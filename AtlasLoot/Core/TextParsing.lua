@@ -10,7 +10,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 function AtlasLoot_FixText(text)
 
     -- Classes
-    text = gsub(text, "#c1#", LOCALIZED_CLASS_NAMES_MALE["DRUID"]);
+    text = gsub(text, "#c1#", "Druid");
     text = gsub(text, "#c2#", LOCALIZED_CLASS_NAMES_MALE["HUNTER"]);
     text = gsub(text, "#c3#", LOCALIZED_CLASS_NAMES_MALE["MAGE"]);
     text = gsub(text, "#c4#", LOCALIZED_CLASS_NAMES_MALE["PALADIN"]);
