@@ -45,7 +45,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 	};
 
 	AtlasLoot_Data["PVPSET"] = {
-		{ 3, "PVPDruid", "Spell_Nature_Regeneration", "=ds="..LOCALIZED_CLASS_NAMES_MALE["DRUID"], ""};
+		{ 3, "PVPDruid", "Spell_Nature_Regeneration", "=ds=".."Druid", ""};
 		{ 4, "PVPMage", "Spell_Frost_IceStorm", "=ds="..LOCALIZED_CLASS_NAMES_MALE["MAGE"], ""};
 		{ 5, "PVPPriest", "Spell_Holy_PowerWordShield", "=ds="..LOCALIZED_CLASS_NAMES_MALE["PRIEST"], ""};
 		{ 6, "PVPShaman", "Spell_FireResistanceTotem_01", "=ds="..LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], ""};
@@ -59,9 +59,9 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 	
 	-- PVP arena set BC
 	AtlasLoot_Data["ARENASET"] = {
-		{ 3, "ArenaDruidBalance", "Spell_Nature_InsectSwarm", "=ds="..LOCALIZED_CLASS_NAMES_MALE["DRUID"], "=q5="..AL["Balance"]};
-		{ 4, "ArenaDruidFeral", "Ability_Druid_Maul", "=ds="..LOCALIZED_CLASS_NAMES_MALE["DRUID"], "=q5="..AL["Feral"]};
-		{ 5, "ArenaDruidRestoration", "Spell_Nature_Regeneration", "=ds="..LOCALIZED_CLASS_NAMES_MALE["DRUID"], "=q5="..AL["Restoration"]};		
+		{ 3, "ArenaDruidBalance", "Spell_Nature_InsectSwarm", "=ds=".."Druid", "=q5="..AL["Balance"]};
+		{ 4, "ArenaDruidFeral", "Ability_Druid_Maul", "=ds=".."Druid", "=q5="..AL["Feral"]};
+		{ 5, "ArenaDruidRestoration", "Spell_Nature_Regeneration", "=ds=".."Druid", "=q5="..AL["Restoration"]};		
 		{ 7, "ArenaHunter", "Ability_Hunter_RunningShot", "=ds="..LOCALIZED_CLASS_NAMES_MALE["HUNTER"], ""};		
 		{ 9, "ArenaMage", "Spell_Frost_IceStorm", "=ds="..LOCALIZED_CLASS_NAMES_MALE["MAGE"], ""};		
 		{ 11, "ArenaPaladinHoly", "Spell_Holy_HolyBolt", "=ds="..LOCALIZED_CLASS_NAMES_MALE["PALADIN"], "=q5="..AL["Holy"]};
@@ -80,7 +80,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 	};
 	
 	AtlasLoot_Data["PVP70RepSET"] = {
-		{ 3, "PVP70RepLeather", "Spell_Nature_Regeneration", "=ds="..LOCALIZED_CLASS_NAMES_MALE["DRUID"], ""};
+		{ 3, "PVP70RepLeather", "Spell_Nature_Regeneration", "=ds=".."Druid", ""};
 		{ 4, "PVP70RepCloth", "Spell_Frost_IceStorm", "=ds="..LOCALIZED_CLASS_NAMES_MALE["MAGE"], ""};
 		{ 5, "PVP70RepCloth", "Spell_Holy_PowerWordShield", "=ds="..LOCALIZED_CLASS_NAMES_MALE["PRIEST"], ""};
 		{ 6, "PVP70RepMail", "Spell_FireResistanceTotem_01", "=ds="..LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], ""};
@@ -103,9 +103,9 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 
 	AtlasLoot_Data["LEVEL80PVPSETS"] = {
 		{ 2, "PvP80DeathKnight", "Spell_Deathknight_DeathStrike", "=ds="..LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"], ""};
-		{ 4, "PvP80DruidBalance", "Spell_Nature_InsectSwarm", "=ds="..LOCALIZED_CLASS_NAMES_MALE["DRUID"], "=q5="..AL["Balance"]};
-		{ 5, "PvP80DruidFeral", "Ability_Druid_Maul", "=ds="..LOCALIZED_CLASS_NAMES_MALE["DRUID"], "=q5="..AL["Feral"]};
-		{ 6, "PvP80DruidRestoration", "Spell_Nature_Regeneration", "=ds="..LOCALIZED_CLASS_NAMES_MALE["DRUID"], "=q5="..AL["Restoration"]};
+		{ 4, "PvP80DruidBalance", "Spell_Nature_InsectSwarm", "=ds=".."Druid", "=q5="..AL["Balance"]};
+		{ 5, "PvP80DruidFeral", "Ability_Druid_Maul", "=ds=".."Druid", "=q5="..AL["Feral"]};
+		{ 6, "PvP80DruidRestoration", "Spell_Nature_Regeneration", "=ds=".."Druid", "=q5="..AL["Restoration"]};
 		{ 8, "PvP80Hunter", "Ability_Hunter_RunningShot", "=ds="..LOCALIZED_CLASS_NAMES_MALE["HUNTER"], ""};
 		{ 10, "PvP80Mage", "Spell_Frost_IceStorm", "=ds="..LOCALIZED_CLASS_NAMES_MALE["MAGE"], ""};
 		{ 12, "PvP80PaladinHoly", "Spell_Holy_HolyBolt", "=ds="..LOCALIZED_CLASS_NAMES_MALE["PALADIN"], "=q5="..AL["Holy"]};

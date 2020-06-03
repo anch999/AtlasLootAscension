@@ -158,7 +158,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 	};
 
 	AtlasLoot_Data["T0SET"] = {
-		{ 3, "T0Druid", "Spell_Nature_Regeneration", "=ds="..LOCALIZED_CLASS_NAMES_MALE["DRUID"], ""};
+		{ 3, "T0Druid", "Spell_Nature_Regeneration", "=ds=".."Druid", ""};
 		{ 4, "T0Mage", "Spell_Frost_IceStorm", "=ds="..LOCALIZED_CLASS_NAMES_MALE["MAGE"], ""};
 		{ 5, "T0Priest", "Spell_Holy_PowerWordShield", "=ds="..LOCALIZED_CLASS_NAMES_MALE["PRIEST"], ""};
 		{ 6, "T0Shaman", "Spell_FireResistanceTotem_01", "=ds="..LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], ""};
@@ -188,8 +188,8 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 	};
 
 	AtlasLoot_Data["T1T2T3SET"] = {
-		{ 1, "T1T2Druid", "Spell_Nature_Regeneration", "=ds="..LOCALIZED_CLASS_NAMES_MALE["DRUID"], "=q5="..AL["Tier 1/2 Sets"]};
-		{ 2, "T3Druid", "Spell_Nature_Regeneration", "=ds="..LOCALIZED_CLASS_NAMES_MALE["DRUID"], "=q5="..AL["Tier 3 Sets"]};
+		{ 1, "T1T2Druid", "Spell_Nature_Regeneration", "=ds=".."Druid", "=q5="..AL["Tier 1/2 Sets"]};
+		{ 2, "T3Druid", "Spell_Nature_Regeneration", "=ds=".."Druid", "=q5="..AL["Tier 3 Sets"]};
 		{ 4, "T1T2Mage", "Spell_Frost_IceStorm", "=ds="..LOCALIZED_CLASS_NAMES_MALE["MAGE"], "=q5="..AL["Tier 1/2 Sets"]};
 		{ 5, "T3Mage", "Spell_Frost_IceStorm", "=ds="..LOCALIZED_CLASS_NAMES_MALE["MAGE"], "=q5="..AL["Tier 3 Sets"]};
 		{ 7, "T1T2Priest", "Spell_Holy_PowerWordShield", "=ds="..LOCALIZED_CLASS_NAMES_MALE["PRIEST"], "=q5="..AL["Tier 1/2 Sets"]};
@@ -210,9 +210,9 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 	};
 
 	AtlasLoot_Data["T456SET"] = {
-		{ 2, "T456DruidBalance", "Spell_Nature_InsectSwarm", "=ds="..LOCALIZED_CLASS_NAMES_MALE["DRUID"], "=q5="..AL["Balance"]};
-		{ 3, "T456DruidFeral", "Ability_Druid_Maul", "=ds="..LOCALIZED_CLASS_NAMES_MALE["DRUID"], "=q5="..AL["Feral"]};
-		{ 4, "T456DruidRestoration", "Spell_Nature_Regeneration", "=ds="..LOCALIZED_CLASS_NAMES_MALE["DRUID"], "=q5="..AL["Restoration"]};
+		{ 2, "T456DruidBalance", "Spell_Nature_InsectSwarm", "=ds=".."Druid", "=q5="..AL["Balance"]};
+		{ 3, "T456DruidFeral", "Ability_Druid_Maul", "=ds=".."Druid", "=q5="..AL["Feral"]};
+		{ 4, "T456DruidRestoration", "Spell_Nature_Regeneration", "=ds=".."Druid", "=q5="..AL["Restoration"]};
 		{ 6, "T456Hunter", "Ability_Hunter_RunningShot", "=ds="..LOCALIZED_CLASS_NAMES_MALE["HUNTER"], ""};
 		{ 8, "T456Mage", "Spell_Frost_IceStorm", "=ds="..LOCALIZED_CLASS_NAMES_MALE["MAGE"], ""};
 		{ 10, "T456PaladinHoly", "Spell_Holy_HolyBolt", "=ds="..LOCALIZED_CLASS_NAMES_MALE["PALADIN"], "=q5="..AL["Holy"]};
@@ -233,9 +233,9 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 	AtlasLoot_Data["T7T8SET"] = {
 		{ 2, "NaxxDeathKnightDPS", "Spell_Deathknight_DeathStrike", "=ds="..LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"], "=q5="..AL["DPS"]};
 		{ 3, "NaxxDeathKnightTank", "Spell_Deathknight_DeathStrike", "=ds="..LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"], "=q5="..AL["Tanking"]};
-		{ 5, "NaxxDruidBalance", "Spell_Nature_InsectSwarm", "=ds="..LOCALIZED_CLASS_NAMES_MALE["DRUID"], "=q5="..AL["Balance"]};
-		{ 6, "NaxxDruidFeral", "Ability_Druid_Maul", "=ds="..LOCALIZED_CLASS_NAMES_MALE["DRUID"], "=q5="..AL["Feral"]};
-		{ 7, "NaxxDruidRestoration", "Spell_Nature_Regeneration", "=ds="..LOCALIZED_CLASS_NAMES_MALE["DRUID"], "=q5="..AL["Restoration"]};
+		{ 5, "NaxxDruidBalance", "Spell_Nature_InsectSwarm", "=ds=".."Druid", "=q5="..AL["Balance"]};
+		{ 6, "NaxxDruidFeral", "Ability_Druid_Maul", "=ds=".."Druid", "=q5="..AL["Feral"]};
+		{ 7, "NaxxDruidRestoration", "Spell_Nature_Regeneration", "=ds=".."Druid", "=q5="..AL["Restoration"]};
 		{ 9, "NaxxHunter", "Ability_Hunter_RunningShot", "=ds="..LOCALIZED_CLASS_NAMES_MALE["HUNTER"], ""};
 		{ 11, "NaxxMage", "Spell_Frost_IceStorm", "=ds="..LOCALIZED_CLASS_NAMES_MALE["MAGE"], ""};
 		{ 13, "NaxxPaladinHoly", "Spell_Holy_HolyBolt", "=ds="..LOCALIZED_CLASS_NAMES_MALE["PALADIN"], "=q5="..AL["Holy"]};
@@ -256,9 +256,9 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 	AtlasLoot_Data["T9SET"] = {
 		{ 2, "T9DeathKnightDPS_A", "Spell_Deathknight_DeathStrike", "=ds="..LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"], "=q5="..AL["DPS"]};
 		{ 3, "T9DeathKnightTank_A", "Spell_Deathknight_DeathStrike", "=ds="..LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"], "=q5="..AL["Tanking"]};
-		{ 5, "T9DruidBalance_A", "Spell_Nature_InsectSwarm", "=ds="..LOCALIZED_CLASS_NAMES_MALE["DRUID"], "=q5="..AL["Balance"]};
-		{ 6, "T9DruidFeral_A", "Ability_Druid_Maul", "=ds="..LOCALIZED_CLASS_NAMES_MALE["DRUID"], "=q5="..AL["Feral"]};
-		{ 7, "T9DruidRestoration_A", "Spell_Nature_Regeneration", "=ds="..LOCALIZED_CLASS_NAMES_MALE["DRUID"], "=q5="..AL["Restoration"]};
+		{ 5, "T9DruidBalance_A", "Spell_Nature_InsectSwarm", "=ds=".."Druid", "=q5="..AL["Balance"]};
+		{ 6, "T9DruidFeral_A", "Ability_Druid_Maul", "=ds=".."Druid", "=q5="..AL["Feral"]};
+		{ 7, "T9DruidRestoration_A", "Spell_Nature_Regeneration", "=ds=".."Druid", "=q5="..AL["Restoration"]};
 		{ 9, "T9Hunter_A", "Ability_Hunter_RunningShot", "=ds="..LOCALIZED_CLASS_NAMES_MALE["HUNTER"], ""};
 		{ 11, "T9Mage_A", "Spell_Frost_IceStorm", "=ds="..LOCALIZED_CLASS_NAMES_MALE["MAGE"], ""};
 		{ 13, "T9PaladinHoly_A", "Spell_Holy_HolyBolt", "=ds="..LOCALIZED_CLASS_NAMES_MALE["PALADIN"], "=q5="..AL["Holy"]};
@@ -279,9 +279,9 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 	AtlasLoot_Data["T10SET"] = {
 		{ 2, "T10DeathKnightDPS", "Spell_Deathknight_DeathStrike", "=ds="..LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"], "=q5="..AL["DPS"]};
 		{ 3, "T10DeathKnightTank", "Spell_Deathknight_DeathStrike", "=ds="..LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"], "=q5="..AL["Tanking"]};
-		{ 5, "T10DruidBalance", "Spell_Nature_InsectSwarm", "=ds="..LOCALIZED_CLASS_NAMES_MALE["DRUID"], "=q5="..AL["Balance"]};
-		{ 6, "T10DruidFeral", "Ability_Druid_Maul", "=ds="..LOCALIZED_CLASS_NAMES_MALE["DRUID"], "=q5="..AL["Feral"]};
-		{ 7, "T10DruidRestoration", "Spell_Nature_Regeneration", "=ds="..LOCALIZED_CLASS_NAMES_MALE["DRUID"], "=q5="..AL["Restoration"]};
+		{ 5, "T10DruidBalance", "Spell_Nature_InsectSwarm", "=ds=".."Druid", "=q5="..AL["Balance"]};
+		{ 6, "T10DruidFeral", "Ability_Druid_Maul", "=ds=".."Druid", "=q5="..AL["Feral"]};
+		{ 7, "T10DruidRestoration", "Spell_Nature_Regeneration", "=ds=".."Druid", "=q5="..AL["Restoration"]};
 		{ 9, "T10Hunter", "Ability_Hunter_RunningShot", "=ds="..LOCALIZED_CLASS_NAMES_MALE["HUNTER"], ""};
 		{ 11, "T10Mage", "Spell_Frost_IceStorm", "=ds="..LOCALIZED_CLASS_NAMES_MALE["MAGE"], ""};
 		{ 13, "T10PaladinHoly", "Spell_Holy_HolyBolt", "=ds="..LOCALIZED_CLASS_NAMES_MALE["PALADIN"], "=q5="..AL["Holy"]};

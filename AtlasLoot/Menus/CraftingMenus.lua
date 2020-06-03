@@ -80,7 +80,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 2, "Inscription_Scrolls1", "INV_Inscription_Tradeskill01", "=ds="..AL["Scrolls"], "" };
 		{ 3, "Inscription_Misc1", "INV_Inscription_Tradeskill01", "=ds="..AL["Miscellaneous"], "" };
 		{ 5, "Inscription_DeathKnightMajor1", "Spell_Deathknight_DeathStrike", "=ds="..LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"], "=q5="..AL["Major Glyph"] };
-		{ 6, "Inscription_DruidMajor1", "Spell_Nature_Regeneration", "=ds="..LOCALIZED_CLASS_NAMES_MALE["DRUID"], "=q5="..AL["Major Glyph"] };
+		{ 6, "Inscription_DruidMajor1", "Spell_Nature_Regeneration", "=ds=".."Druid", "=q5="..AL["Major Glyph"] };
 		{ 7, "Inscription_HunterMajor1", "Ability_Hunter_RunningShot", "=ds="..LOCALIZED_CLASS_NAMES_MALE["HUNTER"], "=q5="..AL["Major Glyph"] };
 		{ 8, "Inscription_MageMajor1", "Spell_Frost_IceStorm", "=ds="..LOCALIZED_CLASS_NAMES_MALE["MAGE"], "=q5="..AL["Major Glyph"] };
 		{ 9, "Inscription_PaladinMajor1", "Spell_Holy_SealOfMight", "=ds="..LOCALIZED_CLASS_NAMES_MALE["PALADIN"], "=q5="..AL["Major Glyph"] };
@@ -92,7 +92,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 17, "Inscription_OffHand1", "INV_Inscription_Tradeskill01", "=ds="..AL["Off-Hand Items"], "" };
 		{ 18, "Inscription_Reagents1", "INV_Inscription_Tradeskill01", "=ds="..AL["Reagents"], "" };
 		{ 20, "Inscription_DeathKnightMinor1", "Spell_Deathknight_DeathStrike", "=ds="..LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"], "=q5="..AL["Minor Glyph"] };
-		{ 21, "Inscription_DruidMinor1", "Spell_Nature_Regeneration", "=ds="..LOCALIZED_CLASS_NAMES_MALE["DRUID"], "=q5="..AL["Minor Glyph"] };
+		{ 21, "Inscription_DruidMinor1", "Spell_Nature_Regeneration", "=ds=".."Druid", "=q5="..AL["Minor Glyph"] };
 		{ 22, "Inscription_HunterMinor1", "Ability_Hunter_RunningShot", "=ds="..LOCALIZED_CLASS_NAMES_MALE["HUNTER"], "=q5="..AL["Minor Glyph"] };
 		{ 23, "Inscription_MageMinor1", "Spell_Frost_IceStorm", "=ds="..LOCALIZED_CLASS_NAMES_MALE["MAGE"], "=q5="..AL["Minor Glyph"] };
 		{ 24, "Inscription_PaladinMinor1", "Spell_Holy_SealOfMight", "=ds="..LOCALIZED_CLASS_NAMES_MALE["PALADIN"], "=q5="..AL["Minor Glyph"] };
