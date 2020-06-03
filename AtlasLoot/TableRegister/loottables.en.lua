@@ -452,6 +452,18 @@ end
 	AtlasLoot_TableNames["BTIllidanStormrage"] = { BabbleBoss["Illidan Stormrage"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["BTTrash"] = { AL["Trash Mobs"].." ("..BabbleZone["Black Temple"]..")", "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["BTPatterns"] = { "BT Patterns/Plans", "AtlasLootBurningCrusade" };
+  -- The Black Temple HEROIC
+	AtlasLoot_TableNames["BTNajentusHEROIC"] = { BabbleBoss["High Warlord Naj'entus"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["BTSupremusHEROIC"] = { BabbleBoss["Supremus"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["BTGorefiendHEROIC"] = { BabbleBoss["Teron Gorefiend"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["BTBloodboilHEROIC"] = { BabbleBoss["Gurtogg Bloodboil"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["BTAkamaHEROIC"] = { BabbleBoss["Shade of Akama"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["BTEssencofSoulsHEROIC"] = { "Essence of Souls", "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["BTShahrazHEROIC"] = { BabbleBoss["Mother Shahraz"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["BTCouncilHEROIC"] = { BabbleBoss["The Illidari Council"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["BTIllidanStormrageHEROIC"] = { BabbleBoss["Illidan Stormrage"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["BTTrashHEROIC"] = { AL["Trash Mobs"].." ("..BabbleZone["Black Temple"]..")", "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["BTPatternsHEROIC"] = { "BT Patterns/Plans", "AtlasLootBurningCrusade" };
   -- CFR: Serpentshrine Cavern
 	AtlasLoot_TableNames["CFRSerpentHydross"] = { BabbleBoss["Hydross the Unstable"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["CFRSerpentKarathress"] = { BabbleBoss["Fathom-Lord Karathress"], "AtlasLootBurningCrusade" };
@@ -460,6 +472,14 @@ end
 	AtlasLoot_TableNames["CFRSerpentLurker"] = { BabbleBoss["The Lurker Below"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["CFRSerpentVashj"] = { BabbleBoss["Lady Vashj"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["CFRSerpentTrash"] = { AL["Trash Mobs"].." ("..BabbleZone["Serpentshrine Cavern"]..")", "AtlasLootBurningCrusade" };
+  -- CFR: Serpentshrine Cavern HEROIC
+	AtlasLoot_TableNames["CFRSerpentHydrossHEROIC"] = { BabbleBoss["Hydross the Unstable"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["CFRSerpentKarathressHEROIC"] = { BabbleBoss["Fathom-Lord Karathress"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["CFRSerpentMorogrimHEROIC"] = { BabbleBoss["Morogrim Tidewalker"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["CFRSerpentLeotherasHEROIC"] = { BabbleBoss["Leotheras the Blind"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["CFRSerpentLurkerHEROIC"] = { BabbleBoss["The Lurker Below"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["CFRSerpentVashjHEROIC"] = { BabbleBoss["Lady Vashj"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["CFRSerpentTrashHEROIC"] = { AL["Trash Mobs"].." ("..BabbleZone["Serpentshrine Cavern"]..")", "AtlasLootBurningCrusade" };
   -- CFR: Slave Pens
 	AtlasLoot_TableNames["CFRSlaveMennu"] = { BabbleBoss["Mennu the Betrayer"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["CFRSlaveRokmar"] = { BabbleBoss["Rokmar the Crackler"], "AtlasLootBurningCrusade" };
@@ -492,9 +512,19 @@ end
 	AtlasLoot_TableNames["MountHyjalAzgalor"] = { BabbleBoss["Azgalor"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["MountHyjalArchimonde"] = { BabbleBoss["Archimonde"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["MountHyjalTrash"] = { AL["Trash Mobs"].." ("..BabbleZone["Hyjal Summit"]..")", "AtlasLootBurningCrusade" };
+  -- CoT: Hyjal Summit HEROIC
+	AtlasLoot_TableNames["MountHyjalWinterchillHEROIC"] = { BabbleBoss["Rage Winterchill"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["MountHyjalAnetheronHEROIC"] = { BabbleBoss["Anetheron"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["MountHyjalKazrogalHEROIC"] = { BabbleBoss["Kaz'rogal"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["MountHyjalAzgalorHEROIC"] = { BabbleBoss["Azgalor"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["MountHyjalArchimondeHEROIC"] = { BabbleBoss["Archimonde"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["MountHyjalTrashHEROIC"] = { AL["Trash Mobs"].." ("..BabbleZone["Hyjal Summit"]..")", "AtlasLootBurningCrusade" };
   -- Gruul's Lair
 	AtlasLoot_TableNames["GruulsLairHighKingMaulgar"] = { BabbleBoss["High King Maulgar"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["GruulGruul"] = { BabbleBoss["Gruul the Dragonkiller"], "AtlasLootBurningCrusade" };
+  -- Gruul's Lair HEROIC
+	AtlasLoot_TableNames["GruulsLairHighKingMaulgarHEROIC"] = { BabbleBoss["High King Maulgar"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["GruulGruulHEROIC"] = { BabbleBoss["Gruul the Dragonkiller"], "AtlasLootBurningCrusade" };
   -- HC: Blood Furnace
 	AtlasLoot_TableNames["HCFurnaceMaker"] = { BabbleBoss["The Maker"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["HCFurnaceBroggok"] = { BabbleBoss["Broggok"], "AtlasLootBurningCrusade" };
@@ -528,6 +558,22 @@ end
 	AtlasLoot_TableNames["KaraChess"] = { BabbleBoss["Chess Event"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["KaraPrince"] = { BabbleBoss["Prince Malchezaar"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["KaraTrash"] = { AL["Trash Mobs"].." ("..BabbleZone["Karazhan"]..")", "AtlasLootBurningCrusade" };
+  -- Karazhan HEROIC
+	AtlasLoot_TableNames["KaraCharredBoneFragmentHEROIC"] = { "Charred Bone Fragment ("..AL["Quest Item"]..")", "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["KaraNamedHEROIC"] = { "Servant's Quarter Animal Bosses", "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["KaraAttumenHEROIC"] = { BabbleBoss["Attumen the Huntsman"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["KaraMoroesHEROIC"] = { BabbleBoss["Moroes"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["KaraKeannaLogHEROIC"] = { "Keanna's Log ("..AL["Quest Item"]..")", "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["KaraMaidenHEROIC"] = { BabbleBoss["Maiden of Virtue"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["KaraOperaEventHEROIC"] = { "Opera Event", "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["KaraCuratorHEROIC"] = { BabbleBoss["The Curator"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["KaraIllhoofHEROIC"] = { BabbleBoss["Terestian Illhoof"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["KaraAranHEROIC"] = { BabbleBoss["Shade of Aran"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["KaraNetherspiteHEROIC"] = { BabbleBoss["Netherspite"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["KaraNightbaneHEROIC"] = { BabbleBoss["Nightbane"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["KaraChessHEROIC"] = { BabbleBoss["Chess Event"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["KaraPrinceHEROIC"] = { BabbleBoss["Prince Malchezaar"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["KaraTrashHEROIC"] = { AL["Trash Mobs"].." ("..BabbleZone["Karazhan"]..")", "AtlasLootBurningCrusade" };
   -- Sunwell Isle: Magister's Terrace
 	AtlasLoot_TableNames["SMTFireheart"] = { BabbleBoss["Selin Fireheart"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["SMTVexallus"] = { BabbleBoss["Vexallus"], "AtlasLootBurningCrusade" };
@@ -544,6 +590,15 @@ end
 	AtlasLoot_TableNames["SPKiljaeden"] = { BabbleBoss["Kil'jaeden"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["SPTrash"] = { AL["Trash Mobs"].." ("..BabbleZone["Sunwell Plateau"]..")", "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["SPPatterns"] = { "SP Patterns/Plans", "AtlasLootBurningCrusade" };
+  -- Sunwell Isle: Sunwell Plateau HEROIC
+	AtlasLoot_TableNames["SPKalecgosHEROIC"] = { BabbleBoss["Kalecgos"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["SPBrutallusHEROIC"] = { BabbleBoss["Brutallus"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["SPFelmystHEROIC"] = { BabbleBoss["Felmyst"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["SPEredarTwinsHEROIC"] = { BabbleBoss["The Eredar Twins"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["SPMuruHEROIC"] = { BabbleBoss["M'uru"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["SPKiljaedenHEROIC"] = { BabbleBoss["Kil'jaeden"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["SPTrashHEROIC"] = { AL["Trash Mobs"].." ("..BabbleZone["Sunwell Plateau"]..")", "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["SPPatternsHEROIC"] = { "SP Patterns/Plans", "AtlasLootBurningCrusade" };
   -- TK: The Arcatraz
 	AtlasLoot_TableNames["TKArcUnbound"] = { BabbleBoss["Zereketh the Unbound"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["TKArcDalliah"] = { BabbleBoss["Dalliah the Doomsayer"], "AtlasLootBurningCrusade" };
@@ -564,6 +619,13 @@ end
 	AtlasLoot_TableNames["TKEyeKaelthas"] = { BabbleBoss["Kael'thas Sunstrider"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["TKEyeLegendaries"] = { "Legendary Items for Kael'thas Fight", "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["TKEyeTrash"] = { AL["Trash Mobs"].." ("..BabbleZone["The Eye"]..")", "AtlasLootExpansionItems" };
+  -- TK: The Eye HEROIC
+	AtlasLoot_TableNames["TKEyeAlarHEROIC"] = { BabbleBoss["Al'ar"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["TKEyeVoidReaverHEROIC"] = { BabbleBoss["Void Reaver"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["TKEyeSolarianHEROIC"] = { BabbleBoss["High Astromancer Solarian"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["TKEyeKaelthasHEROIC"] = { BabbleBoss["Kael'thas Sunstrider"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["TKEyeLegendariesHEROIC"] = { "Legendary Items for Kael'thas Fight", "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["TKEyeTrashHEROIC"] = { AL["Trash Mobs"].." ("..BabbleZone["The Eye"]..")", "AtlasLootExpansionItems" };
   -- TK: The Mechanar
 	AtlasLoot_TableNames["TKMechCacheoftheLegion"] = { AL["Cache of the Legion"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["TKMechCapacitus"] = { BabbleBoss["Mechano-Lord Capacitus"], "AtlasLootBurningCrusade" };
@@ -579,6 +641,15 @@ end
 	AtlasLoot_TableNames["ZAZuljin"] = { BabbleBoss["Zul'jin"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["ZATimedChest"] = { "Timed Reward Chest", "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["ZATrash"] = { AL["Trash Mobs"].." ("..BabbleZone["Zul'Aman"]..")", "AtlasLootBurningCrusade" };
+  -- Zul'Aman HEROIC
+	AtlasLoot_TableNames["ZANalorakkHEROIC"] = { BabbleBoss["Nalorakk"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["ZAAkilZonHEROIC"] = { BabbleBoss["Akil'zon"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["ZAJanAlaiHEROIC"] = { BabbleBoss["Jan'alai"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["ZAHalazziHEROIC"] = { BabbleBoss["Halazzi"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["ZAMalacrassHEROIC"] = { BabbleBoss["Hex Lord Malacrass"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["ZAZuljinHEROIC"] = { BabbleBoss["Zul'jin"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["ZATimedChestHEROIC"] = { "Timed Reward Chest", "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["ZATrashHEROIC"] = { AL["Trash Mobs"].." ("..BabbleZone["Zul'Aman"]..")", "AtlasLootBurningCrusade" };
 
 -------------------------
 --- Classic Instances ---
