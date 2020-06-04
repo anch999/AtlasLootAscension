@@ -2163,29 +2163,29 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		---------------------------------------------------
 
 	AtlasLoot_Data["HCMagtheridonHEROIC"] = {
-		{ 1, 28777, "", "=q4=Cloak of the Pit Stalker", "=ds=#s4#"};
-		{ 2, 28780, "", "=q4=Soul-Eater's Handwraps", "=ds=#s9#, #a1#"};
-		{ 3, 28776, "", "=q4=Liar's Tongue Gloves", "=ds=#s9#, #a2#"};
-		{ 4, 28778, "", "=q4=Terror Pit Girdle", "=ds=#s10#, #a3#"};
-		{ 5, 28775, "", "=q4=Thundering Greathelm", "=ds=#s1#, #a4#"};
-		{ 6, 28779, "", "=q4=Girdle of the Endless Pit", "=ds=#s10#, #a4#"};
-		{ 7, 28789, "", "=q4=Eye of Magtheridon", "=ds=#s14#"};
-		{ 8, 28781, "", "=q4=Karaborian Talisman", "=ds=#s15#"};
-		{ 10, 28774, "", "=q4=Glaive of the Pit", "=ds=#w7#"};
-		{ 11, 28782, "", "=q4=Crystalheart Pulse-Staff", "=ds=#w9#"};
-		{ 12, 29458, "", "=q4=Aegis of the Vindicator", "=ds=#w8#"};
-		{ 13, 28783, "", "=q4=Eredar Wand of Obliteration", "=ds=#w12#"};
-		{ 15, 34846, "", "=q2=Black Sack of Gems", "=ds=#e1#"};
-		{ 16, 29754, "", "=q4=Chestguard of the Fallen Champion", "=q1=#m1# =ds=#c4#, #c6#, #c7#"};
-		{ 17, 29753, "", "=q4=Chestguard of the Fallen Defender", "=q1=#m1# =ds=#c1#, #c5#, #c9#"};
-		{ 18, 29755, "", "=q4=Chestguard of the Fallen Hero", "=q1=#m1# =ds=#c2#, #c3#, #c8#"};
-		{ 20, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
-		{ 22, 32385, "", "=q4=Magtheridon's Head", "=ds=#m2#", "", "100%"};
-		{ 23, 28791, "", "=q4=Ring of the Recalcitrant", "=q1=#m4#: =ds=#s13#"};
-		{ 24, 28790, "", "=q4=Naaru Lightwarden's Band", "=q1=#m4#: =ds=#s13#"};
-		{ 25, 28793, "", "=q4=Band of Crimson Fury", "=q1=#m4#: =ds=#s13#"};
-		{ 26, 28792, "", "=q4=A'dal's Signet of Defense", "=q1=#m4#: =ds=#s13#"};
-		{ 28, 34845, "", "=q4=Pit Lord's Satchel", "=ds=#e1# #m15#"};
+		{ 1, 228777, "", "=q4=Cloak of the Pit Stalker", "=ds=#s4#"};
+		{ 2, 228780, "", "=q4=Soul-Eater's Handwraps", "=ds=#s9#, #a1#"};
+		{ 3, 228776, "", "=q4=Liar's Tongue Gloves", "=ds=#s9#, #a2#"};
+		{ 4, 228778, "", "=q4=Terror Pit Girdle", "=ds=#s10#, #a3#"};
+		{ 5, 228775, "", "=q4=Thundering Greathelm", "=ds=#s1#, #a4#"};
+		{ 6, 228779, "", "=q4=Girdle of the Endless Pit", "=ds=#s10#, #a4#"};
+		{ 7, 228789, "", "=q4=Eye of Magtheridon", "=ds=#s14#"};
+		{ 8, 228781, "", "=q4=Karaborian Talisman", "=ds=#s15#"};
+		{ 10, 228774, "", "=q4=Glaive of the Pit", "=ds=#w7#"};
+		{ 11, 228782, "", "=q4=Crystalheart Pulse-Staff", "=ds=#w9#"};
+		{ 12, 229458, "", "=q4=Aegis of the Vindicator", "=ds=#w8#"};
+		{ 13, 228783, "", "=q4=Eredar Wand of Obliteration", "=ds=#w12#"};
+		{ 15, 234846, "", "=q2=Black Sack of Gems", "=ds=#e1#"};
+		{ 16, 229754, "", "=q4=Chestguard of the Fallen Champion", "=q1=#m1# =ds=#c4#, #c6#, #c7#"};
+		{ 17, 229753, "", "=q4=Chestguard of the Fallen Defender", "=q1=#m1# =ds=#c1#, #c5#, #c9#"};
+		{ 18, 229755, "", "=q4=Chestguard of the Fallen Hero", "=q1=#m1# =ds=#c2#, #c3#, #c8#"};
+		{ 20, 229434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
+		{ 22, 232385, "", "=q4=Magtheridon's Head", "=ds=#m2#", "", "100%"};
+		{ 23, 228791, "", "=q4=Ring of the Recalcitrant", "=q1=#m4#: =ds=#s13#"};
+		{ 24, 228790, "", "=q4=Naaru Lightwarden's Band", "=q1=#m4#: =ds=#s13#"};
+		{ 25, 228793, "", "=q4=Band of Crimson Fury", "=q1=#m4#: =ds=#s13#"};
+		{ 26, 228792, "", "=q4=A'dal's Signet of Defense", "=q1=#m4#: =ds=#s13#"};
+		{ 28, 234845, "", "=q4=Pit Lord's Satchel", "=ds=#e1# #m15#"};
 	};
 
 		----------------
