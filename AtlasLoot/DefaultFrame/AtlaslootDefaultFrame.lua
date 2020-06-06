@@ -251,7 +251,19 @@ function AtlasLoot_DewdropRegister()
                             if (type(v[1]) == "table") and (type(v[1][1]) == "string") then
                                 local checked = false;
                                 --If an entry to show a submenu
-                                if v[1][3] == "Submenu" then
+                                if v[1][4] == "Header" then
+                                    AtlasLoot_Dewdrop:AddLine(
+                                        'text', v[1][1],
+                                        'textR', 0.2,
+                                        'textG', 0.82,
+                                        'textB', 0.5,
+                                        'func', AtlasLoot_DewDropClick,
+                                        'arg1', v[1][2],
+                                        'arg2', v[1][1],
+                                        'arg3', v[1][3],
+                                        'notCheckable', true
+                                    )
+                                elseif v[1][3] == "Submenu" then
                                 AtlasLoot_Dewdrop:AddLine(
                                     'text', v[1][1],
                                     'textR', 1,
