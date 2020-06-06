@@ -105,7 +105,7 @@ AtlasLoot_DewDropDown = {
 	[2] = {
 		[AL["BC Instances"]] = {
 			[1] = {
-				{ BabbleZone["Raids:"], "HCMagtheridon", "Table" },
+				{ BabbleZone["Raids:"], "BCKeys", "Table" },
 			},
 			[2] = {
 				{ BabbleZone["Karazhan"], "Karazhan", "Submenu" },
@@ -138,7 +138,7 @@ AtlasLoot_DewDropDown = {
 ---- Dugneons -----
 
 			[11] = {
-				{ BabbleZone["Raids:"], "BCkeys", "Table" },
+				{ BabbleZone["Dungeons:"], "BCKeys", "Table" },
 			},
 			
 			[12] = {
