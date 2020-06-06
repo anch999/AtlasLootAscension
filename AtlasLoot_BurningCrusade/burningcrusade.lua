@@ -666,7 +666,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 18, 232237, "", "=q4=The Maelstrom's Fury", "=ds=#h3#, #w4#", "", "15%"};
 		{ 19, 232236, "", "=q4=Rising Tide", "=ds=#h1#, #w1#", "", "16%"};
 		{ 20, 232248, "", "=q4=Halberd of Desolation", "=ds=#w7#", "", "16%"};
-		{ 22, 229434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
+		{ 22, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		Next = "BTSupremusHEROIC";
 	};
 
@@ -677,7 +677,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 4, 232251, "", "=q4=Wraps of Precise Flight", "=ds=#s8#, #a3#", "", "15%"};
 		{ 5, 232258, "", "=q4=Naturalist's Preserving Cinch", "=ds=#s10#, #a3#", "", "9%"};
 		{ 6, 232250, "", "=q4=Pauldrons of Abyssal Fury", "=ds=#s3#, #a4#", "", "16%"};
-		{ 8, 229434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
+		{ 8, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		{ 16, 232260, "", "=q4=Choker of Endless Nightmares", "=ds=#s2#", "", "17%"};
 		{ 17, 232261, "", "=q4=Band of the Abyssal Lord", "=ds=#s13#", "", "14%"};
 		{ 18, 232257, "", "=q4=Idol of the White Stag", "=ds=#s16#, #w14#", "", "15%"};
@@ -704,7 +704,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 12, 232268, "", "=q4=Myrmidon's Treads", "=ds=#s12#, #a4#", "", "16%"};
 		{ 16, 232266, "", "=q4=Ring of Deceitful Intent", "=ds=#s13#", "", "16%"};
 		{ 17, 232361, "", "=q4=Blind-Seers Icon", "=ds=#s15#", "", "15%"};
-		{ 19, 229434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
+		{ 19, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		Prev = "BTSupremusHEROIC";
 		Next = "BTGorefiendHEROIC";
 	};
@@ -722,7 +722,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 17, 232348, "", "=q4=Soul Cleaver", "=ds=#h2#, #w1#", "", "19%"};
 		{ 18, 232326, "", "=q4=Twisted Blades of Zarak", "=ds=#w11#", "", "11%"};
 		{ 19, 232325, "", "=q4=Rifle of the Stoic Guardian", "=ds=#w5#", "", "14%"};
-		{ 21, 229434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
+		{ 21, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		Prev = "BTAkamaHEROIC";
 		Next = "BTBloodboilHEROIC";
 	};
@@ -741,7 +741,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 18, 232269, "", "=q4=Messenger of Fate", "=ds=#h1#, #w4#", "", "16%"};
 		{ 19, 232344, "", "=q4=Staff of Immaculate Recovery", "=ds=#w9#", "", "15%"};
 		{ 20, 232343, "", "=q4=Wand of Prismatic Focus", "=ds=#w12#", "", "14%"};
-		{ 22, 229434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
+		{ 22, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		Prev = "BTGorefiendHEROIC";
 		Next = "BTEssencofSoulsHEROIC";
 	};
@@ -760,7 +760,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 18, 232350, "", "=q4=Touch of Inspiration", "=ds=#s15#", "", "16%"};
 		{ 19, 232332, "", "=q4=Torch of the Damned", "=ds=#h2#, #w6#", "", "17%"};
 		{ 20, 232363, "", "=q4=Naaru-Blessed Life Rod", "=ds=#w12#", "", "14%"};
-		{ 22, 229434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
+		{ 22, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		Prev = "BTBloodboilHEROIC";
 		Next = "BTShahrazHEROIC";
 	};
@@ -775,7 +775,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 16, 231101, "", "=q4=Pauldrons of the Forgotten Conqueror", "=q1=#m1# =ds=#c4#, #c5#, #c9#", "", "76%"};
 		{ 17, 231103, "", "=q4=Pauldrons of the Forgotten Protector", "=q1=#m1# =ds=#c9#, #c2#, #c7#", "", "80%"};
 		{ 18, 231102, "", "=q4=Pauldrons of the Forgotten Vanquisher", "=q1=#m1# =ds=#c6#, #c3#, #c1#", "", "77%"};
-		{ 20, 229434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
+		{ 20, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		Prev = "BTEssencofSoulsHEROIC";
 		Next = "BTCouncilHEROIC";
 	};
@@ -790,7 +790,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 16, 231098, "", "=q4=Leggings of the Forgotten Conqueror", "=q1=#m1# =ds=#c4#, #c5#, #c9#", "", "34%"};
 		{ 17, 231100, "", "=q4=Leggings of the Forgotten Protector", "=q1=#m1# =ds=#c9#, #c2#, #c7#", "", "33%"};
 		{ 18, 231099, "", "=q4=Leggings of the Forgotten Vanquisher", "=q1=#m1# =ds=#c6#, #c3#, #c1#", "", "34%"};
-		{ 20, 229434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
+		{ 20, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		Prev = "BTShahrazHEROIC";
 		Next = "BTIllidanStormrageHEROIC";
 	};
@@ -803,7 +803,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 5, 232497, "", "=q4=Stormrage Signet Ring", "=ds=#s13#", "", "15%"};
 		{ 6, 232483, "", "=q4=The Skull of Gul'dan", "=ds=#s14#", "", "16%"};
 		{ 7, 232496, "", "=q4=Memento of Tyrande", "=ds=#s14#", "", "15%"};
-		{ 9, 229434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
+		{ 9, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		{ 11, 232837, "", "=q5=Warglaive of Azzinoth", "=ds=#h3#, #w10#, =q1=#m1# =ds=#c9#, #c6#", "", "4%"};
 		{ 12, 232838, "", "=q5=Warglaive of Azzinoth", "=ds=#h4#, #w10#, =q1=#m1# =ds=#c9#, #c6#", "", "4%"};
 		{ 16, 231089, "", "=q4=Chestguard of the Forgotten Conqueror", "=q1=#m1# =ds=#c4#, #c5#, #c9#", "", "78%"};
@@ -1156,8 +1156,8 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 10, 230861, "", "=q4=Furious Shackles", "=ds=#s8#, #a4#", "", "15%"};
 		{ 16, 230865, "", "=q4=Tracker's Blade", "=ds=#h1#, #w4#", "", "15%"};
 		{ 17, 230872, "", "=q4=Chronicle of Dark Secrets", "=ds=#s15#", "", "16%"};
-		{ 19, 229434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
-		{ 21, 232459, "", "=q1=Time-Phased Phylactery", "=ds=#m3#", "", "8%"};
+		{ 19, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
+		{ 21, 32459, "", "=q1=Time-Phased Phylactery", "=ds=#m3#", "", "8%"};
 		Next = "MountHyjalAnetheronHEROIC";
 	};
 
@@ -1174,7 +1174,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 17, 230881, "", "=q4=Blade of Infamy", "=ds=#h1#, #w10#", "", "15%"};
 		{ 18, 230883, "", "=q4=Pillar of Ferocity", "=ds=#w9#", "", "16%"};
 		{ 19, 230882, "", "=q4=Bastion of Light", "=ds=#w8#", "", "15%"};
-		{ 21, 229434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
+		{ 21, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		Prev = "MountHyjalWinterchillHEROIC";
 		Next = "MountHyjalKazrogalHEROIC";
 	};
@@ -1192,7 +1192,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 10, 230915, "", "=q4=Belt of Seething Fury", "=ds=#s10#, #a4#", "", "17%"};
 		{ 16, 230918, "", "=q4=Hammer of Atonement", "=ds=#h3#, #w6#", "", "17%"};
 		{ 17, 230889, "", "=q4=Kaz'rogal's Hardened Heart", "=ds=#w8#", "", "16%"};
-		{ 19, 229434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
+		{ 19, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		Prev = "MountHyjalAnetheronHEROIC";
 		Next = "MountHyjalAzgalorHEROIC";
 	};
@@ -1207,7 +1207,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 16, 231092, "", "=q4=Gloves of the Forgotten Conqueror", "=q1=#m1# =ds=#c4#, #c5#, #c9#", "", "74%"};
 		{ 17, 231094, "", "=q4=Gloves of the Forgotten Protector", "=q1=#m1# =ds=#c9#, #c2#, #c7#", "", "73%"};
 		{ 18, 231093, "", "=q4=Gloves of the Forgotten Vanquisher", "=q1=#m1# =ds=#c6#, #c3#, #c1#", "", "73%"};
-		{ 20, 229434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
+		{ 20, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		Prev = "MountHyjalKazrogalHEROIC";
 		Next = "MountHyjalArchimondeHEROIC";
 	};
@@ -1228,7 +1228,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 16, 231097, "", "=q4=Helm of the Forgotten Conqueror", "=q1=#m1# =ds=#c4#, #c5#, #c9#", "", "70%"};
 		{ 17, 231095, "", "=q4=Helm of the Forgotten Protector", "=q1=#m1# =ds=#c9#, #c2#, #c7#", "", "72%"};
 		{ 18, 231096, "", "=q4=Helm of the Forgotten Vanquisher", "=q1=#m1# =ds=#c6#, #c3#, #c1#", "", "73%"};
-		{ 20, 229434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
+		{ 20, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		Prev = "MountHyjalAzgalorHEROIC";
 	};
 
@@ -1669,7 +1669,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 19, 230629, "", "=q4=Scarab of Displacement", "=ds=#s14#", "", "21%"};
 		{ 20, 230049, "", "=q4=Fathomstone", "=ds=#s15#", "", "19%"};
 		{ 21, 230051, "", "=q4=Idol of the Crescent Goddess", "=ds=#s16#, #w14#", "", "11%"};
-		{ 23, 229434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
+		{ 23, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		Next = "CFRSerpentLurkerHEROIC";
 	};
 
@@ -1681,7 +1681,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 5, 230066, "", "=q4=Tempest-Strider Boots", "=ds=#s12#, #a3#", "", "21%"};
 		{ 6, 230065, "", "=q4=Glowing Breastplate of Truth", "=ds=#s5#, #a4#", "", "20%"};
 		{ 7, 230057, "", "=q4=Bracers of Eradication", "=ds=#s8#, #a4#", "", "19%"};
-		{ 9, 229434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
+		{ 9, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		{ 16, 230059, "", "=q4=Choker of Animalistic Fury", "=ds=#s2#", "", "21%"};
 		{ 17, 230061, "", "=q4=Ancestral Ring of Conquest", "=ds=#s13#", "", "20%"};
 		{ 18, 233054, "", "=q4=The Seal of Danzalar", "=ds=#s13#", "", "14%"};
@@ -1702,7 +1702,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 16, 230239, "", "=q4=Gloves of the Vanquished Champion", "=q1=#m1# =ds=#c4#, #c6#, #c7#", "", "63%"};
 		{ 17, 230240, "", "=q4=Gloves of the Vanquished Defender", "=q1=#m1# =ds=#c1#, #c5#, #c9#", "", "67%"};
 		{ 18, 230241, "", "=q4=Gloves of the Vanquished Hero", "=q1=#m1# =ds=#c2#, #c3#, #c8#", "", "65%"};
-		{ 20, 229434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
+		{ 20, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		Prev = "CFRSerpentLurkerHEROIC";
 		Next = "CFRSerpentKarathressHEROIC";
 	};
@@ -1717,7 +1717,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 16, 230245, "", "=q4=Leggings of the Vanquished Champion", "=q1=#m1# =ds=#c4#, #c6#, #c7#", "", "62%"};
 		{ 17, 230246, "", "=q4=Leggings of the Vanquished Defender", "=q1=#m1# =ds=#c1#, #c5#, #c9#", "", "61%"};
 		{ 18, 230247, "", "=q4=Leggings of the Vanquished Hero", "=q1=#m1# =ds=#c2#, #c3#, #c8#", "", "62%"};
-		{ 20, 229434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
+		{ 20, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		Prev = "CFRSerpentLeotherasHEROIC";
 		Next = "CFRSerpentMorogrimHEROIC";
 	};
@@ -1730,7 +1730,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 5, 230068, "", "=q4=Girdle of the Tidal Call", "=ds=#s10#, #a3#", "", "17%"};
 		{ 6, 230084, "", "=q4=Pauldrons of the Argent Sentinel", "=ds=#s3#, #a4#", "", "21%"};
 		{ 7, 230081, "", "=q4=Warboots of Obliteration", "=ds=#s12#, #a4#", "", "21%"};
-		{ 9, 229434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
+		{ 9, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		{ 16, 230008, "", "=q4=Pendant of the Lost Ages", "=ds=#s2#", "", "18%"};
 		{ 17, 230083, "", "=q4=Ring of Sundered Souls", "=ds=#s13#", "", "21%"};
 		{ 18, 233058, "", "=q4=Band of the Vigilant", "=ds=#s13#", "", "19%"};
@@ -1757,8 +1757,8 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 16, 230242, "", "=q4=Helm of the Vanquished Champion", "=q1=#m1# =ds=#c4#, #c6#, #c7#", "", "61%"};
 		{ 17, 230243, "", "=q4=Helm of the Vanquished Defender", "=q1=#m1# =ds=#c1#, #c5#, #c9#", "", "62%"};
 		{ 18, 230244, "", "=q4=Helm of the Vanquished Hero", "=q1=#m1# =ds=#c2#, #c3#, #c8#", "", "63%"};
-		{ 20, 229434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
-		{ 22, 229906, "", "=q1=Vashj's Vial Remnant", "=ds=#m3#", "", "35%"};
+		{ 20, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
+		{ 22, 29906, "", "=q1=Vashj's Vial Remnant", "=ds=#m3#", "", "35%"};
 		Prev = "CFRSerpentMorogrimHEROIC";
 	};
 
@@ -1842,7 +1842,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 16, 229763, "", "=q4=Pauldrons of the Fallen Champion", "=q1=#m1# =ds=#c4#, #c6#, #c7#", "", "22.68%"};
 		{ 17, 229764, "", "=q4=Pauldrons of the Fallen Defender", "=q1=#m1# =ds=#c1#, #c5#, #c9#", "", "34.69%"};
 		{ 18, 229762, "", "=q4=Pauldrons of the Fallen Hero", "=q1=#m1# =ds=#c2#, #c3#, #c8#", "", "25.62%"};
-		{ 20, 229434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
+		{ 20, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		Next = "GruulGruulHEROIC";
 	};
 
@@ -1856,11 +1856,11 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 7, 228822, "", "=q4=Teeth of Gruul", "=ds=#s2#", "", "11.47%"};
 		{ 8, 228823, "", "=q4=Eye of Gruul", "=ds=#s14#", "", "6.73%"};
 		{ 9, 228830, "", "=q4=Dragonspine Trophy", "=ds=#s14#", "", "11.72%"};
-		{ 11, 231750, "", "=q1=Earthen Signet", "=ds=#m3#", "", "100%"};
+		{ 11, 31750, "", "=q1=Earthen Signet", "=ds=#m3#", "", "100%"};
 		{ 16, 229766, "", "=q4=Leggings of the Fallen Champion", "=q1=#m1# =ds=#c4#, #c6#, #c7#", "", "23.69%"};
 		{ 17, 229767, "", "=q4=Leggings of the Fallen Defender", "=q1=#m1# =ds=#c1#, #c5#, #c9#", "", "17.46%"};
 		{ 18, 229765, "", "=q4=Leggings of the Fallen Hero", "=q1=#m1# =ds=#c2#, #c3#, #c8#", "", "30.17%"};
-		{ 20, 229434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
+		{ 20, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		{ 22, 228802, "", "=q4=Bloodmaw Magus-Blade", "=ds=#h3#, #w10#", "", "9.23%"};
 		{ 23, 228794, "", "=q4=Axe of the Gronn Lords", "=ds=#h2#, #w1#", "", "6.73%"};
 		{ 24, 228825, "", "=q4=Aldori Legacy Defender", "=ds=#w8#", "", "2.99%"};
@@ -2175,17 +2175,17 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 11, 228782, "", "=q4=Crystalheart Pulse-Staff", "=ds=#w9#"};
 		{ 12, 229458, "", "=q4=Aegis of the Vindicator", "=ds=#w8#"};
 		{ 13, 228783, "", "=q4=Eredar Wand of Obliteration", "=ds=#w12#"};
-		{ 15, 234846, "", "=q2=Black Sack of Gems", "=ds=#e1#"};
+		{ 15, 34846, "", "=q2=Black Sack of Gems", "=ds=#e1#"};
 		{ 16, 229754, "", "=q4=Chestguard of the Fallen Champion", "=q1=#m1# =ds=#c4#, #c6#, #c7#"};
 		{ 17, 229753, "", "=q4=Chestguard of the Fallen Defender", "=q1=#m1# =ds=#c1#, #c5#, #c9#"};
 		{ 18, 229755, "", "=q4=Chestguard of the Fallen Hero", "=q1=#m1# =ds=#c2#, #c3#, #c8#"};
-		{ 20, 229434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
+		{ 20, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		{ 22, 232385, "", "=q4=Magtheridon's Head", "=ds=#m2#", "", "100%"};
 		{ 23, 228791, "", "=q4=Ring of the Recalcitrant", "=q1=#m4#: =ds=#s13#"};
 		{ 24, 228790, "", "=q4=Naaru Lightwarden's Band", "=q1=#m4#: =ds=#s13#"};
 		{ 25, 228793, "", "=q4=Band of Crimson Fury", "=q1=#m4#: =ds=#s13#"};
 		{ 26, 228792, "", "=q4=A'dal's Signet of Defense", "=q1=#m4#: =ds=#s13#"};
-		{ 28, 234845, "", "=q4=Pit Lord's Satchel", "=ds=#e1# #m15#"};
+		{ 28, 34845, "", "=q4=Pit Lord's Satchel", "=ds=#e1# #m15#"};
 	};
 
 		----------------
@@ -2492,9 +2492,9 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 16, 228509, "", "=q4=Worgen Claw Necklace", "=ds=#s2#", "", "17.16%"};
 		{ 17, 228510, "", "=q4=Spectral Band of Innervation", "=ds=#s13#", "", "10.70%"};
 		{ 18, 228504, "", "=q4=Steelhawk Crossbow", "=ds=#w3#", "", "12.44%"};
-		{ 19, 230480, "", "=q4=Fiery Warhorse's Reins", "=ds=#e12#", "", "0.25%"};
-		{ 21, 229434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
-		{ 23, 223809, "", "=q3=Schematic: Stabilized Eternium Scope", "=ds=#p5# (375)", "", "1.00%"};
+		{ 19, 30480, "", "=q4=Fiery Warhorse's Reins", "=ds=#e12#", "", "0.25%"};
+		{ 21, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
+		{ 23, 23809, "", "=q3=Schematic: Stabilized Eternium Scope", "=ds=#p5# (375)", "", "1.00%"};
 		Next = "KaraMoroesHEROIC";
 	};
 
@@ -2506,19 +2506,19 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 5, 228567, "", "=q4=Belt of Gale Force", "=ds=#s10#, #a3#", "", "12.05%"};
 		{ 6, 228566, "", "=q4=Crimson Girdle of the Indomitable", "=ds=#s10#, #a4#", "", "10.81%"};
 		{ 7, 228569, "", "=q4=Boots of Valiance", "=ds=#s12#, #a4#", "", "11.33%"};
-		{ 9, 229434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
+		{ 9, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		{ 16, 228530, "", "=q4=Brooch of Unquenchable Fury", "=ds=#s2#", "", "12.25%"};
 		{ 17, 228528, "", "=q4=Moroes' Lucky Pocket Watch", "=ds=#s14#", "", "12.05%"};
 		{ 18, 228525, "", "=q4=Signet of Unshakable Faith", "=ds=#s15#", "", "14.54%"};
 		{ 19, 228568, "", "=q4=Idol of the Avian Heart", "=ds=#s16#, #w14#", "", "14.08%"};
 		{ 20, 228524, "", "=q4=Emerald Ripper", "=ds=#h1#, #w4#", "", "12.90%"};
-		{ 22, 222559, "", "=q3=Formula: Enchant Weapon - Mongoose", "=ds=#p4# (375)", "", "1.05%"};
+		{ 22, 22559, "", "=q3=Formula: Enchant Weapon - Mongoose", "=ds=#p4# (375)", "", "1.05%"};
 		Prev = "KaraAttumenHEROIC";
 		Next = "KaraMaidenHEROIC";
 	};
 
 	AtlasLoot_Data["KaraKeannaLogHEROIC"] = {
-		{ 1, 224492, "", "=q1=Keanna's Log", "=ds=#m3#"};
+		{ 1, 24492, "", "=q1=Keanna's Log", "=ds=#m3#"};
 	};
 
 	AtlasLoot_Data["KaraMaidenHEROIC"] = {
@@ -2534,14 +2534,14 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 16, 228516, "", "=q4=Barbed Choker of Discipline", "=ds=#s2#", "", "11.48%"};
 		{ 17, 228523, "", "=q4=Totem of Healing Rains", "=ds=#s16#, #w15#", "", "14.58%"};
 		{ 18, 228522, "", "=q4=Shard of the Virtuous", "=ds=#h3#, #w6#", "", "10.69%"};
-		{ 20, 229434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
+		{ 20, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		Prev = "KaraMoroesHEROIC";
 		Next = "KaraOperaEventHEROIC";
 	};
 
 	AtlasLoot_Data["KaraOperaEventHEROIC"] = {
 		{ 1, 0, "INV_Box_01", "=q6="..AL["Shared Drops"], ""};
-		{ 2, 229434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
+		{ 2, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		{ 3, 228594, "", "=q4=Trial-FireTrousers", "=ds=#s11#, #a1#", "", "15.96%"};
 		{ 4, 228591, "", "=q4=Earthsoul Leggings", "=ds=#s11#, #a2#", "", "12.45%"};
 		{ 5, 228589, "", "=q4=Beastmaw Pauldrons", "=ds=#s3#, #a3#", "", "12.54%"};
@@ -2575,14 +2575,14 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 5, 228610, "", "=q4=Ferocious Swift-Kickers", "=ds=#s12#, #a3#", "", "15.71%"};
 		{ 6, 228597, "", "=q4=Panzar'Thar Breastplate", "=ds=#s5#, #a4#", "", "10.00%"};
 		{ 7, 228608, "", "=q4=Ironstriders of Urgency", "=ds=#s12#, #a4#", "", "9.05%"};
-		{ 9, 231751, "", "=q1=Blazing Signet", "=ds=#m3#", "", "100%"};
-		{ 10, 224139, "", "=q1=Faint Arcane Essence", "=ds=#m3#", "", "100%"};
+		{ 9, 31751, "", "=q1=Blazing Signet", "=ds=#m3#", "", "100%"};
+		{ 10, 24139, "", "=q1=Faint Arcane Essence", "=ds=#m3#", "", "100%"};
 		{ 16, 228609, "", "=q4=Emberspur Talisman", "=ds=#s2#", "", "13.33%"};
 		{ 17, 228603, "", "=q4=Talisman of Nightbane", "=ds=#s15#", "", "12.62%"};
 		{ 18, 228604, "", "=q4=Nightstaff of the Everliving", "=ds=#w9#", "", "16.67%"};
 		{ 19, 228611, "", "=q4=Dragonheart Flameshield", "=ds=#w8#", "", "13.57%"};
 		{ 20, 228606, "", "=q4=Shield of Impenetrable Darkness", "=ds=#w8#", "", "12.14%"};
-		{ 22, 229434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
+		{ 22, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		Prev = "KaraOperaEventHEROIC";
 		Next = "KaraCuratorHEROIC";
 	};
@@ -2594,7 +2594,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 4, 228621, "", "=q4=Wrynn Dynasty Greaves", "=ds=#s11#, #a4#", "", "11.85%"};
 		{ 5, 228649, "", "=q4=Garona's Signet Ring", "=ds=#s13#", "", "12.07%"};
 		{ 6, 228633, "", "=q4=Staff of Infinite Mysteries", "=ds=#w9#", "", "12.28%"};
-		{ 8, 229434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
+		{ 8, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		{ 16, 229757, "", "=q4=Gloves of the Fallen Champion", "=q1=#m1# =ds=#c4#, #c6#, #c7#", "", "29.42%"};
 		{ 17, 229758, "", "=q4=Gloves of the Fallen Defender", "=q1=#m1# =ds=#c1#, #c5#, #c9#", "", "23.60%"};
 		{ 18, 229756, "", "=q4=Gloves of the Fallen Hero", "=q1=#m1# =ds=#c2#, #c3#, #c8#", "", "21.66%"};
@@ -2610,13 +2610,13 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 5, 228655, "", "=q4=Cord of Nature's Sustenance", "=ds=#s10#, #a2#", "", "14.93%"};
 		{ 6, 228656, "", "=q4=Girdle of the Prowler", "=ds=#s10#, #a3#", "", "17.91%"};
 		{ 7, 228662, "", "=q4=Breastplate of the Lightbinder", "=ds=#s5#, #a4#", "", "17.31%"};
-		{ 9, 229434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
+		{ 9, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		{ 16, 228661, "", "=q4=Mender's Heart-Ring", "=ds=#s13#", "", "11.64%"};
 		{ 17, 228785, "", "=q4=The Lightning Capacitor", "=ds=#s14#", "", "10.75%"};
 		{ 18, 228657, "", "=q4=Fool's Bane", "=ds=#h1#, #w6#", "", "14.63%"};
 		{ 19, 228658, "", "=q4=Terestian's Stranglestaff", "=ds=#w9#", "", "7.46%"};
 		{ 20, 228659, "", "=q4=Xavian Stiletto", "=ds=#w11#", "", "13.43%"};
-		{ 22, 222561, "", "=q3=Formula: Enchant Weapon - Soulfrost", "=ds=#p4# (375)", "", "0.30%"};
+		{ 22, 22561, "", "=q3=Formula: Enchant Weapon - Soulfrost", "=ds=#p4# (375)", "", "0.30%"};
 		Prev = "KaraCuratorHEROIC";
 		Next = "KaraAranHEROIC";
 	};
@@ -2629,14 +2629,14 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 5, 228669, "", "=q4=Rapscallion Boots", "=ds=#s12#, #a2#", "", "11.32%"};
 		{ 6, 228671, "", "=q4=Steelspine Faceguard", "=ds=#s1#, #a3#", "", "12.21%"};
 		{ 7, 228666, "", "=q4=Pauldrons of the Justice-Seeker", "=ds=#s3#, #a4#", "", "11.58%"};
-		{ 9, 229434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
-		{ 11, 223933, "", "=q1=Medivh's Journal", "=ds=#m3#", "", "100%"};
+		{ 9, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
+		{ 11, 23933, "", "=q1=Medivh's Journal", "=ds=#m3#", "", "100%"};
 		{ 16, 228674, "", "=q4=Saberclaw Talisman", "=ds=#s2#", "", "11.20%"};
 		{ 17, 228675, "", "=q4=Shermanar Great-Ring", "=ds=#s13#", "", "10.43%"};
 		{ 18, 228727, "", "=q4=Pendant of the Violet Eye", "=ds=#s14#", "", "15.39%"};
 		{ 19, 228728, "", "=q4=Aran's Soothing Sapphire", "=ds=#s15#", "", "12.72%"};
 		{ 20, 228673, "", "=q4=Tirisfal Wand of Ascendancy", "=ds=#w12#", "", "7.25%"};
-		{ 22, 222560, "", "=q3=Formula: Enchant Weapon - Sunfire", "=ds=#p4# (375)", "", "0.76%"};
+		{ 22, 22560, "", "=q3=Formula: Enchant Weapon - Sunfire", "=ds=#p4# (375)", "", "0.76%"};
 		Prev = "KaraIllhoofHEROIC";
 		Next = "KaraNetherspiteHEROIC";
 	};
@@ -2654,7 +2654,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 17, 228730, "", "=q4=Mithril Band of the Unscarred", "=ds=#s13#", "", "10.99%"};
 		{ 18, 228734, "", "=q4=Jewel of Infinite Possibilities", "=ds=#s15#", "", "11.64%"};
 		{ 19, 228729, "", "=q4=Spiteblade", "=ds=#h1#, #w10#", "", "6.32%"};
-		{ 21, 229434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
+		{ 21, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		Prev = "KaraAranHEROIC";
 		Next = "KaraChessHEROIC";
 	};
@@ -2672,7 +2672,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 17, 228753, "", "=q4=Ring of Recurrence", "=ds=#s13#", "", "12.56%"};
 		{ 18, 228749, "", "=q4=King's Defender", "=ds=#h1#, #w10#", "", "12.07%"};
 		{ 19, 228754, "", "=q4=Triptych Shield of the Ancients", "=ds=#w8#", "", "13.30%"};
-		{ 21, 229434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
+		{ 21, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		Prev = "KaraNetherspiteHEROIC";
 		Next = "KaraPrinceHEROIC";
 	};
@@ -2693,7 +2693,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 16, 229760, "", "=q4=Helm of the Fallen Champion", "=q1=#m1# =ds=#c4#, #c6#, #c7#", "", "23.01%"};
 		{ 17, 229761, "", "=q4=Helm of the Fallen Defender", "=q1=#m1# =ds=#c1#, #c5#, #c9#", "", "26.73%"};
 		{ 18, 229759, "", "=q4=Helm of the Fallen Hero", "=q1=#m1# =ds=#c2#, #c3#, #c8#", "", "20.48%"};
-		{ 20, 229434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
+		{ 20, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		Prev = "KaraChessHEROIC";
 	};
 
@@ -3043,7 +3043,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 16, 234848, "", "=q4=Bracers of the Forgotten Conqueror", "=q1=#m1# =ds=#c4#, #c5#, #c9#", "", "10%"};
 		{ 17, 234851, "", "=q4=Bracers of the Forgotten Protector", "=q1=#m1# =ds=#c9#, #c2#, #c7#", "", "11%"};
 		{ 18, 234852, "", "=q4=Bracers of the Forgotten Vanquisher", "=q1=#m1# =ds=#c6#, #c3#, #c1#", "", "12%"};
-		{ 20, 229434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
+		{ 20, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		Next = "SPBrutallusHEROIC";
 	};
 
@@ -3058,7 +3058,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 16, 234853, "", "=q4=Belt of the Forgotten Conqueror", "=q1=#m1# =ds=#c4#, #c5#, #c9#", "", "74%"};
 		{ 17, 234854, "", "=q4=Belt of the Forgotten Protector", "=q1=#m1# =ds=#c9#, #c2#, #c7#", "", "70%"};
 		{ 18, 234855, "", "=q4=Belt of the Forgotten Vanquisher", "=q1=#m1# =ds=#c6#, #c3#, #c1#", "", "75%"};
-		{ 20, 229434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
+		{ 20, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		Prev = "SPKalecgosHEROIC";
 		Next = "SPFelmystHEROIC";
 	};
@@ -3075,7 +3075,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 16, 234856, "", "=q4=Boots of the Forgotten Conqueror", "=q1=#m1# =ds=#c4#, #c5#, #c9#", "", "79%"};
 		{ 17, 234857, "", "=q4=Boots of the Forgotten Protector", "=q1=#m1# =ds=#c9#, #c2#, #c7#", "", "86%"};
 		{ 18, 234858, "", "=q4=Boots of the Forgotten Vanquisher", "=q1=#m1# =ds=#c6#, #c3#, #c1#", "", "77%"};
-		{ 20, 229434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
+		{ 20, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		Prev = "SPBrutallusHEROIC";
 		Next = "SPEredarTwinsHEROIC";
 	};
@@ -3108,7 +3108,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 26, 234203, "", "=q4=Grip of Mannoroth", "=ds=#h4#, #w13#", "", "20%"};
 		{ 27, 234198, "", "=q4=Stanchion of Primal Instinct", "=ds=#w9#", "", "19%"};
 		{ 28, 234196, "", "=q4=Golden Bow of Quel'Thalas", "=ds=#w3#", "", "18%"};
-		{ 30, 229434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
+		{ 30, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		Prev = "SPFelmystHEROIC";
 		Next = "SPMuruHEROIC";
 	};
@@ -3142,7 +3142,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 26, 234428, "", "=q4=Steely Naaru Sliver", "=ds=#s14#", "", "15%"};
 		{ 27, 234214, "", "=q4=Muramasa", "=ds=#h1#, #w10#", "", "16%"};
 		{ 28, 234231, "", "=q4=Aegis of Angelic Fortune", "=ds=#w8#", "", "14%"};
-		{ 30, 229434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
+		{ 30, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		Prev = "SPEredarTwinsHEROIC";
 		Next = "SPKiljaedenHEROIC";
 	};
@@ -3677,7 +3677,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 17, 229948, "", "=q4=Claw of the Phoenix", "=ds=#h4#, #w13#", "", "10%"};
 		{ 18, 229924, "", "=q4=Netherbane", "=ds=#h1#, #w1#", "", "21%"};
 		{ 19, 229949, "", "=q4=Arcanite Steam-Pistol", "=ds=#w5#", "", "22%"};
-		{ 21, 229434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
+		{ 21, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		Next = "TKEyeVoidReaverHEROIC";
 	};
 
@@ -3692,7 +3692,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 16, 230248, "", "=q4=Pauldrons of the Vanquished Champion", "=q1=#m1# =ds=#c4#, #c6#, #c7#", "", "61%"};
 		{ 17, 230249, "", "=q4=Pauldrons of the Vanquished Defender", "=q1=#m1# =ds=#c1#, #c5#, #c9#", "", "62%"};
 		{ 18, 230250, "", "=q4=Pauldrons of the Vanquished Hero", "=q1=#m1# =ds=#c2#, #c3#, #c8#", "", "61%"};
-		{ 20, 229434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
+		{ 20, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		Prev = "TKEyeAlarHEROIC";
 		Next = "TKEyeSolarianHEROIC";
 	};
@@ -3711,7 +3711,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 18, 229962, "", "=q4=Heartrazor", "=ds=#h1#, #w4#", "", "23%"};
 		{ 19, 229981, "", "=q4=Etherium Life-Staff", "=ds=#w9#", "", "21%"};
 		{ 20, 229982, "", "=q4=Wand of the Forgotten Star", "=ds=#w12#", "", "18%"};
-		{ 22, 229434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
+		{ 22, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		Prev = "TKEyeVoidReaverHEROIC";
 		Next = "TKEyeKaelthasHEROIC";
 	};
@@ -3729,17 +3729,17 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 10, 229993, "", "=q4=Twinblade of the Phoenix", "=ds=#h2#, #w10#", "", "12%"};
 		{ 11, 229996, "", "=q4=Rod of the Sun King", "=ds=#h1#, #w6#", "", "15%"};
 		{ 12, 229988, "", "=q4=The Nexus Key", "=ds=#w9#", "", "14%"};
-		{ 14, 229434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
+		{ 14, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		{ 16, 230236, "", "=q4=Chestguard of the Vanquished Champion", "=q1=#m1# =ds=#c4#, #c6#, #c7#", "", "69%"};
 		{ 17, 230237, "", "=q4=Chestguard of the Vanquished Defender", "=q1=#m1# =ds=#c1#, #c5#, #c9#", "", "68%"};
 		{ 18, 230238, "", "=q4=Chestguard of the Vanquished Hero", "=q1=#m1# =ds=#c2#, #c3#, #c8#", "", "66%"};
-		{ 20, 232458, "", "=q4=Ashes of Al'ar", "=ds=#e12#", "", "2%"};
+		{ 20, 32458, "", "=q4=Ashes of Al'ar", "=ds=#e12#", "", "2%"};
 		{ 22, 232405, "", "=q4=Verdant Sphere", "=ds=#m2#", "", "100%"};
 		{ 23, 230018, "", "=q4=Lord Sanguinar's Claim", "=q1=#m4#: =ds=#s2#"};
 		{ 24, 230017, "", "=q4=Telonicus's Pendant of Mayhem", "=q1=#m4#: =ds=#s2#"};
 		{ 25, 230007, "", "=q4=The Darkener's Grasp", "=q1=#m4#: =ds=#s2#"};
 		{ 26, 230015, "", "=q4=The Sun King's Talisman", "=q1=#m4#: =ds=#s2#"};
-		{ 28, 229905, "", "=q1=Kael's Vial Remnant", "=ds=#m3#", "", "37%"};
+		{ 28, 29905, "", "=q1=Kael's Vial Remnant", "=ds=#m3#", "", "37%"};
 		Prev = "TKEyeSolarianHEROIC";
 	};
 
@@ -3918,7 +3918,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		----------------------
 
 	AtlasLoot_Data["ZANalorakkHEROIC"] = {
-		{ 1, 229434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
+		{ 1, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		{ 2, 233203, "", "=q4=Robes of Heavenly Purpose", "=ds=#s5#, #a1#", "", "13%"};
 		{ 3, 233285, "", "=q4=Fury of the Ursine", "=ds=#s8#, #a1#", "", "13%"};
 		{ 4, 233211, "", "=q4=Bladeangel's Money Belt", "=ds=#s10#, #a2#", "", "14%"};
@@ -3926,12 +3926,12 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 6, 233327, "", "=q4=Mask of Introspection", "=ds=#s1#, #a4#", "", "13%"};
 		{ 7, 233191, "", "=q4=Jungle Stompers", "=ds=#s12#, #a4#", "", "13%"};
 		{ 8, 233640, "", "=q4=Fury", "=ds=#h4#, #w13#", "", "14%"};
-		{ 10, 233307, "", "=q3=Formula: Enchant Weapon - Executioner", "=ds=#p4# (375)", "", "3%"};
+		{ 10, 33307, "", "=q3=Formula: Enchant Weapon - Executioner", "=ds=#p4# (375)", "", "3%"};
 		Next = "ZAAkilZonHEROIC";
 	};
 
 	AtlasLoot_Data["ZAAkilZonHEROIC"] = {
-		{ 1, 229434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
+		{ 1, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		{ 2, 233286, "", "=q4=Mojo-mender's Mask", "=ds=#s1#, #a3#", "", "13%"};
 		{ 3, 233215, "", "=q4=Bloodstained Elven Battlevest", "=ds=#s5#, #a4#", "", "13%"};
 		{ 4, 233216, "", "=q4=Chestguard of Hidden Purpose", "=ds=#s5#, #a4#", "", "13%"};
@@ -3939,13 +3939,13 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 6, 233293, "", "=q4=Signet of Ancient Magics", "=ds=#s13#", "", "13%"};
 		{ 7, 233214, "", "=q4=Akil'zon's Talonblade", "=ds=#h1#, #w10#", "", "13%"};
 		{ 8, 233283, "", "=q4=Amani Punisher", "=ds=#h3#, #w6#", "", "14%"};
-		{ 10, 233307, "", "=q3=Formula: Enchant Weapon - Executioner", "=ds=#p4# (375)", "", "3%"};
+		{ 10, 33307, "", "=q3=Formula: Enchant Weapon - Executioner", "=ds=#p4# (375)", "", "3%"};
 		Prev = "ZANalorakkHEROIC";
 		Next = "ZAJanAlaiHEROIC";
 	};
 
 	AtlasLoot_Data["ZAJanAlaiHEROIC"] = {
-		{ 1, 229434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
+		{ 1, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		{ 2, 233357, "", "=q4=Footpads of Madness", "=ds=#s12#, #a1#", "", "13%"};
 		{ 3, 233356, "", "=q4=Helm of Natural Regeneration", "=ds=#s1#, #a2#", "", "13%"};
 		{ 4, 233329, "", "=q4=Shadowtooth Trollskin Cuirass", "=ds=#s5#, #a2#", "", "13%"};
@@ -3953,13 +3953,13 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 6, 233354, "", "=q4=Wub's Cursed Hexblade", "=ds=#h3#, #w4#", "", "14%"};
 		{ 7, 233326, "", "=q4=Bulwark of the Amani Empire", "=ds=#w8#", "", "13%"};
 		{ 8, 233332, "", "=q4=Enamelled Disc of Mojo", "=ds=#w8#", "", "12%"};
-		{ 10, 233307, "", "=q3=Formula: Enchant Weapon - Executioner", "=ds=#p4# (375)", "", "3%"};
+		{ 10, 33307, "", "=q3=Formula: Enchant Weapon - Executioner", "=ds=#p4# (375)", "", "3%"};
 		Prev = "ZAAkilZonHEROIC";
 		Next = "ZAHalazziHEROIC";
 	};
 
 	AtlasLoot_Data["ZAHalazziHEROIC"] = {
-		{ 1, 229434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
+		{ 1, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		{ 2, 233317, "", "=q4=Robe of Departed Spirits", "=ds=#s5#, #a1#", "", "13%"};
 		{ 3, 233300, "", "=q4=Shoulderpads of Dancing Blades", "=ds=#s3#, #a2#", "", "14%"};
 		{ 4, 233322, "", "=q4=Shimmer-pelt Vest", "=ds=#s5#, #a2#", "", "13%"};
@@ -3967,13 +3967,13 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 6, 233299, "", "=q4=Spaulders of the Advocate", "=ds=#s3#, #a4#", "", "13%"};
 		{ 7, 233303, "", "=q4=Skullshatter Warboots", "=ds=#s12#, #a4#", "", "14%"};
 		{ 8, 233297, "", "=q4=The Savage's Choker", "=ds=#s2#", "", "13%"};
-		{ 10, 233307, "", "=q3=Formula: Enchant Weapon - Executioner", "=ds=#p4# (375)", "", "3%"};
+		{ 10, 33307, "", "=q3=Formula: Enchant Weapon - Executioner", "=ds=#p4# (375)", "", "3%"};
 		Prev = "ZAJanAlaiHEROIC";
 		Next = "ZAMalacrassHEROIC";
 	};
 
 	AtlasLoot_Data["ZAMalacrassHEROIC"] = {
-		{ 1, 229434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
+		{ 1, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		{ 2, 233592, "", "=q4=Cloak of Ancient Rituals", "=ds=#s4#", "", "13%"};
 		{ 3, 233453, "", "=q4=Hood of Hexing", "=ds=#s1#, #a1#", "", "13%"};
 		{ 4, 233463, "", "=q4=Hood of the Third Eye", "=ds=#s1#, #a1#", "", "13%"};
@@ -3981,7 +3981,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 6, 233464, "", "=q4=Hex Lord's Voodoo Pauldrons", "=ds=#s3#, #a3#", "", "13%"};
 		{ 7, 233421, "", "=q4=Battleworn Tuskguard", "=ds=#s1#, #a4#", "", "15%"};
 		{ 8, 233446, "", "=q4=Girdle of Stromgarde's Hope", "=ds=#s10#, #a4#", "", "15%"};
-		{ 10, 233307, "", "=q3=Formula: Enchant Weapon - Executioner", "=ds=#p4# (375)", "", "3%"};
+		{ 10, 33307, "", "=q3=Formula: Enchant Weapon - Executioner", "=ds=#p4# (375)", "", "3%"};
 		{ 16, 233829, "", "=q4=Hex Shrunken Head", "=ds=#s14#", "", "12%"};
 		{ 17, 234029, "", "=q4=Tiny Voodoo Mask", "=ds=#s14#", "", "25%"};
 		{ 18, 233828, "", "=q4=Tome of Diabolic Remedy", "=ds=#s14#", "", "13%"};
@@ -3994,7 +3994,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 	};
 
 	AtlasLoot_Data["ZAZuljinHEROIC"] = {
-		{ 1, 229434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
+		{ 1, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		{ 2, 233471, "", "=q4=Two-toed Sandals", "=ds=#s12#, #a1#", "", "15%"};
 		{ 3, 233479, "", "=q4=Grimgin Faceguard", "=ds=#s1#, #a2#", "", "15%"};
 		{ 4, 233469, "", "=q4=Hauberk of the Empire's Champion", "=ds=#s5#, #a3#", "", "16%"};
@@ -4002,7 +4002,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 6, 233466, "", "=q4=Loop of Cursed Bones", "=ds=#s2#", "", "14%"};
 		{ 7, 233830, "", "=q4=Ancient Aqir Artifact", "=ds=#s14#", "", "14%"};
 		{ 8, 233831, "", "=q4=Berserker's Call", "=ds=#s14#", "", "14%"};
-		{ 10, 233307, "", "=q3=Formula: Enchant Weapon - Executioner", "=ds=#p4# (375)", "", "3%"};
+		{ 10, 33307, "", "=q3=Formula: Enchant Weapon - Executioner", "=ds=#p4# (375)", "", "3%"};
 		{ 16, 233467, "", "=q4=Blade of Twisted Visions", "=ds=#h3#, #w10#", "", "14%"};
 		{ 17, 233478, "", "=q4=Jin'rohk, The Great Apocalypse", "=ds=#h2#, #w10#", "", "14%"};
 		{ 18, 233476, "", "=q4=Cleaver of the Unforgiving", "=ds=#h1#, #w1#", "", "15%"};
