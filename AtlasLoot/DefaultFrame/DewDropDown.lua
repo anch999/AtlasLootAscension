@@ -105,62 +105,91 @@ AtlasLoot_DewDropDown = {
 	[2] = {
 		[AL["BC Instances"]] = {
 			[1] = {
-				[BabbleZone["Auchindoun"]] = {
-					{ BabbleZone["Mana-Tombs"], "AuchManaTombs", "Submenu" },
-					{ BabbleZone["Auchenai Crypts"], "AuchCrypts", "Submenu" },
-					{ BabbleZone["Sethekk Halls"], "AuchSethekk", "Submenu" },
-					{ BabbleZone["Shadow Labyrinth"], "AuchShadowLab", "Submenu" },
-				}, 
+				{ BabbleZone["Raids:"], "BCKeys", "Table", "Header" },
 			},
 			[2] = {
-				{ BabbleZone["Black Temple"], "BlackTemple", "Submenu" },
-			},
-			[3] = {
-				[BabbleZone["Caverns of Time"]] = {
-					{ BabbleZone["Old Hillsbrad Foothills"], "CoTOldHillsbrad", "Submenu" },
-					{ BabbleZone["The Black Morass"], "CoTBlackMorass", "Submenu" },
-					{ BabbleZone["Hyjal Summit"], "CoTHyjal", "Submenu" },
-				},
-			},
-			[4] = {
-				[BabbleZone["Coilfang Reservoir"]] = {
-					{ BabbleZone["The Slave Pens"], "CFRSlavePens", "Submenu" },
-					{ BabbleZone["The Underbog"], "CFRUnderbog", "Submenu" },
-					{ BabbleZone["The Steamvault"], "CFRSteamvault", "Submenu" },
-					{ BabbleZone["Serpentshrine Cavern"], "CFRSerpentshrine", "Submenu" },
-				},
-			},
-			[5] = {
-				{ BabbleZone["Gruul's Lair"], "Gruul", "Submenu" },
-			},
-			[6] = {
-				[BabbleZone["Hellfire Citadel"]] = {
-					{ BabbleZone["Hellfire Ramparts"], "HCRamparts", "Submenu" },
-					{ BabbleZone["The Blood Furnace"], "HCFurnace", "Submenu" },
-					{ BabbleZone["The Shattered Halls"], "HCShatteredHalls", "Submenu" },
-					{ BabbleZone["Magtheridon's Lair"], "HCMagtheridon", "Table" },
-				}, 
-			},
-			[7] = {
 				{ BabbleZone["Karazhan"], "Karazhan", "Submenu" },
 			},
-			[8] = {
-				{ BabbleZone["Magisters' Terrace"], "MagistersTerrace", "Submenu" },
+			[3] = {
+				{ BabbleZone["Gruul's Lair"], "Gruul", "Submenu" },
 			},
-			[9] = {
-				{ BabbleZone["Sunwell Plateau"], "SunwellPlateau", "Submenu" },
+			[4] = {
+				{ BabbleZone["Magtheridon's Lair"], "HCMagtheridon", "Table" },
 			},
-			[10] = {
-				[BabbleZone["Tempest Keep"]] = {
-					{ BabbleZone["The Mechanar"], "TKMech", "Submenu" },
-					{ BabbleZone["The Botanica"], "TKBot", "Submenu" },
-					{ BabbleZone["The Arcatraz"], "TKArc", "Submenu" },
-					{ BabbleZone["The Eye"], "TKEye", "Submenu" },
-				},
-			},
-			[11] = {
+			[5] = {
 				{ BabbleZone["Zul'Aman"], "ZulAman", "Submenu" },
 			},
+			[6] = {
+				{ BabbleZone["Serpentshrine Cavern"], "CFRSerpentshrine", "Submenu" },
+			},
+			[7] = {
+				{ BabbleZone["The Eye"], "TKEye", "Submenu" },
+			},
+			[8] = {
+				{ BabbleZone["Hyjal Summit"], "CoTHyjal", "Submenu" },
+			},
+			[9] = {
+				{ BabbleZone["Black Temple"], "BlackTemple", "Submenu" },
+			},
+			[10] = {
+				{ BabbleZone["Sunwell Plateau"], "SunwellPlateau", "Submenu" },
+			},
+
+---- Dugneons -----
+
+			[11] = {
+				{ BabbleZone["Dungeons:"], "BCKeys", "Table", "Header" },
+			},
+			
+			[12] = {
+				{ BabbleZone["The Arcatraz"], "TKArc", "Submenu" },
+			},
+			[13] = {
+				{ BabbleZone["Auchenai Crypts"], "AuchCrypts", "Submenu" },
+			},
+			[14] = {
+				{ BabbleZone["The Black Morass"], "CoTBlackMorass", "Submenu" },
+			},
+			[15] = {
+				{ BabbleZone["The Blood Furnace"], "HCFurnace", "Submenu" },
+			},
+			[16] = {
+				{ BabbleZone["The Botanica"], "TKBot", "Submenu" },
+			},
+			[17] = {
+				{ BabbleZone["Hellfire Ramparts"], "HCRamparts", "Submenu" },
+			},
+			[18] = {
+				{ BabbleZone["Magisters' Terrace"], "MagistersTerrace", "Submenu" },
+			},
+			[19] = {
+				{ BabbleZone["Mana-Tombs"], "AuchManaTombs", "Submenu" },
+			},
+			[20] = {
+				{ BabbleZone["The Mechanar"], "TKMech", "Submenu" },
+			},
+			[21] = {
+				{ BabbleZone["Old Hillsbrad Foothills"], "CoTOldHillsbrad", "Submenu" },
+			},
+			[22] = {
+				{ BabbleZone["Sethekk Halls"], "AuchSethekk", "Submenu" },
+			},
+			[23] = {
+				{ BabbleZone["Shadow Labyrinth"], "AuchShadowLab", "Submenu" },
+			},
+			[24] = {
+				{ BabbleZone["The Shattered Halls"], "HCShatteredHalls", "Submenu" },
+			},
+			[25] = {
+				{ BabbleZone["The Slave Pens"], "CFRSlavePens", "Submenu" },
+			},
+			[26] = {
+				{ BabbleZone["The Steamvault"], "CFRSteamvault", "Submenu" },
+			},
+			[27] = {
+				{ BabbleZone["The Underbog"], "CFRUnderbog", "Submenu" },
+			},
+
 		},
 	},
 	[3] = {
