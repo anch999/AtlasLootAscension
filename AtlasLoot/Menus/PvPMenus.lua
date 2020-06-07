@@ -80,15 +80,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 	};
 	
 	AtlasLoot_Data["PVP70RepSET"] = {
-		{ 3, "PVP70RepLeather", "Spell_Nature_Regeneration", "=ds=".."Druid", ""};
-		{ 4, "PVP70RepCloth", "Spell_Frost_IceStorm", "=ds="..LOCALIZED_CLASS_NAMES_MALE["MAGE"], ""};
-		{ 5, "PVP70RepCloth", "Spell_Holy_PowerWordShield", "=ds="..LOCALIZED_CLASS_NAMES_MALE["PRIEST"], ""};
-		{ 6, "PVP70RepMail", "Spell_FireResistanceTotem_01", "=ds="..LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], ""};
-		{ 7, "PVP70RepPlate", "INV_Shield_05", "=ds="..LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], ""};
-		{ 18, "PVP70RepMail", "Ability_Hunter_RunningShot", "=ds="..LOCALIZED_CLASS_NAMES_MALE["HUNTER"], ""};
-		{ 19, "PVP70RepPlate", "Spell_Holy_SealOfMight", "=ds="..LOCALIZED_CLASS_NAMES_MALE["PALADIN"], ""};
-		{ 20, "PVP70RepLeather", "Ability_BackStab", "=ds="..LOCALIZED_CLASS_NAMES_MALE["ROGUE"], ""};
-		{ 21, "PVP70RepCloth", "Spell_Shadow_CurseOfTounges", "=ds="..LOCALIZED_CLASS_NAMES_MALE["WARLOCK"], ""};
+		{ 2, "PVP70RepCloth", "INV_Boots_Cloth_12", "=ds="..BabbleInventory["Cloth"], ""};
+		{ 3, "PVP70RepMail", "INV_Boots_Plate_06", "=ds="..BabbleInventory["Mail"], ""};
+		{ 17, "PVP70RepLeather", "INV_Boots_08", "=ds="..BabbleInventory["Leather"], ""};
+		{ 18, "PVP70RepPlate", "INV_Boots_Plate_04", "=ds="..BabbleInventory["Plate"], ""};
 		Back = "PVPMENU";
 	};
 
