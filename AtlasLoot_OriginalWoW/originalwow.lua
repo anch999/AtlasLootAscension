@@ -4930,7 +4930,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 27, 19826, "", "=q4=Zandalar Freethinker's Belt", "=q4=#zgt2#, =ds=#r3#"};
 		{ 28, 19827, "", "=q4=Zandalar Freethinker's Armguards", "=q4=#zgt3#, =ds=#r2#"};
 		Next = "ZGSets2";
-		Back = "SETMENU";
+		Back = "SETSCLASSIC";
 	};
 
 	AtlasLoot_Data["ZGSets2"] = {
@@ -4960,7 +4960,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 28, 19848, "", "=q4=Zandalar Demoniac's Wraps", "=q4=#zgt5#, =ds=#r2#"};
 		Next = "ZGSets3";
 		Prev = "ZGSets1";
-		Back = "SETMENU";
+		Back = "SETSCLASSIC";
 	};
 
 	AtlasLoot_Data["ZGSets3"] = {
@@ -4971,7 +4971,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 5, 19823, "", "=q4=Zandalar Vindicator's Belt", "=q4=#zgt7#, =ds=#r3#"};
 		{ 6, 19824, "", "=q4=Zandalar Vindicator's Armguards", "=q4=#zgt8#, =ds=#r2#"};
 		Prev = "ZGSets2";
-		Back = "SETMENU";
+		Back = "SETSCLASSIC";
 	};
 
 		-----------------
@@ -5004,7 +5004,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 28, 21406, "", "=q4=Cloak of Veiled Shadows", "=q3=#aq20t2#, =ds=#r4#"};
 		{ 29, 21405, "", "=q4=Band of Veiled Shadows", "=q3=#aq20t4#, =ds=#r3#"};
 		Next = "AQ20Sets2";
-		Back = "SETMENU";
+		Back = "SETSCLASSIC";
 	};
 
 	AtlasLoot_Data["AQ20Sets2"] = {
@@ -5021,7 +5021,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 13, 21394, "", "=q4=Drape of Unyielding Strength", "=q3=#aq20t2#, =ds=#r4#"};
 		{ 14, 21393, "", "=q4=Signet of Unyielding Strength", "=q3=#aq20t3#=ds=, #r3#"};
 		Prev = "AQ20Sets1";
-		Back = "SETMENU";
+		Back = "SETSCLASSIC";
 	};
 
 		-----------------
@@ -5054,7 +5054,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 27, 21391, "", "=q4=Avenger's Pauldrons", "=q4=#aq40t1#, =ds=#r1#"};
 		{ 28, 21388, "", "=q4=Avenger's Greaves", "=q4=#aq40t1#, =ds=#r1#"};
 		Next = "AQ40Sets2";
-		Back = "SETMENU";
+		Back = "SETSCLASSIC";
 	};
 
 	AtlasLoot_Data["AQ40Sets2"] = {
@@ -5084,7 +5084,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 28, 21338, "", "=q4=Doomcaller's Footwraps", "=q4=#aq40t1#, =ds=#r1#"};
 		Next = "AQ40Sets3";
 		Prev = "AQ40Sets1";
-		Back = "SETMENU";
+		Back = "SETSCLASSIC";
 	};
 
 	AtlasLoot_Data["AQ40Sets3"] = {
@@ -5095,7 +5095,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 5, 21330, "", "=q4=Conqueror's Spaulders", "=q4=#aq40t5#, =ds=#r1#"};
 		{ 6, 21333, "", "=q4=Conqueror's Greaves", "=q4=#aq40t5#, =ds=#r1#"};
 		Prev = "AQ40Sets2";
-		Back = "SETMENU";
+		Back = "SETSCLASSIC";
 	};
 
 		-----------------------

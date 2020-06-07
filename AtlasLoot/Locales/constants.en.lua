@@ -159,14 +159,17 @@ if AL then
 	AL["Misc Sets"] = true;
 	AL["Classic Sets"] = true;
 	AL["Burning Crusade Sets"] = true;
-	AL["Wrath Of The Lich King Sets"] = true;
+	AL["Burning Crusade Misc Sets"] = true;
+	AL["Wrath of the Lich King Sets"] = true;
 	AL["Ruins of Ahn'Qiraj Sets"] = true;
 	AL["Temple of Ahn'Qiraj Sets"] = true;
 	AL["Tabards"] = true;
 	AL["Tier 1/2 Sets"] = true;
 	AL["Tier 1/2/3 Sets"] = true;
 	AL["Tier 3 Sets"] = true;
-	AL["Tier 4/5/6 Sets"] = true;
+	AL["Tier 4 Sets"] = true;
+	AL["Tier 5 Sets"] = true;
+	AL["Tier 6 Sets"] = true;
 	AL["Tier 7/8 Sets"] = true;
 	AL["Upper Deck Card Game Items"] = true;
 	AL["Zul'Gurub Sets"] = true;
@@ -753,6 +756,7 @@ if AL then
 	AL["The Postmaster"] = true;
 	AL["Shard of the Gods"] = true;
 	AL["Zul'Gurub Rings"] = true;
+	AL["Misc Zul'Gurub Sets"] = true;
 	AL["Major Mojo Infusion"] = true;
 	AL["Overlord's Resolution"] = true;
 	AL["Prayer of the Primal"] = true;

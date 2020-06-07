@@ -5,31 +5,27 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 
 
 	AtlasLoot_Data["SETMENU"] = {
-		{ 2, "EMBLEMOFFROSTMENU", "inv_misc_frostemblem_01", "=ds="..AL["Emblem of Frost Rewards"], "=q5="..AL["Wrath of the Lich King"]};
-		{ 3, "EMBLEMOFTRIUMPHMENU", "spell_holy_summonchampion", "=ds="..AL["Emblem of Triumph Rewards"], "=q5="..AL["Wrath of the Lich King"]};
-		{ 4, "EMBLEMOFCONQUESTMENU", "Spell_Holy_ChampionsGrace", "=ds="..AL["Emblem of Conquest Rewards"], "=q5="..AL["Wrath of the Lich King"]};
-		{ 5, "EMBLEMOFVALORMENU", "Spell_Holy_ProclaimChampion_02", "=ds="..AL["Emblem of Valor Rewards"], "=q5="..AL["Wrath of the Lich King"]};
-		{ 6, "EMBLEMOFHEROISMMENU", "Spell_Holy_ProclaimChampion", "=ds="..AL["Emblem of Heroism Rewards"], "=q5="..AL["Wrath of the Lich King"]};
-		{ 7, "70TOKENMENU", "Spell_Holy_ChampionsBond", "=ds="..AL["Badge of Justice Rewards"], "=q5="..AL["Burning Crusade"]};
-		{ 8, "WORLDEPICS", "INV_Sword_76", "=ds="..AL["BoE World Epics"], ""};
-		{ 9, "Legendaries", "INV_Staff_Medivh", "=ds="..AL["Legendary Items"], ""};
-		{ 10, "MOUNTMENU", "INV_Misc_QirajiCrystal_05", "=ds="..AL["Mounts"], ""};
-		{ 11, "PETMENU", "INV_Box_PetCarrier_01", "=ds="..AL["Vanity Pets"], ""};
-		{ 12, "Tabards3", "INV_Shirt_GuildTabard_01", "=ds="..AL["Tabards"], ""};
-		{ 13, "CardGame1", "INV_Misc_Ticket_Tarot_Madness", "=ds="..AL["Upper Deck Card Game Items"], ""};
-		{ 15, "PVPMENU", "INV_Axe_02", "=ds="..AL["PvP Rewards"], ""};
-		{ 17, "SETSMISCMENU", "INV_Sword_43", "=ds="..AL["Misc Sets"], ""};
-		{ 18, "ZGSets1", "INV_Jewelry_Necklace_19", "=ds="..AL["Zul'Gurub Sets"], ""};
-		{ 19, "AQ20Sets1", "INV_Jewelry_Ring_AhnQiraj_03", "=ds="..AL["Ruins of Ahn'Qiraj Sets"], ""};
-		{ 20, "AQ40Sets1", "INV_Sword_59", "=ds="..AL["Temple of Ahn'Qiraj Sets"], ""};
-		{ 21, "Heirloom", "INV_Sword_43", "=ds="..AL["Heirloom"], ""};
-		{ 23, "T0SET", "INV_Chest_Chain_03", "=ds="..AL["Dungeon 1/2 Sets"], ""};
-		{ 24, "DS3SET", "INV_Helmet_15", "=ds="..AL["Dungeon 3 Sets"], ""};
-		{ 25, "T1T2T3SET", "INV_Pants_Mail_03", "=ds="..AL["Tier 1/2/3 Sets"], ""};
-		{ 26, "T456SET", "INV_Gauntlets_63", "=ds="..AL["Tier 4/5/6 Sets"], ""};
-		{ 27, "T7T8SET", "INV_Chest_Chain_15", "=ds="..AL["Tier 7/8 Sets"], "=q5="..AL["10/25 Man"]};
-		{ 28, "T9SET", "inv_gauntlets_80", "=ds="..AL["Tier 9 Sets"], "=q5="..AL["10/25 Man"]};
-		{ 29, "T10SET", "INV_Chest_Chain_15", "=ds="..AL["Tier 10 Sets"], "=q5="..AL["10/25 Man"]};
+		{ 1, "EMBLEMOFFROSTMENU", "inv_misc_frostemblem_01", "=ds="..AL["Emblem of Frost Rewards"], "=q5="..AL["Wrath of the Lich King"]};
+		{ 2, "EMBLEMOFTRIUMPHMENU", "spell_holy_summonchampion", "=ds="..AL["Emblem of Triumph Rewards"], "=q5="..AL["Wrath of the Lich King"]};
+		{ 3, "EMBLEMOFCONQUESTMENU", "Spell_Holy_ChampionsGrace", "=ds="..AL["Emblem of Conquest Rewards"], "=q5="..AL["Wrath of the Lich King"]};
+		{ 4, "EMBLEMOFVALORMENU", "Spell_Holy_ProclaimChampion_02", "=ds="..AL["Emblem of Valor Rewards"], "=q5="..AL["Wrath of the Lich King"]};
+		{ 5, "EMBLEMOFHEROISMMENU", "Spell_Holy_ProclaimChampion", "=ds="..AL["Emblem of Heroism Rewards"], "=q5="..AL["Wrath of the Lich King"]};
+		{ 7, "Legendaries", "INV_Staff_Medivh", "=ds="..AL["Legendary Items"], ""};
+		{ 8, "MOUNTMENU", "INV_Misc_QirajiCrystal_05", "=ds="..AL["Mounts"], ""};
+		{ 9, "PETMENU", "INV_Box_PetCarrier_01", "=ds="..AL["Vanity Pets"], ""};
+		{ 10, "Tabards3", "INV_Shirt_GuildTabard_01", "=ds="..AL["Tabards"], ""};
+		{ 11, "CardGame1", "INV_Misc_Ticket_Tarot_Madness", "=ds="..AL["Upper Deck Card Game Items"], ""};
+		{ 13, "WORLDEPICS", "INV_Sword_76", "=ds="..AL["BoE World Epics"], ""};
+		{ 15, "Heirloom", "INV_Sword_43", "=ds="..AL["Heirloom"], ""};
+		{ 16, "PVPMENU", "INV_Axe_02", "=ds="..AL["PvP Rewards"], ""};
+		{ 18, "SETSCLASSIC", "INV_Sword_43", "=ds="..AL["Classic Sets"], ""};
+		{ 19, "SETSWRATHOFLICHKING", "inv_misc_monsterscales_15", "=ds="..AL["Wrath of the Lich King Sets"], ""};
+		{ 21, "70TOKENMENU", "Spell_Holy_ChampionsBond", "=ds="..AL["Badge of Justice Rewards"], "=q5="..AL["Burning Crusade"]};
+		{ 23, "TBCSets", "INV_Weapon_Glave_01", "=ds="..AL["Burning Crusade Misc Sets"], ""};
+		{ 25, "DS3SET", "INV_Helmet_15", "=ds="..AL["Dungeon 3 Sets"], ""};
+		{ 26, "T4SET", "inv_helmet_58", "=ds="..AL["Tier 4 Sets"], ""};
+		{ 27, "T5SET", "inv_helmet_92", "=ds="..AL["Tier 5 Sets"], ""};
+		{ 28, "T6SET", "inv_helmet_98", "=ds="..AL["Tier 6 Sets"], ""};
 	};
 
 	AtlasLoot_Data["70TOKENMENU"] = {
@@ -115,7 +111,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 
 	AtlasLoot_Data["SETSMISCMENU"] = {
 		{ 2, "SETSCLASSIC", "INV_Sword_43", "=ds="..AL["Classic Sets"], ""};
-		{ 3, "SETSWRATHOFLICHKING", "inv_misc_monsterscales_15", "=ds="..AL["Wrath Of The Lich King Sets"], ""};
+		{ 3, "SETSWRATHOFLICHKING", "inv_misc_monsterscales_15", "=ds="..AL["Wrath of the Lich King Sets"], ""};
 		{ 17, "SETSBURNINGCURSADE", "INV_Weapon_Glave_01", "=ds="..AL["Burning Crusade Sets"], ""};
 		Back = "SETMENU";
 	};
@@ -131,14 +127,17 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 9, "VWOWScholo", "INV_Belt_16", "=ds="..AL["Cadaverous Garb"], "=q5="..BabbleZone["Scholomance"]};
 		{ 10, "VWOWScholo", "INV_Gauntlets_26", "=ds="..AL["Bloodmail Regalia"], "=q5="..BabbleZone["Scholomance"]};
 		{ 11, "VWOWScholo", "INV_Belt_12", "=ds="..AL["Deathbone Guardian"], "=q5="..BabbleZone["Scholomance"]};
-		{ 17, "VWOWSets3", "INV_Weapon_ShortBlade_16", "=ds="..AL["Spider's Kiss"], "=q5="..BabbleZone["Lower Blackrock Spire"]};
-		{ 18, "VWOWSets3", "INV_Sword_43", "=ds="..AL["Dal'Rend's Arms"], "=q5="..BabbleZone["Upper Blackrock Spire"]};
-		{ 19, "VWOWZulGurub", "INV_Bijou_Orange", "=ds="..AL["Zul'Gurub Rings"], "=q5="..BabbleZone["Zul'Gurub"]};
-		{ 20, "VWOWZulGurub", "INV_Weapon_Hand_01", "=ds="..AL["Primal Blessing"], "=q5="..BabbleZone["Zul'Gurub"]};
-		{ 21, "VWOWZulGurub", "INV_Sword_55", "=ds="..AL["The Twin Blades of Hakkari"], "=q5="..BabbleZone["Zul'Gurub"]};
-		{ 22, "VWOWSets3", "INV_Misc_MonsterScales_15", "=ds="..AL["Shard of the Gods"], "=q5="..AL["Various Locations"]};
-		{ 23, "VWOWSets3", "INV_Misc_MonsterClaw_04", "=ds="..AL["Spirit of Eskhandar"], "=q5="..AL["Various Locations"]};
-		Back = "SETSMISCMENU";
+		{ 12, "VWOWSets3", "INV_Weapon_ShortBlade_16", "=ds="..AL["Spider's Kiss"], "=q5="..BabbleZone["Lower Blackrock Spire"]};
+		{ 13, "VWOWSets3", "INV_Sword_43", "=ds="..AL["Dal'Rend's Arms"], "=q5="..BabbleZone["Upper Blackrock Spire"]};
+		{ 17, "VWOWSets3", "INV_Misc_MonsterScales_15", "=ds="..AL["Shard of the Gods"], "=q5="..AL["Various Locations"]};
+		{ 18, "VWOWSets3", "INV_Misc_MonsterClaw_04", "=ds="..AL["Spirit of Eskhandar"], "=q5="..AL["Various Locations"]};
+		{ 20, "T0SET", "INV_Chest_Chain_03", "=ds="..AL["Dungeon 1/2 Sets"], ""};
+		{ 22, "VWOWZulGurub", "INV_Weapon_Hand_01", "=ds="..AL["Misc Zul'Gurub Sets"], ""};
+		{ 23, "ZGSets1", "INV_Misc_MonsterClaw_04", "=ds="..AL["Zul'Gurub Sets"], ""};
+		{ 24, "AQ20Sets1", "INV_Jewelry_Ring_AhnQiraj_03", "=ds="..AL["Ruins of Ahn'Qiraj Sets"], ""};
+		{ 25, "AQ40Sets1", "INV_Sword_59", "=ds="..AL["Temple of Ahn'Qiraj Sets"], ""};
+		{ 26, "T1T2T3SET", "INV_Pants_Mail_03", "=ds="..AL["Tier 1/2/3 Sets"], ""};
+		Back = "SETMENU";
 	};
 
 	AtlasLoot_Data["SETSBURNINGCURSADE"] = {
@@ -146,15 +145,17 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 3, "TBCSets", "INV_Jewelry_Necklace_36", "=ds="..AL["The Twin Stars"], "=q5="..AL["World Drop"]};
 		{ 4, "TBCSets", "INV_Weapon_Hand_14", "=ds="..AL["The Fists of Fury"], "=q5="..BabbleZone["Hyjal Summit"]};
 		{ 5, "TBCSets", "INV_Weapon_Glave_01", "=ds="..AL["The Twin Blades of Azzinoth"], "=q5="..BabbleZone["Black Temple"]};
-		{ 6, "ScourgeInvasionEvent2", "INV_Jewelry_Talisman_13", "=ds="..AL["Scourge Invasion Sets"], "=q5="..AL["Scourge Invasion"]};
-		Back = "SETSMISCMENU";
+		Back = "SETMENU";
 	};
 
 	AtlasLoot_Data["SETSWRATHOFLICHKING"] = {
 		{ 2, "WOTLKSets", "inv_jewelry_necklace_27", "=ds="..AL["Raine's Revenge"], "=q5="..AL["World Drop"]};
 		{ 3, "WOTLKSets", "inv_misc_monsterscales_15", "=ds="..AL["Purified Shard of the Gods"], "=q5="..BabbleZone["Onyxia's Lair"]};
 		{ 4, "WOTLKSets", "inv_misc_monsterscales_15", "=ds="..AL["Shiny Shard of the Gods"], "=q5="..BabbleZone["Onyxia's Lair"]};
-		Back = "SETSMISCMENU";
+		{ 6, "T7T8SET", "INV_Chest_Chain_15", "=ds="..AL["Tier 7/8 Sets"], "=q5="..AL["10/25 Man"]};
+		{ 7, "T9SET", "inv_gauntlets_80", "=ds="..AL["Tier 9 Sets"], "=q5="..AL["10/25 Man"]};
+		{ 8, "T10SET", "INV_Chest_Chain_15", "=ds="..AL["Tier 10 Sets"], "=q5="..AL["10/25 Man"]};
+		Back = "SETMENU";
 	};
 
 	AtlasLoot_Data["T0SET"] = {
@@ -167,7 +168,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 19, "T0Paladin", "Spell_Holy_SealOfMight", "=ds="..LOCALIZED_CLASS_NAMES_MALE["PALADIN"], ""};
 		{ 20, "T0Rogue", "Ability_BackStab", "=ds="..LOCALIZED_CLASS_NAMES_MALE["ROGUE"], ""};
 		{ 21, "T0Warlock", "Spell_Shadow_CurseOfTounges", "=ds="..LOCALIZED_CLASS_NAMES_MALE["WARLOCK"], ""};
-		Back = "SETMENU";
+		Back = "SETSCLASSIC";
 	};
 
 	AtlasLoot_Data["DS3SET"] = {
@@ -185,6 +186,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 23, "DS3Mail", "Ability_FiegnDead", "=ds="..AL["Desolation Battlegear"], "=q5="..BabbleInventory["Mail"]};
 		{ 26, "DS3Plate", "INV_Helmet_08", "=ds="..AL["Doomplate Battlegear"], "=q5="..BabbleInventory["Plate"]};
 		Back = "SETMENU";
+		Next = "T4SET";
 	};
 
 	AtlasLoot_Data["T1T2T3SET"] = {
@@ -206,29 +208,76 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 23, "T3Rogue", "Ability_BackStab", "=ds="..LOCALIZED_CLASS_NAMES_MALE["ROGUE"], "=q5="..AL["Tier 3 Sets"]};
 		{ 25, "T1T2Warlock", "Spell_Shadow_CurseOfTounges", "=ds="..LOCALIZED_CLASS_NAMES_MALE["WARLOCK"], "=q5="..AL["Tier 1/2 Sets"]};
 		{ 26, "T3Warlock", "Spell_Shadow_CurseOfTounges", "=ds="..LOCALIZED_CLASS_NAMES_MALE["WARLOCK"], "=q5="..AL["Tier 3 Sets"]};
-		Back = "SETMENU";
+		Back = "SETSCLASSIC";
 	};
 
-	AtlasLoot_Data["T456SET"] = {
-		{ 2, "T456DruidBalance", "Spell_Nature_InsectSwarm", "=ds=".."Druid", "=q5="..AL["Balance"]};
-		{ 3, "T456DruidFeral", "Ability_Druid_Maul", "=ds=".."Druid", "=q5="..AL["Feral"]};
-		{ 4, "T456DruidRestoration", "Spell_Nature_Regeneration", "=ds=".."Druid", "=q5="..AL["Restoration"]};
-		{ 6, "T456Hunter", "Ability_Hunter_RunningShot", "=ds="..LOCALIZED_CLASS_NAMES_MALE["HUNTER"], ""};
-		{ 8, "T456Mage", "Spell_Frost_IceStorm", "=ds="..LOCALIZED_CLASS_NAMES_MALE["MAGE"], ""};
-		{ 10, "T456PaladinHoly", "Spell_Holy_HolyBolt", "=ds="..LOCALIZED_CLASS_NAMES_MALE["PALADIN"], "=q5="..AL["Holy"]};
-		{ 11, "T456PaladinProtection", "Spell_Holy_SealOfMight", "=ds="..LOCALIZED_CLASS_NAMES_MALE["PALADIN"], "=q5="..AL["Protection"]};
-		{ 12, "T456PaladinRetribution", "Spell_Holy_AuraOfLight", "=ds="..LOCALIZED_CLASS_NAMES_MALE["PALADIN"], "=q5="..AL["Retribution"]};
-		{ 17, "T456PriestHoly", "Spell_Holy_PowerWordShield", "=ds="..LOCALIZED_CLASS_NAMES_MALE["PRIEST"], "=q5="..AL["Holy"]};
-		{ 18, "T456PriestShadow", "Spell_Shadow_AntiShadow", "=ds="..LOCALIZED_CLASS_NAMES_MALE["PRIEST"], "=q5="..AL["Shadow"]};
-		{ 20, "T456Rogue", "Ability_BackStab", "=ds="..LOCALIZED_CLASS_NAMES_MALE["ROGUE"], ""};
-		{ 22, "T456ShamanElemental", "Spell_Nature_Lightning", "=ds="..LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], "=q5="..AL["Elemental"]};
-		{ 23, "T456ShamanEnhancement", "Spell_FireResistanceTotem_01", "=ds="..LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], "=q5="..AL["Enhancement"]};
-		{ 24, "T456ShamanRestoration", "Spell_Nature_HealingWaveGreater", "=ds="..LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], "=q5="..AL["Restoration"]};
-		{ 26, "T456Warlock", "Spell_Shadow_CurseOfTounges", "=ds="..LOCALIZED_CLASS_NAMES_MALE["WARLOCK"], ""};
-		{ 28, "T456WarriorFury", "Ability_Warrior_BattleShout", "=ds="..LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], "=q5="..AL["Fury"]};
-		{ 29, "T456WarriorProtection", "INV_Shield_05", "=ds="..LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], "=q5="..AL["Protection"]};
+	AtlasLoot_Data["T4SET"] = {	
+		{ 2, "T4DruidBalance", "Spell_Nature_InsectSwarm", "=ds=".."Druid", "=q5="..AL["Balance"]};
+		{ 3, "T4DruidFeral", "Ability_Druid_Maul", "=ds=".."Druid", "=q5="..AL["Feral"]};
+		{ 4, "T4DruidRestoration", "Spell_Nature_Regeneration", "=ds=".."Druid", "=q5="..AL["Restoration"]};
+		{ 6, "T4Hunter", "Ability_Hunter_RunningShot", "=ds="..LOCALIZED_CLASS_NAMES_MALE["HUNTER"], ""};
+		{ 8, "T4Mage", "Spell_Frost_IceStorm", "=ds="..LOCALIZED_CLASS_NAMES_MALE["MAGE"], ""};
+		{ 10, "T4PaladinHoly", "Spell_Holy_HolyBolt", "=ds="..LOCALIZED_CLASS_NAMES_MALE["PALADIN"], "=q5="..AL["Holy"]};
+		{ 11, "T4PaladinProtection", "Spell_Holy_SealOfMight", "=ds="..LOCALIZED_CLASS_NAMES_MALE["PALADIN"], "=q5="..AL["Protection"]};
+		{ 12, "T4PaladinRetribution", "Spell_Holy_AuraOfLight", "=ds="..LOCALIZED_CLASS_NAMES_MALE["PALADIN"], "=q5="..AL["Retribution"]};
+		{ 17, "T4PriestHoly", "Spell_Holy_PowerWordShield", "=ds="..LOCALIZED_CLASS_NAMES_MALE["PRIEST"], "=q5="..AL["Holy"]};
+		{ 18, "T4PriestShadow", "Spell_Shadow_AntiShadow", "=ds="..LOCALIZED_CLASS_NAMES_MALE["PRIEST"], "=q5="..AL["Shadow"]};
+		{ 20, "T4Rogue", "Ability_BackStab", "=ds="..LOCALIZED_CLASS_NAMES_MALE["ROGUE"], ""};
+		{ 22, "T4ShamanElemental", "Spell_Nature_Lightning", "=ds="..LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], "=q5="..AL["Elemental"]};
+		{ 23, "T4ShamanEnhancement", "Spell_FireResistanceTotem_01", "=ds="..LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], "=q5="..AL["Enhancement"]};
+		{ 24, "T4ShamanRestoration", "Spell_Nature_HealingWaveGreater", "=ds="..LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], "=q5="..AL["Restoration"]};
+		{ 26, "T4Warlock", "Spell_Shadow_CurseOfTounges", "=ds="..LOCALIZED_CLASS_NAMES_MALE["WARLOCK"], ""};
+		{ 28, "T4WarriorFury", "Ability_Warrior_BattleShout", "=ds="..LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], "=q5="..AL["Fury"]};
+		{ 29, "T4WarriorProtection", "INV_Shield_05", "=ds="..LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], "=q5="..AL["Protection"]};
 		Back = "SETMENU";
-	};
+		Prev = "DS3SET";
+		Next = "T5SET";
+	};	
+	
+	AtlasLoot_Data["T5SET"] = {	
+		{ 2, "T5DruidBalance", "Spell_Nature_InsectSwarm", "=ds=".."Druid", "=q5="..AL["Balance"]};
+		{ 3, "T5DruidFeral", "Ability_Druid_Maul", "=ds=".."Druid", "=q5="..AL["Feral"]};
+		{ 4, "T5DruidRestoration", "Spell_Nature_Regeneration", "=ds=".."Druid", "=q5="..AL["Restoration"]};
+		{ 6, "T5Hunter", "Ability_Hunter_RunningShot", "=ds="..LOCALIZED_CLASS_NAMES_MALE["HUNTER"], ""};
+		{ 8, "T5Mage", "Spell_Frost_IceStorm", "=ds="..LOCALIZED_CLASS_NAMES_MALE["MAGE"], ""};
+		{ 10, "T5PaladinHoly", "Spell_Holy_HolyBolt", "=ds="..LOCALIZED_CLASS_NAMES_MALE["PALADIN"], "=q5="..AL["Holy"]};
+		{ 11, "T5PaladinProtection", "Spell_Holy_SealOfMight", "=ds="..LOCALIZED_CLASS_NAMES_MALE["PALADIN"], "=q5="..AL["Protection"]};
+		{ 12, "T5PaladinRetribution", "Spell_Holy_AuraOfLight", "=ds="..LOCALIZED_CLASS_NAMES_MALE["PALADIN"], "=q5="..AL["Retribution"]};
+		{ 17, "T5PriestHoly", "Spell_Holy_PowerWordShield", "=ds="..LOCALIZED_CLASS_NAMES_MALE["PRIEST"], "=q5="..AL["Holy"]};
+		{ 18, "T5PriestShadow", "Spell_Shadow_AntiShadow", "=ds="..LOCALIZED_CLASS_NAMES_MALE["PRIEST"], "=q5="..AL["Shadow"]};
+		{ 20, "T5Rogue", "Ability_BackStab", "=ds="..LOCALIZED_CLASS_NAMES_MALE["ROGUE"], ""};
+		{ 22, "T5ShamanElemental", "Spell_Nature_Lightning", "=ds="..LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], "=q5="..AL["Elemental"]};
+		{ 23, "T5ShamanEnhancement", "Spell_FireResistanceTotem_01", "=ds="..LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], "=q5="..AL["Enhancement"]};
+		{ 24, "T5ShamanRestoration", "Spell_Nature_HealingWaveGreater", "=ds="..LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], "=q5="..AL["Restoration"]};
+		{ 26, "T5Warlock", "Spell_Shadow_CurseOfTounges", "=ds="..LOCALIZED_CLASS_NAMES_MALE["WARLOCK"], ""};
+		{ 28, "T5WarriorFury", "Ability_Warrior_BattleShout", "=ds="..LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], "=q5="..AL["Fury"]};
+		{ 29, "T5WarriorProtection", "INV_Shield_05", "=ds="..LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], "=q5="..AL["Protection"]};
+		Back = "SETMENU";
+		Prev = "T4SET";
+		Next = "T6SET";
+	};	
+	
+	AtlasLoot_Data["T6SET"] = {	
+		{ 2, "T6DruidBalance", "Spell_Nature_InsectSwarm", "=ds=".."Druid", "=q5="..AL["Balance"]};
+		{ 3, "T6DruidFeral", "Ability_Druid_Maul", "=ds=".."Druid", "=q5="..AL["Feral"]};
+		{ 4, "T6DruidRestoration", "Spell_Nature_Regeneration", "=ds=".."Druid", "=q5="..AL["Restoration"]};
+		{ 6, "T6Hunter", "Ability_Hunter_RunningShot", "=ds="..LOCALIZED_CLASS_NAMES_MALE["HUNTER"], ""};
+		{ 8, "T6Mage", "Spell_Frost_IceStorm", "=ds="..LOCALIZED_CLASS_NAMES_MALE["MAGE"], ""};
+		{ 10, "T6PaladinHoly", "Spell_Holy_HolyBolt", "=ds="..LOCALIZED_CLASS_NAMES_MALE["PALADIN"], "=q5="..AL["Holy"]};
+		{ 11, "T6PaladinProtection", "Spell_Holy_SealOfMight", "=ds="..LOCALIZED_CLASS_NAMES_MALE["PALADIN"], "=q5="..AL["Protection"]};
+		{ 12, "T6PaladinRetribution", "Spell_Holy_AuraOfLight", "=ds="..LOCALIZED_CLASS_NAMES_MALE["PALADIN"], "=q5="..AL["Retribution"]};
+		{ 17, "T6PriestHoly", "Spell_Holy_PowerWordShield", "=ds="..LOCALIZED_CLASS_NAMES_MALE["PRIEST"], "=q5="..AL["Holy"]};
+		{ 18, "T6PriestShadow", "Spell_Shadow_AntiShadow", "=ds="..LOCALIZED_CLASS_NAMES_MALE["PRIEST"], "=q5="..AL["Shadow"]};
+		{ 20, "T6Rogue", "Ability_BackStab", "=ds="..LOCALIZED_CLASS_NAMES_MALE["ROGUE"], ""};
+		{ 22, "T6ShamanElemental", "Spell_Nature_Lightning", "=ds="..LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], "=q5="..AL["Elemental"]};
+		{ 23, "T6ShamanEnhancement", "Spell_FireResistanceTotem_01", "=ds="..LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], "=q5="..AL["Enhancement"]};
+		{ 24, "T6ShamanRestoration", "Spell_Nature_HealingWaveGreater", "=ds="..LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], "=q5="..AL["Restoration"]};
+		{ 26, "T6Warlock", "Spell_Shadow_CurseOfTounges", "=ds="..LOCALIZED_CLASS_NAMES_MALE["WARLOCK"], ""};
+		{ 28, "T6WarriorFury", "Ability_Warrior_BattleShout", "=ds="..LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], "=q5="..AL["Fury"]};
+		{ 29, "T6WarriorProtection", "INV_Shield_05", "=ds="..LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], "=q5="..AL["Protection"]};
+		Back = "SETMENU";
+		Prev = "T5SET";
+	};	
 
 	AtlasLoot_Data["T7T8SET"] = {
 		{ 2, "NaxxDeathKnightDPS", "Spell_Deathknight_DeathStrike", "=ds="..LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"], "=q5="..AL["DPS"]};
@@ -250,7 +299,8 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 26, "NaxxWarlock", "Spell_Shadow_CurseOfTounges", "=ds="..LOCALIZED_CLASS_NAMES_MALE["WARLOCK"], ""};
 		{ 28, "NaxxWarriorFury", "Ability_Warrior_BattleShout", "=ds="..LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], "=q5="..AL["Fury"]};
 		{ 29, "NaxxWarriorProtection", "INV_Shield_05", "=ds="..LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], "=q5="..AL["Protection"]};
-		Back = "SETMENU";
+		Back = "SETSWRATHOFLICHKING";
+		Next = "T9SET";
 	};
 
 	AtlasLoot_Data["T9SET"] = {
@@ -273,7 +323,9 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 26, "T9Warlock_A", "Spell_Shadow_CurseOfTounges", "=ds="..LOCALIZED_CLASS_NAMES_MALE["WARLOCK"], ""};
 		{ 28, "T9WarriorFury_A", "Ability_Warrior_BattleShout", "=ds="..LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], "=q5="..AL["Fury"]};
 		{ 29, "T9WarriorProtection_A", "INV_Shield_05", "=ds="..LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], "=q5="..AL["Protection"]};
-		Back = "SETMENU";
+		Back = "SETSWRATHOFLICHKING";
+		Prev = "T7T8SET";
+		Next = "T10SET";
 	};
 
 	AtlasLoot_Data["T10SET"] = {
@@ -296,5 +348,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 26, "T10Warlock", "Spell_Shadow_CurseOfTounges", "=ds="..LOCALIZED_CLASS_NAMES_MALE["WARLOCK"], ""};
 		{ 28, "T10WarriorFury", "Ability_Warrior_BattleShout", "=ds="..LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], "=q5="..AL["Fury"]};
 		{ 29, "T10WarriorProtection", "INV_Shield_05", "=ds="..LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], "=q5="..AL["Protection"]};
-		Back = "SETMENU";
+		Back = "SETSWRATHOFLICHKING";
+		Prev = "T9SET";
 	};

@@ -1045,8 +1045,8 @@ end
 	AtlasLoot_TableNames["VWOWZulGurub"] = { AL["Zul'Gurub Sets"], "AtlasLootOriginalWoW" };
   -- The Burning Crusade Sets
 	AtlasLoot_TableNames["TBCSets"] = { AL["Burning Crusade Sets"], "AtlasLootBurningCrusade" };
-  -- Wrath Of The Lich King Sets
-	AtlasLoot_TableNames["WOTLKSets"] = { AL["Wrath Of The Lich King Sets"], "AtlasLootWotLK" };
+  -- Wrath of the Lich King Sets
+	AtlasLoot_TableNames["WOTLKSets"] = { AL["Wrath of the Lich King Sets"], "AtlasLootWotLK" };
   -- Crafted Sets - Blacksmithing - Mail
 	AtlasLoot_TableNames["BlacksmithingMailBloodsoulEmbrace"] = { AL["Bloodsoul Embrace"], "AtlasLootCrafting" };
 	AtlasLoot_TableNames["BlacksmithingMailFelIronChain"] = { AL["Fel Iron Chain"], "AtlasLootCrafting" };
@@ -1155,24 +1155,60 @@ end
 	AtlasLoot_TableNames["T3Shaman"] = { LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], "AtlasLootOriginalWoW" };
 	AtlasLoot_TableNames["T3Warlock"] = { LOCALIZED_CLASS_NAMES_MALE["WARLOCK"], "AtlasLootOriginalWoW" };
 	AtlasLoot_TableNames["T3Warrior"] = { LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], "AtlasLootOriginalWoW" };
-  -- T4/T5/T6 Sets
-	AtlasLoot_TableNames["T456DruidBalance"] = { "Druid".." - "..AL["Balance"], "AtlasLootBurningCrusade" };
-	AtlasLoot_TableNames["T456DruidFeral"] = { "Druid".." - "..AL["Feral"], "AtlasLootBurningCrusade" };
-	AtlasLoot_TableNames["T456DruidRestoration"] = { "Druid".." - "..AL["Restoration"], "AtlasLootBurningCrusade" };
-	AtlasLoot_TableNames["T456Hunter"] = { LOCALIZED_CLASS_NAMES_MALE["HUNTER"], "AtlasLootBurningCrusade" };
-	AtlasLoot_TableNames["T456Mage"] = { LOCALIZED_CLASS_NAMES_MALE["MAGE"], "AtlasLootBurningCrusade" };
-	AtlasLoot_TableNames["T456PaladinHoly"] = { LOCALIZED_CLASS_NAMES_MALE["PALADIN"].." - "..AL["Holy"], "AtlasLootBurningCrusade" };
-	AtlasLoot_TableNames["T456PaladinProtection"] = { LOCALIZED_CLASS_NAMES_MALE["PALADIN"].." - "..AL["Protection"], "AtlasLootBurningCrusade" };
-	AtlasLoot_TableNames["T456PaladinRetribution"] = { LOCALIZED_CLASS_NAMES_MALE["PALADIN"].." - "..AL["Retribution"], "AtlasLootBurningCrusade" };
-	AtlasLoot_TableNames["T456PriestHoly"] = { LOCALIZED_CLASS_NAMES_MALE["PRIEST"].." - "..AL["Holy"], "AtlasLootBurningCrusade" };
-	AtlasLoot_TableNames["T456PriestShadow"] = { LOCALIZED_CLASS_NAMES_MALE["PRIEST"].." - "..AL["Shadow"], "AtlasLootBurningCrusade" };
-	AtlasLoot_TableNames["T456Rogue"] = { LOCALIZED_CLASS_NAMES_MALE["ROGUE"], "AtlasLootBurningCrusade" };
-	AtlasLoot_TableNames["T456ShamanElemental"] = { LOCALIZED_CLASS_NAMES_MALE["SHAMAN"].." - "..AL["Elemental"], "AtlasLootBurningCrusade" };
-	AtlasLoot_TableNames["T456ShamanEnhancement"] = { LOCALIZED_CLASS_NAMES_MALE["SHAMAN"].." - "..AL["Enhancement"], "AtlasLootBurningCrusade" };
-	AtlasLoot_TableNames["T456ShamanRestoration"] = { LOCALIZED_CLASS_NAMES_MALE["SHAMAN"].." - "..AL["Restoration"], "AtlasLootBurningCrusade" };
-	AtlasLoot_TableNames["T456Warlock"] = { LOCALIZED_CLASS_NAMES_MALE["WARLOCK"], "AtlasLootBurningCrusade" };
-	AtlasLoot_TableNames["T456WarriorFury"] = { LOCALIZED_CLASS_NAMES_MALE["WARRIOR"].." - "..AL["Fury"], "AtlasLootBurningCrusade" };
-	AtlasLoot_TableNames["T456WarriorProtection"] = { LOCALIZED_CLASS_NAMES_MALE["WARRIOR"].." - "..AL["Protection"], "AtlasLootBurningCrusade" };
+  -- T4 Sets
+	AtlasLoot_TableNames["T4DruidBalance"] = { "Druid".." - T4 "..AL["Balance"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["T4DruidFeral"] = { "Druid".." - T4 "..AL["Feral"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["T4DruidRestoration"] = { "Druid".." - T4 "..AL["Restoration"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["T4Hunter"] = { LOCALIZED_CLASS_NAMES_MALE["HUNTER"].." - T4 ", "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["T4Mage"] = { LOCALIZED_CLASS_NAMES_MALE["MAGE"].." - T4 ", "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["T4PaladinHoly"] = { LOCALIZED_CLASS_NAMES_MALE["PALADIN"].." - T4 "..AL["Holy"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["T4PaladinProtection"] = { LOCALIZED_CLASS_NAMES_MALE["PALADIN"].." - T4 "..AL["Protection"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["T4PaladinRetribution"] = { LOCALIZED_CLASS_NAMES_MALE["PALADIN"].." - T4 "..AL["Retribution"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["T4PriestHoly"] = { LOCALIZED_CLASS_NAMES_MALE["PRIEST"].." - T4 "..AL["Holy"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["T4PriestShadow"] = { LOCALIZED_CLASS_NAMES_MALE["PRIEST"].." - T4 "..AL["Shadow"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["T4Rogue"] = { LOCALIZED_CLASS_NAMES_MALE["ROGUE"].." - T4 ", "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["T4ShamanElemental"] = { LOCALIZED_CLASS_NAMES_MALE["SHAMAN"].." - T4 "..AL["Elemental"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["T4ShamanEnhancement"] = { LOCALIZED_CLASS_NAMES_MALE["SHAMAN"].." - T4 "..AL["Enhancement"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["T4ShamanRestoration"] = { LOCALIZED_CLASS_NAMES_MALE["SHAMAN"].." - T4 "..AL["Restoration"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["T4Warlock"] = { LOCALIZED_CLASS_NAMES_MALE["WARLOCK"].." - T4 ", "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["T4WarriorFury"] = { LOCALIZED_CLASS_NAMES_MALE["WARRIOR"].." - T4 "..AL["Fury"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["T4WarriorProtection"] = { LOCALIZED_CLASS_NAMES_MALE["WARRIOR"].." - T4 "..AL["Protection"], "AtlasLootBurningCrusade" };
+  -- T5 Sets
+	AtlasLoot_TableNames["T5DruidBalance"] = { "Druid".." - T5 "..AL["Balance"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["T5DruidFeral"] = { "Druid".." - T5 "..AL["Feral"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["T5DruidRestoration"] = { "Druid".." - T5 "..AL["Restoration"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["T5Hunter"] = { LOCALIZED_CLASS_NAMES_MALE["HUNTER"].." - T5 ", "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["T5Mage"] = { LOCALIZED_CLASS_NAMES_MALE["MAGE"].." - T5 ", "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["T5PaladinHoly"] = { LOCALIZED_CLASS_NAMES_MALE["PALADIN"].." - T5 "..AL["Holy"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["T5PaladinProtection"] = { LOCALIZED_CLASS_NAMES_MALE["PALADIN"].." - T5 "..AL["Protection"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["T5PaladinRetribution"] = { LOCALIZED_CLASS_NAMES_MALE["PALADIN"].." - T5 "..AL["Retribution"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["T5PriestHoly"] = { LOCALIZED_CLASS_NAMES_MALE["PRIEST"].." - T5 "..AL["Holy"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["T5PriestShadow"] = { LOCALIZED_CLASS_NAMES_MALE["PRIEST"].." - T5 "..AL["Shadow"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["T5Rogue"] = { LOCALIZED_CLASS_NAMES_MALE["ROGUE"].." - T5 ", "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["T5ShamanElemental"] = { LOCALIZED_CLASS_NAMES_MALE["SHAMAN"].." - T5 "..AL["Elemental"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["T5ShamanEnhancement"] = { LOCALIZED_CLASS_NAMES_MALE["SHAMAN"].." - T5 "..AL["Enhancement"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["T5ShamanRestoration"] = { LOCALIZED_CLASS_NAMES_MALE["SHAMAN"].." - T5 "..AL["Restoration"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["T5Warlock"] = { LOCALIZED_CLASS_NAMES_MALE["WARLOCK"].." - T5 ", "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["T5WarriorFury"] = { LOCALIZED_CLASS_NAMES_MALE["WARRIOR"].." - T5 "..AL["Fury"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["T5WarriorProtection"] = { LOCALIZED_CLASS_NAMES_MALE["WARRIOR"].." - T5 "..AL["Protection"], "AtlasLootBurningCrusade" };
+  -- T6 Sets
+	AtlasLoot_TableNames["T6DruidBalance"] = { "Druid".." - T6 "..AL["Balance"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["T6DruidFeral"] = { "Druid".." - T6 "..AL["Feral"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["T6DruidRestoration"] = { "Druid".." - T6 "..AL["Restoration"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["T6Hunter"] = { LOCALIZED_CLASS_NAMES_MALE["HUNTER"].." - T6 ", "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["T6Mage"] = { LOCALIZED_CLASS_NAMES_MALE["MAGE"].." - T6 ", "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["T6PaladinHoly"] = { LOCALIZED_CLASS_NAMES_MALE["PALADIN"].." - T6 "..AL["Holy"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["T6PaladinProtection"] = { LOCALIZED_CLASS_NAMES_MALE["PALADIN"].." - T6 "..AL["Protection"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["T6PaladinRetribution"] = { LOCALIZED_CLASS_NAMES_MALE["PALADIN"].." - T6 "..AL["Retribution"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["T6PriestHoly"] = { LOCALIZED_CLASS_NAMES_MALE["PRIEST"].." - T6 "..AL["Holy"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["T6PriestShadow"] = { LOCALIZED_CLASS_NAMES_MALE["PRIEST"].." - T6 "..AL["Shadow"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["T6Rogue"] = { LOCALIZED_CLASS_NAMES_MALE["ROGUE"].." - T6 ", "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["T6ShamanElemental"] = { LOCALIZED_CLASS_NAMES_MALE["SHAMAN"].." - T6 "..AL["Elemental"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["T6ShamanEnhancement"] = { LOCALIZED_CLASS_NAMES_MALE["SHAMAN"].." - T6 "..AL["Enhancement"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["T6ShamanRestoration"] = { LOCALIZED_CLASS_NAMES_MALE["SHAMAN"].." - T6 "..AL["Restoration"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["T6Warlock"] = { LOCALIZED_CLASS_NAMES_MALE["WARLOCK"].." - T6 ", "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["T6WarriorFury"] = { LOCALIZED_CLASS_NAMES_MALE["WARRIOR"].." - T6 "..AL["Fury"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["T6WarriorProtection"] = { LOCALIZED_CLASS_NAMES_MALE["WARRIOR"].." - T6 "..AL["Protection"], "AtlasLootBurningCrusade" };
   -- Badge of Justice Rewards
 	AtlasLoot_TableNames["HardModeCloth"] = { BabbleInventory["Cloth"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["HardModeLeather"] = { BabbleInventory["Leather"], "AtlasLootBurningCrusade" };
@@ -1853,7 +1889,7 @@ end
 	AtlasLoot_TableNames["SETSMISCMENU"] = { AL["Misc Sets"], "Menu" };
 	AtlasLoot_TableNames["SETSCLASSIC"] = { AL["Classic Sets"], "Menu" };
 	AtlasLoot_TableNames["SETSBURNINGCURSADE"] = { AL["Burning Crusade Sets"], "Menu" };
-	AtlasLoot_TableNames["SETSWRATHOFLICHKING"] = { AL["Wrath Of The Lich King Sets"], "Menu" };
+	AtlasLoot_TableNames["SETSWRATHOFLICHKING"] = { AL["Wrath of the Lich King Sets"], "Menu" };
 	AtlasLoot_TableNames["CRAFTSET1"] = { AL["Crafted Sets"].." : "..BLACKSMITHING, "Menu" };
 	AtlasLoot_TableNames["CRAFTSET2"] = { AL["Crafted Sets"].." : "..LEATHERWORKING, "Menu" };
 	AtlasLoot_TableNames["CRAFTSET3"] = { AL["Crafted Sets"].." : "..LEATHERWORKING, "Menu" };
@@ -1862,7 +1898,9 @@ end
 	AtlasLoot_TableNames["DS3SET"] = { AL["Dungeon 3 Sets"], "Menu" };
 	AtlasLoot_TableNames["T1T2T3SET"] = { AL["Tier 1/2/3 Sets"], "Menu" };
 	AtlasLoot_TableNames["T3SET"] = { AL["Tier 3 Sets"], "Menu" };
-	AtlasLoot_TableNames["T456SET"] = { AL["Tier 4/5/6 Sets"], "Menu" };
+	AtlasLoot_TableNames["T4SET"] = { AL["Tier 4 Sets"], "Menu" };
+	AtlasLoot_TableNames["T5SET"] = { AL["Tier 5 Sets"], "Menu" };
+	AtlasLoot_TableNames["T6SET"] = { AL["Tier 6 Sets"], "Menu" };
 	AtlasLoot_TableNames["T7T8SET"] = { AL["Tier 7/8 Sets"], "Menu" };
 	AtlasLoot_TableNames["T9SET"] = { AL["Tier 9 Sets"], "Menu" };
 	AtlasLoot_TableNames["T10SET"] = { AL["Tier 10 Sets"], "Menu" };

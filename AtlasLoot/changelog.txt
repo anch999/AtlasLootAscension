@@ -18,11 +18,15 @@ v1.1 05/30/2020
 v1.2 05/30/2020
 - Fixed item quality on various PVP items
 --------------------------------------------------------------------------------------------------------
-v1.3 06/31/2020
+v1.3 05/31/2020
 - Updated Druid class name/descriptions from "Hero" to "Druid"
 
 TBC improvements contributed by Szyler:
 - Rep window shows TBC reputations by default
 - Karazhan boss order correction
 - TBC tokens show class
+--------------------------------------------------------------------------------------------------------
+v1.4 06/07/2020
+- Sets collection cleanup for TBC
+- Added Heroic gear
 --------------------------------------------------------------------------------------------------------
