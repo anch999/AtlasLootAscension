@@ -4191,7 +4191,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 12, 18713, "", "=q4=Rhok'delar, Longbow of the Ancient Keepers", "=q1=#m4#: =ds=#w2#, =q1=#m1# =ds=#c2#" },
 		{ 13, 0,"","","" },
 		{ 14, 15410, "","=q3=Scale of Onyxia",	  "=ds=#e8#" },
-		{ 15, 0,"","","" },
+		{ 15, 17966, "", "=q2=Onyxia Hide Backpack", "=ds=#m14# #e1#","", "100%"},
 		{ 16, 17078, "", "=q4=Sapphiron Drape",			  "=ds=#s4#","", "28.57%" },
 		{ 17, 18205, "", "=q4=Eskhandar's Collar",				"=ds=#s2#","", "28.57%" },
 		{ 18, 18813, "", "=q4=Ring of Binding",		   "=ds=#s13#", "","28.57%" },
@@ -4199,13 +4199,11 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 20, 17067, "", "=q4=Ancient Cornerstone Grimoire", "=ds=#s15#","", "28.57%" },
 		{ 21, 17075, "", "=q4=Vis'kag the Bloodletter",		  "=ds=#h1#, #w10#","", "28.57%" },
 		{ 22, 17068, "", "=q4=Deathbringer","=ds=#h1#, #w1#","", "28.57%" },
-		{ 23, 0,"","","" },
-		{ 24, 17966, "", "=q2=Onyxia Hide Backpack", "=ds=#m14# #e1#","", "100%"},
-		{ 25, 0,"","","" },
-		{ 26, 18423, "", "=q4=Head of Onyxia","=ds=#m2#","", "100%" },
-		{ 27, 18404, "", "=q4=Onyxia Tooth Pendant", "=q1=#m4#: =ds=#s2#" },
-		{ 28, 18403, "", "=q4=Dragonslayer's Signet", "=q1=#m4#: =ds=#s13#" },
-		{ 29, 18406, "", "=q4=Onyxia Blood Talisman", "=q1=#m4#: =ds=#s14#" },
+		{ 24, 18423, "", "=q4=Head of Onyxia","=ds=#m2#","", "100%" },
+		{ 25, 18404, "", "=q4=Onyxia Tooth Pendant", "=q1=#m4#: =ds=#s2#" },
+		{ 26, 18403, "", "=q4=Dragonslayer's Signet", "=q1=#m4#: =ds=#s13#" },
+		{ 27, 18406, "", "=q4=Onyxia Blood Talisman", "=q1=#m4#: =ds=#s14#" },
+		{ 29, 49636, "", "=q4=Reins of the Onyxian Drake", "=ds=#e12#", "" };
 	};
 
 	--------------------------
