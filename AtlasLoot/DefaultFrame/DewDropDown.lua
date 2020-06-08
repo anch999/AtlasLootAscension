@@ -13,95 +13,102 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0")
 --This is a multi-layer table defining the main loot listing.
 --Entries have the text to display, loot table or sub table to link to and if the link is to a loot table or sub table
 AtlasLoot_DewDropDown = {
-	[1] = {
-		[AL["Classic Instances"]] = {
-			[1] = {
-				{ BabbleZone["Blackfathom Deeps"], "BlackfathomDeeps1", "Table" },
-			},
-			[2] = {
-				{ BabbleZone["Blackrock Depths"], "BlackrockDepths", "Submenu" },
-			},
-			[3] = {
-				{ BabbleZone["Lower Blackrock Spire"], "LowerBlackrock", "Submenu" },
-			},
-			[4] = {
-				{ BabbleZone["Upper Blackrock Spire"], "UpperBlackrock", "Submenu" },
-			},
-			[5] = {
-				{ BabbleZone["Blackwing Lair"], "BlackwingLair", "Submenu" },
-			},
-			[6] = {
-				{ BabbleZone["The Deadmines"], "TheDeadmines1", "Table" },
-			},
-			[7] = {
-				[BabbleZone["Dire Maul"]] = {
-					{ BabbleZone["Dire Maul (East)"], "DireMaulEast", "Submenu" },
-					{ BabbleZone["Dire Maul (West)"], "DireMaulWest", "Submenu" },
-					{ BabbleZone["Dire Maul (North)"], "DireMaulNorth", "Submenu" },
-				},
-			},
-			[8] = {
-				{ BabbleZone["Gnomeregan"], "Gnomeregan1", "Table" },
-			},
-			[9] = {
-				{ BabbleZone["Maraudon"], "Maraudon1", "Table" },
-			},
-			[10] = {
-				{ BabbleZone["Molten Core"], "MoltenCore", "Submenu" },
-			},
-			[11] = {
-				{ BabbleZone["Ragefire Chasm"], "RagefireChasm", "Table" },
-			},
-			[12] = {
-				{ BabbleZone["Razorfen Downs"], "RazorfenDowns1", "Table" },
-			},
-			[13] = {
-				{ BabbleZone["Razorfen Kraul"], "RazorfenKraul1", "Table" },
-			},
-			[14] = {
-				{ BabbleZone["Ruins of Ahn'Qiraj"], "RuinsofAQ", "Submenu" },
-			},
-			[15] = {
-				{ BabbleZone["Scarlet Monastery"], "Scarlet Monastery", "Submenu" },
-			},
-			[16] = {
-				{ BabbleZone["Scholomance"], "Scholomance", "Submenu" },
-			},
-			[17] = {
-				{ BabbleZone["Shadowfang Keep"], "ShadowfangKeep1", "Table" },
-			},
-			[18] = {
-				{ BabbleZone["The Stockade"], "TheStockade", "Table" },
-			},
-			[19] = {
-				{ BabbleZone["Stratholme"], "Stratholme", "Submenu" },
-			},
-			[20] = {
-				{ BabbleZone["Temple of Ahn'Qiraj"], "TempleofAQ", "Submenu" },
-			},
-			[21] = {
-				{ BabbleZone["The Temple of Atal'Hakkar"], "SunkenTemple", "Submenu" },
-			},
-			[22] = {
-				{ BabbleZone["Uldaman"], "Uldaman", "Submenu" },
-			},
-			[23] = {
-				{ BabbleZone["Wailing Caverns"], "WailingCaverns1", "Table" },
-			},
-			[24] = {
-				{ BabbleZone["Zul'Farrak"], "ZulFarrak", "Submenu" },
-			},
-			[25] = {
-				{ BabbleZone["Zul'Gurub"], "ZulGurub", "Submenu" },
-			},
-			[26] = {
-				{ BabbleZone["Naxxramas"], "Naxxramas60", "Submenu" },
-			},
-			[27] = {
-				{ BabbleZone["Onyxia's Lair"], "Onyxia60", "Table" },
+	[1] = {				
+		[AL["Classic Instances"]] = {				
+			[1] = {			
+				{ "Raids:", "OldKeys", "Table", "Header" },		
+			},			
+			[2] = {			
+				{ BabbleZone["Molten Core"], "MoltenCore", "Submenu" },		
+			},			
+			[3] = {			
+				{ BabbleZone["Zul'Gurub"], "ZulGurub", "Submenu" },		
+			},			
+			[4] = {			
+				{ BabbleZone["Onyxia's Lair"], "Onyxia60", "Table" },		
+			},			
+			[5] = {			
+				{ BabbleZone["Blackwing Lair"], "BlackwingLair", "Submenu" },	
+			},			
+			[6] = {			
+				{ BabbleZone["Ruins of Ahn'Qiraj"], "RuinsofAQ", "Submenu" },		
+			},			
+			[7] = {			
+				{ BabbleZone["Temple of Ahn'Qiraj"], "TempleofAQ", "Submenu" },		
+			},			
+			[8] = {			
+				{ BabbleZone["Naxxramas"], "Naxxramas60", "Submenu" },	
+			},			
+			[9] = {			
+				{ "Dungeons:", "OldKeys", "Table", "Header" },		
+			},			
+			[10] = {			
+				{ BabbleZone["Blackfathom Deeps"], "BlackfathomDeeps1", "Table" },		
+			},			
+			[11] = {			
+				{ BabbleZone["Blackrock Depths"], "BlackrockDepths", "Submenu" },		
+			},			
+			[12] = {			
+				{ BabbleZone["Lower Blackrock Spire"], "LowerBlackrock", "Submenu" },		
+			},			
+			[13] = {			
+				{ BabbleZone["Upper Blackrock Spire"], "UpperBlackrock", "Submenu" },		
+			},			
+			[14] = {			
+				{ BabbleZone["The Deadmines"], "TheDeadmines1", "Table" },		
+			},			
+			[15] = {			
+				[BabbleZone["Dire Maul"]] = {		
+					{ BabbleZone["Dire Maul (East)"], "DireMaulEast", "Submenu" },	
+					{ BabbleZone["Dire Maul (West)"], "DireMaulWest", "Submenu" },	
+					{ BabbleZone["Dire Maul (North)"], "DireMaulNorth", "Submenu" },	
+				},		
+			},			
+			[16] = {			
+				{ BabbleZone["Gnomeregan"], "Gnomeregan1", "Table" },		
+			},			
+			[17] = {			
+				{ BabbleZone["Maraudon"], "Maraudon1", "Table" },		
+			},			
+			[18] = {			
+				{ BabbleZone["Ragefire Chasm"], "RagefireChasm", "Table" },		
+			},			
+			[19] = {			
+				{ BabbleZone["Razorfen Downs"], "RazorfenDowns1", "Table" },		
+			},			
+			[20] = {			
+				{ BabbleZone["Razorfen Kraul"], "RazorfenKraul1", "Table" },		
+			},			
+			[21] = {			
+				{ BabbleZone["Scarlet Monastery"], "Scarlet Monastery", "Submenu" },		
+			},			
+			[22] = {			
+				{ BabbleZone["Scholomance"], "Scholomance", "Submenu" },		
+			},			
+			[23] = {			
+				{ BabbleZone["Shadowfang Keep"], "ShadowfangKeep1", "Table" },		
+			},			
+			[24] = {			
+				{ BabbleZone["The Stockade"], "TheStockade", "Table" },		
+			},			
+			[25] = {			
+				{ BabbleZone["Stratholme"], "Stratholme", "Submenu" },		
+			},			
+			[26] = {			
+				{ BabbleZone["The Temple of Atal'Hakkar"], "SunkenTemple", "Submenu" },		
+			},			
+			[27] = {			
+				{ BabbleZone["Uldaman"], "Uldaman", "Submenu" },		
+			},			
+			[28] = {			
+				{ BabbleZone["Wailing Caverns"], "WailingCaverns1", "Table" },		
+			},			
+			[29] = {			
+				{ BabbleZone["Zul'Farrak"], "ZulFarrak", "Submenu" },		
 			},
 		},
-	},
+	},			
+
 	[2] = {
 		[AL["BC Instances"]] = {
 			[1] = {
@@ -135,7 +142,7 @@ AtlasLoot_DewDropDown = {
 				{ BabbleZone["Sunwell Plateau"], "SunwellPlateau", "Submenu" },
 			},
 
----- Dugneons -----
+---- Dungeons -----
 
 			[11] = {
 				{ "Dungeons:", "BCKeys", "Table", "Header" },
@@ -192,85 +199,92 @@ AtlasLoot_DewDropDown = {
 
 		},
 	},
-	[3] = {
-		[AL["WotLK Instances"]] = {
-			[1] = {
-				{ BabbleZone["Ahn'kahet: The Old Kingdom"], "Ahnkahet", "Submenu" },
-			},
-			[2] = {
-				{ BabbleZone["Azjol-Nerub"], "AzjolNerub", "Submenu" },
-			},
-			[3] = {
-				{ BabbleZone["Caverns of Time"]..": "..BabbleZone["The Culling of Stratholme"], "CoTStratholme", "Submenu" },
-			},
-			[4] = {
-				{ BabbleZone["Drak'Tharon Keep"], "DrakTharonKeep", "Submenu" },
-			},
-			[5] = {
-				{ BabbleZone["Gundrak"], "Gundrak", "Submenu" },
-			},
-			[6] = {
-				{ BabbleZone["Halls of Lightning"], "HallsofLightning", "Submenu" },
-			},
-			[7] = {
-				{ BabbleZone["Halls of Stone"], "HallsofStone", "Submenu" },
-			},
-			[8] = {
-				{ BabbleZone["Halls of Reflection"], "HallsofReflection", "Submenu" },
-			},
-			[9] = {
-				{ BabbleZone["Icecrown Citadel"], "IcecrownCitadel", "Submenu" },
-			},
-			[10] = {
-				{ BabbleZone["Naxxramas"], "Naxxramas80", "Submenu" },
-			},
-			[11] = {
-				{ BabbleZone["Onyxia's Lair"], "Onyxia_1", "Table" },
-			},
-           		 [12] = {
-				{ BabbleZone["Pit of Saron"], "PitofSaron", "Submenu" },
-			},
-        	  	[13] = {
-				{ BabbleZone["The Ruby Sanctum"], "Halion", "Table" },
-			},
-			[14] = {
-				{ BabbleZone["The Eye of Eternity"], "Malygos", "Table" },
-			},
-			[15] = {
-				{ BabbleZone["The Forge of Souls"], "ForgeofSouls", "Submenu" },
-			},
-			[16] = {
-				{ BabbleZone["The Nexus"], "TheNexus", "Submenu" },
-			},
-			[17] = {
-				{ BabbleZone["The Obsidian Sanctum"], "Sartharion", "Table" },
-			},
-			[18] = {
-				{ BabbleZone["The Oculus"], "TheOculus", "Submenu" },
-			},
-			[19] = {
-				{ BabbleZone["Trial of the Champion"], "TrialoftheChampion", "Submenu" },
-			},
-			[20] = {
-				{ BabbleZone["Trial of the Crusader"], "TrialoftheCrusader_A", "Submenu" },
-			},
-			[21] = {
-				{ BabbleZone["Ulduar"], "Ulduar", "Submenu" },
-			},
-			[22] = {
-				{ BabbleZone["Utgarde Keep"], "UtgardeKeep", "Submenu" },
-			},
-			[23] = {
-				{ BabbleZone["Utgarde Pinnacle"], "UtgardePinnacle", "Submenu" },
-			},
-			[24] = {
-				{ BabbleZone["Vault of Archavon"], "VaultofArchavon_A", "Submenu" },
-			},
-			[25] = {
-				{ BabbleZone["The Violet Hold"], "TheVioletHold", "Submenu" },
-			},
-		},
-	},
+	[3] = {					
+		[AL["WotLK Instances"]] = {				
+			[1] = {			
+				{ "Raids:", "WrathKeys", "Table", "Header" },		
+			},			
+			[2] = {			
+				{ BabbleZone["Naxxramas"], "Naxxramas80", "Submenu" },		
+			},			
+			[3] = {			
+				{ BabbleZone["The Obsidian Sanctum"], "Sartharion", "Table" },		
+			},			
+			[4] = {			
+				{ BabbleZone["The Eye of Eternity"], "Malygos", "Table" },		
+			},			
+			[5] = {			
+				{ BabbleZone["Vault of Archavon"], "VaultofArchavon_A", "Submenu" },		
+			},			
+			[6] = {			
+				{ BabbleZone["Ulduar"], "Ulduar", "Submenu" },		
+			},			
+			[7] = {			
+				{ BabbleZone["Trial of the Crusader"], "TrialoftheCrusader_A", "Submenu" },		
+			},			
+			[8] = {			
+				{ BabbleZone["Onyxia's Lair"], "Onyxia_1", "Table" },		
+			},			
+			[9] = {			
+				{ BabbleZone["Icecrown Citadel"], "IcecrownCitadel", "Submenu" },		
+			},			
+			[10] = {			
+				{ BabbleZone["The Ruby Sanctum"], "Halion", "Table" },		
+			},			
+			[11] = {			
+				{ "Dungeons:", "WrathKeys", "Table", "Header" },		
+			},			
+           			 [12] = {			
+				{ BabbleZone["Ahn'kahet: The Old Kingdom"], "Ahnkahet", "Submenu" },		
+			},			
+        	  		[13] = {			
+				{ BabbleZone["Azjol-Nerub"], "AzjolNerub", "Submenu" },		
+			},			
+			[14] = {			
+				{ BabbleZone["Caverns of Time"]..": "..BabbleZone["The Culling of Stratholme"], "CoTStratholme", "Submenu" },		
+			},			
+			[15] = {			
+				{ BabbleZone["Drak'Tharon Keep"], "DrakTharonKeep", "Submenu" },		
+			},			
+			[16] = {			
+				{ BabbleZone["The Forge of Souls"], "ForgeofSouls", "Submenu" },		
+			},			
+			[17] = {			
+				{ BabbleZone["Gundrak"], "Gundrak", "Submenu" },		
+			},			
+			[18] = {			
+				{ BabbleZone["Halls of Lightning"], "HallsofLightning", "Submenu" },		
+			},			
+			[19] = {			
+				{ BabbleZone["Halls of Reflection"], "HallsofReflection", "Submenu" },		
+			},			
+			[20] = {			
+				{ BabbleZone["Halls of Stone"], "HallsofStone", "Submenu" },		
+			},			
+			[21] = {			
+				{ BabbleZone["The Nexus"], "TheNexus", "Submenu" },		
+			},			
+			[22] = {			
+				{ BabbleZone["The Oculus"], "TheOculus", "Submenu" },		
+			},			
+			[23] = {			
+				{ BabbleZone["Pit of Saron"], "PitofSaron", "Submenu" },		
+			},			
+			[24] = {			
+				{ BabbleZone["Trial of the Champion"], "TrialoftheChampion", "Submenu" },		
+			},			
+			[25] = {			
+				{ BabbleZone["Utgarde Keep"], "UtgardeKeep", "Submenu" },		
+			},			
+			[26] = {			
+				{ BabbleZone["Utgarde Pinnacle"], "UtgardePinnacle", "Submenu" },		
+			},			
+			[27] = {			
+				{ BabbleZone["The Violet Hold"], "TheVioletHold", "Submenu" },		
+			},			
+		},				
+	},					
+
 	[4] = {
 		{ AL["Crafting"], "CRAFTINGMENU", "Table" },
 	},

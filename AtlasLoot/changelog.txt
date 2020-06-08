@@ -29,4 +29,5 @@ TBC improvements contributed by Szyler:
 v1.4 06/07/2020
 - Sets collection cleanup for TBC
 - Added Heroic gear
+- Drowndown menus
 --------------------------------------------------------------------------------------------------------
