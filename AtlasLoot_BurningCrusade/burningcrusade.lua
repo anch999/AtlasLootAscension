@@ -557,7 +557,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 4, 32370, "", "=q4=Nadina's Pendant of Purity", "=ds=#s2#", "", "15%"};
 		{ 5, 32368, "", "=q4=Tome of the Lightbringer", "=ds=#s16#, #w16#", "", "15%"};
 		{ 6, 32369, "", "=q4=Blade of Savagery", "=ds=#h1#, #w10#", "", "15%"};
-		{ 16, 31101, "", "=q4=Pauldrons of the Forgotten Conqueror", "=q1=#m1# =ds=#c4#, #c5#, #c9#", "", "76%"};
+		{ 16, 31101, "", "=q4=Pauldrons of the Forgotten Conqueror", "=q1=#m1# =ds=#c4#, #c5#, #c8#", "", "76%"};
 		{ 17, 31103, "", "=q4=Pauldrons of the Forgotten Protector", "=q1=#m1# =ds=#c9#, #c2#, #c7#", "", "80%"};
 		{ 18, 31102, "", "=q4=Pauldrons of the Forgotten Vanquisher", "=q1=#m1# =ds=#c6#, #c3#, #c1#", "", "77%"};
 		{ 20, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
@@ -572,7 +572,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 4, 32376, "", "=q4=Forest Prowler's Helm", "=ds=#s1#, #a3#", "", "17%"};
 		{ 5, 32373, "", "=q4=Helm of the Illidari Shatterer", "=ds=#s1#, #a4#", "", "17%"};
 		{ 6, 32505, "", "=q4=Madness of the Betrayer", "=ds=#s14#", "", "16%"};
-		{ 16, 31098, "", "=q4=Leggings of the Forgotten Conqueror", "=q1=#m1# =ds=#c4#, #c5#, #c9#", "", "34%"};
+		{ 16, 31098, "", "=q4=Leggings of the Forgotten Conqueror", "=q1=#m1# =ds=#c4#, #c5#, #c8#", "", "34%"};
 		{ 17, 31100, "", "=q4=Leggings of the Forgotten Protector", "=q1=#m1# =ds=#c9#, #c2#, #c7#", "", "33%"};
 		{ 18, 31099, "", "=q4=Leggings of the Forgotten Vanquisher", "=q1=#m1# =ds=#c6#, #c3#, #c1#", "", "34%"};
 		{ 20, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
@@ -591,7 +591,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 9, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		{ 11, 32837, "", "=q5=Warglaive of Azzinoth", "=ds=#h3#, #w10#, =q1=#m1# =ds=#c9#, #c6#", "", "4%"};
 		{ 12, 32838, "", "=q5=Warglaive of Azzinoth", "=ds=#h4#, #w10#, =q1=#m1# =ds=#c9#, #c6#", "", "4%"};
-		{ 16, 31089, "", "=q4=Chestguard of the Forgotten Conqueror", "=q1=#m1# =ds=#c4#, #c5#, #c9#", "", "78%"};
+		{ 16, 31089, "", "=q4=Chestguard of the Forgotten Conqueror", "=q1=#m1# =ds=#c4#, #c5#, #c8#", "", "78%"};
 		{ 17, 31091, "", "=q4=Chestguard of the Forgotten Protector", "=q1=#m1# =ds=#c9#, #c2#, #c7#", "", "79%"};
 		{ 18, 31090, "", "=q4=Chestguard of the Forgotten Vanquisher", "=q1=#m1# =ds=#c6#, #c3#, #c1#", "", "78%"};
 		{ 20, 32471, "", "=q4=Shard of Azzinoth", "=ds=#h1#, #w4#", "", "16%"};
@@ -772,7 +772,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 4, 232370, "", "=q4=Nadina's Pendant of Purity", "=ds=#s2#", "", "15%"};
 		{ 5, 232368, "", "=q4=Tome of the Lightbringer", "=ds=#s16#, #w16#", "", "15%"};
 		{ 6, 232369, "", "=q4=Blade of Savagery", "=ds=#h1#, #w10#", "", "15%"};
-		{ 16, 231101, "", "=q4=Pauldrons of the Forgotten Conqueror", "=q1=#m1# =ds=#c4#, #c5#, #c9#", "", "76%"};
+		{ 16, 231101, "", "=q4=Pauldrons of the Forgotten Conqueror", "=q1=#m1# =ds=#c4#, #c5#, #c8#", "", "76%"};
 		{ 17, 231103, "", "=q4=Pauldrons of the Forgotten Protector", "=q1=#m1# =ds=#c9#, #c2#, #c7#", "", "80%"};
 		{ 18, 231102, "", "=q4=Pauldrons of the Forgotten Vanquisher", "=q1=#m1# =ds=#c6#, #c3#, #c1#", "", "77%"};
 		{ 20, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
@@ -787,7 +787,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 4, 232376, "", "=q4=Forest Prowler's Helm", "=ds=#s1#, #a3#", "", "17%"};
 		{ 5, 232373, "", "=q4=Helm of the Illidari Shatterer", "=ds=#s1#, #a4#", "", "17%"};
 		{ 6, 232505, "", "=q4=Madness of the Betrayer", "=ds=#s14#", "", "16%"};
-		{ 16, 231098, "", "=q4=Leggings of the Forgotten Conqueror", "=q1=#m1# =ds=#c4#, #c5#, #c9#", "", "34%"};
+		{ 16, 231098, "", "=q4=Leggings of the Forgotten Conqueror", "=q1=#m1# =ds=#c4#, #c5#, #c8#", "", "34%"};
 		{ 17, 231100, "", "=q4=Leggings of the Forgotten Protector", "=q1=#m1# =ds=#c9#, #c2#, #c7#", "", "33%"};
 		{ 18, 231099, "", "=q4=Leggings of the Forgotten Vanquisher", "=q1=#m1# =ds=#c6#, #c3#, #c1#", "", "34%"};
 		{ 20, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
@@ -806,7 +806,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 9, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		{ 11, 232837, "", "=q5=Warglaive of Azzinoth", "=ds=#h3#, #w10#, =q1=#m1# =ds=#c9#, #c6#", "", "4%"};
 		{ 12, 232838, "", "=q5=Warglaive of Azzinoth", "=ds=#h4#, #w10#, =q1=#m1# =ds=#c9#, #c6#", "", "4%"};
-		{ 16, 231089, "", "=q4=Chestguard of the Forgotten Conqueror", "=q1=#m1# =ds=#c4#, #c5#, #c9#", "", "78%"};
+		{ 16, 231089, "", "=q4=Chestguard of the Forgotten Conqueror", "=q1=#m1# =ds=#c4#, #c5#, #c8#", "", "78%"};
 		{ 17, 231091, "", "=q4=Chestguard of the Forgotten Protector", "=q1=#m1# =ds=#c9#, #c2#, #c7#", "", "79%"};
 		{ 18, 231090, "", "=q4=Chestguard of the Forgotten Vanquisher", "=q1=#m1# =ds=#c6#, #c3#, #c1#", "", "78%"};
 		{ 20, 232471, "", "=q4=Shard of Azzinoth", "=ds=#h1#, #w4#", "", "16%"};
@@ -1070,7 +1070,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 4, 30896, "", "=q4=Glory of the Defender", "=ds=#s5#, #a4#", "", "15%"};
 		{ 5, 30897, "", "=q4=Girdle of Hope", "=ds=#s10#, #a4#", "", "15%"};
 		{ 6, 30901, "", "=q4=Boundless Agony", "=ds=#h1#, #w4#", "", "16%"};
-		{ 16, 31092, "", "=q4=Gloves of the Forgotten Conqueror", "=q1=#m1# =ds=#c4#, #c5#, #c9#", "", "74%"};
+		{ 16, 31092, "", "=q4=Gloves of the Forgotten Conqueror", "=q1=#m1# =ds=#c4#, #c5#, #c8#", "", "74%"};
 		{ 17, 31094, "", "=q4=Gloves of the Forgotten Protector", "=q1=#m1# =ds=#c9#, #c2#, #c7#", "", "73%"};
 		{ 18, 31093, "", "=q4=Gloves of the Forgotten Vanquisher", "=q1=#m1# =ds=#c6#, #c3#, #c1#", "", "73%"};
 		{ 20, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
@@ -1091,7 +1091,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 11, 30908, "", "=q4=Apostle of Argus", "=ds=#w9#", "", "15%"};
 		{ 12, 30909, "", "=q4=Antonidas's Aegis of Rapt Concentration", "=ds=#w8#", "", "15%"};
 		{ 13, 30906, "", "=q4=Bristleblitz Striker", "=ds=#w2#", "", "16%"};
-		{ 16, 31097, "", "=q4=Helm of the Forgotten Conqueror", "=q1=#m1# =ds=#c4#, #c5#, #c9#", "", "70%"};
+		{ 16, 31097, "", "=q4=Helm of the Forgotten Conqueror", "=q1=#m1# =ds=#c4#, #c5#, #c8#", "", "70%"};
 		{ 17, 31095, "", "=q4=Helm of the Forgotten Protector", "=q1=#m1# =ds=#c9#, #c2#, #c7#", "", "72%"};
 		{ 18, 31096, "", "=q4=Helm of the Forgotten Vanquisher", "=q1=#m1# =ds=#c6#, #c3#, #c1#", "", "73%"};
 		{ 20, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
@@ -1185,7 +1185,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 4, 230896, "", "=q4=Glory of the Defender", "=ds=#s5#, #a4#", "", "15%"};
 		{ 5, 230897, "", "=q4=Girdle of Hope", "=ds=#s10#, #a4#", "", "15%"};
 		{ 6, 230901, "", "=q4=Boundless Agony", "=ds=#h1#, #w4#", "", "16%"};
-		{ 16, 231092, "", "=q4=Gloves of the Forgotten Conqueror", "=q1=#m1# =ds=#c4#, #c5#, #c9#", "", "74%"};
+		{ 16, 231092, "", "=q4=Gloves of the Forgotten Conqueror", "=q1=#m1# =ds=#c4#, #c5#, #c8#", "", "74%"};
 		{ 17, 231094, "", "=q4=Gloves of the Forgotten Protector", "=q1=#m1# =ds=#c9#, #c2#, #c7#", "", "73%"};
 		{ 18, 231093, "", "=q4=Gloves of the Forgotten Vanquisher", "=q1=#m1# =ds=#c6#, #c3#, #c1#", "", "73%"};
 		{ 20, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
@@ -1206,7 +1206,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 11, 230908, "", "=q4=Apostle of Argus", "=ds=#w9#", "", "15%"};
 		{ 12, 230909, "", "=q4=Antonidas's Aegis of Rapt Concentration", "=ds=#w8#", "", "15%"};
 		{ 13, 230906, "", "=q4=Bristleblitz Striker", "=ds=#w2#", "", "16%"};
-		{ 16, 231097, "", "=q4=Helm of the Forgotten Conqueror", "=q1=#m1# =ds=#c4#, #c5#, #c9#", "", "70%"};
+		{ 16, 231097, "", "=q4=Helm of the Forgotten Conqueror", "=q1=#m1# =ds=#c4#, #c5#, #c8#", "", "70%"};
 		{ 17, 231095, "", "=q4=Helm of the Forgotten Protector", "=q1=#m1# =ds=#c9#, #c2#, #c7#", "", "72%"};
 		{ 18, 231096, "", "=q4=Helm of the Forgotten Vanquisher", "=q1=#m1# =ds=#c6#, #c3#, #c1#", "", "73%"};
 		{ 20, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
@@ -2811,7 +2811,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 8, 34166, "", "=q4=Band of Lucent Beams", "=ds=#s13#", "", "1.#INF%"};
 		{ 9, 34165, "", "=q4=Fang of Kalecgos", "=ds=#h1#, #w4#"};
 		{ 10, 34164, "", "=q4=Dragonscale-Encrusted Longblade", "=ds=#h1#, #w10#"};
-		{ 16, 34848, "", "=q4=Bracers of the Forgotten Conqueror", "=q1=#m1# =ds=#c4#, #c5#, #c9#", "", "10%"};
+		{ 16, 34848, "", "=q4=Bracers of the Forgotten Conqueror", "=q1=#m1# =ds=#c4#, #c5#, #c8#", "", "10%"};
 		{ 17, 34851, "", "=q4=Bracers of the Forgotten Protector", "=q1=#m1# =ds=#c9#, #c2#, #c7#", "", "11%"};
 		{ 18, 34852, "", "=q4=Bracers of the Forgotten Vanquisher", "=q1=#m1# =ds=#c6#, #c3#, #c1#", "", "12%"};
 		{ 20, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
@@ -2826,7 +2826,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 5, 34177, "", "=q4=Clutch of Demise", "=ds=#s2#", "", "15%"};
 		{ 6, 34179, "", "=q4=Heart of the Pit", "=ds=#s15#", "", "13%"};
 		{ 7, 34176, "", "=q4=Reign of Misery", "=ds=#h3#, #w6#", "", "17%"};
-		{ 16, 34853, "", "=q4=Belt of the Forgotten Conqueror", "=q1=#m1# =ds=#c4#, #c5#, #c9#", "", "74%"};
+		{ 16, 34853, "", "=q4=Belt of the Forgotten Conqueror", "=q1=#m1# =ds=#c4#, #c5#, #c8#", "", "74%"};
 		{ 17, 34854, "", "=q4=Belt of the Forgotten Protector", "=q1=#m1# =ds=#c9#, #c2#, #c7#", "", "70%"};
 		{ 18, 34855, "", "=q4=Belt of the Forgotten Vanquisher", "=q1=#m1# =ds=#c6#, #c3#, #c1#", "", "75%"};
 		{ 20, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
@@ -2843,7 +2843,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 6, 34184, "", "=q4=Brooch of the Highborne", "=ds=#s2#", "", "16%"};
 		{ 7, 34185, "", "=q4=Sword Breaker's Bulwark", "=ds=#w8#", "", "16%"};
 		{ 8, 34182, "", "=q4=Grand Magister's Staff of Torrents", "=ds=#w9#", "", "17%"};
-		{ 16, 34856, "", "=q4=Boots of the Forgotten Conqueror", "=q1=#m1# =ds=#c4#, #c5#, #c9#", "", "79%"};
+		{ 16, 34856, "", "=q4=Boots of the Forgotten Conqueror", "=q1=#m1# =ds=#c4#, #c5#, #c8#", "", "79%"};
 		{ 17, 34857, "", "=q4=Boots of the Forgotten Protector", "=q1=#m1# =ds=#c9#, #c2#, #c7#", "", "86%"};
 		{ 18, 34858, "", "=q4=Boots of the Forgotten Vanquisher", "=q1=#m1# =ds=#c6#, #c3#, #c1#", "", "77%"};
 		{ 20, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
@@ -3021,7 +3021,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 8, 234166, "", "=q4=Band of Lucent Beams", "=ds=#s13#", "", "1.#INF%"};
 		{ 9, 234165, "", "=q4=Fang of Kalecgos", "=ds=#h1#, #w4#"};
 		{ 10, 234164, "", "=q4=Dragonscale-Encrusted Longblade", "=ds=#h1#, #w10#"};
-		{ 16, 234848, "", "=q4=Bracers of the Forgotten Conqueror", "=q1=#m1# =ds=#c4#, #c5#, #c9#", "", "10%"};
+		{ 16, 234848, "", "=q4=Bracers of the Forgotten Conqueror", "=q1=#m1# =ds=#c4#, #c5#, #c8#", "", "10%"};
 		{ 17, 234851, "", "=q4=Bracers of the Forgotten Protector", "=q1=#m1# =ds=#c9#, #c2#, #c7#", "", "11%"};
 		{ 18, 234852, "", "=q4=Bracers of the Forgotten Vanquisher", "=q1=#m1# =ds=#c6#, #c3#, #c1#", "", "12%"};
 		{ 20, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
@@ -3036,7 +3036,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 5, 234177, "", "=q4=Clutch of Demise", "=ds=#s2#", "", "15%"};
 		{ 6, 234179, "", "=q4=Heart of the Pit", "=ds=#s15#", "", "13%"};
 		{ 7, 234176, "", "=q4=Reign of Misery", "=ds=#h3#, #w6#", "", "17%"};
-		{ 16, 234853, "", "=q4=Belt of the Forgotten Conqueror", "=q1=#m1# =ds=#c4#, #c5#, #c9#", "", "74%"};
+		{ 16, 234853, "", "=q4=Belt of the Forgotten Conqueror", "=q1=#m1# =ds=#c4#, #c5#, #c8#", "", "74%"};
 		{ 17, 234854, "", "=q4=Belt of the Forgotten Protector", "=q1=#m1# =ds=#c9#, #c2#, #c7#", "", "70%"};
 		{ 18, 234855, "", "=q4=Belt of the Forgotten Vanquisher", "=q1=#m1# =ds=#c6#, #c3#, #c1#", "", "75%"};
 		{ 20, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
@@ -3053,7 +3053,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 6, 234184, "", "=q4=Brooch of the Highborne", "=ds=#s2#", "", "16%"};
 		{ 7, 234185, "", "=q4=Sword Breaker's Bulwark", "=ds=#w8#", "", "16%"};
 		{ 8, 234182, "", "=q4=Grand Magister's Staff of Torrents", "=ds=#w9#", "", "17%"};
-		{ 16, 234856, "", "=q4=Boots of the Forgotten Conqueror", "=q1=#m1# =ds=#c4#, #c5#, #c9#", "", "79%"};
+		{ 16, 234856, "", "=q4=Boots of the Forgotten Conqueror", "=q1=#m1# =ds=#c4#, #c5#, #c8#", "", "79%"};
 		{ 17, 234857, "", "=q4=Boots of the Forgotten Protector", "=q1=#m1# =ds=#c9#, #c2#, #c7#", "", "86%"};
 		{ 18, 234858, "", "=q4=Boots of the Forgotten Vanquisher", "=q1=#m1# =ds=#c6#, #c3#, #c1#", "", "77%"};
 		{ 20, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
