@@ -219,7 +219,9 @@ function AtlasLootItem_OnClick(arg1)
         end
     if isItem then
         local iteminfo = GetItemInfo(this.itemID);
+        local itemIDBloody = 6000000+(this.itemID);
         local itemName, itemLink, itemQuality, itemLevel, itemMinLevel, itemType, itemSubType, itemCount, itemEquipLoc, itemTexture = GetItemInfo(this.itemID);
+        local itemNameB, itemLinkB, itemQualityB, itemLevelB, itemMinLevelB, itemTypeB, itemSubTypeB, itemCountB, itemEquipLocB, itemTextureB = GetItemInfo(itemIDBloody);
         --If shift-clicked, link in the chat window
         if(arg1=="RightButton" and not iteminfo and this.itemID ~= 0) then
             AtlasLootTooltip:SetHyperlink("item:"..this.itemID..":0:0:0:0:0:0:0");
@@ -233,6 +235,9 @@ function AtlasLootItem_OnClick(arg1)
             AtlasLoot_ShowItemsFrame(AtlasLootItemsFrame.refresh[1], AtlasLootItemsFrame.refresh[2], AtlasLootItemsFrame.refresh[3], AtlasLootItemsFrame.refresh[4]);
             if not AtlasLoot.db.profile.ItemSpam then
                 DEFAULT_CHAT_FRAME:AddMessage(itemLink..AL[" is safe."]);
+                if(itemLinkB) then
+                    DEFAULT_CHAT_FRAME:AddMessage(itemLinkB..AL[" is safe."]);
+                end
             end
         elseif(IsShiftKeyDown() and iteminfo and (AtlasLoot.db.profile.SafeLinks or AtlasLoot.db.profile.AllLinks)) then
             ChatEdit_InsertLink(itemLink);
