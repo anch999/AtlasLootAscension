@@ -603,6 +603,7 @@
 					</OnLoad>
 					<OnClick>
 						AtlasLoot_HeroicModeToggle();
+						AtlasLoot_QueryLootPage();
 					</OnClick>
 				</Scripts>
 			</CheckButton>
@@ -626,6 +627,7 @@
                 <Scripts>
                     <OnClick>
                         AtlasLoot_NavButton_OnClick()
+						AtlasLoot_QueryLootPage();
                     </OnClick>
                     <OnShow>
 		                this:SetFrameLevel( (this:GetParent()):GetFrameLevel() + 1 );
@@ -730,6 +732,7 @@
                 <Scripts>
                     <OnClick>
                         AtlasLoot_NavButton_OnClick()
+						AtlasLoot_QueryLootPage();
                     </OnClick>
                     <OnShow>
 		                this:SetFrameLevel( (this:GetParent()):GetFrameLevel() + 1 );

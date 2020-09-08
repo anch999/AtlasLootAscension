@@ -105,7 +105,7 @@ local AtlasLootDBDefaults = {
         AtlasLootVersion = "1",
         AtlasNaggedVersion = "",
         FuBarPosition = 1,
-        AutoQuery = false,
+        AutoQuery = true,
         LoadAllLoDStartup = false,
         PartialMatching = true,
         LootBrowserStyle = 1,
@@ -1409,6 +1409,8 @@ function AtlasLoot_QueryLootPage()
             queryitem = button.itemID;
             if (queryitem) and (queryitem ~= nil) and (queryitem ~= "") and (queryitem ~= 0) and (string.sub(queryitem, 1, 1) ~= "s") then
                 GameTooltip:SetHyperlink("item:"..queryitem..":0:0:0:0:0:0:0");
+                GameTooltip:SetHyperlink("item:60"..queryitem..":0:0:0:0:0:0:0");
+                GameTooltip:SetHyperlink("item:2"..queryitem..":0:0:0:0:0:0:0");
             end
             i=i+1;
         end
