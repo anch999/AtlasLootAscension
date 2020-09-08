@@ -582,6 +582,7 @@
 			        </OnShow>
 					<OnClick>
 						AtlasLoot_10Man25ManToggle();
+						AtlasLoot_QueryLootPage();
 					</OnClick>
 				</Scripts>
 			</Button>
