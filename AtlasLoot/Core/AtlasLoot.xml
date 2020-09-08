@@ -648,6 +648,7 @@
 				</Anchors>
 				<Scripts>
                     <OnShow>
+						AtlasLoot_QueryLootPage();
                         local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot");
                         this:SetText(AL["Query Server"]);
 				        this:SetFrameLevel( (this:GetParent()):GetFrameLevel() + 1 );
