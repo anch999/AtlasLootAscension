@@ -13,6 +13,7 @@ AtlasLootOptions_EquipCompareToggle()
 AtlasLootOptions_OpaqueToggle()
 AtlasLootOptions_ItemIDToggle()
 AtlasLootOptions_ItemSpam()
+AtlasLootOptions_AutoQuery()
 AtlasLootOptions_MinimapToggle()
 AtlasLootOptions_LoDSpam()
 AtlasLootOptions_LoDStartup()
@@ -118,6 +119,15 @@ function AtlasLootOptions_ItemSpam()
     AtlasLootOptions_Init();
 end
 
+function AtlasLootOptions_AutoQuery()
+    if (AtlasLoot.db.profile.AutoQuery) then
+        AtlasLoot.db.profile.AutoQuery = false;
+    else
+        AtlasLoot.db.profile.AutoQuery = true;
+    end
+    AtlasLootOptions_Init();
+end
+
 function AtlasLootOptions_LoDStartup()
     if (AtlasLoot.db.profile.LoadAllLoDStartup) then
         AtlasLoot.db.profile.LoadAllLoDStartup = false;
@@ -181,7 +191,7 @@ function AtlasLoot_DisplayHelp()
             ORANGE..AL["How to link an item to someone else:"].."\n"..
             WHITE..AL["Shift+Left Click the item like you would for any other in-game item"].."\n\n"..
             ORANGE..AL["How to view an 'unsafe' item:"].."\n"..
-            WHITE..AL["Unsafe items have a red border around the icon and are marked because you have not seen the item since the last patch or server restart. Right-click the item, then move your mouse back over the item or click the 'Query Server' button at the bottom of the loot page."].."\n\n"..
+            WHITE..AL["Unsafe items have a red border around the icon and are marked because you have not seen the item since the last patch or server restart. Right-click the item, then move your mouse back over the item or click the 'Query Server' button at the bottom of the loot page. This will also load any Bloodforged items."].."\n\n"..
             ORANGE..AL["How to view an item in the Dressing Room:"].."\n"..
             WHITE..AL["Simply Ctrl+Left Click on the item.  Sometimes the dressing room window is hidden behind the Atlas or AtlasLoot windows, so if nothing seems to happen move your Atlas or AtlasLoot windows and see if anything is hidden."].."\n\n"..
             ORANGE..AL["How to add an item to the wishlist:"].."\n"..
@@ -192,6 +202,8 @@ function AtlasLoot_DisplayHelp()
             WHITE..AL["If you Left Click any item on the wishlist, you can jump to the loot page the item comes from.  Also, on a loot page any item already in your wishlist is marked with a yellow star."].."\n\n"..
             ORANGE..AL["HELP!! I have broken the mod somehow!"].."\n"..
             WHITE..AL["Use the reset buttons available in the options menu, or type '/al reset' in your chat window."].."\n\n"..
+            ORANGE..AL["How do I view Bloodforged items?"].."\n"..
+            WHITE..AL["You must have 'Safe Chat Links' enabled in your options, and the Bloodforged item in your item cache.  When viewing a page, click the 'Query Server' button to load the items and Bloodforged equivalents, then right click on an item to display item links for the original and Bloodforged versions in your chat."].."\n\n"..
             GREY..AL["For further help, see our website and forums: "]..GREEN.."http://www.atlasloot.net"
             );
 			Text:SetWidth(framewidht-80)
@@ -216,6 +228,7 @@ function AtlasLoot_CreateOptionsInfoTooltips()
       AtlasLoot_AddTooltip("AtlasLootOptionsFrameHidePanel", nil) -- AL["Hide AtlasLoot Panel"]
       AtlasLoot_AddTooltip("AtlasLootOptionsFrameItemSpam", nil) -- AL["Suppress Item Query Text"]
       AtlasLoot_AddTooltip("AtlasLootOptionsFrameLoDSpam", nil) -- AL["Notify on LoD Module Load"]
+      AtlasLoot_AddTooltip("AtlasLootOptionsFrameAutoQuery", nil) -- AL["Auto Query items on page load"]
       AtlasLoot_AddTooltip("AtlasLootOptionsFrameLootBrowserScale", nil) -- Scale SLIDER
       AtlasLoot_AddTooltip("AtlasLootOptionsFrame_ResetAtlasLoot", nil) -- AL["Reset Frames"]
       AtlasLoot_AddTooltip("AtlasLootOptionsFrame_ResetWishlist", nil) -- AL["Reset Wishlist"]

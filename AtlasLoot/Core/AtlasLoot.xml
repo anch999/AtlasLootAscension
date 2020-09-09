@@ -582,7 +582,9 @@
 			        </OnShow>
 					<OnClick>
 						AtlasLoot_10Man25ManToggle();
-						AtlasLoot_QueryLootPage();
+							if AtlasLoot.db.profile.AutoQuery then
+								AtlasLoot_QueryLootPage();
+							end
 					</OnClick>
 				</Scripts>
 			</Button>
@@ -604,7 +606,9 @@
 					</OnLoad>
 					<OnClick>
 						AtlasLoot_HeroicModeToggle();
-						AtlasLoot_QueryLootPage();
+							if AtlasLoot.db.profile.AutoQuery then
+								AtlasLoot_QueryLootPage();
+							end							
 					</OnClick>
 				</Scripts>
 			</CheckButton>
@@ -628,7 +632,9 @@
                 <Scripts>
                     <OnClick>
                         AtlasLoot_NavButton_OnClick()
-						AtlasLoot_QueryLootPage();
+				if AtlasLoot.db.profile.AutoQuery then
+					AtlasLoot_QueryLootPage();
+				end
                     </OnClick>
                     <OnShow>
 		                this:SetFrameLevel( (this:GetParent()):GetFrameLevel() + 1 );
@@ -648,7 +654,6 @@
 				</Anchors>
 				<Scripts>
                     <OnShow>
-						AtlasLoot_QueryLootPage();
                         local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot");
                         this:SetText(AL["Query Server"]);
 				        this:SetFrameLevel( (this:GetParent()):GetFrameLevel() + 1 );
@@ -661,7 +666,7 @@
                         GameTooltip:AddLine(AL["Queries the server for all items"]);
                         GameTooltip:AddLine(AL["on this page. The items will be"]);
                         GameTooltip:AddLine(AL["refreshed when you next mouse"]);
-                        GameTooltip:AddLine(AL["over them."]);
+                        GameTooltip:AddLine(AL["over them. |cffff0000 (Includes Bloodforged)"]);
                         GameTooltip:Show();
 			        </OnEnter>
                     <OnLeave>
@@ -734,7 +739,9 @@
                 <Scripts>
                     <OnClick>
                         AtlasLoot_NavButton_OnClick()
-						AtlasLoot_QueryLootPage();
+				if AtlasLoot.db.profile.AutoQuery then
+					AtlasLoot_QueryLootPage();
+				end
                     </OnClick>
                     <OnShow>
 		                this:SetFrameLevel( (this:GetParent()):GetFrameLevel() + 1 );
@@ -941,7 +948,7 @@
 				<Anchors>
 					<Anchor point="TOP">
 						<Offset>
-							<AbsDimension x="5" y="-70"/>
+							<AbsDimension x="5" y="-64"/>
 						</Offset>
 					</Anchor>
 				</Anchors>
@@ -959,7 +966,7 @@
 				<Anchors>
 					<Anchor point="TOP">
 						<Offset>
-							<AbsDimension x="5" y="-100"/>
+							<AbsDimension x="5" y="-88"/>
 						</Offset>
 					</Anchor>
 				</Anchors>
@@ -987,7 +994,7 @@
 				<Anchors>
 					<Anchor point="TOP">
 						<Offset>
-							<AbsDimension x="5" y="-130"/>
+							<AbsDimension x="5" y="-112"/>
 						</Offset>
 					</Anchor>
 				</Anchors>
@@ -1001,6 +1008,26 @@
 					</OnClick>
 				</Scripts>
 			</CheckButton>
+
+            <CheckButton name="$parentAutoQuery" inherits="OptionsCheckButtonTemplate">
+				<Anchors>
+					<Anchor point="TOP">
+						<Offset>
+							<AbsDimension x="5" y="-136"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad>
+                        local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot");
+						getglobal(this:GetName().."Text"):SetText(AL["Auto Query items on page load"]);
+					</OnLoad>
+					<OnClick>
+						AtlasLootOptions_AutoQuery();
+					</OnClick>
+				</Scripts>
+			</CheckButton>
+
             <CheckButton name="$parentHidePanel" inherits="OptionsCheckButtonTemplate">
 				<Anchors>
 					<Anchor point="TOP">
