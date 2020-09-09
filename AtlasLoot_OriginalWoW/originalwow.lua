@@ -7338,6 +7338,144 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 		Back = "T1T2T3SET";
 	};
 
+		-------------------------------
+		--- Tier 3 Sets (T3) HEROIC ---
+		-------------------------------
+
+	AtlasLoot_Data["T3DruidHEROIC"] = {
+		{ 1, 0, "Spell_Nature_Regeneration", "=q6=#t3s1#", "=ec1=#m35#"};
+		{ 2, 222490, "", "=q4=Dreamwalker Headpiece", "=ds="};
+		{ 3, 222491, "", "=q4=Dreamwalker Spaulders", "=ds="};
+		{ 4, 222488, "", "=q4=Dreamwalker Tunic", "=ds="};
+		{ 5, 222495, "", "=q4=Dreamwalker Wristguards", "=ds="};
+		{ 6, 222493, "", "=q4=Dreamwalker Handguards", "=ds="};
+		{ 7, 222494, "", "=q4=Dreamwalker Girdle", "=ds="};
+		{ 8, 222489, "", "=q4=Dreamwalker Legguards", "=ds="};
+		{ 9, 222492, "", "=q4=Dreamwalker Boots", "=ds="};
+		{ 10, 223064, "", "=q4=Ring of the Dreamwalker", "=ds="};
+		Prev = "T1T2DruidHEROIC";
+		Back = "T1T2T3SET";
+	};
+
+	AtlasLoot_Data["T3HunterHEROIC"] = {
+		{ 1, 0, "Ability_Hunter_RunningShot", "=q6=#t3s2#", "=ec1=#m35#"};
+		{ 2, 222438, "", "=q4=Cryptstalker Headpiece", "=ds="};
+		{ 3, 222439, "", "=q4=Cryptstalker Spaulders", "=ds="};
+		{ 4, 222436, "", "=q4=Cryptstalker Tunic", "=ds="};
+		{ 5, 222443, "", "=q4=Cryptstalker Wristguards", "=ds="};
+		{ 6, 222441, "", "=q4=Cryptstalker Handguards", "=ds="};
+		{ 7, 222442, "", "=q4=Cryptstalker Girdle", "=ds="};
+		{ 8, 222437, "", "=q4=Cryptstalker Legguards", "=ds="};
+		{ 9, 222440, "", "=q4=Cryptstalker Boots", "=ds="};
+		{ 10, 223067, "", "=q4=Ring of the Cryptstalker", "=ds="};
+		Prev = "T1T2HunterHEROIC";
+		Back = "T1T2T3SET";
+	};
+
+	AtlasLoot_Data["T3MageHEROIC"] = {
+		{ 1, 0, "Spell_Frost_IceStorm", "=q6=#t3s3#", "=ec1=#m35#"};
+		{ 2, 222498, "", "=q4=Frostfire Circlet", "=ds="};
+		{ 3, 222499, "", "=q4=Frostfire Shoulderpads", "=ds="};
+		{ 4, 222496, "", "=q4=Frostfire Robe", "=ds="};
+		{ 5, 222503, "", "=q4=Frostfire Bindings", "=ds="};
+		{ 6, 222501, "", "=q4=Frostfire Gloves", "=ds="};
+		{ 7, 222502, "", "=q4=Frostfire Belt", "=ds="};
+		{ 8, 222497, "", "=q4=Frostfire Leggings", "=ds="};
+		{ 9, 222500, "", "=q4=Frostfire Sandals", "=ds="};
+		{ 10, 223062, "", "=q4=Frostfire Ring", "=ds="};
+		Prev = "T1T2MageHEROIC";
+		Back = "T1T2T3SET";
+	};
+
+	AtlasLoot_Data["T3PaladinHEROIC"] = {
+		{ 1, 0, "Spell_Holy_SealOfMight", "=q6=#t3s4#", "=ec1=#m35#"};
+		{ 2, 222428, "", "=q4=Redemption Headpiece", "=ds="};
+		{ 3, 222429, "", "=q4=Redemption Spaulders", "=ds="};
+		{ 4, 222425, "", "=q4=Redemption Tunic", "=ds="};
+		{ 5, 222424, "", "=q4=Redemption Wristguards", "=ds="};
+		{ 6, 222426, "", "=q4=Redemption Handguards", "=ds="};
+		{ 7, 222431, "", "=q4=Redemption Girdle", "=ds="};
+		{ 8, 222427, "", "=q4=Redemption Legguards", "=ds="};
+		{ 9, 222430, "", "=q4=Redemption Boots", "=ds="};
+		{ 10, 223066, "", "=q4=Ring of Redemption", "=ds="};
+		Prev = "T1T2PaladinHEROIC";
+		Back = "T1T2T3SET";
+	};
+
+	AtlasLoot_Data["T3PriestHEROIC"] = {
+		{ 1, 0, "Spell_Holy_PowerWordShield", "=q6=#t3s5#", "=ec1=#m35#"};
+		{ 2, 222514, "", "=q4=Circlet of Faith", "=ds="};
+		{ 3, 222515, "", "=q4=Shoulderpads of Faith", "=ds="};
+		{ 4, 222512, "", "=q4=Robe of Faith", "=ds="};
+		{ 5, 222519, "", "=q4=Bindings of Faith", "=ds="};
+		{ 6, 222517, "", "=q4=Gloves of Faith", "=ds="};
+		{ 7, 222518, "", "=q4=Belt of Faith", "=ds="};
+		{ 8, 222513, "", "=q4=Leggings of Faith", "=ds="};
+		{ 9, 222516, "", "=q4=Sandals of Faith", "=ds="};
+		{ 10, 223061, "", "=q4=Ring of Faith", "=ds="};
+		Prev = "T1T2PriestHEROIC";
+		Back = "T1T2T3SET";
+	};
+
+	AtlasLoot_Data["T3RogueHEROIC"] = {
+		{ 1, 0, "Ability_BackStab", "=q6=#t3s6#", "=ec1=#m35#"};
+		{ 2, 222478, "", "=q4=Bonescythe Helmet", "=ds="};
+		{ 3, 222479, "", "=q4=Bonescythe Pauldrons", "=ds="};
+		{ 4, 222476, "", "=q4=Bonescythe Breastplate", "=ds="};
+		{ 5, 222483, "", "=q4=Bonescythe Bracers", "=ds="};
+		{ 6, 222481, "", "=q4=Bonescythe Gauntlets", "=ds="};
+		{ 7, 222482, "", "=q4=Bonescythe Waistguard", "=ds="};
+		{ 8, 222477, "", "=q4=Bonescythe Legplates", "=ds="};
+		{ 9, 222480, "", "=q4=Bonescythe Sabatons", "=ds="};
+		{ 10, 223060, "", "=q4=Bonescythe Ring", "=ds="};
+		Prev = "T1T2RogueHEROIC";
+		Back = "T1T2T3SET";
+	};
+
+	AtlasLoot_Data["T3ShamanHEROIC"] = {
+		{ 1, 0, "Spell_FireResistanceTotem_01", "=q6=#t3s7#", "=ec1=#m35#"};
+		{ 2, 222466, "", "=q4=Earthshatter Headpiece", "=ds="};
+		{ 3, 222467, "", "=q4=Earthshatter Spaulders", "=ds="};
+		{ 4, 222464, "", "=q4=Earthshatter Tunic", "=ds="};
+		{ 5, 222471, "", "=q4=Earthshatter Wristguards", "=ds="};
+		{ 6, 222469, "", "=q4=Earthshatter Handguards", "=ds="};
+		{ 7, 222470, "", "=q4=Earthshatter Girdle", "=ds="};
+		{ 8, 222465, "", "=q4=Earthshatter Legguards", "=ds="};
+		{ 9, 222468, "", "=q4=Earthshatter Boots", "=ds="};
+		{ 10, 223065, "", "=q4=Ring of the Earthshatterer", "=ds="};
+		Prev = "T1T2ShamanHEROIC";
+		Back = "T1T2T3SET";
+	};
+
+	AtlasLoot_Data["T3WarlockHEROIC"] = {
+		{ 1, 0, "Spell_Shadow_CurseOfTounges", "=q6=#t3s8#", "=ec1=#m35#"};
+		{ 2, 222506, "", "=q4=Plagueheart Circlet", "=ds="};
+		{ 3, 222507, "", "=q4=Plagueheart Shoulderpads", "=ds="};
+		{ 4, 222504, "", "=q4=Plagueheart Robe", "=ds="};
+		{ 5, 222511, "", "=q4=Plagueheart Bindings", "=ds="};
+		{ 6, 222509, "", "=q4=Plagueheart Gloves", "=ds="};
+		{ 7, 222510, "", "=q4=Plagueheart Belt", "=ds="};
+		{ 8, 222505, "", "=q4=Plagueheart Leggings", "=ds="};
+		{ 9, 222508, "", "=q4=Plagueheart Sandals", "=ds="};
+		{ 10, 223063, "", "=q4=Plagueheart Ring", "=ds="};
+		Prev = "T1T2WarlockHEROIC";
+		Back = "T1T2T3SET";
+	};
+
+	AtlasLoot_Data["T3WarriorHEROIC"] = {
+		{ 1, 0, "INV_Shield_05", "=q6=#t3s9#", "=ec1=#m35#"};
+		{ 2, 222418, "", "=q4=Dreadnaught Helmet", "=ds="};
+		{ 3, 222419, "", "=q4=Dreadnaught Pauldrons", "=ds="};
+		{ 4, 222416, "", "=q4=Dreadnaught Breastplate", "=ds="};
+		{ 5, 222423, "", "=q4=Dreadnaught Bracers", "=ds="};
+		{ 6, 222421, "", "=q4=Dreadnaught Gauntlets", "=ds="};
+		{ 7, 222422, "", "=q4=Dreadnaught Waistguard", "=ds="};
+		{ 8, 222417, "", "=q4=Dreadnaught Legplates", "=ds="};
+		{ 9, 222420, "", "=q4=Dreadnaught Sabatons", "=ds="};
+		{ 10, 223059, "", "=q4=Ring of the Dreadnaught", "=ds="};
+		Prev = "T1T2WarriorHEROIC";
+		Back = "T1T2T3SET";
+	};
 		------------------------
 		--- Vanilla WoW Sets ---
 		------------------------
@@ -7656,6 +7794,55 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 		Back = "SETSCLASSIC";
 	};
 
+		------------------------
+		--- AQ20 Sets HEROIC ---
+		------------------------
+
+	AtlasLoot_Data["AQ20Sets1HEROIC"] = {
+		{ 1, 0, "Spell_Nature_Regeneration", "=q6=#aq20s1#", "=ec1=#c1#"};
+		{ 2, 221407, "", "=q4=Mace of Unending Life", "=q4=#aq20t1#, =ds=#r5#"};
+		{ 3, 221409, "", "=q4=Cloak of Unending Life", "=q3=#aq20t5#, =ds=#r4#"};
+		{ 4, 221408, "", "=q4=Band of Unending Life", "=q3=#aq20t3#, =ds=#r3#"};
+		{ 6, 0, "Ability_Hunter_RunningShot", "=q6=#aq20s2#", "=ec1=#c2#"};
+		{ 7, 221401, "", "=q4=Scythe of the Unseen Path", "=q4=#aq20t6#, =ds=#r5#"};
+		{ 8, 221403, "", "=q4=Cloak of the Unseen Path", "=q3=#aq20t5#, =ds=#r4#"};
+		{ 9, 221402, "", "=q4=Signet of the Unseen Path", "=q3=#aq20t4#, =ds=#r3#"};
+		{ 11, 0, "Spell_Frost_IceStorm", "=q6=#aq20s3#", "=ec1=#c3#"};
+		{ 12, 221413, "", "=q4=Blade of Vaulted Secrets", "=q4=#aq20t1#, =ds=#r5#"};
+		{ 13, 221415, "", "=q4=Drape of Vaulted Secrets", "=q3=#aq20t2#, =ds=#r4#"};
+		{ 14, 221414, "", "=q4=Band of Vaulted Secrets", "=q3=#aq20t3#, =ds=#r3#"};
+		{ 16, 0, "Spell_Holy_SealOfMight", "=q6=#aq20s4#", "=ec1=#c4#"};
+		{ 17, 221395, "", "=q4=Blade of Eternal Justice", "=q4=#aq20t6#, =ds=#r5#"};
+		{ 18, 221397, "", "=q4=Cape of Eternal Justice", "=q3=#aq20t5#, =ds=#r4#"};
+		{ 19, 221396, "", "=q4=Ring of Eternal Justice", "=q3=#aq20t3#, =ds=#r3#"};
+		{ 21, 0, "Spell_Holy_PowerWordShield", "=q6=#aq20s5#", "=ec1=#c5#"};
+		{ 22, 221410, "", "=q4=Gavel of Infinite Wisdom", "=q4=#aq20t1#, =ds=#r5#"};
+		{ 23, 221412, "", "=q4=Shroud of Infinite Wisdom", "=q3=#aq20t2#, =ds=#r4#"};
+		{ 24, 221411, "", "=q4=Ring of Infinite Wisdom", "=q3=#aq20t4#, =ds=#r3#"};
+		{ 26, 0, "Ability_BackStab", "=q6=#aq20s6#", "=ec1=#c6#"};
+		{ 27, 221404, "", "=q4=Dagger of Veiled Shadows", "=q4=#aq20t6#, =ds=#r5#"};
+		{ 28, 221406, "", "=q4=Cloak of Veiled Shadows", "=q3=#aq20t2#, =ds=#r4#"};
+		{ 29, 221405, "", "=q4=Band of Veiled Shadows", "=q3=#aq20t4#, =ds=#r3#"};
+		Next = "AQ20Sets2HEROIC";
+		Back = "SETSCLASSIC";
+	};
+
+	AtlasLoot_Data["AQ20Sets2HEROIC"] = {
+		{ 1, 0, "Spell_FireResistanceTotem_01", "=q6=#aq20s7#", "=ec1=#c7#"};
+		{ 2, 221398, "", "=q4=Hammer of the Gathering Storm", "=q4=#aq20t6#, =ds=#r5#"};
+		{ 3, 221400, "", "=q4=Cloak of the Gathering Storm", "=q3=#aq20t5#, =ds=#r4#"};
+		{ 4, 221399, "", "=q4=Ring of the Gathering Storm", "=q3=#aq20t3#, =ds=#r3#"};
+		{ 6, 0, "Spell_Shadow_CurseOfTounges", "=q6=#aq20s8#", "=ec1=#c8#"};
+		{ 7, 221416, "", "=q4=Kris of Unspoken Names", "=q4=#aq20t1#, =ds=#r5#"};
+		{ 8, 221418, "", "=q4=Shroud of Unspoken Names", "=q3=#aq20t5#, =ds=#r4#"};
+		{ 9, 221417, "", "=q4=Ring of Unspoken Names", "=q3=#aq20t4#, =ds=#r3#"};
+		{ 11, 0, "INV_Shield_05", "=q6=#aq20s9#", "=ec1=#c9#"};
+		{ 12, 221392, "", "=q4=Sickle of Unyielding Strength", "=q4=#aq20t6#, =ds=#r5#"};
+		{ 13, 221394, "", "=q4=Drape of Unyielding Strength", "=q3=#aq20t2#, =ds=#r4#"};
+		{ 14, 221393, "", "=q4=Signet of Unyielding Strength", "=q3=#aq20t3#=ds=, #r3#"};
+		Prev = "AQ20Sets1HEROIC";
+		Back = "SETSCLASSIC";
+	};
 		-----------------
 		--- AQ40 Sets ---
 		-----------------
@@ -7730,6 +7917,79 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 		Back = "SETSCLASSIC";
 	};
 
+		-----------------------
+		--- AQ40 Sets HEROIC---
+		-----------------------
+
+	AtlasLoot_Data["AQ40Sets1HEROIC"] = {
+		{ 1, 0, "Spell_Nature_Regeneration", "=q6=#aq40s1#", "=ec1=#c1#"};
+		{ 2, 221357, "", "=q4=Genesis Vest", "=q4=#aq40t4#, =ds=#r3#"};
+		{ 3, 221353, "", "=q4=Genesis Helm", "=q4=#aq40t6#, =ds=#r2#"};
+		{ 4, 221356, "", "=q4=Genesis Trousers", "=q4=#aq40t7#, =ds=#r2#"};
+		{ 5, 221354, "", "=q4=Genesis Shoulderpads", "=q4=#aq40t1#, =ds=#r1#"};
+		{ 6, 221355, "", "=q4=Genesis Boots", "=q4=#aq40t1#, =ds=#r1#"};
+		{ 8, 0, "Ability_Hunter_RunningShot", "=q6=#aq40s2#", "=ec1=#c2#"};
+		{ 9, 221370, "", "=q4=Striker's Hauberk", "=q4=#aq40t8#, =ds=#r3#"};
+		{ 10, 221366, "", "=q4=Striker's Diadem", "=q4=#aq40t6#, =ds=#r2#"};
+		{ 11, 221368, "", "=q4=Striker's Leggings", "=q4=#aq40t7#, =ds=#r2#"};
+		{ 12, 221367, "", "=q4=Striker's Pauldrons", "=q4=#aq40t5#, =ds=#r1#"};
+		{ 13, 221365, "", "=q4=Striker's Footguards", "=q4=#aq40t5#, =ds=#r1#"};
+		{ 16, 0, "Spell_Frost_IceStorm", "=q6=#aq40s3#", "=ec1=#c3#"};
+		{ 17, 221343, "", "=q4=Enigma Robes", "=q4=#aq40t4#, =ds=#r3#"};
+		{ 18, 221347, "", "=q4=Enigma Circlet", "=q4=#aq40t2#, =ds=#r2#"};
+		{ 19, 221346, "", "=q4=Enigma Leggings", "=q4=#aq40t3#, =ds=#r2#"};
+		{ 20, 221345, "", "=q4=Enigma Shoulderpads", "=q4=#aq40t1#, =ds=#r1#"};
+		{ 21, 221344, "", "=q4=Enigma Boots", "=q4=#aq40t1#, =ds=#r1#"};
+		{ 23, 0, "Spell_Holy_SealOfMight", "=q6=#aq40s4#", "=ec1=#c4#"};
+		{ 24, 221389, "", "=q4=Avenger's Breastplate", "=q4=#aq40t8#, =ds=#r3#"};
+		{ 25, 221387, "", "=q4=Avenger's Crown", "=q4=#aq40t6#, =ds=#r2#"};
+		{ 26, 221390, "", "=q4=Avenger's Legguards", "=q4=#aq40t7#, =ds=#r2#"};
+		{ 27, 221391, "", "=q4=Avenger's Pauldrons", "=q4=#aq40t1#, =ds=#r1#"};
+		{ 28, 221388, "", "=q4=Avenger's Greaves", "=q4=#aq40t1#, =ds=#r1#"};
+		Next = "AQ40Sets2HEROIC";
+		Back = "SETSCLASSIC";
+	};
+
+	AtlasLoot_Data["AQ40Sets2HEROIC"] = {
+		{ 1, 0, "Spell_Holy_PowerWordShield", "=q6=#aq40s5#", "=ec1=#c5#"};
+		{ 2, 221351, "", "=q4=Vestments of the Oracle", "=q4=#aq40t4#, =ds=#r3#"};
+		{ 3, 221348, "", "=q4=Tiara of the Oracle", "=q4=#aq40t2#, =ds=#r2#"};
+		{ 4, 221352, "", "=q4=Trousers of the Oracle", "=q4=#aq40t3#, =ds=#r2#"};
+		{ 5, 221350, "", "=q4=Mantle of the Oracle", "=q4=#aq40t5#, =ds=#r1#"};
+		{ 6, 221349, "", "=q4=Footwraps of the Oracle", "=q4=#aq40t5#, =ds=#r1#"};
+		{ 8, 0, "Ability_BackStab", "=q6=#aq40s6#", "=ec1=#c6#"};
+		{ 9, 221364, "", "=q4=Deathdealer's Vest", "=q4=#aq40t8#, =ds=#r3#"};
+		{ 10, 221360, "", "=q4=Deathdealer's Helm", "=q4=#aq40t6#, =ds=#r2#"};
+		{ 11, 221362, "", "=q4=Deathdealer's Leggings", "=q4=#aq40t3#, =ds=#r2#"};
+		{ 12, 221361, "", "=q4=Deathdealer's Spaulders", "=q4=#aq40t5#, =ds=#r1#"};
+		{ 13, 221359, "", "=q4=Deathdealer's Boots", "=q4=#aq40t5#, =ds=#r1#"};
+		{ 16, 0, "Spell_FireResistanceTotem_01", "=q6=#aq40s7#", "=ec1=#c7#"};
+		{ 17, 221374, "", "=q4=Stormcaller's Hauberk", "=q4=#aq40t8#, =ds=#r3#"};
+		{ 18, 221372, "", "=q4=Stormcaller's Diadem", "=q4=#aq40t6#, =ds=#r2#"};
+		{ 19, 221375, "", "=q4=Stormcaller's Leggings", "=q4=#aq40t7#, =ds=#r2#"};
+		{ 20, 221376, "", "=q4=Stormcaller's Pauldrons", "=q4=#aq40t1#, =ds=#r1#"};
+		{ 21, 221373, "", "=q4=Stormcaller's Footguards", "=q4=#aq40t1#, =ds=#r1#"};
+		{ 23, 0, "Spell_Shadow_CurseOfTounges", "=q6=#aq40s8#", "=ec1=#c8#"};
+		{ 24, 221334, "", "=q4=Doomcaller's Robes", "=q4=#aq40t4#, =ds=#r3#"};
+		{ 25, 221337, "", "=q4=Doomcaller's Circlet", "=q4=#aq40t2#, =ds=#r2#"};
+		{ 26, 221336, "", "=q4=Doomcaller's Trousers", "=q4=#aq40t7#, =ds=#r2#"};
+		{ 27, 221335, "", "=q4=Doomcaller's Mantle", "=q4=#aq40t1#, =ds=#r1#"};
+		{ 28, 221338, "", "=q4=Doomcaller's Footwraps", "=q4=#aq40t1#, =ds=#r1#"};
+		Next = "AQ40Sets3HEROIC";
+		Prev = "AQ40Sets1HEROIC";
+		Back = "SETSCLASSIC";
+	};
+
+	AtlasLoot_Data["AQ40Sets3HEROIC"] = {
+		{ 1, 0, "INV_Shield_05", "=q6=#aq40s9#", "=ec1=#c9#"};
+		{ 2, 221331, "", "=q4=Conqueror's Breastplate", "=q4=#aq40t8#, =ds=#r3#"};
+		{ 3, 221329, "", "=q4=Conqueror's Crown", "=q4=#aq40t2#, =ds=#r2#"};
+		{ 4, 221332, "", "=q4=Conqueror's Legguards", "=q4=#aq40t3#, =ds=#r2#"};
+		{ 5, 221330, "", "=q4=Conqueror's Spaulders", "=q4=#aq40t5#, =ds=#r1#"};
+		{ 6, 221333, "", "=q4=Conqueror's Greaves", "=q4=#aq40t5#, =ds=#r1#"};
+		Prev = "AQ40Sets2HEROIC";
+		Back = "SETSCLASSIC";
+	};
 		-----------------------
 		--- BoE World Epics ---
 		-----------------------

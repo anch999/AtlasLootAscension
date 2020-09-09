@@ -10,13 +10,13 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 3, "EMBLEMOFCONQUESTMENU", "Spell_Holy_ChampionsGrace", "=ds="..AL["Emblem of Conquest Rewards"], "=q5="..AL["Wrath of the Lich King"]};
 		{ 4, "EMBLEMOFVALORMENU", "Spell_Holy_ProclaimChampion_02", "=ds="..AL["Emblem of Valor Rewards"], "=q5="..AL["Wrath of the Lich King"]};
 		{ 5, "EMBLEMOFHEROISMMENU", "Spell_Holy_ProclaimChampion", "=ds="..AL["Emblem of Heroism Rewards"], "=q5="..AL["Wrath of the Lich King"]};
-		{ 7, "Legendaries", "INV_Staff_Medivh", "=ds="..AL["Legendary Items"], ""};
+		{ 7, "Heirloom", "INV_Sword_43", "=ds="..AL["Heirloom"], ""};
 		{ 8, "MOUNTMENU", "INV_Misc_QirajiCrystal_05", "=ds="..AL["Mounts"], ""};
 		{ 9, "PETMENU", "INV_Box_PetCarrier_01", "=ds="..AL["Vanity Pets"], ""};
 		{ 10, "Tabards3", "INV_Shirt_GuildTabard_01", "=ds="..AL["Tabards"], ""};
 		{ 11, "CardGame1", "INV_Misc_Ticket_Tarot_Madness", "=ds="..AL["Upper Deck Card Game Items"], ""};
-		{ 13, "WORLDEPICS", "INV_Sword_76", "=ds="..AL["BoE World Epics"], ""};
-		{ 15, "Heirloom", "INV_Sword_43", "=ds="..AL["Heirloom"], ""};
+		{ 13, "Legendaries", "INV_Staff_Medivh", "=ds="..AL["Legendary Items"], ""};
+		{ 15, "WORLDEPICS", "INV_Sword_76", "=ds="..AL["BoE World Epics"], ""};
 		{ 16, "PVPMENU", "INV_Axe_02", "=ds="..AL["PvP Rewards"], ""};
 		{ 18, "SETSCLASSIC", "INV_Sword_43", "=ds="..AL["Classic Sets"], ""};
 		{ 19, "SETSWRATHOFLICHKING", "inv_misc_monsterscales_15", "=ds="..AL["Wrath of the Lich King Sets"], ""};
