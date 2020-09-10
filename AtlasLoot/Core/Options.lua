@@ -13,7 +13,7 @@ AtlasLootOptions_EquipCompareToggle()
 AtlasLootOptions_OpaqueToggle()
 AtlasLootOptions_ItemIDToggle()
 AtlasLootOptions_ItemSpam()
-AtlasLootOptions_AutoQuery()
+AtlasLootOptions_ItemAutoQuery()
 AtlasLootOptions_MinimapToggle()
 AtlasLootOptions_LoDSpam()
 AtlasLootOptions_LoDStartup()
@@ -46,6 +46,7 @@ function AtlasLootOptions_Init()
 	AtlasLootOptionsFrameLootlinkTT:SetChecked(AtlasLoot.db.profile.LootlinkTT);
 	AtlasLootOptionsFrameItemSyncTT:SetChecked(AtlasLoot.db.profile.ItemSyncTT);
     AtlasLootOptionsFrameEquipCompare:SetChecked(AtlasLoot.db.profile.EquipCompare);
+    AtlasLootOptionsFrameItemAutoQuery:SetChecked(AtlasLoot.db.profile.ItemAutoQuery);
     AtlasLootOptionsFrameOpaque:SetChecked(AtlasLoot.db.profile.Opaque);
     AtlasLootOptionsFrameItemID:SetChecked(AtlasLoot.db.profile.ItemIDs);
     AtlasLootOptionsFrameItemSpam:SetChecked(AtlasLoot.db.profile.ItemSpam);
@@ -119,11 +120,11 @@ function AtlasLootOptions_ItemSpam()
     AtlasLootOptions_Init();
 end
 
-function AtlasLootOptions_AutoQuery()
-    if (AtlasLoot.db.profile.AutoQuery) then
-        AtlasLoot.db.profile.AutoQuery = false;
+function AtlasLootOptions_ItemAutoQuery()
+    if (AtlasLoot.db.profile.ItemAutoQuery) then
+        AtlasLoot.db.profile.ItemAutoQuery = false;
     else
-        AtlasLoot.db.profile.AutoQuery = true;
+        AtlasLoot.db.profile.ItemAutoQuery = true;
     end
     AtlasLootOptions_Init();
 end
@@ -228,7 +229,7 @@ function AtlasLoot_CreateOptionsInfoTooltips()
       AtlasLoot_AddTooltip("AtlasLootOptionsFrameHidePanel", nil) -- AL["Hide AtlasLoot Panel"]
       AtlasLoot_AddTooltip("AtlasLootOptionsFrameItemSpam", nil) -- AL["Suppress Item Query Text"]
       AtlasLoot_AddTooltip("AtlasLootOptionsFrameLoDSpam", nil) -- AL["Notify on LoD Module Load"]
-      AtlasLoot_AddTooltip("AtlasLootOptionsFrameAutoQuery", nil) -- AL["Auto Query items on page load"]
+      AtlasLoot_AddTooltip("AtlasLootOptionsFrameItemAutoQuery", nil) -- AL["Auto Query items on page load"]
       AtlasLoot_AddTooltip("AtlasLootOptionsFrameLootBrowserScale", nil) -- Scale SLIDER
       AtlasLoot_AddTooltip("AtlasLootOptionsFrame_ResetAtlasLoot", nil) -- AL["Reset Frames"]
       AtlasLoot_AddTooltip("AtlasLootOptionsFrame_ResetWishlist", nil) -- AL["Reset Wishlist"]

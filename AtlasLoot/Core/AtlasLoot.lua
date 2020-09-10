@@ -15,6 +15,7 @@ AtlasLootBoss_OnClick()
 AtlasLoot_ShowItemsFrame()
 AtlasLoot_GenerateAtlasMenu(dataID, pFrame)
 AtlasLoot_SetupForAtlas()
+AtlasLootOptions_ItemAutoQuery()
 AtlasLoot_SetItemInfoFrame()
 AtlasLootItemsFrame_OnCloseButton()
 AtlasLootMenuItem_OnClick()
@@ -90,6 +91,7 @@ local AtlasLootDBDefaults = {
         LootlinkTT = false,
         ItemSyncTT = false,
         EquipCompare = false,
+	ItemAutoQuery = false,
         Opaque = false,
         ItemIDs = false,
         ItemSpam = false,
@@ -105,7 +107,7 @@ local AtlasLootDBDefaults = {
         AtlasLootVersion = "1",
         AtlasNaggedVersion = "",
         FuBarPosition = 1,
-        AutoQuery = true,
+	AutoQuery = false,
         LoadAllLoDStartup = false,
         PartialMatching = true,
         LootBrowserStyle = 1,
@@ -1410,7 +1412,6 @@ function AtlasLoot_QueryLootPage()
             if (queryitem) and (queryitem ~= nil) and (queryitem ~= "") and (queryitem ~= 0) and (string.sub(queryitem, 1, 1) ~= "s") then
                 GameTooltip:SetHyperlink("item:"..queryitem..":0:0:0:0:0:0:0");
                 GameTooltip:SetHyperlink("item:60"..queryitem..":0:0:0:0:0:0:0");
-                GameTooltip:SetHyperlink("item:2"..queryitem..":0:0:0:0:0:0:0");
             end
             i=i+1;
         end

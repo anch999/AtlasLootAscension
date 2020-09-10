@@ -29,11 +29,14 @@ TBC improvements contributed by Szyler:
 v1.4 06/07/2020
 - Sets collection cleanup for TBC
 - Added Heroic gear
-- Drowndown menus
+- Dropdown menu visuals/order changed.
+	- To view keys click the Dungeon/Raid headers
 --------------------------------------------------------------------------------------------------------
 v1.5 09/08/2020
 - Bloody item server query
 - Optional query on page load
 - Bloody Link in chat
-
+	- To link bloody items, click the Query Server button which will load all items and bloody versions
+	   Then right click an item and the bloody version will show in chat.  
+	   (Must have 'Safe Chat Links' enabled in your options)
 --------------------------------------------------------------------------------------------------------
