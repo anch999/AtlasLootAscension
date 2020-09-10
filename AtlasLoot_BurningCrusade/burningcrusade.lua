@@ -6628,7 +6628,7 @@ AtlasLoot_Data["T5WarriorProtection"] = {
 	{ 4, 30113, "", "=q4=Destroyer Chestguard", "=ds="..BabbleBoss["Kael'thas Sunstrider"].." ("..BabbleZone["The Eye"]..")"};
 	{ 5, 30114, "", "=q4=Destroyer Handguards", "=ds="..BabbleBoss["Leotheras the Blind"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
 	{ 6, 30116, "", "=q4=Destroyer Legguards", "=ds="..BabbleBoss["Fathom-Lord Karathress"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-	{ 8, 0, "INV_Shield_05", "=q6=#t4s9_1#", "=ec1=#m21# - Fallen Defender"};
+	{ 8, 0, "INV_Shield_05", "=q6=#t5s9_1#", "=ec1=#m22# - Vanquished Defender"};
 	{ 9, 14992, "", "=q4=Destroyer Helmet", "=ds="..BabbleBoss["Lady Vashj"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
 	{ 10, 14994, "", "=q4=Destroyer Pauldrons", "=ds="..BabbleBoss["Void Reaver"].." ("..BabbleZone["The Eye"]..")"};
 	{ 11, 14990, "", "=q4=Destroyer Hauberk", "=ds="..BabbleBoss["Kael'thas Sunstrider"].." ("..BabbleZone["The Eye"]..")"};
@@ -6640,7 +6640,7 @@ AtlasLoot_Data["T5WarriorProtection"] = {
 	{ 19, 230113, "", "=q4=Destroyer Chestguard", "=ds="..BabbleBoss["Kael'thas Sunstrider"].." ("..BabbleZone["The Eye"]..")"};
 	{ 20, 230114, "", "=q4=Destroyer Handguards", "=ds="..BabbleBoss["Leotheras the Blind"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
 	{ 21, 230116, "", "=q4=Destroyer Legguards", "=ds="..BabbleBoss["Fathom-Lord Karathress"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-	{ 23, 0, "INV_Shield_05", "=q6=#t4s9_1#", "=ec1=#m21# - Fallen Defender"};
+	{ 23, 0, "INV_Shield_05", "=q6=#t5s9_1#", "=ec1=#m22# - Vanquished Defender"};
 	{ 24, 214992, "", "=q4=Destroyer Helmet", "=ds="..BabbleBoss["Lady Vashj"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
 	{ 25, 214994, "", "=q4=Destroyer Pauldrons", "=ds="..BabbleBoss["Void Reaver"].." ("..BabbleZone["The Eye"]..")"};
 	{ 26, 214990, "", "=q4=Destroyer Hauberk", "=ds="..BabbleBoss["Kael'thas Sunstrider"].." ("..BabbleZone["The Eye"]..")"};
