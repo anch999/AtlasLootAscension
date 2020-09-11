@@ -784,6 +784,7 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 				itemButton:Show();
                 
                 if dataSource[dataID][i][2] == 0 then getglobal("AtlasLootItem_"..i.."_Unsafe"):Hide(); end
+				
             end
 		end
 
@@ -914,6 +915,8 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 	if ATLASLOOT_FILTER_ENABLE == true and dataID ~= "FilterList" then
 		AtlasLoot_HideNoUsableItems()
 	end
+	
+	if AtlasLoot.db.profile.ItemAutoQuery then AtlasLoot_QueryLootPage(); end
 end
 
 --[[
