@@ -228,11 +228,7 @@ function AtlasLootItem_OnClick(arg1)
             if not AtlasLoot.db.profile.ItemSpam then
                 DEFAULT_CHAT_FRAME:AddMessage(AL["Server queried for "]..color.."["..name.."]".."|r"..AL[".  Right click on any other item to refresh the loot page."]);
             end
-            AtlasLootItemsFrame:Hide();
-            AtlasLoot_ShowItemsFrame(AtlasLootItemsFrame.refresh[1], AtlasLootItemsFrame.refresh[2], AtlasLootItemsFrame.refresh[3], AtlasLootItemsFrame.refresh[4]);
         elseif(arg1=="RightButton" and iteminfo) then
-            AtlasLootItemsFrame:Hide();
-            AtlasLoot_ShowItemsFrame(AtlasLootItemsFrame.refresh[1], AtlasLootItemsFrame.refresh[2], AtlasLootItemsFrame.refresh[3], AtlasLootItemsFrame.refresh[4]);
             if not AtlasLoot.db.profile.ItemSpam then
                 DEFAULT_CHAT_FRAME:AddMessage(itemLink..AL[" is safe."]);
                 if(itemLinkB) then
