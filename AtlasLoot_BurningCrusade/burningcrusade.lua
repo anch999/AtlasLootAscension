@@ -2161,12 +2161,13 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 17, 229753, "", "=q4=Chestguard of the Fallen Defender", "=q1=#m1# =ds=#c1#, #c5#, #c9#"};
 		{ 18, 229755, "", "=q4=Chestguard of the Fallen Hero", "=q1=#m1# =ds=#c2#, #c3#, #c8#"};
 		{ 20, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
-		{ 22, 232385, "", "=q4=Magtheridon's Head", "=ds=#m2#", "", "100%"};
+		{ 22, 6032385, "", "=q4=Magtheridon's Head", "=ds=#m2#", "", "100%"};
 		{ 23, 228791, "", "=q4=Ring of the Recalcitrant", "=q1=#m4#: =ds=#s13#"};
 		{ 24, 228790, "", "=q4=Naaru Lightwarden's Band", "=q1=#m4#: =ds=#s13#"};
 		{ 25, 228793, "", "=q4=Band of Crimson Fury", "=q1=#m4#: =ds=#s13#"};
 		{ 26, 228792, "", "=q4=A'dal's Signet of Defense", "=q1=#m4#: =ds=#s13#"};
 		{ 28, 34845, "", "=q4=Pit Lord's Satchel", "=ds=#e1# #m15#"};
+		{ 30, 428775, "", "=q4=Magtheridon's Glaive", "=ds=#w7#"};
 	};
 
 		----------------
