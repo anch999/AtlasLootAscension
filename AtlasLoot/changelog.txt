@@ -1,4 +1,16 @@
 --------------------------------------------------------------------------------------------------------
+v1.5.2 03/05/2021
+- Sets/Collections Menu now lists T1-T10 sets instead of having submenus
+- Removed Mount, Pet, and Tabard collections
+- PVP link from Sets/Collections removed, but is still accessible through Loot Table dropdown
+- New custom DPS warrior has it's own listing under T1/2/3
+- Added T2 DPS Warrior set
+- Level 70 Blue PVP items added
+	- Weapons are listed under Arena Season 0
+	- Armor is available under the PVP Reputation sets Sub-menu
+- Wintergrasp and Grizzly Hills PVP menus moved to BG/Open PVP sub-menu
+- Added Smoldering Emberwyrm and Magmatic Steed to Prince and Ragnaros respectively
+--------------------------------------------------------------------------------------------------------
 v1.5.1 02/08/2021
 - Added new T1 Warrior DPS set
 - Added Heroic Thunderfury and Sulfuras

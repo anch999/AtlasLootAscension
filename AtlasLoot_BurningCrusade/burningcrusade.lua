@@ -2676,6 +2676,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 17, 229761, "", "=q4=Helm of the Fallen Defender", "=q1=#m1# =ds=#c1#, #c5#, #c9#", "", "26.73%"};
 		{ 18, 229759, "", "=q4=Helm of the Fallen Hero", "=q1=#m1# =ds=#c2#, #c3#, #c8#", "", "20.48%"};
 		{ 20, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
+		{ 28, 499438, "", "=q4=Smoldering Emberwyrm", "=ds=#e12#", "" };
 		Prev = "KaraChessHEROIC";
 	};
 
@@ -5083,6 +5084,243 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Back = "PVP70RepSET";
 	};
 
+	AtlasLoot_Data["PVP70RareCloth_H"] = {
+		{ 1,0, "INV_BannerPVP_01", "=q6=#pvprep705_1#", "=ec1=#c5#"};
+		{ 2,28857, "", "=q3=High Warlord's Satin Hood"};
+		{ 3,28859, "", "=q3=High Warlord's Satin Mantle"};
+		{ 4,28860, "", "=q3=High Warlord's Satin Robe"};
+		{ 5,28856, "", "=q3=High Warlord's Satin Gloves"};
+		{ 6,28858, "", "=q3=High Warlord's Satin Leggings"};
+		{ 8,0, "INV_BannerPVP_01", "=q6=#pvprep705_2#", "=ec1=#c5#"};
+		{ 9,31626, "", "=q3=High Warlord's Mooncloth Cowl"};
+		{ 10,31628, "", "=q3=High Warlord's Mooncloth Shoulderpads"};
+		{ 11,31629, "", "=q3=High Warlord's Mooncloth Vestments"};
+		{ 12,31621, "", "=q3=High Warlord's Mooncloth Mitts"};
+		{ 13,31627, "", "=q3=High Warlord's Mooncloth Legguards"};
+		{ 16,0, "INV_BannerPVP_01", "=q6=#pvprep703#", "=ec1=#c3#"};
+		{ 17,28867, "", "=q3=High Warlord's Silk Cowl"};
+		{ 18,28866, "", "=q3=High Warlord's Silk Amice"};
+		{ 19,28869, "", "=q3=High Warlord's Silk Raiment"};
+		{ 20,28868, "", "=q3=High Warlord's Silk Handguards"};
+		{ 21,28870, "", "=q3=High Warlord's Silk Trousers"};
+		{ 23,0, "INV_BannerPVP_01", "=q6=#pvprep708#", "=ec1=#c8#"};
+		{ 24,28818, "", "=q3=High Warlord's Dreadweave Hood"};
+		{ 25,28820, "", "=q3=High Warlord's Dreadweave Mantle"};
+		{ 26,28821, "", "=q3=High Warlord's Dreadweave Robe"};
+		{ 27,28817, "", "=q3=High Warlord's Dreadweave Gloves"};
+		{ 28,28819, "", "=q3=High Warlord's Dreadweave Leggings"};
+		Next = "PVP70RareLeather_H";
+		Back = "PVP70RepSET";
+	};
+
+	AtlasLoot_Data["PVP70RareLeather_H"] = {
+		{ 1,0, "INV_BannerPVP_01", "=q6=#pvprep701_1#", "=ec1=#c1#"};
+		{ 2,28812, "", "=q3=High Warlord's Dragonhide Helm"};
+		{ 3,28814, "", "=q3=High Warlord's Dragonhide Spaulders"};
+		{ 4,28815, "", "=q3=High Warlord's Dragonhide Robe"};
+		{ 5,28811, "", "=q3=High Warlord's Dragonhide Gloves"};
+		{ 6,28813, "", "=q3=High Warlord's Dragonhide Legguards"};
+		{ 8,0, "INV_BannerPVP_01", "=q6=#pvprep701_2#", "=ec1=#c1#"};
+		{ 9,28872, "", "=q3=High Warlord's Wyrmhide Helm"};
+		{ 10,28874, "", "=q3=High Warlord's Wyrmhide Spaulders"};
+		{ 11,28875, "", "=q3=High Warlord's Wyrmhide Robe"};
+		{ 12,28871, "", "=q3=High Warlord's Wyrmhide Gloves"};
+		{ 13,28873, "", "=q3=High Warlord's Wyrmhide Legguards"};
+		{ 16,0, "INV_BannerPVP_01", "=q6=#pvprep701_3#", "=ec1=#c1#"};
+		{ 17,31585, "", "=q3=High Warlord's Kodohide Helm"};
+		{ 18,31587, "", "=q3=High Warlord's Kodohide Spaulders"};
+		{ 19,31588, "", "=q3=High Warlord's Kodohide Robe"};
+		{ 20,31584, "", "=q3=High Warlord's Kodohide Gloves"};
+		{ 21,31586, "", "=q3=High Warlord's Kodohide Legguards"};
+		{ 23,0, "INV_BannerPVP_01", "=q6=#pvprep706#", "=ec1=#c6#"};
+		{ 24,28837, "", "=q3=High Warlord's Leather Helm"};
+		{ 25,28839, "", "=q3=High Warlord's Leather Spaulders"};
+		{ 26,28840, "", "=q3=High Warlord's Leather Tunic"};
+		{ 27,28836, "", "=q3=High Warlord's Leather Gloves"};
+		{ 28,28838, "", "=q3=High Warlord's Leather Legguards"};
+		Prev = "PVP70RareCloth_H";
+		Next = "PVP70RareMail_H";
+		Back = "PVP70RepSET";
+	};
+
+	AtlasLoot_Data["PVP70RareMail_H"] = {
+		{ 1,0, "INV_BannerPVP_01", "=q6=#pvprep707_1#", "=ec1=#c7#"};
+		{ 2,28843, "", "=q3=High Warlord's Linked Helm"};
+		{ 3,28845, "", "=q3=High Warlord's Linked Spaulders"};
+		{ 4,28841, "", "=q3=High Warlord's Linked Armor"};
+		{ 5,28842, "", "=q3=High Warlord's Linked Gauntlets"};
+		{ 6,28844, "", "=q3=High Warlord's Linked Leggings"};
+		{ 8,0, "INV_BannerPVP_01", "=q6=#pvprep707_2#", "=ec1=#c7#"};
+		{ 9,28848, "", "=q3=High Warlord's Mail Helm"};
+		{ 10,28850, "", "=q3=High Warlord's Mail Spaulders"};
+		{ 11,28846, "", "=q3=High Warlord's Mail Armor"};
+		{ 12,28847, "", "=q3=High Warlord's Mail Gauntlets"};
+		{ 13,28849, "", "=q3=High Warlord's Mail Leggings"};
+		{ 16,0, "INV_BannerPVP_01", "=q6=#pvprep707_3#", "=ec1=#c7#"};
+		{ 17,31648, "", "=q3=High Warlord's Ringmail Headpiece"};
+		{ 18,31650, "", "=q3=High Warlord's Ringmail Shoulderpads"};
+		{ 19,31646, "", "=q3=High Warlord's Ringmail Chestguard"};
+		{ 20,31647, "", "=q3=High Warlord's Ringmail Gloves"};
+		{ 21,31649, "", "=q3=High Warlord's Ringmail Legguards"};
+		{ 23,0, "INV_BannerPVP_01", "=q6=#pvprep702#", "=ec1=#c2#"};
+		{ 24,28807, "", "=q3=High Warlord's Chain Helm"};
+		{ 25,28809, "", "=q3=High Warlord's Chain Spaulders"};
+		{ 26,28805, "", "=q3=High Warlord's Chain Armor"};
+		{ 27,28806, "", "=q3=High Warlord's Chain Gauntlets"};
+		{ 28,28808, "", "=q3=High Warlord's Chain Leggings"};
+		Prev = "PVP70RareLeather_H";
+		Next = "PVP70RarePlate_H";
+		Back = "PVP70RepSET";
+	};
+
+	AtlasLoot_Data["PVP70RarePlate_H"] = {
+		{ 1,0, "INV_BannerPVP_01", "=q6=#pvprep704_1#", "=ec1=#c4#"};
+		{ 2,28863, "", "=q3=High Warlord's Scaled Helm"};
+		{ 3,28865, "", "=q3=High Warlord's Scaled Shoulders"};
+		{ 4,28861, "", "=q3=High Warlord's Scaled Chestpiece"};
+		{ 5,28862, "", "=q3=High Warlord's Scaled Gauntlets"};
+		{ 6,28864, "", "=q3=High Warlord's Scaled Legguards"};
+		{ 8,0, "INV_BannerPVP_01", "=q6=#pvprep704_2#", "=ec1=#c4#"};
+		{ 9,31637, "", "=q3=High Warlord's Ornamented Headguard"};
+		{ 10,31639, "", "=q3=High Warlord's Ornamented Spaulders"};
+		{ 11,31635, "", "=q3=High Warlord's Ornamented Chestplate"};
+		{ 12,31636, "", "=q3=High Warlord's Ornamented Gloves"};
+		{ 13,31638, "", "=q3=High Warlord's Ornamented Leggings"};
+		{ 16,0, "INV_BannerPVP_01", "=q6=#pvprep709#", "=ec1=#c9#"};
+		{ 17,28853, "", "=q3=High Warlord's Plate Helm"};
+		{ 18,28855, "", "=q3=High Warlord's Plate Shoulders"};
+		{ 19,28851, "", "=q3=High Warlord's Plate Chestpiece"};
+		{ 20,28852, "", "=q3=High Warlord's Plate Gauntlets"};
+		{ 21,28854, "", "=q3=High Warlord's Plate Legguards"};
+		{ 23,0, "INV_BannerPVP_01", "=q6=#arenas4_1#", "=ec1=#c4#"};
+		{ 24,28833, "", "=q3=High Warlord's Lamellar Helm"};
+		{ 25,28835, "", "=q3=High Warlord's Lamellar Shoulders"};
+		{ 26,28831, "", "=q3=High Warlord's Lamellar Chestpiece"};
+		{ 27,28832, "", "=q3=High Warlord's Lamellar Gauntlets"};
+		{ 28,28834, "", "=q3=High Warlord's Lamellar Legguards"};
+		Prev = "PVP70RareMail_H";
+		Back = "PVP70RepSET";
+	};
+	
+	AtlasLoot_Data["PVP70RareCloth_A"] = {
+		{ 1,0, "INV_BannerPVP_02", "=q6=#pvprep705_1#", "=ec1=#c5#"};
+		{ 2,28705, "", "=q3=Grand Marshal's Satin Hood"};
+		{ 3,28707, "", "=q3=Grand Marshal's Satin Mantle"};
+		{ 4,28708, "", "=q3=Grand Marshal's Satin Robe"};
+		{ 5,28704, "", "=q3=Grand Marshal's Satin Gloves"};
+		{ 6,28706, "", "=q3=Grand Marshal's Satin Leggings"};
+		{ 8,0, "INV_BannerPVP_02", "=q6=#pvprep705_2#", "=ec1=#c5#"};
+		{ 9,31622, "", "=q3=Grand Marshal's Mooncloth Cowl"};
+		{ 10,31624, "", "=q3=Grand Marshal's Mooncloth Shoulderpads"};
+		{ 11,31625, "", "=q3=Grand Marshal's Mooncloth Vestments"};
+		{ 12,31620, "", "=q3=Grand Marshal's Mooncloth Mitts"};
+		{ 13,31623, "", "=q3=Grand Marshal's Mooncloth Legguards"};
+		{ 16,0, "INV_BannerPVP_02", "=q6=#pvprep703#", "=ec1=#c3#"};
+		{ 17,28715, "", "=q3=Grand Marshal's Silk Cowl"};
+		{ 18,28714, "", "=q3=Grand Marshal's Silk Amice"};
+		{ 19,28717, "", "=q3=Grand Marshal's Silk Raiment"};
+		{ 20,28716, "", "=q3=Grand Marshal's Silk Handguards"};
+		{ 21,28718, "", "=q3=Grand Marshal's Silk Trousers"};
+		{ 23,0, "INV_BannerPVP_02", "=q6=#pvprep708#", "=ec1=#c8#"};
+		{ 24,28625, "", "=q3=Grand Marshal's Dreadweave Hood"};
+		{ 25,28627, "", "=q3=Grand Marshal's Dreadweave Mantle"};
+		{ 26,28628, "", "=q3=Grand Marshal's Dreadweave Robe"};
+		{ 27,28624, "", "=q3=Grand Marshal's Dreadweave Gloves"};
+		{ 28,28626, "", "=q3=Grand Marshal's Dreadweave Leggings"};
+		Next = "PVP70RareLeather_A";
+		Back = "PVP70RepSET";
+	};
+
+	AtlasLoot_Data["PVP70RareLeather_A"] = {
+		{ 1,0, "INV_BannerPVP_02", "=q6=#pvprep701_1#", "=ec1=#c1#"};
+		{ 2,28619, "", "=q3=Grand Marshal's Dragonhide Helm"};
+		{ 3,28622, "", "=q3=Grand Marshal's Dragonhide Spaulders"};
+		{ 4,28623, "", "=q3=Grand Marshal's Dragonhide Robe"};
+		{ 5,28618, "", "=q3=Grand Marshal's Dragonhide Gloves"};
+		{ 6,28620, "", "=q3=Grand Marshal's Dragonhide Legguards"};
+		{ 8,0, "INV_BannerPVP_02", "=q6=#pvprep701_2#", "=ec1=#c1#"};
+		{ 9,31590, "", "=q3=Grand Marshal's Wyrmhide Helm"};
+		{ 10,31592, "", "=q3=Grand Marshal's Wyrmhide Spaulders"};
+		{ 11,31593, "", "=q3=Grand Marshal's Wyrmhide Robe"};
+		{ 12,31589, "", "=q3=Grand Marshal's Wyrmhide Gloves"};
+		{ 13,31591, "", "=q3=Grand Marshal's Wyrmhide Legguards"};
+		{ 16,0, "INV_BannerPVP_02", "=q6=#pvprep701_3#", "=ec1=#c1#"};
+		{ 17,28720, "", "=q3=Grand Marshal's Kodohide Helm"};
+		{ 18,28722, "", "=q3=Grand Marshal's Kodohide Spaulders"};
+		{ 19,28723, "", "=q3=Grand Marshal's Kodohide Robe"};
+		{ 20,28719, "", "=q3=Grand Marshal's Kodohide Gloves"};
+		{ 21,28721, "", "=q3=Grand Marshal's Kodohide Legguards"};
+		{ 23,0, "INV_BannerPVP_02", "=q6=#pvprep706#", "=ec1=#c6#"};
+		{ 24,28685, "", "=q3=Grand Marshal's Leather Helm"};
+		{ 25,28687, "", "=q3=Grand Marshal's Leather Spaulders"};
+		{ 26,28688, "", "=q3=Grand Marshal's Leather Tunic"};
+		{ 27,28684, "", "=q3=Grand Marshal's Leather Gloves"};
+		{ 28,28686, "", "=q3=Grand Marshal's Leather Legguards"};
+		Prev = "PVP70RareCloth_A";
+		Next = "PVP70RareMail_A";
+		Back = "PVP70RepSET";
+	};
+
+	AtlasLoot_Data["PVP70RareMail_A"] = {
+		{ 1,0, "INV_BannerPVP_02", "=q6=#pvprep707_1#", "=ec1=#c7#"};
+		{ 2,28691, "", "=q3=Grand Marshal's Linked Helm"};
+		{ 3,28693, "", "=q3=Grand Marshal's Linked Spaulders"};
+		{ 4,28689, "", "=q3=Grand Marshal's Linked Armor"};
+		{ 5,28690, "", "=q3=Grand Marshal's Linked Gauntlets"};
+		{ 6,28692, "", "=q3=Grand Marshal's Linked Leggings"};
+		{ 8,0, "INV_BannerPVP_02", "=q6=#pvprep707_2#", "=ec1=#c7#"};
+		{ 9,28696, "", "=q3=Grand Marshal's Mail Helm"};
+		{ 10,28698, "", "=q3=Grand Marshal's Mail Spaulders"};
+		{ 11,28694, "", "=q3=Grand Marshal's Mail Armor"};
+		{ 12,28695, "", "=q3=Grand Marshal's Mail Gauntlets"};
+		{ 13,28697, "", "=q3=Grand Marshal's Mail Leggings"};
+		{ 16,0, "INV_BannerPVP_02", "=q6=#pvprep707_3#", "=ec1=#c7#"};
+		{ 17,31642, "", "=q3=Grand Marshal's Ringmail Headpiece"};
+		{ 18,31644, "", "=q3=Grand Marshal's Ringmail Shoulderpads"};
+		{ 19,31640, "", "=q3=Grand Marshal's Ringmail Chestguard"};
+		{ 20,31641, "", "=q3=Grand Marshal's Ringmail Gloves"};
+		{ 21,31643, "", "=q3=Grand Marshal's Ringmail Legguards"};
+		{ 23,0, "INV_BannerPVP_02", "=q6=#pvprep702#", "=ec1=#c2#"};
+		{ 24,28615, "", "=q3=Grand Marshal's Chain Helm"};
+		{ 25,28617, "", "=q3=Grand Marshal's Chain Spaulders"};
+		{ 26,28613, "", "=q3=Grand Marshal's Chain Armor"};
+		{ 27,28614, "", "=q3=Grand Marshal's Chain Gauntlets"};
+		{ 28,28616, "", "=q3=Grand Marshal's Chain Leggings"};
+		Prev = "PVP70RareLeather_A";
+		Next = "PVP70RarePlate_A";
+		Back = "PVP70RepSET";
+	};
+
+	AtlasLoot_Data["PVP70RarePlate_A"] = {
+		{ 1,0, "INV_BannerPVP_02", "=q6=#pvprep704_1#", "=ec1=#c4#"};
+		{ 2,28711, "", "=q3=Grand Marshal's Scaled Helm"};
+		{ 3,28713, "", "=q3=Grand Marshal's Scaled Shoulders"};
+		{ 4,28709, "", "=q3=Grand Marshal's Scaled Chestpiece"};
+		{ 5,28710, "", "=q3=Grand Marshal's Scaled Gauntlets"};
+		{ 6,28712, "", "=q3=Grand Marshal's Scaled Legguards"};
+		{ 8,0, "INV_BannerPVP_02", "=q6=#pvprep704_2#", "=ec1=#c4#"};
+		{ 9,31632, "", "=q3=Grand Marshal's Ornamented Headguard"};
+		{ 10,31634, "", "=q3=Grand Marshal's Ornamented Spaulders"};
+		{ 11,31630, "", "=q3=Grand Marshal's Ornamented Chestplate"};
+		{ 12,31631, "", "=q3=Grand Marshal's Ornamented Gloves"};
+		{ 13,31633, "", "=q3=Grand Marshal's Ornamented Leggings"};
+		{ 16,0, "INV_BannerPVP_02", "=q6=#pvprep709#", "=ec1=#c9#"};
+		{ 17,28701, "", "=q3=Grand Marshal's Plate Helm"};
+		{ 18,28703, "", "=q3=Grand Marshal's Plate Shoulders"};
+		{ 19,28699, "", "=q3=Grand Marshal's Plate Chestpiece"};
+		{ 20,28700, "", "=q3=Grand Marshal's Plate Gauntlets"};
+		{ 21,28702, "", "=q3=Grand Marshal's Plate Legguards"};
+		{ 23,0, "INV_BannerPVP_02", "=q6=#arenas4_1#", "=ec1=#c4#"};
+		{ 24,28681, "", "=q3=Grand Marshal's Lamellar Helm"};
+		{ 25,28683, "", "=q3=Grand Marshal's Lamellar Shoulders"};
+		{ 26,28679, "", "=q3=Grand Marshal's Lamellar Chestpiece"};
+		{ 27,28680, "", "=q3=Grand Marshal's Lamellar Gauntlets"};
+		{ 28,28724, "", "=q3=Grand Marshal's Lamellar Legguards"};
+		Prev = "PVP70RareMail_A";
+		Back = "PVP70RepSET";
+	};
+
+
 		----------------------------------
 		--- PvP Level 70 - Accessories ---
 		----------------------------------
@@ -5719,12 +5957,57 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Back = "ARENASET";
 	};
 
-
-
-
 		--------------------------------
 		--- Arena Seasons - Weapons ---
 		--------------------------------
+	AtlasLoot_Data["Arena0Weapons1_H"] = {	
+		{1, 28928, "", "=q3=High Warlord's Right Ripper"};
+		{2, 28922, "", "=q3=High Warlord's Left Ripper"};
+		{3, 28931, "", "=q3=High Warlord's Spellblade"};
+		{4, 28929, "", "=q3=High Warlord's Shanker"};
+		{5, 28930, "", "=q3=High Warlord's Shiv"};
+		{6, 28937, "", "=q3=High Warlord's Slicer"};
+		{7, 28926, "", "=q3=High Warlord's Quickblade"};
+		{8, 28293, "", "=q3=High Warlord's Claymore"};
+		{9, 28920, "", "=q3=High Warlord's Cleaver"};
+		{10, 28921, "", "=q3=High Warlord's Hacker"};
+		{11, 28918, "", "=q3=High Warlord's Decapitator"};
+		{12, 28925, "", "=q3=High Warlord's Pummeler"};
+		{13, 28924, "", "=q3=High Warlord's Bonecracker"};
+		{14, 28917, "", "=q3=High Warlord's Bonegrinder"};
+		{15, 28919, "", "=q3=High Warlord's Maul"};
+		{16, 28923, "", "=q3=High Warlord's Painsaw"};
+		{17, 28935, "", "=q3=High Warlord's War Staff"};
+		{18, 28939, "", "=q3=High Warlord's Barricade"};
+		{19, 28933, "", "=q3=High Warlord's Heavy Crossbow"};
+		{20, 28938, "", "=q3=High Warlord's Battletome"};
+		Back = "PVPMENU";
+	};	
+	
+		AtlasLoot_Data["Arena0Weapons1_A"] = {	
+		{1, 28953, "", "=q3=Grand Marshal's Right Ripper"};
+		{2, 28947, "", "=q3=Grand Marshal's Left Ripper"};
+		{3, 28957, "", "=q3=Grand Marshal's Spellblade"};
+		{4, 28954, "", "=q3=Grand Marshal's Shanker"};
+		{5, 28955, "", "=q3=Grand Marshal's Shiv"};
+		{6, 28956, "", "=q3=Grand Marshal's Slicer"};
+		{7, 28952, "", "=q3=Grand Marshal's Quickblade"};
+		{8, 28943, "", "=q3=Grand Marshal's Warblade"};
+		{9, 28944, "", "=q3=Grand Marshal's Cleaver"};
+		{10, 28946, "", "=q3=Grand Marshal's Hacker"};
+		{11, 28945, "", "=q3=Grand Marshal's Decapitator"};
+		{12, 28951, "", "=q3=Grand Marshal's Pummeler"};
+		{13, 28950, "", "=q3=Grand Marshal's Bonecracker"};
+		{14, 28942, "", "=q3=Grand Marshal's Bonegrinder"};
+		{15, 28948, "", "=q3=Grand Marshal's Maul"};
+		{16, 28949, "", "=q3=Grand Marshal's Painsaw"};
+		{17, 28959, "", "=q3=Grand Marshal's War Staff"};
+		{18, 28940, "", "=q3=Grand Marshal's Barricade"};
+		{19, 28960, "", "=q3=Grand Marshal's Heavy Crossbow"};
+		{20, 28941, "", "=q3=Grand Marshal's Battletome"};
+		Back = "PVPMENU";
+	};	
+		
 	AtlasLoot_Data["Arena1Weapons1"] = {
 		{1, 28313, "", "=q4=Gladiator's Right Ripper", "=ds=", "2625 #arena#", ""};
 		{2, 28314, "", "=q4=Gladiator's Left Ripper", "=ds=", "1125 #arena#", ""};
@@ -5766,10 +6049,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "Arena1Weapons1";
 		Back = "PVPMENU";
 	};
-
-
-
-
 		
 	AtlasLoot_Data["Arena3Weapons1"] = {
 		{1, 33737, "", "=q4=Vengeful Gladiator's Right Ripper", "=ds=", "2100 #arena#", ""};
@@ -5828,8 +6107,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "Arena3Weapons1";
 		Back = "PVPMENU";
 	};
-
-
 
 	AtlasLoot_Data["Arena2Weapons1"] = {
 		{1, 32028, "", "=q4=Merciless Gladiator's Right Ripper", "=ds=", "18000 #arena#", ""};
@@ -7477,3 +7754,6 @@ AtlasLoot_Data["T6WarriorFury"] = {
 		{ 25, 30722, "", "=q4=Ethereum Nexus-Reaver", "=ds=#h2#, #w1#", "", "16.0%"};
 		{ 26, 30724, "", "=q4=Barrel-Blade Longrifle", "=ds=#w5#", "", "20.0%"};
 	};
+	
+	
+	

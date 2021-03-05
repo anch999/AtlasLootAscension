@@ -2903,6 +2903,7 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 		{ 9, 216954, "", "=q4=Judgement Legplates", "=q1=#m1# =ds=#c4# (T2)", "", "10.81%"};
 		{ 11, 217204, "", "=q5=Eye of Sulfuras", "=ds=#m3#", "", "3.42%"};
 		{ 12, 217182, "", "=q5=Sulfuras, Hand of Ragnaros", "=q1=#m4#: =ds=#h2#, #w6#"};
+		{ 13, 102107, "", "=q4=Reins of the Magmatic Steed", "=ds=#e12#", "" };
 		{ 14, 219017, "", "=q1=Essence of the Firelord", "=ds=#m3#", "", "0.46%"};
 		{ 15, 219019, "", "=q5=Thunderfury, Blessed Blade of the Windseeker", "=q1=#m4#: =ds=#h1#, #w10#"};
 		{ 16, 217102, "", "=q4=Cloak of the Shrouded Mists", "=ds=#s4#", "", "14.31%"};
@@ -6963,11 +6964,6 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 		{ 7, 16864, "", "=q4=Belt of Might", "=ds="..AL["Trash Mobs"], "", "0.16%"};
 		{ 8, 16867, "", "=q4=Legplates of Might", "=ds="..BabbleBoss["Magmadar"], "", "13.97%"};
 		{ 9, 16862, "", "=q4=Sabatons of Might", "=ds="..BabbleBoss["Gehennas"], "", "14.48%"};
-		{ 11, 0, "Ability_Warrior_BattleShout", "=q6=#t1s9#", "=ec1=#m30#"};
-		{ 12, 10480, "", "=q4=Faceguard of Might", "=ds="..BabbleBoss["Garr"], ""};
-		{ 13, 10481, "", "=q4=Shoulderpads of Might", "=ds="..BabbleBoss["Sulfuron Harbinger"], ""};
-		{ 14, 10482, "", "=q4=Chesttplate of Might", "=ds="..BabbleBoss["Golemagg the Incinerator"], ""};
-		{ 15, 10483, "", "=q4=Wristguards of Might", "=ds="..AL["Trash Mobs"], ""};
 		{ 16, 0, "INV_Shield_05", "=q6=#t2s9#", "=ec1=#m31#"};
 		{ 17, 16963, "", "=q4=Helm of Wrath", "=ds="..BabbleBoss["Nefarian"], "", "13.65%"};
 		{ 18, 16961, "", "=q4=Pauldrons of Wrath", "=ds="..BabbleBoss["Chromaggus"], "", "16.83%"};
@@ -6977,12 +6973,31 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 		{ 22, 16960, "", "=q4=Waistband of Wrath", "=ds="..BabbleBoss["Vaelastrasz the Corrupt"], "", "20.03%"};
 		{ 23, 16962, "", "=q4=Legplates of Wrath", "=ds="..BabbleBoss["Ragnaros"], "", "17.23%"};
 		{ 24, 16965, "", "=q4=Sabatons of Wrath", "=ds="..BabbleBoss["Broodlord Lashlayer"], "", "16.84%"};
-		{ 27, 10484, "", "=q4=Handguards of Might", "=ds="..BabbleBoss["Lucifron"], ""};
-		{ 28, 10485, "", "=q4=Girdle of Might", "=ds="..AL["Trash Mobs"], ""};
-		{ 29, 10486, "", "=q4=Legguards of Might", "=ds="..BabbleBoss["Magmadar"], ""};
-		{ 30, 10487, "", "=q4=Stompers of Might", "=ds="..BabbleBoss["Gehennas"], ""};
 		Prev = "T0Warrior";
 		Next = "T3Warrior";
+		Back = "T1T2T3SET";
+	};
+	
+		AtlasLoot_Data["T1T2DPSWarrior"] = {
+		{ 1, 0, "Ability_Warrior_BattleShout", "=q6=#t1s9#", "=ec1=#m30#"};
+		{ 2, 10480, "", "=q4=Faceguard of Might", "=ds="..BabbleBoss["Garr"], ""};
+		{ 3, 10481, "", "=q4=Shoulderpads of Might", "=ds="..BabbleBoss["Sulfuron Harbinger"], ""};
+		{ 4, 10482, "", "=q4=Chesttplate of Might", "=ds="..BabbleBoss["Golemagg the Incinerator"], ""};
+		{ 5, 10483, "", "=q4=Wristguards of Might", "=ds="..AL["Trash Mobs"], ""};
+		{ 6, 10484, "", "=q4=Handguards of Might", "=ds="..BabbleBoss["Lucifron"], ""};
+		{ 7, 10485, "", "=q4=Girdle of Might", "=ds="..AL["Trash Mobs"], ""};
+		{ 8, 10486, "", "=q4=Legguards of Might", "=ds="..BabbleBoss["Magmadar"], ""};
+		{ 9, 10487, "", "=q4=Stompers of Might", "=ds="..BabbleBoss["Gehennas"], ""};
+		{ 16, 0, "Ability_Warrior_BattleShout", "=q6=#t2s9#", "=ec1=#m31#"};
+		{ 17, 10904, "", "=q4=Faceguard of Wrath", "=ds="..BabbleBoss["Nefarian"], "", "13.65%"};
+		{ 18, 10902, "", "=q4=Shoulderpads of Wrath", "=ds="..BabbleBoss["Chromaggus"], "", "16.83%"};
+		{ 19, 10907, "", "=q4=Chestplate of Wrath", "=ds="..BabbleBoss["Nefarian"], "", "15.06%"};
+		{ 20, 10900, "", "=q4=Wristguards of Wrath", "=ds="..BabbleBoss["Razorgore the Untamed"], "", "20.29%"};
+		{ 21, 10905, "", "=q4=Grippers of Wrath", "=ds="..BabbleBoss["Firemaw"]..", "..BabbleBoss["Ebonroc"]..", "..BabbleBoss["Flamegor"], "", "5.93%"};
+		{ 22, 10901, "", "=q4=Belt of Wrath", "=ds="..BabbleBoss["Vaelastrasz the Corrupt"], "", "20.03%"};
+		{ 23, 10903, "", "=q4=Legguards of Wrath", "=ds="..BabbleBoss["Ragnaros"], "", "17.23%"};
+		{ 24, 10906, "", "=q4=Stompers of Wrath", "=ds="..BabbleBoss["Broodlord Lashlayer"], "", "16.84%"};
+		Next = "T3DPSWarrior";
 		Back = "T1T2T3SET";
 	};
 
@@ -7216,6 +7231,28 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 		Back = "T1T2T3SET";
 	};
 
+	AtlasLoot_Data["T1T2DPSWarriorHEROIC"] = {
+		{ 1, 0, "Ability_Warrior_BattleShout", "=q6=#t1s9#", "=ec1=#m30#"};
+		{ 2, 210480, "", "=q4=Faceguard of Might", "=ds="..BabbleBoss["Garr"], ""};
+		{ 3, 210481, "", "=q4=Shoulderpads of Might", "=ds="..BabbleBoss["Sulfuron Harbinger"], ""};
+		{ 4, 210482, "", "=q4=Chestplate of Might", "=ds="..BabbleBoss["Golemagg the Incinerator"], ""};
+		{ 5, 210483, "", "=q4=Wristguards of Might", "=ds="..AL["Trash Mobs"], ""};
+		{ 6, 210484, "", "=q4=Handguards of Might", "=ds="..BabbleBoss["Lucifron"], ""};
+		{ 7, 210485, "", "=q4=Girdle of Might", "=ds="..AL["Trash Mobs"], ""};
+		{ 8, 210486, "", "=q4=Legguards of Might", "=ds="..BabbleBoss["Magmadar"], ""};
+		{ 9, 210487, "", "=q4=Stompers of Might", "=ds="..BabbleBoss["Gehennas"], ""};
+		{ 16, 0, "Ability_Warrior_BattleShout", "=q6=#t2s9#", "=ec1=#m31#"};
+		{ 17, 210904, "", "=q4=Faceguard of Wrath", "=ds="..BabbleBoss["Nefarian"], "", "13.65%"};
+		{ 18, 210902, "", "=q4=Shoulderpads of Wrath", "=ds="..BabbleBoss["Chromaggus"], "", "16.83%"};
+		{ 19, 210907, "", "=q4=Chestplate of Wrath", "=ds="..BabbleBoss["Nefarian"], "", "15.06%"};
+		{ 20, 210900, "", "=q4=Wristguards of Wrath", "=ds="..BabbleBoss["Razorgore the Untamed"], "", "20.29%"};
+		{ 21, 210905, "", "=q4=Grippers of Wrath", "=ds="..BabbleBoss["Firemaw"]..", "..BabbleBoss["Ebonroc"]..", "..BabbleBoss["Flamegor"], "", "5.93%"};
+		{ 22, 210901, "", "=q4=Belt of Wrath", "=ds="..BabbleBoss["Vaelastrasz the Corrupt"], "", "20.03%"};
+		{ 23, 210903, "", "=q4=Legguards of Wrath", "=ds="..BabbleBoss["Ragnaros"], "", "17.23%"};
+		{ 24, 210906, "", "=q4=Stompers of Wrath", "=ds="..BabbleBoss["Broodlord Lashlayer"], "", "16.84%"};
+		Next = "T3DPSWarriorHEROIC";
+		Back = "T1T2T3SET";
+	};
 
 		------------------------
 		--- Tier 3 Sets (T3) ---
@@ -7355,6 +7392,21 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 		Prev = "T1T2Warrior";
 		Back = "T1T2T3SET";
 	};
+	
+	AtlasLoot_Data["T3DPSWarrior"] = {
+		{ 1, 0, "Ability_Warrior_BattleShout", "=q6=#t3s9#", "=ec1=#m35#"};
+--		{ 2, 22418, "", "=q4=Dreadnaught Helmet", "=ds="};
+--		{ 3, 22419, "", "=q4=Dreadnaught Pauldrons", "=ds="};
+--		{ 4, 22416, "", "=q4=Dreadnaught Breastplate", "=ds="};
+--		{ 5, 22423, "", "=q4=Dreadnaught Bracers", "=ds="};
+--		{ 6, 22421, "", "=q4=Dreadnaught Gauntlets", "=ds="};
+--		{ 7, 22422, "", "=q4=Dreadnaught Waistguard", "=ds="};
+--		{ 8, 22417, "", "=q4=Dreadnaught Legplates", "=ds="};
+--		{ 9, 22420, "", "=q4=Dreadnaught Sabatons", "=ds="};
+--		{ 10, 23059, "", "=q4=Ring of the Dreadnaught", "=ds="};
+		Prev = "T1T2DPSWarrior";
+		Back = "T1T2T3SET";
+	};
 
 		-------------------------------
 		--- Tier 3 Sets (T3) HEROIC ---
@@ -7492,6 +7544,21 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 		{ 9, 222420, "", "=q4=Dreadnaught Sabatons", "=ds="};
 		{ 10, 223059, "", "=q4=Ring of the Dreadnaught", "=ds="};
 		Prev = "T1T2WarriorHEROIC";
+		Back = "T1T2T3SET";
+	};
+	
+	AtlasLoot_Data["T3DPSWarriorHEROIC"] = {
+		{ 1, 0, "Ability_Warrior_BattleShout", "=q6=#t3s9#", "=ec1=#m35#"};
+--		{ 2, 22418, "", "=q4=Dreadnaught Helmet", "=ds="};
+--		{ 3, 22419, "", "=q4=Dreadnaught Pauldrons", "=ds="};
+--		{ 4, 22416, "", "=q4=Dreadnaught Breastplate", "=ds="};
+--		{ 5, 22423, "", "=q4=Dreadnaught Bracers", "=ds="};
+--		{ 6, 22421, "", "=q4=Dreadnaught Gauntlets", "=ds="};
+--		{ 7, 22422, "", "=q4=Dreadnaught Waistguard", "=ds="};
+--		{ 8, 22417, "", "=q4=Dreadnaught Legplates", "=ds="};
+--		{ 9, 22420, "", "=q4=Dreadnaught Sabatons", "=ds="};
+--		{ 10, 23059, "", "=q4=Ring of the Dreadnaught", "=ds="};
+		Prev = "T1T2DPSWarriorHEROIC";
 		Back = "T1T2T3SET";
 	};
 		------------------------
@@ -7642,7 +7709,7 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 		{ 27, 19826, "", "=q4=Zandalar Freethinker's Belt", "=q4=#zgt2#, =ds=#r3#"};
 		{ 28, 19827, "", "=q4=Zandalar Freethinker's Armguards", "=q4=#zgt3#, =ds=#r2#"};
 		Next = "ZGSets2";
-		Back = "SETSCLASSIC";
+		Back = "SETMENU";
 	};
 
 	AtlasLoot_Data["ZGSets2"] = {
@@ -7672,7 +7739,7 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 		{ 28, 19848, "", "=q4=Zandalar Demoniac's Wraps", "=q4=#zgt5#, =ds=#r2#"};
 		Next = "ZGSets3";
 		Prev = "ZGSets1";
-		Back = "SETSCLASSIC";
+		Back = "SETMENU";
 	};
 
 	AtlasLoot_Data["ZGSets3"] = {
@@ -7683,7 +7750,7 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 		{ 5, 19823, "", "=q4=Zandalar Vindicator's Belt", "=q4=#zgt7#, =ds=#r3#"};
 		{ 6, 19824, "", "=q4=Zandalar Vindicator's Armguards", "=q4=#zgt8#, =ds=#r2#"};
 		Prev = "ZGSets2";
-		Back = "SETSCLASSIC";
+		Back = "SETMENU";
 	};
 
 
@@ -7717,7 +7784,7 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 		{ 27, 219826, "", "=q4=Zandalar Freethinker's Belt", "=q4=#zgt2#, =ds=#r3#"};
 		{ 28, 219827, "", "=q4=Zandalar Freethinker's Armguards", "=q4=#zgt3#, =ds=#r2#"};
 		Next = "ZGSets2HEROIC";
-		Back = "SETSCLASSIC";
+		Back = "SETMENU";
 	};
 
 	AtlasLoot_Data["ZGSets2HEROIC"] = {
@@ -7747,7 +7814,7 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 		{ 28, 219848, "", "=q4=Zandalar Demoniac's Wraps", "=q4=#zgt5#, =ds=#r2#"};
 		Next = "ZGSets3HEROIC";
 		Prev = "ZGSets1HEROIC";
-		Back = "SETSCLASSIC";
+		Back = "SETMENU";
 	};
 
 	AtlasLoot_Data["ZGSets3HEROIC"] = {
@@ -7758,7 +7825,7 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 		{ 5, 219823, "", "=q4=Zandalar Vindicator's Belt", "=q4=#zgt7#, =ds=#r3#"};
 		{ 6, 219824, "", "=q4=Zandalar Vindicator's Armguards", "=q4=#zgt8#, =ds=#r2#"};
 		Prev = "ZGSets2HEROIC";
-		Back = "SETSCLASSIC";
+		Back = "SETMENU";
 	};
 
 
@@ -7792,7 +7859,7 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 		{ 28, 21406, "", "=q4=Cloak of Veiled Shadows", "=q3=#aq20t2#, =ds=#r4#"};
 		{ 29, 21405, "", "=q4=Band of Veiled Shadows", "=q3=#aq20t4#, =ds=#r3#"};
 		Next = "AQ20Sets2";
-		Back = "SETSCLASSIC";
+		Back = "SETMENU";
 	};
 
 	AtlasLoot_Data["AQ20Sets2"] = {
@@ -7809,7 +7876,7 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 		{ 13, 21394, "", "=q4=Drape of Unyielding Strength", "=q3=#aq20t2#, =ds=#r4#"};
 		{ 14, 21393, "", "=q4=Signet of Unyielding Strength", "=q3=#aq20t3#=ds=, #r3#"};
 		Prev = "AQ20Sets1";
-		Back = "SETSCLASSIC";
+		Back = "SETMENU";
 	};
 
 		------------------------
@@ -7842,7 +7909,7 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 		{ 28, 221406, "", "=q4=Cloak of Veiled Shadows", "=q3=#aq20t2#, =ds=#r4#"};
 		{ 29, 221405, "", "=q4=Band of Veiled Shadows", "=q3=#aq20t4#, =ds=#r3#"};
 		Next = "AQ20Sets2HEROIC";
-		Back = "SETSCLASSIC";
+		Back = "SETMENU";
 	};
 
 	AtlasLoot_Data["AQ20Sets2HEROIC"] = {
@@ -7859,7 +7926,7 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 		{ 13, 221394, "", "=q4=Drape of Unyielding Strength", "=q3=#aq20t2#, =ds=#r4#"};
 		{ 14, 221393, "", "=q4=Signet of Unyielding Strength", "=q3=#aq20t3#=ds=, #r3#"};
 		Prev = "AQ20Sets1HEROIC";
-		Back = "SETSCLASSIC";
+		Back = "SETMENU";
 	};
 		-----------------
 		--- AQ40 Sets ---
@@ -7891,7 +7958,7 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 		{ 27, 21391, "", "=q4=Avenger's Pauldrons", "=q4=#aq40t1#, =ds=#r1#"};
 		{ 28, 21388, "", "=q4=Avenger's Greaves", "=q4=#aq40t1#, =ds=#r1#"};
 		Next = "AQ40Sets2";
-		Back = "SETSCLASSIC";
+		Back = "SETMENU";
 	};
 
 	AtlasLoot_Data["AQ40Sets2"] = {
@@ -7921,7 +7988,7 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 		{ 28, 21338, "", "=q4=Doomcaller's Footwraps", "=q4=#aq40t1#, =ds=#r1#"};
 		Next = "AQ40Sets3";
 		Prev = "AQ40Sets1";
-		Back = "SETSCLASSIC";
+		Back = "SETMENU";
 	};
 
 	AtlasLoot_Data["AQ40Sets3"] = {
@@ -7932,7 +7999,7 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 		{ 5, 21330, "", "=q4=Conqueror's Spaulders", "=q4=#aq40t5#, =ds=#r1#"};
 		{ 6, 21333, "", "=q4=Conqueror's Greaves", "=q4=#aq40t5#, =ds=#r1#"};
 		Prev = "AQ40Sets2";
-		Back = "SETSCLASSIC";
+		Back = "SETMENU";
 	};
 
 		-----------------------
@@ -7965,7 +8032,7 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 		{ 27, 221391, "", "=q4=Avenger's Pauldrons", "=q4=#aq40t1#, =ds=#r1#"};
 		{ 28, 221388, "", "=q4=Avenger's Greaves", "=q4=#aq40t1#, =ds=#r1#"};
 		Next = "AQ40Sets2HEROIC";
-		Back = "SETSCLASSIC";
+		Back = "SETMENU";
 	};
 
 	AtlasLoot_Data["AQ40Sets2HEROIC"] = {
@@ -7995,7 +8062,7 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 		{ 28, 221338, "", "=q4=Doomcaller's Footwraps", "=q4=#aq40t1#, =ds=#r1#"};
 		Next = "AQ40Sets3HEROIC";
 		Prev = "AQ40Sets1HEROIC";
-		Back = "SETSCLASSIC";
+		Back = "SETMENU";
 	};
 
 	AtlasLoot_Data["AQ40Sets3HEROIC"] = {
@@ -8006,7 +8073,7 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 		{ 5, 221330, "", "=q4=Conqueror's Spaulders", "=q4=#aq40t5#, =ds=#r1#"};
 		{ 6, 221333, "", "=q4=Conqueror's Greaves", "=q4=#aq40t5#, =ds=#r1#"};
 		Prev = "AQ40Sets2HEROIC";
-		Back = "SETSCLASSIC";
+		Back = "SETMENU";
 	};
 		-----------------------
 		--- BoE World Epics ---

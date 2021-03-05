@@ -821,7 +821,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 21, 44788, "", "=q1=Pilgrim's Boots", "=q1=#m4#: =ds=#s12#"};
 		{ 22, 44844, "", "=q1=Turkey Caller", "=q1=#m4#: =ds="};
 		{ 23, 44812, "", "=q1=Turkey Shooter", "=q1=#m4#: =ds="};
-		Back = "PILGRIMSBOUNTYMENU";
+		Back = "WORLDEVENTMENU";
 	};
 
 	AtlasLoot_Data["PilgrimsBounty_H"] = {
@@ -845,7 +845,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 21, 44788, "", "=q1=Pilgrim's Boots", "=q1=#m4#: =ds=#s12#"};
 		{ 22, 44844, "", "=q1=Turkey Caller", "=q1=#m4#: =ds="};
 		{ 23, 44812, "", "=q1=Turkey Shooter", "=q1=#m4#: =ds="};
-		Back = "PILGRIMSBOUNTYMENU";
+		Back = "WORLDEVENTMENU";
 	};
 
 	--------------------------

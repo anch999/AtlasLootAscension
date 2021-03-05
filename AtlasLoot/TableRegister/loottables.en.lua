@@ -1085,6 +1085,14 @@ end
 	AtlasLoot_TableNames["PVP70RepLeather"] = { BabbleInventory["Leather"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["PVP70RepMail"] = { BabbleInventory["Mail"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["PVP70RepPlate"] = { BabbleInventory["Plate"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["PVP70RareCloth_A"] = { BabbleInventory["Cloth"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["PVP70RareLeather_A"] = { BabbleInventory["Leather"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["PVP70RareMail_A"] = { BabbleInventory["Mail"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["PVP70RarePlate_A"] = { BabbleInventory["Plate"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["PVP70RareCloth_H"] = { BabbleInventory["Cloth"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["PVP70RareLeather_H"] = { BabbleInventory["Leather"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["PVP70RareMail_H"] = { BabbleInventory["Mail"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["PVP70RarePlate_H"] = { BabbleInventory["Plate"], "AtlasLootBurningCrusade" };
   -- Level 80 PvP Sets
 	AtlasLoot_TableNames["PvP80DeathKnight"] = { LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"], "AtlasLootWotLK" };
 	AtlasLoot_TableNames["PvP80DeathKnight2"] = { LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"], "AtlasLootWotLK" };
@@ -1238,6 +1246,7 @@ end
 	AtlasLoot_TableNames["T1T2Shaman"] = { LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], "AtlasLootOriginalWoW" };
 	AtlasLoot_TableNames["T1T2Warlock"] = { LOCALIZED_CLASS_NAMES_MALE["WARLOCK"], "AtlasLootOriginalWoW" };
 	AtlasLoot_TableNames["T1T2Warrior"] = { LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["T1T2DPSWarrior"] = { LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], "AtlasLootOriginalWoW" };
  -- T1/T2 Sets HEROIC
 	AtlasLoot_TableNames["T1T2DruidHEROIC"] = { "Druid", "AtlasLootOriginalWoW" };
 	AtlasLoot_TableNames["T1T2HunterHEROIC"] = { LOCALIZED_CLASS_NAMES_MALE["HUNTER"], "AtlasLootOriginalWoW" };
@@ -1248,6 +1257,7 @@ end
 	AtlasLoot_TableNames["T1T2ShamanHEROIC"] = { LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], "AtlasLootOriginalWoW" };
 	AtlasLoot_TableNames["T1T2WarlockHEROIC"] = { LOCALIZED_CLASS_NAMES_MALE["WARLOCK"], "AtlasLootOriginalWoW" };
 	AtlasLoot_TableNames["T1T2WarriorHEROIC"] = { LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["T1T2DPSWarriorHEROIC"] = { LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], "AtlasLootOriginalWoW" };
   -- T3 Sets
 	AtlasLoot_TableNames["T3Druid"] = { "Druid", "AtlasLootOriginalWoW" };
 	AtlasLoot_TableNames["T3Hunter"] = { LOCALIZED_CLASS_NAMES_MALE["HUNTER"], "AtlasLootOriginalWoW" };
@@ -1258,6 +1268,7 @@ end
 	AtlasLoot_TableNames["T3Shaman"] = { LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], "AtlasLootOriginalWoW" };
 	AtlasLoot_TableNames["T3Warlock"] = { LOCALIZED_CLASS_NAMES_MALE["WARLOCK"], "AtlasLootOriginalWoW" };
 	AtlasLoot_TableNames["T3Warrior"] = { LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["T3DPSWarrior"] = { LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], "AtlasLootOriginalWoW" };
   -- T3 Sets HEROIC
 	AtlasLoot_TableNames["T3DruidHEROIC"] = { "Druid", "AtlasLootOriginalWoW" };
 	AtlasLoot_TableNames["T3HunterHEROIC"] = { LOCALIZED_CLASS_NAMES_MALE["HUNTER"], "AtlasLootOriginalWoW" };
@@ -1268,6 +1279,7 @@ end
 	AtlasLoot_TableNames["T3ShamanHEROIC"] = { LOCALIZED_CLASS_NAMES_MALE["SHAMAN"], "AtlasLootOriginalWoW" };
 	AtlasLoot_TableNames["T3WarlockHEROIC"] = { LOCALIZED_CLASS_NAMES_MALE["WARLOCK"], "AtlasLootOriginalWoW" };
 	AtlasLoot_TableNames["T3WarriorHEROIC"] = { LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["T3DPSWarriorHEROIC"] = { LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], "AtlasLootOriginalWoW" };
   -- T4 Sets
 	AtlasLoot_TableNames["T4DruidBalance"] = { "Druid".." - T4 "..AL["Balance"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["T4DruidFeral"] = { "Druid".." - T4 "..AL["Feral"], "AtlasLootBurningCrusade" };
@@ -1993,6 +2005,8 @@ end
 	AtlasLoot_TableNames["Arena3Weapons2"] = { AL["Arena Season 3 Weapons"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["Arena1Weapons1"] = { AL["Arena Season 1 Weapons"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["Arena1Weapons2"] = { AL["Arena Season 1 Weapons"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["Arena0Weapons1_A"] = { AL["Arena Season 0 Weapons"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["Arena0Weapons1_H"] = { AL["Arena Season 0 Weapons"], "AtlasLootBurningCrusade" };
 -------------
 --- Other ---
 -------------
