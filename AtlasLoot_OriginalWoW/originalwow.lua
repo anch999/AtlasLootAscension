@@ -7208,11 +7208,6 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 		{ 7, 216864, "", "=q4=Belt of Might", "=ds="..AL["Trash Mobs"], "", "0.16%"};
 		{ 8, 216867, "", "=q4=Legplates of Might", "=ds="..BabbleBoss["Magmadar"], "", "13.97%"};
 		{ 9, 216862, "", "=q4=Sabatons of Might", "=ds="..BabbleBoss["Gehennas"], "", "14.48%"};
-		{ 11, 0, "Ability_Warrior_BattleShout", "=q6=#t1s9#", "=ec1=#m30#"};
-		{ 12, 210480, "", "=q4=Faceguard of Might", "=ds="..BabbleBoss["Garr"], ""};
-		{ 13, 210481, "", "=q4=Shoulderpads of Might", "=ds="..BabbleBoss["Sulfuron Harbinger"], ""};
-		{ 14, 210482, "", "=q4=Chestplate of Might", "=ds="..BabbleBoss["Golemagg the Incinerator"], ""};
-		{ 15, 210483, "", "=q4=Wristguards of Might", "=ds="..AL["Trash Mobs"], ""};
 		{ 16, 0, "INV_Shield_05", "=q6=#t2s9#", "=ec1=#m31#"};
 		{ 17, 216963, "", "=q4=Helm of Wrath", "=ds="..BabbleBoss["Nefarian"], "", "13.65%"};
 		{ 18, 216961, "", "=q4=Pauldrons of Wrath", "=ds="..BabbleBoss["Chromaggus"], "", "16.83%"};
@@ -7222,10 +7217,6 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 		{ 22, 216960, "", "=q4=Waistband of Wrath", "=ds="..BabbleBoss["Vaelastrasz the Corrupt"], "", "20.03%"};
 		{ 23, 216962, "", "=q4=Legplates of Wrath", "=ds="..BabbleBoss["Ragnaros"], "", "17.23%"};
 		{ 24, 216965, "", "=q4=Sabatons of Wrath", "=ds="..BabbleBoss["Broodlord Lashlayer"], "", "16.84%"};
-		{ 27, 210484, "", "=q4=Handguards of Might", "=ds="..BabbleBoss["Lucifron"], ""};
-		{ 28, 210485, "", "=q4=Girdle of Might", "=ds="..AL["Trash Mobs"], ""};
-		{ 29, 210486, "", "=q4=Legguards of Might", "=ds="..BabbleBoss["Magmadar"], ""};
-		{ 30, 210487, "", "=q4=Stompers of Might", "=ds="..BabbleBoss["Gehennas"], ""};
 		Prev = "T0WarriorHEROIC";
 		Next = "T3WarriorHEROIC";
 		Back = "T1T2T3SET";
