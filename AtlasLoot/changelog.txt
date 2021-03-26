@@ -1,4 +1,8 @@
 --------------------------------------------------------------------------------------------------------
+v1.5.3 03/26/2021
+- Added cross boss loot in BWL for first three bosses
+- Removed extra warrior set on heroic tier 1/2 tab
+--------------------------------------------------------------------------------------------------------
 v1.5.2 03/05/2021
 - Sets/Collections Menu now lists T1-T10 sets instead of having submenus
 - Removed Mount, Pet, and Tabard collections
