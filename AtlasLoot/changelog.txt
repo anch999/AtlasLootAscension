@@ -1,6 +1,7 @@
 --------------------------------------------------------------------------------------------------------
 v1.5.3 03/26/2021
 - Added cross boss loot in BWL for first three bosses
+- Added cross boss loot in BWL to Nefarion
 - Removed extra warrior set on heroic tier 1/2 tab
 --------------------------------------------------------------------------------------------------------
 v1.5.2 03/05/2021
