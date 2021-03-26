@@ -3039,6 +3039,7 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 		{ 23, 19350, "", "=q4=Heartstriker", "=ds=#w2#", "", "10%"};
 		{ 24, 19402, "", "=q4=Legguards of the Fallen Crusader", "=ds=#s11#, #a4#", "", "12.5%"};
 		{ 25, 19365, "", "=q4=Claw of the Black Drake", "=ds=#h3#, #w13#", "", "12.5%"};
+		{ 26, 14000, "", "=q4=Ring of Trinity Force", "=ds=#h3#, #w13#", "", "12.5%"};
 		Prev = "BWLVaelastrasz";
 		Next = "BWLFiremaw";
 	};
@@ -3172,6 +3173,7 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 		{ 25, 19363, "", "=q4=Crul'shorukh, Edge of Chaos", "=ds=#h1#, #w1#", "", "16.67%"};
 		{ 26, 19360, "", "=q4=Lok'amir il Romathis", "=ds=#h3#, #w6#", "", "16.67%"};
 		{ 27, 19356, "", "=q4=Staff of the Shadow Flame", "=ds=#w9#", "", "16.67%%"};
+		{ 28, 14001, "", "=q4=Archimtiros' Ring of Armageddon", "=ds=#s13#", "", "16.67%%"};
 		Prev = "BWLChromaggus";
 		Next = "BWLNefarian2";
 	};
@@ -3272,6 +3274,7 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 		{ 23, 219350, "", "=q4=Heartstriker", "=ds=#w2#", "", "10%"};
 		{ 24, 219402, "", "=q4=Legguards of the Fallen Crusader", "=ds=#s11#, #a4#", "", "12.5%"};
 		{ 25, 219365, "", "=q4=Claw of the Black Drake", "=ds=#h3#, #w13#", "", "12.5%"};
+		{ 26, 214000, "", "=q4=Ring of Trinity Force", "=ds=#h3#, #w13#", "", "12.5%"};
 		Prev = "BWLVaelastraszHEROIC";
 		Next = "BWLFiremawHEROIC";
 	};
@@ -3405,6 +3408,7 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 		{ 25, 219363, "", "=q4=Crul'shorukh, Edge of Chaos", "=ds=#h1#, #w1#", "", "16.67%"};
 		{ 26, 219360, "", "=q4=Lok'amir il Romathis", "=ds=#h3#, #w6#", "", "16.67%"};
 		{ 27, 219356, "", "=q4=Staff of the Shadow Flame", "=ds=#w9#", "", "16.67%%"};
+		{ 28, 214001, "", "=q4=Archimtiros' Ring of Armageddon", "=ds=#s13#", "", "16.67%%"};
 		Prev = "BWLChromaggusHEROIC";
 		Next = "BWLNefarian2HEROIC";
 	};
