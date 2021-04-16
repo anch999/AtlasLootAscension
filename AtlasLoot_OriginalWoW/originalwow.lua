@@ -8013,6 +8013,12 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 		{ 4, 21332, "", "=q4=Conqueror's Legguards", "=q4=#aq40t3#, =ds=#r2#"};
 		{ 5, 21330, "", "=q4=Conqueror's Spaulders", "=q4=#aq40t5#, =ds=#r1#"};
 		{ 6, 21333, "", "=q4=Conqueror's Greaves", "=q4=#aq40t5#, =ds=#r1#"};
+		{ 16, 0, "Ability_Warrior_BattleShout", "=q6=#aq40s9#", "=ec1=#c9#"};
+		{ 17, 10910, "", "=q4=Conqueror's Breastplate", "=q4=#aq40t8#, =ds=#r3#"};
+		{ 18, 10911, "", "=q4=Conqueror's Crown", "=q4=#aq40t2#, =ds=#r2#"};
+		{ 19, 10912, "", "=q4=Conqueror's Legguards", "=q4=#aq40t3#, =ds=#r2#"};
+		{ 20, 10913, "", "=q4=Conqueror's Spaulders", "=q4=#aq40t5#, =ds=#r1#"};
+		{ 21, 10914, "", "=q4=Conqueror's Greaves", "=q4=#aq40t5#, =ds=#r1#"};
 		Prev = "AQ40Sets2";
 		Back = "SETMENU";
 	};
@@ -8087,6 +8093,12 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 		{ 4, 221332, "", "=q4=Conqueror's Legguards", "=q4=#aq40t3#, =ds=#r2#"};
 		{ 5, 221330, "", "=q4=Conqueror's Spaulders", "=q4=#aq40t5#, =ds=#r1#"};
 		{ 6, 221333, "", "=q4=Conqueror's Greaves", "=q4=#aq40t5#, =ds=#r1#"};
+		{ 16, 0, "Ability_Warrior_BattleShout", "=q6=#aq40s9#", "=ec1=#c9#"};
+		{ 17, 210910, "", "=q4=Conqueror's Breastplate", "=q4=#aq40t8#, =ds=#r3#"};
+		{ 18, 210911, "", "=q4=Conqueror's Crown", "=q4=#aq40t2#, =ds=#r2#"};
+		{ 19, 210912, "", "=q4=Conqueror's Legguards", "=q4=#aq40t3#, =ds=#r2#"};
+		{ 20, 210913, "", "=q4=Conqueror's Spaulders", "=q4=#aq40t5#, =ds=#r1#"};
+		{ 21, 210914, "", "=q4=Conqueror's Greaves", "=q4=#aq40t5#, =ds=#r1#"};
 		Prev = "AQ40Sets2HEROIC";
 		Back = "SETMENU";
 	};
