@@ -746,6 +746,7 @@ function AtlasLoot_FixText(text)
     text = gsub(text, "#t1s7#", AL["The Earthfury"]);
     text = gsub(text, "#t1s8#", AL["Felheart Raiment"]);
     text = gsub(text, "#t1s9#", AL["Battlegear of Might"]);
+    text = gsub(text, "#t1s10#", AL["Fury of Might"]);
 
     -- Tier 2 Sets
     text = gsub(text, "#t2s1#", AL["Stormrage Raiment"]);
@@ -757,6 +758,7 @@ function AtlasLoot_FixText(text)
     text = gsub(text, "#t2s7#", AL["The Ten Storms"]);
     text = gsub(text, "#t2s8#", AL["Nemesis Raiment"]);
     text = gsub(text, "#t2s9#", AL["Battlegear of Wrath"]);
+    text = gsub(text, "#t2s10#", AL["Fury of Wrath"]);
 
     -- Tier 3 Sets
     text = gsub(text, "#t3s1#", AL["Dreamwalker Raiment"]);
@@ -768,6 +770,7 @@ function AtlasLoot_FixText(text)
     text = gsub(text, "#t3s7#", AL["The Earthshatterer"]);
     text = gsub(text, "#t3s8#", AL["Plagueheart Raiment"]);
     text = gsub(text, "#t3s9#", AL["Dreadnaught's Battlegear"]);
+    text = gsub(text, "#t3s10#", AL["Fury's Battlegear"]);
 
     -- Tier 4 Sets
     text = gsub(text, "#t4s1_1#", AL["Malorne Harness"]);
