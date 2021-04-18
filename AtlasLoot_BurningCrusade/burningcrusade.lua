@@ -2880,7 +2880,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 25, 34199, "", "=q4=Archon's Gavel", "=ds=#h3#, #w6#", "", "17%"};
 		{ 26, 34203, "", "=q4=Grip of Mannoroth", "=ds=#h4#, #w13#", "", "20%"};
 		{ 27, 34198, "", "=q4=Stanchion of Primal Instinct", "=ds=#w9#", "", "19%"};
-		{ 28, 34196, "", "=q4=Golden Bow of Quel'Thalas", "=ds=#w3#", "", "18%"};
+		{ 28, 34196, "", "=q4=Golden Bow of Quel'Thalas", "=ds=#w2#", "", "18%"};
 		{ 30, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		Prev = "SPFelmyst";
 		Next = "SPMuru";
@@ -3090,7 +3090,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 25, 234199, "", "=q4=Archon's Gavel", "=ds=#h3#, #w6#", "", "17%"};
 		{ 26, 234203, "", "=q4=Grip of Mannoroth", "=ds=#h4#, #w13#", "", "20%"};
 		{ 27, 234198, "", "=q4=Stanchion of Primal Instinct", "=ds=#w9#", "", "19%"};
-		{ 28, 234196, "", "=q4=Golden Bow of Quel'Thalas", "=ds=#w3#", "", "18%"};
+		{ 28, 234196, "", "=q4=Golden Bow of Quel'Thalas", "=ds=#w2#", "", "18%"};
 		{ 30, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		Prev = "SPFelmystHEROIC";
 		Next = "SPMuruHEROIC";
