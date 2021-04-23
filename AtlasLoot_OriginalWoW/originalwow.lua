@@ -7003,7 +7003,7 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 	};
 	
 		AtlasLoot_Data["T1T2DPSWarrior"] = {
-		{ 1, 0, "Ability_Warrior_BattleShout", "=q6=#t1s9#", "=ec1=#m30#"};
+		{ 1, 0, "Ability_Warrior_BattleShout", "=q6=#t1s10#", "=ec1=#m30#"};
 		{ 2, 10480, "", "=q4=Faceguard of Might", "=ds="..BabbleBoss["Garr"], ""};
 		{ 3, 10481, "", "=q4=Shoulderpads of Might", "=ds="..BabbleBoss["Sulfuron Harbinger"], ""};
 		{ 4, 10482, "", "=q4=Chesttplate of Might", "=ds="..BabbleBoss["Golemagg the Incinerator"], ""};
