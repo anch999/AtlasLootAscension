@@ -3040,6 +3040,7 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 		{ 24, 19402, "", "=q4=Legguards of the Fallen Crusader", "=ds=#s11#, #a4#", "", "12.5%"};
 		{ 25, 19365, "", "=q4=Claw of the Black Drake", "=ds=#h3#, #w13#", "", "12.5%"};
 		{ 26, 14000, "", "=q4=Ring of Trinity Force", "=ds=#h3#, #w13#", "", "12.5%"};
+		{ 27, 19432, "", "=q4=Circle of Applied Force", "=ds=#s13#", "", "16.67%"};
 		Prev = "BWLVaelastrasz";
 		Next = "BWLFiremaw";
 	};
@@ -3275,6 +3276,7 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 		{ 24, 219402, "", "=q4=Legguards of the Fallen Crusader", "=ds=#s11#, #a4#", "", "12.5%"};
 		{ 25, 219365, "", "=q4=Claw of the Black Drake", "=ds=#h3#, #w13#", "", "12.5%"};
 		{ 26, 214000, "", "=q4=Ring of Trinity Force", "=ds=#h3#, #w13#", "", "12.5%"};
+		{ 27, 219432, "", "=q4=Circle of Applied Force", "=ds=#s13#", "", "16.67%"};
 		Prev = "BWLVaelastraszHEROIC";
 		Next = "BWLFiremawHEROIC";
 	};
