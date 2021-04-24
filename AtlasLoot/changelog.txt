@@ -1,4 +1,10 @@
 --------------------------------------------------------------------------------------------------------
+v1.5.4 04/25/2021
+- Fixed the order of t2.5 warrior set
+- Added T3 warrior dps set
+- Fixed the names of t1 and t2 warrior dps set
+- Added additional drop locations of some BWL items 
+--------------------------------------------------------------------------------------------------------
 v1.5.3 03/26/2021
 - Added cross boss loot in BWL for first three bosses
 - Added cross boss loot in BWL to Nefarion
