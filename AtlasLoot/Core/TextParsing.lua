@@ -770,7 +770,7 @@ function AtlasLoot_FixText(text)
     text = gsub(text, "#t3s7#", AL["The Earthshatterer"]);
     text = gsub(text, "#t3s8#", AL["Plagueheart Raiment"]);
     text = gsub(text, "#t3s9#", AL["Dreadnaught's Battlegear"]);
-    text = gsub(text, "#t3s10#", AL["Fury's Battlegear"]);
+    text = gsub(text, "#t3s10#", AL["Dreadborne Warplate"]);
 
     -- Tier 4 Sets
     text = gsub(text, "#t4s1_1#", AL["Malorne Harness"]);

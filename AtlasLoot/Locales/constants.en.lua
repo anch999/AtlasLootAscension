@@ -903,6 +903,7 @@ if AL then
 	AL["Plagueheart Raiment"] = true;
 	AL["Dreadnaught's Battlegear"] = true;
 	AL["Fury's Battlegear"] = true;
+	AL["Dreadborne Warplate"] = true;
 
 	-- Tier 4 Sets
 	AL["Malorne Harness"] = true;

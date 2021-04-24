@@ -7409,16 +7409,16 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 	};
 	
 	AtlasLoot_Data["T3DPSWarrior"] = {
-		{ 1, 0, "Ability_Warrior_BattleShout", "=q6=#t3s9#", "=ec1=#m35#"};
-		{ 2, 10488, "", "=q4=Dreadnaught Helmet", "=ds="};
-		{ 3, 10489, "", "=q4=Dreadnaught Pauldrons", "=ds="};
-		{ 4, 10490, "", "=q4=Dreadnaught Breastplate", "=ds="};
-		{ 5, 10491, "", "=q4=Dreadnaught Bracers", "=ds="};
-		{ 6, 10492, "", "=q4=Dreadnaught Gauntlets", "=ds="};
-		{ 7, 10493, "", "=q4=Dreadnaught Waistguard", "=ds="};
-		{ 8, 10494, "", "=q4=Dreadnaught Legplates", "=ds="};
-		{ 9, 10495, "", "=q4=Dreadnaught Sabatons", "=ds="};
-		{ 10, 10496, "", "=q4=Ring of the Dreadnaught", "=ds="};
+		{ 1, 0, "Ability_Warrior_BattleShout", "=q6=#t3s10#", "=ec1=#m35#"};
+		{ 2, 10490, "", "=q4=Dreadborne Helmet", "=ds="};
+		{ 3, 10491, "", "=q4=Dreadborne Pauldrons", "=ds="};
+		{ 4, 10488, "", "=q4=Dreadborne Breastplate", "=ds="};
+		{ 5, 10495, "", "=q4=Dreadborne Bracers", "=ds="};
+		{ 6, 10493, "", "=q4=Dreadborne Gauntlets", "=ds="};
+		{ 7, 10494, "", "=q4=Dreadborne Waistguard", "=ds="};
+		{ 8, 10489, "", "=q4=Dreadborne Legplates", "=ds="};
+		{ 9, 10492, "", "=q4=Dreadborne Sabatons", "=ds="};
+		{ 10, 10496, "", "=q4=Dreadborne Ring", "=ds="};
 		Prev = "T1T2DPSWarrior";
 		Back = "T1T2T3SET";
 	};
@@ -7563,16 +7563,16 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 	};
 	
 	AtlasLoot_Data["T3DPSWarriorHEROIC"] = {
-		{ 1, 0, "Ability_Warrior_BattleShout", "=q6=#t3s9#", "=ec1=#m35#"};
-		{ 2, 210488, "", "=q4=Dreadnaught Helmet", "=ds="};
-		{ 3, 210489, "", "=q4=Dreadnaught Pauldrons", "=ds="};
-		{ 4, 210490, "", "=q4=Dreadnaught Breastplate", "=ds="};
-		{ 5, 210491, "", "=q4=Dreadnaught Bracers", "=ds="};
-		{ 6, 210492, "", "=q4=Dreadnaught Gauntlets", "=ds="};
-		{ 7, 210493, "", "=q4=Dreadnaught Waistguard", "=ds="};
-		{ 8, 210494, "", "=q4=Dreadnaught Legplates", "=ds="};
-		{ 9, 210495, "", "=q4=Dreadnaught Sabatons", "=ds="};
-		{ 10, 210496, "", "=q4=Ring of the Dreadnaught", "=ds="};
+		{ 1, 0, "Ability_Warrior_BattleShout", "=q6=#t3s10#", "=ec1=#m35#"};
+		{ 2, 210490, "", "=q4=Dreadborne Helmet", "=ds="};
+		{ 3, 210491, "", "=q4=Dreadborne Pauldrons", "=ds="};
+		{ 4, 210488, "", "=q4=Dreadborne Breastplate", "=ds="};
+		{ 5, 210495, "", "=q4=Dreadborne Bracers", "=ds="};
+		{ 6, 210493, "", "=q4=Dreadborne Gauntlets", "=ds="};
+		{ 7, 210494, "", "=q4=Dreadborne Waistguard", "=ds="};
+		{ 8, 210489, "", "=q4=Dreadborne Legplates", "=ds="};
+		{ 9, 210492, "", "=q4=Dreadborne Sabatons", "=ds="};
+		{ 10, 210496, "", "=q4=Dreadborne Ring", "=ds="};
 		Prev = "T1T2DPSWarriorHEROIC";
 		Back = "T1T2T3SET";
 	};
