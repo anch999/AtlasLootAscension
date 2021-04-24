@@ -4,6 +4,7 @@ v1.5.4 04/25/2021
 - Added T3 warrior dps set
 - Fixed the names of t1 and t2 warrior dps set
 - Added additional drop locations of some BWL items 
+- Added Naxxramas heroic items and new item from Sapphiron 
 --------------------------------------------------------------------------------------------------------
 v1.5.3 03/26/2021
 - Added cross boss loot in BWL for first three bosses
