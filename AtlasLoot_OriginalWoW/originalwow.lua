@@ -1626,11 +1626,11 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 		{ 20, 21710, "", "=q4=Cloak of the Fallen God", "=q1=#m4#: =ds=#s4#"};
 		{ 21, 21712, "", "=q4=Amulet of the Fallen God", "=q1=#m4#: =ds=#s2#"};
 		{ 22, 21709, "", "=q4=Ring of the Fallen God", "=q1=#m4#: =ds=#s13#"};
-		{ 24, 22734, "", "=q1=Base of Atiesh", "=ds=#m3#"};
-		{ 25, 22632, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c1#"};
-		{ 26, 22589, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c3#"};
-		{ 27, 22631, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c5#"};
-		{ 28, 22630, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c8#"};
+		{ 24, 222734, "", "=q1=Base of Atiesh", "=ds=#m3#"};
+		{ 25, 222632, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c1#"};
+		{ 26, 222589, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c3#"};
+		{ 27, 222631, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c5#"};
+		{ 28, 222630, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c8#"};
 		Prev = "AQ40OuroHEROIC";
 	};
 
@@ -6097,7 +6097,7 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 		{ 9, 23047, "", "=q4=Eye of the Dead", "=ds=#s14#" ,"","18.18%" },
 		{ 10, 23046, "", "=q4=The Restrained Essence of Sapphiron", "=ds=#s14#","","18.18%"  },
 		{ 11, 23041, "", "=q4=Slayer's Crest", "=ds=#s14#","","18.18%"  },
-		{ 12, 0,"","","" },
+		{ 12, 19761,"","Fang of the Frost Wyrm","=ds=#h3#, #w13#" },
 		{ 13, 0,"","","" },
 		{ 14, 0,"","","" },
 		{ 15, 0,"","","" },
@@ -6176,7 +6176,7 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 	------------------------
 
 	AtlasLoot_Data["NAXPatchwerkHEROIC"] = {
-		{ 1, 22726, "", "=q5=Splinter of Atiesh", "=ds=#m3#", "", "30%" },
+		{ 1, 222726, "", "=q5=Splinter of Atiesh", "=ds=#m3#", "", "30%" },
 		{ 2, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
 		{ 3, 0,"","","" },
 		{ 4, 22368, "", "=q4=Desecrated Shoulderpads", "=q1=#m1# =ds=#c8#, #c3#, #c5#","", "33.33%" },
@@ -6192,7 +6192,7 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 	};
 
 	AtlasLoot_Data["NAXGrobbulusHEROIC"] = {
-		{ 1, 22726, "", "=q5=Splinter of Atiesh", "=ds=#m3#","","30%" },
+		{ 1, 222726, "", "=q5=Splinter of Atiesh", "=ds=#m3#","","30%" },
 		{ 2, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
 		{ 3, 0,"","","" },
 		{ 4, 22368, "", "=q4=Desecrated Shoulderpads", "=q1=#m1# =ds=#c8#, #c3#, #c5#","","33.33%" },
@@ -6209,7 +6209,7 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 	};
 
 	AtlasLoot_Data["NAXGluthHEROIC"] = {
-		{ 1, 22726, "", "=q5=Splinter of Atiesh", "=ds=#m3#","","30%" },
+		{ 1, 222726, "", "=q5=Splinter of Atiesh", "=ds=#m3#","","30%" },
 		{ 2, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
 		{ 3, 0,"","","" },
 		{ 4, 222983, "", "=q4=Rime Covered Mantle", "=ds=#s3#, #a1#", "", "20%" },
@@ -6241,7 +6241,7 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 	};
 
 	AtlasLoot_Data["NAXThaddiusHEROIC"] = {
-		{ 1, 22726, "", "=q5=Splinter of Atiesh", "=ds=#m3#","","30%" },
+		{ 1, 222726, "", "=q5=Splinter of Atiesh", "=ds=#m3#","","30%" },
 		{ 2, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
 		{ 3, 0,"","","" },
 		{ 4, 22367, "", "=q4=Desecrated Circlet", "=q1=#m1# =ds=#c8#, #c3#, #c5#","", "66.67%"},
@@ -6258,7 +6258,7 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 	};
 
 	AtlasLoot_Data["NAXAnubRekhanHEROIC"] = {
-		{ 1, 22726, "", "=q5=Splinter of Atiesh", "=ds=#m3#","", "30%" },
+		{ 1, 222726, "", "=q5=Splinter of Atiesh", "=ds=#m3#","", "30%" },
 		{ 2, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
 		{ 3, 0,"","","" },
 		{ 4, 22369, "", "=q4=Desecrated Bindings", "=q1=#m1# =ds=#c8#, #c3#, #c5#", "","33.33%" },
@@ -6275,7 +6275,7 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 	};
 
 	AtlasLoot_Data["NAXGrandWidowFearlinaHEROIC"] = {
-		{ 1, 22726, "", "=q5=Splinter of Atiesh", "=ds=#m3#", "", "30%" },
+		{ 1, 222726, "", "=q5=Splinter of Atiesh", "=ds=#m3#", "", "30%" },
 		{ 2, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
 		{ 3, 0,"","","" },
 		{ 4, 22369, "", "=q4=Desecrated Bindings", "=q1=#m1# =ds=#c8#, #c3#, #c5#","", "33.33%" },
@@ -6292,7 +6292,7 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 	};
 
 	AtlasLoot_Data["NAXMaexxnaHEROIC"] = {
-		{ 1, 22726, "", "=q5=Splinter of Atiesh", "=ds=#m3#","", "30%" },
+		{ 1, 222726, "", "=q5=Splinter of Atiesh", "=ds=#m3#","", "30%" },
 		{ 2, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
 		{ 3, 0,"","","" },
 		{ 4, 22371, "", "=q4=Desecrated Gloves", "=q1=#m1# =ds=#c8#, #c3#, #c5#","", "67.66%" },
@@ -6309,7 +6309,7 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 	};
 
 	AtlasLoot_Data["NAXInstructorRAuviousHEROIC"] = {
-		{ 1, 22726, "", "=q5=Splinter of Atiesh", "=ds=#m3#","", "30%" },
+		{ 1, 222726, "", "=q5=Splinter of Atiesh", "=ds=#m3#","", "30%" },
 		{ 2, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
 		{ 3, 0,"","","" },
 		{ 4, 22372, "", "=q4=Desecrated Sandals", "=q1=#m1# =ds=#c8#, #c3#, #c5#", "", "33.33%" },
@@ -6327,7 +6327,7 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 	};
 
 	AtlasLoot_Data["NAXGothicderHarvesterHEROIC"] = {
-		{ 1, 22726, "", "=q5=Splinter of Atiesh", "=ds=#m3#","", "30%" },
+		{ 1, 222726, "", "=q5=Splinter of Atiesh", "=ds=#m3#","", "30%" },
 		{ 2, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
 		{ 3, 0,"","","" },
 		{ 4, 22372, "", "=q4=Desecrated Sandals", "=q1=#m1# =ds=#c8#, #c3#, #c5#","", "33.33%" },
@@ -6344,7 +6344,7 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 	};
 
 	AtlasLoot_Data["NAXTheFourHorsemenHEROIC"] = {
-		{ 1, 22726, "", "=q5=Splinter of Atiesh", "=ds=#m3#","", "30%"  },
+		{ 1, 222726, "", "=q5=Splinter of Atiesh", "=ds=#m3#","", "30%"  },
 		{ 2, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
 		{ 3, 0,"","","" },
 		{ 4, 22351, "", "=q4=Desecrated Robe", "=q1=#m1# =ds=#c8#, #c3#, #c5#","", "33.33%"  },
@@ -6362,7 +6362,7 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 	};
 
 	AtlasLoot_Data["NAXNothderPlaguebringerHEROIC"] = {
-		{ 1, 22726, "", "=q5=Splinter of Atiesh", "=ds=#m3#","", "30%" },
+		{ 1, 222726, "", "=q5=Splinter of Atiesh", "=ds=#m3#","", "30%" },
 		{ 2, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
 		{ 3, 0,"","","" },
 		{ 4, 22370, "", "=q4=Desecrated Belt", "=q1=#m1# =ds=#c5#, #c3#, #c8#","", "33.33%" },
@@ -6381,7 +6381,7 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 	};
 
 	AtlasLoot_Data["NAXHeiganderUncleanHEROIC"] = {
-		{ 1, 22726, "", "=q5=Splinter of Atiesh", "=ds=#m3#","", "30%"  },
+		{ 1, 222726, "", "=q5=Splinter of Atiesh", "=ds=#m3#","", "30%"  },
 		{ 2, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
 		{ 3, 0,"","","" },
 		{ 4, 22370, "", "=q4=Desecrated Belt", "=q1=#m1# =ds=#c5#, #c3#, #c8#","", "33.33%" },
@@ -6398,7 +6398,7 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 	};
 
 	AtlasLoot_Data["NAXLoathebHEROIC"] = {
-		{ 1, 22726, "", "=q5=Splinter of Atiesh", "=ds=#m3#","", "30%" },
+		{ 1, 222726, "", "=q5=Splinter of Atiesh", "=ds=#m3#","", "30%" },
 		{ 2, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
 		{ 3, 0,"","","" },
 		{ 4, 22366, "", "=q4=Desecrated Leggings", "=q1=#m1# =ds=#c5#, #c3#, #c8#","", "66.67%" },
@@ -6426,7 +6426,7 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 		{ 9, 223047, "", "=q4=Eye of the Dead", "=ds=#s14#" ,"","18.18%" },
 		{ 10, 223046, "", "=q4=The Restrained Essence of Sapphiron", "=ds=#s14#","","18.18%"  },
 		{ 11, 223041, "", "=q4=Slayer's Crest", "=ds=#s14#","","18.18%"  },
-		{ 12, 0,"","","" },
+		{ 12, 219761,"","Fang of the Frost Wyrm","=ds=#h3#, #w13#" },
 		{ 13, 0,"","","" },
 		{ 14, 0,"","","" },
 		{ 15, 0,"","","" },
@@ -6451,10 +6451,10 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 		{ 10, 223057, "", "=q4=Gem of Trapped Innocents", "=ds=#s2#" ,"","18.18%"},
 		{ 11, 223053, "", "=q4=Stormrage's Talisman of Seething", "=ds=#s2#","","18.18%" },
 		{ 12, 0,"","","" },
-		{ 13, 691119, "", "=q4=The Phylactery of Kel'Thuzad", "=ds=#m2#","", "100%" },
-		{ 14, 23207, "", "=q4=Mark of the Champion", "=q1=#m4# =ds=#s14#" },
-		{ 15, 23206, "", "=q4=Mark of the Champion", "=q1=#m4# =ds=#s14#" },
-		{ 16, 23064, "", "=q4=Ring of the Dreamwalker", "=ds=#s13# =q1=#m1# =ds=#c1#","","22.22%" },
+		{ 13, 291119, "", "=q4=The Phylactery of Kel'Thuzad", "=ds=#m2#","", "100%" },
+		{ 14, 223207, "", "=q4=Mark of the Champion", "=q1=#m4# =ds=#s14#" },
+		{ 15, 223206, "", "=q4=Mark of the Champion", "=q1=#m4# =ds=#s14#" },
+		{ 16, 223064, "", "=q4=Ring of the Dreamwalker", "=ds=#s13# =q1=#m1# =ds=#c1#","","22.22%" },
 		{ 17, 223067, "", "=q4=Ring of the Cryptstalker", "=ds=#s13# =q1=#m1# =ds=#c2#" ,"","22.22%"},
 		{ 18, 223062, "", "=q4=Frostfire Ring", "=ds=#s13# =q1=#m1# =ds=#c3#" ,"","22.22%"},
 		{ 19, 223066, "", "=q4=Ring of Redemption", "=ds=#s13# =q1=#m1# =ds=#c4#" ,"","22.22%"},
@@ -6464,11 +6464,11 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 		{ 23, 223063, "", "=q4=Plagueheart Ring", "=ds=#s13# =q1=#m1# =ds=#c8#" ,"","22.22%"},
 		{ 24, 223059, "", "=q4=Ring of the Dreadnaught", "=ds=#s13# =q1=#m1# =ds=#c9#" ,"","22.22%"},
 		{ 25, 0,"","","" },
-		{ 26, 22733, "", "=q1=Staff Head of Atiesh", "=ds=#m3#" },
-		{ 27, 22632, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c1#"},
-		{ 28, 22589, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c3#"},
-		{ 29, 22631, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c5#"},
-		{ 30, 22630, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c8#"},
+		{ 26, 222733, "", "=q1=Staff Head of Atiesh", "=ds=#m3#" },
+		{ 27, 222632, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c1#"},
+		{ 28, 222589, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c3#"},
+		{ 29, 222631, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c5#"},
+		{ 30, 222630, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c8#"},
 		Prev = "NAXSapphironHEROIC";
 		Next = "NAXTrashHEROIC";
 	};
@@ -7005,7 +7005,7 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 	};
 	
 		AtlasLoot_Data["T1T2DPSWarrior"] = {
-		{ 1, 0, "Ability_Warrior_BattleShout", "=q6=#t1s9#", "=ec1=#m30#"};
+		{ 1, 0, "Ability_Warrior_BattleShout", "=q6=#t1s10#", "=ec1=#m30#"};
 		{ 2, 10480, "", "=q4=Faceguard of Might", "=ds="..BabbleBoss["Garr"], ""};
 		{ 3, 10481, "", "=q4=Shoulderpads of Might", "=ds="..BabbleBoss["Sulfuron Harbinger"], ""};
 		{ 4, 10482, "", "=q4=Chesttplate of Might", "=ds="..BabbleBoss["Golemagg the Incinerator"], ""};
@@ -7014,7 +7014,7 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 		{ 7, 10485, "", "=q4=Girdle of Might", "=ds="..AL["Trash Mobs"], ""};
 		{ 8, 10486, "", "=q4=Legguards of Might", "=ds="..BabbleBoss["Magmadar"], ""};
 		{ 9, 10487, "", "=q4=Stompers of Might", "=ds="..BabbleBoss["Gehennas"], ""};
-		{ 16, 0, "Ability_Warrior_BattleShout", "=q6=#t2s9#", "=ec1=#m31#"};
+		{ 16, 0, "Ability_Warrior_BattleShout", "=q6=#t2s10#", "=ec1=#m31#"};
 		{ 17, 10904, "", "=q4=Faceguard of Wrath", "=ds="..BabbleBoss["Nefarian"], "", "13.65%"};
 		{ 18, 10902, "", "=q4=Shoulderpads of Wrath", "=ds="..BabbleBoss["Chromaggus"], "", "16.83%"};
 		{ 19, 10907, "", "=q4=Chestplate of Wrath", "=ds="..BabbleBoss["Nefarian"], "", "15.06%"};
@@ -7258,7 +7258,7 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 		{ 7, 210485, "", "=q4=Girdle of Might", "=ds="..AL["Trash Mobs"], ""};
 		{ 8, 210486, "", "=q4=Legguards of Might", "=ds="..BabbleBoss["Magmadar"], ""};
 		{ 9, 210487, "", "=q4=Stompers of Might", "=ds="..BabbleBoss["Gehennas"], ""};
-		{ 16, 0, "Ability_Warrior_BattleShout", "=q6=#t2s9#", "=ec1=#m31#"};
+		{ 16, 0, "Ability_Warrior_BattleShout", "=q6=#t2s10#", "=ec1=#m31#"};
 		{ 17, 210904, "", "=q4=Faceguard of Wrath", "=ds="..BabbleBoss["Nefarian"], "", "13.65%"};
 		{ 18, 210902, "", "=q4=Shoulderpads of Wrath", "=ds="..BabbleBoss["Chromaggus"], "", "16.83%"};
 		{ 19, 210907, "", "=q4=Chestplate of Wrath", "=ds="..BabbleBoss["Nefarian"], "", "15.06%"};
@@ -7411,16 +7411,16 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 	};
 	
 	AtlasLoot_Data["T3DPSWarrior"] = {
-		{ 1, 0, "Ability_Warrior_BattleShout", "=q6=#t3s9#", "=ec1=#m35#"};
---		{ 2, 22418, "", "=q4=Dreadnaught Helmet", "=ds="};
---		{ 3, 22419, "", "=q4=Dreadnaught Pauldrons", "=ds="};
---		{ 4, 22416, "", "=q4=Dreadnaught Breastplate", "=ds="};
---		{ 5, 22423, "", "=q4=Dreadnaught Bracers", "=ds="};
---		{ 6, 22421, "", "=q4=Dreadnaught Gauntlets", "=ds="};
---		{ 7, 22422, "", "=q4=Dreadnaught Waistguard", "=ds="};
---		{ 8, 22417, "", "=q4=Dreadnaught Legplates", "=ds="};
---		{ 9, 22420, "", "=q4=Dreadnaught Sabatons", "=ds="};
---		{ 10, 23059, "", "=q4=Ring of the Dreadnaught", "=ds="};
+		{ 1, 0, "Ability_Warrior_BattleShout", "=q6=#t3s10#", "=ec1=#m35#"};
+		{ 2, 10490, "", "=q4=Dreadborne Helmet", "=ds="};
+		{ 3, 10491, "", "=q4=Dreadborne Pauldrons", "=ds="};
+		{ 4, 10488, "", "=q4=Dreadborne Breastplate", "=ds="};
+		{ 5, 10495, "", "=q4=Dreadborne Bracers", "=ds="};
+		{ 6, 10493, "", "=q4=Dreadborne Gauntlets", "=ds="};
+		{ 7, 10494, "", "=q4=Dreadborne Waistguard", "=ds="};
+		{ 8, 10489, "", "=q4=Dreadborne Legplates", "=ds="};
+		{ 9, 10492, "", "=q4=Dreadborne Sabatons", "=ds="};
+		{ 10, 10496, "", "=q4=Dreadborne Ring", "=ds="};
 		Prev = "T1T2DPSWarrior";
 		Back = "T1T2T3SET";
 	};
@@ -7565,16 +7565,16 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 	};
 	
 	AtlasLoot_Data["T3DPSWarriorHEROIC"] = {
-		{ 1, 0, "Ability_Warrior_BattleShout", "=q6=#t3s9#", "=ec1=#m35#"};
---		{ 2, 22418, "", "=q4=Dreadnaught Helmet", "=ds="};
---		{ 3, 22419, "", "=q4=Dreadnaught Pauldrons", "=ds="};
---		{ 4, 22416, "", "=q4=Dreadnaught Breastplate", "=ds="};
---		{ 5, 22423, "", "=q4=Dreadnaught Bracers", "=ds="};
---		{ 6, 22421, "", "=q4=Dreadnaught Gauntlets", "=ds="};
---		{ 7, 22422, "", "=q4=Dreadnaught Waistguard", "=ds="};
---		{ 8, 22417, "", "=q4=Dreadnaught Legplates", "=ds="};
---		{ 9, 22420, "", "=q4=Dreadnaught Sabatons", "=ds="};
---		{ 10, 23059, "", "=q4=Ring of the Dreadnaught", "=ds="};
+		{ 1, 0, "Ability_Warrior_BattleShout", "=q6=#t3s10#", "=ec1=#m35#"};
+		{ 2, 210490, "", "=q4=Dreadborne Helmet", "=ds="};
+		{ 3, 210491, "", "=q4=Dreadborne Pauldrons", "=ds="};
+		{ 4, 210488, "", "=q4=Dreadborne Breastplate", "=ds="};
+		{ 5, 210495, "", "=q4=Dreadborne Bracers", "=ds="};
+		{ 6, 210493, "", "=q4=Dreadborne Gauntlets", "=ds="};
+		{ 7, 210494, "", "=q4=Dreadborne Waistguard", "=ds="};
+		{ 8, 210489, "", "=q4=Dreadborne Legplates", "=ds="};
+		{ 9, 210492, "", "=q4=Dreadborne Sabatons", "=ds="};
+		{ 10, 210496, "", "=q4=Dreadborne Ring", "=ds="};
 		Prev = "T1T2DPSWarriorHEROIC";
 		Back = "T1T2T3SET";
 	};
