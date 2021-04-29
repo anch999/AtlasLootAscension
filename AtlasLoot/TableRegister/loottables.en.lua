@@ -522,17 +522,22 @@ end
   -- Gruul's Lair
 	AtlasLoot_TableNames["GruulsLairHighKingMaulgar"] = { BabbleBoss["High King Maulgar"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["GruulGruul"] = { BabbleBoss["Gruul the Dragonkiller"], "AtlasLootBurningCrusade" };
-  -- Gruul's Lair HEROIC
-	AtlasLoot_TableNames["GruulsLairHighKingMaulgarHEROIC"] = { BabbleBoss["High King Maulgar"], "AtlasLootBurningCrusade" };
-	AtlasLoot_TableNames["GruulGruulHEROIC"] = { BabbleBoss["Gruul the Dragonkiller"], "AtlasLootBurningCrusade" };
+  -- Gruul's Lair HEROIC FLEX
+	AtlasLoot_TableNames["GruulsLairHighKingMaulgar25Man"] = { BabbleBoss["High King Maulgar"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["GruulGruul25Man"] = { BabbleBoss["Gruul the Dragonkiller"], "AtlasLootBurningCrusade" };
+  -- Gruul's Lair ASCENDED
+	AtlasLoot_TableNames["GruulsLairHighKingMaulgar25ManHEROIC"] = { BabbleBoss["High King Maulgar"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["GruulGruul25ManHEROIC"] = { BabbleBoss["Gruul the Dragonkiller"], "AtlasLootBurningCrusade" };
   -- HC: Blood Furnace
 	AtlasLoot_TableNames["HCFurnaceMaker"] = { BabbleBoss["The Maker"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["HCFurnaceBroggok"] = { BabbleBoss["Broggok"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["HCFurnaceBreaker"] = { BabbleBoss["Keli'dan the Breaker"], "AtlasLootBurningCrusade" };
   -- HC: Magtheridon's Lair
 	AtlasLoot_TableNames["HCMagtheridon"] = { BabbleBoss["Magtheridon"], "AtlasLootBurningCrusade" };
-  -- HC: Magtheridon's Lair HEROIC
+  -- HC: Magtheridon's Lair HEROIC FLEX
 	AtlasLoot_TableNames["HCMagtheridonHEROIC"] = { BabbleBoss["Magtheridon"], "AtlasLootBurningCrusade" };
+  -- HC: Magtheridon's Lair ASCENDED
+	AtlasLoot_TableNames["HCMagtheridon25ManHEROIC"] = { BabbleBoss["Magtheridon"], "AtlasLootBurningCrusade" };
   -- HC: Ramparts
 	AtlasLoot_TableNames["HCRampWatchkeeper"] = { BabbleBoss["Watchkeeper Gargolmar"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["HCRampOmor"] = { BabbleBoss["Omor the Unscarred"], "AtlasLootBurningCrusade" };

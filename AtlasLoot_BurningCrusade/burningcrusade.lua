@@ -1810,10 +1810,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 	};
 
 		--------------------------
-		--- Gruul's Lair HEROIC---
+		--- Gruul's Lair HEROIC FLEX---
 		--------------------------
 
-	AtlasLoot_Data["GruulsLairHighKingMaulgarHEROIC"] = {
+	AtlasLoot_Data["GruulsLairHighKingMaulgar25Man"] = {
 		{ 1, 228797, "", "=q4=Brute Cloak of the Ogre-Magi", "#s4#", "", "8.39%"};
 		{ 2, 228799, "", "=q4=Belt of Divine Inspiration", "#s10#, #a1#", "", "9.98%"};
 		{ 3, 228796, "", "=q4=Malefic Mask of the Shadows", "=ds=#s1#, #a2#", "", "12.93%"};
@@ -1824,10 +1824,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 17, 229764, "", "=q4=Pauldrons of the Fallen Defender", "=q1=#m1# =ds=#c1#, #c5#, #c9#", "", "34.69%"};
 		{ 18, 229762, "", "=q4=Pauldrons of the Fallen Hero", "=q1=#m1# =ds=#c2#, #c3#, #c8#", "", "25.62%"};
 		{ 20, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
-		Next = "GruulGruulHEROIC";
+		Next = "GruulGruul25Man";
 	};
 
-	AtlasLoot_Data["GruulGruulHEROIC"] = {
+	AtlasLoot_Data["GruulGruul25Man"] = {
 		{ 1, 228804, "", "=q4=Collar of Cho'gall", "=ds=#s1#, #a1#", "", "14.96%"};
 		{ 2, 228803, "", "=q4=Cowl of Nature's Breath", "=ds=#s1#, #a2#", "", "14.21%"};
 		{ 3, 228828, "", "=q4=Gronn-Stitched Girdle", "=ds=#s10#, #a2#", "", "11.22%"};
@@ -1846,7 +1846,47 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 23, 228794, "", "=q4=Axe of the Gronn Lords", "=ds=#h2#, #w1#", "", "6.73%"};
 		{ 24, 228825, "", "=q4=Aldori Legacy Defender", "=ds=#w8#", "", "2.99%"};
 		{ 25, 228826, "", "=q4=Shuriken of Negation", "=ds=#w11#", "", "16.21%"};
-		Prev = "GruulsLairHighKingMaulgarHEROIC";
+		Prev = "GruulsLairHighKingMaulgar25Man";
+	};
+
+		--------------------------
+		--- Gruul's Lair ASCENDED---
+		--------------------------
+
+	AtlasLoot_Data["GruulsLairHighKingMaulgar25ManHEROIC"] = {
+		{ 1, 228797, "", "=q4=Brute Cloak of the Ogre-Magi", "#s4#", "", "8.39%"};
+		{ 2, 228799, "", "=q4=Belt of Divine Inspiration", "#s10#, #a1#", "", "9.98%"};
+		{ 3, 228796, "", "=q4=Malefic Mask of the Shadows", "=ds=#s1#, #a2#", "", "12.93%"};
+		{ 4, 228801, "", "=q4=Maulgar's Warhelm", "=ds=#s1#, #a3#", "", "21.32%"};
+		{ 5, 228795, "", "=q4=Bladespire Warbands", "=ds=#s8#, #a4#", "", "12.02%"};
+		{ 6, 228800, "", "=q4=Hammer of the Naaru", "=ds=#h2#, #w6#", "", "15.87%"};
+		{ 16, 229763, "", "=q4=Pauldrons of the Fallen Champion", "=q1=#m1# =ds=#c4#, #c6#, #c7#", "", "22.68%"};
+		{ 17, 229764, "", "=q4=Pauldrons of the Fallen Defender", "=q1=#m1# =ds=#c1#, #c5#, #c9#", "", "34.69%"};
+		{ 18, 229762, "", "=q4=Pauldrons of the Fallen Hero", "=q1=#m1# =ds=#c2#, #c3#, #c8#", "", "25.62%"};
+		{ 20, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
+		Next = "GruulGruul25ManHEROIC";
+	};
+
+	AtlasLoot_Data["GruulGruul25ManHEROIC"] = {
+		{ 1, 228804, "", "=q4=Collar of Cho'gall", "=ds=#s1#, #a1#", "", "14.96%"};
+		{ 2, 228803, "", "=q4=Cowl of Nature's Breath", "=ds=#s1#, #a2#", "", "14.21%"};
+		{ 3, 228828, "", "=q4=Gronn-Stitched Girdle", "=ds=#s10#, #a2#", "", "11.22%"};
+		{ 4, 228827, "", "=q4=Gauntlets of the Dragonslayer", "=ds=#s9#, #a3#", "", "7.48%"};
+		{ 5, 228810, "", "=q4=Windshear Boots", "=ds=#s12#, #a3#", "", "10.22%"};
+		{ 6, 228824, "", "=q4=Gauntlets of Martial Perfection", "=ds=#s9#, #a4#", "", "12.22%"};
+		{ 7, 228822, "", "=q4=Teeth of Gruul", "=ds=#s2#", "", "11.47%"};
+		{ 8, 228823, "", "=q4=Eye of Gruul", "=ds=#s14#", "", "6.73%"};
+		{ 9, 228830, "", "=q4=Dragonspine Trophy", "=ds=#s14#", "", "11.72%"};
+		{ 11, 31750, "", "=q1=Earthen Signet", "=ds=#m3#", "", "100%"};
+		{ 16, 229766, "", "=q4=Leggings of the Fallen Champion", "=q1=#m1# =ds=#c4#, #c6#, #c7#", "", "23.69%"};
+		{ 17, 229767, "", "=q4=Leggings of the Fallen Defender", "=q1=#m1# =ds=#c1#, #c5#, #c9#", "", "17.46%"};
+		{ 18, 229765, "", "=q4=Leggings of the Fallen Hero", "=q1=#m1# =ds=#c2#, #c3#, #c8#", "", "30.17%"};
+		{ 20, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
+		{ 22, 228802, "", "=q4=Bloodmaw Magus-Blade", "=ds=#h3#, #w10#", "", "9.23%"};
+		{ 23, 228794, "", "=q4=Axe of the Gronn Lords", "=ds=#h2#, #w1#", "", "6.73%"};
+		{ 24, 228825, "", "=q4=Aldori Legacy Defender", "=ds=#w8#", "", "2.99%"};
+		{ 25, 228826, "", "=q4=Shuriken of Negation", "=ds=#w11#", "", "16.21%"};
+		Prev = "GruulsLairHighKingMaulgar25ManHEROIC";
 	};
 
 		-------------------------------------------
@@ -2140,10 +2180,40 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 	};
 
 		---------------------------------------------------
-		--- Hellfire Citadel: Magtheridon's Lair HEROIC ---
+		--- Hellfire Citadel: Magtheridon's Lair HEROIC FLEX ---
 		---------------------------------------------------
 
-	AtlasLoot_Data["HCMagtheridonHEROIC"] = {
+	AtlasLoot_Data["HCMagtheridon25Man"] = {
+		{ 1, 228777, "", "=q4=Cloak of the Pit Stalker", "=ds=#s4#"};
+		{ 2, 228780, "", "=q4=Soul-Eater's Handwraps", "=ds=#s9#, #a1#"};
+		{ 3, 228776, "", "=q4=Liar's Tongue Gloves", "=ds=#s9#, #a2#"};
+		{ 4, 228778, "", "=q4=Terror Pit Girdle", "=ds=#s10#, #a3#"};
+		{ 5, 228775, "", "=q4=Thundering Greathelm", "=ds=#s1#, #a4#"};
+		{ 6, 228779, "", "=q4=Girdle of the Endless Pit", "=ds=#s10#, #a4#"};
+		{ 7, 228789, "", "=q4=Eye of Magtheridon", "=ds=#s14#"};
+		{ 8, 228781, "", "=q4=Karaborian Talisman", "=ds=#s15#"};
+		{ 10, 228774, "", "=q4=Glaive of the Pit", "=ds=#w7#"};
+		{ 11, 228782, "", "=q4=Crystalheart Pulse-Staff", "=ds=#w9#"};
+		{ 12, 229458, "", "=q4=Aegis of the Vindicator", "=ds=#w8#"};
+		{ 13, 228783, "", "=q4=Eredar Wand of Obliteration", "=ds=#w12#"};
+		{ 15, 34846, "", "=q2=Black Sack of Gems", "=ds=#e1#"};
+		{ 16, 229754, "", "=q4=Chestguard of the Fallen Champion", "=q1=#m1# =ds=#c4#, #c6#, #c7#"};
+		{ 17, 229753, "", "=q4=Chestguard of the Fallen Defender", "=q1=#m1# =ds=#c1#, #c5#, #c9#"};
+		{ 18, 229755, "", "=q4=Chestguard of the Fallen Hero", "=q1=#m1# =ds=#c2#, #c3#, #c8#"};
+		{ 20, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
+		{ 22, 6032385, "", "=q4=Magtheridon's Head", "=ds=#m2#", "", "100%"};
+		{ 23, 228791, "", "=q4=Ring of the Recalcitrant", "=q1=#m4#: =ds=#s13#"};
+		{ 24, 228790, "", "=q4=Naaru Lightwarden's Band", "=q1=#m4#: =ds=#s13#"};
+		{ 25, 228793, "", "=q4=Band of Crimson Fury", "=q1=#m4#: =ds=#s13#"};
+		{ 26, 228792, "", "=q4=A'dal's Signet of Defense", "=q1=#m4#: =ds=#s13#"};
+		{ 28, 34845, "", "=q4=Pit Lord's Satchel", "=ds=#e1# #m15#"};
+		{ 30, 428775, "", "=q4=Magtheridon's Glaive", "=ds=#w7#"};
+	};
+		---------------------------------------------------
+		--- Hellfire Citadel: Magtheridon's Lair ASCENDED ---
+		---------------------------------------------------
+
+	AtlasLoot_Data["HCMagtheridon25ManHEROIC"] = {
 		{ 1, 228777, "", "=q4=Cloak of the Pit Stalker", "=ds=#s4#"};
 		{ 2, 228780, "", "=q4=Soul-Eater's Handwraps", "=ds=#s9#, #a1#"};
 		{ 3, 228776, "", "=q4=Liar's Tongue Gloves", "=ds=#s9#, #a2#"};
