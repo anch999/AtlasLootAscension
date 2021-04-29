@@ -5842,9 +5842,9 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 		{ 20, 22635, "", "=q3=Savage Guard", "=ds=#s1#/#s11# #e17#"};
 	};
 
-		-----------------
-		--- Naxxramas ---
-		-----------------
+	-----------------
+	--- Naxxramas ---
+	-----------------
 
 	AtlasLoot_Data["NAXPatchwerk"] = {
 		{ 1, 22726, "", "=q5=Splinter of Atiesh", "=ds=#m3#", "", "30%" },
@@ -6106,10 +6106,10 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 		{ 18, 23549, "", "=q4=Fortitude of the Scourge", "=ds=#s3# #e17#","","50%" },
 		{ 19, 23548, "", "=q4=Might of the Scourge", "=ds=#s3# #e17#" ,"","50%"},
 		Prev = "NAXLoatheb";
-		Next = "NAXKelThuzard";
+		Next = "NAXKelThuzad";
 	};
 
-	AtlasLoot_Data["NAXKelThuzard"] = {
+	AtlasLoot_Data["NAXKelThuzad"] = {
 		{ 1, 22802, "", "=q4=Kingsfall", "=ds=#h1#, #w4#","","18.18%" },
 		{ 2, 23054, "", "=q4=Gressil, Dawn of Ruin", "=ds=#h1#, #w10#" ,"","18.18%"},
 		{ 3, 23577, "", "=q4=The Hungering Cold", "=ds=#h1#, #w10#" ,"","18.18%"}, 
@@ -6167,15 +6167,344 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 		{ 20, 0,"","","" },
 		{ 21, 22708, "", "=q1=Fate of Ramaladni", "=ds=#m3#" },
 		{ 22, 23055, "", "=q1=Word of Thawing", "=ds=#m20#" },
-		Prev = "NAXKelThuzard";
+		Prev = "NAXKelThuzad";
 	};
 
 
-	------------------------
-	--- Naxxramas HEROIC ---
-	------------------------
+	--------------------------
+	--- Naxxramas Flex Heroic ---
+	--------------------------
 
-	AtlasLoot_Data["NAXPatchwerkHEROIC"] = {
+	AtlasLoot_Data["NAXPatchwerk25Man"] = {
+		{ 1, 22726, "", "=q5=Splinter of Atiesh", "=ds=#m3#", "", "30%" },
+		{ 2, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
+		{ 3, 0,"","","" },
+		{ 4, 22368, "", "=q4=Desecrated Shoulderpads", "=q1=#m1# =ds=#c8#, #c3#, #c5#","", "33.33%" },
+		{ 5, 22361, "", "=q4=Desecrated Spaulders", "=q1=#m1# =ds=#c7#, #c1#, #c2#, #c4#","", "33.33%" },
+		{ 6, 22354, "", "=q4=Desecrated Pauldrons", "=q1=#m1# =ds=#c6#, #c9#","", "33.33%" },
+		{ 7, 0,"","","" },
+		{ 8, 322960, "", "=q4=Cloak of Suturing", "=ds=#s4#","", "20%" },
+		{ 9, 322815, "", "=q4=Severance", "=ds=#h2#, #w1#","", "20%" },
+		{ 10, 322820, "", "=q4=Wand of Fates", "=ds=#w12#","", "20%" },
+		{ 11, 322818, "", "=q4=The Plague Bearer", "=ds=#w8#","", "20%" },
+		{ 12, 322961, "", "=q4=Band of Reanimation", "=ds=#s13#","", "20%" },
+		Next = "NAXGrobbulus25Man";
+	};
+
+	AtlasLoot_Data["NAXGrobbulus25Man"] = {
+		{ 1, 22726, "", "=q5=Splinter of Atiesh", "=ds=#m3#","","30%" },
+		{ 2, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
+		{ 3, 0,"","","" },
+		{ 4, 22368, "", "=q4=Desecrated Shoulderpads", "=q1=#m1# =ds=#c8#, #c3#, #c5#","","33.33%" },
+		{ 5, 22361, "", "=q4=Desecrated Spaulders", "=q1=#m1# =ds=#c7#, #c1#, #c2#, #c4#","","33.33%" },
+		{ 6, 22354, "", "=q4=Desecrated Pauldrons", "=q1=#m1# =ds=#c6#, #c9#","","33.33%" },
+		{ 7, 0,"","","" },
+		{ 8, 322968, "", "=q4=Glacial Mantle", "=ds=#s3#, #a1#", "", "20%" },
+		{ 9, 322967, "", "=q4=Icy Scale Spaulders", "=ds=#s3#, #a3#", "", "20%" },
+		{ 10, 322803, "", "=q4=Midnight Haze", "=ds=#h3#, #w4#", "", "20%" },
+		{ 11, 322988, "", "=q4=The End of Dreams", "=ds=#h3#, #w6#","","20%" },
+		{ 12, 322810, "", "=q4=Toxin Injector", "=ds=#w5#", "","20%" },
+		Prev = "NAXPatchwerk25Man";
+		Next = "NAXGluth25Man";
+	};
+
+	AtlasLoot_Data["NAXGluth25Man"] = {
+		{ 1, 22726, "", "=q5=Splinter of Atiesh", "=ds=#m3#","","30%" },
+		{ 2, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
+		{ 3, 0,"","","" },
+		{ 4, 322983, "", "=q4=Rime Covered Mantle", "=ds=#s3#, #a1#", "", "20%" },
+		{ 5, 322813, "", "=q4=Claymore of Unholy Might", "=ds=#h2#, #w10#", "","20%" },
+		{ 6, 323075, "", "=q4=Death's Bargain", "=ds=#w8#", "","20%" },
+		{ 7, 322994, "", "=q4=Digested Hand of Power", "=ds=#s15#","","20%"},
+		{ 8, 322981, "", "=q4=Gluth's Missing Collar", "=ds=#s2#","","20%" },
+		{ 9, 0,"","","" },
+		{ 10, 0,"","","" },
+		{ 11, 0,"","","" },
+		{ 12, 0,"","","" },
+		{ 13, 0,"","","" },
+		{ 14, 0,"","","" },
+		{ 15, 0,"","","" },
+		{ 16, 22368, "", "=q4=Desecrated Shoulderpads", "=q1=#m1# =ds=#c8#, #c3#, #c5#","", "8.33%" },
+		{ 17, 22361, "", "=q4=Desecrated Spaulders", "=q1=#m1# =ds=#c7#, #c1#, #c2#, #c4#","", "8.33%"  },
+		{ 18, 22354, "", "=q4=Desecrated Pauldrons", "=q1=#m1# =ds=#c6#, #c9#","", "8.33%"  },
+		{ 19, 22369, "", "=q4=Desecrated Bindings", "=q1=#m1# =ds=#c8#, #c3#, #c5#","", "8.33%"  },
+		{ 20, 22362, "", "=q4=Desecrated Wristguards", "=q1=#m1# =ds=#c4#, #c7#, #c2#, #c1#","", "8.33%"  },
+		{ 21, 22355, "", "=q4=Desecrated Bracers", "=q1=#m1# =ds=#c9#, #c6#","", "8.33%"  },
+		{ 22, 22370, "", "=q4=Desecrated Belt", "=q1=#m1# =ds=#c5#, #c3#, #c8#","","8.33%" },
+		{ 23, 22363, "", "=q4=Desecrated Girdle", "=q1=#m1# =ds=#c7#, #c1#, #c2#, #c4#","", "8.33%"  },
+		{ 24, 22356, "", "=q4=Desecrated Waistguard", "=q1=#m1# =ds=#c6#, #c9#","", "8.33%"  },
+		{ 25, 22372, "", "=q4=Desecrated Sandals", "=q1=#m1# =ds=#c8#, #c3#, #c5#","", "8.33%"  },
+		{ 26, 22365, "", "=q4=Desecrated Boots", "=q1=#m1# =ds=#c7#, #c1#, #c2#, #c4#","", "8.33%"  },
+		{ 27, 22358, "", "=q4=Desecrated Sabatons", "=q1=#m1# =ds=#c6#, #c9#","", "8.33%"  },
+		Prev = "NAXGrobbulus25Man";
+		Next = "NAXThaddius25Man";
+	};
+
+	AtlasLoot_Data["NAXThaddius25Man"] = {
+		{ 1, 22726, "", "=q5=Splinter of Atiesh", "=ds=#m3#","","30%" },
+		{ 2, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
+		{ 3, 0,"","","" },
+		{ 4, 22367, "", "=q4=Desecrated Circlet", "=q1=#m1# =ds=#c8#, #c3#, #c5#","", "66.67%"},
+		{ 5, 22360, "", "=q4=Desecrated Headpiece", "=q1=#m1# =ds=#c7#, #c1#, #c2#, #c4#" ,"", "66.67%"},
+		{ 6, 22353, "", "=q4=Desecrated Helmet", "=q1=#m1# =ds=#c6#, #c9#","", "66.67%" },
+		{ 7, 0,"","","" },
+		{ 8, 323070, "", "=q4=Leggings of Polarity", "=ds=#s11#, #a1#" ,"", "20%"},
+		{ 9, 323000, "", "=q4=Plated Abomination Ribcage", "=ds=#s5#, #a4#","", "20%" },
+		{ 10, 322808, "", "=q4=The Castigator", "=ds=#h1#, #w6#" ,"", "20%"},
+		{ 11, 322801, "", "=q4=Spire of Twilight", "=ds=#w9#" ,"", "20%"},
+		{ 12, 323001, "", "=q4=Eye of Diminution", "=ds=#s14#" ,"", "20%"},
+		Prev = "NAXGluth25Man";
+		Next = "NAXAnubRekhan25Man";
+	};
+
+	AtlasLoot_Data["NAXAnubRekhan25Man"] = {
+		{ 1, 22726, "", "=q5=Splinter of Atiesh", "=ds=#m3#","", "30%" },
+		{ 2, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
+		{ 3, 0,"","","" },
+		{ 4, 22369, "", "=q4=Desecrated Bindings", "=q1=#m1# =ds=#c8#, #c3#, #c5#", "","33.33%" },
+		{ 5, 22362, "", "=q4=Desecrated Wristguards", "=q1=#m1# =ds=#c4#, #c7#, #c2#, #c1#","", "33.33%" },
+		{ 6, 22355, "", "=q4=Desecrated Bracers", "=q1=#m1# =ds=#c9#, #c6#", "", "33.33%" },
+		{ 7, 0,"","","" },
+		{ 8, 322938, "", "=q4=Cryptfiend Silk Cloak", "=ds=#s4#", "","20%" },
+		{ 9, 322936, "", "=q4=Wristguards of Vengeance", "=ds=#s8#, #a4#","", "20%" },
+		{ 10, 322937, "", "=q4=Gem of Nerubis", "=ds=#s15#","", "20%" },
+		{ 11, 322939, "", "=q4=Band of Unanswered Prayers", "=ds=#s13#","", "20%" },
+		{ 12, 322935, "", "=q4=Touch of Frost", "=ds=#s2#", "", "20%" },
+		Prev = "NAXThaddius25Man";
+		Next = "NAXGrandWidowFearlina25Man";
+	};
+
+	AtlasLoot_Data["NAXGrandWidowFearlina25Man"] = {
+		{ 1, 22726, "", "=q5=Splinter of Atiesh", "=ds=#m3#", "", "30%" },
+		{ 2, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
+		{ 3, 0,"","","" },
+		{ 4, 22369, "", "=q4=Desecrated Bindings", "=q1=#m1# =ds=#c8#, #c3#, #c5#","", "33.33%" },
+		{ 5, 22362, "", "=q4=Desecrated Wristguards", "=q1=#m1# =ds=#c4#, #c7#, #c2#, #c1#","", "33.33%" },
+		{ 6, 22355, "", "=q4=Desecrated Bracers", "=q1=#m1# =ds=#c9#, #c6#","", "33.33%" },
+		{ 7, 0,"","","" },
+		{ 8, 322941, "", "=q4=Polar Shoulder Pads", "=ds=#s3#, #a2#","", "20%" },
+		{ 9, 322940, "", "=q4=Icebane Pauldrons", "=ds=#s3#, #a4#","", "20%" },
+		{ 10, 322806, "", "=q4=Widow's Remorse", "=ds=#h1#, #w10#","", "20%" },
+		{ 11, 322942, "", "=q4=The Widow's Embrace", "=ds=#h3#, #w6#","", "20%" },
+		{ 12, 322943, "", "=q4=Malice Stone Pendant", "=ds=#s2#","", "20%" },
+		Prev = "NAXAnubRekhan25Man";
+		Next = "NAXMaexxna25Man";
+	};
+
+	AtlasLoot_Data["NAXMaexxna25Man"] = {
+		{ 1, 22726, "", "=q5=Splinter of Atiesh", "=ds=#m3#","", "30%" },
+		{ 2, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
+		{ 3, 0,"","","" },
+		{ 4, 22371, "", "=q4=Desecrated Gloves", "=q1=#m1# =ds=#c8#, #c3#, #c5#","", "67.66%" },
+		{ 5, 22364, "", "=q4=Desecrated Handguards", "=q1=#m1# =ds=#c4#, #c7#, #c2#, #c1#","", "67.66%" },
+		{ 6, 22357, "", "=q4=Desecrated Gauntlets", "=q1=#m1# =ds=#c9#, #c6#","", "67.66%" },
+		{ 7, 0,"","","" },
+		{ 8, 323220, "", "=q4=Crystal Webbed Robe", "=ds=#s5#, #a1#","", "20%" },
+		{ 9, 322804, "", "=q4=Maexxna's Fang", "=ds=#h1#, #w4#","", "20%" },
+		{ 10, 322807, "", "=q4=Wraith Blade", "=ds=#h3#, #w10#","", "20%" },
+		{ 11, 322947, "", "=q4=Pendant of Forgotten Names", "=ds=#s2#","", "20%" },
+		{ 12, 322954, "", "=q4=Kiss of the Spider", "=ds=#s14#","", "20%" },
+		Prev = "NAXGrandWidowFearlina25Man";
+		Next = "NAXInstructorRAuvious25Man";
+	};
+
+	AtlasLoot_Data["NAXInstructorRAuvious25Man"] = {
+		{ 1, 22726, "", "=q5=Splinter of Atiesh", "=ds=#m3#","", "30%" },
+		{ 2, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
+		{ 3, 0,"","","" },
+		{ 4, 22372, "", "=q4=Desecrated Sandals", "=q1=#m1# =ds=#c8#, #c3#, #c5#", "", "33.33%" },
+		{ 5, 22365, "", "=q4=Desecrated Boots", "=q1=#m1# =ds=#c7#, #c1#, #c2#, #c4#","", "33.33%" },
+		{ 6, 22358, "", "=q4=Desecrated Sabatons", "=q1=#m1# =ds=#c6#, #c9#","", "33.33%" },
+		{ 7, 0,"","","" },
+		{ 8, 323017, "", "=q4=Veil of Eclipse", "=ds=#s4#","", "16.67%" },
+		{ 9, 323219, "", "=q4=Girdle of the Mentor", "=ds=#s10#, #a4#","", "16.67%" },
+		{ 10, 323014, "", "=q4=Iblis, Blade of the Fallen Seraph", "=ds=#h1#, #w10#","", "16.67%" },
+		{ 11, 323009, "", "=q4=Wand of the Whispering Dead", "=ds=#w12#","", "16.67%" },
+		{ 12, 323004, "", "=q4=Idol of Longevity", "=ds=#s16#, #w14#","", "16.67%" },
+		{ 13, 323018, "", "=q4=Signet of the Fallen Defender", "=ds=#s13#","", "16.67%" },
+		Prev = "NAXMaexxna25Man";
+		Next = "NAXGothicderHarvester25Man";
+	};
+
+	AtlasLoot_Data["NAXGothicderHarvester25Man"] = {
+		{ 1, 22726, "", "=q5=Splinter of Atiesh", "=ds=#m3#","", "30%" },
+		{ 2, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
+		{ 3, 0,"","","" },
+		{ 4, 22372, "", "=q4=Desecrated Sandals", "=q1=#m1# =ds=#c8#, #c3#, #c5#","", "33.33%" },
+		{ 5, 22365, "", "=q4=Desecrated Boots", "=q1=#m1# =ds=#c7#, #c1#, #c2#, #c4#","", "33.33%" },
+		{ 6, 22358, "", "=q4=Desecrated Sabatons", "=q1=#m1# =ds=#c6#, #c9#","", "33.33%" },
+		{ 7, 0,"","","" },
+		{ 8, 323032, "", "=q4=Glacial Headdress", "=ds=#s1#, #a1#","", "20%" },
+		{ 9, 323021, "", "=q4=The Soul Harvester's Bindings", "=ds=#s8#, #a1#","", "20%"  },
+		{ 10, 323020, "", "=q4=Polar Helmet", "=ds=#s1#, #a2#","", "20%"  },
+		{ 11, 323073, "", "=q4=Boots of Displacement", "=ds=#s12#, #a2#","", "20%"  },
+		{ 12, 323023, "", "=q4=Sadist's Collar", "=ds=#s2#","", "20%"  },
+		Prev = "NAXInstructorRAuvious25Man";
+		Next = "NAXTheFourHorsemen25Man";
+	};
+
+	AtlasLoot_Data["NAXTheFourHorsemen25Man"] = {
+		{ 1, 22726, "", "=q5=Splinter of Atiesh", "=ds=#m3#","", "30%"  },
+		{ 2, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
+		{ 3, 0,"","","" },
+		{ 4, 22351, "", "=q4=Desecrated Robe", "=q1=#m1# =ds=#c8#, #c3#, #c5#","", "33.33%"  },
+		{ 5, 22350, "", "=q4=Desecrated Tunic", "=q1=#m1# =ds=#c7#, #c1#, #c2#, #c4#","", "33.33%"  },
+		{ 6, 22349, "", "=q4=Desecrated Breastplate", "=q1=#m1# =ds=#c6#, #c9#","", "33.33%"  },
+		{ 7, 0,"","","" },
+		{ 8, 323071, "", "=q4=Leggings of Apocalypse", "=ds=#s11#, #a2#","", "16.67%"  },
+		{ 9, 322809, "", "=q4=Maul of the Redeemed Crusader", "=ds=#h2#, #w6#","", "16.67%"  },
+		{ 10, 322691, "", "=q4=Corrupted Ashbringer", "=ds=#h2#, #w10#","", "16.67%"  },
+		{ 11, 322811, "", "=q4=Soulstring", "=ds=#w2#","", "20%"  },
+		{ 12, 323025, "", "=q4=Seal of the Damned", "=ds=#s13#","", "16.67%"  },
+		{ 13, 323027, "", "=q4=Warmth of Forgiveness", "=ds=#s14#","", "16.67%"  },
+		Prev = "NAXGothicderHarvester25Man";
+		Next = "NAXNothderPlaguebringer25Man";
+	};
+
+	AtlasLoot_Data["NAXNothderPlaguebringer25Man"] = {
+		{ 1, 22726, "", "=q5=Splinter of Atiesh", "=ds=#m3#","", "30%" },
+		{ 2, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
+		{ 3, 0,"","","" },
+		{ 4, 22370, "", "=q4=Desecrated Belt", "=q1=#m1# =ds=#c5#, #c3#, #c8#","", "33.33%" },
+		{ 5, 22363, "", "=q4=Desecrated Girdle", "=q1=#m1# =ds=#c7#, #c1#, #c2#, #c4#","", "33.33%" },
+		{ 6, 22356, "", "=q4=Desecrated Waistguard", "=q1=#m1# =ds=#c6#, #c9#","", "33.33%" },
+		{ 7, 0,"","","" },
+		{ 8, 323030, "", "=q4=Cloak of the Scourge", "=ds=#s4#","", "14.29%" },
+		{ 9, 322816, "", "=q4=Hatchet of Sundered Bone", "=ds=#h1#, #w1#","", "14.29%" },
+		{ 10, 323005, "", "=q4=Totem of Flowing Water", "=ds=#s16#, #w15#","", "14.29%" },
+		{ 11, 323006, "", "=q4=Libram of Light", "=ds=#s16#, #w16#","", "14.29%" },
+		{ 12, 323029, "", "=q4=Noth's Frigid Heart", "=ds=#s15#","", "14.29%" },
+		{ 13, 323031, "", "=q4=Band of the Inevitable", "=ds=#s13#","", "14.29%" },
+		{ 14, 323028, "", "=q4=Hailstone Band", "=ds=#s13#","", "14.29%" },
+		Prev = "NAXTheFourHorsemen25Man";
+		Next = "NAXHeiganderUnclean25Man";
+	};
+
+	AtlasLoot_Data["NAXHeiganderUnclean25Man"] = {
+		{ 1, 22726, "", "=q5=Splinter of Atiesh", "=ds=#m3#","", "30%"  },
+		{ 2, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
+		{ 3, 0,"","","" },
+		{ 4, 22370, "", "=q4=Desecrated Belt", "=q1=#m1# =ds=#c5#, #c3#, #c8#","", "33.33%" },
+		{ 5, 22363, "", "=q4=Desecrated Girdle", "=q1=#m1# =ds=#c7#, #c1#, #c2#, #c4#","", "33.33%" },
+		{ 6, 22356, "", "=q4=Desecrated Waistguard", "=q1=#m1# =ds=#c6#, #c9#","", "33.33%" },
+		{ 7, 0,"","","" },
+		{ 8, 323035, "", "=q4=Preceptor's Hat", "=ds=#s1#, #a1#","", "20%" },
+		{ 9, 323033, "", "=q4=Icy Scale Coif", "=ds=#s1#, #a3#","", "20%" },
+		{ 10, 323019, "", "=q4=Icebane Helmet", "=ds=#s1#, #a4#","", "20%" },
+		{ 11, 323068, "", "=q4=Legplates of Carnage", "=ds=#s11#, #a4#","", "20%" },
+		{ 12, 323036, "", "=q4=Necklace of Necropsy", "=ds=#s2#","", "20%" },
+		Prev = "NAXNothderPlaguebringer25Man";
+		Next = "NAXLoatheb25Man";
+	};
+
+	AtlasLoot_Data["NAXLoatheb25Man"] = {
+		{ 1, 22726, "", "=q5=Splinter of Atiesh", "=ds=#m3#","", "30%" },
+		{ 2, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
+		{ 3, 0,"","","" },
+		{ 4, 22366, "", "=q4=Desecrated Leggings", "=q1=#m1# =ds=#c5#, #c3#, #c8#","", "66.67%" },
+		{ 5, 22359, "", "=q4=Desecrated Legguards", "=q1=#m1# =ds=#c7#, #c1#, #c2#, #c4#" ,"", "66.67%"},
+		{ 6, 22352, "", "=q4=Desecrated Legplates", "=q1=#m1# =ds=#c6#, #c9#","", "66.67%" },
+		{ 7, 0,"","","" },
+		{ 8, 323039, "", "=q4=The Eye of Nerub", "=ds=#w7#","", "20%" },
+		{ 9, 322800, "", "=q4=Brimstone Staff", "=ds=#w9#","", "20%" },
+		{ 10, 323037, "", "=q4=Ring of Spiritual Fervor", "=ds=#s13#","", "20%" },
+		{ 11, 323038, "", "=q4=Band of Unnatural Forces", "=ds=#s13#" ,"", "20%"},
+		{ 12, 323042, "", "=q4=Loatheb's Reflection", "=ds=#s14#","", "20%" },
+		Prev = "NAXHeiganderUnclean25Man";
+		Next = "NAXSapphiron25Man";
+	};
+
+	AtlasLoot_Data["NAXSapphiron25Man"] = {
+		{ 1, 323050, "", "=q4=Cloak of the Necropolis", "=ds=#s4#","","18.18%"  },
+		{ 2, 323045, "", "=q4=Shroud of Dominion", "=ds=#s4#","","18.18%"  },
+		{ 3, 323072, "", "=q4=Fists of the Unrelenting", "=ds=#s9#, #a4#","","18.18%"  },
+		{ 4, 323043, "", "=q4=The Face of Death", "=ds=#w8#","","18.18%"  },
+		{ 5, 323242, "", "=q4=Claw of the Frost Wyrm", "=ds=#h4#, #w13#","","18.18%"  },
+		{ 6, 323049, "", "=q4=Sapphiron's Left Eye", "=ds=#s15#","","18.18%"  },
+		{ 7, 323048, "", "=q4=Sapphiron's Right Eye", "=ds=#s15#","","18.18%"  },
+		{ 8, 323040, "", "=q4=Glyph of Deflection", "=ds=#s14#","","18.18%"  },
+		{ 9, 323047, "", "=q4=Eye of the Dead", "=ds=#s14#" ,"","18.18%" },
+		{ 10, 323046, "", "=q4=The Restrained Essence of Sapphiron", "=ds=#s14#","","18.18%"  },
+		{ 11, 323041, "", "=q4=Slayer's Crest", "=ds=#s14#","","18.18%"  },
+		{ 12, 319761,"","Fang of the Frost Wyrm","=ds=#h3#, #w13#" },
+		{ 13, 0,"","","" },
+		{ 14, 0,"","","" },
+		{ 15, 0,"","","" },
+		{ 16, 23545, "", "=q4=Power of the Scourge", "=ds=#s3# #e17#","","50%"  },
+		{ 17, 23547, "", "=q4=Resilience of the Scourge", "=ds=#s3# #e17#","","50%" },
+		{ 18, 23549, "", "=q4=Fortitude of the Scourge", "=ds=#s3# #e17#","","50%" },
+		{ 19, 23548, "", "=q4=Might of the Scourge", "=ds=#s3# #e17#" ,"","50%"},
+		Prev = "NAXLoatheb25Man";
+		Next = "NAXKelThuzad25Man";
+	};
+
+	AtlasLoot_Data["NAXKelThuzad25Man"] = {
+		{ 1, 322802, "", "=q4=Kingsfall", "=ds=#h1#, #w4#","","18.18%" },
+		{ 2, 323054, "", "=q4=Gressil, Dawn of Ruin", "=ds=#h1#, #w10#" ,"","18.18%"},
+		{ 3, 323577, "", "=q4=The Hungering Cold", "=ds=#h1#, #w10#" ,"","18.18%"}, 
+		{ 4, 323056, "", "=q4=Hammer of the Twisting Nether", "=ds=#h1#, #w6#","","18.18%" },
+		{ 5, 322798, "", "=q4=Might of Menethil", "=ds=#h2#, #w6#","","18.18%" },
+		{ 6, 322799, "", "=q4=Soulseeker", "=ds=#w9#","","18.18%" },
+		{ 7, 322821, "", "=q4=Doomfinger", "=ds=#w12#" ,"","18.18%"},
+		{ 8, 322812, "", "=q4=Nerubian Slavemaker", "=ds=#w3#" ,"","18.18%"},
+		{ 9, 322819, "", "=q4=Shield of Condemnation", "=ds=#w8#" ,"","18.18%"},
+		{ 10, 323057, "", "=q4=Gem of Trapped Innocents", "=ds=#s2#" ,"","18.18%"},
+		{ 11, 323053, "", "=q4=Stormrage's Talisman of Seething", "=ds=#s2#","","18.18%" },
+		{ 12, 0,"","","" },
+		{ 13, 391119, "", "=q4=The Phylactery of Kel'Thuzad", "=ds=#m2#","", "100%" },
+		{ 14, 323207, "", "=q4=Mark of the Champion", "=q1=#m4# =ds=#s14#" },
+		{ 15, 323206, "", "=q4=Mark of the Champion", "=q1=#m4# =ds=#s14#" },
+		{ 16, 323064, "", "=q4=Ring of the Dreamwalker", "=ds=#s13# =q1=#m1# =ds=#c1#","","22.22%" },
+		{ 17, 323067, "", "=q4=Ring of the Cryptstalker", "=ds=#s13# =q1=#m1# =ds=#c2#" ,"","22.22%"},
+		{ 18, 323062, "", "=q4=Frostfire Ring", "=ds=#s13# =q1=#m1# =ds=#c3#" ,"","22.22%"},
+		{ 19, 323066, "", "=q4=Ring of Redemption", "=ds=#s13# =q1=#m1# =ds=#c4#" ,"","22.22%"},
+		{ 20, 323061, "", "=q4=Ring of Faith", "=ds=#s13# =q1=#m1# =ds=#c5#" ,"","22.22%"},
+		{ 21, 323060, "", "=q4=Bonescythe Ring", "=ds=#s13# =q1=#m1# =ds=#c6#" ,"","22.22%"},
+		{ 22, 323065, "", "=q4=Ring of the Earthshatterer", "=ds=#s13# =q1=#m1# =ds=#c7#" ,"","22.22%"},
+		{ 23, 323063, "", "=q4=Plagueheart Ring", "=ds=#s13# =q1=#m1# =ds=#c8#" ,"","22.22%"},
+		{ 24, 323059, "", "=q4=Ring of the Dreadnaught", "=ds=#s13# =q1=#m1# =ds=#c9#" ,"","22.22%"},
+		{ 25, 0,"","","" },
+		{ 26, 322733, "", "=q1=Staff Head of Atiesh", "=ds=#m3#" },
+		{ 27, 322632, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c1#"},
+		{ 28, 322589, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c3#"},
+		{ 29, 322631, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c5#"},
+		{ 30, 322630, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c8#"},
+		Prev = "NAXSapphiron25Man";
+		Next = "NAXTrash25Man";
+	};
+
+	AtlasLoot_Data["NAXTrash25Man"] = {
+		{ 1, 323069, "", "=q4=Necro-Knight's Garb", "=ds=#s5#, #a1# =q1=#m1# =ds=#c5#, #c3#, #c8#" },
+		{ 2, 323226, "", "=q4=Ghoul Skin Tunic", "=ds=#s5#, #a2#" },
+		{ 3, 323663, "", "=q4=Girdle of Elemental Fury", "=ds=#s10#, #a3#" },
+		{ 4, 323664, "", "=q4=Pauldrons of Elemental Fury", "=ds=#s3#, #a3# =q1=#m1# =ds=#c7#" },
+		{ 5, 323665, "", "=q4=Leggings of Elemental Fury", "=ds=#s11#, #a3# =q1=#m1# =ds=#c7#" },
+		{ 6, 323666, "", "=q4=Belt of the Grand Crusader", "=ds=#s10#, #a4# =q1=#m1# =ds=#c4#" },
+		{ 7, 323667, "", "=q4=Spaulders of the Grand Crusader", "=ds=#s3#, #a4# =q1=#m1# =ds=#c4#" },
+		{ 8, 323668, "", "=q4=Leggings of the Grand Crusader", "=ds=#s11#, #a4# =q1=#m1# =ds=#c4#" },
+		{ 9, 323044, "", "=q4=Harbinger of Doom", "=ds=#h1#, #w4#" },
+		{ 10, 323221, "", "=q4=Misplaced Servo Arm", "=ds=#h1# #w6#" },
+		{ 11, 323238, "", "=q4=Stygian Buckler", "=ds=#w8#" },
+		{ 12, 323237, "", "=q4=Ring of the Eternal Flame", "=ds=#s13#" },
+		{ 13, 0,"","","" },
+		{ 14, 0,"","","" },
+		{ 15, 0,"","","" },
+		{ 16, 22376, "", "=q3=Wartorn Cloth Scrap", "=ds=#m3#" },
+		{ 17, 22373, "", "=q3=Wartorn Leather Scrap", "=ds=#m3#" },
+		{ 18, 22374, "", "=q3=Wartorn Chain Scrap", "=ds=#m3#" },
+		{ 19, 22375, "", "=q3=Wartorn Plate Scrap", "=ds=#m3#" },
+		{ 20, 0,"","","" },
+		{ 21, 22708, "", "=q1=Fate of Ramaladni", "=ds=#m3#" },
+		{ 22, 23055, "", "=q1=Word of Thawing", "=ds=#m20#" },
+		Prev = "NAXKelThuzad25Man";
+	};
+
+
+	--------------------------
+	--- Naxxramas Ascended ---
+	--------------------------
+
+	AtlasLoot_Data["NAXPatchwerk25ManHEROIC"] = {
 		{ 1, 222726, "", "=q5=Splinter of Atiesh", "=ds=#m3#", "", "30%" },
 		{ 2, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
 		{ 3, 0,"","","" },
@@ -6188,10 +6517,10 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 		{ 10, 222820, "", "=q4=Wand of Fates", "=ds=#w12#","", "20%" },
 		{ 11, 222818, "", "=q4=The Plague Bearer", "=ds=#w8#","", "20%" },
 		{ 12, 222961, "", "=q4=Band of Reanimation", "=ds=#s13#","", "20%" },
-		Next = "NAXGrobbulusHEROIC";
+		Next = "NAXGrobbulus25ManHEROIC";
 	};
 
-	AtlasLoot_Data["NAXGrobbulusHEROIC"] = {
+	AtlasLoot_Data["NAXGrobbulus25ManHEROIC"] = {
 		{ 1, 222726, "", "=q5=Splinter of Atiesh", "=ds=#m3#","","30%" },
 		{ 2, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
 		{ 3, 0,"","","" },
@@ -6204,11 +6533,11 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 		{ 10, 222803, "", "=q4=Midnight Haze", "=ds=#h3#, #w4#", "", "20%" },
 		{ 11, 222988, "", "=q4=The End of Dreams", "=ds=#h3#, #w6#","","20%" },
 		{ 12, 222810, "", "=q4=Toxin Injector", "=ds=#w5#", "","20%" },
-		Prev = "NAXPatchwerkHEROIC";
-		Next = "NAXGluthHEROIC";
+		Prev = "NAXPatchwerk25ManHEROIC";
+		Next = "NAXGluth25ManHEROIC";
 	};
 
-	AtlasLoot_Data["NAXGluthHEROIC"] = {
+	AtlasLoot_Data["NAXGluth25ManHEROIC"] = {
 		{ 1, 222726, "", "=q5=Splinter of Atiesh", "=ds=#m3#","","30%" },
 		{ 2, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
 		{ 3, 0,"","","" },
@@ -6236,11 +6565,11 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 		{ 25, 22372, "", "=q4=Desecrated Sandals", "=q1=#m1# =ds=#c8#, #c3#, #c5#","", "8.33%"  },
 		{ 26, 22365, "", "=q4=Desecrated Boots", "=q1=#m1# =ds=#c7#, #c1#, #c2#, #c4#","", "8.33%"  },
 		{ 27, 22358, "", "=q4=Desecrated Sabatons", "=q1=#m1# =ds=#c6#, #c9#","", "8.33%"  },
-		Prev = "NAXGrobbulusHEROIC";
-		Next = "NAXThaddiusHEROIC";
+		Prev = "NAXGrobbulus25ManHEROIC";
+		Next = "NAXThaddius25ManHEROIC";
 	};
 
-	AtlasLoot_Data["NAXThaddiusHEROIC"] = {
+	AtlasLoot_Data["NAXThaddius25ManHEROIC"] = {
 		{ 1, 222726, "", "=q5=Splinter of Atiesh", "=ds=#m3#","","30%" },
 		{ 2, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
 		{ 3, 0,"","","" },
@@ -6253,11 +6582,11 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 		{ 10, 222808, "", "=q4=The Castigator", "=ds=#h1#, #w6#" ,"", "20%"},
 		{ 11, 222801, "", "=q4=Spire of Twilight", "=ds=#w9#" ,"", "20%"},
 		{ 12, 223001, "", "=q4=Eye of Diminution", "=ds=#s14#" ,"", "20%"},
-		Prev = "NAXGluthHEROIC";
-		Next = "NAXAnubRekhanHEROIC";
+		Prev = "NAXGluth25ManHEROIC";
+		Next = "NAXAnubRekhan25ManHEROIC";
 	};
 
-	AtlasLoot_Data["NAXAnubRekhanHEROIC"] = {
+	AtlasLoot_Data["NAXAnubRekhan25ManHEROIC"] = {
 		{ 1, 222726, "", "=q5=Splinter of Atiesh", "=ds=#m3#","", "30%" },
 		{ 2, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
 		{ 3, 0,"","","" },
@@ -6270,11 +6599,11 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 		{ 10, 222937, "", "=q4=Gem of Nerubis", "=ds=#s15#","", "20%" },
 		{ 11, 222939, "", "=q4=Band of Unanswered Prayers", "=ds=#s13#","", "20%" },
 		{ 12, 222935, "", "=q4=Touch of Frost", "=ds=#s2#", "", "20%" },
-		Prev = "NAXThaddiusHEROIC";
-		Next = "NAXGrandWidowFearlinaHEROIC";
+		Prev = "NAXThaddius25ManHEROIC";
+		Next = "NAXGrandWidowFearlina25ManHEROIC";
 	};
 
-	AtlasLoot_Data["NAXGrandWidowFearlinaHEROIC"] = {
+	AtlasLoot_Data["NAXGrandWidowFearlina25ManHEROIC"] = {
 		{ 1, 222726, "", "=q5=Splinter of Atiesh", "=ds=#m3#", "", "30%" },
 		{ 2, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
 		{ 3, 0,"","","" },
@@ -6287,11 +6616,11 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 		{ 10, 222806, "", "=q4=Widow's Remorse", "=ds=#h1#, #w10#","", "20%" },
 		{ 11, 222942, "", "=q4=The Widow's Embrace", "=ds=#h3#, #w6#","", "20%" },
 		{ 12, 222943, "", "=q4=Malice Stone Pendant", "=ds=#s2#","", "20%" },
-		Prev = "NAXAnubRekhanHEROIC";
-		Next = "NAXMaexxnaHEROIC";
+		Prev = "NAXAnubRekhan25ManHEROIC";
+		Next = "NAXMaexxna25ManHEROIC";
 	};
 
-	AtlasLoot_Data["NAXMaexxnaHEROIC"] = {
+	AtlasLoot_Data["NAXMaexxna25ManHEROIC"] = {
 		{ 1, 222726, "", "=q5=Splinter of Atiesh", "=ds=#m3#","", "30%" },
 		{ 2, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
 		{ 3, 0,"","","" },
@@ -6304,11 +6633,11 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 		{ 10, 222807, "", "=q4=Wraith Blade", "=ds=#h3#, #w10#","", "20%" },
 		{ 11, 222947, "", "=q4=Pendant of Forgotten Names", "=ds=#s2#","", "20%" },
 		{ 12, 222954, "", "=q4=Kiss of the Spider", "=ds=#s14#","", "20%" },
-		Prev = "NAXGrandWidowFearlinaHEROIC";
-		Next = "NAXInstructorRAuviousHEROIC";
+		Prev = "NAXGrandWidowFearlina25ManHEROIC";
+		Next = "NAXInstructorRAuvious25ManHEROIC";
 	};
 
-	AtlasLoot_Data["NAXInstructorRAuviousHEROIC"] = {
+	AtlasLoot_Data["NAXInstructorRAuvious25ManHEROIC"] = {
 		{ 1, 222726, "", "=q5=Splinter of Atiesh", "=ds=#m3#","", "30%" },
 		{ 2, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
 		{ 3, 0,"","","" },
@@ -6322,11 +6651,11 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 		{ 11, 223009, "", "=q4=Wand of the Whispering Dead", "=ds=#w12#","", "16.67%" },
 		{ 12, 223004, "", "=q4=Idol of Longevity", "=ds=#s16#, #w14#","", "16.67%" },
 		{ 13, 223018, "", "=q4=Signet of the Fallen Defender", "=ds=#s13#","", "16.67%" },
-		Prev = "NAXMaexxnaHEROIC";
-		Next = "NAXGothicderHarvesterHEROIC";
+		Prev = "NAXMaexxna25ManHEROIC";
+		Next = "NAXGothicderHarvester25ManHEROIC";
 	};
 
-	AtlasLoot_Data["NAXGothicderHarvesterHEROIC"] = {
+	AtlasLoot_Data["NAXGothicderHarvester25ManHEROIC"] = {
 		{ 1, 222726, "", "=q5=Splinter of Atiesh", "=ds=#m3#","", "30%" },
 		{ 2, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
 		{ 3, 0,"","","" },
@@ -6339,11 +6668,11 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 		{ 10, 223020, "", "=q4=Polar Helmet", "=ds=#s1#, #a2#","", "20%"  },
 		{ 11, 223073, "", "=q4=Boots of Displacement", "=ds=#s12#, #a2#","", "20%"  },
 		{ 12, 223023, "", "=q4=Sadist's Collar", "=ds=#s2#","", "20%"  },
-		Prev = "NAXInstructorRAuviousHEROIC";
-		Next = "NAXTheFourHorsemenHEROIC";
+		Prev = "NAXInstructorRAuvious25ManHEROIC";
+		Next = "NAXTheFourHorsemen25ManHEROIC";
 	};
 
-	AtlasLoot_Data["NAXTheFourHorsemenHEROIC"] = {
+	AtlasLoot_Data["NAXTheFourHorsemen25ManHEROIC"] = {
 		{ 1, 222726, "", "=q5=Splinter of Atiesh", "=ds=#m3#","", "30%"  },
 		{ 2, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
 		{ 3, 0,"","","" },
@@ -6357,11 +6686,11 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 		{ 11, 222811, "", "=q4=Soulstring", "=ds=#w2#","", "20%"  },
 		{ 12, 223025, "", "=q4=Seal of the Damned", "=ds=#s13#","", "16.67%"  },
 		{ 13, 223027, "", "=q4=Warmth of Forgiveness", "=ds=#s14#","", "16.67%"  },
-		Prev = "NAXGothicderHarvesterHEROIC";
-		Next = "NAXNothderPlaguebringerHEROIC";
+		Prev = "NAXGothicderHarvester25ManHEROIC";
+		Next = "NAXNothderPlaguebringer25ManHEROIC";
 	};
 
-	AtlasLoot_Data["NAXNothderPlaguebringerHEROIC"] = {
+	AtlasLoot_Data["NAXNothderPlaguebringer25ManHEROIC"] = {
 		{ 1, 222726, "", "=q5=Splinter of Atiesh", "=ds=#m3#","", "30%" },
 		{ 2, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
 		{ 3, 0,"","","" },
@@ -6376,11 +6705,11 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 		{ 12, 223029, "", "=q4=Noth's Frigid Heart", "=ds=#s15#","", "14.29%" },
 		{ 13, 223031, "", "=q4=Band of the Inevitable", "=ds=#s13#","", "14.29%" },
 		{ 14, 223028, "", "=q4=Hailstone Band", "=ds=#s13#","", "14.29%" },
-		Prev = "NAXTheFourHorsemenHEROIC";
-		Next = "NAXHeiganderUncleanHEROIC";
+		Prev = "NAXTheFourHorsemen25ManHEROIC";
+		Next = "NAXHeiganderUnclean25ManHEROIC";
 	};
 
-	AtlasLoot_Data["NAXHeiganderUncleanHEROIC"] = {
+	AtlasLoot_Data["NAXHeiganderUnclean25ManHEROIC"] = {
 		{ 1, 222726, "", "=q5=Splinter of Atiesh", "=ds=#m3#","", "30%"  },
 		{ 2, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
 		{ 3, 0,"","","" },
@@ -6393,11 +6722,11 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 		{ 10, 223019, "", "=q4=Icebane Helmet", "=ds=#s1#, #a4#","", "20%" },
 		{ 11, 223068, "", "=q4=Legplates of Carnage", "=ds=#s11#, #a4#","", "20%" },
 		{ 12, 223036, "", "=q4=Necklace of Necropsy", "=ds=#s2#","", "20%" },
-		Prev = "NAXNothderPlaguebringerHEROIC";
-		Next = "NAXLoathebHEROIC";
+		Prev = "NAXNothderPlaguebringer25ManHEROIC";
+		Next = "NAXLoatheb25ManHEROIC";
 	};
 
-	AtlasLoot_Data["NAXLoathebHEROIC"] = {
+	AtlasLoot_Data["NAXLoatheb25ManHEROIC"] = {
 		{ 1, 222726, "", "=q5=Splinter of Atiesh", "=ds=#m3#","", "30%" },
 		{ 2, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
 		{ 3, 0,"","","" },
@@ -6410,11 +6739,11 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 		{ 10, 223037, "", "=q4=Ring of Spiritual Fervor", "=ds=#s13#","", "20%" },
 		{ 11, 223038, "", "=q4=Band of Unnatural Forces", "=ds=#s13#" ,"", "20%"},
 		{ 12, 223042, "", "=q4=Loatheb's Reflection", "=ds=#s14#","", "20%" },
-		Prev = "NAXHeiganderUncleanHEROIC";
-		Next = "NAXSapphironHEROIC";
+		Prev = "NAXHeiganderUnclean25ManHEROIC";
+		Next = "NAXSapphiron25ManHEROIC";
 	};
 
-	AtlasLoot_Data["NAXSapphironHEROIC"] = {
+	AtlasLoot_Data["NAXSapphiron25ManHEROIC"] = {
 		{ 1, 223050, "", "=q4=Cloak of the Necropolis", "=ds=#s4#","","18.18%"  },
 		{ 2, 223045, "", "=q4=Shroud of Dominion", "=ds=#s4#","","18.18%"  },
 		{ 3, 223072, "", "=q4=Fists of the Unrelenting", "=ds=#s9#, #a4#","","18.18%"  },
@@ -6434,11 +6763,11 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 		{ 17, 23547, "", "=q4=Resilience of the Scourge", "=ds=#s3# #e17#","","50%" },
 		{ 18, 23549, "", "=q4=Fortitude of the Scourge", "=ds=#s3# #e17#","","50%" },
 		{ 19, 23548, "", "=q4=Might of the Scourge", "=ds=#s3# #e17#" ,"","50%"},
-		Prev = "NAXLoathebHEROIC";
-		Next = "NAXKelThuzardHEROIC";
+		Prev = "NAXLoatheb25ManHEROIC";
+		Next = "NAXKelThuzad25ManHEROIC";
 	};
 
-	AtlasLoot_Data["NAXKelThuzardHEROIC"] = {
+	AtlasLoot_Data["NAXKelThuzad25ManHEROIC"] = {
 		{ 1, 222802, "", "=q4=Kingsfall", "=ds=#h1#, #w4#","","18.18%" },
 		{ 2, 223054, "", "=q4=Gressil, Dawn of Ruin", "=ds=#h1#, #w10#" ,"","18.18%"},
 		{ 3, 223577, "", "=q4=The Hungering Cold", "=ds=#h1#, #w10#" ,"","18.18%"}, 
@@ -6469,11 +6798,11 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 		{ 28, 222589, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c3#"},
 		{ 29, 222631, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c5#"},
 		{ 30, 222630, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c8#"},
-		Prev = "NAXSapphironHEROIC";
-		Next = "NAXTrashHEROIC";
+		Prev = "NAXSapphiron25ManHEROIC";
+		Next = "NAXTrash25ManHEROIC";
 	};
 
-	AtlasLoot_Data["NAXTrashHEROIC"] = {
+	AtlasLoot_Data["NAXTrash25ManHEROIC"] = {
 		{ 1, 223069, "", "=q4=Necro-Knight's Garb", "=ds=#s5#, #a1# =q1=#m1# =ds=#c5#, #c3#, #c8#" },
 		{ 2, 223226, "", "=q4=Ghoul Skin Tunic", "=ds=#s5#, #a2#" },
 		{ 3, 223663, "", "=q4=Girdle of Elemental Fury", "=ds=#s10#, #a3#" },
@@ -6496,7 +6825,7 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 		{ 20, 0,"","","" },
 		{ 21, 22708, "", "=q1=Fate of Ramaladni", "=ds=#m3#" },
 		{ 22, 23055, "", "=q1=Word of Thawing", "=ds=#m20#" },
-		Prev = "NAXKelThuzard";
+		Prev = "NAXKelThuzad";
 	};
 
 

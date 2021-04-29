@@ -1034,25 +1034,42 @@ end
 	AtlasLoot_TableNames["NAXHeiganderUnclean"] = { BabbleBoss["Heigan the Unclean"], "AtlasLootOriginalWoW" };
 	AtlasLoot_TableNames["NAXLoatheb"] = { BabbleBoss["Loatheb"], "AtlasLootOriginalWoW" };
 	AtlasLoot_TableNames["NAXSapphiron"] = { BabbleBoss["Sapphiron"], "AtlasLootOriginalWoW" };
-	AtlasLoot_TableNames["NAXKelThuzard"] = { BabbleBoss["Kel'Thuzad"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["NAXKelThuzad"] = { BabbleBoss["Kel'Thuzad"], "AtlasLootOriginalWoW" };
 	AtlasLoot_TableNames["NAXTrash"] = { AL["Trash Mobs"].." ("..BabbleZone["Naxxramas"]..")", "AtlasLootOriginalWoW" };
-  -- Naxxramas level 60 HEROIC
-	AtlasLoot_TableNames["NAXPatchwerkHEROIC"] = { BabbleBoss["Patchwerk"], "AtlasLootOriginalWoW" };
-	AtlasLoot_TableNames["NAXGrobbulusHEROIC"] = { BabbleBoss["Grobbulus"], "AtlasLootOriginalWoW" };
-	AtlasLoot_TableNames["NAXGluthHEROIC"] = { BabbleBoss["Gluth"], "AtlasLootOriginalWoW" };
-	AtlasLoot_TableNames["NAXThaddiusHEROIC"] = { BabbleBoss["Thaddius"], "AtlasLootOriginalWoW" };
-	AtlasLoot_TableNames["NAXAnubRekhanHEROIC"] = { BabbleBoss["Anub'Rekhan"], "AtlasLootOriginalWoW" };
-	AtlasLoot_TableNames["NAXGrandWidowFearlinaHEROIC"] = { BabbleBoss["Grand Widow Faerlina"], "AtlasLootOriginalWoW" };
-	AtlasLoot_TableNames["NAXMaexxnaHEROIC"] = { BabbleBoss["Maexxna"], "AtlasLootOriginalWoW" };
-	AtlasLoot_TableNames["NAXInstructorRAuviousHEROIC"] = { BabbleBoss["Instructor Razuvious"], "AtlasLootOriginalWoW" };
-	AtlasLoot_TableNames["NAXGothicderHarvesterHEROIC"] = { BabbleBoss["Gothik the Harvester"], "AtlasLootOriginalWoW" };
-	AtlasLoot_TableNames["NAXTheFourHorsemenHEROIC"] = { BabbleBoss["The Four Horsemen"], "AtlasLootOriginalWoW" };
-	AtlasLoot_TableNames["NAXNothderPlaguebringerHEROIC"] = { BabbleBoss["Noth the Plaguebringer"], "AtlasLootOriginalWoW" };
-	AtlasLoot_TableNames["NAXHeiganderUncleanHEROIC"] = { BabbleBoss["Heigan the Unclean"], "AtlasLootOriginalWoW" };
-	AtlasLoot_TableNames["NAXLoathebHEROIC"] = { BabbleBoss["Loatheb"], "AtlasLootOriginalWoW" };
-	AtlasLoot_TableNames["NAXSapphironHEROIC"] = { BabbleBoss["Sapphiron"], "AtlasLootOriginalWoW" };
-	AtlasLoot_TableNames["NAXKelThuzardHEROIC"] = { BabbleBoss["Kel'Thuzad"], "AtlasLootOriginalWoW" };
-	AtlasLoot_TableNames["NAXTrashHEROIC"] = { AL["Trash Mobs"].." ("..BabbleZone["Naxxramas"]..")", "AtlasLootOriginalWoW" };
+  -- Naxxramas level 60 Heroic FLEX
+	AtlasLoot_TableNames["NAXPatchwerk25Man"] = { BabbleBoss["Patchwerk"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["NAXGrobbulus25Man"] = { BabbleBoss["Grobbulus"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["NAXGluth25Man"] = { BabbleBoss["Gluth"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["NAXThaddius25Man"] = { BabbleBoss["Thaddius"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["NAXAnubRekhan25Man"] = { BabbleBoss["Anub'Rekhan"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["NAXGrandWidowFearlina25Man"] = { BabbleBoss["Grand Widow Faerlina"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["NAXMaexxna25Man"] = { BabbleBoss["Maexxna"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["NAXInstructorRAuvious25Man"] = { BabbleBoss["Instructor Razuvious"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["NAXGothicderHarvester25Man"] = { BabbleBoss["Gothik the Harvester"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["NAXTheFourHorsemen25Man"] = { BabbleBoss["The Four Horsemen"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["NAXNothderPlaguebringer25Man"] = { BabbleBoss["Noth the Plaguebringer"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["NAXHeiganderUnclean25Man"] = { BabbleBoss["Heigan the Unclean"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["NAXLoatheb25Man"] = { BabbleBoss["Loatheb"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["NAXSapphiron25Man"] = { BabbleBoss["Sapphiron"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["NAXKelThuzad25Man"] = { BabbleBoss["Kel'Thuzad"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["NAXTrash25Man"] = { AL["Trash Mobs"].." ("..BabbleZone["Naxxramas"]..")", "AtlasLootOriginalWoW" };
+  -- Naxxramas level 60 ASCENDED
+	AtlasLoot_TableNames["NAXPatchwerk25ManHEROIC"] = { BabbleBoss["Patchwerk"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["NAXGrobbulus25ManHEROIC"] = { BabbleBoss["Grobbulus"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["NAXGluth25ManHEROIC"] = { BabbleBoss["Gluth"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["NAXThaddius25ManHEROIC"] = { BabbleBoss["Thaddius"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["NAXAnubRekhan25ManHEROIC"] = { BabbleBoss["Anub'Rekhan"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["NAXGrandWidowFearlina25ManHEROIC"] = { BabbleBoss["Grand Widow Faerlina"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["NAXMaexxna25ManHEROIC"] = { BabbleBoss["Maexxna"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["NAXInstructorRAuvious25ManHEROIC"] = { BabbleBoss["Instructor Razuvious"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["NAXGothicderHarvester25ManHEROIC"] = { BabbleBoss["Gothik the Harvester"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["NAXTheFourHorsemen25ManHEROIC"] = { BabbleBoss["The Four Horsemen"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["NAXNothderPlaguebringer25ManHEROIC"] = { BabbleBoss["Noth the Plaguebringer"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["NAXHeiganderUnclean25ManHEROIC"] = { BabbleBoss["Heigan the Unclean"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["NAXLoatheb25ManHEROIC"] = { BabbleBoss["Loatheb"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["NAXSapphiron25ManHEROIC"] = { BabbleBoss["Sapphiron"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["NAXKelThuzad25ManHEROIC"] = { BabbleBoss["Kel'Thuzad"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["NAXTrash25ManHEROIC"] = { AL["Trash Mobs"].." ("..BabbleZone["Naxxramas"]..")", "AtlasLootOriginalWoW" };
   --Onyxia60
 	AtlasLoot_TableNames["Onyxia60"] = { BabbleBoss["Onyxia"], "AtlasLootOriginalWoW" };
   --Onyxia60 HEROIC
