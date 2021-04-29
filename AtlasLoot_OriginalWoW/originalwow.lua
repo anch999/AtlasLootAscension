@@ -3206,10 +3206,245 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 
 
 	-------------------------------------------------
-	--- Blackrock Mountain: Blackwing Lair HEROIC ---
+	--- Blackrock Mountain: Blackwing Lair HEROIC FLEX ---
 	-------------------------------------------------
 
-	AtlasLoot_Data["BWLRazorgoreHEROIC"] = {
+	AtlasLoot_Data["BWLRazorgore25Man"] = {
+		{ 1, 316918, "", "=q4=Netherwind Bindings", "=q1=#m1# =ds=#c3#", "", "22.22%"};
+		{ 2, 316926, "", "=q4=Bindings of Transcendence", "=q1=#m1# =ds=#c5#", "", "22.22%"};
+		{ 3, 316934, "", "=q4=Nemesis Bracers", "=q1=#m1# =ds=#c8#", "", "22.22%"};
+		{ 4, 316911, "", "=q4=Bloodfang Bracers", "=q1=#m1# =ds=#c6#", "", "22.22%"};
+		{ 5, 316904, "", "=q4=Stormrage Bracers", "=q1=#m1# =ds=#c1#", "", "22.22%"};
+		{ 6, 316935, "", "=q4=Dragonstalker's Bracers", "=q1=#m1# =ds=#c2#", "", "22.22%"};
+		{ 7, 316943, "", "=q4=Bracers of Ten Storms", "=q1=#m1# =ds=#c7#", "", "22.22%"};
+		{ 8, 316959, "", "=q4=Bracelets of Wrath", "=q1=#m1# =ds=#c9#", "", "22.22%"};
+		{ 9, 316951, "", "=q4=Judgement Bindings", "=q1=#m1# =ds=#c4#", "", "22.22%"};
+		{ 16, 319337, "", "=q4=The Black Book", "=ds=#s14#, =q1=#m1# =ds=#c8#", "", "20%"};
+		{ 17, 319336, "", "=q4=Arcane Infused Gem", "=ds=#s14#, =q1=#m1# =ds=#c2#", "", "20%"};
+		{ 18, 319344, "", "=q4=Natural Alignment Crystal", "=ds=#s14#, =q1=#m1# =ds=#c7#", "", "6.67%"};
+		{ 20, 319370, "", "=q4=Mantle of the Blackwing Cabal", "=ds=#s3#, #a1#", "", "20%"};
+		{ 21, 319369, "", "=q4=Gloves of Rapid Evolution", "=ds=#s9#, #a1#", "", "20%"};
+		{ 22, 319334, "", "=q4=The Untamed Blade", "=ds=#h2#, #w10#", "", "10%"};
+		{ 23, 319335, "", "=q4=Spineshatter", "=ds=#h1#, #w6#", "", "10%"};
+		{ 24, 319397, "", "=q4=Ring of Blackrock", "=ds=#s13#", "", "6.67%"};
+		{ 25, 319357, "", "=q4=Herald of Woe", "=ds=#h2#, #w6#", "", "16.67%"};
+		{ 26, 319405, "", "=q4=Malfurion's Blessed Bulwark", "=ds=#s5#, #a2#", "", "16.67%"};
+		Next = "BWLVaelastrasz25Man";
+	};
+
+	AtlasLoot_Data["BWLVaelastrasz25Man"] = {
+		{ 1, 316818, "", "=q4=Netherwind Belt", "=q1=#m1# =ds=#c3#", "", "22.22%"};
+		{ 2, 316925, "", "=q4=Belt of Transcendence", "=q1=#m1# =ds=#c5#", "", "22.22%"};
+		{ 3, 316933, "", "=q4=Nemesis Belt", "=q1=#m1# =ds=#c8#", "", "22.22%"};
+		{ 4, 316936, "", "=q4=Dragonstalker's Belt", "=q1=#m1# =ds=#c2#", "", "22.22%"};
+		{ 5, 316903, "", "=q4=Stormrage Belt", "=q1=#m1# =ds=#c1#", "", "22.22%"};
+		{ 6, 316910, "", "=q4=Bloodfang Belt", "=q1=#m1# =ds=#c6#", "", "22.22%"};
+		{ 7, 316944, "", "=q4=Belt of Ten Storms", "=q1=#m1# =ds=#c7#", "", "22.22%"};
+		{ 8, 316960, "", "=q4=Waistband of Wrath", "=q1=#m1# =ds=#c9#", "", "22.22%"};
+		{ 9, 316952, "", "=q4=Judgement Belt", "=q1=#m1# =ds=#c4#", "", "22.22%%"};
+		{ 16, 319339, "", "=q4=Mind Quickening Gem", "=ds=#s14#, =q1=#m1# =ds=#c3#", "", "20%"};
+		{ 17, 319340, "", "=q4=Rune of Metamorphosis", "=ds=#s14#, =q1=#m1# =ds=#c1#", "", "20%"};
+		{ 19, 319372, "", "=q4=Helm of Endless Rage", "=ds=#s1#, #a4#", "", "20%"};
+		{ 20, 319371, "", "=q4=Pendant of the Fallen Dragon", "=ds=#s2#", "", "20%"};
+		{ 21, 319346, "", "=q4=Dragonfang Blade", "=ds=#h1#, #w4#", "", "10%"};
+		{ 22, 319348, "", "=q4=Red Dragonscale Protector", "=ds=#w8#", "", "10%"};
+		{ 23, 319430, "", "=q4=Shroud of Pure Thought", "=ds=#s4#", "", "16.67%"};
+		{ 24, 319403, "", "=q4=Band of Forced Concentration", "=ds=#s13#", "", "16.67%"};
+		{ 25, 319367, "", "=q4=Dragon's Touch", "=ds=#w12#", "", "16.67%"};
+		Prev = "BWLRazorgore25Man";
+		Next = "BWLLashlayer25Man";
+	};
+
+	AtlasLoot_Data["BWLLashlayer25Man"] = {
+		{ 1, 316912, "", "=q4=Netherwind Boots", "=q1=#m1# =ds=#c3#", "", "22.22%"};
+		{ 2, 316919, "", "=q4=Boots of Transcendence", "=q1=#m1# =ds=#c5#", "", "22.22%"};
+		{ 3, 316927, "", "=q4=Nemesis Boots", "=q1=#m1# =ds=#c8#", "", "22.22%"};
+		{ 4, 316898, "", "=q4=Stormrage Boots", "=q1=#m1# =ds=#c1#", "", "22.22%"};
+		{ 5, 316906, "", "=q4=Bloodfang Boots", "=q1=#m1# =ds=#c6#", "", "22.22%"};
+		{ 6, 316941, "", "=q4=Dragonstalker's Greaves", "=q1=#m1# =ds=#c2#", "", "22.22%"};
+		{ 7, 316949, "", "=q4=Greaves of Ten Storms", "=q1=#m1# =ds=#c7#", "", "22.22%"};
+		{ 8, 316965, "", "=q4=Sabatons of Wrath", "=q1=#m1# =ds=#c9#", "", "22.22%"};
+		{ 9, 316957, "", "=q4=Judgement Sabatons", "=q1=#m1# =ds=#c4#", "", "22.22%%"};
+		{ 12, 20383, "", "=q1=Head of the Broodlord Lashlayer", "=ds=#m3#", "", "100%"};
+		{ 16, 319342, "", "=q4=Venomous Totem", "=ds=#s14#, =q1=#m1# =ds=#c6#", "", "20%"};
+		{ 17, 319341, "", "=q4=Lifegiving Gem", "=ds=#s14#, =q1=#m1# =ds=#c9#", "", "20%"};
+		{ 18, 319345, "", "=q4=Aegis of Preservation", "=ds=#s14#, =q1=#m1# =ds=#c5#", "", "16.67%"};
+		{ 20, 319374, "", "=q4=Bracers of Arcane Accuracy", "=ds=#s8#, #a1#", "", "20%"};
+		{ 21, 319373, "", "=q4=Black Brood Pauldrons", "=ds=#s3#, #a3#", "", "20%"};
+		{ 22, 319351, "", "=q4=Maladath, Runed Blade of the Black Flight", "=ds=#h1#, #w10#", "", "10%"};
+		{ 23, 319350, "", "=q4=Heartstriker", "=ds=#w2#", "", "10%"};
+		{ 24, 319402, "", "=q4=Legguards of the Fallen Crusader", "=ds=#s11#, #a4#", "", "12.5%"};
+		{ 25, 319365, "", "=q4=Claw of the Black Drake", "=ds=#h3#, #w13#", "", "12.5%"};
+		{ 26, 314000, "", "=q4=Ring of Trinity Force", "=ds=#h3#, #w13#", "", "12.5%"};
+		{ 27, 319432, "", "=q4=Circle of Applied Force", "=ds=#s13#", "", "16.67%"};
+		Prev = "BWLVaelastrasz25Man";
+		Next = "BWLFiremaw25Man";
+	};
+
+	AtlasLoot_Data["BWLFiremaw25Man"] = {
+		{ 1, 316913, "", "=q4=Netherwind Gloves", "=q1=#m1# =ds=#c3#", "", "6.67%"};
+		{ 2, 316920, "", "=q4=Handguards of Transcendence", "=q1=#m1# =ds=#c5#", "", "6.67%"};
+		{ 3, 316928, "", "=q4=Nemesis Gloves", "=q1=#m1# =ds=#c8#", "", "6.67%"};
+		{ 4, 316907, "", "=q4=Bloodfang Gloves", "=q1=#m1# =ds=#c6#", "", "6.67%"};
+		{ 5, 316940, "", "=q4=Dragonstalker's Gauntlets", "=q1=#m1# =ds=#c2#", "", "6.67%"};
+		{ 6, 316899, "", "=q4=Stormrage Handguards", "=q1=#m1# =ds=#c1#", "", "6.67%"};
+		{ 7, 316948, "", "=q4=Gauntlets of Ten Storms", "=q1=#m1# =ds=#c7#", "", "6.67%"};
+		{ 8, 316964, "", "=q4=Gauntlets of Wrath", "=q1=#m1# =ds=#c9#", "", "6.67%"};
+		{ 9, 316956, "", "=q4=Judgement Gauntlets", "=q1=#m1# =ds=#c4#", "", "6.67%"};
+		{ 11, 319365, "", "=q4=Claw of the Black Drake", "=ds=#h3#, #w13#", "", "12.5%"};
+		{ 12, 319355, "", "=q4=Shadow Wing Focus Staff", "=ds=#w9#", "", "6.67%"};
+		{ 13, 319353, "", "=q4=Drake Talon Cleaver", "=ds=#h2#, #w1#", "", "6.67%"};
+		{ 16, 319343, "", "=q4=Scrolls of Blinding Light", "=ds=#s14#, =q1=#m1# =ds=#c4#", "", "12.5%"};
+		{ 17, 319344, "", "=q4=Natural Alignment Crystal", "=ds=#s14#, =q1=#m1# =ds=#c7#", "", "6.67%"};
+		{ 19, 319398, "", "=q4=Cloak of Firemaw", "=ds=#s4#", "", "12.5%"};
+		{ 20, 319400, "", "=q4=Firemaw's Clutch", "=ds=#s10#, #a1#", "", "12.5%"};
+		{ 21, 319399, "", "=q4=Black Ash Robe", "=ds=#s5#, #a1#", "", "12.5%"};
+		{ 22, 319396, "", "=q4=Taut Dragonhide Belt", "=ds=#s10#, #a2#", "", "6.67%"};
+		{ 23, 319401, "", "=q4=Primalist's Linked Legguards", "=ds=#s11#, #a3#", "", "12.5%"};
+		{ 24, 319394, "", "=q4=Drake Talon Pauldrons", "=ds=#s3#, #a4#", "", "6.76%"};
+		{ 25, 319402, "", "=q4=Legguards of the Fallen Crusader", "=ds=#s11#, #a4#", "", "12.5%"};
+		{ 27, 319397, "", "=q4=Ring of Blackrock", "=ds=#s13#", "", "6.67%"};
+		{ 28, 319395, "", "=q4=Rejuvenating Gem", "=ds=#s14#", "", "6.67%"};
+		Prev = "BWLLashlayer25Man";
+		Next = "BWLEbonroc25Man";
+	};
+
+	AtlasLoot_Data["BWLEbonroc25Man"] = {
+		{ 1, 316913, "", "=q4=Netherwind Gloves", "=q1=#m1# =ds=#c3#", "", "6.67%"};
+		{ 2, 316920, "", "=q4=Handguards of Transcendence", "=q1=#m1# =ds=#c5#", "", "6.67%"};
+		{ 3, 316928, "", "=q4=Nemesis Gloves", "=q1=#m1# =ds=#c8#", "", "6.67%"};
+		{ 4, 316907, "", "=q4=Bloodfang Gloves", "=q1=#m1# =ds=#c6#", "", "6.67%"};
+		{ 5, 316940, "", "=q4=Dragonstalker's Gauntlets", "=q1=#m1# =ds=#c2#", "", "6.67%"};
+		{ 6, 316899, "", "=q4=Stormrage Handguards", "=q1=#m1# =ds=#c1#", "", "6.67%"};
+		{ 7, 316948, "", "=q4=Gauntlets of Ten Storms", "=q1=#m1# =ds=#c7#", "", "6.67%"};
+		{ 8, 316964, "", "=q4=Gauntlets of Wrath", "=q1=#m1# =ds=#c9#", "", "6.67%"};
+		{ 9, 316956, "", "=q4=Judgement Gauntlets", "=q1=#m1# =ds=#c4#", "", "6.67%"};
+		{ 16, 319345, "", "=q4=Aegis of Preservation", "=ds=#s14#, =q1=#m1# =ds=#c5#", "", "16.67%"};
+		{ 18, 319407, "", "=q4=Ebony Flame Gloves", "=ds=#s9#, #a1#", "", "16.67%"};
+		{ 19, 319405, "", "=q4=Malfurion's Blessed Bulwark", "=ds=#s5#, #a2#", "", "16.67%"};
+		{ 20, 319396, "", "=q4=Taut Dragonhide Belt", "=ds=#s10#, #a2#", "", "6.67%"};
+		{ 21, 319394, "", "=q4=Drake Talon Pauldrons", "=ds=#s3#, #a4#", "", "6.67%"};
+		{ 23, 319403, "", "=q4=Band of Forced Concentration", "=ds=#s13#", "", "16.67%"};
+		{ 24, 319397, "", "=q4=Ring of Blackrock", "=ds=#s13#", "", "6.67%"};
+		{ 25, 319406, "", "=q4=Drake Fang Talisman", "=ds=#s14#", "", "16.67%"};
+		{ 26, 319395, "", "=q4=Rejuvenating Gem", "=ds=#s14#", "", "6.67%"};
+		{ 28, 319353, "", "=q4=Drake Talon Cleaver", "=ds=#h2#, #w1#", "", "6.67%"};
+		{ 29, 319355, "", "=q4=Shadow Wing Focus Staff", "=ds=#w9#", "", "6.67%"};
+		{ 30, 319368, "", "=q4=Dragonbreath Hand Cannon", "=ds=#w5#", "", "16.67%"};
+		Prev = "BWLFiremaw25Man";
+		Next = "BWLFlamegor25Man";
+	};
+
+	AtlasLoot_Data["BWLFlamegor25Man"] = {
+		{ 1, 316913, "", "=q4=Netherwind Gloves", "=q1=#m1# =ds=#c3#", "", "6.67%"};
+		{ 2, 316920, "", "=q4=Handguards of Transcendence", "=q1=#m1# =ds=#c5#", "", "6.67%"};
+		{ 3, 316928, "", "=q4=Nemesis Gloves", "=q1=#m1# =ds=#c8#", "", "6.67%"};
+		{ 4, 316907, "", "=q4=Bloodfang Gloves", "=q1=#m1# =ds=#c6#", "", "6.67%"};
+		{ 5, 316940, "", "=q4=Dragonstalker's Gauntlets", "=q1=#m1# =ds=#c2#", "", "6.67%"};
+		{ 6, 316899, "", "=q4=Stormrage Handguards", "=q1=#m1# =ds=#c1#", "", "6.67%"};
+		{ 7, 316948, "", "=q4=Gauntlets of Ten Storms", "=q1=#m1# =ds=#c7#", "", "6.67%"};
+		{ 8, 316964, "", "=q4=Gauntlets of Wrath", "=q1=#m1# =ds=#c9#", "", "6.67%"};
+		{ 9, 316956, "", "=q4=Judgement Gauntlets", "=q1=#m1# =ds=#c4#", "", "6.67%"};
+		{ 16, 319430, "", "=q4=Shroud of Pure Thought", "=ds=#s4#", "", "16.67%"};
+		{ 17, 319396, "", "=q4=Taut Dragonhide Belt", "=ds=#s10#, #a2#", "", "6.67%"};
+		{ 18, 319433, "", "=q4=Emberweave Leggings", "=ds=#s11#, #a3#", "", "16.67%"};
+		{ 19, 319394, "", "=q4=Drake Talon Pauldrons", "=ds=#s3#, #a4#", "", "6.67%"};
+		{ 21, 319397, "", "=q4=Ring of Blackrock", "=ds=#s13#", "", "6.67%"};
+		{ 22, 319432, "", "=q4=Circle of Applied Force", "=ds=#s13#", "", "16.67%"};
+		{ 23, 319395, "", "=q4=Rejuvenating Gem", "=ds=#s14#", "", "6.67%"};
+		{ 24, 319431, "", "=q4=Styleen's Impeding Scarab", "=ds=#s14#", "", "16.67%"};
+		{ 26, 319353, "", "=q4=Drake Talon Cleaver", "=ds=#h2#, #w1#", "", "6.67%"};
+		{ 27, 319357, "", "=q4=Herald of Woe", "=ds=#h2#, #w6#", "", "16.67%"};
+		{ 28, 319355, "", "=q4=Shadow Wing Focus Staff", "=ds=#w9#", "", "6.67%"};
+		{ 29, 319367, "", "=q4=Dragon's Touch", "=ds=#w12#", "", "16.67%"};
+		Prev = "BWLEbonroc25Man";
+		Next = "BWLChromaggus25Man";
+	};
+
+	AtlasLoot_Data["BWLChromaggus25Man"] = {
+		{ 1, 316917, "", "=q4=Netherwind Mantle", "=q1=#m1# =ds=#c3#", "", "22.22%"};
+		{ 2, 316924, "", "=q4=Pauldrons of Transcendence", "=q1=#m1# =ds=#c5#", "", "22.22%"};
+		{ 3, 316932, "", "=q4=Nemesis Spaulders", "=q1=#m1# =ds=#c8#", "", "22.22%"};
+		{ 4, 316937, "", "=q4=Dragonstalker's Spaulders", "=q1=#m1# =ds=#c2#", "", "22.22%"};
+		{ 5, 316902, "", "=q4=Stormrage Pauldrons", "=q1=#m1# =ds=#c1#", "", "22.22%"};
+		{ 6, 316832, "", "=q4=Bloodfang Spaulders", "=q1=#m1# =ds=#c6#", "", "22.22%"};
+		{ 7, 316945, "", "=q4=Epaulets of Ten Storms", "=q1=#m1# =ds=#c7#", "", "22.22%"};
+		{ 8, 316953, "", "=q4=Judgement Spaulders", "=q1=#m1# =ds=#c4#", "", "22.22%"};
+		{ 9, 316961, "", "=q4=Pauldrons of Wrath", "=q1=#m1# =ds=#c9#", "", "22.22%"};
+		{ 16, 319386, "", "=q4=Elementium Threaded Cloak", "=ds=#s4#", "", "20%"};
+		{ 17, 319388, "", "=q4=Angelista's Grasp", "=ds=#s10#, #a1#", "", "20%"};
+		{ 18, 319385, "", "=q4=Empowered Leggings", "=ds=#s11#, #a1#", "", "20%"};
+		{ 19, 319391, "", "=q4=Shimmering Geta", "=ds=#s12#, #a1#", "", "20%"};
+		{ 20, 319389, "", "=q4=Taut Dragonhide Shoulderpads", "=ds=#s3#, #a2#", "", "20%"};
+		{ 21, 319390, "", "=q4=Taut Dragonhide Gloves", "=ds=#s9#, #a2#", "", "20%"};
+		{ 22, 319393, "", "=q4=Primalist's Linked Waistguard", "=ds=#s10#, #a3#", "", "10%"};
+		{ 23, 319392, "", "=q4=Girdle of the Fallen Crusader", "=ds=#s10#, #a4#", "", "10%"};
+		{ 24, 319387, "", "=q4=Chromatic Boots", "=ds=#s12#, #a4#", "", "20%"};
+		{ 26, 319347, "", "=q4=Claw of Chromaggus", "=ds=#h3#, #w4#", "", "10%"};
+		{ 27, 319352, "", "=q4=Chromatically Tempered Sword", "=ds=#h1#, #w10#", "", "10%"};
+		{ 28, 319349, "", "=q4=Elementium Reinforced Bulwark", "=ds=#w8#", "", "10%"};
+		{ 29, 319361, "", "=q4=Ashjre'thul, Crossbow of Smiting", "=ds=#w3#", "", "10%"};
+		Prev = "BWLFlamegor25Man";
+		Next = "BWLNefarian125Man";
+	};
+
+	AtlasLoot_Data["BWLNefarian125Man"] = {
+		{ 1, 316916, "", "=q4=Netherwind Robes", "=q1=#m1# =ds=#c3#", "", "22.22%"};
+		{ 2, 316931, "", "=q4=Nemesis Robes", "=q1=#m1# =ds=#c8#", "", "22.22%"};
+		{ 3, 316923, "", "=q4=Robes of Transcendence", "=q1=#m1# =ds=#c5#", "", "22.22%"};
+		{ 4, 316905, "", "=q4=Bloodfang Chestpiece", "=q1=#m1# =ds=#c6#", "", "22.22%"};
+		{ 5, 316897, "", "=q4=Stormrage Chestguard", "=q1=#m1# =ds=#c1#", "", "22.22%"};
+		{ 6, 316942, "", "=q4=Dragonstalker's Breastplate", "=q1=#m1# =ds=#c2#", "", "22.22%"};
+		{ 7, 316950, "", "=q4=Breastplate of Ten Storms", "=q1=#m1# =ds=#c7#", "", "22.22%"};
+		{ 8, 316966, "", "=q4=Breastplate of Wrath", "=q1=#m1# =ds=#c9#", "", "22.22%"};
+		{ 9, 316958, "", "=q4=Judgement Breastplate", "=q1=#m1# =ds=#c4#", "", "22.22%"};
+		{ 16, 319378, "", "=q4=Cloak of the Brood Lord", "=ds=#s4#", "", "16.67%"};
+		{ 17, 319375, "", "=q4=Mish'undare, Circlet of the Mind Flayer", "=ds=#s1#, #a1#", "", "16.67%"};
+		{ 18, 319381, "", "=q4=Boots of the Shadow Flame", "=ds=#s12#, #a2#", "", "16.67%"};
+		{ 19, 319380, "", "=q4=Therazane's Link", "=ds=#s10#, #a3#", "", "16.67%"};
+		{ 20, 319377, "", "=q4=Prestor's Talisman of Connivery", "=ds=#s2#", "", "16.67%"};
+		{ 21, 319376, "", "=q4=Archimtiros' Ring of Reckoning", "=ds=#s13#", "", "16.67%"};
+		{ 22, 319382, "", "=q4=Pure Elementium Band", "=ds=#s13#", "", "16.67%"};
+		{ 23, 319379, "", "=q4=Neltharion's Tear", "=ds=#s14#", "", "16.67%"};
+		{ 24, 319364, "", "=q4=Ashkandi, Greatsword of the Brotherhood", "=ds=#h2#, #w10#", "", "10%"};
+		{ 25, 319363, "", "=q4=Crul'shorukh, Edge of Chaos", "=ds=#h1#, #w1#", "", "16.67%"};
+		{ 26, 319360, "", "=q4=Lok'amir il Romathis", "=ds=#h3#, #w6#", "", "16.67%"};
+		{ 27, 319356, "", "=q4=Staff of the Shadow Flame", "=ds=#w9#", "", "16.67%%"};
+		{ 28, 314001, "", "=q4=Archimtiros' Ring of Armageddon", "=ds=#s13#", "", "16.67%%"};
+		Prev = "BWLChromaggus25Man";
+		Next = "BWLNefarian225Man";
+	};
+
+	AtlasLoot_Data["BWLNefarian225Man"] = {
+		{ 1, 19003, "", "=q4=Head of Nefarian", "=ds=#m2#", "", "100%"};
+		{ 2, 19383, "", "=q4=Master Dragonslayer's Medallion", "=q1=#m4#: =ds=#s2#"};
+		{ 3, 19384, "", "=q4=Master Dragonslayer's Ring", "=q1=#m4#: =ds=#s13#"};
+		{ 4, 19366, "", "=q4=Master Dragonslayer's Orb", "=q1=#m4#: =ds=#s15#"};
+		{ 6, 21138, "", "=q1=Red Scepter Shard", "=ds=#m3#", "", "100%"};
+		Prev = "BWLNefarian125Man";
+		Next = "BWLTrashMobs25Man";
+	};
+
+	AtlasLoot_Data["BWLTrashMobs25Man"] = {
+		{ 1, 319436, "", "=q4=Cloak of Draconic Might", "=ds=#s4#", "", "2.53%"};
+		{ 2, 319437, "", "=q4=Boots of Pure Thought", "=ds=#s12#, #a1#", "", "2.33%"};
+		{ 3, 319438, "", "=q4=Ringo's Blizzard Boots", "=ds=#s12#, #a1#", "", "4.42%"};
+		{ 4, 319439, "", "=q4=Interlaced Shadow Jerkin", "=ds=#s5#, #a2#", "", "4.62%"};
+		{ 5, 319434, "", "=q4=Band of Dark Dominion", "=ds=#s13#", "", "1.57%"};
+		{ 6, 319362, "", "=q4=Doom's Edge", "=ds=#h1#, #w1#", "", "1.67%"};
+		{ 7, 319354, "", "=q4=Draconic Avenger", "=ds=#h2#, #w1#", "", "5.96%"};
+		{ 8, 319358, "", "=q4=Draconic Maul", "=ds=#h2#, #w6#", "", "2.30%"};
+		{ 9, 319435, "", "=q4=Essence Gatherer", "=ds=#w12#", "", "1.61%"};
+		{ 16, 18562, "", "=q4=Elementium Ore", "=ds=#e8#", "", "4.75%"};
+		{ 18, 21109, "", "=q1=Draconic for Dummies", "=ds=#m3#"};
+		Prev = "BWLNefarian225Man";
+	};
+
+	-------------------------------------------------
+	--- Blackrock Mountain: Blackwing Lair ASCENDED ---
+	-------------------------------------------------
+
+	AtlasLoot_Data["BWLRazorgore25ManHEROIC"] = {
 		{ 1, 216918, "", "=q4=Netherwind Bindings", "=q1=#m1# =ds=#c3#", "", "22.22%"};
 		{ 2, 216926, "", "=q4=Bindings of Transcendence", "=q1=#m1# =ds=#c5#", "", "22.22%"};
 		{ 3, 216934, "", "=q4=Nemesis Bracers", "=q1=#m1# =ds=#c8#", "", "22.22%"};
@@ -3229,10 +3464,10 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 		{ 24, 219397, "", "=q4=Ring of Blackrock", "=ds=#s13#", "", "6.67%"};
 		{ 25, 219357, "", "=q4=Herald of Woe", "=ds=#h2#, #w6#", "", "16.67%"};
 		{ 26, 219405, "", "=q4=Malfurion's Blessed Bulwark", "=ds=#s5#, #a2#", "", "16.67%"};
-		Next = "BWLVaelastraszHEROIC";
+		Next = "BWLVaelastrasz25ManHEROIC";
 	};
 
-	AtlasLoot_Data["BWLVaelastraszHEROIC"] = {
+	AtlasLoot_Data["BWLVaelastrasz25ManHEROIC"] = {
 		{ 1, 216818, "", "=q4=Netherwind Belt", "=q1=#m1# =ds=#c3#", "", "22.22%"};
 		{ 2, 216925, "", "=q4=Belt of Transcendence", "=q1=#m1# =ds=#c5#", "", "22.22%"};
 		{ 3, 216933, "", "=q4=Nemesis Belt", "=q1=#m1# =ds=#c8#", "", "22.22%"};
@@ -3251,11 +3486,11 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 		{ 23, 219430, "", "=q4=Shroud of Pure Thought", "=ds=#s4#", "", "16.67%"};
 		{ 24, 219403, "", "=q4=Band of Forced Concentration", "=ds=#s13#", "", "16.67%"};
 		{ 25, 219367, "", "=q4=Dragon's Touch", "=ds=#w12#", "", "16.67%"};
-		Prev = "BWLRazorgoreHEROIC";
-		Next = "BWLLashlayerHEROIC";
+		Prev = "BWLRazorgore25ManHEROIC";
+		Next = "BWLLashlayer25ManHEROIC";
 	};
 
-	AtlasLoot_Data["BWLLashlayerHEROIC"] = {
+	AtlasLoot_Data["BWLLashlayer25ManHEROIC"] = {
 		{ 1, 216912, "", "=q4=Netherwind Boots", "=q1=#m1# =ds=#c3#", "", "22.22%"};
 		{ 2, 216919, "", "=q4=Boots of Transcendence", "=q1=#m1# =ds=#c5#", "", "22.22%"};
 		{ 3, 216927, "", "=q4=Nemesis Boots", "=q1=#m1# =ds=#c8#", "", "22.22%"};
@@ -3277,11 +3512,11 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 		{ 25, 219365, "", "=q4=Claw of the Black Drake", "=ds=#h3#, #w13#", "", "12.5%"};
 		{ 26, 214000, "", "=q4=Ring of Trinity Force", "=ds=#h3#, #w13#", "", "12.5%"};
 		{ 27, 219432, "", "=q4=Circle of Applied Force", "=ds=#s13#", "", "16.67%"};
-		Prev = "BWLVaelastraszHEROIC";
-		Next = "BWLFiremawHEROIC";
+		Prev = "BWLVaelastrasz25ManHEROIC";
+		Next = "BWLFiremaw25ManHEROIC";
 	};
 
-	AtlasLoot_Data["BWLFiremawHEROIC"] = {
+	AtlasLoot_Data["BWLFiremaw25ManHEROIC"] = {
 		{ 1, 216913, "", "=q4=Netherwind Gloves", "=q1=#m1# =ds=#c3#", "", "6.67%"};
 		{ 2, 216920, "", "=q4=Handguards of Transcendence", "=q1=#m1# =ds=#c5#", "", "6.67%"};
 		{ 3, 216928, "", "=q4=Nemesis Gloves", "=q1=#m1# =ds=#c8#", "", "6.67%"};
@@ -3305,11 +3540,11 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 		{ 25, 219402, "", "=q4=Legguards of the Fallen Crusader", "=ds=#s11#, #a4#", "", "12.5%"};
 		{ 27, 219397, "", "=q4=Ring of Blackrock", "=ds=#s13#", "", "6.67%"};
 		{ 28, 219395, "", "=q4=Rejuvenating Gem", "=ds=#s14#", "", "6.67%"};
-		Prev = "BWLLashlayerHEROIC";
-		Next = "BWLEbonrocHEROIC";
+		Prev = "BWLLashlayer25ManHEROIC";
+		Next = "BWLEbonroc25ManHEROIC";
 	};
 
-	AtlasLoot_Data["BWLEbonrocHEROIC"] = {
+	AtlasLoot_Data["BWLEbonroc25ManHEROIC"] = {
 		{ 1, 216913, "", "=q4=Netherwind Gloves", "=q1=#m1# =ds=#c3#", "", "6.67%"};
 		{ 2, 216920, "", "=q4=Handguards of Transcendence", "=q1=#m1# =ds=#c5#", "", "6.67%"};
 		{ 3, 216928, "", "=q4=Nemesis Gloves", "=q1=#m1# =ds=#c8#", "", "6.67%"};
@@ -3331,11 +3566,11 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 		{ 28, 219353, "", "=q4=Drake Talon Cleaver", "=ds=#h2#, #w1#", "", "6.67%"};
 		{ 29, 219355, "", "=q4=Shadow Wing Focus Staff", "=ds=#w9#", "", "6.67%"};
 		{ 30, 219368, "", "=q4=Dragonbreath Hand Cannon", "=ds=#w5#", "", "16.67%"};
-		Prev = "BWLFiremawHEROIC";
-		Next = "BWLFlamegorHEROIC";
+		Prev = "BWLFiremaw25ManHEROIC";
+		Next = "BWLFlamegor25ManHEROIC";
 	};
 
-	AtlasLoot_Data["BWLFlamegorHEROIC"] = {
+	AtlasLoot_Data["BWLFlamegor25ManHEROIC"] = {
 		{ 1, 216913, "", "=q4=Netherwind Gloves", "=q1=#m1# =ds=#c3#", "", "6.67%"};
 		{ 2, 216920, "", "=q4=Handguards of Transcendence", "=q1=#m1# =ds=#c5#", "", "6.67%"};
 		{ 3, 216928, "", "=q4=Nemesis Gloves", "=q1=#m1# =ds=#c8#", "", "6.67%"};
@@ -3357,11 +3592,11 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 		{ 27, 219357, "", "=q4=Herald of Woe", "=ds=#h2#, #w6#", "", "16.67%"};
 		{ 28, 219355, "", "=q4=Shadow Wing Focus Staff", "=ds=#w9#", "", "6.67%"};
 		{ 29, 219367, "", "=q4=Dragon's Touch", "=ds=#w12#", "", "16.67%"};
-		Prev = "BWLEbonrocHEROIC";
-		Next = "BWLChromaggusHEROIC";
+		Prev = "BWLEbonroc25ManHEROIC";
+		Next = "BWLChromaggus25ManHEROIC";
 	};
 
-	AtlasLoot_Data["BWLChromaggusHEROIC"] = {
+	AtlasLoot_Data["BWLChromaggus25ManHEROIC"] = {
 		{ 1, 216917, "", "=q4=Netherwind Mantle", "=q1=#m1# =ds=#c3#", "", "22.22%"};
 		{ 2, 216924, "", "=q4=Pauldrons of Transcendence", "=q1=#m1# =ds=#c5#", "", "22.22%"};
 		{ 3, 216932, "", "=q4=Nemesis Spaulders", "=q1=#m1# =ds=#c8#", "", "22.22%"};
@@ -3384,11 +3619,11 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 		{ 27, 219352, "", "=q4=Chromatically Tempered Sword", "=ds=#h1#, #w10#", "", "10%"};
 		{ 28, 219349, "", "=q4=Elementium Reinforced Bulwark", "=ds=#w8#", "", "10%"};
 		{ 29, 219361, "", "=q4=Ashjre'thul, Crossbow of Smiting", "=ds=#w3#", "", "10%"};
-		Prev = "BWLFlamegorHEROIC";
-		Next = "BWLNefarian1HEROIC";
+		Prev = "BWLFlamegor25ManHEROIC";
+		Next = "BWLNefarian125ManHEROIC";
 	};
 
-	AtlasLoot_Data["BWLNefarian1HEROIC"] = {
+	AtlasLoot_Data["BWLNefarian125ManHEROIC"] = {
 		{ 1, 216916, "", "=q4=Netherwind Robes", "=q1=#m1# =ds=#c3#", "", "22.22%"};
 		{ 2, 216931, "", "=q4=Nemesis Robes", "=q1=#m1# =ds=#c8#", "", "22.22%"};
 		{ 3, 216923, "", "=q4=Robes of Transcendence", "=q1=#m1# =ds=#c5#", "", "22.22%"};
@@ -3411,21 +3646,21 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 		{ 26, 219360, "", "=q4=Lok'amir il Romathis", "=ds=#h3#, #w6#", "", "16.67%"};
 		{ 27, 219356, "", "=q4=Staff of the Shadow Flame", "=ds=#w9#", "", "16.67%%"};
 		{ 28, 214001, "", "=q4=Archimtiros' Ring of Armageddon", "=ds=#s13#", "", "16.67%%"};
-		Prev = "BWLChromaggusHEROIC";
-		Next = "BWLNefarian2HEROIC";
+		Prev = "BWLChromaggus25ManHEROIC";
+		Next = "BWLNefarian225ManHEROIC";
 	};
 
-	AtlasLoot_Data["BWLNefarian2HEROIC"] = {
+	AtlasLoot_Data["BWLNefarian225ManHEROIC"] = {
 		{ 1, 19003, "", "=q4=Head of Nefarian", "=ds=#m2#", "", "100%"};
 		{ 2, 19383, "", "=q4=Master Dragonslayer's Medallion", "=q1=#m4#: =ds=#s2#"};
 		{ 3, 19384, "", "=q4=Master Dragonslayer's Ring", "=q1=#m4#: =ds=#s13#"};
 		{ 4, 19366, "", "=q4=Master Dragonslayer's Orb", "=q1=#m4#: =ds=#s15#"};
 		{ 6, 21138, "", "=q1=Red Scepter Shard", "=ds=#m3#", "", "100%"};
-		Prev = "BWLNefarian1HEROIC";
-		Next = "BWLTrashMobsHEROIC";
+		Prev = "BWLNefarian125ManHEROIC";
+		Next = "BWLTrashMobs25ManHEROIC";
 	};
 
-	AtlasLoot_Data["BWLTrashMobsHEROIC"] = {
+	AtlasLoot_Data["BWLTrashMobs25ManHEROIC"] = {
 		{ 1, 219436, "", "=q4=Cloak of Draconic Might", "=ds=#s4#", "", "2.53%"};
 		{ 2, 219437, "", "=q4=Boots of Pure Thought", "=ds=#s12#, #a1#", "", "2.33%"};
 		{ 3, 219438, "", "=q4=Ringo's Blizzard Boots", "=ds=#s12#, #a1#", "", "4.42%"};
@@ -3437,7 +3672,7 @@ AtlasLoot_Data["AQ20ClassBooksHEROIC"] = {
 		{ 9, 219435, "", "=q4=Essence Gatherer", "=ds=#w12#", "", "1.61%"};
 		{ 16, 18562, "", "=q4=Elementium Ore", "=ds=#e8#", "", "4.75%"};
 		{ 18, 21109, "", "=q1=Draconic for Dummies", "=ds=#m3#"};
-		Prev = "BWLNefarian2HEROIC";
+		Prev = "BWLNefarian225ManHEROIC";
 	};
 
 		-----------------------

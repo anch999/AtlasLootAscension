@@ -754,17 +754,28 @@ end
 	AtlasLoot_TableNames["BWLNefarian1"] = { BabbleBoss["Nefarian"], "AtlasLootOriginalWoW" };
 	AtlasLoot_TableNames["BWLNefarian2"] = { BabbleBoss["Nefarian"], "AtlasLootOriginalWoW" };
 	AtlasLoot_TableNames["BWLTrashMobs"] = { AL["Trash Mobs"].." ("..BabbleZone["Blackwing Lair"]..")", "AtlasLootOriginalWoW" };
-  -- Blackwing Lair HEROIC
-	AtlasLoot_TableNames["BWLRazorgoreHEROIC"] = { BabbleBoss["Razorgore the Untamed"], "AtlasLootOriginalWoW" };
-	AtlasLoot_TableNames["BWLVaelastraszHEROIC"] = { BabbleBoss["Vaelastrasz the Corrupt"], "AtlasLootOriginalWoW" };
-	AtlasLoot_TableNames["BWLLashlayerHEROIC"] = { BabbleBoss["Broodlord Lashlayer"], "AtlasLootOriginalWoW" };
-	AtlasLoot_TableNames["BWLFiremawHEROIC"] = { BabbleBoss["Firemaw"], "AtlasLootOriginalWoW" };
-	AtlasLoot_TableNames["BWLEbonrocHEROIC"] = { BabbleBoss["Ebonroc"], "AtlasLootOriginalWoW" };
-	AtlasLoot_TableNames["BWLFlamegorHEROIC"] = { BabbleBoss["Flamegor"], "AtlasLootOriginalWoW" };
-	AtlasLoot_TableNames["BWLChromaggusHEROIC"] = { BabbleBoss["Chromaggus"], "AtlasLootOriginalWoW" };
-	AtlasLoot_TableNames["BWLNefarian1HEROIC"] = { BabbleBoss["Nefarian"], "AtlasLootOriginalWoW" };
-	AtlasLoot_TableNames["BWLNefarian2HEROIC"] = { BabbleBoss["Nefarian"], "AtlasLootOriginalWoW" };
-	AtlasLoot_TableNames["BWLTrashMobsHEROIC"] = { AL["Trash Mobs"].." ("..BabbleZone["Blackwing Lair"]..")", "AtlasLootOriginalWoW" };
+  -- Blackwing Lair HEROIC FLEX
+	AtlasLoot_TableNames["BWLRazorgore25Man"] = { BabbleBoss["Razorgore the Untamed"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["BWLVaelastrasz25Man"] = { BabbleBoss["Vaelastrasz the Corrupt"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["BWLLashlayer25Man"] = { BabbleBoss["Broodlord Lashlayer"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["BWLFiremaw25Man"] = { BabbleBoss["Firemaw"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["BWLEbonroc25Man"] = { BabbleBoss["Ebonroc"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["BWLFlamegor25Man"] = { BabbleBoss["Flamegor"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["BWLChromaggus25Man"] = { BabbleBoss["Chromaggus"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["BWLNefarian125Man"] = { BabbleBoss["Nefarian"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["BWLNefarian225Man"] = { BabbleBoss["Nefarian"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["BWLTrashMobs25Man"] = { AL["Trash Mobs"].." ("..BabbleZone["Blackwing Lair"]..")", "AtlasLootOriginalWoW" };
+  -- Blackwing Lair ASCENDED
+	AtlasLoot_TableNames["BWLRazorgore25ManHEROIC"] = { BabbleBoss["Razorgore the Untamed"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["BWLVaelastrasz25ManHEROIC"] = { BabbleBoss["Vaelastrasz the Corrupt"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["BWLLashlayer25ManHEROIC"] = { BabbleBoss["Broodlord Lashlayer"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["BWLFiremaw25ManHEROIC"] = { BabbleBoss["Firemaw"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["BWLEbonroc25ManHEROIC"] = { BabbleBoss["Ebonroc"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["BWLFlamegor25ManHEROIC"] = { BabbleBoss["Flamegor"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["BWLChromaggus25ManHEROIC"] = { BabbleBoss["Chromaggus"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["BWLNefarian125ManHEROIC"] = { BabbleBoss["Nefarian"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["BWLNefarian225ManHEROIC"] = { BabbleBoss["Nefarian"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["BWLTrashMobs25ManHEROIC"] = { AL["Trash Mobs"].." ("..BabbleZone["Blackwing Lair"]..")", "AtlasLootOriginalWoW" };
   -- The Deadmines
 	AtlasLoot_TableNames["TheDeadminesEntrance"] = { BabbleZone["The Deadmines"], "AtlasLootOriginalWoW" };
 	AtlasLoot_TableNames["TheDeadmines1"] = { BabbleZone["The Deadmines"], "AtlasLootOriginalWoW" };
