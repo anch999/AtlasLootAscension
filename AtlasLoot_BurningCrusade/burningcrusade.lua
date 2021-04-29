@@ -2216,18 +2216,18 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 	};
 
 	AtlasLoot_Data["KaraAttumen25Man"] = {
-		{ 1, 228477, "", "=q4=Harbinger Bands", "=ds=#s8#, #a1#", "", "14.68%"};
-		{ 2, 228507, "", "=q4=Handwraps of Flowing Thought", "=ds=#s9#, #a1#", "", "12.44%"};
-		{ 3, 228508, "", "=q4=Gloves of Saintly Blessings", "=ds=#s9#, #a1#", "", "11.69%"};
-		{ 4, 228453, "", "=q4=Bracers of the White Stag", "=ds=#s8#, #a2#", "", "12.19%"};
-		{ 5, 228506, "", "=q4=Gloves of Dexterous Manipulation", "=ds=#s9#, #a2#", "", "14.68%"};
-		{ 6, 228503, "", "=q4=Whirlwind Bracers", "=ds=#s8#, #a3#", "", "9.20%"};
-		{ 7, 228454, "", "=q4=Stalker's War Bands", "=ds=#s8#, #a3#", "", "16.17%"};
-		{ 8, 228502, "", "=q4=Vambraces of Courage", "=ds=#s8#, #a4#", "", "10.70%"};
-		{ 9, 228505, "", "=q4=Gauntlets of Renewed Hope", "=ds=#s9#, #a4#", "", "10.95%"};
-		{ 16, 228509, "", "=q4=Worgen Claw Necklace", "=ds=#s2#", "", "17.16%"};
-		{ 17, 228510, "", "=q4=Spectral Band of Innervation", "=ds=#s13#", "", "10.70%"};
-		{ 18, 228504, "", "=q4=Steelhawk Crossbow", "=ds=#w3#", "", "12.44%"};
+		{ 1, 328477, "", "=q4=Harbinger Bands", "=ds=#s8#, #a1#", "", "14.68%"};
+		{ 2, 328507, "", "=q4=Handwraps of Flowing Thought", "=ds=#s9#, #a1#", "", "12.44%"};
+		{ 3, 328508, "", "=q4=Gloves of Saintly Blessings", "=ds=#s9#, #a1#", "", "11.69%"};
+		{ 4, 328453, "", "=q4=Bracers of the White Stag", "=ds=#s8#, #a2#", "", "12.19%"};
+		{ 5, 328506, "", "=q4=Gloves of Dexterous Manipulation", "=ds=#s9#, #a2#", "", "14.68%"};
+		{ 6, 328503, "", "=q4=Whirlwind Bracers", "=ds=#s8#, #a3#", "", "9.20%"};
+		{ 7, 328454, "", "=q4=Stalker's War Bands", "=ds=#s8#, #a3#", "", "16.17%"};
+		{ 8, 328502, "", "=q4=Vambraces of Courage", "=ds=#s8#, #a4#", "", "10.70%"};
+		{ 9, 328505, "", "=q4=Gauntlets of Renewed Hope", "=ds=#s9#, #a4#", "", "10.95%"};
+		{ 16, 328509, "", "=q4=Worgen Claw Necklace", "=ds=#s2#", "", "17.16%"};
+		{ 17, 328510, "", "=q4=Spectral Band of Innervation", "=ds=#s13#", "", "10.70%"};
+		{ 18, 328504, "", "=q4=Steelhawk Crossbow", "=ds=#w3#", "", "12.44%"};
 		{ 19, 30480, "", "=q4=Fiery Warhorse's Reins", "=ds=#e12#", "", "0.25%"};
 		{ 21, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		{ 23, 23809, "", "=q3=Schematic: Stabilized Eternium Scope", "=ds=#p5# (375)", "", "1.00%"};
@@ -2481,18 +2481,18 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 	};
 
 	AtlasLoot_Data["KaraAttumen25ManHEROIC"] = {
-		{ 1, 328477, "", "=q4=Harbinger Bands", "=ds=#s8#, #a1#", "", "14.68%"};
-		{ 2, 328507, "", "=q4=Handwraps of Flowing Thought", "=ds=#s9#, #a1#", "", "12.44%"};
-		{ 3, 328508, "", "=q4=Gloves of Saintly Blessings", "=ds=#s9#, #a1#", "", "11.69%"};
-		{ 4, 328453, "", "=q4=Bracers of the White Stag", "=ds=#s8#, #a2#", "", "12.19%"};
-		{ 5, 328506, "", "=q4=Gloves of Dexterous Manipulation", "=ds=#s9#, #a2#", "", "14.68%"};
-		{ 6, 328503, "", "=q4=Whirlwind Bracers", "=ds=#s8#, #a3#", "", "9.20%"};
-		{ 7, 328454, "", "=q4=Stalker's War Bands", "=ds=#s8#, #a3#", "", "16.17%"};
-		{ 8, 328502, "", "=q4=Vambraces of Courage", "=ds=#s8#, #a4#", "", "10.70%"};
-		{ 9, 328505, "", "=q4=Gauntlets of Renewed Hope", "=ds=#s9#, #a4#", "", "10.95%"};
-		{ 16, 328509, "", "=q4=Worgen Claw Necklace", "=ds=#s2#", "", "17.16%"};
-		{ 17, 328510, "", "=q4=Spectral Band of Innervation", "=ds=#s13#", "", "10.70%"};
-		{ 18, 328504, "", "=q4=Steelhawk Crossbow", "=ds=#w3#", "", "12.44%"};
+		{ 1, 228477, "", "=q4=Harbinger Bands", "=ds=#s8#, #a1#", "", "14.68%"};
+		{ 2, 228507, "", "=q4=Handwraps of Flowing Thought", "=ds=#s9#, #a1#", "", "12.44%"};
+		{ 3, 228508, "", "=q4=Gloves of Saintly Blessings", "=ds=#s9#, #a1#", "", "11.69%"};
+		{ 4, 228453, "", "=q4=Bracers of the White Stag", "=ds=#s8#, #a2#", "", "12.19%"};
+		{ 5, 228506, "", "=q4=Gloves of Dexterous Manipulation", "=ds=#s9#, #a2#", "", "14.68%"};
+		{ 6, 228503, "", "=q4=Whirlwind Bracers", "=ds=#s8#, #a3#", "", "9.20%"};
+		{ 7, 228454, "", "=q4=Stalker's War Bands", "=ds=#s8#, #a3#", "", "16.17%"};
+		{ 8, 228502, "", "=q4=Vambraces of Courage", "=ds=#s8#, #a4#", "", "10.70%"};
+		{ 9, 228505, "", "=q4=Gauntlets of Renewed Hope", "=ds=#s9#, #a4#", "", "10.95%"};
+		{ 16, 228509, "", "=q4=Worgen Claw Necklace", "=ds=#s2#", "", "17.16%"};
+		{ 17, 228510, "", "=q4=Spectral Band of Innervation", "=ds=#s13#", "", "10.70%"};
+		{ 18, 228504, "", "=q4=Steelhawk Crossbow", "=ds=#w3#", "", "12.44%"};
 		{ 19, 30480, "", "=q4=Fiery Warhorse's Reins", "=ds=#e12#", "", "0.25%"};
 		{ 21, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		{ 23, 23809, "", "=q3=Schematic: Stabilized Eternium Scope", "=ds=#p5# (375)", "", "1.00%"};
