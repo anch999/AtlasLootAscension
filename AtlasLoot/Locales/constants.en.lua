@@ -38,8 +38,8 @@ if AL then
 	AL["Misc"] = true;
 	AL["Miscellaneous"] = true;
 	AL["Rewards"] = true;
-	AL["Show 10 Man Loot"] = true;
-	AL["Show 25 Man Loot"] = true;
+	AL["Show Normal Loot"] = true;
+	AL["Show Heroic/Ascended Loot"] = true;
 	AL["Factions - Original WoW"] = true;
 	AL["Factions - Burning Crusade"] = true;
 	AL["Factions - Wrath of the Lich King"] = true;
@@ -406,7 +406,7 @@ if AL then
 
 	-- Labels for loot table sections
 	AL["Additional Heroic Loot"] = true;
-	AL["Heroic Mode"] = true;
+	AL["Ascended Mode"] = true;
 	AL["Normal Mode"] = true;
 	AL["Raid"] = true;
 	AL["Hard Mode"] = true;

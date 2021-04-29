@@ -432,7 +432,7 @@ AtlasLoot_DewDropDown_SubTables = {
 		{ "", "NAXHeiganderUnclean" },
 		{ "", "NAXLoatheb" },
 		{ "", "NAXSapphiron" },
-		{ "", "NAXKelThuzard" },
+		{ "", "NAXKelThuzad" },
 		{ "", "NAXTrash" },
 	},
 

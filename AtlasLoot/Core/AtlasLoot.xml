@@ -599,7 +599,7 @@
 	                </OnShow>
 					<OnLoad>
                         local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot");
-						getglobal(this:GetName().."Text"):SetText(AL["Heroic Mode"]);
+						getglobal(this:GetName().."Text"):SetText(AL["Ascended Mode"]);
 					</OnLoad>
 					<OnClick>
 						AtlasLoot_HeroicModeToggle();						
