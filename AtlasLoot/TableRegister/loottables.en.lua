@@ -543,7 +543,7 @@ end
   -- HC: Magtheridon's Lair
 	AtlasLoot_TableNames["HCMagtheridon"] = { BabbleBoss["Magtheridon"], "AtlasLootBurningCrusade" };
   -- HC: Magtheridon's Lair HEROIC FLEX
-	AtlasLoot_TableNames["HCMagtheridonHEROIC"] = { BabbleBoss["Magtheridon"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["HCMagtheridon25Man"] = { BabbleBoss["Magtheridon"], "AtlasLootBurningCrusade" };
   -- HC: Magtheridon's Lair ASCENDED
 	AtlasLoot_TableNames["HCMagtheridon25ManHEROIC"] = { BabbleBoss["Magtheridon"], "AtlasLootBurningCrusade" };
   -- HC: Ramparts
@@ -654,19 +654,19 @@ end
 	AtlasLoot_TableNames["TKEyeLegendaries"] = { "Legendary Items for Kael'thas Fight", "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["TKEyeTrash"] = { AL["Trash Mobs"].." ("..BabbleZone["The Eye"]..")", "AtlasLootExpansionItems" };
   -- TK: The Eye HEROIC FLEX
-	AtlasLoot_TableNames["TKEyeAlarHEROIC"] = { BabbleBoss["Al'ar"], "AtlasLootBurningCrusade" };
-	AtlasLoot_TableNames["TKEyeVoidReaverHEROIC"] = { BabbleBoss["Void Reaver"], "AtlasLootBurningCrusade" };
-	AtlasLoot_TableNames["TKEyeSolarianHEROIC"] = { BabbleBoss["High Astromancer Solarian"], "AtlasLootBurningCrusade" };
-	AtlasLoot_TableNames["TKEyeKaelthasHEROIC"] = { BabbleBoss["Kael'thas Sunstrider"], "AtlasLootBurningCrusade" };
-	AtlasLoot_TableNames["TKEyeLegendariesHEROIC"] = { "Legendary Items for Kael'thas Fight", "AtlasLootBurningCrusade" };
-	AtlasLoot_TableNames["TKEyeTrashHEROIC"] = { AL["Trash Mobs"].." ("..BabbleZone["The Eye"]..")", "AtlasLootExpansionItems" };
+	AtlasLoot_TableNames["TKEyeAlar25Man"] = { BabbleBoss["Al'ar"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["TKEyeVoidReaver25Man"] = { BabbleBoss["Void Reaver"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["TKEyeSolarian25Man"] = { BabbleBoss["High Astromancer Solarian"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["TKEyeKaelthas25Man"] = { BabbleBoss["Kael'thas Sunstrider"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["TKEyeLegendaries25Man"] = { "Legendary Items for Kael'thas Fight", "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["TKEyeTrash25Man"] = { AL["Trash Mobs"].." ("..BabbleZone["The Eye"]..")", "AtlasLootExpansionItems" };
   -- TK: The Eye ASCENDED
-	AtlasLoot_TableNames["TKEyeAlarHEROIC"] = { BabbleBoss["Al'ar"], "AtlasLootBurningCrusade" };
-	AtlasLoot_TableNames["TKEyeVoidReaverHEROIC"] = { BabbleBoss["Void Reaver"], "AtlasLootBurningCrusade" };
-	AtlasLoot_TableNames["TKEyeSolarianHEROIC"] = { BabbleBoss["High Astromancer Solarian"], "AtlasLootBurningCrusade" };
-	AtlasLoot_TableNames["TKEyeKaelthasHEROIC"] = { BabbleBoss["Kael'thas Sunstrider"], "AtlasLootBurningCrusade" };
-	AtlasLoot_TableNames["TKEyeLegendariesHEROIC"] = { "Legendary Items for Kael'thas Fight", "AtlasLootBurningCrusade" };
-	AtlasLoot_TableNames["TKEyeTrashHEROIC"] = { AL["Trash Mobs"].." ("..BabbleZone["The Eye"]..")", "AtlasLootExpansionItems" };
+	AtlasLoot_TableNames["TKEyeAlar25ManHEROIC"] = { BabbleBoss["Al'ar"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["TKEyeVoidReaver25ManHEROIC"] = { BabbleBoss["Void Reaver"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["TKEyeSolarian25ManHEROIC"] = { BabbleBoss["High Astromancer Solarian"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["TKEyeKaelthas25ManHEROIC"] = { BabbleBoss["Kael'thas Sunstrider"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["TKEyeLegendaries25ManHEROIC"] = { "Legendary Items for Kael'thas Fight", "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["TKEyeTrash25ManHEROIC"] = { AL["Trash Mobs"].." ("..BabbleZone["The Eye"]..")", "AtlasLootExpansionItems" };
   -- TK: The Mechanar
 	AtlasLoot_TableNames["TKMechCacheoftheLegion"] = { AL["Cache of the Legion"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["TKMechCapacitus"] = { BabbleBoss["Mechano-Lord Capacitus"], "AtlasLootBurningCrusade" };
@@ -893,16 +893,26 @@ end
 	AtlasLoot_TableNames["AQ20Trash"] = { AL["Trash Mobs"].." (AQ20)", "AtlasLootOriginalWoW" };
 	AtlasLoot_TableNames["AQ20ClassBooks"] = { "AQ Class Books", "AtlasLootOriginalWoW" };
 	AtlasLoot_TableNames["AQEnchants"] = { "AQ Enchants", "AtlasLootOriginalWoW" };
-  -- The Ruins of Ahn'Qiraj HEROIC
-  AtlasLoot_TableNames["AQ20KurinnaxxHEROIC"] = { BabbleBoss["Kurinnaxx"], "AtlasLootOriginalWoW" };
-  AtlasLoot_TableNames["AQ20RajaxxHEROIC"] = { BabbleBoss["General Rajaxx"], "AtlasLootOriginalWoW" };
-  AtlasLoot_TableNames["AQ20MoamHEROIC"] = { BabbleBoss["Moam"], "AtlasLootOriginalWoW" };
-  AtlasLoot_TableNames["AQ20BuruHEROIC"] = { BabbleBoss["Buru the Gorger"], "AtlasLootOriginalWoW" };
-  AtlasLoot_TableNames["AQ20AyamissHEROIC"] = { BabbleBoss["Ayamiss the Hunter"], "AtlasLootOriginalWoW" };
-  AtlasLoot_TableNames["AQ20OssirianHEROIC"] = { BabbleBoss["Ossirian the Unscarred"], "AtlasLootOriginalWoW" };
-  AtlasLoot_TableNames["AQ20TrashHEROIC"] = { AL["Trash Mobs"].." (AQ20)", "AtlasLootOriginalWoW" };
-  AtlasLoot_TableNames["AQ20ClassBooksHEROIC"] = { "AQ Class Books", "AtlasLootOriginalWoW" };
-  AtlasLoot_TableNames["AQEnchantsHEROIC"] = { "AQ Enchants", "AtlasLootOriginalWoW" };
+	-- The Ruins of Ahn'Qiraj HEROIC FLEX
+	AtlasLoot_TableNames["AQ20Kurinnaxx25Man"] = { BabbleBoss["Kurinnaxx"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["AQ20Rajaxx25Man"] = { BabbleBoss["General Rajaxx"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["AQ20Moam25Man"] = { BabbleBoss["Moam"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["AQ20Buru25Man"] = { BabbleBoss["Buru the Gorger"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["AQ20Ayamiss25Man"] = { BabbleBoss["Ayamiss the Hunter"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["AQ20Ossirian25Man"] = { BabbleBoss["Ossirian the Unscarred"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["AQ20Trash25Man"] = { AL["Trash Mobs"].." (AQ20)", "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["AQ20ClassBooks25Man"] = { "AQ Class Books", "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["AQEnchants25Man"] = { "AQ Enchants", "AtlasLootOriginalWoW" };
+	-- The Ruins of Ahn'Qiraj ASCENDED
+	AtlasLoot_TableNames["AQ20Kurinnaxx25ManHEROIC"] = { BabbleBoss["Kurinnaxx"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["AQ20Rajaxx25ManHEROIC"] = { BabbleBoss["General Rajaxx"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["AQ20Moam25ManHEROIC"] = { BabbleBoss["Moam"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["AQ20Buru25ManHEROIC"] = { BabbleBoss["Buru the Gorger"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["AQ20Ayamiss25ManHEROIC"] = { BabbleBoss["Ayamiss the Hunter"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["AQ20Ossirian25ManHEROIC"] = { BabbleBoss["Ossirian the Unscarred"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["AQ20Trash25ManHEROIC"] = { AL["Trash Mobs"].." (AQ20)", "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["AQ20ClassBooks25ManHEROIC"] = { "AQ Class Books", "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["AQEnchants25ManHEROIC"] = { "AQ Enchants", "AtlasLootOriginalWoW" };
   -- Scarlet Monestery
 	AtlasLoot_TableNames["SMHerod"] = { BabbleZone["Scarlet Monastery"], "AtlasLootOriginalWoW" };
 	AtlasLoot_TableNames["SMCathedral"] = { BabbleZone["Cathedral"], "AtlasLootOriginalWoW" };

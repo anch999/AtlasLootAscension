@@ -1182,11 +1182,11 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 20, 21710, "", "=q4=Cloak of the Fallen God", "=q1=#m4#: =ds=#s4#"};
 		{ 21, 21712, "", "=q4=Amulet of the Fallen God", "=q1=#m4#: =ds=#s2#"};
 		{ 22, 21709, "", "=q4=Ring of the Fallen God", "=q1=#m4#: =ds=#s13#"};
-		{ 24, 322734, "", "=q1=Base of Atiesh", "=ds=#m3#"};
-		{ 25, 322632, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c1#"};
-		{ 26, 322589, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c3#"};
-		{ 27, 322631, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c5#"};
-		{ 28, 322630, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c8#"};
+		{ 24, 22734, "", "=q1=Base of Atiesh", "=ds=#m3#"};
+		{ 25, 22632, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c1#"};
+		{ 26, 22589, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c3#"};
+		{ 27, 22631, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c5#"};
+		{ 28, 22630, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c8#"};
 		Prev = "AQ40Ouro25Man";
 	};
 
@@ -2645,7 +2645,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 18, 316836, "", "=q4=Cenarion Spaulders", "=q1=#m1# =ds=#c1# (T1)", "", "19.52%"};
 		{ 19, 316856, "", "=q4=Lawbringer Spaulders", "=q1=#m1# =ds=#c4# (T1)", "", "12.62%"};
 		{ 20, 316844, "", "=q4=Earthfury Epaulets", "=q1=#m1# =ds=#c7# (T1)", "", "7.29%"};
-		{ 22, 318563, "", "=q5=Bindings of the Windseeker", " =ds=#m3#, =q1=#m10#", "", "3.78%"};
+		{ 22, 18563, "", "=q5=Bindings of the Windseeker", " =ds=#m3#, =q1=#m10#", "", "3.78%"};
 		{ 23, 19019, "", "=q5=Thunderfury, Blessed Blade of the Windseeker", "=q1=#m4#: =ds=#h1#, #w10#"};
 		Prev = "MCShazzrah25Man";
 		Next = "MCGolemagg25Man";
@@ -7129,9 +7129,9 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 10, 323057, "", "=q4=Gem of Trapped Innocents", "=ds=#s2#" ,"","18.18%"},
 		{ 11, 323053, "", "=q4=Stormrage's Talisman of Seething", "=ds=#s2#","","18.18%" },
 		{ 12, 0,"","","" },
-		{ 13, 391119, "", "=q4=The Phylactery of Kel'Thuzad", "=ds=#m2#","", "100%" },
-		{ 14, 323207, "", "=q4=Mark of the Champion", "=q1=#m4# =ds=#s14#" },
-		{ 15, 323206, "", "=q4=Mark of the Champion", "=q1=#m4# =ds=#s14#" },
+		{ 13, 91119, "", "=q4=The Phylactery of Kel'Thuzad", "=ds=#m2#","", "100%" },
+		{ 14, 23207, "", "=q4=Mark of the Champion", "=q1=#m4# =ds=#s14#" },
+		{ 15, 23206, "", "=q4=Mark of the Champion", "=q1=#m4# =ds=#s14#" },
 		{ 16, 323064, "", "=q4=Ring of the Dreamwalker", "=ds=#s13# =q1=#m1# =ds=#c1#","","22.22%" },
 		{ 17, 323067, "", "=q4=Ring of the Cryptstalker", "=ds=#s13# =q1=#m1# =ds=#c2#" ,"","22.22%"},
 		{ 18, 323062, "", "=q4=Frostfire Ring", "=ds=#s13# =q1=#m1# =ds=#c3#" ,"","22.22%"},
@@ -7142,11 +7142,11 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 23, 323063, "", "=q4=Plagueheart Ring", "=ds=#s13# =q1=#m1# =ds=#c8#" ,"","22.22%"},
 		{ 24, 323059, "", "=q4=Ring of the Dreadnaught", "=ds=#s13# =q1=#m1# =ds=#c9#" ,"","22.22%"},
 		{ 25, 0,"","","" },
-		{ 26, 322733, "", "=q1=Staff Head of Atiesh", "=ds=#m3#" },
-		{ 27, 322632, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c1#"},
-		{ 28, 322589, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c3#"},
-		{ 29, 322631, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c5#"},
-		{ 30, 322630, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c8#"},
+		{ 26, 22733, "", "=q1=Staff Head of Atiesh", "=ds=#m3#" },
+		{ 27, 22632, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c1#"},
+		{ 28, 22589, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c3#"},
+		{ 29, 22631, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c5#"},
+		{ 30, 22630, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c8#"},
 		Prev = "NAXSapphiron25Man";
 		Next = "NAXTrash25Man";
 	};
