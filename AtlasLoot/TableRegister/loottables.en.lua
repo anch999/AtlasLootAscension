@@ -548,6 +548,7 @@ end
 	AtlasLoot_TableNames["KaraCharredBoneFragment"] = { "Charred Bone Fragment ("..AL["Quest Item"]..")", "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["KaraNamed"] = { "Servant's Quarter Animal Bosses", "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["KaraAttumen"] = { BabbleBoss["Attumen the Huntsman"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["KaraAttumen25Man"] = { BabbleBoss["Attumen the Huntsman"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["KaraMoroes"] = { BabbleBoss["Moroes"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["KaraKeannaLog"] = { "Keanna's Log ("..AL["Quest Item"]..")", "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["KaraMaiden"] = { BabbleBoss["Maiden of Virtue"], "AtlasLootBurningCrusade" };
@@ -564,6 +565,7 @@ end
 	AtlasLoot_TableNames["KaraCharredBoneFragmentHEROIC"] = { "Charred Bone Fragment ("..AL["Quest Item"]..")", "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["KaraNamedHEROIC"] = { "Servant's Quarter Animal Bosses", "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["KaraAttumenHEROIC"] = { BabbleBoss["Attumen the Huntsman"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["KaraAttumen25ManHEROIC"] = { BabbleBoss["Attumen the Huntsman"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["KaraMoroesHEROIC"] = { BabbleBoss["Moroes"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["KaraKeannaLogHEROIC"] = { "Keanna's Log ("..AL["Quest Item"]..")", "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["KaraMaidenHEROIC"] = { BabbleBoss["Maiden of Virtue"], "AtlasLootBurningCrusade" };
