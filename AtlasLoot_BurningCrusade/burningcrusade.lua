@@ -6920,9 +6920,9 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Back = "DS3SET";
 	};
 
-		--------------
-		--- Tier 4 ---
-		--------------
+	--------------
+	--- Tier 4 ---
+	--------------
 
 	AtlasLoot_Data["T4DruidFeral"] = {	
 		{ 1, 0, "Ability_Druid_Maul", "=q6=#t4s1_1#", "=ec1=#m21# - Fallen Defender"};
@@ -6931,12 +6931,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 4, 29096, "", "=q4=Breastplate of Malorne", "=ds="..BabbleBoss["Magtheridon"]};
 		{ 5, 29097, "", "=q4=Gauntlets of Malorne", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
 		{ 6, 29099, "", "=q4=Greaves of Malorne", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
-		{ 16, 0, "Ability_Druid_Maul", "=q6=#t4s1_1#", "=ec1=#m21# - Fallen Defender"};
-		{ 17, 229098, "", "=q4=Stag-Helm of Malorne", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 18, 229100, "", "=q4=Mantle of Malorne", "=ds="..BabbleBoss["High King Maulgar"]};
-		{ 19, 229096, "", "=q4=Breastplate of Malorne", "=ds="..BabbleBoss["Magtheridon"]};
-		{ 20, 229097, "", "=q4=Gauntlets of Malorne", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 21, 229099, "", "=q4=Greaves of Malorne", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
 		Back = "T4SET";
 		Next = "T5DruidFeral";
 	};	
@@ -6948,12 +6942,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 4, 29087, "", "=q4=Chestguard of Malorne", "=ds="..BabbleBoss["Magtheridon"]};
 		{ 5, 29090, "", "=q4=Handguards of Malorne", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
 		{ 6, 29088, "", "=q4=Legguards of Malorne", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
-		{ 16, 0, "Spell_Nature_Regeneration", "=q6=#t4s1_2#", "=ec1=#m21# - Fallen Defender"};
-		{ 17, 229086, "", "=q4=Crown of Malorne", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 18, 229089, "", "=q4=Shoulderguards of Malorne", "=ds="..BabbleBoss["High King Maulgar"]};
-		{ 19, 229087, "", "=q4=Chestguard of Malorne", "=ds="..BabbleBoss["Magtheridon"]};
-		{ 20, 229090, "", "=q4=Handguards of Malorne", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 21, 229088, "", "=q4=Legguards of Malorne", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
 		Back = "T4SET";
 		Next = "T5DruidRestoration";
 	};	
@@ -6965,12 +6953,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 4, 29091, "", "=q4=Chestpiece of Malorne", "=ds="..BabbleBoss["Magtheridon"]};
 		{ 5, 29092, "", "=q4=Gloves of Malorne", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
 		{ 6, 29094, "", "=q4=Britches of Malorne", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
-		{ 16, 0, "Spell_Nature_InsectSwarm", "=q6=#t4s1_3#", "=ec1=#m21# - Fallen Defender"};
-		{ 17, 229093, "", "=q4=Antlers of Malorne", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 18, 229095, "", "=q4=Pauldrons of Malorne", "=ds="..BabbleBoss["High King Maulgar"]};
-		{ 19, 229091, "", "=q4=Chestpiece of Malorne", "=ds="..BabbleBoss["Magtheridon"]};
-		{ 20, 229092, "", "=q4=Gloves of Malorne", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 21, 229094, "", "=q4=Britches of Malorne", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
 		Back = "T4SET";
 		Next = "T5DruidBalance";
 	};	
@@ -6982,12 +6964,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 4, 29082, "", "=q4=Demon Stalker Harness", "=ds="..BabbleBoss["Magtheridon"]};
 		{ 5, 29085, "", "=q4=Demon Stalker Gauntlets", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
 		{ 6, 29083, "", "=q4=Demon Stalker Greaves", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
-		{ 16, 0, "Ability_Hunter_RunningShot", "=q6=#t4s2#", "=ec1=#m21# - Fallen Hero"};
-		{ 17, 229081, "", "=q4=Demon Stalker Greathelm", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 18, 229084, "", "=q4=Demon Stalker Shoulderguards", "=ds="..BabbleBoss["High King Maulgar"]};
-		{ 19, 229082, "", "=q4=Demon Stalker Harness", "=ds="..BabbleBoss["Magtheridon"]};
-		{ 20, 229085, "", "=q4=Demon Stalker Gauntlets", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 21, 229083, "", "=q4=Demon Stalker Greaves", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
 		Back = "T4SET";
 		Next = "T5Hunter";
 	};	
@@ -6999,12 +6975,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 4, 29077, "", "=q4=Vestments of the Aldor", "=ds="..BabbleBoss["Magtheridon"]};
 		{ 5, 29080, "", "=q4=Gloves of the Aldor", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
 		{ 6, 29078, "", "=q4=Legwraps of the Aldor", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
-		{ 16, 0, "Spell_Frost_IceStorm", "=q6=#t4s3#", "=ec1=#m21# - Fallen Hero"};
-		{ 17, 229076, "", "=q4=Collar of the Aldor", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 18, 229079, "", "=q4=Pauldrons of the Aldor", "=ds="..BabbleBoss["High King Maulgar"]};
-		{ 19, 229077, "", "=q4=Vestments of the Aldor", "=ds="..BabbleBoss["Magtheridon"]};
-		{ 20, 229080, "", "=q4=Gloves of the Aldor", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 21, 229078, "", "=q4=Legwraps of the Aldor", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
 		Back = "T4SET";
 		Next = "T5Mage";
 	};	
@@ -7016,12 +6986,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 4, 29066, "", "=q4=Justicar Chestguard", "=ds="..BabbleBoss["Magtheridon"]};
 		{ 5, 29067, "", "=q4=Justicar Handguards", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
 		{ 6, 29069, "", "=q4=Justicar Legguards", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
-		{ 16, 0, "Spell_Holy_SealOfMight", "=q6=#t4s4_1#", "=ec1=#m21# - Fallen Champion"};
-		{ 17, 229068, "", "=q4=Justicar Faceguard", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 18, 229070, "", "=q4=Justicar Shoulderguards", "=ds="..BabbleBoss["High King Maulgar"]};
-		{ 19, 229066, "", "=q4=Justicar Chestguard", "=ds="..BabbleBoss["Magtheridon"]};
-		{ 20, 229067, "", "=q4=Justicar Handguards", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 21, 229069, "", "=q4=Justicar Legguards", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
 		Back = "T4SET";
 		Next = "T5PaladinProtection";
 	};	
@@ -7033,12 +6997,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 4, 29071, "", "=q4=Justicar Breastplate", "=ds="..BabbleBoss["Magtheridon"]};
 		{ 5, 29072, "", "=q4=Justicar Gauntlets", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
 		{ 6, 29074, "", "=q4=Justicar Greaves", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
-		{ 16, 0, "Spell_Holy_AuraOfLight", "=q6=#t4s4_2#", "=ec1=#m21# - Fallen Champion"};
-		{ 17, 229073, "", "=q4=Justicar Crown", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 18, 229075, "", "=q4=Justicar Shoulderplates", "=ds="..BabbleBoss["High King Maulgar"]};
-		{ 19, 229071, "", "=q4=Justicar Breastplate", "=ds="..BabbleBoss["Magtheridon"]};
-		{ 20, 229072, "", "=q4=Justicar Gauntlets", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 21, 229074, "", "=q4=Justicar Greaves", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
 		Back = "T4SET";
 		Next = "T5PaladinRetribution";
 	};	
@@ -7050,12 +7008,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 4, 29062, "", "=q4=Justicar Chestpiece", "=ds="..BabbleBoss["Magtheridon"]};
 		{ 5, 29065, "", "=q4=Justicar Gloves", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
 		{ 6, 29063, "", "=q4=Justicar Leggings", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
-		{ 16, 0, "Spell_Holy_HolyBolt", "=q6=#t4s4_3#", "=ec1=#m21# - Fallen Champion"};
-		{ 17, 229061, "", "=q4=Justicar Diadem", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 18, 229064, "", "=q4=Justicar Pauldrons", "=ds="..BabbleBoss["High King Maulgar"]};
-		{ 19, 229062, "", "=q4=Justicar Chestpiece", "=ds="..BabbleBoss["Magtheridon"]};
-		{ 20, 229065, "", "=q4=Justicar Gloves", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 21, 229063, "", "=q4=Justicar Leggings", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
 		Back = "T4SET";
 		Next = "T5PaladinHoly";
 	};	
@@ -7067,12 +7019,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 4, 29050, "", "=q4=Robes of the Incarnate", "=ds="..BabbleBoss["Magtheridon"]};
 		{ 5, 29055, "", "=q4=Handwraps of the Incarnate", "The Curator ("..BabbleZone["Karazhan"]..")"};
 		{ 6, 29053, "", "=q4=Trousers of the Incarnate", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
-		{ 16, 0, "Spell_Holy_PowerWordShield", "=q6=#t4s5_1#", "=ec1=#m21# - Fallen Defender"};
-		{ 17, 229049, "", "=q4=Light-Collar of the Incarnate", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 18, 229054, "", "=q4=Light-Mantle of the Incarnate", "=ds="..BabbleBoss["High King Maulgar"]};
-		{ 19, 229050, "", "=q4=Robes of the Incarnate", "=ds="..BabbleBoss["Magtheridon"]};
-		{ 20, 229055, "", "=q4=Handwraps of the Incarnate", "The Curator ("..BabbleZone["Karazhan"]..")"};
-		{ 21, 229053, "", "=q4=Trousers of the Incarnate", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
 		Back = "T4SET";
 		Next = "T5PriestHoly";
 	};	
@@ -7084,12 +7030,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 4, 29056, "", "=q4=Shroud of the Incarnate", "=ds="..BabbleBoss["Magtheridon"]};
 		{ 5, 29057, "", "=q4=Gloves of the Incarnate", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
 		{ 6, 29059, "", "=q4=Leggings of the Incarnate", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
-		{ 16, 0, "Spell_Shadow_AntiShadow", "=q6=#t4s5_2#", "=ec1=#m21# - Fallen Defender"};
-		{ 17, 229058, "", "=q4=Soul-Collar of the Incarnate", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 18, 229060, "", "=q4=Soul-Mantle of the Incarnate", "=ds="..BabbleBoss["High King Maulgar"]};
-		{ 19, 229056, "", "=q4=Shroud of the Incarnate", "=ds="..BabbleBoss["Magtheridon"]};
-		{ 20, 229057, "", "=q4=Gloves of the Incarnate", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 21, 229059, "", "=q4=Leggings of the Incarnate", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
 		Back = "T4SET";
 		Next = "T5PriestShadow";
 	};	
@@ -7101,12 +7041,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 4, 29045, "", "=q4=Netherblade Chestpiece", "=ds="..BabbleBoss["Magtheridon"]};
 		{ 5, 29048, "", "=q4=Netherblade Gloves", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
 		{ 6, 29046, "", "=q4=Netherblade Breeches", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
-		{ 16, 0, "Ability_BackStab", "=q6=#t4s6#", "=ec1=#m21# - Fallen Champion"};
-		{ 17, 229044, "", "=q4=Netherblade Facemask", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 18, 229047, "", "=q4=Netherblade Shoulderpads", "=ds="..BabbleBoss["High King Maulgar"]};
-		{ 19, 229045, "", "=q4=Netherblade Chestpiece", "=ds="..BabbleBoss["Magtheridon"]};
-		{ 20, 229048, "", "=q4=Netherblade Gloves", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 21, 229046, "", "=q4=Netherblade Breeches", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
 		Back = "T4SET";
 		Next = "T5Rogue";
 	};	
@@ -7118,12 +7052,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 4, 29038, "", "=q4=Cyclone Breastplate", "=ds="..BabbleBoss["Magtheridon"]};
 		{ 5, 29039, "", "=q4=Cyclone Gauntlets", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
 		{ 6, 29042, "", "=q4=Cyclone War-Kilt", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
-		{ 16, 0, "Spell_FireResistanceTotem_01", "=q6=#t4s7_1#", "=ec1=#m21# - Fallen Champion"};
-		{ 17, 229040, "", "=q4=Cyclone Helm", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 18, 229043, "", "=q4=Cyclone Shoulderplates", "=ds="..BabbleBoss["High King Maulgar"]};
-		{ 19, 229038, "", "=q4=Cyclone Breastplate", "=ds="..BabbleBoss["Magtheridon"]};
-		{ 20, 229039, "", "=q4=Cyclone Gauntlets", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 21, 229042, "", "=q4=Cyclone War-Kilt", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
 		Back = "T4SET";
 		Next = "T5ShamanEnhancement";
 	};	
@@ -7135,12 +7063,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 4, 29029, "", "=q4=Cyclone Hauberk", "=ds="..BabbleBoss["Magtheridon"]};
 		{ 5, 29032, "", "=q4=Cyclone Gloves", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
 		{ 6, 29030, "", "=q4=Cyclone Kilt", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
-		{ 16, 0, "Spell_Nature_HealingWaveGreater", "=q6=#t4s7_2#", "=ec1=#m21# - Fallen Champion"};
-		{ 17, 229028, "", "=q4=Cyclone Headdress", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 18, 229031, "", "=q4=Cyclone Shoulderpads", "=ds="..BabbleBoss["High King Maulgar"]};
-		{ 19, 229029, "", "=q4=Cyclone Hauberk", "=ds="..BabbleBoss["Magtheridon"]};
-		{ 20, 229032, "", "=q4=Cyclone Gloves", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 21, 229030, "", "=q4=Cyclone Kilt", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
 		Back = "T4SET";
 		Next = "T5ShamanRestoration";
 	};	
@@ -7152,12 +7074,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 4, 29033, "", "=q4=Cyclone Chestguard", "=ds="..BabbleBoss["Magtheridon"]};
 		{ 5, 29034, "", "=q4=Cyclone Handguards", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
 		{ 6, 29036, "", "=q4=Cyclone Legguards", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
-		{ 16, 0, "Spell_Nature_Lightning", "=q6=#t4s7_3#", "=ec1=#m21# - Fallen Champion"};
-		{ 17, 229035, "", "=q4=Cyclone Faceguard", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 18, 229037, "", "=q4=Cyclone Shoulderguards", "=ds="..BabbleBoss["High King Maulgar"]};
-		{ 19, 229033, "", "=q4=Cyclone Chestguard", "=ds="..BabbleBoss["Magtheridon"]};
-		{ 20, 229034, "", "=q4=Cyclone Handguards", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 21, 229036, "", "=q4=Cyclone Legguards", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
 		Back = "T4SET";
 		Next = "T5ShamanElemental";
 	};	
@@ -7169,12 +7085,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 4, 28964, "", "=q4=Voidheart Robe", "=ds="..BabbleBoss["Magtheridon"]};
 		{ 5, 28968, "", "=q4=Voidheart Gloves", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
 		{ 6, 28966, "", "=q4=Voidheart Leggings", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
-		{ 16, 0, "Spell_Shadow_CurseOfTounges", "=q6=#t4s8#", "=ec1=#m21# - Fallen Hero"};
-		{ 17, 228963, "", "=q4=Voidheart Crown", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 18, 228967, "", "=q4=Voidheart Mantle", "=ds="..BabbleBoss["High King Maulgar"]};
-		{ 19, 228964, "", "=q4=Voidheart Robe", "=ds="..BabbleBoss["Magtheridon"]};
-		{ 20, 228968, "", "=q4=Voidheart Gloves", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 21, 228966, "", "=q4=Voidheart Leggings", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
 		Back = "T4SET";
 		Next = "T5Warlock";
 	};	
@@ -7192,18 +7102,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 11, 14985, "", "=q4=Warbringer Hauberk", "=ds="..BabbleBoss["Magtheridon"]};
 		{ 12, 14989, "", "=q4=Warbringer Gloves", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
 		{ 13, 14987, "", "=q4=Warbringer Leggings", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
-		{ 16, 0, "INV_Shield_05", "=q6=#t4s9_1#", "=ec1=#m21# - Fallen Defender"};
-		{ 17, 229011, "", "=q4=Warbringer Greathelm", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 18, 229016, "", "=q4=Warbringer Shoulderguards", "=ds="..BabbleBoss["High King Maulgar"]};
-		{ 19, 229012, "", "=q4=Warbringer Chestguard", "=ds="..BabbleBoss["Magtheridon"]};
-		{ 20, 229017, "", "=q4=Warbringer Handguards", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 21, 229015, "", "=q4=Warbringer Legguards", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
-		{ 23, 0, "INV_Shield_05", "=q6=#t4s9_1#", "=ec1=#m21# - Fallen Defender"};
-		{ 24, 214984, "", "=q4=Warbringer Helmet", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 25, 214988, "", "=q4=Warbringer Pauldrons", "=ds="..BabbleBoss["High King Maulgar"]};
-		{ 26, 214985, "", "=q4=Warbringer Hauberk", "=ds="..BabbleBoss["Magtheridon"]};
-		{ 27, 214989, "", "=q4=Warbringer Gloves", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 28, 214987, "", "=q4=Warbringer Leggings", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
 		Back = "T4SET";
 		Next = "T5WarriorProtection";
 	};	
@@ -7215,16 +7113,403 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 4, 29019, "", "=q4=Warbringer Breastplate", "=ds="..BabbleBoss["Magtheridon"]};
 		{ 5, 29020, "", "=q4=Warbringer Gauntlets", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
 		{ 6, 29022, "", "=q4=Warbringer Greaves", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
-		{ 16, 0, "Ability_Warrior_BattleShout", "=q6=#t4s9_2#", "=ec1=#m21# - Fallen Defender"};
-		{ 17, 229021, "", "=q4=Warbringer Battle-Helm", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 18, 229023, "", "=q4=Warbringer Shoulderplates", "=ds="..BabbleBoss["High King Maulgar"]};
-		{ 19, 229019, "", "=q4=Warbringer Breastplate", "=ds="..BabbleBoss["Magtheridon"]};
-		{ 20, 229020, "", "=q4=Warbringer Gauntlets", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 21, 229022, "", "=q4=Warbringer Greaves", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
 		Back = "T4SET";
 		Next = "T5WarriorFury";
 	};	
 
+	--------------
+	--- Tier 4 FLEX HEROIC ---
+	--------------
+
+	AtlasLoot_Data["T4DruidFeral25Man"] = {	
+		{ 1, 0, "Ability_Druid_Maul", "=q6=#t4s1_1#", "=ec1=#m21# - Fallen Defender"};
+		{ 2, 329098, "", "=q4=Stag-Helm of Malorne", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
+		{ 3, 329100, "", "=q4=Mantle of Malorne", "=ds="..BabbleBoss["High King Maulgar"]};
+		{ 4, 329096, "", "=q4=Breastplate of Malorne", "=ds="..BabbleBoss["Magtheridon"]};
+		{ 5, 329097, "", "=q4=Gauntlets of Malorne", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
+		{ 6, 329099, "", "=q4=Greaves of Malorne", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
+		Back = "T4SET25Man";
+		Next = "T5DruidFeral25Man";
+	};	
+	
+	AtlasLoot_Data["T4DruidRestoration25Man"] = {	
+		{ 1, 0, "Spell_Nature_Regeneration", "=q6=#t4s1_2#", "=ec1=#m21# - Fallen Defender"};
+		{ 2, 329086, "", "=q4=Crown of Malorne", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
+		{ 3, 329089, "", "=q4=Shoulderguards of Malorne", "=ds="..BabbleBoss["High King Maulgar"]};
+		{ 4, 329087, "", "=q4=Chestguard of Malorne", "=ds="..BabbleBoss["Magtheridon"]};
+		{ 5, 329090, "", "=q4=Handguards of Malorne", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
+		{ 6, 329088, "", "=q4=Legguards of Malorne", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
+		Back = "T4SET25Man";
+		Next = "T5DruidRestoration25Man";
+	};	
+	
+	AtlasLoot_Data["T4DruidBalance25Man"] = {	
+		{ 1, 0, "Spell_Nature_InsectSwarm", "=q6=#t4s1_3#", "=ec1=#m21# - Fallen Defender"};
+		{ 2, 329093, "", "=q4=Antlers of Malorne", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
+		{ 3, 329095, "", "=q4=Pauldrons of Malorne", "=ds="..BabbleBoss["High King Maulgar"]};
+		{ 4, 329091, "", "=q4=Chestpiece of Malorne", "=ds="..BabbleBoss["Magtheridon"]};
+		{ 5, 329092, "", "=q4=Gloves of Malorne", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
+		{ 6, 329094, "", "=q4=Britches of Malorne", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
+		Back = "T4SET25Man";
+		Next = "T5DruidBalance25Man";
+	};	
+	
+	AtlasLoot_Data["T4Hunter25Man"] = {	
+		{ 1, 0, "Ability_Hunter_RunningShot", "=q6=#t4s2#", "=ec1=#m21# - Fallen Hero"};
+		{ 2, 329081, "", "=q4=Demon Stalker Greathelm", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
+		{ 3, 329084, "", "=q4=Demon Stalker Shoulderguards", "=ds="..BabbleBoss["High King Maulgar"]};
+		{ 4, 329082, "", "=q4=Demon Stalker Harness", "=ds="..BabbleBoss["Magtheridon"]};
+		{ 5, 329085, "", "=q4=Demon Stalker Gauntlets", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
+		{ 6, 329083, "", "=q4=Demon Stalker Greaves", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
+		Back = "T4SET25Man";
+		Next = "T5Hunter25Man";
+	};	
+	
+	AtlasLoot_Data["T4Mage25Man"] = {	
+		{ 1, 0, "Spell_Frost_IceStorm", "=q6=#t4s3#", "=ec1=#m21# - Fallen Hero"};
+		{ 2, 329076, "", "=q4=Collar of the Aldor", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
+		{ 3, 329079, "", "=q4=Pauldrons of the Aldor", "=ds="..BabbleBoss["High King Maulgar"]};
+		{ 4, 329077, "", "=q4=Vestments of the Aldor", "=ds="..BabbleBoss["Magtheridon"]};
+		{ 5, 329080, "", "=q4=Gloves of the Aldor", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
+		{ 6, 329078, "", "=q4=Legwraps of the Aldor", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
+		Back = "T4SET25Man";
+		Next = "T5Mage25Man";
+	};	
+	
+	AtlasLoot_Data["T4PaladinProtection25Man"] = {	
+		{ 1, 0, "Spell_Holy_SealOfMight", "=q6=#t4s4_1#", "=ec1=#m21# - Fallen Champion"};
+		{ 2, 329068, "", "=q4=Justicar Faceguard", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
+		{ 3, 329070, "", "=q4=Justicar Shoulderguards", "=ds="..BabbleBoss["High King Maulgar"]};
+		{ 4, 329066, "", "=q4=Justicar Chestguard", "=ds="..BabbleBoss["Magtheridon"]};
+		{ 5, 329067, "", "=q4=Justicar Handguards", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
+		{ 6, 329069, "", "=q4=Justicar Legguards", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
+		Back = "T4SET25Man";
+		Next = "T5PaladinProtection25Man";
+	};	
+	
+	AtlasLoot_Data["T4PaladinRetribution25Man"] = {	
+		{ 1, 0, "Spell_Holy_AuraOfLight", "=q6=#t4s4_2#", "=ec1=#m21# - Fallen Champion"};
+		{ 2, 329073, "", "=q4=Justicar Crown", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
+		{ 3, 329075, "", "=q4=Justicar Shoulderplates", "=ds="..BabbleBoss["High King Maulgar"]};
+		{ 4, 329071, "", "=q4=Justicar Breastplate", "=ds="..BabbleBoss["Magtheridon"]};
+		{ 5, 329072, "", "=q4=Justicar Gauntlets", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
+		{ 6, 329074, "", "=q4=Justicar Greaves", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
+		Back = "T4SET25Man";
+		Next = "T5PaladinRetribution25Man";
+	};	
+	
+	AtlasLoot_Data["T4PaladinHoly25Man"] = {	
+		{ 1, 0, "Spell_Holy_HolyBolt", "=q6=#t4s4_3#", "=ec1=#m21# - Fallen Champion"};
+		{ 2, 329061, "", "=q4=Justicar Diadem", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
+		{ 3, 329064, "", "=q4=Justicar Pauldrons", "=ds="..BabbleBoss["High King Maulgar"]};
+		{ 4, 329062, "", "=q4=Justicar Chestpiece", "=ds="..BabbleBoss["Magtheridon"]};
+		{ 5, 329065, "", "=q4=Justicar Gloves", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
+		{ 6, 329063, "", "=q4=Justicar Leggings", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
+		Back = "T4SET25Man";
+		Next = "T5PaladinHoly25Man";
+	};	
+	
+	AtlasLoot_Data["T4PriestHoly25Man"] = {	
+		{ 1, 0, "Spell_Holy_PowerWordShield", "=q6=#t4s5_1#", "=ec1=#m21# - Fallen Defender"};
+		{ 2, 329049, "", "=q4=Light-Collar of the Incarnate", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
+		{ 3, 329054, "", "=q4=Light-Mantle of the Incarnate", "=ds="..BabbleBoss["High King Maulgar"]};
+		{ 4, 329050, "", "=q4=Robes of the Incarnate", "=ds="..BabbleBoss["Magtheridon"]};
+		{ 5, 329055, "", "=q4=Handwraps of the Incarnate", "The Curator ("..BabbleZone["Karazhan"]..")"};
+		{ 6, 329053, "", "=q4=Trousers of the Incarnate", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
+		Back = "T4SET25Man";
+		Next = "T5PriestHoly25Man";
+	};	
+	
+	AtlasLoot_Data["T4PriestShadow25Man"] = {	
+		{ 1, 0, "Spell_Shadow_AntiShadow", "=q6=#t4s5_2#", "=ec1=#m21# - Fallen Defender"};
+		{ 2, 329058, "", "=q4=Soul-Collar of the Incarnate", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
+		{ 3, 329060, "", "=q4=Soul-Mantle of the Incarnate", "=ds="..BabbleBoss["High King Maulgar"]};
+		{ 4, 329056, "", "=q4=Shroud of the Incarnate", "=ds="..BabbleBoss["Magtheridon"]};
+		{ 5, 329057, "", "=q4=Gloves of the Incarnate", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
+		{ 6, 329059, "", "=q4=Leggings of the Incarnate", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
+		Back = "T4SET25Man";
+		Next = "T5PriestShadow25Man";
+	};	
+	
+	AtlasLoot_Data["T4Rogue25Man"] = {	
+		{ 1, 0, "Ability_BackStab", "=q6=#t4s6#", "=ec1=#m21# - Fallen Champion"};
+		{ 2, 329044, "", "=q4=Netherblade Facemask", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
+		{ 3, 329047, "", "=q4=Netherblade Shoulderpads", "=ds="..BabbleBoss["High King Maulgar"]};
+		{ 4, 329045, "", "=q4=Netherblade Chestpiece", "=ds="..BabbleBoss["Magtheridon"]};
+		{ 5, 329048, "", "=q4=Netherblade Gloves", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
+		{ 6, 329046, "", "=q4=Netherblade Breeches", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
+		Back = "T4SET25Man";
+		Next = "T5Rogue25Man";
+	};	
+	
+	AtlasLoot_Data["T4ShamanEnhancement25Man"] = {	
+		{ 1, 0, "Spell_FireResistanceTotem_01", "=q6=#t4s7_1#", "=ec1=#m21# - Fallen Champion"};
+		{ 2, 329040, "", "=q4=Cyclone Helm", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
+		{ 3, 329043, "", "=q4=Cyclone Shoulderplates", "=ds="..BabbleBoss["High King Maulgar"]};
+		{ 4, 329038, "", "=q4=Cyclone Breastplate", "=ds="..BabbleBoss["Magtheridon"]};
+		{ 5, 329039, "", "=q4=Cyclone Gauntlets", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
+		{ 6, 329042, "", "=q4=Cyclone War-Kilt", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
+		Back = "T4SET25Man";
+		Next = "T5ShamanEnhancement25Man";
+	};	
+	
+	AtlasLoot_Data["T4ShamanRestoration25Man"] = {	
+		{ 1, 0, "Spell_Nature_HealingWaveGreater", "=q6=#t4s7_2#", "=ec1=#m21# - Fallen Champion"};
+		{ 2, 329028, "", "=q4=Cyclone Headdress", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
+		{ 3, 329031, "", "=q4=Cyclone Shoulderpads", "=ds="..BabbleBoss["High King Maulgar"]};
+		{ 4, 329029, "", "=q4=Cyclone Hauberk", "=ds="..BabbleBoss["Magtheridon"]};
+		{ 5, 329032, "", "=q4=Cyclone Gloves", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
+		{ 6, 329030, "", "=q4=Cyclone Kilt", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
+		Back = "T4SET25Man";
+		Next = "T5ShamanRestoration25Man";
+	};	
+	
+	AtlasLoot_Data["T4ShamanElemental25Man"] = {	
+		{ 1, 0, "Spell_Nature_Lightning", "=q6=#t4s7_3#", "=ec1=#m21# - Fallen Champion"};
+		{ 2, 329035, "", "=q4=Cyclone Faceguard", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
+		{ 3, 329037, "", "=q4=Cyclone Shoulderguards", "=ds="..BabbleBoss["High King Maulgar"]};
+		{ 4, 329033, "", "=q4=Cyclone Chestguard", "=ds="..BabbleBoss["Magtheridon"]};
+		{ 5, 329034, "", "=q4=Cyclone Handguards", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
+		{ 6, 329036, "", "=q4=Cyclone Legguards", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
+		Back = "T4SET25Man";
+		Next = "T5ShamanElemental25Man";
+	};	
+	
+	AtlasLoot_Data["T4Warlock25Man"] = {	
+		{ 1, 0, "Spell_Shadow_CurseOfTounges", "=q6=#t4s8#", "=ec1=#m21# - Fallen Hero"};
+		{ 2, 328963, "", "=q4=Voidheart Crown", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
+		{ 3, 328967, "", "=q4=Voidheart Mantle", "=ds="..BabbleBoss["High King Maulgar"]};
+		{ 4, 328964, "", "=q4=Voidheart Robe", "=ds="..BabbleBoss["Magtheridon"]};
+		{ 5, 328968, "", "=q4=Voidheart Gloves", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
+		{ 6, 328966, "", "=q4=Voidheart Leggings", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
+		Back = "T4SET25Man";
+		Next = "T5Warlock25Man";
+	};	
+	
+	AtlasLoot_Data["T4WarriorProtection25Man"] = {	
+		{ 1, 0, "INV_Shield_05", "=q6=#t4s9_1#", "=ec1=#m21# - Fallen Defender"};
+		{ 2, 329011, "", "=q4=Warbringer Greathelm", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
+		{ 3, 329016, "", "=q4=Warbringer Shoulderguards", "=ds="..BabbleBoss["High King Maulgar"]};
+		{ 4, 329012, "", "=q4=Warbringer Chestguard", "=ds="..BabbleBoss["Magtheridon"]};
+		{ 5, 329017, "", "=q4=Warbringer Handguards", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
+		{ 6, 329015, "", "=q4=Warbringer Legguards", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
+		{ 8, 0, "INV_Shield_05", "=q6=#t4s9_1#", "=ec1=#m21# - Fallen Defender"};
+		{ 9, 314984, "", "=q4=Warbringer Helmet", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
+		{ 10, 314988, "", "=q4=Warbringer Pauldrons", "=ds="..BabbleBoss["High King Maulgar"]};
+		{ 11, 314985, "", "=q4=Warbringer Hauberk", "=ds="..BabbleBoss["Magtheridon"]};
+		{ 12, 314989, "", "=q4=Warbringer Gloves", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
+		{ 13, 314987, "", "=q4=Warbringer Leggings", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
+		Back = "T4SET25Man";
+		Next = "T5WarriorProtection25Man";
+	};	
+	
+	AtlasLoot_Data["T4WarriorFury25Man"] = {	
+		{ 1, 0, "Ability_Warrior_BattleShout", "=q6=#t4s9_2#", "=ec1=#m21# - Fallen Defender"};
+		{ 2, 329021, "", "=q4=Warbringer Battle-Helm", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
+		{ 3, 329023, "", "=q4=Warbringer Shoulderplates", "=ds="..BabbleBoss["High King Maulgar"]};
+		{ 4, 329019, "", "=q4=Warbringer Breastplate", "=ds="..BabbleBoss["Magtheridon"]};
+		{ 5, 329020, "", "=q4=Warbringer Gauntlets", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
+		{ 6, 329022, "", "=q4=Warbringer Greaves", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
+		Back = "T4SET25Man";
+		Next = "T5WarriorFury25Man";
+	};	
+
+	-----------------------
+	--- Tier 4 ASCENDED ---
+	-----------------------
+
+	AtlasLoot_Data["T4DruidFeral25ManHEROIC"] = {		
+		{ 1, 0, "Ability_Druid_Maul", "=q6=#t4s1_1#", "=ec1=#m21# - Fallen Defender"};
+		{ 2, 229098, "", "=q4=Stag-Helm of Malorne", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
+		{ 3, 229100, "", "=q4=Mantle of Malorne", "=ds="..BabbleBoss["High King Maulgar"]};
+		{ 4, 229096, "", "=q4=Breastplate of Malorne", "=ds="..BabbleBoss["Magtheridon"]};
+		{ 5, 229097, "", "=q4=Gauntlets of Malorne", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
+		{ 6, 229099, "", "=q4=Greaves of Malorne", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
+		Back = "T4SET25ManHEROIC";	
+		Next = "T5DruidFeral25ManHEROIC";	
+	};	
+	
+	AtlasLoot_Data["T4DruidRestoration25ManHEROIC"] = {		
+		{ 1, 0, "Spell_Nature_Regeneration", "=q6=#t4s1_2#", "=ec1=#m21# - Fallen Defender"};
+		{ 2, 229086, "", "=q4=Crown of Malorne", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
+		{ 3, 229089, "", "=q4=Shoulderguards of Malorne", "=ds="..BabbleBoss["High King Maulgar"]};
+		{ 4, 229087, "", "=q4=Chestguard of Malorne", "=ds="..BabbleBoss["Magtheridon"]};
+		{ 5, 229090, "", "=q4=Handguards of Malorne", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
+		{ 6, 229088, "", "=q4=Legguards of Malorne", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
+		Back = "T4SET25ManHEROIC";	
+		Next = "T5DruidRestoration25ManHEROIC";	
+	};	
+	
+	AtlasLoot_Data["T4DruidBalance25ManHEROIC"] = {		
+		{ 1, 0, "Spell_Nature_InsectSwarm", "=q6=#t4s1_3#", "=ec1=#m21# - Fallen Defender"};
+		{ 2, 229093, "", "=q4=Antlers of Malorne", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
+		{ 3, 229095, "", "=q4=Pauldrons of Malorne", "=ds="..BabbleBoss["High King Maulgar"]};
+		{ 4, 229091, "", "=q4=Chestpiece of Malorne", "=ds="..BabbleBoss["Magtheridon"]};
+		{ 5, 229092, "", "=q4=Gloves of Malorne", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
+		{ 6, 229094, "", "=q4=Britches of Malorne", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
+		Back = "T4SET25ManHEROIC";	
+		Next = "T5DruidBalance25ManHEROIC";	
+	};	
+	
+	AtlasLoot_Data["T4Hunter25ManHEROIC"] = {		
+		{ 1, 0, "Ability_Hunter_RunningShot", "=q6=#t4s2#", "=ec1=#m21# - Fallen Hero"};
+		{ 2, 229081, "", "=q4=Demon Stalker Greathelm", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
+		{ 3, 229084, "", "=q4=Demon Stalker Shoulderguards", "=ds="..BabbleBoss["High King Maulgar"]};
+		{ 4, 229082, "", "=q4=Demon Stalker Harness", "=ds="..BabbleBoss["Magtheridon"]};
+		{ 5, 229085, "", "=q4=Demon Stalker Gauntlets", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
+		{ 6, 229083, "", "=q4=Demon Stalker Greaves", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
+		Back = "T4SET25ManHEROIC";	
+		Next = "T5Hunter25ManHEROIC";	
+	};	
+	
+	AtlasLoot_Data["T4Mage25ManHEROIC"] = {		
+		{ 1, 0, "Spell_Frost_IceStorm", "=q6=#t4s3#", "=ec1=#m21# - Fallen Hero"};
+		{ 2, 229076, "", "=q4=Collar of the Aldor", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
+		{ 3, 229079, "", "=q4=Pauldrons of the Aldor", "=ds="..BabbleBoss["High King Maulgar"]};
+		{ 4, 229077, "", "=q4=Vestments of the Aldor", "=ds="..BabbleBoss["Magtheridon"]};
+		{ 5, 229080, "", "=q4=Gloves of the Aldor", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
+		{ 6, 229078, "", "=q4=Legwraps of the Aldor", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
+		Back = "T4SET25ManHEROIC";	
+		Next = "T5Mage25ManHEROIC";	
+	};	
+	
+	AtlasLoot_Data["T4PaladinProtection25ManHEROIC"] = {		
+		{ 1, 0, "Spell_Holy_SealOfMight", "=q6=#t4s4_1#", "=ec1=#m21# - Fallen Champion"};
+		{ 2, 229068, "", "=q4=Justicar Faceguard", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
+		{ 3, 229070, "", "=q4=Justicar Shoulderguards", "=ds="..BabbleBoss["High King Maulgar"]};
+		{ 4, 229066, "", "=q4=Justicar Chestguard", "=ds="..BabbleBoss["Magtheridon"]};
+		{ 5, 229067, "", "=q4=Justicar Handguards", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
+		{ 6, 229069, "", "=q4=Justicar Legguards", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
+		Back = "T4SET25ManHEROIC";	
+		Next = "T5PaladinProtection25ManHEROIC";	
+	};	
+	
+	AtlasLoot_Data["T4PaladinRetribution25ManHEROIC"] = {		
+		{ 1, 0, "Spell_Holy_AuraOfLight", "=q6=#t4s4_2#", "=ec1=#m21# - Fallen Champion"};
+		{ 2, 229073, "", "=q4=Justicar Crown", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
+		{ 3, 229075, "", "=q4=Justicar Shoulderplates", "=ds="..BabbleBoss["High King Maulgar"]};
+		{ 4, 229071, "", "=q4=Justicar Breastplate", "=ds="..BabbleBoss["Magtheridon"]};
+		{ 5, 229072, "", "=q4=Justicar Gauntlets", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
+		{ 6, 229074, "", "=q4=Justicar Greaves", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
+		Back = "T4SET25ManHEROIC";	
+		Next = "T5PaladinRetribution25ManHEROIC";	
+	};	
+	
+	AtlasLoot_Data["T4PaladinHoly25ManHEROIC"] = {		
+		{ 1, 0, "Spell_Holy_HolyBolt", "=q6=#t4s4_3#", "=ec1=#m21# - Fallen Champion"};
+		{ 2, 229061, "", "=q4=Justicar Diadem", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
+		{ 3, 229064, "", "=q4=Justicar Pauldrons", "=ds="..BabbleBoss["High King Maulgar"]};
+		{ 4, 229062, "", "=q4=Justicar Chestpiece", "=ds="..BabbleBoss["Magtheridon"]};
+		{ 5, 229065, "", "=q4=Justicar Gloves", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
+		{ 6, 229063, "", "=q4=Justicar Leggings", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
+		Back = "T4SET25ManHEROIC";	
+		Next = "T5PaladinHoly25ManHEROIC";	
+	};	
+	
+	AtlasLoot_Data["T4PriestHoly25ManHEROIC"] = {		
+		{ 1, 0, "Spell_Holy_PowerWordShield", "=q6=#t4s5_1#", "=ec1=#m21# - Fallen Defender"};
+		{ 2, 229049, "", "=q4=Light-Collar of the Incarnate", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
+		{ 3, 229054, "", "=q4=Light-Mantle of the Incarnate", "=ds="..BabbleBoss["High King Maulgar"]};
+		{ 4, 229050, "", "=q4=Robes of the Incarnate", "=ds="..BabbleBoss["Magtheridon"]};
+		{ 5, 229055, "", "=q4=Handwraps of the Incarnate", "The Curator ("..BabbleZone["Karazhan"]..")"};
+		{ 6, 229053, "", "=q4=Trousers of the Incarnate", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
+		Back = "T4SET25ManHEROIC";	
+		Next = "T5PriestHoly25ManHEROIC";	
+	};	
+	
+	AtlasLoot_Data["T4PriestShadow25ManHEROIC"] = {		
+		{ 1, 0, "Spell_Shadow_AntiShadow", "=q6=#t4s5_2#", "=ec1=#m21# - Fallen Defender"};
+		{ 2, 229058, "", "=q4=Soul-Collar of the Incarnate", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
+		{ 3, 229060, "", "=q4=Soul-Mantle of the Incarnate", "=ds="..BabbleBoss["High King Maulgar"]};
+		{ 4, 229056, "", "=q4=Shroud of the Incarnate", "=ds="..BabbleBoss["Magtheridon"]};
+		{ 5, 229057, "", "=q4=Gloves of the Incarnate", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
+		{ 6, 229059, "", "=q4=Leggings of the Incarnate", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
+		Back = "T4SET25ManHEROIC";	
+		Next = "T5PriestShadow25ManHEROIC";	
+	};	
+	
+	AtlasLoot_Data["T4Rogue25ManHEROIC"] = {		
+		{ 1, 0, "Ability_BackStab", "=q6=#t4s6#", "=ec1=#m21# - Fallen Champion"};
+		{ 2, 229044, "", "=q4=Netherblade Facemask", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
+		{ 3, 229047, "", "=q4=Netherblade Shoulderpads", "=ds="..BabbleBoss["High King Maulgar"]};
+		{ 4, 229045, "", "=q4=Netherblade Chestpiece", "=ds="..BabbleBoss["Magtheridon"]};
+		{ 5, 229048, "", "=q4=Netherblade Gloves", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
+		{ 6, 229046, "", "=q4=Netherblade Breeches", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
+		Back = "T4SET25ManHEROIC";	
+		Next = "T5Rogue25ManHEROIC";	
+	};	
+	
+	AtlasLoot_Data["T4ShamanEnhancement25ManHEROIC"] = {		
+		{ 1, 0, "Spell_FireResistanceTotem_01", "=q6=#t4s7_1#", "=ec1=#m21# - Fallen Champion"};
+		{ 2, 229040, "", "=q4=Cyclone Helm", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
+		{ 3, 229043, "", "=q4=Cyclone Shoulderplates", "=ds="..BabbleBoss["High King Maulgar"]};
+		{ 4, 229038, "", "=q4=Cyclone Breastplate", "=ds="..BabbleBoss["Magtheridon"]};
+		{ 5, 229039, "", "=q4=Cyclone Gauntlets", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
+		{ 6, 229042, "", "=q4=Cyclone War-Kilt", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
+		Back = "T4SET25ManHEROIC";	
+		Next = "T5ShamanEnhancement25ManHEROIC";	
+	};	
+	
+	AtlasLoot_Data["T4ShamanRestoration25ManHEROIC"] = {		
+		{ 1, 0, "Spell_Nature_HealingWaveGreater", "=q6=#t4s7_2#", "=ec1=#m21# - Fallen Champion"};
+		{ 2, 229028, "", "=q4=Cyclone Headdress", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
+		{ 3, 229031, "", "=q4=Cyclone Shoulderpads", "=ds="..BabbleBoss["High King Maulgar"]};
+		{ 4, 229029, "", "=q4=Cyclone Hauberk", "=ds="..BabbleBoss["Magtheridon"]};
+		{ 5, 229032, "", "=q4=Cyclone Gloves", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
+		{ 6, 229030, "", "=q4=Cyclone Kilt", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
+		Back = "T4SET25ManHEROIC";	
+		Next = "T5ShamanRestoration25ManHEROIC";	
+	};	
+	
+	AtlasLoot_Data["T4ShamanElemental25ManHEROIC"] = {		
+		{ 1, 0, "Spell_Nature_Lightning", "=q6=#t4s7_3#", "=ec1=#m21# - Fallen Champion"};
+		{ 2, 229035, "", "=q4=Cyclone Faceguard", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
+		{ 3, 229037, "", "=q4=Cyclone Shoulderguards", "=ds="..BabbleBoss["High King Maulgar"]};
+		{ 4, 229033, "", "=q4=Cyclone Chestguard", "=ds="..BabbleBoss["Magtheridon"]};
+		{ 5, 229034, "", "=q4=Cyclone Handguards", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
+		{ 6, 229036, "", "=q4=Cyclone Legguards", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
+		Back = "T4SET25ManHEROIC";	
+		Next = "T5ShamanElemental25ManHEROIC";	
+	};	
+	
+	AtlasLoot_Data["T4Warlock25ManHEROIC"] = {		
+		{ 1, 0, "Spell_Shadow_CurseOfTounges", "=q6=#t4s8#", "=ec1=#m21# - Fallen Hero"};
+		{ 2, 228963, "", "=q4=Voidheart Crown", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
+		{ 3, 228967, "", "=q4=Voidheart Mantle", "=ds="..BabbleBoss["High King Maulgar"]};
+		{ 4, 228964, "", "=q4=Voidheart Robe", "=ds="..BabbleBoss["Magtheridon"]};
+		{ 5, 228968, "", "=q4=Voidheart Gloves", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
+		{ 6, 228966, "", "=q4=Voidheart Leggings", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
+		Back = "T4SET25ManHEROIC";	
+		Next = "T5Warlock25ManHEROIC";	
+	};	
+	
+	AtlasLoot_Data["T4WarriorProtection25ManHEROIC"] = {		
+		{ 1, 0, "INV_Shield_05", "=q6=#t4s9_1#", "=ec1=#m21# - Fallen Defender"};
+		{ 2, 229011, "", "=q4=Warbringer Greathelm", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
+		{ 3, 229016, "", "=q4=Warbringer Shoulderguards", "=ds="..BabbleBoss["High King Maulgar"]};
+		{ 4, 229012, "", "=q4=Warbringer Chestguard", "=ds="..BabbleBoss["Magtheridon"]};
+		{ 5, 229017, "", "=q4=Warbringer Handguards", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
+		{ 6, 229015, "", "=q4=Warbringer Legguards", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
+		{ 8, 0, "INV_Shield_05", "=q6=#t4s9_1#", "=ec1=#m21# - Fallen Defender"};
+		{ 9, 214984, "", "=q4=Warbringer Helmet", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
+		{ 10, 214988, "", "=q4=Warbringer Pauldrons", "=ds="..BabbleBoss["High King Maulgar"]};
+		{ 11, 214985, "", "=q4=Warbringer Hauberk", "=ds="..BabbleBoss["Magtheridon"]};
+		{ 12, 214989, "", "=q4=Warbringer Gloves", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
+		{ 13, 214987, "", "=q4=Warbringer Leggings", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
+		Back = "T4SET25ManHEROIC";	
+		Next = "T5WarriorProtection25ManHEROIC";	
+	};	
+	
+	AtlasLoot_Data["T4WarriorFury25ManHEROIC"] = {		
+		{ 1, 0, "Ability_Warrior_BattleShout", "=q6=#t4s9_2#", "=ec1=#m21# - Fallen Defender"};
+		{ 2, 229021, "", "=q4=Warbringer Battle-Helm", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
+		{ 3, 229023, "", "=q4=Warbringer Shoulderplates", "=ds="..BabbleBoss["High King Maulgar"]};
+		{ 4, 229019, "", "=q4=Warbringer Breastplate", "=ds="..BabbleBoss["Magtheridon"]};
+		{ 5, 229020, "", "=q4=Warbringer Gauntlets", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
+		{ 6, 229022, "", "=q4=Warbringer Greaves", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
+		Back = "T4SET25ManHEROIC";	
+		Next = "T5WarriorFury25ManHEROIC";	
+	};	
 		--------------
 		--- Tier 5 ---
 		--------------
