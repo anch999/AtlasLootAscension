@@ -1631,11 +1631,12 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 27, 32897, "", "=q2=Mark of the Illidari", "=ds=#m20#", "", "27%"};
 	};
 
-		------------------------------------------------------
-		--- Coilfang Reservoir: Serpentshrine Cavern HEROIC---
-		------------------------------------------------------
 
-	AtlasLoot_Data["CFRSerpentHydrossHEROIC"] = {
+	------------------------------------------------------
+	--- Coilfang Reservoir: Serpentshrine Cavern HEROIC FLEX---
+	------------------------------------------------------
+
+	AtlasLoot_Data["CFRSerpentHydross25Man"] = {
 		{ 1, 230056, "", "=q4=Robe of Hateful Echoes", "=ds=#s5#, #a1#", "", "18%"};
 		{ 2, 232516, "", "=q4=Wraps of Purification", "=ds=#s8#, #a1#", "", "18%"};
 		{ 3, 230050, "", "=q4=Boots of the Shifting Nightmare", "=ds=#s12#, #a1#", "", "17%"};
@@ -1651,10 +1652,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 20, 230049, "", "=q4=Fathomstone", "=ds=#s15#", "", "19%"};
 		{ 21, 230051, "", "=q4=Idol of the Crescent Goddess", "=ds=#s16#, #w14#", "", "11%"};
 		{ 23, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
-		Next = "CFRSerpentLurkerHEROIC";
+		Next = "CFRSerpentLurker25Man";
 	};
 
-	AtlasLoot_Data["CFRSerpentLurkerHEROIC"] = {
+	AtlasLoot_Data["CFRSerpentLurker25Man"] = {
 		{ 1, 230064, "", "=q4=Cord of Screaming Terrors", "=ds=#s10#, #a1#", "", "17%"};
 		{ 2, 230067, "", "=q4=Velvet Boots of the Guardian", "=ds=#s12#, #a1#", "", "17%"};
 		{ 3, 230062, "", "=q4=Grove-Bands of Remulos", "=ds=#s8#, #a2#", "", "21%"};
@@ -1669,11 +1670,11 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 19, 230665, "", "=q4=Earring of Soulful Meditation", "=ds=#s14#, =q1=#m1# =ds=#c5#", "", "18%"};
 		{ 20, 230063, "", "=q4=Libram of Absolute Truth", "=ds=#s16#, #w16#", "", "17%"};
 		{ 21, 230058, "", "=q4=Mallet of the Tides", "=ds=#h1#, #w6#", "", "20%"};
-		Prev = "CFRSerpentHydrossHEROIC";
-		Next = "CFRSerpentLeotherasHEROIC";
+		Prev = "CFRSerpentHydross25Man";
+		Next = "CFRSerpentLeotheras25Man";
 	};
 
-	AtlasLoot_Data["CFRSerpentLeotherasHEROIC"] = {
+	AtlasLoot_Data["CFRSerpentLeotheras25Man"] = {
 		{ 1, 230092, "", "=q4=Orca-Hide Boots", "=ds=#s12#, #a2#", "", "13%"};
 		{ 2, 230097, "", "=q4=Coral-Barbed Shoulderpads", "=ds=#s3#, #a3#", "", "15%"};
 		{ 3, 230091, "", "=q4=True-Aim Stalker Bands", "=ds=#s8#, #a3#", "", "17%"};
@@ -1684,11 +1685,11 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 17, 230240, "", "=q4=Gloves of the Vanquished Defender", "=q1=#m1# =ds=#c1#, #c5#, #c9#", "", "67%"};
 		{ 18, 230241, "", "=q4=Gloves of the Vanquished Hero", "=q1=#m1# =ds=#c2#, #c3#, #c8#", "", "65%"};
 		{ 20, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
-		Prev = "CFRSerpentLurkerHEROIC";
-		Next = "CFRSerpentKarathressHEROIC";
+		Prev = "CFRSerpentLurker25Man";
+		Next = "CFRSerpentKarathress25Man";
 	};
 
-	AtlasLoot_Data["CFRSerpentKarathressHEROIC"] = {
+	AtlasLoot_Data["CFRSerpentKarathress25Man"] = {
 		{ 1, 230100, "", "=q4=Soul-Strider Boots", "=ds=#s12#, #a1#", "", "15%"};
 		{ 2, 230101, "", "=q4=Bloodsea Brigand's Vest", "=ds=#s5#, #a2#", "", "15%"};
 		{ 3, 230099, "", "=q4=Frayed Tether of the Drowned", "=ds=#s2#", "", "15%"};
@@ -1699,11 +1700,11 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 17, 230246, "", "=q4=Leggings of the Vanquished Defender", "=q1=#m1# =ds=#c1#, #c5#, #c9#", "", "61%"};
 		{ 18, 230247, "", "=q4=Leggings of the Vanquished Hero", "=q1=#m1# =ds=#c2#, #c3#, #c8#", "", "62%"};
 		{ 20, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
-		Prev = "CFRSerpentLeotherasHEROIC";
-		Next = "CFRSerpentMorogrimHEROIC";
+		Prev = "CFRSerpentLeotheras25Man";
+		Next = "CFRSerpentMorogrim25Man";
 	};
 
-	AtlasLoot_Data["CFRSerpentMorogrimHEROIC"] = {
+	AtlasLoot_Data["CFRSerpentMorogrim25Man"] = {
 		{ 1, 230098, "", "=q4=Razor-Scale Battlecloak", "=ds=#s4#", "", "22%"};
 		{ 2, 230079, "", "=q4=Illidari Shoulderpads", "=ds=#s3#, #a1#", "", "15%"};
 		{ 3, 230075, "", "=q4=Gnarled Chestpiece of the Ancients", "=ds=#s5#, #a2#", "", "19%"};
@@ -1718,11 +1719,11 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 19, 230720, "", "=q4=Serpent-Coil Braid", "=ds=#s14#, =q1=#m1# =ds=#c3#", "", "20%"};
 		{ 20, 230082, "", "=q4=Talon of Azshara", "=ds=#h1#, #w10#", "", "20%"};
 		{ 21, 230080, "", "=q4=Luminescent Rod of the Naaru", "=ds=#w12#", "", "15%"};
-		Prev = "CFRSerpentKarathressHEROIC";
-		Next = "CFRSerpentVashjHEROIC";
+		Prev = "CFRSerpentKarathress25Man";
+		Next = "CFRSerpentVashj25Man";
 	};
 
-	AtlasLoot_Data["CFRSerpentVashjHEROIC"] = {
+	AtlasLoot_Data["CFRSerpentVashj25Man"] = {
 		{ 1, 230107, "", "=q4=Vestments of the Sea-Witch", "=ds=#s5#, #a1#", "", "13%"};
 		{ 2, 230111, "", "=q4=Runetotem's Mantle", "=ds=#s3#, #a2#", "", "14%"};
 		{ 3, 230106, "", "=q4=Belt of One-Hundred Deaths", "=ds=#s10#, #a2#", "", "12%"};
@@ -1740,10 +1741,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 18, 230244, "", "=q4=Helm of the Vanquished Hero", "=q1=#m1# =ds=#c2#, #c3#, #c8#", "", "63%"};
 		{ 20, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		{ 22, 29906, "", "=q1=Vashj's Vial Remnant", "=ds=#m3#", "", "35%"};
-		Prev = "CFRSerpentMorogrimHEROIC";
+		Prev = "CFRSerpentMorogrim25Man";
 	};
 
-	AtlasLoot_Data["CFRSerpentTrashHEROIC"] = {
+	AtlasLoot_Data["CFRSerpentTrash25Man"] = {
 		{ 1, 230027, "", "=q4=Boots of Courage Unending", "=ds=#s12#, #a4#", "", "3%"};
 		{ 2, 230022, "", "=q4=Pendant of the Perilous", "=ds=#s2#", "", "3%"};
 		{ 3, 230620, "", "=q4=Spyglass of the Hidden Fleet", "=ds=#s14#", "", "4%"};
@@ -1769,6 +1770,146 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 25, 30183, "", "=q4=Nether Vortex", "=ds=#e8#", "", "75%"};
 		{ 27, 32897, "", "=q2=Mark of the Illidari", "=ds=#m20#", "", "27%"};
 	};
+
+	------------------------------------------------------
+	--- Coilfang Reservoir: Serpentshrine Cavern ASCENDED ---
+	------------------------------------------------------
+
+	AtlasLoot_Data["CFRSerpentHydross25ManHEROIC"] = {
+		{ 1, 230056, "", "=q4=Robe of Hateful Echoes", "=ds=#s5#, #a1#", "", "18%"};
+		{ 2, 232516, "", "=q4=Wraps of Purification", "=ds=#s8#, #a1#", "", "18%"};
+		{ 3, 230050, "", "=q4=Boots of the Shifting Nightmare", "=ds=#s12#, #a1#", "", "17%"};
+		{ 4, 230055, "", "=q4=Shoulderpads of the Stranger", "=ds=#s3#, #a2#", "", "16%"};
+		{ 5, 230047, "", "=q4=Blackfathom Warbands", "=ds=#s8#, #a3#", "", "19%"};
+		{ 6, 230054, "", "=q4=Ranger-General's Chestguard", "=ds=#s5#, #a3#", "", "18%"};
+		{ 7, 230048, "", "=q4=Brighthelm of Justice", "=ds=#s1#, #a4#", "", "21%"};
+		{ 8, 230053, "", "=q4=Pauldrons of the Wardancer", "=ds=#s3#, #a4#", "", "16%"};
+		{ 16, 230052, "", "=q4=Ring of Lethality", "=ds=#s13#", "", "20%"};
+		{ 17, 233055, "", "=q4=Band of Vile Aggression", "=ds=#s13#", "", "14%"};
+		{ 18, 230664, "", "=q4=Living Root of the Wildheart", "=ds=#s14#, =q1=#m1# =ds=#c1#", "", "18%"};
+		{ 19, 230629, "", "=q4=Scarab of Displacement", "=ds=#s14#", "", "21%"};
+		{ 20, 230049, "", "=q4=Fathomstone", "=ds=#s15#", "", "19%"};
+		{ 21, 230051, "", "=q4=Idol of the Crescent Goddess", "=ds=#s16#, #w14#", "", "11%"};
+		{ 23, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
+		Next = "CFRSerpentLurker25ManHEROIC";
+	};
+
+	AtlasLoot_Data["CFRSerpentLurker25ManHEROIC"] = {
+		{ 1, 230064, "", "=q4=Cord of Screaming Terrors", "=ds=#s10#, #a1#", "", "17%"};
+		{ 2, 230067, "", "=q4=Velvet Boots of the Guardian", "=ds=#s12#, #a1#", "", "17%"};
+		{ 3, 230062, "", "=q4=Grove-Bands of Remulos", "=ds=#s8#, #a2#", "", "21%"};
+		{ 4, 230060, "", "=q4=Boots of Effortless Striking", "=ds=#s12#, #a2#", "", "21%"};
+		{ 5, 230066, "", "=q4=Tempest-Strider Boots", "=ds=#s12#, #a3#", "", "21%"};
+		{ 6, 230065, "", "=q4=Glowing Breastplate of Truth", "=ds=#s5#, #a4#", "", "20%"};
+		{ 7, 230057, "", "=q4=Bracers of Eradication", "=ds=#s8#, #a4#", "", "19%"};
+		{ 9, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
+		{ 16, 230059, "", "=q4=Choker of Animalistic Fury", "=ds=#s2#", "", "21%"};
+		{ 17, 230061, "", "=q4=Ancestral Ring of Conquest", "=ds=#s13#", "", "20%"};
+		{ 18, 233054, "", "=q4=The Seal of Danzalar", "=ds=#s13#", "", "14%"};
+		{ 19, 230665, "", "=q4=Earring of Soulful Meditation", "=ds=#s14#, =q1=#m1# =ds=#c5#", "", "18%"};
+		{ 20, 230063, "", "=q4=Libram of Absolute Truth", "=ds=#s16#, #w16#", "", "17%"};
+		{ 21, 230058, "", "=q4=Mallet of the Tides", "=ds=#h1#, #w6#", "", "20%"};
+		Prev = "CFRSerpentHydross25ManHEROIC";
+		Next = "CFRSerpentLeotheras25ManHEROIC";
+	};
+
+	AtlasLoot_Data["CFRSerpentLeotheras25ManHEROIC"] = {
+		{ 1, 230092, "", "=q4=Orca-Hide Boots", "=ds=#s12#, #a2#", "", "13%"};
+		{ 2, 230097, "", "=q4=Coral-Barbed Shoulderpads", "=ds=#s3#, #a3#", "", "15%"};
+		{ 3, 230091, "", "=q4=True-Aim Stalker Bands", "=ds=#s8#, #a3#", "", "17%"};
+		{ 4, 230096, "", "=q4=Girdle of the Invulnerable", "=ds=#s10#, #a4#", "", "14%"};
+		{ 5, 230627, "", "=q4=Tsunami Talisman", "=ds=#s14#", "", "15%"};
+		{ 6, 230095, "", "=q4=Fang of the Leviathan", "=ds=#h3#, #w10#", "", "14%"};
+		{ 16, 230239, "", "=q4=Gloves of the Vanquished Champion", "=q1=#m1# =ds=#c4#, #c6#, #c7#", "", "63%"};
+		{ 17, 230240, "", "=q4=Gloves of the Vanquished Defender", "=q1=#m1# =ds=#c1#, #c5#, #c9#", "", "67%"};
+		{ 18, 230241, "", "=q4=Gloves of the Vanquished Hero", "=q1=#m1# =ds=#c2#, #c3#, #c8#", "", "65%"};
+		{ 20, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
+		Prev = "CFRSerpentLurker25ManHEROIC";
+		Next = "CFRSerpentKarathress25ManHEROIC";
+	};
+
+	AtlasLoot_Data["CFRSerpentKarathress25ManHEROIC"] = {
+		{ 1, 230100, "", "=q4=Soul-Strider Boots", "=ds=#s12#, #a1#", "", "15%"};
+		{ 2, 230101, "", "=q4=Bloodsea Brigand's Vest", "=ds=#s5#, #a2#", "", "15%"};
+		{ 3, 230099, "", "=q4=Frayed Tether of the Drowned", "=ds=#s2#", "", "15%"};
+		{ 4, 230663, "", "=q4=Fathom-Brooch of the Tidewalker", "=ds=#s14#, =q1=#m1# =ds=#c7#", "", "15%"};
+		{ 5, 230626, "", "=q4=Sextant of Unstable Currents", "=ds=#s14#", "", "14%"};
+		{ 6, 230090, "", "=q4=World Breaker", "=ds=#h2#, #w6#", "", "15%"};
+		{ 16, 230245, "", "=q4=Leggings of the Vanquished Champion", "=q1=#m1# =ds=#c4#, #c6#, #c7#", "", "62%"};
+		{ 17, 230246, "", "=q4=Leggings of the Vanquished Defender", "=q1=#m1# =ds=#c1#, #c5#, #c9#", "", "61%"};
+		{ 18, 230247, "", "=q4=Leggings of the Vanquished Hero", "=q1=#m1# =ds=#c2#, #c3#, #c8#", "", "62%"};
+		{ 20, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
+		Prev = "CFRSerpentLeotheras25ManHEROIC";
+		Next = "CFRSerpentMorogrim25ManHEROIC";
+	};
+
+	AtlasLoot_Data["CFRSerpentMorogrim25ManHEROIC"] = {
+		{ 1, 230098, "", "=q4=Razor-Scale Battlecloak", "=ds=#s4#", "", "22%"};
+		{ 2, 230079, "", "=q4=Illidari Shoulderpads", "=ds=#s3#, #a1#", "", "15%"};
+		{ 3, 230075, "", "=q4=Gnarled Chestpiece of the Ancients", "=ds=#s5#, #a2#", "", "19%"};
+		{ 4, 230085, "", "=q4=Mantle of the Tireless Tracker", "=ds=#s3#, #a3#", "", "20%"};
+		{ 5, 230068, "", "=q4=Girdle of the Tidal Call", "=ds=#s10#, #a3#", "", "17%"};
+		{ 6, 230084, "", "=q4=Pauldrons of the Argent Sentinel", "=ds=#s3#, #a4#", "", "21%"};
+		{ 7, 230081, "", "=q4=Warboots of Obliteration", "=ds=#s12#, #a4#", "", "21%"};
+		{ 9, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
+		{ 16, 230008, "", "=q4=Pendant of the Lost Ages", "=ds=#s2#", "", "18%"};
+		{ 17, 230083, "", "=q4=Ring of Sundered Souls", "=ds=#s13#", "", "21%"};
+		{ 18, 233058, "", "=q4=Band of the Vigilant", "=ds=#s13#", "", "19%"};
+		{ 19, 230720, "", "=q4=Serpent-Coil Braid", "=ds=#s14#, =q1=#m1# =ds=#c3#", "", "20%"};
+		{ 20, 230082, "", "=q4=Talon of Azshara", "=ds=#h1#, #w10#", "", "20%"};
+		{ 21, 230080, "", "=q4=Luminescent Rod of the Naaru", "=ds=#w12#", "", "15%"};
+		Prev = "CFRSerpentKarathress25ManHEROIC";
+		Next = "CFRSerpentVashj25ManHEROIC";
+	};
+
+	AtlasLoot_Data["CFRSerpentVashj25ManHEROIC"] = {
+		{ 1, 230107, "", "=q4=Vestments of the Sea-Witch", "=ds=#s5#, #a1#", "", "13%"};
+		{ 2, 230111, "", "=q4=Runetotem's Mantle", "=ds=#s3#, #a2#", "", "14%"};
+		{ 3, 230106, "", "=q4=Belt of One-Hundred Deaths", "=ds=#s10#, #a2#", "", "12%"};
+		{ 4, 230104, "", "=q4=Cobra-Lash Boots", "=ds=#s12#, #a3#", "", "13%"};
+		{ 5, 230102, "", "=q4=Krakken-Heart Breastplate", "=ds=#s5#, #a4#", "", "15%"};
+		{ 6, 230112, "", "=q4=Glorious Gauntlets of Crestfall", "=ds=#s9#, #a4#", "", "14%"};
+		{ 7, 230109, "", "=q4=Ring of Endless Coils", "=ds=#s13#", "", "13%"};
+		{ 8, 230110, "", "=q4=Coral Band of the Revived", "=ds=#s13#", "", "16%"};
+		{ 9, 230621, "", "=q4=Prism of Inner Calm", "=ds=#s14#", "", "13%"};
+		{ 10, 230103, "", "=q4=Fang of Vashj", "=ds=#h1#, #w4#", "", "14%"};
+		{ 11, 230108, "", "=q4=Lightfathom Scepter", "=ds=#h3#, #w6#", "", "14%"};
+		{ 12, 230105, "", "=q4=Serpent Spine Longbow", "=ds=#w2#", "", "13%"};
+		{ 16, 230242, "", "=q4=Helm of the Vanquished Champion", "=q1=#m1# =ds=#c4#, #c6#, #c7#", "", "61%"};
+		{ 17, 230243, "", "=q4=Helm of the Vanquished Defender", "=q1=#m1# =ds=#c1#, #c5#, #c9#", "", "62%"};
+		{ 18, 230244, "", "=q4=Helm of the Vanquished Hero", "=q1=#m1# =ds=#c2#, #c3#, #c8#", "", "63%"};
+		{ 20, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
+		{ 22, 29906, "", "=q1=Vashj's Vial Remnant", "=ds=#m3#", "", "35%"};
+		Prev = "CFRSerpentMorogrim25ManHEROIC";
+	};
+
+	AtlasLoot_Data["CFRSerpentTrash25ManHEROIC"] = {
+		{ 1, 230027, "", "=q4=Boots of Courage Unending", "=ds=#s12#, #a4#", "", "3%"};
+		{ 2, 230022, "", "=q4=Pendant of the Perilous", "=ds=#s2#", "", "3%"};
+		{ 3, 230620, "", "=q4=Spyglass of the Hidden Fleet", "=ds=#s14#", "", "4%"};
+		{ 4, 230023, "", "=q4=Totem of the Maelstrom", "=ds=#s16#, #w15#", "", "3%"};
+		{ 5, 230021, "", "=q4=Wildfury Greatstaff", "=ds=#w9#", "", "3%"};
+		{ 6, 230025, "", "=q4=Serpentshrine Shuriken", "=ds=#w11#", "", "3%"};
+		{ 8, 30324, "", "=q4=Plans: Red Havoc Boots", "=ds=#p2# (375)", "", "1%"};
+		{ 9, 30322, "", "=q4=Plans: Red Belt of Battle", "=ds=#p2# (375)", "", "2%"};
+		{ 10, 30323, "", "=q4=Plans: Boots of the Protector", "=ds=#p2# (375)", "", "2%"};
+		{ 11, 30321, "", "=q4=Plans: Belt of the Guardian", "=ds=#p2# (375)", "", "2%"};
+		{ 12, 30280, "", "=q4=Pattern: Belt of Blasting", "=ds=#p8# (375)", "", "1%"};
+		{ 13, 30282, "", "=q4=Pattern: Boots of Blasting", "=ds=#p8# (375)", "", "1%"};
+		{ 14, 30283, "", "=q4=Pattern: Boots of the Long Road", "=ds=#p8# (375)", "", "2%"};
+		{ 15, 30281, "", "=q4=Pattern: Belt of the Long Road", "=ds=#p8# (375)", "", "1%"};
+		{ 16, 30308, "", "=q4=Pattern: Hurricane Boots", "=ds=#p7# (375)", "", "1%"};
+		{ 17, 30304, "", "=q4=Pattern: Monsoon Belt", "=ds=#p7# (375)", "", "1%"};
+		{ 18, 30305, "", "=q4=Pattern: Boots of Natural Grace", "=ds=#p7# (375)", "", "2%"};
+		{ 19, 30307, "", "=q4=Pattern: Boots of the Crimson Hawk", "=ds=#p7# (375)", "", "1%"};
+		{ 20, 30306, "", "=q4=Pattern: Boots of Utter Darkness", "=ds=#p7# (375)", "", "2%"};
+		{ 21, 30301, "", "=q4=Pattern: Belt of Natural Power", "=ds=#p7# (375)", "", "1%"};
+		{ 22, 30303, "", "=q4=Pattern: Belt of the Black Eagle", "=ds=#p7# (375)", "", "1%"};
+		{ 23, 30302, "", "=q4=Pattern: Belt of Deep Shadow", "=ds=#p7# (375)", "", "1%"};
+		{ 25, 30183, "", "=q4=Nether Vortex", "=ds=#e8#", "", "75%"};
+		{ 27, 32897, "", "=q2=Mark of the Illidari", "=ds=#m20#", "", "27%"};
+	};
+
 		--------------------
 		--- Gruul's Lair ---
 		--------------------
@@ -3945,11 +4086,11 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 8, 30319, "", "=q5=Nether Spike", "=ds=#w17#"};
 	};
 
-		-----------------------------------
-		--- Tempest Keep: The Eye HEROIC---
-		-----------------------------------
+	-----------------------------------
+	--- Tempest Keep: The Eye HEROIC FLEX---
+	-----------------------------------
 
-	AtlasLoot_Data["TKEyeAlarHEROIC"] = {
+	AtlasLoot_Data["TKEyeAlar25Man"] = {
 		{ 1, 229925, "", "=q4=Phoenix-Wing Cloak", "=ds=#s4#", "", "23%"};
 		{ 2, 229918, "", "=q4=Mindstorm Wristbands", "=ds=#s8#, #a1#", "", "22%"};
 		{ 3, 229947, "", "=q4=Gloves of the Searing Grip", "=ds=#s9#, #a2#", "", "23%"};
@@ -3964,10 +4105,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 18, 229924, "", "=q4=Netherbane", "=ds=#h1#, #w1#", "", "21%"};
 		{ 19, 229949, "", "=q4=Arcanite Steam-Pistol", "=ds=#w5#", "", "22%"};
 		{ 21, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
-		Next = "TKEyeVoidReaverHEROIC";
+		Next = "TKEyeVoidReaver25Man";
 	};
 
-	AtlasLoot_Data["TKEyeVoidReaverHEROIC"] = {
+	AtlasLoot_Data["TKEyeVoidReaver25Man"] = {
 		{ 1, 229986, "", "=q4=Cowl of the Grand Engineer", "=ds=#s1#, #a1#", "", "13%"};
 		{ 2, 229984, "", "=q4=Girdle of Zaetar", "=ds=#s10#, #a2#", "", "13%"};
 		{ 3, 229985, "", "=q4=Void Reaver Greaves", "=ds=#s11#, #a3#", "", "14%"};
@@ -3979,11 +4120,11 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 17, 230249, "", "=q4=Pauldrons of the Vanquished Defender", "=q1=#m1# =ds=#c1#, #c5#, #c9#", "", "62%"};
 		{ 18, 230250, "", "=q4=Pauldrons of the Vanquished Hero", "=q1=#m1# =ds=#c2#, #c3#, #c8#", "", "61%"};
 		{ 20, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
-		Prev = "TKEyeAlarHEROIC";
-		Next = "TKEyeSolarianHEROIC";
+		Prev = "TKEyeAlar25Man";
+		Next = "TKEyeSolarian25Man";
 	};
 
-	AtlasLoot_Data["TKEyeSolarianHEROIC"] = {
+	AtlasLoot_Data["TKEyeSolarian25Man"] = {
 		{ 1, 229977, "", "=q4=Star-Soul Breeches", "=ds=#s11#, #a1#", "", "19%"};
 		{ 2, 229972, "", "=q4=Trousers of the Astromancer", "=ds=#s11#, #a1#", "", "19%"};
 		{ 3, 229966, "", "=q4=Vambraces of Ending", "=ds=#s8#, #a2#", "", "23%"};
@@ -3998,11 +4139,11 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 19, 229981, "", "=q4=Etherium Life-Staff", "=ds=#w9#", "", "21%"};
 		{ 20, 229982, "", "=q4=Wand of the Forgotten Star", "=ds=#w12#", "", "18%"};
 		{ 22, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
-		Prev = "TKEyeVoidReaverHEROIC";
-		Next = "TKEyeKaelthasHEROIC";
+		Prev = "TKEyeVoidReaver25Man";
+		Next = "TKEyeKaelthas25Man";
 	};
 
-	AtlasLoot_Data["TKEyeKaelthasHEROIC"] = {
+	AtlasLoot_Data["TKEyeKaelthas25Man"] = {
 		{ 1, 229992, "", "=q4=Royal Cloak of the Sunstriders", "=ds=#s4#", "", "14%"};
 		{ 2, 229989, "", "=q4=Sunshower Light Cloak", "=ds=#s4#", "", "12%"};
 		{ 3, 229994, "", "=q4=Thalassian Wildercloak", "=ds=#s4#", "", "14%"};
@@ -4026,10 +4167,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 25, 230007, "", "=q4=The Darkener's Grasp", "=q1=#m4#: =ds=#s2#"};
 		{ 26, 230015, "", "=q4=The Sun King's Talisman", "=q1=#m4#: =ds=#s2#"};
 		{ 28, 29905, "", "=q1=Kael's Vial Remnant", "=ds=#m3#", "", "37%"};
-		Prev = "TKEyeSolarianHEROIC";
+		Prev = "TKEyeSolarian25Man";
 	};
 
-	AtlasLoot_Data["TKEyeTrashHEROIC"] = {
+	AtlasLoot_Data["TKEyeTrash25Man"] = {
 		{ 1, 230024, "", "=q4=Mantle of the Elven Kings", "=ds=#s3#, #a1#", "", "3%"};
 		{ 2, 230020, "", "=q4=Fire-Cord of the Magus", "=ds=#s10#, #a1#", "", "2%"};
 		{ 3, 230029, "", "=q4=Bark-Gloves of Ancient Wisdom", "=ds=#s9#, #a2#", "", "2%"};
@@ -4056,7 +4197,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 27, 32897, "", "=q2=Mark of the Illidari", "=ds=#m20#", "", "27%"};
 	};
 
-	AtlasLoot_Data["TKEyeLegendariesHEROIC"] = {
+	AtlasLoot_Data["TKEyeLegendaries25Man"] = {
 		{ 1, 230312, "", "=q5=Infinity Blade", "=ds=#h1#, #w4#"};
 		{ 2, 230311, "", "=q5=Warp Slicer", "=ds=#h1#, #w10#"};
 		{ 3, 230317, "", "=q5=Cosmic Infuser", "=ds=#h3#, #w6#"};
@@ -4066,6 +4207,130 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 7, 230318, "", "=q5=Netherstrand Longbow", "=ds=#w2#, =q1=#m1# =ds=#c2#"};
 		{ 8, 230319, "", "=q5=Nether Spike", "=ds=#w17#"};
 	};
+
+
+	-----------------------------------
+	--- Tempest Keep: The Eye ASCENDED---
+	-----------------------------------
+
+	AtlasLoot_Data["TKEyeAlar25ManHEROIC"] = {
+		{ 1, 229925, "", "=q4=Phoenix-Wing Cloak", "=ds=#s4#", "", "23%"};
+		{ 2, 229918, "", "=q4=Mindstorm Wristbands", "=ds=#s8#, #a1#", "", "22%"};
+		{ 3, 229947, "", "=q4=Gloves of the Searing Grip", "=ds=#s9#, #a2#", "", "23%"};
+		{ 4, 229921, "", "=q4=Fire Crest Breastplate", "=ds=#s5#, #a3#", "", "20%"};
+		{ 5, 229922, "", "=q4=Band of Al'Ar", "=ds=#s13#", "", "21%"};
+		{ 6, 229920, "", "=q4=Phoenix-Ring of Rebirth", "=ds=#s13#", "", "21%"};
+		{ 7, 230448, "", "=q4=Talon of Al'ar", "=ds=#s14#, =q1=#m1# =ds=#c2#", "", "22%"};
+		{ 8, 230447, "", "=q4=Tome of Fiery Redemption", "=ds=#s14#, =q1=#m1# =ds=#c4#", "", "21%"};
+		{ 9, 229923, "", "=q4=Talisman of the Sun King", "=ds=#s15#", "", "23%"};
+		{ 16, 232944, "", "=q4=Talon of the Phoenix", "=ds=#h3#, #w13#", "", "12%"};
+		{ 17, 229948, "", "=q4=Claw of the Phoenix", "=ds=#h4#, #w13#", "", "10%"};
+		{ 18, 229924, "", "=q4=Netherbane", "=ds=#h1#, #w1#", "", "21%"};
+		{ 19, 229949, "", "=q4=Arcanite Steam-Pistol", "=ds=#w5#", "", "22%"};
+		{ 21, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
+		Next = "TKEyeVoidReaver25ManHEROIC";
+	};
+
+	AtlasLoot_Data["TKEyeVoidReaver25ManHEROIC"] = {
+		{ 1, 229986, "", "=q4=Cowl of the Grand Engineer", "=ds=#s1#, #a1#", "", "13%"};
+		{ 2, 229984, "", "=q4=Girdle of Zaetar", "=ds=#s10#, #a2#", "", "13%"};
+		{ 3, 229985, "", "=q4=Void Reaver Greaves", "=ds=#s11#, #a3#", "", "14%"};
+		{ 4, 229983, "", "=q4=Fel-Steel Warhelm", "=ds=#s1#, #a4#", "", "12%"};
+		{ 5, 232515, "", "=q4=Wristgaurds of Determination", "=ds=#s8#, #a4#", "", "13%"};
+		{ 6, 230619, "", "=q4=Fel Reaver's Piston", "=ds=#s14#", "", "13%"};
+		{ 7, 230450, "", "=q4=Warp-Spring Coil", "=ds=#s14#, =q1=#m1# =ds=#c6#", "", "12%"};
+		{ 16, 230248, "", "=q4=Pauldrons of the Vanquished Champion", "=q1=#m1# =ds=#c4#, #c6#, #c7#", "", "61%"};
+		{ 17, 230249, "", "=q4=Pauldrons of the Vanquished Defender", "=q1=#m1# =ds=#c1#, #c5#, #c9#", "", "62%"};
+		{ 18, 230250, "", "=q4=Pauldrons of the Vanquished Hero", "=q1=#m1# =ds=#c2#, #c3#, #c8#", "", "61%"};
+		{ 20, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
+		Prev = "TKEyeAlar25ManHEROIC";
+		Next = "TKEyeSolarian25ManHEROIC";
+	};
+
+	AtlasLoot_Data["TKEyeSolarian25ManHEROIC"] = {
+		{ 1, 229977, "", "=q4=Star-Soul Breeches", "=ds=#s11#, #a1#", "", "19%"};
+		{ 2, 229972, "", "=q4=Trousers of the Astromancer", "=ds=#s11#, #a1#", "", "19%"};
+		{ 3, 229966, "", "=q4=Vambraces of Ending", "=ds=#s8#, #a2#", "", "23%"};
+		{ 4, 229976, "", "=q4=Worldstorm Gauntlets", "=ds=#s9#, #a3#", "", "18%"};
+		{ 5, 229951, "", "=q4=Star-Strider Boots", "=ds=#s12#, #a3#", "", "23%"};
+		{ 6, 229965, "", "=q4=Girdle of the Righteous Path", "=ds=#s10#, #a4#", "", "21%"};
+		{ 7, 229950, "", "=q4=Greaves of the Bloodwarder", "=ds=#s11#, #a4#", "", "19%"};
+		{ 8, 232267, "", "=q4=Boots of the Resilient", "=ds=#s12#, #a4#", "", "17%"};
+		{ 16, 230446, "", "=q4=Solarian's Sapphire", "=ds=#s14#, =q1=#m1# =ds=#c9#", "", "21%"};
+		{ 17, 230449, "", "=q4=Void Star Talisman", "=ds=#s14#, =q1=#m1# =ds=#c8#", "", "22%"};
+		{ 18, 229962, "", "=q4=Heartrazor", "=ds=#h1#, #w4#", "", "23%"};
+		{ 19, 229981, "", "=q4=Etherium Life-Staff", "=ds=#w9#", "", "21%"};
+		{ 20, 229982, "", "=q4=Wand of the Forgotten Star", "=ds=#w12#", "", "18%"};
+		{ 22, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
+		Prev = "TKEyeVoidReaver25ManHEROIC";
+		Next = "TKEyeKaelthas25ManHEROIC";
+	};
+
+	AtlasLoot_Data["TKEyeKaelthas25ManHEROIC"] = {
+		{ 1, 229992, "", "=q4=Royal Cloak of the Sunstriders", "=ds=#s4#", "", "14%"};
+		{ 2, 229989, "", "=q4=Sunshower Light Cloak", "=ds=#s4#", "", "12%"};
+		{ 3, 229994, "", "=q4=Thalassian Wildercloak", "=ds=#s4#", "", "14%"};
+		{ 4, 229990, "", "=q4=Crown of the Sun", "=ds=#s1#, #a1#", "", "14%"};
+		{ 5, 229987, "", "=q4=Gauntlets of the Sun-King", "=ds=#s9#, #a1#", "", "14%"};
+		{ 6, 229995, "", "=q4=Leggings of Murderous Intent", "=ds=#s11#, #a2#", "", "15%"};
+		{ 7, 229991, "", "=q4=Sunhawk Leggings", "=ds=#s11#, #a3#", "", "13%"};
+		{ 8, 229998, "", "=q4=Royal Gauntlets of Silvermoon", "=ds=#s9#, #a4#", "", "12%"};
+		{ 9, 229997, "", "=q4=Band of the Ranger-General", "=ds=#s13#", "", "14%"};
+		{ 10, 229993, "", "=q4=Twinblade of the Phoenix", "=ds=#h2#, #w10#", "", "12%"};
+		{ 11, 229996, "", "=q4=Rod of the Sun King", "=ds=#h1#, #w6#", "", "15%"};
+		{ 12, 229988, "", "=q4=The Nexus Key", "=ds=#w9#", "", "14%"};
+		{ 14, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
+		{ 16, 230236, "", "=q4=Chestguard of the Vanquished Champion", "=q1=#m1# =ds=#c4#, #c6#, #c7#", "", "69%"};
+		{ 17, 230237, "", "=q4=Chestguard of the Vanquished Defender", "=q1=#m1# =ds=#c1#, #c5#, #c9#", "", "68%"};
+		{ 18, 230238, "", "=q4=Chestguard of the Vanquished Hero", "=q1=#m1# =ds=#c2#, #c3#, #c8#", "", "66%"};
+		{ 20, 32458, "", "=q4=Ashes of Al'ar", "=ds=#e12#", "", "2%"};
+		{ 22, 232405, "", "=q4=Verdant Sphere", "=ds=#m2#", "", "100%"};
+		{ 23, 230018, "", "=q4=Lord Sanguinar's Claim", "=q1=#m4#: =ds=#s2#"};
+		{ 24, 230017, "", "=q4=Telonicus's Pendant of Mayhem", "=q1=#m4#: =ds=#s2#"};
+		{ 25, 230007, "", "=q4=The Darkener's Grasp", "=q1=#m4#: =ds=#s2#"};
+		{ 26, 230015, "", "=q4=The Sun King's Talisman", "=q1=#m4#: =ds=#s2#"};
+		{ 28, 29905, "", "=q1=Kael's Vial Remnant", "=ds=#m3#", "", "37%"};
+		Prev = "TKEyeSolarian25ManHEROIC";
+	};
+
+	AtlasLoot_Data["TKEyeTrash25ManHEROIC"] = {
+		{ 1, 230024, "", "=q4=Mantle of the Elven Kings", "=ds=#s3#, #a1#", "", "3%"};
+		{ 2, 230020, "", "=q4=Fire-Cord of the Magus", "=ds=#s10#, #a1#", "", "2%"};
+		{ 3, 230029, "", "=q4=Bark-Gloves of Ancient Wisdom", "=ds=#s9#, #a2#", "", "2%"};
+		{ 4, 230026, "", "=q4=Bands of the Celestial Archer", "=ds=#s8#, #a3#", "", "2%"};
+		{ 5, 230030, "", "=q4=Girdle of Fallen Stars", "=ds=#s10#, #a3#", "", "2%"};
+		{ 6, 230028, "", "=q4=Seventh Ring of the Tirisfalen", "=ds=#s13#", "", "2%"};
+		{ 8, 30324, "", "=q4=Plans: Red Havoc Boots", "=ds=#p2# (375)", "", "1%"};
+		{ 9, 30322, "", "=q4=Plans: Red Belt of Battle", "=ds=#p2# (375)", "", "2%"};
+		{ 10, 30323, "", "=q4=Plans: Boots of the Protector", "=ds=#p2# (375)", "", "2%"};
+		{ 11, 30321, "", "=q4=Plans: Belt of the Guardian", "=ds=#p2# (375)", "", "2%"};
+		{ 12, 30280, "", "=q4=Pattern: Belt of Blasting", "=ds=#p8# (375)", "", "1%"};
+		{ 13, 30282, "", "=q4=Pattern: Boots of Blasting", "=ds=#p8# (375)", "", "1%"};
+		{ 14, 30283, "", "=q4=Pattern: Boots of the Long Road", "=ds=#p8# (375)", "", "2%"};
+		{ 15, 30281, "", "=q4=Pattern: Belt of the Long Road", "=ds=#p8# (375)", "", "1%"};
+		{ 16, 30308, "", "=q4=Pattern: Hurricane Boots", "=ds=#p7# (375)", "", "1%"};
+		{ 17, 30304, "", "=q4=Pattern: Monsoon Belt", "=ds=#p7# (375)", "", "1%"};
+		{ 18, 30305, "", "=q4=Pattern: Boots of Natural Grace", "=ds=#p7# (375)", "", "2%"};
+		{ 19, 30307, "", "=q4=Pattern: Boots of the Crimson Hawk", "=ds=#p7# (375)", "", "1%"};
+		{ 20, 30306, "", "=q4=Pattern: Boots of Utter Darkness", "=ds=#p7# (375)", "", "2%"};
+		{ 21, 30301, "", "=q4=Pattern: Belt of Natural Power", "=ds=#p7# (375)", "", "1%"};
+		{ 22, 30303, "", "=q4=Pattern: Belt of the Black Eagle", "=ds=#p7# (375)", "", "1%"};
+		{ 23, 30302, "", "=q4=Pattern: Belt of Deep Shadow", "=ds=#p7# (375)", "", "1%"};
+		{ 25, 30183, "", "=q4=Nether Vortex", "=ds=#e8#", "", "75%"};
+		{ 27, 32897, "", "=q2=Mark of the Illidari", "=ds=#m20#", "", "27%"};
+	};
+
+	AtlasLoot_Data["TKEyeLegendaries25ManHEROIC"] = {
+		{ 1, 230312, "", "=q5=Infinity Blade", "=ds=#h1#, #w4#"};
+		{ 2, 230311, "", "=q5=Warp Slicer", "=ds=#h1#, #w10#"};
+		{ 3, 230317, "", "=q5=Cosmic Infuser", "=ds=#h3#, #w6#"};
+		{ 4, 230316, "", "=q5=Devastation", "=ds=#h2#, #w1#"};
+		{ 5, 230313, "", "=q5=Staff of Disintegration", "=ds=#w9#"};
+		{ 6, 230314, "", "=q5=Phaseshift Bulwark", "=ds=#w8#"};
+		{ 7, 230318, "", "=q5=Netherstrand Longbow", "=ds=#w2#, =q1=#m1# =ds=#c2#"};
+		{ 8, 230319, "", "=q5=Nether Spike", "=ds=#w17#"};
+	};
+
 		----------------
 		--- Zul'Aman ---
 		----------------

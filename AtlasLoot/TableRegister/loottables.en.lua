@@ -472,14 +472,22 @@ end
 	AtlasLoot_TableNames["CFRSerpentLurker"] = { BabbleBoss["The Lurker Below"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["CFRSerpentVashj"] = { BabbleBoss["Lady Vashj"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["CFRSerpentTrash"] = { AL["Trash Mobs"].." ("..BabbleZone["Serpentshrine Cavern"]..")", "AtlasLootBurningCrusade" };
-  -- CFR: Serpentshrine Cavern HEROIC
-	AtlasLoot_TableNames["CFRSerpentHydrossHEROIC"] = { BabbleBoss["Hydross the Unstable"], "AtlasLootBurningCrusade" };
-	AtlasLoot_TableNames["CFRSerpentKarathressHEROIC"] = { BabbleBoss["Fathom-Lord Karathress"], "AtlasLootBurningCrusade" };
-	AtlasLoot_TableNames["CFRSerpentMorogrimHEROIC"] = { BabbleBoss["Morogrim Tidewalker"], "AtlasLootBurningCrusade" };
-	AtlasLoot_TableNames["CFRSerpentLeotherasHEROIC"] = { BabbleBoss["Leotheras the Blind"], "AtlasLootBurningCrusade" };
-	AtlasLoot_TableNames["CFRSerpentLurkerHEROIC"] = { BabbleBoss["The Lurker Below"], "AtlasLootBurningCrusade" };
-	AtlasLoot_TableNames["CFRSerpentVashjHEROIC"] = { BabbleBoss["Lady Vashj"], "AtlasLootBurningCrusade" };
-	AtlasLoot_TableNames["CFRSerpentTrashHEROIC"] = { AL["Trash Mobs"].." ("..BabbleZone["Serpentshrine Cavern"]..")", "AtlasLootBurningCrusade" };
+  -- CFR: Serpentshrine Cavern HEROIC FLEX
+	AtlasLoot_TableNames["CFRSerpentHydross25Man"] = { BabbleBoss["Hydross the Unstable"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["CFRSerpentKarathress25Man"] = { BabbleBoss["Fathom-Lord Karathress"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["CFRSerpentMorogrim25Man"] = { BabbleBoss["Morogrim Tidewalker"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["CFRSerpentLeotheras25Man"] = { BabbleBoss["Leotheras the Blind"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["CFRSerpentLurker25Man"] = { BabbleBoss["The Lurker Below"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["CFRSerpentVashj25Man"] = { BabbleBoss["Lady Vashj"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["CFRSerpentTrash25Man"] = { AL["Trash Mobs"].." ("..BabbleZone["Serpentshrine Cavern"]..")", "AtlasLootBurningCrusade" };
+  -- CFR: Serpentshrine Cavern ASCENDED
+	AtlasLoot_TableNames["CFRSerpentHydross25ManHEROIC"] = { BabbleBoss["Hydross the Unstable"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["CFRSerpentKarathress25ManHEROIC"] = { BabbleBoss["Fathom-Lord Karathress"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["CFRSerpentMorogrim25ManHEROIC"] = { BabbleBoss["Morogrim Tidewalker"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["CFRSerpentLeotheras25ManHEROIC"] = { BabbleBoss["Leotheras the Blind"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["CFRSerpentLurker25ManHEROIC"] = { BabbleBoss["The Lurker Below"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["CFRSerpentVashj25ManHEROIC"] = { BabbleBoss["Lady Vashj"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["CFRSerpentTrash25ManHEROIC"] = { AL["Trash Mobs"].." ("..BabbleZone["Serpentshrine Cavern"]..")", "AtlasLootBurningCrusade" };
   -- CFR: Slave Pens
 	AtlasLoot_TableNames["CFRSlaveMennu"] = { BabbleBoss["Mennu the Betrayer"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["CFRSlaveRokmar"] = { BabbleBoss["Rokmar the Crackler"], "AtlasLootBurningCrusade" };
@@ -645,7 +653,14 @@ end
 	AtlasLoot_TableNames["TKEyeKaelthas"] = { BabbleBoss["Kael'thas Sunstrider"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["TKEyeLegendaries"] = { "Legendary Items for Kael'thas Fight", "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["TKEyeTrash"] = { AL["Trash Mobs"].." ("..BabbleZone["The Eye"]..")", "AtlasLootExpansionItems" };
-  -- TK: The Eye HEROIC
+  -- TK: The Eye HEROIC FLEX
+	AtlasLoot_TableNames["TKEyeAlarHEROIC"] = { BabbleBoss["Al'ar"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["TKEyeVoidReaverHEROIC"] = { BabbleBoss["Void Reaver"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["TKEyeSolarianHEROIC"] = { BabbleBoss["High Astromancer Solarian"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["TKEyeKaelthasHEROIC"] = { BabbleBoss["Kael'thas Sunstrider"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["TKEyeLegendariesHEROIC"] = { "Legendary Items for Kael'thas Fight", "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["TKEyeTrashHEROIC"] = { AL["Trash Mobs"].." ("..BabbleZone["The Eye"]..")", "AtlasLootExpansionItems" };
+  -- TK: The Eye ASCENDED
 	AtlasLoot_TableNames["TKEyeAlarHEROIC"] = { BabbleBoss["Al'ar"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["TKEyeVoidReaverHEROIC"] = { BabbleBoss["Void Reaver"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["TKEyeSolarianHEROIC"] = { BabbleBoss["High Astromancer Solarian"], "AtlasLootBurningCrusade" };
