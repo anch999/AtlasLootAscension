@@ -1125,8 +1125,10 @@ end
 	AtlasLoot_TableNames["NAXTrash25ManHEROIC"] = { AL["Trash Mobs"].." ("..BabbleZone["Naxxramas"]..")", "AtlasLootOriginalWoW" };
   --Onyxia60
 	AtlasLoot_TableNames["Onyxia60"] = { BabbleBoss["Onyxia"], "AtlasLootOriginalWoW" };
-  --Onyxia60 HEROIC
-	AtlasLoot_TableNames["Onyxia60HEROIC"] = { BabbleBoss["Onyxia"], "AtlasLootOriginalWoW" };
+  --Onyxia60 HEROIC FLEX
+	AtlasLoot_TableNames["Onyxia6025Man"] = { BabbleBoss["Onyxia"], "AtlasLootOriginalWoW" };
+  --Onyxia60 ASCENDED
+	AtlasLoot_TableNames["Onyxia6025ManHEROIC"] = { BabbleBoss["Onyxia"], "AtlasLootOriginalWoW" };
 
 ------------
 --- Sets ---

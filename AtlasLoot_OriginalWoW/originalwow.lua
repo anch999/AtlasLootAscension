@@ -2600,7 +2600,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 23, 316866, "", "=q4=Helm of Might", "=q1=#m1# =ds=#c9# (T1)", "", "11.39%"};
 		{ 24, 316854, "", "=q4=Lawbringer Helm", "=q1=#m1# =ds=#c4# (T1)", "", "7.23%"};
 		{ 26, 318564, "", "=q5=Bindings of the Windseeker", "=ds=#m3#, =q1=#m9#", "", "3.74%"};
-		{ 27, 319019, "", "=q5=Thunderfury, Blessed Blade of the Windseeker", "=q1=#m4#: =ds=#h1#, #w10#"};
+		{ 27, 19019, "", "=q5=Thunderfury, Blessed Blade of the Windseeker", "=q1=#m4#: =ds=#h1#, #w10#"};
 		Prev = "MCGehennas25Man";
 		Next = "MCShazzrah25Man";
 	};
@@ -2646,7 +2646,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 19, 316856, "", "=q4=Lawbringer Spaulders", "=q1=#m1# =ds=#c4# (T1)", "", "12.62%"};
 		{ 20, 316844, "", "=q4=Earthfury Epaulets", "=q1=#m1# =ds=#c7# (T1)", "", "7.29%"};
 		{ 22, 318563, "", "=q5=Bindings of the Windseeker", " =ds=#m3#, =q1=#m10#", "", "3.78%"};
-		{ 23, 319019, "", "=q5=Thunderfury, Blessed Blade of the Windseeker", "=q1=#m4#: =ds=#h1#, #w10#"};
+		{ 23, 19019, "", "=q5=Thunderfury, Blessed Blade of the Windseeker", "=q1=#m4#: =ds=#h1#, #w10#"};
 		Prev = "MCShazzrah25Man";
 		Next = "MCGolemagg25Man";
 	};
@@ -2676,7 +2676,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 23, 316865, "", "=q4=Breastplate of Might", "=q1=#m1# =ds=#c9# (T1)", "", "15.28%"};
 		{ 24, 316853, "", "=q4=Lawbringer Chestguard", "=q1=#m1# =ds=#c4# (T1)", "", "9.53%"};
 		{ 26, 17203, "", "=q4=Sulfuron Ingot", "=ds=#m3#", "", "11.98%"};
-		{ 27, 317182, "", "=q5=Sulfuras, Hand of Ragnaros", "=q1=#m4#: =ds=#h2#, #w6#"};
+		{ 27, 17182, "", "=q5=Sulfuras, Hand of Ragnaros", "=q1=#m4#: =ds=#h2#, #w6#"};
 		Prev = "MCGeddon25Man";
 		Next = "MCSulfuron25Man";
 	};
@@ -2734,11 +2734,11 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 7, 316946, "", "=q4=Legplates of Ten Storms", "=q1=#m1# =ds=#c7# (T2)", "", "5.97%"};
 		{ 8, 316962, "", "=q4=Legplates of Wrath", "=q1=#m1# =ds=#c9# (T2)", "", "17.23%"};
 		{ 9, 316954, "", "=q4=Judgement Legplates", "=q1=#m1# =ds=#c4# (T2)", "", "10.81%"};
-		{ 11, 317204, "", "=q5=Eye of Sulfuras", "=ds=#m3#", "", "3.42%"};
-		{ 12, 317182, "", "=q5=Sulfuras, Hand of Ragnaros", "=q1=#m4#: =ds=#h2#, #w6#"};
+		{ 11, 17204, "", "=q5=Eye of Sulfuras", "=ds=#m3#", "", "3.42%"};
+		{ 12, 17182, "", "=q5=Sulfuras, Hand of Ragnaros", "=q1=#m4#: =ds=#h2#, #w6#"};
 		{ 13, 102107, "", "=q4=Reins of the Magmatic Steed", "=ds=#e12#", "" };
-		{ 14, 319017, "", "=q1=Essence of the Firelord", "=ds=#m3#", "", "0.46%"};
-		{ 15, 319019, "", "=q5=Thunderfury, Blessed Blade of the Windseeker", "=q1=#m4#: =ds=#h1#, #w10#"};
+		{ 14, 19017, "", "=q1=Essence of the Firelord", "=ds=#m3#", "", "0.46%"};
+		{ 15, 19019, "", "=q5=Thunderfury, Blessed Blade of the Windseeker", "=q1=#m4#: =ds=#h1#, #w10#"};
 		{ 16, 317102, "", "=q4=Cloak of the Shrouded Mists", "=ds=#s4#", "", "14.31%"};
 		{ 17, 317107, "", "=q4=Dragon's Blood Cape", "=ds=#s4#", "", "15.32%"};
 		{ 18, 318817, "", "=q4=Crown of Destruction", "=ds=#s1#, #a3#", "", "16.75%"};
@@ -7541,12 +7541,46 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 29, 49636, "", "=q4=Reins of the Onyxian Drake", "=ds=#e12#", "" };
 	};
 
-	
+
 	-------------------------------
-	--- Onyxia's Lair 60 HEROIC ---
+	--- Onyxia's Lair 60 HEROIC FLEX ---
 	-------------------------------
 
-	AtlasLoot_Data["Onyxia60HEROIC"] = {
+	AtlasLoot_Data["Onyxia6025Man"] = {
+		{ 1, 316914, "", "=q4=Netherwind Crown",	   "=q1=#m1# =ds=#c3# (T2)", "","22.22%" },
+		{ 2, 316921, "", "=q4=Halo of Transcendence",  "=q1=#m1# =ds=#c5# (T2)", "","22.22%" },
+		{ 3, 316929, "", "=q4=Nemesis Skullcap",	   "=q1=#m1# =ds=#c8# (T2)","", "22.22%" },
+		{ 4, 316900, "", "=q4=Stormrage Cover",		"=q1=#m1# =ds=#c1# (T2)","", "22.22%" },
+		{ 5, 316908, "", "=q4=Bloodfang Hood",		 "=q1=#m1# =ds=#c6# (T2)", "","22.22%" },
+		{ 6, 316939, "", "=q4=Dragonstalker's Helm",   "=q1=#m1# =ds=#c2# (T2)", "","22.22%" },
+		{ 7, 316947, "", "=q4=Helmet of Ten Storms",   "=q1=#m1# =ds=#c7# (T2)", "","22.22%" },
+		{ 8, 316963, "", "=q4=Helm of Wrath",		  "=q1=#m1# =ds=#c9# (T2)","", "22.22%" },
+		{ 9, 316955, "", "=q4=Judgement Crown",		"=q1=#m1# =ds=#c4# (T2)", "","22.22%" },
+		{ 10, 0,"","","" },
+		{ 11, 18705, "", "=q4=Mature Black Dragon Sinew", "=ds=#m3# =q1=#m1# =ds=#c2#", "","100%" },
+		{ 12, 18713, "", "=q4=Rhok'delar, Longbow of the Ancient Keepers", "=q1=#m4#: =ds=#w2#, =q1=#m1# =ds=#c2#" },
+		{ 13, 0,"","","" },
+		{ 14, 15410, "","=q3=Scale of Onyxia",	  "=ds=#e8#" },
+		{ 15, 17966, "", "=q2=Onyxia Hide Backpack", "=ds=#m14# #e1#","", "100%"},
+		{ 16, 317078, "", "=q4=Sapphiron Drape",			  "=ds=#s4#","", "28.57%" },
+		{ 17, 318205, "", "=q4=Eskhandar's Collar",				"=ds=#s2#","", "28.57%" },
+		{ 18, 318813, "", "=q4=Ring of Binding",		   "=ds=#s13#", "","28.57%" },
+		{ 19, 317064, "", "=q4=Shard of the Scale",  "=ds=#s14#","", "28.57%" },
+		{ 20, 317067, "", "=q4=Ancient Cornerstone Grimoire", "=ds=#s15#","", "28.57%" },
+		{ 21, 317075, "", "=q4=Vis'kag the Bloodletter",		  "=ds=#h1#, #w10#","", "28.57%" },
+		{ 22, 317068, "", "=q4=Deathbringer","=ds=#h1#, #w1#","", "28.57%" },
+		{ 24, 18423, "", "=q4=Head of Onyxia","=ds=#m2#","", "100%" },
+		{ 25, 18404, "", "=q4=Onyxia Tooth Pendant", "=q1=#m4#: =ds=#s2#" },
+		{ 26, 18403, "", "=q4=Dragonslayer's Signet", "=q1=#m4#: =ds=#s13#" },
+		{ 27, 18406, "", "=q4=Onyxia Blood Talisman", "=q1=#m4#: =ds=#s14#" },
+		{ 29, 49636, "", "=q4=Reins of the Onyxian Drake", "=ds=#e12#", "" };
+	};	
+
+	-------------------------------
+	--- Onyxia's Lair 60 ASCENDED ---
+	-------------------------------
+
+	AtlasLoot_Data["Onyxia6025ManHEROIC"] = {
 		{ 1, 216914, "", "=q4=Netherwind Crown",	   "=q1=#m1# =ds=#c3# (T2)", "","22.22%" },
 		{ 2, 216921, "", "=q4=Halo of Transcendence",  "=q1=#m1# =ds=#c5# (T2)", "","22.22%" },
 		{ 3, 216929, "", "=q4=Nemesis Skullcap",	   "=q1=#m1# =ds=#c8# (T2)","", "22.22%" },
