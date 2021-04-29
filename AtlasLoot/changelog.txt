@@ -1,16 +1,25 @@
---------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------
+v1.6 04/29/2021
+- Added new Heroic Flex difficulty
+- Repurposed the 10/25 man button to go between Normal/Heroic/Ascended items 
+	- This still works as normal for Wotlk raids, but the button text will be wrong
+- Added Heroic Flex raid dropped items
+- Added Heroic Flex set items to Sets/Collections using the old 10/25 man button
+- Renamed "Heroic Mode" to "Ascended Mode"
+	- This still works as normal for TBC Heroic dungeons, and will be fixed when mythic dungeons comes out.
+---------------------------------------------------------------------------------------------------------------------------
 v1.5.4 04/25/2021
 - Fixed the order of t2.5 warrior set
 - Added T3 warrior dps set
 - Fixed the names of t1 and t2 warrior dps set
 - Added additional drop locations of some BWL items 
 - Added Naxxramas heroic items and new item from Sapphiron 
---------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------
 v1.5.3 03/26/2021
 - Added cross boss loot in BWL for first three bosses
 - Added cross boss loot in BWL to Nefarion
 - Removed extra warrior set on heroic tier 1/2 tab
---------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------
 v1.5.2 03/05/2021
 - Sets/Collections Menu now lists T1-T10 sets instead of having submenus
 - Removed Mount, Pet, and Tabard collections
@@ -22,13 +31,13 @@ v1.5.2 03/05/2021
 	- Armor is available under the PVP Reputation sets Sub-menu
 - Wintergrasp and Grizzly Hills PVP menus moved to BG/Open PVP sub-menu
 - Added Smoldering Emberwyrm and Magmatic Steed to Prince and Ragnaros respectively
---------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------
 v1.5.1 02/08/2021
 - Added new T1 Warrior DPS set
 - Added Heroic Thunderfury and Sulfuras
 - Added Magtheridon's Glaive to Heroic Magtheridon
 - Corrected item ID of Heroic Magtheridon head
---------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------
 v1.5 09/08/2020
 - Added new 2H tank sets
 - Bloody item server query
@@ -37,13 +46,13 @@ v1.5 09/08/2020
 	- To link bloody items, click the Query Server button which will load all items and bloody versions
 	   Then right click an item and the bloody version will show in chat.  
 	   (Must have 'Safe Chat Links' enabled in your options)
---------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------
 v1.4 06/07/2020
 - Sets collection cleanup for TBC
 - Added Heroic gear
 - Dropdown menu visuals/order changed.
 	- To view keys click the Dungeon/Raid headers
---------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------
 v1.3 05/31/2020
 - Updated Druid class name/descriptions from "Hero" to "Druid"
 
@@ -51,10 +60,10 @@ TBC improvements contributed by Szyler:
 - Rep window shows TBC reputations by default
 - Karazhan boss order correction
 - TBC tokens show class
---------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------
 v1.2 05/30/2020
 - Fixed item quality on various PVP items
---------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------
 v1.1 05/30/2020
 - Fixed KT (Naxx 60) Phylactory for Ascension itemID
 - Readded ilvl 68 Rare PVP gear along with ilvl 63 Rare PVP gear
@@ -64,11 +73,11 @@ v1.1 05/30/2020
 - Corrected Honor prices on assortment of items
 - Corrected Kazzak (Classic) item slots
 - Added Setis item slots
---------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------
 v1.0 05/29/2020
 - Initial release based off PrimalWoW edited Atlasloot
 - Added Ascension PVP Enchants
 - Added Ascension Epic Progression5 PVP Gear
 - Added Ascension Epic PVP Accessories
 - Added Setis Loot as new World boss
---------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------
