@@ -2496,12 +2496,317 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 28, 18260, "", "=q3=Formula: Enchant Weapon - Healing Power", "=ds=#p4# (300)", "", "0.75%"};
 	};
 
-	
+
 	----------------------------------------------
-	--- Blackrock Mountain: Molten Core HEROIC ---
+	--- Blackrock Mountain: Molten Core HEROIC FLEX ---
 	----------------------------------------------
 
-	AtlasLoot_Data["MCLucifronHEROIC"] = {
+	AtlasLoot_Data["MCLucifron25Man"] = {
+		{ 1, 318872, "", "=q4=Manastorm Leggings", "=ds=#s11#, #a1#", "", "1.93%"};
+		{ 2, 319145, "", "=q4=Robe of Volatile Power", "=ds=#s5#, #a1#", "", "1.84%"};
+		{ 3, 319146, "", "=q4=Wristguards of Stability", "=ds=#s8#, #a2#", "", "1.95%"};
+		{ 4, 318875, "", "=q4=Salamander Scale Pants", "=ds=#s11#, #a2#", "", "2.00%"};
+		{ 5, 318870, "", "=q4=Helm of the Lifegiver", "=ds=#s1#, #a3#", "", "1.09%"};
+		{ 6, 318861, "", "=q4=Flamewaker Legplates", "=ds=#s11#, #a4#", "", "2.15%"};
+		{ 7, 317109, "", "=q4=Choker of Enlightenment", "=ds=#s2#", "", "12.61%"};
+		{ 8, 318879, "", "=q4=Heavy Dark Iron Ring", "=ds=#s13#", "", "2.04%"};
+		{ 9, 319147, "", "=q4=Ring of Spell Power", "=ds=#s13#", "", "2.23%"};
+		{ 10, 318878, "", "=q4=Sorcerous Dagger", "=ds=#h3#, #w4#", "", "2.23%"};
+		{ 11, 317077, "", "=q4=Crimson Shocker", "=ds=#w12#", "", "1.60%"};
+		{ 16, 316800, "", "=q4=Arcanist Boots", "=q1=#m1# =ds=#c3# (T1)", "", "12.06%"};
+		{ 17, 316805, "", "=q4=Felheart Gloves", "=q1=#m1# =ds=#c8# (T1)", "", "14.89%"};
+		{ 18, 316829, "", "=q4=Cenarion Boots", "=q1=#m1# =ds=#c1# (T1)", "", "10.72%"};
+		{ 19, 316837, "", "=q4=Earthfury Boots", "=q1=#m1# =ds=#c7# (T1)", "", "4.16%"};
+		{ 20, 316863, "", "=q4=Gauntlets of Might", "=q1=#m1# =ds=#c9# (T1)", "", "16.40%"};
+		{ 21, 316859, "", "=q4=Lawbringer Boots", "=q1=#m1# =ds=#c4# (T1)", "", "7.20%"};
+		{ 22, 17329, "", "=q1=Hand of Lucifron", "=ds=#m3#"};
+		Next = "MCMagmadar25Man";
+	};
+
+	AtlasLoot_Data["MCMagmadar25Man"] = {
+		{ 1, 319136, "", "=q4=Mana Igniting Cord", "=ds=#s10#, #a1#", "", "4.79%"};
+		{ 2, 318823, "", "=q4=Aged Core Leather Gloves", "=ds=#s9#, #a2#", "", "6.18%"};
+		{ 3, 318829, "", "=q4=Deep Earth Spaulders", "=ds=#s3#, #a3#", "", "2.10%"};
+		{ 4, 319144, "", "=q4=Sabatons of the Flamewalker", "=ds=#s12#, #a3#", "", "1.86%"};
+		{ 5, 319143, "", "=q4=Flameguard Gauntlets", "=ds=#s9#, #a4#", "", "5.48%"};
+		{ 6, 318861, "", "=q4=Flamewaker Legplates", "=ds=#s11#, #a4#", "", "3.98%"};
+		{ 7, 318824, "", "=q4=Magma Tempered Boots", "=ds=#s12#, #a4#", "", "3.22%"};
+		{ 8, 317065, "", "=q4=Medallion of Steadfast Might", "=ds=#s2#", "", "14.05%"};
+		{ 9, 318821, "", "=q4=Quick Strike Ring", "=ds=#s13#", "", "5.79%"};
+		{ 10, 318820, "", "=q4=Talisman of Ephemeral Power", "=ds=#s14#", "", "5.55%"};
+		{ 11, 319142, "", "=q4=Fire Runed Grimoire", "=ds=#s15#", "", "5.42%"};
+		{ 12, 318203, "", "=q4=Eskhandar's Right Claw", "=ds=#h3#, #w13#", "", "17.82%"};
+		{ 13, 318822, "", "=q4=Obsidian Edged Blade", "=ds=#h2#, #w10#", "", "5.68%"};
+		{ 14, 317073, "", "=q4=Earthshaker", "=ds=#h2#, #w6#", "", "16.75%"};
+		{ 15, 317069, "", "=q4=Striker's Mark", "=ds=#w2#", "", "16.37%"};
+		{ 16, 316796, "", "=q4=Arcanist Leggings", "=q1=#m1# =ds=#c3# (T1)", "", "14.57%"};
+		{ 17, 316814, "", "=q4=Pants of Prophecy", "=q1=#m1# =ds=#c5# (T1)", "", "14.33%"};
+		{ 18, 316810, "", "=q4=Felheart Pants", "=q1=#m1# =ds=#c8# (T1)", "", "13.75%"};
+		{ 19, 316822, "", "=q4=Nightslayer Pants", "=q1=#m1# =ds=#c6# (T1)", "", "13.83%"};
+		{ 20, 316847, "", "=q4=Giantstalker's Leggings", "=q1=#m1# =ds=#c2# (T1)", "", "13.28%"};
+		{ 21, 316835, "", "=q4=Cenarion Leggings", "=q1=#m1# =ds=#c1# (T1)", "", "12.90%"};
+		{ 22, 316843, "", "=q4=Earthfury Legguards", "=q1=#m1# =ds=#c7# (T1)", "", " 4.73%"};
+		{ 23, 316855, "", "=q4=Lawbringer Legplates", "=q1=#m1# =ds=#c4# (T1)", "", "8.54%"};
+		{ 24, 316867, "", "=q4=Legplates of Might", "=q1=#m1# =ds=#c9# (T1)", "", "13.97%"};
+		Prev = "MCLucifron25Man";
+		Next = "MCGehennas25Man";
+	};
+
+	AtlasLoot_Data["MCGehennas25Man"] = {
+		{ 1, 319145, "", "=q4=Robe of Volatile Power", "=ds=#s5#, #a1#", "", "3.83%"};
+		{ 2, 318872, "", "=q4=Manastorm Leggings", "=ds=#s11#, #a1#", "", "3.37%"};
+		{ 3, 319146, "", "=q4=Wristguards of Stability", "=ds=#s8#, #a2#", "", "3.53%"};
+		{ 4, 318875, "", "=q4=Salamander Scale Pants", "=ds=#s11#, #a2#", "", "3.57%"};
+		{ 5, 318870, "", "=q4=Helm of the Lifegiver", "=ds=#s1#, #a3#", "", "1.77%"};
+		{ 6, 318861, "", "=q4=Flamewaker Legplates", "=ds=#s11#, #a4#", "", "3.48%"};
+		{ 7, 318879, "", "=q4=Heavy Dark Iron Ring", "=ds=#s13#", "", "3.78%"};
+		{ 8, 319147, "", "=q4=Ring of Spell Power", "=ds=#s13#", "", "3.78%"};
+		{ 9, 318878, "", "=q4=Sorcerous Dagger", "=ds=#h3#, #w4#", "", "3.79%"};
+		{ 10, 317077, "", "=q4=Crimson Shocker", "=ds=#w12#", "", "3.34%"};
+		{ 16, 316812, "", "=q4=Gloves of Prophecy", "=q1=#m1# =ds=#c5# (T1)", "", "18.65%"};
+		{ 17, 316826, "", "=q4=Nightslayer Gloves", "=q1=#m1# =ds=#c6# (T1)", "", "19.47%"};
+		{ 18, 316849, "", "=q4=Giantstalker's Boots", "=q1=#m1# =ds=#c2# (T1)", "", "14.54%"};
+		{ 19, 316839, "", "=q4=Earthfury Gauntlets", "=q1=#m1# =ds=#c7# (T1)", "", "7.38%"};
+		{ 20, 316862, "", "=q4=Sabatons of Might", "=q1=#m1# =ds=#c9# (T1)", "", "14.48%"};
+		{ 21, 316860, "", "=q4=Lawbringer Gauntlets", "=q1=#m1# =ds=#c4# (T1)", "", "11.77%"};
+		{ 23, 17331, "", "=q1=Hand of Gehennas", "=ds=#m3#"};
+		Prev = "MCMagmadar25Man";
+		Next = "MCGarr25Man";
+	};
+
+	AtlasLoot_Data["MCGarr25Man"] = {
+		{ 1, 319136, "", "=q4=Mana Igniting Cord", "=ds=#s10#, #a1#", "", "4.80%"};
+		{ 2, 318823, "", "=q4=Aged Core Leather Gloves", "=ds=#s9#, #a2#", "", "5.23%"};
+		{ 3, 318829, "", "=q4=Deep Earth Spaulders", "=ds=#s3#, #a3#", "", "1.68%"};
+		{ 4, 319144, "", "=q4=Sabatons of the Flamewalker", "=ds=#s12#, #a3#", "", "1.48%"};
+		{ 5, 319143, "", "=q4=Flameguard Gauntlets", "=ds=#s9#, #a4#", "", "3.84%"};
+		{ 6, 318861, "", "=q4=Flamewaker Legplates", "=ds=#s11#, #a4#", "", "2.82%"};
+		{ 7, 318824, "", "=q4=Magma Tempered Boots", "=ds=#s12#, #a4#", "", "3.05%"};
+		{ 8, 318821, "", "=q4=Quick Strike Ring", "=ds=#s13#", "", "4.48%"};
+		{ 9, 318820, "", "=q4=Talisman of Ephemeral Power", "=ds=#s14#", "", "4.13%"};
+		{ 10, 319142, "", "=q4=Fire Runed Grimoire", "=ds=#s15#", "", "3.69%"};
+		{ 11, 317071, "", "=q4=Gutgore Ripper", "=ds=#h1#, #w4#", "", "11.21%"};
+		{ 12, 318832, "", "=q4=Brutality Blade", "=ds=#h1#, #w10#", "", "13.27%"};
+		{ 13, 318822, "", "=q4=Obsidian Edged Blade", "=ds=#h2#, #w10#", "", "4.09%"};
+		{ 14, 317105, "", "=q4=Aurastone Hammer", "=ds=#h3#, #w6#", "", "12.67%"};
+		{ 15, 317066, "", "=q4=Drillborer Disk", "=ds=#w8#", "", "11.85%"};
+		{ 16, 316795, "", "=q4=Arcanist Crown", "=q1=#m1# =ds=#c3# (T1)", "", "11.31%"};
+		{ 17, 316813, "", "=q4=Circlet of Prophecy", "=q1=#m1# =ds=#c5# (T1)", "", "11.36%"};
+		{ 18, 316808, "", "=q4=Felheart Horns", "=q1=#m1# =ds=#c8# (T1)", "", "10.62%"};
+		{ 19, 316846, "", "=q4=Giantstalker's Helmet", "=q1=#m1# =ds=#c2# (T1)", "", "11.57%"};
+		{ 20, 316834, "", "=q4=Cenarion Helm", "=q1=#m1# =ds=#c1# (T1)", "", "11.51%"};
+		{ 21, 316821, "", "=q4=Nightslayer Cover", "=q1=#m1# =ds=#c6# (T1)", "", "10.38%"};
+		{ 22, 316842, "", "=q4=Earthfury Helmet", "=q1=#m1# =ds=#c7# (T1)", "", "3.91%"};
+		{ 23, 316866, "", "=q4=Helm of Might", "=q1=#m1# =ds=#c9# (T1)", "", "11.39%"};
+		{ 24, 316854, "", "=q4=Lawbringer Helm", "=q1=#m1# =ds=#c4# (T1)", "", "7.23%"};
+		{ 26, 318564, "", "=q5=Bindings of the Windseeker", "=ds=#m3#, =q1=#m9#", "", "3.74%"};
+		{ 27, 319019, "", "=q5=Thunderfury, Blessed Blade of the Windseeker", "=q1=#m4#: =ds=#h1#, #w10#"};
+		Prev = "MCGehennas25Man";
+		Next = "MCShazzrah25Man";
+	};
+
+	AtlasLoot_Data["MCShazzrah25Man"] = {
+		{ 1, 319145, "", "=q4=Robe of Volatile Power", "=ds=#s5#, #a1#", "", "1.97%"};
+		{ 2, 318872, "", "=q4=Manastorm Leggings", "=ds=#s11#, #a1#", "", "1.84%"};
+		{ 3, 319146, "", "=q4=Wristguards of Stability", "=ds=#s8#, #a2#", "", "1.85%"};
+		{ 4, 318875, "", "=q4=Salamander Scale Pants", "=ds=#s11#, #a2#", "", "1.81%"};
+		{ 5, 318870, "", "=q4=Helm of the Lifegiver", "=ds=#s1#, #a3#", "", "0.78%"};
+		{ 6, 318861, "", "=q4=Flamewaker Legplates", "=ds=#s11#, #a4#", "", "2.22%"};
+		{ 7, 318879, "", "=q4=Heavy Dark Iron Ring", "=ds=#s13#", "", "1.72%"};
+		{ 8, 319147, "", "=q4=Ring of Spell Power", "=ds=#s13#", "", "1.99%"};
+		{ 9, 318878, "", "=q4=Sorcerous Dagger", "=ds=#h3#, #w4#", "", "2.27%"};
+		{ 10, 317077, "", "=q4=Crimson Shocker", "=ds=#w12#", "", "3.32%"};
+		{ 16, 316801, "", "=q4=Arcanist Gloves", "=q1=#m1# =ds=#c3# (T1)", "", "19.59%"};
+		{ 17, 316803, "", "=q4=Felheart Slippers", "=q1=#m1# =ds=#c8# (T1)", "", "15.28%"};
+		{ 18, 316811, "", "=q4=Boots of Prophecy", "=q1=#m1# =ds=#c5# (T1)", "", "14.90%"};
+		{ 19, 316831, "", "=q4=Cenarion Gloves", "=q1=#m1# =ds=#c1# (T1)", "", "19.53%"};
+		{ 20, 316852, "", "=q4=Giantstalker's Gloves", "=q1=#m1# =ds=#c2# (T1)", "", "18.58%"};
+		{ 21, 316824, "", "=q4=Nightslayer Boots", "=q1=#m1# =ds=#c6# (T1)", "", "15.58%"};
+		{ 23, 17332, "", "=q1=Hand of Shazzrah", "=ds=#m3#"};
+		Prev = "MCGarr25Man";
+		Next = "MCGeddon25Man";
+	};
+
+	AtlasLoot_Data["MCGeddon25Man"] = {
+		{ 1, 319136, "", "=q4=Mana Igniting Cord", "=ds=#s10#, #a1#", "", "2.44%"};
+		{ 2, 318823, "", "=q4=Aged Core Leather Gloves", "=ds=#s9#, #a2#", "", "3.04%"};
+		{ 3, 318829, "", "=q4=Deep Earth Spaulders", "=ds=#s3#, #a3#", "", "1.04%"};
+		{ 4, 319144, "", "=q4=Sabatons of the Flamewalker", "=ds=#s12#, #a3#", "", "1.00%"};
+		{ 5, 319143, "", "=q4=Flameguard Gauntlets", "=ds=#s9#, #a4#", "", "2.61%"};
+		{ 6, 318861, "", "=q4=Flamewaker Legplates", "=ds=#s11#, #a4#", "", "1.77%"};
+		{ 7, 318824, "", "=q4=Magma Tempered Boots", "=ds=#s12#, #a4#", "", "1.48%"};
+		{ 8, 317110, "", "=q4=Seal of the Archmagus", "=ds=#s13#", "", "21.93%"};
+		{ 9, 318821, "", "=q4=Quick Strike Ring", "=ds=#s13#", "", "2.61%"};
+		{ 10, 318820, "", "=q4=Talisman of Ephemeral Power", "=ds=#s14#", "", "2.68%"};
+		{ 11, 319142, "", "=q4=Fire Runed Grimoire", "=ds=#s15#", "", "2.59%"};
+		{ 12, 318822, "", "=q4=Obsidian Edged Blade", "=ds=#h2#, #w10#", "", "2.70%"};
+		{ 16, 316797, "", "=q4=Arcanist Mantle", "=q1=#m1# =ds=#c3# (T1)", "", "19.92%"};
+		{ 17, 316807, "", "=q4=Felheart Shoulder Pads", "=q1=#m1# =ds=#c8# (T1)", "", "19.78%"};
+		{ 18, 316836, "", "=q4=Cenarion Spaulders", "=q1=#m1# =ds=#c1# (T1)", "", "19.52%"};
+		{ 19, 316856, "", "=q4=Lawbringer Spaulders", "=q1=#m1# =ds=#c4# (T1)", "", "12.62%"};
+		{ 20, 316844, "", "=q4=Earthfury Epaulets", "=q1=#m1# =ds=#c7# (T1)", "", "7.29%"};
+		{ 22, 318563, "", "=q5=Bindings of the Windseeker", " =ds=#m3#, =q1=#m10#", "", "3.78%"};
+		{ 23, 319019, "", "=q5=Thunderfury, Blessed Blade of the Windseeker", "=q1=#m4#: =ds=#h1#, #w10#"};
+		Prev = "MCShazzrah25Man";
+		Next = "MCGolemagg25Man";
+	};
+
+	AtlasLoot_Data["MCGolemagg25Man"] = {
+		{ 1, 319136, "", "=q4=Mana Igniting Cord", "=ds=#s10#, #a1#", "", "2.18%"};
+		{ 2, 318823, "", "=q4=Aged Core Leather Gloves", "=ds=#s9#, #a2#", "", "2.65%"};
+		{ 3, 318829, "", "=q4=Deep Earth Spaulders", "=ds=#s3#, #a3#", "", "1.20%"};
+		{ 4, 319144, "", "=q4=Sabatons of the Flamewalker", "=ds=#s12#, #a3#", "", "1.00%"};
+		{ 5, 319143, "", "=q4=Flameguard Gauntlets", "=ds=#s9#, #a4#", "", "2.17%"};
+		{ 6, 318861, "", "=q4=Flamewaker Legplates", "=ds=#s11#, #a4#", "", "1.44%"};
+		{ 7, 318824, "", "=q4=Magma Tempered Boots", "=ds=#s12#, #a4#", "", "1.69%"};
+		{ 8, 318821, "", "=q4=Quick Strike Ring", "=ds=#s13#", "", "2.26%"};
+		{ 9, 318820, "", "=q4=Talisman of Ephemeral Power", "=ds=#s14#", "", "2.91%"};
+		{ 10, 319142, "", "=q4=Fire Runed Grimoire", "=ds=#s15#", "", "2.46%"};
+		{ 11, 317103, "", "=q4=Azuresong Mageblade", "=ds=#h3#, #w10#", "", "17.59%"};
+		{ 12, 318822, "", "=q4=Obsidian Edged Blade", "=ds=#h2#, #w10#", "", "2.89%"};
+		{ 13, 318842, "", "=q4=Staff of Dominance", "=ds=#w9#", "", "18.95%"};
+		{ 14, 317072, "", "=q4=Blastershot Launcher", "=ds=#w5#", "", "17.83%"};
+		{ 16, 316798, "", "=q4=Arcanist Robes", "=q1=#m1# =ds=#c3# (T1)", "", "16.51%"};
+		{ 17, 316815, "", "=q4=Robes of Prophecy", "=q1=#m1# =ds=#c5# (T1)", "", "15.65%"};
+		{ 18, 316809, "", "=q4=Felheart Robes", "=q1=#m1# =ds=#c8# (T1)", "", "15.66%"};
+		{ 19, 316820, "", "=q4=Nightslayer Chestpiece", "=q1=#m1# =ds=#c6# (T1)", "", "16.76%"};
+		{ 20, 316833, "", "=q4=Cenarion Vestments", "=q1=#m1# =ds=#c1# (T1)", "", "15.21%"};
+		{ 21, 316845, "", "=q4=Giantstalker's Breastplate", "=q1=#m1# =ds=#c2# (T1)", "", "15.83%"};
+		{ 22, 316841, "", "=q4=Earthfury Vestments", "=q1=#m1# =ds=#c7# (T1)", "", " 6.08%"};
+		{ 23, 316865, "", "=q4=Breastplate of Might", "=q1=#m1# =ds=#c9# (T1)", "", "15.28%"};
+		{ 24, 316853, "", "=q4=Lawbringer Chestguard", "=q1=#m1# =ds=#c4# (T1)", "", "9.53%"};
+		{ 26, 17203, "", "=q4=Sulfuron Ingot", "=ds=#m3#", "", "11.98%"};
+		{ 27, 317182, "", "=q5=Sulfuras, Hand of Ragnaros", "=q1=#m4#: =ds=#h2#, #w6#"};
+		Prev = "MCGeddon25Man";
+		Next = "MCSulfuron25Man";
+	};
+
+	AtlasLoot_Data["MCSulfuron25Man"] = {
+		{ 1, 319145, "", "=q4=Robe of Volatile Power", "=ds=#s5#, #a1#", "", "2.80%"};
+		{ 2, 318872, "", "=q4=Manastorm Leggings", "=ds=#s11#, #a1#", "", "2.54%"};
+		{ 3, 319146, "", "=q4=Wristguards of Stability", "=ds=#s8#, #a2#", "", "2.70%"};
+		{ 4, 318875, "", "=q4=Salamander Scale Pants", "=ds=#s11#, #a2#", "", "2.58%"};
+		{ 5, 318870, "", "=q4=Helm of the Lifegiver", "=ds=#s1#, #a3#", "", "1.26%"};
+		{ 6, 318861, "", "=q4=Flamewaker Legplates", "=ds=#s11#, #a4#", "", "2.54%"};
+		{ 7, 318879, "", "=q4=Heavy Dark Iron Ring", "=ds=#s13#", "", "2.32%"};
+		{ 8, 319147, "", "=q4=Ring of Spell Power", "=ds=#s13#", "", "2.39%"};
+		{ 9, 318878, "", "=q4=Sorcerous Dagger", "=ds=#h3#, #w4#", "", "2.53%"};
+		{ 10, 317074, "", "=q4=Shadowstrike", "=ds=#w7#", "", "23.50%"};
+		{ 11, 317077, "", "=q4=Crimson Shocker", "=ds=#w12#", "", "2.26%"};
+		{ 16, 316816, "", "=q4=Mantle of Prophecy", "=q1=#m1# =ds=#c5# (T1)", "", "21.06%"};
+		{ 17, 316823, "", "=q4=Nightslayer Shoulder Pads", "=q1=#m1# =ds=#c6# (T1)", "", "20.66%"};
+		{ 18, 316848, "", "=q4=Giantstalker's Epaulets", "=q1=#m1# =ds=#c2# (T1)", "", "19.64%"};
+		{ 19, 316868, "", "=q4=Pauldrons of Might", "=q1=#m1# =ds=#c9# (T1)", "", "21.14%"};
+		{ 21, 17330, "", "=q1=Hand of Sulfuron", "=ds=#m3#"};
+		Prev = "MCGolemagg25Man";
+		Next = "MCMajordomo25Man";
+	};
+
+	AtlasLoot_Data["MCMajordomo25Man"] = {
+		{ 1, 318811, "", "=q4=Fireproof Cloak", "=ds=#s4#", "", "15.12%"};
+		{ 2, 318808, "", "=q4=Gloves of the Hypnotic Flame", "=ds=#s9#, #a1#", "", "15.36%"};
+		{ 3, 318809, "", "=q4=Sash of Whispered Secrets", "=ds=#s10#, #a1#", "", "15.93%"};
+		{ 4, 319139, "", "=q4=Fireguard Shoulders", "=ds=#s3#, #a2#", "", "15.87%"};
+		{ 5, 318810, "", "=q4=Wild Growth Spaulders", "=ds=#s3#, #a2#", "", "16.91%"};
+		{ 6, 318812, "", "=q4=Wristguards of True Flight", "=ds=#s8#, #a3#", "", "18.04%"};
+		{ 7, 318806, "", "=q4=Core Forged Greaves", "=ds=#s12#, #a4#", "", "16.53%"};
+		{ 8, 319140, "", "=q4=Cauterizing Band", "=ds=#s13#", "", "15.10%"};
+		{ 9, 318805, "", "=q4=Core Hound Tooth", "=ds=#h1#, #w4#", "", "16.06%"};
+		{ 10, 318803, "", "=q4=Finkle's Lava Dredger", "=ds=#h2#, #w6#", "", "12.43%"};
+		{ 16, 18703, "", "=q4=Ancient Petrified Leaf", "=ds=#m2# =q1=(#c2#)", "", "35.25%"};
+		{ 17, 18715, "", "=q4=Lok'delar, Stave of the Ancient Keepers", "=q1=#m4#: =ds=#w9#, =q1=#m1# =ds=#c2#"};
+		{ 18, 18713, "", "=q4=Rhok'delar, Longbow of the Ancient Keepers", "=q1=#m4#: =ds=#w2#, =q1=#m1# =ds=#c2#"};
+		{ 19, 18714, "", "=q4=Ancient Sinew Wrapped Lamina", "=q1=#m4#: =ds=#w19#, =q1=#m1# =ds=#c2#"};
+		{ 21, 18646, "", "=q4=The Eye of Divinity", "=ds=#m2# =q1=(#c5#)", "", "28.30%"};
+		{ 22, 18608, "", "=q4=Benediction", "=q1=#m4#: =ds=#w9#, =q1=#m1# =ds=#c5#"};
+		{ 23, 18609, "", "=q4=Anathema", "=q1=#m4#: =ds=#w9#, =q1=#m1# =ds=#c5#"};
+		Prev = "MCSulfuron25Man";
+		Next = "MCRagnaros25Man";
+	};
+
+	AtlasLoot_Data["MCRagnaros25Man"] = {
+		{ 1, 316915, "", "=q4=Netherwind Pants", "=q1=#m1# =ds=#c3# (T2)", "", "17.37%"};
+		{ 2, 316922, "", "=q4=Leggings of Transcendence", "=q1=#m1# =ds=#c5# (T2)", "", "17.30%"};
+		{ 3, 316930, "", "=q4=Nemesis Leggings", "=q1=#m1# =ds=#c8# (T2)", "", "16.87%"};
+		{ 4, 316909, "", "=q4=Bloodfang Pants", "=q1=#m1# =ds=#c6# (T2)", "", "17.18%"};
+		{ 5, 316901, "", "=q4=Stormrage Legguards", "=q1=#m1# =ds=#c1# (T2)", "", "15.49%"};
+		{ 6, 316938, "", "=q4=Dragonstalker's Legguards", "=q1=#m1# =ds=#c2# (T2)", "", "16.02%"};
+		{ 7, 316946, "", "=q4=Legplates of Ten Storms", "=q1=#m1# =ds=#c7# (T2)", "", "5.97%"};
+		{ 8, 316962, "", "=q4=Legplates of Wrath", "=q1=#m1# =ds=#c9# (T2)", "", "17.23%"};
+		{ 9, 316954, "", "=q4=Judgement Legplates", "=q1=#m1# =ds=#c4# (T2)", "", "10.81%"};
+		{ 11, 317204, "", "=q5=Eye of Sulfuras", "=ds=#m3#", "", "3.42%"};
+		{ 12, 317182, "", "=q5=Sulfuras, Hand of Ragnaros", "=q1=#m4#: =ds=#h2#, #w6#"};
+		{ 13, 102107, "", "=q4=Reins of the Magmatic Steed", "=ds=#e12#", "" };
+		{ 14, 319017, "", "=q1=Essence of the Firelord", "=ds=#m3#", "", "0.46%"};
+		{ 15, 319019, "", "=q5=Thunderfury, Blessed Blade of the Windseeker", "=q1=#m4#: =ds=#h1#, #w10#"};
+		{ 16, 317102, "", "=q4=Cloak of the Shrouded Mists", "=ds=#s4#", "", "14.31%"};
+		{ 17, 317107, "", "=q4=Dragon's Blood Cape", "=ds=#s4#", "", "15.32%"};
+		{ 18, 318817, "", "=q4=Crown of Destruction", "=ds=#s1#, #a3#", "", "16.75%"};
+		{ 19, 319137, "", "=q4=Onslaught Girdle", "=ds=#s10#, #a4#", "", "13.18%"};
+		{ 20, 318814, "", "=q4=Choker of the Fire Lord", "=ds=#s2#", "", "16.08%"};
+		{ 21, 319138, "", "=q4=Band of Sulfuras", "=ds=#s13#", "", "15.64%"};
+		{ 22, 317063, "", "=q4=Band of Accuria", "=ds=#s13#", "", "14.81%"};
+		{ 23, 317082, "", "=q4=Shard of the Flame", "=ds=#s14#", "", " 4.65%"};
+		{ 24, 318815, "", "=q4=Essence of the Pure Flame", "=ds=#s14#", "", "17.80%"};
+		{ 25, 318816, "", "=q4=Perdition's Blade", "=ds=#h1#, #w4#", "", "15.90%"};
+		{ 26, 317076, "", "=q4=Bonereaver's Edge", "=ds=#h2#, #w10#", "", "5.12%"};
+		{ 27, 317104, "", "=q4=Spinal Reaper", "=ds=#h2#, #w1#", "", " 4.63%"};
+		{ 28, 317106, "", "=q4=Malistar's Defender", "=ds=#w8#", "", "13.88%"};
+		{ 30, 21110, "", "=q1=Draconic for Dummies", "=ds=#m3#", "", "100%"};
+		Prev = "MCMajordomo25Man";
+	};
+
+	AtlasLoot_Data["MCTrashMobs25Man"] = {
+		{ 1, 316802, "", "=q4=Arcanist Belt", "=q1=#m1# =ds=#c3# (T1)", "", "0.16%"};
+		{ 2, 316817, "", "=q4=Girdle of Prophecy", "=q1=#m1# =ds=#c5# (T1)", "", "0.18%"};
+		{ 3, 316806, "", "=q4=Felheart Belt", "=q1=#m1# =ds=#c8# (T1)", "", "0.19%"};
+		{ 4, 316827, "", "=q4=Nightslayer Belt", "=q1=#m1# =ds=#c6# (T1)", "", "0.15%"};
+		{ 5, 316828, "", "=q4=Cenarion Belt", "=q1=#m1# =ds=#c1# (T1)", "", "0.16%"};
+		{ 6, 316851, "", "=q4=Giantstalker's Belt", "=q1=#m1# =ds=#c2# (T1)", "", "0.17%"};
+		{ 7, 316838, "", "=q4=Earthfury Belt", "=q1=#m1# =ds=#c7# (T1)", "", "0.07%"};
+		{ 8, 316864, "", "=q4=Belt of Might", "=q1=#m1# =ds=#c9# (T1)", "", "0.16%"};
+		{ 9, 316858, "", "=q4=Lawbringer Belt", "=q1=#m1# =ds=#c4# (T1)", "", "0.10%"};
+		{ 11, 17010, "", "=q3=Fiery Core", "=ds=#e8#"};
+		{ 12, 17011, "", "=q3=Lava Core", "=ds=#e8#"};
+		{ 13, 11382, "", "=q2=Blood of the Mountain", "=ds=#e8#"};
+		{ 14, 17012, "", "=q1=Core Leather", "=ds=#e8#"};
+		{ 16, 316799, "", "=q4=Arcanist Bindings", "=q1=#m1# =ds=#c3# (T1)", "", "0.16%"};
+		{ 17, 316819, "", "=q4=Vambraces of Prophecy", "=q1=#m1# =ds=#c5# (T1)", "", "0.16%"};
+		{ 18, 316804, "", "=q4=Felheart Bracers", "=q1=#m1# =ds=#c8# (T1)", "", "0.16%"};
+		{ 19, 316825, "", "=q4=Nightslayer Bracelets", "=q1=#m1# =ds=#c6# (T1)", "", "0.17%"};
+		{ 20, 316830, "", "=q4=Cenarion Bracers", "=q1=#m1# =ds=#c1# (T1)", "", "0.17%"};
+		{ 21, 316850, "", "=q4=Giantstalker's Bracers", "=q1=#m1# =ds=#c2# (T1)", "", "0.18%"};
+		{ 22, 316840, "", "=q4=Earthfury Bracers", "=q1=#m1# =ds=#c7# (T1)", "", "0.06%"};
+		{ 23, 316861, "", "=q4=Bracers of Might", "=q1=#m1# =ds=#c9# (T1)", "", "0.16%"};
+		{ 24, 316857, "", "=q4=Lawbringer Bracers", "=q1=#m1# =ds=#c4# (T1)", "", "0.11%"};
+	};
+
+	AtlasLoot_Data["MCRANDOMBOSSDROPPS25Man"] = {
+		{ 1, 18264, "", "=q3=Plans: Elemental Sharpening Stone", "=ds=#p2# (300)", "", "1.02%"};
+		{ 2, 18262, "", "=q2=Elemental Sharpening Stone", "=ds=#e6#"};
+		{ 4, 18292, "", "=q3=Schematic: Core Marksman Rifle", "=ds=#p5# (300)", "", "0.96%"};
+		{ 5, 18282, "", "=q4=Core Marksman Rifle", "=ds=#w5#"};
+		{ 7, 18291, "", "=q3=Schematic: Force Reactive Disk", "=ds=#p5# (300)", "", "0.92%"};
+		{ 8, 18168, "", "=q4=Force Reactive Disk", "=ds=#w8#"};
+		{ 10, 18290, "", "=q3=Schematic: Biznicks 247x128 Accurascope", "=ds=#p5# (300)", "", "0.11%"};
+		{ 11, 18283, "", "=q3=Biznicks 247x128 Accurascope", "=ds=#e11#"};
+		{ 13, 18259, "", "=q3=Formula: Enchant Weapon - Spell Power", "=ds=#p4# (300)", "", "0.85%"};
+		{ 16, 18252, "", "=q3=Pattern: Core Armor Kit", "=ds=#p7# (300)", "", "0.85%"};
+		{ 17, 18251, "", "=q3=Core Armor Kit", "=ds=#e6#"};
+		{ 19, 18265, "", "=q3=Pattern: Flarecore Wraps", "=ds=#p8# (300)", "", "0.72%"};
+		{ 20, 18263, "", "=q4=Flarecore Wraps", "=ds=#s8#, #a1#"};
+		{ 22, 21371, "", "=q3=Pattern: Core Felcloth Bag", "=ds=#p8# (300)", "", "0.33%"};
+		{ 23, 21342, "", "=q4=Core Felcloth Bag", "=ds=#m11# #e1# =q1=#m1# #c8#"};
+		{ 25, 18257, "", "=q3=Recipe: Major Rejuvenation Potion", "=ds=#p1# (300)", "", "0.76%"};
+		{ 26, 18253, "", "=q1=Major Rejuvenation Potion", "=ds=#e2#"};
+		{ 28, 18260, "", "=q3=Formula: Enchant Weapon - Healing Power", "=ds=#p4# (300)", "", "0.75%"};
+	};
+
+	----------------------------------------------
+	--- Blackrock Mountain: Molten Core ASCENDED ---
+	----------------------------------------------
+
+	AtlasLoot_Data["MCLucifron25ManHEROIC"] = {
 		{ 1, 218872, "", "=q4=Manastorm Leggings", "=ds=#s11#, #a1#", "", "1.93%"};
 		{ 2, 219145, "", "=q4=Robe of Volatile Power", "=ds=#s5#, #a1#", "", "1.84%"};
 		{ 3, 219146, "", "=q4=Wristguards of Stability", "=ds=#s8#, #a2#", "", "1.95%"};
@@ -2520,10 +2825,10 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 20, 216863, "", "=q4=Gauntlets of Might", "=q1=#m1# =ds=#c9# (T1)", "", "16.40%"};
 		{ 21, 216859, "", "=q4=Lawbringer Boots", "=q1=#m1# =ds=#c4# (T1)", "", "7.20%"};
 		{ 22, 17329, "", "=q1=Hand of Lucifron", "=ds=#m3#"};
-		Next = "MCMagmadarHEROIC";
+		Next = "MCMagmadar25ManHEROIC";
 	};
 
-	AtlasLoot_Data["MCMagmadarHEROIC"] = {
+	AtlasLoot_Data["MCMagmadar25ManHEROIC"] = {
 		{ 1, 219136, "", "=q4=Mana Igniting Cord", "=ds=#s10#, #a1#", "", "4.79%"};
 		{ 2, 218823, "", "=q4=Aged Core Leather Gloves", "=ds=#s9#, #a2#", "", "6.18%"};
 		{ 3, 218829, "", "=q4=Deep Earth Spaulders", "=ds=#s3#, #a3#", "", "2.10%"};
@@ -2548,11 +2853,11 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 22, 216843, "", "=q4=Earthfury Legguards", "=q1=#m1# =ds=#c7# (T1)", "", " 4.73%"};
 		{ 23, 216855, "", "=q4=Lawbringer Legplates", "=q1=#m1# =ds=#c4# (T1)", "", "8.54%"};
 		{ 24, 216867, "", "=q4=Legplates of Might", "=q1=#m1# =ds=#c9# (T1)", "", "13.97%"};
-		Prev = "MCLucifronHEROIC";
-		Next = "MCGehennasHEROIC";
+		Prev = "MCLucifron25ManHEROIC";
+		Next = "MCGehennas25ManHEROIC";
 	};
 
-	AtlasLoot_Data["MCGehennasHEROIC"] = {
+	AtlasLoot_Data["MCGehennas25ManHEROIC"] = {
 		{ 1, 219145, "", "=q4=Robe of Volatile Power", "=ds=#s5#, #a1#", "", "3.83%"};
 		{ 2, 218872, "", "=q4=Manastorm Leggings", "=ds=#s11#, #a1#", "", "3.37%"};
 		{ 3, 219146, "", "=q4=Wristguards of Stability", "=ds=#s8#, #a2#", "", "3.53%"};
@@ -2570,11 +2875,11 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 20, 216862, "", "=q4=Sabatons of Might", "=q1=#m1# =ds=#c9# (T1)", "", "14.48%"};
 		{ 21, 216860, "", "=q4=Lawbringer Gauntlets", "=q1=#m1# =ds=#c4# (T1)", "", "11.77%"};
 		{ 23, 17331, "", "=q1=Hand of Gehennas", "=ds=#m3#"};
-		Prev = "MCMagmadarHEROIC";
-		Next = "MCGarrHEROIC";
+		Prev = "MCMagmadar25ManHEROIC";
+		Next = "MCGarr25ManHEROIC";
 	};
 
-	AtlasLoot_Data["MCGarrHEROIC"] = {
+	AtlasLoot_Data["MCGarr25ManHEROIC"] = {
 		{ 1, 219136, "", "=q4=Mana Igniting Cord", "=ds=#s10#, #a1#", "", "4.80%"};
 		{ 2, 218823, "", "=q4=Aged Core Leather Gloves", "=ds=#s9#, #a2#", "", "5.23%"};
 		{ 3, 218829, "", "=q4=Deep Earth Spaulders", "=ds=#s3#, #a3#", "", "1.68%"};
@@ -2601,11 +2906,11 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 24, 216854, "", "=q4=Lawbringer Helm", "=q1=#m1# =ds=#c4# (T1)", "", "7.23%"};
 		{ 26, 218564, "", "=q5=Bindings of the Windseeker", "=ds=#m3#, =q1=#m9#", "", "3.74%"};
 		{ 27, 219019, "", "=q5=Thunderfury, Blessed Blade of the Windseeker", "=q1=#m4#: =ds=#h1#, #w10#"};
-		Prev = "MCGehennasHEROIC";
-		Next = "MCShazzrahHEROIC";
+		Prev = "MCGehennas25ManHEROIC";
+		Next = "MCShazzrah25ManHEROIC";
 	};
 
-	AtlasLoot_Data["MCShazzrahHEROIC"] = {
+	AtlasLoot_Data["MCShazzrah25ManHEROIC"] = {
 		{ 1, 219145, "", "=q4=Robe of Volatile Power", "=ds=#s5#, #a1#", "", "1.97%"};
 		{ 2, 218872, "", "=q4=Manastorm Leggings", "=ds=#s11#, #a1#", "", "1.84%"};
 		{ 3, 219146, "", "=q4=Wristguards of Stability", "=ds=#s8#, #a2#", "", "1.85%"};
@@ -2623,11 +2928,11 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 20, 216852, "", "=q4=Giantstalker's Gloves", "=q1=#m1# =ds=#c2# (T1)", "", "18.58%"};
 		{ 21, 216824, "", "=q4=Nightslayer Boots", "=q1=#m1# =ds=#c6# (T1)", "", "15.58%"};
 		{ 23, 17332, "", "=q1=Hand of Shazzrah", "=ds=#m3#"};
-		Prev = "MCGarrHEROIC";
-		Next = "MCGeddonHEROIC";
+		Prev = "MCGarr25ManHEROIC";
+		Next = "MCGeddon25ManHEROIC";
 	};
 
-	AtlasLoot_Data["MCGeddonHEROIC"] = {
+	AtlasLoot_Data["MCGeddon25ManHEROIC"] = {
 		{ 1, 219136, "", "=q4=Mana Igniting Cord", "=ds=#s10#, #a1#", "", "2.44%"};
 		{ 2, 218823, "", "=q4=Aged Core Leather Gloves", "=ds=#s9#, #a2#", "", "3.04%"};
 		{ 3, 218829, "", "=q4=Deep Earth Spaulders", "=ds=#s3#, #a3#", "", "1.04%"};
@@ -2647,11 +2952,11 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 20, 216844, "", "=q4=Earthfury Epaulets", "=q1=#m1# =ds=#c7# (T1)", "", "7.29%"};
 		{ 22, 218563, "", "=q5=Bindings of the Windseeker", " =ds=#m3#, =q1=#m10#", "", "3.78%"};
 		{ 23, 219019, "", "=q5=Thunderfury, Blessed Blade of the Windseeker", "=q1=#m4#: =ds=#h1#, #w10#"};
-		Prev = "MCShazzrahHEROIC";
-		Next = "MCGolemaggHEROIC";
+		Prev = "MCShazzrah25ManHEROIC";
+		Next = "MCGolemagg25ManHEROIC";
 	};
 
-	AtlasLoot_Data["MCGolemaggHEROIC"] = {
+	AtlasLoot_Data["MCGolemagg25ManHEROIC"] = {
 		{ 1, 219136, "", "=q4=Mana Igniting Cord", "=ds=#s10#, #a1#", "", "2.18%"};
 		{ 2, 218823, "", "=q4=Aged Core Leather Gloves", "=ds=#s9#, #a2#", "", "2.65%"};
 		{ 3, 218829, "", "=q4=Deep Earth Spaulders", "=ds=#s3#, #a3#", "", "1.20%"};
@@ -2677,11 +2982,11 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 24, 216853, "", "=q4=Lawbringer Chestguard", "=q1=#m1# =ds=#c4# (T1)", "", "9.53%"};
 		{ 26, 17203, "", "=q4=Sulfuron Ingot", "=ds=#m3#", "", "11.98%"};
 		{ 27, 217182, "", "=q5=Sulfuras, Hand of Ragnaros", "=q1=#m4#: =ds=#h2#, #w6#"};
-		Prev = "MCGeddonHEROIC";
-		Next = "MCSulfuronHEROIC";
+		Prev = "MCGeddon25ManHEROIC";
+		Next = "MCSulfuron25ManHEROIC";
 	};
 
-	AtlasLoot_Data["MCSulfuronHEROIC"] = {
+	AtlasLoot_Data["MCSulfuron25ManHEROIC"] = {
 		{ 1, 219145, "", "=q4=Robe of Volatile Power", "=ds=#s5#, #a1#", "", "2.80%"};
 		{ 2, 218872, "", "=q4=Manastorm Leggings", "=ds=#s11#, #a1#", "", "2.54%"};
 		{ 3, 219146, "", "=q4=Wristguards of Stability", "=ds=#s8#, #a2#", "", "2.70%"};
@@ -2698,11 +3003,11 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 18, 216848, "", "=q4=Giantstalker's Epaulets", "=q1=#m1# =ds=#c2# (T1)", "", "19.64%"};
 		{ 19, 216868, "", "=q4=Pauldrons of Might", "=q1=#m1# =ds=#c9# (T1)", "", "21.14%"};
 		{ 21, 17330, "", "=q1=Hand of Sulfuron", "=ds=#m3#"};
-		Prev = "MCGolemaggHEROIC";
-		Next = "MCMajordomoHEROIC";
+		Prev = "MCGolemagg25ManHEROIC";
+		Next = "MCMajordomo25ManHEROIC";
 	};
 
-	AtlasLoot_Data["MCMajordomoHEROIC"] = {
+	AtlasLoot_Data["MCMajordomo25ManHEROIC"] = {
 		{ 1, 218811, "", "=q4=Fireproof Cloak", "=ds=#s4#", "", "15.12%"};
 		{ 2, 218808, "", "=q4=Gloves of the Hypnotic Flame", "=ds=#s9#, #a1#", "", "15.36%"};
 		{ 3, 218809, "", "=q4=Sash of Whispered Secrets", "=ds=#s10#, #a1#", "", "15.93%"};
@@ -2720,11 +3025,11 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 21, 18646, "", "=q4=The Eye of Divinity", "=ds=#m2# =q1=(#c5#)", "", "28.30%"};
 		{ 22, 18608, "", "=q4=Benediction", "=q1=#m4#: =ds=#w9#, =q1=#m1# =ds=#c5#"};
 		{ 23, 18609, "", "=q4=Anathema", "=q1=#m4#: =ds=#w9#, =q1=#m1# =ds=#c5#"};
-		Prev = "MCSulfuronHEROIC";
-		Next = "MCRagnarosHEROIC";
+		Prev = "MCSulfuron25ManHEROIC";
+		Next = "MCRagnaros25ManHEROIC";
 	};
 
-	AtlasLoot_Data["MCRagnarosHEROIC"] = {
+	AtlasLoot_Data["MCRagnaros25ManHEROIC"] = {
 		{ 1, 216915, "", "=q4=Netherwind Pants", "=q1=#m1# =ds=#c3# (T2)", "", "17.37%"};
 		{ 2, 216922, "", "=q4=Leggings of Transcendence", "=q1=#m1# =ds=#c5# (T2)", "", "17.30%"};
 		{ 3, 216930, "", "=q4=Nemesis Leggings", "=q1=#m1# =ds=#c8# (T2)", "", "16.87%"};
@@ -2753,10 +3058,10 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 27, 217104, "", "=q4=Spinal Reaper", "=ds=#h2#, #w1#", "", " 4.63%"};
 		{ 28, 217106, "", "=q4=Malistar's Defender", "=ds=#w8#", "", "13.88%"};
 		{ 30, 21110, "", "=q1=Draconic for Dummies", "=ds=#m3#", "", "100%"};
-		Prev = "MCMajordomoHEROIC";
+		Prev = "MCMajordomo25ManHEROIC";
 	};
 
-	AtlasLoot_Data["MCTrashMobsHEROIC"] = {
+	AtlasLoot_Data["MCTrashMobs25ManHEROIC"] = {
 		{ 1, 216802, "", "=q4=Arcanist Belt", "=q1=#m1# =ds=#c3# (T1)", "", "0.16%"};
 		{ 2, 216817, "", "=q4=Girdle of Prophecy", "=q1=#m1# =ds=#c5# (T1)", "", "0.18%"};
 		{ 3, 216806, "", "=q4=Felheart Belt", "=q1=#m1# =ds=#c8# (T1)", "", "0.19%"};
@@ -2781,7 +3086,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 24, 216857, "", "=q4=Lawbringer Bracers", "=q1=#m1# =ds=#c4# (T1)", "", "0.11%"};
 	};
 
-	AtlasLoot_Data["MCRANDOMBOSSDROPPSHEROIC"] = {
+	AtlasLoot_Data["MCRANDOMBOSSDROPPS25ManHEROIC"] = {
 		{ 1, 18264, "", "=q3=Plans: Elemental Sharpening Stone", "=ds=#p2# (300)", "", "1.02%"};
 		{ 2, 18262, "", "=q2=Elemental Sharpening Stone", "=ds=#e6#"};
 		{ 4, 18292, "", "=q3=Schematic: Core Marksman Rifle", "=ds=#p5# (300)", "", "0.96%"};
@@ -5606,10 +5911,10 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 
 
 	------------------------
-	--- Zul'Gurub HEROIC ---
+	--- Zul'Gurub HEROIC FLEX ---
 	------------------------
 
-	AtlasLoot_Data["ZGJeklikHEROIC"] = {
+	AtlasLoot_Data["ZGJeklik25Man"] = {
 		{ 1, 19717, "", "=q4=Primal Hakkari Armsplint", "=ds=#m3#", "", "11.41%"};
 		{ 2, 19716, "", "=q4=Primal Hakkari Bindings", "=ds=#m3#", "", "11.02%"};
 		{ 3, 19718, "", "=q4=Primal Hakkari Stanchion", "=ds=#m3#", "", "10.84%"};
@@ -5628,10 +5933,10 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 21, 219923, "", "=q3=Jeklik's Opaline Talisman", "=ds=#s2#", "", "12.22%"};
 		{ 22, 219920, "", "=q3=Primalist's Band", "=ds=#s13#", "", "11.89%"};
 		{ 23, 219915, "", "=q3=Zulian Defender", "=ds=#w8#", "", " 11.36%"};
-		Next = "ZGVenoxisHEROIC";
+		Next = "ZGVenoxis25Man";
 	};
 
-	AtlasLoot_Data["ZGVenoxisHEROIC"] = {
+	AtlasLoot_Data["ZGVenoxis25Man"] = {
 		{ 1, 19716, "", "=q4=Primal Hakkari Bindings", "=ds=#m3#", "", "11.01%"};
 		{ 2, 19718, "", "=q4=Primal Hakkari Stanchion", "=ds=#m3#", "", "10.55%"};
 		{ 3, 19717, "", "=q4=Primal Hakkari Armsplint", "=ds=#m3#", "", "10.18%"};
@@ -5650,11 +5955,11 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 20, 219906, "", "=q3=Blooddrenched Footpads", "=ds=#s12#, #a2#", "", "11.36%"};
 		{ 21, 219905, "", "=q3=Zanzil's Band", "=ds=#s13#", "", "6.99%"};
 		{ 22, 219900, "", "=q3=Zulian Stone Axe", "=ds=#h2#, #w1#", "", "11.89%"};
-		Prev = "ZGJeklikHEROIC";
-		Next = "ZGMarliHEROIC";
+		Prev = "ZGJeklik25Man";
+		Next = "ZGMarli25Man";
 	};
 
-	AtlasLoot_Data["ZGMarliHEROIC"] = {
+	AtlasLoot_Data["ZGMarli25Man"] = {
 		{ 1, 19720, "", "=q4=Primal Hakkari Sash", "=ds=#m3#", "", "13.69%"};
 		{ 2, 19719, "", "=q4=Primal Hakkari Girdle", "=ds=#m3#", "", "13.69%"};
 		{ 3, 19721, "", "=q4=Primal Hakkari Shawl", "=ds=#m3#", "", "13.64%"};
@@ -5672,11 +5977,11 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 20, 219871, "", "=q3=Talisman of Protection", "=ds=#s2#", "", "11.36%"};
 		{ 21, 219925, "", "=q3=Band of Jin", "=ds=#s13#", "", " 6.99%"};
 		{ 22, 219930, "", "=q3=Mar'li's Eye", "=ds=#s14#", "", "12.09%"};
-		Prev = "ZGVenoxisHEROIC";
-		Next = "ZGMandokirHEROIC";
+		Prev = "ZGVenoxis25Man";
+		Next = "ZGMandokir25Man";
 	};
 
-	AtlasLoot_Data["ZGMandokirHEROIC"] = {
+	AtlasLoot_Data["ZGMandokir25Man"] = {
 		{ 1, 19723, "", "=q4=Primal Hakkari Kossack", "=ds=#m3#", "", "12.94%"};
 		{ 2, 19724, "", "=q4=Primal Hakkari Aegis", "=ds=#m3#", "", "12.07%"};
 		{ 3, 19722, "", "=q4=Primal Hakkari Tabard", "=ds=#m3#", "", "11.56%"};
@@ -5701,11 +6006,11 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 27, 219873, "", "=q3=Overlord's Crimson Band", "=ds=#s13#", "", "12.28%"};
 		{ 28, 219893, "", "=q3=Zanzil's Seal", "=ds=#s13#", "", "13.11%"};
 		{ 29, 219863, "", "=q3=Primalist's Seal", "=ds=#s13#", "", "12.32%"};
-		Prev = "ZGMarliHEROIC";
-		Next = "ZGEdgeofMadnessHEROIC";
+		Prev = "ZGMarli25Man";
+		Next = "ZGEdgeofMadness25Man";
 	};
 
-	AtlasLoot_Data["ZGEdgeofMadnessHEROIC"] = {
+	AtlasLoot_Data["ZGEdgeofMadness25Man"] = {
 		{ 1, 0, "INV_Box_01", "=q6="..BabbleBoss["Gri'lek"], ""};
 		{ 2, 219961, "", "=q3=Gri'lek's Grinder", "=ds=#h1#, #w6#", "", "43.90%"};
 		{ 3, 219962, "", "=q3=Gri'lek's Carver", "=ds=#h2#, #w1#", "", "41.99%"};
@@ -5722,21 +6027,21 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 22, 219965, "", "=q3=Wushoolay's Poker", "=ds=#h3#, #w4#", "", "45.21%"};
 		{ 23, 219993, "", "=q3=Hoodoo Hunting Bow", "=ds=#w2#", "", "40.96%"};
 		{ 24, 19941, "", "=q2=Wushoolay's Mane", "=ds=#m3#", "", "100%"};
-		Prev = "ZGMandokirHEROIC";
-		Next = "ZGGahzrankaHEROIC";
+		Prev = "ZGMandokir25Man";
+		Next = "ZGGahzranka25Man";
 	};
 
-	AtlasLoot_Data["ZGGahzrankaHEROIC"] = {
+	AtlasLoot_Data["ZGGahzranka25Man"] = {
 		{ 1, 219945, "", "=q4=Foror's Eyepatch", "=ds=#s1#, #a2#", "", "8,82%"};
 		{ 2, 219944, "", "=q4=Nat Pagle's Fish Terminator", "=ds=#w9#", "", "2.39%"};
 		{ 4, 219947, "", "=q3=Nat Pagle's Broken Reel", "=ds=#s14#", "", "28.20%"};
 		{ 5, 219946, "", "=q3=Tigule's Harpoon", "=ds=#w7#", "", "29.22%"};
 		{ 7, 22739, "", "=q3=Tome of Polymorph: Turtle", "=ds=#e10#, =q1=#m1# =ds=#c3#"};
-		Prev = "ZGEdgeofMadnessHEROIC";
-		Next = "ZGThekalHEROIC";
+		Prev = "ZGEdgeofMadness25Man";
+		Next = "ZGThekal25Man";
 	};
 
-	AtlasLoot_Data["ZGThekalHEROIC"] = {
+	AtlasLoot_Data["ZGThekal25Man"] = {
 		{ 1, 19720, "", "=q4=Primal Hakkari Sash", "=ds=#m3#", "", " 14.95%"};
 		{ 2, 19721, "", "=q4=Primal Hakkari Shawl", "=ds=#m3#", "", " 13.74%"};
 		{ 3, 19719, "", "=q4=Primal Hakkari Girdle", "=ds=#m3#", "", " 12.95%"};
@@ -5753,11 +6058,11 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 22, 220260, "", "=q3=Seafury Leggings", "=ds=#s11#, #a3#", "", "4.30%"};
 		{ 23, 220266, "", "=q3=Peacekeeper Leggings", "=ds=#s11#, #a4#", "", "8.69%"};
 		{ 24, 219901, "", "=q3=Zulian Slicer", "=ds=#h1#, #w10#, =q1=#e18#", "", "13.36%"};
-		Prev = "ZGGahzrankaHEROIC";
-		Next = "ZGArlokkHEROIC";
+		Prev = "ZGGahzranka25Man";
+		Next = "ZGArlokk25Man";
 	};
 
-	AtlasLoot_Data["ZGArlokkHEROIC"] = {
+	AtlasLoot_Data["ZGArlokk25Man"] = {
 		{ 1, 19721, "", "=q4=Primal Hakkari Shawl", "=ds=#m3#", "", "15.49%"};
 		{ 2, 19720, "", "=q4=Primal Hakkari Sash", "=ds=#m3#", "", "12.52%"};
 		{ 3, 19719, "", "=q4=Primal Hakkari Girdle", "=ds=#m3#", "", "13.17%"};
@@ -5775,11 +6080,11 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 20, 219912, "", "=q3=Overlord's Onyx Band", "=ds=#s13#", "", "13.95%"};
 		{ 21, 219922, "", "=q3=Arlokk's Hoodoo Stick", "=ds=#s15#", "", "13.66%"};
 		{ 22, 19914, "", "=q3=Panther Hide Sack", "=ds=#m14# #e1#", "", "14.03%"};
-		Prev = "ZGThekalHEROIC";
-		Next = "ZGJindoHEROIC";
+		Prev = "ZGThekal25Man";
+		Next = "ZGJindo25Man";
 	};
 
-	AtlasLoot_Data["ZGJindoHEROIC"] = {
+	AtlasLoot_Data["ZGJindo25Man"] = {
 		{ 1, 19723, "", "=q4=Primal Hakkari Kossack", "=ds=#m3#", "", "13.56%"};
 		{ 2, 19722, "", "=q4=Primal Hakkari Tabard", "=ds=#m3#", "", "13.48%"};
 		{ 3, 19724, "", "=q4=Primal Hakkari Aegis", "=ds=#m3#", "", "12.09%"};
@@ -5803,11 +6108,11 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 26, 219875, "", "=q3=Bloodstained Coif", "=ds=#s1#, #a3#", "", "13.73%"};
 		{ 27, 219887, "", "=q3=Bloodstained Legplates", "=ds=#s11#, #a3#", "", "11.11%"};
 		{ 28, 219894, "", "=q3=Bloodsoaked Gauntlets", "=ds=#s9#, #a4#", "", "12.93%"};
-		Prev = "ZGArlokkHEROIC";
-		Next = "ZGHakkarHEROIC";
+		Prev = "ZGArlokk25Man";
+		Next = "ZGHakkar25Man";
 	};
 
-	AtlasLoot_Data["ZGHakkarHEROIC"] = {
+	AtlasLoot_Data["ZGHakkar25Man"] = {
 		{ 1, 219857, "", "=q4=Cloak of Consumption", "=ds=#s4#", "", "11.65%"};
 		{ 2, 220257, "", "=q4=Seafury Gauntlets", "=ds=#s9#, #a3#", "", "4.11%"};
 		{ 3, 220264, "", "=q4=Peacekeeper Gauntlets", "=ds=#s9#, #a4#", "", "7.37%"};
@@ -5827,14 +6132,14 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 18, 19949, "", "=q4=Zandalarian Hero Medallion", "=q1=#m4#: =ds=#s14#"};
 		{ 19, 19948, "", "=q4=Zandalarian Hero Badge", "=q1=#m4#: =ds=#s14#"};
 		{ 21, 19943, "", "=q1=Massive Mojo", "=ds=#e8#", "", "34.3%"};
-		Prev = "ZGJindoHEROIC";
+		Prev = "ZGJindo25Man";
 	};
 
-	AtlasLoot_Data["ZGMuddyChurningWatersHEROIC"] = {
+	AtlasLoot_Data["ZGMuddyChurningWaters25Man"] = {
 		{ 1, 19975, "", "=q1=Zulian Mudskunk", "=ds=#e21#"};
 	};
 
-	AtlasLoot_Data["ZGSharedHEROIC"] = {
+	AtlasLoot_Data["ZGShared25Man"] = {
 		{ 1, 222721, "", "=q4=Band of Servitude", "=ds=#s13#"};
 		{ 2, 222722, "", "=q4=Seal of the Gurubashi Berserker", "=ds=#s13#"};
 		{ 4, 222711, "", "=q3=Cloak of the Hakkari Worshipers", "=ds=#s4#"};
@@ -5847,7 +6152,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 11, 222713, "", "=q3=Zulian Scepter of Rites", "=ds=#h3#, #w6#"};
 	};
 
-	AtlasLoot_Data["ZGTrash1HEROIC"] = {
+	AtlasLoot_Data["ZGTrash125Man"] = {
 		{ 1, 220259, "", "=q3=Shadow Panther Hide Gloves", "=ds=#s9#, #a2#"};
 		{ 2, 220261, "", "=q3=Shadow Panther Hide Belt", "=ds=#s10#, #a2#"};
 		{ 3, 220263, "", "=q3=Gurubashi Helm", "=ds=#s1#, #a4#"};
@@ -5869,10 +6174,10 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 22, 19817, "", "=q2=Punctured Voodoo Doll", "=q1=#m1# =ds=#c7#", "", "0.01%"};
 		{ 23, 19819, "", "=q2=Punctured Voodoo Doll", "=q1=#m1# =ds=#c8#", "", "0.01%"};
 		{ 24, 19813, "", "=q2=Punctured Voodoo Doll", "=q1=#m1# =ds=#c9#", "", "0.01%"};
-		Next = "ZGTrash2HEROIC";
+		Next = "ZGTrash225Man";
 	};
 
-	AtlasLoot_Data["ZGTrash2HEROIC"] = {
+	AtlasLoot_Data["ZGTrash225Man"] = {
 		{ 1, 19708, "", "=q3=Blue Hakkari Bijou", "=ds=#e15#", "", "1.48%"};
 		{ 2, 19713, "", "=q3=Bronze Hakkari Bijou", "=ds=#e15#", "", "1.57%"};
 		{ 3, 19715, "", "=q3=Gold Hakkari Bijou", "=ds=#e15#", "", "1.63%"};
@@ -5891,10 +6196,315 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 22, 19702, "", "=q2=Vilebranch Coin", "=ds=#e15#", "", "3.27%"};
 		{ 23, 19703, "", "=q2=Witherbark Coin", "=ds=#e15#", "", "3.27%"};
 		{ 24, 19698, "", "=q2=Zulian Coin", "=ds=#e15#", "", "3.01%"};
-		Prev = "ZGTrash1HEROIC";
+		Prev = "ZGTrash125Man";
 	};
 
-	AtlasLoot_Data["ZGEnchantsHEROIC"] = {
+	AtlasLoot_Data["ZGEnchants25Man"] = {
+		{ 1, 19790, "", "=q3=Animist's Caress", "=q1=#m1# =ds=#c1#"};
+		{ 2, 19785, "", "=q3=Falcon's Call", "=q1=#m1# =ds=#c2#"};
+		{ 3, 19787, "", "=q3=Presence of Sight", "=q1=#m1# =ds=#c3#"};
+		{ 4, 19783, "", "=q3=Syncretist's Sigil", "=q1=#m1# =ds=#c4#"};
+		{ 5, 19789, "", "=q3=Prophetic Aura", "=q1=#m1# =ds=#c5#"};
+		{ 6, 19784, "", "=q3=Death's Embrace", "=q1=#m1# =ds=#c6#"};
+		{ 7, 19786, "", "=q3=Vodouisant's Vigilant Embrace", "=q1=#m1# =ds=#c7#"};
+		{ 8, 19788, "", "=q3=Hoodoo Hex", "=q1=#m1# =ds=#c8#"};
+		{ 9, 19782, "", "=q3=Presence of Might", "=q1=#m1# =ds=#c9#"};
+		{ 16, 20077, "", "=q3=Zandalar Signet of Might", "=ds=#s3# #e17#"};
+		{ 17, 20076, "", "=q3=Zandalar Signet of Mojo", "=ds=#s3# #e17#"};
+		{ 18, 20078, "", "=q3=Zandalar Signet of Serenity", "=ds=#s3# #e17#"};
+		{ 20, 22635, "", "=q3=Savage Guard", "=ds=#s1#/#s11# #e17#"};
+	};	
+
+	------------------------
+	--- Zul'Gurub ASCENDED ---
+	------------------------
+
+	AtlasLoot_Data["ZGJeklik25ManHEROIC"] = {
+		{ 1, 19717, "", "=q4=Primal Hakkari Armsplint", "=ds=#m3#", "", "11.41%"};
+		{ 2, 19716, "", "=q4=Primal Hakkari Bindings", "=ds=#m3#", "", "11.02%"};
+		{ 3, 19718, "", "=q4=Primal Hakkari Stanchion", "=ds=#m3#", "", "10.84%"};
+		{ 4, 19721, "", "=q4=Primal Hakkari Shawl", "=ds=#m3#", "", "5.89%"};
+		{ 5, 19720, "", "=q4=Primal Hakkari Sash", "=ds=#m3#", "", "5.80%"};
+		{ 6, 19719, "", "=q4=Primal Hakkari Girdle", "=ds=#m3#", "", "5.56%"};
+		{ 7, 19724, "", "=q4=Primal Hakkari Aegis", "=ds=#m3#", "", "2.33%"};
+		{ 8, 19723, "", "=q4=Primal Hakkari Kossack", "=ds=#m3#", "", "2.32%"};
+		{ 9, 19722, "", "=q4=Primal Hakkari Tabard", "=ds=#m3#", "", "2.17%"};
+		{ 11, 19943, "", "=q1=Massive Mojo", "=ds=#e8#", "", "8.8%"};
+		{ 12, 19881, "", "=q1=Channeler's Head", "=ds=#m3#", "", "100%"};
+		{ 16, 219918, "", "=q4=Jeklik's Crusher", "=ds=#h2#, #w6#", "", "3.96%"};
+		{ 18, 219928, "", "=q3=Animist's Spaulders", "=ds=#s3#, #a2#", "", "3.39%"};
+		{ 19, 220262, "", "=q3=Seafury Boots", "=ds=#s12#, #a3#", "", "4.31%"};
+		{ 20, 220265, "", "=q3=Peacekeeper Boots", "=ds=#s12#, #a4#", "", "6.99%"};
+		{ 21, 219923, "", "=q3=Jeklik's Opaline Talisman", "=ds=#s2#", "", "12.22%"};
+		{ 22, 219920, "", "=q3=Primalist's Band", "=ds=#s13#", "", "11.89%"};
+		{ 23, 219915, "", "=q3=Zulian Defender", "=ds=#w8#", "", " 11.36%"};
+		Next = "ZGVenoxis25ManHEROIC";
+	};
+
+	AtlasLoot_Data["ZGVenoxis25ManHEROIC"] = {
+		{ 1, 19716, "", "=q4=Primal Hakkari Bindings", "=ds=#m3#", "", "11.01%"};
+		{ 2, 19718, "", "=q4=Primal Hakkari Stanchion", "=ds=#m3#", "", "10.55%"};
+		{ 3, 19717, "", "=q4=Primal Hakkari Armsplint", "=ds=#m3#", "", "10.18%"};
+		{ 4, 19720, "", "=q4=Primal Hakkari Sash", "=ds=#m3#", "", "5.93%"};
+		{ 5, 19721, "", "=q4=Primal Hakkari Shawl", "=ds=#m3#", "", "5.67%"};
+		{ 6, 19719, "", "=q4=Primal Hakkari Girdle", "=ds=#m3#", "", "5.52%"};
+		{ 7, 19722, "", "=q4=Primal Hakkari Tabard", "=ds=#m3#", "", "2.18%"};
+		{ 8, 19723, "", "=q4=Primal Hakkari Kossack", "=ds=#m3#", "", "2.02%"};
+		{ 9, 19724, "", "=q4=Primal Hakkari Aegis", "=ds=#m3#", "", "2.00%"};
+		{ 11, 19943, "", "=q1=Massive Mojo", "=ds=#e8#", "", "6.0%"};
+		{ 12, 19881, "", "=q1=Channeler's Head", "=ds=#m3#", "", "100%"};
+		{ 13, 22216, "", "=q1=Venoxis's Venom Sac", "=ds=#m3#", "", "100%"};
+		{ 16, 219904, "", "=q4=Runed Bloodstained Hauberk", "=ds=#s5#, #a3#", "", "3.70%"};
+		{ 17, 219903, "", "=q4=Fang of Venoxis", "=ds=#h3#, #w4#", "", "3.68%"};
+		{ 19, 219907, "", "=q3=Zulian Tigerhide Cloak", "=ds=#s4#", "", "12.09%"};
+		{ 20, 219906, "", "=q3=Blooddrenched Footpads", "=ds=#s12#, #a2#", "", "11.36%"};
+		{ 21, 219905, "", "=q3=Zanzil's Band", "=ds=#s13#", "", "6.99%"};
+		{ 22, 219900, "", "=q3=Zulian Stone Axe", "=ds=#h2#, #w1#", "", "11.89%"};
+		Prev = "ZGJeklik25ManHEROIC";
+		Next = "ZGMarli25ManHEROIC";
+	};
+
+	AtlasLoot_Data["ZGMarli25ManHEROIC"] = {
+		{ 1, 19720, "", "=q4=Primal Hakkari Sash", "=ds=#m3#", "", "13.69%"};
+		{ 2, 19719, "", "=q4=Primal Hakkari Girdle", "=ds=#m3#", "", "13.69%"};
+		{ 3, 19721, "", "=q4=Primal Hakkari Shawl", "=ds=#m3#", "", "13.64%"};
+		{ 4, 19718, "", "=q4=Primal Hakkari Stanchion", "=ds=#m3#", "", "6.55%"};
+		{ 5, 19716, "", "=q4=Primal Hakkari Bindings", "=ds=#m3#", "", "6.49%"};
+		{ 6, 19717, "", "=q4=Primal Hakkari Armsplint", "=ds=#m3#", "", "6.31%"};
+		{ 7, 19722, "", "=q4=Primal Hakkari Tabard", "=ds=#m3#", "", "2.56%"};
+		{ 8, 19723, "", "=q4=Primal Hakkari Kossack", "=ds=#m3#", "", "2.55%"};
+		{ 9, 19724, "", "=q4=Primal Hakkari Aegis", "=ds=#m3#", "", "2.30%"};
+		{ 11, 19943, "", "=q1=Massive Mojo", "=ds=#e8#", "", "7.4%"};
+		{ 12, 19881, "", "=q1=Channeler's Head", "=ds=#m3#", "", "100%"};
+		{ 16, 220032, "", "=q4=Flowing Ritual Robes", "=ds=#s5#, #a1#", "", "4.46%"};
+		{ 17, 219927, "", "=q4=Mar'li's Touch", "=ds=#w12#", "", "4.35%"};
+		{ 19, 219919, "", "=q3=Bloodstained Greaves", "=ds=#s12#, #a3#", "", "11.89%"};
+		{ 20, 219871, "", "=q3=Talisman of Protection", "=ds=#s2#", "", "11.36%"};
+		{ 21, 219925, "", "=q3=Band of Jin", "=ds=#s13#", "", " 6.99%"};
+		{ 22, 219930, "", "=q3=Mar'li's Eye", "=ds=#s14#", "", "12.09%"};
+		Prev = "ZGVenoxis25ManHEROIC";
+		Next = "ZGMandokir25ManHEROIC";
+	};
+
+	AtlasLoot_Data["ZGMandokir25ManHEROIC"] = {
+		{ 1, 19723, "", "=q4=Primal Hakkari Kossack", "=ds=#m3#", "", "12.94%"};
+		{ 2, 19724, "", "=q4=Primal Hakkari Aegis", "=ds=#m3#", "", "12.07%"};
+		{ 3, 19722, "", "=q4=Primal Hakkari Tabard", "=ds=#m3#", "", "11.56%"};
+		{ 4, 19720, "", "=q4=Primal Hakkari Sash", "=ds=#m3#", "", "6.65%"};
+		{ 5, 19719, "", "=q4=Primal Hakkari Girdle", "=ds=#m3#", "", "6.55%"};
+		{ 6, 19721, "", "=q4=Primal Hakkari Shawl", "=ds=#m3#", "", "6.52%"};
+		{ 7, 19716, "", "=q4=Primal Hakkari Bindings", "=ds=#m3#", "", "2.98%"};
+		{ 8, 19718, "", "=q4=Primal Hakkari Stanchion", "=ds=#m3#", "", "2.65%"};
+		{ 9, 19717, "", "=q4=Primal Hakkari Armsplint", "=ds=#m3#", "", "2.48%"};
+		{ 11, 22637, "", "=q3=Primal Hakkari Idol", "=ds=#m3#"};
+		{ 12, 19943, "", "=q1=Massive Mojo", "=ds=#e8#", "", "9.4%"};
+		{ 16, 219867, "", "=q4=Bloodlord's Defender", "=ds=#h1#, #w10#", "", "5.83%"};
+		{ 17, 219866, "", "=q4=Warblade of the Hakkari", "=ds=#h4#, #w10#", "", "3.96%"};
+		{ 18, 219874, "", "=q4=Halberd of Smiting", "=ds=#w7#", "", "6.35%"};
+		{ 19, 220038, "", "=q4=Mandokir's Sting", "=ds=#w2#", "", "5.96%"};
+		{ 20, 19872, "", "=q4=Swift Razzashi Raptor", "=ds=#e12#", "", "0.43%"};
+		{ 22, 219870, "", "=q3=Hakkari Loa Cloak", "=ds=#s4#", "", "12.54%"};
+		{ 23, 219895, "", "=q3=Bloodtinged Kilt", "=ds=#s11#, #a1#", "", "13.50%"};
+		{ 24, 219869, "", "=q3=Blooddrenched Grips", "=ds=#s9#, #a2#", "", "12.87%"};
+		{ 25, 219877, "", "=q3=Animist's Leggings", "=ds=#s11#, #a2#", "", "12.14%"};
+		{ 26, 219878, "", "=q3=Bloodsoaked Pauldrons", "=ds=#s9#, #a4#", "", "12.31%"};
+		{ 27, 219873, "", "=q3=Overlord's Crimson Band", "=ds=#s13#", "", "12.28%"};
+		{ 28, 219893, "", "=q3=Zanzil's Seal", "=ds=#s13#", "", "13.11%"};
+		{ 29, 219863, "", "=q3=Primalist's Seal", "=ds=#s13#", "", "12.32%"};
+		Prev = "ZGMarli25ManHEROIC";
+		Next = "ZGEdgeofMadness25ManHEROIC";
+	};
+
+	AtlasLoot_Data["ZGEdgeofMadness25ManHEROIC"] = {
+		{ 1, 0, "INV_Box_01", "=q6="..BabbleBoss["Gri'lek"], ""};
+		{ 2, 219961, "", "=q3=Gri'lek's Grinder", "=ds=#h1#, #w6#", "", "43.90%"};
+		{ 3, 219962, "", "=q3=Gri'lek's Carver", "=ds=#h2#, #w1#", "", "41.99%"};
+		{ 4, 19939, "", "=q2=Gri'lek's Blood", "=ds=#m3#", "", "100%"};
+		{ 6, 0, "INV_Box_01", "=q6="..BabbleBoss["Hazza'rah"], ""};
+		{ 7, 219968, "", "=q3=Fiery Retributer", "=ds=#h1#, #w10#", "", "38.37%"};
+		{ 8, 219967, "", "=q3=Thoughtblighter", "=ds=#w12#", "", "45.49%"};
+		{ 9, 19942, "", "=q2=Hazza'rah's Dream Thread", "=ds=#m3#", "", "100%"};
+		{ 16, 0, "INV_Box_01", "=q6="..BabbleBoss["Renataki"], ""};
+		{ 17, 219964, "", "=q3=Renataki's Soul Conduit", "=ds=#h3#, #w10#", "", "40.06%"};
+		{ 18, 219963, "", "=q3=Pitchfork of Madness", "=ds=#w7#", "", "45.51%"};
+		{ 19, 19940, "", "=q2=Renataki's Tooth", "=ds=#m3#", "", "100%"};
+		{ 21, 0, "INV_Box_01", "=q6="..BabbleBoss["Wushoolay"], ""};
+		{ 22, 219965, "", "=q3=Wushoolay's Poker", "=ds=#h3#, #w4#", "", "45.21%"};
+		{ 23, 219993, "", "=q3=Hoodoo Hunting Bow", "=ds=#w2#", "", "40.96%"};
+		{ 24, 19941, "", "=q2=Wushoolay's Mane", "=ds=#m3#", "", "100%"};
+		Prev = "ZGMandokir25ManHEROIC";
+		Next = "ZGGahzranka25ManHEROIC";
+	};
+
+	AtlasLoot_Data["ZGGahzranka25ManHEROIC"] = {
+		{ 1, 219945, "", "=q4=Foror's Eyepatch", "=ds=#s1#, #a2#", "", "8,82%"};
+		{ 2, 219944, "", "=q4=Nat Pagle's Fish Terminator", "=ds=#w9#", "", "2.39%"};
+		{ 4, 219947, "", "=q3=Nat Pagle's Broken Reel", "=ds=#s14#", "", "28.20%"};
+		{ 5, 219946, "", "=q3=Tigule's Harpoon", "=ds=#w7#", "", "29.22%"};
+		{ 7, 22739, "", "=q3=Tome of Polymorph: Turtle", "=ds=#e10#, =q1=#m1# =ds=#c3#"};
+		Prev = "ZGEdgeofMadness25ManHEROIC";
+		Next = "ZGThekal25ManHEROIC";
+	};
+
+	AtlasLoot_Data["ZGThekal25ManHEROIC"] = {
+		{ 1, 19720, "", "=q4=Primal Hakkari Sash", "=ds=#m3#", "", " 14.95%"};
+		{ 2, 19721, "", "=q4=Primal Hakkari Shawl", "=ds=#m3#", "", " 13.74%"};
+		{ 3, 19719, "", "=q4=Primal Hakkari Girdle", "=ds=#m3#", "", " 12.95%"};
+		{ 4, 19716, "", "=q4=Primal Hakkari Bindings", "=ds=#m3#", "", " 6.60%"};
+		{ 5, 19718, "", "=q4=Primal Hakkari Stanchion", "=ds=#m3#", "", " 6.56%"};
+		{ 6, 19717, "", "=q4=Primal Hakkari Armsplint", "=ds=#m3#", "", " 6.45%"};
+		{ 8, 19943, "", "=q1=Massive Mojo", "=ds=#e8#", "", "8.3%"};
+		{ 9, 19881, "", "=q1=Channeler's Head", "=ds=#m3#", "", "100%"};
+		{ 16, 219897, "", "=q4=Betrayer's Boots", "=ds=#s12#, #a1#", "", "5.83%"};
+		{ 17, 219896, "", "=q4=Thekal's Grasp", "=ds=#h3#, #w13#", "", "4.23%"};
+		{ 18, 19902, "", "=q4=Swift Zulian Tiger", "=ds=#e12#", "", "0.70%"};
+		{ 20, 219898, "", "=q3=Seal of Jin", "=ds=#s13#", "", "13.65%"};
+		{ 21, 219899, "", "=q3=Ritualistic Legguards", "=ds=#s11#, #a1#", "", "13.41%"};
+		{ 22, 220260, "", "=q3=Seafury Leggings", "=ds=#s11#, #a3#", "", "4.30%"};
+		{ 23, 220266, "", "=q3=Peacekeeper Leggings", "=ds=#s11#, #a4#", "", "8.69%"};
+		{ 24, 219901, "", "=q3=Zulian Slicer", "=ds=#h1#, #w10#, =q1=#e18#", "", "13.36%"};
+		Prev = "ZGGahzranka25ManHEROIC";
+		Next = "ZGArlokk25ManHEROIC";
+	};
+
+	AtlasLoot_Data["ZGArlokk25ManHEROIC"] = {
+		{ 1, 19721, "", "=q4=Primal Hakkari Shawl", "=ds=#m3#", "", "15.49%"};
+		{ 2, 19720, "", "=q4=Primal Hakkari Sash", "=ds=#m3#", "", "12.52%"};
+		{ 3, 19719, "", "=q4=Primal Hakkari Girdle", "=ds=#m3#", "", "13.17%"};
+		{ 4, 19716, "", "=q4=Primal Hakkari Bindings", "=ds=#m3#", "", "6.94%"};
+		{ 5, 19717, "", "=q4=Primal Hakkari Armsplint", "=ds=#m3#", "", "6.65%"};
+		{ 6, 19718, "", "=q4=Primal Hakkari Stanchion", "=ds=#m3#", "", "6.21%"};
+		{ 7, 19722, "", "=q4=Primal Hakkari Tabard", "=ds=#m3#", "", "2.75%"};
+		{ 8, 19723, "", "=q4=Primal Hakkari Kossack", "=ds=#m3#", "", "2.60%"};
+		{ 9, 19724, "", "=q4=Primal Hakkari Aegis", "=ds=#m3#", "", "2.41%"};
+		{ 11, 19943, "", "=q1=Massive Mojo", "=ds=#e8#", "", "5.6%"};
+		{ 12, 19881, "", "=q1=Channeler's Head", "=ds=#m3#", "", "100%"};
+		{ 16, 219910, "", "=q4=Arlokk's Grasp", "=ds=#h4#, #w13#", "", "3.62%"};
+		{ 17, 219909, "", "=q4=Will of Arlokk", "=ds=#w9#", "", "5.14%"};
+		{ 19, 219913, "", "=q3=Bloodsoaked Greaves", "=ds=#s12#, #a4#", "", "13.29%"};
+		{ 20, 219912, "", "=q3=Overlord's Onyx Band", "=ds=#s13#", "", "13.95%"};
+		{ 21, 219922, "", "=q3=Arlokk's Hoodoo Stick", "=ds=#s15#", "", "13.66%"};
+		{ 22, 19914, "", "=q3=Panther Hide Sack", "=ds=#m14# #e1#", "", "14.03%"};
+		Prev = "ZGThekal25ManHEROIC";
+		Next = "ZGJindo25ManHEROIC";
+	};
+
+	AtlasLoot_Data["ZGJindo25ManHEROIC"] = {
+		{ 1, 19723, "", "=q4=Primal Hakkari Kossack", "=ds=#m3#", "", "13.56%"};
+		{ 2, 19722, "", "=q4=Primal Hakkari Tabard", "=ds=#m3#", "", "13.48%"};
+		{ 3, 19724, "", "=q4=Primal Hakkari Aegis", "=ds=#m3#", "", "12.09%"};
+		{ 4, 19721, "", "=q4=Primal Hakkari Shawl", "=ds=#m3#", "", "7.30%"};
+		{ 5, 19719, "", "=q4=Primal Hakkari Girdle", "=ds=#m3#", "", "6.37%"};
+		{ 6, 19720, "", "=q4=Primal Hakkari Sash", "=ds=#m3#", "", "6.10%"};
+		{ 7, 19716, "", "=q4=Primal Hakkari Bindings", "=ds=#m3#", "", "2.85%"};
+		{ 8, 19717, "", "=q4=Primal Hakkari Armsplint", "=ds=#m3#", "", "2.70%"};
+		{ 9, 19718, "", "=q4=Primal Hakkari Stanchion", "=ds=#m3#", "", "2.36%"};
+		{ 11, 22637, "", "=q3=Primal Hakkari Idol", "=ds=#m3#"};
+		{ 12, 19943, "", "=q1=Massive Mojo", "=ds=#e8#", "", "8.4%"};
+		{ 16, 219885, "", "=q4=Jin'do's Evil Eye", "=ds=#s2#", "", "6.82%"};
+		{ 17, 219891, "", "=q4=Jin'do's Bag of Whammies", "=ds=#s15#", "", "7.70%"};
+		{ 18, 219890, "", "=q4=Jin'do's Hexxer", "=ds=#h3#, #w6#", "", "8.08%"};
+		{ 19, 219884, "", "=q4=Jin'do's Judgement", "=ds=#w9#", "", "8.36%"};
+		{ 21, 219888, "", "=q3=Overlord's Embrace", "=ds=#s4#", "", "12.72%"};
+		{ 22, 219886, "", "=q3=The Hexxer's Cover", "=ds=#s1#, #a1#", "", "12.11%"};
+		{ 23, 219929, "", "=q3=Bloodtinged Gloves", "=ds=#s9#, #a1#", "", "11.75%"};
+		{ 24, 219889, "", "=q3=Blooddrenched Leggings", "=ds=#s11#, #a2#", "", "11.97%"};
+		{ 25, 219892, "", "=q3=Animist's Boots", "=ds=#s12#, #a2#", "", "12.28%"};
+		{ 26, 219875, "", "=q3=Bloodstained Coif", "=ds=#s1#, #a3#", "", "13.73%"};
+		{ 27, 219887, "", "=q3=Bloodstained Legplates", "=ds=#s11#, #a3#", "", "11.11%"};
+		{ 28, 219894, "", "=q3=Bloodsoaked Gauntlets", "=ds=#s9#, #a4#", "", "12.93%"};
+		Prev = "ZGArlokk25ManHEROIC";
+		Next = "ZGHakkar25ManHEROIC";
+	};
+
+	AtlasLoot_Data["ZGHakkar25ManHEROIC"] = {
+		{ 1, 219857, "", "=q4=Cloak of Consumption", "=ds=#s4#", "", "11.65%"};
+		{ 2, 220257, "", "=q4=Seafury Gauntlets", "=ds=#s9#, #a3#", "", "4.11%"};
+		{ 3, 220264, "", "=q4=Peacekeeper Gauntlets", "=ds=#s9#, #a4#", "", "7.37%"};
+		{ 4, 219855, "", "=q4=Bloodsoaked Legplates", "=ds=#s11#, #a4#", "", "10.52%"};
+		{ 5, 219876, "", "=q4=Soul Corrupter's Necklace", "=ds=#s2#", "", "10.11%"};
+		{ 6, 219856, "", "=q4=The Eye of Hakkar", "=ds=#s2#", "", "12.02%"};
+		{ 8, 219859, "", "=q4=Fang of the Faceless", "=ds=#h1#, #w4#", "", "7.33%"};
+		{ 9, 219864, "", "=q4=Bloodcaller", "=ds=#h3#, #w10#", "", "7.69%"};
+		{ 10, 219865, "", "=q4=Warblade of the Hakkari", "=ds=#h3#, #w10#", "", "3.67%"};
+		{ 11, 219854, "", "=q4=Zin'rokh, Destroyer of Worlds", "=ds=#h2#, #w10#", "", "6.78%"};
+		{ 12, 219852, "", "=q4=Ancient Hakkari Manslayer", "=ds=#h1#, #w1#", "", "6.62%"};
+		{ 13, 219862, "", "=q4=Aegis of the Blood God", "=ds=#w8#", "", "9.99%"};
+		{ 14, 219853, "", "=q4=Gurubashi Dwarf Destroyer", "=ds=#w5#", "", "6.12%"};
+		{ 15, 219861, "", "=q4=Touch of Chaos", "=ds=#w12#", "", "7.24%"};
+		{ 16, 19802, "", "=q4=Heart of Hakkar", "=ds=#m2#", "", "100%"};
+		{ 17, 19950, "", "=q4=Zandalarian Hero Charm", "=q1=#m4#: =ds=#s14#"};
+		{ 18, 19949, "", "=q4=Zandalarian Hero Medallion", "=q1=#m4#: =ds=#s14#"};
+		{ 19, 19948, "", "=q4=Zandalarian Hero Badge", "=q1=#m4#: =ds=#s14#"};
+		{ 21, 19943, "", "=q1=Massive Mojo", "=ds=#e8#", "", "34.3%"};
+		Prev = "ZGJindo25ManHEROIC";
+	};
+
+	AtlasLoot_Data["ZGMuddyChurningWaters25ManHEROIC"] = {
+		{ 1, 19975, "", "=q1=Zulian Mudskunk", "=ds=#e21#"};
+	};
+
+	AtlasLoot_Data["ZGShared25ManHEROIC"] = {
+		{ 1, 222721, "", "=q4=Band of Servitude", "=ds=#s13#"};
+		{ 2, 222722, "", "=q4=Seal of the Gurubashi Berserker", "=ds=#s13#"};
+		{ 4, 222711, "", "=q3=Cloak of the Hakkari Worshipers", "=ds=#s4#"};
+		{ 5, 222712, "", "=q3=Might of the Tribe", "=ds=#s4#"};
+		{ 6, 222720, "", "=q3=Zulian Headdress", "=ds=#s1#, #a1#"};
+		{ 7, 222716, "", "=q3=Belt of Untapped Power", "=ds=#s10#, #a1#"};
+		{ 8, 222718, "", "=q3=Blooddrenched Mask", "=ds=#s1#, #a2#"};
+		{ 9, 222715, "", "=q3=Gloves of the Tormented", "=ds=#s9#, #a3#"};
+		{ 10, 222714, "", "=q3=Sacrificial Gauntlets", "=ds=#s9#, #a4#"};
+		{ 11, 222713, "", "=q3=Zulian Scepter of Rites", "=ds=#h3#, #w6#"};
+	};
+
+	AtlasLoot_Data["ZGTrash125ManHEROIC"] = {
+		{ 1, 220259, "", "=q3=Shadow Panther Hide Gloves", "=ds=#s9#, #a2#"};
+		{ 2, 220261, "", "=q3=Shadow Panther Hide Belt", "=ds=#s10#, #a2#"};
+		{ 3, 220263, "", "=q3=Gurubashi Helm", "=ds=#s1#, #a4#"};
+		{ 4, 219908, "", "=q3=Sceptre of Smiting", "=ds=#h1#, #w6#"};
+		{ 5, 219921, "", "=q3=Zulian Hacker", "=ds=#h1#, #w1#"};
+		{ 6, 220258, "", "=q3=Zulian Ceremonial Staff", "=ds=#w9#"};
+		{ 7, 19727, "", "=q3=Blood Scythe", "=ds=#e19#", "", "0.02%"};
+		{ 8, 48126, "", "=q1=Razzashi Hatchling", "=ds=#e13#"};
+		{ 10, 19726, "", "=q2=Bloodvine", "=ds=#e8#", "", ""};
+		{ 11, 19774, "", "=q2=Souldarite", "=ds=#e8#", "", ""};
+		{ 12, 19767, "", "=q1=Primal Bat Leather", "=ds=#e8#", "", ""};
+		{ 13, 19768, "", "=q1=Primal Tiger Leather", "=ds=#e8#", "", ""};
+		{ 16, 19821, "", "=q2=Punctured Voodoo Doll", "=q1=#m1# =ds=#c1#", "", "0.01%"};
+		{ 17, 19816, "", "=q2=Punctured Voodoo Doll", "=q1=#m1# =ds=#c2#", "", "0.01%"};
+		{ 18, 19818, "", "=q2=Punctured Voodoo Doll", "=q1=#m1# =ds=#c3#", "", "0.01%"};
+		{ 19, 19815, "", "=q2=Punctured Voodoo Doll", "=q1=#m1# =ds=#c4#", "", "0.01%"};
+		{ 20, 19820, "", "=q2=Punctured Voodoo Doll", "=q1=#m1# =ds=#c5#", "", "0.01%"};
+		{ 21, 19814, "", "=q2=Punctured Voodoo Doll", "=q1=#m1# =ds=#c6#", "", "0.01%"};
+		{ 22, 19817, "", "=q2=Punctured Voodoo Doll", "=q1=#m1# =ds=#c7#", "", "0.01%"};
+		{ 23, 19819, "", "=q2=Punctured Voodoo Doll", "=q1=#m1# =ds=#c8#", "", "0.01%"};
+		{ 24, 19813, "", "=q2=Punctured Voodoo Doll", "=q1=#m1# =ds=#c9#", "", "0.01%"};
+		Next = "ZGTrash225ManHEROIC";
+	};
+
+	AtlasLoot_Data["ZGTrash225ManHEROIC"] = {
+		{ 1, 19708, "", "=q3=Blue Hakkari Bijou", "=ds=#e15#", "", "1.48%"};
+		{ 2, 19713, "", "=q3=Bronze Hakkari Bijou", "=ds=#e15#", "", "1.57%"};
+		{ 3, 19715, "", "=q3=Gold Hakkari Bijou", "=ds=#e15#", "", "1.63%"};
+		{ 4, 19711, "", "=q3=Green Hakkari Bijou", "=ds=#e15#", "", "1.67%"};
+		{ 5, 19710, "", "=q3=Orange Hakkari Bijou", "=ds=#e15#", "", "1.76%"};
+		{ 6, 19712, "", "=q3=Purple Hakkari Bijou", "=ds=#e15#", "", "1.67%"};
+		{ 7, 19707, "", "=q3=Red Hakkari Bijou", "=ds=#e15#", "", "1.63%"};
+		{ 8, 19714, "", "=q3=Silver Hakkari Bijou", "=ds=#e15#", "", "1.59%"};
+		{ 9, 19709, "", "=q3=Yellow Hakkari Bijou", "=ds=#e15#", "", "1.50%"};
+		{ 16, 19706, "", "=q2=Bloodscalp Coin", "=ds=#e15#", "", "3.01%"};
+		{ 17, 19701, "", "=q2=Gurubashi Coin", "=ds=#e15#", "", "3.12%"};
+		{ 18, 19700, "", "=q2=Hakkari Coin", "=ds=#e15#", "", "3.19%"};
+		{ 19, 19699, "", "=q2=Razzashi Coin", "=ds=#e15#", "", "3.36%"};
+		{ 20, 19704, "", "=q2=Sandfury Coin", "=ds=#e15#", "", "3.47%"};
+		{ 21, 19705, "", "=q2=Skullsplitter Coin", "=ds=#e15#", "", "3.32%"};
+		{ 22, 19702, "", "=q2=Vilebranch Coin", "=ds=#e15#", "", "3.27%"};
+		{ 23, 19703, "", "=q2=Witherbark Coin", "=ds=#e15#", "", "3.27%"};
+		{ 24, 19698, "", "=q2=Zulian Coin", "=ds=#e15#", "", "3.01%"};
+		Prev = "ZGTrash125ManHEROIC";
+	};
+
+	AtlasLoot_Data["ZGEnchants25ManHEROIC"] = {
 		{ 1, 19790, "", "=q3=Animist's Caress", "=q1=#m1# =ds=#c1#"};
 		{ 2, 19785, "", "=q3=Falcon's Call", "=q1=#m1# =ds=#c2#"};
 		{ 3, 19787, "", "=q3=Presence of Sight", "=q1=#m1# =ds=#c3#"};
