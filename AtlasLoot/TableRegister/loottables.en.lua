@@ -561,24 +561,41 @@ end
 	AtlasLoot_TableNames["KaraChess"] = { BabbleBoss["Chess Event"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["KaraPrince"] = { BabbleBoss["Prince Malchezaar"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["KaraTrash"] = { AL["Trash Mobs"].." ("..BabbleZone["Karazhan"]..")", "AtlasLootBurningCrusade" };
-  -- Karazhan HEROIC
-	AtlasLoot_TableNames["KaraCharredBoneFragmentHEROIC"] = { "Charred Bone Fragment ("..AL["Quest Item"]..")", "AtlasLootBurningCrusade" };
-	AtlasLoot_TableNames["KaraNamedHEROIC"] = { "Servant's Quarter Animal Bosses", "AtlasLootBurningCrusade" };
-	AtlasLoot_TableNames["KaraAttumenHEROIC"] = { BabbleBoss["Attumen the Huntsman"], "AtlasLootBurningCrusade" };
+	-- Karazhan HEROIC FLEX
+	AtlasLoot_TableNames["KaraCharredBoneFragment25Man"] = { "Charred Bone Fragment ("..AL["Quest Item"]..")", "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["KaraNamed25Man"] = { "Servant's Quarter Animal Bosses", "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["KaraAttumen25Man"] = { BabbleBoss["Attumen the Huntsman"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["KaraAttumen25Man"] = { BabbleBoss["Attumen the Huntsman"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["KaraMoroes25Man"] = { BabbleBoss["Moroes"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["KaraKeannaLog25Man"] = { "Keanna's Log ("..AL["Quest Item"]..")", "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["KaraMaiden25Man"] = { BabbleBoss["Maiden of Virtue"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["KaraOperaEvent25Man"] = { "Opera Event", "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["KaraCurator25Man"] = { BabbleBoss["The Curator"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["KaraIllhoof25Man"] = { BabbleBoss["Terestian Illhoof"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["KaraAran25Man"] = { BabbleBoss["Shade of Aran"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["KaraNetherspite25Man"] = { BabbleBoss["Netherspite"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["KaraNightbane25Man"] = { BabbleBoss["Nightbane"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["KaraChess25Man"] = { BabbleBoss["Chess Event"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["KaraPrince25Man"] = { BabbleBoss["Prince Malchezaar"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["KaraTrash25Man"] = { AL["Trash Mobs"].." ("..BabbleZone["Karazhan"]..")", "AtlasLootBurningCrusade" };
+	-- Karazhan ASCENDED
+	AtlasLoot_TableNames["KaraCharredBoneFragment25ManHEROIC"] = { "Charred Bone Fragment ("..AL["Quest Item"]..")", "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["KaraNamed25ManHEROIC"] = { "Servant's Quarter Animal Bosses", "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["KaraAttumen25ManHEROIC"] = { BabbleBoss["Attumen the Huntsman"], "AtlasLootBurningCrusade" };
-	AtlasLoot_TableNames["KaraMoroesHEROIC"] = { BabbleBoss["Moroes"], "AtlasLootBurningCrusade" };
-	AtlasLoot_TableNames["KaraKeannaLogHEROIC"] = { "Keanna's Log ("..AL["Quest Item"]..")", "AtlasLootBurningCrusade" };
-	AtlasLoot_TableNames["KaraMaidenHEROIC"] = { BabbleBoss["Maiden of Virtue"], "AtlasLootBurningCrusade" };
-	AtlasLoot_TableNames["KaraOperaEventHEROIC"] = { "Opera Event", "AtlasLootBurningCrusade" };
-	AtlasLoot_TableNames["KaraCuratorHEROIC"] = { BabbleBoss["The Curator"], "AtlasLootBurningCrusade" };
-	AtlasLoot_TableNames["KaraIllhoofHEROIC"] = { BabbleBoss["Terestian Illhoof"], "AtlasLootBurningCrusade" };
-	AtlasLoot_TableNames["KaraAranHEROIC"] = { BabbleBoss["Shade of Aran"], "AtlasLootBurningCrusade" };
-	AtlasLoot_TableNames["KaraNetherspiteHEROIC"] = { BabbleBoss["Netherspite"], "AtlasLootBurningCrusade" };
-	AtlasLoot_TableNames["KaraNightbaneHEROIC"] = { BabbleBoss["Nightbane"], "AtlasLootBurningCrusade" };
-	AtlasLoot_TableNames["KaraChessHEROIC"] = { BabbleBoss["Chess Event"], "AtlasLootBurningCrusade" };
-	AtlasLoot_TableNames["KaraPrinceHEROIC"] = { BabbleBoss["Prince Malchezaar"], "AtlasLootBurningCrusade" };
-	AtlasLoot_TableNames["KaraTrashHEROIC"] = { AL["Trash Mobs"].." ("..BabbleZone["Karazhan"]..")", "AtlasLootBurningCrusade" };
-  -- Sunwell Isle: Magister's Terrace
+	AtlasLoot_TableNames["KaraAttumen25ManHEROIC"] = { BabbleBoss["Attumen the Huntsman"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["KaraMoroes25ManHEROIC"] = { BabbleBoss["Moroes"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["KaraKeannaLog25ManHEROIC"] = { "Keanna's Log ("..AL["Quest Item"]..")", "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["KaraMaiden25ManHEROIC"] = { BabbleBoss["Maiden of Virtue"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["KaraOperaEvent25ManHEROIC"] = { "Opera Event", "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["KaraCurator25ManHEROIC"] = { BabbleBoss["The Curator"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["KaraIllhoof25ManHEROIC"] = { BabbleBoss["Terestian Illhoof"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["KaraAran25ManHEROIC"] = { BabbleBoss["Shade of Aran"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["KaraNetherspite25ManHEROIC"] = { BabbleBoss["Netherspite"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["KaraNightbane25ManHEROIC"] = { BabbleBoss["Nightbane"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["KaraChess25ManHEROIC"] = { BabbleBoss["Chess Event"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["KaraPrince25ManHEROIC"] = { BabbleBoss["Prince Malchezaar"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["KaraTrash25ManHEROIC"] = { AL["Trash Mobs"].." ("..BabbleZone["Karazhan"]..")", "AtlasLootBurningCrusade" };
+	-- Sunwell Isle: Magister's Terrace
 	AtlasLoot_TableNames["SMTFireheart"] = { BabbleBoss["Selin Fireheart"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["SMTVexallus"] = { BabbleBoss["Vexallus"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["SMTDelrissa"] = { BabbleBoss["Priestess Delrissa"], "AtlasLootBurningCrusade" };
