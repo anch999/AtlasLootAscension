@@ -174,7 +174,7 @@ function AtlasLoot_FixText(text)
     -- Misc
     text = gsub(text, "#j1#", AL["Normal Mode"]);
     text = gsub(text, "#j2#", AL["Raid"]);
-    text = gsub(text, "#j3#", AL["Heroic Mode"]);
+    text = gsub(text, "#j3#", AL["Ascended Mode"]);
     text = gsub(text, "#j5#", AL["Dungeon Set 2 Summonable"]);
     text = gsub(text, "#j6#", AL["Dungeon Set 1"]);
     text = gsub(text, "#j7#", AL["Dungeon Set 2"]);
@@ -770,7 +770,7 @@ function AtlasLoot_FixText(text)
     text = gsub(text, "#t3s7#", AL["The Earthshatterer"]);
     text = gsub(text, "#t3s8#", AL["Plagueheart Raiment"]);
     text = gsub(text, "#t3s9#", AL["Dreadnaught's Battlegear"]);
-    text = gsub(text, "#t3s10#", AL["Fury's Battlegear"]);
+    text = gsub(text, "#t3s10#", AL["Dreadborne Warplate"]);
 
     -- Tier 4 Sets
     text = gsub(text, "#t4s1_1#", AL["Malorne Harness"]);

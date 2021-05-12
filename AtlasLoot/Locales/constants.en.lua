@@ -38,8 +38,8 @@ if AL then
 	AL["Misc"] = true;
 	AL["Miscellaneous"] = true;
 	AL["Rewards"] = true;
-	AL["Show 10 Man Loot"] = true;
-	AL["Show 25 Man Loot"] = true;
+	AL["Show Normal Loot"] = true;
+	AL["Show Heroic/Ascended Loot"] = true;
 	AL["Factions - Original WoW"] = true;
 	AL["Factions - Burning Crusade"] = true;
 	AL["Factions - Wrath of the Lich King"] = true;
@@ -406,7 +406,7 @@ if AL then
 
 	-- Labels for loot table sections
 	AL["Additional Heroic Loot"] = true;
-	AL["Heroic Mode"] = true;
+	AL["Ascended Mode"] = true;
 	AL["Normal Mode"] = true;
 	AL["Raid"] = true;
 	AL["Hard Mode"] = true;
@@ -878,6 +878,7 @@ if AL then
 	AL["The Earthfury"] = true;
 	AL["Felheart Raiment"] = true;
 	AL["Battlegear of Might"] = true;
+	AL["Fury of Might"] = true;
 
 	-- Tier 2 Sets
 	AL["Stormrage Raiment"] = true;
@@ -889,6 +890,7 @@ if AL then
 	AL["The Ten Storms"] = true;
 	AL["Nemesis Raiment"] = true;
 	AL["Battlegear of Wrath"] = true;
+	AL["Fury of Wrath"] = true;
 
 	-- Tier 3 Sets
 	AL["Dreamwalker Raiment"] = true;
@@ -900,6 +902,8 @@ if AL then
 	AL["The Earthshatterer"] = true;
 	AL["Plagueheart Raiment"] = true;
 	AL["Dreadnaught's Battlegear"] = true;
+	AL["Fury's Battlegear"] = true;
+	AL["Dreadborne Warplate"] = true;
 
 	-- Tier 4 Sets
 	AL["Malorne Harness"] = true;
