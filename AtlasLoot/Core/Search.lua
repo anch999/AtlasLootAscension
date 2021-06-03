@@ -11,6 +11,125 @@ local modules = { "AtlasLoot_BurningCrusade", "AtlasLoot_Crafting", "AtlasLoot_O
 local currentPage = 1;
 local SearchResult = nil;
 
+-- Supported Operators
+local BINARYOPERATORS = { "&" };
+local OPERATORS = { "<>", "<=", ">=", "=", "<", ">" };
+
+-- Supported Stat Filters
+local STATFILTERS = {
+	-- Base Stats
+	["stamina"] = "ITEM_MOD_STAMINA_SHORT",
+	["stam"] = "ITEM_MOD_STAMINA_SHORT",
+	["sta"] = "ITEM_MOD_STAMINA_SHORT",
+	
+	["strength"] = "ITEM_MOD_STRENGTH_SHORT",
+	["str"] = "ITEM_MOD_STRENGTH_SHORT",
+	
+	["agility"] = "ITEM_MOD_AGILITY_SHORT",
+	["agi"] = "ITEM_MOD_AGILITY_SHORT",
+	
+	["intellect"] = "ITEM_MOD_INTELLECT_SHORT",
+	["int"] = "ITEM_MOD_INTELLECT_SHORT",
+	
+	["spirit"] = "ITEM_MOD_SPIRIT_SHORT",
+	["spir"] = "ITEM_MOD_SPIRIT_SHORT",
+	["spi"] = "ITEM_MOD_SPIRIT_SHORT",
+	
+	["health"] = "ITEM_MOD_HEALTH_SHORT",
+	["mana"] = "ITEM_MOD_MANA_SHORT",
+	
+	["mp5"] = "ITEM_MOD_POWER_REGEN0_SHORT",
+	["mpr"] = "ITEM_MOD_POWER_REGEN0_SHORT",
+	
+	["hp5"] = "ITEM_MOD_HEALTH_REGEN_SHORT",
+	["hpr"] = "ITEM_MOD_HEALTH_REGEN_SHORT",
+	
+	--Sockets
+	["socketblue"] = "EMPTY_SOCKET_BLUE",
+	["socketred"] = "EMPTY_SOCKET_RED",
+	["socketyellow"] = "EMPTY_SOCKET_YELLOW",
+	
+	["socketmeta"] = "EMPTY_SOCKET_META",
+	["meta"] = "EMPTY_SOCKET_META",
+	
+	--Secondary Stats
+	["attackpowerferal"] = "ITEM_MOD_FERAL_ATTACK_POWER_SHORT",
+	["attackpowferal"] = "ITEM_MOD_FERAL_ATTACK_POWER_SHORT",
+	["apferal"] = "ITEM_MOD_FERAL_ATTACK_POWER_SHORT",
+	
+	["attackpower"] = "ITEM_MOD_ATTACK_POWER_SHORT",
+	["attackpow"] = "ITEM_MOD_ATTACK_POWER_SHORT",
+	["ap"] = "ITEM_MOD_ATTACK_POWER_SHORT",
+	
+	["spellpower"] = "ITEM_MOD_SPELL_POWER_SHORT",
+	["spellpow"] = "ITEM_MOD_SPELL_POWER_SHORT",
+	["sp"] = "ITEM_MOD_SPELL_POWER_SHORT",
+	
+	["spellpenetration"] = "ITEM_MOD_SPELL_PENETRATION_SHORT",
+	["spellpen"] = "ITEM_MOD_SPELL_PENETRATION_SHORT",
+	["spp"] = "ITEM_MOD_SPELL_PENETRATION_SHORT",
+	
+	["crit"] = "ITEM_MOD_CRIT_RATING_SHORT",
+	["haste"] = "ITEM_MOD_HASTE_RATING_SHORT",
+	
+	["hit"] = "ITEM_MOD_HIT_RATING_SHORT",
+	
+	["armorpenetration"] = "ITEM_MOD_ARMOR_PENETRATION_RATING_SHOR",
+	["armorpen"] = "ITEM_MOD_ARMOR_PENETRATION_RATING_SHOR",
+	["arp"] = "ITEM_MOD_ARMOR_PENETRATION_RATING_SHOR",
+	
+	["expertise"] = "ITEM_MOD_EXPERTISE_RATING_SHORT",
+	["exp"] = "ITEM_MOD_EXPERTISE_RATING_SHORT",
+	
+	["dps"] = "ITEM_MOD_DAMAGE_PER_SECOND_SHORT",
+	
+	["resilience"] = "ITEM_MOD_RESILIENCE_RATING",
+	["resil"] = "ITEM_MOD_RESILIENCE_RATING",
+	["res"] = "ITEM_MOD_RESILIENCE_RATING",
+	
+	["defense"] = "ITEM_MOD_DEFENSE_SKILL_RATING_SHORT",
+	["def"] = "ITEM_MOD_DEFENSE_SKILL_RATING_SHORT",
+	
+	["dodge"] = "ITEM_MOD_DODGE_RATING_SHORT",
+	["dod"] = "ITEM_MOD_DODGE_RATING_SHORT",
+	
+	["block"] = "ITEM_MOD_BLOCK_RATING_SHORT",
+	
+	["blockvalue"] = "ITEM_MOD_BLOCK_VALUE_SHORT",
+	["blockval"] = "ITEM_MOD_BLOCK_VALUE_SHORT",
+	["bv"] = "ITEM_MOD_BLOCK_VALUE_SHORT",
+	
+	["parry"] = "ITEM_MOD_PARRY_RATING_SHORT",
+	
+	--Resistances
+	["armor"] = "RESISTANCE0_NAME",
+	["arm"] = "RESISTANCE0_NAME",
+	["resistancephysical"] = "RESISTANCE0_NAME",
+	["resistancephys"] = "RESISTANCE0_NAME",
+	["resphys"] = "RESISTANCE0_NAME",
+	
+	["resistanceholy"] = "RESISTANCE1_NAME",
+	["resholy"] = "RESISTANCE1_NAME",
+	
+	["resistancefire"] = "RESISTANCE2_NAME",
+	["resfire"] = "RESISTANCE2_NAME",
+	
+	["resistancenature"] = "RESISTANCE3_NAME",
+	["resnature"] = "RESISTANCE3_NAME",
+	["resnat"] = "RESISTANCE3_NAME",
+	
+	["resistanceforst"] = "RESISTANCE4_NAME",
+	["resfrost"] = "RESISTANCE4_NAME",
+	
+	["resistanceshadow"] = "RESISTANCE5_NAME",
+	["resshadow"] = "RESISTANCE5_NAME",
+	["resshad"] = "RESISTANCE5_NAME",
+	
+	["resistancearcane"] = "RESISTANCE6_NAME",
+	["resarcane"] = "RESISTANCE6_NAME",
+	["resarc"] = "RESISTANCE6_NAME",
+};
+
 function AtlasLoot:ShowSearchResult()
 	AtlasLoot_ShowItemsFrame("SearchResult", "SearchResultPage"..currentPage, (AL["Search Result: %s"]):format(AtlasLootCharDB.LastSearchedText or ""), pFrame);
 end
@@ -52,12 +171,108 @@ function AtlasLoot:Search(Text)
         local module = AtlasLoot_GetLODModule(dataSource);
         if not module or self.db.profile.SearchOn[module] ~= true then return end
     end]]
+	
+	local function HaveBinaryOperator (textValue)
+		for index, operator in ipairs(BINARYOPERATORS) do
+			if string.find(textValue, operator) then
+				return operator;
+			end
+		end
+		return nil;
+	end
+	
+	local function HaveOperator (textValue)
+		for index, operator in ipairs(OPERATORS) do
+			if string.find(textValue, operator) then
+				return operator;
+			end
+		end
+		return nil;
+	end
+	
+	local function SplitString(str, delimiter)
+		result = {};
+		for match in (str..delimiter):gmatch("(.-)"..delimiter) do
+			table.insert(result, match);
+		end
+		return result;
+	end
+	
+	local function HaveStat (textValue)
+		for index, statItem in pairs(STATFILTERS) do
+			if string.find(textValue, index) then
+				return STATFILTERS[index];
+			end
+		end
+		return nil;
+	end
+	
+	local function IsStatsMatch(operator, statValue, searchedStat)
+		if searchedStat ~= nil and statValue ~= nil
+			and ((operator == "<>") and (statValue ~= searchedStat)
+				or (operator == "<=") and (statValue <= searchedStat)
+				or (operator == ">=") and (statValue >= searchedStat)
+				or (operator == "=") and (statValue == searchedStat)
+				or (operator == "<") and (statValue < searchedStat)
+				or (operator == ">") and (statValue > searchedStat))
+		then
+			return true;
+		end
+		return false;
+	end
+	
+	local function IsItemMatch(searchTextItem, stats, operator)
+		if stats then
+			local statFilterFound = HaveStat(searchTextItem);
+			if statFilterFound then
+				local statValue = tonumber(stats[statFilterFound]);
+				local searchedStat = tonumber(string.match(searchTextItem, "%d+"));
+				if IsStatsMatch(operator, statValue, searchedStat) then
+					return true;
+				end
+			end
+		end
+		return false;
+	end
+	
     local partial = self.db.profile.PartialMatching;
     for dataID, data in pairs(AtlasLoot_Data) do
         for _, v in ipairs(data) do
             if type(v[2]) == "number" and v[2] > 0 then
                 local itemName = GetItemInfo(v[2]);
                 if not itemName then itemName = gsub(v[4], "=q%d=", "") end
+				
+				-- Checks for Stat Filter by searching for an Operator in the search text
+				local operator = HaveOperator(text);
+				if operator ~= nil then
+				
+					-- Stat Filter
+					local stats = GetItemStats("item:"..tostring(v[2]));
+					if stats then
+						-- Currently only supports "&"
+						local binaryOperator = HaveBinaryOperator(text);
+						if binaryOperator ~= nil then
+						
+							local searchItems = SplitString(text, binaryOperator);
+							local searchConditionsMet = true;
+							for _, searchTextItem in ipairs(searchItems) do
+								local localOperator = HaveOperator(searchTextItem);
+								if not localOperator or not IsItemMatch(searchTextItem, stats, localOperator) then
+									searchConditionsMet = false;
+								end;
+							end
+							table.wipe(searchItems);
+							
+							if searchConditionsMet then
+								table.insert(AtlasLootCharDB["SearchResult"], { 0, v[2], v[3], itemName, lootpage, "", "", dataID.."|".."\"\"" });
+							end
+						elseif IsItemMatch(text, stats, operator) then
+							table.insert(AtlasLootCharDB["SearchResult"], { 0, v[2], v[3], itemName, lootpage, "", "", dataID.."|".."\"\"" });
+						end
+						table.wipe(stats);
+					end
+				end
+				
                 local found;
                 if partial then
                     found = string.find(string.lower(itemName), text);
