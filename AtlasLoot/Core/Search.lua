@@ -206,15 +206,15 @@ function AtlasLoot:Search(Text)
 		end
 		return nil;
 	end
-	
-	local function IsStatsMatch(operator, statValue, searchedStat)
-		if searchedStat ~= nil and statValue ~= nil
-			and ((operator == "<>") and (statValue ~= searchedStat)
-				or (operator == "<=") and (statValue <= searchedStat)
-				or (operator == ">=") and (statValue >= searchedStat)
-				or (operator == "=") and (statValue == searchedStat)
-				or (operator == "<") and (statValue < searchedStat)
-				or (operator == ">") and (statValue > searchedStat))
+		
+	local function CompareNumbersByOperator (operator, baseValue, valueToCompare)
+		if baseValue ~= nil and valueToCompare ~= nil
+			and ((operator == "<>") and (baseValue ~= valueToCompare)
+				or (operator == "<=") and (baseValue <= valueToCompare)
+				or (operator == ">=") and (baseValue >= valueToCompare)
+				or (operator == "=") and (baseValue == valueToCompare)
+				or (operator == "<") and (baseValue < valueToCompare)
+				or (operator == ">") and (baseValue > valueToCompare))
 		then
 			return true;
 		end
@@ -227,7 +227,7 @@ function AtlasLoot:Search(Text)
 			if statFilterFound then
 				local statValue = tonumber(stats[statFilterFound]);
 				local searchedStat = tonumber(string.match(searchTextItem, "%d+"));
-				if IsStatsMatch(operator, statValue, searchedStat) then
+				if CompareNumbersByOperator(operator, statValue, searchedStat) then
 					return true;
 				end
 			end
@@ -246,8 +246,10 @@ function AtlasLoot:Search(Text)
 				local operator = HaveOperator(text);
 				if operator ~= nil then
 				
+					local itemId = tostring(v[2]);
+					
 					-- Stat Filter
-					local stats = GetItemStats("item:"..tostring(v[2]));
+					local stats = GetItemStats("item:"..itemId);
 					if stats then
 						-- Currently only supports "&"
 						local binaryOperator = HaveBinaryOperator(text);
