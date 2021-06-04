@@ -127,7 +127,66 @@ local STATFILTERS = {
 	
 	["resistancearcane"] = "RESISTANCE6_NAME",
 	["resarcane"] = "RESISTANCE6_NAME",
-	["resarc"] = "RESISTANCE6_NAME",
+	["resarc"] = "RESISTANCE6_NAME"
+};
+
+local ITEMINFOFILTERS = {
+	["ilvl"] = "ilvl",
+	["minlvl"] = "minlvl",
+	["type"] = "type",
+	["subtype"] = "subtype",
+	["quality"] = "quality"
+};
+
+local ITEMINFOVALUEFILTERS = {
+	["poor"] = 0,
+	["common"] = 1,
+	["uncommon"] = 2,
+	["rare"] = 3,
+	["epic"] = 4,
+	["legendary"] = 5,
+	["artifact"] = 6,
+	["heirloom"] = 7
+};
+
+local ITEMINFOEQUIPMENTLOC = {
+	["INVTYPE_NON_EQUIP"] = "INVTYPE_NON_EQUIP",
+	["INVTYPE_HEAD"] = "INVTYPE_HEAD",
+	["INVTYPE_NECK"] = "INVTYPE_NECK",
+	["INVTYPE_SHOULDER"] = "INVTYPE_SHOULDER",
+	["INVTYPE_BODY"] = "INVTYPE_BODY",
+	["INVTYPE_CHEST"] = "INVTYPE_CHEST",
+	["INVTYPE_WAIST"] = "INVTYPE_WAIST",
+	["INVTYPE_LEGS"] = "INVTYPE_LEGS",
+	["INVTYPE_FEET"] = "INVTYPE_FEET",
+	["INVTYPE_WRIST"] = "INVTYPE_WRIST",
+	["INVTYPE_HAND"] = "INVTYPE_HAND",
+	["INVTYPE_FINGER"] = "INVTYPE_FINGER",
+	["INVTYPE_TRINKET"] = "INVTYPE_TRINKET",
+	["INVTYPE_WEAPON"] = "INVTYPE_WEAPON",
+	["INVTYPE_SHIELD"] = "INVTYPE_SHIELD",
+	["INVTYPE_RANGED"] = "INVTYPE_RANGED",
+	["INVTYPE_CLOAK"] = "INVTYPE_CLOAK",
+	["INVTYPE_2HWEAPON"] = "INVTYPE_2HWEAPON",
+	["INVTYPE_BAG"] = "INVTYPE_BAG",
+	["INVTYPE_TABARD"] = "INVTYPE_TABARD",
+	["INVTYPE_ROBE"] = "INVTYPE_ROBE",
+	["INVTYPE_WEAPONMAINHAND"] = "INVTYPE_WEAPONMAINHAND",
+	["INVTYPE_WEAPONOFFHAND"] = "INVTYPE_WEAPONOFFHAND",
+	["INVTYPE_HOLDABLE"] = "INVTYPE_HOLDABLE",
+	["INVTYPE_AMMO"] = "INVTYPE_AMMO",
+	["INVTYPE_THROWN"] = "INVTYPE_THROWN",
+	["INVTYPE_RANGEDRIGHT"] = "INVTYPE_RANGEDRIGHT",
+	["INVTYPE_QUIVER"] = "INVTYPE_QUIVER",
+	["INVTYPE_RELIC"] = "INVTYPE_RELIC"
+};
+
+local ITEMLEVELGEAREQUIPFILTER = {
+	["INVTYPE_NON_EQUIP"] = "INVTYPE_NON_EQUIP",
+	["INVTYPE_BODY"] = "INVTYPE_BODY",
+	["INVTYPE_BAG"] = "INVTYPE_BAG",
+	["INVTYPE_AMMO"] = "INVTYPE_AMMO",
+	["INVTYPE_QUIVER"] = "INVTYPE_QUIVER"
 };
 
 function AtlasLoot:ShowSearchResult()
@@ -235,6 +294,35 @@ function AtlasLoot:Search(Text)
 		return false;
 	end
 	
+	local function HaveItemInfoFilter (textValue)
+		for index, itemInfoFilter in pairs(ITEMINFOFILTERS) do
+			if string.find(textValue, index) then
+				return index;
+			end
+		end
+		return nil;
+	end
+	
+	local function IsItemLevelFilter (textValue)
+		local itemLevelFilter = ITEMINFOFILTERS["ilvl"];
+		if string.match(textValue, itemLevelFilter) then
+			return true;
+		end
+		return false;
+	end
+	
+	local function IsEquipableGear (textValue)
+		if textValue == nil or textValue == "" then
+			return false;
+		end
+		for index, equipLoc in ipairs(ITEMLEVELGEAREQUIPFILTER) do
+			if string.find(textValue, equipLoc) then
+				return false;
+			end
+		end
+		return true;
+	end
+	
     local partial = self.db.profile.PartialMatching;
     for dataID, data in pairs(AtlasLoot_Data) do
         for _, v in ipairs(data) do
@@ -273,6 +361,14 @@ function AtlasLoot:Search(Text)
 						end
 						table.wipe(stats);
 					end
+					
+					-- Item Info Filter
+					local itemInfoFilter = HaveItemInfoFilter(text);
+					if itemInfoFilter then
+						-- Name, Link, Quality(num), iLvl(num), minLvl(num), itemType(localized string), itemSubType(localized string), stackCount(num), itemEquipLoc(enum), texture(link to a file), displayId(num)
+						local _, _, itemQuality, itemLvl, minLvl, _, _, _, itemEquipLoc = GetItemInfo(itemId);
+					end
+					
 				end
 				
                 local found;
