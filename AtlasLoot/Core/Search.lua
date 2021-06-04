@@ -367,6 +367,23 @@ function AtlasLoot:Search(Text)
 					if itemInfoFilter then
 						-- Name, Link, Quality(num), iLvl(num), minLvl(num), itemType(localized string), itemSubType(localized string), stackCount(num), itemEquipLoc(enum), texture(link to a file), displayId(num)
 						local _, _, itemQuality, itemLvl, minLvl, _, _, _, itemEquipLoc = GetItemInfo(itemId);
+						
+						-- Currently only supports "&"
+						local binaryOperator = HaveBinaryOperator(text);
+						if binaryOperator ~= nil then
+							-- TODO
+						else
+							-- Item Level Filter
+							if itemLvl ~= nil and itemLvl > 0 and IsEquipableGear(itemEquipLoc) and IsItemLevelFilter(itemInfoFilter) then
+								local searchedItemLevel = tonumber(string.match(text, "%d+"));
+								if CompareNumbersByOperator(operator, itemLvl, searchedItemLevel) then
+									table.insert(AtlasLootCharDB["SearchResult"], { 0, v[2], v[3], itemName, lootpage, "", "", dataID.."|".."\"\"" });
+								end
+							end
+							-- TODO itemQuality
+							-- TODO minLvl
+							-- TODO itemEquipLoc
+						end
 					end
 					
 				end
