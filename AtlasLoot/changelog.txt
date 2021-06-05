@@ -1,4 +1,7 @@
 ---------------------------------------------------------------------------------------------------------------------------
+v1.6.1 05/13/2021
+- Fixed Heroic Flex Gruul's Lair and Magtheridon's Lair item IDs.
+---------------------------------------------------------------------------------------------------------------------------
 v1.6 04/29/2021
 - Added new Heroic Flex difficulty
 - Repurposed the 10/25 man button to go between Normal/Heroic/Ascended items 
