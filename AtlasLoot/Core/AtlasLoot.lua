@@ -635,7 +635,7 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
         getglobal("AtlasLootItem_"..i).spellitemID = 0;
 	end
     
-    if AtlasLoot_TableNames[dataID][2] == "Menu" then
+    if AtlasLoot_TableNames[dataID] ~= nil and AtlasLoot_TableNames[dataID][2] == "Menu" then
         AtlasLoot_GenerateAtlasMenu(dataID, pFrame);
         return;
     end
