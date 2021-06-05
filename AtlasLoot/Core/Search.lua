@@ -257,15 +257,6 @@ function AtlasLoot:Search(Text)
 		return result;
 	end
 	
-	local function HaveStat (textValue)
-		for index, statItem in pairs(STATFILTERS) do
-			if string.find(textValue, index) then
-				return STATFILTERS[index];
-			end
-		end
-		return nil;
-	end
-		
 	local function CompareNumbersByOperator (operator, baseValue, valueToCompare)
 		if baseValue ~= nil and valueToCompare ~= nil
 			and ((operator == "<>") and (baseValue ~= valueToCompare)
@@ -280,7 +271,17 @@ function AtlasLoot:Search(Text)
 		return false;
 	end
 	
-	local function IsItemMatch(searchTextItem, stats, operator)
+	-- Region: Stat Filter
+	local function HaveStat (textValue)
+		for index, statItem in pairs(STATFILTERS) do
+			if string.find(textValue, index) then
+				return STATFILTERS[index];
+			end
+		end
+		return nil;
+	end
+	
+	local function IsItemStatMatch(searchTextItem, stats, operator)
 		if stats then
 			local statFilterFound = HaveStat(searchTextItem);
 			if statFilterFound then
@@ -293,7 +294,9 @@ function AtlasLoot:Search(Text)
 		end
 		return false;
 	end
+	-- EndRegion
 	
+	-- Region: Item Level Filter
 	local function HaveItemInfoFilter (textValue)
 		for index, itemInfoFilter in pairs(ITEMINFOFILTERS) do
 			if string.find(textValue, index) then
@@ -301,14 +304,6 @@ function AtlasLoot:Search(Text)
 			end
 		end
 		return nil;
-	end
-	
-	local function IsItemLevelFilter (textValue)
-		local itemLevelFilter = ITEMINFOFILTERS["ilvl"];
-		if string.match(textValue, itemLevelFilter) then
-			return true;
-		end
-		return false;
 	end
 	
 	local function IsEquipableGear (textValue)
@@ -323,70 +318,88 @@ function AtlasLoot:Search(Text)
 		return true;
 	end
 	
+	local function IsItemLevelFilter (textValue)
+		local itemLevelFilter = ITEMINFOFILTERS["ilvl"];
+		if string.match(textValue, itemLevelFilter) then
+			return true;
+		end
+		return false;
+	end
+	local function IsItemLevelFilterMatch(searchText, itemLvl, itemEquipLoc, operator)
+		local itemInfoFilter = HaveItemInfoFilter(searchText);
+		if itemInfoFilter and itemLvl ~= nil and itemLvl > 0 and IsEquipableGear(itemEquipLoc) and IsItemLevelFilter(itemInfoFilter) then
+			local searchedItemLevel = tonumber(string.match(searchText, "%d+"));
+			if CompareNumbersByOperator(operator, itemLvl, searchedItemLevel) then
+				return true;
+			end
+		end
+		return false;
+	end
+	-- EndRegion
+	
+	-- Add item to Search Result
+	local function AddItemToSearchResult(itemId, itemType, itemName, lootPage, dataId)
+        table.insert(AtlasLootCharDB["SearchResult"], { 0, itemId, itemType, itemName, lootPage, "", "", dataId.."|".."\"\"" });
+    end
+	
     local partial = self.db.profile.PartialMatching;
     for dataID, data in pairs(AtlasLoot_Data) do
         for _, v in ipairs(data) do
             if type(v[2]) == "number" and v[2] > 0 then
-                local itemName = GetItemInfo(v[2]);
+                -- Name, Link, Quality(num), iLvl(num), minLvl(num), itemType(localized string), itemSubType(localized string), stackCount(num), itemEquipLoc(enum), texture(link to a local file), displayId(num)
+                local itemName, _, itemQuality, itemLvl, minLvl, _, _, _, itemEquipLoc = GetItemInfo(v[2]);
+                
                 if not itemName then itemName = gsub(v[4], "=q%d=", "") end
-				
-				-- Checks for Stat Filter by searching for an Operator in the search text
-				local operator = HaveOperator(text);
-				if operator ~= nil then
-				
-					local itemId = tostring(v[2]);
+                
+                -- Checks for Item Filters by searching for an Operator in the search text
+                local operator = HaveOperator(text);
+                if operator ~= nil then
+					local stats = GetItemStats("item:"..tostring(v[2]));
 					
-					-- Stat Filter
-					local stats = GetItemStats("item:"..itemId);
-					if stats then
-						-- Currently only supports "&"
-						local binaryOperator = HaveBinaryOperator(text);
-						if binaryOperator ~= nil then
+					 -- Currently only supports "&"
+					local binaryOperator = HaveBinaryOperator(text);
+					if binaryOperator ~= nil then
+						local searchConditionsMet = true;
+						local searchItems = SplitString(text, binaryOperator);
 						
-							local searchItems = SplitString(text, binaryOperator);
-							local searchConditionsMet = true;
+						if searchItems and searchItems ~= nil then
 							for _, searchTextItem in ipairs(searchItems) do
 								local localOperator = HaveOperator(searchTextItem);
-								if not localOperator or not IsItemMatch(searchTextItem, stats, localOperator) then
+								if not localOperator
+									or not (
+										-- Stat Filter
+										(stats and IsItemStatMatch(searchTextItem, stats, localOperator))
+										-- Item Level Filter
+										or (IsItemLevelFilterMatch(searchTextItem, itemLvl, itemEquipLoc, localOperator))
+									)
+								then
 									searchConditionsMet = false;
-								end;
-							end
-							table.wipe(searchItems);
-							
-							if searchConditionsMet then
-								table.insert(AtlasLootCharDB["SearchResult"], { 0, v[2], v[3], itemName, lootpage, "", "", dataID.."|".."\"\"" });
-							end
-						elseif IsItemMatch(text, stats, operator) then
-							table.insert(AtlasLootCharDB["SearchResult"], { 0, v[2], v[3], itemName, lootpage, "", "", dataID.."|".."\"\"" });
-						end
-						table.wipe(stats);
-					end
-					
-					-- Item Info Filter
-					local itemInfoFilter = HaveItemInfoFilter(text);
-					if itemInfoFilter then
-						-- Name, Link, Quality(num), iLvl(num), minLvl(num), itemType(localized string), itemSubType(localized string), stackCount(num), itemEquipLoc(enum), texture(link to a file), displayId(num)
-						local _, _, itemQuality, itemLvl, minLvl, _, _, _, itemEquipLoc = GetItemInfo(itemId);
-						
-						-- Currently only supports "&"
-						local binaryOperator = HaveBinaryOperator(text);
-						if binaryOperator ~= nil then
-							-- TODO
-						else
-							-- Item Level Filter
-							if itemLvl ~= nil and itemLvl > 0 and IsEquipableGear(itemEquipLoc) and IsItemLevelFilter(itemInfoFilter) then
-								local searchedItemLevel = tonumber(string.match(text, "%d+"));
-								if CompareNumbersByOperator(operator, itemLvl, searchedItemLevel) then
-									table.insert(AtlasLootCharDB["SearchResult"], { 0, v[2], v[3], itemName, lootpage, "", "", dataID.."|".."\"\"" });
+									break;
 								end
 							end
-							-- TODO itemQuality
-							-- TODO minLvl
-							-- TODO itemEquipLoc
+							
+							if searchConditionsMet then
+								AddItemToSearchResult(v[2], v[3], itemName, lootpage, dataID);
+							end
 						end
+					else
+						-- Stat Filter
+						if (stats and IsItemStatMatch(text, stats, operator))
+							-- Item Level Filter
+							or IsItemLevelFilterMatch(text, itemLvl, itemEquipLoc, operator)
+						then
+							AddItemToSearchResult(v[2], v[3], itemName, lootpage, dataID);
+						end
+						-- TODO itemQuality
+						-- TODO minLvl
+						-- TODO itemEquipLoc
 					end
 					
-				end
+					-- Stat Table Cleanup
+					if stats then
+						table.wipe(stats);
+					end
+                end
 				
                 local found;
                 if partial then
