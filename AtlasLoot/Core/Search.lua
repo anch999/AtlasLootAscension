@@ -133,28 +133,6 @@ local STATFILTERS = {
 	["resarc"] = "RESISTANCE6_NAME"
 };
 
--- Slash command that prints out all used item filter keys
-SLASH_ATLASLOOTITEMINFOFILTERS1 = "/atlaslootfilterkeys";
-SlashCmdList["ATLASLOOTITEMINFOFILTERS"] = function(msg, editBox)
-	local sortedTable = { "socket", "sockets", "gem", "gems", "ilvl" };
-	for index, statItem in pairs(STATFILTERS) do
-		table.insert(sortedTable, index);
-	end
-	table.sort(sortedTable, function(a,b) return a < b; end)
-
-	local filterKeys = "Filter keys: [ ";
-	for i, filterIndex in pairs(sortedTable) do
-		if i == 1 then
-			filterKeys = filterKeys..filterIndex;
-		else
-			filterKeys = filterKeys..", "..filterIndex;
-		end
-	end
-	filterKeys = filterKeys.." ]";
-	
-	print(filterKeys);
-end
-
 local ITEMSOCKETSTATFILTERS = {
 	"EMPTY_SOCKET_BLUE",
 	"EMPTY_SOCKET_RED",
@@ -221,6 +199,35 @@ local ITEMLEVELGEAREQUIPFILTER = {
 	["INVTYPE_AMMO"] = "INVTYPE_AMMO",
 	["INVTYPE_QUIVER"] = "INVTYPE_QUIVER"
 };
+
+-- Slash command that prints out all used item filter keys
+SLASH_ATLASLOOTITEMINFOFILTERS1 = "/atlaslootfilterkeys";
+SlashCmdList["ATLASLOOTITEMINFOFILTERS"] = function(msg, editBox)
+	local sortedTable = { "socket", "sockets", "gem", "gems", "ilvl" };
+	for index, statItem in pairs(STATFILTERS) do
+		table.insert(sortedTable, index);
+	end
+	table.sort(sortedTable, function(a,b) return a < b; end)
+
+	local filterKeys = "Filter keys: [ ";
+	for i, filterIndex in pairs(sortedTable) do
+		if i == 1 then
+			filterKeys = filterKeys..filterIndex;
+		else
+			filterKeys = filterKeys..", "..filterIndex;
+		end
+	end
+	filterKeys = filterKeys.." ]";
+	
+	print(filterKeys);
+end
+
+-- Slash command that prints filter examples
+SLASH_ATLASLOOTITEMINFOFILTEREXAMPLE1 = "/atlaslootfilterexample";
+SlashCmdList["ATLASLOOTITEMINFOFILTEREXAMPLE"] = function(msg, editBox)
+	print("Single search example: str>40");
+	print("Multi search example: str>40&ilvl<140&ilvl>=120&int>0&socket>2");
+end
 
 function AtlasLoot:ShowSearchResult()
 	AtlasLoot_ShowItemsFrame("SearchResult", "SearchResultPage"..currentPage, (AL["Search Result: %s"]):format(AtlasLootCharDB.LastSearchedText or ""), pFrame);
@@ -538,7 +545,9 @@ function AtlasLoot:Search(Text)
 		local itemFilterErrorMessage = "";
 		if operator then
 			itemFilterErrorMessage = [[
-Please check if you have a typo in the filter, to check filter keys, type "/atlaslootfilterkeys".
+Please check if you have a typo in the filter.
+To check filter keys, type "/atlaslootfilterkeys".
+To check filter examples, type "/atlaslootfilterexample".
 You might also have to query the server for item informations to load them into your client's Cache.]];
 		end
 		DEFAULT_CHAT_FRAME:AddMessage(RED..AL["AtlasLoot"]..": "..WHITE..AL["No match found for"].." \""..Text.."\"."..itemFilterErrorMessage);
