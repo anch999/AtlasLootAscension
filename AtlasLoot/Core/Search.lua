@@ -327,7 +327,10 @@ function AtlasLoot:Search(Text)
 	end
 	local function IsItemLevelFilterMatch(searchText, itemLvl, itemEquipLoc, operator)
 		local itemInfoFilter = HaveItemInfoFilter(searchText);
-		if itemInfoFilter and itemLvl ~= nil and itemLvl > 0 and IsEquipableGear(itemEquipLoc) and IsItemLevelFilter(itemInfoFilter) then
+		if itemInfoFilter and itemLvl ~= nil and itemLvl > 0
+			--and IsEquipableGear(itemEquipLoc)
+			and IsItemLevelFilter(itemInfoFilter)
+		then
 			local searchedItemLevel = tonumber(string.match(searchText, "%d+"));
 			if CompareNumbersByOperator(operator, itemLvl, searchedItemLevel) then
 				return true;
