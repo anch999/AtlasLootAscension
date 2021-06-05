@@ -130,6 +130,28 @@ local STATFILTERS = {
 	["resarc"] = "RESISTANCE6_NAME"
 };
 
+-- Slash command that prints out all used item filter keys
+SLASH_ATLASLOOTITEMINFOFILTERS1 = "/atlaslootfilterkeys";
+SlashCmdList["ATLASLOOTITEMINFOFILTERS"] = function(msg, editBox)
+	local sortedTable = { "socket", "sockets", "gem", "gems", "ilvl" };
+	for index, statItem in pairs(STATFILTERS) do
+		table.insert(sortedTable, index);
+	end
+	table.sort(sortedTable, function(a,b) return a < b; end)
+
+	local filterKeys = "Filter keys: [ ";
+	for i, filterIndex in pairs(sortedTable) do
+		if i == 1 then
+			filterKeys = filterKeys..filterIndex;
+		else
+			filterKeys = filterKeys..", "..filterIndex;
+		end
+	end
+	filterKeys = filterKeys.." ]";
+	
+	print(filterKeys);
+end
+
 local ITEMINFOFILTERS = {
 	["ilvl"] = "ilvl",
 	["minlvl"] = "minlvl",
@@ -325,9 +347,11 @@ function AtlasLoot:Search(Text)
 		end
 		return false;
 	end
+	
 	local function IsItemLevelFilterMatch(searchText, itemLvl, itemEquipLoc, operator)
 		local itemInfoFilter = HaveItemInfoFilter(searchText);
 		if itemInfoFilter and itemLvl ~= nil and itemLvl > 0
+			--TODO Equipment filter patch
 			--and IsEquipableGear(itemEquipLoc)
 			and IsItemLevelFilter(itemInfoFilter)
 		then
@@ -345,7 +369,12 @@ function AtlasLoot:Search(Text)
         table.insert(AtlasLootCharDB["SearchResult"], { 0, itemId, itemType, itemName, lootPage, "", "", dataId.."|".."\"\"" });
     end
 	
+	-- Checks for Partial Matching
     local partial = self.db.profile.PartialMatching;
+	
+	-- Checks for Item Filters by searching for an Operator in the search text
+	local operator = HaveOperator(text);
+	
     for dataID, data in pairs(AtlasLoot_Data) do
         for _, v in ipairs(data) do
             if type(v[2]) == "number" and v[2] > 0 then
@@ -353,9 +382,7 @@ function AtlasLoot:Search(Text)
                 local itemName, _, itemQuality, itemLvl, minLvl, _, _, _, itemEquipLoc = GetItemInfo(v[2]);
                 
                 if not itemName then itemName = gsub(v[4], "=q%d=", "") end
-                
-                -- Checks for Item Filters by searching for an Operator in the search text
-                local operator = HaveOperator(text);
+
                 if operator ~= nil then
 					local stats = GetItemStats("item:"..tostring(v[2]));
 					
@@ -441,7 +468,13 @@ function AtlasLoot:Search(Text)
     end
 	
 	if #AtlasLootCharDB["SearchResult"] == 0 then
-		DEFAULT_CHAT_FRAME:AddMessage(RED..AL["AtlasLoot"]..": "..WHITE..AL["No match found for"].." \""..Text.."\".");
+		local itemFilterErrorMessage = "";
+		if operator then
+			itemFilterErrorMessage = [[
+Please check if you have a typo in the filter, to check filter keys, type \"/atlaslootfilterkeys\".
+You might also have to query the server for item informations to load them into your client's Cache.]];
+		end
+		DEFAULT_CHAT_FRAME:AddMessage(RED..AL["AtlasLoot"]..": "..WHITE..AL["No match found for"].." \""..Text.."\"."..itemFilterErrorMessage);
 	else
 		currentPage = 1;
 		SearchResult = AtlasLoot_CategorizeWishList(AtlasLootCharDB["SearchResult"]);
