@@ -355,7 +355,7 @@ function AtlasLoot:Search(Text)
 	
 	local function HaveStat (textValue)
 		for index, statItem in pairs(STATFILTERS) do
-			if string.find(textValue, index) then
+			if textValue == index then
 				return STATFILTERS[index];
 			end
 		end
@@ -364,10 +364,13 @@ function AtlasLoot:Search(Text)
 	
 	local function IsItemStatMatch(searchTextItem, stats, operator)
 		if stats then
-			local statFilterFound = HaveStat(searchTextItem);
+			local searchedStat = tonumber(string.match(searchTextItem, "%d+"));
+			local searchTerm = searchTextItem.gsub(searchTextItem, tostring(searchedStat), "");
+			searchTerm = string.gsub(searchTerm, operator, "");
+		
+			local statFilterFound = HaveStat(searchTerm);
 			if statFilterFound then
 				local statValue = tonumber(stats[statFilterFound]);
-				local searchedStat = tonumber(string.match(searchTextItem, "%d+"));
 				if CompareNumbersByOperator(operator, statValue, searchedStat) then
 					return true;
 				end
@@ -453,15 +456,15 @@ function AtlasLoot:Search(Text)
 						local searchConditionsMet = true;
 						local searchItems = SplitString(text, binaryOperator);
 						
-						if searchItems and searchItems ~= nil then
+						if searchItems then
 							for _, searchTextItem in ipairs(searchItems) do
 								local localOperator = HaveOperator(searchTextItem);
 								if not localOperator
 									or not (
 										-- Stat Filter
-										(stats and IsItemStatMatch(searchTextItem, stats, localOperator))
+										IsItemStatMatch(searchTextItem, stats, localOperator)
 										-- Item Level Filter
-										or (IsItemLevelFilterMatch(searchTextItem, itemLvl, itemEquipLoc, localOperator))
+										or IsItemLevelFilterMatch(searchTextItem, itemLvl, itemEquipLoc, localOperator)
 									)
 								then
 									searchConditionsMet = false;
@@ -475,7 +478,7 @@ function AtlasLoot:Search(Text)
 						end
 					else
 						-- Stat Filter
-						if (stats and IsItemStatMatch(text, stats, operator))
+						if IsItemStatMatch(text, stats, operator)
 							-- Item Level Filter
 							or IsItemLevelFilterMatch(text, itemLvl, itemEquipLoc, operator)
 						then
