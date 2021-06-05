@@ -1340,7 +1340,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 3, 427792, "", "=q3=Steam-Hinge Chain of Valor", "=ds=#s2#", "", "14.49%"};
 		{ 4, 427791, "", "=q3=Serpentcrest Life-Staff", "=ds=#w9#", "", "17.09%"};
 		{ 5, 427794, "", "=q3=Recoilless Rocket Ripper X-54", "=ds=#w5#", "", "15.88%"};
-		{ 7, 423887, "", "=q3=Schematic: Rocket Boots Xtreme", "=ds=#p5# (355)", "", "0.52%"};
+		{ 7, 23887, "", "=q3=Schematic: Rocket Boots Xtreme", "=ds=#p5# (355)", "", "0.52%"};
 		{ 16, 0, "INV_Box_01", "=q6=#j27#", ""};
 		{ 17, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		{ 18, 30550, "", "=q4=Sundered Chrysoprase", "=ds=#e7#", "", "8.59%"};
@@ -1381,7 +1381,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 	AtlasLoot_Data["CFRSteamTrash"] = {
 		{ 1, 24159, "", "=q3=Design: Khorium Band of Frost", "=ds=#p12# (355) =q1=#n86#", "", "0.14%"};
 		{ 3, 22533, "", "=q2=Formula: Enchant Bracer - Fortitude", "=ds=#p4# (350) =q1=#n87#", "", "0.40%"};
-		{ 5, 424367, "", "=q1=Orders from Lady Vashj", "=ds=#m2#"};
+		{ 5, 24367, "", "=q1=Orders from Lady Vashj", "=ds=#m2#"};
 		{ 6, 24368, "", "=q1=Coilfang Armaments", "=ds=#m3#", "", "12.68%"};
 		{ 16, 0, "INV_Box_01", "=q6="..AL["Second Fragment Guardian"], "=q5="..BabbleZone["The Steamvault"]};
 		{ 17, 24487, "", "=q1=Second Key Fragment", "=ds=#m3#", "", "100%"};
@@ -2099,7 +2099,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 10, 424044, "", "=q3=Hellreaver", "=ds=#w7#", "", "13.91%"};
 		{ 11, 424155, "", "=q3=Ursol's Claw", "=ds=#w9#", "", "16.21%"};
 		{ 16, 0, "INV_Box_01", "=q6="..BabbleBoss["Vazruden"], ""};
-		{ 17, 423892, "", "=q1=Ominous Letter", "=ds=#m2#", "", "100%"};
+		{ 17, 23892, "", "=q1=Ominous Letter", "=ds=#m2#", "", "100%"};
 		{ 19, 0, "INV_Box_01", "=q6="..BabbleBoss["Nazan"], ""};
 		{ 20, 23901, "", "=q1=Nazan's Head", "=ds=#m3#", "", "100%"};
 		Prev = "HCRampOmor";
@@ -2125,7 +2125,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 21, 427453, "", "=q3=Averinn's Ring of Slaying", "=ds=#s13#", "", "14.20%"};
 		{ 22, 427460, "", "=q3=Reavers' Ring", "=ds=#s13#", "", "17.90%"};
 		{ 24, 0, "INV_Box_01", "=q6="..BabbleBoss["Vazruden"], ""};
-		{ 25, 423892, "", "=q1=Ominous Letter", "=ds=#m2#", "", "100%"};
+		{ 25, 23892, "", "=q1=Ominous Letter", "=ds=#m2#", "", "100%"};
 		{ 27, 0, "INV_Box_01", "=q6="..BabbleBoss["Nazan"], ""};
 		{ 28, 23901, "", "=q1=Nazan's Head", "=ds=#m3#", "", "100%"};
 		Prev = "HCRampOmor";
@@ -3893,7 +3893,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 3, 428254, "", "=q3=Warp Engineer's Prismatic Chain", "=ds=#s2#", "", "16.81%"};
 		{ 4, 428257, "", "=q3=Hammer of the Penitent", "=ds=#h3#, #w6#", "", "14.36%"};
 		{ 5, 428253, "", "=q3=Plasma Rat's Hyper-Scythe", "=ds=#w7#", "", "17.69%"};
-		{ 7, 435582, "", "=q3=Schematic: Rocket Boots Xtreme Lite", "=ds=#p5# (355)"};
+		{ 7, 35582, "", "=q3=Schematic: Rocket Boots Xtreme Lite", "=ds=#p5# (355)"};
 		{ 16, 0, "INV_Box_01", "=q6=#j27#", ""};
 		{ 17, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		{ 18, 30565, "", "=q4=Assassin's Fire Opal", "=ds=#e7#", "", "18.72%"};
