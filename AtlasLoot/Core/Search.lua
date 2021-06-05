@@ -385,7 +385,7 @@ function AtlasLoot:Search(Text)
 	-- Region: Item Level Filter
 	local function HaveItemInfoFilter (textValue)
 		for index, itemInfoFilter in pairs(ITEMINFOFILTERS) do
-			if string.find(textValue, index) then
+			if textValue == index then
 				return index;
 			end
 		end
@@ -413,13 +413,16 @@ function AtlasLoot:Search(Text)
 	end
 	
 	local function IsItemLevelFilterMatch(searchText, itemLvl, itemEquipLoc, operator)
-		local itemInfoFilter = HaveItemInfoFilter(searchText);
+		local searchedItemLevel = tonumber(string.match(searchText, "%d+"));
+		local searchTerm = searchText.gsub(searchText, tostring(searchedItemLevel), "");
+		searchTerm = string.gsub(searchTerm, operator, "");
+		
+		local itemInfoFilter = HaveItemInfoFilter(searchTerm);
 		if itemInfoFilter and itemLvl ~= nil and itemLvl > 0
 			--TODO Equipment filter patch
 			--and IsEquipableGear(itemEquipLoc)
 			and IsItemLevelFilter(itemInfoFilter)
 		then
-			local searchedItemLevel = tonumber(string.match(searchText, "%d+"));
 			if CompareNumbersByOperator(operator, itemLvl, searchedItemLevel) then
 				return true;
 			end
@@ -535,7 +538,7 @@ function AtlasLoot:Search(Text)
 		local itemFilterErrorMessage = "";
 		if operator then
 			itemFilterErrorMessage = [[
-Please check if you have a typo in the filter, to check filter keys, type \"/atlaslootfilterkeys\".
+Please check if you have a typo in the filter, to check filter keys, type "/atlaslootfilterkeys".
 You might also have to query the server for item informations to load them into your client's Cache.]];
 		end
 		DEFAULT_CHAT_FRAME:AddMessage(RED..AL["AtlasLoot"]..": "..WHITE..AL["No match found for"].." \""..Text.."\"."..itemFilterErrorMessage);
