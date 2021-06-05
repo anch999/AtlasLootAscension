@@ -49,6 +49,9 @@ local STATFILTERS = {
 	["socketred"] = "EMPTY_SOCKET_RED",
 	["socketyellow"] = "EMPTY_SOCKET_YELLOW",
 	
+	["socketnocolor"] = "EMPTY_SOCKET_NO_COLOR",
+	["socketwhite"] = "EMPTY_SOCKET_NO_COLOR",
+	
 	["socketmeta"] = "EMPTY_SOCKET_META",
 	["meta"] = "EMPTY_SOCKET_META",
 	
@@ -151,6 +154,14 @@ SlashCmdList["ATLASLOOTITEMINFOFILTERS"] = function(msg, editBox)
 	
 	print(filterKeys);
 end
+
+local ITEMSOCKETSTATFILTERS = {
+	"EMPTY_SOCKET_BLUE",
+	"EMPTY_SOCKET_RED",
+	"EMPTY_SOCKET_YELLOW",
+	"EMPTY_SOCKET_META",
+	"EMPTY_SOCKET_NO_COLOR"
+};
 
 local ITEMINFOFILTERS = {
 	["ilvl"] = "ilvl",
@@ -294,6 +305,54 @@ function AtlasLoot:Search(Text)
 	end
 	
 	-- Region: Stat Filter
+	local function IsSocketTermInSearchText(searchText)
+		if string.find(searchText, "socket")
+			or string.find(searchText, "sockets")
+			or string.find(searchText, "gem")
+			or string.find(searchText, "gems")
+		then
+			return true;
+		end
+		return false;
+	end
+	
+	local function IsSocketTermEqualsSearchText(searchText)
+		if searchText == "socket"
+			or searchText == "sockets"
+			or searchText == "gem"
+			or searchText == "gems"
+		then
+			return true;
+		end
+		return false;
+	end
+	
+	local function FilterSockets(searchTextItem, stats, operator)
+		if stats then
+			if IsSocketTermInSearchText(searchTextItem) then
+				local searchedStatValue = tonumber(string.match(searchTextItem, "%d+"));
+				local searchTerm = string.gsub(searchTextItem, tostring(searchedStatValue), "");
+				searchTerm = string.gsub(searchTerm, operator, "");
+
+				if IsSocketTermEqualsSearchText(searchTerm) then
+					local socketCount = 0;
+					for _, socketType in pairs(ITEMSOCKETSTATFILTERS) do
+						if socketType then
+							local statValue = tonumber(stats[socketType]);
+							if statValue then
+								socketCount = socketCount + statValue;
+							end
+						end
+					end
+					if CompareNumbersByOperator(operator, socketCount, searchedStatValue) then
+						return true;
+					end
+				end
+			end
+		end
+		return false;
+	end
+	
 	local function HaveStat (textValue)
 		for index, statItem in pairs(STATFILTERS) do
 			if string.find(textValue, index) then
@@ -312,6 +371,8 @@ function AtlasLoot:Search(Text)
 				if CompareNumbersByOperator(operator, statValue, searchedStat) then
 					return true;
 				end
+			else
+				return FilterSockets(searchTextItem, stats, operator);
 			end
 		end
 		return false;
