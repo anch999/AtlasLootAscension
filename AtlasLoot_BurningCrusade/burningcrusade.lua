@@ -293,7 +293,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 
 	AtlasLoot_Data["AuchSethekkRavenGod"] = {
 		{ 1, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
-		{ 2, 432768, "", "=q4=Reins of the Raven Lord", "=ds=#e12#"};
+		{ 2, 32768, "", "=q4=Reins of the Raven Lord", "=ds=#e12#"};
 		{ 3, 30553, "", "=q4=Pristine Fire Opal", "=ds=#e7#", "", "15.73%"};
 		{ 4, 30554, "", "=q4=Stalwart Fire Opal", "=ds=#e7#", "", "10.11%"};
 		{ 5, 30552, "", "=q4=Blessed Tanzanite", "=ds=#e7#", "", "0.18%"};
@@ -318,7 +318,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 11, 427980, "", "=q3=Terokk's Nightmace", "=ds=#h1#, #w6#", "", "11.18%"};
 		{ 12, 427986, "", "=q3=Crow Wing Reaper", "=ds=#h2#, #w1#", "", "8.50%"};
 		{ 14, 27632, "", "=q1=Terokk's Quill", "=ds=#m3#", "", "100%"};
-		{ 15, 427991, "", "=q1=Shadow Labyrinth Key", "=ds=#e9#", "", "100%"};
+		{ 15, 27991, "", "=q1=Shadow Labyrinth Key", "=ds=#e9#", "", "100%"};
 		{ 16, 0, "INV_Box_01", "=q6=#j27#", ""};
 		{ 17, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		{ 18, 30553, "", "=q4=Pristine Fire Opal", "=ds=#e7#", "", "15.73%"};
@@ -2886,7 +2886,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 17, 329761, "", "=q4=Helm of the Fallen Defender", "=q1=#m1# =ds=#c1#, #c5#, #c9#", "", "26.73%"};
 		{ 18, 329759, "", "=q4=Helm of the Fallen Hero", "=q1=#m1# =ds=#c2#, #c3#, #c8#", "", "20.48%"};
 		{ 20, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
-		{ 28, 499438, "", "=q4=Smoldering Emberwyrm", "=ds=#e12#", "" };
+		{ 28, 99438, "", "=q4=Smoldering Emberwyrm", "=ds=#e12#", "" };
 		Prev = "KaraChess25Man";
 	};
 
@@ -3250,7 +3250,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 19, 434798, "", "=q3=Band of Celerity", "=ds=#s13#", "", "5%"};
 		{ 20, 434794, "", "=q3=Axe of Shattered Dreams", "=ds=#h2#, #w1#", "", "5%"};
 		{ 21, 434797, "", "=q3=Sun-infused Focus Staff", "=ds=#w9#", "", "14%"};
-		{ 22, 435504, "", "=q3=Phoenix Hatchling", "=ds=#e13#", "", "7%"};
+		{ 22, 35504, "", "=q3=Phoenix Hatchling", "=ds=#e13#", "", "7%"};
 		Prev = "SMTDelrissa";
 	};
 
@@ -3265,8 +3265,8 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 16, 434609, "", "=q4=Quickening Blade of the Prince", "=ds=#h1#, #w10#", "", "20%"};
 		{ 17, 434616, "", "=q4=Breeching Comet", "=ds=#h1#, #w1#", "", "19%"};
 		{ 18, 434611, "", "=q4=Cudgel of Consecration", "=ds=#h3#, #w6#", "", "19%"};
-		{ 19, 435513, "", "=q4=Swift White Hawkstrider", "=ds=#e12#", "", "3%"};
-		{ 21, 435504, "", "=q3=Phoenix Hatchling", "=ds=#e13#", "", "7%"};
+		{ 19, 35513, "", "=q4=Swift White Hawkstrider", "=ds=#e12#", "", "3%"};
+		{ 21, 35504, "", "=q3=Phoenix Hatchling", "=ds=#e13#", "", "7%"};
 		Prev = "SMTDelrissa";
 	};
 
@@ -3881,9 +3881,9 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 6, 428251, "", "=q3=Boots of the Glade-Keeper", "=ds=#s12#, #a2#", "", "18.74%"};
 		{ 7, 428248, "", "=q3=Totem of the Void", "=ds=#s16#, #w15#", "", "19.58%"};
 		{ 16, 0, "INV_Box_01", "=q6="..BabbleBoss["Gatewatcher Gyro-Kill"], ""};
-		{ 17, 430436, "", "=q1=Jagged Blue Crystal", "=ds=#e9#", "", "100%"};
+		{ 17, 30436, "", "=q1=Jagged Blue Crystal", "=ds=#e9#", "", "100%"};
 		{ 19, 0, "INV_Box_01", "=q6="..BabbleBoss["Gatewatcher Iron-Hand"], ""};
-		{ 20, 430437, "", "=q1=Jagged Red Crystal", "=ds=#e9#", "", "100%"};
+		{ 20, 30437, "", "=q1=Jagged Red Crystal", "=ds=#e9#", "", "100%"};
 		Next = "TKMechCapacitus";
 	};
 
