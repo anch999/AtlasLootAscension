@@ -78,7 +78,9 @@ local STATFILTERS = {
 	["hit"] = "ITEM_MOD_HIT_RATING_SHORT",
 	
 	["armorpenetration"] = "ITEM_MOD_ARMOR_PENETRATION_RATING_SHORT",
+	["armourpenetration"] = "ITEM_MOD_ARMOR_PENETRATION_RATING_SHORT",
 	["armorpen"] = "ITEM_MOD_ARMOR_PENETRATION_RATING_SHORT",
+	["armourpen"] = "ITEM_MOD_ARMOR_PENETRATION_RATING_SHORT",
 	["arp"] = "ITEM_MOD_ARMOR_PENETRATION_RATING_SHORT",
 	
 	["expertise"] = "ITEM_MOD_EXPERTISE_RATING_SHORT",
@@ -106,6 +108,7 @@ local STATFILTERS = {
 	
 	--Resistances
 	["armor"] = "RESISTANCE0_NAME",
+	["armour"] = "RESISTANCE0_NAME",
 	["arm"] = "RESISTANCE0_NAME",
 	["resistancephysical"] = "RESISTANCE0_NAME",
 	["resistancephys"] = "RESISTANCE0_NAME",
