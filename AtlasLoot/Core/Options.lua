@@ -205,7 +205,7 @@ function AtlasLoot_DisplayHelp()
             WHITE..AL["Use the reset buttons available in the options menu, or type '/al reset' in your chat window."].."\n\n"..
             ORANGE..AL["How do I view Bloodforged items?"].."\n"..
             WHITE..AL["You must have 'Safe Chat Links' enabled in your options, and the Bloodforged item in your item cache.  When viewing a page, click the 'Query Server' button to load the items and Bloodforged equivalents, then right click on an item to display item links for the original and Bloodforged versions in your chat."].."\n\n"..
-            GREY..AL["For further help, see our website and forums: "]..GREEN.."http://www.atlasloot.net"
+            GREY..AL["For further help, see our website and forums: "]..GREEN.."https://discord.gg/uYCE2X2FgA"
             );
 			Text:SetWidth(framewidht-80)
 			Text:SetJustifyH("LEFT")
