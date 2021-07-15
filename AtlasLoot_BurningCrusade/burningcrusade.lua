@@ -1512,6 +1512,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 20, 30049, "", "=q4=Fathomstone", "=ds=#s15#", "", "19%"};
 		{ 21, 30051, "", "=q4=Idol of the Crescent Goddess", "=ds=#s16#, #w14#", "", "11%"};
 		{ 23, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
+		{ 24, 816254, "", "=q2=Formula: Enchant Cloak - Crushing Wave", "=ds=#p4# (350)", "", "5%"};
 		Next = "CFRSerpentLurker";
 	};
 
@@ -1601,6 +1602,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 18, 30244, "", "=q4=Helm of the Vanquished Hero", "=q1=#m1# =ds=#c2#, #c3#, #c8#", "", "63%"};
 		{ 20, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		{ 22, 29906, "", "=q1=Vashj's Vial Remnant", "=ds=#m3#", "", "35%"};
+		{ 23, 450000, "", "=q5=Intact Vial of Lady Vashj", "", "", "5%"};
 		Prev = "CFRSerpentMorogrim";
 	};
 
@@ -1652,6 +1654,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 20, 330049, "", "=q4=Fathomstone", "=ds=#s15#", "", "19%"};
 		{ 21, 330051, "", "=q4=Idol of the Crescent Goddess", "=ds=#s16#, #w14#", "", "11%"};
 		{ 23, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
+		{ 24, 816254, "", "=q2=Formula: Enchant Cloak - Crushing Wave", "=ds=#p4# (350)", "", "5%"};
 		Next = "CFRSerpentLurker25Man";
 	};
 
@@ -1741,6 +1744,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 18, 330244, "", "=q4=Helm of the Vanquished Hero", "=q1=#m1# =ds=#c2#, #c3#, #c8#", "", "63%"};
 		{ 20, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		{ 22, 29906, "", "=q1=Vashj's Vial Remnant", "=ds=#m3#", "", "35%"};
+		{ 23, 450000, "", "=q5=Intact Vial of Lady Vashj", "", "", "5%"};
 		Prev = "CFRSerpentMorogrim25Man";
 	};
 
@@ -1791,6 +1795,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 20, 230049, "", "=q4=Fathomstone", "=ds=#s15#", "", "19%"};
 		{ 21, 230051, "", "=q4=Idol of the Crescent Goddess", "=ds=#s16#, #w14#", "", "11%"};
 		{ 23, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
+		{ 24, 816254, "", "=q2=Formula: Enchant Cloak - Crushing Wave", "=ds=#p4# (350)", "", "5%"};
 		Next = "CFRSerpentLurker25ManHEROIC";
 	};
 
@@ -1880,6 +1885,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 18, 230244, "", "=q4=Helm of the Vanquished Hero", "=q1=#m1# =ds=#c2#, #c3#, #c8#", "", "63%"};
 		{ 20, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		{ 22, 29906, "", "=q1=Vashj's Vial Remnant", "=ds=#m3#", "", "35%"};
+		{ 23, 450000, "", "=q5=Intact Vial of Lady Vashj", "", "", "5%"};
 		Prev = "CFRSerpentMorogrim25ManHEROIC";
 	};
 
@@ -1939,6 +1945,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 8, 28823, "", "=q4=Eye of Gruul", "=ds=#s14#", "", "6.73%"};
 		{ 9, 28830, "", "=q4=Dragonspine Trophy", "=ds=#s14#", "", "11.72%"};
 		{ 11, 31750, "", "=q1=Earthen Signet", "=ds=#m3#", "", "100%"};
+		{ 12, 816252, "", "=q2=Formula: Enchant Weapon - Undaunted Might", "=ds=#p4# (375)", "", "5%"};
 		{ 16, 29766, "", "=q4=Leggings of the Fallen Champion", "=q1=#m1# =ds=#c4#, #c6#, #c7#", "", "23.69%"};
 		{ 17, 29767, "", "=q4=Leggings of the Fallen Defender", "=q1=#m1# =ds=#c1#, #c5#, #c9#", "", "17.46%"};
 		{ 18, 29765, "", "=q4=Leggings of the Fallen Hero", "=q1=#m1# =ds=#c2#, #c3#, #c8#", "", "30.17%"};
@@ -1979,6 +1986,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 8, 328823, "", "=q4=Eye of Gruul", "=ds=#s14#", "", "6.73%"};
 		{ 9, 328830, "", "=q4=Dragonspine Trophy", "=ds=#s14#", "", "11.72%"};
 		{ 11, 31750, "", "=q1=Earthen Signet", "=ds=#m3#", "", "100%"};
+		{ 12, 816252, "", "=q2=Formula: Enchant Weapon - Undaunted Might", "=ds=#p4# (375)", "", "5%"};
 		{ 16, 329766, "", "=q4=Leggings of the Fallen Champion", "=q1=#m1# =ds=#c4#, #c6#, #c7#", "", "23.69%"};
 		{ 17, 329767, "", "=q4=Leggings of the Fallen Defender", "=q1=#m1# =ds=#c1#, #c5#, #c9#", "", "17.46%"};
 		{ 18, 329765, "", "=q4=Leggings of the Fallen Hero", "=q1=#m1# =ds=#c2#, #c3#, #c8#", "", "30.17%"};
@@ -2019,6 +2027,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 8, 228823, "", "=q4=Eye of Gruul", "=ds=#s14#", "", "6.73%"};
 		{ 9, 228830, "", "=q4=Dragonspine Trophy", "=ds=#s14#", "", "11.72%"};
 		{ 11, 31750, "", "=q1=Earthen Signet", "=ds=#m3#", "", "100%"};
+		{ 12, 816252, "", "=q2=Formula: Enchant Weapon - Undaunted Might", "=ds=#p4# (375)", "", "5%"};
 		{ 16, 229766, "", "=q4=Leggings of the Fallen Champion", "=q1=#m1# =ds=#c4#, #c6#, #c7#", "", "23.69%"};
 		{ 17, 229767, "", "=q4=Leggings of the Fallen Defender", "=q1=#m1# =ds=#c1#, #c5#, #c9#", "", "17.46%"};
 		{ 18, 229765, "", "=q4=Leggings of the Fallen Hero", "=q1=#m1# =ds=#c2#, #c3#, #c8#", "", "30.17%"};
@@ -2303,10 +2312,11 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 6, 28779, "", "=q4=Girdle of the Endless Pit", "=ds=#s10#, #a4#"};
 		{ 7, 28789, "", "=q4=Eye of Magtheridon", "=ds=#s14#"};
 		{ 8, 28781, "", "=q4=Karaborian Talisman", "=ds=#s15#"};
-		{ 10, 28774, "", "=q4=Glaive of the Pit", "=ds=#w7#"};
-		{ 11, 28782, "", "=q4=Crystalheart Pulse-Staff", "=ds=#w9#"};
-		{ 12, 29458, "", "=q4=Aegis of the Vindicator", "=ds=#w8#"};
-		{ 13, 28783, "", "=q4=Eredar Wand of Obliteration", "=ds=#w12#"};
+		{ 9, 28774, "", "=q4=Glaive of the Pit", "=ds=#w7#"};
+		{ 10, 28782, "", "=q4=Crystalheart Pulse-Staff", "=ds=#w9#"};
+		{ 11, 29458, "", "=q4=Aegis of the Vindicator", "=ds=#w8#"};
+		{ 12, 28783, "", "=q4=Eredar Wand of Obliteration", "=ds=#w12#"};
+		{ 14, 34845, "", "=q4=Pit Lord's Satchel", "=ds=#e1# #m15#"};
 		{ 15, 34846, "", "=q2=Black Sack of Gems", "=ds=#e1#"};
 		{ 16, 29754, "", "=q4=Chestguard of the Fallen Champion", "=q1=#m1# =ds=#c4#, #c6#, #c7#"};
 		{ 17, 29753, "", "=q4=Chestguard of the Fallen Defender", "=q1=#m1# =ds=#c1#, #c5#, #c9#"};
@@ -2317,7 +2327,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 24, 28790, "", "=q4=Naaru Lightwarden's Band", "=q1=#m4#: =ds=#s13#"};
 		{ 25, 28793, "", "=q4=Band of Crimson Fury", "=q1=#m4#: =ds=#s13#"};
 		{ 26, 28792, "", "=q4=A'dal's Signet of Defense", "=q1=#m4#: =ds=#s13#"};
-		{ 28, 34845, "", "=q4=Pit Lord's Satchel", "=ds=#e1# #m15#"};
+		{ 28, 816252, "", "=q2=Formula: Enchant Weapon - Undaunted Might", "=ds=#p4# (375)", "", "5%"};
 	};
 
 		---------------------------------------------------
@@ -2333,10 +2343,11 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 6, 328779, "", "=q4=Girdle of the Endless Pit", "=ds=#s10#, #a4#"};
 		{ 7, 328789, "", "=q4=Eye of Magtheridon", "=ds=#s14#"};
 		{ 8, 328781, "", "=q4=Karaborian Talisman", "=ds=#s15#"};
-		{ 10, 328774, "", "=q4=Glaive of the Pit", "=ds=#w7#"};
-		{ 11, 328782, "", "=q4=Crystalheart Pulse-Staff", "=ds=#w9#"};
-		{ 12, 329458, "", "=q4=Aegis of the Vindicator", "=ds=#w8#"};
-		{ 13, 328783, "", "=q4=Eredar Wand of Obliteration", "=ds=#w12#"};
+		{ 9, 328774, "", "=q4=Glaive of the Pit", "=ds=#w7#"};
+		{ 10, 328782, "", "=q4=Crystalheart Pulse-Staff", "=ds=#w9#"};
+		{ 11, 329458, "", "=q4=Aegis of the Vindicator", "=ds=#w8#"};
+		{ 12, 328783, "", "=q4=Eredar Wand of Obliteration", "=ds=#w12#"};
+		{ 14, 34845, "", "=q4=Pit Lord's Satchel", "=ds=#e1# #m15#"};
 		{ 15, 34846, "", "=q2=Black Sack of Gems", "=ds=#e1#"};
 		{ 16, 329754, "", "=q4=Chestguard of the Fallen Champion", "=q1=#m1# =ds=#c4#, #c6#, #c7#"};
 		{ 17, 329753, "", "=q4=Chestguard of the Fallen Defender", "=q1=#m1# =ds=#c1#, #c5#, #c9#"};
@@ -2347,8 +2358,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 24, 328790, "", "=q4=Naaru Lightwarden's Band", "=q1=#m4#: =ds=#s13#"};
 		{ 25, 328793, "", "=q4=Band of Crimson Fury", "=q1=#m4#: =ds=#s13#"};
 		{ 26, 328792, "", "=q4=A'dal's Signet of Defense", "=q1=#m4#: =ds=#s13#"};
-		{ 28, 34845, "", "=q4=Pit Lord's Satchel", "=ds=#e1# #m15#"};
-		{ 30, 428775, "", "=q4=Magtheridon's Glaive", "=ds=#w7#"};
+		{ 28, 816252, "", "=q2=Formula: Enchant Weapon - Undaunted Might", "=ds=#p4# (375)", "", "5%"};
 	};
 		---------------------------------------------------
 		--- Hellfire Citadel: Magtheridon's Lair ASCENDED ---
@@ -2363,10 +2373,11 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 6, 228779, "", "=q4=Girdle of the Endless Pit", "=ds=#s10#, #a4#"};
 		{ 7, 228789, "", "=q4=Eye of Magtheridon", "=ds=#s14#"};
 		{ 8, 228781, "", "=q4=Karaborian Talisman", "=ds=#s15#"};
-		{ 10, 228774, "", "=q4=Glaive of the Pit", "=ds=#w7#"};
-		{ 11, 228782, "", "=q4=Crystalheart Pulse-Staff", "=ds=#w9#"};
-		{ 12, 229458, "", "=q4=Aegis of the Vindicator", "=ds=#w8#"};
-		{ 13, 228783, "", "=q4=Eredar Wand of Obliteration", "=ds=#w12#"};
+		{ 9, 228774, "", "=q4=Glaive of the Pit", "=ds=#w7#"};
+		{ 10, 228782, "", "=q4=Crystalheart Pulse-Staff", "=ds=#w9#"};
+		{ 11, 229458, "", "=q4=Aegis of the Vindicator", "=ds=#w8#"};
+		{ 12, 228783, "", "=q4=Eredar Wand of Obliteration", "=ds=#w12#"};
+		{ 14, 34845, "", "=q4=Pit Lord's Satchel", "=ds=#e1# #m15#"};
 		{ 15, 34846, "", "=q2=Black Sack of Gems", "=ds=#e1#"};
 		{ 16, 229754, "", "=q4=Chestguard of the Fallen Champion", "=q1=#m1# =ds=#c4#, #c6#, #c7#"};
 		{ 17, 229753, "", "=q4=Chestguard of the Fallen Defender", "=q1=#m1# =ds=#c1#, #c5#, #c9#"};
@@ -2377,8 +2388,9 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 24, 228790, "", "=q4=Naaru Lightwarden's Band", "=q1=#m4#: =ds=#s13#"};
 		{ 25, 228793, "", "=q4=Band of Crimson Fury", "=q1=#m4#: =ds=#s13#"};
 		{ 26, 228792, "", "=q4=A'dal's Signet of Defense", "=q1=#m4#: =ds=#s13#"};
-		{ 28, 34845, "", "=q4=Pit Lord's Satchel", "=ds=#e1# #m15#"};
-		{ 30, 428775, "", "=q4=Magtheridon's Glaive", "=ds=#w7#"};
+		{ 28, 816252, "", "=q2=Formula: Enchant Weapon - Undaunted Might", "=ds=#p4# (375)", "", "5%"};
+		{ 29, 428775, "", "=q4=Bor -o G'urth, the Hand of Death", "=ds=#w7#"};
+		{ 30, 428775, "", "=q4=Lebed -o G'urth, the Finger of Death", "=ds=#w7#"};
 	};
 
 		----------------
@@ -2463,6 +2475,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 17, 28523, "", "=q4=Totem of Healing Rains", "=ds=#s16#, #w15#", "", "14.58%"};
 		{ 18, 28522, "", "=q4=Shard of the Virtuous", "=ds=#h3#, #w6#", "", "10.69%"};
 		{ 20, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
+		{ 21, 816253, "", "=q2=Formula: Enchant Weapon - Faith", "=ds=#p4# (375)", "", "5%"};
 		Prev = "KaraMoroes";
 		Next = "KaraOperaEvent";
 	};
@@ -4045,6 +4058,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 25, 30007, "", "=q4=The Darkener's Grasp", "=q1=#m4#: =ds=#s2#"};
 		{ 26, 30015, "", "=q4=The Sun King's Talisman", "=q1=#m4#: =ds=#s2#"};
 		{ 28, 29905, "", "=q1=Kael's Vial Remnant", "=ds=#m3#", "", "37%"};
+		{ 29, 450001, "", "=q5=Intact Vial of Kael'thas Sunstrider", "", "", "5%"};
 		Prev = "TKEyeSolarian";
 	};
 
@@ -4167,6 +4181,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 25, 330007, "", "=q4=The Darkener's Grasp", "=q1=#m4#: =ds=#s2#"};
 		{ 26, 330015, "", "=q4=The Sun King's Talisman", "=q1=#m4#: =ds=#s2#"};
 		{ 28, 29905, "", "=q1=Kael's Vial Remnant", "=ds=#m3#", "", "37%"};
+		{ 29, 450001, "", "=q5=Intact Vial of Kael'thas Sunstrider", "", "", "5%"};
 		Prev = "TKEyeSolarian25Man";
 	};
 
@@ -4290,6 +4305,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 25, 230007, "", "=q4=The Darkener's Grasp", "=q1=#m4#: =ds=#s2#"};
 		{ 26, 230015, "", "=q4=The Sun King's Talisman", "=q1=#m4#: =ds=#s2#"};
 		{ 28, 29905, "", "=q1=Kael's Vial Remnant", "=ds=#m3#", "", "37%"};
+		{ 29, 450001, "", "=q5=Intact Vial of Kael'thas Sunstrider", "", "", "5%"};
 		Prev = "TKEyeSolarian25ManHEROIC";
 	};
 
