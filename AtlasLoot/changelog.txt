@@ -1,3 +1,18 @@
+v1.8.1 07/15/2021
+- Moved Undaunted Might drop to Maulgar
+---------------------------------------------------------------------------------------------------------------------------
+v1.8 07/13/2021
+- Added Ascension custom enchants: Crushing Wave, Undaunted Might, and Faith
+- Added t5 Glaive Vials from Vashj and Kael'thas
+- Added Magtheridon's Agility version of his Polearm
+- Added "armour" and "armourpen" / "armourpenetration" as a keyword
+- Fixed armor penetration stat search filter
+---------------------------------------------------------------------------------------------------------------------------
+v1.7 06/25/2021
+THIS REPLACES NORMAL/HEROIC MODE LOOT 
+- Fixed Normal SSC loot
+- Fixed some m0 items like keys and recipes
+- Added @Krazh's initial search filter (allows to search for items with ">40 crit" from your cached items)
 ---------------------------------------------------------------------------------------------------------------------------
 v1.6.1 05/13/2021
 - Fixed Heroic Flex Gruul's Lair and Magtheridon's Lair item IDs.
