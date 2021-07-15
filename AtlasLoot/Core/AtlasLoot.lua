@@ -1219,7 +1219,7 @@ function AtlasLoot_IsLootTableAvailable(dataID)
 		return true;
 	else
 		if not AtlasLoot_TableNames[dataID] then
-			DEFAULT_CHAT_FRAME:AddMessage(RED..AL["AtlasLoot Error!"].." "..WHITE..dataID..AL[" not listed in loot table registry, please report this message to the AtlasLoot forums at http://www.atlasloot.net"]);
+			DEFAULT_CHAT_FRAME:AddMessage(RED..AL["AtlasLoot Error!"].." "..WHITE..dataID..AL[" not listed in loot table registry, please report this message to the AtlasLoot forums at https://discord.gg/uYCE2X2FgA"]);
 			return false;
 		end
 
