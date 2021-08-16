@@ -1438,16 +1438,55 @@ function AtlasLoot_AddTooltip(frameb, tooltiptext)
    frame:SetScript("OnLeave", function() GameTooltip:Hide() end)
 end
 
---[[
-AL_FindId(name, difficulty)
-Finds the Ids of other difficulties based on the name of the item and the difficulty parameter given.
-On the form of {Name, {normal, heroic, mythic, mythic1, mythic2, ... ,mythicN}]
-]]
-function AL_FindId(name, difficulty)
-   
-end
 
 ItemIDsDatabase = {
 	--name, {normal, heroic, mythic, mythicN}
-	testItemName, {1000, 2000, 3000, 4000} 
+	{"test1", {1000, 2000, 3000, 4000} },
+	{"test2", {1002, 2002, 3002, 4002} },
 }
+
+--[[
+AL_FindId(name, difficulty)
+Finds the Ids of other difficulties based on the name of the item and the difficulty parameter given.
+On the form of {Name, {normal, heroic, mythic, mythic1, mythic2, ... ,mythicN}}
+]]
+function AL_FindId(name, difficulty)
+	for index, items in pairs(ItemIDsDatabase) do
+		for key, eachItem in ipairs(items) do
+			if eachItem == name then 
+				return items[2][difficulty]
+			end
+		end
+	end
+end
+
+-- https://replit.com/languages/lua
+-- ItemIDsDatabase = {
+-- 	--name, {normal, heroic, mythic, mythicN}
+-- 	{"test1", {1000, 2000, 3000, 4000} },
+-- 	{"test2", {1002, 2002, 3002, 4002} },
+-- }
+-- --[[
+-- AL_FindId(name, difficulty)
+-- Finds the Ids of other difficulties based on the name of the item and the difficulty parameter given.
+-- On the form of {Name, {normal, heroic, mythic, mythic1, mythic2, ... ,mythicN}}
+-- ]]
+
+-- name = "test1"
+-- difficulty = 2
+	
+-- for index, items in pairs(ItemIDsDatabase) do
+-- 	--print(index, '\t', items)
+	
+-- 	for key, eachItem in ipairs(items) do
+-- 	--	for key2, eachItem2 in ipairs(eachItem) do
+-- 	--		print('\t', items[1], eachItem2)
+-- 	--	end
+-- 			print("test")
+-- 		if eachItem == name then 
+-- 			print(key, '\t', eachItem)
+-- 			print(items[2][difficulty])
+-- 		end
+-- 		--	print('\t', key, value)
+-- 	end
+-- end
