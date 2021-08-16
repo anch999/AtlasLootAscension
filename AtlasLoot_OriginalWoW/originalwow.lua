@@ -5926,7 +5926,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 9, 19722, "", "=q4=Primal Hakkari Tabard", "=ds=#m3#", "", "2.17%"};
 		{ 11, 19943, "", "=q1=Massive Mojo", "=ds=#e8#", "", "8.8%"};
 		{ 12, 19881, "", "=q1=Channeler's Head", "=ds=#m3#", "", "100%"};
-		{ 16, 219918, "", "=q4=Jeklik's Crusher", "=ds=#h2#, #w6#", "", "3.96%"};
+		{ 16, AL_FindId("Jeklik's Crusher", 2), "", "=q4=Jeklik's Crusher", "=ds=#h2#, #w6#", "", "3.96%"};
 		{ 18, 219928, "", "=q3=Animist's Spaulders", "=ds=#s3#, #a2#", "", "3.39%"};
 		{ 19, 220262, "", "=q3=Seafury Boots", "=ds=#s12#, #a3#", "", "4.31%"};
 		{ 20, 220265, "", "=q3=Peacekeeper Boots", "=ds=#s12#, #a4#", "", "6.99%"};

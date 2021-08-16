@@ -1441,7 +1441,7 @@ end
 
 ItemIDsDatabase = {
 	--name, {normal, heroic, mythic, mythicN}
-	{"test1", {1000, 2000, 3000, 4000} },
+	{"jeklik's Crusher", {19918, 319918, 219918, 4000} },
 	{"test2", {1002, 2002, 3002, 4002} },
 }
 
