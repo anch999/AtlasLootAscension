@@ -6012,12 +6012,12 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 
 	AtlasLoot_Data["ZGEdgeofMadness25Man"] = {
 		{ 1, 0, "INV_Box_01", "=q6="..BabbleBoss["Gri'lek"], ""};
-		{ 2, 219961, "", "=q3=Gri'lek's Grinder", "=ds=#h1#, #w6#", "", "43.90%"};
-		{ 3, 219962, "", "=q3=Gri'lek's Carver", "=ds=#h2#, #w1#", "", "41.99%"};
+		{ 2, 319961, "", "=q3=Gri'lek's Grinder", "=ds=#h1#, #w6#", "", "43.90%"};
+		{ 3, 319962, "", "=q3=Gri'lek's Carver", "=ds=#h2#, #w1#", "", "41.99%"};
 		{ 4, 19939, "", "=q2=Gri'lek's Blood", "=ds=#m3#", "", "100%"};
 		{ 6, 0, "INV_Box_01", "=q6="..BabbleBoss["Hazza'rah"], ""};
-		{ 7, 219968, "", "=q3=Fiery Retributer", "=ds=#h1#, #w10#", "", "38.37%"};
-		{ 8, 219967, "", "=q3=Thoughtblighter", "=ds=#w12#", "", "45.49%"};
+		{ 7, 319968, "", "=q3=Fiery Retributer", "=ds=#h1#, #w10#", "", "38.37%"};
+		{ 8, 319967, "", "=q3=Thoughtblighter", "=ds=#w12#", "", "45.49%"};
 		{ 9, 19942, "", "=q2=Hazza'rah's Dream Thread", "=ds=#m3#", "", "100%"};
 		{ 16, 0, "INV_Box_01", "=q6="..BabbleBoss["Renataki"], ""};
 		{ 17, 319964, "", "=q3=Renataki's Soul Conduit", "=ds=#h3#, #w10#", "", "40.06%"};
@@ -6032,10 +6032,10 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 	};
 
 	AtlasLoot_Data["ZGGahzranka25Man"] = {
-		{ 1, 219945, "", "=q4=Foror's Eyepatch", "=ds=#s1#, #a2#", "", "8,82%"};
-		{ 2, 219944, "", "=q4=Nat Pagle's Fish Terminator", "=ds=#w9#", "", "2.39%"};
-		{ 4, 219947, "", "=q3=Nat Pagle's Broken Reel", "=ds=#s14#", "", "28.20%"};
-		{ 5, 219946, "", "=q3=Tigule's Harpoon", "=ds=#w7#", "", "29.22%"};
+		{ 1, 319945, "", "=q4=Foror's Eyepatch", "=ds=#s1#, #a2#", "", "8,82%"};
+		{ 2, 319944, "", "=q4=Nat Pagle's Fish Terminator", "=ds=#w9#", "", "2.39%"};
+		{ 4, 319947, "", "=q3=Nat Pagle's Broken Reel", "=ds=#s14#", "", "28.20%"};
+		{ 5, 319946, "", "=q3=Tigule's Harpoon", "=ds=#w7#", "", "29.22%"};
 		{ 7, 22739, "", "=q3=Tome of Polymorph: Turtle", "=ds=#e10#, =q1=#m1# =ds=#c3#"};
 		Prev = "ZGEdgeofMadness25Man";
 		Next = "ZGThekal25Man";
@@ -6113,14 +6113,14 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 	};
 
 	AtlasLoot_Data["ZGHakkar25Man"] = {
-		{ 1, 219857, "", "=q4=Cloak of Consumption", "=ds=#s4#", "", "11.65%"};
-		{ 2, 220257, "", "=q4=Seafury Gauntlets", "=ds=#s9#, #a3#", "", "4.11%"};
-		{ 3, 220264, "", "=q4=Peacekeeper Gauntlets", "=ds=#s9#, #a4#", "", "7.37%"};
-		{ 4, 219855, "", "=q4=Bloodsoaked Legplates", "=ds=#s11#, #a4#", "", "10.52%"};
-		{ 5, 219876, "", "=q4=Soul Corrupter's Necklace", "=ds=#s2#", "", "10.11%"};
-		{ 6, 219856, "", "=q4=The Eye of Hakkar", "=ds=#s2#", "", "12.02%"};
-		{ 8, 219859, "", "=q4=Fang of the Faceless", "=ds=#h1#, #w4#", "", "7.33%"};
-		{ 9, 219864, "", "=q4=Bloodcaller", "=ds=#h3#, #w10#", "", "7.69%"};
+		{ 1, 319857, "", "=q4=Cloak of Consumption", "=ds=#s4#", "", "11.65%"};
+		{ 2, 320257, "", "=q4=Seafury Gauntlets", "=ds=#s9#, #a3#", "", "4.11%"};
+		{ 3, 320264, "", "=q4=Peacekeeper Gauntlets", "=ds=#s9#, #a4#", "", "7.37%"};
+		{ 4, 319855, "", "=q4=Bloodsoaked Legplates", "=ds=#s11#, #a4#", "", "10.52%"};
+		{ 5, 319876, "", "=q4=Soul Corrupter's Necklace", "=ds=#s2#", "", "10.11%"};
+		{ 6, 319856, "", "=q4=The Eye of Hakkar", "=ds=#s2#", "", "12.02%"};
+		{ 8, 319859, "", "=q4=Fang of the Faceless", "=ds=#h1#, #w4#", "", "7.33%"};
+		{ 9, 319864, "", "=q4=Bloodcaller", "=ds=#h3#, #w10#", "", "7.69%"};
 		{ 10, 319865, "", "=q4=Warblade of the Hakkari", "=ds=#h3#, #w10#", "", "3.67%"};
 		{ 11, 319854, "", "=q4=Zin'rokh, Destroyer of Worlds", "=ds=#h2#, #w10#", "", "6.78%"};
 		{ 12, 319852, "", "=q4=Ancient Hakkari Manslayer", "=ds=#h1#, #w1#", "", "6.62%"};
