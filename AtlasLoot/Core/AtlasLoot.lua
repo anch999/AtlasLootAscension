@@ -27,6 +27,7 @@ AtlasLoot_LoadAllModules()
 AtlasLoot_ShowQuickLooks(button)
 AtlasLoot_RefreshQuickLookButtons()
 AtlasLoot_AddTooltip(frameb, tooltiptext)
+AL_FindId(name, difficulty)
 ]]
 
 AtlasLoot = LibStub("AceAddon-3.0"):NewAddon("AtlasLoot");
@@ -1435,5 +1436,14 @@ function AtlasLoot_AddTooltip(frameb, tooltiptext)
       GameTooltip:Show()
    end)
    frame:SetScript("OnLeave", function() GameTooltip:Hide() end)
+end
+
+--[[
+AL_FindId(name, difficulty)
+Finds the Ids of other difficulties based on the name of the item and the difficulty parameter given.
+On the form of {Name, normal, heroic, mythic, mythic1, mythic2, ... ,mythicN}
+]]
+function AL_FindId(name, difficulty)
+   
 end
 
