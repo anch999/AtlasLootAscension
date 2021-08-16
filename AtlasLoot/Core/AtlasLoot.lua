@@ -1441,9 +1441,13 @@ end
 --[[
 AL_FindId(name, difficulty)
 Finds the Ids of other difficulties based on the name of the item and the difficulty parameter given.
-On the form of {Name, normal, heroic, mythic, mythic1, mythic2, ... ,mythicN}
+On the form of {Name, {normal, heroic, mythic, mythic1, mythic2, ... ,mythicN}]
 ]]
 function AL_FindId(name, difficulty)
    
 end
 
+ItemIDsDatabase = {
+	--name, {normal, heroic, mythic, mythicN}
+	testItemName, {1000, 2000, 3000, 4000} 
+}
