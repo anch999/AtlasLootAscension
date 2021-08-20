@@ -930,6 +930,26 @@ end
 	AtlasLoot_TableNames["DMEIsalien"] = { BabbleBoss["Isalien"], "AtlasLootOriginalWoW" };
 	AtlasLoot_TableNames["DMETrash"] = { AL["Trash Mobs"].." ("..BabbleZone["Dire Maul (East)"]..")", "AtlasLootOriginalWoW" };
 	AtlasLoot_TableNames["DMBooks"] = { "Dire Maul Books", "AtlasLootOriginalWoW" };
+  -- Dire Maul East HEROIC
+	AtlasLoot_TableNames["DMEPusillin25Man"] = { BabbleBoss["Pusillin"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["DMEZevrimThornhoof25Man"] = { BabbleBoss["Zevrim Thornhoof"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["DMEHydro25Man"] = { BabbleBoss["Hydrospawn"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["DMELethtendris25Man"] = { BabbleBoss["Lethtendris"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["DMEPimgib25Man"] = { BabbleBoss["Pimgib"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["DMEAlzzin25Man"] = { BabbleBoss["Alzzin the Wildshaper"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["DMEIsalien25Man"] = { BabbleBoss["Isalien"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["DMETrash25Man"] = { AL["Trash Mobs"].." ("..BabbleZone["Dire Maul (East)"]..")", "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["DMBooks25Man"] = { "Dire Maul Books", "AtlasLootOriginalWoW" };
+  -- Dire Maul East MYTHIC
+	AtlasLoot_TableNames["DMEPusillin25ManHEROIC"] = { BabbleBoss["Pusillin"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["DMEZevrimThornhoof25ManHEROIC"] = { BabbleBoss["Zevrim Thornhoof"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["DMEHydro25ManHEROIC"] = { BabbleBoss["Hydrospawn"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["DMELethtendris25ManHEROIC"] = { BabbleBoss["Lethtendris"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["DMEPimgib25ManHEROIC"] = { BabbleBoss["Pimgib"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["DMEAlzzin25ManHEROIC"] = { BabbleBoss["Alzzin the Wildshaper"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["DMEIsalien25ManHEROIC"] = { BabbleBoss["Isalien"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["DMETrash25ManHEROIC"] = { AL["Trash Mobs"].." ("..BabbleZone["Dire Maul (East)"]..")", "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["DMBooks25ManHEROIC"] = { "Dire Maul Books", "AtlasLootOriginalWoW" };
   -- Dire Maul North
 	AtlasLoot_TableNames["DMNGuardMoldar"] = { BabbleBoss["Guard Mol'dar"], "AtlasLootOriginalWoW" };
 	AtlasLoot_TableNames["DMNStomperKreeg"] = { BabbleBoss["Stomper Kreeg"], "AtlasLootOriginalWoW" };

@@ -5146,8 +5146,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 	AtlasLoot_Data["DMELethtendris"] = {
 		{ 1, 18325, "", "=q3=Felhide Cap", "=ds=#s1#, #a2#", "", "24.67%"};
 		{ 2, 18311, "", "=q3=Quel'dorai Channeling Rod", "=ds=#w9#", "", "7.30%"};
-		{ 4, 18302, "", "=q2=Band of Vigor", "=ds=#s13#", "", "29.30%"};
-		{ 5, 18301, "", "=q2=Lethtendris's Wand", "=ds=#w12#", "", "25.57%"};
+		{ 4, 18302, "", "=q3=Band of Vigor", "=ds=#s13#", "", "29.30%"};
+		{ 5, 18301, "", "=q3=Lethtendris's Wand", "=ds=#w12#", "", "25.57%"};
 		{ 7, 18426, "", "=q1=Lethtendris's Web", "=ds=#m3#"};
 	};
 
@@ -5159,8 +5159,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 1, 18322, "", "=q3=Waterspout Boots", "=ds=#s12#, #a2#", "", "16.42%"};
 		{ 2, 18317, "", "=q3=Tempest Talisman", "=ds=#s2#", "", "16.44%"};
 		{ 3, 18324, "", "=q3=Waveslicer", "=ds=#h2#, #w1#", "", "8.46%"};
-		{ 5, 18307, "", "=q2=Riptide Shoes", "=ds=#s12#, #a1#", "", "21.33%"};
-		{ 6, 18305, "", "=q2=Breakwater Legguards", "=ds=#s11#, #a4#", "", "22.75%"};
+		{ 5, 18307, "", "=q3=Riptide Shoes", "=ds=#s12#, #a1#", "", "21.33%"};
+		{ 6, 18305, "", "=q3=Breakwater Legguards", "=ds=#s11#, #a4#", "", "22.75%"};
 	};
 
 	AtlasLoot_Data["DMEAlzzin"] = {
@@ -5195,6 +5195,150 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 2, 18298, "", "=q3=Unbridled Leggings", "=ds=#s11#, #a2#", "", "0.62%"};
 		{ 3, 18296, "", "=q3=Marksman Bands", "=ds=#s8#, #a3#", "", "0.59%"};
 		{ 4, 18289, "", "=q3=Barbed Thorn Necklace", "=ds=#s2#", "", "0.87%"};
+	};
+
+		----------------------
+		--- Dire Maul East HEROIC ---
+		----------------------
+
+	AtlasLoot_Data["DMEPusillin25Man"] = {
+		{ 1, 18267, "", "=q2=Recipe: Runn Tum Tuber Surprise", "=ds=#p3# (275)", "", "71.55%"};
+		{ 3, 18261, "", "=q1=Book of Incantations", "=ds=#m3#", "", "100%"};
+		{ 4, 18249, "", "=q1=Crescent Key", "=ds=#e9#", "", "100%"};
+	};
+
+	AtlasLoot_Data["DMEZevrimThornhoof25Man"] = {
+		{ 1,AL_FindId("Fervent Helm", 3), "", "=q4=Fervent Helm", "=ds=#s1#, #a3#", "", "7.88%"};
+		{ 2,AL_FindId("Helm of Awareness", 3), "", "=q4=Helm of Awareness", "=ds=#s1#, #a4#", "", "17.87%"};
+		{ 3,AL_FindId("Satyr's Bow", 3), "", "=q4=Satyr's Bow", "=ds=#w2#", "", "17.24%"};
+		{ 5, 18306, "", "=q2=Gloves of Shadowy Mist", "=ds=#s9#, #a1#", "", "21.40%"};
+		{ 6, 18308, "", "=q2=Clever Hat", "=ds=#s1#, #a2#", "", "23.73%"};
+	};
+
+	AtlasLoot_Data["DMELethtendris25Man"] = {
+		{ 1,AL_FindId("Felhide Cap", 3), "", "=q4=Felhide Cap", "=ds=#s1#, #a2#", "", "24.67%"};
+		{ 2,AL_FindId("Quel'dorai Channeling Rod", 3), "", "=q4=Quel'dorai Channeling Rod", "=ds=#w9#", "", "7.30%"};
+		{ 4, 18302, "", "=q3=Band of Vigor", "=ds=#s13#", "", "29.30%"};
+		{ 5, 18301, "", "=q3=Lethtendris's Wand", "=ds=#w12#", "", "25.57%"};
+		{ 7, 18426, "", "=q1=Lethtendris's Web", "=ds=#m3#"};
+	};
+
+	AtlasLoot_Data["DMEPimgib25Man"] = {
+		{ 1,AL_FindId("Pimgib's Collar", 3), "", "=q4=Pimgib's Collar", "=ds=#s14#, =q1=#m1# =ds=#c8#", "", "18.68%"};
+	};
+
+	AtlasLoot_Data["DMEHydro25Man"] = {
+		{ 1,AL_FindId("Waterspout Boots", 3), "", "=q4=Waterspout Boots", "=ds=#s12#, #a2#", "", "16.42%"};
+		{ 2,AL_FindId("Tempest Talisman", 3), "", "=q4=Tempest Talisman", "=ds=#s2#", "", "16.44%"};
+		{ 3,AL_FindId("Waveslicer", 3), "", "=q4=Waveslicer", "=ds=#h2#, #w1#", "", "8.46%"};
+		{ 5, 18307, "", "=q3=Riptide Shoes", "=ds=#s12#, #a1#", "", "21.33%"};
+		{ 6, 18305, "", "=q3=Breakwater Legguards", "=ds=#s11#, #a4#", "", "22.75%"};
+	};
+
+	AtlasLoot_Data["DMEAlzzin25Man"] = {
+		{ 1,AL_FindId("Shadewood Cloak", 3), "", "=q4=Shadewood Cloak", "=ds=#s4#", "", "15.36%"};
+		{ 2,AL_FindId("Whipvine Cord", 3), "", "=q4=Whipvine Cord", "=ds=#s10#, #a1#", "", "16.53%"};
+		{ 3,AL_FindId("Gloves of Restoration", 3), "", "=q4=Gloves of Restoration", "=ds=#s9#, #a2#", "", "14.05%"};
+		{ 4,AL_FindId("Merciful Greaves", 3), "", "=q4=Merciful Greaves", "=ds=#s12#, #a3#", "", "14.88%"};
+		{ 5,AL_FindId("Energized Chestplate", 3), "", "=q4=Energized Chestplate", "=ds=#s5#, #a4#", "", "16.08%"};
+		{ 6,AL_FindId("Razor Gauntlets", 3), "", "=q4=Razor Gauntlets", "=ds=#s9#, #a4#", "", "18.62%"};
+		{ 8, 0, "INV_Box_01", "=q6=#x9#", ""};
+		{ 9, 18501, "", "=q1=Felvine Shard", "=ds=#m3#"};
+		{ 16,AL_FindId("Ring of Demonic Potency", 3), "", "=q4=Ring of Demonic Potency", "=ds=#s13#", "", "15.40%"};
+		{ 17,AL_FindId("Ring of Demonic Guile", 3), "", "=q4=Ring of Demonic Guile", "=ds=#s13#", "", "13.71%"};
+		{ 18,AL_FindId("Fiendish Machete", 3), "", "=q4=Fiendish Machete", "=ds=#h1#, #w10#", "", "15.39%"};
+		{ 19,AL_FindId("Energetic Rod", 3), "", "=q4=Energetic Rod", "=ds=#h3#, #w6#", "", "15.94%"};
+	};
+
+	AtlasLoot_Data["DMEIsalien25Man"] = {
+		{ 1, 0, "INV_Misc_Bag_09", "=q6=#j5#", "=q5=#n20#"};
+		{ 2,AL_FindId("Ironweave Gloves", 3), "", "=q4=Ironweave Gloves", "=ds=#s9#, #a1#", "", "16.24%"};
+		{ 3,AL_FindId("Boots of Ferocity", 3), "", "=q4=Boots of Ferocity", "=ds=#s12#, #a2#", "", "12.55%"};
+		{ 4,AL_FindId("Libram of Hope", 3), "", "=q4=Libram of Hope", "=ds=#s16#, #w16#", "", "14.76%"};
+		{ 5,AL_FindId("Totem of Rebirth", 3), "", "=q4=Totem of Rebirth", "=ds=#s16#, #w15#", "", "2.95%"};
+		{ 6,AL_FindId("Hammer of Revitalization", 3), "", "=q4=Hammer of Revitalization", "=ds=#h3#, #w6#", "", "13.65%"};
+		{ 7,AL_FindId("Huntsman's Harpoon", 3), "", "=q4=Huntsman's Harpoon", "=ds=#w7#", "", "15.50%"};
+		{ 17, 21984, "", "=q1=Left Piece of Lord Valthalak's Amulet", "=ds=#m3#"};
+		{ 18, 22046, "", "=q1=Right Piece of Lord Valthalak's Amulet", "=ds=#m3#"};
+	};
+
+	AtlasLoot_Data["DMETrash25Man"] = {
+		{ 1,AL_FindId("Phasing Boots", 3), "", "=q4=Phasing Boots", "=ds=#s12#, #a1# =q2=#m16#", "", "1.26%"};
+		{ 2,AL_FindId("Unbridled Leggings", 3), "", "=q4=Unbridled Leggings", "=ds=#s11#, #a2#", "", "0.62%"};
+		{ 3,AL_FindId("Marksman Bands", 3), "", "=q4=Marksman Bands", "=ds=#s8#, #a3#", "", "0.59%"};
+		{ 4,AL_FindId("Barbed Thorn Necklace", 3), "", "=q4=Barbed Thorn Necklace", "=ds=#s2#", "", "0.87%"};
+	};
+
+		----------------------
+		--- Dire Maul East MYTHIC ---
+		----------------------
+
+	AtlasLoot_Data["DMEPusillin25ManHEROIC"] = {
+		{ 1, 18267, "", "=q2=Recipe: Runn Tum Tuber Surprise", "=ds=#p3# (275)", "", "71.55%"};
+		{ 3, 18261, "", "=q1=Book of Incantations", "=ds=#m3#", "", "100%"};
+		{ 4, 18249, "", "=q1=Crescent Key", "=ds=#e9#", "", "100%"};
+	};
+
+	AtlasLoot_Data["DMEZevrimThornhoof25ManHEROIC"] = {
+		{ 1,AL_FindId("Fervent Helm", 4), "", "=q4=Fervent Helm", "=ds=#s1#, #a3#", "", "7.88%"};
+		{ 2,AL_FindId("Helm of Awareness", 4), "", "=q4=Helm of Awareness", "=ds=#s1#, #a4#", "", "17.87%"};
+		{ 3,AL_FindId("Satyr's Bow", 4), "", "=q4=Satyr's Bow", "=ds=#w2#", "", "17.24%"};
+		{ 5, 18306, "", "=q2=Gloves of Shadowy Mist", "=ds=#s9#, #a1#", "", "21.40%"};
+		{ 6, 18308, "", "=q2=Clever Hat", "=ds=#s1#, #a2#", "", "23.73%"};
+	};
+
+	AtlasLoot_Data["DMELethtendris25ManHEROIC"] = {
+		{ 1,AL_FindId("Felhide Cap", 4), "", "=q4=Felhide Cap", "=ds=#s1#, #a2#", "", "24.67%"};
+		{ 2,AL_FindId("Quel'dorai Channeling Rod", 4), "", "=q4=Quel'dorai Channeling Rod", "=ds=#w9#", "", "7.30%"};
+		{ 4, 18302, "", "=q3=Band of Vigor", "=ds=#s13#", "", "29.30%"};
+		{ 5, 18301, "", "=q3=Lethtendris's Wand", "=ds=#w12#", "", "25.57%"};
+		{ 7, 18426, "", "=q1=Lethtendris's Web", "=ds=#m3#"};
+	};
+
+	AtlasLoot_Data["DMEPimgib25ManHEROIC"] = {
+		{ 1,AL_FindId("Pimgib's Collar", 4), "", "=q4=Pimgib's Collar", "=ds=#s14#, =q1=#m1# =ds=#c8#", "", "18.68%"};
+	};
+
+	AtlasLoot_Data["DMEHydro25ManHEROIC"] = {
+		{ 1,AL_FindId("Waterspout Boots", 4), "", "=q4=Waterspout Boots", "=ds=#s12#, #a2#", "", "16.42%"};
+		{ 2,AL_FindId("Tempest Talisman", 4), "", "=q4=Tempest Talisman", "=ds=#s2#", "", "16.44%"};
+		{ 3,AL_FindId("Waveslicer", 4), "", "=q4=Waveslicer", "=ds=#h2#, #w1#", "", "8.46%"};
+		{ 5, 18307, "", "=q3=Riptide Shoes", "=ds=#s12#, #a1#", "", "21.33%"};
+		{ 6, 18305, "", "=q3=Breakwater Legguards", "=ds=#s11#, #a4#", "", "22.75%"};
+	};
+
+	AtlasLoot_Data["DMEAlzzin25ManHEROIC"] = {
+		{ 1,AL_FindId("Shadewood Cloak", 4), "", "=q4=Shadewood Cloak", "=ds=#s4#", "", "15.36%"};
+		{ 2,AL_FindId("Whipvine Cord", 4), "", "=q4=Whipvine Cord", "=ds=#s10#, #a1#", "", "16.53%"};
+		{ 3,AL_FindId("Gloves of Restoration", 4), "", "=q4=Gloves of Restoration", "=ds=#s9#, #a2#", "", "14.05%"};
+		{ 4,AL_FindId("Merciful Greaves", 4), "", "=q4=Merciful Greaves", "=ds=#s12#, #a3#", "", "14.88%"};
+		{ 5,AL_FindId("Energized Chestplate", 4), "", "=q4=Energized Chestplate", "=ds=#s5#, #a4#", "", "16.08%"};
+		{ 6,AL_FindId("Razor Gauntlets", 4), "", "=q4=Razor Gauntlets", "=ds=#s9#, #a4#", "", "18.62%"};
+		{ 8, 0, "INV_Box_01", "=q6=#x9#", ""};
+		{ 9, 18501, "", "=q1=Felvine Shard", "=ds=#m3#"};
+		{ 16,AL_FindId("Ring of Demonic Potency", 4), "", "=q4=Ring of Demonic Potency", "=ds=#s13#", "", "15.40%"};
+		{ 17,AL_FindId("Ring of Demonic Guile", 4), "", "=q4=Ring of Demonic Guile", "=ds=#s13#", "", "13.71%"};
+		{ 18,AL_FindId("Fiendish Machete", 4), "", "=q4=Fiendish Machete", "=ds=#h1#, #w10#", "", "15.39%"};
+		{ 19,AL_FindId("Energetic Rod", 4), "", "=q4=Energetic Rod", "=ds=#h3#, #w6#", "", "15.94%"};
+	};
+
+	AtlasLoot_Data["DMEIsalien25ManHEROIC"] = {
+		{ 1, 0, "INV_Misc_Bag_09", "=q6=#j5#", "=q5=#n20#"};
+		{ 2,AL_FindId("Ironweave Gloves", 4), "", "=q4=Ironweave Gloves", "=ds=#s9#, #a1#", "", "16.24%"};
+		{ 3,AL_FindId("Boots of Ferocity", 4), "", "=q4=Boots of Ferocity", "=ds=#s12#, #a2#", "", "12.55%"};
+		{ 4,AL_FindId("Libram of Hope", 4), "", "=q4=Libram of Hope", "=ds=#s16#, #w16#", "", "14.76%"};
+		{ 5,AL_FindId("Totem of Rebirth", 4), "", "=q4=Totem of Rebirth", "=ds=#s16#, #w15#", "", "2.95%"};
+		{ 6,AL_FindId("Hammer of Revitalization", 4), "", "=q4=Hammer of Revitalization", "=ds=#h3#, #w6#", "", "13.65%"};
+		{ 7,AL_FindId("Huntsman's Harpoon", 4), "", "=q4=Huntsman's Harpoon", "=ds=#w7#", "", "15.50%"};
+		{ 17, 21984, "", "=q1=Left Piece of Lord Valthalak's Amulet", "=ds=#m3#"};
+		{ 18, 22046, "", "=q1=Right Piece of Lord Valthalak's Amulet", "=ds=#m3#"};
+	};
+
+	AtlasLoot_Data["DMETrash25ManHEROIC"] = {
+		{ 1,AL_FindId("Phasing Boots", 4), "", "=q4=Phasing Boots", "=ds=#s12#, #a1# =q2=#m16#", "", "1.26%"};
+		{ 2,AL_FindId("Unbridled Leggings", 4), "", "=q4=Unbridled Leggings", "=ds=#s11#, #a2#", "", "0.62%"};
+		{ 3,AL_FindId("Marksman Bands", 4), "", "=q4=Marksman Bands", "=ds=#s8#, #a3#", "", "0.59%"};
+		{ 4,AL_FindId("Barbed Thorn Necklace", 4), "", "=q4=Barbed Thorn Necklace", "=ds=#s2#", "", "0.87%"};
 	};
 
 		-----------------------
