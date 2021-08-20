@@ -990,6 +990,26 @@ end
 	AtlasLoot_TableNames["DMWPrinceTortheldrin"] = { BabbleBoss["Prince Tortheldrin"], "AtlasLootOriginalWoW" };
 	AtlasLoot_TableNames["DMWShendralarProvisioner"] = { AL["Shen'dralar Provisioner"], "AtlasLootOriginalWoW" };
 	AtlasLoot_TableNames["DMWTrash"] = { AL["Trash Mobs"].." ("..BabbleZone["Dire Maul (West)"]..")", "AtlasLootOriginalWoW" };
+  -- Dire Maul West HEROIC
+	AtlasLoot_TableNames["DMWTendrisWarpwood25Man"] = { BabbleBoss["Tendris Warpwood"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["DMWIllyannaRavenoak25Man"] = { BabbleBoss["Illyanna Ravenoak"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["DMWMagisterKalendris25Man"] = { BabbleBoss["Magister Kalendris"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["DMWTsuzee25Man"] = { BabbleBoss["Tsu'zee"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["DMWImmolthar25Man"] = { BabbleBoss["Immol'thar"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["DMWHelnurath25Man"] = { BabbleBoss["Lord Hel'nurath"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["DMWPrinceTortheldrin25Man"] = { BabbleBoss["Prince Tortheldrin"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["DMWShendralarProvisioner25Man"] = { AL["Shen'dralar Provisioner"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["DMWTrash25Man"] = { AL["Trash Mobs"].." ("..BabbleZone["Dire Maul (West)"]..")", "AtlasLootOriginalWoW" };
+  -- Dire Maul West MYTHIC
+	AtlasLoot_TableNames["DMWTendrisWarpwood25ManHEROIC"] = { BabbleBoss["Tendris Warpwood"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["DMWIllyannaRavenoak25ManHEROIC"] = { BabbleBoss["Illyanna Ravenoak"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["DMWMagisterKalendris25ManHEROIC"] = { BabbleBoss["Magister Kalendris"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["DMWTsuzee25ManHEROIC"] = { BabbleBoss["Tsu'zee"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["DMWImmolthar25ManHEROIC"] = { BabbleBoss["Immol'thar"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["DMWHelnurath25ManHEROIC"] = { BabbleBoss["Lord Hel'nurath"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["DMWPrinceTortheldrin25ManHEROIC"] = { BabbleBoss["Prince Tortheldrin"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["DMWShendralarProvisioner25ManHEROIC"] = { AL["Shen'dralar Provisioner"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["DMWTrash25ManHEROIC"] = { AL["Trash Mobs"].." ("..BabbleZone["Dire Maul (West)"]..")", "AtlasLootOriginalWoW" };
   -- Gnomeregan
 	AtlasLoot_TableNames["Gnomeregan1"] = { BabbleZone["Gnomeregan"], "AtlasLootOriginalWoW" };
 	AtlasLoot_TableNames["Gnomeregan2"] = { BabbleZone["Gnomeregan"], "AtlasLootOriginalWoW" };

@@ -5753,29 +5753,29 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 	AtlasLoot_Data["DMWTendrisWarpwood"] = {
 		{ 1, 18390, "", "=q3=Tanglemoss Leggings", "=ds=#s11#, #a2#", "", "22.55%"};
 		{ 2, 18393, "", "=q3=Warpwood Binding", "=ds=#s10#, #a3#", "", "19.81%"};
-		{ 4, 18353, "", "=q2=Stoneflower Staff", "=ds=#w9#", "", "23.46%"};
-		{ 5, 18352, "", "=q2=Petrified Bark Shield", "=ds=#w8#", "", "21.67%"};
+		{ 4, 18353, "", "=q3=Stoneflower Staff", "=ds=#w9#", "", "23.46%"};
+		{ 5, 18352, "", "=q3=Petrified Bark Shield", "=ds=#w8#", "", "21.67%"};
 	};
 
 	AtlasLoot_Data["DMWIllyannaRavenoak"] = {
 		{ 1, 18386, "", "=q3=Padre's Trousers", "=ds=#s11#, #a1#", "", "18.79%"};
 		{ 2, 18383, "", "=q3=Force Imbued Gauntlets", "=ds=#s9#, #a4#", "", "20.11%"};
-		{ 4, 18349, "", "=q2=Gauntlets of Accuracy", "=ds=#s9#, #a3#", "", "23.94%"};
-		{ 5, 18347, "", "=q2=Well Balanced Axe", "=ds=#h1#, #w1#", "", "22.44%"};
+		{ 4, 18349, "", "=q3=Gauntlets of Accuracy", "=ds=#s9#, #a3#", "", "23.94%"};
+		{ 5, 18347, "", "=q3=Well Balanced Axe", "=ds=#h1#, #w1#", "", "22.44%"};
 	};
 
 	AtlasLoot_Data["DMWMagisterKalendris"] = {
 		{ 1, 18374, "", "=q3=Flamescarred Shoulders", "=ds=#s3#, #a2#", "", "18.11%"};
 		{ 2, 18397, "", "=q3=Elder Magus Pendant", "=ds=#s2#", "", "17.46%"};
 		{ 3, 18371, "", "=q3=Mindtap Talisman", "=ds=#s14#", "", "7.45%"};
-		{ 5, 18350, "", "=q2=Amplifying Cloak", "=ds=#s4#", "", "21.44%"};
-		{ 6, 18351, "", "=q2=Magically Sealed Bracers", "=ds=#s8#, #a4#", "", "24.36%"};
+		{ 5, 18350, "", "=q3=Amplifying Cloak", "=ds=#s4#", "", "21.44%"};
+		{ 6, 18351, "", "=q3=Magically Sealed Bracers", "=ds=#s8#, #a4#", "", "24.36%"};
 		{ 7, 22309, "", "=q2=Pattern: Big Bag of Enchantment", "=ds=#p8# (300)"};
 	};
 	AtlasLoot_Data["DMWTsuzee"] = {
 		{ 1, 18387, "", "=q3=Brightspark Gloves", "=ds=#s9#, #a1#", "", "24.79%"};
-		{ 3, 18346, "", "=q2=Threadbare Trousers", "=ds=#s11#, #a1#", "", "33.94%"};
-		{ 4, 18345, "", "=q2=Murmuring Ring", "=ds=#s13#", "", "30.28%"};
+		{ 3, 18346, "", "=q3=Threadbare Trousers", "=ds=#s11#, #a1#", "", "33.94%"};
+		{ 4, 18345, "", "=q3=Murmuring Ring", "=ds=#s13#", "", "30.28%"};
 	};
 
 	AtlasLoot_Data["DMWImmolthar"] = {
@@ -5821,6 +5821,160 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 1, 18344, "", "=q3=Stonebark Gauntlets", "=ds=#s9#, #a2#", "", "0.47%"};
 		{ 2, 18340, "", "=q3=Eidolon Talisman", "=ds=#s2#", "", "0.58%"};
 		{ 3, 18338, "", "=q3=Wand of Arcane Potency", "=ds=#w12#", "", "0.78%"};
+	};
+
+		----------------------
+		--- Dire Maul West HEROIC ---
+		----------------------
+
+	AtlasLoot_Data["DMWTendrisWarpwood25Man"] = {
+		{ 1, AL_FindId("Tanglemoss Leggings", 3), "", "=q4=Tanglemoss Leggings", "=ds=#s11#, #a2#", "", "22.55%"};
+		{ 2, AL_FindId("Warpwood Binding", 3), "", "=q4=Warpwood Binding", "=ds=#s10#, #a3#", "", "19.81%"};
+		{ 4, AL_FindId("Stoneflower Staff", 3), "", "=q4=Stoneflower Staff", "=ds=#w9#", "", "23.46%"};
+		{ 5, AL_FindId("Petrified Bark Shield", 3), "", "=q4=Petrified Bark Shield", "=ds=#w8#", "", "21.67%"};
+	};
+
+	AtlasLoot_Data["DMWIllyannaRavenoak25Man"] = {
+		{ 1, AL_FindId("Padre's Trousers", 3), "", "=q4=Padre's Trousers", "=ds=#s11#, #a1#", "", "18.79%"};
+		{ 2, AL_FindId("Force Imbued Gauntlets", 3), "", "=q4=Force Imbued Gauntlets", "=ds=#s9#, #a4#", "", "20.11%"};
+		{ 4, AL_FindId("Gauntlets of Accuracy", 3), "", "=q4=Gauntlets of Accuracy", "=ds=#s9#, #a3#", "", "23.94%"};
+		{ 5, AL_FindId("Well Balanced Axe", 3), "", "=q4=Well Balanced Axe", "=ds=#h1#, #w1#", "", "22.44%"};
+	};
+
+	AtlasLoot_Data["DMWMagisterKalendris25Man"] = {
+		{ 1, AL_FindId("Flamescarred Shoulders", 3), "", "=q4=Flamescarred Shoulders", "=ds=#s3#, #a2#", "", "18.11%"};
+		{ 2, AL_FindId("Elder Magus Pendant", 3), "", "=q4=Elder Magus Pendant", "=ds=#s2#", "", "17.46%"};
+		{ 3, AL_FindId("Mindtap Talisman", 3), "", "=q4=Mindtap Talisman", "=ds=#s14#", "", "7.45%"};
+		{ 5, AL_FindId("Amplifying Cloak", 3), "", "=q4=Amplifying Cloak", "=ds=#s4#", "", "21.44%"};
+		{ 6, AL_FindId("Magically Sealed Bracers", 3), "", "=q4=Magically Sealed Bracers", "=ds=#s8#, #a4#", "", "24.36%"};
+		{ 7, 22309, "", "=q2=Pattern: Big Bag of Enchantment", "=ds=#p8# (300)"};
+	};
+	AtlasLoot_Data["DMWTsuzee25Man"] = {
+		{ 1, AL_FindId("Brightspark Gloves", 3), "", "=q4=Brightspark Gloves", "=ds=#s9#, #a1#", "", "24.79%"};
+		{ 3, AL_FindId("Threadbare Trousers", 3), "", "=q4=Threadbare Trousers", "=ds=#s11#, #a1#", "", "33.94%"};
+		{ 4, AL_FindId("Murmuring Ring", 3), "", "=q4=Murmuring Ring", "=ds=#s13#", "", "30.28%"};
+	};
+
+	AtlasLoot_Data["DMWImmolthar25Man"] = {
+		{ 1, AL_FindId("Cloak of the Cosmos", 3), "", "=q4=Cloak of the Cosmos", "=ds=#s4#", "", "14.35%"};
+		{ 2, AL_FindId("Robe of Everlasting Night", 3), "", "=q4=Robe of Everlasting Night", "=ds=#s5#, #a1#", "", "15.33%"};
+		{ 3, AL_FindId("Quickdraw Gloves", 3), "", "=q4=Quickdraw Gloves", "=ds=#s9#, #a2#", "", "21.01%"};
+		{ 4, AL_FindId("Eyestalk Cord", 3), "", "=q4=Eyestalk Cord", "=ds=#s10#, #a2#", "", "20.08%"};
+		{ 5, AL_FindId("Demon Howl Wristguards", 3), "", "=q4=Demon Howl Wristguards", "=ds=#s8#, #a3#", "", "17.51%"};
+		{ 6, AL_FindId("Odious Greaves", 3), "", "=q4=Odious Greaves", "=ds=#s12#, #a3#", "", " 19.81%"};
+		{ 7, AL_FindId("Bile-etched Spaulders", 3), "", "=q4=Bile-etched Spaulders", "=ds=#s3#, #a4#", "", "14.71%"};
+		{ 16, AL_FindId("Evil Eye Pendant", 3), "", "=q4=Evil Eye Pendant", "=ds=#s2#", "", "17.78%"};
+		{ 17, AL_FindId("Vigilance Charm", 3), "", "=q4=Vigilance Charm", "=ds=#s14#", "", "6.30%"};
+		{ 18, AL_FindId("Blade of the New Moon", 3), "", "=q4=Blade of the New Moon", "=ds=#h1#, #w4#", "", "6.99%"};
+	};
+
+	AtlasLoot_Data["DMWHelnurath25Man"] = {
+		{ 1, AL_FindId("Diabolic Mantle", 3), "", "=q4=Diabolic Mantle", "=ds=#s3#, #a1#", "", "23.12%"};
+		{ 2, AL_FindId("Fel Hardened Bracers", 3), "", "=q4=Fel Hardened Bracers", "=ds=#s8#, #a4#", "", "19.24%"};
+		{ 3, AL_FindId("Dreadguard's Protector", 3), "", "=q4=Dreadguard's Protector", "=ds=#w8#", "", "19.77%"};
+		{ 4, AL_FindId("Xorothian Firestick", 3), "", "=q4=Xorothian Firestick", "=ds=#w5#", "", "21.92%"};
+	};
+
+	AtlasLoot_Data["DMWPrinceTortheldrin25Man"] = {
+		{ 1, AL_FindId("Fluctuating Cloak", 3), "", "=q4=Fluctuating Cloak", "=ds=#s4# =q2=#m16#", "", "21.84%"};
+		{ 2, AL_FindId("Chestplate of Tranquility", 3), "", "=q4=Chestplate of Tranquility", "=ds=#s5#, #a2#", "", "6.32%"};
+		{ 3, AL_FindId("Bracers of the Eclipse", 3), "", "=q4=Bracers of the Eclipse", "=ds=#s8#, #a2#", "", "15.62%"};
+		{ 4, AL_FindId("Silvermoon Leggings", 3), "", "=q4=Silvermoon Leggings", "=ds=#s11#, #a3#", "", "21.20%"};
+		{ 5, AL_FindId("Eldritch Reinforced Legplates", 3), "", "=q4=Eldritch Reinforced Legplates", "=ds=#s11#, #a4#", "", "15.87%"};
+		{ 6, AL_FindId("Emerald Flame Ring", 3), "", "=q4=Emerald Flame Ring", "=ds=#s13#", "", "14.55%"};
+		{ 8, 0, "INV_Box_01", "=q6=#x8#", ""};
+		{ 9, 18336, "", "=q1=Gauntlet of Gordok Might", "=ds=#m3#"};
+		{ 16, AL_FindId("Distracting Dagger", 3), "", "=q4=Distracting Dagger", "=ds=#h4#, #w4#", "", "14.70%"};
+		{ 17, AL_FindId("Mind Carver", 3), "", "=q4=Mind Carver", "=ds=#h3#, #w10#", "", "14.62%"};
+		{ 18, AL_FindId("Timeworn Mace", 3), "", "=q4=Timeworn Mace", "=ds=#h1#, #w6#", "", "14.40%"};
+		{ 19, AL_FindId("Stoneshatter", 3), "", "=q4=Stoneshatter", "=ds=#w3#", "", "7.72%"};
+	};
+
+	AtlasLoot_Data["DMWShendralarProvisioner25Man"] = {
+		{ 1, 18487, "", "=q1=Pattern: Mooncloth Robe", "=ds=#p8# (300)"};
+	};
+
+	AtlasLoot_Data["DMWTrash25Man"] = {
+		{ 1, AL_FindId("Stonebark Gauntlets", 3), "", "=q4=Stonebark Gauntlets", "=ds=#s9#, #a2#", "", "0.47%"};
+		{ 2, AL_FindId("Eidolon Talisman", 3), "", "=q4=Eidolon Talisman", "=ds=#s2#", "", "0.58%"};
+		{ 3, AL_FindId("Wand of Arcane Potency", 3), "", "=q4=Wand of Arcane Potency", "=ds=#w12#", "", "0.78%"};
+	};
+
+		----------------------
+		--- Dire Maul West MYTHIC ---
+		----------------------
+
+	AtlasLoot_Data["DMWTendrisWarpwood25ManHEROIC"] = {
+		{ 1, AL_FindId("Tanglemoss Leggings", 4), "", "=q4=Tanglemoss Leggings", "=ds=#s11#, #a2#", "", "22.55%"};
+		{ 2, AL_FindId("Warpwood Binding", 4), "", "=q4=Warpwood Binding", "=ds=#s10#, #a3#", "", "19.81%"};
+		{ 4, AL_FindId("Stoneflower Staff", 4), "", "=q4=Stoneflower Staff", "=ds=#w9#", "", "23.46%"};
+		{ 5, AL_FindId("Petrified Bark Shield", 4), "", "=q4=Petrified Bark Shield", "=ds=#w8#", "", "21.67%"};
+	};
+
+	AtlasLoot_Data["DMWIllyannaRavenoak25ManHEROIC"] = {
+		{ 1, AL_FindId("Padre's Trousers", 4), "", "=q4=Padre's Trousers", "=ds=#s11#, #a1#", "", "18.79%"};
+		{ 2, AL_FindId("Force Imbued Gauntlets", 4), "", "=q4=Force Imbued Gauntlets", "=ds=#s9#, #a4#", "", "20.11%"};
+		{ 4, AL_FindId("Gauntlets of Accuracy", 4), "", "=q4=Gauntlets of Accuracy", "=ds=#s9#, #a3#", "", "23.94%"};
+		{ 5, AL_FindId("Well Balanced Axe", 4), "", "=q4=Well Balanced Axe", "=ds=#h1#, #w1#", "", "22.44%"};
+	};
+
+	AtlasLoot_Data["DMWMagisterKalendris25ManHEROIC"] = {
+		{ 1, AL_FindId("Flamescarred Shoulders", 4), "", "=q4=Flamescarred Shoulders", "=ds=#s3#, #a2#", "", "18.11%"};
+		{ 2, AL_FindId("Elder Magus Pendant", 4), "", "=q4=Elder Magus Pendant", "=ds=#s2#", "", "17.46%"};
+		{ 3, AL_FindId("Mindtap Talisman", 4), "", "=q4=Mindtap Talisman", "=ds=#s14#", "", "7.45%"};
+		{ 5, AL_FindId("Amplifying Cloak", 4), "", "=q4=Amplifying Cloak", "=ds=#s4#", "", "21.44%"};
+		{ 6, AL_FindId("Magically Sealed Bracers", 4), "", "=q4=Magically Sealed Bracers", "=ds=#s8#, #a4#", "", "24.36%"};
+		{ 7, 22309, "", "=q2=Pattern: Big Bag of Enchantment", "=ds=#p8# (300)"};
+	};
+	AtlasLoot_Data["DMWTsuzee25ManHEROIC"] = {
+		{ 1, AL_FindId("Brightspark Gloves", 4), "", "=q4=Brightspark Gloves", "=ds=#s9#, #a1#", "", "24.79%"};
+		{ 3, AL_FindId("Threadbare Trousers", 4), "", "=q4=Threadbare Trousers", "=ds=#s11#, #a1#", "", "33.94%"};
+		{ 4, AL_FindId("Murmuring Ring", 4), "", "=q4=Murmuring Ring", "=ds=#s13#", "", "30.28%"};
+	};
+
+	AtlasLoot_Data["DMWImmolthar25ManHEROIC"] = {
+		{ 1, AL_FindId("Cloak of the Cosmos", 4), "", "=q4=Cloak of the Cosmos", "=ds=#s4#", "", "14.35%"};
+		{ 2, AL_FindId("Robe of Everlasting Night", 4), "", "=q4=Robe of Everlasting Night", "=ds=#s5#, #a1#", "", "15.33%"};
+		{ 3, AL_FindId("Quickdraw Gloves", 4), "", "=q4=Quickdraw Gloves", "=ds=#s9#, #a2#", "", "21.01%"};
+		{ 4, AL_FindId("Eyestalk Cord", 4), "", "=q4=Eyestalk Cord", "=ds=#s10#, #a2#", "", "20.08%"};
+		{ 5, AL_FindId("Demon Howl Wristguards", 4), "", "=q4=Demon Howl Wristguards", "=ds=#s8#, #a3#", "", "17.51%"};
+		{ 6, AL_FindId("Odious Greaves", 4), "", "=q4=Odious Greaves", "=ds=#s12#, #a3#", "", " 19.81%"};
+		{ 7, AL_FindId("Bile-etched Spaulders", 4), "", "=q4=Bile-etched Spaulders", "=ds=#s3#, #a4#", "", "14.71%"};
+		{ 16, AL_FindId("Evil Eye Pendant", 4), "", "=q4=Evil Eye Pendant", "=ds=#s2#", "", "17.78%"};
+		{ 17, AL_FindId("Vigilance Charm", 4), "", "=q4=Vigilance Charm", "=ds=#s14#", "", "6.30%"};
+		{ 18, AL_FindId("Blade of the New Moon", 4), "", "=q4=Blade of the New Moon", "=ds=#h1#, #w4#", "", "6.99%"};
+	};
+
+	AtlasLoot_Data["DMWHelnurath25ManHEROIC"] = {
+		{ 1, AL_FindId("Diabolic Mantle", 4), "", "=q4=Diabolic Mantle", "=ds=#s3#, #a1#", "", "23.12%"};
+		{ 2, AL_FindId("Fel Hardened Bracers", 4), "", "=q4=Fel Hardened Bracers", "=ds=#s8#, #a4#", "", "19.24%"};
+		{ 3, AL_FindId("Dreadguard's Protector", 4), "", "=q4=Dreadguard's Protector", "=ds=#w8#", "", "19.77%"};
+		{ 4, AL_FindId("Xorothian Firestick", 4), "", "=q4=Xorothian Firestick", "=ds=#w5#", "", "21.92%"};
+	};
+
+	AtlasLoot_Data["DMWPrinceTortheldrin25ManHEROIC"] = {
+		{ 1, AL_FindId("Fluctuating Cloak", 4), "", "=q4=Fluctuating Cloak", "=ds=#s4# =q2=#m16#", "", "21.84%"};
+		{ 2, AL_FindId("Chestplate of Tranquility", 4), "", "=q4=Chestplate of Tranquility", "=ds=#s5#, #a2#", "", "6.32%"};
+		{ 3, AL_FindId("Bracers of the Eclipse", 4), "", "=q4=Bracers of the Eclipse", "=ds=#s8#, #a2#", "", "15.62%"};
+		{ 4, AL_FindId("Silvermoon Leggings", 4), "", "=q4=Silvermoon Leggings", "=ds=#s11#, #a3#", "", "21.20%"};
+		{ 5, AL_FindId("Eldritch Reinforced Legplates", 4), "", "=q4=Eldritch Reinforced Legplates", "=ds=#s11#, #a4#", "", "15.87%"};
+		{ 6, AL_FindId("Emerald Flame Ring", 4), "", "=q4=Emerald Flame Ring", "=ds=#s13#", "", "14.55%"};
+		{ 8, 0, "INV_Box_01", "=q6=#x8#", ""};
+		{ 9, 18336, "", "=q1=Gauntlet of Gordok Might", "=ds=#m3#"};
+		{ 16, AL_FindId("Distracting Dagger", 4), "", "=q4=Distracting Dagger", "=ds=#h4#, #w4#", "", "14.70%"};
+		{ 17, AL_FindId("Mind Carver", 4), "", "=q4=Mind Carver", "=ds=#h3#, #w10#", "", "14.62%"};
+		{ 18, AL_FindId("Timeworn Mace", 4), "", "=q4=Timeworn Mace", "=ds=#h1#, #w6#", "", "14.40%"};
+		{ 19, AL_FindId("Stoneshatter", 4), "", "=q4=Stoneshatter", "=ds=#w3#", "", "7.72%"};
+	};
+
+	AtlasLoot_Data["DMWShendralarProvisioner25ManHEROIC"] = {
+		{ 1, 18487, "", "=q1=Pattern: Mooncloth Robe", "=ds=#p8# (300)"};
+	};
+
+	AtlasLoot_Data["DMWTrash25ManHEROIC"] = {
+		{ 1, AL_FindId("Stonebark Gauntlets", 4), "", "=q4=Stonebark Gauntlets", "=ds=#s9#, #a2#", "", "0.47%"};
+		{ 2, AL_FindId("Eidolon Talisman", 4), "", "=q4=Eidolon Talisman", "=ds=#s2#", "", "0.58%"};
+		{ 3, AL_FindId("Wand of Arcane Potency", 4), "", "=q4=Wand of Arcane Potency", "=ds=#w12#", "", "0.78%"};
 	};
 
 		------------------
