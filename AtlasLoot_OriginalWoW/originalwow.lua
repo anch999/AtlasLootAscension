@@ -3176,6 +3176,304 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 7, 12219, "", "=q1=Unadorned Seal of Ascension", "=ds=#m3#"};
 	};
 
+		-------------------------------------------------
+		--- Blackrock Mountain: Upper Blackrock Spire HEROIC ---
+		-------------------------------------------------
+
+	AtlasLoot_Data["UBRSEmberseer25Man"] = {
+		{ 1,AL_FindId("Wildfire Cape", 3), "", "=q4=Wildfire Cape", "=ds=#s4#", "", "15.20%"};
+		{ 2,AL_FindId("Truestrike Shoulders", 3), "", "=q4=Truestrike Shoulders", "=ds=#s3#, #a2#", "", "17.47%"};
+		{ 3,AL_FindId("Emberfury Talisman", 3), "", "=q4=Emberfury Talisman", "=ds=#s2#", "", "15.89%"};
+		{ 4,AL_FindId("Flaming Band", 3), "", "=q4=Flaming Band", "=ds=#s13#", "", "18.52%"};
+		{ 6, 17322, "", "=q1=Eye of the Emberseer", "=ds=#m3#", "", "100%"};
+		{ 7, 21988, "", "=q1=Ember of Emberseer", "=ds=#m3#"};
+		{ 16,AL_FindId("Gauntlets of Elements", 3), "", "=q4=Gauntlets of Elements", "=ds=#s9#, #a3# (D1, #c7#)", "", "14.23%"};
+	};
+
+	AtlasLoot_Data["UBRSSolakar25Man"] = {
+		{ 1,AL_FindId("Polychromatic Visionwrap", 3), "", "=q4=Polychromatic Visionwrap", "=ds=#s5#, #a1#", "", "15.82%"};
+		{ 2,AL_FindId("Dustfeather Sash", 3), "", "=q4=Dustfeather Sash", "=ds=#s10#, #a1#", "", "12.84%"};
+		{ 3,AL_FindId("Nightbrace Tunic", 3), "", "=q4=Nightbrace Tunic", "=ds=#s5#, #a2#", "", "15.06%"};
+		{ 4,AL_FindId("Crystallized Girdle", 3), "", "=q4=Crystallized Girdle", "=ds=#s10#, #a2#", "", "14.04%"};
+		{ 6, 18657, "", "=q2=Schematic: Hyper-Radiant Flame Reflector", "=ds=#p5# (290)", "", "7.38%"};
+		{ 7, 18638, "", "=q3=Hyper-Radiant Flame Reflector", "=ds=#s14#"};
+		{ 16,AL_FindId("Devout Mantle", 3), "", "=q4=Devout Mantle", "=ds=#s3#, #a1# (D1, #c5#)", "", "12.84%"};
+	};
+
+	AtlasLoot_Data["UBRSFLAME25Man"] = {
+		{ 1, 13371, "", "=q2=Father Flame", "=ds=#s15#", "", "100%"};
+	};
+
+	AtlasLoot_Data["UBRSQuestItems25Man"] = {
+		{ 1, 12358, "", "=q1=Darkstone Tablet", "=ds=#m3#"};
+		{ 2, 12352, "", "=q1=Doomrigger's Clasp", "=ds=#m3#"};
+	};
+
+	AtlasLoot_Data["UBRSRunewatcher25Man"] = {
+		{ 1,AL_FindId("Starfire Tiara", 3), "", "=q4=Starfire Tiara", "=ds=#s1#, #a1#", "", "28.64%"};
+		{ 2,AL_FindId("Briarwood Reed", 3), "", "=q4=Briarwood Reed", "=ds=#s14#", "", "26.36%"};
+		{ 3,AL_FindId("Serpentine Skuller", 3), "", "=q4=Serpentine Skuller", "=ds=#w12#", "", "32.95%"};
+	};
+
+	AtlasLoot_Data["UBRSAnvilcrack25Man"] = {
+		{ 1,AL_FindId("Flame Walkers", 3), "", "=q4=Flame Walkers", "=ds=#s12#, #a3#", "", "18.05%"};
+		{ 2,AL_FindId("Handcrafted Mastersmith Girdle", 3), "", "=q4=Handcrafted Mastersmith Girdle", "=ds=#s10#, #a4#", "", "15.78%"};
+		{ 3,AL_FindId("Handcrafted Mastersmith Leggings", 3), "", "=q4=Handcrafted Mastersmith Leggings", "=ds=#s11#, #a4#", "", "20.63%"};
+		{ 4,AL_FindId("Mastersmith's Hammer", 3), "", "=q4=Mastersmith's Hammer", "=ds=#h3#, #w6#", "", "17.26%"};
+		{ 6, 12837, "", "=q3=Plans: Masterwork Stormhammer", "=ds=#p2# (300)", "", "4.80%"};
+		{ 7, 12794, "", "=q3=Masterwork Stormhammer", "=ds=#h1#, #w6#"};
+		{ 8, 12834, "", "=q3=Plans: Arcanite Champion", "=ds=#p2# (300)", "", "4.75%"};
+		{ 9, 12790, "", "=q3=Arcanite Champion", "=ds=#h2#, #w10#"};
+		{ 11, 18779, "", "=q3=Bottom Half of Advanced Armorsmithing: Volume I", "=ds=#m3#", "", "17.08%"};
+		{ 12, 12727, "", "=q3=Plans: Enchanted Thorium Breastplate", "=q1=#m4#: =ds=#p2# (300)"};
+		{ 16, 0, "INV_Box_01", "=q6=#x10#", ""};
+		{ 17, 12806, "", "=q3=Unforged Rune Covered Breastplate", "=ds=#m3#"};
+		{ 18, 12696, "", "=q3=Plans: Demon Forged Breastplate", "=q1=#m4#: =ds=#p2# (285)"};
+	};
+
+	AtlasLoot_Data["UBRSRend25Man"] = {
+		{ 1,AL_FindId("Felstriker", 3), "", "=q4=Felstriker", "=ds=#h1#, #w4#", "", "1.06%"};
+		{ 3,AL_FindId("Faith Healer's Boots", 3), "", "=q4=Faith Healer's Boots", "=ds=#s12#, #a1#", "", "12.71%"};
+		{ 4,AL_FindId("Dragonrider Boots", 3), "", "=q4=Dragonrider Boots", "=ds=#s12#, #a1#", "", "14.35%"};
+		{ 5,AL_FindId("Eye of Rend", 3), "", "=q4=Eye of Rend", "=ds=#s1#, #a2#", "", "14.50%"};
+		{ 6,AL_FindId("Bonespike Shoulder", 3), "", "=q4=Bonespike Shoulder", "=ds=#s3#, #a3#", "", "0.85%"};
+		{ 7,AL_FindId("Feralsurge Girdle", 3), "", "=q4=Feralsurge Girdle", "=ds=#s10#, #a3#", "", "15.30%"};
+		{ 8,AL_FindId("Battleborn Armbraces", 3), "", "=q4=Battleborn Armbraces", "=ds=#s8#, #a4#", "", "16.96%"};
+		{ 9,AL_FindId("Warmaster Legguards", 3), "", "=q4=Warmaster Legguards", "=ds=#s11#, #a4#", "", "15.05%"};
+		{ 10,AL_FindId("Band of Rumination", 3), "", "=q4=Band of Rumination", "=ds=#s13#", "", "15.38%"};
+		{ 16,AL_FindId("Spaulders of Valor", 3), "", "=q4=Spaulders of Valor", "=ds=#s3#, #a4# (D1, #c9#)", "", "13.39%"};
+		{ 18,AL_FindId("Dal'Rend's Sacred Charge", 3), "", "=q4=Dal'Rend's Sacred Charge", "=ds=#h3#, #w10#", "", "6.79%"};
+		{ 19,AL_FindId("Dal'Rend's Tribal Guardian", 3), "", "=q4=Dal'Rend's Tribal Guardian", "=ds=#h4#, #w10#", "", "7.61%"};
+		{ 20,AL_FindId("Blackhand Doomsaw", 3), "", "=q4=Blackhand Doomsaw", "=ds=#w7#", "", "7.44%"};
+		{ 22, 12630, "", "=q1=Head of Rend Blackhand", "=ds=#m3#", "", "100%"};
+	};
+
+	AtlasLoot_Data["UBRSGyth25Man"] = {
+		{ 1, 12871, "", "=q4=Chromatic Carapace", "=ds=#m3#", "", "2.64%"};
+		{ 2, 12945, "", "=q4=Legplates of the Chromatic Defier", "=q1=#m4#: =ds=#s11#, #a3#"};
+		{ 3, 12903, "", "=q4=Legguards of the Chromatic Defier", "=q1=#m4#: =ds=#s11#, #a3#"};
+		{ 4, 12895, "", "=q4=Breastplate of the Chromatic Flight", "=q1=#m4#: =ds=#s5#, #a4#"};
+		{ 6,AL_FindId("Dragonskin Cowl", 3), "", "=q4=Dragonskin Cowl", "=ds=#s1#, #a1# =q2=#m16#", "", "11.85%"};
+		{ 7,AL_FindId("Tribal War Feathers", 3), "", "=q4=Tribal War Feathers", "=ds=#s1#, #a2# =q2=#m16#", "", "15.24%"};
+		{ 8,AL_FindId("Dragoneye Coif", 3), "", "=q4=Dragoneye Coif", "=ds=#s1#, #a3# =q2=#m16#", "", "15.99%"};
+		{ 9,AL_FindId("Gyth's Skull", 3), "", "=q4=Gyth's Skull", "=ds=#s1#, #a4# =q2=#m16#", "", "12.43%"};
+		{ 11, 13522, "", "=q2=Recipe: Flask of Chromatic Resistance", "=ds=#p1# (300)", "", "2.95%"};
+		{ 16,AL_FindId("Pauldrons of Elements", 3), "", "=q4=Pauldrons of Elements", "=ds=#s3#, #a3# (D1, #c7#)", "", "14.77%"};
+	};
+
+	AtlasLoot_Data["UBRSBeast25Man"] = {
+		{ 1, 12731, "", "=q4=Pristine Hide of the Beast", "=ds=#m3#", "", "0.77%"};
+		{ 2, 12752, "", "=q4=Cap of the Scarlet Savant", "=q1=#m4#: =ds=#s1#, #a1#"};
+		{ 3, 12757, "", "=q4=Breastplate of Bloodthirst", "=q1=#m4#: =ds=#s5#, #a2#"};
+		{ 4, 12756, "", "=q4=Leggings of Arcana", "=q1=#m4#: =ds=#s11#, #a2#"};
+		{ 6,AL_FindId("Bloodmoon Cloak", 3), "", "=q4=Bloodmoon Cloak", "=ds=#s4#", "", "18.30%"};
+		{ 7,AL_FindId("Frostweaver Cape", 3), "", "=q4=Frostweaver Cape", "=ds=#s4#", "", "14.47%"};
+		{ 8,AL_FindId("Spiritshroud Leggings", 3), "", "=q4=Spiritshroud Leggings", "=ds=#s11#, #a1#", "", "13.16%"};
+		{ 9,AL_FindId("Ironweave Boots", 3), "", "=q4=Ironweave Boots", "=ds=#s12#, #a1#", "", "12.31%"};
+		{ 10,AL_FindId("Blackmist Armguards", 3), "", "=q4=Blackmist Armguards", "=ds=#s8#, #a2#", "", "16.06%"};
+		{ 11,AL_FindId("Blademaster Leggings", 3), "", "=q4=Blademaster Leggings", "=ds=#s11#, #a2#", "", "12.74%"};
+		{ 12,AL_FindId("Tristam Legguards", 3), "", "=q4=Tristam Legguards", "=ds=#s11#, #a3#", "", "18.16%"};
+		{ 13,AL_FindId("Finkle's Skinner", 3), "", "=q4=Finkle's Skinner", "=ds=#h1#, #w4#, =q1=#e18#", "", "6.95%"};
+		{ 14,AL_FindId("Seeping Willow", 3), "", "=q4=Seeping Willow", "=ds=#h2#, #w6#", "", "11.49%"};
+		{ 16,AL_FindId("Lightforge Spaulders", 3), "", "=q4=Lightforge Spaulders", "=ds=#s3#, #a4# (D1, #c4#)", "", "13.62%"};
+		{ 18, 24101, "", "=q3=Book of Ferocious Bite V", "=ds=#e10# =q1=#m1# =ds=#c1#", "", "1.44%"};
+		{ 19, 19227, "", "=q3=Ace of Beasts", "=ds=#e16#", "", "4.53%"};
+	};
+
+	AtlasLoot_Data["UBRSValthalak25Man"] = {
+		{ 1, 0, "INV_Misc_Bag_09", "=q6=#j5#", "=q5=#n16#"};
+		{ 2,AL_FindId("Shroud of Domination", 3), "", "=q4=Shroud of Domination", "=ds=#s4#", "", "23.37%"};
+		{ 3,AL_FindId("Ironweave Cowl", 3), "", "=q4=Ironweave Cowl", "=ds=#s1#, #a1#", "", "27.72%"};
+		{ 4,AL_FindId("Leggings of Torment", 3), "", "=q4=Leggings of Torment", "=ds=#s11#, #a1#", "", "23.10%"};
+		{ 5,AL_FindId("Handguards of Savagery", 3), "", "=q4=Handguards of Savagery", "=ds=#s9#, #a3#", "", "20.11%"};
+		{ 6,AL_FindId("Pendant of Celerity", 3), "", "=q4=Pendant of Celerity", "=ds=#s2#", "", "17.66%"};
+		{ 7,AL_FindId("Rune Band of Wizardry", 3), "", "=q4=Rune Band of Wizardry", "=ds=#s13#", "", "15.49%"};
+		{ 8,AL_FindId("Lord Valthalak's Staff of Command", 3), "", "=q4=Lord Valthalak's Staff of Command", "=ds=#w9#", "", "14.67%"};
+		{ 9,AL_FindId("Draconian Aegis of the Legion", 3), "", "=q4=Draconian Aegis of the Legion", "=ds=#w8#", "", "17.66%"};
+	};
+
+	AtlasLoot_Data["UBRSDrakkisath25Man"] = {
+		{ 1,AL_FindId("Blackblade of Shahram", 3), "", "=q4=Blackblade of Shahram", "=ds=#h2#, #w10#", "", "1.08%"};
+		{ 3,AL_FindId("Shadow Prowler's Cloak", 3), "", "=q4=Shadow Prowler's Cloak", "=ds=#s4#", "", "10.61%"};
+		{ 4,AL_FindId("Spellweaver's Turban", 3), "", "=q4=Spellweaver's Turban", "=ds=#s1#, #a1#", "", "15.50%"};
+		{ 5,AL_FindId("Brigam Girdle", 3), "", "=q4=Brigam Girdle", "=ds=#s10#, #a4#", "", "16.40%"};
+		{ 6,AL_FindId("Tooth of Gnarr", 3), "", "=q4=Tooth of Gnarr", "=ds=#s2#", "", "16.83%"};
+		{ 7,AL_FindId("Painweaver Band", 3), "", "=q4=Painweaver Band", "=ds=#s13#", "", "13.51%"};
+		{ 8,AL_FindId("Draconic Infused Emblem", 3), "", "=q4=Draconic Infused Emblem", "=ds=#s14#", "", "4.13%"};
+		{ 9,AL_FindId("Tome of the Lost", 3), "", "=q4=Tome of the Lost", "=ds=#s15#", "", "16.05%"};
+		{ 10,AL_FindId("Draconian Deflector", 3), "", "=q4=Draconian Deflector", "=ds=#w8#", "", "14.52%"};
+		{ 12, 15730, "", "=q3=Pattern: Red Dragonscale Breastplate", "=ds=#p7# (300)", "", "3.58%"};
+		{ 13, 15047, "", "=q3=Red Dragonscale Breastplate", "=ds=#s5#, #a3#"};
+		{ 15, 13519, "", "=q2=Recipe: Flask of the Titans", "=ds=#p1# (300)", "", "1.72%"};
+		{ 16,AL_FindId("Magister's Robes", 3), "", "=q4=Magister's Robes", "=ds=#s5#, #a1# (D1, #c3#)", "", "7.24%"};
+		{ 17,AL_FindId("Dreadmist Robe", 3), "", "=q4=Dreadmist Robe", "=ds=#s5#, #a1# (D1, #c8#)", "", "8.04%"};
+		{ 18,AL_FindId("Devout Robe", 3), "", "=q4=Devout Robe", "=ds=#s5#, #a1# (D1, #c5#)", "", "6.20%"};
+		{ 19,AL_FindId("Wildheart Vest", 3), "", "=q4=Wildheart Vest", "=ds=#s5#, #a2# (D1, #c1#)", "", "7.36%"};
+		{ 20,AL_FindId("Shadowcraft Tunic", 3), "", "=q4=Shadowcraft Tunic", "=ds=#s5#, #a2# (D1, #c6#)", "", "6.09%"};
+		{ 21,AL_FindId("Beaststalker's Tunic", 3), "", "=q4=Beaststalker's Tunic", "=ds=#s5#, #a3# (D1, #c2#)", "", "6.81%"};
+		{ 22,AL_FindId("Vest of Elements", 3), "", "=q4=Vest of Elements", "=ds=#s5#, #a3# (D1, #c7#)", "", "3.03%"};
+		{ 23,AL_FindId("Breastplate of Valor", 3), "", "=q4=Breastplate of Valor", "=ds=#s5#, #a4# (D1, #c9#)", "", "5.83%"};
+		{ 24,AL_FindId("Lightforge Breastplate", 3), "", "=q4=Lightforge Breastplate", "=ds=#s5#, #a4# (D1, #c4#)", "", "3.76%"};
+		{ 30, 16663, "", "=q1=Blood of the Black Dragon Champion", "=ds=#m3#", "", "100%"};
+	};
+
+	AtlasLoot_Data["UBRSTrash25Man"] = {
+		{ 1,AL_FindId("Wind Dancer Boots", 3), "", "=q4=Wind Dancer Boots", "=ds=#s12#, #a3#", "", "0.01%"};
+		{ 2, 24102, "", "=q3=Manual of Eviscerate IX", "=ds=#e10# =q1=#m1# =ds=#c6# =q1=#n70#", "", "0.94%"};
+		{ 4, 16247, "", "=q2=Formula: Enchant 2H Weapon - Superior Impact", "=ds=#p4# (295) =q1=#n69#", "", "1.54%"};
+		{ 6, 12607, "", "=q3=Brilliant Chromatic Scale", "=ds=#m3#"};
+		{ 7, 12219, "", "=q1=Unadorned Seal of Ascension", "=ds=#m3#"};
+	};
+
+		-------------------------------------------------
+		--- Blackrock Mountain: Upper Blackrock Spire MYTHIC ---
+		-------------------------------------------------
+
+	AtlasLoot_Data["UBRSEmberseer25ManHEROIC"] = {
+		{ 1,AL_FindId("Wildfire Cape", 4), "", "=q4=Wildfire Cape", "=ds=#s4#", "", "15.20%"};
+		{ 2,AL_FindId("Truestrike Shoulders", 4), "", "=q4=Truestrike Shoulders", "=ds=#s3#, #a2#", "", "17.47%"};
+		{ 3,AL_FindId("Emberfury Talisman", 4), "", "=q4=Emberfury Talisman", "=ds=#s2#", "", "15.89%"};
+		{ 4,AL_FindId("Flaming Band", 4), "", "=q4=Flaming Band", "=ds=#s13#", "", "18.52%"};
+		{ 6, 17322, "", "=q1=Eye of the Emberseer", "=ds=#m3#", "", "100%"};
+		{ 7, 21988, "", "=q1=Ember of Emberseer", "=ds=#m3#"};
+		{ 16,AL_FindId("Gauntlets of Elements", 4), "", "=q4=Gauntlets of Elements", "=ds=#s9#, #a3# (D1, #c7#)", "", "14.23%"};
+	};
+
+	AtlasLoot_Data["UBRSSolakar25ManHEROIC"] = {
+		{ 1,AL_FindId("Polychromatic Visionwrap", 4), "", "=q4=Polychromatic Visionwrap", "=ds=#s5#, #a1#", "", "15.82%"};
+		{ 2,AL_FindId("Dustfeather Sash", 4), "", "=q4=Dustfeather Sash", "=ds=#s10#, #a1#", "", "12.84%"};
+		{ 3,AL_FindId("Nightbrace Tunic", 4), "", "=q4=Nightbrace Tunic", "=ds=#s5#, #a2#", "", "15.06%"};
+		{ 4,AL_FindId("Crystallized Girdle", 4), "", "=q4=Crystallized Girdle", "=ds=#s10#, #a2#", "", "14.04%"};
+		{ 6, 18657, "", "=q2=Schematic: Hyper-Radiant Flame Reflector", "=ds=#p5# (290)", "", "7.38%"};
+		{ 7, 18638, "", "=q3=Hyper-Radiant Flame Reflector", "=ds=#s14#"};
+		{ 16,AL_FindId("Devout Mantle", 4), "", "=q4=Devout Mantle", "=ds=#s3#, #a1# (D1, #c5#)", "", "12.84%"};
+	};
+
+	AtlasLoot_Data["UBRSFLAME25ManHEROIC"] = {
+		{ 1, 13371, "", "=q2=Father Flame", "=ds=#s15#", "", "100%"};
+	};
+
+	AtlasLoot_Data["UBRSQuestItems25ManHEROIC"] = {
+		{ 1, 12358, "", "=q1=Darkstone Tablet", "=ds=#m3#"};
+		{ 2, 12352, "", "=q1=Doomrigger's Clasp", "=ds=#m3#"};
+	};
+
+	AtlasLoot_Data["UBRSRunewatcher25ManHEROIC"] = {
+		{ 1,AL_FindId("Starfire Tiara", 4), "", "=q4=Starfire Tiara", "=ds=#s1#, #a1#", "", "28.64%"};
+		{ 2,AL_FindId("Briarwood Reed", 4), "", "=q4=Briarwood Reed", "=ds=#s14#", "", "26.36%"};
+		{ 3,AL_FindId("Serpentine Skuller", 4), "", "=q4=Serpentine Skuller", "=ds=#w12#", "", "32.95%"};
+	};
+
+	AtlasLoot_Data["UBRSAnvilcrack25ManHEROIC"] = {
+		{ 1,AL_FindId("Flame Walkers", 4), "", "=q4=Flame Walkers", "=ds=#s12#, #a3#", "", "18.05%"};
+		{ 2,AL_FindId("Handcrafted Mastersmith Girdle", 4), "", "=q4=Handcrafted Mastersmith Girdle", "=ds=#s10#, #a4#", "", "15.78%"};
+		{ 3,AL_FindId("Handcrafted Mastersmith Leggings", 4), "", "=q4=Handcrafted Mastersmith Leggings", "=ds=#s11#, #a4#", "", "20.63%"};
+		{ 4,AL_FindId("Mastersmith's Hammer", 4), "", "=q4=Mastersmith's Hammer", "=ds=#h3#, #w6#", "", "17.26%"};
+		{ 6, 12837, "", "=q3=Plans: Masterwork Stormhammer", "=ds=#p2# (300)", "", "4.80%"};
+		{ 7, 12794, "", "=q3=Masterwork Stormhammer", "=ds=#h1#, #w6#"};
+		{ 8, 12834, "", "=q3=Plans: Arcanite Champion", "=ds=#p2# (300)", "", "4.75%"};
+		{ 9, 12790, "", "=q3=Arcanite Champion", "=ds=#h2#, #w10#"};
+		{ 11, 18779, "", "=q3=Bottom Half of Advanced Armorsmithing: Volume I", "=ds=#m3#", "", "17.08%"};
+		{ 12, 12727, "", "=q3=Plans: Enchanted Thorium Breastplate", "=q1=#m4#: =ds=#p2# (300)"};
+		{ 16, 0, "INV_Box_01", "=q6=#x10#", ""};
+		{ 17, 12806, "", "=q3=Unforged Rune Covered Breastplate", "=ds=#m3#"};
+		{ 18, 12696, "", "=q3=Plans: Demon Forged Breastplate", "=q1=#m4#: =ds=#p2# (285)"};
+	};
+
+	AtlasLoot_Data["UBRSRend25ManHEROIC"] = {
+		{ 1,AL_FindId("Felstriker", 4), "", "=q4=Felstriker", "=ds=#h1#, #w4#", "", "1.06%"};
+		{ 3,AL_FindId("Faith Healer's Boots", 4), "", "=q4=Faith Healer's Boots", "=ds=#s12#, #a1#", "", "12.71%"};
+		{ 4,AL_FindId("Dragonrider Boots", 4), "", "=q4=Dragonrider Boots", "=ds=#s12#, #a1#", "", "14.35%"};
+		{ 5,AL_FindId("Eye of Rend", 4), "", "=q4=Eye of Rend", "=ds=#s1#, #a2#", "", "14.50%"};
+		{ 6,AL_FindId("Bonespike Shoulder", 4), "", "=q4=Bonespike Shoulder", "=ds=#s3#, #a3#", "", "0.85%"};
+		{ 7,AL_FindId("Feralsurge Girdle", 4), "", "=q4=Feralsurge Girdle", "=ds=#s10#, #a3#", "", "15.30%"};
+		{ 8,AL_FindId("Battleborn Armbraces", 4), "", "=q4=Battleborn Armbraces", "=ds=#s8#, #a4#", "", "16.96%"};
+		{ 9,AL_FindId("Warmaster Legguards", 4), "", "=q4=Warmaster Legguards", "=ds=#s11#, #a4#", "", "15.05%"};
+		{ 10,AL_FindId("Band of Rumination", 4), "", "=q4=Band of Rumination", "=ds=#s13#", "", "15.38%"};
+		{ 16,AL_FindId("Spaulders of Valor", 4), "", "=q4=Spaulders of Valor", "=ds=#s3#, #a4# (D1, #c9#)", "", "13.39%"};
+		{ 18,AL_FindId("Dal'Rend's Sacred Charge", 4), "", "=q4=Dal'Rend's Sacred Charge", "=ds=#h3#, #w10#", "", "6.79%"};
+		{ 19,AL_FindId("Dal'Rend's Tribal Guardian", 4), "", "=q4=Dal'Rend's Tribal Guardian", "=ds=#h4#, #w10#", "", "7.61%"};
+		{ 20,AL_FindId("Blackhand Doomsaw", 4), "", "=q4=Blackhand Doomsaw", "=ds=#w7#", "", "7.44%"};
+		{ 22, 12630, "", "=q1=Head of Rend Blackhand", "=ds=#m3#", "", "100%"};
+	};
+
+	AtlasLoot_Data["UBRSGyth25ManHEROIC"] = {
+		{ 1, 12871, "", "=q4=Chromatic Carapace", "=ds=#m3#", "", "2.64%"};
+		{ 2, 12945, "", "=q4=Legplates of the Chromatic Defier", "=q1=#m4#: =ds=#s11#, #a3#"};
+		{ 3, 12903, "", "=q4=Legguards of the Chromatic Defier", "=q1=#m4#: =ds=#s11#, #a3#"};
+		{ 4, 12895, "", "=q4=Breastplate of the Chromatic Flight", "=q1=#m4#: =ds=#s5#, #a4#"};
+		{ 6,AL_FindId("Dragonskin Cowl", 4), "", "=q4=Dragonskin Cowl", "=ds=#s1#, #a1# =q2=#m16#", "", "11.85%"};
+		{ 7,AL_FindId("Tribal War Feathers", 4), "", "=q4=Tribal War Feathers", "=ds=#s1#, #a2# =q2=#m16#", "", "15.24%"};
+		{ 8,AL_FindId("Dragoneye Coif", 4), "", "=q4=Dragoneye Coif", "=ds=#s1#, #a3# =q2=#m16#", "", "15.99%"};
+		{ 9,AL_FindId("Gyth's Skull", 4), "", "=q4=Gyth's Skull", "=ds=#s1#, #a4# =q2=#m16#", "", "12.43%"};
+		{ 11, 13522, "", "=q2=Recipe: Flask of Chromatic Resistance", "=ds=#p1# (300)", "", "2.95%"};
+		{ 16,AL_FindId("Pauldrons of Elements", 4), "", "=q4=Pauldrons of Elements", "=ds=#s3#, #a3# (D1, #c7#)", "", "14.77%"};
+	};
+
+	AtlasLoot_Data["UBRSBeast25ManHEROIC"] = {
+		{ 1, 12731, "", "=q4=Pristine Hide of the Beast", "=ds=#m3#", "", "0.77%"};
+		{ 2, 12752, "", "=q4=Cap of the Scarlet Savant", "=q1=#m4#: =ds=#s1#, #a1#"};
+		{ 3, 12757, "", "=q4=Breastplate of Bloodthirst", "=q1=#m4#: =ds=#s5#, #a2#"};
+		{ 4, 12756, "", "=q4=Leggings of Arcana", "=q1=#m4#: =ds=#s11#, #a2#"};
+		{ 6,AL_FindId("Bloodmoon Cloak", 4), "", "=q4=Bloodmoon Cloak", "=ds=#s4#", "", "18.30%"};
+		{ 7,AL_FindId("Frostweaver Cape", 4), "", "=q4=Frostweaver Cape", "=ds=#s4#", "", "14.47%"};
+		{ 8,AL_FindId("Spiritshroud Leggings", 4), "", "=q4=Spiritshroud Leggings", "=ds=#s11#, #a1#", "", "13.16%"};
+		{ 9,AL_FindId("Ironweave Boots", 4), "", "=q4=Ironweave Boots", "=ds=#s12#, #a1#", "", "12.31%"};
+		{ 10,AL_FindId("Blackmist Armguards", 4), "", "=q4=Blackmist Armguards", "=ds=#s8#, #a2#", "", "16.06%"};
+		{ 11,AL_FindId("Blademaster Leggings", 4), "", "=q4=Blademaster Leggings", "=ds=#s11#, #a2#", "", "12.74%"};
+		{ 12,AL_FindId("Tristam Legguards", 4), "", "=q4=Tristam Legguards", "=ds=#s11#, #a3#", "", "18.16%"};
+		{ 13,AL_FindId("Finkle's Skinner", 4), "", "=q4=Finkle's Skinner", "=ds=#h1#, #w4#, =q1=#e18#", "", "6.95%"};
+		{ 14,AL_FindId("Seeping Willow", 4), "", "=q4=Seeping Willow", "=ds=#h2#, #w6#", "", "11.49%"};
+		{ 16,AL_FindId("Lightforge Spaulders", 4), "", "=q4=Lightforge Spaulders", "=ds=#s3#, #a4# (D1, #c4#)", "", "13.62%"};
+		{ 18, 24101, "", "=q3=Book of Ferocious Bite V", "=ds=#e10# =q1=#m1# =ds=#c1#", "", "1.44%"};
+		{ 19, 19227, "", "=q3=Ace of Beasts", "=ds=#e16#", "", "4.53%"};
+	};
+
+	AtlasLoot_Data["UBRSValthalak25ManHEROIC"] = {
+		{ 1, 0, "INV_Misc_Bag_09", "=q6=#j5#", "=q5=#n16#"};
+		{ 2,AL_FindId("Shroud of Domination", 4), "", "=q4=Shroud of Domination", "=ds=#s4#", "", "23.37%"};
+		{ 3,AL_FindId("Ironweave Cowl", 4), "", "=q4=Ironweave Cowl", "=ds=#s1#, #a1#", "", "27.72%"};
+		{ 4,AL_FindId("Leggings of Torment", 4), "", "=q4=Leggings of Torment", "=ds=#s11#, #a1#", "", "23.10%"};
+		{ 5,AL_FindId("Handguards of Savagery", 4), "", "=q4=Handguards of Savagery", "=ds=#s9#, #a3#", "", "20.11%"};
+		{ 6,AL_FindId("Pendant of Celerity", 4), "", "=q4=Pendant of Celerity", "=ds=#s2#", "", "17.66%"};
+		{ 7,AL_FindId("Rune Band of Wizardry", 4), "", "=q4=Rune Band of Wizardry", "=ds=#s13#", "", "15.49%"};
+		{ 8,AL_FindId("Lord Valthalak's Staff of Command", 4), "", "=q4=Lord Valthalak's Staff of Command", "=ds=#w9#", "", "14.67%"};
+		{ 9,AL_FindId("Draconian Aegis of the Legion", 4), "", "=q4=Draconian Aegis of the Legion", "=ds=#w8#", "", "17.66%"};
+	};
+
+	AtlasLoot_Data["UBRSDrakkisath25ManHEROIC"] = {
+		{ 1,AL_FindId("Blackblade of Shahram", 4), "", "=q4=Blackblade of Shahram", "=ds=#h2#, #w10#", "", "1.08%"};
+		{ 3,AL_FindId("Shadow Prowler's Cloak", 4), "", "=q4=Shadow Prowler's Cloak", "=ds=#s4#", "", "10.61%"};
+		{ 4,AL_FindId("Spellweaver's Turban", 4), "", "=q4=Spellweaver's Turban", "=ds=#s1#, #a1#", "", "15.50%"};
+		{ 5,AL_FindId("Brigam Girdle", 4), "", "=q4=Brigam Girdle", "=ds=#s10#, #a4#", "", "16.40%"};
+		{ 6,AL_FindId("Tooth of Gnarr", 4), "", "=q4=Tooth of Gnarr", "=ds=#s2#", "", "16.83%"};
+		{ 7,AL_FindId("Painweaver Band", 4), "", "=q4=Painweaver Band", "=ds=#s13#", "", "13.51%"};
+		{ 8,AL_FindId("Draconic Infused Emblem", 4), "", "=q4=Draconic Infused Emblem", "=ds=#s14#", "", "4.13%"};
+		{ 9,AL_FindId("Tome of the Lost", 4), "", "=q4=Tome of the Lost", "=ds=#s15#", "", "16.05%"};
+		{ 10,AL_FindId("Draconian Deflector", 4), "", "=q4=Draconian Deflector", "=ds=#w8#", "", "14.52%"};
+		{ 12, 15730, "", "=q3=Pattern: Red Dragonscale Breastplate", "=ds=#p7# (300)", "", "3.58%"};
+		{ 13, 15047, "", "=q3=Red Dragonscale Breastplate", "=ds=#s5#, #a3#"};
+		{ 15, 13519, "", "=q2=Recipe: Flask of the Titans", "=ds=#p1# (300)", "", "1.72%"};
+		{ 16,AL_FindId("Magister's Robes", 4), "", "=q4=Magister's Robes", "=ds=#s5#, #a1# (D1, #c3#)", "", "7.24%"};
+		{ 17,AL_FindId("Dreadmist Robe", 4), "", "=q4=Dreadmist Robe", "=ds=#s5#, #a1# (D1, #c8#)", "", "8.04%"};
+		{ 18,AL_FindId("Devout Robe", 4), "", "=q4=Devout Robe", "=ds=#s5#, #a1# (D1, #c5#)", "", "6.20%"};
+		{ 19,AL_FindId("Wildheart Vest", 4), "", "=q4=Wildheart Vest", "=ds=#s5#, #a2# (D1, #c1#)", "", "7.36%"};
+		{ 20,AL_FindId("Shadowcraft Tunic", 4), "", "=q4=Shadowcraft Tunic", "=ds=#s5#, #a2# (D1, #c6#)", "", "6.09%"};
+		{ 21,AL_FindId("Beaststalker's Tunic", 4), "", "=q4=Beaststalker's Tunic", "=ds=#s5#, #a3# (D1, #c2#)", "", "6.81%"};
+		{ 22,AL_FindId("Vest of Elements", 4), "", "=q4=Vest of Elements", "=ds=#s5#, #a3# (D1, #c7#)", "", "3.03%"};
+		{ 23,AL_FindId("Breastplate of Valor", 4), "", "=q4=Breastplate of Valor", "=ds=#s5#, #a4# (D1, #c9#)", "", "5.83%"};
+		{ 24,AL_FindId("Lightforge Breastplate", 4), "", "=q4=Lightforge Breastplate", "=ds=#s5#, #a4# (D1, #c4#)", "", "3.76%"};
+		{ 30, 16663, "", "=q1=Blood of the Black Dragon Champion", "=ds=#m3#", "", "100%"};
+	};
+
+	AtlasLoot_Data["UBRSTrash25ManHEROIC"] = {
+		{ 1,AL_FindId("Wind Dancer Boots", 4), "", "=q4=Wind Dancer Boots", "=ds=#s12#, #a3#", "", "0.01%"};
+		{ 2, 24102, "", "=q3=Manual of Eviscerate IX", "=ds=#e10# =q1=#m1# =ds=#c6# =q1=#n70#", "", "0.94%"};
+		{ 4, 16247, "", "=q2=Formula: Enchant 2H Weapon - Superior Impact", "=ds=#p4# (295) =q1=#n69#", "", "1.54%"};
+		{ 6, 12607, "", "=q3=Brilliant Chromatic Scale", "=ds=#m3#"};
+		{ 7, 12219, "", "=q1=Unadorned Seal of Ascension", "=ds=#m3#"};
+	};
+
 		---------------------------------------
 		--- Blackrock Mountain: Molten Core ---
 		---------------------------------------
