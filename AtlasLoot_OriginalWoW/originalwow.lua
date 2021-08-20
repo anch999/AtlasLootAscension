@@ -7655,6 +7655,526 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 26, 12735, "", "=q2=Frayed Abomination Stitching", "=ds=#m3#", "", "17.5%"};
 	};
 
+		------------------
+		--- Stratholme HEROIC ---
+		------------------
+
+	AtlasLoot_Data["STRATSkull25Man"] = {
+		{ 1, AL_FindId("Skul's Fingerbone Claws", 3), "", "=q4=Skul's Fingerbone Claws", "=ds=#s9#, #a2#", "", "36.52%"};
+		{ 2, AL_FindId("Skul's Cold Embrace", 3), "", "=q4=Skul's Cold Embrace", "=ds=#s5#, #a4#", "", "24.16%"};
+		{ 3, AL_FindId("Skul's Ghastly Touch", 3), "", "=q4=Skul's Ghastly Touch", "=ds=#w12#", "", "16.85%"};
+	};
+
+	AtlasLoot_Data["STRATStratholmeCourier25Man"] = {
+		{ 1, 13304, "", "=q1=Festival Lane Postbox Key", "=ds=#e9#", "", "45.19%"};
+		{ 2, 13303, "", "=q1=Crusaders' Square Postbox Key", "=ds=#e9#", "", "43.46%"};
+		{ 3, 13307, "", "=q1=Fras Siabi's Postbox Key", "=ds=#e9#", "", "42.88%"};
+		{ 4, 13305, "", "=q1=Elders' Square Postbox Key", "=ds=#e9#", "", "36.87%"};
+		{ 5, 13302, "", "=q1=Market Row Postbox Key", "=ds=#e9#", "", "35.58%"};
+		{ 6, 13306, "", "=q1=King's Square Postbox Key", "=ds=#e9#", "", "37.69%"};
+	};
+
+	AtlasLoot_Data["STRATFrasSiabi25Man"] = {
+		{ 1, 13172, "", "=q1=Siabi's Premium Tobacco", "=ds=#m3#", "", "100%"};
+		{ 2, 13171, "", "=q2=Smokey's Lighter", "=q1=#m4#: =ds=#s14#"};
+	};
+
+	AtlasLoot_Data["STRATAtiesh25Man"] = {
+		{ 1, 22736, "", "=q5=Andonisus, Reaper of Souls", "=q1=#m26#: =ds=#h3#, #w10#", "", "100%"};
+	};
+
+	AtlasLoot_Data["STRATHearthsingerForresten25Man"] = {
+		{ 1, AL_FindId("Songbird Blouse", 3), "", "=q4=Songbird Blouse", "=ds=#s5#, #a2#", "", "15.31%"};
+		{ 2, AL_FindId("Woollies of the Prancing Minstrel", 3), "", "=q4=Woollies of the Prancing Minstrel", "=ds=#s11#, #a3#", "", "18.42%"};
+		{ 3, AL_FindId("Rainbow Girdle", 3), "", "=q4=Rainbow Girdle", "=ds=#s10#, #a4#", "", "19.21%"};
+		{ 4, AL_FindId("Piccolo of the Flaming Fire", 3), "", "=q4=Piccolo of the Flaming Fire", "=ds=#s14#", "", "15.13%"};
+		{ 16, AL_FindId("Magister's Boots", 3), "", "=q4=Magister's Boots", "=ds=#s12#, #a1# (D1, #c3#)", "", "10.86%"};
+	};
+
+	AtlasLoot_Data["STRATTheUnforgiven25Man"] = {
+		{ 1, AL_FindId("Tearfall Bracers", 3), "", "=q4=Tearfall Bracers", "=ds=#s8#, #a1#", "", "14.62%"};
+		{ 2, AL_FindId("Mask of the Unforgiven", 3), "", "=q4=Mask of the Unforgiven", "=ds=#s1#, #a2#", "", "14.96%"};
+		{ 3, AL_FindId("Wailing Nightbane Pauldrons", 3), "", "=q4=Wailing Nightbane Pauldrons", "=ds=#s3#, #a4#", "", "12.10%"};
+		{ 4, AL_FindId("Soul Breaker", 3), "", "=q4=Soul Breaker", "=ds=#h1#, #w1#", "", "19.33%"};
+		{ 16, AL_FindId("Wildheart Gloves", 3), "", "=q4=Wildheart Gloves", "=ds=#s9#, #a2# (D1, #c1#)", "", "12.61%"};
+	};
+
+	AtlasLoot_Data["STRATTimmytheCruel25Man"] = {
+		{ 1, AL_FindId("Grimgore Noose", 3), "", "=q4=Grimgore Noose", "=ds=#s10#, #a1#", "", "16.48%"};
+		{ 2, AL_FindId("Timmy's Galoshes", 3), "", "=q4=Timmy's Galoshes", "=ds=#s12#, #a3#", "", "16.74%"};
+		{ 3, AL_FindId("Vambraces of the Sadist", 3), "", "=q4=Vambraces of the Sadist", "=ds=#s8#, #a4#", "", "14.02%"};
+		{ 4, AL_FindId("The Cruel Hand of Timmy", 3), "", "=q4=The Cruel Hand of Timmy", "=ds=#h1#, #w6#", "", "16.87%"};
+		{ 16, AL_FindId("Lightforge Gauntlets", 3), "", "=q4=Lightforge Gauntlets", "=ds=#s9#, #a4# (D1, #c4#)", "", "10.42%"};
+	};
+
+	AtlasLoot_Data["STRATMalorsStrongbox25Man"] = {
+		{ 1, 0, "INV_Box_01", "=q6=#x13#", ""};
+		{ 2, 12845, "", "=q1=Medallion of Faith", "=ds=#m3#", "", "100%"};
+	};
+
+	AtlasLoot_Data["STRATCrimsonHammersmith25Man"] = {
+		{ 1, 18781, "", "=q3=Bottom Half of Advanced Armorsmithing: Volume II", "=ds=#m3#", "", "41.6%"};
+		{ 2, 12726, "", "=q3=Plans: Enchanted Thorium Leggings", "=q1=#m4#: =ds=#p2# (300)"};
+		{ 4, 13351, "", "=q1=Crimson Hammersmith's Apron", "=ds=#m3#", "", "100%"};
+		{ 5, 12824, "", "=q2=Plans: Enchanted Battlehammer", "=q1=#m4#: =ds=#p2# (280)"};
+	};
+
+	AtlasLoot_Data["STRATBSPlansSerenity25Man"] = {
+		{ 1, 12827, "", "=q2=Plans: Serenity", "=ds=#p2# (285)", "", "100%"};
+	};
+
+	AtlasLoot_Data["STRATCannonMasterWilley25Man"] = {
+		{ 1, AL_FindId("Mantle of the Scarlet Crusade", 3), "", "=q4=Mantle of the Scarlet Crusade", "=ds=#s3#, #a1#", "", "16.03%"};
+		{ 2, AL_FindId("Helm of the New Moon", 3), "", "=q4=Helm of the New Moon", "=ds=#s1#, #a2#", "", "13.61%"};
+		{ 3, AL_FindId("Barrage Girdle", 3), "", "=q4=Barrage Girdle", "=ds=#s10#, #a3#", "", "12.39%"};
+		{ 4, AL_FindId("Master Cannoneer Boots", 3), "", "=q4=Master Cannoneer Boots", "=ds=#s12#, #a4#", "", "12.86%"};
+		{ 5, AL_FindId("Diana's Pearl Necklace", 3), "", "=q4=Diana's Pearl Necklace", "=ds=#s2#", "", "14.27%"};
+		{ 6, AL_FindId("Cannonball Runner", 3), "", "=q4=Cannonball Runner", "=ds=#s14#", "", "12.28%"};
+		{ 7, AL_FindId("Willey's Back Scratcher", 3), "", "=q4=Willey's Back Scratcher", "=ds=#h3#, #w13#", "", "6.26%"};
+		{ 8, AL_FindId("Redemption", 3), "", "=q4=Redemption", "=ds=#w9#", "", "7.04%"};
+		{ 9, AL_FindId("Willey's Portable Howitzer", 3), "", "=q4=Willey's Portable Howitzer", "=ds=#w5#", "", "10.71%"};
+		{ 10, 13377, "", "=q3=Miniature Cannon Balls", "=ds=#w18#", "", "66.61%"};
+		{ 16, AL_FindId("Shadowcraft Spaulders", 3), "", "=q4=Shadowcraft Spaulders", "=ds=#s3#, #a2# (D1, #c6#)", "", "10.68%"};
+		{ 18, 12839, "", "=q3=Plans: Heartseeker", "=ds=#p2# (300)", "", "4.98%"};
+		{ 19, 12783, "", "=q3=Heartseeker", "=ds=#h1#, #w4#"};
+	};
+
+	AtlasLoot_Data["STRATArchivistGalford25Man"] = {
+		{ 1, AL_FindId("Archivist Cape", 3), "", "=q4=Archivist Cape", "=ds=#s4#", "", "18.45%"};
+		{ 2, AL_FindId("Ash Covered Boots", 3), "", "=q4=Ash Covered Boots", "=ds=#s12#, #a2#", "", "16.30%"};
+		{ 3, AL_FindId("Foresight Girdle", 3), "", "=q4=Foresight Girdle", "=ds=#s10#, #a3#", "", "18.24%"};
+		{ 4, 13385, "", "=q3=Tome of Knowledge", "=ds=#s15#", "", "9.87%"};
+		{ 5, 22897, "", "=q3=Tome of Conjure Food VII", "=ds=#e10# =q1=#m1# =ds=#c3#", "", "4.86%"};
+		{ 7, 12811, "", "=q2=Righteous Orb", "=ds=#e8#", "", "61.3%"};
+		{ 9, 0, "INV_Box_01", "=q6=#x11#", ""};
+		{ 10, 14679, "", "=q1=Of Love and Family", "=ds=#m3#"};
+		{ 16, AL_FindId("Devout Gloves", 3), "", "=q4=Devout Gloves", "=ds=#s9#, #a1# (D1, #c5#)", "", "12.46%"};
+	};
+
+	AtlasLoot_Data["STRATBalnazzar25Man"] = {
+		{ 1, AL_FindId("Book of the Dead", 3), "", "=q4=Book of the Dead", "=ds=#s15#", "", "1.37%"};
+		{ 2, 14512, "", "=q4=Pattern: Truefaith Vestments", "=ds=#p8# (300)", "", "3.02%"};
+		{ 3, 14154, "", "=q4=Truefaith Vestments", "=ds=#s5#, #a1# =q1=#m1# =ds=#c5#"};
+		{ 5, AL_FindId("Shroud of the Nathrezim", 3), "", "=q4=Shroud of the Nathrezim", "=ds=#s3#, #a1#", "", "10.54%"};
+		{ 6, AL_FindId("Fire Striders", 3), "", "=q4=Fire Striders", "=ds=#s12#, #a1#", "", "14.84%"};
+		{ 7, AL_FindId("Wyrmtongue Shoulders", 3), "", "=q4=Wyrmtongue Shoulders", "=ds=#s3#, #a2#", "", "11.58%"};
+		{ 8, AL_FindId("Crown of Tyranny", 3), "", "=q4=Crown of Tyranny", "=ds=#s1#, #a3#", "", "13.94%"};
+		{ 9, AL_FindId("Grand Crusader's Helm", 3), "", "=q4=Grand Crusader's Helm", "=ds=#s1#, #a4#", "", "10.16%"};
+		{ 10, AL_FindId("Star of Mystaria", 3), "", "=q4=Star of Mystaria", "=ds=#s2#", "", "12.48%"};
+		{ 11, AL_FindId("Gift of the Elven Magi", 3), "", "=q4=Gift of the Elven Magi", "=ds=#h1#, #w4#", "", "13.66%"};
+		{ 12, AL_FindId("Demonshear", 3), "", "=q4=Demonshear", "=ds=#h2#, #w10#", "", "13.94%"};
+		{ 13, AL_FindId("Hammer of the Grand Crusader", 3), "", "=q4=Hammer of the Grand Crusader", "=ds=#h2#, #w6#", "", "11.91%"};
+		{ 16, AL_FindId("Lightforge Boots", 3), "", "=q4=Lightforge Boots", "=ds=#s12#, #a4# (D1, #c4#)", "", "11.11%"};
+		{ 18, 13520, "", "=q2=Recipe: Flask of Distilled Wisdom", "=ds=#p1# (300)", "", "1.94%"};
+		{ 20, 13250, "", "=q1=Head of Balnazzar", "=ds=#m2#"};
+	};
+
+	AtlasLoot_Data["STRATSothosJarien25Man"] = {
+		{ 1, 0, "INV_Misc_Bag_09", "=q6=#j5#", "=q5=#n18#"};
+		{ 2, AL_FindId("Ironweave Robe", 3), "", "=q4=Ironweave Robe", "=ds=#s5#, #a1#", "", "19.00%"};
+		{ 3, AL_FindId("Legplates of Vigilance", 3), "", "=q4=Legplates of Vigilance", "=ds=#s11#, #a4#", "", "21.27%"};
+		{ 4, AL_FindId("Amulet of the Redeemed", 3), "", "=q4=Amulet of the Redeemed", "=ds=#s2#", "", "14.03%"};
+		{ 5, AL_FindId("Band of Mending", 3), "", "=q4=Band of Mending", "=ds=#s13#", "", "17.19%"};
+		{ 6, AL_FindId("Scepter of Interminable Focus", 3), "", "=q4=Scepter of Interminable Focus", "=ds=#s15#", "", "28.51%"};
+		{ 8, 21984, "", "=q1=Left Piece of Lord Valthalak's Amulet", "=ds=#m3#"};
+		{ 9, 22046, "", "=q1=Right Piece of Lord Valthalak's Amulet", "=ds=#m3#"};
+	};
+
+	AtlasLoot_Data["STRATStonespine25Man"] = {
+		{ 1, AL_FindId("Stoneskin Gargoyle Cape", 3), "", "=q4=Stoneskin Gargoyle Cape", "=ds=#s4#", "", "23.44%"};
+		{ 2, AL_FindId("Verdant Footpads", 3), "", "=q4=Verdant Footpads", "=ds=#s12#, #a2#", "", "25.36%"};
+		{ 3, AL_FindId("Gargoyle Shredder Talons", 3), "", "=q4=Gargoyle Shredder Talons", "=ds=#h4#, #w13#", "", "26.16%"};
+	};
+
+	AtlasLoot_Data["STRATBaronessAnastari25Man"] = {
+		{ 1, AL_FindId("Shadowy Laced Handwraps", 3), "", "=q4=Shadowy Laced Handwraps", "=ds=#s9#, #a1#", "", "13.54%"};
+		{ 2, AL_FindId("Anastari Heirloom", 3), "", "=q4=Anastari Heirloom", "=ds=#s2#", "", "11.92%"};
+		{ 3, AL_FindId("Banshee Finger", 3), "", "=q4=Banshee Finger", "=ds=#w12#", "", "13.42%"};
+		{ 4, AL_FindId("Screeching Bow", 3), "", "=q4=Screeching Bow", "=ds=#w2#", "", "15.59%"};
+		{ 6, AL_FindId("Coldtouch Phantom Wraps", 3), "", "=q4=Coldtouch Phantom Wraps", "=ds=#s5#, #a1#", "", "9.84%"};
+		{ 7, AL_FindId("Chillhide Bracers", 3), "", "=q4=Chillhide Bracers", "=ds=#s8#, #a2#", "", "9.71%"};
+		{ 8, AL_FindId("Windshrieker Pauldrons", 3), "", "=q4=Windshrieker Pauldrons", "=ds=#s3#, #a3#", "", "9.75%"};
+		{ 9, AL_FindId("Banshee's Touch", 3), "", "=q4=Banshee's Touch", "=ds=#s9#, #a4#", "", "8.27%"};
+		{ 10, 13514, "", "=q2=Wail of the Banshee", "=ds=#m8#", "", "7.73%"};
+		{ 16, AL_FindId("Dreadmist Sandals", 3), "", "=q4=Dreadmist Sandals", "=ds=#s12#, #a1# (D1, #c8#)", "", "13.16%"};
+	};
+
+	AtlasLoot_Data["STRATBlackGuardSwordsmith25Man"] = {
+		{ 1, 18783, "", "=q3=Bottom Half of Advanced Armorsmithing: Volume III", "=ds=#m3#", "", "23.5%"};
+		{ 2, 12725, "", "=q3=Plans: Enchanted Thorium Helm", "=q1=#m4#: =ds=#p2# (300)"};
+		{ 4, 13350, "", "=q1=Insignia of the Black Guard", "=ds=#m3#", "", "100%"};
+		{ 5, 12825, "", "=q2=Plans: Blazing Rapier", "=q1=#m4#: =ds=#p2# (280)"};
+	};
+
+	AtlasLoot_Data["STRATBSPlansCorruption25Man"] = {
+		{ 1, 12830, "", "=q1=Plans: Corruption", "=ds=#p2# (290)", "", "100%"};
+	};
+
+	AtlasLoot_Data["STRATNerubenkan25Man"] = {
+		{ 1, AL_FindId("Thuzadin Sash", 3), "", "=q4=Thuzadin Sash", "=ds=#s10#, #a1#", "", "14.72%"};
+		{ 2, AL_FindId("Chitinous Plate Legguards", 3), "", "=q4=Chitinous Plate Legguards", "=ds=#s11#, #a4#", "", "12.19%"};
+		{ 3, AL_FindId("Husk of Nerub'enkan", 3), "", "=q4=Husk of Nerub'enkan", "=ds=#w8#", "", "12.62%"};
+		{ 4, AL_FindId("Carapace Spine Crossbow", 3), "", "=q4=Carapace Spine Crossbow", "=ds=#w3#", "", "14.17%"};
+		{ 6, AL_FindId("Fangdrip Runners", 3), "", "=q4=Fangdrip Runners", "=ds=#s12#, #a1#", "", "8.49%"};
+		{ 7, AL_FindId("Crypt Stalker Leggings", 3), "", "=q4=Crypt Stalker Leggings", "=ds=#s11#, #a2#", "", "10.17%"};
+		{ 8, AL_FindId("Darkspinner Claws", 3), "", "=q4=Darkspinner Claws", "=ds=#s9#, #a3#", "", "9.69%"};
+		{ 9, AL_FindId("Acid-etched Pauldrons", 3), "", "=q4=Acid-etched Pauldrons", "=ds=#s3#, #a4#", "", "8.11%"};
+		{ 10, 13508, "", "=q2=Eye of Arachnida", "=ds=#m8#", "", "7.39%"};
+		{ 16, AL_FindId("Beaststalker's Boots", 3), "", "=q4=Beaststalker's Boots", "=ds=#s12#, #a3# (D1, #c2#)", "", "13.62%"};
+	};
+
+	AtlasLoot_Data["STRATMalekithePallid25Man"] = {
+		{ 1, AL_FindId("Pale Moon Cloak", 3), "", "=q4=Pale Moon Cloak", "=ds=#s4#", "", "13.42%"};
+		{ 2, AL_FindId("Maleki's Footwraps", 3), "", "=q4=Maleki's Footwraps", "=ds=#s12#, #a1#", "", "15.03%"};
+		{ 3, AL_FindId("Skull of Burning Shadows", 3), "", "=q4=Skull of Burning Shadows", "=ds=#s15#", "", "13.42%"};
+		{ 4, AL_FindId("Bone Slicing Hatchet", 3), "", "=q4=Bone Slicing Hatchet", "=ds=#h1#, #w1#", "", "14.23%"};
+		{ 6, AL_FindId("Darkbind Fingers", 3), "", "=q4=Darkbind Fingers", "=ds=#s9#, #a1#", "", "9.15%"};
+		{ 7, AL_FindId("Flamescarred Girdle", 3), "", "=q4=Flamescarred Girdle", "=ds=#s10#, #a2#", "", "9.57%"};
+		{ 8, AL_FindId("Twilight Void Bracers", 3), "", "=q4=Twilight Void Bracers", "=ds=#s8#, #a3#", "", "9.49%"};
+		{ 9, AL_FindId("Lavawalker Greaves", 3), "", "=q4=Lavawalker Greaves", "=ds=#s12#, #a4#", "", "9.39%"};
+		{ 10, 13509, "", "=q2=Clutch of Foresight", "=ds=#m8#", "", "6.95%"};
+		{ 16, AL_FindId("Devout Sandals", 3), "", "=q4=Devout Sandals", "=ds=#s12#, #a1# (D1, #c5#)", "", "13.64%"};
+		{ 18, 12833, "", "=q3=Plans: Hammer of the Titans", "=ds=#p2# (300)", "", "5.86%"};
+		{ 19, 12796, "", "=q3=Hammer of the Titans", "=ds=#h2#, #w6#"};
+	};
+
+	AtlasLoot_Data["STRATMagistrateBarthilas25Man"] = {
+		{ 1, AL_FindId("Royal Tribunal Cloak", 3), "", "=q4=Royal Tribunal Cloak", "=ds=#s4#", "", "12.44%"};
+		{ 2, AL_FindId("Crimson Felt Hat", 3), "", "=q4=Crimson Felt Hat", "=ds=#s1#, #a1#", "", "13.82%"};
+		{ 3, AL_FindId("Magistrate's Cuffs", 3), "", "=q4=Magistrate's Cuffs", "=ds=#s8#, #a2#", "", "12.87%"};
+		{ 4, AL_FindId("Death Grips", 3), "", "=q4=Death Grips", "=ds=#s9#, #a4#", "", "15.34%"};
+		{ 5, AL_FindId("Idol of Brutality", 3), "", "=q4=Idol of Brutality", "=ds=#s16#, #w14#", "", "2.37%"};
+		{ 6, AL_FindId("Peacemaker", 3), "", "=q4=Peacemaker", "=ds=#w7#", "", "14.22%"};
+		{ 8, 12382, "", "=q2=Key to the City", "=ds=#e9#", "", "100%"};
+	};
+
+	AtlasLoot_Data["STRATRamsteintheGorger25Man"] = {
+		{ 1, AL_FindId("Soulstealer Mantle", 3), "", "=q4=Soulstealer Mantle", "=ds=#s3#, #a1#", "", "9.87%"};
+		{ 2, AL_FindId("Animated Chain Necklace", 3), "", "=q4=Animated Chain Necklace", "=ds=#s2#", "", "7.54%"};
+		{ 3, AL_FindId("Band of Flesh", 3), "", "=q4=Band of Flesh", "=ds=#s13#", "", "8.15%"};
+		{ 4, AL_FindId("Ramstein's Lightning Bolts", 3), "", "=q4=Ramstein's Lightning Bolts", "=ds=#s14#", "", "8.09%"};
+		{ 5, AL_FindId("Slavedriver's Cane", 3), "", "=q4=Slavedriver's Cane", "=ds=#w9#", "", "8.63%"};
+		{ 6, AL_FindId("Crest of Retribution", 3), "", "=q4=Crest of Retribution", "=ds=#w8#", "", "9.17%"};
+		{ 16, AL_FindId("Gauntlets of Valor", 3), "", "=q4=Gauntlets of Valor", "=ds=#s9#, #a4# (D1, #c9#)", "", "9.58%"};
+	};
+
+	AtlasLoot_Data["STRATBaronRivendare25Man"] = {
+		{ 1, AL_FindId("Runeblade of Baron Rivendare", 3), "", "=q4=Runeblade of Baron Rivendare", "=ds=#h2#, #w10#", "", "1%"}; ---drop rate according to blue
+		{ 2, 13335, "", "=q4=Deathcharger's Reins", "=ds=#e12#", "", "0.10%"};
+		{ 4, AL_FindId("Cape of the Black Baron", 3), "", "=q4=Cape of the Black Baron", "=ds=#s4#", "", "8.75%"};
+		{ 5, AL_FindId("Thuzadin Mantle", 3), "", "=q4=Thuzadin Mantle", "=ds=#s3#, #a1#", "", "4.16%"};
+		{ 6, AL_FindId("Robes of the Exalted", 3), "", "=q4=Robes of the Exalted", "=ds=#s5#, #a1#", "", "11.51%"};
+		{ 7, AL_FindId("Tunic of the Crescent Moon", 3), "", "=q4=Tunic of the Crescent Moon", "=ds=#s5#, #a2#", "", "4.59%"};
+		{ 8, AL_FindId("Dracorian Gauntlets", 3), "", "=q4=Dracorian Gauntlets", "=ds=#s9#, #a3#", "", "10.85%"};
+		{ 9, AL_FindId("Gauntlets of Deftness", 3), "", "=q4=Gauntlets of Deftness", "=ds=#s9#, #a3#", "", "4.98%"};
+		{ 10, AL_FindId("Helm of the Executioner", 3), "", "=q4=Helm of the Executioner", "=ds=#s1#, #a4#", "", "3.80%"};
+		{ 11, AL_FindId("Seal of Rivendare", 3), "", "=q4=Seal of Rivendare", "=ds=#s13#", "", "9.50%"};
+		{ 12, AL_FindId("Bonescraper", 3), "", "=q4=Bonescraper", "=ds=#h1#, #w4#", "", "4.32%"};
+		{ 13, AL_FindId("Skullforge Reaver", 3), "", "=q4=Skullforge Reaver", "=ds=#h1#, #w10#", "", "4.25%"};
+		{ 14, AL_FindId("Scepter of the Unholy", 3), "", "=q4=Scepter of the Unholy", "=ds=#h1#, #w6#", "", "9.30%"};
+		{ 15, AL_FindId("Ritssyn's Wand of Bad Mojo", 3), "", "=q4=Ritssyn's Wand of Bad Mojo", "=ds=#w12#", "", "3.39%"};
+		{ 16, AL_FindId("Magister's Leggings", 3), "", "=q4=Magister's Leggings", "=ds=#s11#, #a1# (D1, #c3#)", "", "6.79%"};
+		{ 17, AL_FindId("Dreadmist Leggings", 3), "", "=q4=Dreadmist Leggings", "=ds=#s11#, #a1# (D1, #c8#)", "", "7.31%"};
+		{ 18, AL_FindId("Devout Skirt", 3), "", "=q4=Devout Skirt", "=ds=#s11#, #a1# (D1, #c5#)", "", "7.42%"};
+		{ 19, AL_FindId("Shadowcraft Pants", 3), "", "=q4=Shadowcraft Pants", "=ds=#s11#, #a2# (D1, #c6#)", "", "7.76%"};
+		{ 20, AL_FindId("Wildheart Kilt", 3), "", "=q4=Wildheart Kilt", "=ds=#s11#, #a2# (D1, #c1#)", "", "6.58%"};
+		{ 21, AL_FindId("Kilt of Elements", 3), "", "=q4=Kilt of Elements", "=ds=#s11#, #a3# (D1, #c7#)", "", "3.02%"};
+		{ 22, AL_FindId("Beaststalker's Pants", 3), "", "=q4=Beaststalker's Pants", "=ds=#s11#, #a3# (D1, #c2#)", "", "6.16%"};
+		{ 23, AL_FindId("Legplates of Valor", 3), "", "=q4=Legplates of Valor", "=ds=#s11#, #a4# (D1, #c9#)", "", "5.74%"};
+		{ 24, AL_FindId("Lightforge Legplates", 3), "", "=q4=Lightforge Legplates", "=ds=#s11#, #a4# (D1, #c4#)", "", "4.20%"};
+		{ 26, 13251, "", "=q1=Head of Baron Rivendare", "=ds=#m3#", "", "100%"};
+		{ 27, 13246, "", "=q3=Argent Avenger", "=q1=#m4#: =ds=#h1#, #w10#"};
+		{ 28, 13249, "", "=q3=Argent Crusader", "=q1=#m4#: =ds=#w9#"};
+		{ 29, 13243, "", "=q3=Argent Defender", "=q1=#m4#: =ds=#w8#"};
+	};
+
+	AtlasLoot_Data["STRATTrash25Man"] = {
+		{ 1, AL_FindId("Gracious Cape", 3), "", "=q4=Gracious Cape", "=ds=#s4#", "", "0.01%"};
+		{ 2, AL_FindId("Juno's Shadow", 3), "", "=q4=Juno's Shadow", "=ds=#s4#", "", "0.01%"};
+		{ 3, AL_FindId("Sacred Cloth Leggings", 3), "", "=q4=Sacred Cloth Leggings", "=ds=#s11#, #a1#", "", "0.01%"};
+		{ 4, AL_FindId("Plaguebat Fur Gloves", 3), "", "=q4=Plaguebat Fur Gloves", "=ds=#s9#, #a2#", "", "0.00%"};
+		{ 5, AL_FindId("Plaguehound Leggings", 3), "", "=q4=Plaguehound Leggings", "=ds=#s11#, #a2#", "", "0.00%"};
+		{ 6, AL_FindId("Stratholme Militia Shoulderguard", 3), "", "=q4=Stratholme Militia Shoulderguard", "=ds=#s3#, #a3#", "", "0.00%"};
+		{ 7, AL_FindId("Morlune's Bracer", 3), "", "=q4=Morlune's Bracer", "=ds=#s8#, #a4#", "", "0.01%"};
+		{ 9, 16249, "", "=q2=Formula: Enchant 2H Weapon - Major Intellect", "=ds=#p4# (300) =q1=#n60#", "", "1.19%"};
+		{ 10, 16248, "", "=q2=Formula: Enchant Weapon - Unholy", "=ds=#p4# (295) =q1=#n61#", "", "0.36%"};
+		{ 11, 18658, "", "=q2=Schematic: Ultra-Flash Shadow Reflector", "=ds=#p5# (300) =q1=#n62#", "", "1.82%"};
+		{ 12, 16052, "", "=q2=Schematic: Voice Amplification Modulator", "=ds=#p5# (290) =q1=#n62#", "", "1.99%"};
+		{ 13, 15777, "", "=q2=Pattern: Runic Leather Shoulders", "=ds=#p7# (300) =q1=#n63#", "", "1.00%"};
+		{ 14, 15768, "", "=q2=Pattern: Wicked Leather Belt", "=ds=#p7# (300) =q1=#n64#", "", "0.85%"};
+		{ 15, 14495, "", "=q2=Pattern: Ghostweave Pants", "=ds=#p8# (290) =q1=#n65#", "", "2.13%"};
+		{ 16, AL_FindId("Devout Bracers", 3), "", "=q4=Devout Bracers", "=ds=#s8#, #a1# (D1)", "", "1.15%"};
+		{ 17, AL_FindId("Dreadmist Belt", 3), "", "=q4=Dreadmist Belt", "=ds=#s10#, #a1# (D1)", "", "0.90%"};
+		{ 18, AL_FindId("Magister's Belt", 3), "", "=q4=Magister's Belt", "=ds=#s10#, #a1# (D1)", "", "0.80%"};
+		{ 19, AL_FindId("Wildheart Bracers", 3), "", "=q4=Wildheart Bracers", "=ds=#s8#, #a2# (D1)", "", "1.49%"};
+		{ 20, AL_FindId("Beaststalker's Bindings", 3), "", "=q4=Beaststalker's Bindings", "=ds=#s8#, #a3# (D1)", "", "1.64%"};
+		{ 21, AL_FindId("Bindings of Elements", 3), "", "=q4=Bindings of Elements", "=ds=#s8#, #a3# (D1)", "", "1.90%"};
+		{ 22, AL_FindId("Belt of Valor", 3), "", "=q4=Belt of Valor", "=ds=#s10#, #a4# (D1)", "", "2.02%"};
+		{ 23, AL_FindId("Lightforge Belt", 3), "", "=q4=Lightforge Belt", "=ds=#s10#, #a4# (D1)", "", "1.83%"};
+		{ 25, 12811, "", "=q2=Righteous Orb", "=ds=#e8#", "", "5.09%"};
+		{ 26, 12735, "", "=q2=Frayed Abomination Stitching", "=ds=#m3#", "", "17.5%"};
+	};
+
+		------------------
+		--- Stratholme MYTHIC ---
+		------------------
+
+	AtlasLoot_Data["STRATSkull25ManHEROIC"] = {
+		{ 1, AL_FindId("Skul's Fingerbone Claws", 4), "", "=q4=Skul's Fingerbone Claws", "=ds=#s9#, #a2#", "", "36.52%"};
+		{ 2, AL_FindId("Skul's Cold Embrace", 4), "", "=q4=Skul's Cold Embrace", "=ds=#s5#, #a4#", "", "24.16%"};
+		{ 3, AL_FindId("Skul's Ghastly Touch", 4), "", "=q4=Skul's Ghastly Touch", "=ds=#w12#", "", "16.85%"};
+	};
+
+	AtlasLoot_Data["STRATStratholmeCourier25ManHEROIC"] = {
+		{ 1, 13304, "", "=q1=Festival Lane Postbox Key", "=ds=#e9#", "", "45.19%"};
+		{ 2, 13303, "", "=q1=Crusaders' Square Postbox Key", "=ds=#e9#", "", "43.46%"};
+		{ 3, 13307, "", "=q1=Fras Siabi's Postbox Key", "=ds=#e9#", "", "42.88%"};
+		{ 4, 13305, "", "=q1=Elders' Square Postbox Key", "=ds=#e9#", "", "36.87%"};
+		{ 5, 13302, "", "=q1=Market Row Postbox Key", "=ds=#e9#", "", "35.58%"};
+		{ 6, 13306, "", "=q1=King's Square Postbox Key", "=ds=#e9#", "", "37.69%"};
+	};
+
+	AtlasLoot_Data["STRATFrasSiabi25ManHEROIC"] = {
+		{ 1, 13172, "", "=q1=Siabi's Premium Tobacco", "=ds=#m3#", "", "100%"};
+		{ 2, 13171, "", "=q2=Smokey's Lighter", "=q1=#m4#: =ds=#s14#"};
+	};
+
+	AtlasLoot_Data["STRATAtiesh25ManHEROIC"] = {
+		{ 1, 22736, "", "=q5=Andonisus, Reaper of Souls", "=q1=#m26#: =ds=#h3#, #w10#", "", "100%"};
+	};
+
+	AtlasLoot_Data["STRATHearthsingerForresten25ManHEROIC"] = {
+		{ 1, AL_FindId("Songbird Blouse", 4), "", "=q4=Songbird Blouse", "=ds=#s5#, #a2#", "", "15.31%"};
+		{ 2, AL_FindId("Woollies of the Prancing Minstrel", 4), "", "=q4=Woollies of the Prancing Minstrel", "=ds=#s11#, #a3#", "", "18.42%"};
+		{ 3, AL_FindId("Rainbow Girdle", 4), "", "=q4=Rainbow Girdle", "=ds=#s10#, #a4#", "", "19.21%"};
+		{ 4, AL_FindId("Piccolo of the Flaming Fire", 4), "", "=q4=Piccolo of the Flaming Fire", "=ds=#s14#", "", "15.13%"};
+		{ 16, AL_FindId("Magister's Boots", 4), "", "=q4=Magister's Boots", "=ds=#s12#, #a1# (D1, #c3#)", "", "10.86%"};
+	};
+
+	AtlasLoot_Data["STRATTheUnforgiven25ManHEROIC"] = {
+		{ 1, AL_FindId("Tearfall Bracers", 4), "", "=q4=Tearfall Bracers", "=ds=#s8#, #a1#", "", "14.62%"};
+		{ 2, AL_FindId("Mask of the Unforgiven", 4), "", "=q4=Mask of the Unforgiven", "=ds=#s1#, #a2#", "", "14.96%"};
+		{ 3, AL_FindId("Wailing Nightbane Pauldrons", 4), "", "=q4=Wailing Nightbane Pauldrons", "=ds=#s3#, #a4#", "", "12.10%"};
+		{ 4, AL_FindId("Soul Breaker", 4), "", "=q4=Soul Breaker", "=ds=#h1#, #w1#", "", "19.33%"};
+		{ 16, AL_FindId("Wildheart Gloves", 4), "", "=q4=Wildheart Gloves", "=ds=#s9#, #a2# (D1, #c1#)", "", "12.61%"};
+	};
+
+	AtlasLoot_Data["STRATTimmytheCruel25ManHEROIC"] = {
+		{ 1, AL_FindId("Grimgore Noose", 4), "", "=q4=Grimgore Noose", "=ds=#s10#, #a1#", "", "16.48%"};
+		{ 2, AL_FindId("Timmy's Galoshes", 4), "", "=q4=Timmy's Galoshes", "=ds=#s12#, #a3#", "", "16.74%"};
+		{ 3, AL_FindId("Vambraces of the Sadist", 4), "", "=q4=Vambraces of the Sadist", "=ds=#s8#, #a4#", "", "14.02%"};
+		{ 4, AL_FindId("The Cruel Hand of Timmy", 4), "", "=q4=The Cruel Hand of Timmy", "=ds=#h1#, #w6#", "", "16.87%"};
+		{ 16, AL_FindId("Lightforge Gauntlets", 4), "", "=q4=Lightforge Gauntlets", "=ds=#s9#, #a4# (D1, #c4#)", "", "10.42%"};
+	};
+
+	AtlasLoot_Data["STRATMalorsStrongbox25ManHEROIC"] = {
+		{ 1, 0, "INV_Box_01", "=q6=#x13#", ""};
+		{ 2, 12845, "", "=q1=Medallion of Faith", "=ds=#m3#", "", "100%"};
+	};
+
+	AtlasLoot_Data["STRATCrimsonHammersmith25ManHEROIC"] = {
+		{ 1, 18781, "", "=q3=Bottom Half of Advanced Armorsmithing: Volume II", "=ds=#m3#", "", "41.6%"};
+		{ 2, 12726, "", "=q3=Plans: Enchanted Thorium Leggings", "=q1=#m4#: =ds=#p2# (300)"};
+		{ 4, 13351, "", "=q1=Crimson Hammersmith's Apron", "=ds=#m3#", "", "100%"};
+		{ 5, 12824, "", "=q2=Plans: Enchanted Battlehammer", "=q1=#m4#: =ds=#p2# (280)"};
+	};
+
+	AtlasLoot_Data["STRATBSPlansSerenity25ManHEROIC"] = {
+		{ 1, 12827, "", "=q2=Plans: Serenity", "=ds=#p2# (285)", "", "100%"};
+	};
+
+	AtlasLoot_Data["STRATCannonMasterWilley25ManHEROIC"] = {
+		{ 1, AL_FindId("Mantle of the Scarlet Crusade", 4), "", "=q4=Mantle of the Scarlet Crusade", "=ds=#s3#, #a1#", "", "16.03%"};
+		{ 2, AL_FindId("Helm of the New Moon", 4), "", "=q4=Helm of the New Moon", "=ds=#s1#, #a2#", "", "13.61%"};
+		{ 3, AL_FindId("Barrage Girdle", 4), "", "=q4=Barrage Girdle", "=ds=#s10#, #a3#", "", "12.39%"};
+		{ 4, AL_FindId("Master Cannoneer Boots", 4), "", "=q4=Master Cannoneer Boots", "=ds=#s12#, #a4#", "", "12.86%"};
+		{ 5, AL_FindId("Diana's Pearl Necklace", 4), "", "=q4=Diana's Pearl Necklace", "=ds=#s2#", "", "14.27%"};
+		{ 6, AL_FindId("Cannonball Runner", 4), "", "=q4=Cannonball Runner", "=ds=#s14#", "", "12.28%"};
+		{ 7, AL_FindId("Willey's Back Scratcher", 4), "", "=q4=Willey's Back Scratcher", "=ds=#h3#, #w13#", "", "6.26%"};
+		{ 8, AL_FindId("Redemption", 4), "", "=q4=Redemption", "=ds=#w9#", "", "7.04%"};
+		{ 9, AL_FindId("Willey's Portable Howitzer", 4), "", "=q4=Willey's Portable Howitzer", "=ds=#w5#", "", "10.71%"};
+		{ 10, 13377, "", "=q3=Miniature Cannon Balls", "=ds=#w18#", "", "66.61%"};
+		{ 16, AL_FindId("Shadowcraft Spaulders", 4), "", "=q4=Shadowcraft Spaulders", "=ds=#s3#, #a2# (D1, #c6#)", "", "10.68%"};
+		{ 18, 12839, "", "=q3=Plans: Heartseeker", "=ds=#p2# (300)", "", "4.98%"};
+		{ 19, 12783, "", "=q3=Heartseeker", "=ds=#h1#, #w4#"};
+	};
+
+	AtlasLoot_Data["STRATArchivistGalford25ManHEROIC"] = {
+		{ 1, AL_FindId("Archivist Cape", 4), "", "=q4=Archivist Cape", "=ds=#s4#", "", "18.45%"};
+		{ 2, AL_FindId("Ash Covered Boots", 4), "", "=q4=Ash Covered Boots", "=ds=#s12#, #a2#", "", "16.30%"};
+		{ 3, AL_FindId("Foresight Girdle", 4), "", "=q4=Foresight Girdle", "=ds=#s10#, #a3#", "", "18.24%"};
+		{ 4, 13385, "", "=q3=Tome of Knowledge", "=ds=#s15#", "", "9.87%"};
+		{ 5, 22897, "", "=q3=Tome of Conjure Food VII", "=ds=#e10# =q1=#m1# =ds=#c3#", "", "4.86%"};
+		{ 7, 12811, "", "=q2=Righteous Orb", "=ds=#e8#", "", "61.3%"};
+		{ 9, 0, "INV_Box_01", "=q6=#x11#", ""};
+		{ 10, 14679, "", "=q1=Of Love and Family", "=ds=#m3#"};
+		{ 16, AL_FindId("Devout Gloves", 4), "", "=q4=Devout Gloves", "=ds=#s9#, #a1# (D1, #c5#)", "", "12.46%"};
+	};
+
+	AtlasLoot_Data["STRATBalnazzar25ManHEROIC"] = {
+		{ 1, AL_FindId("Book of the Dead", 4), "", "=q4=Book of the Dead", "=ds=#s15#", "", "1.37%"};
+		{ 2, 14512, "", "=q4=Pattern: Truefaith Vestments", "=ds=#p8# (300)", "", "3.02%"};
+		{ 3, 14154, "", "=q4=Truefaith Vestments", "=ds=#s5#, #a1# =q1=#m1# =ds=#c5#"};
+		{ 5, AL_FindId("Shroud of the Nathrezim", 4), "", "=q4=Shroud of the Nathrezim", "=ds=#s3#, #a1#", "", "10.54%"};
+		{ 6, AL_FindId("Fire Striders", 4), "", "=q4=Fire Striders", "=ds=#s12#, #a1#", "", "14.84%"};
+		{ 7, AL_FindId("Wyrmtongue Shoulders", 4), "", "=q4=Wyrmtongue Shoulders", "=ds=#s3#, #a2#", "", "11.58%"};
+		{ 8, AL_FindId("Crown of Tyranny", 4), "", "=q4=Crown of Tyranny", "=ds=#s1#, #a3#", "", "13.94%"};
+		{ 9, AL_FindId("Grand Crusader's Helm", 4), "", "=q4=Grand Crusader's Helm", "=ds=#s1#, #a4#", "", "10.16%"};
+		{ 10, AL_FindId("Star of Mystaria", 4), "", "=q4=Star of Mystaria", "=ds=#s2#", "", "12.48%"};
+		{ 11, AL_FindId("Gift of the Elven Magi", 4), "", "=q4=Gift of the Elven Magi", "=ds=#h1#, #w4#", "", "13.66%"};
+		{ 12, AL_FindId("Demonshear", 4), "", "=q4=Demonshear", "=ds=#h2#, #w10#", "", "13.94%"};
+		{ 13, AL_FindId("Hammer of the Grand Crusader", 4), "", "=q4=Hammer of the Grand Crusader", "=ds=#h2#, #w6#", "", "11.91%"};
+		{ 16, AL_FindId("Lightforge Boots", 4), "", "=q4=Lightforge Boots", "=ds=#s12#, #a4# (D1, #c4#)", "", "11.11%"};
+		{ 18, 13520, "", "=q2=Recipe: Flask of Distilled Wisdom", "=ds=#p1# (300)", "", "1.94%"};
+		{ 20, 13250, "", "=q1=Head of Balnazzar", "=ds=#m2#"};
+	};
+
+	AtlasLoot_Data["STRATSothosJarien25ManHEROIC"] = {
+		{ 1, 0, "INV_Misc_Bag_09", "=q6=#j5#", "=q5=#n18#"};
+		{ 2, AL_FindId("Ironweave Robe", 4), "", "=q4=Ironweave Robe", "=ds=#s5#, #a1#", "", "19.00%"};
+		{ 3, AL_FindId("Legplates of Vigilance", 4), "", "=q4=Legplates of Vigilance", "=ds=#s11#, #a4#", "", "21.27%"};
+		{ 4, AL_FindId("Amulet of the Redeemed", 4), "", "=q4=Amulet of the Redeemed", "=ds=#s2#", "", "14.03%"};
+		{ 5, AL_FindId("Band of Mending", 4), "", "=q4=Band of Mending", "=ds=#s13#", "", "17.19%"};
+		{ 6, AL_FindId("Scepter of Interminable Focus", 4), "", "=q4=Scepter of Interminable Focus", "=ds=#s15#", "", "28.51%"};
+		{ 8, 21984, "", "=q1=Left Piece of Lord Valthalak's Amulet", "=ds=#m3#"};
+		{ 9, 22046, "", "=q1=Right Piece of Lord Valthalak's Amulet", "=ds=#m3#"};
+	};
+
+	AtlasLoot_Data["STRATStonespine25ManHEROIC"] = {
+		{ 1, AL_FindId("Stoneskin Gargoyle Cape", 4), "", "=q4=Stoneskin Gargoyle Cape", "=ds=#s4#", "", "23.44%"};
+		{ 2, AL_FindId("Verdant Footpads", 4), "", "=q4=Verdant Footpads", "=ds=#s12#, #a2#", "", "25.36%"};
+		{ 3, AL_FindId("Gargoyle Shredder Talons", 4), "", "=q4=Gargoyle Shredder Talons", "=ds=#h4#, #w13#", "", "26.16%"};
+	};
+
+	AtlasLoot_Data["STRATBaronessAnastari25ManHEROIC"] = {
+		{ 1, AL_FindId("Shadowy Laced Handwraps", 4), "", "=q4=Shadowy Laced Handwraps", "=ds=#s9#, #a1#", "", "13.54%"};
+		{ 2, AL_FindId("Anastari Heirloom", 4), "", "=q4=Anastari Heirloom", "=ds=#s2#", "", "11.92%"};
+		{ 3, AL_FindId("Banshee Finger", 4), "", "=q4=Banshee Finger", "=ds=#w12#", "", "13.42%"};
+		{ 4, AL_FindId("Screeching Bow", 4), "", "=q4=Screeching Bow", "=ds=#w2#", "", "15.59%"};
+		{ 6, AL_FindId("Coldtouch Phantom Wraps", 4), "", "=q4=Coldtouch Phantom Wraps", "=ds=#s5#, #a1#", "", "9.84%"};
+		{ 7, AL_FindId("Chillhide Bracers", 4), "", "=q4=Chillhide Bracers", "=ds=#s8#, #a2#", "", "9.71%"};
+		{ 8, AL_FindId("Windshrieker Pauldrons", 4), "", "=q4=Windshrieker Pauldrons", "=ds=#s3#, #a3#", "", "9.75%"};
+		{ 9, AL_FindId("Banshee's Touch", 4), "", "=q4=Banshee's Touch", "=ds=#s9#, #a4#", "", "8.27%"};
+		{ 10, 13514, "", "=q2=Wail of the Banshee", "=ds=#m8#", "", "7.73%"};
+		{ 16, AL_FindId("Dreadmist Sandals", 4), "", "=q4=Dreadmist Sandals", "=ds=#s12#, #a1# (D1, #c8#)", "", "13.16%"};
+	};
+
+	AtlasLoot_Data["STRATBlackGuardSwordsmith25ManHEROIC"] = {
+		{ 1, 18783, "", "=q3=Bottom Half of Advanced Armorsmithing: Volume III", "=ds=#m3#", "", "23.5%"};
+		{ 2, 12725, "", "=q3=Plans: Enchanted Thorium Helm", "=q1=#m4#: =ds=#p2# (300)"};
+		{ 4, 13350, "", "=q1=Insignia of the Black Guard", "=ds=#m3#", "", "100%"};
+		{ 5, 12825, "", "=q2=Plans: Blazing Rapier", "=q1=#m4#: =ds=#p2# (280)"};
+	};
+
+	AtlasLoot_Data["STRATBSPlansCorruption25ManHEROIC"] = {
+		{ 1, 12830, "", "=q1=Plans: Corruption", "=ds=#p2# (290)", "", "100%"};
+	};
+
+	AtlasLoot_Data["STRATNerubenkan25ManHEROIC"] = {
+		{ 1, AL_FindId("Thuzadin Sash", 4), "", "=q4=Thuzadin Sash", "=ds=#s10#, #a1#", "", "14.72%"};
+		{ 2, AL_FindId("Chitinous Plate Legguards", 4), "", "=q4=Chitinous Plate Legguards", "=ds=#s11#, #a4#", "", "12.19%"};
+		{ 3, AL_FindId("Husk of Nerub'enkan", 4), "", "=q4=Husk of Nerub'enkan", "=ds=#w8#", "", "12.62%"};
+		{ 4, AL_FindId("Carapace Spine Crossbow", 4), "", "=q4=Carapace Spine Crossbow", "=ds=#w3#", "", "14.17%"};
+		{ 6, AL_FindId("Fangdrip Runners", 4), "", "=q4=Fangdrip Runners", "=ds=#s12#, #a1#", "", "8.49%"};
+		{ 7, AL_FindId("Crypt Stalker Leggings", 4), "", "=q4=Crypt Stalker Leggings", "=ds=#s11#, #a2#", "", "10.17%"};
+		{ 8, AL_FindId("Darkspinner Claws", 4), "", "=q4=Darkspinner Claws", "=ds=#s9#, #a3#", "", "9.69%"};
+		{ 9, AL_FindId("Acid-etched Pauldrons", 4), "", "=q4=Acid-etched Pauldrons", "=ds=#s3#, #a4#", "", "8.11%"};
+		{ 10, 13508, "", "=q2=Eye of Arachnida", "=ds=#m8#", "", "7.39%"};
+		{ 16, AL_FindId("Beaststalker's Boots", 4), "", "=q4=Beaststalker's Boots", "=ds=#s12#, #a3# (D1, #c2#)", "", "13.62%"};
+	};
+
+	AtlasLoot_Data["STRATMalekithePallid25ManHEROIC"] = {
+		{ 1, AL_FindId("Pale Moon Cloak", 4), "", "=q4=Pale Moon Cloak", "=ds=#s4#", "", "13.42%"};
+		{ 2, AL_FindId("Maleki's Footwraps", 4), "", "=q4=Maleki's Footwraps", "=ds=#s12#, #a1#", "", "15.03%"};
+		{ 3, AL_FindId("Skull of Burning Shadows", 4), "", "=q4=Skull of Burning Shadows", "=ds=#s15#", "", "13.42%"};
+		{ 4, AL_FindId("Bone Slicing Hatchet", 4), "", "=q4=Bone Slicing Hatchet", "=ds=#h1#, #w1#", "", "14.23%"};
+		{ 6, AL_FindId("Darkbind Fingers", 4), "", "=q4=Darkbind Fingers", "=ds=#s9#, #a1#", "", "9.15%"};
+		{ 7, AL_FindId("Flamescarred Girdle", 4), "", "=q4=Flamescarred Girdle", "=ds=#s10#, #a2#", "", "9.57%"};
+		{ 8, AL_FindId("Twilight Void Bracers", 4), "", "=q4=Twilight Void Bracers", "=ds=#s8#, #a3#", "", "9.49%"};
+		{ 9, AL_FindId("Lavawalker Greaves", 4), "", "=q4=Lavawalker Greaves", "=ds=#s12#, #a4#", "", "9.39%"};
+		{ 10, 13509, "", "=q2=Clutch of Foresight", "=ds=#m8#", "", "6.95%"};
+		{ 16, AL_FindId("Devout Sandals", 4), "", "=q4=Devout Sandals", "=ds=#s12#, #a1# (D1, #c5#)", "", "13.64%"};
+		{ 18, 12833, "", "=q3=Plans: Hammer of the Titans", "=ds=#p2# (300)", "", "5.86%"};
+		{ 19, 12796, "", "=q3=Hammer of the Titans", "=ds=#h2#, #w6#"};
+	};
+
+	AtlasLoot_Data["STRATMagistrateBarthilas25ManHEROIC"] = {
+		{ 1, AL_FindId("Royal Tribunal Cloak", 4), "", "=q4=Royal Tribunal Cloak", "=ds=#s4#", "", "12.44%"};
+		{ 2, AL_FindId("Crimson Felt Hat", 4), "", "=q4=Crimson Felt Hat", "=ds=#s1#, #a1#", "", "13.82%"};
+		{ 3, AL_FindId("Magistrate's Cuffs", 4), "", "=q4=Magistrate's Cuffs", "=ds=#s8#, #a2#", "", "12.87%"};
+		{ 4, AL_FindId("Death Grips", 4), "", "=q4=Death Grips", "=ds=#s9#, #a4#", "", "15.34%"};
+		{ 5, AL_FindId("Idol of Brutality", 4), "", "=q4=Idol of Brutality", "=ds=#s16#, #w14#", "", "2.37%"};
+		{ 6, AL_FindId("Peacemaker", 4), "", "=q4=Peacemaker", "=ds=#w7#", "", "14.22%"};
+		{ 8, 12382, "", "=q2=Key to the City", "=ds=#e9#", "", "100%"};
+	};
+
+	AtlasLoot_Data["STRATRamsteintheGorger25ManHEROIC"] = {
+		{ 1, AL_FindId("Soulstealer Mantle", 4), "", "=q4=Soulstealer Mantle", "=ds=#s3#, #a1#", "", "9.87%"};
+		{ 2, AL_FindId("Animated Chain Necklace", 4), "", "=q4=Animated Chain Necklace", "=ds=#s2#", "", "7.54%"};
+		{ 3, AL_FindId("Band of Flesh", 4), "", "=q4=Band of Flesh", "=ds=#s13#", "", "8.15%"};
+		{ 4, AL_FindId("Ramstein's Lightning Bolts", 4), "", "=q4=Ramstein's Lightning Bolts", "=ds=#s14#", "", "8.09%"};
+		{ 5, AL_FindId("Slavedriver's Cane", 4), "", "=q4=Slavedriver's Cane", "=ds=#w9#", "", "8.63%"};
+		{ 6, AL_FindId("Crest of Retribution", 4), "", "=q4=Crest of Retribution", "=ds=#w8#", "", "9.17%"};
+		{ 16, AL_FindId("Gauntlets of Valor", 4), "", "=q4=Gauntlets of Valor", "=ds=#s9#, #a4# (D1, #c9#)", "", "9.58%"};
+	};
+
+	AtlasLoot_Data["STRATBaronRivendare25ManHEROIC"] = {
+		{ 1, AL_FindId("Runeblade of Baron Rivendare", 4), "", "=q4=Runeblade of Baron Rivendare", "=ds=#h2#, #w10#", "", "1%"}; ---drop rate according to blue
+		{ 2, 13335, "", "=q4=Deathcharger's Reins", "=ds=#e12#", "", "0.10%"};
+		{ 4, AL_FindId("Cape of the Black Baron", 4), "", "=q4=Cape of the Black Baron", "=ds=#s4#", "", "8.75%"};
+		{ 5, AL_FindId("Thuzadin Mantle", 4), "", "=q4=Thuzadin Mantle", "=ds=#s3#, #a1#", "", "4.16%"};
+		{ 6, AL_FindId("Robes of the Exalted", 4), "", "=q4=Robes of the Exalted", "=ds=#s5#, #a1#", "", "11.51%"};
+		{ 7, AL_FindId("Tunic of the Crescent Moon", 4), "", "=q4=Tunic of the Crescent Moon", "=ds=#s5#, #a2#", "", "4.59%"};
+		{ 8, AL_FindId("Dracorian Gauntlets", 4), "", "=q4=Dracorian Gauntlets", "=ds=#s9#, #a3#", "", "10.85%"};
+		{ 9, AL_FindId("Gauntlets of Deftness", 4), "", "=q4=Gauntlets of Deftness", "=ds=#s9#, #a3#", "", "4.98%"};
+		{ 10, AL_FindId("Helm of the Executioner", 4), "", "=q4=Helm of the Executioner", "=ds=#s1#, #a4#", "", "3.80%"};
+		{ 11, AL_FindId("Seal of Rivendare", 4), "", "=q4=Seal of Rivendare", "=ds=#s13#", "", "9.50%"};
+		{ 12, AL_FindId("Bonescraper", 4), "", "=q4=Bonescraper", "=ds=#h1#, #w4#", "", "4.32%"};
+		{ 13, AL_FindId("Skullforge Reaver", 4), "", "=q4=Skullforge Reaver", "=ds=#h1#, #w10#", "", "4.25%"};
+		{ 14, AL_FindId("Scepter of the Unholy", 4), "", "=q4=Scepter of the Unholy", "=ds=#h1#, #w6#", "", "9.30%"};
+		{ 15, AL_FindId("Ritssyn's Wand of Bad Mojo", 4), "", "=q4=Ritssyn's Wand of Bad Mojo", "=ds=#w12#", "", "3.39%"};
+		{ 16, AL_FindId("Magister's Leggings", 4), "", "=q4=Magister's Leggings", "=ds=#s11#, #a1# (D1, #c3#)", "", "6.79%"};
+		{ 17, AL_FindId("Dreadmist Leggings", 4), "", "=q4=Dreadmist Leggings", "=ds=#s11#, #a1# (D1, #c8#)", "", "7.31%"};
+		{ 18, AL_FindId("Devout Skirt", 4), "", "=q4=Devout Skirt", "=ds=#s11#, #a1# (D1, #c5#)", "", "7.42%"};
+		{ 19, AL_FindId("Shadowcraft Pants", 4), "", "=q4=Shadowcraft Pants", "=ds=#s11#, #a2# (D1, #c6#)", "", "7.76%"};
+		{ 20, AL_FindId("Wildheart Kilt", 4), "", "=q4=Wildheart Kilt", "=ds=#s11#, #a2# (D1, #c1#)", "", "6.58%"};
+		{ 21, AL_FindId("Kilt of Elements", 4), "", "=q4=Kilt of Elements", "=ds=#s11#, #a3# (D1, #c7#)", "", "3.02%"};
+		{ 22, AL_FindId("Beaststalker's Pants", 4), "", "=q4=Beaststalker's Pants", "=ds=#s11#, #a3# (D1, #c2#)", "", "6.16%"};
+		{ 23, AL_FindId("Legplates of Valor", 4), "", "=q4=Legplates of Valor", "=ds=#s11#, #a4# (D1, #c9#)", "", "5.74%"};
+		{ 24, AL_FindId("Lightforge Legplates", 4), "", "=q4=Lightforge Legplates", "=ds=#s11#, #a4# (D1, #c4#)", "", "4.20%"};
+		{ 26, 13251, "", "=q1=Head of Baron Rivendare", "=ds=#m3#", "", "100%"};
+		{ 27, 13246, "", "=q3=Argent Avenger", "=q1=#m4#: =ds=#h1#, #w10#"};
+		{ 28, 13249, "", "=q3=Argent Crusader", "=q1=#m4#: =ds=#w9#"};
+		{ 29, 13243, "", "=q3=Argent Defender", "=q1=#m4#: =ds=#w8#"};
+	};
+
+	AtlasLoot_Data["STRATTrash25ManHEROIC"] = {
+		{ 1, AL_FindId("Gracious Cape", 4), "", "=q4=Gracious Cape", "=ds=#s4#", "", "0.01%"};
+		{ 2, AL_FindId("Juno's Shadow", 4), "", "=q4=Juno's Shadow", "=ds=#s4#", "", "0.01%"};
+		{ 3, AL_FindId("Sacred Cloth Leggings", 4), "", "=q4=Sacred Cloth Leggings", "=ds=#s11#, #a1#", "", "0.01%"};
+		{ 4, AL_FindId("Plaguebat Fur Gloves", 4), "", "=q4=Plaguebat Fur Gloves", "=ds=#s9#, #a2#", "", "0.00%"};
+		{ 5, AL_FindId("Plaguehound Leggings", 4), "", "=q4=Plaguehound Leggings", "=ds=#s11#, #a2#", "", "0.00%"};
+		{ 6, AL_FindId("Stratholme Militia Shoulderguard", 4), "", "=q4=Stratholme Militia Shoulderguard", "=ds=#s3#, #a3#", "", "0.00%"};
+		{ 7, AL_FindId("Morlune's Bracer", 4), "", "=q4=Morlune's Bracer", "=ds=#s8#, #a4#", "", "0.01%"};
+		{ 9, 16249, "", "=q2=Formula: Enchant 2H Weapon - Major Intellect", "=ds=#p4# (300) =q1=#n60#", "", "1.19%"};
+		{ 10, 16248, "", "=q2=Formula: Enchant Weapon - Unholy", "=ds=#p4# (295) =q1=#n61#", "", "0.36%"};
+		{ 11, 18658, "", "=q2=Schematic: Ultra-Flash Shadow Reflector", "=ds=#p5# (300) =q1=#n62#", "", "1.82%"};
+		{ 12, 16052, "", "=q2=Schematic: Voice Amplification Modulator", "=ds=#p5# (290) =q1=#n62#", "", "1.99%"};
+		{ 13, 15777, "", "=q2=Pattern: Runic Leather Shoulders", "=ds=#p7# (300) =q1=#n63#", "", "1.00%"};
+		{ 14, 15768, "", "=q2=Pattern: Wicked Leather Belt", "=ds=#p7# (300) =q1=#n64#", "", "0.85%"};
+		{ 15, 14495, "", "=q2=Pattern: Ghostweave Pants", "=ds=#p8# (290) =q1=#n65#", "", "2.13%"};
+		{ 16, AL_FindId("Devout Bracers", 4), "", "=q4=Devout Bracers", "=ds=#s8#, #a1# (D1)", "", "1.15%"};
+		{ 17, AL_FindId("Dreadmist Belt", 4), "", "=q4=Dreadmist Belt", "=ds=#s10#, #a1# (D1)", "", "0.90%"};
+		{ 18, AL_FindId("Magister's Belt", 4), "", "=q4=Magister's Belt", "=ds=#s10#, #a1# (D1)", "", "0.80%"};
+		{ 19, AL_FindId("Wildheart Bracers", 4), "", "=q4=Wildheart Bracers", "=ds=#s8#, #a2# (D1)", "", "1.49%"};
+		{ 20, AL_FindId("Beaststalker's Bindings", 4), "", "=q4=Beaststalker's Bindings", "=ds=#s8#, #a3# (D1)", "", "1.64%"};
+		{ 21, AL_FindId("Bindings of Elements", 4), "", "=q4=Bindings of Elements", "=ds=#s8#, #a3# (D1)", "", "1.90%"};
+		{ 22, AL_FindId("Belt of Valor", 4), "", "=q4=Belt of Valor", "=ds=#s10#, #a4# (D1)", "", "2.02%"};
+		{ 23, AL_FindId("Lightforge Belt", 4), "", "=q4=Lightforge Belt", "=ds=#s10#, #a4# (D1)", "", "1.83%"};
+		{ 25, 12811, "", "=q2=Righteous Orb", "=ds=#e8#", "", "5.09%"};
+		{ 26, 12735, "", "=q2=Frayed Abomination Stitching", "=ds=#m3#", "", "17.5%"};
+	};
+
 		---------------------
 		--- The Deadmines ---
 		---------------------
