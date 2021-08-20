@@ -436,8 +436,8 @@ end
   -- Auch: Mana-Tombs MYTHIC
 	AtlasLoot_TableNames["AuchManaPandemonius25Man"] = { BabbleBoss["Pandemonius"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["AuchManaTavarok25Man"] = { BabbleBoss["Tavarok"], "AtlasLootBurningCrusade" };
-	AtlasLoot_TableNames["AuchManaNexusPrince25Man"] = { BabbleBoss["Nexus-Prince Shaffar"], "AtlasLootBurningCrusade" };
-	AtlasLoot_TableNames["AuchManaNexusPrince25Man"] = { BabbleBoss["Nexus-Prince Shaffar"].." ("..AL["Heroic"]..")", "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["AuchManaNexusPrince25ManHEROIC"] = { BabbleBoss["Nexus-Prince Shaffar"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["AuchManaNexusPrince225ManHEROIC"] = { BabbleBoss["Nexus-Prince Shaffar"].." ("..AL["Heroic"]..")", "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["AuchManaYor25Man"] = { AL["Yor"].." ("..AL["Heroic"]..")", "AtlasLootBurningCrusade" };
   -- Auch: Sethekk Halls
 	AtlasLoot_TableNames["AuchSethekkDarkweaver"] = { BabbleBoss["Darkweaver Syth"], "AtlasLootBurningCrusade" };
@@ -535,8 +535,8 @@ end
 	AtlasLoot_TableNames["CFRUnderHungarfen25Man"] = { BabbleBoss["Hungarfen"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["CFRUnderGhazan25Man"] = { BabbleBoss["Ghaz'an"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["CFRUnderSwamplord25Man"] = { BabbleBoss["Swamplord Musel'ek"], "AtlasLootBurningCrusade" };
-	AtlasLoot_TableNames["CFRUnderStalker25Man"] = { BabbleBoss["The Black Stalker"], "AtlasLootBurningCrusade" };
-	AtlasLoot_TableNames["CFRUnderStalker25ManHEROIC"] = { BabbleBoss["The Black Stalker"].." ("..AL["Heroic"]..")", "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["CFRUnderStalker25ManHEROIC"] = { BabbleBoss["The Black Stalker"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["CFRUnderStalker225ManHEROIC"] = { BabbleBoss["The Black Stalker"].." ("..AL["Heroic"]..")", "AtlasLootBurningCrusade" };
   -- CoT: Old Hillsbrad Foothills
 	AtlasLoot_TableNames["CoTHillsbradDrake"] = { BabbleBoss["Lieutenant Drake"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["CoTHillsbradSkarloc"] = { BabbleBoss["Captain Skarloc"], "AtlasLootBurningCrusade" };
@@ -546,8 +546,8 @@ end
   -- CoT: Old Hillsbrad Foothills MYTHIC
 	AtlasLoot_TableNames["CoTHillsbradDrake25Man"] = { BabbleBoss["Lieutenant Drake"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["CoTHillsbradSkarloc25Man"] = { BabbleBoss["Captain Skarloc"], "AtlasLootBurningCrusade" };
-	AtlasLoot_TableNames["CoTHillsbradHunter25Man"] = { BabbleBoss["Epoch Hunter"], "AtlasLootBurningCrusade" };
-	AtlasLoot_TableNames["CoTHillsbradHunter25ManHEROIC"] = { BabbleBoss["Epoch Hunter"].." ("..AL["Heroic"]..")", "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["CoTHillsbradHunter25ManHEROIC"] = { BabbleBoss["Epoch Hunter"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["CoTHillsbradHunter225ManHEROIC"] = { BabbleBoss["Epoch Hunter"].." ("..AL["Heroic"]..")", "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["CoTTrash25Man"] = { AL["Trash Mobs"].." ("..BabbleZone["Caverns of Time"]..")", "AtlasLootBurningCrusade" };
   -- CoT: Black Morass
 	AtlasLoot_TableNames["CoTMorassDeja"] = { BabbleBoss["Chrono Lord Deja"], "AtlasLootBurningCrusade" };
@@ -716,8 +716,8 @@ end
 	AtlasLoot_TableNames["TKBotFreywinn25Man"] = { BabbleBoss["High Botanist Freywinn"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["TKBotThorngrin25Man"] = { BabbleBoss["Thorngrin the Tender"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["TKBotLaj25Man"] = { BabbleBoss["Laj"], "AtlasLootBurningCrusade" };
-	AtlasLoot_TableNames["TKBotSplinter25Man"] = { BabbleBoss["Warp Splinter"], "AtlasLootBurningCrusade" };
-	AtlasLoot_TableNames["TKBotSplinter25ManHEROIC"] = { BabbleBoss["Warp Splinter"].." ("..AL["Heroic"]..")", "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["TKBotSplinter25ManHEROIC"] = { BabbleBoss["Warp Splinter"], "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["TKBotSplinter225ManHEROIC"] = { BabbleBoss["Warp Splinter"].." ("..AL["Heroic"]..")", "AtlasLootBurningCrusade" };
   -- TK: The Eye
 	AtlasLoot_TableNames["TKEyeAlar"] = { BabbleBoss["Al'ar"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["TKEyeVoidReaver"] = { BabbleBoss["Void Reaver"], "AtlasLootBurningCrusade" };
