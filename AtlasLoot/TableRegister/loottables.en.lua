@@ -960,6 +960,26 @@ end
 	AtlasLoot_TableNames["DMNChoRush"] = { BabbleBoss["Cho'Rush the Observer"], "AtlasLootOriginalWoW" };
 	AtlasLoot_TableNames["DMNKingGordok"] = { BabbleBoss["King Gordok"], "AtlasLootOriginalWoW" };
 	AtlasLoot_TableNames["DMNTRIBUTERUN"] = { AL["DM North Tribute Chest"], "AtlasLootOriginalWoW" };
+  -- Dire Maul North HEROIC
+	AtlasLoot_TableNames["DMNGuardMoldar25Man"] = { BabbleBoss["Guard Mol'dar"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["DMNStomperKreeg25Man"] = { BabbleBoss["Stomper Kreeg"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["DMNGuardFengus25Man"] = { BabbleBoss["Guard Fengus"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["DMNThimblejack25Man"] = { AL["Knot Thimblejack"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["DMNGuardSlipkik25Man"] = { BabbleBoss["Guard Slip'kik"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["DMNCaptainKromcrush25Man"] = { BabbleBoss["Captain Kromcrush"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["DMNChoRush25Man"] = { BabbleBoss["Cho'Rush the Observer"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["DMNKingGordok25Man"] = { BabbleBoss["King Gordok"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["DMNTRIBUTERUN25Man"] = { AL["DM North Tribute Chest"], "AtlasLootOriginalWoW" };
+  -- Dire Maul North MYTHIC
+	AtlasLoot_TableNames["DMNGuardMoldar25ManHEROIC"] = { BabbleBoss["Guard Mol'dar"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["DMNStomperKreeg25ManHEROIC"] = { BabbleBoss["Stomper Kreeg"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["DMNGuardFengus25ManHEROIC"] = { BabbleBoss["Guard Fengus"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["DMNThimblejack25ManHEROIC"] = { AL["Knot Thimblejack"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["DMNGuardSlipkik25ManHEROIC"] = { BabbleBoss["Guard Slip'kik"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["DMNCaptainKromcrush25ManHEROIC"] = { BabbleBoss["Captain Kromcrush"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["DMNChoRush25ManHEROIC"] = { BabbleBoss["Cho'Rush the Observer"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["DMNKingGordok25ManHEROIC"] = { BabbleBoss["King Gordok"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["DMNTRIBUTERUN25ManHEROIC"] = { AL["DM North Tribute Chest"], "AtlasLootOriginalWoW" };
   -- Dire Maul West
 	AtlasLoot_TableNames["DMWTendrisWarpwood"] = { BabbleBoss["Tendris Warpwood"], "AtlasLootOriginalWoW" };
 	AtlasLoot_TableNames["DMWIllyannaRavenoak"] = { BabbleBoss["Illyanna Ravenoak"], "AtlasLootOriginalWoW" };
