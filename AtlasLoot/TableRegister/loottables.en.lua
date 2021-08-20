@@ -757,33 +757,6 @@ end
 	AtlasLoot_TableNames["BRDImperatorDagranThaurissan25Man"] = { BabbleBoss["Emperor Dagran Thaurissan"], "AtlasLootOriginalWoW" };
 	AtlasLoot_TableNames["BRDBSPlans25Man"] = { "Blacksmith Plans".." ("..BabbleZone["Blackrock Depths"]..")", "AtlasLootOriginalWoW" };
 	AtlasLoot_TableNames["BRDTrash25Man"] = { AL["Trash Mobs"].." ("..BabbleZone["Blackrock Depths"]..")", "AtlasLootOriginalWoW" };
-  -- Blackrock Depths MYTHIC
-	AtlasLoot_TableNames["BRDPyron25ManHEROIC"] = { AL["Overmaster Pyron"], "AtlasLootOriginalWoW" };
-	AtlasLoot_TableNames["BRDLordRoccor25ManHEROIC"] = { BabbleBoss["Lord Roccor"], "AtlasLootOriginalWoW" };
-	AtlasLoot_TableNames["BRDHighInterrogatorGerstahn25ManHEROIC"] = { BabbleBoss["High Interrogator Gerstahn"], "AtlasLootOriginalWoW" };
-	AtlasLoot_TableNames["BRDArena25ManHEROIC"] = { "Ring of Law", "AtlasLootOriginalWoW" };
-	AtlasLoot_TableNames["BRDTheldren25ManHEROIC"] = { AL["Theldren"], "AtlasLootOriginalWoW" };
-	AtlasLoot_TableNames["BRDHoundmaster25ManHEROIC"] = { BabbleBoss["Houndmaster Grebmar"], "AtlasLootOriginalWoW" };
-	AtlasLoot_TableNames["BRDForgewright25ManHEROIC"] = { "Monument of Franclorn Forgewright", "AtlasLootOriginalWoW" };
-	AtlasLoot_TableNames["BRDPyromantLoregrain25ManHEROIC"] = { BabbleBoss["Pyromancer Loregrain"], "AtlasLootOriginalWoW" };
-	AtlasLoot_TableNames["BRDTheVault25ManHEROIC"] = { AL["The Vault"], "AtlasLootOriginalWoW" };
-	AtlasLoot_TableNames["BRDWarderStilgiss25ManHEROIC"] = { BabbleBoss["Warder Stilgiss"], "AtlasLootOriginalWoW" };
-	AtlasLoot_TableNames["BRDVerek25ManHEROIC"] = { BabbleBoss["Verek"], "AtlasLootOriginalWoW" };
-	AtlasLoot_TableNames["BRDFineousDarkvire25ManHEROIC"] = { BabbleBoss["Fineous Darkvire"], "AtlasLootOriginalWoW" };
-	AtlasLoot_TableNames["BRDLordIncendius25ManHEROIC"] = { BabbleBoss["Lord Incendius"], "AtlasLootOriginalWoW" };
-	AtlasLoot_TableNames["BRDBaelGar25ManHEROIC"] = { BabbleBoss["Bael'Gar"], "AtlasLootOriginalWoW" };
-	AtlasLoot_TableNames["BRDGeneralAngerforge25ManHEROIC"] = { BabbleBoss["General Angerforge"], "AtlasLootOriginalWoW" };
-	AtlasLoot_TableNames["BRDGolemLordArgelmach25ManHEROIC"] = { BabbleBoss["Golem Lord Argelmach"], "AtlasLootOriginalWoW" };
-	AtlasLoot_TableNames["BRDGuzzler25ManHEROIC"] = { "The Grim Guzzler", "AtlasLootOriginalWoW" };
-	AtlasLoot_TableNames["BRDFlamelash25ManHEROIC"] = { BabbleBoss["Ambassador Flamelash"], "AtlasLootOriginalWoW" };
-	AtlasLoot_TableNames["BRDPanzor25ManHEROIC"] = { BabbleBoss["Panzor the Invincible"].." ("..AL["Rare"]..")", "AtlasLootOriginalWoW" };
-	AtlasLoot_TableNames["BRDTomb25ManHEROIC"] = { "Summoner's Tomb", "AtlasLootOriginalWoW" };
-	AtlasLoot_TableNames["BRDLyceum25ManHEROIC"] = { AL["Shadowforge Flame Keeper"], "AtlasLootOriginalWoW" };
-	AtlasLoot_TableNames["BRDMagmus25ManHEROIC"] = { BabbleBoss["Magmus"], "AtlasLootOriginalWoW" };
-	AtlasLoot_TableNames["BRDPrincess25ManHEROIC"] = { BabbleBoss["Princess Moira Bronzebeard"], "AtlasLootOriginalWoW" };
-	AtlasLoot_TableNames["BRDImperatorDagranThaurissan25ManHEROIC"] = { BabbleBoss["Emperor Dagran Thaurissan"], "AtlasLootOriginalWoW" };
-	AtlasLoot_TableNames["BRDBSPlans25ManHEROIC"] = { "Blacksmith Plans".." ("..BabbleZone["Blackrock Depths"]..")", "AtlasLootOriginalWoW" };
-	AtlasLoot_TableNames["BRDTrash25ManHEROIC"] = { AL["Trash Mobs"].." ("..BabbleZone["Blackrock Depths"]..")", "AtlasLootOriginalWoW" };
   -- Lower Blackrock Spire
 	AtlasLoot_TableNames["LBRSQuestItems"] = { BabbleZone["Lower Blackrock Spire"].." - "..AL["Quest Item"], "AtlasLootOriginalWoW" };
 	AtlasLoot_TableNames["LBRSSpirestoneButcher"] = { BabbleBoss["Spirestone Butcher"].." ("..AL["Rare"]..")", "AtlasLootOriginalWoW" };
