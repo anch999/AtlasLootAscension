@@ -1118,6 +1118,44 @@ end
 	AtlasLoot_TableNames["SCHOLODarkmasterGandling"] = { BabbleBoss["Darkmaster Gandling"], "AtlasLootOriginalWoW" };
 	AtlasLoot_TableNames["SCHOLOQuestItems"] = { AL["Quest Item"].." ("..BabbleZone["Scholomance"]..")", "AtlasLootOriginalWoW" };
 	AtlasLoot_TableNames["SCHOLOTrash"] = { AL["Trash Mobs"].." ("..BabbleZone["Scholomance"]..")", "AtlasLootOriginalWoW" };
+  -- Scholomance HEROIC
+	AtlasLoot_TableNames["SCHOLOBloodStewardofKirtonos25Man"] = { BabbleBoss["Blood Steward of Kirtonos"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["SCHOLOKirtonostheHerald25Man"] = { BabbleBoss["Kirtonos the Herald"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["SCHOLOJandiceBarov25Man"] = { BabbleBoss["Jandice Barov"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["SCHOLORattlegore25Man"] = { BabbleBoss["Rattlegore"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["SCHOLODeathKnight25Man"] = { BabbleBoss["Death Knight Darkreaver"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["SCHOLOMarduk25Man"] = { BabbleBoss["Marduk Blackpool"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["SCHOLOVectus25Man"] = { BabbleBoss["Vectus"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["SCHOLORasFrostwhisper25Man"] = { BabbleBoss["Ras Frostwhisper"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["SCHOLOKormok25Man"] = { BabbleBoss["Kormok"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["SCHOLOInstructorMalicia25Man"] = { BabbleBoss["Instructor Malicia"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["SCHOLODoctorTheolenKrastinov25Man"] = { BabbleBoss["Doctor Theolen Krastinov"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["SCHOLOLorekeeperPolkelt25Man"] = { BabbleBoss["Lorekeeper Polkelt"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["SCHOLOTheRavenian25Man"] = { BabbleBoss["The Ravenian"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["SCHOLOLordAlexeiBarov25Man"] = { BabbleBoss["Lord Alexei Barov"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["SCHOLOLadyIlluciaBarov25Man"] = { BabbleBoss["Lady Illucia Barov"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["SCHOLODarkmasterGandling25Man"] = { BabbleBoss["Darkmaster Gandling"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["SCHOLOQuestItems25Man"] = { AL["Quest Item"].." ("..BabbleZone["Scholomance"]..")", "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["SCHOLOTrash25Man"] = { AL["Trash Mobs"].." ("..BabbleZone["Scholomance"]..")", "AtlasLootOriginalWoW" };
+  -- Scholomance MYTHIC
+	AtlasLoot_TableNames["SCHOLOBloodStewardofKirtonos25ManHEROIC"] = { BabbleBoss["Blood Steward of Kirtonos"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["SCHOLOKirtonostheHerald25ManHEROIC"] = { BabbleBoss["Kirtonos the Herald"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["SCHOLOJandiceBarov25ManHEROIC"] = { BabbleBoss["Jandice Barov"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["SCHOLORattlegore25ManHEROIC"] = { BabbleBoss["Rattlegore"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["SCHOLODeathKnight25ManHEROIC"] = { BabbleBoss["Death Knight Darkreaver"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["SCHOLOMarduk25ManHEROIC"] = { BabbleBoss["Marduk Blackpool"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["SCHOLOVectus25ManHEROIC"] = { BabbleBoss["Vectus"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["SCHOLORasFrostwhisper25ManHEROIC"] = { BabbleBoss["Ras Frostwhisper"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["SCHOLOKormok25ManHEROIC"] = { BabbleBoss["Kormok"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["SCHOLOInstructorMalicia25ManHEROIC"] = { BabbleBoss["Instructor Malicia"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["SCHOLODoctorTheolenKrastinov25ManHEROIC"] = { BabbleBoss["Doctor Theolen Krastinov"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["SCHOLOLorekeeperPolkelt25ManHEROIC"] = { BabbleBoss["Lorekeeper Polkelt"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["SCHOLOTheRavenian25ManHEROIC"] = { BabbleBoss["The Ravenian"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["SCHOLOLordAlexeiBarov25ManHEROIC"] = { BabbleBoss["Lord Alexei Barov"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["SCHOLOLadyIlluciaBarov25ManHEROIC"] = { BabbleBoss["Lady Illucia Barov"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["SCHOLODarkmasterGandling25ManHEROIC"] = { BabbleBoss["Darkmaster Gandling"], "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["SCHOLOQuestItems25ManHEROIC"] = { AL["Quest Item"].." ("..BabbleZone["Scholomance"]..")", "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["SCHOLOTrash25ManHEROIC"] = { AL["Trash Mobs"].." ("..BabbleZone["Scholomance"]..")", "AtlasLootOriginalWoW" };
   -- Shadowfang Keep
 	AtlasLoot_TableNames["ShadowfangKeep1"] = { BabbleZone["Shadowfang Keep"], "AtlasLootOriginalWoW" };
 	AtlasLoot_TableNames["ShadowfangKeep2"] = { BabbleZone["Shadowfang Keep"], "AtlasLootOriginalWoW" };
