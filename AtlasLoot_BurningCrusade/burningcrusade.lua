@@ -183,7 +183,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 25, 427845, "", "=q3=Magma Plume Boots", "=ds=#s12#, #a3#", "", "23.91%"};
 		{ 26, 427847, "", "=q3=Fanblade Pauldrons", "=ds=#s3#, #a4#", "", "6.52%"};
 		{ 27, 427846, "", "=q3=Claw of the Watcher", "=ds=#h3#, #w13#", "", "6.52%"};
-		Next = "AuchCryptsExarch";
+		Next = "AuchCryptsExarchæ";
 	};
 
 	AtlasLoot_Data["AuchCryptsExarch25Man"] = {
@@ -209,8 +209,8 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 26, 427413, "", "=q3=Ring of the Exarchs", "=ds=#s13#", "", "10.42%"};
 		{ 27, 427416, "", "=q3=Fetish of the Fallen", "=ds=#s14#", "", "12.81%"};
 		{ 28, 427412, "", "=q3=Ironstaff of Regeneration", "=ds=#w9#", "", "11.95%"};
-		Prev = "AuchCryptsShirrak";
-		Next = "AuchCryptsAvatar";
+		Prev = "AuchCryptsShirrakæ";
+		Next = "AuchCryptsAvataræ";
 	};
 
 	AtlasLoot_Data["AuchCryptsAvatar25Man"] = {
@@ -220,7 +220,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 4, 427937, "", "=q3=Sky Breaker", "=ds=#h3#, #w6#", "", "3.48%"};
 		{ 5, 427877, "", "=q3=Draenic Wildstaff", "=ds=#w9#", "", "4.87%"};
 		{ 7, 427797, "", "=q3=Wastewalker Shoulderpads", "=ds=#s3#, #a2# (D3)", "", "3.94%"};
-		Prev = "AuchCryptsExarch";
+		Prev = "AuchCryptsExarchæ";
 	};
 
 		------------------------------
@@ -354,7 +354,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 25, 427815, "", "=q3=Totem of the Astral Winds", "=ds=#s16#, #w15#", "", "2.33%"};
 		{ 26, 427814, "", "=q3=Twinblade of Mastery", "=ds=#h1#, #w4#", "", "6.98%"};
 		{ 27, 427817, "", "=q3=Starbolt Longbow", "=ds=#w2#", "", "9.30%"};
-		Next = "AuchManaTavarok";
+		Next = "AuchManaTavarokæ";
 	};
 
 	AtlasLoot_Data["AuchManaTavarok25Man"] = {
@@ -376,8 +376,8 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 25, 427826, "", "=q3=Mantle of the Sea Wolf", "=ds=#s3#, #a3#", "", "3.03%"};
 		{ 26, 427823, "", "=q3=Shard Encrusted Breastplate", "=ds=#s5#, #a3#", "", "15.15%"};
 		{ 27, 427822, "", "=q3=Crystal Band of Valor", "=ds=#s13#", "", "15.15%"};
-		Prev = "AuchManaPandemonius";
-		Next = "AuchManaNexusPrince";
+		Prev = "AuchManaPandemoniusæ";
+		Next = "AuchManaNexusPrinceæ";
 	};
 
 	AtlasLoot_Data["AuchManaNexusPrince25Man"] = {
@@ -389,8 +389,8 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 6, 425953, "", "=q3=Ethereal Warp-Bow", "=ds=#w2#", "", "14.19%"};
 		{ 8, 22921, "", "=q2=Recipe: Major Frost Protection Potion", "=ds=#p1# (360)", "", "0.85%"};
 		{ 10, 28490, "", "=q1=Shaffar's Wrappings", "=ds=#m3#", "", "100%"};
-		Prev = "AuchManaTavarok";
-		Next = "AuchManaYor";
+		Prev = "AuchManaTavarokæ";
+		Next = "AuchManaYoræ";
 	};
 
 	AtlasLoot_Data["AuchManaNexusPrince25ManHEROIC"] = {
@@ -417,8 +417,8 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 25, 427840, "", "=q3=Scepter of Sha'tar", "=ds=#h2#, #w6#"};
 		{ 26, 427842, "", "=q3=Grand Scepter of the Nexus-Kings", "=ds=#w9#", "", "9.09%"};
 		{ 28, 22921, "", "=q2=Recipe: Major Frost Protection Potion", "=ds=#p1# (360)", "", "2.85%"};
-		Prev = "AuchManaTavarok";
-		Next = "AuchManaYor";
+		Prev = "AuchManaTavarokæ";
+		Next = "AuchManaYoræ";
 	};
 
 	AtlasLoot_Data["AuchManaYor25Man"] = {
@@ -436,7 +436,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 16, 30584, "", "=q4=Enscribed Fire Opal", "=ds=#e7#", "", "0.08%"};
 		{ 17, 30585, "", "=q4=Glistening Fire Opal", "=ds=#e7#", "", "6.06%"};
 		{ 18, 30583, "", "=q4=Timeless Chrysoprase", "=ds=#e7#", "", "9.09%"};
-		Prev = "AuchManaNexusPrince";
+		Prev = "AuchManaNexusPrinceæ";
 	};
 
 		---------------------------------
@@ -522,7 +522,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 19, 30554, "", "=q4=Stalwart Fire Opal", "=ds=#e7#", "", "10.11%"};
 		{ 20, 30552, "", "=q4=Blessed Tanzanite", "=ds=#e7#", "", "0.18%"};
 		{ 22, 25461, "", "=q1=Book of Forgotten Names", "=ds=#m3#", "", "100%"};
-		Next = "AuchSethekkTalonKing";
+		Next = "AuchSethekkTalonKingæ";
 	};
 
 	AtlasLoot_Data["AuchSethekkRavenGod25Man"] = {
@@ -536,7 +536,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 9, 432779, "", "=q3=Band of Frigid Elements", "=ds=#s13#"};
 		{ 10, 432781, "", "=q3=Talon of Anzu", "=ds=#h1#, #w4#"};
 		{ 11, 432780, "", "=q3=The Boomstick", "=ds=#w5#"};
-		Prev = "AuchSethekkTalonKing";
+		Prev = "AuchSethekkTalonKingæ";
 	};
 
 	AtlasLoot_Data["AuchSethekkTalonKing25Man"] = {
@@ -563,8 +563,8 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 24, 432073, "", "=q4=Spaulders of Dementia", "=ds=#s3#, #a4#"};
 		{ 25, 429355, "", "=q4=Terokk's Shadowstaff", "=ds=#w9#", "", "0.16%"};
 		{ 27, 33834, "", "=q1=The Headfeathers of Ikiss", "=ds=#m3#", "", "100%"};
-		Prev = "AuchSethekkDarkweaver";
-		Next = "AuchSethekkRavenGod";
+		Prev = "AuchSethekkDarkweaveræ";
+		Next = "AuchSethekkRavenGodæ";
 	};
 
 		------------------------------------
@@ -682,7 +682,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 18, 30563, "", "=q4=Regal Tanzanite", "=ds=#e7#", "", "16.67%"};
 		{ 19, 30559, "", "=q4=Etched Fire Opal", "=ds=#e7#", "", "17.85%"};
 		{ 20, 30560, "", "=q4=Rune Covered Chrysoprase", "=ds=#e7#", "", "15.47%"};
-		Next = "AuchShadowBlackheart";
+		Next = "AuchShadowBlackheartæ";
 	};
 
 	AtlasLoot_Data["AuchShadowBlackheart25Man"] = {
@@ -699,8 +699,8 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 18, 30563, "", "=q4=Regal Tanzanite", "=ds=#e7#", "", "16.67%"};
 		{ 19, 30559, "", "=q4=Etched Fire Opal", "=ds=#e7#", "", "17.85%"};
 		{ 20, 30560, "", "=q4=Rune Covered Chrysoprase", "=ds=#e7#", "", "15.47%"};
-		Prev = "AuchShadowHellmaw";
-		Next = "AuchShadowGrandmaster";
+		Prev = "AuchShadowHellmawæ";
+		Next = "AuchShadowGrandmasteræ";
 	};
 
 	AtlasLoot_Data["AuchShadowGrandmaster25Man"] = {
@@ -715,8 +715,8 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 18, 30563, "", "=q4=Regal Tanzanite", "=ds=#e7#", "", "16.67%"};
 		{ 19, 30559, "", "=q4=Etched Fire Opal", "=ds=#e7#", "", "17.85%"};
 		{ 20, 30560, "", "=q4=Rune Covered Chrysoprase", "=ds=#e7#", "", "15.47%"};
-		Prev = "AuchShadowBlackheart";
-		Next = "AuchShadowMurmur";
+		Prev = "AuchShadowBlackheartæ";
+		Next = "AuchShadowMurmuræ";
 	};
 
 	AtlasLoot_Data["AuchShadowMurmur25Man"] = {
@@ -744,7 +744,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 25, 429353, "", "=q4=Shockwave Truncheon", "=ds=#h3#, #w6#", "", "10.71%"};
 		{ 27, 31722, "", "=q1=Murmur's Essence", "=ds=#m3#", "", "100%"};
 		{ 28, 33840, "", "=q1=Murmur's Whisper", "=ds=#m3#", "", "100%"};
-		Prev = "AuchShadowGrandmaster";
+		Prev = "AuchShadowGrandmasteræ";
 	};
 
 	AtlasLoot_Data["AuchTrash25Man"] = {
@@ -1298,7 +1298,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 25, 428211, "", "=q3=Lieutenant's Signet of Lordaeron", "=ds=#s13#", "", "5.71%"};
 		{ 26, 428213, "", "=q3=Lordaeron Medical Guide", "=ds=#s15#", "", "8.57%"};
 		{ 27, 428210, "", "=q3=Bloodskull Destroyer", "=ds=#h1#, #w6#", "", "5.71%"};
-		Next = "CoTHillsbradSkarloc";
+		Next = "CoTHillsbradSkarlocæ";
 	};
 
 	AtlasLoot_Data["CoTHillsbradSkarloc25Man"] = {
@@ -1320,8 +1320,8 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 25, 428221, "", "=q3=Boots of the Watchful Heart", "=ds=#s12#, #a4#", "", "0.52%"};
 		{ 26, 428217, "", "=q3=Tarren Mill Vitality Locket", "=ds=#s2#", "", "9.09%"};
 		{ 27, 428216, "", "=q3=Dathrohan's Ceremonial Hammer", "=ds=#h3#, #w6#", "", "6.06%"};
-		Prev = "CoTHillsbradDrake";
-		Next = "CoTHillsbradHunter";
+		Prev = "CoTHillsbradDrakeæ";
+		Next = "CoTHillsbradHunteræ";
 	};
 
 	AtlasLoot_Data["CoTHillsbradHunter25Man"] = {
@@ -1331,7 +1331,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 5, 427440, "", "=q3=Diamond Prism of Recurrence", "=ds=#s2#", "", "16.12%"};
 		{ 6, 427432, "", "=q3=Broxigar's Ring of Valor", "=ds=#s13#", "", "16.35%"};
 		{ 7, 427431, "", "=q3=Time-Shifted Dagger", "=ds=#h3#, #w4#", "", "14.09%"};
-		Prev = "CoTHillsbradSkarloc";
+		Prev = "CoTHillsbradSkarlocæ";
 	};
 
 	AtlasLoot_Data["CoTHillsbradHunter25Man"] = {
@@ -1358,7 +1358,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 23, 428401, "", "=q3=Hauberk of Desolation", "=ds=#s5#, #a3# (D3)", "", "0.14%"};
 		{ 24, 428225, "", "=q3=Doomplate Warhelm", "=ds=#s1#, #a4# (D3)", "", "0.14%"};
 		{ 26, 33847, "", "=q1=Epoch Hunter's Head", "=ds=#m3#", "", "100%"};
-		Prev = "CoTHillsbradSkarloc";
+		Prev = "CoTHillsbradSkarlocæ";
 	};
 
 	AtlasLoot_Data["CoTTrash25Man"] = {
@@ -1455,7 +1455,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 18, 30558, "", "=q4=Glimmering Fire Opal", "=ds=#e7#"};
 		{ 19, 30556, "", "=q4=Glinting Fire Opal", "=ds=#e7#"};
 		{ 20, 30555, "", "=q4=Glowing Tanzanite", "=ds=#e7#"};
-		Next = "CoTMorassTemporus";
+		Next = "CoTMorassTemporusæ";
 	};
 
 	AtlasLoot_Data["CoTMorassTemporus25Man"] = {
@@ -1470,8 +1470,8 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 18, 30558, "", "=q4=Glimmering Fire Opal", "=ds=#e7#"};
 		{ 19, 30556, "", "=q4=Glinting Fire Opal", "=ds=#e7#"};
 		{ 20, 30555, "", "=q4=Glowing Tanzanite", "=ds=#e7#"};
-		Prev = "CoTMorassDeja";
-		Next = "CoTMorassAeonus";
+		Prev = "CoTMorassDejaæ";
+		Next = "CoTMorassAeonusæ";
 	};
 
 	AtlasLoot_Data["CoTMorassAeonus25Man"] = {
@@ -1497,7 +1497,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 24, 429253, "", "=q4=Girdle of Valorous Deeds", "=ds=#s10#, #a4#"};
 		{ 25, 429356, "", "=q4=Quantum Blade", "=ds=#h2#, #w10#"};
 		{ 27, 33858, "", "=q1=Aeonus's Hourglass", "=ds=#m3#", "", "100%"};
-		Prev = "CoTMorassTemporus";
+		Prev = "CoTMorassTemporusæ";
 	};
 
 		-------------------------------------
@@ -1834,7 +1834,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 26, 427544, "", "=q3=Totem of Spontaneous Regrowth", "=ds=#s16#, #w15#", "", "12.25%"};
 		{ 27, 427543, "", "=q3=Starlight Dagger", "=ds=#h3#, #w4#", "", "20.00%"};
 		{ 29, 29674, "", "=q2=Pattern: Nature Armor Kit", "=ds=#p7# (340)", "", "0.80%"};
-		Next = "CFRSlaveRokmar";
+		Next = "CFRSlaveRokmaræ";
 	};
 
 	AtlasLoot_Data["CFRSlaveRokmar25Man"] = {
@@ -1855,8 +1855,8 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 25, 427549, "", "=q3=Wavefury Boots", "=ds=#s12#, #a3#", "", "9.80%"};
 		{ 26, 427548, "", "=q3=Girdle of Many Blessings", "=ds=#s10#, #a4#", "", "14.85%"};
 		{ 27, 427551, "", "=q3=Skeletal Necklace of Battlerage", "=ds=#s2#", "", "16.25%"};
-		Prev = "CFRSlaveMennu";
-		Next = "CFRSlaveQuagmirran";
+		Prev = "CFRSlaveMennuæ";
+		Next = "CFRSlaveQuagmirranæ";
 	};
 
 	AtlasLoot_Data["CFRSlaveQuagmirran25Man"] = {
@@ -1887,7 +1887,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 28, 424366, "", "=q3=Scorpid-Sting Mantle", "=ds=#s3#, #a3#", "", "11.72%"};
 		{ 29, 424363, "", "=q3=Unscarred Breastplate", "=ds=#s5#, #a4#", "", "9.54%"};
 		{ 30, 424364, "", "=q3=Azureplate Greaves", "=ds=#s11#, #a4#", "", "9.98%"};
-		Prev = "CFRSlaveRokmar";
+		Prev = "CFRSlaveRokmaræ";
 	};
 
 		------------------------------------------
@@ -1980,7 +1980,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 18, 30550, "", "=q4=Sundered Chrysoprase", "=ds=#e7#", "", "8.59%"};
 		{ 19, 30551, "", "=q4=Infused Fire Opal", "=ds=#e7#", "", "6.64%"};
 		{ 20, 30549, "", "=q4=Shifting Tanzanite", "=ds=#e7#", "", "1.56%"};
-		Next = "CFRSteamSteamrigger";
+		Next = "CFRSteamSteamriggeræ";
 	};
 
 	AtlasLoot_Data["CFRSteamSteamrigger25Man"] = {
@@ -1995,8 +1995,8 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 18, 30550, "", "=q4=Sundered Chrysoprase", "=ds=#e7#", "", "8.59%"};
 		{ 19, 30551, "", "=q4=Infused Fire Opal", "=ds=#e7#", "", "6.64%"};
 		{ 20, 30549, "", "=q4=Shifting Tanzanite", "=ds=#e7#", "", "1.56%"};
-		Prev = "CFRSteamThespia";
-		Next = "CFRSteamWarlord";
+		Prev = "CFRSteamThespiaæ";
+		Next = "CFRSteamWarlordæ";
 	};
 
 	AtlasLoot_Data["CFRSteamWarlord25Man"] = {
@@ -2024,7 +2024,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 24, 429351, "", "=q4=Wrathtide Longbow", "=ds=#w2#", "", "3.52%"};
 		{ 26, 31721, "", "=q1=Kalithresh's Trident", "=ds=#m3#", "", "100%"};
 		{ 27, 33827, "", "=q1=The Warlord's Treatise", "=ds=#m3#", "", "100%"};
-		Prev = "CFRSteamSteamrigger";
+		Prev = "CFRSteamSteamriggeræ";
 	};
 
 	AtlasLoot_Data["CFRSteamTrash25Man"] = {
@@ -2163,7 +2163,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 25, 427748, "", "=q3=Cassock of the Loyal", "=ds=#s11#, #a4#", "", "7.39%"};
 		{ 26, 427744, "", "=q3=Idol of Ursoc", "=ds=#s16#, #w14#", "", "16.26%"};
 		{ 27, 427747, "", "=q3=Boggspine Knuckles", "=ds=#h4#, #w13#", "", "12.81%"};
-		Next = "CFRUnderGhazan";
+		Next = "CFRUnderGhazanæ";
 	};
 
 	AtlasLoot_Data["CFRUnderGhazan25Man"] = {
@@ -2184,8 +2184,8 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 25, 427758, "", "=q3=Hydra-fang Necklace", "=ds=#s2#", "", "12.00%"};
 		{ 26, 427761, "", "=q3=Ring of the Shadow Deeps", "=ds=#s13#", "", "18.67%"};
 		{ 27, 427757, "", "=q3=Greatstaff of the Leviathan", "=ds=#w9#", "", "16.00%"};
-		Prev = "CFRUnderHungarfen";
-		Next = "CFRUnderSwamplord";
+		Prev = "CFRUnderHungarfenæ";
+		Next = "CFRUnderSwamplordæ";
 	};
 
 	AtlasLoot_Data["CFRUnderSwamplord25Man"] = {
@@ -2206,8 +2206,8 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 25, 427766, "", "=q3=Swampstone Necklace", "=ds=#s2#", "", "17.14%"};
 		{ 26, 427762, "", "=q3=Weathered Band of the Swamplord", "=ds=#s13#"};
 		{ 27, 427767, "", "=q3=Bogreaver", "=ds=#h1#, #w1#", "", "9.29%"};
-		Prev = "CFRUnderGhazan";
-		Next = "CFRUnderStalker";
+		Prev = "CFRUnderGhazanæ";
+		Next = "CFRUnderStalkeræ";
 	};
 
 	AtlasLoot_Data["CFRUnderStalker25Man"] = {
@@ -2217,7 +2217,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 4, 424463, "", "=q3=Pauldrons of Brute Force", "=ds=#s3#, #a4#", "", "11.95%"};
 		{ 5, 424464, "", "=q3=The Stalker's Fangs", "=ds=#h1#, #w4#", "", "14.31%"};
 		{ 7, 24248, "", "=q1=Brain of the Black Stalker", "=ds=#m3#", "", "100%"};
-		Prev = "CFRUnderSwamplord";
+		Prev = "CFRUnderSwamplordæ";
 	};
 
 	AtlasLoot_Data["CFRUnderStalker25Man"] = {
@@ -2243,7 +2243,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 24, 427772, "", "=q3=Stormshield of Renewal", "=ds=#w8#", "", "13.01%"};
 		{ 26, 24248, "", "=q1=Brain of the Black Stalker", "=ds=#m3#", "", "100%"};
 		{ 27, 33826, "", "=q1=Black Stalker Egg", "=ds=#m3#", "", "100%"};
-		Prev = "CFRUnderSwamplord";
+		Prev = "CFRUnderSwamplordæ";
 	};
 
 		------------------------------------------------
@@ -2917,7 +2917,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 25, 427447, "", "=q3=Bracers of Just Rewards", "=ds=#s8#, #a4#", "", "13.84%"};
 		{ 26, 427449, "", "=q3=Blood Knight Defender", "=ds=#w8#", "", "13.15%"};
 		{ 28, 23881, "", "=q1=Gargolmar's Hand", "=ds=#m3#", "", "100%"};
-		Next = "HCRampOmor";
+		Next = "HCRampOmoræ";
 	};
 
 	AtlasLoot_Data["HCRampOmor25Man"] = {
@@ -2946,7 +2946,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 26, 424094, "", "=q3=Heart Fire Warhammer", "=ds=#h2#, #w6#", "", "14.76%"};
 		{ 27, 424069, "", "=q3=Crystalfire Staff", "=ds=#w9#", "", "12.43%"};
 		{ 29, 23886, "", "=q1=Omor's Hoof", "=ds=#m3#", "", "100%"};
-		Prev = "HCRampWatchkeeper";
+		Prev = "HCRampWatchkeeperæ";
 		Next = "HCRampVazruden25ManHEROIC";
 	};
 
@@ -2966,7 +2966,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 17, 23892, "", "=q1=Ominous Letter", "=ds=#m2#", "", "100%"};
 		{ 19, 0, "INV_Box_01", "=q6="..BabbleBoss["Nazan"], ""};
 		{ 20, 23901, "", "=q1=Nazan's Head", "=ds=#m3#", "", "100%"};
-		Prev = "HCRampOmor";
+		Prev = "HCRampOmoræ";
 		Next = "HCRampVazruden225ManHEROIC";
 	};
 
@@ -3093,7 +3093,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 24, 427483, "", "=q3=Moon-Touched Bands", "=ds=#s8#, #a2#", "", "25.00%"};
 		{ 25, 427487, "", "=q3=Bloodlord Legplates", "=ds=#s11#, #a4#", "", "9.26%"};
 		{ 26, 427484, "", "=q3=Libram of Avengement", "=ds=#s16#, #w16#", "", "14.81%"};
-		Next = "HCFurnaceBroggok";
+		Next = "HCFurnaceBroggokæ";
 	};
 
 	AtlasLoot_Data["HCFurnaceBroggok25Man"] = {
@@ -3113,8 +3113,8 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 24, 427489, "", "=q3=Virtue Bearer's Vambraces", "=ds=#s8#, #a4#", "", "22.22%"};
 		{ 25, 427491, "", "=q3=Signet of Repose", "=ds=#s13#", "", "30.56%"};
 		{ 26, 427490, "", "=q3=Firebrand Battleaxe", "=ds=#h1#, #w1#", "", "9.72%"};
-		Prev = "HCFurnaceMaker";
-		Next = "HCFurnaceBreaker";
+		Prev = "HCFurnaceMakeræ";
+		Next = "HCFurnaceBreakeræ";
 	};
 
 	AtlasLoot_Data["HCFurnaceBreaker25Man"] = {
@@ -3145,7 +3145,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 28, 424398, "", "=q3=Mantle of the Dusk-Dweller", "=ds=#s3#, #a2#", "", "14.29%"};
 		{ 29, 424396, "", "=q3=Vest of Vengeance", "=ds=#s5#, #a2#", "", "15.46%"};
 		{ 30, 424394, "", "=q3=Warsong Howling Axe", "=ds=#h2#, #w1#", "", "15.52%"};
-		Prev = "HCFurnaceBroggok";
+		Prev = "HCFurnaceBroggokæ";
 	};
 
 		---------------------------------------------
@@ -3250,7 +3250,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 20, 30547, "", "=q4=Luminous Fire Opal", "=ds=#e7#", "", "0.19%"};
 		{ 21, 30546, "", "=q4=Sovereign Tanzanite", "=ds=#e7#", "", "3.39%"};
 		{ 23, 25462, "", "=q1=Tome of Dusk", "=ds=#m3#", "", "100%"};
-		Next = "HCHallsOmrogg";
+		Next = "HCHallsOmroggæ";
 	};
 
 	AtlasLoot_Data["HCHallsPorung25Man"] = {
@@ -3277,8 +3277,8 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 18, 30548, "", "=q4=Polished Chrysoprase", "=ds=#e7#", "", "0.16%"};
 		{ 19, 30547, "", "=q4=Luminous Fire Opal", "=ds=#e7#", "", "0.19%"};
 		{ 20, 30546, "", "=q4=Sovereign Tanzanite", "=ds=#e7#", "", "3.39%"};
-		Prev = "HCHallsNethekurse";
-		Next = "HCHallsKargath";
+		Prev = "HCHallsNethekurseæ";
+		Next = "HCHallsKargathæ";
 	};
 
 	AtlasLoot_Data["HCHallsKargath25Man"] = {
@@ -3305,7 +3305,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 24, 429254, "", "=q4=Boots of the Righteous Path", "=ds=#s12#, #a4#"};
 		{ 25, 429348, "", "=q4=The Bladefist", "=ds=#h3#, #w13#", "", "3.39%"};
 		{ 27, 33815, "", "=q1=Bladefist's Seal", "=ds=#m3#", "", "100%"};
-		Prev = "HCHallsOmrogg";
+		Prev = "HCHallsOmroggæ";
 	};
 
 	AtlasLoot_Data["HCHallsTrash25Man"] = {
@@ -4798,7 +4798,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 18, 30582, "", "=q4=Deadly Fire Opal", "=ds=#e7#", "", "0.18%"};
 		{ 19, 30575, "", "=q4=Nimble Fire Opal", "=ds=#e7#", "", "0.18%"};
 		{ 20, 30581, "", "=q4=Durable Fire Opal", "=ds=#e7#", "", "0.18%"};
-		Next = "TKArcScryer";
+		Next = "TKArcScryeræ";
 	};
 
 	AtlasLoot_Data["TKArcScryer25Man"] = {
@@ -4812,8 +4812,8 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 18, 30582, "", "=q4=Deadly Fire Opal", "=ds=#e7#", "", "0.18%"};
 		{ 19, 30575, "", "=q4=Nimble Fire Opal", "=ds=#e7#", "", "0.18%"};
 		{ 20, 30581, "", "=q4=Durable Fire Opal", "=ds=#e7#", "", "0.18%"};
-		Prev = "TKArcUnbound";
-		Next = "TKArcDalliah";
+		Prev = "TKArcUnboundæ";
+		Next = "TKArcDalliahæ";
 	};
 
 	AtlasLoot_Data["TKArcDalliah25Man"] = {
@@ -4828,8 +4828,8 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 18, 30582, "", "=q4=Deadly Fire Opal", "=ds=#e7#", "", "0.18%"};
 		{ 19, 30575, "", "=q4=Nimble Fire Opal", "=ds=#e7#", "", "0.18%"};
 		{ 20, 30581, "", "=q4=Durable Fire Opal", "=ds=#e7#", "", "0.18%"};
-		Prev = "TKArcScryer";
-		Next = "TKArcHarbinger";
+		Prev = "TKArcScryeræ";
+		Next = "TKArcHarbingeræ";
 	};
 
 	AtlasLoot_Data["TKArcHarbinger25Man"] = {
@@ -4855,7 +4855,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 24, 429252, "", "=q4=Bracers of Dignity", "=ds=#s8#, #a4#", "", "3.03%"};
 		{ 25, 429360, "", "=q4=Vileblade of the Betrayer", "=ds=#h1#, #w4#", "", "0.18%"};
 		{ 27, 33861, "", "=q1=The Scroll of Skyriss", "=ds=#m3#", "", "100%"};
-		Prev = "TKArcDalliah";
+		Prev = "TKArcDalliahæ";
 	};
 
 	AtlasLoot_Data["TKTrash25Man"] = {
@@ -5005,7 +5005,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 18, 30574, "", "=q4=Brutal Tanzanite", "=ds=#e7#", "", "8.00%"};
 		{ 19, 30572, "", "=q4=Imperial Tanzanite", "=ds=#e7#", "", "8.00%"};
 		{ 20, 30573, "", "=q4=Mysterious Fire Opal", "=ds=#e7#", "", "8.00%"};
-		Next = "TKBotFreywinn";
+		Next = "TKBotFreywinnæ";
 	};
 
 	AtlasLoot_Data["TKBotFreywinn25Man"] = {
@@ -5021,8 +5021,8 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 18, 30574, "", "=q4=Brutal Tanzanite", "=ds=#e7#", "", "8.00%"};
 		{ 19, 30572, "", "=q4=Imperial Tanzanite", "=ds=#e7#", "", "8.00%"};
 		{ 20, 30573, "", "=q4=Mysterious Fire Opal", "=ds=#e7#", "", "8.00%"};
-		Prev = "TKBotSarannis";
-		Next = "TKBotThorngrin";
+		Prev = "TKBotSarannisæ";
+		Next = "TKBotThorngrinæ";
 	};
 
 	AtlasLoot_Data["TKBotThorngrin25Man"] = {
@@ -5037,8 +5037,8 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 18, 30574, "", "=q4=Brutal Tanzanite", "=ds=#e7#", "", "8.00%"};
 		{ 19, 30572, "", "=q4=Imperial Tanzanite", "=ds=#e7#", "", "8.00%"};
 		{ 20, 30573, "", "=q4=Mysterious Fire Opal", "=ds=#e7#", "", "8.00%"};
-		Prev = "TKBotFreywinn";
-		Next = "TKBotLaj";
+		Prev = "TKBotFreywinnæ";
+		Next = "TKBotLajæ";
 	};
 
 	AtlasLoot_Data["TKBotLaj25Man"] = {
@@ -5052,8 +5052,8 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 18, 30574, "", "=q4=Brutal Tanzanite", "=ds=#e7#", "", "8.00%"};
 		{ 19, 30572, "", "=q4=Imperial Tanzanite", "=ds=#e7#", "", "8.00%"};
 		{ 20, 30573, "", "=q4=Mysterious Fire Opal", "=ds=#e7#", "", "8.00%"};
-		Prev = "TKBotThorngrin";
-		Next = "TKBotSplinter";
+		Prev = "TKBotThorngrinæ";
+		Next = "TKBotSplinteræ";
 	};
 
 	AtlasLoot_Data["TKBotSplinter25Man"] = {
@@ -5072,7 +5072,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 18, 428349, "", "=q3=Tidefury Helm", "=ds=#s1#, #a3# (D3)", "", "13.85%"};
 		{ 19, 428228, "", "=q3=Beast Lord Curiass", "=ds=#s5#, #a3# (D3)", "", "9.59%"};
 		{ 20, 428350, "", "=q3=Warhelm of the Bold", "=ds=#s1#, #a4# (D3)", "", "8.96%"};
-		Prev = "TKBotLaj";
+		Prev = "TKBotLajæ";
 	};
 
 	AtlasLoot_Data["TKBotSplinter25Man"] = {
@@ -5100,7 +5100,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 24, 428350, "", "=q3=Warhelm of the Bold", "=ds=#s1#, #a4# (D3)", "", "16.00%"};
 		{ 26, 31085, "", "=q1=Top Shard of the Arcatraz Key", "=ds=#m3#", "", "100%"};
 		{ 27, 33859, "", "=q1=Warp Splinter Clipping", "=ds=#m3#", "", "100%"};
-		Prev = "TKBotLaj";
+		Prev = "TKBotLajæ";
 	};
 
 		----------------------------------
@@ -5215,7 +5215,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 17, 30436, "", "=q1=Jagged Blue Crystal", "=ds=#e9#", "", "100%"};
 		{ 19, 0, "INV_Box_01", "=q6="..BabbleBoss["Gatewatcher Iron-Hand"], ""};
 		{ 20, 30437, "", "=q1=Jagged Red Crystal", "=ds=#e9#", "", "100%"};
-		Next = "TKMechCapacitus";
+		Next = "TKMechCapacitusæ";
 	};
 
 	AtlasLoot_Data["TKMechCapacitus25Man"] = {
@@ -5230,8 +5230,8 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 18, 30565, "", "=q4=Assassin's Fire Opal", "=ds=#e7#", "", "18.72%"};
 		{ 19, 30566, "", "=q4=Defender's Tanzanite", "=ds=#e7#", "", "8.87%"};
 		{ 20, 30564, "", "=q4=Shining Fire Opal", "=ds=#e7#", "", "3.45%"};
-		Prev = "TKMechCacheoftheLegion";
-		Next = "TKMechSepethrea";
+		Prev = "TKMechCacheoftheLegionææ";
+		Next = "TKMechSepethreaæ";
 	};
 
 	AtlasLoot_Data["TKMechSepethrea25Man"] = {
@@ -5246,8 +5246,8 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 18, 30565, "", "=q4=Assassin's Fire Opal", "=ds=#e7#", "", "18.72%"};
 		{ 19, 30566, "", "=q4=Defender's Tanzanite", "=ds=#e7#", "", "8.87%"};
 		{ 20, 30564, "", "=q4=Shining Fire Opal", "=ds=#e7#", "", "3.45%"};
-		Prev = "TKMechCapacitus";
-		Next = "TKMechCalc";
+		Prev = "TKMechCapacitusæ";
+		Next = "TKMechCalcæ";
 	};
 
 	AtlasLoot_Data["TKMechCalc25Man"] = {
@@ -5265,7 +5265,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 18, 428204, "", "=q3=Tunic of Assassination", "=ds=#s5#, #a2# (D3)", "", "12.44%"};
 		{ 19, 428275, "", "=q3=Beast Lord Helm", "=ds=#s1#, #a3# (D3)", "", "12.37%"};
 		{ 20, 428285, "", "=q3=Helm of the Righteous", "=ds=#s1#, #a4# (D3)", "", "10.88%"};
-		Prev = "TKMechSepethrea";
+		Prev = "TKMechSepethreaæ";
 	};
 
 	AtlasLoot_Data["TKMechCalc25Man"] = {
@@ -5292,7 +5292,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 24, 428285, "", "=q3=Helm of the Righteous", "=ds=#s1#, #a4# (D3)", "", "10.34%"};
 		{ 26, 33860, "", "=q1=Pathaleon's Projector", "=ds=#m3#", "", "100%"};
 		{ 27, 31086, "", "=q1=Bottom Shard of the Arcatraz Key", "=ds=#m3#", "", "100%"};
-		Prev = "TKMechSepethrea";
+		Prev = "TKMechSepethreaæ";
 	};
 
 		-----------------------------
