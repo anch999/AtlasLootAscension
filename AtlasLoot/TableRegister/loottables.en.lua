@@ -2496,6 +2496,19 @@ end
 	AtlasLoot_TableNames["JewelcraftingDaily4"] = { AL["Jewelcrafting Daily"], "AtlasLootCrafting" };
 	AtlasLoot_TableNames["JewelcraftingDaily5"] = { AL["Jewelcrafting Daily"], "AtlasLootCrafting" };
 	AtlasLoot_TableNames["JewelcraftingDaily6"] = { AL["Jewelcrafting Daily"], "AtlasLootCrafting" };
+	
+	AtlasLoot_TableNames["AlchemyHighRisk1"] = { ALCHEMY, "AtlasLootCrafting" };
+	AtlasLoot_TableNames["AlchemyHighRisk2"] = { ALCHEMY, "AtlasLootCrafting" };
+	AtlasLoot_TableNames["SmithingHighRisk"] = { BLACKSMITHING, "AtlasLootCrafting" };
+	AtlasLoot_TableNames["EnchantingHighRisk"] = { ENCHANTING, "AtlasLootCrafting" };
+	AtlasLoot_TableNames["EngineerHighRisk"] = { ENGINEERING, "AtlasLootCrafting" };
+	AtlasLoot_TableNames["LeatherHighRisk"] = { LEATHERWORKING, "AtlasLootCrafting" };
+	AtlasLoot_TableNames["TailorHighRisk"] = { TAILORING, "AtlasLootCrafting" };
+	AtlasLoot_TableNames["CookingHighRisk1"] = { COOKING, "AtlasLootCrafting" };
+	AtlasLoot_TableNames["CookingHighRisk2"] = { COOKING, "AtlasLootCrafting" };
+	AtlasLoot_TableNames["CookingHighRisk3"] = { COOKING, "AtlasLootCrafting" };
+	AtlasLoot_TableNames["CookingHighRisk4"] = { COOKING, "AtlasLootCrafting" };
+	AtlasLoot_TableNames["CookingHighRisk5"] = { COOKING, "AtlasLootCrafting" };
 
 -----------
 --- PvP ---
@@ -2648,3 +2661,5 @@ end
 	AtlasLoot_TableNames["EmptyTable"] = { AL["Select a Loot Table..."], "Menu" };
 	AtlasLoot_TableNames["EmptyInstance"] = { "AtlasLoot", "AtlasLootFallback" };
 	AtlasLoot_TableNames["AtlasLootFallback"] = { "AtlasLoot", "AtlasLootFallback" };
+	
+	
