@@ -5704,7 +5704,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 11, "s968433", "967474", "=q3=Potent Flask of Adept Striking", 		"=ds=#sr# 300"};
 		Back = "ALCHEMYMENU";
 	};
-	
+
 	AtlasLoot_Data["AlchemyHighRisk25ManHEROIC"] = {	
 		{ 1, "s968404", "967445",  "=q4=Distilled Flask of Manifesting Power", 	"=ds=#sr# 300"};
 		{ 2, "s968407", "967448",  "=q4=Distilled Flask of the Warsong", "=ds=#sr# 300"};
@@ -5729,26 +5729,30 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 6, "s968033", "967187", "=q2=Cleric's Belt Buckle", "=ds=#sr# 300"};
 		{ 7, "s968036", "967190", "=q2=Warlord's Belt Buckle", "=ds=#sr# 300"};
 		{ 8, "s968039", "967193", "=q2=Gaurdian's Belt Buckle", "=ds=#sr# 300"};
-		
-		{ 12, "s968020", "967174", "=q4=Mastercraft Living Belt Buckle", "=ds=#sr# 300"};
-		{ 13, "s968023", "967177", "=q4=Mastercraft Deflecting Belt Buckle", "=ds=#sr# 300"};
-		{ 14, "s968026", "967180", "=q4=Mastercraft Roguish Belt Buckle", "=ds=#sr# 300"};
-		{ 15, "s968029", "967183", "=q4=Mastercraft Dancing Belt Buckle", "=ds=#sr# 300"};
-		
-		{ 16, "s968019", "967173", "=q3=Sturdy Living Belt Buckle", "=ds=#sr# 300"};
-		{ 17, "s968022", "967176", "=q3=Sturdy Deflecting Belt Buckle", "=ds=#sr# 300"};
-		{ 18, "s968025", "967179", "=q3=Sturdy Roguish Belt Buckle", "=ds=#sr# 300"};
-		{ 19, "s968028", "967182", "=q3=Sturdy Dancing Belt Buckle", "=ds=#sr# 300"};
-		{ 20, "s968031", "967185", "=q3=Sturdy Magus Belt Buckle", 	"=ds=#sr# 300"};
-		{ 21, "s968034", "967188", "=q3=Sturdy Cleric's Belt Buckle", "=ds=#sr# 300"};
-		{ 22, "s968037", "967191", "=q3=Sturdy Warlord's Belt Buckle", "=ds=#sr# 300"};
-		{ 23, "s968040", "967194", "=q3=Sturdy Gaurdian's Belt Buckle", "=ds=#sr# 300"};
-		
-		{ 27, "s968032", "967186", "=q4=Mastercraft Magus Belt Buckle", "=ds=#sr# 300"};
-		{ 28, "s968035", "967189", "=q4=Mastercraft Cleric's Belt Buckle", "=ds=#sr# 300"};
-		{ 29, "s968038", "967192", "=q4=Mastercraft Warlord's Belt Buckle", "=ds=#sr# 300"};
-		{ 30, "s968041", "967195", "=q4=Mastercraft Gaurdian's Belt Buckle", "=ds=#sr# 300"};
+		Back = "SMITHINGMENU";
+	};
 
+	AtlasLoot_Data["SmithingHighRisk25Man"] = {
+		{ 1, "s968019", "967173", "=q3=Sturdy Living Belt Buckle", "=ds=#sr# 300"};
+		{ 2, "s968022", "967176", "=q3=Sturdy Deflecting Belt Buckle", "=ds=#sr# 300"};
+		{ 3, "s968025", "967179", "=q3=Sturdy Roguish Belt Buckle", "=ds=#sr# 300"};
+		{ 4, "s968028", "967182", "=q3=Sturdy Dancing Belt Buckle", "=ds=#sr# 300"};
+		{ 5, "s968031", "967185", "=q3=Sturdy Magus Belt Buckle", 	"=ds=#sr# 300"};
+		{ 6, "s968034", "967188", "=q3=Sturdy Cleric's Belt Buckle", "=ds=#sr# 300"};
+		{ 7, "s968037", "967191", "=q3=Sturdy Warlord's Belt Buckle", "=ds=#sr# 300"};
+		{ 8, "s968040", "967194", "=q3=Sturdy Gaurdian's Belt Buckle", "=ds=#sr# 300"};
+		Back = "SMITHINGMENU";
+	};
+
+	AtlasLoot_Data["SmithingHighRisk25ManHEROIC"] = {
+		{ 1, "s968020", "967174", "=q4=Mastercraft Living Belt Buckle", "=ds=#sr# 300"};
+		{ 2, "s968023", "967177", "=q4=Mastercraft Deflecting Belt Buckle", "=ds=#sr# 300"};
+		{ 3, "s968026", "967180", "=q4=Mastercraft Roguish Belt Buckle", "=ds=#sr# 300"};
+		{ 4, "s968029", "967183", "=q4=Mastercraft Dancing Belt Buckle", "=ds=#sr# 300"};
+		{ 5, "s968032", "967186", "=q4=Mastercraft Magus Belt Buckle", "=ds=#sr# 300"};
+		{ 6, "s968035", "967189", "=q4=Mastercraft Cleric's Belt Buckle", "=ds=#sr# 300"};
+		{ 7, "s968038", "967192", "=q4=Mastercraft Warlord's Belt Buckle", "=ds=#sr# 300"};
+		{ 8, "s968041", "967195", "=q4=Mastercraft Gaurdian's Belt Buckle", "=ds=#sr# 300"};
 		Back = "SMITHINGMENU";
 	};
 	
@@ -5759,22 +5763,26 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 4, "s968009", "967163", "=q2=Sandworm Gambeson", 				"=ds=#sr# 300"};
 		{ 5, "s968012", "967166", "=q2=Black Scale Gambeson", 				"=ds=#sr# 300"};
 		{ 6, "s968015", "967169", "=q2=Blue Scale Gambeson", 				"=ds=#sr# 300"};
-		
-		{ 13, "s968002", "967156", "=q4=Mastercraft Yeti Gambeson", 			"=ds=#sr# 300"};
-		{ 14, "s968005", "967159", "=q4=Mastercraft Devilsaur Gambeson", 	"=ds=#sr# 300"};
-		{ 15, "s968008", "967162", "=q4=Mastercraft Plaguebat Gambeson", 	"=ds=#sr# 300"};
-		
-		{ 16, "s968001", "967155", "=q3=Sturdy Yeti Gambeson", 				"=ds=#sr# 300"};
-		{ 17, "s968004", "967158", "=q3=Sturdy Devilsaur Gambeson", 			"=ds=#sr# 300"};
-		{ 18, "s968007", "967161", "=q3=Sturdy Plaguebat Gambeson", 			"=ds=#sr# 300"};
-		{ 19, "s968010", "967164", "=q3=Sturdy Sandworm Gambeson", 			"=ds=#sr# 300"};
-		{ 20, "s968013", "967167", "=q3=Sturdy Black Scale Gambeson", 		"=ds=#sr# 300"};
-		{ 21, "s968016", "967170", "=q3=Sturdy Blue Scale Gambeson", 		"=ds=#sr# 300"};
-		
-		{ 28, "s968011", "967165", "=q4=Mastercraft Sandworm Gambeson", 	"=ds=#sr# 300"};	
-		{ 29, "s968014", "967168", "=q4=Mastercraft Black Scale Gambeson", 	"=ds=#sr# 300"};
-		{ 30, "s968017", "967171", "=q4=Mastercraft Blue Scale Gambeson", 	"=ds=#sr# 300"};
-
+		Back = "LEATHERWORKINGMENU";
+	};
+	
+	AtlasLoot_Data["LeatherHighRisk25Man"] = {
+		{ 1, "s968001", "967155", "=q3=Sturdy Yeti Gambeson", 				"=ds=#sr# 300"};
+		{ 2, "s968004", "967158", "=q3=Sturdy Devilsaur Gambeson", 			"=ds=#sr# 300"};
+		{ 3, "s968007", "967161", "=q3=Sturdy Plaguebat Gambeson", 			"=ds=#sr# 300"};
+		{ 4, "s968010", "967164", "=q3=Sturdy Sandworm Gambeson", 			"=ds=#sr# 300"};
+		{ 5, "s968013", "967167", "=q3=Sturdy Black Scale Gambeson", 		"=ds=#sr# 300"};
+		{ 6, "s968016", "967170", "=q3=Sturdy Blue Scale Gambeson", 		"=ds=#sr# 300"};
+		Back = "LEATHERWORKINGMENU";
+	};
+	
+	AtlasLoot_Data["LeatherHighRisk25ManHEROIC"] = {
+		{ 1, "s968002", "967156", "=q4=Mastercraft Yeti Gambeson", 			"=ds=#sr# 300"};
+		{ 2, "s968005", "967159", "=q4=Mastercraft Devilsaur Gambeson", 	"=ds=#sr# 300"};
+		{ 3, "s968008", "967162", "=q4=Mastercraft Plaguebat Gambeson", 	"=ds=#sr# 300"};
+		{ 4, "s968011", "967165", "=q4=Mastercraft Sandworm Gambeson", 	"=ds=#sr# 300"};	
+		{ 5, "s968014", "967168", "=q4=Mastercraft Black Scale Gambeson", 	"=ds=#sr# 300"};
+		{ 6, "s968017", "967171", "=q4=Mastercraft Blue Scale Gambeson", 	"=ds=#sr# 300"};
 		Back = "LEATHERWORKINGMENU";
 	};
 	
@@ -5782,57 +5790,68 @@ local MASTER = select(2, GetSpellInfo(28596));
         { 1, "s968042", "967196", "=q2=Gnomish Magnifying Lense I", "=ds=#sr# 300"};
 		{ 2, "s968045", "967199", "=q2=Gnomish Focusing Lense", "=ds=#sr# 300"};
 		{ 3, "s968048", "967202", "=q2=Gnomish Prismatic Lense", "=ds=#sr# 300"};
-		{ 4,  "s968051", "967205", "=q2=Hipfire Scope", "=ds=#sr# 300"};
-		{ 5,  "s968054", "967208", "=q2=Precision Scope", "=ds=#sr# 300"};
-		{ 6,  "s968057", "967211", "=q2=Reflex Scope", "=ds=#sr# 300"};
-		
-		{ 13,"s968044", "967198", "=q4=Polished Gnomish Magnifying Lense", "=ds=#sr# 300"};
-		{ 14,"s968047", "967201", "=q4=Polished Gnomish Focusing Lense", "=ds=#sr# 300"};
-		{ 15,"s968050", "967204", "=q4=Polished Gnomish Prismatic Lense", "=ds=#sr# 300"};
-		
-		{ 16,"s968043", "967197", "=q3=Focused Gnomish Magnifying Lense", "=ds=#sr# 300"};
-		{ 17,"s968046", "967200", "=q3=Focused Gnomish Focusing Lense", "=ds=#sr# 300"};
-		{ 18,"s968049", "967203", "=q3=Focused Gnomish Prismatic Lense", "=ds=#sr# 300"};
-		{ 19, "s968052", "967206", "=q3=Focused Hipfire Scope", "=ds=#sr# 300"};
-		{ 20, "s968055", "967209", "=q3=Focused Precision Scope", "=ds=#sr# 300"};
-		{ 21, "s968058", "967212", "=q3=Focused Reflex Scope", "=ds=#sr# 300"};
-		
-		{ 28, "s968053", "967207", "=q4=Polished Hipfire Scope", "=ds=#sr# 300"};
-		{ 29, "s968056", "967210", "=q4=Polished Precision Scope", "=ds=#sr# 300"};
-		{ 30, "s968059", "967213", "=q4=Polished Reflex Scope", "=ds=#sr# 300"};
-
+		{ 4, "s968051", "967205", "=q2=Hipfire Scope", "=ds=#sr# 300"};
+		{ 5, "s968054", "967208", "=q2=Precision Scope", "=ds=#sr# 300"};
+		{ 6, "s968057", "967211", "=q2=Reflex Scope", "=ds=#sr# 300"};
+		Back = "ENGINEERINGMENU";
+	};
+	
+	AtlasLoot_Data["EngineerHighRisk25Man"] = {
+		{ 1, "s968043", "967197", "=q3=Focused Gnomish Magnifying Lense", "=ds=#sr# 300"};
+		{ 2, "s968046", "967200", "=q3=Focused Gnomish Focusing Lense", "=ds=#sr# 300"};
+		{ 3, "s968049", "967203", "=q3=Focused Gnomish Prismatic Lense", "=ds=#sr# 300"};
+		{ 4, "s968052", "967206", "=q3=Focused Hipfire Scope", "=ds=#sr# 300"};
+		{ 5, "s968055", "967209", "=q3=Focused Precision Scope", "=ds=#sr# 300"};
+		{ 6, "s968058", "967212", "=q3=Focused Reflex Scope", "=ds=#sr# 300"};
+		Back = "ENGINEERINGMENU";
+	};
+	
+	AtlasLoot_Data["EngineerHighRisk25ManHEROIC"] = {
+		{ 1, "s968044", "967198", "=q4=Polished Gnomish Magnifying Lense", "=ds=#sr# 300"};
+		{ 2, "s968047", "967201", "=q4=Polished Gnomish Focusing Lense", "=ds=#sr# 300"};
+		{ 3, "s968050", "967204", "=q4=Polished Gnomish Prismatic Lense", "=ds=#sr# 300"};
+		{ 4, "s968053", "967207", "=q4=Polished Hipfire Scope", "=ds=#sr# 300"};
+		{ 5, "s968056", "967210", "=q4=Polished Precision Scope", "=ds=#sr# 300"};
+		{ 6, "s968059", "967213", "=q4=Polished Reflex Scope", "=ds=#sr# 300"};
 		Back = "ENGINEERINGMENU";
 	};
 	
 	AtlasLoot_Data["EnchantingHighRisk"] = {
-        { 19, "s968676", "Spell_Holy_GreaterHeal", "=q2=Enchant Weapon - Lesser Unstoppable Assault", "=ds=#sr# 300"};
-		{ 10, "s968677", "Spell_Holy_GreaterHeal", "=q3=Enchant Weapon - Unstoppable Assault", "=ds=#sr# 300"};
+        { 1, "s968676", "Spell_Holy_GreaterHeal", "=q2=Enchant Weapon - Lesser Unstoppable Assault", "=ds=#sr# 300"};
+		{ 2, "s968679", "Spell_Holy_GreaterHeal", "=q2=Enchant Weapon - Lesser Lucid Assault", "=ds=#sr# 300"};
+		{ 3, "s968682", "Spell_Holy_GreaterHeal", "=q2=Enchant Weapon - Lesser Spellbinder's Rage", "=ds=#sr# 300"};
+		{ 4, "s968685", "Spell_Holy_GreaterHeal", "=q2=Enchant Weapon - Lesser Ninja's Focus", "=ds=#sr# 300"};
+		{ 5, "s968688", "Spell_Holy_GreaterHeal", "=q2=Enchant Weapon - Lesser Grovewarden's Blessing", "=ds=#sr# 300"};
+		{ 6, "s968691", "Spell_Holy_GreaterHeal", "=q2=Enchant Weapon - Lesser Viscious Assault", "=ds=#sr# 300"};
+		{ 7, "s968694", "Spell_Holy_GreaterHeal", "=q2=Enchant Weapon - Lesser Arcane Dexterity", "=ds=#sr# 300"};
+		{ 8, "s968697", "Spell_Holy_GreaterHeal", "=q2=Enchant Weapon - Lesser Arcane Artillery", "=ds=#sr# 300"};
+		{ 9, "s968700", "Spell_Holy_GreaterHeal", "=q2=Enchant Weapon - Lesser Arcane Precision", "=ds=#sr# 300"};
+		Back = "ENCHANTINGMENU";
+	};
+	
+	AtlasLoot_Data["EnchantingHighRisk25Man"] = {
+		{ 1, "s968677", "Spell_Holy_GreaterHeal", "=q3=Enchant Weapon - Unstoppable Assault", "=ds=#sr# 300"};
+		{ 2, "s968680", "Spell_Holy_GreaterHeal", "=q3=Enchant Weapon - Lucid Assault", "=ds=#sr# 300"};
+		{ 3, "s968683", "Spell_Holy_GreaterHeal", "=q3=Enchant Weapon - Spellbinder's Rage", "=ds=#sr# 300"};
+		{ 4, "s968686", "Spell_Holy_GreaterHeal", "=q3=Enchant Weapon - Ninja's Focus", "=ds=#sr# 300"};
+		{ 5, "s968689", "Spell_Holy_GreaterHeal", "=q3=Enchant Weapon - Grovewarden's Blessing", "=ds=#sr# 300"};
+		{ 6, "s968692", "Spell_Holy_GreaterHeal", "=q3=Enchant Weapon - Viscious Assault", "=ds=#sr# 300"};
+		{ 7, "s968695", "Spell_Holy_GreaterHeal", "=q3=Enchant Weapon - Arcane Dexterity", "=ds=#sr# 300"};
+		{ 8, "s968698", "Spell_Holy_GreaterHeal", "=q3=Enchant Weapon - Arcane Artillery", "=ds=#sr# 300"};
+		{ 9, "s968701", "Spell_Holy_GreaterHeal", "=q3=Enchant Weapon - Arcane Precision", "=ds=#sr# 300"};
+		Back = "ENCHANTINGMENU";
+	};
+	
+	AtlasLoot_Data["EnchantingHighRisk25ManHEROIC"] = {
 		{ 1, "s968678", "Spell_Holy_GreaterHeal", "=q4=Enchant Weapon - Greater Unstoppable Assault", "=ds=#sr# 300"};
-		{ 20, "s968679", "Spell_Holy_GreaterHeal", "=q2=Enchant Weapon - Lesser Lucid Assault", "=ds=#sr# 300"};
-		{ 11, "s968680", "Spell_Holy_GreaterHeal", "=q3=Enchant Weapon - Lucid Assault", "=ds=#sr# 300"};
 		{ 2, "s968681", "Spell_Holy_GreaterHeal", "=q4=Enchant Weapon - Greater Lucid Assualt", "=ds=#sr# 300"};
-		{ 21, "s968682", "Spell_Holy_GreaterHeal", "=q2=Enchant Weapon - Lesser Spellbinder's Rage", "=ds=#sr# 300"};
-		{ 12, "s968683", "Spell_Holy_GreaterHeal", "=q3=Enchant Weapon - Spellbinder's Rage", "=ds=#sr# 300"};
 		{ 3, "s968684", "Spell_Holy_GreaterHeal", "=q4=Enchant Weapon - Greater Spellbinder's Rage", "=ds=#sr# 300"};
-		{ 22, "s968685", "Spell_Holy_GreaterHeal", "=q2=Enchant Weapon - Lesser Ninja's Focus", "=ds=#sr# 300"};
-		{ 13, "s968686", "Spell_Holy_GreaterHeal", "=q3=Enchant Weapon - Ninja's Focus", "=ds=#sr# 300"};
 		{ 4, "s968687", "Spell_Holy_GreaterHeal", "=q4=Enchant Weapon - Greater Ninja's Focus", "=ds=#sr# 300"};
-		{ 23, "s968688", "Spell_Holy_GreaterHeal", "=q2=Enchant Weapon - Lesser Grovewarden's Blessing", "=ds=#sr# 300"};
-		{ 14, "s968689", "Spell_Holy_GreaterHeal", "=q3=Enchant Weapon - Grovewarden's Blessing", "=ds=#sr# 300"};
 		{ 5, "s968690", "Spell_Holy_GreaterHeal", "=q4=Enchant Weapon - Greater Grovewarden's Blessing", "=ds=#sr# 300"};
-		{ 24, "s968691", "Spell_Holy_GreaterHeal", "=q2=Enchant Weapon - Lesser Viscious Assault", "=ds=#sr# 300"};
-		{ 15, "s968692", "Spell_Holy_GreaterHeal", "=q3=Enchant Weapon - Viscious Assault", "=ds=#sr# 300"};
 		{ 6, "s968693", "Spell_Holy_GreaterHeal", "=q4=Enchant Weapon - Greater Viscious Assault", "=ds=#sr# 300"};
-		{ 25, "s968694", "Spell_Holy_GreaterHeal", "=q2=Enchant Weapon - Lesser Arcane Dexterity", "=ds=#sr# 300"};
-		{ 16, "s968695", "Spell_Holy_GreaterHeal", "=q3=Enchant Weapon - Arcane Dexterity", "=ds=#sr# 300"};
 		{ 7, "s968696", "Spell_Holy_GreaterHeal", "=q4=Enchant Weapon - Greater Arcane Dexterity", "=ds=#sr# 300"};
-		{ 26, "s968697", "Spell_Holy_GreaterHeal", "=q2=Enchant Weapon - Lesser Arcane Artillery", "=ds=#sr# 300"};
-		{ 17, "s968698", "Spell_Holy_GreaterHeal", "=q3=Enchant Weapon - Arcane Artillery", "=ds=#sr# 300"};
 		{ 8, "s968699", "Spell_Holy_GreaterHeal", "=q4=Enchant Weapon - Greater Arcane Artillery", "=ds=#sr# 300"};
-		{ 27, "s968700", "Spell_Holy_GreaterHeal", "=q2=Enchant Weapon - Lesser Arcane Precision", "=ds=#sr# 300"};
-		{ 18, "s968701", "Spell_Holy_GreaterHeal", "=q3=Enchant Weapon - Arcane Precision", "=ds=#sr# 300"};
 		{ 9, "s968702", "Spell_Holy_GreaterHeal", "=q4=Enchant Weapon - Greater Arcane Precision", "=ds=#sr# 300"};
-
 		Back = "ENCHANTINGMENU";
 	};
 	
@@ -5843,22 +5862,26 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 4, "s968069", "967223", "=q2=Rampager's Cloak Lining", "=ds=#sr# 300"};
 		{ 5, "s968072", "967226", "=q2=Deadwind Cloak Lining", "=ds=#sr# 300"};
 		{ 6, "s968075", "967229", "=q2=Slippery Cloak Lining", "=ds=#sr# 300"};
-		
-		{ 13, "s968062", "967216", "=q4=Illustrious Dragonweave Cloak Lining", "=ds=#sr# 300"};
-		{ 14, "s968065", "967219", "=q4=Illustrious Twilight Cloak Lining", "=ds=#sr# 300"};
-		{ 15, "s968068", "967222", "=q4=Illustrious Scarlet Cloak Lining", "=ds=#sr# 300"};
-		
-		{ 16, "s968061", "967215", "=q3=Heavy Dragonweave Cloak Lining", "=ds=#sr# 300"};
-		{ 17, "s968064", "967218", "=q3=Heavy Twilight Cloak Lining", "=ds=#sr# 300"};
-		{ 18, "s968067", "967221", "=q3=Heavy Scarlet Cloak Lining", "=ds=#sr# 300"};
-		{ 19, "s968070", "967224", "=q3=Heavy Rampager's Cloak Lining", "=ds=#sr# 300"};
-		{ 20, "s968073", "967227", "=q3=Heavy Deadwind Cloak Lining", "=ds=#sr# 300"};
-		{ 21, "s968076", "967230", "=q3=Heavy Slippery Cloak Lining", "=ds=#sr# 300"};
-		
-		{ 28, "s968071", "967225", "=q4=Illustrious Rampager's Cloak Lining", "=ds=#sr# 300"};
-		{ 29, "s968074", "967228", "=q4=Illustrious Deadwind Cloak Lining", "=ds=#sr# 300"};
-		{ 30, "s968077", "967231", "=q4=Illustrious Slippery Cloak Lining", "=ds=#sr# 300"};
-
+		Back = "TAILORINGMENU";
+	};
+	
+	AtlasLoot_Data["TailorHighRisk25Man"] = {
+		{ 1, "s968061", "967215", "=q3=Heavy Dragonweave Cloak Lining", "=ds=#sr# 300"};
+		{ 2, "s968064", "967218", "=q3=Heavy Twilight Cloak Lining", "=ds=#sr# 300"};
+		{ 3, "s968067", "967221", "=q3=Heavy Scarlet Cloak Lining", "=ds=#sr# 300"};
+		{ 4, "s968070", "967224", "=q3=Heavy Rampager's Cloak Lining", "=ds=#sr# 300"};
+		{ 5, "s968073", "967227", "=q3=Heavy Deadwind Cloak Lining", "=ds=#sr# 300"};
+		{ 6, "s968076", "967230", "=q3=Heavy Slippery Cloak Lining", "=ds=#sr# 300"};
+		Back = "TAILORINGMENU";
+	};
+	
+	AtlasLoot_Data["TailorHighRisk25ManHEROIC"] = {
+		{ 1, "s968062", "967216", "=q4=Illustrious Dragonweave Cloak Lining", "=ds=#sr# 300"};
+		{ 2, "s968065", "967219", "=q4=Illustrious Twilight Cloak Lining", "=ds=#sr# 300"};
+		{ 3, "s968068", "967222", "=q4=Illustrious Scarlet Cloak Lining", "=ds=#sr# 300"};
+		{ 4, "s968071", "967225", "=q4=Illustrious Rampager's Cloak Lining", "=ds=#sr# 300"};
+		{ 5, "s968074", "967228", "=q4=Illustrious Deadwind Cloak Lining", "=ds=#sr# 300"};
+		{ 6, "s968077", "967231", "=q4=Illustrious Slippery Cloak Lining", "=ds=#sr# 300"};
 		Back = "TAILORINGMENU";
 	};
 	
