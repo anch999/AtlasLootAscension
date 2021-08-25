@@ -5675,37 +5675,37 @@ local MASTER = select(2, GetSpellInfo(28596));
 		---   High Risk   ---
 		---------------------
 		
-	AtlasLoot_Data["AlchemyHighRisk1"] = {
+	AtlasLoot_Data["AlchemyHighRisk"] = {
 		{ 1, "s968402", "967443",  "=q2=Flask of Manifesting Power", 	"=ds=#sr# 300"};	
 		{ 2, "s968405", "967446",  "=q2=Flask of the Warsong", 			"=ds=#sr# 300"};	
 		{ 3, "s968408", "967449",  "=q2=Flask of the Kirin Tor", 		"=ds=#sr# 300"};			
-		{ 4, "s968411", "967452", "=q2=Flask of Butchery", 			"=ds=#sr# 300"};	
+		{ 4, "s968411", "967452", "=q2=Flask of Butchery", 				"=ds=#sr# 300"};	
 		{ 5, "s968414", "967455", "=q2=Flask of the Unyielding", 		"=ds=#sr# 300"};	
 		{ 6, "s968417", "967458", "=q2=Flask of Unrelenting Power", 	"=ds=#sr# 300"};	
 		{ 7, "s968420", "967461", "=q2=Flask of Savage Assault", 		"=ds=#sr# 300"};	
 		{ 8, "s968423", "967464", "=q2=Flask of Shattering Thunder", 	"=ds=#sr# 300"};	
 		{ 9, "s968426", "967467", "=q2=Flask of the Executioner", 		"=ds=#sr# 300"};
 		{ 10, "s968429", "967470", "=q2=Flask of Deep Meditation", 		"=ds=#sr# 300"};	
-		{ 11, "s968432", "967473", "=q2=Flask of Adept Striking", 		"=ds=#sr# 300"};
-		
-		{ 16, "s968403", "967444",  "=q3=Potent Flask of Manifesting Power", 	"=ds=#sr# 300"};
-		{ 17, "s968406", "967447",  "=q3=Potent Flask of the Warsong", 			"=ds=#sr# 300"};
-		{ 18, "s968409", "967450",  "=q3=Potent Flask of the Kirin Tor", 		"=ds=#sr# 300"};
-		{ 19, "s968412", "967453", "=q3=Potent Flask of Butchery", 			"=ds=#sr# 300"};
-		{ 20, "s968415", "967456", "=q3=Potent Flask of the Unyielding", 		"=ds=#sr# 300"};
-		{ 21, "s968418", "967459", "=q3=Potent Flask of Unrelenting Power", 	"=ds=#sr# 300"};
-		{ 22, "s968421", "967462", "=q3=Potent Flask of Savage Assault", 		"=ds=#sr# 300"};
-		{ 23, "s968424", "967465", "=q3=Potent Flask of Shattering Thunder", 	"=ds=#sr# 300"};
-		{ 24, "s968427", "967468", "=q3=Potent Flask of the Executioner", 		"=ds=#sr# 300"};
-		{ 25, "s968430", "967471", "=q3=Potent Flask of Deep Meditation", 		"=ds=#sr# 300"};
-		{ 26, "s968433", "967474", "=q3=Potent Flask of Adept Striking", 		"=ds=#sr# 300"};	
-		
-		
-		Next = "AlchemyHighRisk2";
+		{ 11, "s968432", "967473", "=q2=Flask of Adept Striking", 		"=ds=#sr# 300"};	
 		Back = "ALCHEMYMENU";
 	};
 
-	AtlasLoot_Data["AlchemyHighRisk2"] = {	
+	AtlasLoot_Data["AlchemyHighRisk25Man"] = {	
+		{ 1, "s968403", "967444",  "=q3=Potent Flask of Manifesting Power", 	"=ds=#sr# 300"};
+		{ 2, "s968406", "967447",  "=q3=Potent Flask of the Warsong", 			"=ds=#sr# 300"};
+		{ 3, "s968409", "967450",  "=q3=Potent Flask of the Kirin Tor", 		"=ds=#sr# 300"};
+		{ 4, "s968412", "967453", "=q3=Potent Flask of Butchery", 				"=ds=#sr# 300"};
+		{ 5, "s968415", "967456", "=q3=Potent Flask of the Unyielding", 		"=ds=#sr# 300"};
+		{ 6, "s968418", "967459", "=q3=Potent Flask of Unrelenting Power", 		"=ds=#sr# 300"};
+		{ 7, "s968421", "967462", "=q3=Potent Flask of Savage Assault", 		"=ds=#sr# 300"};
+		{ 8, "s968424", "967465", "=q3=Potent Flask of Shattering Thunder", 	"=ds=#sr# 300"};
+		{ 9, "s968427", "967468", "=q3=Potent Flask of the Executioner", 		"=ds=#sr# 300"};
+		{ 10, "s968430", "967471", "=q3=Potent Flask of Deep Meditation", 		"=ds=#sr# 300"};
+		{ 11, "s968433", "967474", "=q3=Potent Flask of Adept Striking", 		"=ds=#sr# 300"};
+		Back = "ALCHEMYMENU";
+	};
+	
+	AtlasLoot_Data["AlchemyHighRisk25ManHEROIC"] = {	
 		{ 1, "s968404", "967445",  "=q4=Distilled Flask of Manifesting Power", 	"=ds=#sr# 300"};
 		{ 2, "s968407", "967448",  "=q4=Distilled Flask of the Warsong", "=ds=#sr# 300"};
 		{ 3, "s968410", "967451",  "=q4=Distilled Flask of the Kirin Tor", "=ds=#sr# 300"};
@@ -5717,7 +5717,6 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 9, "s968428", "967469", "=q4=Distilled Flask of the Executioner", "=ds=#sr# 300"};
 		{ 10, "s968431", "967472", "=q4=Distilled Flask of Deep Meditation", "=ds=#sr# 300"};
 		{ 11, "s968434", "967475", "=q4=Distilled Flask of Adept Striking", "=ds=#sr# 300"};
-		Prev = "AlchemyHighRisk1";
 		Back = "ALCHEMYMENU";
 	};
 

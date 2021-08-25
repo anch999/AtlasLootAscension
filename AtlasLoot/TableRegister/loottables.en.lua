@@ -2497,13 +2497,24 @@ end
 	AtlasLoot_TableNames["JewelcraftingDaily5"] = { AL["Jewelcrafting Daily"], "AtlasLootCrafting" };
 	AtlasLoot_TableNames["JewelcraftingDaily6"] = { AL["Jewelcrafting Daily"], "AtlasLootCrafting" };
 	
-	AtlasLoot_TableNames["AlchemyHighRisk1"] = { ALCHEMY, "AtlasLootCrafting" };
-	AtlasLoot_TableNames["AlchemyHighRisk2"] = { ALCHEMY, "AtlasLootCrafting" };
+	AtlasLoot_TableNames["AlchemyHighRisk"] = { ALCHEMY, "AtlasLootCrafting" };
+	AtlasLoot_TableNames["AlchemyHighRisk25Man"] = { ALCHEMY, "AtlasLootCrafting" };
+	AtlasLoot_TableNames["AlchemyHighRisk25ManHEROIC"] = { ALCHEMY, "AtlasLootCrafting" };
 	AtlasLoot_TableNames["SmithingHighRisk"] = { BLACKSMITHING, "AtlasLootCrafting" };
+	AtlasLoot_TableNames["SmithingHighRisk25Man"] = { BLACKSMITHING, "AtlasLootCrafting" };
+	AtlasLoot_TableNames["SmithingHighRisk25ManHeroic"] = { BLACKSMITHING, "AtlasLootCrafting" };
 	AtlasLoot_TableNames["EnchantingHighRisk"] = { ENCHANTING, "AtlasLootCrafting" };
+	AtlasLoot_TableNames["EnchantingHighRisk25Man"] = { ENCHANTING, "AtlasLootCrafting" };
+	AtlasLoot_TableNames["EnchantingHighRisk25ManHeroic"] = { ENCHANTING, "AtlasLootCrafting" };
 	AtlasLoot_TableNames["EngineerHighRisk"] = { ENGINEERING, "AtlasLootCrafting" };
+	AtlasLoot_TableNames["EngineerHighRisk25Man"] = { ENGINEERING, "AtlasLootCrafting" };
+	AtlasLoot_TableNames["EngineerHighRisk25ManHeroic"] = { ENGINEERING, "AtlasLootCrafting" };
 	AtlasLoot_TableNames["LeatherHighRisk"] = { LEATHERWORKING, "AtlasLootCrafting" };
+	AtlasLoot_TableNames["LeatherHighRisk25Man"] = { LEATHERWORKING, "AtlasLootCrafting" };
+	AtlasLoot_TableNames["LeatherHighRisk25ManHeroic"] = { LEATHERWORKING, "AtlasLootCrafting" };
 	AtlasLoot_TableNames["TailorHighRisk"] = { TAILORING, "AtlasLootCrafting" };
+	AtlasLoot_TableNames["TailorHighRisk25Man"] = { TAILORING, "AtlasLootCrafting" };
+	AtlasLoot_TableNames["TailorHighRisk25ManHeroic"] = { TAILORING, "AtlasLootCrafting" };
 	AtlasLoot_TableNames["CookingHighRisk1"] = { COOKING, "AtlasLootCrafting" };
 	AtlasLoot_TableNames["CookingHighRisk2"] = { COOKING, "AtlasLootCrafting" };
 	AtlasLoot_TableNames["CookingHighRisk3"] = { COOKING, "AtlasLootCrafting" };

@@ -26,7 +26,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 2, "AlchemyBattleElixir1", "INV_Potion_23", "=ds="..AL["Battle Elixirs"], "" };
 		{ 3, "AlchemyPotion1", "INV_Potion_23", "=ds="..AL["Potions"], "" };
 		{ 4, "AlchemyTransmute1", "INV_Potion_23", "=ds="..AL["Transmutes"], "" };
-		{ 13, "AlchemyHighRisk1", "INV_Potion_23", "=ds=High Risk", "" };
+		{ 13, "AlchemyHighRisk", "INV_Potion_23", "=ds=High Risk", "" };
 		{ 17, "AlchemyGuardianElixir1", "INV_Potion_23", "=ds="..AL["Guardian Elixirs"], "" };
 		{ 18, "AlchemyFlask1", "INV_Potion_23", "=ds="..AL["Flasks"], "" };
 		{ 19, "AlchemyMisc1", "INV_Potion_23", "=ds="..AL["Miscellaneous"], "" };
