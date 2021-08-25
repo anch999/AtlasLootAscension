@@ -19,7 +19,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 20, "COOKINGDAILYMENU", "INV_Misc_Food_15", AL["Cooking Daily"], ""};
 		{ 21, "FISHINGDAILYMENU", "inv_fishingpole_03", AL["Fishing Daily"], ""};
 		{ 22, "JEWELCRAFTINGDAILYMENU", "INV_Misc_Gem_01", AL["Jewelcrafting Daily"], ""};
-		{ 27, "CookingHighRisk1", "INV_Misc_Food_15", "=ds=Cooking High Risk", ""};
+		{ 27, "CookingHighRisk", "INV_Misc_Food_15", "=ds=Cooking High Risk", ""};
 	};
 
 	AtlasLoot_Data["ALCHEMYMENU"] = {

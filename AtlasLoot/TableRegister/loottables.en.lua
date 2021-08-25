@@ -2515,11 +2515,12 @@ end
 	AtlasLoot_TableNames["TailorHighRisk"] = { TAILORING, "AtlasLootCrafting" };
 	AtlasLoot_TableNames["TailorHighRisk25Man"] = { TAILORING, "AtlasLootCrafting" };
 	AtlasLoot_TableNames["TailorHighRisk25ManHEROIC"] = { TAILORING, "AtlasLootCrafting" };
-	AtlasLoot_TableNames["CookingHighRisk1"] = { COOKING, "AtlasLootCrafting" };
-	AtlasLoot_TableNames["CookingHighRisk2"] = { COOKING, "AtlasLootCrafting" };
-	AtlasLoot_TableNames["CookingHighRisk3"] = { COOKING, "AtlasLootCrafting" };
-	AtlasLoot_TableNames["CookingHighRisk4"] = { COOKING, "AtlasLootCrafting" };
-	AtlasLoot_TableNames["CookingHighRisk5"] = { COOKING, "AtlasLootCrafting" };
+	AtlasLoot_TableNames["CookingHighRisk"] = { COOKING, "AtlasLootCrafting" };
+	AtlasLoot_TableNames["CookingHighRiskTwo"] = { COOKING, "AtlasLootCrafting" };
+	AtlasLoot_TableNames["CookingHighRisk25Man"] = { COOKING, "AtlasLootCrafting" };
+	AtlasLoot_TableNames["CookingHighRiskTwo25Man"] = { COOKING, "AtlasLootCrafting" };
+	AtlasLoot_TableNames["CookingHighRisk25ManHEROIC"] = { COOKING, "AtlasLootCrafting" };
+	AtlasLoot_TableNames["CookingHighRiskTwo25ManHEROIC"] = { COOKING, "AtlasLootCrafting" };
 
 -----------
 --- PvP ---

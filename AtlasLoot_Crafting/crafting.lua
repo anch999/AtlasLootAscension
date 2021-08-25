@@ -5884,17 +5884,120 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 6, "s968077", "967231", "=q4=Illustrious Slippery Cloak Lining", "=ds=#sr# 300"};
 		Back = "TAILORINGMENU";
 	};
+
+	AtlasLoot_Data["CookingHighRisk"] = {
+		{ 1, "s968279",	"967509",	"=q2=Animated Soup for the Soul", "=ds=#sr# 300"};
+		{ 2, "s968282",	"967512",	"=q2=Volcanic Sandwich", "=ds=#sr# 300"};
+		{ 3, "s968285",	"967515",	"=q2=Winter Wontons", "=ds=#sr# 300"};
+		{ 4, "s968288",	"967518",	"=q2=Storm Steak", "=ds=#sr# 300"};
+		{ 5, "s968291",	"967521",	"=q2=Void Touched Stew", "=ds=#sr# 300"};
+		{ 6, "s968294",	"967524",	"=q2=Spicy Vulture Steak", "=ds=#sr# 300"};
+		{ 7, "s968297",	"967527",	"=q2=Wizard Wontons", "=ds=#sr# 300"};
+		{ 8, "s968300",	"967530",	"=q2=Jurassic Burger", "=ds=#sr# 300"};
+		{ 9, "s968303",	"967533",	"=q2=Rough-alo wings", "=ds=#sr# 300"};
+		{ 10, "s968306",	"967536",	"=q2=The Whooper Sandwich", "=ds=#sr# 300"};
+		{ 11, "s968309",	"967539",	"=q2=Vulture a la King", "=ds=#sr# 300"};
+		{ 12, "s968312",	"967542",	"=q2=Scorching Hot Steak", "=ds=#sr# 300"};
+		{ 13, "s968315",	"967545",	"=q2=Lively Stew", "=ds=#sr# 300"};
+		{ 14, "s968318",	"967548",	"=q2=Crawling Steak", "=ds=#sr# 300"};
+		{ 15, "s968321",	"967551",	"=q2=Breakonator Sandwich", "=ds=#sr# 300"};
+		{ 16, "s968324",	"967554",	"=q2=Master Wontons", "=ds=#sr# 300"};
+		{ 17, "s968327",	"967557",	"=q2=Big Whack Sandwich", "=ds=#sr# 300"};
+		{ 18, "s968330",	"967560",	"=q2=Warping Wontons", "=ds=#sr# 300"};
+		{ 19, "s968333",	"967563",	"=q2=Duck Stew", "=ds=#sr# 300"};
+		{ 20, "s968336",	"967566",	"=q2=Mountainman Stew", "=ds=#sr# 300"};
+		{ 21, "s968339",	"967569",	"=q2=Scorched Stew", "=ds=#sr# 300"};
+		{ 22, "s968342",	"967572",	"=q2=Vulcan Wontons", "=ds=#sr# 300"};
+		{ 23, "s968345",	"967575",	"=q2=Jurassic Soup", "=ds=#sr# 300"};
+		{ 24, "s968348",	"967578",	"=q2=Heightened Wontons", "=ds=#sr# 300"};
+		{ 25, "s968351",	"967581",	"=q2=Hearty Spirit Soup", "=ds=#sr# 300"};
+		{ 26, "s968354",	"967584",	"=q2=Jurassic Steak", "=ds=#sr# 300"};
+		{ 27, "s968357",	"967587",	"=q2=Stormwich Sandwich", "=ds=#sr# 300"};
+		{ 28, "s968360",	"967590",	"=q2=Warding Wontons", "=ds=#sr# 300"};
+		{ 29, "s968363",	"967593",	"=q2=Rolling Meatballs", "=ds=#sr# 300"};
+		{ 30, "s968366",	"967596",	"=q2=Subtle Steak", "=ds=#sr# 300"};
+		Next = "CookingHighRiskTwo";
+		Back = "CRAFTINGMENU";
+	};
 	
-	AtlasLoot_Data["CookingHighRisk1"] = {
-		{ 1, "s968281",	"967511", "=q4=Animated Soup for the Soul", "=ds=#sr# 300"};
-		{ 2, "s968284",	"967514",	"=q4=Volcanic Sandwich", "=ds=#sr# 300"};
-		{ 3, "s968287",	"967517",	"=q4=Winter Wontons", "=ds=#sr# 300"};
-		{ 4, "s968290",	"967520",	"=q4=Storm Steak", "=ds=#sr# 300"};
-		{ 5, "s968293",	"967523",	"=q4=Void Touched Stew", "=ds=#sr# 300"};
-		{ 6, "s968296",	"967526",	"=q4=Spicy Vulture Steak", "=ds=#sr# 300"};
-		{ 7, "s968299",	"967529",	"=q4=Wizard Wontons", "=ds=#sr# 300"};
-		{ 8, "s968302",	"967532",	"=q4=Jurassic Burger", "=ds=#sr# 300"};
-		{ 9, "s968305",	"967535",	"=q4=Rough-alo wings", "=ds=#sr# 300"};
+	AtlasLoot_Data["CookingHighRiskTwo"] = {
+		{ 1, "s968369",	"967599",	"=q2=Subtle Sandwich", "=ds=#sr# 300"};
+		{ 2, "s968372",	"967602",	"=q2=Subtle Wontons", "=ds=#sr# 300"};
+		{ 3, "s968375",	"967605",	"=q2=Subtle Sulferous Soup", "=ds=#sr# 300"};
+		{ 4, "s968378",	"967608",	"=q2=Strongman Stew", "=ds=#sr# 300"};
+		{ 5, "s968381",	"967611",	"=q2=Mysterious Void Roast", "=ds=#sr# 300"};
+		{ 6, "s968384",	"967614",	"=q2=Fire Charred Roast", "=ds=#sr# 300"};
+		{ 7, "s968387",	"967617",	"=q2=Storm Fried Roast", "=ds=#sr# 300"};
+		{ 8, "s968390",	"967620",	"=q2=Winter Roast", "=ds=#sr# 300"};
+		{ 9, "s968393",	"967623",	"=q2=Blackened Roast", "=ds=#sr# 300"};
+		{ 10, "s968396",	"967626",	"=q2=Dino Delight", "=ds=#sr# 300"};
+		{ 11, "s968399",	"967629",	"=q2=Slick-fil-A Sandwich", "=ds=#sr# 300"};
+		Prev = "CookingHighRisk";
+		Back = "CRAFTINGMENU";
+	};
+	
+	AtlasLoot_Data["CookingHighRisk25Man"] = {
+		{ 1, "s968280",	"967510",	"=q3=Animated Soup for the Soul", "=ds=#sr# 300"};
+		{ 2, "s968283",	"967513",	"=q3=Volcanic Sandwich", "=ds=#sr# 300"};
+		{ 3, "s968286",	"967516",	"=q3=Winter Wontons", "=ds=#sr# 300"};
+		{ 4, "s968289",	"967519",	"=q3=Storm Steak", "=ds=#sr# 300"};
+		{ 5, "s968292",	"967522",	"=q3=Void Touched Stew", "=ds=#sr# 300"};
+		{ 6, "s968295",	"967525",	"=q3=Spicy Vulture Steak", "=ds=#sr# 300"};
+		{ 7, "s968298",	"967528",	"=q3=Wizard Wontons", "=ds=#sr# 300"};
+		{ 8, "s968301",	"967531",	"=q3=Jurassic Burger", "=ds=#sr# 300"};
+		{ 9, "s968304",	"967534",	"=q3=Rough-alo wings", "=ds=#sr# 300"};
+		{ 10, "s968307",	"967537",	"=q3=The Whooper Sandwich", "=ds=#sr# 300"};
+		{ 11, "s968310",	"967540",	"=q3=Vulture a la King", "=ds=#sr# 300"};
+		{ 12, "s968313",	"967543",	"=q3=Scorching Hot Steak", "=ds=#sr# 300"};
+		{ 13, "s968316",	"967546",	"=q3=Lively Stew", "=ds=#sr# 300"};
+		{ 14, "s968319",	"967549",	"=q3=Crawling Steak", "=ds=#sr# 300"};
+		{ 15, "s968322",	"967552",	"=q3=Breakonator Sandwich", "=ds=#sr# 300"};
+		{ 16, "s968325",	"967555",	"=q3=Master Wontons", "=ds=#sr# 300"};
+		{ 17, "s968328",	"967558",	"=q3=Big Whack Sandwich", "=ds=#sr# 300"};
+		{ 18, "s968331",	"967561",	"=q3=Warping Wontons", "=ds=#sr# 300"};
+		{ 19, "s968334",	"967564",	"=q3=Duck Stew", "=ds=#sr# 300"};
+		{ 20, "s968337",	"967567",	"=q3=Mountainman Stew", "=ds=#sr# 300"};
+		{ 21, "s968340",	"967570",	"=q3=Scorched Stew", "=ds=#sr# 300"};
+		{ 22, "s968343",	"967573",	"=q3=Vulcan Wontons", "=ds=#sr# 300"};
+		{ 23, "s968346",	"967576",	"=q3=Jurassic Soup", "=ds=#sr# 300"};
+		{ 24, "s968349",	"967579",	"=q3=Heightened Wontons", "=ds=#sr# 300"};
+		{ 25, "s968352",	"967582",	"=q3=Hearty Spirit Soup", "=ds=#sr# 300"};
+		{ 26, "s968355",	"967585",	"=q3=Jurassic Steak", "=ds=#sr# 300"};
+		{ 27, "s968358",	"967588",	"=q3=Stormwich Sandwich", "=ds=#sr# 300"};
+		{ 28, "s968361",	"967591",	"=q3=Warding Wontons", "=ds=#sr# 300"};
+		{ 29, "s968364",	"967594",	"=q3=Rolling Meatballs", "=ds=#sr# 300"};
+		{ 30, "s968367",	"967597",	"=q3=Subtle Steak", "=ds=#sr# 300"};
+		Next = "CookingHighRiskTwo25Man";
+		Back = "CRAFTINGMENU";
+	};
+	
+	AtlasLoot_Data["CookingHighRiskTwo25Man"] = {
+		{ 1, "s968370",	"967600",	"=q3=Subtle Sandwich", "=ds=#sr# 300"};
+		{ 2, "s968373",	"967603",	"=q3=Subtle Wontons", "=ds=#sr# 300"};
+		{ 3, "s968376",	"967606",	"=q3=Subtle Sulferous Soup", "=ds=#sr# 300"};
+		{ 4, "s968379",	"967609",	"=q3=Strongman Stew", "=ds=#sr# 300"};
+		{ 5, "s968382",	"967612",	"=q3=Mysterious Void Roast", "=ds=#sr# 300"};
+		{ 6, "s968385",	"967615",	"=q3=Fire Charred Roast", "=ds=#sr# 300"};
+		{ 7, "s968388",	"967618",	"=q3=Storm Fried Roast", "=ds=#sr# 300"};
+		{ 8, "s968391",	"967621",	"=q3=Winter Roast", "=ds=#sr# 300"};
+		{ 9, "s968394",	"967624",	"=q3=Blackened Roast", "=ds=#sr# 300"};
+		{ 10, "s968397",	"967627",	"=q3=Dino Delight", "=ds=#sr# 300"};
+		{ 11, "s968400",	"967630",	"=q3=Slick-fil-A Sandwich", "=ds=#sr# 300"};
+		Prev = "CookingHighRisk25Man";
+		Back = "CRAFTINGMENU";
+	};
+	
+	
+	AtlasLoot_Data["CookingHighRisk25ManHEROIC"] = {
+		{ 1, "s968281",	"967511", 		"=q4=Animated Soup for the Soul", "=ds=#sr# 300"};
+		{ 2, "s968284",	"967514",		"=q4=Volcanic Sandwich", "=ds=#sr# 300"};
+		{ 3, "s968287",	"967517",		"=q4=Winter Wontons", "=ds=#sr# 300"};
+		{ 4, "s968290",	"967520",		"=q4=Storm Steak", "=ds=#sr# 300"};
+		{ 5, "s968293",	"967523",		"=q4=Void Touched Stew", "=ds=#sr# 300"};
+		{ 6, "s968296",	"967526",		"=q4=Spicy Vulture Steak", "=ds=#sr# 300"};
+		{ 7, "s968299",	"967529",		"=q4=Wizard Wontons", "=ds=#sr# 300"};
+		{ 8, "s968302",	"967532",		"=q4=Jurassic Burger", "=ds=#sr# 300"};
+		{ 9, "s968305",	"967535",		"=q4=Rough-alo wings", "=ds=#sr# 300"};
 		{ 10, "s968308",	"967538",	"=q4=The Whooper Sandwich", "=ds=#sr# 300"};
 		{ 11, "s968311",	"967541",	"=q4=Vulture a la King", "=ds=#sr# 300"};
 		{ 12, "s968314",	"967542",	"=q4=Scorching Hot Steak", "=ds=#sr# 300"};
@@ -5916,12 +6019,11 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 28, "s968362",	"967592",	"=q4=Warding Wontons", "=ds=#sr# 300"};
 		{ 29, "s968365",	"967595",	"=q4=Rolling Meatballs", "=ds=#sr# 300"};
 		{ 30, "s968368",	"967598",	"=q4=Subtle Steak", "=ds=#sr# 300"};
-		
-		Next = "CookingHighRisk2";
-		Back = "ENGINEERINGMENU";
+		Next = "CookingHighRiskTwo25ManHEROIC";
+		Back = "CRAFTINGMENU";
 	};
 	
-	AtlasLoot_Data["CookingHighRisk2"] = {
+	AtlasLoot_Data["CookingHighRiskTwo25ManHEROIC"] = {
 		{ 1, "s968371",	"967601",	"=q4=Subtle Sandwich", "=ds=#sr# 300"};
 		{ 2, "s968374",	"967604",	"=q4=Subtle Wontons", "=ds=#sr# 300"};
 		{ 3, "s968377",	"967607",	"=q4=Subtle Sulferous Soup", "=ds=#sr# 300"};
@@ -5933,110 +6035,6 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 9, "s968395",	"967625",	"=q4=Blackened Roast", "=ds=#sr# 300"};
 		{ 10, "s968398",	"967628",	"=q4=Dino Delight", "=ds=#sr# 300"};
 		{ 11, "s968401",	"967631",	"=q4=Slick-fil-A Sandwich", "=ds=#sr# 300"};
-		{ 12, "s968280",	"967510",	"=q3=Animated Soup for the Soul", "=ds=#sr# 300"};
-		{ 13, "s968283",	"967513",	"=q3=Volcanic Sandwich", "=ds=#sr# 300"};
-		{ 14, "s968286",	"967516",	"=q3=Winter Wontons", "=ds=#sr# 300"};
-		{ 15, "s968289",	"967519",	"=q3=Storm Steak", "=ds=#sr# 300"};
-		{ 16, "s968292",	"967522",	"=q3=Void Touched Stew", "=ds=#sr# 300"};
-		{ 17, "s968295",	"967525",	"=q3=Spicy Vulture Steak", "=ds=#sr# 300"};
-		{ 18, "s968298",	"967528",	"=q3=Wizard Wontons", "=ds=#sr# 300"};
-		{ 19, "s968301",	"967531",	"=q3=Jurassic Burger", "=ds=#sr# 300"};
-		{ 20, "s968304",	"967534",	"=q3=Rough-alo wings", "=ds=#sr# 300"};
-		{ 21, "s968307",	"967537",	"=q3=The Whooper Sandwich", "=ds=#sr# 300"};
-		{ 22, "s968310",	"967540",	"=q3=Vulture a la King", "=ds=#sr# 300"};
-		{ 23, "s968313",	"967543",	"=q3=Scorching Hot Steak", "=ds=#sr# 300"};
-		{ 24, "s968316",	"967546",	"=q3=Lively Stew", "=ds=#sr# 300"};
-		{ 25, "s968319",	"967549",	"=q3=Crawling Steak", "=ds=#sr# 300"};
-		{ 26, "s968322",	"967552",	"=q3=Breakonator Sandwich", "=ds=#sr# 300"};
-		{ 27, "s968325",	"967555",	"=q3=Master Wontons", "=ds=#sr# 300"};
-		{ 28, "s968328",	"967558",	"=q3=Big Whack Sandwich", "=ds=#sr# 300"};
-		{ 29, "s968331",	"967561",	"=q3=Warping Wontons", "=ds=#sr# 300"};
-		{ 30, "s968334",	"967564",	"=q3=Duck Stew", "=ds=#sr# 300"};
-
-		Next = "CookingHighRisk3";
-		Prev = "CookingHighRisk1";
-		Back = "ENGINEERINGMENU";
-	};
-	
-	AtlasLoot_Data["CookingHighRisk3"] = {
-		{ 1, "s968337",	"967567",	"=q3=Mountainman Stew", "=ds=#sr# 300"};
-		{ 2, "s968340",	"967570",	"=q3=Scorched Stew", "=ds=#sr# 300"};
-		{ 3, "s968343",	"967573",	"=q3=Vulcan Wontons", "=ds=#sr# 300"};
-		{ 4, "s968346",	"967576",	"=q3=Jurassic Soup", "=ds=#sr# 300"};
-		{ 5, "s968349",	"967579",	"=q3=Heightened Wontons", "=ds=#sr# 300"};
-		{ 6, "s968352",	"967582",	"=q3=Hearty Spirit Soup", "=ds=#sr# 300"};
-		{ 7, "s968355",	"967585",	"=q3=Jurassic Steak", "=ds=#sr# 300"};
-		{ 8, "s968358",	"967588",	"=q3=Stormwich Sandwich", "=ds=#sr# 300"};
-		{ 9, "s968361",	"967591",	"=q3=Warding Wontons", "=ds=#sr# 300"};
-		{ 10, "s968364",	"967594",	"=q3=Rolling Meatballs", "=ds=#sr# 300"};
-		{ 11, "s968367",	"967597",	"=q3=Subtle Steak", "=ds=#sr# 300"};
-		{ 12, "s968370",	"967600",	"=q3=Subtle Sandwich", "=ds=#sr# 300"};
-		{ 13, "s968373",	"967603",	"=q3=Subtle Wontons", "=ds=#sr# 300"};
-		{ 14, "s968376",	"967606",	"=q3=Subtle Sulferous Soup", "=ds=#sr# 300"};
-		{ 15, "s968379",	"967609",	"=q3=Strongman Stew", "=ds=#sr# 300"};
-		{ 16, "s968382",	"967612",	"=q3=Mysterious Void Roast", "=ds=#sr# 300"};
-		{ 17, "s968385",	"967615",	"=q3=Fire Charred Roast", "=ds=#sr# 300"};
-		{ 18, "s968388",	"967618",	"=q3=Storm Fried Roast", "=ds=#sr# 300"};
-		{ 19, "s968391",	"967621",	"=q3=Winter Roast", "=ds=#sr# 300"};
-		{ 20, "s968394",	"967624",	"=q3=Blackened Roast", "=ds=#sr# 300"};
-		{ 21, "s968397",	"967627",	"=q3=Dino Delight", "=ds=#sr# 300"};
-		{ 22, "s968400",	"967630",	"=q3=Slick-fil-A Sandwich", "=ds=#sr# 300"};
-		{ 23, "s968279",	"967509",	"=q2=Animated Soup for the Soul", "=ds=#sr# 300"};
-		{ 24, "s968282",	"967512",	"=q2=Volcanic Sandwich", "=ds=#sr# 300"};
-		{ 25, "s968285",	"967515",	"=q2=Winter Wontons", "=ds=#sr# 300"};
-		{ 26, "s968288",	"967518",	"=q2=Storm Steak", "=ds=#sr# 300"};
-		{ 27, "s968291",	"967521",	"=q2=Void Touched Stew", "=ds=#sr# 300"};
-		{ 28, "s968294",	"967524",	"=q2=Spicy Vulture Steak", "=ds=#sr# 300"};
-		{ 29, "s968297",	"967527",	"=q2=Wizard Wontons", "=ds=#sr# 300"};
-		{ 30, "s968300",	"967530",	"=q2=Jurassic Burger", "=ds=#sr# 300"};
-
-		Next = "CookingHighRisk4";
-		Prev = "CookingHighRisk2";
-		Back = "ENGINEERINGMENU";
-	};
-	
-	AtlasLoot_Data["CookingHighRisk4"] = {
-		{ 1, "s968303",	"967533",	"=q2=Rough-alo wings", "=ds=#sr# 300"};
-		{ 2, "s968306",	"967536",	"=q2=The Whooper Sandwich", "=ds=#sr# 300"};
-		{ 3, "s968309",	"967539",	"=q2=Vulture a la King", "=ds=#sr# 300"};
-		{ 4, "s968312",	"967542",	"=q2=Scorching Hot Steak", "=ds=#sr# 300"};
-		{ 5, "s968315",	"967545",	"=q2=Lively Stew", "=ds=#sr# 300"};
-		{ 6, "s968318",	"967548",	"=q2=Crawling Steak", "=ds=#sr# 300"};
-		{ 7, "s968321",	"967551",	"=q2=Breakonator Sandwich", "=ds=#sr# 300"};
-		{ 8, "s968324",	"967554",	"=q2=Master Wontons", "=ds=#sr# 300"};
-		{ 9, "s968327",	"967557",	"=q2=Big Whack Sandwich", "=ds=#sr# 300"};
-		{ 10, "s968330",	"967560",	"=q2=Warping Wontons", "=ds=#sr# 300"};
-		{ 11, "s968333",	"967563",	"=q2=Duck Stew", "=ds=#sr# 300"};
-		{ 12, "s968336",	"967566",	"=q2=Mountainman Stew", "=ds=#sr# 300"};
-		{ 13, "s968339",	"967569",	"=q2=Scorched Stew", "=ds=#sr# 300"};
-		{ 14, "s968342",	"967572",	"=q2=Vulcan Wontons", "=ds=#sr# 300"};
-		{ 15, "s968345",	"967575",	"=q2=Jurassic Soup", "=ds=#sr# 300"};
-		{ 16, "s968348",	"967578",	"=q2=Heightened Wontons", "=ds=#sr# 300"};
-		{ 17, "s968351",	"967581",	"=q2=Hearty Spirit Soup", "=ds=#sr# 300"};
-		{ 18, "s968354",	"967584",	"=q2=Jurassic Steak", "=ds=#sr# 300"};
-		{ 19, "s968357",	"967587",	"=q2=Stormwich Sandwich", "=ds=#sr# 300"};
-		{ 20, "s968360",	"967590",	"=q2=Warding Wontons", "=ds=#sr# 300"};
-		{ 21, "s968363",	"967593",	"=q2=Rolling Meatballs", "=ds=#sr# 300"};
-		{ 22, "s968366",	"967596",	"=q2=Subtle Steak", "=ds=#sr# 300"};
-		{ 23, "s968369",	"967599",	"=q2=Subtle Sandwich", "=ds=#sr# 300"};
-		{ 24, "s968372",	"967602",	"=q2=Subtle Wontons", "=ds=#sr# 300"};
-		{ 25, "s968375",	"967605",	"=q2=Subtle Sulferous Soup", "=ds=#sr# 300"};
-		{ 26, "s968378",	"967608",	"=q2=Strongman Stew", "=ds=#sr# 300"};
-		{ 27, "s968381",	"967611",	"=q2=Mysterious Void Roast", "=ds=#sr# 300"};
-		{ 28, "s968384",	"967614",	"=q2=Fire Charred Roast", "=ds=#sr# 300"};
-		{ 29, "s968387",	"967617",	"=q2=Storm Fried Roast", "=ds=#sr# 300"};
-		{ 30, "s968390",	"967620",	"=q2=Winter Roast", "=ds=#sr# 300"};
-
-		Next = "CookingHighRisk5";
-		Prev = "CookingHighRisk3";
-		Back = "ENGINEERINGMENU";
-	};
-	
-	AtlasLoot_Data["CookingHighRisk5"] = {
-		{ 1, "s968393",	"967623",	"=q2=Blackened Roast", "=ds=#sr# 300"};
-		{ 2, "s968396",	"967626",	"=q2=Dino Delight", "=ds=#sr# 300"};
-		{ 3, "s968399",	"967629",	"=q2=Slick-fil-A Sandwich", "=ds=#sr# 300"};
-
-		Prev = "CookingHighRisk4";
-		Back = "ENGINEERINGMENU";
+		Prev = "CookingHighRisk25ManHEROIC";
+		Back = "CRAFTINGMENU";
 	};
