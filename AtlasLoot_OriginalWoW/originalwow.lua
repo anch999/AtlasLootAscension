@@ -8960,7 +8960,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 	};
 
 
-	------------------------
+------------------------
 	--- Zul'Gurub HEROIC FLEX ---
 	------------------------
 
@@ -8976,13 +8976,13 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 9, 19722, "", "=q4=Primal Hakkari Tabard", "=ds=#m3#", "", "2.17%"};
 		{ 11, 19943, "", "=q1=Massive Mojo", "=ds=#e8#", "", "8.8%"};
 		{ 12, 19881, "", "=q1=Channeler's Head", "=ds=#m3#", "", "100%"};
-		{ 16, AL_FindId("Jeklik's Crusher", 2), "", "=q4=Jeklik's Crusher", "=ds=#h2#, #w6#", "", "3.96%"};
-		{ 18, 219928, "", "=q3=Animist's Spaulders", "=ds=#s3#, #a2#", "", "3.39%"};
-		{ 19, 220262, "", "=q3=Seafury Boots", "=ds=#s12#, #a3#", "", "4.31%"};
-		{ 20, 220265, "", "=q3=Peacekeeper Boots", "=ds=#s12#, #a4#", "", "6.99%"};
-		{ 21, 219923, "", "=q3=Jeklik's Opaline Talisman", "=ds=#s2#", "", "12.22%"};
-		{ 22, 219920, "", "=q3=Primalist's Band", "=ds=#s13#", "", "11.89%"};
-		{ 23, 219915, "", "=q3=Zulian Defender", "=ds=#w8#", "", " 11.36%"};
+		{ 16, 319918, "", "=q4=Jeklik's Crusher", "=ds=#h2#, #w6#", "", "3.96%"};
+		{ 18, 319928, "", "=q3=Animist's Spaulders", "=ds=#s3#, #a2#", "", "3.39%"};
+		{ 19, 320262, "", "=q3=Seafury Boots", "=ds=#s12#, #a3#", "", "4.31%"};
+		{ 20, 320265, "", "=q3=Peacekeeper Boots", "=ds=#s12#, #a4#", "", "6.99%"};
+		{ 21, 319923, "", "=q3=Jeklik's Opaline Talisman", "=ds=#s2#", "", "12.22%"};
+		{ 22, 319920, "", "=q3=Primalist's Band", "=ds=#s13#", "", "11.89%"};
+		{ 23, 319915, "", "=q3=Zulian Defender", "=ds=#w8#", "", " 11.36%"};
 		Next = "ZGVenoxis25Man";
 	};
 
@@ -8999,12 +8999,12 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 11, 19943, "", "=q1=Massive Mojo", "=ds=#e8#", "", "6.0%"};
 		{ 12, 19881, "", "=q1=Channeler's Head", "=ds=#m3#", "", "100%"};
 		{ 13, 22216, "", "=q1=Venoxis's Venom Sac", "=ds=#m3#", "", "100%"};
-		{ 16, 219904, "", "=q4=Runed Bloodstained Hauberk", "=ds=#s5#, #a3#", "", "3.70%"};
-		{ 17, 219903, "", "=q4=Fang of Venoxis", "=ds=#h3#, #w4#", "", "3.68%"};
-		{ 19, 219907, "", "=q3=Zulian Tigerhide Cloak", "=ds=#s4#", "", "12.09%"};
-		{ 20, 219906, "", "=q3=Blooddrenched Footpads", "=ds=#s12#, #a2#", "", "11.36%"};
-		{ 21, 219905, "", "=q3=Zanzil's Band", "=ds=#s13#", "", "6.99%"};
-		{ 22, 219900, "", "=q3=Zulian Stone Axe", "=ds=#h2#, #w1#", "", "11.89%"};
+		{ 16, 319904, "", "=q4=Runed Bloodstained Hauberk", "=ds=#s5#, #a3#", "", "3.70%"};
+		{ 17, 319903, "", "=q4=Fang of Venoxis", "=ds=#h3#, #w4#", "", "3.68%"};
+		{ 19, 319907, "", "=q3=Zulian Tigerhide Cloak", "=ds=#s4#", "", "12.09%"};
+		{ 20, 319906, "", "=q3=Blooddrenched Footpads", "=ds=#s12#, #a2#", "", "11.36%"};
+		{ 21, 319905, "", "=q3=Zanzil's Band", "=ds=#s13#", "", "6.99%"};
+		{ 22, 319900, "", "=q3=Zulian Stone Axe", "=ds=#h2#, #w1#", "", "11.89%"};
 		Prev = "ZGJeklik25Man";
 		Next = "ZGMarli25Man";
 	};
@@ -9021,12 +9021,12 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 9, 19724, "", "=q4=Primal Hakkari Aegis", "=ds=#m3#", "", "2.30%"};
 		{ 11, 19943, "", "=q1=Massive Mojo", "=ds=#e8#", "", "7.4%"};
 		{ 12, 19881, "", "=q1=Channeler's Head", "=ds=#m3#", "", "100%"};
-		{ 16, 220032, "", "=q4=Flowing Ritual Robes", "=ds=#s5#, #a1#", "", "4.46%"};
-		{ 17, 219927, "", "=q4=Mar'li's Touch", "=ds=#w12#", "", "4.35%"};
-		{ 19, 219919, "", "=q3=Bloodstained Greaves", "=ds=#s12#, #a3#", "", "11.89%"};
-		{ 20, 219871, "", "=q3=Talisman of Protection", "=ds=#s2#", "", "11.36%"};
-		{ 21, 219925, "", "=q3=Band of Jin", "=ds=#s13#", "", " 6.99%"};
-		{ 22, 219930, "", "=q3=Mar'li's Eye", "=ds=#s14#", "", "12.09%"};
+		{ 16, 320032, "", "=q4=Flowing Ritual Robes", "=ds=#s5#, #a1#", "", "4.46%"};
+		{ 17, 319927, "", "=q4=Mar'li's Touch", "=ds=#w12#", "", "4.35%"};
+		{ 19, 319919, "", "=q3=Bloodstained Greaves", "=ds=#s12#, #a3#", "", "11.89%"};
+		{ 20, 319871, "", "=q3=Talisman of Protection", "=ds=#s2#", "", "11.36%"};
+		{ 21, 319925, "", "=q3=Band of Jin", "=ds=#s13#", "", " 6.99%"};
+		{ 22, 319930, "", "=q3=Mar'li's Eye", "=ds=#s14#", "", "12.09%"};
 		Prev = "ZGVenoxis25Man";
 		Next = "ZGMandokir25Man";
 	};
@@ -9043,19 +9043,19 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 9, 19717, "", "=q4=Primal Hakkari Armsplint", "=ds=#m3#", "", "2.48%"};
 		{ 11, 22637, "", "=q3=Primal Hakkari Idol", "=ds=#m3#"};
 		{ 12, 19943, "", "=q1=Massive Mojo", "=ds=#e8#", "", "9.4%"};
-		{ 16, 219867, "", "=q4=Bloodlord's Defender", "=ds=#h1#, #w10#", "", "5.83%"};
-		{ 17, 219866, "", "=q4=Warblade of the Hakkari", "=ds=#h4#, #w10#", "", "3.96%"};
-		{ 18, 219874, "", "=q4=Halberd of Smiting", "=ds=#w7#", "", "6.35%"};
-		{ 19, 220038, "", "=q4=Mandokir's Sting", "=ds=#w2#", "", "5.96%"};
+		{ 16, 319867, "", "=q4=Bloodlord's Defender", "=ds=#h1#, #w10#", "", "5.83%"};
+		{ 17, 319866, "", "=q4=Warblade of the Hakkari", "=ds=#h4#, #w10#", "", "3.96%"};
+		{ 18, 319874, "", "=q4=Halberd of Smiting", "=ds=#w7#", "", "6.35%"};
+		{ 19, 320038, "", "=q4=Mandokir's Sting", "=ds=#w2#", "", "5.96%"};
 		{ 20, 19872, "", "=q4=Swift Razzashi Raptor", "=ds=#e12#", "", "0.43%"};
-		{ 22, 219870, "", "=q3=Hakkari Loa Cloak", "=ds=#s4#", "", "12.54%"};
-		{ 23, 219895, "", "=q3=Bloodtinged Kilt", "=ds=#s11#, #a1#", "", "13.50%"};
-		{ 24, 219869, "", "=q3=Blooddrenched Grips", "=ds=#s9#, #a2#", "", "12.87%"};
-		{ 25, 219877, "", "=q3=Animist's Leggings", "=ds=#s11#, #a2#", "", "12.14%"};
-		{ 26, 219878, "", "=q3=Bloodsoaked Pauldrons", "=ds=#s9#, #a4#", "", "12.31%"};
-		{ 27, 219873, "", "=q3=Overlord's Crimson Band", "=ds=#s13#", "", "12.28%"};
-		{ 28, 219893, "", "=q3=Zanzil's Seal", "=ds=#s13#", "", "13.11%"};
-		{ 29, 219863, "", "=q3=Primalist's Seal", "=ds=#s13#", "", "12.32%"};
+		{ 22, 319870, "", "=q3=Hakkari Loa Cloak", "=ds=#s4#", "", "12.54%"};
+		{ 23, 319895, "", "=q3=Bloodtinged Kilt", "=ds=#s11#, #a1#", "", "13.50%"};
+		{ 24, 319869, "", "=q3=Blooddrenched Grips", "=ds=#s9#, #a2#", "", "12.87%"};
+		{ 25, 319877, "", "=q3=Animist's Leggings", "=ds=#s11#, #a2#", "", "12.14%"};
+		{ 26, 319878, "", "=q3=Bloodsoaked Pauldrons", "=ds=#s9#, #a4#", "", "12.31%"};
+		{ 27, 319873, "", "=q3=Overlord's Crimson Band", "=ds=#s13#", "", "12.28%"};
+		{ 28, 319893, "", "=q3=Zanzil's Seal", "=ds=#s13#", "", "13.11%"};
+		{ 29, 319863, "", "=q3=Primalist's Seal", "=ds=#s13#", "", "12.32%"};
 		Prev = "ZGMarli25Man";
 		Next = "ZGEdgeofMadness25Man";
 	};
@@ -9070,12 +9070,12 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 8, 219967, "", "=q3=Thoughtblighter", "=ds=#w12#", "", "45.49%"};
 		{ 9, 19942, "", "=q2=Hazza'rah's Dream Thread", "=ds=#m3#", "", "100%"};
 		{ 16, 0, "INV_Box_01", "=q6="..BabbleBoss["Renataki"], ""};
-		{ 17, 219964, "", "=q3=Renataki's Soul Conduit", "=ds=#h3#, #w10#", "", "40.06%"};
-		{ 18, 219963, "", "=q3=Pitchfork of Madness", "=ds=#w7#", "", "45.51%"};
+		{ 17, 319964, "", "=q3=Renataki's Soul Conduit", "=ds=#h3#, #w10#", "", "40.06%"};
+		{ 18, 319963, "", "=q3=Pitchfork of Madness", "=ds=#w7#", "", "45.51%"};
 		{ 19, 19940, "", "=q2=Renataki's Tooth", "=ds=#m3#", "", "100%"};
 		{ 21, 0, "INV_Box_01", "=q6="..BabbleBoss["Wushoolay"], ""};
-		{ 22, 219965, "", "=q3=Wushoolay's Poker", "=ds=#h3#, #w4#", "", "45.21%"};
-		{ 23, 219993, "", "=q3=Hoodoo Hunting Bow", "=ds=#w2#", "", "40.96%"};
+		{ 22, 319965, "", "=q3=Wushoolay's Poker", "=ds=#h3#, #w4#", "", "45.21%"};
+		{ 23, 319993, "", "=q3=Hoodoo Hunting Bow", "=ds=#w2#", "", "40.96%"};
 		{ 24, 19941, "", "=q2=Wushoolay's Mane", "=ds=#m3#", "", "100%"};
 		Prev = "ZGMandokir25Man";
 		Next = "ZGGahzranka25Man";
@@ -9100,14 +9100,14 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 6, 19717, "", "=q4=Primal Hakkari Armsplint", "=ds=#m3#", "", " 6.45%"};
 		{ 8, 19943, "", "=q1=Massive Mojo", "=ds=#e8#", "", "8.3%"};
 		{ 9, 19881, "", "=q1=Channeler's Head", "=ds=#m3#", "", "100%"};
-		{ 16, 219897, "", "=q4=Betrayer's Boots", "=ds=#s12#, #a1#", "", "5.83%"};
-		{ 17, 219896, "", "=q4=Thekal's Grasp", "=ds=#h3#, #w13#", "", "4.23%"};
+		{ 16, 319897, "", "=q4=Betrayer's Boots", "=ds=#s12#, #a1#", "", "5.83%"};
+		{ 17, 319896, "", "=q4=Thekal's Grasp", "=ds=#h3#, #w13#", "", "4.23%"};
 		{ 18, 19902, "", "=q4=Swift Zulian Tiger", "=ds=#e12#", "", "0.70%"};
-		{ 20, 219898, "", "=q3=Seal of Jin", "=ds=#s13#", "", "13.65%"};
-		{ 21, 219899, "", "=q3=Ritualistic Legguards", "=ds=#s11#, #a1#", "", "13.41%"};
-		{ 22, 220260, "", "=q3=Seafury Leggings", "=ds=#s11#, #a3#", "", "4.30%"};
-		{ 23, 220266, "", "=q3=Peacekeeper Leggings", "=ds=#s11#, #a4#", "", "8.69%"};
-		{ 24, 219901, "", "=q3=Zulian Slicer", "=ds=#h1#, #w10#, =q1=#e18#", "", "13.36%"};
+		{ 20, 319898, "", "=q3=Seal of Jin", "=ds=#s13#", "", "13.65%"};
+		{ 21, 319899, "", "=q3=Ritualistic Legguards", "=ds=#s11#, #a1#", "", "13.41%"};
+		{ 22, 320260, "", "=q3=Seafury Leggings", "=ds=#s11#, #a3#", "", "4.30%"};
+		{ 23, 320266, "", "=q3=Peacekeeper Leggings", "=ds=#s11#, #a4#", "", "8.69%"};
+		{ 24, 319901, "", "=q3=Zulian Slicer", "=ds=#h1#, #w10#, =q1=#e18#", "", "13.36%"};
 		Prev = "ZGGahzranka25Man";
 		Next = "ZGArlokk25Man";
 	};
@@ -9124,11 +9124,11 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 9, 19724, "", "=q4=Primal Hakkari Aegis", "=ds=#m3#", "", "2.41%"};
 		{ 11, 19943, "", "=q1=Massive Mojo", "=ds=#e8#", "", "5.6%"};
 		{ 12, 19881, "", "=q1=Channeler's Head", "=ds=#m3#", "", "100%"};
-		{ 16, 219910, "", "=q4=Arlokk's Grasp", "=ds=#h4#, #w13#", "", "3.62%"};
-		{ 17, 219909, "", "=q4=Will of Arlokk", "=ds=#w9#", "", "5.14%"};
-		{ 19, 219913, "", "=q3=Bloodsoaked Greaves", "=ds=#s12#, #a4#", "", "13.29%"};
-		{ 20, 219912, "", "=q3=Overlord's Onyx Band", "=ds=#s13#", "", "13.95%"};
-		{ 21, 219922, "", "=q3=Arlokk's Hoodoo Stick", "=ds=#s15#", "", "13.66%"};
+		{ 16, 319910, "", "=q4=Arlokk's Grasp", "=ds=#h4#, #w13#", "", "3.62%"};
+		{ 17, 319909, "", "=q4=Will of Arlokk", "=ds=#w9#", "", "5.14%"};
+		{ 19, 319913, "", "=q3=Bloodsoaked Greaves", "=ds=#s12#, #a4#", "", "13.29%"};
+		{ 20, 319912, "", "=q3=Overlord's Onyx Band", "=ds=#s13#", "", "13.95%"};
+		{ 21, 319922, "", "=q3=Arlokk's Hoodoo Stick", "=ds=#s15#", "", "13.66%"};
 		{ 22, 19914, "", "=q3=Panther Hide Sack", "=ds=#m14# #e1#", "", "14.03%"};
 		Prev = "ZGThekal25Man";
 		Next = "ZGJindo25Man";
@@ -9146,18 +9146,18 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 9, 19718, "", "=q4=Primal Hakkari Stanchion", "=ds=#m3#", "", "2.36%"};
 		{ 11, 22637, "", "=q3=Primal Hakkari Idol", "=ds=#m3#"};
 		{ 12, 19943, "", "=q1=Massive Mojo", "=ds=#e8#", "", "8.4%"};
-		{ 16, 219885, "", "=q4=Jin'do's Evil Eye", "=ds=#s2#", "", "6.82%"};
-		{ 17, 219891, "", "=q4=Jin'do's Bag of Whammies", "=ds=#s15#", "", "7.70%"};
-		{ 18, 219890, "", "=q4=Jin'do's Hexxer", "=ds=#h3#, #w6#", "", "8.08%"};
-		{ 19, 219884, "", "=q4=Jin'do's Judgement", "=ds=#w9#", "", "8.36%"};
-		{ 21, 219888, "", "=q3=Overlord's Embrace", "=ds=#s4#", "", "12.72%"};
-		{ 22, 219886, "", "=q3=The Hexxer's Cover", "=ds=#s1#, #a1#", "", "12.11%"};
-		{ 23, 219929, "", "=q3=Bloodtinged Gloves", "=ds=#s9#, #a1#", "", "11.75%"};
-		{ 24, 219889, "", "=q3=Blooddrenched Leggings", "=ds=#s11#, #a2#", "", "11.97%"};
-		{ 25, 219892, "", "=q3=Animist's Boots", "=ds=#s12#, #a2#", "", "12.28%"};
-		{ 26, 219875, "", "=q3=Bloodstained Coif", "=ds=#s1#, #a3#", "", "13.73%"};
-		{ 27, 219887, "", "=q3=Bloodstained Legplates", "=ds=#s11#, #a3#", "", "11.11%"};
-		{ 28, 219894, "", "=q3=Bloodsoaked Gauntlets", "=ds=#s9#, #a4#", "", "12.93%"};
+		{ 16, 319885, "", "=q4=Jin'do's Evil Eye", "=ds=#s2#", "", "6.82%"};
+		{ 17, 319891, "", "=q4=Jin'do's Bag of Whammies", "=ds=#s15#", "", "7.70%"};
+		{ 18, 319890, "", "=q4=Jin'do's Hexxer", "=ds=#h3#, #w6#", "", "8.08%"};
+		{ 19, 319884, "", "=q4=Jin'do's Judgement", "=ds=#w9#", "", "8.36%"};
+		{ 21, 319888, "", "=q3=Overlord's Embrace", "=ds=#s4#", "", "12.72%"};
+		{ 22, 319886, "", "=q3=The Hexxer's Cover", "=ds=#s1#, #a1#", "", "12.11%"};
+		{ 23, 319929, "", "=q3=Bloodtinged Gloves", "=ds=#s9#, #a1#", "", "11.75%"};
+		{ 24, 319889, "", "=q3=Blooddrenched Leggings", "=ds=#s11#, #a2#", "", "11.97%"};
+		{ 25, 319892, "", "=q3=Animist's Boots", "=ds=#s12#, #a2#", "", "12.28%"};
+		{ 26, 319875, "", "=q3=Bloodstained Coif", "=ds=#s1#, #a3#", "", "13.73%"};
+		{ 27, 319887, "", "=q3=Bloodstained Legplates", "=ds=#s11#, #a3#", "", "11.11%"};
+		{ 28, 319894, "", "=q3=Bloodsoaked Gauntlets", "=ds=#s9#, #a4#", "", "12.93%"};
 		Prev = "ZGArlokk25Man";
 		Next = "ZGHakkar25Man";
 	};
@@ -9171,12 +9171,12 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 6, 219856, "", "=q4=The Eye of Hakkar", "=ds=#s2#", "", "12.02%"};
 		{ 8, 219859, "", "=q4=Fang of the Faceless", "=ds=#h1#, #w4#", "", "7.33%"};
 		{ 9, 219864, "", "=q4=Bloodcaller", "=ds=#h3#, #w10#", "", "7.69%"};
-		{ 10, 219865, "", "=q4=Warblade of the Hakkari", "=ds=#h3#, #w10#", "", "3.67%"};
-		{ 11, 219854, "", "=q4=Zin'rokh, Destroyer of Worlds", "=ds=#h2#, #w10#", "", "6.78%"};
-		{ 12, 219852, "", "=q4=Ancient Hakkari Manslayer", "=ds=#h1#, #w1#", "", "6.62%"};
-		{ 13, 219862, "", "=q4=Aegis of the Blood God", "=ds=#w8#", "", "9.99%"};
-		{ 14, 219853, "", "=q4=Gurubashi Dwarf Destroyer", "=ds=#w5#", "", "6.12%"};
-		{ 15, 219861, "", "=q4=Touch of Chaos", "=ds=#w12#", "", "7.24%"};
+		{ 10, 319865, "", "=q4=Warblade of the Hakkari", "=ds=#h3#, #w10#", "", "3.67%"};
+		{ 11, 319854, "", "=q4=Zin'rokh, Destroyer of Worlds", "=ds=#h2#, #w10#", "", "6.78%"};
+		{ 12, 319852, "", "=q4=Ancient Hakkari Manslayer", "=ds=#h1#, #w1#", "", "6.62%"};
+		{ 13, 319862, "", "=q4=Aegis of the Blood God", "=ds=#w8#", "", "9.99%"};
+		{ 14, 319853, "", "=q4=Gurubashi Dwarf Destroyer", "=ds=#w5#", "", "6.12%"};
+		{ 15, 319861, "", "=q4=Touch of Chaos", "=ds=#w12#", "", "7.24%"};
 		{ 16, 19802, "", "=q4=Heart of Hakkar", "=ds=#m2#", "", "100%"};
 		{ 17, 19950, "", "=q4=Zandalarian Hero Charm", "=q1=#m4#: =ds=#s14#"};
 		{ 18, 19949, "", "=q4=Zandalarian Hero Medallion", "=q1=#m4#: =ds=#s14#"};
@@ -9198,8 +9198,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 7, 222716, "", "=q3=Belt of Untapped Power", "=ds=#s10#, #a1#"};
 		{ 8, 222718, "", "=q3=Blooddrenched Mask", "=ds=#s1#, #a2#"};
 		{ 9, 222715, "", "=q3=Gloves of the Tormented", "=ds=#s9#, #a3#"};
-		{ 10, 222714, "", "=q3=Sacrificial Gauntlets", "=ds=#s9#, #a4#"};
-		{ 11, 222713, "", "=q3=Zulian Scepter of Rites", "=ds=#h3#, #w6#"};
+		{ 10, 322714, "", "=q3=Sacrificial Gauntlets", "=ds=#s9#, #a4#"};
+		{ 11, 322713, "", "=q3=Zulian Scepter of Rites", "=ds=#h3#, #w6#"};
 	};
 
 	AtlasLoot_Data["ZGTrash125Man"] = {
