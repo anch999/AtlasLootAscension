@@ -2496,6 +2496,31 @@ end
 	AtlasLoot_TableNames["JewelcraftingDaily4"] = { AL["Jewelcrafting Daily"], "AtlasLootCrafting" };
 	AtlasLoot_TableNames["JewelcraftingDaily5"] = { AL["Jewelcrafting Daily"], "AtlasLootCrafting" };
 	AtlasLoot_TableNames["JewelcraftingDaily6"] = { AL["Jewelcrafting Daily"], "AtlasLootCrafting" };
+	
+	AtlasLoot_TableNames["AlchemyHighRisk"] = { ALCHEMY, "AtlasLootCrafting" };
+	AtlasLoot_TableNames["AlchemyHighRisk25Man"] = { ALCHEMY, "AtlasLootCrafting" };
+	AtlasLoot_TableNames["AlchemyHighRisk25ManHEROIC"] = { ALCHEMY, "AtlasLootCrafting" };
+	AtlasLoot_TableNames["SmithingHighRisk"] = { BLACKSMITHING, "AtlasLootCrafting" };
+	AtlasLoot_TableNames["SmithingHighRisk25Man"] = { BLACKSMITHING, "AtlasLootCrafting" };
+	AtlasLoot_TableNames["SmithingHighRisk25ManHEROIC"] = { BLACKSMITHING, "AtlasLootCrafting" };
+	AtlasLoot_TableNames["EnchantingHighRisk"] = { ENCHANTING, "AtlasLootCrafting" };
+	AtlasLoot_TableNames["EnchantingHighRisk25Man"] = { ENCHANTING, "AtlasLootCrafting" };
+	AtlasLoot_TableNames["EnchantingHighRisk25ManHEROIC"] = { ENCHANTING, "AtlasLootCrafting" };
+	AtlasLoot_TableNames["EngineerHighRisk"] = { ENGINEERING, "AtlasLootCrafting" };
+	AtlasLoot_TableNames["EngineerHighRisk25Man"] = { ENGINEERING, "AtlasLootCrafting" };
+	AtlasLoot_TableNames["EngineerHighRisk25ManHEROIC"] = { ENGINEERING, "AtlasLootCrafting" };
+	AtlasLoot_TableNames["LeatherHighRisk"] = { LEATHERWORKING, "AtlasLootCrafting" };
+	AtlasLoot_TableNames["LeatherHighRisk25Man"] = { LEATHERWORKING, "AtlasLootCrafting" };
+	AtlasLoot_TableNames["LeatherHighRisk25ManHEROIC"] = { LEATHERWORKING, "AtlasLootCrafting" };
+	AtlasLoot_TableNames["TailorHighRisk"] = { TAILORING, "AtlasLootCrafting" };
+	AtlasLoot_TableNames["TailorHighRisk25Man"] = { TAILORING, "AtlasLootCrafting" };
+	AtlasLoot_TableNames["TailorHighRisk25ManHEROIC"] = { TAILORING, "AtlasLootCrafting" };
+	AtlasLoot_TableNames["CookingHighRisk"] = { COOKING, "AtlasLootCrafting" };
+	AtlasLoot_TableNames["CookingHighRiskTwo"] = { COOKING, "AtlasLootCrafting" };
+	AtlasLoot_TableNames["CookingHighRisk25Man"] = { COOKING, "AtlasLootCrafting" };
+	AtlasLoot_TableNames["CookingHighRiskTwo25Man"] = { COOKING, "AtlasLootCrafting" };
+	AtlasLoot_TableNames["CookingHighRisk25ManHEROIC"] = { COOKING, "AtlasLootCrafting" };
+	AtlasLoot_TableNames["CookingHighRiskTwo25ManHEROIC"] = { COOKING, "AtlasLootCrafting" };
 
 -----------
 --- PvP ---
@@ -2648,3 +2673,5 @@ end
 	AtlasLoot_TableNames["EmptyTable"] = { AL["Select a Loot Table..."], "Menu" };
 	AtlasLoot_TableNames["EmptyInstance"] = { "AtlasLoot", "AtlasLootFallback" };
 	AtlasLoot_TableNames["AtlasLootFallback"] = { "AtlasLoot", "AtlasLootFallback" };
+	
+	
