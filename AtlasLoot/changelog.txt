@@ -1,4 +1,8 @@
-v2.0 08/20/2021
+v2.01 08/28/2021
+- Fixed lua Error when "Query Server" is used to query all items on the page
+- Added High Risk crafting materials and crafts (Credit: Rvng)
+- (Actually) Fixed Heroic ZG pages
+---------------------------------------------------------------------------------------------------------------------------v2.0 08/20/2021
 - Added Heroic and Mythic Vanilla dungeons
 - Added back the Normal/Heroic versions of TBC dungeons. You can now use the same Heroic/Ascended button to swap between Themios
 - Fixed Heroic ZG showing the same as Ascended ZG
