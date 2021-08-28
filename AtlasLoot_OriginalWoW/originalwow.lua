@@ -1601,6 +1601,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 
 	AtlasLoot_Data["BRDPyron"] = {
 		{ 1, 14486, "", "=q3=Pattern: Cloak of Fire", "=ds=#p8# (275)", "", "17.95%"};
+		Next = "BRDLordRoccor";
 	};
 
 	AtlasLoot_Data["BRDLordRoccor"] = {
@@ -1611,6 +1612,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 5, 11630, "", "=q3=Rockshard Pellets", "=ds=#w18#", "", "16.82%"};
 		{ 16, 11813, "", "=q2=Formula: Smoking Heart of the Mountain", "=ds=#p4# (265)", "", "14.79%"};
 		{ 17, 11811, "", "=q3=Smoking Heart of the Mountain", "=ds=#s14#"};
+		Next = "BRDHighInterrogatorGerstahn";
+		Prev = "BRDPyron";
 	};
 
 	AtlasLoot_Data["BRDHighInterrogatorGerstahn"] = {
@@ -1619,6 +1622,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 3, 22240, "", "=q3=Greaves of Withering Despair", "=ds=#s12#, #a3#", "", "16.81%"};
 		{ 4, 11625, "", "=q3=Enthralled Sphere", "=ds=#s15#", "", "23.14%"};
 		{ 6, 11140, "", "=q1=Prison Cell Key", "=ds=#e9#"};
+		Next = "BRDArena";
+		Prev = "BRDLordRoccor";
 	};
 
 	AtlasLoot_Data["BRDArena"] = {
@@ -1647,6 +1652,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 27, 11665, "", "=q3=Ogreseer Fists", "=ds=#s9#, #a2# =q2=#brd6#", "", "28.16%"};
 		{ 28, 11728, "", "=q3=Savage Gladiator Leggings", "=ds=#s11#, #a3# =q2=#brd6#", "", "14.95%"};
 		{ 29, 11824, "", "=q3=Cyclopean Band", "=ds=#s13# =q2=#brd6#", "", "18.37%"};
+		Next = "BRDTheldren";
+		Prev = "BRDHighInterrogatorGerstahn";
 	};
 
 	AtlasLoot_Data["BRDTheldren"] = {
@@ -1656,6 +1663,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 4, 22317, "", "=q3=Lefty's Brass Knuckle", "=ds=#h1#, #w13#", "", "26.15%"};
 		{ 5, 22318, "", "=q3=Malgen's Long Bow", "=ds=#w2#", "", "22.88%"};
 		{ 7, 22047, "", "=q1=Top Piece of Lord Valthalak's Amulet", "=ds=#m3#"};
+		Next = "BRDHoundmaster";
+		Prev = "BRDArena";
 	};
 
 	AtlasLoot_Data["BRDHoundmaster"] = {
@@ -1664,10 +1673,14 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 3, 11627, "", "=q3=Fleetfoot Greaves", "=ds=#s12#, #a3#", "", "32.09%"};
 		{ 4, 11628, "", "=q3=Houndmaster's Bow", "=ds=#w2#", "", "12.14%"};
 		{ 5, 11629, "", "=q3=Houndmaster's Rifle", "=ds=#w5#", "", "11.18%"};
+		Next = "BRDForgewright";
+		Prev = "BRDTheldren";
 	};
 
 	AtlasLoot_Data["BRDForgewright"] = {
 		{ 1, 11000, "", "=q1=Shadowforge Key", "=q1=#m4#: =ds=#e9#"};
+		Next = "BRDPyromantLoregrain";
+		Prev = "BRDHoundmaster";
 	};
 
 	AtlasLoot_Data["BRDPyromantLoregrain"] = {
@@ -1676,6 +1689,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 3, 11750, "", "=q3=Kindling Stave", "=ds=#w9#", "", " 16.19%"};
 		{ 4, 11748, "", "=q3=Pyric Caduceus", "=ds=#w12#", "", "30.20%"};
 		{ 6, 11207, "", "=q2=Formula: Enchant Weapon - Fiery Weapon", "=ds=#p4# (265)", "", "13.32%"};
+		Next = "BRDTheVault";
+		Prev = "BRDForgewright";
 	};
 
 	AtlasLoot_Data["BRDTheVault"] = {
@@ -1694,6 +1709,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 17, 11752, "", "=q1=Black Blood of the Tormented", "=ds=#m3#", "", "44.48%"};
 		{ 18, 11751, "", "=q1=Burning Essence", "=ds=#m3#", "", "39.35%"};
 		{ 19, 11753, "", "=q1=Eye of Kajal", "=ds=#m3#", "", "39.95%"};
+		Next = "BRDWarderStilgiss";
+		Prev = "BRDPyromantLoregrain";
 	};
 
 	AtlasLoot_Data["BRDWarderStilgiss"] = {
@@ -1701,11 +1718,15 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 2, 22241, "", "=q3=Dark Warder's Pauldrons", "=ds=#s3#, #a2#", "", "18.38%"};
 		{ 3, 11783, "", "=q3=Chillsteel Girdle", "=ds=#s10#, #a3#", "", "20.50%"};
 		{ 4, 11784, "", "=q3=Arbiter's Blade", "=ds=#h3#, #w10#", "", "21.54%"};
+		Next = "BRDVerek";
+		Prev = "BRDTheVault";
 	};
 
 	AtlasLoot_Data["BRDVerek"] = {
 		{ 1, 22242, "", "=q3=Verek's Leash", "=ds=#s10#, #a3#", "", "9.78%"};
 		{ 2, 11755, "", "=q3=Verek's Collar", "=ds=#s2#", "", "9.54%"};
+		Next = "BRDFineousDarkvire";
+		Prev = "BRDWarderStilgiss";
 	};
 
 	AtlasLoot_Data["BRDFineousDarkvire"] = {
@@ -1715,6 +1736,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 4, 22223, "", "=q3=Foreman's Head Protector", "=ds=#s1#, #a4#", "", "19.73%"};
 		{ 6, 11840, "", "=q1=Master Builder's Shirt", "#s6#", "", "3.9%"};
 		{ 8, 10999, "", "=q1=Ironfel", "=ds=#m3#", "", "100%"};
+		Next = "BRDLordIncendius";
+		Prev = "BRDVerek";
 	};
 
 	AtlasLoot_Data["BRDLordIncendius"] = {
@@ -1726,6 +1749,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 6, 19268, "", "=q3=Ace of Elementals", "=ds=#e16#", "", "2.10%"};
 		{ 8, 21987, "", "=q1=Incendicite of Incendius", "=ds=#m3#"};
 		{ 9, 11126, "", "=q1=Tablet of Kurniya", "=ds=#m3#"};
+		Next = "BRDBaelGar";
+		Prev = "BRDFineousDarkvire";
 	};
 
 	AtlasLoot_Data["BRDBaelGar"] = {
@@ -1733,6 +1758,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 2, 11802, "", "=q3=Lavacrest Leggings", "=ds=#s11#, #a4#", "", "26.75%"};
 		{ 3, 11805, "", "=q3=Rubidium Hammer", "=ds=#h1#, #w6#", "", "17.02%"};
 		{ 4, 11803, "", "=q3=Force of Magma", "=ds=#h2#, #w6#", "", "27.47%"};
+		Next = "BRDGeneralAngerforge";
+		Prev = "BRDLordIncendius";
 	};
 
 	AtlasLoot_Data["BRDGeneralAngerforge"] = {
@@ -1742,6 +1769,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 4, 11817, "", "=q3=Lord General's Sword", "=ds=#h1#, #w10# ", "", "14.72%"};
 		{ 5, 11816, "", "=q3=Angerforge's Battle Axe", "=ds=#h2#, #w1#", "", "16.41%"};
 		{ 7, 11464, "", "=q1=Marshal Windsor's Lost Information", "=ds=#m3#"};
+		Next = "BRDGolemLordArgelmach";
+		Prev = "BRDBaelGar";
 	};
 
 	AtlasLoot_Data["BRDGolemLordArgelmach"] = {
@@ -1752,6 +1781,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 6, 21956, "", "=q2=Design: Dark Iron Scorpid", "=ds=#p12# (300)"};
 		{ 8, 11268, "", "=q1=Head of Argelmach", "=ds=#m3#"};
 		{ 9, 11465, "", "=q1=Marshal Windsor's Lost Information", "=ds=#m3#"};
+		Next = "BRDGuzzler";
+		Prev = "BRDGeneralAngerforge";
 	};
 
 	AtlasLoot_Data["BRDGuzzler"] = {
@@ -1779,6 +1810,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 28, 15759, "", "=q1=Pattern: Black Dragonscale Breastplate", "=ds=#p7# (290)"};
 		{ 29, 11602, "", "=q1=Grim Guzzler Key", "=ds=#e9#"};
 		{ 30, 11325, "", "=q1=Dark Iron Ale Mug", "=ds=#m3#"};
+		Next = "BRDFlamelash";
+		Prev = "BRDGolemLordArgelmach";
 	};
 
 	AtlasLoot_Data["BRDFlamelash"] = {
@@ -1788,6 +1821,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 5, 11832, "", "=q3=Burst of Knowledge", "=ds=#s14#", "", "14.61%"};
 		{ 6, 11809, "", "=q3=Flame Wrath", "=ds=#w7#", "", "18.69%"};
 		{ 8, 23320, "", "=q3=Tablet of Flame Shock VI", "=ds=#e10# =q1=#m1# =ds=#c7#"};
+		Next = "BRDPanzor";
+		Prev = "BRDGuzzler";
 	};
 
 	AtlasLoot_Data["BRDPanzor"] = {
@@ -1795,6 +1830,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 2, 11787, "", "=q3=Shalehusk Boots", "=ds=#s12#, #a4#", "", "19.96%"};
 		{ 3, 11786, "", "=q3=Stone of the Earth", "=ds=#h2#, #w10#", "", "20.38%"};
 		{ 4, 11785, "", "=q3=Rock Golem Bulwark", "=ds=#w8#", "", "21.22%"};
+		Next = "BRDTomb";
+		Prev = "BRDFlamelash";
 	};
 
 	AtlasLoot_Data["BRDTomb"] = {
@@ -1807,11 +1844,15 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 7, 11920, "", "=q3=Wraith Scythe", "=ds=#h1# #w1#", "", "22.61%"};
 		{ 8, 11923, "", "=q3=The Hammer of Grace", "=ds=#h3#, #w6#", "", "21.29%"};
 		{ 9, 11921, "", "=q3=Impervious Giant", "=ds=#h2#, #w6#", "", "22.23%"};
+		Next = "BRDLyceum";
+		Prev = "BRDPanzor";
 	};
 
 	AtlasLoot_Data["BRDLyceum"] = {
 		{ 1, 0, "INV_Box_01", "=q6=#n44#", ""};
 		{ 2, 11885, "", "=q1=Shadowforge Torch", "=ds=#m20#"};
+		Next = "BRDMagmus";
+		Prev = "BRDTomb";
 	};
 
 	AtlasLoot_Data["BRDMagmus"] = {
@@ -1820,6 +1861,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 3, 22395, "", "=q3=Totem of Rage", "=ds=#s16#, #w15#", "", "10.09%"};
 		{ 4, 22400, "", "=q3=Libram of Truth", "=ds=#s16#, #w16#", "", "9.75%"};
 		{ 5, 22208, "", "=q3=Lavastone Hammer", "=ds=#h2#, #w6#", "", "22.79%"};
+		Next = "BRDImperatorDagranThaurissan";
+		Prev = "BRDLyceum";
 	};
 
 	AtlasLoot_Data["BRDImperatorDagranThaurissan"] = {
@@ -1835,6 +1878,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 17, 11932, "", "=q3=Guiding Stave of Wisdom", "=ds=#w9#", "", "15.01%"};
 		{ 18, 11928, "", "=q3=Thaurissan's Royal Scepter", "=ds=#s15#", "", " 12.86%"};
 		{ 20, 12033, "", "=q1=Thaurissan Family Jewels", "=ds=#e7# #e1#", "", "2.2%"};
+		Next = "BRDPrincess";
+		Prev = "BRDMagmus"
 	};
 
 	AtlasLoot_Data["BRDPrincess"] = {
@@ -1842,11 +1887,15 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 2, 12556, "", "=q3=High Priestess Boots", "=ds=#s12#, #a1#", "", "10.26%"};
 		{ 3, 12557, "", "=q3=Ebonsteel Spaulders", "=ds=#s3#, #a4#", "", "12.11%"};
 		{ 4, 12553, "", "=q3=Swiftwalker Boots", "=ds=#s12#, #a2#", "", "11.05%"};
+		Next = "BRDBSPlans";
+		Prev = "BRDImperatorDagranThaurissan";
 	};
 
 	AtlasLoot_Data["BRDBSPlans"] = {
 		{ 1, 11614, "", "=q2=Plans: Dark Iron Mail", "=ds=#p2# (270)", "", "13.38%"};
 		{ 2, 11615, "", "=q2=Plans: Dark Iron Shoulders", "=ds=#p2# (280)", "", "7.65%"};
+		Next = "BRDTrash";
+		Prev = "BRDPrincess";
 	};
 
 	AtlasLoot_Data["BRDTrash"] = {
@@ -1875,6 +1924,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 26, 18945, "", "=q1=Dark Iron Residue", "=ds=#m3#"};
 		{ 27, 11468, "", "=q1=Dark Iron Fanny Pack", "=ds=#m3#"};
 		{ 28, 11446, "", "=q1=A Crumpled Up Note", "=ds=#m2#"};
+		Next = "BRDPyron";
 	};
 
 
@@ -1884,6 +1934,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 
 	AtlasLoot_Data["BRDPyron25Man"] = {
 		{ 1, 14486, "", "=q3=Pattern: Cloak of Fire", "=ds=#p8# (275)", "", "17.95%"};
+		Next = "BRDLordRoccor25Man";
 	};
 
 	AtlasLoot_Data["BRDLordRoccor25Man"] = {
@@ -1895,6 +1946,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 16, 11813, "", "=q2=Formula: Smoking Heart of the Mountain", "=ds=#p4# (265)", "", "14.79%"};
 		{ 17, 11811, "", "=q3=Smoking Heart of the Mountain", "=ds=#s14#"};
 		Next = "BRDHighInterrogatorGerstahn25Man";
+		Prev = "BRDPyron25Man";
 	};
 
 	AtlasLoot_Data["BRDHighInterrogatorGerstahn25Man"] = {
@@ -1955,11 +2007,13 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 4, AL_FindId("Houndmaster's Bow", 3), "", "=q4=Houndmaster's Bow", "=ds=#w2#", "", "12.14%"};
 		{ 5, AL_FindId("Houndmaster's Rifle", 3), "", "=q4=Houndmaster's Rifle", "=ds=#w5#", "", "11.18%"};
 		Prev = "BRDTheldren25Man";
-		Next = "BRDPyromantLoregrain25Man";
+		Next = "BRDForgewright25Man";
 	};
 
 	AtlasLoot_Data["BRDForgewright25Man"] = {
 		{ 1, 11000, "", "=q1=Shadowforge Key", "=q1=#m4#: =ds=#e9#"};
+		Next = "BRDPyromantLoregrain25Man";
+		Prev = "BRDHoundmaster25Man";
 	};
 
 	AtlasLoot_Data["BRDPyromantLoregrain25Man"] = {
@@ -1968,7 +2022,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 3, AL_FindId("Kindling Stave", 3), "", "=q4=Kindling Stave", "=ds=#w9#", "", " 16.19%"};
 		{ 4, AL_FindId("Pyric Caduceus", 3), "", "=q4=Pyric Caduceus", "=ds=#w12#", "", "30.20%"};
 		{ 6, 11207, "", "=q2=Formula: Enchant Weapon - Fiery Weapon", "=ds=#p4# (265)", "", "13.32%"};
-		Prev = "BRDHoundmaster25Man";
+		Prev = "BRDForgewright25Man";
 		Next = "BRDTheVault25Man";
 	};
 
@@ -2124,12 +2178,15 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 8, AL_FindId("The Hammer of Grace", 3), "", "=q4=The Hammer of Grace", "=ds=#h3#, #w6#", "", "21.29%"};
 		{ 9, AL_FindId("Impervious Giant", 3), "", "=q4=Impervious Giant", "=ds=#h2#, #w6#", "", "22.23%"};
 		Prev = "BRDPanzor25Man";
-		Next = "BRDMagmus25Man";
+		Next = "BRDLyceum25Man";
+		
 	};
 
 	AtlasLoot_Data["BRDLyceum25Man"] = {
 		{ 1, 0, "INV_Box_01", "=q6=#n44#", ""};
 		{ 2, 11885, "", "=q1=Shadowforge Torch", "=ds=#m20#"};
+		Next = "BRDMagmus25Man";
+		Prev = "BRDTomb25Man";
 	};
 
 	AtlasLoot_Data["BRDMagmus25Man"] = {
@@ -2138,7 +2195,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 3, AL_FindId("Totem of Rage", 3), "", "=q4=Totem of Rage", "=ds=#s16#, #w15#", "", "10.09%"};
 		{ 4, AL_FindId("Libram of Truth", 3), "", "=q4=Libram of Truth", "=ds=#s16#, #w16#", "", "9.75%"};
 		{ 5, AL_FindId("Lavastone Hammer", 3), "", "=q4=Lavastone Hammer", "=ds=#h2#, #w6#", "", "22.79%"};
-		Prev = "BRDTomb25Man";
+		Prev = "BRDLyceum25Man";
 		Next = "BRDImperatorDagranThaurissan25Man";
 	};
 
@@ -2165,12 +2222,14 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 3, AL_FindId("Ebonsteel Spaulders", 3), "", "=q4=Ebonsteel Spaulders", "=ds=#s3#, #a4#", "", "12.11%"};
 		{ 4, AL_FindId("Swiftwalker Boots", 3), "", "=q4=Swiftwalker Boots", "=ds=#s12#, #a2#", "", "11.05%"};
 		Prev = "BRDImperatorDagranThaurissan25Man";
+		Next = "BRDBSPlans25Man";
 	};
 
 	AtlasLoot_Data["BRDBSPlans25Man"] = {
 		{ 1, 11614, "", "=q2=Plans: Dark Iron Mail", "=ds=#p2# (270)", "", "13.38%"};
 		{ 2, 11615, "", "=q2=Plans: Dark Iron Shoulders", "=ds=#p2# (280)", "", "7.65%"};
 		Next = "BRDTrash25Man";
+		Prev = "BRDPrincess25Man";
 	};
 
 	AtlasLoot_Data["BRDTrash25Man"] = {
@@ -2208,6 +2267,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 
 	AtlasLoot_Data["BRDPyron25ManHEROIC"] = {
 		{ 1, 14486, "", "=q3=Pattern: Cloak of Fire", "=ds=#p8# (275)", "", "17.95%"};
+		Next = "BRDLordRoccor25ManHEROIC";
 	};
 
 	AtlasLoot_Data["BRDLordRoccor25ManHEROIC"] = {
@@ -2219,6 +2279,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 16, 11813, "", "=q2=Formula: Smoking Heart of the Mountain", "=ds=#p4# (265)", "", "14.79%"};
 		{ 17, 11811, "", "=q3=Smoking Heart of the Mountain", "=ds=#s14#"};
 		Next = "BRDHighInterrogatorGerstahn25Man";
+		Prev = "BRDPyron25ManHEROIC";
 	};
 
 	AtlasLoot_Data["BRDHighInterrogatorGerstahn25ManHEROIC"] = {
@@ -2284,6 +2345,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 
 	AtlasLoot_Data["BRDForgewright25ManHEROIC"] = {
 		{ 1, 11000, "", "=q1=Shadowforge Key", "=q1=#m4#: =ds=#e9#"};
+		Next = "BRDPyromantLoregrain25ManHEROIC";
+		Prev = "BRDHoundmaster25ManHEROIC";
 	};
 
 	AtlasLoot_Data["BRDPyromantLoregrain25ManHEROIC"] = {
@@ -2292,7 +2355,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 3, AL_FindId("Kindling Stave", 4), "", "=q4=Kindling Stave", "=ds=#w9#", "", " 16.19%"};
 		{ 4, AL_FindId("Pyric Caduceus", 4), "", "=q4=Pyric Caduceus", "=ds=#w12#", "", "30.20%"};
 		{ 6, 11207, "", "=q2=Formula: Enchant Weapon - Fiery Weapon", "=ds=#p4# (265)", "", "13.32%"};
-		Prev = "BRDHoundmaster25Man";
+		Prev = "BRDForgewright25ManHEROIC";
 		Next = "BRDTheVault25Man";
 	};
 
@@ -2448,12 +2511,14 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 8, AL_FindId("The Hammer of Grace", 4), "", "=q4=The Hammer of Grace", "=ds=#h3#, #w6#", "", "21.29%"};
 		{ 9, AL_FindId("Impervious Giant", 4), "", "=q4=Impervious Giant", "=ds=#h2#, #w6#", "", "22.23%"};
 		Prev = "BRDPanzor25Man";
-		Next = "BRDMagmus25Man";
+		Next = "BRDLyceum25ManHEROIC";
 	};
 
 	AtlasLoot_Data["BRDLyceum25ManHEROIC"] = {
 		{ 1, 0, "INV_Box_01", "=q6=#n44#", ""};
 		{ 2, 11885, "", "=q1=Shadowforge Torch", "=ds=#m20#"};
+		Next = "BRDMagmus25Man";
+		Prev = "BRDTomb25Man";
 	};
 
 	AtlasLoot_Data["BRDMagmus25ManHEROIC"] = {
@@ -2532,6 +2597,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 
 	AtlasLoot_Data["BRMScarshieldQuartermaster"] = {
 		{ 1, 18987, "", "=q1=Blackhand's Command", "=ds=#m2#", "", "100%"};
+		Next = "LBRSQuestItems";
 	};
 
 	AtlasLoot_Data["LBRSQuestItems"] = {
@@ -2542,11 +2608,15 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 6, 12740, "", "=q1=Fifth Mosh'aru Tablet", "=ds=#m3#"};
 		{ 7, 12741, "", "=q1=Sixth Mosh'aru Tablet", "=ds=#m3#"};
 		{ 8, 12345, "", "=q1=Bijou's Belongings", "=ds=#m3#"};
+		Next = "LBRSSpirestoneButcher";
+		Prev = "BRMScarshieldQuartermaster";
 	};
 
 	AtlasLoot_Data["LBRSSpirestoneButcher"] = {
 		{ 1, 12608, "", "=q3=Butcher's Apron", "=ds=#s4#", "", "54.31%"};
 		{ 2, 13286, "", "=q3=Rivenspike", "=ds=#h1#, #w1#", "", "35.78%"};
+		Next = "LBRSOmokk";
+		Prev = "LBRSQuestItems";
 	};
 
 	AtlasLoot_Data["LBRSOmokk"] = {
@@ -2558,17 +2628,23 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 7, 12336, "", "=q2=Gemstone of Spirestone", "=ds=#m3#", "", "100%"};
 		{ 9, 12534, "", "=q1=Omokk's Head", "=ds=#m3#", "", "100%"};
 		{ 16, 16670, "", "=q3=Boots of Elements", "=ds=#s12#, #a3# (D1, #c7#)", "", "9.35%"};
+		Next = "LBRSSpirestoneLord";
+		Prev = "LBRSSpirestoneButcher";
 	};
 
 	AtlasLoot_Data["LBRSSpirestoneLord"] = {
 		{ 1, 13284, "", "=q3=Swiftdart Battleboots", "=ds=#s12#, #a3#", "", "48.68%"};
 		{ 2, 13285, "", "=q3=The Blackrock Slicer", "=ds=#h2#, #w1#", "", "34.87%"};
+		Next = "LBRSLordMagus";
+		Prev = "LBRSOmokk";
 	};
 
 	AtlasLoot_Data["LBRSLordMagus"] = {
 		{ 1, 13282, "", "=q3=Ogreseer Tower Boots", "=ds=#s12#, #a3#", "", "22.95%"};
 		{ 2, 13283, "", "=q3=Magus Ring", "=ds=#s13#", "", "38.01%"};
 		{ 3, 13261, "", "=q3=Globe of D'sak", "=ds=#s15#", "", "18.07%"};
+		Next = "LBRSVosh";
+		Prev = "LBRSSpirestoneLord";
 	};
 
 	AtlasLoot_Data["LBRSVosh"] = {
@@ -2581,6 +2657,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 8, 13352, "", "=q1=Vosh'gajin's Snakestone", "=ds=#m3#", "", "100%"};
 		{ 9, 12821, "", "=q3=Plans: Dawn's Edge", "=q1=#m4#: =ds=#p2# (275)"};
 		{ 16, 16712, "", "=q3=Shadowcraft Gloves", "=ds=#s9#, #a2# (D1, #c6#)", "", "11.89%"};
+		Next = "LBRSVoone";
+		Prev = "LBRSLordMagus";
 	};
 
 	AtlasLoot_Data["LBRSVoone"] = {
@@ -2591,6 +2669,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 5, 28972, "", "=q3=Flightblade Throwing Axe", "=ds=#w11#", "", "79.85%"};
 		{ 7, 12335, "", "=q2=Gemstone of Smolderthorn", "=ds=#m3#", "", "100%"};
 		{ 16, 16676, "", "=q3=Beaststalker's Gloves", "=ds=#s9#, #a3# (D1, #c2#)", "", "9.15%"};
+		Next = "LBRSGrayhoof";
+		Prev = "LBRSVosh";
 	};
 
 	AtlasLoot_Data["LBRSGrayhoof"] = {
@@ -2602,6 +2682,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 6, 22322, "", "=q3=The Jaw Breaker", "=ds=#h1#, #w6#", "", "20.28%"};
 		{ 8, 21984, "", "=q1=Left Piece of Lord Valthalak's Amulet", "=ds=#m3#"};
 		{ 9, 22046, "", "=q1=Right Piece of Lord Valthalak's Amulet", "=ds=#m3#"};
+		Next = "LBRSGrimaxe";
+		Prev = "LBRSVoone";
 	};
 
 	AtlasLoot_Data["LBRSGrimaxe"] = {
@@ -2610,6 +2692,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 3, 12621, "", "=q3=Demonfork", "=ds=#h1#, #w1#", "", "27.64%"};
 		{ 5, 12838, "", "=q3=Plans: Arcanite Reaper", "=ds=#p2# (300)", "", "6.73%"};
 		{ 6, 12784, "", "=q3=Arcanite Reaper", "=ds=#h2#, #w1#"};
+		Next = "LBRSSmolderweb";
+		Prev = "LBRSGrayhoof";
 	};
 
 	AtlasLoot_Data["LBRSSmolderweb"] = {
@@ -2617,12 +2701,16 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 2, 13213, "", "=q3=Smolderweb's Eye", "=ds=#s14#", "", "24.97%"};
 		{ 3, 13183, "", "=q3=Venomspitter", "=ds=#h1#, #w6#", "", "12.49%"};
 		{ 16, 16715, "", "=q3=Wildheart Boots", "=ds=#s12#, #a2# (D1, #c1#)", "", "13.03%"};
+		Next = "LBRSCrystalFang";
+		Prev = "LBRSGrimaxe";
 	};
 
 	AtlasLoot_Data["LBRSCrystalFang"] = {
 		{ 1, 13185, "", "=q3=Sunderseer Mantle", "=ds=#s3#, #a1#", "", "28.10%"};
 		{ 2, 13184, "", "=q3=Fallbrush Handgrips", "=ds=#s9#, #a2#", "", "35.48%"};
 		{ 3, 13218, "", "=q3=Fang of the Crystal Spider", "=ds=#h1#, #w4#", "", "17.62%"};
+		Next = "LBRSDoomhowl";
+		Prev = "LBRSSmolderweb";
 	};
 
 	AtlasLoot_Data["LBRSDoomhowl"] = {
@@ -2634,6 +2722,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 7, 12725, "", "=q3=Plans: Enchanted Thorium Helm", "=q1=#m4#: =ds=#p2# (300)"};
 		{ 9, 12712, "", "=q1=Warosh's Mojo", "=ds=#m3#", "", "100%"};
 		{ 10, 15867, "", "=q2=Prismcharm", "=q1=#m4#: =ds=#s14#"};
+		Next = "LBRSZigris";
+		Prev = "LBRSCrystalFang";
 	};
 
 	AtlasLoot_Data["LBRSZigris"] = {
@@ -2642,6 +2732,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 4, 12835, "", "=q3=Plans: Annihilator", "=ds=#p2# (300)", "", "8.37%"};
 		{ 5, 12798, "", "=q3=Annihilator", "=ds=#h1#, #w1#"};
 		{ 7, 21955, "", "=q2=Design: Black Diamond Crab", "=ds=#p12# (300)"};
+		Next = "LBRSSlavener";
+		Prev = "LBRSDoomhowl";
 	};
 
 	AtlasLoot_Data["LBRSSlavener"] = {
@@ -2649,6 +2741,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 2, 13208, "", "=q3=Bleak Howler Armguards", "=ds=#s8#, #a2#", "", "18.02%"};
 		{ 3, 13205, "", "=q3=Rhombeard Protector", "=ds=#w8#", "", "16.93%"};
 		{ 16, 16718, "", "=q3=Wildheart Spaulders", "=ds=#s3#, #a2# (D1, #c1#)", "", "11.04%"};
+		Next = "LBRSHalycon";
+		Prev = "LBRSBashguud";
 	};
 
 	AtlasLoot_Data["LBRSHalycon"] = {
@@ -2656,12 +2750,16 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 2, 13210, "", "=q3=Pads of the Dread Wolf", "=ds=#s12#, #a2#", "", "9.88%"};
 		{ 3, 13211, "", "=q3=Slashclaw Bracers", "=ds=#s8#, #a3#", "", "20.32%"};
 		{ 4, 13212, "", "=q3=Halycon's Spiked Collar", "=ds=#s2#", "", "18.23%"};
+		Next = "LBRSBashguud";
+		Prev = "LBRSSlavener";
 	};
 
 	AtlasLoot_Data["LBRSBashguud"] = {
 		{ 1, 13203, "", "=q3=Armswake Cloak", "=ds=#s4#", "", "35.31%"};
 		{ 2, 13198, "", "=q3=Hurd Smasher", "=ds=#h1#, #w13#", "", "21.15%"};
 		{ 3, 13204, "", "=q3=Bashguuder", "=ds=#h1#, #w6#", "", "27.09%"};
+		Next = "LBRSWyrmthalak";
+		Prev = "LBRSHalycon";
 	};
 
 	AtlasLoot_Data["LBRSWyrmthalak"] = {
@@ -2674,11 +2772,15 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 8, 13161, "", "=q3=Trindlehaven Staff", "=ds=#w9#", "", "10.40%"};
 		{ 10, 12337, "", "=q2=Gemstone of Bloodaxe", "=ds=#m3#", "", "100%"};
 		{ 16, 16679, "", "=q3=Beaststalker's Mantle", "=ds=#s3#, #a3# (D1, #c2#)", "", "9.89%"};
+		Next = "LBRSFelguard";
+		Prev = "LBRSBashguud";
 	};
 
 	AtlasLoot_Data["LBRSFelguard"] = {
 		{ 1, 13181, "", "=q3=Demonskin Gloves", "=ds=#s9#, #a1#", "", "14.47%"};
 		{ 2, 13182, "", "=q3=Phase Blade", "=ds=#h1#, #w10#", "", "11.63%"};
+		Next = "LBRSTrash";
+		Prev = "LBRSWyrmthalak";
 	};
 
 	AtlasLoot_Data["LBRSTrash"] = {
@@ -2691,6 +2793,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 8, 15775, "", "=q2=Pattern: Volcanic Shoulders", "=ds=#p7# (300) =q1=#n74#", "", "10.56%"};
 		{ 10, 12219, "", "=q1=Unadorned Seal of Ascension", "=ds=#m3#"};
 		{ 11, 21982, "", "=q1=Ogre Warbeads", "=ds=#m3#"};
+		Prev = "LBRSFelguard";
 	};
 
 		-------------------------------------------------
@@ -2699,6 +2802,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 
 	AtlasLoot_Data["BRMScarshieldQuartermaster25Man"] = {
 		{ 1, 18987, "", "=q1=Blackhand's Command", "=ds=#m2#", "", "100%"};
+		Next = "LBRSQuestItems25Man";
 	};
 
 	AtlasLoot_Data["LBRSQuestItems25Man"] = {
@@ -2709,11 +2813,15 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 6, 12740, "", "=q1=Fifth Mosh'aru Tablet", "=ds=#m3#"};
 		{ 7, 12741, "", "=q1=Sixth Mosh'aru Tablet", "=ds=#m3#"};
 		{ 8, 12345, "", "=q1=Bijou's Belongings", "=ds=#m3#"};
+		Next = "LBRSSpirestoneButcher25Man";
+		Prev = "BRMScarshieldQuartermaster25Man";
 	};
 
 	AtlasLoot_Data["LBRSSpirestoneButcher25Man"] = {
 		{ 1, AL_FindId("Butcher's Apron", 3), "", "=q4=Butcher's Apron", "=ds=#s4#", "", "54.31%"};
 		{ 2, AL_FindId("Rivenspike", 3), "", "=q4=Rivenspike", "=ds=#h1#, #w1#", "", "35.78%"};
+		Next = "LBRSOmokk25Man";
+		Prev = "LBRSQuestItems25Man";
 	};
 
 	AtlasLoot_Data["LBRSOmokk25Man"] = {
@@ -2725,17 +2833,25 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 7, 12336, "", "=q2=Gemstone of Spirestone", "=ds=#m3#", "", "100%"};
 		{ 9, 12534, "", "=q1=Omokk's Head", "=ds=#m3#", "", "100%"};
 		{ 16, AL_FindId("Boots of Elements", 3), "", "=q4=Boots of Elements", "=ds=#s12#, #a3# (D1, #c7#)", "", "9.35%"};
+		Next = "LBRSSpirestoneLord25Man";
+		Prev = "LBRSSpirestoneButcher25Man";
 	};
 
 	AtlasLoot_Data["LBRSSpirestoneLord25Man"] = {
 		{ 1, AL_FindId("Swiftdart Battleboots", 3), "", "=q4=Swiftdart Battleboots", "=ds=#s12#, #a3#", "", "48.68%"};
 		{ 2, AL_FindId("The Blackrock Slicer", 3), "", "=q4=The Blackrock Slicer", "=ds=#h2#, #w1#", "", "34.87%"};
+		Next = "LBRSLordMagus25Man";
+		Prev = "LBRSOmokk25Man";
+		
 	};
 
 	AtlasLoot_Data["LBRSLordMagus25Man"] = {
 		{ 1, AL_FindId("Ogreseer Tower Boots", 3), "", "=q4=Ogreseer Tower Boots", "=ds=#s12#, #a3#", "", "22.95%"};
 		{ 2, AL_FindId("Magus Ring", 3), "", "=q4=Magus Ring", "=ds=#s13#", "", "38.01%"};
 		{ 3, AL_FindId("Globe of D'sak", 3), "", "=q4=Globe of D'sak", "=ds=#s15#", "", "18.07%"};
+		Next = "LBRSVosh25Man";
+		Prev = "LBRSSpirestoneLord25Man";
+		
 	};
 
 	AtlasLoot_Data["LBRSVosh25Man"] = {
@@ -2748,6 +2864,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 8, 13352, "", "=q1=Vosh'gajin's Snakestone", "=ds=#m3#", "", "100%"};
 		{ 9, 12821, "", "=q3=Plans: Dawn's Edge", "=q1=#m4#: =ds=#p2# (275)"};
 		{ 16, AL_FindId("Shadowcraft Gloves", 3), "", "=q4=Shadowcraft Gloves", "=ds=#s9#, #a2# (D1, #c6#)", "", "11.89%"};
+		Next = "LBRSVoone25Man";
+		Prev = "LBRSLordMagus25Man";
 	};
 
 	AtlasLoot_Data["LBRSVoone25Man"] = {
@@ -2758,6 +2876,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 5, AL_FindId("Flightblade Throwing Axe", 3), "", "=q4=Flightblade Throwing Axe", "=ds=#w11#", "", "79.85%"};
 		{ 7, 12335, "", "=q2=Gemstone of Smolderthorn", "=ds=#m3#", "", "100%"};
 		{ 16, AL_FindId("Beaststalker's Gloves", 3), "", "=q4=Beaststalker's Gloves", "=ds=#s9#, #a3# (D1, #c2#)", "", "9.15%"};
+		Next = "LBRSGrayhoof25Man";
+		Prev = "LBRSVosh25Man";
 	};
 
 	AtlasLoot_Data["LBRSGrayhoof25Man"] = {
@@ -2769,6 +2889,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 6, AL_FindId("The Jaw Breaker", 3), "", "=q4=The Jaw Breaker", "=ds=#h1#, #w6#", "", "20.28%"};
 		{ 8, 21984, "", "=q1=Left Piece of Lord Valthalak's Amulet", "=ds=#m3#"};
 		{ 9, 22046, "", "=q1=Right Piece of Lord Valthalak's Amulet", "=ds=#m3#"};
+		Next = "LBRSGrimaxe25Man";
+		Prev = "LBRSVoone25Man";
 	};
 
 	AtlasLoot_Data["LBRSGrimaxe25Man"] = {
@@ -2777,6 +2899,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 3, AL_FindId("Demonfork", 3), "", "=q4=Demonfork", "=ds=#h1#, #w1#", "", "27.64%"};
 		{ 5, 12838, "", "=q3=Plans: Arcanite Reaper", "=ds=#p2# (300)", "", "6.73%"};
 		{ 6, 12784, "", "=q3=Arcanite Reaper", "=ds=#h2#, #w1#"};
+		Next = "LBRSSmolderweb25Man";
+		Prev = "LBRSGrayhoof25Man";
 	};
 
 	AtlasLoot_Data["LBRSSmolderweb25Man"] = {
@@ -2784,12 +2908,16 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 2, AL_FindId("Smolderweb's Eye", 3), "", "=q4=Smolderweb's Eye", "=ds=#s14#", "", "24.97%"};
 		{ 3, AL_FindId("Venomspitter", 3), "", "=q4=Venomspitter", "=ds=#h1#, #w6#", "", "12.49%"};
 		{ 16, AL_FindId("Wildheart Boots", 3), "", "=q4=Wildheart Boots", "=ds=#s12#, #a2# (D1, #c1#)", "", "13.03%"};
+		Next = "LBRSCrystalFang25Man";
+		Prev = "LBRSGrimaxe25Man";
 	};
 
 	AtlasLoot_Data["LBRSCrystalFang25Man"] = {
 		{ 1, AL_FindId("Sunderseer Mantle", 3), "", "=q4=Sunderseer Mantle", "=ds=#s3#, #a1#", "", "28.10%"};
 		{ 2, AL_FindId("Fallbrush Handgrips", 3), "", "=q4=Fallbrush Handgrips", "=ds=#s9#, #a2#", "", "35.48%"};
 		{ 3, AL_FindId("Fang of the Crystal Spider", 3), "", "=q4=Fang of the Crystal Spider", "=ds=#h1#, #w4#", "", "17.62%"};
+		Next = "LBRSDoomhowl25Man";
+		Prev = "LBRSSmolderweb25Man";
 	};
 
 	AtlasLoot_Data["LBRSDoomhowl25Man"] = {
@@ -2801,6 +2929,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 7, 12725, "", "=q3=Plans: Enchanted Thorium Helm", "=q1=#m4#: =ds=#p2# (300)"};
 		{ 9, 12712, "", "=q1=Warosh's Mojo", "=ds=#m3#", "", "100%"};
 		{ 10, 15867, "", "=q2=Prismcharm", "=q1=#m4#: =ds=#s14#"};
+		Next = "LBRSZigris25Man";
+		Prev = "LBRSCrystalFang25Man";
 	};
 
 	AtlasLoot_Data["LBRSZigris25Man"] = {
@@ -2809,6 +2939,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 4, 12835, "", "=q3=Plans: Annihilator", "=ds=#p2# (300)", "", "8.37%"};
 		{ 5, 12798, "", "=q3=Annihilator", "=ds=#h1#, #w1#"};
 		{ 7, 21955, "", "=q2=Design: Black Diamond Crab", "=ds=#p12# (300)"};
+		Next = "LBRSSlavener25Man";
+		Prev = "LBRSDoomhowl25Man";
 	};
 
 	AtlasLoot_Data["LBRSSlavener25Man"] = {
@@ -2816,6 +2948,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 2, AL_FindId("Bleak Howler Armguards", 3), "", "=q4=Bleak Howler Armguards", "=ds=#s8#, #a2#", "", "18.02%"};
 		{ 3, AL_FindId("Rhombeard Protector", 3), "", "=q4=Rhombeard Protector", "=ds=#w8#", "", "16.93%"};
 		{ 16, AL_FindId("Wildheart Spaulders", 3), "", "=q4=Wildheart Spaulders", "=ds=#s3#, #a2# (D1, #c1#)", "", "11.04%"};
+		Next = "LBRSHalycon25Man";
+		Prev = "LBRSBashguud25Man";
 	};
 
 	AtlasLoot_Data["LBRSHalycon25Man"] = {
@@ -2823,12 +2957,16 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 2, AL_FindId("Pads of the Dread Wolf", 3), "", "=q4=Pads of the Dread Wolf", "=ds=#s12#, #a2#", "", "9.88%"};
 		{ 3, AL_FindId("Slashclaw Bracers", 3), "", "=q4=Slashclaw Bracers", "=ds=#s8#, #a3#", "", "20.32%"};
 		{ 4, AL_FindId("Halycon's Spiked Collar", 3), "", "=q4=Halycon's Spiked Collar", "=ds=#s2#", "", "18.23%"};
+		Next = "LBRSBashguud25Man";
+		Prev = "LBRSSlavener25Man";
 	};
 
 	AtlasLoot_Data["LBRSBashguud25Man"] = {
 		{ 1, AL_FindId("Armswake Cloak", 3), "", "=q4=Armswake Cloak", "=ds=#s4#", "", "35.31%"};
 		{ 2, AL_FindId("Hurd Smasher", 3), "", "=q4=Hurd Smasher", "=ds=#h1#, #w13#", "", "21.15%"};
 		{ 3, AL_FindId("Bashguuder", 3), "", "=q4=Bashguuder", "=ds=#h1#, #w6#", "", "27.09%"};
+		Next = "LBRSWyrmthalak25Man";
+		Prev = "LBRSHalycon25Man";
 	};
 
 	AtlasLoot_Data["LBRSWyrmthalak25Man"] = {
@@ -2841,11 +2979,15 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 8, AL_FindId("Trindlehaven Staff", 3), "", "=q4=Trindlehaven Staff", "=ds=#w9#", "", "10.40%"};
 		{ 10, 12337, "", "=q2=Gemstone of Bloodaxe", "=ds=#m3#", "", "100%"};
 		{ 16, AL_FindId("Beaststalker's Mantle", 3), "", "=q4=Beaststalker's Mantle", "=ds=#s3#, #a3# (D1, #c2#)", "", "9.89%"};
+		Next = "LBRSFelguard25Man";
+		Prev = "LBRSBashguud25Man";
 	};
 
 	AtlasLoot_Data["LBRSFelguard25Man"] = {
 		{ 1, AL_FindId("Demonskin Gloves", 3), "", "=q4=Demonskin Gloves", "=ds=#s9#, #a1#", "", "14.47%"};
 		{ 2, AL_FindId("Phase Blade", 3), "", "=q4=Phase Blade", "=ds=#h1#, #w10#", "", "11.63%"};
+		Next = "LBRSTrash25Man";
+		Prev = "LBRSWyrmthalak25Man";
 	};
 
 	AtlasLoot_Data["LBRSTrash25Man"] = {
@@ -2858,6 +3000,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 8, 15775, "", "=q2=Pattern: Volcanic Shoulders", "=ds=#p7# (300) =q1=#n74#", "", "10.56%"};
 		{ 10, 12219, "", "=q1=Unadorned Seal of Ascension", "=ds=#m3#"};
 		{ 11, 21982, "", "=q1=Ogre Warbeads", "=ds=#m3#"};
+		Prev = "LBRSFelguard25Man";
 	};
 
 		-------------------------------------------------
@@ -2866,6 +3009,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 
 	AtlasLoot_Data["BRMScarshieldQuartermaster25ManHEROIC"] = {
 		{ 1, 18987, "", "=q1=Blackhand's Command", "=ds=#m2#", "", "100%"};
+		Next = "LBRSQuestItems25Man";
 	};
 
 	AtlasLoot_Data["LBRSQuestItems25ManHEROIC"] = {
@@ -2876,11 +3020,15 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 6, 12740, "", "=q1=Fifth Mosh'aru Tablet", "=ds=#m3#"};
 		{ 7, 12741, "", "=q1=Sixth Mosh'aru Tablet", "=ds=#m3#"};
 		{ 8, 12345, "", "=q1=Bijou's Belongings", "=ds=#m3#"};
+		Next = "LBRSSpirestoneButcher25Man";
+		Prev = "BRMScarshieldQuartermaster25Man";
 	};
 
 	AtlasLoot_Data["LBRSSpirestoneButcher25ManHEROIC"] = {
 		{ 1, AL_FindId("Butcher's Apron", 4), "", "=q4=Butcher's Apron", "=ds=#s4#", "", "54.31%"};
 		{ 2, AL_FindId("Rivenspike", 4), "", "=q4=Rivenspike", "=ds=#h1#, #w1#", "", "35.78%"};
+		Next = "LBRSOmokk25Man";
+		Prev = "LBRSQuestItems25Man";
 	};
 
 	AtlasLoot_Data["LBRSOmokk25ManHEROIC"] = {
@@ -2892,17 +3040,23 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 7, 12336, "", "=q2=Gemstone of Spirestone", "=ds=#m3#", "", "100%"};
 		{ 9, 12534, "", "=q1=Omokk's Head", "=ds=#m3#", "", "100%"};
 		{ 16, AL_FindId("Boots of Elements", 4), "", "=q4=Boots of Elements", "=ds=#s12#, #a3# (D1, #c7#)", "", "9.35%"};
+		Next = "LBRSSpirestoneLord25Man";
+		Prev = "LBRSSpirestoneButcher25Man";
 	};
 
 	AtlasLoot_Data["LBRSSpirestoneLord25ManHEROIC"] = {
 		{ 1, AL_FindId("Swiftdart Battleboots", 4), "", "=q4=Swiftdart Battleboots", "=ds=#s12#, #a3#", "", "48.68%"};
 		{ 2, AL_FindId("The Blackrock Slicer", 4), "", "=q4=The Blackrock Slicer", "=ds=#h2#, #w1#", "", "34.87%"};
+		Next = "LBRSLordMagus25Man";
+		Prev = "LBRSOmokk25Man";
 	};
 
 	AtlasLoot_Data["LBRSLordMagus25ManHEROIC"] = {
 		{ 1, AL_FindId("Ogreseer Tower Boots", 4), "", "=q4=Ogreseer Tower Boots", "=ds=#s12#, #a3#", "", "22.95%"};
 		{ 2, AL_FindId("Magus Ring", 4), "", "=q4=Magus Ring", "=ds=#s13#", "", "38.01%"};
 		{ 3, AL_FindId("Globe of D'sak", 4), "", "=q4=Globe of D'sak", "=ds=#s15#", "", "18.07%"};
+		Next = "LBRSVosh25Man";
+		Prev = "LBRSSpirestoneLord25Man";
 	};
 
 	AtlasLoot_Data["LBRSVosh25ManHEROIC"] = {
@@ -2915,6 +3069,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 8, 13352, "", "=q1=Vosh'gajin's Snakestone", "=ds=#m3#", "", "100%"};
 		{ 9, 12821, "", "=q3=Plans: Dawn's Edge", "=q1=#m4#: =ds=#p2# (275)"};
 		{ 16, AL_FindId("Shadowcraft Gloves", 4), "", "=q4=Shadowcraft Gloves", "=ds=#s9#, #a2# (D1, #c6#)", "", "11.89%"};
+		Next = "LBRSVoone25Man";
+		Prev = "LBRSLordMagus25Man";
 	};
 
 	AtlasLoot_Data["LBRSVoone25ManHEROIC"] = {
@@ -2925,6 +3081,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 5, AL_FindId("Flightblade Throwing Axe", 4), "", "=q4=Flightblade Throwing Axe", "=ds=#w11#", "", "79.85%"};
 		{ 7, 12335, "", "=q2=Gemstone of Smolderthorn", "=ds=#m3#", "", "100%"};
 		{ 16, AL_FindId("Beaststalker's Gloves", 4), "", "=q4=Beaststalker's Gloves", "=ds=#s9#, #a3# (D1, #c2#)", "", "9.15%"};
+		Next = "LBRSGrayhoof25Man";
+		Prev = "LBRSVosh25Man";
 	};
 
 	AtlasLoot_Data["LBRSGrayhoof25ManHEROIC"] = {
@@ -2936,6 +3094,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 6, AL_FindId("The Jaw Breaker", 4), "", "=q4=The Jaw Breaker", "=ds=#h1#, #w6#", "", "20.28%"};
 		{ 8, 21984, "", "=q1=Left Piece of Lord Valthalak's Amulet", "=ds=#m3#"};
 		{ 9, 22046, "", "=q1=Right Piece of Lord Valthalak's Amulet", "=ds=#m3#"};
+		Next = "LBRSGrimaxe25Man";
+		Prev = "LBRSVoone25Man";
 	};
 
 	AtlasLoot_Data["LBRSGrimaxe25ManHEROIC"] = {
@@ -2944,6 +3104,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 3, AL_FindId("Demonfork", 4), "", "=q4=Demonfork", "=ds=#h1#, #w1#", "", "27.64%"};
 		{ 5, 12838, "", "=q3=Plans: Arcanite Reaper", "=ds=#p2# (300)", "", "6.73%"};
 		{ 6, 12784, "", "=q3=Arcanite Reaper", "=ds=#h2#, #w1#"};
+		Next = "LBRSSmolderweb25Man";
+		Prev = "LBRSGrayhoof25Man";
 	};
 
 	AtlasLoot_Data["LBRSSmolderweb25ManHEROIC"] = {
@@ -2951,12 +3113,16 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 2, AL_FindId("Smolderweb's Eye", 4), "", "=q4=Smolderweb's Eye", "=ds=#s14#", "", "24.97%"};
 		{ 3, AL_FindId("Venomspitter", 4), "", "=q4=Venomspitter", "=ds=#h1#, #w6#", "", "12.49%"};
 		{ 16, AL_FindId("Wildheart Boots", 4), "", "=q4=Wildheart Boots", "=ds=#s12#, #a2# (D1, #c1#)", "", "13.03%"};
+		Next = "LBRSCrystalFang25Man";
+		Prev = "LBRSGrimaxe25Man";
 	};
 
 	AtlasLoot_Data["LBRSCrystalFang25ManHEROIC"] = {
 		{ 1, AL_FindId("Sunderseer Mantle", 4), "", "=q4=Sunderseer Mantle", "=ds=#s3#, #a1#", "", "28.10%"};
 		{ 2, AL_FindId("Fallbrush Handgrips", 4), "", "=q4=Fallbrush Handgrips", "=ds=#s9#, #a2#", "", "35.48%"};
 		{ 3, AL_FindId("Fang of the Crystal Spider", 4), "", "=q4=Fang of the Crystal Spider", "=ds=#h1#, #w4#", "", "17.62%"};
+		Next = "LBRSDoomhowl25Man";
+		Prev = "LBRSSmolderweb25Man";
 	};
 
 	AtlasLoot_Data["LBRSDoomhowl25ManHEROIC"] = {
@@ -2968,6 +3134,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 7, 12725, "", "=q3=Plans: Enchanted Thorium Helm", "=q1=#m4#: =ds=#p2# (300)"};
 		{ 9, 12712, "", "=q1=Warosh's Mojo", "=ds=#m3#", "", "100%"};
 		{ 10, 15867, "", "=q2=Prismcharm", "=q1=#m4#: =ds=#s14#"};
+		Next = "LBRSZigris25Man";
+		Prev = "LBRSCrystalFang25Man";
 	};
 
 	AtlasLoot_Data["LBRSZigris25ManHEROIC"] = {
@@ -2976,6 +3144,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 4, 12835, "", "=q3=Plans: Annihilator", "=ds=#p2# (300)", "", "8.37%"};
 		{ 5, 12798, "", "=q3=Annihilator", "=ds=#h1#, #w1#"};
 		{ 7, 21955, "", "=q2=Design: Black Diamond Crab", "=ds=#p12# (300)"};
+		Next = "LBRSSlavener25Man";
+		Prev = "LBRSDoomhowl25Man";
 	};
 
 	AtlasLoot_Data["LBRSSlavener25ManHEROIC"] = {
@@ -2983,6 +3153,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 2, AL_FindId("Bleak Howler Armguards", 4), "", "=q4=Bleak Howler Armguards", "=ds=#s8#, #a2#", "", "18.02%"};
 		{ 3, AL_FindId("Rhombeard Protector", 4), "", "=q4=Rhombeard Protector", "=ds=#w8#", "", "16.93%"};
 		{ 16, AL_FindId("Wildheart Spaulders", 4), "", "=q4=Wildheart Spaulders", "=ds=#s3#, #a2# (D1, #c1#)", "", "11.04%"};
+		Next = "LBRSHalycon25Man";
+		Prev = "LBRSBashguud25Man";
 	};
 
 	AtlasLoot_Data["LBRSHalycon25ManHEROIC"] = {
@@ -2990,12 +3162,16 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 2, AL_FindId("Pads of the Dread Wolf", 4), "", "=q4=Pads of the Dread Wolf", "=ds=#s12#, #a2#", "", "9.88%"};
 		{ 3, AL_FindId("Slashclaw Bracers", 4), "", "=q4=Slashclaw Bracers", "=ds=#s8#, #a3#", "", "20.32%"};
 		{ 4, AL_FindId("Halycon's Spiked Collar", 4), "", "=q4=Halycon's Spiked Collar", "=ds=#s2#", "", "18.23%"};
+		Next = "LBRSBashguud25Man";
+		Prev = "LBRSSlavener25Man";
 	};
 
 	AtlasLoot_Data["LBRSBashguud25ManHEROIC"] = {
 		{ 1, AL_FindId("Armswake Cloak", 4), "", "=q4=Armswake Cloak", "=ds=#s4#", "", "35.31%"};
 		{ 2, AL_FindId("Hurd Smasher", 4), "", "=q4=Hurd Smasher", "=ds=#h1#, #w13#", "", "21.15%"};
 		{ 3, AL_FindId("Bashguuder", 4), "", "=q4=Bashguuder", "=ds=#h1#, #w6#", "", "27.09%"};
+		Next = "LBRSWyrmthalak25Man";
+		Prev = "LBRSHalycon25Man";
 	};
 
 	AtlasLoot_Data["LBRSWyrmthalak25ManHEROIC"] = {
@@ -3008,11 +3184,15 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 8, AL_FindId("Trindlehaven Staff", 4), "", "=q4=Trindlehaven Staff", "=ds=#w9#", "", "10.40%"};
 		{ 10, 12337, "", "=q2=Gemstone of Bloodaxe", "=ds=#m3#", "", "100%"};
 		{ 16, AL_FindId("Beaststalker's Mantle", 4), "", "=q4=Beaststalker's Mantle", "=ds=#s3#, #a3# (D1, #c2#)", "", "9.89%"};
+		Next = "LBRSFelguard25Man";
+		Prev = "LBRSBashguud25Man";
 	};
 
 	AtlasLoot_Data["LBRSFelguard25ManHEROIC"] = {
 		{ 1, AL_FindId("Demonskin Gloves", 4), "", "=q4=Demonskin Gloves", "=ds=#s9#, #a1#", "", "14.47%"};
 		{ 2, AL_FindId("Phase Blade", 4), "", "=q4=Phase Blade", "=ds=#h1#, #w10#", "", "11.63%"};
+		Next = "LBRSTrash25Man";
+		Prev = "LBRSWyrmthalak25Man";
 	};
 
 	AtlasLoot_Data["LBRSTrash25ManHEROIC"] = {
@@ -3025,6 +3205,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 8, 15775, "", "=q2=Pattern: Volcanic Shoulders", "=ds=#p7# (300) =q1=#n74#", "", "10.56%"};
 		{ 10, 12219, "", "=q1=Unadorned Seal of Ascension", "=ds=#m3#"};
 		{ 11, 21982, "", "=q1=Ogre Warbeads", "=ds=#m3#"};
+		Prev = "LBRSFelguard25Man";
 	};
 
 		-------------------------------------------------
@@ -3039,6 +3220,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 6, 17322, "", "=q1=Eye of the Emberseer", "=ds=#m3#", "", "100%"};
 		{ 7, 21988, "", "=q1=Ember of Emberseer", "=ds=#m3#"};
 		{ 16, 16672, "", "=q3=Gauntlets of Elements", "=ds=#s9#, #a3# (D1, #c7#)", "", "14.23%"};
+		Next = "UBRSSolakar";
 	};
 
 	AtlasLoot_Data["UBRSSolakar"] = {
@@ -3049,21 +3231,29 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 6, 18657, "", "=q2=Schematic: Hyper-Radiant Flame Reflector", "=ds=#p5# (290)", "", "7.38%"};
 		{ 7, 18638, "", "=q3=Hyper-Radiant Flame Reflector", "=ds=#s14#"};
 		{ 16, 16695, "", "=q3=Devout Mantle", "=ds=#s3#, #a1# (D1, #c5#)", "", "12.84%"};
+		Next = "UBRSFLAME";
+		Prev = "UBRSEmberseer";
 	};
 
 	AtlasLoot_Data["UBRSFLAME"] = {
 		{ 1, 13371, "", "=q2=Father Flame", "=ds=#s15#", "", "100%"};
+		Next = "UBRSQuestItems";
+		Prev = "UBRSSolakar";
 	};
 
 	AtlasLoot_Data["UBRSQuestItems"] = {
 		{ 1, 12358, "", "=q1=Darkstone Tablet", "=ds=#m3#"};
 		{ 2, 12352, "", "=q1=Doomrigger's Clasp", "=ds=#m3#"};
+		Next = "UBRSRunewatcher";
+		Prev = "UBRSFLAME";
 	};
 
 	AtlasLoot_Data["UBRSRunewatcher"] = {
 		{ 1, 12604, "", "=q3=Starfire Tiara", "=ds=#s1#, #a1#", "", "28.64%"};
 		{ 2, 12930, "", "=q3=Briarwood Reed", "=ds=#s14#", "", "26.36%"};
 		{ 3, 12605, "", "=q3=Serpentine Skuller", "=ds=#w12#", "", "32.95%"};
+		Next = "UBRSAnvilcrack";
+		Prev = "UBRSQuestItems";
 	};
 
 	AtlasLoot_Data["UBRSAnvilcrack"] = {
@@ -3080,6 +3270,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 16, 0, "INV_Box_01", "=q6=#x10#", ""};
 		{ 17, 12806, "", "=q3=Unforged Rune Covered Breastplate", "=ds=#m3#"};
 		{ 18, 12696, "", "=q3=Plans: Demon Forged Breastplate", "=q1=#m4#: =ds=#p2# (285)"};
+		Next = "UBRSRend";
+		Prev = "UBRSRunewatcher";
 	};
 
 	AtlasLoot_Data["UBRSRend"] = {
@@ -3097,6 +3289,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 19, 12939, "", "=q3=Dal'Rend's Tribal Guardian", "=ds=#h4#, #w10#", "", "7.61%"};
 		{ 20, 12583, "", "=q3=Blackhand Doomsaw", "=ds=#w7#", "", "7.44%"};
 		{ 22, 12630, "", "=q1=Head of Rend Blackhand", "=ds=#m3#", "", "100%"};
+		Next = "UBRSGyth";
+		Prev = "UBRSAnvilcrack";
 	};
 
 	AtlasLoot_Data["UBRSGyth"] = {
@@ -3110,6 +3304,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 9, 12952, "", "=q3=Gyth's Skull", "=ds=#s1#, #a4# =q2=#m16#", "", "12.43%"};
 		{ 11, 13522, "", "=q2=Recipe: Flask of Chromatic Resistance", "=ds=#p1# (300)", "", "2.95%"};
 		{ 16, 16669, "", "=q3=Pauldrons of Elements", "=ds=#s3#, #a3# (D1, #c7#)", "", "14.77%"};
+		Next = "UBRSBeast";
+		Prev = "UBRSRend";
 	};
 
 	AtlasLoot_Data["UBRSBeast"] = {
@@ -3129,6 +3325,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 16, 16729, "", "=q3=Lightforge Spaulders", "=ds=#s3#, #a4# (D1, #c4#)", "", "13.62%"};
 		{ 18, 24101, "", "=q3=Book of Ferocious Bite V", "=ds=#e10# =q1=#m1# =ds=#c1#", "", "1.44%"};
 		{ 19, 19227, "", "=q3=Ace of Beasts", "=ds=#e16#", "", "4.53%"};
+		Next = "UBRSValthalak";
+		Prev = "UBRSGyth";
 	};
 
 	AtlasLoot_Data["UBRSValthalak"] = {
@@ -3141,6 +3339,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 7, 22339, "", "=q3=Rune Band of Wizardry", "=ds=#s13#", "", "15.49%"};
 		{ 8, 22335, "", "=q3=Lord Valthalak's Staff of Command", "=ds=#w9#", "", "14.67%"};
 		{ 9, 22336, "", "=q3=Draconian Aegis of the Legion", "=ds=#w8#", "", "17.66%"};
+		Next = "UBRSDrakkisath";
+		Prev = "UBRSBeast";
 	};
 
 	AtlasLoot_Data["UBRSDrakkisath"] = {
@@ -3166,6 +3366,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 23, 16730, "", "=q3=Breastplate of Valor", "=ds=#s5#, #a4# (D1, #c9#)", "", "5.83%"};
 		{ 24, 16726, "", "=q3=Lightforge Breastplate", "=ds=#s5#, #a4# (D1, #c4#)", "", "3.76%"};
 		{ 30, 16663, "", "=q1=Blood of the Black Dragon Champion", "=ds=#m3#", "", "100%"};
+		Next = "UBRSTrash";
+		Prev = "UBRSValthalak";
 	};
 
 	AtlasLoot_Data["UBRSTrash"] = {
@@ -3174,6 +3376,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 4, 16247, "", "=q2=Formula: Enchant 2H Weapon - Superior Impact", "=ds=#p4# (295) =q1=#n69#", "", "1.54%"};
 		{ 6, 12607, "", "=q3=Brilliant Chromatic Scale", "=ds=#m3#"};
 		{ 7, 12219, "", "=q1=Unadorned Seal of Ascension", "=ds=#m3#"};
+		Prev = "UBRSDrakkisath";
 	};
 
 		-------------------------------------------------
@@ -3188,6 +3391,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 6, 17322, "", "=q1=Eye of the Emberseer", "=ds=#m3#", "", "100%"};
 		{ 7, 21988, "", "=q1=Ember of Emberseer", "=ds=#m3#"};
 		{ 16,AL_FindId("Gauntlets of Elements", 3), "", "=q4=Gauntlets of Elements", "=ds=#s9#, #a3# (D1, #c7#)", "", "14.23%"};
+		Next = "UBRSSolakar25Man";
 	};
 
 	AtlasLoot_Data["UBRSSolakar25Man"] = {
@@ -3198,21 +3402,29 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 6, 18657, "", "=q2=Schematic: Hyper-Radiant Flame Reflector", "=ds=#p5# (290)", "", "7.38%"};
 		{ 7, 18638, "", "=q3=Hyper-Radiant Flame Reflector", "=ds=#s14#"};
 		{ 16,AL_FindId("Devout Mantle", 3), "", "=q4=Devout Mantle", "=ds=#s3#, #a1# (D1, #c5#)", "", "12.84%"};
+		Next = "UBRSFLAME25Man";
+		Prev = "UBRSEmberseer25Man";
 	};
 
 	AtlasLoot_Data["UBRSFLAME25Man"] = {
 		{ 1, 13371, "", "=q2=Father Flame", "=ds=#s15#", "", "100%"};
+		Next = "UBRSQuestItems25Man";
+		Prev = "UBRSSolakar25Man";
 	};
 
 	AtlasLoot_Data["UBRSQuestItems25Man"] = {
 		{ 1, 12358, "", "=q1=Darkstone Tablet", "=ds=#m3#"};
 		{ 2, 12352, "", "=q1=Doomrigger's Clasp", "=ds=#m3#"};
+		Next = "UBRSRunewatcher25Man";
+		Prev = "UBRSFLAME25Man";
 	};
 
 	AtlasLoot_Data["UBRSRunewatcher25Man"] = {
 		{ 1,AL_FindId("Starfire Tiara", 3), "", "=q4=Starfire Tiara", "=ds=#s1#, #a1#", "", "28.64%"};
 		{ 2,AL_FindId("Briarwood Reed", 3), "", "=q4=Briarwood Reed", "=ds=#s14#", "", "26.36%"};
 		{ 3,AL_FindId("Serpentine Skuller", 3), "", "=q4=Serpentine Skuller", "=ds=#w12#", "", "32.95%"};
+		Next = "UBRSAnvilcrack25Man";
+		Prev = "UBRSQuestItems25Man";
 	};
 
 	AtlasLoot_Data["UBRSAnvilcrack25Man"] = {
@@ -3229,6 +3441,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 16, 0, "INV_Box_01", "=q6=#x10#", ""};
 		{ 17, 12806, "", "=q3=Unforged Rune Covered Breastplate", "=ds=#m3#"};
 		{ 18, 12696, "", "=q3=Plans: Demon Forged Breastplate", "=q1=#m4#: =ds=#p2# (285)"};
+		Next = "UBRSRend25Man";
+		Prev = "UBRSRunewatcher25Man";
 	};
 
 	AtlasLoot_Data["UBRSRend25Man"] = {
@@ -3246,6 +3460,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 19,AL_FindId("Dal'Rend's Tribal Guardian", 3), "", "=q4=Dal'Rend's Tribal Guardian", "=ds=#h4#, #w10#", "", "7.61%"};
 		{ 20,AL_FindId("Blackhand Doomsaw", 3), "", "=q4=Blackhand Doomsaw", "=ds=#w7#", "", "7.44%"};
 		{ 22, 12630, "", "=q1=Head of Rend Blackhand", "=ds=#m3#", "", "100%"};
+		Next = "UBRSGyth25Man";
+		Prev = "UBRSAnvilcrack25Man";
 	};
 
 	AtlasLoot_Data["UBRSGyth25Man"] = {
@@ -3259,6 +3475,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 9,AL_FindId("Gyth's Skull", 3), "", "=q4=Gyth's Skull", "=ds=#s1#, #a4# =q2=#m16#", "", "12.43%"};
 		{ 11, 13522, "", "=q2=Recipe: Flask of Chromatic Resistance", "=ds=#p1# (300)", "", "2.95%"};
 		{ 16,AL_FindId("Pauldrons of Elements", 3), "", "=q4=Pauldrons of Elements", "=ds=#s3#, #a3# (D1, #c7#)", "", "14.77%"};
+		Next = "UBRSBeast25Man";
+		Prev = "UBRSRend25Man";
 	};
 
 	AtlasLoot_Data["UBRSBeast25Man"] = {
@@ -3278,6 +3496,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 16,AL_FindId("Lightforge Spaulders", 3), "", "=q4=Lightforge Spaulders", "=ds=#s3#, #a4# (D1, #c4#)", "", "13.62%"};
 		{ 18, 24101, "", "=q3=Book of Ferocious Bite V", "=ds=#e10# =q1=#m1# =ds=#c1#", "", "1.44%"};
 		{ 19, 19227, "", "=q3=Ace of Beasts", "=ds=#e16#", "", "4.53%"};
+		Next = "UBRSValthalak25Man";
+		Prev = "UBRSGyth25Man";
 	};
 
 	AtlasLoot_Data["UBRSValthalak25Man"] = {
@@ -3290,6 +3510,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 7,AL_FindId("Rune Band of Wizardry", 3), "", "=q4=Rune Band of Wizardry", "=ds=#s13#", "", "15.49%"};
 		{ 8,AL_FindId("Lord Valthalak's Staff of Command", 3), "", "=q4=Lord Valthalak's Staff of Command", "=ds=#w9#", "", "14.67%"};
 		{ 9,AL_FindId("Draconian Aegis of the Legion", 3), "", "=q4=Draconian Aegis of the Legion", "=ds=#w8#", "", "17.66%"};
+		Next = "UBRSDrakkisath25Man";
+		Prev = "UBRSBeast25Man";
 	};
 
 	AtlasLoot_Data["UBRSDrakkisath25Man"] = {
@@ -3315,6 +3537,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 23,AL_FindId("Breastplate of Valor", 3), "", "=q4=Breastplate of Valor", "=ds=#s5#, #a4# (D1, #c9#)", "", "5.83%"};
 		{ 24,AL_FindId("Lightforge Breastplate", 3), "", "=q4=Lightforge Breastplate", "=ds=#s5#, #a4# (D1, #c4#)", "", "3.76%"};
 		{ 30, 16663, "", "=q1=Blood of the Black Dragon Champion", "=ds=#m3#", "", "100%"};
+		Next = "UBRSTrash25Man";
+		Prev = "UBRSValthalak25Man";
 	};
 
 	AtlasLoot_Data["UBRSTrash25Man"] = {
@@ -3323,6 +3547,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 4, 16247, "", "=q2=Formula: Enchant 2H Weapon - Superior Impact", "=ds=#p4# (295) =q1=#n69#", "", "1.54%"};
 		{ 6, 12607, "", "=q3=Brilliant Chromatic Scale", "=ds=#m3#"};
 		{ 7, 12219, "", "=q1=Unadorned Seal of Ascension", "=ds=#m3#"};
+		Prev = "UBRSDrakkisath25Man";
 	};
 
 		-------------------------------------------------
@@ -3337,6 +3562,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 6, 17322, "", "=q1=Eye of the Emberseer", "=ds=#m3#", "", "100%"};
 		{ 7, 21988, "", "=q1=Ember of Emberseer", "=ds=#m3#"};
 		{ 16,AL_FindId("Gauntlets of Elements", 4), "", "=q4=Gauntlets of Elements", "=ds=#s9#, #a3# (D1, #c7#)", "", "14.23%"};
+		Next = "UBRSSolakar25Man";
+		
 	};
 
 	AtlasLoot_Data["UBRSSolakar25ManHEROIC"] = {
@@ -3347,21 +3574,29 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 6, 18657, "", "=q2=Schematic: Hyper-Radiant Flame Reflector", "=ds=#p5# (290)", "", "7.38%"};
 		{ 7, 18638, "", "=q3=Hyper-Radiant Flame Reflector", "=ds=#s14#"};
 		{ 16,AL_FindId("Devout Mantle", 4), "", "=q4=Devout Mantle", "=ds=#s3#, #a1# (D1, #c5#)", "", "12.84%"};
+		Next = "UBRSQuestItems25Man";
+		Prev = "UBRSSolakar25Man";
 	};
 
 	AtlasLoot_Data["UBRSFLAME25ManHEROIC"] = {
 		{ 1, 13371, "", "=q2=Father Flame", "=ds=#s15#", "", "100%"};
+		Next = "UBRSQuestItems25Man";
+		Prev = "UBRSSolakar25Man";
 	};
 
 	AtlasLoot_Data["UBRSQuestItems25ManHEROIC"] = {
 		{ 1, 12358, "", "=q1=Darkstone Tablet", "=ds=#m3#"};
 		{ 2, 12352, "", "=q1=Doomrigger's Clasp", "=ds=#m3#"};
+		Next = "UBRSRunewatcher25Man";
+		Prev = "UBRSFLAME25Man";
 	};
 
 	AtlasLoot_Data["UBRSRunewatcher25ManHEROIC"] = {
 		{ 1,AL_FindId("Starfire Tiara", 4), "", "=q4=Starfire Tiara", "=ds=#s1#, #a1#", "", "28.64%"};
 		{ 2,AL_FindId("Briarwood Reed", 4), "", "=q4=Briarwood Reed", "=ds=#s14#", "", "26.36%"};
 		{ 3,AL_FindId("Serpentine Skuller", 4), "", "=q4=Serpentine Skuller", "=ds=#w12#", "", "32.95%"};
+		Next = "UBRSAnvilcrack25Man";
+		Prev = "UBRSQuestItems25Man";
 	};
 
 	AtlasLoot_Data["UBRSAnvilcrack25ManHEROIC"] = {
@@ -3378,6 +3613,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 16, 0, "INV_Box_01", "=q6=#x10#", ""};
 		{ 17, 12806, "", "=q3=Unforged Rune Covered Breastplate", "=ds=#m3#"};
 		{ 18, 12696, "", "=q3=Plans: Demon Forged Breastplate", "=q1=#m4#: =ds=#p2# (285)"};
+		Next = "UBRSRend25Man";
+		Prev = "UBRSRunewatcher25Man";
 	};
 
 	AtlasLoot_Data["UBRSRend25ManHEROIC"] = {
@@ -3395,6 +3632,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 19,AL_FindId("Dal'Rend's Tribal Guardian", 4), "", "=q4=Dal'Rend's Tribal Guardian", "=ds=#h4#, #w10#", "", "7.61%"};
 		{ 20,AL_FindId("Blackhand Doomsaw", 4), "", "=q4=Blackhand Doomsaw", "=ds=#w7#", "", "7.44%"};
 		{ 22, 12630, "", "=q1=Head of Rend Blackhand", "=ds=#m3#", "", "100%"};
+		Next = "UBRSGyth25Man";
+		Prev = "UBRSAnvilcrack25Man";
 	};
 
 	AtlasLoot_Data["UBRSGyth25ManHEROIC"] = {
@@ -3408,6 +3647,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 9,AL_FindId("Gyth's Skull", 4), "", "=q4=Gyth's Skull", "=ds=#s1#, #a4# =q2=#m16#", "", "12.43%"};
 		{ 11, 13522, "", "=q2=Recipe: Flask of Chromatic Resistance", "=ds=#p1# (300)", "", "2.95%"};
 		{ 16,AL_FindId("Pauldrons of Elements", 4), "", "=q4=Pauldrons of Elements", "=ds=#s3#, #a3# (D1, #c7#)", "", "14.77%"};
+		Next = "UBRSBeast25Man";
+		Prev = "UBRSRend25Man";
 	};
 
 	AtlasLoot_Data["UBRSBeast25ManHEROIC"] = {
@@ -3427,6 +3668,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 16,AL_FindId("Lightforge Spaulders", 4), "", "=q4=Lightforge Spaulders", "=ds=#s3#, #a4# (D1, #c4#)", "", "13.62%"};
 		{ 18, 24101, "", "=q3=Book of Ferocious Bite V", "=ds=#e10# =q1=#m1# =ds=#c1#", "", "1.44%"};
 		{ 19, 19227, "", "=q3=Ace of Beasts", "=ds=#e16#", "", "4.53%"};
+		Next = "UBRSValthalak25Man";
+		Prev = "UBRSGyth25Man";
 	};
 
 	AtlasLoot_Data["UBRSValthalak25ManHEROIC"] = {
@@ -3439,6 +3682,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 7,AL_FindId("Rune Band of Wizardry", 4), "", "=q4=Rune Band of Wizardry", "=ds=#s13#", "", "15.49%"};
 		{ 8,AL_FindId("Lord Valthalak's Staff of Command", 4), "", "=q4=Lord Valthalak's Staff of Command", "=ds=#w9#", "", "14.67%"};
 		{ 9,AL_FindId("Draconian Aegis of the Legion", 4), "", "=q4=Draconian Aegis of the Legion", "=ds=#w8#", "", "17.66%"};
+		Next = "UBRSDrakkisath25Man";
+		Prev = "UBRSBeast25Man";
 	};
 
 	AtlasLoot_Data["UBRSDrakkisath25ManHEROIC"] = {
@@ -3464,6 +3709,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 23,AL_FindId("Breastplate of Valor", 4), "", "=q4=Breastplate of Valor", "=ds=#s5#, #a4# (D1, #c9#)", "", "5.83%"};
 		{ 24,AL_FindId("Lightforge Breastplate", 4), "", "=q4=Lightforge Breastplate", "=ds=#s5#, #a4# (D1, #c4#)", "", "3.76%"};
 		{ 30, 16663, "", "=q1=Blood of the Black Dragon Champion", "=ds=#m3#", "", "100%"};
+		Next = "UBRSTrash25Man";
+		Prev = "UBRSValthalak25Man";
 	};
 
 	AtlasLoot_Data["UBRSTrash25ManHEROIC"] = {
@@ -3472,6 +3719,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 4, 16247, "", "=q2=Formula: Enchant 2H Weapon - Superior Impact", "=ds=#p4# (295) =q1=#n69#", "", "1.54%"};
 		{ 6, 12607, "", "=q3=Brilliant Chromatic Scale", "=ds=#m3#"};
 		{ 7, 12219, "", "=q1=Unadorned Seal of Ascension", "=ds=#m3#"};
+		Prev = "UBRSDrakkisath25Man";
 	};
 
 		---------------------------------------
