@@ -5686,7 +5686,9 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 8, "s968423", "967464", "=q2=Flask of Shattering Thunder", 	"=ds=#sr# 300"};	
 		{ 9, "s968426", "967467", "=q2=Flask of the Executioner", 		"=ds=#sr# 300"};
 		{ 10, "s968429", "967470", "=q2=Flask of Deep Meditation", 		"=ds=#sr# 300"};	
-		{ 11, "s968432", "967473", "=q2=Flask of Adept Striking", 		"=ds=#sr# 300"};	
+		{ 11, "s968432", "967473", "=q2=Flask of Adept Striking", 		"=ds=#sr# 300"};
+		Next = "SmithingHighRisk";	
+		Prev = "TailorHighRisk";
 		Back = "ALCHEMYMENU";
 	};
 
@@ -5702,6 +5704,8 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 9, "s968427", "967468", "=q3=Potent Flask of the Executioner", 		"=ds=#sr# 300"};
 		{ 10, "s968430", "967471", "=q3=Potent Flask of Deep Meditation", 		"=ds=#sr# 300"};
 		{ 11, "s968433", "967474", "=q3=Potent Flask of Adept Striking", 		"=ds=#sr# 300"};
+		Next = "SmithingHighRisk25Man";
+		Prev = "TailorHighRisk25Man";
 		Back = "ALCHEMYMENU";
 	};
 
@@ -5717,6 +5721,8 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 9, "s968428", "967469", "=q4=Distilled Flask of the Executioner", "=ds=#sr# 300"};
 		{ 10, "s968431", "967472", "=q4=Distilled Flask of Deep Meditation", "=ds=#sr# 300"};
 		{ 11, "s968434", "967475", "=q4=Distilled Flask of Adept Striking", "=ds=#sr# 300"};
+		Next = "SmithingHighRisk25ManHEROIC";
+		Prev = "TailorHighRisk25ManHEROIC";
 		Back = "ALCHEMYMENU";
 	};
 
@@ -5729,6 +5735,8 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 6, "s968033", "967187", "=q2=Cleric's Belt Buckle", "=ds=#sr# 300"};
 		{ 7, "s968036", "967190", "=q2=Warlord's Belt Buckle", "=ds=#sr# 300"};
 		{ 8, "s968039", "967193", "=q2=Gaurdian's Belt Buckle", "=ds=#sr# 300"};
+		Next = "SmithingHighRisk";	
+		Prev = "TailorHighRisk";
 		Back = "SMITHINGMENU";
 	};
 
@@ -5741,6 +5749,8 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 6, "s968034", "967188", "=q3=Sturdy Cleric's Belt Buckle", "=ds=#sr# 300"};
 		{ 7, "s968037", "967191", "=q3=Sturdy Warlord's Belt Buckle", "=ds=#sr# 300"};
 		{ 8, "s968040", "967194", "=q3=Sturdy Gaurdian's Belt Buckle", "=ds=#sr# 300"};
+		Next = "SmithingHighRisk25Man";
+		Prev = "TailorHighRisk25Man";
 		Back = "SMITHINGMENU";
 	};
 
@@ -5753,6 +5763,8 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 6, "s968035", "967189", "=q4=Mastercraft Cleric's Belt Buckle", "=ds=#sr# 300"};
 		{ 7, "s968038", "967192", "=q4=Mastercraft Warlord's Belt Buckle", "=ds=#sr# 300"};
 		{ 8, "s968041", "967195", "=q4=Mastercraft Gaurdian's Belt Buckle", "=ds=#sr# 300"};
+		Next = "SmithingHighRisk25ManHEROIC";
+		Prev = "TailorHighRisk25ManHEROIC";
 		Back = "SMITHINGMENU";
 	};
 	
@@ -5763,6 +5775,8 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 4, "s968009", "967163", "=q2=Sandworm Gambeson", 				"=ds=#sr# 300"};
 		{ 5, "s968012", "967166", "=q2=Black Scale Gambeson", 				"=ds=#sr# 300"};
 		{ 6, "s968015", "967169", "=q2=Blue Scale Gambeson", 				"=ds=#sr# 300"};
+		Next = "SmithingHighRisk";	
+		Prev = "TailorHighRisk";
 		Back = "LEATHERWORKINGMENU";
 	};
 	
@@ -5773,6 +5787,8 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 4, "s968010", "967164", "=q3=Sturdy Sandworm Gambeson", 			"=ds=#sr# 300"};
 		{ 5, "s968013", "967167", "=q3=Sturdy Black Scale Gambeson", 		"=ds=#sr# 300"};
 		{ 6, "s968016", "967170", "=q3=Sturdy Blue Scale Gambeson", 		"=ds=#sr# 300"};
+		Next = "SmithingHighRisk25Man";
+		Prev = "TailorHighRisk25Man";
 		Back = "LEATHERWORKINGMENU";
 	};
 	
@@ -5783,6 +5799,8 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 4, "s968011", "967165", "=q4=Mastercraft Sandworm Gambeson", 	"=ds=#sr# 300"};	
 		{ 5, "s968014", "967168", "=q4=Mastercraft Black Scale Gambeson", 	"=ds=#sr# 300"};
 		{ 6, "s968017", "967171", "=q4=Mastercraft Blue Scale Gambeson", 	"=ds=#sr# 300"};
+		Next = "SmithingHighRisk25ManHEROIC";
+		Prev = "TailorHighRisk25ManHEROIC";
 		Back = "LEATHERWORKINGMENU";
 	};
 	
@@ -5793,6 +5811,8 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 4, "s968051", "967205", "=q2=Hipfire Scope", "=ds=#sr# 300"};
 		{ 5, "s968054", "967208", "=q2=Precision Scope", "=ds=#sr# 300"};
 		{ 6, "s968057", "967211", "=q2=Reflex Scope", "=ds=#sr# 300"};
+		Next = "SmithingHighRisk";	
+		Prev = "TailorHighRisk";
 		Back = "ENGINEERINGMENU";
 	};
 	
@@ -5803,6 +5823,8 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 4, "s968052", "967206", "=q3=Focused Hipfire Scope", "=ds=#sr# 300"};
 		{ 5, "s968055", "967209", "=q3=Focused Precision Scope", "=ds=#sr# 300"};
 		{ 6, "s968058", "967212", "=q3=Focused Reflex Scope", "=ds=#sr# 300"};
+		Next = "SmithingHighRisk25Man";
+		Prev = "TailorHighRisk25Man";
 		Back = "ENGINEERINGMENU";
 	};
 	
@@ -5813,6 +5835,8 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 4, "s968053", "967207", "=q4=Polished Hipfire Scope", "=ds=#sr# 300"};
 		{ 5, "s968056", "967210", "=q4=Polished Precision Scope", "=ds=#sr# 300"};
 		{ 6, "s968059", "967213", "=q4=Polished Reflex Scope", "=ds=#sr# 300"};
+		Next = "SmithingHighRisk25ManHEROIC";
+		Prev = "TailorHighRisk25ManHEROIC";
 		Back = "ENGINEERINGMENU";
 	};
 	
@@ -5826,6 +5850,8 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 7, "s968694", "Spell_Holy_GreaterHeal", "=q2=Enchant Weapon - Lesser Arcane Dexterity", "=ds=#sr# 300"};
 		{ 8, "s968697", "Spell_Holy_GreaterHeal", "=q2=Enchant Weapon - Lesser Arcane Artillery", "=ds=#sr# 300"};
 		{ 9, "s968700", "Spell_Holy_GreaterHeal", "=q2=Enchant Weapon - Lesser Arcane Precision", "=ds=#sr# 300"};
+		Next = "SmithingHighRisk";	
+		Prev = "TailorHighRisk";
 		Back = "ENCHANTINGMENU";
 	};
 	
@@ -5839,6 +5865,8 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 7, "s968695", "Spell_Holy_GreaterHeal", "=q3=Enchant Weapon - Arcane Dexterity", "=ds=#sr# 300"};
 		{ 8, "s968698", "Spell_Holy_GreaterHeal", "=q3=Enchant Weapon - Arcane Artillery", "=ds=#sr# 300"};
 		{ 9, "s968701", "Spell_Holy_GreaterHeal", "=q3=Enchant Weapon - Arcane Precision", "=ds=#sr# 300"};
+		Next = "SmithingHighRisk25Man";
+		Prev = "TailorHighRisk25Man";
 		Back = "ENCHANTINGMENU";
 	};
 	
@@ -5852,6 +5880,8 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 7, "s968696", "Spell_Holy_GreaterHeal", "=q4=Enchant Weapon - Greater Arcane Dexterity", "=ds=#sr# 300"};
 		{ 8, "s968699", "Spell_Holy_GreaterHeal", "=q4=Enchant Weapon - Greater Arcane Artillery", "=ds=#sr# 300"};
 		{ 9, "s968702", "Spell_Holy_GreaterHeal", "=q4=Enchant Weapon - Greater Arcane Precision", "=ds=#sr# 300"};
+		Next = "SmithingHighRisk25ManHEROIC";
+		Prev = "TailorHighRisk25ManHEROIC";
 		Back = "ENCHANTINGMENU";
 	};
 	
