@@ -1410,13 +1410,13 @@ function AtlasLoot_QueryLootPage()
     local now = 0;
     while i<31 do
         now = GetTime();
-        if now - querytime > 0.03 then
+        if now - querytime > 0.01 then
             querytime = GetTime();        
             button = getglobal("AtlasLootItem_"..i);
             queryitem = button.itemID;
             if (queryitem) and (queryitem ~= nil) and (queryitem ~= "") and (queryitem ~= 0) and (string.sub(queryitem, 1, 1) ~= "s") then
-                GameTooltip:SetHyperlink("item:"..queryitem..":0:0:0:0:0:0:0");
-                GameTooltip:SetHyperlink("item:60"..queryitem..":0:0:0:0:0:0:0");
+				AtlasLootTooltip:SetHyperlink("item:"..queryitem..":0:0:0:0:0:0:0");
+				AtlasLootTooltip:SetHyperlink("item:60"..queryitem..":0:0:0:0:0:0:0");
             end
             i=i+1;
         end
