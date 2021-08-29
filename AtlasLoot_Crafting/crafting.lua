@@ -5729,6 +5729,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 6, "s968033", "967187", "=q2=Cleric's Belt Buckle", "=ds=#sr# 300"};
 		{ 7, "s968036", "967190", "=q2=Warlord's Belt Buckle", "=ds=#sr# 300"};
 		{ 8, "s968039", "967193", "=q2=Gaurdian's Belt Buckle", "=ds=#sr# 300"};
+		{ 10, "s968480", "967680", "=q2=Homicite Key", "=ds=#sr# 300"};
 		Back = "SMITHINGMENU";
 	};
 
@@ -5741,6 +5742,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 6, "s968034", "967188", "=q3=Sturdy Cleric's Belt Buckle", "=ds=#sr# 300"};
 		{ 7, "s968037", "967191", "=q3=Sturdy Warlord's Belt Buckle", "=ds=#sr# 300"};
 		{ 8, "s968040", "967194", "=q3=Sturdy Gaurdian's Belt Buckle", "=ds=#sr# 300"};
+		{ 10, "s968481", "967681", "=q3=Homicite Key", "=ds=#sr# 300"};
 		Back = "SMITHINGMENU";
 	};
 
@@ -5753,6 +5755,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 6, "s968035", "967189", "=q4=Mastercraft Cleric's Belt Buckle", "=ds=#sr# 300"};
 		{ 7, "s968038", "967192", "=q4=Mastercraft Warlord's Belt Buckle", "=ds=#sr# 300"};
 		{ 8, "s968041", "967195", "=q4=Mastercraft Gaurdian's Belt Buckle", "=ds=#sr# 300"};
+		{ 10, "s968482", "967682", "=q4=Homicite Key", "=ds=#sr# 300"};
 		Back = "SMITHINGMENU";
 	};
 	
@@ -5839,6 +5842,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 7, "s968695", "Spell_Holy_GreaterHeal", "=q3=Enchant Weapon - Arcane Dexterity", "=ds=#sr# 300"};
 		{ 8, "s968698", "Spell_Holy_GreaterHeal", "=q3=Enchant Weapon - Arcane Artillery", "=ds=#sr# 300"};
 		{ 9, "s968701", "Spell_Holy_GreaterHeal", "=q3=Enchant Weapon - Arcane Precision", "=ds=#sr# 300"};
+		{ 10, "s968770", "Spell_Holy_GreaterHeal", "=q3=Enchant Weapon - Crusader II", "=ds=#sr# 300"};
 		Back = "ENCHANTINGMENU";
 	};
 	
@@ -5852,6 +5856,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 7, "s968696", "Spell_Holy_GreaterHeal", "=q4=Enchant Weapon - Greater Arcane Dexterity", "=ds=#sr# 300"};
 		{ 8, "s968699", "Spell_Holy_GreaterHeal", "=q4=Enchant Weapon - Greater Arcane Artillery", "=ds=#sr# 300"};
 		{ 9, "s968702", "Spell_Holy_GreaterHeal", "=q4=Enchant Weapon - Greater Arcane Precision", "=ds=#sr# 300"};
+		{ 10, "s968771", "Spell_Holy_GreaterHeal", "=q4=Enchant Weapon - Crusader III", "=ds=#sr# 300"};
 		Back = "ENCHANTINGMENU";
 	};
 	
