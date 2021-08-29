@@ -2,6 +2,9 @@ v2.02 08/29/2021
 - Added forward and previous arrows to all classic dungeons (Credit: alexs and Powerthegreat)
 - Added forward and previous arrows to all classic world bosses (Credit: Powerthegreat)
 - Moved TBC world boss to the bottom of the dropdown
+- Added missing Keys to High Risk Balcksmithing and Crusader High Risk craft (Credit: Rvng)
+- Added missing Lures to High Risk Cooking
+- Added forward and previous arrows to High Risk crafting
 ---------------------------------------------------------------------------------------------------------------------------
 v2.01 08/28/2021
 - Fixed lua Error when "Query Server" is used to query all items on the page
