@@ -913,13 +913,13 @@ AtlasLoot_DewDropDown_SubTables = {
 	},
 	["WorldBosses"] = {
 		{ "", "WorldBossesClassic" },
-		{ "", "WorldBossesBC"},
 		{ "", "DEmeriss" },
 		{ "", "DLethon"},
 		{ "", "DTaerar" },
 		{ "", "DYsondre" },
 		{ "", "Kazzak60" },
 		{ "", "Setis" },
+		{ "", "WorldBossesBC"},
 	},
 	["ForgeofSouls"] = {
 		{ "", "FoSBronjahm" },
