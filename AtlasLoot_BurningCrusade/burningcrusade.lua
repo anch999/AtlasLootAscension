@@ -285,7 +285,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Next = "AuchManaYor";
 	};
 
-	AtlasLoot_Data["AuchManaNexusPrinceHEROIC"] = {
+	AtlasLoot_Data["AuchManaNexusPrince25Man"] = {
 		{ 1, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		{ 2, 29240, "", "=q4=Bands of Negation", "=ds=#s8#, #a1#", "", "3.03%"};
 		{ 3, 30535, "", "=q4=Forestwalker Kilt", "=ds=#s11#, #a2#", "", "27.27%"};
