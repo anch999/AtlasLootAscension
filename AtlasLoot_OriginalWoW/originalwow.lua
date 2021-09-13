@@ -1,7 +1,7 @@
 local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot");
 local BabbleBoss = AtlasLoot_GetLocaleLibBabble("LibBabble-Boss-3.0")
 local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
-local MythicTier = AtlasLoot.db.profile.MythicPlussTier - 1 + 4
+local MythicTier = (AtlasLoot.db.profile.MythicPlussTier or 1) - 1 + 4
 
 -- Index
 --- Dungeons & Raids
