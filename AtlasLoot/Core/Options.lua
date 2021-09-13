@@ -373,8 +373,6 @@ function AtlasLoot_MythicPlussTier_OnClick()
         AtlasLoot_ShowItemsFrame(AtlasLootItemsFrame.refresh[1], AtlasLootItemsFrame.refresh[2], AtlasLootItemsFrame.refresh[3], AtlasLootItemsFrame.refresh[4]);
     end
     AtlasLoot_OptionsOnShow();
-    LoadAddOn("AtlasLoot_OriginalWoW");
-    AtlasLoot_Refresh()
 end
 
 local Authors = {
