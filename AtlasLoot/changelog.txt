@@ -1,3 +1,6 @@
+v2.04 09/13/2021
+- Added automatic reloads of loot tables when changing mythic+ options (Credit: Rvng) 
+---------------------------------------------------------------------------------------------------------------------------
 v2.03 09/13/2021
 - Added option to select Mythic Pluss tiers (Requires /reload for changes)
 - Added Mythic +1 to +10 to all Vanilla dungeons (selectable in options menu)

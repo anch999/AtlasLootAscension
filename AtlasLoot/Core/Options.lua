@@ -307,69 +307,23 @@ end
 
 function AtlasLoot_SelectMythicPlussTier_Initialize()
 	local info;
-	info = {
-        text = AL["Mythic Tier 0"];
-        func = AtlasLoot_MythicPlussTier_OnClick;
-    };
-	UIDropDownMenu_AddButton(info);
-    info = {
-        text = AL["Mythic Tier 1"];
-        func = AtlasLoot_MythicPlussTier_OnClick;
-    };
-	UIDropDownMenu_AddButton(info);
-    info = {
-        text = AL["Mythic Tier 2"];
-        func = AtlasLoot_MythicPlussTier_OnClick;
-    };
-	UIDropDownMenu_AddButton(info);
-    info = {
-        text = AL["Mythic Tier 3"];
-        func = AtlasLoot_MythicPlussTier_OnClick;
-    };
-	UIDropDownMenu_AddButton(info);
-    info = {
-        text = AL["Mythic Tier 4"];
-        func = AtlasLoot_MythicPlussTier_OnClick;
-    };
-	UIDropDownMenu_AddButton(info);
-    info = {
-        text = AL["Mythic Tier 5"];
-        func = AtlasLoot_MythicPlussTier_OnClick;
-    };
-	UIDropDownMenu_AddButton(info);
-    info = {
-        text = AL["Mythic Tier 6"];
-        func = AtlasLoot_MythicPlussTier_OnClick;
-    };
-	UIDropDownMenu_AddButton(info);
-    info = {
-        text = AL["Mythic Tier 7"];
-        func = AtlasLoot_MythicPlussTier_OnClick;
-    };
-	UIDropDownMenu_AddButton(info);
-    info = {
-        text = AL["Mythic Tier 8"];
-        func = AtlasLoot_MythicPlussTier_OnClick;
-    };
-	UIDropDownMenu_AddButton(info);
-    info = {
-        text = AL["Mythic Tier 9"];
-        func = AtlasLoot_MythicPlussTier_OnClick;
-    };
-	UIDropDownMenu_AddButton(info);
-    info = {
-        text = AL["Mythic Tier 10"];
-        func = AtlasLoot_MythicPlussTier_OnClick;
-    };
-	UIDropDownMenu_AddButton(info);
+	
+	for t = 0, 10, 1 do
+		info = {
+			text = AL["Mythic Tier "..t];
+			func = AtlasLoot_MythicPlussTier_OnClick;
+		};
+		UIDropDownMenu_AddButton(info);
+	end
+	
 end
 
 function AtlasLoot_MythicPlussTier_OnClick()
-    
     local thisID = this:GetID();
     UIDropDownMenu_SetSelectedID(AtlasLoot_SelectMythicPlussTier, thisID);
     AtlasLoot.db.profile.MythicPlussTier = thisID;
     if AtlasLootItemsFrame:IsVisible() and AtlasLootItemsFrame.refresh then
+		Mythic_Reload();
         AtlasLoot_ShowItemsFrame(AtlasLootItemsFrame.refresh[1], AtlasLootItemsFrame.refresh[2], AtlasLootItemsFrame.refresh[3], AtlasLootItemsFrame.refresh[4]);
     end
     AtlasLoot_OptionsOnShow();
