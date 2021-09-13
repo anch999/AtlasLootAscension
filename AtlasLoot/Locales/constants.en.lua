@@ -105,6 +105,18 @@ if AL then
 	AL["Loot Browser Style:"] = true;
 	AL["New Style"] = true;
 	AL["Classic Style"] = true;
+	AL["Select Mythic Pluss Tier:"] = true;
+	AL["Mythic Tier 0"] = true;
+	AL["Mythic Tier 1"] = true;
+	AL["Mythic Tier 2"] = true;
+	AL["Mythic Tier 3"] = true;
+	AL["Mythic Tier 4"] = true;
+	AL["Mythic Tier 5"] = true;
+	AL["Mythic Tier 6"] = true;
+	AL["Mythic Tier 7"] = true;
+	AL["Mythic Tier 8"] = true;
+	AL["Mythic Tier 9"] = true;
+	AL["Mythic Tier 10"] = true;
 
 	-- Slash commands
 	AL["reset"] = true;
