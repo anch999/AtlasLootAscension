@@ -1,7 +1,7 @@
 local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot");
 local BabbleBoss = AtlasLoot_GetLocaleLibBabble("LibBabble-Boss-3.0")
 local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
-local MythicTier = AtlasLoot.db.profile.MythicPlussTier - 1 + 4
+local MythicTier = (AtlasLoot.db.profile.MythicPlussTier or 1) - 1 + 4
 
 -- Index
 --- Dungeons & Raids
@@ -7661,7 +7661,7 @@ local MythicTier = AtlasLoot.db.profile.MythicPlussTier - 1 + 4
 	};
 
 	AtlasLoot_Data["SCHOLOLorekeeperPolkelt25ManHEROIC"] = {
-		{ 1, AL_FindId("Dreadmist Wraps", MythicTier()), "", "=q4=Dreadmist Wraps", "=ds=#s9#, #a1# (D1, #c8#)", "", "14.54%"};
+		{ 1, AL_FindId("Dreadmist Wraps", MythicTier), "", "=q4=Dreadmist Wraps", "=ds=#s9#, #a1# (D1, #c8#)", "", "14.54%"};
 		{ 3, AL_FindId("Burial Shawl", MythicTier), "", "=q4=Burial Shawl", "=ds=#s3#, #a1#", "", "0.53%"};
 		{ 4, AL_FindId("Necropile Mantle", MythicTier), "", "=q4=Necropile Mantle", "=ds=#s3#, #a1#", "", "0.67%"};
 		{ 5, AL_FindId("Necropile Robe", MythicTier), "", "=q4=Necropile Robe", "=ds=#s5#, #a1#", "", "0.55%"};
