@@ -323,7 +323,6 @@ function AtlasLoot_MythicPlussTier_OnClick()
     UIDropDownMenu_SetSelectedID(AtlasLoot_SelectMythicPlussTier, thisID);
     AtlasLoot.db.profile.MythicPlussTier = thisID;
     if AtlasLootItemsFrame:IsVisible() and AtlasLootItemsFrame.refresh then
-		Mythic_Reload();
         AtlasLoot_ShowItemsFrame(AtlasLootItemsFrame.refresh[1], AtlasLootItemsFrame.refresh[2], AtlasLootItemsFrame.refresh[3], AtlasLootItemsFrame.refresh[4]);
     end
     AtlasLoot_OptionsOnShow();
