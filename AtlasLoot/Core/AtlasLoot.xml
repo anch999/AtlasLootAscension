@@ -1065,7 +1065,7 @@
 				<Anchors>
 					<Anchor point="TOP">
 						<Offset>
-							<AbsDimension x="30" y="-200"/>
+							<AbsDimension x="30" y="-100"/>
 						</Offset>
 					</Anchor>
 				</Anchors>
@@ -1087,7 +1087,29 @@
 				<Anchors>
 					<Anchor point="TOP">
 						<Offset>
-							<AbsDimension x="30" y="-230"/>
+							<AbsDimension x="30" y="-200"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+            <Button name="AtlasLoot_SelectMythicPlussTier" inherits="UIDropDownMenuTemplate">
+				<Layers>
+					<Layer level="BACKGROUND">
+						<FontString name="$parent_Label" inherits="GameFontNormalSmall">
+							<Anchors>
+								<Anchor point="RIGHT" relativePoint="LEFT">
+									<Offset>
+										<AbsDimension x="15" y="2"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</FontString>
+					</Layer>
+				</Layers>
+				<Anchors>
+					<Anchor point="TOP">
+						<Offset>
+							<AbsDimension x="30" y="-200"/>
 						</Offset>
 					</Anchor>
 				</Anchors>
@@ -1099,7 +1121,7 @@
 				<Anchors>
 					<Anchor point="TOP">
 						<Offset>
-							<AbsDimension x="0" y="-285" />
+							<AbsDimension x="0" y="-230" />
 						</Offset>
 					</Anchor>
 				</Anchors>
