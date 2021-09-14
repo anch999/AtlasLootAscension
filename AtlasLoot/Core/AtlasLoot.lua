@@ -677,12 +677,12 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 			--Check for a valid object (that it exists, and that it has a name)
 			local itemId = 0;
 			if(dataSource[dataID][i] ~= nil and dataSource[dataID][i][4] ~= "") then
-				print(dataSource[dataID][i][2])
-					if string.sub(dataSource[dataID][i][2], 1, 1) == "s" then
-						isItem = false;
-					else
-						isItem = true;
-					end
+				
+				if string.sub(dataSource[dataID][i][2], 1, 1) == "s" then
+					isItem = false;
+				else
+					isItem = true;
+				end
 				
 				itemId = dataSource[dataID][i][2]
 
