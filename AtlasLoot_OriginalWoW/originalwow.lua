@@ -118,7 +118,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
         { 18, -20884, "", "=q3=Qiraji Magisterial Ring", "#m3#", "", "7.98%"};
         { 19, -20888, "", "=q3=Qiraji Ceremonial Ring", "#m3#", "", "7.80%"};
         Next = "AQ20Rajaxx";
-		Dif = MythicTier;
+		Dif = 4; --Set to 4 for Ascended becuase that is this tables default data
 		Raid = true;
     };
     
@@ -142,7 +142,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
         { 23, -22219, "", "=q1=Plans: Jagged Obsidian Shield", "=ds=#p2# (300)"};
         Prev = "AQ20Kurinnaxx";
         Next = "AQ20Moam";
-		Dif = MythicTier;
+		Dif = 4;
 		Raid = true;
     };
     
@@ -168,7 +168,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
         { 22, -22194, "", "=q4=Black Grasp of the Destroyer", "=ds=#s9#, #a3#"};
         Prev = "AQ20Rajaxx";
         Next = "AQ20Buru";
-		Dif = MythicTier;
+		Dif = 4;
 		Raid = true;
     };
     
@@ -188,7 +188,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
         { 21, -20888, "", "=q3=Qiraji Ceremonial Ring", "#m3#", "", "25.58%"};
         Prev = "AQ20Moam";
         Next = "AQ20Ayamiss";
-		Dif = MythicTier;
+		Dif = 4;
 		Raid = true;
     };
     
@@ -209,7 +209,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
         { 21, -20888, "", "=q3=Qiraji Ceremonial Ring", "#m3#", "", "27.50%"};
         Prev = "AQ20Buru";
         Next = "AQ20Ossirian";
-		Dif = MythicTier;
+		Dif = 4;
 		Raid = true;
     };
     
@@ -237,7 +237,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
         { 24, -20884, "", "=q3=Qiraji Magisterial Ring", "#m3#", "", "9.65%"};
         { 25, -20888, "", "=q3=Qiraji Ceremonial Ring", "#m3#", "", "8.53%"};
         Prev = "AQ20Ayamiss";
-		Dif = MythicTier;
+		Dif = 4;
 		Raid = true;
     };
     
@@ -324,7 +324,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 27, -22222, "", "=q3=Plans: Thick Obsidian Breastplate", "=ds=#p2# (300)", "", "5.00%"};
 		{ 28, -22196, "", "=q4=Thick Obsidian Breastplate", "=ds=#s5#, #a4#"};
 		Next = "AQ40Vem";
-		Dif = MythicTier;
+		Dif = 4;
 		Raid = true;
 	};
 
@@ -352,7 +352,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 25, 221687, "", "=q4=Ukko's Ring of Darkness", "=ds=#s13# =q2=#n117#", "", "20%"};
 		Prev = "AQ40Skeram";
 		Next = "AQ40Sartura";
-		Dif = MythicTier;
+		Dif = 4;
 		Raid = true;
 	};
 
@@ -381,7 +381,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 25, -21269, "", "=q4=Blessed Qiraji Bulwark", "=q1=#m4#, =ds=#w8#"};
 		Prev = "AQ40Vem";
 		Next = "AQ40Fankriss";
-		Dif = MythicTier;
+		Dif = 4;
 		Raid = true;
 	};
 
@@ -410,7 +410,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 25, -21269, "", "=q4=Blessed Qiraji Bulwark", "=q1=#m4#, =ds=#w8#"};
 		Prev = "AQ40Sartura";
 		Next = "AQ40Viscidus";
-		Dif = MythicTier;
+		Dif = 4;
 		Raid = true;
 	};
 
@@ -435,7 +435,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 25, -21269, "", "=q4=Blessed Qiraji Bulwark", "=q1=#m4#, =ds=#w8#"};
 		Prev = "AQ40Fankriss";
 		Next = "AQ40Huhuran";
-		Dif = MythicTier;
+		Dif = 4;
 		Raid = true;
 	};
 
@@ -459,7 +459,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 25, -21269, "", "=q4=Blessed Qiraji Bulwark", "=q1=#m4#, =ds=#w8#"};
 		Prev = "AQ40Viscidus";
 		Next = "AQ40Emperors";
-		Dif = MythicTier;
+		Dif = 4;
 		Raid = true;
 	};
 
@@ -492,7 +492,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 29, -21268, "", "=q4=Blessed Qiraji War Hammer", "=q1=#m4#, =ds=#h1#, #w6#"};
 		Prev = "AQ40Huhuran";
 		Next = "AQ40Ouro";
-		Dif = MythicTier;
+		Dif = 4;
 		Raid = true;
 	};
 
@@ -516,7 +516,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 25, -21269, "", "=q4=Blessed Qiraji Bulwark", "=q1=#m4# =ds=#w8#"};
 		Prev = "AQ40Emperors";
 		Next = "AQ40CThun";
-		Dif = MythicTier;
+		Dif = 4;
 		Raid = true;
 	};
 
@@ -546,7 +546,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 27, 222631, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c5#"};
 		{ 28, 222630, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c8#"};
 		Prev = "AQ40Ouro";
-		Dif = MythicTier;
+		Dif = 4;
 		Raid = true;
 	};
 
@@ -565,7 +565,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 18, -21323, "", "=q3=Green Qiraji Resonating Crystal", "=ds=#e12#", "", "11.62%"};
 		{ 19, -21321, "", "=q3=Red Qiraji Resonating Crystal", "=ds=#e12#", "", "1.39%"};
 		Next = "AQ40Trash2";
-		Dif = MythicTier;
+		Dif = 4;
 		Raid = true;
 	};
 
@@ -1462,7 +1462,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 21, 216859, "", "=q4=Lawbringer Boots", "=q1=#m1# =ds=#c4# (T1)", "", "7.20%"};
 		{ 22, -17329, "", "=q1=Hand of Lucifron", "=ds=#m3#"};
 		Next = "MCMagmadar";
-		Dif = MythicTier;
+		Dif = 4;
 		Raid = true;
 	};
 
@@ -1493,7 +1493,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 24, 216867, "", "=q4=Legplates of Might", "=q1=#m1# =ds=#c9# (T1)", "", "13.97%"};
 		Prev = "MCLucifron";
 		Next = "MCGehennas";
-		Dif = MythicTier;
+		Dif = 4;
 		Raid = true;
 	};
 
@@ -1517,7 +1517,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 23, -17331, "", "=q1=Hand of Gehennas", "=ds=#m3#"};
 		Prev = "MCMagmadar";
 		Next = "MCGarr";
-		Dif = MythicTier;
+		Dif = 4;
 		Raid = true;
 	};
 
@@ -1550,7 +1550,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 27, 219019, "", "=q5=Thunderfury, Blessed Blade of the Windseeker", "=q1=#m4#: =ds=#h1#, #w10#"};
 		Prev = "MCGehennas";
 		Next = "MCShazzrah";
-		Dif = MythicTier;
+		Dif = 4;
 		Raid = true;
 	};
 
@@ -1574,7 +1574,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 23, -17332, "", "=q1=Hand of Shazzrah", "=ds=#m3#"};
 		Prev = "MCGarr";
 		Next = "MCGeddon";
-		Dif = MythicTier;
+		Dif = 4;
 		Raid = true;
 	};
 
@@ -1600,7 +1600,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 23, 219019, "", "=q5=Thunderfury, Blessed Blade of the Windseeker", "=q1=#m4#: =ds=#h1#, #w10#"};
 		Prev = "MCShazzrah";
 		Next = "MCGolemagg";
-		Dif = MythicTier;
+		Dif = 4;
 		Raid = true;
 	};
 
@@ -1632,7 +1632,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 27, 217182, "", "=q5=Sulfuras, Hand of Ragnaros", "=q1=#m4#: =ds=#h2#, #w6#"};
 		Prev = "MCGeddon";
 		Next = "MCSulfuron";
-		Dif = MythicTier;
+		Dif = 4;
 		Raid = true;
 	};
 
@@ -1655,7 +1655,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 21, -17330, "", "=q1=Hand of Sulfuron", "=ds=#m3#"};
 		Prev = "MCGolemagg";
 		Next = "MCMajordomo";
-		Dif = MythicTier;
+		Dif = 4;
 		Raid = true;
 	};
 
@@ -1679,7 +1679,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 23, -18609, "", "=q4=Anathema", "=q1=#m4#: =ds=#w9#, =q1=#m1# =ds=#c5#"};
 		Prev = "MCSulfuron";
 		Next = "MCRagnaros";
-		Dif = MythicTier;
+		Dif = 4;
 		Raid = true;
 	};
 
@@ -1714,7 +1714,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 30, -21110, "", "=q1=Draconic for Dummies", "=ds=#m3#", "", "100%"};
 		Prev = "MCMajordomo";
 		Next = "MCTrashMobs";
-		Dif = MythicTier;
+		Dif = 4;
 		Raid = true;
 	};
 
@@ -1743,7 +1743,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 24, 216857, "", "=q4=Lawbringer Bracers", "=q1=#m1# =ds=#c4# (T1)", "", "0.11%"};
 		Prev = "MCRagnaros";
 		Next = "MCRANDOMBOSSDROPPS";
-		Dif = MythicTier;
+		Dif = 4;
 		Raid = true;
 	};
 
@@ -1795,7 +1795,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 25, 219357, "", "=q4=Herald of Woe", "=ds=#h2#, #w6#", "", "16.67%"};
 		{ 26, 219405, "", "=q4=Malfurion's Blessed Bulwark", "=ds=#s5#, #a2#", "", "16.67%"};
 		Next = "BWLVaelastrasz";
-		Dif = MythicTier;
+		Dif = 4;
 		Raid = true;
 	};
 
@@ -1820,7 +1820,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 25, 219367, "", "=q4=Dragon's Touch", "=ds=#w12#", "", "16.67%"};
 		Prev = "BWLRazorgore";
 		Next = "BWLLashlayer";
-		Dif = MythicTier;
+		Dif = 4;
 		Raid = true;
 	};
 
@@ -1848,7 +1848,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 27, 219432, "", "=q4=Circle of Applied Force", "=ds=#s13#", "", "16.67%"};
 		Prev = "BWLVaelastrasz";
 		Next = "BWLFiremaw";
-		Dif = MythicTier;
+		Dif = 4;
 		Raid = true;
 	};
 
@@ -1878,7 +1878,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 28, 219395, "", "=q4=Rejuvenating Gem", "=ds=#s14#", "", "6.67%"};
 		Prev = "BWLLashlayer";
 		Next = "BWLEbonroc";
-		Dif = MythicTier;
+		Dif = 4;
 		Raid = true;
 	};
 
@@ -1906,7 +1906,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 30, 219368, "", "=q4=Dragonbreath Hand Cannon", "=ds=#w5#", "", "16.67%"};
 		Prev = "BWLFiremaw";
 		Next = "BWLFlamegor";
-		Dif = MythicTier;
+		Dif = 4;
 		Raid = true;
 	};
 
@@ -1934,7 +1934,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 29, 219367, "", "=q4=Dragon's Touch", "=ds=#w12#", "", "16.67%"};
 		Prev = "BWLEbonroc";
 		Next = "BWLChromaggus";
-		Dif = MythicTier;
+		Dif = 4;
 		Raid = true;
 	};
 
@@ -1963,7 +1963,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 29, 219361, "", "=q4=Ashjre'thul, Crossbow of Smiting", "=ds=#w3#", "", "10%"};
 		Prev = "BWLFlamegor";
 		Next = "BWLNefarian1";
-		Dif = MythicTier;
+		Dif = 4;
 		Raid = true;
 	};
 
@@ -1992,7 +1992,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 28, 214001, "", "=q4=Archimtiros' Ring of Armageddon", "=ds=#s13#", "", "16.67%%"};
 		Prev = "BWLChromaggus";
 		Next = "BWLNefarian2";
-		Dif = MythicTier;
+		Dif = 4;
 		Raid = true;
 	};
 
@@ -2004,7 +2004,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 6, -21138, "", "=q1=Red Scepter Shard", "=ds=#m3#", "", "100%"};
 		Prev = "BWLNefarian1";
 		Next = "BWLTrashMobs";
-		Dif = MythicTier;
+		Dif = 4;
 		Raid = true;
 	};
 
@@ -2021,7 +2021,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 16, -18562, "", "=q4=Elementium Ore", "=ds=#e8#", "", "4.75%"};
 		{ 18, -21109, "", "=q1=Draconic for Dummies", "=ds=#m3#"};
 		Prev = "BWLNefarian2";
-		Dif = MythicTier;
+		Dif = 4;
 		Raid = true;
 	};
 
@@ -2079,7 +2079,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 
 	AtlasLoot_Data["DMELethtendris"] = {
 		{ 1,AL_FindId("Felhide Cap", MythicTier), "", "=q4=Felhide Cap", "=ds=#s1#, #a2#", "", "24.67%"};
-		--{ 2,AL_FindId("Quel'dorai Channeling Rod", 2), "", "=q4=Quel'dorai Channeling Rod", "=ds=#w9#", "", "7.30%"};
+		{ 2,AL_FindId("Quel'dorei Channeling Rod", 2), "", "=q4=Quel'dorei Channeling Rod", "=ds=#w9#", "", "7.30%"};
 		{ 4, -18302, "", "=q3=Band of Vigor", "=ds=#s13#", "", "29.30%"};
 		{ 5, -18301, "", "=q3=Lethtendris's Wand", "=ds=#w12#", "", "25.57%"};
 		{ 7, -18426, "", "=q1=Lethtendris's Web", "=ds=#m3#"};
@@ -4110,7 +4110,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 22, 219920, "", "=q3=Primalist's Band", "=ds=#s13#", "", "11.89%"};
 		{ 23, 219915, "", "=q3=Zulian Defender", "=ds=#w8#", "", " 11.36%"};
 		Next = "ZGVenoxis";
-		Dif = MythicTier;
+		Dif = 4;
 		Raid = true;
 	};
 
@@ -4135,7 +4135,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 22, 219900, "", "=q3=Zulian Stone Axe", "=ds=#h2#, #w1#", "", "11.89%"};
 		Prev = "ZGJeklik";
 		Next = "ZGMarli";
-		Dif = MythicTier;
+		Dif = 4;
 		Raid = true;
 	};
 
@@ -4159,7 +4159,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 22, 219930, "", "=q3=Mar'li's Eye", "=ds=#s14#", "", "12.09%"};
 		Prev = "ZGVenoxis";
 		Next = "ZGMandokir";
-		Dif = MythicTier;
+		Dif = 4;
 		Raid = true;
 	};
 
@@ -4190,7 +4190,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 29, 219863, "", "=q3=Primalist's Seal", "=ds=#s13#", "", "12.32%"};
 		Prev = "ZGMarli";
 		Next = "ZGEdgeofMadness";
-		Dif = MythicTier;
+		Dif = 4;
 		Raid = true;
 	};
 
@@ -4213,7 +4213,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 24, -19941, "", "=q2=Wushoolay's Mane", "=ds=#m3#", "", "100%"};
 		Prev = "ZGMandokir";
 		Next = "ZGGahzranka";
-		Dif = MythicTier;
+		Dif = 4;
 		Raid = true;
 	};
 
@@ -4225,7 +4225,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 7, -22739, "", "=q3=Tome of Polymorph: Turtle", "=ds=#e10#, =q1=#m1# =ds=#c3#"};
 		Prev = "ZGEdgeofMadness";
 		Next = "ZGThekal";
-		Dif = MythicTier;
+		Dif = 4;
 		Raid = true;
 	};
 
@@ -4248,7 +4248,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 24, 219901, "", "=q3=Zulian Slicer", "=ds=#h1#, #w10#, =q1=#e18#", "", "13.36%"};
 		Prev = "ZGGahzranka";
 		Next = "ZGArlokk";
-		Dif = MythicTier;
+		Dif = 4;
 		Raid = true;
 	};
 
@@ -4272,7 +4272,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 22, -19914, "", "=q3=Panther Hide Sack", "=ds=#m14# #e1#", "", "14.03%"};
 		Prev = "ZGThekal";
 		Next = "ZGJindo";
-		Dif = MythicTier;
+		Dif = 4;
 		Raid = true;
 	};
 
@@ -4302,7 +4302,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 28, 219894, "", "=q3=Bloodsoaked Gauntlets", "=ds=#s9#, #a4#", "", "12.93%"};
 		Prev = "ZGArlokk";
 		Next = "ZGHakkar";
-		Dif = MythicTier;
+		Dif = 4;
 		Raid = true;
 	};
 
@@ -4328,7 +4328,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 21, -19943, "", "=q1=Massive Mojo", "=ds=#e8#", "", "34.3%"};
 		Prev = "ZGJindo";
 		Next = "ZGShared";
-		Dif = MythicTier;
+		Dif = 4;
 		Raid = true;
 	};
 
@@ -4349,7 +4349,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 11, 222713, "", "=q3=Zulian Scepter of Rites", "=ds=#h3#, #w6#"};
 		Prev = "ZGHakkar";
 		Next = "ZGTrash1";
-		Dif = MythicTier;
+		Dif = 4;
 		Raid = true;
 	};
 
@@ -4377,7 +4377,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 24, -19813, "", "=q2=Punctured Voodoo Doll", "=q1=#m1# =ds=#c9#", "", "0.01%"};
 		Prev = "ZGShared";
 		Next = "ZGTrash2";
-		Dif = MythicTier;
+		Dif = 4;
 		Raid = true;
 	};
 
@@ -4440,7 +4440,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 11, 222818, "", "=q4=The Plague Bearer", "=ds=#w8#","", "20%" },
 		{ 12, 222961, "", "=q4=Band of Reanimation", "=ds=#s13#","", "20%" },
 		Next = "NAXGrobbulus";
-		Dif = MythicTier;
+		Dif = 4;
 		Raid = true;
 	};
 
@@ -4459,7 +4459,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 12, 222810, "", "=q4=Toxin Injector", "=ds=#w5#", "","20%" },
 		Prev = "NAXPatchwerk";
 		Next = "NAXGluth";
-		Dif = MythicTier;
+		Dif = 4;
 		Raid = true;
 	};
 
@@ -4493,7 +4493,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 27, -22358, "", "=q4=Desecrated Sabatons", "=q1=#m1# =ds=#c6#, #c9#","", "8.33%"  },
 		Prev = "NAXGrobbulus";
 		Next = "NAXThaddius";
-		Dif = MythicTier;
+		Dif = 4;
 		Raid = true;
 	};
 
@@ -4512,7 +4512,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 12, 223001, "", "=q4=Eye of Diminution", "=ds=#s14#" ,"", "20%"},
 		Prev = "NAXGluth";
 		Next = "NAXAnubRekhan";
-		Dif = MythicTier;
+		Dif = 4;
 		Raid = true;
 	};
 
@@ -4531,7 +4531,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 12, 222935, "", "=q4=Touch of Frost", "=ds=#s2#", "", "20%" },
 		Prev = "NAXThaddius";
 		Next = "NAXGrandWidowFearlina";
-		Dif = MythicTier;
+		Dif = 4;
 		Raid = true;
 	};
 
@@ -4550,7 +4550,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 12, 222943, "", "=q4=Malice Stone Pendant", "=ds=#s2#","", "20%" },
 		Prev = "NAXAnubRekhan";
 		Next = "NAXMaexxna";
-		Dif = MythicTier;
+		Dif = 4;
 		Raid = true;
 	};
 
@@ -4569,7 +4569,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 12, 222954, "", "=q4=Kiss of the Spider", "=ds=#s14#","", "20%" },
 		Prev = "NAXGrandWidowFearlina";
 		Next = "NAXInstructorRAuvious";
-		Dif = MythicTier;
+		Dif = 4;
 		Raid = true;
 	};
 
@@ -4589,7 +4589,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 13, 223018, "", "=q4=Signet of the Fallen Defender", "=ds=#s13#","", "16.67%" },
 		Prev = "NAXMaexxna";
 		Next = "NAXGothicderHarvester";
-		Dif = MythicTier;
+		Dif = 4;
 		Raid = true;
 	};
 
@@ -4608,7 +4608,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 12, 223023, "", "=q4=Sadist's Collar", "=ds=#s2#","", "20%"  },
 		Prev = "NAXInstructorRAuvious";
 		Next = "NAXTheFourHorsemen";
-		Dif = MythicTier;
+		Dif = 4;
 		Raid = true;
 	};
 
@@ -4628,7 +4628,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 13, 223027, "", "=q4=Warmth of Forgiveness", "=ds=#s14#","", "16.67%"  },
 		Prev = "NAXGothicderHarvester";
 		Next = "NAXNothderPlaguebringer";
-		Dif = MythicTier;
+		Dif = 4;
 		Raid = true;
 	};
 
@@ -4649,7 +4649,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 14, 223028, "", "=q4=Hailstone Band", "=ds=#s13#","", "14.29%" },
 		Prev = "NAXTheFourHorsemen";
 		Next = "NAXHeiganderUnclean";
-		Dif = MythicTier;
+		Dif = 4;
 		Raid = true;
 	};
 
@@ -4668,7 +4668,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 12, 223036, "", "=q4=Necklace of Necropsy", "=ds=#s2#","", "20%" },
 		Prev = "NAXNothderPlaguebringer";
 		Next = "NAXLoatheb";
-		Dif = MythicTier;
+		Dif = 4;
 		Raid = true;
 	};
 
@@ -4687,7 +4687,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 12, 223042, "", "=q4=Loatheb's Reflection", "=ds=#s14#","", "20%" },
 		Prev = "NAXHeiganderUnclean";
 		Next = "NAXSapphiron";
-		Dif = MythicTier;
+		Dif = 4;
 		Raid = true;
 	};
 
@@ -4713,7 +4713,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 19, -23548, "", "=q4=Might of the Scourge", "=ds=#s3# #e17#" ,"","50%"},
 		Prev = "NAXLoatheb";
 		Next = "NAXKelThuzad";
-		Dif = MythicTier;
+		Dif = 4;
 		Raid = true;
 	};
 
@@ -4750,7 +4750,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 30, 222630, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c8#"},
 		Prev = "NAXSapphiron";
 		Next = "NAXTrash";
-		Dif = MythicTier;
+		Dif = 4;
 		Raid = true;
 	};
 
@@ -4778,7 +4778,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 21, -22708, "", "=q1=Fate of Ramaladni", "=ds=#m3#" },
 		{ 22, -23055, "", "=q1=Word of Thawing", "=ds=#m20#" },
 		Prev = "NAXKelThuzad";
-		Dif = MythicTier;
+		Dif = 4;
 		Raid = true;
 	};
 
@@ -4816,7 +4816,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 26, -18403, "", "=q4=Dragonslayer's Signet", "=q1=#m4#: =ds=#s13#" },
 		{ 27, -18406, "", "=q4=Onyxia Blood Talisman", "=q1=#m4#: =ds=#s14#" },
 		{ 29, -49636, "", "=q4=Reins of the Onyxian Drake", "=ds=#e12#", "" };
-		Dif = MythicTier;
+		Dif = 4;
 		Raid = true;
 	};
 
