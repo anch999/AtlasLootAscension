@@ -133,6 +133,17 @@ AtlasLoot_MenuList = {
 	"ARENA4SET",
 };
 
+AtlasLoot_Difficulty = {
+	"Bloodforged", "Normal", "Heroic", "Mythic", "Mythic 1",
+	"Mythic 2","Mythic 3","Mythic 4","Mythic 5",
+	"Mythic 6","Mythic 7","Mythic 8","Mythic 9",
+	"Mythic 10",
+}
+
+AtlasLoot_RaidDifficulty = {
+	"Bloodforged", "Normal Flex", "Heroic Flex", "Ascended",
+}
+
 -- Popup Box for first time users
 StaticPopupDialogs["ATLASLOOT_SETUP"] = {
   text = AL["Welcome to Atlasloot Enhanced.  Please take a moment to set your preferences."],
@@ -645,35 +656,43 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 	-- Create the loottable
 	if (dataID == "SearchResult") or (dataID == "WishList") or (AtlasLoot_IsLootTableAvailable(dataID)) then
 
-		--Check to see if loaded table is different Mythic Difficulty then options set
+		--Check to see if loaded table is different Difficulty then options set
 		local dif = false;
 		if(dataSource[dataID].Dif ~= nil) then
-			dif = not (dataSource[dataID].Dif == AtlasLoot.db.profile.MythicPlussTier - 1 + 4);
+			if (dataSource[dataID].Raid ~= nil) then
+				if(AtlasLoot.db.profile.MythicPlussTier > 4) then
+					AtlasLoot.db.profile.MythicPlussTier = 4;
+				end
+			end
+
+			dif = not (dataSource[dataID].Dif == AtlasLoot.db.profile.MythicPlussTier);
 			if dif then
-				--Set this page to the new Mythic Difficulty
-				dataSource[dataID].Dif = AtlasLoot.db.profile.MythicPlussTier - 1 + 4;
+				--Set this page to the new Difficulty
+				dataSource[dataID].Dif = AtlasLoot.db.profile.MythicPlussTier;
 			end
 		end
 
 		--Iterate through each item object and set its properties
 		for i = 1, 30, 1 do
 			--Check for a valid object (that it exists, and that it has a name)
-			local itemID = 0;
+			local itemId = 0;
 			if(dataSource[dataID][i] ~= nil and dataSource[dataID][i][4] ~= "") then
-				if string.sub(dataSource[dataID][i][2], 1, 1) == "s" then
-					isItem = false;
-				else
-					isItem = true;
-				end
-				if isItem then
-					itemId = dataSource[dataID][i][2];
+				print(dataSource[dataID][i][2])
+					if string.sub(dataSource[dataID][i][2], 1, 1) == "s" then
+						isItem = false;
+					else
+						isItem = true;
+					end
+				
+				itemId = dataSource[dataID][i][2]
 
+				if isItem then
 					if itemId < 0 then
-						--Set all items that wont be changed by mythic difficulty to negative
+						--Items that are set to be ignored by difficulty changed need to be flipped positive
 						itemId = math.abs(itemId);
 					elseif dif and itemId ~= 0 then
 						--If difficulty has changed, find new id and set it.
-						itemId = AL_FindId(string.sub(dataSource[dataID][i][4], 5), dataSource[dataID].Dif);
+						itemId = AL_FindId(string.sub(dataSource[dataID][i][4], 5), dataSource[dataID].Dif) or dataSource[dataID][i][2];
 						dataSource[dataID][i][2] = itemId;
 					end
 
@@ -839,8 +858,18 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
         AtlasLoot_QuickLooks:Show();
         AtlasLootQuickLooksButton:Show();
 
-		AtlasLootMythicButton:Hide();
-		AtlasLoot_MythicSelect:Hide();
+		if (AtlasLoot_Data[dataID].Dif ~= nil and AtlasLoot_Data[dataID].Raid ~= nil) then
+			AtlasLootMythicButton:Show();
+			AtlasLootMythicButton:SetScript("OnClick", AtlasLoot_ShowRaidSelect);
+			AtlasLoot_DifficultySelect:Show();
+		elseif (AtlasLoot_Data[dataID].Dif ~= nil) then
+			AtlasLootMythicButton:Show();
+			AtlasLootMythicButton:SetScript("OnClick", AtlasLoot_ShowMythicSelect);
+			AtlasLoot_DifficultySelect:Show();	
+		else
+			AtlasLootMythicButton:Hide();
+			AtlasLoot_DifficultySelect:Show();
+		end
 		
 		-- Show the Filter Check-Box
 		if dataID ~= "WishList" and dataID ~= "SearchResult" and dataSource_backup ~= "AtlasLootCrafting" then
@@ -881,11 +910,6 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 				AtlasLootItemsFrame_Heroic:Enable()
 			else
 				AtlasLootItemsFrame_Heroic:Disable()
-			end
-
-			if (AtlasLoot.db.profile.BigraidHeroic and AtlasLoot_Data[Heroic25ID].Dif ~= nil) then
-				AtlasLootMythicButton:Show();
-				AtlasLoot_MythicSelect:Show();	
 			end
 		elseif AtlasLoot.db.profile.HeroicMode and HeroicID then
 			AtlasLootItemsFrame_Heroic:Show()
@@ -1426,13 +1450,48 @@ function AtlasLoot_ShowMythicSelect(button)
 		dewdrop:Close(1);
 	else
 		local setOptions = function()
-			for t = 0, 10, 1 do
+			for t = 1, 14, 1 do
 				dewdrop:AddLine(
-					"text", AL["Mythic Tier "..t],
-					"tooltipTitle", AL["Mythic Tier "..t],
-					"tooltipText", "Swap to Mythic Level: "..t,
+					"text", AtlasLoot_Difficulty[t],
+					"tooltipTitle", AtlasLoot_Difficulty[t],
+					"tooltipText", "Swap to Difficulty Level: "..AtlasLoot_Difficulty[t],
 					"func", function()
-						AtlasLoot.db.profile.MythicPlussTier = t + 1;
+						AtlasLoot.db.profile.MythicPlussTier = t;
+						if AtlasLootItemsFrame:IsVisible() and AtlasLootItemsFrame.refresh then
+							AtlasLoot_ShowItemsFrame(AtlasLootItemsFrame.refresh[1], AtlasLootItemsFrame.refresh[2], AtlasLootItemsFrame.refresh[3], AtlasLootItemsFrame.refresh[4]);
+						end
+						dewdrop:Close(1);
+					end
+				);
+			end
+		end;
+		dewdrop:Open(button,
+			'point', function(parent)
+				return "TOPLEFT", "TOPRIGHT";
+			end,
+			"children", setOptions
+		);
+	end
+end
+
+--[[
+AtlasLoot_ShowMythicSelect(button)
+button: Identity of the button pressed to trigger the function
+Shows the GUI for choosing Mythic Tier
+]]
+function AtlasLoot_ShowRaidSelect(button)
+	local dewdrop = AceLibrary("Dewdrop-2.0");
+	if dewdrop:IsOpen(button) then
+		dewdrop:Close(1);
+	else
+		local setOptions = function()
+			for t = 1, 4, 1 do
+				dewdrop:AddLine(
+					"text", AtlasLoot_RaidDifficulty[t],
+					"tooltipTitle", AtlasLoot_RaidDifficulty[t],
+					"tooltipText", "Swap to Difficulty Level: "..AtlasLoot_RaidDifficulty[t],
+					"func", function()
+						AtlasLoot.db.profile.MythicPlussTier = t;
 						if AtlasLootItemsFrame:IsVisible() and AtlasLootItemsFrame.refresh then
 							AtlasLoot_ShowItemsFrame(AtlasLootItemsFrame.refresh[1], AtlasLootItemsFrame.refresh[2], AtlasLootItemsFrame.refresh[3], AtlasLootItemsFrame.refresh[4]);
 						end

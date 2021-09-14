@@ -792,7 +792,7 @@
                         </Anchor>
 					</Anchors>
 				</FontString>
-				<FontString name="AtlasLoot_MythicSelect" inherits="GameFontNormal" justifyH="RIGHT" text="Select Mythic Difficulty: " hidden="true">
+				<FontString name="AtlasLoot_DifficultySelect" inherits="GameFontNormal" justifyH="RIGHT" text="Select Difficulty: " hidden="true">
 					<Size>
 						<AbsDimension x="200" y="25"/>
 					</Size>
