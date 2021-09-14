@@ -5406,7 +5406,7 @@ local MythicTier = (AtlasLoot.db.profile.MythicPlussTier or 1) - 1 + 4
 
 	AtlasLoot_Data["DMELethtendris"] = {
 		{ 1, 18325, "", "=q3=Felhide Cap", "=ds=#s1#, #a2#", "", "24.67%"};
-		{ 2, 18311, "", "=q3=Quel'dorai Channeling Rod", "=ds=#w9#", "", "7.30%"};
+		{ 2, 18311, "", "=q3=Quel'dorei Channeling Rod", "=ds=#w9#", "", "7.30%"};
 		{ 4, 18302, "", "=q3=Band of Vigor", "=ds=#s13#", "", "29.30%"};
 		{ 5, 18301, "", "=q3=Lethtendris's Wand", "=ds=#w12#", "", "25.57%"};
 		{ 7, 18426, "", "=q1=Lethtendris's Web", "=ds=#m3#"};
@@ -5492,7 +5492,7 @@ local MythicTier = (AtlasLoot.db.profile.MythicPlussTier or 1) - 1 + 4
 
 	AtlasLoot_Data["DMELethtendris25Man"] = {
 		{ 1,AL_FindId("Felhide Cap", 3), "", "=q4=Felhide Cap", "=ds=#s1#, #a2#", "", "24.67%"};
-		{ 2,AL_FindId("Quel'dorai Channeling Rod", 3), "", "=q4=Quel'dorai Channeling Rod", "=ds=#w9#", "", "7.30%"};
+		{ 2,AL_FindId("Quel'dorei Channeling Rod", 3), "", "=q4=Quel'dorei Channeling Rod", "=ds=#w9#", "", "7.30%"};
 		{ 4, 18302, "", "=q3=Band of Vigor", "=ds=#s13#", "", "29.30%"};
 		{ 5, 18301, "", "=q3=Lethtendris's Wand", "=ds=#w12#", "", "25.57%"};
 		{ 7, 18426, "", "=q1=Lethtendris's Web", "=ds=#m3#"};
@@ -5578,7 +5578,7 @@ local MythicTier = (AtlasLoot.db.profile.MythicPlussTier or 1) - 1 + 4
 
 	AtlasLoot_Data["DMELethtendris25ManHEROIC"] = {
 		{ 1,AL_FindId("Felhide Cap", MythicTier), "", "=q4=Felhide Cap", "=ds=#s1#, #a2#", "", "24.67%"};
-		{ 2,AL_FindId("Quel'dorai Channeling Rod", MythicTier), "", "=q4=Quel'dorai Channeling Rod", "=ds=#w9#", "", "7.30%"};
+		{ 2,AL_FindId("Quel'dorei Channeling Rod", MythicTier), "", "=q4=Quel'dorei Channeling Rod", "=ds=#w9#", "", "7.30%"};
 		{ 4, 18302, "", "=q3=Band of Vigor", "=ds=#s13#", "", "29.30%"};
 		{ 5, 18301, "", "=q3=Lethtendris's Wand", "=ds=#w12#", "", "25.57%"};
 		{ 7, 18426, "", "=q1=Lethtendris's Web", "=ds=#m3#"};
@@ -16210,7 +16210,7 @@ function Mythic_Reload()
 
 	AtlasLoot_Data["DMELethtendris25ManHEROIC"] = {
 		{ 1,AL_FindId("Felhide Cap", MythicTier), "", "=q4=Felhide Cap", "=ds=#s1#, #a2#", "", "24.67%"};
-		{ 2,AL_FindId("Quel'dorai Channeling Rod", MythicTier), "", "=q4=Quel'dorai Channeling Rod", "=ds=#w9#", "", "7.30%"};
+		{ 2,AL_FindId("Quel'dorei Channeling Rod", MythicTier), "", "=q4=Quel'dorei Channeling Rod", "=ds=#w9#", "", "7.30%"};
 		{ 4, 18302, "", "=q3=Band of Vigor", "=ds=#s13#", "", "29.30%"};
 		{ 5, 18301, "", "=q3=Lethtendris's Wand", "=ds=#w12#", "", "25.57%"};
 		{ 7, 18426, "", "=q1=Lethtendris's Web", "=ds=#m3#"};
