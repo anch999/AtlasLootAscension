@@ -113,10 +113,10 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
         { 6, 221502, "", "=q3=Sand Reaver Wristguards", "=ds=#s8#, #a3#", "", "13.79%"};
         { 7, 221503, "", "=q3=Belt of the Sand Reaver", "=ds=#s10#, #a4#", "", "14.38%"};
         { 9, 22217, "", "=q1=Kurinnaxx's Venom Sac", "=ds=#m3#", "", "100%"};
-        { 16, -20889, "", "=q3=Qiraji Regal Drape", "#m3#", "", "30.83%"};
-        { 17, -20885, "", "=q3=Qiraji Martial Drape", "#m3#", "", "30.25%"};
-        { 18, -20884, "", "=q3=Qiraji Magisterial Ring", "#m3#", "", "7.98%"};
-        { 19, -20888, "", "=q3=Qiraji Ceremonial Ring", "#m3#", "", "7.80%"};
+        { 16, 20889, "", "=q3=Qiraji Regal Drape", "#m3#", "", "30.83%"};
+        { 17, 20885, "", "=q3=Qiraji Martial Drape", "#m3#", "", "30.25%"};
+        { 18, 20884, "", "=q3=Qiraji Magisterial Ring", "#m3#", "", "7.98%"};
+        { 19, 20888, "", "=q3=Qiraji Ceremonial Ring", "#m3#", "", "7.80%"};
         Next = "AQ20Rajaxx";
 		Dif = 4; --Set to 4 for Ascended becuase that is this tables default data
 		Raid = true;
@@ -133,13 +133,13 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
         { 10, 221810, "", "=q3=Treads of the Wandering Nomad", "=ds=#s12#, #a1#", "", "3.11%"};
         { 11, 221809, "", "=q3=Fury of the Forgotten Swarm", "=ds=#s2#", "", "3.20%"};
         { 12, 221806, "", "=q3=Gavel of Qiraji Authority", "=ds=#h2#, #w6#", "", "3.04%"};
-        { 16, -20889, "", "=q3=Qiraji Regal Drape", "#m3#", "", "36.51%"};
-        { 17, -20885, "", "=q3=Qiraji Martial Drape", "#m3#", "", "33.97%"};
-        { 18, -20884, "", "=q3=Qiraji Magisterial Ring", "#m3#", "", "8.82%"};
-        { 19, -20888, "", "=q3=Qiraji Ceremonial Ring", "#m3#", "", "8.56%"};
+        { 16, 20889, "", "=q3=Qiraji Regal Drape", "#m3#", "", "36.51%"};
+        { 17, 20885, "", "=q3=Qiraji Martial Drape", "#m3#", "", "33.97%"};
+        { 18, 20884, "", "=q3=Qiraji Magisterial Ring", "#m3#", "", "8.82%"};
+        { 19, 20888, "", "=q3=Qiraji Ceremonial Ring", "#m3#", "", "8.56%"};
         { 21, 0, "INV_Box_01", "=q6="..BabbleBoss["Lieutenant General Andorov"], ""};
-        { 22, -22221, "", "=q1=Plans: Obsidian Mail Tunic", "=ds=#p2# (300)"};
-        { 23, -22219, "", "=q1=Plans: Jagged Obsidian Shield", "=ds=#p2# (300)"};
+        { 22, 22221, "", "=q1=Plans: Obsidian Mail Tunic", "=ds=#p2# (300)"};
+        { 23, 22219, "", "=q1=Plans: Jagged Obsidian Shield", "=ds=#p2# (300)"};
         Prev = "AQ20Kurinnaxx";
         Next = "AQ20Moam";
 		Dif = 4;
@@ -160,12 +160,12 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
         { 12, 221475, "", "=q3=Legplates of the Destroyer", "=ds=#s11#, #a4#", "", "10.39%"};
         { 13, 221477, "", "=q3=Ring of Fury", "=ds=#s13#", "", "14.42%"};
         { 14, 221473, "", "=q3=Eye of Moam", "=ds=#s14#", "", "14.74%"};
-        { 16, -20886, "", "=q4=Qiraji Spiked Hilt", "#m3#", "", "36.38%"};
-        { 17, -20890, "", "=q4=Qiraji Ornate Hilt", "#m3#", "", "33.16%"};
-        { 18, -20884, "", "=q3=Qiraji Magisterial Ring", "#m3#", "", "7.56%"};
-        { 19, -20888, "", "=q3=Qiraji Ceremonial Ring", "#m3#", "", "8.34%"};
-        { 21, -22220, "", "=q3=Plans: Black Grasp of the Destroyer", "=ds=#p2# (300)", "", "4.11%"};
-        { 22, -22194, "", "=q4=Black Grasp of the Destroyer", "=ds=#s9#, #a3#"};
+        { 16, 20886, "", "=q4=Qiraji Spiked Hilt", "#m3#", "", "36.38%"};
+        { 17, 20890, "", "=q4=Qiraji Ornate Hilt", "#m3#", "", "33.16%"};
+        { 18, 20884, "", "=q3=Qiraji Magisterial Ring", "#m3#", "", "7.56%"};
+        { 19, 20888, "", "=q3=Qiraji Ceremonial Ring", "#m3#", "", "8.34%"};
+        { 21, 22220, "", "=q3=Plans: Black Grasp of the Destroyer", "=ds=#p2# (300)", "", "4.11%"};
+        { 22, 22194, "", "=q4=Black Grasp of the Destroyer", "=ds=#s9#, #a3#"};
         Prev = "AQ20Rajaxx";
         Next = "AQ20Buru";
 		Dif = 4;
@@ -180,12 +180,12 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
         { 6, 221491, "", "=q3=Scaled Bracers of the Gorger", "=ds=#s8#, #a2#", "", "16.51%"};
         { 7, 221490, "", "=q3=Slime Kickers", "=ds=#s12#, #a4#", "", "15.99%"};
         { 8, 221488, "", "=q3=Fetish of Chitinous Spikes", "=ds=#s14#", "", "17.22%"};
-        { 16, -20886, "", "=q4=Qiraji Spiked Hilt", "#m3#", "", "8.31%"};
-        { 17, -20890, "", "=q4=Qiraji Ornate Hilt", "#m3#", "", "8.98%"};
-        { 18, -20889, "", "=q3=Qiraji Regal Drape", "#m3#", "", "9.77%"};
-        { 19, -20885, "", "=q3=Qiraji Martial Drape", "#m3#", "", "9.84%"};
-        { 20, -20884, "", "=q3=Qiraji Magisterial Ring", "#m3#", "", "26.98%"};
-        { 21, -20888, "", "=q3=Qiraji Ceremonial Ring", "#m3#", "", "25.58%"};
+        { 16, 20886, "", "=q4=Qiraji Spiked Hilt", "#m3#", "", "8.31%"};
+        { 17, 20890, "", "=q4=Qiraji Ornate Hilt", "#m3#", "", "8.98%"};
+        { 18, 20889, "", "=q3=Qiraji Regal Drape", "#m3#", "", "9.77%"};
+        { 19, 20885, "", "=q3=Qiraji Martial Drape", "#m3#", "", "9.84%"};
+        { 20, 20884, "", "=q3=Qiraji Magisterial Ring", "#m3#", "", "26.98%"};
+        { 21, 20888, "", "=q3=Qiraji Ceremonial Ring", "#m3#", "", "25.58%"};
         Prev = "AQ20Moam";
         Next = "AQ20Ayamiss";
 		Dif = 4;
@@ -201,12 +201,12 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
         { 7, 221482, "", "=q3=Boots of the Fiery Sands", "=ds=#s12#, #a3#", "", "4.92%"};
         { 8, 221481, "", "=q3=Boots of the Desert Protector", "=ds=#s12#, #a4#", "", "11.08%"};
         { 9, 221483, "", "=q3=Ring of the Desert Winds", "=ds=#s13#", "", "16.32%"};
-        { 16, -20886, "", "=q4=Qiraji Spiked Hilt", "#m3#", "", "8.24%"};
-        { 17, -20890, "", "=q4=Qiraji Ornate Hilt", "#m3#", "", "8.21%"};
-        { 18, -20889, "", "=q3=Qiraji Regal Drape", "#m3#", "", "8.85%"};
-        { 19, -20885, "", "=q3=Qiraji Martial Drape", "#m3#", "", "10.97%"};
-        { 20, -20884, "", "=q3=Qiraji Magisterial Ring", "#m3#", "", "26.98%"};
-        { 21, -20888, "", "=q3=Qiraji Ceremonial Ring", "#m3#", "", "27.50%"};
+        { 16, 20886, "", "=q4=Qiraji Spiked Hilt", "#m3#", "", "8.24%"};
+        { 17, 20890, "", "=q4=Qiraji Ornate Hilt", "#m3#", "", "8.21%"};
+        { 18, 20889, "", "=q3=Qiraji Regal Drape", "#m3#", "", "8.85%"};
+        { 19, 20885, "", "=q3=Qiraji Martial Drape", "#m3#", "", "10.97%"};
+        { 20, 20884, "", "=q3=Qiraji Magisterial Ring", "#m3#", "", "26.98%"};
+        { 21, 20888, "", "=q3=Qiraji Ceremonial Ring", "#m3#", "", "27.50%"};
         Prev = "AQ20Buru";
         Next = "AQ20Ossirian";
 		Dif = 4;
@@ -227,15 +227,15 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
         { 11, 221715, "", "=q4=Sand Polished Hammer", "=ds=#h1#, #w6#", "", "5.95%"};
         { 12, 221459, "", "=q4=Crossbow of Imminent Doom", "=ds=#w3#", "", "6.12%"};
         { 13, 221452, "", "=q4=Staff of the Ruins", "=ds=#w9#", "", "10.32%"};
-        { 16, -21220, "", "=q4=Head of Ossirian the Unscarred", "=ds=#m2#", "", "100%"};
-        { 17, -21504, "", "=q4=Charm of the Shifting Sands", "=q1=#m4#: =ds=#s2#"};
-        { 18, -21507, "", "=q4=Amulet of the Shifting Sands", "=q1=#m4#: =ds=#s2#"};
-        { 19, -21505, "", "=q4=Choker of the Shifting Sands", "=q1=#m4#: =ds=#s2#"};
-        { 20, -21506, "", "=q4=Pendant of the Shifting Sands", "=q1=#m4#: =ds=#s2#"};
-        { 22, -20886, "", "=q4=Qiraji Spiked Hilt", "#m3#", "", "35.27%"};
-        { 23, -20890, "", "=q4=Qiraji Ornate Hilt", "#m3#", "", "30.69%"};
-        { 24, -20884, "", "=q3=Qiraji Magisterial Ring", "#m3#", "", "9.65%"};
-        { 25, -20888, "", "=q3=Qiraji Ceremonial Ring", "#m3#", "", "8.53%"};
+        { 16, 21220, "", "=q4=Head of Ossirian the Unscarred", "=ds=#m2#", "", "100%"};
+        { 17, 21504, "", "=q4=Charm of the Shifting Sands", "=q1=#m4#: =ds=#s2#"};
+        { 18, 21507, "", "=q4=Amulet of the Shifting Sands", "=q1=#m4#: =ds=#s2#"};
+        { 19, 21505, "", "=q4=Choker of the Shifting Sands", "=q1=#m4#: =ds=#s2#"};
+        { 20, 21506, "", "=q4=Pendant of the Shifting Sands", "=q1=#m4#: =ds=#s2#"};
+        { 22, 20886, "", "=q4=Qiraji Spiked Hilt", "#m3#", "", "35.27%"};
+        { 23, 20890, "", "=q4=Qiraji Ornate Hilt", "#m3#", "", "30.69%"};
+        { 24, 20884, "", "=q3=Qiraji Magisterial Ring", "#m3#", "", "9.65%"};
+        { 25, 20888, "", "=q3=Qiraji Ceremonial Ring", "#m3#", "", "8.53%"};
         Prev = "AQ20Ayamiss";
 		Dif = 4;
 		Raid = true;
@@ -312,17 +312,17 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 12, 221707, "", "=q4=Ring of Swarming Thought", "=ds=#s13#", "", "12.57%"};
 		{ 13, 221703, "", "=q4=Hammer of Ji'zhi", "=ds=#h2#, #w6#", "", "7.14%"};
 		{ 14, 221128, "", "=q4=Staff of the Qiraji Prophets", "=ds=#w9#", "", " 6.32%"};
-		{ 16, -21237, "", "=q4=Imperial Qiraji Regalia", "=ds=#m3#", "", "1.74%"};
-		{ 17, -21273, "", "=q4=Blessed Qiraji Acolyte Staff", "=q1=#m4#, =ds=#w9#"};
-		{ 18, -21275, "", "=q4=Blessed Qiraji Augur Staff", "=q1=#m4#, =ds=#w9#"};
-		{ 19, -21268, "", "=q4=Blessed Qiraji War Hammer", "=q1=#m4#, =ds=#h1#, #w6#"};
-		{ 21, -21232, "", "=q4=Imperial Qiraji Armaments", "=ds=#m3#", "", "1.32%"};
-		{ 22, -21242, "", "=q4=Blessed Qiraji War Axe", "=q1=#m4#, =ds=#h1#, #w1#"};
-		{ 23, -21272, "", "=q4=Blessed Qiraji Musket", "=q1=#m4#, =ds=#w5#"};
-		{ 24, -21244, "", "=q4=Blessed Qiraji Pugio", "=q1=#m4#, =ds=#h1#, #w4#"};
-		{ 25, -21269, "", "=q4=Blessed Qiraji Bulwark", "=q1=#m4#, =ds=#w8#"};
-		{ 27, -22222, "", "=q3=Plans: Thick Obsidian Breastplate", "=ds=#p2# (300)", "", "5.00%"};
-		{ 28, -22196, "", "=q4=Thick Obsidian Breastplate", "=ds=#s5#, #a4#"};
+		{ 16, 21237, "", "=q4=Imperial Qiraji Regalia", "=ds=#m3#", "", "1.74%"};
+		{ 17, 21273, "", "=q4=Blessed Qiraji Acolyte Staff", "=q1=#m4#, =ds=#w9#"};
+		{ 18, 21275, "", "=q4=Blessed Qiraji Augur Staff", "=q1=#m4#, =ds=#w9#"};
+		{ 19, 21268, "", "=q4=Blessed Qiraji War Hammer", "=q1=#m4#, =ds=#h1#, #w6#"};
+		{ 21, 21232, "", "=q4=Imperial Qiraji Armaments", "=ds=#m3#", "", "1.32%"};
+		{ 22, 21242, "", "=q4=Blessed Qiraji War Axe", "=q1=#m4#, =ds=#h1#, #w1#"};
+		{ 23, 21272, "", "=q4=Blessed Qiraji Musket", "=q1=#m4#, =ds=#w5#"};
+		{ 24, 21244, "", "=q4=Blessed Qiraji Pugio", "=q1=#m4#, =ds=#h1#, #w4#"};
+		{ 25, 21269, "", "=q4=Blessed Qiraji Bulwark", "=q1=#m4#, =ds=#w8#"};
+		{ 27, 22222, "", "=q3=Plans: Thick Obsidian Breastplate", "=ds=#p2# (300)", "", "5.00%"};
+		{ 28, 22196, "", "=q4=Thick Obsidian Breastplate", "=ds=#s5#, #a4#"};
 		Next = "AQ40Vem";
 		Dif = 4;
 		Raid = true;
@@ -335,8 +335,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 4, 221693, "", "=q4=Guise of the Devourer", "=ds=#s1#, #a2# =q2=#m5#", "", "16%"};
 		{ 5, 221692, "", "=q4=Triad Girdle", "=ds=#s10#, #a4# =q2=#m5#", "", "16%"};
 		{ 6, 221695, "", "=q4=Angelista's Touch", "=ds=#s13# =q2=#m5#", "", "14%"};
-		{ 8, -21237, "", "=q4=Imperial Qiraji Regalia", "=ds=#m3# =q2=#m5#", "", "7%"};
-		{ 9, -21232, "", "=q4=Imperial Qiraji Armaments", "=ds=#m3# =q2=#m5#", "", "7%"};
+		{ 8, 21237, "", "=q4=Imperial Qiraji Regalia", "=ds=#m3# =q2=#m5#", "", "7%"};
+		{ 9, 21232, "", "=q4=Imperial Qiraji Armaments", "=ds=#m3# =q2=#m5#", "", "7%"};
 		{ 11, 221680, "", "=q4=Vest of Swift Execution", "=ds=#s5#, #a2# =q2=#n115#", "", "21%"};
 		{ 12, 221603, "", "=q4=Wand of Qiraji Nobility", "=ds=#w12# =q2=#n115#", "", "25%"};
 		{ 13, 221681, "", "=q4=Ring of the Devoured", "=ds=#s13# =q2=#n115#", "", "17%"};
@@ -370,15 +370,15 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 12, 221670, "", "=q4=Badge of the Swarmguard", "=ds=#s14#", "", "13.22%"};
 		{ 13, 221666, "", "=q4=Sartura's Might", "=ds=#s15#", "", "6.47%"};
 		{ 14, 221673, "", "=q4=Silithid Claw", "=ds=#h3#, #w13#", "", "7.16%"};
-		{ 16, -21237, "", "=q4=Imperial Qiraji Regalia", "=ds=#m3#", "", "4.01%"};
-		{ 17, -21273, "", "=q4=Blessed Qiraji Acolyte Staff", "=q1=#m4#, =ds=#w9#"};
-		{ 18, -21275, "", "=q4=Blessed Qiraji Augur Staff", "=q1=#m4#, =ds=#w9#"};
-		{ 19, -21268, "", "=q4=Blessed Qiraji War Hammer", "=q1=#m4#, =ds=#h1#, #w6#"};
-		{ 21, -21232, "", "=q4=Imperial Qiraji Armaments", "=ds=#m3#", "", "4.02%"};
-		{ 22, -21242, "", "=q4=Blessed Qiraji War Axe", "=q1=#m4#, =ds=#h1#, #w1#"};
-		{ 23, -21272, "", "=q4=Blessed Qiraji Musket", "=q1=#m4#, =ds=#w5#"};
-		{ 24, -21244, "", "=q4=Blessed Qiraji Pugio", "=q1=#m4#, =ds=#h1#, #w4#"};
-		{ 25, -21269, "", "=q4=Blessed Qiraji Bulwark", "=q1=#m4#, =ds=#w8#"};
+		{ 16, 21237, "", "=q4=Imperial Qiraji Regalia", "=ds=#m3#", "", "4.01%"};
+		{ 17, 21273, "", "=q4=Blessed Qiraji Acolyte Staff", "=q1=#m4#, =ds=#w9#"};
+		{ 18, 21275, "", "=q4=Blessed Qiraji Augur Staff", "=q1=#m4#, =ds=#w9#"};
+		{ 19, 21268, "", "=q4=Blessed Qiraji War Hammer", "=q1=#m4#, =ds=#h1#, #w6#"};
+		{ 21, 21232, "", "=q4=Imperial Qiraji Armaments", "=ds=#m3#", "", "4.02%"};
+		{ 22, 21242, "", "=q4=Blessed Qiraji War Axe", "=q1=#m4#, =ds=#h1#, #w1#"};
+		{ 23, 21272, "", "=q4=Blessed Qiraji Musket", "=q1=#m4#, =ds=#w5#"};
+		{ 24, 21244, "", "=q4=Blessed Qiraji Pugio", "=q1=#m4#, =ds=#h1#, #w4#"};
+		{ 25, 21269, "", "=q4=Blessed Qiraji Bulwark", "=q1=#m4#, =ds=#w8#"};
 		Prev = "AQ40Vem";
 		Next = "AQ40Fankriss";
 		Dif = 4;
@@ -399,15 +399,15 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 12, 222396, "", "=q4=Totem of Life", "=ds=#s16#, #w15#", "", "1.69%"};
 		{ 13, 221650, "", "=q4=Ancient Qiraji Ripper", "=ds=#h1#, #w10#", "", " 7.19%"};
 		{ 14, 221635, "", "=q4=Barb of the Sand Reaver", "=ds=#w7#", "", "6.61%"};
-		{ 16, -21237, "", "=q4=Imperial Qiraji Regalia", "=ds=#m3#", "", "4.84%"};
-		{ 17, -21273, "", "=q4=Blessed Qiraji Acolyte Staff", "=q1=#m4#, =ds=#w9#"};
-		{ 18, -21275, "", "=q4=Blessed Qiraji Augur Staff", "=q1=#m4#, =ds=#w9#"};
-		{ 19, -21268, "", "=q4=Blessed Qiraji War Hammer", "=q1=#m4#, =ds=#h1#, #w6#"};
-		{ 21, -21232, "", "=q4=Imperial Qiraji Armaments", "=ds=#m3#", "", "4.09%"};
-		{ 22, -21242, "", "=q4=Blessed Qiraji War Axe", "=q1=#m4#, =ds=#h1#, #w1#"};
-		{ 23, -21272, "", "=q4=Blessed Qiraji Musket", "=q1=#m4#, =ds=#w5#"};
-		{ 24, -21244, "", "=q4=Blessed Qiraji Pugio", "=q1=#m4#, =ds=#h1#, #w4#"};
-		{ 25, -21269, "", "=q4=Blessed Qiraji Bulwark", "=q1=#m4#, =ds=#w8#"};
+		{ 16, 21237, "", "=q4=Imperial Qiraji Regalia", "=ds=#m3#", "", "4.84%"};
+		{ 17, 21273, "", "=q4=Blessed Qiraji Acolyte Staff", "=q1=#m4#, =ds=#w9#"};
+		{ 18, 21275, "", "=q4=Blessed Qiraji Augur Staff", "=q1=#m4#, =ds=#w9#"};
+		{ 19, 21268, "", "=q4=Blessed Qiraji War Hammer", "=q1=#m4#, =ds=#h1#, #w6#"};
+		{ 21, 21232, "", "=q4=Imperial Qiraji Armaments", "=ds=#m3#", "", "4.09%"};
+		{ 22, 21242, "", "=q4=Blessed Qiraji War Axe", "=q1=#m4#, =ds=#h1#, #w1#"};
+		{ 23, 21272, "", "=q4=Blessed Qiraji Musket", "=q1=#m4#, =ds=#w5#"};
+		{ 24, 21244, "", "=q4=Blessed Qiraji Pugio", "=q1=#m4#, =ds=#h1#, #w4#"};
+		{ 25, 21269, "", "=q4=Blessed Qiraji Bulwark", "=q1=#m4#, =ds=#w8#"};
 		Prev = "AQ40Sartura";
 		Next = "AQ40Viscidus";
 		Dif = 4;
@@ -422,17 +422,17 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 6, 221625, "", "=q4=Scarab Brooch", "=ds=#s14#", "", "21.46%"};
 		{ 7, 222399, "", "=q4=Idol of Health", "=ds=#s16#, #w14#", "", "7.32%"};
 		{ 8, 221622, "", "=q4=Sharpened Silithid Femur", "=ds=#h3#, #w10#", "", "15.12%"};
-		{ 10, -20932, "", "=q4=Qiraji Bindings of Dominance", "=q1=#m1# =ds=#c8#, #c3#, #c7#, #c1#, #c4#", "", "100%"};
-		{ 11, -20928, "", "=q4=Qiraji Bindings of Command", "=q1=#m1# =ds=#c5#, #c6#, #c9#, #c2#", "", "100%"};
-		{ 16, -21237, "", "=q4=Imperial Qiraji Regalia", "=ds=#m3#", "", "3.19%"};
-		{ 17, -21273, "", "=q4=Blessed Qiraji Acolyte Staff", "=q1=#m4#, =ds=#w9#"};
-		{ 18, -21275, "", "=q4=Blessed Qiraji Augur Staff", "=q1=#m4#, =ds=#w9#"};
-		{ 19, -21268, "", "=q4=Blessed Qiraji War Hammer", "=q1=#m4#, =ds=#h1#, #w6#"};
-		{ 21, -21232, "", "=q4=Imperial Qiraji Armaments", "=ds=#m3#", "", "6.86%"};
-		{ 22, -21242, "", "=q4=Blessed Qiraji War Axe", "=q1=#m4#, =ds=#h1#, #w1#"};
-		{ 23, -21272, "", "=q4=Blessed Qiraji Musket", "=q1=#m4#, =ds=#w5#"};
-		{ 24, -21244, "", "=q4=Blessed Qiraji Pugio", "=q1=#m4#, =ds=#h1#, #w4#"};
-		{ 25, -21269, "", "=q4=Blessed Qiraji Bulwark", "=q1=#m4#, =ds=#w8#"};
+		{ 10, 20932, "", "=q4=Qiraji Bindings of Dominance", "=q1=#m1# =ds=#c8#, #c3#, #c7#, #c1#, #c4#", "", "100%"};
+		{ 11, 20928, "", "=q4=Qiraji Bindings of Command", "=q1=#m1# =ds=#c5#, #c6#, #c9#, #c2#", "", "100%"};
+		{ 16, 21237, "", "=q4=Imperial Qiraji Regalia", "=ds=#m3#", "", "3.19%"};
+		{ 17, 21273, "", "=q4=Blessed Qiraji Acolyte Staff", "=q1=#m4#, =ds=#w9#"};
+		{ 18, 21275, "", "=q4=Blessed Qiraji Augur Staff", "=q1=#m4#, =ds=#w9#"};
+		{ 19, 21268, "", "=q4=Blessed Qiraji War Hammer", "=q1=#m4#, =ds=#h1#, #w6#"};
+		{ 21, 21232, "", "=q4=Imperial Qiraji Armaments", "=ds=#m3#", "", "6.86%"};
+		{ 22, 21242, "", "=q4=Blessed Qiraji War Axe", "=q1=#m4#, =ds=#h1#, #w1#"};
+		{ 23, 21272, "", "=q4=Blessed Qiraji Musket", "=q1=#m4#, =ds=#w5#"};
+		{ 24, 21244, "", "=q4=Blessed Qiraji Pugio", "=q1=#m4#, =ds=#h1#, #w4#"};
+		{ 25, 21269, "", "=q4=Blessed Qiraji Bulwark", "=q1=#m4#, =ds=#w8#"};
 		Prev = "AQ40Fankriss";
 		Next = "AQ40Huhuran";
 		Dif = 4;
@@ -446,17 +446,17 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 4, 221618, "", "=q4=Hive Defiler Wristguards", "=ds=#s8#, #a4#", "", "10.34%"};
 		{ 6, 221620, "", "=q4=Ring of the Martyr", "=ds=#s13#", "", "12.97%"};
 		{ 7, 221616, "", "=q4=Huhuran's Stinger", "=ds=#w2#", "", "5.71%"};
-		{ 9, -20932, "", "=q4=Qiraji Bindings of Dominance", "=q1=#m1# =ds=#c8#, #c3#, #c7#, #c1#, #c4#", "", "100%"};
-		{ 10, -20928, "", "=q4=Qiraji Bindings of Command", "=q1=#m1# =ds=#c5#, #c6#, #c9#, #c2#", "", "100%"};
-		{ 16, -21237, "", "=q4=Imperial Qiraji Regalia", "=ds=#m3#", "", "4.31%"};
-		{ 17, -21273, "", "=q4=Blessed Qiraji Acolyte Staff", "=q1=#m4#, =ds=#w9#"};
-		{ 18, -21275, "", "=q4=Blessed Qiraji Augur Staff", "=q1=#m4#, =ds=#w9#"};
-		{ 19, -21268, "", "=q4=Blessed Qiraji War Hammer", "=q1=#m4#, =ds=#h1#, #w6#"};
-		{ 21, -21232, "", "=q4=Imperial Qiraji Armaments", "=ds=#m3#", "", "4.11%"};
-		{ 22, -21242, "", "=q4=Blessed Qiraji War Axe", "=q1=#m4#, =ds=#h1#, #w1#"};
-		{ 23, -21272, "", "=q4=Blessed Qiraji Musket", "=q1=#m4#, =ds=#w5#"};
-		{ 24, -21244, "", "=q4=Blessed Qiraji Pugio", "=q1=#m4#, =ds=#h1#, #w4#"};
-		{ 25, -21269, "", "=q4=Blessed Qiraji Bulwark", "=q1=#m4#, =ds=#w8#"};
+		{ 9, 20932, "", "=q4=Qiraji Bindings of Dominance", "=q1=#m1# =ds=#c8#, #c3#, #c7#, #c1#, #c4#", "", "100%"};
+		{ 10, 20928, "", "=q4=Qiraji Bindings of Command", "=q1=#m1# =ds=#c5#, #c6#, #c9#, #c2#", "", "100%"};
+		{ 16, 21237, "", "=q4=Imperial Qiraji Regalia", "=ds=#m3#", "", "4.31%"};
+		{ 17, 21273, "", "=q4=Blessed Qiraji Acolyte Staff", "=q1=#m4#, =ds=#w9#"};
+		{ 18, 21275, "", "=q4=Blessed Qiraji Augur Staff", "=q1=#m4#, =ds=#w9#"};
+		{ 19, 21268, "", "=q4=Blessed Qiraji War Hammer", "=q1=#m4#, =ds=#h1#, #w6#"};
+		{ 21, 21232, "", "=q4=Imperial Qiraji Armaments", "=ds=#m3#", "", "4.11%"};
+		{ 22, 21242, "", "=q4=Blessed Qiraji War Axe", "=q1=#m4#, =ds=#h1#, #w1#"};
+		{ 23, 21272, "", "=q4=Blessed Qiraji Musket", "=q1=#m4#, =ds=#w5#"};
+		{ 24, 21244, "", "=q4=Blessed Qiraji Pugio", "=q1=#m4#, =ds=#h1#, #w4#"};
+		{ 25, 21269, "", "=q4=Blessed Qiraji Bulwark", "=q1=#m4#, =ds=#w8#"};
 		Prev = "AQ40Viscidus";
 		Next = "AQ40Emperors";
 		Dif = 4;
@@ -471,13 +471,13 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 5, 221598, "", "=q4=Royal Qiraji Belt", "=ds=#s10#, #a4#", "", "9.84%"};
 		{ 6, 221597, "", "=q4=Royal Scepter of Vek'lor", "=ds=#s15#", "", "6.99%"};
 		{ 7, 221601, "", "=q4=Ring of Emperor Vek'lor", "=ds=#s13#", "", "17.27%"};
-		{ 8, -20735, "", "=q3=Formula: Enchant Cloak - Subtlety", "=ds=#p4# (300)", "", "6.62%"};
-		{ 11, -21232, "", "=q4=Imperial Qiraji Armaments", "=ds=#m3#", "", "6.25%"};
-		{ 12, -21242, "", "=q4=Blessed Qiraji War Axe", "=q1=#m4#, =ds=#h1#, #w1#"};
-		{ 13, -21272, "", "=q4=Blessed Qiraji Musket", "=q1=#m4#, =ds=#w5#"};
-		{ 14, -21244, "", "=q4=Blessed Qiraji Pugio", "=q1=#m4#, =ds=#h1#, #w4#"};
-		{ 15, -21269, "", "=q4=Blessed Qiraji Bulwark", "=q1=#m4#, =ds=#w8#"};
-		{ 16, -20926, "", "=q4=Vek'nilash's Circlet", "=q1=#m1# =ds=#c8#, #c3#, #c5#, #c9#", "", "100%"};
+		{ 8, 20735, "", "=q3=Formula: Enchant Cloak - Subtlety", "=ds=#p4# (300)", "", "6.62%"};
+		{ 11, 21232, "", "=q4=Imperial Qiraji Armaments", "=ds=#m3#", "", "6.25%"};
+		{ 12, 21242, "", "=q4=Blessed Qiraji War Axe", "=q1=#m4#, =ds=#h1#, #w1#"};
+		{ 13, 21272, "", "=q4=Blessed Qiraji Musket", "=q1=#m4#, =ds=#w5#"};
+		{ 14, 21244, "", "=q4=Blessed Qiraji Pugio", "=q1=#m4#, =ds=#h1#, #w4#"};
+		{ 15, 21269, "", "=q4=Blessed Qiraji Bulwark", "=q1=#m4#, =ds=#w8#"};
+		{ 16, 20926, "", "=q4=Vek'nilash's Circlet", "=q1=#m1# =ds=#c8#, #c3#, #c5#, #c9#", "", "100%"};
 		{ 17, 221604, "", "=q4=Bracelets of Royal Redemption", "=ds=#s8#, #a1#", "", "12.51%"};
 		{ 18, 221605, "", "=q4=Gloves of the Hidden Temple", "=ds=#s9#, #a2#", "", "15.45%"};
 		{ 19, 221609, "", "=q4=Regenerating Belt of Vek'nilash", "=ds=#s10#, #a2#", "", "13.35%"};
@@ -485,11 +485,11 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 21, 221606, "", "=q4=Belt of the Fallen Emperor", "=ds=#s10#, #a4#", "", "12.22%"};
 		{ 22, 221679, "", "=q4=Kalimdor's Revenge", "=ds=#h2#, #w10#", "", "9.25%"};
 		{ 23, 221608, "", "=q4=Amulet of Vek'nilash", "=ds=#s2#", "", "14.25%"};
-		{ 24, -20726, "", "=q3=Formula: Enchant Gloves - Threat", "=ds=#p4# (300)", "", "6.24%"};
-		{ 26, -21237, "", "=q4=Imperial Qiraji Regalia", "=ds=#m3#", "", "5.00%"};
-		{ 27, -21273, "", "=q4=Blessed Qiraji Acolyte Staff", "=q1=#m4#, =ds=#w9#"};
-		{ 28, -21275, "", "=q4=Blessed Qiraji Augur Staff", "=q1=#m4#, =ds=#w9#"};
-		{ 29, -21268, "", "=q4=Blessed Qiraji War Hammer", "=q1=#m4#, =ds=#h1#, #w6#"};
+		{ 24, 20726, "", "=q3=Formula: Enchant Gloves - Threat", "=ds=#p4# (300)", "", "6.24%"};
+		{ 26, 21237, "", "=q4=Imperial Qiraji Regalia", "=ds=#m3#", "", "5.00%"};
+		{ 27, 21273, "", "=q4=Blessed Qiraji Acolyte Staff", "=q1=#m4#, =ds=#w9#"};
+		{ 28, 21275, "", "=q4=Blessed Qiraji Augur Staff", "=q1=#m4#, =ds=#w9#"};
+		{ 29, 21268, "", "=q4=Blessed Qiraji War Hammer", "=q1=#m4#, =ds=#h1#, #w6#"};
 		Prev = "AQ40Huhuran";
 		Next = "AQ40Ouro";
 		Dif = 4;
@@ -503,17 +503,17 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 4, 223570, "", "=q4=Jom Gabbar", "=ds=#s14#", "", "2.80%"};
 		{ 5, 223557, "", "=q4=Larvae of the Great Worm", "=ds=#w5#", "", "3.95%"};
 		{ 6, 221610, "", "=q4=Wormscale Blocker", "=ds=#w8#", "", "16.54%"};
-		{ 8, -20927, "", "=q4=Ouro's Intact Hide", "=q1=#m1# =ds=#c3#, #c5#, #c6#, #c9#", "", "100%"};
-		{ 9, -20931, "", "=q4=Skin of the Great Sandworm", "=q1=#m1# =ds=#c8#, #c7#, #c1#, #c2#, #c4#", "", "100%"};
-		{ 16, -21237, "", "=q4=Imperial Qiraji Regalia", "=ds=#m3#", "", "5.20%"};
-		{ 17, -21273, "", "=q4=Blessed Qiraji Acolyte Staff", "=q1=#m4# =ds=#w9#"};
-		{ 18, -21275, "", "=q4=Blessed Qiraji Augur Staff", "=q1=#m4# =ds=#w9#"};
-		{ 19, -21268, "", "=q4=Blessed Qiraji War Hammer", "=q1=#m4# =ds=#h1#, #w6#"};
-		{ 21, -21232, "", "=q4=Imperial Qiraji Armaments", "=ds=#m3#", "", "4.10%"};
-		{ 22, -21242, "", "=q4=Blessed Qiraji War Axe", "=q1=#m4# =ds=#h1#, #w1#"};
-		{ 23, -21272, "", "=q4=Blessed Qiraji Musket", "=q1=#m4# =ds=#w5#"};
-		{ 24, -21244, "", "=q4=Blessed Qiraji Pugio", "=q1=#m4# =ds=#h1#, #w4#"};
-		{ 25, -21269, "", "=q4=Blessed Qiraji Bulwark", "=q1=#m4# =ds=#w8#"};
+		{ 8, 20927, "", "=q4=Ouro's Intact Hide", "=q1=#m1# =ds=#c3#, #c5#, #c6#, #c9#", "", "100%"};
+		{ 9, 20931, "", "=q4=Skin of the Great Sandworm", "=q1=#m1# =ds=#c8#, #c7#, #c1#, #c2#, #c4#", "", "100%"};
+		{ 16, 21237, "", "=q4=Imperial Qiraji Regalia", "=ds=#m3#", "", "5.20%"};
+		{ 17, 21273, "", "=q4=Blessed Qiraji Acolyte Staff", "=q1=#m4# =ds=#w9#"};
+		{ 18, 21275, "", "=q4=Blessed Qiraji Augur Staff", "=q1=#m4# =ds=#w9#"};
+		{ 19, 21268, "", "=q4=Blessed Qiraji War Hammer", "=q1=#m4# =ds=#h1#, #w6#"};
+		{ 21, 21232, "", "=q4=Imperial Qiraji Armaments", "=ds=#m3#", "", "4.10%"};
+		{ 22, 21242, "", "=q4=Blessed Qiraji War Axe", "=q1=#m4# =ds=#h1#, #w1#"};
+		{ 23, 21272, "", "=q4=Blessed Qiraji Musket", "=q1=#m4# =ds=#w5#"};
+		{ 24, 21244, "", "=q4=Blessed Qiraji Pugio", "=q1=#m4# =ds=#h1#, #w4#"};
+		{ 25, 21269, "", "=q4=Blessed Qiraji Bulwark", "=q1=#m4# =ds=#w8#"};
 		Prev = "AQ40Emperors";
 		Next = "AQ40CThun";
 		Dif = 4;
@@ -534,12 +534,12 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 12, 221126, "", "=q4=Death's Sting", "=ds=#h1#, #w4#", "", "6.84%"};
 		{ 13, 221134, "", "=q4=Dark Edge of Insanity", "=ds=#h2#, #w1#", "", "5.93%"};
 		{ 14, 221839, "", "=q4=Scepter of the False Prophet", "=ds=#h3#, #w6#", "", "4.75%"};
-		{ 16, -20933, "", "=q4=Husk of the Old God", "=q1=#m1# =ds=#c8#, #c3#, #c1#, #c5#", "", "100%"};
-		{ 17, -20929, "", "=q4=Carapace of the Old God", "=q1=#m1# =ds=#c7#, #c6#, #c9#, #c2#, #c4#", "", "100%"};
-		{ 19, -21221, "", "=q4=Eye of C'Thun", "=ds=#m2#", "", "100%"};
-		{ 20, -21710, "", "=q4=Cloak of the Fallen God", "=q1=#m4#: =ds=#s4#"};
-		{ 21, -21712, "", "=q4=Amulet of the Fallen God", "=q1=#m4#: =ds=#s2#"};
-		{ 22, -21709, "", "=q4=Ring of the Fallen God", "=q1=#m4#: =ds=#s13#"};
+		{ 16, 20933, "", "=q4=Husk of the Old God", "=q1=#m1# =ds=#c8#, #c3#, #c1#, #c5#", "", "100%"};
+		{ 17, 20929, "", "=q4=Carapace of the Old God", "=q1=#m1# =ds=#c7#, #c6#, #c9#, #c2#, #c4#", "", "100%"};
+		{ 19, 21221, "", "=q4=Eye of C'Thun", "=ds=#m2#", "", "100%"};
+		{ 20, 21710, "", "=q4=Cloak of the Fallen God", "=q1=#m4#: =ds=#s4#"};
+		{ 21, 21712, "", "=q4=Amulet of the Fallen God", "=q1=#m4#: =ds=#s2#"};
+		{ 22, 21709, "", "=q4=Ring of the Fallen God", "=q1=#m4#: =ds=#s13#"};
 		{ 24, 222734, "", "=q1=Base of Atiesh", "=ds=#m3#"};
 		{ 25, 222632, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c1#"};
 		{ 26, 222589, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c3#"};
@@ -558,12 +558,12 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 5, 221891, "", "=q4=Shard of the Fallen Star", "=ds=#s14#", "", "0.59%"};
 		{ 6, 221856, "", "=q4=Neretzek, The Blood Drinker", "=ds=#h2#, #w1#", "", "0.20%"};
 		{ 7, 221837, "", "=q4=Anubisath Warhammer", "=ds=#h1#, #w6#", "", "0.21%"};
-		{ 9, -22202, "", "=q1=Small Obsidian Shard", "=ds=#e8#"};
-		{ 10, -22203, "", "=q1=Large Obsidian Shard", "=ds=#e8#"};
-		{ 16, -21218, "", "=q3=Blue Qiraji Resonating Crystal", "=ds=#e12#", "", "10.64%"};
-		{ 17, -21324, "", "=q3=Yellow Qiraji Resonating Crystal", "=ds=#e12#", "", "12.15%"};
-		{ 18, -21323, "", "=q3=Green Qiraji Resonating Crystal", "=ds=#e12#", "", "11.62%"};
-		{ 19, -21321, "", "=q3=Red Qiraji Resonating Crystal", "=ds=#e12#", "", "1.39%"};
+		{ 9, 22202, "", "=q1=Small Obsidian Shard", "=ds=#e8#"};
+		{ 10, 22203, "", "=q1=Large Obsidian Shard", "=ds=#e8#"};
+		{ 16, 21218, "", "=q3=Blue Qiraji Resonating Crystal", "=ds=#e12#", "", "10.64%"};
+		{ 17, 21324, "", "=q3=Yellow Qiraji Resonating Crystal", "=ds=#e12#", "", "12.15%"};
+		{ 18, 21323, "", "=q3=Green Qiraji Resonating Crystal", "=ds=#e12#", "", "11.62%"};
+		{ 19, 21321, "", "=q3=Red Qiraji Resonating Crystal", "=ds=#e12#", "", "1.39%"};
 		Next = "AQ40Trash2";
 		Dif = 4;
 		Raid = true;
@@ -693,9 +693,9 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 2, AL_FindId("Earthslag Shoulders", MythicTier), "", "=q4=Earthslag Shoulders", "=ds=#s3#, #a4#", "", "19.99%"};
 		{ 3, AL_FindId("Idol of Ferocity", MythicTier), "", "=q4=Idol of Ferocity", "=ds=#s16#, #w14#", "", "19.58%"};
 		{ 4, AL_FindId("Stoneshell Guard", MythicTier), "", "=q4=Stoneshell Guard", "=ds=#w8#", "", "22.06%"};
-		{ 5, -11630, "", "=q3=Rockshard Pellets", "=ds=#w18#", "", "16.82%"};
-		{ 16, -11813, "", "=q2=Formula: Smoking Heart of the Mountain", "=ds=#p4# (265)", "", "14.79%"};
-		{ 17, -11811, "", "=q3=Smoking Heart of the Mountain", "=ds=#s14#"};
+		{ 5, 11630, "", "=q3=Rockshard Pellets", "=ds=#w18#", "", "16.82%"};
+		{ 16, 11813, "", "=q2=Formula: Smoking Heart of the Mountain", "=ds=#p4# (265)", "", "14.79%"};
+		{ 17, 11811, "", "=q3=Smoking Heart of the Mountain", "=ds=#s14#"};
 		Prev = "BRDPyron";
 		Next = "BRDHighInterrogatorGerstahn";
 		Dif = MythicTier;
@@ -706,7 +706,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 2, AL_FindId("Kentic Amice", MythicTier), "", "=q4=Kentic Amice", "=ds=#s3#, #a1#", "", "22.45%"};
 		{ 3, AL_FindId("Greaves of Withering Despair", MythicTier), "", "=q4=Greaves of Withering Despair", "=ds=#s12#, #a3#", "", "16.81%"};
 		{ 4, AL_FindId("Enthralled Sphere", MythicTier), "", "=q4=Enthralled Sphere", "=ds=#s15#", "", "23.14%"};
-		{ 6, -11140, "", "=q1=Prison Cell Key", "=ds=#e9#"};
+		{ 6, 11140, "", "=q1=Prison Cell Key", "=ds=#e9#"};
 		Prev = "BRDLordRoccor";
 		Next = "BRDArena";
 		Dif = MythicTier;
@@ -730,7 +730,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 17, AL_FindId("Bloodclot Band", MythicTier), "", "=q4=Bloodclot Band", "=ds=#s13# =q2=#brd3#", "", "26.28%"};
 		{ 18, AL_FindId("Flarethorn", MythicTier), "", "=q4=Flarethorn", "=ds=#h1#, #w4# =q2=#brd3#", "", "17.98%"};
 		{ 19, AL_FindId("Grizzle's Skinner", MythicTier), "", "=q4=Grizzle's Skinner", "=ds=#h1#, #w1# =q2=#brd4#", "", "20.62%"};
-		{ 20, -11610, "", "=q3=Plans: Dark Iron Pulverizer", "=ds=#p2# (265) =q2=#brd4#", "", "69.76%"};
+		{ 20, 11610, "", "=q3=Plans: Dark Iron Pulverizer", "=ds=#p2# (265) =q2=#brd4#", "", "69.76%"};
 		{ 22, AL_FindId("Silkweb Gloves", MythicTier), "", "=q4=Silkweb Gloves", "=ds=#s9#, #a1# =q2=#brd5#", "", "24.02%"};
 		{ 23, AL_FindId("Spiderfang Carapace", MythicTier), "", "=q4=Spiderfang Carapace", "=ds=#s5#, #a4# =q2=#brd5#", "", "20.61%"};
 		{ 24, AL_FindId("Hookfang Shanker", MythicTier), "", "=q4=Hookfang Shanker", "=ds=#h1#, #w4# =q2=#brd5#", "", "17.26%"};
@@ -749,7 +749,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 3, AL_FindId("Ironweave Mantle", MythicTier), "", "=q4=Ironweave Mantle", "=ds=#s3#, #a1#", "", "30.39%"};
 		{ 4, AL_FindId("Lefty's Brass Knuckle", MythicTier), "", "=q4=Lefty's Brass Knuckle", "=ds=#h1#, #w13#", "", "26.15%"};
 		{ 5, AL_FindId("Malgen's Long Bow", MythicTier), "", "=q4=Malgen's Long Bow", "=ds=#w2#", "", "22.88%"};
-		{ 7, -22047, "", "=q1=Top Piece of Lord Valthalak's Amulet", "=ds=#m3#"};
+		{ 7, 22047, "", "=q1=Top Piece of Lord Valthalak's Amulet", "=ds=#m3#"};
 		Prev = "BRDArena";
 		Next = "BRDHoundmaster";
 		Dif = MythicTier;
@@ -777,7 +777,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 2, AL_FindId("Searingscale Leggings", MythicTier), "", "=q4=Searingscale Leggings", "=ds=#s11#, #a3#", "", "21.29%"};
 		{ 3, AL_FindId("Kindling Stave", MythicTier), "", "=q4=Kindling Stave", "=ds=#w9#", "", " 16.19%"};
 		{ 4, AL_FindId("Pyric Caduceus", MythicTier), "", "=q4=Pyric Caduceus", "=ds=#w12#", "", "30.20%"};
-		{ 6, -11207, "", "=q2=Formula: Enchant Weapon - Fiery Weapon", "=ds=#p4# (265)", "", "13.32%"};
+		{ 6, 11207, "", "=q2=Formula: Enchant Weapon - Fiery Weapon", "=ds=#p4# (265)", "", "13.32%"};
 		Prev = "BRDForgewright";
 		Next = "BRDTheVault";
 		Dif = MythicTier;
@@ -785,7 +785,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 
 	AtlasLoot_Data["BRDTheVault"] = {
 		{ 1, 0, "INV_Box_01", "=q6=#x3#", ""};
-		{ 2, -11309, "", "=q1=The Heart of the Mountain", "=ds=#m3#", "", "100%"};
+		{ 2, 11309, "", "=q1=The Heart of the Mountain", "=ds=#m3#", "", "100%"};
 		{ 4, 0, "INV_Box_01", "=q6=#x5#", ""};
 		{ 5, AL_FindId("Mana Shaping Handwraps", MythicTier), "", "=q4=Mana Shaping Handwraps", "=ds=#s9#, #a1#", "", "4.49%"};
 		{ 6, AL_FindId("Haunting Specter Leggings", MythicTier), "", "=q4=Haunting Specter Leggings", "=ds=#s11#, #a1#", "", "21.12%"};
@@ -796,9 +796,9 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 11, AL_FindId("The Hammer of Grace", MythicTier), "", "=q4=The Hammer of Grace", "=ds=#h3#, #w6#", "", "19.84%"};
 		{ 12, AL_FindId("Wand of Eternal Light", MythicTier), "", "=q4=Wand of Eternal Light", "=ds=#w12#", "", "3.65%"};
 		{ 16, 0, "INV_Box_01", "=q6=#x4#", ""};
-		{ 17, -11752, "", "=q1=Black Blood of the Tormented", "=ds=#m3#", "", "44.48%"};
-		{ 18, -11751, "", "=q1=Burning Essence", "=ds=#m3#", "", "39.35%"};
-		{ 19, -11753, "", "=q1=Eye of Kajal", "=ds=#m3#", "", "39.95%"};
+		{ 17, 11752, "", "=q1=Black Blood of the Tormented", "=ds=#m3#", "", "44.48%"};
+		{ 18, 11751, "", "=q1=Burning Essence", "=ds=#m3#", "", "39.35%"};
+		{ 19, 11753, "", "=q1=Eye of Kajal", "=ds=#m3#", "", "39.95%"};
 		Prev = "BRDPyromantLoregrain";
 		Next = "BRDWarderStilgiss";
 		Dif = MythicTier;
@@ -827,8 +827,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 2, AL_FindId("Senior Designer's Pantaloons", MythicTier), "", "=q4=Senior Designer's Pantaloons", "=ds=#s11#, #a1#", "", "21.25%"};
 		{ 3, AL_FindId("Lead Surveyor's Mantle", MythicTier), "", "=q4=Lead Surveyor's Mantle", "=ds=#s3#, #a3#", "", "20.83%"};
 		{ 4, AL_FindId("Foreman's Head Protector", MythicTier), "", "=q4=Foreman's Head Protector", "=ds=#s1#, #a4#", "", "19.73%"};
-		{ 6, -11840, "", "=q1=Master Builder's Shirt", "#s6#", "", "3.9%"};
-		{ 8, -10999, "", "=q1=Ironfel", "=ds=#m3#", "", "100%"};
+		{ 6, 11840, "", "=q1=Master Builder's Shirt", "#s6#", "", "3.9%"};
+		{ 8, 10999, "", "=q1=Ironfel", "=ds=#m3#", "", "100%"};
 		Next = "BRDLordIncendius";
 		Prev = "BRDVerek";
 		Dif = MythicTier;
@@ -840,9 +840,9 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 3, AL_FindId("Cinderhide Armsplints", MythicTier), "", "=q4=Cinderhide Armsplints", "=ds=#s8#, #a2# =q2=#m16#", "", "18.33%"};
 		{ 4, AL_FindId("Pyremail Wristguards", MythicTier), "", "=q4=Pyremail Wristguards", "=ds=#s8#, #a3# =q2=#m16#", "", "18.85%"};
 		{ 5, AL_FindId("Emberplate Armguards", MythicTier), "", "=q4=Emberplate Armguards", "=ds=#s8#, #a4# =q2=#m16#", "", "19.24%"};
-		{ 6, -19268, "", "=q3=Ace of Elementals", "=ds=#e16#", "", "2.10%"};
-		{ 8, -21987, "", "=q1=Incendicite of Incendius", "=ds=#m3#"};
-		{ 9, -11126, "", "=q1=Tablet of Kurniya", "=ds=#m3#"};
+		{ 6, 19268, "", "=q3=Ace of Elementals", "=ds=#e16#", "", "2.10%"};
+		{ 8, 21987, "", "=q1=Incendicite of Incendius", "=ds=#m3#"};
+		{ 9, 11126, "", "=q1=Tablet of Kurniya", "=ds=#m3#"};
 		Next = "BRDBaelGar";
 		Prev = "BRDFineousDarkvire";
 		Dif = MythicTier;
@@ -864,7 +864,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 3, AL_FindId("Force of Will", MythicTier), "", "=q4=Force of Will", "=ds=#s14#", "", "12.97%"};
 		{ 4, AL_FindId("Lord General's Sword", MythicTier), "", "=q4=Lord General's Sword", "=ds=#h1#, #w10# ", "", "14.72%"};
 		{ 5, AL_FindId("Angerforge's Battle Axe", MythicTier), "", "=q4=Angerforge's Battle Axe", "=ds=#h2#, #w1#", "", "16.41%"};
-		{ 7, -11464, "", "=q1=Marshal Windsor's Lost Information", "=ds=#m3#"};
+		{ 7, 11464, "", "=q1=Marshal Windsor's Lost Information", "=ds=#m3#"};
 		Next = "BRDGolemLordArgelmach";
 		Prev = "BRDBaelGar";
 		Dif = MythicTier;
@@ -875,9 +875,9 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 2, AL_FindId("Luminary Kilt", MythicTier), "", "=q4=Luminary Kilt", "=ds=#s11#, #a2#", "", "25.73%"};
 		{ 3, AL_FindId("Naglering", MythicTier), "", "=q4=Naglering", "=ds=#s13#", "", "22.92%"};
 		{ 4, AL_FindId("Second Wind", MythicTier), "", "=q4=Second Wind", "=ds=#s14#", "", "5.75%"};
-		{ 6, -21956, "", "=q2=Design: Dark Iron Scorpid", "=ds=#p12# (300)"};
-		{ 8, -11268, "", "=q1=Head of Argelmach", "=ds=#m3#"};
-		{ 9, -11465, "", "=q1=Marshal Windsor's Lost Information", "=ds=#m3#"};
+		{ 6, 21956, "", "=q2=Design: Dark Iron Scorpid", "=ds=#p12# (300)"};
+		{ 8, 11268, "", "=q1=Head of Argelmach", "=ds=#m3#"};
+		{ 9, 11465, "", "=q1=Marshal Windsor's Lost Information", "=ds=#m3#"};
 		Next = "BRDGuzzler";
 		Prev = "BRDGeneralAngerforge";
 		Dif = MythicTier;
@@ -889,25 +889,25 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 3, AL_FindId("Coal Miner Boots", MythicTier), "", "=q4=Coal Miner Boots", "=ds=#s12#, #a2#", "", "23.87%"};
 		{ 4, AL_FindId("Firemoss Boots", MythicTier), "", "=q4=Firemoss Boots", "=ds=#s12#, #a2#", "", "23.87%"};
 		{ 5, AL_FindId("Hurley's Tankard", MythicTier), "", "=q4=Hurley's Tankard", "=ds=#h1#, #w6#", "", "31.02%"};
-		{ 6, -11312, "", "=q1=Lost Thunderbrew Recipe", "=ds=#m3#"};
+		{ 6, 11312, "", "=q1=Lost Thunderbrew Recipe", "=ds=#m3#"};
 		{ 8, 0, "INV_Box_01", "=q6=#n49#", ""};
 		{ 9, AL_FindId("Golem Fitted Pauldrons", MythicTier), "", "=q4=Golem Fitted Pauldrons", "=ds=#s3#, #a3#", "", "26.04%"};
 		{ 10, AL_FindId("Fists of Phalanx", MythicTier), "", "=q4=Fists of Phalanx", "=ds=#s9#, #a4#", "", "29.79%"};
 		{ 11, AL_FindId("Bloodfist", MythicTier), "", "=q4=Bloodfist", "=ds=#h1#, #w13#", "", "28.48%"};
 		{ 16, 0, "INV_Box_01", "=q6=#n50#", ""};
-		{ 17, -11612, "", "=q3=Plans: Dark Iron Plate", "=ds=#p2# (285)", "", "22.20%"};
-		{ 18, -2662, "", "=q2=Ribbly's Quiver", "=ds=#m13# #w19#", "", "17.03%"};
-		{ 19, -2663, "", "=q2=Ribbly's Bandolier", "=ds=#m13# #w20#", "", "15.73%"};
-		{ 20, -11742, "", "=q2=Wayfarer's Knapsack", "=ds=#m13# #e1#", "", "25.07%"};
-		{ 21, -11313, "", "=q1=Ribbly's Head", "=ds=#m3#"};
+		{ 17, 11612, "", "=q3=Plans: Dark Iron Plate", "=ds=#p2# (285)", "", "22.20%"};
+		{ 18, 2662, "", "=q2=Ribbly's Quiver", "=ds=#m13# #w19#", "", "17.03%"};
+		{ 19, 2663, "", "=q2=Ribbly's Bandolier", "=ds=#m13# #w20#", "", "15.73%"};
+		{ 20, 11742, "", "=q2=Wayfarer's Knapsack", "=ds=#m13# #e1#", "", "25.07%"};
+		{ 21, 11313, "", "=q1=Ribbly's Head", "=ds=#m3#"};
 		{ 23, 0, "INV_Box_01", "=q6=#n51#", ""};
 		{ 24, AL_FindId("Mixologist's Tunic", MythicTier), "", "=q4=Mixologist's Tunic", "=ds=#s5#, #a2#", "", "24.87%"};
 		{ 25, AL_FindId("Barman Shanker", MythicTier), "", "=q4=Barman Shanker", "=ds=#h1#, #w4#", "", "6.97%"};
-		{ 26, -13483, "", "=q2=Recipe: Transmute Fire to Earth", "=ds=#p1# (275)"};
-		{ 27, -18653, "", "=q2=Schematic: Goblin Jumper Cables XL", "=ds=#p5# (265)", "", "14.13%"};
-		{ 28, -15759, "", "=q1=Pattern: Black Dragonscale Breastplate", "=ds=#p7# (290)"};
-		{ 29, -11602, "", "=q1=Grim Guzzler Key", "=ds=#e9#"};
-		{ 30, -11325, "", "=q1=Dark Iron Ale Mug", "=ds=#m3#"};
+		{ 26, 13483, "", "=q2=Recipe: Transmute Fire to Earth", "=ds=#p1# (275)"};
+		{ 27, 18653, "", "=q2=Schematic: Goblin Jumper Cables XL", "=ds=#p5# (265)", "", "14.13%"};
+		{ 28, 15759, "", "=q1=Pattern: Black Dragonscale Breastplate", "=ds=#p7# (290)"};
+		{ 29, 11602, "", "=q1=Grim Guzzler Key", "=ds=#e9#"};
+		{ 30, 11325, "", "=q1=Dark Iron Ale Mug", "=ds=#m3#"};
 		Prev = "BRDGolemLordArgelmach";
 		Next = "BRDFlamelash";
 		Dif = MythicTier;
@@ -919,7 +919,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 4, AL_FindId("Molten Fists", MythicTier), "", "=q4=Molten Fists", "=ds=#s9#, #a3#", "", "27.88%"};
 		{ 5, AL_FindId("Burst of Knowledge", MythicTier), "", "=q4=Burst of Knowledge", "=ds=#s14#", "", "14.61%"};
 		{ 6, AL_FindId("Flame Wrath", MythicTier), "", "=q4=Flame Wrath", "=ds=#w7#", "", "18.69%"};
-		{ 8, -23320, "", "=q3=Tablet of Flame Shock VI", "=ds=#e10# =q1=#m1# =ds=#c7#"};
+		{ 8, 23320, "", "=q3=Tablet of Flame Shock VI", "=ds=#e10# =q1=#m1# =ds=#c7#"};
 		Prev = "BRDGuzzler";
 		Next = "BRDPanzor";
 		Dif = MythicTier;
@@ -952,7 +952,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 
 	AtlasLoot_Data["BRDLyceum"] = {
 		{ 1, 0, "INV_Box_01", "=q6=#n44#", ""};
-		{ 2, -11885, "", "=q1=Shadowforge Torch", "=ds=#m20#"};
+		{ 2, 11885, "", "=q1=Shadowforge Torch", "=ds=#m20#"};
 		Prev = "BRDTomb";
 		Next = "BRDMagmus";
 	};
@@ -980,7 +980,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 16, AL_FindId("Dreadforge Retaliator", MythicTier), "", "=q4=Dreadforge Retaliator", "=ds=#h2#, #w1#", "", "15.76%"};
 		{ 17, AL_FindId("Guiding Stave of Wisdom", MythicTier), "", "=q4=Guiding Stave of Wisdom", "=ds=#w9#", "", "15.01%"};
 		{ 18, AL_FindId("Thaurissan's Royal Scepter", MythicTier), "", "=q4=Thaurissan's Royal Scepter", "=ds=#s15#", "", " 12.86%"};
-		{ 20, -12033, "", "=q1=Thaurissan Family Jewels", "=ds=#e7# #e1#", "", "2.2%"};
+		{ 20, 12033, "", "=q1=Thaurissan Family Jewels", "=ds=#e7# #e1#", "", "2.2%"};
 		Prev = "BRDMagmus";
 		Next = "BRDPrincess";
 		Dif = MythicTier;
@@ -997,8 +997,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 	};
 
 	AtlasLoot_Data["BRDBSPlans"] = {
-		{ 1, -11614, "", "=q2=Plans: Dark Iron Mail", "=ds=#p2# (270)", "", "13.38%"};
-		{ 2, -11615, "", "=q2=Plans: Dark Iron Shoulders", "=ds=#p2# (280)", "", "7.65%"};
+		{ 1, 11614, "", "=q2=Plans: Dark Iron Mail", "=ds=#p2# (270)", "", "13.38%"};
+		{ 2, 11615, "", "=q2=Plans: Dark Iron Shoulders", "=ds=#p2# (280)", "", "7.65%"};
 		Prev = "BRDPrincess";
 		Next = "BRDTrash";
 	};
@@ -1017,18 +1017,18 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 11, AL_FindId("Ribsplitter", MythicTier), "", "=q4=Ribsplitter", "=ds=#h1#, #w1# =q2=#m16#", "", "0.02%"};
 		{ 12, AL_FindId("The Judge's Gavel", MythicTier), "", "=q4=The Judge's Gavel", "=ds=#h2#, #w6#", "", "0.02%"};
 		{ 13, AL_FindId("Spire of the Stoneshaper", MythicTier), "", "=q4=Spire of the Stoneshaper", "=ds=#w9#", "", "0.01%"};
-		{ 16, -15781, "", "=q3=Pattern: Black Dragonscale Leggings", "=ds=#p7# (300) =q1=#n75#", "", "1.93%"};
-		{ 17, -15770, "", "=q3=Pattern: Black Dragonscale Shoulders", "=ds=#p7# (300) =q1=#n76#", "", "1.88%"};
-		{ 18, -16053, "", "=q2=Schematic: Master Engineer's Goggles", "=ds=#p5# (290) =q1=#n77#", "", "0.45%"};
-		{ 19, -16049, "", "=q2=Schematic: Dark Iron Bomb", "=ds=#p5# (285) =q1=#n78#", "", "1.02%"};
-		{ 20, -16048, "", "=q2=Schematic: Dark Iron Rifle", "=ds=#p5# (275) =q1=#n79#", "", "0.98%"};
-		{ 21, -18654, "", "=q2=Schematic: Gnomish Alarm-O-Bot", "=ds=#p5# (265) =q1=#n78#", "", "1.88%"};
-		{ 22, -18661, "", "=q2=Schematic: World Enlarger", "=ds=#p5# (260) =q1=#n78#", "", "2.00%"};
-		{ 24, -11754, "", "=q2=Black Diamond", "#e8#", "", "5.0%"};
-		{ 25, -11078, "", "=q1=Relic Coffer Key", "=ds=#e9#"};
-		{ 26, -18945, "", "=q1=Dark Iron Residue", "=ds=#m3#"};
-		{ 27, -11468, "", "=q1=Dark Iron Fanny Pack", "=ds=#m3#"};
-		{ 28, -11446, "", "=q1=A Crumpled Up Note", "=ds=#m2#"};
+		{ 16, 15781, "", "=q3=Pattern: Black Dragonscale Leggings", "=ds=#p7# (300) =q1=#n75#", "", "1.93%"};
+		{ 17, 15770, "", "=q3=Pattern: Black Dragonscale Shoulders", "=ds=#p7# (300) =q1=#n76#", "", "1.88%"};
+		{ 18, 16053, "", "=q2=Schematic: Master Engineer's Goggles", "=ds=#p5# (290) =q1=#n77#", "", "0.45%"};
+		{ 19, 16049, "", "=q2=Schematic: Dark Iron Bomb", "=ds=#p5# (285) =q1=#n78#", "", "1.02%"};
+		{ 20, 16048, "", "=q2=Schematic: Dark Iron Rifle", "=ds=#p5# (275) =q1=#n79#", "", "0.98%"};
+		{ 21, 18654, "", "=q2=Schematic: Gnomish Alarm-O-Bot", "=ds=#p5# (265) =q1=#n78#", "", "1.88%"};
+		{ 22, 18661, "", "=q2=Schematic: World Enlarger", "=ds=#p5# (260) =q1=#n78#", "", "2.00%"};
+		{ 24, 11754, "", "=q2=Black Diamond", "#e8#", "", "5.0%"};
+		{ 25, 11078, "", "=q1=Relic Coffer Key", "=ds=#e9#"};
+		{ 26, 18945, "", "=q1=Dark Iron Residue", "=ds=#m3#"};
+		{ 27, 11468, "", "=q1=Dark Iron Fanny Pack", "=ds=#m3#"};
+		{ 28, 11446, "", "=q1=A Crumpled Up Note", "=ds=#m2#"};
 		Prev = "BRDBSPlans";
 		Dif = MythicTier;
 	};
@@ -1069,8 +1069,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 3, AL_FindId("Plate of the Shaman King", MythicTier), "", "=q4=Plate of the Shaman King", "=ds=#s5#, #a4#", "", "8.62%"};
 		{ 4, AL_FindId("Slamshot Shoulders", MythicTier), "", "=q4=Slamshot Shoulders", "=ds=#s3#, #a4#", "", "7.25%"};
 		{ 5, AL_FindId("Fist of Omokk", MythicTier), "", "=q4=Fist of Omokk", "=ds=#h2#, #w6#", "", "10.64%"};
-		{ 7, -12336, "", "=q2=Gemstone of Spirestone", "=ds=#m3#", "", "100%"};
-		{ 9, -12534, "", "=q1=Omokk's Head", "=ds=#m3#", "", "100%"};
+		{ 7, 12336, "", "=q2=Gemstone of Spirestone", "=ds=#m3#", "", "100%"};
+		{ 9, 12534, "", "=q1=Omokk's Head", "=ds=#m3#", "", "100%"};
 		{ 16, AL_FindId("Boots of Elements", MythicTier), "", "=q4=Boots of Elements", "=ds=#s12#, #a3# (D1, #c7#)", "", "9.35%"};
 		Prev = "LBRSSpirestoneButcher";
 		Next = "LBRSSpirestoneLord";
@@ -1100,9 +1100,9 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 3, AL_FindId("Trueaim Gauntlets", MythicTier), "", "=q4=Trueaim Gauntlets", "=ds=#s9#, #a3#", "", "18.08%"};
 		{ 4, AL_FindId("Blackcrow", MythicTier), "", "=q4=Blackcrow", "=ds=#w3#", "", "8.56%"};
 		{ 5, AL_FindId("Riphook", MythicTier), "", "=q4=Riphook", "=ds=#w2#", "", "7.99%"};
-		{ 6, -12654, "", "=q3=Doomshot", "=ds=#w17#", "", "23.06%"};
-		{ 8, -13352, "", "=q1=Vosh'gajin's Snakestone", "=ds=#m3#", "", "100%"};
-		{ 9, -12821, "", "=q3=Plans: Dawn's Edge", "=q1=#m4#: =ds=#p2# (275)"};
+		{ 6, 12654, "", "=q3=Doomshot", "=ds=#w17#", "", "23.06%"};
+		{ 8, 13352, "", "=q1=Vosh'gajin's Snakestone", "=ds=#m3#", "", "100%"};
+		{ 9, 12821, "", "=q3=Plans: Dawn's Edge", "=q1=#m4#: =ds=#p2# (275)"};
 		{ 16, AL_FindId("Shadowcraft Gloves", MythicTier), "", "=q4=Shadowcraft Gloves", "=ds=#s9#, #a2# (D1, #c6#)", "", "11.89%"};
 		Prev = "LBRSLordMagus";
 		Next = "LBRSVoone";
@@ -1115,7 +1115,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 3, AL_FindId("Talisman of Evasion", MythicTier), "", "=q4=Talisman of Evasion", "=ds=#s2#", "", "15.40%"};
 		{ 4, AL_FindId("Keris of Zul'Serak", MythicTier), "", "=q4=Keris of Zul'Serak", "=ds=#h1#, #w4#", "", "8.08%"};
 		{ 5, AL_FindId("Flightblade Throwing Axe", MythicTier), "", "=q4=Flightblade Throwing Axe", "=ds=#w11#", "", "79.85%"};
-		{ 7, -12335, "", "=q2=Gemstone of Smolderthorn", "=ds=#m3#", "", "100%"};
+		{ 7, 12335, "", "=q2=Gemstone of Smolderthorn", "=ds=#m3#", "", "100%"};
 		{ 16, AL_FindId("Beaststalker's Gloves", MythicTier), "", "=q4=Beaststalker's Gloves", "=ds=#s9#, #a3# (D1, #c2#)", "", "9.15%"};
 		Prev = "LBRSVosh";
 		Next = "LBRSGrayhoof";
@@ -1129,8 +1129,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 4, AL_FindId("Tome of Divine Right", MythicTier), "", "=q4=Tome of Divine Right", "=ds=#s15#", "", "20.81%"};
 		{ 5, AL_FindId("Idol of Rejuvenation", MythicTier), "", "=q4=Idol of Rejuvenation", "=ds=#s16#, #w14#", "", "12.87%"};
 		{ 6, AL_FindId("The Jaw Breaker", MythicTier), "", "=q4=The Jaw Breaker", "=ds=#h1#, #w6#", "", "20.28%"};
-		{ 8, -21984, "", "=q1=Left Piece of Lord Valthalak's Amulet", "=ds=#m3#"};
-		{ 9, -22046, "", "=q1=Right Piece of Lord Valthalak's Amulet", "=ds=#m3#"};
+		{ 8, 21984, "", "=q1=Left Piece of Lord Valthalak's Amulet", "=ds=#m3#"};
+		{ 9, 22046, "", "=q1=Right Piece of Lord Valthalak's Amulet", "=ds=#m3#"};
 		Prev = "LBRSVoone";
 		Next = "LBRSGrimaxe";
 		Dif = MythicTier;
@@ -1140,8 +1140,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 1, AL_FindId("Chiselbrand Girdle", MythicTier), "", "=q4=Chiselbrand Girdle", "=ds=#s10#, #a3#", "", "31.73%"};
 		{ 2, AL_FindId("Backusarian Gauntlets", MythicTier), "", "=q4=Backusarian Gauntlets", "=ds=#s9#, #a4#", "", "26.44%"};
 		{ 3, AL_FindId("Demonfork", MythicTier), "", "=q4=Demonfork", "=ds=#h1#, #w1#", "", "27.64%"};
-		{ 5, -12838, "", "=q3=Plans: Arcanite Reaper", "=ds=#p2# (300)", "", "6.73%"};
-		{ 6, -12784, "", "=q3=Arcanite Reaper", "=ds=#h2#, #w1#"};
+		{ 5, 12838, "", "=q3=Plans: Arcanite Reaper", "=ds=#p2# (300)", "", "6.73%"};
+		{ 6, 12784, "", "=q3=Arcanite Reaper", "=ds=#h2#, #w1#"};
 		Prev = "LBRSGrayhoof";
 		Next = "LBRSSmolderweb";
 		Dif = MythicTier;
@@ -1171,10 +1171,10 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 2, AL_FindId("Marksman's Girdle", MythicTier), "", "=q4=Marksman's Girdle", "=ds=#s10#, #a3#", "", "20.60%"};
 		{ 3, AL_FindId("Ribsteel Footguards", MythicTier), "", "=q4=Ribsteel Footguards", "=ds=#s12#, #a4#", "", "25.38%"};
 		{ 4, AL_FindId("Rosewine Circle", MythicTier), "", "=q4=Rosewine Circle", "=ds=#s13#", "", "21.48%"};
-		{ 6, -18784, "", "=q3=Top Half of Advanced Armorsmithing: Volume III", "=ds=#m3#", "", "10.30%"};
-		{ 7, -12725, "", "=q3=Plans: Enchanted Thorium Helm", "=q1=#m4#: =ds=#p2# (300)"};
-		{ 9, -12712, "", "=q1=Warosh's Mojo", "=ds=#m3#", "", "100%"};
-		{ 10, -15867, "", "=q2=Prismcharm", "=q1=#m4#: =ds=#s14#"};
+		{ 6, 18784, "", "=q3=Top Half of Advanced Armorsmithing: Volume III", "=ds=#m3#", "", "10.30%"};
+		{ 7, 12725, "", "=q3=Plans: Enchanted Thorium Helm", "=q1=#m4#: =ds=#p2# (300)"};
+		{ 9, 12712, "", "=q1=Warosh's Mojo", "=ds=#m3#", "", "100%"};
+		{ 10, 15867, "", "=q2=Prismcharm", "=q1=#m4#: =ds=#s14#"};
 		Prev = "LBRSCrystalFang";
 		Next = "LBRSZigris";
 		Dif = MythicTier;
@@ -1183,9 +1183,9 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 	AtlasLoot_Data["LBRSZigris"] = {
 		{ 1, AL_FindId("Hands of Power", MythicTier), "", "=q4=Hands of Power", "=ds=#s9#, #a1#", "", "14.22%"};
 		{ 2, AL_FindId("Cloudrunner Girdle", MythicTier), "", "=q4=Cloudrunner Girdle", "=ds=#s10#, #a2#", "", "15.48%"};
-		{ 4, -12835, "", "=q3=Plans: Annihilator", "=ds=#p2# (300)", "", "8.37%"};
-		{ 5, -12798, "", "=q3=Annihilator", "=ds=#h1#, #w1#"};
-		{ 7, -21955, "", "=q2=Design: Black Diamond Crab", "=ds=#p12# (300)"};
+		{ 4, 12835, "", "=q3=Plans: Annihilator", "=ds=#p2# (300)", "", "8.37%"};
+		{ 5, 12798, "", "=q3=Annihilator", "=ds=#h1#, #w1#"};
+		{ 7, 21955, "", "=q2=Design: Black Diamond Crab", "=ds=#p12# (300)"};
 		Prev = "LBRSDoomhowl";
 		Next = "LBRSSlavener";
 		Dif = MythicTier;
@@ -1228,7 +1228,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 6, AL_FindId("Relentless Scythe", MythicTier), "", "=q4=Relentless Scythe", "=ds=#h2#, #w10#", "", "14.12%"};
 		{ 7, AL_FindId("Chillpike", MythicTier), "", "=q4=Chillpike", "=ds=#w7#", "", "0.76%"};
 		{ 8, AL_FindId("Trindlehaven Staff", MythicTier), "", "=q4=Trindlehaven Staff", "=ds=#w9#", "", "10.40%"};
-		{ 10, -12337, "", "=q2=Gemstone of Bloodaxe", "=ds=#m3#", "", "100%"};
+		{ 10, 12337, "", "=q2=Gemstone of Bloodaxe", "=ds=#m3#", "", "100%"};
 		{ 16, AL_FindId("Beaststalker's Mantle", MythicTier), "", "=q4=Beaststalker's Mantle", "=ds=#s3#, #a3# (D1, #c2#)", "", "9.89%"};
 		Prev = "LBRSBashguud";
 		Next = "LBRSFelguard";
@@ -1265,8 +1265,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 2,AL_FindId("Truestrike Shoulders", MythicTier), "", "=q4=Truestrike Shoulders", "=ds=#s3#, #a2#", "", "17.47%"};
 		{ 3,AL_FindId("Emberfury Talisman", MythicTier), "", "=q4=Emberfury Talisman", "=ds=#s2#", "", "15.89%"};
 		{ 4,AL_FindId("Flaming Band", MythicTier), "", "=q4=Flaming Band", "=ds=#s13#", "", "18.52%"};
-		{ 6, -17322, "", "=q1=Eye of the Emberseer", "=ds=#m3#", "", "100%"};
-		{ 7, -21988, "", "=q1=Ember of Emberseer", "=ds=#m3#"};
+		{ 6, 17322, "", "=q1=Eye of the Emberseer", "=ds=#m3#", "", "100%"};
+		{ 7, 21988, "", "=q1=Ember of Emberseer", "=ds=#m3#"};
 		{ 16,AL_FindId("Gauntlets of Elements", MythicTier), "", "=q4=Gauntlets of Elements", "=ds=#s9#, #a3# (D1, #c7#)", "", "14.23%"};
 		Next = "UBRSSolakar";
 		Dif = MythicTier;
@@ -1277,8 +1277,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 2,AL_FindId("Dustfeather Sash", MythicTier), "", "=q4=Dustfeather Sash", "=ds=#s10#, #a1#", "", "12.84%"};
 		{ 3,AL_FindId("Nightbrace Tunic", MythicTier), "", "=q4=Nightbrace Tunic", "=ds=#s5#, #a2#", "", "15.06%"};
 		{ 4,AL_FindId("Crystallized Girdle", MythicTier), "", "=q4=Crystallized Girdle", "=ds=#s10#, #a2#", "", "14.04%"};
-		{ 6, -18657, "", "=q2=Schematic: Hyper-Radiant Flame Reflector", "=ds=#p5# (290)", "", "7.38%"};
-		{ 7, -18638, "", "=q3=Hyper-Radiant Flame Reflector", "=ds=#s14#"};
+		{ 6, 18657, "", "=q2=Schematic: Hyper-Radiant Flame Reflector", "=ds=#p5# (290)", "", "7.38%"};
+		{ 7, 18638, "", "=q3=Hyper-Radiant Flame Reflector", "=ds=#s14#"};
 		{ 16,AL_FindId("Devout Mantle", MythicTier), "", "=q4=Devout Mantle", "=ds=#s3#, #a1# (D1, #c5#)", "", "12.84%"};
 		Prev = "UBRSSolakar";
 		Next = "UBRSQuestItems";
@@ -1312,15 +1312,15 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 2,AL_FindId("Handcrafted Mastersmith Girdle", MythicTier), "", "=q4=Handcrafted Mastersmith Girdle", "=ds=#s10#, #a4#", "", "15.78%"};
 		{ 3,AL_FindId("Handcrafted Mastersmith Leggings", MythicTier), "", "=q4=Handcrafted Mastersmith Leggings", "=ds=#s11#, #a4#", "", "20.63%"};
 		{ 4,AL_FindId("Mastersmith's Hammer", MythicTier), "", "=q4=Mastersmith's Hammer", "=ds=#h3#, #w6#", "", "17.26%"};
-		{ 6, -12837, "", "=q3=Plans: Masterwork Stormhammer", "=ds=#p2# (300)", "", "4.80%"};
-		{ 7, -12794, "", "=q3=Masterwork Stormhammer", "=ds=#h1#, #w6#"};
-		{ 8, -12834, "", "=q3=Plans: Arcanite Champion", "=ds=#p2# (300)", "", "4.75%"};
-		{ 9, -12790, "", "=q3=Arcanite Champion", "=ds=#h2#, #w10#"};
-		{ 11, -18779, "", "=q3=Bottom Half of Advanced Armorsmithing: Volume I", "=ds=#m3#", "", "17.08%"};
-		{ 12, -12727, "", "=q3=Plans: Enchanted Thorium Breastplate", "=q1=#m4#: =ds=#p2# (300)"};
+		{ 6, 12837, "", "=q3=Plans: Masterwork Stormhammer", "=ds=#p2# (300)", "", "4.80%"};
+		{ 7, 12794, "", "=q3=Masterwork Stormhammer", "=ds=#h1#, #w6#"};
+		{ 8, 12834, "", "=q3=Plans: Arcanite Champion", "=ds=#p2# (300)", "", "4.75%"};
+		{ 9, 12790, "", "=q3=Arcanite Champion", "=ds=#h2#, #w10#"};
+		{ 11, 18779, "", "=q3=Bottom Half of Advanced Armorsmithing: Volume I", "=ds=#m3#", "", "17.08%"};
+		{ 12, 12727, "", "=q3=Plans: Enchanted Thorium Breastplate", "=q1=#m4#: =ds=#p2# (300)"};
 		{ 16, 0, "INV_Box_01", "=q6=#x10#", ""};
-		{ 17, -12806, "", "=q3=Unforged Rune Covered Breastplate", "=ds=#m3#"};
-		{ 18, -12696, "", "=q3=Plans: Demon Forged Breastplate", "=q1=#m4#: =ds=#p2# (285)"};
+		{ 17, 12806, "", "=q3=Unforged Rune Covered Breastplate", "=ds=#m3#"};
+		{ 18, 12696, "", "=q3=Plans: Demon Forged Breastplate", "=q1=#m4#: =ds=#p2# (285)"};
 		Prev = "UBRSRunewatcher";
 		Next = "UBRSRend";
 		Dif = MythicTier;
@@ -1340,17 +1340,17 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 18,AL_FindId("Dal'Rend's Sacred Charge", MythicTier), "", "=q4=Dal'Rend's Sacred Charge", "=ds=#h3#, #w10#", "", "6.79%"};
 		{ 19,AL_FindId("Dal'Rend's Tribal Guardian", MythicTier), "", "=q4=Dal'Rend's Tribal Guardian", "=ds=#h4#, #w10#", "", "7.61%"};
 		{ 20,AL_FindId("Blackhand Doomsaw", MythicTier), "", "=q4=Blackhand Doomsaw", "=ds=#w7#", "", "7.44%"};
-		{ 22, -12630, "", "=q1=Head of Rend Blackhand", "=ds=#m3#", "", "100%"};
+		{ 22, 12630, "", "=q1=Head of Rend Blackhand", "=ds=#m3#", "", "100%"};
 		Prev = "UBRSAnvilcrack";
 		Next = "UBRSGyth";
 		Dif = MythicTier;
 	};
 
 	AtlasLoot_Data["UBRSGyth"] = {
-		{ 1, -12871, "", "=q4=Chromatic Carapace", "=ds=#m3#", "", "2.64%"};
-		{ 2, -12945, "", "=q4=Legplates of the Chromatic Defier", "=q1=#m4#: =ds=#s11#, #a3#"};
-		{ 3, -12903, "", "=q4=Legguards of the Chromatic Defier", "=q1=#m4#: =ds=#s11#, #a3#"};
-		{ 4, -12895, "", "=q4=Breastplate of the Chromatic Flight", "=q1=#m4#: =ds=#s5#, #a4#"};
+		{ 1, 12871, "", "=q4=Chromatic Carapace", "=ds=#m3#", "", "2.64%"};
+		{ 2, 12945, "", "=q4=Legplates of the Chromatic Defier", "=q1=#m4#: =ds=#s11#, #a3#"};
+		{ 3, 12903, "", "=q4=Legguards of the Chromatic Defier", "=q1=#m4#: =ds=#s11#, #a3#"};
+		{ 4, 12895, "", "=q4=Breastplate of the Chromatic Flight", "=q1=#m4#: =ds=#s5#, #a4#"};
 		{ 6,AL_FindId("Dragonskin Cowl", MythicTier), "", "=q4=Dragonskin Cowl", "=ds=#s1#, #a1# =q2=#m16#", "", "11.85%"};
 		{ 7,AL_FindId("Tribal War Feathers", MythicTier), "", "=q4=Tribal War Feathers", "=ds=#s1#, #a2# =q2=#m16#", "", "15.24%"};
 		{ 8,AL_FindId("Dragoneye Coif", MythicTier), "", "=q4=Dragoneye Coif", "=ds=#s1#, #a3# =q2=#m16#", "", "15.99%"};
@@ -1363,10 +1363,10 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 	};
 
 	AtlasLoot_Data["UBRSBeast"] = {
-		{ 1, -12731, "", "=q4=Pristine Hide of the Beast", "=ds=#m3#", "", "0.77%"};
-		{ 2, -12752, "", "=q4=Cap of the Scarlet Savant", "=q1=#m4#: =ds=#s1#, #a1#"};
-		{ 3, -12757, "", "=q4=Breastplate of Bloodthirst", "=q1=#m4#: =ds=#s5#, #a2#"};
-		{ 4, -12756, "", "=q4=Leggings of Arcana", "=q1=#m4#: =ds=#s11#, #a2#"};
+		{ 1, 12731, "", "=q4=Pristine Hide of the Beast", "=ds=#m3#", "", "0.77%"};
+		{ 2, 12752, "", "=q4=Cap of the Scarlet Savant", "=q1=#m4#: =ds=#s1#, #a1#"};
+		{ 3, 12757, "", "=q4=Breastplate of Bloodthirst", "=q1=#m4#: =ds=#s5#, #a2#"};
+		{ 4, 12756, "", "=q4=Leggings of Arcana", "=q1=#m4#: =ds=#s11#, #a2#"};
 		{ 6,AL_FindId("Bloodmoon Cloak", MythicTier), "", "=q4=Bloodmoon Cloak", "=ds=#s4#", "", "18.30%"};
 		{ 7,AL_FindId("Frostweaver Cape", MythicTier), "", "=q4=Frostweaver Cape", "=ds=#s4#", "", "14.47%"};
 		{ 8,AL_FindId("Spiritshroud Leggings", MythicTier), "", "=q4=Spiritshroud Leggings", "=ds=#s11#, #a1#", "", "13.16%"};
@@ -1377,8 +1377,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 13,AL_FindId("Finkle's Skinner", MythicTier), "", "=q4=Finkle's Skinner", "=ds=#h1#, #w4#, =q1=#e18#", "", "6.95%"};
 		{ 14,AL_FindId("Seeping Willow", MythicTier), "", "=q4=Seeping Willow", "=ds=#h2#, #w6#", "", "11.49%"};
 		{ 16,AL_FindId("Lightforge Spaulders", MythicTier), "", "=q4=Lightforge Spaulders", "=ds=#s3#, #a4# (D1, #c4#)", "", "13.62%"};
-		{ 18, -24101, "", "=q3=Book of Ferocious Bite V", "=ds=#e10# =q1=#m1# =ds=#c1#", "", "1.44%"};
-		{ 19, -19227, "", "=q3=Ace of Beasts", "=ds=#e16#", "", "4.53%"};
+		{ 18, 24101, "", "=q3=Book of Ferocious Bite V", "=ds=#e10# =q1=#m1# =ds=#c1#", "", "1.44%"};
+		{ 19, 19227, "", "=q3=Ace of Beasts", "=ds=#e16#", "", "4.53%"};
 		Prev = "UBRSGyth";
 		Next = "UBRSValthalak";
 		Dif = MythicTier;
@@ -1409,9 +1409,9 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 8,AL_FindId("Draconic Infused Emblem", MythicTier), "", "=q4=Draconic Infused Emblem", "=ds=#s14#", "", "4.13%"};
 		{ 9,AL_FindId("Tome of the Lost", MythicTier), "", "=q4=Tome of the Lost", "=ds=#s15#", "", "16.05%"};
 		{ 10,AL_FindId("Draconian Deflector", MythicTier), "", "=q4=Draconian Deflector", "=ds=#w8#", "", "14.52%"};
-		{ 12, -15730, "", "=q3=Pattern: Red Dragonscale Breastplate", "=ds=#p7# (300)", "", "3.58%"};
-		{ 13, -15047, "", "=q3=Red Dragonscale Breastplate", "=ds=#s5#, #a3#"};
-		{ 15, -13519, "", "=q2=Recipe: Flask of the Titans", "=ds=#p1# (300)", "", "1.72%"};
+		{ 12, 15730, "", "=q3=Pattern: Red Dragonscale Breastplate", "=ds=#p7# (300)", "", "3.58%"};
+		{ 13, 15047, "", "=q3=Red Dragonscale Breastplate", "=ds=#s5#, #a3#"};
+		{ 15, 13519, "", "=q2=Recipe: Flask of the Titans", "=ds=#p1# (300)", "", "1.72%"};
 		{ 16,AL_FindId("Magister's Robes", MythicTier), "", "=q4=Magister's Robes", "=ds=#s5#, #a1# (D1, #c3#)", "", "7.24%"};
 		{ 17,AL_FindId("Dreadmist Robe", MythicTier), "", "=q4=Dreadmist Robe", "=ds=#s5#, #a1# (D1, #c8#)", "", "8.04%"};
 		{ 18,AL_FindId("Devout Robe", MythicTier), "", "=q4=Devout Robe", "=ds=#s5#, #a1# (D1, #c5#)", "", "6.20%"};
@@ -1429,10 +1429,10 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 
 	AtlasLoot_Data["UBRSTrash"] = {
 		{ 1,AL_FindId("Wind Dancer Boots", MythicTier), "", "=q4=Wind Dancer Boots", "=ds=#s12#, #a3#", "", "0.01%"};
-		{ 2, -24102, "", "=q3=Manual of Eviscerate IX", "=ds=#e10# =q1=#m1# =ds=#c6# =q1=#n70#", "", "0.94%"};
-		{ 4, -16247, "", "=q2=Formula: Enchant 2H Weapon - Superior Impact", "=ds=#p4# (295) =q1=#n69#", "", "1.54%"};
-		{ 6, -12607, "", "=q3=Brilliant Chromatic Scale", "=ds=#m3#"};
-		{ 7, -12219, "", "=q1=Unadorned Seal of Ascension", "=ds=#m3#"};
+		{ 2, 24102, "", "=q3=Manual of Eviscerate IX", "=ds=#e10# =q1=#m1# =ds=#c6# =q1=#n70#", "", "0.94%"};
+		{ 4, 16247, "", "=q2=Formula: Enchant 2H Weapon - Superior Impact", "=ds=#p4# (295) =q1=#n69#", "", "1.54%"};
+		{ 6, 12607, "", "=q3=Brilliant Chromatic Scale", "=ds=#m3#"};
+		{ 7, 12219, "", "=q1=Unadorned Seal of Ascension", "=ds=#m3#"};
 		Prev = "UBRSDrakkisath";
 		Dif = MythicTier;
 	};
@@ -1460,7 +1460,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 19, 216837, "", "=q4=Earthfury Boots", "=q1=#m1# =ds=#c7# (T1)", "", "4.16%"};
 		{ 20, 216863, "", "=q4=Gauntlets of Might", "=q1=#m1# =ds=#c9# (T1)", "", "16.40%"};
 		{ 21, 216859, "", "=q4=Lawbringer Boots", "=q1=#m1# =ds=#c4# (T1)", "", "7.20%"};
-		{ 22, -17329, "", "=q1=Hand of Lucifron", "=ds=#m3#"};
+		{ 22, 17329, "", "=q1=Hand of Lucifron", "=ds=#m3#"};
 		Next = "MCMagmadar";
 		Dif = 4;
 		Raid = true;
@@ -1514,7 +1514,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 19, 216839, "", "=q4=Earthfury Gauntlets", "=q1=#m1# =ds=#c7# (T1)", "", "7.38%"};
 		{ 20, 216862, "", "=q4=Sabatons of Might", "=q1=#m1# =ds=#c9# (T1)", "", "14.48%"};
 		{ 21, 216860, "", "=q4=Lawbringer Gauntlets", "=q1=#m1# =ds=#c4# (T1)", "", "11.77%"};
-		{ 23, -17331, "", "=q1=Hand of Gehennas", "=ds=#m3#"};
+		{ 23, 17331, "", "=q1=Hand of Gehennas", "=ds=#m3#"};
 		Prev = "MCMagmadar";
 		Next = "MCGarr";
 		Dif = 4;
@@ -1546,7 +1546,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 22, 216842, "", "=q4=Earthfury Helmet", "=q1=#m1# =ds=#c7# (T1)", "", "3.91%"};
 		{ 23, 216866, "", "=q4=Helm of Might", "=q1=#m1# =ds=#c9# (T1)", "", "11.39%"};
 		{ 24, 216854, "", "=q4=Lawbringer Helm", "=q1=#m1# =ds=#c4# (T1)", "", "7.23%"};
-		{ 26, 218564, "", "=q5=Bindings of the Windseeker", "=ds=#m3#, =q1=#m9#", "", "3.74%"};
+		{ 26, 218564, "", "=q5=Bindings of the Windseeker", "=ds=#m3#, =q1=#m9#", "", "3.74%"}; --Needs to be correctly added to the Difficulty loot table
 		{ 27, 219019, "", "=q5=Thunderfury, Blessed Blade of the Windseeker", "=q1=#m4#: =ds=#h1#, #w10#"};
 		Prev = "MCGehennas";
 		Next = "MCShazzrah";
@@ -1571,7 +1571,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 19, 216831, "", "=q4=Cenarion Gloves", "=q1=#m1# =ds=#c1# (T1)", "", "19.53%"};
 		{ 20, 216852, "", "=q4=Giantstalker's Gloves", "=q1=#m1# =ds=#c2# (T1)", "", "18.58%"};
 		{ 21, 216824, "", "=q4=Nightslayer Boots", "=q1=#m1# =ds=#c6# (T1)", "", "15.58%"};
-		{ 23, -17332, "", "=q1=Hand of Shazzrah", "=ds=#m3#"};
+		{ 23, 17332, "", "=q1=Hand of Shazzrah", "=ds=#m3#"};
 		Prev = "MCGarr";
 		Next = "MCGeddon";
 		Dif = 4;
@@ -1596,7 +1596,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 18, 216836, "", "=q4=Cenarion Spaulders", "=q1=#m1# =ds=#c1# (T1)", "", "19.52%"};
 		{ 19, 216856, "", "=q4=Lawbringer Spaulders", "=q1=#m1# =ds=#c4# (T1)", "", "12.62%"};
 		{ 20, 216844, "", "=q4=Earthfury Epaulets", "=q1=#m1# =ds=#c7# (T1)", "", "7.29%"};
-		{ 22, 218563, "", "=q5=Bindings of the Windseeker", " =ds=#m3#, =q1=#m10#", "", "3.78%"};
+		{ 22, 218563, "", "=q5=Bindings of the Windseeker", " =ds=#m3#, =q1=#m10#", "", "3.78%"}; --Needs to be correctly added to the Difficulty loot table
 		{ 23, 219019, "", "=q5=Thunderfury, Blessed Blade of the Windseeker", "=q1=#m4#: =ds=#h1#, #w10#"};
 		Prev = "MCShazzrah";
 		Next = "MCGolemagg";
@@ -1628,7 +1628,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 22, 216841, "", "=q4=Earthfury Vestments", "=q1=#m1# =ds=#c7# (T1)", "", " 6.08%"};
 		{ 23, 216865, "", "=q4=Breastplate of Might", "=q1=#m1# =ds=#c9# (T1)", "", "15.28%"};
 		{ 24, 216853, "", "=q4=Lawbringer Chestguard", "=q1=#m1# =ds=#c4# (T1)", "", "9.53%"};
-		{ 26, -17203, "", "=q4=Sulfuron Ingot", "=ds=#m3#", "", "11.98%"};
+		{ 26, 17203, "", "=q4=Sulfuron Ingot", "=ds=#m3#", "", "11.98%"};
 		{ 27, 217182, "", "=q5=Sulfuras, Hand of Ragnaros", "=q1=#m4#: =ds=#h2#, #w6#"};
 		Prev = "MCGeddon";
 		Next = "MCSulfuron";
@@ -1652,7 +1652,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 17, 216823, "", "=q4=Nightslayer Shoulder Pads", "=q1=#m1# =ds=#c6# (T1)", "", "20.66%"};
 		{ 18, 216848, "", "=q4=Giantstalker's Epaulets", "=q1=#m1# =ds=#c2# (T1)", "", "19.64%"};
 		{ 19, 216868, "", "=q4=Pauldrons of Might", "=q1=#m1# =ds=#c9# (T1)", "", "21.14%"};
-		{ 21, -17330, "", "=q1=Hand of Sulfuron", "=ds=#m3#"};
+		{ 21, 17330, "", "=q1=Hand of Sulfuron", "=ds=#m3#"};
 		Prev = "MCGolemagg";
 		Next = "MCMajordomo";
 		Dif = 4;
@@ -1670,13 +1670,13 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 8, 219140, "", "=q4=Cauterizing Band", "=ds=#s13#", "", "15.10%"};
 		{ 9, 218805, "", "=q4=Core Hound Tooth", "=ds=#h1#, #w4#", "", "16.06%"};
 		{ 10, 218803, "", "=q4=Finkle's Lava Dredger", "=ds=#h2#, #w6#", "", "12.43%"};
-		{ 16, -18703, "", "=q4=Ancient Petrified Leaf", "=ds=#m2# =q1=(#c2#)", "", "35.25%"};
-		{ 17, -18715, "", "=q4=Lok'delar, Stave of the Ancient Keepers", "=q1=#m4#: =ds=#w9#, =q1=#m1# =ds=#c2#"};
-		{ 18, -18713, "", "=q4=Rhok'delar, Longbow of the Ancient Keepers", "=q1=#m4#: =ds=#w2#, =q1=#m1# =ds=#c2#"};
-		{ 19, -18714, "", "=q4=Ancient Sinew Wrapped Lamina", "=q1=#m4#: =ds=#w19#, =q1=#m1# =ds=#c2#"};
-		{ 21, -18646, "", "=q4=The Eye of Divinity", "=ds=#m2# =q1=(#c5#)", "", "28.30%"};
-		{ 22, -18608, "", "=q4=Benediction", "=q1=#m4#: =ds=#w9#, =q1=#m1# =ds=#c5#"};
-		{ 23, -18609, "", "=q4=Anathema", "=q1=#m4#: =ds=#w9#, =q1=#m1# =ds=#c5#"};
+		{ 16, 18703, "", "=q4=Ancient Petrified Leaf", "=ds=#m2# =q1=(#c2#)", "", "35.25%"};
+		{ 17, 18715, "", "=q4=Lok'delar, Stave of the Ancient Keepers", "=q1=#m4#: =ds=#w9#, =q1=#m1# =ds=#c2#"};
+		{ 18, 18713, "", "=q4=Rhok'delar, Longbow of the Ancient Keepers", "=q1=#m4#: =ds=#w2#, =q1=#m1# =ds=#c2#"};
+		{ 19, 18714, "", "=q4=Ancient Sinew Wrapped Lamina", "=q1=#m4#: =ds=#w19#, =q1=#m1# =ds=#c2#"};
+		{ 21, 18646, "", "=q4=The Eye of Divinity", "=ds=#m2# =q1=(#c5#)", "", "28.30%"};
+		{ 22, 18608, "", "=q4=Benediction", "=q1=#m4#: =ds=#w9#, =q1=#m1# =ds=#c5#"};
+		{ 23, 18609, "", "=q4=Anathema", "=q1=#m4#: =ds=#w9#, =q1=#m1# =ds=#c5#"};
 		Prev = "MCSulfuron";
 		Next = "MCRagnaros";
 		Dif = 4;
@@ -1711,7 +1711,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 26, 217076, "", "=q4=Bonereaver's Edge", "=ds=#h2#, #w10#", "", "5.12%"};
 		{ 27, 217104, "", "=q4=Spinal Reaper", "=ds=#h2#, #w1#", "", " 4.63%"};
 		{ 28, 217106, "", "=q4=Malistar's Defender", "=ds=#w8#", "", "13.88%"};
-		{ 30, -21110, "", "=q1=Draconic for Dummies", "=ds=#m3#", "", "100%"};
+		{ 30, 21110, "", "=q1=Draconic for Dummies", "=ds=#m3#", "", "100%"};
 		Prev = "MCMajordomo";
 		Next = "MCTrashMobs";
 		Dif = 4;
@@ -1728,10 +1728,10 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 7, 216838, "", "=q4=Earthfury Belt", "=q1=#m1# =ds=#c7# (T1)", "", "0.07%"};
 		{ 8, 216864, "", "=q4=Belt of Might", "=q1=#m1# =ds=#c9# (T1)", "", "0.16%"};
 		{ 9, 216858, "", "=q4=Lawbringer Belt", "=q1=#m1# =ds=#c4# (T1)", "", "0.10%"};
-		{ 11, -17010, "", "=q3=Fiery Core", "=ds=#e8#"};
-		{ 12, -17011, "", "=q3=Lava Core", "=ds=#e8#"};
-		{ 13, -11382, "", "=q2=Blood of the Mountain", "=ds=#e8#"};
-		{ 14, -17012, "", "=q1=Core Leather", "=ds=#e8#"};
+		{ 11, 17010, "", "=q3=Fiery Core", "=ds=#e8#"};
+		{ 12, 17011, "", "=q3=Lava Core", "=ds=#e8#"};
+		{ 13, 11382, "", "=q2=Blood of the Mountain", "=ds=#e8#"};
+		{ 14, 17012, "", "=q1=Core Leather", "=ds=#e8#"};
 		{ 16, 216799, "", "=q4=Arcanist Bindings", "=q1=#m1# =ds=#c3# (T1)", "", "0.16%"};
 		{ 17, 216819, "", "=q4=Vambraces of Prophecy", "=q1=#m1# =ds=#c5# (T1)", "", "0.16%"};
 		{ 18, 216804, "", "=q4=Felheart Bracers", "=q1=#m1# =ds=#c8# (T1)", "", "0.16%"};
@@ -1834,7 +1834,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 7, 216949, "", "=q4=Greaves of Ten Storms", "=q1=#m1# =ds=#c7#", "", "22.22%"};
 		{ 8, 216965, "", "=q4=Sabatons of Wrath", "=q1=#m1# =ds=#c9#", "", "22.22%"};
 		{ 9, 216957, "", "=q4=Judgement Sabatons", "=q1=#m1# =ds=#c4#", "", "22.22%%"};
-		{ 12, -20383, "", "=q1=Head of the Broodlord Lashlayer", "=ds=#m3#", "", "100%"};
+		{ 12, 20383, "", "=q1=Head of the Broodlord Lashlayer", "=ds=#m3#", "", "100%"};
 		{ 16, 219342, "", "=q4=Venomous Totem", "=ds=#s14#, =q1=#m1# =ds=#c6#", "", "20%"};
 		{ 17, 219341, "", "=q4=Lifegiving Gem", "=ds=#s14#, =q1=#m1# =ds=#c9#", "", "20%"};
 		{ 18, 219345, "", "=q4=Aegis of Preservation", "=ds=#s14#, =q1=#m1# =ds=#c5#", "", "16.67%"};
@@ -1997,11 +1997,11 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 	};
 
 	AtlasLoot_Data["BWLNefarian2"] = {
-		{ 1, -19003, "", "=q4=Head of Nefarian", "=ds=#m2#", "", "100%"};
-		{ 2, -19383, "", "=q4=Master Dragonslayer's Medallion", "=q1=#m4#: =ds=#s2#"};
-		{ 3, -19384, "", "=q4=Master Dragonslayer's Ring", "=q1=#m4#: =ds=#s13#"};
-		{ 4, -19366, "", "=q4=Master Dragonslayer's Orb", "=q1=#m4#: =ds=#s15#"};
-		{ 6, -21138, "", "=q1=Red Scepter Shard", "=ds=#m3#", "", "100%"};
+		{ 1, 19003, "", "=q4=Head of Nefarian", "=ds=#m2#", "", "100%"};
+		{ 2, 19383, "", "=q4=Master Dragonslayer's Medallion", "=q1=#m4#: =ds=#s2#"};
+		{ 3, 19384, "", "=q4=Master Dragonslayer's Ring", "=q1=#m4#: =ds=#s13#"};
+		{ 4, 19366, "", "=q4=Master Dragonslayer's Orb", "=q1=#m4#: =ds=#s15#"};
+		{ 6, 21138, "", "=q1=Red Scepter Shard", "=ds=#m3#", "", "100%"};
 		Prev = "BWLNefarian1";
 		Next = "BWLTrashMobs";
 		Dif = 4;
@@ -2018,8 +2018,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 7, 219354, "", "=q4=Draconic Avenger", "=ds=#h2#, #w1#", "", "5.96%"};
 		{ 8, 219358, "", "=q4=Draconic Maul", "=ds=#h2#, #w6#", "", "2.30%"};
 		{ 9, 219435, "", "=q4=Essence Gatherer", "=ds=#w12#", "", "1.61%"};
-		{ 16, -18562, "", "=q4=Elementium Ore", "=ds=#e8#", "", "4.75%"};
-		{ 18, -21109, "", "=q1=Draconic for Dummies", "=ds=#m3#"};
+		{ 16, 18562, "", "=q4=Elementium Ore", "=ds=#e8#", "", "4.75%"};
+		{ 18, 21109, "", "=q1=Draconic for Dummies", "=ds=#m3#"};
 		Prev = "BWLNefarian2";
 		Dif = 4;
 		Raid = true;
@@ -2070,8 +2070,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 1,AL_FindId("Fervent Helm", MythicTier), "", "=q4=Fervent Helm", "=ds=#s1#, #a3#", "", "7.88%"};
 		{ 2,AL_FindId("Helm of Awareness", MythicTier), "", "=q4=Helm of Awareness", "=ds=#s1#, #a4#", "", "17.87%"};
 		{ 3,AL_FindId("Satyr's Bow", MythicTier), "", "=q4=Satyr's Bow", "=ds=#w2#", "", "17.24%"};
-		{ 5, -18306, "", "=q2=Gloves of Shadowy Mist", "=ds=#s9#, #a1#", "", "21.40%"};
-		{ 6, -18308, "", "=q2=Clever Hat", "=ds=#s1#, #a2#", "", "23.73%"};
+		{ 5, 18306, "", "=q2=Gloves of Shadowy Mist", "=ds=#s9#, #a1#", "", "21.40%"};
+		{ 6, 18308, "", "=q2=Clever Hat", "=ds=#s1#, #a2#", "", "23.73%"};
 		Prev = "DMEPusillin";
 		Next = "DMELethtendris";
 		Dif = MythicTier;
@@ -2080,9 +2080,9 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 	AtlasLoot_Data["DMELethtendris"] = {
 		{ 1,AL_FindId("Felhide Cap", MythicTier), "", "=q4=Felhide Cap", "=ds=#s1#, #a2#", "", "24.67%"};
 		{ 2,AL_FindId("Quel'dorei Channeling Rod", 2), "", "=q4=Quel'dorei Channeling Rod", "=ds=#w9#", "", "7.30%"};
-		{ 4, -18302, "", "=q3=Band of Vigor", "=ds=#s13#", "", "29.30%"};
-		{ 5, -18301, "", "=q3=Lethtendris's Wand", "=ds=#w12#", "", "25.57%"};
-		{ 7, -18426, "", "=q1=Lethtendris's Web", "=ds=#m3#"};
+		{ 4, 18302, "", "=q3=Band of Vigor", "=ds=#s13#", "", "29.30%"};
+		{ 5, 18301, "", "=q3=Lethtendris's Wand", "=ds=#w12#", "", "25.57%"};
+		{ 7, 18426, "", "=q1=Lethtendris's Web", "=ds=#m3#"};
 		Prev = "DMEZevrimThornhoof";
 		Next = "DMEPimgib";
 		Dif = MythicTier;
@@ -2099,8 +2099,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 1,AL_FindId("Waterspout Boots", MythicTier), "", "=q4=Waterspout Boots", "=ds=#s12#, #a2#", "", "16.42%"};
 		{ 2,AL_FindId("Tempest Talisman", MythicTier), "", "=q4=Tempest Talisman", "=ds=#s2#", "", "16.44%"};
 		{ 3,AL_FindId("Waveslicer", MythicTier), "", "=q4=Waveslicer", "=ds=#h2#, #w1#", "", "8.46%"};
-		{ 5, -18307, "", "=q3=Riptide Shoes", "=ds=#s12#, #a1#", "", "21.33%"};
-		{ 6, -18305, "", "=q3=Breakwater Legguards", "=ds=#s11#, #a4#", "", "22.75%"};
+		{ 5, 18307, "", "=q3=Riptide Shoes", "=ds=#s12#, #a1#", "", "21.33%"};
+		{ 6, 18305, "", "=q3=Breakwater Legguards", "=ds=#s11#, #a4#", "", "22.75%"};
 		Prev = "DMEPimgib";
 		Next = "DMEAlzzin";
 		Dif = MythicTier;
@@ -2114,7 +2114,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 5,AL_FindId("Energized Chestplate", MythicTier), "", "=q4=Energized Chestplate", "=ds=#s5#, #a4#", "", "16.08%"};
 		{ 6,AL_FindId("Razor Gauntlets", MythicTier), "", "=q4=Razor Gauntlets", "=ds=#s9#, #a4#", "", "18.62%"};
 		{ 8, 0, "INV_Box_01", "=q6=#x9#", ""};
-		{ 9, -18501, "", "=q1=Felvine Shard", "=ds=#m3#"};
+		{ 9, 18501, "", "=q1=Felvine Shard", "=ds=#m3#"};
 		{ 16,AL_FindId("Ring of Demonic Potency", MythicTier), "", "=q4=Ring of Demonic Potency", "=ds=#s13#", "", "15.40%"};
 		{ 17,AL_FindId("Ring of Demonic Guile", MythicTier), "", "=q4=Ring of Demonic Guile", "=ds=#s13#", "", "13.71%"};
 		{ 18,AL_FindId("Fiendish Machete", MythicTier), "", "=q4=Fiendish Machete", "=ds=#h1#, #w10#", "", "15.39%"};
@@ -2132,8 +2132,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 5,AL_FindId("Totem of Rebirth", MythicTier), "", "=q4=Totem of Rebirth", "=ds=#s16#, #w15#", "", "2.95%"};
 		{ 6,AL_FindId("Hammer of Revitalization", MythicTier), "", "=q4=Hammer of Revitalization", "=ds=#h3#, #w6#", "", "13.65%"};
 		{ 7,AL_FindId("Huntsman's Harpoon", MythicTier), "", "=q4=Huntsman's Harpoon", "=ds=#w7#", "", "15.50%"};
-		{ 17, -21984, "", "=q1=Left Piece of Lord Valthalak's Amulet", "=ds=#m3#"};
-		{ 18, -22046, "", "=q1=Right Piece of Lord Valthalak's Amulet", "=ds=#m3#"};
+		{ 17, 21984, "", "=q1=Left Piece of Lord Valthalak's Amulet", "=ds=#m3#"};
+		{ 18, 22046, "", "=q1=Right Piece of Lord Valthalak's Amulet", "=ds=#m3#"};
 		Prev = "DMEAlzzin";
 		Next = "DMETrash";
 		Dif = MythicTier;
@@ -2160,7 +2160,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 3,AL_FindId("Denwatcher's Shoulders", MythicTier), "", "=q4=Denwatcher's Shoulders", "=ds=#s3#, #a3#", "", "4.62%"};
 		{ 4,AL_FindId("Bulky Iron Spaulders", MythicTier), "", "=q4=Bulky Iron Spaulders", "=ds=#s3#, #a4#", "", "3.96%"};
 		{ 5,AL_FindId("Hedgecutter", MythicTier), "", "=q4=Hedgecutter", "=ds=#h1#, #w1#", "", "4.94%"};
-		{ 7, -18268, "", "=q1=Gordok Inner Door Key", "=ds=#e9#", "", "100%"};
+		{ 7, 18268, "", "=q1=Gordok Inner Door Key", "=ds=#e9#", "", "100%"};
 		{ 16,AL_FindId("Robe of Combustion", MythicTier), "", "=q4=Robe of Combustion", "=ds=#s5#, #a1#", "", "6.57%"};
 		{ 17,AL_FindId("Hyena Hide Belt", MythicTier), "", "=q4=Hyena Hide Belt", "=ds=#s10#, #a2#", "", "6.61%"};
 		{ 18,AL_FindId("Modest Armguards", MythicTier), "", "=q4=Modest Armguards", "=ds=#s8#, #a3#", "", "7.12%"};
@@ -2175,8 +2175,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 
 	AtlasLoot_Data["DMNStomperKreeg"] = {
 		{ 1,AL_FindId("Kreeg's Mug", MythicTier), "", "=q4=Kreeg's Mug", "=ds=#s15#", "", "40.24%"};
-		{ 2, -18269, "", "=q3=Gordok Green Grog", "=ds=#e4#", "", "100%"};
-		{ 3, -18284, "", "=q3=Kreeg's Stout Beatdown", "=ds=#e4#", "", "100%"};
+		{ 2, 18269, "", "=q3=Gordok Green Grog", "=ds=#e4#", "", "100%"};
+		{ 3, 18284, "", "=q3=Kreeg's Stout Beatdown", "=ds=#e4#", "", "100%"};
 		Prev = "DMNGuardMoldar";
 		Next = "DMNGuardFengus";
 		Dif = MythicTier;
@@ -2192,37 +2192,37 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 7,AL_FindId("Ogre Pocket Knife", MythicTier), "", "=q4=Ogre Pocket Knife", "=ds=#h1#, #w10#", "", "11.02%"};
 		{ 8,AL_FindId("Unsophisticated Hand Cannon", MythicTier), "", "=q4=Unsophisticated Hand Cannon", "=ds=#w5#", "", "9.07%"};
 		{ 16, 0, "INV_Box_01", "=q6=#x7#", ""};
-		{ 17, -18266, "", "=q1=Gordok Courtyard Key", "=ds=#e9#", "", "100%"};
+		{ 17, 18266, "", "=q1=Gordok Courtyard Key", "=ds=#e9#", "", "100%"};
 		Prev = "DMNStomperKreeg";
 		Next = "DMNThimblejack";
 		Dif = MythicTier;
 	};
 
 	AtlasLoot_Data["DMNThimblejack"] = {
-		{ 1, -18517, "", "=q4=Pattern: Chromatic Cloak", "=ds=#p7# (300)", "", "0.92%"};
-		{ 2, -18518, "", "=q4=Pattern: Hide of the Wild", "=ds=#p7# (300)", "", "1.29%"};
-		{ 3, -18519, "", "=q4=Pattern: Shifting Cloak", "=ds=#p7# (300)", "", "1.14%"};
-		{ 4, -18414, "", "=q4=Pattern: Belt of the Archmage", "=ds=#p8# (300)", "", "1.00%"};
-		{ 6, -18418, "", "=q3=Pattern: Cloak of Warding", "=ds=#p8# (300)", "", "9.75%"};
-		{ 7, -18415, "", "=q3=Pattern: Felcloth Gloves", "=ds=#p8# (300)", "", "9.62%"};
-		{ 8, -18416, "", "=q3=Pattern: Inferno Gloves", "=ds=#p8# (300)", "", "10.66%"};
-		{ 9, -18417, "", "=q3=Pattern: Mooncloth Gloves", "=ds=#p8# (300)", "", "10.28%"};
-		{ 10, -18514, "", "=q3=Pattern: Girdle of Insight", "=ds=#p7# (300)", "", "10.90%"};
-		{ 11, -18515, "", "=q3=Pattern: Mongoose Boots", "=ds=#p7# (300)", "", "11.18%"};
-		{ 12, -18516, "", "=q3=Pattern: Swift Flight Bracers", "=ds=#p7# (300)", "", "10.26%"};
+		{ 1, 18517, "", "=q4=Pattern: Chromatic Cloak", "=ds=#p7# (300)", "", "0.92%"};
+		{ 2, 18518, "", "=q4=Pattern: Hide of the Wild", "=ds=#p7# (300)", "", "1.29%"};
+		{ 3, 18519, "", "=q4=Pattern: Shifting Cloak", "=ds=#p7# (300)", "", "1.14%"};
+		{ 4, 18414, "", "=q4=Pattern: Belt of the Archmage", "=ds=#p8# (300)", "", "1.00%"};
+		{ 6, 18418, "", "=q3=Pattern: Cloak of Warding", "=ds=#p8# (300)", "", "9.75%"};
+		{ 7, 18415, "", "=q3=Pattern: Felcloth Gloves", "=ds=#p8# (300)", "", "9.62%"};
+		{ 8, 18416, "", "=q3=Pattern: Inferno Gloves", "=ds=#p8# (300)", "", "10.66%"};
+		{ 9, 18417, "", "=q3=Pattern: Mooncloth Gloves", "=ds=#p8# (300)", "", "10.28%"};
+		{ 10, 18514, "", "=q3=Pattern: Girdle of Insight", "=ds=#p7# (300)", "", "10.90%"};
+		{ 11, 18515, "", "=q3=Pattern: Mongoose Boots", "=ds=#p7# (300)", "", "11.18%"};
+		{ 12, 18516, "", "=q3=Pattern: Swift Flight Bracers", "=ds=#p7# (300)", "", "10.26%"};
 		{ 14, 0, "INV_Box_01", "=q6=#x6#", ""};
-		{ 15, -18240, "", "=q2=Ogre Tannin", "=ds=#m3#", "", "100%"};
-		{ 16,AL_FindId("Chromatic Cloak", MythicTier), "", "=q4=Chromatic Cloak", "=ds=#s4#"};
-		{ 17,AL_FindId("Hide of the Wild", MythicTier), "", "=q4=Hide of the Wild", "=ds=#s4#"};
-		{ 18,AL_FindId("Shifting Cloak", MythicTier), "", "=q4=Shifting Cloak", "=ds=#s4#"};
-		{ 19,AL_FindId("Belt of the Archmage", MythicTier), "", "=q4=Belt of the Archmage", "=ds=#s10#, #a1#"};
-		{ 21,AL_FindId("Cloak of Warding", MythicTier), "", "=q4=Cloak of Warding", "=ds=#s4#"};
-		{ 22,AL_FindId("Felcloth Gloves", MythicTier), "", "=q4=Felcloth Gloves", "=ds=#s9#, #a1#"};
-		{ 23,AL_FindId("Inferno Gloves", MythicTier), "", "=q4=Inferno Gloves", "=ds=#s9#, #a1#"};
-		{ 24,AL_FindId("Mooncloth Gloves", MythicTier), "", "=q4=Mooncloth Gloves", "=ds=#s9#, #a1#"};
-		{ 25,AL_FindId("Girdle of Insight", MythicTier), "", "=q4=Girdle of Insight", "=ds=#s10#, #a2#"};
-		{ 26,AL_FindId("Mongoose Boots", MythicTier), "", "=q4=Mongoose Boots", "=ds=#s12#, #a2#"};
-		{ 27,AL_FindId("Swift Flight Bracers", MythicTier), "", "=q4=Swift Flight Bracers", "=ds=#s8#, #a3#"};
+		{ 15, 18240, "", "=q2=Ogre Tannin", "=ds=#m3#", "", "100%"};
+		{ 16,AL_FindId("Chromatic Cloak", MythicTier), "", "=q4=Chromatic Cloak", "=ds=#s4#"}; --These only have up to Mythic0 added to game 
+		{ 17,AL_FindId("Hide of the Wild", MythicTier), "", "=q4=Hide of the Wild", "=ds=#s4#"};--1
+		{ 18,AL_FindId("Shifting Cloak", MythicTier), "", "=q4=Shifting Cloak", "=ds=#s4#"};--2
+		{ 19,AL_FindId("Belt of the Archmage", MythicTier), "", "=q4=Belt of the Archmage", "=ds=#s10#, #a1#"};--3
+		{ 21,AL_FindId("Cloak of Warding", MythicTier), "", "=q4=Cloak of Warding", "=ds=#s4#"};--4
+		{ 22,AL_FindId("Felcloth Gloves", MythicTier), "", "=q4=Felcloth Gloves", "=ds=#s9#, #a1#"};--5
+		{ 23,AL_FindId("Inferno Gloves", MythicTier), "", "=q4=Inferno Gloves", "=ds=#s9#, #a1#"};--6
+		{ 24,AL_FindId("Mooncloth Gloves", MythicTier), "", "=q4=Mooncloth Gloves", "=ds=#s9#, #a1#"};--7
+		{ 25,AL_FindId("Girdle of Insight", MythicTier), "", "=q4=Girdle of Insight", "=ds=#s10#, #a2#"};--8
+		{ 26,AL_FindId("Mongoose Boots", MythicTier), "", "=q4=Mongoose Boots", "=ds=#s12#, #a2#"};--9
+		{ 27,AL_FindId("Swift Flight Bracers", MythicTier), "", "=q4=Swift Flight Bracers", "=ds=#s8#, #a3#"};--10
 		Prev = "DMNGuardFengus";
 		Next = "DMNGuardSlipkik";
 		Dif = MythicTier;
@@ -2276,9 +2276,9 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 6,AL_FindId("Band of the Ogre King", MythicTier), "", "=q4=Band of the Ogre King", "=ds=#s13#", "", "14.96%"};
 		{ 7,AL_FindId("Brightly Glowing Stone", MythicTier), "", "=q4=Brightly Glowing Stone", "=ds=#s15#", "", "20.21%"};
 		{ 8,AL_FindId("Barbarous Blade", MythicTier), "", "=q4=Barbarous Blade", "=ds=#h2#, #w10#", "", "16.44%"};
-		{ 16, -19258, "", "=q3=Ace of Warlords", "=ds=#e16#", "", "1.84%"};
-		{ 18, -18780, "", "=q3=Top Half of Advanced Armorsmithing: Volume I", "=ds=#m3#", "", "6.00%"};
-		{ 19, -12727, "", "=q3=Plans: Enchanted Thorium Breastplate", "=q1=#m4#: =ds=#p2# (300)"};
+		{ 16, 19258, "", "=q3=Ace of Warlords", "=ds=#e16#", "", "1.84%"};
+		{ 18, 18780, "", "=q3=Top Half of Advanced Armorsmithing: Volume I", "=ds=#m3#", "", "6.00%"};
+		{ 19, 12727, "", "=q3=Plans: Enchanted Thorium Breastplate", "=q1=#m4#: =ds=#p2# (300)"};
 		Prev = "DMNChoRush";
 		Next = "DMNTRIBUTERUN";
 		Dif = MythicTier;
@@ -2341,7 +2341,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 3, AL_FindId("Mindtap Talisman", MythicTier), "", "=q4=Mindtap Talisman", "=ds=#s14#", "", "7.45%"};
 		{ 5, AL_FindId("Amplifying Cloak", MythicTier), "", "=q4=Amplifying Cloak", "=ds=#s4#", "", "21.44%"};
 		{ 6, AL_FindId("Magically Sealed Bracers", MythicTier), "", "=q4=Magically Sealed Bracers", "=ds=#s8#, #a4#", "", "24.36%"};
-		{ 7, -22309, "", "=q2=Pattern: Big Bag of Enchantment", "=ds=#p8# (300)"};
+		{ 7, 22309, "", "=q2=Pattern: Big Bag of Enchantment", "=ds=#p8# (300)"};
 		Prev = "DMWIllyannaRavenoak";
 		Next = "DMWTsuzee";
 		Dif = MythicTier;
@@ -2389,7 +2389,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 5, AL_FindId("Eldritch Reinforced Legplates", MythicTier), "", "=q4=Eldritch Reinforced Legplates", "=ds=#s11#, #a4#", "", "15.87%"};
 		{ 6, AL_FindId("Emerald Flame Ring", MythicTier), "", "=q4=Emerald Flame Ring", "=ds=#s13#", "", "14.55%"};
 		{ 8, 0, "INV_Box_01", "=q6=#x8#", ""};
-		{ 9, -18336, "", "=q1=Gauntlet of Gordok Might", "=ds=#m3#"};
+		{ 9, 18336, "", "=q1=Gauntlet of Gordok Might", "=ds=#m3#"};
 		{ 16, AL_FindId("Distracting Dagger", MythicTier), "", "=q4=Distracting Dagger", "=ds=#h4#, #w4#", "", "14.70%"};
 		{ 17, AL_FindId("Mind Carver", MythicTier), "", "=q4=Mind Carver", "=ds=#h3#, #w10#", "", "14.62%"};
 		{ 18, AL_FindId("Timeworn Mace", MythicTier), "", "=q4=Timeworn Mace", "=ds=#h1#, #w6#", "", "14.40%"};
@@ -2802,8 +2802,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 5, AL_FindId("Wraithplate Leggings", MythicTier), "", "=q4=Wraithplate Leggings", "=ds=#s11#, #a4#", "", "8.59%"};
 		{ 6, AL_FindId("Barovian Family Sword", MythicTier), "", "=q4=Barovian Family Sword", "=ds=#h2#, #w10#", "", "8.27%"};
 		{ 7, AL_FindId("Staff of Metanoia", MythicTier), "", "=q4=Staff of Metanoia", "=ds=#w9#", "", "8.67%"};
-		{ 9, -13725, "", "=q1=Krastinov's Bag of Horrors", "=ds=#m3#", "", "100%"};
-		{ 10, -13523, "", "=q1=Blood of Innocents", "=ds=#m3#", "", "17.8%"};
+		{ 9, 13725, "", "=q1=Krastinov's Bag of Horrors", "=ds=#m3#", "", "100%"};
+		{ 10, 13523, "", "=q1=Blood of Innocents", "=ds=#m3#", "", "17.8%"};
 		{ 16, AL_FindId("Dreadmist Mantle", MythicTier), "", "=q4=Dreadmist Mantle", "=ds=#s3#, #a1# (D1, #c8#)", "", "12.20%"};
 		Prev = "SCHOLOKirtonostheHerald";
 		Next = "SCHOLORattlegore";
@@ -2817,10 +2817,10 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 4, AL_FindId("Corpselight Greaves", MythicTier), "", "=q4=Corpselight Greaves", "=ds=#s12#, #a4#", "", "10.22%"};
 		{ 5, AL_FindId("Frightskull Shaft", MythicTier), "", "=q4=Frightskull Shaft", "=ds=#h2#, #w6#", "", "9.55%"};
 		{ 6, AL_FindId("Rattlecage Buckler", MythicTier), "", "=q4=Rattlecage Buckler", "=ds=#w8#", "", "9.16%"};
-		{ 8, -13873, "", "=q1=Viewing Room Key", "=ds=#e9#", "", "100%"};
+		{ 8, 13873, "", "=q1=Viewing Room Key", "=ds=#e9#", "", "100%"};
 		{ 16, AL_FindId("Shadowcraft Boots", MythicTier), "", "=q4=Shadowcraft Boots", "=ds=#s12#, #a2# (D1, #c6#)", "", "14.32%"};
-		{ 18, -18782, "", "=q3=Top Half of Advanced Armorsmithing: Volume II", "=ds=#m3#", "", "5.71%"};
-		{ 19, -12726, "", "=q3=Plans: Enchanted Thorium Leggings", "=q1=#m4#: =ds=#p2# (300)"};
+		{ 18, 18782, "", "=q3=Top Half of Advanced Armorsmithing: Volume II", "=ds=#m3#", "", "5.71%"};
+		{ 19, 12726, "", "=q3=Plans: Enchanted Thorium Leggings", "=q1=#m4#: =ds=#p2# (300)"};
 		Prev = "SCHOLOJandiceBarov";
 		Next = "SCHOLODeathKnight";
 		Dif = MythicTier;
@@ -2831,7 +2831,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 2, AL_FindId("Specter's Blade", MythicTier), "", "=q4=Specter's Blade", "=ds=#h1#, #w4#", "", "15.72%"};
 		{ 3, AL_FindId("Malicious Axe", MythicTier), "", "=q4=Malicious Axe", "=ds=#h2#, #w1#", "", "24.75%"};
 		{ 4, AL_FindId("Oblivion's Touch", MythicTier), "", "=q4=Oblivion's Touch", "=ds=#w12#", "", "17.17%"};
-		{ 6, -18749, "", "=q1=Charger's Lost Soul", "=ds=#m3#", "", "10.93%"};
+		{ 6, 18749, "", "=q1=Charger's Lost Soul", "=ds=#m3#", "", "10.93%"};
 		Prev = "SCHOLORattlegore";
 		Next = "SCHOLOVectus";
 		Dif = MythicTier;
@@ -2867,14 +2867,14 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 12, AL_FindId("Bonechill Hammer", MythicTier), "", "=q4=Bonechill Hammer", "=ds=#h1#, #w6#", "", "11.92%"};
 		{ 13, AL_FindId("Intricately Runed Shield", MythicTier), "", "=q4=Intricately Runed Shield", "=ds=#w8#", "", "13.04%"};
 		{ 16, AL_FindId("Magister's Mantle", MythicTier), "", "=q4=Magister's Mantle", "=ds=#s3#, #a1# (D1, #c3#)", "", "11.93%"};
-		{ 18, -13521, "", "=q2=Recipe: Flask of Supreme Power", "=ds=#p1# (300)", "", "2.92%"};
-		{ 20, -13626, "", "=q1=Human Head of Ras Frostwhisper", "=ds=#m3#", "", "100%"};
-		{ 21, -13986, "", "=q3=Crown of Caer Darrow", "=q1=#m4#: =ds=#s1#, #a1#"};
-		{ 22, -13984, "", "=q3=Darrowspike", "=q1=#m4#: =ds=#h1#, #w4#"};
-		{ 23, -13982, "", "=q3=Warblade of Caer Darrow", "=q1=#m4#: =ds=#h2#, #w10#"};
-		{ 24, -14002, "", "=q3=Darrowshire Strongguard", "=q1=#m4#: =ds=#w8#"};
+		{ 18, 13521, "", "=q2=Recipe: Flask of Supreme Power", "=ds=#p1# (300)", "", "2.92%"};
+		{ 20, 13626, "", "=q1=Human Head of Ras Frostwhisper", "=ds=#m3#", "", "100%"};
+		{ 21, 13986, "", "=q3=Crown of Caer Darrow", "=q1=#m4#: =ds=#s1#, #a1#"};
+		{ 22, 13984, "", "=q3=Darrowspike", "=q1=#m4#: =ds=#h1#, #w4#"};
+		{ 23, 13982, "", "=q3=Warblade of Caer Darrow", "=q1=#m4#: =ds=#h2#, #w10#"};
+		{ 24, 14002, "", "=q3=Darrowshire Strongguard", "=q1=#m4#: =ds=#w8#"};
 		{ 26, 0, "INV_Box_01", "=q6=#x12#", ""};
-		{ 27, -12736, "", "=q1=Frostwhisper's Embalming Fluid", "=ds=#m3#"};
+		{ 27, 12736, "", "=q1=Frostwhisper's Embalming Fluid", "=ds=#m3#"};
 		Prev = "SCHOLOMarduk";
 		Next = "SCHOLOKormok";
 		Dif = MythicTier;
@@ -2887,8 +2887,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 4, AL_FindId("Band of the Steadfast Hero", MythicTier), "", "=q4=Band of the Steadfast Hero", "=ds=#s13#", "", "15.42%"};
 		{ 5, AL_FindId("Blade of Necromancy", MythicTier), "", "=q4=Blade of Necromancy", "=ds=#h1#, #w10#", "", "25.42%"};
 		{ 6, AL_FindId("Hammer of Divine Might", MythicTier), "", "=q4=Hammer of Divine Might", "=ds=#h2#, #w6#", "", "12.50%"};
-		{ 8, -21984, "", "=q1=Left Piece of Lord Valthalak's Amulet", "=ds=#m3#"};
-		{ 9, -22046, "", "=q1=Right Piece of Lord Valthalak's Amulet", "=ds=#m3#"};
+		{ 8, 21984, "", "=q1=Left Piece of Lord Valthalak's Amulet", "=ds=#m3#"};
+		{ 9, 22046, "", "=q1=Right Piece of Lord Valthalak's Amulet", "=ds=#m3#"};
 		Prev = "SCHOLORasFrostwhisper";
 		Next = "SCHOLOInstructorMalicia";
 		Dif = MythicTier;
@@ -2957,7 +2957,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 27, AL_FindId("Totem of Sustaining", MythicTier), "", "=q4=Totem of Sustaining", "=ds=#s16#, #w15#", "", "3.5%"};
 		{ 28, AL_FindId("Hammer of the Vesper", MythicTier), "", "=q4=Hammer of the Vesper", "=ds=#h1#, #w6#", "", "2.54%"};
 		{ 29, AL_FindId("Ancient Bone Bow", MythicTier), "", "=q4=Ancient Bone Bow", "=ds=#w2#", "", "3.21%"};
-		{ 30, -13523, "", "=q1=Blood of Innocents", "=ds=#m3#", "", "25.7%"};
+		{ 30, 13523, "", "=q1=Blood of Innocents", "=ds=#m3#", "", "25.7%"};
 		Prev = "SCHOLOInstructorMalicia";
 		Next = "SCHOLOLorekeeperPolkelt";
 		Dif = MythicTier;
@@ -3100,8 +3100,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 
 	AtlasLoot_Data["SCHOLODarkmasterGandling"] = {
 		{ 1, AL_FindId("Headmaster's Charge", MythicTier), "", "=q4=Headmaster's Charge", "=ds=#w9#", "", "1.11%"};
-		{ 2, -14514, "", "=q4=Pattern: Robe of the Void", "=ds=#p8# (300) =q1=#m1# =ds=#c8#", "", "6.71%"};
-		{ 3, -14153, "", "=q4=Robe of the Void", "=ds=#s5#, #a1# =q1=#m1# =ds=#c8#"};
+		{ 2, 14514, "", "=q4=Pattern: Robe of the Void", "=ds=#p8# (300) =q1=#m1# =ds=#c8#", "", "6.71%"};
+		{ 3, 14153, "", "=q4=Robe of the Void", "=ds=#s5#, #a1# =q1=#m1# =ds=#c8#"};
 		{ 4, AL_FindId("Tombstone Breastplate", MythicTier), "", "=q4=Tombstone Breastplate", "=ds=#s5#, #a2#", "", "8.96%"};
 		{ 5, AL_FindId("Boots of the Shrieker", MythicTier), "", "=q4=Boots of the Shrieker", "=ds=#s12#, #a2#", "", "10.75%"};
 		{ 7, AL_FindId("Detention Strap", MythicTier), "", "=q4=Detention Strap", "=ds=#s10#, #a3#", "", "0.24%"};
@@ -3119,8 +3119,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 22, AL_FindId("Coif of Elements", MythicTier), "", "=q4=Coif of Elements", "=ds=#s1#, #a3# (D1, #c7#)", "", "2.86%"};
 		{ 23, AL_FindId("Helm of Valor", MythicTier), "", "=q4=Helm of Valor", "=ds=#s1#, #a4# (D1, #c9#)", "", "6.54%"};
 		{ 24, AL_FindId("Lightforge Helm", MythicTier), "", "=q4=Lightforge Helm", "=ds=#s1#, #a4# (D1, #c4#)", "", "5.32%"};
-		{ 26, -19276, "", "=q3=Ace of Portals", "=ds=#e16#", "", "2.20%"};
-		{ 28, -13501, "", "=q2=Recipe: Major Mana Potion", "=ds=#p1# (295)", "", "8.64%"};
+		{ 26, 19276, "", "=q3=Ace of Portals", "=ds=#e16#", "", "2.20%"};
+		{ 28, 13501, "", "=q2=Recipe: Major Mana Potion", "=ds=#p1# (295)", "", "8.64%"};
 		Prev = "SCHOLOLadyIlluciaBarov";
 		Next = "SCHOLOTrash";
 		Dif = MythicTier;
@@ -3134,12 +3134,12 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 5, AL_FindId("Bonebrace Hauberk", MythicTier), "", "=q4=Bonebrace Hauberk", "=ds=#s5#, #a3#", "", "0.01%"};
 		{ 6, AL_FindId("Belt of the Ordained", MythicTier), "", "=q4=Belt of the Ordained", "=ds=#s10#, #a4#", "", "0.01%"};
 		{ 7, AL_FindId("Innervating Band", MythicTier), "", "=q4=Innervating Band", "=ds=#s13#", "", "0.01%"};
-		{ 9, -16254, "", "=q3=Formula: Enchant Weapon - Lifestealing", "=ds=#p4# (300) =q1=#n66#", "", "0.93%"};
-		{ 10, -16255, "", "=q2=Formula: Enchant 2H Weapon - Major Spirit", "=ds=#p4# (300) =q1=#n67#", "", "0.88%"};
-		{ 11, -15773, "", "=q2=Pattern: Wicked Leather Armor", "=ds=#p7# (300) =q1=#n66#", "", "3.03%"};
-		{ 12, -15776, "", "=q2=Pattern: Runic Leather Armor", "=ds=#p7# (300) =q1=#n68#", "", "1.62%"};
-		{ 14, -12753, "", "=q2=Skin of Shadow", "=ds=#m3#"};
-		{ 15, -13920, "", "=q1=Healthy Dragon Scale", "=ds=#m2#"};
+		{ 9, 16254, "", "=q3=Formula: Enchant Weapon - Lifestealing", "=ds=#p4# (300) =q1=#n66#", "", "0.93%"};
+		{ 10, 16255, "", "=q2=Formula: Enchant 2H Weapon - Major Spirit", "=ds=#p4# (300) =q1=#n67#", "", "0.88%"};
+		{ 11, 15773, "", "=q2=Pattern: Wicked Leather Armor", "=ds=#p7# (300) =q1=#n66#", "", "3.03%"};
+		{ 12, 15776, "", "=q2=Pattern: Runic Leather Armor", "=ds=#p7# (300) =q1=#n68#", "", "1.62%"};
+		{ 14, 12753, "", "=q2=Skin of Shadow", "=ds=#m3#"};
+		{ 15, 13920, "", "=q1=Healthy Dragon Scale", "=ds=#m2#"};
 		{ 16, AL_FindId("Dreadmist Wraps", MythicTier), "", "=q4=Dreadmist Wraps", "=ds=#s9#, #a1# (D1)", "", "0.03%"};
 		{ 17, AL_FindId("Magister's Gloves", MythicTier), "", "=q4=Magister's Gloves", "=ds=#s9#, #a1# (D1)", "", "1.27%"};
 		{ 18, AL_FindId("Magister's Belt", MythicTier), "", "=q4=Magister's Belt", "=ds=#s8#, #a1# (D1)", "", "0.22%"};
@@ -3311,10 +3311,10 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 7, AL_FindId("Willey's Back Scratcher", MythicTier), "", "=q4=Willey's Back Scratcher", "=ds=#h3#, #w13#", "", "6.26%"};
 		{ 8, AL_FindId("Redemption", MythicTier), "", "=q4=Redemption", "=ds=#w9#", "", "7.04%"};
 		{ 9, AL_FindId("Willey's Portable Howitzer", MythicTier), "", "=q4=Willey's Portable Howitzer", "=ds=#w5#", "", "10.71%"};
-		{ 10, -13377, "", "=q3=Miniature Cannon Balls", "=ds=#w18#", "", "66.61%"};
+		{ 10, 13377, "", "=q3=Miniature Cannon Balls", "=ds=#w18#", "", "66.61%"};
 		{ 16, AL_FindId("Shadowcraft Spaulders", MythicTier), "", "=q4=Shadowcraft Spaulders", "=ds=#s3#, #a2# (D1, #c6#)", "", "10.68%"};
-		{ 18, -12839, "", "=q3=Plans: Heartseeker", "=ds=#p2# (300)", "", "4.98%"};
-		{ 19, -12783, "", "=q3=Heartseeker", "=ds=#h1#, #w4#"};
+		{ 18, 12839, "", "=q3=Plans: Heartseeker", "=ds=#p2# (300)", "", "4.98%"};
+		{ 19, 12783, "", "=q3=Heartseeker", "=ds=#h1#, #w4#"};
 		Prev = "STRATBSPlansSerenity";
 		Next = "STRATArchivistGalford";
 		Dif = MythicTier;
@@ -3324,11 +3324,11 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 1, AL_FindId("Archivist Cape", MythicTier), "", "=q4=Archivist Cape", "=ds=#s4#", "", "18.45%"};
 		{ 2, AL_FindId("Ash Covered Boots", MythicTier), "", "=q4=Ash Covered Boots", "=ds=#s12#, #a2#", "", "16.30%"};
 		{ 3, AL_FindId("Foresight Girdle", MythicTier), "", "=q4=Foresight Girdle", "=ds=#s10#, #a3#", "", "18.24%"};
-		{ 4, -13385, "", "=q3=Tome of Knowledge", "=ds=#s15#", "", "9.87%"};
-		{ 5, -22897, "", "=q3=Tome of Conjure Food VII", "=ds=#e10# =q1=#m1# =ds=#c3#", "", "4.86%"};
-		{ 7, -12811, "", "=q2=Righteous Orb", "=ds=#e8#", "", "61.3%"};
+		{ 4, 13385, "", "=q3=Tome of Knowledge", "=ds=#s15#", "", "9.87%"};
+		{ 5, 22897, "", "=q3=Tome of Conjure Food VII", "=ds=#e10# =q1=#m1# =ds=#c3#", "", "4.86%"};
+		{ 7, 12811, "", "=q2=Righteous Orb", "=ds=#e8#", "", "61.3%"};
 		{ 9, 0, "INV_Box_01", "=q6=#x11#", ""};
-		{ 10, -14679, "", "=q1=Of Love and Family", "=ds=#m3#"};
+		{ 10, 14679, "", "=q1=Of Love and Family", "=ds=#m3#"};
 		{ 16, AL_FindId("Devout Gloves", MythicTier), "", "=q4=Devout Gloves", "=ds=#s9#, #a1# (D1, #c5#)", "", "12.46%"};
 		Prev = "STRATCannonMasterWilley";
 		Next = "STRATBalnazzar";
@@ -3337,8 +3337,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 
 	AtlasLoot_Data["STRATBalnazzar"] = {
 		{ 1, AL_FindId("Book of the Dead", MythicTier), "", "=q4=Book of the Dead", "=ds=#s15#", "", "1.37%"};
-		{ 2, -14512, "", "=q4=Pattern: Truefaith Vestments", "=ds=#p8# (300)", "", "3.02%"};
-		{ 3, -14154, "", "=q4=Truefaith Vestments", "=ds=#s5#, #a1# =q1=#m1# =ds=#c5#"};
+		{ 2, 14512, "", "=q4=Pattern: Truefaith Vestments", "=ds=#p8# (300)", "", "3.02%"};
+		{ 3, 14154, "", "=q4=Truefaith Vestments", "=ds=#s5#, #a1# =q1=#m1# =ds=#c5#"};
 		{ 5, AL_FindId("Shroud of the Nathrezim", MythicTier), "", "=q4=Shroud of the Nathrezim", "=ds=#s3#, #a1#", "", "10.54%"};
 		{ 6, AL_FindId("Fire Striders", MythicTier), "", "=q4=Fire Striders", "=ds=#s12#, #a1#", "", "14.84%"};
 		{ 7, AL_FindId("Wyrmtongue Shoulders", MythicTier), "", "=q4=Wyrmtongue Shoulders", "=ds=#s3#, #a2#", "", "11.58%"};
@@ -3349,8 +3349,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 12, AL_FindId("Demonshear", MythicTier), "", "=q4=Demonshear", "=ds=#h2#, #w10#", "", "13.94%"};
 		{ 13, AL_FindId("Hammer of the Grand Crusader", MythicTier), "", "=q4=Hammer of the Grand Crusader", "=ds=#h2#, #w6#", "", "11.91%"};
 		{ 16, AL_FindId("Lightforge Boots", MythicTier), "", "=q4=Lightforge Boots", "=ds=#s12#, #a4# (D1, #c4#)", "", "11.11%"};
-		{ 18, -13520, "", "=q2=Recipe: Flask of Distilled Wisdom", "=ds=#p1# (300)", "", "1.94%"};
-		{ 20, -13250, "", "=q1=Head of Balnazzar", "=ds=#m2#"};
+		{ 18, 13520, "", "=q2=Recipe: Flask of Distilled Wisdom", "=ds=#p1# (300)", "", "1.94%"};
+		{ 20, 13250, "", "=q1=Head of Balnazzar", "=ds=#m2#"};
 		Prev = "STRATArchivistGalford";
 		Next = "STRATSothosJarien";
 		Dif = MythicTier;
@@ -3363,8 +3363,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 4, AL_FindId("Amulet of the Redeemed", MythicTier), "", "=q4=Amulet of the Redeemed", "=ds=#s2#", "", "14.03%"};
 		{ 5, AL_FindId("Band of Mending", MythicTier), "", "=q4=Band of Mending", "=ds=#s13#", "", "17.19%"};
 		{ 6, AL_FindId("Scepter of Interminable Focus", MythicTier), "", "=q4=Scepter of Interminable Focus", "=ds=#s15#", "", "28.51%"};
-		{ 8, -21984, "", "=q1=Left Piece of Lord Valthalak's Amulet", "=ds=#m3#"};
-		{ 9, -22046, "", "=q1=Right Piece of Lord Valthalak's Amulet", "=ds=#m3#"};
+		{ 8, 21984, "", "=q1=Left Piece of Lord Valthalak's Amulet", "=ds=#m3#"};
+		{ 9, 22046, "", "=q1=Right Piece of Lord Valthalak's Amulet", "=ds=#m3#"};
 		Prev = "STRATBalnazzar";
 		Next = "STRATStonespine";
 		Dif = MythicTier;
@@ -3388,7 +3388,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 7, AL_FindId("Chillhide Bracers", MythicTier), "", "=q4=Chillhide Bracers", "=ds=#s8#, #a2#", "", "9.71%"};
 		{ 8, AL_FindId("Windshrieker Pauldrons", MythicTier), "", "=q4=Windshrieker Pauldrons", "=ds=#s3#, #a3#", "", "9.75%"};
 		{ 9, AL_FindId("Banshee's Touch", MythicTier), "", "=q4=Banshee's Touch", "=ds=#s9#, #a4#", "", "8.27%"};
-		{ 10, -13514, "", "=q2=Wail of the Banshee", "=ds=#m8#", "", "7.73%"};
+		{ 10, 13514, "", "=q2=Wail of the Banshee", "=ds=#m8#", "", "7.73%"};
 		{ 16, AL_FindId("Dreadmist Sandals", MythicTier), "", "=q4=Dreadmist Sandals", "=ds=#s12#, #a1# (D1, #c8#)", "", "13.16%"};
 		Prev = "STRATStonespine";
 		Next = "STRATBlackGuardSwordsmith";
@@ -3419,7 +3419,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 7, AL_FindId("Crypt Stalker Leggings", MythicTier), "", "=q4=Crypt Stalker Leggings", "=ds=#s11#, #a2#", "", "10.17%"};
 		{ 8, AL_FindId("Darkspinner Claws", MythicTier), "", "=q4=Darkspinner Claws", "=ds=#s9#, #a3#", "", "9.69%"};
 		{ 9, AL_FindId("Acid-etched Pauldrons", MythicTier), "", "=q4=Acid-etched Pauldrons", "=ds=#s3#, #a4#", "", "8.11%"};
-		{ 10, -13508, "", "=q2=Eye of Arachnida", "=ds=#m8#", "", "7.39%"};
+		{ 10, 13508, "", "=q2=Eye of Arachnida", "=ds=#m8#", "", "7.39%"};
 		{ 16, AL_FindId("Beaststalker's Boots", MythicTier), "", "=q4=Beaststalker's Boots", "=ds=#s12#, #a3# (D1, #c2#)", "", "13.62%"};
 		Prev = "STRATBSPlansCorruption";
 		Next = "STRATMalekithePallid";
@@ -3435,10 +3435,10 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 7, AL_FindId("Flamescarred Girdle", MythicTier), "", "=q4=Flamescarred Girdle", "=ds=#s10#, #a2#", "", "9.57%"};
 		{ 8, AL_FindId("Twilight Void Bracers", MythicTier), "", "=q4=Twilight Void Bracers", "=ds=#s8#, #a3#", "", "9.49%"};
 		{ 9, AL_FindId("Lavawalker Greaves", MythicTier), "", "=q4=Lavawalker Greaves", "=ds=#s12#, #a4#", "", "9.39%"};
-		{ 10, -13509, "", "=q2=Clutch of Foresight", "=ds=#m8#", "", "6.95%"};
+		{ 10, 13509, "", "=q2=Clutch of Foresight", "=ds=#m8#", "", "6.95%"};
 		{ 16, AL_FindId("Devout Sandals", MythicTier), "", "=q4=Devout Sandals", "=ds=#s12#, #a1# (D1, #c5#)", "", "13.64%"};
-		{ 18, -12833, "", "=q3=Plans: Hammer of the Titans", "=ds=#p2# (300)", "", "5.86%"};
-		{ 19, -12796, "", "=q3=Hammer of the Titans", "=ds=#h2#, #w6#"};
+		{ 18, 12833, "", "=q3=Plans: Hammer of the Titans", "=ds=#p2# (300)", "", "5.86%"};
+		{ 19, 12796, "", "=q3=Hammer of the Titans", "=ds=#h2#, #w6#"};
 		Prev = "STRATNerubenkan";
 		Next = "STRATMagistrateBarthilas";
 		Dif = MythicTier;
@@ -3451,7 +3451,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 4, AL_FindId("Death Grips", MythicTier), "", "=q4=Death Grips", "=ds=#s9#, #a4#", "", "15.34%"};
 		{ 5, AL_FindId("Idol of Brutality", MythicTier), "", "=q4=Idol of Brutality", "=ds=#s16#, #w14#", "", "2.37%"};
 		{ 6, AL_FindId("Peacemaker", MythicTier), "", "=q4=Peacemaker", "=ds=#w7#", "", "14.22%"};
-		{ 8, -12382, "", "=q2=Key to the City", "=ds=#e9#", "", "100%"};
+		{ 8, 12382, "", "=q2=Key to the City", "=ds=#e9#", "", "100%"};
 		Prev = "STRATMalekithePallid";
 		Next = "STRATRamsteintheGorger";
 		Dif = MythicTier;
@@ -3472,7 +3472,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 
 	AtlasLoot_Data["STRATBaronRivendare"] = {
 		{ 1, AL_FindId("Runeblade of Baron Rivendare", MythicTier), "", "=q4=Runeblade of Baron Rivendare", "=ds=#h2#, #w10#", "", "1%"}; ---drop rate according to blue
-		{ 2, -13335, "", "=q4=Deathcharger's Reins", "=ds=#e12#", "", "0.10%"};
+		{ 2, 13335, "", "=q4=Deathcharger's Reins", "=ds=#e12#", "", "0.10%"};
 		{ 4, AL_FindId("Cape of the Black Baron", MythicTier), "", "=q4=Cape of the Black Baron", "=ds=#s4#", "", "8.75%"};
 		{ 5, AL_FindId("Thuzadin Mantle", MythicTier), "", "=q4=Thuzadin Mantle", "=ds=#s3#, #a1#", "", "4.16%"};
 		{ 6, AL_FindId("Robes of the Exalted", MythicTier), "", "=q4=Robes of the Exalted", "=ds=#s5#, #a1#", "", "11.51%"};
@@ -3494,10 +3494,10 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 22, AL_FindId("Beaststalker's Pants", MythicTier), "", "=q4=Beaststalker's Pants", "=ds=#s11#, #a3# (D1, #c2#)", "", "6.16%"};
 		{ 23, AL_FindId("Legplates of Valor", MythicTier), "", "=q4=Legplates of Valor", "=ds=#s11#, #a4# (D1, #c9#)", "", "5.74%"};
 		{ 24, AL_FindId("Lightforge Legplates", MythicTier), "", "=q4=Lightforge Legplates", "=ds=#s11#, #a4# (D1, #c4#)", "", "4.20%"};
-		{ 26, -13251, "", "=q1=Head of Baron Rivendare", "=ds=#m3#", "", "100%"};
-		{ 27, -13246, "", "=q3=Argent Avenger", "=q1=#m4#: =ds=#h1#, #w10#"};
-		{ 28, -13249, "", "=q3=Argent Crusader", "=q1=#m4#: =ds=#w9#"};
-		{ 29, -13243, "", "=q3=Argent Defender", "=q1=#m4#: =ds=#w8#"};
+		{ 26, 13251, "", "=q1=Head of Baron Rivendare", "=ds=#m3#", "", "100%"};
+		{ 27, 13246, "", "=q3=Argent Avenger", "=q1=#m4#: =ds=#h1#, #w10#"};
+		{ 28, 13249, "", "=q3=Argent Crusader", "=q1=#m4#: =ds=#w9#"};
+		{ 29, 13243, "", "=q3=Argent Defender", "=q1=#m4#: =ds=#w8#"};
 		Prev = "STRATRamsteintheGorger";
 		Next = "STRATTrash";
 		Dif = MythicTier;
@@ -3511,13 +3511,13 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 5, AL_FindId("Plaguehound Leggings", MythicTier), "", "=q4=Plaguehound Leggings", "=ds=#s11#, #a2#", "", "0.00%"};
 		{ 6, AL_FindId("Stratholme Militia Shoulderguard", MythicTier), "", "=q4=Stratholme Militia Shoulderguard", "=ds=#s3#, #a3#", "", "0.00%"};
 		{ 7, AL_FindId("Morlune's Bracer", MythicTier), "", "=q4=Morlune's Bracer", "=ds=#s8#, #a4#", "", "0.01%"};
-		{ 9, -16249, "", "=q2=Formula: Enchant 2H Weapon - Major Intellect", "=ds=#p4# (300) =q1=#n60#", "", "1.19%"};
-		{ 10, -16248, "", "=q2=Formula: Enchant Weapon - Unholy", "=ds=#p4# (295) =q1=#n61#", "", "0.36%"};
-		{ 11, -18658, "", "=q2=Schematic: Ultra-Flash Shadow Reflector", "=ds=#p5# (300) =q1=#n62#", "", "1.82%"};
-		{ 12, -16052, "", "=q2=Schematic: Voice Amplification Modulator", "=ds=#p5# (290) =q1=#n62#", "", "1.99%"};
-		{ 13, -15777, "", "=q2=Pattern: Runic Leather Shoulders", "=ds=#p7# (300) =q1=#n63#", "", "1.00%"};
-		{ 14, -15768, "", "=q2=Pattern: Wicked Leather Belt", "=ds=#p7# (300) =q1=#n64#", "", "0.85%"};
-		{ 15, -14495, "", "=q2=Pattern: Ghostweave Pants", "=ds=#p8# (290) =q1=#n65#", "", "2.13%"};
+		{ 9, 16249, "", "=q2=Formula: Enchant 2H Weapon - Major Intellect", "=ds=#p4# (300) =q1=#n60#", "", "1.19%"};
+		{ 10, 16248, "", "=q2=Formula: Enchant Weapon - Unholy", "=ds=#p4# (295) =q1=#n61#", "", "0.36%"};
+		{ 11, 18658, "", "=q2=Schematic: Ultra-Flash Shadow Reflector", "=ds=#p5# (300) =q1=#n62#", "", "1.82%"};
+		{ 12, 16052, "", "=q2=Schematic: Voice Amplification Modulator", "=ds=#p5# (290) =q1=#n62#", "", "1.99%"};
+		{ 13, 15777, "", "=q2=Pattern: Runic Leather Shoulders", "=ds=#p7# (300) =q1=#n63#", "", "1.00%"};
+		{ 14, 15768, "", "=q2=Pattern: Wicked Leather Belt", "=ds=#p7# (300) =q1=#n64#", "", "0.85%"};
+		{ 15, 14495, "", "=q2=Pattern: Ghostweave Pants", "=ds=#p8# (290) =q1=#n65#", "", "2.13%"};
 		{ 16, AL_FindId("Devout Bracers", MythicTier), "", "=q4=Devout Bracers", "=ds=#s8#, #a1# (D1)", "", "1.15%"};
 		{ 17, AL_FindId("Dreadmist Belt", MythicTier), "", "=q4=Dreadmist Belt", "=ds=#s10#, #a1# (D1)", "", "0.90%"};
 		{ 18, AL_FindId("Magister's Belt", MythicTier), "", "=q4=Magister's Belt", "=ds=#s10#, #a1# (D1)", "", "0.80%"};
@@ -3526,8 +3526,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 21, AL_FindId("Bindings of Elements", MythicTier), "", "=q4=Bindings of Elements", "=ds=#s8#, #a3# (D1)", "", "1.90%"};
 		{ 22, AL_FindId("Belt of Valor", MythicTier), "", "=q4=Belt of Valor", "=ds=#s10#, #a4# (D1)", "", "2.02%"};
 		{ 23, AL_FindId("Lightforge Belt", MythicTier), "", "=q4=Lightforge Belt", "=ds=#s10#, #a4# (D1)", "", "1.83%"};
-		{ 25, -12811, "", "=q2=Righteous Orb", "=ds=#e8#", "", "5.09%"};
-		{ 26, -12735, "", "=q2=Frayed Abomination Stitching", "=ds=#m3#", "", "17.5%"};
+		{ 25, 12811, "", "=q2=Righteous Orb", "=ds=#e8#", "", "5.09%"};
+		{ 26, 12735, "", "=q2=Frayed Abomination Stitching", "=ds=#m3#", "", "17.5%"};
 		Prev = "STRATBaronRivendare";
 		Dif = MythicTier;
 	};
@@ -4091,17 +4091,17 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 	------------------------
 
 	AtlasLoot_Data["ZGJeklik"] = {
-		{ 1, -19717, "", "=q4=Primal Hakkari Armsplint", "=ds=#m3#", "", "11.41%"};
-		{ 2, -19716, "", "=q4=Primal Hakkari Bindings", "=ds=#m3#", "", "11.02%"};
-		{ 3, -19718, "", "=q4=Primal Hakkari Stanchion", "=ds=#m3#", "", "10.84%"};
-		{ 4, -19721, "", "=q4=Primal Hakkari Shawl", "=ds=#m3#", "", "5.89%"};
-		{ 5, -19720, "", "=q4=Primal Hakkari Sash", "=ds=#m3#", "", "5.80%"};
-		{ 6, -19719, "", "=q4=Primal Hakkari Girdle", "=ds=#m3#", "", "5.56%"};
-		{ 7, -19724, "", "=q4=Primal Hakkari Aegis", "=ds=#m3#", "", "2.33%"};
-		{ 8, -19723, "", "=q4=Primal Hakkari Kossack", "=ds=#m3#", "", "2.32%"};
-		{ 9, -19722, "", "=q4=Primal Hakkari Tabard", "=ds=#m3#", "", "2.17%"};
-		{ 11, -19943, "", "=q1=Massive Mojo", "=ds=#e8#", "", "8.8%"};
-		{ 12, -19881, "", "=q1=Channeler's Head", "=ds=#m3#", "", "100%"};
+		{ 1, 19717, "", "=q4=Primal Hakkari Armsplint", "=ds=#m3#", "", "11.41%"};
+		{ 2, 19716, "", "=q4=Primal Hakkari Bindings", "=ds=#m3#", "", "11.02%"};
+		{ 3, 19718, "", "=q4=Primal Hakkari Stanchion", "=ds=#m3#", "", "10.84%"};
+		{ 4, 19721, "", "=q4=Primal Hakkari Shawl", "=ds=#m3#", "", "5.89%"};
+		{ 5, 19720, "", "=q4=Primal Hakkari Sash", "=ds=#m3#", "", "5.80%"};
+		{ 6, 19719, "", "=q4=Primal Hakkari Girdle", "=ds=#m3#", "", "5.56%"};
+		{ 7, 19724, "", "=q4=Primal Hakkari Aegis", "=ds=#m3#", "", "2.33%"};
+		{ 8, 19723, "", "=q4=Primal Hakkari Kossack", "=ds=#m3#", "", "2.32%"};
+		{ 9, 19722, "", "=q4=Primal Hakkari Tabard", "=ds=#m3#", "", "2.17%"};
+		{ 11, 19943, "", "=q1=Massive Mojo", "=ds=#e8#", "", "8.8%"};
+		{ 12, 19881, "", "=q1=Channeler's Head", "=ds=#m3#", "", "100%"};
 		{ 16, 219918, "", "=q4=Jeklik's Crusher", "=ds=#h2#, #w6#", "", "3.96%"};
 		{ 18, 219928, "", "=q3=Animist's Spaulders", "=ds=#s3#, #a2#", "", "3.39%"};
 		{ 19, 220262, "", "=q3=Seafury Boots", "=ds=#s12#, #a3#", "", "4.31%"};
@@ -4115,18 +4115,18 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 	};
 
 	AtlasLoot_Data["ZGVenoxis"] = {
-		{ 1, -19716, "", "=q4=Primal Hakkari Bindings", "=ds=#m3#", "", "11.01%"};
-		{ 2, -19718, "", "=q4=Primal Hakkari Stanchion", "=ds=#m3#", "", "10.55%"};
-		{ 3, -19717, "", "=q4=Primal Hakkari Armsplint", "=ds=#m3#", "", "10.18%"};
-		{ 4, -19720, "", "=q4=Primal Hakkari Sash", "=ds=#m3#", "", "5.93%"};
-		{ 5, -19721, "", "=q4=Primal Hakkari Shawl", "=ds=#m3#", "", "5.67%"};
-		{ 6, -19719, "", "=q4=Primal Hakkari Girdle", "=ds=#m3#", "", "5.52%"};
-		{ 7, -19722, "", "=q4=Primal Hakkari Tabard", "=ds=#m3#", "", "2.18%"};
-		{ 8, -19723, "", "=q4=Primal Hakkari Kossack", "=ds=#m3#", "", "2.02%"};
-		{ 9, -19724, "", "=q4=Primal Hakkari Aegis", "=ds=#m3#", "", "2.00%"};
-		{ 11, -19943, "", "=q1=Massive Mojo", "=ds=#e8#", "", "6.0%"};
-		{ 12, -19881, "", "=q1=Channeler's Head", "=ds=#m3#", "", "100%"};
-		{ 13, -22216, "", "=q1=Venoxis's Venom Sac", "=ds=#m3#", "", "100%"};
+		{ 1, 19716, "", "=q4=Primal Hakkari Bindings", "=ds=#m3#", "", "11.01%"};
+		{ 2, 19718, "", "=q4=Primal Hakkari Stanchion", "=ds=#m3#", "", "10.55%"};
+		{ 3, 19717, "", "=q4=Primal Hakkari Armsplint", "=ds=#m3#", "", "10.18%"};
+		{ 4, 19720, "", "=q4=Primal Hakkari Sash", "=ds=#m3#", "", "5.93%"};
+		{ 5, 19721, "", "=q4=Primal Hakkari Shawl", "=ds=#m3#", "", "5.67%"};
+		{ 6, 19719, "", "=q4=Primal Hakkari Girdle", "=ds=#m3#", "", "5.52%"};
+		{ 7, 19722, "", "=q4=Primal Hakkari Tabard", "=ds=#m3#", "", "2.18%"};
+		{ 8, 19723, "", "=q4=Primal Hakkari Kossack", "=ds=#m3#", "", "2.02%"};
+		{ 9, 19724, "", "=q4=Primal Hakkari Aegis", "=ds=#m3#", "", "2.00%"};
+		{ 11, 19943, "", "=q1=Massive Mojo", "=ds=#e8#", "", "6.0%"};
+		{ 12, 19881, "", "=q1=Channeler's Head", "=ds=#m3#", "", "100%"};
+		{ 13, 22216, "", "=q1=Venoxis's Venom Sac", "=ds=#m3#", "", "100%"};
 		{ 16, 219904, "", "=q4=Runed Bloodstained Hauberk", "=ds=#s5#, #a3#", "", "3.70%"};
 		{ 17, 219903, "", "=q4=Fang of Venoxis", "=ds=#h3#, #w4#", "", "3.68%"};
 		{ 19, 219907, "", "=q3=Zulian Tigerhide Cloak", "=ds=#s4#", "", "12.09%"};
@@ -4140,17 +4140,17 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 	};
 
 	AtlasLoot_Data["ZGMarli"] = {
-		{ 1, -19720, "", "=q4=Primal Hakkari Sash", "=ds=#m3#", "", "13.69%"};
-		{ 2, -19719, "", "=q4=Primal Hakkari Girdle", "=ds=#m3#", "", "13.69%"};
-		{ 3, -19721, "", "=q4=Primal Hakkari Shawl", "=ds=#m3#", "", "13.64%"};
-		{ 4, -19718, "", "=q4=Primal Hakkari Stanchion", "=ds=#m3#", "", "6.55%"};
-		{ 5, -19716, "", "=q4=Primal Hakkari Bindings", "=ds=#m3#", "", "6.49%"};
-		{ 6, -19717, "", "=q4=Primal Hakkari Armsplint", "=ds=#m3#", "", "6.31%"};
-		{ 7, -19722, "", "=q4=Primal Hakkari Tabard", "=ds=#m3#", "", "2.56%"};
-		{ 8, -19723, "", "=q4=Primal Hakkari Kossack", "=ds=#m3#", "", "2.55%"};
-		{ 9, -19724, "", "=q4=Primal Hakkari Aegis", "=ds=#m3#", "", "2.30%"};
-		{ 11, -19943, "", "=q1=Massive Mojo", "=ds=#e8#", "", "7.4%"};
-		{ 12, -19881, "", "=q1=Channeler's Head", "=ds=#m3#", "", "100%"};
+		{ 1, 19720, "", "=q4=Primal Hakkari Sash", "=ds=#m3#", "", "13.69%"};
+		{ 2, 19719, "", "=q4=Primal Hakkari Girdle", "=ds=#m3#", "", "13.69%"};
+		{ 3, 19721, "", "=q4=Primal Hakkari Shawl", "=ds=#m3#", "", "13.64%"};
+		{ 4, 19718, "", "=q4=Primal Hakkari Stanchion", "=ds=#m3#", "", "6.55%"};
+		{ 5, 19716, "", "=q4=Primal Hakkari Bindings", "=ds=#m3#", "", "6.49%"};
+		{ 6, 19717, "", "=q4=Primal Hakkari Armsplint", "=ds=#m3#", "", "6.31%"};
+		{ 7, 19722, "", "=q4=Primal Hakkari Tabard", "=ds=#m3#", "", "2.56%"};
+		{ 8, 19723, "", "=q4=Primal Hakkari Kossack", "=ds=#m3#", "", "2.55%"};
+		{ 9, 19724, "", "=q4=Primal Hakkari Aegis", "=ds=#m3#", "", "2.30%"};
+		{ 11, 19943, "", "=q1=Massive Mojo", "=ds=#e8#", "", "7.4%"};
+		{ 12, 19881, "", "=q1=Channeler's Head", "=ds=#m3#", "", "100%"};
 		{ 16, 220032, "", "=q4=Flowing Ritual Robes", "=ds=#s5#, #a1#", "", "4.46%"};
 		{ 17, 219927, "", "=q4=Mar'li's Touch", "=ds=#w12#", "", "4.35%"};
 		{ 19, 219919, "", "=q3=Bloodstained Greaves", "=ds=#s12#, #a3#", "", "11.89%"};
@@ -4164,22 +4164,22 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 	};
 
 	AtlasLoot_Data["ZGMandokir"] = {
-		{ 1, -19723, "", "=q4=Primal Hakkari Kossack", "=ds=#m3#", "", "12.94%"};
-		{ 2, -19724, "", "=q4=Primal Hakkari Aegis", "=ds=#m3#", "", "12.07%"};
-		{ 3, -19722, "", "=q4=Primal Hakkari Tabard", "=ds=#m3#", "", "11.56%"};
-		{ 4, -19720, "", "=q4=Primal Hakkari Sash", "=ds=#m3#", "", "6.65%"};
-		{ 5, -19719, "", "=q4=Primal Hakkari Girdle", "=ds=#m3#", "", "6.55%"};
-		{ 6, -19721, "", "=q4=Primal Hakkari Shawl", "=ds=#m3#", "", "6.52%"};
-		{ 7, -19716, "", "=q4=Primal Hakkari Bindings", "=ds=#m3#", "", "2.98%"};
-		{ 8, -19718, "", "=q4=Primal Hakkari Stanchion", "=ds=#m3#", "", "2.65%"};
-		{ 9, -19717, "", "=q4=Primal Hakkari Armsplint", "=ds=#m3#", "", "2.48%"};
-		{ 11, -22637, "", "=q3=Primal Hakkari Idol", "=ds=#m3#"};
-		{ 12, -19943, "", "=q1=Massive Mojo", "=ds=#e8#", "", "9.4%"};
+		{ 1, 19723, "", "=q4=Primal Hakkari Kossack", "=ds=#m3#", "", "12.94%"};
+		{ 2, 19724, "", "=q4=Primal Hakkari Aegis", "=ds=#m3#", "", "12.07%"};
+		{ 3, 19722, "", "=q4=Primal Hakkari Tabard", "=ds=#m3#", "", "11.56%"};
+		{ 4, 19720, "", "=q4=Primal Hakkari Sash", "=ds=#m3#", "", "6.65%"};
+		{ 5, 19719, "", "=q4=Primal Hakkari Girdle", "=ds=#m3#", "", "6.55%"};
+		{ 6, 19721, "", "=q4=Primal Hakkari Shawl", "=ds=#m3#", "", "6.52%"};
+		{ 7, 19716, "", "=q4=Primal Hakkari Bindings", "=ds=#m3#", "", "2.98%"};
+		{ 8, 19718, "", "=q4=Primal Hakkari Stanchion", "=ds=#m3#", "", "2.65%"};
+		{ 9, 19717, "", "=q4=Primal Hakkari Armsplint", "=ds=#m3#", "", "2.48%"};
+		{ 11, 22637, "", "=q3=Primal Hakkari Idol", "=ds=#m3#"};
+		{ 12, 19943, "", "=q1=Massive Mojo", "=ds=#e8#", "", "9.4%"};
 		{ 16, 219867, "", "=q4=Bloodlord's Defender", "=ds=#h1#, #w10#", "", "5.83%"};
 		{ 17, 219866, "", "=q4=Warblade of the Hakkari", "=ds=#h4#, #w10#", "", "3.96%"};
 		{ 18, 219874, "", "=q4=Halberd of Smiting", "=ds=#w7#", "", "6.35%"};
 		{ 19, 220038, "", "=q4=Mandokir's Sting", "=ds=#w2#", "", "5.96%"};
-		{ 20, -19872, "", "=q4=Swift Razzashi Raptor", "=ds=#e12#", "", "0.43%"};
+		{ 20, 19872, "", "=q4=Swift Razzashi Raptor", "=ds=#e12#", "", "0.43%"};
 		{ 22, 219870, "", "=q3=Hakkari Loa Cloak", "=ds=#s4#", "", "12.54%"};
 		{ 23, 219895, "", "=q3=Bloodtinged Kilt", "=ds=#s11#, #a1#", "", "13.50%"};
 		{ 24, 219869, "", "=q3=Blooddrenched Grips", "=ds=#s9#, #a2#", "", "12.87%"};
@@ -4198,19 +4198,19 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 1, 0, "INV_Box_01", "=q6="..BabbleBoss["Gri'lek"], ""};
 		{ 2, 219961, "", "=q3=Gri'lek's Grinder", "=ds=#h1#, #w6#", "", "43.90%"};
 		{ 3, 219962, "", "=q3=Gri'lek's Carver", "=ds=#h2#, #w1#", "", "41.99%"};
-		{ 4, -19939, "", "=q2=Gri'lek's Blood", "=ds=#m3#", "", "100%"};
+		{ 4, 19939, "", "=q2=Gri'lek's Blood", "=ds=#m3#", "", "100%"};
 		{ 6, 0, "INV_Box_01", "=q6="..BabbleBoss["Hazza'rah"], ""};
 		{ 7, 219968, "", "=q3=Fiery Retributer", "=ds=#h1#, #w10#", "", "38.37%"};
 		{ 8, 219967, "", "=q3=Thoughtblighter", "=ds=#w12#", "", "45.49%"};
-		{ 9, -19942, "", "=q2=Hazza'rah's Dream Thread", "=ds=#m3#", "", "100%"};
+		{ 9, 19942, "", "=q2=Hazza'rah's Dream Thread", "=ds=#m3#", "", "100%"};
 		{ 16, 0, "INV_Box_01", "=q6="..BabbleBoss["Renataki"], ""};
 		{ 17, 219964, "", "=q3=Renataki's Soul Conduit", "=ds=#h3#, #w10#", "", "40.06%"};
 		{ 18, 219963, "", "=q3=Pitchfork of Madness", "=ds=#w7#", "", "45.51%"};
-		{ 19, -19940, "", "=q2=Renataki's Tooth", "=ds=#m3#", "", "100%"};
+		{ 19, 19940, "", "=q2=Renataki's Tooth", "=ds=#m3#", "", "100%"};
 		{ 21, 0, "INV_Box_01", "=q6="..BabbleBoss["Wushoolay"], ""};
 		{ 22, 219965, "", "=q3=Wushoolay's Poker", "=ds=#h3#, #w4#", "", "45.21%"};
 		{ 23, 219993, "", "=q3=Hoodoo Hunting Bow", "=ds=#w2#", "", "40.96%"};
-		{ 24, -19941, "", "=q2=Wushoolay's Mane", "=ds=#m3#", "", "100%"};
+		{ 24, 19941, "", "=q2=Wushoolay's Mane", "=ds=#m3#", "", "100%"};
 		Prev = "ZGMandokir";
 		Next = "ZGGahzranka";
 		Dif = 4;
@@ -4222,7 +4222,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 2, 219944, "", "=q4=Nat Pagle's Fish Terminator", "=ds=#w9#", "", "2.39%"};
 		{ 4, 219947, "", "=q3=Nat Pagle's Broken Reel", "=ds=#s14#", "", "28.20%"};
 		{ 5, 219946, "", "=q3=Tigule's Harpoon", "=ds=#w7#", "", "29.22%"};
-		{ 7, -22739, "", "=q3=Tome of Polymorph: Turtle", "=ds=#e10#, =q1=#m1# =ds=#c3#"};
+		{ 7, 22739, "", "=q3=Tome of Polymorph: Turtle", "=ds=#e10#, =q1=#m1# =ds=#c3#"};
 		Prev = "ZGEdgeofMadness";
 		Next = "ZGThekal";
 		Dif = 4;
@@ -4230,17 +4230,17 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 	};
 
 	AtlasLoot_Data["ZGThekal"] = {
-		{ 1, -19720, "", "=q4=Primal Hakkari Sash", "=ds=#m3#", "", " 14.95%"};
-		{ 2, -19721, "", "=q4=Primal Hakkari Shawl", "=ds=#m3#", "", " 13.74%"};
-		{ 3, -19719, "", "=q4=Primal Hakkari Girdle", "=ds=#m3#", "", " 12.95%"};
-		{ 4, -19716, "", "=q4=Primal Hakkari Bindings", "=ds=#m3#", "", " 6.60%"};
-		{ 5, -19718, "", "=q4=Primal Hakkari Stanchion", "=ds=#m3#", "", " 6.56%"};
-		{ 6, -19717, "", "=q4=Primal Hakkari Armsplint", "=ds=#m3#", "", " 6.45%"};
-		{ 8, -19943, "", "=q1=Massive Mojo", "=ds=#e8#", "", "8.3%"};
-		{ 9, -19881, "", "=q1=Channeler's Head", "=ds=#m3#", "", "100%"};
+		{ 1, 19720, "", "=q4=Primal Hakkari Sash", "=ds=#m3#", "", " 14.95%"};
+		{ 2, 19721, "", "=q4=Primal Hakkari Shawl", "=ds=#m3#", "", " 13.74%"};
+		{ 3, 19719, "", "=q4=Primal Hakkari Girdle", "=ds=#m3#", "", " 12.95%"};
+		{ 4, 19716, "", "=q4=Primal Hakkari Bindings", "=ds=#m3#", "", " 6.60%"};
+		{ 5, 19718, "", "=q4=Primal Hakkari Stanchion", "=ds=#m3#", "", " 6.56%"};
+		{ 6, 19717, "", "=q4=Primal Hakkari Armsplint", "=ds=#m3#", "", " 6.45%"};
+		{ 8, 19943, "", "=q1=Massive Mojo", "=ds=#e8#", "", "8.3%"};
+		{ 9, 19881, "", "=q1=Channeler's Head", "=ds=#m3#", "", "100%"};
 		{ 16, 219897, "", "=q4=Betrayer's Boots", "=ds=#s12#, #a1#", "", "5.83%"};
 		{ 17, 219896, "", "=q4=Thekal's Grasp", "=ds=#h3#, #w13#", "", "4.23%"};
-		{ 18, -19902, "", "=q4=Swift Zulian Tiger", "=ds=#e12#", "", "0.70%"};
+		{ 18, 19902, "", "=q4=Swift Zulian Tiger", "=ds=#e12#", "", "0.70%"};
 		{ 20, 219898, "", "=q3=Seal of Jin", "=ds=#s13#", "", "13.65%"};
 		{ 21, 219899, "", "=q3=Ritualistic Legguards", "=ds=#s11#, #a1#", "", "13.41%"};
 		{ 22, 220260, "", "=q3=Seafury Leggings", "=ds=#s11#, #a3#", "", "4.30%"};
@@ -4253,23 +4253,23 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 	};
 
 	AtlasLoot_Data["ZGArlokk"] = {
-		{ 1, -19721, "", "=q4=Primal Hakkari Shawl", "=ds=#m3#", "", "15.49%"};
-		{ 2, -19720, "", "=q4=Primal Hakkari Sash", "=ds=#m3#", "", "12.52%"};
-		{ 3, -19719, "", "=q4=Primal Hakkari Girdle", "=ds=#m3#", "", "13.17%"};
-		{ 4, -19716, "", "=q4=Primal Hakkari Bindings", "=ds=#m3#", "", "6.94%"};
-		{ 5, -19717, "", "=q4=Primal Hakkari Armsplint", "=ds=#m3#", "", "6.65%"};
-		{ 6, -19718, "", "=q4=Primal Hakkari Stanchion", "=ds=#m3#", "", "6.21%"};
-		{ 7, -19722, "", "=q4=Primal Hakkari Tabard", "=ds=#m3#", "", "2.75%"};
-		{ 8, -19723, "", "=q4=Primal Hakkari Kossack", "=ds=#m3#", "", "2.60%"};
-		{ 9, -19724, "", "=q4=Primal Hakkari Aegis", "=ds=#m3#", "", "2.41%"};
-		{ 11, -19943, "", "=q1=Massive Mojo", "=ds=#e8#", "", "5.6%"};
-		{ 12, -19881, "", "=q1=Channeler's Head", "=ds=#m3#", "", "100%"};
+		{ 1, 19721, "", "=q4=Primal Hakkari Shawl", "=ds=#m3#", "", "15.49%"};
+		{ 2, 19720, "", "=q4=Primal Hakkari Sash", "=ds=#m3#", "", "12.52%"};
+		{ 3, 19719, "", "=q4=Primal Hakkari Girdle", "=ds=#m3#", "", "13.17%"};
+		{ 4, 19716, "", "=q4=Primal Hakkari Bindings", "=ds=#m3#", "", "6.94%"};
+		{ 5, 19717, "", "=q4=Primal Hakkari Armsplint", "=ds=#m3#", "", "6.65%"};
+		{ 6, 19718, "", "=q4=Primal Hakkari Stanchion", "=ds=#m3#", "", "6.21%"};
+		{ 7, 19722, "", "=q4=Primal Hakkari Tabard", "=ds=#m3#", "", "2.75%"};
+		{ 8, 19723, "", "=q4=Primal Hakkari Kossack", "=ds=#m3#", "", "2.60%"};
+		{ 9, 19724, "", "=q4=Primal Hakkari Aegis", "=ds=#m3#", "", "2.41%"};
+		{ 11, 19943, "", "=q1=Massive Mojo", "=ds=#e8#", "", "5.6%"};
+		{ 12, 19881, "", "=q1=Channeler's Head", "=ds=#m3#", "", "100%"};
 		{ 16, 219910, "", "=q4=Arlokk's Grasp", "=ds=#h4#, #w13#", "", "3.62%"};
 		{ 17, 219909, "", "=q4=Will of Arlokk", "=ds=#w9#", "", "5.14%"};
 		{ 19, 219913, "", "=q3=Bloodsoaked Greaves", "=ds=#s12#, #a4#", "", "13.29%"};
 		{ 20, 219912, "", "=q3=Overlord's Onyx Band", "=ds=#s13#", "", "13.95%"};
 		{ 21, 219922, "", "=q3=Arlokk's Hoodoo Stick", "=ds=#s15#", "", "13.66%"};
-		{ 22, -19914, "", "=q3=Panther Hide Sack", "=ds=#m14# #e1#", "", "14.03%"};
+		{ 22, 19914, "", "=q3=Panther Hide Sack", "=ds=#m14# #e1#", "", "14.03%"};
 		Prev = "ZGThekal";
 		Next = "ZGJindo";
 		Dif = 4;
@@ -4277,17 +4277,17 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 	};
 
 	AtlasLoot_Data["ZGJindo"] = {
-		{ 1, -19723, "", "=q4=Primal Hakkari Kossack", "=ds=#m3#", "", "13.56%"};
-		{ 2, -19722, "", "=q4=Primal Hakkari Tabard", "=ds=#m3#", "", "13.48%"};
-		{ 3, -19724, "", "=q4=Primal Hakkari Aegis", "=ds=#m3#", "", "12.09%"};
-		{ 4, -19721, "", "=q4=Primal Hakkari Shawl", "=ds=#m3#", "", "7.30%"};
-		{ 5, -19719, "", "=q4=Primal Hakkari Girdle", "=ds=#m3#", "", "6.37%"};
-		{ 6, -19720, "", "=q4=Primal Hakkari Sash", "=ds=#m3#", "", "6.10%"};
-		{ 7, -19716, "", "=q4=Primal Hakkari Bindings", "=ds=#m3#", "", "2.85%"};
-		{ 8, -19717, "", "=q4=Primal Hakkari Armsplint", "=ds=#m3#", "", "2.70%"};
-		{ 9, -19718, "", "=q4=Primal Hakkari Stanchion", "=ds=#m3#", "", "2.36%"};
-		{ 11, -22637, "", "=q3=Primal Hakkari Idol", "=ds=#m3#"};
-		{ 12, -19943, "", "=q1=Massive Mojo", "=ds=#e8#", "", "8.4%"};
+		{ 1, 19723, "", "=q4=Primal Hakkari Kossack", "=ds=#m3#", "", "13.56%"};
+		{ 2, 19722, "", "=q4=Primal Hakkari Tabard", "=ds=#m3#", "", "13.48%"};
+		{ 3, 19724, "", "=q4=Primal Hakkari Aegis", "=ds=#m3#", "", "12.09%"};
+		{ 4, 19721, "", "=q4=Primal Hakkari Shawl", "=ds=#m3#", "", "7.30%"};
+		{ 5, 19719, "", "=q4=Primal Hakkari Girdle", "=ds=#m3#", "", "6.37%"};
+		{ 6, 19720, "", "=q4=Primal Hakkari Sash", "=ds=#m3#", "", "6.10%"};
+		{ 7, 19716, "", "=q4=Primal Hakkari Bindings", "=ds=#m3#", "", "2.85%"};
+		{ 8, 19717, "", "=q4=Primal Hakkari Armsplint", "=ds=#m3#", "", "2.70%"};
+		{ 9, 19718, "", "=q4=Primal Hakkari Stanchion", "=ds=#m3#", "", "2.36%"};
+		{ 11, 22637, "", "=q3=Primal Hakkari Idol", "=ds=#m3#"};
+		{ 12, 19943, "", "=q1=Massive Mojo", "=ds=#e8#", "", "8.4%"};
 		{ 16, 219885, "", "=q4=Jin'do's Evil Eye", "=ds=#s2#", "", "6.82%"};
 		{ 17, 219891, "", "=q4=Jin'do's Bag of Whammies", "=ds=#s15#", "", "7.70%"};
 		{ 18, 219890, "", "=q4=Jin'do's Hexxer", "=ds=#h3#, #w6#", "", "8.08%"};
@@ -4321,11 +4321,11 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 13, 219862, "", "=q4=Aegis of the Blood God", "=ds=#w8#", "", "9.99%"};
 		{ 14, 219853, "", "=q4=Gurubashi Dwarf Destroyer", "=ds=#w5#", "", "6.12%"};
 		{ 15, 219861, "", "=q4=Touch of Chaos", "=ds=#w12#", "", "7.24%"};
-		{ 16, -19802, "", "=q4=Heart of Hakkar", "=ds=#m2#", "", "100%"};
-		{ 17, -19950, "", "=q4=Zandalarian Hero Charm", "=q1=#m4#: =ds=#s14#"};
-		{ 18, -19949, "", "=q4=Zandalarian Hero Medallion", "=q1=#m4#: =ds=#s14#"};
-		{ 19, -19948, "", "=q4=Zandalarian Hero Badge", "=q1=#m4#: =ds=#s14#"};
-		{ 21, -19943, "", "=q1=Massive Mojo", "=ds=#e8#", "", "34.3%"};
+		{ 16, 19802, "", "=q4=Heart of Hakkar", "=ds=#m2#", "", "100%"};
+		{ 17, 19950, "", "=q4=Zandalarian Hero Charm", "=q1=#m4#: =ds=#s14#"};
+		{ 18, 19949, "", "=q4=Zandalarian Hero Medallion", "=q1=#m4#: =ds=#s14#"};
+		{ 19, 19948, "", "=q4=Zandalarian Hero Badge", "=q1=#m4#: =ds=#s14#"};
+		{ 21, 19943, "", "=q1=Massive Mojo", "=ds=#e8#", "", "34.3%"};
 		Prev = "ZGJindo";
 		Next = "ZGShared";
 		Dif = 4;
@@ -4360,21 +4360,21 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 4, 219908, "", "=q3=Sceptre of Smiting", "=ds=#h1#, #w6#"};
 		{ 5, 219921, "", "=q3=Zulian Hacker", "=ds=#h1#, #w1#"};
 		{ 6, 220258, "", "=q3=Zulian Ceremonial Staff", "=ds=#w9#"};
-		{ 7, -19727, "", "=q3=Blood Scythe", "=ds=#e19#", "", "0.02%"};
+		{ 7, 19727, "", "=q3=Blood Scythe", "=ds=#e19#", "", "0.02%"};
 		{ 8, 48126, "", "=q1=Razzashi Hatchling", "=ds=#e13#"};
-		{ 10, -19726, "", "=q2=Bloodvine", "=ds=#e8#", "", ""};
-		{ 11, -19774, "", "=q2=Souldarite", "=ds=#e8#", "", ""};
-		{ 12, -19767, "", "=q1=Primal Bat Leather", "=ds=#e8#", "", ""};
-		{ 13, -19768, "", "=q1=Primal Tiger Leather", "=ds=#e8#", "", ""};
-		{ 16, -19821, "", "=q2=Punctured Voodoo Doll", "=q1=#m1# =ds=#c1#", "", "0.01%"};
-		{ 17, -19816, "", "=q2=Punctured Voodoo Doll", "=q1=#m1# =ds=#c2#", "", "0.01%"};
-		{ 18, -19818, "", "=q2=Punctured Voodoo Doll", "=q1=#m1# =ds=#c3#", "", "0.01%"};
-		{ 19, -19815, "", "=q2=Punctured Voodoo Doll", "=q1=#m1# =ds=#c4#", "", "0.01%"};
-		{ 20, -19820, "", "=q2=Punctured Voodoo Doll", "=q1=#m1# =ds=#c5#", "", "0.01%"};
-		{ 21, -19814, "", "=q2=Punctured Voodoo Doll", "=q1=#m1# =ds=#c6#", "", "0.01%"};
-		{ 22, -19817, "", "=q2=Punctured Voodoo Doll", "=q1=#m1# =ds=#c7#", "", "0.01%"};
-		{ 23, -19819, "", "=q2=Punctured Voodoo Doll", "=q1=#m1# =ds=#c8#", "", "0.01%"};
-		{ 24, -19813, "", "=q2=Punctured Voodoo Doll", "=q1=#m1# =ds=#c9#", "", "0.01%"};
+		{ 10, 19726, "", "=q2=Bloodvine", "=ds=#e8#", "", ""};
+		{ 11, 19774, "", "=q2=Souldarite", "=ds=#e8#", "", ""};
+		{ 12, 19767, "", "=q1=Primal Bat Leather", "=ds=#e8#", "", ""};
+		{ 13, 19768, "", "=q1=Primal Tiger Leather", "=ds=#e8#", "", ""};
+		{ 16, 19821, "", "=q2=Punctured Voodoo Doll", "=q1=#m1# =ds=#c1#", "", "0.01%"};
+		{ 17, 19816, "", "=q2=Punctured Voodoo Doll", "=q1=#m1# =ds=#c2#", "", "0.01%"};
+		{ 18, 19818, "", "=q2=Punctured Voodoo Doll", "=q1=#m1# =ds=#c3#", "", "0.01%"};
+		{ 19, 19815, "", "=q2=Punctured Voodoo Doll", "=q1=#m1# =ds=#c4#", "", "0.01%"};
+		{ 20, 19820, "", "=q2=Punctured Voodoo Doll", "=q1=#m1# =ds=#c5#", "", "0.01%"};
+		{ 21, 19814, "", "=q2=Punctured Voodoo Doll", "=q1=#m1# =ds=#c6#", "", "0.01%"};
+		{ 22, 19817, "", "=q2=Punctured Voodoo Doll", "=q1=#m1# =ds=#c7#", "", "0.01%"};
+		{ 23, 19819, "", "=q2=Punctured Voodoo Doll", "=q1=#m1# =ds=#c8#", "", "0.01%"};
+		{ 24, 19813, "", "=q2=Punctured Voodoo Doll", "=q1=#m1# =ds=#c9#", "", "0.01%"};
 		Prev = "ZGShared";
 		Next = "ZGTrash2";
 		Dif = 4;
@@ -4428,11 +4428,11 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 
 	AtlasLoot_Data["NAXPatchwerk"] = {
 		{ 1, 222726, "", "=q5=Splinter of Atiesh", "=ds=#m3#", "", "30%" },
-		{ 2, -22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
+		{ 2, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
 		{ 3, 0,"","","" },
-		{ 4, -22368, "", "=q4=Desecrated Shoulderpads", "=q1=#m1# =ds=#c8#, #c3#, #c5#","", "33.33%" },
-		{ 5, -22361, "", "=q4=Desecrated Spaulders", "=q1=#m1# =ds=#c7#, #c1#, #c2#, #c4#","", "33.33%" },
-		{ 6, -22354, "", "=q4=Desecrated Pauldrons", "=q1=#m1# =ds=#c6#, #c9#","", "33.33%" },
+		{ 4, 22368, "", "=q4=Desecrated Shoulderpads", "=q1=#m1# =ds=#c8#, #c3#, #c5#","", "33.33%" },
+		{ 5, 22361, "", "=q4=Desecrated Spaulders", "=q1=#m1# =ds=#c7#, #c1#, #c2#, #c4#","", "33.33%" },
+		{ 6, 22354, "", "=q4=Desecrated Pauldrons", "=q1=#m1# =ds=#c6#, #c9#","", "33.33%" },
 		{ 7, 0,"","","" },
 		{ 8, 222960, "", "=q4=Cloak of Suturing", "=ds=#s4#","", "20%" },
 		{ 9, 222815, "", "=q4=Severance", "=ds=#h2#, #w1#","", "20%" },
@@ -4446,11 +4446,11 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 
 	AtlasLoot_Data["NAXGrobbulus"] = {
 		{ 1, 222726, "", "=q5=Splinter of Atiesh", "=ds=#m3#","","30%" },
-		{ 2, -22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
+		{ 2, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
 		{ 3, 0,"","","" },
-		{ 4, -22368, "", "=q4=Desecrated Shoulderpads", "=q1=#m1# =ds=#c8#, #c3#, #c5#","","33.33%" },
-		{ 5, -22361, "", "=q4=Desecrated Spaulders", "=q1=#m1# =ds=#c7#, #c1#, #c2#, #c4#","","33.33%" },
-		{ 6, -22354, "", "=q4=Desecrated Pauldrons", "=q1=#m1# =ds=#c6#, #c9#","","33.33%" },
+		{ 4, 22368, "", "=q4=Desecrated Shoulderpads", "=q1=#m1# =ds=#c8#, #c3#, #c5#","","33.33%" },
+		{ 5, 22361, "", "=q4=Desecrated Spaulders", "=q1=#m1# =ds=#c7#, #c1#, #c2#, #c4#","","33.33%" },
+		{ 6, 22354, "", "=q4=Desecrated Pauldrons", "=q1=#m1# =ds=#c6#, #c9#","","33.33%" },
 		{ 7, 0,"","","" },
 		{ 8, 222968, "", "=q4=Glacial Mantle", "=ds=#s3#, #a1#", "", "20%" },
 		{ 9, 222967, "", "=q4=Icy Scale Spaulders", "=ds=#s3#, #a3#", "", "20%" },
@@ -4465,7 +4465,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 
 	AtlasLoot_Data["NAXGluth"] = {
 		{ 1, 222726, "", "=q5=Splinter of Atiesh", "=ds=#m3#","","30%" },
-		{ 2, -22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
+		{ 2, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
 		{ 3, 0,"","","" },
 		{ 4, 222983, "", "=q4=Rime Covered Mantle", "=ds=#s3#, #a1#", "", "20%" },
 		{ 5, 222813, "", "=q4=Claymore of Unholy Might", "=ds=#h2#, #w10#", "","20%" },
@@ -4479,18 +4479,18 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 13, 0,"","","" },
 		{ 14, 0,"","","" },
 		{ 15, 0,"","","" },
-		{ 16, -22368, "", "=q4=Desecrated Shoulderpads", "=q1=#m1# =ds=#c8#, #c3#, #c5#","", "8.33%" },
-		{ 17, -22361, "", "=q4=Desecrated Spaulders", "=q1=#m1# =ds=#c7#, #c1#, #c2#, #c4#","", "8.33%"  },
-		{ 18, -22354, "", "=q4=Desecrated Pauldrons", "=q1=#m1# =ds=#c6#, #c9#","", "8.33%"  },
-		{ 19, -22369, "", "=q4=Desecrated Bindings", "=q1=#m1# =ds=#c8#, #c3#, #c5#","", "8.33%"  },
-		{ 20, -22362, "", "=q4=Desecrated Wristguards", "=q1=#m1# =ds=#c4#, #c7#, #c2#, #c1#","", "8.33%"  },
-		{ 21, -22355, "", "=q4=Desecrated Bracers", "=q1=#m1# =ds=#c9#, #c6#","", "8.33%"  },
-		{ 22, -22370, "", "=q4=Desecrated Belt", "=q1=#m1# =ds=#c5#, #c3#, #c8#","","8.33%" },
-		{ 23, -22363, "", "=q4=Desecrated Girdle", "=q1=#m1# =ds=#c7#, #c1#, #c2#, #c4#","", "8.33%"  },
-		{ 24, -22356, "", "=q4=Desecrated Waistguard", "=q1=#m1# =ds=#c6#, #c9#","", "8.33%"  },
-		{ 25, -22372, "", "=q4=Desecrated Sandals", "=q1=#m1# =ds=#c8#, #c3#, #c5#","", "8.33%"  },
-		{ 26, -22365, "", "=q4=Desecrated Boots", "=q1=#m1# =ds=#c7#, #c1#, #c2#, #c4#","", "8.33%"  },
-		{ 27, -22358, "", "=q4=Desecrated Sabatons", "=q1=#m1# =ds=#c6#, #c9#","", "8.33%"  },
+		{ 16, 22368, "", "=q4=Desecrated Shoulderpads", "=q1=#m1# =ds=#c8#, #c3#, #c5#","", "8.33%" },
+		{ 17, 22361, "", "=q4=Desecrated Spaulders", "=q1=#m1# =ds=#c7#, #c1#, #c2#, #c4#","", "8.33%"  },
+		{ 18, 22354, "", "=q4=Desecrated Pauldrons", "=q1=#m1# =ds=#c6#, #c9#","", "8.33%"  },
+		{ 19, 22369, "", "=q4=Desecrated Bindings", "=q1=#m1# =ds=#c8#, #c3#, #c5#","", "8.33%"  },
+		{ 20, 22362, "", "=q4=Desecrated Wristguards", "=q1=#m1# =ds=#c4#, #c7#, #c2#, #c1#","", "8.33%"  },
+		{ 21, 22355, "", "=q4=Desecrated Bracers", "=q1=#m1# =ds=#c9#, #c6#","", "8.33%"  },
+		{ 22, 22370, "", "=q4=Desecrated Belt", "=q1=#m1# =ds=#c5#, #c3#, #c8#","","8.33%" },
+		{ 23, 22363, "", "=q4=Desecrated Girdle", "=q1=#m1# =ds=#c7#, #c1#, #c2#, #c4#","", "8.33%"  },
+		{ 24, 22356, "", "=q4=Desecrated Waistguard", "=q1=#m1# =ds=#c6#, #c9#","", "8.33%"  },
+		{ 25, 22372, "", "=q4=Desecrated Sandals", "=q1=#m1# =ds=#c8#, #c3#, #c5#","", "8.33%"  },
+		{ 26, 22365, "", "=q4=Desecrated Boots", "=q1=#m1# =ds=#c7#, #c1#, #c2#, #c4#","", "8.33%"  },
+		{ 27, 22358, "", "=q4=Desecrated Sabatons", "=q1=#m1# =ds=#c6#, #c9#","", "8.33%"  },
 		Prev = "NAXGrobbulus";
 		Next = "NAXThaddius";
 		Dif = 4;
@@ -4499,11 +4499,11 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 
 	AtlasLoot_Data["NAXThaddius"] = {
 		{ 1, 222726, "", "=q5=Splinter of Atiesh", "=ds=#m3#","","30%" },
-		{ 2, -22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
+		{ 2, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
 		{ 3, 0,"","","" },
-		{ 4, -22367, "", "=q4=Desecrated Circlet", "=q1=#m1# =ds=#c8#, #c3#, #c5#","", "66.67%"},
-		{ 5, -22360, "", "=q4=Desecrated Headpiece", "=q1=#m1# =ds=#c7#, #c1#, #c2#, #c4#" ,"", "66.67%"},
-		{ 6, -22353, "", "=q4=Desecrated Helmet", "=q1=#m1# =ds=#c6#, #c9#","", "66.67%" },
+		{ 4, 22367, "", "=q4=Desecrated Circlet", "=q1=#m1# =ds=#c8#, #c3#, #c5#","", "66.67%"},
+		{ 5, 22360, "", "=q4=Desecrated Headpiece", "=q1=#m1# =ds=#c7#, #c1#, #c2#, #c4#" ,"", "66.67%"},
+		{ 6, 22353, "", "=q4=Desecrated Helmet", "=q1=#m1# =ds=#c6#, #c9#","", "66.67%" },
 		{ 7, 0,"","","" },
 		{ 8, 223070, "", "=q4=Leggings of Polarity", "=ds=#s11#, #a1#" ,"", "20%"},
 		{ 9, 223000, "", "=q4=Plated Abomination Ribcage", "=ds=#s5#, #a4#","", "20%" },
@@ -4518,11 +4518,11 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 
 	AtlasLoot_Data["NAXAnubRekhan"] = {
 		{ 1, 222726, "", "=q5=Splinter of Atiesh", "=ds=#m3#","", "30%" },
-		{ 2, -22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
+		{ 2, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
 		{ 3, 0,"","","" },
-		{ 4, -22369, "", "=q4=Desecrated Bindings", "=q1=#m1# =ds=#c8#, #c3#, #c5#", "","33.33%" },
-		{ 5, -22362, "", "=q4=Desecrated Wristguards", "=q1=#m1# =ds=#c4#, #c7#, #c2#, #c1#","", "33.33%" },
-		{ 6, -22355, "", "=q4=Desecrated Bracers", "=q1=#m1# =ds=#c9#, #c6#", "", "33.33%" },
+		{ 4, 22369, "", "=q4=Desecrated Bindings", "=q1=#m1# =ds=#c8#, #c3#, #c5#", "","33.33%" },
+		{ 5, 22362, "", "=q4=Desecrated Wristguards", "=q1=#m1# =ds=#c4#, #c7#, #c2#, #c1#","", "33.33%" },
+		{ 6, 22355, "", "=q4=Desecrated Bracers", "=q1=#m1# =ds=#c9#, #c6#", "", "33.33%" },
 		{ 7, 0,"","","" },
 		{ 8, 222938, "", "=q4=Cryptfiend Silk Cloak", "=ds=#s4#", "","20%" },
 		{ 9, 222936, "", "=q4=Wristguards of Vengeance", "=ds=#s8#, #a4#","", "20%" },
@@ -4537,11 +4537,11 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 
 	AtlasLoot_Data["NAXGrandWidowFearlina"] = {
 		{ 1, 222726, "", "=q5=Splinter of Atiesh", "=ds=#m3#", "", "30%" },
-		{ 2, -22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
+		{ 2, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
 		{ 3, 0,"","","" },
-		{ 4, -22369, "", "=q4=Desecrated Bindings", "=q1=#m1# =ds=#c8#, #c3#, #c5#","", "33.33%" },
-		{ 5, -22362, "", "=q4=Desecrated Wristguards", "=q1=#m1# =ds=#c4#, #c7#, #c2#, #c1#","", "33.33%" },
-		{ 6, -22355, "", "=q4=Desecrated Bracers", "=q1=#m1# =ds=#c9#, #c6#","", "33.33%" },
+		{ 4, 22369, "", "=q4=Desecrated Bindings", "=q1=#m1# =ds=#c8#, #c3#, #c5#","", "33.33%" },
+		{ 5, 22362, "", "=q4=Desecrated Wristguards", "=q1=#m1# =ds=#c4#, #c7#, #c2#, #c1#","", "33.33%" },
+		{ 6, 22355, "", "=q4=Desecrated Bracers", "=q1=#m1# =ds=#c9#, #c6#","", "33.33%" },
 		{ 7, 0,"","","" },
 		{ 8, 222941, "", "=q4=Polar Shoulder Pads", "=ds=#s3#, #a2#","", "20%" },
 		{ 9, 222940, "", "=q4=Icebane Pauldrons", "=ds=#s3#, #a4#","", "20%" },
@@ -4556,11 +4556,11 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 
 	AtlasLoot_Data["NAXMaexxna"] = {
 		{ 1, 222726, "", "=q5=Splinter of Atiesh", "=ds=#m3#","", "30%" },
-		{ 2, -22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
+		{ 2, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
 		{ 3, 0,"","","" },
-		{ 4, -22371, "", "=q4=Desecrated Gloves", "=q1=#m1# =ds=#c8#, #c3#, #c5#","", "67.66%" },
-		{ 5, -22364, "", "=q4=Desecrated Handguards", "=q1=#m1# =ds=#c4#, #c7#, #c2#, #c1#","", "67.66%" },
-		{ 6, -22357, "", "=q4=Desecrated Gauntlets", "=q1=#m1# =ds=#c9#, #c6#","", "67.66%" },
+		{ 4, 22371, "", "=q4=Desecrated Gloves", "=q1=#m1# =ds=#c8#, #c3#, #c5#","", "67.66%" },
+		{ 5, 22364, "", "=q4=Desecrated Handguards", "=q1=#m1# =ds=#c4#, #c7#, #c2#, #c1#","", "67.66%" },
+		{ 6, 22357, "", "=q4=Desecrated Gauntlets", "=q1=#m1# =ds=#c9#, #c6#","", "67.66%" },
 		{ 7, 0,"","","" },
 		{ 8, 223220, "", "=q4=Crystal Webbed Robe", "=ds=#s5#, #a1#","", "20%" },
 		{ 9, 222804, "", "=q4=Maexxna's Fang", "=ds=#h1#, #w4#","", "20%" },
@@ -4575,11 +4575,11 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 
 	AtlasLoot_Data["NAXInstructorRAuvious"] = {
 		{ 1, 222726, "", "=q5=Splinter of Atiesh", "=ds=#m3#","", "30%" },
-		{ 2, -22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
+		{ 2, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
 		{ 3, 0,"","","" },
-		{ 4, -22372, "", "=q4=Desecrated Sandals", "=q1=#m1# =ds=#c8#, #c3#, #c5#", "", "33.33%" },
-		{ 5, -22365, "", "=q4=Desecrated Boots", "=q1=#m1# =ds=#c7#, #c1#, #c2#, #c4#","", "33.33%" },
-		{ 6, -22358, "", "=q4=Desecrated Sabatons", "=q1=#m1# =ds=#c6#, #c9#","", "33.33%" },
+		{ 4, 22372, "", "=q4=Desecrated Sandals", "=q1=#m1# =ds=#c8#, #c3#, #c5#", "", "33.33%" },
+		{ 5, 22365, "", "=q4=Desecrated Boots", "=q1=#m1# =ds=#c7#, #c1#, #c2#, #c4#","", "33.33%" },
+		{ 6, 22358, "", "=q4=Desecrated Sabatons", "=q1=#m1# =ds=#c6#, #c9#","", "33.33%" },
 		{ 7, 0,"","","" },
 		{ 8, 223017, "", "=q4=Veil of Eclipse", "=ds=#s4#","", "16.67%" },
 		{ 9, 223219, "", "=q4=Girdle of the Mentor", "=ds=#s10#, #a4#","", "16.67%" },
@@ -4595,11 +4595,11 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 
 	AtlasLoot_Data["NAXGothicderHarvester"] = {
 		{ 1, 222726, "", "=q5=Splinter of Atiesh", "=ds=#m3#","", "30%" },
-		{ 2, -22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
+		{ 2, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
 		{ 3, 0,"","","" },
-		{ 4, -22372, "", "=q4=Desecrated Sandals", "=q1=#m1# =ds=#c8#, #c3#, #c5#","", "33.33%" },
-		{ 5, -22365, "", "=q4=Desecrated Boots", "=q1=#m1# =ds=#c7#, #c1#, #c2#, #c4#","", "33.33%" },
-		{ 6, -22358, "", "=q4=Desecrated Sabatons", "=q1=#m1# =ds=#c6#, #c9#","", "33.33%" },
+		{ 4, 22372, "", "=q4=Desecrated Sandals", "=q1=#m1# =ds=#c8#, #c3#, #c5#","", "33.33%" },
+		{ 5, 22365, "", "=q4=Desecrated Boots", "=q1=#m1# =ds=#c7#, #c1#, #c2#, #c4#","", "33.33%" },
+		{ 6, 22358, "", "=q4=Desecrated Sabatons", "=q1=#m1# =ds=#c6#, #c9#","", "33.33%" },
 		{ 7, 0,"","","" },
 		{ 8, 223032, "", "=q4=Glacial Headdress", "=ds=#s1#, #a1#","", "20%" },
 		{ 9, 223021, "", "=q4=The Soul Harvester's Bindings", "=ds=#s8#, #a1#","", "20%"  },
@@ -4614,11 +4614,11 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 
 	AtlasLoot_Data["NAXTheFourHorsemen"] = {
 		{ 1, 222726, "", "=q5=Splinter of Atiesh", "=ds=#m3#","", "30%"  },
-		{ 2, -22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
+		{ 2, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
 		{ 3, 0,"","","" },
-		{ 4, -22351, "", "=q4=Desecrated Robe", "=q1=#m1# =ds=#c8#, #c3#, #c5#","", "33.33%"  },
-		{ 5, -22350, "", "=q4=Desecrated Tunic", "=q1=#m1# =ds=#c7#, #c1#, #c2#, #c4#","", "33.33%"  },
-		{ 6, -22349, "", "=q4=Desecrated Breastplate", "=q1=#m1# =ds=#c6#, #c9#","", "33.33%"  },
+		{ 4, 22351, "", "=q4=Desecrated Robe", "=q1=#m1# =ds=#c8#, #c3#, #c5#","", "33.33%"  },
+		{ 5, 22350, "", "=q4=Desecrated Tunic", "=q1=#m1# =ds=#c7#, #c1#, #c2#, #c4#","", "33.33%"  },
+		{ 6, 22349, "", "=q4=Desecrated Breastplate", "=q1=#m1# =ds=#c6#, #c9#","", "33.33%"  },
 		{ 7, 0,"","","" },
 		{ 8, 223071, "", "=q4=Leggings of Apocalypse", "=ds=#s11#, #a2#","", "16.67%"  },
 		{ 9, 222809, "", "=q4=Maul of the Redeemed Crusader", "=ds=#h2#, #w6#","", "16.67%"  },
@@ -4634,11 +4634,11 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 
 	AtlasLoot_Data["NAXNothderPlaguebringer"] = {
 		{ 1, 222726, "", "=q5=Splinter of Atiesh", "=ds=#m3#","", "30%" },
-		{ 2, -22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
+		{ 2, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
 		{ 3, 0,"","","" },
-		{ 4, -22370, "", "=q4=Desecrated Belt", "=q1=#m1# =ds=#c5#, #c3#, #c8#","", "33.33%" },
-		{ 5, -22363, "", "=q4=Desecrated Girdle", "=q1=#m1# =ds=#c7#, #c1#, #c2#, #c4#","", "33.33%" },
-		{ 6, -22356, "", "=q4=Desecrated Waistguard", "=q1=#m1# =ds=#c6#, #c9#","", "33.33%" },
+		{ 4, 22370, "", "=q4=Desecrated Belt", "=q1=#m1# =ds=#c5#, #c3#, #c8#","", "33.33%" },
+		{ 5, 22363, "", "=q4=Desecrated Girdle", "=q1=#m1# =ds=#c7#, #c1#, #c2#, #c4#","", "33.33%" },
+		{ 6, 22356, "", "=q4=Desecrated Waistguard", "=q1=#m1# =ds=#c6#, #c9#","", "33.33%" },
 		{ 7, 0,"","","" },
 		{ 8, 223030, "", "=q4=Cloak of the Scourge", "=ds=#s4#","", "14.29%" },
 		{ 9, 222816, "", "=q4=Hatchet of Sundered Bone", "=ds=#h1#, #w1#","", "14.29%" },
@@ -4655,11 +4655,11 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 
 	AtlasLoot_Data["NAXHeiganderUnclean"] = {
 		{ 1, 222726, "", "=q5=Splinter of Atiesh", "=ds=#m3#","", "30%"  },
-		{ 2, -22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
+		{ 2, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
 		{ 3, 0,"","","" },
-		{ 4, -22370, "", "=q4=Desecrated Belt", "=q1=#m1# =ds=#c5#, #c3#, #c8#","", "33.33%" },
-		{ 5, -22363, "", "=q4=Desecrated Girdle", "=q1=#m1# =ds=#c7#, #c1#, #c2#, #c4#","", "33.33%" },
-		{ 6, -22356, "", "=q4=Desecrated Waistguard", "=q1=#m1# =ds=#c6#, #c9#","", "33.33%" },
+		{ 4, 22370, "", "=q4=Desecrated Belt", "=q1=#m1# =ds=#c5#, #c3#, #c8#","", "33.33%" },
+		{ 5, 22363, "", "=q4=Desecrated Girdle", "=q1=#m1# =ds=#c7#, #c1#, #c2#, #c4#","", "33.33%" },
+		{ 6, 22356, "", "=q4=Desecrated Waistguard", "=q1=#m1# =ds=#c6#, #c9#","", "33.33%" },
 		{ 7, 0,"","","" },
 		{ 8, 223035, "", "=q4=Preceptor's Hat", "=ds=#s1#, #a1#","", "20%" },
 		{ 9, 223033, "", "=q4=Icy Scale Coif", "=ds=#s1#, #a3#","", "20%" },
@@ -4674,11 +4674,11 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 
 	AtlasLoot_Data["NAXLoatheb"] = {
 		{ 1, 222726, "", "=q5=Splinter of Atiesh", "=ds=#m3#","", "30%" },
-		{ 2, -22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
+		{ 2, 22727, "", "=q5=Frame of Atiesh", "=ds=#m2#" },
 		{ 3, 0,"","","" },
-		{ 4, -22366, "", "=q4=Desecrated Leggings", "=q1=#m1# =ds=#c5#, #c3#, #c8#","", "66.67%" },
-		{ 5, -22359, "", "=q4=Desecrated Legguards", "=q1=#m1# =ds=#c7#, #c1#, #c2#, #c4#" ,"", "66.67%"},
-		{ 6, -22352, "", "=q4=Desecrated Legplates", "=q1=#m1# =ds=#c6#, #c9#","", "66.67%" },
+		{ 4, 22366, "", "=q4=Desecrated Leggings", "=q1=#m1# =ds=#c5#, #c3#, #c8#","", "66.67%" },
+		{ 5, 22359, "", "=q4=Desecrated Legguards", "=q1=#m1# =ds=#c7#, #c1#, #c2#, #c4#" ,"", "66.67%"},
+		{ 6, 22352, "", "=q4=Desecrated Legplates", "=q1=#m1# =ds=#c6#, #c9#","", "66.67%" },
 		{ 7, 0,"","","" },
 		{ 8, 223039, "", "=q4=The Eye of Nerub", "=ds=#w7#","", "20%" },
 		{ 9, 222800, "", "=q4=Brimstone Staff", "=ds=#w9#","", "20%" },
@@ -4707,10 +4707,10 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 13, 0,"","","" },
 		{ 14, 0,"","","" },
 		{ 15, 0,"","","" },
-		{ 16, -23545, "", "=q4=Power of the Scourge", "=ds=#s3# #e17#","","50%"  },
-		{ 17, -23547, "", "=q4=Resilience of the Scourge", "=ds=#s3# #e17#","","50%" },
-		{ 18, -23549, "", "=q4=Fortitude of the Scourge", "=ds=#s3# #e17#","","50%" },
-		{ 19, -23548, "", "=q4=Might of the Scourge", "=ds=#s3# #e17#" ,"","50%"},
+		{ 16, 23545, "", "=q4=Power of the Scourge", "=ds=#s3# #e17#","","50%"  },
+		{ 17, 23547, "", "=q4=Resilience of the Scourge", "=ds=#s3# #e17#","","50%" },
+		{ 18, 23549, "", "=q4=Fortitude of the Scourge", "=ds=#s3# #e17#","","50%" },
+		{ 19, 23548, "", "=q4=Might of the Scourge", "=ds=#s3# #e17#" ,"","50%"},
 		Prev = "NAXLoatheb";
 		Next = "NAXKelThuzad";
 		Dif = 4;
@@ -4770,13 +4770,13 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 13, 0,"","","" },
 		{ 14, 0,"","","" },
 		{ 15, 0,"","","" },
-		{ 16, -22376, "", "=q3=Wartorn Cloth Scrap", "=ds=#m3#" },
-		{ 17, -22373, "", "=q3=Wartorn Leather Scrap", "=ds=#m3#" },
-		{ 18, -22374, "", "=q3=Wartorn Chain Scrap", "=ds=#m3#" },
-		{ 19, -22375, "", "=q3=Wartorn Plate Scrap", "=ds=#m3#" },
+		{ 16, 22376, "", "=q3=Wartorn Cloth Scrap", "=ds=#m3#" },
+		{ 17, 22373, "", "=q3=Wartorn Leather Scrap", "=ds=#m3#" },
+		{ 18, 22374, "", "=q3=Wartorn Chain Scrap", "=ds=#m3#" },
+		{ 19, 22375, "", "=q3=Wartorn Plate Scrap", "=ds=#m3#" },
 		{ 20, 0,"","","" },
-		{ 21, -22708, "", "=q1=Fate of Ramaladni", "=ds=#m3#" },
-		{ 22, -23055, "", "=q1=Word of Thawing", "=ds=#m20#" },
+		{ 21, 22708, "", "=q1=Fate of Ramaladni", "=ds=#m3#" },
+		{ 22, 23055, "", "=q1=Word of Thawing", "=ds=#m20#" },
 		Prev = "NAXKelThuzad";
 		Dif = 4;
 		Raid = true;
@@ -4799,11 +4799,11 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 8, 216963, "", "=q4=Helm of Wrath",		  "=q1=#m1# =ds=#c9# (T2)","", "22.22%" },
 		{ 9, 216955, "", "=q4=Judgement Crown",		"=q1=#m1# =ds=#c4# (T2)", "","22.22%" },
 		{ 10, 0,"","","" },
-		{ 11, -18705, "", "=q4=Mature Black Dragon Sinew", "=ds=#m3# =q1=#m1# =ds=#c2#", "","100%" },
-		{ 12, -18713, "", "=q4=Rhok'delar, Longbow of the Ancient Keepers", "=q1=#m4#: =ds=#w2#, =q1=#m1# =ds=#c2#" },
+		{ 11, 18705, "", "=q4=Mature Black Dragon Sinew", "=ds=#m3# =q1=#m1# =ds=#c2#", "","100%" },
+		{ 12, 18713, "", "=q4=Rhok'delar, Longbow of the Ancient Keepers", "=q1=#m4#: =ds=#w2#, =q1=#m1# =ds=#c2#" },
 		{ 13, 0,"","","" },
-		{ 14, -15410, "","=q3=Scale of Onyxia",	  "=ds=#e8#" },
-		{ 15, -17966, "", "=q2=Onyxia Hide Backpack", "=ds=#m14# #e1#","", "100%"},
+		{ 14, 15410, "","=q3=Scale of Onyxia",	  "=ds=#e8#" },
+		{ 15, 17966, "", "=q2=Onyxia Hide Backpack", "=ds=#m14# #e1#","", "100%"},
 		{ 16, 217078, "", "=q4=Sapphiron Drape",			  "=ds=#s4#","", "28.57%" },
 		{ 17, 218205, "", "=q4=Eskhandar's Collar",				"=ds=#s2#","", "28.57%" },
 		{ 18, 218813, "", "=q4=Ring of Binding",		   "=ds=#s13#", "","28.57%" },
@@ -4811,11 +4811,11 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 20, 217067, "", "=q4=Ancient Cornerstone Grimoire", "=ds=#s15#","", "28.57%" },
 		{ 21, 217075, "", "=q4=Vis'kag the Bloodletter",		  "=ds=#h1#, #w10#","", "28.57%" },
 		{ 22, 217068, "", "=q4=Deathbringer","=ds=#h1#, #w1#","", "28.57%" },
-		{ 24, -18423, "", "=q4=Head of Onyxia","=ds=#m2#","", "100%" },
-		{ 25, -18404, "", "=q4=Onyxia Tooth Pendant", "=q1=#m4#: =ds=#s2#" },
-		{ 26, -18403, "", "=q4=Dragonslayer's Signet", "=q1=#m4#: =ds=#s13#" },
-		{ 27, -18406, "", "=q4=Onyxia Blood Talisman", "=q1=#m4#: =ds=#s14#" },
-		{ 29, -49636, "", "=q4=Reins of the Onyxian Drake", "=ds=#e12#", "" };
+		{ 24, 18423, "", "=q4=Head of Onyxia","=ds=#m2#","", "100%" },
+		{ 25, 18404, "", "=q4=Onyxia Tooth Pendant", "=q1=#m4#: =ds=#s2#" },
+		{ 26, 18403, "", "=q4=Dragonslayer's Signet", "=q1=#m4#: =ds=#s13#" },
+		{ 27, 18406, "", "=q4=Onyxia Blood Talisman", "=q1=#m4#: =ds=#s14#" },
+		{ 29, 49636, "", "=q4=Reins of the Onyxian Drake", "=ds=#e12#", "" };
 		Dif = 4;
 		Raid = true;
 	};

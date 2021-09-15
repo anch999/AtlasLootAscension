@@ -589,6 +589,10 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 	
 	-- Hide the Filter Check-Box
 	AtlasLootFilterCheck:Hide();
+
+	--Hide the Difficulty selector will show if needed
+	AtlasLootMythicButton:Hide();
+	AtlasLoot_DifficultySelect:Hide();
     
     dataSource_backup = dataSource;
 	if dataID == "SearchResult" or dataID == "WishList" then
@@ -659,12 +663,9 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 		--Check to see if loaded table is different Difficulty then options set
 		local dif = false;
 		if(dataSource[dataID].Dif ~= nil) then
-			if (dataSource[dataID].Raid ~= nil) then
-				if(AtlasLoot.db.profile.MythicPlussTier > 4) then
-					AtlasLoot.db.profile.MythicPlussTier = 4;
-				end
-			end
-
+			--Raid tables only have 4 Difficulties, this helps set it if previous selection was possibly dungeon
+			if dataSource[dataID].Raid ~= nil then AtlasLoot.db.profile.MythicPlussTier = math.min(4, AtlasLoot.db.profile.MythicPlussTier) end
+			
 			dif = not (dataSource[dataID].Dif == AtlasLoot.db.profile.MythicPlussTier);
 			if dif then
 				--Set this page to the new Difficulty
@@ -675,7 +676,6 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 		--Iterate through each item object and set its properties
 		for i = 1, 30, 1 do
 			--Check for a valid object (that it exists, and that it has a name)
-			local itemId = 0;
 			if(dataSource[dataID][i] ~= nil and dataSource[dataID][i][4] ~= "") then
 				
 				if string.sub(dataSource[dataID][i][2], 1, 1) == "s" then
@@ -683,28 +683,23 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 				else
 					isItem = true;
 				end
-				
-				itemId = dataSource[dataID][i][2]
 
 				if isItem then
-					if itemId < 0 then
-						--Items that are set to be ignored by difficulty changed need to be flipped positive
-						itemId = math.abs(itemId);
-					elseif dif and itemId ~= 0 then
-						--If difficulty has changed, find new id and set it.
-						itemId = AL_FindId(string.sub(dataSource[dataID][i][4], 5), dataSource[dataID].Dif) or dataSource[dataID][i][2];
-						dataSource[dataID][i][2] = itemId;
+
+					--If difficulty has changed, find new id and set it.
+					if dif and dataSource[dataID][i][2] ~= 0 then
+						--Some items have an entry in the Difficulty table but are not in the game, will look into seperating later 
+						dataSource[dataID][i][2] = AL_FindId(string.sub(dataSource[dataID][i][4], 5), dataSource[dataID].Dif) or dataSource[dataID][i][2]; --No need for negatives anymore :D
 					end
 
-
-					itemName, itemLink, itemQuality, itemLevel, itemMinLevel, itemType, itemSubType, itemCount, itemEquipLoc, itemTexture = GetItemInfo(itemId);
+					itemName, itemLink, itemQuality, itemLevel, itemMinLevel, itemType, itemSubType, itemCount, itemEquipLoc, itemTexture = GetItemInfo(dataSource[dataID][i][2]);
 					--If the client has the name of the item in cache, use that instead.
 					--This is poor man's localisation, English is replaced be whatever is needed
-					if(GetItemInfo(itemId)) then
+					if(GetItemInfo(dataSource[dataID][i][2])) then
 						_, _, _, itemColor = GetItemQualityColor(itemQuality);
 						text = itemColor..itemName;
 					else
-						if(GetItemInfo(itemId)) then
+						if(GetItemInfo(dataSource[dataID][i][2])) then
 							_, _, _, itemColor = GetItemQualityColor(itemQuality);
 							text = itemColor..itemName;
 						else
@@ -749,7 +744,7 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 				if dataSource[dataID][i][3] == "?" then
 					iconFrame:SetTexture("Interface\\Icons\\INV_Misc_QuestionMark");
 				elseif dataSource[dataID][i][3] == "" then
-					iconFrame:SetTexture(GetItemIcon(itemId));
+					iconFrame:SetTexture(GetItemIcon(dataSource[dataID][i][2]));
 				elseif (not isItem) and (spellIcon) then
 					if tonumber(dataSource[dataID][i][3]) then
 						iconFrame:SetTexture(GetItemIcon(tonumber(dataSource[dataID][i][3])));
@@ -788,7 +783,7 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
                     itemButton.itemID = dataSource[dataID][i][3];
                     itemButton.spellitemID = dataSource[dataID][i][3];
                 else
-                    itemButton.itemID = itemId;
+                    itemButton.itemID = dataSource[dataID][i][2];
                     if tonumber(dataSource[dataID][i][3]) then
                         itemButton.spellitemID = dataSource[dataID][i][3];
                     else
@@ -858,16 +853,9 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
         AtlasLoot_QuickLooks:Show();
         AtlasLootQuickLooksButton:Show();
 
-		if (AtlasLoot_Data[dataID].Dif ~= nil and AtlasLoot_Data[dataID].Raid ~= nil) then
+		if (AtlasLoot_Data[dataID].Dif ~= nil) then
+			if AtlasLoot_Data[dataID].Raid ~= nil then AtlasLootMythicButton:SetScript("OnClick", AtlasLoot_ShowRaidSelect) else AtlasLootMythicButton:SetScript("OnClick", AtlasLoot_ShowMythicSelect) end;
 			AtlasLootMythicButton:Show();
-			AtlasLootMythicButton:SetScript("OnClick", AtlasLoot_ShowRaidSelect);
-			AtlasLoot_DifficultySelect:Show();
-		elseif (AtlasLoot_Data[dataID].Dif ~= nil) then
-			AtlasLootMythicButton:Show();
-			AtlasLootMythicButton:SetScript("OnClick", AtlasLoot_ShowMythicSelect);
-			AtlasLoot_DifficultySelect:Show();	
-		else
-			AtlasLootMythicButton:Hide();
 			AtlasLoot_DifficultySelect:Show();
 		end
 		
