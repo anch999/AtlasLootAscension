@@ -665,7 +665,10 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 		if(dataSource[dataID].Dif ~= nil) then
 			--Raid tables only have 4 Difficulties, this helps set it if previous selection was possibly dungeon
 			if dataSource[dataID].Raid ~= nil then AtlasLoot.db.profile.MythicPlussTier = math.min(4, AtlasLoot.db.profile.MythicPlussTier) end
-			
+			--Expansion dungeons show both normal and heroic loot on same page/setting
+			--so if its set to Heroic(3) lets change it back to Normal(2)
+			if dataSource[dataID].Exp ~= nil then if AtlasLoot.db.profile.MythicPlussTier == 3 then AtlasLoot.db.profile.MythicPlussTier = 2 end end
+
 			dif = not (dataSource[dataID].Dif == AtlasLoot.db.profile.MythicPlussTier);
 			if dif then
 				--Set this page to the new Difficulty
@@ -854,7 +857,11 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
         AtlasLootQuickLooksButton:Show();
 
 		if (AtlasLoot_Data[dataID].Dif ~= nil) then
-			if AtlasLoot_Data[dataID].Raid ~= nil then AtlasLootMythicButton:SetScript("OnClick", AtlasLoot_ShowRaidSelect) else AtlasLootMythicButton:SetScript("OnClick", AtlasLoot_ShowMythicSelect) end;
+			--Set the difficulty select button to correct list
+			if AtlasLoot_Data[dataID].Raid ~= nil then AtlasLootMythicButton:SetScript("OnClick", AtlasLoot_ShowRaidSelect)
+			elseif AtlasLoot_Data[dataID].Exp ~= nil then AtlasLootMythicButton:SetScript("OnClick", AtlasLoot_ShowExpSelect) 
+			else AtlasLootMythicButton:SetScript("OnClick", AtlasLoot_ShowMythicSelect) end;
+			
 			AtlasLootMythicButton:Show();
 			AtlasLoot_DifficultySelect:Show();
 		end
@@ -1459,6 +1466,44 @@ function AtlasLoot_ShowMythicSelect(button)
 						dewdrop:Close(1);
 					end
 				);
+			end
+		end;
+		dewdrop:Open(button,
+			'point', function(parent)
+				return "TOPLEFT", "TOPRIGHT";
+			end,
+			"children", setOptions
+		);
+	end
+end
+
+--[[
+AtlasLoot_ShowExpSelect(button)
+button: Identity of the button pressed to trigger the function
+Shows the GUI for choosing Difficulty Tier
+This is for expansion dungeons where Normal/Heroic are the same page
+]]
+function AtlasLoot_ShowExpSelect(button)
+	local dewdrop = AceLibrary("Dewdrop-2.0");
+	if dewdrop:IsOpen(button) then
+		dewdrop:Close(1);
+	else
+		local setOptions = function()
+			for t = 1, 14, 1 do
+				if t ~= 3 then
+					dewdrop:AddLine(
+						"text", AtlasLoot_Difficulty[t],
+						"tooltipTitle", AtlasLoot_Difficulty[t],
+						"tooltipText", "Swap to Difficulty Level: "..AtlasLoot_Difficulty[t],
+						"func", function()
+							AtlasLoot.db.profile.MythicPlussTier = t;
+							if AtlasLootItemsFrame:IsVisible() and AtlasLootItemsFrame.refresh then
+								AtlasLoot_ShowItemsFrame(AtlasLootItemsFrame.refresh[1], AtlasLootItemsFrame.refresh[2], AtlasLootItemsFrame.refresh[3], AtlasLootItemsFrame.refresh[4]);
+							end
+							dewdrop:Close(1);
+						end
+					);
+				end
 			end
 		end;
 		dewdrop:Open(button,
