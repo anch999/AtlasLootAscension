@@ -919,7 +919,15 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 		getglobal("AtlasLootItemsFrame_NEXT"):Hide();
 		getglobal("AtlasLootItemsFrame_PREV"):Hide();
         if dataID ~= "SearchResult" and dataID ~= "WishList" then
-		    AtlasLoot_BossName:SetText(AtlasLoot_TableNames[dataID][1]);
+			local affix = "";
+			if AtlasLoot_Data[dataID].Dif ~= nil then
+				if AtlasLoot_Data[dataID].Raid ~= nil then 
+					affix = " ("..AtlasLoot_RaidDifficulty[AtlasLoot.db.profile.MythicPlussTier]..")"
+				else
+					affix = " ("..AtlasLoot_Difficulty[AtlasLoot.db.profile.MythicPlussTier]..")"
+				end
+			end			
+		    AtlasLoot_BossName:SetText(AtlasLoot_TableNames[dataID][1]..affix);
         else
             AtlasLoot_BossName:SetText(boss);
         end
