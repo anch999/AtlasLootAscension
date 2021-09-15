@@ -11126,17 +11126,27 @@ ItemIDsDatabase = {
 	{"Vigorous Spaulders", {6051998, 51998, 397657, 397658, 397659, 397660, 397661, 397662, 397663, 397664, 397665, 397666, 397667, 397668} }
 }
 
+
 --[[
 AL_FindId(name, difficulty)
 Finds the Ids of other difficulties based on the name of the item and the difficulty parameter given.
 On the form of {Name, {normal, heroic, mythic, mythic1, mythic2, ... ,mythicN}}
 ]]
 function AL_FindId(name, difficulty)
-	for index, items in pairs(ItemIDsDatabase) do
-		for key, eachItem in ipairs(items) do
-			if eachItem == name then 
-				return items[2][difficulty]
-			end
+	for i = 1, #ItemIDsDatabase do
+		if ItemIDsDatabase[i][1] == name then 
+			return ItemIDsDatabase[i][2][difficulty]
+		elseif ItemIDsDatabase[i][3] ~= nil and (ItemIDsDatabase[i][3] == name or ItemIDsDatabase[i][1] == name) then
+			return ItemIDsDatabase[i][2][difficulty]
+		end
+	end
+end
+
+function AL_ItemDBLocalize(name, localization)
+	for i = 1, #ItemIDsDatabase do
+		if ItemIDsDatabase[i][1] == name then
+			ItemIDsDatabase[i][3] = localization
+			break
 		end
 	end
 end
