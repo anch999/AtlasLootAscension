@@ -119,7 +119,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
         { 19, 20888, "", "=q3=Qiraji Ceremonial Ring", "#m3#", "", "7.80%"};
         Next = "AQ20Rajaxx";
 		Dif = 4; --Set to 4 for Ascended becuase that is this tables default data
-		Raid = true;
+		Type = "Raid";
     };
     
     AtlasLoot_Data["AQ20Rajaxx"] = {
@@ -143,7 +143,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
         Prev = "AQ20Kurinnaxx";
         Next = "AQ20Moam";
 		Dif = 4;
-		Raid = true;
+		Type = "Raid";
     };
     
     AtlasLoot_Data["AQ20Moam"] = {
@@ -169,7 +169,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
         Prev = "AQ20Rajaxx";
         Next = "AQ20Buru";
 		Dif = 4;
-		Raid = true;
+		Type = "Raid";
     };
     
     AtlasLoot_Data["AQ20Buru"] = {
@@ -189,7 +189,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
         Prev = "AQ20Moam";
         Next = "AQ20Ayamiss";
 		Dif = 4;
-		Raid = true;
+		Type = "Raid";
     };
     
     AtlasLoot_Data["AQ20Ayamiss"] = {
@@ -210,7 +210,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
         Prev = "AQ20Buru";
         Next = "AQ20Ossirian";
 		Dif = 4;
-		Raid = true;
+		Type = "Raid";
     };
     
     AtlasLoot_Data["AQ20Ossirian"] = {
@@ -238,7 +238,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
         { 25, 20888, "", "=q3=Qiraji Ceremonial Ring", "#m3#", "", "8.53%"};
         Prev = "AQ20Ayamiss";
 		Dif = 4;
-		Raid = true;
+		Type = "Raid";
     };
     
     AtlasLoot_Data["AQ20Trash"] = {
@@ -325,7 +325,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 28, 22196, "", "=q4=Thick Obsidian Breastplate", "=ds=#s5#, #a4#"};
 		Next = "AQ40Vem";
 		Dif = 4;
-		Raid = true;
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["AQ40Vem"] = {
@@ -353,7 +353,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		Prev = "AQ40Skeram";
 		Next = "AQ40Sartura";
 		Dif = 4;
-		Raid = true;
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["AQ40Sartura"] = {
@@ -382,7 +382,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		Prev = "AQ40Vem";
 		Next = "AQ40Fankriss";
 		Dif = 4;
-		Raid = true;
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["AQ40Fankriss"] = {
@@ -411,7 +411,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		Prev = "AQ40Sartura";
 		Next = "AQ40Viscidus";
 		Dif = 4;
-		Raid = true;
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["AQ40Viscidus"] = {
@@ -436,7 +436,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		Prev = "AQ40Fankriss";
 		Next = "AQ40Huhuran";
 		Dif = 4;
-		Raid = true;
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["AQ40Huhuran"] = {
@@ -460,7 +460,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		Prev = "AQ40Viscidus";
 		Next = "AQ40Emperors";
 		Dif = 4;
-		Raid = true;
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["AQ40Emperors"] = {
@@ -493,7 +493,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		Prev = "AQ40Huhuran";
 		Next = "AQ40Ouro";
 		Dif = 4;
-		Raid = true;
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["AQ40Ouro"] = {
@@ -517,7 +517,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		Prev = "AQ40Emperors";
 		Next = "AQ40CThun";
 		Dif = 4;
-		Raid = true;
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["AQ40CThun"] = {
@@ -547,7 +547,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 28, 222630, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c8#"};
 		Prev = "AQ40Ouro";
 		Dif = 4;
-		Raid = true;
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["AQ40Trash1"] = {
@@ -566,7 +566,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 19, 21321, "", "=q3=Red Qiraji Resonating Crystal", "=ds=#e12#", "", "1.39%"};
 		Next = "AQ40Trash2";
 		Dif = 4;
-		Raid = true;
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["AQ40Trash2"] = {
@@ -1463,7 +1463,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 22, 17329, "", "=q1=Hand of Lucifron", "=ds=#m3#"};
 		Next = "MCMagmadar";
 		Dif = 4;
-		Raid = true;
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["MCMagmadar"] = {
@@ -1494,7 +1494,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		Prev = "MCLucifron";
 		Next = "MCGehennas";
 		Dif = 4;
-		Raid = true;
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["MCGehennas"] = {
@@ -1518,7 +1518,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		Prev = "MCMagmadar";
 		Next = "MCGarr";
 		Dif = 4;
-		Raid = true;
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["MCGarr"] = {
@@ -1551,7 +1551,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		Prev = "MCGehennas";
 		Next = "MCShazzrah";
 		Dif = 4;
-		Raid = true;
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["MCShazzrah"] = {
@@ -1575,7 +1575,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		Prev = "MCGarr";
 		Next = "MCGeddon";
 		Dif = 4;
-		Raid = true;
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["MCGeddon"] = {
@@ -1601,7 +1601,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		Prev = "MCShazzrah";
 		Next = "MCGolemagg";
 		Dif = 4;
-		Raid = true;
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["MCGolemagg"] = {
@@ -1633,7 +1633,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		Prev = "MCGeddon";
 		Next = "MCSulfuron";
 		Dif = 4;
-		Raid = true;
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["MCSulfuron"] = {
@@ -1656,7 +1656,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		Prev = "MCGolemagg";
 		Next = "MCMajordomo";
 		Dif = 4;
-		Raid = true;
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["MCMajordomo"] = {
@@ -1680,7 +1680,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		Prev = "MCSulfuron";
 		Next = "MCRagnaros";
 		Dif = 4;
-		Raid = true;
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["MCRagnaros"] = {
@@ -1715,7 +1715,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		Prev = "MCMajordomo";
 		Next = "MCTrashMobs";
 		Dif = 4;
-		Raid = true;
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["MCTrashMobs"] = {
@@ -1744,7 +1744,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		Prev = "MCRagnaros";
 		Next = "MCRANDOMBOSSDROPPS";
 		Dif = 4;
-		Raid = true;
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["MCRANDOMBOSSDROPPS"] = {
@@ -1796,7 +1796,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 26, 219405, "", "=q4=Malfurion's Blessed Bulwark", "=ds=#s5#, #a2#", "", "16.67%"};
 		Next = "BWLVaelastrasz";
 		Dif = 4;
-		Raid = true;
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["BWLVaelastrasz"] = {
@@ -1821,7 +1821,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		Prev = "BWLRazorgore";
 		Next = "BWLLashlayer";
 		Dif = 4;
-		Raid = true;
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["BWLLashlayer"] = {
@@ -1849,7 +1849,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		Prev = "BWLVaelastrasz";
 		Next = "BWLFiremaw";
 		Dif = 4;
-		Raid = true;
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["BWLFiremaw"] = {
@@ -1879,7 +1879,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		Prev = "BWLLashlayer";
 		Next = "BWLEbonroc";
 		Dif = 4;
-		Raid = true;
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["BWLEbonroc"] = {
@@ -1907,7 +1907,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		Prev = "BWLFiremaw";
 		Next = "BWLFlamegor";
 		Dif = 4;
-		Raid = true;
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["BWLFlamegor"] = {
@@ -1935,7 +1935,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		Prev = "BWLEbonroc";
 		Next = "BWLChromaggus";
 		Dif = 4;
-		Raid = true;
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["BWLChromaggus"] = {
@@ -1964,7 +1964,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		Prev = "BWLFlamegor";
 		Next = "BWLNefarian1";
 		Dif = 4;
-		Raid = true;
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["BWLNefarian1"] = {
@@ -1993,7 +1993,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		Prev = "BWLChromaggus";
 		Next = "BWLNefarian2";
 		Dif = 4;
-		Raid = true;
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["BWLNefarian2"] = {
@@ -2005,7 +2005,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		Prev = "BWLNefarian1";
 		Next = "BWLTrashMobs";
 		Dif = 4;
-		Raid = true;
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["BWLTrashMobs"] = {
@@ -2022,7 +2022,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 18, 21109, "", "=q1=Draconic for Dummies", "=ds=#m3#"};
 		Prev = "BWLNefarian2";
 		Dif = 4;
-		Raid = true;
+		Type = "Raid";
 	};
 
 		-----------------------
@@ -4111,7 +4111,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 23, 219915, "", "=q3=Zulian Defender", "=ds=#w8#", "", " 11.36%"};
 		Next = "ZGVenoxis";
 		Dif = 4;
-		Raid = true;
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["ZGVenoxis"] = {
@@ -4136,7 +4136,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		Prev = "ZGJeklik";
 		Next = "ZGMarli";
 		Dif = 4;
-		Raid = true;
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["ZGMarli"] = {
@@ -4160,7 +4160,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		Prev = "ZGVenoxis";
 		Next = "ZGMandokir";
 		Dif = 4;
-		Raid = true;
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["ZGMandokir"] = {
@@ -4191,7 +4191,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		Prev = "ZGMarli";
 		Next = "ZGEdgeofMadness";
 		Dif = 4;
-		Raid = true;
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["ZGEdgeofMadness"] = {
@@ -4214,7 +4214,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		Prev = "ZGMandokir";
 		Next = "ZGGahzranka";
 		Dif = 4;
-		Raid = true;
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["ZGGahzranka"] = {
@@ -4226,7 +4226,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		Prev = "ZGEdgeofMadness";
 		Next = "ZGThekal";
 		Dif = 4;
-		Raid = true;
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["ZGThekal"] = {
@@ -4249,7 +4249,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		Prev = "ZGGahzranka";
 		Next = "ZGArlokk";
 		Dif = 4;
-		Raid = true;
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["ZGArlokk"] = {
@@ -4273,7 +4273,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		Prev = "ZGThekal";
 		Next = "ZGJindo";
 		Dif = 4;
-		Raid = true;
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["ZGJindo"] = {
@@ -4303,7 +4303,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		Prev = "ZGArlokk";
 		Next = "ZGHakkar";
 		Dif = 4;
-		Raid = true;
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["ZGHakkar"] = {
@@ -4329,7 +4329,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		Prev = "ZGJindo";
 		Next = "ZGShared";
 		Dif = 4;
-		Raid = true;
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["ZGMuddyChurningWaters"] = {
@@ -4350,7 +4350,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		Prev = "ZGHakkar";
 		Next = "ZGTrash1";
 		Dif = 4;
-		Raid = true;
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["ZGTrash1"] = {
@@ -4378,7 +4378,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		Prev = "ZGShared";
 		Next = "ZGTrash2";
 		Dif = 4;
-		Raid = true;
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["ZGTrash2"] = {
@@ -4441,7 +4441,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 12, 222961, "", "=q4=Band of Reanimation", "=ds=#s13#","", "20%" },
 		Next = "NAXGrobbulus";
 		Dif = 4;
-		Raid = true;
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["NAXGrobbulus"] = {
@@ -4460,7 +4460,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		Prev = "NAXPatchwerk";
 		Next = "NAXGluth";
 		Dif = 4;
-		Raid = true;
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["NAXGluth"] = {
@@ -4494,7 +4494,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		Prev = "NAXGrobbulus";
 		Next = "NAXThaddius";
 		Dif = 4;
-		Raid = true;
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["NAXThaddius"] = {
@@ -4513,7 +4513,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		Prev = "NAXGluth";
 		Next = "NAXAnubRekhan";
 		Dif = 4;
-		Raid = true;
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["NAXAnubRekhan"] = {
@@ -4532,7 +4532,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		Prev = "NAXThaddius";
 		Next = "NAXGrandWidowFearlina";
 		Dif = 4;
-		Raid = true;
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["NAXGrandWidowFearlina"] = {
@@ -4551,7 +4551,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		Prev = "NAXAnubRekhan";
 		Next = "NAXMaexxna";
 		Dif = 4;
-		Raid = true;
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["NAXMaexxna"] = {
@@ -4570,7 +4570,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		Prev = "NAXGrandWidowFearlina";
 		Next = "NAXInstructorRAuvious";
 		Dif = 4;
-		Raid = true;
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["NAXInstructorRAuvious"] = {
@@ -4590,7 +4590,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		Prev = "NAXMaexxna";
 		Next = "NAXGothicderHarvester";
 		Dif = 4;
-		Raid = true;
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["NAXGothicderHarvester"] = {
@@ -4609,7 +4609,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		Prev = "NAXInstructorRAuvious";
 		Next = "NAXTheFourHorsemen";
 		Dif = 4;
-		Raid = true;
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["NAXTheFourHorsemen"] = {
@@ -4629,7 +4629,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		Prev = "NAXGothicderHarvester";
 		Next = "NAXNothderPlaguebringer";
 		Dif = 4;
-		Raid = true;
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["NAXNothderPlaguebringer"] = {
@@ -4650,7 +4650,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		Prev = "NAXTheFourHorsemen";
 		Next = "NAXHeiganderUnclean";
 		Dif = 4;
-		Raid = true;
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["NAXHeiganderUnclean"] = {
@@ -4669,7 +4669,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		Prev = "NAXNothderPlaguebringer";
 		Next = "NAXLoatheb";
 		Dif = 4;
-		Raid = true;
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["NAXLoatheb"] = {
@@ -4688,7 +4688,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		Prev = "NAXHeiganderUnclean";
 		Next = "NAXSapphiron";
 		Dif = 4;
-		Raid = true;
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["NAXSapphiron"] = {
@@ -4714,7 +4714,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		Prev = "NAXLoatheb";
 		Next = "NAXKelThuzad";
 		Dif = 4;
-		Raid = true;
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["NAXKelThuzad"] = {
@@ -4751,7 +4751,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		Prev = "NAXSapphiron";
 		Next = "NAXTrash";
 		Dif = 4;
-		Raid = true;
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["NAXTrash"] = {
@@ -4779,7 +4779,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 22, 23055, "", "=q1=Word of Thawing", "=ds=#m20#" },
 		Prev = "NAXKelThuzad";
 		Dif = 4;
-		Raid = true;
+		Type = "Raid";
 	};
 
 
@@ -4817,7 +4817,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 27, 18406, "", "=q4=Onyxia Blood Talisman", "=q1=#m4#: =ds=#s14#" },
 		{ 29, 49636, "", "=q4=Reins of the Onyxian Drake", "=ds=#e12#", "" };
 		Dif = 4;
-		Raid = true;
+		Type = "Raid";
 	};
 
 	--------------------------

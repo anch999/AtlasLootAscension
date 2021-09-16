@@ -699,6 +699,9 @@
 				</Scripts>
 			</Button>
 			<Button name="AtlasLootMythicButton" hidden="true">
+				<KeyValues>
+    				<KeyValue key="difficulty_type" value="dungeon" type="string"/>
+  				</KeyValues>
 				<Size>
 					<AbsDimension x="25" y="25" />
 				</Size>
@@ -718,7 +721,7 @@
 						this:SetFrameLevel( (this:GetParent()):GetFrameLevel() + 1 );
 					</OnShow>
 					<OnClick>
-						AtlasLoot_ShowMythicSelect(this);
+						AtlasLoot_ShowDifficultySelect(this, this.difficulty_type);
 					</OnClick>
 				</Scripts>
 			</Button>

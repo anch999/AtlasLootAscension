@@ -134,14 +134,10 @@ AtlasLoot_MenuList = {
 };
 
 AtlasLoot_Difficulty = {
-	"Bloodforged", "Normal", "Heroic", "Mythic", "Mythic 1",
-	"Mythic 2","Mythic 3","Mythic 4","Mythic 5",
-	"Mythic 6","Mythic 7","Mythic 8","Mythic 9",
-	"Mythic 10",
-}
-
-AtlasLoot_RaidDifficulty = {
-	"Bloodforged", "Normal Flex", "Heroic Flex", "Ascended",
+	["Dungeon"] = {"Bloodforged", "Normal", "Heroic", "Mythic", "Mythic 1", "Mythic 2","Mythic 3","Mythic 4","Mythic 5", "Mythic 6","Mythic 7","Mythic 8","Mythic 9", "Mythic 10",};
+	["ExDungeon"] = {"Bloodforged", "Normal/Heroic", ":D", "Mythic", "Mythic 1", "Mythic 2","Mythic 3","Mythic 4","Mythic 5", "Mythic 6","Mythic 7","Mythic 8","Mythic 9", "Mythic 10",};
+	["Raid"] = {"Bloodforged", "Normal Flex", "Heroic Flex", "Ascended",};
+	["Crafting"] = {"Uncommon", "Rare", "Epic"};
 }
 
 -- Popup Box for first time users
@@ -663,11 +659,15 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 		--Check to see if loaded table is different Difficulty then options set
 		local dif = false;
 		if(dataSource[dataID].Dif ~= nil) then
-			--Raid tables only have 4 Difficulties, this helps set it if previous selection was possibly dungeon
-			if dataSource[dataID].Raid ~= nil then AtlasLoot.db.profile.MythicPlussTier = math.min(4, AtlasLoot.db.profile.MythicPlussTier) end
-			--Expansion dungeons show both normal and heroic loot on same page/setting
-			--so if its set to Heroic(3) lets change it back to Normal(2)
-			if dataSource[dataID].Exp ~= nil then if AtlasLoot.db.profile.MythicPlussTier == 3 then AtlasLoot.db.profile.MythicPlussTier = 2 end end
+			
+			if dataSource[dataID].Type ~= nil then
+				--Raid tables only have 4 Difficulties, this helps set it if previous selection was possibly dungeon 
+				if dataSource[dataID].Type == "Raid" then AtlasLoot.db.profile.MythicPlussTier = math.min(4, AtlasLoot.db.profile.MythicPlussTier)
+				--Expansion dungeons show both normal and heroic loot on same page/setting
+				--so if its set to Heroic(3) lets change it back to Normal(2) 
+				elseif dataSource[dataID].Type == "ExDungeon" then  if AtlasLoot.db.profile.MythicPlussTier == 3 then AtlasLoot.db.profile.MythicPlussTier = 2 end 
+				end 
+			end
 
 			dif = not (dataSource[dataID].Dif == AtlasLoot.db.profile.MythicPlussTier);
 			if dif then
@@ -680,7 +680,6 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 		for i = 1, 30, 1 do
 			--Check for a valid object (that it exists, and that it has a name)
 			if(dataSource[dataID][i] ~= nil and dataSource[dataID][i][4] ~= "") then
-				
 				if string.sub(dataSource[dataID][i][2], 1, 1) == "s" then
 					isItem = false;
 				else
@@ -856,12 +855,10 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
         AtlasLoot_QuickLooks:Show();
         AtlasLootQuickLooksButton:Show();
 
+
+		--Check if difficulties exist, if so show difficulty select buttons
 		if (AtlasLoot_Data[dataID].Dif ~= nil) then
-			--Set the difficulty select button to correct list
-			if AtlasLoot_Data[dataID].Raid ~= nil then AtlasLootMythicButton:SetScript("OnClick", AtlasLoot_ShowRaidSelect)
-			elseif AtlasLoot_Data[dataID].Exp ~= nil then AtlasLootMythicButton:SetScript("OnClick", AtlasLoot_ShowExpSelect) 
-			else AtlasLootMythicButton:SetScript("OnClick", AtlasLoot_ShowMythicSelect) end;
-			
+			AtlasLootMythicButton.difficulty_type = AtlasLoot_Data[dataID].Type or "Dungeon" 
 			AtlasLootMythicButton:Show();
 			AtlasLoot_DifficultySelect:Show();
 		end
@@ -928,11 +925,8 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
         if dataID ~= "SearchResult" and dataID ~= "WishList" then
 			local affix = "";
 			if AtlasLoot_Data[dataID].Dif ~= nil then
-				if AtlasLoot_Data[dataID].Raid ~= nil then 
-					affix = " ("..AtlasLoot_RaidDifficulty[AtlasLoot.db.profile.MythicPlussTier]..")"
-				else
-					affix = " ("..AtlasLoot_Difficulty[AtlasLoot.db.profile.MythicPlussTier]..")"
-				end
+					local d = AtlasLoot_Data[dataID].Type or "Dungeon"
+					affix = " ("..AtlasLoot_Difficulty[d][AtlasLoot.db.profile.MythicPlussTier]..")"
 			end			
 		    AtlasLoot_BossName:SetText(AtlasLoot_TableNames[dataID][1]..affix);
         else
@@ -1443,114 +1437,6 @@ function AtlasLoot_ShowQuickLooks(button)
 end
 
 --[[
-AtlasLoot_ShowMythicSelect(button)
-button: Identity of the button pressed to trigger the function
-Shows the GUI for choosing Mythic Tier
-]]
-function AtlasLoot_ShowMythicSelect(button)
-	local dewdrop = AceLibrary("Dewdrop-2.0");
-	if dewdrop:IsOpen(button) then
-		dewdrop:Close(1);
-	else
-		local setOptions = function()
-			for t = 1, 14, 1 do
-				dewdrop:AddLine(
-					"text", AtlasLoot_Difficulty[t],
-					"tooltipTitle", AtlasLoot_Difficulty[t],
-					"tooltipText", "Swap to Difficulty Level: "..AtlasLoot_Difficulty[t],
-					"func", function()
-						AtlasLoot.db.profile.MythicPlussTier = t;
-						if AtlasLootItemsFrame:IsVisible() and AtlasLootItemsFrame.refresh then
-							AtlasLoot_ShowItemsFrame(AtlasLootItemsFrame.refresh[1], AtlasLootItemsFrame.refresh[2], AtlasLootItemsFrame.refresh[3], AtlasLootItemsFrame.refresh[4]);
-						end
-						dewdrop:Close(1);
-					end
-				);
-			end
-		end;
-		dewdrop:Open(button,
-			'point', function(parent)
-				return "TOPLEFT", "TOPRIGHT";
-			end,
-			"children", setOptions
-		);
-	end
-end
-
---[[
-AtlasLoot_ShowExpSelect(button)
-button: Identity of the button pressed to trigger the function
-Shows the GUI for choosing Difficulty Tier
-This is for expansion dungeons where Normal/Heroic are the same page
-]]
-function AtlasLoot_ShowExpSelect(button)
-	local dewdrop = AceLibrary("Dewdrop-2.0");
-	if dewdrop:IsOpen(button) then
-		dewdrop:Close(1);
-	else
-		local setOptions = function()
-			for t = 1, 14, 1 do
-				if t ~= 3 then
-					dewdrop:AddLine(
-						"text", AtlasLoot_Difficulty[t],
-						"tooltipTitle", AtlasLoot_Difficulty[t],
-						"tooltipText", "Swap to Difficulty Level: "..AtlasLoot_Difficulty[t],
-						"func", function()
-							AtlasLoot.db.profile.MythicPlussTier = t;
-							if AtlasLootItemsFrame:IsVisible() and AtlasLootItemsFrame.refresh then
-								AtlasLoot_ShowItemsFrame(AtlasLootItemsFrame.refresh[1], AtlasLootItemsFrame.refresh[2], AtlasLootItemsFrame.refresh[3], AtlasLootItemsFrame.refresh[4]);
-							end
-							dewdrop:Close(1);
-						end
-					);
-				end
-			end
-		end;
-		dewdrop:Open(button,
-			'point', function(parent)
-				return "TOPLEFT", "TOPRIGHT";
-			end,
-			"children", setOptions
-		);
-	end
-end
-
---[[
-AtlasLoot_ShowMythicSelect(button)
-button: Identity of the button pressed to trigger the function
-Shows the GUI for choosing Mythic Tier
-]]
-function AtlasLoot_ShowRaidSelect(button)
-	local dewdrop = AceLibrary("Dewdrop-2.0");
-	if dewdrop:IsOpen(button) then
-		dewdrop:Close(1);
-	else
-		local setOptions = function()
-			for t = 1, 4, 1 do
-				dewdrop:AddLine(
-					"text", AtlasLoot_RaidDifficulty[t],
-					"tooltipTitle", AtlasLoot_RaidDifficulty[t],
-					"tooltipText", "Swap to Difficulty Level: "..AtlasLoot_RaidDifficulty[t],
-					"func", function()
-						AtlasLoot.db.profile.MythicPlussTier = t;
-						if AtlasLootItemsFrame:IsVisible() and AtlasLootItemsFrame.refresh then
-							AtlasLoot_ShowItemsFrame(AtlasLootItemsFrame.refresh[1], AtlasLootItemsFrame.refresh[2], AtlasLootItemsFrame.refresh[3], AtlasLootItemsFrame.refresh[4]);
-						end
-						dewdrop:Close(1);
-					end
-				);
-			end
-		end;
-		dewdrop:Open(button,
-			'point', function(parent)
-				return "TOPLEFT", "TOPRIGHT";
-			end,
-			"children", setOptions
-		);
-	end
-end
-
---[[
 AtlasLoot_RefreshQuickLookButtons()
 Enables/disables the quicklook buttons depending on what is assigned
 ]]
@@ -1606,6 +1492,41 @@ function AtlasLoot_AddTooltip(frameb, tooltiptext)
    frame:SetScript("OnLeave", function() GameTooltip:Hide() end)
 end
 
-
+--[[
+AtlasLoot_DifficultyDungeonSelect(button)
+button: Identity of the button pressed to trigger the function
+Shows the GUI for choosing Mythic Tier
+]]
+function AtlasLoot_ShowDifficultySelect(button, difficulty)
+	local dewdrop = AceLibrary("Dewdrop-2.0");
+	if dewdrop:IsOpen(button) then
+		dewdrop:Close(1);
+	else
+		local setOptions = function()
+			for t = 1, #AtlasLoot_Difficulty[difficulty], 1 do
+				if not (t == 3 and difficulty == "ExDungeon") then
+					dewdrop:AddLine(
+						"text", AtlasLoot_Difficulty[difficulty][t],
+						"tooltipTitle", AtlasLoot_Difficulty[difficulty][t],
+						"tooltipText", "Swap to Difficulty Level: "..AtlasLoot_Difficulty[difficulty][t],
+						"func", function()
+							AtlasLoot.db.profile.MythicPlussTier = t;
+							if AtlasLootItemsFrame:IsVisible() and AtlasLootItemsFrame.refresh then
+								AtlasLoot_ShowItemsFrame(AtlasLootItemsFrame.refresh[1], AtlasLootItemsFrame.refresh[2], AtlasLootItemsFrame.refresh[3], AtlasLootItemsFrame.refresh[4]);
+							end
+							dewdrop:Close(1);
+						end
+					);
+				end
+			end
+		end;
+		dewdrop:Open(button,
+			'point', function(parent)
+				return "TOPLEFT", "TOPRIGHT";
+			end,
+			"children", setOptions
+		);
+	end
+end
 
 
