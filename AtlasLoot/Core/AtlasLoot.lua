@@ -1566,32 +1566,61 @@ end
 	
 
 
---Mass Queary Items
-function QueryItems(instance, difficulty)
+--Mass Query Items
+--Sorry if this looks messy might cleanup later
+function QueryItems(instance, difficulty, expansion)
 	if instance == "help" then 
-		print("Instance types are: Dungeon, ExDungeon, Raid");
+		print("Instance types are: \"Dungeon\", \"Raid\"");
 		print("Difficulty types are: AL_Dif.Bloodforged, AL_Dif.Normal, AL_Dif.Heroic, AL_Dif.Mythic, AL_Dif.MythicPlus[1-10]");
-		print("Example: QueryItems(\"Dungeon\", AL_Dif.MythicPlus[6]) - This will query all dungeons Mythic+ 6 items");
+		print("Expansion options are: \"classic\" and \"tbc\"");
+		print("Example: QueryItems(\"Dungeon\", AL_Dif.MythicPlus[6]) - This will query all classic dungeons Mythic+ 6 items");
+		print("Example: QueryItems(\"Dungeon\", AL_Dif.MythicPlus[6], \"tbc\") - This will query all tbc dungeons Mythic+ 6 items");
 		return
 	end
+	
+	--Expansion select enums to make arguments easier to use
+	local ex_sel = {
+		["classic"] = AL["Classic Instances"];
+		["tbc"] = AL["BC Instances"];
+	}
 
+	--Setup ranges so we arent parsing unwanted instance pages
+	local range = {
+		["classic"] = {
+			["Raid"] = {2, 8},
+			["Dungeon"] = {10, 29}
+		},
+		["tbc"] = {
+			["Raid"] = {2, 10},
+			["Dungeon"] = {12, 27}
+		}
+	}
+
+	--Setup defualts if the arguments are not set or nil
+	if expansion == nil or ex_sel[expansion] == nil then expansion = "classic" end
 	if instance == nil then instance = "Dungeon" end
+	--TBC dungeon types are ExDungeon, i only want one argument type so we swap it here
+	if instance == "Dungeon" and expansion == "tbc" then instance = "ExDungeon" end
 	if difficulty == nil then difficulty = AL_Dif.Normal end
+	
+	--We parse a drop down menu, they are setup weird so we have to check for expansion twice in the arry once as a number second as a Global Var
+	local _men = 1
+	if expansion == "tbc" then _men = 2 end;
 
 	if instance == "Raid" then difficulty = math.min(AL_Dif.Ascended, difficulty) end
 
-	for i = 1, #AtlasLoot_DewDropDown[1][AL["Classic Instances"]] do
+	for i = range[expansion][instance][1], range[expansion][instance][2] do
 		local inst = "";
 		--DireMaul is in an another drop down list so instead what we can do is utilize instance ids we won't be querying
-		if i == 14 then inst = "DireMaulNorth" elseif i == 15 then inst = "DireMaulEast" elseif i == 16 then inst = "DireMaulWest"
+		if i == 14 and expansion == "classic" then inst = "DireMaulNorth" elseif i == 15 and expansion == "classic" then inst = "DireMaulEast" elseif i == 16 and expansion == "classic" then inst = "DireMaulWest"
 		else
-			inst = AtlasLoot_DewDropDown[1][AL["Classic Instances"]][i][1][2] or nil
+			inst = AtlasLoot_DewDropDown[_men][ex_sel[expansion]][i][1][2]
 		end
+
 		if (inst ~= nil and AtlasLoot_DewDropDown_SubTables[inst] ~= nil) then
 			for b = 1, #AtlasLoot_DewDropDown_SubTables[inst] do
 				local boss = AtlasLoot_DewDropDown_SubTables[inst][b][2];
 				if(AtlasLoot_Data[boss] ~= nil and AtlasLoot_Data[boss].Type ~= nil and AtlasLoot_Data[boss].Type == instance) then
-					print("Query for "..boss.." in instance "..inst.." started");
 					local n = 1;
 					local querytime = 0;
 					local now = 0;
@@ -1611,9 +1640,8 @@ function QueryItems(instance, difficulty)
 					print("Query for "..boss.." in instance "..inst.." finished");
 				end
 			end
-		elseif AtlasLoot_DewDropDown[1][AL["Classic Instances"]][i][1][3] == "Table" then
+		elseif AtlasLoot_DewDropDown[_men][ex_sel[expansion]][i][1][3] == "Table" then
 			if(AtlasLoot_Data[inst] ~= nil and AtlasLoot_Data[inst].Type ~= nil and AtlasLoot_Data[inst].Type == instance) then
-				print("Query for "..inst.." in instance "..inst.." started");
 				local n = 1;
 				local querytime = 0;
 				local now = 0;
@@ -1634,4 +1662,5 @@ function QueryItems(instance, difficulty)
 			end
 		end
 	end
+	print("You may need to reload your UI to finalize the Query")
 end
