@@ -1565,3 +1565,73 @@ function SetDifficultyTier(difficulty)
 end
 	
 
+
+--Mass Queary Items
+function QueryItems(instance, difficulty)
+	if instance == "help" then 
+		print("Instance types are: Dungeon, ExDungeon, Raid");
+		print("Difficulty types are: AL_Dif.Bloodforged, AL_Dif.Normal, AL_Dif.Heroic, AL_Dif.Mythic, AL_Dif.MythicPlus[1-10]");
+		print("Example: QueryItems(\"Dungeon\", AL_Dif.MythicPlus[6]) - This will query all dungeons Mythic+ 6 items");
+		return
+	end
+
+	if instance == nil then instance = "Dungeon" end
+	if difficulty == nil then difficulty = AL_Dif.Normal end
+
+	if instance == "Raid" then difficulty = math.min(AL_Dif.Ascended, difficulty) end
+
+	for i = 1, #AtlasLoot_DewDropDown[1][AL["Classic Instances"]] do
+		local inst = "";
+		--DireMaul is in an another drop down list so instead what we can do is utilize instance ids we won't be querying
+		if i == 14 then inst = "DireMaulNorth" elseif i == 15 then inst = "DireMaulEast" elseif i == 16 then inst = "DireMaulWest"
+		else
+			inst = AtlasLoot_DewDropDown[1][AL["Classic Instances"]][i][1][2] or nil
+		end
+		if (inst ~= nil and AtlasLoot_DewDropDown_SubTables[inst] ~= nil) then
+			for b = 1, #AtlasLoot_DewDropDown_SubTables[inst] do
+				local boss = AtlasLoot_DewDropDown_SubTables[inst][b][2];
+				if(AtlasLoot_Data[boss] ~= nil and AtlasLoot_Data[boss].Type ~= nil and AtlasLoot_Data[boss].Type == instance) then
+					print("Query for "..boss.." in instance "..inst.." started");
+					local n = 1;
+					local querytime = 0;
+					local now = 0;
+					while n < 31 do
+						now = GetTime();
+						if now - querytime > 0.01 then
+							querytime = GetTime();        
+							if(AtlasLoot_Data[boss][n] ~= nil) then
+								local queryitem = AL_FindId(string.sub(AtlasLoot_Data[boss][n][4], 5), difficulty) or AtlasLoot_Data[boss][n][2];
+								if (queryitem) and (queryitem ~= nil) and (queryitem ~= "") and (queryitem ~= 0) and (string.sub(queryitem, 1, 1) ~= "s") then
+									AtlasLootTooltip:SetHyperlink("item:"..queryitem..":0:0:0:0:0:0:0");
+								end
+							end
+							n = n + 1;
+						end
+					end
+					print("Query for "..boss.." in instance "..inst.." finished");
+				end
+			end
+		elseif AtlasLoot_DewDropDown[1][AL["Classic Instances"]][i][1][3] == "Table" then
+			if(AtlasLoot_Data[inst] ~= nil and AtlasLoot_Data[inst].Type ~= nil and AtlasLoot_Data[inst].Type == instance) then
+				print("Query for "..inst.." in instance "..inst.." started");
+				local n = 1;
+				local querytime = 0;
+				local now = 0;
+				while n < 31 do
+					now = GetTime();
+					if now - querytime > 0.01 then
+						querytime = GetTime();        
+						if(AtlasLoot_Data[inst][n] ~= nil) then
+							local queryitem = AL_FindId(string.sub(AtlasLoot_Data[inst][n][4], 5), difficulty) or AtlasLoot_Data[inst][n][2];
+							if (queryitem) and (queryitem ~= nil) and (queryitem ~= "") and (queryitem ~= 0) and (string.sub(queryitem, 1, 1) ~= "s") then
+								AtlasLootTooltip:SetHyperlink("item:"..queryitem..":0:0:0:0:0:0:0");
+							end
+						end
+						n = n + 1;
+					end
+				end
+				print("Query for "..inst.." in instance "..inst.." finished");
+			end
+		end
+	end
+end
