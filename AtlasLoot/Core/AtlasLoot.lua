@@ -138,7 +138,23 @@ AtlasLoot_Difficulty = {
 	["ExDungeon"] = {"Bloodforged", "Normal/Heroic", ":D", "Mythic", "Mythic 1", "Mythic 2","Mythic 3","Mythic 4","Mythic 5", "Mythic 6","Mythic 7","Mythic 8","Mythic 9", "Mythic 10",};
 	["Raid"] = {"Bloodforged", "Normal Flex", "Heroic Flex", "Ascended",};
 	["Crafting"] = {"Uncommon", "Rare", "Epic"};
+
+	--Enums
+	Bloodforged = 1;
+	Normal = 2;
+	Heroic = 3;
+	Mythic = 4;
+	Ascended = 4;
+	MythicPlus = {5, 6, 7, 8, 9, 10, 11, 12, 13, 14};
+
+	--Helper Enums to Set min and max difficulties
+	MIN_DIF = 8;
+	MAX_DIF = 9;
 }
+--AtlasLoot_Difficulty was too long to write for enum reasons
+AL_Dif = AtlasLoot_Difficulty;
+
+
 
 -- Popup Box for first time users
 StaticPopupDialogs["ATLASLOOT_SETUP"] = {
@@ -658,28 +674,35 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 
 		--Check to see if loaded table is different Difficulty then options set
 		local dif = false;
-		if(dataSource[dataID].Dif ~= nil) then
-			
+		if(dataSource[dataID].Dif ~= nil or dataSource[dataID].Type ~= nil) then
+			--Just incase dif isnt set but a type is this will create and set Dif to normal for future use 
+			if(dataSource[dataID].Dif == nil) then dataSource[dataID].Dif = 2 end
+
 			if dataSource[dataID].Type ~= nil then
 				--Raid tables only have 4 Difficulties, this helps set it if previous selection was possibly dungeon 
-				if dataSource[dataID].Type == "Raid" then AtlasLoot.db.profile.MythicPlussTier = math.min(4, AtlasLoot.db.profile.MythicPlussTier)
+				if dataSource[dataID].Type == "Raid" then SetDifficultyTier(math.min(AtlasLoot_Difficulty.Ascended, GetDifficultyTier()));
 				--Expansion dungeons show both normal and heroic loot on same page/setting
 				--so if its set to Heroic(3) lets change it back to Normal(2) 
-				elseif dataSource[dataID].Type == "ExDungeon" then  if AtlasLoot.db.profile.MythicPlussTier == 3 then AtlasLoot.db.profile.MythicPlussTier = 2 end 
+				elseif dataSource[dataID].Type == "ExDungeon" then  if GetDifficultyTier() == AtlasLoot_Difficulty.Heroic then SetDifficultyTier(AtlasLoot_Difficulty.Normal) end 
 				end 
 			end
 
-			dif = not (dataSource[dataID].Dif == AtlasLoot.db.profile.MythicPlussTier);
+			dif = not (dataSource[dataID].Dif == GetDifficultyTier());
 			if dif then
 				--Set this page to the new Difficulty
-				dataSource[dataID].Dif = AtlasLoot.db.profile.MythicPlussTier;
+				dataSource[dataID].Dif = GetDifficultyTier();
 			end
 		end
 
 		--Iterate through each item object and set its properties
 		for i = 1, 30, 1 do
+			--Check to see if item should show for this difficulty
+			local toShow = true;
+			if(dataSource[dataID][i] ~= nil and dataSource[dataID][i][AL_Dif.MIN_DIF] ~= nil) then
+			 	if(dataSource[dataID][i][AL_Dif.MIN_DIF] ~= "" and dataSource[dataID][i][AL_Dif.MIN_DIF] > GetDifficultyTier()) then toShow = false end end
+
 			--Check for a valid object (that it exists, and that it has a name)
-			if(dataSource[dataID][i] ~= nil and dataSource[dataID][i][4] ~= "") then
+			if(dataSource[dataID][i] ~= nil and dataSource[dataID][i][4] ~= "" and toShow) then
 				if string.sub(dataSource[dataID][i][2], 1, 1) == "s" then
 					isItem = false;
 				else
@@ -687,11 +710,15 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 				end
 
 				if isItem then
-
 					--If difficulty has changed, find new id and set it.
 					if dif and dataSource[dataID][i][2] ~= 0 then
-						--Some items have an entry in the Difficulty table but are not in the game, will look into seperating later 
-						dataSource[dataID][i][2] = AL_FindId(string.sub(dataSource[dataID][i][4], 5), dataSource[dataID].Dif) or dataSource[dataID][i][2]; --No need for negatives anymore :D
+						--Some items have an entry in the Difficulty table but are not in the game
+						--To deal with this items will need to have variable [AL_Dif.MAX_DIF] set to their max difficulty, this seems to usually be AL_Dif.Normal or AL_Dif.Mythic
+						if dataSource[dataID][i][AL_Dif.MAX_DIF] ~= nil and dataSource[dataID][i][AL_Dif.MAX_DIF] ~= "" then
+							dataSource[dataID][i][2] = AL_FindId(string.sub(dataSource[dataID][i][4], 5), math.min(dataSource[dataID].Dif, dataSource[dataID][i][AL_Dif.MAX_DIF])) or dataSource[dataID][i][2];
+						else
+							dataSource[dataID][i][2] = AL_FindId(string.sub(dataSource[dataID][i][4], 5), dataSource[dataID].Dif) or dataSource[dataID][i][2]; --No need for negatives anymore :D
+						end
 					end
 
 					itemName, itemLink, itemQuality, itemLevel, itemMinLevel, itemType, itemSubType, itemCount, itemEquipLoc, itemTexture = GetItemInfo(dataSource[dataID][i][2]);
@@ -926,7 +953,7 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 			local affix = "";
 			if AtlasLoot_Data[dataID].Dif ~= nil then
 					local d = AtlasLoot_Data[dataID].Type or "Dungeon"
-					affix = " ("..AtlasLoot_Difficulty[d][AtlasLoot.db.profile.MythicPlussTier]..")"
+					affix = " ("..AtlasLoot_Difficulty[d][GetDifficultyTier()]..")"
 			end			
 		    AtlasLoot_BossName:SetText(AtlasLoot_TableNames[dataID][1]..affix);
         else
@@ -1510,7 +1537,7 @@ function AtlasLoot_ShowDifficultySelect(button, difficulty)
 						"tooltipTitle", AtlasLoot_Difficulty[difficulty][t],
 						"tooltipText", "Swap to Difficulty Level: "..AtlasLoot_Difficulty[difficulty][t],
 						"func", function()
-							AtlasLoot.db.profile.MythicPlussTier = t;
+							SetDifficultyTier(t)
 							if AtlasLootItemsFrame:IsVisible() and AtlasLootItemsFrame.refresh then
 								AtlasLoot_ShowItemsFrame(AtlasLootItemsFrame.refresh[1], AtlasLootItemsFrame.refresh[2], AtlasLootItemsFrame.refresh[3], AtlasLootItemsFrame.refresh[4]);
 							end
@@ -1529,4 +1556,12 @@ function AtlasLoot_ShowDifficultySelect(button, difficulty)
 	end
 end
 
+function GetDifficultyTier()
+	return AtlasLoot.db.profile.MythicPlussTier
+end
+
+function SetDifficultyTier(difficulty)
+	AtlasLoot.db.profile.MythicPlussTier = difficulty;
+end
+	
 

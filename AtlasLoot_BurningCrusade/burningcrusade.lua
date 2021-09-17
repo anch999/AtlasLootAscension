@@ -123,7 +123,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 27, 27846, "", "=q3=Claw of the Watcher", "=ds=#h3#, #w13#", "", "6.52%"};
 		Next = "AuchCryptsExarch";
 		Type = "ExDungeon";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["AuchCryptsExarch"] = {
@@ -152,7 +151,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "AuchCryptsShirrak";
 		Next = "AuchCryptsAvatar";
 		Type = "ExDungeon";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["AuchCryptsAvatar"] = {
@@ -164,7 +162,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 7, 27797, "", "=q3=Wastewalker Shoulderpads", "=ds=#s3#, #a2# (D3)", "", "3.94%"};
 		Prev = "AuchCryptsExarch";
 		Type = "ExDungeon";
-		Dif = 2;
 	};
 
 		------------------------------
@@ -192,7 +189,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 27, 27817, "", "=q3=Starbolt Longbow", "=ds=#w2#", "", "9.30%"};
 		Next = "AuchManaTavarok";
 		Type = "ExDungeon";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["AuchManaTavarok"] = {
@@ -217,7 +213,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "AuchManaPandemonius";
 		Next = "AuchManaNexusPrince";
 		Type = "ExDungeon";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["AuchManaNexusPrince"] = {
@@ -232,7 +227,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "AuchManaTavarok";
 		Next = "AuchManaNexusPrince2";
 		Type = "ExDungeon";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["AuchManaNexusPrince2"] = {
@@ -262,7 +256,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "AuchManaNexusPrince";
 		Next = "AuchManaYor";
 		Type = "ExDungeon";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["AuchManaYor"] = {
@@ -282,7 +275,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 18, 30583, "", "=q4=Timeless Chrysoprase", "=ds=#e7#", "", "9.09%"};
 		Prev = "AuchManaNexusPrince";
 		Type = "ExDungeon";
-		Dif = 2;
 	};
 
 
@@ -308,7 +300,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 22, 25461, "", "=q1=Book of Forgotten Names", "=ds=#m3#", "", "100%"};
 		Next = "AuchSethekkTalonKing";
 		Type = "ExDungeon";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["AuchSethekkRavenGod"] = {
@@ -324,7 +315,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 11, 32780, "", "=q3=The Boomstick", "=ds=#w5#"};
 		Prev = "AuchSethekkTalonKing";
 		Type = "ExDungeon";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["AuchSethekkTalonKing"] = {
@@ -354,7 +344,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "AuchSethekkDarkweaver";
 		Next = "AuchSethekkRavenGod";
 		Type = "ExDungeon";
-		Dif = 2;
 	};
 
 
@@ -376,7 +365,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 20, 30560, "", "=q4=Rune Covered Chrysoprase", "=ds=#e7#", "", "15.47%"};
 		Next = "AuchShadowBlackheart";
 		Type = "ExDungeon";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["AuchShadowBlackheart"] = {
@@ -396,7 +384,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "AuchShadowHellmaw";
 		Next = "AuchShadowGrandmaster";
 		Type = "ExDungeon";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["AuchShadowGrandmaster"] = {
@@ -414,7 +401,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "AuchShadowBlackheart";
 		Next = "AuchShadowMurmur";
 		Type = "ExDungeon";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["AuchShadowMurmur"] = {
@@ -444,7 +430,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 28, 33840, "", "=q1=Murmur's Whisper", "=ds=#m3#", "", "100%"};
 		Prev = "AuchShadowGrandmaster";
 		Type = "ExDungeon";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["AuchTrash"] = {
@@ -464,7 +449,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 23, 0, "INV_Box_01", "=q6="..AL["First Fragment Guardian"], "=q5="..BabbleZone["Shadow Labyrinth"]};
 		{ 24, 24514, "", "=q1=First Key Fragment", "=ds=#m3#", "", "100%"};
 		Type = "ExDungeon";
-		Dif = 2;
 	};
 
 
@@ -491,7 +475,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 22, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		Next = "BTSupremus";
 		Type = "Raid";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["BTSupremus"] = {
@@ -512,7 +495,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "BTNajentus";
 		Next = "BTAkama";
 		Type = "Raid";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["BTAkama"] = {
@@ -534,7 +516,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "BTSupremus";
 		Next = "BTGorefiend";
 		Type = "Raid";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["BTGorefiend"] = {
@@ -554,7 +535,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "BTAkama";
 		Next = "BTBloodboil";
 		Type = "Raid";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["BTBloodboil"] = {
@@ -575,7 +555,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "BTGorefiend";
 		Next = "BTEssencofSouls";
 		Type = "Raid";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["BTEssencofSouls"] = {
@@ -596,7 +575,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "BTBloodboil";
 		Next = "BTShahraz";
 		Type = "Raid";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["BTShahraz"] = {
@@ -613,7 +591,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "BTEssencofSouls";
 		Next = "BTCouncil";
 		Type = "Raid";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["BTCouncil"] = {
@@ -630,7 +607,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "BTShahraz";
 		Next = "BTIllidanStormrage";
 		Type = "Raid";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["BTIllidanStormrage"] = {
@@ -654,7 +630,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 24, 32336, "", "=q4=Black Bow of the Betrayer", "=ds=#w2#", "", "16%"};
 		Prev = "BTCouncil";
 		Type = "Raid";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["BTTrash"] = {
@@ -682,7 +657,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 27, 32428, "", "=q3=Heart of Darkness", "=ds=#e8#", "", "16%"};
 		{ 28, 32897, "", "=q2=Mark of the Illidari", "=ds=#m20#", "", "27%"};
 		Type = "Raid";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["BTPatterns"] = {
@@ -730,7 +704,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 27, 28210, "", "=q3=Bloodskull Destroyer", "=ds=#h1#, #w6#", "", "5.71%"};
 		Next = "CoTHillsbradSkarloc";
 		Type = "ExDungeon";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["CoTHillsbradSkarloc"] = {
@@ -755,7 +728,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "CoTHillsbradDrake";
 		Next = "CoTHillsbradHunter";
 		Type = "ExDungeon";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["CoTHillsbradHunter"] = {
@@ -768,7 +740,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "CoTHillsbradSkarloc";
 		Next = "CoTHillsbradHunter2";
 		Type = "ExDungeon";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["CoTHillsbradHunter2"] = { -- only heroic
@@ -797,7 +768,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 26, 33847, "", "=q1=Epoch Hunter's Head", "=ds=#m3#", "", "100%"};
 		Prev = "CoTHillsbradHunter";
 		Type = "ExDungeon";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["CoTTrash"] = {
@@ -814,7 +784,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 19, 0, "INV_Box_01", "=q6="..AL["Aged Dalaran Wizard"], "=q5="..BabbleZone["Old Hillsbrad Foothills"]};
 		{ 20, 22539, "", "=q1=Formula: Enchant Shield - Intellect", "=ds=#p4# (325)"};
 		Type = "ExDungeon";
-		Dif = 2;
 	};
 
 
@@ -839,7 +808,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 20, 30555, "", "=q4=Glowing Tanzanite", "=ds=#e7#"};
 		Next = "CoTMorassTemporus";
 		Type = "ExDungeon";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["CoTMorassTemporus"] = {
@@ -857,7 +825,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "CoTMorassDeja";
 		Next = "CoTMorassAeonus";
 		Type = "ExDungeon";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["CoTMorassAeonus"] = {
@@ -885,7 +852,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 27, 33858, "", "=q1=Aeonus's Hourglass", "=ds=#m3#", "", "100%"};
 		Prev = "CoTMorassTemporus";
 		Type = "ExDungeon";
-		Dif = 2;
 	};
 
 
@@ -911,7 +877,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 21, 32459, "", "=q1=Time-Phased Phylactery", "=ds=#m3#", "", "8%"};
 		Next = "MountHyjalAnetheron";
 		Type = "Raid";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["MountHyjalAnetheron"] = {
@@ -931,7 +896,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "MountHyjalWinterchill";
 		Next = "MountHyjalKazrogal";
 		Type = "Raid";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["MountHyjalKazrogal"] = {
@@ -951,7 +915,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "MountHyjalAnetheron";
 		Next = "MountHyjalAzgalor";
 		Type = "Raid";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["MountHyjalAzgalor"] = {
@@ -968,7 +931,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "MountHyjalKazrogal";
 		Next = "MountHyjalArchimonde";
 		Type = "Raid";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["MountHyjalArchimonde"] = {
@@ -990,7 +952,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 20, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		Prev = "MountHyjalAzgalor";
 		Type = "Raid";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["MountHyjalTrash"] = {
@@ -1014,7 +975,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 22, 32289, "", "=q4=Design: Stormy Empyrean Sapphire", "=ds=#p12# (375)", "", "4%"};
 		{ 23, 32307, "", "=q4=Design: Veiled Pyrestone", "=ds=#p12# (375)", "", "3%"};
 		Type = "Raid";
-		Dif = 2;
 	};
 
 
@@ -1045,7 +1005,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 29, 29674, "", "=q2=Pattern: Nature Armor Kit", "=ds=#p7# (340)", "", "0.80%"};
 		Next = "CFRSlaveRokmar";
 		Type = "ExDungeon";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["CFRSlaveRokmar"] = {
@@ -1069,7 +1028,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "CFRSlaveMennu";
 		Next = "CFRSlaveQuagmirran";
 		Type = "ExDungeon";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["CFRSlaveQuagmirran"] = {
@@ -1102,7 +1060,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 30, 24364, "", "=q3=Azureplate Greaves", "=ds=#s11#, #a4#", "", "9.98%"};
 		Prev = "CFRSlaveRokmar";
 		Type = "ExDungeon";
-		Dif = 2;
 	};
 
 
@@ -1125,7 +1082,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 20, 30549, "", "=q4=Shifting Tanzanite", "=ds=#e7#", "", "1.56%"};
 		Next = "CFRSteamSteamrigger";
 		Type = "ExDungeon";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["CFRSteamSteamrigger"] = {
@@ -1143,7 +1099,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "CFRSteamThespia";
 		Next = "CFRSteamWarlord";
 		Type = "ExDungeon";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["CFRSteamWarlord"] = {
@@ -1173,7 +1128,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 27, 33827, "", "=q1=The Warlord's Treatise", "=ds=#m3#", "", "100%"};
 		Prev = "CFRSteamSteamrigger";
 		Type = "ExDungeon";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["CFRSteamTrash"] = {
@@ -1184,7 +1138,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 16, 0, "INV_Box_01", "=q6="..AL["Second Fragment Guardian"], "=q5="..BabbleZone["The Steamvault"]};
 		{ 17, 24487, "", "=q1=Second Key Fragment", "=ds=#m3#", "", "100%"};
 		Type = "ExDungeon";
-		Dif = 2;
 	};
 
 
@@ -1212,7 +1165,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 27, 27747, "", "=q3=Boggspine Knuckles", "=ds=#h4#, #w13#", "", "12.81%"};
 		Next = "CFRUnderGhazan";
 		Type = "ExDungeon";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["CFRUnderGhazan"] = {
@@ -1236,7 +1188,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "CFRUnderHungarfen";
 		Next = "CFRUnderSwamplord";
 		Type = "ExDungeon";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["CFRUnderSwamplord"] = {
@@ -1260,7 +1211,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "CFRUnderGhazan";
 		Next = "CFRUnderStalker";
 		Type = "ExDungeon";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["CFRUnderStalker"] = {
@@ -1273,7 +1223,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "CFRUnderSwamplord";
 		Next = "CFRUnderStalker2";
 		Type = "ExDungeon";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["CFRUnderStalker2"] = { --only heroic
@@ -1301,7 +1250,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 27, 33826, "", "=q1=Black Stalker Egg", "=ds=#m3#", "", "100%"};
 		Prev = "CFRUnderStalker";
 		Type = "ExDungeon";
-		Dif = 2;
 	};
 
 		------------------------------------------------
@@ -1327,7 +1275,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 24, 816254, "", "=q2=Formula: Enchant Cloak - Crushing Wave", "=ds=#p4# (350)", "", "5%"};
 		Next = "CFRSerpentLurker";
 		Type = "Raid";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["CFRSerpentLurker"] = {
@@ -1348,7 +1295,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "CFRSerpentHydross";
 		Next = "CFRSerpentLeotheras";
 		Type = "Raid";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["CFRSerpentLeotheras"] = {
@@ -1365,7 +1311,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "CFRSerpentLurker";
 		Next = "CFRSerpentKarathress";
 		Type = "Raid";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["CFRSerpentKarathress"] = {
@@ -1382,7 +1327,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "CFRSerpentLeotheras";
 		Next = "CFRSerpentMorogrim";
 		Type = "Raid";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["CFRSerpentMorogrim"] = {
@@ -1403,7 +1347,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "CFRSerpentKarathress";
 		Next = "CFRSerpentVashj";
 		Type = "Raid";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["CFRSerpentVashj"] = {
@@ -1427,7 +1370,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 23, 450000, "", "=q5=Intact Vial of Lady Vashj", "", "", "5%"};
 		Prev = "CFRSerpentMorogrim";
 		Type = "Raid";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["CFRSerpentTrash"] = {
@@ -1456,7 +1398,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 25, 30183, "", "=q4=Nether Vortex", "=ds=#e8#", "", "75%"};
 		{ 27, 32897, "", "=q2=Mark of the Illidari", "=ds=#m20#", "", "27%"};
 		Type = "Raid";
-		Dif = 2;
 	};
 
 
@@ -1480,7 +1421,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 21, 816252, "", "=q2=Formula: Enchant Weapon - Undaunted Might", "=ds=#p4# (375)", "", "5%"};
 		Next = "GruulGruul";
 		Type = "Raid";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["GruulGruul"] = {
@@ -1504,7 +1444,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 25, 28826, "", "=q4=Shuriken of Negation", "=ds=#w11#", "", "16.21%"};
 		Prev = "GruulsLairHighKingMaulgar";
 		Type = "Raid";
-		Dif = 2;
 	};
 
 
@@ -1533,7 +1472,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 28, 23881, "", "=q1=Gargolmar's Hand", "=ds=#m3#", "", "100%"};
 		Next = "HCRampOmor";
 		Type = "ExDungeon";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["HCRampOmor"] = {
@@ -1565,7 +1503,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "HCRampWatchkeeper";
 		Next = "HCRampVazruden";
 		Type = "ExDungeon";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["HCRampVazruden"] = {
@@ -1586,7 +1523,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 20, 23901, "", "=q1=Nazan's Head", "=ds=#m3#", "", "100%"};
 		Prev = "HCRampOmor";
 		Type = "ExDungeon";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["HCRampVazruden2"] = {
@@ -1614,7 +1550,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 28, 23901, "", "=q1=Nazan's Head", "=ds=#m3#", "", "100%"};
 		Prev = "HCRampOmor";
 		Type = "ExDungeon";
-		Dif = 2;
 	};
 
 
@@ -1642,7 +1577,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 26, 27484, "", "=q3=Libram of Avengement", "=ds=#s16#, #w16#", "", "14.81%"};
 		Next = "HCFurnaceBroggok";
 		Type = "ExDungeon";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["HCFurnaceBroggok"] = {
@@ -1665,7 +1599,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "HCFurnaceMaker";
 		Next = "HCFurnaceBreaker";
 		Type = "ExDungeon";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["HCFurnaceBreaker"] = {
@@ -1698,7 +1631,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 30, 24394, "", "=q3=Warsong Howling Axe", "=ds=#h2#, #w1#", "", "15.52%"};
 		Prev = "HCFurnaceBroggok";
 		Type = "ExDungeon";
-		Dif = 2;
 	};
 
 
@@ -1724,7 +1656,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 23, 25462, "", "=q1=Tome of Dusk", "=ds=#m3#", "", "100%"};
 		Next = "HCHallsOmrogg";
 		Type = "ExDungeon";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["HCHallsPorung"] = {
@@ -1738,7 +1669,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 9, 30705, "", "=q3=Spaulders of Slaughter", "=ds=#s3#, #a4#", "", "21.88%"};
 		{ 10, 30710, "", "=q3=Blood Guard's Necklace of Ferocity", "=ds=#s2#", "", "10.42%"};
 		Type = "ExDungeon";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["HCHallsOmrogg"] = {
@@ -1756,7 +1686,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "HCHallsNethekurse";
 		Next = "HCHallsKargath";
 		Type = "ExDungeon";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["HCHallsKargath"] = {
@@ -1785,7 +1714,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 27, 33815, "", "=q1=Bladefist's Seal", "=ds=#m3#", "", "100%"};
 		Prev = "HCHallsOmrogg";
 		Type = "ExDungeon";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["HCHallsTrash"] = {
@@ -1793,7 +1721,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 3, 0, "INV_Box_01", "=q6="..AL["Shattered Hand Executioner"], ""};
 		{ 4, 31716, "", "=q1=Unused Axe of the Executioner", "=ds=#m3#", "", "100%"};
 		Type = "ExDungeon";
-		Dif = 2;
 	};
 
 
@@ -1828,7 +1755,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 26, 28792, "", "=q4=A'dal's Signet of Defense", "=q1=#m4#: =ds=#s13#"};
 		{ 28, 816252, "", "=q2=Formula: Enchant Weapon - Undaunted Might", "=ds=#p4# (375)", "", "5%"};
 		Type = "Raid";
-		Dif = 2;
 	};
 
 
@@ -1858,7 +1784,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 19, 30682, "", "=q4=Glider's Sabatons", "=ds=#s12#, #a3# =q2=#m16#", "", "9.68%"};
 		{ 20, 30683, "", "=q4=Glider's Greaves", "=ds=#s12#, #a4# =q2=#m16#", "", "8.60%"};
 		Type = "Raid";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["KaraAttumen"] = {
@@ -1879,7 +1804,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 23, 23809, "", "=q3=Schematic: Stabilized Eternium Scope", "=ds=#p5# (375)", "", "1.00%"};
 		Next = "KaraMoroes";
 		Type = "Raid";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["KaraMoroes"] = {
@@ -1900,7 +1824,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "KaraAttumen";
 		Next = "KaraMaiden";
 		Type = "Raid";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["KaraKeannaLog"] = {
@@ -1925,7 +1848,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "KaraMoroes";
 		Next = "KaraOperaEvent";
 		Type = "Raid";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["KaraOperaEvent"] = {
@@ -1955,7 +1877,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "KaraMaiden";
 		Next = "KaraNightbane";
 		Type = "Raid";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["KaraNightbane"] = {
@@ -1977,7 +1898,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "KaraOperaEvent";
 		Next = "KaraCurator";
 		Type = "Raid";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["KaraCurator"] = {
@@ -1994,7 +1914,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "KaraNightbane";
 		Next = "KaraIllhoof";
 		Type = "Raid";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["KaraIllhoof"] = {
@@ -2015,7 +1934,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "KaraCurator";
 		Next = "KaraAran";
 		Type = "Raid";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["KaraAran"] = {
@@ -2037,7 +1955,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "KaraIllhoof";
 		Next = "KaraNetherspite";
 		Type = "Raid";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["KaraNetherspite"] = {
@@ -2057,7 +1974,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "KaraAran";
 		Next = "KaraChess";
 		Type = "Raid";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["KaraChess"] = {
@@ -2077,7 +1993,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "KaraNetherspite";
 		Next = "KaraPrince";
 		Type = "Raid";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["KaraPrince"] = {
@@ -2097,9 +2012,9 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 17, 29761, "", "=q4=Helm of the Fallen Defender", "=q1=#m1# =ds=#c1#, #c5#, #c9#", "", "26.73%"};
 		{ 18, 29759, "", "=q4=Helm of the Fallen Hero", "=q1=#m1# =ds=#c2#, #c3#, #c8#", "", "20.48%"};
 		{ 20, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
+		{ 28, 499438, "", "=q4=Smoldering Emberwyrm", "=ds=#e12#", "", [AL_Dif.MIN_DIF] = AtlasLoot_Difficulty.Heroic};
 		Prev = "KaraChess";
 		Type = "Raid";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["KaraTrash"] = {
@@ -2121,7 +2036,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 20, 21904, "", "=q4=Pattern: Soulcloth Vest", "=ds=#p8# (375)", "", "1.07%"};
 		{ 21, 22545, "", "=q2=Formula: Enchant Boots - Surefooted", "=ds=#p4# (370)", "", "0.66%"};
 		Type = "Raid";
-		Dif = 2;
 	};
 
 
@@ -2146,7 +2060,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 23, 435275, "", "=q3=Orb of the Sin'dorei", "=ds=#m20#", "", "2%"};
 		Next = "SMTVexallus";
 		Type = "ExDungeon";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["SMTVexallus"] = {
@@ -2167,7 +2080,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "SMTFireheart";
 		Next = "SMTDelrissa";
 		Type = "ExDungeon";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["SMTDelrissa"] = {
@@ -2189,7 +2101,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "SMTVexallus";
 		Next = "SMTKaelthas";
 		Type = "ExDungeon";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["SMTKaelthas"] = {
@@ -2210,7 +2121,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "SMTDelrissa";
 		Next = "SMTKaelthas2";
 		Type = "ExDungeon";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["SMTKaelthas2"] = {
@@ -2228,7 +2138,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 21, 35504, "", "=q3=Phoenix Hatchling", "=ds=#e13#", "", "7%"};
 		Prev = "SMTKaelthas";
 		Type = "ExDungeon";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["SMTTrash"] = {
@@ -2256,7 +2165,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 20, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		Next = "SPBrutallus";
 		Type = "Raid";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["SPBrutallus"] = {
@@ -2274,7 +2182,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "SPKalecgos";
 		Next = "SPFelmyst";
 		Type = "Raid";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["SPFelmyst"] = {
@@ -2293,7 +2200,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "SPBrutallus";
 		Next = "SPEredarTwins";
 		Type = "Raid";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["SPEredarTwins"] = {
@@ -2328,7 +2234,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "SPFelmyst";
 		Next = "SPMuru";
 		Type = "Raid";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["SPMuru"] = {
@@ -2364,7 +2269,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "SPEredarTwins";
 		Next = "SPKiljaeden";
 		Type = "Raid";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["SPKiljaeden"] = {
@@ -2398,7 +2302,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 30, 34337, "", "=q4=Golden Staff of the Sin'dorei", "=ds=#w9#", "", "14%"};
 		Prev = "SPMuru";
 		Type = "Raid";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["SPTrash"] = {
@@ -2425,7 +2328,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 25, 35209, "", "=q4=Plans: Hard Khorium Battlefists", "=ds=#p2# (365)", "", "6%"};
 		{ 26, 35211, "", "=q4=Plans: Hard Khorium Battleplate", "=ds=#p2# (365)", "", "0.38%"};
 		Type = "Raid";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["SPPatterns"] = {
@@ -2478,7 +2380,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 20, 30581, "", "=q4=Durable Fire Opal", "=ds=#e7#", "", "0.18%"};
 		Next = "TKArcScryer";
 		Type = "ExDungeon";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["TKArcScryer"] = {
@@ -2495,7 +2396,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "TKArcUnbound";
 		Next = "TKArcDalliah";
 		Type = "ExDungeon";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["TKArcDalliah"] = {
@@ -2513,7 +2413,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "TKArcScryer";
 		Next = "TKArcHarbinger";
 		Type = "ExDungeon";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["TKArcHarbinger"] = {
@@ -2541,7 +2440,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 27, 33861, "", "=q1=The Scroll of Skyriss", "=ds=#m3#", "", "100%"};
 		Prev = "TKArcDalliah";
 		Type = "ExDungeon";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["TKTrash"] = {
@@ -2560,7 +2458,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 22, 0, "INV_Box_01", "=q6="..AL["Third Fragment Guardian"], "=q5="..BabbleZone["The Arcatraz"]};
 		{ 23, 24488, "", "=q1=Third Key Fragment", "=ds=#m3#", "", "100%"};
 		Type = "ExDungeon";
-		Dif = 2;
 	};
 
 
@@ -2583,7 +2480,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 20, 30573, "", "=q4=Mysterious Fire Opal", "=ds=#e7#", "", "8.00%"};
 		Next = "TKBotFreywinn";
 		Type = "ExDungeon";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["TKBotFreywinn"] = {
@@ -2602,7 +2498,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "TKBotSarannis";
 		Next = "TKBotThorngrin";
 		Type = "ExDungeon";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["TKBotThorngrin"] = {
@@ -2620,7 +2515,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "TKBotFreywinn";
 		Next = "TKBotLaj";
 		Type = "ExDungeon";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["TKBotLaj"] = {
@@ -2637,7 +2531,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "TKBotThorngrin";
 		Next = "TKBotSplinter";
 		Type = "ExDungeon";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["TKBotSplinter"] = {
@@ -2659,7 +2552,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "TKBotLaj";
 		Next = "TKBotSplinter2";
 		Type = "ExDungeon";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["TKBotSplinter2"] = { -- only heroic
@@ -2689,7 +2581,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 27, 33859, "", "=q1=Warp Splinter Clipping", "=ds=#m3#", "", "100%"};
 		Prev = "TKBotSplinter";
 		Type = "ExDungeon";
-		Dif = 2;
 	};
 
 
@@ -2711,7 +2602,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 20, 30437, "", "=q1=Jagged Red Crystal", "=ds=#e9#", "", "100%"};
 		Next = "TKMechCapacitus";
 		Type = "ExDungeon";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["TKMechCapacitus"] = {
@@ -2729,7 +2619,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "TKMechCacheoftheLegion";
 		Next = "TKMechSepethrea";
 		Type = "ExDungeon";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["TKMechSepethrea"] = {
@@ -2747,7 +2636,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "TKMechCapacitus";
 		Next = "TKMechCalc";
 		Type = "ExDungeon";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["TKMechCalc"] = {
@@ -2768,7 +2656,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "TKMechSepethrea";
 		Next = "TKMechCalc2";
 		Type = "ExDungeon";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["TKMechCalc2"] = { --only heroic
@@ -2797,7 +2684,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 27, 31086, "", "=q1=Bottom Shard of the Arcatraz Key", "=ds=#m3#", "", "100%"};
 		Prev = "TKMechCalc";
 		Type = "ExDungeon";
-		Dif = 2;
 	};
 
 
@@ -2822,7 +2708,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 21, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		Next = "TKEyeVoidReaver";
 		Type = "Raid";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["TKEyeVoidReaver"] = {
@@ -2840,7 +2725,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "TKEyeAlar";
 		Next = "TKEyeSolarian";
 		Type = "Raid";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["TKEyeSolarian"] = {
@@ -2861,7 +2745,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "TKEyeVoidReaver";
 		Next = "TKEyeKaelthas";
 		Type = "Raid";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["TKEyeKaelthas"] = {
@@ -2891,7 +2774,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 29, 450001, "", "=q5=Intact Vial of Kael'thas Sunstrider", "", "", "5%"};
 		Prev = "TKEyeSolarian";
 		Type = "Raid";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["TKEyeTrash"] = {
@@ -2920,7 +2802,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 25, 30183, "", "=q4=Nether Vortex", "=ds=#e8#", "", "75%"};
 		{ 27, 32897, "", "=q2=Mark of the Illidari", "=ds=#m20#", "", "27%"};
 		Type = "Raid";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["TKEyeLegendaries"] = {
@@ -2952,7 +2833,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 10, 33307, "", "=q3=Formula: Enchant Weapon - Executioner", "=ds=#p4# (375)", "", "3%"};
 		Next = "ZAAkilZon";
 		Type = "Raid";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["ZAAkilZon"] = {
@@ -2968,7 +2848,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "ZANalorakk";
 		Next = "ZAJanAlai";
 		Type = "Raid";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["ZAJanAlai"] = {
@@ -2984,7 +2863,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "ZAAkilZon";
 		Next = "ZAHalazzi";
 		Type = "Raid";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["ZAHalazzi"] = {
@@ -3000,7 +2878,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "ZAJanAlai";
 		Next = "ZAMalacrass";
 		Type = "Raid";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["ZAMalacrass"] = {
@@ -3023,7 +2900,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "ZAHalazzi";
 		Next = "ZAZuljin";
 		Type = "Raid";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["ZAZuljin"] = {
@@ -3044,7 +2920,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 22, 33102, "", "=q4=Blood of Zul'Jin", "=ds=#m2#", "", "87%"};
 		Prev = "ZAMalacrass";
 		Type = "Raid";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["ZATimedChest"] = {
@@ -3071,7 +2946,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 28, 33499, "", "=q4=Signet of the Last Defender", "=ds=#s13#", "", "18%"};
 		{ 29, 33498, "", "=q4=Signet of the Quiet Forest", "=ds=#s13#", "", "21%"};
 		Type = "Raid";
-		Dif = 2;
 	};
 
 	AtlasLoot_Data["ZATrash"] = {
@@ -3082,7 +2956,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 6, 33931, "", "=q2=Amani Charm of Mighty Mojo", "=ds=#m26#", "", "25%"};
 		{ 7, 33933, "", "=q2=Amani Charm of the Raging Defender", "=ds=#m26#", "", "25%"};
 		Type = "Raid";
-		Dif = 2;
 	};
 
 
@@ -5432,6 +5305,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 6, 29099, "", "=q4=Greaves of Malorne", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
 		Back = "T4SET";
 		Next = "T5DruidFeral";
+		Type = "Raid";
 	};	
 	
 	AtlasLoot_Data["T4DruidRestoration"] = {	
@@ -5443,6 +5317,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 6, 29088, "", "=q4=Legguards of Malorne", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
 		Back = "T4SET";
 		Next = "T5DruidRestoration";
+		Type = "Raid";
 	};	
 	
 	AtlasLoot_Data["T4DruidBalance"] = {	
@@ -5454,6 +5329,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 6, 29094, "", "=q4=Britches of Malorne", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
 		Back = "T4SET";
 		Next = "T5DruidBalance";
+		Type = "Raid";
 	};	
 	
 	AtlasLoot_Data["T4Hunter"] = {	
@@ -5465,6 +5341,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 6, 29083, "", "=q4=Demon Stalker Greaves", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
 		Back = "T4SET";
 		Next = "T5Hunter";
+		Type = "Raid";
 	};	
 	
 	AtlasLoot_Data["T4Mage"] = {	
@@ -5476,6 +5353,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 6, 29078, "", "=q4=Legwraps of the Aldor", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
 		Back = "T4SET";
 		Next = "T5Mage";
+		Type = "Raid";
 	};	
 	
 	AtlasLoot_Data["T4PaladinProtection"] = {	
@@ -5487,6 +5365,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 6, 29069, "", "=q4=Justicar Legguards", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
 		Back = "T4SET";
 		Next = "T5PaladinProtection";
+		Type = "Raid";
 	};	
 	
 	AtlasLoot_Data["T4PaladinRetribution"] = {	
@@ -5498,6 +5377,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 6, 29074, "", "=q4=Justicar Greaves", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
 		Back = "T4SET";
 		Next = "T5PaladinRetribution";
+		Type = "Raid";
 	};	
 	
 	AtlasLoot_Data["T4PaladinHoly"] = {	
@@ -5509,6 +5389,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 6, 29063, "", "=q4=Justicar Leggings", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
 		Back = "T4SET";
 		Next = "T5PaladinHoly";
+		Type = "Raid";
 	};	
 	
 	AtlasLoot_Data["T4PriestHoly"] = {	
@@ -5520,6 +5401,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 6, 29053, "", "=q4=Trousers of the Incarnate", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
 		Back = "T4SET";
 		Next = "T5PriestHoly";
+		Type = "Raid";
 	};	
 	
 	AtlasLoot_Data["T4PriestShadow"] = {	
@@ -5531,6 +5413,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 6, 29059, "", "=q4=Leggings of the Incarnate", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
 		Back = "T4SET";
 		Next = "T5PriestShadow";
+		Type = "Raid";
 	};	
 	
 	AtlasLoot_Data["T4Rogue"] = {	
@@ -5542,6 +5425,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 6, 29046, "", "=q4=Netherblade Breeches", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
 		Back = "T4SET";
 		Next = "T5Rogue";
+		Type = "Raid";
 	};	
 	
 	AtlasLoot_Data["T4ShamanEnhancement"] = {	
@@ -5553,6 +5437,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 6, 29042, "", "=q4=Cyclone War-Kilt", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
 		Back = "T4SET";
 		Next = "T5ShamanEnhancement";
+		Type = "Raid";
 	};	
 	
 	AtlasLoot_Data["T4ShamanRestoration"] = {	
@@ -5564,6 +5449,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 6, 29030, "", "=q4=Cyclone Kilt", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
 		Back = "T4SET";
 		Next = "T5ShamanRestoration";
+		Type = "Raid";
 	};	
 	
 	AtlasLoot_Data["T4ShamanElemental"] = {	
@@ -5575,6 +5461,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 6, 29036, "", "=q4=Cyclone Legguards", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
 		Back = "T4SET";
 		Next = "T5ShamanElemental";
+		Type = "Raid";
 	};	
 	
 	AtlasLoot_Data["T4Warlock"] = {	
@@ -5586,6 +5473,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 6, 28966, "", "=q4=Voidheart Leggings", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
 		Back = "T4SET";
 		Next = "T5Warlock";
+		Type = "Raid";
 	};	
 	
 	AtlasLoot_Data["T4WarriorProtection"] = {	
@@ -5603,6 +5491,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 13, 14987, "", "=q4=Warbringer Leggings", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
 		Back = "T4SET";
 		Next = "T5WarriorProtection";
+		Type = "Raid";
 	};	
 	
 	AtlasLoot_Data["T4WarriorFury"] = {	
@@ -5614,400 +5503,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 6, 29022, "", "=q4=Warbringer Greaves", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
 		Back = "T4SET";
 		Next = "T5WarriorFury";
-	};	
-
-	--------------
-	--- Tier 4 FLEX HEROIC ---
-	--------------
-
-	AtlasLoot_Data["T4DruidFeral25Man"] = {	
-		{ 1, 0, "Ability_Druid_Maul", "=q6=#t4s1_1#", "=ec1=#m21# - Fallen Defender"};
-		{ 2, 329098, "", "=q4=Stag-Helm of Malorne", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 3, 329100, "", "=q4=Mantle of Malorne", "=ds="..BabbleBoss["High King Maulgar"]};
-		{ 4, 329096, "", "=q4=Breastplate of Malorne", "=ds="..BabbleBoss["Magtheridon"]};
-		{ 5, 329097, "", "=q4=Gauntlets of Malorne", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 6, 329099, "", "=q4=Greaves of Malorne", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
-		Back = "T4SET25Man";
-		Next = "T5DruidFeral25Man";
-	};	
-	
-	AtlasLoot_Data["T4DruidRestoration25Man"] = {	
-		{ 1, 0, "Spell_Nature_Regeneration", "=q6=#t4s1_2#", "=ec1=#m21# - Fallen Defender"};
-		{ 2, 329086, "", "=q4=Crown of Malorne", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 3, 329089, "", "=q4=Shoulderguards of Malorne", "=ds="..BabbleBoss["High King Maulgar"]};
-		{ 4, 329087, "", "=q4=Chestguard of Malorne", "=ds="..BabbleBoss["Magtheridon"]};
-		{ 5, 329090, "", "=q4=Handguards of Malorne", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 6, 329088, "", "=q4=Legguards of Malorne", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
-		Back = "T4SET25Man";
-		Next = "T5DruidRestoration25Man";
-	};	
-	
-	AtlasLoot_Data["T4DruidBalance25Man"] = {	
-		{ 1, 0, "Spell_Nature_InsectSwarm", "=q6=#t4s1_3#", "=ec1=#m21# - Fallen Defender"};
-		{ 2, 329093, "", "=q4=Antlers of Malorne", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 3, 329095, "", "=q4=Pauldrons of Malorne", "=ds="..BabbleBoss["High King Maulgar"]};
-		{ 4, 329091, "", "=q4=Chestpiece of Malorne", "=ds="..BabbleBoss["Magtheridon"]};
-		{ 5, 329092, "", "=q4=Gloves of Malorne", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 6, 329094, "", "=q4=Britches of Malorne", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
-		Back = "T4SET25Man";
-		Next = "T5DruidBalance25Man";
-	};	
-	
-	AtlasLoot_Data["T4Hunter25Man"] = {	
-		{ 1, 0, "Ability_Hunter_RunningShot", "=q6=#t4s2#", "=ec1=#m21# - Fallen Hero"};
-		{ 2, 329081, "", "=q4=Demon Stalker Greathelm", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 3, 329084, "", "=q4=Demon Stalker Shoulderguards", "=ds="..BabbleBoss["High King Maulgar"]};
-		{ 4, 329082, "", "=q4=Demon Stalker Harness", "=ds="..BabbleBoss["Magtheridon"]};
-		{ 5, 329085, "", "=q4=Demon Stalker Gauntlets", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 6, 329083, "", "=q4=Demon Stalker Greaves", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
-		Back = "T4SET25Man";
-		Next = "T5Hunter25Man";
-	};	
-	
-	AtlasLoot_Data["T4Mage25Man"] = {	
-		{ 1, 0, "Spell_Frost_IceStorm", "=q6=#t4s3#", "=ec1=#m21# - Fallen Hero"};
-		{ 2, 329076, "", "=q4=Collar of the Aldor", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 3, 329079, "", "=q4=Pauldrons of the Aldor", "=ds="..BabbleBoss["High King Maulgar"]};
-		{ 4, 329077, "", "=q4=Vestments of the Aldor", "=ds="..BabbleBoss["Magtheridon"]};
-		{ 5, 329080, "", "=q4=Gloves of the Aldor", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 6, 329078, "", "=q4=Legwraps of the Aldor", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
-		Back = "T4SET25Man";
-		Next = "T5Mage25Man";
-	};	
-	
-	AtlasLoot_Data["T4PaladinProtection25Man"] = {	
-		{ 1, 0, "Spell_Holy_SealOfMight", "=q6=#t4s4_1#", "=ec1=#m21# - Fallen Champion"};
-		{ 2, 329068, "", "=q4=Justicar Faceguard", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 3, 329070, "", "=q4=Justicar Shoulderguards", "=ds="..BabbleBoss["High King Maulgar"]};
-		{ 4, 329066, "", "=q4=Justicar Chestguard", "=ds="..BabbleBoss["Magtheridon"]};
-		{ 5, 329067, "", "=q4=Justicar Handguards", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 6, 329069, "", "=q4=Justicar Legguards", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
-		Back = "T4SET25Man";
-		Next = "T5PaladinProtection25Man";
-	};	
-	
-	AtlasLoot_Data["T4PaladinRetribution25Man"] = {	
-		{ 1, 0, "Spell_Holy_AuraOfLight", "=q6=#t4s4_2#", "=ec1=#m21# - Fallen Champion"};
-		{ 2, 329073, "", "=q4=Justicar Crown", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 3, 329075, "", "=q4=Justicar Shoulderplates", "=ds="..BabbleBoss["High King Maulgar"]};
-		{ 4, 329071, "", "=q4=Justicar Breastplate", "=ds="..BabbleBoss["Magtheridon"]};
-		{ 5, 329072, "", "=q4=Justicar Gauntlets", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 6, 329074, "", "=q4=Justicar Greaves", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
-		Back = "T4SET25Man";
-		Next = "T5PaladinRetribution25Man";
-	};	
-	
-	AtlasLoot_Data["T4PaladinHoly25Man"] = {	
-		{ 1, 0, "Spell_Holy_HolyBolt", "=q6=#t4s4_3#", "=ec1=#m21# - Fallen Champion"};
-		{ 2, 329061, "", "=q4=Justicar Diadem", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 3, 329064, "", "=q4=Justicar Pauldrons", "=ds="..BabbleBoss["High King Maulgar"]};
-		{ 4, 329062, "", "=q4=Justicar Chestpiece", "=ds="..BabbleBoss["Magtheridon"]};
-		{ 5, 329065, "", "=q4=Justicar Gloves", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 6, 329063, "", "=q4=Justicar Leggings", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
-		Back = "T4SET25Man";
-		Next = "T5PaladinHoly25Man";
-	};	
-	
-	AtlasLoot_Data["T4PriestHoly25Man"] = {	
-		{ 1, 0, "Spell_Holy_PowerWordShield", "=q6=#t4s5_1#", "=ec1=#m21# - Fallen Defender"};
-		{ 2, 329049, "", "=q4=Light-Collar of the Incarnate", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 3, 329054, "", "=q4=Light-Mantle of the Incarnate", "=ds="..BabbleBoss["High King Maulgar"]};
-		{ 4, 329050, "", "=q4=Robes of the Incarnate", "=ds="..BabbleBoss["Magtheridon"]};
-		{ 5, 329055, "", "=q4=Handwraps of the Incarnate", "The Curator ("..BabbleZone["Karazhan"]..")"};
-		{ 6, 329053, "", "=q4=Trousers of the Incarnate", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
-		Back = "T4SET25Man";
-		Next = "T5PriestHoly25Man";
-	};	
-	
-	AtlasLoot_Data["T4PriestShadow25Man"] = {	
-		{ 1, 0, "Spell_Shadow_AntiShadow", "=q6=#t4s5_2#", "=ec1=#m21# - Fallen Defender"};
-		{ 2, 329058, "", "=q4=Soul-Collar of the Incarnate", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 3, 329060, "", "=q4=Soul-Mantle of the Incarnate", "=ds="..BabbleBoss["High King Maulgar"]};
-		{ 4, 329056, "", "=q4=Shroud of the Incarnate", "=ds="..BabbleBoss["Magtheridon"]};
-		{ 5, 329057, "", "=q4=Gloves of the Incarnate", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 6, 329059, "", "=q4=Leggings of the Incarnate", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
-		Back = "T4SET25Man";
-		Next = "T5PriestShadow25Man";
-	};	
-	
-	AtlasLoot_Data["T4Rogue25Man"] = {	
-		{ 1, 0, "Ability_BackStab", "=q6=#t4s6#", "=ec1=#m21# - Fallen Champion"};
-		{ 2, 329044, "", "=q4=Netherblade Facemask", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 3, 329047, "", "=q4=Netherblade Shoulderpads", "=ds="..BabbleBoss["High King Maulgar"]};
-		{ 4, 329045, "", "=q4=Netherblade Chestpiece", "=ds="..BabbleBoss["Magtheridon"]};
-		{ 5, 329048, "", "=q4=Netherblade Gloves", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 6, 329046, "", "=q4=Netherblade Breeches", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
-		Back = "T4SET25Man";
-		Next = "T5Rogue25Man";
-	};	
-	
-	AtlasLoot_Data["T4ShamanEnhancement25Man"] = {	
-		{ 1, 0, "Spell_FireResistanceTotem_01", "=q6=#t4s7_1#", "=ec1=#m21# - Fallen Champion"};
-		{ 2, 329040, "", "=q4=Cyclone Helm", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 3, 329043, "", "=q4=Cyclone Shoulderplates", "=ds="..BabbleBoss["High King Maulgar"]};
-		{ 4, 329038, "", "=q4=Cyclone Breastplate", "=ds="..BabbleBoss["Magtheridon"]};
-		{ 5, 329039, "", "=q4=Cyclone Gauntlets", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 6, 329042, "", "=q4=Cyclone War-Kilt", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
-		Back = "T4SET25Man";
-		Next = "T5ShamanEnhancement25Man";
-	};	
-	
-	AtlasLoot_Data["T4ShamanRestoration25Man"] = {	
-		{ 1, 0, "Spell_Nature_HealingWaveGreater", "=q6=#t4s7_2#", "=ec1=#m21# - Fallen Champion"};
-		{ 2, 329028, "", "=q4=Cyclone Headdress", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 3, 329031, "", "=q4=Cyclone Shoulderpads", "=ds="..BabbleBoss["High King Maulgar"]};
-		{ 4, 329029, "", "=q4=Cyclone Hauberk", "=ds="..BabbleBoss["Magtheridon"]};
-		{ 5, 329032, "", "=q4=Cyclone Gloves", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 6, 329030, "", "=q4=Cyclone Kilt", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
-		Back = "T4SET25Man";
-		Next = "T5ShamanRestoration25Man";
-	};	
-	
-	AtlasLoot_Data["T4ShamanElemental25Man"] = {	
-		{ 1, 0, "Spell_Nature_Lightning", "=q6=#t4s7_3#", "=ec1=#m21# - Fallen Champion"};
-		{ 2, 329035, "", "=q4=Cyclone Faceguard", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 3, 329037, "", "=q4=Cyclone Shoulderguards", "=ds="..BabbleBoss["High King Maulgar"]};
-		{ 4, 329033, "", "=q4=Cyclone Chestguard", "=ds="..BabbleBoss["Magtheridon"]};
-		{ 5, 329034, "", "=q4=Cyclone Handguards", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 6, 329036, "", "=q4=Cyclone Legguards", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
-		Back = "T4SET25Man";
-		Next = "T5ShamanElemental25Man";
-	};	
-	
-	AtlasLoot_Data["T4Warlock25Man"] = {	
-		{ 1, 0, "Spell_Shadow_CurseOfTounges", "=q6=#t4s8#", "=ec1=#m21# - Fallen Hero"};
-		{ 2, 328963, "", "=q4=Voidheart Crown", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 3, 328967, "", "=q4=Voidheart Mantle", "=ds="..BabbleBoss["High King Maulgar"]};
-		{ 4, 328964, "", "=q4=Voidheart Robe", "=ds="..BabbleBoss["Magtheridon"]};
-		{ 5, 328968, "", "=q4=Voidheart Gloves", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 6, 328966, "", "=q4=Voidheart Leggings", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
-		Back = "T4SET25Man";
-		Next = "T5Warlock25Man";
-	};	
-	
-	AtlasLoot_Data["T4WarriorProtection25Man"] = {	
-		{ 1, 0, "INV_Shield_05", "=q6=#t4s9_1#", "=ec1=#m21# - Fallen Defender"};
-		{ 2, 329011, "", "=q4=Warbringer Greathelm", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 3, 329016, "", "=q4=Warbringer Shoulderguards", "=ds="..BabbleBoss["High King Maulgar"]};
-		{ 4, 329012, "", "=q4=Warbringer Chestguard", "=ds="..BabbleBoss["Magtheridon"]};
-		{ 5, 329017, "", "=q4=Warbringer Handguards", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 6, 329015, "", "=q4=Warbringer Legguards", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
-		{ 8, 0, "INV_Shield_05", "=q6=#t4s9_1#", "=ec1=#m21# - Fallen Defender"};
-		{ 9, 314984, "", "=q4=Warbringer Helmet", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 10, 314988, "", "=q4=Warbringer Pauldrons", "=ds="..BabbleBoss["High King Maulgar"]};
-		{ 11, 314985, "", "=q4=Warbringer Hauberk", "=ds="..BabbleBoss["Magtheridon"]};
-		{ 12, 314989, "", "=q4=Warbringer Gloves", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 13, 314987, "", "=q4=Warbringer Leggings", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
-		Back = "T4SET25Man";
-		Next = "T5WarriorProtection25Man";
-	};	
-	
-	AtlasLoot_Data["T4WarriorFury25Man"] = {	
-		{ 1, 0, "Ability_Warrior_BattleShout", "=q6=#t4s9_2#", "=ec1=#m21# - Fallen Defender"};
-		{ 2, 329021, "", "=q4=Warbringer Battle-Helm", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 3, 329023, "", "=q4=Warbringer Shoulderplates", "=ds="..BabbleBoss["High King Maulgar"]};
-		{ 4, 329019, "", "=q4=Warbringer Breastplate", "=ds="..BabbleBoss["Magtheridon"]};
-		{ 5, 329020, "", "=q4=Warbringer Gauntlets", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 6, 329022, "", "=q4=Warbringer Greaves", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
-		Back = "T4SET25Man";
-		Next = "T5WarriorFury25Man";
-	};	
-
-	-----------------------
-	--- Tier 4 ASCENDED ---
-	-----------------------
-
-	AtlasLoot_Data["T4DruidFeral25ManHEROIC"] = {		
-		{ 1, 0, "Ability_Druid_Maul", "=q6=#t4s1_1#", "=ec1=#m21# - Fallen Defender"};
-		{ 2, 229098, "", "=q4=Stag-Helm of Malorne", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 3, 229100, "", "=q4=Mantle of Malorne", "=ds="..BabbleBoss["High King Maulgar"]};
-		{ 4, 229096, "", "=q4=Breastplate of Malorne", "=ds="..BabbleBoss["Magtheridon"]};
-		{ 5, 229097, "", "=q4=Gauntlets of Malorne", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 6, 229099, "", "=q4=Greaves of Malorne", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
-		Back = "T4SET";	
-		Next = "T5DruidFeral25ManHEROIC";	
-	};	
-	
-	AtlasLoot_Data["T4DruidRestoration25ManHEROIC"] = {		
-		{ 1, 0, "Spell_Nature_Regeneration", "=q6=#t4s1_2#", "=ec1=#m21# - Fallen Defender"};
-		{ 2, 229086, "", "=q4=Crown of Malorne", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 3, 229089, "", "=q4=Shoulderguards of Malorne", "=ds="..BabbleBoss["High King Maulgar"]};
-		{ 4, 229087, "", "=q4=Chestguard of Malorne", "=ds="..BabbleBoss["Magtheridon"]};
-		{ 5, 229090, "", "=q4=Handguards of Malorne", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 6, 229088, "", "=q4=Legguards of Malorne", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
-		Back = "T4SET";	
-		Next = "T5DruidRestoration25ManHEROIC";	
-	};	
-	
-	AtlasLoot_Data["T4DruidBalance25ManHEROIC"] = {		
-		{ 1, 0, "Spell_Nature_InsectSwarm", "=q6=#t4s1_3#", "=ec1=#m21# - Fallen Defender"};
-		{ 2, 229093, "", "=q4=Antlers of Malorne", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 3, 229095, "", "=q4=Pauldrons of Malorne", "=ds="..BabbleBoss["High King Maulgar"]};
-		{ 4, 229091, "", "=q4=Chestpiece of Malorne", "=ds="..BabbleBoss["Magtheridon"]};
-		{ 5, 229092, "", "=q4=Gloves of Malorne", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 6, 229094, "", "=q4=Britches of Malorne", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
-		Back = "T4SET";	
-		Next = "T5DruidBalance25ManHEROIC";	
-	};	
-	
-	AtlasLoot_Data["T4Hunter25ManHEROIC"] = {		
-		{ 1, 0, "Ability_Hunter_RunningShot", "=q6=#t4s2#", "=ec1=#m21# - Fallen Hero"};
-		{ 2, 229081, "", "=q4=Demon Stalker Greathelm", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 3, 229084, "", "=q4=Demon Stalker Shoulderguards", "=ds="..BabbleBoss["High King Maulgar"]};
-		{ 4, 229082, "", "=q4=Demon Stalker Harness", "=ds="..BabbleBoss["Magtheridon"]};
-		{ 5, 229085, "", "=q4=Demon Stalker Gauntlets", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 6, 229083, "", "=q4=Demon Stalker Greaves", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
-		Back = "T4SET";	
-		Next = "T5Hunter25ManHEROIC";	
-	};	
-	
-	AtlasLoot_Data["T4Mage25ManHEROIC"] = {		
-		{ 1, 0, "Spell_Frost_IceStorm", "=q6=#t4s3#", "=ec1=#m21# - Fallen Hero"};
-		{ 2, 229076, "", "=q4=Collar of the Aldor", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 3, 229079, "", "=q4=Pauldrons of the Aldor", "=ds="..BabbleBoss["High King Maulgar"]};
-		{ 4, 229077, "", "=q4=Vestments of the Aldor", "=ds="..BabbleBoss["Magtheridon"]};
-		{ 5, 229080, "", "=q4=Gloves of the Aldor", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 6, 229078, "", "=q4=Legwraps of the Aldor", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
-		Back = "T4SET";	
-		Next = "T5Mage25ManHEROIC";	
-	};	
-	
-	AtlasLoot_Data["T4PaladinProtection25ManHEROIC"] = {		
-		{ 1, 0, "Spell_Holy_SealOfMight", "=q6=#t4s4_1#", "=ec1=#m21# - Fallen Champion"};
-		{ 2, 229068, "", "=q4=Justicar Faceguard", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 3, 229070, "", "=q4=Justicar Shoulderguards", "=ds="..BabbleBoss["High King Maulgar"]};
-		{ 4, 229066, "", "=q4=Justicar Chestguard", "=ds="..BabbleBoss["Magtheridon"]};
-		{ 5, 229067, "", "=q4=Justicar Handguards", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 6, 229069, "", "=q4=Justicar Legguards", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
-		Back = "T4SET";	
-		Next = "T5PaladinProtection25ManHEROIC";	
-	};	
-	
-	AtlasLoot_Data["T4PaladinRetribution25ManHEROIC"] = {		
-		{ 1, 0, "Spell_Holy_AuraOfLight", "=q6=#t4s4_2#", "=ec1=#m21# - Fallen Champion"};
-		{ 2, 229073, "", "=q4=Justicar Crown", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 3, 229075, "", "=q4=Justicar Shoulderplates", "=ds="..BabbleBoss["High King Maulgar"]};
-		{ 4, 229071, "", "=q4=Justicar Breastplate", "=ds="..BabbleBoss["Magtheridon"]};
-		{ 5, 229072, "", "=q4=Justicar Gauntlets", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 6, 229074, "", "=q4=Justicar Greaves", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
-		Back = "T4SET";	
-		Next = "T5PaladinRetribution25ManHEROIC";	
-	};	
-	
-	AtlasLoot_Data["T4PaladinHoly25ManHEROIC"] = {		
-		{ 1, 0, "Spell_Holy_HolyBolt", "=q6=#t4s4_3#", "=ec1=#m21# - Fallen Champion"};
-		{ 2, 229061, "", "=q4=Justicar Diadem", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 3, 229064, "", "=q4=Justicar Pauldrons", "=ds="..BabbleBoss["High King Maulgar"]};
-		{ 4, 229062, "", "=q4=Justicar Chestpiece", "=ds="..BabbleBoss["Magtheridon"]};
-		{ 5, 229065, "", "=q4=Justicar Gloves", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 6, 229063, "", "=q4=Justicar Leggings", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
-		Back = "T4SET";	
-		Next = "T5PaladinHoly25ManHEROIC";	
-	};	
-	
-	AtlasLoot_Data["T4PriestHoly25ManHEROIC"] = {		
-		{ 1, 0, "Spell_Holy_PowerWordShield", "=q6=#t4s5_1#", "=ec1=#m21# - Fallen Defender"};
-		{ 2, 229049, "", "=q4=Light-Collar of the Incarnate", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 3, 229054, "", "=q4=Light-Mantle of the Incarnate", "=ds="..BabbleBoss["High King Maulgar"]};
-		{ 4, 229050, "", "=q4=Robes of the Incarnate", "=ds="..BabbleBoss["Magtheridon"]};
-		{ 5, 229055, "", "=q4=Handwraps of the Incarnate", "The Curator ("..BabbleZone["Karazhan"]..")"};
-		{ 6, 229053, "", "=q4=Trousers of the Incarnate", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
-		Back = "T4SET";	
-		Next = "T5PriestHoly25ManHEROIC";	
-	};	
-	
-	AtlasLoot_Data["T4PriestShadow25ManHEROIC"] = {		
-		{ 1, 0, "Spell_Shadow_AntiShadow", "=q6=#t4s5_2#", "=ec1=#m21# - Fallen Defender"};
-		{ 2, 229058, "", "=q4=Soul-Collar of the Incarnate", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 3, 229060, "", "=q4=Soul-Mantle of the Incarnate", "=ds="..BabbleBoss["High King Maulgar"]};
-		{ 4, 229056, "", "=q4=Shroud of the Incarnate", "=ds="..BabbleBoss["Magtheridon"]};
-		{ 5, 229057, "", "=q4=Gloves of the Incarnate", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 6, 229059, "", "=q4=Leggings of the Incarnate", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
-		Back = "T4SET";	
-		Next = "T5PriestShadow25ManHEROIC";	
-	};	
-	
-	AtlasLoot_Data["T4Rogue25ManHEROIC"] = {		
-		{ 1, 0, "Ability_BackStab", "=q6=#t4s6#", "=ec1=#m21# - Fallen Champion"};
-		{ 2, 229044, "", "=q4=Netherblade Facemask", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 3, 229047, "", "=q4=Netherblade Shoulderpads", "=ds="..BabbleBoss["High King Maulgar"]};
-		{ 4, 229045, "", "=q4=Netherblade Chestpiece", "=ds="..BabbleBoss["Magtheridon"]};
-		{ 5, 229048, "", "=q4=Netherblade Gloves", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 6, 229046, "", "=q4=Netherblade Breeches", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
-		Back = "T4SET";	
-		Next = "T5Rogue25ManHEROIC";	
-	};	
-	
-	AtlasLoot_Data["T4ShamanEnhancement25ManHEROIC"] = {		
-		{ 1, 0, "Spell_FireResistanceTotem_01", "=q6=#t4s7_1#", "=ec1=#m21# - Fallen Champion"};
-		{ 2, 229040, "", "=q4=Cyclone Helm", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 3, 229043, "", "=q4=Cyclone Shoulderplates", "=ds="..BabbleBoss["High King Maulgar"]};
-		{ 4, 229038, "", "=q4=Cyclone Breastplate", "=ds="..BabbleBoss["Magtheridon"]};
-		{ 5, 229039, "", "=q4=Cyclone Gauntlets", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 6, 229042, "", "=q4=Cyclone War-Kilt", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
-		Back = "T4SET";	
-		Next = "T5ShamanEnhancement25ManHEROIC";	
-	};	
-	
-	AtlasLoot_Data["T4ShamanRestoration25ManHEROIC"] = {		
-		{ 1, 0, "Spell_Nature_HealingWaveGreater", "=q6=#t4s7_2#", "=ec1=#m21# - Fallen Champion"};
-		{ 2, 229028, "", "=q4=Cyclone Headdress", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 3, 229031, "", "=q4=Cyclone Shoulderpads", "=ds="..BabbleBoss["High King Maulgar"]};
-		{ 4, 229029, "", "=q4=Cyclone Hauberk", "=ds="..BabbleBoss["Magtheridon"]};
-		{ 5, 229032, "", "=q4=Cyclone Gloves", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 6, 229030, "", "=q4=Cyclone Kilt", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
-		Back = "T4SET";	
-		Next = "T5ShamanRestoration25ManHEROIC";	
-	};	
-	
-	AtlasLoot_Data["T4ShamanElemental25ManHEROIC"] = {		
-		{ 1, 0, "Spell_Nature_Lightning", "=q6=#t4s7_3#", "=ec1=#m21# - Fallen Champion"};
-		{ 2, 229035, "", "=q4=Cyclone Faceguard", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 3, 229037, "", "=q4=Cyclone Shoulderguards", "=ds="..BabbleBoss["High King Maulgar"]};
-		{ 4, 229033, "", "=q4=Cyclone Chestguard", "=ds="..BabbleBoss["Magtheridon"]};
-		{ 5, 229034, "", "=q4=Cyclone Handguards", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 6, 229036, "", "=q4=Cyclone Legguards", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
-		Back = "T4SET";	
-		Next = "T5ShamanElemental25ManHEROIC";	
-	};	
-	
-	AtlasLoot_Data["T4Warlock25ManHEROIC"] = {		
-		{ 1, 0, "Spell_Shadow_CurseOfTounges", "=q6=#t4s8#", "=ec1=#m21# - Fallen Hero"};
-		{ 2, 228963, "", "=q4=Voidheart Crown", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 3, 228967, "", "=q4=Voidheart Mantle", "=ds="..BabbleBoss["High King Maulgar"]};
-		{ 4, 228964, "", "=q4=Voidheart Robe", "=ds="..BabbleBoss["Magtheridon"]};
-		{ 5, 228968, "", "=q4=Voidheart Gloves", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 6, 228966, "", "=q4=Voidheart Leggings", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
-		Back = "T4SET";	
-		Next = "T5Warlock25ManHEROIC";	
-	};	
-	
-	AtlasLoot_Data["T4WarriorProtection25ManHEROIC"] = {		
-		{ 1, 0, "INV_Shield_05", "=q6=#t4s9_1#", "=ec1=#m21# - Fallen Defender"};
-		{ 2, 229011, "", "=q4=Warbringer Greathelm", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 3, 229016, "", "=q4=Warbringer Shoulderguards", "=ds="..BabbleBoss["High King Maulgar"]};
-		{ 4, 229012, "", "=q4=Warbringer Chestguard", "=ds="..BabbleBoss["Magtheridon"]};
-		{ 5, 229017, "", "=q4=Warbringer Handguards", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 6, 229015, "", "=q4=Warbringer Legguards", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
-		{ 8, 0, "INV_Shield_05", "=q6=#t4s9_1#", "=ec1=#m21# - Fallen Defender"};
-		{ 9, 214984, "", "=q4=Warbringer Helmet", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 10, 214988, "", "=q4=Warbringer Pauldrons", "=ds="..BabbleBoss["High King Maulgar"]};
-		{ 11, 214985, "", "=q4=Warbringer Hauberk", "=ds="..BabbleBoss["Magtheridon"]};
-		{ 12, 214989, "", "=q4=Warbringer Gloves", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 13, 214987, "", "=q4=Warbringer Leggings", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
-		Back = "T4SET";	
-		Next = "T5WarriorProtection25ManHEROIC";	
-	};	
-	
-	AtlasLoot_Data["T4WarriorFury25ManHEROIC"] = {		
-		{ 1, 0, "Ability_Warrior_BattleShout", "=q6=#t4s9_2#", "=ec1=#m21# - Fallen Defender"};
-		{ 2, 229021, "", "=q4=Warbringer Battle-Helm", "=ds="..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 3, 229023, "", "=q4=Warbringer Shoulderplates", "=ds="..BabbleBoss["High King Maulgar"]};
-		{ 4, 229019, "", "=q4=Warbringer Breastplate", "=ds="..BabbleBoss["Magtheridon"]};
-		{ 5, 229020, "", "=q4=Warbringer Gauntlets", "=ds="..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")"};
-		{ 6, 229022, "", "=q4=Warbringer Greaves", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
-		Back = "T4SET";	
-		Next = "T5WarriorFury25ManHEROIC";	
+		Type = "Raid";
 	};	
 
 
@@ -6025,6 +5521,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Back = "T5SET";
 		Prev = "T4DruidFeral";
 		Next = "T6DruidFeral";
+		Type = "Raid";
 	};	
 		
 	AtlasLoot_Data["T5DruidRestoration"] = {	
@@ -6037,6 +5534,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Back = "T5SET";
 		Prev = "T4DruidRestoration";
 		Next = "T6DruidRestoration";
+		Type = "Raid";
 	};	
 		
 	AtlasLoot_Data["T5DruidBalance"] = {	
@@ -6049,6 +5547,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Back = "T5SET";
 		Prev = "T4DruidBalance";
 		Next = "T6DruidBalance";
+		Type = "Raid";
 	};	
 		
 	AtlasLoot_Data["T5Hunter"] = {	
@@ -6061,6 +5560,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Back = "T5SET";
 		Prev = "T4Hunter";
 		Next = "T6Hunter";
+		Type = "Raid";
 	};	
 		
 	AtlasLoot_Data["T5Mage"] = {	
@@ -6073,6 +5573,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Back = "T5SET";
 		Prev = "T4Mage";
 		Next = "T6Mage";
+		Type = "Raid";
 	};	
 		
 	AtlasLoot_Data["T5PaladinProtection"] = {	
@@ -6085,6 +5586,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Back = "T5SET";
 		Prev = "T4PaladinProtection";
 		Next = "T6PaladinProtection";
+		Type = "Raid";
 	};	
 		
 	AtlasLoot_Data["T5PaladinRetribution"] = {	
@@ -6097,6 +5599,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Back = "T5SET";
 		Prev = "T4PaladinRetribution";
 		Next = "T6PaladinRetribution";
+		Type = "Raid";
 	};	
 		
 	AtlasLoot_Data["T5PaladinHoly"] = {	
@@ -6109,6 +5612,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Back = "T5SET";
 		Prev = "T4PaladinHoly";
 		Next = "T6PaladinHoly";
+		Type = "Raid";
 	};	
 		
 	AtlasLoot_Data["T5PriestHoly"] = {	
@@ -6121,6 +5625,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Back = "T5SET";
 		Prev = "T4PriestHoly";
 		Next = "T6PriestHoly";
+		Type = "Raid";
 	};	
 		
 	AtlasLoot_Data["T5PriestShadow"] = {	
@@ -6133,6 +5638,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Back = "T5SET";
 		Prev = "T4PriestShadow";
 		Next = "T6PriestShadow";
+		Type = "Raid";
 	};	
 		
 	AtlasLoot_Data["T5Rogue"] = {	
@@ -6145,6 +5651,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Back = "T5SET";
 		Prev = "T4Rogue";
 		Next = "T6Rogue";
+		Type = "Raid";
 	};	
 		
 	AtlasLoot_Data["T5ShamanEnhancement"] = {	
@@ -6157,6 +5664,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Back = "T5SET";
 		Prev = "T4ShamanEnhancement";
 		Next = "T6ShamanEnhancement";
+		Type = "Raid";
 	};	
 		
 	AtlasLoot_Data["T5ShamanRestoration"] = {	
@@ -6169,6 +5677,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Back = "T5SET";
 		Prev = "T4ShamanRestoration";
 		Next = "T6ShamanRestoration";
+		Type = "Raid";
 	};	
 		
 	AtlasLoot_Data["T5ShamanElemental"] = {	
@@ -6181,6 +5690,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Back = "T5SET";
 		Prev = "T4ShamanElemental";
 		Next = "T6ShamanElemental";
+		Type = "Raid";
 	};	
 		
 	AtlasLoot_Data["T5Warlock"] = {	
@@ -6193,6 +5703,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Back = "T5SET";
 		Prev = "T4Warlock";
 		Next = "T6Warlock";
+		Type = "Raid";
 	};	
 		
 	AtlasLoot_Data["T5WarriorProtection"] = {	
@@ -6211,6 +5722,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Back = "T5SET";
 		Prev = "T4WarriorProtection";
 		Next = "T6WarriorProtection";
+		Type = "Raid";
 	};	
 		
 	AtlasLoot_Data["T5WarriorFury"] = {	
@@ -6223,437 +5735,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Back = "T5SET";
 		Prev = "T4WarriorFury";
 		Next = "T6WarriorFury";
-	};	
-	
-	
-
-	--------------------------
-	--- Tier 5 HEROIC FLEX ---
-	--------------------------
-
-	AtlasLoot_Data["T5DruidFeral25Man"] = {	
-		{ 1, 0, "Ability_Druid_Maul", "=q6=#t5s1_1#", "=ec1=#m22# - Vanquished Defender"};
-		{ 2, 330228, "", "=q4=Nordrassil Headdress", "=ds="..BabbleBoss["Lady Vashj"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		{ 3, 330230, "", "=q4=Nordrassil Feral-Mantle", "=ds="..BabbleBoss["Void Reaver"].." ("..BabbleZone["The Eye"]..")"};
-		{ 4, 330222, "", "=q4=Nordrassil Chestplate", "=ds="..BabbleBoss["Kael'thas Sunstrider"].." ("..BabbleZone["The Eye"]..")"};
-		{ 5, 330223, "", "=q4=Nordrassil Handgrips", "=ds="..BabbleBoss["Leotheras the Blind"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		{ 6, 330229, "", "=q4=Nordrassil Feral-Kilt", "=ds="..BabbleBoss["Fathom-Lord Karathress"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		Back = "T5SET";
-		Prev = "T4DruidFeral25Man";
-		Next = "T6DruidFeral25Man";
-	};	
-		
-	AtlasLoot_Data["T5DruidRestoration25Man"] = {	
-		{ 1, 0, "Spell_Nature_Regeneration", "=q6=#t5s1_2#", "=ec1=#m22# - Vanquished Defender"};
-		{ 2, 330219, "", "=q4=Nordrassil Headguard", "=ds="..BabbleBoss["Lady Vashj"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		{ 3, 330221, "", "=q4=Nordrassil Life-Mantle", "=ds="..BabbleBoss["Void Reaver"].." ("..BabbleZone["The Eye"]..")"};
-		{ 4, 330216, "", "=q4=Nordrassil Chestguard", "=ds="..BabbleBoss["Kael'thas Sunstrider"].." ("..BabbleZone["The Eye"]..")"};
-		{ 5, 330217, "", "=q4=Nordrassil Gloves", "=ds="..BabbleBoss["Leotheras the Blind"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		{ 6, 330220, "", "=q4=Nordrassil Life-Kilt", "=ds="..BabbleBoss["Fathom-Lord Karathress"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		Back = "T5SET";
-		Prev = "T4DruidRestoration25Man";
-		Next = "T6DruidRestoration25Man";
-	};	
-		
-	AtlasLoot_Data["T5DruidBalance25Man"] = {	
-		{ 1, 0, "Spell_Nature_InsectSwarm", "=q6=#t5s1_3#", "=ec1=#m22# - Vanquished Defender"};
-		{ 2, 330233, "", "=q4=Nordrassil Headpiece", "=ds="..BabbleBoss["Lady Vashj"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		{ 3, 330235, "", "=q4=Nordrassil Wrath-Mantle", "=ds="..BabbleBoss["Void Reaver"].." ("..BabbleZone["The Eye"]..")"};
-		{ 4, 330231, "", "=q4=Nordrassil Chestpiece", "=ds="..BabbleBoss["Kael'thas Sunstrider"].." ("..BabbleZone["The Eye"]..")"};
-		{ 5, 330232, "", "=q4=Nordrassil Gauntlets", "=ds="..BabbleBoss["Leotheras the Blind"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		{ 6, 330234, "", "=q4=Nordrassil Wrath-Kilt", "=ds="..BabbleBoss["Fathom-Lord Karathress"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		Back = "T5SET";
-		Prev = "T4DruidBalance25Man";
-		Next = "T6DruidBalance25Man";
-	};	
-		
-	AtlasLoot_Data["T5Hunter25Man"] = {	
-		{ 1, 0, "Ability_Hunter_RunningShot", "=q6=#t5s2#", "=ec1=#m22# - Vanquished Hero"};
-		{ 2, 330141, "", "=q4=Rift Stalker Helm", "=ds="..BabbleBoss["Lady Vashj"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		{ 3, 330143, "", "=q4=Rift Stalker Mantle", "=ds="..BabbleBoss["Void Reaver"].." ("..BabbleZone["The Eye"]..")"};
-		{ 4, 330139, "", "=q4=Rift Stalker Hauberk", "=ds="..BabbleBoss["Kael'thas Sunstrider"].." ("..BabbleZone["The Eye"]..")"};
-		{ 5, 330140, "", "=q4=Rift Stalker Gauntlets", "=ds="..BabbleBoss["Leotheras the Blind"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		{ 6, 330142, "", "=q4=Rift Stalker Leggings", "=ds="..BabbleBoss["Fathom-Lord Karathress"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		Back = "T5SET";
-		Prev = "T4Hunter25Man";
-		Next = "T6Hunter25Man";
-	};	
-		
-	AtlasLoot_Data["T5Mage25Man"] = {	
-		{ 1, 0, "Spell_Frost_IceStorm", "=q6=#t5s3#", "=ec1=#m22# - Vanquished Hero"};
-		{ 2, 330206, "", "=q4=Cowl of Tirisfal", "=ds="..BabbleBoss["Lady Vashj"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		{ 3, 330210, "", "=q4=Mantle of Tirisfal", "=ds="..BabbleBoss["Void Reaver"].." ("..BabbleZone["The Eye"]..")"};
-		{ 4, 330196, "", "=q4=Robes of Tirisfal", "=ds="..BabbleBoss["Kael'thas Sunstrider"].." ("..BabbleZone["The Eye"]..")"};
-		{ 5, 330205, "", "=q4=Gloves of Tirisfal", "=ds="..BabbleBoss["Leotheras the Blind"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		{ 6, 330207, "", "=q4=Leggings of Tirisfal", "=ds="..BabbleBoss["Fathom-Lord Karathress"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		Back = "T5SET";
-		Prev = "T4Mage25Man";
-		Next = "T6Mage25Man";
-	};	
-		
-	AtlasLoot_Data["T5PaladinProtection25Man"] = {	
-		{ 1, 0, "Spell_Holy_SealOfMight", "=q6=#t5s4_1#", "=ec1=#m22# - Vanquished Champion"};
-		{ 2, 330125, "", "=q4=Crystalforge Faceguard", "=ds="..BabbleBoss["Lady Vashj"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		{ 3, 330127, "", "=q4=Crystalforge Shoulderguards", "=ds="..BabbleBoss["Void Reaver"].." ("..BabbleZone["The Eye"]..")"};
-		{ 4, 330123, "", "=q4=Crystalforge Chestguard", "=ds="..BabbleBoss["Kael'thas Sunstrider"].." ("..BabbleZone["The Eye"]..")"};
-		{ 5, 330124, "", "=q4=Crystalforge Handguards", "=ds="..BabbleBoss["Leotheras the Blind"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		{ 6, 330126, "", "=q4=Crystalforge Legguards", "=ds="..BabbleBoss["Fathom-Lord Karathress"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		Back = "T5SET";
-		Prev = "T4PaladinProtection25Man";
-		Next = "T6PaladinProtection25Man";
-	};	
-		
-	AtlasLoot_Data["T5PaladinRetribution25Man"] = {	
-		{ 1, 0, "Spell_Holy_AuraOfLight", "=q6=#t5s4_2#", "=ec1=#m22# - Vanquished Champion"};
-		{ 2, 330131, "", "=q4=Crystalforge War-Helm", "=ds="..BabbleBoss["Lady Vashj"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		{ 3, 330133, "", "=q4=Crystalforge Shoulderbraces", "=ds="..BabbleBoss["Void Reaver"].." ("..BabbleZone["The Eye"]..")"};
-		{ 4, 330129, "", "=q4=Crystalforge Breastplate", "=ds="..BabbleBoss["Kael'thas Sunstrider"].." ("..BabbleZone["The Eye"]..")"};
-		{ 5, 330130, "", "=q4=Crystalforge Gauntlets", "=ds="..BabbleBoss["Leotheras the Blind"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		{ 6, 330132, "", "=q4=Crystalforge Greaves", "=ds="..BabbleBoss["Fathom-Lord Karathress"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		Back = "T5SET";
-		Prev = "T4PaladinRetribution25Man";
-		Next = "T6PaladinRetribution25Man";
-	};	
-		
-	AtlasLoot_Data["T5PaladinHoly25Man"] = {	
-		{ 1, 0, "Spell_Holy_HolyBolt", "=q6=#t5s4_3#", "=ec1=#m22# - Vanquished Champion"};
-		{ 2, 330136, "", "=q4=Crystalforge Greathelm", "=ds="..BabbleBoss["Lady Vashj"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		{ 3, 330138, "", "=q4=Crystalforge Pauldrons", "=ds="..BabbleBoss["Void Reaver"].." ("..BabbleZone["The Eye"]..")"};
-		{ 4, 330134, "", "=q4=Crystalforge Chestpiece", "=ds="..BabbleBoss["Kael'thas Sunstrider"].." ("..BabbleZone["The Eye"]..")"};
-		{ 5, 330135, "", "=q4=Crystalforge Gloves", "=ds="..BabbleBoss["Leotheras the Blind"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		{ 6, 330137, "", "=q4=Crystalforge Leggings", "=ds="..BabbleBoss["Fathom-Lord Karathress"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		Back = "T5SET";
-		Prev = "T4PaladinHoly25Man";
-		Next = "T6PaladinHoly25Man";
-	};	
-		
-	AtlasLoot_Data["T5PriestHoly25Man"] = {	
-		{ 1, 0, "Spell_Holy_PowerWordShield", "=q6=#t5s5_1#", "=ec1=#m22# - Vanquished Defender"};
-		{ 2, 330152, "", "=q4=Cowl of the Avatar", "=ds="..BabbleBoss["Lady Vashj"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		{ 3, 330154, "", "=q4=Mantle of the Avatar", "=ds="..BabbleBoss["Void Reaver"].." ("..BabbleZone["The Eye"]..")"};
-		{ 4, 330150, "", "=q4=Vestments of the Avatar", "=ds="..BabbleBoss["Kael'thas Sunstrider"].." ("..BabbleZone["The Eye"]..")"};
-		{ 5, 330151, "", "=q4=Gloves of the Avatar", "=ds="..BabbleBoss["Leotheras the Blind"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		{ 6, 330153, "", "=q4=Breeches of the Avatar", "=ds="..BabbleBoss["Fathom-Lord Karathress"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		Back = "T5SET";
-		Prev = "T4PriestHoly25Man";
-		Next = "T6PriestHoly25Man";
-	};	
-		
-	AtlasLoot_Data["T5PriestShadow25Man"] = {	
-		{ 1, 0, "Spell_Shadow_AntiShadow", "=q6=#t5s5_2#", "=ec1=#m22# - Vanquished Defender"};
-		{ 2, 330161, "", "=q4=Hood of the Avatar", "=ds="..BabbleBoss["Lady Vashj"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		{ 3, 330163, "", "=q4=Wings of the Avatar", "=ds="..BabbleBoss["Void Reaver"].." ("..BabbleZone["The Eye"]..")"};
-		{ 4, 330159, "", "=q4=Shroud of the Avatar", "=ds="..BabbleBoss["Kael'thas Sunstrider"].." ("..BabbleZone["The Eye"]..")"};
-		{ 5, 330160, "", "=q4=Handguards of the Avatar", "=ds="..BabbleBoss["Leotheras the Blind"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		{ 6, 330162, "", "=q4=Leggings of the Avatar", "=ds="..BabbleBoss["Fathom-Lord Karathress"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		Back = "T5SET";
-		Prev = "T4PriestShadow25Man";
-		Next = "T6PriestShadow25Man";
-	};	
-		
-	AtlasLoot_Data["T5Rogue25Man"] = {	
-		{ 1, 0, "Ability_BackStab", "=q6=#t5s6#", "=ec1=#m22# - Vanquished Champion"};
-		{ 2, 330146, "", "=q4=Deathmantle Helm", "=ds="..BabbleBoss["Lady Vashj"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		{ 3, 330149, "", "=q4=Deathmantle Shoulderpads", "=ds="..BabbleBoss["Void Reaver"].." ("..BabbleZone["The Eye"]..")"};
-		{ 4, 330144, "", "=q4=Deathmantle Chestguard", "=ds="..BabbleBoss["Kael'thas Sunstrider"].." ("..BabbleZone["The Eye"]..")"};
-		{ 5, 330145, "", "=q4=Deathmantle Handguards", "=ds="..BabbleBoss["Leotheras the Blind"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		{ 6, 330148, "", "=q4=Deathmantle Legguards", "=ds="..BabbleBoss["Fathom-Lord Karathress"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		Back = "T5SET";
-		Prev = "T4Rogue25Man";
-		Next = "T6Rogue25Man";
-	};	
-		
-	AtlasLoot_Data["T5ShamanEnhancement25Man"] = {	
-		{ 1, 0, "Spell_FireResistanceTotem_01", "=q6=#t5s7_1#", "=ec1=#m22# - Vanquished Champion"};
-		{ 2, 330190, "", "=q4=Cataclysm Helm", "=ds="..BabbleBoss["Lady Vashj"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		{ 3, 330194, "", "=q4=Cataclysm Shoulderplates", "=ds="..BabbleBoss["Void Reaver"].." ("..BabbleZone["The Eye"]..")"};
-		{ 4, 330185, "", "=q4=Cataclysm Chestplate", "=ds="..BabbleBoss["Kael'thas Sunstrider"].." ("..BabbleZone["The Eye"]..")"};
-		{ 5, 330189, "", "=q4=Cataclysm Gauntlets", "=ds="..BabbleBoss["Leotheras the Blind"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		{ 6, 330192, "", "=q4=Cataclysm Leggings", "=ds="..BabbleBoss["Fathom-Lord Karathress"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		Back = "T5SET";
-		Prev = "T4ShamanEnhancement25Man";
-		Next = "T6ShamanEnhancement25Man";
-	};	
-		
-	AtlasLoot_Data["T5ShamanRestoration25Man"] = {	
-		{ 1, 0, "Spell_Nature_HealingWaveGreater", "=q6=#t5s7_2#", "=ec1=#m22# - Vanquished Champion"};
-		{ 2, 330166, "", "=q4=Cataclysm Headguard", "=ds="..BabbleBoss["Lady Vashj"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		{ 3, 330168, "", "=q4=Cataclysm Shoulderguards", "=ds="..BabbleBoss["Void Reaver"].." ("..BabbleZone["The Eye"]..")"};
-		{ 4, 330164, "", "=q4=Cataclysm Chestguard", "=ds="..BabbleBoss["Kael'thas Sunstrider"].." ("..BabbleZone["The Eye"]..")"};
-		{ 5, 330165, "", "=q4=Cataclysm Gloves", "=ds="..BabbleBoss["Leotheras the Blind"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		{ 6, 330167, "", "=q4=Cataclysm Legguards", "=ds="..BabbleBoss["Fathom-Lord Karathress"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		Back = "T5SET";
-		Prev = "T4ShamanRestoration25Man";
-		Next = "T6ShamanRestoration25Man";
-	};	
-		
-	AtlasLoot_Data["T5ShamanElemental25Man"] = {	
-		{ 1, 0, "Spell_Nature_Lightning", "=q6=#t5s7_3#", "=ec1=#m22# - Vanquished Champion"};
-		{ 2, 330171, "", "=q4=Cataclysm Headpiece", "=ds="..BabbleBoss["Lady Vashj"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		{ 3, 330173, "", "=q4=Cataclysm Shoulderpads", "=ds="..BabbleBoss["Void Reaver"].." ("..BabbleZone["The Eye"]..")"};
-		{ 4, 330169, "", "=q4=Cataclysm Chestpiece", "=ds="..BabbleBoss["Kael'thas Sunstrider"].." ("..BabbleZone["The Eye"]..")"};
-		{ 5, 330170, "", "=q4=Cataclysm Handgrips", "=ds="..BabbleBoss["Leotheras the Blind"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		{ 6, 330172, "", "=q4=Cataclysm Legguards", "=ds="..BabbleBoss["Fathom-Lord Karathress"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		Back = "T5SET";
-		Prev = "T4ShamanElemental25Man";
-		Next = "T6ShamanElemental25Man";
-	};	
-		
-	AtlasLoot_Data["T5Warlock25Man"] = {	
-		{ 1, 0, "Spell_Shadow_CurseOfTounges", "=q6=#t5s8#", "=ec1=#m22# - Vanquished Hero"};
-		{ 2, 330212, "", "=q4=Hood of the Corruptor", "=ds="..BabbleBoss["Lady Vashj"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		{ 3, 330215, "", "=q4=Mantle of the Corruptor", "=ds="..BabbleBoss["Void Reaver"].." ("..BabbleZone["The Eye"]..")"};
-		{ 4, 330214, "", "=q4=Robe of the Corruptor", "=ds="..BabbleBoss["Kael'thas Sunstrider"].." ("..BabbleZone["The Eye"]..")"};
-		{ 5, 330211, "", "=q4=Gloves of the Corruptor", "=ds="..BabbleBoss["Leotheras the Blind"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		{ 6, 330213, "", "=q4=Leggings of the Corruptor", "=ds="..BabbleBoss["Fathom-Lord Karathress"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		Back = "T5SET";
-		Prev = "T4Warlock25Man";
-		Next = "T6Warlock25Man";
-	};	
-		
-	AtlasLoot_Data["T5WarriorProtection25Man"] = {	
-		{ 1, 0, "INV_Shield_05", "=q6=#t5s9_1#", "=ec1=#m22# - Vanquished Defender"};
-		{ 2, 330115, "", "=q4=Destroyer Greathelm", "=ds="..BabbleBoss["Lady Vashj"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		{ 3, 330117, "", "=q4=Destroyer Shoulderguards", "=ds="..BabbleBoss["Void Reaver"].." ("..BabbleZone["The Eye"]..")"};
-		{ 4, 330113, "", "=q4=Destroyer Chestguard", "=ds="..BabbleBoss["Kael'thas Sunstrider"].." ("..BabbleZone["The Eye"]..")"};
-		{ 5, 330114, "", "=q4=Destroyer Handguards", "=ds="..BabbleBoss["Leotheras the Blind"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		{ 6, 330116, "", "=q4=Destroyer Legguards", "=ds="..BabbleBoss["Fathom-Lord Karathress"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		{ 8, 0, "INV_Shield_05", "=q6=#t5s9_1#", "=ec1=#m22# - Vanquished Defender"};
-		{ 9, 314992, "", "=q4=Destroyer Helmet", "=ds="..BabbleBoss["Lady Vashj"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		{ 10, 314994, "", "=q4=Destroyer Pauldrons", "=ds="..BabbleBoss["Void Reaver"].." ("..BabbleZone["The Eye"]..")"};
-		{ 11, 314990, "", "=q4=Destroyer Hauberk", "=ds="..BabbleBoss["Kael'thas Sunstrider"].." ("..BabbleZone["The Eye"]..")"};
-		{ 12, 314991, "", "=q4=Destroyer Gloves", "=ds="..BabbleBoss["Leotheras the Blind"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		{ 13, 314993, "", "=q4=Destroyer Leggings", "=ds="..BabbleBoss["Fathom-Lord Karathress"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		Back = "T5SET";
-		Prev = "T4WarriorProtection25Man";
-		Next = "T6WarriorProtection25Man";
-	};	
-		
-	AtlasLoot_Data["T5WarriorFury25Man"] = {	
-		{ 1, 0, "Ability_Warrior_BattleShout", "=q6=#t5s9_2#", "=ec1=#m22# - Vanquished Defender"};
-		{ 2, 330120, "", "=q4=Destroyer Battle-Helm", "=ds="..BabbleBoss["Lady Vashj"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		{ 3, 330122, "", "=q4=Destroyer Shoulderblades", "=ds="..BabbleBoss["Void Reaver"].." ("..BabbleZone["The Eye"]..")"};
-		{ 4, 330118, "", "=q4=Destroyer Breastplate", "=ds="..BabbleBoss["Kael'thas Sunstrider"].." ("..BabbleZone["The Eye"]..")"};
-		{ 5, 330119, "", "=q4=Destroyer Gauntlets", "=ds="..BabbleBoss["Leotheras the Blind"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		{ 6, 330121, "", "=q4=Destroyer Greaves", "=ds="..BabbleBoss["Fathom-Lord Karathress"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		Back = "T5SET";
-		Prev = "T4WarriorFury25Man";
-		Next = "T6WarriorFury25Man";
-	};	
-	
-	
-	------------------------------
-	--- Tier 5 HEROIC ASCENDED ---
-	------------------------------
-
-	AtlasLoot_Data["T5DruidFeral25ManHEROIC"] = {	
-		{ 1, 0, "Ability_Druid_Maul", "=q6=#t5s1_1#", "=ec1=#m22# - Vanquished Defender"};
-		{ 2, 230228, "", "=q4=Nordrassil Headdress", "=ds="..BabbleBoss["Lady Vashj"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		{ 3, 230230, "", "=q4=Nordrassil Feral-Mantle", "=ds="..BabbleBoss["Void Reaver"].." ("..BabbleZone["The Eye"]..")"};
-		{ 4, 230222, "", "=q4=Nordrassil Chestplate", "=ds="..BabbleBoss["Kael'thas Sunstrider"].." ("..BabbleZone["The Eye"]..")"};
-		{ 5, 230223, "", "=q4=Nordrassil Handgrips", "=ds="..BabbleBoss["Leotheras the Blind"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		{ 6, 230229, "", "=q4=Nordrassil Feral-Kilt", "=ds="..BabbleBoss["Fathom-Lord Karathress"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		Back = "T5SET";
-		Prev = "T4DruidFeral25ManHEROIC";
-		Next = "T6DruidFeral25ManHEROIC";
-	};	
-		
-	AtlasLoot_Data["T5DruidRestoration25ManHEROIC"] = {	
-		{ 1, 0, "Spell_Nature_Regeneration", "=q6=#t5s1_2#", "=ec1=#m22# - Vanquished Defender"};
-		{ 2, 230219, "", "=q4=Nordrassil Headguard", "=ds="..BabbleBoss["Lady Vashj"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		{ 3, 230221, "", "=q4=Nordrassil Life-Mantle", "=ds="..BabbleBoss["Void Reaver"].." ("..BabbleZone["The Eye"]..")"};
-		{ 4, 230216, "", "=q4=Nordrassil Chestguard", "=ds="..BabbleBoss["Kael'thas Sunstrider"].." ("..BabbleZone["The Eye"]..")"};
-		{ 5, 230217, "", "=q4=Nordrassil Gloves", "=ds="..BabbleBoss["Leotheras the Blind"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		{ 6, 230220, "", "=q4=Nordrassil Life-Kilt", "=ds="..BabbleBoss["Fathom-Lord Karathress"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		Back = "T5SET";
-		Prev = "T4DruidRestoration25ManHEROIC";
-		Next = "T6DruidRestoration25ManHEROIC";
-	};	
-		
-	AtlasLoot_Data["T5DruidBalance25ManHEROIC"] = {	
-		{ 1, 0, "Spell_Nature_InsectSwarm", "=q6=#t5s1_3#", "=ec1=#m22# - Vanquished Defender"};
-		{ 2, 230233, "", "=q4=Nordrassil Headpiece", "=ds="..BabbleBoss["Lady Vashj"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		{ 3, 230235, "", "=q4=Nordrassil Wrath-Mantle", "=ds="..BabbleBoss["Void Reaver"].." ("..BabbleZone["The Eye"]..")"};
-		{ 4, 230231, "", "=q4=Nordrassil Chestpiece", "=ds="..BabbleBoss["Kael'thas Sunstrider"].." ("..BabbleZone["The Eye"]..")"};
-		{ 5, 230232, "", "=q4=Nordrassil Gauntlets", "=ds="..BabbleBoss["Leotheras the Blind"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		{ 6, 230234, "", "=q4=Nordrassil Wrath-Kilt", "=ds="..BabbleBoss["Fathom-Lord Karathress"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		Back = "T5SET";
-		Prev = "T4DruidBalance25ManHEROIC";
-		Next = "T6DruidBalance25ManHEROIC";
-	};	
-		
-	AtlasLoot_Data["T5Hunter25ManHEROIC"] = {	
-		{ 1, 0, "Ability_Hunter_RunningShot", "=q6=#t5s2#", "=ec1=#m22# - Vanquished Hero"};
-		{ 2, 230141, "", "=q4=Rift Stalker Helm", "=ds="..BabbleBoss["Lady Vashj"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		{ 3, 230143, "", "=q4=Rift Stalker Mantle", "=ds="..BabbleBoss["Void Reaver"].." ("..BabbleZone["The Eye"]..")"};
-		{ 4, 230139, "", "=q4=Rift Stalker Hauberk", "=ds="..BabbleBoss["Kael'thas Sunstrider"].." ("..BabbleZone["The Eye"]..")"};
-		{ 5, 230140, "", "=q4=Rift Stalker Gauntlets", "=ds="..BabbleBoss["Leotheras the Blind"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		{ 6, 230142, "", "=q4=Rift Stalker Leggings", "=ds="..BabbleBoss["Fathom-Lord Karathress"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		Back = "T5SET";
-		Prev = "T4Hunter25ManHEROIC";
-		Next = "T6Hunter25ManHEROIC";
-	};	
-		
-	AtlasLoot_Data["T5Mage25ManHEROIC"] = {	
-		{ 1, 0, "Spell_Frost_IceStorm", "=q6=#t5s3#", "=ec1=#m22# - Vanquished Hero"};
-		{ 2, 230206, "", "=q4=Cowl of Tirisfal", "=ds="..BabbleBoss["Lady Vashj"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		{ 3, 230210, "", "=q4=Mantle of Tirisfal", "=ds="..BabbleBoss["Void Reaver"].." ("..BabbleZone["The Eye"]..")"};
-		{ 4, 230196, "", "=q4=Robes of Tirisfal", "=ds="..BabbleBoss["Kael'thas Sunstrider"].." ("..BabbleZone["The Eye"]..")"};
-		{ 5, 230205, "", "=q4=Gloves of Tirisfal", "=ds="..BabbleBoss["Leotheras the Blind"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		{ 6, 230207, "", "=q4=Leggings of Tirisfal", "=ds="..BabbleBoss["Fathom-Lord Karathress"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		Back = "T5SET";
-		Prev = "T4Mage25ManHEROIC";
-		Next = "T6Mage25ManHEROIC";
-	};	
-		
-	AtlasLoot_Data["T5PaladinProtection25ManHEROIC"] = {	
-		{ 1, 0, "Spell_Holy_SealOfMight", "=q6=#t5s4_1#", "=ec1=#m22# - Vanquished Champion"};
-		{ 2, 230125, "", "=q4=Crystalforge Faceguard", "=ds="..BabbleBoss["Lady Vashj"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		{ 3, 230127, "", "=q4=Crystalforge Shoulderguards", "=ds="..BabbleBoss["Void Reaver"].." ("..BabbleZone["The Eye"]..")"};
-		{ 4, 230123, "", "=q4=Crystalforge Chestguard", "=ds="..BabbleBoss["Kael'thas Sunstrider"].." ("..BabbleZone["The Eye"]..")"};
-		{ 5, 230124, "", "=q4=Crystalforge Handguards", "=ds="..BabbleBoss["Leotheras the Blind"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		{ 6, 230126, "", "=q4=Crystalforge Legguards", "=ds="..BabbleBoss["Fathom-Lord Karathress"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		Back = "T5SET";
-		Prev = "T4PaladinProtection25ManHEROIC";
-		Next = "T6PaladinProtection25ManHEROIC";
-	};	
-		
-	AtlasLoot_Data["T5PaladinRetribution25ManHEROIC"] = {	
-		{ 1, 0, "Spell_Holy_AuraOfLight", "=q6=#t5s4_2#", "=ec1=#m22# - Vanquished Champion"};
-		{ 2, 230131, "", "=q4=Crystalforge War-Helm", "=ds="..BabbleBoss["Lady Vashj"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		{ 3, 230133, "", "=q4=Crystalforge Shoulderbraces", "=ds="..BabbleBoss["Void Reaver"].." ("..BabbleZone["The Eye"]..")"};
-		{ 4, 230129, "", "=q4=Crystalforge Breastplate", "=ds="..BabbleBoss["Kael'thas Sunstrider"].." ("..BabbleZone["The Eye"]..")"};
-		{ 5, 230130, "", "=q4=Crystalforge Gauntlets", "=ds="..BabbleBoss["Leotheras the Blind"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		{ 6, 230132, "", "=q4=Crystalforge Greaves", "=ds="..BabbleBoss["Fathom-Lord Karathress"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		Back = "T5SET";
-		Prev = "T4PaladinRetribution25ManHEROIC";
-		Next = "T6PaladinRetribution25ManHEROIC";
-	};	
-		
-	AtlasLoot_Data["T5PaladinHoly25ManHEROIC"] = {	
-		{ 1, 0, "Spell_Holy_HolyBolt", "=q6=#t5s4_3#", "=ec1=#m22# - Vanquished Champion"};
-		{ 2, 230136, "", "=q4=Crystalforge Greathelm", "=ds="..BabbleBoss["Lady Vashj"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		{ 3, 230138, "", "=q4=Crystalforge Pauldrons", "=ds="..BabbleBoss["Void Reaver"].." ("..BabbleZone["The Eye"]..")"};
-		{ 4, 230134, "", "=q4=Crystalforge Chestpiece", "=ds="..BabbleBoss["Kael'thas Sunstrider"].." ("..BabbleZone["The Eye"]..")"};
-		{ 5, 230135, "", "=q4=Crystalforge Gloves", "=ds="..BabbleBoss["Leotheras the Blind"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		{ 6, 230137, "", "=q4=Crystalforge Leggings", "=ds="..BabbleBoss["Fathom-Lord Karathress"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		Back = "T5SET";
-		Prev = "T4PaladinHoly25ManHEROIC";
-		Next = "T6PaladinHoly25ManHEROIC";
-	};	
-		
-	AtlasLoot_Data["T5PriestHoly25ManHEROIC"] = {	
-		{ 1, 0, "Spell_Holy_PowerWordShield", "=q6=#t5s5_1#", "=ec1=#m22# - Vanquished Defender"};
-		{ 2, 230152, "", "=q4=Cowl of the Avatar", "=ds="..BabbleBoss["Lady Vashj"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		{ 3, 230154, "", "=q4=Mantle of the Avatar", "=ds="..BabbleBoss["Void Reaver"].." ("..BabbleZone["The Eye"]..")"};
-		{ 4, 230150, "", "=q4=Vestments of the Avatar", "=ds="..BabbleBoss["Kael'thas Sunstrider"].." ("..BabbleZone["The Eye"]..")"};
-		{ 5, 230151, "", "=q4=Gloves of the Avatar", "=ds="..BabbleBoss["Leotheras the Blind"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		{ 6, 230153, "", "=q4=Breeches of the Avatar", "=ds="..BabbleBoss["Fathom-Lord Karathress"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		Back = "T5SET";
-		Prev = "T4PriestHoly25ManHEROIC";
-		Next = "T6PriestHoly25ManHEROIC";
-	};	
-		
-	AtlasLoot_Data["T5PriestShadow25ManHEROIC"] = {	
-		{ 1, 0, "Spell_Shadow_AntiShadow", "=q6=#t5s5_2#", "=ec1=#m22# - Vanquished Defender"};
-		{ 2, 230161, "", "=q4=Hood of the Avatar", "=ds="..BabbleBoss["Lady Vashj"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		{ 3, 230163, "", "=q4=Wings of the Avatar", "=ds="..BabbleBoss["Void Reaver"].." ("..BabbleZone["The Eye"]..")"};
-		{ 4, 230159, "", "=q4=Shroud of the Avatar", "=ds="..BabbleBoss["Kael'thas Sunstrider"].." ("..BabbleZone["The Eye"]..")"};
-		{ 5, 230160, "", "=q4=Handguards of the Avatar", "=ds="..BabbleBoss["Leotheras the Blind"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		{ 6, 230162, "", "=q4=Leggings of the Avatar", "=ds="..BabbleBoss["Fathom-Lord Karathress"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		Back = "T5SET";
-		Prev = "T4PriestShadow25ManHEROIC";
-		Next = "T6PriestShadow25ManHEROIC";
-	};	
-		
-	AtlasLoot_Data["T5Rogue25ManHEROIC"] = {	
-		{ 1, 0, "Ability_BackStab", "=q6=#t5s6#", "=ec1=#m22# - Vanquished Champion"};
-		{ 2, 230146, "", "=q4=Deathmantle Helm", "=ds="..BabbleBoss["Lady Vashj"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		{ 3, 230149, "", "=q4=Deathmantle Shoulderpads", "=ds="..BabbleBoss["Void Reaver"].." ("..BabbleZone["The Eye"]..")"};
-		{ 4, 230144, "", "=q4=Deathmantle Chestguard", "=ds="..BabbleBoss["Kael'thas Sunstrider"].." ("..BabbleZone["The Eye"]..")"};
-		{ 5, 230145, "", "=q4=Deathmantle Handguards", "=ds="..BabbleBoss["Leotheras the Blind"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		{ 6, 230148, "", "=q4=Deathmantle Legguards", "=ds="..BabbleBoss["Fathom-Lord Karathress"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		Back = "T5SET";
-		Prev = "T4Rogue25ManHEROIC";
-		Next = "T6Rogue25ManHEROIC";
-	};	
-		
-	AtlasLoot_Data["T5ShamanEnhancement25ManHEROIC"] = {	
-		{ 1, 0, "Spell_FireResistanceTotem_01", "=q6=#t5s7_1#", "=ec1=#m22# - Vanquished Champion"};
-		{ 2, 230190, "", "=q4=Cataclysm Helm", "=ds="..BabbleBoss["Lady Vashj"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		{ 3, 230194, "", "=q4=Cataclysm Shoulderplates", "=ds="..BabbleBoss["Void Reaver"].." ("..BabbleZone["The Eye"]..")"};
-		{ 4, 230185, "", "=q4=Cataclysm Chestplate", "=ds="..BabbleBoss["Kael'thas Sunstrider"].." ("..BabbleZone["The Eye"]..")"};
-		{ 5, 230189, "", "=q4=Cataclysm Gauntlets", "=ds="..BabbleBoss["Leotheras the Blind"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		{ 6, 230192, "", "=q4=Cataclysm Leggings", "=ds="..BabbleBoss["Fathom-Lord Karathress"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		Back = "T5SET";
-		Prev = "T4ShamanEnhancement25ManHEROIC";
-		Next = "T6ShamanEnhancement25ManHEROIC";
-	};	
-		
-	AtlasLoot_Data["T5ShamanRestoration25ManHEROIC"] = {	
-		{ 1, 0, "Spell_Nature_HealingWaveGreater", "=q6=#t5s7_2#", "=ec1=#m22# - Vanquished Champion"};
-		{ 2, 230166, "", "=q4=Cataclysm Headguard", "=ds="..BabbleBoss["Lady Vashj"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		{ 3, 230168, "", "=q4=Cataclysm Shoulderguards", "=ds="..BabbleBoss["Void Reaver"].." ("..BabbleZone["The Eye"]..")"};
-		{ 4, 230164, "", "=q4=Cataclysm Chestguard", "=ds="..BabbleBoss["Kael'thas Sunstrider"].." ("..BabbleZone["The Eye"]..")"};
-		{ 5, 230165, "", "=q4=Cataclysm Gloves", "=ds="..BabbleBoss["Leotheras the Blind"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		{ 6, 230167, "", "=q4=Cataclysm Legguards", "=ds="..BabbleBoss["Fathom-Lord Karathress"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		Back = "T5SET";
-		Prev = "T4ShamanRestoration25ManHEROIC";
-		Next = "T6ShamanRestoration25ManHEROIC";
-	};	
-		
-	AtlasLoot_Data["T5ShamanElemental25ManHEROIC"] = {	
-		{ 1, 0, "Spell_Nature_Lightning", "=q6=#t5s7_3#", "=ec1=#m22# - Vanquished Champion"};
-		{ 2, 230171, "", "=q4=Cataclysm Headpiece", "=ds="..BabbleBoss["Lady Vashj"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		{ 3, 230173, "", "=q4=Cataclysm Shoulderpads", "=ds="..BabbleBoss["Void Reaver"].." ("..BabbleZone["The Eye"]..")"};
-		{ 4, 230169, "", "=q4=Cataclysm Chestpiece", "=ds="..BabbleBoss["Kael'thas Sunstrider"].." ("..BabbleZone["The Eye"]..")"};
-		{ 5, 230170, "", "=q4=Cataclysm Handgrips", "=ds="..BabbleBoss["Leotheras the Blind"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		{ 6, 230172, "", "=q4=Cataclysm Legguards", "=ds="..BabbleBoss["Fathom-Lord Karathress"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		Back = "T5SET";
-		Prev = "T4ShamanElemental25ManHEROIC";
-		Next = "T6ShamanElemental25ManHEROIC";
-	};	
-		
-	AtlasLoot_Data["T5Warlock25ManHEROIC"] = {	
-		{ 1, 0, "Spell_Shadow_CurseOfTounges", "=q6=#t5s8#", "=ec1=#m22# - Vanquished Hero"};
-		{ 2, 230212, "", "=q4=Hood of the Corruptor", "=ds="..BabbleBoss["Lady Vashj"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		{ 3, 230215, "", "=q4=Mantle of the Corruptor", "=ds="..BabbleBoss["Void Reaver"].." ("..BabbleZone["The Eye"]..")"};
-		{ 4, 230214, "", "=q4=Robe of the Corruptor", "=ds="..BabbleBoss["Kael'thas Sunstrider"].." ("..BabbleZone["The Eye"]..")"};
-		{ 5, 230211, "", "=q4=Gloves of the Corruptor", "=ds="..BabbleBoss["Leotheras the Blind"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		{ 6, 230213, "", "=q4=Leggings of the Corruptor", "=ds="..BabbleBoss["Fathom-Lord Karathress"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		Back = "T5SET";
-		Prev = "T4Warlock25ManHEROIC";
-		Next = "T6Warlock25ManHEROIC";
-	};	
-		
-	AtlasLoot_Data["T5WarriorProtection25ManHEROIC"] = {	
-		{ 1, 0, "INV_Shield_05", "=q6=#t5s9_1#", "=ec1=#m22# - Vanquished Defender"};
-		{ 2, 230115, "", "=q4=Destroyer Greathelm", "=ds="..BabbleBoss["Lady Vashj"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		{ 3, 230117, "", "=q4=Destroyer Shoulderguards", "=ds="..BabbleBoss["Void Reaver"].." ("..BabbleZone["The Eye"]..")"};
-		{ 4, 230113, "", "=q4=Destroyer Chestguard", "=ds="..BabbleBoss["Kael'thas Sunstrider"].." ("..BabbleZone["The Eye"]..")"};
-		{ 5, 230114, "", "=q4=Destroyer Handguards", "=ds="..BabbleBoss["Leotheras the Blind"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		{ 6, 230116, "", "=q4=Destroyer Legguards", "=ds="..BabbleBoss["Fathom-Lord Karathress"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		{ 8, 0, "INV_Shield_05", "=q6=#t5s9_1#", "=ec1=#m22# - Vanquished Defender"};
-		{ 9, 214992, "", "=q4=Destroyer Helmet", "=ds="..BabbleBoss["Lady Vashj"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		{ 10, 214994, "", "=q4=Destroyer Pauldrons", "=ds="..BabbleBoss["Void Reaver"].." ("..BabbleZone["The Eye"]..")"};
-		{ 11, 214990, "", "=q4=Destroyer Hauberk", "=ds="..BabbleBoss["Kael'thas Sunstrider"].." ("..BabbleZone["The Eye"]..")"};
-		{ 12, 214991, "", "=q4=Destroyer Gloves", "=ds="..BabbleBoss["Leotheras the Blind"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		{ 13, 214993, "", "=q4=Destroyer Leggings", "=ds="..BabbleBoss["Fathom-Lord Karathress"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		Back = "T5SET";
-		Prev = "T4WarriorProtection25ManHEROIC";
-		Next = "T6WarriorProtection25ManHEROIC";
-	};	
-		
-	AtlasLoot_Data["T5WarriorFury25ManHEROIC"] = {	
-		{ 1, 0, "Ability_Warrior_BattleShout", "=q6=#t5s9_2#", "=ec1=#m22# - Vanquished Defender"};
-		{ 2, 230120, "", "=q4=Destroyer Battle-Helm", "=ds="..BabbleBoss["Lady Vashj"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		{ 3, 230122, "", "=q4=Destroyer Shoulderblades", "=ds="..BabbleBoss["Void Reaver"].." ("..BabbleZone["The Eye"]..")"};
-		{ 4, 230118, "", "=q4=Destroyer Breastplate", "=ds="..BabbleBoss["Kael'thas Sunstrider"].." ("..BabbleZone["The Eye"]..")"};
-		{ 5, 230119, "", "=q4=Destroyer Gauntlets", "=ds="..BabbleBoss["Leotheras the Blind"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		{ 6, 230121, "", "=q4=Destroyer Greaves", "=ds="..BabbleBoss["Fathom-Lord Karathress"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		Back = "T5SET";
-		Prev = "T4WarriorFury25ManHEROIC";
-		Next = "T6WarriorFury25ManHEROIC";
+		Type = "Raid";
 	};	
 
 		--------------
@@ -6670,17 +5752,9 @@ AtlasLoot_Data["T6DruidFeral"] = {
 	{ 7, 34556, "", "=q4=Thunderheart Waistguard", "=ds="..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 	{ 8, 31044, "", "=q4=Thunderheart Leggings", "=ds="..BabbleBoss["The Illidari Council"].." ("..BabbleZone["Black Temple"]..")"};
 	{ 9, 34573, "", "=q4=Thunderheart Treads", "=ds="..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")"};
-	{ 16, 0, "Ability_Druid_Maul", "=q6=#t6s1_1#", "=ec1=#m23# - Forgotten Vanquisher"};
-	{ 17, 31039, "", "=q4=Thunderheart Cover", "=ds="..BabbleBoss["Archimonde"].." ("..BabbleZone["Hyjal Summit"]..")"};
-	{ 18, 31048, "", "=q4=Thunderheart Pauldrons", "=ds="..BabbleBoss["Mother Shahraz"].." ("..BabbleZone["Black Temple"]..")"};
-	{ 19, 31042, "", "=q4=Thunderheart Chestguard", "=ds="..BabbleBoss["Illidan Stormrage"].." ("..BabbleZone["Black Temple"]..")"};
-	{ 20, 34444, "", "=q4=Thunderheart Wristguards", "=ds="..BabbleBoss["Kalecgos"].." ("..BabbleZone["Sunwell Plateau"]..")"};
-	{ 21, 31034, "", "=q4=Thunderheart Gauntlets", "=ds="..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")"};
-	{ 22, 34556, "", "=q4=Thunderheart Waistguard", "=ds="..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")"};
-	{ 23, 31044, "", "=q4=Thunderheart Leggings", "=ds="..BabbleBoss["The Illidari Council"].." ("..BabbleZone["Black Temple"]..")"};
-	{ 24, 34573, "", "=q4=Thunderheart Treads", "=ds="..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 	Back = "T6SET";
 	Prev = "T5DruidFeral";
+	Type = "Raid";
 };	
 	
 AtlasLoot_Data["T6DruidRestoration"] = {	
@@ -6693,17 +5767,9 @@ AtlasLoot_Data["T6DruidRestoration"] = {
 	{ 7, 34554, "", "=q4=Thunderheart Belt", "=ds="..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 	{ 8, 31045, "", "=q4=Thunderheart Legguards", "=ds="..BabbleBoss["The Illidari Council"].." ("..BabbleZone["Black Temple"]..")"};
 	{ 9, 34571, "", "=q4=Thunderheart Boots", "=ds="..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")"};
-	{ 16, 0, "Spell_Nature_Regeneration", "=q6=#t6s1_2#", "=ec1=#m23# - Forgotten Vanquisher"};
-	{ 17, 231037, "", "=q4=Thunderheart Helmet", "=ds="..BabbleBoss["Archimonde"].." ("..BabbleZone["Hyjal Summit"]..")"};
-	{ 18, 231047, "", "=q4=Thunderheart Spaulders", "=ds="..BabbleBoss["Mother Shahraz"].." ("..BabbleZone["Black Temple"]..")"};
-	{ 19, 231041, "", "=q4=Thunderheart Tunic", "=ds="..BabbleBoss["Illidan Stormrage"].." ("..BabbleZone["Black Temple"]..")"};
-	{ 20, 234445, "", "=q4=Thunderheart Bracers", "=ds="..BabbleBoss["Kalecgos"].." ("..BabbleZone["Sunwell Plateau"]..")"};
-	{ 21, 231032, "", "=q4=Thunderheart Gloves", "=ds="..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")"};
-	{ 22, 234554, "", "=q4=Thunderheart Belt", "=ds="..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")"};
-	{ 23, 231045, "", "=q4=Thunderheart Legguards", "=ds="..BabbleBoss["The Illidari Council"].." ("..BabbleZone["Black Temple"]..")"};
-	{ 24, 234571, "", "=q4=Thunderheart Boots", "=ds="..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 	Back = "T6SET";
 	Prev = "T5DruidRestoration";
+	Type = "Raid";
 };	
 	
 AtlasLoot_Data["T6DruidBalance"] = {	
@@ -6716,17 +5782,9 @@ AtlasLoot_Data["T6DruidBalance"] = {
 	{ 7, 34555, "", "=q4=Thunderheart Cord", "=ds="..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 	{ 8, 31046, "", "=q4=Thunderheart Pants", "=ds="..BabbleBoss["The Illidari Council"].." ("..BabbleZone["Black Temple"]..")"};
 	{ 9, 34572, "", "=q4=Thunderheart Footwraps", "=ds="..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")"};
-	{ 16, 0, "Spell_Nature_InsectSwarm", "=q6=#t6s1_3#", "=ec1=#m23# - Forgotten Vanquisher"};
-	{ 17, 231040, "", "=q4=Thunderheart Headguard", "=ds="..BabbleBoss["Archimonde"].." ("..BabbleZone["Hyjal Summit"]..")"};
-	{ 18, 231049, "", "=q4=Thunderheart Shoulderpads", "=ds="..BabbleBoss["Mother Shahraz"].." ("..BabbleZone["Black Temple"]..")"};
-	{ 19, 231043, "", "=q4=Thunderheart Vest", "=ds="..BabbleBoss["Illidan Stormrage"].." ("..BabbleZone["Black Temple"]..")"};
-	{ 20, 234446, "", "=q4=Thunderheart Bands", "=ds="..BabbleBoss["Kalecgos"].." ("..BabbleZone["Sunwell Plateau"]..")"};
-	{ 21, 231035, "", "=q4=Thunderheart Handguards", "=ds="..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")"};
-	{ 22, 234555, "", "=q4=Thunderheart Cord", "=ds="..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")"};
-	{ 23, 231046, "", "=q4=Thunderheart Pants", "=ds="..BabbleBoss["The Illidari Council"].." ("..BabbleZone["Black Temple"]..")"};
-	{ 24, 234572, "", "=q4=Thunderheart Footwraps", "=ds="..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 	Back = "T6SET";
 	Prev = "T5DruidBalance";
+	Type = "Raid";
 };	
 	
 AtlasLoot_Data["T6Hunter"] = {	
@@ -6739,17 +5797,9 @@ AtlasLoot_Data["T6Hunter"] = {
 	{ 7, 34549, "", "=q4=Gronnstalker's Belt", "=ds="..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 	{ 8, 31005, "", "=q4=Gronnstalker's Leggings", "=ds="..BabbleBoss["The Illidari Council"].." ("..BabbleZone["Black Temple"]..")"};
 	{ 9, 34570, "", "=q4=Gronnstalker's Boots", "=ds="..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")"};
-	{ 16, 0, "Ability_Hunter_RunningShot", "=q6=#t6s2#", "=ec1=#m23# - Forgotten Protector"};
-	{ 17, 231003, "", "=q4=Gronnstalker's Helmet", "=ds="..BabbleBoss["Archimonde"].." ("..BabbleZone["Hyjal Summit"]..")"};
-	{ 18, 231006, "", "=q4=Gronnstalker's Spaulders", "=ds="..BabbleBoss["Mother Shahraz"].." ("..BabbleZone["Black Temple"]..")"};
-	{ 19, 231004, "", "=q4=Gronnstalker's Chestguard", "=ds="..BabbleBoss["Illidan Stormrage"].." ("..BabbleZone["Black Temple"]..")"};
-	{ 20, 234443, "", "=q4=Gronnstalker's Bracers", "=ds="..BabbleBoss["Kalecgos"].." ("..BabbleZone["Sunwell Plateau"]..")"};
-	{ 21, 231001, "", "=q4=Gronnstalker's Gloves", "=ds="..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")"};
-	{ 22, 234549, "", "=q4=Gronnstalker's Belt", "=ds="..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")"};
-	{ 23, 231005, "", "=q4=Gronnstalker's Leggings", "=ds="..BabbleBoss["The Illidari Council"].." ("..BabbleZone["Black Temple"]..")"};
-	{ 24, 234570, "", "=q4=Gronnstalker's Boots", "=ds="..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 	Back = "T6SET";
 	Prev = "T5Hunter";
+	Type = "Raid";
 };	
 	
 AtlasLoot_Data["T6Mage"] = {	
@@ -6762,17 +5812,9 @@ AtlasLoot_Data["T6Mage"] = {
 	{ 7, 34557, "", "=q4=Belt of the Tempest", "=ds="..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 	{ 8, 31058, "", "=q4=Leggings of the Tempest", "=ds="..BabbleBoss["The Illidari Council"].." ("..BabbleZone["Black Temple"]..")"};
 	{ 9, 34574, "", "=q4=Boots of the Tempest", "=ds="..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")"};
-	{ 16, 0, "Spell_Frost_IceStorm", "=q6=#t6s3#", "=ec1=#m23# - Forgotten Vanquisher"};
-	{ 17, 231056, "", "=q4=Cowl of the Tempest", "=ds="..BabbleBoss["Archimonde"].." ("..BabbleZone["Hyjal Summit"]..")"};
-	{ 18, 231059, "", "=q4=Mantle of the Tempest", "=ds="..BabbleBoss["Mother Shahraz"].." ("..BabbleZone["Black Temple"]..")"};
-	{ 19, 231057, "", "=q4=Robes of the Tempest", "=ds="..BabbleBoss["Illidan Stormrage"].." ("..BabbleZone["Black Temple"]..")"};
-	{ 20, 234447, "", "=q4=Bracers of the Tempest", "=ds="..BabbleBoss["Kalecgos"].." ("..BabbleZone["Sunwell Plateau"]..")"};
-	{ 21, 231055, "", "=q4=Gloves of the Tempest", "=ds="..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")"};
-	{ 22, 234557, "", "=q4=Belt of the Tempest", "=ds="..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")"};
-	{ 23, 231058, "", "=q4=Leggings of the Tempest", "=ds="..BabbleBoss["The Illidari Council"].." ("..BabbleZone["Black Temple"]..")"};
-	{ 24, 234574, "", "=q4=Boots of the Tempest", "=ds="..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 	Back = "T6SET";
 	Prev = "T5Mage";
+	Type = "Raid";
 };	
 	
 AtlasLoot_Data["T6PaladinProtection"] = {	
@@ -6785,17 +5827,9 @@ AtlasLoot_Data["T6PaladinProtection"] = {
 	{ 7, 34488, "", "=q4=Lightbringer Waistguard", "=ds="..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 	{ 8, 30995, "", "=q4=Lightbringer Legguards", "=ds="..BabbleBoss["The Illidari Council"].." ("..BabbleZone["Black Temple"]..")"};
 	{ 9, 34560, "", "=q4=Lightbringer Greaves", "=ds="..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")"};
-	{ 16, 0, "Spell_Holy_SealOfMight", "=q6=#t6s4_1#", "=ec1=#m23# - Forgotten Conqueror"};
-	{ 17, 230987, "", "=q4=Lightbringer Faceguard", "=ds="..BabbleBoss["Archimonde"].." ("..BabbleZone["Hyjal Summit"]..")"};
-	{ 18, 230998, "", "=q4=Lightbringer Shoulderguards", "=ds="..BabbleBoss["Mother Shahraz"].." ("..BabbleZone["Black Temple"]..")"};
-	{ 19, 230991, "", "=q4=Lightbringer Chestguard", "=ds="..BabbleBoss["Illidan Stormrage"].." ("..BabbleZone["Black Temple"]..")"};
-	{ 20, 234433, "", "=q4=Lightbringer Wristguards", "=ds="..BabbleBoss["Kalecgos"].." ("..BabbleZone["Sunwell Plateau"]..")"};
-	{ 21, 230985, "", "=q4=Lightbringer Handguards", "=ds="..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")"};
-	{ 22, 234488, "", "=q4=Lightbringer Waistguard", "=ds="..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")"};
-	{ 23, 230995, "", "=q4=Lightbringer Legguards", "=ds="..BabbleBoss["The Illidari Council"].." ("..BabbleZone["Black Temple"]..")"};
-	{ 24, 234560, "", "=q4=Lightbringer Greaves", "=ds="..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 	Back = "T6SET";
 	Prev = "T5PaladinProtection";
+	Type = "Raid";
 };	
 	
 AtlasLoot_Data["T6PaladinRetribution"] = {	
@@ -6808,17 +5842,9 @@ AtlasLoot_Data["T6PaladinRetribution"] = {
 	{ 7, 34485, "", "=q4=Lightbringer Girdle", "=ds="..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 	{ 8, 30993, "", "=q4=Lightbringer Greaves", "=ds="..BabbleBoss["The Illidari Council"].." ("..BabbleZone["Black Temple"]..")"};
 	{ 9, 34561, "", "=q4=Lightbringer Boots", "=ds="..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")"};
-	{ 16, 0, "Spell_Holy_AuraOfLight", "=q6=#t6s4_2#", "=ec1=#m23# - Forgotten Conqueror"};
-	{ 17, 230989, "", "=q4=Lightbringer War-Helm", "=ds="..BabbleBoss["Archimonde"].." ("..BabbleZone["Hyjal Summit"]..")"};
-	{ 18, 230997, "", "=q4=Lightbringer Shoulderbraces", "=ds="..BabbleBoss["Mother Shahraz"].." ("..BabbleZone["Black Temple"]..")"};
-	{ 19, 230990, "", "=q4=Lightbringer Breastplate", "=ds="..BabbleBoss["Illidan Stormrage"].." ("..BabbleZone["Black Temple"]..")"};
-	{ 20, 234431, "", "=q4=Lightbringer Bands", "=ds="..BabbleBoss["Kalecgos"].." ("..BabbleZone["Sunwell Plateau"]..")"};
-	{ 21, 230982, "", "=q4=Lightbringer Gauntlets", "=ds="..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")"};
-	{ 22, 234485, "", "=q4=Lightbringer Girdle", "=ds="..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")"};
-	{ 23, 230993, "", "=q4=Lightbringer Greaves", "=ds="..BabbleBoss["The Illidari Council"].." ("..BabbleZone["Black Temple"]..")"};
-	{ 24, 234561, "", "=q4=Lightbringer Boots", "=ds="..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 	Back = "T6SET";
 	Prev = "T5PaladinRetribution";
+	Type = "Raid";
 };	
 	
 AtlasLoot_Data["T6PaladinHoly"] = {	
@@ -6831,17 +5857,9 @@ AtlasLoot_Data["T6PaladinHoly"] = {
 	{ 7, 34487, "", "=q4=Lightbringer Belt", "=ds="..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 	{ 8, 30994, "", "=q4=Lightbringer Leggings", "=ds="..BabbleBoss["The Illidari Council"].." ("..BabbleZone["Black Temple"]..")"};
 	{ 9, 34559, "", "=q4=Lightbringer Treads", "=ds="..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")"};
-	{ 16, 0, "Spell_Holy_HolyBolt", "=q6=#t6s4_3#", "=ec1=#m23# - Forgotten Conqueror"};
-	{ 17, 230988, "", "=q4=Lightbringer Greathelm", "=ds="..BabbleBoss["Archimonde"].." ("..BabbleZone["Hyjal Summit"]..")"};
-	{ 18, 230996, "", "=q4=Lightbringer Pauldrons", "=ds="..BabbleBoss["Mother Shahraz"].." ("..BabbleZone["Black Temple"]..")"};
-	{ 19, 230992, "", "=q4=Lightbringer Chestpiece", "=ds="..BabbleBoss["Illidan Stormrage"].." ("..BabbleZone["Black Temple"]..")"};
-	{ 20, 234432, "", "=q4=Lightbringer Bracers", "=ds="..BabbleBoss["Kalecgos"].." ("..BabbleZone["Sunwell Plateau"]..")"};
-	{ 21, 230983, "", "=q4=Lightbringer Gloves", "=ds="..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")"};
-	{ 22, 234487, "", "=q4=Lightbringer Belt", "=ds="..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")"};
-	{ 23, 230994, "", "=q4=Lightbringer Leggings", "=ds="..BabbleBoss["The Illidari Council"].." ("..BabbleZone["Black Temple"]..")"};
-	{ 24, 234559, "", "=q4=Lightbringer Treads", "=ds="..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 	Back = "T6SET";
 	Prev = "T5PaladinHoly";
+	Type = "Raid";
 };	
 	
 AtlasLoot_Data["T6PriestHoly"] = {	
@@ -6854,17 +5872,9 @@ AtlasLoot_Data["T6PriestHoly"] = {
 	{ 7, 34527, "", "=q4=Belt of Absolution", "=ds="..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 	{ 8, 31068, "", "=q4=Breeches of Absolution", "=ds="..BabbleBoss["The Illidari Council"].." ("..BabbleZone["Black Temple"]..")"};
 	{ 9, 34562, "", "=q4=Boots of Absolution", "=ds="..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")"};
-	{ 16, 0, "Spell_Holy_PowerWordShield", "=q6=#t6s5_1#", "=ec1=#m23# - Forgotten Conqueror"};
-	{ 17, 231063, "", "=q4=Cowl of Absolution", "=ds="..BabbleBoss["Archimonde"].." ("..BabbleZone["Hyjal Summit"]..")"};
-	{ 18, 231069, "", "=q4=Mantle of Absolution", "=ds="..BabbleBoss["Mother Shahraz"].." ("..BabbleZone["Black Temple"]..")"};
-	{ 19, 231066, "", "=q4=Vestments of Absolution", "=ds="..BabbleBoss["Illidan Stormrage"].." ("..BabbleZone["Black Temple"]..")"};
-	{ 20, 234435, "", "=q4=Cuffs of Absolution", "=ds="..BabbleBoss["Kalecgos"].." ("..BabbleZone["Sunwell Plateau"]..")"};
-	{ 21, 231060, "", "=q4=Gloves of Absolution", "=ds="..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")"};
-	{ 22, 234527, "", "=q4=Belt of Absolution", "=ds="..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")"};
-	{ 23, 231068, "", "=q4=Breeches of Absolution", "=ds="..BabbleBoss["The Illidari Council"].." ("..BabbleZone["Black Temple"]..")"};
-	{ 24, 234562, "", "=q4=Boots of Absolution", "=ds="..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 	Back = "T6SET";
 	Prev = "T5PriestHoly";
+	Type = "Raid";
 };	
 	
 AtlasLoot_Data["T6PriestShadow"] = {	
@@ -6877,17 +5887,9 @@ AtlasLoot_Data["T6PriestShadow"] = {
 	{ 7, 34528, "", "=q4=Cord of Absolution", "=ds="..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 	{ 8, 31067, "", "=q4=Leggings of Absolution", "=ds="..BabbleBoss["The Illidari Council"].." ("..BabbleZone["Black Temple"]..")"};
 	{ 9, 34563, "", "=q4=Treads of Absolution", "=ds="..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")"};
-	{ 16, 0, "Spell_Shadow_AntiShadow", "=q6=#t6s5_2#", "=ec1=#m23# - Forgotten Conqueror"};
-	{ 17, 231064, "", "=q4=Hood of Absolution", "=ds="..BabbleBoss["Archimonde"].." ("..BabbleZone["Hyjal Summit"]..")"};
-	{ 18, 231070, "", "=q4=Shoulderpads of Absolution", "=ds="..BabbleBoss["Mother Shahraz"].." ("..BabbleZone["Black Temple"]..")"};
-	{ 19, 231065, "", "=q4=Shroud of Absolution", "=ds="..BabbleBoss["Illidan Stormrage"].." ("..BabbleZone["Black Temple"]..")"};
-	{ 20, 234434, "", "=q4=Bracers of Absolution", "=ds="..BabbleBoss["Kalecgos"].." ("..BabbleZone["Sunwell Plateau"]..")"};
-	{ 21, 231061, "", "=q4=Handguards of Absolution", "=ds="..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")"};
-	{ 22, 234528, "", "=q4=Cord of Absolution", "=ds="..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")"};
-	{ 23, 231067, "", "=q4=Leggings of Absolution", "=ds="..BabbleBoss["The Illidari Council"].." ("..BabbleZone["Black Temple"]..")"};
-	{ 24, 234563, "", "=q4=Treads of Absolution", "=ds="..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 	Back = "T6SET";
 	Prev = "T5PriestShadow";
+	Type = "Raid";
 };	
 	
 AtlasLoot_Data["T6Rogue"] = {	
@@ -6900,17 +5902,9 @@ AtlasLoot_Data["T6Rogue"] = {
 	{ 7, 34558, "", "=q4=Slayer's Belt", "=ds="..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 	{ 8, 31029, "", "=q4=Slayer's Legguards", "=ds="..BabbleBoss["The Illidari Council"].." ("..BabbleZone["Black Temple"]..")"};
 	{ 9, 34575, "", "=q4=Slayer's Boots", "=ds="..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")"};
-	{ 16, 0, "Ability_BackStab", "=q6=#t6s6#", "=ec1=#m23# - Forgotten Vanquisher"};
-	{ 17, 231027, "", "=q4=Slayer's Helm", "=ds="..BabbleBoss["Archimonde"].." ("..BabbleZone["Hyjal Summit"]..")"};
-	{ 18, 231030, "", "=q4=Slayer's Shoulderpads", "=ds="..BabbleBoss["Mother Shahraz"].." ("..BabbleZone["Black Temple"]..")"};
-	{ 19, 231028, "", "=q4=Slayer's Chestguard", "=ds="..BabbleBoss["Illidan Stormrage"].." ("..BabbleZone["Black Temple"]..")"};
-	{ 20, 234448, "", "=q4=Slayer's Bracers", "=ds="..BabbleBoss["Kalecgos"].." ("..BabbleZone["Sunwell Plateau"]..")"};
-	{ 21, 231026, "", "=q4=Slayer's Handguards", "=ds="..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")"};
-	{ 22, 234558, "", "=q4=Slayer's Belt", "=ds="..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")"};
-	{ 23, 231029, "", "=q4=Slayer's Legguards", "=ds="..BabbleBoss["The Illidari Council"].." ("..BabbleZone["Black Temple"]..")"};
-	{ 24, 234575, "", "=q4=Slayer's Boots", "=ds="..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 	Back = "T6SET";
 	Prev = "T5Rogue";
+	Type = "Raid";
 };	
 	
 AtlasLoot_Data["T6ShamanEnhancement"] = {	
@@ -6923,17 +5917,9 @@ AtlasLoot_Data["T6ShamanEnhancement"] = {
 	{ 7, 34545, "", "=q4=Skyshatter Girdle", "=ds="..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 	{ 8, 31021, "", "=q4=Skyshatter Pants", "=ds="..BabbleBoss["The Illidari Council"].." ("..BabbleZone["Black Temple"]..")"};
 	{ 9, 34567, "", "=q4=Skyshatter Greaves", "=ds="..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")"};
-	{ 16, 0, "Spell_FireResistanceTotem_01", "=q6=#t6s7_1#", "=ec1=#m23# - Forgotten Protector"};
-	{ 17, 231015, "", "=q4=Skyshatter Cover", "=ds="..BabbleBoss["Archimonde"].." ("..BabbleZone["Hyjal Summit"]..")"};
-	{ 18, 231024, "", "=q4=Skyshatter Pauldrons", "=ds="..BabbleBoss["Mother Shahraz"].." ("..BabbleZone["Black Temple"]..")"};
-	{ 19, 231018, "", "=q4=Skyshatter Tunic", "=ds="..BabbleBoss["Illidan Stormrage"].." ("..BabbleZone["Black Temple"]..")"};
-	{ 20, 234439, "", "=q4=Skyshatter Wristguards", "=ds="..BabbleBoss["Kalecgos"].." ("..BabbleZone["Sunwell Plateau"]..")"};
-	{ 21, 231011, "", "=q4=Skyshatter Grips", "=ds="..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")"};
-	{ 22, 234545, "", "=q4=Skyshatter Girdle", "=ds="..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")"};
-	{ 23, 231021, "", "=q4=Skyshatter Pants", "=ds="..BabbleBoss["The Illidari Council"].." ("..BabbleZone["Black Temple"]..")"};
-	{ 24, 234567, "", "=q4=Skyshatter Greaves", "=ds="..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 	Back = "T6SET";
 	Prev = "T5ShamanEnhancement";
+	Type = "Raid";
 };	
 	
 AtlasLoot_Data["T6ShamanRestoration"] = {	
@@ -6946,17 +5932,9 @@ AtlasLoot_Data["T6ShamanRestoration"] = {
 	{ 7, 34543, "", "=q4=Skyshatter Belt", "=ds="..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 	{ 8, 31019, "", "=q4=Skyshatter Leggings", "=ds="..BabbleBoss["The Illidari Council"].." ("..BabbleZone["Black Temple"]..")"};
 	{ 9, 34565, "", "=q4=Skyshatter Boots", "=ds="..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")"};
-	{ 16, 0, "Spell_Nature_HealingWaveGreater", "=q6=#t6s7_2#", "=ec1=#m23# - Forgotten Protector"};
-	{ 17, 231012, "", "=q4=Skyshatter Helmet", "=ds="..BabbleBoss["Archimonde"].." ("..BabbleZone["Hyjal Summit"]..")"};
-	{ 18, 231022, "", "=q4=Skyshatter Shoulderpads", "=ds="..BabbleBoss["Mother Shahraz"].." ("..BabbleZone["Black Temple"]..")"};
-	{ 19, 231016, "", "=q4=Skyshatter Chestguard", "=ds="..BabbleBoss["Illidan Stormrage"].." ("..BabbleZone["Black Temple"]..")"};
-	{ 20, 234438, "", "=q4=Skyshatter Bracers", "=ds="..BabbleBoss["Kalecgos"].." ("..BabbleZone["Sunwell Plateau"]..")"};
-	{ 21, 231007, "", "=q4=Skyshatter Gloves", "=ds="..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")"};
-	{ 22, 234543, "", "=q4=Skyshatter Belt", "=ds="..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")"};
-	{ 23, 231019, "", "=q4=Skyshatter Leggings", "=ds="..BabbleBoss["The Illidari Council"].." ("..BabbleZone["Black Temple"]..")"};
-	{ 24, 234565, "", "=q4=Skyshatter Boots", "=ds="..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 	Back = "T6SET";
 	Prev = "T5ShamanRestoration";
+	Type = "Raid";
 };	
 	
 AtlasLoot_Data["T6ShamanElemental"] = {	
@@ -6969,17 +5947,9 @@ AtlasLoot_Data["T6ShamanElemental"] = {
 	{ 7, 34542, "", "=q4=Skyshatter Cord", "=ds="..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 	{ 8, 31020, "", "=q4=Skyshatter Legguards", "=ds="..BabbleBoss["The Illidari Council"].." ("..BabbleZone["Black Temple"]..")"};
 	{ 9, 34566, "", "=q4=Skyshatter Treads", "=ds="..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")"};
-	{ 16, 0, "Spell_Nature_Lightning", "=q6=#t6s7_3#", "=ec1=#m23# - Forgotten Protector"};
-	{ 17, 231014, "", "=q4=Skyshatter Headguard", "=ds="..BabbleBoss["Archimonde"].." ("..BabbleZone["Hyjal Summit"]..")"};
-	{ 18, 231023, "", "=q4=Skyshatter Mantle", "=ds="..BabbleBoss["Mother Shahraz"].." ("..BabbleZone["Black Temple"]..")"};
-	{ 19, 231017, "", "=q4=Skyshatter Breastplate", "=ds="..BabbleBoss["Illidan Stormrage"].." ("..BabbleZone["Black Temple"]..")"};
-	{ 20, 234437, "", "=q4=Skyshatter Bands", "=ds="..BabbleBoss["Kalecgos"].." ("..BabbleZone["Sunwell Plateau"]..")"};
-	{ 21, 231008, "", "=q4=Skyshatter Gauntlets", "=ds="..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")"};
-	{ 22, 234542, "", "=q4=Skyshatter Cord", "=ds="..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")"};
-	{ 23, 231020, "", "=q4=Skyshatter Legguards", "=ds="..BabbleBoss["The Illidari Council"].." ("..BabbleZone["Black Temple"]..")"};
-	{ 24, 234566, "", "=q4=Skyshatter Treads", "=ds="..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 	Back = "T6SET";
 	Prev = "T5ShamanElemental";
+	Type = "Raid";
 };	
 	
 AtlasLoot_Data["T6Warlock"] = {	
@@ -6992,17 +5962,9 @@ AtlasLoot_Data["T6Warlock"] = {
 	{ 7, 34541, "", "=q4=Belt of the Malefic", "=ds="..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 	{ 8, 31053, "", "=q4=Leggings of the Malefic", "=ds="..BabbleBoss["The Illidari Council"].." ("..BabbleZone["Black Temple"]..")"};
 	{ 9, 34564, "", "=q4=Boots of the Malefic", "=ds="..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")"};
-	{ 16, 0, "Spell_Shadow_CurseOfTounges", "=q6=#t6s8#", "=ec1=#m23# - Forgotten Conqueror"};
-	{ 17, 231051, "", "=q4=Hood of the Malefic", "=ds="..BabbleBoss["Archimonde"].." ("..BabbleZone["Hyjal Summit"]..")"};
-	{ 18, 231054, "", "=q4=Mantle of the Malefic", "=ds="..BabbleBoss["Mother Shahraz"].." ("..BabbleZone["Black Temple"]..")"};
-	{ 19, 231052, "", "=q4=Robe of the Malefic", "=ds="..BabbleBoss["Illidan Stormrage"].." ("..BabbleZone["Black Temple"]..")"};
-	{ 20, 234436, "", "=q4=Bracers of the Malefic", "=ds="..BabbleBoss["Kalecgos"].." ("..BabbleZone["Sunwell Plateau"]..")"};
-	{ 21, 231050, "", "=q4=Gloves of the Malefic", "=ds="..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")"};
-	{ 22, 234541, "", "=q4=Belt of the Malefic", "=ds="..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")"};
-	{ 23, 231053, "", "=q4=Leggings of the Malefic", "=ds="..BabbleBoss["The Illidari Council"].." ("..BabbleZone["Black Temple"]..")"};
-	{ 24, 234564, "", "=q4=Boots of the Malefic", "=ds="..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 	Back = "T6SET";
 	Prev = "T5Warlock";
+	Type = "Raid";
 };	
 	
 AtlasLoot_Data["T6WarriorProtection"] = {	
@@ -7015,17 +5977,9 @@ AtlasLoot_Data["T6WarriorProtection"] = {
 	{ 7, 34547, "", "=q4=Onslaught Waistguard", "=ds="..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 	{ 8, 30978, "", "=q4=Onslaught Legguards", "=ds="..BabbleBoss["The Illidari Council"].." ("..BabbleZone["Black Temple"]..")"};
 	{ 9, 34568, "", "=q4=Onslaught Boots", "=ds="..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")"};
-	{ 16, 0, "INV_Shield_05", "=q6=#t6s9_1#", "=ec1=#m23# - Forgotten Protector"};
-	{ 17, 230974, "", "=q4=Onslaught Greathelm", "=ds="..BabbleBoss["Archimonde"].." ("..BabbleZone["Hyjal Summit"]..")"};
-	{ 18, 230980, "", "=q4=Onslaught Shoulderguards", "=ds="..BabbleBoss["Mother Shahraz"].." ("..BabbleZone["Black Temple"]..")"};
-	{ 19, 230976, "", "=q4=Onslaught Chestguard", "=ds="..BabbleBoss["Illidan Stormrage"].." ("..BabbleZone["Black Temple"]..")"};
-	{ 20, 234442, "", "=q4=Onslaught Wristguards", "=ds="..BabbleBoss["Kalecgos"].." ("..BabbleZone["Sunwell Plateau"]..")"};
-	{ 21, 230970, "", "=q4=Onslaught Handguards", "=ds="..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")"};
-	{ 22, 234547, "", "=q4=Onslaught Waistguard", "=ds="..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")"};
-	{ 23, 230978, "", "=q4=Onslaught Legguards", "=ds="..BabbleBoss["The Illidari Council"].." ("..BabbleZone["Black Temple"]..")"};
-	{ 24, 234568, "", "=q4=Onslaught Boots", "=ds="..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 	Back = "T6SET";
 	Prev = "T5WarriorProtection";
+	Type = "Raid";
 };	
 	
 AtlasLoot_Data["T6WarriorFury"] = {	
@@ -7038,17 +5992,9 @@ AtlasLoot_Data["T6WarriorFury"] = {
 	{ 7, 34546, "", "=q4=Onslaught Belt", "=ds="..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 	{ 8, 30977, "", "=q4=Onslaught Greaves", "=ds="..BabbleBoss["The Illidari Council"].." ("..BabbleZone["Black Temple"]..")"};
 	{ 9, 34569, "", "=q4=Onslaught Treads", "=ds="..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")"};
-	{ 16, 0, "Ability_Warrior_BattleShout", "=q6=#t6s9_2#", "=ec1=#m23# - Forgotten Protector"};
-	{ 17, 230972, "", "=q4=Onslaught Battle-Helm", "=ds="..BabbleBoss["Archimonde"].." ("..BabbleZone["Hyjal Summit"]..")"};
-	{ 18, 230979, "", "=q4=Onslaught Shoulderblades", "=ds="..BabbleBoss["Mother Shahraz"].." ("..BabbleZone["Black Temple"]..")"};
-	{ 19, 230975, "", "=q4=Onslaught Breastplate", "=ds="..BabbleBoss["Illidan Stormrage"].." ("..BabbleZone["Black Temple"]..")"};
-	{ 20, 234441, "", "=q4=Onslaught Bracers", "=ds="..BabbleBoss["Kalecgos"].." ("..BabbleZone["Sunwell Plateau"]..")"};
-	{ 21, 230969, "", "=q4=Onslaught Gauntlets", "=ds="..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")"};
-	{ 22, 234546, "", "=q4=Onslaught Belt", "=ds="..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")"};
-	{ 23, 230977, "", "=q4=Onslaught Greaves", "=ds="..BabbleBoss["The Illidari Council"].." ("..BabbleZone["Black Temple"]..")"};
-	{ 24, 234569, "", "=q4=Onslaught Treads", "=ds="..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 	Back = "T6SET";
 	Prev = "T5WarriorFury";
+	Type = "Raid";
 };	
 
 		--------------------------------

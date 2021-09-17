@@ -142,8 +142,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
         { 23, 22219, "", "=q1=Plans: Jagged Obsidian Shield", "=ds=#p2# (300)"};
         Prev = "AQ20Kurinnaxx";
         Next = "AQ20Moam";
-		Dif = 4;
 		Type = "Raid";
+		Dif = AL_Dif.Ascended;
     };
     
     AtlasLoot_Data["AQ20Moam"] = {
@@ -168,8 +168,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
         { 22, 22194, "", "=q4=Black Grasp of the Destroyer", "=ds=#s9#, #a3#"};
         Prev = "AQ20Rajaxx";
         Next = "AQ20Buru";
-		Dif = 4;
 		Type = "Raid";
+		Dif = AL_Dif.Ascended;
     };
     
     AtlasLoot_Data["AQ20Buru"] = {
@@ -188,8 +188,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
         { 21, 20888, "", "=q3=Qiraji Ceremonial Ring", "#m3#", "", "25.58%"};
         Prev = "AQ20Moam";
         Next = "AQ20Ayamiss";
-		Dif = 4;
 		Type = "Raid";
+		Dif = AL_Dif.Ascended;
     };
     
     AtlasLoot_Data["AQ20Ayamiss"] = {
@@ -209,8 +209,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
         { 21, 20888, "", "=q3=Qiraji Ceremonial Ring", "#m3#", "", "27.50%"};
         Prev = "AQ20Buru";
         Next = "AQ20Ossirian";
-		Dif = 4;
 		Type = "Raid";
+		Dif = AL_Dif.Ascended;
     };
     
     AtlasLoot_Data["AQ20Ossirian"] = {
@@ -237,8 +237,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
         { 24, 20884, "", "=q3=Qiraji Magisterial Ring", "#m3#", "", "9.65%"};
         { 25, 20888, "", "=q3=Qiraji Ceremonial Ring", "#m3#", "", "8.53%"};
         Prev = "AQ20Ayamiss";
-		Dif = 4;
 		Type = "Raid";
+		Dif = AL_Dif.Ascended;
     };
     
     AtlasLoot_Data["AQ20Trash"] = {
@@ -324,8 +324,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 27, 22222, "", "=q3=Plans: Thick Obsidian Breastplate", "=ds=#p2# (300)", "", "5.00%"};
 		{ 28, 22196, "", "=q4=Thick Obsidian Breastplate", "=ds=#s5#, #a4#"};
 		Next = "AQ40Vem";
-		Dif = 4;
 		Type = "Raid";
+		Dif = AL_Dif.Ascended;
 	};
 
 	AtlasLoot_Data["AQ40Vem"] = {
@@ -352,8 +352,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 25, 221687, "", "=q4=Ukko's Ring of Darkness", "=ds=#s13# =q2=#n117#", "", "20%"};
 		Prev = "AQ40Skeram";
 		Next = "AQ40Sartura";
-		Dif = 4;
 		Type = "Raid";
+		Dif = AL_Dif.Ascended;
 	};
 
 	AtlasLoot_Data["AQ40Sartura"] = {
@@ -381,8 +381,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 25, 21269, "", "=q4=Blessed Qiraji Bulwark", "=q1=#m4#, =ds=#w8#"};
 		Prev = "AQ40Vem";
 		Next = "AQ40Fankriss";
-		Dif = 4;
 		Type = "Raid";
+		Dif = AL_Dif.Ascended;
 	};
 
 	AtlasLoot_Data["AQ40Fankriss"] = {
@@ -410,8 +410,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 25, 21269, "", "=q4=Blessed Qiraji Bulwark", "=q1=#m4#, =ds=#w8#"};
 		Prev = "AQ40Sartura";
 		Next = "AQ40Viscidus";
-		Dif = 4;
 		Type = "Raid";
+		Dif = AL_Dif.Ascended;
 	};
 
 	AtlasLoot_Data["AQ40Viscidus"] = {
@@ -435,8 +435,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 25, 21269, "", "=q4=Blessed Qiraji Bulwark", "=q1=#m4#, =ds=#w8#"};
 		Prev = "AQ40Fankriss";
 		Next = "AQ40Huhuran";
-		Dif = 4;
 		Type = "Raid";
+		Dif = AL_Dif.Ascended;
 	};
 
 	AtlasLoot_Data["AQ40Huhuran"] = {
@@ -459,8 +459,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 25, 21269, "", "=q4=Blessed Qiraji Bulwark", "=q1=#m4#, =ds=#w8#"};
 		Prev = "AQ40Viscidus";
 		Next = "AQ40Emperors";
-		Dif = 4;
 		Type = "Raid";
+		Dif = AL_Dif.Ascended;
 	};
 
 	AtlasLoot_Data["AQ40Emperors"] = {
@@ -492,8 +492,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 29, 21268, "", "=q4=Blessed Qiraji War Hammer", "=q1=#m4#, =ds=#h1#, #w6#"};
 		Prev = "AQ40Huhuran";
 		Next = "AQ40Ouro";
-		Dif = 4;
 		Type = "Raid";
+		Dif = AL_Dif.Ascended;
 	};
 
 	AtlasLoot_Data["AQ40Ouro"] = {
@@ -516,8 +516,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 25, 21269, "", "=q4=Blessed Qiraji Bulwark", "=q1=#m4# =ds=#w8#"};
 		Prev = "AQ40Emperors";
 		Next = "AQ40CThun";
-		Dif = 4;
 		Type = "Raid";
+		Dif = AL_Dif.Ascended;
 	};
 
 	AtlasLoot_Data["AQ40CThun"] = {
@@ -546,8 +546,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 27, 222631, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c5#"};
 		{ 28, 222630, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c8#"};
 		Prev = "AQ40Ouro";
-		Dif = 4;
 		Type = "Raid";
+		Dif = AL_Dif.Ascended;
 	};
 
 	AtlasLoot_Data["AQ40Trash1"] = {
@@ -565,8 +565,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 18, 21323, "", "=q3=Green Qiraji Resonating Crystal", "=ds=#e12#", "", "11.62%"};
 		{ 19, 21321, "", "=q3=Red Qiraji Resonating Crystal", "=ds=#e12#", "", "1.39%"};
 		Next = "AQ40Trash2";
-		Dif = 4;
 		Type = "Raid";
+		Dif = AL_Dif.Ascended;
 	};
 
 	AtlasLoot_Data["AQ40Trash2"] = {
@@ -698,7 +698,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 17, 11811, "", "=q3=Smoking Heart of the Mountain", "=ds=#s14#"};
 		Prev = "BRDPyron";
 		Next = "BRDHighInterrogatorGerstahn";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["BRDHighInterrogatorGerstahn"] = {
@@ -709,7 +709,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 6, 11140, "", "=q1=Prison Cell Key", "=ds=#e9#"};
 		Prev = "BRDLordRoccor";
 		Next = "BRDArena";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["BRDArena"] = {
@@ -740,7 +740,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 29, AL_FindId("Cyclopean Band", MythicTier), "", "=q4=Cyclopean Band", "=ds=#s13# =q2=#brd6#", "", "18.37%"};
 		Prev = "BRDHighInterrogatorGerstahn";
 		Next = "BRDTheldren";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["BRDTheldren"] = {
@@ -752,7 +752,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 7, 22047, "", "=q1=Top Piece of Lord Valthalak's Amulet", "=ds=#m3#"};
 		Prev = "BRDArena";
 		Next = "BRDHoundmaster";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["BRDHoundmaster"] = {
@@ -763,7 +763,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 5, AL_FindId("Houndmaster's Rifle", MythicTier), "", "=q4=Houndmaster's Rifle", "=ds=#w5#", "", "11.18%"};
 		Prev = "BRDTheldren";
 		Next = "BRDPyromantLoregrain";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["BRDForgewright"] = {
@@ -780,7 +780,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 6, 11207, "", "=q2=Formula: Enchant Weapon - Fiery Weapon", "=ds=#p4# (265)", "", "13.32%"};
 		Prev = "BRDForgewright";
 		Next = "BRDTheVault";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["BRDTheVault"] = {
@@ -801,7 +801,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 19, 11753, "", "=q1=Eye of Kajal", "=ds=#m3#", "", "39.95%"};
 		Prev = "BRDPyromantLoregrain";
 		Next = "BRDWarderStilgiss";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["BRDWarderStilgiss"] = {
@@ -811,7 +811,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 4, AL_FindId("Arbiter's Blade", MythicTier), "", "=q4=Arbiter's Blade", "=ds=#h3#, #w10#", "", "21.54%"};
 		Prev = "BRDTheVault";
 		Next = "BRDVerek";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["BRDVerek"] = {
@@ -819,7 +819,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 2, AL_FindId("Verek's Collar", MythicTier), "", "=q4=Verek's Collar", "=ds=#s2#", "", "9.54%"};
 		Prev = "BRDWarderStilgiss";
 		Next = "BRDFineousDarkvire";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["BRDFineousDarkvire"] = {
@@ -831,7 +831,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 8, 10999, "", "=q1=Ironfel", "=ds=#m3#", "", "100%"};
 		Next = "BRDLordIncendius";
 		Prev = "BRDVerek";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["BRDLordIncendius"] = {
@@ -845,7 +845,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 9, 11126, "", "=q1=Tablet of Kurniya", "=ds=#m3#"};
 		Next = "BRDBaelGar";
 		Prev = "BRDFineousDarkvire";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["BRDBaelGar"] = {
@@ -855,7 +855,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 4, AL_FindId("Force of Magma", MythicTier), "", "=q4=Force of Magma", "=ds=#h2#, #w6#", "", "27.47%"};
 		Next = "BRDGeneralAngerforge";
 		Prev = "BRDLordIncendius";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["BRDGeneralAngerforge"] = {
@@ -867,7 +867,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 7, 11464, "", "=q1=Marshal Windsor's Lost Information", "=ds=#m3#"};
 		Next = "BRDGolemLordArgelmach";
 		Prev = "BRDBaelGar";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["BRDGolemLordArgelmach"] = {
@@ -880,7 +880,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 9, 11465, "", "=q1=Marshal Windsor's Lost Information", "=ds=#m3#"};
 		Next = "BRDGuzzler";
 		Prev = "BRDGeneralAngerforge";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["BRDGuzzler"] = {
@@ -910,7 +910,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 30, 11325, "", "=q1=Dark Iron Ale Mug", "=ds=#m3#"};
 		Prev = "BRDGolemLordArgelmach";
 		Next = "BRDFlamelash";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["BRDFlamelash"] = {
@@ -922,7 +922,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 8, 23320, "", "=q3=Tablet of Flame Shock VI", "=ds=#e10# =q1=#m1# =ds=#c7#"};
 		Prev = "BRDGuzzler";
 		Next = "BRDPanzor";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["BRDPanzor"] = {
@@ -932,7 +932,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 4, AL_FindId("Rock Golem Bulwark", MythicTier), "", "=q4=Rock Golem Bulwark", "=ds=#w8#", "", "21.22%"};
 		Prev = "BRDFlamelash";
 		Next = "BRDTomb";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["BRDTomb"] = {
@@ -947,7 +947,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 9, AL_FindId("Impervious Giant", MythicTier), "", "=q4=Impervious Giant", "=ds=#h2#, #w6#", "", "22.23%"};
 		Prev = "BRDPanzor";
 		Next = "BRDLyceum";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["BRDLyceum"] = {
@@ -965,7 +965,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 5, AL_FindId("Lavastone Hammer", MythicTier), "", "=q4=Lavastone Hammer", "=ds=#h2#, #w6#", "", "22.79%"};
 		Prev = "BRDTomb";
 		Next = "BRDImperatorDagranThaurissan";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["BRDImperatorDagranThaurissan"] = {
@@ -983,7 +983,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 20, 12033, "", "=q1=Thaurissan Family Jewels", "=ds=#e7# #e1#", "", "2.2%"};
 		Prev = "BRDMagmus";
 		Next = "BRDPrincess";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["BRDPrincess"] = {
@@ -993,7 +993,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 4, AL_FindId("Swiftwalker Boots", MythicTier), "", "=q4=Swiftwalker Boots", "=ds=#s12#, #a2#", "", "11.05%"};
 		Prev = "BRDImperatorDagranThaurissan";
 		Next = "BRDBSPlans";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["BRDBSPlans"] = {
@@ -1030,7 +1030,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 27, 11468, "", "=q1=Dark Iron Fanny Pack", "=ds=#m3#"};
 		{ 28, 11446, "", "=q1=A Crumpled Up Note", "=ds=#m2#"};
 		Prev = "BRDBSPlans";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 
@@ -1060,7 +1060,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 2, AL_FindId("Rivenspike", MythicTier), "", "=q4=Rivenspike", "=ds=#h1#, #w1#", "", "35.78%"};
 		Prev = "LBRSQuestItems";
 		Next = "LBRSOmokk";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["LBRSOmokk"] = {
@@ -1074,7 +1074,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 16, AL_FindId("Boots of Elements", MythicTier), "", "=q4=Boots of Elements", "=ds=#s12#, #a3# (D1, #c7#)", "", "9.35%"};
 		Prev = "LBRSSpirestoneButcher";
 		Next = "LBRSSpirestoneLord";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["LBRSSpirestoneLord"] = {
@@ -1082,7 +1082,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 2, AL_FindId("The Blackrock Slicer", MythicTier), "", "=q4=The Blackrock Slicer", "=ds=#h2#, #w1#", "", "34.87%"};
 		Prev = "LBRSOmokk";
 		Next = "LBRSLordMagus";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["LBRSLordMagus"] = {
@@ -1091,7 +1091,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 3, AL_FindId("Globe of D'sak", MythicTier), "", "=q4=Globe of D'sak", "=ds=#s15#", "", "18.07%"};
 		Prev = "LBRSSpirestoneLord";
 		Next = "LBRSVosh";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["LBRSVosh"] = {
@@ -1106,7 +1106,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 16, AL_FindId("Shadowcraft Gloves", MythicTier), "", "=q4=Shadowcraft Gloves", "=ds=#s9#, #a2# (D1, #c6#)", "", "11.89%"};
 		Prev = "LBRSLordMagus";
 		Next = "LBRSVoone";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["LBRSVoone"] = {
@@ -1119,7 +1119,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 16, AL_FindId("Beaststalker's Gloves", MythicTier), "", "=q4=Beaststalker's Gloves", "=ds=#s9#, #a3# (D1, #c2#)", "", "9.15%"};
 		Prev = "LBRSVosh";
 		Next = "LBRSGrayhoof";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["LBRSGrayhoof"] = {
@@ -1133,7 +1133,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 9, 22046, "", "=q1=Right Piece of Lord Valthalak's Amulet", "=ds=#m3#"};
 		Prev = "LBRSVoone";
 		Next = "LBRSGrimaxe";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["LBRSGrimaxe"] = {
@@ -1144,7 +1144,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 6, 12784, "", "=q3=Arcanite Reaper", "=ds=#h2#, #w1#"};
 		Prev = "LBRSGrayhoof";
 		Next = "LBRSSmolderweb";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["LBRSSmolderweb"] = {
@@ -1154,7 +1154,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 16, AL_FindId("Wildheart Boots", MythicTier), "", "=q4=Wildheart Boots", "=ds=#s12#, #a2# (D1, #c1#)", "", "13.03%"};
 		Prev = "LBRSGrimaxe";
 		Next = "LBRSCrystalFang";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["LBRSCrystalFang"] = {
@@ -1163,7 +1163,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 3, AL_FindId("Fang of the Crystal Spider", MythicTier), "", "=q4=Fang of the Crystal Spider", "=ds=#h1#, #w4#", "", "17.62%"};
 		Prev = "LBRSSmolderweb";
 		Next = "LBRSDoomhowl";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["LBRSDoomhowl"] = {
@@ -1177,7 +1177,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 10, 15867, "", "=q2=Prismcharm", "=q1=#m4#: =ds=#s14#"};
 		Prev = "LBRSCrystalFang";
 		Next = "LBRSZigris";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["LBRSZigris"] = {
@@ -1188,7 +1188,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 7, 21955, "", "=q2=Design: Black Diamond Crab", "=ds=#p12# (300)"};
 		Prev = "LBRSDoomhowl";
 		Next = "LBRSSlavener";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["LBRSSlavener"] = {
@@ -1198,7 +1198,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 16, AL_FindId("Wildheart Spaulders", MythicTier), "", "=q4=Wildheart Spaulders", "=ds=#s3#, #a2# (D1, #c1#)", "", "11.04%"};
 		Prev = "LBRSZigris";
 		Next = "LBRSHalycon";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["LBRSHalycon"] = {
@@ -1208,7 +1208,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 4, AL_FindId("Halycon's Spiked Collar", MythicTier), "", "=q4=Halycon's Spiked Collar", "=ds=#s2#", "", "18.23%"};
 		Prev = "LBRSSlavener";
 		Next = "LBRSBashguud";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["LBRSBashguud"] = {
@@ -1217,7 +1217,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 3, AL_FindId("Bashguuder", MythicTier), "", "=q4=Bashguuder", "=ds=#h1#, #w6#", "", "27.09%"};
 		Prev = "LBRSHalycon";
 		Next = "LBRSWyrmthalak";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["LBRSWyrmthalak"] = {
@@ -1232,7 +1232,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 16, AL_FindId("Beaststalker's Mantle", MythicTier), "", "=q4=Beaststalker's Mantle", "=ds=#s3#, #a3# (D1, #c2#)", "", "9.89%"};
 		Prev = "LBRSBashguud";
 		Next = "LBRSFelguard";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["LBRSFelguard"] = {
@@ -1240,7 +1240,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 2, AL_FindId("Phase Blade", MythicTier), "", "=q4=Phase Blade", "=ds=#h1#, #w10#", "", "11.63%"};
 		Prev = "LBRSWyrmthalak";
 		Next = "LBRSTrash";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["LBRSTrash"] = {
@@ -1269,7 +1269,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 7, 21988, "", "=q1=Ember of Emberseer", "=ds=#m3#"};
 		{ 16,AL_FindId("Gauntlets of Elements", MythicTier), "", "=q4=Gauntlets of Elements", "=ds=#s9#, #a3# (D1, #c7#)", "", "14.23%"};
 		Next = "UBRSSolakar";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["UBRSSolakar"] = {
@@ -1282,7 +1282,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 16,AL_FindId("Devout Mantle", MythicTier), "", "=q4=Devout Mantle", "=ds=#s3#, #a1# (D1, #c5#)", "", "12.84%"};
 		Prev = "UBRSSolakar";
 		Next = "UBRSQuestItems";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["UBRSFLAME"] = {
@@ -1304,7 +1304,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 3,AL_FindId("Serpentine Skuller", MythicTier), "", "=q4=Serpentine Skuller", "=ds=#w12#", "", "32.95%"};
 		Prev = "UBRSQuestItems";
 		Next = "UBRSAnvilcrack";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["UBRSAnvilcrack"] = {
@@ -1323,7 +1323,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 18, 12696, "", "=q3=Plans: Demon Forged Breastplate", "=q1=#m4#: =ds=#p2# (285)"};
 		Prev = "UBRSRunewatcher";
 		Next = "UBRSRend";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["UBRSRend"] = {
@@ -1343,7 +1343,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 22, 12630, "", "=q1=Head of Rend Blackhand", "=ds=#m3#", "", "100%"};
 		Prev = "UBRSAnvilcrack";
 		Next = "UBRSGyth";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["UBRSGyth"] = {
@@ -1359,7 +1359,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 16,AL_FindId("Pauldrons of Elements", MythicTier), "", "=q4=Pauldrons of Elements", "=ds=#s3#, #a3# (D1, #c7#)", "", "14.77%"};
 		Prev = "UBRSRend";
 		Next = "UBRSBeast";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["UBRSBeast"] = {
@@ -1381,7 +1381,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 19, 19227, "", "=q3=Ace of Beasts", "=ds=#e16#", "", "4.53%"};
 		Prev = "UBRSGyth";
 		Next = "UBRSValthalak";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["UBRSValthalak"] = {
@@ -1396,7 +1396,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 9,AL_FindId("Draconian Aegis of the Legion", MythicTier), "", "=q4=Draconian Aegis of the Legion", "=ds=#w8#", "", "17.66%"};
 		Prev = "UBRSBeast";
 		Next = "UBRSDrakkisath";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["UBRSDrakkisath"] = {
@@ -1424,7 +1424,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 30, 16663, "", "=q1=Blood of the Black Dragon Champion", "=ds=#m3#", "", "100%"};
 		Prev = "UBRSValthalak";
 		Next = "UBRSTrash";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["UBRSTrash"] = {
@@ -1434,7 +1434,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 6, 12607, "", "=q3=Brilliant Chromatic Scale", "=ds=#m3#"};
 		{ 7, 12219, "", "=q1=Unadorned Seal of Ascension", "=ds=#m3#"};
 		Prev = "UBRSDrakkisath";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 
@@ -1462,8 +1462,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 21, 216859, "", "=q4=Lawbringer Boots", "=q1=#m1# =ds=#c4# (T1)", "", "7.20%"};
 		{ 22, 17329, "", "=q1=Hand of Lucifron", "=ds=#m3#"};
 		Next = "MCMagmadar";
-		Dif = 4;
 		Type = "Raid";
+		Dif = AL_Dif.Ascended;
 	};
 
 	AtlasLoot_Data["MCMagmadar"] = {
@@ -1493,8 +1493,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 24, 216867, "", "=q4=Legplates of Might", "=q1=#m1# =ds=#c9# (T1)", "", "13.97%"};
 		Prev = "MCLucifron";
 		Next = "MCGehennas";
-		Dif = 4;
 		Type = "Raid";
+		Dif = AL_Dif.Ascended;
 	};
 
 	AtlasLoot_Data["MCGehennas"] = {
@@ -1517,8 +1517,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 23, 17331, "", "=q1=Hand of Gehennas", "=ds=#m3#"};
 		Prev = "MCMagmadar";
 		Next = "MCGarr";
-		Dif = 4;
 		Type = "Raid";
+		Dif = AL_Dif.Ascended;
 	};
 
 	AtlasLoot_Data["MCGarr"] = {
@@ -1550,8 +1550,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 27, 219019, "", "=q5=Thunderfury, Blessed Blade of the Windseeker", "=q1=#m4#: =ds=#h1#, #w10#"};
 		Prev = "MCGehennas";
 		Next = "MCShazzrah";
-		Dif = 4;
 		Type = "Raid";
+		Dif = AL_Dif.Ascended;
 	};
 
 	AtlasLoot_Data["MCShazzrah"] = {
@@ -1574,8 +1574,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 23, 17332, "", "=q1=Hand of Shazzrah", "=ds=#m3#"};
 		Prev = "MCGarr";
 		Next = "MCGeddon";
-		Dif = 4;
 		Type = "Raid";
+		Dif = AL_Dif.Ascended;
 	};
 
 	AtlasLoot_Data["MCGeddon"] = {
@@ -1600,8 +1600,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 23, 219019, "", "=q5=Thunderfury, Blessed Blade of the Windseeker", "=q1=#m4#: =ds=#h1#, #w10#"};
 		Prev = "MCShazzrah";
 		Next = "MCGolemagg";
-		Dif = 4;
 		Type = "Raid";
+		Dif = AL_Dif.Ascended;
 	};
 
 	AtlasLoot_Data["MCGolemagg"] = {
@@ -1632,8 +1632,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 27, 217182, "", "=q5=Sulfuras, Hand of Ragnaros", "=q1=#m4#: =ds=#h2#, #w6#"};
 		Prev = "MCGeddon";
 		Next = "MCSulfuron";
-		Dif = 4;
 		Type = "Raid";
+		Dif = AL_Dif.Ascended;
 	};
 
 	AtlasLoot_Data["MCSulfuron"] = {
@@ -1655,8 +1655,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 21, 17330, "", "=q1=Hand of Sulfuron", "=ds=#m3#"};
 		Prev = "MCGolemagg";
 		Next = "MCMajordomo";
-		Dif = 4;
 		Type = "Raid";
+		Dif = AL_Dif.Ascended;
 	};
 
 	AtlasLoot_Data["MCMajordomo"] = {
@@ -1679,8 +1679,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 23, 18609, "", "=q4=Anathema", "=q1=#m4#: =ds=#w9#, =q1=#m1# =ds=#c5#"};
 		Prev = "MCSulfuron";
 		Next = "MCRagnaros";
-		Dif = 4;
 		Type = "Raid";
+		Dif = AL_Dif.Ascended;
 	};
 
 	AtlasLoot_Data["MCRagnaros"] = {
@@ -1695,7 +1695,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 9, 216954, "", "=q4=Judgement Legplates", "=q1=#m1# =ds=#c4# (T2)", "", "10.81%"};
 		{ 11, 217204, "", "=q5=Eye of Sulfuras", "=ds=#m3#", "", "3.42%"};
 		{ 12, 217182, "", "=q5=Sulfuras, Hand of Ragnaros", "=q1=#m4#: =ds=#h2#, #w6#"};
-		{ 13, 102107, "", "=q4=Reins of the Magmatic Steed", "=ds=#e12#", "" };
+		{ 13, 102107, "", "=q4=Reins of the Magmatic Steed", "=ds=#e12#", [AL_Dif.MIN_DIF] = AL_Dif.Heroic};
 		{ 14, 219017, "", "=q1=Essence of the Firelord", "=ds=#m3#", "", "0.46%"};
 		{ 15, 219019, "", "=q5=Thunderfury, Blessed Blade of the Windseeker", "=q1=#m4#: =ds=#h1#, #w10#"};
 		{ 16, 217102, "", "=q4=Cloak of the Shrouded Mists", "=ds=#s4#", "", "14.31%"};
@@ -1714,8 +1714,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 30, 21110, "", "=q1=Draconic for Dummies", "=ds=#m3#", "", "100%"};
 		Prev = "MCMajordomo";
 		Next = "MCTrashMobs";
-		Dif = 4;
 		Type = "Raid";
+		Dif = AL_Dif.Ascended;
 	};
 
 	AtlasLoot_Data["MCTrashMobs"] = {
@@ -1743,8 +1743,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 24, 216857, "", "=q4=Lawbringer Bracers", "=q1=#m1# =ds=#c4# (T1)", "", "0.11%"};
 		Prev = "MCRagnaros";
 		Next = "MCRANDOMBOSSDROPPS";
-		Dif = 4;
 		Type = "Raid";
+		Dif = AL_Dif.Ascended;
 	};
 
 	AtlasLoot_Data["MCRANDOMBOSSDROPPS"] = {
@@ -1795,8 +1795,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 25, 219357, "", "=q4=Herald of Woe", "=ds=#h2#, #w6#", "", "16.67%"};
 		{ 26, 219405, "", "=q4=Malfurion's Blessed Bulwark", "=ds=#s5#, #a2#", "", "16.67%"};
 		Next = "BWLVaelastrasz";
-		Dif = 4;
 		Type = "Raid";
+		Dif = AL_Dif.Ascended;
 	};
 
 	AtlasLoot_Data["BWLVaelastrasz"] = {
@@ -1820,8 +1820,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 25, 219367, "", "=q4=Dragon's Touch", "=ds=#w12#", "", "16.67%"};
 		Prev = "BWLRazorgore";
 		Next = "BWLLashlayer";
-		Dif = 4;
 		Type = "Raid";
+		Dif = AL_Dif.Ascended;
 	};
 
 	AtlasLoot_Data["BWLLashlayer"] = {
@@ -1848,8 +1848,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 27, 219432, "", "=q4=Circle of Applied Force", "=ds=#s13#", "", "16.67%"};
 		Prev = "BWLVaelastrasz";
 		Next = "BWLFiremaw";
-		Dif = 4;
 		Type = "Raid";
+		Dif = AL_Dif.Ascended;
 	};
 
 	AtlasLoot_Data["BWLFiremaw"] = {
@@ -1878,8 +1878,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 28, 219395, "", "=q4=Rejuvenating Gem", "=ds=#s14#", "", "6.67%"};
 		Prev = "BWLLashlayer";
 		Next = "BWLEbonroc";
-		Dif = 4;
 		Type = "Raid";
+		Dif = AL_Dif.Ascended;
 	};
 
 	AtlasLoot_Data["BWLEbonroc"] = {
@@ -1906,8 +1906,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 30, 219368, "", "=q4=Dragonbreath Hand Cannon", "=ds=#w5#", "", "16.67%"};
 		Prev = "BWLFiremaw";
 		Next = "BWLFlamegor";
-		Dif = 4;
 		Type = "Raid";
+		Dif = AL_Dif.Ascended;
 	};
 
 	AtlasLoot_Data["BWLFlamegor"] = {
@@ -1934,8 +1934,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 29, 219367, "", "=q4=Dragon's Touch", "=ds=#w12#", "", "16.67%"};
 		Prev = "BWLEbonroc";
 		Next = "BWLChromaggus";
-		Dif = 4;
 		Type = "Raid";
+		Dif = AL_Dif.Ascended;
 	};
 
 	AtlasLoot_Data["BWLChromaggus"] = {
@@ -1963,8 +1963,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 29, 219361, "", "=q4=Ashjre'thul, Crossbow of Smiting", "=ds=#w3#", "", "10%"};
 		Prev = "BWLFlamegor";
 		Next = "BWLNefarian1";
-		Dif = 4;
 		Type = "Raid";
+		Dif = AL_Dif.Ascended;
 	};
 
 	AtlasLoot_Data["BWLNefarian1"] = {
@@ -1992,8 +1992,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 28, 214001, "", "=q4=Archimtiros' Ring of Armageddon", "=ds=#s13#", "", "16.67%%"};
 		Prev = "BWLChromaggus";
 		Next = "BWLNefarian2";
-		Dif = 4;
 		Type = "Raid";
+		Dif = AL_Dif.Ascended;
 	};
 
 	AtlasLoot_Data["BWLNefarian2"] = {
@@ -2004,8 +2004,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 6, 21138, "", "=q1=Red Scepter Shard", "=ds=#m3#", "", "100%"};
 		Prev = "BWLNefarian1";
 		Next = "BWLTrashMobs";
-		Dif = 4;
 		Type = "Raid";
+		Dif = AL_Dif.Ascended;
 	};
 
 	AtlasLoot_Data["BWLTrashMobs"] = {
@@ -2021,8 +2021,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 16, 18562, "", "=q4=Elementium Ore", "=ds=#e8#", "", "4.75%"};
 		{ 18, 21109, "", "=q1=Draconic for Dummies", "=ds=#m3#"};
 		Prev = "BWLNefarian2";
-		Dif = 4;
 		Type = "Raid";
+		Dif = AL_Dif.Ascended;
 	};
 
 		-----------------------
@@ -2074,7 +2074,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 6, 18308, "", "=q2=Clever Hat", "=ds=#s1#, #a2#", "", "23.73%"};
 		Prev = "DMEPusillin";
 		Next = "DMELethtendris";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["DMELethtendris"] = {
@@ -2085,14 +2085,14 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 7, 18426, "", "=q1=Lethtendris's Web", "=ds=#m3#"};
 		Prev = "DMEZevrimThornhoof";
 		Next = "DMEPimgib";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["DMEPimgib"] = {
 		{ 1,AL_FindId("Pimgib's Collar", MythicTier), "", "=q4=Pimgib's Collar", "=ds=#s14#, =q1=#m1# =ds=#c8#", "", "18.68%"};
 		Prev = "DMELethtendris";
 		Next = "DMEHydro";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["DMEHydro"] = {
@@ -2103,7 +2103,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 6, 18305, "", "=q3=Breakwater Legguards", "=ds=#s11#, #a4#", "", "22.75%"};
 		Prev = "DMEPimgib";
 		Next = "DMEAlzzin";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["DMEAlzzin"] = {
@@ -2121,7 +2121,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 19,AL_FindId("Energetic Rod", MythicTier), "", "=q4=Energetic Rod", "=ds=#h3#, #w6#", "", "15.94%"};
 		Prev = "DMEHydro";
 		Next = "DMEIsalien";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["DMEIsalien"] = {
@@ -2136,7 +2136,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 18, 22046, "", "=q1=Right Piece of Lord Valthalak's Amulet", "=ds=#m3#"};
 		Prev = "DMEAlzzin";
 		Next = "DMETrash";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["DMETrash"] = {
@@ -2145,7 +2145,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 3,AL_FindId("Marksman Bands", MythicTier), "", "=q4=Marksman Bands", "=ds=#s8#, #a3#", "", "0.59%"};
 		{ 4,AL_FindId("Barbed Thorn Necklace", MythicTier), "", "=q4=Barbed Thorn Necklace", "=ds=#s2#", "", "0.87%"};
 		Prev = "DMEIsalien";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 
@@ -2170,7 +2170,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 22,AL_FindId("Ogre Pocket Knife", MythicTier), "", "=q4=Ogre Pocket Knife", "=ds=#h1#, #w10#", "", "7.38%"};
 		{ 23,AL_FindId("Unsophisticated Hand Cannon", MythicTier), "", "=q4=Unsophisticated Hand Cannon", "=ds=#w5#", "", "5.86%"};
 		Next = "DMNStomperKreeg";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["DMNStomperKreeg"] = {
@@ -2179,7 +2179,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 3, 18284, "", "=q3=Kreeg's Stout Beatdown", "=ds=#e4#", "", "100%"};
 		Prev = "DMNGuardMoldar";
 		Next = "DMNGuardFengus";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["DMNGuardFengus"] = {
@@ -2195,7 +2195,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 17, 18266, "", "=q1=Gordok Courtyard Key", "=ds=#e9#", "", "100%"};
 		Prev = "DMNStomperKreeg";
 		Next = "DMNThimblejack";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["DMNThimblejack"] = {
@@ -2225,7 +2225,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 27,AL_FindId("Swift Flight Bracers", MythicTier), "", "=q4=Swift Flight Bracers", "=ds=#s8#, #a3#"};--10
 		Prev = "DMNGuardFengus";
 		Next = "DMNGuardSlipkik";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["DMNGuardSlipkik"] = {
@@ -2244,7 +2244,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 23,AL_FindId("Unsophisticated Hand Cannon", MythicTier), "", "=q4=Unsophisticated Hand Cannon", "=ds=#w5#", "", "6.66%"};
 		Prev = "DMNThimblejack";
 		Next = "DMNCaptainKromcrush";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["DMNCaptainKromcrush"] = {
@@ -2254,7 +2254,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 4,AL_FindId("Monstrous Glaive", MythicTier), "", "=q4=Monstrous Glaive", "=ds=#w7#", "", "21.47%"};
 		Prev = "DMNGuardSlipkik";
 		Next = "DMNChoRush";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["DMNChoRush"] = {
@@ -2264,7 +2264,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 4,AL_FindId("Mana Channeling Wand", MythicTier), "", "=q4=Mana Channeling Wand", "=ds=#w12#", "", "19.01%"};
 		Prev = "DMNCaptainKromcrush";
 		Next = "DMNKingGordok";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["DMNKingGordok"] = {
@@ -2281,7 +2281,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 19, 12727, "", "=q3=Plans: Enchanted Thorium Breastplate", "=q1=#m4#: =ds=#p2# (300)"};
 		Prev = "DMNChoRush";
 		Next = "DMNTRIBUTERUN";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["DMNTRIBUTERUN"] = {
@@ -2307,7 +2307,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 23,AL_FindId("Ogre Toothpick Shooter", MythicTier), "", "=q4=Ogre Toothpick Shooter", "=ds=#w2#"};
 		{ 24, 18655, "", "=q2=Schematic: Major Recombobulator", "=ds=#p5# (275)"};
 		Prev = "DMNKingGordok";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 
@@ -2322,7 +2322,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 4, AL_FindId("Stoneflower Staff", MythicTier), "", "=q4=Stoneflower Staff", "=ds=#w9#", "", "23.46%"};
 		{ 5, AL_FindId("Petrified Bark Shield", MythicTier), "", "=q4=Petrified Bark Shield", "=ds=#w8#", "", "21.67%"};
 		Next = "DMWIllyannaRavenoak";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["DMWIllyannaRavenoak"] = {
@@ -2332,7 +2332,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 5, AL_FindId("Well Balanced Axe", MythicTier), "", "=q4=Well Balanced Axe", "=ds=#h1#, #w1#", "", "22.44%"};
 		Prev = "DMWTendrisWarpwood";
 		Next = "DMWMagisterKalendris";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["DMWMagisterKalendris"] = {
@@ -2344,7 +2344,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 7, 22309, "", "=q2=Pattern: Big Bag of Enchantment", "=ds=#p8# (300)"};
 		Prev = "DMWIllyannaRavenoak";
 		Next = "DMWTsuzee";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 	AtlasLoot_Data["DMWTsuzee"] = {
 		{ 1, AL_FindId("Brightspark Gloves", MythicTier), "", "=q4=Brightspark Gloves", "=ds=#s9#, #a1#", "", "24.79%"};
@@ -2352,7 +2352,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 4, AL_FindId("Murmuring Ring", MythicTier), "", "=q4=Murmuring Ring", "=ds=#s13#", "", "30.28%"};
 		Prev = "DMWMagisterKalendris";
 		Next = "DMWImmolthar";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["DMWImmolthar"] = {
@@ -2368,7 +2368,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 18, AL_FindId("Blade of the New Moon", MythicTier), "", "=q4=Blade of the New Moon", "=ds=#h1#, #w4#", "", "6.99%"};
 		Prev = "DMWTsuzee";
 		Next = "DMWHelnurath";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["DMWHelnurath"] = {
@@ -2378,7 +2378,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 4, AL_FindId("Xorothian Firestick", MythicTier), "", "=q4=Xorothian Firestick", "=ds=#w5#", "", "21.92%"};
 		Prev = "DMWImmolthar";
 		Next = "DMWPrinceTortheldrin";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["DMWPrinceTortheldrin"] = {
@@ -2396,7 +2396,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 19, AL_FindId("Stoneshatter", MythicTier), "", "=q4=Stoneshatter", "=ds=#w3#", "", "7.72%"};
 		Prev = "DMWHelnurath";
 		Next = "DMWShendralarProvisioner";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["DMWShendralarProvisioner"] = {
@@ -2410,7 +2410,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 2, AL_FindId("Eidolon Talisman", MythicTier), "", "=q4=Eidolon Talisman", "=ds=#s2#", "", "0.58%"};
 		{ 3, AL_FindId("Wand of Arcane Potency", MythicTier), "", "=q4=Wand of Arcane Potency", "=ds=#w12#", "", "0.78%"};
 		Prev = "DMWShendralarProvisioner";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 		------------------
@@ -2791,7 +2791,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 16, AL_FindId("Boots of Valor", MythicTier), "", "=q4=Boots of Valor", "=ds=#s12#, #a4# (D1, #c9#)", "", "11.12%"};
 		Prev = "SCHOLOBloodStewardofKirtonos";
 		Next = "SCHOLOJandiceBarov";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["SCHOLOJandiceBarov"] = {
@@ -2807,7 +2807,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 16, AL_FindId("Dreadmist Mantle", MythicTier), "", "=q4=Dreadmist Mantle", "=ds=#s3#, #a1# (D1, #c8#)", "", "12.20%"};
 		Prev = "SCHOLOKirtonostheHerald";
 		Next = "SCHOLORattlegore";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["SCHOLORattlegore"] = {
@@ -2823,7 +2823,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 19, 12726, "", "=q3=Plans: Enchanted Thorium Leggings", "=q1=#m4#: =ds=#p2# (300)"};
 		Prev = "SCHOLOJandiceBarov";
 		Next = "SCHOLODeathKnight";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["SCHOLODeathKnight"] = {
@@ -2834,7 +2834,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 6, 18749, "", "=q1=Charger's Lost Soul", "=ds=#m3#", "", "10.93%"};
 		Prev = "SCHOLORattlegore";
 		Next = "SCHOLOVectus";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["SCHOLOVectus"] = {
@@ -2842,7 +2842,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 2, AL_FindId("Dark Advisor's Pendant", MythicTier), "", "=q4=Dark Advisor's Pendant", "=ds=#s2#", "", "6.16%"};
 		Prev = "SCHOLODeathKnight";
 		Next = "SCHOLOMarduk";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["SCHOLOMarduk"] = {
@@ -2850,7 +2850,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 2, AL_FindId("Ebon Hilt of Marduk", MythicTier), "", "=q4=Ebon Hilt of Marduk", "=ds=#h1#, #w10#", "", "6.55%"};
 		Prev = "SCHOLOVectus";
 		Next = "SCHOLORasFrostwhisper";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["SCHOLORasFrostwhisper"] = {
@@ -2877,7 +2877,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 27, 12736, "", "=q1=Frostwhisper's Embalming Fluid", "=ds=#m3#"};
 		Prev = "SCHOLOMarduk";
 		Next = "SCHOLOKormok";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["SCHOLOKormok"] = {
@@ -2891,7 +2891,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 9, 22046, "", "=q1=Right Piece of Lord Valthalak's Amulet", "=ds=#m3#"};
 		Prev = "SCHOLORasFrostwhisper";
 		Next = "SCHOLOInstructorMalicia";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["SCHOLOInstructorMalicia"] = {
@@ -2925,7 +2925,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 29, AL_FindId("Ancient Bone Bow", MythicTier), "", "=q4=Ancient Bone Bow", "=ds=#w2#", "", "0.91%"};
 		Prev = "SCHOLOKormok";
 		Next = "SCHOLODoctorTheolenKrastinov";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["SCHOLODoctorTheolenKrastinov"] = {
@@ -2960,7 +2960,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 30, 13523, "", "=q1=Blood of Innocents", "=ds=#m3#", "", "25.7%"};
 		Prev = "SCHOLOInstructorMalicia";
 		Next = "SCHOLOLorekeeperPolkelt";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["SCHOLOLorekeeperPolkelt"] = {
@@ -2994,7 +2994,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 29, AL_FindId("Ancient Bone Bow", MythicTier), "", "=q4=Ancient Bone Bow", "=ds=#w2#", "", "0.49%"};
 		Prev = "SCHOLODoctorTheolenKrastinov";
 		Next = "SCHOLOTheRavenian";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["SCHOLOTheRavenian"] = {
@@ -3028,7 +3028,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 29, AL_FindId("Ancient Bone Bow", MythicTier), "", "=q4=Ancient Bone Bow", "=ds=#w2#", "", "1.74%"};
 		Prev = "SCHOLOLorekeeperPolkelt";
 		Next = "SCHOLOLordAlexeiBarov";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["SCHOLOLordAlexeiBarov"] = {
@@ -3062,7 +3062,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 29, AL_FindId("Ancient Bone Bow", MythicTier), "", "=q4=Ancient Bone Bow", "=ds=#w2#", "", "4.70%"};
 		Prev = "SCHOLOTheRavenian";
 		Next = "SCHOLOLadyIlluciaBarov";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["SCHOLOLadyIlluciaBarov"] = {
@@ -3095,7 +3095,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 27, AL_FindId("Ancient Bone Bow", MythicTier), "", "=q4=Ancient Bone Bow", "=ds=#w2#", "", "1.17%"};
 		Prev = "SCHOLOLordAlexeiBarov";
 		Next = "SCHOLODarkmasterGandling";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["SCHOLODarkmasterGandling"] = {
@@ -3123,7 +3123,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 28, 13501, "", "=q2=Recipe: Major Mana Potion", "=ds=#p1# (295)", "", "8.64%"};
 		Prev = "SCHOLOLadyIlluciaBarov";
 		Next = "SCHOLOTrash";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["SCHOLOTrash"] = {
@@ -3147,7 +3147,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 20, AL_FindId("Wildheart Belt", MythicTier), "", "=q4=Wildheart Belt", "=ds=#s8#, #a2# (D1)", "", "1.84%"};
 		{ 21, AL_FindId("Lightforge Bracers", MythicTier), "", "=q4=Lightforge Bracers", "=ds=#s8#, #a4# (D1)", "", "2.72%"};
 		Prev = "SCHOLODarkmasterGandling";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 		-----------------------
@@ -3219,7 +3219,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 2, AL_FindId("Skul's Cold Embrace", MythicTier), "", "=q4=Skul's Cold Embrace", "=ds=#s5#, #a4#", "", "24.16%"};
 		{ 3, AL_FindId("Skul's Ghastly Touch", MythicTier), "", "=q4=Skul's Ghastly Touch", "=ds=#w12#", "", "16.85%"};
 		Next = "STRATStratholmeCourier";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["STRATStratholmeCourier"] = {
@@ -3254,7 +3254,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 16, AL_FindId("Magister's Boots", MythicTier), "", "=q4=Magister's Boots", "=ds=#s12#, #a1# (D1, #c3#)", "", "10.86%"};
 		Prev = "STRATAtiesh";
 		Next = "STRATTheUnforgiven";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["STRATTheUnforgiven"] = {
@@ -3265,7 +3265,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 16, AL_FindId("Wildheart Gloves", MythicTier), "", "=q4=Wildheart Gloves", "=ds=#s9#, #a2# (D1, #c1#)", "", "12.61%"};
 		Prev = "STRATHearthsingerForresten";
 		Next = "STRATTimmytheCruel";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["STRATTimmytheCruel"] = {
@@ -3276,7 +3276,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 16, AL_FindId("Lightforge Gauntlets", MythicTier), "", "=q4=Lightforge Gauntlets", "=ds=#s9#, #a4# (D1, #c4#)", "", "10.42%"};
 		Prev = "STRATTheUnforgiven";
 		Next = "STRATMalorsStrongbox";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["STRATMalorsStrongbox"] = {
@@ -3317,7 +3317,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 19, 12783, "", "=q3=Heartseeker", "=ds=#h1#, #w4#"};
 		Prev = "STRATBSPlansSerenity";
 		Next = "STRATArchivistGalford";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["STRATArchivistGalford"] = {
@@ -3332,7 +3332,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 16, AL_FindId("Devout Gloves", MythicTier), "", "=q4=Devout Gloves", "=ds=#s9#, #a1# (D1, #c5#)", "", "12.46%"};
 		Prev = "STRATCannonMasterWilley";
 		Next = "STRATBalnazzar";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["STRATBalnazzar"] = {
@@ -3353,7 +3353,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 20, 13250, "", "=q1=Head of Balnazzar", "=ds=#m2#"};
 		Prev = "STRATArchivistGalford";
 		Next = "STRATSothosJarien";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["STRATSothosJarien"] = {
@@ -3367,7 +3367,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 9, 22046, "", "=q1=Right Piece of Lord Valthalak's Amulet", "=ds=#m3#"};
 		Prev = "STRATBalnazzar";
 		Next = "STRATStonespine";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["STRATStonespine"] = {
@@ -3376,7 +3376,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 3, AL_FindId("Gargoyle Shredder Talons", MythicTier), "", "=q4=Gargoyle Shredder Talons", "=ds=#h4#, #w13#", "", "26.16%"};
 		Prev = "STRATSothosJarien";
 		Next = "STRATBaronessAnastari";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["STRATBaronessAnastari"] = {
@@ -3392,7 +3392,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 16, AL_FindId("Dreadmist Sandals", MythicTier), "", "=q4=Dreadmist Sandals", "=ds=#s12#, #a1# (D1, #c8#)", "", "13.16%"};
 		Prev = "STRATStonespine";
 		Next = "STRATBlackGuardSwordsmith";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["STRATBlackGuardSwordsmith"] = {
@@ -3423,7 +3423,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 16, AL_FindId("Beaststalker's Boots", MythicTier), "", "=q4=Beaststalker's Boots", "=ds=#s12#, #a3# (D1, #c2#)", "", "13.62%"};
 		Prev = "STRATBSPlansCorruption";
 		Next = "STRATMalekithePallid";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["STRATMalekithePallid"] = {
@@ -3441,7 +3441,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 19, 12796, "", "=q3=Hammer of the Titans", "=ds=#h2#, #w6#"};
 		Prev = "STRATNerubenkan";
 		Next = "STRATMagistrateBarthilas";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["STRATMagistrateBarthilas"] = {
@@ -3454,7 +3454,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 8, 12382, "", "=q2=Key to the City", "=ds=#e9#", "", "100%"};
 		Prev = "STRATMalekithePallid";
 		Next = "STRATRamsteintheGorger";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["STRATRamsteintheGorger"] = {
@@ -3467,7 +3467,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 16, AL_FindId("Gauntlets of Valor", MythicTier), "", "=q4=Gauntlets of Valor", "=ds=#s9#, #a4# (D1, #c9#)", "", "9.58%"};
 		Prev = "STRATMagistrateBarthilas";
 		Next = "STRATBaronRivendare";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["STRATBaronRivendare"] = {
@@ -3500,7 +3500,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 29, 13243, "", "=q3=Argent Defender", "=q1=#m4#: =ds=#w8#"};
 		Prev = "STRATRamsteintheGorger";
 		Next = "STRATTrash";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["STRATTrash"] = {
@@ -3529,7 +3529,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 25, 12811, "", "=q2=Righteous Orb", "=ds=#e8#", "", "5.09%"};
 		{ 26, 12735, "", "=q2=Frayed Abomination Stitching", "=ds=#m3#", "", "17.5%"};
 		Prev = "STRATBaronRivendare";
-		Dif = MythicTier;
+		Type = "Dungeon";
 	};
 
 		---------------------
@@ -4110,8 +4110,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 22, 219920, "", "=q3=Primalist's Band", "=ds=#s13#", "", "11.89%"};
 		{ 23, 219915, "", "=q3=Zulian Defender", "=ds=#w8#", "", " 11.36%"};
 		Next = "ZGVenoxis";
-		Dif = 4;
 		Type = "Raid";
+		Dif = AL_Dif.Ascended;
 	};
 
 	AtlasLoot_Data["ZGVenoxis"] = {
@@ -4135,8 +4135,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 22, 219900, "", "=q3=Zulian Stone Axe", "=ds=#h2#, #w1#", "", "11.89%"};
 		Prev = "ZGJeklik";
 		Next = "ZGMarli";
-		Dif = 4;
 		Type = "Raid";
+		Dif = AL_Dif.Ascended;
 	};
 
 	AtlasLoot_Data["ZGMarli"] = {
@@ -4159,8 +4159,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 22, 219930, "", "=q3=Mar'li's Eye", "=ds=#s14#", "", "12.09%"};
 		Prev = "ZGVenoxis";
 		Next = "ZGMandokir";
-		Dif = 4;
 		Type = "Raid";
+		Dif = AL_Dif.Ascended;
 	};
 
 	AtlasLoot_Data["ZGMandokir"] = {
@@ -4190,8 +4190,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 29, 219863, "", "=q3=Primalist's Seal", "=ds=#s13#", "", "12.32%"};
 		Prev = "ZGMarli";
 		Next = "ZGEdgeofMadness";
-		Dif = 4;
 		Type = "Raid";
+		Dif = AL_Dif.Ascended;
 	};
 
 	AtlasLoot_Data["ZGEdgeofMadness"] = {
@@ -4213,8 +4213,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 24, 19941, "", "=q2=Wushoolay's Mane", "=ds=#m3#", "", "100%"};
 		Prev = "ZGMandokir";
 		Next = "ZGGahzranka";
-		Dif = 4;
 		Type = "Raid";
+		Dif = AL_Dif.Ascended;
 	};
 
 	AtlasLoot_Data["ZGGahzranka"] = {
@@ -4225,8 +4225,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 7, 22739, "", "=q3=Tome of Polymorph: Turtle", "=ds=#e10#, =q1=#m1# =ds=#c3#"};
 		Prev = "ZGEdgeofMadness";
 		Next = "ZGThekal";
-		Dif = 4;
 		Type = "Raid";
+		Dif = AL_Dif.Ascended;
 	};
 
 	AtlasLoot_Data["ZGThekal"] = {
@@ -4248,8 +4248,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 24, 219901, "", "=q3=Zulian Slicer", "=ds=#h1#, #w10#, =q1=#e18#", "", "13.36%"};
 		Prev = "ZGGahzranka";
 		Next = "ZGArlokk";
-		Dif = 4;
 		Type = "Raid";
+		Dif = AL_Dif.Ascended;
 	};
 
 	AtlasLoot_Data["ZGArlokk"] = {
@@ -4272,8 +4272,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 22, 19914, "", "=q3=Panther Hide Sack", "=ds=#m14# #e1#", "", "14.03%"};
 		Prev = "ZGThekal";
 		Next = "ZGJindo";
-		Dif = 4;
 		Type = "Raid";
+		Dif = AL_Dif.Ascended;
 	};
 
 	AtlasLoot_Data["ZGJindo"] = {
@@ -4302,8 +4302,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 28, 219894, "", "=q3=Bloodsoaked Gauntlets", "=ds=#s9#, #a4#", "", "12.93%"};
 		Prev = "ZGArlokk";
 		Next = "ZGHakkar";
-		Dif = 4;
 		Type = "Raid";
+		Dif = AL_Dif.Ascended;
 	};
 
 	AtlasLoot_Data["ZGHakkar"] = {
@@ -4328,8 +4328,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 21, 19943, "", "=q1=Massive Mojo", "=ds=#e8#", "", "34.3%"};
 		Prev = "ZGJindo";
 		Next = "ZGShared";
-		Dif = 4;
 		Type = "Raid";
+		Dif = AL_Dif.Ascended;
 	};
 
 	AtlasLoot_Data["ZGMuddyChurningWaters"] = {
@@ -4349,8 +4349,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 11, 222713, "", "=q3=Zulian Scepter of Rites", "=ds=#h3#, #w6#"};
 		Prev = "ZGHakkar";
 		Next = "ZGTrash1";
-		Dif = 4;
 		Type = "Raid";
+		Dif = AL_Dif.Ascended;
 	};
 
 	AtlasLoot_Data["ZGTrash1"] = {
@@ -4377,8 +4377,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 24, 19813, "", "=q2=Punctured Voodoo Doll", "=q1=#m1# =ds=#c9#", "", "0.01%"};
 		Prev = "ZGShared";
 		Next = "ZGTrash2";
-		Dif = 4;
 		Type = "Raid";
+		Dif = AL_Dif.Ascended;
 	};
 
 	AtlasLoot_Data["ZGTrash2"] = {
@@ -4440,8 +4440,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 11, 222818, "", "=q4=The Plague Bearer", "=ds=#w8#","", "20%" },
 		{ 12, 222961, "", "=q4=Band of Reanimation", "=ds=#s13#","", "20%" },
 		Next = "NAXGrobbulus";
-		Dif = 4;
 		Type = "Raid";
+		Dif = AL_Dif.Ascended;
 	};
 
 	AtlasLoot_Data["NAXGrobbulus"] = {
@@ -4459,8 +4459,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 12, 222810, "", "=q4=Toxin Injector", "=ds=#w5#", "","20%" },
 		Prev = "NAXPatchwerk";
 		Next = "NAXGluth";
-		Dif = 4;
 		Type = "Raid";
+		Dif = AL_Dif.Ascended;
 	};
 
 	AtlasLoot_Data["NAXGluth"] = {
@@ -4493,8 +4493,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 27, 22358, "", "=q4=Desecrated Sabatons", "=q1=#m1# =ds=#c6#, #c9#","", "8.33%"  },
 		Prev = "NAXGrobbulus";
 		Next = "NAXThaddius";
-		Dif = 4;
 		Type = "Raid";
+		Dif = AL_Dif.Ascended;
 	};
 
 	AtlasLoot_Data["NAXThaddius"] = {
@@ -4512,8 +4512,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 12, 223001, "", "=q4=Eye of Diminution", "=ds=#s14#" ,"", "20%"},
 		Prev = "NAXGluth";
 		Next = "NAXAnubRekhan";
-		Dif = 4;
 		Type = "Raid";
+		Dif = AL_Dif.Ascended;
 	};
 
 	AtlasLoot_Data["NAXAnubRekhan"] = {
@@ -4531,8 +4531,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 12, 222935, "", "=q4=Touch of Frost", "=ds=#s2#", "", "20%" },
 		Prev = "NAXThaddius";
 		Next = "NAXGrandWidowFearlina";
-		Dif = 4;
 		Type = "Raid";
+		Dif = AL_Dif.Ascended;
 	};
 
 	AtlasLoot_Data["NAXGrandWidowFearlina"] = {
@@ -4550,8 +4550,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 12, 222943, "", "=q4=Malice Stone Pendant", "=ds=#s2#","", "20%" },
 		Prev = "NAXAnubRekhan";
 		Next = "NAXMaexxna";
-		Dif = 4;
 		Type = "Raid";
+		Dif = AL_Dif.Ascended;
 	};
 
 	AtlasLoot_Data["NAXMaexxna"] = {
@@ -4569,8 +4569,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 12, 222954, "", "=q4=Kiss of the Spider", "=ds=#s14#","", "20%" },
 		Prev = "NAXGrandWidowFearlina";
 		Next = "NAXInstructorRAuvious";
-		Dif = 4;
 		Type = "Raid";
+		Dif = AL_Dif.Ascended;
 	};
 
 	AtlasLoot_Data["NAXInstructorRAuvious"] = {
@@ -4589,8 +4589,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 13, 223018, "", "=q4=Signet of the Fallen Defender", "=ds=#s13#","", "16.67%" },
 		Prev = "NAXMaexxna";
 		Next = "NAXGothicderHarvester";
-		Dif = 4;
 		Type = "Raid";
+		Dif = AL_Dif.Ascended;
 	};
 
 	AtlasLoot_Data["NAXGothicderHarvester"] = {
@@ -4608,8 +4608,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 12, 223023, "", "=q4=Sadist's Collar", "=ds=#s2#","", "20%"  },
 		Prev = "NAXInstructorRAuvious";
 		Next = "NAXTheFourHorsemen";
-		Dif = 4;
 		Type = "Raid";
+		Dif = AL_Dif.Ascended;
 	};
 
 	AtlasLoot_Data["NAXTheFourHorsemen"] = {
@@ -4628,8 +4628,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 13, 223027, "", "=q4=Warmth of Forgiveness", "=ds=#s14#","", "16.67%"  },
 		Prev = "NAXGothicderHarvester";
 		Next = "NAXNothderPlaguebringer";
-		Dif = 4;
 		Type = "Raid";
+		Dif = AL_Dif.Ascended;
 	};
 
 	AtlasLoot_Data["NAXNothderPlaguebringer"] = {
@@ -4649,8 +4649,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 14, 223028, "", "=q4=Hailstone Band", "=ds=#s13#","", "14.29%" },
 		Prev = "NAXTheFourHorsemen";
 		Next = "NAXHeiganderUnclean";
-		Dif = 4;
 		Type = "Raid";
+		Dif = AL_Dif.Ascended;
 	};
 
 	AtlasLoot_Data["NAXHeiganderUnclean"] = {
@@ -4668,8 +4668,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 12, 223036, "", "=q4=Necklace of Necropsy", "=ds=#s2#","", "20%" },
 		Prev = "NAXNothderPlaguebringer";
 		Next = "NAXLoatheb";
-		Dif = 4;
 		Type = "Raid";
+		Dif = AL_Dif.Ascended;
 	};
 
 	AtlasLoot_Data["NAXLoatheb"] = {
@@ -4687,8 +4687,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 12, 223042, "", "=q4=Loatheb's Reflection", "=ds=#s14#","", "20%" },
 		Prev = "NAXHeiganderUnclean";
 		Next = "NAXSapphiron";
-		Dif = 4;
 		Type = "Raid";
+		Dif = AL_Dif.Ascended;
 	};
 
 	AtlasLoot_Data["NAXSapphiron"] = {
@@ -4713,8 +4713,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 19, 23548, "", "=q4=Might of the Scourge", "=ds=#s3# #e17#" ,"","50%"},
 		Prev = "NAXLoatheb";
 		Next = "NAXKelThuzad";
-		Dif = 4;
 		Type = "Raid";
+		Dif = AL_Dif.Ascended;
 	};
 
 	AtlasLoot_Data["NAXKelThuzad"] = {
@@ -4750,8 +4750,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 30, 222630, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c8#"},
 		Prev = "NAXSapphiron";
 		Next = "NAXTrash";
-		Dif = 4;
 		Type = "Raid";
+		Dif = AL_Dif.Ascended;
 	};
 
 	AtlasLoot_Data["NAXTrash"] = {
@@ -4778,8 +4778,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 21, 22708, "", "=q1=Fate of Ramaladni", "=ds=#m3#" },
 		{ 22, 23055, "", "=q1=Word of Thawing", "=ds=#m20#" },
 		Prev = "NAXKelThuzad";
-		Dif = 4;
 		Type = "Raid";
+		Dif = AL_Dif.Ascended;
 	};
 
 
@@ -4816,8 +4816,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 26, 18403, "", "=q4=Dragonslayer's Signet", "=q1=#m4#: =ds=#s13#" },
 		{ 27, 18406, "", "=q4=Onyxia Blood Talisman", "=q1=#m4#: =ds=#s14#" },
 		{ 29, 49636, "", "=q4=Reins of the Onyxian Drake", "=ds=#e12#", "" };
-		Dif = 4;
 		Type = "Raid";
+		Dif = AL_Dif.Ascended;
 	};
 
 	--------------------------
@@ -4839,16 +4839,17 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 8, 16719, "", "=q3=Wildheart Kilt", "=ds="..BabbleBoss["Baron Rivendare"].." ("..AL["Strat"]..")", "", "6.58%"};
 		{ 9, 16715, "", "=q3=Wildheart Boots", "=ds="..BabbleBoss["Mother Smolderweb"].." ("..AL["LBRS"]..")", "", "13.03%"};
 		{ 16, 0, "Spell_Nature_Regeneration", "=q6=#t05s1#", "=ec1=#j7#"};
-		{ 17, 22109, "", "=q4=Feralheart Cowl", "=ds=#a2#, #s1#"};
-		{ 18, 22112, "", "=q3=Feralheart Spaulders", "=ds=#a2#, #s3#"};
-		{ 19, 22113, "", "=q4=Feralheart Vest", "=ds=#a2#, #s5#"};
-		{ 20, 22108, "", "=q3=Feralheart Bracers", "=ds=#a2#, #s8#"};
-		{ 21, 22110, "", "=q4=Feralheart Gloves", "=ds=#a2#, #s9#"};
-		{ 22, 22106, "", "=q3=Feralheart Belt", "=ds=#a2#, #s10#"};
-		{ 23, 22111, "", "=q3=Feralheart Kilt", "=ds=#a2#, #s11#"};
-		{ 24, 22107, "", "=q4=Feralheart Boots", "=ds=#a2#, #s12#"};
+		{ 17, 22109, "", "=q4=Feralheart Cowl", "=ds=#a2#, #s1#", [AL_Dif.MAX_DIF] = AL_Dif.Normal};
+		{ 18, 22112, "", "=q3=Feralheart Spaulders", "=ds=#a2#, #s3#", [AL_Dif.MAX_DIF] = AL_Dif.Normal};
+		{ 19, 22113, "", "=q4=Feralheart Vest", "=ds=#a2#, #s5#", [AL_Dif.MAX_DIF] = AL_Dif.Normal};
+		{ 20, 22108, "", "=q3=Feralheart Bracers", "=ds=#a2#, #s8#", [AL_Dif.MAX_DIF] = AL_Dif.Normal};
+		{ 21, 22110, "", "=q4=Feralheart Gloves", "=ds=#a2#, #s9#", [AL_Dif.MAX_DIF] = AL_Dif.Normal};
+		{ 22, 22106, "", "=q3=Feralheart Belt", "=ds=#a2#, #s10#", [AL_Dif.MAX_DIF] = AL_Dif.Normal};
+		{ 23, 22111, "", "=q3=Feralheart Kilt", "=ds=#a2#, #s11#", [AL_Dif.MAX_DIF] = AL_Dif.Normal};
+		{ 24, 22107, "", "=q4=Feralheart Boots", "=ds=#a2#, #s12#", [AL_Dif.MAX_DIF] = AL_Dif.Normal};
 		Next = "T1T2Druid";
 		Back = "T0SET";
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["T0Hunter"] = {
@@ -4862,16 +4863,17 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 8, 16678, "", "=q3=Beaststalker's Pants", "=ds="..BabbleBoss["Baron Rivendare"].." ("..AL["Strat"]..")", "", "6.16%"};
 		{ 9, 16675, "", "=q3=Beaststalker's Boots", "=ds="..BabbleBoss["Nerub'enkan"].." ("..AL["Strat"]..")", "", "13.62%"};
 		{ 16, 0, "Ability_Hunter_RunningShot", "=q6=#t05s2#", "=ec1=#j7#"};
-		{ 17, 22013, "", "=q4=Beastmaster's Cap", "=ds=#a3#, #s1#"};
-		{ 18, 22016, "", "=q3=Beastmaster's Mantle", "=ds=#a3#, #s3#"};
-		{ 19, 22060, "", "=q4=Beastmaster's Tunic", "=ds=#a3#, #s5#"};
-		{ 20, 22011, "", "=q3=Beastmaster's Bindings", "=ds=#a3#, #s8#"};
-		{ 21, 22015, "", "=q4=Beastmaster's Gloves", "=ds=#a3#, #s9#"};
-		{ 22, 22010, "", "=q3=Beastmaster's Belt", "=ds=#a3#, #s10#"};
-		{ 23, 22017, "", "=q3=Beastmaster's Pants", "=ds=#a3#, #s11#"};
-		{ 24, 22061, "", "=q4=Beastmaster's Boots", "=ds=#a3#, #s12#"};
+		{ 17, 22013, "", "=q4=Beastmaster's Cap", "=ds=#a3#, #s1#", [AL_Dif.MAX_DIF] = AL_Dif.Normal};
+		{ 18, 22016, "", "=q3=Beastmaster's Mantle", "=ds=#a3#, #s3#", [AL_Dif.MAX_DIF] = AL_Dif.Normal};
+		{ 19, 22060, "", "=q4=Beastmaster's Tunic", "=ds=#a3#, #s5#", [AL_Dif.MAX_DIF] = AL_Dif.Normal};
+		{ 20, 22011, "", "=q3=Beastmaster's Bindings", "=ds=#a3#, #s8#", [AL_Dif.MAX_DIF] = AL_Dif.Normal};
+		{ 21, 22015, "", "=q4=Beastmaster's Gloves", "=ds=#a3#, #s9#", [AL_Dif.MAX_DIF] = AL_Dif.Normal};
+		{ 22, 22010, "", "=q3=Beastmaster's Belt", "=ds=#a3#, #s10#", [AL_Dif.MAX_DIF] = AL_Dif.Normal};
+		{ 23, 22017, "", "=q3=Beastmaster's Pants", "=ds=#a3#, #s11#", [AL_Dif.MAX_DIF] = AL_Dif.Normal};
+		{ 24, 22061, "", "=q4=Beastmaster's Boots", "=ds=#a3#, #s12#", [AL_Dif.MAX_DIF] = AL_Dif.Normal};
 		Next = "T1T2Hunter";
 		Back = "T0SET";
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["T0Mage"] = {
@@ -4885,16 +4887,17 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 8, 16687, "", "=q3=Magister's Leggings", "=ds="..BabbleBoss["Baron Rivendare"].." ("..AL["Strat"]..")", "", "6.79%"};
 		{ 9, 16682, "", "=q3=Magister's Boots", "=ds="..BabbleBoss["Hearthsinger Forresten"].." ("..AL["Strat"]..")", "", "10.86%"};
 		{ 16, 0, "Spell_Frost_IceStorm", "=q6=#t05s3#", "=ec1=#j7#"};
-		{ 17, 22065, "", "=q4=Sorcerer's Crown", "=ds=#a1#, #s1#"};
-		{ 18, 22068, "", "=q3=Sorcerer's Mantle", "=ds=#a1#, #s3#"};
-		{ 19, 22069, "", "=q4=Sorcerer's Robes", "=ds=#a1#, #s5#"};
-		{ 20, 22063, "", "=q3=Sorcerer's Bindings", "=ds=#a1#, #s8#"};
-		{ 21, 22066, "", "=q4=Sorcerer's Gloves", "=ds=#a1#, #s9#"};
-		{ 22, 22062, "", "=q3=Sorcerer's Belt", "=ds=#a1#, #s10#"};
-		{ 23, 22067, "", "=q3=Sorcerer's Leggings", "=ds=#a1#, #s11#"};
-		{ 24, 22064, "", "=q4=Sorcerer's Boots", "=ds=#a1#, #s12#"};
+		{ 17, 22065, "", "=q4=Sorcerer's Crown", "=ds=#a1#, #s1#", [AL_Dif.MAX_DIF] = AL_Dif.Normal};
+		{ 18, 22068, "", "=q3=Sorcerer's Mantle", "=ds=#a1#, #s3#", [AL_Dif.MAX_DIF] = AL_Dif.Normal};
+		{ 19, 22069, "", "=q4=Sorcerer's Robes", "=ds=#a1#, #s5#", [AL_Dif.MAX_DIF] = AL_Dif.Normal};
+		{ 20, 22063, "", "=q3=Sorcerer's Bindings", "=ds=#a1#, #s8#", [AL_Dif.MAX_DIF] = AL_Dif.Normal};
+		{ 21, 22066, "", "=q4=Sorcerer's Gloves", "=ds=#a1#, #s9#", [AL_Dif.MAX_DIF] = AL_Dif.Normal};
+		{ 22, 22062, "", "=q3=Sorcerer's Belt", "=ds=#a1#, #s10#", [AL_Dif.MAX_DIF] = AL_Dif.Normal};
+		{ 23, 22067, "", "=q3=Sorcerer's Leggings", "=ds=#a1#, #s11#", [AL_Dif.MAX_DIF] = AL_Dif.Normal};
+		{ 24, 22064, "", "=q4=Sorcerer's Boots", "=ds=#a1#, #s12#", [AL_Dif.MAX_DIF] = AL_Dif.Normal};
 		Next = "T1T2Mage";
 		Back = "T0SET";
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["T0Paladin"] = {
@@ -4908,16 +4911,17 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 8, 16728, "", "=q3=Lightforge Legplates", "=ds="..BabbleBoss["Baron Rivendare"].." ("..AL["Strat"]..")", "", "4.20%"};
 		{ 9, 16725, "", "=q3=Lightforge Boots", "=ds="..BabbleBoss["Balnazzar"].." ("..AL["Strat"]..")", "", "11.11%"};
 		{ 16, 0, "Spell_Holy_SealOfMight", "=q6=#t05s4#", "=ec1=#j7#"};
-		{ 17, 22091, "", "=q4=Soulforge Helm", "=ds=#a4#, #s1#"};
-		{ 18, 22093, "", "=q3=Soulforge Spaulders", "=ds=#a4#, #s3#"};
-		{ 19, 22089, "", "=q4=Soulforge Breastplate", "=ds=#a4#, #s5#"};
-		{ 20, 22088, "", "=q3=Soulforge Bracers", "=ds=#a4#, #s8#"};
-		{ 21, 22090, "", "=q4=Soulforge Gauntlets", "=ds=#a4#, #s9#"};
-		{ 22, 22086, "", "=q3=Soulforge Belt", "=ds=#a4#, #s10#"};
-		{ 23, 22092, "", "=q3=Soulforge Legplates", "=ds=#a4#, #s11#"};
-		{ 24, 22087, "", "=q4=Soulforge Boots", "=ds=#a4#, #s12#"};
+		{ 17, 22091, "", "=q4=Soulforge Helm", "=ds=#a4#, #s1#", [AL_Dif.MAX_DIF] = AL_Dif.Normal};
+		{ 18, 22093, "", "=q3=Soulforge Spaulders", "=ds=#a4#, #s3#", [AL_Dif.MAX_DIF] = AL_Dif.Normal};
+		{ 19, 22089, "", "=q4=Soulforge Breastplate", "=ds=#a4#, #s5#", [AL_Dif.MAX_DIF] = AL_Dif.Normal};
+		{ 20, 22088, "", "=q3=Soulforge Bracers", "=ds=#a4#, #s8#", [AL_Dif.MAX_DIF] = AL_Dif.Normal};
+		{ 21, 22090, "", "=q4=Soulforge Gauntlets", "=ds=#a4#, #s9#", [AL_Dif.MAX_DIF] = AL_Dif.Normal};
+		{ 22, 22086, "", "=q3=Soulforge Belt", "=ds=#a4#, #s10#", [AL_Dif.MAX_DIF] = AL_Dif.Normal};
+		{ 23, 22092, "", "=q3=Soulforge Legplates", "=ds=#a4#, #s11#", [AL_Dif.MAX_DIF] = AL_Dif.Normal};
+		{ 24, 22087, "", "=q4=Soulforge Boots", "=ds=#a4#, #s12#", [AL_Dif.MAX_DIF] = AL_Dif.Normal};
 		Next = "T1T2Paladin";
 		Back = "T0SET";
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["T0Priest"] = {
@@ -4931,16 +4935,17 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 8, 16694, "", "=q3=Devout Skirt", "=ds="..BabbleBoss["Baron Rivendare"].." ("..AL["Strat"]..")", "", "7.42%"};
 		{ 9, 16691, "", "=q3=Devout Sandals", "=ds="..BabbleBoss["Maleki the Pallid"].." ("..AL["Strat"]..")", "", "13.64%"};
 		{ 16, 0, "Spell_Holy_PowerWordShield", "=q6=#t05s5#", "=ec1=#j7#"};
-		{ 17, 22080, "", "=q4=Virtuous Crown", "=ds=#a1#, #s1#"};
-		{ 18, 22082, "", "=q3=Virtuous Mantle", "=ds=#a1#, #s3#"};
-		{ 19, 22083, "", "=q4=Virtuous Robe", "=ds=#a1#, #s5#"};
-		{ 20, 22079, "", "=q3=Virtuous Bracers", "=ds=#a1#, #s8#"};
-		{ 21, 22081, "", "=q4=Virtuous Gloves", "=ds=#a1#, #s9#"};
-		{ 22, 22078, "", "=q3=Virtuous Belt", "=ds=#a1#, #s10#"};
-		{ 23, 22085, "", "=q3=Virtuous Skirt", "=ds=#a1#, #s11#"};
-		{ 24, 22084, "", "=q4=Virtuous Sandals", "=ds=#a1#, #s12#"};
+		{ 17, 22080, "", "=q4=Virtuous Crown", "=ds=#a1#, #s1#", [AL_Dif.MAX_DIF] = AL_Dif.Normal};
+		{ 18, 22082, "", "=q3=Virtuous Mantle", "=ds=#a1#, #s3#", [AL_Dif.MAX_DIF] = AL_Dif.Normal};
+		{ 19, 22083, "", "=q4=Virtuous Robe", "=ds=#a1#, #s5#", [AL_Dif.MAX_DIF] = AL_Dif.Normal};
+		{ 20, 22079, "", "=q3=Virtuous Bracers", "=ds=#a1#, #s8#", [AL_Dif.MAX_DIF] = AL_Dif.Normal};
+		{ 21, 22081, "", "=q4=Virtuous Gloves", "=ds=#a1#, #s9#", [AL_Dif.MAX_DIF] = AL_Dif.Normal};
+		{ 22, 22078, "", "=q3=Virtuous Belt", "=ds=#a1#, #s10#", [AL_Dif.MAX_DIF] = AL_Dif.Normal};
+		{ 23, 22085, "", "=q3=Virtuous Skirt", "=ds=#a1#, #s11#", [AL_Dif.MAX_DIF] = AL_Dif.Normal};
+		{ 24, 22084, "", "=q4=Virtuous Sandals", "=ds=#a1#, #s12#", [AL_Dif.MAX_DIF] = AL_Dif.Normal};
 		Next = "T1T2Priest";
 		Back = "T0SET";
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["T0Rogue"] = {
@@ -4954,16 +4959,17 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 8, 16709, "", "=q3=Shadowcraft Pants", "=ds="..BabbleBoss["Baron Rivendare"].." ("..AL["Strat"]..")", "", "7.76%"};
 		{ 9, 16711, "", "=q3=Shadowcraft Boots", "=ds="..BabbleBoss["Rattlegore"].." ("..AL["Scholo"]..")", "", "14.32%"};
 		{ 16, 0, "Ability_BackStab", "=q6=#t05s6#", "=ec1=#j7#"};
-		{ 17, 22005, "", "=q4=Darkmantle Cap", "=ds=#a2#, #s1#"};
-		{ 18, 22008, "", "=q3=Darkmantle Spaulders", "=ds=#a2#, #s3#"};
-		{ 19, 22009, "", "=q4=Darkmantle Tunic", "=ds=#a2#, #s5#"};
-		{ 20, 22004, "", "=q3=Darkmantle Bracers", "=ds=#a2#, #s8#"};
-		{ 21, 22006, "", "=q4=Darkmantle Gloves", "=ds=#a2#, #s9#"};
-		{ 22, 22002, "", "=q3=Darkmantle Belt", "=ds=#a2#, #s10#"};
-		{ 23, 22007, "", "=q3=Darkmantle Pants", "=ds=#a2#, #s11#"};
-		{ 24, 22003, "", "=q4=Darkmantle Boots", "=ds=#a2#, #s12#"};
+		{ 17, 22005, "", "=q4=Darkmantle Cap", "=ds=#a2#, #s1#", [AL_Dif.MAX_DIF] = AL_Dif.Normal};
+		{ 18, 22008, "", "=q3=Darkmantle Spaulders", "=ds=#a2#, #s3#", [AL_Dif.MAX_DIF] = AL_Dif.Normal};
+		{ 19, 22009, "", "=q4=Darkmantle Tunic", "=ds=#a2#, #s5#", [AL_Dif.MAX_DIF] = AL_Dif.Normal};
+		{ 20, 22004, "", "=q3=Darkmantle Bracers", "=ds=#a2#, #s8#", [AL_Dif.MAX_DIF] = AL_Dif.Normal};
+		{ 21, 22006, "", "=q4=Darkmantle Gloves", "=ds=#a2#, #s9#", [AL_Dif.MAX_DIF] = AL_Dif.Normal};
+		{ 22, 22002, "", "=q3=Darkmantle Belt", "=ds=#a2#, #s10#", [AL_Dif.MAX_DIF] = AL_Dif.Normal};
+		{ 23, 22007, "", "=q3=Darkmantle Pants", "=ds=#a2#, #s11#", [AL_Dif.MAX_DIF] = AL_Dif.Normal};
+		{ 24, 22003, "", "=q4=Darkmantle Boots", "=ds=#a2#, #s12#", [AL_Dif.MAX_DIF] = AL_Dif.Normal};
 		Next = "T1T2Rogue";
 		Back = "T0SET";
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["T0Shaman"] = {
@@ -4977,16 +4983,17 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 8, 16668, "", "=q3=Kilt of Elements", "=ds="..BabbleBoss["Baron Rivendare"].." ("..AL["Strat"]..")", "", "3.02%"};
 		{ 9, 16670, "", "=q3=Boots of Elements", "=ds="..BabbleBoss["Highlord Omokk"].." ("..AL["LBRS"]..")", "", "9.35%"};
 		{ 16, 0, "Spell_FireResistanceTotem_01", "=q6=#t05s7#", "=ec1=#j7#"};
-		{ 17, 22097, "", "=q4=Coif of The Five Thunders", "=ds=#a3#, #s1#"};
-		{ 18, 22101, "", "=q3=Pauldrons of The Five Thunders", "=ds=#a3#, #s3#"};
-		{ 19, 22102, "", "=q4=Vest of The Five Thunders", "=ds=#a3#, #s5#"};
-		{ 20, 22095, "", "=q3=Bindings of The Five Thunders", "=ds=#a3#, #s8#"};
-		{ 21, 22099, "", "=q4=Gauntlets of The Five Thunders", "=ds=#a3#, #s9#"};
-		{ 22, 22098, "", "=q3=Cord of The Five Thunders", "=ds=#a3#, #s10#"};
-		{ 23, 22100, "", "=q3=Kilt of The Five Thunders", "=ds=#a3#, #s11#"};
-		{ 24, 22096, "", "=q4=Boots of The Five Thunders", "=ds=#a3#, #s12#"};
+		{ 17, 22097, "", "=q4=Coif of The Five Thunders", "=ds=#a3#, #s1#", [AL_Dif.MAX_DIF] = AL_Dif.Normal};
+		{ 18, 22101, "", "=q3=Pauldrons of The Five Thunders", "=ds=#a3#, #s3#", [AL_Dif.MAX_DIF] = AL_Dif.Normal};
+		{ 19, 22102, "", "=q4=Vest of The Five Thunders", "=ds=#a3#, #s5#", [AL_Dif.MAX_DIF] = AL_Dif.Normal};
+		{ 20, 22095, "", "=q3=Bindings of The Five Thunders", "=ds=#a3#, #s8#", [AL_Dif.MAX_DIF] = AL_Dif.Normal};
+		{ 21, 22099, "", "=q4=Gauntlets of The Five Thunders", "=ds=#a3#, #s9#", [AL_Dif.MAX_DIF] = AL_Dif.Normal};
+		{ 22, 22098, "", "=q3=Cord of The Five Thunders", "=ds=#a3#, #s10#", [AL_Dif.MAX_DIF] = AL_Dif.Normal};
+		{ 23, 22100, "", "=q3=Kilt of The Five Thunders", "=ds=#a3#, #s11#", [AL_Dif.MAX_DIF] = AL_Dif.Normal};
+		{ 24, 22096, "", "=q4=Boots of The Five Thunders", "=ds=#a3#, #s12#", [AL_Dif.MAX_DIF] = AL_Dif.Normal};
 		Next = "T1T2Shaman";
 		Back = "T0SET";
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["T0Warlock"] = {
@@ -5000,16 +5007,17 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 8, 16699, "", "=q3=Dreadmist Leggings", "=ds="..BabbleBoss["Baron Rivendare"].." ("..AL["Strat"]..")", "", "7.31%"};
 		{ 9, 16704, "", "=q3=Dreadmist Sandals", "=ds="..BabbleBoss["Baroness Anastari"].." ("..AL["Strat"]..")", "", "13.16%"};
 		{ 16, 0, "Spell_Shadow_CurseOfTounges", "=q6=#t05s8#", "=ec1=#j7#"};
-		{ 17, 22074, "", "=q4=Deathmist Mask", "=ds=#a1#, #s1#"};
-		{ 18, 22073, "", "=q3=Deathmist Mantle", "=ds=#a1#, #s5#"};
-		{ 19, 22075, "", "=q4=Deathmist Robe", "=ds=#a1#, #s3#"};
-		{ 20, 22071, "", "=q3=Deathmist Bracers", "=ds=#a1#, #s8#"};
-		{ 21, 22077, "", "=q4=Deathmist Wraps", "=ds=#a1#, #s9#"};
-		{ 22, 22070, "", "=q3=Deathmist Belt", "=ds=#a1#, #s10#"};
-		{ 23, 22072, "", "=q3=Deathmist Leggings", "=ds=#a1#, #s11#"};
-		{ 24, 22076, "", "=q4=Deathmist Sandals", "=ds=#a1#, #s12#"};
+		{ 17, 22074, "", "=q4=Deathmist Mask", "=ds=#a1#, #s1#", [AL_Dif.MAX_DIF] = AL_Dif.Normal};
+		{ 18, 22073, "", "=q3=Deathmist Mantle", "=ds=#a1#, #s5#", [AL_Dif.MAX_DIF] = AL_Dif.Normal};
+		{ 19, 22075, "", "=q4=Deathmist Robe", "=ds=#a1#, #s3#", [AL_Dif.MAX_DIF] = AL_Dif.Normal};
+		{ 20, 22071, "", "=q3=Deathmist Bracers", "=ds=#a1#, #s8#", [AL_Dif.MAX_DIF] = AL_Dif.Normal};
+		{ 21, 22077, "", "=q4=Deathmist Wraps", "=ds=#a1#, #s9#", [AL_Dif.MAX_DIF] = AL_Dif.Normal};
+		{ 22, 22070, "", "=q3=Deathmist Belt", "=ds=#a1#, #s10#", [AL_Dif.MAX_DIF] = AL_Dif.Normal};
+		{ 23, 22072, "", "=q3=Deathmist Leggings", "=ds=#a1#, #s11#", [AL_Dif.MAX_DIF] = AL_Dif.Normal};
+		{ 24, 22076, "", "=q4=Deathmist Sandals", "=ds=#a1#, #s12#", [AL_Dif.MAX_DIF] = AL_Dif.Normal};
 		Next = "T1T2Warlock";
 		Back = "T0SET";
+		Type = "Dungeon";
 	};
 
 	AtlasLoot_Data["T0Warrior"] = {
@@ -5023,16 +5031,17 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 8, 16732, "", "=q3=Legplates of Valor", "=ds="..BabbleBoss["Baron Rivendare"].." ("..AL["Strat"]..")", "", "5.74%"};
 		{ 9, 16734, "", "=q3=Boots of Valor", "=ds="..BabbleBoss["Kirtonos the Herald"].." ("..AL["Scholo"]..")", "", "11.12%"};
 		{ 16, 0, "INV_Shield_05", "=q6=#t05s9#", "=ec1=#j7#"};
-		{ 17, 21999, "", "=q4=Helm of Heroism", "=ds=#a4#, #s1#"};
-		{ 18, 22001, "", "=q3=Spaulders of Heroism", "=ds=#a4#, #s3#"};
-		{ 19, 21997, "", "=q4=Breastplate of Heroism", "=ds=#a4#, #s5#"};
-		{ 20, 21996, "", "=q3=Bracers of Heroism", "=ds=#a4#, #s8#"};
-		{ 21, 21998, "", "=q4=Gauntlets of Heroism", "=ds=#a4#, #s9#"};
-		{ 22, 21994, "", "=q3=Belt of Heroism", "=ds=#a4#, #s10#"};
-		{ 23, 22000, "", "=q3=Legplates of Heroism", "=ds=#a4#, #s11#"};
-		{ 24, 21995, "", "=q4=Boots of Heroism", "=ds=#a4#, #s12#"};
+		{ 17, 21999, "", "=q4=Helm of Heroism", "=ds=#a4#, #s1#", [AL_Dif.MAX_DIF] = AL_Dif.Normal};
+		{ 18, 22001, "", "=q3=Spaulders of Heroism", "=ds=#a4#, #s3#", [AL_Dif.MAX_DIF] = AL_Dif.Normal};
+		{ 19, 21997, "", "=q4=Breastplate of Heroism", "=ds=#a4#, #s5#", [AL_Dif.MAX_DIF] = AL_Dif.Normal};
+		{ 20, 21996, "", "=q3=Bracers of Heroism", "=ds=#a4#, #s8#", [AL_Dif.MAX_DIF] = AL_Dif.Normal};
+		{ 21, 21998, "", "=q4=Gauntlets of Heroism", "=ds=#a4#, #s9#", [AL_Dif.MAX_DIF] = AL_Dif.Normal};
+		{ 22, 21994, "", "=q3=Belt of Heroism", "=ds=#a4#, #s10#", [AL_Dif.MAX_DIF] = AL_Dif.Normal};
+		{ 23, 22000, "", "=q3=Legplates of Heroism", "=ds=#a4#, #s11#", [AL_Dif.MAX_DIF] = AL_Dif.Normal};
+		{ 24, 21995, "", "=q4=Boots of Heroism", "=ds=#a4#, #s12#", [AL_Dif.MAX_DIF] = AL_Dif.Normal};
 		Next = "T1T2Warrior";
 		Back = "T0SET";
+		Type = "Dungeon";
 	};
 
 		-----------------------------
@@ -5061,6 +5070,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		Prev = "T0Druid";
 		Next = "T3Druid";
 		Back = "T1T2T3SET";
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["T1T2Hunter"] = {
@@ -5085,6 +5095,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		Prev = "T0Hunter";
 		Next = "T3Hunter";
 		Back = "T1T2T3SET";
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["T1T2Mage"] = {
@@ -5109,6 +5120,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		Prev = "T0Mage";
 		Next = "T3Mage";
 		Back = "T1T2T3SET";
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["T1T2Paladin"] = {
@@ -5133,6 +5145,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		Prev = "T0Paladin";
 		Next = "T3Paladin";
 		Back = "T1T2T3SET";
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["T1T2Priest"] = {
@@ -5157,6 +5170,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		Prev = "T0Priest";
 		Next = "T3Priest";
 		Back = "T1T2T3SET";
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["T1T2Rogue"] = {
@@ -5181,6 +5195,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		Prev = "T0Rogue";
 		Next = "T3Rogue";
 		Back = "T1T2T3SET";
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["T1T2Shaman"] = {
@@ -5205,6 +5220,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		Prev = "T0Shaman";
 		Next = "T3Shaman";
 		Back = "T1T2T3SET";
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["T1T2Warlock"] = {
@@ -5229,6 +5245,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		Prev = "T0Warlock";
 		Next = "T3Warlock";
 		Back = "T1T2T3SET";
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["T1T2Warrior"] = {
@@ -5253,6 +5270,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		Prev = "T0Warrior";
 		Next = "T3Warrior";
 		Back = "T1T2T3SET";
+		Type = "Raid";
 	};
 	
 		AtlasLoot_Data["T1T2DPSWarrior"] = {
@@ -5276,494 +5294,11 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 24, 10906, "", "=q4=Stompers of Wrath", "=ds="..BabbleBoss["Broodlord Lashlayer"], "", "16.84%"};
 		Next = "T3DPSWarrior";
 		Back = "T1T2T3SET";
+		Type = "Raid";
 	};
 
 
-	------------------------------------
-	--- Tier 1/2 Sets (T1/T2) HEROIC FLEX ---
-	------------------------------------
 
-	AtlasLoot_Data["T1T2Druid25Man"] = {
-		{ 1, 0, "Spell_Nature_Regeneration", "=q6=#t1s1#", "=ec1=#m30#"};
-		{ 2, 316834, "", "=q4=Cenarion Helm", "=ds="..BabbleBoss["Garr"], "", "11.51%"};
-		{ 3, 316836, "", "=q4=Cenarion Spaulders", "=ds="..BabbleBoss["Baron Geddon"], "", "19.52%"};
-		{ 4, 316833, "", "=q4=Cenarion Vestments", "=ds="..BabbleBoss["Golemagg the Incinerator"], "", "15.21%"};
-		{ 5, 316830, "", "=q4=Cenarion Bracers", "=ds="..AL["Trash Mobs"], "", "0.17%"};
-		{ 6, 316831, "", "=q4=Cenarion Gloves", "=ds="..BabbleBoss["Shazzrah"], "", "19.53%"};
-		{ 7, 316828, "", "=q4=Cenarion Belt", "=ds="..AL["Trash Mobs"], "", "0.16%"};
-		{ 8, 316835, "", "=q4=Cenarion Leggings", "=ds="..BabbleBoss["Magmadar"], "", "12.90%"};
-		{ 9, 316829, "", "=q4=Cenarion Boots", "=ds="..BabbleBoss["Lucifron"], "", "10.72%"};
-		{ 16, 0, "Spell_Nature_Regeneration", "=q6=#t2s1#", "=ec1=#m31#"};
-		{ 17, 316900, "", "=q4=Stormrage Cover", "=ds="..BabbleBoss["Nefarian"], "", "13.08%"};
-		{ 18, 316902, "", "=q4=Stormrage Pauldrons", "=ds="..BabbleBoss["Chromaggus"], "", "14.63%"};
-		{ 19, 316897, "", "=q4=Stormrage Chestguard", "=ds="..BabbleBoss["Nefarian"], "", "11.89%"};
-		{ 20, 316904, "", "=q4=Stormrage Bracers", "=ds="..BabbleBoss["Razorgore the Untamed"], "", "17.38%"};
-		{ 21, 316899, "", "=q4=Stormrage Handguards", "=ds="..BabbleBoss["Firemaw"]..", "..BabbleBoss["Ebonroc"]..", "..BabbleBoss["Flamegor"], "", "5.34%"};
-		{ 22, 316903, "", "=q4=Stormrage Belt", "=ds="..BabbleBoss["Vaelastrasz the Corrupt"], "", "16.90%"};
-		{ 23, 316901, "", "=q4=Stormrage Legguards", "=ds="..BabbleBoss["Ragnaros"], "", "15.49%"};
-		{ 24, 316898, "", "=q4=Stormrage Boots", "=ds="..BabbleBoss["Broodlord Lashlayer"], "", "13.79%"};
-		Prev = "T0Druid25Man";
-		Next = "T3Druid25Man";
-		Back = "T1T2T3SET";
-	};
-
-	AtlasLoot_Data["T1T2Hunter25Man"] = {
-		{ 1, 0, "Ability_Hunter_RunningShot", "=q6=#t1s2#", "=ec1=#m30#"};
-		{ 2, 316846, "", "=q4=Giantstalker's Helmet", "=ds="..BabbleBoss["Garr"], "", "11.57%"};
-		{ 3, 316848, "", "=q4=Giantstalker's Epaulets", "=ds="..BabbleBoss["Sulfuron Harbinger"], "", "19.64%"};
-		{ 4, 316845, "", "=q4=Giantstalker's Breastplate", "=ds="..BabbleBoss["Golemagg the Incinerator"], "", "15.83%"};
-		{ 5, 316850, "", "=q4=Giantstalker's Bracers", "=ds="..AL["Trash Mobs"], "", "0.18%"};
-		{ 6, 316852, "", "=q4=Giantstalker's Gloves", "=ds="..BabbleBoss["Shazzrah"], "", "18.58%"};
-		{ 7, 316851, "", "=q4=Giantstalker's Belt", "=ds="..AL["Trash Mobs"], "", "0.17%"};
-		{ 8, 316847, "", "=q4=Giantstalker's Leggings", "=ds="..BabbleBoss["Magmadar"], "", "13.28%"};
-		{ 9, 316849, "", "=q4=Giantstalker's Boots", "=ds="..BabbleBoss["Gehennas"], "", "14.54%"};
-		{ 16, 0, "Ability_Hunter_RunningShot", "=q6=#t2s2#", "=ec1=#m31#"};
-		{ 17, 316939, "", "=q4=Dragonstalker's Helm", "=ds="..BabbleBoss["Nefarian"], "", "13.91%"};
-		{ 18, 316937, "", "=q4=Dragonstalker's Spaulders", "=ds="..BabbleBoss["Chromaggus"], "", "16.20%"};
-		{ 19, 316942, "", "=q4=Dragonstalker's Breastplate", "=ds="..BabbleBoss["Nefarian"], "", "13.30%"};
-		{ 20, 316935, "", "=q4=Dragonstalker's Bracers", "=ds="..BabbleBoss["Razorgore the Untamed"], "", "19.13%"};
-		{ 21, 316940, "", "=q4=Dragonstalker's Gauntlets", "=ds="..BabbleBoss["Firemaw"]..", "..BabbleBoss["Ebonroc"]..", "..BabbleBoss["Flamegor"], "", "6.13%"};
-		{ 22, 316936, "", "=q4=Dragonstalker's Belt", "=ds="..BabbleBoss["Vaelastrasz the Corrupt"], "", "20.17%"};
-		{ 23, 316938, "", "=q4=Dragonstalker's Legguards", "=ds="..BabbleBoss["Ragnaros"], "", "16.02%"};
-		{ 24, 316941, "", "=q4=Dragonstalker's Greaves", "=ds="..BabbleBoss["Broodlord Lashlayer"], "", "17.78%"};
-		Prev = "T0Hunter25Man";
-		Next = "T3Hunter25Man";
-		Back = "T1T2T3SET";
-	};
-
-	AtlasLoot_Data["T1T2Mage25Man"] = {
-		{ 1, 0, "Spell_Frost_IceStorm", "=q6=#t1s3#", "=ec1=#m30#"};
-		{ 2, 316795, "", "=q4=Arcanist Crown", "=ds="..BabbleBoss["Garr"], "", "11.31%"};
-		{ 3, 316797, "", "=q4=Arcanist Mantle", "=ds="..BabbleBoss["Baron Geddon"], "", "19.92%"};
-		{ 4, 316798, "", "=q4=Arcanist Robes", "=ds="..BabbleBoss["Golemagg the Incinerator"], "", "16.51%"};
-		{ 5, 316799, "", "=q4=Arcanist Bindings", "=ds="..AL["Trash Mobs"], "", "0.16%"};
-		{ 6, 316801, "", "=q4=Arcanist Gloves", "=ds="..BabbleBoss["Shazzrah"], "", "19.59%"};
-		{ 7, 316802, "", "=q4=Arcanist Belt", "=ds="..AL["Trash Mobs"], "", "0.16%"};
-		{ 8, 316796, "", "=q4=Arcanist Leggings", "=ds="..BabbleBoss["Magmadar"], "", "14.57%"};
-		{ 9, 316800, "", "=q4=Arcanist Boots", "=ds="..BabbleBoss["Lucifron"], "", "12.06%"};
-		{ 16, 0, "Spell_Frost_IceStorm", "=q6=#t2s3#", "=ec1=#m31#"};
-		{ 17, 316914, "", "=q4=Netherwind Crown", "=ds="..BabbleBoss["Nefarian"], "", "14.09%"};
-		{ 18, 316917, "", "=q4=Netherwind Mantle", "=ds="..BabbleBoss["Chromaggus"], "", "18.09%"};
-		{ 19, 316916, "", "=q4=Netherwind Robes", "=ds="..BabbleBoss["Nefarian"], "", "14.03%"};
-		{ 20, 316918, "", "=q4=Netherwind Bindings", "=ds="..BabbleBoss["Razorgore the Untamed"], "", "20.41%"};
-		{ 21, 316913, "", "=q4=Netherwind Gloves", "=ds="..BabbleBoss["Firemaw"]..", "..BabbleBoss["Ebonroc"]..", "..BabbleBoss["Flamegor"], "", "7.37%"};
-		{ 22, 316818, "", "=q4=Netherwind Belt", "=ds="..BabbleBoss["Vaelastrasz the Corrupt"], "", "19.94%"};
-		{ 23, 316915, "", "=q4=Netherwind Pants", "=ds="..BabbleBoss["Ragnaros"], "", "17.37%"};
-		{ 24, 316912, "", "=q4=Netherwind Boots", "=ds="..BabbleBoss["Broodlord Lashlayer"], "", "17.17%"};
-		Prev = "T0Mage25Man";
-		Next = "T3Mage25Man";
-		Back = "T1T2T3SET";
-	};
-
-	AtlasLoot_Data["T1T2Paladin25Man"] = {
-		{ 1, 0, "Spell_Holy_SealOfMight", "=q6=#t1s4#", "=ec1=#m30#"};
-		{ 2, 316854, "", "=q4=Lawbringer Helm", "=ds="..BabbleBoss["Garr"], "", "7.23%"};
-		{ 3, 316856, "", "=q4=Lawbringer Spaulders", "=ds="..BabbleBoss["Baron Geddon"], "", "12.62%"};
-		{ 4, 316853, "", "=q4=Lawbringer Chestguard", "=ds="..BabbleBoss["Golemagg the Incinerator"], "", "9.53%"};
-		{ 5, 316857, "", "=q4=Lawbringer Bracers", "=ds="..AL["Trash Mobs"], "", "0.11%"};
-		{ 6, 316860, "", "=q4=Lawbringer Gauntlets", "=ds="..BabbleBoss["Gehennas"], "", "11.77%"};
-		{ 7, 316858, "", "=q4=Lawbringer Belt", "=ds="..AL["Trash Mobs"], "", "0.10%"};
-		{ 8, 316855, "", "=q4=Lawbringer Legplates", "=ds="..BabbleBoss["Magmadar"], "", "8.54%"};
-		{ 9, 316859, "", "=q4=Lawbringer Boots", "=ds="..BabbleBoss["Lucifron"], "", "7.20%"};
-		{ 16, 0, "Spell_Holy_SealOfMight", "=q6=#t2s4#", "=ec1=#m31#"};
-		{ 17, 316955, "", "=q4=Judgement Crown", "=ds="..BabbleBoss["Nefarian"], "", "8.64%"};
-		{ 18, 316953, "", "=q4=Judgement Spaulders", "=ds="..BabbleBoss["Chromaggus"], "", "10.97%"};
-		{ 19, 316958, "", "=q4=Judgement Breastplate", "=ds="..BabbleBoss["Nefarian"], "", "9.24%"};
-		{ 20, 316951, "", "=q4=Judgement Bindings", "=ds="..BabbleBoss["Razorgore the Untamed"], "", "13.61%"};
-		{ 21, 316956, "", "=q4=Judgement Gauntlets", "=ds="..BabbleBoss["Firemaw"]..", "..BabbleBoss["Ebonroc"]..", "..BabbleBoss["Flamegor"], "", "3.58%"};
-		{ 22, 316952, "", "=q4=Judgement Belt", "=ds="..BabbleBoss["Vaelastrasz the Corrupt"], "", "12.23%"};
-		{ 23, 316954, "", "=q4=Judgement Legplates", "=ds="..BabbleBoss["Ragnaros"], "", "10.81%"};
-		{ 24, 316957, "", "=q4=Judgement Sabatons", "=ds="..BabbleBoss["Broodlord Lashlayer"], "", "11.28%"};
-		Prev = "T0Paladin25Man";
-		Next = "T3Paladin25Man";
-		Back = "T1T2T3SET";
-	};
-
-	AtlasLoot_Data["T1T2Priest25Man"] = {
-		{ 1, 0, "Spell_Holy_PowerWordShield", "=q6=#t1s5#", "=ec1=#m30#"};
-		{ 2, 316813, "", "=q4=Circlet of Prophecy", "=ds="..BabbleBoss["Garr"], "", "11.36%"};
-		{ 3, 316816, "", "=q4=Mantle of Prophecy", "=ds="..BabbleBoss["Sulfuron Harbinger"], "", "21.06%"};
-		{ 4, 316815, "", "=q4=Robes of Prophecy", "=ds="..BabbleBoss["Golemagg the Incinerator"], "", "15.65%"};
-		{ 5, 316819, "", "=q4=Vambraces of Prophecy", "=ds="..AL["Trash Mobs"], "", "0.16%"};
-		{ 6, 316812, "", "=q4=Gloves of Prophecy", "=ds="..BabbleBoss["Gehennas"], "", "18.65%"};
-		{ 7, 316817, "", "=q4=Girdle of Prophecy", "=ds="..AL["Trash Mobs"], "", "0.18%"};
-		{ 8, 316814, "", "=q4=Pants of Prophecy", "=ds="..BabbleBoss["Magmadar"], "", "14.33%"};
-		{ 9, 316811, "", "=q4=Boots of Prophecy", "=ds="..BabbleBoss["Shazzrah"], "", "14.90%"};
-		{ 16, 0, "Spell_Holy_PowerWordShield", "=q6=#t2s5#", "=ec1=#m31#"};
-		{ 17, 316921, "", "=q4=Halo of Transcendence", "=ds="..BabbleBoss["Nefarian"], "", "13.39%"};
-		{ 18, 316924, "", "=q4=Pauldrons of Transcendence", "=ds="..BabbleBoss["Chromaggus"], "", "17.83%"};
-		{ 19, 316923, "", "=q4=Robes of Transcendence", "=ds="..BabbleBoss["Nefarian"], "", "14.83%"};
-		{ 20, 316926, "", "=q4=Bindings of Transcendence", "=ds="..BabbleBoss["Razorgore the Untamed"], "", "20.37%"};
-		{ 21, 316920, "", "=q4=Handguards of Transcendence", "=ds="..BabbleBoss["Firemaw"]..", "..BabbleBoss["Ebonroc"]..", "..BabbleBoss["Flamegor"], "", "6.01%"};
-		{ 22, 316925, "", "=q4=Belt of Transcendence", "=ds="..BabbleBoss["Vaelastrasz the Corrupt"], "", "18.76%"};
-		{ 23, 316922, "", "=q4=Leggings of Transcendence", "=ds="..BabbleBoss["Ragnaros"], "", "17.30%"};
-		{ 24, 316919, "", "=q4=Boots of Transcendence", "=ds="..BabbleBoss["Broodlord Lashlayer"], "", "14.61%"};
-		Prev = "T0Priest25Man";
-		Next = "T3Priest25Man";
-		Back = "T1T2T3SET";
-	};
-
-	AtlasLoot_Data["T1T2Rogue25Man"] = {
-		{ 1, 0, "Ability_BackStab", "=q6=#t1s6#", "=ec1=#m30#"};
-		{ 2, 316821, "", "=q4=Nightslayer Cover", "=ds="..BabbleBoss["Garr"], "", "10.38%"};
-		{ 3, 316823, "", "=q4=Nightslayer Shoulder Pads", "=ds="..BabbleBoss["Sulfuron Harbinger"], "", "20.66%"};
-		{ 4, 316820, "", "=q4=Nightslayer Chestpiece", "=ds="..BabbleBoss["Golemagg the Incinerator"], "", "16.76%"};
-		{ 5, 316825, "", "=q4=Nightslayer Bracelets", "=ds="..AL["Trash Mobs"], "", "0.17%"};
-		{ 6, 316826, "", "=q4=Nightslayer Gloves", "=ds="..BabbleBoss["Gehennas"], "", "19.47%"};
-		{ 7, 316827, "", "=q4=Nightslayer Belt", "=ds="..AL["Trash Mobs"], "", "0.15%"};
-		{ 8, 316822, "", "=q4=Nightslayer Pants", "=ds="..BabbleBoss["Magmadar"], "", "13.83%"};
-		{ 9, 316824, "", "=q4=Nightslayer Boots", "=ds="..BabbleBoss["Shazzrah"], "", "15.58%"};
-		{ 16, 0, "Ability_BackStab", "=q6=#t2s6#", "=ec1=#m31#"};
-		{ 17, 316908, "", "=q4=Bloodfang Hood", "=ds="..BabbleBoss["Nefarian"], "", "13.21%"};
-		{ 18, 316832, "", "=q4=Bloodfang Spaulders", "=ds="..BabbleBoss["Chromaggus"], "", "17.03%"};
-		{ 19, 316905, "", "=q4=Bloodfang Chestpiece", "=ds="..BabbleBoss["Nefarian"], "", "14.21%"};
-		{ 20, 316911, "", "=q4=Bloodfang Bracers", "=ds="..BabbleBoss["Razorgore the Untamed"], "", "20.69%"};
-		{ 21, 316907, "", "=q4=Bloodfang Gloves", "=ds="..BabbleBoss["Firemaw"]..", "..BabbleBoss["Ebonroc"]..", "..BabbleBoss["Flamegor"], "", "6.84%"};
-		{ 22, 316910, "", "=q4=Bloodfang Belt", "=ds="..BabbleBoss["Vaelastrasz the Corrupt"], "", "19.69%"};
-		{ 23, 316909, "", "=q4=Bloodfang Pants", "=ds="..BabbleBoss["Ragnaros"], "", "17.18%"};
-		{ 24, 316906, "", "=q4=Bloodfang Boots", "=ds="..BabbleBoss["Broodlord Lashlayer"], "", "15.66%"};
-		Prev = "T0Rogue25Man";
-		Next = "T3Rogue25Man";
-		Back = "T1T2T3SET";
-	};
-
-	AtlasLoot_Data["T1T2Shaman25Man"] = {
-		{ 1, 0, "Spell_FireResistanceTotem_01", "=q6=#t1s7#", "=ec1=#m30#"};
-		{ 2, 316842, "", "=q4=Earthfury Helmet", "=ds="..BabbleBoss["Garr"], "", "3.91%"};
-		{ 3, 316844, "", "=q4=Earthfury Epaulets", "=ds="..BabbleBoss["Baron Geddon"], "", "7.29%"};
-		{ 4, 316841, "", "=q4=Earthfury Vestments", "=ds="..BabbleBoss["Golemagg the Incinerator"], "", "6.08%"};
-		{ 5, 316840, "", "=q4=Earthfury Bracers", "=ds="..AL["Trash Mobs"], "", "0.06%"};
-		{ 6, 316839, "", "=q4=Earthfury Gauntlets", "=ds="..BabbleBoss["Gehennas"], "", "7.38%"};
-		{ 7, 316838, "", "=q4=Earthfury Belt", "=ds="..AL["Trash Mobs"], "", "0.07%"};
-		{ 8, 316843, "", "=q4=Earthfury Legguards", "=ds="..BabbleBoss["Magmadar"], "", "4.73%"};
-		{ 9, 316837, "", "=q4=Earthfury Boots", "=ds="..BabbleBoss["Lucifron"], "", "4.16%"};
-		{ 16, 0, "Spell_FireResistanceTotem_01", "=q6=#t2s7#", "=ec1=#m31#"};
-		{ 17, 316947, "", "=q4=Helmet of Ten Storms", "=ds="..BabbleBoss["Nefarian"], "", "4.86%"};
-		{ 18, 316945, "", "=q4=Epaulets of Ten Storms", "=ds="..BabbleBoss["Chromaggus"], "", "6.73%"};
-		{ 19, 316950, "", "=q4=Breastplate of Ten Storms", "=ds="..BabbleBoss["Nefarian"], "", "5.65%"};
-		{ 20, 316943, "", "=q4=Bracers of Ten Storms", "=ds="..BabbleBoss["Razorgore the Untamed"], "", "7.54%"};
-		{ 21, 316948, "", "=q4=Gauntlets of Ten Storms", "=ds="..BabbleBoss["Firemaw"]..", "..BabbleBoss["Ebonroc"]..", "..BabbleBoss["Flamegor"], "", "2.13%"};
-		{ 22, 316944, "", "=q4=Belt of Ten Storms", "=ds="..BabbleBoss["Vaelastrasz the Corrupt"], "", "6.93%"};
-		{ 23, 316946, "", "=q4=Legplates of Ten Storms", "=ds="..BabbleBoss["Ragnaros"], "", "5.97%"};
-		{ 24, 316949, "", "=q4=Greaves of Ten Storms", "=ds="..BabbleBoss["Broodlord Lashlayer"], "", "5.57%"};
-		Prev = "T0Shaman25Man";
-		Next = "T3Shaman25Man";
-		Back = "T1T2T3SET";
-	};
-
-	AtlasLoot_Data["T1T2Warlock25Man"] = {
-		{ 1, 0, "Spell_Shadow_CurseOfTounges", "=q6=#t1s8#", "=ec1=#m30#"};
-		{ 2, 316808, "", "=q4=Felheart Horns", "=ds="..BabbleBoss["Garr"], "", "10.62%"};
-		{ 3, 316807, "", "=q4=Felheart Shoulder Pads", "=ds="..BabbleBoss["Baron Geddon"], "", "19.78%"};
-		{ 4, 316809, "", "=q4=Felheart Robes", "=ds="..BabbleBoss["Golemagg the Incinerator"], "", "15.66%"};
-		{ 5, 316804, "", "=q4=Felheart Bracers", "=ds="..AL["Trash Mobs"], "", "0.16%"};
-		{ 6, 316805, "", "=q4=Felheart Gloves", "=ds="..BabbleBoss["Lucifron"], "", "14.89%"};
-		{ 7, 316806, "", "=q4=Felheart Belt", "=ds="..AL["Trash Mobs"], "", "0.19%"};
-		{ 8, 316810, "", "=q4=Felheart Pants", "=ds="..BabbleBoss["Magmadar"], "", "13.75%"};
-		{ 9, 316803, "", "=q4=Felheart Slippers", "=ds="..BabbleBoss["Shazzrah"], "", "15.28%"};
-		{ 16, 0, "Spell_Shadow_CurseOfTounges", "=q6=#t2s8#", "=ec1=#m31#"};
-		{ 17, 316929, "", "=q4=Nemesis Skullcap", "=ds="..BabbleBoss["Nefarian"], "", "13.54%"};
-		{ 18, 316932, "", "=q4=Nemesis Spaulders", "=ds="..BabbleBoss["Chromaggus"], "", "16.26%"};
-		{ 19, 316931, "", "=q4=Nemesis Robes", "=ds="..BabbleBoss["Nefarian"], "", "12.46%"};
-		{ 20, 316934, "", "=q4=Nemesis Bracers", "=ds="..BabbleBoss["Razorgore the Untamed"], "", "18.11%"};
-		{ 21, 316928, "", "=q4=Nemesis Gloves", "=ds="..BabbleBoss["Firemaw"]..", "..BabbleBoss["Ebonroc"]..", "..BabbleBoss["Flamegor"], "", "5.28%"};
-		{ 22, 316933, "", "=q4=Nemesis Belt", "=ds="..BabbleBoss["Vaelastrasz the Corrupt"], "", "18.42%"};
-		{ 23, 316930, "", "=q4=Nemesis Leggings", "=ds="..BabbleBoss["Ragnaros"], "", "16.87%"};
-		{ 24, 316927, "", "=q4=Nemesis Boots", "=ds="..BabbleBoss["Broodlord Lashlayer"], "", "15.32%"};
-		Prev = "T0Warlock25Man";
-		Next = "T3Warlock25Man";
-		Back = "T1T2T3SET";
-	};
-
-	AtlasLoot_Data["T1T2Warrior25Man"] = {
-		{ 1, 0, "INV_Shield_05", "=q6=#t1s9#", "=ec1=#m30#"};
-		{ 2, 316866, "", "=q4=Helm of Might", "=ds="..BabbleBoss["Garr"], "", "11.39%"};
-		{ 3, 316868, "", "=q4=Pauldrons of Might", "=ds="..BabbleBoss["Sulfuron Harbinger"], "", "21.14%"};
-		{ 4, 316865, "", "=q4=Breastplate of Might", "=ds="..BabbleBoss["Golemagg the Incinerator"], "", "15.28%"};
-		{ 5, 316861, "", "=q4=Bracers of Might", "=ds="..AL["Trash Mobs"], "", "0.16%"};
-		{ 6, 316863, "", "=q4=Gauntlets of Might", "=ds="..BabbleBoss["Lucifron"], "", "16.40%"};
-		{ 7, 316864, "", "=q4=Belt of Might", "=ds="..AL["Trash Mobs"], "", "0.16%"};
-		{ 8, 316867, "", "=q4=Legplates of Might", "=ds="..BabbleBoss["Magmadar"], "", "13.97%"};
-		{ 9, 316862, "", "=q4=Sabatons of Might", "=ds="..BabbleBoss["Gehennas"], "", "14.48%"};
-		{ 16, 0, "INV_Shield_05", "=q6=#t2s9#", "=ec1=#m31#"};
-		{ 17, 316963, "", "=q4=Helm of Wrath", "=ds="..BabbleBoss["Nefarian"], "", "13.65%"};
-		{ 18, 316961, "", "=q4=Pauldrons of Wrath", "=ds="..BabbleBoss["Chromaggus"], "", "16.83%"};
-		{ 19, 316966, "", "=q4=Breastplate of Wrath", "=ds="..BabbleBoss["Nefarian"], "", "15.06%"};
-		{ 20, 316959, "", "=q4=Bracelets of Wrath", "=ds="..BabbleBoss["Razorgore the Untamed"], "", "20.29%"};
-		{ 21, 316964, "", "=q4=Gauntlets of Wrath", "=ds="..BabbleBoss["Firemaw"]..", "..BabbleBoss["Ebonroc"]..", "..BabbleBoss["Flamegor"], "", "5.93%"};
-		{ 22, 316960, "", "=q4=Waistband of Wrath", "=ds="..BabbleBoss["Vaelastrasz the Corrupt"], "", "20.03%"};
-		{ 23, 316962, "", "=q4=Legplates of Wrath", "=ds="..BabbleBoss["Ragnaros"], "", "17.23%"};
-		{ 24, 316965, "", "=q4=Sabatons of Wrath", "=ds="..BabbleBoss["Broodlord Lashlayer"], "", "16.84%"};
-		Prev = "T0Warrior25Man";
-		Next = "T3Warrior25Man";
-		Back = "T1T2T3SET";
-	};
-
-	AtlasLoot_Data["T1T2DPSWarrior25Man"] = {
-		{ 1, 0, "Ability_Warrior_BattleShout", "=q6=#t1s9#", "=ec1=#m30#"};
-		{ 2, 310480, "", "=q4=Faceguard of Might", "=ds="..BabbleBoss["Garr"], ""};
-		{ 3, 310481, "", "=q4=Shoulderpads of Might", "=ds="..BabbleBoss["Sulfuron Harbinger"], ""};
-		{ 4, 310482, "", "=q4=Chestplate of Might", "=ds="..BabbleBoss["Golemagg the Incinerator"], ""};
-		{ 5, 310483, "", "=q4=Wristguards of Might", "=ds="..AL["Trash Mobs"], ""};
-		{ 6, 310484, "", "=q4=Handguards of Might", "=ds="..BabbleBoss["Lucifron"], ""};
-		{ 7, 310485, "", "=q4=Girdle of Might", "=ds="..AL["Trash Mobs"], ""};
-		{ 8, 310486, "", "=q4=Legguards of Might", "=ds="..BabbleBoss["Magmadar"], ""};
-		{ 9, 310487, "", "=q4=Stompers of Might", "=ds="..BabbleBoss["Gehennas"], ""};
-		{ 16, 0, "Ability_Warrior_BattleShout", "=q6=#t2s10#", "=ec1=#m31#"};
-		{ 17, 310904, "", "=q4=Faceguard of Wrath", "=ds="..BabbleBoss["Nefarian"], "", "13.65%"};
-		{ 18, 310902, "", "=q4=Shoulderpads of Wrath", "=ds="..BabbleBoss["Chromaggus"], "", "16.83%"};
-		{ 19, 310907, "", "=q4=Chestplate of Wrath", "=ds="..BabbleBoss["Nefarian"], "", "15.06%"};
-		{ 20, 310900, "", "=q4=Wristguards of Wrath", "=ds="..BabbleBoss["Razorgore the Untamed"], "", "20.29%"};
-		{ 21, 310905, "", "=q4=Grippers of Wrath", "=ds="..BabbleBoss["Firemaw"]..", "..BabbleBoss["Ebonroc"]..", "..BabbleBoss["Flamegor"], "", "5.93%"};
-		{ 22, 310901, "", "=q4=Belt of Wrath", "=ds="..BabbleBoss["Vaelastrasz the Corrupt"], "", "20.03%"};
-		{ 23, 310903, "", "=q4=Legguards of Wrath", "=ds="..BabbleBoss["Ragnaros"], "", "17.23%"};
-		{ 24, 310906, "", "=q4=Stompers of Wrath", "=ds="..BabbleBoss["Broodlord Lashlayer"], "", "16.84%"};
-		Next = "T3DPSWarrior25Man";
-		Back = "T1T2T3SET";
-	};
-
-	------------------------------------
-	--- Tier 1/2 Sets (T1/T2) ASCENDED ---
-	------------------------------------
-
-	AtlasLoot_Data["T1T2Druid"] = {
-		{ 1, 0, "Spell_Nature_Regeneration", "=q6=#t1s1#", "=ec1=#m30#"};
-		{ 2, 216834, "", "=q4=Cenarion Helm", "=ds="..BabbleBoss["Garr"], "", "11.51%"};
-		{ 3, 216836, "", "=q4=Cenarion Spaulders", "=ds="..BabbleBoss["Baron Geddon"], "", "19.52%"};
-		{ 4, 216833, "", "=q4=Cenarion Vestments", "=ds="..BabbleBoss["Golemagg the Incinerator"], "", "15.21%"};
-		{ 5, 216830, "", "=q4=Cenarion Bracers", "=ds="..AL["Trash Mobs"], "", "0.17%"};
-		{ 6, 216831, "", "=q4=Cenarion Gloves", "=ds="..BabbleBoss["Shazzrah"], "", "19.53%"};
-		{ 7, 216828, "", "=q4=Cenarion Belt", "=ds="..AL["Trash Mobs"], "", "0.16%"};
-		{ 8, 216835, "", "=q4=Cenarion Leggings", "=ds="..BabbleBoss["Magmadar"], "", "12.90%"};
-		{ 9, 216829, "", "=q4=Cenarion Boots", "=ds="..BabbleBoss["Lucifron"], "", "10.72%"};
-		{ 16, 0, "Spell_Nature_Regeneration", "=q6=#t2s1#", "=ec1=#m31#"};
-		{ 17, 216900, "", "=q4=Stormrage Cover", "=ds="..BabbleBoss["Nefarian"], "", "13.08%"};
-		{ 18, 216902, "", "=q4=Stormrage Pauldrons", "=ds="..BabbleBoss["Chromaggus"], "", "14.63%"};
-		{ 19, 216897, "", "=q4=Stormrage Chestguard", "=ds="..BabbleBoss["Nefarian"], "", "11.89%"};
-		{ 20, 216904, "", "=q4=Stormrage Bracers", "=ds="..BabbleBoss["Razorgore the Untamed"], "", "17.38%"};
-		{ 21, 216899, "", "=q4=Stormrage Handguards", "=ds="..BabbleBoss["Firemaw"]..", "..BabbleBoss["Ebonroc"]..", "..BabbleBoss["Flamegor"], "", "5.34%"};
-		{ 22, 216903, "", "=q4=Stormrage Belt", "=ds="..BabbleBoss["Vaelastrasz the Corrupt"], "", "16.90%"};
-		{ 23, 216901, "", "=q4=Stormrage Legguards", "=ds="..BabbleBoss["Ragnaros"], "", "15.49%"};
-		{ 24, 216898, "", "=q4=Stormrage Boots", "=ds="..BabbleBoss["Broodlord Lashlayer"], "", "13.79%"};
-		Prev = "T0Druid";
-		Next = "T3Druid";
-		Back = "T1T2T3SET";
-	};
-
-	AtlasLoot_Data["T1T2Hunter"] = {
-		{ 1, 0, "Ability_Hunter_RunningShot", "=q6=#t1s2#", "=ec1=#m30#"};
-		{ 2, 216846, "", "=q4=Giantstalker's Helmet", "=ds="..BabbleBoss["Garr"], "", "11.57%"};
-		{ 3, 216848, "", "=q4=Giantstalker's Epaulets", "=ds="..BabbleBoss["Sulfuron Harbinger"], "", "19.64%"};
-		{ 4, 216845, "", "=q4=Giantstalker's Breastplate", "=ds="..BabbleBoss["Golemagg the Incinerator"], "", "15.83%"};
-		{ 5, 216850, "", "=q4=Giantstalker's Bracers", "=ds="..AL["Trash Mobs"], "", "0.18%"};
-		{ 6, 216852, "", "=q4=Giantstalker's Gloves", "=ds="..BabbleBoss["Shazzrah"], "", "18.58%"};
-		{ 7, 216851, "", "=q4=Giantstalker's Belt", "=ds="..AL["Trash Mobs"], "", "0.17%"};
-		{ 8, 216847, "", "=q4=Giantstalker's Leggings", "=ds="..BabbleBoss["Magmadar"], "", "13.28%"};
-		{ 9, 216849, "", "=q4=Giantstalker's Boots", "=ds="..BabbleBoss["Gehennas"], "", "14.54%"};
-		{ 16, 0, "Ability_Hunter_RunningShot", "=q6=#t2s2#", "=ec1=#m31#"};
-		{ 17, 216939, "", "=q4=Dragonstalker's Helm", "=ds="..BabbleBoss["Nefarian"], "", "13.91%"};
-		{ 18, 216937, "", "=q4=Dragonstalker's Spaulders", "=ds="..BabbleBoss["Chromaggus"], "", "16.20%"};
-		{ 19, 216942, "", "=q4=Dragonstalker's Breastplate", "=ds="..BabbleBoss["Nefarian"], "", "13.30%"};
-		{ 20, 216935, "", "=q4=Dragonstalker's Bracers", "=ds="..BabbleBoss["Razorgore the Untamed"], "", "19.13%"};
-		{ 21, 216940, "", "=q4=Dragonstalker's Gauntlets", "=ds="..BabbleBoss["Firemaw"]..", "..BabbleBoss["Ebonroc"]..", "..BabbleBoss["Flamegor"], "", "6.13%"};
-		{ 22, 216936, "", "=q4=Dragonstalker's Belt", "=ds="..BabbleBoss["Vaelastrasz the Corrupt"], "", "20.17%"};
-		{ 23, 216938, "", "=q4=Dragonstalker's Legguards", "=ds="..BabbleBoss["Ragnaros"], "", "16.02%"};
-		{ 24, 216941, "", "=q4=Dragonstalker's Greaves", "=ds="..BabbleBoss["Broodlord Lashlayer"], "", "17.78%"};
-		Prev = "T0Hunter";
-		Next = "T3Hunter";
-		Back = "T1T2T3SET";
-	};
-
-	AtlasLoot_Data["T1T2Mage"] = {
-		{ 1, 0, "Spell_Frost_IceStorm", "=q6=#t1s3#", "=ec1=#m30#"};
-		{ 2, 216795, "", "=q4=Arcanist Crown", "=ds="..BabbleBoss["Garr"], "", "11.31%"};
-		{ 3, 216797, "", "=q4=Arcanist Mantle", "=ds="..BabbleBoss["Baron Geddon"], "", "19.92%"};
-		{ 4, 216798, "", "=q4=Arcanist Robes", "=ds="..BabbleBoss["Golemagg the Incinerator"], "", "16.51%"};
-		{ 5, 216799, "", "=q4=Arcanist Bindings", "=ds="..AL["Trash Mobs"], "", "0.16%"};
-		{ 6, 216801, "", "=q4=Arcanist Gloves", "=ds="..BabbleBoss["Shazzrah"], "", "19.59%"};
-		{ 7, 216802, "", "=q4=Arcanist Belt", "=ds="..AL["Trash Mobs"], "", "0.16%"};
-		{ 8, 216796, "", "=q4=Arcanist Leggings", "=ds="..BabbleBoss["Magmadar"], "", "14.57%"};
-		{ 9, 216800, "", "=q4=Arcanist Boots", "=ds="..BabbleBoss["Lucifron"], "", "12.06%"};
-		{ 16, 0, "Spell_Frost_IceStorm", "=q6=#t2s3#", "=ec1=#m31#"};
-		{ 17, 216914, "", "=q4=Netherwind Crown", "=ds="..BabbleBoss["Nefarian"], "", "14.09%"};
-		{ 18, 216917, "", "=q4=Netherwind Mantle", "=ds="..BabbleBoss["Chromaggus"], "", "18.09%"};
-		{ 19, 216916, "", "=q4=Netherwind Robes", "=ds="..BabbleBoss["Nefarian"], "", "14.03%"};
-		{ 20, 216918, "", "=q4=Netherwind Bindings", "=ds="..BabbleBoss["Razorgore the Untamed"], "", "20.41%"};
-		{ 21, 216913, "", "=q4=Netherwind Gloves", "=ds="..BabbleBoss["Firemaw"]..", "..BabbleBoss["Ebonroc"]..", "..BabbleBoss["Flamegor"], "", "7.37%"};
-		{ 22, 216818, "", "=q4=Netherwind Belt", "=ds="..BabbleBoss["Vaelastrasz the Corrupt"], "", "19.94%"};
-		{ 23, 216915, "", "=q4=Netherwind Pants", "=ds="..BabbleBoss["Ragnaros"], "", "17.37%"};
-		{ 24, 216912, "", "=q4=Netherwind Boots", "=ds="..BabbleBoss["Broodlord Lashlayer"], "", "17.17%"};
-		Prev = "T0Mage";
-		Next = "T3Mage";
-		Back = "T1T2T3SET";
-	};
-
-	AtlasLoot_Data["T1T2Paladin"] = {
-		{ 1, 0, "Spell_Holy_SealOfMight", "=q6=#t1s4#", "=ec1=#m30#"};
-		{ 2, 216854, "", "=q4=Lawbringer Helm", "=ds="..BabbleBoss["Garr"], "", "7.23%"};
-		{ 3, 216856, "", "=q4=Lawbringer Spaulders", "=ds="..BabbleBoss["Baron Geddon"], "", "12.62%"};
-		{ 4, 216853, "", "=q4=Lawbringer Chestguard", "=ds="..BabbleBoss["Golemagg the Incinerator"], "", "9.53%"};
-		{ 5, 216857, "", "=q4=Lawbringer Bracers", "=ds="..AL["Trash Mobs"], "", "0.11%"};
-		{ 6, 216860, "", "=q4=Lawbringer Gauntlets", "=ds="..BabbleBoss["Gehennas"], "", "11.77%"};
-		{ 7, 216858, "", "=q4=Lawbringer Belt", "=ds="..AL["Trash Mobs"], "", "0.10%"};
-		{ 8, 216855, "", "=q4=Lawbringer Legplates", "=ds="..BabbleBoss["Magmadar"], "", "8.54%"};
-		{ 9, 216859, "", "=q4=Lawbringer Boots", "=ds="..BabbleBoss["Lucifron"], "", "7.20%"};
-		{ 16, 0, "Spell_Holy_SealOfMight", "=q6=#t2s4#", "=ec1=#m31#"};
-		{ 17, 216955, "", "=q4=Judgement Crown", "=ds="..BabbleBoss["Nefarian"], "", "8.64%"};
-		{ 18, 216953, "", "=q4=Judgement Spaulders", "=ds="..BabbleBoss["Chromaggus"], "", "10.97%"};
-		{ 19, 216958, "", "=q4=Judgement Breastplate", "=ds="..BabbleBoss["Nefarian"], "", "9.24%"};
-		{ 20, 216951, "", "=q4=Judgement Bindings", "=ds="..BabbleBoss["Razorgore the Untamed"], "", "13.61%"};
-		{ 21, 216956, "", "=q4=Judgement Gauntlets", "=ds="..BabbleBoss["Firemaw"]..", "..BabbleBoss["Ebonroc"]..", "..BabbleBoss["Flamegor"], "", "3.58%"};
-		{ 22, 216952, "", "=q4=Judgement Belt", "=ds="..BabbleBoss["Vaelastrasz the Corrupt"], "", "12.23%"};
-		{ 23, 216954, "", "=q4=Judgement Legplates", "=ds="..BabbleBoss["Ragnaros"], "", "10.81%"};
-		{ 24, 216957, "", "=q4=Judgement Sabatons", "=ds="..BabbleBoss["Broodlord Lashlayer"], "", "11.28%"};
-		Prev = "T0Paladin";
-		Next = "T3Paladin";
-		Back = "T1T2T3SET";
-	};
-
-	AtlasLoot_Data["T1T2Priest"] = {
-		{ 1, 0, "Spell_Holy_PowerWordShield", "=q6=#t1s5#", "=ec1=#m30#"};
-		{ 2, 216813, "", "=q4=Circlet of Prophecy", "=ds="..BabbleBoss["Garr"], "", "11.36%"};
-		{ 3, 216816, "", "=q4=Mantle of Prophecy", "=ds="..BabbleBoss["Sulfuron Harbinger"], "", "21.06%"};
-		{ 4, 216815, "", "=q4=Robes of Prophecy", "=ds="..BabbleBoss["Golemagg the Incinerator"], "", "15.65%"};
-		{ 5, 216819, "", "=q4=Vambraces of Prophecy", "=ds="..AL["Trash Mobs"], "", "0.16%"};
-		{ 6, 216812, "", "=q4=Gloves of Prophecy", "=ds="..BabbleBoss["Gehennas"], "", "18.65%"};
-		{ 7, 216817, "", "=q4=Girdle of Prophecy", "=ds="..AL["Trash Mobs"], "", "0.18%"};
-		{ 8, 216814, "", "=q4=Pants of Prophecy", "=ds="..BabbleBoss["Magmadar"], "", "14.33%"};
-		{ 9, 216811, "", "=q4=Boots of Prophecy", "=ds="..BabbleBoss["Shazzrah"], "", "14.90%"};
-		{ 16, 0, "Spell_Holy_PowerWordShield", "=q6=#t2s5#", "=ec1=#m31#"};
-		{ 17, 216921, "", "=q4=Halo of Transcendence", "=ds="..BabbleBoss["Nefarian"], "", "13.39%"};
-		{ 18, 216924, "", "=q4=Pauldrons of Transcendence", "=ds="..BabbleBoss["Chromaggus"], "", "17.83%"};
-		{ 19, 216923, "", "=q4=Robes of Transcendence", "=ds="..BabbleBoss["Nefarian"], "", "14.83%"};
-		{ 20, 216926, "", "=q4=Bindings of Transcendence", "=ds="..BabbleBoss["Razorgore the Untamed"], "", "20.37%"};
-		{ 21, 216920, "", "=q4=Handguards of Transcendence", "=ds="..BabbleBoss["Firemaw"]..", "..BabbleBoss["Ebonroc"]..", "..BabbleBoss["Flamegor"], "", "6.01%"};
-		{ 22, 216925, "", "=q4=Belt of Transcendence", "=ds="..BabbleBoss["Vaelastrasz the Corrupt"], "", "18.76%"};
-		{ 23, 216922, "", "=q4=Leggings of Transcendence", "=ds="..BabbleBoss["Ragnaros"], "", "17.30%"};
-		{ 24, 216919, "", "=q4=Boots of Transcendence", "=ds="..BabbleBoss["Broodlord Lashlayer"], "", "14.61%"};
-		Prev = "T0Priest";
-		Next = "T3Priest";
-		Back = "T1T2T3SET";
-	};
-
-	AtlasLoot_Data["T1T2Rogue"] = {
-		{ 1, 0, "Ability_BackStab", "=q6=#t1s6#", "=ec1=#m30#"};
-		{ 2, 216821, "", "=q4=Nightslayer Cover", "=ds="..BabbleBoss["Garr"], "", "10.38%"};
-		{ 3, 216823, "", "=q4=Nightslayer Shoulder Pads", "=ds="..BabbleBoss["Sulfuron Harbinger"], "", "20.66%"};
-		{ 4, 216820, "", "=q4=Nightslayer Chestpiece", "=ds="..BabbleBoss["Golemagg the Incinerator"], "", "16.76%"};
-		{ 5, 216825, "", "=q4=Nightslayer Bracelets", "=ds="..AL["Trash Mobs"], "", "0.17%"};
-		{ 6, 216826, "", "=q4=Nightslayer Gloves", "=ds="..BabbleBoss["Gehennas"], "", "19.47%"};
-		{ 7, 216827, "", "=q4=Nightslayer Belt", "=ds="..AL["Trash Mobs"], "", "0.15%"};
-		{ 8, 216822, "", "=q4=Nightslayer Pants", "=ds="..BabbleBoss["Magmadar"], "", "13.83%"};
-		{ 9, 216824, "", "=q4=Nightslayer Boots", "=ds="..BabbleBoss["Shazzrah"], "", "15.58%"};
-		{ 16, 0, "Ability_BackStab", "=q6=#t2s6#", "=ec1=#m31#"};
-		{ 17, 216908, "", "=q4=Bloodfang Hood", "=ds="..BabbleBoss["Nefarian"], "", "13.21%"};
-		{ 18, 216832, "", "=q4=Bloodfang Spaulders", "=ds="..BabbleBoss["Chromaggus"], "", "17.03%"};
-		{ 19, 216905, "", "=q4=Bloodfang Chestpiece", "=ds="..BabbleBoss["Nefarian"], "", "14.21%"};
-		{ 20, 216911, "", "=q4=Bloodfang Bracers", "=ds="..BabbleBoss["Razorgore the Untamed"], "", "20.69%"};
-		{ 21, 216907, "", "=q4=Bloodfang Gloves", "=ds="..BabbleBoss["Firemaw"]..", "..BabbleBoss["Ebonroc"]..", "..BabbleBoss["Flamegor"], "", "6.84%"};
-		{ 22, 216910, "", "=q4=Bloodfang Belt", "=ds="..BabbleBoss["Vaelastrasz the Corrupt"], "", "19.69%"};
-		{ 23, 216909, "", "=q4=Bloodfang Pants", "=ds="..BabbleBoss["Ragnaros"], "", "17.18%"};
-		{ 24, 216906, "", "=q4=Bloodfang Boots", "=ds="..BabbleBoss["Broodlord Lashlayer"], "", "15.66%"};
-		Prev = "T0Rogue";
-		Next = "T3Rogue";
-		Back = "T1T2T3SET";
-	};
-
-	AtlasLoot_Data["T1T2Shaman"] = {
-		{ 1, 0, "Spell_FireResistanceTotem_01", "=q6=#t1s7#", "=ec1=#m30#"};
-		{ 2, 216842, "", "=q4=Earthfury Helmet", "=ds="..BabbleBoss["Garr"], "", "3.91%"};
-		{ 3, 216844, "", "=q4=Earthfury Epaulets", "=ds="..BabbleBoss["Baron Geddon"], "", "7.29%"};
-		{ 4, 216841, "", "=q4=Earthfury Vestments", "=ds="..BabbleBoss["Golemagg the Incinerator"], "", "6.08%"};
-		{ 5, 216840, "", "=q4=Earthfury Bracers", "=ds="..AL["Trash Mobs"], "", "0.06%"};
-		{ 6, 216839, "", "=q4=Earthfury Gauntlets", "=ds="..BabbleBoss["Gehennas"], "", "7.38%"};
-		{ 7, 216838, "", "=q4=Earthfury Belt", "=ds="..AL["Trash Mobs"], "", "0.07%"};
-		{ 8, 216843, "", "=q4=Earthfury Legguards", "=ds="..BabbleBoss["Magmadar"], "", "4.73%"};
-		{ 9, 216837, "", "=q4=Earthfury Boots", "=ds="..BabbleBoss["Lucifron"], "", "4.16%"};
-		{ 16, 0, "Spell_FireResistanceTotem_01", "=q6=#t2s7#", "=ec1=#m31#"};
-		{ 17, 216947, "", "=q4=Helmet of Ten Storms", "=ds="..BabbleBoss["Nefarian"], "", "4.86%"};
-		{ 18, 216945, "", "=q4=Epaulets of Ten Storms", "=ds="..BabbleBoss["Chromaggus"], "", "6.73%"};
-		{ 19, 216950, "", "=q4=Breastplate of Ten Storms", "=ds="..BabbleBoss["Nefarian"], "", "5.65%"};
-		{ 20, 216943, "", "=q4=Bracers of Ten Storms", "=ds="..BabbleBoss["Razorgore the Untamed"], "", "7.54%"};
-		{ 21, 216948, "", "=q4=Gauntlets of Ten Storms", "=ds="..BabbleBoss["Firemaw"]..", "..BabbleBoss["Ebonroc"]..", "..BabbleBoss["Flamegor"], "", "2.13%"};
-		{ 22, 216944, "", "=q4=Belt of Ten Storms", "=ds="..BabbleBoss["Vaelastrasz the Corrupt"], "", "6.93%"};
-		{ 23, 216946, "", "=q4=Legplates of Ten Storms", "=ds="..BabbleBoss["Ragnaros"], "", "5.97%"};
-		{ 24, 216949, "", "=q4=Greaves of Ten Storms", "=ds="..BabbleBoss["Broodlord Lashlayer"], "", "5.57%"};
-		Prev = "T0Shaman";
-		Next = "T3Shaman";
-		Back = "T1T2T3SET";
-	};
-
-	AtlasLoot_Data["T1T2Warlock"] = {
-		{ 1, 0, "Spell_Shadow_CurseOfTounges", "=q6=#t1s8#", "=ec1=#m30#"};
-		{ 2, 216808, "", "=q4=Felheart Horns", "=ds="..BabbleBoss["Garr"], "", "10.62%"};
-		{ 3, 216807, "", "=q4=Felheart Shoulder Pads", "=ds="..BabbleBoss["Baron Geddon"], "", "19.78%"};
-		{ 4, 216809, "", "=q4=Felheart Robes", "=ds="..BabbleBoss["Golemagg the Incinerator"], "", "15.66%"};
-		{ 5, 216804, "", "=q4=Felheart Bracers", "=ds="..AL["Trash Mobs"], "", "0.16%"};
-		{ 6, 216805, "", "=q4=Felheart Gloves", "=ds="..BabbleBoss["Lucifron"], "", "14.89%"};
-		{ 7, 216806, "", "=q4=Felheart Belt", "=ds="..AL["Trash Mobs"], "", "0.19%"};
-		{ 8, 216810, "", "=q4=Felheart Pants", "=ds="..BabbleBoss["Magmadar"], "", "13.75%"};
-		{ 9, 216803, "", "=q4=Felheart Slippers", "=ds="..BabbleBoss["Shazzrah"], "", "15.28%"};
-		{ 16, 0, "Spell_Shadow_CurseOfTounges", "=q6=#t2s8#", "=ec1=#m31#"};
-		{ 17, 216929, "", "=q4=Nemesis Skullcap", "=ds="..BabbleBoss["Nefarian"], "", "13.54%"};
-		{ 18, 216932, "", "=q4=Nemesis Spaulders", "=ds="..BabbleBoss["Chromaggus"], "", "16.26%"};
-		{ 19, 216931, "", "=q4=Nemesis Robes", "=ds="..BabbleBoss["Nefarian"], "", "12.46%"};
-		{ 20, 216934, "", "=q4=Nemesis Bracers", "=ds="..BabbleBoss["Razorgore the Untamed"], "", "18.11%"};
-		{ 21, 216928, "", "=q4=Nemesis Gloves", "=ds="..BabbleBoss["Firemaw"]..", "..BabbleBoss["Ebonroc"]..", "..BabbleBoss["Flamegor"], "", "5.28%"};
-		{ 22, 216933, "", "=q4=Nemesis Belt", "=ds="..BabbleBoss["Vaelastrasz the Corrupt"], "", "18.42%"};
-		{ 23, 216930, "", "=q4=Nemesis Leggings", "=ds="..BabbleBoss["Ragnaros"], "", "16.87%"};
-		{ 24, 216927, "", "=q4=Nemesis Boots", "=ds="..BabbleBoss["Broodlord Lashlayer"], "", "15.32%"};
-		Prev = "T0Warlock";
-		Next = "T3Warlock";
-		Back = "T1T2T3SET";
-	};
-
-	AtlasLoot_Data["T1T2Warrior"] = {
-		{ 1, 0, "INV_Shield_05", "=q6=#t1s9#", "=ec1=#m30#"};
-		{ 2, 216866, "", "=q4=Helm of Might", "=ds="..BabbleBoss["Garr"], "", "11.39%"};
-		{ 3, 216868, "", "=q4=Pauldrons of Might", "=ds="..BabbleBoss["Sulfuron Harbinger"], "", "21.14%"};
-		{ 4, 216865, "", "=q4=Breastplate of Might", "=ds="..BabbleBoss["Golemagg the Incinerator"], "", "15.28%"};
-		{ 5, 216861, "", "=q4=Bracers of Might", "=ds="..AL["Trash Mobs"], "", "0.16%"};
-		{ 6, 216863, "", "=q4=Gauntlets of Might", "=ds="..BabbleBoss["Lucifron"], "", "16.40%"};
-		{ 7, 216864, "", "=q4=Belt of Might", "=ds="..AL["Trash Mobs"], "", "0.16%"};
-		{ 8, 216867, "", "=q4=Legplates of Might", "=ds="..BabbleBoss["Magmadar"], "", "13.97%"};
-		{ 9, 216862, "", "=q4=Sabatons of Might", "=ds="..BabbleBoss["Gehennas"], "", "14.48%"};
-		{ 16, 0, "INV_Shield_05", "=q6=#t2s9#", "=ec1=#m31#"};
-		{ 17, 216963, "", "=q4=Helm of Wrath", "=ds="..BabbleBoss["Nefarian"], "", "13.65%"};
-		{ 18, 216961, "", "=q4=Pauldrons of Wrath", "=ds="..BabbleBoss["Chromaggus"], "", "16.83%"};
-		{ 19, 216966, "", "=q4=Breastplate of Wrath", "=ds="..BabbleBoss["Nefarian"], "", "15.06%"};
-		{ 20, 216959, "", "=q4=Bracelets of Wrath", "=ds="..BabbleBoss["Razorgore the Untamed"], "", "20.29%"};
-		{ 21, 216964, "", "=q4=Gauntlets of Wrath", "=ds="..BabbleBoss["Firemaw"]..", "..BabbleBoss["Ebonroc"]..", "..BabbleBoss["Flamegor"], "", "5.93%"};
-		{ 22, 216960, "", "=q4=Waistband of Wrath", "=ds="..BabbleBoss["Vaelastrasz the Corrupt"], "", "20.03%"};
-		{ 23, 216962, "", "=q4=Legplates of Wrath", "=ds="..BabbleBoss["Ragnaros"], "", "17.23%"};
-		{ 24, 216965, "", "=q4=Sabatons of Wrath", "=ds="..BabbleBoss["Broodlord Lashlayer"], "", "16.84%"};
-		Prev = "T0Warrior";
-		Next = "T3Warrior";
-		Back = "T1T2T3SET";
-	};
-
-	AtlasLoot_Data["T1T2DPSWarrior"] = {
-		{ 1, 0, "Ability_Warrior_BattleShout", "=q6=#t1s9#", "=ec1=#m30#"};
-		{ 2, 210480, "", "=q4=Faceguard of Might", "=ds="..BabbleBoss["Garr"], ""};
-		{ 3, 210481, "", "=q4=Shoulderpads of Might", "=ds="..BabbleBoss["Sulfuron Harbinger"], ""};
-		{ 4, 210482, "", "=q4=Chestplate of Might", "=ds="..BabbleBoss["Golemagg the Incinerator"], ""};
-		{ 5, 210483, "", "=q4=Wristguards of Might", "=ds="..AL["Trash Mobs"], ""};
-		{ 6, 210484, "", "=q4=Handguards of Might", "=ds="..BabbleBoss["Lucifron"], ""};
-		{ 7, 210485, "", "=q4=Girdle of Might", "=ds="..AL["Trash Mobs"], ""};
-		{ 8, 210486, "", "=q4=Legguards of Might", "=ds="..BabbleBoss["Magmadar"], ""};
-		{ 9, 210487, "", "=q4=Stompers of Might", "=ds="..BabbleBoss["Gehennas"], ""};
-		{ 16, 0, "Ability_Warrior_BattleShout", "=q6=#t2s10#", "=ec1=#m31#"};
-		{ 17, 210904, "", "=q4=Faceguard of Wrath", "=ds="..BabbleBoss["Nefarian"], "", "13.65%"};
-		{ 18, 210902, "", "=q4=Shoulderpads of Wrath", "=ds="..BabbleBoss["Chromaggus"], "", "16.83%"};
-		{ 19, 210907, "", "=q4=Chestplate of Wrath", "=ds="..BabbleBoss["Nefarian"], "", "15.06%"};
-		{ 20, 210900, "", "=q4=Wristguards of Wrath", "=ds="..BabbleBoss["Razorgore the Untamed"], "", "20.29%"};
-		{ 21, 210905, "", "=q4=Grippers of Wrath", "=ds="..BabbleBoss["Firemaw"]..", "..BabbleBoss["Ebonroc"]..", "..BabbleBoss["Flamegor"], "", "5.93%"};
-		{ 22, 210901, "", "=q4=Belt of Wrath", "=ds="..BabbleBoss["Vaelastrasz the Corrupt"], "", "20.03%"};
-		{ 23, 210903, "", "=q4=Legguards of Wrath", "=ds="..BabbleBoss["Ragnaros"], "", "17.23%"};
-		{ 24, 210906, "", "=q4=Stompers of Wrath", "=ds="..BabbleBoss["Broodlord Lashlayer"], "", "16.84%"};
-		Next = "T3DPSWarrior";
-		Back = "T1T2T3SET";
-	};
 
 		------------------------
 		--- Tier 3 Sets (T3) ---
@@ -5782,6 +5317,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 10, 23064, "", "=q4=Ring of the Dreamwalker", "=ds="};
 		Prev = "T1T2Druid";
 		Back = "T1T2T3SET";
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["T3Hunter"] = {
@@ -5797,6 +5333,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 10, 23067, "", "=q4=Ring of the Cryptstalker", "=ds="};
 		Prev = "T1T2Hunter";
 		Back = "T1T2T3SET";
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["T3Mage"] = {
@@ -5812,6 +5349,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 10, 23062, "", "=q4=Frostfire Ring", "=ds="};
 		Prev = "T1T2Mage";
 		Back = "T1T2T3SET";
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["T3Paladin"] = {
@@ -5827,6 +5365,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 10, 23066, "", "=q4=Ring of Redemption", "=ds="};
 		Prev = "T1T2Paladin";
 		Back = "T1T2T3SET";
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["T3Priest"] = {
@@ -5842,6 +5381,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 10, 23061, "", "=q4=Ring of Faith", "=ds="};
 		Prev = "T1T2Priest";
 		Back = "T1T2T3SET";
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["T3Rogue"] = {
@@ -5857,6 +5397,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 10, 23060, "", "=q4=Bonescythe Ring", "=ds="};
 		Prev = "T1T2Rogue";
 		Back = "T1T2T3SET";
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["T3Shaman"] = {
@@ -5872,6 +5413,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 10, 23065, "", "=q4=Ring of the Earthshatterer", "=ds="};
 		Prev = "T1T2Shaman";
 		Back = "T1T2T3SET";
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["T3Warlock"] = {
@@ -5887,6 +5429,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 10, 23063, "", "=q4=Plagueheart Ring", "=ds="};
 		Prev = "T1T2Warlock";
 		Back = "T1T2T3SET";
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["T3Warrior"] = {
@@ -5902,6 +5445,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 10, 23059, "", "=q4=Ring of the Dreadnaught", "=ds="};
 		Prev = "T1T2Warrior";
 		Back = "T1T2T3SET";
+		Type = "Raid";
 	};
 	
 	AtlasLoot_Data["T3DPSWarrior"] = {
@@ -5917,314 +5461,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 10, 10496, "", "=q4=Dreadborne Ring", "=ds="};
 		Prev = "T1T2DPSWarrior";
 		Back = "T1T2T3SET";
-	};
-
-	-------------------------------
-	--- Tier 3 Sets (T3) HEROIC FLEX ---
-	-------------------------------
-
-	AtlasLoot_Data["T3Druid25Man"] = {
-		{ 1, 0, "Spell_Nature_Regeneration", "=q6=#t3s1#", "=ec1=#m35#"};
-		{ 2, 322490, "", "=q4=Dreamwalker Headpiece", "=ds="};
-		{ 3, 322491, "", "=q4=Dreamwalker Spaulders", "=ds="};
-		{ 4, 322488, "", "=q4=Dreamwalker Tunic", "=ds="};
-		{ 5, 322495, "", "=q4=Dreamwalker Wristguards", "=ds="};
-		{ 6, 322493, "", "=q4=Dreamwalker Handguards", "=ds="};
-		{ 7, 322494, "", "=q4=Dreamwalker Girdle", "=ds="};
-		{ 8, 322489, "", "=q4=Dreamwalker Legguards", "=ds="};
-		{ 9, 322492, "", "=q4=Dreamwalker Boots", "=ds="};
-		{ 10, 323064, "", "=q4=Ring of the Dreamwalker", "=ds="};
-		Prev = "T1T2Druid25Man";
-		Back = "T1T2T3SET";
-	};
-	
-	AtlasLoot_Data["T3Hunter25Man"] = {
-		{ 1, 0, "Ability_Hunter_RunningShot", "=q6=#t3s2#", "=ec1=#m35#"};
-		{ 2, 322438, "", "=q4=Cryptstalker Headpiece", "=ds="};
-		{ 3, 322439, "", "=q4=Cryptstalker Spaulders", "=ds="};
-		{ 4, 322436, "", "=q4=Cryptstalker Tunic", "=ds="};
-		{ 5, 322443, "", "=q4=Cryptstalker Wristguards", "=ds="};
-		{ 6, 322441, "", "=q4=Cryptstalker Handguards", "=ds="};
-		{ 7, 322442, "", "=q4=Cryptstalker Girdle", "=ds="};
-		{ 8, 322437, "", "=q4=Cryptstalker Legguards", "=ds="};
-		{ 9, 322440, "", "=q4=Cryptstalker Boots", "=ds="};
-		{ 10, 323067, "", "=q4=Ring of the Cryptstalker", "=ds="};
-		Prev = "T1T2Hunter25Man";
-		Back = "T1T2T3SET";
-	};
-	
-	AtlasLoot_Data["T3Mage25Man"] = {
-		{ 1, 0, "Spell_Frost_IceStorm", "=q6=#t3s3#", "=ec1=#m35#"};
-		{ 2, 322498, "", "=q4=Frostfire Circlet", "=ds="};
-		{ 3, 322499, "", "=q4=Frostfire Shoulderpads", "=ds="};
-		{ 4, 322496, "", "=q4=Frostfire Robe", "=ds="};
-		{ 5, 322503, "", "=q4=Frostfire Bindings", "=ds="};
-		{ 6, 322501, "", "=q4=Frostfire Gloves", "=ds="};
-		{ 7, 322502, "", "=q4=Frostfire Belt", "=ds="};
-		{ 8, 322497, "", "=q4=Frostfire Leggings", "=ds="};
-		{ 9, 322500, "", "=q4=Frostfire Sandals", "=ds="};
-		{ 10, 323062, "", "=q4=Frostfire Ring", "=ds="};
-		Prev = "T1T2Mage25Man";
-		Back = "T1T2T3SET";
-	};
-	
-	AtlasLoot_Data["T3Paladin25Man"] = {
-		{ 1, 0, "Spell_Holy_SealOfMight", "=q6=#t3s4#", "=ec1=#m35#"};
-		{ 2, 322428, "", "=q4=Redemption Headpiece", "=ds="};
-		{ 3, 322429, "", "=q4=Redemption Spaulders", "=ds="};
-		{ 4, 322425, "", "=q4=Redemption Tunic", "=ds="};
-		{ 5, 322424, "", "=q4=Redemption Wristguards", "=ds="};
-		{ 6, 322426, "", "=q4=Redemption Handguards", "=ds="};
-		{ 7, 322431, "", "=q4=Redemption Girdle", "=ds="};
-		{ 8, 322427, "", "=q4=Redemption Legguards", "=ds="};
-		{ 9, 322430, "", "=q4=Redemption Boots", "=ds="};
-		{ 10, 323066, "", "=q4=Ring of Redemption", "=ds="};
-		Prev = "T1T2Paladin25Man";
-		Back = "T1T2T3SET";
-	};
-	
-	AtlasLoot_Data["T3Priest25Man"] = {
-		{ 1, 0, "Spell_Holy_PowerWordShield", "=q6=#t3s5#", "=ec1=#m35#"};
-		{ 2, 322514, "", "=q4=Circlet of Faith", "=ds="};
-		{ 3, 322515, "", "=q4=Shoulderpads of Faith", "=ds="};
-		{ 4, 322512, "", "=q4=Robe of Faith", "=ds="};
-		{ 5, 322519, "", "=q4=Bindings of Faith", "=ds="};
-		{ 6, 322517, "", "=q4=Gloves of Faith", "=ds="};
-		{ 7, 322518, "", "=q4=Belt of Faith", "=ds="};
-		{ 8, 322513, "", "=q4=Leggings of Faith", "=ds="};
-		{ 9, 322516, "", "=q4=Sandals of Faith", "=ds="};
-		{ 10, 323061, "", "=q4=Ring of Faith", "=ds="};
-		Prev = "T1T2Priest25Man";
-		Back = "T1T2T3SET";
-	};
-	
-	AtlasLoot_Data["T3Rogue25Man"] = {
-		{ 1, 0, "Ability_BackStab", "=q6=#t3s6#", "=ec1=#m35#"};
-		{ 2, 322478, "", "=q4=Bonescythe Helmet", "=ds="};
-		{ 3, 322479, "", "=q4=Bonescythe Pauldrons", "=ds="};
-		{ 4, 322476, "", "=q4=Bonescythe Breastplate", "=ds="};
-		{ 5, 322483, "", "=q4=Bonescythe Bracers", "=ds="};
-		{ 6, 322481, "", "=q4=Bonescythe Gauntlets", "=ds="};
-		{ 7, 322482, "", "=q4=Bonescythe Waistguard", "=ds="};
-		{ 8, 322477, "", "=q4=Bonescythe Legplates", "=ds="};
-		{ 9, 322480, "", "=q4=Bonescythe Sabatons", "=ds="};
-		{ 10, 323060, "", "=q4=Bonescythe Ring", "=ds="};
-		Prev = "T1T2Rogue25Man";
-		Back = "T1T2T3SET";
-	};
-	
-	AtlasLoot_Data["T3Shaman25Man"] = {
-		{ 1, 0, "Spell_FireResistanceTotem_01", "=q6=#t3s7#", "=ec1=#m35#"};
-		{ 2, 322466, "", "=q4=Earthshatter Headpiece", "=ds="};
-		{ 3, 322467, "", "=q4=Earthshatter Spaulders", "=ds="};
-		{ 4, 322464, "", "=q4=Earthshatter Tunic", "=ds="};
-		{ 5, 322471, "", "=q4=Earthshatter Wristguards", "=ds="};
-		{ 6, 322469, "", "=q4=Earthshatter Handguards", "=ds="};
-		{ 7, 322470, "", "=q4=Earthshatter Girdle", "=ds="};
-		{ 8, 322465, "", "=q4=Earthshatter Legguards", "=ds="};
-		{ 9, 322468, "", "=q4=Earthshatter Boots", "=ds="};
-		{ 10, 323065, "", "=q4=Ring of the Earthshatterer", "=ds="};
-		Prev = "T1T2Shaman25Man";
-		Back = "T1T2T3SET";
-	};
-	
-	AtlasLoot_Data["T3Warlock25Man"] = {
-		{ 1, 0, "Spell_Shadow_CurseOfTounges", "=q6=#t3s8#", "=ec1=#m35#"};
-		{ 2, 322506, "", "=q4=Plagueheart Circlet", "=ds="};
-		{ 3, 322507, "", "=q4=Plagueheart Shoulderpads", "=ds="};
-		{ 4, 322504, "", "=q4=Plagueheart Robe", "=ds="};
-		{ 5, 322511, "", "=q4=Plagueheart Bindings", "=ds="};
-		{ 6, 322509, "", "=q4=Plagueheart Gloves", "=ds="};
-		{ 7, 322510, "", "=q4=Plagueheart Belt", "=ds="};
-		{ 8, 322505, "", "=q4=Plagueheart Leggings", "=ds="};
-		{ 9, 322508, "", "=q4=Plagueheart Sandals", "=ds="};
-		{ 10, 323063, "", "=q4=Plagueheart Ring", "=ds="};
-		Prev = "T1T2Warlock25Man";
-		Back = "T1T2T3SET";
-	};
-	
-	AtlasLoot_Data["T3Warrior25Man"] = {
-		{ 1, 0, "INV_Shield_05", "=q6=#t3s9#", "=ec1=#m35#"};
-		{ 2, 322418, "", "=q4=Dreadnaught Helmet", "=ds="};
-		{ 3, 322419, "", "=q4=Dreadnaught Pauldrons", "=ds="};
-		{ 4, 322416, "", "=q4=Dreadnaught Breastplate", "=ds="};
-		{ 5, 322423, "", "=q4=Dreadnaught Bracers", "=ds="};
-		{ 6, 322421, "", "=q4=Dreadnaught Gauntlets", "=ds="};
-		{ 7, 322422, "", "=q4=Dreadnaught Waistguard", "=ds="};
-		{ 8, 322417, "", "=q4=Dreadnaught Legplates", "=ds="};
-		{ 9, 322420, "", "=q4=Dreadnaught Sabatons", "=ds="};
-		{ 10, 323059, "", "=q4=Ring of the Dreadnaught", "=ds="};
-		Prev = "T1T2Warrior25Man";
-		Back = "T1T2T3SET";
-	};
-	
-	AtlasLoot_Data["T3DPSWarrior25Man"] = {
-		{ 1, 0, "Ability_Warrior_BattleShout", "=q6=#t3s10#", "=ec1=#m35#"};
-		{ 2, 310490, "", "=q4=Dreadborne Helmet", "=ds="};
-		{ 3, 310491, "", "=q4=Dreadborne Pauldrons", "=ds="};
-		{ 4, 310488, "", "=q4=Dreadborne Breastplate", "=ds="};
-		{ 5, 310495, "", "=q4=Dreadborne Bracers", "=ds="};
-		{ 6, 310493, "", "=q4=Dreadborne Gauntlets", "=ds="};
-		{ 7, 310494, "", "=q4=Dreadborne Waistguard", "=ds="};
-		{ 8, 310489, "", "=q4=Dreadborne Legplates", "=ds="};
-		{ 9, 310492, "", "=q4=Dreadborne Sabatons", "=ds="};
-		{ 10, 310496, "", "=q4=Dreadborne Ring", "=ds="};
-		Prev = "T1T2DPSWarrior25Man";
-		Back = "T1T2T3SET";
-	};	
-
-	-------------------------------
-	--- Tier 3 Sets (T3) ASCENDED ---
-	-------------------------------
-
-	AtlasLoot_Data["T3Druid"] = {
-		{ 1, 0, "Spell_Nature_Regeneration", "=q6=#t3s1#", "=ec1=#m35#"};
-		{ 2, 222490, "", "=q4=Dreamwalker Headpiece", "=ds="};
-		{ 3, 222491, "", "=q4=Dreamwalker Spaulders", "=ds="};
-		{ 4, 222488, "", "=q4=Dreamwalker Tunic", "=ds="};
-		{ 5, 222495, "", "=q4=Dreamwalker Wristguards", "=ds="};
-		{ 6, 222493, "", "=q4=Dreamwalker Handguards", "=ds="};
-		{ 7, 222494, "", "=q4=Dreamwalker Girdle", "=ds="};
-		{ 8, 222489, "", "=q4=Dreamwalker Legguards", "=ds="};
-		{ 9, 222492, "", "=q4=Dreamwalker Boots", "=ds="};
-		{ 10, 223064, "", "=q4=Ring of the Dreamwalker", "=ds="};
-		Prev = "T1T2Druid";
-		Back = "T1T2T3SET";
-	};
-
-	AtlasLoot_Data["T3Hunter"] = {
-		{ 1, 0, "Ability_Hunter_RunningShot", "=q6=#t3s2#", "=ec1=#m35#"};
-		{ 2, 222438, "", "=q4=Cryptstalker Headpiece", "=ds="};
-		{ 3, 222439, "", "=q4=Cryptstalker Spaulders", "=ds="};
-		{ 4, 222436, "", "=q4=Cryptstalker Tunic", "=ds="};
-		{ 5, 222443, "", "=q4=Cryptstalker Wristguards", "=ds="};
-		{ 6, 222441, "", "=q4=Cryptstalker Handguards", "=ds="};
-		{ 7, 222442, "", "=q4=Cryptstalker Girdle", "=ds="};
-		{ 8, 222437, "", "=q4=Cryptstalker Legguards", "=ds="};
-		{ 9, 222440, "", "=q4=Cryptstalker Boots", "=ds="};
-		{ 10, 223067, "", "=q4=Ring of the Cryptstalker", "=ds="};
-		Prev = "T1T2Hunter";
-		Back = "T1T2T3SET";
-	};
-
-	AtlasLoot_Data["T3Mage"] = {
-		{ 1, 0, "Spell_Frost_IceStorm", "=q6=#t3s3#", "=ec1=#m35#"};
-		{ 2, 222498, "", "=q4=Frostfire Circlet", "=ds="};
-		{ 3, 222499, "", "=q4=Frostfire Shoulderpads", "=ds="};
-		{ 4, 222496, "", "=q4=Frostfire Robe", "=ds="};
-		{ 5, 222503, "", "=q4=Frostfire Bindings", "=ds="};
-		{ 6, 222501, "", "=q4=Frostfire Gloves", "=ds="};
-		{ 7, 222502, "", "=q4=Frostfire Belt", "=ds="};
-		{ 8, 222497, "", "=q4=Frostfire Leggings", "=ds="};
-		{ 9, 222500, "", "=q4=Frostfire Sandals", "=ds="};
-		{ 10, 223062, "", "=q4=Frostfire Ring", "=ds="};
-		Prev = "T1T2Mage";
-		Back = "T1T2T3SET";
-	};
-
-	AtlasLoot_Data["T3Paladin"] = {
-		{ 1, 0, "Spell_Holy_SealOfMight", "=q6=#t3s4#", "=ec1=#m35#"};
-		{ 2, 222428, "", "=q4=Redemption Headpiece", "=ds="};
-		{ 3, 222429, "", "=q4=Redemption Spaulders", "=ds="};
-		{ 4, 222425, "", "=q4=Redemption Tunic", "=ds="};
-		{ 5, 222424, "", "=q4=Redemption Wristguards", "=ds="};
-		{ 6, 222426, "", "=q4=Redemption Handguards", "=ds="};
-		{ 7, 222431, "", "=q4=Redemption Girdle", "=ds="};
-		{ 8, 222427, "", "=q4=Redemption Legguards", "=ds="};
-		{ 9, 222430, "", "=q4=Redemption Boots", "=ds="};
-		{ 10, 223066, "", "=q4=Ring of Redemption", "=ds="};
-		Prev = "T1T2Paladin";
-		Back = "T1T2T3SET";
-	};
-
-	AtlasLoot_Data["T3Priest"] = {
-		{ 1, 0, "Spell_Holy_PowerWordShield", "=q6=#t3s5#", "=ec1=#m35#"};
-		{ 2, 222514, "", "=q4=Circlet of Faith", "=ds="};
-		{ 3, 222515, "", "=q4=Shoulderpads of Faith", "=ds="};
-		{ 4, 222512, "", "=q4=Robe of Faith", "=ds="};
-		{ 5, 222519, "", "=q4=Bindings of Faith", "=ds="};
-		{ 6, 222517, "", "=q4=Gloves of Faith", "=ds="};
-		{ 7, 222518, "", "=q4=Belt of Faith", "=ds="};
-		{ 8, 222513, "", "=q4=Leggings of Faith", "=ds="};
-		{ 9, 222516, "", "=q4=Sandals of Faith", "=ds="};
-		{ 10, 223061, "", "=q4=Ring of Faith", "=ds="};
-		Prev = "T1T2Priest";
-		Back = "T1T2T3SET";
-	};
-
-	AtlasLoot_Data["T3Rogue"] = {
-		{ 1, 0, "Ability_BackStab", "=q6=#t3s6#", "=ec1=#m35#"};
-		{ 2, 222478, "", "=q4=Bonescythe Helmet", "=ds="};
-		{ 3, 222479, "", "=q4=Bonescythe Pauldrons", "=ds="};
-		{ 4, 222476, "", "=q4=Bonescythe Breastplate", "=ds="};
-		{ 5, 222483, "", "=q4=Bonescythe Bracers", "=ds="};
-		{ 6, 222481, "", "=q4=Bonescythe Gauntlets", "=ds="};
-		{ 7, 222482, "", "=q4=Bonescythe Waistguard", "=ds="};
-		{ 8, 222477, "", "=q4=Bonescythe Legplates", "=ds="};
-		{ 9, 222480, "", "=q4=Bonescythe Sabatons", "=ds="};
-		{ 10, 223060, "", "=q4=Bonescythe Ring", "=ds="};
-		Prev = "T1T2Rogue";
-		Back = "T1T2T3SET";
-	};
-
-	AtlasLoot_Data["T3Shaman"] = {
-		{ 1, 0, "Spell_FireResistanceTotem_01", "=q6=#t3s7#", "=ec1=#m35#"};
-		{ 2, 222466, "", "=q4=Earthshatter Headpiece", "=ds="};
-		{ 3, 222467, "", "=q4=Earthshatter Spaulders", "=ds="};
-		{ 4, 222464, "", "=q4=Earthshatter Tunic", "=ds="};
-		{ 5, 222471, "", "=q4=Earthshatter Wristguards", "=ds="};
-		{ 6, 222469, "", "=q4=Earthshatter Handguards", "=ds="};
-		{ 7, 222470, "", "=q4=Earthshatter Girdle", "=ds="};
-		{ 8, 222465, "", "=q4=Earthshatter Legguards", "=ds="};
-		{ 9, 222468, "", "=q4=Earthshatter Boots", "=ds="};
-		{ 10, 223065, "", "=q4=Ring of the Earthshatterer", "=ds="};
-		Prev = "T1T2Shaman";
-		Back = "T1T2T3SET";
-	};
-
-	AtlasLoot_Data["T3Warlock"] = {
-		{ 1, 0, "Spell_Shadow_CurseOfTounges", "=q6=#t3s8#", "=ec1=#m35#"};
-		{ 2, 222506, "", "=q4=Plagueheart Circlet", "=ds="};
-		{ 3, 222507, "", "=q4=Plagueheart Shoulderpads", "=ds="};
-		{ 4, 222504, "", "=q4=Plagueheart Robe", "=ds="};
-		{ 5, 222511, "", "=q4=Plagueheart Bindings", "=ds="};
-		{ 6, 222509, "", "=q4=Plagueheart Gloves", "=ds="};
-		{ 7, 222510, "", "=q4=Plagueheart Belt", "=ds="};
-		{ 8, 222505, "", "=q4=Plagueheart Leggings", "=ds="};
-		{ 9, 222508, "", "=q4=Plagueheart Sandals", "=ds="};
-		{ 10, 223063, "", "=q4=Plagueheart Ring", "=ds="};
-		Prev = "T1T2Warlock";
-		Back = "T1T2T3SET";
-	};
-
-	AtlasLoot_Data["T3Warrior"] = {
-		{ 1, 0, "INV_Shield_05", "=q6=#t3s9#", "=ec1=#m35#"};
-		{ 2, 222418, "", "=q4=Dreadnaught Helmet", "=ds="};
-		{ 3, 222419, "", "=q4=Dreadnaught Pauldrons", "=ds="};
-		{ 4, 222416, "", "=q4=Dreadnaught Breastplate", "=ds="};
-		{ 5, 222423, "", "=q4=Dreadnaught Bracers", "=ds="};
-		{ 6, 222421, "", "=q4=Dreadnaught Gauntlets", "=ds="};
-		{ 7, 222422, "", "=q4=Dreadnaught Waistguard", "=ds="};
-		{ 8, 222417, "", "=q4=Dreadnaught Legplates", "=ds="};
-		{ 9, 222420, "", "=q4=Dreadnaught Sabatons", "=ds="};
-		{ 10, 223059, "", "=q4=Ring of the Dreadnaught", "=ds="};
-		Prev = "T1T2Warrior";
-		Back = "T1T2T3SET";
-	};
-	
-	AtlasLoot_Data["T3DPSWarrior"] = {
-		{ 1, 0, "Ability_Warrior_BattleShout", "=q6=#t3s10#", "=ec1=#m35#"};
-		{ 2, 210490, "", "=q4=Dreadborne Helmet", "=ds="};
-		{ 3, 210491, "", "=q4=Dreadborne Pauldrons", "=ds="};
-		{ 4, 210488, "", "=q4=Dreadborne Breastplate", "=ds="};
-		{ 5, 210495, "", "=q4=Dreadborne Bracers", "=ds="};
-		{ 6, 210493, "", "=q4=Dreadborne Gauntlets", "=ds="};
-		{ 7, 210494, "", "=q4=Dreadborne Waistguard", "=ds="};
-		{ 8, 210489, "", "=q4=Dreadborne Legplates", "=ds="};
-		{ 9, 210492, "", "=q4=Dreadborne Sabatons", "=ds="};
-		{ 10, 210496, "", "=q4=Dreadborne Ring", "=ds="};
-		Prev = "T1T2DPSWarrior";
-		Back = "T1T2T3SET";
+		Type = "Raid";
 	};
 
 		------------------------
@@ -6343,6 +5580,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 25, 19865, "", "=q4=Warblade of the Hakkari", "=ds=#h3#, #w10#, =q2=#n34#", "", "5.18%"};
 		{ 26, 19866, "", "=q4=Warblade of the Hakkari", "=ds=#h4#, #w10#, =q2=#n33#", "", "4.55%"};
 		Back = "SETSCLASSIC";
+		Type = "Raid";
 	};
 
 		---------------
@@ -6376,6 +5614,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 28, 19827, "", "=q4=Zandalar Freethinker's Armguards", "=q4=#zgt3#, =ds=#r2#"};
 		Next = "ZGSets2";
 		Back = "SETMENU";
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["ZGSets2"] = {
@@ -6406,6 +5645,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		Next = "ZGSets3";
 		Prev = "ZGSets1";
 		Back = "SETMENU";
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["ZGSets3"] = {
@@ -6417,157 +5657,9 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 6, 19824, "", "=q4=Zandalar Vindicator's Armguards", "=q4=#zgt8#, =ds=#r2#"};
 		Prev = "ZGSets2";
 		Back = "SETMENU";
+		Type = "Raid";
 	};
 
-
-	----------------------
-	--- ZG HEROIC FLEX Sets ---
-	----------------------
-
-	AtlasLoot_Data["ZGSets125Man"] = {
-		{ 1, 0, "Spell_Nature_Regeneration", "=q6=#zgs1#", "=ec1=#c1#"};
-		{ 2, 19955, "", "=q4=Wushoolay's Charm of Nature", ""};
-		{ 3, 19613, "", "=q4=Pristine Enchanted South Seas Kelp", "=ds=#r5#"};
-		{ 4, 319838, "", "=q4=Zandalar Haruspex's Tunic", "=q4=#zgt9#, =ds=#r4#"};
-		{ 5, 319839, "", "=q4=Zandalar Haruspex's Belt", "=q4=#zgt4#, =ds=#r3#"};
-		{ 6, 319840, "", "=q4=Zandalar Haruspex's Bracers", "=q4=#zgt5#, =ds=#r2#"};
-		{ 8, 0, "Ability_Hunter_RunningShot", "=q6=#zgs2#", "=ec1=#c2#"};
-		{ 9, 19953, "", "=q4=Renataki's Charm of Beasts", ""};
-		{ 10, 19621, "", "=q4=Maelstrom's Wrath", "=ds=#r5#"};
-		{ 11, 319831, "", "=q4=Zandalar Predator's Mantle", "=q4=#zgt6#, =ds=#r4#"};
-		{ 12, 319832, "", "=q4=Zandalar Predator's Belt", "=q4=#zgt2#, =ds=#r3#"};
-		{ 13, 319833, "", "=q4=Zandalar Predator's Bracers", "=q4=#zgt3#, =ds=#r2#"};
-		{ 16, 0, "Spell_Frost_IceStorm", "=q6=#zgs3#", "=ec1=#c3#"};
-		{ 17, 19959, "", "=q4=Hazza'rah's Charm of Magic", ""};
-		{ 18, 19601, "", "=q4=Jewel of Kajaro", "=ds=#r5#"};
-		{ 19, 320034, "", "=q4=Zandalar Illusionist's Robe", "=q4=#zgt1#, =ds=#r4#"};
-		{ 20, 319845, "", "=q4=Zandalar Illusionist's Mantle", "=q4=#zgt2#, =ds=#r3#"};
-		{ 21, 319846, "", "=q4=Zandalar Illusionist's Wraps", "=q4=#zgt3#, =ds=#r2#"};
-		{ 23, 0, "Spell_Holy_SealOfMight", "=q6=#zgs4#", "=ec1=#c4#"};
-		{ 24, 19952, "", "=q4=Gri'lek's Charm of Valor", ""};
-		{ 25, 19588, "", "=q4=Hero's Brand", "=ds=#r5#"};
-		{ 26, 319825, "", "=q4=Zandalar Freethinker's Breastplate", "=q4=#zgt9#, =ds=#r4#"};
-		{ 27, 319826, "", "=q4=Zandalar Freethinker's Belt", "=q4=#zgt2#, =ds=#r3#"};
-		{ 28, 319827, "", "=q4=Zandalar Freethinker's Armguards", "=q4=#zgt3#, =ds=#r2#"};
-		Next = "ZGSets225Man";
-		Back = "SETMENU";
-	};
-
-	AtlasLoot_Data["ZGSets225Man"] = {
-		{ 1, 0, "Spell_Holy_PowerWordShield", "=q6=#zgs5#", "=ec1=#c5#"};
-		{ 2, 19958, "", "=q4=Hazza'rah's Charm of Healing", ""};
-		{ 3, 19594, "", "=q4=The All-Seeing Eye of Zuldazar", "=ds=#r5#"};
-		{ 4, 319841, "", "=q4=Zandalar Confessor's Mantle", "=q4=#zgt6#, =ds=#r4#"};
-		{ 5, 319842, "", "=q4=Zandalar Confessor's Bindings", "=q4=#zgt4#, =ds=#r3#"};
-		{ 6, 319843, "", "=q4=Zandalar Confessor's Wraps", "=q4=#zgt5#, =ds=#r2#"};
-		{ 8, 0, "Ability_BackStab", "=q6=#zgs6#", "=ec1=#c6#"};
-		{ 9, 19954, "", "=q4=Renataki's Charm of Trickery", ""};
-		{ 10, 19617, "", "=q4=Zandalarian Shadow Mastery Talisman", "=ds=#r5#"};
-		{ 11, 319834, "", "=q4=Zandalar Madcap's Tunic", "=q4=#zgt6#, =ds=#r4#"};
-		{ 12, 319835, "", "=q4=Zandalar Madcap's Mantle", "=q4=#zgt7#, =ds=#r3#"};
-		{ 13, 319836, "", "=q4=Zandalar Madcap's Bracers", "=q4=#zgt8#, =ds=#r2#"};
-		{ 16, 0, "Spell_FireResistanceTotem_01", "=q6=#zgs7#", "=ec1=#c7#"};
-		{ 17, 19956, "", "=q4=Wushoolay's Charm of Spirits", ""};
-		{ 18, 19609, "", "=q4=Unmarred Vision of Voodress", "=ds=#r5#"};
-		{ 19, 319828, "", "=q4=Zandalar Augur's Hauberk", "=q4=#zgt9#, =ds=#r4#"};
-		{ 20, 319829, "", "=q4=Zandalar Augur's Belt", "=q4=#zgt7#, =ds=#r3#"};
-		{ 21, 319830, "", "=q4=Zandalar Augur's Bracers", "=q4=#zgt8#, =ds=#r2#"};
-		{ 23, 0, "Spell_Shadow_CurseOfTounges", "=q6=#zgs8#", "=ec1=#c8#"};
-		{ 24, 19957, "", "=q4=Hazza'rah's Charm of Destruction", ""};
-		{ 25, 19605, "", "=q4=Kezan's Unstoppable Taint", "=ds=#r5#"};
-		{ 26, 320033, "", "=q4=Zandalar Demoniac's Robe", "=q4=#zgt1#, =ds=#r4#"};
-		{ 27, 319849, "", "=q4=Zandalar Demoniac's Mantle", "=q4=#zgt4#, =ds=#r3#"};
-		{ 28, 319848, "", "=q4=Zandalar Demoniac's Wraps", "=q4=#zgt5#, =ds=#r2#"};
-		Next = "ZGSets325Man";
-		Prev = "ZGSets125Man";
-		Back = "SETMENU";
-	};
-
-	AtlasLoot_Data["ZGSets325Man"] = {
-		{ 1, 0, "INV_Shield_05", "=q6=#zgs9#", "=ec1=#c9#"};
-		{ 2, 19951, "", "=q4=Gri'lek's Charm of Might", ""};
-		{ 3, 19577, "", "=q4=Rage of Mugamba", "=ds=#r5#"};
-		{ 4, 319822, "", "=q4=Zandalar Vindicator's Breastplate", "=q4=#zgt1#, =ds=#r4#"};
-		{ 5, 319823, "", "=q4=Zandalar Vindicator's Belt", "=q4=#zgt7#, =ds=#r3#"};
-		{ 6, 319824, "", "=q4=Zandalar Vindicator's Armguards", "=q4=#zgt8#, =ds=#r2#"};
-		Prev = "ZGSets225Man";
-		Back = "SETMENU";
-	};	
-
-
-	----------------------
-	--- ZG ASCENDED Sets ---
-	----------------------
-
-	AtlasLoot_Data["ZGSets1"] = {
-		{ 1, 0, "Spell_Nature_Regeneration", "=q6=#zgs1#", "=ec1=#c1#"};
-		{ 2, 19955, "", "=q4=Wushoolay's Charm of Nature", ""};
-		{ 3, 19613, "", "=q4=Pristine Enchanted South Seas Kelp", "=ds=#r5#"};
-		{ 4, 219838, "", "=q4=Zandalar Haruspex's Tunic", "=q4=#zgt9#, =ds=#r4#"};
-		{ 5, 219839, "", "=q4=Zandalar Haruspex's Belt", "=q4=#zgt4#, =ds=#r3#"};
-		{ 6, 219840, "", "=q4=Zandalar Haruspex's Bracers", "=q4=#zgt5#, =ds=#r2#"};
-		{ 8, 0, "Ability_Hunter_RunningShot", "=q6=#zgs2#", "=ec1=#c2#"};
-		{ 9, 19953, "", "=q4=Renataki's Charm of Beasts", ""};
-		{ 10, 19621, "", "=q4=Maelstrom's Wrath", "=ds=#r5#"};
-		{ 11, 219831, "", "=q4=Zandalar Predator's Mantle", "=q4=#zgt6#, =ds=#r4#"};
-		{ 12, 219832, "", "=q4=Zandalar Predator's Belt", "=q4=#zgt2#, =ds=#r3#"};
-		{ 13, 219833, "", "=q4=Zandalar Predator's Bracers", "=q4=#zgt3#, =ds=#r2#"};
-		{ 16, 0, "Spell_Frost_IceStorm", "=q6=#zgs3#", "=ec1=#c3#"};
-		{ 17, 19959, "", "=q4=Hazza'rah's Charm of Magic", ""};
-		{ 18, 19601, "", "=q4=Jewel of Kajaro", "=ds=#r5#"};
-		{ 19, 220034, "", "=q4=Zandalar Illusionist's Robe", "=q4=#zgt1#, =ds=#r4#"};
-		{ 20, 219845, "", "=q4=Zandalar Illusionist's Mantle", "=q4=#zgt2#, =ds=#r3#"};
-		{ 21, 219846, "", "=q4=Zandalar Illusionist's Wraps", "=q4=#zgt3#, =ds=#r2#"};
-		{ 23, 0, "Spell_Holy_SealOfMight", "=q6=#zgs4#", "=ec1=#c4#"};
-		{ 24, 19952, "", "=q4=Gri'lek's Charm of Valor", ""};
-		{ 25, 19588, "", "=q4=Hero's Brand", "=ds=#r5#"};
-		{ 26, 219825, "", "=q4=Zandalar Freethinker's Breastplate", "=q4=#zgt9#, =ds=#r4#"};
-		{ 27, 219826, "", "=q4=Zandalar Freethinker's Belt", "=q4=#zgt2#, =ds=#r3#"};
-		{ 28, 219827, "", "=q4=Zandalar Freethinker's Armguards", "=q4=#zgt3#, =ds=#r2#"};
-		Next = "ZGSets2";
-		Back = "SETMENU";
-	};
-
-	AtlasLoot_Data["ZGSets2"] = {
-		{ 1, 0, "Spell_Holy_PowerWordShield", "=q6=#zgs5#", "=ec1=#c5#"};
-		{ 2, 19958, "", "=q4=Hazza'rah's Charm of Healing", ""};
-		{ 3, 19594, "", "=q4=The All-Seeing Eye of Zuldazar", "=ds=#r5#"};
-		{ 4, 219841, "", "=q4=Zandalar Confessor's Mantle", "=q4=#zgt6#, =ds=#r4#"};
-		{ 5, 219842, "", "=q4=Zandalar Confessor's Bindings", "=q4=#zgt4#, =ds=#r3#"};
-		{ 6, 219843, "", "=q4=Zandalar Confessor's Wraps", "=q4=#zgt5#, =ds=#r2#"};
-		{ 8, 0, "Ability_BackStab", "=q6=#zgs6#", "=ec1=#c6#"};
-		{ 9, 19954, "", "=q4=Renataki's Charm of Trickery", ""};
-		{ 10, 19617, "", "=q4=Zandalarian Shadow Mastery Talisman", "=ds=#r5#"};
-		{ 11, 219834, "", "=q4=Zandalar Madcap's Tunic", "=q4=#zgt6#, =ds=#r4#"};
-		{ 12, 219835, "", "=q4=Zandalar Madcap's Mantle", "=q4=#zgt7#, =ds=#r3#"};
-		{ 13, 219836, "", "=q4=Zandalar Madcap's Bracers", "=q4=#zgt8#, =ds=#r2#"};
-		{ 16, 0, "Spell_FireResistanceTotem_01", "=q6=#zgs7#", "=ec1=#c7#"};
-		{ 17, 19956, "", "=q4=Wushoolay's Charm of Spirits", ""};
-		{ 18, 19609, "", "=q4=Unmarred Vision of Voodress", "=ds=#r5#"};
-		{ 19, 219828, "", "=q4=Zandalar Augur's Hauberk", "=q4=#zgt9#, =ds=#r4#"};
-		{ 20, 219829, "", "=q4=Zandalar Augur's Belt", "=q4=#zgt7#, =ds=#r3#"};
-		{ 21, 219830, "", "=q4=Zandalar Augur's Bracers", "=q4=#zgt8#, =ds=#r2#"};
-		{ 23, 0, "Spell_Shadow_CurseOfTounges", "=q6=#zgs8#", "=ec1=#c8#"};
-		{ 24, 19957, "", "=q4=Hazza'rah's Charm of Destruction", ""};
-		{ 25, 19605, "", "=q4=Kezan's Unstoppable Taint", "=ds=#r5#"};
-		{ 26, 220033, "", "=q4=Zandalar Demoniac's Robe", "=q4=#zgt1#, =ds=#r4#"};
-		{ 27, 219849, "", "=q4=Zandalar Demoniac's Mantle", "=q4=#zgt4#, =ds=#r3#"};
-		{ 28, 219848, "", "=q4=Zandalar Demoniac's Wraps", "=q4=#zgt5#, =ds=#r2#"};
-		Next = "ZGSets3";
-		Prev = "ZGSets1";
-		Back = "SETMENU";
-	};
-
-	AtlasLoot_Data["ZGSets3"] = {
-		{ 1, 0, "INV_Shield_05", "=q6=#zgs9#", "=ec1=#c9#"};
-		{ 2, 19951, "", "=q4=Gri'lek's Charm of Might", ""};
-		{ 3, 19577, "", "=q4=Rage of Mugamba", "=ds=#r5#"};
-		{ 4, 219822, "", "=q4=Zandalar Vindicator's Breastplate", "=q4=#zgt1#, =ds=#r4#"};
-		{ 5, 219823, "", "=q4=Zandalar Vindicator's Belt", "=q4=#zgt7#, =ds=#r3#"};
-		{ 6, 219824, "", "=q4=Zandalar Vindicator's Armguards", "=q4=#zgt8#, =ds=#r2#"};
-		Prev = "ZGSets2";
-		Back = "SETMENU";
-	};
 
 
 		-----------------
@@ -6601,6 +5693,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 29, 21405, "", "=q4=Band of Veiled Shadows", "=q3=#aq20t4#, =ds=#r3#"};
 		Next = "AQ20Sets2";
 		Back = "SETMENU";
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["AQ20Sets2"] = {
@@ -6618,107 +5711,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 14, 21393, "", "=q4=Signet of Unyielding Strength", "=q3=#aq20t3#=ds=, #r3#"};
 		Prev = "AQ20Sets1";
 		Back = "SETMENU";
-	};
-
-    
-	------------------------
-	--- AQ20 Sets HEROIC FLEX ---
-	------------------------
-
-	AtlasLoot_Data["AQ20Sets125Man"] = {
-		{ 1, 0, "Spell_Nature_Regeneration", "=q6=#aq20s1#", "=ec1=#c1#"};
-		{ 2, 321407, "", "=q4=Mace of Unending Life", "=q4=#aq20t1#, =ds=#r5#"};
-		{ 3, 321409, "", "=q4=Cloak of Unending Life", "=q3=#aq20t5#, =ds=#r4#"};
-		{ 4, 321408, "", "=q4=Band of Unending Life", "=q3=#aq20t3#, =ds=#r3#"};
-		{ 6, 0, "Ability_Hunter_RunningShot", "=q6=#aq20s2#", "=ec1=#c2#"};
-		{ 7, 321401, "", "=q4=Scythe of the Unseen Path", "=q4=#aq20t6#, =ds=#r5#"};
-		{ 8, 321403, "", "=q4=Cloak of the Unseen Path", "=q3=#aq20t5#, =ds=#r4#"};
-		{ 9, 321402, "", "=q4=Signet of the Unseen Path", "=q3=#aq20t4#, =ds=#r3#"};
-		{ 11, 0, "Spell_Frost_IceStorm", "=q6=#aq20s3#", "=ec1=#c3#"};
-		{ 12, 321413, "", "=q4=Blade of Vaulted Secrets", "=q4=#aq20t1#, =ds=#r5#"};
-		{ 13, 321415, "", "=q4=Drape of Vaulted Secrets", "=q3=#aq20t2#, =ds=#r4#"};
-		{ 14, 321414, "", "=q4=Band of Vaulted Secrets", "=q3=#aq20t3#, =ds=#r3#"};
-		{ 16, 0, "Spell_Holy_SealOfMight", "=q6=#aq20s4#", "=ec1=#c4#"};
-		{ 17, 321395, "", "=q4=Blade of Eternal Justice", "=q4=#aq20t6#, =ds=#r5#"};
-		{ 18, 321397, "", "=q4=Cape of Eternal Justice", "=q3=#aq20t5#, =ds=#r4#"};
-		{ 19, 321396, "", "=q4=Ring of Eternal Justice", "=q3=#aq20t3#, =ds=#r3#"};
-		{ 21, 0, "Spell_Holy_PowerWordShield", "=q6=#aq20s5#", "=ec1=#c5#"};
-		{ 22, 321410, "", "=q4=Gavel of Infinite Wisdom", "=q4=#aq20t1#, =ds=#r5#"};
-		{ 23, 321412, "", "=q4=Shroud of Infinite Wisdom", "=q3=#aq20t2#, =ds=#r4#"};
-		{ 24, 321411, "", "=q4=Ring of Infinite Wisdom", "=q3=#aq20t4#, =ds=#r3#"};
-		{ 26, 0, "Ability_BackStab", "=q6=#aq20s6#", "=ec1=#c6#"};
-		{ 27, 321404, "", "=q4=Dagger of Veiled Shadows", "=q4=#aq20t6#, =ds=#r5#"};
-		{ 28, 321406, "", "=q4=Cloak of Veiled Shadows", "=q3=#aq20t2#, =ds=#r4#"};
-		{ 29, 321405, "", "=q4=Band of Veiled Shadows", "=q3=#aq20t4#, =ds=#r3#"};
-		Next = "AQ20Sets225Man";
-		Back = "SETMENU";
-	};
-
-	AtlasLoot_Data["AQ20Sets225Man"] = {
-		{ 1, 0, "Spell_FireResistanceTotem_01", "=q6=#aq20s7#", "=ec1=#c7#"};
-		{ 2, 321398, "", "=q4=Hammer of the Gathering Storm", "=q4=#aq20t6#, =ds=#r5#"};
-		{ 3, 321400, "", "=q4=Cloak of the Gathering Storm", "=q3=#aq20t5#, =ds=#r4#"};
-		{ 4, 321399, "", "=q4=Ring of the Gathering Storm", "=q3=#aq20t3#, =ds=#r3#"};
-		{ 6, 0, "Spell_Shadow_CurseOfTounges", "=q6=#aq20s8#", "=ec1=#c8#"};
-		{ 7, 321416, "", "=q4=Kris of Unspoken Names", "=q4=#aq20t1#, =ds=#r5#"};
-		{ 8, 321418, "", "=q4=Shroud of Unspoken Names", "=q3=#aq20t5#, =ds=#r4#"};
-		{ 9, 321417, "", "=q4=Ring of Unspoken Names", "=q3=#aq20t4#, =ds=#r3#"};
-		{ 11, 0, "INV_Shield_05", "=q6=#aq20s9#", "=ec1=#c9#"};
-		{ 12, 321392, "", "=q4=Sickle of Unyielding Strength", "=q4=#aq20t6#, =ds=#r5#"};
-		{ 13, 321394, "", "=q4=Drape of Unyielding Strength", "=q3=#aq20t2#, =ds=#r4#"};
-		{ 14, 321393, "", "=q4=Signet of Unyielding Strength", "=q3=#aq20t3#=ds=, #r3#"};
-		Prev = "AQ20Sets125Man";
-		Back = "SETMENU";
-	};
-  
-	------------------------
-	--- AQ20 Sets ASCENDED ---
-	------------------------
-
-	AtlasLoot_Data["AQ20Sets1"] = {
-		{ 1, 0, "Spell_Nature_Regeneration", "=q6=#aq20s1#", "=ec1=#c1#"};
-		{ 2, 221407, "", "=q4=Mace of Unending Life", "=q4=#aq20t1#, =ds=#r5#"};
-		{ 3, 221409, "", "=q4=Cloak of Unending Life", "=q3=#aq20t5#, =ds=#r4#"};
-		{ 4, 221408, "", "=q4=Band of Unending Life", "=q3=#aq20t3#, =ds=#r3#"};
-		{ 6, 0, "Ability_Hunter_RunningShot", "=q6=#aq20s2#", "=ec1=#c2#"};
-		{ 7, 221401, "", "=q4=Scythe of the Unseen Path", "=q4=#aq20t6#, =ds=#r5#"};
-		{ 8, 221403, "", "=q4=Cloak of the Unseen Path", "=q3=#aq20t5#, =ds=#r4#"};
-		{ 9, 221402, "", "=q4=Signet of the Unseen Path", "=q3=#aq20t4#, =ds=#r3#"};
-		{ 11, 0, "Spell_Frost_IceStorm", "=q6=#aq20s3#", "=ec1=#c3#"};
-		{ 12, 221413, "", "=q4=Blade of Vaulted Secrets", "=q4=#aq20t1#, =ds=#r5#"};
-		{ 13, 221415, "", "=q4=Drape of Vaulted Secrets", "=q3=#aq20t2#, =ds=#r4#"};
-		{ 14, 221414, "", "=q4=Band of Vaulted Secrets", "=q3=#aq20t3#, =ds=#r3#"};
-		{ 16, 0, "Spell_Holy_SealOfMight", "=q6=#aq20s4#", "=ec1=#c4#"};
-		{ 17, 221395, "", "=q4=Blade of Eternal Justice", "=q4=#aq20t6#, =ds=#r5#"};
-		{ 18, 221397, "", "=q4=Cape of Eternal Justice", "=q3=#aq20t5#, =ds=#r4#"};
-		{ 19, 221396, "", "=q4=Ring of Eternal Justice", "=q3=#aq20t3#, =ds=#r3#"};
-		{ 21, 0, "Spell_Holy_PowerWordShield", "=q6=#aq20s5#", "=ec1=#c5#"};
-		{ 22, 221410, "", "=q4=Gavel of Infinite Wisdom", "=q4=#aq20t1#, =ds=#r5#"};
-		{ 23, 221412, "", "=q4=Shroud of Infinite Wisdom", "=q3=#aq20t2#, =ds=#r4#"};
-		{ 24, 221411, "", "=q4=Ring of Infinite Wisdom", "=q3=#aq20t4#, =ds=#r3#"};
-		{ 26, 0, "Ability_BackStab", "=q6=#aq20s6#", "=ec1=#c6#"};
-		{ 27, 221404, "", "=q4=Dagger of Veiled Shadows", "=q4=#aq20t6#, =ds=#r5#"};
-		{ 28, 221406, "", "=q4=Cloak of Veiled Shadows", "=q3=#aq20t2#, =ds=#r4#"};
-		{ 29, 221405, "", "=q4=Band of Veiled Shadows", "=q3=#aq20t4#, =ds=#r3#"};
-		Next = "AQ20Sets2";
-		Back = "SETMENU";
-	};
-
-	AtlasLoot_Data["AQ20Sets2"] = {
-		{ 1, 0, "Spell_FireResistanceTotem_01", "=q6=#aq20s7#", "=ec1=#c7#"};
-		{ 2, 221398, "", "=q4=Hammer of the Gathering Storm", "=q4=#aq20t6#, =ds=#r5#"};
-		{ 3, 221400, "", "=q4=Cloak of the Gathering Storm", "=q3=#aq20t5#, =ds=#r4#"};
-		{ 4, 221399, "", "=q4=Ring of the Gathering Storm", "=q3=#aq20t3#, =ds=#r3#"};
-		{ 6, 0, "Spell_Shadow_CurseOfTounges", "=q6=#aq20s8#", "=ec1=#c8#"};
-		{ 7, 221416, "", "=q4=Kris of Unspoken Names", "=q4=#aq20t1#, =ds=#r5#"};
-		{ 8, 221418, "", "=q4=Shroud of Unspoken Names", "=q3=#aq20t5#, =ds=#r4#"};
-		{ 9, 221417, "", "=q4=Ring of Unspoken Names", "=q3=#aq20t4#, =ds=#r3#"};
-		{ 11, 0, "INV_Shield_05", "=q6=#aq20s9#", "=ec1=#c9#"};
-		{ 12, 221392, "", "=q4=Sickle of Unyielding Strength", "=q4=#aq20t6#, =ds=#r5#"};
-		{ 13, 221394, "", "=q4=Drape of Unyielding Strength", "=q3=#aq20t2#, =ds=#r4#"};
-		{ 14, 221393, "", "=q4=Signet of Unyielding Strength", "=q3=#aq20t3#=ds=, #r3#"};
-		Prev = "AQ20Sets1";
-		Back = "SETMENU";
+		Type = "Raid";
 	};
 
 		-----------------
@@ -6752,6 +5745,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 28, 21388, "", "=q4=Avenger's Greaves", "=q4=#aq40t1#, =ds=#r1#"};
 		Next = "AQ40Sets2";
 		Back = "SETMENU";
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["AQ40Sets2"] = {
@@ -6782,6 +5776,7 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		Next = "AQ40Sets3";
 		Prev = "AQ40Sets1";
 		Back = "SETMENU";
+		Type = "Raid";
 	};
 
 	AtlasLoot_Data["AQ40Sets3"] = {
@@ -6799,169 +5794,8 @@ local MythicTier = 2; --Set Mythic Tier to 2 (Normal) by defualt
 		{ 21, 10914, "", "=q4=Conqueror's War Stompers", "=q4=#aq40t5#, =ds=#r1#"};
 		Prev = "AQ40Sets2";
 		Back = "SETMENU";
+		Type = "Raid";
 	};
-
-		-----------------------
-		--- AQ40 Sets HEROIC FLEX ---
-		-----------------------
-
-		AtlasLoot_Data["AQ40Sets125Man"] = {
-			{ 1, 0, "Spell_Nature_Regeneration", "=q6=#aq40s1#", "=ec1=#c1#"};
-			{ 2, 321357, "", "=q4=Genesis Vest", "=q4=#aq40t4#, =ds=#r3#"};
-			{ 3, 321353, "", "=q4=Genesis Helm", "=q4=#aq40t6#, =ds=#r2#"};
-			{ 4, 321356, "", "=q4=Genesis Trousers", "=q4=#aq40t7#, =ds=#r2#"};
-			{ 5, 321354, "", "=q4=Genesis Shoulderpads", "=q4=#aq40t1#, =ds=#r1#"};
-			{ 6, 321355, "", "=q4=Genesis Boots", "=q4=#aq40t1#, =ds=#r1#"};
-			{ 8, 0, "Ability_Hunter_RunningShot", "=q6=#aq40s2#", "=ec1=#c2#"};
-			{ 9, 321370, "", "=q4=Striker's Hauberk", "=q4=#aq40t8#, =ds=#r3#"};
-			{ 10, 321366, "", "=q4=Striker's Diadem", "=q4=#aq40t6#, =ds=#r2#"};
-			{ 11, 321368, "", "=q4=Striker's Leggings", "=q4=#aq40t7#, =ds=#r2#"};
-			{ 12, 321367, "", "=q4=Striker's Pauldrons", "=q4=#aq40t5#, =ds=#r1#"};
-			{ 13, 321365, "", "=q4=Striker's Footguards", "=q4=#aq40t5#, =ds=#r1#"};
-			{ 16, 0, "Spell_Frost_IceStorm", "=q6=#aq40s3#", "=ec1=#c3#"};
-			{ 17, 321343, "", "=q4=Enigma Robes", "=q4=#aq40t4#, =ds=#r3#"};
-			{ 18, 321347, "", "=q4=Enigma Circlet", "=q4=#aq40t2#, =ds=#r2#"};
-			{ 19, 321346, "", "=q4=Enigma Leggings", "=q4=#aq40t3#, =ds=#r2#"};
-			{ 20, 321345, "", "=q4=Enigma Shoulderpads", "=q4=#aq40t1#, =ds=#r1#"};
-			{ 21, 321344, "", "=q4=Enigma Boots", "=q4=#aq40t1#, =ds=#r1#"};
-			{ 23, 0, "Spell_Holy_SealOfMight", "=q6=#aq40s4#", "=ec1=#c4#"};
-			{ 24, 321389, "", "=q4=Avenger's Breastplate", "=q4=#aq40t8#, =ds=#r3#"};
-			{ 25, 321387, "", "=q4=Avenger's Crown", "=q4=#aq40t6#, =ds=#r2#"};
-			{ 26, 321390, "", "=q4=Avenger's Legguards", "=q4=#aq40t7#, =ds=#r2#"};
-			{ 27, 321391, "", "=q4=Avenger's Pauldrons", "=q4=#aq40t1#, =ds=#r1#"};
-			{ 28, 321388, "", "=q4=Avenger's Greaves", "=q4=#aq40t1#, =ds=#r1#"};
-			Next = "AQ40Sets225Man";
-			Back = "SETMENU";
-		};
-	
-		AtlasLoot_Data["AQ40Sets225Man"] = {
-			{ 1, 0, "Spell_Holy_PowerWordShield", "=q6=#aq40s5#", "=ec1=#c5#"};
-			{ 2, 321351, "", "=q4=Vestments of the Oracle", "=q4=#aq40t4#, =ds=#r3#"};
-			{ 3, 321348, "", "=q4=Tiara of the Oracle", "=q4=#aq40t2#, =ds=#r2#"};
-			{ 4, 321352, "", "=q4=Trousers of the Oracle", "=q4=#aq40t3#, =ds=#r2#"};
-			{ 5, 321350, "", "=q4=Mantle of the Oracle", "=q4=#aq40t5#, =ds=#r1#"};
-			{ 6, 321349, "", "=q4=Footwraps of the Oracle", "=q4=#aq40t5#, =ds=#r1#"};
-			{ 8, 0, "Ability_BackStab", "=q6=#aq40s6#", "=ec1=#c6#"};
-			{ 9, 321364, "", "=q4=Deathdealer's Vest", "=q4=#aq40t8#, =ds=#r3#"};
-			{ 10, 321360, "", "=q4=Deathdealer's Helm", "=q4=#aq40t6#, =ds=#r2#"};
-			{ 11, 321362, "", "=q4=Deathdealer's Leggings", "=q4=#aq40t3#, =ds=#r2#"};
-			{ 12, 321361, "", "=q4=Deathdealer's Spaulders", "=q4=#aq40t5#, =ds=#r1#"};
-			{ 13, 321359, "", "=q4=Deathdealer's Boots", "=q4=#aq40t5#, =ds=#r1#"};
-			{ 16, 0, "Spell_FireResistanceTotem_01", "=q6=#aq40s7#", "=ec1=#c7#"};
-			{ 17, 321374, "", "=q4=Stormcaller's Hauberk", "=q4=#aq40t8#, =ds=#r3#"};
-			{ 18, 321372, "", "=q4=Stormcaller's Diadem", "=q4=#aq40t6#, =ds=#r2#"};
-			{ 19, 321375, "", "=q4=Stormcaller's Leggings", "=q4=#aq40t7#, =ds=#r2#"};
-			{ 20, 321376, "", "=q4=Stormcaller's Pauldrons", "=q4=#aq40t1#, =ds=#r1#"};
-			{ 21, 321373, "", "=q4=Stormcaller's Footguards", "=q4=#aq40t1#, =ds=#r1#"};
-			{ 23, 0, "Spell_Shadow_CurseOfTounges", "=q6=#aq40s8#", "=ec1=#c8#"};
-			{ 24, 321334, "", "=q4=Doomcaller's Robes", "=q4=#aq40t4#, =ds=#r3#"};
-			{ 25, 321337, "", "=q4=Doomcaller's Circlet", "=q4=#aq40t2#, =ds=#r2#"};
-			{ 26, 321336, "", "=q4=Doomcaller's Trousers", "=q4=#aq40t7#, =ds=#r2#"};
-			{ 27, 321335, "", "=q4=Doomcaller's Mantle", "=q4=#aq40t1#, =ds=#r1#"};
-			{ 28, 321338, "", "=q4=Doomcaller's Footwraps", "=q4=#aq40t1#, =ds=#r1#"};
-			Next = "AQ40Sets325Man";
-			Prev = "AQ40Sets125Man";
-			Back = "SETMENU";
-		};
-	
-		AtlasLoot_Data["AQ40Sets325Man"] = {
-			{ 1, 0, "INV_Shield_05", "=q6=#aq40s9#", "=ec1=#c9#"};
-			{ 2, 321331, "", "=q4=Conqueror's Breastplate", "=q4=#aq40t8#, =ds=#r3#"};
-			{ 3, 321329, "", "=q4=Conqueror's Crown", "=q4=#aq40t2#, =ds=#r2#"};
-			{ 4, 321332, "", "=q4=Conqueror's Legguards", "=q4=#aq40t3#, =ds=#r2#"};
-			{ 5, 321330, "", "=q4=Conqueror's Spaulders", "=q4=#aq40t5#, =ds=#r1#"};
-			{ 6, 321333, "", "=q4=Conqueror's Greaves", "=q4=#aq40t5#, =ds=#r1#"};
-			{ 16, 0, "Ability_Warrior_BattleShout", "=q6=#aq40s9#", "=ec1=#c9#"};
-			{ 17, 310912, "", "=q4=Conqueror's Chestplate", "=q4=#aq40t8#, =ds=#r3#"};
-			{ 18, 310910, "", "=q4=Conqueror's Headguard", "=q4=#aq40t2#, =ds=#r2#"};
-			{ 19, 310913, "", "=q4=Conqueror's Platelegs", "=q4=#aq40t3#, =ds=#r2#"};
-			{ 20, 310911, "", "=q4=Conqueror's Shoulderpads", "=q4=#aq40t5#, =ds=#r1#"};
-			{ 21, 310914, "", "=q4=Conqueror's War Stompers", "=q4=#aq40t5#, =ds=#r1#"};
-			Prev = "AQ40Sets225Man";
-			Back = "SETMENU";
-		};
-
-
-	-----------------------
-	--- AQ40 Sets ASCENDED ---
-	-----------------------
-
-	AtlasLoot_Data["AQ40Sets1"] = {
-		{ 1, 0, "Spell_Nature_Regeneration", "=q6=#aq40s1#", "=ec1=#c1#"};
-		{ 2, 221357, "", "=q4=Genesis Vest", "=q4=#aq40t4#, =ds=#r3#"};
-		{ 3, 221353, "", "=q4=Genesis Helm", "=q4=#aq40t6#, =ds=#r2#"};
-		{ 4, 221356, "", "=q4=Genesis Trousers", "=q4=#aq40t7#, =ds=#r2#"};
-		{ 5, 221354, "", "=q4=Genesis Shoulderpads", "=q4=#aq40t1#, =ds=#r1#"};
-		{ 6, 221355, "", "=q4=Genesis Boots", "=q4=#aq40t1#, =ds=#r1#"};
-		{ 8, 0, "Ability_Hunter_RunningShot", "=q6=#aq40s2#", "=ec1=#c2#"};
-		{ 9, 221370, "", "=q4=Striker's Hauberk", "=q4=#aq40t8#, =ds=#r3#"};
-		{ 10, 221366, "", "=q4=Striker's Diadem", "=q4=#aq40t6#, =ds=#r2#"};
-		{ 11, 221368, "", "=q4=Striker's Leggings", "=q4=#aq40t7#, =ds=#r2#"};
-		{ 12, 221367, "", "=q4=Striker's Pauldrons", "=q4=#aq40t5#, =ds=#r1#"};
-		{ 13, 221365, "", "=q4=Striker's Footguards", "=q4=#aq40t5#, =ds=#r1#"};
-		{ 16, 0, "Spell_Frost_IceStorm", "=q6=#aq40s3#", "=ec1=#c3#"};
-		{ 17, 221343, "", "=q4=Enigma Robes", "=q4=#aq40t4#, =ds=#r3#"};
-		{ 18, 221347, "", "=q4=Enigma Circlet", "=q4=#aq40t2#, =ds=#r2#"};
-		{ 19, 221346, "", "=q4=Enigma Leggings", "=q4=#aq40t3#, =ds=#r2#"};
-		{ 20, 221345, "", "=q4=Enigma Shoulderpads", "=q4=#aq40t1#, =ds=#r1#"};
-		{ 21, 221344, "", "=q4=Enigma Boots", "=q4=#aq40t1#, =ds=#r1#"};
-		{ 23, 0, "Spell_Holy_SealOfMight", "=q6=#aq40s4#", "=ec1=#c4#"};
-		{ 24, 221389, "", "=q4=Avenger's Breastplate", "=q4=#aq40t8#, =ds=#r3#"};
-		{ 25, 221387, "", "=q4=Avenger's Crown", "=q4=#aq40t6#, =ds=#r2#"};
-		{ 26, 221390, "", "=q4=Avenger's Legguards", "=q4=#aq40t7#, =ds=#r2#"};
-		{ 27, 221391, "", "=q4=Avenger's Pauldrons", "=q4=#aq40t1#, =ds=#r1#"};
-		{ 28, 221388, "", "=q4=Avenger's Greaves", "=q4=#aq40t1#, =ds=#r1#"};
-		Next = "AQ40Sets2";
-		Back = "SETMENU";
-	};
-
-	AtlasLoot_Data["AQ40Sets2"] = {
-		{ 1, 0, "Spell_Holy_PowerWordShield", "=q6=#aq40s5#", "=ec1=#c5#"};
-		{ 2, 221351, "", "=q4=Vestments of the Oracle", "=q4=#aq40t4#, =ds=#r3#"};
-		{ 3, 221348, "", "=q4=Tiara of the Oracle", "=q4=#aq40t2#, =ds=#r2#"};
-		{ 4, 221352, "", "=q4=Trousers of the Oracle", "=q4=#aq40t3#, =ds=#r2#"};
-		{ 5, 221350, "", "=q4=Mantle of the Oracle", "=q4=#aq40t5#, =ds=#r1#"};
-		{ 6, 221349, "", "=q4=Footwraps of the Oracle", "=q4=#aq40t5#, =ds=#r1#"};
-		{ 8, 0, "Ability_BackStab", "=q6=#aq40s6#", "=ec1=#c6#"};
-		{ 9, 221364, "", "=q4=Deathdealer's Vest", "=q4=#aq40t8#, =ds=#r3#"};
-		{ 10, 221360, "", "=q4=Deathdealer's Helm", "=q4=#aq40t6#, =ds=#r2#"};
-		{ 11, 221362, "", "=q4=Deathdealer's Leggings", "=q4=#aq40t3#, =ds=#r2#"};
-		{ 12, 221361, "", "=q4=Deathdealer's Spaulders", "=q4=#aq40t5#, =ds=#r1#"};
-		{ 13, 221359, "", "=q4=Deathdealer's Boots", "=q4=#aq40t5#, =ds=#r1#"};
-		{ 16, 0, "Spell_FireResistanceTotem_01", "=q6=#aq40s7#", "=ec1=#c7#"};
-		{ 17, 221374, "", "=q4=Stormcaller's Hauberk", "=q4=#aq40t8#, =ds=#r3#"};
-		{ 18, 221372, "", "=q4=Stormcaller's Diadem", "=q4=#aq40t6#, =ds=#r2#"};
-		{ 19, 221375, "", "=q4=Stormcaller's Leggings", "=q4=#aq40t7#, =ds=#r2#"};
-		{ 20, 221376, "", "=q4=Stormcaller's Pauldrons", "=q4=#aq40t1#, =ds=#r1#"};
-		{ 21, 221373, "", "=q4=Stormcaller's Footguards", "=q4=#aq40t1#, =ds=#r1#"};
-		{ 23, 0, "Spell_Shadow_CurseOfTounges", "=q6=#aq40s8#", "=ec1=#c8#"};
-		{ 24, 221334, "", "=q4=Doomcaller's Robes", "=q4=#aq40t4#, =ds=#r3#"};
-		{ 25, 221337, "", "=q4=Doomcaller's Circlet", "=q4=#aq40t2#, =ds=#r2#"};
-		{ 26, 221336, "", "=q4=Doomcaller's Trousers", "=q4=#aq40t7#, =ds=#r2#"};
-		{ 27, 221335, "", "=q4=Doomcaller's Mantle", "=q4=#aq40t1#, =ds=#r1#"};
-		{ 28, 221338, "", "=q4=Doomcaller's Footwraps", "=q4=#aq40t1#, =ds=#r1#"};
-		Next = "AQ40Sets3";
-		Prev = "AQ40Sets1";
-		Back = "SETMENU";
-	};
-
-	AtlasLoot_Data["AQ40Sets3"] = {
-		{ 1, 0, "INV_Shield_05", "=q6=#aq40s9#", "=ec1=#c9#"};
-		{ 2, 221331, "", "=q4=Conqueror's Breastplate", "=q4=#aq40t8#, =ds=#r3#"};
-		{ 3, 221329, "", "=q4=Conqueror's Crown", "=q4=#aq40t2#, =ds=#r2#"};
-		{ 4, 221332, "", "=q4=Conqueror's Legguards", "=q4=#aq40t3#, =ds=#r2#"};
-		{ 5, 221330, "", "=q4=Conqueror's Spaulders", "=q4=#aq40t5#, =ds=#r1#"};
-		{ 6, 221333, "", "=q4=Conqueror's Greaves", "=q4=#aq40t5#, =ds=#r1#"};
-		{ 16, 0, "Ability_Warrior_BattleShout", "=q6=#aq40s9#", "=ec1=#c9#"};
-		{ 17, 210912, "", "=q4=Conqueror's Chestplate", "=q4=#aq40t8#, =ds=#r3#"};
-		{ 18, 210910, "", "=q4=Conqueror's Headguard", "=q4=#aq40t2#, =ds=#r2#"};
-		{ 19, 210913, "", "=q4=Conqueror's Platelegs", "=q4=#aq40t3#, =ds=#r2#"};
-		{ 20, 210911, "", "=q4=Conqueror's Shoulderpads", "=q4=#aq40t5#, =ds=#r1#"};
-		{ 21, 210914, "", "=q4=Conqueror's War Stompers", "=q4=#aq40t5#, =ds=#r1#"};
-		Prev = "AQ40Sets2";
-		Back = "SETMENU";
-	};
-
 
 		-----------------------
 		--- BoE World Epics ---
