@@ -453,95 +453,104 @@ function AtlasLoot:Search(Text)
 	local operator = HaveOperator(text);
 	
     for dataID, data in pairs(AtlasLoot_Data) do
-        for _, v in ipairs(data) do
-            if type(v[2]) == "number" and v[2] > 0 then
-                -- Name, Link, Quality(num), iLvl(num), minLvl(num), itemType(localized string), itemSubType(localized string), stackCount(num), itemEquipLoc(enum), texture(link to a local file), displayId(num)
-                local itemName, _, itemQuality, itemLvl, minLvl, _, _, _, itemEquipLoc = GetItemInfo(v[2]);
-                
-                if not itemName then itemName = gsub(v[4], "=q%d=", "") end
+		local maxDifficulties = 2;
 
-                if operator ~= nil then
-					local stats = GetItemStats("item:"..tostring(v[2]));
+		if data.Type ~= nil then
+			maxDifficulties = 4;
+		end
+
+		for dif = 2, maxDifficulties do
+			for _, v in ipairs(data) do
+				local _id = AL_FindId(gsub(v[4], "=q%d=", ""), dif) or v[2] 
+				if type(_id) == "number" and _id > 0 then
+					-- Name, Link, Quality(num), iLvl(num), minLvl(num), itemType(localized string), itemSubType(localized string), stackCount(num), itemEquipLoc(enum), texture(link to a local file), displayId(num)
+					local itemName, _, itemQuality, itemLvl, minLvl, _, _, _, itemEquipLoc = GetItemInfo(_id);
 					
-					 -- Currently only supports "&"
-					local binaryOperator = HaveBinaryOperator(text);
-					if binaryOperator ~= nil then
-						local searchConditionsMet = true;
-						local searchItems = SplitString(text, binaryOperator);
+					if not itemName then itemName = gsub(v[4], "=q%d=", "") end
+
+					if operator ~= nil then
+						local stats = GetItemStats("item:"..tostring(_id));
 						
-						if searchItems then
-							for _, searchTextItem in ipairs(searchItems) do
-								local localOperator = HaveOperator(searchTextItem);
-								if not localOperator
-									or not (
-										-- Stat Filter
-										IsItemStatMatch(searchTextItem, stats, localOperator)
-										-- Item Level Filter
-										or IsItemLevelFilterMatch(searchTextItem, itemLvl, itemEquipLoc, localOperator)
-									)
-								then
-									searchConditionsMet = false;
-									break;
+						-- Currently only supports "&"
+						local binaryOperator = HaveBinaryOperator(text);
+						if binaryOperator ~= nil then
+							local searchConditionsMet = true;
+							local searchItems = SplitString(text, binaryOperator);
+							
+							if searchItems then
+								for _, searchTextItem in ipairs(searchItems) do
+									local localOperator = HaveOperator(searchTextItem);
+									if not localOperator
+										or not (
+											-- Stat Filter
+											IsItemStatMatch(searchTextItem, stats, localOperator)
+											-- Item Level Filter
+											or IsItemLevelFilterMatch(searchTextItem, itemLvl, itemEquipLoc, localOperator)
+										)
+									then
+										searchConditionsMet = false;
+										break;
+									end
+								end
+								
+								if searchConditionsMet then
+									AddItemToSearchResult(_id, v[3], itemName, lootpage, dataID);
 								end
 							end
-							
-							if searchConditionsMet then
-								AddItemToSearchResult(v[2], v[3], itemName, lootpage, dataID);
+						else
+							-- Stat Filter
+							if IsItemStatMatch(text, stats, operator)
+								-- Item Level Filter
+								or IsItemLevelFilterMatch(text, itemLvl, itemEquipLoc, operator)
+							then
+								AddItemToSearchResult(_id, v[3], itemName, lootpage, dataID);
 							end
+							-- TODO itemQuality
+							-- TODO minLvl
+							-- TODO itemEquipLoc
 						end
-					else
-						-- Stat Filter
-						if IsItemStatMatch(text, stats, operator)
-							-- Item Level Filter
-							or IsItemLevelFilterMatch(text, itemLvl, itemEquipLoc, operator)
-						then
-							AddItemToSearchResult(v[2], v[3], itemName, lootpage, dataID);
+						
+						-- Stat Table Cleanup
+						if stats then
+							table.wipe(stats);
 						end
-						-- TODO itemQuality
-						-- TODO minLvl
-						-- TODO itemEquipLoc
 					end
 					
-					-- Stat Table Cleanup
-					if stats then
-						table.wipe(stats);
+					local found;
+					if partial then
+						found = string.find(string.lower(itemName), text);
+					else
+						found = string.lower(itemName) == text;
 					end
-                end
-				
-                local found;
-                if partial then
-                    found = string.find(string.lower(itemName), text);
-                else
-                    found = string.lower(itemName) == text;
-                end
-                if found then
-                    local _, _, quality = string.find(v[4], "=q(%d)=");
-                    if quality then itemName = "=q"..quality.."="..itemName end
-                    if AtlasLoot_TableNames[dataID] then lootpage = AtlasLoot_TableNames[dataID][1]; else lootpage = "Argh!"; end
-                    table.insert(AtlasLootCharDB["SearchResult"], { 0, v[2], v[3], itemName, lootpage, "", "", dataID.."|".."\"\"" });
-                end
-            elseif (v[2] ~= nil) and (v[2] ~= "") and (string.sub(v[2], 1, 1) == "s") then 
-                local spellName = GetSpellInfo(string.sub(v[2], 2));
-                if not spellName then
-                    if (string.sub(v[4], 1, 2) == "=d") then  
-                        spellName = gsub(v[4], "=ds=", "");
-                    else
-                        spellName = gsub(v[4], "=q%d=", ""); 
-                    end
-                end
-                local found;
-                if partial then
-                    found = string.find(string.lower(spellName), text);
-                else
-                    found = string.lower(spellName) == text;
-                end
-                if found then
-                    spellName = string.sub(v[4], 1, 4)..spellName;
-                    if AtlasLoot_TableNames[dataID][1] then lootpage = AtlasLoot_TableNames[dataID][1]; else lootpage = "Argh!"; end
-                    table.insert(AtlasLootCharDB["SearchResult"], { 0, v[2], v[3], spellName, lootpage, "", "", dataID.."|".."\"\"" });
-                end
-            end
-        end
+					if found then
+						local _, _, quality = string.find(v[4], "=q(%d)=");
+						if quality then itemName = "=q"..quality.."="..itemName end
+						if AtlasLoot_TableNames[dataID] then lootpage = AtlasLoot_TableNames[dataID][1]; else lootpage = "Argh!"; end
+						table.insert(AtlasLootCharDB["SearchResult"], { 0, _id, v[3], itemName, lootpage..", "..GREEN..AL_Dif.Dungeon[dif], "", "", dataID.."|".."\"\"" });
+					end
+				elseif (v[2] ~= nil) and (v[2] ~= "") and (string.sub(v[2], 1, 1) == "s") then 
+					local spellName = GetSpellInfo(string.sub(v[2], 2));
+					if not spellName then
+						if (string.sub(v[4], 1, 2) == "=d") then  
+							spellName = gsub(v[4], "=ds=", "");
+						else
+							spellName = gsub(v[4], "=q%d=", ""); 
+						end
+					end
+					local found;
+					if partial then
+						found = string.find(string.lower(spellName), text);
+					else
+						found = string.lower(spellName) == text;
+					end
+					if found then
+						spellName = string.sub(v[4], 1, 4)..spellName;
+						if AtlasLoot_TableNames[dataID][1] then lootpage = AtlasLoot_TableNames[dataID][1]; else lootpage = "Argh!"; end
+						table.insert(AtlasLootCharDB["SearchResult"], { 0, v[2], v[3], spellName, lootpage, "", "", dataID.."|".."\"\"" });
+					end
+				end
+			end
+		end
     end
 	
 	if #AtlasLootCharDB["SearchResult"] == 0 then
@@ -650,5 +659,6 @@ function AtlasLoot:GetSearchResultPage(page)
 		table.insert(result, SearchResult[i]);
         k=k+1;
 	end
+
 	return result, pageMax;
 end

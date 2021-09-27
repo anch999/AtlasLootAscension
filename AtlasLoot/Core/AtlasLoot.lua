@@ -148,8 +148,8 @@ AtlasLoot_Difficulty = {
 	MythicPlus = {5, 6, 7, 8, 9, 10, 11, 12, 13, 14};
 
 	--Helper Enums to Set min and max difficulties
-	MIN_DIF = 8;
-	MAX_DIF = 9;
+	MIN_DIF = 18;
+	MAX_DIF = 19;
 }
 --AtlasLoot_Difficulty was too long to write for enum reasons
 AL_Dif = AtlasLoot_Difficulty;
@@ -884,8 +884,14 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 
 
 		--Check if difficulties exist, if so show difficulty select buttons
-		if (AtlasLoot_Data[dataID].Dif ~= nil) then
+		if (dataID ~= "SearchResult" and AtlasLoot_Data[dataID].Dif ~= nil) then
 			AtlasLootMythicButton.difficulty_type = AtlasLoot_Data[dataID].Type or "Dungeon" 
+			AtlasLootMythicButton:Show();
+			AtlasLoot_DifficultySelect:Show();
+		end
+
+		if (dataID == "SearchResult" and dataSource[dataID].Dif ~= nil) then
+			AtlasLootMythicButton.difficulty_type = dataSource[dataID].Type or "Dungeon" 
 			AtlasLootMythicButton:Show();
 			AtlasLoot_DifficultySelect:Show();
 		end
@@ -1637,7 +1643,6 @@ function QueryItems(instance, difficulty, expansion)
 							n = n + 1;
 						end
 					end
-					print("Query for "..boss.." in instance "..inst.." finished");
 				end
 			end
 		elseif AtlasLoot_DewDropDown[_men][ex_sel[expansion]][i][1][3] == "Table" then
@@ -1658,7 +1663,6 @@ function QueryItems(instance, difficulty, expansion)
 						n = n + 1;
 					end
 				end
-				print("Query for "..inst.." in instance "..inst.." finished");
 			end
 		end
 	end
