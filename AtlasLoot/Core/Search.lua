@@ -454,14 +454,14 @@ function AtlasLoot:Search(Text)
 	
     for dataID, data in pairs(AtlasLoot_Data) do
 		local queryDifficulties = 1;
-		local maxDifficulties = 1;
+		local maxDifficulties = 2;
 
 		if data.Type ~= nil then
 			queryDifficulties = 0;
 			maxDifficulties = 4;
 		end
 
-		for dif = 1, maxDifficulties do
+		for dif = 2, maxDifficulties do
 			for _, v in ipairs(data) do
 				local _id = AL_FindId(gsub(v[4], "=q%d=", ""), dif + queryDifficulties) or v[2] 
 				if type(_id) == "number" and _id > 0 then
@@ -528,7 +528,7 @@ function AtlasLoot:Search(Text)
 						local _, _, quality = string.find(v[4], "=q(%d)=");
 						if quality then itemName = "=q"..quality.."="..itemName end
 						if AtlasLoot_TableNames[dataID] then lootpage = AtlasLoot_TableNames[dataID][1]; else lootpage = "Argh!"; end
-						table.insert(AtlasLootCharDB["SearchResult"], { 0, _id, v[3], itemName, lootpage, "", "", dataID.."|".."\"\"" });
+						table.insert(AtlasLootCharDB["SearchResult"], { 0, _id, v[3], itemName, lootpage..", "..GREEN..AL_Dif.Dungeon[dif], "", "", dataID.."|".."\"\"" });
 					end
 				elseif (v[2] ~= nil) and (v[2] ~= "") and (string.sub(v[2], 1, 1) == "s") then 
 					local spellName = GetSpellInfo(string.sub(v[2], 2));
@@ -661,9 +661,6 @@ function AtlasLoot:GetSearchResultPage(page)
 		table.insert(result, SearchResult[i]);
         k=k+1;
 	end
-
-	result.Type = "Dungeon";
-	result.Dif = GetDifficultyTier();
 
 	return result, pageMax;
 end
