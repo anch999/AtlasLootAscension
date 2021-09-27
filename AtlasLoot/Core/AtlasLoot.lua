@@ -1627,7 +1627,6 @@ function QueryItems(instance, difficulty, expansion)
 			for b = 1, #AtlasLoot_DewDropDown_SubTables[inst] do
 				local boss = AtlasLoot_DewDropDown_SubTables[inst][b][2];
 				if(AtlasLoot_Data[boss] ~= nil and AtlasLoot_Data[boss].Type ~= nil and AtlasLoot_Data[boss].Type == instance) then
-					print("Query for "..boss.." in instance "..inst.." started");
 					local n = 1;
 					local querytime = 0;
 					local now = 0;
@@ -1644,12 +1643,10 @@ function QueryItems(instance, difficulty, expansion)
 							n = n + 1;
 						end
 					end
-					print("Query for "..boss.." in instance "..inst.." finished");
 				end
 			end
 		elseif AtlasLoot_DewDropDown[_men][ex_sel[expansion]][i][1][3] == "Table" then
 			if(AtlasLoot_Data[inst] ~= nil and AtlasLoot_Data[inst].Type ~= nil and AtlasLoot_Data[inst].Type == instance) then
-				print("Query for "..inst.." in instance "..inst.." started");
 				local n = 1;
 				local querytime = 0;
 				local now = 0;
@@ -1666,8 +1663,8 @@ function QueryItems(instance, difficulty, expansion)
 						n = n + 1;
 					end
 				end
-				print("Query for "..inst.." in instance "..inst.." finished");
 			end
 		end
 	end
+	print("You may need to reload your UI to finalize the Query")
 end

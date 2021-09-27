@@ -453,17 +453,15 @@ function AtlasLoot:Search(Text)
 	local operator = HaveOperator(text);
 	
     for dataID, data in pairs(AtlasLoot_Data) do
-		local queryDifficulties = 1;
 		local maxDifficulties = 2;
 
 		if data.Type ~= nil then
-			queryDifficulties = 0;
 			maxDifficulties = 4;
 		end
 
 		for dif = 2, maxDifficulties do
 			for _, v in ipairs(data) do
-				local _id = AL_FindId(gsub(v[4], "=q%d=", ""), dif + queryDifficulties) or v[2] 
+				local _id = AL_FindId(gsub(v[4], "=q%d=", ""), dif) or v[2] 
 				if type(_id) == "number" and _id > 0 then
 					-- Name, Link, Quality(num), iLvl(num), minLvl(num), itemType(localized string), itemSubType(localized string), stackCount(num), itemEquipLoc(enum), texture(link to a local file), displayId(num)
 					local itemName, _, itemQuality, itemLvl, minLvl, _, _, _, itemEquipLoc = GetItemInfo(_id);
