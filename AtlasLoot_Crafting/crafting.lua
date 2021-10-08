@@ -5692,7 +5692,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Back = "ALCHEMYMENU";
 	};
 
-	AtlasLoot_Data["AlchemyHighRisk25Man"] = {	
+	AtlasLoot_Data["AlchemyHighRiskHeroic"] = {	
 		{ 1, "s968403", "967444",  "=q3=Potent Flask of Manifesting Power", 	"=ds=#sr# 300"};
 		{ 2, "s968406", "967447",  "=q3=Potent Flask of the Warsong", 			"=ds=#sr# 300"};
 		{ 3, "s968409", "967450",  "=q3=Potent Flask of the Kirin Tor", 		"=ds=#sr# 300"};
@@ -5704,12 +5704,12 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 9, "s968427", "967468", "=q3=Potent Flask of the Executioner", 		"=ds=#sr# 300"};
 		{ 10, "s968430", "967471", "=q3=Potent Flask of Deep Meditation", 		"=ds=#sr# 300"};
 		{ 11, "s968433", "967474", "=q3=Potent Flask of Adept Striking", 		"=ds=#sr# 300"};
-		Prev = "TailorHighRisk25Man";
-		Next = "SmithingHighRisk25Man";
+		Prev = "TailorHighRisk";
+		Next = "SmithingHighRisk";
 		Back = "ALCHEMYMENU";
 	};
 
-	AtlasLoot_Data["AlchemyHighRisk25ManHEROIC"] = {	
+	AtlasLoot_Data["AlchemyHighRiskMythic"] = {	
 		{ 1, "s968404", "967445",  "=q4=Distilled Flask of Manifesting Power", 	"=ds=#sr# 300"};
 		{ 2, "s968407", "967448",  "=q4=Distilled Flask of the Warsong", "=ds=#sr# 300"};
 		{ 3, "s968410", "967451",  "=q4=Distilled Flask of the Kirin Tor", "=ds=#sr# 300"};
@@ -5721,8 +5721,8 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 9, "s968428", "967469", "=q4=Distilled Flask of the Executioner", "=ds=#sr# 300"};
 		{ 10, "s968431", "967472", "=q4=Distilled Flask of Deep Meditation", "=ds=#sr# 300"};
 		{ 11, "s968434", "967475", "=q4=Distilled Flask of Adept Striking", "=ds=#sr# 300"};
-		Prev = "TailorHighRisk25ManHEROIC";
-		Next = "SmithingHighRisk25ManHEROIC";
+		Prev = "TailorHighRisk";
+		Next = "SmithingHighRisk";
 		Back = "ALCHEMYMENU";
 	};
 
@@ -5741,7 +5741,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Back = "SMITHINGMENU";
 	};
 
-	AtlasLoot_Data["SmithingHighRisk25Man"] = {
+	AtlasLoot_Data["SmithingHighRiskHeroic"] = {
 		{ 1, "s968019", "967173", "=q3=Sturdy Living Belt Buckle", "=ds=#sr# 300"};
 		{ 2, "s968022", "967176", "=q3=Sturdy Deflecting Belt Buckle", "=ds=#sr# 300"};
 		{ 3, "s968025", "967179", "=q3=Sturdy Roguish Belt Buckle", "=ds=#sr# 300"};
@@ -5751,12 +5751,12 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 7, "s968037", "967191", "=q3=Sturdy Warlord's Belt Buckle", "=ds=#sr# 300"};
 		{ 8, "s968040", "967194", "=q3=Sturdy Gaurdian's Belt Buckle", "=ds=#sr# 300"};
 		{ 10, "s968481", "967681", "=q3=Homicite Key", "=ds=#sr# 300"};
-		Prev = "AlchemyHighRisk25Man";
-		Next = "LeatherHighRisk25Man";
+		Prev = "AlchemyHighRisk";
+		Next = "LeatherHighRisk";
 		Back = "SMITHINGMENU";
 	};
 
-	AtlasLoot_Data["SmithingHighRisk25ManHEROIC"] = {
+	AtlasLoot_Data["SmithingHighRiskMythic"] = {
 		{ 1, "s968020", "967174", "=q4=Mastercraft Living Belt Buckle", "=ds=#sr# 300"};
 		{ 2, "s968023", "967177", "=q4=Mastercraft Deflecting Belt Buckle", "=ds=#sr# 300"};
 		{ 3, "s968026", "967180", "=q4=Mastercraft Roguish Belt Buckle", "=ds=#sr# 300"};
@@ -5766,8 +5766,8 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 7, "s968038", "967192", "=q4=Mastercraft Warlord's Belt Buckle", "=ds=#sr# 300"};
 		{ 8, "s968041", "967195", "=q4=Mastercraft Gaurdian's Belt Buckle", "=ds=#sr# 300"};
 		{ 10, "s968482", "967682", "=q4=Homicite Key", "=ds=#sr# 300"};
-		Prev = "AlchemyHighRisk25ManHEROIC";
-		Next = "LeatherHighRisk25ManHEROIC";
+		Prev = "AlchemyHighRisk";
+		Next = "LeatherHighRisk";
 		Back = "SMITHINGMENU";
 	};
 	
@@ -5783,27 +5783,27 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Back = "LEATHERWORKINGMENU";
 	};
 	
-	AtlasLoot_Data["LeatherHighRisk25Man"] = {
+	AtlasLoot_Data["LeatherHighRiskHeroic"] = {
 		{ 1, "s968001", "967155", "=q3=Sturdy Yeti Gambeson", 				"=ds=#sr# 300"};
 		{ 2, "s968004", "967158", "=q3=Sturdy Devilsaur Gambeson", 			"=ds=#sr# 300"};
 		{ 3, "s968007", "967161", "=q3=Sturdy Plaguebat Gambeson", 			"=ds=#sr# 300"};
 		{ 4, "s968010", "967164", "=q3=Sturdy Sandworm Gambeson", 			"=ds=#sr# 300"};
 		{ 5, "s968013", "967167", "=q3=Sturdy Black Scale Gambeson", 		"=ds=#sr# 300"};
 		{ 6, "s968016", "967170", "=q3=Sturdy Blue Scale Gambeson", 		"=ds=#sr# 300"};
-		Prev = "SmithingHighRisk25Man";
-		Next = "EngineerHighRisk25Man";
+		Prev = "SmithingHighRisk";
+		Next = "EngineerHighRisk";
 		Back = "LEATHERWORKINGMENU";
 	};
 	
-	AtlasLoot_Data["LeatherHighRisk25ManHEROIC"] = {
+	AtlasLoot_Data["LeatherHighRiskMythic"] = {
 		{ 1, "s968002", "967156", "=q4=Mastercraft Yeti Gambeson", 			"=ds=#sr# 300"};
 		{ 2, "s968005", "967159", "=q4=Mastercraft Devilsaur Gambeson", 	"=ds=#sr# 300"};
 		{ 3, "s968008", "967162", "=q4=Mastercraft Plaguebat Gambeson", 	"=ds=#sr# 300"};
 		{ 4, "s968011", "967165", "=q4=Mastercraft Sandworm Gambeson", 	"=ds=#sr# 300"};	
 		{ 5, "s968014", "967168", "=q4=Mastercraft Black Scale Gambeson", 	"=ds=#sr# 300"};
 		{ 6, "s968017", "967171", "=q4=Mastercraft Blue Scale Gambeson", 	"=ds=#sr# 300"};
-		Prev = "SmithingHighRisk25ManHEROIC";
-		Next = "EngineerHighRisk25ManHEROIC";
+		Prev = "SmithingHighRisk";
+		Next = "EngineerHighRisk";
 		Back = "LEATHERWORKINGMENU";
 	};
 	
@@ -5819,27 +5819,27 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Back = "ENGINEERINGMENU";
 	};
 	
-	AtlasLoot_Data["EngineerHighRisk25Man"] = {
+	AtlasLoot_Data["EngineerHighRiskHeroic"] = {
 		{ 1, "s968043", "967197", "=q3=Focused Gnomish Magnifying Lense", "=ds=#sr# 300"};
 		{ 2, "s968046", "967200", "=q3=Focused Gnomish Focusing Lense", "=ds=#sr# 300"};
 		{ 3, "s968049", "967203", "=q3=Focused Gnomish Prismatic Lense", "=ds=#sr# 300"};
 		{ 4, "s968052", "967206", "=q3=Focused Hipfire Scope", "=ds=#sr# 300"};
 		{ 5, "s968055", "967209", "=q3=Focused Precision Scope", "=ds=#sr# 300"};
 		{ 6, "s968058", "967212", "=q3=Focused Reflex Scope", "=ds=#sr# 300"};
-		Prev = "LeatherHighRisk25Man";
-		Next = "EnchantingHighRisk25Man";
+		Prev = "LeatherHighRisk";
+		Next = "EnchantingHighRisk";
 		Back = "ENGINEERINGMENU";
 	};
 	
-	AtlasLoot_Data["EngineerHighRisk25ManHEROIC"] = {
+	AtlasLoot_Data["EngineerHighRiskMythic"] = {
 		{ 1, "s968044", "967198", "=q4=Polished Gnomish Magnifying Lense", "=ds=#sr# 300"};
 		{ 2, "s968047", "967201", "=q4=Polished Gnomish Focusing Lense", "=ds=#sr# 300"};
 		{ 3, "s968050", "967204", "=q4=Polished Gnomish Prismatic Lense", "=ds=#sr# 300"};
 		{ 4, "s968053", "967207", "=q4=Polished Hipfire Scope", "=ds=#sr# 300"};
 		{ 5, "s968056", "967210", "=q4=Polished Precision Scope", "=ds=#sr# 300"};
 		{ 6, "s968059", "967213", "=q4=Polished Reflex Scope", "=ds=#sr# 300"};
-		Prev = "LeatherHighRisk25ManHEROIC";
-		Next = "EnchantingHighRisk25ManHEROIC";
+		Prev = "LeatherHighRisk";
+		Next = "EnchantingHighRisk";
 		Back = "ENGINEERINGMENU";
 	};
 	
@@ -5858,7 +5858,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Back = "ENCHANTINGMENU";
 	};
 	
-	AtlasLoot_Data["EnchantingHighRisk25Man"] = {
+	AtlasLoot_Data["EnchantingHighRiskHeroic"] = {
 		{ 1, "s968677", "Spell_Holy_GreaterHeal", "=q3=Enchant Weapon - Unstoppable Assault", "=ds=#sr# 300"};
 		{ 2, "s968680", "Spell_Holy_GreaterHeal", "=q3=Enchant Weapon - Lucid Assault", "=ds=#sr# 300"};
 		{ 3, "s968683", "Spell_Holy_GreaterHeal", "=q3=Enchant Weapon - Spellbinder's Rage", "=ds=#sr# 300"};
@@ -5869,12 +5869,12 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 8, "s968698", "Spell_Holy_GreaterHeal", "=q3=Enchant Weapon - Arcane Artillery", "=ds=#sr# 300"};
 		{ 9, "s968701", "Spell_Holy_GreaterHeal", "=q3=Enchant Weapon - Arcane Precision", "=ds=#sr# 300"};
 		{ 10, "s968770", "Spell_Holy_GreaterHeal", "=q3=Enchant Weapon - Crusader II", "=ds=#sr# 300"};
-		Prev = "EngineerHighRisk25Man";
-		Next = "TailorHighRisk25Man";
+		Prev = "EngineerHighRisk";
+		Next = "TailorHighRisk";
 		Back = "ENCHANTINGMENU";
 	};
 	
-	AtlasLoot_Data["EnchantingHighRisk25ManHEROIC"] = {
+	AtlasLoot_Data["EnchantingHighRiskMythic"] = {
 		{ 1, "s968678", "Spell_Holy_GreaterHeal", "=q4=Enchant Weapon - Greater Unstoppable Assault", "=ds=#sr# 300"};
 		{ 2, "s968681", "Spell_Holy_GreaterHeal", "=q4=Enchant Weapon - Greater Lucid Assualt", "=ds=#sr# 300"};
 		{ 3, "s968684", "Spell_Holy_GreaterHeal", "=q4=Enchant Weapon - Greater Spellbinder's Rage", "=ds=#sr# 300"};
@@ -5885,8 +5885,8 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 8, "s968699", "Spell_Holy_GreaterHeal", "=q4=Enchant Weapon - Greater Arcane Artillery", "=ds=#sr# 300"};
 		{ 9, "s968702", "Spell_Holy_GreaterHeal", "=q4=Enchant Weapon - Greater Arcane Precision", "=ds=#sr# 300"};
 		{ 10, "s968771", "Spell_Holy_GreaterHeal", "=q4=Enchant Weapon - Crusader III", "=ds=#sr# 300"};
-		Prev = "EngineerHighRisk25ManHEROIC";
-		Next = "TailorHighRisk25ManHEROIC";
+		Prev = "EngineerHighRisk";
+		Next = "TailorHighRisk";
 		Back = "ENCHANTINGMENU";
 	};
 	
@@ -5897,32 +5897,32 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 4, "s968069", "967223", "=q2=Rampager's Cloak Lining", "=ds=#sr# 300"};
 		{ 5, "s968072", "967226", "=q2=Deadwind Cloak Lining", "=ds=#sr# 300"};
 		{ 6, "s968075", "967229", "=q2=Slippery Cloak Lining", "=ds=#sr# 300"};
-		Prev = "EnchantingHighRisk25ManHEROIC";
-		Next = "AlchemyHighRisk25ManHEROIC";
+		Prev = "EnchantingHighRisk";
+		Next = "AlchemyHighRisk";
 		Back = "TAILORINGMENU";
 	};
 	
-	AtlasLoot_Data["TailorHighRisk25Man"] = {
+	AtlasLoot_Data["TailorHighRiskHeroic"] = {
 		{ 1, "s968061", "967215", "=q3=Heavy Dragonweave Cloak Lining", "=ds=#sr# 300"};
 		{ 2, "s968064", "967218", "=q3=Heavy Twilight Cloak Lining", "=ds=#sr# 300"};
 		{ 3, "s968067", "967221", "=q3=Heavy Scarlet Cloak Lining", "=ds=#sr# 300"};
 		{ 4, "s968070", "967224", "=q3=Heavy Rampager's Cloak Lining", "=ds=#sr# 300"};
 		{ 5, "s968073", "967227", "=q3=Heavy Deadwind Cloak Lining", "=ds=#sr# 300"};
 		{ 6, "s968076", "967230", "=q3=Heavy Slippery Cloak Lining", "=ds=#sr# 300"};
-		Prev = "EnchantingHighRisk25ManHEROIC";
-		Next = "AlchemyHighRisk25ManHEROIC";
+		Prev = "EnchantingHighRisk";
+		Next = "AlchemyHighRisk";
 		Back = "TAILORINGMENU";
 	};
 	
-	AtlasLoot_Data["TailorHighRisk25ManHEROIC"] = {
+	AtlasLoot_Data["TailorHighRiskMythic"] = {
 		{ 1, "s968062", "967216", "=q4=Illustrious Dragonweave Cloak Lining", "=ds=#sr# 300"};
 		{ 2, "s968065", "967219", "=q4=Illustrious Twilight Cloak Lining", "=ds=#sr# 300"};
 		{ 3, "s968068", "967222", "=q4=Illustrious Scarlet Cloak Lining", "=ds=#sr# 300"};
 		{ 4, "s968071", "967225", "=q4=Illustrious Rampager's Cloak Lining", "=ds=#sr# 300"};
 		{ 5, "s968074", "967228", "=q4=Illustrious Deadwind Cloak Lining", "=ds=#sr# 300"};
 		{ 6, "s968077", "967231", "=q4=Illustrious Slippery Cloak Lining", "=ds=#sr# 300"};
-		Prev = "EnchantingHighRisk25ManHEROIC";
-		Next = "AlchemyHighRisk25ManHEROIC";
+		Prev = "EnchantingHighRisk";
+		Next = "AlchemyHighRisk";
 		Back = "TAILORINGMENU";
 	};
 
@@ -5978,7 +5978,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Back = "CRAFTINGMENU";
 	};
 	
-	AtlasLoot_Data["CookingHighRisk25Man"] = {
+	AtlasLoot_Data["CookingHighRiskHeroic"] = {
 		{ 1, "s968280",	"967510",	"=q3=Animated Soup for the Soul", "=ds=#sr# 300"};
 		{ 2, "s968283",	"967513",	"=q3=Volcanic Sandwich", "=ds=#sr# 300"};
 		{ 3, "s968286",	"967516",	"=q3=Winter Wontons", "=ds=#sr# 300"};
@@ -6009,11 +6009,11 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 28, "s968361",	"967591",	"=q3=Warding Wontons", "=ds=#sr# 300"};
 		{ 29, "s968364",	"967594",	"=q3=Rolling Meatballs", "=ds=#sr# 300"};
 		{ 30, "s968367",	"967597",	"=q3=Subtle Steak", "=ds=#sr# 300"};
-		Next = "CookingHighRiskTwo25Man";
+		Next = "CookingHighRiskTwo";
 		Back = "CRAFTINGMENU";
 	};
 	
-	AtlasLoot_Data["CookingHighRiskTwo25Man"] = {
+	AtlasLoot_Data["CookingHighRiskTwoHeroic"] = {
 		{ 1, "s968370",	"967600",	"=q3=Subtle Sandwich", "=ds=#sr# 300"};
 		{ 2, "s968373",	"967603",	"=q3=Subtle Wontons", "=ds=#sr# 300"};
 		{ 3, "s968376",	"967606",	"=q3=Subtle Sulferous Soup", "=ds=#sr# 300"};
@@ -6026,11 +6026,11 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 10, "s968397",	"967627",	"=q3=Dino Delight", "=ds=#sr# 300"};
 		{ 11, "s968400",	"967630",	"=q3=Slick-fil-A Sandwich", "=ds=#sr# 300"};
 		{ 13, "s968647",	"967704",	"=q3=Alluring Bait", "=ds=#sr# 300"};
-		Prev = "CookingHighRisk25Man";
+		Prev = "CookingHighRisk";
 		Back = "CRAFTINGMENU";
 	};
 	
-	AtlasLoot_Data["CookingHighRisk25ManHEROIC"] = {
+	AtlasLoot_Data["CookingHighRiskMythic"] = {
 		{ 1, "s968281",	"967511", 		"=q4=Animated Soup for the Soul", "=ds=#sr# 300"};
 		{ 2, "s968284",	"967514",		"=q4=Volcanic Sandwich", "=ds=#sr# 300"};
 		{ 3, "s968287",	"967517",		"=q4=Winter Wontons", "=ds=#sr# 300"};
@@ -6061,11 +6061,11 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 28, "s968362",	"967592",	"=q4=Warding Wontons", "=ds=#sr# 300"};
 		{ 29, "s968365",	"967595",	"=q4=Rolling Meatballs", "=ds=#sr# 300"};
 		{ 30, "s968368",	"967598",	"=q4=Subtle Steak", "=ds=#sr# 300"};
-		Next = "CookingHighRiskTwo25ManHEROIC";
+		Next = "CookingHighRiskTwo";
 		Back = "CRAFTINGMENU";
 	};
 	
-	AtlasLoot_Data["CookingHighRiskTwo25ManHEROIC"] = {
+	AtlasLoot_Data["CookingHighRiskTwoMythic"] = {
 		{ 1, "s968371",	"967601",	"=q4=Subtle Sandwich", "=ds=#sr# 300"};
 		{ 2, "s968374",	"967604",	"=q4=Subtle Wontons", "=ds=#sr# 300"};
 		{ 3, "s968377",	"967607",	"=q4=Subtle Sulferous Soup", "=ds=#sr# 300"};
@@ -6078,6 +6078,6 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 10, "s968398",	"967628",	"=q4=Dino Delight", "=ds=#sr# 300"};
 		{ 11, "s968401",	"967631",	"=q4=Slick-fil-A Sandwich", "=ds=#sr# 300"};
 		{ 13, "s968648",	"967705",	"=q4=Irresistible Bait", "=ds=#sr# 300"};
-		Prev = "CookingHighRisk25ManHEROIC";
+		Prev = "CookingHighRisk";
 		Back = "CRAFTINGMENU";
 	};
