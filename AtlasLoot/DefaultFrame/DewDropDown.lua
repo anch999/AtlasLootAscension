@@ -536,6 +536,7 @@ AtlasLoot_DewDropDown_SubTables = {
 		{ "", "CoTHillsbradDrake" },
 		{ "", "CoTHillsbradSkarloc" },
 		{ "", "CoTHillsbradHunter" },
+		{ "", "CoTHillsbradHunterHeroic" },
 		{ AL["Trash Mobs"], "CoTTrash" },
 	},
 	["CoTBlackMorass"] = {
@@ -631,7 +632,8 @@ AtlasLoot_DewDropDown_SubTables = {
 		{ "", "AuchManaPandemonius" },
 		{ "", "AuchManaTavarok" },
 		{ "", "AuchManaNexusPrince" },
-		{ "", "AuchManaYor" },
+		{ "", "AuchManaNexusPrinceHeroic" },
+		{ "", "AuchManaYorHeroic" },
 		{ AL["Trash Mobs"], "AuchTrash" },
 	},
 	["AuchCrypts"] = {
@@ -677,6 +679,7 @@ AtlasLoot_DewDropDown_SubTables = {
 		{ "", "CFRUnderGhazan" },
 		{ "", "CFRUnderSwamplord" },
 		{ "", "CFRUnderStalker" },
+		{ "", "CFRUnderStalkerHeroic" },
 	},
 	["CFRSteamvault"] = {
 		{ "", "CFRSteamThespia" },
@@ -701,6 +704,7 @@ AtlasLoot_DewDropDown_SubTables = {
 		{ "", "HCRampWatchkeeper" },
 		{ "", "HCRampOmor" },
 		{ "", "HCRampVazruden" },
+		{ "", "HCRampVazrudenHeroic" },
 	},
 	["HCFurnace"] = {
 		{ "", "HCFurnaceMaker" },
@@ -719,6 +723,7 @@ AtlasLoot_DewDropDown_SubTables = {
 		{ "", "TKMechCapacitus" },
 		{ "", "TKMechSepethrea" },
 		{ "", "TKMechCalc" },
+		{ "", "TKMechCalcHeroic" },
 		{ AL["Trash Mobs"], "TKTrash" },
 	},
 	["TKBot"] = {
@@ -727,6 +732,7 @@ AtlasLoot_DewDropDown_SubTables = {
 		{ "", "TKBotThorngrin" },
 		{ "", "TKBotLaj" },
 		{ "", "TKBotSplinter" },
+		{ "", "TKBotSplinterHeroic" },
 		{ AL["Trash Mobs"], "TKTrash" },
 	},
 	["TKArc"] = {
@@ -1750,14 +1756,14 @@ AtlasLoot_DewDropDown_SubTables2 = {
 	
 	--Crafting High Risk
 
-	["AlchemyHighRisk"] = { { "", 1, "CraftingPatternUncommon", "Normal" }, { "", 2, "CraftingPatternsRare", "Heroic" }, { "", 3, "CraftingPatternsEpic", "Mythic" }, { "", 4, "ItemUncommon", "=s=" }, { "", 5, "ItemRare", "=s=Heroic" }, { "", 6, "ItemEpic", "=s=Mythic" } },
-	["SmithingHighRisk"] = { { "", 1, "CraftingPatternUncommon", "Normal" }, { "", 2, "CraftingPatternsRare", "Heroic" }, { "", 3, "CraftingPatternsEpic", "Mythic" }, { "", 4, "ItemUncommon", "=s=" }, { "", 5, "ItemRare", "=s=Heroic" }, { "", 6, "ItemEpic", "=s=Mythic" } },
-	["EnchantingHighRisk"] = { { "", 1, "CraftingPatternUncommon", "Normal" }, { "", 2, "CraftingPatternsRare", "Heroic" }, { "", 3, "CraftingPatternsEpic", "Mythic" }, { "", 4, "ItemUncommon", "=s=" }, { "", 5, "ItemRare", "=s=Heroic" },{ "", 6, "ItemEpic", "=s=Mythic" } },
-	["EngineerHighRisk"] = { { "", 1, "CraftingPatternUncommon", "Normal" }, { "", 2, "CraftingPatternsRare", "Heroic" }, { "", 3, "CraftingPatternsEpic", "Mythic" }, { "", 4, "ItemUncommon", "=s=" }, { "", 5, "ItemRare", "=s=Heroic" },{ "", 6, "ItemEpic", "=s=Mythic" } },
-	["LeatherHighRisk"] = { { "", 1, "CraftingPatternUncommon", "Normal" }, { "", 2, "CraftingPatternsRare", "Heroic" }, { "", 3, "CraftingPatternsEpic", "Mythic" }, { "", 4, "ItemUncommon", "=s=" }, { "", 5, "ItemRare", "=s=Heroic" },{ "", 6, "ItemEpic", "=s=Mythic" } },
-	["TailorHighRisk"] = { { "", 1, "CraftingPatternUncommon", "Normal" }, { "", 2, "CraftingPatternsRare", "Heroic" }, { "", 3, "CraftingPatternsEpic", "Mythic" }, { "", 4, "ItemUncommon", "=s=" }, { "", 5, "ItemRare", "=s=Heroic" },{ "", 6, "ItemEpic", "=s=Mythic" } },
-	["CookingHighRisk"] = { { "", 1, "CraftingPatternUncommon", "Normal" }, { "", 2, "CraftingPatternsRare", "Heroic" }, { "", 3, "CraftingPatternsEpic", "Mythic" }, { "", 4, "ItemUncommon", "=s=" }, { "", 5, "ItemRare", "=s=Heroic" },{ "", 6, "ItemEpic", "=s=Mythic" } },
-	["CookingHighRiskTwo"] = { { "", 1, "CraftingPatternUncommon", "Normal" }, { "", 2, "CraftingPatternsRare", "Heroic" }, { "", 3, "CraftingPatternsEpic", "Mythic" }, { "", 4, "ItemUncommon", "=s=" }, { "", 5, "ItemRare", "=s=Heroic" },{ "", 6, "ItemEpic", "=s=Mythic" } },
+	["AlchemyHighRisk"] = { { "", 1, "CraftingPatternUncommon", "Normal" }, { "", 2, "CraftingPatternsRare", "Rare" }, { "", 3, "CraftingPatternsEpic", "Epic" }, { "", 4, "ItemUncommon", "=s=" }, { "", 5, "ItemRare", "=s=Rare" }, { "", 6, "ItemEpic", "=s=Epic" } },
+	["SmithingHighRisk"] = { { "", 1, "CraftingPatternUncommon", "Normal" }, { "", 2, "CraftingPatternsRare", "Rare" }, { "", 3, "CraftingPatternsEpic", "Epic" }, { "", 4, "ItemUncommon", "=s=" }, { "", 5, "ItemRare", "=s=Rare" }, { "", 6, "ItemEpic", "=s=Epic" } },
+	["EnchantingHighRisk"] = { { "", 1, "CraftingPatternUncommon", "Normal" }, { "", 2, "CraftingPatternsRare", "Rare" }, { "", 3, "CraftingPatternsEpic", "Epic" } },
+	["EngineerHighRisk"] = { { "", 1, "CraftingPatternUncommon", "Normal" }, { "", 2, "CraftingPatternsRare", "Rare" }, { "", 3, "CraftingPatternsEpic", "Epic" }, { "", 4, "ItemUncommon", "=s=" }, { "", 5, "ItemRare", "=s=Rare" },{ "", 6, "ItemEpic", "=s=Epic" } },
+	["LeatherHighRisk"] = { { "", 1, "CraftingPatternUncommon", "Normal" }, { "", 2, "CraftingPatternsRare", "Rare" }, { "", 3, "CraftingPatternsEpic", "Epic" }, { "", 4, "ItemUncommon", "=s=" }, { "", 5, "ItemRare", "=s=Rare" },{ "", 6, "ItemEpic", "=s=Epic" } },
+	["TailorHighRisk"] = { { "", 1, "CraftingPatternUncommon", "Normal" }, { "", 2, "CraftingPatternsRare", "Rare" }, { "", 3, "CraftingPatternsEpic", "Epic" }, { "", 4, "ItemUncommon", "=s=" }, { "", 5, "ItemRare", "=s=Rare" },{ "", 6, "ItemEpic", "=s=Epic" } },
+	["CookingHighRisk"] = { { "", 1, "CraftingPatternUncommon", "Normal" }, { "", 2, "CraftingPatternsRare", "Rare" }, { "", 3, "CraftingPatternsEpic", "Epic" }, { "", 4, "ItemUncommon", "=s=" }, { "", 5, "ItemRare", "=s=Rare" },{ "", 6, "ItemEpic", "=s=Epic" } },
+	["CookingHighRiskTwo"] = { { "", 1, "CraftingPatternUncommon", "Normal" }, { "", 2, "CraftingPatternsRare", "Rare" }, { "", 3, "CraftingPatternsEpic", "Epic" }, { "", 4, "ItemUncommon", "=s=" }, { "", 5, "ItemRare", "=s=Rare" },{ "", 6, "ItemEpic", "=s=Epic" } },
 	
 	
 	

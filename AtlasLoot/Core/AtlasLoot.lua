@@ -60,6 +60,8 @@ AtlasLoot_DewdropSubMenu = AceLibrary("Dewdrop-2.0");
 AtlasLoot_DewdropSubMenu2 = AceLibrary("Dewdrop-2.0");
 DewDrop2Enable = false;
 currentID = "";
+dataIDBackup = nil;
+dataSourceBackup = nil;
 
 --Variable to cap debug spam
 ATLASLOOT_DEBUGSHOWN = false;
@@ -493,6 +495,32 @@ function AtlasLoot_OnLoad()
 	end
 end
 
+AtlasLoot_Difficulty = {
+		
+		["ClassicDungeon"] = { {"Normal", "" }, {"Bloodforged", 1 } };
+		
+		["ClassicDungeonExt"] = { {"Normal", "" }, {"Heroic", 3 }, {"Mythic", 4 }, {"Mythic1", 5 }, {"Mythic2", 6 }, {"Mythic3", 7 }, {"Mythic4", 8 }, {"Mythic5", 9 }, {"Mythic6", 10 },
+		{"Mythic7", 11 }, {"Mythic8", 12 }, {"Mythic9", 13 }, {"Mythic10", 14 }, {"Bloodforged", 1 }, };
+		
+		["ClassicRaid"] = { {"NormalFLEX", "" }, {"HeroicFLEX", 3 }, {"Ascended", 4 }, {"Bloodforged", 1 }, };
+		
+		["BCDungeon"] = { {"Normal", "" }, {"Mythic", 4 }, {"Mythic1", 5 }, {"Mythic2", 6 }, {"Mythic3", 7 }, {"Mythic4", 8 }, {"Mythic5", 9 }, {"Mythic6", 10 },
+		{"Mythic7", 11 }, {"Mythic8", 12 }, {"Mythic9", 13 }, {"Mythic10", 14 }, {"Bloodforged", 1 }, };
+		
+		["BCRaid"] = { {"NormalFLEX", "" }, {"HeroicFLEX", 3 }, {"Ascended", 4 }, {"Bloodforged", 1 }, };
+		
+		["WrathDungeon"] = { {"Normal", "" }, {"Mythic", 4 }, {"Mythic1", 5 }, {"Mythic2", 6 }, {"Mythic3", 7 }, {"Mythic4", 8 }, {"Mythic5", 9 }, {"Mythic6", 10 },
+		{"Mythic7", 11 }, {"Mythic8", 12 }, {"Mythic9", 13 }, {"Mythic10", 14 }, {"Bloodforged", 1 }, };
+		
+		["WrathRaid"] = { {"NormalFLEX", "" }, {"HeroicFLEX", 3 }, {"Ascended", 4 }, {"Bloodforged", 1 }, };
+		
+		["Crafting"] = { {"CraftingPatterns", "" }, {"", "=s=Normal" }, {"Bloodforged", 1 }, },
+		
+		["CraftingExt"] = { {"CraftingPatternUncommon", "" }, {"CraftingPatternsRare", "Rare" }, {"CraftingPatternsEpic", "Epic" }, {"ItemUncommon", "=s=" }, {"ItemRare", "=s=Rare" }, {"ItemEpic", "=s=Epic" } }
+		
+
+}
+
 --[[
 AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame):
 dataID - Name of the loot table
@@ -511,38 +539,11 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 	local isItem;
 	local spellName, spellIcon;
 	
+
     --If the loot table name has not been passed, throw up a debugging statement
 	if dataID == nil then
 		DEFAULT_CHAT_FRAME:AddMessage("No dataID!");
         return;
-	end
-	--used when there is an extra loottable instead of using itemIDsDatabase
-
-	if dataID:match("MENU") then
-		isTablereference = false
-		notPattern = false
-		isItemID = false
-		AtlasLoot_DewdropSubMenu2:Unregister(AtlasLootDefaultFrame_SubMenu2);
-		AtlasLootDefaultFrame_SubMenu2:Disable();
-		AtlasLootDefaultFrame_SelectedTable2:SetText("");
-		AtlasLootDefaultFrame_SelectedTable2:Hide();
-		DewDrop2Enable = false
-	elseif isTablereference and not notPattern then
-		if DewDrop2Enable then
-			dataID = gsub(dataID, lastReference, "")
-		end
-		dataID = dataID .. tableReference
-		DewDrop2Enable = true
-		lastReference = tableReference
-	elseif isTablereference and notPattern then
-		if DewDrop2Enable then
-			dataID = gsub(dataID, lastReference, "")
-		end
-		dataID = dataID .. tableReference
-		DewDrop2Enable = true
-		lastReference = tableReference
-	else
-		DewDrop2Enable = false
 	end
     	--Get AtlasQuest out of the way
 	if (AtlasQuestInsideFrame) then
@@ -577,8 +578,45 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
     else
         dataSource = AtlasLoot_Data;
     end
+	--Hide UI objects so that only needed ones are shown
+	for i = 1, 30, 1 do
+        getglobal("AtlasLootItem_"..i.."_Unsafe"):Hide();
+		getglobal("AtlasLootMenuItem_"..i):Hide();
+        getglobal("AtlasLootItem_"..i):Hide();
+        getglobal("AtlasLootItem_"..i).itemID = 0;
+        getglobal("AtlasLootItem_"..i).spellitemID = 0;
+	end
+
+	--used when there is an extra loottable instead of using itemIDsDatabase
+
+	if dataID:match("MENU") then
+		isTablereference = false
+		notPattern = false
+		isItemID = false
+		AtlasLoot_DewdropSubMenu2:Unregister(AtlasLootDefaultFrame_SubMenu2);
+		AtlasLootDefaultFrame_SubMenu2:Disable();
+		AtlasLootDefaultFrame_SelectedTable2:SetText("");
+		AtlasLootDefaultFrame_SelectedTable2:Hide();
+		DewDrop2Enable = false
+	elseif isTablereference and not notPattern then
+		if DewDrop2Enable then
+			dataID = gsub(dataID, lastReference, "")
+		end
+		dataID = dataID .. tableReference
+		DewDrop2Enable = true
+		lastReference = tableReference
+	elseif isTablereference and notPattern then
+		if DewDrop2Enable then
+			dataID = gsub(dataID, lastReference, "")
+		end
+		dataID = dataID .. tableReference
+		DewDrop2Enable = true
+		lastReference = tableReference
+	else
+		DewDrop2Enable = false
+	end
 	
-	--Used to enable difficulty menu if its not a subtable
+		--Used to enable difficulty menu if its not a subtable
 	if AtlasLoot_DewDropDown_SubTables2[dataID] and DropMenu2 == true then
 		AtlasLootDefaultFrame_SubMenu2:Enable();
 		AtlasLoot_DewdropSubMenu2:Unregister(AtlasLootDefaultFrame_SubMenu2);
@@ -598,16 +636,10 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 		AtlasLootDefaultFrame_SelectedTable2:Hide();
 		SelectedTable2TextSet = false
 	end
+	if dataSource[dataID].Difficulty then
+	print(dataSource[dataID].Difficulty)
+    end
 	
-	--Hide UI objects so that only needed ones are shown
-	for i = 1, 30, 1 do
-        getglobal("AtlasLootItem_"..i.."_Unsafe"):Hide();
-		getglobal("AtlasLootMenuItem_"..i):Hide();
-        getglobal("AtlasLootItem_"..i):Hide();
-        getglobal("AtlasLootItem_"..i).itemID = 0;
-        getglobal("AtlasLootItem_"..i).spellitemID = 0;
-	end
-    
     if AtlasLoot_TableNames[dataID] ~= nil and AtlasLoot_TableNames[dataID][2] == "Menu" then
         AtlasLoot_GenerateAtlasMenu(dataID, pFrame);
         return;
@@ -619,20 +651,29 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 		for i = 1, 30, 1 do
 			--Check for a valid object (that it exists, and that it has a name)
 			if(dataSource[dataID][i] ~= nil and dataSource[dataID][i][4] ~= "") then					
-				if string.sub(dataSource[dataID][i][2], 1, 1) == "s" then
+				--Finds ItemIDS of none normal gear				
+				if  AL_FindId(string.sub(dataSource[dataID][i][4], 5), ItemindexID) == nil or  AL_FindId(string.sub(dataSource[dataID][i][4], 5), ItemindexID) == '' or not tonumber(ItemindexID) then
+					IDfound = dataSource[dataID][i][2]
+				else
+					IDfound = AL_FindId(string.sub(dataSource[dataID][i][4], 5), ItemindexID)
+				end
+				if string.sub(IDfound, 1, 1) == "s" then
 					isItem = false;
 				else
 					isItem = true;
 				end
 				if isItem then
-					itemName, itemLink, itemQuality, itemLevel, itemMinLevel, itemType, itemSubType, itemCount, itemEquipLoc, itemTexture = GetItemInfo(dataSource[dataID][i][2]);
+					--print(dataSource[dataID][i][2])
+					
+					--print(dataSource[dataID][i][2])
+					itemName, itemLink, itemQuality, itemLevel, itemMinLevel, itemType, itemSubType, itemCount, itemEquipLoc, itemTexture = GetItemInfo(IDfound);
 					--If the client has the name of the item in cache, use that instead.
 					--This is poor man's localisation, English is replaced be whatever is needed
-					if(GetItemInfo(dataSource[dataID][i][2])) then
+					if(GetItemInfo(IDfound)) then
 						_, _, _, itemColor = GetItemQualityColor(itemQuality);
 						text = itemColor..itemName;
 					else
-						if(GetItemInfo(dataSource[dataID][i][2])) then
+						if(GetItemInfo(IDfound)) then
 							_, _, _, itemColor = GetItemQualityColor(itemQuality);
 							text = itemColor..itemName;
 						else
@@ -642,7 +683,7 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 						end
 					end
 				else
-					spellName, _, spellIcon, _, _, _, _, _, _ = GetSpellInfo(string.sub(dataSource[dataID][i][2], 2));
+					spellName, _, spellIcon, _, _, _, _, _, _ = GetSpellInfo(string.sub(IDfound, 2));
 					if spellName then
                         text = AtlasLoot_FixText(string.sub(dataSource[dataID][i][4], 1, 4)..spellName);
                     else
@@ -677,7 +718,7 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 				if dataSource[dataID][i][3] == "?" then
 					iconFrame:SetTexture("Interface\\Icons\\INV_Misc_QuestionMark");
 				elseif dataSource[dataID][i][3] == "" then
-					iconFrame:SetTexture(GetItemIcon(dataSource[dataID][i][2]));
+					iconFrame:SetTexture(GetItemIcon(IDfound));
 				elseif (not isItem) and (spellIcon) then
 					if tonumber(dataSource[dataID][i][3]) then
 						iconFrame:SetTexture(GetItemIcon(tonumber(dataSource[dataID][i][3])));
@@ -700,8 +741,8 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
                 itemButton.extra = extra;
 				
                 --Highlight items in the wishlist
-                if dataSource[dataID][i][2] ~= "" and dataSource[dataID][i][2] ~= 0 and dataID ~= "WishList" and AtlasLootWishList["Options"][UnitName("player")]["Mark"] == true then
-					local xitemexistwish, itemwishicons = AtlasLoot_WishListCheck(dataSource[dataID][i][2], true)
+                if IDfound ~= "" and IDfound ~= 0 and dataID ~= "WishList" and AtlasLootWishList["Options"][UnitName("player")]["Mark"] == true then
+					local xitemexistwish, itemwishicons = AtlasLoot_WishListCheck(IDfound, true)
                     if xitemexistwish then
                         text = itemwishicons.." "..text;
                     end
@@ -711,27 +752,14 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 				extraFrame:SetText(extra);
 				extraFrame:Show();
 				--For convenience, we store information about the objects in the objects so that it can be easily accessed later
-				if((string.sub(dataSource[dataID][i][2], 1, 1) == "s") and (AtlasLoot.db.profile.CraftingLink ~= 1) and (tonumber(dataSource[dataID][i][3]))) then
+				if((string.sub(IDfound, 1, 1) == "s") and (AtlasLoot.db.profile.CraftingLink ~= 1) and (tonumber(dataSource[dataID][i][3]))) then
                     itemButton.itemID = dataSource[dataID][i][3];
                     itemButton.spellitemID = dataSource[dataID][i][3];
-				elseif ((string.sub(dataSource[dataID][i][2], 1, 1) == "s") and notPattern == true and (tonumber(dataSource[dataID][i][3]))) then
+				elseif ((string.sub(IDfound, 1, 1) == "s") and notPattern == true and (tonumber(dataSource[dataID][i][3]))) then
                     itemButton.itemID = dataSource[dataID][i][3];
                     itemButton.spellitemID = dataSource[dataID][i][3];
-				else
-				
-                    --removes unneeded info from item names
-					Lname = gsub(dataSource[dataID][i][4], "=q4=","")
-					Lname = gsub(Lname, "=q3=","")
-					Lname = gsub(Lname, "=q2=","")
-					Lname = gsub(Lname, "=q1=","")
-					--Finds ItemIDS of none normal gear
-					IDfound = AL_FindId(Lname, ItemindexID)
-					--goes to default table if nothing in item database
-					if IDfound == nil or IDfound == '' or ItemindexID == "" then
-					IDfound = dataSource[dataID][i][2]
-					end
-
-					itemButton.itemID = IDfound;  --this is now the new itemID					
+				else					
+					itemButton.itemID = IDfound;			
 
 						if tonumber(dataSource[dataID][i][3]) then
 							itemButton.spellitemID = dataSource[dataID][i][3];
@@ -743,7 +771,7 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
                 itemButton.iteminfo = {};
 				if isItem then
 					itemButton.iteminfo.idcore = IDfound;
-					itemButton.iteminfo.icontexture = GetItemIcon(IDfound);
+					itemButton.iteminfo.icontexture = IDfound;
 				    itemButton.storeID = IDfound;
                     itemButton.dressingroomID = IDfound;
                 else
@@ -773,8 +801,8 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 				itemButton.i = 1;
 				itemButton:Show();
                 
-                if dataSource[dataID][i][2] == 0 then getglobal("AtlasLootItem_"..i.."_Unsafe"):Hide(); end
-				
+                if IDfound == 0 then getglobal("AtlasLootItem_"..i.."_Unsafe"):Hide(); end
+
             end
 		end
 

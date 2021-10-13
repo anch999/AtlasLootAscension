@@ -46,7 +46,7 @@ function AtlasLoot_DewDropClick(tablename, text, tabletype, tabletype2)
 	notPattern = false
 	isItemID = false
 	if tabletype == "Table" then
-        AtlasLoot_DewdropSubMenu2:Unregister(AtlasLootDefaultFrame_SubMenu2);
+		AtlasLoot_DewdropSubMenu2:Unregister(AtlasLootDefaultFrame_SubMenu2);
 		--Show the loot table
         AtlasLoot_ShowItemsFrame(tablename, "", text, pFrame);
         AtlasLoot_RootBoss = tablename;
@@ -286,23 +286,6 @@ function AtlasLoot_DewdropSubMenu2Register(loottable)
 					'func', function() AtlasLoot_DewdropSubMenu2:Close() end,
 					'notCheckable', true
 				)	
-            end
-		end,
-		'dontHook', true
-	)
-end
-
-function AtlasLoot_lootcheck(loottable)
-    AtlasLoot_DewdropSubMenu2:Register(AtlasLootDefaultFrame_SubMenu2,
-        'point', function(parent)
-            return "TOP", "BOTTOM"
-        end,
-        'children', function(level, value)
-            if level == 1 then
-                for k,v in pairs(loottable) do
-                    if v[1] == "" then
-                    end
-                end
             end
 		end,
 		'dontHook', true
