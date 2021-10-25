@@ -221,11 +221,13 @@ function AtlasLoot_HideNoUsableItems()
 	
 	AtlasLoot_TableNames["FilterList"] = {AtlasLoot_TableNames[dataID][1],AtlasLoot_TableNames[dataID][2]};
 	AtlasLoot_ShowItemsFrame("FilterList", "AtlasLootFilter", "", AtlasLootItemsFrame.refresh[4])
+	Type = lastType
 end
 
 function AtlasLoot_FilterEnableButton()
 	if ATLASLOOT_FILTER_ENABLE == true then
 		ATLASLOOT_FILTER_ENABLE = false
+		ReEnableFilter = false
 		AtlasLoot_ShowItemsFrame(AtlasLootItemsFrame.refreshOri[1], AtlasLootItemsFrame.refreshOri[2], AtlasLootItemsFrame.refreshOri[3], AtlasLootItemsFrame.refreshOri[4])
 	else
 		ATLASLOOT_FILTER_ENABLE = true

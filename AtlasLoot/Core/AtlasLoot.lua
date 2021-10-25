@@ -36,8 +36,6 @@ AtlasLoot = LibStub("AceAddon-3.0"):NewAddon("AtlasLoot");
 local BabbleBoss = AtlasLoot_GetLocaleLibBabble("LibBabble-Boss-3.0")
 local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot");
 
-
-
 --Establish version number and compatible version of Atlas
 local VERSION_MAJOR = "5";
 local VERSION_MINOR = "11";
@@ -58,11 +56,6 @@ ATLASLOOT_INDENT = "   ";
 AtlasLoot_Dewdrop = AceLibrary("Dewdrop-2.0");
 AtlasLoot_DewdropSubMenu = AceLibrary("Dewdrop-2.0");
 AtlasLoot_DewdropSubMenu2 = AceLibrary("Dewdrop-2.0");
-DewDrop2Enable = false;
-currentID = "";
-dataIDBackup = nil;
-dataSourceBackup = nil;
-
 --Variable to cap debug spam
 ATLASLOOT_DEBUGSHOWN = false;
 
@@ -88,6 +81,12 @@ AtlasLoot_AnchorFrame = AtlasFrame;
 Hooked_Atlas_Refresh = nil;
 Hooked_Atlas_OnShow = nil;
 Hooked_AtlasScrollBar_Update = nil;
+
+--Pre Sets for defficuilty menu
+SelectedTable2TextSet = true
+isTablereference = false
+notPattern = false
+
 
 AtlasLootCharDB={};
 
@@ -115,6 +114,7 @@ local AtlasLootDBDefaults = {
         AtlasLootVersion = "1",
         AtlasNaggedVersion = "",
         FuBarPosition = 1,
+		MythicPlussTier = 1,
 		AutoQuery = false,
         LoadAllLoDStartup = false,
         PartialMatching = true,
@@ -138,6 +138,7 @@ AtlasLoot_MenuList = {
 	"ARENA3SET",
 	"ARENA4SET",
 };
+
 
 -- Popup Box for first time users
 StaticPopupDialogs["ATLASLOOT_SETUP"] = {
@@ -496,29 +497,28 @@ function AtlasLoot_OnLoad()
 end
 
 AtlasLoot_Difficulty = {
-		
+		-- table of difficuilitys and there itemID references
 		["ClassicDungeon"] = { {"Normal", "" }, {"Bloodforged", 1 } };
 		
-		["ClassicDungeonExt"] = { {"Normal", "" }, {"Heroic", 3 }, {"Mythic", 4 }, {"Mythic1", 5 }, {"Mythic2", 6 }, {"Mythic3", 7 }, {"Mythic4", 8 }, {"Mythic5", 9 }, {"Mythic6", 10 },
-		{"Mythic7", 11 }, {"Mythic8", 12 }, {"Mythic9", 13 }, {"Mythic10", 14 }, {"Bloodforged", 1 }, };
+		["ClassicDungeonExt"] = { {"Normal", "" }, {"Heroic", 3 }, {"Mythic", 4 }, {"Mythic 1", 5 }, {"Mythic 2", 6 }, {"Mythic 3", 7 }, {"Mythic 4", 8 }, {"Mythic 5", 9 }, {"Mythic 6", 10 },
+		{"Mythic 7", 11 }, {"Mythic 8", 12 }, {"Mythic 9", 13 }, {"Mythic 10", 14 }, {"Bloodforged", 1 }, };
 		
-		["ClassicRaid"] = { {"NormalFLEX", "" }, {"HeroicFLEX", 3 }, {"Ascended", 4 }, {"Bloodforged", 1 }, };
+		["ClassicRaid"] = { {"Normal Flex", "" }, {"Heroic Flex", 3 }, {"Ascended", 4 }, {"Bloodforged", 1 }, };
 		
-		["BCDungeon"] = { {"Normal", "" }, {"Mythic", 4 }, {"Mythic1", 5 }, {"Mythic2", 6 }, {"Mythic3", 7 }, {"Mythic4", 8 }, {"Mythic5", 9 }, {"Mythic6", 10 },
-		{"Mythic7", 11 }, {"Mythic8", 12 }, {"Mythic9", 13 }, {"Mythic10", 14 }, {"Bloodforged", 1 }, };
+		["BCDungeon"] = { {"Normal/Heroic", "" }, {"Mythic", 4 }, {"Mythic 1", 5 }, {"Mythic 2", 6 }, {"Mythic 3", 7 }, {"Mythic 4", 8 }, {"Mythic 5", 9 }, {"Mythic 6", 10 },
+		{"Mythic 7", 11 }, {"Mythic 8", 12 }, {"Mythic 9", 13 }, {"Mythic 10", 14 }, {"Bloodforged", 1 }, };
 		
-		["BCRaid"] = { {"NormalFLEX", "" }, {"HeroicFLEX", 3 }, {"Ascended", 4 }, {"Bloodforged", 1 }, };
+		["BCRaid"] = { {"Normal Flex", "" }, {"Heroic Flex", 3 }, {"Ascended", 4 }, {"Bloodforged", 1 }, };
 		
 		["WrathDungeon"] = { {"Normal", "" }, {"Mythic", 4 }, {"Mythic1", 5 }, {"Mythic2", 6 }, {"Mythic3", 7 }, {"Mythic4", 8 }, {"Mythic5", 9 }, {"Mythic6", 10 },
 		{"Mythic7", 11 }, {"Mythic8", 12 }, {"Mythic9", 13 }, {"Mythic10", 14 }, {"Bloodforged", 1 }, };
 		
-		["WrathRaid"] = { {"NormalFLEX", "" }, {"HeroicFLEX", 3 }, {"Ascended", 4 }, {"Bloodforged", 1 }, };
+		["WrathRaid"] = { {"Normal Flex", "" }, {"Heroic Flex", 3 }, {"Ascended", 4 }, {"Bloodforged", 1 }, };
 		
-		["Crafting"] = { {"CraftingPatterns", "" }, {"", "=s=Normal" }, {"Bloodforged", 1 }, },
+		["Crafting"] = { {"Crafting Patterns", "" }, {"Item Normal", "=s=Normal" }, {"Bloodforged", 1 }, },
 		
-		["CraftingExt"] = { {"CraftingPatternUncommon", "" }, {"CraftingPatternsRare", "Rare" }, {"CraftingPatternsEpic", "Epic" }, {"ItemUncommon", "=s=" }, {"ItemRare", "=s=Rare" }, {"ItemEpic", "=s=Epic" } }
+		["CraftingExt"] = { {"Crafting Pattern Uncommon", "" }, {"Crafting Patterns Rare", "Rare" }, {"Crafting Patterns Epic", "Epic" }, {"Item Uncommon", "=s=" }, {"Item Rare", "=s=Rare" }, {"Item Epic", "=s=Epic" } }
 		
-
 }
 
 --[[
@@ -538,10 +538,9 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 	local wlPage, wlPageMax = 1, 1;
 	local isItem;
 	local spellName, spellIcon;
-	
 
     --If the loot table name has not been passed, throw up a debugging statement
-	if dataID == nil then
+	if dataID==nil then
 		DEFAULT_CHAT_FRAME:AddMessage("No dataID!");
         return;
 	end
@@ -559,7 +558,7 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
     
     dataSource_backup = dataSource;
 	if dataID == "SearchResult" or dataID == "WishList" then
-        ItemindexID = ""
+        ItemindexID = "";
 		AtlasLootDefaultFrame_SubMenu2:Disable();
 		AtlasLootDefaultFrame_SelectedTable2:SetText("");
 		AtlasLootDefaultFrame_SelectedTable2:Hide();
@@ -578,6 +577,46 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
     else
         dataSource = AtlasLoot_Data;
     end
+	if dataID == "FilterList" then
+		Type = lastType;
+	else
+		Type = dataSource[dataID].Type;
+	end
+	
+	if Type ~= lastType then
+		AtlasLoot_DifficultyDisable()
+		if lastReference ~= nil then
+			dataID = gsub(dataID, lastReference, "");	-- removes old table reference before adding a new 1 if needed
+		end
+		ItemindexID = "";
+	end
+
+	if DewDrop2Enable or not dataID == nil or lastReference then
+		dataID = gsub(dataID, lastReference, "");	-- removes old table reference before adding a new 1 if needed
+	end
+
+	if Type == nil and ATLASLOOT_FILTER_ENABLE == false or dataID:match("MENU") or ATLASLOOT_FILTER_ENABLE and dataSource[AtlasLoot_CurrentBoss].Type == nil  then -- disable difficulty menu
+		AtlasLoot_DifficultyDisable()
+		AtlasLoot_CurrentBoss = dataID;
+	elseif ATLASLOOT_FILTER_ENABLE then
+		AtlasLoot_DifficultyEnable(AtlasLoot_CurrentBoss, dataSource)
+	elseif Type ~= nil then-- enable difficulty menu 
+		AtlasLoot_DifficultyEnable(dataID, dataSource)
+		AtlasLoot_CurrentBoss = dataID
+	end
+
+	if isTablereference and not notPattern then  		-- if the itemID is the item rather from a crafting pattern rather then the pattern itself
+		dataID = dataID .. tableReference;
+		DewDrop2Enable = true;
+		lastReference = tableReference;
+	elseif isTablereference and notPattern then			-- if the itemID is a new table reference rather then and itemID reference
+		dataID = dataID .. tableReference;
+		DewDrop2Enable = true;
+		lastReference = tableReference;
+	else
+		DewDrop2Enable = false;
+	end
+	
 	--Hide UI objects so that only needed ones are shown
 	for i = 1, 30, 1 do
         getglobal("AtlasLootItem_"..i.."_Unsafe"):Hide();
@@ -587,85 +626,32 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
         getglobal("AtlasLootItem_"..i).spellitemID = 0;
 	end
 
-	--used when there is an extra loottable instead of using itemIDsDatabase
-
-	if dataID:match("MENU") then
-		isTablereference = false
-		notPattern = false
-		isItemID = false
-		AtlasLoot_DewdropSubMenu2:Unregister(AtlasLootDefaultFrame_SubMenu2);
-		AtlasLootDefaultFrame_SubMenu2:Disable();
-		AtlasLootDefaultFrame_SelectedTable2:SetText("");
-		AtlasLootDefaultFrame_SelectedTable2:Hide();
-		DewDrop2Enable = false
-	elseif isTablereference and not notPattern then
-		if DewDrop2Enable then
-			dataID = gsub(dataID, lastReference, "")
-		end
-		dataID = dataID .. tableReference
-		DewDrop2Enable = true
-		lastReference = tableReference
-	elseif isTablereference and notPattern then
-		if DewDrop2Enable then
-			dataID = gsub(dataID, lastReference, "")
-		end
-		dataID = dataID .. tableReference
-		DewDrop2Enable = true
-		lastReference = tableReference
-	else
-		DewDrop2Enable = false
-	end
-	
-		--Used to enable difficulty menu if its not a subtable
-	if AtlasLoot_DewDropDown_SubTables2[dataID] and DropMenu2 == true then
-		AtlasLootDefaultFrame_SubMenu2:Enable();
-		AtlasLoot_DewdropSubMenu2:Unregister(AtlasLootDefaultFrame_SubMenu2);
-		AtlasLoot_DewdropSubMenu2Register(AtlasLoot_DewDropDown_SubTables2[dataID]);
-		--Sets difficulty text if theres none there
-		if not SelectedTable2TextSet then
-		AtlasLootDefaultFrame_SelectedTable2:SetText(AtlasLoot_TableNames[AtlasLoot_DewDropDown_SubTables2[dataID][1][3]][1]);
-		end
-		AtlasLootDefaultFrame_SelectedTable2:Show();
-		SelectedTable2TextSet = true
-	elseif DewDrop2Enable then
-		AtlasLootDefaultFrame_SubMenu2:Enable();
-	elseif not AtlasLoot_DewDropDown_SubTables2[dataID] and DropMenu2 == true then
-		AtlasLoot_DewdropSubMenu2:Unregister(AtlasLootDefaultFrame_SubMenu2);
-		AtlasLootDefaultFrame_SubMenu2:Disable();
-		AtlasLootDefaultFrame_SelectedTable2:SetText("");
-		AtlasLootDefaultFrame_SelectedTable2:Hide();
-		SelectedTable2TextSet = false
-	end
-	if dataSource[dataID].Difficulty then
-	print(dataSource[dataID].Difficulty)
-    end
-	
     if AtlasLoot_TableNames[dataID] ~= nil and AtlasLoot_TableNames[dataID][2] == "Menu" then
         AtlasLoot_GenerateAtlasMenu(dataID, pFrame);
         return;
     end
-
+	
 	-- Create the loottable
 	if (dataID == "SearchResult") or (dataID == "WishList") or (AtlasLoot_IsLootTableAvailable(dataID)) then
 		--Iterate through each item object and set its properties
 		for i = 1, 30, 1 do
 			--Check for a valid object (that it exists, and that it has a name)
 			if(dataSource[dataID][i] ~= nil and dataSource[dataID][i][4] ~= "") then					
-				--Finds ItemIDS of none normal gear				
-				if  AL_FindId(string.sub(dataSource[dataID][i][4], 5), ItemindexID) == nil or  AL_FindId(string.sub(dataSource[dataID][i][4], 5), ItemindexID) == '' or not tonumber(ItemindexID) then
-					IDfound = dataSource[dataID][i][2]
-				else
-					IDfound = AL_FindId(string.sub(dataSource[dataID][i][4], 5), ItemindexID)
+				
+				if dataSource[dataID][i][8] and tonumber(ItemindexID) then
+					-- Used if an item has more then 1 version with the same name eg Atiesh
+					IDfound = AL_FindId(string.sub(dataSource[dataID][i][4], 5) .. " " .. dataSource[dataID][i][8], ItemindexID) -- Used for 8th table entery in a loottable for when we have items with the same name eg Atiesh
+				else	
+					--	if something was found in itemID database show that if not show default table item
+					IDfound = AL_FindId(string.sub(dataSource[dataID][i][4], 5), ItemindexID) or dataSource[dataID][i][2]
 				end
+
 				if string.sub(IDfound, 1, 1) == "s" then
 					isItem = false;
 				else
 					isItem = true;
 				end
 				if isItem then
-					--print(dataSource[dataID][i][2])
-					
-					--print(dataSource[dataID][i][2])
 					itemName, itemLink, itemQuality, itemLevel, itemMinLevel, itemType, itemSubType, itemCount, itemEquipLoc, itemTexture = GetItemInfo(IDfound);
 					--If the client has the name of the item in cache, use that instead.
 					--This is poor man's localisation, English is replaced be whatever is needed
@@ -673,9 +659,19 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 						_, _, _, itemColor = GetItemQualityColor(itemQuality);
 						text = itemColor..itemName;
 					else
-						if(GetItemInfo(IDfound)) then
+						if(GetItemInfo(IDfound)) or not dataSource[dataID][i][2] == IDfound then
 							_, _, _, itemColor = GetItemQualityColor(itemQuality);
 							text = itemColor..itemName;
+						elseif dataSource[dataID][i][2] ~= IDfound then
+							--If the item is not in cache, use the saved value and process it
+							if tonumber(ItemindexID) then
+								text = (string.sub(dataSource[dataID][i][4], 5));
+								text = "=q4=" .. text;
+								text = AtlasLoot_FixText(text);
+							else
+								text = dataSource[dataID][i][4];
+								text = AtlasLoot_FixText(text);
+							end
 						else
 							--If the item is not in cache, use the saved value and process it
 							text = dataSource[dataID][i][4];
@@ -806,6 +802,10 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
             end
 		end
 
+		if dataID ~= "FilterList" then
+		lastType = dataSource[dataID].Type
+		end
+
         AtlasLootItemsFrame.refresh = {dataID, dataSource_backup, boss, pFrame};
 		if dataID ~= "FilterList" then
 			AtlasLootItemsFrame.refreshOri = {dataID, dataSource_backup, boss, pFrame}
@@ -830,9 +830,21 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
         --This is a valid QuickLook, so show the UI objects
         AtlasLoot_QuickLooks:Show();
         AtlasLootQuickLooksButton:Show();
+		--Check if difficulties exist, if so show difficulty select buttons
+		if (dataID ~= "SearchResult" and AtlasLoot_Data[dataID].Dif ~= nil) then
+			--AtlasLootMythicButton.difficulty_type = AtlasLoot_Data[dataID].Type or "Dungeon" 
+			--AtlasLootMythicButton:Show();
+			--AtlasLoot_DifficultySelect:Show();
+		end
 		
+		if (dataID == "SearchResult" and dataSource[dataID].Dif ~= nil) then
+			--AtlasLootMythicButton.difficulty_type = dataSource[dataID].Type or "Dungeon" 
+			--AtlasLootMythicButton:Show();
+			--AtlasLoot_DifficultySelect:Show();
+		end
+
 		-- Show the Filter Check-Box
-		if dataID ~= "WishList" and dataID ~= "SearchResult" and dataSource_backup ~= "AtlasLootCrafting" and not isTablereference then
+		if dataID ~= "WishList" and dataID ~= "SearchResult" and dataSource_backup ~= "AtlasLootCrafting"  then
 			AtlasLootFilterCheck:Show();
 		end
 		--Hide navigation buttons by default, only show what we need
@@ -840,7 +852,12 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 		getglobal("AtlasLootItemsFrame_NEXT"):Hide();
 		getglobal("AtlasLootItemsFrame_PREV"):Hide();
         if dataID ~= "SearchResult" and dataID ~= "WishList" then
-		    AtlasLoot_BossName:SetText(AtlasLoot_TableNames[dataID][1]);
+			local affix = "";
+			if AtlasLoot_Data[dataID].Dif ~= nil then
+					local d = AtlasLoot_Data[dataID].Type or "Dungeon"
+					affix = " ("..AtlasLoot_Difficulty[d][GetDifficultyTier()]..")"
+			end		
+			AtlasLoot_BossName:SetText(AtlasLoot_TableNames[dataID][1]..affix);
         else
             AtlasLoot_BossName:SetText(boss);
         end
@@ -868,8 +885,8 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 				getglobal("AtlasLootItemsFrame_BACK"):Show();
 				getglobal("AtlasLootItemsFrame_BACK").lootpage = tablebase.Back;			
 			end
-			
 		end
+		
 	end
 
 	--For Alphamap and Atlas integration, show a 'close' button to hide the loot table and restore the map view
@@ -884,7 +901,7 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 	if ATLASLOOT_FILTER_ENABLE == true and dataID ~= "FilterList" then
 		AtlasLoot_HideNoUsableItems()
 	end
-	AtlasLoot_CurrentBoss = dataID
+
 	if AtlasLoot.db.profile.ItemAutoQuery then AtlasLoot_QueryLootPage(); end
 end
 
@@ -1064,7 +1081,6 @@ end
 AtlasLoot_NavButton_OnClick:
 Called when <-, -> or 'Back' are pressed and calls up the appropriate loot page
 ]]
-
 function AtlasLoot_NavButton_OnClick()
 	if AtlasLootItemsFrame.refresh and AtlasLootItemsFrame.refresh[4] then
 		if strsub(this.lootpage, 1, 16) == "SearchResultPage" then
@@ -1325,42 +1341,19 @@ Finds the Ids of other difficulties based on the name of the item and the diffic
 On the form of {Name, {normal, heroic, mythic, mythic1, mythic2, ... ,mythicN}}
 ]]
 function AL_FindId(name, difficulty)
-	for index, items in pairs(ItemIDsDatabase) do
-		for key, eachItem in ipairs(items) do
-			if eachItem == name then 
-				return items[2][difficulty]
-			end
-		end
+	if ItemIDsDatabase[name] ~= nil then
+		return ItemIDsDatabase[name][difficulty]
+	else
+		return nil;
 	end
 end
 
--- https://replit.com/languages/lua
--- ItemIDsDatabase = {
--- 	--name, {normal, heroic, mythic, mythicN}
--- 	{"test1", {1000, 2000, 3000, 4000} },
--- 	{"test2", {1002, 2002, 3002, 4002} },
--- }
--- --[[
--- AL_FindId(name, difficulty)
--- Finds the Ids of other difficulties based on the name of the item and the difficulty parameter given.
--- On the form of {Name, {normal, heroic, mythic, mythic1, mythic2, ... ,mythicN}}
--- ]]
 
--- name = "test1"
--- difficulty = 2
-	
--- for index, items in pairs(ItemIDsDatabase) do
--- 	--print(index, '\t', items)
-	
--- 	for key, eachItem in ipairs(items) do
--- 	--	for key2, eachItem2 in ipairs(eachItem) do
--- 	--		print('\t', items[1], eachItem2)
--- 	--	end
--- 			print("test")
--- 		if eachItem == name then 
--- 			print(key, '\t', eachItem)
--- 			print(items[2][difficulty])
--- 		end
--- 		--	print('\t', key, value)
--- 	end
--- end
+
+function GetDifficultyTier()
+	return AtlasLoot.db.profile.MythicPlussTier
+end
+
+function SetDifficultyTier(difficulty)
+	AtlasLoot.db.profile.MythicPlussTier = difficulty;
+end

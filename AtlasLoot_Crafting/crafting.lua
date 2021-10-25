@@ -422,6 +422,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 30, "s16744", "12619", "=q3=Enchanted Thorium Leggings", "=ds=#sr# 300"};
 		Next = "SmithingArmorOld2";
 		Back = "SMITHINGMENU";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["SmithingArmorOld2"] = {
@@ -458,6 +459,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Next = "SmithingArmorOld3";
 		Prev = "SmithingArmorOld1";
 		Back = "SMITHINGMENU";
+Type = "Crafting";
 	};
 
 	AtlasLoot_Data["SmithingArmorOld3"] = {
@@ -494,6 +496,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Next = "SmithingArmorOld4";
 		Prev = "SmithingArmorOld2";
 		Back = "SMITHINGMENU";
+Type = "Crafting";
 	};
 
 	AtlasLoot_Data["SmithingArmorOld4"] = {
@@ -530,6 +533,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Next = "SmithingArmorOld5";
 		Prev = "SmithingArmorOld3";
 		Back = "SMITHINGMENU";
+Type = "Crafting";
 	};
 
 	AtlasLoot_Data["SmithingArmorOld5"] = {
@@ -556,6 +560,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 21, "s12260", "10421", "=q1=Rough Copper Vest", "=ds=#sr# 1"};
 		Prev = "SmithingArmorOld4";
 		Back = "SMITHINGMENU";
+Type = "Crafting";
 	};
 
 	AtlasLoot_Data["SmithingArmorBC1"] = {
@@ -591,6 +596,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 30, "s29664", "23535", "=q4=Helm of the Stalwart Defender", "=ds=#sr# 365"};
 		Next = "SmithingArmorBC2";
 		Back = "SMITHINGMENU";
+Type = "Crafting";
 	};
 
 	AtlasLoot_Data["SmithingArmorBC2"] = {
@@ -627,6 +633,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Next = "SmithingArmorBC3";
 		Prev = "SmithingArmorBC1";
 		Back = "SMITHINGMENU";
+Type = "Crafting";
 	};
 
 	AtlasLoot_Data["SmithingArmorBC3"] = {
@@ -643,6 +650,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 11, "s29545", "23482", "=q2=Fel Iron Plate Gloves", "=ds=#sr# 300"};
 		Prev = "SmithingArmorBC2";
 		Back = "SMITHINGMENU";
+Type = "Crafting";
 	};
 
 	AtlasLoot_Data["SmithingArmorWrath1"] = {
@@ -678,6 +686,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 30, "s55376", "41392", "=q4=Tempered Titansteel Treads", "=ds="..AL["Trainer"] };
 		Next = "SmithingArmorWrath2";
 		Back = "SMITHINGMENU";
+Type = "Crafting";
 	};
 
 	AtlasLoot_Data["SmithingArmorWrath2"] = {
@@ -714,6 +723,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Next = "SmithingArmorWrath3";
 		Prev = "SmithingArmorWrath1";
 		Back = "SMITHINGMENU";
+Type = "Crafting";
 	};
 
 	AtlasLoot_Data["SmithingArmorWrath3"] = {
@@ -750,6 +760,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Prev = "SmithingArmorWrath2";
 		Next = "SmithingArmorWrath4";
 		Back = "SMITHINGMENU";
+Type = "Crafting";
 	};
 
 	AtlasLoot_Data["SmithingArmorWrath4"] = {
@@ -764,6 +775,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 9, "s52569", "39088", "=q2=Cobalt Boots", "=ds="..AL["Trainer"] };
 		Prev = "SmithingArmorWrath3";
 		Back = "SMITHINGMENU";
+Type = "Crafting";
 	};
 
 	AtlasLoot_Data["SmithingWeaponOld1"] = {
@@ -799,6 +811,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 30, "s10007", "7961", "=q3=Phantom Blade", "=ds=#sr# 245"};
 		Next = "SmithingWeaponOld2";
 		Back = "SMITHINGMENU";
+Type = "Crafting";
 	};
 
 	AtlasLoot_Data["SmithingWeaponOld2"] = {
@@ -835,6 +848,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Next = "SmithingWeaponOld3";
 		Prev = "SmithingWeaponOld1";
 		Back = "SMITHINGMENU";
+Type = "Crafting";
 	};
 
 	AtlasLoot_Data["SmithingWeaponOld3"] = {
@@ -857,6 +871,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 17, "s2737", "2844", "=q1=Copper Mace", "=ds=#sr# 15"};
 		Prev = "SmithingWeaponOld2";
 		Back = "SMITHINGMENU";
+Type = "Crafting";
 	};
 
 	AtlasLoot_Data["SmithingWeaponBC1"] = {
@@ -892,6 +907,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 30, "s36137", "30093", "=q3=Great Earthforged Hammer", "=ds=#sr# 330"};
 		Next = "SmithingWeaponBC2";
 		Back = "SMITHINGMENU";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["SmithingWeaponBC2"] = {
@@ -909,6 +925,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 12, "s29557", "23497", "=q2=Fel Iron Hatchet", "=ds=#sr# 310"};
 		Prev = "SmithingWeaponBC1";
 		Back = "SMITHINGMENU";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["SmithingWeaponWrath1"] = {
@@ -934,6 +951,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 20, "s55200", "41239", "=q2=Sturdy Cobalt Quickblade", "=ds="..AL["Trainer"] };
 		{ 21, "s55203", "41242", "=q2=Forged Cobalt Claymore", "=ds="..AL["Trainer"] };
 		Back = "SMITHINGMENU";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["SmithingEnhancement1"] = {
@@ -969,6 +987,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 30, "s2665", "2863", "=q1=Coarse Sharpening Stone", "=ds=#sr# 65"};
 		Next = "SmithingEnhancement2";
 		Back = "SMITHINGMENU";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["SmithingEnhancement2"] = {
@@ -977,6 +996,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 3, "s3115", "3239", "=q1=Rough Weightstone", "=ds=#sr# 1"};
 		Prev = "SmithingEnhancement1";
 		Back = "SMITHINGMENU";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["SmithingMisc1"] = {
@@ -1019,6 +1039,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 12, "s55187", "41190", "=q3=Legplates of Conquest", "=ds=#sr# 415"};
 		Next = "Weaponsmith1";
 		Back = "SMITHINGMENU";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["Weaponsmith1"] = {
@@ -1031,6 +1052,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Next = "Axesmith1";
 		Prev = "Armorsmith1";
 		Back = "SMITHINGMENU";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["Axesmith1"] = {
@@ -1045,6 +1067,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Next = "Hammersmith1";
 		Prev = "Weaponsmith1";
 		Back = "SMITHINGMENU";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["Hammersmith1"] = {
@@ -1059,6 +1082,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Next = "Swordsmith1";
 		Prev = "Axesmith1";
 		Back = "SMITHINGMENU";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["Swordsmith1"] = {
@@ -1072,6 +1096,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 8, "s36259", "28430", "=q4=Lionheart Executioner", "=ds=#sr# 375"};
 		Prev = "Hammersmith1";
 		Back = "SMITHINGMENU";
+		Type = "Crafting";
 	};
 
 		---------------
@@ -1764,6 +1789,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 30, "s41319", "32480", "=q4=Magnified Moon Specs", "=ds=#sr# 350"};
 		Next = "EngineeringArmor2";
 		Back = "ENGINEERINGMENU";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["EngineeringArmor2"] = {
@@ -1800,6 +1826,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Next = "EngineeringArmor3";
 		Prev = "EngineeringArmor1";
 		Back = "ENGINEERINGMENU";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["EngineeringArmor3"] = {
@@ -1836,12 +1863,14 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Prev = "EngineeringArmor2";
 		Next = "EngineeringArmor4";
 		Back = "ENGINEERINGMENU";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["EngineeringArmor4"] = {
 		{ 1, "s3969", "4396", "=q1=Mechanical Dragonling", "=ds=#sr# 200"};
 		Prev = "EngineeringArmor3";
 		Back = "ENGINEERINGMENU";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["EngineeringExplosives1"] = {
@@ -2075,6 +2104,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 19, "s3925", "4362", "=q2=Rough Boomstick", "=ds=#sr# 50"};
 		{ 20, "s7430", "6219", "=q1=Arclight Spanner", "=ds=#sr# 50"};
 		Back = "ENGINEERINGMENU";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["Gnomish1"] = {
@@ -2172,6 +2202,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 14, "s59475", "43654", "=q3=Tome of the Dawn", "=ds=" };
 		{ 15, "s58565", "43515", "=q3=Mystic Tome", "=ds="..AL["Trainer"] };
 		Back = "INSCRIPTIONMENU";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["Inscription_Reagents1"] = {
@@ -3209,6 +3240,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 23, "s26872", "21748", "=q2=Figurine - Jade Owl", "=ds=#sr# 200"};
 		{ 24, "s26875", "21758", "=q2=Figurine - Black Pearl Panther", "=ds=#sr# 215"};
 		Back = "JEWELCRAFTINGMENU";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["JewelRing1"] = {
@@ -3244,6 +3276,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 30, "s41415", "32774", "=q3=The Black Pearl", "=ds=#sr# 330"};
 		Next = "JewelRing2";
 		Back = "JEWELCRAFTINGMENU";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["JewelRing2"] = {
@@ -3280,6 +3313,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Prev = "JewelRing1";
 		Next = "JewelRing3";
 		Back = "JEWELCRAFTINGMENU";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["JewelRing3"] = {
@@ -3299,6 +3333,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 14, "s26925", "21931", "=q2=Woven Copper Ring", "=ds=#sr# 1"};
 		Prev = "JewelRing2";
 		Back = "JEWELCRAFTINGMENU";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["JewelNeck1"] = {
@@ -3334,6 +3369,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 30, "s26908", "21790", "=q2=Sapphire Pendant of Winter Night", "=ds=#sr# 280"};
 		Next = "JewelNeck2";
 		Back = "JEWELCRAFTINGMENU";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["JewelNeck2"] = {
@@ -3352,6 +3388,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 13, "s32178", "25438", "=q2=Malachite Pendant", "=ds=#sr# 20"};
 		Prev = "JewelNeck1";
 		Back = "JEWELCRAFTINGMENU";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["JewelMisc1"] = {
@@ -3417,6 +3454,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 30, "s19078", "15060", "=q3=Living Leggings", "=ds=#sr# 285"};
 		Next = "LeatherLeatherArmorOld2";
 		Back = "LEATHERWORKINGMENU";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["LeatherLeatherArmorOld2"] = {
@@ -3453,6 +3491,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Prev = "LeatherLeatherArmorOld1";
 		Next = "LeatherLeatherArmorOld3";
 		Back = "LEATHERWORKINGMENU";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["LeatherLeatherArmorOld3"] = {
@@ -3489,6 +3528,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Prev = "LeatherLeatherArmorOld2";
 		Next = "LeatherLeatherArmorOld4";
 		Back = "LEATHERWORKINGMENU";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["LeatherLeatherArmorOld4"] = {
@@ -3525,6 +3565,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Prev = "LeatherLeatherArmorOld3";
 		Next = "LeatherLeatherArmorOld5";
 		Back = "LEATHERWORKINGMENU";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["LeatherLeatherArmorOld5"] = {
@@ -3561,6 +3602,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Prev = "LeatherLeatherArmorOld4";
 		Next = "LeatherLeatherArmorOld6";
 		Back = "LEATHERWORKINGMENU";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["LeatherLeatherArmorOld6"] = {
@@ -3570,6 +3612,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 4, "s7126", "5957", "=q1=Handstitched Leather Vest", "=ds=#sr# 1"};
 		Prev = "LeatherLeatherArmorOld5";
 		Back = "LEATHERWORKINGMENU";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["LeatherLeatherArmorBC1"] = {
@@ -3605,6 +3648,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 30, "s32495", "25689", "=q3=Heavy Clefthoof Vest", "=ds=#sr# 360"};
 		Next = "LeatherLeatherArmorBC2";
 		Back = "LEATHERWORKINGMENU";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["LeatherLeatherArmorBC2"] = {
@@ -3633,6 +3677,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 23, "s32478", "25673", "=q2=Wild Draenish Boots", "=ds=#sr# 300"};
 		Prev = "LeatherLeatherArmorBC1";
 		Back = "LEATHERWORKINGMENU";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["LeatherLeatherArmorWrath1"] = {
@@ -3668,6 +3713,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 30, "s60705", "43436", "=q3=Eviscerator's Gauntlets", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"]};
 		Next = "LeatherLeatherArmorWrath2";
 		Back = "LEATHERWORKINGMENU";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["LeatherLeatherArmorWrath2"] = {
@@ -3704,6 +3750,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Prev = "LeatherLeatherArmorWrath1";
 		Next = "LeatherLeatherArmorWrath3";
 		Back = "LEATHERWORKINGMENU";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["LeatherLeatherArmorWrath3"] = {
@@ -3717,6 +3764,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 8, "s50942", "38407", "=q2=Iceborne Boots", "=ds="..AL["Trainer"]};
 		Prev = "LeatherLeatherArmorWrath2";
 		Back = "LEATHERWORKINGMENU";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["LeatherMailArmorOld1"] = {
@@ -3752,6 +3800,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 30, "s19070", "15082", "=q2=Heavy Scorpid Belt", "=ds=#sr# 280"};
 		Next = "LeatherMailArmorOld2";
 		Back = "LEATHERWORKINGMENU";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["LeatherMailArmorOld2"] = {
@@ -3772,6 +3821,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 15, "s10509", "8187", "=q2=Turtle Scale Gloves", "=ds=#sr# 205"};
 		Prev = "LeatherMailArmorOld1";
 		Back = "LEATHERWORKINGMENU";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["LeatherMailArmorBC1"] = {
@@ -3807,6 +3857,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 30, "s32500", "25696", "=q3=Felstalker Breastplate", "=ds=#sr# 360"};
 		Next = "LeatherMailArmorBC2";
 		Back = "LEATHERWORKINGMENU";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["LeatherMailArmorBC2"] = {
@@ -3833,6 +3884,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 21, "s32462", "25654", "=q2=Felscale Gloves", "=ds=#sr# 300"};
 		Prev = "LeatherMailArmorBC1";
 		Back = "LEATHERWORKINGMENU";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["LeatherMailArmorWrath1"] = {
@@ -3868,6 +3920,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 30, "s60735", "43448", "=q3=Swiftarrow Leggings", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"]};
 		Next = "LeatherMailArmorWrath2";
 		Back = "LEATHERWORKINGMENU";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["LeatherMailArmorWrath2"] = {
@@ -3904,6 +3957,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Prev = "LeatherMailArmorWrath1";
 		Next = "LeatherMailArmorWrath3";
 		Back = "LEATHERWORKINGMENU";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["LeatherMailArmorWrath3"] = {
@@ -3915,6 +3969,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 6, "s50960", "38419", "=q2=Nerubian Boots", "=ds="..AL["Trainer"]};
 		Prev = "LeatherMailArmorWrath2";
 		Back = "LEATHERWORKINGMENU";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["LeatherCloaks1"] = {
@@ -3937,6 +3992,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 17, "s2168", "2316", "=q1=Dark Leather Cloak", "=ds=#sr# 110"};
 		{ 18, "s2162", "2310", "=q1=Embossed Leather Cloak", "=ds=#sr# 60"};
 		Back = "LEATHERWORKINGMENU";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["LeatherItemEnhancement1"] = {
@@ -4040,6 +4096,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 13, "s3816", "4231", "=q1=Cured Light Hide", "=ds=#sr# 35"};
 		{ 14, "s2881", "2318", "=q1=Light Leather", "=ds=#sr# 1"};
 		Back = "LEATHERWORKINGMENU";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["Dragonscale1"] = {
@@ -4057,6 +4114,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 12, "s35580", "29519", "=q4=Netherstrike Breastplate", "=ds=#sr# 375"};
 		Next = "Elemental1";
 		Back = "LEATHERWORKINGMENU";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["Elemental1"] = {
@@ -4070,6 +4128,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Next = "Tribal1";
 		Prev = "Dragonscale1";
 		Back = "LEATHERWORKINGMENU";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["Tribal1"] = {
@@ -4082,6 +4141,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 7, "s35585", "29522", "=q4=Windhawk Hauberk", "=ds=#sr# 375"};
 		Prev = "Elemental1";
 		Back = "LEATHERWORKINGMENU";
+		Type = "Crafting";
 	};
 
 		--------------
@@ -4155,6 +4215,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 30, "s24903", "20537", "=q3=Runed Stygian Boots", "=ds=#sr# 300"};
 		Next = "TailoringArmorOld2";
 		Back = "TAILORINGMENU";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["TailoringArmorOld2"] = {
@@ -4191,6 +4252,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Next = "TailoringArmorOld3";
 		Prev = "TailoringArmorOld1";
 		Back = "TAILORINGMENU";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["TailoringArmorOld3"] = {
@@ -4227,6 +4289,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Next = "TailoringArmorOld4";
 		Prev = "TailoringArmorOld2";
 		Back = "TAILORINGMENU";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["TailoringArmorOld4"] = {
@@ -4263,6 +4326,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Next = "TailoringArmorOld5";
 		Prev = "TailoringArmorOld3";
 		Back = "TAILORINGMENU";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["TailoringArmorOld5"] = {
@@ -4299,6 +4363,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Next = "TailoringArmorOld6";
 		Prev = "TailoringArmorOld4";
 		Back = "TAILORINGMENU";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["TailoringArmorOld6"] = {
@@ -4335,6 +4400,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Prev = "TailoringArmorOld5";
 		Next = "TailoringArmorOld7";
 		Back = "TAILORINGMENU";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["TailoringArmorOld7"] = {
@@ -4343,6 +4409,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 3, "s12044", "10045", "=q1=Simple Linen Pants", "=ds=#sr# 1"};
 		Prev = "TailoringArmorOld6";
 		Back = "TAILORINGMENU";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["TailoringArmorBC1"] = {
@@ -4378,6 +4445,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 30, "s31448", "24258", "=q4=Resolute Cape", "=ds=#sr# 365"};
 		Next = "TailoringArmorBC2";
 		Back = "TAILORINGMENU";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["TailoringArmorBC2"] = {
@@ -4414,6 +4482,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Prev = "TailoringArmorBC1";
 		Next = "TailoringArmorBC3";
 		Back = "TAILORINGMENU";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["TailoringArmorBC3"] = {
@@ -4424,6 +4493,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 5, "s26764", "21849", "=q2=Netherweave Bracers", "=ds=#sr# 310"};
 		Prev = "TailoringArmorBC2";
 		Back = "TAILORINGMENU";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["TailoringArmorWotLK1"] = {
@@ -4459,6 +4529,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 30, "s56023", "42096", "=q3=Aurora Slippers", "=ds="..AL["Trainer"] };
 		Next = "TailoringArmorWotLK2";
 		Back = "TAILORINGMENU";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["TailoringArmorWotLK2"] = {
@@ -4495,6 +4566,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Prev = "TailoringArmorWotLK1";
 		Next = "TailoringArmorWotLK3";
 		Back = "TAILORINGMENU";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["TailoringArmorWotLK3"] = {
@@ -4507,6 +4579,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 7, "s56031", "41512", "=q2=Frostwoven Wriststraps", "=ds="..AL["Trainer"] };
 		Prev = "TailoringArmorWotLK2";
 		Back = "TAILORINGMENU";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["TailoringBags1"] = {
@@ -4637,6 +4710,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 3, "s26762", "21875", "=q4=Primal Mooncloth Robe", "=ds=#sr# 375"};
 		Next = "Shadoweave1";
 		Back = "TAILORINGMENU";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["Shadoweave1"] = {
@@ -4646,6 +4720,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Next = "Spellfire1";
 		Prev = "Mooncloth1";
 		Back = "TAILORINGMENU";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["Spellfire1"] = {
@@ -4654,6 +4729,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 3, "s26754", "21848", "=q4=Spellfire Robe", "=ds=#sr# 375"};
 		Prev = "Shadoweave1";
 		Back = "TAILORINGMENU";
+		Type = "Crafting";
 	};
 
 	-----------------------
@@ -4671,6 +4747,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 4, 19692, "", "=q3=Bloodsoul Gauntlets", "=ds=#s9#, #a3#"};
 		Next = "BlacksmithingMailFelIronChain";
 		Back = "CRAFTSET1";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["BlacksmithingMailFelIronChain"] = {
@@ -4681,6 +4758,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 5, 23491, "", "=q2=Fel Iron Chain Gloves", "=ds=#s9#, #a3#"};
 		Prev = "BlacksmithingMailBloodsoulEmbrace";
 		Back = "CRAFTSET1";
+		Type = "Crafting";
 	};
 
 		--------------------------------
@@ -4698,6 +4776,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 8, 12426, "", "=q2=Imperial Plate Boots", "=ds=#s12#, #a4#"};
 		Next = "BlacksmithingPlateTheDarksoul";
 		Back = "CRAFTSET1";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["BlacksmithingPlateTheDarksoul"] = {
@@ -4708,6 +4787,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Prev = "BlacksmithingPlateImperialPlate";
 		Next = "BlacksmithingPlateFelIronPlate";
 		Back = "CRAFTSET1";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["BlacksmithingPlateFelIronPlate"] = {
@@ -4720,6 +4800,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Prev = "BlacksmithingPlateTheDarksoul";
 		Next = "BlacksmithingPlateAdamantiteB";
 		Back = "CRAFTSET1";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["BlacksmithingPlateAdamantiteB"] = {
@@ -4730,6 +4811,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Prev = "BlacksmithingPlateFelIronPlate";
 		Next = "BlacksmithingPlateFlameG";
 		Back = "CRAFTSET1";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["BlacksmithingPlateFlameG"] = {
@@ -4741,6 +4823,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Prev = "BlacksmithingPlateAdamantiteB";
 		Next = "BlacksmithingPlateEnchantedAdaman";
 		Back = "CRAFTSET1";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["BlacksmithingPlateEnchantedAdaman"] = {
@@ -4762,6 +4845,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Prev = "BlacksmithingPlateEnchantedAdaman";
 		Next = "BlacksmithingPlateFaithFelsteel";
 		Back = "CRAFTSET1";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["BlacksmithingPlateFaithFelsteel"] = {
@@ -4772,6 +4856,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Prev = "BlacksmithingPlateKhoriumWard";
 		Next = "BlacksmithingPlateBurningRage";
 		Back = "CRAFTSET1";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["BlacksmithingPlateBurningRage"] = {
@@ -4783,6 +4868,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Prev = "BlacksmithingPlateFaithFelsteel";
 		Next = "BlacksmithingPlateOrnateSaroniteBattlegear";
 		Back = "CRAFTSET1";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["BlacksmithingPlateOrnateSaroniteBattlegear"] = {
@@ -4798,6 +4884,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Prev = "BlacksmithingPlateBurningRage";
 		Next = "BlacksmithingPlateSavageSaroniteBattlegear";
 		Back = "CRAFTSET1";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["BlacksmithingPlateSavageSaroniteBattlegear"] = {
@@ -4812,6 +4899,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 9, 41348, "", "=q3=Savage Saronite Walkers", "=ds=#s12#, #a4#"};
 		Prev = "BlacksmithingPlateOrnateSaroniteBattlegear";
 		Back = "CRAFTSET1";
+		Type = "Crafting";
 	};
 
 		-----------------------------------
@@ -4825,6 +4913,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 4, 15054, "", "=q2=Volcanic Leggings", "=ds=#s11#, #a2#"};
 		Next = "LeatherworkingLeatherIronfeatherArmor";
 		Back = "CRAFTSET2";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["LeatherworkingLeatherIronfeatherArmor"] = {
@@ -4834,6 +4923,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Prev = "LeatherworkingLeatherVolcanicArmor";
 		Next = "LeatherworkingLeatherStormshroudArmor";
 		Back = "CRAFTSET2";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["LeatherworkingLeatherStormshroudArmor"] = {
@@ -4845,6 +4935,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Prev = "LeatherworkingLeatherIronfeatherArmor";
 		Next = "LeatherworkingLeatherDevilsaurArmor";
 		Back = "CRAFTSET2";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["LeatherworkingLeatherDevilsaurArmor"] = {
@@ -4854,6 +4945,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Prev = "LeatherworkingLeatherStormshroudArmor";
 		Next = "LeatherworkingLeatherBloodTigerH";
 		Back = "CRAFTSET2";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["LeatherworkingLeatherBloodTigerH"] = {
@@ -4863,6 +4955,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Prev = "LeatherworkingLeatherDevilsaurArmor";
 		Next = "LeatherworkingLeatherPrimalBatskin";
 		Back = "CRAFTSET2";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["LeatherworkingLeatherPrimalBatskin"] = {
@@ -4873,6 +4966,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Prev = "LeatherworkingLeatherBloodTigerH";
 		Next = "LeatherworkingLeatherWildDraenishA";
 		Back = "CRAFTSET2";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["LeatherworkingLeatherWildDraenishA"] = {
@@ -4884,6 +4978,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Prev = "LeatherworkingLeatherPrimalBatskin";
 		Next = "LeatherworkingLeatherThickDraenicA";
 		Back = "CRAFTSET2";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["LeatherworkingLeatherThickDraenicA"] = {
@@ -4895,6 +4990,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Prev = "LeatherworkingLeatherWildDraenishA";
 		Next = "LeatherworkingLeatherFelSkin";
 		Back = "CRAFTSET2";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["LeatherworkingLeatherFelSkin"] = {
@@ -4905,6 +5001,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Prev = "LeatherworkingLeatherThickDraenicA";
 		Next = "LeatherworkingLeatherSClefthoof";
 		Back = "CRAFTSET2";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["LeatherworkingLeatherSClefthoof"] = {
@@ -4915,6 +5012,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Prev = "LeatherworkingLeatherFelSkin";
 		Next = "LeatherworkingLeatherPrimalIntent";
 		Back = "CRAFTSET2";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["LeatherworkingLeatherPrimalIntent"] = {
@@ -4925,6 +5023,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Prev = "LeatherworkingLeatherSClefthoof";
 		Next = "LeatherworkingLeatherWindhawkArmor";
 		Back = "CRAFTSET2";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["LeatherworkingLeatherWindhawkArmor"] = {
@@ -4935,6 +5034,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Prev = "LeatherworkingLeatherPrimalIntent";
 		Next = "LeatherworkingLeatherBoreanEmbrace";
 		Back = "CRAFTSET2";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["LeatherworkingLeatherBoreanEmbrace"] = {
@@ -4950,6 +5050,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Prev = "LeatherworkingLeatherWindhawkArmor";
 		Next = "LeatherworkingLeatherIceborneEmbrace";
 		Back = "CRAFTSET2";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["LeatherworkingLeatherIceborneEmbrace"] = {
@@ -4965,6 +5066,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Prev = "LeatherworkingLeatherBoreanEmbrace";
 		Next = "LeatherworkingLeatherEvisceratorBattlegear";
 		Back = "CRAFTSET2";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["LeatherworkingLeatherEvisceratorBattlegear"] = {
@@ -4980,6 +5082,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Prev = "LeatherworkingLeatherIceborneEmbrace";
 		Next = "LeatherworkingLeatherOvercasterBattlegear";
 		Back = "CRAFTSET2";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["LeatherworkingLeatherOvercasterBattlegear"] = {
@@ -4994,6 +5097,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 9, 43273, "", "=q3=Overcast Boots", "=ds=#s12#, #a2#"};
 		Prev = "LeatherworkingLeatherEvisceratorBattlegear";
 		Back = "CRAFTSET2";
+		Type = "Crafting";
 	};
 
 		--------------------------------
@@ -5007,6 +5111,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 4, 15046, "", "=q3=Green Dragonscale Leggings", "=ds=#s11#, #a3#"};
 		Next = "LeatherworkingMailBlueDragonM";
 		Back = "CRAFTSET3";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["LeatherworkingMailBlueDragonM"] = {
@@ -5017,6 +5122,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Prev = "LeatherworkingMailGreenDragonM";
 		Next = "LeatherworkingMailBlackDragonM";
 		Back = "CRAFTSET3";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["LeatherworkingMailBlackDragonM"] = {
@@ -5028,6 +5134,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Prev = "LeatherworkingMailBlueDragonM";
 		Next = "LeatherworkingMailScaledDraenicA";
 		Back = "CRAFTSET3";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["LeatherworkingMailScaledDraenicA"] = {
@@ -5039,6 +5146,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Prev = "LeatherworkingMailBlackDragonM";
 		Next = "LeatherworkingMailFelscaleArmor";
 		Back = "CRAFTSET3";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["LeatherworkingMailFelscaleArmor"] = {
@@ -5050,6 +5158,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Prev = "LeatherworkingMailScaledDraenicA";
 		Next = "LeatherworkingMailFelstalkerArmor";
 		Back = "CRAFTSET3";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["LeatherworkingMailFelstalkerArmor"] = {
@@ -5060,6 +5169,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Prev = "LeatherworkingMailFelscaleArmor";
 		Next = "LeatherworkingMailNetherFury";
 		Back = "CRAFTSET3";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["LeatherworkingMailNetherFury"] = {
@@ -5070,6 +5180,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Prev = "LeatherworkingMailFelstalkerArmor";
 		Next = "LeatherworkingMailNetherscaleArmor";
 		Back = "CRAFTSET3";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["LeatherworkingMailNetherscaleArmor"] = {
@@ -5080,6 +5191,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Prev = "LeatherworkingMailNetherFury";
 		Next = "LeatherworkingMailNetherstrikeArmor";
 		Back = "CRAFTSET3";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["LeatherworkingMailNetherstrikeArmor"] = {
@@ -5090,6 +5202,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Prev = "LeatherworkingMailNetherscaleArmor";
 		Next = "LeatherworkingMailFrostscaleBinding";
 		Back = "CRAFTSET3";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["LeatherworkingMailFrostscaleBinding"] = {
@@ -5105,6 +5218,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Prev = "LeatherworkingMailNetherstrikeArmor";
 		Next = "LeatherworkingMailNerubianHive";
 		Back = "CRAFTSET3";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["LeatherworkingMailNerubianHive"] = {
@@ -5120,6 +5234,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Prev = "LeatherworkingMailFrostscaleBinding";
 		Next = "LeatherworkingMailStormhideBattlegear";
 		Back = "CRAFTSET3";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["LeatherworkingMailStormhideBattlegear"] = {
@@ -5135,6 +5250,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Prev = "LeatherworkingMailNerubianHive";
 		Next = "LeatherworkingMailSwiftarrowBattlefear";
 		Back = "CRAFTSET3";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["LeatherworkingMailSwiftarrowBattlefear"] = {
@@ -5149,6 +5265,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 9, 43443, "", "=q3=Swiftarrow Boots", "=ds=#s12#, #a3#"};
 		Prev = "LeatherworkingMailStormhideBattlegear";
 		Back = "CRAFTSET3";
+		Type = "Crafting";
 	};
 
 		----------------------
@@ -5162,6 +5279,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 4, 19684, "", "=q3=Bloodvine Boots", "=ds=#s12#, #a1#"};
 		Next = "TailoringNeatherVest";
 		Back = "CRAFTSET4";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["TailoringNeatherVest"] = {
@@ -5176,6 +5294,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Prev = "TailoringBloodvineG";
 		Next = "TailoringImbuedNeather";
 		Back = "CRAFTSET4";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["TailoringImbuedNeather"] = {
@@ -5187,6 +5306,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Prev = "TailoringNeatherVest";
 		Next = "TailoringArcanoVest";
 		Back = "CRAFTSET4";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["TailoringArcanoVest"] = {
@@ -5197,6 +5317,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Prev = "TailoringImbuedNeather";
 		Next = "TailoringTheUnyielding";
 		Back = "CRAFTSET4";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["TailoringTheUnyielding"] = {
@@ -5206,6 +5327,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Prev = "TailoringArcanoVest";
 		Next = "TailoringWhitemendWis";
 		Back = "CRAFTSET4";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["TailoringWhitemendWis"] = {
@@ -5215,6 +5337,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Prev = "TailoringTheUnyielding";
 		Next = "TailoringSpellstrikeInfu";
 		Back = "CRAFTSET4";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["TailoringSpellstrikeInfu"] = {
@@ -5224,6 +5347,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Prev = "TailoringWhitemendWis";
 		Next = "TailoringBattlecastG";
 		Back = "CRAFTSET4";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["TailoringBattlecastG"] = {
@@ -5233,6 +5357,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Prev = "TailoringSpellstrikeInfu";
 		Next = "TailoringSoulclothEm";
 		Back = "CRAFTSET4";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["TailoringSoulclothEm"] = {
@@ -5243,6 +5368,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Prev = "TailoringBattlecastG";
 		Next = "TailoringPrimalMoon";
 		Back = "CRAFTSET4";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["TailoringPrimalMoon"] = {
@@ -5253,6 +5379,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Prev = "TailoringSoulclothEm";
 		Next = "TailoringShadowEmbrace";
 		Back = "CRAFTSET4";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["TailoringShadowEmbrace"] = {
@@ -5263,6 +5390,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Prev = "TailoringPrimalMoon";
 		Next = "TailoringSpellfireWrath";
 		Back = "CRAFTSET4";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["TailoringSpellfireWrath"] = {
@@ -5273,6 +5401,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Prev = "TailoringShadowEmbrace";
 		Next = "TailoringFrostwovenPower";
 		Back = "CRAFTSET4";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["TailoringFrostwovenPower"] = {
@@ -5288,6 +5417,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Prev = "TailoringSpellfireWrath";
 		Next = "TailoringDuskweaver";
 		Back = "CRAFTSET4";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["TailoringDuskweaver"] = {
@@ -5303,6 +5433,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Prev = "TailoringFrostwovenPower";
 		Next = "TailoringFrostsavageBattlegear";
 		Back = "CRAFTSET4";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["TailoringFrostsavageBattlegear"] = {
@@ -5317,6 +5448,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 9, 43970, "", "=q3=Frostsavage Boots", "=ds=#s12#, #a1#"};
 		Prev = "TailoringDuskweaver";
 		Back = "CRAFTSET4";
+		Type = "Crafting";
 	};
 
 	-------------
@@ -5354,6 +5486,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 29, 32756, "", "=q4=Gyro-balanced Khorium Destroyer", "=ds=#w5#"};
 		Next = "CraftedWeapons2";
 		Back = "CRAFTINGMENU";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["CraftedWeapons2"] = {
@@ -5373,6 +5506,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Prev = "CraftedWeapons1";
 		Next = "CraftedWeapons3";
 		Back = "CRAFTINGMENU";
+		Type = "Crafting";
 	};
 
 	AtlasLoot_Data["CraftedWeapons3"] = {
@@ -5399,6 +5533,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 22, 28442, "", "=q4=Stormherald", "=ds=#h2#, #w6#"};
 		Prev = "CraftedWeapons2";
 		Back = "CRAFTINGMENU";
+		Type = "Crafting";
 	};
 
 	--------------------------------
@@ -5690,6 +5825,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Prev = "TailorHighRisk";
 		Next = "SmithingHighRisk";	
 		Back = "ALCHEMYMENU";
+		Type = "CraftingExt";
 	};
 
 	AtlasLoot_Data["AlchemyHighRiskRare"] = {	
@@ -5707,6 +5843,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Prev = "TailorHighRisk";
 		Next = "SmithingHighRisk";
 		Back = "ALCHEMYMENU";
+		Type = "CraftingExt";
 	};
 
 	AtlasLoot_Data["AlchemyHighRiskEpic"] = {	
@@ -5724,6 +5861,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Prev = "TailorHighRisk";
 		Next = "SmithingHighRisk";
 		Back = "ALCHEMYMENU";
+		Type = "CraftingExt";
 	};
 
 	AtlasLoot_Data["SmithingHighRisk"] = {
@@ -5739,6 +5877,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Prev = "AlchemyHighRisk";
 		Next = "LeatherHighRisk";	
 		Back = "SMITHINGMENU";
+		Type = "CraftingExt";
 	};
 
 	AtlasLoot_Data["SmithingHighRiskRare"] = {
@@ -5754,6 +5893,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Prev = "AlchemyHighRisk";
 		Next = "LeatherHighRisk";
 		Back = "SMITHINGMENU";
+		Type = "CraftingExt";
 	};
 
 	AtlasLoot_Data["SmithingHighRiskEpic"] = {
@@ -5769,6 +5909,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Prev = "AlchemyHighRisk";
 		Next = "LeatherHighRisk";
 		Back = "SMITHINGMENU";
+		Type = "CraftingExt";
 	};
 	
 	AtlasLoot_Data["LeatherHighRisk"] = {
@@ -5781,6 +5922,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Prev = "SmithingHighRisk";
 		Next = "EngineerHighRisk";	
 		Back = "LEATHERWORKINGMENU";
+		Type = "CraftingExt";
 	};
 	
 	AtlasLoot_Data["LeatherHighRiskRare"] = {
@@ -5793,6 +5935,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Prev = "SmithingHighRisk";
 		Next = "EngineerHighRisk";
 		Back = "LEATHERWORKINGMENU";
+		Type = "CraftingExt";
 	};
 	
 	AtlasLoot_Data["LeatherHighRiskEpic"] = {
@@ -5805,6 +5948,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Prev = "SmithingHighRisk";
 		Next = "EngineerHighRisk";
 		Back = "LEATHERWORKINGMENU";
+		Type = "CraftingExt";
 	};
 	
 	AtlasLoot_Data["EngineerHighRisk"] = {
@@ -5817,6 +5961,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Prev = "LeatherHighRisk";
 		Next = "EnchantingHighRisk";	
 		Back = "ENGINEERINGMENU";
+		Type = "CraftingExt";
 	};
 	
 	AtlasLoot_Data["EngineerHighRiskRare"] = {
@@ -5829,6 +5974,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Prev = "LeatherHighRisk";
 		Next = "EnchantingHighRisk";
 		Back = "ENGINEERINGMENU";
+		Type = "CraftingExt";
 	};
 	
 	AtlasLoot_Data["EngineerHighRiskEpic"] = {
@@ -5841,6 +5987,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Prev = "LeatherHighRisk";
 		Next = "EnchantingHighRisk";
 		Back = "ENGINEERINGMENU";
+		Type = "CraftingExt";
 	};
 	
 	AtlasLoot_Data["EnchantingHighRisk"] = {
@@ -5856,6 +6003,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Prev = "EngineerHighRisk";
 		Next = "TailorHighRisk";	
 		Back = "ENCHANTINGMENU";
+		Type = "CraftingExt";
 	};
 	
 	AtlasLoot_Data["EnchantingHighRiskRare"] = {
@@ -5872,6 +6020,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Prev = "EngineerHighRisk";
 		Next = "TailorHighRisk";
 		Back = "ENCHANTINGMENU";
+		Type = "CraftingExt";
 	};
 	
 	AtlasLoot_Data["EnchantingHighRiskEpic"] = {
@@ -5888,6 +6037,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Prev = "EngineerHighRisk";
 		Next = "TailorHighRisk";
 		Back = "ENCHANTINGMENU";
+		Type = "CraftingExt";
 	};
 	
 	AtlasLoot_Data["TailorHighRisk"] = {
@@ -5900,6 +6050,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Prev = "EnchantingHighRisk";
 		Next = "AlchemyHighRisk";
 		Back = "TAILORINGMENU";
+		Type = "CraftingExt";
 	};
 	
 	AtlasLoot_Data["TailorHighRiskRare"] = {
@@ -5912,6 +6063,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Prev = "EnchantingHighRisk";
 		Next = "AlchemyHighRisk";
 		Back = "TAILORINGMENU";
+		Type = "CraftingExt";
 	};
 	
 	AtlasLoot_Data["TailorHighRiskEpic"] = {
@@ -5924,6 +6076,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Prev = "EnchantingHighRisk";
 		Next = "AlchemyHighRisk";
 		Back = "TAILORINGMENU";
+		Type = "CraftingExt";
 	};
 
 	AtlasLoot_Data["CookingHighRisk"] = {
@@ -5959,6 +6112,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 30, "s968366",	"967596",	"=q2=Subtle Steak", "=ds=#sr# 300"};
 		Next = "CookingHighRiskTwo";
 		Back = "CRAFTINGMENU";
+		Type = "CraftingExt";
 	};
 	
 	AtlasLoot_Data["CookingHighRiskTwo"] = {
@@ -5976,6 +6130,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 13, "s968646",	"967703",	"=q2=Tempting Bait", "=ds=#sr# 300"};
 		Prev = "CookingHighRisk";
 		Back = "CRAFTINGMENU";
+		Type = "CraftingExt";
 	};
 	
 	AtlasLoot_Data["CookingHighRiskRare"] = {
@@ -6011,6 +6166,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 30, "s968367",	"967597",	"=q3=Subtle Steak", "=ds=#sr# 300"};
 		Next = "CookingHighRiskTwo";
 		Back = "CRAFTINGMENU";
+		Type = "CraftingExt";
 	};
 	
 	AtlasLoot_Data["CookingHighRiskTwoRare"] = {
@@ -6028,6 +6184,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 13, "s968647",	"967704",	"=q3=Alluring Bait", "=ds=#sr# 300"};
 		Prev = "CookingHighRisk";
 		Back = "CRAFTINGMENU";
+		Type = "CraftingExt";
 	};
 	
 	AtlasLoot_Data["CookingHighRiskEpic"] = {
@@ -6063,6 +6220,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 30, "s968368",	"967598",	"=q4=Subtle Steak", "=ds=#sr# 300"};
 		Next = "CookingHighRiskTwo";
 		Back = "CRAFTINGMENU";
+		Type = "CraftingExt";
 	};
 	
 	AtlasLoot_Data["CookingHighRiskTwoEpic"] = {
@@ -6080,4 +6238,5 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 13, "s968648",	"967705",	"=q4=Irresistible Bait", "=ds=#sr# 300"};
 		Prev = "CookingHighRisk";
 		Back = "CRAFTINGMENU";
+		Type = "CraftingExt";
 	};

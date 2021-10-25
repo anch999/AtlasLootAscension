@@ -36,38 +36,25 @@ tabletype - Whether the tablename indexes an actual table or needs to generate a
 tabletype2 - Whether the tablename indexes an actual second submenu
 Called when a button in AtlasLoot_Dewdrop is clicked
 ]]
-function AtlasLoot_DewDropClick(tablename, text, tabletype, tabletype2)
+function AtlasLoot_DewDropClick(tablename, text, tabletype)
     --Definition of where I want the loot table to be shown
     pFrame = { "TOPLEFT", "AtlasLootDefaultFrame_LootBackground", "TOPLEFT", "2", "-2" };
     --If the button clicked was linked to a loot table
-	ItemindexID = ""
-    SelectedTable2TextSet = false
-	isTablereference = false
-	notPattern = false
-	isItemID = false
 	if tabletype == "Table" then
-		AtlasLoot_DewdropSubMenu2:Unregister(AtlasLootDefaultFrame_SubMenu2);
 		--Show the loot table
         AtlasLoot_ShowItemsFrame(tablename, "", text, pFrame);
-        AtlasLoot_RootBoss = tablename;
 		--Save needed info for fuure re-display of the table
         AtlasLoot.db.profile.LastBoss = tablename;
         --Purge the text label for the submenu and disable the submenu
         AtlasLootDefaultFrame_SubMenu:Disable();
         AtlasLootDefaultFrame_SelectedTable:SetText("");
         AtlasLootDefaultFrame_SelectedTable:Show();
-    --If the button links to a sub menu definition
-		AtlasLootDefaultFrame_SubMenu2:Disable();
-		AtlasLootDefaultFrame_SelectedTable2:SetText("");
-		AtlasLootDefaultFrame_SelectedTable2:Hide();
-    else
-        
+    else   
 		--Enable the submenu button
         AtlasLootDefaultFrame_SubMenu:Enable();
         --Show the first loot table associated with the submenu
         AtlasLoot_ShowBossLoot(AtlasLoot_DewDropDown_SubTables[tablename][1][2], AtlasLoot_DewDropDown_SubTables[tablename][1][1], pFrame);
 		--Save needed info for fuure re-display of the table
-		AtlasLoot_RootBoss = AtlasLoot_DewDropDown_SubTables[tablename][1][2];
 		AtlasLoot.db.profile.LastBoss = AtlasLoot_DewDropDown_SubTables[tablename][1][2];
         --Load the correct submenu and associated with the button
 		AtlasLoot_DewdropSubMenu:Unregister(AtlasLootDefaultFrame_SubMenu);
@@ -80,18 +67,6 @@ function AtlasLoot_DewDropClick(tablename, text, tabletype, tabletype2)
         end
 		AtlasLootDefaultFrame_SelectedTable:Show();	
     end
-		--check to see if its a submenu thats need a difficulty list
-		if tabletype2 == "Submenu2" then
-			AtlasLootDefaultFrame_SubMenu2:Enable();
-			AtlasLoot_DewdropSubMenu2:Unregister(AtlasLootDefaultFrame_SubMenu2);
-			AtlasLoot_DewdropSubMenu2Register(AtlasLoot_DewDropDown_SubTables2[tablename]);
-			AtlasLootDefaultFrame_SelectedTable2:SetText(AtlasLoot_TableNames[AtlasLoot_DewDropDown_SubTables2[tablename][1][3]][1]);
-			AtlasLootDefaultFrame_SelectedTable2:Show();
-			DropMenu2 = false
-		elseif tabletype2 == "Submenu2Table" then
-			DropMenu2 = true
-		end	
-	
     --Show the category that has been selected
     AtlasLootDefaultFrame_SelectedCategory:SetText(text);
     AtlasLootDefaultFrame_SelectedCategory:Show();
@@ -120,22 +95,6 @@ function AtlasLoot_DewDropSubMenuClick(tablename, text)
     AtlasLootDefaultFrame_SelectedTable:Show();
     AtlasLoot_DewdropSubMenu:Close(1);
 end
-
-function AtlasLoot_DewDropSubMenu2Click(raidtablename, itemID, indexID)
-	--Definition of where I want the loot table to be shown
-	pFrame = { "TOPLEFT", "AtlasLootDefaultFrame_LootBackground", "TOPLEFT", "2", "-2" };
-	AtlasLootDefaultFrame_GetRaidDifficulty(raidtablename, itemID, indexID)
-	--Show the select loot table
-	AtlasLoot_ShowItemsFrame(AtlasLoot_CurrentBoss, "", text, pFrame);
-    --Save needed info for fuure re-display of the table
-    AtlasLoot.db.profile.LastBoss = AtlasLoot_CurrentBoss;
-    --Set text for difficulty
-	AtlasLootDefaultFrame_SelectedTable2:SetText(AtlasLoot_TableNames[DropTablename][1]);
-	AtlasLootDefaultFrame_SelectedTable2:Show();
-	AtlasLoot_DewdropSubMenu2:Close(1);
-end
-
-
 
 --[[
 AtlasLootDefaultFrame_OnShow:
@@ -174,34 +133,97 @@ function AtlasLootDefaultFrame_OnHide()
     AtlasLoot_DewdropSubMenu:Close(1);
 end   
 
-function AtlasLootDefaultFrame_GetRaidDifficulty(raidtablename, itemID, indexID)
-	for i = 1, 20, 1 do
-		if indexID == i then
-			if tonumber(itemID) then
-				ItemindexID = itemID
-				isTablereference = false
-				notPattern = false
-				isItemID = true
-			elseif itemID:match("=s=") then
-				newID = gsub(itemID, "=s=","")
-				newID = gsub(newID, "Normal","")
-				tableReference = newID
-				isTablereference = true
-				notPattern = true
-				isItemID = false
-				ItemindexID = ""
-			else
-				newID = gsub(itemID, "=s=","")
-				newID = gsub(newID, "Normal","")
-				tableReference = newID
-				isTablereference = true
-				notPattern = false
-				isItemID = false
-				ItemindexID = ""
-			end
-			DropTablename = raidtablename
+function AtlasLoot_DewDropSubMenu2Click(raidtablename, itemID)
+	if ATLASLOOT_FILTER_ENABLE == true then
+    AtlasLoot_FilterEnableButton()
+    ReEnableFilter = true
+    end
+    -- gets itemID reference
+    AtlasLootDefaultFrame_GetRaidDifficulty(raidtablename, itemID)
+	--Show the select loot table
+	AtlasLoot_ShowItemsFrame(AtlasLootItemsFrame.refreshOri[1], AtlasLootItemsFrame.refreshOri[2], AtlasLootItemsFrame.refreshOri[3], AtlasLootItemsFrame.refreshOri[4]);
+    --Set text for difficulty
+	AtlasLootDefaultFrame_SelectedTable2:SetText(DropTablename);
+	AtlasLootDefaultFrame_SelectedTable2:Show();
+	AtlasLoot_DewdropSubMenu2:Close(1);
+    if ReEnableFilter then
+        AtlasLoot_FilterEnableButton()
+    end
+end
+
+function AtlasLoot_DifficultyDisable()
+    isTablereference = false
+		notPattern = false
+		AtlasLoot_DewdropSubMenu2:Unregister(AtlasLootDefaultFrame_SubMenu2);
+		AtlasLootDefaultFrame_SubMenu2:Disable();
+		AtlasLootDefaultFrame_SelectedTable2:SetText("");
+		AtlasLootDefaultFrame_SelectedTable2:Hide();
+		DewDrop2Enable = false
+		SelectedTable2TextSet = false
+end
+
+function AtlasLoot_DifficultyEnable(dataID, dataSource)
+    AtlasLootDefaultFrame_SubMenu2:Enable();
+		AtlasLoot_DewdropSubMenu2:Unregister(AtlasLootDefaultFrame_SubMenu2);
+		AtlasLoot_DewdropSubMenu2Register(AtlasLoot_Difficulty[dataSource[dataID].Type]);
+		if SelectedTable2TextSet == false then 
+			AtlasLootDefaultFrame_SelectedTable2:SetText(AtlasLoot_Difficulty[dataSource[dataID].Type][1][1])
 		end
-	end
+		AtlasLootDefaultFrame_SelectedTable2:Show();
+		SelectedTable2TextSet = true
+end
+
+function AtlasLootDefaultFrame_GetRaidDifficulty(raidtablename, itemID)
+            if tonumber(itemID) then --used in itemID search feature for itemID database
+				ItemindexID = itemID;
+				isTablereference = false;
+				notPattern = false;
+			elseif itemID:match("=s=") then -- =s= infront of a table reference will make it show a normal crafting item instead of a crafting pattern
+				newID = gsub(itemID, "=s=",""); -- removes =s= before passing the extra table addition
+				newID = gsub(newID, "Normal","");
+				tableReference = newID;
+				isTablereference = true;
+				notPattern = true;
+				ItemindexID = "";
+			else
+				newID = gsub(itemID, "=s=","");
+				newID = gsub(newID, "Normal","");
+				tableReference = newID;
+				isTablereference = true;
+				notPattern = false;
+				ItemindexID = "";
+			end
+            DropTablename = raidtablename;
+end
+
+function AtlasLoot_DewdropSubMenu2Register(loottable)
+    AtlasLoot_DewdropSubMenu2:Register(AtlasLootDefaultFrame_SubMenu2,
+        'point', function(parent)
+            return "TOP", "BOTTOM"
+        end,
+        'children', function(level, value)
+            if level == 1 then
+                for k,v in pairs(loottable) do
+						AtlasLoot_DewdropSubMenu2:AddLine(
+                            'text', v[1],
+                            'func', AtlasLoot_DewDropSubMenu2Click,
+                            'arg1', v[1],
+                            'arg2', v[2],
+                            'notCheckable', true
+                        )
+                end
+                AtlasLoot_DewdropSubMenu2:AddLine(
+					'text', AL["Close Menu"],
+                    'textR', 0,
+                    'textG', 1,
+                    'textB', 1,
+					'func', function() AtlasLoot_DewdropSubMenu2:Close() end,
+					'notCheckable', true
+				)
+            end
+		end,
+		'dontHook', true
+	)
 end
 
 --[[
@@ -244,48 +266,6 @@ function AtlasLoot_DewdropSubMenuRegister(loottable)
 					'func', function() AtlasLoot_DewdropSubMenu:Close() end,
 					'notCheckable', true
 				)
-            end
-		end,
-		'dontHook', true
-	)
-end
-
-function AtlasLoot_DewdropSubMenu2Register(loottable)
-    AtlasLoot_DewdropSubMenu2:Register(AtlasLootDefaultFrame_SubMenu2,
-        'point', function(parent)
-            return "TOP", "BOTTOM"
-        end,
-        'children', function(level, value)
-            if level == 1 then
-				for k,v in pairs(loottable) do
-					if v[1] == "" then
-						AtlasLoot_DewdropSubMenu2:AddLine(
-                            'text', AtlasLoot_TableNames[v[3]][1],
-                            'func', AtlasLoot_DewDropSubMenu2Click,
-                            'arg1', v[3],
-                            'arg2', v[4],
-							'arg3', v[2],
-                            'notCheckable', true
-                        )
-                    else
-                        AtlasLoot_DewdropSubMenu2:AddLine(
-                            'text', v[1],
-                            'func', AtlasLoot_DewDropSubMenu2Click,
-                            'arg1', v[3],
-                            'arg2', v[4],
-							'arg3', v[2],
-                            'notCheckable', true
-						)
-                    end
-                end
-                AtlasLoot_DewdropSubMenu2:AddLine(
-					'text', AL["Close Menu"],
-                    'textR', 0,
-                    'textG', 1,
-                    'textB', 1,
-					'func', function() AtlasLoot_DewdropSubMenu2:Close() end,
-					'notCheckable', true
-				)	
             end
 		end,
 		'dontHook', true
