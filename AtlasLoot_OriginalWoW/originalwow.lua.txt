@@ -1825,7 +1825,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 
 	AtlasLoot_Data["DMELethtendris"] = {
 		{ 1, 18325, "", "=q3=Felhide Cap", "=ds=#s1#, #a2#", "", "24.67%"};
-		{ 2, 18311, "", "=q3=Quel'dorai Channeling Rod", "=ds=#w9#", "", "7.30%"};
+		{ 2, 18311, "", "=q3=Quel'dorei Channeling Rod", "=ds=#w9#", "", "7.30%"};
 		{ 4, 18302, "", "=q2=Band of Vigor", "=ds=#s13#", "", "29.30%"};
 		{ 5, 18301, "", "=q2=Lethtendris's Wand", "=ds=#w12#", "", "25.57%"};
 		{ 7, 18426, "", "=q1=Lethtendris's Web", "=ds=#m3#"};
