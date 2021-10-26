@@ -3,7 +3,7 @@
 ## Notes: Minimap button for AtlasLoot
 ## Title-zhTW: |r|cFF0099FF[地圖]|rAL 小地圖按鍵
 ## Notes-zhTW: AtlasLoot 小地圖按鍵
-## Author: Hegarol
+## Author: Original: Hegarol, Ascension: Skray/Szyler/Anch/Rvng
 ## Version: v6.0
 ## X-eMail: manager@atlasloot.net
 ## X-Category: Map

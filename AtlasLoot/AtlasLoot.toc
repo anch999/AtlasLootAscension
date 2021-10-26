@@ -1,7 +1,7 @@
 ﻿## Interface: 30300
 ## Title: AtlasLoot Ascension Edition
 ## Notes: Shows the possible loot from the bosses
-## Author: Original: Hegarol, Ascension: Skray/Szyler/Anch
+## Author: Original: Hegarol, Ascension: Skray/Szyler/Anch/Rvng
 ## Version: v6.0
 ## X-eMail: manager@atlasloot.net
 ## X-Credits: Daviesh, Lag, Cellelach, Asurn, Pernicus and many others.
