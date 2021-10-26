@@ -424,16 +424,12 @@ end
 	AtlasLoot_TableNames["AuchCryptsShirrak"] = { BabbleBoss["Shirrak the Dead Watcher"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["AuchCryptsExarch"] = { BabbleBoss["Exarch Maladaar"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["AuchCryptsAvatar"] = { AL["Avatar of the Martyred"], "AtlasLootBurningCrusade" };
-  -- Auch: Auchenai Crypts MYTHIC
-	AtlasLoot_TableNames["AuchCryptsShirrak25Man"] = { BabbleBoss["Shirrak the Dead Watcher"], "AtlasLootBurningCrusade" };
-	AtlasLoot_TableNames["AuchCryptsExarch25Man"] = { BabbleBoss["Exarch Maladaar"], "AtlasLootBurningCrusade" };
-	AtlasLoot_TableNames["AuchCryptsAvatar25Man"] = { AL["Avatar of the Martyred"], "AtlasLootBurningCrusade" };
   -- Auch: Mana-Tombs
 	AtlasLoot_TableNames["AuchManaPandemonius"] = { BabbleBoss["Pandemonius"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["AuchManaTavarok"] = { BabbleBoss["Tavarok"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["AuchManaNexusPrince"] = { BabbleBoss["Nexus-Prince Shaffar"], "AtlasLootBurningCrusade" };
-	AtlasLoot_TableNames["AuchManaNexusPrince2"] = { BabbleBoss["Nexus-Prince Shaffar"].." ("..AL["Heroic"]..")", "AtlasLootBurningCrusade" };
-	AtlasLoot_TableNames["AuchManaYor"] = { AL["Yor"].." ("..AL["Heroic"]..")", "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["AuchManaNexusPrinceHeroic"] = { BabbleBoss["Nexus-Prince Shaffar"].." ("..AL["Heroic"]..")", "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["AuchManaYorHeroic"] = { AL["Yor"].." ("..AL["Heroic"]..")", "AtlasLootBurningCrusade" };
   -- Auch: Sethekk Halls
 	AtlasLoot_TableNames["AuchSethekkDarkweaver"] = { BabbleBoss["Darkweaver Syth"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["AuchSethekkRavenGod"] = { BabbleBoss["Anzu"].." ("..AL["Heroic"]..")", "AtlasLootBurningCrusade" };
@@ -478,12 +474,12 @@ end
 	AtlasLoot_TableNames["CFRUnderGhazan"] = { BabbleBoss["Ghaz'an"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["CFRUnderSwamplord"] = { BabbleBoss["Swamplord Musel'ek"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["CFRUnderStalker"] = { BabbleBoss["The Black Stalker"], "AtlasLootBurningCrusade" };
-	AtlasLoot_TableNames["CFRUnderStalker2"] = { BabbleBoss["The Black Stalker"].." ("..AL["Heroic"]..")", "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["CFRUnderStalkerHeroic"] = { BabbleBoss["The Black Stalker"].." ("..AL["Heroic"]..")", "AtlasLootBurningCrusade" };
   -- CoT: Old Hillsbrad Foothills
 	AtlasLoot_TableNames["CoTHillsbradDrake"] = { BabbleBoss["Lieutenant Drake"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["CoTHillsbradSkarloc"] = { BabbleBoss["Captain Skarloc"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["CoTHillsbradHunter"] = { BabbleBoss["Epoch Hunter"], "AtlasLootBurningCrusade" };
-	AtlasLoot_TableNames["CoTHillsbradHunter2"] = { BabbleBoss["Epoch Hunter"].." ("..AL["Heroic"]..")", "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["CoTHillsbradHunterHeroic"] = { BabbleBoss["Epoch Hunter"].." ("..AL["Heroic"]..")", "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["CoTTrash"] = { AL["Trash Mobs"].." ("..BabbleZone["Caverns of Time"]..")", "AtlasLootBurningCrusade" };
   -- CoT: Black Morass
 	AtlasLoot_TableNames["CoTMorassDeja"] = { BabbleBoss["Chrono Lord Deja"], "AtlasLootBurningCrusade" };
@@ -509,7 +505,7 @@ end
 	AtlasLoot_TableNames["HCRampWatchkeeper"] = { BabbleBoss["Watchkeeper Gargolmar"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["HCRampOmor"] = { BabbleBoss["Omor the Unscarred"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["HCRampVazruden"] = { BabbleBoss["Vazruden"], "AtlasLootBurningCrusade" };
-	AtlasLoot_TableNames["HCRampVazruden2"] = { BabbleBoss["Vazruden"].." ("..AL["Heroic"]..")", "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["HCRampVazrudenHeroic"] = { BabbleBoss["Vazruden"].." ("..AL["Heroic"]..")", "AtlasLootBurningCrusade" };
   -- HC: Shattered Halls
 	AtlasLoot_TableNames["HCHallsNethekurse"] = { BabbleBoss["Grand Warlock Nethekurse"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["HCHallsPorung"] = { BabbleBoss["Blood Guard Porung"].." ("..AL["Heroic"]..")", "AtlasLootBurningCrusade" };
@@ -520,7 +516,6 @@ end
 	AtlasLoot_TableNames["KaraCharredBoneFragment"] = { "Charred Bone Fragment ("..AL["Quest Item"]..")", "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["KaraNamed"] = { "Servant's Quarter Animal Bosses", "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["KaraAttumen"] = { BabbleBoss["Attumen the Huntsman"], "AtlasLootBurningCrusade" };
-	AtlasLoot_TableNames["KaraAttumen25Man"] = { BabbleBoss["Attumen the Huntsman"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["KaraMoroes"] = { BabbleBoss["Moroes"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["KaraKeannaLog"] = { "Keanna's Log ("..AL["Quest Item"]..")", "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["KaraMaiden"] = { BabbleBoss["Maiden of Virtue"], "AtlasLootBurningCrusade" };
@@ -554,14 +549,14 @@ end
 	AtlasLoot_TableNames["TKArcDalliah"] = { BabbleBoss["Dalliah the Doomsayer"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["TKArcScryer"] = { BabbleBoss["Wrath-Scryer Soccothrates"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["TKArcHarbinger"] = { BabbleBoss["Harbinger Skyriss"], "AtlasLootBurningCrusade" };
-	AtlasLoot_TableNames["TKTrash"] = { AL["Trash Mobs"].." ("..BabbleZone["Tempest Keep"]..")", "AtlasLootBurningCrusade" }; 
+	AtlasLoot_TableNames["TKTrash"] = { AL["Trash Mobs"].." ("..BabbleZone["Tempest Keep"]..")", "AtlasLootBurningCrusade" };
   -- TK: The Botanica
 	AtlasLoot_TableNames["TKBotSarannis"] = { BabbleBoss["Commander Sarannis"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["TKBotFreywinn"] = { BabbleBoss["High Botanist Freywinn"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["TKBotThorngrin"] = { BabbleBoss["Thorngrin the Tender"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["TKBotLaj"] = { BabbleBoss["Laj"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["TKBotSplinter"] = { BabbleBoss["Warp Splinter"], "AtlasLootBurningCrusade" };
-	AtlasLoot_TableNames["TKBotSplinter2"] = { BabbleBoss["Warp Splinter"].." ("..AL["Heroic"]..")", "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["TKBotSplinterHeroic"] = { BabbleBoss["Warp Splinter"].." ("..AL["Heroic"]..")", "AtlasLootBurningCrusade" };
   -- TK: The Eye
 	AtlasLoot_TableNames["TKEyeAlar"] = { BabbleBoss["Al'ar"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["TKEyeVoidReaver"] = { BabbleBoss["Void Reaver"], "AtlasLootBurningCrusade" };
@@ -574,7 +569,7 @@ end
 	AtlasLoot_TableNames["TKMechCapacitus"] = { BabbleBoss["Mechano-Lord Capacitus"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["TKMechSepethrea"] = { BabbleBoss["Nethermancer Sepethrea"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["TKMechCalc"] = { BabbleBoss["Pathaleon the Calculator"], "AtlasLootBurningCrusade" };
-	AtlasLoot_TableNames["TKMechCalc2"] = { BabbleBoss["Pathaleon the Calculator"].." ("..AL["Heroic"]..")", "AtlasLootBurningCrusade" };
+	AtlasLoot_TableNames["TKMechCalcHeroic"] = { BabbleBoss["Pathaleon the Calculator"].." ("..AL["Heroic"]..")", "AtlasLootBurningCrusade" };
   -- Zul'Aman
 	AtlasLoot_TableNames["ZANalorakk"] = { BabbleBoss["Nalorakk"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["ZAAkilZon"] = { BabbleBoss["Akil'zon"], "AtlasLootBurningCrusade" };
@@ -584,7 +579,6 @@ end
 	AtlasLoot_TableNames["ZAZuljin"] = { BabbleBoss["Zul'jin"], "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["ZATimedChest"] = { "Timed Reward Chest", "AtlasLootBurningCrusade" };
 	AtlasLoot_TableNames["ZATrash"] = { AL["Trash Mobs"].." ("..BabbleZone["Zul'Aman"]..")", "AtlasLootBurningCrusade" };
-
 
 -------------------------
 --- Classic Instances ---
@@ -1898,29 +1892,29 @@ end
 	AtlasLoot_TableNames["JewelcraftingDaily6"] = { AL["Jewelcrafting Daily"], "AtlasLootCrafting" };
 	
 	AtlasLoot_TableNames["AlchemyHighRisk"] = { ALCHEMY, "AtlasLootCrafting" };
-	AtlasLoot_TableNames["AlchemyHighRisk25Man"] = { ALCHEMY, "AtlasLootCrafting" };
-	AtlasLoot_TableNames["AlchemyHighRisk25ManHEROIC"] = { ALCHEMY, "AtlasLootCrafting" };
+	AtlasLoot_TableNames["AlchemyHighRiskRare"] = { ALCHEMY, "AtlasLootCrafting" };
+	AtlasLoot_TableNames["AlchemyHighRiskEpic"] = { ALCHEMY, "AtlasLootCrafting" };
 	AtlasLoot_TableNames["SmithingHighRisk"] = { BLACKSMITHING, "AtlasLootCrafting" };
-	AtlasLoot_TableNames["SmithingHighRisk25Man"] = { BLACKSMITHING, "AtlasLootCrafting" };
-	AtlasLoot_TableNames["SmithingHighRisk25ManHEROIC"] = { BLACKSMITHING, "AtlasLootCrafting" };
+	AtlasLoot_TableNames["SmithingHighRiskRare"] = { BLACKSMITHING, "AtlasLootCrafting" };
+	AtlasLoot_TableNames["SmithingHighRiskEpic"] = { BLACKSMITHING, "AtlasLootCrafting" };
 	AtlasLoot_TableNames["EnchantingHighRisk"] = { ENCHANTING, "AtlasLootCrafting" };
-	AtlasLoot_TableNames["EnchantingHighRisk25Man"] = { ENCHANTING, "AtlasLootCrafting" };
-	AtlasLoot_TableNames["EnchantingHighRisk25ManHEROIC"] = { ENCHANTING, "AtlasLootCrafting" };
+	AtlasLoot_TableNames["EnchantingHighRiskRare"] = { ENCHANTING, "AtlasLootCrafting" };
+	AtlasLoot_TableNames["EnchantingHighRiskEpic"] = { ENCHANTING, "AtlasLootCrafting" };
 	AtlasLoot_TableNames["EngineerHighRisk"] = { ENGINEERING, "AtlasLootCrafting" };
-	AtlasLoot_TableNames["EngineerHighRisk25Man"] = { ENGINEERING, "AtlasLootCrafting" };
-	AtlasLoot_TableNames["EngineerHighRisk25ManHEROIC"] = { ENGINEERING, "AtlasLootCrafting" };
+	AtlasLoot_TableNames["EngineerHighRiskRare"] = { ENGINEERING, "AtlasLootCrafting" };
+	AtlasLoot_TableNames["EngineerHighRiskEpic"] = { ENGINEERING, "AtlasLootCrafting" };
 	AtlasLoot_TableNames["LeatherHighRisk"] = { LEATHERWORKING, "AtlasLootCrafting" };
-	AtlasLoot_TableNames["LeatherHighRisk25Man"] = { LEATHERWORKING, "AtlasLootCrafting" };
-	AtlasLoot_TableNames["LeatherHighRisk25ManHEROIC"] = { LEATHERWORKING, "AtlasLootCrafting" };
+	AtlasLoot_TableNames["LeatherHighRiskRare"] = { LEATHERWORKING, "AtlasLootCrafting" };
+	AtlasLoot_TableNames["LeatherHighRiskEpic"] = { LEATHERWORKING, "AtlasLootCrafting" };
 	AtlasLoot_TableNames["TailorHighRisk"] = { TAILORING, "AtlasLootCrafting" };
-	AtlasLoot_TableNames["TailorHighRisk25Man"] = { TAILORING, "AtlasLootCrafting" };
-	AtlasLoot_TableNames["TailorHighRisk25ManHEROIC"] = { TAILORING, "AtlasLootCrafting" };
+	AtlasLoot_TableNames["TailorHighRiskRare"] = { TAILORING, "AtlasLootCrafting" };
+	AtlasLoot_TableNames["TailorHighRiskEpic"] = { TAILORING, "AtlasLootCrafting" };
 	AtlasLoot_TableNames["CookingHighRisk"] = { COOKING, "AtlasLootCrafting" };
 	AtlasLoot_TableNames["CookingHighRiskTwo"] = { COOKING, "AtlasLootCrafting" };
-	AtlasLoot_TableNames["CookingHighRisk25Man"] = { COOKING, "AtlasLootCrafting" };
-	AtlasLoot_TableNames["CookingHighRiskTwo25Man"] = { COOKING, "AtlasLootCrafting" };
-	AtlasLoot_TableNames["CookingHighRisk25ManHEROIC"] = { COOKING, "AtlasLootCrafting" };
-	AtlasLoot_TableNames["CookingHighRiskTwo25ManHEROIC"] = { COOKING, "AtlasLootCrafting" };
+	AtlasLoot_TableNames["CookingHighRiskRare"] = { COOKING, "AtlasLootCrafting" };
+	AtlasLoot_TableNames["CookingHighRiskTwoRare"] = { COOKING, "AtlasLootCrafting" };
+	AtlasLoot_TableNames["CookingHighRiskEpic"] = { COOKING, "AtlasLootCrafting" };
+	AtlasLoot_TableNames["CookingHighRiskTwoEpic"] = { COOKING, "AtlasLootCrafting" };
 
 -----------
 --- PvP ---
@@ -2073,5 +2067,30 @@ end
 	AtlasLoot_TableNames["EmptyTable"] = { AL["Select a Loot Table..."], "Menu" };
 	AtlasLoot_TableNames["EmptyInstance"] = { "AtlasLoot", "AtlasLootFallback" };
 	AtlasLoot_TableNames["AtlasLootFallback"] = { "AtlasLoot", "AtlasLootFallback" };
+	AtlasLoot_TableNames["NormalFLEX"] = { AL["Normal Flex"], "Menu" };
+	AtlasLoot_TableNames["HeroicFLEX"] = { AL["Heroic Flex"], "Menu" };
+	AtlasLoot_TableNames["Ascended"] = { AL["Ascended"], "Menu" };
+	AtlasLoot_TableNames["Normal"] = { AL["Normal"], "Menu" };
+	AtlasLoot_TableNames["Heroic"] = { AL["Heroic"], "Menu" };
+	AtlasLoot_TableNames["Mythic"] = { AL["Mythic"], "Menu" };
+	AtlasLoot_TableNames["NormalHEROIC"] = { AL["Normal/Heroic"], "Menu" };
+	AtlasLoot_TableNames["Bloodforged"] = { AL["Bloodforged"], "Menu" };
+	AtlasLoot_TableNames["Mythic1"] = { AL["Mythic Tier 1"], "Menu" };
+	AtlasLoot_TableNames["Mythic2"] = { AL["Mythic Tier 2"], "Menu" };
+	AtlasLoot_TableNames["Mythic3"] = { AL["Mythic Tier 3"], "Menu" };
+	AtlasLoot_TableNames["Mythic4"] = { AL["Mythic Tier 4"], "Menu" };
+	AtlasLoot_TableNames["Mythic5"] = { AL["Mythic Tier 5"], "Menu" };
+	AtlasLoot_TableNames["Mythic6"] = { AL["Mythic Tier 6"], "Menu" };
+	AtlasLoot_TableNames["Mythic7"] = { AL["Mythic Tier 7"], "Menu" };
+	AtlasLoot_TableNames["Mythic8"] = { AL["Mythic Tier 8"], "Menu" };
+	AtlasLoot_TableNames["Mythic9"] = { AL["Mythic Tier 9"], "Menu" };
+	AtlasLoot_TableNames["Mythic10"] = { AL["Mythic Tier 10"], "Menu" };
+	AtlasLoot_TableNames["CraftingPatterns"] = { AL["Crafting Patterns"], "Menu" };
+	AtlasLoot_TableNames["CraftingPatternUncommon"] = { AL["Crafting Patterns Uncommon"], "Menu" };
+	AtlasLoot_TableNames["CraftingPatternsRare"] = { AL["Crafting Patterns Rare"], "Menu" };
+	AtlasLoot_TableNames["CraftingPatternsEpic"] = { AL["Crafting Patterns Epic"], "Menu" };
+	AtlasLoot_TableNames["ItemUncommon"] = { AL["Item Uncommon"], "Menu" };
+	AtlasLoot_TableNames["ItemRare"] = { AL["Item Rare"], "Menu" };
+	AtlasLoot_TableNames["ItemEpic"] = { AL["Item Epic"], "Menu" };
 	
 	

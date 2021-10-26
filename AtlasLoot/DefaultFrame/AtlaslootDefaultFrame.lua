@@ -1,10 +1,12 @@
 --[[
 Functions:
-AtlasLoot_DewDropClick(tablename, text, tabletype)
+AtlasLoot_DewDropClick(tablename, text, tabletype, tabletype2)
 AtlasLoot_DewDropSubMenuClick(tablename, text)
+AtlasLoot_DewDropSubMenu2Click(tablename, text)
 AtlasLoot_DefaultFrame_OnShow()
 AtlasLootDefaultFrame_OnHide()
 AtlasLoot_DewdropSubMenuRegister(loottable)
+AtlasLoot_DewdropSubMenu2Register(loottable)
 AtlasLoot_DewdropRegister()
 AtlasLoot_SetNewStyle(style)
 ]]
@@ -18,50 +20,52 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 --Load the 2 dewdrop menus
 AtlasLoot_Dewdrop = AceLibrary("Dewdrop-2.0");
 AtlasLoot_DewdropSubMenu = AceLibrary("Dewdrop-2.0");
+AtlasLoot_DewdropSubMenu2 = AceLibrary("Dewdrop-2.0");
+indexID = 2
+ItemindexID = ""
 
 AtlasLoot_Data["AtlasLootFallback"] = {
     EmptyInstance = {};
 };
 
 --[[
-AtlasLoot_DewDropClick(tablename, text, tabletype):
+AtlasLoot_DewDropClick(tablename, text, tabletype, tabletype2):
 tablename - Name of the loot table in the database
 text - Heading for the loot table
 tabletype - Whether the tablename indexes an actual table or needs to generate a submenu
+tabletype2 - Whether the tablename indexes an actual second submenu
 Called when a button in AtlasLoot_Dewdrop is clicked
 ]]
 function AtlasLoot_DewDropClick(tablename, text, tabletype)
     --Definition of where I want the loot table to be shown
     pFrame = { "TOPLEFT", "AtlasLootDefaultFrame_LootBackground", "TOPLEFT", "2", "-2" };
-    
     --If the button clicked was linked to a loot table
-    if tabletype == "Table" then
-        --Show the loot table
+	if tabletype == "Table" then
+		--Show the loot table
         AtlasLoot_ShowItemsFrame(tablename, "", text, pFrame);
-        --Save needed info for fuure re-display of the table
+		--Save needed info for fuure re-display of the table
         AtlasLoot.db.profile.LastBoss = tablename;
         --Purge the text label for the submenu and disable the submenu
         AtlasLootDefaultFrame_SubMenu:Disable();
         AtlasLootDefaultFrame_SelectedTable:SetText("");
         AtlasLootDefaultFrame_SelectedTable:Show();
-    --If the button links to a sub menu definition
-    else
-        --Enable the submenu button
+    else   
+		--Enable the submenu button
         AtlasLootDefaultFrame_SubMenu:Enable();
         --Show the first loot table associated with the submenu
         AtlasLoot_ShowBossLoot(AtlasLoot_DewDropDown_SubTables[tablename][1][2], AtlasLoot_DewDropDown_SubTables[tablename][1][1], pFrame);
-        --Save needed info for fuure re-display of the table
-        AtlasLoot.db.profile.LastBoss = AtlasLoot_DewDropDown_SubTables[tablename][1][2];
+		--Save needed info for fuure re-display of the table
+		AtlasLoot.db.profile.LastBoss = AtlasLoot_DewDropDown_SubTables[tablename][1][2];
         --Load the correct submenu and associated with the button
-        AtlasLoot_DewdropSubMenu:Unregister(AtlasLootDefaultFrame_SubMenu);
+		AtlasLoot_DewdropSubMenu:Unregister(AtlasLootDefaultFrame_SubMenu);
         AtlasLoot_DewdropSubMenuRegister(AtlasLoot_DewDropDown_SubTables[tablename]);
-        --Show a text label of what has been selected
+		--Show a text label of what has been selected
         if AtlasLoot_DewDropDown_SubTables[tablename][1][1] ~= "" then
             AtlasLootDefaultFrame_SelectedTable:SetText(AtlasLoot_DewDropDown_SubTables[tablename][1][1]);
         else
             AtlasLootDefaultFrame_SelectedTable:SetText(AtlasLoot_TableNames[AtlasLoot_DewDropDown_SubTables[tablename][1][2]][1]);
         end
-        AtlasLootDefaultFrame_SelectedTable:Show();
+		AtlasLootDefaultFrame_SelectedTable:Show();	
     end
     --Show the category that has been selected
     AtlasLootDefaultFrame_SelectedCategory:SetText(text);
@@ -129,27 +133,121 @@ function AtlasLootDefaultFrame_OnHide()
     AtlasLoot_DewdropSubMenu:Close(1);
 end   
 
---[[
-AtlasLoot_DewdropSubMenuRegister(loottable):
-loottable - Table defining the sub menu
-Generates the sub menu needed by passing a table of loot tables and titles
-]]
-function AtlasLoot_DewdropSubMenuRegister(loottable)
-    AtlasLoot_DewdropSubMenu:Register(AtlasLootDefaultFrame_SubMenu,
+function AtlasLoot_DewDropSubMenu2Click(raidtablename, itemID)
+	if ATLASLOOT_FILTER_ENABLE == true then
+    AtlasLoot_FilterEnableButton()
+    ReEnableFilter = true
+    end
+    -- gets itemID reference
+    AtlasLootDefaultFrame_GetRaidDifficulty(raidtablename, itemID)
+	--Show the select loot table
+	AtlasLoot_ShowItemsFrame(AtlasLootItemsFrame.refreshOri[1], AtlasLootItemsFrame.refreshOri[2], AtlasLootItemsFrame.refreshOri[3], AtlasLootItemsFrame.refreshOri[4]);
+    --Set text for difficulty
+	AtlasLootDefaultFrame_SelectedTable2:SetText(DropTablename);
+	AtlasLootDefaultFrame_SelectedTable2:Show();
+	AtlasLoot_DewdropSubMenu2:Close(1);
+    if ReEnableFilter then
+        AtlasLoot_FilterEnableButton()
+    end
+end
+
+function AtlasLoot_DifficultyDisable()
+    isTablereference = false
+		notPattern = false
+		AtlasLoot_DewdropSubMenu2:Unregister(AtlasLootDefaultFrame_SubMenu2);
+		AtlasLootDefaultFrame_SubMenu2:Disable();
+		AtlasLootDefaultFrame_SelectedTable2:SetText("");
+		AtlasLootDefaultFrame_SelectedTable2:Hide();
+		DewDrop2Enable = false
+		SelectedTable2TextSet = false
+end
+
+function AtlasLoot_DifficultyEnable(dataID, dataSource)
+    AtlasLootDefaultFrame_SubMenu2:Enable();
+		AtlasLoot_DewdropSubMenu2:Unregister(AtlasLootDefaultFrame_SubMenu2);
+		AtlasLoot_DewdropSubMenu2Register(AtlasLoot_Difficulty[dataSource[dataID].Type]);
+		if SelectedTable2TextSet == false then 
+			AtlasLootDefaultFrame_SelectedTable2:SetText(AtlasLoot_Difficulty[dataSource[dataID].Type][1][1])
+		end
+		AtlasLootDefaultFrame_SelectedTable2:Show();
+		SelectedTable2TextSet = true
+end
+
+function AtlasLootDefaultFrame_GetRaidDifficulty(raidtablename, itemID)
+            if tonumber(itemID) then --used in itemID search feature for itemID database
+				ItemindexID = itemID;
+				isTablereference = false;
+				notPattern = false;
+			elseif itemID:match("=s=") then -- =s= infront of a table reference will make it show a normal crafting item instead of a crafting pattern
+				newID = gsub(itemID, "=s=",""); -- removes =s= before passing the extra table addition
+				newID = gsub(newID, "Normal","");
+				tableReference = newID;
+				isTablereference = true;
+				notPattern = true;
+				ItemindexID = "";
+			else
+				newID = gsub(itemID, "=s=","");
+				newID = gsub(newID, "Normal","");
+				tableReference = newID;
+				isTablereference = true;
+				notPattern = false;
+				ItemindexID = "";
+			end
+            DropTablename = raidtablename;
+end
+
+function AtlasLoot_DewdropSubMenu2Register(loottable)
+    AtlasLoot_DewdropSubMenu2:Register(AtlasLootDefaultFrame_SubMenu2,
         'point', function(parent)
             return "TOP", "BOTTOM"
         end,
         'children', function(level, value)
             if level == 1 then
                 for k,v in pairs(loottable) do
-                    if v[1] == "" then
-                        AtlasLoot_DewdropSubMenu:AddLine(
+						AtlasLoot_DewdropSubMenu2:AddLine(
+                            'text', v[1],
+                            'func', AtlasLoot_DewDropSubMenu2Click,
+                            'arg1', v[1],
+                            'arg2', v[2],
+                            'notCheckable', true
+                        )
+                end
+                AtlasLoot_DewdropSubMenu2:AddLine(
+					'text', AL["Close Menu"],
+                    'textR', 0,
+                    'textG', 1,
+                    'textB', 1,
+					'func', function() AtlasLoot_DewdropSubMenu2:Close() end,
+					'notCheckable', true
+				)
+            end
+		end,
+		'dontHook', true
+	)
+end
+
+--[[
+AtlasLoot_DewdropSubMenuRegister(loottable):
+loottable - Table defining the sub menu
+Generates the sub menu needed by passing a table of loot tables and titles
+]]
+function AtlasLoot_DewdropSubMenuRegister(loottable)
+	AtlasLoot_DewdropSubMenu:Register(AtlasLootDefaultFrame_SubMenu,
+        'point', function(parent)
+            return "TOP", "BOTTOM"
+        end,
+        'children', function(level, value)
+            if level == 1 then
+                for k,v in pairs(loottable) do
+					if v[1] == "" then
+						AtlasLoot_DewdropSubMenu:AddLine(
                             'text', AtlasLoot_TableNames[v[2]][1],
                             'func', AtlasLoot_DewDropSubMenuClick,
                             'arg1', v[2],
                             'arg2', v[1],
                             'notCheckable', true
                         )
+						
                     else
                         AtlasLoot_DewdropSubMenu:AddLine(
                             'text', v[1],
@@ -200,6 +298,7 @@ function AtlasLoot_DewdropRegister()
                                     'arg1', v[1][2],
                                     'arg2', v[1][1],
                                     'arg3', v[1][3],
+                                    'arg4', v[1][4],
                                     'notCheckable', true
                                 )
                             elseif v[1][3] == "Table" and v[1][1] ~= "" then
@@ -212,6 +311,7 @@ function AtlasLoot_DewdropRegister()
                                     'arg1', v[1][2],
                                     'arg2', v[1][1],
                                     'arg3', v[1][3],
+                                    'arg4', v[1][4],
                                     'notCheckable', true
                                 )
                             end
@@ -261,6 +361,7 @@ function AtlasLoot_DewdropRegister()
                                         'arg1', v[1][2],
                                         'arg2', v[1][1],
                                         'arg3', v[1][3],
+										'arg4', v[1][4],
                                         'notCheckable', true
                                     )
                                 elseif v[1][3] == "Submenu" then
@@ -273,6 +374,7 @@ function AtlasLoot_DewdropRegister()
                                     'arg1', v[1][2],
                                     'arg2', v[1][1],
                                     'arg3', v[1][3],
+									'arg4', v[1][4],
                                     'notCheckable', true
                                 )
                                 --An entry to show a specific loot page
@@ -286,6 +388,7 @@ function AtlasLoot_DewdropRegister()
                                         'arg1', v[1][2],
                                         'arg2', v[1][1],
                                         'arg3', v[1][3],
+										'arg4', v[1][4],
                                         'notCheckable', true
                                     )
                                 else
@@ -298,6 +401,7 @@ function AtlasLoot_DewdropRegister()
                                         'arg1', v[1][2],
                                         'arg2', v[1][1],
                                         'arg3', v[1][3],
+										'arg4', v[1][4],
                                         'notCheckable', true
                                     )
                                 end
@@ -346,6 +450,7 @@ function AtlasLoot_DewdropRegister()
                                     'arg1', v[2],
                                     'arg2', v[1],
                                     'arg3', v[3],
+									'arg4', v[4],
                                     'notCheckable', true
                                 )
                             elseif v[3] == "Table" and v[1] == "" then
@@ -358,6 +463,7 @@ function AtlasLoot_DewdropRegister()
                                     'arg1', v[2],
                                     'arg2', v[1],
                                     'arg3', v[3],
+									'arg4', v[4],
                                     'notCheckable', true
                                 )
                             else
@@ -370,6 +476,7 @@ function AtlasLoot_DewdropRegister()
                                     'arg1', v[2],
                                     'arg2', v[1],
                                     'arg3', v[3],
+									'arg4', v[4],
                                     'notCheckable', true
                                 )
                             end
@@ -413,6 +520,7 @@ function AtlasLoot_SetNewStyle(style)
 		"AtlasLootDefaultFrame_LoadModules",
 		"AtlasLootDefaultFrame_Menu",
 		"AtlasLootDefaultFrame_SubMenu",
+		"AtlasLootDefaultFrame_SubMenu2",
 		"AtlasLootDefaultFrame_Preset1",
 		"AtlasLootDefaultFrame_Preset2",
 		"AtlasLootDefaultFrame_Preset3",

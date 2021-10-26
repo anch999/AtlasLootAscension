@@ -19,25 +19,25 @@ AtlasLoot_DewDropDown = {
 				{ "Raids:", "OldKeys", "Table", "Header" },		
 			},			
 			[2] = {			
-				{ BabbleZone["Molten Core"], "MoltenCore", "Submenu" },		
+				{ BabbleZone["Molten Core"], "MoltenCore",  "Submenu" },		
 			},			
 			[3] = {			
-				{ BabbleZone["Zul'Gurub"], "ZulGurub", "Submenu" },		
+				{ BabbleZone["Zul'Gurub"], "ZulGurub",  "Submenu" },		
 			},			
 			[4] = {			
-				{ BabbleZone["Onyxia's Lair"], "Onyxia60", "Table" },		
+				{ BabbleZone["Onyxia's Lair"], "Onyxia60", "Table" },	
 			},			
 			[5] = {			
-				{ BabbleZone["Blackwing Lair"], "BlackwingLair", "Submenu" },	
+				{ BabbleZone["Blackwing Lair"], "BlackwingLair",  "Submenu" },	
 			},			
 			[6] = {			
-				{ BabbleZone["Ruins of Ahn'Qiraj"], "RuinsofAQ", "Submenu" },		
+				{ BabbleZone["Ruins of Ahn'Qiraj"], "RuinsofAQ",  "Submenu" },		
 			},			
 			[7] = {			
-				{ BabbleZone["Temple of Ahn'Qiraj"], "TempleofAQ", "Submenu" },		
+				{ BabbleZone["Temple of Ahn'Qiraj"], "TempleofAQ",  "Submenu" },		
 			},			
 			[8] = {			
-				{ BabbleZone["Naxxramas"], "Naxxramas60", "Submenu" },	
+				{ BabbleZone["Naxxramas"], "Naxxramas60",  "Submenu" },	
 			},			
 			[9] = {			
 				{ "Dungeons:", "OldKeys", "Table", "Header" },		
@@ -46,7 +46,7 @@ AtlasLoot_DewDropDown = {
 				{ BabbleZone["Blackfathom Deeps"], "BlackfathomDeeps1", "Table" },		
 			},			
 			[11] = {			
-				{ BabbleZone["Blackrock Depths"], "BlackrockDepths", "Submenu" },		
+				{ BabbleZone["Blackrock Depths"], "BlackrockDepths",  "Submenu" },		
 			},			
 			[12] = {			
 				{ BabbleZone["Lower Blackrock Spire"], "LowerBlackrock", "Submenu" },		
@@ -59,52 +59,52 @@ AtlasLoot_DewDropDown = {
 			},			
 			[15] = {			
 				[BabbleZone["Dire Maul"]] = {		
-					{ BabbleZone["Dire Maul (East)"], "DireMaulEast", "Submenu" },	
-					{ BabbleZone["Dire Maul (West)"], "DireMaulWest", "Submenu" },	
-					{ BabbleZone["Dire Maul (North)"], "DireMaulNorth", "Submenu" },	
+					{ BabbleZone["Dire Maul (East)"], "DireMaulEast",  "Submenu" },
+					{ BabbleZone["Dire Maul (West)"], "DireMaulWest",  "Submenu" },
+					{ BabbleZone["Dire Maul (North)"], "DireMaulNorth",  "Submenu" },
 				},		
 			},			
 			[16] = {			
-				{ BabbleZone["Gnomeregan"], "Gnomeregan1", "Table" },		
+				{ BabbleZone["Gnomeregan"], "Gnomeregan1", "Table" },
 			},			
 			[17] = {			
-				{ BabbleZone["Maraudon"], "Maraudon1", "Table" },		
+				{ BabbleZone["Maraudon"], "Maraudon1", "Table" },
 			},			
 			[18] = {			
-				{ BabbleZone["Ragefire Chasm"], "RagefireChasm", "Table" },		
+				{ BabbleZone["Ragefire Chasm"], "RagefireChasm", "Table" },
 			},			
 			[19] = {			
-				{ BabbleZone["Razorfen Downs"], "RazorfenDowns1", "Table" },		
+				{ BabbleZone["Razorfen Downs"], "RazorfenDowns1", "Table" },
 			},			
 			[20] = {			
-				{ BabbleZone["Razorfen Kraul"], "RazorfenKraul1", "Table" },		
+				{ BabbleZone["Razorfen Kraul"], "RazorfenKraul1", "Table" },
 			},			
 			[21] = {			
-				{ BabbleZone["Scarlet Monastery"], "Scarlet Monastery", "Submenu" },		
+				{ BabbleZone["Scarlet Monastery"], "Scarlet Monastery",  "Submenu" },
 			},			
 			[22] = {			
-				{ BabbleZone["Scholomance"], "Scholomance", "Submenu" },		
+				{ BabbleZone["Scholomance"], "Scholomance",  "Submenu" },
 			},			
 			[23] = {			
-				{ BabbleZone["Shadowfang Keep"], "ShadowfangKeep1", "Table" },		
+				{ BabbleZone["Shadowfang Keep"], "ShadowfangKeep1", "Table" },
 			},			
 			[24] = {			
-				{ BabbleZone["The Stockade"], "TheStockade", "Table" },		
+				{ BabbleZone["The Stockade"], "TheStockade", "Table" },
 			},			
 			[25] = {			
-				{ BabbleZone["Stratholme"], "Stratholme", "Submenu" },		
+				{ BabbleZone["Stratholme"], "Stratholme",  "Submenu" },
 			},			
 			[26] = {			
-				{ BabbleZone["The Temple of Atal'Hakkar"], "SunkenTemple", "Submenu" },		
+				{ BabbleZone["The Temple of Atal'Hakkar"], "SunkenTemple",  "Submenu" },
 			},			
 			[27] = {			
-				{ BabbleZone["Uldaman"], "Uldaman", "Submenu" },		
+				{ BabbleZone["Uldaman"], "Uldaman",  "Submenu" },
 			},			
 			[28] = {			
-				{ BabbleZone["Wailing Caverns"], "WailingCaverns1", "Table" },		
+				{ BabbleZone["Wailing Caverns"], "WailingCaverns1", "Table" },
 			},			
 			[29] = {			
-				{ BabbleZone["Zul'Farrak"], "ZulFarrak", "Submenu" },		
+				{ BabbleZone["Zul'Farrak"], "ZulFarrak",  "Submenu" },
 			},
 		},
 	},			
@@ -115,31 +115,31 @@ AtlasLoot_DewDropDown = {
 				{ "Raids:", "BCKeys", "Table", "Header" },
 			},
 			[2] = {
-				{ BabbleZone["Karazhan"], "Karazhan", "Submenu" },
+				{ BabbleZone["Karazhan"], "Karazhan",  "Submenu" },
 			},
 			[3] = {
-				{ BabbleZone["Gruul's Lair"], "Gruul", "Submenu" },
+				{ BabbleZone["Gruul's Lair"], "Gruul",  "Submenu" },
 			},
 			[4] = {
 				{ BabbleZone["Magtheridon's Lair"], "HCMagtheridon", "Table" },
 			},
 			[5] = {
-				{ BabbleZone["Zul'Aman"], "ZulAman", "Submenu" },
+				{ BabbleZone["Zul'Aman"], "ZulAman",  "Submenu" },
 			},
 			[6] = {
-				{ BabbleZone["Serpentshrine Cavern"], "CFRSerpentshrine", "Submenu" },
+				{ BabbleZone["Serpentshrine Cavern"], "CFRSerpentshrine",  "Submenu" },
 			},
 			[7] = {
-				{ BabbleZone["The Eye"], "TKEye", "Submenu" },
+				{ BabbleZone["The Eye"], "TKEye",  "Submenu" },
 			},
 			[8] = {
-				{ BabbleZone["Hyjal Summit"], "CoTHyjal", "Submenu" },
+				{ BabbleZone["Hyjal Summit"], "CoTHyjal",  "Submenu" },
 			},
 			[9] = {
-				{ BabbleZone["Black Temple"], "BlackTemple", "Submenu" },
+				{ BabbleZone["Black Temple"], "BlackTemple",  "Submenu" },
 			},
 			[10] = {
-				{ BabbleZone["Sunwell Plateau"], "SunwellPlateau", "Submenu" },
+				{ BabbleZone["Sunwell Plateau"], "SunwellPlateau",  "Submenu" },
 			},
 
 ---- Dungeons -----
@@ -250,63 +250,61 @@ AtlasLoot_DewDropDown = {
 				{ BabbleZone["The Forge of Souls"], "ForgeofSouls", "Submenu" },		
 			},			
 			[17] = {			
-				{ BabbleZone["Gundrak"], "Gundrak", "Submenu" },		
+				{ BabbleZone["Gundrak"], "Gundrak",  "Submenu" },		
 			},			
 			[18] = {			
-				{ BabbleZone["Halls of Lightning"], "HallsofLightning", "Submenu" },		
+				{ BabbleZone["Halls of Lightning"], "HallsofLightning",  "Submenu" },		
 			},			
 			[19] = {			
-				{ BabbleZone["Halls of Reflection"], "HallsofReflection", "Submenu" },		
+				{ BabbleZone["Halls of Reflection"], "HallsofReflection",  "Submenu" },		
 			},			
 			[20] = {			
-				{ BabbleZone["Halls of Stone"], "HallsofStone", "Submenu" },		
+				{ BabbleZone["Halls of Stone"], "HallsofStone",  "Submenu" },		
 			},			
 			[21] = {			
-				{ BabbleZone["The Nexus"], "TheNexus", "Submenu" },		
+				{ BabbleZone["The Nexus"], "TheNexus",  "Submenu" },		
 			},			
 			[22] = {			
-				{ BabbleZone["The Oculus"], "TheOculus", "Submenu" },		
+				{ BabbleZone["The Oculus"], "TheOculus",  "Submenu" },		
 			},			
 			[23] = {			
-				{ BabbleZone["Pit of Saron"], "PitofSaron", "Submenu" },		
+				{ BabbleZone["Pit of Saron"], "PitofSaron",  "Submenu" },		
 			},			
 			[24] = {			
-				{ BabbleZone["Trial of the Champion"], "TrialoftheChampion", "Submenu" },		
+				{ BabbleZone["Trial of the Champion"], "TrialoftheChampion",  "Submenu" },		
 			},			
 			[25] = {			
-				{ BabbleZone["Utgarde Keep"], "UtgardeKeep", "Submenu" },		
+				{ BabbleZone["Utgarde Keep"], "UtgardeKeep",  "Submenu" },		
 			},			
 			[26] = {			
-				{ BabbleZone["Utgarde Pinnacle"], "UtgardePinnacle", "Submenu" },		
+				{ BabbleZone["Utgarde Pinnacle"], "UtgardePinnacle",  "Submenu" },		
 			},			
 			[27] = {			
-				{ BabbleZone["The Violet Hold"], "TheVioletHold", "Submenu" },		
+				{ BabbleZone["The Violet Hold"], "TheVioletHold",  "Submenu" },		
 			},			
 		},				
 	},					
 
 	[4] = {
-		{ AL["Crafting"], "CRAFTINGMENU", "Table" },
+		{ AL["Crafting"], "CRAFTINGMENU", "Table", "Submenu2Table" },
 	},
 	[5] = {
-		{ AL["Sets/Collections"], "SETMENU", "Table" },
+		{ AL["Sets/Collections"], "SETMENU", "Table", "Submenu2Table" },
 	},
 	[6] = {
-		{ AL["PvP Rewards"], "PVPMENU", "Table" },
+		{ AL["PvP Rewards"], "PVPMENU", "Table", "Submenu2Table" },
 	},
 	[7] = {
-		{ AL["World Bosses"], "WorldBosses", "Submenu" },
+		{ AL["World Bosses"], "WorldBosses", "Submenu", "Submenu2Table" },
 	},
 	[8] = {
-		{ AL["Reputation Factions"], "REPMENU", "Table" },
+		{ AL["Reputation Factions"], "REPMENU", "Table", "Submenu2Table" },
 	},
 	[9] = {
-		{ AL["World Events"], "WORLDEVENTMENU", "Table" },
+		{ AL["World Events"], "WORLDEVENTMENU", "Table", "Submenu2Table" },
 	},
 };
-
---This table defines all the subtables needed for the full menu
---Each sub table entry contains the text entry and the loot table that goes wih it
+ 
 AtlasLoot_DewDropDown_SubTables = {
 	["BlackrockDepths"] = {
 		{ "", "BRDPyron" },
@@ -538,6 +536,7 @@ AtlasLoot_DewDropDown_SubTables = {
 		{ "", "CoTHillsbradDrake" },
 		{ "", "CoTHillsbradSkarloc" },
 		{ "", "CoTHillsbradHunter" },
+		{ "", "CoTHillsbradHunterHeroic" },
 		{ AL["Trash Mobs"], "CoTTrash" },
 	},
 	["CoTBlackMorass"] = {
@@ -633,7 +632,8 @@ AtlasLoot_DewDropDown_SubTables = {
 		{ "", "AuchManaPandemonius" },
 		{ "", "AuchManaTavarok" },
 		{ "", "AuchManaNexusPrince" },
-		{ "", "AuchManaYor" },
+		{ "", "AuchManaNexusPrinceHeroic" },
+		{ "", "AuchManaYorHeroic" },
 		{ AL["Trash Mobs"], "AuchTrash" },
 	},
 	["AuchCrypts"] = {
@@ -679,6 +679,7 @@ AtlasLoot_DewDropDown_SubTables = {
 		{ "", "CFRUnderGhazan" },
 		{ "", "CFRUnderSwamplord" },
 		{ "", "CFRUnderStalker" },
+		{ "", "CFRUnderStalkerHeroic" },
 	},
 	["CFRSteamvault"] = {
 		{ "", "CFRSteamThespia" },
@@ -703,6 +704,7 @@ AtlasLoot_DewDropDown_SubTables = {
 		{ "", "HCRampWatchkeeper" },
 		{ "", "HCRampOmor" },
 		{ "", "HCRampVazruden" },
+		{ "", "HCRampVazrudenHeroic" },
 	},
 	["HCFurnace"] = {
 		{ "", "HCFurnaceMaker" },
@@ -721,6 +723,7 @@ AtlasLoot_DewDropDown_SubTables = {
 		{ "", "TKMechCapacitus" },
 		{ "", "TKMechSepethrea" },
 		{ "", "TKMechCalc" },
+		{ "", "TKMechCalcHeroic" },
 		{ AL["Trash Mobs"], "TKTrash" },
 	},
 	["TKBot"] = {
@@ -729,6 +732,7 @@ AtlasLoot_DewDropDown_SubTables = {
 		{ "", "TKBotThorngrin" },
 		{ "", "TKBotLaj" },
 		{ "", "TKBotSplinter" },
+		{ "", "TKBotSplinterHeroic" },
 		{ AL["Trash Mobs"], "TKTrash" },
 	},
 	["TKArc"] = {

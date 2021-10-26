@@ -23,6 +23,7 @@ if AL then
 	AL["AtlasLoot"] = true;
 	AL["Select Loot Table"] = true;
 	AL["Select Sub-Table"] = true;
+	AL["Select Difficulty"] = true;
 	AL["Drop Rate: "] = true;
 	AL["DKP"] = true;
 	AL["Priority:"] = true;
@@ -40,6 +41,7 @@ if AL then
 	AL["Rewards"] = true;
 	AL["Show Normal Loot"] = true;
 	AL["Show Heroic/Ascended Loot"] = true;
+	AL["Bloodforged"] = true;
 	AL["Factions - Original WoW"] = true;
 	AL["Factions - Burning Crusade"] = true;
 	AL["Factions - Wrath of the Lich King"] = true;
@@ -64,7 +66,14 @@ if AL then
 	AL["Hide Text"] = true;
 	AL["Hide Icon"] = true;
 	AL["Minimap Button Options"] = true;
-
+	AL["Normal"] = true;
+	AL["Heroic"] = true;
+	AL["Mythic"] = true;
+	AL["Normal Flex"] = true;
+	AL["Heroic Flex"] = true;
+	AL["Ascended"] = true;
+	AL["Normal/Heroic"] = true;
+	AL["Crafting Patterns"] = true;
 	-- Text for Options Panel
 	AL["Atlasloot Options"] = true;
 	AL["Safe Chat Links"] = true;
@@ -116,7 +125,7 @@ if AL then
 	AL["Mythic Tier 7"] = true;
 	AL["Mythic Tier 8"] = true;
 	AL["Mythic Tier 9"] = true;
-	AL["Mythic Tier 10"] = true;
+	AL["Mythic Tier 10"] = true;										
 
 	-- Slash commands
 	AL["reset"] = true;
@@ -155,6 +164,12 @@ if AL then
 	AL["Crafted Sets"] = true;
 	AL["Crafted Epic Weapons"] = true;
 	AL["Dragon's Eye"] = true;
+	AL["Crafting Patterns Uncommon"] = true;
+	AL["Crafting Patterns Rare"] = true;
+	AL["Crafting Patterns Epic"] = true;
+	AL["Item Uncommon"] = true;
+	AL["Item Rare"] = true;
+	AL["Item Epic"] = true;
 
 	-- Sets/Collections Menu
 	AL["Badge of Justice Rewards"] = true;

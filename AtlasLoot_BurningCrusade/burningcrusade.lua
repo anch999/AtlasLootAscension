@@ -3,7 +3,7 @@ local BabbleBoss = AtlasLoot_GetLocaleLibBabble("LibBabble-Boss-3.0")
 local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 
 -- Index
---- Dungeons & Raids
+--- Dungeons & BCRaids
 ---- Keys
 ---- Auchindoun: Auchenai Crypts
 ---- Auchindoun: Mana-Tombs
@@ -73,7 +73,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 --- World Bosses
 
 	------------------------
-	--- Dungeons & Raids ---
+	--- Dungeons & BCRaids ---
 	------------------------
 
 		------------
@@ -122,8 +122,9 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 26, 27847, "", "=q3=Fanblade Pauldrons", "=ds=#s3#, #a4#", "", "6.52%"};
 		{ 27, 27846, "", "=q3=Claw of the Watcher", "=ds=#h3#, #w13#", "", "6.52%"};
 		Next = "AuchCryptsExarch";
-		Type = "ExDungeon";
+		Type = "BCDungeon";
 	};
+
 
 	AtlasLoot_Data["AuchCryptsExarch"] = {
 		{ 1, 0, "INV_Box_01", "=q6=#j3#", ""};
@@ -150,8 +151,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 28, 27412, "", "=q3=Ironstaff of Regeneration", "=ds=#w9#", "", "11.95%"};
 		Prev = "AuchCryptsShirrak";
 		Next = "AuchCryptsAvatar";
-		Type = "ExDungeon";
+		Type = "BCDungeon";
 	};
+
+
 
 	AtlasLoot_Data["AuchCryptsAvatar"] = {
 		{ 1, 27878, "", "=q3=Auchenai Death Shroud", "=ds=#s4#", "", "4.41%"};
@@ -161,8 +164,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 5, 27877, "", "=q3=Draenic Wildstaff", "=ds=#w9#", "", "4.87%"};
 		{ 7, 27797, "", "=q3=Wastewalker Shoulderpads", "=ds=#s3#, #a2# (D3)", "", "3.94%"};
 		Prev = "AuchCryptsExarch";
-		Type = "ExDungeon";
+		Type = "BCDungeon";
 	};
+
+
 
 		------------------------------
 		--- Auchindoun: Mana-Tombs ---
@@ -188,8 +193,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 26, 27814, "", "=q3=Twinblade of Mastery", "=ds=#h1#, #w4#", "", "6.98%"};
 		{ 27, 27817, "", "=q3=Starbolt Longbow", "=ds=#w2#", "", "9.30%"};
 		Next = "AuchManaTavarok";
-		Type = "ExDungeon";
+		Type = "BCDungeon";
 	};
+
+
 
 	AtlasLoot_Data["AuchManaTavarok"] = {
 		{ 1, 0, "INV_Box_01", "=q6=#j1#", ""};
@@ -212,8 +219,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 27, 27822, "", "=q3=Crystal Band of Valor", "=ds=#s13#", "", "15.15%"};
 		Prev = "AuchManaPandemonius";
 		Next = "AuchManaNexusPrince";
-		Type = "ExDungeon";
+		Type = "BCDungeon";
 	};
+
+
 
 	AtlasLoot_Data["AuchManaNexusPrince"] = {
 		{ 1, 25957, "", "=q3=Ethereal Boots of the Skystrider", "=ds=#s12#, #a1#", "", "11.60%"};
@@ -225,11 +234,13 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 8, 22921, "", "=q2=Recipe: Major Frost Protection Potion", "=ds=#p1# (360)", "", "0.85%"};
 		{ 10, 28490, "", "=q1=Shaffar's Wrappings", "=ds=#m3#", "", "100%"};
 		Prev = "AuchManaTavarok";
-		Next = "AuchManaNexusPrince2";
-		Type = "ExDungeon";
+		Next = "AuchManaNexusPrinceHeroic";
+		Type = "BCDungeon";
 	};
 
-	AtlasLoot_Data["AuchManaNexusPrince2"] = {
+
+
+	AtlasLoot_Data["AuchManaNexusPrinceHeroic"] = {
 		{ 1, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		{ 2, 29240, "", "=q4=Bands of Negation", "=ds=#s8#, #a1#", "", "3.03%"};
 		{ 3, 30535, "", "=q4=Forestwalker Kilt", "=ds=#s11#, #a2#", "", "27.27%"};
@@ -255,8 +266,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 28, 22921, "", "=q2=Recipe: Major Frost Protection Potion", "=ds=#p1# (360)", "", "2.85%"};
 		Prev = "AuchManaNexusPrince";
 		Next = "AuchManaYor";
-		Type = "ExDungeon";
+		Type = "BCDungeon";
 	};
+
+
 
 	AtlasLoot_Data["AuchManaYor"] = {
 		{ 1, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
@@ -274,8 +287,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 17, 30585, "", "=q4=Glistening Fire Opal", "=ds=#e7#", "", "6.06%"};
 		{ 18, 30583, "", "=q4=Timeless Chrysoprase", "=ds=#e7#", "", "9.09%"};
 		Prev = "AuchManaNexusPrince";
-		Type = "ExDungeon";
+		Type = "BCDungeon";
 	};
+
+
 
 
 
@@ -299,8 +314,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 20, 30552, "", "=q4=Blessed Tanzanite", "=ds=#e7#", "", "0.18%"};
 		{ 22, 25461, "", "=q1=Book of Forgotten Names", "=ds=#m3#", "", "100%"};
 		Next = "AuchSethekkTalonKing";
-		Type = "ExDungeon";
+		Type = "BCDungeon";
 	};
+
+
 
 	AtlasLoot_Data["AuchSethekkRavenGod"] = {
 		{ 1, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
@@ -314,8 +331,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 10, 32781, "", "=q3=Talon of Anzu", "=ds=#h1#, #w4#"};
 		{ 11, 32780, "", "=q3=The Boomstick", "=ds=#w5#"};
 		Prev = "AuchSethekkTalonKing";
-		Type = "ExDungeon";
+		Type = "BCDungeon";
 	};
+
+
 
 	AtlasLoot_Data["AuchSethekkTalonKing"] = {
 		{ 1, 27948, "", "=q3=Trousers of Oblivion", "=ds=#s11#, #a1# (D3)", "", "8.89%"};
@@ -343,8 +362,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 27, 33834, "", "=q1=The Headfeathers of Ikiss", "=ds=#m3#", "", "100%"};
 		Prev = "AuchSethekkDarkweaver";
 		Next = "AuchSethekkRavenGod";
-		Type = "ExDungeon";
+		Type = "BCDungeon";
 	};
+
+
 
 
 		------------------------------------
@@ -364,8 +385,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 19, 30559, "", "=q4=Etched Fire Opal", "=ds=#e7#", "", "17.85%"};
 		{ 20, 30560, "", "=q4=Rune Covered Chrysoprase", "=ds=#e7#", "", "15.47%"};
 		Next = "AuchShadowBlackheart";
-		Type = "ExDungeon";
+		Type = "BCDungeon";
 	};
+
+
 
 	AtlasLoot_Data["AuchShadowBlackheart"] = {
 		{ 1, 27468, "", "=q3=Moonglade Handwraps", "=ds=#s9#, #a2# (D3)", "", "6.67%"};
@@ -383,8 +406,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 20, 30560, "", "=q4=Rune Covered Chrysoprase", "=ds=#e7#", "", "15.47%"};
 		Prev = "AuchShadowHellmaw";
 		Next = "AuchShadowGrandmaster";
-		Type = "ExDungeon";
+		Type = "BCDungeon";
 	};
+
+
 
 	AtlasLoot_Data["AuchShadowGrandmaster"] = {
 		{ 1, 27775, "", "=q3=Hallowed Pauldrons", "=ds=#s3#, #a1# (D3)", "", "16.11%"};
@@ -400,8 +425,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 20, 30560, "", "=q4=Rune Covered Chrysoprase", "=ds=#e7#", "", "15.47%"};
 		Prev = "AuchShadowBlackheart";
 		Next = "AuchShadowMurmur";
-		Type = "ExDungeon";
+		Type = "BCDungeon";
 	};
+
+
 
 	AtlasLoot_Data["AuchShadowMurmur"] = {
 		{ 1, 24309, "", "=q4=Pattern: Spellstrike Pants", "=ds=#p8# (375)", "", "0.37%"};
@@ -429,8 +456,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 27, 31722, "", "=q1=Murmur's Essence", "=ds=#m3#", "", "100%"};
 		{ 28, 33840, "", "=q1=Murmur's Whisper", "=ds=#m3#", "", "100%"};
 		Prev = "AuchShadowGrandmaster";
-		Type = "ExDungeon";
+		Type = "BCDungeon";
 	};
+
+
 
 	AtlasLoot_Data["AuchTrash"] = {
 		{ 1, 0, "INV_Box_01", "=q6="..AL["Trash Mobs"], "=q5="..BabbleZone["Mana-Tombs"]};
@@ -448,8 +477,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 21, 23607, "", "=q3=Plans: Felsteel Helm", "=ds=#p2# (365), =q1=#n56#", "", "0.61%"};
 		{ 23, 0, "INV_Box_01", "=q6="..AL["First Fragment Guardian"], "=q5="..BabbleZone["Shadow Labyrinth"]};
 		{ 24, 24514, "", "=q1=First Key Fragment", "=ds=#m3#", "", "100%"};
-		Type = "ExDungeon";
+		Type = "BCDungeon";
 	};
+
+
 
 
 
@@ -474,8 +505,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 20, 32248, "", "=q4=Halberd of Desolation", "=ds=#w7#", "", "16%"};
 		{ 22, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		Next = "BTSupremus";
-		Type = "Raid";
+		Type = "BCRaid";
 	};
+
+
 
 	AtlasLoot_Data["BTSupremus"] = {
 		{ 1, 32256, "", "=q4=Waistwrap of Infinity", "=ds=#s10#, #a1#", "", "16%"};
@@ -494,8 +527,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 22, 32253, "", "=q4=Legionkiller", "=ds=#w3#", "", "16%"};
 		Prev = "BTNajentus";
 		Next = "BTAkama";
-		Type = "Raid";
+		Type = "BCRaid";
 	};
+
+
 
 	AtlasLoot_Data["BTAkama"] = {
 		{ 1, 32273, "", "=q4=Amice of Brilliant Light", "=ds=#s3#, #a1#", "", "16%"};
@@ -515,8 +550,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 19, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		Prev = "BTSupremus";
 		Next = "BTGorefiend";
-		Type = "Raid";
+		Type = "BCRaid";
 	};
+
+
 
 	AtlasLoot_Data["BTGorefiend"] = {
 		{ 1, 32323, "", "=q4=Shadowmoon Destroyer's Drape", "=ds=#s4#", "", "17%"};
@@ -534,8 +571,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 21, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		Prev = "BTAkama";
 		Next = "BTBloodboil";
-		Type = "Raid";
+		Type = "BCRaid";
 	};
+
+
 
 	AtlasLoot_Data["BTBloodboil"] = {
 		{ 1, 32337, "", "=q4=Shroud of Forgiveness", "=ds=#s4#", "", "16%"};
@@ -554,8 +593,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 22, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		Prev = "BTGorefiend";
 		Next = "BTEssencofSouls";
-		Type = "Raid";
+		Type = "BCRaid";
 	};
+
+
 
 	AtlasLoot_Data["BTEssencofSouls"] = {
 		{ 1, 32353, "", "=q4=Gloves of Unfailing Faith", "=ds=#s9#, #a1#", "", "17%"};
@@ -574,8 +615,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 22, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		Prev = "BTBloodboil";
 		Next = "BTShahraz";
-		Type = "Raid";
+		Type = "BCRaid";
 	};
+
+
 
 	AtlasLoot_Data["BTShahraz"] = {
 		{ 1, 32367, "", "=q4=Leggings of Devastation", "=ds=#s11#, #a1#", "", "16%"};
@@ -590,8 +633,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 20, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		Prev = "BTEssencofSouls";
 		Next = "BTCouncil";
-		Type = "Raid";
+		Type = "BCRaid";
 	};
+
+
 
 	AtlasLoot_Data["BTCouncil"] = {
 		{ 1, 32331, "", "=q4=Cloak of the Illidari Council", "=ds=#s4#", "", "16%"};
@@ -606,8 +651,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 20, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		Prev = "BTShahraz";
 		Next = "BTIllidanStormrage";
-		Type = "Raid";
+		Type = "BCRaid";
 	};
+
+
 
 	AtlasLoot_Data["BTIllidanStormrage"] = {
 		{ 1, 32524, "", "=q4=Shroud of the Highborne", "=ds=#s4#", "", "16%"};
@@ -618,8 +665,8 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 6, 32483, "", "=q4=The Skull of Gul'dan", "=ds=#s14#", "", "16%"};
 		{ 7, 32496, "", "=q4=Memento of Tyrande", "=ds=#s14#", "", "15%"};
 		{ 9, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
-		{ 11, 32837, "", "=q5=Warglaive of Azzinoth", "=ds=#h3#, #w10#, =q1=#m1# =ds=#c9#, #c6#", "", "4%"};
-		{ 12, 32838, "", "=q5=Warglaive of Azzinoth", "=ds=#h4#, #w10#, =q1=#m1# =ds=#c9#, #c6#", "", "4%"};
+		{ 11, 32837, "", "=q5=Warglaive of Azzinoth", "=ds=#h3#, #w10#, =q1=#m1# =ds=#c9#, #c6#", "", "4%", "(MainHand)"};
+		{ 12, 32838, "", "=q5=Warglaive of Azzinoth", "=ds=#h4#, #w10#, =q1=#m1# =ds=#c9#, #c6#", "", "4%", "(OffHand)"};
 		{ 16, 31089, "", "=q4=Chestguard of the Forgotten Conqueror", "=q1=#m1# =ds=#c4#, #c5#, #c8#", "", "78%"};
 		{ 17, 31091, "", "=q4=Chestguard of the Forgotten Protector", "=q1=#m1# =ds=#c9#, #c2#, #c7#", "", "79%"};
 		{ 18, 31090, "", "=q4=Chestguard of the Forgotten Vanquisher", "=q1=#m1# =ds=#c6#, #c3#, #c1#", "", "78%"};
@@ -629,8 +676,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 23, 32375, "", "=q4=Bulwark of Azzinoth", "=ds=#w8#", "", "14%"};
 		{ 24, 32336, "", "=q4=Black Bow of the Betrayer", "=ds=#w2#", "", "16%"};
 		Prev = "BTCouncil";
-		Type = "Raid";
+		Type = "BCRaid";
 	};
+
+
 
 	AtlasLoot_Data["BTTrash"] = {
 		{ 1, 32590, "", "=q4=Nethervoid Cloak", "=ds=#s4#", "", "1%"};
@@ -656,8 +705,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 25, 32227, "", "=q4=Crimson Spinel", "=ds=#e7#", "", "8%"};
 		{ 27, 32428, "", "=q3=Heart of Darkness", "=ds=#e8#", "", "16%"};
 		{ 28, 32897, "", "=q2=Mark of the Illidari", "=ds=#m20#", "", "27%"};
-		Type = "Raid";
+		Type = "BCRaid";
 	};
+
+
 
 	AtlasLoot_Data["BTPatterns"] = {
 		{ 1, 32738, "", "=q4=Plans: Dawnsteel Bracers", "=ds=#p2# (375)"};
@@ -703,8 +754,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 26, 28213, "", "=q3=Lordaeron Medical Guide", "=ds=#s15#", "", "8.57%"};
 		{ 27, 28210, "", "=q3=Bloodskull Destroyer", "=ds=#h1#, #w6#", "", "5.71%"};
 		Next = "CoTHillsbradSkarloc";
-		Type = "ExDungeon";
+		Type = "BCDungeon";
 	};
+
+
 
 	AtlasLoot_Data["CoTHillsbradSkarloc"] = {
 		{ 1, 0, "INV_Box_01", "=q6=#j1#", ""};
@@ -727,8 +780,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 27, 28216, "", "=q3=Dathrohan's Ceremonial Hammer", "=ds=#h3#, #w6#", "", "6.06%"};
 		Prev = "CoTHillsbradDrake";
 		Next = "CoTHillsbradHunter";
-		Type = "ExDungeon";
+		Type = "BCDungeon";
 	};
+
+
 
 	AtlasLoot_Data["CoTHillsbradHunter"] = {
 		{ 1, 24173, "", "=q4=Design: Circlet of Arcane Might", "=ds=#p12# (370)", "", "0.10%"};
@@ -738,11 +793,13 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 6, 27432, "", "=q3=Broxigar's Ring of Valor", "=ds=#s13#", "", "16.35%"};
 		{ 7, 27431, "", "=q3=Time-Shifted Dagger", "=ds=#h3#, #w4#", "", "14.09%"};
 		Prev = "CoTHillsbradSkarloc";
-		Next = "CoTHillsbradHunter2";
-		Type = "ExDungeon";
+		Next = "CoTHillsbradHunterHeroic";
+		Type = "BCDungeon";
 	};
 
-	AtlasLoot_Data["CoTHillsbradHunter2"] = { -- only heroic
+
+
+	AtlasLoot_Data["CoTHillsbradHunterHeroic"] = { -- only heroic
 		{ 1, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		{ 2, 29250, "", "=q4=Cord of Sanctification", "=ds=#s10#, #a1#"};
 		{ 3, 29246, "", "=q4=Nightfall Wristguards", "=ds=#s8#, #a2#"};
@@ -767,8 +824,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 24, 28225, "", "=q3=Doomplate Warhelm", "=ds=#s1#, #a4# (D3)", "", "0.14%"};
 		{ 26, 33847, "", "=q1=Epoch Hunter's Head", "=ds=#m3#", "", "100%"};
 		Prev = "CoTHillsbradHunter";
-		Type = "ExDungeon";
+		Type = "BCDungeon";
 	};
+
+
 
 	AtlasLoot_Data["CoTTrash"] = {
 		{ 1, 0, "INV_Box_01", "=q6="..AL["Trash Mobs"], "=q5="..BabbleZone["Old Hillsbrad Foothills"]};
@@ -783,8 +842,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 17, 25725, "", "=q1=Pattern: Riding Crop", "=ds=#p7# (350)"};
 		{ 19, 0, "INV_Box_01", "=q6="..AL["Aged Dalaran Wizard"], "=q5="..BabbleZone["Old Hillsbrad Foothills"]};
 		{ 20, 22539, "", "=q1=Formula: Enchant Shield - Intellect", "=ds=#p4# (325)"};
-		Type = "ExDungeon";
+		Type = "BCDungeon";
 	};
+
+
 
 
 
@@ -807,8 +868,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 19, 30556, "", "=q4=Glinting Fire Opal", "=ds=#e7#"};
 		{ 20, 30555, "", "=q4=Glowing Tanzanite", "=ds=#e7#"};
 		Next = "CoTMorassTemporus";
-		Type = "ExDungeon";
+		Type = "BCDungeon";
 	};
+
+
 
 	AtlasLoot_Data["CoTMorassTemporus"] = {
 		{ 1, 28185, "", "=q3=Khadgar's Kilt of Abjuration", "=ds=#s11#, #a1#", "", "14.26%"};
@@ -824,8 +887,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 20, 30555, "", "=q4=Glowing Tanzanite", "=ds=#e7#"};
 		Prev = "CoTMorassDeja";
 		Next = "CoTMorassAeonus";
-		Type = "ExDungeon";
+		Type = "BCDungeon";
 	};
+
+
 
 	AtlasLoot_Data["CoTMorassAeonus"] = {
 		{ 1, 28193, "", "=q3=Mana-Etched Crown", "=ds=#s1#, #a1# (D3)", "", "11.99%"};
@@ -851,8 +916,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 25, 29356, "", "=q4=Quantum Blade", "=ds=#h2#, #w10#"};
 		{ 27, 33858, "", "=q1=Aeonus's Hourglass", "=ds=#m3#", "", "100%"};
 		Prev = "CoTMorassTemporus";
-		Type = "ExDungeon";
+		Type = "BCDungeon";
 	};
+
+
 
 
 
@@ -876,8 +943,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 19, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		{ 21, 32459, "", "=q1=Time-Phased Phylactery", "=ds=#m3#", "", "8%"};
 		Next = "MountHyjalAnetheron";
-		Type = "Raid";
+		Type = "BCRaid";
 	};
+
+
 
 	AtlasLoot_Data["MountHyjalAnetheron"] = {
 		{ 1, 30884, "", "=q4=Hatefury Mantle", "=ds=#s3#, #a1#", "", "16%"};
@@ -895,8 +964,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 21, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		Prev = "MountHyjalWinterchill";
 		Next = "MountHyjalKazrogal";
-		Type = "Raid";
+		Type = "BCRaid";
 	};
+
+
 
 	AtlasLoot_Data["MountHyjalKazrogal"] = {
 		{ 1, 30895, "", "=q4=Angelista's Sash", "=ds=#s10#, #a1#", "", "16%"};
@@ -914,8 +985,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 19, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		Prev = "MountHyjalAnetheron";
 		Next = "MountHyjalAzgalor";
-		Type = "Raid";
+		Type = "BCRaid";
 	};
+
+
 
 	AtlasLoot_Data["MountHyjalAzgalor"] = {
 		{ 1, 30899, "", "=q4=Don Rodrigo's Poncho", "=ds=#s5#, #a2#", "", "15%"};
@@ -930,8 +1003,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 20, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		Prev = "MountHyjalKazrogal";
 		Next = "MountHyjalArchimonde";
-		Type = "Raid";
+		Type = "BCRaid";
 	};
+
+
 
 	AtlasLoot_Data["MountHyjalArchimonde"] = {
 		{ 1, 30913, "", "=q4=Robes of Rhonin", "=ds=#s5#, #a1#", "", "15%"};
@@ -951,8 +1026,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 18, 31096, "", "=q4=Helm of the Forgotten Vanquisher", "=q1=#m1# =ds=#c6#, #c3#, #c1#", "", "73%"};
 		{ 20, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		Prev = "MountHyjalAzgalor";
-		Type = "Raid";
+		Type = "BCRaid";
 	};
+
+
 
 	AtlasLoot_Data["MountHyjalTrash"] = {
 		{ 1, 32590, "", "=q4=Nethervoid Cloak", "=ds=#s4#", "", "1%"};
@@ -974,8 +1051,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 21, 32297, "", "=q4=Design: Sovereign Shadowsong Amethyst", "=ds=#p12# (375)", "", "4%"};
 		{ 22, 32289, "", "=q4=Design: Stormy Empyrean Sapphire", "=ds=#p12# (375)", "", "4%"};
 		{ 23, 32307, "", "=q4=Design: Veiled Pyrestone", "=ds=#p12# (375)", "", "3%"};
-		Type = "Raid";
+		Type = "BCRaid";
 	};
+
+
 
 
 	
@@ -1004,8 +1083,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 27, 27543, "", "=q3=Starlight Dagger", "=ds=#h3#, #w4#", "", "20.00%"};
 		{ 29, 29674, "", "=q2=Pattern: Nature Armor Kit", "=ds=#p7# (340)", "", "0.80%"};
 		Next = "CFRSlaveRokmar";
-		Type = "ExDungeon";
+		Type = "BCDungeon";
 	};
+
+
 
 	AtlasLoot_Data["CFRSlaveRokmar"] = {
 		{ 1, 0, "INV_Box_01", "=q6=#j1#", ""};
@@ -1027,8 +1108,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 27, 27551, "", "=q3=Skeletal Necklace of Battlerage", "=ds=#s2#", "", "16.25%"};
 		Prev = "CFRSlaveMennu";
 		Next = "CFRSlaveQuagmirran";
-		Type = "ExDungeon";
+		Type = "BCDungeon";
 	};
+
+
 
 	AtlasLoot_Data["CFRSlaveQuagmirran"] = {
 		{ 1, 27796, "", "=q3=Mana-Etched Spaulders", "=ds=#s3#, #a1# (D3)", "", "5.24%"};
@@ -1059,8 +1142,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 29, 24363, "", "=q3=Unscarred Breastplate", "=ds=#s5#, #a4#", "", "9.54%"};
 		{ 30, 24364, "", "=q3=Azureplate Greaves", "=ds=#s11#, #a4#", "", "9.98%"};
 		Prev = "CFRSlaveRokmar";
-		Type = "ExDungeon";
+		Type = "BCDungeon";
 	};
+
+
 
 
 		------------------------------------------
@@ -1081,8 +1166,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 19, 30551, "", "=q4=Infused Fire Opal", "=ds=#e7#", "", "6.64%"};
 		{ 20, 30549, "", "=q4=Shifting Tanzanite", "=ds=#e7#", "", "1.56%"};
 		Next = "CFRSteamSteamrigger";
-		Type = "ExDungeon";
+		Type = "BCDungeon";
 	};
+
+
 
 	AtlasLoot_Data["CFRSteamSteamrigger"] = {
 		{ 1, 27793, "", "=q3=Earth Mantle Handwraps", "=ds=#s9#, #a3#", "", "16.92%"};
@@ -1098,8 +1185,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 20, 30549, "", "=q4=Shifting Tanzanite", "=ds=#e7#", "", "1.56%"};
 		Prev = "CFRSteamThespia";
 		Next = "CFRSteamWarlord";
-		Type = "ExDungeon";
+		Type = "BCDungeon";
 	};
+
+
 
 	AtlasLoot_Data["CFRSteamWarlord"] = {
 		{ 1, 24313, "", "=q4=Pattern: Battlecast Hood", "=ds=#p8# (375)", "", "0.20%"};
@@ -1127,8 +1216,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 26, 31721, "", "=q1=Kalithresh's Trident", "=ds=#m3#", "", "100%"};
 		{ 27, 33827, "", "=q1=The Warlord's Treatise", "=ds=#m3#", "", "100%"};
 		Prev = "CFRSteamSteamrigger";
-		Type = "ExDungeon";
+		Type = "BCDungeon";
 	};
+
+
 
 	AtlasLoot_Data["CFRSteamTrash"] = {
 		{ 1, 24159, "", "=q3=Design: Khorium Band of Frost", "=ds=#p12# (355) =q1=#n86#", "", "0.14%"};
@@ -1137,8 +1228,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 6, 24368, "", "=q1=Coilfang Armaments", "=ds=#m3#", "", "12.68%"};
 		{ 16, 0, "INV_Box_01", "=q6="..AL["Second Fragment Guardian"], "=q5="..BabbleZone["The Steamvault"]};
 		{ 17, 24487, "", "=q1=Second Key Fragment", "=ds=#m3#", "", "100%"};
-		Type = "ExDungeon";
+		Type = "BCDungeon";
 	};
+
+
 
 
 		----------------------------------------
@@ -1164,8 +1257,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 26, 27744, "", "=q3=Idol of Ursoc", "=ds=#s16#, #w14#", "", "16.26%"};
 		{ 27, 27747, "", "=q3=Boggspine Knuckles", "=ds=#h4#, #w13#", "", "12.81%"};
 		Next = "CFRUnderGhazan";
-		Type = "ExDungeon";
+		Type = "BCDungeon";
 	};
+
+
 
 	AtlasLoot_Data["CFRUnderGhazan"] = {
 		{ 1, 0, "INV_Box_01", "=q6=#j1#", ""};
@@ -1187,8 +1282,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 27, 27757, "", "=q3=Greatstaff of the Leviathan", "=ds=#w9#", "", "16.00%"};
 		Prev = "CFRUnderHungarfen";
 		Next = "CFRUnderSwamplord";
-		Type = "ExDungeon";
+		Type = "BCDungeon";
 	};
+
+
 
 	AtlasLoot_Data["CFRUnderSwamplord"] = {
 		{ 1, 0, "INV_Box_01", "=q6=#j1#", ""};
@@ -1210,8 +1307,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 27, 27767, "", "=q3=Bogreaver", "=ds=#h1#, #w1#", "", "9.29%"};
 		Prev = "CFRUnderGhazan";
 		Next = "CFRUnderStalker";
-		Type = "ExDungeon";
+		Type = "BCDungeon";
 	};
+
+
 
 	AtlasLoot_Data["CFRUnderStalker"] = {
 		{ 1, 24481, "", "=q3=Robes of the Augurer", "=ds=#s5#, #a1#", "", "10.55%"};
@@ -1221,11 +1320,13 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 5, 24464, "", "=q3=The Stalker's Fangs", "=ds=#h1#, #w4#", "", "14.31%"};
 		{ 7, 24248, "", "=q1=Brain of the Black Stalker", "=ds=#m3#", "", "100%"};
 		Prev = "CFRUnderSwamplord";
-		Next = "CFRUnderStalker2";
-		Type = "ExDungeon";
+		Next = "CFRUnderStalkerHeroic";
+		Type = "BCDungeon";
 	};
 
-	AtlasLoot_Data["CFRUnderStalker2"] = { --only heroic
+
+
+	AtlasLoot_Data["CFRUnderStalkerHeroic"] = { --only heroic
 		{ 1, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		{ 2, 29265, "", "=q4=Barkchip Boots", "=ds=#s12#, #a2#", "", "8.54%"};
 		{ 3, 30541, "", "=q4=Stormsong Kilt", "=ds=#s11#, #a3#", "", "6.50%"};
@@ -1249,8 +1350,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 26, 24248, "", "=q1=Brain of the Black Stalker", "=ds=#m3#", "", "100%"};
 		{ 27, 33826, "", "=q1=Black Stalker Egg", "=ds=#m3#", "", "100%"};
 		Prev = "CFRUnderStalker";
-		Type = "ExDungeon";
+		Type = "BCDungeon";
 	};
+
+
 
 		------------------------------------------------
 		--- Coilfang Reservoir: Serpentshrine Cavern ---
@@ -1274,8 +1377,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 23, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		{ 24, 816254, "", "=q2=Formula: Enchant Cloak - Crushing Wave", "=ds=#p4# (350)", "", "5%"};
 		Next = "CFRSerpentLurker";
-		Type = "Raid";
+		Type = "BCRaid";
 	};
+
+
 
 	AtlasLoot_Data["CFRSerpentLurker"] = {
 		{ 1, 30064, "", "=q4=Cord of Screaming Terrors", "=ds=#s10#, #a1#", "", "17%"};
@@ -1294,8 +1399,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 21, 30058, "", "=q4=Mallet of the Tides", "=ds=#h1#, #w6#", "", "20%"};
 		Prev = "CFRSerpentHydross";
 		Next = "CFRSerpentLeotheras";
-		Type = "Raid";
+		Type = "BCRaid";
 	};
+
+
 
 	AtlasLoot_Data["CFRSerpentLeotheras"] = {
 		{ 1, 30092, "", "=q4=Orca-Hide Boots", "=ds=#s12#, #a2#", "", "13%"};
@@ -1310,8 +1417,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 20, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		Prev = "CFRSerpentLurker";
 		Next = "CFRSerpentKarathress";
-		Type = "Raid";
+		Type = "BCRaid";
 	};
+
+
 
 	AtlasLoot_Data["CFRSerpentKarathress"] = {
 		{ 1, 30100, "", "=q4=Soul-Strider Boots", "=ds=#s12#, #a1#", "", "15%"};
@@ -1326,8 +1435,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 20, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		Prev = "CFRSerpentLeotheras";
 		Next = "CFRSerpentMorogrim";
-		Type = "Raid";
+		Type = "BCRaid";
 	};
+
+
 
 	AtlasLoot_Data["CFRSerpentMorogrim"] = {
 		{ 1, 30098, "", "=q4=Razor-Scale Battlecloak", "=ds=#s4#", "", "22%"};
@@ -1341,13 +1452,15 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 16, 30008, "", "=q4=Pendant of the Lost Ages", "=ds=#s2#", "", "18%"};
 		{ 17, 30083, "", "=q4=Ring of Sundered Souls", "=ds=#s13#", "", "21%"};
 		{ 18, 33058, "", "=q4=Band of the Vigilant", "=ds=#s13#", "", "19%"};
-		{ 19, 30720, "", "=q4=Serpent-Coil Braid", "=ds=#s14#, =q1=#m1# =ds=#c3#", "", "20%"};
+		{ 19, 30720, "", "=q4=Serpent-Coil BBCRaid", "=ds=#s14#, =q1=#m1# =ds=#c3#", "", "20%"};
 		{ 20, 30082, "", "=q4=Talon of Azshara", "=ds=#h1#, #w10#", "", "20%"};
 		{ 21, 30080, "", "=q4=Luminescent Rod of the Naaru", "=ds=#w12#", "", "15%"};
 		Prev = "CFRSerpentKarathress";
 		Next = "CFRSerpentVashj";
-		Type = "Raid";
+		Type = "BCRaid";
 	};
+
+
 
 	AtlasLoot_Data["CFRSerpentVashj"] = {
 		{ 1, 30107, "", "=q4=Vestments of the Sea-Witch", "=ds=#s5#, #a1#", "", "13%"};
@@ -1369,8 +1482,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 22, 29906, "", "=q1=Vashj's Vial Remnant", "=ds=#m3#", "", "35%"};
 		{ 23, 450000, "", "=q5=Intact Vial of Lady Vashj", "", "", "5%"};
 		Prev = "CFRSerpentMorogrim";
-		Type = "Raid";
+		Type = "BCRaid";
 	};
+
+
 
 	AtlasLoot_Data["CFRSerpentTrash"] = {
 		{ 1, 30027, "", "=q4=Boots of Courage Unending", "=ds=#s12#, #a4#", "", "3%"};
@@ -1397,8 +1512,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 23, 30302, "", "=q4=Pattern: Belt of Deep Shadow", "=ds=#p7# (375)", "", "1%"};
 		{ 25, 30183, "", "=q4=Nether Vortex", "=ds=#e8#", "", "75%"};
 		{ 27, 32897, "", "=q2=Mark of the Illidari", "=ds=#m20#", "", "27%"};
-		Type = "Raid";
+		Type = "BCRaid";
 	};
+
+
 
 
 
@@ -1418,10 +1535,12 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 17, 29764, "", "=q4=Pauldrons of the Fallen Defender", "=q1=#m1# =ds=#c1#, #c5#, #c9#", "", "34.69%"};
 		{ 18, 29762, "", "=q4=Pauldrons of the Fallen Hero", "=q1=#m1# =ds=#c2#, #c3#, #c8#", "", "25.62%"};
 		{ 20, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
-		{ 21, 816252, "", "=q2=Formula: Enchant Weapon - Undaunted Might", "=ds=#p4# (375)", "", "5%"};
+		{ 21, 816252, "", "=q3=Formula: Enchant Weapon - Undaunted Might", "=ds=#p4# (375)", "", "5%"};
 		Next = "GruulGruul";
-		Type = "Raid";
+		Type = "BCRaid";
 	};
+
+
 
 	AtlasLoot_Data["GruulGruul"] = {
 		{ 1, 28804, "", "=q4=Collar of Cho'gall", "=ds=#s1#, #a1#", "", "14.96%"};
@@ -1443,8 +1562,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 24, 28825, "", "=q4=Aldori Legacy Defender", "=ds=#w8#", "", "2.99%"};
 		{ 25, 28826, "", "=q4=Shuriken of Negation", "=ds=#w11#", "", "16.21%"};
 		Prev = "GruulsLairHighKingMaulgar";
-		Type = "Raid";
+		Type = "BCRaid";
 	};
+
+
 
 
 		-------------------------------------------
@@ -1471,8 +1592,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 26, 27449, "", "=q3=Blood Knight Defender", "=ds=#w8#", "", "13.15%"};
 		{ 28, 23881, "", "=q1=Gargolmar's Hand", "=ds=#m3#", "", "100%"};
 		Next = "HCRampOmor";
-		Type = "ExDungeon";
+		Type = "BCDungeon";
 	};
+
+
 
 	AtlasLoot_Data["HCRampOmor"] = {
 		{ 1, 0, "INV_Box_01", "=q6=#j3#", ""};
@@ -1502,8 +1625,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 29, 23886, "", "=q1=Omor's Hoof", "=ds=#m3#", "", "100%"};
 		Prev = "HCRampWatchkeeper";
 		Next = "HCRampVazruden";
-		Type = "ExDungeon";
+		Type = "BCDungeon";
 	};
+
+
 
 	AtlasLoot_Data["HCRampVazruden"] = {
 		{ 1, 0, "INV_Box_01", "=q6="..AL["Reinforced Fel Iron Chest"], ""};
@@ -1522,10 +1647,12 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 19, 0, "INV_Box_01", "=q6="..BabbleBoss["Nazan"], ""};
 		{ 20, 23901, "", "=q1=Nazan's Head", "=ds=#m3#", "", "100%"};
 		Prev = "HCRampOmor";
-		Type = "ExDungeon";
+		Type = "BCDungeon";
 	};
 
-	AtlasLoot_Data["HCRampVazruden2"] = {
+
+
+	AtlasLoot_Data["HCRampVazrudenHeroic"] = {
 		{ 1, 29264, "", "=q4=Tree-Mender's Belt", "=ds=#s10#, #a2#", "", "16.05%"};
 		{ 2, 32077, "", "=q4=Wrath Infused Gauntlets", "=ds=#s9#, #a3#"};
 		{ 3, 29238, "", "=q4=Lion's Heart Girdle", "=ds=#s10#, #a4#", "", "14.81%"};
@@ -1549,8 +1676,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 27, 0, "INV_Box_01", "=q6="..BabbleBoss["Nazan"], ""};
 		{ 28, 23901, "", "=q1=Nazan's Head", "=ds=#m3#", "", "100%"};
 		Prev = "HCRampOmor";
-		Type = "ExDungeon";
+		Type = "BCDungeon";
 	};
+
+
 
 
 
@@ -1576,8 +1705,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 25, 27487, "", "=q3=Bloodlord Legplates", "=ds=#s11#, #a4#", "", "9.26%"};
 		{ 26, 27484, "", "=q3=Libram of Avengement", "=ds=#s16#, #w16#", "", "14.81%"};
 		Next = "HCFurnaceBroggok";
-		Type = "ExDungeon";
+		Type = "BCDungeon";
 	};
+
+
 
 	AtlasLoot_Data["HCFurnaceBroggok"] = {
 		{ 1, 0, "INV_Box_01", "=q6=#j1#", ""};
@@ -1598,8 +1729,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 26, 27490, "", "=q3=Firebrand Battleaxe", "=ds=#h1#, #w1#", "", "9.72%"};
 		Prev = "HCFurnaceMaker";
 		Next = "HCFurnaceBreaker";
-		Type = "ExDungeon";
+		Type = "BCDungeon";
 	};
+
+
 
 	AtlasLoot_Data["HCFurnaceBreaker"] = {
 		{ 1, 28264, "", "=q3=Wastewalker Tunic", "=ds=#s5#, #a2# (D3)", "", "6.82%"};
@@ -1630,8 +1763,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 29, 24396, "", "=q3=Vest of Vengeance", "=ds=#s5#, #a2#", "", "15.46%"};
 		{ 30, 24394, "", "=q3=Warsong Howling Axe", "=ds=#h2#, #w1#", "", "15.52%"};
 		Prev = "HCFurnaceBroggok";
-		Type = "ExDungeon";
+		Type = "BCDungeon";
 	};
+
+
 
 
 
@@ -1655,8 +1790,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 21, 30546, "", "=q4=Sovereign Tanzanite", "=ds=#e7#", "", "3.39%"};
 		{ 23, 25462, "", "=q1=Tome of Dusk", "=ds=#m3#", "", "100%"};
 		Next = "HCHallsOmrogg";
-		Type = "ExDungeon";
+		Type = "BCDungeon";
 	};
+
+
 
 	AtlasLoot_Data["HCHallsPorung"] = {
 		{ 1, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
@@ -1668,8 +1805,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 8, 30708, "", "=q3=Belt of Flowing Thought", "=ds=#s10#, #a3#", "", "12.50%"};
 		{ 9, 30705, "", "=q3=Spaulders of Slaughter", "=ds=#s3#, #a4#", "", "21.88%"};
 		{ 10, 30710, "", "=q3=Blood Guard's Necklace of Ferocity", "=ds=#s2#", "", "10.42%"};
-		Type = "ExDungeon";
+		Type = "BCDungeon";
 	};
+
+
 
 	AtlasLoot_Data["HCHallsOmrogg"] = {
 		{ 1, 27802, "", "=q3=Tidefury Shoulderguards", "=ds=#s3#, #a3# (D3)", "", "17.02%"};
@@ -1685,8 +1824,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 20, 30546, "", "=q4=Sovereign Tanzanite", "=ds=#e7#", "", "3.39%"};
 		Prev = "HCHallsNethekurse";
 		Next = "HCHallsKargath";
-		Type = "ExDungeon";
+		Type = "BCDungeon";
 	};
+
+
 
 	AtlasLoot_Data["HCHallsKargath"] = {
 		{ 1, 27536, "", "=q3=Hallowed Handwraps", "=ds=#s9#, #a1# (D3)", "", "12.63%"};
@@ -1713,15 +1854,19 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 25, 29348, "", "=q4=The Bladefist", "=ds=#h3#, #w13#", "", "3.39%"};
 		{ 27, 33815, "", "=q1=Bladefist's Seal", "=ds=#m3#", "", "100%"};
 		Prev = "HCHallsOmrogg";
-		Type = "ExDungeon";
+		Type = "BCDungeon";
 	};
+
+
 
 	AtlasLoot_Data["HCHallsTrash"] = {
 		{ 1, 22554, "", "=q2=Formula: Enchant 2H Weapon - Savagery", "=ds=#p4# (350) =q1=#n88#", "", "1.65%"};
 		{ 3, 0, "INV_Box_01", "=q6="..AL["Shattered Hand Executioner"], ""};
 		{ 4, 31716, "", "=q1=Unused Axe of the Executioner", "=ds=#m3#", "", "100%"};
-		Type = "ExDungeon";
+		Type = "BCDungeon";
 	};
+
+
 
 
 
@@ -1754,8 +1899,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 25, 28793, "", "=q4=Band of Crimson Fury", "=q1=#m4#: =ds=#s13#"};
 		{ 26, 28792, "", "=q4=A'dal's Signet of Defense", "=q1=#m4#: =ds=#s13#"};
 		{ 28, 816252, "", "=q2=Formula: Enchant Weapon - Undaunted Might", "=ds=#p4# (375)", "", "5%"};
-		Type = "Raid";
+		Type = "BCRaid";
 	};
+
+
 
 
 
@@ -1783,8 +1930,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 18, 30681, "", "=q4=Glider's Boots", "=ds=#s12#, #a2# =q2=#m16#", "", "22.58%"};
 		{ 19, 30682, "", "=q4=Glider's Sabatons", "=ds=#s12#, #a3# =q2=#m16#", "", "9.68%"};
 		{ 20, 30683, "", "=q4=Glider's Greaves", "=ds=#s12#, #a4# =q2=#m16#", "", "8.60%"};
-		Type = "Raid";
+		Type = "BCRaid";
 	};
+
+
 
 	AtlasLoot_Data["KaraAttumen"] = {
 		{ 1, 28477, "", "=q4=Harbinger Bands", "=ds=#s8#, #a1#", "", "14.68%"};
@@ -1803,8 +1952,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 21, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		{ 23, 23809, "", "=q3=Schematic: Stabilized Eternium Scope", "=ds=#p5# (375)", "", "1.00%"};
 		Next = "KaraMoroes";
-		Type = "Raid";
+		Type = "BCRaid";
 	};
+
+
 
 	AtlasLoot_Data["KaraMoroes"] = {
 		{ 1, 28529, "", "=q4=Royal Cloak of Arathi Kings", "=ds=#s4#", "", "15.91%"};
@@ -1823,8 +1974,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 22, 22559, "", "=q3=Formula: Enchant Weapon - Mongoose", "=ds=#p4# (375)", "", "1.05%"};
 		Prev = "KaraAttumen";
 		Next = "KaraMaiden";
-		Type = "Raid";
+		Type = "BCRaid";
 	};
+
+
 
 	AtlasLoot_Data["KaraKeannaLog"] = {
 		{ 1, 24492, "", "=q1=Keanna's Log", "=ds=#m3#"};
@@ -1847,8 +2000,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 21, 816253, "", "=q2=Formula: Enchant Weapon - Faith", "=ds=#p4# (375)", "", "5%"};
 		Prev = "KaraMoroes";
 		Next = "KaraOperaEvent";
-		Type = "Raid";
+		Type = "BCRaid";
 	};
+
+
 
 	AtlasLoot_Data["KaraOperaEvent"] = {
 		{ 1, 0, "INV_Box_01", "=q6="..AL["Shared Drops"], ""};
@@ -1876,8 +2031,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 28, 28581, "", "=q4=Wolfslayer Sniper Rifle", "=ds=#w5#", "", "22.42%"};
 		Prev = "KaraMaiden";
 		Next = "KaraNightbane";
-		Type = "Raid";
+		Type = "BCRaid";
 	};
+
+
 
 	AtlasLoot_Data["KaraNightbane"] = {
 		{ 1, 28602, "", "=q4=Robe of the Elder Scribes", "=ds=#s5#, #a1#", "", "17.38%"};
@@ -1897,8 +2054,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 22, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		Prev = "KaraOperaEvent";
 		Next = "KaraCurator";
-		Type = "Raid";
+		Type = "BCRaid";
 	};
+
+
 
 	AtlasLoot_Data["KaraCurator"] = {
 		{ 1, 28612, "", "=q4=Pauldrons of the Solace-Giver", "=ds=#s3#, #a1#", "", "15.19%"};
@@ -1913,8 +2072,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 18, 29756, "", "=q4=Gloves of the Fallen Hero", "=q1=#m1# =ds=#c2#, #c3#, #c8#", "", "21.66%"};
 		Prev = "KaraNightbane";
 		Next = "KaraIllhoof";
-		Type = "Raid";
+		Type = "BCRaid";
 	};
+
+
 
 	AtlasLoot_Data["KaraIllhoof"] = {
 		{ 1, 28660, "", "=q4=Gilded Thorium Cloak", "=ds=#s4#", "", "14.63%"};
@@ -1933,8 +2094,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 22, 22561, "", "=q3=Formula: Enchant Weapon - Soulfrost", "=ds=#p4# (375)", "", "0.30%"};
 		Prev = "KaraCurator";
 		Next = "KaraAran";
-		Type = "Raid";
+		Type = "BCRaid";
 	};
+
+
 
 	AtlasLoot_Data["KaraAran"] = {
 		{ 1, 28672, "", "=q4=Drape of the Dark Reavers", "=ds=#s4#", "", "11.70%"};
@@ -1954,8 +2117,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 22, 22560, "", "=q3=Formula: Enchant Weapon - Sunfire", "=ds=#p4# (375)", "", "0.76%"};
 		Prev = "KaraIllhoof";
 		Next = "KaraNetherspite";
-		Type = "Raid";
+		Type = "BCRaid";
 	};
+
+
 
 	AtlasLoot_Data["KaraNetherspite"] = {
 		{ 1, 28744, "", "=q4=Uni-Mind Headdress", "=ds=#s1#, #a1#", "", "12.91%"};
@@ -1973,8 +2138,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 21, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		Prev = "KaraAran";
 		Next = "KaraChess";
-		Type = "Raid";
+		Type = "BCRaid";
 	};
+
+
 
 	AtlasLoot_Data["KaraChess"] = {
 		{ 1, 28756, "", "=q4=Headdress of the High Potentate", "=ds=#s1#, #a1#", "", "17.98%"};
@@ -1992,8 +2159,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 21, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		Prev = "KaraNetherspite";
 		Next = "KaraPrince";
-		Type = "Raid";
+		Type = "BCRaid";
 	};
+
+
 
 	AtlasLoot_Data["KaraPrince"] = {
 		{ 1, 28765, "", "=q4=Stainless Cloak of the Pure Hearted", "=ds=#s4#", "", "10.37%"};
@@ -2012,10 +2181,12 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 17, 29761, "", "=q4=Helm of the Fallen Defender", "=q1=#m1# =ds=#c1#, #c5#, #c9#", "", "26.73%"};
 		{ 18, 29759, "", "=q4=Helm of the Fallen Hero", "=q1=#m1# =ds=#c2#, #c3#, #c8#", "", "20.48%"};
 		{ 20, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
-		{ 28, 499438, "", "=q4=Smoldering Emberwyrm", "=ds=#e12#", "", [AL_Dif.MIN_DIF] = AtlasLoot_Difficulty.Heroic};
+		{ 28, 499438, "", "=q4=Smoldering Emberwyrm", "=ds=#e12#", "", ""};
 		Prev = "KaraChess";
-		Type = "Raid";
+		Type = "BCRaid";
 	};
+
+
 
 	AtlasLoot_Data["KaraTrash"] = {
 		{ 1, 30642, "", "=q4=Drape of the Righteous", "=ds=#s4#", "", "0.22%"};
@@ -2035,8 +2206,11 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 19, 21903, "", "=q4=Pattern: Soulcloth Shoulders", "=ds=#p8# (375)", "", "0.74%"};
 		{ 20, 21904, "", "=q4=Pattern: Soulcloth Vest", "=ds=#p8# (375)", "", "1.07%"};
 		{ 21, 22545, "", "=q2=Formula: Enchant Boots - Surefooted", "=ds=#p4# (370)", "", "0.66%"};
-		Type = "Raid";
+		Type = "BCRaid";
 	};
+
+
+
 
 
 		----------------------------------------
@@ -2059,8 +2233,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 21, 434603, "", "=q4=Distracting Blades", "=ds=#w11#", "", "21%"};
 		{ 23, 435275, "", "=q3=Orb of the Sin'dorei", "=ds=#m20#", "", "2%"};
 		Next = "SMTVexallus";
-		Type = "ExDungeon";
+		Type = "BCDungeon";
 	};
+
+
 
 	AtlasLoot_Data["SMTVexallus"] = {
 		{ 1, 0, "INV_Box_01", "=q6=#j1#", ""};
@@ -2079,8 +2255,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 23, 435275, "", "=q3=Orb of the Sin'dorei", "=ds=#m20#", "", "2%"};
 		Prev = "SMTFireheart";
 		Next = "SMTDelrissa";
-		Type = "ExDungeon";
+		Type = "BCDungeon";
 	};
+
+
 
 	AtlasLoot_Data["SMTDelrissa"] = {
 		{ 1, 0, "INV_Box_01", "=q6=#j1#", ""};
@@ -2100,8 +2278,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 23, 435275, "", "=q3=Orb of the Sin'dorei", "=ds=#m20#", "", "2%"};
 		Prev = "SMTVexallus";
 		Next = "SMTKaelthas";
-		Type = "ExDungeon";
+		Type = "BCDungeon";
 	};
+
+
 
 	AtlasLoot_Data["SMTKaelthas"] = {
 		{ 1, 434810, "", "=q4=Cloak of Blade Turning", "=ds=#s4#", "", "5%"};
@@ -2119,11 +2299,13 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 21, 434797, "", "=q3=Sun-infused Focus Staff", "=ds=#w9#", "", "14%"};
 		{ 22, 35504, "", "=q3=Phoenix Hatchling", "=ds=#e13#", "", "7%"};
 		Prev = "SMTDelrissa";
-		Next = "SMTKaelthas2";
-		Type = "ExDungeon";
+		Next = "SMTKaelthasHeroic";
+		Type = "BCDungeon";
 	};
 
-	AtlasLoot_Data["SMTKaelthas2"] = {
+
+
+	AtlasLoot_Data["SMTKaelthasHeroic"] = {
 		{ 1, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		{ 2, 434610, "", "=q4=Scarlet Sin'dorei Robes", "=ds=#s5#, #a1#", "", "19%"};
 		{ 3, 434613, "", "=q4=Shoulderpads of the Silvermoon Retainer", "=ds=#s3#, #a2#", "", "19%"};
@@ -2137,8 +2319,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 19, 35513, "", "=q4=Swift White Hawkstrider", "=ds=#e12#", "", "3%"};
 		{ 21, 35504, "", "=q3=Phoenix Hatchling", "=ds=#e13#", "", "7%"};
 		Prev = "SMTKaelthas";
-		Type = "ExDungeon";
+		Type = "BCDungeon";
 	};
+
+
 
 	AtlasLoot_Data["SMTTrash"] = {
 		{ 1, 35516, "", "=q3=Sun Touched Satchel", "=ds=#e1# #m15#", "", "1%"};
@@ -2164,8 +2348,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 18, 34852, "", "=q4=Bracers of the Forgotten Vanquisher", "=q1=#m1# =ds=#c6#, #c3#, #c1#", "", "12%"};
 		{ 20, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		Next = "SPBrutallus";
-		Type = "Raid";
+		Type = "BCRaid";
 	};
+
+
 
 	AtlasLoot_Data["SPBrutallus"] = {
 		{ 1, 34181, "", "=q4=Leggings of Calamity", "=ds=#s11#, #a1#", "", "15%"};
@@ -2181,8 +2367,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 20, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		Prev = "SPKalecgos";
 		Next = "SPFelmyst";
-		Type = "Raid";
+		Type = "BCRaid";
 	};
+
+
 
 	AtlasLoot_Data["SPFelmyst"] = {
 		{ 1, 34352, "", "=q4=Borderland Fortress Grips", "=ds=#s9#, #a4#", "", "15%"};
@@ -2199,8 +2387,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 20, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		Prev = "SPBrutallus";
 		Next = "SPEredarTwins";
-		Type = "Raid";
+		Type = "BCRaid";
 	};
+
+
 
 	AtlasLoot_Data["SPEredarTwins"] = {
 		{ 1, 34205, "", "=q4=Shroud of Redeemed Souls", "=ds=#s4#", "", "18%"};
@@ -2233,8 +2423,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 30, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		Prev = "SPFelmyst";
 		Next = "SPMuru";
-		Type = "Raid";
+		Type = "BCRaid";
 	};
+
+
 
 	AtlasLoot_Data["SPMuru"] = {
 		{ 1, 34232, "", "=q4=Fel Conquerer Raiments", "=ds=#s5#, #a1#", "", "13%"};
@@ -2268,8 +2460,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 30, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		Prev = "SPEredarTwins";
 		Next = "SPKiljaeden";
-		Type = "Raid";
+		Type = "BCRaid";
 	};
+
+
 
 	AtlasLoot_Data["SPKiljaeden"] = {
 		{ 1, 34241, "", "=q4=Cloak of Unforgivable Sin", "=ds=#s4#", "", "16%"};
@@ -2301,8 +2495,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 29, 34336, "", "=q4=Sunflare", "=ds=#h3#, #w4#", "", "18%"};
 		{ 30, 34337, "", "=q4=Golden Staff of the Sin'dorei", "=ds=#w9#", "", "14%"};
 		Prev = "SPMuru";
-		Type = "Raid";
+		Type = "BCRaid";
 	};
+
+
 
 	AtlasLoot_Data["SPTrash"] = {
 		{ 1, 34351, "", "=q4=Tranquil Majesty Wraps", "=ds=#s9#, #a2#", "", "1%"};
@@ -2327,8 +2523,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 24, 35210, "", "=q4=Plans: Sunblessed Breastplate", "=ds=#p2# (365)", "", "0.25%"};
 		{ 25, 35209, "", "=q4=Plans: Hard Khorium Battlefists", "=ds=#p2# (365)", "", "6%"};
 		{ 26, 35211, "", "=q4=Plans: Hard Khorium Battleplate", "=ds=#p2# (365)", "", "0.38%"};
-		Type = "Raid";
+		Type = "BCRaid";
 	};
+
+
 
 	AtlasLoot_Data["SPPatterns"] = {
 		{ 1, 35212, "", "=q4=Pattern: Leather Gauntlets of the Sun", "=ds=#p7# (365)"};
@@ -2379,8 +2577,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 19, 30575, "", "=q4=Nimble Fire Opal", "=ds=#e7#", "", "0.18%"};
 		{ 20, 30581, "", "=q4=Durable Fire Opal", "=ds=#e7#", "", "0.18%"};
 		Next = "TKArcScryer";
-		Type = "ExDungeon";
+		Type = "BCDungeon";
 	};
+
+
 
 	AtlasLoot_Data["TKArcScryer"] = {
 		{ 1, 28396, "", "=q3=Gloves of the Unbound", "=ds=#s9#, #a2#", "", "17.80%"};
@@ -2395,8 +2595,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 20, 30581, "", "=q4=Durable Fire Opal", "=ds=#e7#", "", "0.18%"};
 		Prev = "TKArcUnbound";
 		Next = "TKArcDalliah";
-		Type = "ExDungeon";
+		Type = "BCDungeon";
 	};
+
+
 
 	AtlasLoot_Data["TKArcDalliah"] = {
 		{ 1, 24308, "", "=q4=Pattern: Whitemend Pants", "=ds=#p8# (375)", "", "0.29%"};
@@ -2412,8 +2614,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 20, 30581, "", "=q4=Durable Fire Opal", "=ds=#e7#", "", "0.18%"};
 		Prev = "TKArcScryer";
 		Next = "TKArcHarbinger";
-		Type = "ExDungeon";
+		Type = "BCDungeon";
 	};
+
+
 
 	AtlasLoot_Data["TKArcHarbinger"] = {
 		{ 1, 28415, "", "=q3=Hood of Oblivion", "=ds=#s1#, #a1# (D3)", "", "12.23%"};
@@ -2439,8 +2643,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 25, 29360, "", "=q4=Vileblade of the Betrayer", "=ds=#h1#, #w4#", "", "0.18%"};
 		{ 27, 33861, "", "=q1=The Scroll of Skyriss", "=ds=#m3#", "", "100%"};
 		Prev = "TKArcDalliah";
-		Type = "ExDungeon";
+		Type = "BCDungeon";
 	};
+
+
 
 	AtlasLoot_Data["TKTrash"] = {
 		{ 1, 0, "INV_Box_01", "=q6="..AL["Trash Mobs"], "=q5="..BabbleZone["The Botanica"]};
@@ -2457,8 +2663,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 20, 21905, "", "=q2=Pattern: Arcanoweave Bracers", "=ds=#p8# (350) =q1=#n90#", "", "1.21%"};
 		{ 22, 0, "INV_Box_01", "=q6="..AL["Third Fragment Guardian"], "=q5="..BabbleZone["The Arcatraz"]};
 		{ 23, 24488, "", "=q1=Third Key Fragment", "=ds=#m3#", "", "100%"};
-		Type = "ExDungeon";
+		Type = "BCDungeon";
 	};
+
+
 
 
 
@@ -2479,8 +2687,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 19, 30572, "", "=q4=Imperial Tanzanite", "=ds=#e7#", "", "8.00%"};
 		{ 20, 30573, "", "=q4=Mysterious Fire Opal", "=ds=#e7#", "", "8.00%"};
 		Next = "TKBotFreywinn";
-		Type = "ExDungeon";
+		Type = "BCDungeon";
 	};
+
+
 
 	AtlasLoot_Data["TKBotFreywinn"] = {
 		{ 1, 28317, "", "=q3=Energis Armwraps", "=ds=#s9#, #a1#", "", "17.60%"};
@@ -2497,8 +2707,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 20, 30573, "", "=q4=Mysterious Fire Opal", "=ds=#e7#", "", "8.00%"};
 		Prev = "TKBotSarannis";
 		Next = "TKBotThorngrin";
-		Type = "ExDungeon";
+		Type = "BCDungeon";
 	};
+
+
 
 	AtlasLoot_Data["TKBotThorngrin"] = {
 		{ 1, 24310, "", "=q4=Pattern: Battlecast Pants", "=ds=#p8# (375)", "", "0.44%"};
@@ -2514,8 +2726,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 20, 30573, "", "=q4=Mysterious Fire Opal", "=ds=#e7#", "", "8.00%"};
 		Prev = "TKBotFreywinn";
 		Next = "TKBotLaj";
-		Type = "ExDungeon";
+		Type = "BCDungeon";
 	};
+
+
 
 	AtlasLoot_Data["TKBotLaj"] = {
 		{ 1, 27739, "", "=q3=Spaulders of the Righteous", "=ds=#s3#, #a4# (D3)", "", "18.13%"};
@@ -2530,8 +2744,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 20, 30573, "", "=q4=Mysterious Fire Opal", "=ds=#e7#", "", "8.00%"};
 		Prev = "TKBotThorngrin";
 		Next = "TKBotSplinter";
-		Type = "ExDungeon";
+		Type = "BCDungeon";
 	};
+
+
 
 	AtlasLoot_Data["TKBotSplinter"] = {
 		{ 1, 24311, "", "=q4=Pattern: Whitemend Hood", "=ds=#p8# (375)", "", "0.30%"};
@@ -2550,11 +2766,13 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 19, 28228, "", "=q3=Beast Lord Curiass", "=ds=#s5#, #a3# (D3)", "", "9.59%"};
 		{ 20, 28350, "", "=q3=Warhelm of the Bold", "=ds=#s1#, #a4# (D3)", "", "8.96%"};
 		Prev = "TKBotLaj";
-		Next = "TKBotSplinter2";
-		Type = "ExDungeon";
+		Next = "TKBotSplinterHeroic";
+		Type = "BCDungeon";
 	};
 
-	AtlasLoot_Data["TKBotSplinter2"] = { -- only heroic
+
+
+	AtlasLoot_Data["TKBotSplinterHeroic"] = { -- only heroic
 		{ 1, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		{ 2, 29258, "", "=q4=Boots of Ethereal Manipulation", "=ds=#s11#, #a1#"};
 		{ 3, 29262, "", "=q4=Boots of the Endless Hunt", "=ds=#s12#, #a3#", "", "4.00%"};
@@ -2580,8 +2798,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 26, 31085, "", "=q1=Top Shard of the Arcatraz Key", "=ds=#m3#", "", "100%"};
 		{ 27, 33859, "", "=q1=Warp Splinter Clipping", "=ds=#m3#", "", "100%"};
 		Prev = "TKBotSplinter";
-		Type = "ExDungeon";
+		Type = "BCDungeon";
 	};
+
+
 
 
 		----------------------------------
@@ -2601,8 +2821,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 19, 0, "INV_Box_01", "=q6="..BabbleBoss["Gatewatcher Iron-Hand"], ""};
 		{ 20, 30437, "", "=q1=Jagged Red Crystal", "=ds=#e9#", "", "100%"};
 		Next = "TKMechCapacitus";
-		Type = "ExDungeon";
+		Type = "BCDungeon";
 	};
+
+
 
 	AtlasLoot_Data["TKMechCapacitus"] = {
 		{ 1, 28256, "", "=q3=Thoriumweave Cloak", "=ds=#s4#", "", "14.81%"};
@@ -2618,8 +2840,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 20, 30564, "", "=q4=Shining Fire Opal", "=ds=#e7#", "", "3.45%"};
 		Prev = "TKMechCacheoftheLegion";
 		Next = "TKMechSepethrea";
-		Type = "ExDungeon";
+		Type = "BCDungeon";
 	};
+
+
 
 	AtlasLoot_Data["TKMechSepethrea"] = {
 		{ 1, 28262, "", "=q3=Jade-Skull Breastplate", "=ds=#s5#, #a4#", "", "15.37%"};
@@ -2635,8 +2859,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 20, 30564, "", "=q4=Shining Fire Opal", "=ds=#e7#", "", "3.45%"};
 		Prev = "TKMechCapacitus";
 		Next = "TKMechCalc";
-		Type = "ExDungeon";
+		Type = "BCDungeon";
 	};
+
+
 
 	AtlasLoot_Data["TKMechCalc"] = {
 		{ 1, 28269, "", "=q3=Baba's Cloak of Arcanistry", "=ds=#s4#", "", "11.78%"};
@@ -2654,11 +2880,13 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 19, 28275, "", "=q3=Beast Lord Helm", "=ds=#s1#, #a3# (D3)", "", "12.37%"};
 		{ 20, 28285, "", "=q3=Helm of the Righteous", "=ds=#s1#, #a4# (D3)", "", "10.88%"};
 		Prev = "TKMechSepethrea";
-		Next = "TKMechCalc2";
-		Type = "ExDungeon";
+		Next = "TKMechCalcHeroic";
+		Type = "BCDungeon";
 	};
 
-	AtlasLoot_Data["TKMechCalc2"] = { --only heroic
+
+
+	AtlasLoot_Data["TKMechCalcHeroic"] = { --only heroic
 		{ 1, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		{ 2, 29251, "", "=q4=Boots of the Pious", "=ds=#s12#, #a1#", "", "7.88%"};
 		{ 3, 32076, "", "=q4=Handguards of the Steady", "=ds=#s9#, #a3#"};
@@ -2683,8 +2911,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 26, 33860, "", "=q1=Pathaleon's Projector", "=ds=#m3#", "", "100%"};
 		{ 27, 31086, "", "=q1=Bottom Shard of the Arcatraz Key", "=ds=#m3#", "", "100%"};
 		Prev = "TKMechCalc";
-		Type = "ExDungeon";
+		Type = "BCDungeon";
 	};
+
+
 
 
 		-----------------------------
@@ -2707,8 +2937,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 19, 29949, "", "=q4=Arcanite Steam-Pistol", "=ds=#w5#", "", "22%"};
 		{ 21, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		Next = "TKEyeVoidReaver";
-		Type = "Raid";
+		Type = "BCRaid";
 	};
+
+
 
 	AtlasLoot_Data["TKEyeVoidReaver"] = {
 		{ 1, 29986, "", "=q4=Cowl of the Grand Engineer", "=ds=#s1#, #a1#", "", "13%"};
@@ -2724,8 +2956,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 20, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		Prev = "TKEyeAlar";
 		Next = "TKEyeSolarian";
-		Type = "Raid";
+		Type = "BCRaid";
 	};
+
+
 
 	AtlasLoot_Data["TKEyeSolarian"] = {
 		{ 1, 29977, "", "=q4=Star-Soul Breeches", "=ds=#s11#, #a1#", "", "19%"};
@@ -2744,8 +2978,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 22, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		Prev = "TKEyeVoidReaver";
 		Next = "TKEyeKaelthas";
-		Type = "Raid";
+		Type = "BCRaid";
 	};
+
+
 
 	AtlasLoot_Data["TKEyeKaelthas"] = {
 		{ 1, 29992, "", "=q4=Royal Cloak of the Sunstriders", "=ds=#s4#", "", "14%"};
@@ -2773,8 +3009,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 28, 29905, "", "=q1=Kael's Vial Remnant", "=ds=#m3#", "", "37%"};
 		{ 29, 450001, "", "=q5=Intact Vial of Kael'thas Sunstrider", "", "", "5%"};
 		Prev = "TKEyeSolarian";
-		Type = "Raid";
+		Type = "BCRaid";
 	};
+
+
 
 	AtlasLoot_Data["TKEyeTrash"] = {
 		{ 1, 30024, "", "=q4=Mantle of the Elven Kings", "=ds=#s3#, #a1#", "", "3%"};
@@ -2801,8 +3039,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 23, 30302, "", "=q4=Pattern: Belt of Deep Shadow", "=ds=#p7# (375)", "", "1%"};
 		{ 25, 30183, "", "=q4=Nether Vortex", "=ds=#e8#", "", "75%"};
 		{ 27, 32897, "", "=q2=Mark of the Illidari", "=ds=#m20#", "", "27%"};
-		Type = "Raid";
+		Type = "BCRaid";
 	};
+
+
 
 	AtlasLoot_Data["TKEyeLegendaries"] = {
 		{ 1, 30312, "", "=q5=Infinity Blade", "=ds=#h1#, #w4#"};
@@ -2832,8 +3072,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 8, 33640, "", "=q4=Fury", "=ds=#h4#, #w13#", "", "14%"};
 		{ 10, 33307, "", "=q3=Formula: Enchant Weapon - Executioner", "=ds=#p4# (375)", "", "3%"};
 		Next = "ZAAkilZon";
-		Type = "Raid";
+		Type = "BCRaid";
 	};
+
+
 
 	AtlasLoot_Data["ZAAkilZon"] = {
 		{ 1, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
@@ -2847,8 +3089,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 10, 33307, "", "=q3=Formula: Enchant Weapon - Executioner", "=ds=#p4# (375)", "", "3%"};
 		Prev = "ZANalorakk";
 		Next = "ZAJanAlai";
-		Type = "Raid";
+		Type = "BCRaid";
 	};
+
+
 
 	AtlasLoot_Data["ZAJanAlai"] = {
 		{ 1, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
@@ -2862,8 +3106,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 10, 33307, "", "=q3=Formula: Enchant Weapon - Executioner", "=ds=#p4# (375)", "", "3%"};
 		Prev = "ZAAkilZon";
 		Next = "ZAHalazzi";
-		Type = "Raid";
+		Type = "BCRaid";
 	};
+
+
 
 	AtlasLoot_Data["ZAHalazzi"] = {
 		{ 1, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
@@ -2877,8 +3123,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 10, 33307, "", "=q3=Formula: Enchant Weapon - Executioner", "=ds=#p4# (375)", "", "3%"};
 		Prev = "ZAJanAlai";
 		Next = "ZAMalacrass";
-		Type = "Raid";
+		Type = "BCRaid";
 	};
+
+
 
 	AtlasLoot_Data["ZAMalacrass"] = {
 		{ 1, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
@@ -2899,8 +3147,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 22, 33465, "", "=q4=Staff of Primal Fury", "=ds=#w9#", "", "13%"};
 		Prev = "ZAHalazzi";
 		Next = "ZAZuljin";
-		Type = "Raid";
+		Type = "BCRaid";
 	};
+
+
 
 	AtlasLoot_Data["ZAZuljin"] = {
 		{ 1, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
@@ -2919,15 +3169,17 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 20, 33474, "", "=q4=Ancient Amani Longbow", "=ds=#w2#", "", "14%"};
 		{ 22, 33102, "", "=q4=Blood of Zul'Jin", "=ds=#m2#", "", "87%"};
 		Prev = "ZAMalacrass";
-		Type = "Raid";
+		Type = "BCRaid";
 	};
+
+
 
 	AtlasLoot_Data["ZATimedChest"] = {
 		{ 1, 0, "INV_Box_01", "=q6=#x30#", ""};
 		{ 2, 33590, "", "=q4=Cloak of Fiends", "=ds=#s4#", "", "10%"};
 		{ 3, 33591, "", "=q4=Shadowcaster's Drape", "=ds=#s4#", "", "11%"};
 		{ 4, 33489, "", "=q4=Mantle of Ill Intent", "=ds=#s3#, #a1#", "", "11%"};
-		{ 5, 33480, "", "=q4=Cord of Braided Troll Hair", "=ds=#s10#, #a1#", "", "10%"};
+		{ 5, 33480, "", "=q4=Cord of BBCRaided Troll Hair", "=ds=#s10#, #a1#", "", "10%"};
 		{ 6, 33483, "", "=q4=Life-step Belt", "=ds=#s10#, #a2#", "", "12%"};
 		{ 7, 33971, "", "=q4=Elunite Imbued Leggings", "=ds=#s11#, #a2#", "", "10%"};
 		{ 8, 33805, "", "=q4=Shadowhunter's Treads", "=ds=#s12#, #a3#", "", "10%"};
@@ -2945,8 +3197,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 27, 33496, "", "=q4=Signet of Primal Wrath", "=ds=#s13#", "", "23%"};
 		{ 28, 33499, "", "=q4=Signet of the Last Defender", "=ds=#s13#", "", "18%"};
 		{ 29, 33498, "", "=q4=Signet of the Quiet Forest", "=ds=#s13#", "", "21%"};
-		Type = "Raid";
+		Type = "BCRaid";
 	};
+
+
 
 	AtlasLoot_Data["ZATrash"] = {
 		{ 1, 33993, "", "=q3=Mojo", "=ds=#e13#"};
@@ -2955,8 +3209,12 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 5, 33932, "", "=q2=Amani Charm of the Witch Doctor", "=ds=#m26#", "", "24%"};
 		{ 6, 33931, "", "=q2=Amani Charm of Mighty Mojo", "=ds=#m26#", "", "25%"};
 		{ 7, 33933, "", "=q2=Amani Charm of the Raging Defender", "=ds=#m26#", "", "25%"};
-		Type = "Raid";
+		Type = "BCRaid";
 	};
+
+
+
+
 
 
 
@@ -5305,8 +5563,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 6, 29099, "", "=q4=Greaves of Malorne", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
 		Back = "T4SET";
 		Next = "T5DruidFeral";
-		Type = "Raid";
-	};	
+		Type = "BCRaid";
+	};
+
+	
 	
 	AtlasLoot_Data["T4DruidRestoration"] = {	
 		{ 1, 0, "Spell_Nature_Regeneration", "=q6=#t4s1_2#", "=ec1=#m21# - Fallen Defender"};
@@ -5317,8 +5577,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 6, 29088, "", "=q4=Legguards of Malorne", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
 		Back = "T4SET";
 		Next = "T5DruidRestoration";
-		Type = "Raid";
-	};	
+		Type = "BCRaid";
+	};
+
+	
 	
 	AtlasLoot_Data["T4DruidBalance"] = {	
 		{ 1, 0, "Spell_Nature_InsectSwarm", "=q6=#t4s1_3#", "=ec1=#m21# - Fallen Defender"};
@@ -5329,8 +5591,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 6, 29094, "", "=q4=Britches of Malorne", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
 		Back = "T4SET";
 		Next = "T5DruidBalance";
-		Type = "Raid";
-	};	
+		Type = "BCRaid";
+	};
+
+	
 	
 	AtlasLoot_Data["T4Hunter"] = {	
 		{ 1, 0, "Ability_Hunter_RunningShot", "=q6=#t4s2#", "=ec1=#m21# - Fallen Hero"};
@@ -5341,8 +5605,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 6, 29083, "", "=q4=Demon Stalker Greaves", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
 		Back = "T4SET";
 		Next = "T5Hunter";
-		Type = "Raid";
-	};	
+		Type = "BCRaid";
+	};
+
+	
 	
 	AtlasLoot_Data["T4Mage"] = {	
 		{ 1, 0, "Spell_Frost_IceStorm", "=q6=#t4s3#", "=ec1=#m21# - Fallen Hero"};
@@ -5353,8 +5619,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 6, 29078, "", "=q4=Legwraps of the Aldor", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
 		Back = "T4SET";
 		Next = "T5Mage";
-		Type = "Raid";
-	};	
+		Type = "BCRaid";
+	};
+
+	
 	
 	AtlasLoot_Data["T4PaladinProtection"] = {	
 		{ 1, 0, "Spell_Holy_SealOfMight", "=q6=#t4s4_1#", "=ec1=#m21# - Fallen Champion"};
@@ -5365,8 +5633,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 6, 29069, "", "=q4=Justicar Legguards", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
 		Back = "T4SET";
 		Next = "T5PaladinProtection";
-		Type = "Raid";
-	};	
+		Type = "BCRaid";
+	};
+
+	
 	
 	AtlasLoot_Data["T4PaladinRetribution"] = {	
 		{ 1, 0, "Spell_Holy_AuraOfLight", "=q6=#t4s4_2#", "=ec1=#m21# - Fallen Champion"};
@@ -5377,8 +5647,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 6, 29074, "", "=q4=Justicar Greaves", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
 		Back = "T4SET";
 		Next = "T5PaladinRetribution";
-		Type = "Raid";
-	};	
+		Type = "BCRaid";
+	};
+
+	
 	
 	AtlasLoot_Data["T4PaladinHoly"] = {	
 		{ 1, 0, "Spell_Holy_HolyBolt", "=q6=#t4s4_3#", "=ec1=#m21# - Fallen Champion"};
@@ -5389,8 +5661,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 6, 29063, "", "=q4=Justicar Leggings", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
 		Back = "T4SET";
 		Next = "T5PaladinHoly";
-		Type = "Raid";
-	};	
+		Type = "BCRaid";
+	};
+
+	
 	
 	AtlasLoot_Data["T4PriestHoly"] = {	
 		{ 1, 0, "Spell_Holy_PowerWordShield", "=q6=#t4s5_1#", "=ec1=#m21# - Fallen Defender"};
@@ -5401,8 +5675,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 6, 29053, "", "=q4=Trousers of the Incarnate", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
 		Back = "T4SET";
 		Next = "T5PriestHoly";
-		Type = "Raid";
-	};	
+		Type = "BCRaid";
+	};
+
+	
 	
 	AtlasLoot_Data["T4PriestShadow"] = {	
 		{ 1, 0, "Spell_Shadow_AntiShadow", "=q6=#t4s5_2#", "=ec1=#m21# - Fallen Defender"};
@@ -5413,8 +5689,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 6, 29059, "", "=q4=Leggings of the Incarnate", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
 		Back = "T4SET";
 		Next = "T5PriestShadow";
-		Type = "Raid";
-	};	
+		Type = "BCRaid";
+	};
+
+	
 	
 	AtlasLoot_Data["T4Rogue"] = {	
 		{ 1, 0, "Ability_BackStab", "=q6=#t4s6#", "=ec1=#m21# - Fallen Champion"};
@@ -5425,8 +5703,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 6, 29046, "", "=q4=Netherblade Breeches", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
 		Back = "T4SET";
 		Next = "T5Rogue";
-		Type = "Raid";
-	};	
+		Type = "BCRaid";
+	};
+
+	
 	
 	AtlasLoot_Data["T4ShamanEnhancement"] = {	
 		{ 1, 0, "Spell_FireResistanceTotem_01", "=q6=#t4s7_1#", "=ec1=#m21# - Fallen Champion"};
@@ -5437,8 +5717,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 6, 29042, "", "=q4=Cyclone War-Kilt", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
 		Back = "T4SET";
 		Next = "T5ShamanEnhancement";
-		Type = "Raid";
-	};	
+		Type = "BCRaid";
+	};
+
+	
 	
 	AtlasLoot_Data["T4ShamanRestoration"] = {	
 		{ 1, 0, "Spell_Nature_HealingWaveGreater", "=q6=#t4s7_2#", "=ec1=#m21# - Fallen Champion"};
@@ -5449,8 +5731,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 6, 29030, "", "=q4=Cyclone Kilt", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
 		Back = "T4SET";
 		Next = "T5ShamanRestoration";
-		Type = "Raid";
-	};	
+		Type = "BCRaid";
+	};
+
+	
 	
 	AtlasLoot_Data["T4ShamanElemental"] = {	
 		{ 1, 0, "Spell_Nature_Lightning", "=q6=#t4s7_3#", "=ec1=#m21# - Fallen Champion"};
@@ -5461,8 +5745,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 6, 29036, "", "=q4=Cyclone Legguards", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
 		Back = "T4SET";
 		Next = "T5ShamanElemental";
-		Type = "Raid";
-	};	
+		Type = "BCRaid";
+	};
+
+	
 	
 	AtlasLoot_Data["T4Warlock"] = {	
 		{ 1, 0, "Spell_Shadow_CurseOfTounges", "=q6=#t4s8#", "=ec1=#m21# - Fallen Hero"};
@@ -5473,8 +5759,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 6, 28966, "", "=q4=Voidheart Leggings", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
 		Back = "T4SET";
 		Next = "T5Warlock";
-		Type = "Raid";
-	};	
+		Type = "BCRaid";
+	};
+
+	
 	
 	AtlasLoot_Data["T4WarriorProtection"] = {	
 		{ 1, 0, "INV_Shield_05", "=q6=#t4s9_1#", "=ec1=#m21# - Fallen Defender"};
@@ -5491,8 +5779,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 13, 14987, "", "=q4=Warbringer Leggings", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
 		Back = "T4SET";
 		Next = "T5WarriorProtection";
-		Type = "Raid";
-	};	
+		Type = "BCRaid";
+	};
+
+	
 	
 	AtlasLoot_Data["T4WarriorFury"] = {	
 		{ 1, 0, "Ability_Warrior_BattleShout", "=q6=#t4s9_2#", "=ec1=#m21# - Fallen Defender"};
@@ -5503,8 +5793,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 6, 29022, "", "=q4=Warbringer Greaves", "=ds="..BabbleBoss["Gruul the Dragonkiller"]};
 		Back = "T4SET";
 		Next = "T5WarriorFury";
-		Type = "Raid";
-	};	
+		Type = "BCRaid";
+	};
+
+	
 
 
 	--------------
@@ -5521,8 +5813,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Back = "T5SET";
 		Prev = "T4DruidFeral";
 		Next = "T6DruidFeral";
-		Type = "Raid";
-	};	
+		Type = "BCRaid";
+	};
+
+	
 		
 	AtlasLoot_Data["T5DruidRestoration"] = {	
 		{ 1, 0, "Spell_Nature_Regeneration", "=q6=#t5s1_2#", "=ec1=#m22# - Vanquished Defender"};
@@ -5534,8 +5828,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Back = "T5SET";
 		Prev = "T4DruidRestoration";
 		Next = "T6DruidRestoration";
-		Type = "Raid";
-	};	
+		Type = "BCRaid";
+	};
+
+	
 		
 	AtlasLoot_Data["T5DruidBalance"] = {	
 		{ 1, 0, "Spell_Nature_InsectSwarm", "=q6=#t5s1_3#", "=ec1=#m22# - Vanquished Defender"};
@@ -5547,8 +5843,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Back = "T5SET";
 		Prev = "T4DruidBalance";
 		Next = "T6DruidBalance";
-		Type = "Raid";
-	};	
+		Type = "BCRaid";
+	};
+
+	
 		
 	AtlasLoot_Data["T5Hunter"] = {	
 		{ 1, 0, "Ability_Hunter_RunningShot", "=q6=#t5s2#", "=ec1=#m22# - Vanquished Hero"};
@@ -5560,8 +5858,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Back = "T5SET";
 		Prev = "T4Hunter";
 		Next = "T6Hunter";
-		Type = "Raid";
-	};	
+		Type = "BCRaid";
+	};
+
+	
 		
 	AtlasLoot_Data["T5Mage"] = {	
 		{ 1, 0, "Spell_Frost_IceStorm", "=q6=#t5s3#", "=ec1=#m22# - Vanquished Hero"};
@@ -5573,8 +5873,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Back = "T5SET";
 		Prev = "T4Mage";
 		Next = "T6Mage";
-		Type = "Raid";
-	};	
+		Type = "BCRaid";
+	};
+
+	
 		
 	AtlasLoot_Data["T5PaladinProtection"] = {	
 		{ 1, 0, "Spell_Holy_SealOfMight", "=q6=#t5s4_1#", "=ec1=#m22# - Vanquished Champion"};
@@ -5586,8 +5888,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Back = "T5SET";
 		Prev = "T4PaladinProtection";
 		Next = "T6PaladinProtection";
-		Type = "Raid";
-	};	
+		Type = "BCRaid";
+	};
+
+	
 		
 	AtlasLoot_Data["T5PaladinRetribution"] = {	
 		{ 1, 0, "Spell_Holy_AuraOfLight", "=q6=#t5s4_2#", "=ec1=#m22# - Vanquished Champion"};
@@ -5599,8 +5903,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Back = "T5SET";
 		Prev = "T4PaladinRetribution";
 		Next = "T6PaladinRetribution";
-		Type = "Raid";
-	};	
+		Type = "BCRaid";
+	};
+
+	
 		
 	AtlasLoot_Data["T5PaladinHoly"] = {	
 		{ 1, 0, "Spell_Holy_HolyBolt", "=q6=#t5s4_3#", "=ec1=#m22# - Vanquished Champion"};
@@ -5612,8 +5918,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Back = "T5SET";
 		Prev = "T4PaladinHoly";
 		Next = "T6PaladinHoly";
-		Type = "Raid";
-	};	
+		Type = "BCRaid";
+	};
+
+	
 		
 	AtlasLoot_Data["T5PriestHoly"] = {	
 		{ 1, 0, "Spell_Holy_PowerWordShield", "=q6=#t5s5_1#", "=ec1=#m22# - Vanquished Defender"};
@@ -5625,8 +5933,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Back = "T5SET";
 		Prev = "T4PriestHoly";
 		Next = "T6PriestHoly";
-		Type = "Raid";
-	};	
+		Type = "BCRaid";
+	};
+
+	
 		
 	AtlasLoot_Data["T5PriestShadow"] = {	
 		{ 1, 0, "Spell_Shadow_AntiShadow", "=q6=#t5s5_2#", "=ec1=#m22# - Vanquished Defender"};
@@ -5638,8 +5948,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Back = "T5SET";
 		Prev = "T4PriestShadow";
 		Next = "T6PriestShadow";
-		Type = "Raid";
-	};	
+		Type = "BCRaid";
+	};
+
+	
 		
 	AtlasLoot_Data["T5Rogue"] = {	
 		{ 1, 0, "Ability_BackStab", "=q6=#t5s6#", "=ec1=#m22# - Vanquished Champion"};
@@ -5651,8 +5963,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Back = "T5SET";
 		Prev = "T4Rogue";
 		Next = "T6Rogue";
-		Type = "Raid";
-	};	
+		Type = "BCRaid";
+	};
+
+	
 		
 	AtlasLoot_Data["T5ShamanEnhancement"] = {	
 		{ 1, 0, "Spell_FireResistanceTotem_01", "=q6=#t5s7_1#", "=ec1=#m22# - Vanquished Champion"};
@@ -5664,8 +5978,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Back = "T5SET";
 		Prev = "T4ShamanEnhancement";
 		Next = "T6ShamanEnhancement";
-		Type = "Raid";
-	};	
+		Type = "BCRaid";
+	};
+
+	
 		
 	AtlasLoot_Data["T5ShamanRestoration"] = {	
 		{ 1, 0, "Spell_Nature_HealingWaveGreater", "=q6=#t5s7_2#", "=ec1=#m22# - Vanquished Champion"};
@@ -5677,8 +5993,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Back = "T5SET";
 		Prev = "T4ShamanRestoration";
 		Next = "T6ShamanRestoration";
-		Type = "Raid";
-	};	
+		Type = "BCRaid";
+	};
+
+	
 		
 	AtlasLoot_Data["T5ShamanElemental"] = {	
 		{ 1, 0, "Spell_Nature_Lightning", "=q6=#t5s7_3#", "=ec1=#m22# - Vanquished Champion"};
@@ -5690,8 +6008,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Back = "T5SET";
 		Prev = "T4ShamanElemental";
 		Next = "T6ShamanElemental";
-		Type = "Raid";
-	};	
+		Type = "BCRaid";
+	};
+
+	
 		
 	AtlasLoot_Data["T5Warlock"] = {	
 		{ 1, 0, "Spell_Shadow_CurseOfTounges", "=q6=#t5s8#", "=ec1=#m22# - Vanquished Hero"};
@@ -5703,8 +6023,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Back = "T5SET";
 		Prev = "T4Warlock";
 		Next = "T6Warlock";
-		Type = "Raid";
-	};	
+		Type = "BCRaid";
+	};
+
+	
 		
 	AtlasLoot_Data["T5WarriorProtection"] = {	
 		{ 1, 0, "INV_Shield_05", "=q6=#t5s9_1#", "=ec1=#m22# - Vanquished Defender"};
@@ -5722,8 +6044,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Back = "T5SET";
 		Prev = "T4WarriorProtection";
 		Next = "T6WarriorProtection";
-		Type = "Raid";
-	};	
+		Type = "BCRaid";
+	};
+
+	
 		
 	AtlasLoot_Data["T5WarriorFury"] = {	
 		{ 1, 0, "Ability_Warrior_BattleShout", "=q6=#t5s9_2#", "=ec1=#m22# - Vanquished Defender"};
@@ -5735,8 +6059,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Back = "T5SET";
 		Prev = "T4WarriorFury";
 		Next = "T6WarriorFury";
-		Type = "Raid";
-	};	
+		Type = "BCRaid";
+	};
+
+	
 
 		--------------
 		--- Tier 6 ---
@@ -5754,8 +6080,9 @@ AtlasLoot_Data["T6DruidFeral"] = {
 	{ 9, 34573, "", "=q4=Thunderheart Treads", "=ds="..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 	Back = "T6SET";
 	Prev = "T5DruidFeral";
-	Type = "Raid";
-};	
+	Type = "BCRaid";
+};
+
 	
 AtlasLoot_Data["T6DruidRestoration"] = {	
 	{ 1, 0, "Spell_Nature_Regeneration", "=q6=#t6s1_2#", "=ec1=#m23# - Forgotten Vanquisher"};
@@ -5769,8 +6096,9 @@ AtlasLoot_Data["T6DruidRestoration"] = {
 	{ 9, 34571, "", "=q4=Thunderheart Boots", "=ds="..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 	Back = "T6SET";
 	Prev = "T5DruidRestoration";
-	Type = "Raid";
-};	
+	Type = "BCRaid";
+};
+	
 	
 AtlasLoot_Data["T6DruidBalance"] = {	
 	{ 1, 0, "Spell_Nature_InsectSwarm", "=q6=#t6s1_3#", "=ec1=#m23# - Forgotten Vanquisher"};
@@ -5784,8 +6112,9 @@ AtlasLoot_Data["T6DruidBalance"] = {
 	{ 9, 34572, "", "=q4=Thunderheart Footwraps", "=ds="..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 	Back = "T6SET";
 	Prev = "T5DruidBalance";
-	Type = "Raid";
-};	
+	Type = "BCRaid";
+};
+	
 	
 AtlasLoot_Data["T6Hunter"] = {	
 	{ 1, 0, "Ability_Hunter_RunningShot", "=q6=#t6s2#", "=ec1=#m23# - Forgotten Protector"};
@@ -5799,8 +6128,9 @@ AtlasLoot_Data["T6Hunter"] = {
 	{ 9, 34570, "", "=q4=Gronnstalker's Boots", "=ds="..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 	Back = "T6SET";
 	Prev = "T5Hunter";
-	Type = "Raid";
-};	
+	Type = "BCRaid";
+};
+	
 	
 AtlasLoot_Data["T6Mage"] = {	
 	{ 1, 0, "Spell_Frost_IceStorm", "=q6=#t6s3#", "=ec1=#m23# - Forgotten Vanquisher"};
@@ -5814,8 +6144,9 @@ AtlasLoot_Data["T6Mage"] = {
 	{ 9, 34574, "", "=q4=Boots of the Tempest", "=ds="..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 	Back = "T6SET";
 	Prev = "T5Mage";
-	Type = "Raid";
-};	
+	Type = "BCRaid";
+};
+	
 	
 AtlasLoot_Data["T6PaladinProtection"] = {	
 	{ 1, 0, "Spell_Holy_SealOfMight", "=q6=#t6s4_1#", "=ec1=#m23# - Forgotten Conqueror"};
@@ -5829,8 +6160,9 @@ AtlasLoot_Data["T6PaladinProtection"] = {
 	{ 9, 34560, "", "=q4=Lightbringer Greaves", "=ds="..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 	Back = "T6SET";
 	Prev = "T5PaladinProtection";
-	Type = "Raid";
-};	
+	Type = "BCRaid";
+};
+	
 	
 AtlasLoot_Data["T6PaladinRetribution"] = {	
 	{ 1, 0, "Spell_Holy_AuraOfLight", "=q6=#t6s4_2#", "=ec1=#m23# - Forgotten Conqueror"};
@@ -5844,8 +6176,9 @@ AtlasLoot_Data["T6PaladinRetribution"] = {
 	{ 9, 34561, "", "=q4=Lightbringer Boots", "=ds="..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 	Back = "T6SET";
 	Prev = "T5PaladinRetribution";
-	Type = "Raid";
-};	
+	Type = "BCRaid";
+};
+	
 	
 AtlasLoot_Data["T6PaladinHoly"] = {	
 	{ 1, 0, "Spell_Holy_HolyBolt", "=q6=#t6s4_3#", "=ec1=#m23# - Forgotten Conqueror"};
@@ -5859,8 +6192,9 @@ AtlasLoot_Data["T6PaladinHoly"] = {
 	{ 9, 34559, "", "=q4=Lightbringer Treads", "=ds="..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 	Back = "T6SET";
 	Prev = "T5PaladinHoly";
-	Type = "Raid";
-};	
+	Type = "BCRaid";
+};
+	
 	
 AtlasLoot_Data["T6PriestHoly"] = {	
 	{ 1, 0, "Spell_Holy_PowerWordShield", "=q6=#t6s5_1#", "=ec1=#m23# - Forgotten Conqueror"};
@@ -5874,8 +6208,9 @@ AtlasLoot_Data["T6PriestHoly"] = {
 	{ 9, 34562, "", "=q4=Boots of Absolution", "=ds="..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 	Back = "T6SET";
 	Prev = "T5PriestHoly";
-	Type = "Raid";
-};	
+	Type = "BCRaid";
+};
+	
 	
 AtlasLoot_Data["T6PriestShadow"] = {	
 	{ 1, 0, "Spell_Shadow_AntiShadow", "=q6=#t6s5_2#", "=ec1=#m23# - Forgotten Conqueror"};
@@ -5889,8 +6224,9 @@ AtlasLoot_Data["T6PriestShadow"] = {
 	{ 9, 34563, "", "=q4=Treads of Absolution", "=ds="..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 	Back = "T6SET";
 	Prev = "T5PriestShadow";
-	Type = "Raid";
-};	
+	Type = "BCRaid";
+};
+	
 	
 AtlasLoot_Data["T6Rogue"] = {	
 	{ 1, 0, "Ability_BackStab", "=q6=#t6s6#", "=ec1=#m23# - Forgotten Vanquisher"};
@@ -5904,8 +6240,9 @@ AtlasLoot_Data["T6Rogue"] = {
 	{ 9, 34575, "", "=q4=Slayer's Boots", "=ds="..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 	Back = "T6SET";
 	Prev = "T5Rogue";
-	Type = "Raid";
-};	
+	Type = "BCRaid";
+};
+	
 	
 AtlasLoot_Data["T6ShamanEnhancement"] = {	
 	{ 1, 0, "Spell_FireResistanceTotem_01", "=q6=#t6s7_1#", "=ec1=#m23# - Forgotten Protector"};
@@ -5919,8 +6256,9 @@ AtlasLoot_Data["T6ShamanEnhancement"] = {
 	{ 9, 34567, "", "=q4=Skyshatter Greaves", "=ds="..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 	Back = "T6SET";
 	Prev = "T5ShamanEnhancement";
-	Type = "Raid";
-};	
+	Type = "BCRaid";
+};
+	
 	
 AtlasLoot_Data["T6ShamanRestoration"] = {	
 	{ 1, 0, "Spell_Nature_HealingWaveGreater", "=q6=#t6s7_2#", "=ec1=#m23# - Forgotten Protector"};
@@ -5934,8 +6272,9 @@ AtlasLoot_Data["T6ShamanRestoration"] = {
 	{ 9, 34565, "", "=q4=Skyshatter Boots", "=ds="..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 	Back = "T6SET";
 	Prev = "T5ShamanRestoration";
-	Type = "Raid";
-};	
+	Type = "BCRaid";
+};
+	
 	
 AtlasLoot_Data["T6ShamanElemental"] = {	
 	{ 1, 0, "Spell_Nature_Lightning", "=q6=#t6s7_3#", "=ec1=#m23# - Forgotten Protector"};
@@ -5949,8 +6288,9 @@ AtlasLoot_Data["T6ShamanElemental"] = {
 	{ 9, 34566, "", "=q4=Skyshatter Treads", "=ds="..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 	Back = "T6SET";
 	Prev = "T5ShamanElemental";
-	Type = "Raid";
-};	
+	Type = "BCRaid";
+};
+	
 	
 AtlasLoot_Data["T6Warlock"] = {	
 	{ 1, 0, "Spell_Shadow_CurseOfTounges", "=q6=#t6s8#", "=ec1=#m23# - Forgotten Conqueror"};
@@ -5964,8 +6304,9 @@ AtlasLoot_Data["T6Warlock"] = {
 	{ 9, 34564, "", "=q4=Boots of the Malefic", "=ds="..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 	Back = "T6SET";
 	Prev = "T5Warlock";
-	Type = "Raid";
-};	
+	Type = "BCRaid";
+};
+	
 	
 AtlasLoot_Data["T6WarriorProtection"] = {	
 	{ 1, 0, "INV_Shield_05", "=q6=#t6s9_1#", "=ec1=#m23# - Forgotten Protector"};
@@ -5979,8 +6320,9 @@ AtlasLoot_Data["T6WarriorProtection"] = {
 	{ 9, 34568, "", "=q4=Onslaught Boots", "=ds="..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 	Back = "T6SET";
 	Prev = "T5WarriorProtection";
-	Type = "Raid";
-};	
+	Type = "BCRaid";
+};
+	
 	
 AtlasLoot_Data["T6WarriorFury"] = {	
 	{ 1, 0, "Ability_Warrior_BattleShout", "=q6=#t6s9_2#", "=ec1=#m23# - Forgotten Protector"};
@@ -5994,8 +6336,9 @@ AtlasLoot_Data["T6WarriorFury"] = {
 	{ 9, 34569, "", "=q4=Onslaught Treads", "=ds="..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 	Back = "T6SET";
 	Prev = "T5WarriorFury";
-	Type = "Raid";
-};	
+	Type = "BCRaid";
+};
+	
 
 		--------------------------------
 		--- The Burning Crusade Sets ---

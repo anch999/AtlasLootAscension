@@ -55,7 +55,7 @@ ATLASLOOT_INDENT = "   ";
 --Make the Dewdrop menu in the standalone loot browser accessible here
 AtlasLoot_Dewdrop = AceLibrary("Dewdrop-2.0");
 AtlasLoot_DewdropSubMenu = AceLibrary("Dewdrop-2.0");
-
+AtlasLoot_DewdropSubMenu2 = AceLibrary("Dewdrop-2.0");
 --Variable to cap debug spam
 ATLASLOOT_DEBUGSHOWN = false;
 
@@ -82,6 +82,12 @@ Hooked_Atlas_Refresh = nil;
 Hooked_Atlas_OnShow = nil;
 Hooked_AtlasScrollBar_Update = nil;
 
+--Pre Sets for defficuilty menu
+SelectedTable2TextSet = true
+isTablereference = false
+notPattern = false
+
+
 AtlasLootCharDB={};
 
 local AtlasLootDBDefaults = { 
@@ -104,7 +110,7 @@ local AtlasLootDBDefaults = {
         LastBoss = "EmptyTable",
         HeroicMode = false,
 		BigraidHeroic = false,
-        Bigraid = false,
+        Bigraid = false, 
         AtlasLootVersion = "1",
         AtlasNaggedVersion = "",
         FuBarPosition = 1,
@@ -132,28 +138,6 @@ AtlasLoot_MenuList = {
 	"ARENA3SET",
 	"ARENA4SET",
 };
-
-AtlasLoot_Difficulty = {
-	["Dungeon"] = {"Bloodforged", "Normal", "Heroic", "Mythic", "Mythic 1", "Mythic 2","Mythic 3","Mythic 4","Mythic 5", "Mythic 6","Mythic 7","Mythic 8","Mythic 9", "Mythic 10",};
-	["ExDungeon"] = {"Bloodforged", "Normal/Heroic", ":D", "Mythic", "Mythic 1", "Mythic 2","Mythic 3","Mythic 4","Mythic 5", "Mythic 6","Mythic 7","Mythic 8","Mythic 9", "Mythic 10",};
-	["Raid"] = {"Bloodforged", "Normal Flex", "Heroic Flex", "Ascended",};
-	["Crafting"] = {"Uncommon", "Rare", "Epic"};
-
-	--Enums
-	Bloodforged = 1;
-	Normal = 2;
-	Heroic = 3;
-	Mythic = 4;
-	Ascended = 4;
-	MythicPlus = {5, 6, 7, 8, 9, 10, 11, 12, 13, 14};
-
-	--Helper Enums to Set min and max difficulties
-	MIN_DIF = 18;
-	MAX_DIF = 19;
-}
---AtlasLoot_Difficulty was too long to write for enum reasons
-AL_Dif = AtlasLoot_Difficulty;
-
 
 
 -- Popup Box for first time users
@@ -380,11 +364,15 @@ function AtlasLoot_OnVariablesLoaded()
 	--Position relevant UI objects for loot browser and set up menu
 	AtlasLootDefaultFrame_SelectedCategory:SetPoint("TOP", "AtlasLootDefaultFrame_Menu", "BOTTOM", 0, -4);
 	AtlasLootDefaultFrame_SelectedTable:SetPoint("TOP", "AtlasLootDefaultFrame_SubMenu", "BOTTOM", 0, -4);
+	AtlasLootDefaultFrame_SelectedTable2:SetPoint("TOP", "AtlasLootDefaultFrame_SubMenu2", "BOTTOM", 0, -4);
 	AtlasLootDefaultFrame_SelectedCategory:SetText(AL["Choose Table ..."]);
 	AtlasLootDefaultFrame_SelectedTable:SetText("");
+	AtlasLootDefaultFrame_SelectedTable2:SetText("");
 	AtlasLootDefaultFrame_SelectedCategory:Show();
 	AtlasLootDefaultFrame_SelectedTable:Show();
+	AtlasLootDefaultFrame_SelectedTable2:Show();
 	AtlasLootDefaultFrame_SubMenu:Disable();
+	AtlasLootDefaultFrame_SubMenu2:Disable();
 	if (AtlasLoot.db.profile.LoadAllLoDStartup == true) then
 		AtlasLoot_LoadAllModules();
 	else
@@ -508,59 +496,30 @@ function AtlasLoot_OnLoad()
 	end
 end
 
---[[
-AtlasLoot_GetLoottableHeroic:
-Set up checks to see if we have a heroic loot table or not.
-Returns: HeroicCheck, HeroicdataID, NonHeroicdataID, BigraidCheck, BigraiddataID, SmallraiddataID, heroname
-]]
-function AtlasLoot_GetLoottableHeroic(dataID)
-	local NormalID, HeroicID, Normal25ID, Heroic25ID = nil,nil,nil,nil
-	local dataSource = AtlasLoot_Data
-	local englishFaction = UnitFactionGroup("player")
-	-- remove all Heroic etc infos from the dataID**
-	dataID = gsub(dataID, "_H", "")				-- Horde
-	dataID = gsub(dataID, "_A", "")				-- Alliance
-	dataID = gsub(dataID, "HEROIC", "")			-- Hero Table (10)
-	dataID = gsub(dataID, "25Man", "")			-- 25 Man Table
-	dataID = gsub(dataID, "25ManHEROIC", "")	-- Heroic Table (25)
-	
-	-- dataID from normal <return>
-	-- Check tables if Heroic etc exists
-	if dataSource[dataID] or dataSource[dataID.."_H"] or dataSource[dataID.."_A"] then
-		NormalID = dataID
-		if englishFaction == "Horde" and dataSource[NormalID.."_H"] then
-			NormalID = NormalID.."_H"
-		elseif englishFaction ~= "Horde" and dataSource[NormalID.."_A"] then
-			NormalID = NormalID.."_A"
-		end
-	end
-	if dataSource[dataID.."HEROIC"] or dataSource[dataID.."HEROIC".."_H"] or dataSource[dataID.."HEROIC".."_A"] then
-		HeroicID = dataID.."HEROIC"
-		if englishFaction == "Horde" and dataSource[HeroicID.."_H"] then
-			HeroicID = HeroicID.."_H"
-		elseif englishFaction ~= "Horde" and dataSource[HeroicID.."_A"] then
-			HeroicID = HeroicID.."_A"
-		end
-	end
-	if dataSource[dataID.."25Man"] or dataSource[dataID.."25Man".."_H"] or dataSource[dataID.."25Man".."_A"] then
-		Normal25ID = dataID.."25Man"
-		if englishFaction == "Horde" and dataSource[Normal25ID.."_H"] then
-			Normal25ID = Normal25ID.."_H"
-		elseif englishFaction ~= "Horde" and dataSource[Normal25ID.."_A"] then
-			Normal25ID = Normal25ID.."_A"
-		end
-	end
-	if dataSource[dataID.."25ManHEROIC"] or dataSource[dataID.."25ManHEROIC".."_H"] or dataSource[dataID.."25ManHEROIC".."_A"] then
-		Heroic25ID = dataID.."25ManHEROIC"
-		if englishFaction == "Horde" and dataSource[Heroic25ID.."_H"] then
-			Heroic25ID = Heroic25ID.."_H"
-		elseif englishFaction ~= "Horde" and dataSource[Heroic25ID.."_A"] then
-			Heroic25ID = Heroic25ID.."_A"
-		end
-	end
-
-	return NormalID, HeroicID, Normal25ID, Heroic25ID
-end
+AtlasLoot_Difficulty = {
+		-- table of difficuilitys and there itemID references
+		["ClassicDungeon"] = { {"Normal", "" }, {"Bloodforged", 1 } };
+		
+		["ClassicDungeonExt"] = { {"Normal", "" }, {"Heroic", 3 }, {"Mythic", 4 }, {"Mythic 1", 5 }, {"Mythic 2", 6 }, {"Mythic 3", 7 }, {"Mythic 4", 8 }, {"Mythic 5", 9 }, {"Mythic 6", 10 },
+		{"Mythic 7", 11 }, {"Mythic 8", 12 }, {"Mythic 9", 13 }, {"Mythic 10", 14 }, {"Bloodforged", 1 }, };
+		
+		["ClassicRaid"] = { {"Normal Flex", "" }, {"Heroic Flex", 3 }, {"Ascended", 4 }, {"Bloodforged", 1 }, };
+		
+		["BCDungeon"] = { {"Normal/Heroic", "" }, {"Mythic", 4 }, {"Mythic 1", 5 }, {"Mythic 2", 6 }, {"Mythic 3", 7 }, {"Mythic 4", 8 }, {"Mythic 5", 9 }, {"Mythic 6", 10 },
+		{"Mythic 7", 11 }, {"Mythic 8", 12 }, {"Mythic 9", 13 }, {"Mythic 10", 14 }, {"Bloodforged", 1 }, };
+		
+		["BCRaid"] = { {"Normal Flex", "" }, {"Heroic Flex", 3 }, {"Ascended", 4 }, {"Bloodforged", 1 }, };
+		
+		["WrathDungeon"] = { {"Normal", "" }, {"Mythic", 4 }, {"Mythic1", 5 }, {"Mythic2", 6 }, {"Mythic3", 7 }, {"Mythic4", 8 }, {"Mythic5", 9 }, {"Mythic6", 10 },
+		{"Mythic7", 11 }, {"Mythic8", 12 }, {"Mythic9", 13 }, {"Mythic10", 14 }, {"Bloodforged", 1 }, };
+		
+		["WrathRaid"] = { {"Normal Flex", "" }, {"Heroic Flex", 3 }, {"Ascended", 4 }, {"Bloodforged", 1 }, };
+		
+		["Crafting"] = { {"Crafting Patterns", "" }, {"Item Normal", "=s=Normal" }, {"Bloodforged", 1 }, },
+		
+		["CraftingExt"] = { {"Crafting Pattern Uncommon", "" }, {"Crafting Patterns Rare", "Rare" }, {"Crafting Patterns Epic", "Epic" }, {"Item Uncommon", "=s=" }, {"Item Rare", "=s=Rare" }, {"Item Epic", "=s=Epic" } }
+		
+}
 
 --[[
 AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame):
@@ -585,16 +544,11 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 		DEFAULT_CHAT_FRAME:AddMessage("No dataID!");
         return;
 	end
-    
     	--Get AtlasQuest out of the way
 	if (AtlasQuestInsideFrame) then
 		HideUIPanel(AtlasQuestInsideFrame);
 	end
-    
-    --Hide the toggle to switch between heroic and normal loot tables, we will only show it if required
-	AtlasLootItemsFrame_Heroic:Hide();
-    AtlasLoot10Man25ManSwitch:Hide();
-    
+
     --Ditch the Quicklook selector
     AtlasLoot_QuickLooks:Hide();
     AtlasLootQuickLooksButton:Hide();
@@ -608,7 +562,11 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
     
     dataSource_backup = dataSource;
 	if dataID == "SearchResult" or dataID == "WishList" then
-        dataSource = {};
+        ItemindexID = "";
+		AtlasLootDefaultFrame_SubMenu2:Disable();
+		AtlasLootDefaultFrame_SelectedTable2:SetText("");
+		AtlasLootDefaultFrame_SelectedTable2:Hide();
+		dataSource = {};
         -- Match the page number to display
         wlPage = tonumber(dataSource_backup:match("%d+$"));
         -- Aquiring items of the page
@@ -623,36 +581,44 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
     else
         dataSource = AtlasLoot_Data;
     end
-
-	--Set up checks to see if we have a heroic loot table or not
-	local NormalID, HeroicID, Normal25ID, Heroic25ID = AtlasLoot_GetLoottableHeroic(dataID)
-	if AtlasLoot.db.profile.HeroicMode and HeroicID then
-		dataID = HeroicID
-	elseif AtlasLoot.db.profile.Bigraid and Normal25ID then
-		dataID = Normal25ID
-	elseif AtlasLoot.db.profile.BigraidHeroic and Heroic25ID then
-		dataID = Heroic25ID
+	if dataID == "FilterList" then
+		Type = lastType;
 	else
-		if not NormalID then
-			if Normal25ID and not AtlasLoot.db.profile.HeroicMode then
-				dataID = Normal25ID
-				AtlasLoot.db.profile.Bigraid = true
-				AtlasLoot.db.profile.BigraidHeroic = false
-				AtlasLoot.db.profile.HeroicMode = false
-			elseif HeroicID then
-				dataID = HeroicID
-				AtlasLoot.db.profile.Bigraid = false
-				AtlasLoot.db.profile.BigraidHeroic = false
-				AtlasLoot.db.profile.HeroicMode = true
-			elseif Heroic25ID then
-				dataID = Heroic25ID
-				AtlasLoot.db.profile.Bigraid = false
-				AtlasLoot.db.profile.BigraidHeroic = true
-				AtlasLoot.db.profile.HeroicMode = false
-			end
-		else
-			dataID = NormalID
+		Type = dataSource[dataID].Type;
+	end
+	
+	if Type ~= lastType then
+		AtlasLoot_DifficultyDisable()
+		if lastReference ~= nil then
+			dataID = gsub(dataID, lastReference, "");	-- removes old table reference before adding a new 1 if needed
 		end
+		ItemindexID = "";
+	end
+
+	if DewDrop2Enable or not dataID == nil or lastReference then
+		dataID = gsub(dataID, lastReference, "");	-- removes old table reference before adding a new 1 if needed
+	end
+
+	if Type == nil and ATLASLOOT_FILTER_ENABLE == false or dataID:match("MENU") or ATLASLOOT_FILTER_ENABLE and dataSource[AtlasLoot_CurrentBoss].Type == nil  then -- disable difficulty menu
+		AtlasLoot_DifficultyDisable()
+		AtlasLoot_CurrentBoss = dataID;
+	elseif ATLASLOOT_FILTER_ENABLE then
+		AtlasLoot_DifficultyEnable(AtlasLoot_CurrentBoss, dataSource)
+	elseif Type ~= nil then-- enable difficulty menu 
+		AtlasLoot_DifficultyEnable(dataID, dataSource)
+		AtlasLoot_CurrentBoss = dataID
+	end
+
+	if isTablereference and not notPattern then  		-- if the itemID is the item rather from a crafting pattern rather then the pattern itself
+		dataID = dataID .. tableReference;
+		DewDrop2Enable = true;
+		lastReference = tableReference;
+	elseif isTablereference and notPattern then			-- if the itemID is a new table reference rather then and itemID reference
+		dataID = dataID .. tableReference;
+		DewDrop2Enable = true;
+		lastReference = tableReference;
+	else
+		DewDrop2Enable = false;
 	end
 	
 	--Hide UI objects so that only needed ones are shown
@@ -663,12 +629,12 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
         getglobal("AtlasLootItem_"..i).itemID = 0;
         getglobal("AtlasLootItem_"..i).spellitemID = 0;
 	end
-    
+
     if AtlasLoot_TableNames[dataID] ~= nil and AtlasLoot_TableNames[dataID][2] == "Menu" then
         AtlasLoot_GenerateAtlasMenu(dataID, pFrame);
         return;
     end
-
+	
 	-- Create the loottable
 	if (dataID == "SearchResult") or (dataID == "WishList") or (AtlasLoot_IsLootTableAvailable(dataID)) then
 
@@ -702,35 +668,43 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 			 	if(dataSource[dataID][i][AL_Dif.MIN_DIF] ~= "" and dataSource[dataID][i][AL_Dif.MIN_DIF] > GetDifficultyTier()) then toShow = false end end
 
 			--Check for a valid object (that it exists, and that it has a name)
-			if(dataSource[dataID][i] ~= nil and dataSource[dataID][i][4] ~= "" and toShow) then
-				if string.sub(dataSource[dataID][i][2], 1, 1) == "s" then
+			if(dataSource[dataID][i] ~= nil and dataSource[dataID][i][4] ~= "") then					
+				
+				if dataSource[dataID][i][8] and tonumber(ItemindexID) then
+					-- Used if an item has more then 1 version with the same name eg Atiesh
+					IDfound = AL_FindId(string.sub(dataSource[dataID][i][4], 5) .. " " .. dataSource[dataID][i][8], ItemindexID) -- Used for 8th table entery in a loottable for when we have items with the same name eg Atiesh
+				else	
+					--	if something was found in itemID database show that if not show default table item
+					IDfound = AL_FindId(string.sub(dataSource[dataID][i][4], 5), ItemindexID) or dataSource[dataID][i][2]
+				end
+
+				if string.sub(IDfound, 1, 1) == "s" then
 					isItem = false;
 				else
 					isItem = true;
 				end
 
 				if isItem then
-					--If difficulty has changed, find new id and set it.
-					if dif and dataSource[dataID][i][2] ~= 0 then
-						--Some items have an entry in the Difficulty table but are not in the game
-						--To deal with this items will need to have variable [AL_Dif.MAX_DIF] set to their max difficulty, this seems to usually be AL_Dif.Normal or AL_Dif.Mythic
-						if dataSource[dataID][i][AL_Dif.MAX_DIF] ~= nil and dataSource[dataID][i][AL_Dif.MAX_DIF] ~= "" then
-							dataSource[dataID][i][2] = AL_FindId(string.sub(dataSource[dataID][i][4], 5), math.min(dataSource[dataID].Dif, dataSource[dataID][i][AL_Dif.MAX_DIF])) or dataSource[dataID][i][2];
-						else
-							dataSource[dataID][i][2] = AL_FindId(string.sub(dataSource[dataID][i][4], 5), dataSource[dataID].Dif) or dataSource[dataID][i][2]; --No need for negatives anymore :D
-						end
-					end
-
-					itemName, itemLink, itemQuality, itemLevel, itemMinLevel, itemType, itemSubType, itemCount, itemEquipLoc, itemTexture = GetItemInfo(dataSource[dataID][i][2]);
+					itemName, itemLink, itemQuality, itemLevel, itemMinLevel, itemType, itemSubType, itemCount, itemEquipLoc, itemTexture = GetItemInfo(IDfound);
 					--If the client has the name of the item in cache, use that instead.
 					--This is poor man's localisation, English is replaced be whatever is needed
-					if(GetItemInfo(dataSource[dataID][i][2])) then
+					if(GetItemInfo(IDfound)) then
 						_, _, _, itemColor = GetItemQualityColor(itemQuality);
 						text = itemColor..itemName;
 					else
-						if(GetItemInfo(dataSource[dataID][i][2])) then
+						if(GetItemInfo(IDfound)) or not dataSource[dataID][i][2] == IDfound then
 							_, _, _, itemColor = GetItemQualityColor(itemQuality);
 							text = itemColor..itemName;
+						elseif dataSource[dataID][i][2] ~= IDfound then
+							--If the item is not in cache, use the saved value and process it
+							if tonumber(ItemindexID) then
+								text = (string.sub(dataSource[dataID][i][4], 5));
+								text = "=q4=" .. text;
+								text = AtlasLoot_FixText(text);
+							else
+								text = dataSource[dataID][i][4];
+								text = AtlasLoot_FixText(text);
+							end
 						else
 							--If the item is not in cache, use the saved value and process it
 							text = dataSource[dataID][i][4];
@@ -738,7 +712,7 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 						end
 					end
 				else
-					spellName, _, spellIcon, _, _, _, _, _, _ = GetSpellInfo(string.sub(dataSource[dataID][i][2], 2));
+					spellName, _, spellIcon, _, _, _, _, _, _ = GetSpellInfo(string.sub(IDfound, 2));
 					if spellName then
                         text = AtlasLoot_FixText(string.sub(dataSource[dataID][i][4], 1, 4)..spellName);
                     else
@@ -773,7 +747,7 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 				if dataSource[dataID][i][3] == "?" then
 					iconFrame:SetTexture("Interface\\Icons\\INV_Misc_QuestionMark");
 				elseif dataSource[dataID][i][3] == "" then
-					iconFrame:SetTexture(GetItemIcon(dataSource[dataID][i][2]));
+					iconFrame:SetTexture(GetItemIcon(IDfound));
 				elseif (not isItem) and (spellIcon) then
 					if tonumber(dataSource[dataID][i][3]) then
 						iconFrame:SetTexture(GetItemIcon(tonumber(dataSource[dataID][i][3])));
@@ -796,8 +770,8 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
                 itemButton.extra = extra;
 				
                 --Highlight items in the wishlist
-                if dataSource[dataID][i][2] ~= "" and dataSource[dataID][i][2] ~= 0 and dataID ~= "WishList" and AtlasLootWishList["Options"][UnitName("player")]["Mark"] == true then
-					local xitemexistwish, itemwishicons = AtlasLoot_WishListCheck(dataSource[dataID][i][2], true)
+                if IDfound ~= "" and IDfound ~= 0 and dataID ~= "WishList" and AtlasLootWishList["Options"][UnitName("player")]["Mark"] == true then
+					local xitemexistwish, itemwishicons = AtlasLoot_WishListCheck(IDfound, true)
                     if xitemexistwish then
                         text = itemwishicons.." "..text;
                     end
@@ -806,25 +780,29 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 				nameFrame:SetText(text);
 				extraFrame:SetText(extra);
 				extraFrame:Show();
-
 				--For convenience, we store information about the objects in the objects so that it can be easily accessed later
-				if((string.sub(dataSource[dataID][i][2], 1, 1) == "s") and (AtlasLoot.db.profile.CraftingLink ~= 1) and (tonumber(dataSource[dataID][i][3]))) then
+				if((string.sub(IDfound, 1, 1) == "s") and (AtlasLoot.db.profile.CraftingLink ~= 1) and (tonumber(dataSource[dataID][i][3]))) then
                     itemButton.itemID = dataSource[dataID][i][3];
                     itemButton.spellitemID = dataSource[dataID][i][3];
-                else
-                    itemButton.itemID = dataSource[dataID][i][2];
-                    if tonumber(dataSource[dataID][i][3]) then
-                        itemButton.spellitemID = dataSource[dataID][i][3];
-                    else
-                        itemButton.spellitemID = 0;
-                    end
+				elseif ((string.sub(IDfound, 1, 1) == "s") and notPattern == true and (tonumber(dataSource[dataID][i][3]))) then
+                    itemButton.itemID = dataSource[dataID][i][3];
+                    itemButton.spellitemID = dataSource[dataID][i][3];
+				else					
+					itemButton.itemID = IDfound;			
+
+						if tonumber(dataSource[dataID][i][3]) then
+							itemButton.spellitemID = dataSource[dataID][i][3];
+						else
+							itemButton.spellitemID = 0;
+						end
+
                 end
                 itemButton.iteminfo = {};
 				if isItem then
-					itemButton.iteminfo.idcore = itemId;
-					itemButton.iteminfo.icontexture = GetItemIcon(itemId);
-				    itemButton.storeID = itemId;
-                    itemButton.dressingroomID = itemId;
+					itemButton.iteminfo.idcore = IDfound;
+					itemButton.iteminfo.icontexture = IDfound;
+				    itemButton.storeID = IDfound;
+                    itemButton.dressingroomID = IDfound;
                 else
 				    itemButton.iteminfo.idcore = dataSource[dataID][i][3];
 					itemButton.iteminfo.icontexture = GetItemIcon(dataSource[dataID][i][3]);
@@ -852,9 +830,13 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 				itemButton.i = 1;
 				itemButton:Show();
                 
-                if dataSource[dataID][i][2] == 0 then getglobal("AtlasLootItem_"..i.."_Unsafe"):Hide(); end
-				
+                if IDfound == 0 then getglobal("AtlasLootItem_"..i.."_Unsafe"):Hide(); end
+
             end
+		end
+
+		if dataID ~= "FilterList" then
+		lastType = dataSource[dataID].Type
 		end
 
         AtlasLootItemsFrame.refresh = {dataID, dataSource_backup, boss, pFrame};
@@ -881,76 +863,23 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
         --This is a valid QuickLook, so show the UI objects
         AtlasLoot_QuickLooks:Show();
         AtlasLootQuickLooksButton:Show();
-
-
 		--Check if difficulties exist, if so show difficulty select buttons
 		if (dataID ~= "SearchResult" and AtlasLoot_Data[dataID].Dif ~= nil) then
-			AtlasLootMythicButton.difficulty_type = AtlasLoot_Data[dataID].Type or "Dungeon" 
-			AtlasLootMythicButton:Show();
-			AtlasLoot_DifficultySelect:Show();
-		end
-
-		if (dataID == "SearchResult" and dataSource[dataID].Dif ~= nil) then
-			AtlasLootMythicButton.difficulty_type = dataSource[dataID].Type or "Dungeon" 
-			AtlasLootMythicButton:Show();
-			AtlasLoot_DifficultySelect:Show();
+			--AtlasLootMythicButton.difficulty_type = AtlasLoot_Data[dataID].Type or "Dungeon" 
+			--AtlasLootMythicButton:Show();
+			--AtlasLoot_DifficultySelect:Show();
 		end
 		
+		if (dataID == "SearchResult" and dataSource[dataID].Dif ~= nil) then
+			--AtlasLootMythicButton.difficulty_type = dataSource[dataID].Type or "Dungeon" 
+			--AtlasLootMythicButton:Show();
+			--AtlasLoot_DifficultySelect:Show();
+		end
+
 		-- Show the Filter Check-Box
-		if dataID ~= "WishList" and dataID ~= "SearchResult" and dataSource_backup ~= "AtlasLootCrafting" then
+		if dataID ~= "WishList" and dataID ~= "SearchResult" and dataSource_backup ~= "AtlasLootCrafting"  then
 			AtlasLootFilterCheck:Show();
 		end
-        
-		--Decide whether to show the Heroic mode toggle
-        --Checks if a heroic version of the loot table is available.
-		NormalID, HeroicID, Normal25ID, Heroic25ID = AtlasLoot_GetLoottableHeroic(AtlasLootItemsFrame.refreshOri[1])
-
-		if AtlasLoot.db.profile.Bigraid and Normal25ID and NormalID then
-			AtlasLoot10Man25ManSwitch:SetText(AL["Show Normal Loot"])
-			AtlasLoot10Man25ManSwitch.lootpage = NormalID
-			AtlasLoot10Man25ManSwitch:Show()
-		elseif AtlasLoot.db.profile.BigraidHeroic and Heroic25ID and HeroicID then
-			AtlasLoot10Man25ManSwitch:SetText(AL["Show Normal Loot"])
-			AtlasLoot10Man25ManSwitch.lootpage = HeroicID
-			AtlasLoot10Man25ManSwitch:Show()
-		elseif AtlasLoot.db.profile.HeroicMode and HeroicID and Heroic25ID then
-			AtlasLoot10Man25ManSwitch:SetText(AL["Show Heroic/Ascended Loot"]);
-			AtlasLoot10Man25ManSwitch.lootpage = Heroic25ID
-			AtlasLoot10Man25ManSwitch:Show();
-		elseif not AtlasLoot.db.profile.Bigraid and NormalID and Normal25ID then
-			AtlasLoot10Man25ManSwitch:SetText(AL["Show Heroic/Ascended Loot"]);
-			AtlasLoot10Man25ManSwitch.lootpage = Normal25ID;
-			AtlasLoot10Man25ManSwitch:Show();
-		end
-		-- Heroic check
-		if AtlasLoot.db.profile.Bigraid and Normal25ID and Heroic25ID then
-			AtlasLootItemsFrame_Heroic:Show()
-			AtlasLootItemsFrame_Heroic:SetChecked(false)
-			AtlasLootItemsFrame_Heroic:Enable()
-		elseif AtlasLoot.db.profile.BigraidHeroic and Heroic25ID then
-			AtlasLoot10Man25ManSwitch:SetText(AL["Show Normal Loot"])
-			AtlasLootItemsFrame_Heroic:Show()
-			AtlasLootItemsFrame_Heroic:SetChecked(true)
-			if Normal25ID then
-				AtlasLootItemsFrame_Heroic:Enable()
-			else
-				AtlasLootItemsFrame_Heroic:Disable()
-			end
-		elseif AtlasLoot.db.profile.HeroicMode and HeroicID then
-			AtlasLootItemsFrame_Heroic:Show()
-			AtlasLootItemsFrame_Heroic:SetChecked(true)
-			AtlasLootItemsFrame_Heroic:Enable()
-			if NormalID then
-				AtlasLootItemsFrame_Heroic:Enable()
-			else
-				AtlasLootItemsFrame_Heroic:Disable()
-			end
-		elseif NormalID and HeroicID then
-			AtlasLootItemsFrame_Heroic:Show()
-			AtlasLootItemsFrame_Heroic:SetChecked(false)
-			AtlasLootItemsFrame_Heroic:Enable()
-		end
-        
 		--Hide navigation buttons by default, only show what we need
 		getglobal("AtlasLootItemsFrame_BACK"):Hide();
 		getglobal("AtlasLootItemsFrame_NEXT"):Hide();
@@ -960,8 +889,8 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 			if AtlasLoot_Data[dataID].Dif ~= nil then
 					local d = AtlasLoot_Data[dataID].Type or "Dungeon"
 					affix = " ("..AtlasLoot_Difficulty[d][GetDifficultyTier()]..")"
-			end			
-		    AtlasLoot_BossName:SetText(AtlasLoot_TableNames[dataID][1]..affix);
+			end		
+			AtlasLoot_BossName:SetText(AtlasLoot_TableNames[dataID][1]..affix);
         else
             AtlasLoot_BossName:SetText(boss);
         end
@@ -987,9 +916,10 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 			end
 			if tablebase.Back then
 				getglobal("AtlasLootItemsFrame_BACK"):Show();
-				getglobal("AtlasLootItemsFrame_BACK").lootpage = tablebase.Back;
+				getglobal("AtlasLootItemsFrame_BACK").lootpage = tablebase.Back;			
 			end
 		end
+		
 	end
 
 	--For Alphamap and Atlas integration, show a 'close' button to hide the loot table and restore the map view
@@ -1004,7 +934,7 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 	if ATLASLOOT_FILTER_ENABLE == true and dataID ~= "FilterList" then
 		AtlasLoot_HideNoUsableItems()
 	end
-	
+
 	if AtlasLoot.db.profile.ItemAutoQuery then AtlasLoot_QueryLootPage(); end
 end
 
@@ -1083,23 +1013,6 @@ function AtlasLoot_GenerateAtlasMenu(dataID, pFrame)
     AtlasLoot_QuickLooks:Hide();
     AtlasLootQuickLooksButton:Hide();
 	AtlasLootFilterCheck:Hide();
-    
-    AtlasLootItemsFrame_Heroic:Hide();
-    AtlasLoot10Man25ManSwitch:Hide();
-    
-    BigraidCheck=string.sub(dataID, string.len(dataID)-4, string.len(dataID));
-    BigraiddataID=dataID.."25Man";
-    if BigraidCheck=="25Man" then
-        AtlasLoot10Man25ManSwitch:SetText(AL["Show Normal Loot"]);
-        AtlasLoot10Man25ManSwitch.lootpage = string.sub(dataID, 1, string.len(dataID)-5);
-        AtlasLoot10Man25ManSwitch:Show();
-    else
-        if dataSource[BigraiddataID] then
-            AtlasLoot10Man25ManSwitch:SetText(AL["Show Heroic/Ascended Loot"]);
-            AtlasLoot10Man25ManSwitch.lootpage = BigraiddataID;
-            AtlasLoot10Man25ManSwitch:Show();
-        end
-    end
     
     --Hide navigation buttons by default, only show what we need
     getglobal("AtlasLootItemsFrame_BACK"):Hide();
@@ -1214,76 +1127,6 @@ function AtlasLoot_NavButton_OnClick()
 		--Fallback for if the requested loot page is a menu and does not have a .refresh instance
 		AtlasLoot_ShowItemsFrame(this.lootpage, "", "", AtlasFrame);
 	end
-end
-
---[[
-AtlasLoot_HeroicModeToggle:
-Switches between the heroic and normal versions of a loot page
-]]
-function AtlasLoot_HeroicModeToggle()
-	local Heroic
-	local dataID
-    if ATLASLOOT_FILTER_ENABLE then
-        dataID = AtlasLootItemsFrame.refreshOri[1]
-    else
-        dataID = AtlasLootItemsFrame.refresh[1]
-    end
-
-	local NormalID, HeroicID, Normal25ID, Heroic25ID = AtlasLoot_GetLoottableHeroic(dataID)
-
-	if AtlasLoot.db.profile.Bigraid and Heroic25ID then
-		AtlasLoot.db.profile.Bigraid = false
-		AtlasLoot.db.profile.BigraidHeroic = true
-		dataID = Heroic25ID
-	elseif AtlasLoot.db.profile.HeroicMode and NormalID then
-		AtlasLoot.db.profile.HeroicMode = false
-		dataID = NormalID
-	elseif AtlasLoot.db.profile.BigraidHeroic and Normal25ID then
-		AtlasLoot.db.profile.Bigraid = true
-		AtlasLoot.db.profile.BigraidHeroic = false
-		dataID = Normal25ID
-	else
-		AtlasLoot.db.profile.HeroicMode = true
-		AtlasLoot.db.profile.Bigraid = false
-		AtlasLoot.db.profile.BigraidHeroic = false
-		dataID = HeroicID
-	end
-	AtlasLoot_ShowItemsFrame(dataID, AtlasLootItemsFrame.refresh[2], "", AtlasLootItemsFrame.refresh[4]);
-end
-
---[[
-AtlasLoot_10Man25ManToggle:
-Switches between the heroic and normal versions of a loot page
-]]
-function AtlasLoot_10Man25ManToggle()
-	local Lootpage = AtlasLoot10Man25ManSwitch.lootpage;
-    --Deal with loot filter issue
-    if ATLASLOOT_FILTER_ENABLE == true then
-        Lootpage = AtlasLootItemsFrame.refreshOri[1];
-    end
-	
-	local NormalID, HeroicID, Normal25ID, Heroic25ID = AtlasLoot_GetLoottableHeroic(Lootpage)
-    if AtlasLoot.db.profile.Bigraid and Normal25ID then
-        AtlasLoot.db.profile.Bigraid = false
-	elseif AtlasLoot.db.profile.BigraidHeroic and Heroic25ID then
-		AtlasLoot.db.profile.BigraidHeroic = false
-		AtlasLoot.db.profile.HeroicMode = true
-	elseif AtlasLoot.db.profile.HeroicMode and HeroicID then
-		AtlasLoot.db.profile.HeroicMode = false
-		AtlasLoot.db.profile.BigraidHeroic = true
-	else
-		AtlasLoot.db.profile.Bigraid = true
-		AtlasLoot.db.profile.BigraidHeroic = false
-		AtlasLoot.db.profile.HeroicMode = false
-	end
-	
-    if AtlasLootItemsFrame.refresh then
-	    AtlasLoot_ShowItemsFrame(Lootpage, AtlasLootItemsFrame.refresh[2], "", AtlasLootItemsFrame.refresh[4]);
-    elseif AtlasLootDefaultFrame:IsVisible() then
-        AtlasLoot_ShowItemsFrame(Lootpage, AtlasLootItemsFrame.refresh[2], "", { "TOPLEFT", "AtlasLootDefaultFrame_LootBackground", "TOPLEFT", "2", "-2" });
-    else
-        AtlasLoot_ShowItemsFrame(Lootpage, AtlasLootItemsFrame.refresh[2], "", nil);
-    end
 end
 
 --[[
@@ -1530,37 +1373,15 @@ AtlasLoot_DifficultyDungeonSelect(button)
 button: Identity of the button pressed to trigger the function
 Shows the GUI for choosing Mythic Tier
 ]]
-function AtlasLoot_ShowDifficultySelect(button, difficulty)
-	local dewdrop = AceLibrary("Dewdrop-2.0");
-	if dewdrop:IsOpen(button) then
-		dewdrop:Close(1);
+function AL_FindId(name, difficulty)
+	if ItemIDsDatabase[name] ~= nil then
+		return ItemIDsDatabase[name][difficulty]
 	else
-		local setOptions = function()
-			for t = 1, #AtlasLoot_Difficulty[difficulty], 1 do
-				if not (t == 3 and difficulty == "ExDungeon") then
-					dewdrop:AddLine(
-						"text", AtlasLoot_Difficulty[difficulty][t],
-						"tooltipTitle", AtlasLoot_Difficulty[difficulty][t],
-						"tooltipText", "Swap to Difficulty Level: "..AtlasLoot_Difficulty[difficulty][t],
-						"func", function()
-							SetDifficultyTier(t)
-							if AtlasLootItemsFrame:IsVisible() and AtlasLootItemsFrame.refresh then
-								AtlasLoot_ShowItemsFrame(AtlasLootItemsFrame.refresh[1], AtlasLootItemsFrame.refresh[2], AtlasLootItemsFrame.refresh[3], AtlasLootItemsFrame.refresh[4]);
-							end
-							dewdrop:Close(1);
-						end
-					);
-				end
-			end
-		end;
-		dewdrop:Open(button,
-			'point', function(parent)
-				return "TOPLEFT", "TOPRIGHT";
-			end,
-			"children", setOptions
-		);
+		return nil;
 	end
 end
+
+
 
 function GetDifficultyTier()
 	return AtlasLoot.db.profile.MythicPlussTier
@@ -1568,103 +1389,4 @@ end
 
 function SetDifficultyTier(difficulty)
 	AtlasLoot.db.profile.MythicPlussTier = difficulty;
-end
-	
-
-
---Mass Query Items
---Sorry if this looks messy might cleanup later
-function QueryItems(instance, difficulty, expansion)
-	if instance == "help" then 
-		print("Instance types are: \"Dungeon\", \"Raid\"");
-		print("Difficulty types are: AL_Dif.Bloodforged, AL_Dif.Normal, AL_Dif.Heroic, AL_Dif.Mythic, AL_Dif.MythicPlus[1-10]");
-		print("Expansion options are: \"classic\" and \"tbc\"");
-		print("Example: QueryItems(\"Dungeon\", AL_Dif.MythicPlus[6]) - This will query all classic dungeons Mythic+ 6 items");
-		print("Example: QueryItems(\"Dungeon\", AL_Dif.MythicPlus[6], \"tbc\") - This will query all tbc dungeons Mythic+ 6 items");
-		return
-	end
-	
-	--Expansion select enums to make arguments easier to use
-	local ex_sel = {
-		["classic"] = AL["Classic Instances"];
-		["tbc"] = AL["BC Instances"];
-	}
-
-	--Setup ranges so we arent parsing unwanted instance pages
-	local range = {
-		["classic"] = {
-			["Raid"] = {2, 8},
-			["Dungeon"] = {10, 29}
-		},
-		["tbc"] = {
-			["Raid"] = {2, 10},
-			["Dungeon"] = {12, 27}
-		}
-	}
-
-	--Setup defualts if the arguments are not set or nil
-	if expansion == nil or ex_sel[expansion] == nil then expansion = "classic" end
-	if instance == nil then instance = "Dungeon" end
-	--TBC dungeon types are ExDungeon, i only want one argument type so we swap it here
-	if instance == "Dungeon" and expansion == "tbc" then instance = "ExDungeon" end
-	if difficulty == nil then difficulty = AL_Dif.Normal end
-	
-	--We parse a drop down menu, they are setup weird so we have to check for expansion twice in the arry once as a number second as a Global Var
-	local _men = 1
-	if expansion == "tbc" then _men = 2 end;
-
-	if instance == "Raid" then difficulty = math.min(AL_Dif.Ascended, difficulty) end
-
-	for i = range[expansion][instance][1], range[expansion][instance][2] do
-		local inst = "";
-		--DireMaul is in an another drop down list so instead what we can do is utilize instance ids we won't be querying
-		if i == 14 and expansion == "classic" then inst = "DireMaulNorth" elseif i == 15 and expansion == "classic" then inst = "DireMaulEast" elseif i == 16 and expansion == "classic" then inst = "DireMaulWest"
-		else
-			inst = AtlasLoot_DewDropDown[_men][ex_sel[expansion]][i][1][2]
-		end
-
-		if (inst ~= nil and AtlasLoot_DewDropDown_SubTables[inst] ~= nil) then
-			for b = 1, #AtlasLoot_DewDropDown_SubTables[inst] do
-				local boss = AtlasLoot_DewDropDown_SubTables[inst][b][2];
-				if(AtlasLoot_Data[boss] ~= nil and AtlasLoot_Data[boss].Type ~= nil and AtlasLoot_Data[boss].Type == instance) then
-					local n = 1;
-					local querytime = 0;
-					local now = 0;
-					while n < 31 do
-						now = GetTime();
-						if now - querytime > 0.01 then
-							querytime = GetTime();        
-							if(AtlasLoot_Data[boss][n] ~= nil) then
-								local queryitem = AL_FindId(string.sub(AtlasLoot_Data[boss][n][4], 5), difficulty) or AtlasLoot_Data[boss][n][2];
-								if (queryitem) and (queryitem ~= nil) and (queryitem ~= "") and (queryitem ~= 0) and (string.sub(queryitem, 1, 1) ~= "s") then
-									AtlasLootTooltip:SetHyperlink("item:"..queryitem..":0:0:0:0:0:0:0");
-								end
-							end
-							n = n + 1;
-						end
-					end
-				end
-			end
-		elseif AtlasLoot_DewDropDown[_men][ex_sel[expansion]][i][1][3] == "Table" then
-			if(AtlasLoot_Data[inst] ~= nil and AtlasLoot_Data[inst].Type ~= nil and AtlasLoot_Data[inst].Type == instance) then
-				local n = 1;
-				local querytime = 0;
-				local now = 0;
-				while n < 31 do
-					now = GetTime();
-					if now - querytime > 0.01 then
-						querytime = GetTime();        
-						if(AtlasLoot_Data[inst][n] ~= nil) then
-							local queryitem = AL_FindId(string.sub(AtlasLoot_Data[inst][n][4], 5), difficulty) or AtlasLoot_Data[inst][n][2];
-							if (queryitem) and (queryitem ~= nil) and (queryitem ~= "") and (queryitem ~= 0) and (string.sub(queryitem, 1, 1) ~= "s") then
-								AtlasLootTooltip:SetHyperlink("item:"..queryitem..":0:0:0:0:0:0:0");
-							end
-						end
-						n = n + 1;
-					end
-				end
-			end
-		end
-	end
-	print("You may need to reload your UI to finalize the Query")
 end
