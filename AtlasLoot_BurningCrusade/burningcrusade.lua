@@ -2212,7 +2212,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 
 
 
-
 		----------------------------------------
 		--- Sunwell Isle: Magister's Terrace ---
 		----------------------------------------
@@ -3211,8 +3210,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 7, 33933, "", "=q2=Amani Charm of the Raging Defender", "=ds=#m26#", "", "25%"};
 		Type = "BCRaid";
 	};
-
-
 
 
 

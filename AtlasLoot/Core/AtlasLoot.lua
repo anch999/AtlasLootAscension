@@ -501,7 +501,8 @@ AtlasLoot_Difficulty = {
 		["ClassicDungeon"] = { {"Normal", "" }, {"Bloodforged", 1 } };
 		
 		["ClassicDungeonExt"] = { {"Normal", "" }, {"Heroic", 3 }, {"Mythic", 4 }, {"Mythic 1", 5 }, {"Mythic 2", 6 }, {"Mythic 3", 7 }, {"Mythic 4", 8 }, {"Mythic 5", 9 }, {"Mythic 6", 10 },
-		{"Mythic 7", 11 }, {"Mythic 8", 12 }, {"Mythic 9", 13 }, {"Mythic 10", 14 }, {"Bloodforged", 1 }, };
+		{"Mythic 7", 11 }, {"Mythic 8", 12 }, {"Mythic 9", 13 }, {"Mythic 10", 14 }, {"Mythic 11", 15 }, {"Mythic 12", 16 }, {"Mythic 13", 17 }, {"Mythic 14", 18 }, {"Mythic 15", 19 }, {"Mythic 16", 20 },
+		{"Mythic 17", 21 }, {"Mythic 18", 22 }, {"Mythic 19", 23 }, {"Mythic 20", 24 }, {"Bloodforged", 1 }, };
 		
 		["ClassicRaid"] = { {"Normal Flex", "" }, {"Heroic Flex", 3 }, {"Ascended", 4 }, {"Bloodforged", 1 }, };
 		
@@ -555,10 +556,6 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 	
 	-- Hide the Filter Check-Box
 	AtlasLootFilterCheck:Hide();
-
-	--Hide the Difficulty selector will show if needed
-	AtlasLootMythicButton:Hide();
-	AtlasLoot_DifficultySelect:Hide();
     
     dataSource_backup = dataSource;
 	if dataID == "SearchResult" or dataID == "WishList" then
@@ -637,36 +634,8 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 	
 	-- Create the loottable
 	if (dataID == "SearchResult") or (dataID == "WishList") or (AtlasLoot_IsLootTableAvailable(dataID)) then
-
-		--Check to see if loaded table is different Difficulty then options set
-		local dif = false;
-		if(dataSource[dataID].Dif ~= nil or dataSource[dataID].Type ~= nil) then
-			--Just incase dif isnt set but a type is this will create and set Dif to normal for future use 
-			if(dataSource[dataID].Dif == nil) then dataSource[dataID].Dif = 2 end
-
-			if dataSource[dataID].Type ~= nil then
-				--Raid tables only have 4 Difficulties, this helps set it if previous selection was possibly dungeon 
-				if dataSource[dataID].Type == "Raid" then SetDifficultyTier(math.min(AtlasLoot_Difficulty.Ascended, GetDifficultyTier()));
-				--Expansion dungeons show both normal and heroic loot on same page/setting
-				--so if its set to Heroic(3) lets change it back to Normal(2) 
-				elseif dataSource[dataID].Type == "ExDungeon" then  if GetDifficultyTier() == AtlasLoot_Difficulty.Heroic then SetDifficultyTier(AtlasLoot_Difficulty.Normal) end 
-				end 
-			end
-
-			dif = not (dataSource[dataID].Dif == GetDifficultyTier());
-			if dif then
-				--Set this page to the new Difficulty
-				dataSource[dataID].Dif = GetDifficultyTier();
-			end
-		end
-
 		--Iterate through each item object and set its properties
 		for i = 1, 30, 1 do
-			--Check to see if item should show for this difficulty
-			local toShow = true;
-			if(dataSource[dataID][i] ~= nil and dataSource[dataID][i][AL_Dif.MIN_DIF] ~= nil) then
-			 	if(dataSource[dataID][i][AL_Dif.MIN_DIF] ~= "" and dataSource[dataID][i][AL_Dif.MIN_DIF] > GetDifficultyTier()) then toShow = false end end
-
 			--Check for a valid object (that it exists, and that it has a name)
 			if(dataSource[dataID][i] ~= nil and dataSource[dataID][i][4] ~= "") then					
 				
@@ -683,7 +652,6 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 				else
 					isItem = true;
 				end
-
 				if isItem then
 					itemName, itemLink, itemQuality, itemLevel, itemMinLevel, itemType, itemSubType, itemCount, itemEquipLoc, itemTexture = GetItemInfo(IDfound);
 					--If the client has the name of the item in cache, use that instead.
@@ -697,7 +665,7 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 							text = itemColor..itemName;
 						elseif dataSource[dataID][i][2] ~= IDfound then
 							--If the item is not in cache, use the saved value and process it
-							if tonumber(ItemindexID) then
+							if tonumber(ItemindexID) and not dataSource[dataID][i][4]:match("=q5=") then
 								text = (string.sub(dataSource[dataID][i][4], 5));
 								text = "=q4=" .. text;
 								text = AtlasLoot_FixText(text);
@@ -1346,7 +1314,6 @@ function AtlasLoot_QueryLootPage()
             queryitem = button.itemID;
             if (queryitem) and (queryitem ~= nil) and (queryitem ~= "") and (queryitem ~= 0) and (string.sub(queryitem, 1, 1) ~= "s") then
 				AtlasLootTooltip:SetHyperlink("item:"..queryitem..":0:0:0:0:0:0:0");
-				AtlasLootTooltip:SetHyperlink("item:60"..queryitem..":0:0:0:0:0:0:0");
             end
             i=i+1;
         end
@@ -1369,9 +1336,9 @@ function AtlasLoot_AddTooltip(frameb, tooltiptext)
 end
 
 --[[
-AtlasLoot_DifficultyDungeonSelect(button)
-button: Identity of the button pressed to trigger the function
-Shows the GUI for choosing Mythic Tier
+AL_FindId(name, difficulty)
+Finds the Ids of other difficulties based on the name of the item and the difficulty parameter given.
+On the form of {Name, {normal, heroic, mythic, mythic1, mythic2, ... ,mythicN}}
 ]]
 function AL_FindId(name, difficulty)
 	if ItemIDsDatabase[name] ~= nil then

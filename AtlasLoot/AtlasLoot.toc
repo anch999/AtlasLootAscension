@@ -34,7 +34,6 @@
 
 embeds.xml
 
-Core\ItemDB.lua
 
 Locales\Locales.xml
 TableRegister\TableRegister.xml

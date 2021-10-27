@@ -11,7 +11,8 @@
 	<Script file="AtlasLoot.lua"/>
 	<Script file="WishList.lua"/>
     <Script file="Search.lua"/>
-	<Script file="ItemIDsDatabase.lua"/>
+	<Script file="ItemIDsDatabase.lua"/>\
+	<Script file="ItemIDsDatabase2.lua"/>
     
 	
     <GameTooltip name="AtlasLootTooltip" inherits="GameTooltipTemplate" parent="UIParent" hidden="true"/>
@@ -658,33 +659,6 @@
 					</OnClick>
 				</Scripts>
 			</Button>
-			<Button name="AtlasLootMythicButton" hidden="true">
-				<KeyValues>
-    				<KeyValue key="difficulty_type" value="dungeon" type="string"/>
-  				</KeyValues>
-				<Size>
-					<AbsDimension x="25" y="25" />
-				</Size>
-				<Anchors>
-					<Anchor point="TOPRIGHT" relativeTo="$parent" relativePoint="TOPRIGHT">
-                        <Offset>
-                            <AbsDimension x="-5" y="-5"/>
-                        </Offset>
-                    </Anchor>
-				</Anchors>
-				<NormalTexture file="Interface\Buttons\UI-SpellbookIcon-NextPage-Up"/>
-				<PushedTexture file="Interface\Buttons\UI-SpellbookIcon-NextPage-Down"/>
-				<DisabledTexture file="Interface\Buttons\UI-SpellbookIcon-NextPage-Disabled"/>
-				<HighlightTexture file="Interface\Buttons\UI-Common-MouseHilight" alphaMode="ADD"/>
-				<Scripts>
-					<OnShow>
-						this:SetFrameLevel( (this:GetParent()):GetFrameLevel() + 1 );
-					</OnShow>
-					<OnClick>
-						AtlasLoot_ShowDifficultySelect(this, this.difficulty_type);
-					</OnClick>
-				</Scripts>
-			</Button>
 			<CheckButton name="AtlasLootFilterCheck" inherits="OptionsCheckButtonTemplate" hidden="true">
 				<Anchors>
 					<Anchor point="BOTTOM" relativeTo="$parent" relativePoint="BOTTOM">
@@ -751,18 +725,6 @@
 						<Anchor point="BOTTOM" relativeTo="$parent" relativePoint="BOTTOM">
                             <Offset>
                                 <AbsDimension x="-57" y="28"/>
-                            </Offset>
-                        </Anchor>
-					</Anchors>
-				</FontString>
-				<FontString name="AtlasLoot_DifficultySelect" inherits="GameFontNormal" justifyH="RIGHT" text="Select Difficulty: " hidden="true">
-					<Size>
-						<AbsDimension x="200" y="25"/>
-					</Size>
-					<Anchors>
-						<Anchor point="TOPRIGHT" relativeTo="$parent" relativePoint="TOPRIGHT">
-                            <Offset>
-                                <AbsDimension x="-30" y="-4"/>
                             </Offset>
                         </Anchor>
 					</Anchors>

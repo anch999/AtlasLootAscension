@@ -1,11 +1,3 @@
-v2.04 09/13/2021
-- Added automatic reloads of loot tables when changing mythic+ options (Credit: Rvng) 
----------------------------------------------------------------------------------------------------------------------------
-v2.03 09/13/2021
-- Added option to select Mythic Pluss tiers (Requires /reload for changes)
-- Added Mythic +1 to +10 to all Vanilla dungeons (selectable in options menu)
-- Fixed a non-existent boss table in Mana-Tombs Mythic0
----------------------------------------------------------------------------------------------------------------------------
 v2.02 08/29/2021
 - Added forward and previous arrows to all classic dungeons (Credit: alexs and Powerthegreat)
 - Added forward and previous arrows to all classic world bosses (Credit: Powerthegreat)
