@@ -133,13 +133,13 @@ function AtlasLootDefaultFrame_OnHide()
     AtlasLoot_DewdropSubMenu:Close(1);
 end   
 
-function AtlasLoot_DewDropSubMenu2Click(raidtablename, itemID)
+function AtlasLoot_DewDropSubMenu2Click(raidtablename, itemID, itemColour)
 	if ATLASLOOT_FILTER_ENABLE == true then
     AtlasLoot_FilterEnableButton()
     ReEnableFilter = true
     end
     -- gets itemID reference
-    AtlasLootDefaultFrame_GetRaidDifficulty(raidtablename, itemID)
+    AtlasLootDefaultFrame_GetRaidDifficulty(raidtablename, itemID, itemColour)
 	--Show the select loot table
 	AtlasLoot_ShowItemsFrame(AtlasLootItemsFrame.refreshOri[1], AtlasLootItemsFrame.refreshOri[2], AtlasLootItemsFrame.refreshOri[3], AtlasLootItemsFrame.refreshOri[4]);
     --Set text for difficulty
@@ -173,11 +173,13 @@ function AtlasLoot_DifficultyEnable(dataID, dataSource)
 		SelectedTable2TextSet = true
 end
 
-function AtlasLootDefaultFrame_GetRaidDifficulty(raidtablename, itemID)
+function AtlasLootDefaultFrame_GetRaidDifficulty(raidtablename, itemID, itemColour)
+            
             if tonumber(itemID) then --used in itemID search feature for itemID database
 				ItemindexID = itemID;
 				isTablereference = false;
 				notPattern = false;
+                itemDefaultColour = itemColour;
 			elseif itemID:match("=s=") then -- =s= infront of a table reference will make it show a normal crafting item instead of a crafting pattern
 				newID = gsub(itemID, "=s=",""); -- removes =s= before passing the extra table addition
 				newID = gsub(newID, "Normal","");
@@ -209,6 +211,7 @@ function AtlasLoot_DewdropSubMenu2Register(loottable)
                             'func', AtlasLoot_DewDropSubMenu2Click,
                             'arg1', v[1],
                             'arg2', v[2],
+                            'arg3', v[3],
                             'notCheckable', true
                         )
                 end

@@ -20,7 +20,6 @@ AtlasLoot_SetItemInfoFrame()
 AtlasLootItemsFrame_OnCloseButton()
 AtlasLootMenuItem_OnClick()
 AtlasLoot_NavButton_OnClick()
-AtlasLoot_HeroicModeToggle()
 AtlasLoot_IsLootTableAvailable(dataID)
 AtlasLoot_GetLODModule(dataSource)
 AtlasLoot_LoadAllModules()
@@ -108,13 +107,10 @@ local AtlasLootDBDefaults = {
         FuBarIcon = true,
         HidePanel = false,
         LastBoss = "EmptyTable",
-        HeroicMode = false,
-		BigraidHeroic = false,
-        Bigraid = false, 
         AtlasLootVersion = "1",
         AtlasNaggedVersion = "",
         FuBarPosition = 1,
-		MythicPlussTier = 1,
+		SubtablePosition = false,
 		AutoQuery = false,
         LoadAllLoDStartup = false,
         PartialMatching = true,
@@ -392,10 +388,6 @@ function AtlasLoot_OnVariablesLoaded()
         LibStub("LibAboutPanel").new(AL["AtlasLoot"], "AtlasLoot");
     end    
     AtlasLoot_UpdateLootBrowserScale();
-	
-	AtlasLoot.db.profile.Bigraid = false
-	AtlasLoot.db.profile.BigraidHeroic = false
-	AtlasLoot.db.profile.HeroicMode = false
 end
 
 function AtlasLoot_Reset(data)
@@ -607,6 +599,11 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 	if DewDrop2Enable or not dataID == nil or lastReference then
 		dataID = gsub(dataID, lastReference, "");	-- removes old table reference before adding a new 1 if needed
 	end
+	
+	if dataID:match("MENU") and ATLASLOOT_FILTER_ENABLE then
+		AtlasLootFilterCheck:SetChecked(false);
+		ATLASLOOT_FILTER_ENABLE = false
+	end
 
 	if Type == nil and ATLASLOOT_FILTER_ENABLE == false or dataID:match("MENU") or ATLASLOOT_FILTER_ENABLE and dataSource[AtlasLoot_CurrentBoss].Type == nil  then -- disable difficulty menu
 		AtlasLoot_DifficultyDisable()
@@ -643,7 +640,7 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
         AtlasLoot_GenerateAtlasMenu(dataID, pFrame);
         return;
     end
-	
+
 	-- Create the loottable
 	if (dataID == "SearchResult") or (dataID == "WishList") or (AtlasLoot_IsLootTableAvailable(dataID)) then
 		--Iterate through each item object and set its properties
@@ -690,25 +687,15 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 					if(GetItemInfo(IDfound)) then
 						_, _, _, itemColor = GetItemQualityColor(itemQuality);
 						text = itemColor..itemName;
+					elseif dataSource[dataID][i][2] ~= IDfound and itemDefaultColour ~= nil and not dataSource[dataID][i][4]:match("=q5=") then
+						--If the item is not in cache, use the saved value and process it
+						text = (string.sub(dataSource[dataID][i][4], 5));
+						text = itemDefaultColour .. text;
+						text = AtlasLoot_FixText(text);
 					else
-						if(GetItemInfo(IDfound)) or not dataSource[dataID][i][2] == IDfound then
-							_, _, _, itemColor = GetItemQualityColor(itemQuality);
-							text = itemColor..itemName;
-						elseif dataSource[dataID][i][2] ~= IDfound then
-							--If the item is not in cache, use the saved value and process it
-							if tonumber(ItemindexID) and not dataSource[dataID][i][4]:match("=q5=") then
-								text = (string.sub(dataSource[dataID][i][4], 5));
-								text = "=q4=" .. text;
-								text = AtlasLoot_FixText(text);
-							else
-								text = dataSource[dataID][i][4];
-								text = AtlasLoot_FixText(text);
-							end
-						else
-							--If the item is not in cache, use the saved value and process it
-							text = dataSource[dataID][i][4];
-							text = AtlasLoot_FixText(text);
-						end
+						--If the item is not in cache, use the saved value and process it
+						text = dataSource[dataID][i][4];
+						text = AtlasLoot_FixText(text);
 					end
 				else
 					spellName, _, spellIcon, _, _, _, _, _, _ = GetSpellInfo(string.sub(IDfound, 2));
@@ -1377,14 +1364,4 @@ function AL_FindId(name, difficulty)
 	else
 		return nil;
 	end
-end
-
-
-
-function GetDifficultyTier()
-	return AtlasLoot.db.profile.MythicPlussTier
-end
-
-function SetDifficultyTier(difficulty)
-	AtlasLoot.db.profile.MythicPlussTier = difficulty;
 end

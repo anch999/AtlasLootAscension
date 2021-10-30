@@ -49,6 +49,7 @@ function AtlasLootOptions_Init()
     AtlasLootOptionsFrameItemAutoQuery:SetChecked(AtlasLoot.db.profile.ItemAutoQuery);
     AtlasLootOptionsFrameOpaque:SetChecked(AtlasLoot.db.profile.Opaque);
     AtlasLootOptionsFrameItemID:SetChecked(AtlasLoot.db.profile.ItemIDs);
+    AtlasLootOptionsFrameSubtablePosition:SetChecked(AtlasLoot.db.profile.SubtablePosition);
     AtlasLootOptionsFrameItemSpam:SetChecked(AtlasLoot.db.profile.ItemSpam);
     AtlasLootOptionsFrameLoDStartup:SetChecked(AtlasLoot.db.profile.LoadAllLoDStartup);
     AtlasLootOptionsFrameHidePanel:SetChecked(AtlasLoot.db.profile.HidePanel);
@@ -66,6 +67,7 @@ function AtlasLootOptions_OnLoad()
         AtlasLootOptionsFrameItemSyncTTText:SetText(AL["|cff9d9d9dItemSync Tooltips|r"]);
     end
     AtlasLootOptions_Init();
+    AtlasLootOptions_SubtablePositionToggle()
     temp=AtlasLoot.db.profile.SafeLinks;
 end
 
@@ -140,6 +142,19 @@ end
 
 function AtlasLootOptions_ItemIDToggle()
     AtlasLoot.db.profile.ItemIDs=AtlasLootOptionsFrameItemID:GetChecked();
+    AtlasLootOptions_Init();
+end
+
+function AtlasLootOptions_SubtablePositionToggle()
+    if  AtlasLootOptionsFrameSubtablePosition:GetChecked() then
+		AtlasLootDefaultFrame_SubMenu2:SetPoint("TOP", 160, -40);
+		AtlasLootDefaultFrame_SubMenu:SetPoint("TOP", 0, -40);
+		AtlasLoot.db.profile.SubtablePosition = AtlasLootOptionsFrameSubtablePosition:GetChecked();
+	else
+		AtlasLootDefaultFrame_SubMenu:SetPoint("TOP", 160, -40);
+		AtlasLootDefaultFrame_SubMenu2:SetPoint("TOP", 0, -40);
+		AtlasLoot.db.profile.SubtablePosition = AtlasLootOptionsFrameSubtablePosition:GetChecked();
+	end
     AtlasLootOptions_Init();
 end
 

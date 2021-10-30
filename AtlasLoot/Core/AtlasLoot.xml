@@ -875,6 +875,24 @@
 					</OnClick>
 				</Scripts>
 			</CheckButton>
+			<CheckButton name="$parentSubtablePosition" inherits="OptionsCheckButtonTemplate">
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="5" y="-190"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad>
+                        local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot");
+						getglobal(this:GetName().."Text"):SetText("Swap Subtable/Difficuilty Menus");
+					</OnLoad>
+					<OnClick>
+						AtlasLootOptions_SubtablePositionToggle();
+					</OnClick>
+				</Scripts>
+			</CheckButton>
             <CheckButton name="$parentLoDStartup" inherits="OptionsCheckButtonTemplate">
 				<Anchors>
 					<Anchor point="TOP">
@@ -1026,7 +1044,7 @@
 				<Anchors>
 					<Anchor point="TOP">
 						<Offset>
-							<AbsDimension x="30" y="-190"/>
+							<AbsDimension x="30" y="-220"/>
 						</Offset>
 					</Anchor>
 				</Anchors>
@@ -1048,7 +1066,7 @@
 				<Anchors>
 					<Anchor point="TOP">
 						<Offset>
-							<AbsDimension x="30" y="-220"/>
+							<AbsDimension x="30" y="-250"/>
 						</Offset>
 					</Anchor>
 				</Anchors>
