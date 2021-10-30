@@ -525,10 +525,10 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 21, 21712, "", "=q4=Amulet of the Fallen God", "=q1=#m4#: =ds=#s2#"};
 		{ 22, 21709, "", "=q4=Ring of the Fallen God", "=q1=#m4#: =ds=#s13#"};
 		{ 24, 22734, "", "=q1=Base of Atiesh", "=ds=#m3#"};
-		{ 25, 22632, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c1#", "", "", "(Druid)" },
-		{ 26, 22589, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c3#", "", "", "(Mage)" },
-		{ 27, 22631, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c5#", "", "", "(Priest)" },
-		{ 28, 22630, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c8#", "", "", "(Warlock)" },
+		{ 25, 22632, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c1#", "", "", [AtlasLoot_Difficulty.DUPLICATE] = "(Druid)" },
+		{ 26, 22589, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c3#", "", "", [AtlasLoot_Difficulty.DUPLICATE] = "(Mage)" },
+		{ 27, 22631, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c5#", "", "", [AtlasLoot_Difficulty.DUPLICATE] = "(Priest)" },
+		{ 28, 22630, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c8#", "", "", [AtlasLoot_Difficulty.DUPLICATE] = "(Warlock)" },
 		Prev = "AQ40Ouro";
 		Type = "ClassicRaid";
 	};
@@ -1678,7 +1678,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 9, 16954, "", "=q4=Judgement Legplates", "=q1=#m1# =ds=#c4# (T2)", "", "10.81%"};
 		{ 11, 17204, "", "=q5=Eye of Sulfuras", "=ds=#m3#", "", "3.42%"};
 		{ 12, 17182, "", "=q5=Sulfuras, Hand of Ragnaros", "=q1=#m4#: =ds=#h2#, #w6#"};
-		{ 13, 102107, "", "=q4=Reins of the Magmatic Steed", "=ds=#e12#"};
+		{ 13, 102107, "", "=q4=Reins of the Magmatic Steed", "=ds=#e12#", [AtlasLoot_Difficulty.MIN_DIF] = AtlasLoot_Difficulty.Heroic};
 		{ 14, 19017, "", "=q1=Essence of the Firelord", "=ds=#m3#", "", "0.46%"};
 		{ 15, 19019, "", "=q5=Thunderfury, Blessed Blade of the Windseeker", "=q1=#m4#: =ds=#h1#, #w10#"};
 		{ 16, 17102, "", "=q4=Cloak of the Shrouded Mists", "=ds=#s4#", "", "14.31%"};
@@ -4698,10 +4698,10 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 24, 23059, "", "=q4=Ring of the Dreadnaught", "=ds=#s13# =q1=#m1# =ds=#c9#" ,"","22.22%"},
 		{ 25, 0,"","","" },
 		{ 26, 22733, "", "=q1=Staff Head of Atiesh", "=ds=#m3#" },
-		{ 27, 22632, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c1#", "", "", "(Druid)" },
-		{ 28, 22589, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c3#", "", "", "(Mage)" },
-		{ 29, 22631, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c5#", "", "", "(Priest)" },
-		{ 30, 22630, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c8#", "", "", "(Warlock)" },
+		{ 27, 22632, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c1#", "", "", [AtlasLoot_Difficulty.DUPLICATE] = "(Druid)" },
+		{ 28, 22589, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c3#", "", "", [AtlasLoot_Difficulty.DUPLICATE] = "(Mage)" },
+		{ 29, 22631, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c5#", "", "", [AtlasLoot_Difficulty.DUPLICATE] = "(Priest)" },
+		{ 30, 22630, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c8#", "", "", [AtlasLoot_Difficulty.DUPLICATE] = "(Warlock)" },
 		Prev = "NAXSapphiron";
 		Next = "NAXTrash";
 		Type = "ClassicRaid";
@@ -4777,221 +4777,221 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		--- Dungeon 1 and 2 Sets (D1/D2) ---
 		------------------------------------
 
-	AtlasLoot_Data["T0Druid"] = {
-		{ 1, 0, "Spell_Nature_Regeneration", "=q6=#t0s1#", "=ec1=#j6#"};
-		{ 2, 16720, "", "=q3=Wildheart Cowl", "=ds="..BabbleBoss["Darkmaster Gandling"].." ("..AL["Scholo"]..")", "", "7.09%"};
-		{ 3, 16718, "", "=q3=Wildheart Spaulders", "=ds="..BabbleBoss["Gizrul the Slavener"].." ("..AL["LBRS"]..")", "", "11.04%"};
-		{ 4, 16706, "", "=q3=Wildheart Vest", "=ds="..BabbleBoss["General Drakkisath"].." ("..AL["UBRS"]..")", "", "7.36%"};
-		{ 5, 16714, "", "=q3=Wildheart Bracers", "=ds="..AL["Trash Mobs"].." ("..AL["Strat"]..")", "", "1.85%"};
-		{ 6, 16717, "", "=q3=Wildheart Gloves", "=ds="..BabbleBoss["The Unforgiven"].." ("..AL["Strat"]..")", "", "12.61%"};
-		{ 7, 16716, "", "=q3=Wildheart Belt", "=ds="..AL["Trash Mobs"].." ("..AL["Scholo"]..")", "", "2.60%"};
-		{ 8, 16719, "", "=q3=Wildheart Kilt", "=ds="..BabbleBoss["Baron Rivendare"].." ("..AL["Strat"]..")", "", "6.58%"};
-		{ 9, 16715, "", "=q3=Wildheart Boots", "=ds="..BabbleBoss["Mother Smolderweb"].." ("..AL["LBRS"]..")", "", "13.03%"};
-		{ 16, 0, "Spell_Nature_Regeneration", "=q6=#t05s1#", "=ec1=#j7#"};
-		{ 17, 22109, "", "=q4=Feralheart Cowl", "=ds=#a2#, #s1#"};
-		{ 18, 22112, "", "=q3=Feralheart Spaulders", "=ds=#a2#, #s3#"};
-		{ 19, 22113, "", "=q4=Feralheart Vest", "=ds=#a2#, #s5#"};
-		{ 20, 22108, "", "=q3=Feralheart Bracers", "=ds=#a2#, #s8#"};
-		{ 21, 22110, "", "=q4=Feralheart Gloves", "=ds=#a2#, #s9#"};
-		{ 22, 22106, "", "=q3=Feralheart Belt", "=ds=#a2#, #s10#"};
-		{ 23, 22111, "", "=q3=Feralheart Kilt", "=ds=#a2#, #s11#"};
-		{ 24, 22107, "", "=q4=Feralheart Boots", "=ds=#a2#, #s12#"};
-		Next = "T1T2Druid";
-		Back = "T0SET";
-		Type = "ClassicDungeonExt";
-	};
-
-	AtlasLoot_Data["T0Hunter"] = {
-		{ 1, 0, "Ability_Hunter_RunningShot", "=q6=#t0s2#", "=ec1=#j6#"};
-		{ 2, 16677, "", "=q3=Beaststalker's Cap", "=ds="..BabbleBoss["Darkmaster Gandling"].." ("..AL["Scholo"]..")", "", "7.00%"};
-		{ 3, 16679, "", "=q3=Beaststalker's Mantle", "=ds="..BabbleBoss["Overlord Wyrmthalak"].." ("..AL["LBRS"]..")", "", "9.89%"};
-		{ 4, 16674, "", "=q3=Beaststalker's Tunic", "=ds="..BabbleBoss["General Drakkisath"].." ("..AL["UBRS"]..")", "", "6.81%"};
-		{ 5, 16681, "", "=q3=Beaststalker's Bindings", "=ds="..AL["Trash Mobs"].." ("..AL["Strat"]..")", "", "1.64%"};
-		{ 6, 16676, "", "=q3=Beaststalker's Gloves", "=ds="..BabbleBoss["War Master Voone"].." ("..AL["LBRS"]..")", "", "9.15%"};
-		{ 7, 16680, "", "=q3=Beaststalker's Belt", "=ds="..AL["Trash Mobs"].." ("..AL["LBRS"]..")", "", "1.36%"};
-		{ 8, 16678, "", "=q3=Beaststalker's Pants", "=ds="..BabbleBoss["Baron Rivendare"].." ("..AL["Strat"]..")", "", "6.16%"};
-		{ 9, 16675, "", "=q3=Beaststalker's Boots", "=ds="..BabbleBoss["Nerub'enkan"].." ("..AL["Strat"]..")", "", "13.62%"};
-		{ 16, 0, "Ability_Hunter_RunningShot", "=q6=#t05s2#", "=ec1=#j7#"};
-		{ 17, 22013, "", "=q4=Beastmaster's Cap", "=ds=#a3#, #s1#"};
-		{ 18, 22016, "", "=q3=Beastmaster's Mantle", "=ds=#a3#, #s3#"};
-		{ 19, 22060, "", "=q4=Beastmaster's Tunic", "=ds=#a3#, #s5#"};
-		{ 20, 22011, "", "=q3=Beastmaster's Bindings", "=ds=#a3#, #s8#"};
-		{ 21, 22015, "", "=q4=Beastmaster's Gloves", "=ds=#a3#, #s9#"};
-		{ 22, 22010, "", "=q3=Beastmaster's Belt", "=ds=#a3#, #s10#"};
-		{ 23, 22017, "", "=q3=Beastmaster's Pants", "=ds=#a3#, #s11#"};
-		{ 24, 22061, "", "=q4=Beastmaster's Boots", "=ds=#a3#, #s12#"};
-		Next = "T1T2Hunter";
-		Back = "T0SET";
-		Type = "ClassicDungeonExt";
-	};
-
-	AtlasLoot_Data["T0Mage"] = {
-		{ 1, 0, "Spell_Frost_IceStorm", "=q6=#t0s3#", "=ec1=#j6#"};
-		{ 2, 16686, "", "=q3=Magister's Crown", "=ds="..BabbleBoss["Darkmaster Gandling"].." ("..AL["Scholo"]..")", "", "8.60%"};
-		{ 3, 16689, "", "=q3=Magister's Mantle", "=ds="..BabbleBoss["Ras Frostwhisper"].." ("..AL["Scholo"]..")", "", "11.93%"};
-		{ 4, 16688, "", "=q3=Magister's Robes", "=ds="..BabbleBoss["General Drakkisath"].." ("..AL["UBRS"]..")", "", "7.24%"};
-		{ 5, 16683, "", "=q3=Magister's Bindings", "=ds="..AL["Trash Mobs"].." ("..AL["LBRS"]..")", "", "1.19%"};
-		{ 6, 16684, "", "=q3=Magister's Gloves", "=ds="..BabbleBoss["Doctor Theolen Krastinov"].." ("..AL["Scholo"]..")", "", "9.75%"};
-		{ 7, 16685, "", "=q3=Magister's Belt", "=ds="..AL["Trash Mobs"].." ("..AL["Strat"]..")", "", "1.32%"};
-		{ 8, 16687, "", "=q3=Magister's Leggings", "=ds="..BabbleBoss["Baron Rivendare"].." ("..AL["Strat"]..")", "", "6.79%"};
-		{ 9, 16682, "", "=q3=Magister's Boots", "=ds="..BabbleBoss["Hearthsinger Forresten"].." ("..AL["Strat"]..")", "", "10.86%"};
-		{ 16, 0, "Spell_Frost_IceStorm", "=q6=#t05s3#", "=ec1=#j7#"};
-		{ 17, 22065, "", "=q4=Sorcerer's Crown", "=ds=#a1#, #s1#"};
-		{ 18, 22068, "", "=q3=Sorcerer's Mantle", "=ds=#a1#, #s3#"};
-		{ 19, 22069, "", "=q4=Sorcerer's Robes", "=ds=#a1#, #s5#"};
-		{ 20, 22063, "", "=q3=Sorcerer's Bindings", "=ds=#a1#, #s8#"};
-		{ 21, 22066, "", "=q4=Sorcerer's Gloves", "=ds=#a1#, #s9#"};
-		{ 22, 22062, "", "=q3=Sorcerer's Belt", "=ds=#a1#, #s10#"};
-		{ 23, 22067, "", "=q3=Sorcerer's Leggings", "=ds=#a1#, #s11#"};
-		{ 24, 22064, "", "=q4=Sorcerer's Boots", "=ds=#a1#, #s12#"};
-		Next = "T1T2Mage";
-		Back = "T0SET";
-		Type = "ClassicDungeonExt";
-	};
-
-	AtlasLoot_Data["T0Paladin"] = {
-		{ 1, 0, "Spell_Holy_SealOfMight", "=q6=#t0s4#", "=ec1=#j6#"};
-		{ 2, 16727, "", "=q3=Lightforge Helm", "=ds="..BabbleBoss["Darkmaster Gandling"].." ("..AL["Scholo"]..")", "", "5.32%"};
-		{ 3, 16729, "", "=q3=Lightforge Spaulders", "=ds="..BabbleBoss["The Beast"].." ("..AL["UBRS"]..")", "", "13.62%"};
-		{ 4, 16726, "", "=q3=Lightforge Breastplate", "=ds="..BabbleBoss["General Drakkisath"].." ("..AL["UBRS"]..")", "", "3.76%"};
-		{ 5, 16722, "", "=q3=Lightforge Bracers", "=ds="..AL["Trash Mobs"].." ("..AL["Scholo"]..")", "", "3.37%"};
-		{ 6, 16724, "", "=q3=Lightforge Gauntlets", "=ds="..BabbleBoss["Timmy the Cruel"].." ("..AL["Strat"]..")", "", "10.42%"};
-		{ 7, 16723, "", "=q3=Lightforge Belt", "=ds="..AL["Trash Mobs"].." ("..AL["Strat"]..")", "", "1.93%"};
-		{ 8, 16728, "", "=q3=Lightforge Legplates", "=ds="..BabbleBoss["Baron Rivendare"].." ("..AL["Strat"]..")", "", "4.20%"};
-		{ 9, 16725, "", "=q3=Lightforge Boots", "=ds="..BabbleBoss["Balnazzar"].." ("..AL["Strat"]..")", "", "11.11%"};
-		{ 16, 0, "Spell_Holy_SealOfMight", "=q6=#t05s4#", "=ec1=#j7#"};
-		{ 17, 22091, "", "=q4=Soulforge Helm", "=ds=#a4#, #s1#"};
-		{ 18, 22093, "", "=q3=Soulforge Spaulders", "=ds=#a4#, #s3#"};
-		{ 19, 22089, "", "=q4=Soulforge Breastplate", "=ds=#a4#, #s5#"};
-		{ 20, 22088, "", "=q3=Soulforge Bracers", "=ds=#a4#, #s8#"};
-		{ 21, 22090, "", "=q4=Soulforge Gauntlets", "=ds=#a4#, #s9#"};
-		{ 22, 22086, "", "=q3=Soulforge Belt", "=ds=#a4#, #s10#"};
-		{ 23, 22092, "", "=q3=Soulforge Legplates", "=ds=#a4#, #s11#"};
-		{ 24, 22087, "", "=q4=Soulforge Boots", "=ds=#a4#, #s12#"};
-		Next = "T1T2Paladin";
-		Back = "T0SET";
-		Type = "ClassicDungeonExt";
-	};
-
-	AtlasLoot_Data["T0Priest"] = {
-		{ 1, 0, "Spell_Holy_PowerWordShield", "=q6=#t0s5#", "=ec1=#j6#"};
-		{ 2, 16693, "", "=q3=Devout Crown", "=ds="..BabbleBoss["Darkmaster Gandling"].." ("..AL["Scholo"]..")", "", "7.89%"};
-		{ 3, 16695, "", "=q3=Devout Mantle", "=ds="..BabbleBoss["Solakar Flamewreath"].." ("..AL["UBRS"]..")", "", "12.84%"};
-		{ 4, 16690, "", "=q3=Devout Robe", "=ds="..BabbleBoss["General Drakkisath"].." ("..AL["UBRS"]..")", "", "6.20%"};
-		{ 5, 16697, "", "=q3=Devout Bracers", "=ds="..AL["Trash Mobs"].." ("..AL["Strat"]..")", "", "1.13%"};
-		{ 6, 16692, "", "=q3=Devout Gloves", "=ds="..BabbleBoss["Archivist Galford"].." ("..AL["Strat"]..")", "", "12.46%"};
-		{ 7, 16696, "", "=q3=Devout Belt", "=ds="..AL["Trash Mobs"].." ("..AL["LBRS"]..")", "", "2.07%"};
-		{ 8, 16694, "", "=q3=Devout Skirt", "=ds="..BabbleBoss["Baron Rivendare"].." ("..AL["Strat"]..")", "", "7.42%"};
-		{ 9, 16691, "", "=q3=Devout Sandals", "=ds="..BabbleBoss["Maleki the Pallid"].." ("..AL["Strat"]..")", "", "13.64%"};
-		{ 16, 0, "Spell_Holy_PowerWordShield", "=q6=#t05s5#", "=ec1=#j7#"};
-		{ 17, 22080, "", "=q4=Virtuous Crown", "=ds=#a1#, #s1#"};
-		{ 18, 22082, "", "=q3=Virtuous Mantle", "=ds=#a1#, #s3#"};
-		{ 19, 22083, "", "=q4=Virtuous Robe", "=ds=#a1#, #s5#"};
-		{ 20, 22079, "", "=q3=Virtuous Bracers", "=ds=#a1#, #s8#"};
-		{ 21, 22081, "", "=q4=Virtuous Gloves", "=ds=#a1#, #s9#"};
-		{ 22, 22078, "", "=q3=Virtuous Belt", "=ds=#a1#, #s10#"};
-		{ 23, 22085, "", "=q3=Virtuous Skirt", "=ds=#a1#, #s11#"};
-		{ 24, 22084, "", "=q4=Virtuous Sandals", "=ds=#a1#, #s12#"};
-		Next = "T1T2Priest";
-		Back = "T0SET";
-		Type = "ClassicDungeonExt";
-	};
-
-	AtlasLoot_Data["T0Rogue"] = {
-		{ 1, 0, "Ability_BackStab", "=q6=#t0s6#", "=ec1=#j6#"};
-		{ 2, 16707, "", "=q3=Shadowcraft Cap", "=ds="..BabbleBoss["Darkmaster Gandling"].." ("..AL["Scholo"]..")", "", "6.65%"};
-		{ 3, 16708, "", "=q3=Shadowcraft Spaulders", "=ds="..BabbleBoss["Cannon Master Willey"].." ("..AL["Strat"]..")", "", "10.68%"};
-		{ 4, 16721, "", "=q3=Shadowcraft Tunic", "=ds="..BabbleBoss["General Drakkisath"].." ("..AL["UBRS"]..")", "", "6.09%"};
-		{ 5, 16710, "", "=q3=Shadowcraft Bracers", "=ds="..AL["Trash Mobs"].." ("..AL["Scholo"]..")", "", "3.51%"};
-		{ 6, 16712, "", "=q3=Shadowcraft Gloves", "=ds="..BabbleBoss["Shadow Hunter Vosh'gajin"].." ("..AL["LBRS"]..")", "", "11.89%"};
-		{ 7, 16713, "", "=q3=Shadowcraft Belt", "=ds="..AL["Trash Mobs"].." ("..AL["LBRS"]..")", "", "1.05%"};
-		{ 8, 16709, "", "=q3=Shadowcraft Pants", "=ds="..BabbleBoss["Baron Rivendare"].." ("..AL["Strat"]..")", "", "7.76%"};
-		{ 9, 16711, "", "=q3=Shadowcraft Boots", "=ds="..BabbleBoss["Rattlegore"].." ("..AL["Scholo"]..")", "", "14.32%"};
-		{ 16, 0, "Ability_BackStab", "=q6=#t05s6#", "=ec1=#j7#"};
-		{ 17, 22005, "", "=q4=Darkmantle Cap", "=ds=#a2#, #s1#"};
-		{ 18, 22008, "", "=q3=Darkmantle Spaulders", "=ds=#a2#, #s3#"};
-		{ 19, 22009, "", "=q4=Darkmantle Tunic", "=ds=#a2#, #s5#"};
-		{ 20, 22004, "", "=q3=Darkmantle Bracers", "=ds=#a2#, #s8#"};
-		{ 21, 22006, "", "=q4=Darkmantle Gloves", "=ds=#a2#, #s9#"};
-		{ 22, 22002, "", "=q3=Darkmantle Belt", "=ds=#a2#, #s10#"};
-		{ 23, 22007, "", "=q3=Darkmantle Pants", "=ds=#a2#, #s11#"};
-		{ 24, 22003, "", "=q4=Darkmantle Boots", "=ds=#a2#, #s12#"};
-		Next = "T1T2Rogue";
-		Back = "T0SET";
-		Type = "ClassicDungeonExt";
-	};
-
-	AtlasLoot_Data["T0Shaman"] = {
-		{ 1, 0, "Spell_FireResistanceTotem_01", "=q6=#t0s7#", "=ec1=#j6#"};
-		{ 2, 16667, "", "=q3=Coif of Elements", "=ds="..BabbleBoss["Darkmaster Gandling"].." ("..AL["Scholo"]..")", "", "2.86%"};
-		{ 3, 16669, "", "=q3=Pauldrons of Elements", "=ds="..BabbleBoss["Gyth"].." ("..AL["UBRS"]..")", "", "14.77%"};
-		{ 4, 16666, "", "=q3=Vest of Elements", "=ds="..BabbleBoss["General Drakkisath"].." ("..AL["UBRS"]..")", "", "3.03%"};
-		{ 5, 16671, "", "=q3=Bindings of Elements", "=ds="..AL["Trash Mobs"].." ("..AL["Strat"]..")", "", "1.59%"};
-		{ 6, 16672, "", "=q3=Gauntlets of Elements", "=ds="..BabbleBoss["Pyroguard Emberseer"].." ("..AL["UBRS"]..")", "", "14.23%"};
-		{ 7, 16673, "", "=q3=Cord of Elements", "=ds="..AL["Trash Mobs"].." ("..AL["LBRS"]..")", "", "1.06%"};
-		{ 8, 16668, "", "=q3=Kilt of Elements", "=ds="..BabbleBoss["Baron Rivendare"].." ("..AL["Strat"]..")", "", "3.02%"};
-		{ 9, 16670, "", "=q3=Boots of Elements", "=ds="..BabbleBoss["Highlord Omokk"].." ("..AL["LBRS"]..")", "", "9.35%"};
-		{ 16, 0, "Spell_FireResistanceTotem_01", "=q6=#t05s7#", "=ec1=#j7#"};
-		{ 17, 22097, "", "=q4=Coif of The Five Thunders", "=ds=#a3#, #s1#"};
-		{ 18, 22101, "", "=q3=Pauldrons of The Five Thunders", "=ds=#a3#, #s3#"};
-		{ 19, 22102, "", "=q4=Vest of The Five Thunders", "=ds=#a3#, #s5#"};
-		{ 20, 22095, "", "=q3=Bindings of The Five Thunders", "=ds=#a3#, #s8#"};
-		{ 21, 22099, "", "=q4=Gauntlets of The Five Thunders", "=ds=#a3#, #s9#"};
-		{ 22, 22098, "", "=q3=Cord of The Five Thunders", "=ds=#a3#, #s10#"};
-		{ 23, 22100, "", "=q3=Kilt of The Five Thunders", "=ds=#a3#, #s11#"};
-		{ 24, 22096, "", "=q4=Boots of The Five Thunders", "=ds=#a3#, #s12#"};
-		Next = "T1T2Shaman";
-		Back = "T0SET";
-		Type = "ClassicDungeonExt";
-	};
-
-	AtlasLoot_Data["T0Warlock"] = {
-		{ 1, 0, "Spell_Shadow_CurseOfTounges", "=q6=#t0s8#", "=ec1=#j6#"};
-		{ 2, 16698, "", "=q3=Dreadmist Mask", "=ds="..BabbleBoss["Darkmaster Gandling"].." ("..AL["Scholo"]..")", "", "8.78%"};
-		{ 3, 16701, "", "=q3=Dreadmist Mantle", "=ds="..BabbleBoss["Jandice Barov"].." ("..AL["Scholo"]..")", "", "12.20%"};
-		{ 4, 16700, "", "=q3=Dreadmist Robe", "=ds="..BabbleBoss["General Drakkisath"].." ("..AL["UBRS"]..")", "", "8.04%"};
-		{ 5, 16703, "", "=q3=Dreadmist Bracers", "=ds="..AL["Trash Mobs"].." ("..AL["LBRS"]..")", "", "1.68%"};
-		{ 6, 16705, "", "=q3=Dreadmist Wraps", "=ds="..BabbleBoss["Lorekeeper Polkelt"].." ("..AL["Scholo"]..")", "", "14.54%"};
-		{ 7, 16702, "", "=q3=Dreadmist Belt", "=ds="..AL["Trash Mobs"].." ("..AL["Strat"]..")", "", "1.03%"};
-		{ 8, 16699, "", "=q3=Dreadmist Leggings", "=ds="..BabbleBoss["Baron Rivendare"].." ("..AL["Strat"]..")", "", "7.31%"};
-		{ 9, 16704, "", "=q3=Dreadmist Sandals", "=ds="..BabbleBoss["Baroness Anastari"].." ("..AL["Strat"]..")", "", "13.16%"};
-		{ 16, 0, "Spell_Shadow_CurseOfTounges", "=q6=#t05s8#", "=ec1=#j7#"};
-		{ 17, 22074, "", "=q4=Deathmist Mask", "=ds=#a1#, #s1#"};
-		{ 18, 22073, "", "=q3=Deathmist Mantle", "=ds=#a1#, #s5#"};
-		{ 19, 22075, "", "=q4=Deathmist Robe", "=ds=#a1#, #s3#"};
-		{ 20, 22071, "", "=q3=Deathmist Bracers", "=ds=#a1#, #s8#"};
-		{ 21, 22077, "", "=q4=Deathmist Wraps", "=ds=#a1#, #s9#"};
-		{ 22, 22070, "", "=q3=Deathmist Belt", "=ds=#a1#, #s10#"};
-		{ 23, 22072, "", "=q3=Deathmist Leggings", "=ds=#a1#, #s11#"};
-		{ 24, 22076, "", "=q4=Deathmist Sandals", "=ds=#a1#, #s12#"};
-		Next = "T1T2Warlock";
-		Back = "T0SET";
-		Type = "ClassicDungeonExt";
-	};
-
-	AtlasLoot_Data["T0Warrior"] = {
-		{ 1, 0, "INV_Shield_05", "=q6=#t0s9#", "=ec1=#j6#"};
-		{ 2, 16731, "", "=q3=Helm of Valor", "=ds="..BabbleBoss["Darkmaster Gandling"].." ("..AL["Scholo"]..")", "", "6.54%"};
-		{ 3, 16733, "", "=q3=Spaulders of Valor", "=ds="..BabbleBoss["Warchief Rend Blackhand"].." ("..AL["UBRS"]..")", "", "13.39%"};
-		{ 4, 16730, "", "=q3=Breastplate of Valor", "=ds="..BabbleBoss["General Drakkisath"].." ("..AL["UBRS"]..")", "", "5.83%"};
-		{ 5, 16735, "", "=q3=Bracers of Valor", "=ds="..AL["Trash Mobs"].." ("..AL["LBRS"]..")", "", "1.49%"};
-		{ 6, 16737, "", "=q3=Gauntlets of Valor", "=ds="..BabbleBoss["Ramstein the Gorger"].." ("..AL["Strat"]..")", "", "9.58%"};
-		{ 7, 16736, "", "=q3=Belt of Valor", "=ds="..AL["Trash Mobs"].." ("..AL["LBRS"]..")", "", "1.96%"};
-		{ 8, 16732, "", "=q3=Legplates of Valor", "=ds="..BabbleBoss["Baron Rivendare"].." ("..AL["Strat"]..")", "", "5.74%"};
-		{ 9, 16734, "", "=q3=Boots of Valor", "=ds="..BabbleBoss["Kirtonos the Herald"].." ("..AL["Scholo"]..")", "", "11.12%"};
-		{ 16, 0, "INV_Shield_05", "=q6=#t05s9#", "=ec1=#j7#"};
-		{ 17, 21999, "", "=q4=Helm of Heroism", "=ds=#a4#, #s1#"};
-		{ 18, 22001, "", "=q3=Spaulders of Heroism", "=ds=#a4#, #s3#"};
-		{ 19, 21997, "", "=q4=Breastplate of Heroism", "=ds=#a4#, #s5#"};
-		{ 20, 21996, "", "=q3=Bracers of Heroism", "=ds=#a4#, #s8#"};
-		{ 21, 21998, "", "=q4=Gauntlets of Heroism", "=ds=#a4#, #s9#"};
-		{ 22, 21994, "", "=q3=Belt of Heroism", "=ds=#a4#, #s10#"};
-		{ 23, 22000, "", "=q3=Legplates of Heroism", "=ds=#a4#, #s11#"};
-		{ 24, 21995, "", "=q4=Boots of Heroism", "=ds=#a4#, #s12#"};
-		Next = "T1T2Warrior";
-		Back = "T0SET";
-		Type = "ClassicDungeonExt";
-	};
+		AtlasLoot_Data["T0Druid"] = {
+			{ 1, 0, "Spell_Nature_Regeneration", "=q6=#t0s1#", "=ec1=#j6#"};
+			{ 2, 16720, "", "=q3=Wildheart Cowl", "=ds="..BabbleBoss["Darkmaster Gandling"].." ("..AL["Scholo"]..")", "", "7.09%"};
+			{ 3, 16718, "", "=q3=Wildheart Spaulders", "=ds="..BabbleBoss["Gizrul the Slavener"].." ("..AL["LBRS"]..")", "", "11.04%"};
+			{ 4, 16706, "", "=q3=Wildheart Vest", "=ds="..BabbleBoss["General Drakkisath"].." ("..AL["UBRS"]..")", "", "7.36%"};
+			{ 5, 16714, "", "=q3=Wildheart Bracers", "=ds="..AL["Trash Mobs"].." ("..AL["Strat"]..")", "", "1.85%"};
+			{ 6, 16717, "", "=q3=Wildheart Gloves", "=ds="..BabbleBoss["The Unforgiven"].." ("..AL["Strat"]..")", "", "12.61%"};
+			{ 7, 16716, "", "=q3=Wildheart Belt", "=ds="..AL["Trash Mobs"].." ("..AL["Scholo"]..")", "", "2.60%"};
+			{ 8, 16719, "", "=q3=Wildheart Kilt", "=ds="..BabbleBoss["Baron Rivendare"].." ("..AL["Strat"]..")", "", "6.58%"};
+			{ 9, 16715, "", "=q3=Wildheart Boots", "=ds="..BabbleBoss["Mother Smolderweb"].." ("..AL["LBRS"]..")", "", "13.03%"};
+			{ 16, 0, "Spell_Nature_Regeneration", "=q6=#t05s1#", "=ec1=#j7#"};
+			{ 17, 22109, "", "=q4=Feralheart Cowl", "=ds=#a2#, #s1#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal};
+			{ 18, 22112, "", "=q3=Feralheart Spaulders", "=ds=#a2#, #s3#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal};
+			{ 19, 22113, "", "=q4=Feralheart Vest", "=ds=#a2#, #s5#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal};
+			{ 20, 22108, "", "=q3=Feralheart Bracers", "=ds=#a2#, #s8#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal};
+			{ 21, 22110, "", "=q4=Feralheart Gloves", "=ds=#a2#, #s9#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal};
+			{ 22, 22106, "", "=q3=Feralheart Belt", "=ds=#a2#, #s10#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal};
+			{ 23, 22111, "", "=q3=Feralheart Kilt", "=ds=#a2#, #s11#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal};
+			{ 24, 22107, "", "=q4=Feralheart Boots", "=ds=#a2#, #s12#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal};
+			Next = "T1T2Druid";
+			Back = "T0SET";
+			Type = "ClassicDungeonExt";
+		};
+	
+		AtlasLoot_Data["T0Hunter"] = {
+			{ 1, 0, "Ability_Hunter_RunningShot", "=q6=#t0s2#", "=ec1=#j6#"};
+			{ 2, 16677, "", "=q3=Beaststalker's Cap", "=ds="..BabbleBoss["Darkmaster Gandling"].." ("..AL["Scholo"]..")", "", "7.00%"};
+			{ 3, 16679, "", "=q3=Beaststalker's Mantle", "=ds="..BabbleBoss["Overlord Wyrmthalak"].." ("..AL["LBRS"]..")", "", "9.89%"};
+			{ 4, 16674, "", "=q3=Beaststalker's Tunic", "=ds="..BabbleBoss["General Drakkisath"].." ("..AL["UBRS"]..")", "", "6.81%"};
+			{ 5, 16681, "", "=q3=Beaststalker's Bindings", "=ds="..AL["Trash Mobs"].." ("..AL["Strat"]..")", "", "1.64%"};
+			{ 6, 16676, "", "=q3=Beaststalker's Gloves", "=ds="..BabbleBoss["War Master Voone"].." ("..AL["LBRS"]..")", "", "9.15%"};
+			{ 7, 16680, "", "=q3=Beaststalker's Belt", "=ds="..AL["Trash Mobs"].." ("..AL["LBRS"]..")", "", "1.36%"};
+			{ 8, 16678, "", "=q3=Beaststalker's Pants", "=ds="..BabbleBoss["Baron Rivendare"].." ("..AL["Strat"]..")", "", "6.16%"};
+			{ 9, 16675, "", "=q3=Beaststalker's Boots", "=ds="..BabbleBoss["Nerub'enkan"].." ("..AL["Strat"]..")", "", "13.62%"};
+			{ 16, 0, "Ability_Hunter_RunningShot", "=q6=#t05s2#", "=ec1=#j7#"};
+			{ 17, 22013, "", "=q4=Beastmaster's Cap", "=ds=#a3#, #s1#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal};
+			{ 18, 22016, "", "=q3=Beastmaster's Mantle", "=ds=#a3#, #s3#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal};
+			{ 19, 22060, "", "=q4=Beastmaster's Tunic", "=ds=#a3#, #s5#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal};
+			{ 20, 22011, "", "=q3=Beastmaster's Bindings", "=ds=#a3#, #s8#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal};
+			{ 21, 22015, "", "=q4=Beastmaster's Gloves", "=ds=#a3#, #s9#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal};
+			{ 22, 22010, "", "=q3=Beastmaster's Belt", "=ds=#a3#, #s10#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal};
+			{ 23, 22017, "", "=q3=Beastmaster's Pants", "=ds=#a3#, #s11#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal};
+			{ 24, 22061, "", "=q4=Beastmaster's Boots", "=ds=#a3#, #s12#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal};
+			Next = "T1T2Hunter";
+			Back = "T0SET";
+			Type = "ClassicDungeonExt";
+		};
+	
+		AtlasLoot_Data["T0Mage"] = {
+			{ 1, 0, "Spell_Frost_IceStorm", "=q6=#t0s3#", "=ec1=#j6#"};
+			{ 2, 16686, "", "=q3=Magister's Crown", "=ds="..BabbleBoss["Darkmaster Gandling"].." ("..AL["Scholo"]..")", "", "8.60%"};
+			{ 3, 16689, "", "=q3=Magister's Mantle", "=ds="..BabbleBoss["Ras Frostwhisper"].." ("..AL["Scholo"]..")", "", "11.93%"};
+			{ 4, 16688, "", "=q3=Magister's Robes", "=ds="..BabbleBoss["General Drakkisath"].." ("..AL["UBRS"]..")", "", "7.24%"};
+			{ 5, 16683, "", "=q3=Magister's Bindings", "=ds="..AL["Trash Mobs"].." ("..AL["LBRS"]..")", "", "1.19%"};
+			{ 6, 16684, "", "=q3=Magister's Gloves", "=ds="..BabbleBoss["Doctor Theolen Krastinov"].." ("..AL["Scholo"]..")", "", "9.75%"};
+			{ 7, 16685, "", "=q3=Magister's Belt", "=ds="..AL["Trash Mobs"].." ("..AL["Strat"]..")", "", "1.32%"};
+			{ 8, 16687, "", "=q3=Magister's Leggings", "=ds="..BabbleBoss["Baron Rivendare"].." ("..AL["Strat"]..")", "", "6.79%"};
+			{ 9, 16682, "", "=q3=Magister's Boots", "=ds="..BabbleBoss["Hearthsinger Forresten"].." ("..AL["Strat"]..")", "", "10.86%"};
+			{ 16, 0, "Spell_Frost_IceStorm", "=q6=#t05s3#", "=ec1=#j7#"};
+			{ 17, 22065, "", "=q4=Sorcerer's Crown", "=ds=#a1#, #s1#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal};
+			{ 18, 22068, "", "=q3=Sorcerer's Mantle", "=ds=#a1#, #s3#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal};
+			{ 19, 22069, "", "=q4=Sorcerer's Robes", "=ds=#a1#, #s5#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal};
+			{ 20, 22063, "", "=q3=Sorcerer's Bindings", "=ds=#a1#, #s8#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal};
+			{ 21, 22066, "", "=q4=Sorcerer's Gloves", "=ds=#a1#, #s9#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal};
+			{ 22, 22062, "", "=q3=Sorcerer's Belt", "=ds=#a1#, #s10#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal};
+			{ 23, 22067, "", "=q3=Sorcerer's Leggings", "=ds=#a1#, #s11#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal};
+			{ 24, 22064, "", "=q4=Sorcerer's Boots", "=ds=#a1#, #s12#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal};
+			Next = "T1T2Mage";
+			Back = "T0SET";
+			Type = "ClassicDungeonExt";
+		};
+	
+		AtlasLoot_Data["T0Paladin"] = {
+			{ 1, 0, "Spell_Holy_SealOfMight", "=q6=#t0s4#", "=ec1=#j6#"};
+			{ 2, 16727, "", "=q3=Lightforge Helm", "=ds="..BabbleBoss["Darkmaster Gandling"].." ("..AL["Scholo"]..")", "", "5.32%"};
+			{ 3, 16729, "", "=q3=Lightforge Spaulders", "=ds="..BabbleBoss["The Beast"].." ("..AL["UBRS"]..")", "", "13.62%"};
+			{ 4, 16726, "", "=q3=Lightforge Breastplate", "=ds="..BabbleBoss["General Drakkisath"].." ("..AL["UBRS"]..")", "", "3.76%"};
+			{ 5, 16722, "", "=q3=Lightforge Bracers", "=ds="..AL["Trash Mobs"].." ("..AL["Scholo"]..")", "", "3.37%"};
+			{ 6, 16724, "", "=q3=Lightforge Gauntlets", "=ds="..BabbleBoss["Timmy the Cruel"].." ("..AL["Strat"]..")", "", "10.42%"};
+			{ 7, 16723, "", "=q3=Lightforge Belt", "=ds="..AL["Trash Mobs"].." ("..AL["Strat"]..")", "", "1.93%"};
+			{ 8, 16728, "", "=q3=Lightforge Legplates", "=ds="..BabbleBoss["Baron Rivendare"].." ("..AL["Strat"]..")", "", "4.20%"};
+			{ 9, 16725, "", "=q3=Lightforge Boots", "=ds="..BabbleBoss["Balnazzar"].." ("..AL["Strat"]..")", "", "11.11%"};
+			{ 16, 0, "Spell_Holy_SealOfMight", "=q6=#t05s4#", "=ec1=#j7#"};
+			{ 17, 22091, "", "=q4=Soulforge Helm", "=ds=#a4#, #s1#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal};
+			{ 18, 22093, "", "=q3=Soulforge Spaulders", "=ds=#a4#, #s3#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal};
+			{ 19, 22089, "", "=q4=Soulforge Breastplate", "=ds=#a4#, #s5#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal};
+			{ 20, 22088, "", "=q3=Soulforge Bracers", "=ds=#a4#, #s8#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal};
+			{ 21, 22090, "", "=q4=Soulforge Gauntlets", "=ds=#a4#, #s9#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal};
+			{ 22, 22086, "", "=q3=Soulforge Belt", "=ds=#a4#, #s10#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal};
+			{ 23, 22092, "", "=q3=Soulforge Legplates", "=ds=#a4#, #s11#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal};
+			{ 24, 22087, "", "=q4=Soulforge Boots", "=ds=#a4#, #s12#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal};
+			Next = "T1T2Paladin";
+			Back = "T0SET";
+			Type = "ClassicDungeonExt";
+		};
+	
+		AtlasLoot_Data["T0Priest"] = {
+			{ 1, 0, "Spell_Holy_PowerWordShield", "=q6=#t0s5#", "=ec1=#j6#"};
+			{ 2, 16693, "", "=q3=Devout Crown", "=ds="..BabbleBoss["Darkmaster Gandling"].." ("..AL["Scholo"]..")", "", "7.89%"};
+			{ 3, 16695, "", "=q3=Devout Mantle", "=ds="..BabbleBoss["Solakar Flamewreath"].." ("..AL["UBRS"]..")", "", "12.84%"};
+			{ 4, 16690, "", "=q3=Devout Robe", "=ds="..BabbleBoss["General Drakkisath"].." ("..AL["UBRS"]..")", "", "6.20%"};
+			{ 5, 16697, "", "=q3=Devout Bracers", "=ds="..AL["Trash Mobs"].." ("..AL["Strat"]..")", "", "1.13%"};
+			{ 6, 16692, "", "=q3=Devout Gloves", "=ds="..BabbleBoss["Archivist Galford"].." ("..AL["Strat"]..")", "", "12.46%"};
+			{ 7, 16696, "", "=q3=Devout Belt", "=ds="..AL["Trash Mobs"].." ("..AL["LBRS"]..")", "", "2.07%"};
+			{ 8, 16694, "", "=q3=Devout Skirt", "=ds="..BabbleBoss["Baron Rivendare"].." ("..AL["Strat"]..")", "", "7.42%"};
+			{ 9, 16691, "", "=q3=Devout Sandals", "=ds="..BabbleBoss["Maleki the Pallid"].." ("..AL["Strat"]..")", "", "13.64%"};
+			{ 16, 0, "Spell_Holy_PowerWordShield", "=q6=#t05s5#", "=ec1=#j7#"};
+			{ 17, 22080, "", "=q4=Virtuous Crown", "=ds=#a1#, #s1#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal};
+			{ 18, 22082, "", "=q3=Virtuous Mantle", "=ds=#a1#, #s3#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal};
+			{ 19, 22083, "", "=q4=Virtuous Robe", "=ds=#a1#, #s5#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal};
+			{ 20, 22079, "", "=q3=Virtuous Bracers", "=ds=#a1#, #s8#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal};
+			{ 21, 22081, "", "=q4=Virtuous Gloves", "=ds=#a1#, #s9#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal};
+			{ 22, 22078, "", "=q3=Virtuous Belt", "=ds=#a1#, #s10#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal};
+			{ 23, 22085, "", "=q3=Virtuous Skirt", "=ds=#a1#, #s11#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal};
+			{ 24, 22084, "", "=q4=Virtuous Sandals", "=ds=#a1#, #s12#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal};
+			Next = "T1T2Priest";
+			Back = "T0SET";
+			Type = "ClassicDungeonExt";
+		};
+	
+		AtlasLoot_Data["T0Rogue"] = {
+			{ 1, 0, "Ability_BackStab", "=q6=#t0s6#", "=ec1=#j6#"};
+			{ 2, 16707, "", "=q3=Shadowcraft Cap", "=ds="..BabbleBoss["Darkmaster Gandling"].." ("..AL["Scholo"]..")", "", "6.65%"};
+			{ 3, 16708, "", "=q3=Shadowcraft Spaulders", "=ds="..BabbleBoss["Cannon Master Willey"].." ("..AL["Strat"]..")", "", "10.68%"};
+			{ 4, 16721, "", "=q3=Shadowcraft Tunic", "=ds="..BabbleBoss["General Drakkisath"].." ("..AL["UBRS"]..")", "", "6.09%"};
+			{ 5, 16710, "", "=q3=Shadowcraft Bracers", "=ds="..AL["Trash Mobs"].." ("..AL["Scholo"]..")", "", "3.51%"};
+			{ 6, 16712, "", "=q3=Shadowcraft Gloves", "=ds="..BabbleBoss["Shadow Hunter Vosh'gajin"].." ("..AL["LBRS"]..")", "", "11.89%"};
+			{ 7, 16713, "", "=q3=Shadowcraft Belt", "=ds="..AL["Trash Mobs"].." ("..AL["LBRS"]..")", "", "1.05%"};
+			{ 8, 16709, "", "=q3=Shadowcraft Pants", "=ds="..BabbleBoss["Baron Rivendare"].." ("..AL["Strat"]..")", "", "7.76%"};
+			{ 9, 16711, "", "=q3=Shadowcraft Boots", "=ds="..BabbleBoss["Rattlegore"].." ("..AL["Scholo"]..")", "", "14.32%"};
+			{ 16, 0, "Ability_BackStab", "=q6=#t05s6#", "=ec1=#j7#"};
+			{ 17, 22005, "", "=q4=Darkmantle Cap", "=ds=#a2#, #s1#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal};
+			{ 18, 22008, "", "=q3=Darkmantle Spaulders", "=ds=#a2#, #s3#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal};
+			{ 19, 22009, "", "=q4=Darkmantle Tunic", "=ds=#a2#, #s5#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal};
+			{ 20, 22004, "", "=q3=Darkmantle Bracers", "=ds=#a2#, #s8#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal};
+			{ 21, 22006, "", "=q4=Darkmantle Gloves", "=ds=#a2#, #s9#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal};
+			{ 22, 22002, "", "=q3=Darkmantle Belt", "=ds=#a2#, #s10#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal};
+			{ 23, 22007, "", "=q3=Darkmantle Pants", "=ds=#a2#, #s11#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal};
+			{ 24, 22003, "", "=q4=Darkmantle Boots", "=ds=#a2#, #s12#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal};
+			Next = "T1T2Rogue";
+			Back = "T0SET";
+			Type = "ClassicDungeonExt";
+		};
+	
+		AtlasLoot_Data["T0Shaman"] = {
+			{ 1, 0, "Spell_FireResistanceTotem_01", "=q6=#t0s7#", "=ec1=#j6#"};
+			{ 2, 16667, "", "=q3=Coif of Elements", "=ds="..BabbleBoss["Darkmaster Gandling"].." ("..AL["Scholo"]..")", "", "2.86%"};
+			{ 3, 16669, "", "=q3=Pauldrons of Elements", "=ds="..BabbleBoss["Gyth"].." ("..AL["UBRS"]..")", "", "14.77%"};
+			{ 4, 16666, "", "=q3=Vest of Elements", "=ds="..BabbleBoss["General Drakkisath"].." ("..AL["UBRS"]..")", "", "3.03%"};
+			{ 5, 16671, "", "=q3=Bindings of Elements", "=ds="..AL["Trash Mobs"].." ("..AL["Strat"]..")", "", "1.59%"};
+			{ 6, 16672, "", "=q3=Gauntlets of Elements", "=ds="..BabbleBoss["Pyroguard Emberseer"].." ("..AL["UBRS"]..")", "", "14.23%"};
+			{ 7, 16673, "", "=q3=Cord of Elements", "=ds="..AL["Trash Mobs"].." ("..AL["LBRS"]..")", "", "1.06%"};
+			{ 8, 16668, "", "=q3=Kilt of Elements", "=ds="..BabbleBoss["Baron Rivendare"].." ("..AL["Strat"]..")", "", "3.02%"};
+			{ 9, 16670, "", "=q3=Boots of Elements", "=ds="..BabbleBoss["Highlord Omokk"].." ("..AL["LBRS"]..")", "", "9.35%"};
+			{ 16, 0, "Spell_FireResistanceTotem_01", "=q6=#t05s7#", "=ec1=#j7#"};
+			{ 17, 22097, "", "=q4=Coif of The Five Thunders", "=ds=#a3#, #s1#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal};
+			{ 18, 22101, "", "=q3=Pauldrons of The Five Thunders", "=ds=#a3#, #s3#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal};
+			{ 19, 22102, "", "=q4=Vest of The Five Thunders", "=ds=#a3#, #s5#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal};
+			{ 20, 22095, "", "=q3=Bindings of The Five Thunders", "=ds=#a3#, #s8#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal};
+			{ 21, 22099, "", "=q4=Gauntlets of The Five Thunders", "=ds=#a3#, #s9#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal};
+			{ 22, 22098, "", "=q3=Cord of The Five Thunders", "=ds=#a3#, #s10#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal};
+			{ 23, 22100, "", "=q3=Kilt of The Five Thunders", "=ds=#a3#, #s11#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal};
+			{ 24, 22096, "", "=q4=Boots of The Five Thunders", "=ds=#a3#, #s12#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal};
+			Next = "T1T2Shaman";
+			Back = "T0SET";
+			Type = "ClassicDungeonExt";
+		};
+	
+		AtlasLoot_Data["T0Warlock"] = {
+			{ 1, 0, "Spell_Shadow_CurseOfTounges", "=q6=#t0s8#", "=ec1=#j6#"};
+			{ 2, 16698, "", "=q3=Dreadmist Mask", "=ds="..BabbleBoss["Darkmaster Gandling"].." ("..AL["Scholo"]..")", "", "8.78%"};
+			{ 3, 16701, "", "=q3=Dreadmist Mantle", "=ds="..BabbleBoss["Jandice Barov"].." ("..AL["Scholo"]..")", "", "12.20%"};
+			{ 4, 16700, "", "=q3=Dreadmist Robe", "=ds="..BabbleBoss["General Drakkisath"].." ("..AL["UBRS"]..")", "", "8.04%"};
+			{ 5, 16703, "", "=q3=Dreadmist Bracers", "=ds="..AL["Trash Mobs"].." ("..AL["LBRS"]..")", "", "1.68%"};
+			{ 6, 16705, "", "=q3=Dreadmist Wraps", "=ds="..BabbleBoss["Lorekeeper Polkelt"].." ("..AL["Scholo"]..")", "", "14.54%"};
+			{ 7, 16702, "", "=q3=Dreadmist Belt", "=ds="..AL["Trash Mobs"].." ("..AL["Strat"]..")", "", "1.03%"};
+			{ 8, 16699, "", "=q3=Dreadmist Leggings", "=ds="..BabbleBoss["Baron Rivendare"].." ("..AL["Strat"]..")", "", "7.31%"};
+			{ 9, 16704, "", "=q3=Dreadmist Sandals", "=ds="..BabbleBoss["Baroness Anastari"].." ("..AL["Strat"]..")", "", "13.16%"};
+			{ 16, 0, "Spell_Shadow_CurseOfTounges", "=q6=#t05s8#", "=ec1=#j7#"};
+			{ 17, 22074, "", "=q4=Deathmist Mask", "=ds=#a1#, #s1#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal};
+			{ 18, 22073, "", "=q3=Deathmist Mantle", "=ds=#a1#, #s5#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal};
+			{ 19, 22075, "", "=q4=Deathmist Robe", "=ds=#a1#, #s3#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal};
+			{ 20, 22071, "", "=q3=Deathmist Bracers", "=ds=#a1#, #s8#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal};
+			{ 21, 22077, "", "=q4=Deathmist Wraps", "=ds=#a1#, #s9#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal};
+			{ 22, 22070, "", "=q3=Deathmist Belt", "=ds=#a1#, #s10#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal};
+			{ 23, 22072, "", "=q3=Deathmist Leggings", "=ds=#a1#, #s11#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal};
+			{ 24, 22076, "", "=q4=Deathmist Sandals", "=ds=#a1#, #s12#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal};
+			Next = "T1T2Warlock";
+			Back = "T0SET";
+			Type = "ClassicDungeonExt";
+		};
+	
+		AtlasLoot_Data["T0Warrior"] = {
+			{ 1, 0, "INV_Shield_05", "=q6=#t0s9#", "=ec1=#j6#"};
+			{ 2, 16731, "", "=q3=Helm of Valor", "=ds="..BabbleBoss["Darkmaster Gandling"].." ("..AL["Scholo"]..")", "", "6.54%"};
+			{ 3, 16733, "", "=q3=Spaulders of Valor", "=ds="..BabbleBoss["Warchief Rend Blackhand"].." ("..AL["UBRS"]..")", "", "13.39%"};
+			{ 4, 16730, "", "=q3=Breastplate of Valor", "=ds="..BabbleBoss["General Drakkisath"].." ("..AL["UBRS"]..")", "", "5.83%"};
+			{ 5, 16735, "", "=q3=Bracers of Valor", "=ds="..AL["Trash Mobs"].." ("..AL["LBRS"]..")", "", "1.49%"};
+			{ 6, 16737, "", "=q3=Gauntlets of Valor", "=ds="..BabbleBoss["Ramstein the Gorger"].." ("..AL["Strat"]..")", "", "9.58%"};
+			{ 7, 16736, "", "=q3=Belt of Valor", "=ds="..AL["Trash Mobs"].." ("..AL["LBRS"]..")", "", "1.96%"};
+			{ 8, 16732, "", "=q3=Legplates of Valor", "=ds="..BabbleBoss["Baron Rivendare"].." ("..AL["Strat"]..")", "", "5.74%"};
+			{ 9, 16734, "", "=q3=Boots of Valor", "=ds="..BabbleBoss["Kirtonos the Herald"].." ("..AL["Scholo"]..")", "", "11.12%"};
+			{ 16, 0, "INV_Shield_05", "=q6=#t05s9#", "=ec1=#j7#"};
+			{ 17, 21999, "", "=q4=Helm of Heroism", "=ds=#a4#, #s1#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal};
+			{ 18, 22001, "", "=q3=Spaulders of Heroism", "=ds=#a4#, #s3#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal};
+			{ 19, 21997, "", "=q4=Breastplate of Heroism", "=ds=#a4#, #s5#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal};
+			{ 20, 21996, "", "=q3=Bracers of Heroism", "=ds=#a4#, #s8#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal};
+			{ 21, 21998, "", "=q4=Gauntlets of Heroism", "=ds=#a4#, #s9#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal};
+			{ 22, 21994, "", "=q3=Belt of Heroism", "=ds=#a4#, #s10#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal};
+			{ 23, 22000, "", "=q3=Legplates of Heroism", "=ds=#a4#, #s11#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal};
+			{ 24, 21995, "", "=q4=Boots of Heroism", "=ds=#a4#, #s12#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal};
+			Next = "T1T2Warrior";
+			Back = "T0SET";
+			Type = "ClassicDungeonExt";
+		};
 
 		-----------------------------
 		--- Tier 1/2 Sets (T1/T2) ---

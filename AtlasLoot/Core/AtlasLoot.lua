@@ -497,7 +497,7 @@ function AtlasLoot_OnLoad()
 end
 
 AtlasLoot_Difficulty = {
-		-- table of difficuilitys and there itemID references
+		-- table of difficulties and there itemID references
 		["ClassicDungeon"] = { {"Normal", "" }, {"Bloodforged", 1 } };
 		
 		["ClassicDungeonExt"] = { {"Normal", "" }, {"Heroic", 3 }, {"Mythic", 4 }, {"Mythic 1", 5 }, {"Mythic 2", 6 }, {"Mythic 3", 7 }, {"Mythic 4", 8 }, {"Mythic 5", 9 }, {"Mythic 6", 10 },
@@ -516,10 +516,22 @@ AtlasLoot_Difficulty = {
 		
 		["WrathRaid"] = { {"Normal Flex", "" }, {"Heroic Flex", 3 }, {"Ascended", 4 }, {"Bloodforged", 1 }, };
 		
-		["Crafting"] = { {"Crafting Patterns", "" }, {"Item Normal", "=s=Normal" }, {"Bloodforged", 1 }, },
+		["Crafting"] = { {"Crafting Patterns", "" }, {"Item Normal", "=s=Normal" }, {"Bloodforged", 1 }, };
 		
-		["CraftingExt"] = { {"Crafting Pattern Uncommon", "" }, {"Crafting Patterns Rare", "Rare" }, {"Crafting Patterns Epic", "Epic" }, {"Item Uncommon", "=s=" }, {"Item Rare", "=s=Rare" }, {"Item Epic", "=s=Epic" } }
+		["CraftingExt"] = { {"Crafting Pattern Uncommon", "" }, {"Crafting Patterns Rare", "Rare" }, {"Crafting Patterns Epic", "Epic" }, {"Item Uncommon", "=s=" }, {"Item Rare", "=s=Rare" }, {"Item Epic", "=s=Epic" } };
 		
+
+		--Enums for comparisons in code
+		Bloodforged = 1;
+		Normal = 2;
+		Heroic = 3;
+		Mythic = 4; --Use for Ascended as well
+
+		MythicPlus = {5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24}; --Usage AtlasLoot_Difficulty.MythicPlus[1-20];
+
+		DUPLICATE = 17;
+		MIN_DIF = 18;
+		MAX_DIF = 19;
 }
 
 --[[
@@ -636,15 +648,34 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 	if (dataID == "SearchResult") or (dataID == "WishList") or (AtlasLoot_IsLootTableAvailable(dataID)) then
 		--Iterate through each item object and set its properties
 		for i = 1, 30, 1 do
+
 			--Check for a valid object (that it exists, and that it has a name)
-			if(dataSource[dataID][i] ~= nil and dataSource[dataID][i][4] ~= "") then					
-				
-				if dataSource[dataID][i][8] and tonumber(ItemindexID) then
-					-- Used if an item has more then 1 version with the same name eg Atiesh
-					IDfound = AL_FindId(string.sub(dataSource[dataID][i][4], 5) .. " " .. dataSource[dataID][i][8], ItemindexID) -- Used for 8th table entery in a loottable for when we have items with the same name eg Atiesh
+			local toShow = true;
+			if(dataSource[dataID][i] ~= nil and dataSource[dataID][i][4] ~= "") then
+				--Checks if an item has a Minimum difficulty, this is to hide items that shouldn't show on lower difficulties
+				if dataSource[dataID][i][AtlasLoot_Difficulty.MIN_DIF] then
+					if dataSource[dataID][i][AtlasLoot_Difficulty.MIN_DIF] > ItemindexID then toShow = false end;
+				end
+			else
+				toShow = false;
+			end
+
+			if(toShow) then					
+
+				--Sets ItemindexID to normal(2) if it is nil for min/max difficulties. 
+				if not tonumber(ItemindexID) then ItemindexID = AtlasLoot_Difficulty.Normal end;
+
+				--Checks if an item has a Maximum difficulty, this is to correct some items that have an entry for higher difficulties then they really do
+				if dataSource[dataID][i][AtlasLoot_Difficulty.MAX_DIF] then
+					if tonumber(dataSource[dataID][i][AtlasLoot_Difficulty.MAX_DIF]) < ItemindexID then ItemindexID = dataSource[dataID][i][AtlasLoot_Difficulty.MAX_DIF] end;
+				end
+
+				if dataSource[dataID][i][AtlasLoot_Difficulty.DUPLICATE] then
+					--Used if an item has more then 1 version with the same name eg Atiesh
+					IDfound = AL_FindId(string.sub(dataSource[dataID][i][4], 5) .. " " .. dataSource[dataID][i][AtlasLoot_Difficulty.DUPLICATE], ItemindexID) or dataSource[dataID][i][2];
 				else	
-					--	if something was found in itemID database show that if not show default table item
-					IDfound = AL_FindId(string.sub(dataSource[dataID][i][4], 5), ItemindexID) or dataSource[dataID][i][2]
+					--If something was found in itemID database show that if not show default table item
+					IDfound = AL_FindId(string.sub(dataSource[dataID][i][4], 5), ItemindexID) or dataSource[dataID][i][2];
 				end
 
 				if string.sub(IDfound, 1, 1) == "s" then
