@@ -5,8 +5,12 @@ AtlasLoot_DewDropSubMenuClick(tablename, text)
 AtlasLoot_DewDropSubMenu2Click(tablename, text)
 AtlasLoot_DefaultFrame_OnShow()
 AtlasLootDefaultFrame_OnHide()
-AtlasLoot_DewdropSubMenuRegister(loottable)
+AtlasLoot_DewDropSubMenu2Click(raidtablename, itemID, itemColour)
+AtlasLoot_DifficultyDisable()
+AtlasLoot_DifficultyEnable(dataID, dataSource)
+AtlasLootDefaultFrame_GetRaidDifficulty(raidtablename, itemID, itemColour)
 AtlasLoot_DewdropSubMenu2Register(loottable)
+AtlasLoot_DewdropSubMenuRegister(loottable)
 AtlasLoot_DewdropRegister()
 AtlasLoot_SetNewStyle(style)
 ]]
@@ -134,7 +138,7 @@ function AtlasLootDefaultFrame_OnHide()
 end   
 
 function AtlasLoot_DewDropSubMenu2Click(raidtablename, itemID, itemColour)
-	if ATLASLOOT_FILTER_ENABLE == true then
+	if ATLASLOOT_FILTER_ENABLE == true then --used to refresh loottable when filter is enabled
     AtlasLoot_FilterEnableButton()
     ReEnableFilter = true
     end
@@ -146,12 +150,12 @@ function AtlasLoot_DewDropSubMenu2Click(raidtablename, itemID, itemColour)
 	AtlasLootDefaultFrame_SelectedTable2:SetText(DropTablename);
 	AtlasLootDefaultFrame_SelectedTable2:Show();
 	AtlasLoot_DewdropSubMenu2:Close(1);
-    if ReEnableFilter then
+    if ReEnableFilter then --used to refresh loottable when filter is enabled
         AtlasLoot_FilterEnableButton()
     end
 end
 
-function AtlasLoot_DifficultyDisable()
+function AtlasLoot_DifficultyDisable() --Disables Difficulty Menu
     isTablereference = false
 		notPattern = false
 		AtlasLoot_DewdropSubMenu2:Unregister(AtlasLootDefaultFrame_SubMenu2);
@@ -162,7 +166,7 @@ function AtlasLoot_DifficultyDisable()
 		SelectedTable2TextSet = false
 end
 
-function AtlasLoot_DifficultyEnable(dataID, dataSource)
+function AtlasLoot_DifficultyEnable(dataID, dataSource) --Enables Difficulty Menu
     AtlasLootDefaultFrame_SubMenu2:Enable();
 		AtlasLoot_DewdropSubMenu2:Unregister(AtlasLootDefaultFrame_SubMenu2);
 		AtlasLoot_DewdropSubMenu2Register(AtlasLoot_Difficulty[dataSource[dataID].Type]);
@@ -174,7 +178,6 @@ function AtlasLoot_DifficultyEnable(dataID, dataSource)
 end
 
 function AtlasLootDefaultFrame_GetRaidDifficulty(raidtablename, itemID, itemColour)
-            
             if tonumber(itemID) then --used in itemID search feature for itemID database
 				ItemindexID = itemID;
 				isTablereference = false;

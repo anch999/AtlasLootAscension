@@ -2181,7 +2181,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 17, 29761, "", "=q4=Helm of the Fallen Defender", "=q1=#m1# =ds=#c1#, #c5#, #c9#", "", "26.73%"};
 		{ 18, 29759, "", "=q4=Helm of the Fallen Hero", "=q1=#m1# =ds=#c2#, #c3#, #c8#", "", "20.48%"};
 		{ 20, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
-		{ 28, 499438, "", "=q4=Smoldering Emberwyrm", "=ds=#e12#", "", ""};
+		{ 28, 499438, "", "=q4=Smoldering Emberwyrm", "=ds=#e12#", [AtlasLoot_Difficulty.MIN_DIF] = AtlasLoot_Difficulty.Heroic, "" };
 		Prev = "KaraChess";
 		Type = "BCRaid";
 	};
