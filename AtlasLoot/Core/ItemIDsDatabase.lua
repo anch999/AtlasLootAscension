@@ -5008,3 +5008,58 @@ ItemIDsDatabase["Atiesh, Greatstaff of the Guardian (Mage)"] = {6022589, 22589, 
 ItemIDsDatabase["Atiesh, Greatstaff of the Guardian (Druid)"] = {6022632, 22632, 22632, 222632};
 ItemIDsDatabase["Atiesh, Greatstaff of the Guardian (Priest)"] = {6022631, 22631, 22631, 222631};
 ItemIDsDatabase["Atiesh, Greatstaff of the Guardian (Warlock)"] = {6022630, 22630, 22630, 222630};
+
+--Tier 1/2 Tokens
+ItemIDsDatabase["Molten Helmet"] = {2522353, 2522353, 2622353, 2722353};
+ItemIDsDatabase["Molten Pauldrons"] = {2522354, 2522354, 2622354, 2722354};
+ItemIDsDatabase["Molten Breastplate"] = {2522349, 2522349, 2622349, 2722349};
+ItemIDsDatabase["Molten Bracers"] = {2522355, 2522355, 2622355, 2722355};
+ItemIDsDatabase["Molten Gauntlets"] = {2522356, 2522356, 2622356, 2722356};
+ItemIDsDatabase["Molten Waistgaurd"] = {2522352, 2522357, 2622357, 2722357};
+ItemIDsDatabase["Molten Legplates"] = {2522358, 2522352, 2622352, 2722352};
+ItemIDsDatabase["Molten Sabatons"] = {2522357, 2522358, 2622358, 2722358};
+
+ItemIDsDatabase["Molten Headpiece"] = {2522360, 2522360, 2622360, 2722360};
+ItemIDsDatabase["Molten Spaulders"] = {2522361, 2522361, 2622361, 2722361};
+ItemIDsDatabase["Molten Tunic"] = {2522350, 2522350, 2622350, 2722350};
+ItemIDsDatabase["Molten Wristgaurds"] = {2522362, 2522362, 2622362, 2722362};
+ItemIDsDatabase["Molten Handgaurds"] = {2522363, 2522363, 2622363, 2722363};
+ItemIDsDatabase["Molten Girdle"] = {2522364, 2522364, 2622364, 2722364};
+ItemIDsDatabase["Molten Leggaurds"] = {2522359, 2522359, 2622359, 2722359};
+ItemIDsDatabase["Molten Boots"] = {2522365, 2522365, 2622365, 2722365};
+
+ItemIDsDatabase["Molten Circlet"] = {2522367, 2522367, 2622367, 2722367};
+ItemIDsDatabase["Molten Shoulderpads"] = {2522368, 2522368, 2622368, 2722368};
+ItemIDsDatabase["Molten Robe"] = {2522351, 2522351, 2622351, 2722351};
+ItemIDsDatabase["Molten Bindings"] = {2522369, 2522369, 2622369, 2722369};
+ItemIDsDatabase["Molten Gloves"] = {2522370, 2522370, 2622370, 2722370};
+ItemIDsDatabase["Molten Belt"] = {2522371, 2522371, 2622371, 2722371};
+ItemIDsDatabase["Molten Leggings"] = {2522366, 2522366, 2622366, 2722366};
+ItemIDsDatabase["Molten Boots"] = {2522372, 2522372, 2622372, 2722372};
+
+ItemIDsDatabase["Chromatic Helmet"] = {2522453, 2522453, 2622453, 2722453};
+ItemIDsDatabase["Chromatic Pauldrons"] = {2522454, 2522454, 2622454, 2722454};
+ItemIDsDatabase["Chromatic Breastplate"] = {2522449, 2522449, 2622449, 2722449};
+ItemIDsDatabase["Chromatic Bracers"] = {2522455, 2522455, 2622455, 2722455};
+ItemIDsDatabase["Chromatic Gauntlets"] = {2522456, 2522456, 2622456, 2722456};
+ItemIDsDatabase["Chromatic Waistgaurd"] = {2522452, 2522457, 2622457, 2722457};
+ItemIDsDatabase["Chromatic Legplates"] = {2522458, 2522452, 2622452, 2722452};
+ItemIDsDatabase["Chromatic Sabatons"] = {2522457, 2522458, 2622458, 2722458};
+
+ItemIDsDatabase["Chromatic Headpiece"] = {2522460, 2522460, 2622460, 2722460};
+ItemIDsDatabase["Chromatic Spaulders"] = {2522461, 2522461, 2622461, 2722461};
+ItemIDsDatabase["Chromatic Tunic"] = {2522450, 2522450, 2622450, 2722450};
+ItemIDsDatabase["Chromatic Wristgaurds"] = {2522462, 2522462, 2622462, 2722462};
+ItemIDsDatabase["Chromatic Handgaurds"] = {2522463, 2522463, 2622463, 2722463};
+ItemIDsDatabase["Chromatic Girdle"] = {2522464, 2522464, 2622464, 2722464};
+ItemIDsDatabase["Chromatic Leggaurds"] = {2522459, 2522459, 2622459, 2722459};
+ItemIDsDatabase["Chromatic Boots"] = {2522465, 2522465, 2622465, 2722465};
+
+ItemIDsDatabase["Chromatic Circlet"] = {2522467, 2522467, 2622467, 2722467};
+ItemIDsDatabase["Chromatic Shoulderpads"] = {2522468, 2522468, 2622468, 2722468};
+ItemIDsDatabase["Chromatic Robe"] = {2522451, 2522451, 2622451, 2722451};
+ItemIDsDatabase["Chromatic Bindings"] = {2522469, 2522469, 2622469, 2722469};
+ItemIDsDatabase["Chromatic Gloves"] = {2522470, 2522470, 2622470, 2722470};
+ItemIDsDatabase["Chromatic Belt"] = {2522471, 2522471, 2622471, 2722471};
+ItemIDsDatabase["Chromatic Leggings"] = {2522466, 2522466, 2622466, 2722466};
+ItemIDsDatabase["Chromatic Boots"] = {2522472, 2522472, 2622472, 2722472};
