@@ -657,30 +657,32 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 				toShow = false;
 			end
 
-			if(toShow) then					
-
-				--Sets ItemindexID to normal(2) if it is nil for min/max difficulties. 
-				if not tonumber(ItemindexID) then ItemindexID = AtlasLoot_Difficulty.Normal end;
-
-				--Checks if an item has a Maximum difficulty, this is to correct some items that have an entry for higher difficulties then they really do
-				if dataSource[dataID][i][AtlasLoot_Difficulty.MAX_DIF] then
-					if tonumber(dataSource[dataID][i][AtlasLoot_Difficulty.MAX_DIF]) < ItemindexID then ItemindexID = dataSource[dataID][i][AtlasLoot_Difficulty.MAX_DIF] end;
-				end
-
-				if dataSource[dataID][i][AtlasLoot_Difficulty.DUPLICATE] then
-					--Used if an item has more then 1 version with the same name eg Atiesh
-					IDfound = AL_FindId(string.sub(dataSource[dataID][i][4], 5) .. " " .. dataSource[dataID][i][AtlasLoot_Difficulty.DUPLICATE], ItemindexID) or dataSource[dataID][i][2];
-				else	
-					--If something was found in itemID database show that if not show default table item
-					IDfound = AL_FindId(string.sub(dataSource[dataID][i][4], 5), ItemindexID) or dataSource[dataID][i][2];
-				end
+			if(toShow) then
+				IDfound = AL_FindId(string.sub(dataSource[dataID][i][4], 5), ItemindexID) or dataSource[dataID][i][2];
 
 				if string.sub(IDfound, 1, 1) == "s" then
 					isItem = false;
 				else
 					isItem = true;
 				end
+				
 				if isItem then
+					--Sets ItemindexID to normal(2) if it is nil for min/max difficulties. 
+					if not tonumber(ItemindexID) then ItemindexID = AtlasLoot_Difficulty.Normal end;
+
+					--Checks if an item has a Maximum difficulty, this is to correct some items that have an entry for higher difficulties then they really do
+					if dataSource[dataID][i][AtlasLoot_Difficulty.MAX_DIF] then
+						if tonumber(dataSource[dataID][i][AtlasLoot_Difficulty.MAX_DIF]) < ItemindexID then ItemindexID = dataSource[dataID][i][AtlasLoot_Difficulty.MAX_DIF] end;
+					end
+
+					if dataSource[dataID][i][AtlasLoot_Difficulty.DUPLICATE] then
+						--Used if an item has more then 1 version with the same name eg Atiesh
+						IDfound = AL_FindId(string.sub(dataSource[dataID][i][4], 5) .. " " .. dataSource[dataID][i][AtlasLoot_Difficulty.DUPLICATE], ItemindexID) or dataSource[dataID][i][2];
+					else	
+						--If something was found in itemID database show that if not show default table item
+						IDfound = AL_FindId(string.sub(dataSource[dataID][i][4], 5), ItemindexID) or dataSource[dataID][i][2];
+					end
+
 					itemName, itemLink, itemQuality, itemLevel, itemMinLevel, itemType, itemSubType, itemCount, itemEquipLoc, itemTexture = GetItemInfo(IDfound);
 					--If the client has the name of the item in cache, use that instead.
 					--This is poor man's localisation, English is replaced be whatever is needed
@@ -849,18 +851,6 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
         --This is a valid QuickLook, so show the UI objects
         AtlasLoot_QuickLooks:Show();
         AtlasLootQuickLooksButton:Show();
-		--Check if difficulties exist, if so show difficulty select buttons
-		if (dataID ~= "SearchResult" and AtlasLoot_Data[dataID].Dif ~= nil) then
-			--AtlasLootMythicButton.difficulty_type = AtlasLoot_Data[dataID].Type or "Dungeon" 
-			--AtlasLootMythicButton:Show();
-			--AtlasLoot_DifficultySelect:Show();
-		end
-		
-		if (dataID == "SearchResult" and dataSource[dataID].Dif ~= nil) then
-			--AtlasLootMythicButton.difficulty_type = dataSource[dataID].Type or "Dungeon" 
-			--AtlasLootMythicButton:Show();
-			--AtlasLoot_DifficultySelect:Show();
-		end
 
 		-- Show the Filter Check-Box
 		if dataID ~= "WishList" and dataID ~= "SearchResult" and dataSource_backup ~= "AtlasLootCrafting"  then
