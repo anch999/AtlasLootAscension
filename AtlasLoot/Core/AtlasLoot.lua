@@ -546,12 +546,12 @@ AtlasLoot_Difficulty = {
 				{"Normal/Heroic", "", [4] = "Submenu"}, 
 			}, 
 			[2] = {
-				{"Mythic", 4, [4] = "Submenu"}, 
+				{"Mythic", 4, "=q4=", [4] = "Submenu"}, 
 			}, 
 			[3] = { 
 				["Mythic+ 1-10"] = {
-					{"Mythic 1", 5, [4] = "Submenu" },  {"Mythic 2", 6, [4] = "Submenu" },  {"Mythic 3", 7, [4] = "Submenu" },  {"Mythic 4", 8, [4] = "Submenu" },  {"Mythic 5", 9, [4] = "Submenu" }, 
-					{"Mythic 6", 10, [4] = "Submenu" }, {"Mythic 7", 11, [4] = "Submenu" }, {"Mythic 8", 12, [4] = "Submenu" }, {"Mythic 9", 13, [4] = "Submenu" }, {"Mythic 10", 14, [4] = "Submenu" },
+					{"Mythic 1", 5, "=q4=", [4] = "Submenu" },  {"Mythic 2", 6, "=q4=", [4] = "Submenu" },  {"Mythic 3", 7, "=q4=", [4] = "Submenu" },  {"Mythic 4", 8, "=q4=", [4] = "Submenu" },  {"Mythic 5", 9, "=q4=", [4] = "Submenu" }, 
+					{"Mythic 6", 10, "=q4=", [4] = "Submenu" }, {"Mythic 7", 11, "=q4=", [4] = "Submenu" }, {"Mythic 8", 12, "=q4=", [4] = "Submenu" }, {"Mythic 9", 13, "=q4=", [4] = "Submenu" }, {"Mythic 10", 14, "=q4=", [4] = "Submenu" },
 				}, 
 			},
 			[4] = {
