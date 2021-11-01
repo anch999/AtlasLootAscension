@@ -681,7 +681,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 4, 11631, "", "=q3=Stoneshell Guard", "=ds=#w8#", "", "22.06%"};
 		{ 5, 11630, "", "=q3=Rockshard Pellets", "=ds=#w18#", "", "16.82%"};
 		{ 16, 11813, "", "=q2=Formula: Smoking Heart of the Mountain", "=ds=#p4# (265)", "", "14.79%"};
-		{ 17, 11811, "", "=q3=Smoking Heart of the Mountain", "=ds=#s14#"};
+		{ 17, 11811, "", "=q3=Smoking Heart of the Mountain", "=ds=#s14#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal };
 		Prev = "BRDPyron";
 		Next = "BRDHighInterrogatorGerstahn";
 		Type = "ClassicDungeonExt";
