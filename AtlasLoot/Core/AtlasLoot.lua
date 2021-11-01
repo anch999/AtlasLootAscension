@@ -492,7 +492,7 @@ AtlasLoot_Difficulty = {
 		-- table of difficulties and there itemID references
 		["ClassicDungeon"] = { 
 			[1] = {
-				{"Normal", 2, [4] = "Submenu"}, 
+				{"Normal", "", [4] = "Submenu"}, 
 			}, 
 			[2] = {
 				{"Bloodforged", 1, [4] = "Submenu"}, 
@@ -501,7 +501,7 @@ AtlasLoot_Difficulty = {
 		
 		["ClassicDungeonExt"] = { 
 			[1] = {
-				{"Normal", 2, [4] = "Submenu"}, 
+				{"Normal", "", [4] = "Submenu"}, 
 			}, 
 			[2] = {
 				{"Heroic", 3, [4] = "Submenu"}, 
@@ -528,10 +528,10 @@ AtlasLoot_Difficulty = {
 		
 		["ClassicRaid"] = { 
 			[1] = {
-				{"Normal", 2, [4] = "Submenu"}, 
+				{"Normal Flex", "", [4] = "Submenu"}, 
 				}, 
 			[2] = {
-				{"Heroic", 3, [4] = "Submenu"}, 
+				{"Heroic Flex", 3, [4] = "Submenu"}, 
 			}, 
 			[3] = {
 				{"Ascended", 4, [4] = "Submenu"}, 
@@ -543,7 +543,7 @@ AtlasLoot_Difficulty = {
 		
 		["BCDungeon"] = { 
 			[1] = {
-				{"Normal", 2, [4] = "Submenu"}, 
+				{"Normal/Heroic", "", [4] = "Submenu"}, 
 			}, 
 			[2] = {
 				{"Mythic", 4, [4] = "Submenu"}, 
@@ -567,10 +567,10 @@ AtlasLoot_Difficulty = {
 		
 		["BCRaid"] = { 
 			[1] = {
-				{"Normal", 2, [4] = "Submenu"}, 
+				{"Normal Flex", "", [4] = "Submenu"}, 
 				}, 
 			[2] = {
-				{"Heroic", 3, [4] = "Submenu"}, 
+				{"Heroic Flex", 3, [4] = "Submenu"}, 
 			}, 
 			[3] = {
 				{"Ascended", 4, [4] = "Submenu"}, 
@@ -580,7 +580,7 @@ AtlasLoot_Difficulty = {
 			},
 		 };
 		
-		["WrathDungeon"] = { {"Normal", "" }, {"Mythic", 4 }, {"Mythic1", 5 }, {"Mythic2", 6 }, {"Mythic3", 7 }, {"Mythic4", 8 }, {"Mythic5", 9 }, {"Mythic6", 10 },
+		["WrathDungeon"] = { {"Normal/Heroic", "" }, {"Mythic", 4 }, {"Mythic1", 5 }, {"Mythic2", 6 }, {"Mythic3", 7 }, {"Mythic4", 8 }, {"Mythic5", 9 }, {"Mythic6", 10 },
 		{"Mythic7", 11 }, {"Mythic8", 12 }, {"Mythic9", 13 }, {"Mythic10", 14 }, {"Bloodforged", 1 }, };
 		
 		["WrathRaid"] = { {"Normal Flex", "" }, {"Heroic Flex", 3 }, {"Ascended", 4 }, {"Bloodforged", 1 }, };

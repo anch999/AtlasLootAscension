@@ -171,7 +171,7 @@ function AtlasLoot_DifficultyEnable(dataID, dataSource) --Enables Difficulty Men
     AtlasLoot_DewdropSubMenu2:Unregister(AtlasLootDefaultFrame_SubMenu2);
     AtlasLoot_DewdropSubMenu2Register(AtlasLoot_Difficulty[dataSource[dataID].Type]);
     if SelectedTable2TextSet == false then 
-        AtlasLootDefaultFrame_SelectedTable2:SetText(AtlasLoot_Difficulty[dataSource[dataID].Type][1][1])
+        AtlasLootDefaultFrame_SelectedTable2:SetText(AtlasLoot_Difficulty[dataSource[dataID].Type][1][1][1])
     end
     AtlasLootDefaultFrame_SelectedTable2:Show();
     SelectedTable2TextSet = true
