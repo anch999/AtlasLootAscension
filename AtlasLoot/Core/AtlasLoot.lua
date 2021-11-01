@@ -490,27 +490,133 @@ end
 
 AtlasLoot_Difficulty = {
 		-- table of difficulties and there itemID references
-		["ClassicDungeon"] = { {"Normal", "" }, {"Bloodforged", 1 } };
+		["ClassicDungeon"] = { 
+			[1] = {
+				{"Normal", 2, [4] = "Submenu"}, 
+			}, 
+			[2] = {
+				{"Bloodforged", 1, [4] = "Submenu"}, 
+			}, 
+		};
 		
-		["ClassicDungeonExt"] = { {"Normal", "" }, {"Heroic", 3 }, {"Mythic", 4 }, {"Mythic 1", 5 }, {"Mythic 2", 6 }, {"Mythic 3", 7 }, {"Mythic 4", 8 }, {"Mythic 5", 9 }, {"Mythic 6", 10 },
-		{"Mythic 7", 11 }, {"Mythic 8", 12 }, {"Mythic 9", 13 }, {"Mythic 10", 14 }, {"Mythic 11", 15 }, {"Mythic 12", 16 }, {"Mythic 13", 17 }, {"Mythic 14", 18 }, {"Mythic 15", 19 }, {"Mythic 16", 20 },
-		{"Mythic 17", 21 }, {"Mythic 18", 22 }, {"Mythic 19", 23 }, {"Mythic 20", 24 }, {"Bloodforged", 1 }, };
+		["ClassicDungeonExt"] = { 
+			[1] = {
+				{"Normal", 2, [4] = "Submenu"}, 
+			}, 
+			[2] = {
+				{"Heroic", 3, [4] = "Submenu"}, 
+			}, 
+			[3] = {
+				{"Mythic", 4, [4] = "Submenu"}, 
+			}, 
+			[4] = { 
+				["Mythic+ 1-10"] = {
+					{"Mythic 1", 5, [4] = "Submenu" },  {"Mythic 2", 6, [4] = "Submenu" },  {"Mythic 3", 7, [4] = "Submenu" },  {"Mythic 4", 8, [4] = "Submenu" },  {"Mythic 5", 9, [4] = "Submenu" }, 
+					{"Mythic 6", 10, [4] = "Submenu" }, {"Mythic 7", 11, [4] = "Submenu" }, {"Mythic 8", 12, [4] = "Submenu" }, {"Mythic 9", 13, [4] = "Submenu" }, {"Mythic 10", 14, [4] = "Submenu" },
+				}, 
+			},
+			[5] = {
+				["Mythic+ 11-20"] = {
+					{"Mythic 11", 15, [4] = "Submenu" }, {"Mythic 12", 16, [4] = "Submenu" }, {"Mythic 13", 17, [4] = "Submenu" }, {"Mythic 14", 18, [4] = "Submenu" }, {"Mythic 15", 19, [4] = "Submenu" }, 
+					{"Mythic 16", 20, [4] = "Submenu" }, {"Mythic 17", 21, [4] = "Submenu" }, {"Mythic 18", 22, [4] = "Submenu" }, {"Mythic 19", 23, [4] = "Submenu" }, {"Mythic 20", 24, [4] = "Submenu" },
+				},
+			}, 
+			[6] = {
+				{"Bloodforged", 1, [4] = "Submenu"},
+			}, 
+		};
 		
-		["ClassicRaid"] = { {"Normal Flex", "" }, {"Heroic Flex", 3 }, {"Ascended", 4 }, {"Bloodforged", 1 }, };
+		["ClassicRaid"] = { 
+			[1] = {
+				{"Normal", 2, [4] = "Submenu"}, 
+				}, 
+			[2] = {
+				{"Heroic", 3, [4] = "Submenu"}, 
+			}, 
+			[3] = {
+				{"Ascended", 4, [4] = "Submenu"}, 
+			},
+			[4] = {
+				{"Bloodforged", 1, [4] = "Submenu"},
+			}, 
+		};
 		
-		["BCDungeon"] = { {"Normal/Heroic", "" }, {"Mythic", 4 }, {"Mythic 1", 5 }, {"Mythic 2", 6 }, {"Mythic 3", 7 }, {"Mythic 4", 8 }, {"Mythic 5", 9 }, {"Mythic 6", 10 },
-		{"Mythic 7", 11 }, {"Mythic 8", 12 }, {"Mythic 9", 13 }, {"Mythic 10", 14 }, {"Bloodforged", 1 }, };
+		["BCDungeon"] = { 
+			[1] = {
+				{"Normal", 2, [4] = "Submenu"}, 
+			}, 
+			[2] = {
+				{"Mythic", 4, [4] = "Submenu"}, 
+			}, 
+			[3] = { 
+				["Mythic+ 1-10"] = {
+					{"Mythic 1", 5, [4] = "Submenu" },  {"Mythic 2", 6, [4] = "Submenu" },  {"Mythic 3", 7, [4] = "Submenu" },  {"Mythic 4", 8, [4] = "Submenu" },  {"Mythic 5", 9, [4] = "Submenu" }, 
+					{"Mythic 6", 10, [4] = "Submenu" }, {"Mythic 7", 11, [4] = "Submenu" }, {"Mythic 8", 12, [4] = "Submenu" }, {"Mythic 9", 13, [4] = "Submenu" }, {"Mythic 10", 14, [4] = "Submenu" },
+				}, 
+			},
+			[4] = {
+				["Mythic+ 11-20"] = {
+					{"Mythic 11", 15, [4] = "Submenu" }, {"Mythic 12", 16, [4] = "Submenu" }, {"Mythic 13", 17, [4] = "Submenu" }, {"Mythic 14", 18, [4] = "Submenu" }, {"Mythic 15", 19, [4] = "Submenu" }, 
+					{"Mythic 16", 20, [4] = "Submenu" }, {"Mythic 17", 21, [4] = "Submenu" }, {"Mythic 18", 22, [4] = "Submenu" }, {"Mythic 19", 23, [4] = "Submenu" }, {"Mythic 20", 24, [4] = "Submenu" },
+				},
+			}, 
+			[5] = {
+				{"Bloodforged", 1, [4] = "Submenu"},
+			},
+		 };
 		
-		["BCRaid"] = { {"Normal Flex", "" }, {"Heroic Flex", 3 }, {"Ascended", 4 }, {"Bloodforged", 1 }, };
+		["BCRaid"] = { 
+			[1] = {
+				{"Normal", 2, [4] = "Submenu"}, 
+				}, 
+			[2] = {
+				{"Heroic", 3, [4] = "Submenu"}, 
+			}, 
+			[3] = {
+				{"Ascended", 4, [4] = "Submenu"}, 
+			},
+			[4] = {
+				{"Bloodforged", 1, [4] = "Submenu"},
+			},
+		 };
 		
 		["WrathDungeon"] = { {"Normal", "" }, {"Mythic", 4 }, {"Mythic1", 5 }, {"Mythic2", 6 }, {"Mythic3", 7 }, {"Mythic4", 8 }, {"Mythic5", 9 }, {"Mythic6", 10 },
 		{"Mythic7", 11 }, {"Mythic8", 12 }, {"Mythic9", 13 }, {"Mythic10", 14 }, {"Bloodforged", 1 }, };
 		
 		["WrathRaid"] = { {"Normal Flex", "" }, {"Heroic Flex", 3 }, {"Ascended", 4 }, {"Bloodforged", 1 }, };
 		
-		["Crafting"] = { {"Crafting Patterns", "" }, {"Item Normal", "=s=Normal" }, {"Bloodforged", 1 }, };
+		["Crafting"] = { 
+			[1] = {
+				{"Crafting Patterns", "", [4] = "Submenu" },
+			},
+			[2] = { 
+				{"Item Normal", "=s=Normal", [4] = "Submenu" },
+			},
+			[3] = { 
+				{"Bloodforged", 1, [4] = "Submenu" },
+			}, 
+		};
 		
-		["CraftingExt"] = { {"Crafting Pattern Uncommon", "" }, {"Crafting Patterns Rare", "Rare" }, {"Crafting Patterns Epic", "Epic" }, {"Item Uncommon", "=s=" }, {"Item Rare", "=s=Rare" }, {"Item Epic", "=s=Epic" } };
+		["CraftingExt"] = { 
+			[1] = {
+				{"Crafting Pattern Uncommon", "", [4] = "Submenu" },
+			},
+			[2] = { 
+				{"Crafting Patterns Rare", "Rare", [4] = "Submenu" },
+			},
+			[3] = { 
+				{"Crafting Patterns Epic", "Epic", [4] = "Submenu" },
+			},
+			[4] = { 
+				{"Item Uncommon", "=s=", [4] = "Submenu" },
+			},
+			[5] = { 
+				{"Item Rare", "=s=Rare", [4] = "Submenu" },
+			},
+			[6] = { 
+				{"Item Epic", "=s=Epic", [4] = "Submenu" }
+			}, 
+		};
 		
 
 		--Enums for comparisons in code
