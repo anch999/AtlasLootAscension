@@ -4996,7 +4996,7 @@ ItemIDsDatabase["Molten Bindings"] = {2522369, 2522369, 2622369, 2722369};
 ItemIDsDatabase["Molten Gloves"] = {2522370, 2522370, 2622370, 2722370};
 ItemIDsDatabase["Molten Belt"] = {2522371, 2522371, 2622371, 2722371};
 ItemIDsDatabase["Molten Leggings"] = {2522366, 2522366, 2622366, 2722366};
-ItemIDsDatabase["Molten Boots"] = {2522372, 2522372, 2622372, 2722372};
+ItemIDsDatabase["Molten Sandals"] = {2522372, 2522372, 2622372, 2722372};
 
 ItemIDsDatabase["Chromatic Helmet"] = {2522453, 2522453, 2622453, 2722453};
 ItemIDsDatabase["Chromatic Pauldrons"] = {2522454, 2522454, 2622454, 2722454};
@@ -5023,4 +5023,4 @@ ItemIDsDatabase["Chromatic Bindings"] = {2522469, 2522469, 2622469, 2722469};
 ItemIDsDatabase["Chromatic Gloves"] = {2522470, 2522470, 2622470, 2722470};
 ItemIDsDatabase["Chromatic Belt"] = {2522471, 2522471, 2622471, 2722471};
 ItemIDsDatabase["Chromatic Leggings"] = {2522466, 2522466, 2622466, 2722466};
-ItemIDsDatabase["Chromatic Boots"] = {2522472, 2522472, 2622472, 2722472};
+ItemIDsDatabase["Chromatic Sandals"] = {2522472, 2522472, 2622472, 2722472};

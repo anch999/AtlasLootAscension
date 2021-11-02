@@ -488,44 +488,6 @@ function AtlasLoot_OnLoad()
 	end
 end
 
-AtlasLoot_Difficulty = {
-		-- table of difficulties and there itemID references
-		["ClassicDungeon"] = { {"Normal", "" }, {"Bloodforged", 1 } };
-		
-		["ClassicDungeonExt"] = { {"Normal", "" }, {"Heroic", 3 }, {"Mythic", 4 }, {"Mythic 1", 5 }, {"Mythic 2", 6 }, {"Mythic 3", 7 }, {"Mythic 4", 8 }, {"Mythic 5", 9 }, {"Mythic 6", 10 },
-		{"Mythic 7", 11 }, {"Mythic 8", 12 }, {"Mythic 9", 13 }, {"Mythic 10", 14 }, {"Mythic 11", 15 }, {"Mythic 12", 16 }, {"Mythic 13", 17 }, {"Mythic 14", 18 }, {"Mythic 15", 19 }, {"Mythic 16", 20 },
-		{"Mythic 17", 21 }, {"Mythic 18", 22 }, {"Mythic 19", 23 }, {"Mythic 20", 24 }, {"Bloodforged", 1 }, };
-		
-		["ClassicRaid"] = { {"Normal Flex", "" }, {"Heroic Flex", 3 }, {"Ascended", 4 }, {"Bloodforged", 1 }, };
-		
-		["BCDungeon"] = { {"Normal/Heroic", "" }, {"Mythic", 4 }, {"Mythic 1", 5 }, {"Mythic 2", 6 }, {"Mythic 3", 7 }, {"Mythic 4", 8 }, {"Mythic 5", 9 }, {"Mythic 6", 10 },
-		{"Mythic 7", 11 }, {"Mythic 8", 12 }, {"Mythic 9", 13 }, {"Mythic 10", 14 }, {"Bloodforged", 1 }, };
-		
-		["BCRaid"] = { {"Normal Flex", "" }, {"Heroic Flex", 3 }, {"Ascended", 4 }, {"Bloodforged", 1 }, };
-		
-		["WrathDungeon"] = { {"Normal", "" }, {"Mythic", 4 }, {"Mythic1", 5 }, {"Mythic2", 6 }, {"Mythic3", 7 }, {"Mythic4", 8 }, {"Mythic5", 9 }, {"Mythic6", 10 },
-		{"Mythic7", 11 }, {"Mythic8", 12 }, {"Mythic9", 13 }, {"Mythic10", 14 }, {"Bloodforged", 1 }, };
-		
-		["WrathRaid"] = { {"Normal Flex", "" }, {"Heroic Flex", 3 }, {"Ascended", 4 }, {"Bloodforged", 1 }, };
-		
-		["Crafting"] = { {"Crafting Patterns", "" }, {"Item Normal", "=s=Normal" }, {"Bloodforged", 1 }, };
-		
-		["CraftingExt"] = { {"Crafting Pattern Uncommon", "" }, {"Crafting Patterns Rare", "Rare" }, {"Crafting Patterns Epic", "Epic" }, {"Item Uncommon", "=s=" }, {"Item Rare", "=s=Rare" }, {"Item Epic", "=s=Epic" } };
-		
-
-		--Enums for comparisons in code
-		Bloodforged = 1;
-		Normal = 2;
-		Heroic = 3;
-		Mythic = 4; --Use for Ascended as well
-
-		MythicPlus = {5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24}; --Usage AtlasLoot_Difficulty.MythicPlus[1-20];
-
-		DUPLICATE = 17;
-		MIN_DIF = 18;
-		MAX_DIF = 19;
-}
-
 --[[
 AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame):
 dataID - Name of the loot table
@@ -827,6 +789,12 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 		lastType = dataSource[dataID].Type
 		end
 
+		if SelectedTableTextSet then
+            AtlasLootDefaultFrame_SelectedTable:SetText(AtlasLoot_TableNames[dataID][1]);
+        else
+            AtlasLootDefaultFrame_SelectedTable:SetText("");
+        end
+
         AtlasLootItemsFrame.refresh = {dataID, dataSource_backup, boss, pFrame};
 		if dataID ~= "FilterList" then
 			AtlasLootItemsFrame.refreshOri = {dataID, dataSource_backup, boss, pFrame}
@@ -895,6 +863,7 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 				getglobal("AtlasLootItemsFrame_BACK").lootpage = tablebase.Back;			
 			end
 		end
+		
 		
 	end
 
