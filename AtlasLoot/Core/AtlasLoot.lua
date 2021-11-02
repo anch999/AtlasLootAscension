@@ -789,6 +789,12 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 		lastType = dataSource[dataID].Type
 		end
 
+		if SelectedTableTextSet then
+            AtlasLootDefaultFrame_SelectedTable:SetText(AtlasLoot_TableNames[dataID][1]);
+        else
+            AtlasLootDefaultFrame_SelectedTable:SetText("");
+        end
+
         AtlasLootItemsFrame.refresh = {dataID, dataSource_backup, boss, pFrame};
 		if dataID ~= "FilterList" then
 			AtlasLootItemsFrame.refreshOri = {dataID, dataSource_backup, boss, pFrame}
@@ -857,6 +863,7 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 				getglobal("AtlasLootItemsFrame_BACK").lootpage = tablebase.Back;			
 			end
 		end
+		
 		
 	end
 

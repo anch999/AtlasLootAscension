@@ -53,6 +53,7 @@ function AtlasLoot_DewDropClick(tablename, text, tabletype)
         AtlasLootDefaultFrame_SubMenu:Disable();
         AtlasLootDefaultFrame_SelectedTable:SetText("");
         AtlasLootDefaultFrame_SelectedTable:Show();
+        SelectedTableTextSet = false;
     else   
 		--Enable the submenu button
         AtlasLootDefaultFrame_SubMenu:Enable();
@@ -69,7 +70,8 @@ function AtlasLoot_DewDropClick(tablename, text, tabletype)
         else
             AtlasLootDefaultFrame_SelectedTable:SetText(AtlasLoot_TableNames[AtlasLoot_DewDropDown_SubTables[tablename][1][2]][1]);
         end
-		AtlasLootDefaultFrame_SelectedTable:Show();	
+		AtlasLootDefaultFrame_SelectedTable:Show();
+        SelectedTableTextSet = true;
     end
     --Show the category that has been selected
     AtlasLootDefaultFrame_SelectedCategory:SetText(text);
