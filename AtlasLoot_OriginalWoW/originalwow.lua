@@ -1519,6 +1519,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 18, 2522367, "", "=q4=Molten Circlet", "=q1=#m1# =ds=#c2#, #c3#, #c8#", "", "33.33%"};
 		{ 20, 18564, "", "=q5=Bindings of the Windseeker", "=ds=#m3#, =q1=#m9#", "", "3.74%"};
 		{ 21, 19019, "", "=q5=Thunderfury, Blessed Blade of the Windseeker", "=q1=#m4#: =ds=#h1#, #w10#"};
+		{ 22, 17782, "", "=q5=Talisman of Binding Shard", "=ds=#s2#", "", ""};        
+		{ 23, 11879, "", "=q5=Medallion of Binding Shard", "=ds=#s2#", "", ""}; 
 		Prev = "MCGehennas";
 		Next = "MCShazzrah";
 		Type = "ClassicRaid";
