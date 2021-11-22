@@ -169,6 +169,8 @@ function AtlasLoot_DifficultyDisable() --Disables Difficulty Menu
 end
 
 function AtlasLoot_DifficultyEnable(dataID, dataSource) --Enables Difficulty Menu
+    if not AtlasLoot_Difficulty[dataSource[dataID].Type] then return end
+    
     AtlasLootDefaultFrame_SubMenu2:Enable();
     AtlasLoot_DewdropSubMenu2:Unregister(AtlasLootDefaultFrame_SubMenu2);
     AtlasLoot_DewdropSubMenu2Register(AtlasLoot_Difficulty[dataSource[dataID].Type]);
@@ -668,9 +670,12 @@ function AtlasLoot_SetNewStyle(style)
 		"AtlasLootDefaultFrame_Preset3",
 		"AtlasLootDefaultFrame_Preset4",
 		"AtlasLootDefaultFrameSearchButton",
-		"AtlasLootDefaultFrameSearchClearButton",
-		"AtlasLootDefaultFrameLastResultButton",
-		"AtlasLootDefaultFrameWishListButton"
+		--"AtlasLootDefaultFrameSearchClearButton",
+		--"AtlasLootDefaultFrameLastResultButton",
+		"AtlasLootDefaultFrameWishListButton",
+        "AtlasLootAdvancedSearch_SearchButton",
+        "AtlasLootAdvancedSearch_SearchClearButton",
+        "AtlasLootAdvancedSearch_LastResultButton"
 	}
 	
 	if style == "new" then

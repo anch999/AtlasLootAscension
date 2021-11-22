@@ -86,6 +86,9 @@ SelectedTable2TextSet = true
 isTablereference = false
 notPattern = false
 
+--Search panel open and close save variables
+--dataID, dataSource, boss, pFrame
+SearchPrevData = {"", "", "", ""};
 
 AtlasLootCharDB={};
 
@@ -506,6 +509,8 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 	local isItem;
 	local spellName, spellIcon;
 
+	SearchPrevData = {dataID, dataSource, boss, pFrame};
+
     --If the loot table name has not been passed, throw up a debugging statement
 	if dataID==nil then
 		DEFAULT_CHAT_FRAME:AddMessage("No dataID!");
@@ -515,6 +520,9 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 	if (AtlasQuestInsideFrame) then
 		HideUIPanel(AtlasQuestInsideFrame);
 	end
+
+	--Hide Advanced search if it is up
+	AtlasLootAdvancedSearch:Hide();
 
     --Ditch the Quicklook selector
     AtlasLoot_QuickLooks:Hide();
@@ -544,6 +552,7 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
     else
         dataSource = AtlasLoot_Data;
     end
+
 	if dataID == "FilterList" then
 		Type = lastType;
 	else
@@ -621,6 +630,9 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 
 			if(toShow) then
 				IDfound = AL_FindId(string.sub(dataSource[dataID][i][4], 5), ItemindexID) or dataSource[dataID][i][2];
+				if ((dataID == "SearchResult") or (dataID == "WishList")) then
+					IDfound = AL_FindId(string.sub(dataSource[dataID][i][4], 5), dataSource[dataID][i][AtlasLoot_Difficulty.DIF_SEARCH]) or dataSource[dataID][i][2];
+				end
 
 				if string.sub(IDfound, 1, 1) == "s" then
 					isItem = false;
@@ -640,9 +652,16 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 					if dataSource[dataID][i][AtlasLoot_Difficulty.DUPLICATE] then
 						--Used if an item has more then 1 version with the same name eg Atiesh
 						IDfound = AL_FindId(string.sub(dataSource[dataID][i][4], 5) .. " " .. dataSource[dataID][i][AtlasLoot_Difficulty.DUPLICATE], ItemindexID) or dataSource[dataID][i][2];
+						if ((dataID == "SearchResult") or (dataID == "WishList")) then
+							IDfound = AL_FindId(string.sub(dataSource[dataID][i][4], 5), dataSource[dataID][i][AtlasLoot_Difficulty.DIF_SEARCH]) or dataSource[dataID][i][2];
+						end
 					else	
 						--If something was found in itemID database show that if not show default table item
 						IDfound = AL_FindId(string.sub(dataSource[dataID][i][4], 5), ItemindexID) or dataSource[dataID][i][2];
+						if ((dataID == "SearchResult") or (dataID == "WishList")) then
+							IDfound = AL_FindId(string.sub(dataSource[dataID][i][4], 5), dataSource[dataID][i][AtlasLoot_Difficulty.DIF_SEARCH]) or dataSource[dataID][i][2];
+						end
+
 					end
 
 					itemName, itemLink, itemQuality, itemLevel, itemMinLevel, itemType, itemSubType, itemCount, itemEquipLoc, itemTexture = GetItemInfo(IDfound);
@@ -777,6 +796,10 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
                 if (dataID == "SearchResult" or dataID == "WishList") and dataSource[dataID][i][8] then
                     itemButton.sourcePage = dataSource[dataID][i][8];
                 end
+				if (dataID == "SearchResult" or dataID == "WishList") and dataSource[dataID][i][AtlasLoot_Difficulty.DIF_SEARCH] then
+					itemButton.difficulty = dataSource[dataID][i][AtlasLoot_Difficulty.DIF_SEARCH];
+				end
+
 				itemButton.i = 1;
 				itemButton:Show();
                 
@@ -786,7 +809,7 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 		end
 
 		if dataID ~= "FilterList" then
-		lastType = dataSource[dataID].Type
+			lastType = dataSource[dataID].Type
 		end
 
 		if SelectedTableTextSet then

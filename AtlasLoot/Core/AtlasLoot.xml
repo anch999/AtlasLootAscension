@@ -16,6 +16,7 @@
     <Script file="Launchers.lua"/>
 	<Script file="AtlasLoot.lua"/>
 	<Script file="WishList.lua"/>
+	<Script file="SearchAdvanced.lua"/>
     <Script file="Search.lua"/>
 	
     
@@ -1627,7 +1628,7 @@
 				</Scripts>
             </Button>
             
-            <EditBox name="AtlasLootSearchBox" inherits="InputBoxTemplate" letters="100">
+            <EditBox name="AtlasLootSearchBox" inherits="InputBoxTemplate" letters="100" hidden="true">
 				<Size>
 					<AbsDimension x="240" y="35"></AbsDimension>
 				</Size>
@@ -1650,14 +1651,14 @@
 				</Scripts>
 				<FontString name="AtlasLootSearchString" inherits="GameFontNormal"></FontString>
 			</EditBox>
-            <Button name="AtlasLootSearchButton" inherits="UIPanelButtonTemplate2" parent="AtlasLootSearchBox">
+            <Button name="AtlasLootSearchButton" inherits="UIPanelButtonTemplate2">
 				<Size>
 					<AbsDimension x="69" y="32"/>
 				</Size>
 				<Anchors>
-					<Anchor point="LEFT" relativePoint="RIGHT">
+					<Anchor point="BOTTOM" relativeTo="$parent" relativePoint="BOTTOM">
 						<Offset>
-							<AbsDimension x="0" y="0"/>
+							<AbsDimension x="-123" y="20"/>
 						</Offset>
 					</Anchor>
 				</Anchors>
@@ -1668,7 +1669,7 @@
 				        this:SetFrameLevel( (this:GetParent()):GetFrameLevel() + 1 );
 			        </OnShow>
 					<OnClick>
-						AtlasLoot:Search(AtlasLootSearchBox:GetText());
+						AtlasLoot_AdvancedSearchShow();
 						AtlasLootSearchBox:ClearFocus();
 					</OnClick>
 				</Scripts>
@@ -1742,5 +1743,335 @@
         </Frames>
     </Frame>
 
+	<Frame name="AtlasLootAdvancedSearch" parent="UIParent" hidden="true">
+		<Size>
+			<AbsDimension x="510" y="510"/>
+		</Size>
+		<Anchors>
+			<Anchor point="CENTER"/>
+		</Anchors>
+		<Layers>
+			<Layer level="OVERLAY">
+				<FontString name="$parent_QualityText" inherits="GameFontNormal" text="Quality: ">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativeTo="$parent" relativePoint="TOPLEFT">
+							<Offset>
+								<AbsDimension x="30" y="-20"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="$parent_EquipText" inherits="GameFontNormal" text="Equip Type Info: ">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativeTo="$parent_QualityText" relativePoint="BOTTOMLEFT">
+							<Offset>
+								<AbsDimension y="-50"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="$parent_DifficultyText" inherits="GameFontNormal" text="Difficulty: ">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativeTo="$parent_EquipText" relativePoint="BOTTOMLEFT">
+							<Offset>
+								<AbsDimension y="-50"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+		<Frames>
+			<Button name="$parent_CloseButton" inherits="UIPanelCloseButton">
+				<Anchors>
+					<Anchor point="TOPRIGHT" relativeTo="$parent" relativePoint="TOPRIGHT">
+						<Offset>
+							<AbsDimension x="-5" y="-5"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+                <Scripts>
+                    <OnClick>
+						AtlasLoot_AdvancedSearchClose();
+                    </OnClick>
+                    <OnShow>
+				        this:SetFrameLevel( (this:GetParent()):GetFrameLevel() + 1 );
+			        </OnShow>
+                </Scripts>
+			</Button>
+			<Button name="$parent_Quality" inherits="OptionsButtonTemplate">
+				<Size>
+					<AbsDimension x="130" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOP" relativeTo="$parent" relativePoint="TOP">
+						<Offset>
+							<AbsDimension x="-160" y="-40"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						if AtlasLoot_QualityMenu:IsOpen() then
+							AtlasLoot_QualityMenu:Close();
+						else
+							AtlasLoot_QualityMenu:Open(this);
+						end
+					</OnClick>
+					<OnShow>
+						local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot");
+						this:SetText("Select Quality");
+						this:SetFrameLevel( (this:GetParent()):GetFrameLevel() + 1 );
+					</OnShow>
+				</Scripts>
+			</Button>
+			<Button name="$parent_Equip" inherits="OptionsButtonTemplate">
+				<Size>
+					<AbsDimension x="130" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOP" relativeTo="$parent_Quality" relativePoint="BOTTOM">
+						<Offset>
+							<AbsDimension y="-40"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						if AtlasLoot_EquipMenu:IsOpen() then
+							AtlasLoot_EquipMenu:Close();
+						else
+							AtlasLoot_EquipMenu:Open(this);
+						end
+					</OnClick>
+					<OnShow>
+						local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot");
+						this:SetText("Select Item Type");
+						this:SetFrameLevel( (this:GetParent()):GetFrameLevel() + 1 );
+					</OnShow>
+				</Scripts>
+			</Button>
+			<Button name="$parent_EquipSub" inherits="OptionsButtonTemplate">
+				<Size>
+					<AbsDimension x="130" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parent_Equip" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="15"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						if AtlasLoot_EquipSubMenu:IsOpen() then
+							AtlasLoot_EquipSubMenu:Close();
+						else
+							AtlasLoot_EquipSubMenu:Open(this);
+						end
+					</OnClick>
+					<OnShow>
+						local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot");
+						this:SetText("Select Option");
+						this:SetFrameLevel( (this:GetParent()):GetFrameLevel() + 1 );
+					</OnShow>
+				</Scripts>
+			</Button>
+			<Button name="$parent_WeaponSub" inherits="OptionsButtonTemplate">
+				<Size>
+					<AbsDimension x="130" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parent_EquipSub" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="15"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						if AtlasLoot_WeaponSubMenu:IsOpen() then
+							AtlasLoot_WeaponSubMenu:Close();
+						else
+							AtlasLoot_WeaponSubMenu:Open(this);
+						end
+					</OnClick>
+					<OnShow>
+						local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot");
+						this:SetText("Select Weapon Type");
+						this:SetFrameLevel( (this:GetParent()):GetFrameLevel() + 1 );
+					</OnShow>
+				</Scripts>
+			</Button>
+			<Button name="$parent_Difficulty" inherits="OptionsButtonTemplate">
+				<Size>
+					<AbsDimension x="130" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOP" relativeTo="$parent_Equip" relativePoint="BOTTOM">
+						<Offset>
+							<AbsDimension y="-40"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						if AtlasLoot_DifficultyMenu:IsOpen() then
+							AtlasLoot_DifficultyMenu:Close();
+						else
+							AtlasLoot_DifficultyMenu:Open(this);
+						end
+					</OnClick>
+					<OnShow>
+						local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot");
+						this:SetText("Select Difficulty");
+						this:SetFrameLevel( (this:GetParent()):GetFrameLevel() + 1 );
+					</OnShow>
+				</Scripts>
+			</Button>
+			<Button name="$parent_MythicSub" inherits="OptionsButtonTemplate">
+				<Size>
+					<AbsDimension x="130" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parent_Difficulty" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="15"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						if AtlasLoot_DiffSubMenu:IsOpen() then
+							AtlasLoot_DiffSubMenu:Close();
+						else
+							AtlasLoot_DiffSubMenu:Open(this);
+						end
+					</OnClick>
+					<OnShow>
+						local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot");
+						this:SetText("Mythic+ 1");
+						this:SetFrameLevel( (this:GetParent()):GetFrameLevel() + 1 );
+					</OnShow>
+				</Scripts>
+			</Button>
+			<EditBox name="$parent_SearchBox" inherits="InputBoxTemplate" letters="100">
+				<Size>
+					<AbsDimension x="240" y="35"></AbsDimension>
+				</Size>
+				<Anchors>
+					<Anchor point="BOTTOM" relativeTo="$parent" relativePoint="BOTTOM">
+						<Offset>
+							<AbsDimension x="-120" y="20"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad>
+						this:SetAutoFocus(false);
+						this:SetTextInsets(0, 8, 0, 0);
+					</OnLoad>
+					<OnEnterPressed>
+						AtlasLoot:AdvancedSearch(AtlasLootAdvancedSearch_SearchBox:GetText());
+						this:ClearFocus();
+					</OnEnterPressed>
+				</Scripts>
+				<FontString name="$parent_SearchString" inherits="GameFontNormal"></FontString>
+			</EditBox>
+            <Button name="$parent_SearchButton" inherits="UIPanelButtonTemplate2">
+				<Size>
+					<AbsDimension x="69" y="32"/>
+				</Size>
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parent_SearchBox" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="0" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+                    <OnShow>
+                        local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot");
+                        this:SetText(AL["Search"]);
+				        this:SetFrameLevel( (this:GetParent()):GetFrameLevel() + 1 );
+			        </OnShow>
+					<OnClick>
+						AtlasLoot:AdvancedSearch(AtlasLootAdvancedSearch_SearchBox:GetText());
+						AtlasLootAdvancedSearch_SearchBox:ClearFocus();
+					</OnClick>
+				</Scripts>
+			</Button>
+			<Button name="$parent_SearchOptionsButton">
+				<Size>
+					<AbsDimension x="28" y="28" />
+				</Size>
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parent_SearchButton" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="-6" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<NormalTexture file="Interface\Buttons\UI-SpellbookIcon-NextPage-Up"/>
+				<PushedTexture file="Interface\Buttons\UI-SpellbookIcon-NextPage-Down"/>
+				<DisabledTexture file="Interface\Buttons\UI-SpellbookIcon-NextPage-Disabled"/>
+				<HighlightTexture file="Interface\Buttons\UI-Common-MouseHilight" alphaMode="ADD"/>
+				<Scripts>
+					<OnShow>
+						this:SetFrameLevel( (this:GetParent()):GetFrameLevel() + 1 );
+					</OnShow>
+					<OnClick>
+						AtlasLoot:ShowSearchOptions(this);
+					</OnClick>
+				</Scripts>
+			</Button>
+			<Button name="$parent_SearchClearButton" inherits="UIPanelButtonTemplate2">
+				<Size>
+					<AbsDimension x="58" y="32"/>
+				</Size>
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parent_SearchOptionsButton" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="-2" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnShow>
+						local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot");
+						this:SetText(AL["Clear"]);
+						this:SetFrameLevel( (this:GetParent()):GetFrameLevel() + 1 );
+					</OnShow>
+					<OnClick>
+						AtlasLoot_AdvancedSearchReset();
+						AtlasLootAdvancedSearch_SearchBox:SetText("");
+						AtlasLootAdvancedSearch_SearchBox:ClearFocus();
+					</OnClick>
+				</Scripts>
+			</Button>
+			<Button name="$parent_LastResultButton" inherits="UIPanelButtonTemplate2">
+				<Size>
+					<AbsDimension x="100" y="32"/>
+				</Size>
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parent_SearchClearButton" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="0" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnShow>
+						local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot");
+						this:SetText(AL["Last Result"]);
+						this:SetFrameLevel( (this:GetParent()):GetFrameLevel() + 1 );
+					</OnShow>
+					<OnClick>
+						AtlasLoot:ShowSearchResult();
+					</OnClick>
+				</Scripts>
+			</Button>
+		</Frames>
+	</Frame>
 </Ui>
 

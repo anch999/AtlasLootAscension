@@ -167,6 +167,10 @@ AtlasLoot_Difficulty = {
     };
     
 
+    ["Search"] = {"Bloodforged", "Normal", "Heroic", "Mythic", "Mythic 1", "Mythic 2","Mythic 3","Mythic 4","Mythic 5", "Mythic 6","Mythic 7",
+    "Mythic 8","Mythic 9", "Mythic 10", "Mythic 11", "Mythic 12","Mythic 13","Mythic 14","Mythic 15", "Mythic 16","Mythic 17","Mythic 18",
+    "Mythic 19", "Mythic 20",};
+
     --Enums for comparisons in code
     Bloodforged = 1;
     Normal = 2;
@@ -175,6 +179,7 @@ AtlasLoot_Difficulty = {
 
     MythicPlus = {5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24}; --Usage AtlasLoot_Difficulty.MythicPlus[1-20];
 
+    DIF_SEARCH = 16;
     DUPLICATE = 17;
     MIN_DIF = 18;
     MAX_DIF = 19;

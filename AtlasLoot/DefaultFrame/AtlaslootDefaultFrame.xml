@@ -44,7 +44,7 @@
 					</OnShow>
 				</Scripts>
 			</Button>
-			  <Button name="$parent_LoadModules" inherits="AtlasLootDefaultFrameButtonTemplate">
+			<Button name="$parent_LoadModules" inherits="AtlasLootDefaultFrameButtonTemplate">
 				<Anchors>
 					<Anchor point="TOPRIGHT" relativeTo="$parent" relativePoint="TOPRIGHT">
 						<Offset>
@@ -335,7 +335,9 @@
 			        </OnShow>
 				</Scripts>
             </Button>
-			<EditBox name="AtlasLootDefaultFrameSearchBox" inherits="InputBoxTemplate" letters="100">
+			
+			<!--
+			<EditBox name="AtlasLootDefaultFrameSearchBox" inherits="InputBoxTemplate" letters="100" hidden="true">
 				<Size>
 					<AbsDimension x="180" y="32" />
 				</Size>
@@ -358,29 +360,31 @@
 				</Scripts>
 				<FontString name="AtlasLootDefaultFrameSearchString" inherits="GameFontNormal"></FontString>
 			</EditBox>
-			<Button name="AtlasLootDefaultFrameSearchButton" inherits="UIPanelButtonTemplate2" parent="AtlasLootDefaultFrameSearchBox">
+			-->
+			<Button name="AtlasLootDefaultFrameSearchButton" inherits="UIPanelButtonTemplate2">
 				<Size>
-					<AbsDimension x="69" y="32"/>
+					<AbsDimension x="105" y="20"/>
 				</Size>
 				<Anchors>
-					<Anchor point="LEFT" relativePoint="RIGHT">
+					<Anchor point="TOP" relativeTo="$parent_Preset4" relativePoint="BOTTOM">
 						<Offset>
-							<AbsDimension x="0" y="0"/>
+							<AbsDimension y="-5"/>
 						</Offset>
 					</Anchor>
 				</Anchors>
 				<Scripts>
 					<OnShow>
 						local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot");
-						this:SetText(AL["Search"]);
+						this:SetText(AL["Search"].." Panel");
 						this:SetFrameLevel( (this:GetParent()):GetFrameLevel() + 1 );
 					</OnShow>
 					<OnClick>
-						AtlasLoot:Search(AtlasLootDefaultFrameSearchBox:GetText());
-						AtlasLootDefaultFrameSearchBox:ClearFocus();
+						AtlasLoot_AdvancedSearchShow();
+						--AtlasLootSearchBox:ClearFocus();
 					</OnClick>
 				</Scripts>
 			</Button>
+			<!--
 			<Button name="AtlasLootDefaultFrameSearchOptionsButton" parent="AtlasLootDefaultFrameSearchButton">
 				<Size>
 					<AbsDimension x="28" y="28" />
@@ -450,14 +454,15 @@
 					</OnClick>
 				</Scripts>
 			</Button>
+			-->
 			<Button name="AtlasLootDefaultFrameWishListButton" inherits="UIPanelButtonTemplate2" parent="AtlasLootDefaultFrame">
 				<Size>
-					<AbsDimension x="100" y="32"/>
+					<AbsDimension x="105" y="20"/>
 				</Size>
 				<Anchors>
-					<Anchor point="RIGHT" relativeTo="AtlasLootDefaultFrameSearchBox" relativePoint="LEFT">
+					<Anchor point="TOP" relativeTo="$parent_Preset1" relativePoint="BOTTOM">
 						<Offset>
-							<AbsDimension x="-7" y="0"/>
+							<AbsDimension x="0" y="-5"/>
 						</Offset>
 					</Anchor>
 				</Anchors>
