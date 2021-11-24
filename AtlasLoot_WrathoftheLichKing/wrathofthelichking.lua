@@ -149,7 +149,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 22, 37189, "", "=q3=Breeches of the Caller", "=ds=#s11#, #a1#", "", "19%"};
 		{ 23, 37188, "", "=q3=Plunderer's Helmet", "=ds=#s1#, #a3#", "", "20%"};
 		{ 24, 37186, "", "=q3=Unsmashable Heavy Band", "=ds=#s13#", "", "20%"};
-		{ 25, 37190, "", "=q3=Enraged Feral Staff", "=ds=#w9#", "", "20%"};
+		{ 25, 37190, "", "=q3=Enraged Feral Staff", "=ds=#h2#, #w9#", "", "20%"};
 		{ 26, 41793, "", "=q3=Design: Fierce Monarch Topaz", "=ds=#p12# (390)", "", "8%"};
 		{ 27, 43102, "", "=q3=Frozen Orb", "=ds=#e6#", "", "100%"};
 		Prev = "UtgardeKeepSkarvald";
@@ -268,7 +268,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 1, 0, "INV_Box_01", "=q6=#j1#", ""};
 		{ 2, 35660, "", "=q3=Spinneret Epaulets", "=ds=#s3#, #a2#", "", "30%"};
 		{ 3, 35659, "", "=q3=Treads of Aspiring Heights", "=ds=#s12#, #a2#", "", "30%"};
-		{ 4, 35658, "", "=q3=Life-Staff of the Web Lair", "=ds=#w9#", "", "29%"};
+		{ 4, 35658, "", "=q3=Life-Staff of the Web Lair", "=ds=#h2#, #w9#", "", "29%"};
 		{ 16, 0, "INV_Box_01", "=q6=#j3#", ""};
 		{ 17, 47241, "", "=q4=Emblem of Triumph", "=ds=#e15#", "", "100%"};
 		{ 18, 37222, "", "=q3=Egg Sac Robes", "=ds=#s5#, #a1#", "", "21%"};
@@ -382,7 +382,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 21, 37619, "", "=q4=Wand of Ahnkahet", "=ds=#w12#", "", "18%"};
 		{ 22, 37616, "", "=q3=Kilt of the Forgotten One", "=ds=#s11#, #a2#", "", "19%"};
 		{ 23, 37618, "", "=q3=Greaves of Ancient Evil", "=ds=#s12#, #a4#", "", "20%"};
-		{ 24, 37617, "", "=q3=Staff of Sinister Claws", "=ds=#w9#", "", "19%"};
+		{ 24, 37617, "", "=q3=Staff of Sinister Claws", "=ds=#h2#, #w9#", "", "19%"};
 		{ 25, 37615, "", "=q3=Titanium Compound Bow", "=ds=#w2#", "", "19%"};
 		{ 26, 41790, "", "=q3=Design: Precise Scarlet Ruby", "=ds=#p12# (390)", "", "17%"};
 		{ 27, 43102, "", "=q3=Frozen Orb", "=ds=#e6#", "", "100%"};
@@ -436,7 +436,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 1, 0, "INV_Box_01", "=q6=#j1#", ""};
 		{ 2, 35635, "", "=q3=Stable Master's Breeches", "=ds=#s11#, #a1#", "", "28%"};
 		{ 3, 35634, "", "=q3=Scabrous-Hide Helm", "=ds=#s1#, #a2#", "", "28%"};
-		{ 4, 35633, "", "=q3=Staff of the Great Reptile", "=ds=#w9#", "", "31%"};
+		{ 4, 35633, "", "=q3=Staff of the Great Reptile", "=ds=#h2#, #w9#", "", "31%"};
 		{ 16, 0, "INV_Box_01", "=q6=#j3#", ""};
 		{ 17, 47241, "", "=q4=Emblem of Triumph", "=ds=#e15#", "", "100%"};
 		{ 18, 37725, "", "=q3=Savage Wound Wrap", "=ds=#s8#, #a1#", "", "21%"};
@@ -565,13 +565,13 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 1, 0, "INV_Box_01", "=q6=#j1#", ""};
 		{ 2, 35650, "", "=q3=Boots of the Portal Guardian", "=ds=#s12#, #a3#", "", "31%"};
 		{ 3, 35651, "", "=q3=Plate Claws of the Dragon", "=ds=#s9#, #a4#", "", "31%"};
-		{ 4, 35649, "", "=q3=Jailer's Baton", "=ds=#w9#", "", "31%"};
+		{ 4, 35649, "", "=q3=Jailer's Baton", "=ds=#h2#, #w9#", "", "31%"};
 		{ 16, 0, "INV_Box_01", "=q6=#j3#", ""};
 		{ 17, 47241, "", "=q4=Emblem of Triumph", "=ds=#e15#", "", "100%"};
 		{ 18, 37884, "", "=q4=Azure Cloth Bindings", "=ds=#s8#, #a1#", "", "20%"};
 		{ 19, 37886, "", "=q4=Handgrips of the Savage Emissary", "=ds=#s9#, #a3#", "", "21%"};
 		{ 20, 43500, "", "=q4=Bolstered Legplates", "=ds=#s11#, #a4#", "", "20%"};
-		{ 21, 37883, "", "=q4=Staff of Trickery", "=ds=#w9#", "", "21%"};
+		{ 21, 37883, "", "=q4=Staff of Trickery", "=ds=#h2#, #w9#", "", "21%"};
 		{ 22, 37876, "", "=q3=Cyanigosa's Leggings", "=ds=#s11#, #a1#", "", "22%"};
 		{ 23, 37875, "", "=q3=Spaulders of the Violet Hold", "=ds=#s3#, #a3#", "", "21%"};
 		{ 24, 37874, "", "=q3=Gauntlets of Capture", "=ds=#s9#, #a4#", "", "21%"};
@@ -605,7 +605,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 1, 0, "INV_Box_01", "=q6=#j1#", ""};
 		{ 2, 35584, "", "=q3=Embroidered Gown of Zul'drak", "=ds=#s5#, #a1#", "", "28%"};
 		{ 3, 35585, "", "=q3=Cannibal's Legguards", "=ds=#s11#, #a3#", "", "29%"};
-		{ 4, 35583, "", "=q3=Witch Doctor's Wildstaff", "=ds=#w9#", "", "28%"};
+		{ 4, 35583, "", "=q3=Witch Doctor's Wildstaff", "=ds=#h2#, #w9#", "", "28%"};
 		{ 16, 0, "INV_Box_01", "=q6=#j3#", ""};
 		{ 17, 47241, "", "=q4=Emblem of Triumph", "=ds=#e15#", "", "100%"};
 		{ 18, 37629, "", "=q3=Slithering Slippers", "=ds=#s12#, #a1#", "", "21%"};
@@ -774,7 +774,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 1, 0, "INV_Box_01", "=q6=#j1#", ""};
 		{ 2, 36982, "", "=q3=Mantle of Electrical Charges", "=ds=#s3#, #a1#", "", "22%"};
 		{ 3, 36979, "", "=q3=Bjarngrim Family Signet", "=ds=#s13#", "", "22%"};
-		{ 4, 36980, "", "=q3=Hewn Sparring Quarterstaff", "=ds=#w9#", "", "22%"};
+		{ 4, 36980, "", "=q3=Hewn Sparring Quarterstaff", "=ds=#h2#, #w9#", "", "22%"};
 		{ 5, 36981, "", "=q3=Hardened Vrykul Throwing Axe", "=ds=#w11#", "", "23%"};
 		{ 16, 0, "INV_Box_01", "=q6=#j3#", ""};
 		{ 17, 47241, "", "=q4=Emblem of Triumph", "=ds=#e15#", "", "100%"};
@@ -838,7 +838,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 22, 37851, "", "=q3=Ornate Woolen Stola", "=ds=#s5#, #a1#", "", "19%"};
 		{ 23, 37850, "", "=q3=Flowing Sash of Order", "=ds=#s10#, #a1#", "", "19%"};
 		{ 24, 37849, "", "=q3=Planetary Helm", "=ds=#s1#, #a4#", "", "19%"};
-		{ 25, 37848, "", "=q3=Lightning Giant Staff", "=ds=#w9#", "", "18%"};
+		{ 25, 37848, "", "=q3=Lightning Giant Staff", "=ds=#h2#, #w9#", "", "18%"};
 		{ 26, 41799, "", "=q3=Design: Eternal Earthsiege Diamond", "=ds=#p12# (420)", "", "11%"};
 		{ 27, 43102, "", "=q3=Frozen Orb", "=ds=#e6#", "", "100%"};
 		Prev = "HallsofLightningIonar";
@@ -897,7 +897,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 2, 37106, "", "=q3=Ouroboros Belt", "=ds=#s10#, #a2#", "", "23%"};
 		{ 3, 37105, "", "=q3=Treads of Altered History", "=ds=#s12#, #a3#", "", "24%"};
 		{ 4, 37096, "", "=q3=Necklace of the Chrono-Lord", "=ds=#s2#", "", "22%"};
-		{ 5, 37099, "", "=q3=Sempiternal Staff", "=ds=#w9#", "", "22%"};
+		{ 5, 37099, "", "=q3=Sempiternal Staff", "=ds=#h2#, #w9#", "", "22%"};
 		{ 16, 0, "INV_Box_01", "=q6=#j3#", ""};
 		{ 17, 47241, "", "=q4=Emblem of Triumph", "=ds=#e15#", "", "100%"};
 		{ 18, 37687, "", "=q3=Gloves of Distorted Time", "=ds=#s9#, #a1#", "", "23%"};
@@ -995,7 +995,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 19, 37389, "", "=q3=Crenelation Leggings", "=ds=#s11#, #a2#", "", "21%"};
 		{ 20, 37379, "", "=q3=Skadi's Iron Belt", "=ds=#s10#, #a4#", "", "22%"};
 		{ 21, 37377, "", "=q3=Netherbreath Spellblade", "=ds=#h3#, #w4#", "", "21%"};
-		{ 22, 37384, "", "=q3=Staff of Wayward Principles", "=ds=#w9#", "", "21%"};
+		{ 22, 37384, "", "=q3=Staff of Wayward Principles", "=ds=#h2#, #w9#", "", "21%"};
 		Prev = "UPPalehoof";
 		Next = "UPYmiron";
 	};
@@ -1101,14 +1101,14 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 6, 36961, "", "=q3=Dragonflight Great-Ring", "=ds=#s13#", "", "17%"};
 		{ 7, 36972, "", "=q3=Tome of Arcane Phenomena", "=ds=#s14#", "", "15%"};
 		{ 8, 36962, "", "=q3=Wyrmclaw Battleaxe", "=ds=#h2#, #w1#", "", "17%"};
-		{ 9, 36975, "", "=q3=Malygos's Favor", "=ds=#w9#", "", "17%"};
+		{ 9, 36975, "", "=q3=Malygos's Favor", "=ds=#h2#, #w9#", "", "17%"};
 		{ 10, 41798, "", "=q3=Design: Bracing Earthsiege Diamond", "=ds=#p12# (420)", "", "7%"};
 		{ 16, 0, "INV_Box_01", "=q6=#j3#", ""};
 		{ 17, 47241, "", "=q4=Emblem of Triumph", "=ds=#e15#", "", "100%"};
 		{ 18, 37361, "", "=q4=Cuffs of Winged Levitation", "=ds=#s8#, #a1#", "", "14%"};
 		{ 19, 37363, "", "=q4=Gauntlets of Dragon Wrath", "=ds=#s9#, #a4#", "", "13%"};
 		{ 20, 37362, "", "=q4=Leggings of Protective Auras", "=ds=#s11#, #a4#", "", "13%"};
-		{ 21, 37360, "", "=q4=Staff of Draconic Combat", "=ds=#w9#", "", "14%"};
+		{ 21, 37360, "", "=q4=Staff of Draconic Combat", "=ds=#h2#, #w9#", "", "14%"};
 		{ 22, 37291, "", "=q3=Ancient Dragon Spirit Cape", "=ds=#s4#", "", "14%"};
 		{ 23, 37294, "", "=q3=Crown of Unbridled Magic", "=ds=#s1#, #a1#", "", "14%"};
 		{ 24, 37293, "", "=q3=Mask of the Watcher", "=ds=#s1#, #a2#", "", "15%"};
@@ -3186,7 +3186,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 21, 40258, "", "=q4=Forethought Talisman", "=ds=#s14#", "", "11%"};
 		{ 22, 40256, "", "=q4=Grim Toll", "=ds=#s14#", "", "11%"};
 		{ 23, 40281, "", "=q4=Twilight Mist", "=ds=#h1#, #w4#", "", "19%"};
-		{ 24, 40280, "", "=q4=Origin of Nightmares", "=ds=#w9#", "", "9%"};
+		{ 24, 40280, "", "=q4=Origin of Nightmares", "=ds=#h2#, #w9#", "", "9%"};
 		{ 25, 40284, "", "=q4=Plague Igniter", "=ds=#w12#", "", "9%"};
 		Prev = "Naxx80Patchwerk25Man";
 		Next = "Naxx80Gluth125Man";
@@ -3215,7 +3215,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 20, 39200, "", "=q4=Grieving Spellblade", "=ds=#h3#, #w10#", "", "11%"};
 		{ 21, 39344, "", "=q4=Slayer of the Lifeless", "=ds=#h1#, #w10#", "", "10%"};
 		{ 22, 39281, "", "=q4=Infection Repulser", "=ds=#h3#, #w6#", "", "19%"};
-		{ 23, 39394, "", "=q4=Charmed Cierge", "=ds=#w9#", "", "0.44%"};
+		{ 23, 39394, "", "=q4=Charmed Cierge", "=ds=#h2#, #w9#", "", "0.44%"};
 		Prev = "Naxx80Grobbulus";
 		Next = "Naxx80Gluth2";
 	};
@@ -3274,7 +3274,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 3, 39730, "", "=q4=Widow's Fury", "=ds=#h1#, #w10#", "", "9%"};
 		{ 4, 40343, "", "=q4=Armageddon", "=ds=#h2#, #w10#", "", "1%"};
 		{ 5, 40239, "", "=q4=The Hand of Nerub", "=ds=#h4#, #w13#", "", "19%"};
-		{ 6, 40280, "", "=q4=Origin of Nightmares", "=ds=#w9#", "", "9%"};
+		{ 6, 40280, "", "=q4=Origin of Nightmares", "=ds=#h2#, #w9#", "", "9%"};
 		{ 7, 39716, "", "=q4=Shield of Assimilation", "=ds=#w8#", "", "24%"};
 		{ 8, 40265, "", "=q4=Arrowsong", "=ds=#w2#", "", "19%"};
 		{ 9, 40346, "", "=q4=Final Voyage", "=ds=#w3#", "", "1%"};
@@ -3313,7 +3313,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 7, 40298, "", "=q4=Faceguard of the Succumbed", "=ds=#s1#, #a4#", "", "9%"};
 		{ 8, 40294, "", "=q4=Riveted Abomination Leggings", "=ds=#s11#, #a4#", "", "8%"};
 		{ 9, 40297, "", "=q4=Sabatons of Endurance", "=ds=#s12#, #a4#", "", "17%"};
-		{ 10, 40300, "", "=q4=Spire of Sunset", "=ds=#w9#", "", "9%"};
+		{ 10, 40300, "", "=q4=Spire of Sunset", "=ds=#h2#, #w9#", "", "9%"};
 		{ 16, 40634, "", "=q4=Legplates of the Lost Conqueror", "=ds=#e15#", "", "56%"};
 		{ 17, 40635, "", "=q4=Legplates of the Lost Protector", "=ds=#e15#", "", "58%"};
 		{ 18, 40636, "", "=q4=Legplates of the Lost Vanquisher", "=ds=#e15#", "", "76%"};
@@ -3545,7 +3545,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 2, 39397, "", "=q4=Pauldrons of Havoc", "=ds=#s3#, #a3#", "", "12%"};
 		{ 3, 39395, "", "=q4=Thane's Tainted Greathelm", "=ds=#s1#, #a4#", "", "12%"};
 		{ 4, 39393, "", "=q4=Claymore of Ancient Power", "=ds=#h2#, #w10#", "", "12%"};
-		{ 5, 39394, "", "=q4=Charmed Cierge", "=ds=#w9#", "", "12%"};
+		{ 5, 39394, "", "=q4=Charmed Cierge", "=ds=#h2#, #w9#", "", "12%"};
 		{ 16, 40610, "", "=q4=Chestguard of the Lost Conqueror", "=ds=#e15#", "", "18%"};
 		{ 17, 40611, "", "=q4=Chestguard of the Lost Protector", "=ds=#e15#", "", "19%"};
 		{ 18, 40612, "", "=q4=Chestguard of the Lost Vanquisher", "=ds=#e15#", "", "25%"};
@@ -3560,7 +3560,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 5, 40350, "", "=q4=Urn of Lost Memories", "=ds=#s15#", "", "10%"};
 		{ 6, 40345, "", "=q4=Broken Promise", "=ds=#h1#, #w10#", "", "10%"};
 		{ 8, 40343, "", "=q4=Armageddon", "=ds=#h2#, #w10#", "", "9%"};
-		{ 7, 40348, "", "=q4=Damnation", "=ds=#w9#", "", "10%"};
+		{ 7, 40348, "", "=q4=Damnation", "=ds=#h2#, #w9#", "", "10%"};
 		{ 9, 40346, "", "=q4=Final Voyage", "=ds=#w3#", "", "10%"};
 		{ 16, 40625, "", "=q4=Breastplate of the Lost Conqueror", "=ds=#e15#", "", "30%"};
 		{ 17, 40626, "", "=q4=Breastplate of the Lost Protector", "=ds=#e15#", "", "30%"};
@@ -3623,7 +3623,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 7, 39246, "", "=q4=Amulet of Autopsy", "=ds=#s2#", "", "9%"};
 		{ 8, 39250, "", "=q4=Ring of Holy Cleansing", "=ds=#s13#", "", "10%"};
 		{ 9, 39245, "", "=q4=Demise", "=ds=#h2#, #w6#", "", "9%"};
-		{ 10, 39255, "", "=q4=Staff of the Plague Beast", "=ds=#w9#", "", "9%"};
+		{ 10, 39255, "", "=q4=Staff of the Plague Beast", "=ds=#h2#, #w9#", "", "9%"};
 		Prev = "Naxx80Noth";
 		Next = "Naxx80Loatheb";
 	};
@@ -3652,7 +3652,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 21, 40256, "", "=q4=Grim Toll", "=ds=#s14#", "", "11%"};
 		{ 22, 40207, "", "=q4=Sigil of Awareness", "=ds=#s16#, #w21#", "", "9%"};
 		{ 23, 40208, "", "=q4=Cryptfiend's Bite", "=ds=#w7#", "", "10%"};
-		{ 24, 40233, "", "=q4=The Undeath Carrier", "=ds=#w9#", "", "9%"};
+		{ 24, 40233, "", "=q4=The Undeath Carrier", "=ds=#h2#, #w9#", "", "9%"};
 		Prev = "Naxx80Noth25Man";
 		Next = "Naxx80Loatheb25Man";
 	};
@@ -3662,7 +3662,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 2, 39260, "", "=q4=Helm of the Corrupted Mind", "=ds=#s1#, #a4#", "", "10%"};
 		{ 3, 39258, "", "=q4=Legplates of Inescapable Death", "=ds=#s11#, #a4#", "", "10%"};
 		{ 4, 39257, "", "=q4=Loatheb's Shadow", "=ds=#s14#", "", "10%"};
-		{ 5, 39256, "", "=q4=Sulfur Stave", "=ds=#w9#", "", "10%"};
+		{ 5, 39256, "", "=q4=Sulfur Stave", "=ds=#h2#, #w9#", "", "10%"};
 		{ 16, 40622, "", "=q4=Spaulders of the Lost Conqueror", "=ds=#e15#", "", "29%"};
 		{ 17, 40623, "", "=q4=Spaulders of the Lost Protector", "=ds=#e15#", "", "30%"};
 		{ 18, 40624, "", "=q4=Spaulders of the Lost Vanquisher", "=ds=#e15#", "", "38%"};
@@ -3740,7 +3740,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 5, 39420, "", "=q4=Anarchy", "=ds=#h1#, #w4#", "", "18%"};
 		{ 6, 39417, "", "=q4=Death's Bite", "=ds=#h2#, #w1#", "", "18%"};
 		{ 7, 39423, "", "=q4=Hammer of the Astral Plane", "=ds=#h3#, #w6#", "", "18%"};
-		{ 8, 39422, "", "=q4=Staff of the Plaguehound", "=ds=#w9#", "", "19%"};
+		{ 8, 39422, "", "=q4=Staff of the Plaguehound", "=ds=#h2#, #w9#", "", "19%"};
 		{ 9, 39426, "", "=q4=Wand of the Archlich", "=ds=#w12#", "", "19%"};
 		{ 10, 39419, "", "=q4=Nerubian Conquerer", "=ds=#w5#", "", "19%"};
 		{ 16, 40616, "", "=q4=Helm of the Lost Conqueror", "=ds=#e15#", "", "28%"};
@@ -3762,7 +3762,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 9, 40402, "", "=q4=Last Laugh", "=ds=#h1#, #w1#", "", "18%"};
 		{ 10, 40384, "", "=q4=Betrayer of Humanity", "=ds=#h2#, #w1#", "", "17%"};
 		{ 11, 40395, "", "=q4=Torch of Holy Fire", "=ds=#h3#, #w6#", "", "18%"};
-		{ 12, 40388, "", "=q4=Journey's End", "=ds=#w9#", "", "18%"};
+		{ 12, 40388, "", "=q4=Journey's End", "=ds=#h2#, #w9#", "", "18%"};
 		{ 13, 40401, "", "=q4=Voice of Reason", "=ds=#w8#", "", "17%"};
 		{ 14, 40400, "", "=q4=Wall of Terror", "=ds=#w8#", "", "18%"};
 		{ 15, 40385, "", "=q4=Envoy of Mortality", "=ds=#w5#", "", "17%"};
@@ -3836,7 +3836,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 7, 40433, "", "=q4=Wyrmrest Band", "=ds=#s13#", "", "7%"};
 		{ 8, 40431, "", "=q4=Fury of the Five Flights", "=ds=#s14#", "", "17%"};
 		{ 9, 40432, "", "=q4=Illustration of the Dragon Soul", "=ds=#s14#", "", "19%"};
-		{ 10, 40455, "", "=q4=Staff of Restraint", "=ds=#w9#", "", "19%"};
+		{ 10, 40455, "", "=q4=Staff of Restraint", "=ds=#h2#, #w9#", "", "19%"};
 		{ 11, 43345, "", "=q4=Dragon Hide Bag", "=ds=#e1#", "", "100%"};
 		{ 12, 43346, "", "=q4=Large Satchel of Spoils", "", "", "100%"};
 		{ 13, 40628, "", "=q4=Gauntlets of the Lost Conqueror", "=ds=#e15#", "", "51%"};
@@ -3869,7 +3869,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 5, 40474, "", "=q4=Surge Needle Ring", "=ds=#s13#", "", "10%"};
 		{ 6, 40491, "", "=q4=Hailstorm", "=ds=#h1#, #w10#", "", "11%"};
 		{ 7, 40488, "", "=q4=Ice Spire Scepter", "=ds=#h3#, #w6#", "", "12%"};
-		{ 8, 40489, "", "=q4=Greatstaff of the Nexus", "=ds=#w9#", "", "12%"};
+		{ 8, 40489, "", "=q4=Greatstaff of the Nexus", "=ds=#h2#, #w9#", "", "12%"};
 		{ 9, 40497, "", "=q4=Black Ice", "=ds=#w7#", "", "10%"};
 		{ 10, 40475, "", "=q4=Barricade of Eternity", "=ds=#w8#", "", "11%"};
 		{ 11, 43952, "", "=q4=Reins of the Azure Drake", "=ds=#e12#", "", "1%"};
@@ -4030,7 +4030,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 14, 45158, "", "=q4=Heart of Iron", "=ds=#s14#", "", "19%"};
 		{ 15, 45169, "", "=q4=Totem of the Dancing Flame", "=ds=#s16#, #w15#", "", "21%"};
 		{ 16, 45165, "", "=q4=Worldcarver", "=ds=#h2#, #w1#", "", "19%"};
-		{ 17, 45171, "", "=q4=Intensity", "=ds=#w9#", "", "20%"};
+		{ 17, 45171, "", "=q4=Intensity", "=ds=#h2#, #w9#", "", "20%"};
 		{ 18, 45170, "", "=q4=Scepter of Creation", "=ds=#w12#", "", "21%"};
 		Prev = "UlduarRazorscale25Man";
 		Next = "UlduarDeconstructor25Man";
@@ -4073,7 +4073,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 14, 45254, "", "=q4=Sigil of the Vengeful Heart", "=ds=#s16#, #w21#", "", "20%"};
 		{ 15, 45255, "", "=q4=Thunderfall Totem", "=ds=#s16#, #w15#", "", "20%"};
 		{ 16, 45246, "", "=q4=Golem-Shard Sticker", "=ds=#h1#, #w4#", "", "19%"};
-		{ 17, 45256, "", "=q4=Twisted Visage", "=ds=#w9#", "", "19%"};
+		{ 17, 45256, "", "=q4=Twisted Visage", "=ds=#h2#, #w9#", "", "19%"};
 		{ 18, 45257, "", "=q4=Quartz Crystal Wand", "=ds=#w12#", "", "20%"};
 		{ 20, 0, "INV_Box_01", "=q6=#j53#", ""};
 		{ 21, 45446, "", "=q4=Grasps of Reason", "=ds=#s8#, #a1#", "", "0.16%"};
@@ -4124,7 +4124,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 15, 45236, "", "=q4=Unblinking Eye", "=ds=#s2#", "", "19%"};
 		{ 16, 45235, "", "=q4=Radiant Seal", "=ds=#s13#", "", "20%"};
 		{ 17, 45233, "", "=q4=Rune Edge", "=ds=#h2#, #w10#", "", "20%"};
-		{ 18, 45234, "", "=q4=Rapture", "=ds=#w9#", "", "19%"};
+		{ 18, 45234, "", "=q4=Rapture", "=ds=#h2#, #w9#", "", "19%"};
 		{ 20, 0, "INV_Box_01", "=q6=#j53#", ""};
 		{ 21, 45242, "", "=q4=Drape of Mortal Downfall", "=ds=#s4#", "", "21%"};
 		{ 22, 45245, "", "=q4=Shoulderpads of the Intruder", "=ds=#s3#, #a2#", "", "14%"};
@@ -4147,7 +4147,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 7, 45702, "", "=q4=Emerald Signet Ring", "=ds=#s13#", "", "18%"};
 		{ 8, 45703, "", "=q4=Spark of Hope", "=ds=#s14#", "", "17%"};
 		{ 9, 45700, "", "=q4=Stoneguard", "=ds=#h1#, #w10#", "", "19%"};
-		{ 10, 45695, "", "=q4=Spire of Withering Dreams", "=ds=#w9#", "", "21%"};
+		{ 10, 45695, "", "=q4=Spire of Withering Dreams", "=ds=#h2#, #w9#", "", "21%"};
 		Prev = "UlduarIronCouncil";
 		Next = "UlduarAlgalon";
 	};
@@ -4212,7 +4212,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 10, 45620, "", "=q4=Starshard Edge", "=ds=#h3#, #w4#"};
 		{ 11, 45607, "", "=q4=Fang of Oblivion", "=ds=#h1#, #w4#", "", "18%"};
 		{ 12, 45612, "", "=q4=Constellus", "=ds=#h3#, #w6#", "", "11%"};
-		{ 13, 45613, "", "=q4=Dreambinder", "=ds=#w9#", "", "1%"};
+		{ 13, 45613, "", "=q4=Dreambinder", "=ds=#h2#, #w9#", "", "1%"};
 		{ 14, 45587, "", "=q4=Bulwark of Algalon", "=ds=#w8#"};
 		{ 15, 45570, "", "=q4=Skyforge Crossbow", "=ds=#w3#", "", "1%"};
 		{ 16, 45609, "", "=q4=Comet's Trail", "=ds=#s14#"};
@@ -4274,7 +4274,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 16, 0, "INV_Box_01", "=q6=#j53#", ""};
 		{ 17, 45888, "", "=q4=Bitter Cold Armguards", "=ds=#s8#, #a4#", "", "18%"};
 		{ 18, 45876, "", "=q4=Shiver", "=ds=#h1#, #w6#", "", "16%"};
-		{ 19, 45886, "", "=q4=Icecore Staff", "=ds=#w9#", "", "20%"};
+		{ 19, 45886, "", "=q4=Icecore Staff", "=ds=#h2#, #w9#", "", "20%"};
 		{ 20, 45887, "", "=q4=Ice Layered Barrier", "=ds=#w8#", "", "18%"};
 		{ 21, 45877, "", "=q4=The Boreal Guard", "=ds=#w8#", "", "17%"};
 		{ 23, 45786, "", "=q1=Hodir's Sigil", "=ds=#m3#", "", "23%"};
@@ -4299,7 +4299,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 19, 45460, "", "=q4=Bindings of Winter Gale", "=ds=#s8#, #a3#", "", "12%"};
 		{ 20, 45459, "", "=q4=Frigid Strength of Hodir", "=ds=#s2#", "", "13%"};
 		{ 21, 45612, "", "=q4=Constellus", "=ds=#h3#, #w6#", "", "11%"};
-		{ 22, 45457, "", "=q4=Staff of Endless Winter", "=ds=#w9#", "", "19%"};
+		{ 22, 45457, "", "=q4=Staff of Endless Winter", "=ds=#h2#, #w9#", "", "19%"};
 		{ 24, 45815, "", "=q1=Hodir's Sigil", "=ds=#m3#", "", "21%"};
 		Prev = "UlduarAuriaya25Man";
 		Next = "UlduarThorim25Man";
@@ -4353,7 +4353,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 2, 45941, "", "=q4=Chestguard of the Lasher", "=ds=#s5#, #a3#", "", "15%"};
 		{ 3, 45935, "", "=q4=Ironbark Faceguard", "=ds=#s1#, #a4#", "", "17%"};
 		{ 4, 45936, "", "=q4=Legplates of Flourishing Resolve", "=ds=#s11#, #a4#", "", "15%"};
-		{ 5, 45934, "", "=q4=Unraveling Reach", "=ds=#w9#", "", "18%"};
+		{ 5, 45934, "", "=q4=Unraveling Reach", "=ds=#h2#, #w9#", "", "18%"};
 		{ 7, 45644, "", "=q4=Gloves of the Wayward Conqueror", "=ds=#e15#", "", "25%"};
 		{ 8, 45645, "", "=q4=Gloves of the Wayward Protector", "=ds=#e15#", "", "23%"};
 		{ 9, 45646, "", "=q4=Gloves of the Wayward Vanquisher", "=ds=#e15#", "", "30%"};
@@ -4376,7 +4376,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 5, 45482, "", "=q4=Leggings of the Lifetender", "=ds=#s11#, #a2#", "", "17%"};
 		{ 6, 45481, "", "=q4=Gauntlets of Ruthless Reprisal", "=ds=#s9#, #a4#", "", "16%"};
 		{ 7, 45480, "", "=q4=Nymph Heart Charm", "=ds=#s2#", "", "13%"};
-		{ 8, 45479, "", "=q4=The Lifebinder", "=ds=#w9#", "", "19%"};
+		{ 8, 45479, "", "=q4=The Lifebinder", "=ds=#h2#, #w9#", "", "19%"};
 		{ 10, 45653, "", "=q4=Legplates of the Wayward Conqueror", "=ds=#e15#", "", "43%"};
 		{ 11, 45654, "", "=q4=Legplates of the Wayward Protector", "=ds=#e15#", "", "52%"};
 		{ 12, 45655, "", "=q4=Legplates of the Wayward Vanquisher", "=ds=#e15#", "", "69%"};
@@ -4387,7 +4387,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 19, 45487, "", "=q4=Handguards of Revitalization", "=ds=#s9#, #a4#", "", "0.34%"};
 		{ 20, 45485, "", "=q4=Bronze Pendant of the Vanir", "=ds=#s2#"};
 		{ 21, 45484, "", "=q4=Bladetwister", "=ds=#h1#, #w4#", "", "0.27%"};
-		{ 22, 45613, "", "=q4=Dreambinder", "=ds=#w9#", "", "1%"};
+		{ 22, 45613, "", "=q4=Dreambinder", "=ds=#h2#, #w9#", "", "1%"};
 		{ 24, 45814, "", "=q1=Freya's Sigil", "=ds=#m3#", "", "0.27%"};
 		Prev = "UlduarThorim25Man";
 		Next = "UlduarMimiron25Man";
@@ -4453,7 +4453,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 18, 46034, "", "=q4=Leggings of Profound Darkness", "=ds=#s11#, #a1#", "", "3%"};
 		{ 19, 46036, "", "=q4=Void Sabre", "=ds=#h1#, #w10#", "", "2%"};
 		{ 20, 46035, "", "=q4=Aesuga, Hand of the Ardent Champion", "=ds=#h1#, #w6#", "", "3%"};
-		{ 21, 46033, "", "=q4=Tortured Earth", "=ds=#w9#", "", "4%"};
+		{ 21, 46033, "", "=q4=Tortured Earth", "=ds=#h2#, #w9#", "", "4%"};
 		Prev = "UlduarMimiron";
 		Next = "UlduarYoggSaron";
 	};
@@ -4495,7 +4495,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 6, 46024, "", "=q4=Kingsbane", "=ds=#h1#, #w4#", "", "10%"};
 		{ 7, 46016, "", "=q4=Abaddon", "=ds=#h2#, #w10#", "", "17%"};
 		{ 8, 46031, "", "=q4=Touch of Madness", "=ds=#h1#, #w1#", "", "25%"};
-		{ 9, 46025, "", "=q4=Devotion", "=ds=#w9#", "", "23%"};
+		{ 9, 46025, "", "=q4=Devotion", "=ds=#h2#, #w9#", "", "23%"};
 		{ 10, 46018, "", "=q4=Deliverance", "=ds=#w3#", "", "35%"};
 		{ 12, 45635, "", "=q4=Chestguard of the Wayward Conqueror", "=ds=#e15#", "", "52%"};
 		{ 13, 45636, "", "=q4=Chestguard of the Wayward Protector", "=ds=#e15#", "", "50%"};
@@ -4550,7 +4550,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 7, 46343, "", "=q4=Fervor of the Protectorate", "=ds=#s2#", "", "2%"};
 		{ 8, 46339, "", "=q4=Mimiron's Repeater", "=ds=#w5#", "", "2%"};
 		{ 9, 46351, "", "=q4=Bloodcrush Cudgel", "=ds=#h1# #w6#", "", "2%"};
-		{ 10, 46350, "", "=q4=Pillar of Fortitude", "=ds=#w9#", "", "2%"};
+		{ 10, 46350, "", "=q4=Pillar of Fortitude", "=ds=#h2#, #w9#", "", "2%"};
 		{ 11, 46342, "", "=q4=Golemheart Longbow", "=ds=#w2#", "", "2%"};
 		Prev = "UlduarYoggSaron";
 		Next = "UlduarPatterns";
@@ -4960,7 +4960,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 10, 47742, "", "=q4=Chalice of Benedictus", "=ds=#s15#"};
 		{ 16, 47736, "", "=q4=Icefall Blade", "=ds=#h1#, #w4#"};
 		{ 17, 47737, "", "=q4=Reckoning", "=ds=#h2#, #w10#"};
-		{ 18, 47743, "", "=q4=Enlightenment", "=ds=#w9#"};
+		{ 18, 47743, "", "=q4=Enlightenment", "=ds=#h2#, #w9#"};
 		{ 19, 47740, "", "=q4=The Diplomat", "=ds=#w5#"};
 		Prev = "TrialoftheCrusaderFactionChampions_A";
 		Next = "TrialoftheCrusaderAnubarak_A";
@@ -4978,7 +4978,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 10, 47913, "", "=q4=Lightbane Focus", "=ds=#s15#"};
 		{ 16, 47886, "", "=q4=Nemesis Blade", "=ds=#h1#, #w4#"};
 		{ 17, 47884, "", "=q4=Edge of Agony", "=ds=#h2#, #w10#"};
-		{ 18, 47892, "", "=q4=Illumination", "=ds=#w9#"};
+		{ 18, 47892, "", "=q4=Illumination", "=ds=#h2#, #w9#"};
 		{ 19, 47883, "", "=q4=Widebarrel Flintlock", "=ds=#w5#"};
 		Prev = "TrialoftheCrusaderFactionChampions_H";
 		Next = "TrialoftheCrusaderAnubarak_H";
@@ -5000,7 +5000,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 14, 47138, "", "=q4=Chalice of Searing Light", "=ds=#s15#"};
 		{ 16, 47242, "", "=q4=Trophy of the Crusade", "=ds=#e15#"};
 		{ 18, 47104, "", "=q4=Twin Spike", "=ds=#h1#, #w4#"};
-		{ 19, 47114, "", "=q4=Lupine Longstaff", "=ds=#w9#"};
+		{ 19, 47114, "", "=q4=Lupine Longstaff", "=ds=#h2#, #w9#"};
 		Prev = "TrialoftheCrusaderFactionChampions25Man_A";
 		Next = "TrialoftheCrusaderAnubarak25Man_A";
 	};
@@ -5021,7 +5021,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 14, 47309, "", "=q4=Mystifying Charm", "=ds=#s15#"};
 		{ 16, 47242, "", "=q4=Trophy of the Crusade", "=ds=#e15#"};
 		{ 18, 47300, "", "=q4=Gouge of the Frigid Heart", "=ds=#h1#, #w4#"};
-		{ 19, 47302, "", "=q4=Twin's Pact", "=ds=#w9#"};
+		{ 19, 47302, "", "=q4=Twin's Pact", "=ds=#h2#, #w9#"};
 		Prev = "TrialoftheCrusaderFactionChampions25Man_H";
 		Next = "TrialoftheCrusaderAnubarak25Man_H";
 	};
@@ -5041,7 +5041,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 13, 47809, "", "=q4=Argent Resolve", "=ds=#h3#, #w6#" };
 		{ 14, 47816, "", "=q4=The Grinder", "=ds=#h1#, #w6#" };
 		{ 16, 47834, "", "=q4=Fordragon Blades", "=ds=#w7#" };
-		{ 17, 47815, "", "=q4=Cold Convergence", "=ds=#w9#" };
+		{ 17, 47815, "", "=q4=Cold Convergence", "=ds=#h2#, #w9#" };
 		{ 18, 47835, "", "=q4=Bulwark of the Royal Guard", "=ds=#w8#" };
 		{ 19, 47812, "", "=q4=Vigilant Ward", "=ds=#w8#" };
 		{ 20, 47741, "", "=q4=Baelgun's Heavy Crossbow", "=ds=#w3#" };
@@ -5064,7 +5064,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 13, 47894, "", "=q4=Mace of the Earthborn Chieftain", "=ds=#h3#, #w6#" };
 		{ 14, 47905, "", "=q4=Blackhorn Bludgeon", "=ds=#h1#, #w6#" };
 		{ 16, 47911, "", "=q4=Anguish", "=ds=#w7#" };
-		{ 17, 47900, "", "=q4=Perdition", "=ds=#w9#" };
+		{ 17, 47900, "", "=q4=Perdition", "=ds=#h2#, #w9#" };
 		{ 18, 47910, "", "=q4=Aegis of the Coliseum", "=ds=#w8#" };
 		{ 19, 47895, "", "=q4=Pride of the Kor'kron", "=ds=#w8#" };
 		{ 20, 47907, "", "=q4=Darkmaw Crossbow", "=ds=#w3#" };
@@ -5408,7 +5408,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 10, 47958, "", "=q4=Chalice of Benedictus", "=ds=#s15#"};
 		{ 16, 47953, "", "=q4=Icefall Blade", "=ds=#h1#, #w4#"};
 		{ 17, 47951, "", "=q4=Reckoning", "=ds=#h2#, #w10#"};
-		{ 18, 47960, "", "=q4=Enlightenment", "=ds=#w9#"};
+		{ 18, 47960, "", "=q4=Enlightenment", "=ds=#h2#, #w9#"};
 		{ 19, 47950, "", "=q4=The Diplomat", "=ds=#w5#"};
 		Prev = "TrialoftheCrusaderFactionChampionsHEROIC_A";
 		Next = "TrialoftheCrusaderAnubarakHEROIC_A";
@@ -5426,7 +5426,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 10, 48032, "", "=q4=Lightbane Focus", "=ds=#s15#"};
 		{ 16, 48025, "", "=q4=Nemesis Blade", "=ds=#h1#, #w4#"};
 		{ 17, 48023, "", "=q4=Edge of Agony", "=ds=#h2#, #w10#"};
-		{ 18, 48036, "", "=q4=Illumination", "=ds=#w9#"};
+		{ 18, 48036, "", "=q4=Illumination", "=ds=#h2#, #w9#"};
 		{ 19, 48022, "", "=q4=Widebarrel Flintlock", "=ds=#w5#"};
 		Prev = "TrialoftheCrusaderFactionChampionsHEROIC_H";
 		Next = "TrialoftheCrusaderAnubarakHEROIC_H";
@@ -5448,7 +5448,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 14, 47146, "", "=q4=Chalice of Searing Light", "=ds=#s15#"};
 		{ 16, 47242, "", "=q4=Trophy of the Crusade", "=ds=#e15#"};
 		{ 18, 47113, "", "=q4=Twin Spike", "=ds=#h1#, #w4#"};
-		{ 19, 47130, "", "=q4=Lupine Longstaff", "=ds=#w9#"};
+		{ 19, 47130, "", "=q4=Lupine Longstaff", "=ds=#h2#, #w9#"};
 		Prev = "TrialoftheCrusaderFactionChampions25ManHEROIC_A";
 		Next = "TrialoftheCrusaderAnubarak25ManHEROIC_A";
 	};
@@ -5469,7 +5469,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 14, 47470, "", "=q4=Mystifying Charm", "=ds=#s15#"};
 		{ 16, 47242, "", "=q4=Trophy of the Crusade", "=ds=#e15#"};
 		{ 18, 47461, "", "=q4=Gouge of the Frigid Heart", "=ds=#h1#, #w4#"};
-		{ 19, 47463, "", "=q4=Twin's Pact", "=ds=#w9#"};
+		{ 19, 47463, "", "=q4=Twin's Pact", "=ds=#h2#, #w9#"};
 		Prev = "TrialoftheCrusaderFactionChampions25ManHEROIC_H";
 		Next = "TrialoftheCrusaderAnubarak25ManHEROIC_H";
 	};
@@ -5489,7 +5489,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 13, 47962, "", "=q4=Argent Resolve", "=ds=#h3#, #w6#" };
 		{ 14, 47973, "", "=q4=The Grinder", "=ds=#h1#, #w6#" };
 		{ 16, 47979, "", "=q4=Fordragon Blades", "=ds=#w7#" };
-		{ 17, 47968, "", "=q4=Cold Convergence", "=ds=#w9#" };
+		{ 17, 47968, "", "=q4=Cold Convergence", "=ds=#h2#, #w9#" };
 		{ 18, 47978, "", "=q4=Bulwark of the Royal Guard", "=ds=#w8#" };
 		{ 19, 47963, "", "=q4=Vigilant Ward", "=ds=#w8#" };
 		{ 20, 47975, "", "=q4=Baelgun's Heavy Crossbow", "=ds=#w3#" };
@@ -5512,7 +5512,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 13, 48039, "", "=q4=Mace of the Earthborn Chieftain", "=ds=#h3#, #w6#" };
 		{ 14, 48050, "", "=q4=Blackhorn Bludgeon", "=ds=#h1#, #w6#" };
 		{ 16, 48056, "", "=q4=Anguish", "=ds=#w7#" };
-		{ 17, 48045, "", "=q4=Perdition", "=ds=#w9#" };
+		{ 17, 48045, "", "=q4=Perdition", "=ds=#h2#, #w9#" };
 		{ 18, 48055, "", "=q4=Aegis of the Coliseum", "=ds=#w8#" };
 		{ 19, 48040, "", "=q4=Pride of the Kor'kron", "=ds=#w8#" };
 		{ 20, 48052, "", "=q4=Darkmaw Crossbow", "=ds=#w3#" };
@@ -5581,7 +5581,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 7, 48713, "", "=q4=Lothar's Edge", "=ds=#h2#, #w1#"};
 		{ 8, 48709, "", "=q4=Heartcrusher", "=ds=#h3#, #w6#"};
 		{ 9, 48714, "", "=q4=Honor of the Fallen", "=ds=#h1#, #w6#"};
-		{ 10, 48710, "", "=q4=Paragon's Breadth", "=ds=#w9#"};
+		{ 10, 48710, "", "=q4=Paragon's Breadth", "=ds=#h2#, #w9#"};
 		{ 11, 48711, "", "=q4=Rhok'shalla, the Shadow's Bane", "=ds=#w2#"};
 		{ 16, 0, "INV_Box_01", "=q6="..AL["Bonus Loot"], "=q5="..AL["A Tribute to Mad Skill (45)"]};
 		{ 17, 47242, "", "=q4=Trophy of the Crusade", "=ds=2x #e15#"};
@@ -5605,7 +5605,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 7, 48695, "", "=q4=Mor'kosh, the Bloodreaver", "=ds=#h2#, #w1#" };
 		{ 8, 48693, "", "=q4=Heartsmasher", "=ds=#h3#, #w6#" };
 		{ 9, 48699, "", "=q4=Blood and Glory", "=ds=#h1#, #w6#" };
-		{ 10, 48705, "", "=q4=Attrition", "=ds=#w9#" };
+		{ 10, 48705, "", "=q4=Attrition", "=ds=#h2#, #w9#" };
 		{ 11, 48697, "", "=q4=Frenzystrike Longbow", "=ds=#w2#"};
 		{ 16, 0, "INV_Box_01", "=q6="..AL["Bonus Loot"], "=q5="..AL["A Tribute to Mad Skill (45)"]};
 		{ 17, 47242, "", "=q4=Trophy of the Crusade", "=ds=2x #e15#"};
@@ -5631,7 +5631,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 9, 47515, "", "=q4=Decimation", "=ds=#h2#, #w10#"};
 		{ 10, 47526, "", "=q4=Remorseless", "=ds=#h1#, #w6#"};
 		{ 11, 47519, "", "=q4=Catastrophe", "=ds=#h2#, #w6#"};
-		{ 12, 47524, "", "=q4=Clemency", "=ds=#w9#"};
+		{ 12, 47524, "", "=q4=Clemency", "=ds=#h2#, #w9#"};
 		{ 13, 47521, "", "=q4=BRK-1000", "=ds=#w5#"};
 		{ 16, 0, "INV_Box_01", "=q6="..AL["Bonus Loot"], "=q5="..AL["A Tribute to Mad Skill (45)"]};
 		{ 17, 47557, "", "=q4=Regalia of the Grand Conqueror", "=ds=#e15#"};
@@ -5658,7 +5658,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 9, 47516, "", "=q4=Fleshrender", "=ds=#h2#, #w10#"};
 		{ 10, 47528, "", "=q4=Cudgel of the Damned", "=ds=#h1#, #w6#"};
 		{ 11, 47520, "", "=q4=Grievance", "=ds=#h2#, #w6#"};
-		{ 12, 47525, "", "=q4=Sufferance", "=ds=#w9#"};
+		{ 12, 47525, "", "=q4=Sufferance", "=ds=#h2#, #w9#"};
 		{ 13, 47523, "", "=q4=Fezzik's Autocannon", "=ds=#w5#"};
 		{ 16, 0, "INV_Box_01", "=q6="..AL["Bonus Loot"], "=q5="..AL["A Tribute to Mad Skill (45)"]};
 		{ 17, 47557, "", "=q4=Regalia of the Grand Conqueror", "=ds=#e15#"};
@@ -5815,8 +5815,8 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 16, 49799, "", "=q4=Coil of Missing Gems", "=ds=#s2#"};
 		{ 17, 49800, "", "=q4=Spiteful Signet", "=ds=#s13#"};
 		{ 19, 49789, "", "=q4=Heartshiver", "=ds=#h1#, #w4#"};
-		{ 20, 49790, "", "=q4=Blood Boil Lancet", "=ds=#w9#"};
-		{ 21, 49793, "", "=q4=Tower of the Mouldering Corpse", "=ds=#w9#"};
+		{ 20, 49790, "", "=q4=Blood Boil Lancet", "=ds=#h2#, #w9#"};
+		{ 21, 49793, "", "=q4=Tower of the Mouldering Corpse", "=ds=#h2#, #w9#"};
 		Prev = "FoSBronjahm";
 		Next = "FHTrashMobs";
 	};
@@ -5849,7 +5849,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 4, 49804, "", "=q4=Polished Mirror Helm", "=ds=#s1#, #a3#"};
 		{ 5, 49803, "", "=q4=Ring of Carnelian and Bone", "=ds=#s13#"};
 		{ 6, 49802, "", "=q4=Garfrost's Two-Ton Hammer", "=ds=#h2#, #w6#"};
-		{ 7, 49801, "", "=q4=Unspeakable Secret", "=ds=#w9#"};
+		{ 7, 49801, "", "=q4=Unspeakable Secret", "=ds=#h2#, #w9#"};
 		{ 16, 0, "INV_Box_01", "=q6=#j3#", ""};
 		{ 17, 50233, "", "=q4=Spurned Val'kyr Shoulderguards", "=ds=#s3#, #a3#"};
 		{ 18, 50234, "", "=q4=Shoulderplates of Frozen Blood", "=ds=#s3#, #a4#"};
@@ -5908,7 +5908,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 17, 50259, "", "=q4=Nevermelting Ice Crystal", "=ds=#s14#"};
 		{ 19, 50268, "", "=q4=Rimefang's Claw", "=ds=#h1#, #w10#"};
 		{ 20, 50267, "", "=q4=Tyrannical Beheader", "=ds=#h2#, #w1#"};
-		{ 21, 50273, "", "=q4=Engraved Gargoyle Femur", "=ds=#w9#"};
+		{ 21, 50273, "", "=q4=Engraved Gargoyle Femur", "=ds=#h2#, #w9#"};
 		Prev = "PoSKrickIck";
 		Next = "FHTrashMobs";
 	};
@@ -6085,7 +6085,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 12, 49985, "", "=q4=Juggernaut Band", "=ds=#s13#"};
 		{ 13, 49990, "", "=q4=Ring of Maddening Whispers", "=ds=#s13#"};
 		{ 16, 49982, "", "=q4=Heartpierce", "=ds=#h1#, #w4#"};
-		{ 17, 49992, "", "=q4=Nibelung", "=ds=#w9#"};
+		{ 17, 49992, "", "=q4=Nibelung", "=ds=#h2#, #w9#"};
 		{ 18, 50034, "", "=q4=Zod's Repeating Longbow", "=ds=#w2#"};
 		{ 20, 50274, "", "=q5=Shadowfrost Shard", "=ds=#m3#"};
 		{ 21, 49908, "", "=q4=Primordial Saronite", "=ds=#e8#"};
@@ -6144,7 +6144,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 16, 50809, "", "=q4=Soulcleave Pendant", "=ds=#s2#"};
 		{ 17, 50803, "", "=q4=Saurfang's Cold-Forged Band", "=ds=#s13#"};
 		{ 19, 50798, "", "=q4=Ramaladni's Blade of Culling", "=ds=#h2#, #w1#"};
-		{ 20, 50805, "", "=q4=Mag'hari Chieftain's Staff", "=ds=#w9#"};
+		{ 20, 50805, "", "=q4=Mag'hari Chieftain's Staff", "=ds=#h2#, #w9#"};
 		Prev = "ICCGunshipBattle";
 		Next = "ICCFestergut";
 	};
@@ -6180,7 +6180,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 16, 50852, "", "=q4=Precious's Putrid Collar", "=ds=#s2#"};
 		{ 17, 50986, "", "=q4=Signet of Putrefaction", "=ds=#s13#"};
 		{ 19, 50810, "", "=q4=Gutbuster", "=ds=#h1#, #w6#"};
-		{ 20, 50966, "", "=q4=Abracadaver", "=ds=#w9#"};
+		{ 20, 50966, "", "=q4=Abracadaver", "=ds=#h2#, #w9#"};
 		Prev = "ICCSaurfang";
 		Next = "ICCRotface";
 	};
@@ -6201,7 +6201,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 16, 50061, "", "=q4=Holiday's Grace", "=ds=#s2#"};
 		{ 17, 50414, "", "=q4=Might of Blight", "=ds=#s13#"};
 		{ 19, 50035, "", "=q4=Black Bruise", "=ds=#h3#, #w13#"};
-		{ 20, 50040, "", "=q4=Distant Land", "=ds=#w9#"};
+		{ 20, 50040, "", "=q4=Distant Land", "=ds=#h2#, #w9#"};
 		{ 22, 50226, "", "=q4=Festergut's Acidic Blood", "=ds=#m3#"};
 		{ 24, 50274, "", "=q5=Shadowfrost Shard", "=ds=#m3#"};
 		{ 25, 49908, "", "=q4=Primordial Saronite", "=ds=#e8#"};
@@ -6220,7 +6220,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 9, 51001, "", "=q4=Rotface's Rupturing Ring", "=ds=#s13#"};
 		{ 16, 51003, "", "=q4=Abomination Knuckles", "=ds=#h3#, #w13#"};
 		{ 17, 51004, "", "=q4=Lockjaw", "=ds=#h3#, #w6#"};
-		{ 18, 50998, "", "=q4=Shaft of Glacial Ice", "=ds=#w9#"};
+		{ 18, 50998, "", "=q4=Shaft of Glacial Ice", "=ds=#h2#, #w9#"};
 		{ 19, 50999, "", "=q4=Gluth's Fetching Knife", "=ds=#w11#"};
 		Prev = "ICCFestergut";
 		Next = "ICCPutricide";
@@ -6346,7 +6346,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 2, 50180, "", "=q4=Lana'thel's Chain of Flagellation", "=ds=#s2#"};
 		{ 3, 50354, "", "=q4=Bauble of True Blood", "=ds=#s14#"};
 		{ 4, 50178, "", "=q4=Bloodfall", "=ds=#w7#"};
-		{ 5, 50181, "", "=q4=Dying Light", "=ds=#w9#"};
+		{ 5, 50181, "", "=q4=Dying Light", "=ds=#h2#, #w9#"};
 		{ 6, 50065, "", "=q4=Icecrown Glacial Wall", "=ds=#w8#"};
 		{ 8, 50274, "", "=q5=Shadowfrost Shard", "=ds=#m3#"};
 		{ 9, 49908, "", "=q4=Primordial Saronite", "=ds=#e8#"};
@@ -6372,7 +6372,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 8, 51563, "", "=q4=Taiga Bindings", "=ds=#s8#, #a4#"};
 		{ 9, 51564, "", "=q4=Ironrope Belt of Ymirjar", "=ds=#s10#, #a4#"};
 		{ 16, 51562, "", "=q4=Oxheart", "=ds=#h2#, #w6#"};
-		{ 17, 51582, "", "=q4=Sister Svalna's Aether Staff", "=ds=#w9#"};
+		{ 17, 51582, "", "=q4=Sister Svalna's Aether Staff", "=ds=#h2#, #w9#"};
 		{ 18, 51561, "", "=q4=Dreamhunter's Carbine", "=ds=#w5#"};
 		Prev = "ICCLanathel";
 		Next = "ICCSindragosa";
@@ -6445,8 +6445,8 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 4, 51795, "", "=q4=Troggbane, Axe of the Frostborne King", "=ds=#h1#, #w1#"};
 		{ 5, 51798, "", "=q4=Valius, Gavel of the Lightbringer", "=ds=#h3#, #w6#"};
 		{ 6, 51796, "", "=q4=Warmace of Menethil", "=ds=#h2#, #w6#"};
-		{ 7, 51799, "", "=q4=Halion, Staff of Forgotten Love", "=ds=#w9#"};
-		{ 8, 51797, "", "=q4=Tainted Twig of Nordrassil", "=ds=#w9#"};
+		{ 7, 51799, "", "=q4=Halion, Staff of Forgotten Love", "=ds=#h2#, #w9#"};
+		{ 8, 51797, "", "=q4=Tainted Twig of Nordrassil", "=ds=#h2#, #w9#"};
 		{ 9, 51802, "", "=q4=Windrunner's Heartseeker", "=ds=#w3#"};
 		Prev = "ICCSindragosa";
 		Next = "ICCTrash25Man";
@@ -6460,7 +6460,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 5, 50428, "", "=q4=Royal Scepter of Terenas II", "=ds=#h3#, #w6#"};
 		{ 6, 49997, "", "=q4=Mithrios, Bronzebeard's Legacy", "=ds=#h1#, #w6#"};
 		{ 7, 50425, "", "=q4=Oathbinder, Charge of the Ranger-General", "=ds=#w7#"};
-		{ 8, 50429, "", "=q4=Archus, Greatstaff of Antonidas", "=ds=#w9#"};
+		{ 8, 50429, "", "=q4=Archus, Greatstaff of Antonidas", "=ds=#h2#, #w9#"};
 		{ 9, 49981, "", "=q4=Fal'inrush, Defender of Quel'thalas", "=ds=#w3#"};
 		{ 16, 52027, "", "=q4=Conqueror's Mark of Sanctification", "=ds=#e15#"};
 		{ 17, 52026, "", "=q4=Protector's Mark of Sanctification", "=ds=#e15#"};
@@ -6558,7 +6558,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 12, 50642, "", "=q4=Juggernaut Band", "=ds=#s13#"};
 		{ 13, 50644, "", "=q4=Ring of Maddening Whispers", "=ds=#s13#"};
 		{ 16, 50641, "", "=q4=Heartpierce", "=ds=#h1#, #w4#"};
-		{ 17, 50648, "", "=q4=Nibelung", "=ds=#w9#"};
+		{ 17, 50648, "", "=q4=Nibelung", "=ds=#h2#, #w9#"};
 		{ 18, 50638, "", "=q4=Zod's Repeating Longbow", "=ds=#w2#"};
 		{ 20, 50274, "", "=q5=Shadowfrost Shard", "=ds=#m3#"};
 		{ 21, 49908, "", "=q4=Primordial Saronite", "=ds=#e8#"};
@@ -6620,7 +6620,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 17, 52026, "", "=q4=Protector's Mark of Sanctification", "=ds=#e15#"};
 		{ 18, 52025, "", "=q4=Vanquisher's Mark of Sanctification", "=ds=#e15#"};
 		{ 20, 51905, "", "=q4=Ramaladni's Blade of Culling", "=ds=#h2#, #w1#"};
-		{ 21, 51898, "", "=q4=Mag'hari Chieftain's Staff", "=ds=#w9#"};
+		{ 21, 51898, "", "=q4=Mag'hari Chieftain's Staff", "=ds=#h2#, #w9#"};
 		Prev = "ICCGunshipBattleHEROIC";
 		Next = "ICCFestergutHEROIC";
 	};
@@ -6659,7 +6659,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 16, 51890, "", "=q4=Precious's Putrid Collar", "=ds=#s2#"};
 		{ 17, 51884, "", "=q4=Signet of Putrefaction", "=ds=#s13#"};
 		{ 19, 51893, "", "=q4=Gutbuster", "=ds=#h1#, #w6#"};
-		{ 20, 51887, "", "=q4=Abracadaver", "=ds=#w9#"};
+		{ 20, 51887, "", "=q4=Abracadaver", "=ds=#h2#, #w9#"};
 		Prev = "ICCSaurfangHEROIC";
 		Next = "ICCRotfaceHEROIC";
 	};
@@ -6680,7 +6680,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 16, 50700, "", "=q4=Holiday's Grace", "=ds=#s2#"};
 		{ 17, 50693, "", "=q4=Might of Blight", "=ds=#s13#"};
 		{ 19, 50692, "", "=q4=Black Bruise", "=ds=#h3#, #w13#"};
-		{ 20, 50695, "", "=q4=Distant Land", "=ds=#w9#"};
+		{ 20, 50695, "", "=q4=Distant Land", "=ds=#h2#, #w9#"};
 		{ 22, 50274, "", "=q5=Shadowfrost Shard", "=ds=#m3#"};
 		{ 23, 49908, "", "=q4=Primordial Saronite", "=ds=#e8#"};
 		Prev = "ICCSaurfang25ManHEROIC";
@@ -6698,7 +6698,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 9, 51878, "", "=q4=Rotface's Rupturing Ring", "=ds=#s13#"};
 		{ 16, 51876, "", "=q4=Abomination Knuckles", "=ds=#h3#, #w13#"};
 		{ 17, 51875, "", "=q4=Lockjaw", "=ds=#h3#, #w6#"};
-		{ 18, 51881, "", "=q4=Shaft of Glacial Ice", "=ds=#w9#"};
+		{ 18, 51881, "", "=q4=Shaft of Glacial Ice", "=ds=#h2#, #w9#"};
 		{ 19, 51880, "", "=q4=Gluth's Fetching Knife", "=ds=#w11#"};
 		Prev = "ICCFestergutHEROIC";
 		Next = "ICCPutricideHEROIC";
@@ -6833,7 +6833,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 2, 50728, "", "=q4=Lana'thel's Chain of Flagellation", "=ds=#s2#"};
 		{ 3, 50726, "", "=q4=Bauble of True Blood", "=ds=#s14#"};
 		{ 4, 50727, "", "=q4=Bloodfall", "=ds=#w7#"};
-		{ 5, 50725, "", "=q4=Dying Light", "=ds=#w9#"};
+		{ 5, 50725, "", "=q4=Dying Light", "=ds=#h2#, #w9#"};
 		{ 6, 50729, "", "=q4=Icecrown Glacial Wall", "=ds=#w8#"};
 		{ 8, 50274, "", "=q5=Shadowfrost Shard", "=ds=#m3#"};
 		{ 9, 49908, "", "=q4=Primordial Saronite", "=ds=#e8#"};
@@ -6862,7 +6862,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 8, 51832, "", "=q4=Taiga Bindings", "=ds=#s8#, #a4#"};
 		{ 9, 51831, "", "=q4=Ironrope Belt of Ymirjar", "=ds=#s10#, #a4#"};
 		{ 16, 51833, "", "=q4=Oxheart", "=ds=#h2#, #w6#"};
-		{ 17, 51828, "", "=q4=Sister Svalna's Aether Staff", "=ds=#w9#"};
+		{ 17, 51828, "", "=q4=Sister Svalna's Aether Staff", "=ds=#h2#, #w9#"};
 		{ 18, 51834, "", "=q4=Dreamhunter's Carbine", "=ds=#w5#"};
 		Prev = "ICCLanathelHEROIC";
 		Next = "ICCSindragosaHEROIC";
@@ -6883,7 +6883,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 17, 50622, "", "=q4=Devium's Eternally Cold Ring", "=ds=#s13#"};
 		{ 18, 50618, "", "=q4=Frostbrood Sapphire Ring", "=ds=#s13#"};
 		{ 20, 50621, "", "=q4=Lungbreaker", "=ds=#h1#, #w4#"};
-		{ 21, 50631, "", "=q4=Nightmare Ender", "=ds=#w9#"};
+		{ 21, 50631, "", "=q4=Nightmare Ender", "=ds=#h2#, #w9#"};
 		{ 23, 50274, "", "=q5=Shadowfrost Shard", "=ds=#m3#"};
 		{ 24, 49908, "", "=q4=Primordial Saronite", "=ds=#e8#"};
 		Prev = "ICCLanathel25ManHEROIC";
@@ -6940,8 +6940,8 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 4, 51947, "", "=q4=Troggbane, Axe of the Frostborne King", "=ds=#h1#, #w1#"};
 		{ 5, 51944, "", "=q4=Valius, Gavel of the Lightbringer", "=ds=#h3#, #w6#"};
 		{ 6, 51946, "", "=q4=Warmace of Menethil", "=ds=#h2#, #w6#"};
-		{ 7, 51943, "", "=q4=Halion, Staff of Forgotten Love", "=ds=#w9#"};
-		{ 8, 51945, "", "=q4=Tainted Twig of Nordrassil", "=ds=#w9#"};
+		{ 7, 51943, "", "=q4=Halion, Staff of Forgotten Love", "=ds=#h2#, #w9#"};
+		{ 8, 51945, "", "=q4=Tainted Twig of Nordrassil", "=ds=#h2#, #w9#"};
 		{ 9, 51940, "", "=q4=Windrunner's Heartseeker", "=ds=#w3#"};
 		{ 16, 52027, "", "=q4=Conqueror's Mark of Sanctification", "=ds=#e15#"};
 		{ 17, 52026, "", "=q4=Protector's Mark of Sanctification", "=ds=#e15#"};
@@ -6959,7 +6959,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 5, 50734, "", "=q4=Royal Scepter of Terenas II", "=ds=#h3#, #w6#"};
 		{ 6, 50738, "", "=q4=Mithrios, Bronzebeard's Legacy", "=ds=#h1#, #w6#"};
 		{ 7, 50735, "", "=q4=Oathbinder, Charge of the Ranger-General", "=ds=#w7#"};
-		{ 8, 50731, "", "=q4=Archus, Greatstaff of Antonidas", "=ds=#w9#"};
+		{ 8, 50731, "", "=q4=Archus, Greatstaff of Antonidas", "=ds=#h2#, #w9#"};
 		{ 9, 50733, "", "=q4=Fal'inrush, Defender of Quel'thalas", "=ds=#w3#"};
 		{ 10, 50818, "", "=q4=Invincible's Reins", "=ds=#e12#"};
 		{ 12, 50274, "", "=q5=Shadowfrost Shard", "=ds=#m3#"};
@@ -7166,7 +7166,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 17, 44179, "", "=q3=Mind-Expanding Leggings", "=ds=#s11#, #a2#"};
 		{ 18, 44176, "", "=q3=Girdle of the Warrior Magi", "=ds=#s10#, #a4#"};
 		{ 19, 44173, "", "=q3=Flameheart Spell Scalpel", "=ds=#h3#, #w4#"};
-		{ 20, 44174, "", "=q3=Stave of Shrouded Mysteries", "=ds=#w9#"};
+		{ 20, 44174, "", "=q3=Stave of Shrouded Mysteries", "=ds=#h2#, #w9#"};
 		{ 21, 44159, "", "=q7=Arcanum of Burning Mysteries", "=ds=#s1# #e17#"};
 		{ 23, 0, "Spell_Fire_MasterOfElements", "=q6=#r5#", ""};
 		{ 24, 44180, "", "=q4=Robes of Crackling Flame", "=ds=#s5#, #a1#"};
@@ -8355,11 +8355,11 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 5, 51445, "", "=q4=Wrathful Gladiator's Bonecracker", "=ds=#h4#, #w6#", "16500 #faction# 450 #arena# #reqrating# 1800"};
 		{ 6, 51390, "", "=q4=Wrathful Gladiator's Bonegrinder", "=ds=#h2#, #w6#", "55000 #faction# 1540 #arena# #reqrating# 1800"};
 		{ 7, 51480, "", "=q4=Wrathful Gladiator's Pike", "=ds=#w7#", "55000 #faction# 1540 #arena# #reqrating# 1800"};
-		{ 8, 51404, "", "=q4=Wrathful Gladiator's Battle Staff", "=ds=#w9#", "55000 #faction# 1540 #arena# #reqrating# 1800"};
-		{ 9, 51456, "", "=q4=Wrathful Gladiator's Energy Staff", "=ds=#w9#", "55000 #faction# 1540 #arena# #reqrating# 1800"};
-		{ 10, 51402, "", "=q4=Wrathful Gladiator's Focus Staff", "=ds=#w9#", "55000 #faction# 1540 #arena# #reqrating# 1800"};
-		{ 11, 51431, "", "=q4=Wrathful Gladiator's Staff", "=ds=#w9#", "55000 #faction# 1540 #arena# #reqrating# 1800"};
-		{ 12, 51400, "", "=q4=Wrathful Gladiator's War Staff", "=ds=#w9#", "55000 #faction# 1540 #arena# #reqrating# 1800"};
+		{ 8, 51404, "", "=q4=Wrathful Gladiator's Battle Staff", "=ds=#h2#, #w9#", "55000 #faction# 1540 #arena# #reqrating# 1800"};
+		{ 9, 51456, "", "=q4=Wrathful Gladiator's Energy Staff", "=ds=#h2#, #w9#", "55000 #faction# 1540 #arena# #reqrating# 1800"};
+		{ 10, 51402, "", "=q4=Wrathful Gladiator's Focus Staff", "=ds=#h2#, #w9#", "55000 #faction# 1540 #arena# #reqrating# 1800"};
+		{ 11, 51431, "", "=q4=Wrathful Gladiator's Staff", "=ds=#h2#, #w9#", "55000 #faction# 1540 #arena# #reqrating# 1800"};
+		{ 12, 51400, "", "=q4=Wrathful Gladiator's War Staff", "=ds=#h2#, #w9#", "55000 #faction# 1540 #arena# #reqrating# 1800"};
 		{ 13, 51394, "", "=q4=Wrathful Gladiator's Longbow", "=ds=#w2#", "55000 #faction# 1540 #arena# #reqrating# 1800"};
 		{ 14, 51411, "", "=q4=Wrathful Gladiator's Heavy Crossbow", "=ds=#w3#", "55000 #faction# 1540 #arena# #reqrating# 1800"};
 		{ 15, 51449, "", "=q4=Wrathful Gladiator's Rifle", "=ds=#w5#", "55000 #faction# 1540 #arena# #reqrating# 1800"};
@@ -8370,11 +8370,11 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 20, 51446, "", "=q4=Wrathful Gladiator's Punisher", "=ds=#h4#, #w6#", "1370 #arena# #reqrating# 2200"};
 		{ 21, 51391, "", "=q4=Wrathful Gladiator's Crusher", "=ds=#h2#, #w6#", "4670 #arena# #reqrating# 2200"};
 		{ 22, 51481, "", "=q4=Wrathful Gladiator's Halberd", "=ds=#w7#", "4670 #arena# #reqrating# 2200"};
-		{ 23, 51403, "", "=q4=Wrathful Gladiator's Acute Staff", "=ds=#w9#", "4670 #arena# #reqrating# 2200"};
-		{ 24, 51401, "", "=q4=Wrathful Gladiator's Combat Staff", "=ds=#w9#", "4670 #arena# #reqrating# 2200"};
-		{ 25, 51432, "", "=q4=Wrathful Gladiator's Greatstaff", "=ds=#w9#", "4670 #arena# #reqrating# 2200"};
-		{ 26, 51457, "", "=q4=Wrathful Gladiator's Light Staff", "=ds=#w9#", "4670 #arena# #reqrating# 2200"};
-		{ 27, 51405, "", "=q4=Wrathful Gladiator's Skirmish Staff", "=ds=#w9#", "4670 #arena# #reqrating# 2200"};
+		{ 23, 51403, "", "=q4=Wrathful Gladiator's Acute Staff", "=ds=#h2#, #w9#", "4670 #arena# #reqrating# 2200"};
+		{ 24, 51401, "", "=q4=Wrathful Gladiator's Combat Staff", "=ds=#h2#, #w9#", "4670 #arena# #reqrating# 2200"};
+		{ 25, 51432, "", "=q4=Wrathful Gladiator's Greatstaff", "=ds=#h2#, #w9#", "4670 #arena# #reqrating# 2200"};
+		{ 26, 51457, "", "=q4=Wrathful Gladiator's Light Staff", "=ds=#h2#, #w9#", "4670 #arena# #reqrating# 2200"};
+		{ 27, 51405, "", "=q4=Wrathful Gladiator's Skirmish Staff", "=ds=#h2#, #w9#", "4670 #arena# #reqrating# 2200"};
 		{ 28, 51395, "", "=q4=Wrathful Gladiator's Recurve", "=ds=#w2#", "4670 #arena# #reqrating# 2200"};
 		{ 29, 51412, "", "=q4=Wrathful Gladiator's Repeater", "=ds=#w3#", "4670 #arena# #reqrating# 2200"};
 		{ 30, 51450, "", "=q4=Wrathful Gladiator's Shotgun", "=ds=#w5#", "4670 #arena# #reqrating# 2200"};
@@ -8644,7 +8644,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 17, 44096, "", "=q7=Battleworn Thrash Blade", "=ds=#h1#, #w10#", "200 #wintergrasp#"};
 		{ 18, 44092, "", "=q7=Reforged Truesilver Champion", "=ds=#h2#, #w10#", "325 #wintergrasp#"};
 		{ 19, 44094, "", "=q7=The Blessed Hammer of Grace", "=ds=#h3#, #w6#", "250 #wintergrasp#"};
-		{ 20, 44095, "", "=q7=Grand Staff of Jordan", "=ds=#w9#", "325 #wintergrasp#"};
+		{ 20, 44095, "", "=q7=Grand Staff of Jordan", "=ds=#h2#, #w9#", "325 #wintergrasp#"};
 		{ 21, 44093, "", "=q7=Upgraded Dwarven Hand Cannon", "=ds=#w5#", "325 #wintergrasp#"};
 		Prev = "LakeWintergrasp6";
 		Back = "WINTERGRASPMENU";
@@ -10510,7 +10510,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 7, 30311, "", "=q5=Warp Slicer", "=q1=#m26#: =ds=#h1#, #w10#"};
 		{ 8, 30317, "", "=q5=Cosmic Infuser", "=q1=#m26#: =ds=#h3#, #w6#"};
 		{ 9, 30316, "", "=q5=Devastation", "=q1=#m26#: =ds=#h2#, #w1#"};
-		{ 10, 30313, "", "=q5=Staff of Disintegration", "=q1=#m26#: =ds=#w9#"};
+		{ 10, 30313, "", "=q5=Staff of Disintegration", "=q1=#m26#: =ds=#h2#, #w9#"};
 		{ 11, 30314, "", "=q5=Phaseshift Bulwark", "=q1=#m26#: =ds=#w8#"};
 		{ 12, 30318, "", "=q5=Netherstrand Longbow", "=q1=#m26#: =ds=#w2#, =q1=#m1# =ds=#c2#"};
 		{ 13, 30319, "", "=q5=Nether Spike", "=q1=#m26#: =ds=#w17#"};
@@ -10518,10 +10518,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 17, 19019, "", "=q5=Thunderfury, Blessed Blade of the Windseeker", "=ds=#h1#, #w10#"};
 		{ 18, 17182, "", "=q5=Sulfuras, Hand of Ragnaros", "=ds=#h2#, #w6#"};
 		{ 19, 21176, "", "=q5=Black Qiraji Resonating Crystal", "=ds=#e12#"};
-		{ 21, 22632, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#w9#, =q1=#m1# =ds=#c1#", "", "", "(Druid)"};
-		{ 22, 22589, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#w9#, =q1=#m1# =ds=#c3#", "", "", "(Mage)" };
-		{ 23, 22631, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#w9#, =q1=#m1# =ds=#c5#", "", "", "(Priest)"};
-		{ 24, 22630, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#w9#, =q1=#m1# =ds=#c8#", "", "", "(Warlock)"};
+		{ 21, 22632, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#h2#, #w9#, =q1=#m1# =ds=#c1#", "", "", "(Druid)"};
+		{ 22, 22589, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#h2#, #w9#, =q1=#m1# =ds=#c3#", "", "", "(Mage)" };
+		{ 23, 22631, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#h2#, #w9#, =q1=#m1# =ds=#c5#", "", "", "(Priest)"};
+		{ 24, 22630, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#h2#, #w9#, =q1=#m1# =ds=#c8#", "", "", "(Warlock)"};
 		{ 26, 49623, "", "=q5=Shadowmourne", "=ds=#h2# #w1#", "" };
 		{ 27, 46017, "", "=q5=Val'anyr, Hammer of Ancient Kings", "=ds=#h3# #w6#", "" };
 		Back = "SETMENU";
@@ -11316,7 +11316,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 26, 42948, "", "=q7=Devout Aurastone Hammer", "=ds=#w6#, #h3#", "50 #eofheroism#  / 75 #champseal#"};
 		{ 27, 48716, "", "=q7=Venerable Mass of McGowan", "=ds=#w6#, #h1#", "40 #eofheroism#  / 75 #champseal#"};
 		{ 28, 48718, "", "=q7=Repurposed Lava Dredger", "=ds=#w6#, #h2#", "65 #eofheroism#  / 95 #champseal#"};
-		{ 29, 42947, "", "=q7=Dignified Headmaster's Charge", "=ds=#w9#", "65 #eofheroism#  / 95 #champseal#"};
+		{ 29, 42947, "", "=q7=Dignified Headmaster's Charge", "=ds=#h2#, #w9#", "65 #eofheroism#  / 95 #champseal#"};
 		{ 30, 42946, "", "=q7=Charmed Ancient Bone Bow", "=ds=#w2#", "65 #eofheroism#  / 95 #champseal#"};
 		Next = "Heirloom2";
 		Back = "SETMENU";
@@ -11337,7 +11337,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 17, 44096, "", "=q7=Battleworn Thrash Blade", "=ds=#h1#, #w10#", "200 #wintergrasp#"};
 		{ 18, 44092, "", "=q7=Reforged Truesilver Champion", "=ds=#h2#, #w10#", "325 #wintergrasp#"};
 		{ 19, 44094, "", "=q7=The Blessed Hammer of Grace", "=ds=#h3#, #w6#", "250 #wintergrasp#"};
-		{ 20, 44095, "", "=q7=Grand Staff of Jordan", "=ds=#w9#", "325 #wintergrasp#"};
+		{ 20, 44095, "", "=q7=Grand Staff of Jordan", "=ds=#h2#, #w9#", "325 #wintergrasp#"};
 		{ 21, 44093, "", "=q7=Upgraded Dwarven Hand Cannon", "=ds=#w5#", "325 #wintergrasp#"};
 		Prev = "Heirloom";
 		Back = "SETMENU";
@@ -11436,7 +11436,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 22, 42948, "", "=q7=Devout Aurastone Hammer", "=ds=#w6#, #h3#", "50 #eofheroism#"};
 		{ 23, 48716, "", "=q7=Venerable Mass of McGowan", "=ds=#w6#, #h1#", "40 #eofheroism#"};
 		{ 24, 48718, "", "=q7=Repurposed Lava Dredger", "=ds=#w6#, #h2#", "65 #eofheroism#"};
-		{ 25, 42947, "", "=q7=Dignified Headmaster's Charge", "=ds=#w9#", "65 #eofheroism#"};
+		{ 25, 42947, "", "=q7=Dignified Headmaster's Charge", "=ds=#h2#, #w9#", "65 #eofheroism#"};
 		{ 26, 42946, "", "=q7=Charmed Ancient Bone Bow", "=ds=#w2#", "65 #eofheroism#"};
 		Prev = "EmblemofHeroism3";
 		Back = "EMBLEMOFHEROISMMENU";

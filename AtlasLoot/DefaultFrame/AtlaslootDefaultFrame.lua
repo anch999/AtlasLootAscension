@@ -670,9 +670,10 @@ function AtlasLoot_SetNewStyle(style)
 		"AtlasLootDefaultFrame_Preset3",
 		"AtlasLootDefaultFrame_Preset4",
 		"AtlasLootDefaultFrameSearchButton",
-		--"AtlasLootDefaultFrameSearchClearButton",
-		--"AtlasLootDefaultFrameLastResultButton",
+		"AtlasLootDefaultFrameSearchClearButton",
+		"AtlasLootDefaultFrameLastResultButton",
 		"AtlasLootDefaultFrameWishListButton",
+        "AtlasLootDefaultFrameAdvancedSearchButton",
         "AtlasLootAdvancedSearch_SearchButton",
         "AtlasLootAdvancedSearch_SearchClearButton",
         "AtlasLootAdvancedSearch_LastResultButton"

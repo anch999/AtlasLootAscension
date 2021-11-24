@@ -521,8 +521,9 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 		HideUIPanel(AtlasQuestInsideFrame);
 	end
 
-	--Hide Advanced search if it is up
+	--Hide Advanced search if it is up and reshow Querybutton
 	AtlasLootAdvancedSearch:Hide();
+	AtlasLootServerQueryButton:Show();
 
     --Ditch the Quicklook selector
     AtlasLoot_QuickLooks:Hide();

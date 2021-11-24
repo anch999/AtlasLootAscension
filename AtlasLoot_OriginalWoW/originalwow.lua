@@ -219,7 +219,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 10, 21457, "", "=q4=Bracers of Brutality", "=ds=#s8#, #a4#", "", "10.74%"};
 		{ 11, 21715, "", "=q4=Sand Polished Hammer", "=ds=#h1#, #w6#", "", "5.95%"};
 		{ 12, 21459, "", "=q4=Crossbow of Imminent Doom", "=ds=#w3#", "", "6.12%"};
-		{ 13, 21452, "", "=q4=Staff of the Ruins", "=ds=#w9#", "", "10.32%"};
+		{ 13, 21452, "", "=q4=Staff of the Ruins", "=ds=#h2#, #w9#", "", "10.32%"};
 		{ 16, 21220, "", "=q4=Head of Ossirian the Unscarred", "=ds=#m2#", "", "100%"};
 		{ 17, 21504, "", "=q4=Charm of the Shifting Sands", "=q1=#m4#: =ds=#s2#"};
 		{ 18, 21507, "", "=q4=Amulet of the Shifting Sands", "=q1=#m4#: =ds=#s2#"};
@@ -303,10 +303,10 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 11, 21700, "", "=q4=Pendant of the Qiraji Guardian", "=ds=#s2#", "", "11.57%"};
 		{ 12, 21707, "", "=q4=Ring of Swarming Thought", "=ds=#s13#", "", "12.57%"};
 		{ 13, 21703, "", "=q4=Hammer of Ji'zhi", "=ds=#h2#, #w6#", "", "7.14%"};
-		{ 14, 21128, "", "=q4=Staff of the Qiraji Prophets", "=ds=#w9#", "", " 6.32%"};
+		{ 14, 21128, "", "=q4=Staff of the Qiraji Prophets", "=ds=#h2#, #w9#", "", " 6.32%"};
 		{ 16, 21237, "", "=q4=Imperial Qiraji Regalia", "=ds=#m3#", "", "1.74%"};
-		{ 17, 21273, "", "=q4=Blessed Qiraji Acolyte Staff", "=q1=#m4#, =ds=#w9#"};
-		{ 18, 21275, "", "=q4=Blessed Qiraji Augur Staff", "=q1=#m4#, =ds=#w9#"};
+		{ 17, 21273, "", "=q4=Blessed Qiraji Acolyte Staff", "=q1=#m4#, =ds=#h2#, #w9#"};
+		{ 18, 21275, "", "=q4=Blessed Qiraji Augur Staff", "=q1=#m4#, =ds=#h2#, #w9#"};
 		{ 19, 21268, "", "=q4=Blessed Qiraji War Hammer", "=q1=#m4#, =ds=#h1#, #w6#"};
 		{ 21, 21232, "", "=q4=Imperial Qiraji Armaments", "=ds=#m3#", "", "1.32%"};
 		{ 22, 21242, "", "=q4=Blessed Qiraji War Axe", "=q1=#m4#, =ds=#h1#, #w1#"};
@@ -361,8 +361,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 13, 21666, "", "=q4=Sartura's Might", "=ds=#s15#", "", "6.47%"};
 		{ 14, 21673, "", "=q4=Silithid Claw", "=ds=#h3#, #w13#", "", "7.16%"};
 		{ 16, 21237, "", "=q4=Imperial Qiraji Regalia", "=ds=#m3#", "", "4.01%"};
-		{ 17, 21273, "", "=q4=Blessed Qiraji Acolyte Staff", "=q1=#m4#, =ds=#w9#"};
-		{ 18, 21275, "", "=q4=Blessed Qiraji Augur Staff", "=q1=#m4#, =ds=#w9#"};
+		{ 17, 21273, "", "=q4=Blessed Qiraji Acolyte Staff", "=q1=#m4#, =ds=#h2#, #w9#"};
+		{ 18, 21275, "", "=q4=Blessed Qiraji Augur Staff", "=q1=#m4#, =ds=#h2#, #w9#"};
 		{ 19, 21268, "", "=q4=Blessed Qiraji War Hammer", "=q1=#m4#, =ds=#h1#, #w6#"};
 		{ 21, 21232, "", "=q4=Imperial Qiraji Armaments", "=ds=#m3#", "", "4.02%"};
 		{ 22, 21242, "", "=q4=Blessed Qiraji War Axe", "=q1=#m4#, =ds=#h1#, #w1#"};
@@ -389,8 +389,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 13, 21650, "", "=q4=Ancient Qiraji Ripper", "=ds=#h1#, #w10#", "", " 7.19%"};
 		{ 14, 21635, "", "=q4=Barb of the Sand Reaver", "=ds=#w7#", "", "6.61%"};
 		{ 16, 21237, "", "=q4=Imperial Qiraji Regalia", "=ds=#m3#", "", "4.84%"};
-		{ 17, 21273, "", "=q4=Blessed Qiraji Acolyte Staff", "=q1=#m4#, =ds=#w9#"};
-		{ 18, 21275, "", "=q4=Blessed Qiraji Augur Staff", "=q1=#m4#, =ds=#w9#"};
+		{ 17, 21273, "", "=q4=Blessed Qiraji Acolyte Staff", "=q1=#m4#, =ds=#h2#, #w9#"};
+		{ 18, 21275, "", "=q4=Blessed Qiraji Augur Staff", "=q1=#m4#, =ds=#h2#, #w9#"};
 		{ 19, 21268, "", "=q4=Blessed Qiraji War Hammer", "=q1=#m4#, =ds=#h1#, #w6#"};
 		{ 21, 21232, "", "=q4=Imperial Qiraji Armaments", "=ds=#m3#", "", "4.09%"};
 		{ 22, 21242, "", "=q4=Blessed Qiraji War Axe", "=q1=#m4#, =ds=#h1#, #w1#"};
@@ -413,8 +413,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 10, 20932, "", "=q4=Qiraji Bindings of Dominance", "=q1=#m1# =ds=#c8#, #c3#, #c7#, #c1#, #c4#", "", "100%"};
 		{ 11, 20928, "", "=q4=Qiraji Bindings of Command", "=q1=#m1# =ds=#c5#, #c6#, #c9#, #c2#", "", "100%"};
 		{ 16, 21237, "", "=q4=Imperial Qiraji Regalia", "=ds=#m3#", "", "3.19%"};
-		{ 17, 21273, "", "=q4=Blessed Qiraji Acolyte Staff", "=q1=#m4#, =ds=#w9#"};
-		{ 18, 21275, "", "=q4=Blessed Qiraji Augur Staff", "=q1=#m4#, =ds=#w9#"};
+		{ 17, 21273, "", "=q4=Blessed Qiraji Acolyte Staff", "=q1=#m4#, =ds=#h2#, #w9#"};
+		{ 18, 21275, "", "=q4=Blessed Qiraji Augur Staff", "=q1=#m4#, =ds=#h2#, #w9#"};
 		{ 19, 21268, "", "=q4=Blessed Qiraji War Hammer", "=q1=#m4#, =ds=#h1#, #w6#"};
 		{ 21, 21232, "", "=q4=Imperial Qiraji Armaments", "=ds=#m3#", "", "6.86%"};
 		{ 22, 21242, "", "=q4=Blessed Qiraji War Axe", "=q1=#m4#, =ds=#h1#, #w1#"};
@@ -436,8 +436,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 9, 20932, "", "=q4=Qiraji Bindings of Dominance", "=q1=#m1# =ds=#c8#, #c3#, #c7#, #c1#, #c4#", "", "100%"};
 		{ 10, 20928, "", "=q4=Qiraji Bindings of Command", "=q1=#m1# =ds=#c5#, #c6#, #c9#, #c2#", "", "100%"};
 		{ 16, 21237, "", "=q4=Imperial Qiraji Regalia", "=ds=#m3#", "", "4.31%"};
-		{ 17, 21273, "", "=q4=Blessed Qiraji Acolyte Staff", "=q1=#m4#, =ds=#w9#"};
-		{ 18, 21275, "", "=q4=Blessed Qiraji Augur Staff", "=q1=#m4#, =ds=#w9#"};
+		{ 17, 21273, "", "=q4=Blessed Qiraji Acolyte Staff", "=q1=#m4#, =ds=#h2#, #w9#"};
+		{ 18, 21275, "", "=q4=Blessed Qiraji Augur Staff", "=q1=#m4#, =ds=#h2#, #w9#"};
 		{ 19, 21268, "", "=q4=Blessed Qiraji War Hammer", "=q1=#m4#, =ds=#h1#, #w6#"};
 		{ 21, 21232, "", "=q4=Imperial Qiraji Armaments", "=ds=#m3#", "", "4.11%"};
 		{ 22, 21242, "", "=q4=Blessed Qiraji War Axe", "=q1=#m4#, =ds=#h1#, #w1#"};
@@ -473,8 +473,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 23, 21608, "", "=q4=Amulet of Vek'nilash", "=ds=#s2#", "", "14.25%"};
 		{ 24, 20726, "", "=q3=Formula: Enchant Gloves - Threat", "=ds=#p4# (300)", "", "6.24%"};
 		{ 26, 21237, "", "=q4=Imperial Qiraji Regalia", "=ds=#m3#", "", "5.00%"};
-		{ 27, 21273, "", "=q4=Blessed Qiraji Acolyte Staff", "=q1=#m4#, =ds=#w9#"};
-		{ 28, 21275, "", "=q4=Blessed Qiraji Augur Staff", "=q1=#m4#, =ds=#w9#"};
+		{ 27, 21273, "", "=q4=Blessed Qiraji Acolyte Staff", "=q1=#m4#, =ds=#h2#, #w9#"};
+		{ 28, 21275, "", "=q4=Blessed Qiraji Augur Staff", "=q1=#m4#, =ds=#h2#, #w9#"};
 		{ 29, 21268, "", "=q4=Blessed Qiraji War Hammer", "=q1=#m4#, =ds=#h1#, #w6#"};
 		Prev = "AQ40Huhuran";
 		Next = "AQ40Ouro";
@@ -491,8 +491,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 8, 20927, "", "=q4=Ouro's Intact Hide", "=q1=#m1# =ds=#c3#, #c5#, #c6#, #c9#", "", "100%"};
 		{ 9, 20931, "", "=q4=Skin of the Great Sandworm", "=q1=#m1# =ds=#c8#, #c7#, #c1#, #c2#, #c4#", "", "100%"};
 		{ 16, 21237, "", "=q4=Imperial Qiraji Regalia", "=ds=#m3#", "", "5.20%"};
-		{ 17, 21273, "", "=q4=Blessed Qiraji Acolyte Staff", "=q1=#m4# =ds=#w9#"};
-		{ 18, 21275, "", "=q4=Blessed Qiraji Augur Staff", "=q1=#m4# =ds=#w9#"};
+		{ 17, 21273, "", "=q4=Blessed Qiraji Acolyte Staff", "=q1=#m4# =ds=#h2#, #w9#"};
+		{ 18, 21275, "", "=q4=Blessed Qiraji Augur Staff", "=q1=#m4# =ds=#h2#, #w9#"};
 		{ 19, 21268, "", "=q4=Blessed Qiraji War Hammer", "=q1=#m4# =ds=#h1#, #w6#"};
 		{ 21, 21232, "", "=q4=Imperial Qiraji Armaments", "=ds=#m3#", "", "4.10%"};
 		{ 22, 21242, "", "=q4=Blessed Qiraji War Axe", "=q1=#m4# =ds=#h1#, #w1#"};
@@ -631,7 +631,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 19, 16887, "", "=q3=Witch's Finger", "=q1=#m4#: =ds=#s15#"};
 		{ 21, 0, "INV_Box_01", "=q6="..BabbleBoss["Twilight Lord Kelris"], ""};
 		{ 22, 6903, "", "=q3=Gaze Dreamer Pants", "=ds=#s11#, #a1#", "", "31.90%"};
-		{ 23, 1155, "", "=q3=Rod of the Sleepwalker", "=ds=#w9#", "", "45.59%"};
+		{ 23, 1155, "", "=q3=Rod of the Sleepwalker", "=ds=#h2#, #w9#", "", "45.59%"};
 		{ 24, 5881, "", "=q1=Head of Kelris", "=ds=#m3#", "", "100%"};
 		{ 26, 0, "INV_Box_01", "=q6="..BabbleBoss["Old Serra'kis"], ""};
 		{ 27, 6901, "", "=q3=Glowing Thresher Cape", "=ds=#s4#", "", "36.14%"};
@@ -658,8 +658,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 23, 1454, "", "=q3=Axe of the Enforcer", "=ds=#h1#, #w1#", "", "0.01%"};
 		{ 24, 1481, "", "=q3=Grimclaw", "=ds=#h1#, #w1#", "", "0.01%"};
 		{ 25, 3414, "", "=q3=Crested Scepter", "=ds=#h1#, #w6#", "", "0.01%"};
-		{ 26, 3415, "", "=q3=Staff of the Friar", "=ds=#w9#", "", "0.02%"};
-		{ 27, 2271, "", "=q3=Staff of the Blessed Seer", "=ds=#w9#", "", "0.02%"};
+		{ 26, 3415, "", "=q3=Staff of the Friar", "=ds=#h2#, #w9#", "", "0.02%"};
+		{ 27, 2271, "", "=q3=Staff of the Blessed Seer", "=ds=#h2#, #w9#", "", "0.02%"};
 		Prev = "BlackfathomDeeps1";
 	};
 
@@ -762,7 +762,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 	AtlasLoot_Data["BRDPyromantLoregrain"] = {
 		{ 1, 11747, "", "=q3=Flamestrider Robes", "=ds=#s5#, #a2#", "", "18.10%"};
 		{ 2, 11749, "", "=q3=Searingscale Leggings", "=ds=#s11#, #a3#", "", "21.29%"};
-		{ 3, 11750, "", "=q3=Kindling Stave", "=ds=#w9#", "", " 16.19%"};
+		{ 3, 11750, "", "=q3=Kindling Stave", "=ds=#h2#, #w9#", "", " 16.19%"};
 		{ 4, 11748, "", "=q3=Pyric Caduceus", "=ds=#w12#", "", "30.20%"};
 		{ 6, 11207, "", "=q2=Formula: Enchant Weapon - Fiery Weapon", "=ds=#p4# (265)", "", "13.32%"};
 		Prev = "BRDForgewright";
@@ -966,7 +966,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 8, 11934, "", "=q3=Emperor's Seal", "=ds=#s13#", "", "15.41%"};
 		{ 9, 11815, "", "=q3=Hand of Justice", "=ds=#s14#", "", "10.43%"};
 		{ 16, 11931, "", "=q3=Dreadforge Retaliator", "=ds=#h2#, #w1#", "", "15.76%"};
-		{ 17, 11932, "", "=q3=Guiding Stave of Wisdom", "=ds=#w9#", "", "15.01%"};
+		{ 17, 11932, "", "=q3=Guiding Stave of Wisdom", "=ds=#h2#, #w9#", "", "15.01%"};
 		{ 18, 11928, "", "=q3=Thaurissan's Royal Scepter", "=ds=#s15#", "", " 12.86%"};
 		{ 20, 12033, "", "=q1=Thaurissan Family Jewels", "=ds=#e7# #e1#", "", "2.2%"};
 		Prev = "BRDMagmus";
@@ -1005,7 +1005,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 10, 12535, "", "=q3=Doomforged Straightedge", "=ds=#h1#, #w10#", "", "0.01%"};
 		{ 11, 12527, "", "=q3=Ribsplitter", "=ds=#h1#, #w1# =q2=#m16#", "", "0.02%"};
 		{ 12, 12528, "", "=q3=The Judge's Gavel", "=ds=#h2#, #w6#", "", "0.02%"};
-		{ 13, 12532, "", "=q3=Spire of the Stoneshaper", "=ds=#w9#", "", "0.01%"};
+		{ 13, 12532, "", "=q3=Spire of the Stoneshaper", "=ds=#h2#, #w9#", "", "0.01%"};
 		{ 16, 15781, "", "=q3=Pattern: Black Dragonscale Leggings", "=ds=#p7# (300) =q1=#n75#", "", "1.93%"};
 		{ 17, 15770, "", "=q3=Pattern: Black Dragonscale Shoulders", "=ds=#p7# (300) =q1=#n76#", "", "1.88%"};
 		{ 18, 16053, "", "=q2=Schematic: Master Engineer's Goggles", "=ds=#p5# (290) =q1=#n77#", "", "0.45%"};
@@ -1217,7 +1217,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 5, 22321, "", "=q3=Heart of Wyrmthalak", "=ds=#s14#", "", "13.87%"};
 		{ 6, 13163, "", "=q3=Relentless Scythe", "=ds=#h2#, #w10#", "", "14.12%"};
 		{ 7, 13148, "", "=q3=Chillpike", "=ds=#w7#", "", "0.76%"};
-		{ 8, 13161, "", "=q3=Trindlehaven Staff", "=ds=#w9#", "", "10.40%"};
+		{ 8, 13161, "", "=q3=Trindlehaven Staff", "=ds=#h2#, #w9#", "", "10.40%"};
 		{ 10, 12337, "", "=q2=Gemstone of Bloodaxe", "=ds=#m3#", "", "100%"};
 		{ 16, 16679, "", "=q3=Beaststalker's Mantle", "=ds=#s3#, #a3# (D1, #c2#)", "", "9.89%"};
 		Prev = "LBRSBashguud";
@@ -1385,7 +1385,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 5, 22343, "", "=q3=Handguards of Savagery", "=ds=#s9#, #a3#", "", "20.11%"};
 		{ 6, 22340, "", "=q3=Pendant of Celerity", "=ds=#s2#", "", "17.66%"};
 		{ 7, 22339, "", "=q3=Rune Band of Wizardry", "=ds=#s13#", "", "15.49%"};
-		{ 8, 22335, "", "=q3=Lord Valthalak's Staff of Command", "=ds=#w9#", "", "14.67%"};
+		{ 8, 22335, "", "=q3=Lord Valthalak's Staff of Command", "=ds=#h2#, #w9#", "", "14.67%"};
 		{ 9, 22336, "", "=q3=Draconian Aegis of the Legion", "=ds=#w8#", "", "17.66%"};
 		Prev = "UBRSBeast";
 		Next = "UBRSDrakkisath";
@@ -1582,7 +1582,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 10, 19142, "", "=q4=Fire Runed Grimoire", "=ds=#s15#", "", "2.46%"};
 		{ 11, 17103, "", "=q4=Azuresong Mageblade", "=ds=#h3#, #w10#", "", "17.59%"};
 		{ 12, 18822, "", "=q4=Obsidian Edged Blade", "=ds=#h2#, #w10#", "", "2.89%"};
-		{ 13, 18842, "", "=q4=Staff of Dominance", "=ds=#w9#", "", "18.95%"};
+		{ 13, 18842, "", "=q4=Staff of Dominance", "=ds=#h2#, #w9#", "", "18.95%"};
 		{ 14, 17072, "", "=q4=Blastershot Launcher", "=ds=#w5#", "", "17.83%"};
 		{ 16, 2522349, "", "=q4=Molten Breastplate", "=q1=#m1# =ds=#c4#, #c6#, #c7#", "", "33.33%"};
 		{ 17, 2522350, "", "=q4=Molten Tunic", "=q1=#m1# =ds=#c1#, #c5#, #c9#", "", "33.33%"};
@@ -1627,12 +1627,12 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 9, 18805, "", "=q4=Core Hound Tooth", "=ds=#h1#, #w4#", "", "16.06%"};
 		{ 10, 18803, "", "=q4=Finkle's Lava Dredger", "=ds=#h2#, #w6#", "", "12.43%"};
 		{ 16, 18703, "", "=q4=Ancient Petrified Leaf", "=ds=#m2# =q1=(#c2#)", "", "35.25%"};
-		{ 17, 18715, "", "=q4=Lok'delar, Stave of the Ancient Keepers", "=q1=#m4#: =ds=#w9#, =q1=#m1# =ds=#c2#"};
+		{ 17, 18715, "", "=q4=Lok'delar, Stave of the Ancient Keepers", "=q1=#m4#: =ds=#h2#, #w9#, =q1=#m1# =ds=#c2#"};
 		{ 18, 18713, "", "=q4=Rhok'delar, Longbow of the Ancient Keepers", "=q1=#m4#: =ds=#w2#, =q1=#m1# =ds=#c2#"};
 		{ 19, 18714, "", "=q4=Ancient Sinew Wrapped Lamina", "=q1=#m4#: =ds=#w19#, =q1=#m1# =ds=#c2#"};
 		{ 21, 18646, "", "=q4=The Eye of Divinity", "=ds=#m2# =q1=(#c5#)", "", "28.30%"};
-		{ 22, 18608, "", "=q4=Benediction", "=q1=#m4#: =ds=#w9#, =q1=#m1# =ds=#c5#"};
-		{ 23, 18609, "", "=q4=Anathema", "=q1=#m4#: =ds=#w9#, =q1=#m1# =ds=#c5#"};
+		{ 22, 18608, "", "=q4=Benediction", "=q1=#m4#: =ds=#h2#, #w9#, =q1=#m1# =ds=#c5#"};
+		{ 23, 18609, "", "=q4=Anathema", "=q1=#m4#: =ds=#h2#, #w9#, =q1=#m1# =ds=#c5#"};
 		Prev = "MCSulfuron";
 		Next = "MCRagnaros";
 		Type = "ClassicRaid";
@@ -1762,7 +1762,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 
 	AtlasLoot_Data["BWLFiremaw"] = {
 		{ 1, 19365, "", "=q4=Claw of the Black Drake", "=ds=#h3#, #w13#", "", "12.5%"};
-		{ 2, 19355, "", "=q4=Shadow Wing Focus Staff", "=ds=#w9#", "", "6.67%"};
+		{ 2, 19355, "", "=q4=Shadow Wing Focus Staff", "=ds=#h2#, #w9#", "", "6.67%"};
 		{ 3, 19353, "", "=q4=Drake Talon Cleaver", "=ds=#h2#, #w1#", "", "6.67%"};
 		{ 4, 19343, "", "=q4=Scrolls of Blinding Light", "=ds=#s14#, =q1=#m1# =ds=#c4#", "", "12.5%"};
 		{ 5, 19344, "", "=q4=Natural Alignment Crystal", "=ds=#s14#, =q1=#m1# =ds=#c7#", "", "6.67%"};
@@ -1794,7 +1794,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 8, 19406, "", "=q4=Drake Fang Talisman", "=ds=#s14#", "", "16.67%"};
 		{ 9, 19395, "", "=q4=Rejuvenating Gem", "=ds=#s14#", "", "6.67%"};
 		{ 10, 19353, "", "=q4=Drake Talon Cleaver", "=ds=#h2#, #w1#", "", "6.67%"};
-		{ 11, 19355, "", "=q4=Shadow Wing Focus Staff", "=ds=#w9#", "", "6.67%"};
+		{ 11, 19355, "", "=q4=Shadow Wing Focus Staff", "=ds=#h2#, #w9#", "", "6.67%"};
 		{ 12, 19368, "", "=q4=Dragonbreath Hand Cannon", "=ds=#w5#", "", "16.67%"};
 		{ 16, 2522456, "", "=q4=Chromatic Gauntlets", "=q1=#m1# =ds=#c4#, #c6#, #c7#", "", "33.33%"};
 		{ 17, 2522463, "", "=q4=Chromatic Girdle", "=q1=#m1# =ds=#c1#, #c5#, #c9#", "", "33.33%"};
@@ -1815,7 +1815,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 8, 19431, "", "=q4=Styleen's Impeding Scarab", "=ds=#s14#", "", "16.67%"};
 		{ 9, 19353, "", "=q4=Drake Talon Cleaver", "=ds=#h2#, #w1#", "", "6.67%"};
 		{ 10, 19357, "", "=q4=Herald of Woe", "=ds=#h2#, #w6#", "", "16.67%"};
-		{ 11, 19355, "", "=q4=Shadow Wing Focus Staff", "=ds=#w9#", "", "6.67%"};
+		{ 11, 19355, "", "=q4=Shadow Wing Focus Staff", "=ds=#h2#, #w9#", "", "6.67%"};
 		{ 12, 19367, "", "=q4=Dragon's Touch", "=ds=#w12#", "", "16.67%"};
 		{ 16, 2522456, "", "=q4=Chromatic Gauntlets", "=q1=#m1# =ds=#c4#, #c6#, #c7#", "", "33.33%"};
 		{ 17, 2522463, "", "=q4=Chromatic Girdle", "=q1=#m1# =ds=#c1#, #c5#, #c9#", "", "33.33%"};
@@ -1859,7 +1859,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 9, 19364, "", "=q4=Ashkandi, Greatsword of the Brotherhood", "=ds=#h2#, #w10#", "", "10%"};
 		{ 10, 19363, "", "=q4=Crul'shorukh, Edge of Chaos", "=ds=#h1#, #w1#", "", "16.67%"};
 		{ 11, 19360, "", "=q4=Lok'amir il Romathis", "=ds=#h3#, #w6#", "", "16.67%"};
-		{ 12, 19356, "", "=q4=Staff of the Shadow Flame", "=ds=#w9#", "", "16.67%%"};
+		{ 12, 19356, "", "=q4=Staff of the Shadow Flame", "=ds=#h2#, #w9#", "", "16.67%%"};
 		{ 13, 14001, "", "=q4=Archimtiros' Ring of Armageddon", "=ds=#s13#", "", "16.67%%"};
 		{ 16, 2522449, "", "=q4=Chromatic Breastplate", "=q1=#m1# =ds=#c4#, #c6#, #c7#", "", "33.33%"};
 		{ 17, 2522450, "", "=q4=Chromatic Tunic", "=q1=#m1# =ds=#c1#, #c5#, #c9#", "", "33.33%"};
@@ -1946,7 +1946,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 
 	AtlasLoot_Data["DMELethtendris"] = {
 		{ 1, 18325, "", "=q3=Felhide Cap", "=ds=#s1#, #a2#", "", "24.67%"};
-		{ 2, 18311, "", "=q3=Quel'dorei Channeling Rod", "=ds=#w9#", "", "7.30%"};
+		{ 2, 18311, "", "=q3=Quel'dorei Channeling Rod", "=ds=#h2#, #w9#", "", "7.30%"};
 		{ 4, 18302, "", "=q3=Band of Vigor", "=ds=#s13#", "", "29.30%"};
 		{ 5, 18301, "", "=q3=Lethtendris's Wand", "=ds=#w12#", "", "25.57%"};
 		{ 7, 18426, "", "=q1=Lethtendris's Web", "=ds=#m3#"};
@@ -2160,7 +2160,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 9, 18500, "", "=q3=Tarnished Elven Ring", "=ds=#s13#"};
 		{ 10, 18537, "", "=q3=Counterattack Lodestone", "=ds=#s14#"};
 		{ 11, 18531, "", "=q3=Unyielding Maul", "=ds=#h2#, #w6#"};
-		{ 12, 18534, "", "=q3=Rod of the Ogre Magi", "=ds=#w9#"};
+		{ 12, 18534, "", "=q3=Rod of the Ogre Magi", "=ds=#h2#, #w9#"};
 		{ 13, 18499, "", "=q3=Barrier Shield", "=ds=#w8#"};
 		{ 16, 18475, "", "=q2=Oddly Magical Belt", "=ds=#s10#, #a1#"};
 		{ 17, 18478, "", "=q2=Hyena Hide Jerkin", "=ds=#s5#, #a2#"};
@@ -2182,7 +2182,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 	AtlasLoot_Data["DMWTendrisWarpwood"] = {
 		{ 1, 18390, "", "=q3=Tanglemoss Leggings", "=ds=#s11#, #a2#", "", "22.55%"};
 		{ 2, 18393, "", "=q3=Warpwood Binding", "=ds=#s10#, #a3#", "", "19.81%"};
-		{ 4, 18353, "", "=q3=Stoneflower Staff", "=ds=#w9#", "", "23.46%"};
+		{ 4, 18353, "", "=q3=Stoneflower Staff", "=ds=#h2#, #w9#", "", "23.46%"};
 		{ 5, 18352, "", "=q3=Petrified Bark Shield", "=ds=#w8#", "", "21.67%"};
 		Next = "DMWIllyannaRavenoak";
 		Type = "ClassicDungeonExt";
@@ -2292,7 +2292,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 11, 0, "INV_Box_01", "=q6="..BabbleBoss["Viscous Fallout"], ""};
 		{ 12, 9454, "", "=q3=Acidic Walkers", "=ds=#s12#, #a1#", "", "54.02%"};
 		{ 13, 9453, "", "=q3=Toxic Revenger", "=ds=#h1#, #w4#", "", "19.05%"};
-		{ 14, 9452, "", "=q3=Hydrocane", "=ds=#w9#", "", "18.25%"};
+		{ 14, 9452, "", "=q3=Hydrocane", "=ds=#h2#, #w9#", "", "18.25%"};
 		{ 16, 0, "INV_Box_01", "=q6="..BabbleBoss["Electrocutioner 6000"], ""};
 		{ 17, 9448, "", "=q3=Spidertank Oilrag", "=ds=#s8#, #a1#", "", "28.37%"};
 		{ 18, 9447, "", "=q3=Electrocutioner Lagnut", "=ds=#s13#", "", "28.44%"};
@@ -2504,7 +2504,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 7, 5792, "", "=q1=Razorflank's Medallion", "=ds=#m3#", "", "100%"};
 		{ 9, 0, "INV_Box_01", "=q6="..BabbleBoss["Earthcaller Halmgar"], ""};
 		{ 10, 6688, "", "=q3=Whisperwind Headdress", "=ds=#s1#, #a2#", "", "43.75%"};
-		{ 11, 6689, "", "=q3=Wind Spirit Staff", "=ds=#w9#", "", "42.66%"};
+		{ 11, 6689, "", "=q3=Wind Spirit Staff", "=ds=#h2#, #w9#", "", "42.66%"};
 		{ 16, 0, "INV_Box_01", "=q6="..AL["Trash Mobs"], ""};
 		{ 17, 2264, "", "=q3=Mantle of Thieves", "=ds=#s3#, #a2#", "", "0.02%"};
 		{ 18, 1978, "", "=q3=Wolfclaw Gloves", "=ds=#s9#, #a2#", "", "0.02%"};
@@ -2515,7 +2515,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 23, 1727, "", "=q3=Sword of Decay", "=ds=#h1#, #w10#", "", "0.02%"};
 		{ 24, 1975, "", "=q3=Pysan's Old Greatsword", "=ds=#h2#, #w10#", "", "0.02%"};
 		{ 25, 1976, "", "=q3=Slaghammer", "=ds=#h2#, #w6#", "", "0.02%"};
-		{ 26, 2549, "", "=q3=Staff of the Shade", "=ds=#w9#", "", "0.02%"};
+		{ 26, 2549, "", "=q3=Staff of the Shade", "=ds=#h2#, #w9#", "", "0.02%"};
 		Prev = "RazorfenKraul1";
 	};
 
@@ -2578,14 +2578,14 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 	AtlasLoot_Data["SMLibrary"] = {
 		{ 1, 0, "INV_Box_01", "=q6="..BabbleBoss["Houndmaster Loksey"], ""};
 		{ 2, 7756, "", "=q3=Dog Training Gloves", "=ds=#s9#, #a2#", "", "53.66%"};
-		{ 3, 7710, "", "=q3=Loksey's Training Stick", "=ds=#w9#", "", "13.96%"};
+		{ 3, 7710, "", "=q3=Loksey's Training Stick", "=ds=#h2#, #w9#", "", "13.96%"};
 		{ 4, 3456, "", "=q3=Dog Whistle", "=ds=#e13#", "", "21.33%"};
 		{ 16, 0, "INV_Box_01", "=q6="..BabbleBoss["Arcanist Doan"], ""};
 		{ 17, 34227, "", "=q4=Deadman's Hand", "=ds=#s13#", "", ""};
 		{ 18, 7712, "", "=q3=Mantle of Doan", "=ds=#s3#, #a1#", "", "41.96%"};
 		{ 19, 7711, "", "=q3=Robe of Doan", "=ds=#s5#, #a1#", "", "42.86%"};
 		{ 20, 7714, "", "=q3=Hypnotic Blade", "=ds=#h3#, #w4#", "", "39.91%"};
-		{ 21, 7713, "", "=q3=Illusionary Rod", "=ds=#w9#", "", "38.44%"};
+		{ 21, 7713, "", "=q3=Illusionary Rod", "=ds=#h2#, #w9#", "", "38.44%"};
 		{ 23, 0, "INV_Box_01", "=q6=#x1#", ""};
 		{ 24, 7146, "", "=q2=The Scarlet Key", "=ds=#e9#"};
 		Prev = "SMGraveyard";
@@ -2617,7 +2617,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 23, 7736, "", "=q3=Fight Club", "=ds=#h1#, #w6#", "", "0.00%"};
 		{ 24, 7730, "", "=q3=Cobalt Crusher", "=ds=#h2#, #w6#", "", "0.01%"};
 		{ 25, 7758, "", "=q3=Ruthless Shiv", "=ds=#w7#", "", "0.00%"};
-		{ 26, 7757, "", "=q3=Windweaver Staff", "=ds=#w9#", "", "0.01%"};
+		{ 26, 7757, "", "=q3=Windweaver Staff", "=ds=#h2#, #w9#", "", "0.01%"};
 		{ 27, 7787, "", "=q3=Resplendent Guardian", "=ds=#w8#", "", "0.01%"};
 		{ 28, 7729, "", "=q3=Chesterfall Musket", "=ds=#w5#", "", "0.01%"};
 		Prev = "SMLibrary";
@@ -2666,7 +2666,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 4, 14548, "", "=q3=Royal Cap Spaulders", "=ds=#s3#, #a3#", "", "10.06%"};
 		{ 5, 18690, "", "=q3=Wraithplate Leggings", "=ds=#s11#, #a4#", "", "8.59%"};
 		{ 6, 14541, "", "=q3=Barovian Family Sword", "=ds=#h2#, #w10#", "", "8.27%"};
-		{ 7, 22394, "", "=q3=Staff of Metanoia", "=ds=#w9#", "", "8.67%"};
+		{ 7, 22394, "", "=q3=Staff of Metanoia", "=ds=#h2#, #w9#", "", "8.67%"};
 		{ 9, 13725, "", "=q1=Krastinov's Bag of Horrors", "=ds=#m3#", "", "100%"};
 		{ 10, 13523, "", "=q1=Blood of Innocents", "=ds=#m3#", "", "17.8%"};
 		{ 16, 16701, "", "=q3=Dreadmist Mantle", "=ds=#s3#, #a1# (D1, #c8#)", "", "12.20%"};
@@ -2964,7 +2964,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 	};
 
 	AtlasLoot_Data["SCHOLODarkmasterGandling"] = {
-		{ 1, 13937, "", "=q4=Headmaster's Charge", "=ds=#w9#", "", "1.11%"};
+		{ 1, 13937, "", "=q4=Headmaster's Charge", "=ds=#h2#, #w9#", "", "1.11%"};
 		{ 2, 14514, "", "=q4=Pattern: Robe of the Void", "=ds=#p8# (300) =q1=#m1# =ds=#c8#", "", "6.71%"};
 		{ 3, 14153, "", "=q4=Robe of the Void", "=ds=#s5#, #a1# =q1=#m1# =ds=#c8#"};
 		{ 4, 13944, "", "=q3=Tombstone Breastplate", "=ds=#s5#, #a2#", "", "8.96%"};
@@ -3040,7 +3040,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 22, 6320, "", "=q3=Commander's Crest", "=ds=#w8#", "", "27.71%"};
 		{ 24, 0, "INV_Box_01", "=q6="..BabbleBoss["Odo the Blindwatcher"], ""};
 		{ 25, 6319, "", "=q3=Girdle of the Blindwatcher", "=ds=#s10#, #a2#", "", "57.15%"};
-		{ 26, 6318, "", "=q3=Odo's Ley Staff", "=ds=#w9#", "", "29.97%"};
+		{ 26, 6318, "", "=q3=Odo's Ley Staff", "=ds=#h2#, #w9#", "", "29.97%"};
 		{ 28, 0, "INV_Box_01", "=q6="..BabbleBoss["Fenrus the Devourer"], ""};
 		{ 29, 6340, "", "=q3=Fenrus' Hide", "=ds=#s4#", "", "58.02%"};
 		{ 30, 3230, "", "=q3=Black Wolf Bracers", "=ds=#s8#, #a2#", "", "14.76%"};
@@ -3071,7 +3071,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 24, 1318, "", "=q3=Night Reaver", "=ds=#h2#, #w1#", "", "0.01%"};
 		{ 25, 1483, "", "=q3=Face Smasher", "=ds=#h1#, #w6#", "", "0.02%"};
 		{ 26, 3194, "", "=q3=Black Malice", "=ds=#h2#, #w6#", "", "0.02%"};
-		{ 27, 1484, "", "=q3=Witching Stave", "=ds=#w9#", "", "0.01%"};
+		{ 27, 1484, "", "=q3=Witching Stave", "=ds=#h2#, #w9#", "", "0.01%"};
 		Prev = "ShadowfangKeep1";
 	};
 
@@ -3180,7 +3180,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 5, 22403, "", "=q3=Diana's Pearl Necklace", "=ds=#s2#", "", "14.27%"};
 		{ 6, 13382, "", "=q3=Cannonball Runner", "=ds=#s14#", "", "12.28%"};
 		{ 7, 22404, "", "=q3=Willey's Back Scratcher", "=ds=#h3#, #w13#", "", "6.26%"};
-		{ 8, 22406, "", "=q3=Redemption", "=ds=#w9#", "", "7.04%"};
+		{ 8, 22406, "", "=q3=Redemption", "=ds=#h2#, #w9#", "", "7.04%"};
 		{ 9, 13380, "", "=q3=Willey's Portable Howitzer", "=ds=#w5#", "", "10.71%"};
 		{ 10, 13377, "", "=q3=Miniature Cannon Balls", "=ds=#w18#", "", "66.61%"};
 		{ 16, 16708, "", "=q3=Shadowcraft Spaulders", "=ds=#s3#, #a2# (D1, #c6#)", "", "10.68%"};
@@ -3335,7 +3335,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 2, 18723, "", "=q3=Animated Chain Necklace", "=ds=#s2#", "", "7.54%"};
 		{ 3, 13373, "", "=q3=Band of Flesh", "=ds=#s13#", "", "8.15%"};
 		{ 4, 13515, "", "=q3=Ramstein's Lightning Bolts", "=ds=#s14#", "", "8.09%"};
-		{ 5, 13372, "", "=q3=Slavedriver's Cane", "=ds=#w9#", "", "8.63%"};
+		{ 5, 13372, "", "=q3=Slavedriver's Cane", "=ds=#h2#, #w9#", "", "8.63%"};
 		{ 6, 13375, "", "=q3=Crest of Retribution", "=ds=#w8#", "", "9.17%"};
 		{ 16, 16737, "", "=q3=Gauntlets of Valor", "=ds=#s9#, #a4# (D1, #c9#)", "", "9.58%"};
 		Prev = "STRATMagistrateBarthilas";
@@ -3369,7 +3369,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 24, 16728, "", "=q3=Lightforge Legplates", "=ds=#s11#, #a4# (D1, #c4#)", "", "4.20%"};
 		{ 26, 13251, "", "=q1=Head of Baron Rivendare", "=ds=#m3#", "", "100%"};
 		{ 27, 13246, "", "=q3=Argent Avenger", "=q1=#m4#: =ds=#h1#, #w10#"};
-		{ 28, 13249, "", "=q3=Argent Crusader", "=q1=#m4#: =ds=#w9#"};
+		{ 28, 13249, "", "=q3=Argent Crusader", "=q1=#m4#: =ds=#h2#, #w9#"};
 		{ 29, 13243, "", "=q3=Argent Defender", "=q1=#m4#: =ds=#w8#"};
 		Prev = "STRATRamsteintheGorger";
 		Next = "STRATTrash";
@@ -3415,7 +3415,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 3, 4660, "", "=q2=Walking Boots", "=ds=#s12#, #a1#", "", "71.4%"};
 		{ 5, 0, "INV_Box_01", "=q6="..BabbleBoss["Brainwashed Noble"], "=ec1=#j28#"};
 		{ 6, 5967, "", "=q2=Girdle of Nobility", "=ds=#s10#, #a1#", "", "70.4%"};
-		{ 7, 3902, "", "=q2=Staff of Nobles", "=ds=#w9#", "", "23.0%"};
+		{ 7, 3902, "", "=q2=Staff of Nobles", "=ds=#h2#, #w9#", "", "23.0%"};
 		{ 9, 0, "INV_Box_01", "=q6="..BabbleBoss["Foreman Thistlenettle"], "=ec1=#j28#"};
 		{ 10, 1875, "", "=q1=Thistlenettle's Badge", "=ds=#m3#", "", "100%"};
 		{ 12, 0, "INV_Box_01", "=q6="..BabbleBoss["Rhahk'Zor"], ""};
@@ -3442,7 +3442,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 5, 0, "INV_Box_01", "=q6=#n7#", ""};
 		{ 6, 10403, "", "=q3=Blackened Defias Belt", "=ds=#s10#, #a2#", "", "23.26%"};
 		{ 7, 5200, "", "=q3=Impaling Harpoon", "=ds=#w7#", "", "25.39%"};
-		{ 8, 5201, "", "=q3=Emberstone Staff", "=ds=#w9#", "", "34.10%"};
+		{ 8, 5201, "", "=q3=Emberstone Staff", "=ds=#h2#, #w9#", "", "34.10%"};
 		{ 10, 0, "INV_Box_01", "=q6="..BabbleBoss["Mr. Smite"], ""};
 		{ 11, 5192, "", "=q3=Thief's Blade", "=ds=#h1#, #w10#", "", "34.96%"};
 		{ 12, 5196, "", "=q3=Smite's Reaver", "=ds=#h1#, #w1#", "", "33.95%"};
@@ -3470,7 +3470,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 1, 0, "INV_Box_01", "=q6="..BabbleBoss["Targorr the Dread"], ""};
 		{ 2, 3630, "", "=q1=Head of Targorr", "=ds=#m3#", "", "100%"};
 		{ 4, 0, "INV_Box_01", "=q6="..BabbleBoss["Kam Deepfury"], ""};
-		{ 5, 2280, "", "=q3=Kam's Walking Stick", "=ds=#w9#", "", "0.62%"};
+		{ 5, 2280, "", "=q3=Kam's Walking Stick", "=ds=#h2#, #w9#", "", "0.62%"};
 		{ 6, 3640, "", "=q1=Head of Deepfury", "=ds=#m3#", "", "100%"};
 		{ 8, 0, "INV_Box_01", "=q6="..BabbleBoss["Bazil Thredd"], ""};
 		{ 9, 2926, "", "=q1=Head of Bazil Thredd", "=ds=#m3#", "", "100%"};
@@ -3549,7 +3549,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 5, 10846, "", "=q3=Bloodshot Greaves", "=ds=#s12#, #a3#", "", "32.44%"};
 		{ 6, 10845, "", "=q3=Warrior's Embrace", "=ds=#s5#, #a4#", "", "30.44%"};
 		{ 7, 10838, "", "=q3=Might of Hakkar", "=ds=#h1#, #w6#", "", "16.37%"};
-		{ 8, 10844, "", "=q3=Spire of Hakkar", "=ds=#w9#", "", "16.02%"};
+		{ 8, 10844, "", "=q3=Spire of Hakkar", "=ds=#h2#, #w9#", "", "16.02%"};
 		{ 10, 10663, "", "=q1=Essence of Hakkar", "=ds=#m3#", "", "100%"};
 		Prev = "STWeaver";
 		Next = "STJammalan";
@@ -3631,7 +3631,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 17, 10625, "", "=q3=Stealthblade", "=ds=#h1#, #w4#", "", "0.01%"};
 		{ 18, 10628, "", "=q3=Deathblow", "=ds=#h2#, #w10#", "", "0.01%"};
 		{ 19, 10626, "", "=q3=Ragehammer", "=ds=#h2#, #w6#", "", "0.01%"};
-		{ 20, 10627, "", "=q3=Bludgeon of the Grinning Dog", "=ds=#w9#", "", "0.02%"};
+		{ 20, 10627, "", "=q3=Bludgeon of the Grinning Dog", "=ds=#h2#, #w9#", "", "0.02%"};
 		{ 21, 10624, "", "=q3=Stinging Bow", "=ds=#w2#", "", "0.02%"};
 		Prev = "STEranikus";
 	};
@@ -3705,7 +3705,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 	AtlasLoot_Data["UldIronaya"] = {
 		{ 1, 9407, "", "=q3=Stoneweaver Leggings", "=ds=#s11#, #a1#", "", "31.02%"};
 		{ 2, 9409, "", "=q3=Ironaya's Bracers", "=ds=#s8#, #a3# =q2=#m16#", "", "32.71%"};
-		{ 3, 9408, "", "=q3=Ironshod Bludgeon", "=ds=#w9#", "", "17.37%"};
+		{ 3, 9408, "", "=q3=Ironshod Bludgeon", "=ds=#h2#, #w9#", "", "17.37%"};
 		Prev = "UldRevelosh";
 		Next = "UldObsidianSentinel";
 	};
@@ -3835,7 +3835,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 13, 6469, "", "=q3=Venomstrike", "=ds=#w2#", "", "16.63%"};
 		{ 16, 0, "INV_Box_01", "=q6="..BabbleBoss["Verdan the Everliving"], ""};
 		{ 17, 6629, "", "=q3=Sporid Cape", "=ds=#s4#", "", "16.65%"};
-		{ 18, 6631, "", "=q3=Living Root", "=ds=#w9#", "", "34.47%"};
+		{ 18, 6631, "", "=q3=Living Root", "=ds=#h2#, #w9#", "", "34.47%"};
 		{ 19, 6630, "", "=q3=Seedcloud Buckler", "=ds=#w8#", "", "35.38%"};
 		{ 21, 0, "INV_Box_01", "=q6="..BabbleBoss["Mutanus the Devourer"], ""};
 		{ 22, 6461, "", "=q3=Slime-encrusted Pads", "=ds=#s3#, #a1#", "", "22.96%"};
@@ -3870,7 +3870,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 
 	AtlasLoot_Data["ZFWitchDoctorZumrah"] = {
 		{ 1, 18083, "", "=q3=Jumanza Grips", "=ds=#s9#, #a1#", "", "24.97%"};
-		{ 2, 18082, "", "=q3=Zum'rah's Vexing Cane", "=ds=#w9#", "", "11.98%"};
+		{ 2, 18082, "", "=q3=Zum'rah's Vexing Cane", "=ds=#h2#, #w9#", "", "11.98%"};
 		Prev = "ZFThekatheMartyr";
 		Next = "ZFNekrumGutchewer";
 	};
@@ -3927,7 +3927,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 1, 9479, "", "=q3=Embrace of the Lycan", "=ds=#s1#, #a2#", "", "8.97%"};
 		{ 2, 9476, "", "=q3=Big Bad Pauldrons", "=ds=#s3#, #a4#", "", "28.17%"};
 		{ 3, 9478, "", "=q3=Ripsaw", "=ds=#h1#, #w1#", "", "19.78%"};
-		{ 4, 9477, "", "=q3=The Chief's Enforcer", "=ds=#w9#", "", "22.33%"};
+		{ 4, 9477, "", "=q3=The Chief's Enforcer", "=ds=#h2#, #w9#", "", "22.33%"};
 		{ 6, 11086, "", "=q3=Jang'thraze the Protector", "=ds=#h3#, #w10#", "", "1.72%"};
 		{ 7, 9372, "", "=q4=Sul'thraze the Lasher", "=ds=#h2# #w10#"};
 		Prev = "ZFGahzrilla";
@@ -3952,7 +3952,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 17, 9511, "", "=q3=Bloodletter Scalpel", "=ds=#h1#, #w10#", "", "0.01%"};
 		{ 18, 9481, "", "=q3=The Minotaur", "=ds=#h2#, #w1#", "", "0.01%"};
 		{ 19, 9480, "", "=q3=Eyegouger", "=ds=#w7#", "", "0.01%"};
-		{ 20, 9482, "", "=q3=Witch Doctor's Cane", "=ds=#w9#", "", "0.01%"};
+		{ 20, 9482, "", "=q3=Witch Doctor's Cane", "=ds=#h2#, #w9#", "", "0.01%"};
 		{ 21, 9483, "", "=q3=Flaming Incinerator", "=ds=#w12#", "", "0.01%"};
 		{ 22, 2040, "", "=q3=Troll Protector", "=ds=#w8#", "", "0.02%"};
 		Prev = "ZFZerillis";
@@ -4086,7 +4086,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 
 	AtlasLoot_Data["ZGGahzranka"] = {
 		{ 1, 19945, "", "=q4=Foror's Eyepatch", "=ds=#s1#, #a2#", "", "8,82%"};
-		{ 2, 19944, "", "=q4=Nat Pagle's Fish Terminator", "=ds=#w9#", "", "2.39%"};
+		{ 2, 19944, "", "=q4=Nat Pagle's Fish Terminator", "=ds=#h2#, #w9#", "", "2.39%"};
 		{ 4, 19947, "", "=q3=Nat Pagle's Broken Reel", "=ds=#s14#", "", "28.20%"};
 		{ 5, 19946, "", "=q3=Tigule's Harpoon", "=ds=#w7#", "", "29.22%"};
 		{ 7, 22739, "", "=q3=Tome of Polymorph: Turtle", "=ds=#e10#, =q1=#m1# =ds=#c3#"};
@@ -4130,7 +4130,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 11, 19943, "", "=q1=Massive Mojo", "=ds=#e8#", "", "5.6%"};
 		{ 12, 19881, "", "=q1=Channeler's Head", "=ds=#m3#", "", "100%"};
 		{ 16, 19910, "", "=q4=Arlokk's Grasp", "=ds=#h4#, #w13#", "", "3.62%"};
-		{ 17, 19909, "", "=q4=Will of Arlokk", "=ds=#w9#", "", "5.14%"};
+		{ 17, 19909, "", "=q4=Will of Arlokk", "=ds=#h2#, #w9#", "", "5.14%"};
 		{ 19, 19913, "", "=q3=Bloodsoaked Greaves", "=ds=#s12#, #a4#", "", "13.29%"};
 		{ 20, 19912, "", "=q3=Overlord's Onyx Band", "=ds=#s13#", "", "13.95%"};
 		{ 21, 19922, "", "=q3=Arlokk's Hoodoo Stick", "=ds=#s15#", "", "13.66%"};
@@ -4155,7 +4155,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 16, 19885, "", "=q4=Jin'do's Evil Eye", "=ds=#s2#", "", "6.82%"};
 		{ 17, 19891, "", "=q4=Jin'do's Bag of Whammies", "=ds=#s15#", "", "7.70%"};
 		{ 18, 19890, "", "=q4=Jin'do's Hexxer", "=ds=#h3#, #w6#", "", "8.08%"};
-		{ 19, 19884, "", "=q4=Jin'do's Judgement", "=ds=#w9#", "", "8.36%"};
+		{ 19, 19884, "", "=q4=Jin'do's Judgement", "=ds=#h2#, #w9#", "", "8.36%"};
 		{ 21, 19888, "", "=q3=Overlord's Embrace", "=ds=#s4#", "", "12.72%"};
 		{ 22, 19886, "", "=q3=The Hexxer's Cover", "=ds=#s1#, #a1#", "", "12.11%"};
 		{ 23, 19929, "", "=q3=Bloodtinged Gloves", "=ds=#s9#, #a1#", "", "11.75%"};
@@ -4221,7 +4221,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 3, 20263, "", "=q3=Gurubashi Helm", "=ds=#s1#, #a4#"};
 		{ 4, 19908, "", "=q3=Sceptre of Smiting", "=ds=#h1#, #w6#"};
 		{ 5, 19921, "", "=q3=Zulian Hacker", "=ds=#h1#, #w1#"};
-		{ 6, 20258, "", "=q3=Zulian Ceremonial Staff", "=ds=#w9#"};
+		{ 6, 20258, "", "=q3=Zulian Ceremonial Staff", "=ds=#h2#, #w9#"};
 		{ 7, 19727, "", "=q3=Blood Scythe", "=ds=#e19#", "", "0.02%"};
 		{ 8, 48126, "", "=q1=Razzashi Hatchling", "=ds=#e13#"};
 		{ 10, 19726, "", "=q2=Bloodvine", "=ds=#e8#", "", ""};
@@ -4367,7 +4367,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 8, 23070, "", "=q4=Leggings of Polarity", "=ds=#s11#, #a1#" ,"", "20%"},
 		{ 9, 23000, "", "=q4=Plated Abomination Ribcage", "=ds=#s5#, #a4#","", "20%" },
 		{ 10, 22808, "", "=q4=The Castigator", "=ds=#h1#, #w6#" ,"", "20%"},
-		{ 11, 22801, "", "=q4=Spire of Twilight", "=ds=#w9#" ,"", "20%"},
+		{ 11, 22801, "", "=q4=Spire of Twilight", "=ds=#h2#, #w9#" ,"", "20%"},
 		{ 12, 23001, "", "=q4=Eye of Diminution", "=ds=#s14#" ,"", "20%"},
 		Prev = "NAXGluth";
 		Next = "NAXAnubRekhan";
@@ -4531,7 +4531,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 6, 22352, "", "=q4=Desecrated Legplates", "=q1=#m1# =ds=#c6#, #c9#","", "66.67%" },
 		{ 7, 0,"","","" },
 		{ 8, 23039, "", "=q4=The Eye of Nerub", "=ds=#w7#","", "20%" },
-		{ 9, 22800, "", "=q4=Brimstone Staff", "=ds=#w9#","", "20%" },
+		{ 9, 22800, "", "=q4=Brimstone Staff", "=ds=#h2#, #w9#","", "20%" },
 		{ 10, 23037, "", "=q4=Ring of Spiritual Fervor", "=ds=#s13#","", "20%" },
 		{ 11, 23038, "", "=q4=Band of Unnatural Forces", "=ds=#s13#" ,"", "20%"},
 		{ 12, 23042, "", "=q4=Loatheb's Reflection", "=ds=#s14#","", "20%" },
@@ -4571,7 +4571,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 3, 23577, "", "=q4=The Hungering Cold", "=ds=#h1#, #w10#" ,"","18.18%"}, 
 		{ 4, 23056, "", "=q4=Hammer of the Twisting Nether", "=ds=#h1#, #w6#","","18.18%" },
 		{ 5, 22798, "", "=q4=Might of Menethil", "=ds=#h2#, #w6#","","18.18%" },
-		{ 6, 22799, "", "=q4=Soulseeker", "=ds=#w9#","","18.18%" },
+		{ 6, 22799, "", "=q4=Soulseeker", "=ds=#h2#, #w9#","","18.18%" },
 		{ 7, 22821, "", "=q4=Doomfinger", "=ds=#w12#" ,"","18.18%"},
 		{ 8, 22812, "", "=q4=Nerubian Slavemaker", "=ds=#w3#" ,"","18.18%"},
 		{ 9, 22819, "", "=q4=Shield of Condemnation", "=ds=#w8#" ,"","18.18%"},
@@ -5639,7 +5639,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 17, 1982, "", "=q4=Nightblade", "=ds=#h2#, #w10#", "", ""};
 		{ 18, 870, "", "=q4=Fiery War Axe", "=ds=#h2#, #w1#", "", ""};
 		{ 19, 868, "", "=q4=Ardent Custodian", "=ds=#h1#, #w6#", "", ""};
-		{ 20, 873, "", "=q4=Staff of Jordan", "=ds=#w9#", "", ""};
+		{ 20, 873, "", "=q4=Staff of Jordan", "=ds=#h2#, #w9#", "", ""};
 		{ 21, 1204, "", "=q4=The Green Tower", "=ds=#w8#", "", ""};
 		{ 22, 2825, "", "=q4=Bow of Searing Arrows", "=ds=#w2#", "", ""};
 		Next = "WorldEpics2";
@@ -5662,8 +5662,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 20, 2291, "", "=q4=Kang the Decapitator", "=ds=#h2#, #w1#", "", ""};
 		{ 21, 810, "", "=q4=Hammer of the Northern Wind", "=ds=#h1#, #w6#", "", ""};
 		{ 22, 2915, "", "=q4=Taran Icebreaker", "=ds=#h2#, #w6#", "", ""};
-		{ 23, 812, "", "=q4=Glowing Brightwood Staff", "=ds=#w9#", "", ""};
-		{ 24, 943, "", "=q4=Warden Staff", "=ds=#w9#", "", ""};
+		{ 23, 812, "", "=q4=Glowing Brightwood Staff", "=ds=#h2#, #w9#", "", ""};
+		{ 24, 943, "", "=q4=Warden Staff", "=ds=#h2#, #w9#", "", ""};
 		{ 25, 1169, "", "=q4=Blackskull Shield", "=ds=#w8#", "", ""};
 		{ 26, 1979, "", "=q4=Wall of the Dead", "=ds=#w8#", "", ""};
 		{ 27, 2824, "", "=q4=Hurricane", "=ds=#w2#", "", ""};
@@ -5692,7 +5692,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 21, 811, "", "=q4=Axe of the Deep Woods", "=ds=#h1#, #w1#", "", ""};
 		{ 22, 1263, "", "=q4=Brain Hacker", "=ds=#h2#, #w1#", "", ""};
 		{ 23, 2243, "", "=q4=Hand of Edward the Odd", "=ds=#h1#, #w6#", "", ""};
-		{ 24, 944, "", "=q4=Elemental Mage Staff", "=ds=#w9#", "", ""};
+		{ 24, 944, "", "=q4=Elemental Mage Staff", "=ds=#h2#, #w9#", "", ""};
 		{ 25, 1168, "", "=q4=Skullflame Shield", "=ds=#w8#", "", ""};
 		{ 26, 2099, "", "=q4=Dwarven Hand Cannon", "=ds=#w5#", "", ""};
 		Next = "WorldEpics4";
@@ -5741,7 +5741,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 9, 19097, "", "=q3=Stormpike Soldier's Pendant", "=ds=#s2#", "1600 #alliance#"};
 		{ 10, 19100, "", "=q3=Electrified Dagger", "=ds=#h1#, #w4#", "2400 #alliance#"};
 		{ 11, 19104, "", "=q3=Stormstrike Hammer", "=ds=#h1#, #w6#", "2400 #alliance#"};
-		{ 12, 19102, "", "=q3=Crackling Staff", "=ds=#w9#", "3000 #alliance#"};
+		{ 12, 19102, "", "=q3=Crackling Staff", "=ds=#h2#, #w9#", "3000 #alliance#"};
 		{ 13, 19320, "", "=q3=Gnoll Skin Bandolier", "=ds=#w20#", "1600 #alliance#"};
 		{ 14, 19319, "", "=q3=Harpy Hide Quiver", "=ds=#w19#", "1600 #alliance#"};
 		{ 17, 19325, "", "=q4=Don Julio's Band", "=ds=#s13#", "5000 #faction#"};
@@ -5770,7 +5770,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 9, 19095, "", "=q3=Frostwolf Legionnaire's Pendant", "=ds=#s2#", "1600 #horde#"};
 		{ 10, 19099, "", "=q3=Glacial Blade", "=ds=#h1#, #w4#", "2400 #horde#"};
 		{ 11, 19103, "", "=q3=Frostbite", "=ds=#h1#, #w6#", "2400 #horde#"};
-		{ 12, 19101, "", "=q3=Whiteout Staff", "=ds=#w9#", "3000 #horde#"};
+		{ 12, 19101, "", "=q3=Whiteout Staff", "=ds=#h2#, #w9#", "3000 #horde#"};
 		{ 13, 19320, "", "=q3=Gnoll Skin Bandolier", "=ds=#w20#", "1600 #horde#"};
 		{ 14, 19319, "", "=q3=Harpy Hide Quiver", "=ds=#w19#", "1600 #horde#"};
 		{ 17, 19325, "", "=q4=Don Julio's Band", "=ds=#s13#", "5000 #faction#"};
@@ -6809,7 +6809,7 @@ AtlasLoot_Data["PVPWarrior2"] = {
 		{ 12, 18867, "", "=q4=Grand Marshal's Battle Hammer", "=ds=#h2#, #w6#", "68200 #alliance#", ""};
 		{ 13, 23455, "", "=q4=Grand Marshal's Demolisher", "=ds=#h2#, #w6#", "68200 #alliance#", ""};
 		{ 14, 18869, "", "=q4=Grand Marshal's Glaive", "=ds=#w7#", "68200 #alliance#", ""};
-		{ 15, 18873, "", "=q4=Grand Marshal's Stave", "=ds=#w9#", "68200 #alliance#", ""};
+		{ 15, 18873, "", "=q4=Grand Marshal's Stave", "=ds=#h2#, #w9#", "68200 #alliance#", ""};
 		{ 16, 18825, "", "=q4=Grand Marshal's Aegis", "=ds=#w8#", "34100 #alliance#", ""};
 		{ 17, 18833, "", "=q4=Grand Marshal's Bullseye", "=ds=#w2#", "34100 #alliance#", ""};
 		{ 18, 18836, "", "=q4=Grand Marshal's Repeater", "=ds=#w3#", "34100 #alliance#", ""};
@@ -6835,7 +6835,7 @@ AtlasLoot_Data["PVPWarrior2"] = {
 		{ 12, 918867, "", "=q3=Lieutenant Commander's Battle Hammer", "=ds=#h2#, #w6#", "34100 #alliance#", ""};
 		{ 13, 923455, "", "=q3=Lieutenant Commander's Demolisher", "=ds=#h2#, #w6#", "34100 #alliance#", ""};
 		{ 14, 918869, "", "=q3=Lieutenant Commander's Glaive", "=ds=#w7#", "34100 #alliance#", ""};
-		{ 15, 918873, "", "=q3=Lieutenant Commander's Stave", "=ds=#w9#", "34100 #alliance#", ""};
+		{ 15, 918873, "", "=q3=Lieutenant Commander's Stave", "=ds=#h2#, #w9#", "34100 #alliance#", ""};
 		{ 16, 918825, "", "=q3=Lieutenant Commander's Aegis", "=ds=#w8#", "20000 #alliance#", ""};
 		{ 17, 918833, "", "=q3=Lieutenant Commander's Bullseye", "=ds=#w2#", "20000 #alliance#", ""};
 		{ 18, 918836, "", "=q3=Lieutenant Commander's Repeater", "=ds=#w3#", "20000 #alliance#", ""};
@@ -6862,7 +6862,7 @@ AtlasLoot_Data["PVPWarrior2"] = {
 		{ 12, 18868, "", "=q4=High Warlord's Pulverizer", "=ds=#h2#, #w6#", "68200 #horde#", ""};
 		{ 13, 23465, "", "=q4=High Warlord's Destroyer", "=ds=#h2#, #w6#", "68200 #horde#", ""};
 		{ 14, 18871, "", "=q4=High Warlord's Pig Sticker", "=ds=#w7#", "68200 #horde#", ""};
-		{ 15, 18874, "", "=q4=High Warlord's War Staff", "=ds=#w9#", "68200 #horde#", ""};
+		{ 15, 18874, "", "=q4=High Warlord's War Staff", "=ds=#h2#, #w9#", "68200 #horde#", ""};
 		{ 16, 18826, "", "=q4=High Warlord's Shield Wall", "=ds=#w8#", "34100 #horde#", ""};
 		{ 17, 18835, "", "=q4=High Warlord's Recurve", "=ds=#w2#", "34100 #horde#", ""};
 		{ 18, 18837, "", "=q4=High Warlord's Crossbow", "=ds=#w3#", "34100 #horde#", ""};
@@ -6888,7 +6888,7 @@ AtlasLoot_Data["PVPWarrior2"] = {
 		{ 12, 918868, "", "=q3=Champion's Pulverizer", "=ds=#h2#, #w6#", "34100 #horde#", ""};
 		{ 13, 923465, "", "=q3=Champion's Destroyer", "=ds=#h2#, #w6#", "34100 #horde#", ""};
 		{ 14, 918871, "", "=q3=Champion's Pig Sticker", "=ds=#w7#", "34100 #horde#", ""};
-		{ 15, 918874, "", "=q3=Champion's War Staff", "=ds=#w9#", "34100 #horde#", ""};
+		{ 15, 918874, "", "=q3=Champion's War Staff", "=ds=#h2#, #w9#", "34100 #horde#", ""};
 		{ 16, 918826, "", "=q3=Champion's Shield Wall", "=ds=#w8#", "20000 #horde#", ""};
 		{ 17, 918835, "", "=q3=Champion's Recurve", "=ds=#w2#", "20000 #horde#", ""};
 		{ 18, 918837, "", "=q3=Champion's Crossbow", "=ds=#w3#", "20000 #horde#", ""};
@@ -7430,7 +7430,7 @@ AtlasLoot_Data["PVPWarrior2"] = {
 		{ 6, 20619, "", "=q4=Acid Inscribed Greaves", "=ds=#s12#, #a4# =q1=#m5#", "", "8.85%"};
 		{ 7, 20582, "", "=q4=Trance Stone", "=ds=#s15# =q1=#m5#", "", "9.57%"};
 		{ 8, 20580, "", "=q4=Hammer of Bestial Fury", "=ds=#h3#, #w6# =q1=#m5#", "", "8.93%"};
-		{ 9, 20581, "", "=q4=Staff of Rampant Growth", "=ds=#w9# =q1=#m5#", "", "9.70%"};
+		{ 9, 20581, "", "=q4=Staff of Rampant Growth", "=ds=#h2#, #w9# =q1=#m5#", "", "9.70%"};
 		{ 11, 20644, "", "=q4=Nightmare Engulfed Object", "=ds=#m3# =q1=#m5#", "", "80.05%"};
 		{ 12, 20600, "", "=q4=Malfurion's Signet Ring", "=q1=#m4#: =ds=#s13#"};
 		{ 16, 20623, "", "=q4=Circlet of Restless Dreams", "=ds=#s1#, #a2#", "", "10.51%"};
@@ -7451,7 +7451,7 @@ AtlasLoot_Data["PVPWarrior2"] = {
 		{ 6, 20619, "", "=q4=Acid Inscribed Greaves", "=ds=#s12#, #a4# =q1=#m5#", "", "8.85%"};
 		{ 7, 20582, "", "=q4=Trance Stone", "=ds=#s15# =q1=#m5#", "", "9.57%"};
 		{ 8, 20580, "", "=q4=Hammer of Bestial Fury", "=ds=#h3#, #w6# =q1=#m5#", "", "8.93%"};
-		{ 9, 20581, "", "=q4=Staff of Rampant Growth", "=ds=#w9# =q1=#m5#", "", "9.70%"};
+		{ 9, 20581, "", "=q4=Staff of Rampant Growth", "=ds=#h2#, #w9# =q1=#m5#", "", "9.70%"};
 		{ 11, 20644, "", "=q4=Nightmare Engulfed Object", "=ds=#m3# =q1=#m5#", "", "80.05%"};
 		{ 12, 20600, "", "=q4=Malfurion's Signet Ring", "=q1=#m4#: =ds=#s13#"};
 		{ 16, 20626, "", "=q4=Black Bark Wristbands", "=ds=#s8#, #a1#", "", "9.44%"};
@@ -7473,7 +7473,7 @@ AtlasLoot_Data["PVPWarrior2"] = {
 		{ 6, 20619, "", "=q4=Acid Inscribed Greaves", "=ds=#s12#, #a4# =q1=#m5#", "", "8.85%"};
 		{ 7, 20582, "", "=q4=Trance Stone", "=ds=#s15# =q1=#m5#", "", "9.57%"};
 		{ 8, 20580, "", "=q4=Hammer of Bestial Fury", "=ds=#h3#, #w6# =q1=#m5#", "", "8.93%"};
-		{ 9, 20581, "", "=q4=Staff of Rampant Growth", "=ds=#w9# =q1=#m5#", "", "9.70%"};
+		{ 9, 20581, "", "=q4=Staff of Rampant Growth", "=ds=#h2#, #w9# =q1=#m5#", "", "9.70%"};
 		{ 11, 20644, "", "=q4=Nightmare Engulfed Object", "=ds=#m3# =q1=#m5#", "", "80.05%"};
 		{ 12, 20600, "", "=q4=Malfurion's Signet Ring", "=q1=#m4#: =ds=#s13#"};
 		{ 16, 20631, "", "=q4=Mendicant's Slippers", "=ds=#s12#, #a1#", "", "13.14%"};
@@ -7494,7 +7494,7 @@ AtlasLoot_Data["PVPWarrior2"] = {
 		{ 6, 20619, "", "=q4=Acid Inscribed Greaves", "=ds=#s12#, #a4# =q1=#m5#", "", "8.85%"};
 		{ 7, 20582, "", "=q4=Trance Stone", "=ds=#s15# =q1=#m5#", "", "9.57%"};
 		{ 8, 20580, "", "=q4=Hammer of Bestial Fury", "=ds=#h3#, #w6# =q1=#m5#", "", "8.93%"};
-		{ 9, 20581, "", "=q4=Staff of Rampant Growth", "=ds=#w9# =q1=#m5#", "", "9.70%"};
+		{ 9, 20581, "", "=q4=Staff of Rampant Growth", "=ds=#h2#, #w9# =q1=#m5#", "", "9.70%"};
 		{ 11, 20644, "", "=q4=Nightmare Engulfed Object", "=ds=#m3# =q1=#m5#", "", "80.05%"};
 		{ 12, 20600, "", "=q4=Malfurion's Signet Ring", "=q1=#m4#: =ds=#s13#"};
 		{ 16, 20635, "", "=q4=Jade Inlaid Vestments", "=ds=#s5#, #a1#", "", "14.19%"};
@@ -7532,7 +7532,7 @@ AtlasLoot_Data["PVPWarrior2"] = {
 		{ 1, 18665, "", "=q4=The Eye of Shadow", "=ds=#s14#", "", "40.96%"};
 		{ 2, 18546, "", "=q4=Infernal Headcage", "=ds=#s1#, #a3#", "", "22.89%"};
 		{ 3, 17112, "", "=q4=Empyrean Demolisher", "=ds=#h1#, #w6#", "", "13.54%"};
-		{ 4, 17113, "", "=q4=Amberseal Keeper", "=ds=#h2#, #w9#", "", "16.87% "};
+		{ 4, 17113, "", "=q4=Amberseal Keeper", "=ds=#h2#, #h2#, #w9#", "", "16.87% "};
 		{ 5, 18204, "", "=q4=Eskhandar's Pelt", "=ds=#s4#, #a1#", "", "12.23%"};
 		{ 6, 19133, "", "=q4=Fel Infused Leggings", "=ds=#s11#, #a1#", "", "12.05%"};
 		{ 7, 18543, "", "=q4=Ring of Entropy", "=ds=#s13#", "", "14.46%"};
@@ -7546,7 +7546,7 @@ AtlasLoot_Data["PVPWarrior2"] = {
 
 	AtlasLoot_Data["Setis"] = {
 		{ 1,122880, "", "=q4=Scepter of the Gate Warden", "=ds=#h3#, #w6#", "", ""};
-		{ 2,122881, "", "=q4=Staff of the Gate Warden", "=ds=#h2#, #w9#", "", ""};
+		{ 2,122881, "", "=q4=Staff of the Gate Warden", "=ds=#h2#, #h2#, #w9#", "", ""};
 		{ 3,122883, "", "=q4=Musket of the Gate Warden", "=ds=#w5#", "", ""};
 		{ 4,122884, "", "=q4=Wristguards of the Shifting Sands", "=ds=#s8#, #a2#", "", ""};
 		{ 5,122885, "", "=q4=Waistguard of the Shifting Sands", "=ds=#s10#, #a2#", "", ""};

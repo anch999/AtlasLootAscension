@@ -135,7 +135,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 5, 45074, "", "=q4=Claymore of the Prophet", "=ds=#h2#, #w10#", "25 #champseal#" };
 		{ 6, 45076, "", "=q4=Teldrassil Protector", "=ds=#h1#, #w1#", "25 #champseal#" };
 		{ 7, 45075, "", "=q4=Ironforge Smasher", "=ds=#h1#, #w6#", "25 #champseal#" };
-		{ 8, 45128, "", "=q4=Silvery Sylvan Stave", "=ds=#w9#", "25 #champseal#" };
+		{ 8, 45128, "", "=q4=Silvery Sylvan Stave", "=ds=#h2#, #w9#", "25 #champseal#" };
 		{ 9, 45130, "", "=q4=Blunderbuss of Khaz Modan", "=ds=#w5#", "25 #champseal#" };
 		{ 15, 44990, "", "=q2=Champion's Seal", "=ds=#m17#"};
 		{ 16, 0, "INV_BannerPVP_01", "=q6=#m6#", ""};
@@ -145,7 +145,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 20, 45205, "", "=q4=Greatsword of the Sin'dorei", "=ds=#h2#, #w10#", "25 #champseal#" };
 		{ 21, 45204, "", "=q4=Axe of the Sen'jin Protector", "=ds=#h1#, #w1#", "25 #champseal#" };
 		{ 22, 45203, "", "=q4=Grimhorn Crusher", "=ds=#h1#, #w6#", "25 #champseal#" };
-		{ 23, 45212, "", "=q4=Staff of Feral Furies", "=ds=#w9#", "25 #champseal#" };
+		{ 23, 45212, "", "=q4=Staff of Feral Furies", "=ds=#h2#, #w9#", "25 #champseal#" };
 		{ 24, 45210, "", "=q4=Sen'jin Beakblade Longrifle", "=ds=#w5#", "25 #champseal#" };
 		Prev = "ArgentTournament3";
 		Next = "ArgentTournament5";
@@ -245,7 +245,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 26, 42948, "", "=q7=Devout Aurastone Hammer", "=ds=#h3#, #w6#", "75 #champseal#"};
 		{ 27, 48716, "", "=q7=Venerable Mass of McGowan", "=ds=#h1#, #w6#", "75 #champseal#"};
 		{ 28, 48718, "", "=q7=Repurposed Lava Dredger", "=ds=#h2#, #w6#", "95 #champseal#"};
-		{ 29, 42947, "", "=q7=Dignified Headmaster's Charge", "=ds=#w9#", "95 #champseal#"};
+		{ 29, 42947, "", "=q7=Dignified Headmaster's Charge", "=ds=#h2#, #w9#", "95 #champseal#"};
 		{ 30, 42946, "", "=q7=Charmed Ancient Bone Bow", "=ds=#w2#", "95 #champseal#"};
 		Prev = "ArgentTournament7";
 		Back = "ARGENTMENU";
@@ -749,13 +749,13 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 10, 35279, "", "=q3=Tabard of Summer Skies", "=q1=#m4#: =ds=#s7#"};
 		{ 11, 35280, "", "=q3=Tabard of Summer Flames", "=q1=#m4#: =ds=#s7#"};
 		{ 16, 54536, "", "=q3=Satchel of Chilled Goods", "=ds="};
-		{ 17, 54806, "", "=q4=Frostscythe of Lord Ahune", "=ds=#w9#"};
+		{ 17, 54806, "", "=q4=Frostscythe of Lord Ahune", "=ds=#h2#, #w9#"};
 		{ 18, 53641, "", "=q3=Ice Chip", "=ds=#e13#"};
 		{20, 35497, "", "=q4=Cloak of the Frigid Winds", "=ds=#s4#" };
 		{21, 35496, "", "=q4=Icebound Cloak", "=ds=#s4#" };
 		{22, 35494, "", "=q4=Shroud of Winter's Chill", "=ds=#s4#" };
 		{23, 35495, "", "=q4=The Frost Lord's War Cloak", "=ds=#s4#" };
-		{24,  35514, "", "=q4=Frostscythe of Lord Ahune", "=ds=#w9#" };
+		{24,  35514, "", "=q4=Frostscythe of Lord Ahune", "=ds=#h2#, #w9#" };
 		Prev = "MidsummerFestival";
 		Back = "WORLDEVENTMENU";
 	};
@@ -779,7 +779,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{17, 35496, "", "=q4=Icebound Cloak", "=ds=#s4#" };
 		{18, 35494, "", "=q4=Shroud of Winter's Chill", "=ds=#s4#" };
 		{19, 35495, "", "=q4=The Frost Lord's War Cloak", "=ds=#s4#" };
-		{20, 35514, "", "=q4=Frostscythe of Lord Ahune", "=ds=#w9#" };
+		{20, 35514, "", "=q4=Frostscythe of Lord Ahune", "=ds=#h2#, #w9#" };
 	};
 
 		-------------------
@@ -929,7 +929,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 21, 44158, "", "=q3=Demons Deck", "=ds=#m2#"};
 		{ 22, 44217, "", "=q3=Darkmoon Dirk", "=q1=#m4#: =ds=#h1#, #w4#"};
 		{ 23, 44218, "", "=q3=Darkmoon Executioner", "=q1=#m4#: =ds=#h2#, #w1#"};
-		{ 24, 44219, "", "=q3=Darkmoon Magestaff", "=q1=#m4#: =ds=#w9#"};
+		{ 24, 44219, "", "=q3=Darkmoon Magestaff", "=q1=#m4#: =ds=#h2#, #w9#"};
 		Prev = "Darkmoon1";
 		Next = "Darkmoon3";
 		Back = "DARKMOONMENU";
@@ -1048,7 +1048,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 4, 20656, "", "=q2=Abyssal Mail Sabatons", "=ds=#s12#, #a3# =q2=#m16#", "", "12.89%"};
 		{ 5, 20513, "", "=q2=Abyssal Crest", "=ds=#m3#", "", "100%"};
 		{ 7, 0, "INV_Box_01", "=q6=#n97#", "=q1=#j20#"};
-		{ 8, 20654, "", "=q3=Amethyst War Staff", "=ds=#w9#", "", "2.38%"};
+		{ 8, 20654, "", "=q3=Amethyst War Staff", "=ds=#h2#, #w9#", "", "2.38%"};
 		{ 9, 20652, "", "=q2=Abyssal Cloth Slippers", "=ds=#s12#, #a1# =q2=#m16#", "", "12.94%"};
 		{ 10, 20653, "", "=q2=Abyssal Plate Gauntlets", "=ds=#s9#, #a4# =q2=#m16#", "", "13.61%"};
 		{ 11, 20513, "", "=q2=Abyssal Crest", "=ds=#m3#", "", "100%"};
@@ -1275,7 +1275,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 24, 32660, "", "=q3=Crystalforged Sword", "=ds=#h3#, #w10#"};
 		{ 25, 32663, "", "=q3=Apexis Cleaver", "=ds=#h2#, #w1#"};
 		{ 26, 32661, "", "=q3=Apexis Crystal Mace", "=ds=#h1#, #w6#"};
-		{ 27, 32662, "", "=q3=Flaming Quartz Staff", "=ds=#w9#"};
+		{ 27, 32662, "", "=q3=Flaming Quartz Staff", "=ds=#h2#, #w9#"};
 		Back = "WORLDEVENTMENU";
 	};
 
@@ -1423,7 +1423,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 1, 0, "INV_Box_01", "=q6=#n123#", "=q1=#z6#"};
 		{ 2, 23126, "", "=q3=Waistband of Balzaphon", "=ds=#s10#, #a1#", "", "27.38%"};
 		{ 3, 23125, "", "=q3=Chains of the Lich", "=ds=#s2#", "", "19.89%"};
-		{ 4, 23124, "", "=q3=Staff of Balzaphon", "=ds=#w9#", "", "24.74%"};
+		{ 4, 23124, "", "=q3=Staff of Balzaphon", "=ds=#h2#, #w9#", "", "24.74%"};
 		{ 6, 0, "INV_Box_01", "=q6=#n124#", "=q1=#z5#"};
 		{ 7, 23156, "", "=q3=Blackwood's Thigh", "=ds=#s15#", "", "22.60%"};
 		{ 8, 23132, "", "=q3=Lord Blackwood's Blade", "=ds=#h1#, #w10#", "", "23.80%"};
