@@ -1,3 +1,5 @@
+local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot");
+
 AtlasLoot_Difficulty = {
     -- table of difficulties and there itemID references
     ["ClassicDungeon"] = { 
@@ -184,3 +186,118 @@ AtlasLoot_Difficulty = {
     MIN_DIF = 18;
     MAX_DIF = 19;
 }
+
+function QueryItems(instance, difficulty, expansion)
+	if instance == "help" then 
+		print("Instance types are: \"Dungeon\", \"Raid\"");
+		print("Difficulty types are: 1 - 24");
+		print("Expansion options are: \"classic\" and \"tbc\"");
+		print("Example: QueryItems(\"Dungeon\", 10) - This will query all classic dungeons Mythic+ 6 items");
+		print("Example: QueryItems(\"Dungeon\", 10, \"tbc\") - This will query all tbc dungeons Mythic+ 6 items");
+		return
+	end
+
+    local instanceType = "ClassicRaid";
+	
+	--Expansion select enums to make arguments easier to use
+	local ex_sel = {
+		["classic"] = AL["Classic Instances"];
+		["tbc"] = AL["BC Instances"];
+	}
+
+	--Setup ranges so we arent parsing unwanted instance pages
+	local range = {
+		["classic"] = {
+			["Raid"] = {2, 8},
+			["Dungeon"] = {10, 29}
+		},
+		["tbc"] = {
+			["Raid"] = {2, 10},
+			["Dungeon"] = {12, 27}
+		}
+	}
+
+	--Setup defualts if the arguments are not set or nil
+	if expansion == nil or ex_sel[expansion] == nil then expansion = "classic" end
+	if instance == nil then 
+        instance = "Dungeon"
+        instanceType = "ClassicDungeonExt" 
+    end
+	--TBC dungeon types are ExDungeon, i only want one argument type so we swap it here
+	if instance == "Dungeon" and expansion == "tbc" then 
+        instanceType = "BCDungeon" 
+    end
+
+    if instance == "Raid" then
+        if expansion == "classic" then
+            instanceType = "ClassicRaid"
+        end
+
+        if expansion == "tbc" then
+            instanceType = "BCRaid"
+        end
+    end
+
+	if difficulty == nil then difficulty = AtlasLoot_Difficulty.Normal end
+	
+	--We parse a drop down menu, they are setup weird so we have to check for expansion twice in the arry once as a number second as a Global Var
+	local _men = 1
+	if expansion == "tbc" then _men = 2 end;
+
+	if instance == "Raid" then difficulty = math.min(AtlasLoot_Difficulty.Mythic, difficulty) end
+
+	for i = range[expansion][instance][1], range[expansion][instance][2] do
+		local inst = "";
+		--DireMaul is in an another drop down list so instead what we can do is utilize instance ids we won't be querying
+		if i == 14 and expansion == "classic" then inst = "DireMaulNorth" elseif i == 15 and expansion == "classic" then inst = "DireMaulEast" elseif i == 16 and expansion == "classic" then inst = "DireMaulWest"
+		else
+			inst = AtlasLoot_DewDropDown[_men][ex_sel[expansion]][i][1][2]
+		end
+
+		if (inst ~= nil and AtlasLoot_DewDropDown_SubTables[inst] ~= nil) then
+			for b = 1, #AtlasLoot_DewDropDown_SubTables[inst] do
+				local boss = AtlasLoot_DewDropDown_SubTables[inst][b][2];
+				if(AtlasLoot_Data[boss] ~= nil and AtlasLoot_Data[boss].Type ~= nil and AtlasLoot_Data[boss].Type == instanceType) then
+					local n = 1;
+					local querytime = 0;
+					local now = 0;
+					while n < 31 do
+						now = GetTime();
+						if now - querytime > 0.01 then
+							querytime = GetTime();        
+							if(AtlasLoot_Data[boss][n] ~= nil) then
+								local queryitem = AL_FindId(string.sub(AtlasLoot_Data[boss][n][4], 5), difficulty) or AtlasLoot_Data[boss][n][2];
+								if (queryitem) and (queryitem ~= nil) and (queryitem ~= "") and (queryitem ~= 0) and (string.sub(queryitem, 1, 1) ~= "s") then
+									AtlasLootTooltip:SetHyperlink("item:"..queryitem..":0:0:0:0:0:0:0");
+								end
+							end
+							n = n + 1;
+						end
+					end
+					print("Query for "..boss.." in instance "..inst.." finished");
+				end
+			end
+		elseif AtlasLoot_DewDropDown[_men][ex_sel[expansion]][i][1][3] == "Table" then
+			if(AtlasLoot_Data[inst] ~= nil and AtlasLoot_Data[inst].Type ~= nil and AtlasLoot_Data[inst].Type == instanceType) then
+				local n = 1;
+				local querytime = 0;
+				local now = 0;
+				while n < 31 do
+					now = GetTime();
+					if now - querytime > 0.01 then
+						querytime = GetTime();        
+						if(AtlasLoot_Data[inst][n] ~= nil) then
+							local queryitem = AL_FindId(string.sub(AtlasLoot_Data[inst][n][4], 5), difficulty) or AtlasLoot_Data[inst][n][2];
+							if (queryitem) and (queryitem ~= nil) and (queryitem ~= "") and (queryitem ~= 0) and (string.sub(queryitem, 1, 1) ~= "s") then
+								AtlasLootTooltip:SetHyperlink("item:"..queryitem..":0:0:0:0:0:0:0");
+							end
+						end
+						n = n + 1;
+					end
+				end
+				print("Query for "..inst.." in instance "..inst.." finished");
+			end
+		end
+	end
+	print("You may need to reload your UI to finalize the Query")
+end

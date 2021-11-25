@@ -753,6 +753,21 @@ function AtlasLoot:AdvancedSearch(Text, arg1, arg2, arg3)
 
 	local advSearchString = "";
 
+	if AdvancedSearchOptions["arg1"] ~= "" and AdvancedSearchOptions["arg1op"] == "" then
+		AdvancedSearchOptions["arg1op"] = ">"
+		arg1 = "0";
+	end
+
+	if AdvancedSearchOptions["arg2"] ~= "" and AdvancedSearchOptions["arg2op"] == "" then
+		AdvancedSearchOptions["arg2op"] = ">"
+		arg2 = "0";
+	end
+
+	if AdvancedSearchOptions["arg3"] ~= "" and AdvancedSearchOptions["arg3op"] == "" then
+		AdvancedSearchOptions["arg3op"] = ">"
+		arg3 = "0";
+	end
+
 	if AdvancedSearchOptions["arg1"] ~= "" and AdvancedSearchOptions["arg1op"] ~= "" and arg1 ~= "" then
 		advSearchString = advSearchString..AdvancedSearchOptions["arg1"]..AdvancedSearchOptions["arg1op"]..arg1;
 		searchTitleString = searchTitleString.." "..AdvancedSearchOptions["arg1"].." "..AdvancedSearchOptions["arg1op"].." "..arg1;
