@@ -797,8 +797,15 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
                 if (dataID == "SearchResult" or dataID == "WishList") and dataSource[dataID][i][8] then
                     itemButton.sourcePage = dataSource[dataID][i][8];
                 end
-				if (dataID == "SearchResult" or dataID == "WishList") and dataSource[dataID][i][AtlasLoot_Difficulty.DIF_SEARCH] then
+				if dataSource[dataID][i][AtlasLoot_Difficulty.DIF_SEARCH] then
 					itemButton.difficulty = dataSource[dataID][i][AtlasLoot_Difficulty.DIF_SEARCH];
+				else
+					itemButton.difficulty = ItemindexID;
+					if dataSource[dataID].Type then
+						if string.find(dataSource[dataID].Type, "Raid") and ItemindexID == 4 then
+							itemButton.difficulty = 99;
+						end
+					end
 				end
 
 				itemButton.i = 1;

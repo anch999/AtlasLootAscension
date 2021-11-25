@@ -34,6 +34,7 @@ STATFILTERS = {
 	["spirit"] = "ITEM_MOD_SPIRIT_SHORT",
 	["spir"] = "ITEM_MOD_SPIRIT_SHORT",
 	["spi"] = "ITEM_MOD_SPIRIT_SHORT",
+	["spr"] = "ITEM_MOD_SPIRIT_SHORT",
 	
 	["health"] = "ITEM_MOD_HEALTH_SHORT",
 	["mana"] = "ITEM_MOD_MANA_SHORT",
@@ -136,7 +137,7 @@ STATFILTERS = {
 	["resarc"] = "RESISTANCE6_NAME"
 };
 
-local ITEMSOCKETSTATFILTERS = {
+ITEMSOCKETSTATFILTERS = {
 	"EMPTY_SOCKET_BLUE",
 	"EMPTY_SOCKET_RED",
 	"EMPTY_SOCKET_YELLOW",
@@ -144,7 +145,7 @@ local ITEMSOCKETSTATFILTERS = {
 	"EMPTY_SOCKET_NO_COLOR"
 };
 
-local ITEMINFOFILTERS = {
+ITEMINFOFILTERS = {
 	["ilvl"] = "ilvl",
 	["minlvl"] = "minlvl",
 	["type"] = "type",
@@ -152,50 +153,7 @@ local ITEMINFOFILTERS = {
 	["quality"] = "quality"
 };
 
-local ITEMINFOVALUEFILTERS = {
-	["poor"] = 0,
-	["common"] = 1,
-	["uncommon"] = 2,
-	["rare"] = 3,
-	["epic"] = 4,
-	["legendary"] = 5,
-	["artifact"] = 6,
-	["heirloom"] = 7
-};
-
-local ITEMINFOEQUIPMENTLOC = {
-	["INVTYPE_NON_EQUIP"] = "INVTYPE_NON_EQUIP",
-	["INVTYPE_HEAD"] = "INVTYPE_HEAD",
-	["INVTYPE_NECK"] = "INVTYPE_NECK",
-	["INVTYPE_SHOULDER"] = "INVTYPE_SHOULDER",
-	["INVTYPE_BODY"] = "INVTYPE_BODY",
-	["INVTYPE_CHEST"] = "INVTYPE_CHEST",
-	["INVTYPE_WAIST"] = "INVTYPE_WAIST",
-	["INVTYPE_LEGS"] = "INVTYPE_LEGS",
-	["INVTYPE_FEET"] = "INVTYPE_FEET",
-	["INVTYPE_WRIST"] = "INVTYPE_WRIST",
-	["INVTYPE_HAND"] = "INVTYPE_HAND",
-	["INVTYPE_FINGER"] = "INVTYPE_FINGER",
-	["INVTYPE_TRINKET"] = "INVTYPE_TRINKET",
-	["INVTYPE_WEAPON"] = "INVTYPE_WEAPON",
-	["INVTYPE_SHIELD"] = "INVTYPE_SHIELD",
-	["INVTYPE_RANGED"] = "INVTYPE_RANGED",
-	["INVTYPE_CLOAK"] = "INVTYPE_CLOAK",
-	["INVTYPE_2HWEAPON"] = "INVTYPE_2HWEAPON",
-	["INVTYPE_BAG"] = "INVTYPE_BAG",
-	["INVTYPE_TABARD"] = "INVTYPE_TABARD",
-	["INVTYPE_ROBE"] = "INVTYPE_ROBE",
-	["INVTYPE_WEAPONMAINHAND"] = "INVTYPE_WEAPONMAINHAND",
-	["INVTYPE_WEAPONOFFHAND"] = "INVTYPE_WEAPONOFFHAND",
-	["INVTYPE_HOLDABLE"] = "INVTYPE_HOLDABLE",
-	["INVTYPE_AMMO"] = "INVTYPE_AMMO",
-	["INVTYPE_THROWN"] = "INVTYPE_THROWN",
-	["INVTYPE_RANGEDRIGHT"] = "INVTYPE_RANGEDRIGHT",
-	["INVTYPE_QUIVER"] = "INVTYPE_QUIVER",
-	["INVTYPE_RELIC"] = "INVTYPE_RELIC"
-};
-
-local ITEMLEVELGEAREQUIPFILTER = {
+ITEMLEVELGEAREQUIPFILTER = {
 	["INVTYPE_NON_EQUIP"] = "INVTYPE_NON_EQUIP",
 	["INVTYPE_BODY"] = "INVTYPE_BODY",
 	["INVTYPE_BAG"] = "INVTYPE_BAG",
@@ -626,7 +584,7 @@ end
 function AtlasLoot:GetOriginalDataFromSearchResult(itemID)
 	for i, v in ipairs(AtlasLootCharDB["SearchResult"]) do
 		if v[2] == itemID then 
-            AtlasLoot_ShowWishListDropDown(v[2], v[3], v[4], v[5], v[8], this);        
+            AtlasLoot_ShowWishListDropDown(v[2], v[3], v[4], v[5], v[8], this, nil, v[AtlasLoot_Difficulty.DIF_SEARCH]);        
         end
 	end
 end

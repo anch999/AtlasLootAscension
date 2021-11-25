@@ -248,26 +248,19 @@ function AtlasLootItem_OnClick(arg1)
             if AtlasLootItemsFrame.refresh[1] == "WishList" then
                 AtlasLoot_DeleteFromWishList(this.itemID);
             elseif AtlasLootItemsFrame.refresh[1] == "SearchResult" then
-            	AtlasLoot:GetOriginalDataFromSearchResult(this.itemID);
+                if this.difficulty then
+            	    AtlasLoot:GetOriginalDataFromSearchResult(this.itemID);
+                end
             else
-                AtlasLoot_ShowWishListDropDown(this.itemID, this.itemTexture, getglobal("AtlasLootItem_"..this:GetID().."_Name"):GetText(), AtlasLoot_BossName:GetText(), AtlasLootItemsFrame.refreshOri[1].."|"..AtlasLootItemsFrame.refreshOri[2], this);
+                if this.difficulty then
+                    AtlasLoot_ShowWishListDropDown(this.itemID, this.itemTexture, getglobal("AtlasLootItem_"..this:GetID().."_Name"):GetText(), AtlasLoot_BossName:GetText(), AtlasLootItemsFrame.refreshOri[1].."|"..AtlasLootItemsFrame.refreshOri[2], this, nil, this.difficulty);
+                else
+                    AtlasLoot_ShowWishListDropDown(this.itemID, this.itemTexture, getglobal("AtlasLootItem_"..this:GetID().."_Name"):GetText(), AtlasLoot_BossName:GetText(), AtlasLootItemsFrame.refreshOri[1].."|"..AtlasLootItemsFrame.refreshOri[2], this);
+                end
             end
         elseif((AtlasLootItemsFrame.refresh[1] == "SearchResult" or AtlasLootItemsFrame.refresh[1] == "WishList") and this.sourcePage) then
             local dataID, dataSource = strsplit("|", this.sourcePage);
             if(dataID and dataSource and AtlasLoot_IsLootTableAvailable(dataID)) then
-                if (this.difficulty) then
-                    if(AtlasLoot_Data[dataID].Type) then
-                        AtlasLoot_DifficultyEnable(dataID, AtlasLoot_Data);
-                        lastType = AtlasLoot_Data[dataID].Type
-                        local dif_color  = "";
-                        if this.difficulty == 1 or this.difficulty == 2 then
-                            dif_color = "";
-                        else
-                            dif_color = "=q4="
-                        end 
-                        AtlasLoot_DewDropSubMenu2Click(dataID, this.difficulty, dif_color);
-                    end
-                end
                 AtlasLoot_ShowItemsFrame(dataID, dataSource, AtlasLoot_TableNames[dataID][1], AtlasLootItemsFrame.refresh[4]);
             end
         end

@@ -169,7 +169,7 @@ AtlasLoot_Difficulty = {
 
     ["Search"] = {"Bloodforged", "Normal", "Heroic", "Mythic", "Mythic 1", "Mythic 2","Mythic 3","Mythic 4","Mythic 5", "Mythic 6","Mythic 7",
     "Mythic 8","Mythic 9", "Mythic 10", "Mythic 11", "Mythic 12","Mythic 13","Mythic 14","Mythic 15", "Mythic 16","Mythic 17","Mythic 18",
-    "Mythic 19", "Mythic 20",};
+    "Mythic 19", "Mythic 20", [99] = "Ascended"};
 
     --Enums for comparisons in code
     Bloodforged = 1;

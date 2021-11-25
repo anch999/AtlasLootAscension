@@ -8,6 +8,15 @@ AtlasLoot_EquipMenu = AceLibrary("Dewdrop-2.0");
 AtlasLoot_EquipSubMenu = AceLibrary("Dewdrop-2.0");
 AtlasLoot_WeaponSubMenu = AceLibrary("Dewdrop-2.0");
 
+AtlasLoot_Argument1Menu = AceLibrary("Dewdrop-2.0");
+AtlasLoot_Argument1SubMenu = AceLibrary("Dewdrop-2.0");
+
+AtlasLoot_Argument2Menu = AceLibrary("Dewdrop-2.0");
+AtlasLoot_Argument2SubMenu = AceLibrary("Dewdrop-2.0");
+
+AtlasLoot_Argument3Menu = AceLibrary("Dewdrop-2.0");
+AtlasLoot_Argument3SubMenu = AceLibrary("Dewdrop-2.0");
+
 local GREY = "|cff999999";
 local RED = "|cffff0000";
 local WHITE = "|cffFFFFFF";
@@ -15,155 +24,7 @@ local GREEN = "|cff1eff00";
 local PURPLE = "|cff9F3FFF";
 local BLUE = "|cff0070dd";
 local ORANGE = "|cffFF8400";
-
--- Supported Operators
-local BINARYOPERATORS = { "&" };
-local OPERATORS = { "<>", "<=", ">=", "=", "<", ">" };
-
--- Supported Stat Filters
-local STATFILTERS = {
-	-- Base Stats
-	["stamina"] = "ITEM_MOD_STAMINA_SHORT",
-	["stam"] = "ITEM_MOD_STAMINA_SHORT",
-	["sta"] = "ITEM_MOD_STAMINA_SHORT",
-	
-	["strength"] = "ITEM_MOD_STRENGTH_SHORT",
-	["str"] = "ITEM_MOD_STRENGTH_SHORT",
-	
-	["agility"] = "ITEM_MOD_AGILITY_SHORT",
-	["agi"] = "ITEM_MOD_AGILITY_SHORT",
-	
-	["intellect"] = "ITEM_MOD_INTELLECT_SHORT",
-	["int"] = "ITEM_MOD_INTELLECT_SHORT",
-	
-	["spirit"] = "ITEM_MOD_SPIRIT_SHORT",
-	["spir"] = "ITEM_MOD_SPIRIT_SHORT",
-	["spi"] = "ITEM_MOD_SPIRIT_SHORT",
-	
-	["health"] = "ITEM_MOD_HEALTH_SHORT",
-	["mana"] = "ITEM_MOD_MANA_SHORT",
-	
-	["mp5"] = "ITEM_MOD_POWER_REGEN0_SHORT",
-	["mpr"] = "ITEM_MOD_POWER_REGEN0_SHORT",
-	
-	["hp5"] = "ITEM_MOD_HEALTH_REGEN_SHORT",
-	["hpr"] = "ITEM_MOD_HEALTH_REGEN_SHORT",
-	
-	--Sockets
-	["socketblue"] = "EMPTY_SOCKET_BLUE",
-	["socketred"] = "EMPTY_SOCKET_RED",
-	["socketyellow"] = "EMPTY_SOCKET_YELLOW",
-	
-	["socketnocolor"] = "EMPTY_SOCKET_NO_COLOR",
-	["socketwhite"] = "EMPTY_SOCKET_NO_COLOR",
-	
-	["socketmeta"] = "EMPTY_SOCKET_META",
-	["meta"] = "EMPTY_SOCKET_META",
-	
-	--Secondary Stats
-	["attackpowerferal"] = "ITEM_MOD_FERAL_ATTACK_POWER_SHORT",
-	["attackpowferal"] = "ITEM_MOD_FERAL_ATTACK_POWER_SHORT",
-	["apferal"] = "ITEM_MOD_FERAL_ATTACK_POWER_SHORT",
-	
-	["attackpower"] = "ITEM_MOD_ATTACK_POWER_SHORT",
-	["attackpow"] = "ITEM_MOD_ATTACK_POWER_SHORT",
-	["ap"] = "ITEM_MOD_ATTACK_POWER_SHORT",
-	
-	["spellpower"] = "ITEM_MOD_SPELL_POWER_SHORT",
-	["spellpow"] = "ITEM_MOD_SPELL_POWER_SHORT",
-	["sp"] = "ITEM_MOD_SPELL_POWER_SHORT",
-	
-	["spellpenetration"] = "ITEM_MOD_SPELL_PENETRATION_SHORT",
-	["spellpen"] = "ITEM_MOD_SPELL_PENETRATION_SHORT",
-	["spp"] = "ITEM_MOD_SPELL_PENETRATION_SHORT",
-	
-	["crit"] = "ITEM_MOD_CRIT_RATING_SHORT",
-	["haste"] = "ITEM_MOD_HASTE_RATING_SHORT",
-	
-	["hit"] = "ITEM_MOD_HIT_RATING_SHORT",
-	
-	["armorpenetration"] = "ITEM_MOD_ARMOR_PENETRATION_RATING_SHORT",
-	["armourpenetration"] = "ITEM_MOD_ARMOR_PENETRATION_RATING_SHORT",
-	["armorpen"] = "ITEM_MOD_ARMOR_PENETRATION_RATING_SHORT",
-	["armourpen"] = "ITEM_MOD_ARMOR_PENETRATION_RATING_SHORT",
-	["arp"] = "ITEM_MOD_ARMOR_PENETRATION_RATING_SHORT",
-	
-	["expertise"] = "ITEM_MOD_EXPERTISE_RATING_SHORT",
-	["exp"] = "ITEM_MOD_EXPERTISE_RATING_SHORT",
-	
-	["dps"] = "ITEM_MOD_DAMAGE_PER_SECOND_SHORT",
-	
-	["resilience"] = "ITEM_MOD_RESILIENCE_RATING",
-	["resil"] = "ITEM_MOD_RESILIENCE_RATING",
-	["res"] = "ITEM_MOD_RESILIENCE_RATING",
-	
-	["defense"] = "ITEM_MOD_DEFENSE_SKILL_RATING_SHORT",
-	["def"] = "ITEM_MOD_DEFENSE_SKILL_RATING_SHORT",
-	
-	["dodge"] = "ITEM_MOD_DODGE_RATING_SHORT",
-	["dod"] = "ITEM_MOD_DODGE_RATING_SHORT",
-	
-	["block"] = "ITEM_MOD_BLOCK_RATING_SHORT",
-	
-	["blockvalue"] = "ITEM_MOD_BLOCK_VALUE_SHORT",
-	["blockval"] = "ITEM_MOD_BLOCK_VALUE_SHORT",
-	["bv"] = "ITEM_MOD_BLOCK_VALUE_SHORT",
-	
-	["parry"] = "ITEM_MOD_PARRY_RATING_SHORT",
-	
-	--Resistances
-	["armor"] = "RESISTANCE0_NAME",
-	["armour"] = "RESISTANCE0_NAME",
-	["arm"] = "RESISTANCE0_NAME",
-	["resistancephysical"] = "RESISTANCE0_NAME",
-	["resistancephys"] = "RESISTANCE0_NAME",
-	["resphys"] = "RESISTANCE0_NAME",
-	
-	["resistanceholy"] = "RESISTANCE1_NAME",
-	["resholy"] = "RESISTANCE1_NAME",
-	
-	["resistancefire"] = "RESISTANCE2_NAME",
-	["resfire"] = "RESISTANCE2_NAME",
-	
-	["resistancenature"] = "RESISTANCE3_NAME",
-	["resnature"] = "RESISTANCE3_NAME",
-	["resnat"] = "RESISTANCE3_NAME",
-	
-	["resistanceforst"] = "RESISTANCE4_NAME",
-	["resfrost"] = "RESISTANCE4_NAME",
-	
-	["resistanceshadow"] = "RESISTANCE5_NAME",
-	["resshadow"] = "RESISTANCE5_NAME",
-	["resshad"] = "RESISTANCE5_NAME",
-	
-	["resistancearcane"] = "RESISTANCE6_NAME",
-	["resarcane"] = "RESISTANCE6_NAME",
-	["resarc"] = "RESISTANCE6_NAME"
-};
-
-local ITEMSOCKETSTATFILTERS = {
-	"EMPTY_SOCKET_BLUE",
-	"EMPTY_SOCKET_RED",
-	"EMPTY_SOCKET_YELLOW",
-	"EMPTY_SOCKET_META",
-	"EMPTY_SOCKET_NO_COLOR"
-};
-
-local ITEMINFOFILTERS = {
-	["ilvl"] = "ilvl",
-	["minlvl"] = "minlvl",
-	["type"] = "type",
-	["subtype"] = "subtype",
-	["quality"] = "quality"
-};
-
-local ITEMLEVELGEAREQUIPFILTER = {
-	["INVTYPE_NON_EQUIP"] = "INVTYPE_NON_EQUIP",
-	["INVTYPE_BODY"] = "INVTYPE_BODY",
-	["INVTYPE_BAG"] = "INVTYPE_BAG",
-	["INVTYPE_AMMO"] = "INVTYPE_AMMO",
-	["INVTYPE_QUIVER"] = "INVTYPE_QUIVER"
-};
+local DEFAULT = "|cffFFd200";
 
 AtlasLoot_FrameMenuList = {
     ["EquipSubMenu"] = {AtlasLoot_EquipSubMenu, "AtlasLootAdvancedSearch_EquipSub", "Select Option", "equipType", "", "AtlasLootAdvancedSearch_WeaponSub"};
@@ -212,10 +73,7 @@ AtlasLoot_AdvancedSearchMenus = {
         }, 
         [6] = {
             {AtlasLoot_FixText("=q5=").."Legendary", "quality", "=q5="}, 
-        }, 
-        [7] = {
-            {AtlasLoot_FixText("=q6=").."Artifact", "quality", "=q6="}, 
-        }, 
+        },  
     };
 
     ["Equip"] = { 
@@ -354,6 +212,96 @@ AtlasLoot_AdvancedSearchMenus = {
 	};
 }
 
+AtlasLoot_AdvancedSearchArguments = {
+	["Arguments"] = {
+		[1] = {
+			["Primary Stats"] = {
+				{"Stamina", "sta"},
+				{"Strength", "str"},
+				{"Agility", "agi"};
+				{"Intellect", "int"},
+				{"Spirit", "spr"},
+			}
+		};
+		[2] = {
+			["Secondary Stats"] = {
+				{"Attack Power", "ap"};
+				{"Spell Power", "sp"};
+				{"Crit", "crit"};
+				{"Hit", "hit"};
+				{"Haste", "haste"};
+				{"Expertise", "exp"};
+				{"Armor Pen", "arp"};
+				{"Spell Pen", "spp"};
+			}
+		};
+		[3] = {
+			["Defensive Stats"] = {
+				{"Defense", "def"};
+				{"Dodge", "dodge"};
+				{"Parry", "parry"};
+				{"Block", "block"};
+				{"Block Value", "bv"};
+				{"Resilience", "res"};
+			}
+		};
+		[4] = {
+			["Resistances"] = {
+				{"Armor", "armor"};
+				{"Holy Resist", "resholy"};
+				{"Fire Resist", "resfire"};
+				{"Nature Resist", "resnat"};
+				{"Frost Resist", "resfrost"};
+				{"Shadow Resist", "resshad"};
+				{"Arcane Resist", "resarc"};
+			}
+		};
+		[5] = {
+			["Sockets"] = {
+				{"Any", "socket"};
+				{"Red Socket", "socketred"};
+				{"Blue Socket", "socketblue"};
+				{"Yellow Socket", "socketyellow"};
+				{"Meta Socket", "socketmeta"};
+			}
+		};
+		[6] = {
+			["Other"] = {
+				{"Required Level", "minlvl"};
+				{"Item Level", "ilvl"};
+			}
+		};
+
+		[7] = {
+			{RED.."Reset", "reset"}
+		}
+	};
+
+	["Operators"] = {
+		[1] = {
+			{"Equals", "=", true};
+		},
+		[2] = {
+			{"Greater Than", ">", true}
+		},
+		[3] = {
+			{"Greater Than Or Equal", ">=", true}
+		},
+		[4] = {
+			{"Less Than", "<", true}
+		},
+		[5] = {
+			{"Less Than Or Equal", "<=", true}
+		},
+		[6] = {
+			{"Not Equal", "<>", true}
+		},
+		[7] = {
+			{RED.."Reset", "reset", true}
+		}
+	}
+}
+
 local findByQuality = false;
 local findByEquip = false;
 local findByEquipType = false;
@@ -364,7 +312,13 @@ AdvancedSearchOptions = {
     ["quality"] = "",
     ["equip"] = "",
     ["equipType"] = "",
-    ["difficulty"] = 2
+    ["difficulty"] = 0,
+	["arg1"] = "",
+	["arg1op"] = "",
+	["arg2"] = "",
+	["arg2op"] = "",
+	["arg3"] = "",
+	["arg3op"] = "",
 }
 
 local AtlasLoot_AdvancedSearchQuality = {
@@ -389,6 +343,14 @@ function AtlasLoot_AdvancedSearchShow()
     AtlasLoot_AdvancedSearchRegister(AtlasLoot_QualityMenu, AtlasLootAdvancedSearch_Quality, AtlasLoot_AdvancedSearchMenus["Quality"]);
     AtlasLoot_AdvancedSearchRegister(AtlasLoot_EquipMenu, AtlasLootAdvancedSearch_Equip, AtlasLoot_AdvancedSearchMenus["Equip"]);
     AtlasLoot_AdvancedSearchRegister(AtlasLoot_DifficultyMenu, AtlasLootAdvancedSearch_Difficulty, AtlasLoot_AdvancedSearchMenus["Difficulty"]);
+
+	AtlasLoot_AdvancedSearchArgumentRegister(AtlasLoot_Argument1Menu, AtlasLootAdvancedSearch_Argument1, "1", AtlasLoot_AdvancedSearchArguments["Arguments"]);
+	AtlasLoot_AdvancedSearchArgumentRegister(AtlasLoot_Argument2Menu, AtlasLootAdvancedSearch_Argument2, "2", AtlasLoot_AdvancedSearchArguments["Arguments"]);
+	AtlasLoot_AdvancedSearchArgumentRegister(AtlasLoot_Argument3Menu, AtlasLootAdvancedSearch_Argument3, "3", AtlasLoot_AdvancedSearchArguments["Arguments"]);
+
+	AtlasLoot_AdvancedSearchArgumentRegister(AtlasLoot_Argument1SubMenu, AtlasLootAdvancedSearch_Argument1Sub, "1", AtlasLoot_AdvancedSearchArguments["Operators"]);
+	AtlasLoot_AdvancedSearchArgumentRegister(AtlasLoot_Argument2SubMenu, AtlasLootAdvancedSearch_Argument2Sub, "2", AtlasLoot_AdvancedSearchArguments["Operators"]);
+	AtlasLoot_AdvancedSearchArgumentRegister(AtlasLoot_Argument3SubMenu, AtlasLootAdvancedSearch_Argument3Sub, "3", AtlasLoot_AdvancedSearchArguments["Operators"]);
 
     --Hide all elements that could be in the AtlasTable
     getglobal("AtlasLootItemsFrame_NEXT"):Hide();
@@ -427,24 +389,9 @@ function AtlasLoot_AdvancedSearchShow()
     end
 
 	--Reset Search options
-	AdvancedSearchOptions = { }
-	AdvancedSearchOptions = {
-		["quality"] = "",
-		["equip"] = "",
-		["equipType"] = "",
-		["difficulty"] = 2
-	}
-	findByQuality = false;
-	findByEquip = false;
-	findByEquipType = false;
-	findByName = false;
-	findByDifficulty = false;
+	AtlasLoot_AdvancedSearchReset();
 
     AtlasLoot_BossName:SetText("Advanced Search");
-
-    AtlasLootAdvancedSearch_EquipSub:Disable();
-    AtlasLootAdvancedSearch_MythicSub:Disable();
-	AtlasLootAdvancedSearch_WeaponSub:Disable();
 
     AtlasLootAdvancedSearch:ClearAllPoints();
 	AtlasLootAdvancedSearch:SetParent(pFrame[2]);
@@ -459,7 +406,13 @@ function AtlasLoot_AdvancedSearchReset()
 		["quality"] = "",
 		["equip"] = "",
 		["equipType"] = "",
-		["difficulty"] = 2
+		["difficulty"] = 0,
+		["arg1"] = "",
+		["arg1op"] = "",
+		["arg2"] = "",
+		["arg2op"] = "",
+		["arg3"] = "",
+		["arg3op"] = "",
 	}
 
 	findByQuality = false;
@@ -471,6 +424,9 @@ function AtlasLoot_AdvancedSearchReset()
 	AtlasLootAdvancedSearch_Quality:SetText("Select Quality");
 	AtlasLootAdvancedSearch_Equip:SetText("Select Item Type");
 	AtlasLootAdvancedSearch_Difficulty:SetText("Select Difficulty");
+	AtlasLootAdvancedSearch_Argument1:SetText("Select Option");
+	AtlasLootAdvancedSearch_Argument2:SetText("Select Option");
+	AtlasLootAdvancedSearch_Argument3:SetText("Select Option");
 
 	AtlasLootAdvancedSearch_EquipSub:Disable();
 	AtlasLootAdvancedSearch_EquipSub:SetText("Select Option")
@@ -478,6 +434,19 @@ function AtlasLoot_AdvancedSearchReset()
 	AtlasLootAdvancedSearch_MythicSub:SetText("Mythic+ 1");
 	AtlasLootAdvancedSearch_WeaponSub:Disable();
 	AtlasLootAdvancedSearch_WeaponSub:SetText("Select Weapon Type")
+
+	AtlasLootAdvancedSearch_Argument1Sub:Disable();
+	AtlasLootAdvancedSearch_Argument1Sub:SetText("Select Option");
+	AtlasLootAdvancedSearch_Argument1Value:Hide();
+	AtlasLootAdvancedSearch_Argument1Value:SetText("");
+	AtlasLootAdvancedSearch_Argument2Sub:Disable();
+	AtlasLootAdvancedSearch_Argument2Sub:SetText("Select Option");
+	AtlasLootAdvancedSearch_Argument2Value:Hide();
+	AtlasLootAdvancedSearch_Argument2Value:SetText("");
+	AtlasLootAdvancedSearch_Argument3Sub:Disable();
+	AtlasLootAdvancedSearch_Argument3Sub:SetText("Select Option");
+	AtlasLootAdvancedSearch_Argument3Value:Hide();
+	AtlasLootAdvancedSearch_Argument3Value:SetText("");
 end
 
 function AtlasLoot_AdvancedSearchClose() 
@@ -576,20 +545,195 @@ function AtlasLoot_AdvancedSearchRegister(DropDown, DropDownObject, MenuOption)
 	)
 end
 
+function AtlasLoot_AdvancedSearchArgumentClick(Object, VariableToSet, VariableValue, IsOperator)
+	if IsOperator and VariableValue == "reset" then
+		AdvancedSearchOptions["arg"..VariableToSet.."op"] = "";
+
+		getglobal("AtlasLootAdvancedSearch_Argument"..VariableToSet.."Value"):SetText("");
+		getglobal("AtlasLootAdvancedSearch_Argument"..VariableToSet.."Value"):Hide();
+
+		Object[1]:SetText("Select Option");
+    	Object[2]:Close();
+	elseif IsOperator then
+		AdvancedSearchOptions["arg"..VariableToSet.."op"] = VariableValue;
+
+		getglobal("AtlasLootAdvancedSearch_Argument"..VariableToSet.."Value"):Show();
+
+		Object[1]:SetText(Object[3]);
+    	Object[2]:Close();
+	elseif VariableValue == "reset" then
+		getglobal("AtlasLootAdvancedSearch_Argument"..VariableToSet.."Sub"):SetText("Select Option");
+		getglobal("AtlasLootAdvancedSearch_Argument"..VariableToSet.."Sub"):Disable();
+
+		getglobal("AtlasLootAdvancedSearch_Argument"..VariableToSet.."Value"):SetText("");
+		getglobal("AtlasLootAdvancedSearch_Argument"..VariableToSet.."Value"):Hide();
+
+		AdvancedSearchOptions["arg"..VariableToSet] = "";
+		AdvancedSearchOptions["arg"..VariableToSet.."op"] = "";		
+
+		Object[1]:SetText("Select Option");
+		Object[2]:Close();
+	else
+		getglobal("AtlasLootAdvancedSearch_Argument"..VariableToSet.."Sub"):SetText("Select Option");
+		getglobal("AtlasLootAdvancedSearch_Argument"..VariableToSet.."Sub"):Enable();
+		AdvancedSearchOptions["arg"..VariableToSet.."op"] = "";	
+
+		getglobal("AtlasLootAdvancedSearch_Argument"..VariableToSet.."Value"):SetText("");
+		getglobal("AtlasLootAdvancedSearch_Argument"..VariableToSet.."Value"):Hide();
+		
+		AdvancedSearchOptions["arg"..VariableToSet] = VariableValue;
+		Object[1]:SetText(Object[3]);
+		Object[2]:Close();
+	end
+end
+
+function AtlasLoot_AdvancedSearchArgumentRegister(DropDown, DropDownObject, ArgumentCount, ArgumentMenu)
+    DropDown:Register(DropDownObject,
+        'point', function(parent)
+            return "TOP", "BOTTOM"
+        end,
+		'children', function(level, value)
+			if level == 1 then
+				if AtlasLoot_AdvancedSearchArguments then
+                    for k,v in ipairs(ArgumentMenu) do
+                        --If a link to show a submenu
+                        if (type(v[1]) == "table") and (type(v[1][1]) == "string") then
+                            local checked = false;
+                            if v[1][3] == "Submenu" then
+                                DropDown:AddLine(
+                                    'text', v[1][1],
+                                    'textR', 1,
+                                    'textG', 0.82,
+                                    'textB', 0,
+                                    'func', AtlasLoot_AdvancedSearchArgumentClick,
+                                    'arg1', {DropDownObject, DropDown, v[1][1]},
+                                    'arg2', ArgumentCount,
+                                    'arg3', v[1][2],
+									'arg4', v[1][3],
+                                    'notCheckable', true
+                                )
+                            elseif v[1][1] ~= "" then
+                                DropDown:AddLine(
+                                    'text', v[1][1],
+                                    'textR', 1,
+                                    'textG', 0.82,
+                                    'textB', 0,
+                                    'func', AtlasLoot_AdvancedSearchArgumentClick,
+                                    'arg1', {DropDownObject, DropDown, v[1][1]},
+                                    'arg2', ArgumentCount,
+                                    'arg3', v[1][2],
+									'arg4', v[1][3],
+                                    'notCheckable', true
+                                )
+                            end
+                        else
+                            local lock=0;
+                            --If an entry linked to a subtable
+                            for i,j in pairs(v) do
+                                if lock==0 then
+                                    DropDown:AddLine(
+                                        'text', i,
+                                        'textR', 1,
+                                        'textG', 0.82,
+                                        'textB', 0,
+                                        'hasArrow', true,
+                                        'value', j,
+                                        'notCheckable', true
+                                    )
+                                    lock=1;
+                                end
+                            end
+                        end
+                    end
+                end
+                --Close button
+				DropDown:AddLine(
+					'text', AL["Close Menu"],
+                    'textR', 0,
+                    'textG', 1,
+                    'textB', 1,
+					'func', function() DropDown:Close() end,
+					'notCheckable', true
+				)
+			elseif level == 2 then
+				if value then
+                    for k,v in ipairs(value) do
+                        if type(v) == "table" then
+                            if (type(v[1]) == "string") then
+                                local checked = false;
+                                --If an entry to show a submenu
+                                if v[4] == "Header" then
+                                    DropDown:AddLine(
+                                        'text', v[1],
+                                        'textR', 0.2,
+                                        'textG', 0.82,
+                                        'textB', 0.5,
+                                        'func', AtlasLoot_AdvancedSearchArgumentClick,
+										'arg1', {DropDownObject, DropDown, v[1]},
+										'arg2', ArgumentCount,
+										'arg3', v[2],
+										'arg4', v[3],
+                                        'notCheckable', true
+                                    )
+                                elseif v[3] == "Submenu" then
+                                    DropDown:AddLine(
+                                    'text', v[1],
+                                    'textR', 1,
+                                    'textG', 0.82,
+                                    'textB', 0,
+                                    'func', AtlasLoot_AdvancedSearchArgumentClick,
+                                    'arg1', {DropDownObject, DropDown, v[1]},
+                                    'arg2', ArgumentCount,
+                                    'arg3', v[2],
+									'arg4', v[3],
+                                    'notCheckable', true
+                                )
+                                else
+                                    DropDown:AddLine(
+                                        'text', v[1],
+                                        'textR', 1,
+                                        'textG', 0.82,
+                                        'textB', 0,
+                                        'func', AtlasLoot_AdvancedSearchArgumentClick,
+                                        'arg1', {DropDownObject, DropDown, v[1]},
+                                        'arg2', ArgumentCount,
+                                        'arg3', v[2],
+										'arg4', v[3],
+                                        'notCheckable', true
+                                    )
+                                end
+                            end
+                        end
+                    end
+                end
+                DropDown:AddLine(
+					'text', AL["Close Menu"],
+                    'textR', 0,
+                    'textG', 1,
+                    'textB', 1,
+					'func', function() DropDown:Close() end,
+					'notCheckable', true
+				)
+            end
+		end,
+		'dontHook', true
+	)
+end
 
 
-function AtlasLoot:AdvancedSearch(Text)
+
+function AtlasLoot:AdvancedSearch(Text, arg1, arg2, arg3)
 	if not Text then return end
 	Text = strtrim(Text);
 	if Text == "" then findByName = false else findByName = true end
 	local searchTitleString = Text
 	
+    local dif = 2;
 
-    local dif = AdvancedSearchOptions["difficulty"];
-	searchTitleString = searchTitleString.." "..WHITE..AtlasLoot_Difficulty.Search[dif];
-
-    if dif ~= 2 then
+    if AdvancedSearchOptions["difficulty"] ~= 0 then
         findByDifficulty = true;
+		dif = AdvancedSearchOptions["difficulty"]
+		searchTitleString = searchTitleString.." "..WHITE..AtlasLoot_Difficulty.Search[dif];
     end
 
     if AdvancedSearchOptions["quality"] ~= "" then
@@ -607,7 +751,34 @@ function AtlasLoot:AdvancedSearch(Text)
 		searchTitleString = searchTitleString.." "..WHITE..AtlasLoot_FixText(AdvancedSearchOptions["equip"]);
     end
 
-	
+	local advSearchString = "";
+
+	if AdvancedSearchOptions["arg1"] ~= "" and AdvancedSearchOptions["arg1op"] ~= "" and arg1 ~= "" then
+		advSearchString = advSearchString..AdvancedSearchOptions["arg1"]..AdvancedSearchOptions["arg1op"]..arg1;
+		searchTitleString = searchTitleString.." "..AdvancedSearchOptions["arg1"].." "..AdvancedSearchOptions["arg1op"].." "..arg1;
+	end
+
+	if AdvancedSearchOptions["arg2"] ~= "" and AdvancedSearchOptions["arg2op"] ~= "" and arg2 ~= "" then
+		if advSearchString == "" then
+			advSearchString = advSearchString..AdvancedSearchOptions["arg2"]..AdvancedSearchOptions["arg2op"]..arg2;
+			searchTitleString = searchTitleString.." "..AdvancedSearchOptions["arg2"].." "..AdvancedSearchOptions["arg2op"].." "..arg2;
+		else
+			advSearchString = advSearchString.."&"..AdvancedSearchOptions["arg2"]..AdvancedSearchOptions["arg2op"]..arg2;
+			searchTitleString = searchTitleString.." & "..AdvancedSearchOptions["arg2"].." "..AdvancedSearchOptions["arg2op"].." "..arg2;
+		end
+	end
+
+	if AdvancedSearchOptions["arg3"] ~= "" and AdvancedSearchOptions["arg3op"] ~= "" and arg3 ~= "" then
+		if advSearchString == "" then
+			advSearchString = advSearchString..AdvancedSearchOptions["arg3"]..AdvancedSearchOptions["arg3op"]..arg3;
+			searchTitleString = searchTitleString.." "..AdvancedSearchOptions["arg3"].." "..AdvancedSearchOptions["arg3op"].." "..arg3
+		else
+			advSearchString = advSearchString.."&"..AdvancedSearchOptions["arg3"]..AdvancedSearchOptions["arg3op"]..arg3;
+			searchTitleString = searchTitleString.." & "..AdvancedSearchOptions["arg3"].." "..AdvancedSearchOptions["arg3op"].." "..arg3
+		end
+	end
+
+	advSearchString = string.lower(advSearchString);
 	
 	-- Decide if we need load all modules or just specified ones
 	local allDisabled = not self.db.profile.SearchOn.All;
@@ -807,18 +978,37 @@ function AtlasLoot:AdvancedSearch(Text)
 		end
 		return false;
 	end
+
+	local function IsMinLevelFilter (textValue)
+		local itemLevelFilter = ITEMINFOFILTERS["minlvl"];
+		if string.match(textValue, itemLevelFilter) then
+			return true;
+		end
+		return false;
+	end
+
+	local function IsMinLevelFilterMatch(searchText, minLvl, operator)
+		local searchedMinLevel = tonumber(string.match(searchText, "%d+"));
+		local searchTerm = searchText.gsub(searchText, tostring(searchedMinLevel), "");
+		searchTerm = string.gsub(searchTerm, operator, "");
+		
+		local itemInfoFilter = HaveItemInfoFilter(searchTerm);
+		if itemInfoFilter and minLvl ~= nil and minLvl > 0
+			and IsMinLevelFilter(itemInfoFilter)
+		then
+			if CompareNumbersByOperator(operator, minLvl, searchedMinLevel) then
+				return true;
+			end
+		end
+		return false;
+	end
 	-- EndRegion
-	
-	-- Add item to Search Result
-	local function AddItemToSearchResult(itemId, itemType, itemName, lootPage, dataId)
-        table.insert(AtlasLootCharDB["SearchResult"], { 0, itemId, itemType, itemName, lootPage, "", "", dataId.."|".."\"\"" });
-    end
 	
 	-- Checks for Partial Matching
     local partial = self.db.profile.PartialMatching;
 	
 	-- Checks for Item Filters by searching for an Operator in the search text
-	local operator = HaveOperator(text);
+	local operator = HaveOperator(advSearchString);
 
     for dataID, data in pairs(AtlasLoot_Data) do
         for _, v in ipairs(data) do
@@ -885,10 +1075,10 @@ function AtlasLoot:AdvancedSearch(Text)
 					local stats = GetItemStats("item:"..tostring(_id));
 					
 					 -- Currently only supports "&"
-					local binaryOperator = HaveBinaryOperator(text);
+					local binaryOperator = HaveBinaryOperator(advSearchString);
 					if binaryOperator ~= nil then
 						local searchConditionsMet = true;
-						local searchItems = SplitString(text, binaryOperator);
+						local searchItems = SplitString(advSearchString, binaryOperator);
 						
 						if searchItems then
 							for _, searchTextItem in ipairs(searchItems) do
@@ -899,6 +1089,8 @@ function AtlasLoot:AdvancedSearch(Text)
 										IsItemStatMatch(searchTextItem, stats, localOperator)
 										-- Item Level Filter
 										or IsItemLevelFilterMatch(searchTextItem, itemLvl, itemEquipLoc, localOperator)
+										-- Min Level Filter
+										or IsMinLevelFilterMatch(searchTextItem, minLvl, localOperator)
 									)
 								then
 									searchConditionsMet = false;
@@ -906,25 +1098,20 @@ function AtlasLoot:AdvancedSearch(Text)
 								end
 							end
 							
-							if searchConditionsMet then
-								itemName = "=q"..quality.."="..itemName
-								if AtlasLoot_TableNames[dataID] then lootpage = AtlasLoot_TableNames[dataID][1]; else lootpage = "Argh!"; end
-								table.insert(AtlasLootCharDB["SearchResult"], { 0, _id, v[3], itemName, lootpage.." ("..GREEN..AtlasLoot_Difficulty.Search[dif]..WHITE..")", "", "", dataID.."|".."\"\"", [AtlasLoot_Difficulty.DUPLICATE] = dup, [AtlasLoot_Difficulty.DIF_SEARCH] = dif});
+							if not (searchConditionsMet) then
+								found = false;
 							end
 						end
 					else
 						-- Stat Filter
-						if IsItemStatMatch(text, stats, operator)
+						if not (IsItemStatMatch(advSearchString, stats, operator)
 							-- Item Level Filter
-							or IsItemLevelFilterMatch(text, itemLvl, itemEquipLoc, operator)
+							or IsItemLevelFilterMatch(advSearchString, itemLvl, itemEquipLoc, operator)
+							-- Min Level Filter
+							or IsMinLevelFilterMatch(advSearchString, minLvl, operator))
 						then
-							itemName = "=q"..quality.."="..itemName
-							if AtlasLoot_TableNames[dataID] then lootpage = AtlasLoot_TableNames[dataID][1]; else lootpage = "Argh!"; end
-							table.insert(AtlasLootCharDB["SearchResult"], { 0, _id, v[3], itemName, lootpage.." ("..GREEN..AtlasLoot_Difficulty.Search[dif]..WHITE..")", "", "", dataID.."|".."\"\"", [AtlasLoot_Difficulty.DUPLICATE] = dup, [AtlasLoot_Difficulty.DIF_SEARCH] = dif});
+							found = false;
 						end
-						-- TODO itemQuality
-						-- TODO minLvl
-						-- TODO itemEquipLoc
 					end
 					
 					-- Stat Table Cleanup
@@ -942,10 +1129,20 @@ function AtlasLoot:AdvancedSearch(Text)
                     end
                 end
 
-                if found and operator == nil then
+                if found then
+
+					local difficultyName = AtlasLoot_Difficulty.Search[dif];
+					local tempdif = dif
+					if dif == 4 and data.Type then
+						if string.find(data.Type, "Raid") then
+							difficultyName = "Ascended";
+							tempdif = 99;
+						end
+					end
+
 					itemName = "=q"..quality.."="..itemName
                     if AtlasLoot_TableNames[dataID] then lootpage = AtlasLoot_TableNames[dataID][1]; else lootpage = "Argh!"; end
-                    table.insert(AtlasLootCharDB["SearchResult"], { 0, _id, v[3], itemName, lootpage.." ("..GREEN..AtlasLoot_Difficulty.Search[dif]..WHITE..")", "", "", dataID.."|".."\"\"", [AtlasLoot_Difficulty.DUPLICATE] = dup, [AtlasLoot_Difficulty.DIF_SEARCH] = dif});
+                    table.insert(AtlasLootCharDB["SearchResult"], { 0, _id, v[3], itemName, lootpage.." ("..GREEN..difficultyName..DEFAULT..")", "", "", dataID.."|".."\"\"", [AtlasLoot_Difficulty.DUPLICATE] = dup, [AtlasLoot_Difficulty.DIF_SEARCH] = tempdif});
                 end
 
             --[[elseif (v[2] ~= nil) and (v[2] ~= "") and (string.sub(v[2], 1, 1) == "s") then 
