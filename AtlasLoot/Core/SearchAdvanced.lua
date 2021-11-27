@@ -847,7 +847,7 @@ function AtlasLoot:AdvancedSearch(Text, arg1, arg2, arg3)
 	end
 	
 	local function SplitString(str, delimiter)
-		result = {};
+		local result = {};
 		for match in (str..delimiter):gmatch("(.-)"..delimiter) do
 			table.insert(result, match);
 		end
@@ -1138,7 +1138,13 @@ function AtlasLoot:AdvancedSearch(Text, arg1, arg2, arg3)
                 
                 if findByName and found then
                     if partial then
-                        found = string.find(string.lower(itemName), text);
+						local res = SplitString(text, " ");
+						for _, t in ipairs(res) do
+                        	found = string.find(string.lower(itemName), t);
+							if not found then
+								break;
+							end
+						end
                     else
                         found = string.lower(itemName) == text;
                     end

@@ -468,7 +468,13 @@ function AtlasLoot:Search(Text)
 				
                 local found;
                 if partial then
-                    found = string.find(string.lower(itemName), text);
+                    local res = SplitString(text, " ");
+						for _, t in ipairs(res) do
+                        	found = string.find(string.lower(itemName), t);
+							if not found then
+								break;
+							end
+						end
                 else
                     found = string.lower(itemName) == text;
                 end
