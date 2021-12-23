@@ -230,6 +230,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 24, 20884, "", "=q3=Qiraji Magisterial Ring", "#m3#", "", "9.65%"};
 		{ 25, 20888, "", "=q3=Qiraji Ceremonial Ring", "#m3#", "", "8.53%"};
 		Prev = "AQ20Ayamiss";
+		Next = "AQ20Trash";
 		Type = "ClassicRaid";
 	};
 
@@ -253,6 +254,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 22, 20860, "", "=q2=Silver Scarab", "=ds=#e15#", "", "1.82%"};
 		{ 23, 20858, "", "=q2=Stone Scarab", "=ds=#e15#", "", "0.86%"};
 		{ 25, 21761, "", "=q1=Scarab Coffer Key", "=ds=#e9#", "", "7.27%"};
+		Prev = "AQ20Ossirian";
 		Type = "ClassicRaid";
 	};
 
@@ -530,6 +532,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 27, 22631, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c5#", "", "", [AtlasLoot_Difficulty.DUPLICATE] = "(Priest)" },
 		{ 28, 22630, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c8#", "", "", [AtlasLoot_Difficulty.DUPLICATE] = "(Warlock)" },
 		Prev = "AQ40Ouro";
+		Next = "AQ40Trash1";
 		Type = "ClassicRaid";
 	};
 
@@ -547,6 +550,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 17, 21324, "", "=q3=Yellow Qiraji Resonating Crystal", "=ds=#e12#", "", "12.15%"};
 		{ 18, 21323, "", "=q3=Green Qiraji Resonating Crystal", "=ds=#e12#", "", "11.62%"};
 		{ 19, 21321, "", "=q3=Red Qiraji Resonating Crystal", "=ds=#e12#", "", "1.39%"};
+		Prev = "AQ40CThun";
 		Next = "AQ40Trash2";
 		Type = "ClassicRaid";
 	};
@@ -1517,7 +1521,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 16, 2522353, "", "=q4=Molten Helmet", "=q1=#m1# =ds=#c4#, #c6#, #c7#", "", "33.33%"};
 		{ 17, 2522360, "", "=q4=Molten Headpiece", "=q1=#m1# =ds=#c1#, #c5#, #c9#", "", "33.33%"};
 		{ 18, 2522367, "", "=q4=Molten Circlet", "=q1=#m1# =ds=#c2#, #c3#, #c8#", "", "33.33%"};
-		{ 20, 18564, "", "=q5=Bindings of the Windseeker", "=ds=#m3#, =q1=#m9#", "", "3.74%"};
+		{ 20, 18564, "", "=q5=Bindings of the Windseeker", "=ds=#m3#, =q1=#m9#", "", "3.74%", [AtlasLoot_Difficulty.DUPLICATE] = "(Right)"};
 		{ 21, 19019, "", "=q5=Thunderfury, Blessed Blade of the Windseeker", "=q1=#m4#: =ds=#h1#, #w10#"};
 		{ 22, 17782, "", "=q5=Talisman of Binding Shard", "=ds=#s2#", "", ""};        
 		{ 23, 11879, "", "=q5=Medallion of Binding Shard", "=ds=#s2#", "", ""}; 
@@ -1562,7 +1566,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 16, 2522354, "", "=q4=Molten Pauldrons", "=q1=#m1# =ds=#c4#, #c6#, #c7#", "", "33.33%"};
 		{ 17, 2522361, "", "=q4=Molten Spaulders", "=q1=#m1# =ds=#c1#, #c5#, #c9#", "", "33.33%"};
 		{ 18, 2522368, "", "=q4=Molten Shoulderpads", "=q1=#m1# =ds=#c2#, #c3#, #c8#", "", "33.33%"};
-		{ 20, 18563, "", "=q5=Bindings of the Windseeker", " =ds=#m3#, =q1=#m10#", "", "3.78%"};
+		{ 20, 18563, "", "=q5=Bindings of the Windseeker", " =ds=#m3#, =q1=#m10#", "", "3.78%", [AtlasLoot_Difficulty.DUPLICATE] = "(Left)"};
 		{ 21, 19019, "", "=q5=Thunderfury, Blessed Blade of the Windseeker", "=q1=#m4#: =ds=#h1#, #w10#"};
 		Prev = "MCShazzrah";
 		Next = "MCGolemagg";
