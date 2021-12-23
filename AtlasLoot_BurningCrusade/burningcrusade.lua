@@ -665,8 +665,8 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 6, 32483, "", "=q4=The Skull of Gul'dan", "=ds=#s14#", "", "16%"};
 		{ 7, 32496, "", "=q4=Memento of Tyrande", "=ds=#s14#", "", "15%"};
 		{ 9, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
-		{ 11, 32837, "", "=q5=Warglaive of Azzinoth", "=ds=#h3#, #w10#, =q1=#m1# =ds=#c9#, #c6#", "", "4%", "(MainHand)"};
-		{ 12, 32838, "", "=q5=Warglaive of Azzinoth", "=ds=#h4#, #w10#, =q1=#m1# =ds=#c9#, #c6#", "", "4%", "(OffHand)"};
+		{ 11, 32837, "", "=q5=Warglaive of Azzinoth", "=ds=#h3#, #w10#, =q1=#m1# =ds=#c9#, #c6#", "", "4%", [AtlasLoot_Difficulty.DUPLICATE] = "(Mainhand)"};
+		{ 12, 32838, "", "=q5=Warglaive of Azzinoth", "=ds=#h4#, #w10#, =q1=#m1# =ds=#c9#, #c6#", "", "4%", [AtlasLoot_Difficulty.DUPLICATE] = "(Offhand)"};
 		{ 16, 31089, "", "=q4=Chestguard of the Forgotten Conqueror", "=q1=#m1# =ds=#c4#, #c5#, #c8#", "", "78%"};
 		{ 17, 31091, "", "=q4=Chestguard of the Forgotten Protector", "=q1=#m1# =ds=#c9#, #c2#, #c7#", "", "79%"};
 		{ 18, 31090, "", "=q4=Chestguard of the Forgotten Vanquisher", "=q1=#m1# =ds=#c6#, #c3#, #c1#", "", "78%"};
@@ -1512,6 +1512,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 23, 30302, "", "=q4=Pattern: Belt of Deep Shadow", "=ds=#p7# (375)", "", "1%"};
 		{ 25, 30183, "", "=q4=Nether Vortex", "=ds=#e8#", "", "75%"};
 		{ 27, 32897, "", "=q2=Mark of the Illidari", "=ds=#m20#", "", "27%"};
+		{ 29, 44831, "", "=q4=Mmrgrg glm Nuubs", "=ds=#s15#", "", "19%"};
 		Type = "BCRaid";
 	};
 
@@ -2927,7 +2928,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 2, 29918, "", "=q4=Mindstorm Wristbands", "=ds=#s8#, #a1#", "", "22%"};
 		{ 3, 29947, "", "=q4=Gloves of the Searing Grip", "=ds=#s9#, #a2#", "", "23%"};
 		{ 4, 29921, "", "=q4=Fire Crest Breastplate", "=ds=#s5#, #a3#", "", "20%"};
-		{ 5, 29922, "", "=q4=Band of Al'Ar", "=ds=#s13#", "", "21%"};
+		{ 5, 29922, "", "=q4=Band of Al'ar", "=ds=#s13#", "", "21%"};
 		{ 6, 29920, "", "=q4=Phoenix-Ring of Rebirth", "=ds=#s13#", "", "21%"};
 		{ 7, 30448, "", "=q4=Talon of Al'ar", "=ds=#s14#, =q1=#m1# =ds=#c2#", "", "22%"};
 		{ 8, 30447, "", "=q4=Tome of Fiery Redemption", "=ds=#s14#, =q1=#m1# =ds=#c4#", "", "21%"};
@@ -2948,7 +2949,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 2, 29984, "", "=q4=Girdle of Zaetar", "=ds=#s10#, #a2#", "", "13%"};
 		{ 3, 29985, "", "=q4=Void Reaver Greaves", "=ds=#s11#, #a3#", "", "14%"};
 		{ 4, 29983, "", "=q4=Fel-Steel Warhelm", "=ds=#s1#, #a4#", "", "12%"};
-		{ 5, 32515, "", "=q4=Wristgaurds of Determination", "=ds=#s8#, #a4#", "", "13%"};
+		{ 5, 32515, "", "=q4=Wristguards of Determination", "=ds=#s8#, #a4#", "", "13%"};
 		{ 6, 30619, "", "=q4=Fel Reaver's Piston", "=ds=#s14#", "", "13%"};
 		{ 7, 30450, "", "=q4=Warp-Spring Coil", "=ds=#s14#, =q1=#m1# =ds=#c6#", "", "12%"};
 		{ 16, 30248, "", "=q4=Pauldrons of the Vanquished Champion", "=q1=#m1# =ds=#c4#, #c6#, #c7#", "", "61%"};
@@ -2974,7 +2975,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 16, 30446, "", "=q4=Solarian's Sapphire", "=ds=#s14#, =q1=#m1# =ds=#c9#", "", "21%"};
 		{ 17, 30449, "", "=q4=Void Star Talisman", "=ds=#s14#, =q1=#m1# =ds=#c8#", "", "22%"};
 		{ 18, 29962, "", "=q4=Heartrazor", "=ds=#h1#, #w4#", "", "23%"};
-		{ 19, 29981, "", "=q4=Etherium Life-Staff", "=ds=#h2#, #w9#", "", "21%"};
+		{ 19, 29981, "", "=q4=Ethereum Life-Staff", "=ds=#w9#", "", "21%"};
 		{ 20, 29982, "", "=q4=Wand of the Forgotten Star", "=ds=#w12#", "", "18%"};
 		{ 22, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		Prev = "TKEyeVoidReaver";
@@ -2989,7 +2990,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 2, 29989, "", "=q4=Sunshower Light Cloak", "=ds=#s4#", "", "12%"};
 		{ 3, 29994, "", "=q4=Thalassian Wildercloak", "=ds=#s4#", "", "14%"};
 		{ 4, 29990, "", "=q4=Crown of the Sun", "=ds=#s1#, #a1#", "", "14%"};
-		{ 5, 29987, "", "=q4=Gauntlets of the Sun-King", "=ds=#s9#, #a1#", "", "14%"};
+		{ 5, 29987, "", "=q4=Gauntlets of the Sun King", "=ds=#s9#, #a1#", "", "14%"};
 		{ 6, 29995, "", "=q4=Leggings of Murderous Intent", "=ds=#s11#, #a2#", "", "15%"};
 		{ 7, 29991, "", "=q4=Sunhawk Leggings", "=ds=#s11#, #a3#", "", "13%"};
 		{ 8, 29998, "", "=q4=Royal Gauntlets of Silvermoon", "=ds=#s9#, #a4#", "", "12%"};
@@ -3040,6 +3041,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 23, 30302, "", "=q4=Pattern: Belt of Deep Shadow", "=ds=#p7# (375)", "", "1%"};
 		{ 25, 30183, "", "=q4=Nether Vortex", "=ds=#e8#", "", "75%"};
 		{ 27, 32897, "", "=q2=Mark of the Illidari", "=ds=#m20#", "", "27%"};
+		{ 29, 2032902, "", "=q4=Bottled Nethergron Extract", "=ds=#s14#", "", "??%"};
 		Type = "BCRaid";
 	};
 
