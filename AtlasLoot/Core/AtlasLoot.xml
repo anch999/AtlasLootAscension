@@ -2276,7 +2276,7 @@
 						AtlasLootAdvancedSearch_Argument1Value:ClearFocus();
 						AtlasLootAdvancedSearch_Argument2Value:ClearFocus();
 						AtlasLootAdvancedSearch_Argument3Value:ClearFocus();
-						AtlasLoot:AdvancedSearch(AtlasLootAdvancedSearch_SearchBox:GetText(), AtlasLootAdvancedSearch_Argument1Value:GetText(), AtlasLootAdvancedSearch_Argument2Value:GetText(), AtlasLootAdvancedSearch_Argument3Value:GetText());
+						AtlasLoot:AdvancedSearch(AtlasLootAdvancedSearch_SearchBox:GetText(), {AtlasLootAdvancedSearch_Argument1Value:GetText(), AtlasLootAdvancedSearch_Argument2Value:GetText(), AtlasLootAdvancedSearch_Argument3Value:GetText()});
 					</OnClick>
 				</Scripts>
 			</Button>

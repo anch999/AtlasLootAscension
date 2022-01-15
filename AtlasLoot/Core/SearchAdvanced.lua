@@ -26,6 +26,13 @@ local BLUE = "|cff0070dd";
 local ORANGE = "|cffFF8400";
 local DEFAULT = "|cffFFd200";
 
+AdvSearchSubMenuEnabled = 0;
+AdvSearchSubMenuText = "";
+AdvSearchSubMenu2Enabled = 0;
+AdvSearchSubMenuText = "";
+
+AdvSearchSetup = false;
+
 AtlasLoot_FrameMenuList = {
     ["EquipSubMenu"] = {AtlasLoot_EquipSubMenu, "AtlasLootAdvancedSearch_EquipSub", "Select Option", "equipType", "", "AtlasLootAdvancedSearch_WeaponSub"};
     ["MythicSubMenu"] = {AtlasLoot_DiffSubMenu, "AtlasLootAdvancedSearch_MythicSub", "Mythic+ 1", "difficulty", 5};
@@ -48,121 +55,124 @@ AtlasLoot_AdvancedSearchMenus = {
         },
         [5] = {
             {"Bloodforged", "difficulty", 1, "MythicSubMenu", "Disable"},
-        }, 
+        },
     };
 
     ["MythicPlus"] = {
 
     };
 
-    ["Quality"] = { 
+    ["Quality"] = {
         [1] = {
-            {AtlasLoot_FixText("=q0=").."Poor", "quality", "=q0="}, 
-        }, 
+            {AtlasLoot_FixText("=q0=").."Poor", "quality", "poor"},
+        },
         [2] = {
-            {AtlasLoot_FixText("=q1=").."Normal", "quality", "=q1="}, 
-        }, 
+            {AtlasLoot_FixText("=q1=").."Normal", "quality", "normal"},
+        },
         [3] = {
-            {AtlasLoot_FixText("=q2=").."Uncommon", "quality", "=q2="}, 
-        }, 
+            {AtlasLoot_FixText("=q2=").."Uncommon", "quality", "uncommon"},
+        },
         [4] = {
-            {AtlasLoot_FixText("=q3=").."Rare", "quality", "=q3="}, 
-        }, 
+            {AtlasLoot_FixText("=q3=").."Rare", "quality", "rare"},
+        },
         [5] = {
-            {AtlasLoot_FixText("=q4=").."Epic", "quality", "=q4="}, 
-        }, 
+            {AtlasLoot_FixText("=q4=").."Epic", "quality", "epic"},
+        },
         [6] = {
-            {AtlasLoot_FixText("=q5=").."Legendary", "quality", "=q5="}, 
-        },  
+            {AtlasLoot_FixText("=q5=").."Legendary", "quality", "legendary"},
+        },
     };
 
-    ["Equip"] = { 
+    ["Equip"] = {
         [1] = {
-            {"Head", "equip", "#s1#", "EquipSubMenu", "ArmorType"}, 
-        }, 
+            {"Head", "equip", "head", "EquipSubMenu", "ArmorType"},
+        },
         [2] = {
-            {"Shoulder", "equip", "#s3#", "EquipSubMenu", "ArmorType"}, 
-        }, 
+            {"Shoulder", "equip", "shoulder", "EquipSubMenu", "ArmorType"},
+        },
         [3] = {
-            {"Chest", "equip", "#s5#", "EquipSubMenu", "ArmorType"}, 
-        }, 
+            {"Chest", "equip", "chest", "EquipSubMenu", "ArmorType"},
+        },
         [4] = {
-            {"Wrist", "equip", "#s8#", "EquipSubMenu", "ArmorType"}, 
-        }, 
+            {"Wrist", "equip", "wrist", "EquipSubMenu", "ArmorType"},
+        },
         [5] = {
-            {"Hands", "equip", "#s9#", "EquipSubMenu", "ArmorType"}, 
-        }, 
+            {"Hands", "equip", "hands", "EquipSubMenu", "ArmorType"},
+        },
         [6] = {
-            {"Waist", "equip", "#s10#", "EquipSubMenu", "ArmorType"}, 
-        }, 
+            {"Waist", "equip", "waist", "EquipSubMenu", "ArmorType"},
+        },
         [7] = {
-            {"Legs", "equip", "#s11#", "EquipSubMenu", "ArmorType"}, 
+            {"Legs", "equip", "legs", "EquipSubMenu", "ArmorType"},
         },
         [8] = {
-            {"Feet", "equip", "#s12#", "EquipSubMenu", "ArmorType"}, 
+            {"Feet", "equip", "feet", "EquipSubMenu", "ArmorType"},
         },
         [9] = {
-            {"Back", "equip", "#s4#", "EquipSubMenu", "Disable"}, 
+            {"Back", "equip", "back", "EquipSubMenu", "Disable"},
         },
         [10] = {
-            {"Necklace", "equip", "#s2#", "EquipSubMenu", "Disable"}, 
+            {"Necklace", "equip", "neck", "EquipSubMenu", "Disable"},
         },
         [11] = {
-            {"Ring", "equip", "#s13#", "EquipSubMenu", "Disable"}, 
+            {"Ring", "equip", "ring", "EquipSubMenu", "Disable"},
         },
         [12] = {
-            {"Trinket", "equip", "#s14#", "EquipSubMenu", "Disable"}, 
+            {"Trinket", "equip", "trinket", "EquipSubMenu", "Disable"},
         },
         [13] = {
-            {"Weapon/Shield", "equip", "#w", "EquipSubMenu", "WeaponEquip"}, 
+            {"Weapon/Shield", "equip", "#w", "EquipSubMenu", "WeaponEquip"},
         },
-        [14] = {
-            {"Relic", "equip", "#s16#", "EquipSubMenu", "RelicType"}, 
+		[14] = {
+			{"Held in Off-Hand", "equip", "holdable", "EquipSubMenu", "Disable"},
+		},
+        [15] = {
+            {"Relic", "equip", "relic", "EquipSubMenu", "RelicType"},
         },
     };
 
     ["ArmorType"] = {
         [1] = {
-            {"Cloth", "equipType", "#a1#"}, 
-        }, 
+            {"Cloth", "equipType", "cloth"},
+        },
         [2] = {
-            {"Leather", "equipType", "#a2#"}, 
-        }, 
+            {"Leather", "equipType", "leather"},
+        },
         [3] = {
-            {"Mail", "equipType", "#a3#"}, 
-        }, 
+            {"Mail", "equipType", "mail"},
+        },
         [4] = {
-            {"Plate", "equipType", "#a4#"}, 
+            {"Plate", "equipType", "plate"},
         },
     };
 
     ["RelicType"] = {
         [1] = {
-            {"Idols", "equipType", "#w14#"}, 
-        }, 
+            {"Idols", "equipType", "idol"},
+        },
         [2] = {
-            {"Libram", "equipType", "#w16#"}, 
-        }, 
+            {"Libram", "equipType", "libram"},
+        },
         [3] = {
-            {"Totem", "equipType", "#w15#"}, 
-        }, 
+            {"Totem", "equipType", "totem"},
+        },
         [4] = {
-            {"Sigil", "equipType", "#w21#"}, 
+            {"Sigil", "equipType", "sigil"},
         },
     };
 
 	["WeaponEquip"] = {
 		[1] = {
-            {"One-Hand", "equip", "#h1#", "WeaponSubMenu", "WeaponType"}, 
-        }, 
+            {"One-Hand", "equip", "weapon", "WeaponSubMenu", "WeaponType"},
+        },
         [2] = {
-            {"Two-Hand", "equip", "#h2#", "WeaponSubMenu", "WeaponType"}, 
-        }, 
+            {"Two-Hand", "equip", "2hweapon", "WeaponSubMenu", "WeaponType"},
+        },
         [3] = {
-            {"Main Hand", "equip", "#h3#", "WeaponSubMenu", "WeaponType"}, 
-        }, 
+            {"Main Hand", "equip", "mainhand", "WeaponSubMenu", "WeaponType"},
+        },
         [4] = {
-            {"Off Hand", "equip", "#h4#", "WeaponSubMenu", "WeaponType"}, 
+            {"Off Hand", "equip", "offhand", "WeaponSubMenu", "WeaponType"},
         },
 		[5] = {
 			{"Ranged", "equip", "ranged", "WeaponSubMenu", "WeaponType"},
@@ -208,7 +218,7 @@ AtlasLoot_AdvancedSearchMenus = {
 		},
 		[13] = {
 			{"Shield", "equipType", "#w8#"}
-		},	
+		},
 	};
 }
 
@@ -302,12 +312,6 @@ AtlasLoot_AdvancedSearchArguments = {
 	}
 }
 
-local findByQuality = false;
-local findByEquip = false;
-local findByEquipType = false;
-local findByName = false;
-local findByDifficulty = false;
-
 AdvancedSearchOptions = {
     ["quality"] = "",
     ["equip"] = "",
@@ -321,26 +325,8 @@ AdvancedSearchOptions = {
 	["arg3op"] = "",
 }
 
-local AtlasLoot_AdvancedSearchQuality = {
-	["=q0="] = "Poor",
-	["=q1="] = "Common",
-	["=q2="] = "Uncoom",
-	["=q3="] = "Rare",
-	["=q4="] = "Epic",
-	["=q5="] = "Legendary",
-	["=q6="] = "Artifact",
-	["=q7="] = "Heirloom"
-};
-
-function AtlasLoot_AdvancedSearchShow()
-	if (AtlasLootAdvancedSearch:IsVisible()) then
-		AtlasLoot_AdvancedSearchClose();
-		return;
-	end
-
-    pFrame = { "TOPLEFT", "AtlasLootDefaultFrame_LootBackground", "TOPLEFT", "2", "-2" };
-
-    AtlasLoot_AdvancedSearchRegister(AtlasLoot_QualityMenu, AtlasLootAdvancedSearch_Quality, AtlasLoot_AdvancedSearchMenus["Quality"]);
+function AtlasLoot_AdvancedSearchSetup()
+	AtlasLoot_AdvancedSearchRegister(AtlasLoot_QualityMenu, AtlasLootAdvancedSearch_Quality, AtlasLoot_AdvancedSearchMenus["Quality"]);
     AtlasLoot_AdvancedSearchRegister(AtlasLoot_EquipMenu, AtlasLootAdvancedSearch_Equip, AtlasLoot_AdvancedSearchMenus["Equip"]);
     AtlasLoot_AdvancedSearchRegister(AtlasLoot_DifficultyMenu, AtlasLootAdvancedSearch_Difficulty, AtlasLoot_AdvancedSearchMenus["Difficulty"]);
 
@@ -352,24 +338,52 @@ function AtlasLoot_AdvancedSearchShow()
 	AtlasLoot_AdvancedSearchArgumentRegister(AtlasLoot_Argument2SubMenu, AtlasLootAdvancedSearch_Argument2Sub, "2", AtlasLoot_AdvancedSearchArguments["Operators"]);
 	AtlasLoot_AdvancedSearchArgumentRegister(AtlasLoot_Argument3SubMenu, AtlasLootAdvancedSearch_Argument3Sub, "3", AtlasLoot_AdvancedSearchArguments["Operators"]);
 
+	--Setup Mythic+ dropdown options;
+    for i = 1, 30, 1 do
+        AtlasLoot_AdvancedSearchMenus["MythicPlus"][i] = {
+            {"Mythic+ "..i, "difficulty", i + 4};
+        }
+    end
+
+	AdvSearchSetup = true;
+end
+
+function AtlasLoot_AdvancedSearchShow()
+	if (AtlasLootAdvancedSearch:IsVisible()) then
+		AtlasLoot_AdvancedSearchClose();
+		return;
+	end
+
+    pFrame = { "TOPLEFT", "AtlasLootDefaultFrame_LootBackground", "TOPLEFT", "2", "-2" };
+
+	if not (AdvSearchSetup) then AtlasLoot_AdvancedSearchSetup() end
+
     --Hide all elements that could be in the AtlasTable
     getglobal("AtlasLootItemsFrame_NEXT"):Hide();
     getglobal("AtlasLootItemsFrame_PREV"):Hide();
 	getglobal("AtlasLootItemsFrame_BACK"):Hide();
 
-    AtlasLootDefaultFrame_SubMenu2:Disable();
-    AtlasLootDefaultFrame_SelectedTable2:SetText("");
-    AtlasLootDefaultFrame_SelectedTable2:Hide();
+	if AtlasLootDefaultFrame_SubMenu2:IsEnabled() then
+		AdvSearchSubMenu2Enabled = 1;
+		AdvSearchSubMenu2Text = AtlasLootDefaultFrame_SelectedTable2:GetText();
+		AtlasLootDefaultFrame_SubMenu2:Disable();
+		AtlasLootDefaultFrame_SelectedTable2:SetText("");
+    	AtlasLootDefaultFrame_SelectedTable2:Hide();
+	end
 
-    AtlasLootDefaultFrame_SubMenu:Disable();
-    AtlasLootDefaultFrame_SelectedTable:SetText("");
+	if AtlasLootDefaultFrame_SubMenu:IsEnabled() then
+		AdvSearchSubMenuEnabled = 1;
+		AdvSearchSubMenuText = AtlasLootDefaultFrame_SelectedTable:GetText();
+		AtlasLootDefaultFrame_SubMenu:Disable();
+		AtlasLootDefaultFrame_SelectedTable:SetText("");
+	end
 
 	AtlasLootServerQueryButton:Hide();
 
     --Ditch the Quicklook selector
     AtlasLoot_QuickLooks:Hide();
     AtlasLootQuickLooksButton:Hide();
-	
+
 	-- Hide the Filter Check-Box
 	AtlasLootFilterCheck:Hide();
 
@@ -380,13 +394,6 @@ function AtlasLoot_AdvancedSearchShow()
         getglobal("AtlasLootItem_"..i).itemID = 0;
         getglobal("AtlasLootItem_"..i).spellitemID = 0;
 	end
-
-    --Setup Mythic+ dropdown options;
-    for i = 1, 20, 1 do
-        AtlasLoot_AdvancedSearchMenus["MythicPlus"][i] = {
-            {"Mythic+ "..i, "difficulty", i + 4};
-        }
-    end
 
 	--Reset Search options
 	AtlasLoot_AdvancedSearchReset();
@@ -400,8 +407,29 @@ function AtlasLoot_AdvancedSearchShow()
     AtlasLootAdvancedSearch:Show();
 end
 
+function AtlasLoot_AdvancedSearchClose()
+	AtlasLootAdvancedSearch:Hide();
+	AtlasLootServerQueryButton:Show();
+
+	if AdvSearchSubMenu2Enabled then
+		AtlasLootDefaultFrame_SubMenu2:Enable();
+		AtlasLootDefaultFrame_SelectedTable2:SetText(AdvSearchSubMenu2Text);
+	end
+
+	if AdvSearchSubMenuEnabled then
+		AtlasLootDefaultFrame_SubMenu:Enable();
+		AtlasLootDefaultFrame_SelectedTable:SetText(AdvSearchSubMenuText);
+	end
+
+	AdvSearchSubMenuEnabled = 0;
+	AdvSearchSubMenu2Enabled = 0;
+
+	if (SearchPrevData[1] ~= "") then
+		AtlasLoot_ShowItemsFrame(SearchPrevData[1], SearchPrevData[2], SearchPrevData[3], SearchPrevData[4]);
+	end
+end
+
 function AtlasLoot_AdvancedSearchReset()
-	AdvancedSearchOptions = { }
 	AdvancedSearchOptions = {
 		["quality"] = "",
 		["equip"] = "",
@@ -415,14 +443,9 @@ function AtlasLoot_AdvancedSearchReset()
 		["arg3op"] = "",
 	}
 
-	findByQuality = false;
-	findByEquip = false;
-	findByEquipType = false;
-	findByName = false;
-	findByDifficulty = false;
-
 	AtlasLootAdvancedSearch_Quality:SetText("Select Quality");
 	AtlasLootAdvancedSearch_Equip:SetText("Select Item Type");
+	AtlasLootAdvancedSearch_Difficulty:Disable();
 	AtlasLootAdvancedSearch_Difficulty:SetText("Select Difficulty");
 	AtlasLootAdvancedSearch_Argument1:SetText("Select Option");
 	AtlasLootAdvancedSearch_Argument2:SetText("Select Option");
@@ -449,14 +472,7 @@ function AtlasLoot_AdvancedSearchReset()
 	AtlasLootAdvancedSearch_Argument3Value:SetText("");
 end
 
-function AtlasLoot_AdvancedSearchClose() 
-	AtlasLootAdvancedSearch:Hide();
-	AtlasLootServerQueryButton:Show();
 
-	if (SearchPrevData[1] ~= "") then
-		AtlasLoot_ShowItemsFrame(SearchPrevData[1], SearchPrevData[2], SearchPrevData[3], SearchPrevData[4]);
-	end
-end
 
 function AtlasLoot_AdvancedSearchMenuClick(Object, VariableToSet, VariableValue, ChildMenu, ChildMenuRegister)
 	--Setups child menus and sets search options to default
@@ -468,7 +484,7 @@ function AtlasLoot_AdvancedSearchMenuClick(Object, VariableToSet, VariableValue,
 			if(AtlasLoot_FrameMenuList[ChildMenu][6]) then
 				getglobal(AtlasLoot_FrameMenuList[ChildMenu][6]):Disable();
 			end
-        else 
+        else
             AtlasLoot_AdvancedSearchRegister(AtlasLoot_FrameMenuList[ChildMenu][1], getglobal(AtlasLoot_FrameMenuList[ChildMenu][2]), AtlasLoot_AdvancedSearchMenus[ChildMenuRegister]);
 			AdvancedSearchOptions[AtlasLoot_FrameMenuList[ChildMenu][4]] = AtlasLoot_FrameMenuList[ChildMenu][5];
             getglobal(AtlasLoot_FrameMenuList[ChildMenu][2]):Enable();
@@ -569,18 +585,18 @@ function AtlasLoot_AdvancedSearchArgumentClick(Object, VariableToSet, VariableVa
 		getglobal("AtlasLootAdvancedSearch_Argument"..VariableToSet.."Value"):Hide();
 
 		AdvancedSearchOptions["arg"..VariableToSet] = "";
-		AdvancedSearchOptions["arg"..VariableToSet.."op"] = "";		
+		AdvancedSearchOptions["arg"..VariableToSet.."op"] = "";
 
 		Object[1]:SetText("Select Option");
 		Object[2]:Close();
 	else
 		getglobal("AtlasLootAdvancedSearch_Argument"..VariableToSet.."Sub"):SetText("Select Option");
 		getglobal("AtlasLootAdvancedSearch_Argument"..VariableToSet.."Sub"):Enable();
-		AdvancedSearchOptions["arg"..VariableToSet.."op"] = "";	
+		AdvancedSearchOptions["arg"..VariableToSet.."op"] = "";
 
 		getglobal("AtlasLootAdvancedSearch_Argument"..VariableToSet.."Value"):SetText("");
 		getglobal("AtlasLootAdvancedSearch_Argument"..VariableToSet.."Value"):Hide();
-		
+
 		AdvancedSearchOptions["arg"..VariableToSet] = VariableValue;
 		Object[1]:SetText(Object[3]);
 		Object[2]:Close();
@@ -720,490 +736,42 @@ function AtlasLoot_AdvancedSearchArgumentRegister(DropDown, DropDownObject, Argu
 	)
 end
 
-
-
-function AtlasLoot:AdvancedSearch(Text, arg1, arg2, arg3)
+function AtlasLoot:AdvancedSearch(Text, args)
 	if not Text then return end
 	Text = strtrim(Text);
-	if Text == "" then findByName = false else findByName = true end
-	local searchTitleString = Text
-	
-    local dif = 2;
+	local advSearchString = Text or "";
 
-    if AdvancedSearchOptions["difficulty"] ~= 0 then
-        findByDifficulty = true;
-		dif = AdvancedSearchOptions["difficulty"]
-		searchTitleString = searchTitleString.." "..WHITE..AtlasLoot_Difficulty.Search[dif];
-    end
+	local function AppendSearchString(toAppend, str)
+		if toAppend ~= "" then
+			toAppend = toAppend.."&"..str;
+			return toAppend;
+		end
+
+		return str;
+	end
 
     if AdvancedSearchOptions["quality"] ~= "" then
-        findByQuality = true;
-		searchTitleString = searchTitleString.." "..AtlasLoot_FixText(AdvancedSearchOptions["quality"])..AtlasLoot_AdvancedSearchQuality[AdvancedSearchOptions["quality"]];
+		advSearchString = AppendSearchString(advSearchString, "quality="..AdvancedSearchOptions["quality"]);
     end
 
 	if AdvancedSearchOptions["equipType"] ~= "" then
-        findByEquipType = true;
-		searchTitleString = searchTitleString.." "..WHITE..AtlasLoot_FixText(AdvancedSearchOptions["equipType"]);
+		--advSearchString = AppendSearchString(advSearchString, AtlasLoot_FixText(AdvancedSearchOptions["equipType"]));
     end
 
 	if AdvancedSearchOptions["equip"] ~= "" then
-        findByEquip = true;
-		searchTitleString = searchTitleString.." "..WHITE..AtlasLoot_FixText(AdvancedSearchOptions["equip"]);
+		advSearchString = AppendSearchString(advSearchString, "slot="..AdvancedSearchOptions["equip"]);
     end
 
-	local advSearchString = "";
-
-	if AdvancedSearchOptions["arg1"] ~= "" and AdvancedSearchOptions["arg1op"] == "" then
-		AdvancedSearchOptions["arg1op"] = ">"
-		arg1 = "0";
-	end
-
-	if AdvancedSearchOptions["arg2"] ~= "" and AdvancedSearchOptions["arg2op"] == "" then
-		AdvancedSearchOptions["arg2op"] = ">"
-		arg2 = "0";
-	end
-
-	if AdvancedSearchOptions["arg3"] ~= "" and AdvancedSearchOptions["arg3op"] == "" then
-		AdvancedSearchOptions["arg3op"] = ">"
-		arg3 = "0";
-	end
-
-	if AdvancedSearchOptions["arg1"] ~= "" and AdvancedSearchOptions["arg1op"] ~= "" and arg1 ~= "" then
-		advSearchString = advSearchString..AdvancedSearchOptions["arg1"]..AdvancedSearchOptions["arg1op"]..arg1;
-		searchTitleString = searchTitleString.." "..AdvancedSearchOptions["arg1"].." "..AdvancedSearchOptions["arg1op"].." "..arg1;
-	end
-
-	if AdvancedSearchOptions["arg2"] ~= "" and AdvancedSearchOptions["arg2op"] ~= "" and arg2 ~= "" then
-		if advSearchString == "" then
-			advSearchString = advSearchString..AdvancedSearchOptions["arg2"]..AdvancedSearchOptions["arg2op"]..arg2;
-			searchTitleString = searchTitleString.." "..AdvancedSearchOptions["arg2"].." "..AdvancedSearchOptions["arg2op"].." "..arg2;
-		else
-			advSearchString = advSearchString.."&"..AdvancedSearchOptions["arg2"]..AdvancedSearchOptions["arg2op"]..arg2;
-			searchTitleString = searchTitleString.." & "..AdvancedSearchOptions["arg2"].." "..AdvancedSearchOptions["arg2op"].." "..arg2;
-		end
-	end
-
-	if AdvancedSearchOptions["arg3"] ~= "" and AdvancedSearchOptions["arg3op"] ~= "" and arg3 ~= "" then
-		if advSearchString == "" then
-			advSearchString = advSearchString..AdvancedSearchOptions["arg3"]..AdvancedSearchOptions["arg3op"]..arg3;
-			searchTitleString = searchTitleString.." "..AdvancedSearchOptions["arg3"].." "..AdvancedSearchOptions["arg3op"].." "..arg3
-		else
-			advSearchString = advSearchString.."&"..AdvancedSearchOptions["arg3"]..AdvancedSearchOptions["arg3op"]..arg3;
-			searchTitleString = searchTitleString.." & "..AdvancedSearchOptions["arg3"].." "..AdvancedSearchOptions["arg3op"].." "..arg3
-		end
-	end
-
-	advSearchString = string.lower(advSearchString);
-	
-	-- Decide if we need load all modules or just specified ones
-	local allDisabled = not self.db.profile.SearchOn.All;
-	if allDisabled then
-		for _, module in ipairs(modules) do
-			if self.db.profile.SearchOn[module] == true then
-				allDisabled = false;
-				break;
+	for i = 1, 3, 1 do
+		if AdvancedSearchOptions["arg"..i] ~= "" then
+			if AdvancedSearchOptions["arg"..i.."op"] == "" then
+				AdvancedSearchOptions["arg"..i.."op"] = ">"
+				args[i] = "0";
+				print(args[i]);
 			end
+		advSearchString = AppendSearchString(advSearchString, AdvancedSearchOptions["arg"..i]..AdvancedSearchOptions["arg"..i.."op"]..args[i]);
 		end
 	end
-	if allDisabled then
-		DEFAULT_CHAT_FRAME:AddMessage(RED..AL["AtlasLoot"]..": "..WHITE..AL["You don't have any module selected to search on."]);
-		return;
-	end
-	if self.db.profile.SearchOn.All then
-		AtlasLoot_LoadAllModules();
-	else
-		for k, v in pairs(self.db.profile.SearchOn) do
-			if k ~= "All" and v == true and not IsAddOnLoaded(k) and LoadAddOn(k) and self.db.profile.LoDNotify then
-				DEFAULT_CHAT_FRAME:AddMessage(GREEN..AL["AtlasLoot"]..": "..ORANGE..k..WHITE.." "..AL["sucessfully loaded."]);
-			end
-		end
-	end
-	
-    AtlasLootCharDB["SearchResult"] = {};
-	AtlasLootCharDB.LastSearchedText = searchTitleString;
-    
-	local text = string.lower(Text);
-    --[[if not self.db.profile.SearchOn.All then
-        local module = AtlasLoot_GetLODModule(dataSource);
-        if not module or self.db.profile.SearchOn[module] ~= true then return end
-    end]]
-	
-	local function HaveBinaryOperator (textValue)
-		for index, operator in ipairs(BINARYOPERATORS) do
-			if string.find(textValue, operator) then
-				return operator;
-			end
-		end
-		return nil;
-	end
-	
-	local function HaveOperator (textValue)
-		for index, operator in ipairs(OPERATORS) do
-			if string.find(textValue, operator) then
-				return operator;
-			end
-		end
-		return nil;
-	end
-	
-	local function SplitString(str, delimiter)
-		local result = {};
-		for match in (str..delimiter):gmatch("(.-)"..delimiter) do
-			table.insert(result, match);
-		end
-		return result;
-	end
-	
-	local function CompareNumbersByOperator (operator, baseValue, valueToCompare)
-		if baseValue ~= nil and valueToCompare ~= nil
-			and ((operator == "<>") and (baseValue ~= valueToCompare)
-				or (operator == "<=") and (baseValue <= valueToCompare)
-				or (operator == ">=") and (baseValue >= valueToCompare)
-				or (operator == "=") and (baseValue == valueToCompare)
-				or (operator == "<") and (baseValue < valueToCompare)
-				or (operator == ">") and (baseValue > valueToCompare))
-		then
-			return true;
-		end
-		return false;
-	end
-	
-	-- Region: Stat Filter
-	local function IsSocketTermInSearchText(searchText)
-		if string.find(searchText, "socket")
-			or string.find(searchText, "sockets")
-			or string.find(searchText, "gem")
-			or string.find(searchText, "gems")
-		then
-			return true;
-		end
-		return false;
-	end
-	
-	local function IsSocketTermEqualsSearchText(searchText)
-		if searchText == "socket"
-			or searchText == "sockets"
-			or searchText == "gem"
-			or searchText == "gems"
-		then
-			return true;
-		end
-		return false;
-	end
-	
-	local function FilterSockets(searchTextItem, stats, operator)
-		if stats then
-			if IsSocketTermInSearchText(searchTextItem) then
-				local searchedStatValue = tonumber(string.match(searchTextItem, "%d+"));
-				local searchTerm = string.gsub(searchTextItem, tostring(searchedStatValue), "");
-				searchTerm = string.gsub(searchTerm, operator, "");
-
-				if IsSocketTermEqualsSearchText(searchTerm) then
-					local socketCount = 0;
-					for _, socketType in pairs(ITEMSOCKETSTATFILTERS) do
-						if socketType then
-							local statValue = tonumber(stats[socketType]);
-							if statValue then
-								socketCount = socketCount + statValue;
-							end
-						end
-					end
-					if CompareNumbersByOperator(operator, socketCount, searchedStatValue) then
-						return true;
-					end
-				end
-			end
-		end
-		return false;
-	end
-	
-	local function HaveStat (textValue)
-		for index, statItem in pairs(STATFILTERS) do
-			if textValue == index then
-				return STATFILTERS[index];
-			end
-		end
-		return nil;
-	end
-	
-	local function IsItemStatMatch(searchTextItem, stats, operator)
-		if stats then
-			local searchedStat = tonumber(string.match(searchTextItem, "%d+"));
-			local searchTerm = searchTextItem.gsub(searchTextItem, tostring(searchedStat), "");
-			searchTerm = string.gsub(searchTerm, operator, "");
-		
-			local statFilterFound = HaveStat(searchTerm);
-			if statFilterFound then
-				local statValue = tonumber(stats[statFilterFound]);
-				if CompareNumbersByOperator(operator, statValue, searchedStat) then
-					return true;
-				end
-			else
-				return FilterSockets(searchTextItem, stats, operator);
-			end
-		end
-		return false;
-	end
-	-- EndRegion
-	
-	-- Region: Item Level Filter
-	local function HaveItemInfoFilter (textValue)
-		for index, itemInfoFilter in pairs(ITEMINFOFILTERS) do
-			if textValue == index then
-				return index;
-			end
-		end
-		return nil;
-	end
-	
-	local function IsEquipableGear (textValue)
-		if textValue == nil or textValue == "" then
-			return false;
-		end
-		for index, equipLoc in ipairs(ITEMLEVELGEAREQUIPFILTER) do
-			if string.find(textValue, equipLoc) then
-				return false;
-			end
-		end
-		return true;
-	end
-	
-	local function IsItemLevelFilter (textValue)
-		local itemLevelFilter = ITEMINFOFILTERS["ilvl"];
-		if string.match(textValue, itemLevelFilter) then
-			return true;
-		end
-		return false;
-	end
-	
-	local function IsItemLevelFilterMatch(searchText, itemLvl, itemEquipLoc, operator)
-		local searchedItemLevel = tonumber(string.match(searchText, "%d+"));
-		local searchTerm = searchText.gsub(searchText, tostring(searchedItemLevel), "");
-		searchTerm = string.gsub(searchTerm, operator, "");
-		
-		local itemInfoFilter = HaveItemInfoFilter(searchTerm);
-		if itemInfoFilter and itemLvl ~= nil and itemLvl > 0
-			--TODO Equipment filter patch
-			--and IsEquipableGear(itemEquipLoc)
-			and IsItemLevelFilter(itemInfoFilter)
-		then
-			if CompareNumbersByOperator(operator, itemLvl, searchedItemLevel) then
-				return true;
-			end
-		end
-		return false;
-	end
-
-	local function IsMinLevelFilter (textValue)
-		local itemLevelFilter = ITEMINFOFILTERS["minlvl"];
-		if string.match(textValue, itemLevelFilter) then
-			return true;
-		end
-		return false;
-	end
-
-	local function IsMinLevelFilterMatch(searchText, minLvl, operator)
-		local searchedMinLevel = tonumber(string.match(searchText, "%d+"));
-		local searchTerm = searchText.gsub(searchText, tostring(searchedMinLevel), "");
-		searchTerm = string.gsub(searchTerm, operator, "");
-		
-		local itemInfoFilter = HaveItemInfoFilter(searchTerm);
-		if itemInfoFilter and minLvl ~= nil and minLvl > 0
-			and IsMinLevelFilter(itemInfoFilter)
-		then
-			if CompareNumbersByOperator(operator, minLvl, searchedMinLevel) then
-				return true;
-			end
-		end
-		return false;
-	end
-	-- EndRegion
-	
-	-- Checks for Partial Matching
-    local partial = self.db.profile.PartialMatching;
-	
-	-- Checks for Item Filters by searching for an Operator in the search text
-	local operator = HaveOperator(advSearchString);
-
-    for dataID, data in pairs(AtlasLoot_Data) do
-        for _, v in ipairs(data) do
-            local _id;
-            local found = true;
-
-			local dup = "";
-			if v[AtlasLoot_Difficulty.DUPLICATE] then
-				dup = " "..v[AtlasLoot_Difficulty.DUPLICATE]
-			end
-
-            if findByDifficulty then
-                _id = AL_FindId(string.sub(v[4]..dup, 5), dif);
-                if _id == nil then found = false; end
-            else
-                _id = v[2];
-            end
-
-            if _id ~= nil and type(_id) == "number" and _id > 0 then
-                -- Name, Link, Quality(num), iLvl(num), minLvl(num), itemType(localized string), itemSubType(localized string), stackCount(num), itemEquipLoc(enum), texture(link to a local file), displayId(num)
-                local itemName, _, itemQuality, itemLvl, minLvl, _, _, _, itemEquipLoc, tex = GetItemInfo(_id);
-                
-                if GetItemIcon(_id) == nil then
-                    found = false;
-                end
-
-				if(dif > 4 and (data.Type ~= "ClassicDungeonExt" --[[or data.Type ~= "BCDungeon"]])) then
-					found = false;
-				end
-				
-                itemName = string.sub(v[4], 5)
-
-                local quality = string.sub(v[4], 3, -(string.len(v[4]) - 2));
-				if dif > 2 and tonumber(quality) then
-					if tonumber(quality) < 4 then
-						quality = 4;
-					end
-				end
-
-                if findByQuality then
-                    if not (AdvancedSearchOptions["quality"] == "=q"..quality.."=") then
-                        found = false;
-                    end
-                end
-
-				--v[5] contains equip data
-				if findByEquip then
-					if v[5] then
-						if string.find(v[5], AdvancedSearchOptions["equip"]) then
-							if findByEquipType then
-								if not (string.find(v[5], AdvancedSearchOptions["equipType"])) then
-									found = false;
-								end
-							end
-						else
-							found = false
-						end
-					else
-						found = false;
-					end
-				end
-
-                if operator ~= nil and found then
-					local stats = GetItemStats("item:"..tostring(_id));
-					
-					 -- Currently only supports "&"
-					local binaryOperator = HaveBinaryOperator(advSearchString);
-					if binaryOperator ~= nil then
-						local searchConditionsMet = true;
-						local searchItems = SplitString(advSearchString, binaryOperator);
-						
-						if searchItems then
-							for _, searchTextItem in ipairs(searchItems) do
-								local localOperator = HaveOperator(searchTextItem);
-								if not localOperator
-									or not (
-										-- Stat Filter
-										IsItemStatMatch(searchTextItem, stats, localOperator)
-										-- Item Level Filter
-										or IsItemLevelFilterMatch(searchTextItem, itemLvl, itemEquipLoc, localOperator)
-										-- Min Level Filter
-										or IsMinLevelFilterMatch(searchTextItem, minLvl, localOperator)
-									)
-								then
-									searchConditionsMet = false;
-									break;
-								end
-							end
-							
-							if not (searchConditionsMet) then
-								found = false;
-							end
-						end
-					else
-						-- Stat Filter
-						if not (IsItemStatMatch(advSearchString, stats, operator)
-							-- Item Level Filter
-							or IsItemLevelFilterMatch(advSearchString, itemLvl, itemEquipLoc, operator)
-							-- Min Level Filter
-							or IsMinLevelFilterMatch(advSearchString, minLvl, operator))
-						then
-							found = false;
-						end
-					end
-					
-					-- Stat Table Cleanup
-					if stats then
-						table.wipe(stats);
-					end
-                end
-
-                
-                if findByName and found then
-                    if partial then
-						local res = SplitString(text, " ");
-						for _, t in ipairs(res) do
-                        	found = string.find(string.lower(itemName), t);
-							if not found then
-								break;
-							end
-						end
-                    else
-                        found = string.lower(itemName) == text;
-                    end
-                end
-
-                if found then
-
-					local difficultyName = AtlasLoot_Difficulty.Search[dif];
-					local tempdif = dif
-					if dif == 4 and data.Type then
-						if string.find(data.Type, "Raid") then
-							difficultyName = "Ascended";
-							tempdif = 99;
-						end
-					end
-
-					itemName = "=q"..quality.."="..itemName
-                    if AtlasLoot_TableNames[dataID] then lootpage = AtlasLoot_TableNames[dataID][1]; else lootpage = "Argh!"; end
-                    table.insert(AtlasLootCharDB["SearchResult"], { 0, _id, v[3], itemName, lootpage.." ("..GREEN..difficultyName..DEFAULT..")", "", "", dataID.."|".."\"\"", [AtlasLoot_Difficulty.DUPLICATE] = dup, [AtlasLoot_Difficulty.DIF_SEARCH] = tempdif});
-                end
-
-            --[[elseif (v[2] ~= nil) and (v[2] ~= "") and (string.sub(v[2], 1, 1) == "s") then 
-                local spellName = GetSpellInfo(string.sub(v[2], 2));
-                if not spellName then
-                    if (string.sub(v[4], 1, 2) == "=d") then  
-                        spellName = gsub(v[4], "=ds=", "");
-                    else
-                        spellName = gsub(v[4], "=q%d=", ""); 
-                    end
-                end
-                local found;
-                if partial then
-                    found = string.find(string.lower(spellName), text);
-                else
-                    found = string.lower(spellName) == text;
-                end
-                if found then
-                    spellName = string.sub(v[4], 1, 4)..spellName;
-                    if AtlasLoot_TableNames[dataID][1] then lootpage = AtlasLoot_TableNames[dataID][1]; else lootpage = "Argh!"; end
-                    table.insert(AtlasLootCharDB["SearchResult"], { 0, v[2], v[3], spellName, lootpage, "", "", dataID.."|".."\"\"" });
-                end--]]
-            end
-        end
-    end
-	
-	if #AtlasLootCharDB["SearchResult"] == 0 then
-		local itemFilterErrorMessage = "";
-		if operator then
-			itemFilterErrorMessage = [[
-			Please check if you have a typo in the filter.
-			To check filter keys, type "/atlaslootfilterkeys".
-			To check filter examples, type "/atlaslootfilterexample".
-			You might also have to query the server for item informations to load them into your client's Cache.]];
-		end
-		DEFAULT_CHAT_FRAME:AddMessage(RED..AL["AtlasLoot"]..": "..WHITE..AL["No match found for"].." \""..Text.."\"."..itemFilterErrorMessage);
-	else
-		AtlasLootServerQueryButton:Show();
-		currentPage = 1;
-		SearchResult = AtlasLoot_CategorizeWishList(AtlasLootCharDB["SearchResult"]);
-		AtlasLoot_ShowItemsFrame("SearchResult", "SearchResultPage1", (AL["Search Result: %s"]):format(AtlasLootCharDB.LastSearchedText or ""), pFrame);
-	end
+	print(string.lower(advSearchString));
+	AtlasLoot:Search(string.lower(advSearchString));
 end
