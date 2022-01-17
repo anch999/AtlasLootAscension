@@ -768,7 +768,7 @@ function AtlasLoot:AdvancedSearch(Text, args)
 		advSearchString = AppendSearchString(advSearchString, "type="..AdvancedSearchOptions["type"]);
     end
 
-	if AdvancedSearchOptions["difficulty"] ~= "" then
+	if AdvancedSearchOptions["difficulty"] ~= "" and AdvancedSearchOptions["difficulty"] ~= 2 then
 		advSearchString = AppendSearchString(advSearchString, "dif="..AdvancedSearchOptions["difficulty"]);
 	end
 

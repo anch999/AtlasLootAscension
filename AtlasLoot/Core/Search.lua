@@ -539,8 +539,8 @@ local function DoSearch(searchText)
     local searchTerms = ParseQuery(searchText);
     local equipableFilterOn = AtlasLoot.db.profile.EquipableFilter;
 	local difficulty = TermsContainDifficulty(searchTerms);
-    local function IsItemEquipableMatch(itemEquipLoc)
-        return not equipableFilterOn or (itemEquipLoc and itemEquipLoc ~= '' and not NON_EQUIPABLE_SLOTS[itemEquipLoc])
+    local function IsItemEquipableMatch(itemEquipLoc, minLvl)
+        return not equipableFilterOn or ((itemEquipLoc and itemEquipLoc ~= '' and not NON_EQUIPABLE_SLOTS[itemEquipLoc]) and not (UnitLevel("player") < minLvl))
     end
     
     for dataID, data in pairs(AtlasLoot_Data) do
@@ -553,7 +553,7 @@ local function DoSearch(searchText)
 
             if type(itemId) == "number" and itemId > 0 then
                 local itemName, itemQuality, itemLvl, minLvl, itemEquipLoc, itemSubType, stats = GetItemDetails(itemId, atlasName);
-                if IsItemEquipableMatch(itemEquipLoc) and ItemMatchesAllTerms(searchTerms, itemName, stats, itemLvl, minLvl, itemQuality, itemEquipLoc, itemSubType) then
+                if IsItemEquipableMatch(itemEquipLoc, minLvl) and ItemMatchesAllTerms(searchTerms, itemName, stats, itemLvl, minLvl, itemQuality, itemEquipLoc, itemSubType) then
                     AddItemToSearchResult(itemId, itemType, itemName, dataID, difficulty);
                 end
             elseif not equipableFilterOn and itemId and itemId ~= "" and string.sub(itemId, 1, 1) == "s" then
