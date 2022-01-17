@@ -17,6 +17,9 @@ AtlasLoot_Argument2SubMenu = AceLibrary("Dewdrop-2.0");
 AtlasLoot_Argument3Menu = AceLibrary("Dewdrop-2.0");
 AtlasLoot_Argument3SubMenu = AceLibrary("Dewdrop-2.0");
 
+AtlasLoot_Argument4Menu = AceLibrary("Dewdrop-2.0");
+AtlasLoot_Argument4SubMenu = AceLibrary("Dewdrop-2.0");
+
 local GREY = "|cff999999";
 local RED = "|cffff0000";
 local WHITE = "|cffFFFFFF";
@@ -67,7 +70,7 @@ AtlasLoot_AdvancedSearchMenus = {
         --     {AtlasLoot_FixText("=q0=").."Poor", "quality", "poor"},
         -- },
         -- [2] = {
-        --     {AtlasLoot_FixText("=q1=").."Normal", "quality", "normal"},
+        --     {AtlasLoot_FixText("=q1=").."Common", "quality", "common"},
         -- },
         [1] = {
             {AtlasLoot_FixText("=q2=").."Uncommon", "quality", "uncommon"},
@@ -316,13 +319,15 @@ AdvancedSearchOptions = {
     ["quality"] = "",
     ["equip"] = "",
     ["type"] = "",
-    ["difficulty"] = 0,
-	["arg1"] = "",
-	["arg1op"] = "",
+    ["difficulty"] = "",
+	["arg1"] = "minlvl",
+	["arg1op"] = "=",
 	["arg2"] = "",
 	["arg2op"] = "",
 	["arg3"] = "",
 	["arg3op"] = "",
+	["arg4"] = "",
+	["arg4op"] = "",
 }
 
 function AtlasLoot_AdvancedSearchSetup()
@@ -333,10 +338,12 @@ function AtlasLoot_AdvancedSearchSetup()
 	AtlasLoot_AdvancedSearchArgumentRegister(AtlasLoot_Argument1Menu, AtlasLootAdvancedSearch_Argument1, "1", AtlasLoot_AdvancedSearchArguments["Arguments"]);
 	AtlasLoot_AdvancedSearchArgumentRegister(AtlasLoot_Argument2Menu, AtlasLootAdvancedSearch_Argument2, "2", AtlasLoot_AdvancedSearchArguments["Arguments"]);
 	AtlasLoot_AdvancedSearchArgumentRegister(AtlasLoot_Argument3Menu, AtlasLootAdvancedSearch_Argument3, "3", AtlasLoot_AdvancedSearchArguments["Arguments"]);
+	AtlasLoot_AdvancedSearchArgumentRegister(AtlasLoot_Argument4Menu, AtlasLootAdvancedSearch_Argument4, "4", AtlasLoot_AdvancedSearchArguments["Arguments"]);
 
 	AtlasLoot_AdvancedSearchArgumentRegister(AtlasLoot_Argument1SubMenu, AtlasLootAdvancedSearch_Argument1Sub, "1", AtlasLoot_AdvancedSearchArguments["Operators"]);
 	AtlasLoot_AdvancedSearchArgumentRegister(AtlasLoot_Argument2SubMenu, AtlasLootAdvancedSearch_Argument2Sub, "2", AtlasLoot_AdvancedSearchArguments["Operators"]);
 	AtlasLoot_AdvancedSearchArgumentRegister(AtlasLoot_Argument3SubMenu, AtlasLootAdvancedSearch_Argument3Sub, "3", AtlasLoot_AdvancedSearchArguments["Operators"]);
+	AtlasLoot_AdvancedSearchArgumentRegister(AtlasLoot_Argument4SubMenu, AtlasLootAdvancedSearch_Argument4Sub, "4", AtlasLoot_AdvancedSearchArguments["Operators"]);
 
 	--Setup Mythic+ dropdown options;
     for i = 1, 30, 1 do
@@ -433,22 +440,29 @@ function AtlasLoot_AdvancedSearchReset()
 	AdvancedSearchOptions = {
 		["quality"] = "",
 		["equip"] = "",
-		["equipType"] = "",
-		["difficulty"] = AtlasLoot_Difficulty.Normal,
-		["arg1"] = "",
-		["arg1op"] = "",
+		["type"] = "",
+		["difficulty"] = "",
+		["arg1"] = "minlvl",
+		["arg1op"] = "=",
 		["arg2"] = "",
 		["arg2op"] = "",
 		["arg3"] = "",
 		["arg3op"] = "",
+		["arg4"] = "",
+		["arg4op"] = "",
 	}
 
 	AtlasLootAdvancedSearch_Quality:SetText("Select Quality");
 	AtlasLootAdvancedSearch_Equip:SetText("Select Item Type");
 	AtlasLootAdvancedSearch_Difficulty:SetText("Select Difficulty");
-	AtlasLootAdvancedSearch_Argument1:SetText("Select Option");
+
+	AtlasLootAdvancedSearch_Argument1:SetText("Required Level");
+	AtlasLootAdvancedSearch_Argument1Sub:SetText("Equals");
+	AtlasLootAdvancedSearch_Argument1Value:SetText(UnitLevel("player"));
+	
 	AtlasLootAdvancedSearch_Argument2:SetText("Select Option");
 	AtlasLootAdvancedSearch_Argument3:SetText("Select Option");
+	AtlasLootAdvancedSearch_Argument4:SetText("Select Option");
 
 	AtlasLootAdvancedSearch_EquipSub:Disable();
 	AtlasLootAdvancedSearch_EquipSub:SetText("Select Option")
@@ -457,10 +471,6 @@ function AtlasLoot_AdvancedSearchReset()
 	AtlasLootAdvancedSearch_WeaponSub:Disable();
 	AtlasLootAdvancedSearch_WeaponSub:SetText("Select Weapon Type")
 
-	AtlasLootAdvancedSearch_Argument1Sub:Disable();
-	AtlasLootAdvancedSearch_Argument1Sub:SetText("Select Option");
-	AtlasLootAdvancedSearch_Argument1Value:Hide();
-	AtlasLootAdvancedSearch_Argument1Value:SetText("");
 	AtlasLootAdvancedSearch_Argument2Sub:Disable();
 	AtlasLootAdvancedSearch_Argument2Sub:SetText("Select Option");
 	AtlasLootAdvancedSearch_Argument2Value:Hide();
@@ -469,6 +479,10 @@ function AtlasLoot_AdvancedSearchReset()
 	AtlasLootAdvancedSearch_Argument3Sub:SetText("Select Option");
 	AtlasLootAdvancedSearch_Argument3Value:Hide();
 	AtlasLootAdvancedSearch_Argument3Value:SetText("");
+	AtlasLootAdvancedSearch_Argument4Sub:Disable();
+	AtlasLootAdvancedSearch_Argument4Sub:SetText("Select Option");
+	AtlasLootAdvancedSearch_Argument4Value:Hide();
+	AtlasLootAdvancedSearch_Argument4Value:SetText("");
 end
 
 
@@ -772,7 +786,7 @@ function AtlasLoot:AdvancedSearch(Text, args)
 		advSearchString = AppendSearchString(advSearchString, "dif="..AdvancedSearchOptions["difficulty"]);
 	end
 
-	for i = 1, 3, 1 do
+	for i = 1, 4, 1 do
 		if AdvancedSearchOptions["arg"..i] ~= "" then
 			if AdvancedSearchOptions["arg"..i.."op"] == "" then
 				AdvancedSearchOptions["arg"..i.."op"] = ">"
