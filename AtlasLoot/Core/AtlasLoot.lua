@@ -1350,8 +1350,8 @@ On the form of {Name, {normal, heroic, mythic, mythic1, mythic2, ... ,mythicN}}
 ]]
 function AL_FindId(name, difficulty)
 	if ItemIDsDatabase[name] ~= nil then
-		return ItemIDsDatabase[name][difficulty]
-	else
-		return nil;
+		return ItemIDsDatabase[name][difficulty], true
 	end
+	
+	return nil, false;
 end

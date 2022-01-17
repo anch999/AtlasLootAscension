@@ -34,27 +34,27 @@ AdvSearchSubMenuText = "";
 AdvSearchSetup = false;
 
 AtlasLoot_FrameMenuList = {
-    ["EquipSubMenu"] = {AtlasLoot_EquipSubMenu, "AtlasLootAdvancedSearch_EquipSub", "Select Option", "equipType", "", "AtlasLootAdvancedSearch_WeaponSub"};
+    ["EquipSubMenu"] = {AtlasLoot_EquipSubMenu, "AtlasLootAdvancedSearch_EquipSub", "Select Option", "type", "", "AtlasLootAdvancedSearch_WeaponSub"};
     ["MythicSubMenu"] = {AtlasLoot_DiffSubMenu, "AtlasLootAdvancedSearch_MythicSub", "Mythic+ 1", "difficulty", 5};
-	["WeaponSubMenu"] = {AtlasLoot_WeaponSubMenu, "AtlasLootAdvancedSearch_WeaponSub", "Select Weapon Type", "equipType", ""};
+	["WeaponSubMenu"] = {AtlasLoot_WeaponSubMenu, "AtlasLootAdvancedSearch_WeaponSub", "Select Weapon Type", "type", ""};
 }
 
 AtlasLoot_AdvancedSearchMenus = {
     ["Difficulty"] ={
         [1] = {
-            {"Normal", "difficulty", 2, "MythicSubMenu", "Disable"},
+            {"Normal", "difficulty", AtlasLoot_Difficulty.Normal, "MythicSubMenu", "Disable"},
         },
         [2] = {
-            {"Heroic", "difficulty", 3, "MythicSubMenu", "Disable"},
+            {"Heroic", "difficulty", AtlasLoot_Difficulty.Heroic, "MythicSubMenu", "Disable"},
         },
         [3] = {
-            {"Mythic/Ascended", "difficulty", 4, "MythicSubMenu", "Disable"},
+            {"Mythic/Ascended", "difficulty", AtlasLoot_Difficulty.Mythic, "MythicSubMenu", "Disable"},
         },
         [4] = {
-            {"Mythic Plus", "difficulty", 5, "MythicSubMenu", "MythicPlus"},
+            {"Mythic Plus", "difficulty", AtlasLoot_Difficulty.MythicPlus[1], "MythicSubMenu", "MythicPlus"},
         },
         [5] = {
-            {"Bloodforged", "difficulty", 1, "MythicSubMenu", "Disable"},
+            {"Bloodforged", "difficulty", AtlasLoot_Difficulty.Bloodforged, "MythicSubMenu", "Disable"},
         },
     };
 
@@ -97,7 +97,7 @@ AtlasLoot_AdvancedSearchMenus = {
             {"Wrist", "equip", "wrist", "EquipSubMenu", "ArmorType"},
         },
         [5] = {
-            {"Hands", "equip", "hands", "EquipSubMenu", "ArmorType"},
+            {"Hands", "equip", "hand", "EquipSubMenu", "ArmorType"},
         },
         [6] = {
             {"Waist", "equip", "waist", "EquipSubMenu", "ArmorType"},
@@ -133,31 +133,31 @@ AtlasLoot_AdvancedSearchMenus = {
 
     ["ArmorType"] = {
         [1] = {
-            {"Cloth", "equipType", "cloth"},
+            {"Cloth", "type", "Cloth"},
         },
         [2] = {
-            {"Leather", "equipType", "leather"},
+            {"Leather", "type", "Leather"},
         },
         [3] = {
-            {"Mail", "equipType", "mail"},
+            {"Mail", "type", "Mail"},
         },
         [4] = {
-            {"Plate", "equipType", "plate"},
+            {"Plate", "type", "Plate"},
         },
     };
 
     ["RelicType"] = {
         [1] = {
-            {"Idols", "equipType", "idol"},
+            {"Idols", "type", "idol"},
         },
         [2] = {
-            {"Libram", "equipType", "libram"},
+            {"Libram", "type", "libram"},
         },
         [3] = {
-            {"Totem", "equipType", "totem"},
+            {"Totem", "type", "totem"},
         },
         [4] = {
-            {"Sigil", "equipType", "sigil"},
+            {"Sigil", "type", "sigil"},
         },
     };
 
@@ -166,7 +166,7 @@ AtlasLoot_AdvancedSearchMenus = {
             {"One-Hand", "equip", "weapon", "WeaponSubMenu", "WeaponType"},
         },
         [2] = {
-            {"Two-Hand", "equip", "2hweapon", "WeaponSubMenu", "WeaponType"},
+            {"Two-Hand", "equip", "2h", "WeaponSubMenu", "WeaponType"},
         },
         [3] = {
             {"Main Hand", "equip", "mainhand", "WeaponSubMenu", "WeaponType"},
@@ -181,43 +181,43 @@ AtlasLoot_AdvancedSearchMenus = {
 
 	["WeaponType"] = {
 		[1] = {
-			{"Axe", "equipType", "#w1#"}
+			{"Axe", "type", "axe"}
 		},
 		[2] = {
-			{"Mace", "equipType", "#w6#"}
+			{"Mace", "type", "mace"}
 		},
 		[3] = {
-			{"Sword", "equipType", "#w10#"}
+			{"Sword", "type", "sword"}
 		},
 		[4] = {
-			{"Polearm", "equipType", "#w7#"}
+			{"Polearm", "type", "polearm"}
 		},
 		[5] = {
-			{"Dagger", "equipType", "#w4#"}
+			{"Dagger", "type", "dagger"}
 		},
 		[6] = {
-			{"Staff", "equipType", "#w9#"}
+			{"Staff", "type", "stave"}
 		},
 		[7] = {
-			{"Fist Weapon", "equipType", "#w13#"}
+			{"Fist Weapon", "type", "fist"}
 		},
 		[8] = {
-			{"Bow", "equipType", "#w2#"}
+			{"Bow", "type", "bow"}
 		},
 		[9] = {
-			{"Gun", "equipType", "#w5#"}
+			{"Gun", "type", "gun"}
 		},
 		[10] = {
-			{"Crossbow", "equipType", "#w3#"}
+			{"Crossbow", "type", "crossbow"}
 		},
 		[11] = {
-			{"Wand", "equipType", "#w12#"}
+			{"Wand", "type", "wand"}
 		},
 		[12] = {
-			{"Thrown", "equipType", "#w11#"}
+			{"Thrown", "type", "thrown"}
 		},
 		[13] = {
-			{"Shield", "equipType", "#w8#"}
+			{"Shield", "type", "shield"}
 		},
 	};
 }
@@ -315,7 +315,7 @@ AtlasLoot_AdvancedSearchArguments = {
 AdvancedSearchOptions = {
     ["quality"] = "",
     ["equip"] = "",
-    ["equipType"] = "",
+    ["type"] = "",
     ["difficulty"] = 0,
 	["arg1"] = "",
 	["arg1op"] = "",
@@ -341,7 +341,7 @@ function AtlasLoot_AdvancedSearchSetup()
 	--Setup Mythic+ dropdown options;
     for i = 1, 30, 1 do
         AtlasLoot_AdvancedSearchMenus["MythicPlus"][i] = {
-            {"Mythic+ "..i, "difficulty", i + 4};
+            {"Mythic+ "..i, "difficulty", AtlasLoot_Difficulty.MythicPlus[i]};
         }
     end
 
@@ -434,7 +434,7 @@ function AtlasLoot_AdvancedSearchReset()
 		["quality"] = "",
 		["equip"] = "",
 		["equipType"] = "",
-		["difficulty"] = 0,
+		["difficulty"] = AtlasLoot_Difficulty.Normal,
 		["arg1"] = "",
 		["arg1op"] = "",
 		["arg2"] = "",
@@ -445,7 +445,6 @@ function AtlasLoot_AdvancedSearchReset()
 
 	AtlasLootAdvancedSearch_Quality:SetText("Select Quality");
 	AtlasLootAdvancedSearch_Equip:SetText("Select Item Type");
-	AtlasLootAdvancedSearch_Difficulty:Disable();
 	AtlasLootAdvancedSearch_Difficulty:SetText("Select Difficulty");
 	AtlasLootAdvancedSearch_Argument1:SetText("Select Option");
 	AtlasLootAdvancedSearch_Argument2:SetText("Select Option");
@@ -750,17 +749,28 @@ function AtlasLoot:AdvancedSearch(Text, args)
 		return str;
 	end
 
+	local function AdvancedSearchFixType(slot, subType)
+		if slot == "2h" and (subType == "axe" or subType == "sword" or subType == "mace") then
+			return slot..subType;
+		end
+	end
+
     if AdvancedSearchOptions["quality"] ~= "" then
 		advSearchString = AppendSearchString(advSearchString, "quality="..AdvancedSearchOptions["quality"]);
-    end
-
-	if AdvancedSearchOptions["equipType"] ~= "" then
-		--advSearchString = AppendSearchString(advSearchString, AtlasLoot_FixText(AdvancedSearchOptions["equipType"]));
     end
 
 	if AdvancedSearchOptions["equip"] ~= "" then
 		advSearchString = AppendSearchString(advSearchString, "slot="..AdvancedSearchOptions["equip"]);
     end
+
+	if AdvancedSearchOptions["type"] ~= "" and AdvancedSearchOptions["type"] then
+		AdvancedSearchOptions["type"] = AdvancedSearchFixType(AdvancedSearchOptions["equip"], AdvancedSearchOptions["type"]) or AdvancedSearchOptions["type"];
+		advSearchString = AppendSearchString(advSearchString, "type="..AdvancedSearchOptions["type"]);
+    end
+
+	if AdvancedSearchOptions["difficulty"] ~= "" then
+		advSearchString = AppendSearchString(advSearchString, "dif="..AdvancedSearchOptions["difficulty"]);
+	end
 
 	for i = 1, 3, 1 do
 		if AdvancedSearchOptions["arg"..i] ~= "" then
@@ -772,6 +782,6 @@ function AtlasLoot:AdvancedSearch(Text, args)
 		advSearchString = AppendSearchString(advSearchString, AdvancedSearchOptions["arg"..i]..AdvancedSearchOptions["arg"..i.."op"]..args[i]);
 		end
 	end
-	print(string.lower(advSearchString));
+
 	AtlasLoot:Search(string.lower(advSearchString));
 end

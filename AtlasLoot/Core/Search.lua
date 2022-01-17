@@ -190,6 +190,7 @@ local SLOT_FILTERS = {
 	["ranged"] = "INVTYPE_RANGED",
 	["cloak"] = "INVTYPE_CLOAK",
 	["2hweapon"] = "INVTYPE_2HWEAPON",
+	["2h"] = "INVTYPE_2HWEAPON",
 	["bag"] = "INVTYPE_BAG",
 	["tabard"] = "INVTYPE_TABARD",
 	["robe"] = "INVTYPE_ROBE",
@@ -204,6 +205,38 @@ local SLOT_FILTERS = {
 	["quiver"] = "INVTYPE_QUIVER",
 	["relic"] = "INVTYPE_RELIC"
 };
+
+local TYPE_FILTERS = {
+	["cloth"] = "Cloth",
+	["leather"] = "Leather",
+	["mail"] = "Mail",
+	["plate"] = "Plate",
+	["shield"] = "Shields",
+	["libram"] = "Librams",
+	["idol"] = "Idols",
+	["totem"] = "Totems",
+	["sigil"] = "Sigils",
+
+	["bow"] = "Bows",
+	["crossbow"] = "Crossbows",
+	["dagger"] = "Daggers",
+	["gun"] = "Guns",
+	["fishing poles"] = "Fishing Poles",
+	["fist"] = "Fist Weapons",
+	["miscellaneous"] = "Miscellaneous",
+	["axe"] = "One-Handed Axes",
+	["mace"] = "One-Handed Maces",
+	["sword"] = "One-Handed Swords",
+	["polearm"] = "Polearms",
+	["stave"] = "Staves",
+	["staves"] = "Staves",
+	["staff"] = "Staves",
+	["thrown"] = "Thrown",
+	["2haxe"] = "Two-Handed Axes",
+	["2hmace"] = "Two-Handed Maces",
+	["2hsword"] = "Two-Handed Swords",
+	["wand"] = "Wands",
+}
 
 local NON_EQUIPABLE_SLOTS = {
 	["INVTYPE_NON_EQUIP"] = true,
@@ -375,6 +408,41 @@ local function IsItemSlotMatch(term, itemEquipLoc)
     return slot == itemEquipLoc
 end
 
+local function IsItemTypeMatch(term, itemEquipType)
+    if term.left ~= "type" then
+        return
+    end
+
+    if term.relational ~= "=" then
+        ThrowQueryError("type searches should be in the form \"type=[typename]\"")
+    end
+
+    local type = TYPE_FILTERS[term.right]
+    if not type then
+        ThrowQueryError("unrecognized type name: \"%s\"", term.right)
+    end
+
+    return type == itemEquipType;
+end
+
+local function IsItemDifficulty(term, itemName)
+    if term.left ~= "dif" then
+        return
+    end
+
+    if term.relational ~= "=" then
+        ThrowQueryError("difficulty searches should be in the form \"dif=[difficulty]\"")
+    end
+
+    if tonumber(term.right) > (#AtlasLoot_Difficulty.MythicPlus + 4) then
+        ThrowQueryError("difficulty should be a number: 1 - %i", #AtlasLoot_Difficulty.MythicPlus + 4)
+    end
+
+	local _, hasDifficulty = AL_FindId(itemName, tonumber(term.right));
+	
+    return hasDifficulty;
+end
+
 local function nameMatches(name, searchText)
     if AtlasLoot.db.profile.PartialMatching then
         return string.find(string.lower(name), searchText);
@@ -383,7 +451,7 @@ local function nameMatches(name, searchText)
     end
 end
 
-local function ItemMatchesTerm(term, itemName, stats, itemLvl, minLvl, itemQuality, itemEquipLoc)
+local function ItemMatchesTerm(term, itemName, stats, itemLvl, minLvl, itemQuality, itemEquipLoc, itemType)
     if term.relational then
         return IsItemStatMatch(term, stats)
             or IsItemSocketMatch(term, stats)
@@ -391,18 +459,30 @@ local function ItemMatchesTerm(term, itemName, stats, itemLvl, minLvl, itemQuali
             or IsMinLevelFilterMatch(term, minLvl)
             or IsItemSlotMatch(term, itemEquipLoc)
             or IsItemQualityMatch(term, itemQuality)
+			or IsItemTypeMatch(term, itemType)
+			or IsItemDifficulty(term, itemName)
     else
         return nameMatches(itemName, term.name)
     end
 end
 
-local function ItemMatchesAllTerms(searchTerms, itemName, stats, itemLvl, minLvl, itemQuality, itemEquipLoc)
+local function ItemMatchesAllTerms(searchTerms, itemName, stats, itemLvl, minLvl, itemQuality, itemEquipLoc, itemType)
     for _, term in ipairs(searchTerms) do
-        if not ItemMatchesTerm(term, itemName, stats, itemLvl, minLvl, itemQuality, itemEquipLoc) then
+        if not ItemMatchesTerm(term, itemName, stats, itemLvl, minLvl, itemQuality, itemEquipLoc, itemType) then
             return false
         end
     end
     return true
+end
+
+local function TermsContainDifficulty(searchTerms)
+	for _, term in ipairs(searchTerms) do
+		if term.relational then
+			if term.left == "dif" then return tonumber(term.right) end
+		end
+	end
+
+	return AtlasLoot_Difficulty.Normal;
 end
 
 local function ParseTerm(termText)
@@ -431,9 +511,9 @@ end
 
 local function GetItemDetails(itemId, atlasName)
     -- Name, Link, Quality(num), iLvl(num), minLvl(num), itemType(localized string), itemSubType(localized string), stackCount(num), itemEquipLoc(enum), texture(link to a local file), displayId(num)
-    local itemName, _, itemQuality, itemLvl, minLvl, _, _, _, itemEquipLoc = GetItemInfo(itemId);
+    local itemName, _, itemQuality, itemLvl, minLvl, _, itemSubType, _, itemEquipLoc = GetItemInfo(itemId);
     if not itemName then itemName = gsub(atlasName, "=q%d=", "") end
-    return itemName, itemQuality, itemLvl, minLvl, itemEquipLoc, GetItemStats("item:"..itemId)
+    return itemName, itemQuality, itemLvl, minLvl, itemEquipLoc, itemSubType, GetItemStats("item:"..itemId)
 end
 
 local function GetSpellName(itemId, atlasName)
@@ -449,15 +529,16 @@ end
 
 local function DoSearch(searchText)
     AtlasLootCharDB["SearchResult"] = {};
-	AtlasLootCharDB.LastSearchedText = Text;
+	AtlasLootCharDB.LastSearchedText = searchText;
 
-	local function AddItemToSearchResult(itemId, itemType, itemName, dataID)
+	local function AddItemToSearchResult(itemId, itemType, itemName, dataID, difficulty)
         local lootPage = AtlasLoot_TableNames[dataID] and AtlasLoot_TableNames[dataID][1] or "Argh!";
-        table.insert(AtlasLootCharDB["SearchResult"], { 0, itemId, itemType, itemName, lootPage, "", "", dataID.."|".."\"\"", [AtlasLoot_Difficulty.DIF_SEARCH] = 2});
+        table.insert(AtlasLootCharDB["SearchResult"], { 0, itemId, itemType, itemName, lootPage, "", "", dataID.."|".."\"\""});
     end
 
-    local searchTerms = ParseQuery(searchText)
-    local equipableFilterOn = AtlasLoot.db.profile.EquipableFilter
+    local searchTerms = ParseQuery(searchText);
+    local equipableFilterOn = AtlasLoot.db.profile.EquipableFilter;
+	local difficulty = TermsContainDifficulty(searchTerms);
     local function IsItemEquipableMatch(itemEquipLoc)
         return not equipableFilterOn or (itemEquipLoc and itemEquipLoc ~= '' and not NON_EQUIPABLE_SLOTS[itemEquipLoc])
     end
@@ -466,10 +547,14 @@ local function DoSearch(searchText)
         for _, v in ipairs(data) do
             local _, itemId, itemType, atlasName = unpack(v)
 
+			itemId = AL_FindId(string.sub(atlasName, 5), difficulty);
+
+			itemId = tonumber(itemId);
+
             if type(itemId) == "number" and itemId > 0 then
-                local itemName, itemQuality, itemLvl, minLvl, itemEquipLoc, stats = GetItemDetails(itemId, atlasName);
-                if IsItemEquipableMatch(itemEquipLoc) and ItemMatchesAllTerms(searchTerms, itemName, stats, itemLvl, minLvl, itemQuality, itemEquipLoc) then
-                    AddItemToSearchResult(itemId, itemType, itemName, dataID)
+                local itemName, itemQuality, itemLvl, minLvl, itemEquipLoc, itemSubType, stats = GetItemDetails(itemId, atlasName);
+                if IsItemEquipableMatch(itemEquipLoc) and ItemMatchesAllTerms(searchTerms, itemName, stats, itemLvl, minLvl, itemQuality, itemEquipLoc, itemSubType) then
+                    AddItemToSearchResult(itemId, itemType, itemName, dataID, difficulty);
                 end
             elseif not equipableFilterOn and itemId and itemId ~= "" and string.sub(itemId, 1, 1) == "s" then
                 local spellName = GetSpellName(itemId, atlasName)
