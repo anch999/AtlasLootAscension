@@ -63,22 +63,22 @@ AtlasLoot_AdvancedSearchMenus = {
     };
 
     ["Quality"] = {
+        -- [1] = {
+        --     {AtlasLoot_FixText("=q0=").."Poor", "quality", "poor"},
+        -- },
+        -- [2] = {
+        --     {AtlasLoot_FixText("=q1=").."Normal", "quality", "normal"},
+        -- },
         [1] = {
-            {AtlasLoot_FixText("=q0=").."Poor", "quality", "poor"},
-        },
-        [2] = {
-            {AtlasLoot_FixText("=q1=").."Normal", "quality", "normal"},
-        },
-        [3] = {
             {AtlasLoot_FixText("=q2=").."Uncommon", "quality", "uncommon"},
         },
-        [4] = {
+        [2] = {
             {AtlasLoot_FixText("=q3=").."Rare", "quality", "rare"},
         },
-        [5] = {
+        [3] = {
             {AtlasLoot_FixText("=q4=").."Epic", "quality", "epic"},
         },
-        [6] = {
+        [4] = {
             {AtlasLoot_FixText("=q5=").."Legendary", "quality", "legendary"},
         },
     };
