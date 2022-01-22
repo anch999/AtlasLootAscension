@@ -118,7 +118,7 @@ AtlasLoot_AdvancedSearchMenus = {
             {"Necklace", "equip", "neck", "EquipSubMenu", "Disable"},
         },
         [11] = {
-            {"Ring", "equip", "ring", "EquipSubMenu", "Disable"},
+            {"Ring", "equip", "finger", "EquipSubMenu", "Disable"},
         },
         [12] = {
             {"Trinket", "equip", "trinket", "EquipSubMenu", "Disable"},
@@ -233,7 +233,7 @@ AtlasLoot_AdvancedSearchArguments = {
 				{"Strength", "str"},
 				{"Agility", "agi"};
 				{"Intellect", "int"},
-				{"Spirit", "spr"},
+				{"Spirit", "spi"},
 			}
 		};
 		[2] = {
