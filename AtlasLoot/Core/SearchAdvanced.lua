@@ -3,22 +3,14 @@ local modules = { "AtlasLoot_BurningCrusade", "AtlasLoot_Crafting", "AtlasLoot_O
 
 AtlasLoot_QualityMenu = AceLibrary("Dewdrop-2.0");
 AtlasLoot_DifficultyMenu = AceLibrary("Dewdrop-2.0");
-AtlasLoot_DiffSubMenu = AceLibrary("Dewdrop-2.0");
 AtlasLoot_EquipMenu = AceLibrary("Dewdrop-2.0");
 AtlasLoot_EquipSubMenu = AceLibrary("Dewdrop-2.0");
-AtlasLoot_WeaponSubMenu = AceLibrary("Dewdrop-2.0");
 
-AtlasLoot_Argument1Menu = AceLibrary("Dewdrop-2.0");
-AtlasLoot_Argument1SubMenu = AceLibrary("Dewdrop-2.0");
+local MAX_ARGUMENTS = 6;
+local ACTIVE_ARGUMENT = 0;
 
-AtlasLoot_Argument2Menu = AceLibrary("Dewdrop-2.0");
-AtlasLoot_Argument2SubMenu = AceLibrary("Dewdrop-2.0");
-
-AtlasLoot_Argument3Menu = AceLibrary("Dewdrop-2.0");
-AtlasLoot_Argument3SubMenu = AceLibrary("Dewdrop-2.0");
-
-AtlasLoot_Argument4Menu = AceLibrary("Dewdrop-2.0");
-AtlasLoot_Argument4SubMenu = AceLibrary("Dewdrop-2.0");
+AtlasLoot_ArgumentMenus = {};
+AtlasLoot_ArgumentSubMenus = {};
 
 local GREY = "|cff999999";
 local RED = "|cffff0000";
@@ -37,32 +29,68 @@ AdvSearchSubMenuText = "";
 AdvSearchSetup = false;
 
 AtlasLoot_FrameMenuList = {
-    ["EquipSubMenu"] = {AtlasLoot_EquipSubMenu, "AtlasLootAdvancedSearch_EquipSub", "Select Option", "type", "", "AtlasLootAdvancedSearch_WeaponSub"};
-    ["MythicSubMenu"] = {AtlasLoot_DiffSubMenu, "AtlasLootAdvancedSearch_MythicSub", "Mythic+ 1", "difficulty", 5};
-	["WeaponSubMenu"] = {AtlasLoot_WeaponSubMenu, "AtlasLootAdvancedSearch_WeaponSub", "Select Weapon Type", "type", ""};
+    ["EquipSubMenu"] = {AtlasLoot_EquipSubMenu, "AtlasLootAdvancedSearch_EquipSub", "Select Option", "type", ""};
 }
 
 AtlasLoot_AdvancedSearchMenus = {
     ["Difficulty"] ={
         [1] = {
-            {"Normal", "difficulty", AtlasLoot_Difficulty.Normal, "MythicSubMenu", "Disable"},
+            {"Normal", "difficulty", AtlasLoot_Difficulty.Normal},
         },
         [2] = {
-            {"Heroic", "difficulty", AtlasLoot_Difficulty.Heroic, "MythicSubMenu", "Disable"},
+            {"Heroic", "difficulty", AtlasLoot_Difficulty.Heroic},
         },
         [3] = {
-            {"Mythic/Ascended", "difficulty", AtlasLoot_Difficulty.Mythic, "MythicSubMenu", "Disable"},
+            {"Mythic/Ascended", "difficulty", AtlasLoot_Difficulty.Mythic},
         },
         [4] = {
-            {"Mythic Plus", "difficulty", AtlasLoot_Difficulty.MythicPlus[1], "MythicSubMenu", "MythicPlus"},
+            ["Mythic+ 1-10"] = {
+				{"Mythic 1", "difficulty", AtlasLoot_Difficulty.MythicPlus[1]},
+				{"Mythic 2", "difficulty", AtlasLoot_Difficulty.MythicPlus[2]},
+				{"Mythic 3", "difficulty", AtlasLoot_Difficulty.MythicPlus[3]},
+				{"Mythic 4", "difficulty", AtlasLoot_Difficulty.MythicPlus[4]},
+				{"Mythic 5", "difficulty", AtlasLoot_Difficulty.MythicPlus[5]},
+				{"Mythic 6", "difficulty", AtlasLoot_Difficulty.MythicPlus[6]},
+				{"Mythic 7", "difficulty", AtlasLoot_Difficulty.MythicPlus[7]},
+				{"Mythic 8", "difficulty", AtlasLoot_Difficulty.MythicPlus[8]},
+				{"Mythic 9", "difficulty", AtlasLoot_Difficulty.MythicPlus[9]},
+				{"Mythic 10", "difficulty", AtlasLoot_Difficulty.MythicPlus[10]},
+			},
         },
-        [5] = {
-            {"Bloodforged", "difficulty", AtlasLoot_Difficulty.Bloodforged, "MythicSubMenu", "Disable"},
+		[5] = {
+            ["Mythic+ 11-20"] = {
+				{"Mythic 11", "difficulty", AtlasLoot_Difficulty.MythicPlus[11]},
+				{"Mythic 12", "difficulty", AtlasLoot_Difficulty.MythicPlus[12]},
+				{"Mythic 13", "difficulty", AtlasLoot_Difficulty.MythicPlus[13]},
+				{"Mythic 14", "difficulty", AtlasLoot_Difficulty.MythicPlus[14]},
+				{"Mythic 15", "difficulty", AtlasLoot_Difficulty.MythicPlus[15]},
+				{"Mythic 16", "difficulty", AtlasLoot_Difficulty.MythicPlus[16]},
+				{"Mythic 17", "difficulty", AtlasLoot_Difficulty.MythicPlus[17]},
+				{"Mythic 18", "difficulty", AtlasLoot_Difficulty.MythicPlus[18]},
+				{"Mythic 19", "difficulty", AtlasLoot_Difficulty.MythicPlus[19]},
+				{"Mythic 20", "difficulty", AtlasLoot_Difficulty.MythicPlus[20]},
+			},
         },
-    };
-
-    ["MythicPlus"] = {
-
+		[6] = {
+            ["Mythic+ 21-30"] = {
+				{"Mythic 21", "difficulty", AtlasLoot_Difficulty.MythicPlus[21]},
+				{"Mythic 22", "difficulty", AtlasLoot_Difficulty.MythicPlus[22]},
+				{"Mythic 23", "difficulty", AtlasLoot_Difficulty.MythicPlus[23]},
+				{"Mythic 24", "difficulty", AtlasLoot_Difficulty.MythicPlus[24]},
+				{"Mythic 25", "difficulty", AtlasLoot_Difficulty.MythicPlus[25]},
+				{"Mythic 26", "difficulty", AtlasLoot_Difficulty.MythicPlus[26]},
+				{"Mythic 27", "difficulty", AtlasLoot_Difficulty.MythicPlus[27]},
+				{"Mythic 28", "difficulty", AtlasLoot_Difficulty.MythicPlus[28]},
+				{"Mythic 29", "difficulty", AtlasLoot_Difficulty.MythicPlus[29]},
+				{"Mythic 30", "difficulty", AtlasLoot_Difficulty.MythicPlus[30]},
+			},
+        },
+        [7] = {
+            {"Bloodforged", "difficulty", AtlasLoot_Difficulty.Bloodforged},
+        },
+		[8] = {
+			{RED.."Reset", "difficulty", "reset"},
+		},
     };
 
     ["Quality"] = {
@@ -84,6 +112,9 @@ AtlasLoot_AdvancedSearchMenus = {
         [4] = {
             {AtlasLoot_FixText("=q5=").."Legendary", "quality", "legendary"},
         },
+		[5] = {
+			{RED.."Reset", "quality", "reset"},
+		},
     };
 
     ["Equip"] = {
@@ -111,27 +142,33 @@ AtlasLoot_AdvancedSearchMenus = {
         [8] = {
             {"Feet", "equip", "feet", "EquipSubMenu", "ArmorType"},
         },
-        [9] = {
-            {"Back", "equip", "back", "EquipSubMenu", "Disable"},
-        },
-        [10] = {
-            {"Necklace", "equip", "neck", "EquipSubMenu", "Disable"},
-        },
-        [11] = {
-            {"Ring", "equip", "finger", "EquipSubMenu", "Disable"},
-        },
-        [12] = {
-            {"Trinket", "equip", "trinket", "EquipSubMenu", "Disable"},
-        },
-        [13] = {
-            {"Weapon/Shield", "equip", "#w", "EquipSubMenu", "WeaponEquip"},
-        },
-		[14] = {
-			{"Held in Off-Hand", "equip", "holdable", "EquipSubMenu", "Disable"},
+		[9] = {
+			["Accessories"] = {
+				{"Necklace", "equip", "neck", "EquipSubMenu", "Disable"},
+				{"Back", "equip", "back", "EquipSubMenu", "Disable"},
+				{"Ring", "equip", "finger", "EquipSubMenu", "Disable"},
+				{"Trinket", "equip", "trinket", "EquipSubMenu", "Disable"},
+			},
 		},
-        [15] = {
-            {"Relic", "equip", "relic", "EquipSubMenu", "RelicType"},
+        [10] = {
+            ["Weapons"] = {
+				{"One-Hand", "equip", "weapon", "EquipSubMenu", "WeaponType1H"},
+				{"Two-Hand", "equip", "2h", "EquipSubMenu", "WeaponType2H"},
+				{"Main Hand", "equip", "mainhand", "EquipSubMenu", "WeaponType1H"},
+				{"Off Hand", "equip", "offhand", "EquipSubMenu", "WeaponType1H"},
+				{"Ranged", "equip", "ranged", "EquipSubMenu", "WeaponTypeRanged"},
+				{"Relic", "equip", "relic", "EquipSubMenu", "RelicType"},
+			},
         },
+		[11] = {
+			["Off-Hand"] = {
+				{"Shield", "equip", "shield", "EquipSubMenu", "Disable"},
+				{"Held in Off-Hand", "equip", "holdable", "EquipSubMenu", "Disable"},
+			}
+		},
+		[12] = {
+			{RED.."Reset", "equip", "reset", "EquipSubMenu", "Disable"},
+		},
     };
 
     ["ArmorType"] = {
@@ -147,6 +184,9 @@ AtlasLoot_AdvancedSearchMenus = {
         [4] = {
             {"Plate", "type", "Plate"},
         },
+		[5] = {
+			{RED.."Reset", "type", "reset"},
+		},
     };
 
     ["RelicType"] = {
@@ -162,65 +202,72 @@ AtlasLoot_AdvancedSearchMenus = {
         [4] = {
             {"Sigil", "type", "sigil"},
         },
+		[5] = {
+			{RED.."Reset", "type", "reset"},
+		},
     };
 
-	["WeaponEquip"] = {
+	["WeaponType1H"] = {
 		[1] = {
-            {"One-Hand", "equip", "weapon", "WeaponSubMenu", "WeaponType"},
-        },
-        [2] = {
-            {"Two-Hand", "equip", "2h", "WeaponSubMenu", "WeaponType"},
-        },
-        [3] = {
-            {"Main Hand", "equip", "mainhand", "WeaponSubMenu", "WeaponType"},
-        },
-        [4] = {
-            {"Off Hand", "equip", "offhand", "WeaponSubMenu", "WeaponType"},
-        },
-		[5] = {
-			{"Ranged", "equip", "ranged", "WeaponSubMenu", "WeaponType"},
-		}
-	};
-
-	["WeaponType"] = {
-		[1] = {
-			{"Axe", "type", "axe"}
+			{"Axe", "type", "axe1h"}
 		},
 		[2] = {
-			{"Mace", "type", "mace"}
+			{"Mace", "type", "mace1h"}
 		},
 		[3] = {
-			{"Sword", "type", "sword"}
+			{"Sword", "type", "sword1h"}
+		},
+		[4] = {
+			{"Dagger", "type", "dagger"}
+		},
+		[5] = {
+			{"Fist Weapon", "type", "fist"}
+		},
+		[6] = {
+			{RED.."Reset", "type", "reset"},
+		},
+	};
+
+	["WeaponType2H"] = {
+		[1] = {
+			{"Axe", "type", "axe2h"}
+		},
+		[2] = {
+			{"Mace", "type", "mace2h"}
+		},
+		[3] = {
+			{"Sword", "type", "sword2h"}
 		},
 		[4] = {
 			{"Polearm", "type", "polearm"}
 		},
 		[5] = {
-			{"Dagger", "type", "dagger"}
+			{"Staff", "type", "staff"}
 		},
 		[6] = {
-			{"Staff", "type", "stave"}
+			{RED.."Reset", "type", "reset"},
 		},
-		[7] = {
-			{"Fist Weapon", "type", "fist"}
+		
+	};
+
+	["WeaponTypeRanged"] = {
+		[1] = {
+			{"Bow", "type", "bows"}
 		},
-		[8] = {
-			{"Bow", "type", "bow"}
+		[2] = {
+			{"Gun", "type", "guns"}
 		},
-		[9] = {
-			{"Gun", "type", "gun"}
+		[3] = {
+			{"Crossbow", "type", "crossbows"}
 		},
-		[10] = {
-			{"Crossbow", "type", "crossbow"}
-		},
-		[11] = {
+		[4] = {
 			{"Wand", "type", "wand"}
 		},
-		[12] = {
+		[5] = {
 			{"Thrown", "type", "thrown"}
 		},
-		[13] = {
-			{"Shield", "type", "shield"}
+		[6] = {
+			{RED.."Reset", "type", "reset"},
 		},
 	};
 }
@@ -320,14 +367,6 @@ AdvancedSearchOptions = {
     ["equip"] = "",
     ["type"] = "",
     ["difficulty"] = "",
-	["arg1"] = "minlvl",
-	["arg1op"] = "=",
-	["arg2"] = "",
-	["arg2op"] = "",
-	["arg3"] = "",
-	["arg3op"] = "",
-	["arg4"] = "",
-	["arg4op"] = "",
 }
 
 function AtlasLoot_AdvancedSearchSetup()
@@ -335,22 +374,69 @@ function AtlasLoot_AdvancedSearchSetup()
     AtlasLoot_AdvancedSearchRegister(AtlasLoot_EquipMenu, AtlasLootAdvancedSearch_Equip, AtlasLoot_AdvancedSearchMenus["Equip"]);
     AtlasLoot_AdvancedSearchRegister(AtlasLoot_DifficultyMenu, AtlasLootAdvancedSearch_Difficulty, AtlasLoot_AdvancedSearchMenus["Difficulty"]);
 
-	AtlasLoot_AdvancedSearchArgumentRegister(AtlasLoot_Argument1Menu, AtlasLootAdvancedSearch_Argument1, "1", AtlasLoot_AdvancedSearchArguments["Arguments"]);
-	AtlasLoot_AdvancedSearchArgumentRegister(AtlasLoot_Argument2Menu, AtlasLootAdvancedSearch_Argument2, "2", AtlasLoot_AdvancedSearchArguments["Arguments"]);
-	AtlasLoot_AdvancedSearchArgumentRegister(AtlasLoot_Argument3Menu, AtlasLootAdvancedSearch_Argument3, "3", AtlasLoot_AdvancedSearchArguments["Arguments"]);
-	AtlasLoot_AdvancedSearchArgumentRegister(AtlasLoot_Argument4Menu, AtlasLootAdvancedSearch_Argument4, "4", AtlasLoot_AdvancedSearchArguments["Arguments"]);
+	local addArg = CreateFrame("Button", "AtlasLootAdvancedSearch_ArgumentContainerAddArgBtn", AtlasLootAdvancedSearch_ArgumentContainer, "OptionsButtonTemplate");
+	addArg:SetPoint("BOTTOMLEFT", AtlasLootAdvancedSearch_ArgumentContainer, "TOPLEFT", 110, 2);
+	addArg:SetSize(20, 20);
+	addArg:SetText("+");
+	addArg:SetScript("OnClick", function(self, button)
+		AddArgumentContainer();
+	end)
 
-	AtlasLoot_AdvancedSearchArgumentRegister(AtlasLoot_Argument1SubMenu, AtlasLootAdvancedSearch_Argument1Sub, "1", AtlasLoot_AdvancedSearchArguments["Operators"]);
-	AtlasLoot_AdvancedSearchArgumentRegister(AtlasLoot_Argument2SubMenu, AtlasLootAdvancedSearch_Argument2Sub, "2", AtlasLoot_AdvancedSearchArguments["Operators"]);
-	AtlasLoot_AdvancedSearchArgumentRegister(AtlasLoot_Argument3SubMenu, AtlasLootAdvancedSearch_Argument3Sub, "3", AtlasLoot_AdvancedSearchArguments["Operators"]);
-	AtlasLoot_AdvancedSearchArgumentRegister(AtlasLoot_Argument4SubMenu, AtlasLootAdvancedSearch_Argument4Sub, "4", AtlasLoot_AdvancedSearchArguments["Operators"]);
+	local remArg = CreateFrame("Button", "AtlasLootAdvancedSearch_ArgumentContainerRemArgBtn", AtlasLootAdvancedSearch_ArgumentContainer, "OptionsButtonTemplate")
+	remArg:SetPoint("LEFT", AtlasLootAdvancedSearch_ArgumentContainerAddArgBtn, "RIGHT", 10, 0);
+	remArg:SetSize(20, 20);
+	remArg:SetText("-");
+	remArg:SetScript("OnClick", function(self, button)
+		RemoveArgumentContainer();
+	end)
+	remArg:Disable();
 
-	--Setup Mythic+ dropdown options;
-    for i = 1, 30, 1 do
-        AtlasLoot_AdvancedSearchMenus["MythicPlus"][i] = {
-            {"Mythic+ "..i, "difficulty", AtlasLoot_Difficulty.MythicPlus[i]};
-        }
-    end
+	for n = 1, MAX_ARGUMENTS do
+		AtlasLoot_ArgumentMenus[n] = AceLibrary("Dewdrop-2.0");
+		AtlasLoot_ArgumentSubMenus[n] = AceLibrary("Dewdrop-2.0");
+
+		local btn = CreateFrame("Button", "AtlasLootAdvancedSearch_ArgumentContainer"..tostring(n), AtlasLootAdvancedSearch_ArgumentContainer, "OptionsButtonTemplate");
+		btn:SetPoint("TOPLEFT", AtlasLootAdvancedSearch_ArgumentContainer, "TOPLEFT", 0, -((n-1) * 35));
+		btn:SetSize(130, 20);
+		btn:SetScript("OnClick", function(self, button)
+			if AtlasLoot_ArgumentMenus[n]:IsOpen() then
+				AtlasLoot_ArgumentMenus[n]:Close();
+			else
+				AtlasLoot_ArgumentMenus[n]:Open(self);
+			end
+		end)
+		btn:Hide();
+		btn:SetText("Select Option");
+
+		local sub = CreateFrame("Button", "AtlasLootAdvancedSearch_ArgumentContainer"..tostring(n).."Sub", AtlasLootAdvancedSearch_ArgumentContainer, "OptionsButtonTemplate");
+		sub:SetPoint("LEFT", btn, "RIGHT", 15, 0);
+		sub:SetSize(130, 20);
+		sub:SetScript("OnClick", function(self, button)
+			if AtlasLoot_ArgumentSubMenus[n]:IsOpen() then
+				AtlasLoot_ArgumentSubMenus[n]:Close();
+			else
+				AtlasLoot_ArgumentSubMenus[n]:Open(self);
+			end
+		end)
+		sub:Hide();
+		sub:Disable();
+
+		local txt = CreateFrame("EditBox", "AtlasLootAdvancedSearch_ArgumentContainer"..tostring(n).."Value", AtlasLootAdvancedSearch_ArgumentContainer, "InputBoxTemplate")
+		txt:SetPoint("LEFT", sub, "RIGHT", 15, 0);
+		txt:SetSize(65, 35);
+		txt:SetAutoFocus(false);
+		txt:SetTextInsets(0, 8, 0, 0);
+		txt:SetScript("OnEnterPressed", function(self)
+			self:ClearFocus();
+		end)
+		txt:Hide();
+
+		AtlasLoot_AdvancedSearchArgumentRegister(AtlasLoot_ArgumentMenus[n], _G["AtlasLootAdvancedSearch_ArgumentContainer"..tostring(n)], tostring(n), AtlasLoot_AdvancedSearchArguments["Arguments"]);
+		AtlasLoot_AdvancedSearchArgumentRegister(AtlasLoot_ArgumentSubMenus[n], _G["AtlasLootAdvancedSearch_ArgumentContainer"..tostring(n).."Sub"], tostring(n), AtlasLoot_AdvancedSearchArguments["Operators"]);
+	end
+
+	--Reset Search options to defualt
+	AtlasLoot_AdvancedSearchReset();
 
 	AdvSearchSetup = true;
 end
@@ -369,6 +455,12 @@ function AtlasLoot_AdvancedSearchShow()
     getglobal("AtlasLootItemsFrame_NEXT"):Hide();
     getglobal("AtlasLootItemsFrame_PREV"):Hide();
 	getglobal("AtlasLootItemsFrame_BACK"):Hide();
+
+	--Clear these values to defualt
+	AdvSearchSubMenuEnabled = 0;
+	AdvSearchSubMenuText = "";
+	AdvSearchSubMenu2Enabled = 0;
+	AdvSearchSubMenuText = "";
 
 	if AtlasLootDefaultFrame_SubMenu2:IsEnabled() then
 		AdvSearchSubMenu2Enabled = 1;
@@ -401,9 +493,6 @@ function AtlasLoot_AdvancedSearchShow()
         getglobal("AtlasLootItem_"..i).itemID = 0;
         getglobal("AtlasLootItem_"..i).spellitemID = 0;
 	end
-
-	--Reset Search options
-	AtlasLoot_AdvancedSearchReset();
 
     AtlasLoot_BossName:SetText("Advanced Search");
 
@@ -442,50 +531,76 @@ function AtlasLoot_AdvancedSearchReset()
 		["equip"] = "",
 		["type"] = "",
 		["difficulty"] = "",
-		["arg1"] = "minlvl",
-		["arg1op"] = "=",
-		["arg2"] = "",
-		["arg2op"] = "",
-		["arg3"] = "",
-		["arg3op"] = "",
-		["arg4"] = "",
-		["arg4op"] = "",
 	}
 
+	for i = 1, MAX_ARGUMENTS do
+		AdvancedSearchOptions["arg"..tostring(i)] = "";
+		AdvancedSearchOptions["arg"..tostring(i).."op"] = "";
+
+		RemoveArgumentContainer();
+	end
+
+	AtlasLootAdvancedSearch_LevelMin:SetText(UnitLevel("player"));
+	AtlasLootAdvancedSearch_LevelMax:SetText(UnitLevel("player"));
+	AtlasLootAdvancedSearch_ILevelMin:SetText("");
+	AtlasLootAdvancedSearch_ILevelMax:SetText("");
+
 	AtlasLootAdvancedSearch_Quality:SetText("Select Quality");
+
 	AtlasLootAdvancedSearch_Equip:SetText("Select Item Type");
-	AtlasLootAdvancedSearch_Difficulty:SetText("Select Difficulty");
-
-	AtlasLootAdvancedSearch_Argument1:SetText("Required Level");
-	AtlasLootAdvancedSearch_Argument1Sub:SetText("Equals");
-	AtlasLootAdvancedSearch_Argument1Value:SetText(UnitLevel("player"));
-	
-	AtlasLootAdvancedSearch_Argument2:SetText("Select Option");
-	AtlasLootAdvancedSearch_Argument3:SetText("Select Option");
-	AtlasLootAdvancedSearch_Argument4:SetText("Select Option");
-
 	AtlasLootAdvancedSearch_EquipSub:Disable();
 	AtlasLootAdvancedSearch_EquipSub:SetText("Select Option")
-    AtlasLootAdvancedSearch_MythicSub:Disable();
-	AtlasLootAdvancedSearch_MythicSub:SetText("Mythic+ 1");
-	AtlasLootAdvancedSearch_WeaponSub:Disable();
-	AtlasLootAdvancedSearch_WeaponSub:SetText("Select Weapon Type")
 
-	AtlasLootAdvancedSearch_Argument2Sub:Disable();
-	AtlasLootAdvancedSearch_Argument2Sub:SetText("Select Option");
-	AtlasLootAdvancedSearch_Argument2Value:Hide();
-	AtlasLootAdvancedSearch_Argument2Value:SetText("");
-	AtlasLootAdvancedSearch_Argument3Sub:Disable();
-	AtlasLootAdvancedSearch_Argument3Sub:SetText("Select Option");
-	AtlasLootAdvancedSearch_Argument3Value:Hide();
-	AtlasLootAdvancedSearch_Argument3Value:SetText("");
-	AtlasLootAdvancedSearch_Argument4Sub:Disable();
-	AtlasLootAdvancedSearch_Argument4Sub:SetText("Select Option");
-	AtlasLootAdvancedSearch_Argument4Value:Hide();
-	AtlasLootAdvancedSearch_Argument4Value:SetText("");
+	AtlasLootAdvancedSearch_Difficulty:SetText("Select Difficulty");
 end
 
+function AddArgumentContainer()
+	if ACTIVE_ARGUMENT == MAX_ARGUMENTS then AdvSearchArgButtonToggle() return end
 
+	ACTIVE_ARGUMENT = ACTIVE_ARGUMENT + 1;
+
+	_G["AtlasLootAdvancedSearch_ArgumentContainer"..tostring(ACTIVE_ARGUMENT)]:Show();
+	_G["AtlasLootAdvancedSearch_ArgumentContainer"..tostring(ACTIVE_ARGUMENT)]:SetText("Select Option");
+	_G["AtlasLootAdvancedSearch_ArgumentContainer"..tostring(ACTIVE_ARGUMENT).."Sub"]:Show();
+
+	AdvSearchArgButtonToggle()
+end
+
+function RemoveArgumentContainer()
+	if ACTIVE_ARGUMENT == 0 then AdvSearchArgButtonToggle() return end
+
+	AdvancedSearchOptions["arg"..tostring(ACTIVE_ARGUMENT)] = "";
+	AdvancedSearchOptions["arg"..tostring(ACTIVE_ARGUMENT).."op"] = "";
+
+	_G["AtlasLootAdvancedSearch_ArgumentContainer"..tostring(ACTIVE_ARGUMENT)]:Hide();
+	_G["AtlasLootAdvancedSearch_ArgumentContainer"..tostring(ACTIVE_ARGUMENT).."Sub"]:Disable();
+	_G["AtlasLootAdvancedSearch_ArgumentContainer"..tostring(ACTIVE_ARGUMENT).."Sub"]:Hide();
+	_G["AtlasLootAdvancedSearch_ArgumentContainer"..tostring(ACTIVE_ARGUMENT).."Value"]:Hide();
+
+	ACTIVE_ARGUMENT = ACTIVE_ARGUMENT - 1;
+	AdvSearchArgButtonToggle()
+end
+
+function AdvSearchArgButtonToggle()
+	if ACTIVE_ARGUMENT == MAX_ARGUMENTS then
+		AtlasLootAdvancedSearch_ArgumentContainerAddArgBtn:Disable()
+	else
+		AtlasLootAdvancedSearch_ArgumentContainerAddArgBtn:Enable()
+	end
+
+	if ACTIVE_ARGUMENT == 0 then
+		AtlasLootAdvancedSearch_ArgumentContainerRemArgBtn:Disable()
+	else
+		AtlasLootAdvancedSearch_ArgumentContainerRemArgBtn:Enable()
+	end
+end
+
+AdvSearchDefaultText = {
+	["quality"] = "Select Quality",
+	["equip"] = "Select Item Type",
+	["type"] = "Select Option",
+	["difficulty"] = "Select Difficulty"
+}
 
 function AtlasLoot_AdvancedSearchMenuClick(Object, VariableToSet, VariableValue, ChildMenu, ChildMenuRegister)
 	--Setups child menus and sets search options to default
@@ -496,6 +611,14 @@ function AtlasLoot_AdvancedSearchMenuClick(Object, VariableToSet, VariableValue,
 			--Disable assigned children menus as well
 			if(AtlasLoot_FrameMenuList[ChildMenu][6]) then
 				getglobal(AtlasLoot_FrameMenuList[ChildMenu][6]):Disable();
+			end
+			if VariableValue == "reset" then
+				AdvancedSearchOptions[VariableToSet] = "";
+    			Object[1]:SetText(AdvSearchDefaultText[VariableToSet]);
+   				Object[2]:Close();
+
+				getglobal(AtlasLoot_FrameMenuList[ChildMenu][2]):SetText(AtlasLoot_FrameMenuList[ChildMenu][3])
+				return
 			end
         else
             AtlasLoot_AdvancedSearchRegister(AtlasLoot_FrameMenuList[ChildMenu][1], getglobal(AtlasLoot_FrameMenuList[ChildMenu][2]), AtlasLoot_AdvancedSearchMenus[ChildMenuRegister]);
@@ -508,6 +631,12 @@ function AtlasLoot_AdvancedSearchMenuClick(Object, VariableToSet, VariableValue,
 			end
         end
     end
+	if VariableValue == "reset" then
+		AdvancedSearchOptions[VariableToSet] = "";
+		Object[1]:SetText(AdvSearchDefaultText[VariableToSet]);
+		Object[2]:Close();
+		return
+	end
 	AdvancedSearchOptions[VariableToSet] = VariableValue;
     Object[1]:SetText(Object[3]);
     Object[2]:Close();
@@ -568,6 +697,24 @@ function AtlasLoot_AdvancedSearchRegister(DropDown, DropDownObject, MenuOption)
 					'func', function() DropDown:Close() end,
 					'notCheckable', true
 				)
+			elseif level == 2 then
+				if value then
+                    for k,v in ipairs(value) do
+						DropDown:AddLine(
+                                        'text', v[1],
+                                        'textR', 1,
+                                        'textG', 0.82,
+                                        'textB', 0,
+                                        'func', AtlasLoot_AdvancedSearchMenuClick,
+                                        'arg1', {DropDownObject, DropDown, v[1]},
+                                        'arg2', v[2],
+                                        'arg3', v[3],
+										'arg4', v[4],
+										'arg5', v[5],
+                                        'notCheckable', true
+                                    )
+					end
+				end
 			end
 		end,
 		'dontHook', true
@@ -578,24 +725,24 @@ function AtlasLoot_AdvancedSearchArgumentClick(Object, VariableToSet, VariableVa
 	if IsOperator and VariableValue == "reset" then
 		AdvancedSearchOptions["arg"..VariableToSet.."op"] = "";
 
-		getglobal("AtlasLootAdvancedSearch_Argument"..VariableToSet.."Value"):SetText("");
-		getglobal("AtlasLootAdvancedSearch_Argument"..VariableToSet.."Value"):Hide();
+		getglobal("AtlasLootAdvancedSearch_ArgumentContainer"..VariableToSet.."Value"):SetText("");
+		getglobal("AtlasLootAdvancedSearch_ArgumentContainer"..VariableToSet.."Value"):Hide();
 
 		Object[1]:SetText("Select Option");
     	Object[2]:Close();
 	elseif IsOperator then
 		AdvancedSearchOptions["arg"..VariableToSet.."op"] = VariableValue;
 
-		getglobal("AtlasLootAdvancedSearch_Argument"..VariableToSet.."Value"):Show();
+		getglobal("AtlasLootAdvancedSearch_ArgumentContainer"..VariableToSet.."Value"):Show();
 
 		Object[1]:SetText(Object[3]);
     	Object[2]:Close();
 	elseif VariableValue == "reset" then
-		getglobal("AtlasLootAdvancedSearch_Argument"..VariableToSet.."Sub"):SetText("Select Option");
-		getglobal("AtlasLootAdvancedSearch_Argument"..VariableToSet.."Sub"):Disable();
+		getglobal("AtlasLootAdvancedSearch_ArgumentContainer"..VariableToSet.."Sub"):SetText("Select Option");
+		getglobal("AtlasLootAdvancedSearch_ArgumentContainer"..VariableToSet.."Sub"):Disable();
 
-		getglobal("AtlasLootAdvancedSearch_Argument"..VariableToSet.."Value"):SetText("");
-		getglobal("AtlasLootAdvancedSearch_Argument"..VariableToSet.."Value"):Hide();
+		getglobal("AtlasLootAdvancedSearch_ArgumentContainer"..VariableToSet.."Value"):SetText("");
+		getglobal("AtlasLootAdvancedSearch_ArgumentContainer"..VariableToSet.."Value"):Hide();
 
 		AdvancedSearchOptions["arg"..VariableToSet] = "";
 		AdvancedSearchOptions["arg"..VariableToSet.."op"] = "";
@@ -603,12 +750,12 @@ function AtlasLoot_AdvancedSearchArgumentClick(Object, VariableToSet, VariableVa
 		Object[1]:SetText("Select Option");
 		Object[2]:Close();
 	else
-		getglobal("AtlasLootAdvancedSearch_Argument"..VariableToSet.."Sub"):SetText("Select Option");
-		getglobal("AtlasLootAdvancedSearch_Argument"..VariableToSet.."Sub"):Enable();
+		getglobal("AtlasLootAdvancedSearch_ArgumentContainer"..VariableToSet.."Sub"):SetText("Select Option");
+		getglobal("AtlasLootAdvancedSearch_ArgumentContainer"..VariableToSet.."Sub"):Enable();
 		AdvancedSearchOptions["arg"..VariableToSet.."op"] = "";
 
-		getglobal("AtlasLootAdvancedSearch_Argument"..VariableToSet.."Value"):SetText("");
-		getglobal("AtlasLootAdvancedSearch_Argument"..VariableToSet.."Value"):Hide();
+		getglobal("AtlasLootAdvancedSearch_ArgumentContainer"..VariableToSet.."Value"):SetText("");
+		getglobal("AtlasLootAdvancedSearch_ArgumentContainer"..VariableToSet.."Value"):Hide();
 
 		AdvancedSearchOptions["arg"..VariableToSet] = VariableValue;
 		Object[1]:SetText(Object[3]);
@@ -749,7 +896,7 @@ function AtlasLoot_AdvancedSearchArgumentRegister(DropDown, DropDownObject, Argu
 	)
 end
 
-function AtlasLoot:AdvancedSearch(Text, args)
+function AtlasLoot:AdvancedSearch(Text)
 	if not Text then return end
 	Text = strtrim(Text);
 	local advSearchString = Text or "";
@@ -763,10 +910,21 @@ function AtlasLoot:AdvancedSearch(Text, args)
 		return str;
 	end
 
-	local function AdvancedSearchFixType(slot, subType)
-		if slot == "2h" and (subType == "axe" or subType == "sword" or subType == "mace") then
-			return slot..subType;
+	local function GetTextByName(name)
+		if (_G["AtlasLootAdvancedSearch_"..name]) then
+			return _G["AtlasLootAdvancedSearch_"..name]:GetText()
 		end
+
+		return nil;
+	end
+
+	local function FixRangedSlot(subType)
+		if (subType == "wand" or subType == "gun" or subType == "crossbow") then
+			return "rangedright";
+		elseif subType == "thrown" then
+			return "thrown";
+		end
+			return "ranged";
 	end
 
     if AdvancedSearchOptions["quality"] ~= "" then
@@ -774,11 +932,13 @@ function AtlasLoot:AdvancedSearch(Text, args)
     end
 
 	if AdvancedSearchOptions["equip"] ~= "" then
+		if AdvancedSearchOptions["equip"] == "ranged" and AdvancedSearchOptions["type"] ~= ""then
+			AdvancedSearchOptions["equip"] = FixRangedSlot(AdvancedSearchOptions["type"]);
+		end
 		advSearchString = AppendSearchString(advSearchString, "slot="..AdvancedSearchOptions["equip"]);
     end
 
 	if AdvancedSearchOptions["type"] ~= "" and AdvancedSearchOptions["type"] then
-		AdvancedSearchOptions["type"] = AdvancedSearchFixType(AdvancedSearchOptions["equip"], AdvancedSearchOptions["type"]) or AdvancedSearchOptions["type"];
 		advSearchString = AppendSearchString(advSearchString, "type="..AdvancedSearchOptions["type"]);
     end
 
@@ -786,16 +946,34 @@ function AtlasLoot:AdvancedSearch(Text, args)
 		advSearchString = AppendSearchString(advSearchString, "dif="..AdvancedSearchOptions["difficulty"]);
 	end
 
-	for i = 1, 4, 1 do
+	if (GetTextByName("LevelMin") and GetTextByName("LevelMin") ~= "") then
+		advSearchString = AppendSearchString(advSearchString, "minlvl>="..GetTextByName("LevelMin"));
+	end
+
+	if (GetTextByName("LevelMax") and GetTextByName("LevelMax") ~= "") then
+		advSearchString = AppendSearchString(advSearchString, "minlvl<="..GetTextByName("LevelMax"));
+	end
+
+	if (GetTextByName("ILevelMin") and GetTextByName("ILevelMin") ~= "") then
+		advSearchString = AppendSearchString(advSearchString, "ilvl>="..GetTextByName("ILevelMin"));
+	end
+
+	if (GetTextByName("ILevelMax") and GetTextByName("ILevelMax") ~= "") then
+		advSearchString = AppendSearchString(advSearchString, "ilvl<="..GetTextByName("ILevelMax"));
+	end
+
+	for i = 1, ACTIVE_ARGUMENT, 1 do
 		if AdvancedSearchOptions["arg"..i] ~= "" then
+			local arg = _G["AtlasLootAdvancedSearch_ArgumentContainer"..tostring(i).."Value"]:GetText();
 			if AdvancedSearchOptions["arg"..i.."op"] == "" then
 				AdvancedSearchOptions["arg"..i.."op"] = ">"
-				args[i] = "0";
-				print(args[i]);
+				arg = "0";
 			end
-		advSearchString = AppendSearchString(advSearchString, AdvancedSearchOptions["arg"..i]..AdvancedSearchOptions["arg"..i.."op"]..args[i]);
+			advSearchString = AppendSearchString(advSearchString, AdvancedSearchOptions["arg"..i]..AdvancedSearchOptions["arg"..i.."op"]..arg);
 		end
 	end
+
+	
 
 	AtlasLoot:Search(string.lower(advSearchString));
 end
