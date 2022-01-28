@@ -675,9 +675,6 @@ function AtlasLoot_SetNewStyle(style)
 		"AtlasLootDefaultFrameLastResultButton",
 		"AtlasLootDefaultFrameWishListButton",
         "AtlasLootDefaultFrameAdvancedSearchButton",
-        "AtlasLootAdvancedSearch_SearchButton",
-        "AtlasLootAdvancedSearch_SearchClearButton",
-        "AtlasLootAdvancedSearch_LastResultButton"
 	}
 	
 	if style == "new" then
