@@ -33,7 +33,7 @@ AtlasLoot_Data["AtlasLootFallback"] = {
 };
 
 --[[
-AtlasLoot_DewDropClick(tablename, text, tabletype, tabletype2):
+AtlasLoot_DewDropClick(tablename, text, tabletype):
 tablename - Name of the loot table in the database
 text - Heading for the loot table
 tabletype - Whether the tablename indexes an actual table or needs to generate a submenu
@@ -44,9 +44,10 @@ function AtlasLoot_DewDropClick(tablename, text, tabletype)
     --Definition of where I want the loot table to be shown
     pFrame = { "TOPLEFT", "AtlasLootDefaultFrame_LootBackground", "TOPLEFT", "2", "-2" };
     --If the button clicked was linked to a loot table
-	if tabletype == "Table" then
-		--Show the loot table
-        AtlasLoot_ShowItemsFrame(tablename, "", text, pFrame);
+
+    if tabletype == "Table" then
+        --Show the loot table
+        AtlasLoot_ShowBossLoot(tablename, tablename, pFrame);
 		--Save needed info for fuure re-display of the table
         AtlasLoot.db.profile.LastBoss = tablename;
         --Purge the text label for the submenu and disable the submenu
