@@ -5063,16 +5063,16 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 	-- T1 Token Items
 
 	AtlasLoot_Data["T1Bracers"] = {
-		{ 1, 16830, "", "=q4=Cenarion Bracers", "=ds="..AL["Trash Mobs"], "", ""};
-		{ 2, 16850, "", "=q4=Giantstalker's Bracers", "=ds="..AL["Trash Mobs"], "", ""};
-		{ 3, 16799, "", "=q4=Arcanist Bindings", "=ds="..AL["Trash Mobs"], "", ""};
-		{ 4, 16857, "", "=q4=Lawbringer Bracers", "=ds="..AL["Trash Mobs"], "", ""};
-		{ 5, 16819, "", "=q4=Vambraces of Prophecy", "=ds="..AL["Trash Mobs"], "", ""};
-		{ 6, 16825, "", "=q4=Nightslayer Bracelets", "=ds="..AL["Trash Mobs"], "", ""};
-		{ 7, 16840, "", "=q4=Earthfury Bracers", "=ds="..AL["Trash Mobs"], "", ""};
-		{ 8, 16804, "", "=q4=Felheart Bracers", "=ds="..AL["Trash Mobs"], "", ""};
-		{ 9, 16861, "", "=q4=Bracers of Might", "=ds="..AL["Trash Mobs"], "", ""};
-		{ 10, 10483, "", "=q4=Wristguards of Might", "=ds="..AL["Trash Mobs"], ""};
+		{ 1, 16830, "", "=q4=Cenarion Bracers", "=ds=#c1#", "", ""};
+		{ 2, 16850, "", "=q4=Giantstalker's Bracers", "=ds=#c2#", "", ""};
+		{ 3, 16799, "", "=q4=Arcanist Bindings", "=ds=#c3#", "", ""};
+		{ 4, 16857, "", "=q4=Lawbringer Bracers", "=ds=#c4#", "", ""};
+		{ 5, 16819, "", "=q4=Vambraces of Prophecy", "=ds=#c5#", "", ""};
+		{ 6, 16825, "", "=q4=Nightslayer Bracelets", "=ds=#c6#", "", ""};
+		{ 7, 16840, "", "=q4=Earthfury Bracers", "=ds=#c7#", "", ""};
+		{ 8, 16804, "", "=q4=Felheart Bracers", "=ds=#c8#", "", ""};
+		{ 9, 16861, "", "=q4=Bracers of Might", "=ds=#c9#", "", ""};
+		{ 10, 10483, "", "=q4=Wristguards of Might", "=ds=#c9#", "", ""};
 		Back = AtlasLoot_Lastboss;
 		Type = "ClassicRaid";
 		

@@ -25,6 +25,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 AtlasLoot_Dewdrop = AceLibrary("Dewdrop-2.0");
 AtlasLoot_DewdropSubMenu = AceLibrary("Dewdrop-2.0");
 AtlasLoot_DewdropSubMenu2 = AceLibrary("Dewdrop-2.0");
+AtlasLoot_DifficultyAtlas = AceLibrary("Dewdrop-2.0");
 indexID = 2
 ItemindexID = ""
 
@@ -160,11 +161,32 @@ function AtlasLoot_DewDropSubMenu2Click(raidtablename, itemID, itemColour)
     end
 end
 
+function AtlasLoot_DifficultyAtlasClick(raidtablename, itemID, itemColour)
+	if ATLASLOOT_FILTER_ENABLE == true then --used to refresh loottable when filter is enabled
+        AtlasLoot_FilterEnableButton()
+        ReEnableFilter = true
+    end
+    -- gets itemID reference
+    AtlasLootDefaultFrame_GetRaidDifficulty(raidtablename, itemID, itemColour)
+	--Show the select loot table
+	AtlasLoot_ShowItemsFrame(AtlasLootItemsFrame.refreshOri[1], AtlasLootItemsFrame.refreshOri[2], AtlasLootItemsFrame.refreshOri[3], AtlasLootItemsFrame.refreshOri[4]);
+    --Set text for difficulty
+	AtlasLootItemsFrame_DifficultyAtlasButton:SetText(DropTablename);
+    AtlasLoot_DifficultyAtlas:Close(1);
+    if ReEnableFilter then --used to refresh loottable when filter is enabled
+        AtlasLoot_FilterEnableButton()
+    end
+end
+
 function AtlasLoot_DifficultyDisable() --Disables Difficulty Menu
     isTablereference = false
     notPattern = false
+    AtlasLootItemsFrame_DifficultyAtlasButton:Hide();
+    AtlasLootItemsFrame_DifficultyAtlasButton:Disable();
+    AtlasLoot_DifficultyAtlas:Unregister(AtlasLootItemsFrame_DifficultyAtlasButton);
     AtlasLoot_DewdropSubMenu2:Unregister(AtlasLootDefaultFrame_SubMenu2);
     AtlasLootDefaultFrame_SubMenu2:Disable();
+    AtlasLootItemsFrame_DifficultyAtlasButton:SetText("Select Difficulty");
     AtlasLootDefaultFrame_SelectedTable2:SetText("");
     AtlasLootDefaultFrame_SelectedTable2:Hide();
     DewDrop2Enable = false
@@ -173,15 +195,26 @@ end
 
 function AtlasLoot_DifficultyEnable(dataID, dataSource) --Enables Difficulty Menu
     if not AtlasLoot_Difficulty[dataSource[dataID].Type] then return end
-    
-    AtlasLootDefaultFrame_SubMenu2:Enable();
-    AtlasLoot_DewdropSubMenu2:Unregister(AtlasLootDefaultFrame_SubMenu2);
-    AtlasLoot_DewdropSubMenu2Register(AtlasLoot_Difficulty[dataSource[dataID].Type]);
-    if SelectedTable2TextSet == false then 
-        AtlasLootDefaultFrame_SelectedTable2:SetText(AtlasLoot_Difficulty[dataSource[dataID].Type][1][1][1])
+    if AtlasMapMenu == true then
+        AtlasLootItemsFrame_DifficultyAtlasButton:Show();
+		AtlasLootItemsFrame_DifficultyAtlasButton:Enable();
+        AtlasLoot_DifficultyAtlas:Unregister(AtlasLootItemsFrame_DifficultyAtlasButton);
+        AtlasLoot_DifficultyAtlasRegister(AtlasLoot_Difficulty[dataSource[dataID].Type]);
+        if SelectedTable2TextSet == false then
+            AtlasLootItemsFrame_DifficultyAtlasButton:SetText(AtlasLoot_Difficulty[dataSource[dataID].Type][1][1][1])
+        end
+        SelectedTable2TextSet = true
+    else 
+        AtlasLootDefaultFrame_SubMenu2:Enable();
+        AtlasLoot_DewdropSubMenu2:Unregister(AtlasLootDefaultFrame_SubMenu2);
+        AtlasLoot_DewdropSubMenu2Register(AtlasLoot_Difficulty[dataSource[dataID].Type]);
+        if SelectedTable2TextSet == false then 
+            AtlasLootDefaultFrame_SelectedTable2:SetText(AtlasLoot_Difficulty[dataSource[dataID].Type][1][1][1])
+        end
+        AtlasLootDefaultFrame_SelectedTable2:Show();
+        SelectedTable2TextSet = true
     end
-    AtlasLootDefaultFrame_SelectedTable2:Show();
-    SelectedTable2TextSet = true
+    
 end
 
 function AtlasLootDefaultFrame_GetRaidDifficulty(raidtablename, itemID, itemColour)
@@ -372,6 +405,140 @@ function AtlasLoot_DewdropSubMenu2Register(loottable)
 		'dontHook', true
 	)
 end
+
+function AtlasLoot_DifficultyAtlasRegister(loottable)
+    AtlasLoot_DifficultyAtlas:Register(AtlasLootItemsFrame_DifficultyAtlasButton,
+        'point', function(parent)
+            return "BOTTOM", "TOP"
+        end,
+		'children', function(level, value)
+			if level == 1 then
+				if AtlasLoot_Difficulty then
+                    for k,v in ipairs(loottable) do
+                        --If a link to show a submenu
+                        if (type(v[1]) == "table") and (type(v[1][1]) == "string") then
+                            local checked = false;
+                            if v[1][3] == "Submenu" then
+                                AtlasLoot_DifficultyAtlas:AddLine(
+                                    'text', v[1][1],
+                                    'textR', 1,
+                                    'textG', 0.82,
+                                    'textB', 0,
+                                    'func', AtlasLoot_DifficultyAtlasClick,
+                                    'arg1', v[1][1],
+                                    'arg2', v[1][2],
+                                    'arg3', v[1][3],
+                                    'arg4', v[1][4],
+                                    'notCheckable', true
+                                )
+                            elseif v[1][1] ~= "" then
+                                AtlasLoot_DifficultyAtlas:AddLine(
+                                    'text', v[1][1],
+                                    'textR', 1,
+                                    'textG', 0.82,
+                                    'textB', 0,
+                                    'func', AtlasLoot_DifficultyAtlasClick,
+                                    'arg1', v[1][1],
+                                    'arg2', v[1][2],
+                                    'arg3', v[1][3],
+                                    'arg4', v[1][4],
+                                    'notCheckable', true
+                                )
+                            end
+                        else
+                            local lock=0;
+                            --If an entry linked to a subtable
+                            for i,j in pairs(v) do
+                                if lock==0 then
+                                    AtlasLoot_DifficultyAtlas:AddLine(
+                                        'text', i,
+                                        'textR', 1,
+                                        'textG', 0.82,
+                                        'textB', 0,
+                                        'hasArrow', true,
+                                        'value', j,
+                                        'notCheckable', true
+                                    )
+                                    lock=1;
+                                end
+                            end
+                        end
+                    end
+                end
+                --Close button
+				AtlasLoot_DifficultyAtlas:AddLine(
+					'text', AL["Close Menu"],
+                    'textR', 0,
+                    'textG', 1,
+                    'textB', 1,
+					'func', function() AtlasLoot_DifficultyAtlas:Close() end,
+					'notCheckable', true
+				)
+			elseif level == 2 then
+				if value then
+                    for k,v in ipairs(value) do
+                        if type(v) == "table" then
+                            if (type(v[1]) == "string") then
+                                local checked = false;
+                                --If an entry to show a submenu
+                                if v[4] == "Header" then
+                                    AtlasLoot_Dewdrop:AddLine(
+                                        'text', v[1],
+                                        'textR', 0.2,
+                                        'textG', 0.82,
+                                        'textB', 0.5,
+                                        'func', AtlasLoot_DifficultyAtlasClick,
+                                        'arg1', v[1],
+                                        'arg2', v[2],
+                                        'arg3', v[3],
+										'arg4', v[4],
+                                        'notCheckable', true
+                                    )
+                                elseif v[3] == "Submenu" then
+                                    AtlasLoot_DifficultyAtlas:AddLine(
+                                    'text', v[1],
+                                    'textR', 1,
+                                    'textG', 0.82,
+                                    'textB', 0,
+                                    'func', AtlasLoot_DifficultyAtlasClick,
+                                    'arg1', v[1],
+                                    'arg2', v[2],
+                                    'arg3', v[3],
+									'arg4', v[4],
+                                    'notCheckable', true
+                                )
+                                else
+                                    AtlasLoot_DifficultyAtlas:AddLine(
+                                        'text', v[1],
+                                        'textR', 1,
+                                        'textG', 0.82,
+                                        'textB', 0,
+                                        'func', AtlasLoot_DifficultyAtlasClick,
+                                        'arg1', v[1],
+                                        'arg2', v[2],
+                                        'arg3', v[3],
+										'arg4', v[4],
+                                        'notCheckable', true
+                                    )
+                                end
+                            end
+                        end
+                    end
+                end
+                AtlasLoot_DifficultyAtlas:AddLine(
+					'text', AL["Close Menu"],
+                    'textR', 0,
+                    'textG', 1,
+                    'textB', 1,
+					'func', function() AtlasLoot_DifficultyAtlas:Close() end,
+					'notCheckable', true
+				)
+            end
+		end,
+		'dontHook', true
+	)
+end
+
 
 --[[
 AtlasLoot_DewdropSubMenuRegister(loottable):

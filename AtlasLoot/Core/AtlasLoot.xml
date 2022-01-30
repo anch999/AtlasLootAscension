@@ -369,6 +369,30 @@
 			        </OnShow>
                 </Scripts>
 			</Button>
+			<Button name="$parent_DifficultyAtlasButton" inherits="OptionsButtonTemplate">
+				<Size>
+					<AbsDimension x="140" y="23" />
+				</Size>
+				<Anchors>
+					<Anchor point="BOTTOMLEFT" relativeTo="$parent" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="60" y="4"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnShow>
+						this:SetFrameLevel( (this:GetParent()):GetFrameLevel() + 1 );
+					</OnShow>
+					<OnClick>
+						if AtlasLoot_DifficultyAtlas:IsOpen() then
+							AtlasLoot_DifficultyAtlas:Close();
+						else
+							AtlasLoot_DifficultyAtlas:Open(this);
+						end
+					</OnClick>
+				</Scripts>
+			</Button>
 			<Button name="AtlasLootItem_1" inherits="AtlasLootItem_Template" id="1">
 				<Anchors>
 					<Anchor point="TOPLEFT" relativeTo="$parent" relativePoint="TOPLEFT">
@@ -601,7 +625,7 @@
             </Button>
             <Button name="AtlasLootServerQueryButton" inherits="OptionsButtonTemplate">
 				<Size>
-					<AbsDimension x="160" y="23"/>
+					<AbsDimension x="140" y="23"/>
 				</Size>
 				<Anchors>
 					<Anchor point="BOTTOM" relativeTo="$parent" relativePoint="BOTTOM">

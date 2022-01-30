@@ -55,6 +55,7 @@ ATLASLOOT_INDENT = "   ";
 AtlasLoot_Dewdrop = AceLibrary("Dewdrop-2.0");
 AtlasLoot_DewdropSubMenu = AceLibrary("Dewdrop-2.0");
 AtlasLoot_DewdropSubMenu2 = AceLibrary("Dewdrop-2.0");
+AtlasLoot_DifficultyAtlas = AceLibrary("Dewdrop-2.0");
 --Variable to cap debug spam
 ATLASLOOT_DEBUGSHOWN = false;
 
@@ -81,8 +82,6 @@ Hooked_Atlas_Refresh = nil;
 Hooked_Atlas_OnShow = nil;
 Hooked_AtlasScrollBar_Update = nil;
 
---Pre Sets for defficuilty menu
-SelectedTable2TextSet = true
 isTablereference = false
 notPattern = false
 
@@ -367,6 +366,7 @@ function AtlasLoot_OnVariablesLoaded()
 	AtlasLootDefaultFrame_SelectedCategory:SetText(AL["Choose Table ..."]);
 	AtlasLootDefaultFrame_SelectedTable:SetText("");
 	AtlasLootDefaultFrame_SelectedTable2:SetText("");
+	AtlasLootItemsFrame_DifficultyAtlasButton:SetText("Select Difficulty");
 	AtlasLootDefaultFrame_SelectedCategory:Show();
 	AtlasLootDefaultFrame_SelectedTable:Show();
 	AtlasLootDefaultFrame_SelectedTable2:Show();
@@ -531,6 +531,10 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 	
 	-- Hide the Filter Check-Box
 	AtlasLootFilterCheck:Hide();
+
+	-- Hide Selector
+	AtlasLootItemsFrame_DifficultyAtlasButton:Disable();
+	AtlasLootItemsFrame_DifficultyAtlasButton:Hide();
 	
 	-- Updates AtlasLoot_Lastboss if your in a main loot table
 	if AtlasLoot_Hold == false then
@@ -542,11 +546,14 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 
 	if dataID == "SearchResult" or dataID == "WishList" then
         ItemindexID = "";
+		AtlasLootItemsFrame_DifficultyAtlasButton:Disable();
+		AtlasLootItemsFrame_DifficultyAtlasButton:Hide();
 		AtlasLootDefaultFrame_SubMenu2:Disable();
 		AtlasLootDefaultFrame_SelectedTable2:SetText("");
 		AtlasLootDefaultFrame_SelectedTable2:Hide();
-		dataSource = {};
-        -- Match the page number to display
+        AtlasLootItemsFrame_DifficultyAtlasButton:SetText("Select Difficulty");
+        dataSource = {};
+		-- Match the page number to display
         wlPage = tonumber(dataSource_backup:match("%d+$"));
         -- Aquiring items of the page
         if dataID == "SearchResult" then
@@ -582,6 +589,13 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 	if dataID:match("MENU") and ATLASLOOT_FILTER_ENABLE then
 		AtlasLootFilterCheck:SetChecked(false);
 		ATLASLOOT_FILTER_ENABLE = false
+	end
+	if (AtlasLootItemsFrame:GetParent() == AlphaMapAlphaMapFrame or AtlasLootItemsFrame:GetParent() == AtlasFrame) then
+		AtlasMapMenu = true;		
+	else
+		AtlasLootItemsFrame_DifficultyAtlasButton:Hide();
+		AtlasLootItemsFrame_DifficultyAtlasButton:Disable();
+		AtlasMapMenu = false;
 	end
 
 	if Type == nil and ATLASLOOT_FILTER_ENABLE == false or dataID:match("MENU") or ATLASLOOT_FILTER_ENABLE and dataSource[AtlasLoot_CurrentBoss].Type == nil  then -- disable difficulty menu
