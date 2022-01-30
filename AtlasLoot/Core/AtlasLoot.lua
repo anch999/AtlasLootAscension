@@ -1014,7 +1014,6 @@ function AtlasLoot_GenerateAtlasMenu(dataID, pFrame)
         getglobal("AtlasLootItemsFrame_PREV").lootpage = tablebase.Prev;
     end
 	if tablebase.Back then
-		print(AtlasLoot_Lastboss)
 		getglobal("AtlasLootItemsFrame_BACK"):Show();
         getglobal("AtlasLootItemsFrame_BACK").lootpage = tablebase.Back;
     end
@@ -1109,7 +1108,6 @@ function AtlasLoot_NavButton_OnClick()
 		elseif AtlasLoot_Hold == true then
 			AtlasLoot_ShowItemsFrame(AtlasLoot_Lastboss, AtlasLootItemsFrame.refresh[2], "", AtlasLootItemsFrame.refresh[4]);
 		else
-			print(this.lootpage)
 			AtlasLoot_ShowItemsFrame(this.lootpage, AtlasLootItemsFrame.refresh[2], "", AtlasLootItemsFrame.refresh[4]);
 		end
     else
