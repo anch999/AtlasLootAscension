@@ -532,7 +532,7 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 	-- Hide the Filter Check-Box
 	AtlasLootFilterCheck:Hide();
 	
-	-- 
+	-- Updates AtlasLoot_Lastboss if your in a main loot table
 	if AtlasLoot_Hold == false then
 		AtlasLoot_Lastboss = dataID;
 	end
@@ -1116,6 +1116,7 @@ function AtlasLoot_NavButton_OnClick()
 		--Fallback for if the requested loot page is a menu and does not have a .refresh instance
 		AtlasLoot_ShowItemsFrame(this.lootpage, "", "", AtlasFrame);
 	end
+	-- Lets AtlasLoot_Lastboss be updated after going back to main table
 	AtlasLoot_Hold = false;	
 end
 
