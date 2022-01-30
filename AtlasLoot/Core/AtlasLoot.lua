@@ -531,8 +531,15 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 	
 	-- Hide the Filter Check-Box
 	AtlasLootFilterCheck:Hide();
-    
+	
+	-- 
+	if AtlasLoot_Hold == false then
+		AtlasLoot_Lastboss = dataID;
+	end
+	
+	
     dataSource_backup = dataSource;
+
 	if dataID == "SearchResult" or dataID == "WishList" then
         ItemindexID = "";
 		AtlasLootDefaultFrame_SubMenu2:Disable();
@@ -559,7 +566,7 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 	else
 		Type = dataSource[dataID].Type;
 	end
-	
+
 	if Type ~= lastType then
 		AtlasLoot_DifficultyDisable()
 		if lastReference ~= nil then
@@ -794,9 +801,13 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
                 else
                     itemButton.droprate = nil;
                 end
-                if (dataID == "SearchResult" or dataID == "WishList") and dataSource[dataID][i][8] then
+				if (dataID == "SearchResult" or dataID == "WishList") and dataSource[dataID][i][8] then
                     itemButton.sourcePage = dataSource[dataID][i][8];
-                end
+				elseif dataSource[dataID][i][8] ~= nil and dataSource[dataID][i][8]:match("=LT=") then
+					itemButton.sourcePage = string.sub(dataSource[dataID][i][8], 5);
+				else
+					itemButton.sourcePage = nil;
+				end
 				if dataSource[dataID][i][AtlasLoot_Difficulty.DIF_SEARCH] then
 					itemButton.difficulty = dataSource[dataID][i][AtlasLoot_Difficulty.DIF_SEARCH];
 				else
@@ -868,7 +879,8 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 			AtlasLoot_BossName:SetText(AtlasLoot_TableNames[dataID][1]..affix);
         else
             AtlasLoot_BossName:SetText(boss);
-        end
+        end		
+
 		--Consult the button registry to determine what nav buttons are required
 		if dataID == "SearchResult" or dataID == "WishList" then
 			if wlPage < wlPageMax then
@@ -891,11 +903,9 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 			end
 			if tablebase.Back then
 				getglobal("AtlasLootItemsFrame_BACK"):Show();
-				getglobal("AtlasLootItemsFrame_BACK").lootpage = tablebase.Back;			
+				getglobal("AtlasLootItemsFrame_BACK").lootpage = tablebase.Back;
 			end
 		end
-		
-		
 	end
 
 	--For Alphamap and Atlas integration, show a 'close' button to hide the loot table and restore the map view
@@ -910,7 +920,6 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 	if ATLASLOOT_FILTER_ENABLE == true and dataID ~= "FilterList" then
 		AtlasLoot_HideNoUsableItems()
 	end
-
 	if AtlasLoot.db.profile.ItemAutoQuery then AtlasLoot_QueryLootPage(); end
 end
 
@@ -1004,8 +1013,9 @@ function AtlasLoot_GenerateAtlasMenu(dataID, pFrame)
         getglobal("AtlasLootItemsFrame_PREV"):Show();
         getglobal("AtlasLootItemsFrame_PREV").lootpage = tablebase.Prev;
     end
-    if tablebase.Back then
-        getglobal("AtlasLootItemsFrame_BACK"):Show();
+	if tablebase.Back then
+		print(AtlasLoot_Lastboss)
+		getglobal("AtlasLootItemsFrame_BACK"):Show();
         getglobal("AtlasLootItemsFrame_BACK").lootpage = tablebase.Back;
     end
     
@@ -1096,13 +1106,17 @@ function AtlasLoot_NavButton_OnClick()
 			AtlasLoot_ShowItemsFrame("SearchResult", this.lootpage, (AL["Search Result: %s"]):format(AtlasLootCharDB.LastSearchedText or ""), AtlasLootItemsFrame.refresh[4]);
 		elseif strsub(this.lootpage, 1, 12) == "WishListPage" then
 			AtlasLoot_ShowItemsFrame("WishList", this.lootpage, AL["Wishlist"], AtlasLootItemsFrame.refresh[4]);
+		elseif AtlasLoot_Hold == true then
+			AtlasLoot_ShowItemsFrame(AtlasLoot_Lastboss, AtlasLootItemsFrame.refresh[2], "", AtlasLootItemsFrame.refresh[4]);
 		else
+			print(this.lootpage)
 			AtlasLoot_ShowItemsFrame(this.lootpage, AtlasLootItemsFrame.refresh[2], "", AtlasLootItemsFrame.refresh[4]);
 		end
     else
 		--Fallback for if the requested loot page is a menu and does not have a .refresh instance
 		AtlasLoot_ShowItemsFrame(this.lootpage, "", "", AtlasFrame);
 	end
+	AtlasLoot_Hold = false;	
 end
 
 --[[

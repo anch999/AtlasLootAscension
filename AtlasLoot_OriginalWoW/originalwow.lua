@@ -1448,7 +1448,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 9, 19147, "", "=q4=Ring of Spell Power", "=ds=#s13#", "", "2.23%"};
 		{ 10, 18878, "", "=q4=Sorcerous Dagger", "=ds=#h3#, #w4#", "", "2.23%"};
 		{ 11, 17077, "", "=q4=Crimson Shocker", "=ds=#w12#", "", "1.60%"};
-		{ 16, 2522362, "", "=q4=Molten Wristgaurds",  "T1Bracers", "", "100%"};
+		{ 16, 2522362, "", "=q4=Molten Wristgaurds",  "=ds=#tt1#", "", "100%", "=LT=T1Bracers"};
 		{ 18, 17329, "", "=q1=Hand of Lucifron", "=ds=#m3#"};
 		Next = "MCMagmadar";
 		Type = "ClassicRaid";
@@ -1470,7 +1470,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 13, 18822, "", "=q4=Obsidian Edged Blade", "=ds=#h2#, #w10#", "", "5.68%"};
 		{ 14, 17073, "", "=q4=Earthshaker", "=ds=#h2#, #w6#", "", "16.75%"};
 		{ 15, 17069, "", "=q4=Striker's Mark", "=ds=#w2#", "", "16.37%"};
-		{ 16, 2522359, "", "=q4=Molten Leggaurds", "=ds=#tt1#", "", "100%"};
+		{ 16, 2522359, "", "=q4=Molten Leggaurds", "=ds=#tt1#", "", "100%", "=LT=T1Legs"};
 		Prev = "MCLucifron";
 		Next = "MCGehennas";
 		Type = "ClassicRaid";
@@ -1487,7 +1487,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 8, 19147, "", "=q4=Ring of Spell Power", "=ds=#s13#", "", "3.78%"};
 		{ 9, 18878, "", "=q4=Sorcerous Dagger", "=ds=#h3#, #w4#", "", "3.79%"};
 		{ 10, 17077, "", "=q4=Crimson Shocker", "=ds=#w12#", "", "3.34%"};
-		{ 16, 2522364, "", "=q4=Molten Girdle", "=ds=#tt1#", "", "100%"};
+		{ 16, 2522364, "", "=q4=Molten Girdle", "=ds=#tt1#", "", "100%", "=LT=T1Gloves"};
 		{ 18, 17331, "", "=q1=Hand of Gehennas", "=ds=#m3#"};
 		Prev = "MCMagmadar";
 		Next = "MCGarr";
@@ -1510,7 +1510,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 13, 18822, "", "=q4=Obsidian Edged Blade", "=ds=#h2#, #w10#", "", "4.09%"};
 		{ 14, 17105, "", "=q4=Aurastone Hammer", "=ds=#h3#, #w6#", "", "12.67%"};
 		{ 15, 17066, "", "=q4=Drillborer Disk", "=ds=#w8#", "", "11.85%"};
-		{ 16, 2522360, "", "=q4=Molten Headpiece", "=ds=#tt1#", "", "100%"};
+		{ 16, 2522360, "", "=q4=Molten Headpiece", "=ds=#tt1#", "", "100%", "=LT=T1Helms"};
 		{ 18, 18564, "", "=q5=Bindings of the Windseeker", "=ds=#m3#, =q1=#m9#", "", "3.74%", [AtlasLoot_Difficulty.DUPLICATE] = "(Right)"};
 		{ 19, 19019, "", "=q5=Thunderfury, Blessed Blade of the Windseeker", "=q1=#m4#: =ds=#h1#, #w10#"};
 		{ 21, 17782, "", "=q5=Talisman of Binding Shard", "=ds=#s2#", "", ""};        
@@ -1531,7 +1531,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 8, 19147, "", "=q4=Ring of Spell Power", "=ds=#s13#", "", "1.99%"};
 		{ 9, 18878, "", "=q4=Sorcerous Dagger", "=ds=#h3#, #w4#", "", "2.27%"};
 		{ 10, 17077, "", "=q4=Crimson Shocker", "=ds=#w12#", "", "3.32%"};
-		{ 16, 2522363, "", "=q4=Molten Handgaurds", "=ds=#tt1#", "", "100%"};
+		{ 16, 2522363, "", "=q4=Molten Handgaurds", "=ds=#tt1#", "", "100%", "=LT=T1Belts"};
 		{ 18, 17332, "", "=q1=Hand of Shazzrah", "=ds=#m3#"};
 		Prev = "MCGarr";
 		Next = "MCGeddon";
@@ -1551,7 +1551,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 10, 18820, "", "=q4=Talisman of Ephemeral Power", "=ds=#s14#", "", "2.68%"};
 		{ 11, 19142, "", "=q4=Fire Runed Grimoire", "=ds=#s15#", "", "2.59%"};
 		{ 12, 18822, "", "=q4=Obsidian Edged Blade", "=ds=#h2#, #w10#", "", "2.70%"};
-		{ 16, 2522361, "", "=q4=Molten Spaulders", "=ds=#tt1#", "", "100%"};
+		{ 16, 2522361, "", "=q4=Molten Spaulders", "=ds=#tt1#", "", "100%", "=LT=T1Shoulders"};
 		{ 18, 18563, "", "=q5=Bindings of the Windseeker", " =ds=#m3#, =q1=#m10#", "", "3.78%", [AtlasLoot_Difficulty.DUPLICATE] = "(Left)"};
 		{ 19, 19019, "", "=q5=Thunderfury, Blessed Blade of the Windseeker", "=q1=#m4#: =ds=#h1#, #w10#"};
 		Prev = "MCShazzrah";
@@ -1574,7 +1574,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 12, 18822, "", "=q4=Obsidian Edged Blade", "=ds=#h2#, #w10#", "", "2.89%"};
 		{ 13, 18842, "", "=q4=Staff of Dominance", "=ds=#w9#", "", "18.95%"};
 		{ 14, 17072, "", "=q4=Blastershot Launcher", "=ds=#w5#", "", "17.83%"};
-		{ 16, 2522350, "", "=q4=Molten Tunic", "=ds=#tt1#", "", "100%"};
+		{ 16, 2522350, "", "=q4=Molten Tunic", "=ds=#tt1#", "", "100%", "=LT=T1Chests"};
 		{ 18, 17203, "", "=q4=Sulfuron Ingot", "=ds=#m3#", "", "11.98%"};
 		{ 19, 17182, "", "=q5=Sulfuras, Hand of Ragnaros", "=q1=#m4#: =ds=#h2#, #w6#"};
 		Prev = "MCGeddon";
@@ -1594,7 +1594,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 9, 18878, "", "=q4=Sorcerous Dagger", "=ds=#h3#, #w4#", "", "2.53%"};
 		{ 10, 17074, "", "=q4=Shadowstrike", "=ds=#w7#", "", "23.50%"};
 		{ 11, 17077, "", "=q4=Crimson Shocker", "=ds=#w12#", "", "2.26%"};
-		{ 16, 2522365, "", "=q4=Molten Boots", "=ds=#tt1#", "", "100%"};
+		{ 16, 2522365, "", "=q4=Molten Boots", "=ds=#tt1#", "", "100%", "=LT=T1Boots"};
 		{ 18, 17330, "", "=q1=Hand of Sulfuron", "=ds=#m3#"};
 		Prev = "MCGolemagg";
 		Next = "MCMajordomo";
@@ -5060,6 +5060,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		Type = "ClassicRaid";
 	};
 
+	-- T1 Token Items
+
 	AtlasLoot_Data["T1Bracers"] = {
 		{ 1, 16830, "", "=q4=Cenarion Bracers", "=ds="..AL["Trash Mobs"], "", ""};
 		{ 2, 16850, "", "=q4=Giantstalker's Bracers", "=ds="..AL["Trash Mobs"], "", ""};
@@ -5071,84 +5073,117 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 8, 16804, "", "=q4=Felheart Bracers", "=ds="..AL["Trash Mobs"], "", ""};
 		{ 9, 16861, "", "=q4=Bracers of Might", "=ds="..AL["Trash Mobs"], "", ""};
 		{ 10, 10483, "", "=q4=Wristguards of Might", "=ds="..AL["Trash Mobs"], ""};
+		Back = AtlasLoot_Lastboss;
+		Type = "ClassicRaid";
+		
 	};
 
 	AtlasLoot_Data["T1Belts"] = {
-		{ 1, 16830, "", "=q4=Cenarion Bracers", "=ds="..AL["Trash Mobs"], "", ""};
-		{ 2, 16850, "", "=q4=Giantstalker's Bracers", "=ds="..AL["Trash Mobs"], "", ""};
-		{ 3, 16799, "", "=q4=Arcanist Bindings", "=ds="..AL["Trash Mobs"], "", ""};
-		{ 4, 16857, "", "=q4=Lawbringer Bracers", "=ds="..AL["Trash Mobs"], "", ""};
-		{ 5, 16819, "", "=q4=Vambraces of Prophecy", "=ds="..AL["Trash Mobs"], "", ""};
-		{ 6, 16825, "", "=q4=Nightslayer Bracelets", "=ds="..AL["Trash Mobs"], "", ""};
-		{ 7, 16840, "", "=q4=Earthfury Bracers", "=ds="..AL["Trash Mobs"], "", ""};
-		{ 8, 16804, "", "=q4=Felheart Bracers", "=ds="..AL["Trash Mobs"], "", ""};
-		{ 9, 16861, "", "=q4=Bracers of Might", "=ds="..AL["Trash Mobs"], "", ""};
-		{ 10, 10483, "", "=q4=Wristguards of Might", "=ds="..AL["Trash Mobs"], ""};
+		{ 1, 16828, "", "=q4=Cenarion Belt", "=ds="..AL["Trash Mobs"], "", "0.16%"};
+		{ 2, 16851, "", "=q4=Giantstalker's Belt", "=ds="..AL["Trash Mobs"], "", "0.17%"};
+		{ 3, 16802, "", "=q4=Arcanist Belt", "=ds="..AL["Trash Mobs"], "", "0.16%"};
+		{ 4, 16858, "", "=q4=Lawbringer Belt", "=ds="..AL["Trash Mobs"], "", "0.10%"};
+		{ 5, 16817, "", "=q4=Girdle of Prophecy", "=ds="..AL["Trash Mobs"], "", "0.18%"};
+		{ 6, 16827, "", "=q4=Nightslayer Belt", "=ds="..AL["Trash Mobs"], "", "0.15%"};
+		{ 7, 16838, "", "=q4=Earthfury Belt", "=ds="..AL["Trash Mobs"], "", "0.07%"};
+		{ 8, 16806, "", "=q4=Felheart Belt", "=ds="..AL["Trash Mobs"], "", "0.19%"};
+		{ 9, 16864, "", "=q4=Belt of Might", "=ds="..AL["Trash Mobs"], "", "0.16%"};
+		{ 10, 10485, "", "=q4=Girdle of Might", "=ds="..AL["Trash Mobs"], ""};
+		Back = AtlasLoot_Lastboss;
+		Type = "ClassicRaid";
 	};
 
 	AtlasLoot_Data["T1Gloves"] = {
-		{ 1, 16830, "", "=q4=Cenarion Bracers", "=ds="..AL["Trash Mobs"], "", ""};
-		{ 2, 16850, "", "=q4=Giantstalker's Bracers", "=ds="..AL["Trash Mobs"], "", ""};
-		{ 3, 16799, "", "=q4=Arcanist Bindings", "=ds="..AL["Trash Mobs"], "", ""};
-		{ 4, 16857, "", "=q4=Lawbringer Bracers", "=ds="..AL["Trash Mobs"], "", ""};
-		{ 5, 16819, "", "=q4=Vambraces of Prophecy", "=ds="..AL["Trash Mobs"], "", ""};
-		{ 6, 16825, "", "=q4=Nightslayer Bracelets", "=ds="..AL["Trash Mobs"], "", ""};
-		{ 7, 16840, "", "=q4=Earthfury Bracers", "=ds="..AL["Trash Mobs"], "", ""};
-		{ 8, 16804, "", "=q4=Felheart Bracers", "=ds="..AL["Trash Mobs"], "", ""};
-		{ 9, 16861, "", "=q4=Bracers of Might", "=ds="..AL["Trash Mobs"], "", ""};
-		{ 10, 10483, "", "=q4=Wristguards of Might", "=ds="..AL["Trash Mobs"], ""};
+		{ 1, 16831, "", "=q4=Cenarion Gloves", "=ds="..BabbleBoss["Shazzrah"], "", "19.53%"};
+		{ 2, 16852, "", "=q4=Giantstalker's Gloves", "=ds="..BabbleBoss["Shazzrah"], "", "18.58%"};
+		{ 3, 16801, "", "=q4=Arcanist Gloves", "=ds="..BabbleBoss["Shazzrah"], "", "19.59%"};
+		{ 4, 16860, "", "=q4=Lawbringer Gauntlets", "=ds="..BabbleBoss["Gehennas"], "", "11.77%"};
+		{ 5, 16812, "", "=q4=Gloves of Prophecy", "=ds="..BabbleBoss["Gehennas"], "", "18.65%"};
+		{ 6, 16826, "", "=q4=Nightslayer Gloves", "=ds="..BabbleBoss["Gehennas"], "", "19.47%"};
+		{ 7, 16839, "", "=q4=Earthfury Gauntlets", "=ds="..BabbleBoss["Gehennas"], "", "7.38%"};
+		{ 8, 16805, "", "=q4=Felheart Gloves", "=ds="..BabbleBoss["Lucifron"], "", "14.89%"};
+		{ 9, 16863, "", "=q4=Gauntlets of Might", "=ds="..BabbleBoss["Lucifron"], "", "16.40%"};
+		{ 10, 10484, "", "=q4=Handguards of Might", "=ds="..BabbleBoss["Lucifron"], ""};
+		Back = AtlasLoot_Lastboss;
+		Type = "ClassicRaid";
 	};
 
+
 	AtlasLoot_Data["T1Shoulders"] = {
-		{ 1, 16830, "", "=q4=Cenarion Bracers", "=ds="..AL["Trash Mobs"], "", ""};
-		{ 2, 16850, "", "=q4=Giantstalker's Bracers", "=ds="..AL["Trash Mobs"], "", ""};
-		{ 3, 16799, "", "=q4=Arcanist Bindings", "=ds="..AL["Trash Mobs"], "", ""};
-		{ 4, 16857, "", "=q4=Lawbringer Bracers", "=ds="..AL["Trash Mobs"], "", ""};
-		{ 5, 16819, "", "=q4=Vambraces of Prophecy", "=ds="..AL["Trash Mobs"], "", ""};
-		{ 6, 16825, "", "=q4=Nightslayer Bracelets", "=ds="..AL["Trash Mobs"], "", ""};
-		{ 7, 16840, "", "=q4=Earthfury Bracers", "=ds="..AL["Trash Mobs"], "", ""};
-		{ 8, 16804, "", "=q4=Felheart Bracers", "=ds="..AL["Trash Mobs"], "", ""};
-		{ 9, 16861, "", "=q4=Bracers of Might", "=ds="..AL["Trash Mobs"], "", ""};
-		{ 10, 10483, "", "=q4=Wristguards of Might", "=ds="..AL["Trash Mobs"], ""};
+		{ 1, 16836, "", "=q4=Cenarion Spaulders", "=ds="..BabbleBoss["Baron Geddon"], "", "19.52%"};
+		{ 2, 16848, "", "=q4=Giantstalker's Epaulets", "=ds="..BabbleBoss["Sulfuron Harbinger"], "", "19.64%"};
+		{ 3, 16797, "", "=q4=Arcanist Mantle", "=ds="..BabbleBoss["Baron Geddon"], "", "19.92%"};
+		{ 4, 16856, "", "=q4=Lawbringer Spaulders", "=ds="..BabbleBoss["Baron Geddon"], "", "12.62%"};
+		{ 5, 16816, "", "=q4=Mantle of Prophecy", "=ds="..BabbleBoss["Sulfuron Harbinger"], "", "21.06%"};
+		{ 6, 16823, "", "=q4=Nightslayer Shoulder Pads", "=ds="..BabbleBoss["Sulfuron Harbinger"], "", "20.66%"};
+		{ 7, 16844, "", "=q4=Earthfury Epaulets", "=ds="..BabbleBoss["Baron Geddon"], "", "7.29%"};
+		{ 8, 16807, "", "=q4=Felheart Shoulder Pads", "=ds="..BabbleBoss["Baron Geddon"], "", "19.78%"};
+		{ 9, 16868, "", "=q4=Pauldrons of Might", "=ds="..BabbleBoss["Sulfuron Harbinger"], "", "21.14%"};
+		{ 10, 10481, "", "=q4=Shoulderpads of Might", "=ds="..BabbleBoss["Sulfuron Harbinger"], ""};
+		Back = AtlasLoot_Lastboss;
+		Type = "ClassicRaid";
 	};
 
 	AtlasLoot_Data["T1Boots"] = {
-		{ 1, 16830, "", "=q4=Cenarion Bracers", "=ds="..AL["Trash Mobs"], "", ""};
-		{ 2, 16850, "", "=q4=Giantstalker's Bracers", "=ds="..AL["Trash Mobs"], "", ""};
-		{ 3, 16799, "", "=q4=Arcanist Bindings", "=ds="..AL["Trash Mobs"], "", ""};
-		{ 4, 16857, "", "=q4=Lawbringer Bracers", "=ds="..AL["Trash Mobs"], "", ""};
-		{ 5, 16819, "", "=q4=Vambraces of Prophecy", "=ds="..AL["Trash Mobs"], "", ""};
-		{ 6, 16825, "", "=q4=Nightslayer Bracelets", "=ds="..AL["Trash Mobs"], "", ""};
-		{ 7, 16840, "", "=q4=Earthfury Bracers", "=ds="..AL["Trash Mobs"], "", ""};
-		{ 8, 16804, "", "=q4=Felheart Bracers", "=ds="..AL["Trash Mobs"], "", ""};
-		{ 9, 16861, "", "=q4=Bracers of Might", "=ds="..AL["Trash Mobs"], "", ""};
-		{ 10, 10483, "", "=q4=Wristguards of Might", "=ds="..AL["Trash Mobs"], ""};
+		{ 1, 16829, "", "=q4=Cenarion Boots", "=ds="..BabbleBoss["Lucifron"], "", "10.72%"};
+		{ 2, 16849, "", "=q4=Giantstalker's Boots", "=ds="..BabbleBoss["Gehennas"], "", "14.54%"};
+		{ 3, 16800, "", "=q4=Arcanist Boots", "=ds="..BabbleBoss["Lucifron"], "", "12.06%"};
+		{ 4, 16859, "", "=q4=Lawbringer Boots", "=ds="..BabbleBoss["Lucifron"], "", "7.20%"};
+		{ 5, 16811, "", "=q4=Boots of Prophecy", "=ds="..BabbleBoss["Shazzrah"], "", "14.90%"};
+		{ 6, 16824, "", "=q4=Nightslayer Boots", "=ds="..BabbleBoss["Shazzrah"], "", "15.58%"};
+		{ 7, 16837, "", "=q4=Earthfury Boots", "=ds="..BabbleBoss["Lucifron"], "", "4.16%"};
+		{ 8, 16803, "", "=q4=Felheart Slippers", "=ds="..BabbleBoss["Shazzrah"], "", "15.28%"};
+		{ 9, 16862, "", "=q4=Sabatons of Might", "=ds="..BabbleBoss["Gehennas"], "", "14.48%"};
+		{ 10, 10487, "", "=q4=Stompers of Might", "=ds="..BabbleBoss["Gehennas"], ""};
+		Back = AtlasLoot_Lastboss;
+		Type = "ClassicRaid";
+
 	};
 
 	AtlasLoot_Data["T1Legs"] = {
-		{ 1, 16830, "", "=q4=Cenarion Bracers", "=ds="..AL["Trash Mobs"], "", ""};
-		{ 2, 16850, "", "=q4=Giantstalker's Bracers", "=ds="..AL["Trash Mobs"], "", ""};
-		{ 3, 16799, "", "=q4=Arcanist Bindings", "=ds="..AL["Trash Mobs"], "", ""};
-		{ 4, 16857, "", "=q4=Lawbringer Bracers", "=ds="..AL["Trash Mobs"], "", ""};
-		{ 5, 16819, "", "=q4=Vambraces of Prophecy", "=ds="..AL["Trash Mobs"], "", ""};
-		{ 6, 16825, "", "=q4=Nightslayer Bracelets", "=ds="..AL["Trash Mobs"], "", ""};
-		{ 7, 16840, "", "=q4=Earthfury Bracers", "=ds="..AL["Trash Mobs"], "", ""};
-		{ 8, 16804, "", "=q4=Felheart Bracers", "=ds="..AL["Trash Mobs"], "", ""};
-		{ 9, 16861, "", "=q4=Bracers of Might", "=ds="..AL["Trash Mobs"], "", ""};
-		{ 10, 10483, "", "=q4=Wristguards of Might", "=ds="..AL["Trash Mobs"], ""};
+		{ 1, 16835, "", "=q4=Cenarion Leggings", "=ds="..BabbleBoss["Magmadar"], "", "12.90%"};
+		{ 2, 16847, "", "=q4=Giantstalker's Leggings", "=ds="..BabbleBoss["Magmadar"], "", "13.28%"};
+		{ 3, 16796, "", "=q4=Arcanist Leggings", "=ds="..BabbleBoss["Magmadar"], "", "14.57%"};
+		{ 4, 16855, "", "=q4=Lawbringer Legplates", "=ds="..BabbleBoss["Magmadar"], "", "8.54%"};
+		{ 5, 16814, "", "=q4=Pants of Prophecy", "=ds="..BabbleBoss["Magmadar"], "", "14.33%"};
+		{ 6, 16822, "", "=q4=Nightslayer Pants", "=ds="..BabbleBoss["Magmadar"], "", "13.83%"};
+		{ 7, 16843, "", "=q4=Earthfury Legguards", "=ds="..BabbleBoss["Magmadar"], "", "4.73%"};
+		{ 8, 16810, "", "=q4=Felheart Pants", "=ds="..BabbleBoss["Magmadar"], "", "13.75%"};
+		{ 9, 16867, "", "=q4=Legplates of Might", "=ds="..BabbleBoss["Magmadar"], "", "13.97%"};
+		{ 10, 10486, "", "=q4=Legguards of Might", "=ds="..BabbleBoss["Magmadar"], ""};
+		Back = AtlasLoot_Lastboss;
+		Type = "ClassicRaid";
 	};
 
 	AtlasLoot_Data["T1Helms"] = {
-		{ 1, 16830, "", "=q4=Cenarion Bracers", "=ds="..AL["Trash Mobs"], "", ""};
-		{ 2, 16850, "", "=q4=Giantstalker's Bracers", "=ds="..AL["Trash Mobs"], "", ""};
-		{ 3, 16799, "", "=q4=Arcanist Bindings", "=ds="..AL["Trash Mobs"], "", ""};
-		{ 4, 16857, "", "=q4=Lawbringer Bracers", "=ds="..AL["Trash Mobs"], "", ""};
-		{ 5, 16819, "", "=q4=Vambraces of Prophecy", "=ds="..AL["Trash Mobs"], "", ""};
-		{ 6, 16825, "", "=q4=Nightslayer Bracelets", "=ds="..AL["Trash Mobs"], "", ""};
-		{ 7, 16840, "", "=q4=Earthfury Bracers", "=ds="..AL["Trash Mobs"], "", ""};
-		{ 8, 16804, "", "=q4=Felheart Bracers", "=ds="..AL["Trash Mobs"], "", ""};
-		{ 9, 16861, "", "=q4=Bracers of Might", "=ds="..AL["Trash Mobs"], "", ""};
-		{ 10, 10483, "", "=q4=Wristguards of Might", "=ds="..AL["Trash Mobs"], ""};
+		{ 1, 16834, "", "=q4=Cenarion Helm", "=ds="..BabbleBoss["Garr"], "", ""};
+		{ 2, 16846, "", "=q4=Giantstalker's Helmet", "=ds="..BabbleBoss["Garr"], "", ""};
+		{ 3, 16795, "", "=q4=Arcanist Crown", "=ds="..BabbleBoss["Garr"], "", ""};
+		{ 4, 16795, "", "=q4=Arcanist Crown", "=ds="..BabbleBoss["Garr"], "", ""};
+		{ 5, 16854, "", "=q4=Lawbringer Helm", "=ds="..BabbleBoss["Garr"], "", ""};
+		{ 6, 16813, "", "=q4=Circlet of Prophecy", "=ds="..BabbleBoss["Garr"], "", ""};
+		{ 7, 16821, "", "=q4=Nightslayer Cover", "=ds="..BabbleBoss["Garr"], "", ""};
+		{ 8, 16842, "", "=q4=Earthfury Helmet", "=ds="..BabbleBoss["Garr"], "", ""};
+		{ 9, 16808, "", "=q4=Felheart Horns", "=ds="..BabbleBoss["Garr"], "", ""};
+		{ 10, 16866, "", "=q4=Helm of Might", "=ds="..BabbleBoss["Garr"], "", ""};
+		{ 11, 10480, "", "=q4=Faceguard of Might", "=ds="..BabbleBoss["Garr"], ""};
+		Back = AtlasLoot_Lastboss;
+		Type = "ClassicRaid";
+	};
+
+	AtlasLoot_Data["T1Chests"] = {
+		{ 1, 16833, "", "=q4=Cenarion Vestments", "=ds="..BabbleBoss["Golemagg the Incinerator"], "", "15.21%"};
+		{ 2, 16845, "", "=q4=Giantstalker's Breastplate", "=ds="..BabbleBoss["Golemagg the Incinerator"], "", "15.83%"};
+		{ 3, 16798, "", "=q4=Arcanist Robes", "=ds="..BabbleBoss["Golemagg the Incinerator"], "", "16.51%"};
+		{ 4, 16853, "", "=q4=Lawbringer Chestguard", "=ds="..BabbleBoss["Golemagg the Incinerator"], "", "9.53%"};
+		{ 5, 16815, "", "=q4=Robes of Prophecy", "=ds="..BabbleBoss["Golemagg the Incinerator"], "", "15.65%"};
+		{ 6, 16820, "", "=q4=Nightslayer Chestpiece", "=ds="..BabbleBoss["Golemagg the Incinerator"], "", "16.76%"};
+		{ 7, 16841, "", "=q4=Earthfury Vestments", "=ds="..BabbleBoss["Golemagg the Incinerator"], "", "6.08%"};
+		{ 8, 16809, "", "=q4=Felheart Robes", "=ds="..BabbleBoss["Golemagg the Incinerator"], "", "15.66%"};
+		{ 9, 16865, "", "=q4=Breastplate of Might", "=ds="..BabbleBoss["Golemagg the Incinerator"], "", "15.28%"};
+		{ 10, 10482, "", "=q4=Chesttplate of Might", "=ds="..BabbleBoss["Golemagg the Incinerator"], ""};
+		Back = AtlasLoot_Lastboss;
+		Type = "ClassicRaid";
 	};
 
 		------------------------

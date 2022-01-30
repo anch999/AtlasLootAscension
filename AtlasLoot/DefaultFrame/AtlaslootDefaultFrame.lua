@@ -44,11 +44,12 @@ function AtlasLoot_DewDropClick(tablename, text, tabletype)
     --Definition of where I want the loot table to be shown
     pFrame = { "TOPLEFT", "AtlasLootDefaultFrame_LootBackground", "TOPLEFT", "2", "-2" };
     --If the button clicked was linked to a loot table
-
+    Hold = false;
     if tabletype == "Table" then
         --Show the loot table
         AtlasLoot_ShowBossLoot(tablename, tablename, pFrame);
 		--Save needed info for fuure re-display of the table
+        AtlasLoot_Lastboss = tablename;
         AtlasLoot.db.profile.LastBoss = tablename;
         --Purge the text label for the submenu and disable the submenu
         AtlasLootDefaultFrame_SubMenu:Disable();
@@ -58,6 +59,7 @@ function AtlasLoot_DewDropClick(tablename, text, tabletype)
     else   
 		--Enable the submenu button
         AtlasLootDefaultFrame_SubMenu:Enable();
+        AtlasLoot_Lastboss = AtlasLoot_DewDropDown_SubTables[tablename][1][2];
         --Show the first loot table associated with the submenu
         AtlasLoot_ShowBossLoot(AtlasLoot_DewDropDown_SubTables[tablename][1][2], AtlasLoot_DewDropDown_SubTables[tablename][1][1], pFrame);
 		--Save needed info for fuure re-display of the table
