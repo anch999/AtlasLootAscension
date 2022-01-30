@@ -528,20 +528,18 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
     --Ditch the Quicklook selector
     AtlasLoot_QuickLooks:Hide();
     AtlasLootQuickLooksButton:Hide();
-	
+
 	-- Hide the Filter Check-Box
 	AtlasLootFilterCheck:Hide();
 
 	-- Hide Selector
 	AtlasLootItemsFrame_DifficultyAtlasButton:Disable();
 	AtlasLootItemsFrame_DifficultyAtlasButton:Hide();
-	
+
 	-- Updates AtlasLoot_Lastboss if your in a main loot table
-	if AtlasLoot_Hold == false then
+	if AtlasLoot_Hold == false or AtlasLoot_Lastboss == nil then
 		AtlasLoot_Lastboss = dataID;
 	end
-	
-	
     dataSource_backup = dataSource;
 
 	if dataID == "SearchResult" or dataID == "WishList" then
@@ -1121,6 +1119,8 @@ function AtlasLoot_NavButton_OnClick()
 			AtlasLoot_ShowItemsFrame("WishList", this.lootpage, AL["Wishlist"], AtlasLootItemsFrame.refresh[4]);
 		elseif AtlasLoot_Hold == true then
 			AtlasLoot_ShowItemsFrame(AtlasLoot_Lastboss, AtlasLootItemsFrame.refresh[2], "", AtlasLootItemsFrame.refresh[4]);
+			-- Lets AtlasLoot_Lastboss be updated after going back to main table
+			AtlasLoot_Hold = false;
 		else
 			AtlasLoot_ShowItemsFrame(this.lootpage, AtlasLootItemsFrame.refresh[2], "", AtlasLootItemsFrame.refresh[4]);
 		end
@@ -1128,8 +1128,6 @@ function AtlasLoot_NavButton_OnClick()
 		--Fallback for if the requested loot page is a menu and does not have a .refresh instance
 		AtlasLoot_ShowItemsFrame(this.lootpage, "", "", AtlasFrame);
 	end
-	-- Lets AtlasLoot_Lastboss be updated after going back to main table
-	AtlasLoot_Hold = false;	
 end
 
 --[[
