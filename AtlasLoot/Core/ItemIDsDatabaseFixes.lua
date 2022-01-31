@@ -42,3 +42,19 @@ ItemIDsDatabase["Chromatic Handgaurds"] = {2522463, 2522463, 2622463, 2722463};
 ItemIDsDatabase["Chromatic Girdle"] = {2522464, 2522464, 2622464, 2722464};
 ItemIDsDatabase["Chromatic Leggaurds"] = {2522459, 2522459, 2622459, 2722459};
 ItemIDsDatabase["Chromatic Boots"] = {2522465, 2522465, 2622465, 2722465};
+
+--Tier 4 Tokens
+
+ItemIDsDatabase["Helm of the Fallen Defender"] = {29761, 29761, 329761, 229761};
+ItemIDsDatabase["Pauldrons of the Fallen Defender"] = {29764, 29764, 329764, 229764};
+ItemIDsDatabase["Chestguard of the Fallen Defender"] = {29753, 29753, 329753, 229753};
+ItemIDsDatabase["Gloves of the Fallen Defender"] = {29758, 29758, 329758, 229758};
+ItemIDsDatabase["Leggings of the Fallen Defender"] = {29767, 29767, 329767, 229767};
+
+--Tier 5 Tokens
+
+ItemIDsDatabase["Helm of the Vanquished Defender"] = {30243, 30243, 330243, 230243};
+ItemIDsDatabase["Pauldrons of the Vanquished Defender"] = {30249, 30249, 330249, 230249};
+ItemIDsDatabase["Chestguard of the Vanquished Defender"] = {30237, 30237, 330237, 230237};
+ItemIDsDatabase["Gloves of the Vanquished Defender"] = {30240, 30240, 330240, 230240};
+ItemIDsDatabase["Leggings of the Vanquished Defender"] = {30246, 30246, 30246, 230246};
