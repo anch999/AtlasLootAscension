@@ -20,3 +20,25 @@ ItemIDsDatabase["Lord Sanguinar's Claim"] = {6030018, 30018, 330018, 230018};
 ItemIDsDatabase["Warglaive of Azzinoth (Mainhand)"] = {6032837, 32837, 332837, 232837};
 ItemIDsDatabase["Warglaive of Azzinoth (Offhand)"] = {6032838, 32838, 332838, 232838};
 ItemIDsDatabase["Cobra-Lash Boots"] = {6033482, 30104, 330104, 230104};
+
+--Tier 1 Tokens
+
+ItemIDsDatabase["Molten Headpiece"] = {2522360, 2522360, 2622360, 2722360};
+ItemIDsDatabase["Molten Spaulders"] = {2522361, 2522361, 2622361, 2722361};
+ItemIDsDatabase["Molten Tunic"] = {2522350, 2522350, 2622350, 2722350};
+ItemIDsDatabase["Molten Wristgaurds"] = {2522362, 2522362, 2622362, 2722362};
+ItemIDsDatabase["Molten Handgaurds"] = {2522363, 2522363, 2622363, 2722363};
+ItemIDsDatabase["Molten Girdle"] = {2522364, 2522364, 2622364, 2722364};
+ItemIDsDatabase["Molten Leggaurds"] = {2522359, 2522359, 2622359, 2722359};
+ItemIDsDatabase["Molten Boots"] = {2522365, 2522365, 2622365, 2722365};
+
+--Tier 2 Tokens
+
+ItemIDsDatabase["Chromatic Headpiece"] = {2522460, 2522460, 2622460, 2722460};
+ItemIDsDatabase["Chromatic Spaulders"] = {2522461, 2522461, 2622461, 2722461};
+ItemIDsDatabase["Chromatic Tunic"] = {2522450, 2522450, 2622450, 2722450};
+ItemIDsDatabase["Chromatic Wristgaurds"] = {2522462, 2522462, 2622462, 2722462};
+ItemIDsDatabase["Chromatic Handgaurds"] = {2522463, 2522463, 2622463, 2722463};
+ItemIDsDatabase["Chromatic Girdle"] = {2522464, 2522464, 2622464, 2722464};
+ItemIDsDatabase["Chromatic Leggaurds"] = {2522459, 2522459, 2622459, 2722459};
+ItemIDsDatabase["Chromatic Boots"] = {2522465, 2522465, 2622465, 2722465};
