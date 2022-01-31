@@ -203,7 +203,7 @@ local SLOT_FILTERS = {
 	["thrown"] = "INVTYPE_THROWN",
 	["rangedright"] = "INVTYPE_RANGEDRIGHT",
 	["quiver"] = "INVTYPE_QUIVER",
-	["relic"] = "INVTYPE_RELIC"
+	["relic"] = "INVTYPE_RELIC",
 };
 
 local TYPE_FILTERS = {
@@ -217,25 +217,26 @@ local TYPE_FILTERS = {
 	["totem"] = "Totems",
 	["sigil"] = "Sigils",
 
+	["axe1h"] = "One-Handed Axes",
+	["axe2h"] = "Two-Handed Axes",
+	["bows"] = "Bows",
 	["bow"] = "Bows",
-	["crossbow"] = "Crossbows",
-	["dagger"] = "Daggers",
+	["guns"] = "Guns",
 	["gun"] = "Guns",
-	["fishing poles"] = "Fishing Poles",
-	["fist"] = "Fist Weapons",
-	["miscellaneous"] = "Miscellaneous",
-	["axe"] = "One-Handed Axes",
-	["mace"] = "One-Handed Maces",
-	["sword"] = "One-Handed Swords",
+	["mace1h"] = "One-Handed Maces",
+	["mace2h"] = "Two-Handed Maces",
 	["polearm"] = "Polearms",
-	["stave"] = "Staves",
-	["staves"] = "Staves",
+	["sword1h"] = "One-Handed Swords",
+	["sword2h"] = "Two-Handed Swords",
 	["staff"] = "Staves",
+	["fist"] = "Fist Weapons",
+	["generic"] = "",
+	["dagger"] = "Daggers",
 	["thrown"] = "Thrown",
-	["2haxe"] = "Two-Handed Axes",
-	["2hmace"] = "Two-Handed Maces",
-	["2hsword"] = "Two-Handed Swords",
+	["crossbows"] = "Crossbows",
+	["crossbow"] = "Crossbows",
 	["wand"] = "Wands",
+	["fishingpole"] = "Fishing Poles",
 }
 
 local NON_EQUIPABLE_SLOTS = {

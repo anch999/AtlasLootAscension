@@ -263,6 +263,10 @@ function AtlasLootItem_OnClick(arg1)
             if(dataID and dataSource and AtlasLoot_IsLootTableAvailable(dataID)) then
                 AtlasLoot_ShowItemsFrame(dataID, dataSource, AtlasLoot_TableNames[dataID][1], AtlasLootItemsFrame.refresh[4]);
             end
+        elseif (arg1=="LeftButton") and this.sourcePage ~= nil then
+            --Holds AtlasLoot_Lastboss so back button works
+            AtlasLoot_Hold = true;
+            AtlasLoot_ShowBossLoot(this.sourcePage, this.sourcePage, pFrame);
         end
     else
         if IsShiftKeyDown() then
