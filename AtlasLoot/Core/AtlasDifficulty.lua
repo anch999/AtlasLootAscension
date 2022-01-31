@@ -40,6 +40,12 @@ AtlasLoot_Difficulty = {
             },
         },
         [7] = {
+            ["Mythic+ 31-40"] = {
+                {"Mythic 31", 35, "=q4=", [4] = "Submenu" }, {"Mythic 32", 36, "=q4=", [4] = "Submenu" }, {"Mythic 33", 37, "=q4=", [4] = "Submenu" }, {"Mythic 34", 38, "=q4=", [4] = "Submenu" }, {"Mythic 35", 39, "=q4=", [4] = "Submenu" },
+                {"Mythic 36", 40, "=q4=", [4] = "Submenu" }, {"Mythic 27", 41, "=q4=", [4] = "Submenu" }, {"Mythic 38", 42, "=q4=", [4] = "Submenu" }, {"Mythic 39", 43, "=q4=", [4] = "Submenu" }, {"Mythic 30", 44, "=q4=", [4] = "Submenu" },
+            },
+        },
+        [8] = {
             {"Bloodforged", 1, [4] = "Submenu"},
         },
     };
