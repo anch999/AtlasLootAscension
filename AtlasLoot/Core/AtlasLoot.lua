@@ -1374,9 +1374,7 @@ Finds the Ids of other difficulties based on the name of the item and the diffic
 On the form of {Name, {normal, heroic, mythic, mythic1, mythic2, ... ,mythicN}}
 ]]
 function AL_FindId(name, difficulty)
-	if FixedItemIDsDatabase[name] ~= nil then
-		return FixedItemIDsDatabase[name][difficulty], true
-	elseif ItemIDsDatabase[name] ~= nil then
+	if ItemIDsDatabase[name] ~= nil then
 		return ItemIDsDatabase[name][difficulty], true
 	end
 	return nil, false;
