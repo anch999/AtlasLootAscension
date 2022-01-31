@@ -5,6 +5,7 @@
 	<Script file="ItemIDsDatabase.lua"/>
 	<Script file="ItemIDsDatabase2.lua"/>
 	<Script file="ItemIDsDatabase3.lua"/>
+	<Script file="FixedItemIDsDatabase.lua"/>
 
 	<!--Default Files-->
 	<Script file="Filter.lua"/>

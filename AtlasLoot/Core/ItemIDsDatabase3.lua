@@ -578,6 +578,6 @@ ItemIDsDatabase["Monster - Fist, Zul'Aman (Offhand)"] = {6053890, 53890, 397993,
 
 
 --Items not added from generated file
-ItemIDsDatabase["Bottled Nethergron Extract"] = {6053891, 2032902, 2232902, 2332902};
-ItemIDsDatabase["Mmrgrg glm Nuubs"] = {6044831, 44831, 344831, 244831};
-ItemIDsDatabase["Alembic of Infernal Power"] = {6027896, 27896, 27896, 427896};
+ItemIDsDatabase["Bottled Nethergron Extract"] = {6053891, 53890, 2232902, 2332902};
+ItemIDsDatabase["Mmrgrg glm Nuubs"] = {6044831, 53890, 344831, 244831};
+ItemIDsDatabase["Alembic of Infernal Power"] = {53890, 27896, 27896, 427896};
