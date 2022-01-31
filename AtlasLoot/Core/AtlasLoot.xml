@@ -375,9 +375,9 @@
 					<AbsDimension x="140" y="23" />
 				</Size>
 				<Anchors>
-					<Anchor point="BOTTOMLEFT" relativeTo="$parent" relativePoint="BOTTOMLEFT">
+					<Anchor point="BOTTOM" relativeTo="$parent" relativePoint="BOTTOM">
 						<Offset>
-							<AbsDimension x="60" y="4"/>
+							<AbsDimension x="-130" y="4"/>
 						</Offset>
 					</Anchor>
 				</Anchors>
@@ -631,7 +631,7 @@
 				<Anchors>
 					<Anchor point="BOTTOM" relativeTo="$parent" relativePoint="BOTTOM">
 						<Offset>
-							<AbsDimension x="120" y="4"/>
+							<AbsDimension x="130" y="4"/>
 						</Offset>
 					</Anchor>
 				</Anchors>
