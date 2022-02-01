@@ -145,7 +145,7 @@ AtlasLoot_AdvancedSearchMenus = {
 		[9] = {
 			["Accessories"] = {
 				{"Necklace", "equip", "neck", "EquipSubMenu", "Disable"},
-				{"Back", "equip", "back", "EquipSubMenu", "Disable"},
+				{"Back", "equip", "cloak", "EquipSubMenu", "Disable"},
 				{"Ring", "equip", "finger", "EquipSubMenu", "Disable"},
 				{"Trinket", "equip", "trinket", "EquipSubMenu", "Disable"},
 			},
