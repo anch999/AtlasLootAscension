@@ -6871,7 +6871,7 @@ AtlasLoot_Data["PVPWarrior2"] = {
 		{ 20, 23452, "", "=q4=Grand Marshal's Tome of Power", "=ds=#s15#", "34100 #alliance#", ""};
 		{ 21, 23453, "", "=q4=Grand Marshal's Tome of Restoration", "=ds=#s15#", "34100 #alliance#", ""};
 		Back = "PVPMENU";
-		Next = "PVPWeapons_A2";
+		Next = "PVPWeapons_H";
 	};
 
 	AtlasLoot_Data["PVPWeapons_A2"] = {	
@@ -6897,7 +6897,8 @@ AtlasLoot_Data["PVPWarrior2"] = {
 		{ 20, 923452, "", "=q3=Lieutenant Commander's Tome of Power", "=ds=#s15#", "20000 #alliance#", ""};
 		{ 21, 923453, "", "=q3=Lieutenant Commander's Tome of Restoration", "=ds=#s15#", "20000 #alliance#", ""};
 		Back = "PVPMENU";
-		Prev = "PVPWeapons_A";
+		Prev = "PVPWeapons_H";
+		Next = "PVPWeapons_H2";
 	};	
 
 
@@ -6924,7 +6925,8 @@ AtlasLoot_Data["PVPWarrior2"] = {
 		{ 20, 23468, "", "=q4=High Warlord's Tome of Destruction", "=ds=#s15#", "34100 #horde#", ""};
 		{ 21, 23469, "", "=q4=High Warlord's Tome of Mending", "=ds=#s15#", "34100 #horde#", ""};
 		Back = "PVPMENU";
-		Next = "PVPWeapons_H2";
+		Prev = "PVPWeapons_A";
+		Next = "PVPWeapons_A2";
 	};
 
 	AtlasLoot_Data["PVPWeapons_H2"] = {	
@@ -6950,7 +6952,7 @@ AtlasLoot_Data["PVPWarrior2"] = {
 		{ 20, 923468, "", "=q3=Champion's Tome of Destruction", "=ds=#s15#", "20000 #horde#", ""};
 		{ 21, 923469, "", "=q3=Champion's Tome of Mending", "=ds=#s15#", "20000 #horde#", ""};
 		Back = "PVPMENU";
-		Prev = "PVPWeapons_H";
+		Prev = "PVPWeapons_A2";
 	};	
 
 		--------------------------------
