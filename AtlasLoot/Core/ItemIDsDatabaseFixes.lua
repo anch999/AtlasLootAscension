@@ -43,6 +43,17 @@ ItemIDsDatabase["Chromatic Girdle"] = {2522464, 2522464, 2622464, 2722464};
 ItemIDsDatabase["Chromatic Leggaurds"] = {2522459, 2522459, 2622459, 2722459};
 ItemIDsDatabase["Chromatic Boots"] = {2522465, 2522465, 2622465, 2722465};
 
+--Tier 3 Tokens
+
+ItemIDsDatabase["Desecrated Helmet"] = {22353, 22353, 102278, 222353};
+ItemIDsDatabase["Desecrated Pauldrons"] = {22354, 22354, 102286, 222354};
+ItemIDsDatabase["Desecrated Breastplate"] = {22349, 22349, 102264, 222349};
+ItemIDsDatabase["Desecrated Bracers"] = {22355, 22355, 102262, 222355};
+ItemIDsDatabase["Desecrated Gauntlets"] = {22357, 22357, 102268, 222357};
+ItemIDsDatabase["Desecrated Waistguard"] = {22356, 22356, 102300, 222356};
+ItemIDsDatabase["Desecrated Legplates"] = {22352, 22352, 102284, 222352};
+ItemIDsDatabase["Desecrated Sabatons"] = {22358, 22358, 102290, 222358};
+
 --Tier 4 Tokens
 
 ItemIDsDatabase["Helm of the Fallen Defender"] = {29761, 29761, 329761, 229761};
