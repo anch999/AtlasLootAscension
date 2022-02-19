@@ -11,6 +11,15 @@ AtlasLoot_Difficulty = {
         },
     };
 
+    ["PVP"] = {
+        [1] = {
+            {"Normal", "", [4] = "Submenu"},
+        },
+        [2] = {
+            {"Bloodforged", "Bloodforged", [4] = "Submenu"},
+        },
+    };
+
     ["ClassicDungeonExt"] = {
         [1] = {
             {"Normal", "", [4] = "Submenu"},

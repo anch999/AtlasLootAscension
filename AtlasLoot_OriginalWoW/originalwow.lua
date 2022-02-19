@@ -5750,6 +5750,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 24, 19318, "", "=q1=Bottled Alterac Spring Water", "=ds=#e4#", "50 #silver#"};
 		Next = "AVBlue_A";
 		Back = "PVPMENU2";
+		Type = "PVP";
 	};
 
 	AtlasLoot_Data["AVBlue_A"] = {
@@ -5779,6 +5780,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 27, 19323, "", "=q4=The Unstoppable Force", "=ds=#h2#, #w6#", "5000 #faction#"};
 		Prev = "AVMisc";
 		Back = "PVPMENU2";
+		Type = "PVP";
 	};
 
 	AtlasLoot_Data["AVBlue_H"] = {
@@ -5808,6 +5810,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 27, 19323, "", "=q4=The Unstoppable Force", "=ds=#h2#, #w6#", "5000 #faction#"};
 		Prev = "AVMisc";
 		Back = "PVPMENU2";
+		Type = "PVP";
 	};
 
 		--------------------
@@ -5833,6 +5836,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 20, 20069, "", "=q4=Ironbark Staff", "=ds=", "16000 #alliance#", ""};
 		Next = "AB4049_A";
 		Back = "PVPMENU2";
+		Type = "PVP";
 	};
 
 	AtlasLoot_Data["AB4049_A"] = {
@@ -5862,6 +5866,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		Prev = "ABMisc_A";
 		Next = "AB2039_A";
 		Back = "PVPMENU2";
+		Type = "PVP";
 	};
 
 	AtlasLoot_Data["AB2039_A"] = {
@@ -5889,6 +5894,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 30, 20129, "", "=q3=Highlander's Mail Greaves", "=ds=", "300 #alliance#", ""};
 		Prev = "AB4049_A";
 		Back = "PVPMENU2";
+		Type = "PVP";
 	};
 
 	AtlasLoot_Data["ABMisc_H"] = {
@@ -5910,6 +5916,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 26, 20220, "", "=q4=Ironbark Staff", "=ds=", "16000 #horde#", ""};
 		Next = "AB4049_H";
 		Back = "PVPMENU2";
+		Type = "PVP";
 	};
 
 	AtlasLoot_Data["AB4049_H"] = {
@@ -5939,6 +5946,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		Prev = "ABMisc_H";
 		Next = "AB2039_H";
 		Back = "PVPMENU2";
+		Type = "PVP";
 	};
 
 	AtlasLoot_Data["AB2039_H"] = {
@@ -5966,6 +5974,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 30, 20210, "", "=q3=Defiler's Mail Greaves", "=ds=", "300 #horde#", ""};
 		Prev = "AB4049_H";
 		Back = "PVPMENU2";
+		Type = "PVP";
 	};
 
 	AtlasLoot_Data["ABSets1_A"] = {
@@ -5995,6 +6004,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 29, 20048, "", "=q3=Highlander's Plate Greaves", "=ds=", "3000 #alliance#", ""};
 		Next = "ABSets2_A";
 		Back = "PVPMENU2";
+		Type = "PVP";
 	};
 
 	AtlasLoot_Data["ABSets1_H"] = {
@@ -6024,6 +6034,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 19, 20208, "", "=q3=Defiler's Plate Greaves", "=ds=", "3000 #horde#", ""};
 		Next = "ABSets2_H";
 		Back = "PVPMENU2";
+		Type = "PVP";
 	};
 
 	AtlasLoot_Data["ABSets2_A"] = {
@@ -6033,6 +6044,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 4, 20049, "", "=q3=Highlander's Lamellar Greaves", "=ds=", "3000 #alliance#", ""};
 		Prev = "ABSets1_A";
 		Back = "PVPMENU2";
+		Type = "PVP";
 	};
 
 	AtlasLoot_Data["ABSets2_H"] = {
@@ -6042,6 +6054,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 4, 20181, "", "=q3=Defiler's Lamellar Greaves", "=ds=", "3000 #horde#", ""};
 		Prev = "ABSets1_H";
 		Back = "PVPMENU2";
+		Type = "PVP";
 	};
 
 		---------------------
@@ -6065,6 +6078,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 24, 19068, "", "=q1=Warsong Gulch Silk Bandage", "=ds=", "10 #silver#", ""};
 		Next = "WSGAccessories_A";
 		Back = "PVPMENU2";
+		Type = "PVP";
 	};
 
 	AtlasLoot_Data["WSGAccessories_A"] = {
@@ -6094,6 +6108,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 29, 21565, "", "=q3=Rune of Perfection", "=ds=", "300 #alliance#", ""};
 		Next = "WSGWeapons_A";
 		Back = "PVPMENU2";
+		Type = "PVP";
 	};
 
 	AtlasLoot_Data["WSGAccessories_H"] = {
@@ -6123,6 +6138,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 29, 21565, "", "=q3=Rune of Perfection", "=ds=", "300 #horde#", ""};
 		Next = "WSGWeapons_H";
 		Back = "PVPMENU2";
+		Type = "PVP";
 	};
 
 	AtlasLoot_Data["WSGWeapons_A"] = {
@@ -6149,6 +6165,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		Prev = "WSGAccessories_A";
 		Next = "WSGArmor_A";
 		Back = "PVPMENU2";
+		Type = "PVP";
 	};
 
 	AtlasLoot_Data["WSGWeapons_H"] = {
@@ -6175,6 +6192,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		Prev = "WSGAccessories_H";
 		Next = "WSGArmor_H";
 		Back = "PVPMENU2";
+		Type = "PVP";
 	};
 
 	AtlasLoot_Data["WSGArmor_A"] = {
@@ -6199,6 +6217,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 25, 22672, "", "=q4=Sentinel's Plate Legguards", "=ds=", "9000 #alliance#", ""};	
 		Prev = "WSGWeapons_A";
 		Back = "PVPMENU2";
+		Type = "PVP";
 	};
 
 	AtlasLoot_Data["WSGArmor_H"] = {
@@ -6223,6 +6242,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 25, 22651, "", "=q4=Outrider's Plate Legguards", "=ds=", "9000 #horde#", ""};
 		Prev = "WSGWeapons_H";
 		Back = "PVPMENU2";
+		Type = "PVP";
 	};
 
 		---------------------------------------
@@ -6840,6 +6860,7 @@ AtlasLoot_Data["PVPWarrior2"] = {
 		{ 21, 23453, "", "=q4=Grand Marshal's Tome of Restoration", "=ds=#s15#", "34100 #alliance#", ""};
 		Back = "PVPMENU";
 		Next = "PVPWeapons_H";
+		Type = "PVP";
 	};
 
 	AtlasLoot_Data["PVPWeapons_A2"] = {	
@@ -6867,6 +6888,7 @@ AtlasLoot_Data["PVPWarrior2"] = {
 		Back = "PVPMENU";
 		Prev = "PVPWeapons_H";
 		Next = "PVPWeapons_H2";
+		Type = "PVP";
 	};	
 
 
@@ -6895,6 +6917,7 @@ AtlasLoot_Data["PVPWarrior2"] = {
 		Back = "PVPMENU";
 		Prev = "PVPWeapons_A";
 		Next = "PVPWeapons_A2";
+		Type = "PVP";
 	};
 
 	AtlasLoot_Data["PVPWeapons_H2"] = {	
@@ -6921,6 +6944,7 @@ AtlasLoot_Data["PVPWarrior2"] = {
 		{ 21, 923469, "", "=q3=Champion's Tome of Mending", "=ds=#s15#", "20000 #horde#", ""};
 		Back = "PVPMENU";
 		Prev = "PVPWeapons_A2";
+		Type = "PVP";
 	};	
 
 		--------------------------------
@@ -6948,6 +6972,7 @@ AtlasLoot_Data["PVPWarrior2"] = {
 		{ 22, 100532, "", "=q4=Combatant's Scroll of Sorcery, =ds=", " #alliance#", ""};
 		Next = "PvP60Accessories2_A";
 		Back = "PVPMENU";
+		Type = "PVP";
 	};
 
 	AtlasLoot_Data["PvP60Accessories1_H"] = {
@@ -6972,6 +6997,7 @@ AtlasLoot_Data["PVPWarrior2"] = {
 		{ 22, 100532, "", "=q4=Combatant's Scroll of Sorcery, =ds=", " #horde#", ""};
 		Next = "PvP60Accessories2_H";
 		Back = "PVPMENU";
+		Type = "PVP";
 	};
 
 	AtlasLoot_Data["PvP60Accessories2_A"] = {
@@ -6998,6 +7024,7 @@ AtlasLoot_Data["PVPWarrior2"] = {
 		Next = "PvP60Accessories3_A";
 		Prev = "PvP60Accessories1_A";	
 		Back = "PVPMENU";
+		Type = "PVP";
 	};
 
 	AtlasLoot_Data["PvP60Accessories2_H"] = {
@@ -7024,6 +7051,7 @@ AtlasLoot_Data["PVPWarrior2"] = {
 		Next = "PvP60Accessories3_H";
 		Prev = "PvP60Accessories1_H";
 		Back = "PVPMENU";
+		Type = "PVP";
 	};
 
 	AtlasLoot_Data["PvP60Accessories3_A"] = {
@@ -7045,6 +7073,7 @@ AtlasLoot_Data["PVPWarrior2"] = {
 		{ 22, 18443, "", "=q3=Master Sergeant's Insignia", "=ds=#s2#", "1600 #alliance#", ""};
 		Prev = "PvP60Accessories2_A";
 		Back = "PVPMENU";
+		Type = "PVP";
 	};
 
 	AtlasLoot_Data["PvP60Accessories3_H"] = {
@@ -7066,6 +7095,7 @@ AtlasLoot_Data["PVPWarrior2"] = {
 		{ 22, 16335, "", "=q3=Senior Sergeant's Insignia", "=ds=#s2#", "1600 #horde#", ""};
 		Prev = "PvP60Accessories2_H";
 		Back = "PVPMENU";
+		Type = "PVP";
 	};
 
 	AtlasLoot_Data["PvP60Ench"] = {
@@ -7091,6 +7121,7 @@ AtlasLoot_Data["PVPWarrior2"] = {
 		{ 20, 449570, "", "=q3=Lesser Inscription of the Gladiator, =ds=", "40000 #alliance#", ""};
 		{ 21, 449571, "", "=q3=Lesser Inscription of the Battle Mage, =ds=", "40000 #alliance#", ""};
 		Back = "PVPMENU";
+		Type = "PVP";
 	};
 	----------------
 	--- Factions ---

@@ -218,7 +218,7 @@ function AtlasLoot_DifficultyEnable(dataID, dataSource) --Enables Difficulty Men
 end
 
 function AtlasLootDefaultFrame_GetRaidDifficulty(raidtablename, itemID, itemColour)
-            if tonumber(itemID) then --used in itemID search feature for itemID database
+            if tonumber(itemID) or itemID:match("Bloodforged") then --used in itemID search feature for itemID database
 				ItemindexID = itemID;
 				isTablereference = false;
 				notPattern = false;

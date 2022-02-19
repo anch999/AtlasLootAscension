@@ -4084,6 +4084,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 21, 24522, "", "=q1=Thrallmar Favor", "=ds=5 #markthrallmar#"};
 		{ 22, 24581, "", "=q1=Mark of Thrallmar", "=ds=#m19#"};
 		Back = "PVPMENU2";
+		Type = "PVP";
 	};
 
 		----------------------------------
@@ -4116,6 +4117,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 29, 26044, "", "=q2=Halaa Research Token", "=ds=#m17#"};
 		Next = "Nagrand2";
 		Back = "PVPMENU2";
+		Type = "PVP";
 	};
 
 	AtlasLoot_Data["Nagrand2"] = {
@@ -4132,6 +4134,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 22, 30568, "", "=q2=The Sharp Cookie", "=ds=#w11#"};
 		Prev = "Nagrand1";
 		Back = "PVPMENU2";
+		Type = "PVP";
 	};
 
 		------------------------------------------------
@@ -4158,6 +4161,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 22, 28559, "", "=q3=Exorcist's Plate Helm", "=ds=#a4# #s1#", "18 #spiritshard#", ""};
 		{ 25, 32948, "", "=q1=Auchenai Mana Potion", "=ds=#e2#", "2 #spiritshard#", ""};
 		Back = "PVPMENU2";
+		Type = "PVP";
 	};
 
 		-------------------------------------------------
@@ -4177,6 +4181,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 19, 27930, "", "=q3=Splintermark", "=ds=#w2#", "15 #markthrallmarhhold#", ""};
 		{ 22, 24581, "", "=q1=Mark of Thrallmar", "=ds=#m19#"};
 		Back = "PVPMENU2";
+		Type = "PVP";
 	};
 
 		-------------------------------------
@@ -4210,6 +4215,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 28, 35330, "", "=q3=Dreadweave Leggings", "=ds=#f2#, =ec1=#r3#"};
 		Next = "PVP70RepLeather";
 		Back = "PVP70RepSET";
+		Type = "PVP";
 	};
 
 	AtlasLoot_Data["PVP70RepLeather"] = {
@@ -4240,6 +4246,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "PVP70RepCloth";
 		Next = "PVP70RepMail";
 		Back = "PVP70RepSET";
+		Type = "PVP";
 	};
 
 	AtlasLoot_Data["PVP70RepMail"] = {
@@ -4270,6 +4277,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "PVP70RepLeather";
 		Next = "PVP70RepPlate";
 		Back = "PVP70RepSET";
+		Type = "PVP";
 	};
 
 	AtlasLoot_Data["PVP70RepPlate"] = {
@@ -4293,6 +4301,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 21, 35410, "", "=q3=Savage Plate Legguards", "=ds=#f5#, =ec1=#r3#"};
 		Prev = "PVP70RepMail";
 		Back = "PVP70RepSET";
+		Type = "PVP";
 	};
 
 	AtlasLoot_Data["PVP70RareCloth_H"] = {
@@ -4322,6 +4331,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 28,28819, "", "=q3=High Warlord's Dreadweave Leggings"};
 		Next = "PVP70RareLeather_H";
 		Back = "PVP70RepSET";
+		Type = "PVP";
 	};
 
 	AtlasLoot_Data["PVP70RareLeather_H"] = {
@@ -4352,6 +4362,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "PVP70RareCloth_H";
 		Next = "PVP70RareMail_H";
 		Back = "PVP70RepSET";
+		Type = "PVP";
 	};
 
 	AtlasLoot_Data["PVP70RareMail_H"] = {
@@ -4382,6 +4393,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "PVP70RareLeather_H";
 		Next = "PVP70RarePlate_H";
 		Back = "PVP70RepSET";
+		Type = "PVP";
 	};
 
 	AtlasLoot_Data["PVP70RarePlate_H"] = {
@@ -4411,6 +4423,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 28,28834, "", "=q3=High Warlord's Lamellar Legguards"};
 		Prev = "PVP70RareMail_H";
 		Back = "PVP70RepSET";
+		Type = "PVP";
 	};
 	
 	AtlasLoot_Data["PVP70RareCloth_A"] = {
@@ -4440,6 +4453,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 28,28626, "", "=q3=Grand Marshal's Dreadweave Leggings"};
 		Next = "PVP70RareLeather_A";
 		Back = "PVP70RepSET";
+		Type = "PVP";
 	};
 
 	AtlasLoot_Data["PVP70RareLeather_A"] = {
@@ -4470,6 +4484,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "PVP70RareCloth_A";
 		Next = "PVP70RareMail_A";
 		Back = "PVP70RepSET";
+		Type = "PVP";
 	};
 
 	AtlasLoot_Data["PVP70RareMail_A"] = {
@@ -4500,6 +4515,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "PVP70RareLeather_A";
 		Next = "PVP70RarePlate_A";
 		Back = "PVP70RepSET";
+		Type = "PVP";
 	};
 
 	AtlasLoot_Data["PVP70RarePlate_A"] = {
@@ -4529,6 +4545,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 28,28724, "", "=q3=Grand Marshal's Lamellar Legguards"};
 		Prev = "PVP70RareMail_A";
 		Back = "PVP70RepSET";
+		Type = "PVP";
 	};
 
 
@@ -4565,6 +4582,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 29, 31854, "", "=q1=Major Combat Mana Potion", "=ds=", "200 #faction#"};
 		Next = "PvP70Accessories2";
 		Back = "PVPMENU";
+		Type = "PVP";
 	};
 
 	AtlasLoot_Data["PvP70Accessories1_H"] = {
@@ -4596,6 +4614,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 29, 31854, "", "=q1=Major Combat Mana Potion", "=ds=", "200 #faction#"};
 		Next = "PvP70Accessories2";
 		Back = "PVPMENU";
+		Type = "PVP";
 	};
 	
 	AtlasLoot_Data["PvP70Accessories2"] = {
@@ -4627,6 +4646,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 30, 33919, "", "=q4=Vindicator's Band of Triumph", "=ds=", "12000 #faction#"};
 		Prev = "PvP70Accessories1_A";
 		Back = "PVPMENU";
+		Type = "PVP";
 	};
 
 		------------------------------------
@@ -4657,6 +4677,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 30, 35150, "", "=q4=Guardian's Wyrmhide Boots", "=ds=", "18000 #faction#"};
 		Next = "PvP70NonSet2";
 		Back = "PVPMENU";
+		Type = "PVP";
 	};
 
 	AtlasLoot_Data["PvP70NonSet2"] = {
@@ -4686,6 +4707,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 30, 35148, "", "=q4=Guardian's Scaled Greaves", "=ds=", "18000 #faction#"};
 		Prev = "PvP70NonSet1";
 		Back = "PVPMENU";
+		Type = "PVP";
 	};
 
 		--------------------------
@@ -4718,6 +4740,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 27, 34998, "", "=q4=Brutal Gladiator's Dragonhide Gloves", "=ds=", "1125 #arena#", ""};
 		{ 28, 35000, "", "=q4=Brutal Gladiator's Dragonhide Legguards", "=ds=", "1875 #arena#", ""};
 		Back = "ARENASET";
+		Type = "PVP";
 	};
 
 	AtlasLoot_Data["ArenaDruidBalance"] = {
@@ -4746,6 +4769,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 27, 35111, "", "=q4=Brutal Gladiator's Wyrmhide Gloves", "=ds=", "1125 #arena#", ""};
 		{ 28, 35113, "", "=q4=Brutal Gladiator's Wyrmhide Legguards", "=ds=", "1875 #arena#", ""};
 		Back = "ARENASET";
+		Type = "PVP";
 	};
 
 	AtlasLoot_Data["ArenaDruidRestoration"] = {
@@ -4774,6 +4798,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 27, 35022, "", "=q4=Brutal Gladiator's Kodohide Gloves", "=ds=", "1125 #arena#", ""};
 		{ 28, 35024, "", "=q4=Brutal Gladiator's Kodohide Legguards", "=ds=", "1875 #arena#", ""};
 		Back = "ARENASET";
+		Type = "PVP";
 	};
 
 	AtlasLoot_Data["ArenaHunter"] = {
@@ -4802,6 +4827,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 27, 34991, "", "=q4=Brutal Gladiator's Chain Gauntlets", "=ds=", "1125 #arena#", ""};
 		{ 28, 34993, "", "=q4=Brutal Gladiator's Chain Leggings", "=ds=", "1875 #arena#", ""};
 		Back = "ARENASET";
+		Type = "PVP";
 	};
 
 	AtlasLoot_Data["ArenaMage"] = {
@@ -4830,6 +4856,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 27, 35098, "", "=q4=Brutal Gladiator's Silk Handguards", "=ds=", "1125 #arena#", ""};
 		{ 28, 35100, "", "=q4=Brutal Gladiator's Silk Trousers", "=ds=", "1875 #arena#", ""};
 		Back = "ARENASET";
+		Type = "PVP";
 	};
 
 	AtlasLoot_Data["ArenaPaladinProtection"] = {
@@ -4858,6 +4885,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 27, 35028, "", "=q4=Brutal Gladiator's Lamellar Gauntlets", "=ds=", "1125 #arena#", ""};
 		{ 28, 35030, "", "=q4=Brutal Gladiator's Lamellar Legguards", "=ds=", "1875 #arena#", ""};
 		Back = "ARENASET";
+		Type = "PVP";
 	};
 
 	AtlasLoot_Data["ArenaPaladinRetribution"] = {
@@ -4886,6 +4914,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 27, 35089, "", "=q4=Brutal Gladiator's Scaled Gauntlets", "=ds=", "1125 #arena#", ""};
 		{ 28, 35091, "", "=q4=Brutal Gladiator's Scaled Legguards", "=ds=", "1875 #arena#", ""};
 		Back = "ARENASET";
+		Type = "PVP";
 	};
 
 	AtlasLoot_Data["ArenaPaladinHoly"] = {
@@ -4914,6 +4943,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 27, 35060, "", "=q4=Brutal Gladiator's Ornamented Gloves", "=ds=", "1125 #arena#", ""};
 		{ 28, 35062, "", "=q4=Brutal Gladiator's Ornamented Legplates", "=ds=", "1875 #arena#", ""};
 		Back = "ARENASET";
+		Type = "PVP";
 	};
 
 	AtlasLoot_Data["ArenaPriestShadow"] = {
@@ -4942,6 +4972,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 27, 35083, "", "=q4=Brutal Gladiator's Satin Gloves", "=ds=", "1125 #arena#", ""};
 		{ 28, 35085, "", "=q4=Brutal Gladiator's Satin Leggings", "=ds=", "1875 #arena#", ""};
 		Back = "ARENASET";
+		Type = "PVP";
 	};
 
 	AtlasLoot_Data["ArenaPriestHoly"] = {
@@ -4970,6 +5001,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 27, 35053, "", "=q4=Brutal Gladiator's Mooncloth Gloves", "=ds=", "1125 #arena#", ""};
 		{ 28, 35055, "", "=q4=Brutal Gladiator's Mooncloth Leggings", "=ds=", "1875 #arena#", ""};
 		Back = "ARENASET";
+		Type = "PVP";
 	};
 
 	AtlasLoot_Data["ArenaRogue"] = {
@@ -4998,6 +5030,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 27, 35032, "", "=q4=Brutal Gladiator's Leather Gloves", "=ds=", "1125 #arena#", ""};
 		{ 28, 35034, "", "=q4=Brutal Gladiator's Leather Legguards", "=ds=", "1875 #arena#", ""};
 		Back = "ARENASET";
+		Type = "PVP";
 	};
 
 	AtlasLoot_Data["ArenaWarlockDemonology"] = {
@@ -5026,6 +5059,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 27, 35003, "", "=q4=Brutal Gladiator's Dreadweave Gloves", "=ds=", "1125 #arena#", ""};
 		{ 28, 35005, "", "=q4=Brutal Gladiator's Dreadweave Leggings", "=ds=", "1875 #arena#", ""};
 		Back = "ARENASET";
+		Type = "PVP";
 	};
 
 	AtlasLoot_Data["ArenaWarlockDestruction"] = {
@@ -5054,6 +5088,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 27, 35011, "", "=q4=Brutal Gladiator's Felweave Handguards", "=ds=", "1125 #arena#", ""};
 		{ 28, 35013, "", "=q4=Brutal Gladiator's Felweave Trousers", "=ds=", "1875 #arena#", ""};
 		Back = "ARENASET";
+		Type = "PVP";
 	};
 
 	AtlasLoot_Data["ArenaShamanEnhancement"] = {
@@ -5082,6 +5117,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 27, 35043, "", "=q4=Brutal Gladiator's Linked Gauntlets", "=ds=", "1125 #arena#", ""};
 		{ 28, 35045, "", "=q4=Brutal Gladiator's Linked Leggings", "=ds=", "1875 #arena#", ""};
 		Back = "ARENASET";
+		Type = "PVP";
 	};
 
 	AtlasLoot_Data["ArenaShamanElemental"] = {
@@ -5110,6 +5146,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 27, 35049, "", "=q4=Brutal Gladiator's Mail Gauntlets", "=ds=", "1125 #arena#", ""};
 		{ 28, 35051, "", "=q4=Brutal Gladiator's Mail Leggings", "=ds=", "1875 #arena#", ""};
 		Back = "ARENASET";
+		Type = "PVP";
 	};
 
 	AtlasLoot_Data["ArenaShamanRestoration"] = {
@@ -5138,6 +5175,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 27, 35078, "", "=q4=Brutal Gladiator's Ringmail Gauntlets", "=ds=", "1125 #arena#", ""};
 		{ 28, 35080, "", "=q4=Brutal Gladiator's Ringmail Leggings", "=ds=", "1875 #arena#", ""};
 		Back = "ARENASET";
+		Type = "PVP";
 	};
 
 	AtlasLoot_Data["ArenaWarrior"] = {
@@ -5166,6 +5204,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 27, 35067, "", "=q4=Brutal Gladiator's Plate Gauntlets", "=ds=", "1125 #arena#", ""};
 		{ 28, 35069, "", "=q4=Brutal Gladiator's Plate Legguards", "=ds=", "1875 #arena#", ""};
 		Back = "ARENASET";
+		Type = "PVP";
 	};
 
 		--------------------------------
@@ -5193,6 +5232,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{19, 28933, "", "=q3=High Warlord's Heavy Crossbow"};
 		{20, 28938, "", "=q3=High Warlord's Battletome"};
 		Back = "PVPMENU";
+		Type = "PVP";
 	};	
 	
 		AtlasLoot_Data["Arena0Weapons1_A"] = {	
@@ -5217,6 +5257,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{19, 28960, "", "=q3=Grand Marshal's Heavy Crossbow"};
 		{20, 28941, "", "=q3=Grand Marshal's Battletome"};
 		Back = "PVPMENU";
+		Type = "PVP";
 	};	
 		
 	AtlasLoot_Data["Arena1Weapons1"] = {
@@ -5245,6 +5286,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{23, 32452, "", "=q4=Gladiator's Reprieve", "=ds=", "1125 #arena#", ""};
 		Next = "Arena1Weapons2";
 		Back = "PVPMENU";
+		Type = "PVP";
 	};
 	
 	AtlasLoot_Data["Arena1Weapons2"] = {
@@ -5259,6 +5301,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{9, 28357, "", "=q4=Gladiator's Totem of the Third Wind", "=ds=", "1000 #arena#", ""};
 		Prev = "Arena1Weapons1";
 		Back = "PVPMENU";
+		Type = "PVP";
 	};
 		
 	AtlasLoot_Data["Arena3Weapons1"] = {
@@ -5288,6 +5331,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{24, 33766, "", "=q4=Vengeful Gladiator's War Staff", "=ds=", "3000 #arena#", ""};
 		Next = "Arena3Weapons2";
 		Back = "PVPMENU";
+		Type = "PVP";
 	};
 
 	AtlasLoot_Data["Arena3Weapons2"] = {
@@ -5317,6 +5361,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{24, 33843, "", "=q4=Vengeful Gladiator's Totem of the Third Wind", "=ds=", "800 #arena#", ""};
 		Prev = "Arena3Weapons1";
 		Back = "PVPMENU";
+		Type = "PVP";
 	};
 
 	AtlasLoot_Data["Arena2Weapons1"] = {
@@ -5349,6 +5394,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{27, 32961, "", "=q4=Merciless Gladiator's Reprieve", "=ds=", "9000 #arena#", ""};
 		Next = "Arena2Weapons2";
 		Back = "PVPMENU";
+		Type = "PVP";
 	};
 
 	AtlasLoot_Data["Arena2Weapons2"] = {
@@ -5394,6 +5440,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 27, 35109, "", "=q4=Brutal Gladiator's War Staff", "=ds=#h2#, #w9#", "3750 #arena#", ""};
 		Next = "Arena4Weapons2";
 		Back = "PVPMENU";
+		Type = "PVP";
 	};
 
 	AtlasLoot_Data["Arena4Weapons2"] = {
@@ -5421,6 +5468,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 24, 35106, "", "=q4=Brutal Gladiator's Totem of the Third Wind", "=ds=#w15#", "1000 #arena#", ""};
 		Prev = "Arena4Weapons1";
 		Back = "PVPMENU";
+		Type = "PVP";
 	};
 
 	--------------------------
