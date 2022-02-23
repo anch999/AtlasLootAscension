@@ -1305,6 +1305,12 @@ end
 	AtlasLoot_TableNames["T2Legs"] = {"Teir 2 Legs", "AtlasLootOriginalWoW" };
 	AtlasLoot_TableNames["T2Helms"] = {"Teir 2 Helms", "AtlasLootOriginalWoW" };
 	AtlasLoot_TableNames["T2Chests"] = {"Teir 2 Chests", "AtlasLootOriginalWoW" };
+	--T2.5 Token Tables
+	AtlasLoot_TableNames["T2.5Shoulders"] = {"Teir 2.5 Shoulders", "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["T2.5Boots"] = {"Teir 2.5 Boots", "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["T2.5Legs"] = {"Teir 2.5 Legs", "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["T2.5Helms"] = {"Teir 2.5 Helms", "AtlasLootOriginalWoW" };
+	AtlasLoot_TableNames["T2.5Chests"] = {"Teir 2.5 Chests", "AtlasLootOriginalWoW" };
 	--T3 Token Tables
 	AtlasLoot_TableNames["T3Bracers"] = {"Teir 3 Bracers", "AtlasLootOriginalWoW" };
 	AtlasLoot_TableNames["T3Belts"] = {"Teir 3 Belts", "AtlasLootOriginalWoW" };

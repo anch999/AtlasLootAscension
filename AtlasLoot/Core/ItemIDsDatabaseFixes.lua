@@ -38,8 +38,8 @@ ItemIDsDatabase["Chromatic Headpiece"] = {2522460, 2522460, 2622460, 2722460};
 ItemIDsDatabase["Chromatic Spaulders"] = {2522461, 2522461, 2622461, 2722461};
 ItemIDsDatabase["Chromatic Tunic"] = {2522450, 2522450, 2622450, 2722450};
 ItemIDsDatabase["Chromatic Wristgaurds"] = {2522462, 2522462, 2622462, 2722462};
-ItemIDsDatabase["Chromatic Handgaurds"] = {2522463, 2522463, 2622463, 2722463};
-ItemIDsDatabase["Chromatic Girdle"] = {2522464, 2522464, 2622464, 2722464};
+ItemIDsDatabase["Chromatic Handgaurds"] = {2522464, 2522464, 2622464, 2722464};
+ItemIDsDatabase["Chromatic Girdle"] = {2522463, 2522463, 2622463, 2722463};
 ItemIDsDatabase["Chromatic Leggaurds"] = {2522459, 2522459, 2622459, 2722459};
 ItemIDsDatabase["Chromatic Boots"] = {2522465, 2522465, 2622465, 2722465};
 

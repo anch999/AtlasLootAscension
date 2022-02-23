@@ -412,8 +412,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 6, 21625, "", "=q4=Scarab Brooch", "=ds=#s14#", "", "21.46%"};
 		{ 7, 22399, "", "=q4=Idol of Health", "=ds=#s16#, #w14#", "", "7.32%"};
 		{ 8, 21622, "", "=q4=Sharpened Silithid Femur", "=ds=#h3#, #w10#", "", "15.12%"};
-		{ 10, 20932, "", "=q4=Qiraji Bindings of Dominance", "=ds=#tt2.5#", "", "100%"};
-		{ 11, 20928, "", "=q4=Qiraji Bindings of Command","=ds=#tt2.5#", "", "100%"};
+		{ 10, 20932, "", "=q4=Spaulders of the Imperial Guard", "=ds=#tt2.5#", "", "100%", "=LT=T2.5Shoulders"};
+		{ 11, 20928, "", "=q4=Bindings of the Lost Nomad","=ds=#tt2.5#", "", "100%", "=LT=T2.5Boots"};
 		{ 16, 21237, "", "=q4=Imperial Qiraji Regalia", "=ds=#m3#", "", "3.19%"};
 		{ 17, 21273, "", "=q4=Blessed Qiraji Acolyte Staff", "=q1=#m4#, =ds=#w9#"};
 		{ 18, 21275, "", "=q4=Blessed Qiraji Augur Staff", "=q1=#m4#, =ds=#w9#"};
@@ -435,8 +435,8 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 4, 21618, "", "=q4=Hive Defiler Wristguards", "=ds=#s8#, #a4#", "", "10.34%"};
 		{ 6, 21620, "", "=q4=Ring of the Martyr", "=ds=#s13#", "", "12.97%"};
 		{ 7, 21616, "", "=q4=Huhuran's Stinger", "=ds=#w2#", "", "5.71%"};
-		{ 9, 20932, "", "=q4=Qiraji Bindings of Dominance", "=ds=#tt2.5#", "", "100%"};
-		{ 10, 20928, "", "=q4=Qiraji Bindings of Command","=ds=#tt2.5#", "", "100%"};
+		{ 9, 20932, "", "=q4=Spaulders of the Imperial Guard", "=ds=#tt2.5#", "", "100%", "=LT=T2.5Shoulders"};
+		{ 10, 20928, "", "=q4=Bindings of the Lost Nomad","=ds=#tt2.5#", "", "100%", "=LT=T2.5Boots"};
 		{ 16, 21237, "", "=q4=Imperial Qiraji Regalia", "=ds=#m3#", "", "4.31%"};
 		{ 17, 21273, "", "=q4=Blessed Qiraji Acolyte Staff", "=q1=#m4#, =ds=#w9#"};
 		{ 18, 21275, "", "=q4=Blessed Qiraji Augur Staff", "=q1=#m4#, =ds=#w9#"};
@@ -452,24 +452,23 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 	};
 
 	AtlasLoot_Data["AQ40Emperors"] = {
-		{ 1, 20930, "", "=q4=Vek'lor's Diadem", "=q1=#m1# =ds=#c7#, #c1#, #c6#, #c2#, #c4#", "", "100%"};
-		{ 2, 21600, "", "=q4=Boots of Epiphany", "=ds=#s12#, #a1#", "", "15.77%"};
-		{ 3, 21602, "", "=q4=Qiraji Execution Bracers", "=ds=#s8#, #a2#", "", "15.95%"};
-		{ 4, 21599, "", "=q4=Vek'lor's Gloves of Devastation", "=ds=#s9#, #a3#", "", "15.77%"};
-		{ 5, 21598, "", "=q4=Royal Qiraji Belt", "=ds=#s10#, #a4#", "", "9.84%"};
-		{ 6, 21597, "", "=q4=Royal Scepter of Vek'lor", "=ds=#s15#", "", "6.99%"};
-		{ 7, 21601, "", "=q4=Ring of Emperor Vek'lor", "=ds=#s13#", "", "17.27%"};
-		{ 8, 20735, "", "=q3=Formula: Enchant Cloak - Subtlety", "=ds=#p4# (300)", "", "6.62%"};
-		{ 11, 21232, "", "=q4=Imperial Qiraji Armaments", "=ds=#m3#", "", "6.25%"};
-		{ 12, 21242, "", "=q4=Blessed Qiraji War Axe", "=q1=#m4#, =ds=#h1#, #w1#"};
-		{ 13, 21272, "", "=q4=Blessed Qiraji Musket", "=q1=#m4#, =ds=#w5#"};
-		{ 14, 21244, "", "=q4=Blessed Qiraji Pugio", "=q1=#m4#, =ds=#h1#, #w4#"};
-		{ 15, 21269, "", "=q4=Blessed Qiraji Bulwark", "=q1=#m4#, =ds=#w8#"};
-		{ 16, 20930, "", "=q4=Diadem of the Desert Prince", "=ds=#tt2.5#", "", "100%"};
+		{ 1, 21600, "", "=q4=Boots of Epiphany", "=ds=#s12#, #a1#", "", "15.77%"};
+		{ 2, 21602, "", "=q4=Qiraji Execution Bracers", "=ds=#s8#, #a2#", "", "15.95%"};
+		{ 3, 21599, "", "=q4=Vek'lor's Gloves of Devastation", "=ds=#s9#, #a3#", "", "15.77%"};
+		{ 4, 21598, "", "=q4=Royal Qiraji Belt", "=ds=#s10#, #a4#", "", "9.84%"};
+		{ 5, 21597, "", "=q4=Royal Scepter of Vek'lor", "=ds=#s15#", "", "6.99%"};
+		{ 6, 21601, "", "=q4=Ring of Emperor Vek'lor", "=ds=#s13#", "", "17.27%"};
+		{ 7, 20735, "", "=q3=Formula: Enchant Cloak - Subtlety", "=ds=#p4# (300)", "", "6.62%"};
+		{ 9, 21232, "", "=q4=Imperial Qiraji Armaments", "=ds=#m3#", "", "6.25%"};
+		{ 10, 21242, "", "=q4=Blessed Qiraji War Axe", "=q1=#m4#, =ds=#h1#, #w1#"};
+		{ 11, 21272, "", "=q4=Blessed Qiraji Musket", "=q1=#m4#, =ds=#w5#"};
+		{ 12, 21244, "", "=q4=Blessed Qiraji Pugio", "=q1=#m4#, =ds=#h1#, #w4#"};
+		{ 13, 21269, "", "=q4=Blessed Qiraji Bulwark", "=q1=#m4#, =ds=#w8#"};
+		{ 15, 20930, "", "=q4=Diadem of the Desert Prince", "=ds=#tt2.5#", "", "100%", "=LT=T2.5Helms"};
 		{ 16, 21604, "", "=q4=Bracelets of Royal Redemption", "=ds=#s8#, #a1#", "", "12.51%"};
 		{ 17, 21605, "", "=q4=Gloves of the Hidden Temple", "=ds=#s9#, #a2#", "", "15.45%"};
 		{ 18, 21609, "", "=q4=Regenerating Belt of Vek'nilash", "=ds=#s10#, #a2#", "", "13.35%"};
-		{ 29, 21607, "", "=q4=Grasp of the Fallen Emperor", "=ds=#s10#, #a3#", "", "2.72%"};
+		{ 19, 21607, "", "=q4=Grasp of the Fallen Emperor", "=ds=#s10#, #a3#", "", "2.72%"};
 		{ 20, 21606, "", "=q4=Belt of the Fallen Emperor", "=ds=#s10#, #a4#", "", "12.22%"};
 		{ 21, 21679, "", "=q4=Kalimdor's Revenge", "=ds=#h2#, #w10#", "", "9.25%"};
 		{ 22, 21608, "", "=q4=Amulet of Vek'nilash", "=ds=#s2#", "", "14.25%"};
@@ -490,7 +489,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 4, 23570, "", "=q4=Jom Gabbar", "=ds=#s14#", "", "2.80%"};
 		{ 5, 23557, "", "=q4=Larvae of the Great Worm", "=ds=#w5#", "", "3.95%"};
 		{ 6, 21610, "", "=q4=Wormscale Blocker", "=ds=#w8#", "", "16.54%"};
-		{ 8, 20931, "", "=q4=Hardened Qiraj Chitin", "=ds=#tt2.5#", "", "100%"};
+		{ 8, 20931, "", "=q4=Hardened Qiraj Chitin", "=ds=#tt2.5#", "", "100%", "=LT=T2.5Legs"};
 		{ 16, 21237, "", "=q4=Imperial Qiraji Regalia", "=ds=#m3#", "", "5.20%"};
 		{ 17, 21273, "", "=q4=Blessed Qiraji Acolyte Staff", "=q1=#m4# =ds=#w9#"};
 		{ 18, 21275, "", "=q4=Blessed Qiraji Augur Staff", "=q1=#m4# =ds=#w9#"};
@@ -519,7 +518,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 12, 21126, "", "=q4=Death's Sting", "=ds=#h1#, #w4#", "", "6.84%"};
 		{ 13, 21134, "", "=q4=Dark Edge of Insanity", "=ds=#h2#, #w1#", "", "5.93%"};
 		{ 14, 21839, "", "=q4=Scepter of the False Prophet", "=ds=#h3#, #w6#", "", "4.75%"};
-		{ 16, 20933, "", "=q4=Husk of the Old God", "=ds=#tt2.5#", "", "100%"};
+		{ 16, 20933, "", "=q4=Husk of the Old God", "=ds=#tt2.5#", "", "100%", "=LT=T2.5Chests"};
 		{ 18, 21221, "", "=q4=Eye of C'Thun", "=ds=#m2#", "", "100%"};
 		{ 19, 21710, "", "=q4=Cloak of the Fallen God", "=q1=#m4#: =ds=#s4#"};
 		{ 20, 21712, "", "=q4=Amulet of the Fallen God", "=q1=#m4#: =ds=#s2#"};
@@ -1713,7 +1712,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 7, 19430, "", "=q4=Shroud of Pure Thought", "=ds=#s4#", "", "16.67%"};
 		{ 8, 19403, "", "=q4=Band of Forced Concentration", "=ds=#s13#", "", "16.67%"};
 		{ 9, 19367, "", "=q4=Dragon's Touch", "=ds=#w12#", "", "16.67%"};
-		{ 16, 2522464, "", "=q4=Chromatic Girdle", "=ds=#tt2#", "", "100%", "=LT=T2Belts"};
+		{ 16, 2522463, "", "=q4=Chromatic Girdle", "=ds=#tt2#", "", "100%", "=LT=T2Belts"};
 		Prev = "BWLRazorgore";
 		Next = "BWLLashlayer";
 		Type = "ClassicRaid";
@@ -1753,7 +1752,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 12, 19402, "", "=q4=Legguards of the Fallen Crusader", "=ds=#s11#, #a4#", "", "12.5%"};
 		{ 13, 19397, "", "=q4=Ring of Blackrock", "=ds=#s13#", "", "6.67%"};
 		{ 14, 19395, "", "=q4=Rejuvenating Gem", "=ds=#s14#", "", "6.67%"};
-		{ 16, 2522463, "", "=q4=Chromatic Girdle", "=ds=#tt2#", "", "100%", "=LT=T2Belts"};
+		{ 16, 2522464, "", "=q4=Chromatic Handgaurds", "=ds=#tt2#", "", "100%", "=LT=T2Gloves"};
 		Prev = "BWLLashlayer";
 		Next = "BWLEbonroc";
 		Type = "ClassicRaid";
@@ -1772,7 +1771,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 10, 19353, "", "=q4=Drake Talon Cleaver", "=ds=#h2#, #w1#", "", "6.67%"};
 		{ 11, 19355, "", "=q4=Shadow Wing Focus Staff", "=ds=#w9#", "", "6.67%"};
 		{ 12, 19368, "", "=q4=Dragonbreath Hand Cannon", "=ds=#w5#", "", "16.67%"};
-		{ 16, 2522463, "", "=q4=Chromatic Girdle", "=ds=#tt2#", "", "100%", "=LT=T2Belts"};
+		{ 16, 2522464, "", "=q4=Chromatic Handgaurds", "=ds=#tt2#", "", "100%", "=LT=T2Gloves"};
 		Prev = "BWLFiremaw";
 		Next = "BWLFlamegor";
 		Type = "ClassicRaid";
@@ -1791,7 +1790,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 10, 19357, "", "=q4=Herald of Woe", "=ds=#h2#, #w6#", "", "16.67%"};
 		{ 11, 19355, "", "=q4=Shadow Wing Focus Staff", "=ds=#w9#", "", "6.67%"};
 		{ 12, 19367, "", "=q4=Dragon's Touch", "=ds=#w12#", "", "16.67%"};
-		{ 16, 2522463, "", "=q4=Chromatic Girdle", "=ds=#tt2#", "", "100%", "=LT=T2Belts"};
+		{ 16, 2522464, "", "=q4=Chromatic Handgaurds", "=ds=#tt2#", "", "100%", "=LT=T2Gloves"};
 		Prev = "BWLEbonroc";
 		Next = "BWLChromaggus";
 		Type = "ClassicRaid";
@@ -5825,29 +5824,29 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 
 	AtlasLoot_Data["AQ40Sets1"] = {
 		{ 1, 0, "Spell_Nature_Regeneration", "=q6=#aq40s1#", "=ec1=#c1#"};
-		{ 2, 21357, "", "=q4=Genesis Vest", "=q4=#aq40t4#, =ds=#r3#"};
-		{ 3, 21353, "", "=q4=Genesis Helm", "=q4=#aq40t6#, =ds=#r2#"};
-		{ 4, 21356, "", "=q4=Genesis Trousers", "=q4=#aq40t7#, =ds=#r2#"};
-		{ 5, 21354, "", "=q4=Genesis Shoulderpads", "=q4=#aq40t1#, =ds=#r1#"};
-		{ 6, 21355, "", "=q4=Genesis Boots", "=q4=#aq40t1#, =ds=#r1#"};
+		{ 2, 21357, "", "=q4=Genesis Vest", ""};
+		{ 3, 21353, "", "=q4=Genesis Helm", ""};
+		{ 4, 21356, "", "=q4=Genesis Trousers", ""};
+		{ 5, 21354, "", "=q4=Genesis Shoulderpads", ""};
+		{ 6, 21355, "", "=q4=Genesis Boots", ""};
 		{ 8, 0, "Ability_Hunter_RunningShot", "=q6=#aq40s2#", "=ec1=#c2#"};
-		{ 9, 21370, "", "=q4=Striker's Hauberk", "=q4=#aq40t8#, =ds=#r3#"};
-		{ 10, 21366, "", "=q4=Striker's Diadem", "=q4=#aq40t6#, =ds=#r2#"};
-		{ 11, 21368, "", "=q4=Striker's Leggings", "=q4=#aq40t7#, =ds=#r2#"};
-		{ 12, 21367, "", "=q4=Striker's Pauldrons", "=q4=#aq40t5#, =ds=#r1#"};
-		{ 13, 21365, "", "=q4=Striker's Footguards", "=q4=#aq40t5#, =ds=#r1#"};
+		{ 9, 21370, "", "=q4=Striker's Hauberk", ""};
+		{ 10, 21366, "", "=q4=Striker's Diadem", ""};
+		{ 11, 21368, "", "=q4=Striker's Leggings", ""};
+		{ 12, 21367, "", "=q4=Striker's Pauldrons", ""};
+		{ 13, 21365, "", "=q4=Striker's Footguards", ""};
 		{ 16, 0, "Spell_Frost_IceStorm", "=q6=#aq40s3#", "=ec1=#c3#"};
-		{ 17, 21343, "", "=q4=Enigma Robes", "=q4=#aq40t4#, =ds=#r3#"};
-		{ 18, 21347, "", "=q4=Enigma Circlet", "=q4=#aq40t2#, =ds=#r2#"};
-		{ 19, 21346, "", "=q4=Enigma Leggings", "=q4=#aq40t3#, =ds=#r2#"};
-		{ 20, 21345, "", "=q4=Enigma Shoulderpads", "=q4=#aq40t1#, =ds=#r1#"};
-		{ 21, 21344, "", "=q4=Enigma Boots", "=q4=#aq40t1#, =ds=#r1#"};
+		{ 17, 21343, "", "=q4=Enigma Robes", ""};
+		{ 18, 21347, "", "=q4=Enigma Circlet", ""};
+		{ 19, 21346, "", "=q4=Enigma Leggings", ""};
+		{ 20, 21345, "", "=q4=Enigma Shoulderpads", ""};
+		{ 21, 21344, "", "=q4=Enigma Boots", ""};
 		{ 23, 0, "Spell_Holy_SealOfMight", "=q6=#aq40s4#", "=ec1=#c4#"};
-		{ 24, 21389, "", "=q4=Avenger's Breastplate", "=q4=#aq40t8#, =ds=#r3#"};
-		{ 25, 21387, "", "=q4=Avenger's Crown", "=q4=#aq40t6#, =ds=#r2#"};
-		{ 26, 21390, "", "=q4=Avenger's Legguards", "=q4=#aq40t7#, =ds=#r2#"};
-		{ 27, 21391, "", "=q4=Avenger's Pauldrons", "=q4=#aq40t1#, =ds=#r1#"};
-		{ 28, 21388, "", "=q4=Avenger's Greaves", "=q4=#aq40t1#, =ds=#r1#"};
+		{ 24, 21389, "", "=q4=Avenger's Breastplate", ""};
+		{ 25, 21387, "", "=q4=Avenger's Crown", ""};
+		{ 26, 21390, "", "=q4=Avenger's Legguards", ""};
+		{ 27, 21391, "", "=q4=Avenger's Pauldrons", ""};
+		{ 28, 21388, "", "=q4=Avenger's Greaves", ""};
 		Next = "AQ40Sets2";
 		Back = "SETMENU";
 		Type = "ClassicRaid";
@@ -5855,53 +5854,131 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 
 	AtlasLoot_Data["AQ40Sets2"] = {
 		{ 1, 0, "Spell_Holy_PowerWordShield", "=q6=#aq40s5#", "=ec1=#c5#"};
-		{ 2, 21351, "", "=q4=Vestments of the Oracle", "=q4=#aq40t4#, =ds=#r3#"};
-		{ 3, 21348, "", "=q4=Tiara of the Oracle", "=q4=#aq40t2#, =ds=#r2#"};
-		{ 4, 21352, "", "=q4=Trousers of the Oracle", "=q4=#aq40t3#, =ds=#r2#"};
-		{ 5, 21350, "", "=q4=Mantle of the Oracle", "=q4=#aq40t5#, =ds=#r1#"};
-		{ 6, 21349, "", "=q4=Footwraps of the Oracle", "=q4=#aq40t5#, =ds=#r1#"};
+		{ 2, 21351, "", "=q4=Vestments of the Oracle", ""};
+		{ 3, 21348, "", "=q4=Tiara of the Oracle", ""};
+		{ 4, 21352, "", "=q4=Trousers of the Oracle", ""};
+		{ 5, 21350, "", "=q4=Mantle of the Oracle", ""};
+		{ 6, 21349, "", "=q4=Footwraps of the Oracle", ""};
 		{ 8, 0, "Ability_BackStab", "=q6=#aq40s6#", "=ec1=#c6#"};
-		{ 9, 21364, "", "=q4=Deathdealer's Vest", "=q4=#aq40t8#, =ds=#r3#"};
-		{ 10, 21360, "", "=q4=Deathdealer's Helm", "=q4=#aq40t6#, =ds=#r2#"};
-		{ 11, 21362, "", "=q4=Deathdealer's Leggings", "=q4=#aq40t3#, =ds=#r2#"};
-		{ 12, 21361, "", "=q4=Deathdealer's Spaulders", "=q4=#aq40t5#, =ds=#r1#"};
-		{ 13, 21359, "", "=q4=Deathdealer's Boots", "=q4=#aq40t5#, =ds=#r1#"};
+		{ 9, 21364, "", "=q4=Deathdealer's Vest", ""};
+		{ 10, 21360, "", "=q4=Deathdealer's Helm", ""};
+		{ 11, 21362, "", "=q4=Deathdealer's Leggings", ""};
+		{ 12, 21361, "", "=q4=Deathdealer's Spaulders", ""};
+		{ 13, 21359, "", "=q4=Deathdealer's Boots", ""};
 		{ 16, 0, "Spell_FireResistanceTotem_01", "=q6=#aq40s7#", "=ec1=#c7#"};
-		{ 17, 21374, "", "=q4=Stormcaller's Hauberk", "=q4=#aq40t8#, =ds=#r3#"};
-		{ 18, 21372, "", "=q4=Stormcaller's Diadem", "=q4=#aq40t6#, =ds=#r2#"};
-		{ 19, 21375, "", "=q4=Stormcaller's Leggings", "=q4=#aq40t7#, =ds=#r2#"};
-		{ 20, 21376, "", "=q4=Stormcaller's Pauldrons", "=q4=#aq40t1#, =ds=#r1#"};
-		{ 21, 21373, "", "=q4=Stormcaller's Footguards", "=q4=#aq40t1#, =ds=#r1#"};
+		{ 17, 21374, "", "=q4=Stormcaller's Hauberk", ""};
+		{ 18, 21372, "", "=q4=Stormcaller's Diadem", ""};
+		{ 19, 21375, "", "=q4=Stormcaller's Leggings", ""};
+		{ 20, 21376, "", "=q4=Stormcaller's Pauldrons", ""};
+		{ 21, 21373, "", "=q4=Stormcaller's Footguards", ""};
 		{ 23, 0, "Spell_Shadow_CurseOfTounges", "=q6=#aq40s8#", "=ec1=#c8#"};
-		{ 24, 21334, "", "=q4=Doomcaller's Robes", "=q4=#aq40t4#, =ds=#r3#"};
-		{ 25, 21337, "", "=q4=Doomcaller's Circlet", "=q4=#aq40t2#, =ds=#r2#"};
-		{ 26, 21336, "", "=q4=Doomcaller's Trousers", "=q4=#aq40t7#, =ds=#r2#"};
-		{ 27, 21335, "", "=q4=Doomcaller's Mantle", "=q4=#aq40t1#, =ds=#r1#"};
-		{ 28, 21338, "", "=q4=Doomcaller's Footwraps", "=q4=#aq40t1#, =ds=#r1#"};
+		{ 24, 21334, "", "=q4=Doomcaller's Robes", ""};
+		{ 25, 21337, "", "=q4=Doomcaller's Circlet", ""};
+		{ 26, 21336, "", "=q4=Doomcaller's Trousers", ""};
+		{ 27, 21335, "", "=q4=Doomcaller's Mantle", ""};
+		{ 28, 21338, "", "=q4=Doomcaller's Footwraps", ""};
 		Next = "AQ40Sets3";
 		Prev = "AQ40Sets1";
 		Back = "SETMENU";
 		Type = "ClassicRaid";
 	};
-
+	
 	AtlasLoot_Data["AQ40Sets3"] = {
 		{ 1, 0, "INV_Shield_05", "=q6=#aq40s9#", "=ec1=#c9#"};
-		{ 2, 21331, "", "=q4=Conqueror's Breastplate", "=q4=#aq40t8#, =ds=#r3#"};
-		{ 3, 21329, "", "=q4=Conqueror's Crown", "=q4=#aq40t2#, =ds=#r2#"};
-		{ 4, 21332, "", "=q4=Conqueror's Legguards", "=q4=#aq40t3#, =ds=#r2#"};
-		{ 5, 21330, "", "=q4=Conqueror's Spaulders", "=q4=#aq40t5#, =ds=#r1#"};
-		{ 6, 21333, "", "=q4=Conqueror's Greaves", "=q4=#aq40t5#, =ds=#r1#"};
+		{ 2, 21331, "", "=q4=Conqueror's Breastplate", ""};
+		{ 3, 21329, "", "=q4=Conqueror's Crown", ""};
+		{ 4, 21332, "", "=q4=Conqueror's Legguards", ""};
+		{ 5, 21330, "", "=q4=Conqueror's Spaulders", ""};
+		{ 6, 21333, "", "=q4=Conqueror's Greaves", ""};
 		{ 16, 0, "Ability_Warrior_BattleShout", "=q6=#aq40s9#", "=ec1=#c9#"};
-		{ 17, 10912, "", "=q4=Conqueror's Chestplate", "=q4=#aq40t8#, =ds=#r3#"};
-		{ 18, 10910, "", "=q4=Conqueror's Headguard", "=q4=#aq40t2#, =ds=#r2#"};
-		{ 19, 10913, "", "=q4=Conqueror's Platelegs", "=q4=#aq40t3#, =ds=#r2#"};
-		{ 20, 10911, "", "=q4=Conqueror's Shoulderpads", "=q4=#aq40t5#, =ds=#r1#"};
-		{ 21, 10914, "", "=q4=Conqueror's War Stompers", "=q4=#aq40t5#, =ds=#r1#"};
+		{ 17, 10912, "", "=q4=Conqueror's Chestplate", ""};
+		{ 18, 10910, "", "=q4=Conqueror's Headguard", ""};
+		{ 19, 10913, "", "=q4=Conqueror's Platelegs", ""};
+		{ 20, 10911, "", "=q4=Conqueror's Shoulderpads", ""};
+		{ 21, 10914, "", "=q4=Conqueror's War Stompers", ""};
 		Prev = "AQ40Sets2";
 		Back = "SETMENU";
 		Type = "ClassicRaid";
 	};
 
+	--Teir 2.5 Sets
+
+	AtlasLoot_Data["T2.5Chests"] = {
+		{ 1, 21357, "", "=q4=Genesis Vest", "=ec1=#c1#"};
+		{ 2, 21370, "", "=q4=Striker's Hauberk", "=ec1=#c2#"};
+		{ 3, 21343, "", "=q4=Enigma Robes", "=ec1=#c3#"};
+		{ 4, 21389, "", "=q4=Avenger's Breastplate", "=ec1=#c4#"};
+		{ 5, 21351, "", "=q4=Vestments of the Oracle", "=ec1=#c5#"};
+		{ 6, 21364, "", "=q4=Deathdealer's Vest", "=ec1=#c6#"};
+		{ 7, 21374, "", "=q4=Stormcaller's Hauberk", "=ec1=#c7#"};
+		{ 8, 21334, "", "=q4=Doomcaller's Robes", "=ec1=#c8#"};
+		{ 9, 21331, "", "=q4=Conqueror's Breastplate", "=ec1=#c9#"};
+		{ 10, 10912, "", "=q4=Conqueror's Chestplate", "=ec1=#c9#"};
+		Back = AtlasLoot_Lastboss;
+		Type = "ClassicRaid";
+	};
+
+
+	AtlasLoot_Data["T2.5Shoulders"] = {
+		{ 1, 21354, "", "=q4=Genesis Shoulderpads", "=ec1=#c1#"};
+		{ 2, 21367, "", "=q4=Striker's Pauldrons", "=ec1=#c2#"};
+		{ 3, 21345, "", "=q4=Enigma Shoulderpads", "=ec1=#c3#"};
+		{ 4, 21391, "", "=q4=Avenger's Pauldrons", "=ec1=#c4#"};
+		{ 5, 21350, "", "=q4=Mantle of the Oracle", "=ec1=#c5#"};
+		{ 6, 21361, "", "=q4=Deathdealer's Spaulders", "=ec1=#c6#"};
+		{ 7, 21376, "", "=q4=Stormcaller's Pauldrons", "=ec1=#c7#"};
+		{ 8, 21335, "", "=q4=Doomcaller's Mantle", "=ec1=#c8#"};
+		{ 9, 21330, "", "=q4=Conqueror's Spaulders", "=ec1=#c9#"};
+		{ 10, 10911, "", "=q4=Conqueror's Shoulderpads", "=ec1=#c9#"};
+		Back = AtlasLoot_Lastboss;
+		Type = "ClassicRaid";
+	};
+
+	AtlasLoot_Data["T2.5Legs"] = {
+		{ 1, 21356, "", "=q4=Genesis Trousers", "=ec1=#c1#"};
+		{ 2, 21368, "", "=q4=Striker's Leggings", "=ec1=#c2#"};
+		{ 3, 21346, "", "=q4=Enigma Leggings", "=ec1=#c3#"};
+		{ 4, 21390, "", "=q4=Avenger's Legguards", "=ec1=#c4#"};
+		{ 5, 21352, "", "=q4=Trousers of the Oracle", "=ec1=#c5#"};
+		{ 6, 21362, "", "=q4=Deathdealer's Leggings", "=ec1=#c6#"};
+		{ 7, 21375, "", "=q4=Stormcaller's Leggings", "=ec1=#c7#"};
+		{ 8, 21336, "", "=q4=Doomcaller's Trousers", "=ec1=#c8#"};
+		{ 9, 21332, "", "=q4=Conqueror's Legguards", "=ec1=#c9#"};
+		{ 10, 10913, "", "=q4=Conqueror's Platelegs", "=ec1=#c9#"};
+		Back = AtlasLoot_Lastboss;
+		Type = "ClassicRaid";
+	};
+
+	AtlasLoot_Data["T2.5Boots"] = {
+		{ 1, 21355, "", "=q4=Genesis Boots", "=ec1=#c1#"};
+		{ 2, 21365, "", "=q4=Striker's Footguards", "=ec1=#c2#"};
+		{ 3, 21344, "", "=q4=Enigma Boots", "=ec1=#c3#"};
+		{ 4, 21388, "", "=q4=Avenger's Greaves", "=ec1=#c4#"};
+		{ 5, 21349, "", "=q4=Footwraps of the Oracle", "=ec1=#c5#"};
+		{ 6, 21359, "", "=q4=Deathdealer's Boots", "=ec1=#c6#"};
+		{ 7, 21373, "", "=q4=Stormcaller's Footguards", "=ec1=#c7#"};
+		{ 8, 21338, "", "=q4=Doomcaller's Footwraps", "=ec1=#c8#"};
+		{ 9, 21333, "", "=q4=Conqueror's Greaves", "=ec1=#c9#"};
+		{ 10, 10914, "", "=q4=Conqueror's War Stompers", "=ec1=#c9#"};
+		Back = AtlasLoot_Lastboss;
+		Type = "ClassicRaid";
+	};
+
+	AtlasLoot_Data["T2.5Helms"] = {
+		{ 1, 21353, "", "=q4=Genesis Helm", "=ec1=#c1#"};
+		{ 2, 21366, "", "=q4=Striker's Diadem", "=ec1=#c2#"};
+		{ 3, 21347, "", "=q4=Enigma Circlet", "=ec1=#c3#"};
+		{ 4, 21387, "", "=q4=Avenger's Crown", "=ec1=#c4#"};
+		{ 5, 21348, "", "=q4=Tiara of the Oracle", "=ec1=#c5#"};
+		{ 6, 21360, "", "=q4=Deathdealer's Helm", "=ec1=#c6#"};
+		{ 7, 21372, "", "=q4=Stormcaller's Diadem", "=ec1=#c7#"};
+		{ 8, 21337, "", "=q4=Doomcaller's Circlet", "=ec1=#c8#"};
+		{ 9, 21329, "", "=q4=Conqueror's Crown", "=ec1=#c9#"};
+		{ 10, 10910, "", "=q4=Conqueror's Headguard", "=ec1=#c9#"};
+		Back = AtlasLoot_Lastboss;
+		Type = "ClassicRaid";
+	};
+	
 		-----------------------
 		--- BoE World Epics ---
 		-----------------------
