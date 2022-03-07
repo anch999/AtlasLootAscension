@@ -265,13 +265,11 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 26, 27842, "", "=q3=Grand Scepter of the Nexus-Kings", "=ds=#h2#, #w9#", "", "9.09%"};
 		{ 28, 22921, "", "=q2=Recipe: Major Frost Protection Potion", "=ds=#p1# (360)", "", "2.85%"};
 		Prev = "AuchManaNexusPrince";
-		Next = "AuchManaYor";
+		Next = "AuchManaYorHeroic";
 		Type = "BCDungeon";
 	};
 
-
-
-	AtlasLoot_Data["AuchManaYor"] = {
+	AtlasLoot_Data["AuchManaYorHeroic"] = {
 		{ 1, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 		{ 2, 31919, "", "=q4=Nexus-Prince's Ring of Balance", "=ds=#s13#"};
 		{ 3, 31920, "", "=q4=Shaffar's Band of Brutality", "=ds=#s13#"};
@@ -286,7 +284,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 16, 30584, "", "=q4=Enscribed Fire Opal", "=ds=#e7#", "", "0.08%"};
 		{ 17, 30585, "", "=q4=Glistening Fire Opal", "=ds=#e7#", "", "6.06%"};
 		{ 18, 30583, "", "=q4=Timeless Chrysoprase", "=ds=#e7#", "", "9.09%"};
-		Prev = "AuchManaNexusPrince";
+		Prev = "AuchManaNexusPrinceHeroic";
 		Type = "BCDungeon";
 	};
 
