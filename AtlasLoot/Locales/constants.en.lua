@@ -439,6 +439,12 @@ if AL then
 	AL["Nature Resistance Gear"] = true;
 	AL["Frost Resistance Gear"] = true;
 	AL["Shadow Resistance Gear"] = true;
+	AL["Sets - Original WoW"] = true;
+	AL["Sets - Burning Crusade"] = true;
+	AL["Sets - Wrath of the Lich King"] = true;
+	AL["PVP - Original WoW"] = true;
+	AL["PVP - Burning Crusade"] = true;
+	AL["PVP - Wrath of the Lich King"] = true;
 
 	-- Labels for loot table sections
 	AL["Additional Heroic Loot"] = true;

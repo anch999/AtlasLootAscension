@@ -9,32 +9,55 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 --		{ #, "CardGame1", "INV_Misc_Ticket_Tarot_Madness", "=ds="..AL["Upper Deck Card Game Items"], ""};
 --		{ #, "PVPMENU", "INV_Axe_02", "=ds="..AL["PvP Rewards"], ""};
 
+	AtlasLoot_Data["SETMENUCLASSIC"] = {
+		{ 1, "SETMENUTBC", "INV_Helmet_66", "=ds="..AL["Sets - Burning Crusade"], ""};
+		{ 16, "SETMENUWRATH", "INV_Misc_Ribbon_01", "=ds="..AL["Sets - Wrath of the Lich King"], ""};
+		{ 3, "SETSCLASSIC", "INV_Sword_43", "=ds="..AL["Classic Sets"], ""};
+		{ 5, 0, "INV_Box_01", "=q6="..AL["BoE World Epics"], ""};
+		{ 6, "WorldEpics1", "INV_Jewelry_Ring_15", "=ds="..AL["Level 30-39"], ""};
+		{ 7, "WorldEpics2", "INV_Staff_29", "=ds="..AL["Level 40-49"], ""};
+		{ 8, "WorldEpics3", "INV_Jewelry_Amulet_01", "=ds="..AL["Level 50-60"], ""};
+		{ 10, "Heirloom", "INV_Sword_43", "=ds="..AL["Heirloom"], ""};
+		{ 11, "Legendaries", "INV_Staff_Medivh", "=ds="..AL["Legendary Items"], ""};
+		{ 18, "T0SET", "INV_Chest_Chain_03", "=ds="..AL["Dungeon 1/2 Sets"], ""};
+		{ 19, "ZGSets1", "INV_Misc_MonsterClaw_04", "=ds="..AL["Zul'Gurub Sets"], ""};
+		{ 20, "AQ20Sets1", "INV_Jewelry_Ring_AhnQiraj_03", "=ds="..AL["Ruins of Ahn'Qiraj Sets"], ""};
+		{ 21, "AQ40Sets1", "INV_Sword_59", "=ds="..AL["Temple of Ahn'Qiraj Sets"], ""};
+		{ 22, "T1T2T3SET", "INV_Pants_Mail_03", "=ds="..AL["Tier 1/2/3 Sets"], ""};
+		Back = "SETMENU"..AtlasLoot_Expac;
+	};
 
-	AtlasLoot_Data["SETMENU"] = {
-		{ 1, "EMBLEMOFFROSTMENU", "inv_misc_frostemblem_01", "=ds="..AL["Emblem of Frost Rewards"], "=q5="..AL["Wrath of the Lich King"]};
-		{ 2, "EMBLEMOFTRIUMPHMENU", "spell_holy_summonchampion", "=ds="..AL["Emblem of Triumph Rewards"], "=q5="..AL["Wrath of the Lich King"]};
-		{ 3, "EMBLEMOFCONQUESTMENU", "Spell_Holy_ChampionsGrace", "=ds="..AL["Emblem of Conquest Rewards"], "=q5="..AL["Wrath of the Lich King"]};
-		{ 4, "EMBLEMOFVALORMENU", "Spell_Holy_ProclaimChampion_02", "=ds="..AL["Emblem of Valor Rewards"], "=q5="..AL["Wrath of the Lich King"]};
-		{ 5, "EMBLEMOFHEROISMMENU", "Spell_Holy_ProclaimChampion", "=ds="..AL["Emblem of Heroism Rewards"], "=q5="..AL["Wrath of the Lich King"]};
-		{ 6, "70TOKENMENU", "Spell_Holy_ChampionsBond", "=ds="..AL["Badge of Justice Rewards"], "=q5="..AL["Burning Crusade"]};
-		{ 8, "Heirloom", "INV_Sword_43", "=ds="..AL["Heirloom"], ""};
-		{ 10, "SETSCLASSIC", "INV_Sword_43", "=ds="..AL["Classic Sets"], ""};
-		{ 11, "TBCSets", "INV_Weapon_Glave_01", "=ds="..AL["Burning Crusade Misc Sets"], ""};
-		{ 12, "SETSWRATHOFLICHKING", "inv_misc_monsterscales_15", "=ds="..AL["Wrath of the Lich King Sets"], ""};
-		{ 14, "Legendaries", "INV_Staff_Medivh", "=ds="..AL["Legendary Items"], ""};
-		{ 15, "WORLDEPICS", "INV_Sword_76", "=ds="..AL["BoE World Epics"], ""};
-		{ 16, "T0SET", "INV_Chest_Chain_03", "=ds="..AL["Dungeon 1/2 Sets"], ""};
-		{ 17, "ZGSets1", "INV_Misc_MonsterClaw_04", "=ds="..AL["Zul'Gurub Sets"], ""};
-		{ 18, "AQ20Sets1", "INV_Jewelry_Ring_AhnQiraj_03", "=ds="..AL["Ruins of Ahn'Qiraj Sets"], ""};
-		{ 19, "AQ40Sets1", "INV_Sword_59", "=ds="..AL["Temple of Ahn'Qiraj Sets"], ""};
-		{ 20, "T1T2T3SET", "INV_Pants_Mail_03", "=ds="..AL["Tier 1/2/3 Sets"], ""};
-		{ 22, "DS3SET", "INV_Helmet_15", "=ds="..AL["Dungeon 3 Sets"], ""};
-		{ 23, "T4SET", "inv_helmet_58", "=ds="..AL["Tier 4 Sets"], ""};
-		{ 24, "T5SET", "inv_helmet_92", "=ds="..AL["Tier 5 Sets"], ""};
-		{ 25, "T6SET", "inv_helmet_98", "=ds="..AL["Tier 6 Sets"], ""};
-		{ 27, "T7T8SET", "INV_Chest_Chain_15", "=ds="..AL["Tier 7/8 Sets"], "=q5="..AL["10/25 Man"]};
-		{ 28, "T9SET", "inv_gauntlets_80", "=ds="..AL["Tier 9 Sets"], "=q5="..AL["10/25 Man"]};
-		{ 29, "T10SET", "INV_Chest_Chain_15", "=ds="..AL["Tier 10 Sets"], "=q5="..AL["10/25 Man"]};
+	AtlasLoot_Data["SETMENUTBC"] = {
+		{ 1, "SETMENUCLASSIC", "INV_Helmet_66", "=ds="..AL["Sets - Original WoW"], ""};
+		{ 16, "SETMENUWRATH", "INV_Misc_Ribbon_01", "=ds="..AL["Sets - Wrath of the Lich King"], ""};
+		{ 3, "70TOKENMENU", "Spell_Holy_ChampionsBond", "=ds="..AL["Badge of Justice Rewards"], "=q5="..AL["Burning Crusade"]};
+		{ 5, "Heirloom", "INV_Sword_43", "=ds="..AL["Heirloom"], ""};
+		{ 6, "WorldEpics4", "INV_Sword_76", "=ds=".."World Epics", ""};
+		{ 7, "TBCSets", "INV_Weapon_Glave_01", "=ds="..AL["Burning Crusade Misc Sets"], ""};
+		{ 8, "Legendaries", "INV_Staff_Medivh", "=ds="..AL["Legendary Items"], ""};
+		{ 18, "DS3SET", "INV_Helmet_15", "=ds="..AL["Dungeon 3 Sets"], ""};
+		{ 20, "T4SET", "inv_helmet_58", "=ds="..AL["Tier 4 Sets"], ""};
+		{ 21, "T5SET", "inv_helmet_92", "=ds="..AL["Tier 5 Sets"], ""};
+		{ 22, "T6SET", "inv_helmet_98", "=ds="..AL["Tier 6 Sets"], ""};
+		Back = "SETMENU"..AtlasLoot_Expac;
+	};
+
+	AtlasLoot_Data["SETMENUWRATH"] = {
+		{ 1, "SETMENUCLASSIC", "INV_Helmet_66", "=ds="..AL["Sets - Original WoW"], ""};
+		{ 16, "SETMENUTBC", "INV_Misc_Ribbon_01", "=ds="..AL["Sets - Burning Crusade"], ""};
+		{ 3, "EMBLEMOFFROSTMENU", "inv_misc_frostemblem_01", "=ds="..AL["Emblem of Frost Rewards"], "=q5="..AL["Wrath of the Lich King"]};
+		{ 4, "EMBLEMOFTRIUMPHMENU", "spell_holy_summonchampion", "=ds="..AL["Emblem of Triumph Rewards"], "=q5="..AL["Wrath of the Lich King"]};
+		{ 5, "EMBLEMOFCONQUESTMENU", "Spell_Holy_ChampionsGrace", "=ds="..AL["Emblem of Conquest Rewards"], "=q5="..AL["Wrath of the Lich King"]};
+		{ 6, "EMBLEMOFVALORMENU", "Spell_Holy_ProclaimChampion_02", "=ds="..AL["Emblem of Valor Rewards"], "=q5="..AL["Wrath of the Lich King"]};
+		{ 7, "EMBLEMOFHEROISMMENU", "Spell_Holy_ProclaimChampion", "=ds="..AL["Emblem of Heroism Rewards"], "=q5="..AL["Wrath of the Lich King"]};
+		{ 9, "Heirloom", "INV_Sword_43", "=ds="..AL["Heirloom"], ""};
+		{ 10, "WorldEpicsWrath1", "INV_Sword_109", "=ds=".."World Epics", ""};
+		{ 11, "SETSWRATHOFLICHKING", "inv_misc_monsterscales_15", "=ds="..AL["Wrath of the Lich King Sets"], ""};
+		{ 12, "Legendaries", "INV_Staff_Medivh", "=ds="..AL["Legendary Items"], ""};
+		{ 18, "T7T8SET", "INV_Chest_Chain_15", "=ds="..AL["Tier 7/8 Sets"], "=q5="..AL["10/25 Man"]};
+		{ 19, "T9SET", "inv_gauntlets_80", "=ds="..AL["Tier 9 Sets"], "=q5="..AL["10/25 Man"]};
+		{ 20, "T10SET", "INV_Chest_Chain_15", "=ds="..AL["Tier 10 Sets"], "=q5="..AL["10/25 Man"]};
+		Back = "SETMENU"..AtlasLoot_Expac;
 	};
 
 	AtlasLoot_Data["70TOKENMENU"] = {
@@ -48,7 +71,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 19, "HardModeCloaks", "Spell_Holy_ChampionsBond", "=ds="..BabbleInventory["Back"], ""};
 		{ 21, "HardModeArena", "Spell_Holy_ChampionsBond", "=ds="..AL["PvP Rewards"], ""};
 		{ 23, "HardModeAccessories", "Spell_Holy_ChampionsBond", "=ds="..AL["Accessories"], ""};
-		Back = "SETMENU";
+		Back = "SETMENU"..AtlasLoot_Expac;
 	};
 
 	AtlasLoot_Data["EMBLEMOFHEROISMMENU"] = {
@@ -57,20 +80,20 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 4, "LEVEL80PVPSETS", "Spell_Holy_ProclaimChampion", "=ds="..AL["Level 80 PvP Sets"], "" };
 		{ 17, "EmblemofHeroism2", "Spell_Holy_ProclaimChampion", "=ds="..AL["Accessories"], ""};
 		{ 18, "EmblemofHeroism4", "Spell_Holy_ProclaimChampion", "=ds="..AL["Heirloom"], ""};
-		Back = "SETMENU";
+		Back = "SETMENU"..AtlasLoot_Expac;
 	};
 
 	AtlasLoot_Data["EMBLEMOFCONQUESTMENU"] = {
 		{ 2, "EmblemofConquest1", "Spell_Holy_ChampionsGrace", "=ds="..AL["Vendor"], ""};
 		{ 17, "LEVEL80PVPSETS", "Spell_Holy_ChampionsGrace", "=ds="..AL["Level 80 PvP Sets"], "" };
-		Back = "SETMENU";
+		Back = "SETMENU"..AtlasLoot_Expac;
 	};
 
 	AtlasLoot_Data["EMBLEMOFVALORMENU"] = {
 		{ 2, "EmblemofValor", "Spell_Holy_ProclaimChampion_02", "=ds="..BabbleInventory["Armor"], ""};
 		{ 3, "LEVEL80PVPSETS", "Spell_Holy_ProclaimChampion_02", "=ds="..AL["Level 80 PvP Sets"], "" };
 		{ 17, "EmblemofValor2", "Spell_Holy_ProclaimChampion_02", "=ds="..AL["Accessories"], ""};
-		Back = "SETMENU";
+		Back = "SETMENU"..AtlasLoot_Expac;
 	};
 
 	AtlasLoot_Data["EMBLEMOFTRIUMPHMENU"] = {
@@ -78,22 +101,13 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 3, "EmblemofTriumph2", "spell_holy_summonchampion", "=ds="..AL["Accessories"].." & "..AL["Weapons"], ""};
 		{ 17, "LEVEL80PVPSETS", "spell_holy_summonchampion", "=ds="..AL["Level 80 PvP Sets"], "" };
 		{ 18, "T9SET", "spell_holy_summonchampion", "=ds="..AL["Tier 9 Sets"], "=q5="..AL["10/25 Man"]};
-		Back = "SETMENU";
+		Back = "SETMENU"..AtlasLoot_Expac;
 	};
 
 	AtlasLoot_Data["EMBLEMOFFROSTMENU"] = {
 		{ 2, "EmblemofFrost", "inv_misc_frostemblem_01", "=ds="..BabbleInventory["Armor"].." & "..AL["Weapons"], ""};
 		{ 17, "T10SET", "inv_misc_frostemblem_01", "=ds="..AL["Tier 10 Sets"], "=q5="..AL["10/25 Man"]};
-		Back = "SETMENU";
-	};
-
-	AtlasLoot_Data["WORLDEPICS"] = {
-		{ 2, "WorldEpicsWrath1", "INV_Sword_109", "=ds="..AL["Level 80"], ""};
-		{ 3, "WorldEpics3", "INV_Jewelry_Amulet_01", "=ds="..AL["Level 50-60"], ""};
-		{ 4, "WorldEpics1", "INV_Jewelry_Ring_15", "=ds="..AL["Level 30-39"], ""};
-		{ 17, "WorldEpics4", "INV_Sword_76", "=ds="..AL["Level 70"], ""};
-		{ 18, "WorldEpics2", "INV_Staff_29", "=ds="..AL["Level 40-49"], ""};
-		Back = "SETMENU";
+		Back = "SETMENU"..AtlasLoot_Expac;
 	};
 
 	AtlasLoot_Data["MOUNTMENU"] = {
@@ -104,7 +118,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 17, "MountsHorde1", "achievement_pvp_h_16", "=ds="..AL["Horde Mounts"], ""};
 		{ 18, "MountsPvP1", "ability_mount_netherdrakeelite", "=ds="..AL["PvP Mounts"], ""};
 		{ 19, "MountsCraftQuestPromotion1", "INV_Misc_QirajiCrystal_05", "=ds="..AL["Quest"].." / "..AL["Promotional"].." / "..AL["Crafted Mounts"], ""};
-		Back = "SETMENU";
+		Back = "SETMENU"..AtlasLoot_Expac;
 	};
 
 	AtlasLoot_Data["PETMENU"] = {
@@ -115,14 +129,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 17, "PetsQuestCrafted1", "inv_drink_19", "=ds="..AL["Quest"].." / "..AL["Crafted"], ""};
 		{ 18, "PetsEvent1", "inv_pet_egbert", "=ds="..AL["World Events"], ""};
 		{ 19, "PetsPetStore1", "INV_Misc_Coin_01", "=ds="..AL["Pet Store"], ""};
-		Back = "SETMENU";
-	};
-
-	AtlasLoot_Data["SETSMISCMENU"] = {
-		{ 2, "SETSCLASSIC", "INV_Sword_43", "=ds="..AL["Classic Sets"], ""};
-		{ 3, "SETSWRATHOFLICHKING", "inv_misc_monsterscales_15", "=ds="..AL["Wrath of the Lich King Sets"], ""};
-		{ 17, "SETSBURNINGCURSADE", "INV_Weapon_Glave_01", "=ds="..AL["Burning Crusade Sets"], ""};
-		Back = "SETMENU";
+		Back = "SETMENU"..AtlasLoot_Expac;
 	};
 
 	AtlasLoot_Data["SETSCLASSIC"] = {
@@ -146,7 +153,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 --		{ 24, "AQ20Sets1", "INV_Jewelry_Ring_AhnQiraj_03", "=ds="..AL["Ruins of Ahn'Qiraj Sets"], ""};
 --		{ 25, "AQ40Sets1", "INV_Sword_59", "=ds="..AL["Temple of Ahn'Qiraj Sets"], ""};
 --		{ 26, "T1T2T3SET", "INV_Pants_Mail_03", "=ds="..AL["Tier 1/2/3 Sets"], ""};
-		Back = "SETMENU";
+		Back = "SETMENU"..AtlasLoot_Expac;
 	};
 
 	AtlasLoot_Data["SETSBURNINGCURSADE"] = {
@@ -154,7 +161,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 3, "TBCSets", "INV_Jewelry_Necklace_36", "=ds="..AL["The Twin Stars"], "=q5="..AL["World Drop"]};
 		{ 4, "TBCSets", "INV_Weapon_Hand_14", "=ds="..AL["The Fists of Fury"], "=q5="..BabbleZone["Hyjal Summit"]};
 		{ 5, "TBCSets", "INV_Weapon_Glave_01", "=ds="..AL["The Twin Blades of Azzinoth"], "=q5="..BabbleZone["Black Temple"]};
-		Back = "SETMENU";
+		Back = "SETMENU"..AtlasLoot_Expac;
 	};
 
 	AtlasLoot_Data["SETSWRATHOFLICHKING"] = {
@@ -164,7 +171,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 --		{ 6, "T7T8SET", "INV_Chest_Chain_15", "=ds="..AL["Tier 7/8 Sets"], "=q5="..AL["10/25 Man"]};
 --		{ 7, "T9SET", "inv_gauntlets_80", "=ds="..AL["Tier 9 Sets"], "=q5="..AL["10/25 Man"]};
 --		{ 8, "T10SET", "INV_Chest_Chain_15", "=ds="..AL["Tier 10 Sets"], "=q5="..AL["10/25 Man"]};
-		Back = "SETMENU";
+		Back = "SETMENU"..AtlasLoot_Expac;
 	};
 
 	AtlasLoot_Data["T0SET"] = {
@@ -177,7 +184,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 19, "T0Paladin", "Spell_Holy_SealOfMight", "=ds="..LOCALIZED_CLASS_NAMES_MALE["PALADIN"], ""};
 		{ 20, "T0Rogue", "Ability_BackStab", "=ds="..LOCALIZED_CLASS_NAMES_MALE["ROGUE"], ""};
 		{ 21, "T0Warlock", "Spell_Shadow_CurseOfTounges", "=ds="..LOCALIZED_CLASS_NAMES_MALE["WARLOCK"], ""};
-		Back = "SETMENU";
+		Back = "SETMENU"..AtlasLoot_Expac;
 	};
 
 	AtlasLoot_Data["DS3SET"] = {
@@ -194,7 +201,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 20, "DS3Leather", "Spell_Holy_SealOfRighteousness", "=ds="..AL["Moonglade Raiment"], "=q5="..BabbleInventory["Leather"]};
 		{ 23, "DS3Mail", "Ability_FiegnDead", "=ds="..AL["Desolation Battlegear"], "=q5="..BabbleInventory["Mail"]};
 		{ 26, "DS3Plate", "INV_Helmet_08", "=ds="..AL["Doomplate Battlegear"], "=q5="..BabbleInventory["Plate"]};
-		Back = "SETMENU";
+		Back = "SETMENU"..AtlasLoot_Expac;
 		Next = "T4SET";
 	};
 
@@ -219,7 +226,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 26, "T3Warlock", "Spell_Shadow_CurseOfTounges", "=ds="..LOCALIZED_CLASS_NAMES_MALE["WARLOCK"], "=q5="..AL["Tier 3 Sets"]};
 		{ 28, "T1T2DPSWarrior", "Ability_Warrior_BattleShout", "=ds="..LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], "=q5="..AL["Tier 1/2 Sets"]};
 		{ 29, "T3DPSWarrior", "Ability_Warrior_BattleShout", "=ds="..LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], "=q5="..AL["Tier 3 Sets"]};
-		Back = "SETMENU";
+		Back = "SETMENU"..AtlasLoot_Expac;
 	};
 
 	AtlasLoot_Data["T4SET"] = {	
@@ -240,7 +247,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 26, "T4Warlock", "Spell_Shadow_CurseOfTounges", "=ds="..LOCALIZED_CLASS_NAMES_MALE["WARLOCK"], ""};
 		{ 28, "T4WarriorFury", "Ability_Warrior_BattleShout", "=ds="..LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], "=q5="..AL["Fury"]};
 		{ 29, "T4WarriorProtection", "INV_Shield_05", "=ds="..LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], "=q5="..AL["Protection"]};
-		Back = "SETMENU";
+		Back = "SETMENU"..AtlasLoot_Expac;
 		Prev = "DS3SET";
 		Next = "T5SET";
 	};	
@@ -263,7 +270,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 26, "T5Warlock", "Spell_Shadow_CurseOfTounges", "=ds="..LOCALIZED_CLASS_NAMES_MALE["WARLOCK"], ""};
 		{ 28, "T5WarriorFury", "Ability_Warrior_BattleShout", "=ds="..LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], "=q5="..AL["Fury"]};
 		{ 29, "T5WarriorProtection", "INV_Shield_05", "=ds="..LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], "=q5="..AL["Protection"]};
-		Back = "SETMENU";
+		Back = "SETMENU"..AtlasLoot_Expac;
 		Prev = "T4SET";
 		Next = "T6SET";
 	};	
@@ -286,7 +293,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 26, "T6Warlock", "Spell_Shadow_CurseOfTounges", "=ds="..LOCALIZED_CLASS_NAMES_MALE["WARLOCK"], ""};
 		{ 28, "T6WarriorFury", "Ability_Warrior_BattleShout", "=ds="..LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], "=q5="..AL["Fury"]};
 		{ 29, "T6WarriorProtection", "INV_Shield_05", "=ds="..LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], "=q5="..AL["Protection"]};
-		Back = "SETMENU";
+		Back = "SETMENU"..AtlasLoot_Expac;
 		Prev = "T5SET";
 	};	
 
@@ -310,7 +317,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 26, "NaxxWarlock", "Spell_Shadow_CurseOfTounges", "=ds="..LOCALIZED_CLASS_NAMES_MALE["WARLOCK"], ""};
 		{ 28, "NaxxWarriorFury", "Ability_Warrior_BattleShout", "=ds="..LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], "=q5="..AL["Fury"]};
 		{ 29, "NaxxWarriorProtection", "INV_Shield_05", "=ds="..LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], "=q5="..AL["Protection"]};
-		Back = "SETMENU";
+		Back = "SETMENU"..AtlasLoot_Expac;
 		Next = "T9SET";
 	};
 
@@ -334,7 +341,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 26, "T9Warlock_A", "Spell_Shadow_CurseOfTounges", "=ds="..LOCALIZED_CLASS_NAMES_MALE["WARLOCK"], ""};
 		{ 28, "T9WarriorFury_A", "Ability_Warrior_BattleShout", "=ds="..LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], "=q5="..AL["Fury"]};
 		{ 29, "T9WarriorProtection_A", "INV_Shield_05", "=ds="..LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], "=q5="..AL["Protection"]};
-		Back = "SETMENU";
+		Back = "SETMENU"..AtlasLoot_Expac;
 		Prev = "T7T8SET";
 		Next = "T10SET";
 	};
@@ -359,6 +366,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 26, "T10Warlock", "Spell_Shadow_CurseOfTounges", "=ds="..LOCALIZED_CLASS_NAMES_MALE["WARLOCK"], ""};
 		{ 28, "T10WarriorFury", "Ability_Warrior_BattleShout", "=ds="..LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], "=q5="..AL["Fury"]};
 		{ 29, "T10WarriorProtection", "INV_Shield_05", "=ds="..LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], "=q5="..AL["Protection"]};
-		Back = "SETMENU";
+		Back = "SETMENU"..AtlasLoot_Expac;
 		Prev = "T9SET";
 	};

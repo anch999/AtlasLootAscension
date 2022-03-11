@@ -1960,11 +1960,16 @@ end
 	AtlasLoot_TableNames["REPMENUCLASSIC"] = { AL["Factions"], "Menu" };
 	AtlasLoot_TableNames["REPMENUTBC"] = { AL["Factions"], "Menu" };
 	AtlasLoot_TableNames["REPMENUWRATH"] = { AL["Factions"], "Menu" };
-	AtlasLoot_TableNames["SETMENU"] = { AL["Collections"], "Menu" };
+	AtlasLoot_TableNames["SETMENUCLASSIC"] = { AL["Collections"], "Menu" };
+	AtlasLoot_TableNames["SETMENUTBC"] = { AL["Collections"], "Menu" };
+	AtlasLoot_TableNames["SETMENUWRATH"] = { AL["Collections"], "Menu" };
+
 	AtlasLoot_TableNames["MOUNTMENU"] = { AL["Mounts"], "Menu" };
 	AtlasLoot_TableNames["PETMENU"] = { AL["Vanity Pets"], "Menu" };
 	AtlasLoot_TableNames["PVPSET"] = { AL["PvP Armor Sets"]..": "..AL["Level 60"], "Menu" };
-	AtlasLoot_TableNames["PVPMENU"] = { AL["PvP Rewards"], "Menu" };
+	AtlasLoot_TableNames["PVPMENUCLASSIC"] = { AL["PvP Rewards"], "Menu" };
+	AtlasLoot_TableNames["PVPMENUTBC"] = { AL["PvP Rewards"], "Menu" };
+	AtlasLoot_TableNames["PVPMENUWRATH"] = { AL["PvP Rewards"], "Menu" };
 	AtlasLoot_TableNames["PVPMENU2"] = { AL["PvP Rewards"], "Menu" };
 	AtlasLoot_TableNames["WINTERGRASPMENU"] = { BabbleZone["Wintergrasp"], "Menu" };
 	AtlasLoot_TableNames["PVP70RepSET"] = { AL["PvP Reputation Sets"]..": "..AL["Level 70"], "Menu" };

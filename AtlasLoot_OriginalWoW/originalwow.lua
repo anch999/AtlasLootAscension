@@ -5719,7 +5719,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 27, 19826, "", "=q4=Zandalar Freethinker's Belt", "=q4=#zgt2#, =ds=#r3#"};
 		{ 28, 19827, "", "=q4=Zandalar Freethinker's Armguards", "=q4=#zgt3#, =ds=#r2#"};
 		Next = "ZGSets2";
-		Back = "SETMENU";
+		Back = "SETMENU"..AtlasLoot_Expac;
 		Type = "ClassicRaid";
 	};
 
@@ -5750,7 +5750,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 28, 19848, "", "=q4=Zandalar Demoniac's Wraps", "=q4=#zgt5#, =ds=#r2#"};
 		Next = "ZGSets3";
 		Prev = "ZGSets1";
-		Back = "SETMENU";
+		Back = "SETMENU"..AtlasLoot_Expac;
 		Type = "ClassicRaid";
 	};
 
@@ -5762,7 +5762,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 5, 19823, "", "=q4=Zandalar Vindicator's Belt", "=q4=#zgt7#, =ds=#r3#"};
 		{ 6, 19824, "", "=q4=Zandalar Vindicator's Armguards", "=q4=#zgt8#, =ds=#r2#"};
 		Prev = "ZGSets2";
-		Back = "SETMENU";
+		Back = "SETMENU"..AtlasLoot_Expac;
 		Type = "ClassicRaid";
 	};
 
@@ -5796,7 +5796,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 28, 21406, "", "=q4=Cloak of Veiled Shadows", "=q3=#aq20t2#, =ds=#r4#"};
 		{ 29, 21405, "", "=q4=Band of Veiled Shadows", "=q3=#aq20t4#, =ds=#r3#"};
 		Next = "AQ20Sets2";
-		Back = "SETMENU";
+		Back = "SETMENU"..AtlasLoot_Expac;
 		Type = "ClassicRaid";
 	};
 
@@ -5814,7 +5814,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 13, 21394, "", "=q4=Drape of Unyielding Strength", "=q3=#aq20t2#, =ds=#r4#"};
 		{ 14, 21393, "", "=q4=Signet of Unyielding Strength", "=q3=#aq20t3#=ds=, #r3#"};
 		Prev = "AQ20Sets1";
-		Back = "SETMENU";
+		Back = "SETMENU"..AtlasLoot_Expac;
 		Type = "ClassicRaid";
 	};
 
@@ -5848,7 +5848,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 27, 21391, "", "=q4=Avenger's Pauldrons", ""};
 		{ 28, 21388, "", "=q4=Avenger's Greaves", ""};
 		Next = "AQ40Sets2";
-		Back = "SETMENU";
+		Back = "SETMENU"..AtlasLoot_Expac;
 		Type = "ClassicRaid";
 	};
 
@@ -5879,7 +5879,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 28, 21338, "", "=q4=Doomcaller's Footwraps", ""};
 		Next = "AQ40Sets3";
 		Prev = "AQ40Sets1";
-		Back = "SETMENU";
+		Back = "SETMENU"..AtlasLoot_Expac;
 		Type = "ClassicRaid";
 	};
 	
@@ -5897,7 +5897,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 20, 10911, "", "=q4=Conqueror's Shoulderpads", ""};
 		{ 21, 10914, "", "=q4=Conqueror's War Stompers", ""};
 		Prev = "AQ40Sets2";
-		Back = "SETMENU";
+		Back = "SETMENU"..AtlasLoot_Expac;
 		Type = "ClassicRaid";
 	};
 
@@ -5994,8 +5994,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 20, 873, "", "=q4=Staff of Jordan", "=ds=#w9#", "", ""};
 		{ 21, 1204, "", "=q4=The Green Tower", "=ds=#w8#", "", ""};
 		{ 22, 2825, "", "=q4=Bow of Searing Arrows", "=ds=#w2#", "", ""};
-		Next = "WorldEpics2";
-		Back = "WORLDEPICS";
+		Back = "SETMENUCLASSIC";
 	};
 
 	AtlasLoot_Data["WorldEpics2"] = {
@@ -6020,9 +6019,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 26, 1979, "", "=q4=Wall of the Dead", "=ds=#w8#", "", ""};
 		{ 27, 2824, "", "=q4=Hurricane", "=ds=#w2#", "", ""};
 		{ 28, 2100, "", "=q4=Precisely Calibrated Boomstick", "=ds=#w5#", "", ""};
-		Next = "WorldEpics3";
-		Prev = "WorldEpics1";
-		Back = "WORLDEPICS";
+		Back = "SETMENUCLASSIC";
 	};
 
 	AtlasLoot_Data["WorldEpics3"] = {
@@ -6047,9 +6044,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 24, 944, "", "=q4=Elemental Mage Staff", "=ds=#w9#", "", ""};
 		{ 25, 1168, "", "=q4=Skullflame Shield", "=ds=#w8#", "", ""};
 		{ 26, 2099, "", "=q4=Dwarven Hand Cannon", "=ds=#w5#", "", ""};
-		Next = "WorldEpics4";
-		Prev = "WorldEpics2";
-		Back = "WORLDEPICS";
+		Back = "SETMENUCLASSIC";
 	};
 
 	-----------
@@ -7188,7 +7183,7 @@ AtlasLoot_Data["PVPWarrior2"] = {
 		{ 19, 18855, "", "=q4=Grand Marshal's Hand Cannon", "=ds=#w5#", "34100 #alliance#", ""};
 		{ 20, 23452, "", "=q4=Grand Marshal's Tome of Power", "=ds=#s15#", "34100 #alliance#", ""};
 		{ 21, 23453, "", "=q4=Grand Marshal's Tome of Restoration", "=ds=#s15#", "34100 #alliance#", ""};
-		Back = "PVPMENU";
+		Back = "PVPMENU"..AtlasLoot_Expac;
 		Next = "PVPWeapons_H";
 		Type = "PVP";
 	};
@@ -7215,7 +7210,7 @@ AtlasLoot_Data["PVPWarrior2"] = {
 		{ 19, 918855, "", "=q3=Lieutenant Commander's Hand Cannon", "=ds=#w5#", "20000 #alliance#", ""};
 		{ 20, 923452, "", "=q3=Lieutenant Commander's Tome of Power", "=ds=#s15#", "20000 #alliance#", ""};
 		{ 21, 923453, "", "=q3=Lieutenant Commander's Tome of Restoration", "=ds=#s15#", "20000 #alliance#", ""};
-		Back = "PVPMENU";
+		Back = "PVPMENU"..AtlasLoot_Expac;
 		Prev = "PVPWeapons_H";
 		Next = "PVPWeapons_H2";
 		Type = "PVP";
@@ -7244,7 +7239,7 @@ AtlasLoot_Data["PVPWarrior2"] = {
 		{ 19, 18860, "", "=q4=High Warlord's Street Sweeper", "=ds=#w5#", "34100 #horde#", ""};
 		{ 20, 23468, "", "=q4=High Warlord's Tome of Destruction", "=ds=#s15#", "34100 #horde#", ""};
 		{ 21, 23469, "", "=q4=High Warlord's Tome of Mending", "=ds=#s15#", "34100 #horde#", ""};
-		Back = "PVPMENU";
+		Back = "PVPMENU"..AtlasLoot_Expac;
 		Prev = "PVPWeapons_A";
 		Next = "PVPWeapons_A2";
 		Type = "PVP";
@@ -7272,7 +7267,7 @@ AtlasLoot_Data["PVPWarrior2"] = {
 		{ 19, 918860, "", "=q3=Champion's Street Sweeper", "=ds=#w5#", "20000 #horde#", ""};
 		{ 20, 923468, "", "=q3=Champion's Tome of Destruction", "=ds=#s15#", "20000 #horde#", ""};
 		{ 21, 923469, "", "=q3=Champion's Tome of Mending", "=ds=#s15#", "20000 #horde#", ""};
-		Back = "PVPMENU";
+		Back = "PVPMENU"..AtlasLoot_Expac;
 		Prev = "PVPWeapons_A2";
 		Type = "PVP";
 	};	
@@ -7301,7 +7296,7 @@ AtlasLoot_Data["PVPWarrior2"] = {
 		{ 21, 100531, "", "=q4=Combatant's Scroll of Battle, =ds=", " #alliance#", ""};
 		{ 22, 100532, "", "=q4=Combatant's Scroll of Sorcery, =ds=", " #alliance#", ""};
 		Next = "PvP60Accessories2_A";
-		Back = "PVPMENU";
+		Back = "PVPMENU"..AtlasLoot_Expac;
 		Type = "PVP";
 	};
 
@@ -7326,7 +7321,7 @@ AtlasLoot_Data["PVPWarrior2"] = {
 		{ 21, 100531, "", "=q4=Combatant's Scroll of Battle, =ds=", " #horde#", ""};
 		{ 22, 100532, "", "=q4=Combatant's Scroll of Sorcery, =ds=", " #horde#", ""};
 		Next = "PvP60Accessories2_H";
-		Back = "PVPMENU";
+		Back = "PVPMENU"..AtlasLoot_Expac;
 		Type = "PVP";
 	};
 
@@ -7353,7 +7348,7 @@ AtlasLoot_Data["PVPWarrior2"] = {
 		{ 22, 32455, "", "=q1=Star's Lament", "=ds=#e4#", "12 #silver# 1 #alliance#", ""};
 		Next = "PvP60Accessories3_A";
 		Prev = "PvP60Accessories1_A";	
-		Back = "PVPMENU";
+		Back = "PVPMENU"..AtlasLoot_Expac;
 		Type = "PVP";
 	};
 
@@ -7380,7 +7375,7 @@ AtlasLoot_Data["PVPWarrior2"] = {
 		{ 22, 32455, "", "=q1=Star's Lament", "=ds=#e4#", "12 #silver# 1 #horde#", ""};
 		Next = "PvP60Accessories3_H";
 		Prev = "PvP60Accessories1_H";
-		Back = "PVPMENU";
+		Back = "PVPMENU"..AtlasLoot_Expac;
 		Type = "PVP";
 	};
 
@@ -7402,7 +7397,7 @@ AtlasLoot_Data["PVPWarrior2"] = {
 		{ 21, 18444, "", "=q3=Master Sergeant's Insignia", "=ds=#s2#", "300 #alliance#", ""};
 		{ 22, 18443, "", "=q3=Master Sergeant's Insignia", "=ds=#s2#", "1600 #alliance#", ""};
 		Prev = "PvP60Accessories2_A";
-		Back = "PVPMENU";
+		Back = "PVPMENU"..AtlasLoot_Expac;
 		Type = "PVP";
 	};
 
@@ -7424,7 +7419,7 @@ AtlasLoot_Data["PVPWarrior2"] = {
 		{ 21, 18428, "", "=q3=Senior Sergeant's Insignia", "=ds=#s2#", "300 #horde#", ""};
 		{ 22, 16335, "", "=q3=Senior Sergeant's Insignia", "=ds=#s2#", "1600 #horde#", ""};
 		Prev = "PvP60Accessories2_H";
-		Back = "PVPMENU";
+		Back = "PVPMENU"..AtlasLoot_Expac;
 		Type = "PVP";
 	};
 
@@ -7450,7 +7445,7 @@ AtlasLoot_Data["PVPWarrior2"] = {
 		{ 19, 100564, "", "=q3=Lesser Arcanum of Triumph, =ds=", "50000 #alliance#", ""};
 		{ 20, 449570, "", "=q3=Lesser Inscription of the Gladiator, =ds=", "40000 #alliance#", ""};
 		{ 21, 449571, "", "=q3=Lesser Inscription of the Battle Mage, =ds=", "40000 #alliance#", ""};
-		Back = "PVPMENU";
+		Back = "PVPMENU"..AtlasLoot_Expac;
 		Type = "PVP";
 	};
 	----------------

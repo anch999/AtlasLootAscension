@@ -289,10 +289,10 @@ AtlasLoot_DewDropDown = {
 		{ AL["Crafting"], "CRAFTINGMENU", "Table" },
 	},
 	[5] = {
-		{ AL["Sets/Collections"], "SETMENU", "Table" },
+		{ AL["Sets/Collections"], "SETMENU"..AtlasLoot_Expac, "Table" },
 	},
 	[6] = {
-		{ AL["PvP Rewards"], "PVPMENU", "Table" },
+		{ AL["PvP Rewards"], "PVPMENU"..AtlasLoot_Expac, "Table" },
 	},
 	[7] = {
 		{ AL["World Bosses"], "WorldBosses", "Submenu" },

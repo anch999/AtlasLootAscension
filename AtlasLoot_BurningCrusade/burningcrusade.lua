@@ -4579,7 +4579,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 28, 31840, "", "=q1=Major Combat Mana Potion", "=ds=", "200 #faction#"};
 		{ 29, 31854, "", "=q1=Major Combat Mana Potion", "=ds=", "200 #faction#"};
 		Next = "PvP70Accessories2";
-		Back = "PVPMENU";
+		Back = "PVPMENU"..AtlasLoot_Expac;
 		Type = "PVP";
 	};
 
@@ -4611,7 +4611,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 28, 31840, "", "=q1=Major Combat Mana Potion", "=ds=", "200 #faction#"};
 		{ 29, 31854, "", "=q1=Major Combat Mana Potion", "=ds=", "200 #faction#"};
 		Next = "PvP70Accessories2";
-		Back = "PVPMENU";
+		Back = "PVPMENU"..AtlasLoot_Expac;
 		Type = "PVP";
 	};
 	
@@ -4643,7 +4643,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 29, 35320, "", "=q4=Vindicator's Band of Subjugation", "=ds=", "12000 #faction#"};
 		{ 30, 33919, "", "=q4=Vindicator's Band of Triumph", "=ds=", "12000 #faction#"};
 		Prev = "PvP70Accessories1_A";
-		Back = "PVPMENU";
+		Back = "PVPMENU"..AtlasLoot_Expac;
 		Type = "PVP";
 	};
 
@@ -4674,7 +4674,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 29, 35165, "", "=q4=Guardian's Wyrmhide Belt", "=ds=", "18000 #faction#"};
 		{ 30, 35150, "", "=q4=Guardian's Wyrmhide Boots", "=ds=", "18000 #faction#"};
 		Next = "PvP70NonSet2";
-		Back = "PVPMENU";
+		Back = "PVPMENU"..AtlasLoot_Expac;
 		Type = "PVP";
 	};
 
@@ -4704,7 +4704,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 29, 35163, "", "=q4=Guardian's Scaled Belt", "=ds=", "18000 #faction#"};
 		{ 30, 35148, "", "=q4=Guardian's Scaled Greaves", "=ds=", "18000 #faction#"};
 		Prev = "PvP70NonSet1";
-		Back = "PVPMENU";
+		Back = "PVPMENU"..AtlasLoot_Expac;
 		Type = "PVP";
 	};
 
@@ -5229,7 +5229,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{18, 28939, "", "=q3=High Warlord's Barricade"};
 		{19, 28933, "", "=q3=High Warlord's Heavy Crossbow"};
 		{20, 28938, "", "=q3=High Warlord's Battletome"};
-		Back = "PVPMENU";
+		Back = "PVPMENU"..AtlasLoot_Expac;
 		Type = "PVP";
 	};	
 	
@@ -5254,7 +5254,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{18, 28940, "", "=q3=Grand Marshal's Barricade"};
 		{19, 28960, "", "=q3=Grand Marshal's Heavy Crossbow"};
 		{20, 28941, "", "=q3=Grand Marshal's Battletome"};
-		Back = "PVPMENU";
+		Back = "PVPMENU"..AtlasLoot_Expac;
 		Type = "PVP";
 	};	
 		
@@ -5283,7 +5283,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{22, 28346, "", "=q4=Gladiator's Endgame", "=ds=", "1125 #arena#", ""};
 		{23, 32452, "", "=q4=Gladiator's Reprieve", "=ds=", "1125 #arena#", ""};
 		Next = "Arena1Weapons2";
-		Back = "PVPMENU";
+		Back = "PVPMENU"..AtlasLoot_Expac;
 		Type = "PVP";
 	};
 	
@@ -5298,7 +5298,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{8, 33951, "", "=q4=Gladiator's Totem of Survival", "=ds=", "1000 #arena#", ""};
 		{9, 28357, "", "=q4=Gladiator's Totem of the Third Wind", "=ds=", "1000 #arena#", ""};
 		Prev = "Arena1Weapons1";
-		Back = "PVPMENU";
+		Back = "PVPMENU"..AtlasLoot_Expac;
 		Type = "PVP";
 	};
 		
@@ -5328,7 +5328,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{23, 33716, "", "=q4=Vengeful Gladiator's Staff", "=ds=", "3000 #arena#", ""};
 		{24, 33766, "", "=q4=Vengeful Gladiator's War Staff", "=ds=", "3000 #arena#", ""};
 		Next = "Arena3Weapons2";
-		Back = "PVPMENU";
+		Back = "PVPMENU"..AtlasLoot_Expac;
 		Type = "PVP";
 	};
 
@@ -5358,7 +5358,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{23, 33953, "", "=q4=Vengeful Gladiator's Totem of Survival", "=ds=", "800 #arena#", ""};
 		{24, 33843, "", "=q4=Vengeful Gladiator's Totem of the Third Wind", "=ds=", "800 #arena#", ""};
 		Prev = "Arena3Weapons1";
-		Back = "PVPMENU";
+		Back = "PVPMENU"..AtlasLoot_Expac;
 		Type = "PVP";
 	};
 
@@ -5391,7 +5391,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{26, 31978, "", "=q4=Merciless Gladiator's Endgame", "=ds=", "9000 #arena#", ""};
 		{27, 32961, "", "=q4=Merciless Gladiator's Reprieve", "=ds=", "9000 #arena#", ""};
 		Next = "Arena2Weapons2";
-		Back = "PVPMENU";
+		Back = "PVPMENU"..AtlasLoot_Expac;
 		Type = "PVP";
 	};
 
@@ -5406,7 +5406,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{8, 33952, "", "=q4=Merciless Gladiator's Totem of Survival", "=ds=", "8000 #arena#", ""};
 		{9, 33078, "", "=q4=Merciless Gladiator's Totem of the Third Wind", "=ds=", "8000 #arena#", ""};
 		Prev = "Arena2Weapons1";
-		Back = "PVPMENU";
+		Back = "PVPMENU"..AtlasLoot_Expac;
 	};
 	AtlasLoot_Data["Arena4Weapons1"] = {
 		{ 1, 35076, "", "=q4=Brutal Gladiator's Right Ripper", "=ds=#h3#, #w13#", "2625 #arena#", ""};
@@ -5437,7 +5437,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 26, 35103, "", "=q4=Brutal Gladiator's Staff", "=ds=#h2#, #w9#", "3750 #arena#", ""};
 		{ 27, 35109, "", "=q4=Brutal Gladiator's War Staff", "=ds=#h2#, #w9#", "3750 #arena#", ""};
 		Next = "Arena4Weapons2";
-		Back = "PVPMENU";
+		Back = "PVPMENU"..AtlasLoot_Expac;
 		Type = "PVP";
 	};
 
@@ -5465,7 +5465,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 23, 35105, "", "=q4=Brutal Gladiator's Totem of Survival", "=ds=#w15#", "1000 #arena#", ""};
 		{ 24, 35106, "", "=q4=Brutal Gladiator's Totem of the Third Wind", "=ds=#w15#", "1000 #arena#", ""};
 		Prev = "Arena4Weapons1";
-		Back = "PVPMENU";
+		Back = "PVPMENU"..AtlasLoot_Expac;
 		Type = "PVP";
 	};
 
@@ -6616,7 +6616,7 @@ AtlasLoot_Data["T6WarriorFury"] = {
 		{ 20, 0, "INV_Box_01", "=q6=#bcs2#", "=q2=#n137#, =q1=#z18#"};
 		{ 21, 32837, "", "=q5=Warglaive of Azzinoth", "=ds=#h3#, #w10#, =q1=#m1# =ds=#c9#, #c6#"};
 		{ 22, 32838, "", "=q5=Warglaive of Azzinoth", "=ds=#h4#, #w10#, =q1=#m1# =ds=#c9#, #c6#"};
-		Back = "SETMENU";
+		Back = "SETMENU"..AtlasLoot_Expac;
 	};
 
 		--------------------------------
@@ -6978,7 +6978,5 @@ AtlasLoot_Data["T6WarriorFury"] = {
 		{ 22, 31334, "", "=q4=Staff of Natural Fury", "=ds=#h2#, #w9#", "", ""};
 		{ 23, 34622, "", "=q4=Spinesever", "=ds=#w11#", "", ""};
 		{ 24, 31323, "", "=q4=Don Santos' Famous Hunting Rifle", "=ds=#w5#", "", ""};
-		Next = "WorldEpicsWrath1";
-		Prev = "WorldEpics3";
-		Back = "WORLDEPICS";
+		Back = "SETMENUTBC";
 	};
