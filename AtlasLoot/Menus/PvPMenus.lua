@@ -4,46 +4,40 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0")
 local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 
 	AtlasLoot_Data["PVPMENUCLASSIC"] = {
-		{ 1, "PVPMENUTBC", "INV_Helmet_66", "=ds="..AL["PVP - Burning Crusade"], ""};
-		{ 16, "PVPMENUWRATH", "INV_Misc_Ribbon_01", "=ds="..AL["PVP - Wrath of the Lich King"], ""};
-		{ 3, "PvP60Accessories1_A", "inv_jewelry_trinketpvp_01", "=ds="..AL["PvP Accessories"], "=q5="..AL["Level 60"]};
-		{ 4, "PVPSET", "INV_Axe_02", "=ds="..AL["PvP Armor Sets"], "=q5="..AL["Level 60"]};
-		{ 6, "PVPMENU2", "INV_Jewelry_Necklace_21", "=ds="..AL["BG PvP Rewards"], ""};
-		{ 18, "PVPWeapons_A", "INV_Weapon_Bow_08", "=ds="..AL["PvP Weapons"], "=q5="..AL["Level 60"]};
-		{ 19, "PvP60Ench", "INV_Scroll_06", "=ds="..AL["PvP Enchants"], "=q5="..AL["Level 60"]};
-		Back = "PVPMENU"..AtlasLoot_Expac;
+		{ 1, "PvP60Accessories1_A", "inv_jewelry_trinketpvp_01", "=ds="..AL["PvP Accessories"], "=q5="..AL["Level 60"]};
+		{ 2, "PVPSET", "INV_Axe_02", "=ds="..AL["PvP Armor Sets"], "=q5="..AL["Level 60"]};
+		{ 4, "PVPMENU2", "INV_Jewelry_Necklace_21", "=ds="..AL["BG PvP Rewards"], ""};
+		{ 16, "PVPWeapons_A", "INV_Weapon_Bow_08", "=ds="..AL["PvP Weapons"], "=q5="..AL["Level 60"]};
+		{ 17, "PvP60Ench", "INV_Scroll_06", "=ds="..AL["PvP Enchants"], "=q5="..AL["Level 60"]};
+		Type = "Expansion"
 	};
 
 	AtlasLoot_Data["PVPMENUTBC"] = {
-		{ 1, "PVPMENUCLASSIC", "INV_Helmet_66", "=ds="..AL["PVP - Original WoW"], ""};
-		{ 16, "PVPMENUWRATH", "INV_Misc_Ribbon_01", "=ds="..AL["PVP - Wrath of the Lich King"], ""};
-		{ 3, "PvP70Accessories1_A", "inv_jewelry_ring_60", "=ds="..AL["PvP Accessories"], "=q5="..AL["Level 70"]};
-		{ 4, "PVP70RepSET", "INV_Axe_02", "=ds="..AL["PvP Reputation Sets"], "=q5="..AL["Level 70"]};
-		{ 5, "ARENASET", "inv_gauntlets_29", "=ds="..AL["PvP Armor Sets"], "=q5="..AL["Level 70"]};
-		{ 6, "PvP70NonSet1", "inv_belt_13", "=ds="..AL["PvP Non-Set Epics"], "=q5="..AL["Level 70"]};
-		{ 8, "Hellfire", "INV_Misc_Token_HonorHold", "=ds="..BabbleZone["Hellfire Peninsula"], "=q5="..AL["Hellfire Fortifications"]};
-		{ 9, "Zangarmarsh", "Spell_Nature_ElementalPrecision_1", "=ds="..BabbleZone["Zangarmarsh"], "=q5="..AL["Twin Spire Ruins"]};
-		{ 10, "Terokkar", "INV_Jewelry_FrostwolfTrinket_04", "=ds="..BabbleZone["Terokkar Forest"], "=q5="..AL["Spirit Towers"]};
-		{ 11, "Nagrand1", "INV_Misc_Rune_09", "=ds="..BabbleZone["Nagrand"], "=q5="..AL["Halaa"]};
-		{ 18, "Arena0Weapons1_A", "INV_Weapon_Crossbow_09", "=ds="..AL["Arena Season 0 Weapons"], "=q5="..AL["Level 70"]};
-		{ 19, "Arena1Weapons1", "INV_Weapon_Crossbow_10", "=ds="..AL["Arena Season 1 Weapons"], "=q5="..AL["Level 70"]};
-		{ 20, "Arena2Weapons1", "INV_Weapon_Crossbow_11", "=ds="..AL["Arena Season 2 Weapons"], "=q5="..AL["Level 70"]};
-		{ 21, "Arena3Weapons1", "INV_Weapon_Crossbow_12", "=ds="..AL["Arena Season 3 Weapons"], "=q5="..AL["Level 70"]};
-		{ 22, "Arena4Weapons1", "inv_weapon_crossbow_26", "=ds="..AL["Arena Season 4 Weapons"], "=q5="..AL["Level 70"]};
-		Back = "PVPMENU"..AtlasLoot_Expac;
+		{ 1, "PvP70Accessories1_A", "inv_jewelry_ring_60", "=ds="..AL["PvP Accessories"], "=q5="..AL["Level 70"]};
+		{ 2, "PVP70RepSET", "INV_Axe_02", "=ds="..AL["PvP Reputation Sets"], "=q5="..AL["Level 70"]};
+		{ 3, "ARENASET", "inv_gauntlets_29", "=ds="..AL["PvP Armor Sets"], "=q5="..AL["Level 70"]};
+		{ 4, "PvP70NonSet1", "inv_belt_13", "=ds="..AL["PvP Non-Set Epics"], "=q5="..AL["Level 70"]};
+		{ 6, "Hellfire", "INV_Misc_Token_HonorHold", "=ds="..BabbleZone["Hellfire Peninsula"], "=q5="..AL["Hellfire Fortifications"]};
+		{ 7, "Zangarmarsh", "Spell_Nature_ElementalPrecision_1", "=ds="..BabbleZone["Zangarmarsh"], "=q5="..AL["Twin Spire Ruins"]};
+		{ 8, "Terokkar", "INV_Jewelry_FrostwolfTrinket_04", "=ds="..BabbleZone["Terokkar Forest"], "=q5="..AL["Spirit Towers"]};
+		{ 9, "Nagrand1", "INV_Misc_Rune_09", "=ds="..BabbleZone["Nagrand"], "=q5="..AL["Halaa"]};
+		{ 16, "Arena0Weapons1_A", "INV_Weapon_Crossbow_09", "=ds="..AL["Arena Season 0 Weapons"], "=q5="..AL["Level 70"]};
+		{ 17, "Arena1Weapons1", "INV_Weapon_Crossbow_10", "=ds="..AL["Arena Season 1 Weapons"], "=q5="..AL["Level 70"]};
+		{ 18, "Arena2Weapons1", "INV_Weapon_Crossbow_11", "=ds="..AL["Arena Season 2 Weapons"], "=q5="..AL["Level 70"]};
+		{ 19, "Arena3Weapons1", "INV_Weapon_Crossbow_12", "=ds="..AL["Arena Season 3 Weapons"], "=q5="..AL["Level 70"]};
+		{ 20, "Arena4Weapons1", "inv_weapon_crossbow_26", "=ds="..AL["Arena Season 4 Weapons"], "=q5="..AL["Level 70"]};
+		Type = "Expansion"
 	};
 
 	AtlasLoot_Data["PVPMENUWRATH"] = {
-		{ 1, "PVPMENUCLASSIC", "INV_Helmet_66", "=ds="..AL["PVP - Original WoW"], ""};
-		{ 16, "PVPMENUTBC", "INV_Misc_Ribbon_01", "=ds="..AL["PVP - Burning Crusade"], ""};
-		{ 3, "PvP80NonSet1", "INV_Jewelry_Necklace_36", "=ds="..AL["PvP Accessories"], "=q5="..AL["Level 80"]};
-		{ 4, "PvP80Misc", "INV_Scroll_06", "=ds="..AL["PvP Misc"], "=q5="..AL["Level 80"]};
-		{ 5, "LEVEL80PVPSETS", "INV_Boots_01", "=ds="..AL["PvP Armor Sets"], "=q5="..AL["Level 80"], "" };
-		{ 6, "WINTERGRASPMENU", "INV_Misc_Platnumdisks", "=ds="..BabbleZone["Wintergrasp"], ""};
-		{ 8, "VentureBay1", "INV_Misc_Coin_16", "=ds="..BabbleZone["Grizzly Hills"], "=q5="..AL["Venture Bay"]};
-		{ 18, "PVP80NONSETEPICS", "inv_bracer_51", "=ds="..AL["PvP Non-Set Epics"], "=q5="..AL["Level 80"]};
-		{ 19, "WrathfulGladiatorWeapons1", "INV_Sword_86", "=ds="..AL["Wrathful Gladiator\'s Weapons"], "=q5="..AL["Level 80"] };
-		Back = "PVPMENU"..AtlasLoot_Expac;
+		{ 1, "PvP80NonSet1", "INV_Jewelry_Necklace_36", "=ds="..AL["PvP Accessories"], "=q5="..AL["Level 80"]};
+		{ 2, "PvP80Misc", "INV_Scroll_06", "=ds="..AL["PvP Misc"], "=q5="..AL["Level 80"]};
+		{ 3, "LEVEL80PVPSETS", "INV_Boots_01", "=ds="..AL["PvP Armor Sets"], "=q5="..AL["Level 80"], "" };
+		{ 4, "WINTERGRASPMENU", "INV_Misc_Platnumdisks", "=ds="..BabbleZone["Wintergrasp"], ""};
+		{ 6, "VentureBay1", "INV_Misc_Coin_16", "=ds="..BabbleZone["Grizzly Hills"], "=q5="..AL["Venture Bay"]};
+		{ 16, "PVP80NONSETEPICS", "inv_bracer_51", "=ds="..AL["PvP Non-Set Epics"], "=q5="..AL["Level 80"]};
+		{ 17, "WrathfulGladiatorWeapons1", "INV_Sword_86", "=ds="..AL["Wrathful Gladiator\'s Weapons"], "=q5="..AL["Level 80"] };
+		Type = "Expansion"
 	};
 
 	AtlasLoot_Data["PVPMENU2"] = {

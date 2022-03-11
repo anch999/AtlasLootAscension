@@ -57,7 +57,7 @@ function AtlasLoot_DewDropClick(tablename, text, tabletype)
         AtlasLootDefaultFrame_SelectedTable:SetText("");
         AtlasLootDefaultFrame_SelectedTable:Show();
         SelectedTableTextSet = false;
-    else   
+    else
 		--Enable the submenu button
         AtlasLootDefaultFrame_SubMenu:Enable();
         AtlasLoot_Lastboss = AtlasLoot_DewDropDown_SubTables[tablename][1][2];
@@ -81,7 +81,7 @@ function AtlasLoot_DewDropClick(tablename, text, tabletype)
     AtlasLootDefaultFrame_SelectedCategory:SetText(text);
     AtlasLootDefaultFrame_SelectedCategory:Show();
     AtlasLoot_Dewdrop:Close(1);
-end 
+end
 
 --[[
 AtlasLoot_DewDropSubMenuClick(tablename, text):
@@ -111,7 +111,7 @@ AtlasLootDefaultFrame_OnShow:
 Called whenever the loot browser is shown and sets up buttons and loot tables
 ]]
 function AtlasLootDefaultFrame_OnShow()
-    --Definition of where I want the loot table to be shown    
+    --Definition of where I want the loot table to be shown
     pFrame = { "TOPLEFT", "AtlasLootDefaultFrame_LootBackground", "TOPLEFT", "2", "-2" };
     --Having the Atlas and loot browser frames shown at the same time would
     --cause conflicts, so I hide the Atlas frame when the loot browser appears
@@ -141,7 +141,7 @@ function AtlasLootDefaultFrame_OnHide()
     end
     AtlasLoot_Dewdrop:Close(1);
     AtlasLoot_DewdropSubMenu:Close(1);
-end   
+end
 
 function AtlasLoot_DewDropSubMenu2Click(raidtablename, itemID, itemColour)
 	if ATLASLOOT_FILTER_ENABLE == true then --used to refresh loottable when filter is enabled
@@ -151,7 +151,11 @@ function AtlasLoot_DewDropSubMenu2Click(raidtablename, itemID, itemColour)
     -- gets itemID reference
     AtlasLootDefaultFrame_GetRaidDifficulty(raidtablename, itemID, itemColour)
 	--Show the select loot table
-	AtlasLoot_ShowItemsFrame(AtlasLootItemsFrame.refreshOri[1], AtlasLootItemsFrame.refreshOri[2], AtlasLootItemsFrame.refreshOri[3], AtlasLootItemsFrame.refreshOri[4]);
+    if type(itemID) ~= "number" and itemID:match("=ex=") then
+        AtlasLoot_ShowItemsFrame(AtlasLootItemsFrame.refresh[1], AtlasLootItemsFrame.refresh[2], AtlasLootItemsFrame.refresh[3], AtlasLootItemsFrame.refresh[4]);
+    else
+	    AtlasLoot_ShowItemsFrame(AtlasLootItemsFrame.refreshOri[1], AtlasLootItemsFrame.refreshOri[2], AtlasLootItemsFrame.refreshOri[3], AtlasLootItemsFrame.refreshOri[4]);
+    end
     --Set text for difficulty
 	AtlasLootDefaultFrame_SelectedTable2:SetText(DropTablename);
 	AtlasLootDefaultFrame_SelectedTable2:Show();
@@ -181,6 +185,7 @@ end
 function AtlasLoot_DifficultyDisable() --Disables Difficulty Menu
     isTablereference = false
     notPattern = false
+    isTableExpansion = false;
     AtlasLootItemsFrame_DifficultyAtlasButton:Hide();
     AtlasLootItemsFrame_DifficultyAtlasButton:Disable();
     AtlasLoot_DifficultyAtlas:Unregister(AtlasLootItemsFrame_DifficultyAtlasButton);
@@ -204,38 +209,39 @@ function AtlasLoot_DifficultyEnable(dataID, dataSource) --Enables Difficulty Men
             AtlasLootItemsFrame_DifficultyAtlasButton:SetText(AtlasLoot_Difficulty[dataSource[dataID].Type][1][1][1])
         end
         SelectedTable2TextSet = true
-    else 
+    else
         AtlasLootDefaultFrame_SubMenu2:Enable();
         AtlasLoot_DewdropSubMenu2:Unregister(AtlasLootDefaultFrame_SubMenu2);
         AtlasLoot_DewdropSubMenu2Register(AtlasLoot_Difficulty[dataSource[dataID].Type]);
-        if SelectedTable2TextSet == false then 
+        if SelectedTable2TextSet == false then
             AtlasLootDefaultFrame_SelectedTable2:SetText(AtlasLoot_Difficulty[dataSource[dataID].Type][1][1][1])
         end
         AtlasLootDefaultFrame_SelectedTable2:Show();
         SelectedTable2TextSet = true
     end
-    
+
 end
 
 function AtlasLootDefaultFrame_GetRaidDifficulty(raidtablename, itemID, itemColour)
+            isTablereference = false;
+			notPattern = false;
+            isTableExpansion = false;
+
             if tonumber(itemID) or itemID:match("Bloodforged") then --used in itemID search feature for itemID database
 				ItemindexID = itemID;
-				isTablereference = false;
-				notPattern = false;
                 itemDefaultColour = itemColour;
 			elseif itemID:match("=s=") then -- =s= infront of a table reference will make it show a normal crafting item instead of a crafting pattern
-				newID = gsub(itemID, "=s=",""); -- removes =s= before passing the extra table addition
-				newID = gsub(newID, "Normal","");
-				tableReference = newID;
+				tableReference = gsub(gsub(itemID, "=s=",""), "Normal","");
 				isTablereference = true;
 				notPattern = true;
 				ItemindexID = "";
+            elseif itemID:match("=ex=") then
+                tableReference = gsub(itemID, "=ex=", "");
+                isTableExpansion = true;
+                ItemindexID = "";
 			else
-				newID = gsub(itemID, "=s=","");
-				newID = gsub(newID, "Normal","");
-				tableReference = newID;
+				tableReference = gsub(gsub(itemID, "=s=",""), "Normal","");
 				isTablereference = true;
-				notPattern = false;
 				ItemindexID = "";
 			end
             DropTablename = raidtablename;
@@ -561,7 +567,7 @@ function AtlasLoot_DewdropSubMenuRegister(loottable)
                             'arg2', v[1],
                             'notCheckable', true
                         )
-						
+
                     else
                         AtlasLoot_DewdropSubMenu:AddLine(
                             'text', v[1],
@@ -845,13 +851,13 @@ function AtlasLoot_SetNewStyle(style)
 		"AtlasLootDefaultFrameWishListButton",
         "AtlasLootDefaultFrameAdvancedSearchButton",
 	}
-	
+
 	if style == "new" then
 		AtlasLootDefaultFrame_LootBackground:SetBackdrop({bgFile = "Interface/AchievementFrame/UI-Achievement-StatsBackground"});
 		AtlasLootDefaultFrame_LootBackground:SetBackdropColor(1,1,1,0.5)
-		AtlasLootDefaultFrame:SetBackdrop({bgFile = "Interface/AchievementFrame/UI-Achievement-AchievementBackground", 
-			  edgeFile = "Interface/Tooltips/UI-Tooltip-Border", 
-			  edgeSize = 16, 
+		AtlasLootDefaultFrame:SetBackdrop({bgFile = "Interface/AchievementFrame/UI-Achievement-AchievementBackground",
+			  edgeFile = "Interface/Tooltips/UI-Tooltip-Border",
+			  edgeSize = 16,
 			  insets = { left = 4, right = 4, top = 4, bottom = 4 }});
 		AtlasLootDefaultFrame:SetBackdropColor(1,1,1,0.5)
 		AtlasLootDefaultFrame:SetBackdropBorderColor(1,0.675,0.125,1)
@@ -874,7 +880,7 @@ function AtlasLoot_SetNewStyle(style)
 		   local tex = getglobal(path):GetNormalTexture();
 		   tex:SetTexCoord(0, 0.6640625, 0, 0.8);
 		   tex:SetHeight(32)
-		   
+
 		   local tex2 = getglobal(path):GetPushedTexture();
 		   tex2:SetTexCoord(0, 0.6640625, 0, 0.8);
 		   tex2:SetHeight(32)
@@ -884,18 +890,18 @@ function AtlasLoot_SetNewStyle(style)
 		   SetButtons(v)
 		end
 	elseif style == "old" then
-	
+
 		AtlasLootDefaultFrame_LootBackground:SetBackdrop({bgFile = ""});
-		AtlasLootDefaultFrame_LootBackground:SetBackdropColor(0,0,0.5,0.5)	
-		
-		AtlasLootDefaultFrame:SetBackdrop({bgFile = "Interface/DialogFrame/UI-DialogBox-Background", 
-			  edgeFile = "Interface/DialogFrame/UI-DialogBox-Border", 
-			  edgeSize = 32, 
+		AtlasLootDefaultFrame_LootBackground:SetBackdropColor(0,0,0.5,0.5)
+
+		AtlasLootDefaultFrame:SetBackdrop({bgFile = "Interface/DialogFrame/UI-DialogBox-Background",
+			  edgeFile = "Interface/DialogFrame/UI-DialogBox-Border",
+			  edgeSize = 32,
 			  insets = { left = 11, right = 12, top = 12, bottom = 11 }});
 		AtlasLootDefaultFrame:SetBackdropColor(1,1,1,1)
 		AtlasLootDefaultFrame:SetBackdropBorderColor(1,1,1,1)
-		
-		
+
+
 		AtlasLootDefaultFrameHeader:SetTexture("Interface/DialogFrame/UI-DialogBox-Header")
 		AtlasLootDefaultFrameHeader:SetTexCoord(0,1,0,1)
 		AtlasLootDefaultFrameHeader:SetWidth(425)
@@ -915,7 +921,7 @@ function AtlasLoot_SetNewStyle(style)
 		   local tex = getglobal(path):GetNormalTexture();
 		   tex:SetTexCoord(0, 0.625, 0, 0.6875);
 		   tex:SetHeight(20)
-		   
+
 		   local tex2 = getglobal(path):GetPushedTexture();
 		   tex2:SetTexCoord(0, 0.625, 0, 0.6875);
 		   tex2:SetHeight(20)
@@ -924,6 +930,6 @@ function AtlasLoot_SetNewStyle(style)
 		for k,v in pairs(buttons) do
 		   SetButtons(v)
 		end
-		
+
 	end
 end

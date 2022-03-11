@@ -548,10 +548,11 @@ local function DoSearch(searchText)
         for _, v in ipairs(data) do
             local _, itemId, itemType, atlasName = unpack(v)
 
-			itemId = AL_FindId(string.sub(atlasName, 5), difficulty);
-
-			itemId = tonumber(itemId);
-
+			if (string.sub(itemId, 1, 1) ~= "s") then
+				itemId = AL_FindId(string.sub(atlasName, 5), difficulty) or itemId;
+				itemId = tonumber(itemId);
+			end
+			
             if type(itemId) == "number" and itemId > 0 then
                 local itemName, itemQuality, itemLvl, minLvl, itemEquipLoc, itemSubType, stats = GetItemDetails(itemId, atlasName);
                 if IsItemEquipableMatch(itemEquipLoc) and ItemMatchesAllTerms(searchTerms, itemName, stats, itemLvl, minLvl, itemQuality, itemEquipLoc, itemSubType) then

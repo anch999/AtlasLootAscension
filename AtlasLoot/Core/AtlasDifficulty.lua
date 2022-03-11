@@ -189,18 +189,39 @@ AtlasLoot_Difficulty = {
         },
     };
 
+    ["Expansion"] = {
+        [1] = {
+            {"Classic", "=ex=CLASSIC", [4] = "Submenu"}
+        },
+        [2] = {
+            {"Burning Crusade", "=ex=TBC", [4] = "Submenu"}
+        },
+        [3] ={
+            {"Wrath of the Lich King", "=ex=WRATH", [4] = "Submenu"}
+        }
+    },
 
-    ["Search"] = {"Bloodforged", "Normal", "Heroic", "Mythic", "Mythic 1", "Mythic 2","Mythic 3","Mythic 4","Mythic 5", "Mythic 6","Mythic 7",
-    "Mythic 8","Mythic 9", "Mythic 10", "Mythic 11", "Mythic 12","Mythic 13","Mythic 14","Mythic 15", "Mythic 16","Mythic 17","Mythic 18",
-    "Mythic 19", "Mythic 20", [99] = "Ascended"};
+
+    ["Search"] = {"Bloodforged", "Normal", "Heroic", "Mythic", 
+    "Mythic 1", "Mythic 2","Mythic 3","Mythic 4","Mythic 5", "Mythic 6","Mythic 7", "Mythic 8","Mythic 9", "Mythic 10",
+    "Mythic 11", "Mythic 12","Mythic 13","Mythic 14","Mythic 15", "Mythic 16","Mythic 17","Mythic 18", "Mythic 19", "Mythic 20",
+    "Mythic 21", "Mythic 22","Mythic 23","Mythic 24","Mythic 25", "Mythic 26","Mythic 27", "Mythic 28","Mythic 29", "Mythic 30",
+    "Mythic 31", "Mythic 32","Mythic 33","Mythic 34","Mythic 35", "Mythic 36","Mythic 37","Mythic 38", "Mythic 39", "Mythic 40",
+    [99] = "Ascended"};
 
     --Enums for comparisons in code
     Bloodforged = 1;
     Normal = 2;
     Heroic = 3;
-    Mythic = 4; --Use for Ascended as well
+    Mythic = 4;
+    Ascended = 4;
 
-    MythicPlus = {5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34}; --Usage AtlasLoot_Difficulty.MythicPlus[1-30];
+    MythicPlus = {
+        5, 6, 7, 8, 9, 10, 11, 12, 13, 14,
+        15, 16, 17, 18, 19, 20, 21, 22, 23, 24,
+        25, 26, 27, 28, 29, 30, 31, 32, 33, 34,
+        35, 36, 37, 38, 39, 40, 41, 42, 43, 44
+    }; --Usage AtlasLoot_Difficulty.MythicPlus[1-40];
 
     DIF_SEARCH = 16;
     DUPLICATE = 17;

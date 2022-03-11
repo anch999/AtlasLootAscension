@@ -10,56 +10,54 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 --		{ #, "PVPMENU", "INV_Axe_02", "=ds="..AL["PvP Rewards"], ""};
 
 	AtlasLoot_Data["SETMENUCLASSIC"] = {
-		{ 1, "SETMENUTBC", "INV_Helmet_66", "=ds="..AL["Sets - Burning Crusade"], ""};
-		{ 16, "SETMENUWRATH", "INV_Misc_Ribbon_01", "=ds="..AL["Sets - Wrath of the Lich King"], ""};
-		{ 3, "SETSCLASSIC", "INV_Sword_43", "=ds="..AL["Classic Sets"], ""};
-		{ 5, 0, "INV_Box_01", "=q6="..AL["BoE World Epics"], ""};
-		{ 6, "WorldEpics1", "INV_Jewelry_Ring_15", "=ds="..AL["Level 30-39"], ""};
-		{ 7, "WorldEpics2", "INV_Staff_29", "=ds="..AL["Level 40-49"], ""};
-		{ 8, "WorldEpics3", "INV_Jewelry_Amulet_01", "=ds="..AL["Level 50-60"], ""};
-		{ 10, "Heirloom", "INV_Sword_43", "=ds="..AL["Heirloom"], ""};
-		{ 11, "Legendaries", "INV_Staff_Medivh", "=ds="..AL["Legendary Items"], ""};
-		{ 18, "T0SET", "INV_Chest_Chain_03", "=ds="..AL["Dungeon 1/2 Sets"], ""};
-		{ 19, "ZGSets1", "INV_Misc_MonsterClaw_04", "=ds="..AL["Zul'Gurub Sets"], ""};
-		{ 20, "AQ20Sets1", "INV_Jewelry_Ring_AhnQiraj_03", "=ds="..AL["Ruins of Ahn'Qiraj Sets"], ""};
-		{ 21, "AQ40Sets1", "INV_Sword_59", "=ds="..AL["Temple of Ahn'Qiraj Sets"], ""};
-		{ 23, "T1SET", "INV_Pants_Mail_03", "=ds="..AL["Tier 1 Sets"], ""};
-		{ 24, "T2SET", "INV_Pants_Mail_26", "=ds="..AL["Tier 2 Sets"], ""};
-		{ 25, "T3SET", "INV_Pants_Mail_38v3", "=ds="..AL["Tier 3 Sets"], ""};
+		
+		{ 1, "SETSCLASSIC", "INV_Sword_43", "=ds="..AL["Classic Sets"], ""};
+		{ 3, 0, "INV_Box_01", "=q6="..AL["BoE World Epics"], ""};
+		{ 4, "WorldEpics1", "INV_Jewelry_Ring_15", "=ds="..AL["Level 30-39"], ""};
+		{ 5, "WorldEpics2", "INV_Staff_29", "=ds="..AL["Level 40-49"], ""};
+		{ 6, "WorldEpics3", "INV_Jewelry_Amulet_01", "=ds="..AL["Level 50-60"], ""};
+		{ 8, "Heirloom", "INV_Sword_43", "=ds="..AL["Heirloom"], ""};
+		{ 9, "Legendaries", "INV_Staff_Medivh", "=ds="..AL["Legendary Items"], ""};
+		{ 16, "T0SET", "INV_Chest_Chain_03", "=ds="..AL["Dungeon 1/2 Sets"], ""};
+		{ 17, "ZGSets1", "INV_Misc_MonsterClaw_04", "=ds="..AL["Zul'Gurub Sets"], ""};
+		{ 18, "AQ20Sets1", "INV_Jewelry_Ring_AhnQiraj_03", "=ds="..AL["Ruins of Ahn'Qiraj Sets"], ""};
+		{ 19, "AQ40Sets1", "INV_Sword_59", "=ds="..AL["Temple of Ahn'Qiraj Sets"], ""};
+		{ 21, "T1SET", "INV_Pants_Mail_03", "=ds="..AL["Tier 1 Sets"], ""};
+		{ 22, "T2SET", "INV_Pants_Mail_26", "=ds="..AL["Tier 2 Sets"], ""};
+		{ 23, "T3SET", "INV_Pants_Mail_38v3", "=ds="..AL["Tier 3 Sets"], ""};
 		Back = "SETMENU"..AtlasLoot_Expac;
+		Type = "Expansion"
 	};
 
 	AtlasLoot_Data["SETMENUTBC"] = {
-		{ 1, "SETMENUCLASSIC", "INV_Helmet_66", "=ds="..AL["Sets - Original WoW"], ""};
-		{ 16, "SETMENUWRATH", "INV_Misc_Ribbon_01", "=ds="..AL["Sets - Wrath of the Lich King"], ""};
-		{ 3, "70TOKENMENU", "Spell_Holy_ChampionsBond", "=ds="..AL["Badge of Justice Rewards"], "=q5="..AL["Burning Crusade"]};
-		{ 5, "Heirloom", "INV_Sword_43", "=ds="..AL["Heirloom"], ""};
-		{ 6, "WorldEpics4", "INV_Sword_76", "=ds=".."World Epics", ""};
-		{ 7, "TBCSets", "INV_Weapon_Glave_01", "=ds="..AL["Burning Crusade Misc Sets"], ""};
-		{ 8, "Legendaries", "INV_Staff_Medivh", "=ds="..AL["Legendary Items"], ""};
-		{ 18, "DS3SET", "INV_Helmet_15", "=ds="..AL["Dungeon 3 Sets"], ""};
-		{ 20, "T4SET", "inv_helmet_58", "=ds="..AL["Tier 4 Sets"], ""};
-		{ 21, "T5SET", "inv_helmet_92", "=ds="..AL["Tier 5 Sets"], ""};
-		{ 22, "T6SET", "inv_helmet_98", "=ds="..AL["Tier 6 Sets"], ""};
+		{ 1, "70TOKENMENU", "Spell_Holy_ChampionsBond", "=ds="..AL["Badge of Justice Rewards"], "=q5="..AL["Burning Crusade"]};
+		{ 3, "Heirloom", "INV_Sword_43", "=ds="..AL["Heirloom"], ""};
+		{ 4, "WorldEpics4", "INV_Sword_76", "=ds=".."World Epics", ""};
+		{ 5, "TBCSets", "INV_Weapon_Glave_01", "=ds="..AL["Burning Crusade Misc Sets"], ""};
+		{ 7, "Legendaries", "INV_Staff_Medivh", "=ds="..AL["Legendary Items"], ""};
+		{ 16, "DS3SET", "INV_Helmet_15", "=ds="..AL["Dungeon 3 Sets"], ""};
+		{ 18, "T4SET", "inv_helmet_58", "=ds="..AL["Tier 4 Sets"], ""};
+		{ 19, "T5SET", "inv_helmet_92", "=ds="..AL["Tier 5 Sets"], ""};
+		{ 20, "T6SET", "inv_helmet_98", "=ds="..AL["Tier 6 Sets"], ""};
 		Back = "SETMENU"..AtlasLoot_Expac;
+		Type = "Expansion"
 	};
 
 	AtlasLoot_Data["SETMENUWRATH"] = {
-		{ 1, "SETMENUCLASSIC", "INV_Helmet_66", "=ds="..AL["Sets - Original WoW"], ""};
-		{ 16, "SETMENUTBC", "INV_Misc_Ribbon_01", "=ds="..AL["Sets - Burning Crusade"], ""};
-		{ 3, "EMBLEMOFFROSTMENU", "inv_misc_frostemblem_01", "=ds="..AL["Emblem of Frost Rewards"], "=q5="..AL["Wrath of the Lich King"]};
-		{ 4, "EMBLEMOFTRIUMPHMENU", "spell_holy_summonchampion", "=ds="..AL["Emblem of Triumph Rewards"], "=q5="..AL["Wrath of the Lich King"]};
-		{ 5, "EMBLEMOFCONQUESTMENU", "Spell_Holy_ChampionsGrace", "=ds="..AL["Emblem of Conquest Rewards"], "=q5="..AL["Wrath of the Lich King"]};
-		{ 6, "EMBLEMOFVALORMENU", "Spell_Holy_ProclaimChampion_02", "=ds="..AL["Emblem of Valor Rewards"], "=q5="..AL["Wrath of the Lich King"]};
-		{ 7, "EMBLEMOFHEROISMMENU", "Spell_Holy_ProclaimChampion", "=ds="..AL["Emblem of Heroism Rewards"], "=q5="..AL["Wrath of the Lich King"]};
-		{ 9, "Heirloom", "INV_Sword_43", "=ds="..AL["Heirloom"], ""};
-		{ 10, "WorldEpicsWrath1", "INV_Sword_109", "=ds=".."World Epics", ""};
-		{ 11, "SETSWRATHOFLICHKING", "inv_misc_monsterscales_15", "=ds="..AL["Wrath of the Lich King Sets"], ""};
-		{ 12, "Legendaries", "INV_Staff_Medivh", "=ds="..AL["Legendary Items"], ""};
-		{ 18, "T7T8SET", "INV_Chest_Chain_15", "=ds="..AL["Tier 7/8 Sets"], "=q5="..AL["10/25 Man"]};
-		{ 19, "T9SET", "inv_gauntlets_80", "=ds="..AL["Tier 9 Sets"], "=q5="..AL["10/25 Man"]};
-		{ 20, "T10SET", "INV_Chest_Chain_15", "=ds="..AL["Tier 10 Sets"], "=q5="..AL["10/25 Man"]};
+		{ 1, "EMBLEMOFFROSTMENU", "inv_misc_frostemblem_01", "=ds="..AL["Emblem of Frost Rewards"], "=q5="..AL["Wrath of the Lich King"]};
+		{ 2, "EMBLEMOFTRIUMPHMENU", "spell_holy_summonchampion", "=ds="..AL["Emblem of Triumph Rewards"], "=q5="..AL["Wrath of the Lich King"]};
+		{ 3, "EMBLEMOFCONQUESTMENU", "Spell_Holy_ChampionsGrace", "=ds="..AL["Emblem of Conquest Rewards"], "=q5="..AL["Wrath of the Lich King"]};
+		{ 4, "EMBLEMOFVALORMENU", "Spell_Holy_ProclaimChampion_02", "=ds="..AL["Emblem of Valor Rewards"], "=q5="..AL["Wrath of the Lich King"]};
+		{ 5, "EMBLEMOFHEROISMMENU", "Spell_Holy_ProclaimChampion", "=ds="..AL["Emblem of Heroism Rewards"], "=q5="..AL["Wrath of the Lich King"]};
+		{ 7, "Heirloom", "INV_Sword_43", "=ds="..AL["Heirloom"], ""};
+		{ 8, "WorldEpicsWrath1", "INV_Sword_109", "=ds=".."World Epics", ""};
+		{ 9, "SETSWRATHOFLICHKING", "inv_misc_monsterscales_15", "=ds="..AL["Wrath of the Lich King Sets"], ""};
+		{ 10, "Legendaries", "INV_Staff_Medivh", "=ds="..AL["Legendary Items"], ""};
+		{ 16, "T7T8SET", "INV_Chest_Chain_15", "=ds="..AL["Tier 7/8 Sets"], "=q5="..AL["10/25 Man"]};
+		{ 17, "T9SET", "inv_gauntlets_80", "=ds="..AL["Tier 9 Sets"], "=q5="..AL["10/25 Man"]};
+		{ 18, "T10SET", "INV_Chest_Chain_15", "=ds="..AL["Tier 10 Sets"], "=q5="..AL["10/25 Man"]};
 		Back = "SETMENU"..AtlasLoot_Expac;
+		Type = "Expansion"
 	};
 
 	AtlasLoot_Data["70TOKENMENU"] = {
