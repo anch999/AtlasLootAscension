@@ -298,7 +298,7 @@ AtlasLoot_DewDropDown = {
 		{ AL["World Bosses"], "WorldBosses", "Submenu" },
 	},
 	[8] = {
-		{ AL["Reputation Factions"], "REPMENU", "Table" },
+		{ AL["Reputation Factions"], "REPMENU"..AtlasLoot_Expac, "Table" },
 	},
 	[9] = {
 		{ AL["World Events"], "WORLDEVENTMENU", "Table" },

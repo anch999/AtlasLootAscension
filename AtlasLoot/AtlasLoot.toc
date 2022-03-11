@@ -39,8 +39,8 @@ Locales\Locales.xml
 TableRegister\TableRegister.xml
 AtlasLayout\AtlasLayout.xml
 Add_Ons\Addons.xml
-Menus\Menus.xml
 Core\AtlasLoot.xml
 DefaultFrame\AtlaslootDefaultFrame.xml
+Menus\Menus.xml
 
 modules.xml

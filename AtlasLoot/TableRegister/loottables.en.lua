@@ -1957,7 +1957,9 @@ end
 	AtlasLoot_TableNames["REPMENU_ORIGINALWOW"] = { AL["Factions - Original WoW"], "Menu" };
 	AtlasLoot_TableNames["REPMENU_BURNINGCRUSADE"] = { AL["Factions - Burning Crusade"], "Menu" };
 	AtlasLoot_TableNames["REPMENU_WOTLK"] = { AL["Factions - Wrath of the Lich King"], "Menu" };
-	AtlasLoot_TableNames["REPMENU"] = { AL["Factions"], "Menu" };
+	AtlasLoot_TableNames["REPMENUCLASSIC"] = { AL["Factions"], "Menu" };
+	AtlasLoot_TableNames["REPMENUTBC"] = { AL["Factions"], "Menu" };
+	AtlasLoot_TableNames["REPMENUWRATH"] = { AL["Factions"], "Menu" };
 	AtlasLoot_TableNames["SETMENU"] = { AL["Collections"], "Menu" };
 	AtlasLoot_TableNames["MOUNTMENU"] = { AL["Mounts"], "Menu" };
 	AtlasLoot_TableNames["PETMENU"] = { AL["Vanity Pets"], "Menu" };

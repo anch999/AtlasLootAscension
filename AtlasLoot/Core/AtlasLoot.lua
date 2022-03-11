@@ -196,7 +196,7 @@ Invoked by the VARIABLES_LOADED event.  Now that we are sure all the assets
 the addon needs are in place, we can properly set up the mod
 ]]
 function AtlasLoot_OnVariablesLoaded()
-    local AtlasCheck = false;
+	local AtlasCheck = false;
     AtlasLoot.db = LibStub("AceDB-3.0"):New("AtlasLootDB");
     AtlasLoot.db:RegisterDefaults(AtlasLootDBDefaults);
 	if not AtlasLootCharDB then AtlasLootCharDB = {} end
@@ -489,6 +489,17 @@ function AtlasLoot_OnLoad()
 	SlashCmdList["ATLASLOOT"] = function(msg)
 		AtlasLoot_SlashCommand(msg);
 	end
+	AtlasLoot_SetExpac();
+end
+
+function AtlasLoot_SetExpac()
+    if GetAccountExpansionLevel() == 0 then
+        AtlasLoot_Expac = "CLASSIC"
+    elseif GetAccountExpansionLevel() == 1 then
+        AtlasLoot_Expac = "TBC"
+    elseif GetAccountExpansionLevel() == 2 then
+        AtlasLoot_Expac = "WRATH"
+    end
 end
 
 --[[
