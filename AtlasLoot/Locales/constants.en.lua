@@ -201,8 +201,8 @@ if AL then
 	AL["Ruins of Ahn'Qiraj Sets"] = true;
 	AL["Temple of Ahn'Qiraj Sets"] = true;
 	AL["Tabards"] = true;
-	AL["Tier 1/2 Sets"] = true;
-	AL["Tier 1/2/3 Sets"] = true;
+	AL["Tier 1 Sets"] = true;
+	AL["Tier 2 Sets"] = true;
 	AL["Tier 3 Sets"] = true;
 	AL["Tier 4 Sets"] = true;
 	AL["Tier 5 Sets"] = true;
@@ -642,7 +642,7 @@ if AL then
 	AL["Paint Bomb"] = true;
 
 	-- Battleground Brackets
-	AL["BG/Open PvP Rewards"] = true;
+	AL["BG PvP Rewards"] = true;
 	AL["Misc. Rewards"] = true;
 	AL["Level 20-39 Rewards"] = true;
 	AL["Level 20-29 Rewards"] = true;

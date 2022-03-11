@@ -8190,7 +8190,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 28, 42137, "", "=q4=Battlemaster's Ruination", "=ds=", "34100 #faction#"};
 		{ 29, 42135, "", "=q4=Battlemaster's Vivacity", "=ds=", "34100 #faction#"};
 		Next = "PvP80NonSet2";
-		Back = "PVPMENU"..AtlasLoot_Expac;
+		Back = "PVPMENUWRATH";
 	};
 
 	AtlasLoot_Data["PvP80NonSet2"] = {
@@ -8212,7 +8212,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 22, 42041, "", "=q4=Relentless Gladiator's Pendant of Triumph", "=ds=", "26100 #faction#"};
 		{ 23, 42042, "", "=q4=Relentless Gladiator's Pendant of Victory", "=ds=", "26100 #faction#"};
 		Prev = "PvP80NonSet1";
-		Back = "PVPMENU"..AtlasLoot_Expac;
+		Back = "PVPMENUWRATH";
 	};
 
 --Cloth
@@ -8344,7 +8344,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 29, 51440, "", "=q4=Wrathful Gladiator's Dicer", "=ds=#h4#, #w1#", "1370 #arena# #reqrating# 2200"};
 		{ 30, 51526, "", "=q4=Wrathful Gladiator's Splitter", "=ds=#h4#, #w1#", "1370 #arena# #reqrating# 2200"};
 		Next = "WrathfulGladiatorWeapons2";
-		Back = "PVPMENU"..AtlasLoot_Expac;
+		Back = "PVPMENUWRATH";
 	};
 
 	AtlasLoot_Data["WrathfulGladiatorWeapons2"] = {
@@ -8380,7 +8380,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 30, 51450, "", "=q4=Wrathful Gladiator's Shotgun", "=ds=#w5#", "4670 #arena# #reqrating# 2200"};
 		Prev = "WrathfulGladiatorWeapons1";
 		Next = "WrathfulGladiatorWeapons3";
-		Back = "PVPMENU"..AtlasLoot_Expac;
+		Back = "PVPMENUWRATH";
 	};
 
 	AtlasLoot_Data["WrathfulGladiatorWeapons3"] = {
@@ -8397,7 +8397,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 11, 51408, "", "=q4=Wrathful Gladiator's Grimoire", "=ds=#s15#", "350 #arena# #reqrating# 1800"};
 		{ 12, 51409, "", "=q4=Wrathful Gladiator's Reprieve", "=ds=#s15#", "350 #arena# #reqrating# 1800"};
 		Prev = "WrathfulGladiatorWeapons2";
-		Back = "PVPMENU"..AtlasLoot_Expac;
+		Back = "PVPMENUWRATH";
 	};
 
 		-----------------------
@@ -8472,7 +8472,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 25, 41560, "", "=q2=Design: Stormy Chalcedony", "=ds=#p12# (350)", "1250 #faction#"};
 		{ 26, 41570, "", "=q2=Design: Tense Dark Jade", "=ds=#p12# (350)", "1250 #faction#"};
 		{ 27, 41571, "", "=q2=Design: Turbid Dark Jade", "=ds=#p12# (350)", "1250 #faction#"};
-		Back = "PVPMENU"..AtlasLoot_Expac;
+		Back = "PVPMENUWRATH";
 	};
 
 		--------------------------------
@@ -10504,8 +10504,8 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 
 	AtlasLoot_Data["Legendaries"] = {
 		{ 1, 34334, "", "=q5=Thori'dal, the Stars' Fury", "=ds=#w2#"};
-		{ 3, 32837, "", "=q5=Warglaive of Azzinoth", "=ds=#h3#, #w10#, =q1=#m1# =ds=#c9#, #c6#", "", "4%", "(MainHand)"};
-		{ 4, 32838, "", "=q5=Warglaive of Azzinoth", "=ds=#h4#, #w10#, =q1=#m1# =ds=#c9#, #c6#", "", "4%", "(OffHand)"};
+		{ 3, 32837, "", "=q5=Warglaive of Azzinoth", "=ds=#h3#, #w10#, =q1=#m1# =ds=#c9#, #c6#", "", "4%", [AtlasLoot_Difficulty.DUPLICATE] = "(Mainhand)"};
+		{ 4, 32838, "", "=q5=Warglaive of Azzinoth", "=ds=#h4#, #w10#, =q1=#m1# =ds=#c9#, #c6#", "", "4%", [AtlasLoot_Difficulty.DUPLICATE] = "(Offhand)"};
 		{ 6, 30312, "", "=q5=Infinity Blade", "=q1=#m26#: =ds=#h1#, #w4#"};
 		{ 7, 30311, "", "=q5=Warp Slicer", "=q1=#m26#: =ds=#h1#, #w10#"};
 		{ 8, 30317, "", "=q5=Cosmic Infuser", "=q1=#m26#: =ds=#h3#, #w6#"};
@@ -10518,13 +10518,13 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 17, 19019, "", "=q5=Thunderfury, Blessed Blade of the Windseeker", "=ds=#h1#, #w10#"};
 		{ 18, 17182, "", "=q5=Sulfuras, Hand of Ragnaros", "=ds=#h2#, #w6#"};
 		{ 19, 21176, "", "=q5=Black Qiraji Resonating Crystal", "=ds=#e12#"};
-		{ 21, 22632, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#w9#, =q1=#m1# =ds=#c1#", "", "", "(Druid)"};
-		{ 22, 22589, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#w9#, =q1=#m1# =ds=#c3#", "", "", "(Mage)" };
-		{ 23, 22631, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#w9#, =q1=#m1# =ds=#c5#", "", "", "(Priest)"};
-		{ 24, 22630, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#w9#, =q1=#m1# =ds=#c8#", "", "", "(Warlock)"};
+		{ 21, 22632, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c1#", "", "", [AtlasLoot_Difficulty.DUPLICATE] = "(Druid)" },
+		{ 22, 22589, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c3#", "", "", [AtlasLoot_Difficulty.DUPLICATE] = "(Mage)" },
+		{ 23, 22631, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c5#", "", "", [AtlasLoot_Difficulty.DUPLICATE] = "(Priest)" },
+		{ 24, 22630, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c8#", "", "", [AtlasLoot_Difficulty.DUPLICATE] = "(Warlock)" },
 		{ 26, 49623, "", "=q5=Shadowmourne", "=ds=#h2# #w1#", "" };
 		{ 27, 46017, "", "=q5=Val'anyr, Hammer of Ancient Kings", "=ds=#h3# #w6#", "" };
-		Back = "SETMENU"..AtlasLoot_Expac;
+		Back = "SETMENUWRATH";
 		Type = "BCRaid";
 	};
 
@@ -10560,7 +10560,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 29, 45584, "", "=q1=Thunder Bluff Tabard", "=ds=#s7# =ec1=#m6#"};
 		{ 30, 45583, "", "=q1=Undercity Tabard", "=ds=#s7# =ec1=#m6#"};
 		Next = "Tabards2";
-		Back = "SETMENU"..AtlasLoot_Expac;
+		Back = "SETMENUWRATH";
 	};
 
 	AtlasLoot_Data["Tabards2"] = {
@@ -10595,7 +10595,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 30, 24004, "", "=q1=Thrallmar Tabard", "=ds=#s7#, =ec1=#m6#"};
 		Prev = "Tabards3";
 		Next = "Tabards1";
-		Back = "SETMENU"..AtlasLoot_Expac;
+		Back = "SETMENUWRATH";
 	};
 
 	AtlasLoot_Data["Tabards1"] = {
@@ -10619,7 +10619,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 22, 28788, "", "=q1=Tabard of the Protector", "=ds=#s7#, =q1=#m4#"};
 		{ 23, 19160, "", "=q1=Contest Winner's Tabard", "=ds=#s7#"};
 		Prev = "Tabards2";
-		Back = "SETMENU"..AtlasLoot_Expac;
+		Back = "SETMENUWRATH";
 	};
 
 		----------------------------------
@@ -10653,7 +10653,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 28, 38578, "", "=q3=The Flag of Ownership", "=ds=#ud29#"};
 		{ 29, 38577, "", "=q1=Party G.R.E.N.A.D.E.", "=ds=#ud30#"};
 		Next = "CardGame2";
-		Back = "SETMENU"..AtlasLoot_Expac;
+		Back = "SETMENUWRATH";
 	};
 
 	AtlasLoot_Data["CardGame2"] = {
@@ -10685,7 +10685,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 30, 23720, "", "=q4=Riding Turtle", "=ds=#ud8#"};	
 		Prev = "CardGame1";
 		Next = "CardGame3";
-		Back = "SETMENU"..AtlasLoot_Expac;
+		Back = "SETMENUWRATH";
 	};
 
 	AtlasLoot_Data["CardGame3"] = {
@@ -10701,7 +10701,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 10, 49704, "", "=q4=Carved Ogre Idol", "=ds="};
 		{ 11, 49703, "", "=q4=Perpetual Purple Firework", "=ds="};
 		Prev = "CardGame2";
-		Back = "SETMENU"..AtlasLoot_Expac;
+		Back = "SETMENUWRATH";
 	};
 
 		-------------------
@@ -11318,7 +11318,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 29, 42947, "", "=q7=Dignified Headmaster's Charge", "=ds=#w9#", "65 #eofheroism#  / 95 #champseal#"};
 		{ 30, 42946, "", "=q7=Charmed Ancient Bone Bow", "=ds=#w2#", "65 #eofheroism#  / 95 #champseal#"};
 		Next = "Heirloom2";
-		Back = "SETMENU"..AtlasLoot_Expac;
+		Back = "SETMENUWRATH";
 	};
 
 	AtlasLoot_Data["Heirloom2"] = {
@@ -11339,7 +11339,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 20, 44095, "", "=q7=Grand Staff of Jordan", "=ds=#w9#", "325 #wintergrasp#"};
 		{ 21, 44093, "", "=q7=Upgraded Dwarven Hand Cannon", "=ds=#w5#", "325 #wintergrasp#"};
 		Prev = "Heirloom";
-		Back = "SETMENU"..AtlasLoot_Expac;
+		Back = "SETMENUWRATH";
 	};
 
 		-------------------------------
@@ -11672,7 +11672,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 29, 50987, "", "=q4=Malevolant Girdle", "=ds=#s10#, #a4#", "60 #eoffrost#" };
 		{ 30, 50991, "", "=q4=Verdigris Chain Belt", "=ds=#s10#, #a4#", "60 #eoffrost#" };
 		Next = "EmblemofFrost2";
-		Back = "SETMENU"..AtlasLoot_Expac;
+		Back = "SETMENUWRATH";
 	};
 
 	AtlasLoot_Data["EmblemofFrost2"] = {
@@ -11700,5 +11700,5 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 26, 50464, "", "=q4=Totem of the Surging Sea", "=ds=#s16#, #w15#", "30 #eoffrost#" };
 		{ 28, 50474, "", "=q4=Shrapnel Star", "=ds=#w11#", "30 #eoffrost#" };
 		Prev = "EmblemofFrost";
-		Back = "SETMENU"..AtlasLoot_Expac;
+		Back = "SETMENUWRATH";
 	};
