@@ -9,12 +9,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 4, "PVPMENU2", "INV_Jewelry_Necklace_21", "=ds="..AL["BG PvP Rewards"], ""};
 		{ 16, "PVPWeapons_A", "INV_Weapon_Bow_08", "=ds="..AL["PvP Weapons"], "=q5="..AL["Level 60"]};
 		{ 17, "PvP60Ench", "INV_Scroll_06", "=ds="..AL["PvP Enchants"], "=q5="..AL["Level 60"]};
-<<<<<<< Updated upstream
-=======
-		Prev = "PVPMENUWRATH";
-		Next = "PVPMENUTBC";
-		Back = "PVPMENU"..AtlasLoot_Expac;
->>>>>>> Stashed changes
 	};
 
 	AtlasLoot_Data["PVPMENUTBC"] = {
@@ -31,13 +25,9 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 18, "Arena2Weapons1", "INV_Weapon_Crossbow_11", "=ds="..AL["Arena Season 2 Weapons"], "=q5="..AL["Level 70"]};
 		{ 19, "Arena3Weapons1", "INV_Weapon_Crossbow_12", "=ds="..AL["Arena Season 3 Weapons"], "=q5="..AL["Level 70"]};
 		{ 20, "Arena4Weapons1", "inv_weapon_crossbow_26", "=ds="..AL["Arena Season 4 Weapons"], "=q5="..AL["Level 70"]};
-<<<<<<< Updated upstream
-		Type = "Expansion"
-=======
 		Prev = "PVPMENUCLASSIC";
 		Next = "PVPMENUWRATH";
 		Back = "PVPMENU"..AtlasLoot_Expac;
->>>>>>> Stashed changes
 	};
 
 	AtlasLoot_Data["PVPMENUWRATH"] = {
@@ -48,12 +38,9 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 6, "VentureBay1", "INV_Misc_Coin_16", "=ds="..BabbleZone["Grizzly Hills"], "=q5="..AL["Venture Bay"]};
 		{ 16, "PVP80NONSETEPICS", "inv_bracer_51", "=ds="..AL["PvP Non-Set Epics"], "=q5="..AL["Level 80"]};
 		{ 17, "WrathfulGladiatorWeapons1", "INV_Sword_86", "=ds="..AL["Wrathful Gladiator\'s Weapons"], "=q5="..AL["Level 80"] };
-<<<<<<< Updated upstream
-=======
 		Prev = "PVPMENUTBC";
 		Next = "PVPMENUCLASSIC";
 		Back = "PVPMENU"..AtlasLoot_Expac;
->>>>>>> Stashed changes
 	};
 
 	AtlasLoot_Data["PVPMENU2"] = {
