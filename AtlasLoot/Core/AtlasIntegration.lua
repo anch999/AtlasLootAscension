@@ -37,8 +37,7 @@ function AtlasLootBoss_OnClick(name)
     local zoneID = ATLAS_DROPDOWNS[AtlasOptions.AtlasType][AtlasOptions.AtlasZone];
     local id = this.idnum;
     
-    AtlasLoot_Lastboss = AtlasLootBossButtons[zoneID][id];
-    AtlasLoot_Hold = false;
+    
     --If the loot table was already shown and boss clicked again, hide the loot table and fix boss list icons
     if getglobal(name.."_Selected"):IsVisible() then
         getglobal(name.."_Selected"):Hide();
@@ -55,6 +54,8 @@ function AtlasLootBoss_OnClick(name)
                 AtlasLoot_ShowBossLoot(AtlasLootBossButtons[zoneID][id], boss, AtlasFrame);
                 AtlasLootItemsFrame.activeBoss = id;
                 AtlasLoot_AtlasScrollBar_Update();
+                AtlasLoot_Lastboss = AtlasLootBossButtons[zoneID][id];
+                AtlasLoot_Hold = false;
             end
         elseif (AtlasLootWBBossButtons[zoneID] ~= nil and AtlasLootWBBossButtons[zoneID][id] ~= nil and AtlasLootWBBossButtons[zoneID][id] ~= "") then
             if AtlasLoot_IsLootTableAvailable(AtlasLootWBBossButtons[zoneID][id]) then

@@ -37,7 +37,7 @@ AtlasLootWBBossButtons = {
         };
 
     DoomLordKazzak = {
-        "WorldBossesCLASSIC";
+        "WorldBossesTBC";
         };
     Doomwalker = {
         "WorldBossesTBC";

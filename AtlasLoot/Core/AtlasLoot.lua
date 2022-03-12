@@ -495,22 +495,26 @@ function AtlasLoot_OnLoad()
 	AtlasLoot_SetExpac();
 end
 
+--Sets Expansion for seasonal/leagues
 function AtlasLoot_SetExpac()
-    if GetAccountExpansionLevel() == 0 then
-        AtlasLoot_Expac = "CLASSIC";
+	if GetAccountExpansionLevel() == 0 then
+		AtlasLoot_Expac = "CLASSIC";
 		AtlasLoot_Expac2 = "TBC";
 		AtlasLoot_Expac3 = "WRATH";
-    elseif GetAccountExpansionLevel() == 1 then
-        AtlasLoot_Expac = "TBC";
+	elseif GetAccountExpansionLevel() == 1 then
+		AtlasLoot_Expac = "TBC";
 		AtlasLoot_Expac2 = "CLASSIC";
 		AtlasLoot_Expac3 = "WRATH";
-    elseif GetAccountExpansionLevel() == 2 then
-        AtlasLoot_Expac = "WRATH";
+	elseif GetAccountExpansionLevel() == 2 then
+		AtlasLoot_Expac = "WRATH";
 		AtlasLoot_Expac2 = "CLASSIC";
 		AtlasLoot_Expac3 = "TBC";
-    end
+	else
+		AtlasLoot_Expac = "CLASSIC";
+		AtlasLoot_Expac2 = "TBC";
+		AtlasLoot_Expac3 = "WRATH";
+	end
 end
-
 --[[
 AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame):
 dataID - Name of the loot table
