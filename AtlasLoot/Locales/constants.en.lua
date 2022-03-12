@@ -653,6 +653,14 @@ if AL then
 	AL["Level 40-49 Rewards"] = true;
 	AL["Level 60 Rewards"] = true;
 
+	-- Sets/PVP/Rep Menus
+	AL["Original WOW Collections"] = true;
+	AL["Burning Crusade Collections"] = true;
+	AL["Wrath of the Lich King Collections"] = true;
+	AL["Original WOW PvP Rewards"] = true;
+	AL["Burning Crusade PvP Rewards"] = true;
+	AL["Wrath of the Lich King PvP Rewards"] = true;
+
 	-- Brood of Nozdormu Paths
 	AL["Path of the Conqueror"] = true;
 	AL["Path of the Invoker"] = true;

@@ -493,6 +493,7 @@ function AtlasLoot_OnLoad()
 		AtlasLoot_SlashCommand(msg);
 	end
 
+<<<<<<< Updated upstream
 	--Set defualt to classic as that seems to be where most players are.
 	local function getExpacByLevel()
 			if UnitLevel("player") > 60 then
@@ -502,6 +503,22 @@ function AtlasLoot_OnLoad()
 			end
 	end
 	AtlasLoot_Expac = ATLAS_EXPANSION[GetAccountExpansionLevel()] or getExpacByLevel();
+=======
+function AtlasLoot_SetExpac()
+    if GetAccountExpansionLevel() == 0 then
+        AtlasLoot_Expac = "CLASSIC";
+		AtlasLoot_Expac2 = "TBC";
+		AtlasLoot_Expac3 = "WRATH";
+    elseif GetAccountExpansionLevel() == 1 then
+        AtlasLoot_Expac = "TBC";
+		AtlasLoot_Expac2 = "CLASSIC";
+		AtlasLoot_Expac3 = "WRATH";
+    elseif GetAccountExpansionLevel() == 2 then
+        AtlasLoot_Expac = "WRATH";
+		AtlasLoot_Expac2 = "CLASSIC";
+		AtlasLoot_Expac3 = "TBC";
+    end
+>>>>>>> Stashed changes
 end
 
 --[[

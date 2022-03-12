@@ -10,7 +10,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 --		{ #, "PVPMENU", "INV_Axe_02", "=ds="..AL["PvP Rewards"], ""};
 
 	AtlasLoot_Data["SETMENUCLASSIC"] = {
+<<<<<<< Updated upstream
 		
+=======
+>>>>>>> Stashed changes
 		{ 1, "SETSCLASSIC", "INV_Sword_43", "=ds="..AL["Classic Sets"], ""};
 		{ 3, 0, "INV_Box_01", "=q6="..AL["BoE World Epics"], ""};
 		{ 4, "WorldEpics1", "INV_Jewelry_Ring_15", "=ds="..AL["Level 30-39"], ""};
@@ -25,6 +28,11 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 21, "T1SET", "INV_Pants_Mail_03", "=ds="..AL["Tier 1 Sets"], ""};
 		{ 22, "T2SET", "INV_Pants_Mail_26", "=ds="..AL["Tier 2 Sets"], ""};
 		{ 23, "T3SET", "INV_Pants_Mail_38v3", "=ds="..AL["Tier 3 Sets"], ""};
+<<<<<<< Updated upstream
+=======
+		Prev = "SETMENUWRATH";
+		Next = "SETMENUTBC";
+>>>>>>> Stashed changes
 		Back = "SETMENU"..AtlasLoot_Expac;
 		Type = "Expansion"
 	};
@@ -34,11 +42,20 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 3, "Heirloom", "INV_Sword_43", "=ds="..AL["Heirloom"], ""};
 		{ 4, "WorldEpics4", "INV_Sword_76", "=ds=".."World Epics", ""};
 		{ 5, "TBCSets", "INV_Weapon_Glave_01", "=ds="..AL["Burning Crusade Misc Sets"], ""};
+<<<<<<< Updated upstream
 		{ 7, "Legendaries", "INV_Staff_Medivh", "=ds="..AL["Legendary Items"], ""};
+=======
+		{ 6, "Legendaries", "INV_Staff_Medivh", "=ds="..AL["Legendary Items"], ""};
+>>>>>>> Stashed changes
 		{ 16, "DS3SET", "INV_Helmet_15", "=ds="..AL["Dungeon 3 Sets"], ""};
 		{ 18, "T4SET", "inv_helmet_58", "=ds="..AL["Tier 4 Sets"], ""};
 		{ 19, "T5SET", "inv_helmet_92", "=ds="..AL["Tier 5 Sets"], ""};
 		{ 20, "T6SET", "inv_helmet_98", "=ds="..AL["Tier 6 Sets"], ""};
+<<<<<<< Updated upstream
+=======
+		Prev = "SETMENUCLASSIC";
+		Next = "SETMENUWRATH";
+>>>>>>> Stashed changes
 		Back = "SETMENU"..AtlasLoot_Expac;
 		Type = "Expansion"
 	};
@@ -56,6 +73,11 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 16, "T7T8SET", "INV_Chest_Chain_15", "=ds="..AL["Tier 7/8 Sets"], "=q5="..AL["10/25 Man"]};
 		{ 17, "T9SET", "inv_gauntlets_80", "=ds="..AL["Tier 9 Sets"], "=q5="..AL["10/25 Man"]};
 		{ 18, "T10SET", "INV_Chest_Chain_15", "=ds="..AL["Tier 10 Sets"], "=q5="..AL["10/25 Man"]};
+<<<<<<< Updated upstream
+=======
+		Prev = "SETMENUTBC";
+		Next = "SETMENUCLASSIC";
+>>>>>>> Stashed changes
 		Back = "SETMENU"..AtlasLoot_Expac;
 		Type = "Expansion"
 	};

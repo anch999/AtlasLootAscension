@@ -18,29 +18,29 @@ AtlasLootWBBossButtons = {
         "";
         "";
         "";
-        "DLethon";
-        "DEmeriss";
-        "DTaerar";
-        "DYsondre";
+        "WorldBossesCLASSIC";
+        "WorldBossesCLASSIC";
+        "WorldBossesCLASSIC";
+        "WorldBossesCLASSIC";
         };
 
     Azuregos = {
-        "WorldBossesClassic";
+        "WorldBossesCLASSIC";
         };
 
     Kazzak = {
-        "Kazzak60";
+        "WorldBossesCLASSIC";
         };
 
     Setis = {
-        "Setis";
+        "WorldBossesCLASSIC";
         };
 
     DoomLordKazzak = {
-        "WorldBossesBC";
+        "WorldBossesCLASSIC";
         };
     Doomwalker = {
-        "WorldBossesBC";
+        "WorldBossesTBC";
         };
 
     Skettis = {

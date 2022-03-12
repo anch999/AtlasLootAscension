@@ -7539,7 +7539,7 @@ AtlasLoot_Data["PVPWarrior2"] = {
 		{ 18, 6774, "", "=q2=Uthek's Finger", "=q1=#m4#: =ds=#s15#"};
 		{ 20, 0, "INV_Jewelry_Amulet_07", "=q6=#b6#", "=q5=#r5#, =q1="..BabbleFaction["Horde"]};
 		{ 21, 20131, "", "=q1=Battle Tabard of the Defilers", "=q1=#m4#: =ds=#s7#"};
-		Back = "REPMENU_ORIGINALWOW";
+		Back = "REPMENUCLASSIC";
 	};
 
 		-------------------
@@ -7564,7 +7564,7 @@ AtlasLoot_Data["PVPWarrior2"] = {
 		{ 23, 22636, "", "=q3=Ice Guard", "=ds=#s1# #e17#"};
 		{ 25, 22524, "", "=q2=Insignia of the Crusade", "=ds=#m17#"};
 		Next = "Argent2";
-		Back = "REPMENU_ORIGINALWOW";
+		Back = "REPMENUCLASSIC";
 	};
 
 	AtlasLoot_Data["Argent2"] = {
@@ -7593,7 +7593,7 @@ AtlasLoot_Data["PVPWarrior2"] = {
 		{ 29, 0, "INV_Jewelry_Talisman_08", "=q6=#r5#", ""};
 		{ 30, 18182, "", "=q2=Chromatic Mantle of the Dawn", "=ds=#s3# #e17#"};
 		Prev = "Argent1";
-		Back = "REPMENU_ORIGINALWOW";
+		Back = "REPMENUCLASSIC";
 	};
 
 		---------------------------------------------------
@@ -7614,7 +7614,7 @@ AtlasLoot_Data["PVPWarrior2"] = {
 		{ 19, 17333, "", "=q1=Aqual Quintessence", "=ds=#m3#"};
 		{ 21, 0, "Spell_Frost_SummonWaterElemental_2", "=q6="..BabbleFaction["Hydraxian Waterlords"], "=q5=#r4#"};
 		{ 22, 22754, "", "=q1=Eternal Quintessence", "=ds=#m3#"};
-		Back = "REPMENU_ORIGINALWOW";
+		Back = "REPMENUCLASSIC";
 	};
 		-------------------------
 		--- Brood of Nozdormu ---
@@ -7639,7 +7639,7 @@ AtlasLoot_Data["PVPWarrior2"] = {
 		{ 19, 21198, "", "=q4=Signet Ring of the Bronze Dragonflight", "=ds=#s13#, =q1=#r3#"};
 		{ 20, 21199, "", "=q4=Signet Ring of the Bronze Dragonflight", "=ds=#s13#, =q1=#r4#"};
 		{ 21, 21200, "", "=q4=Signet Ring of the Bronze Dragonflight", "=ds=#s13#, =q1=#r5#"};
-		Back = "REPMENU_ORIGINALWOW";
+		Back = "REPMENUCLASSIC";
 	};
 
 		-----------------------
@@ -7665,7 +7665,7 @@ AtlasLoot_Data["PVPWarrior2"] = {
 		{ 25, 20801, "", "=q2=Cenarion Tactical Badge", "=ds=#m17#"};
 		{ 26, 21508, "", "=q2=Mark of Cenarius", "=ds=#m17#"};
 		Next = "Cenarion2";
-		Back = "REPMENU_ORIGINALWOW";
+		Back = "REPMENUCLASSIC";
 	};
 
 	AtlasLoot_Data["Cenarion2"] = {
@@ -7682,7 +7682,7 @@ AtlasLoot_Data["PVPWarrior2"] = {
 		{ 19, 21181, "", "=q3=Grace of Earth", "=ds=#s14#", "7 #ccombat# 4 #clogistics# 4 #ctactical#"};
 		Next = "Cenarion3";
 		Prev = "Cenarion1";
-		Back = "REPMENU_ORIGINALWOW";
+		Back = "REPMENUCLASSIC";
 	};
 
 	AtlasLoot_Data["Cenarion3"] = {
@@ -7701,7 +7701,7 @@ AtlasLoot_Data["PVPWarrior2"] = {
 		{ 20, 21185, "", "=q4=Earthcalm Orb", "=ds=#s15#", "15 #ccombat# 20 #clogistics# 17 #ctactical# 1 #cremulos#"};
 		Next = "Cenarion4";
 		Prev = "Cenarion2";
-		Back = "REPMENU_ORIGINALWOW";
+		Back = "REPMENUCLASSIC";
 	};
 
 	AtlasLoot_Data["Cenarion4"] = {
@@ -7712,7 +7712,7 @@ AtlasLoot_Data["PVPWarrior2"] = {
 		{ 18, 21180, "", "=q4=Earthstrike", "=ds=#s14#", "15 #ccombat# 20 #clogistics# 20 #ctactical# 1 #ccenarius#"};
 		{ 19, 21188, "", "=q4=Fist of Cenarius", "=ds=#h2#, #w6#", "15 #ccombat# 20 #clogistics# 20 #ctactical# 1 #ccenarius#", "", ""};
 		Prev = "Cenarion3";
-		Back = "REPMENU_ORIGINALWOW";
+		Back = "REPMENUCLASSIC";
 	};
 
 		----------------------------------------
@@ -7738,7 +7738,7 @@ AtlasLoot_Data["PVPWarrior2"] = {
 		{ 20, 17906, "", "=q2=Frostwolf Insignia Rank 3", "=ds=#s14#, =q1=#r3#"};
 		{ 21, 17905, "", "=q2=Frostwolf Insignia Rank 2", "=ds=#s14#, =q1=#r2#"};
 		{ 22, 17690, "", "=q2=Frostwolf Insignia Rank 1", "=ds=#s14#, =q1=#r1#"};
-		Back = "REPMENU_ORIGINALWOW";
+		Back = "REPMENUCLASSIC";
 	};
 
 		---------------------------
@@ -7764,7 +7764,7 @@ AtlasLoot_Data["PVPWarrior2"] = {
 		{ 24, 17017, "", "=q1=Pattern: Flarecore Mantle", "=ds=#p8# (300)"};
 		{ 25, 19219, "", "=q1=Pattern: Flarecore Robe", "=ds=#p8# (300)"};
 		Next = "Thorium2";
-		Back = "REPMENU_ORIGINALWOW";
+		Back = "REPMENUCLASSIC";
 	};
 
 	AtlasLoot_Data["Thorium2"] = {
@@ -7786,7 +7786,7 @@ AtlasLoot_Data["PVPWarrior2"] = {
 		{ 19, 19210, "", "=q1=Plans: Ebon Hand", "=ds=#p2# (300)"};
 		{ 20, 19212, "", "=q1=Plans: Nightfall", "=ds=#p2# (300)"};
 		Prev = "Thorium1";
-		Back = "REPMENU_ORIGINALWOW";
+		Back = "REPMENUCLASSIC";
 	};
 
 		----------------------
@@ -7812,7 +7812,7 @@ AtlasLoot_Data["PVPWarrior2"] = {
 		{ 19, 19218, "", "=q1=Pattern: Mantle of the Timbermaw", "=ds=#p8# (300)"};
 		{ 22, 0, "INV_Misc_Horn_01", "=q6=#r5#", ""};
 		{ 23, 21326, "", "=q4=Defender of the Timbermaw", "=q1=#m4#: =ds=#s14#"};
-		Back = "REPMENU_ORIGINALWOW";
+		Back = "REPMENUCLASSIC";
 	};
 
 		----------------------
@@ -7840,7 +7840,7 @@ AtlasLoot_Data["PVPWarrior2"] = {
 		{ 24, 19765, "", "=q1=Pattern: Bloodvine Leggings", "=ds=#p8# (300)"};
 		{ 25, 20031, "", "=q1=Essence Mango", "=ds=#e3#", "1 #zandalar#", ""};
 		Next = "Zandalar2";
-		Back = "REPMENU_ORIGINALWOW";
+		Back = "REPMENUCLASSIC";
 	};
 
 	AtlasLoot_Data["Zandalar2"] = {
@@ -7860,7 +7860,7 @@ AtlasLoot_Data["PVPWarrior2"] = {
 		{ 19, 20078, "", "=q3=Zandalar Signet of Serenity", "=ds=#s3# #e17#", "15 #zandalar#", ""};
 		{ 20, 20013, "", "=q1=Recipe: Living Action Potion", "=ds=#p1# (285)"};
 		Prev = "Zandalar1";
-		Back = "REPMENU_ORIGINALWOW";
+		Back = "REPMENUCLASSIC";
 	};
 
 	--------------------
@@ -7871,150 +7871,97 @@ AtlasLoot_Data["PVPWarrior2"] = {
 		--- Dragons of Nightmare ---
 		----------------------------
 
-	AtlasLoot_Data["DEmeriss"] = {
-		{ 1, 20579, "", "=q4=Green Dragonskin Cloak", "=ds=#s4# =q1=#m5#", "", "9.14%"};
-		{ 2, 20618, "", "=q4=Gloves of Delusional Power", "=ds=#s9#, #a1# =q1=#m5#", "", "9.71%"};
-		{ 3, 20615, "", "=q4=Dragonspur Wraps", "=ds=#s8#, #a2# =q1=#m5#", "", "8.83%"};
-		{ 4, 20617, "", "=q4=Ancient Corroded Leggings", "=ds=#s11#, #a3# =q1=#m5#", "", "9.80%"};
-		{ 5, 20616, "", "=q4=Dragonbone Wristguards", "=ds=#s8#, #a4# =q1=#m5#", "", "10.20%"};
-		{ 6, 20619, "", "=q4=Acid Inscribed Greaves", "=ds=#s12#, #a4# =q1=#m5#", "", "8.85%"};
-		{ 7, 20582, "", "=q4=Trance Stone", "=ds=#s15# =q1=#m5#", "", "9.57%"};
-		{ 8, 20580, "", "=q4=Hammer of Bestial Fury", "=ds=#h3#, #w6# =q1=#m5#", "", "8.93%"};
-		{ 9, 20581, "", "=q4=Staff of Rampant Growth", "=ds=#w9# =q1=#m5#", "", "9.70%"};
-		{ 11, 20644, "", "=q4=Nightmare Engulfed Object", "=ds=#m3# =q1=#m5#", "", "80.05%"};
-		{ 12, 20600, "", "=q4=Malfurion's Signet Ring", "=q1=#m4#: =ds=#s13#"};
-		{ 16, 20623, "", "=q4=Circlet of Restless Dreams", "=ds=#s1#, #a2#", "", "10.51%"};
-		{ 17, 20621, "", "=q4=Boots of the Endless Moor", "=ds=#s12#, #a3#", "", "10.24%"};
-		{ 18, 20622, "", "=q4=Dragonheart Necklace", "=ds=#s2#", "", "12.35%"};
-		{ 19, 20624, "", "=q4=Ring of the Unliving", "=ds=#s13#", "", "13.23%"};
+	AtlasLoot_Data["WorldBossesCLASSIC"] = {
+		{ 1, 0, "inv_sword_74", "=q4=Physical Gear",  "", "", "", "=LT=WorldBossesClassicPhysDPS"};
+		{ 2, 0, "inv_wand_1h_zuldazarraid_d_01", "=q4=Caster Gear",  "", "", "", "=LT=WorldBossesClassicCaster"};
+		{ 16, 0, "inv_shield_draenorcrafted_d_01_a_alliance", "=q4=Tank Gear",  "", "", "", "=LT=WorldBossesClassicTank"};
+		{ 4, 20581, "", "=q4=Staff of Rampant Growth", "=ds=#w9# =q1=#m5#", "", "9.70%"};
+		{ 5, 17070, "", "=q4=Fang of the Mystics", "=ds=#h3#, #w4#", "", "13.64%"};
+		{ 6, 19130, "", "=q4=Cold Snap", "=ds=#w12#", "", "11.89%"};
+		{ 7, 17113, "", "=q4=Amberseal Keeper", "=ds=#h2#, #w9#", "", "16.87% "};
+		{ 8, 20636, "", "=q4=Hibernation Crystal", "=ds=#s14#", "", "12.75%"};
+		{ 9, 20582, "", "=q4=Trance Stone", "=ds=#s15# =q1=#m5#", "", "9.57%"};
+		{ 10, 18665, "", "=q4=The Eye of Shadow", "=ds=#s14#", "", "40.96%"};
+		{ 12, 18704, "", "=q4=Mature Blue Dragon Sinew", "=ds=#m3# =q1=(#c2#)", "", "51.56%"};
+		{ 13, 18714, "", "=q4=Ancient Sinew Wrapped Lamina", "=q1=#m4#: =ds=#m14# #w19#"};
+		{ 19, 20580, "", "=q4=Hammer of Bestial Fury", "=ds=#h3#, #w6# =q1=#m5#", "", "8.93%"};
 		{ 20, 20599, "", "=q4=Polished Ironwood Crossbow", "=ds=#w3#", "", "12.63%"};
-		Prev = "WorldBossesClassic";
-		Next = "DLethon";
+		{ 21, 18202, "", "=q4=Eskhandar's Left Claw", "=ds=#h4#, #w13#", "", "11.76%"};
+		{ 22, 20577, "", "=q4=Nightmare Blade", "=ds=#h1#, #w10#", "", "12.07%"};
+		{ 23, 20578, "", "=q4=Emerald Dragonfang", "=ds=#h1#, #w4#", "", "9.95%"};
+		{ 24, 17112, "", "=q4=Empyrean Demolisher", "=ds=#h1#, #w6#", "", "13.54%"};
+		{ 25, 18542, "", "=q4=Typhoon", "=ds=#h2#, #w10#", "", "16.89%"};
+		{ 27, 20644, "", "=q4=Nightmare Engulfed Object", "=ds=#m3# =q1=#m5#", "", "80.05%"};
+		{ 28, 20600, "", "=q4=Malfurion's Signet Ring", "=q1=#m4#: =ds=#s13#"};
+		Prev = "WorldBossesTBC";
+		Next = "WorldBossesTBC";
 	};
 
-	AtlasLoot_Data["DLethon"] = {
-		{ 1, 20579, "", "=q4=Green Dragonskin Cloak", "=ds=#s4# =q1=#m5#", "", "9.14%"};
-		{ 2, 20618, "", "=q4=Gloves of Delusional Power", "=ds=#s9#, #a1# =q1=#m5#", "", "9.71%"};
+	AtlasLoot_Data["WorldBossesClassicPhysDPS"] = {
+		{ 1, 20623, "", "=q4=Circlet of Restless Dreams", "=ds=#s1#, #a2#", "", "10.51%"};
 		{ 3, 20615, "", "=q4=Dragonspur Wraps", "=ds=#s8#, #a2# =q1=#m5#", "", "8.83%"};
-		{ 4, 20617, "", "=q4=Ancient Corroded Leggings", "=ds=#s11#, #a3# =q1=#m5#", "", "9.80%"};
-		{ 5, 20616, "", "=q4=Dragonbone Wristguards", "=ds=#s8#, #a4# =q1=#m5#", "", "10.20%"};
-		{ 6, 20619, "", "=q4=Acid Inscribed Greaves", "=ds=#s12#, #a4# =q1=#m5#", "", "8.85%"};
-		{ 7, 20582, "", "=q4=Trance Stone", "=ds=#s15# =q1=#m5#", "", "9.57%"};
-		{ 8, 20580, "", "=q4=Hammer of Bestial Fury", "=ds=#h3#, #w6# =q1=#m5#", "", "8.93%"};
-		{ 9, 20581, "", "=q4=Staff of Rampant Growth", "=ds=#w9# =q1=#m5#", "", "9.70%"};
-		{ 11, 20644, "", "=q4=Nightmare Engulfed Object", "=ds=#m3# =q1=#m5#", "", "80.05%"};
-		{ 12, 20600, "", "=q4=Malfurion's Signet Ring", "=q1=#m4#: =ds=#s13#"};
-		{ 16, 20626, "", "=q4=Black Bark Wristbands", "=ds=#s8#, #a1#", "", "9.44%"};
-		{ 17, 20625, "", "=q4=Belt of the Dark Bog", "=ds=#s10#, #a1#", "", "10.99%"};
-		{ 18, 20628, "", "=q4=Deviate Growth Cap", "=ds=#s1#, #a2#", "", "15.80%"};
-		{ 19, 20627, "", "=q4=Dark Heart Pants", "=ds=#s11#, #a2#", "", "11.68%"};
-		{ 20, 20629, "", "=q4=Malignant Footguards", "=ds=#s12#, #a3#", "", "4.46%"};
-		{ 21, 20630, "", "=q4=Gauntlets of the Shining Light", "=ds=#s9#, #a4#", "", "8.19%"};
-		Prev = "DEmeriss";
-		Next = "DTaerar";
-	};
-
-	AtlasLoot_Data["DTaerar"] = {
-		{ 1, 20579, "", "=q4=Green Dragonskin Cloak", "=ds=#s4# =q1=#m5#", "", "9.14%"};
-		{ 2, 20618, "", "=q4=Gloves of Delusional Power", "=ds=#s9#, #a1# =q1=#m5#", "", "9.71%"};
-		{ 3, 20615, "", "=q4=Dragonspur Wraps", "=ds=#s8#, #a2# =q1=#m5#", "", "8.83%"};
-		{ 4, 20617, "", "=q4=Ancient Corroded Leggings", "=ds=#s11#, #a3# =q1=#m5#", "", "9.80%"};
-		{ 5, 20616, "", "=q4=Dragonbone Wristguards", "=ds=#s8#, #a4# =q1=#m5#", "", "10.20%"};
-		{ 6, 20619, "", "=q4=Acid Inscribed Greaves", "=ds=#s12#, #a4# =q1=#m5#", "", "8.85%"};
-		{ 7, 20582, "", "=q4=Trance Stone", "=ds=#s15# =q1=#m5#", "", "9.57%"};
-		{ 8, 20580, "", "=q4=Hammer of Bestial Fury", "=ds=#h3#, #w6# =q1=#m5#", "", "8.93%"};
-		{ 9, 20581, "", "=q4=Staff of Rampant Growth", "=ds=#w9# =q1=#m5#", "", "9.70%"};
-		{ 11, 20644, "", "=q4=Nightmare Engulfed Object", "=ds=#m3# =q1=#m5#", "", "80.05%"};
-		{ 12, 20600, "", "=q4=Malfurion's Signet Ring", "=q1=#m4#: =ds=#s13#"};
-		{ 16, 20631, "", "=q4=Mendicant's Slippers", "=ds=#s12#, #a1#", "", "13.14%"};
-		{ 17, 20633, "", "=q4=Unnatural Leather Spaulders", "=ds=#s3#, #a2#", "", "11.30%"};
-		{ 18, 20634, "", "=q4=Boots of Fright", "=ds=#s12#, #a2#", "", "10.15%"};
-		{ 19, 20632, "", "=q4=Mindtear Band", "=ds=#s13#", "", "13.69%"};
-		{ 20, 20577, "", "=q4=Nightmare Blade", "=ds=#h1#, #w10#", "", "12.07%"};
-		Prev = "DLethon";
-		Next = "DYsondre";
-	};
-
-	AtlasLoot_Data["DYsondre"] = {
-		{ 1, 20579, "", "=q4=Green Dragonskin Cloak", "=ds=#s4# =q1=#m5#", "", "9.14%"};
-		{ 2, 20618, "", "=q4=Gloves of Delusional Power", "=ds=#s9#, #a1# =q1=#m5#", "", "9.71%"};
-		{ 3, 20615, "", "=q4=Dragonspur Wraps", "=ds=#s8#, #a2# =q1=#m5#", "", "8.83%"};
-		{ 4, 20617, "", "=q4=Ancient Corroded Leggings", "=ds=#s11#, #a3# =q1=#m5#", "", "9.80%"};
-		{ 5, 20616, "", "=q4=Dragonbone Wristguards", "=ds=#s8#, #a4# =q1=#m5#", "", "10.20%"};
-		{ 6, 20619, "", "=q4=Acid Inscribed Greaves", "=ds=#s12#, #a4# =q1=#m5#", "", "8.85%"};
-		{ 7, 20582, "", "=q4=Trance Stone", "=ds=#s15# =q1=#m5#", "", "9.57%"};
-		{ 8, 20580, "", "=q4=Hammer of Bestial Fury", "=ds=#h3#, #w6# =q1=#m5#", "", "8.93%"};
-		{ 9, 20581, "", "=q4=Staff of Rampant Growth", "=ds=#w9# =q1=#m5#", "", "9.70%"};
-		{ 11, 20644, "", "=q4=Nightmare Engulfed Object", "=ds=#m3# =q1=#m5#", "", "80.05%"};
-		{ 12, 20600, "", "=q4=Malfurion's Signet Ring", "=q1=#m4#: =ds=#s13#"};
-		{ 16, 20635, "", "=q4=Jade Inlaid Vestments", "=ds=#s5#, #a1#", "", "14.19%"};
-		{ 17, 20638, "", "=q4=Leggings of the Demented Mind", "=ds=#s11#, #a3#", "", "3.66%"};
-		{ 18, 20637, "", "=q4=Acid Inscribed Pauldrons", "=ds=#s3#, #a4#", "", "10.13%"};
-		{ 19, 20639, "", "=q4=Strangely Glyphed Legplates", "=ds=#s11#, #a4#", "", "8.87%"};
-		{ 20, 20636, "", "=q4=Hibernation Crystal", "=ds=#s14#", "", "12.75%"};
-		{ 21, 20578, "", "=q4=Emerald Dragonfang", "=ds=#h1#, #w4#", "", "9.95%"};
-		Prev = "DTaerar";
-		Next = "Kazzak60";
-	};
-
-		----------------
-		--- Azuregos ---
-		----------------
-
-	AtlasLoot_Data["WorldBossesClassic"] = {
-		{ 1, 18541, "", "=q4=Puissant Cape", "=ds=#s4#", "", "11.71%"};
-		{ 2, 18208, "", "=q4=Drape of Benediction", "=ds=#s4#", "", "11.22%"};
-		{ 3, 19132, "", "=q4=Crystal Adorned Crown", "=ds=#s1#, #a1#", "", "13.54%"};
-		{ 4, 18545, "", "=q4=Leggings of Arcane Supremacy", "=ds=#s11#, #a1#", "", "16.39% "};
-		{ 5, 19131, "", "=q4=Snowblind Shoes", "=ds=#s12#, #a1#", "", "12.23%"};
-		{ 6, 18547, "", "=q4=Unmelting Ice Girdle", "=ds=#s10#, #a4#", "", "12.93%"};
-		{ 7, 17070, "", "=q4=Fang of the Mystics", "=ds=#h3#, #w4#", "", "13.64%"};
-		{ 8, 18202, "", "=q4=Eskhandar's Left Claw", "=ds=#h4#, #w13#", "", "11.76%"};
-		{ 9, 18542, "", "=q4=Typhoon", "=ds=#h2#, #w10#", "", "16.89%"};
-		{ 10, 19130, "", "=q4=Cold Snap", "=ds=#w12#", "", "11.89%"};
-		{ 11, 18704, "", "=q4=Mature Blue Dragon Sinew", "=ds=#m3# =q1=(#c2#)", "", "51.56%"};
-		{ 12, 18714, "", "=q4=Ancient Sinew Wrapped Lamina", "=q1=#m4#: =ds=#m14# #w19#"};
-		Prev = "Setis";
-		Next = "DEmeriss";
-	};
-
-	AtlasLoot_Data["Kazzak60"] = {
-		{ 1, 18665, "", "=q4=The Eye of Shadow", "=ds=#s14#", "", "40.96%"};
-		{ 2, 18546, "", "=q4=Infernal Headcage", "=ds=#s1#, #a3#", "", "22.89%"};
-		{ 3, 17112, "", "=q4=Empyrean Demolisher", "=ds=#h1#, #w6#", "", "13.54%"};
-		{ 4, 17113, "", "=q4=Amberseal Keeper", "=ds=#h2#, #w9#", "", "16.87% "};
-		{ 5, 18204, "", "=q4=Eskhandar's Pelt", "=ds=#s4#, #a1#", "", "12.23%"};
-		{ 6, 19133, "", "=q4=Fel Infused Leggings", "=ds=#s11#, #a1#", "", "12.05%"};
-		{ 7, 18543, "", "=q4=Ring of Entropy", "=ds=#s13#", "", "14.46%"};
+		{ 4, 122884, "", "=q4=Wristguards of the Shifting Sands", "=ds=#s8#, #a2#", "", ""};
+		{ 6, 122885, "", "=q4=Waistguard of the Shifting Sands", "=ds=#s10#, #a2#", "", ""};
 		{ 8, 18544, "", "=q4=Doomhide Gauntlets", "=ds=#s9#, #a2#", "", "11.76%"};
-		{ 9, 19134, "", "=q4=Flayed Doomguard Belt", "=ds=#s10#, #a2#", "", "16.89%"};
-		{ 10, 19135, "", "=q4=Blacklight Bracer", "=ds=#s8#, #a1#", "", "11.89%"};
-		Prev = "DYsondre";
-		Next = "Setis";
-	
+		{ 10, 20627, "", "=q4=Dark Heart Pants", "=ds=#s11#, #a2#", "", "11.68%"};
+		{ 13, 20633, "", "=q4=Unnatural Leather Spaulders", "=ds=#s3#, #a2#", "", "11.30%"};
+		{ 11, 20617, "", "=q4=Ancient Corroded Leggings", "=ds=#s11#, #a3# =q1=#m5#", "", "9.80%"};
+		{ 16, 20624, "", "=q4=Ring of the Unliving", "=ds=#s13#", "", "13.23%"};
+		{ 18, 20622, "", "=q4=Dragonheart Necklace", "=ds=#s2#", "", "12.35%"};
+		{ 20, 18541, "", "=q4=Puissant Cape", "=ds=#s4#", "", "11.71%"};
+		{ 21, 18204, "", "=q4=Eskhandar's Pelt", "=ds=#s4#, #a1#", "", "12.23%"};
+		Prev = "WorldBossesClassicTank";
+		Next = "WorldBossesClassicCaster";
+		Back = "WorldBossesCLASSIC";
 	};
 
-	AtlasLoot_Data["Setis"] = {
-		{ 1,122880, "", "=q4=Scepter of the Gate Warden", "=ds=#h3#, #w6#", "", ""};
-		{ 2,122881, "", "=q4=Staff of the Gate Warden", "=ds=#h2#, #w9#", "", ""};
-		{ 3,122883, "", "=q4=Musket of the Gate Warden", "=ds=#w5#", "", ""};
-		{ 4,122884, "", "=q4=Wristguards of the Shifting Sands", "=ds=#s8#, #a2#", "", ""};
-		{ 5,122885, "", "=q4=Waistguard of the Shifting Sands", "=ds=#s10#, #a2#", "", ""};
-		{ 6,122886, "", "=q4=Bracers of the Sand Prince", "=ds=#s8#, #a2#", "", ""};
-		{ 7,122887, "", "=q4=Belt of the Sand Prince", "=ds=#s10#, #a2#", "", ""};
-		{ 8,122888, "", "=q4=Amulet of the Gate Warden", "=ds=#s2#", "", ""};
-		{ 9,122889, "", "=q4=Amulet of the Sand Prince", "=ds=#s2#", "", ""};
-		{ 10,122890, "", "=q4=Amulet of the Shifting Sands", "=ds=#s2#", "", ""};
-		Prev = "Kazzak60";
-		Next = "WorldBossesClassic";
+	AtlasLoot_Data["WorldBossesClassicCaster"] = {
+		{ 1, 19132, "", "=q4=Crystal Adorned Crown", "=ds=#s1#, #a1#", "", "13.54%"};
+		{ 2, 18546, "", "=q4=Infernal Headcage", "=ds=#s1#, #a3#", "", "22.89%"};
+		{ 3, 20628, "", "=q4=Deviate Growth Cap", "=ds=#s1#, #a2#", "", "15.80%"};
+		{ 5, 18545, "", "=q4=Leggings of Arcane Supremacy", "=ds=#s11#, #a1#", "", "16.39% "};
+		{ 6, 19133, "", "=q4=Fel Infused Leggings", "=ds=#s11#, #a1#", "", "12.05%"};
+		{ 7, 20638, "", "=q4=Leggings of the Demented Mind", "=ds=#s11#, #a3#", "", "3.66%"};
+		{ 8, 20639, "", "=q4=Strangely Glyphed Legplates", "=ds=#s11#, #a4#", "", "8.87%"};
+		{ 10, 19131, "", "=q4=Snowblind Shoes", "=ds=#s12#, #a1#", "", "12.23%"};
+		{ 11, 20631, "", "=q4=Mendicant's Slippers", "=ds=#s12#, #a1#", "", "13.14%"};
+		{ 12, 20634, "", "=q4=Boots of Fright", "=ds=#s12#, #a2#", "", "10.15%"};
+		{ 13, 20621, "", "=q4=Boots of the Endless Moor", "=ds=#s12#, #a3#", "", "10.24%"};
+		{ 14, 20629, "", "=q4=Malignant Footguards", "=ds=#s12#, #a3#", "", "4.46%"};
+		{ 16, 20630, "", "=q4=Gauntlets of the Shining Light", "=ds=#s9#, #a4#", "", "8.19%"};
+		{ 17, 20618, "", "=q4=Gloves of Delusional Power", "=ds=#s9#, #a1# =q1=#m5#", "", "9.71%"};
+		{ 15, 20635, "", "=q4=Jade Inlaid Vestments", "=ds=#s5#, #a1#", "", "14.19%"};
+		{ 19, 19135, "", "=q4=Blacklight Bracer", "=ds=#s8#, #a1#", "", "11.89%"};
+		{ 20,122886, "", "=q4=Bracers of the Sand Prince", "=ds=#s8#, #a2#", "", ""};
+		{ 21, 20626, "", "=q4=Black Bark Wristbands", "=ds=#s8#, #a1#", "", "9.44%"};
+		{ 23,122887, "", "=q4=Belt of the Sand Prince", "=ds=#s10#, #a2#", "", ""};
+		{ 24, 19134, "", "=q4=Flayed Doomguard Belt", "=ds=#s10#, #a2#", "", "16.89%"};
+		{ 25, 20625, "", "=q4=Belt of the Dark Bog", "=ds=#s10#, #a1#", "", "10.99%"};
+		{ 27, 20579, "", "=q4=Green Dragonskin Cloak", "=ds=#s4# =q1=#m5#", "", "9.14%"};
+		{ 28, 18208, "", "=q4=Drape of Benediction", "=ds=#s4#", "", "11.22%"};
+		{ 29, 20632, "", "=q4=Mindtear Band", "=ds=#s13#", "", "13.69%"};
+		{ 30, 18543, "", "=q4=Ring of Entropy", "=ds=#s13#", "", "14.46%"};
 
+		Prev = "WorldBossesClassicPhysDPS";
+		Next = "WorldBossesClassicTank";
+		Back = "WorldBossesCLASSIC";
 	};
 
-		--------------------
-		--- World Bosses ---
-		--------------------
+	AtlasLoot_Data["WorldBossesClassicTank"] = {
+		{ 1, 18547, "", "=q4=Unmelting Ice Girdle", "=ds=#s10#, #a4#", "", "12.93%"};
+		{ 3, 20616, "", "=q4=Dragonbone Wristguards", "=ds=#s8#, #a4# =q1=#m5#", "", "10.20%"};
+		{ 5, 20619, "", "=q4=Acid Inscribed Greaves", "=ds=#s12#, #a4# =q1=#m5#", "", "8.85%"};
+		{ 7, 20637, "", "=q4=Acid Inscribed Pauldrons", "=ds=#s3#, #a4#", "", "10.13%"};
+		Prev = "WorldBossesClassicCaster";
+		Next = "WorldBossesClassicPhysDPS";
+		Back = "WorldBossesCLASSIC";
+	};
+
+		------------------------
+		--- World Bosses TBC ---
+		------------------------
 	
-		AtlasLoot_Data["WorldBossesBC"] = {
+		AtlasLoot_Data["WorldBossesTBC"] = {
 			{ 1, 0, "INV_Box_01", "=q6="..BabbleBoss["Doom Lord Kazzak"], ""};
 			{ 2, 30735, "", "=q4=Ancient Spellcloak of the Highborne", "=ds=#s4#", "", "16.5%"};
 			{ 3, 30734, "", "=q4=Leggings of the Seventh Circle", "=ds=#s11#, #a1#", "", "17.0%"};
@@ -8037,4 +7984,6 @@ AtlasLoot_Data["PVPWarrior2"] = {
 			{ 24, 30723, "", "=q4=Talon of the Tempest", "=ds=#h3#, #w4#", "", "15.4%"};
 			{ 25, 30722, "", "=q4=Ethereum Nexus-Reaver", "=ds=#h2#, #w1#", "", "16.0%"};
 			{ 26, 30724, "", "=q4=Barrel-Blade Longrifle", "=ds=#w5#", "", "20.0%"};
+			Prev = "WorldBossesCLASSIC";
+			Next = "WorldBossesCLASSIC";
 		};

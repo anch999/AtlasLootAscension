@@ -289,16 +289,16 @@ AtlasLoot_DewDropDown = {
 		{ AL["Crafting"], "CRAFTINGMENU", "Table" },
 	},
 	[5] = {
-		{ AL["Sets/Collections"], "SETMENU"..AtlasLoot_Expac, "Table" },
+		{ AL["Sets/Collections"], "SETMENU"..AtlasLoot_Expac, "Submenu" },
 	},
 	[6] = {
-		{ AL["PvP Rewards"], "PVPMENU"..AtlasLoot_Expac, "Table" },
+		{ AL["PvP Rewards"], "PVPMENU"..AtlasLoot_Expac, "Submenu" },
 	},
 	[7] = {
-		{ AL["World Bosses"], "WorldBosses", "Submenu" },
+		{ AL["World Bosses"], "WorldBosses"..AtlasLoot_Expac, "Submenu" },
 	},
 	[8] = {
-		{ AL["Reputation Factions"], "REPMENU"..AtlasLoot_Expac, "Table" },
+		{ AL["Reputation Factions"], "REPMENU"..AtlasLoot_Expac, "Submenu" },
 	},
 	[9] = {
 		{ AL["World Events"], "WORLDEVENTMENU", "Table" },
@@ -306,6 +306,21 @@ AtlasLoot_DewDropDown = {
 };
  
 AtlasLoot_DewDropDown_SubTables = {
+	["REPMENU"..AtlasLoot_Expac] = {
+		{ "", "REPMENU"..AtlasLoot_Expac },
+		{ "", "REPMENU"..AtlasLoot_Expac2 },
+		{ "", "REPMENU"..AtlasLoot_Expac3 },
+	},
+	["PVPMENU"..AtlasLoot_Expac] = {
+		{ "", "PVPMENU"..AtlasLoot_Expac },
+		{ "", "PVPMENU"..AtlasLoot_Expac2 },
+		{ "", "PVPMENU"..AtlasLoot_Expac3 },
+	},
+	["SETMENU"..AtlasLoot_Expac] = {
+		{ "", "SETMENU"..AtlasLoot_Expac },
+		{ "", "SETMENU"..AtlasLoot_Expac2 },
+		{ "", "SETMENU"..AtlasLoot_Expac3 },
+	},
 	["BlackrockDepths"] = {
 		{ "", "BRDPyron" },
 		{ "", "BRDLordRoccor" },
@@ -915,15 +930,9 @@ AtlasLoot_DewDropDown_SubTables = {
 		{ "", "TheNexusKolurgStoutbeardHEROIC"},
 		{ "", "TheNexusKeristrasza" },
 	},
-	["WorldBosses"] = {
-		{ "", "WorldBossesClassic" },
-		{ "", "DEmeriss" },
-		{ "", "DLethon"},
-		{ "", "DTaerar" },
-		{ "", "DYsondre" },
-		{ "", "Kazzak60" },
-		{ "", "Setis" },
-		{ "", "WorldBossesBC"},
+	["WorldBosses"..AtlasLoot_Expac] = {
+		{ "", "WorldBosses"..AtlasLoot_Expac },
+		{ "", "WorldBosses"..AtlasLoot_Expac2 },
 	},
 	["ForgeofSouls"] = {
 		{ "", "FoSBronjahm" },
