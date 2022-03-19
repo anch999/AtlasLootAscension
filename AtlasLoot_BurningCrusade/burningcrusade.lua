@@ -1887,7 +1887,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 23, 28792, "", "=q4=A'dal's Signet of Defense", "=q1=#m4#: =ds=#s13#"};
 		{ 25, 816252, "", "=q3=Formula: Enchant Weapon - Undaunted Might", "=ds=#p4# (375)", "", "5%"};
 		{ 26, 428775, "", "=q4=Bor -o G'urth, the Hand of Death", "=ds=#w7#", [AtlasLoot_Difficulty.MIN_DIF] = AtlasLoot_Difficulty.Mythic};
-		{ 37, 428776, "", "=q4=Lebed -o G'urth, the Finger of Death", "=ds=#w7#", [AtlasLoot_Difficulty.MIN_DIF] = AtlasLoot_Difficulty.Mythic};
+		{ 27, 428776, "", "=q4=Lebed -o G'urth, the Finger of Death", "=ds=#w7#", [AtlasLoot_Difficulty.MIN_DIF] = AtlasLoot_Difficulty.Mythic};
 		Type = "BCRaid";
 	};
 

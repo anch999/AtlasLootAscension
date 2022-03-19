@@ -42,7 +42,7 @@ if AL then
 	AL["Show Normal Loot"] = true;
 	AL["Show Heroic/Ascended Loot"] = true;
 	AL["Bloodforged"] = true;
-	AL["Factions - Original WoW"] = true;
+	AL["Factions - Classic"] = true;
 	AL["Factions - Burning Crusade"] = true;
 	AL["Factions - Wrath of the Lich King"] = true;
 	AL["Choose Table ..."] = true;
@@ -654,10 +654,10 @@ if AL then
 	AL["Level 60 Rewards"] = true;
 
 	-- Sets/PVP/Rep Menus
-	AL["Original WOW Collections"] = true;
+	AL["Classic Collections"] = true;
 	AL["Burning Crusade Collections"] = true;
 	AL["Wrath of the Lich King Collections"] = true;
-	AL["Original WOW PvP Rewards"] = true;
+	AL["Classic PvP Rewards"] = true;
 	AL["Burning Crusade PvP Rewards"] = true;
 	AL["Wrath of the Lich King PvP Rewards"] = true;
 

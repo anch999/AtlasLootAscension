@@ -9,6 +9,9 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 4, "PVPMENU2", "INV_Jewelry_Necklace_21", "=ds="..AL["BG PvP Rewards"], ""};
 		{ 16, "PVPWeapons_A", "INV_Weapon_Bow_08", "=ds="..AL["PvP Weapons"], "=q5="..AL["Level 60"]};
 		{ 17, "PvP60Ench", "INV_Scroll_06", "=ds="..AL["PvP Enchants"], "=q5="..AL["Level 60"]};
+		Prev = "PVPMENUWRATH";
+		Next = "PVPMENUTBC";
+		Back = "PVPMENU"..AtlasLoot_Expac;
 	};
 
 	AtlasLoot_Data["PVPMENUTBC"] = {

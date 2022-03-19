@@ -27,7 +27,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "SETMENUWRATH";
 		Next = "SETMENUTBC";
 		Back = "SETMENU"..AtlasLoot_Expac;
-		Type = "Expansion"
 	};
 
 	AtlasLoot_Data["SETMENUTBC"] = {
@@ -42,8 +41,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 20, "T6SET", "inv_helmet_98", "=ds="..AL["Tier 6 Sets"], ""};
 		Prev = "SETMENUCLASSIC";
 		Next = "SETMENUWRATH";
-		Back = "SETMENU"..AtlasLoot_Expac;
-		Type = "Expansion"
+		Back = "SETMENU"..AtlasLoot_Expac;	
 	};
 
 	AtlasLoot_Data["SETMENUWRATH"] = {
@@ -61,8 +59,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 18, "T10SET", "INV_Chest_Chain_15", "=ds="..AL["Tier 10 Sets"], "=q5="..AL["10/25 Man"]};
 		Prev = "SETMENUTBC";
 		Next = "SETMENUCLASSIC";
-		Back = "SETMENU"..AtlasLoot_Expac;
-		Type = "Expansion"
+		Back = "SETMENU"..AtlasLoot_Expac;	
 	};
 
 	AtlasLoot_Data["70TOKENMENU"] = {
@@ -213,6 +210,8 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 20, "T1Rogue", "Ability_BackStab", "=ds="..LOCALIZED_CLASS_NAMES_MALE["ROGUE"], "=q5="..AL["Tier 1 Sets"]};
 		{ 22, "T1Warlock", "Spell_Shadow_CurseOfTounges", "=ds="..LOCALIZED_CLASS_NAMES_MALE["WARLOCK"], "=q5="..AL["Tier 1 Sets"]};
 		{ 10, "T1DPSWarrior", "Ability_Warrior_BattleShout", "=ds="..LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], "=q5="..AL["Tier 1 Sets"]};
+		Prev = "T3SET";
+		Next = "T2SET";
 		Back = "SETMENUCLASSIC";
 	};
 
@@ -227,6 +226,8 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 20, "T2Rogue", "Ability_BackStab", "=ds="..LOCALIZED_CLASS_NAMES_MALE["ROGUE"], "=q5="..AL["Tier 2 Sets"]};
 		{ 22, "T2Warlock", "Spell_Shadow_CurseOfTounges", "=ds="..LOCALIZED_CLASS_NAMES_MALE["WARLOCK"], "=q5="..AL["Tier 2 Sets"]};
 		{ 10, "T2DPSWarrior", "Ability_Warrior_BattleShout", "=ds="..LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], "=q5="..AL["Tier 2 Sets"]};
+		Prev = "T1SET";
+		Next = "T3SET";
 		Back = "SETMENUCLASSIC";
 	};
 
@@ -241,6 +242,8 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 20, "T3Rogue", "Ability_BackStab", "=ds="..LOCALIZED_CLASS_NAMES_MALE["ROGUE"], "=q5="..AL["Tier 3 Sets"]};
 		{ 22, "T3Warlock", "Spell_Shadow_CurseOfTounges", "=ds="..LOCALIZED_CLASS_NAMES_MALE["WARLOCK"], "=q5="..AL["Tier 3 Sets"]};
 		{ 10, "T3DPSWarrior", "Ability_Warrior_BattleShout", "=ds="..LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], "=q5="..AL["Tier 3 Sets"]};
+		Prev = "T2SET";
+		Next = "T1SET";
 		Back = "SETMENUCLASSIC";
 	};
 

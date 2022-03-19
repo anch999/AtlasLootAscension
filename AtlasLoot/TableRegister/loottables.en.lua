@@ -1964,20 +1964,20 @@ end
 	AtlasLoot_TableNames["T7T8SET"] = { AL["Tier 7/8 Sets"], "Menu" };
 	AtlasLoot_TableNames["T9SET"] = { AL["Tier 9 Sets"], "Menu" };
 	AtlasLoot_TableNames["T10SET"] = { AL["Tier 10 Sets"], "Menu" };
-	AtlasLoot_TableNames["REPMENU_ORIGINALWOW"] = { AL["Factions - Original WoW"], "Menu" };
+	AtlasLoot_TableNames["REPMENU_ORIGINALWOW"] = { AL["Factions - Classic"], "Menu" };
 	AtlasLoot_TableNames["REPMENU_BURNINGCRUSADE"] = { AL["Factions - Burning Crusade"], "Menu" };
 	AtlasLoot_TableNames["REPMENU_WOTLK"] = { AL["Factions - Wrath of the Lich King"], "Menu" };
-	AtlasLoot_TableNames["REPMENUCLASSIC"] = { AL["Factions - Original WoW"], "Menu" };
+	AtlasLoot_TableNames["REPMENUCLASSIC"] = { AL["Factions - Classic"], "Menu" };
 	AtlasLoot_TableNames["REPMENUTBC"] = { AL["Factions - Burning Crusade"], "Menu" };
 	AtlasLoot_TableNames["REPMENUWRATH"] = { AL["Factions - Wrath of the Lich King"], "Menu" };
-	AtlasLoot_TableNames["SETMENUCLASSIC"] = { AL["Original WOW Collections"], "Menu" };
+	AtlasLoot_TableNames["SETMENUCLASSIC"] = { AL["Classic Collections"], "Menu" };
 	AtlasLoot_TableNames["SETMENUTBC"] = { AL["Burning Crusade Collections"], "Menu" };
 	AtlasLoot_TableNames["SETMENUWRATH"] = { AL["Wrath of the Lich King Collections"], "Menu" };
 
 	AtlasLoot_TableNames["MOUNTMENU"] = { AL["Mounts"], "Menu" };
 	AtlasLoot_TableNames["PETMENU"] = { AL["Vanity Pets"], "Menu" };
 	AtlasLoot_TableNames["PVPSET"] = { AL["PvP Armor Sets"]..": "..AL["Level 60"], "Menu" };
-	AtlasLoot_TableNames["PVPMENUCLASSIC"] = { AL["Original WOW PvP Rewards"], "Menu" };
+	AtlasLoot_TableNames["PVPMENUCLASSIC"] = { AL["Classic PvP Rewards"], "Menu" };
 	AtlasLoot_TableNames["PVPMENUTBC"] = { AL["Burning Crusade PvP Rewards"], "Menu" };
 	AtlasLoot_TableNames["PVPMENUWRATH"] = { AL["Wrath of the Lich King PvP Rewards"], "Menu" };
 	AtlasLoot_TableNames["PVPMENU2"] = { AL["PvP Rewards"], "Menu" };
