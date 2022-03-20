@@ -42,6 +42,7 @@ if AL then
 	AL["Show Normal Loot"] = true;
 	AL["Show Heroic/Ascended Loot"] = true;
 	AL["Bloodforged"] = true;
+	AL["Factions - Original WoW"] = true;
 	AL["Factions - Classic"] = true;
 	AL["Factions - Burning Crusade"] = true;
 	AL["Factions - Wrath of the Lich King"] = true;

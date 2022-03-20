@@ -1149,9 +1149,28 @@ end
 
 --[[
 AtlasLoot_NavButton_OnClick:
-Called when <-, -> or 'Back' are pressed and calls up the appropriate loot page
+Called when <-, -> are pressed and calls up the appropriate loot page
 ]]
 function AtlasLoot_NavButton_OnClick()
+	if AtlasLootItemsFrame.refresh and AtlasLootItemsFrame.refresh[4] then
+		if strsub(this.lootpage, 1, 16) == "SearchResultPage" then
+			AtlasLoot_ShowItemsFrame("SearchResult", this.lootpage, (AL["Search Result: %s"]):format(AtlasLootCharDB.LastSearchedText or ""), AtlasLootItemsFrame.refresh[4]);
+		elseif strsub(this.lootpage, 1, 12) == "WishListPage" then
+			AtlasLoot_ShowItemsFrame("WishList", this.lootpage, AL["Wishlist"], AtlasLootItemsFrame.refresh[4]);
+		else
+			AtlasLoot_ShowItemsFrame(this.lootpage, AtlasLootItemsFrame.refresh[2], "", AtlasLootItemsFrame.refresh[4]);
+		end
+    else
+		--Fallback for if the requested loot page is a menu and does not have a .refresh instance
+		AtlasLoot_ShowItemsFrame(this.lootpage, "", "", AtlasFrame);
+	end
+end
+
+--[[
+AtlasLoot_NavButton_OnClick:
+Called when 'Back'Button is pressed and calls up the appropriate loot page
+]]
+function AtlasLoot_BackButton_OnClick()
 	if AtlasLootItemsFrame.refresh and AtlasLootItemsFrame.refresh[4] then
 		if strsub(this.lootpage, 1, 16) == "SearchResultPage" then
 			AtlasLoot_ShowItemsFrame("SearchResult", this.lootpage, (AL["Search Result: %s"]):format(AtlasLootCharDB.LastSearchedText or ""), AtlasLootItemsFrame.refresh[4]);

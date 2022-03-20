@@ -166,7 +166,7 @@
     <Button name="AtlasLootClassButtonTemplate" inherits="OptionsButtonTemplate" virtual="true" hidden="true">
         <Scripts>
             <OnClick>
-                AtlasLoot_NavButton_OnClick()
+                AtlasLoot_BackButton_OnClick()
             </OnClick>
             <OnShow>
 		        this:SetFrameLevel( (this:GetParent()):GetFrameLevel() + 1 );
@@ -618,7 +618,7 @@
                 </Anchors>
                 <Scripts>
                     <OnClick>
-                        AtlasLoot_NavButton_OnClick()
+						AtlasLoot_NavButton_OnClick()
                     </OnClick>
                     <OnShow>
 		                this:SetFrameLevel( (this:GetParent()):GetFrameLevel() + 1 );
