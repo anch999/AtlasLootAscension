@@ -1346,7 +1346,7 @@
 					<OnClick>
                         AtlasLoot_QuickLooks:Hide();
                         AtlasLootQuickLooksButton:Hide();
-						AtlasLoot_GenerateAtlasMenu("SETMENU", AtlasLoot_AnchorFrame);
+						AtlasLoot_GenerateAtlasMenu("SETMENU"..AtlasLoot_Expac, AtlasLoot_AnchorFrame);
 					</OnClick>
                     <OnShow>
                         local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot");
@@ -1367,7 +1367,7 @@
 					<OnClick>
                         AtlasLoot_QuickLooks:Hide();
                         AtlasLootQuickLooksButton:Hide();
-						AtlasLoot_GenerateAtlasMenu("REPMENU", AtlasLoot_AnchorFrame);
+						AtlasLoot_GenerateAtlasMenu("REPMENU"..AtlasLoot_Expac, AtlasLoot_AnchorFrame);
 					</OnClick>
                     <OnShow>
                         local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot");
@@ -1388,7 +1388,7 @@
 					<OnClick>
                         AtlasLoot_QuickLooks:Hide();
                         AtlasLootQuickLooksButton:Hide();
-						AtlasLoot_GenerateAtlasMenu("PVPMENU", AtlasLoot_AnchorFrame);
+						AtlasLoot_GenerateAtlasMenu("PVPMENU"..AtlasLoot_Expac, AtlasLoot_AnchorFrame);
 					</OnClick>
                     <OnShow>
                         local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot");
