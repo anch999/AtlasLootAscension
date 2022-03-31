@@ -7895,6 +7895,7 @@ AtlasLoot_Data["PVPWarrior2"] = {
 		{ 28, 20600, "", "=q4=Malfurion's Signet Ring", "=q1=#m4#: =ds=#s13#"};
 		Prev = "WorldBossesTBC";
 		Next = "WorldBossesTBC";
+		Type = "ClassicRaid";
 	};
 
 	AtlasLoot_Data["WorldBossesClassicPhysDPS"] = {
@@ -7913,6 +7914,7 @@ AtlasLoot_Data["PVPWarrior2"] = {
 		Prev = "WorldBossesClassicTank";
 		Next = "WorldBossesClassicCaster";
 		Back = "WorldBossesCLASSIC";
+		Type = "ClassicRaid";
 	};
 
 	AtlasLoot_Data["WorldBossesClassicCaster"] = {
@@ -7945,6 +7947,7 @@ AtlasLoot_Data["PVPWarrior2"] = {
 		Prev = "WorldBossesClassicPhysDPS";
 		Next = "WorldBossesClassicTank";
 		Back = "WorldBossesCLASSIC";
+		Type = "ClassicRaid";
 	};
 
 	AtlasLoot_Data["WorldBossesClassicTank"] = {
@@ -7955,6 +7958,7 @@ AtlasLoot_Data["PVPWarrior2"] = {
 		Prev = "WorldBossesClassicCaster";
 		Next = "WorldBossesClassicPhysDPS";
 		Back = "WorldBossesCLASSIC";
+		Type = "ClassicRaid";
 	};
 
 		------------------------
