@@ -501,10 +501,10 @@ function AtlasLoot_CategorizeWishList(wlTable)
 			local dataID = strsplit("|", v[8]);
 			if v[AtlasLoot_Difficulty.DIF_SEARCH] then
 				local name =  AtlasLoot_GetWishListSubheading(dataID)
-				dataID = dataID..AtlasLoot_Difficulty.Search[v[AtlasLoot_Difficulty.DIF_SEARCH]];
+				--dataID = dataID..AtlasLoot_Difficulty.Search[v[AtlasLoot_Difficulty.DIF_SEARCH]];
 				if not subheadings[dataID] then
 					subheadings[dataID] = name;
-					if subheadings[dataID] then subheadings[dataID] = subheadings[dataID].." ("..AtlasLoot_Difficulty.Search[v[AtlasLoot_Difficulty.DIF_SEARCH]]..")" end
+					--if subheadings[dataID] then subheadings[dataID] = subheadings[dataID].." ("..AtlasLoot_Difficulty.Search[v[AtlasLoot_Difficulty.DIF_SEARCH]]..")" end
 				end
 			-- Build subheading table
 			elseif not subheadings[dataID] then
