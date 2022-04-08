@@ -1171,7 +1171,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 
 	AtlasLoot_Data["CFRSteamSteamrigger"] = {
 		{ 1, 27793, "", "=q3=Earth Mantle Handwraps", "=ds=#s9#, #a3#", "", "16.92%"};
-		{ 2, 27790, "", "=q3=Mask of Pennance", "=ds=#s1#, #a4#", "", "16.65%"};
+		{ 2, 27790, "", "=q3=Mask of Penance", "=ds=#s1#, #a4#", "", "16.65%"};
 		{ 3, 27792, "", "=q3=Steam-Hinge Chain of Valor", "=ds=#s2#", "", "14.49%"};
 		{ 4, 27791, "", "=q3=Serpentcrest Life-Staff", "=ds=#h2#, #w9#", "", "17.09%"};
 		{ 5, 27794, "", "=q3=Recoilless Rocket Ripper X-54", "=ds=#w5#", "", "15.88%"};
