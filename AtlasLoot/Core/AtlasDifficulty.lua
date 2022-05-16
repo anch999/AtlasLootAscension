@@ -87,13 +87,13 @@ AtlasLoot_Difficulty = {
                 {"Mythic 6", 10, "=q4=", [4] = "Submenu" }, {"Mythic 7", 11, "=q4=", [4] = "Submenu" }, {"Mythic 8", 12, "=q4=", [4] = "Submenu" }, {"Mythic 9", 13, "=q4=", [4] = "Submenu" }, {"Mythic 10", 14, "=q4=", [4] = "Submenu" },
             },
         },
-        --[[4] = {
+        [4] = {
             ["Mythic+ 11-20"] = {
                 {"Mythic 11", 15, "=q4=", [4] = "Submenu" }, {"Mythic 12", 16, "=q4=", [4] = "Submenu" }, {"Mythic 13", 17, "=q4=", [4] = "Submenu" }, {"Mythic 14", 18, "=q4=", [4] = "Submenu" }, {"Mythic 15", 19, "=q4=", [4] = "Submenu" },
                 {"Mythic 16", 20, "=q4=", [4] = "Submenu" }, {"Mythic 17", 21, "=q4=", [4] = "Submenu" }, {"Mythic 18", 22, "=q4=", [4] = "Submenu" }, {"Mythic 19", 23, "=q4=", [4] = "Submenu" }, {"Mythic 20", 24, "=q4=", [4] = "Submenu" },
             },
         },
-        [5] = {
+        --[[5] = {
             ["Mythic+ 21-30"] = {
                 {"Mythic 21", 25, "=q4=", [4] = "Submenu" }, {"Mythic 22", 26, "=q4=", [4] = "Submenu" }, {"Mythic 23", 27, "=q4=", [4] = "Submenu" }, {"Mythic 24", 28, "=q4=", [4] = "Submenu" }, {"Mythic 25", 29, "=q4=", [4] = "Submenu" },
                 {"Mythic 26", 30, "=q4=", [4] = "Submenu" }, {"Mythic 27", 31, "=q4=", [4] = "Submenu" }, {"Mythic 28", 32, "=q4=", [4] = "Submenu" }, {"Mythic 29", 33, "=q4=", [4] = "Submenu" }, {"Mythic 30", 34, "=q4=", [4] = "Submenu" },
@@ -105,7 +105,7 @@ AtlasLoot_Difficulty = {
                 {"Mythic 36", 40, "=q4=", [4] = "Submenu" }, {"Mythic 37", 41, "=q4=", [4] = "Submenu" }, {"Mythic 38", 42, "=q4=", [4] = "Submenu" }, {"Mythic 39", 43, "=q4=", [4] = "Submenu" }, {"Mythic 40", 44, "=q4=", [4] = "Submenu" },
             },
         },]]
-        [4] = {
+        [5] = {
             {"Bloodforged", 1, [4] = "Submenu"},
         },
      };
