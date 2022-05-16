@@ -2920,6 +2920,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 18, 29924, "", "=q4=Netherbane", "=ds=#h1#, #w1#", "", "21%"};
 		{ 19, 29949, "", "=q4=Arcanite Steam-Pistol", "=ds=#w5#", "", "22%"};
 		{ 21, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
+		{ 22, 1816254, "", "=q3=Forumla: Enchant Cloak - Phoenix Fire", "=ds=#p4# (375)", "", "6.75%"};
 		Next = "TKEyeVoidReaver";
 		Type = "BCRaid";
 	};
