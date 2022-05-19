@@ -1446,7 +1446,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 16, 30008, "", "=q4=Pendant of the Lost Ages", "=ds=#s2#", "", "18%"};
 		{ 17, 30083, "", "=q4=Ring of Sundered Souls", "=ds=#s13#", "", "21%"};
 		{ 18, 33058, "", "=q4=Band of the Vigilant", "=ds=#s13#", "", "19%"};
-		{ 19, 30720, "", "=q4=Serpent-Coil BBCRaid", "=ds=#s14#, =q1=#m1# =ds=#c3#", "", "20%"};
+		{ 19, 30720, "", "=q4=Serpent-Coil Braid", "=ds=#s14#, =q1=#m1# =ds=#c3#", "", "20%"};
 		{ 20, 30082, "", "=q4=Talon of Azshara", "=ds=#h1#, #w10#", "", "20%"};
 		{ 21, 30080, "", "=q4=Luminescent Rod of the Naaru", "=ds=#w12#", "", "15%"};
 		Prev = "CFRSerpentKarathress";
