@@ -12,6 +12,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "PVPMENUWRATH";
 		Next = "PVPMENUTBC";
 		Back = "PVPMENU"..AtlasLoot_Expac;
+		Submenu = "Expansion";
 	};
 
 	AtlasLoot_Data["PVPMENUTBC"] = {
@@ -31,6 +32,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "PVPMENUCLASSIC";
 		Next = "PVPMENUWRATH";
 		Back = "PVPMENU"..AtlasLoot_Expac;
+		Submenu = "Expansion";
 	};
 
 	AtlasLoot_Data["PVPMENUWRATH"] = {
@@ -44,6 +46,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "PVPMENUTBC";
 		Next = "PVPMENUCLASSIC";
 		Back = "PVPMENU"..AtlasLoot_Expac;
+		Submenu = "Expansion";
 	};
 
 	AtlasLoot_Data["PVPMENU2"] = {

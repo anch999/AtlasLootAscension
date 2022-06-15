@@ -46,6 +46,9 @@ if AL then
 	AL["Factions - Classic"] = true;
 	AL["Factions - Burning Crusade"] = true;
 	AL["Factions - Wrath of the Lich King"] = true;
+	AL["Classic"] = true;
+	AL["Burning Crusade"] = true;
+	AL["Wrath of the Lich King"] = true;
 	AL["Choose Table ..."] = true;
 	AL["Unknown"] = true;
 	AL["Add to QuickLooks:"] = true;
@@ -127,15 +130,15 @@ if AL then
 	AL["Mythic Tier 8"] = true;
 	AL["Mythic Tier 9"] = true;
 	AL["Mythic Tier 10"] = true;
-	AL["Tier 1 Set Token"] = true;
-	AL["Tier 2 Set Token"] = true;
-	AL["Tier 2.5 Set Token"] = true;
-	AL["Tier 3 Set Token"] = true;
-	AL["Tier 4 Set Token"] = true;
-	AL["Tier 5 Set Token"] = true;
-	AL["Tier 6 Set Token"] = true;
-	AL["Tier 7 Set Token"] = true;
-	AL["Tier 8 Set Token"] = true;
+	AL["Tier 1 Set Token (Click)"] = true;
+	AL["Tier 2 Set Token (Click)"] = true;
+	AL["Tier 2.5 Set Token (Click)"] = true;
+	AL["Tier 3 Set Token (Click)"] = true;
+	AL["Tier 4 Set Token (Click)"] = true;
+	AL["Tier 5 Set Token (Click)"] = true;
+	AL["Tier 6 Set Token (Click)"] = true;
+	AL["Tier 7 Set Token (Click)"] = true;
+	AL["Tier 8 Set Token (Click)"] = true;
 
 	-- Slash commands
 	AL["reset"] = true;

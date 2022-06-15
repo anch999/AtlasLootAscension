@@ -20,51 +20,51 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 21, "FISHINGDAILYMENU", "inv_fishingpole_03", AL["Fishing Daily"], ""};
 		{ 22, "JEWELCRAFTINGDAILYMENU", "INV_Misc_Gem_01", AL["Jewelcrafting Daily"], ""};
 		{ 27, "CookingHighRisk", "INV_Misc_Food_15", "=ds=Cooking High Risk", ""};
+		Submenu = "Disable";
 	};
 
 	AtlasLoot_Data["ALCHEMYMENU"] = {
-		{ 2, "AlchemyBattleElixir1", "INV_Potion_23", "=ds="..AL["Battle Elixirs"], "" };
-		{ 3, "AlchemyPotion1", "INV_Potion_23", "=ds="..AL["Potions"], "" };
-		{ 4, "AlchemyTransmute1", "INV_Potion_23", "=ds="..AL["Transmutes"], "" };
-		{ 13, "AlchemyHighRisk", "INV_Potion_23", "=ds=High Risk", "" };
-		{ 17, "AlchemyGuardianElixir1", "INV_Potion_23", "=ds="..AL["Guardian Elixirs"], "" };
-		{ 18, "AlchemyFlask1", "INV_Potion_23", "=ds="..AL["Flasks"], "" };
-		{ 19, "AlchemyMisc1", "INV_Potion_23", "=ds="..AL["Miscellaneous"], "" };
+		{ 2, "AlchemyBattleElixir"..AtlasLoot_Expac, "INV_Potion_23", "=ds="..AL["Battle Elixirs"], "" };
+		{ 3, "AlchemyPotion"..AtlasLoot_Expac, "INV_Potion_23", "=ds="..AL["Potions"], "" };
+		{ 4, "AlchemyTransmute"..AtlasLoot_Expac, "INV_Potion_23", "=ds="..AL["Transmutes"], "" };
+		{ 6, "AlchemyHighRisk", "INV_Potion_23", "=ds=High Risk", "" };
+		{ 17, "AlchemyGuardianElixir"..AtlasLoot_Expac, "INV_Potion_23", "=ds="..AL["Guardian Elixirs"], "" };
+		{ 18, "AlchemyFlask"..AtlasLoot_Expac, "INV_Potion_23", "=ds="..AL["Flasks"], "" };
+		{ 19, "AlchemyMisc"..AtlasLoot_Expac, "INV_Potion_23", "=ds="..AL["Miscellaneous"], "" };
 		Back = "CRAFTINGMENU";
+		Submenu = "Disable";
 	};
 
 	AtlasLoot_Data["SMITHINGMENU"] = {
-		{ 2, "SmithingArmorOld1", "Trade_BlackSmithing", "=ds="..BabbleInventory["Armor"], "=q5="..AL["Original WoW"] };
-		{ 3, "SmithingArmorBC1", "Trade_BlackSmithing", "=ds="..BabbleInventory["Armor"], "=q5="..AL["Burning Crusade"] };
-		{ 4, "SmithingArmorWrath1", "Trade_BlackSmithing", "=ds="..BabbleInventory["Armor"], "=q5="..AL["Wrath of the Lich King"] };
-		{ 5, "SmithingEnhancement1", "Trade_BlackSmithing", "=ds="..AL["Item Enhancements"], "" };
-		{ 7, "Armorsmith1", "Trade_BlackSmithing", "=ds="..GetSpellInfo(9788), "" };
-		{ 8, "Axesmith1", "Trade_BlackSmithing", "=ds="..GetSpellInfo(17041), "" };
-		{ 9, "Swordsmith1", "Trade_BlackSmithing", "=ds="..GetSpellInfo(17039), "" };
-		{ 13, "SmithingHighRisk", "Trade_BlackSmithing", "=ds=High Risk", "" };
-		{ 17, "SmithingWeaponOld1", "Trade_BlackSmithing", "=ds="..BabbleInventory["Weapon"], "=q5="..AL["Original WoW"] };
-		{ 18, "SmithingWeaponBC1", "Trade_BlackSmithing", "=ds="..BabbleInventory["Weapon"], "=q5="..AL["Burning Crusade"] };
-		{ 19, "SmithingWeaponWrath1", "Trade_BlackSmithing", "=ds="..BabbleInventory["Weapon"], "=q5="..AL["Wrath of the Lich King"] };
-		{ 20, "SmithingMisc1", "Trade_BlackSmithing", "=ds="..AL["Miscellaneous"], "" };
-		{ 22, "Weaponsmith1", "Trade_BlackSmithing", "=ds="..GetSpellInfo(9787), "" };
-		{ 23, "Hammersmith1", "Trade_BlackSmithing", "=ds="..GetSpellInfo(17040), "" };
+		{ 2, "SmithingArmor"..AtlasLoot_Expac, "Trade_BlackSmithing", "=ds="..BabbleInventory["Armor"], "" };
+		{ 4, "SmithingEnhancement1", "Trade_BlackSmithing", "=ds="..AL["Item Enhancements"], "" };
+		{ 6, "Armorsmith1", "Trade_BlackSmithing", "=ds="..GetSpellInfo(9788), "" };
+		{ 7, "Axesmith1", "Trade_BlackSmithing", "=ds="..GetSpellInfo(17041), "" };
+		{ 8, "Swordsmith1", "Trade_BlackSmithing", "=ds="..GetSpellInfo(17039), "" };
+		{ 10, "SmithingHighRisk", "Trade_BlackSmithing", "=ds=High Risk", "" };
+		{ 17, "SmithingWeapon"..AtlasLoot_Expac, "Trade_BlackSmithing", "=ds="..BabbleInventory["Weapon"], "" };
+		{ 19, "SmithingMisc1", "Trade_BlackSmithing", "=ds="..AL["Miscellaneous"], "" };
+		{ 21, "Weaponsmith1", "Trade_BlackSmithing", "=ds="..GetSpellInfo(9787), "" };
+		{ 22, "Hammersmith1", "Trade_BlackSmithing", "=ds="..GetSpellInfo(17040), "" };
 		Back = "CRAFTINGMENU";
+		Submenu = "Disable";
 	};
 
 	AtlasLoot_Data["ENCHANTINGMENU"] = {
-		{ 2, "EnchantingBoots1", "Trade_Engraving", "=ds="..AL["Enchant Boots"], "" };
-		{ 3, "EnchantingChest1", "Trade_Engraving", "=ds="..AL["Enchant Chest"], "" };
-		{ 4, "EnchantingGloves1", "Trade_Engraving", "=ds="..AL["Enchant Gloves"], "" };
-		{ 5, "EnchantingShield1", "Trade_Engraving", "=ds="..AL["Enchant Shield"], "" };
-		{ 6, "Enchanting2HWeapon1", "Trade_Engraving", "=ds="..AL["Enchant 2H Weapon"], "" };
-		{ 7, "EnchantingMisc1", "Trade_Engraving", "=ds="..AL["Miscellaneous"], "" };
-		{ 13, "EnchantingHighRisk", "Trade_Engraving", "=ds=High Risk", "" };
-		{ 17, "EnchantingBracer1", "Trade_Engraving", "=ds="..AL["Enchant Bracer"], "" };
-		{ 18, "EnchantingCloak1", "Trade_Engraving", "=ds="..AL["Enchant Cloak"], "" };
+		{ 2, "EnchantingBoots"..AtlasLoot_Expac, "Trade_Engraving", "=ds="..AL["Enchant Boots"], "" };
+		{ 3, "EnchantingChest"..AtlasLoot_Expac, "Trade_Engraving", "=ds="..AL["Enchant Chest"], "" };
+		{ 4, "EnchantingGloves"..AtlasLoot_Expac, "Trade_Engraving", "=ds="..AL["Enchant Gloves"], "" };
+		{ 5, "EnchantingShield"..AtlasLoot_Expac, "Trade_Engraving", "=ds="..AL["Enchant Shield"], "" };
+		{ 6, "EnchantingTwoHWeapon"..AtlasLoot_Expac, "Trade_Engraving", "=ds="..AL["Enchant 2H Weapon"], "" };
+		{ 7, "EnchantingMisc"..AtlasLoot_Expac, "Trade_Engraving", "=ds="..AL["Miscellaneous"], "" };
+		{ 9, "EnchantingHighRisk", "Trade_Engraving", "=ds=High Risk", "" };
+		{ 17, "EnchantingBracer"..AtlasLoot_Expac, "Trade_Engraving", "=ds="..AL["Enchant Bracer"], "" };
+		{ 18, "EnchantingCloak"..AtlasLoot_Expac, "Trade_Engraving", "=ds="..AL["Enchant Cloak"], "" };
 		{ 19, "EnchantingRing1", "Trade_Engraving", "=ds="..AL["Enchant Ring"], "" };
 		{ 20, "EnchantingStaff1", "Trade_Engraving", "=ds="..BabbleInventory["Staff"], "" };
-		{ 21, "EnchantingWeapon1", "Trade_Engraving", "=ds="..AL["Enchant Weapon"], "" };
+		{ 21, "EnchantingWeapon"..AtlasLoot_Expac, "Trade_Engraving", "=ds="..AL["Enchant Weapon"], "" };
 		Back = "CRAFTINGMENU";
+		Submenu = "Disable";
 	};
 
 	AtlasLoot_Data["ENGINEERINGMENU"] = {
@@ -73,12 +73,13 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 4, "EngineeringMisc1", "Trade_Engineering", "=ds="..AL["Miscellaneous"], "" };
 		{ 5, "EngineeringWeapon1", "Trade_Engineering", "=ds="..BabbleInventory["Weapon"], "" };
 		{ 7, "Gnomish1", "Trade_Engineering", "=ds="..GetSpellInfo(20220), "" };
-		{ 13, "EngineerHighRisk", "Trade_Engineering", "=ds=High Risk", "" };
+		{ 9, "EngineerHighRisk", "Trade_Engineering", "=ds=High Risk", "" };
 		{ 17, "EngineeringArmor1", "Trade_Engineering", "=ds="..BabbleInventory["Armor"], "" };
 		{ 18, "EngineeringItemEnhancements1", "Trade_Engineering", "=ds="..AL["Item Enhancements"], "" };
 		{ 19, "EngineeringReagents1", "Trade_Engineering", "=ds="..AL["Reagents"], "" };
 		{ 22, "Goblin1", "Trade_Engineering", "=ds="..GetSpellInfo(20221), "" };
 		Back = "CRAFTINGMENU";
+		Submenu = "Disable";
 	};
 
 	AtlasLoot_Data["INSCRIPTIONMENU"] = {
@@ -107,16 +108,17 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 28, "Inscription_WarlockMinor1", "Spell_Shadow_CurseOfTounges", "=ds="..LOCALIZED_CLASS_NAMES_MALE["WARLOCK"], "=q5="..AL["Minor Glyph"] };
 		{ 29, "Inscription_WarriorMinor1", "Ability_Warrior_BattleShout", "=ds="..LOCALIZED_CLASS_NAMES_MALE["WARRIOR"], "=q5="..AL["Minor Glyph"] };
 		Back = "CRAFTINGMENU";
+		Submenu = "Disable";
 	};
 
 	AtlasLoot_Data["JEWELCRAFTINGMENU"] = {
-		{ 1, "JewelRed1", "INV_Misc_Gem_01", "=ds="..BabbleInventory["Red"].." "..BabbleInventory["Gem"], "" };
-		{ 2, "JewelBlue1", "INV_Misc_Gem_01", "=ds="..BabbleInventory["Blue"].." "..BabbleInventory["Gem"], "" };
-		{ 3, "JewelYellow1", "INV_Misc_Gem_01", "=ds="..BabbleInventory["Yellow"].." "..BabbleInventory["Gem"], "" };
-		{ 4, "JewelGreen1", "INV_Misc_Gem_01", "=ds="..BabbleInventory["Green"].." "..BabbleInventory["Gem"], "" };
-		{ 5, "JewelOrange1", "INV_Misc_Gem_01", "=ds="..BabbleInventory["Orange"].." "..BabbleInventory["Gem"], "" };
-		{ 6, "JewelPurple1", "INV_Misc_Gem_01", "=ds="..BabbleInventory["Purple"].." "..BabbleInventory["Gem"], "" };
-		{ 7, "JewelMeta1", "INV_Misc_Gem_01", "=ds="..BabbleInventory["Meta"].." "..BabbleInventory["Gem"], "" };
+		{ 1, "JewelRed"..AtlasLoot_Expac, "INV_Misc_Gem_01", "=ds="..BabbleInventory["Red"].." "..BabbleInventory["Gem"], "" };
+		{ 2, "JewelBlue"..AtlasLoot_Expac, "INV_Misc_Gem_01", "=ds="..BabbleInventory["Blue"].." "..BabbleInventory["Gem"], "" };
+		{ 3, "JewelYellow"..AtlasLoot_Expac, "INV_Misc_Gem_01", "=ds="..BabbleInventory["Yellow"].." "..BabbleInventory["Gem"], "" };
+		{ 4, "JewelGreen"..AtlasLoot_Expac, "INV_Misc_Gem_01", "=ds="..BabbleInventory["Green"].." "..BabbleInventory["Gem"], "" };
+		{ 5, "JewelOrange"..AtlasLoot_Expac, "INV_Misc_Gem_01", "=ds="..BabbleInventory["Orange"].." "..BabbleInventory["Gem"], "" };
+		{ 6, "JewelPurple"..AtlasLoot_Expac, "INV_Misc_Gem_01", "=ds="..BabbleInventory["Purple"].." "..BabbleInventory["Gem"], "" };
+		{ 7, "JewelMeta"..AtlasLoot_Expac, "INV_Misc_Gem_01", "=ds="..BabbleInventory["Meta"].." "..BabbleInventory["Gem"], "" };
 		{ 8, "JewelPrismatic1", "INV_Misc_Gem_01", "=ds="..BabbleInventory["Prismatic"].." "..BabbleInventory["Gem"], "" };
 		{ 9, "JewelDragonsEye1", "INV_Misc_Gem_01", "=ds="..AL["Dragon's Eye"], "" };
 		{ 16, "JewelNeck1", "INV_Misc_Gem_01", "=ds="..BabbleInventory["Neck"], "" };
@@ -124,39 +126,36 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 18, "JewelRing1", "INV_Misc_Gem_01", "=ds="..BabbleInventory["Ring"], "" };
 		{ 19, "JewelMisc1", "INV_Misc_Gem_01", "=ds="..AL["Miscellaneous"], "" };
 		Back = "CRAFTINGMENU";
+		Submenu = "Disable";
 	};
 
 	AtlasLoot_Data["LEATHERWORKINGMENU"] = {
-		{ 2, "LeatherLeatherArmorOld1", "INV_Misc_ArmorKit_17", "=ds="..AL["Leather Armor"], "=q5="..AL["Original WoW"] };
-		{ 3, "LeatherLeatherArmorBC1", "INV_Misc_ArmorKit_17", "=ds="..AL["Leather Armor"], "=q5="..AL["Burning Crusade"] };
-		{ 4, "LeatherLeatherArmorWrath1", "INV_Misc_ArmorKit_17", "=ds="..AL["Leather Armor"], "=q5="..AL["Wrath of the Lich King"] };
-		{ 6, "LeatherCloaks1", "INV_Misc_ArmorKit_17", "=ds="..AL["Cloaks"], "" };
-		{ 7, "LeatherQuiversPouches1", "INV_Misc_ArmorKit_17", "=ds="..AL["Quivers and Ammo Pouches"], "" };
-		{ 8, "LeatherLeather1", "INV_Misc_ArmorKit_17", "=ds="..BabbleInventory["Leather"], "" };
-		{ 10, "Dragonscale1", "INV_Misc_ArmorKit_17", "=ds="..GetSpellInfo(10656), "" };
-		{ 11, "Tribal1", "INV_Misc_ArmorKit_17", "=ds="..GetSpellInfo(10660), "" };
-		{ 13, "LeatherHighRisk", "INV_Misc_ArmorKit_17", "=ds=High Risk", "" };
-		{ 17, "LeatherMailArmorOld1", "INV_Misc_ArmorKit_17", "=ds="..AL["Mail Armor"], "=q5="..AL["Original WoW"] };
-		{ 18, "LeatherMailArmorBC1", "INV_Misc_ArmorKit_17", "=ds="..AL["Mail Armor"], "=q5="..AL["Burning Crusade"] };
-		{ 19, "LeatherMailArmorWrath1", "INV_Misc_ArmorKit_17", "=ds="..AL["Mail Armor"], "=q5="..AL["Wrath of the Lich King"] };
-		{ 21, "LeatherItemEnhancement1", "INV_Misc_ArmorKit_17", "=ds="..AL["Item Enhancements"], "" };
-		{ 22, "LeatherDrumsBagsMisc1", "INV_Misc_ArmorKit_17", "=ds="..AL["Drums, Bags and Misc."], "" };
-		{ 25, "Elemental1", "INV_Misc_ArmorKit_17", "=ds="..GetSpellInfo(10658), "" };
+		{ 2, "LeatherLeatherArmor"..AtlasLoot_Expac, "INV_Misc_ArmorKit_17", "=ds="..AL["Leather Armor"], "" };
+		{ 4, "LeatherCloaks1", "INV_Misc_ArmorKit_17", "=ds="..AL["Cloaks"], "" };
+		{ 5, "LeatherQuiversPouches1", "INV_Misc_ArmorKit_17", "=ds="..AL["Quivers and Ammo Pouches"], "" };
+		{ 6, "LeatherLeather1", "INV_Misc_ArmorKit_17", "=ds="..BabbleInventory["Leather"], "" };
+		{ 8, "Dragonscale1", "INV_Misc_ArmorKit_17", "=ds="..GetSpellInfo(10656), "" };
+		{ 9, "Tribal1", "INV_Misc_ArmorKit_17", "=ds="..GetSpellInfo(10660), "" };
+		{ 11, "LeatherHighRisk", "INV_Misc_ArmorKit_17", "=ds=High Risk", "" };
+		{ 17, "LeatherMailArmor"..AtlasLoot_Expac, "INV_Misc_ArmorKit_17", "=ds="..AL["Mail Armor"],"" };
+		{ 19, "LeatherItemEnhancement1", "INV_Misc_ArmorKit_17", "=ds="..AL["Item Enhancements"], "" };
+		{ 20, "LeatherDrumsBagsMisc1", "INV_Misc_ArmorKit_17", "=ds="..AL["Drums, Bags and Misc."], "" };
+		{ 22, "Elemental1", "INV_Misc_ArmorKit_17", "=ds="..GetSpellInfo(10658), "" };
 		Back = "CRAFTINGMENU";
+		Submenu = "Disable";
 	};
 
 	AtlasLoot_Data["TAILORINGMENU"] = {
-		{ 2, "TailoringArmorOld1", "Trade_Tailoring", "=ds="..AL["Cloth Armor"], "=q5="..AL["Original WoW"] };
-		{ 3, "TailoringArmorBC1", "Trade_Tailoring", "=ds="..AL["Cloth Armor"], "=q5="..AL["Burning Crusade"] };
-		{ 4, "TailoringArmorWotLK1", "Trade_Tailoring", "=ds="..AL["Cloth Armor"], "=q5="..AL["Wrath of the Lich King"] };
-		{ 6, "Mooncloth1", "Trade_Tailoring", "=ds="..GetSpellInfo(26798), "" };
-		{ 7, "Shadoweave1", "Trade_Tailoring", "=ds="..GetSpellInfo(26801), "" };
-		{ 13, "TailorHighRisk", "Trade_Tailoring", "=ds=High Risk", "" };
+		{ 2, "TailoringArmor"..AtlasLoot_Expac, "Trade_Tailoring", "=ds="..AL["Cloth Armor"], "" };
+		{ 4, "Mooncloth1", "Trade_Tailoring", "=ds="..GetSpellInfo(26798), "" };
+		{ 5, "Shadoweave1", "Trade_Tailoring", "=ds="..GetSpellInfo(26801), "" };
+		{ 6, "Spellfire1", "Trade_Tailoring", "=ds="..GetSpellInfo(26797), "" };
+		{ 8, "TailorHighRisk", "Trade_Tailoring", "=ds=High Risk", "" };
 		{ 17, "TailoringBags1", "Trade_Tailoring", "=ds="..AL["Bags"], "" };
 		{ 18, "TailoringMisc1", "Trade_Tailoring", "=ds="..AL["Miscellaneous"], "" };
 		{ 19, "TailoringShirts1", "Trade_Tailoring", "=ds="..AL["Shirts"], "" };
-		{ 21, "Spellfire1", "Trade_Tailoring", "=ds="..GetSpellInfo(26797), "" };
 		Back = "CRAFTINGMENU";
+		Submenu = "Disable";
 	};
 
 	AtlasLoot_Data["CRAFTSET1"] = {

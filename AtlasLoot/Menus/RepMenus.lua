@@ -22,6 +22,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "REPMENUWRATH";
 		Next = "REPMENUTBC";
 		Back = "REPMENU"..AtlasLoot_Expac;
+		Submenu = "Expansion";
 	};
 
 	AtlasLoot_Data["REPMENUTBC"] = {
@@ -48,6 +49,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "REPMENUCLASSIC";
 		Next = "REPMENUWRATH";
 		Back = "REPMENU"..AtlasLoot_Expac;
+		Submenu = "Expansion";
 	};
 
 	AtlasLoot_Data["REPMENUWRATH"] = {
@@ -66,4 +68,5 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "REPMENUTBC";
 		Next = "REPMENUCLASSIC";
 		Back = "REPMENU"..AtlasLoot_Expac;
+		Submenu = "Expansion";
 	};

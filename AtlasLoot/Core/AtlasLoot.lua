@@ -85,8 +85,9 @@ Hooked_Atlas_Refresh = nil;
 Hooked_Atlas_OnShow = nil;
 Hooked_AtlasScrollBar_Update = nil;
 
-isTablereference = false
-notPattern = false
+isTablereference = false;
+notPattern = false;
+Updated_dataID = "";
 
 --Search panel open and close save variables
 --dataID, dataSource, boss, pFrame
@@ -493,28 +494,25 @@ function AtlasLoot_OnLoad()
 		AtlasLoot_SlashCommand(msg);
 	end
 
-	--Sets Expansion for seasonal/leagues
+	--Sets the default loot tables for the current expansion enabled on the server.
 	local function getExpac()
-		if GetAccountExpansionLevel() == 0 then
-			AtlasLoot_Expac = "CLASSIC";
-			AtlasLoot_Expac2 = "TBC";
-			AtlasLoot_Expac3 = "WRATH";
-		elseif GetAccountExpansionLevel() == 1 then
-			AtlasLoot_Expac = "TBC";
-			AtlasLoot_Expac2 = "CLASSIC";
-			AtlasLoot_Expac3 = "WRATH";
-		elseif GetAccountExpansionLevel() == 2 then
-			AtlasLoot_Expac = "WRATH";
-			AtlasLoot_Expac2 = "CLASSIC";
-			AtlasLoot_Expac3 = "TBC";
-		else
-			AtlasLoot_Expac = "CLASSIC";
-			AtlasLoot_Expac2 = "TBC";
-			AtlasLoot_Expac3 = "WRATH";
-		end
+		local xpaclist = { [0] = {"CLASSIC"} ,[1] = {"TBC"} ,[2] = {"WRATH"} };
+		AtlasLoot_Expac = xpaclist[GetAccountExpansionLevel()][1];
 	end
 	getExpac();
+	AtlasLoot_Expac_CurrentTable = AtlasLoot_Expac;
 end
+
+function AtlasLoot_CleandataID(newID, listnum)
+	local cleanlist = {	[1] = {"CLASSIC", "TBC", "WRATH", "1", "2", "3", "4", "5", "6", "7", "8"},
+						[2] = {"1", "2", "3", "4", "5", "6", "7", "8"}
+					};
+	for i = 1, #cleanlist[listnum] do
+		newID = gsub(newID, cleanlist[listnum][i], "");
+	end
+	return newID;
+end
+
 --[[
 AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame):
 dataID - Name of the loot table
@@ -653,6 +651,25 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 	else
 		DewDrop2Enable = false;
 	end
+		--Turns on the submenu to change expansion
+		if dataID == "SearchResult" or dataID == "WishList" then
+		elseif AtlasLoot_Data[dataID].Submenu == "Expansion" then
+			Updated_dataID = AtlasLoot_CleandataID(dataID, 1);
+			AtlasLoot_Expac_CurrentTable = gsub(dataID, Updated_dataID, "")
+			AtlasLoot_Expac_CurrentTable = AtlasLoot_CleandataID(AtlasLoot_Expac_CurrentTable, 2);
+			AtlasLootDefaultFrame_SubMenu:Enable();
+			AtlasLoot_DewdropSubMenu:Unregister(AtlasLootDefaultFrame_SubMenu);
+			AtlasLoot_DewdropSubMenuRegister(AtlasLoot_DewDropDown_SubTables["Expansion"]);
+			AtlasLootDefaultFrame_SelectedTable:SetText(AtlasLoot_TableNames[AtlasLoot_Expac_CurrentTable][1]);
+			SelectedTableTextSet = true;
+		elseif AtlasLoot_Data[dataID].Submenu == "Disable" then
+			AtlasLoot_DewdropSubMenu:Unregister(AtlasLootDefaultFrame_SubMenu);
+			SelectedTableTextSet = false;
+			AtlasLootDefaultFrame_SubMenu:Disable();
+			AtlasLootDefaultFrame_SelectedTable:SetText("");
+			AtlasLoot_Expac_CurrentTable = "";
+		end
+	
 
 	--Hide UI objects so that only needed ones are shown
 	for i = 1, 30, 1 do
@@ -700,6 +717,8 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 				if isItem then
 					if ItemindexID == "Bloodforged" then
 						IDfound = "60"..dataSource[dataID][i][2];
+					elseif ItemindexID == 2 then
+						IDfound = dataSource[dataID][i][2];
 					else
 					--Sets ItemindexID to normal(2) if it is nil for min/max difficulties.
 						if not tonumber(ItemindexID) then ItemindexID = AtlasLoot_Difficulty.Normal end;
@@ -883,7 +902,9 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 			lastType = dataSource[dataID].Type
 		end
 
-		if SelectedTableTextSet then
+		if AtlasLoot_Expac_CurrentTable ~= "" then	
+			AtlasLootDefaultFrame_SelectedTable:SetText(AtlasLoot_TableNames[AtlasLoot_Expac_CurrentTable][1]);
+		elseif SelectedTableTextSet then
             AtlasLootDefaultFrame_SelectedTable:SetText(AtlasLoot_TableNames[dataID][1]);
         else
             AtlasLootDefaultFrame_SelectedTable:SetText("");

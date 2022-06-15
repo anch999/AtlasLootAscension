@@ -26,7 +26,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 23, "T3SET", "INV_Pants_Mail_38v3", "=ds="..AL["Tier 3 Sets"], ""};
 		Prev = "SETMENUWRATH";
 		Next = "SETMENUTBC";
-		Back = "SETMENU"..AtlasLoot_Expac;
+		Submenu = "Expansion";
 	};
 
 	AtlasLoot_Data["SETMENUTBC"] = {
@@ -41,7 +41,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 20, "T6SET", "inv_helmet_98", "=ds="..AL["Tier 6 Sets"], ""};
 		Prev = "SETMENUCLASSIC";
 		Next = "SETMENUWRATH";
-		Back = "SETMENU"..AtlasLoot_Expac;	
+		Submenu = "Expansion";	
 	};
 
 	AtlasLoot_Data["SETMENUWRATH"] = {
@@ -59,7 +59,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 18, "T10SET", "INV_Chest_Chain_15", "=ds="..AL["Tier 10 Sets"], "=q5="..AL["10/25 Man"]};
 		Prev = "SETMENUTBC";
 		Next = "SETMENUCLASSIC";
-		Back = "SETMENU"..AtlasLoot_Expac;	
+		Submenu = "Expansion";
 	};
 
 	AtlasLoot_Data["70TOKENMENU"] = {
@@ -121,6 +121,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 18, "MountsPvP1", "ability_mount_netherdrakeelite", "=ds="..AL["PvP Mounts"], ""};
 		{ 19, "MountsCraftQuestPromotion1", "INV_Misc_QirajiCrystal_05", "=ds="..AL["Quest"].." / "..AL["Promotional"].." / "..AL["Crafted Mounts"], ""};
 		Back = "SETMENU"..AtlasLoot_Expac;
+		Submenu = "Expansion";
 	};
 
 	AtlasLoot_Data["PETMENU"] = {
@@ -132,6 +133,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 18, "PetsEvent1", "inv_pet_egbert", "=ds="..AL["World Events"], ""};
 		{ 19, "PetsPetStore1", "INV_Misc_Coin_01", "=ds="..AL["Pet Store"], ""};
 		Back = "SETMENU"..AtlasLoot_Expac;
+		Submenu = "Expansion";
 	};
 
 	AtlasLoot_Data["SETSCLASSIC"] = {

@@ -700,14 +700,14 @@ function AtlasLoot_FixText(text)
     text = gsub(text, "#aq40s9#", AL["Conqueror's Battlegear"]);
 
     -- Teir Tokens
-    text = gsub(text, "#tt1#", AL["Tier 1 Set Token"]);
-    text = gsub(text, "#tt2#", AL["Tier 2 Set Token"]);
-    text = gsub(text, "#tt2.5#", AL["Tier 2.5 Set Token"]);
-    text = gsub(text, "#tt3#", AL["Tier 3 Set Token"]);
-    text = gsub(text, "#tt4#", AL["Tier 4 Set Token"]);
-    text = gsub(text, "#tt5#", AL["Tier 5 Set Token"]);
-    text = gsub(text, "#tt6#", AL["Tier 6 Set Token"]);
-    text = gsub(text, "#tt7#", AL["Tier 7 Set Token"]);
+    text = gsub(text, "#tt1#", AL["Tier 1 Set Token (Click)"]);
+    text = gsub(text, "#tt2#", AL["Tier 2 Set Token (Click)"]);
+    text = gsub(text, "#tt2.5#", AL["Tier 2.5 Set Token (Click)"]);
+    text = gsub(text, "#tt3#", AL["Tier 3 Set Token (Click)"]);
+    text = gsub(text, "#tt4#", AL["Tier 4 Set Token (Click)"]);
+    text = gsub(text, "#tt5#", AL["Tier 5 Set Token (Click)"]);
+    text = gsub(text, "#tt6#", AL["Tier 6 Set Token (Click)"]);
+    text = gsub(text, "#tt7#", AL["Tier 7 Set Token (Click)"]);
 
     -- Dungeon 1 Sets
     text = gsub(text, "#t0s1#", AL["Wildheart Raiment"]);

@@ -26,8 +26,8 @@ AtlasLoot_Dewdrop = AceLibrary("Dewdrop-2.0");
 AtlasLoot_DewdropSubMenu = AceLibrary("Dewdrop-2.0");
 AtlasLoot_DewdropSubMenu2 = AceLibrary("Dewdrop-2.0");
 AtlasLoot_DifficultyAtlas = AceLibrary("Dewdrop-2.0");
-indexID = 2
-ItemindexID = ""
+indexID = 2;
+ItemindexID = "";
 
 AtlasLoot_Data["AtlasLootFallback"] = {
     EmptyInstance = {};
@@ -46,17 +46,29 @@ function AtlasLoot_DewDropClick(tablename, text, tabletype)
     pFrame = { "TOPLEFT", "AtlasLootDefaultFrame_LootBackground", "TOPLEFT", "2", "-2" };
     --If the button clicked was linked to a loot table
     AtlasLoot_Hold = false;
-    if tabletype == "Table" then
-        --Show the loot table
-        AtlasLoot_ShowBossLoot(tablename, tablename, pFrame);
-		--Save needed info for fuure re-display of the table
-        AtlasLoot_Lastboss = tablename;
-        AtlasLoot.db.profile.LastBoss = tablename;
-        --Purge the text label for the submenu and disable the submenu
-        AtlasLootDefaultFrame_SubMenu:Disable();
-        AtlasLootDefaultFrame_SelectedTable:SetText("");
-        AtlasLootDefaultFrame_SelectedTable:Show();
-        SelectedTableTextSet = false;
+        if tabletype == "Table" then
+            --Show the loot table
+            AtlasLoot_ShowBossLoot(tablename, tablename, pFrame);
+            --Save needed info for fuure re-display of the table
+            AtlasLoot_Lastboss = tablename;
+            AtlasLoot.db.profile.LastBoss = tablename;
+            --Turns on the submenu to select expansion
+            if AtlasLoot_Data[tablename].Submenu == "Expansion" then
+                local updated_tablename = AtlasLoot_CleandataID(tablename, 1);
+                Updated_dataID = updated_tablename;
+                AtlasLootDefaultFrame_SubMenu:Enable();
+                AtlasLoot_DewdropSubMenu:Unregister(AtlasLootDefaultFrame_SubMenu);
+                AtlasLoot_DewdropSubMenuRegister(AtlasLoot_DewDropDown_SubTables["Expansion"]);
+                AtlasLootDefaultFrame_SelectedTable:SetText(AtlasLoot_TableNames[AtlasLoot_Expac][1]);
+            else
+            --Purge the text label for the submenu and disable the submenu
+            AtlasLootDefaultFrame_SubMenu:Disable();
+            AtlasLootDefaultFrame_SelectedTable:SetText("");
+            AtlasLootDefaultFrame_SelectedTable:Show();
+            SelectedTableTextSet = false;
+            Updated_dataID = "";
+            AtlasLoot_Expac_CurrentTable = "";
+        end
     else
 		--Enable the submenu button
         AtlasLootDefaultFrame_SubMenu:Enable();
@@ -76,6 +88,8 @@ function AtlasLoot_DewDropClick(tablename, text, tabletype)
         end
 		AtlasLootDefaultFrame_SelectedTable:Show();
         SelectedTableTextSet = true;
+        Updated_dataID = ""
+        AtlasLoot_Expac_CurrentTable = "";
     end
     --Show the category that has been selected
     AtlasLootDefaultFrame_SelectedCategory:SetText(text);
@@ -90,6 +104,12 @@ text - Heading for the loot table
 Called when a button in AtlasLoot_DewdropSubMenu is clicked
 ]]
 function AtlasLoot_DewDropSubMenuClick(tablename, text)
+    --Changes the lable of the submenu to show Expansion not the main table name
+    if Updated_dataID ~= "" then
+        if AtlasLoot_Data[Updated_dataID..tablename].Submenu == "Expansion" then
+            tablename = Updated_dataID..tablename;
+        end
+    end
     --Definition of where I want the loot table to be shown
     pFrame = { "TOPLEFT", "AtlasLootDefaultFrame_LootBackground", "TOPLEFT", "2", "-2" };
     --Show the select loot table
@@ -246,38 +266,6 @@ function AtlasLootDefaultFrame_GetRaidDifficulty(raidtablename, itemID, itemColo
 			end
             DropTablename = raidtablename;
 end
---[[
-function AtlasLoot_DewdropSubMenu2Register(loottable)
-    AtlasLoot_DewdropSubMenu2:Register(AtlasLootDefaultFrame_SubMenu2,
-        'point', function(parent)
-            return "TOP", "BOTTOM"
-        end,
-        'children', function(level, value)
-            if level == 1 then
-                for k,v in pairs(loottable) do
-						AtlasLoot_DewdropSubMenu2:AddLine(
-                            'text', v[1],
-                            'func', AtlasLoot_DewDropSubMenu2Click,
-                            'arg1', v[1],
-                            'arg2', v[2],
-                            'arg3', v[3],
-                            'notCheckable', true
-                        )
-                end
-                AtlasLoot_DewdropSubMenu2:AddLine(
-					'text', AL["Close Menu"],
-                    'textR', 0,
-                    'textG', 1,
-                    'textB', 1,
-					'func', function() AtlasLoot_DewdropSubMenu2:Close() end,
-					'notCheckable', true
-				)
-            end
-		end,
-		'dontHook', true
-	)
-end
-]]
 
 function AtlasLoot_DewdropSubMenu2Register(loottable)
     AtlasLoot_DewdropSubMenu2:Register(AtlasLootDefaultFrame_SubMenu2,

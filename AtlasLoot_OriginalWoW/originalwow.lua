@@ -5549,16 +5549,16 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 
 
 	AtlasLoot_Data["T3Shoulders"] = {
-		{ 3, 22491, "", "=q4=Dreamwalker Spaulders", "=ds="};
-		{ 3, 22439, "", "=q4=Cryptstalker Spaulders", "=ds="};
+		{ 1, 22491, "", "=q4=Dreamwalker Spaulders", "=ds="};
+		{ 2, 22439, "", "=q4=Cryptstalker Spaulders", "=ds="};
 		{ 3, 22499, "", "=q4=Frostfire Shoulderpads", "=ds="};
-		{ 3, 22429, "", "=q4=Redemption Spaulders", "=ds="};
-		{ 3, 22515, "", "=q4=Shoulderpads of Faith", "=ds="};
-		{ 3, 22479, "", "=q4=Bonescythe Pauldrons", "=ds="};
-		{ 3, 22467, "", "=q4=Earthshatter Spaulders", "=ds="};
-		{ 3, 22507, "", "=q4=Plagueheart Shoulderpads", "=ds="};
-		{ 3, 22419, "", "=q4=Dreadnaught Pauldrons", "=ds="};
-		{ 3, 10491, "", "=q4=Dreadborne Pauldrons", "=ds="};
+		{ 4, 22429, "", "=q4=Redemption Spaulders", "=ds="};
+		{ 5, 22515, "", "=q4=Shoulderpads of Faith", "=ds="};
+		{ 6, 22479, "", "=q4=Bonescythe Pauldrons", "=ds="};
+		{ 7, 22467, "", "=q4=Earthshatter Spaulders", "=ds="};
+		{ 8, 22507, "", "=q4=Plagueheart Shoulderpads", "=ds="};
+		{ 9, 22419, "", "=q4=Dreadnaught Pauldrons", "=ds="};
+		{ 10, 10491, "", "=q4=Dreadborne Pauldrons", "=ds="};
 		Back = AtlasLoot_Lastboss;
 		Type = "ClassicRaid";
 	};

@@ -69,8 +69,48 @@ local MASTER = select(2, GetSpellInfo(28596));
 		---------------
 		--- Alchemy ---
 		---------------
-
-	AtlasLoot_Data["AlchemyBattleElixir1"] = {
+	AtlasLoot_Data["AlchemyBattleElixirCLASSIC"] = {
+		{ 1, "s17573", "13454", "=q1=Greater Arcane Elixir", "=ds="..AL["Trainer"]};
+		{ 2, "s17571", "13452", "=q1=Elixir of the Mongoose", "=ds="..BabbleZone["Felwood"]};
+		{ 3, "s17557", "13453", "=q1=Elixir of Brute Force", "=ds="..AL["Trainer"]};
+		{ 4, "s11477", "9224", "=q1=Elixir of Demonslaying", "=ds="..AL["Vendor"]};
+		{ 5, "s26277", "21546", "=q1=Elixir of Greater Firepower", "=ds="..BabbleZone["Searing Gorge"]};
+		{ 6, "s11476", "9264", "=q1=Elixir of Shadow Power", "=ds="..AL["Vendor"]..", "..BabbleZone["Undercity"].."/"..BabbleZone["Stormwind City"]};
+		{ 7, "s11472", "9206", "=q1=Elixir of Giants", "=ds="..AL["World Drop"]};
+		{ 8, "s11467", "9187", "=q1=Elixir of Greater Agility", "=ds="..AL["Trainer"]};
+		{ 9, "s11461", "9155", "=q1=Arcane Elixir", "=ds="..AL["Trainer"]};
+		{ 10, "s21923", "17708", "=q1=Elixir of Frost Power", "=ds="..AL["Feast of Winter Veil"]};
+		{ 11, "s11449", "8949", "=q1=Elixir of Agility", "=ds="..AL["Trainer"]};
+		{ 12, "s63732", "45621", "=q1=Elixir of Minor Accuracy", "=ds="};
+		{ 13, "s3188", "3391", "=q1=Elixir of Ogre's Strength", "=ds="..AL["World Drop"]};
+		{ 14, "s2333", "3390", "=q1=Elixir of Lesser Agility", "=ds="..AL["World Drop"]};
+		{ 15, "s7845", "6373", "=q1=Elixir of Firepower", "=ds="..AL["Trainer"]};
+		{ 16, "s8240", "6662", "=q1=Elixir of Giant Growth", "=ds="..BabbleZone["The Barrens"]};
+		{ 17, "s3230", "2457", "=q1=Elixir of Minor Agility", "=ds="..AL["World Drop"]};
+		{ 18, "s2329", "2454", "=q1=Elixir of Lion's Strength", "=ds="..AL["Trainer"]};
+		Next = "AlchemyBattleElixirTBC";
+		Prev = "AlchemyBattleElixirWRATH";
+		Back = "ALCHEMYMENU";
+		Submenu = "Expansion";
+	};
+	AtlasLoot_Data["AlchemyBattleElixirTBC"] = {
+		{ 1, "s28558", "22835", "=q1=Elixir of Major Shadow Power", "=ds="..BabbleFaction["Revered"]..": "..BabbleFaction["Lower City"]};
+		{ 2, "s28556", "22833", "=q1=Elixir of Major Firepower", "=ds="..BabbleFaction["Revered"]..": "..BabbleFaction["The Scryers"]};
+		{ 3, "s38960", "31679", "=q1=Fel Strength Elixir", "=ds="..BabbleZone["Shadowmoon Valley"]};
+		{ 4, "s28553", "22831", "=q1=Elixir of Major Agility", "=ds="..BabbleFaction["Honored"]..": "..BabbleFaction["Thrallmar"].."/"..BabbleFaction["Honor Hold"]};
+		{ 5, "s28549", "22827", "=q1=Elixir of Major Frost Power", "=ds="..AL["Vendor"]..", "..BabbleZone["Zangarmarsh"]};
+		{ 6, "s33741", "28104", "=q1=Elixir of Mastery", "=ds="..AL["Trainer"]};
+		{ 7, "s28545", "22825", "=q1=Elixir of Healing Power", "=ds="..AL["Trainer"]};
+		{ 8, "s28544", "22824", "=q1=Elixir of Major Strength", "=ds="..AL["Trainer"]};
+		{ 9, "s33740", "28103", "=q1=Adept's Elixir", "=ds="..AL["Trainer"]};
+		{ 10, "s33738", "28102", "=q1=Onslaught Elixir", "=ds="..AL["Trainer"]};
+		Next = "AlchemyBattleElixirWRATH";
+		Prev = "AlchemyBattleElixirCLASSIC";
+		Back = "ALCHEMYMENU";
+		Submenu = "Expansion";
+	};
+	
+	AtlasLoot_Data["AlchemyBattleElixirWRATH"] = {
 		{ 1, "s60365", "44330", "=q1=Elixir of Armor Piercing", "=ds="};
 		{ 2, "s60355", "44327", "=q1=Elixir of Deadly Strikes", "=ds="};
 		{ 3, "s60357", "44329", "=q1=Elixir of Expertise", "=ds="};
@@ -80,46 +120,50 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 7, "s54218", "40073", "=q1=Elixir of Mighty Strength", "=ds="..AL["Trainer"]};
 		{ 8, "s53848", "40076", "=q1=Guru's Elixir", "=ds="..AL["Trainer"]};
 		{ 9, "s53842", "40070", "=q1=Spellpower Elixir", "=ds="..AL["Trainer"]};
-		{ 10, "s53841", "40068", "=q1=Wrath Elixir", "=ds="..AL["Trainer"]};
-		{ 11, "s28558", "22835", "=q1=Elixir of Major Shadow Power", "=ds="..BabbleFaction["Revered"]..": "..BabbleFaction["Lower City"]};
-		{ 12, "s28556", "22833", "=q1=Elixir of Major Firepower", "=ds="..BabbleFaction["Revered"]..": "..BabbleFaction["The Scryers"]};
-		{ 13, "s38960", "31679", "=q1=Fel Strength Elixir", "=ds="..BabbleZone["Shadowmoon Valley"]};
-		{ 14, "s28553", "22831", "=q1=Elixir of Major Agility", "=ds="..BabbleFaction["Honored"]..": "..BabbleFaction["Thrallmar"].."/"..BabbleFaction["Honor Hold"]};
-		{ 15, "s28549", "22827", "=q1=Elixir of Major Frost Power", "=ds="..AL["Vendor"]..", "..BabbleZone["Zangarmarsh"]};
-		{ 16, "s33741", "28104", "=q1=Elixir of Mastery", "=ds="..AL["Trainer"]};
-		{ 17, "s28545", "22825", "=q1=Elixir of Healing Power", "=ds="..AL["Trainer"]};
-		{ 18, "s28544", "22824", "=q1=Elixir of Major Strength", "=ds="..AL["Trainer"]};
-		{ 19, "s33740", "28103", "=q1=Adept's Elixir", "=ds="..AL["Trainer"]};
-		{ 20, "s33738", "28102", "=q1=Onslaught Elixir", "=ds="..AL["Trainer"]};
-		{ 21, "s17573", "13454", "=q1=Greater Arcane Elixir", "=ds="..AL["Trainer"]};
-		{ 22, "s17571", "13452", "=q1=Elixir of the Mongoose", "=ds="..BabbleZone["Felwood"]};
-		{ 23, "s17557", "13453", "=q1=Elixir of Brute Force", "=ds="..AL["Trainer"]};
-		{ 24, "s11477", "9224", "=q1=Elixir of Demonslaying", "=ds="..AL["Vendor"]};
-		{ 25, "s26277", "21546", "=q1=Elixir of Greater Firepower", "=ds="..BabbleZone["Searing Gorge"]};
-		{ 26, "s11476", "9264", "=q1=Elixir of Shadow Power", "=ds="..AL["Vendor"]..", "..BabbleZone["Undercity"].."/"..BabbleZone["Stormwind City"]};
-		{ 27, "s11472", "9206", "=q1=Elixir of Giants", "=ds="..AL["World Drop"]};
-		{ 28, "s11467", "9187", "=q1=Elixir of Greater Agility", "=ds="..AL["Trainer"]};
-		{ 29, "s11461", "9155", "=q1=Arcane Elixir", "=ds="..AL["Trainer"]};
-		{ 30, "s21923", "17708", "=q1=Elixir of Frost Power", "=ds="..AL["Feast of Winter Veil"]};
-		Next = "AlchemyBattleElixir2";
+		{ 10, "s53841", "40068", "=q1=WRATH Elixir", "=ds="..AL["Trainer"]};
+		Prev = "AlchemyBattleElixirTBC";
+		Next = "AlchemyBattleElixirCLASSIC";
 		Back = "ALCHEMYMENU";
+		Submenu = "Expansion";
+	};
+	
+	AtlasLoot_Data["AlchemyGuardianElixirCLASSIC"] = {
+		{ 1, "s24368", "20004", "=q1=Major Troll's Blood Elixir", "=ds="..BabbleFaction["Honored"]..": "..BabbleFaction["Zandalar Tribe"]};
+		{ 2, "s24365", "20007", "=q1=Mageblood Elixir", "=ds="..BabbleFaction["Revered"]..": "..BabbleFaction["Zandalar Tribe"]};
+		{ 3, "s17554", "13445", "=q1=Elixir of Superior Defense", "=ds="..AL["Vendor"]..", "..BabbleZone["Orgrimmar"].."/"..BabbleZone["Ironforge"]};
+		{ 4, "s17555", "13447", "=q1=Elixir of the Sages", "=ds="..AL["Trainer"]};
+		{ 5, "s11466", "9088", "=q1=Gift of Arthas", "=ds="..BabbleZone["Western Plaguelands"]};
+		{ 6, "s11465", "9179", "=q1=Elixir of Greater Intellect", "=ds="..AL["Trainer"]};
+		{ 7, "s11450", "8951", "=q1=Elixir of Greater Defense", "=ds="..AL["Trainer"]};
+		{ 8, "s3451", "3826", "=q1=Mighty Troll's Blood Elixir", "=ds="..AL["World Drop"]};
+		{ 9, "s3450", "3825", "=q1=Elixir of Fortitude", "=ds="..AL["Trainer"]};
+		{ 10, "s3177", "3389", "=q1=Elixir of Defense", "=ds="..AL["Trainer"]};
+		{ 11, "s3176", "3388", "=q1=Strong Troll's Blood Potion", "=ds="..AL["Trainer"]};
+		{ 12, "s3171", "3383", "=q1=Elixir of Wisdom", "=ds="..AL["Trainer"]};
+		{ 13, "s2334", "2458", "=q1=Elixir of Minor Fortitude", "=ds="..AL["Trainer"]};
+		{ 14, "s3170", "3382", "=q1=Weak Troll's Blood Elixir", "=ds="..AL["Trainer"]};
+		{ 15, "s7183", "5997", "=q1=Elixir of Minor Defense", "=ds="..AL["Trainer"]};
+		Next = "AlchemyGuardianElixirTBC";
+		Prev = "AlchemyGuardianElixirWRATH";
+		Back = "ALCHEMYMENU";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["AlchemyBattleElixir2"] = {
-		{ 1, "s11449", "8949", "=q1=Elixir of Agility", "=ds="..AL["Trainer"]};
-		{ 2, "s63732", "45621", "=q1=Elixir of Minor Accuracy", "=ds="};
-		{ 3, "s3188", "3391", "=q1=Elixir of Ogre's Strength", "=ds="..AL["World Drop"]};
-		{ 4, "s2333", "3390", "=q1=Elixir of Lesser Agility", "=ds="..AL["World Drop"]};
-		{ 5, "s7845", "6373", "=q1=Elixir of Firepower", "=ds="..AL["Trainer"]};
-		{ 6, "s8240", "6662", "=q1=Elixir of Giant Growth", "=ds="..BabbleZone["The Barrens"]};
-		{ 7, "s3230", "2457", "=q1=Elixir of Minor Agility", "=ds="..AL["World Drop"]};
-		{ 8, "s2329", "2454", "=q1=Elixir of Lion's Strength", "=ds="..AL["Trainer"]};
-		Prev = "AlchemyBattleElixir1";
-		Next = "AlchemyGuardianElixir1";
+	AtlasLoot_Data["AlchemyGuardianElixirTBC"] = {
+		{ 1, "s28578", "22848", "=q1=Elixir of Empowerment", "=ds="..AL["World Drop"]};
+		{ 2, "s28570", "22840", "=q1=Elixir of Major Mageblood", "=ds="..AL["World Drop"]};
+		{ 3, "s28557", "22834", "=q1=Elixir of Major Defense", "=ds="..AL["Vendor"]};
+		{ 4, "s39639", "32068", "=q1=Elixir of Ironskin", "=ds="..AL["Vendor"]..", "..BabbleZone["Nagrand"]};
+		{ 5, "s39637", "32063", "=q1=Earthen Elixir", "=ds="..BabbleFaction["Honored"]..": "..BabbleFaction["Cenarion Expedition"]};
+		{ 6, "s39638", "32067", "=q1=Elixir of Draenic Wisdom", "=ds="..AL["Trainer"]};
+		{ 7, "s39636", "32062", "=q1=Elixir of Major Fortitude", "=ds="..AL["Trainer"]};
+		Next = "AlchemyGuardianElixirWRATH";
+		Prev = "AlchemyGuardianElixirCLASSIC";
 		Back = "ALCHEMYMENU";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["AlchemyGuardianElixir1"] = {
+	AtlasLoot_Data["AlchemyGuardianElixirWRATH"] = {
 		{ 1, "s60356", "44328", "=q1=Elixir of Mighty Defense", "=ds="..AL["Discovery"]};
 		{ 2, "s56519", "40109", "=q1=Elixir of Mighty Mageblood", "=ds="..AL["Discovery"]};
 		{ 3, "s54220", "40097", "=q1=Elixir of Protection", "=ds="..AL["Discovery"]};
@@ -127,106 +171,40 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 5, "s53898", "40078", "=q1=Elixir of Mighty Fortitude", "=ds="..AL["Trainer"]};
 		{ 6, "s60367", "44332", "=q1=Elixir of Mighty Thoughts", "=ds="..AL["Trainer"]};
 		{ 7, "s53847", "40072", "=q1=Elixir of Spirit", "=ds="..AL["Trainer"]};
-		{ 8, "s28578", "22848", "=q1=Elixir of Empowerment", "=ds="..AL["World Drop"]};
-		{ 9, "s28570", "22840", "=q1=Elixir of Major Mageblood", "=ds="..AL["World Drop"]};
-		{ 10, "s28557", "22834", "=q1=Elixir of Major Defense", "=ds="..AL["Vendor"]};
-		{ 11, "s39639", "32068", "=q1=Elixir of Ironskin", "=ds="..AL["Vendor"]..", "..BabbleZone["Nagrand"]};
-		{ 12, "s39637", "32063", "=q1=Earthen Elixir", "=ds="..BabbleFaction["Honored"]..": "..BabbleFaction["Cenarion Expedition"]};
-		{ 13, "s39638", "32067", "=q1=Elixir of Draenic Wisdom", "=ds="..AL["Trainer"]};
-		{ 14, "s39636", "32062", "=q1=Elixir of Major Fortitude", "=ds="..AL["Trainer"]};
-		{ 15, "s24368", "20004", "=q1=Major Troll's Blood Elixir", "=ds="..BabbleFaction["Honored"]..": "..BabbleFaction["Zandalar Tribe"]};
-		{ 16, "s24365", "20007", "=q1=Mageblood Elixir", "=ds="..BabbleFaction["Revered"]..": "..BabbleFaction["Zandalar Tribe"]};
-		{ 17, "s17554", "13445", "=q1=Elixir of Superior Defense", "=ds="..AL["Vendor"]..", "..BabbleZone["Orgrimmar"].."/"..BabbleZone["Ironforge"]};
-		{ 18, "s17555", "13447", "=q1=Elixir of the Sages", "=ds="..AL["Trainer"]};
-		{ 19, "s11466", "9088", "=q1=Gift of Arthas", "=ds="..BabbleZone["Western Plaguelands"]};
-		{ 20, "s11465", "9179", "=q1=Elixir of Greater Intellect", "=ds="..AL["Trainer"]};
-		{ 21, "s11450", "8951", "=q1=Elixir of Greater Defense", "=ds="..AL["Trainer"]};
-		{ 22, "s3451", "3826", "=q1=Mighty Troll's Blood Elixir", "=ds="..AL["World Drop"]};
-		{ 23, "s3450", "3825", "=q1=Elixir of Fortitude", "=ds="..AL["Trainer"]};
-		{ 24, "s3177", "3389", "=q1=Elixir of Defense", "=ds="..AL["Trainer"]};
-		{ 25, "s3176", "3388", "=q1=Strong Troll's Blood Potion", "=ds="..AL["Trainer"]};
-		{ 26, "s3171", "3383", "=q1=Elixir of Wisdom", "=ds="..AL["Trainer"]};
-		{ 27, "s2334", "2458", "=q1=Elixir of Minor Fortitude", "=ds="..AL["Trainer"]};
-		{ 28, "s3170", "3382", "=q1=Weak Troll's Blood Elixir", "=ds="..AL["Trainer"]};
-		{ 29, "s7183", "5997", "=q1=Elixir of Minor Defense", "=ds="..AL["Trainer"]};
-		Next = "AlchemyPotion1";
-		Prev = "AlchemyBattleElixir1";
+		Prev = "AlchemyGuardianElixirTBC";
 		Back = "ALCHEMYMENU";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["AlchemyPotion1"] = {
-		{ 1, "s54221", "40211", "=q1=Potion of Speed", "=ds="};
-		{ 2, "s54222", "40212", "=q1=Potion of Wild Magic", "=ds="};
-		{ 3, "s53904", "40087", "=q1=Powerful Rejuvenation Potion", "=ds="};
-		{ 4, "s58868", "43570", "=q1=Endless Mana Potion", "=ds="..AL["Trainer"]};
-		{ 5, "s53837", "33448", "=q1=Runic Mana Potion", "=ds="..AL["Trainer"]};
-		{ 6, "s58871", "43569", "=q1=Endless Healing Potion", "=ds="..AL["Trainer"]};
-		{ 7, "s53836", "33447", "=q1=Runic Healing Potion", "=ds="..AL["Trainer"]};
-		{ 8, "s53936", "40213", "=q1=Mighty Arcane Protection Potion", "=ds="};
-		{ 9, "s53939", "40214", "=q1=Mighty Fire Protection Potion", "=ds="..AL["Drop"]};
-		{ 10, "s53937", "40215", "=q1=Mighty Frost Protection Potion", "=ds="..AL["Drop"]};
-		{ 11, "s53942", "40216", "=q1=Mighty Nature Protection Potion", "=ds="..AL["Drop"]};
-		{ 12, "s53938", "40217", "=q1=Mighty Shadow Protection Potion", "=ds="};
-		{ 13, "s53905", "40093", "=q1=Indestructible Potion", "=ds="..AL["Trainer"]};
-		{ 14, "s53900", "40081", "=q1=Potion of Nightmares", "=ds="..AL["Trainer"]};
-		{ 15, "s53895", "40077", "=q1=Crazy Alchemist's Potion", "=ds="..AL["Trainer"]};
-		{ 16, "s53839", "40067", "=q1=Icy Mana Potion", "=ds="..AL["Trainer"]};
-		{ 17, "s53838", "39671", "=q1=Resurgent Healing Potion", "=ds="..AL["Trainer"]};
-		{ 18, "s28586", "22850", "=q1=Super Rejuvenation Potion", "=ds="..AL["Discovery"]};
-		{ 19, "s38961", "31677", "=q1=Fel Mana Potion", "=ds="..BabbleZone["Shadowmoon Valley"]};
-		{ 20, "s28579", "22849", "=q1=Ironshield Potion", "=ds="..BabbleBoss["Captain Skarloc"]..": "..BabbleZone["Old Hillsbrad Foothills"]};
-		{ 21, "s28575", "22845", "=q1=Major Arcane Protection Potion", "=ds="..BabbleZone["Nagrand"]};
-		{ 22, "s28571", "22841", "=q1=Major Fire Protection Potion", "=ds="..BabbleZone["The Mechanar"]};
-		{ 23, "s28572", "22842", "=q1=Major Frost Protection Potion", "=ds="..BabbleBoss["Nexus-Prince Shaffar"]..": "..BabbleZone["Mana-Tombs"]};
-		{ 24, "s28577", "22847", "=q1=Major Holy Protection Potion", "=ds="..BabbleZone["Blade's Edge Mountains"]};
-		{ 25, "s28573", "22844", "=q1=Major Nature Protection Potion", "=ds="..BabbleFaction["Exalted"]..": "..BabbleFaction["Cenarion Expedition"]};
-		{ 26, "s28576", "22846", "=q1=Major Shadow Protection Potion", "=ds="..BabbleZone["Shadowmoon Valley"]};
-		{ 27, "s28565", "22839", "=q1=Destruction Potion", "=ds="..AL["World Drop"]};
-		{ 28, "s28564", "22838", "=q1=Haste Potion", "=ds="..AL["World Drop"]};
-		{ 29, "s28563", "22837", "=q1=Heroic Potion", "=ds="..AL["World Drop"]};
-		{ 30, "s28562", "22836", "=q1=Major Dreamless Sleep Potion", "=ds="..AL["Vendor"]};
-		Next = "AlchemyPotion2";
-		Prev = "AlchemyGuardianElixir1";
+		AtlasLoot_Data["AlchemyPotionCLASSIC"] = {
+		{ 1, "s22732", "18253", "=q1=Major Rejuvenation Potion", "=ds="..BabbleZone["Molten Core"]};
+		{ 2, "s17580", "13444", "=q1=Major Mana Potion", "=ds="..AL["Vendor"]..", "..BabbleZone["Western Plaguelands"]};
+		{ 3, "s17577", "13461", "=q1=Greater Arcane Protection Potion", "=ds="..BabbleZone["Winterspring"]};
+		{ 4, "s17574", "13457", "=q1=Greater Fire Protection Potion", "=ds="..BabbleZone["Blackrock Spire"]};
+		{ 5, "s17575", "13456", "=q1=Greater Frost Protection Potion", "=ds="..BabbleZone["Winterspring"]};
+		{ 6, "s17576", "13458", "=q1=Greater Nature Protection Potion", "=ds="..BabbleZone["Western Plaguelands"]};
+		{ 7, "s17578", "13459", "=q1=Greater Shadow Protection Potion", "=ds="..BabbleZone["Eastern Plaguelands"]};
+		{ 8, "s24367", "20008", "=q1=Living Action Potion", "=ds="..BabbleFaction["Exalted"]..": "..BabbleFaction["Zandalar Tribe"]};
+		{ 9, "s17572", "13462", "=q1=Purification Potion", "=ds="..AL["World Drop"]};
+		{ 10, "s17570", "13455", "=q1=Greater Stoneshield Potion", "=ds="..AL["World Drop"]};
+		{ 11, "s24366", "20002", "=q1=Greater Dreamless Sleep Potion", "=ds="..BabbleFaction["Friendly"]..": "..BabbleFaction["Zandalar Tribe"]};
+		{ 12, "s17556", "13446", "=q1=Major Healing Potion", "=ds="..AL["Trainer"]};
+		{ 13, "s17553", "13443", "=q1=Superior Mana Potion", "=ds="..AL["Trainer"]};
+		{ 14, "s17552", "13442", "=q1=Mighty Rage Potion", "=ds="..AL["Trainer"]};
+		{ 15, "s3175", "3387", "=q1=Limited Invulnerability Potion", "=ds="..AL["World Drop"]};
+		{ 16, "s11464", "9172", "=q1=Invisibility Potion", "=ds="..AL["World Drop"]};
+		{ 17, "s15833", "12190", "=q1=Dreamless Sleep Potion", "=ds="..AL["Trainer"]};
+		{ 18, "s11458", "9144", "=q1=Wildvine Potion", "=ds="..BabbleZone["The Hinterlands"].."/"..BabbleZone["Stranglethorn Vale"]};
+		{ 19, "s4942", "4623", "=q1=Lesser Stoneshield Potion", "=ds="..AL["Quest"]..": "..BabbleZone["Badlands"]};
+		{ 20, "s11457", "3928", "=q1=Superior Healing Potion", "=ds="..AL["Trainer"]};
+		{ 21, "s11453", "9036", "=q1=Magic Resistance Potion", "=ds="..AL["World Drop"]};
+		Next = "AlchemyPotion1CLASSIC";
+		Prev = "AlchemyPotionWRATH";
 		Back = "ALCHEMYMENU";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["AlchemyPotion2"] = {
-		{ 1, "s38962", "31676", "=q1=Fel Regeneration Potion", "=ds="..BabbleZone["Shadowmoon Valley"]};
-		{ 2, "s28555", "22832", "=q1=Super Mana Potion", "=ds="..AL["Vendor"]};
-		{ 3, "s28554", "22871", "=q1=Shrouding Potion", "=ds="..BabbleFaction["Exalted"]..": "..BabbleFaction["Sporeggar"]};
-		{ 4, "s45061", "34440", "=q1=Mad Alchemist's Potion", "=ds="..AL["Trainer"]};
-		{ 5, "s28551", "22829", "=q1=Super Healing Potion", "=ds="..AL["Trainer"]};
-		{ 6, "s28550", "22828", "=q1=Insane Strength Potion", "=ds="..AL["World Drop"]};
-		{ 7, "s28546", "22826", "=q1=Sneaking Potion", "=ds="..AL["Vendor"]};
-		{ 8, "s33733", "28101", "=q1=Unstable Mana Potion", "=ds="..AL["Trainer"]};
-		{ 9, "s22732", "18253", "=q1=Major Rejuvenation Potion", "=ds="..BabbleZone["Molten Core"]};
-		{ 10, "s33732", "28100", "=q1=Volatile Healing Potion", "=ds="..AL["Trainer"]};
-		{ 11, "s17580", "13444", "=q1=Major Mana Potion", "=ds="..AL["Vendor"]..", "..BabbleZone["Western Plaguelands"]};
-		{ 12, "s17577", "13461", "=q1=Greater Arcane Protection Potion", "=ds="..BabbleZone["Winterspring"]};
-		{ 13, "s17574", "13457", "=q1=Greater Fire Protection Potion", "=ds="..BabbleZone["Blackrock Spire"]};
-		{ 14, "s17575", "13456", "=q1=Greater Frost Protection Potion", "=ds="..BabbleZone["Winterspring"]};
-		{ 15, "s17576", "13458", "=q1=Greater Nature Protection Potion", "=ds="..BabbleZone["Western Plaguelands"]};
-		{ 16, "s17578", "13459", "=q1=Greater Shadow Protection Potion", "=ds="..BabbleZone["Eastern Plaguelands"]};
-		{ 17, "s24367", "20008", "=q1=Living Action Potion", "=ds="..BabbleFaction["Exalted"]..": "..BabbleFaction["Zandalar Tribe"]};
-		{ 18, "s17572", "13462", "=q1=Purification Potion", "=ds="..AL["World Drop"]};
-		{ 19, "s17570", "13455", "=q1=Greater Stoneshield Potion", "=ds="..AL["World Drop"]};
-		{ 20, "s24366", "20002", "=q1=Greater Dreamless Sleep Potion", "=ds="..BabbleFaction["Friendly"]..": "..BabbleFaction["Zandalar Tribe"]};
-		{ 21, "s17556", "13446", "=q1=Major Healing Potion", "=ds="..AL["Trainer"]};
-		{ 22, "s17553", "13443", "=q1=Superior Mana Potion", "=ds="..AL["Trainer"]};
-		{ 23, "s17552", "13442", "=q1=Mighty Rage Potion", "=ds="..AL["Trainer"]};
-		{ 24, "s3175", "3387", "=q1=Limited Invulnerability Potion", "=ds="..AL["World Drop"]};
-		{ 25, "s11464", "9172", "=q1=Invisibility Potion", "=ds="..AL["World Drop"]};
-		{ 26, "s15833", "12190", "=q1=Dreamless Sleep Potion", "=ds="..AL["Trainer"]};
-		{ 27, "s11458", "9144", "=q1=Wildvine Potion", "=ds="..BabbleZone["The Hinterlands"].."/"..BabbleZone["Stranglethorn Vale"]};
-		{ 28, "s4942", "4623", "=q1=Lesser Stoneshield Potion", "=ds="..AL["Quest"]..": "..BabbleZone["Badlands"]};
-		{ 29, "s11457", "3928", "=q1=Superior Healing Potion", "=ds="..AL["Trainer"]};
-		{ 30, "s11453", "9036", "=q1=Magic Resistance Potion", "=ds="..AL["World Drop"]};
-		Next = "AlchemyPotion3";
-		Prev = "AlchemyPotion1";
-		Back = "ALCHEMYMENU";
-	};
-
-	AtlasLoot_Data["AlchemyPotion3"] = {
+	AtlasLoot_Data["AlchemyPotion1CLASSIC"] = {
 		{ 1, "s11452", "9030", "=q1=Restorative Potion", "=ds="..AL["Quest"]..": "..BabbleZone["Badlands"]};
 		{ 2, "s11448", "6149", "=q1=Greater Mana Potion", "=ds="..AL["Trainer"]};
 		{ 3, "s7258", "6050", "=q1=Frost Protection Potion", "=ds="..AL["Vendor"]};
@@ -251,12 +229,91 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 22, "s2332", "2456", "=q1=Minor Rejuvenation Potion", "=ds="..AL["Trainer"]};
 		{ 23, "s2331", "2455", "=q1=Minor Mana Potion", "=ds="..AL["Trainer"]};
 		{ 24, "s2330", "118", "=q1=Minor Healing Potion", "=ds="..AL["Trainer"]};
-		Next = "AlchemyFlask1";
-		Prev = "AlchemyPotion2";
+		Next = "AlchemyPotionTBC";
+		Prev = "AlchemyPotionCLASSIC";
 		Back = "ALCHEMYMENU";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["AlchemyFlask1"] = {
+	AtlasLoot_Data["AlchemyPotionTBC"] = {
+		{ 1, "s28586", "22850", "=q1=Super Rejuvenation Potion", "=ds="..AL["Discovery"]};
+		{ 2, "s38961", "31677", "=q1=Fel Mana Potion", "=ds="..BabbleZone["Shadowmoon Valley"]};
+		{ 3, "s28579", "22849", "=q1=Ironshield Potion", "=ds="..BabbleBoss["Captain Skarloc"]..": "..BabbleZone["Old Hillsbrad Foothills"]};
+		{ 4, "s28575", "22845", "=q1=Major Arcane Protection Potion", "=ds="..BabbleZone["Nagrand"]};
+		{ 5, "s28571", "22841", "=q1=Major Fire Protection Potion", "=ds="..BabbleZone["The Mechanar"]};
+		{ 6, "s28572", "22842", "=q1=Major Frost Protection Potion", "=ds="..BabbleBoss["Nexus-Prince Shaffar"]..": "..BabbleZone["Mana-Tombs"]};
+		{ 7, "s28577", "22847", "=q1=Major Holy Protection Potion", "=ds="..BabbleZone["Blade's Edge Mountains"]};
+		{ 8, "s28573", "22844", "=q1=Major Nature Protection Potion", "=ds="..BabbleFaction["Exalted"]..": "..BabbleFaction["Cenarion Expedition"]};
+		{ 9, "s28576", "22846", "=q1=Major Shadow Protection Potion", "=ds="..BabbleZone["Shadowmoon Valley"]};
+		{ 10, "s28565", "22839", "=q1=Destruction Potion", "=ds="..AL["World Drop"]};
+		{ 11, "s28564", "22838", "=q1=Haste Potion", "=ds="..AL["World Drop"]};
+		{ 12, "s28563", "22837", "=q1=Heroic Potion", "=ds="..AL["World Drop"]};
+		{ 13, "s28562", "22836", "=q1=Major Dreamless Sleep Potion", "=ds="..AL["Vendor"]};
+		{ 14, "s38962", "31676", "=q1=Fel Regeneration Potion", "=ds="..BabbleZone["Shadowmoon Valley"]};
+		{ 15, "s28555", "22832", "=q1=Super Mana Potion", "=ds="..AL["Vendor"]};
+		{ 16, "s28554", "22871", "=q1=Shrouding Potion", "=ds="..BabbleFaction["Exalted"]..": "..BabbleFaction["Sporeggar"]};
+		{ 17, "s45061", "34440", "=q1=Mad Alchemist's Potion", "=ds="..AL["Trainer"]};
+		{ 18, "s28551", "22829", "=q1=Super Healing Potion", "=ds="..AL["Trainer"]};
+		{ 19, "s28550", "22828", "=q1=Insane Strength Potion", "=ds="..AL["World Drop"]};
+		{ 20, "s28546", "22826", "=q1=Sneaking Potion", "=ds="..AL["Vendor"]};
+		{ 21, "s33733", "28101", "=q1=Unstable Mana Potion", "=ds="..AL["Trainer"]};
+		{ 22, "s33732", "28100", "=q1=Volatile Healing Potion", "=ds="..AL["Trainer"]};
+		Next = "AlchemyPotionWRATH";
+		Prev = "AlchemyPotion1CLASSIC";
+		Back = "ALCHEMYMENU";
+		Submenu = "Expansion";
+	};
+
+	AtlasLoot_Data["AlchemyPotionWRATH"] = {
+		{ 1, "s54221", "40211", "=q1=Potion of Speed", "=ds="};
+		{ 2, "s54222", "40212", "=q1=Potion of Wild Magic", "=ds="};
+		{ 3, "s53904", "40087", "=q1=Powerful Rejuvenation Potion", "=ds="};
+		{ 4, "s58868", "43570", "=q1=Endless Mana Potion", "=ds="..AL["Trainer"]};
+		{ 5, "s53837", "33448", "=q1=Runic Mana Potion", "=ds="..AL["Trainer"]};
+		{ 6, "s58871", "43569", "=q1=Endless Healing Potion", "=ds="..AL["Trainer"]};
+		{ 7, "s53836", "33447", "=q1=Runic Healing Potion", "=ds="..AL["Trainer"]};
+		{ 8, "s53936", "40213", "=q1=Mighty Arcane Protection Potion", "=ds="};
+		{ 9, "s53939", "40214", "=q1=Mighty Fire Protection Potion", "=ds="..AL["Drop"]};
+		{ 10, "s53937", "40215", "=q1=Mighty Frost Protection Potion", "=ds="..AL["Drop"]};
+		{ 11, "s53942", "40216", "=q1=Mighty Nature Protection Potion", "=ds="..AL["Drop"]};
+		{ 12, "s53938", "40217", "=q1=Mighty Shadow Protection Potion", "=ds="};
+		{ 13, "s53905", "40093", "=q1=Indestructible Potion", "=ds="..AL["Trainer"]};
+		{ 14, "s53900", "40081", "=q1=Potion of Nightmares", "=ds="..AL["Trainer"]};
+		{ 15, "s53895", "40077", "=q1=Crazy Alchemist's Potion", "=ds="..AL["Trainer"]};
+		{ 16, "s53839", "40067", "=q1=Icy Mana Potion", "=ds="..AL["Trainer"]};
+		{ 17, "s53838", "39671", "=q1=Resurgent Healing Potion", "=ds="..AL["Trainer"]};
+		Prev = "AlchemyPotionTBC";
+		Next = "AlchemyPotionCLASSIC";
+		Back = "ALCHEMYMENU";
+		Submenu = "Expansion";
+	};
+
+	AtlasLoot_Data["AlchemyFlaskCLASSIC"] = {
+		{ 1, "s17638", "13513", "=q1=Flask of Chromatic Resistance", "=ds="..BabbleFaction["Exalted"]..": "..BabbleFaction["Lower City"]};
+		{ 2, "s17636", "13511", "=q1=Flask of Distilled Wisdom", "=ds="..BabbleFaction["Exalted"]..": "..BabbleFaction["Cenarion Expedition"]};
+		{ 3, "s17634", "13506", "=q1=Flask of Petrification", "=ds="..AL["World Drop"]};
+		{ 4, "s17637", "13512", "=q1=Flask of Supreme Power", "=ds="..BabbleFaction["Exalted"]..": "..BabbleFaction["Keepers of Time"]};
+		{ 5, "s17635", "13510", "=q1=Flask of the Titans", "=ds="..BabbleFaction["Exalted"]..": "..BabbleFaction["The Sha'tar"]};
+		Next = "AlchemyFlaskTBC";
+		Prev = "AlchemyFlaskWRATH";
+		Back = "ALCHEMYMENU";
+		Submenu = "Expansion";
+	};
+
+	AtlasLoot_Data["AlchemyFlaskTBC"] = {
+		{ 1, "s42736", "33208", "=q1=Flask of Chromatic Wonder", "=ds="..BabbleFaction["Honored"]..": "..BabbleFaction["The Violet Eye"]};
+		{ 2, "s28590", "22861", "=q1=Flask of Blinding Light", "=ds="..AL["Discovery"]};
+		{ 3, "s28587", "22851", "=q1=Flask of Fortification", "=ds="..AL["Discovery"]};
+		{ 4, "s28588", "22853", "=q1=Flask of Mighty Restoration", "=ds="..AL["Discovery"]};
+		{ 5, "s28591", "22866", "=q1=Flask of Pure Death", "=ds="..AL["Discovery"]};
+		{ 6, "s28589", "22854", "=q1=Flask of Relentless Assault", "=ds="..AL["Discovery"]};
+		Next = "AlchemyFlaskWRATH";
+		Prev = "AlchemyFlaskCLASSIC";
+		Back = "ALCHEMYMENU";
+		Submenu = "Expansion";
+	};
+	
+	AtlasLoot_Data["AlchemyFlaskWRATH"] = {
 		{ 1, "s67025", "47499", "=q3=Flask of the North", "=ds="..AL["Trainer"]};
 		{ 2, "s53903", "46377", "=q1=Flask of Endless Rage", "=ds="..AL["Trainer"]};
 		{ 3, "s54213", "46378", "=q1=Flask of Pure Mojo", "=ds="..AL["Trainer"]};
@@ -264,23 +321,52 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 5, "s53901", "46376", "=q1=Flask of the Frost Wyrm", "=ds="..AL["Trainer"]};	
 		{ 6, "s62213", "44939", "=q1=Lesser Flask of Resistance", "=ds="..AL["Trainer"]};
 		{ 7, "s53899", "40079", "=q1=Lesser Flask of Toughness", "=ds="..AL["Trainer"]};
-		{ 8, "s42736", "33208", "=q1=Flask of Chromatic Wonder", "=ds="..BabbleFaction["Honored"]..": "..BabbleFaction["The Violet Eye"]};
-		{ 9, "s28590", "22861", "=q1=Flask of Blinding Light", "=ds="..AL["Discovery"]};
-		{ 10, "s28587", "22851", "=q1=Flask of Fortification", "=ds="..AL["Discovery"]};
-		{ 11, "s28588", "22853", "=q1=Flask of Mighty Restoration", "=ds="..AL["Discovery"]};
-		{ 12, "s28591", "22866", "=q1=Flask of Pure Death", "=ds="..AL["Discovery"]};
-		{ 13, "s28589", "22854", "=q1=Flask of Relentless Assault", "=ds="..AL["Discovery"]};
-		{ 14, "s17638", "13513", "=q1=Flask of Chromatic Resistance", "=ds="..BabbleFaction["Exalted"]..": "..BabbleFaction["Lower City"]};
-		{ 15, "s17636", "13511", "=q1=Flask of Distilled Wisdom", "=ds="..BabbleFaction["Exalted"]..": "..BabbleFaction["Cenarion Expedition"]};
-		{ 16, "s17634", "13506", "=q1=Flask of Petrification", "=ds="..AL["World Drop"]};
-		{ 17, "s17637", "13512", "=q1=Flask of Supreme Power", "=ds="..BabbleFaction["Exalted"]..": "..BabbleFaction["Keepers of Time"]};
-		{ 18, "s17635", "13510", "=q1=Flask of the Titans", "=ds="..BabbleFaction["Exalted"]..": "..BabbleFaction["The Sha'tar"]};
-		Next = "AlchemyTransmute1";
-		Prev = "AlchemyPotion3";
+		Prev = "AlchemyFlaskTBC";
+		Next = "AlchemyFlaskCLASSIC";
 		Back = "ALCHEMYMENU";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["AlchemyTransmute1"] = {
+	AtlasLoot_Data["AlchemyTransmuteCLASSIC"] = {
+		{ 1, "s11479", "3577", "=q2=Transmute: Iron to Gold", "=ds="..AL["Vendor"]..", "..BabbleZone["Tanaris"]};
+		{ 2, "s11480", "6037", "=q2=Transmute: Mithril to Truesilver", "=ds="..AL["Vendor"]..", "..BabbleZone["Tanaris"]};
+		{ 3, "s17187", "12360", "=q2=Transmute: Arcanite Bar", "=ds="..AL["Vendor"]..", "..BabbleZone["Tanaris"]};
+		{ 4, "s17559", "7078", "=q2=Transmute: Air to Fire", "=ds="..BabbleFaction["Honored"]..": "..BabbleFaction["Argent Dawn"]};
+		{ 5, "s17566", "12803", "=q2=Transmute: Earth to Life", "=ds="..AL["World Drop"]};
+		{ 6, "s17561", "7080", "=q2=Transmute: Earth to Water", "=ds="..AL["Vendor"]..", "..BabbleZone["Felwood"]};
+		{ 7, "s17560", "7076", "=q2=Transmute: Fire to Earth", "=ds="..AL["Vendor"]..", "..BabbleZone["Blackrock Depths"]};
+		{ 8, "s17565", "7076", "=q2=Transmute: Life to Earth", "=ds="..AL["World Drop"]};
+		{ 9, "s17563", "7080", "=q2=Transmute: Undeath to Water", "=ds="..AL["World Drop"]};
+		{ 10, "s17562", "7082", "=q2=Transmute: Water to Air", "=ds="..AL["Vendor"]..", "..BabbleZone["Western Plaguelands"]};
+		{ 11, "s17564", "12808", "=q2=Transmute: Water to Undeath", "=ds="..AL["World Drop"]};
+		{ 12, "s25146", "7068", "=q1=Transmute: Elemental Fire", "=ds="..AL["Vendor"]..", "..BabbleZone["Blackrock Depths"]};
+		Next = "AlchemyTransmuteTBC";
+		Prev = "AlchemyTransmuteWRATH";
+		Back = "ALCHEMYMENU";
+		Submenu = "Expansion";
+	};
+
+		AtlasLoot_Data["AlchemyTransmuteTBC"] = {
+		{ 1, "s29688", "23571", "=q3=Transmute: Primal Might", "=ds="..AL["Vendor"]};
+		{ 2, "s32765", "25867", "=q3=Transmute: Earthstorm Diamond", "=ds="..BabbleFaction["Honored"]..": "..BabbleFaction["Cenarion Expedition"]};
+		{ 3, "s32766", "25868", "=q3=Transmute: Skyfire Diamond", "=ds="..BabbleFaction["Honored"]..": "..BabbleFaction["Thrallmar"].."/"..BabbleFaction["Honor Hold"]};
+		{ 4, "s28585", "21886", "=q2=Transmute: Primal Earth to Life", "=ds="..AL["Discovery"]};
+		{ 5, "s28583", "22457", "=q2=Transmute: Primal Fire to Mana", "=ds="..AL["Discovery"]};
+		{ 6, "s28584", "22452", "=q2=Transmute: Primal Life to Earth", "=ds="..AL["Discovery"]};
+		{ 7, "s28582", "21884", "=q2=Transmute: Primal Mana to Fire", "=ds="..AL["Discovery"]};
+		{ 8, "s28580", "21885", "=q2=Transmute: Primal Shadow to Water", "=ds="..AL["Discovery"]};
+		{ 9, "s28581", "22456", "=q2=Transmute: Primal Water to Shadow", "=ds="..AL["Discovery"]};
+		{ 10, "s28566", "21884", "=q2=Transmute: Primal Air to Fire", "=ds="..BabbleFaction["Revered"]..": "..BabbleFaction["The Sha'tar"]};
+		{ 11, "s28567", "21885", "=q2=Transmute: Primal Earth to Water", "=ds="..BabbleFaction["Revered"]..": "..BabbleFaction["Sporeggar"]};
+		{ 12, "s28568", "22452", "=q2=Transmute: Primal Fire to Earth", "=ds="..BabbleFaction["Revered"]..": "..BabbleFaction["The Mag'har"].."/"..BabbleFaction["Kurenai"]};
+		{ 13, "s28569", "22451", "=q2=Transmute: Primal Water to Air", "=ds="..BabbleFaction["Revered"]..": "..BabbleFaction["Cenarion Expedition"]};
+		Next = "AlchemyTransmuteWRATH";
+		Prev = "AlchemyTransmuteCLASSIC";
+		Back = "ALCHEMYMENU";
+		Submenu = "Expansion";
+	};
+
+	AtlasLoot_Data["AlchemyTransmuteWRATH"] = {
 		{ 1, "s66659", "36919", "=q4=Transmute: Cardinal Ruby", "=ds="..AL["Quest Reward"]};
 		{ 2, "s66658", "36931", "=q4=Transmute: Ametrine", "=ds="..AL["Trainer"]};
 		{ 3, "s66662", "36928", "=q4=Transmute: Dreadstone", "=ds="..AL["Trainer"]};
@@ -290,9 +376,6 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 7, "s54020", "40248", "=q3=Transmute: Eternal Might", "=ds="..AL["Trainer"]};
 		{ 8, "s57427", "41334", "=q3=Transmute: Earthsiege Diamond", "=ds="..AL["Trainer"]};
 		{ 9, "s57425", "41266", "=q3=Transmute: Skyflare Diamond", "=ds="..AL["Trainer"]};
-		{ 10, "s29688", "23571", "=q3=Transmute: Primal Might", "=ds="..AL["Vendor"]};
-		{ 11, "s32765", "25867", "=q3=Transmute: Earthstorm Diamond", "=ds="..BabbleFaction["Honored"]..": "..BabbleFaction["Cenarion Expedition"]};
-		{ 12, "s32766", "25868", "=q3=Transmute: Skyfire Diamond", "=ds="..BabbleFaction["Honored"]..": "..BabbleFaction["Thrallmar"].."/"..BabbleFaction["Honor Hold"]};
 		{ 13, "s53777", "35624", "=q2=Transmute: Eternal Air to Earth", "=ds="};
 		{ 14, "s53776", "35622", "=q2=Transmute: Eternal Air to Water", "=ds="};
 		{ 15, "s53781", "35623", "=q2=Transmute: Eternal Earth to Air", "=ds="};
@@ -306,40 +389,51 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 23, "s53783", "35623", "=q2=Transmute: Eternal Water to Air", "=ds="};
 		{ 24, "s53784", "36860", "=q2=Transmute: Eternal Water to Fire", "=ds="};
 		{ 25, "s60350", "41163", "=q2=Transmute: Titanium", "=ds="..AL["Trainer"]};
-		{ 26, "s28585", "21886", "=q2=Transmute: Primal Earth to Life", "=ds="..AL["Discovery"]};
-		{ 27, "s28583", "22457", "=q2=Transmute: Primal Fire to Mana", "=ds="..AL["Discovery"]};
-		{ 28, "s28584", "22452", "=q2=Transmute: Primal Life to Earth", "=ds="..AL["Discovery"]};
-		{ 29, "s28582", "21884", "=q2=Transmute: Primal Mana to Fire", "=ds="..AL["Discovery"]};
-		{ 30, "s28580", "21885", "=q2=Transmute: Primal Shadow to Water", "=ds="..AL["Discovery"]};
-		Next = "AlchemyTransmute2";
-		Prev = "AlchemyFlask1";
+		Prev = "AlchemyTransmuteTBC";
+		Next = "AlchemyTransmuteCLASSIC";
 		Back = "ALCHEMYMENU";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["AlchemyTransmute2"] = {
-		{ 1, "s28581", "22456", "=q2=Transmute: Primal Water to Shadow", "=ds="..AL["Discovery"]};
-		{ 2, "s28566", "21884", "=q2=Transmute: Primal Air to Fire", "=ds="..BabbleFaction["Revered"]..": "..BabbleFaction["The Sha'tar"]};
-		{ 3, "s28567", "21885", "=q2=Transmute: Primal Earth to Water", "=ds="..BabbleFaction["Revered"]..": "..BabbleFaction["Sporeggar"]};
-		{ 4, "s28568", "22452", "=q2=Transmute: Primal Fire to Earth", "=ds="..BabbleFaction["Revered"]..": "..BabbleFaction["The Mag'har"].."/"..BabbleFaction["Kurenai"]};
-		{ 5, "s28569", "22451", "=q2=Transmute: Primal Water to Air", "=ds="..BabbleFaction["Revered"]..": "..BabbleFaction["Cenarion Expedition"]};
-		{ 6, "s11479", "3577", "=q2=Transmute: Iron to Gold", "=ds="..AL["Vendor"]..", "..BabbleZone["Tanaris"]};
-		{ 7, "s11480", "6037", "=q2=Transmute: Mithril to Truesilver", "=ds="..AL["Vendor"]..", "..BabbleZone["Tanaris"]};
-		{ 8, "s17187", "12360", "=q2=Transmute: Arcanite Bar", "=ds="..AL["Vendor"]..", "..BabbleZone["Tanaris"]};
-		{ 9, "s17559", "7078", "=q2=Transmute: Air to Fire", "=ds="..BabbleFaction["Honored"]..": "..BabbleFaction["Argent Dawn"]};
-		{ 10, "s17566", "12803", "=q2=Transmute: Earth to Life", "=ds="..AL["World Drop"]};
-		{ 11, "s17561", "7080", "=q2=Transmute: Earth to Water", "=ds="..AL["Vendor"]..", "..BabbleZone["Felwood"]};
-		{ 12, "s17560", "7076", "=q2=Transmute: Fire to Earth", "=ds="..AL["Vendor"]..", "..BabbleZone["Blackrock Depths"]};
-		{ 13, "s17565", "7076", "=q2=Transmute: Life to Earth", "=ds="..AL["World Drop"]};
-		{ 14, "s17563", "7080", "=q2=Transmute: Undeath to Water", "=ds="..AL["World Drop"]};
-		{ 15, "s17562", "7082", "=q2=Transmute: Water to Air", "=ds="..AL["Vendor"]..", "..BabbleZone["Western Plaguelands"]};
-		{ 16, "s17564", "12808", "=q2=Transmute: Water to Undeath", "=ds="..AL["World Drop"]};
-		{ 17, "s25146", "7068", "=q1=Transmute: Elemental Fire", "=ds="..AL["Vendor"]..", "..BabbleZone["Blackrock Depths"]};
-		Next = "AlchemyMisc1";
-		Prev = "AlchemyTransmute1";
+	AtlasLoot_Data["AlchemyMiscCLASSIC"] = {
+		{ 1, "s24266", "19931", "=q3=Gurubashi Mojo Madness", "=ds="..BabbleZone["Zul'Gurub"]};
+		{ 2, "s11460", "9154", "=q1=Elixir of Detect Undead", "=ds="..AL["Trainer"]};
+		{ 3, "s22808", "18294", "=q1=Elixir of Greater Water Breathing", "=ds="..AL["Trainer"]};
+		{ 4, "s11456", "9061", "=q1=Goblin Rocket Fuel", "=ds="..AL["Crafted"]..": "..GetSpellInfo(4036)};
+		{ 5, "s11451", "8956", "=q1=Oil of Immolation", "=ds="..AL["Trainer"]};
+		{ 6, "s12609", "10592", "=q1=Catseye Elixir", "=ds="..AL["Trainer"]};
+		{ 7, "s3454", "3829", "=q1=Frost Oil", "=ds="..AL["Vendor"]..", "..BabbleZone["Alterac Mountains"]};
+		{ 8, "s11459", "9149", "=q1=Philosopher's Stone", "=ds="..AL["Vendor"]..", "..BabbleZone["Tanaris"]};
+		{ 9, "s3453", "3828", "=q1=Elixir of Detect Lesser Invisibility", "=ds="..AL["World Drop"]};
+		{ 10, "s3449", "3824", "=q1=Shadow Oil", "=ds="..AL["Vendor"]};
+		{ 11, "s7837", "6371", "=q1=Fire Oil", "=ds="..AL["Trainer"]};
+		{ 12, "s7179", "5996", "=q1=Elixir of Water Breathing", "=ds="..AL["Trainer"]};
+		{ 13, "s7836", "6370", "=q1=Blackmouth Oil", "=ds="..AL["Trainer"]};
+		Next = "AlchemyMiscTBC";
+		Prev = "AlchemyMiscWRATH";
 		Back = "ALCHEMYMENU";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["AlchemyMisc1"] = {
+	AtlasLoot_Data["AlchemyMiscTBC"] = {
+		{ 1, "s41458", "32839", "=q1=Cauldron of Major Arcane Protection Potion", "=ds="..AL["Discovery"]};
+		{ 2, "s41500", "32849", "=q1=Cauldron of Major Fire Protection Potion", "=ds="..AL["Discovery"]};
+		{ 3, "s41501", "32850", "=q1=Cauldron of Major Frost Protection Potion", "=ds="..AL["Discovery"]};
+		{ 4, "s41502", "32851", "=q1=Cauldron of Major Nature Protection Potion", "=ds="..AL["Discovery"]};
+		{ 5, "s41503", "32852", "=q1=Cauldron of Major Shadow Protection Potion", "=ds="..AL["Discovery"]};
+		{ 6, "s28552", "22830", "=q1=Elixir of the Searching Eye", "=ds="..AL["World Drop"]};
+		{ 7, "s28543", "22823", "=q1=Elixir of Camouflage", "=ds="..AL["Vendor"]};
+		{ 8, "s11478", "9233", "=q1=Elixir of Detect Demon", "=ds="..AL["Trainer"]};
+		{ 9, "s17551", "13423", "=q1=Stonescale Oil", "=ds="..AL["Trainer"]};
+		{ 10, "s11473", "9210", "=q1=Ghost Dye", "=ds="..AL["Vendor"]..", "..BabbleZone["Feralas"]};
+		{ 11, "s11468", "9197", "=q1=Elixir of Dream Vision", "=ds="..AL["World Drop"]};
+		Prev = "AlchemyMiscCLASSIC";
+		Next = "AlchemyMiscWRATH";
+		Back = "ALCHEMYMENU";
+		Submenu = "Expansion";
+	};
+
+	AtlasLoot_Data["AlchemyMiscWRATH"] = {
 		{ 1, "s47050", "35751", "=q4=Assassin's Alchemist Stone", "=ds="..BabbleFaction["Exalted"]..": "..BabbleFaction["Shattered Sun Offensive"]};
 		{ 2, "s47046", "35748", "=q4=Guardian's Alchemist Stone", "=ds="..BabbleFaction["Exalted"]..": "..BabbleFaction["Shattered Sun Offensive"]};
 		{ 3, "s47049", "35750", "=q4=Redeemer's Alchemist Stone", "=ds="..BabbleFaction["Exalted"]..": "..BabbleFaction["Shattered Sun Offensive"]};
@@ -348,48 +442,20 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 6, "s60403", "44323", "=q3=Indestructible Alchemist Stone", "=ds="..AL["Trainer"]};
 		{ 7, "s60396", "44322", "=q3=Mercurial Alchemist Stone", "=ds="..AL["Trainer"]};
 		{ 8, "s60405", "44324", "=q3=Mighty Alchemist Stone", "=ds="..AL["Trainer"]};
-		{ 9, "s24266", "19931", "=q3=Gurubashi Mojo Madness", "=ds="..BabbleZone["Zul'Gurub"]};
 		{ 10, "s38070", "31080", "=q2=Mercurial Stone", "=ds="..AL["Trainer"]};
 		{ 11, "s62409", "44958", "=q1=Ethereal Oil", "=ds="..AL["Trainer"]};
 		{ 12, "s53812", "40195", "=q1=Pygmy Oil", "=ds="..AL["Trainer"]};
-		{ 13, "s41458", "32839", "=q1=Cauldron of Major Arcane Protection Potion", "=ds="..AL["Discovery"]};
-		{ 14, "s41500", "32849", "=q1=Cauldron of Major Fire Protection Potion", "=ds="..AL["Discovery"]};
-		{ 15, "s41501", "32850", "=q1=Cauldron of Major Frost Protection Potion", "=ds="..AL["Discovery"]};
-		{ 16, "s41502", "32851", "=q1=Cauldron of Major Nature Protection Potion", "=ds="..AL["Discovery"]};
-		{ 17, "s41503", "32852", "=q1=Cauldron of Major Shadow Protection Potion", "=ds="..AL["Discovery"]};
-		{ 18, "s28552", "22830", "=q1=Elixir of the Searching Eye", "=ds="..AL["World Drop"]};
-		{ 19, "s28543", "22823", "=q1=Elixir of Camouflage", "=ds="..AL["Vendor"]};
-		{ 20, "s11478", "9233", "=q1=Elixir of Detect Demon", "=ds="..AL["Trainer"]};
-		{ 21, "s17551", "13423", "=q1=Stonescale Oil", "=ds="..AL["Trainer"]};
-		{ 22, "s11473", "9210", "=q1=Ghost Dye", "=ds="..AL["Vendor"]..", "..BabbleZone["Feralas"]};
-		{ 23, "s11468", "9197", "=q1=Elixir of Dream Vision", "=ds="..AL["World Drop"]};
-		{ 24, "s11460", "9154", "=q1=Elixir of Detect Undead", "=ds="..AL["Trainer"]};
-		{ 25, "s22808", "18294", "=q1=Elixir of Greater Water Breathing", "=ds="..AL["Trainer"]};
-		{ 26, "s11456", "9061", "=q1=Goblin Rocket Fuel", "=ds="..AL["Crafted"]..": "..GetSpellInfo(4036)};
-		{ 27, "s11451", "8956", "=q1=Oil of Immolation", "=ds="..AL["Trainer"]};
-		{ 28, "s12609", "10592", "=q1=Catseye Elixir", "=ds="..AL["Trainer"]};
-		{ 29, "s3454", "3829", "=q1=Frost Oil", "=ds="..AL["Vendor"]..", "..BabbleZone["Alterac Mountains"]};
-		{ 30, "s11459", "9149", "=q1=Philosopher's Stone", "=ds="..AL["Vendor"]..", "..BabbleZone["Tanaris"]};
-		Prev = "AlchemyTransmute2";
-		Next = "AlchemyMisc2";
+		Prev = "AlchemyMiscTBC";
+		Next = "AlchemyMiscCLASSIC";
 		Back = "ALCHEMYMENU";
-	};
-
-	AtlasLoot_Data["AlchemyMisc2"] = {
-		{ 1, "s3453", "3828", "=q1=Elixir of Detect Lesser Invisibility", "=ds="..AL["World Drop"]};
-		{ 2, "s3449", "3824", "=q1=Shadow Oil", "=ds="..AL["Vendor"]};
-		{ 3, "s7837", "6371", "=q1=Fire Oil", "=ds="..AL["Trainer"]};
-		{ 4, "s7179", "5996", "=q1=Elixir of Water Breathing", "=ds="..AL["Trainer"]};
-		{ 5, "s7836", "6370", "=q1=Blackmouth Oil", "=ds="..AL["Trainer"]};
-		Prev = "AlchemyMisc1";
-		Back = "ALCHEMYMENU";
+		Submenu = "Expansion";
 	};
 
 		---------------------
 		--- Blacksmithing ---
 		---------------------
 
-	AtlasLoot_Data["SmithingArmorOld1"] = {
+	AtlasLoot_Data["SmithingArmorCLASSIC"] = {
 		{ 1, "s27589", "22194", "=q4=Black Grasp of the Destroyer", "=ds=#sr# 300"};
 		{ 2, "s24399", "20039", "=q4=Dark Iron Boots", "=ds=#sr# 300"};
 		{ 3, "s23637", "19164", "=q4=Dark Iron Gauntlets", "=ds=#sr# 300"};
@@ -420,12 +486,13 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 28, "s16745", "12618", "=q3=Enchanted Thorium Breastplate", "=ds=#sr# 300"};
 		{ 29, "s16742", "12620", "=q3=Enchanted Thorium Helm", "=ds=#sr# 300"};
 		{ 30, "s16744", "12619", "=q3=Enchanted Thorium Leggings", "=ds=#sr# 300"};
-		Next = "SmithingArmorOld2";
+		Next = "SmithingArmorCLASSIC2";
 		Back = "SMITHINGMENU";
 		Type = "Crafting";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["SmithingArmorOld2"] = {
+	AtlasLoot_Data["SmithingArmorCLASSIC2"] = {
 		{ 1, "s23633", "19057", "=q3=Gloves of the Dawn", "=ds=#sr# 300"};
 		{ 2, "s27585", "22197", "=q3=Heavy Obsidian Belt", "=ds=#sr# 300"};
 		{ 3, "s23629", "19048", "=q3=Heavy Timbermaw Boots", "=ds=#sr# 300"};
@@ -456,13 +523,14 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 28, "s16665", "12611", "=q2=Runic Plate Boots", "=ds=#sr# 300"};
 		{ 29, "s16732", "12614", "=q2=Runic Plate Leggings", "=ds=#sr# 300"};
 		{ 30, "s16726", "12612", "=q2=Runic Plate Helm", "=ds="..AL["Drop"]..""};
-		Next = "SmithingArmorOld3";
-		Prev = "SmithingArmorOld1";
+		Next = "SmithingArmorCLASSIC3";
+		Prev = "SmithingArmorCLASSIC";
 		Back = "SMITHINGMENU";
-Type = "Crafting";
+		Type = "Crafting";
+	Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["SmithingArmorOld3"] = {
+	AtlasLoot_Data["SmithingArmorCLASSIC3"] = {
 		{ 1, "s16726", "12612", "=q2=Runic Plate Helm", "=ds="..AL["Drop"]..""};
 		{ 2, "s16664", "12610", "=q2=Runic Plate Shoulders", "=ds=#sr# 300"};
 		{ 3, "s16662", "12414", "=q2=Thorium Leggings", "=ds=#sr# 300"};
@@ -493,13 +561,14 @@ Type = "Crafting";
 		{ 28, "s9961", "7931", "=q2=Mithril Coif", "=ds=#sr# 230"};
 		{ 29, "s9952", "7928", "=q2=Ornate Mithril Shoulder", "=ds=#sr# 225"};
 		{ 30, "s9950", "7927", "=q2=Ornate Mithril Gloves", "=ds=#sr# 220"};
-		Next = "SmithingArmorOld4";
-		Prev = "SmithingArmorOld2";
+		Next = "SmithingArmorCLASSIC4";
+		Prev = "SmithingArmorCLASSIC2";
 		Back = "SMITHINGMENU";
-Type = "Crafting";
+		Type = "Crafting";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["SmithingArmorOld4"] = {
+	AtlasLoot_Data["SmithingArmorCLASSIC4"] = {
 		{ 1, "s9945", "7926", "=q2=Ornate Mithril Pants", "=ds=#sr# 220"};
 		{ 2, "s9937", "7924", "=q2=Mithril Scale Bracers", "=ds=#sr# 215"};
 		{ 3, "s9931", "7920", "=q2=Mithril Scale Pants", "=ds=#sr# 210"};
@@ -530,13 +599,14 @@ Type = "Crafting";
 		{ 28, "s3331", "3482", "=q2=Silvered Bronze Boots", "=ds=#sr# 130"};
 		{ 29, "s2673", "2869", "=q2=Silvered Bronze Breastplate", "=ds=#sr# 130"};
 		{ 30, "s3330", "3481", "=q2=Silvered Bronze Shoulders", "=ds=#sr# 125"};
-		Next = "SmithingArmorOld5";
-		Prev = "SmithingArmorOld3";
+		Next = "SmithingArmorCLASSIC5";
+		Prev = "SmithingArmorCLASSIC3";
 		Back = "SMITHINGMENU";
-Type = "Crafting";
+		Type = "Crafting";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["SmithingArmorOld5"] = {
+	AtlasLoot_Data["SmithingArmorCLASSIC5"] = {
 		{ 1, "s2672", "2868", "=q2=Patterned Bronze Bracers", "=ds=#sr# 120"};
 		{ 2, "s2668", "2865", "=q2=Rough Bronze Leggings", "=ds=#sr# 105"};
 		{ 3, "s8367", "6731", "=q2=Ironforge Breastplate", "=ds=#sr# 100"};
@@ -558,12 +628,13 @@ Type = "Crafting";
 		{ 19, "s2663", "2853", "=q1=Copper Bracers", "=ds=#sr# 1"};
 		{ 20, "s2662", "2852", "=q1=Copper Chain Pants", "=ds=#sr# 1"};
 		{ 21, "s12260", "10421", "=q1=Rough Copper Vest", "=ds=#sr# 1"};
-		Prev = "SmithingArmorOld4";
+		Prev = "SmithingArmorCLASSIC4";
 		Back = "SMITHINGMENU";
-Type = "Crafting";
+		Type = "Crafting";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["SmithingArmorBC1"] = {
+	AtlasLoot_Data["SmithingArmorTBC"] = {
 		{ 1, "s36389", "30034", "=q4=Belt of the Guardian", "=ds=#sr# 375"};
 		{ 2, "s36391", "30033", "=q4=Boots of the Protector", "=ds=#sr# 375"};
 		{ 3, "s34534", "28484", "=q4=Bulwark of Kings", "=ds=#sr# 375"};
@@ -594,12 +665,13 @@ Type = "Crafting";
 		{ 28, "s46141", "34378", "=q4=Hard Khorium Battlefists", "=ds=#sr# 365"};
 		{ 29, "s46144", "34377", "=q4=Hard Khorium Battleplate", "=ds=#sr# 365"};
 		{ 30, "s29664", "23535", "=q4=Helm of the Stalwart Defender", "=ds=#sr# 365"};
-		Next = "SmithingArmorBC2";
+		Next = "SmithingArmorTBC2";
 		Back = "SMITHINGMENU";
-Type = "Crafting";
+		Type = "Crafting";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["SmithingArmorBC2"] = {
+	AtlasLoot_Data["SmithingArmorTBC2"] = {
 		{ 1, "s29668", "23536", "=q4=Oathkeeper's Helm", "=ds=#sr# 365"};
 		{ 2, "s29662", "23533", "=q4=Steelgrip Gauntlets", "=ds=#sr# 365"};
 		{ 3, "s29663", "23534", "=q4=Storm Helm", "=ds=#sr# 365"};
@@ -630,13 +702,14 @@ Type = "Crafting";
 		{ 28, "s29606", "23507", "=q3=Adamantite Breastplate", "=ds=#sr# 340"};
 		{ 29, "s29603", "23506", "=q3=Adamantite Plate Bracers", "=ds=#sr# 335"};
 		{ 30, "s29605", "23508", "=q3=Adamantite Plate Gloves", "=ds=#sr# 335"};
-		Next = "SmithingArmorBC3";
-		Prev = "SmithingArmorBC1";
+		Next = "SmithingArmorTBC3";
+		Prev = "SmithingArmorTBC";
 		Back = "SMITHINGMENU";
-Type = "Crafting";
+		Type = "Crafting";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["SmithingArmorBC3"] = {
+	AtlasLoot_Data["SmithingArmorTBC3"] = {
 		{ 1, "s36129", "30074", "=q3=Heavy Earthforged Breastplate", "=ds=#sr# 330"};
 		{ 2, "s36130", "30076", "=q3=Stormforged Hauberk", "=ds=#sr# 330"};
 		{ 3, "s29550", "23489", "=q2=Fel Iron Breastplate", "=ds=#sr# 325"};
@@ -648,12 +721,13 @@ Type = "Crafting";
 		{ 9, "s29547", "23484", "=q2=Fel Iron Plate Belt", "=ds=#sr# 305"};
 		{ 10, "s29551", "23493", "=q2=Fel Iron Chain Coif", "=ds=#sr# 300"};
 		{ 11, "s29545", "23482", "=q2=Fel Iron Plate Gloves", "=ds=#sr# 300"};
-		Prev = "SmithingArmorBC2";
+		Prev = "SmithingArmorTBC2";
 		Back = "SMITHINGMENU";
-Type = "Crafting";
+		Type = "Crafting";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["SmithingArmorWrath1"] = {
+	AtlasLoot_Data["SmithingArmorWRATH"] = {
         { 1, "s70568", "49907", "=q4=Boots of Kingly Upheaval", "=ds="..AL["Vendor"]..""};
         { 2, "s70566", "49906", "=q4=Hellfrozen Bonegrinders", "=ds="..AL["Vendor"]..""};
         { 3, "s70565", "49903", "=q4=Legplates of Painful Death", "=ds="..AL["Vendor"]..""};
@@ -684,12 +758,13 @@ Type = "Crafting";
 		{ 28, "s55375", "41391", "=q4=Spiked Titansteel Treads", "=ds="..AL["Trainer"] };
 		{ 29, "s55373", "41387", "=q4=Tempered Titansteel Helm", "=ds="..AL["Trainer"] };
 		{ 30, "s55376", "41392", "=q4=Tempered Titansteel Treads", "=ds="..AL["Trainer"] };
-		Next = "SmithingArmorWrath2";
+		Next = "SmithingArmorWRATH2";
 		Back = "SMITHINGMENU";
-Type = "Crafting";
+		Type = "Crafting";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["SmithingArmorWrath2"] = {
+	AtlasLoot_Data["SmithingArmorWRATH2"] = {
         { 1, "s56400", "42508", "=q4=Titansteel Shield Wall", "=ds="..AL["Trainer"] };
 		{ 2, "s61008", "43586", "=q4=Icebane Chestguard", "=ds="..AL["Trainer"] };
 		{ 3, "s61009", "43587", "=q4=Icebane Girdle", "=ds="..AL["Trainer"] };
@@ -720,13 +795,14 @@ Type = "Crafting";
 		{ 28, "s59441", "43870", "=q3=Brilliant Saronite Helm", "=ds="..AL["Trainer"] };
 		{ 29, "s55186", "41189", "=q3=Chestplate of Conquest", "=ds="..AL["Trainer"] };
 		{ 30, "s55187", "41190", "=q3=Legplates of Conquest", "=ds="..AL["Trainer"] };
-		Next = "SmithingArmorWrath3";
-		Prev = "SmithingArmorWrath1";
+		Next = "SmithingArmorWRATH3";
+		Prev = "SmithingArmorWRATH";
 		Back = "SMITHINGMENU";
-Type = "Crafting";
+		Type = "Crafting";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["SmithingArmorWrath3"] = {
+	AtlasLoot_Data["SmithingArmorWRATH3"] = {
         { 1, "s55015", "41114", "=q3=Tempered Saronite Gauntlets", "=ds="..AL["Trainer"] };
 		{ 2, "s55014", "41113", "=q3=Saronite Bulwark", "=ds="..AL["Trainer"] };
 		{ 3, "s55017", "41116", "=q3=Tempered Saronite Bracers", "=ds="..AL["Trainer"] };
@@ -757,13 +833,14 @@ Type = "Crafting";
 		{ 28, "s54980", "40958", "=q2=Reinforced Cobalt Legplates", "=ds="..AL["Drop"]..": "..BabbleZone["Zul'Drak"] };
 		{ 29, "s54981", "40959", "=q2=Reinforced Cobalt Chestpiece", "=ds="..AL["Drop"]..": "..BabbleZone["Sholazar Basin"] };
 		{ 30, "s54917", "40942", "=q2=Spiked Cobalt Helm", "=ds="..AL["Trainer"] };
-		Prev = "SmithingArmorWrath2";
-		Next = "SmithingArmorWrath4";
+		Prev = "SmithingArmorWRATH2";
+		Next = "SmithingArmorWRATH4";
 		Back = "SMITHINGMENU";
-Type = "Crafting";
+		Type = "Crafting";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["SmithingArmorWrath4"] = {
+	AtlasLoot_Data["SmithingArmorWRATH4"] = {
         { 1, "s52570", "39085", "=q2=Cobalt Chestpiece", "=ds="..AL["Trainer"] };
 		{ 2, "s52571", "39084", "=q2=Cobalt Helm", "=ds="..AL["Trainer"] };
 		{ 3, "s52567", "39086", "=q2=Cobalt Legplates", "=ds="..AL["Trainer"] };
@@ -773,12 +850,13 @@ Type = "Crafting";
 		{ 7, "s54550", "40668", "=q2=Cobalt Triangle Shield", "=ds="..AL["Trainer"] };
 		{ 8, "s52568", "39087", "=q2=Cobalt Belt", "=ds="..AL["Trainer"] };
 		{ 9, "s52569", "39088", "=q2=Cobalt Boots", "=ds="..AL["Trainer"] };
-		Prev = "SmithingArmorWrath3";
+		Prev = "SmithingArmorWRATH3";
 		Back = "SMITHINGMENU";
-Type = "Crafting";
+		Type = "Crafting";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["SmithingWeaponOld1"] = {
+	AtlasLoot_Data["SmithingWeaponCLASSIC"] = {
 		{ 1, "s23638", "19166", "=q4=Black Amnesty", "=ds=#sr# 300"};
 		{ 2, "s23639", "19167", "=q4=Blackfury", "=ds=#sr# 300"};
 		{ 3, "s23652", "19168", "=q4=Blackguard", "=ds=#sr# 300"};
@@ -809,12 +887,13 @@ Type = "Crafting";
 		{ 28, "s10015", "7960", "=q3=Truesilver Champion", "=ds=#sr# 260"};
 		{ 29, "s10011", "7959", "=q3=Blight", "=ds=#sr# 250"};
 		{ 30, "s10007", "7961", "=q3=Phantom Blade", "=ds=#sr# 245"};
-		Next = "SmithingWeaponOld2";
+		Next = "SmithingWeaponCLASSIC2";
 		Back = "SMITHINGMENU";
-Type = "Crafting";
+		Type = "Crafting";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["SmithingWeaponOld2"] = {
+	AtlasLoot_Data["SmithingWeaponCLASSIC2"] = {
 		{ 1, "s10003", "7954", "=q3=The Shatterer", "=ds=#sr# 235"};
 		{ 2, "s34982", "29203", "=q2=Enchanted Thorium Blades", "=ds=#sr# 300"};
 		{ 3, "s16984", "12792", "=q2=Volcanic Hammer", "=ds=#sr# 290"};
@@ -845,13 +924,14 @@ Type = "Crafting";
 		{ 28, "s3295", "3490", "=q2=Deadly Bronze Poniard", "=ds=#sr# 125"};
 		{ 29, "s6517", "5540", "=q2=Pearl-handled Dagger", "=ds=#sr# 110"};
 		{ 30, "s3491", "3848", "=q2=Big Bronze Knife", "=ds=#sr# 105"};
-		Next = "SmithingWeaponOld3";
-		Prev = "SmithingWeaponOld1";
+		Next = "SmithingWeaponCLASSIC3";
+		Prev = "SmithingWeaponCLASSIC";
 		Back = "SMITHINGMENU";
-Type = "Crafting";
+		Type = "Crafting";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["SmithingWeaponOld3"] = {
+	AtlasLoot_Data["SmithingWeaponCLASSIC3"] = {
 		{ 1, "s34979", "29201", "=q2=Thick Bronze Darts", "=ds=#sr# 100"};
 		{ 2, "s3292", "3487", "=q2=Heavy Copper Broadsword", "=ds=#sr# 95"};
 		{ 3, "s3294", "3489", "=q2=Thick War Axe", "=ds=#sr# 70"};
@@ -869,12 +949,13 @@ Type = "Crafting";
 		{ 15, "s2739", "2847", "=q1=Copper Shortsword", "=ds=#sr# 25"};
 		{ 16, "s2738", "2845", "=q1=Copper Axe", "=ds=#sr# 20"};
 		{ 17, "s2737", "2844", "=q1=Copper Mace", "=ds=#sr# 15"};
-		Prev = "SmithingWeaponOld2";
+		Prev = "SmithingWeaponCLASSIC2";
 		Back = "SMITHINGMENU";
-Type = "Crafting";
+		Type = "Crafting";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["SmithingWeaponBC1"] = {
+	AtlasLoot_Data["SmithingWeaponTBC"] = {
 		{ 1, "s34542", "28432", "=q4=Black Planar Edge", "=ds=#sr# 375"};
 		{ 2, "s36258", "28427", "=q4=Blazefury", "=ds=#sr# 375"};
 		{ 3, "s34537", "28426", "=q4=Blazeguard", "=ds=#sr# 375"};
@@ -905,12 +986,13 @@ Type = "Crafting";
 		{ 28, "s34547", "28440", "=q4=Thunder", "=ds=#sr# 350"};
 		{ 29, "s34983", "29204", "=q3=Felsteel Whisper Knives", "=ds=#sr# 350"};
 		{ 30, "s36137", "30093", "=q3=Great Earthforged Hammer", "=ds=#sr# 330"};
-		Next = "SmithingWeaponBC2";
+		Next = "SmithingWeaponTBC2";
 		Back = "SMITHINGMENU";
 		Type = "Crafting";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["SmithingWeaponBC2"] = {
+	AtlasLoot_Data["SmithingWeaponTBC2"] = {
 		{ 1, "s36136", "30089", "=q3=Lavaforged Warhammer", "=ds=#sr# 330"};
 		{ 2, "s36135", "30088", "=q3=Skyforged Great Axe", "=ds=#sr# 330"};
 		{ 3, "s36133", "30086", "=q3=Stoneforged Claymore", "=ds=#sr# 330"};
@@ -923,12 +1005,13 @@ Type = "Crafting";
 		{ 10, "s29565", "23499", "=q2=Fel Iron Greatsword", "=ds=#sr# 320"};
 		{ 11, "s29558", "23498", "=q2=Fel Iron Hammer", "=ds=#sr# 315"};
 		{ 12, "s29557", "23497", "=q2=Fel Iron Hatchet", "=ds=#sr# 310"};
-		Prev = "SmithingWeaponBC1";
+		Prev = "SmithingWeaponTBC";
 		Back = "SMITHINGMENU";
 		Type = "Crafting";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["SmithingWeaponWrath1"] = {
+	AtlasLoot_Data["SmithingWeaponWRATH"] = {
 		{ 1, "s63182", "45085", "=q4=Titansteel Spellblade", "=ds="..AL["Trainer"] };
 		{ 2, "s55370", "41383", "=q4=Titansteel Bonecrusher", "=ds="..AL["Trainer"] };
 		{ 3, "s55369", "41257", "=q4=Titansteel Destroyer", "=ds="..AL["Trainer"] };
@@ -952,6 +1035,7 @@ Type = "Crafting";
 		{ 21, "s55203", "41242", "=q2=Forged Cobalt Claymore", "=ds="..AL["Trainer"] };
 		Back = "SMITHINGMENU";
 		Type = "Crafting";
+		Submenu = "Expansion";
 	};
 
 	AtlasLoot_Data["SmithingEnhancement1"] = {
@@ -1336,38 +1420,102 @@ Type = "Crafting";
 		--- Enchanting ---
 		------------------
 
-	AtlasLoot_Data["EnchantingBoots1"] = {
+	AtlasLoot_Data["EnchantingBootsCLASSIC"] = {
+		{ 1, "s20023", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Greater Agility", "=ds=#sr# 295"};
+		{ 2, "s20024", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Spirit", "=ds=#sr# 275"};
+		{ 3, "s20020", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Greater Stamina", "=ds=#sr# 260"};
+		{ 4, "s63746", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Lesser Accuracy", "=ds="};
+		{ 5, "s13935", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Agility", "=ds=#sr# 235"};
+		{ 6, "s13890", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Minor Speed", "=ds=#sr# 225"};
+		{ 16, "s13836", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Stamina", "=ds=#sr# 215"};
+		{ 17, "s13687", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Lesser Spirit", "=ds=#sr# 190"};
+		{ 18, "s13644", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Lesser Stamina", "=ds=#sr# 170"};
+		{ 19, "s13637", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Lesser Agility", "=ds=#sr# 160"};
+		{ 20, "s7867", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Minor Agility", "=ds=#sr# 125"};
+		{ 21, "s7863", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Minor Stamina", "=ds=#sr# 125"};
+		Next = "EnchantingBootsTBC";
+		Prev = "EnchantingBootsWRATH";
+		Back = "ENCHANTINGMENU";
+		Submenu = "Expansion";
+	};
+
+	AtlasLoot_Data["EnchantingBootsTBC"] = {
+		{ 1, "s27954", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Surefooted", "=ds=#sr# 370"};
+		{ 2, "s34008", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Boar's Speed", "=ds=#sr# 360"};
+		{ 3, "s34007", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Cat's Swiftness", "=ds=#sr# 360"};
+		{ 4, "s27951", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Dexterity", "=ds=#sr# 340"};
+		{ 5, "s27950", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Fortitude", "=ds=#sr# 320"};
+		{ 6, "s27948", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Vitality", "=ds=#sr# 305"};
+		Next = "EnchantingBootsWRATH";
+		Prev = "EnchantingBootsCLASSIC";
+		Back = "ENCHANTINGMENU";
+		Submenu = "Expansion";
+	};
+
+	AtlasLoot_Data["EnchantingBootsWRATH"] = {
 		{ 1, "s60763", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Greater Assault", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"]};
 		{ 2, "s47901", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Tuskarr's Vitality", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"]};
 		{ 3, "s44589", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Superior Agility", "=ds="..AL["Trainer"]};
 		{ 4, "s44508", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Greater Spirit", "=ds="..AL["Trainer"]};
-		{ 5, "s44584", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Greater Vitality", "=ds="..AL["Trainer"]};
-		{ 6, "s60606", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Assault", "=ds="..AL["Trainer"]};
-		{ 7, "s44528", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Greater Fortitude", "=ds="..AL["Trainer"]};
-		{ 8, "s60623", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Icewalker", "=ds="..AL["Trainer"]};
-		{ 9, "s27954", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Surefooted", "=ds=#sr# 370"};
-		{ 10, "s34008", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Boar's Speed", "=ds=#sr# 360"};
-		{ 11, "s34007", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Cat's Swiftness", "=ds=#sr# 360"};
-		{ 12, "s27951", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Dexterity", "=ds=#sr# 340"};
-		{ 13, "s27950", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Fortitude", "=ds=#sr# 320"};
-		{ 14, "s27948", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Vitality", "=ds=#sr# 305"};
-		{ 15, "s20023", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Greater Agility", "=ds=#sr# 295"};
-		{ 16, "s20024", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Spirit", "=ds=#sr# 275"};
-		{ 17, "s20020", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Greater Stamina", "=ds=#sr# 260"};
-		{ 18, "s63746", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Lesser Accuracy", "=ds="};
-		{ 19, "s13935", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Agility", "=ds=#sr# 235"};
-		{ 20, "s13890", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Minor Speed", "=ds=#sr# 225"};
-		{ 21, "s13836", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Stamina", "=ds=#sr# 215"};
-		{ 22, "s13687", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Lesser Spirit", "=ds=#sr# 190"};
-		{ 23, "s13644", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Lesser Stamina", "=ds=#sr# 170"};
-		{ 24, "s13637", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Lesser Agility", "=ds=#sr# 160"};
-		{ 25, "s7867", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Minor Agility", "=ds=#sr# 125"};
-		{ 26, "s7863", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Minor Stamina", "=ds=#sr# 125"};
-		Next = "EnchantingBracer1";
+		{ 16, "s44584", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Greater Vitality", "=ds="..AL["Trainer"]};
+		{ 17, "s60606", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Assault", "=ds="..AL["Trainer"]};
+		{ 18, "s44528", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Greater Fortitude", "=ds="..AL["Trainer"]};
+		{ 19, "s60623", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Icewalker", "=ds="..AL["Trainer"]};
+		Next = "EnchantingBootsCLASSIC";
+		Prev = "EnchantingBootsTBC";
 		Back = "ENCHANTINGMENU";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["EnchantingBracer1"] = {
+	AtlasLoot_Data["EnchantingBracerCLASSIC"] = {
+		{ 1, "s23802", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Healing Power", "=ds=#sr# 300"};
+		{ 2, "s20011", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Superior Stamina", "=ds=#sr# 300"};
+		{ 3, "s20010", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Superior Strength", "=ds=#sr# 295"};
+		{ 4, "s23801", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Mana Regeneration", "=ds=#sr# 290"};
+		{ 5, "s20009", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Superior Spirit", "=ds=#sr# 270"};
+		{ 6, "s20008", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Greater Intellect", "=ds=#sr# 255"};
+		{ 7, "s13939", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Greater Strength", "=ds=#sr# 240"};
+		{ 8, "s13945", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Greater Stamina", "=ds=#sr# 245"};
+		{ 9, "s13931", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Deflection", "=ds=#sr# 235"};
+		{ 10, "s13846", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Greater Spirit", "=ds=#sr# 220"};
+		{ 11, "s13822", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Intellect", "=ds=#sr# 210"};
+		{ 12, "s13661", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Strength", "=ds=#sr# 180"};
+		{ 13, "s13646", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Lesser Deflection", "=ds=#sr# 170"};
+		{ 14, "s13648", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Stamina", "=ds=#sr# 170"};
+		{ 15, "s13642", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Spirit", "=ds=#sr# 165"};
+		{ 16, "s13622", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Lesser Intellect", "=ds=#sr# 150"};
+		{ 17, "s13536", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Lesser Strength", "=ds=#sr# 140"};
+		{ 18, "s13501", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Lesser Stamina", "=ds=#sr# 130"};
+		{ 19, "s7859", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Lesser Spirit", "=ds=#sr# 120"};
+		{ 20, "s7779", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Minor Agility", "=ds=#sr# 80"};
+		{ 21, "s7782", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Minor Strength", "=ds=#sr# 80"};
+		{ 22, "s7457", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Minor Stamina", "=ds=#sr# 50"};
+		{ 23, "s7766", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Minor Spirit", "=ds=#sr# 60"};
+		{ 24, "s7418", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Minor Health", "=ds=#sr# 1"};
+		{ 25, "s7428", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Minor Deflection", "=ds=#sr# 1"};
+		Next = "EnchantingBracerTBC";
+		Prev = "EnchantingBracerWRATH";
+		Back = "ENCHANTINGMENU";
+		Submenu = "Expansion";
+	};
+
+	AtlasLoot_Data["EnchantingBracerTBC"] = {
+		{ 1, "s27917", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Spellpower", "=ds=#sr# 360"};
+		{ 2, "s27914", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Fortitude", "=ds=#sr# 350"};
+		{ 3, "s27913", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Restore Mana Prime", "=ds=#sr# 335"};
+		{ 4, "s27911", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Superior Healing", "=ds=#sr# 325"};
+		{ 5, "s27906", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Major Defense", "=ds=#sr# 320"};
+		{ 6, "s27905", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Stats", "=ds=#sr# 315"};
+		{ 7, "s27899", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Brawn", "=ds=#sr# 305"};
+		{ 8, "s34001", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Major Intellect", "=ds=#sr# 305"};
+		{ 9, "s34002", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Assault", "=ds=#sr# 300"};
+		Next = "EnchantingBracerWRATH";
+		Prev = "EnchantingBracerCLASSIC";
+		Back = "ENCHANTINGMENU";
+		Submenu = "Expansion";
+	};
+
+	AtlasLoot_Data["EnchantingBracerWRATH"] = {
 		{ 1, "s62256", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Major Stamina", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"]};
 		{ 2, "s60767", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Superior Spellpower", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"]};
 		{ 3, "s44575", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Greater Assault", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"]};
@@ -1377,52 +1525,50 @@ Type = "Crafting";
 		{ 7, "s44635", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Greater Spellpower", "=ds="..AL["Trainer"]};
 		{ 8, "s44555", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Exceptional Intellect", "=ds="..AL["Trainer"]};
 		{ 9, "s60616", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Striking", "=ds="..AL["Trainer"]};
-		{ 10, "s27917", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Spellpower", "=ds=#sr# 360"};
-		{ 11, "s27914", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Fortitude", "=ds=#sr# 350"};
-		{ 12, "s27913", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Restore Mana Prime", "=ds=#sr# 335"};
-		{ 13, "s27911", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Superior Healing", "=ds=#sr# 325"};
-		{ 14, "s27906", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Major Defense", "=ds=#sr# 320"};
-		{ 15, "s27905", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Stats", "=ds=#sr# 315"};
-		{ 16, "s27899", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Brawn", "=ds=#sr# 305"};
-		{ 17, "s34001", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Major Intellect", "=ds=#sr# 305"};
-		{ 18, "s34002", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Assault", "=ds=#sr# 300"};
-		{ 19, "s23802", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Healing Power", "=ds=#sr# 300"};
-		{ 20, "s20011", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Superior Stamina", "=ds=#sr# 300"};
-		{ 21, "s20010", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Superior Strength", "=ds=#sr# 295"};
-		{ 22, "s23801", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Mana Regeneration", "=ds=#sr# 290"};
-		{ 23, "s20009", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Superior Spirit", "=ds=#sr# 270"};
-		{ 24, "s20008", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Greater Intellect", "=ds=#sr# 255"};
-		{ 25, "s13939", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Greater Strength", "=ds=#sr# 240"};
-		{ 26, "s13945", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Greater Stamina", "=ds=#sr# 245"};
-		{ 27, "s13931", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Deflection", "=ds=#sr# 235"};
-		{ 28, "s13846", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Greater Spirit", "=ds=#sr# 220"};
-		{ 29, "s13822", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Intellect", "=ds=#sr# 210"};
-		{ 30, "s13661", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Strength", "=ds=#sr# 180"};
-		Prev = "EnchantingBoots1";
-		Next = "EnchantingBracer2";
+		Prev = "EnchantingBracerTBC";
+		Next = "EnchantingBracerCLASSIC";
 		Back = "ENCHANTINGMENU";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["EnchantingBracer2"] = {
-		{ 1, "s13646", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Lesser Deflection", "=ds=#sr# 170"};
-		{ 2, "s13648", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Stamina", "=ds=#sr# 170"};
-		{ 3, "s13642", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Spirit", "=ds=#sr# 165"};
-		{ 4, "s13622", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Lesser Intellect", "=ds=#sr# 150"};
-		{ 5, "s13536", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Lesser Strength", "=ds=#sr# 140"};
-		{ 6, "s13501", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Lesser Stamina", "=ds=#sr# 130"};
-		{ 7, "s7859", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Lesser Spirit", "=ds=#sr# 120"};
-		{ 8, "s7779", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Minor Agility", "=ds=#sr# 80"};
-		{ 9, "s7782", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Minor Strength", "=ds=#sr# 80"};
-		{ 10, "s7457", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Minor Stamina", "=ds=#sr# 50"};
-		{ 11, "s7766", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Minor Spirit", "=ds=#sr# 60"};
-		{ 12, "s7418", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Minor Health", "=ds=#sr# 1"};
-		{ 13, "s7428", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Minor Deflection", "=ds=#sr# 1"};
-		Prev = "EnchantingBracer1";
-		Next = "EnchantingChest1";
+	AtlasLoot_Data["EnchantingChestCLASSIC"] = {
+		{ 1, "s20025", "Spell_Holy_GreaterHeal", "=ds=Enchant Chest - Greater Stats", "=ds=#sr# 300"};
+		{ 2, "s33991", "Spell_Holy_GreaterHeal", "=ds=Enchant Chest - Restore Mana Prime", "=ds=#sr# 300"};
+		{ 3, "s20028", "Spell_Holy_GreaterHeal", "=ds=Enchant Chest - Major Mana", "=ds=#sr# 290"};
+		{ 4, "s20026", "Spell_Holy_GreaterHeal", "=ds=Enchant Chest - Major Health", "=ds=#sr# 275"};
+		{ 5, "s13941", "Spell_Holy_GreaterHeal", "=ds=Enchant Chest - Stats", "=ds=#sr# 245"};
+		{ 6, "s13917", "Spell_Holy_GreaterHeal", "=ds=Enchant Chest - Superior Mana", "=ds=#sr# 230"};
+		{ 7, "s13858", "Spell_Holy_GreaterHeal", "=ds=Enchant Chest - Superior Health", "=ds=#sr# 220"};
+		{ 8, "s13700", "Spell_Holy_GreaterHeal", "=ds=Enchant Chest - Lesser Stats", "=ds=#sr# 200"};
+		{ 9, "s13663", "Spell_Holy_GreaterHeal", "=ds=Enchant Chest - Greater Mana", "=ds=#sr# 185"};
+		{ 10, "s13640", "Spell_Holy_GreaterHeal", "=ds=Enchant Chest - Greater Health", "=ds=#sr# 160"};
+		{ 11, "s13626", "Spell_Holy_GreaterHeal", "=ds=Enchant Chest - Minor Stats", "=ds=#sr# 150"};
+		{ 12, "s13607", "Spell_Holy_GreaterHeal", "=ds=Enchant Chest - Mana", "=ds=#sr# 145"};
+		{ 13, "s13538", "Spell_Holy_GreaterHeal", "=ds=Enchant Chest - Lesser Absorption", "=ds=#sr# 140"};
+		{ 14, "s7857", "Spell_Holy_GreaterHeal", "=ds=Enchant Chest - Health", "=ds=#sr# 120"};
+		{ 15, "s7776", "Spell_Holy_GreaterHeal", "=ds=Enchant Chest - Lesser Mana", "=ds=#sr# 80"};
+		{ 16, "s7748", "Spell_Holy_GreaterHeal", "=ds=Enchant Chest - Lesser Health", "=ds=#sr# 60"};
+		{ 17, "s7443", "Spell_Holy_GreaterHeal", "=ds=Enchant Chest - Minor Mana", "=ds=#sr# 20"};
+		{ 18, "s7420", "Spell_Holy_GreaterHeal", "=ds=Enchant Chest - Minor Health", "=ds=#sr# 15"};
+		Prev = "EnchantingChestWRATH";
+		Next = "EnchantingChestTBC";
 		Back = "ENCHANTINGMENU";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["EnchantingChest1"] = {
+	AtlasLoot_Data["EnchantingChestTBC"] = {
+		{ 1, "s46594", "Spell_Holy_GreaterHeal", "=ds=Enchant Chest - Defense", "=ds=#sr# 360"};
+		{ 2, "s27960", "Spell_Holy_GreaterHeal", "=ds=Enchant Chest - Exceptional Stats", "=ds=#sr# 345"};
+		{ 3, "s33992", "Spell_Holy_GreaterHeal", "=ds=Enchant Chest - Major Resilience", "=ds=#sr# 345"};
+		{ 4, "s33990", "Spell_Holy_GreaterHeal", "=ds=Enchant Chest - Major Spirit", "=ds=#sr# 320"};
+		{ 5, "s27957", "Spell_Holy_GreaterHeal", "=ds=Enchant Chest - Exceptional Health", "=ds=#sr# 315"};
+		Prev = "EnchantingChestCLASSIC";
+		Next = "EnchantingChestWRATH";
+		Back = "ENCHANTINGMENU";
+		Submenu = "Expansion";
+	};
+
+	AtlasLoot_Data["EnchantingChestWRATH"] = {
 		{ 1, "s27958", "Spell_Holy_GreaterHeal", "=ds=Enchant Chest - Exceptional Mana", "=ds="..AL["Trainer"]..""};
 		{ 2, "s44588", "Spell_Holy_GreaterHeal", "=ds=Enchant Chest - Exceptional Resilience", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"]};
 		{ 3, "s60692", "Spell_Holy_GreaterHeal", "=ds=Enchant Chest - Powerful Stats", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"]};
@@ -1431,41 +1577,55 @@ Type = "Crafting";
 		{ 6, "s47766", "Spell_Holy_GreaterHeal", "=ds=Enchant Chest - Greater Defense", "=ds="..AL["Trainer"]};
 		{ 7, "s44492", "Spell_Holy_GreaterHeal", "=ds=Enchant Chest - Mighty Health", "=ds="..AL["Trainer"]};
 		{ 8, "s44623", "Spell_Holy_GreaterHeal", "=ds=Enchant Chest - Super Stats", "=ds="..AL["Trainer"]};
-		{ 9, "s46594", "Spell_Holy_GreaterHeal", "=ds=Enchant Chest - Defense", "=ds=#sr# 360"};
-		{ 10, "s27960", "Spell_Holy_GreaterHeal", "=ds=Enchant Chest - Exceptional Stats", "=ds=#sr# 345"};
-		{ 11, "s33992", "Spell_Holy_GreaterHeal", "=ds=Enchant Chest - Major Resilience", "=ds=#sr# 345"};
-		{ 12, "s33990", "Spell_Holy_GreaterHeal", "=ds=Enchant Chest - Major Spirit", "=ds=#sr# 320"};
-		{ 13, "s27957", "Spell_Holy_GreaterHeal", "=ds=Enchant Chest - Exceptional Health", "=ds=#sr# 315"};
-		{ 14, "s20025", "Spell_Holy_GreaterHeal", "=ds=Enchant Chest - Greater Stats", "=ds=#sr# 300"};
-		{ 15, "s33991", "Spell_Holy_GreaterHeal", "=ds=Enchant Chest - Restore Mana Prime", "=ds=#sr# 300"};
-		{ 16, "s20028", "Spell_Holy_GreaterHeal", "=ds=Enchant Chest - Major Mana", "=ds=#sr# 290"};
-		{ 17, "s20026", "Spell_Holy_GreaterHeal", "=ds=Enchant Chest - Major Health", "=ds=#sr# 275"};
-		{ 18, "s13941", "Spell_Holy_GreaterHeal", "=ds=Enchant Chest - Stats", "=ds=#sr# 245"};
-		{ 19, "s13917", "Spell_Holy_GreaterHeal", "=ds=Enchant Chest - Superior Mana", "=ds=#sr# 230"};
-		{ 20, "s13858", "Spell_Holy_GreaterHeal", "=ds=Enchant Chest - Superior Health", "=ds=#sr# 220"};
-		{ 21, "s13700", "Spell_Holy_GreaterHeal", "=ds=Enchant Chest - Lesser Stats", "=ds=#sr# 200"};
-		{ 22, "s13663", "Spell_Holy_GreaterHeal", "=ds=Enchant Chest - Greater Mana", "=ds=#sr# 185"};
-		{ 23, "s13640", "Spell_Holy_GreaterHeal", "=ds=Enchant Chest - Greater Health", "=ds=#sr# 160"};
-		{ 24, "s13626", "Spell_Holy_GreaterHeal", "=ds=Enchant Chest - Minor Stats", "=ds=#sr# 150"};
-		{ 25, "s13607", "Spell_Holy_GreaterHeal", "=ds=Enchant Chest - Mana", "=ds=#sr# 145"};
-		{ 26, "s13538", "Spell_Holy_GreaterHeal", "=ds=Enchant Chest - Lesser Absorption", "=ds=#sr# 140"};
-		{ 27, "s7857", "Spell_Holy_GreaterHeal", "=ds=Enchant Chest - Health", "=ds=#sr# 120"};
-		{ 28, "s7776", "Spell_Holy_GreaterHeal", "=ds=Enchant Chest - Lesser Mana", "=ds=#sr# 80"};
-		{ 29, "s7748", "Spell_Holy_GreaterHeal", "=ds=Enchant Chest - Lesser Health", "=ds=#sr# 60"};
-		{ 30, "s7443", "Spell_Holy_GreaterHeal", "=ds=Enchant Chest - Minor Mana", "=ds=#sr# 20"};
-		Prev = "EnchantingBracer2";
-		Next = "EnchantingChest2";
+		Prev = "EnchantingChestTBC";
+		Next = "EnchantingChestCLASSIC";
 		Back = "ENCHANTINGMENU";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["EnchantingChest2"] = {
-		{ 1, "s7420", "Spell_Holy_GreaterHeal", "=ds=Enchant Chest - Minor Health", "=ds=#sr# 15"};
-		Prev = "EnchantingChest1";
-		Next = "EnchantingCloak1";
+	AtlasLoot_Data["EnchantingCloakCLASSIC"] = {
+        { 1, "s25081", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Greater Fire Resistance", "=ds=#sr# 300"};
+		{ 2, "s20015", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Superior Defense", "=ds=#sr# 285"};
+		{ 3, "s20014", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Greater Resistance", "=ds=#sr# 265"};
+		{ 4, "s13882", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Lesser Agility", "=ds=#sr# 225"};
+		{ 5, "s13746", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Greater Defense", "=ds=#sr# 205"};
+		{ 6, "s13794", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Resistance", "=ds=#sr# 205"};
+		{ 7, "s13657", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Fire Resistance", "=ds=#sr# 175"};
+		{ 8, "s13635", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Defense", "=ds=#sr# 155"};
+		{ 9, "s13522", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Lesser Shadow Resistance", "=ds=#sr# 135"};
+		{ 10, "s7861", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Lesser Fire Resistance", "=ds=#sr# 125"};
+		{ 11, "s13419", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Minor Agility", "=ds=#sr# 110"};
+		{ 12, "s13421", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Lesser Protection", "=ds=#sr# 115"};
+		{ 13, "s7771", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Minor Protection", "=ds=#sr# 70"};
+		{ 14, "s7454", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Minor Resistance", "=ds=#sr# 45"};
+		{ 15, "s7426", "Spell_Holy_GreaterHeal", "=ds=Enchant Chest - Minor Absorption", "=ds=#sr# 40"};
+		Prev = "EnchantingCloakWRATH";
+		Next = "EnchantingCloakTBC";
 		Back = "ENCHANTINGMENU";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["EnchantingCloak1"] = {
+		AtlasLoot_Data["EnchantingCloakTBC"] = {
+		{ 1, "s47051", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Steelweave", "=ds=#sr# 375"};
+        { 2, "s351501", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Crushing Wave", "=ds=#sr# 375"};
+		{ 3, "s351530", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Phoenix Fire", "=ds=#sr# 375"};
+		{ 4, "s34005", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Greater Arcane Resistance", "=ds=#sr# 350"};
+		{ 5, "s34006", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Greater Shadow Resistance", "=ds=#sr# 350"};
+		{ 6, "s27962", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Major Resistance", "=ds=#sr# 330"};
+		{ 7, "s34003", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Spell Penetration", "=ds=#sr# 325"};
+		{ 8, "s34004", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Greater Agility", "=ds=#sr# 310"};
+		{ 9, "s27961", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Major Armor", "=ds=#sr# 310"};
+		{ 10, "s25082", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Greater Nature Resistance", "=ds=#sr# 300"};
+		{ 11, "s25083", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Stealth", "=ds=#sr# 300"};
+		{ 12, "s25084", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Subtlety", "=ds=#sr# 300"};
+		{ 13, "s25086", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Dodge", "=ds=#sr# 300"};
+		Prev = "EnchantingCloakCLASSIC";
+		Next = "EnchantingCloakWRATH";
+		Back = "ENCHANTINGMENU";
+		Submenu = "Expansion";
+	};
+
+	AtlasLoot_Data["EnchantingCloakWRATH"] = {
 		{ 1, "s60609", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Speed", "=ds="..AL["Trainer"]..""};
 		{ 2, "s44631", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Shadow Armor", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"]};
 		{ 3, "s47899", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Wisdom", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"]};
@@ -1480,47 +1640,54 @@ Type = "Crafting";
 		{ 12, "s44590", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Superior Shadow Resistance", "=ds="..AL["Drop"]};
 		{ 13, "s44500", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Superior Agility", "=ds="..AL["Trainer"]};
 		{ 14, "s44582", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Spell Piercing", "=ds="..AL["Trainer"]};
-		{ 15, "s47051", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Steelweave", "=ds=#sr# 375"};
-        { 16, "s351501", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Crushing Wave", "=ds=#sr# 375"};
-		{ 17, "s351530", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Phoenix Fire", "=ds=#sr# 375"};
-		{ 18, "s34005", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Greater Arcane Resistance", "=ds=#sr# 350"};
-		{ 19, "s34006", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Greater Shadow Resistance", "=ds=#sr# 350"};
-		{ 20, "s27962", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Major Resistance", "=ds=#sr# 330"};
-		{ 21, "s34003", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Spell Penetration", "=ds=#sr# 325"};
-		{ 22, "s34004", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Greater Agility", "=ds=#sr# 310"};
-		{ 23, "s27961", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Major Armor", "=ds=#sr# 310"};
-		{ 24, "s25082", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Greater Nature Resistance", "=ds=#sr# 300"};
-		{ 25, "s25083", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Stealth", "=ds=#sr# 300"};
-		{ 26, "s25084", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Subtlety", "=ds=#sr# 300"};
-		{ 27, "s25086", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Dodge", "=ds=#sr# 300"};
-		{ 28, "s25081", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Greater Fire Resistance", "=ds=#sr# 300"};
-		{ 29, "s20015", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Superior Defense", "=ds=#sr# 285"};
-		{ 30, "s20014", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Greater Resistance", "=ds=#sr# 265"};
-		
-		Prev = "EnchantingChest1";
-		Next = "EnchantingCloak2";
+		Prev = "EnchantingCloakTBC";
+		Next = "EnchantingCloakCLASSIC";
 		Back = "ENCHANTINGMENU";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["EnchantingCloak2"] = {
-        { 1, "s13882", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Lesser Agility", "=ds=#sr# 225"};
-		{ 2, "s13746", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Greater Defense", "=ds=#sr# 205"};
-		{ 3, "s13794", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Resistance", "=ds=#sr# 205"};
-		{ 4, "s13657", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Fire Resistance", "=ds=#sr# 175"};
-		{ 5, "s13635", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Defense", "=ds=#sr# 155"};
-		{ 6, "s13522", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Lesser Shadow Resistance", "=ds=#sr# 135"};
-		{ 7, "s7861", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Lesser Fire Resistance", "=ds=#sr# 125"};
-		{ 8, "s13419", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Minor Agility", "=ds=#sr# 110"};
-		{ 9, "s13421", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Lesser Protection", "=ds=#sr# 115"};
-		{ 10, "s7771", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Minor Protection", "=ds=#sr# 70"};
-		{ 11, "s7454", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Minor Resistance", "=ds=#sr# 45"};
-		{ 12, "s7426", "Spell_Holy_GreaterHeal", "=ds=Enchant Chest - Minor Absorption", "=ds=#sr# 40"};
-		Prev = "EnchantingCloak1";
-		Next = "EnchantingGloves1";
+	AtlasLoot_Data["EnchantingGlovesCLASSIC"] = {	
+		{ 1, "s25078", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Fire Power", "=ds=#sr# 300"};
+		{ 2, "s25074", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Frost Power", "=ds=#sr# 300"};
+		{ 3, "s25079", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Healing Power", "=ds=#sr# 300"};
+		{ 4, "s25073", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Shadow Power", "=ds=#sr# 300"};
+		{ 5, "s25080", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Superior Agility", "=ds=#sr# 300"};
+		{ 6, "s25072", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Threat", "=ds=#sr# 300"};
+		{ 7, "s20013", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Greater Strength", "=ds=#sr# 295"};
+		{ 8, "s20012", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Greater Agility", "=ds=#sr# 270"};
+		{ 9, "s13948", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Minor Haste", "=ds=#sr# 250"};
+		{ 10, "s13947", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Riding Skill", "=ds=#sr# 250"};
+		{ 11, "s13868", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Advanced Herbalism", "=ds=#sr# 225"};
+		{ 12, "s13887", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Strength", "=ds=#sr# 225"};
+		{ 13, "s13841", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Advanced Mining", "=ds=#sr# 215"};
+		{ 14, "s13815", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Agility", "=ds=#sr# 210"};
+        { 15, "s13698", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Skinning", "=ds=#sr# 200"};
+		{ 16, "s13620", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Fishing", "=ds=#sr# 145"};
+		{ 17, "s13617", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Herbalism", "=ds=#sr# 145"};
+		{ 18, "s13612", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Mining", "=ds=#sr# 145"};
+		Prev = "EnchantingGlovesWRATH";
+		Next = "EnchantingGlovesTBC";
 		Back = "ENCHANTINGMENU";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["EnchantingGloves1"] = {
+	AtlasLoot_Data["EnchantingGlovesTBC"] = {
+		{ 1, "s44592", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Exceptional Spellpower", "=ds="..AL["Trainer"] };
+		{ 2, "s33997", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Major Spellpower", "=ds=#sr# 360"};
+		{ 3, "s33994", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Spell Strike", "=ds=#sr# 360"};
+		{ 4, "s33999", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Major Healing", "=ds=#sr# 350"};
+		{ 5, "s33995", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Major Strength", "=ds=#sr# 340"};
+		{ 6, "s33996", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Assault", "=ds=#sr# 310"};
+		{ 7, "s33993", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Blasting", "=ds=#sr# 305"};
+		{ 8, "s25080", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Superior Agility", "=ds=#sr# 300"};
+		{ 9, "s25072", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Threat", "=ds=#sr# 300"};
+		Prev = "EnchantingGlovesCLASSIC";
+		Next = "EnchantingGlovesWRATH";
+		Back = "ENCHANTINGMENU";
+		Submenu = "Expansion";
+	};
+
+	AtlasLoot_Data["EnchantingGlovesWRATH"] = {
         { 1, "s71692", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Angler", "=ds="..AL["Drop"]..""};
 		{ 2, "s44625", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Armsman", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
 		{ 3, "s60668", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Crusher", "=ds="..AL["Trainer"] };
@@ -1529,137 +1696,101 @@ Type = "Crafting";
 		{ 6, "s44484", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Expertise", "=ds="..AL["Trainer"] };
 		{ 7, "s44513", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Greater Assault", "=ds="..AL["Trainer"] };
 		{ 8, "s44506", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Gatherer", "=ds="..AL["Trainer"] };
-		{ 9, "s44592", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Exceptional Spellpower", "=ds="..AL["Trainer"] };
-		{ 10, "s33997", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Major Spellpower", "=ds=#sr# 360"};
-		{ 11, "s33994", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Spell Strike", "=ds=#sr# 360"};
-		{ 12, "s33999", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Major Healing", "=ds=#sr# 350"};
-		{ 13, "s33995", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Major Strength", "=ds=#sr# 340"};
-		{ 14, "s33996", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Assault", "=ds=#sr# 310"};
-		{ 15, "s33993", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Blasting", "=ds=#sr# 305"};
-		{ 16, "s25078", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Fire Power", "=ds=#sr# 300"};
-		{ 17, "s25074", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Frost Power", "=ds=#sr# 300"};
-		{ 18, "s25079", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Healing Power", "=ds=#sr# 300"};
-		{ 19, "s25073", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Shadow Power", "=ds=#sr# 300"};
-		{ 20, "s25080", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Superior Agility", "=ds=#sr# 300"};
-		{ 21, "s25072", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Threat", "=ds=#sr# 300"};
-		{ 22, "s20013", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Greater Strength", "=ds=#sr# 295"};
-		{ 23, "s20012", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Greater Agility", "=ds=#sr# 270"};
-		{ 24, "s13948", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Minor Haste", "=ds=#sr# 250"};
-		{ 25, "s13947", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Riding Skill", "=ds=#sr# 250"};
-		{ 26, "s13868", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Advanced Herbalism", "=ds=#sr# 225"};
-		{ 27, "s13887", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Strength", "=ds=#sr# 225"};
-		{ 28, "s13841", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Advanced Mining", "=ds=#sr# 215"};
-		{ 29, "s13815", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Agility", "=ds=#sr# 210"};
-        { 30, "s13698", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Skinning", "=ds=#sr# 200"};
-		Prev = "EnchantingCloak1";
-		Next = "EnchantingGloves2";
+		Prev = "EnchantingGlovesTBC";
+		Next = "EnchantingGlovesCLASSIC";
 		Back = "ENCHANTINGMENU";
-	};
-
-	AtlasLoot_Data["EnchantingGloves2"] = {
-		{ 1, "s13620", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Fishing", "=ds=#sr# 145"};
-		{ 2, "s13617", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Herbalism", "=ds=#sr# 145"};
-		{ 3, "s13612", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Mining", "=ds=#sr# 145"};
-		Prev = "EnchantingGloves1";
-		Next = "EnchantingRing1";
-		Back = "ENCHANTINGMENU";
+		Submenu = "Expansion";
 	};
 
 	AtlasLoot_Data["EnchantingRing1"] = {
-		{ 1, "s44645", "Spell_Holy_GreaterHeal", "=ds=Enchant Ring - Assault", "=ds="..AL["Trainer"]};
-		{ 2, "s44636", "Spell_Holy_GreaterHeal", "=ds=Enchant Ring - Greater Spellpower", "=ds="..AL["Trainer"]};
-		{ 3, "s59636", "Spell_Holy_GreaterHeal", "=ds=Enchant Ring - Stamina", "=ds="..AL["Trainer"]};
-		{ 4, "s27927", "Spell_Holy_GreaterHeal", "=ds=Enchant Ring - Stats", "=ds=#sr# 375"};
-		{ 5, "s27926", "Spell_Holy_GreaterHeal", "=ds=Enchant Ring - Healing Power", "=ds=#sr# 370"};
-		{ 6, "s27924", "Spell_Holy_GreaterHeal", "=ds=Enchant Ring - Spellpower", "=ds=#sr# 360"};
-		{ 7, "s27920", "Spell_Holy_GreaterHeal", "=ds=Enchant Ring - Striking", "=ds=#sr# 360"};
-		Prev = "EnchantingGloves1";
-		Next = "EnchantingShield1";
+		{ 1, "EnchantingRing1", "INV_Box_01", AL["Wrath of the Lich King"], ""};
+		{ 2, "s44645", "Spell_Holy_GreaterHeal", "=ds=Enchant Ring - Assault", "=ds="..AL["Trainer"]};
+		{ 3, "s44636", "Spell_Holy_GreaterHeal", "=ds=Enchant Ring - Greater Spellpower", "=ds="..AL["Trainer"]};
+		{ 4, "s59636", "Spell_Holy_GreaterHeal", "=ds=Enchant Ring - Stamina", "=ds="..AL["Trainer"]};
+		{ 6, "EnchantingRing1", "INV_Box_01", AL["Burning Crusade"], ""};
+		{ 7, "s27927", "Spell_Holy_GreaterHeal", "=ds=Enchant Ring - Stats", "=ds=#sr# 375"};
+		{ 8, "s27926", "Spell_Holy_GreaterHeal", "=ds=Enchant Ring - Healing Power", "=ds=#sr# 370"};
+		{ 9, "s27924", "Spell_Holy_GreaterHeal", "=ds=Enchant Ring - Spellpower", "=ds=#sr# 360"};
+		{ 10, "s27920", "Spell_Holy_GreaterHeal", "=ds=Enchant Ring - Striking", "=ds=#sr# 360"};
 		Back = "ENCHANTINGMENU";
+		Submenu = "Disable";
 	};
 
-	AtlasLoot_Data["EnchantingShield1"] = {
+	AtlasLoot_Data["EnchantingShieldCLASSIC"] = {
+		{ 1, "s20016", "Spell_Holy_GreaterHeal", "=ds=Enchant Shield - Superior Spirit", "=ds=#sr# 280"};
+		{ 2, "s20017", "Spell_Holy_GreaterHeal", "=ds=Enchant Shield - Greater Stamina", "=ds=#sr# 265"};
+		{ 3, "s13933", "Spell_Holy_GreaterHeal", "=ds=Enchant Shield - Frost Resistance", "=ds=#sr# 235"};
+		{ 4, "s13905", "Spell_Holy_GreaterHeal", "=ds=Enchant Shield - Greater Spirit", "=ds=#sr# 230"};
+		{ 5, "s13817", "Spell_Holy_GreaterHeal", "=ds=Enchant Shield - Stamina", "=ds=#sr# 210"};
+		{ 6, "s13689", "Spell_Holy_GreaterHeal", "=ds=Enchant Shield - Lesser Block", "=ds=#sr# 195"};
+		{ 7, "s13659", "Spell_Holy_GreaterHeal", "=ds=Enchant Shield - Spirit", "=ds=#sr# 180"};
+		{ 8, "s13631", "Spell_Holy_GreaterHeal", "=ds=Enchant Shield - Lesser Stamina", "=ds=#sr# 155"};
+		{ 9, "s13485", "Spell_Holy_GreaterHeal", "=ds=Enchant Shield - Lesser Spirit", "=ds=#sr# 130"};
+		{ 10, "s13464", "Spell_Holy_GreaterHeal", "=ds=Enchant Shield - Lesser Protection", "=ds=#sr# 115"};
+		{ 11, "s13378", "Spell_Holy_GreaterHeal", "=ds=Enchant Shield - Minor Stamina", "=ds=#sr# 105"};
+		Prev = "EnchantingShieldWRATH";
+		Next = "EnchantingShieldTBC";
+		Back = "ENCHANTINGMENU";
+		Submenu = "Expansion";
+	};
+	AtlasLoot_Data["EnchantingShieldTBC"] = {
+		{ 1, "s27947", "Spell_Holy_GreaterHeal", "=ds=Enchant Shield - Resistance", "=ds=#sr# 360"};
+		{ 2, "s27946", "Spell_Holy_GreaterHeal", "=ds=Enchant Shield - Shield Block", "=ds=#sr# 340"};
+		{ 3, "s44383", "Spell_Holy_GreaterHeal", "=ds=Enchant Shield - Resilience", "=ds=#sr# 330"};
+		{ 4, "s27945", "Spell_Holy_GreaterHeal", "=ds=Enchant Shield - Intellect", "=ds=#sr# 325"};
+		{ 5, "s34009", "Spell_Holy_GreaterHeal", "=ds=Enchant Shield - Major Stamina", "=ds=#sr# 325"};
+		{ 6, "s27944", "Spell_Holy_GreaterHeal", "=ds=Enchant Shield - Tough Shield", "=ds=#sr# 310"};
+		Prev = "EnchantingShieldCLASSIC";
+		Next = "EnchantingShieldWRATH";
+		Back = "ENCHANTINGMENU";
+		Submenu = "Expansion";
+	};
+	AtlasLoot_Data["EnchantingShieldWRATH"] = {
 		{ 1, "s44489", "Spell_Holy_GreaterHeal", "=ds=Enchant Shield - Defense", "=ds="..AL["Trainer"]};
 		{ 2, "s60653", "Spell_Holy_GreaterHeal", "=ds=Enchant Shield - Greater Intellect", "=ds="..AL["Trainer"]};
-		{ 3, "s27947", "Spell_Holy_GreaterHeal", "=ds=Enchant Shield - Resistance", "=ds=#sr# 360"};
-		{ 4, "s27946", "Spell_Holy_GreaterHeal", "=ds=Enchant Shield - Shield Block", "=ds=#sr# 340"};
-		{ 5, "s44383", "Spell_Holy_GreaterHeal", "=ds=Enchant Shield - Resilience", "=ds=#sr# 330"};
-		{ 6, "s27945", "Spell_Holy_GreaterHeal", "=ds=Enchant Shield - Intellect", "=ds=#sr# 325"};
-		{ 7, "s34009", "Spell_Holy_GreaterHeal", "=ds=Enchant Shield - Major Stamina", "=ds=#sr# 325"};
-		{ 8, "s27944", "Spell_Holy_GreaterHeal", "=ds=Enchant Shield - Tough Shield", "=ds=#sr# 310"};
-		{ 9, "s20016", "Spell_Holy_GreaterHeal", "=ds=Enchant Shield - Superior Spirit", "=ds=#sr# 280"};
-		{ 10, "s20017", "Spell_Holy_GreaterHeal", "=ds=Enchant Shield - Greater Stamina", "=ds=#sr# 265"};
-		{ 11, "s13933", "Spell_Holy_GreaterHeal", "=ds=Enchant Shield - Frost Resistance", "=ds=#sr# 235"};
-		{ 12, "s13905", "Spell_Holy_GreaterHeal", "=ds=Enchant Shield - Greater Spirit", "=ds=#sr# 230"};
-		{ 13, "s13817", "Spell_Holy_GreaterHeal", "=ds=Enchant Shield - Stamina", "=ds=#sr# 210"};
-		{ 14, "s13689", "Spell_Holy_GreaterHeal", "=ds=Enchant Shield - Lesser Block", "=ds=#sr# 195"};
-		{ 15, "s13659", "Spell_Holy_GreaterHeal", "=ds=Enchant Shield - Spirit", "=ds=#sr# 180"};
-		{ 16, "s13631", "Spell_Holy_GreaterHeal", "=ds=Enchant Shield - Lesser Stamina", "=ds=#sr# 155"};
-		{ 17, "s13485", "Spell_Holy_GreaterHeal", "=ds=Enchant Shield - Lesser Spirit", "=ds=#sr# 130"};
-		{ 18, "s13464", "Spell_Holy_GreaterHeal", "=ds=Enchant Shield - Lesser Protection", "=ds=#sr# 115"};
-		{ 19, "s13378", "Spell_Holy_GreaterHeal", "=ds=Enchant Shield - Minor Stamina", "=ds=#sr# 105"};
-		Prev = "EnchantingRing1";
-		Next = "Enchanting2HWeapon1";
+		Prev = "EnchantingShieldTBC";
+		Next = "EnchantingShieldCLASSIC";
 		Back = "ENCHANTINGMENU";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["Enchanting2HWeapon1"] = {
+	AtlasLoot_Data["EnchantingTwoHWeaponCLASSIC"] = {
+		{ 1, "s20036", "Spell_Holy_GreaterHeal", "=ds=Enchant 2H Weapon - Major Intellect", "=ds=#sr# 300"};
+		{ 2, "s20035", "Spell_Holy_GreaterHeal", "=ds=Enchant 2H Weapon - Major Spirit", "=ds=#sr# 300"};
+		{ 3, "s20030", "Spell_Holy_GreaterHeal", "=ds=Enchant 2H Weapon - Superior Impact", "=ds=#sr# 295"};
+		{ 4, "s27837", "Spell_Holy_GreaterHeal", "=ds=Enchant 2H Weapon - Agility", "=ds=#sr# 290"};
+		{ 5, "s13937", "Spell_Holy_GreaterHeal", "=ds=Enchant 2H Weapon - Greater Impact", "=ds=#sr# 240"};
+		{ 6, "s13695", "Spell_Holy_GreaterHeal", "=ds=Enchant 2H Weapon - Impact", "=ds=#sr# 200"};
+		{ 7, "s13529", "Spell_Holy_GreaterHeal", "=ds=Enchant 2H Weapon - Lesser Impact", "=ds=#sr# 145"};
+		{ 8, "s13380", "Spell_Holy_GreaterHeal", "=ds=Enchant 2H Weapon - Lesser Spirit", "=ds=#sr# 110"};
+		{ 9, "s7793", "Spell_Holy_GreaterHeal", "=ds=Enchant 2H Weapon - Lesser Intellect", "=ds=#sr# 100"};
+		{ 10, "s7745", "Spell_Holy_GreaterHeal", "=ds=Enchant 2H Weapon - Minor Impact", "=ds=#sr# 100"};
+		Prev = "EnchantingTwoHWeaponWRATH";
+		Next = "EnchantingTwoHWeaponTBC";
+		Back = "ENCHANTINGMENU";
+		Submenu = "Expansion";
+	};
+
+	AtlasLoot_Data["EnchantingTwoHWeaponTBC"] = {
+		{ 1, "s27977", "Spell_Holy_GreaterHeal", "=ds=Enchant 2H Weapon - Major Agility", "=ds=#sr# 360"};
+		{ 2, "s27971", "Spell_Holy_GreaterHeal", "=ds=Enchant 2H Weapon - Savagery", "=ds=#sr# 350"};
+		Prev = "EnchantingTwoHWeaponCLASSIC";
+		Next = "EnchantingTwoHWeaponWRATH";
+		Back = "ENCHANTINGMENU";
+		Submenu = "Expansion";
+	};
+
+	AtlasLoot_Data["EnchantingTwoHWeaponWRATH"] = {
 		{ 1, "s60691", "Spell_Holy_GreaterHeal", "=ds=Enchant 2H Weapon - Massacre", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
 		{ 2, "s44595", "Spell_Holy_GreaterHeal", "=ds=Enchant 2H Weapon - Scourgebane", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
 		{ 3, "s44630", "Spell_Holy_GreaterHeal", "=ds=Enchant 2H Weapon - Greater Savagery", "=ds="..AL["Trainer"] };
-		{ 4, "s27977", "Spell_Holy_GreaterHeal", "=ds=Enchant 2H Weapon - Major Agility", "=ds=#sr# 360"};
-		{ 5, "s27971", "Spell_Holy_GreaterHeal", "=ds=Enchant 2H Weapon - Savagery", "=ds=#sr# 350"};
-		{ 6, "s20036", "Spell_Holy_GreaterHeal", "=ds=Enchant 2H Weapon - Major Intellect", "=ds=#sr# 300"};
-		{ 7, "s20035", "Spell_Holy_GreaterHeal", "=ds=Enchant 2H Weapon - Major Spirit", "=ds=#sr# 300"};
-		{ 8, "s20030", "Spell_Holy_GreaterHeal", "=ds=Enchant 2H Weapon - Superior Impact", "=ds=#sr# 295"};
-		{ 9, "s27837", "Spell_Holy_GreaterHeal", "=ds=Enchant 2H Weapon - Agility", "=ds=#sr# 290"};
-		{ 10, "s13937", "Spell_Holy_GreaterHeal", "=ds=Enchant 2H Weapon - Greater Impact", "=ds=#sr# 240"};
-		{ 11, "s13695", "Spell_Holy_GreaterHeal", "=ds=Enchant 2H Weapon - Impact", "=ds=#sr# 200"};
-		{ 12, "s13529", "Spell_Holy_GreaterHeal", "=ds=Enchant 2H Weapon - Lesser Impact", "=ds=#sr# 145"};
-		{ 13, "s13380", "Spell_Holy_GreaterHeal", "=ds=Enchant 2H Weapon - Lesser Spirit", "=ds=#sr# 110"};
-		{ 14, "s7793", "Spell_Holy_GreaterHeal", "=ds=Enchant 2H Weapon - Lesser Intellect", "=ds=#sr# 100"};
-		{ 15, "s7745", "Spell_Holy_GreaterHeal", "=ds=Enchant 2H Weapon - Minor Impact", "=ds=#sr# 100"};
-		Prev = "EnchantingShield1";
-		Next = "EnchantingWeapon1";
+		Prev = "EnchantingTwoHWeaponTBC";
+		Next = "EnchantingTwoHWeaponCLASSIC";
 		Back = "ENCHANTINGMENU";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["EnchantingWeapon1"] = {
-		{ 1, "s64441", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Blade Ward", "=ds=#sr# 450"};
-		{ 2, "s64579", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Blood Draining", "=ds=#sr# 450"};
-		{ 3, "s59619", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Accuracy", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
-		{ 4, "s59621", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Berserking", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
-		{ 5, "s59625", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Black Magic", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
-		{ 6, "s44576", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Lifeward", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
-		{ 7, "s60714", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Mighty Spellpower", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
-		{ 8, "s60707", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Superior Potency", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
-		{ 9, "s44621", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Giant Slayer", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
-		{ 10, "s44524", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Icebreaker", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
-		{ 11, "s44633", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Exceptional Agility", "=ds="..AL["Trainer"] };
-		{ 12, "s44510", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Exceptional Spirit", "=ds="..AL["Trainer"] };
-		{ 13, "s44629", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Exceptional Spellpower", "=ds="..AL["Trainer"] };
-		{ 14, "s60621", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Greater Potency", "=ds="..AL["Trainer"] };
-		{ 15, "s42974", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Executioner", "=ds=#sr# 375"};
-        { 16, "s820034", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Undaunted Might", "=ds=#sr# 375"};
-        { 17, "s359012", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Faith", "=ds=#sr# 375"};
-		{ 18, "s27984", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Mongoose", "=ds=#sr# 375"};
-		{ 19, "s27982", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Soulfrost", "=ds=#sr# 375"};
-		{ 20, "s27981", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Sunfire", "=ds=#sr# 375"};
-		{ 21, "s28004", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Battlemaster", "=ds=#sr# 360"};
-		{ 22, "s28003", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Spellsurge", "=ds=#sr# 360"};
-		{ 23, "s46578", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Deathfrost", "=ds=#sr# 350"};
-		{ 24, "s34010", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Major Healing", "=ds=#sr# 350"};
-		{ 25, "s27975", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Major Spellpower", "=ds=#sr# 350"};
-		{ 26, "s27972", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Potency", "=ds=#sr# 350"};
-		{ 27, "s42620", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Greater Agility", "=ds=#sr# 350"};
-		{ 28, "s27968", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Major Intellect", "=ds=#sr# 340"};
-		{ 29, "s27967", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Major Striking", "=ds=#sr# 340"};
-		Prev = "Enchanting2HWeapon1";
-		Next = "EnchantingWeapon2";
-		Back = "ENCHANTINGMENU";
-	};
-
-	AtlasLoot_Data["EnchantingWeapon2"] = {
+	AtlasLoot_Data["EnchantingWeaponCLASSIC"] = {
         { 1, "s20034", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Crusader", "=ds=#sr# 300"};
 		{ 2, "s22750", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Healing Power", "=ds=#sr# 300"};
 		{ 3, "s20032", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Lifestealing", "=ds=#sr# 300"};
@@ -1681,59 +1812,112 @@ Type = "Crafting";
 		{ 19, "s13503", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Lesser Striking", "=ds=#sr# 140"};
 		{ 20, "s7786", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Minor Beastslayer", "=ds=#sr# 90"};
 		{ 21, "s7788", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Minor Striking", "=ds=#sr# 90"};
-		Prev = "EnchantingWeapon1";
-		Next = "EnchantingStaff1";
+		Prev = "EnchantingWeaponWRATH";
+		Next = "EnchantingWeaponTBC";
 		Back = "ENCHANTINGMENU";
+		Submenu = "Expansion";
+	};
+
+	AtlasLoot_Data["EnchantingWeaponTBC"] = {
+		{ 1, "s42974", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Executioner", "=ds=#sr# 375"};
+        { 2, "s820034", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Undaunted Might", "=ds=#sr# 375"};
+        { 3, "s359012", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Faith", "=ds=#sr# 375"};
+		{ 4, "s27984", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Mongoose", "=ds=#sr# 375"};
+		{ 5, "s27982", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Soulfrost", "=ds=#sr# 375"};
+		{ 6, "s27981", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Sunfire", "=ds=#sr# 375"};
+		{ 7, "s28004", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Battlemaster", "=ds=#sr# 360"};
+		{ 8, "s28003", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Spellsurge", "=ds=#sr# 360"};
+		{ 9, "s46578", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Deathfrost", "=ds=#sr# 350"};
+		{ 10, "s34010", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Major Healing", "=ds=#sr# 350"};
+		{ 11, "s27975", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Major Spellpower", "=ds=#sr# 350"};
+		{ 12, "s27972", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Potency", "=ds=#sr# 350"};
+		{ 13, "s42620", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Greater Agility", "=ds=#sr# 350"};
+		{ 14, "s27968", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Major Intellect", "=ds=#sr# 340"};
+		{ 15, "s27967", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Major Striking", "=ds=#sr# 340"};
+		Prev = "EnchantingWeaponCLASSIC";
+		Next = "EnchantingWeaponWRATH";
+		Back = "ENCHANTINGMENU";
+		Submenu = "Expansion";
+	};
+	
+	AtlasLoot_Data["EnchantingWeaponWRATH"] = {
+		{ 1, "s64441", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Blade Ward", "=ds=#sr# 450"};
+		{ 2, "s64579", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Blood Draining", "=ds=#sr# 450"};
+		{ 3, "s59619", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Accuracy", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
+		{ 4, "s59621", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Berserking", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
+		{ 5, "s59625", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Black Magic", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
+		{ 6, "s44576", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Lifeward", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
+		{ 7, "s60714", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Mighty Spellpower", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
+		{ 8, "s60707", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Superior Potency", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
+		{ 9, "s44621", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Giant Slayer", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
+		{ 10, "s44524", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Icebreaker", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
+		{ 11, "s44633", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Exceptional Agility", "=ds="..AL["Trainer"] };
+		{ 12, "s44510", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Exceptional Spirit", "=ds="..AL["Trainer"] };
+		{ 13, "s44629", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Exceptional Spellpower", "=ds="..AL["Trainer"] };
+		{ 14, "s60621", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Greater Potency", "=ds="..AL["Trainer"] };
+		Prev = "EnchantingWeaponTBC";
+		Next = "EnchantingWeaponCLASSIC";
+		Back = "ENCHANTINGMENU";
+		Submenu = "Expansion";
 	};
 
 	AtlasLoot_Data["EnchantingStaff1"] = {
 		{ 1, "s62948", "Spell_Holy_GreaterHeal", "=ds=Enchant Staff - Greater Spellpower", "=ds="};
 		{ 2, "s62959", "Spell_Holy_GreaterHeal", "=ds=Enchant Staff - Spellpower", "=ds="};
-		Prev = "EnchantingWeapon2";
-		Next = "EnchantingMisc1";
 		Back = "ENCHANTINGMENU";
+		Submenu = "Disable";
+	};
+	
+	
+	AtlasLoot_Data["EnchantingMiscCLASSIC"] = {
+		{ 1, "s25130", "20748", "=q1=Brilliant Mana Oil", "=ds=#sr# 300"};
+		{ 2, "s25129", "20749", "=q1=Brilliant Wizard Oil", "=ds=#sr# 300"};
+		{ 3, "s32664", "22461", "=q1=Runed Fel Iron Rod", "=ds=#sr# 300"};
+		{ 4, "s20051", "16207", "=q1=Runed Arcanite Rod", "=ds=#sr# 290"};
+		{ 5, "s25128", "20750", "=q1=Wizard Oil", "=ds=#sr# 275"};
+		{ 6, "s17180", "12655", "=q1=Enchanted Thorium", "=ds=#sr# 250"};
+		{ 7, "s25127", "20747", "=q1=Lesser Mana Oil", "=ds=#sr# 250"};
+		{ 8, "s17181", "12810", "=q1=Enchanted Leather", "=ds=#sr# 250"};
+		{ 9, "s25126", "20746", "=q1=Lesser Wizard Oil", "=ds=#sr# 200"};
+		{ 10, "s13702", "11145", "=q1=Runed Truesilver Rod", "=ds=#sr# 200"};
+		{ 11, "s25125", "20745", "=q1=Minor Mana Oil", "=ds=#sr# 150"};
+		{ 12, "s13628", "11130", "=q1=Runed Golden Rod", "=ds=#sr# 150"};
+		{ 13, "s7795", "6339", "=q1=Runed Silver Rod", "=ds=#sr# 100"};
+		{ 14, "s25124", "20744", "=q1=Minor Wizard Oil", "=ds=#sr# 45"};
+		{ 15, "s7421", "6218", "=q1=Runed Copper Rod", "=ds=#sr# 1"};
+		{ 16, "s14810", "11290", "=q2=Greater Mystic Wand", "=ds=#sr# 175"};
+		{ 17, "s14809", "11289", "=q2=Lesser Mystic Wand", "=ds=#sr# 155"};
+		{ 18, "s14807", "11288", "=q2=Greater Magic Wand", "=ds=#sr# 70"};
+		{ 19, "s14293", "11287", "=q2=Lesser Magic Wand", "=ds=#sr# 10"};
+		Next = "EnchantingMiscTBC";
+		Prev = "EnchantingMiscWRATH";
+		Back = "ENCHANTINGMENU";
+		Submenu = "Expansion";
+	};
+	AtlasLoot_Data["EnchantingMiscTBC"] = {
+		{ 1, "s32667", "22463", "=q3=Runed Eternium Rod", "=ds=#sr# 375"};
+		{ 2, "s45765", "22449", "=q3=Void Shatter", "=ds=#sr# 360"};
+		{ 3, "s42615", "22448", "=q3=Small Prismatic Shard", "=ds=#sr# 335"};
+		{ 4, "s28022", "22449", "=q3=Large Prismatic Shard", "=ds=#sr# 335"};
+		{ 5, "s28027", "22460", "=q3=Prismatic Sphere", "=ds=#sr# 325"};
+		{ 6, "s42613", "22448", "=q3=Nexus Transformation", "=ds=#sr# 300"};
+		{ 7, "s15596", "11811", "=q3=Smoking Heart of the Mountain", "=ds=#sr# 265"};
+		{ 8, "s32665", "22462", "=q2=Runed Adamantite Rod", "=ds=#sr# 350"};
+		{ 9, "s28019", "22522", "=q1=Superior Wizard Oil", "=ds=#sr# 340"};
+		{ 10, "s28016", "22521", "=q1=Superior Mana Oil", "=ds=#sr# 310"};
+		Next = "EnchantingMiscWRATH";
+		Prev = "EnchantingMiscCLASSIC";
+		Back = "ENCHANTINGMENU";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["EnchantingMisc1"] = {
+	AtlasLoot_Data["EnchantingMiscWRATH"] = {
 		{ 1, "s28028", "22459", "=q4=Void Sphere", "=ds=#sr# 350"};
 		{ 2, "s60619", "44452", "=q3=Runed Titanium Rod", "=ds="..AL["Trainer"]};
-		{ 3, "s32667", "22463", "=q3=Runed Eternium Rod", "=ds=#sr# 375"};
-		{ 4, "s45765", "22449", "=q3=Void Shatter", "=ds=#sr# 360"};
-		{ 5, "s42615", "22448", "=q3=Small Prismatic Shard", "=ds=#sr# 335"};
-		{ 6, "s28022", "22449", "=q3=Large Prismatic Shard", "=ds=#sr# 335"};
-		{ 7, "s28027", "22460", "=q3=Prismatic Sphere", "=ds=#sr# 325"};
-		{ 8, "s42613", "22448", "=q3=Nexus Transformation", "=ds=#sr# 300"};
-		{ 9, "s15596", "11811", "=q3=Smoking Heart of the Mountain", "=ds=#sr# 265"};
-		{ 10, "s32665", "22462", "=q2=Runed Adamantite Rod", "=ds=#sr# 350"};
-		{ 11, "s14810", "11290", "=q2=Greater Mystic Wand", "=ds=#sr# 175"};
-		{ 12, "s14809", "11289", "=q2=Lesser Mystic Wand", "=ds=#sr# 155"};
-		{ 13, "s14807", "11288", "=q2=Greater Magic Wand", "=ds=#sr# 70"};
-		{ 14, "s14293", "11287", "=q2=Lesser Magic Wand", "=ds=#sr# 10"};
-		{ 15, "s28019", "22522", "=q1=Superior Wizard Oil", "=ds=#sr# 340"};
-		{ 16, "s28016", "22521", "=q1=Superior Mana Oil", "=ds=#sr# 310"};
-		{ 17, "s25130", "20748", "=q1=Brilliant Mana Oil", "=ds=#sr# 300"};
-		{ 18, "s25129", "20749", "=q1=Brilliant Wizard Oil", "=ds=#sr# 300"};
-		{ 19, "s32664", "22461", "=q1=Runed Fel Iron Rod", "=ds=#sr# 300"};
-		{ 20, "s20051", "16207", "=q1=Runed Arcanite Rod", "=ds=#sr# 290"};
-		{ 21, "s25128", "20750", "=q1=Wizard Oil", "=ds=#sr# 275"};
-		{ 22, "s17180", "12655", "=q1=Enchanted Thorium", "=ds=#sr# 250"};
-		{ 23, "s25127", "20747", "=q1=Lesser Mana Oil", "=ds=#sr# 250"};
-		{ 24, "s17181", "12810", "=q1=Enchanted Leather", "=ds=#sr# 250"};
-		{ 25, "s25126", "20746", "=q1=Lesser Wizard Oil", "=ds=#sr# 200"};
-		{ 26, "s13702", "11145", "=q1=Runed Truesilver Rod", "=ds=#sr# 200"};
-		{ 27, "s25125", "20745", "=q1=Minor Mana Oil", "=ds=#sr# 150"};
-		{ 28, "s13628", "11130", "=q1=Runed Golden Rod", "=ds=#sr# 150"};
-		{ 29, "s7795", "6339", "=q1=Runed Silver Rod", "=ds=#sr# 100"};
-		{ 30, "s25124", "20744", "=q1=Minor Wizard Oil", "=ds=#sr# 45"};
-		Prev = "EnchantingWeapon2";
-		Next = "EnchantingMisc2";
+		Next = "EnchantingMiscCLASSIC";
+		Prev = "EnchantingMiscTBC";
 		Back = "ENCHANTINGMENU";
-	};
-
-	AtlasLoot_Data["EnchantingMisc2"] = {
-		{ 1, "s7421", "6218", "=q1=Runed Copper Rod", "=ds=#sr# 1"};
-		Prev = "EnchantingMisc1";
-		Back = "ENCHANTINGMENU";
+		Submenu = "Expansion";
 	};
 
 		-------------------
@@ -2374,7 +2558,7 @@ Type = "Crafting";
 		{ 27, "s56959", "40916", "=q1=Glyph of Starfire", "=ds="..AL["Trainer"] };
 		{ 28, "s65245", "46372", "=q1=Glyph of Survival Instincts", "=ds="..AL["Book of Glyph Mastery"]};
 		{ 29, "s56960", "40906", "=q1=Glyph of Swiftmend", "=ds="..GetSpellInfo(61177) };
-		{ 30, "s56963", "40922", "=q1=Glyph of Wrath", "=ds="..AL["Trainer"] };
+		{ 30, "s56963", "40922", "=q1=Glyph of WRATH", "=ds="..AL["Trainer"] };
 		Back = "INSCRIPTIONMENU";
 	};
 
@@ -2396,7 +2580,7 @@ Type = "Crafting";
 		{ 3, "s56996", "42899", "=q1=Glyph of Aspect of the Beast", "=ds="..GetSpellInfo(61177) };
 		{ 4, "s56997", "42900", "=q1=Glyph of Aspect of the Monkey", "=ds="..AL["Trainer"] };
 		{ 5, "s56998", "42901", "=q1=Glyph of Aspect of the Viper", "=ds="..GetSpellInfo(61177) };
-		{ 6, "s56999", "42902", "=q1=Glyph of Beastial Wrath", "=ds="..GetSpellInfo(61177)  };
+		{ 6, "s56999", "42902", "=q1=Glyph of Beastial WRATH", "=ds="..GetSpellInfo(61177)  };
 		{ 7, "s64271", "45625", "=q1=Glyph of Chimera Shot", "=ds="..AL["Book of Glyph Mastery"]};
 		{ 8, "s57000", "42903", "=q1=Glyph of Deterrence", "=ds="..AL["Trainer"] };
 		{ 9, "s57001", "42904", "=q1=Glyph of Disengage", "=ds="..AL["Trainer"] };
@@ -2477,7 +2661,7 @@ Type = "Crafting";
 
 	AtlasLoot_Data["Inscription_PaladinMajor1"] = {
 		{ 1, "s57019", "41101", "=q1=Glyph of Avenger's Shield", "=ds="..GetSpellInfo(61177) };
-		{ 2, "s57021", "41107", "=q1=Glyph of Avenging Wrath", "=ds="..GetSpellInfo(61177) };
+		{ 2, "s57021", "41107", "=q1=Glyph of Avenging WRATH", "=ds="..GetSpellInfo(61177) };
 		{ 3, "s64277", "45741", "=q1=Glyph of Beacon of Light", "=ds="..AL["Book of Glyph Mastery"]};
 		{ 4, "s57020", "41104", "=q1=Glyph of Cleansing", "=ds="..AL["Trainer"] };
 		{ 5, "s57023", "41099", "=q1=Glyph of Consecration", "=ds="..AL["Trainer"] };
@@ -2489,7 +2673,7 @@ Type = "Crafting";
 		{ 11, "s57026", "41105", "=q1=Glyph of Flash of Light", "=ds="..AL["Trainer"] };
 		{ 12, "s57027", "41095", "=q1=Glyph of Hammer of Justice", "=ds="..AL["Trainer"] };
 		{ 13, "s64278", "45742", "=q1=Glyph of Hammer of the Righteous", "=ds="..AL["Book of Glyph Mastery"]};
-		{ 14, "s57028", "41097", "=q1=Glyph of Hammer of Wrath", "=ds="..GetSpellInfo(61177) };
+		{ 14, "s57028", "41097", "=q1=Glyph of Hammer of WRATH", "=ds="..GetSpellInfo(61177) };
 		{ 15, "s57029", "41106", "=q1=Glyph of Holy Light", "=ds="..AL["Trainer"] };
 		{ 16, "s64254", "45746", "=q1=Glyph of Holy Shock", "=ds="..AL["Book of Glyph Mastery"]};
 		{ 17, "s57030", "41092", "=q1=Glyph of Judgement", "=ds="..AL["Trainer"] };
@@ -2626,7 +2810,7 @@ Type = "Crafting";
 		{ 23, "s64247", "45778", "=q1=Glyph of Stoneclaw Totem", "=ds="..AL["Book of Glyph Mastery"]};
 		{ 24, "s57248", "41539", "=q1=Glyph of Stormstrike", "=ds="..AL["Trainer"] };
 		{ 25, "s64287", "45770", "=q1=Glyph of Thunder", "=ds="..AL["Book of Glyph Mastery"]};
-		{ 26, "s64262", "45776", "=q1=Glyph of Totem of Wrath", "=ds="..AL["Book of Glyph Mastery"]};
+		{ 26, "s64262", "45776", "=q1=Glyph of Totem of WRATH", "=ds="..AL["Book of Glyph Mastery"]};
 		{ 27, "s57251", "41541", "=q1=Glyph of Water Mastery", "=ds="..AL["Trainer"] };
 		{ 28, "s57252", "41542", "=q1=Glyph of Windfury Weapon", "=ds="..AL["Trainer"] };
 		Back = "INSCRIPTIONMENU";
@@ -2732,7 +2916,42 @@ Type = "Crafting";
 		--- Jewelcrafting ---
 		---------------------
 
-	AtlasLoot_Data["JewelRed1"] ={
+	AtlasLoot_Data["JewelRedCLASSIC"] = { 
+		Prev = "JewelRedWRATH";
+		Next = "JewelRedTBC";
+		Submenu = "Expansion";
+		};
+
+	AtlasLoot_Data["JewelRedTBC"] ={
+		{ 1, "s39705", "32193", "=q4=Bold Crimson Spinel", "=ds=#sr# 375"};
+		{ 2, "s39712", "32197", "=q4=Bright Crimson Spinel", "=ds=#sr# 375"};
+		{ 3, "s39706", "32194", "=q4=Delicate Crimson Spinel", "=ds=#sr# 375"};
+		{ 4, "s39714", "32199", "=q4=Flashing Crimson Spinel", "=ds=#sr# 375"};
+		{ 5, "s39711", "32196", "=q4=Runed Crimson Spinel", "=ds=#sr# 375"};
+		{ 6, "s39713", "32198", "=q4=Subtle Crimson Spinel", "=ds=#sr# 375"};
+		{ 7, "s39710", "32195", "=q4=Teardrop Crimson Spinel", "=ds=#sr# 375"};
+		{ 8, "s42589", "33131", "=q4=Crimson Sun", "=ds=#sr# 360"};
+		{ 9, "s42558", "33133", "=q4=Don Julio's Heart", "=ds=#sr# 360"};
+		{ 10, "s42588", "33134", "=q4=Kailee's Rose", "=ds=#sr# 360"};
+		{ 16, "s31084", "24027", "=q3=Bold Living Ruby", "=ds=#sr# 350"};
+		{ 17, "s31089", "24031", "=q3=Bright Living Ruby", "=ds=#sr# 350"};
+		{ 18, "s31085", "24028", "=q3=Delicate Living Ruby", "=ds=#sr# 350"};
+		{ 19, "s31091", "24036", "=q3=Flashing Living Ruby", "=ds=#sr# 350"};
+		{ 20, "s31088", "24030", "=q3=Runed Living Ruby", "=ds=#sr# 350"};
+		{ 21, "s31090", "24032", "=q3=Subtle Living Ruby", "=ds=#sr# 350"};
+		{ 22, "s31087", "24029", "=q3=Teardrop Living Ruby", "=ds=#sr# 350"};
+		{ 23, "s28907", "23097", "=q2=Delicate Blood Garnet", "=ds=#sr# 325"};
+		{ 24, "s28906", "23096", "=q2=Runed Blood Garnet", "=ds=#sr# 315"};
+		{ 25, "s28905", "23095", "=q2=Bold Blood Garnet", "=ds=#sr# 305"};
+		{ 26, "s34590", "28595", "=q2=Bright Blood Garnet", "=ds=#sr# 305"};
+		{ 27, "s28903", "23094", "=q2=Teardrop Blood Garnet", "=ds=#sr# 300"};
+		Prev = "JewelRedWRATH";
+		Next = "JewelRedWRATH";
+		Back = "JEWELCRAFTINGMENU";
+		Submenu = "Expansion";
+	};
+
+	AtlasLoot_Data["JewelRedWRATH"] ={
 		{ 1, "s66447", "40111", "=q4=Bold Cardinal Ruby", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
 		{ 2, "s66449", "40114", "=q4=Bright Cardinal Ruby", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
 		{ 3, "s66448", "40112", "=q4=Delicate Cardinal Ruby", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
@@ -2741,135 +2960,165 @@ Type = "Crafting";
 		{ 6, "s66450", "40118", "=q4=Precise Cardinal Ruby", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
 		{ 7, "s66446", "40113", "=q4=Runed Cardinal Ruby", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
 		{ 8, "s66452", "40115", "=q4=Subtle Cardinal Ruby", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
-		{ 9, "s39705", "32193", "=q4=Bold Crimson Spinel", "=ds=#sr# 375"};
-		{ 10, "s39712", "32197", "=q4=Bright Crimson Spinel", "=ds=#sr# 375"};
-		{ 11, "s39706", "32194", "=q4=Delicate Crimson Spinel", "=ds=#sr# 375"};
-		{ 12, "s39714", "32199", "=q4=Flashing Crimson Spinel", "=ds=#sr# 375"};
-		{ 13, "s39711", "32196", "=q4=Runed Crimson Spinel", "=ds=#sr# 375"};
-		{ 14, "s39713", "32198", "=q4=Subtle Crimson Spinel", "=ds=#sr# 375"};
-		{ 15, "s39710", "32195", "=q4=Teardrop Crimson Spinel", "=ds=#sr# 375"};
-		{ 16, "s42589", "33131", "=q4=Crimson Sun", "=ds=#sr# 360"};
-		{ 17, "s42558", "33133", "=q4=Don Julio's Heart", "=ds=#sr# 360"};
-		{ 18, "s42588", "33134", "=q4=Kailee's Rose", "=ds=#sr# 360"};
-		{ 19, "s53830", "39996", "=q3=Bold Scarlet Ruby", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
-		{ 20, "s53947", "39999", "=q3=Bright Scarlet Ruby", "=ds="..AL["Trainer"] };
-		{ 21, "s53945", "39997", "=q3=Delicate Scarlet Ruby", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
-		{ 22, "s53949", "40001", "=q3=Flashing Scarlet Ruby", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
-		{ 23, "s53950", "40002", "=q3=Fractured Scarlet Ruby","=ds="..AL["Drop"].." - "..BabbleZone["The Storm Peaks"] };
-		{ 24, "s53951", "40003", "=q3=Precise Scarlet Ruby", "=ds="..BabbleBoss["Herald Volazj"].." ("..AL["Heroic"]..")" };
-		{ 25, "s53946", "39998", "=q3=Runed Scarlet Ruby", "=ds="..BabbleFaction["Kirin Tor"]..": "..BabbleFaction["Exalted"] };
-		{ 26, "s31084", "24027", "=q3=Bold Living Ruby", "=ds=#sr# 350"};
-		{ 27, "s31089", "24031", "=q3=Bright Living Ruby", "=ds=#sr# 350"};
-		{ 28, "s31085", "24028", "=q3=Delicate Living Ruby", "=ds=#sr# 350"};
-		{ 29, "s31091", "24036", "=q3=Flashing Living Ruby", "=ds=#sr# 350"};
-		{ 30, "s31088", "24030", "=q3=Runed Living Ruby", "=ds=#sr# 350"};
-		Next = "JewelRed2";
+		{ 9, "s53830", "39996", "=q3=Bold Scarlet Ruby", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
+		{ 10, "s53947", "39999", "=q3=Bright Scarlet Ruby", "=ds="..AL["Trainer"] };
+		{ 11, "s53945", "39997", "=q3=Delicate Scarlet Ruby", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
+		{ 12, "s53949", "40001", "=q3=Flashing Scarlet Ruby", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
+		{ 13, "s53950", "40002", "=q3=Fractured Scarlet Ruby","=ds="..AL["Drop"].." - "..BabbleZone["The Storm Peaks"] };
+		{ 14, "s53951", "40003", "=q3=Precise Scarlet Ruby", "=ds="..BabbleBoss["Herald Volazj"].." ("..AL["Heroic"]..")" };
+		{ 15, "s53946", "39998", "=q3=Runed Scarlet Ruby", "=ds="..BabbleFaction["Kirin Tor"]..": "..BabbleFaction["Exalted"] };
+		{ 16, "s53843", "39907", "=q2=Subtle Bloodstone", "=ds="..AL["Trainer"] };
+		{ 17, "s53831", "39900", "=q2=Bold Bloodstone", "=ds="..AL["Trainer"] };
+		{ 18, "s53835", "39906", "=q2=Bright Bloodstone", "=ds="..AL["Trainer"] };
+		{ 19, "s53832", "39905", "=q2=Delicate Bloodstone", "=ds="..AL["Trainer"] };
+		{ 20, "s53844", "39908", "=q2=Flashing Bloodstone", "=ds="..AL["Trainer"] };
+		{ 21, "s53845", "39909", "=q2=Fractured Bloodstone", "=ds="..AL["Trainer"] };
+		{ 22, "s54017", "39910", "=q2=Precise Bloodstone", "=ds="..AL["Trainer"] };
+		{ 23, "s53834", "39911", "=q2=Runed Bloodstone", "=ds="..AL["Trainer"] };
+		Prev = "JewelRedTBC";
+		Next = "JewelRedTBC";
 		Back = "JEWELCRAFTINGMENU";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["JewelRed2"] ={
-		{ 1, "s31090", "24032", "=q3=Subtle Living Ruby", "=ds=#sr# 350"};
-		{ 2, "s31087", "24029", "=q3=Teardrop Living Ruby", "=ds=#sr# 350"};
-		{ 3, "s53843", "39907", "=q2=Subtle Bloodstone", "=ds="..AL["Trainer"] };
-		{ 4, "s53831", "39900", "=q2=Bold Bloodstone", "=ds="..AL["Trainer"] };
-		{ 5, "s53835", "39906", "=q2=Bright Bloodstone", "=ds="..AL["Trainer"] };
-		{ 6, "s53832", "39905", "=q2=Delicate Bloodstone", "=ds="..AL["Trainer"] };
-		{ 7, "s53844", "39908", "=q2=Flashing Bloodstone", "=ds="..AL["Trainer"] };
-		{ 8, "s53845", "39909", "=q2=Fractured Bloodstone", "=ds="..AL["Trainer"] };
-		{ 9, "s54017", "39910", "=q2=Precise Bloodstone", "=ds="..AL["Trainer"] };
-		{ 10, "s53834", "39911", "=q2=Runed Bloodstone", "=ds="..AL["Trainer"] };
-		{ 11, "s28907", "23097", "=q2=Delicate Blood Garnet", "=ds=#sr# 325"};
-		{ 12, "s28906", "23096", "=q2=Runed Blood Garnet", "=ds=#sr# 315"};
-		{ 13, "s28905", "23095", "=q2=Bold Blood Garnet", "=ds=#sr# 305"};
-		{ 14, "s34590", "28595", "=q2=Bright Blood Garnet", "=ds=#sr# 305"};
-		{ 15, "s28903", "23094", "=q2=Teardrop Blood Garnet", "=ds=#sr# 300"};
-		Prev = "JewelRed1";
-		Back = "JEWELCRAFTINGMENU";
+	AtlasLoot_Data["JewelBlueCLASSIC"] = { 
+		Prev = "JewelBlueWRATH";
+		Next = "JewelBlueTBC";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["JewelBlue1"] = {
+	AtlasLoot_Data["JewelBlueTBC"] = {
+		{ 1, "s39717", "32202", "=q4=Lustrous Empyrean Sapphire", "=ds=#sr# 375"};
+		{ 2, "s39715", "32200", "=q4=Solid Empyrean Sapphire", "=ds=#sr# 375"};
+		{ 3, "s39716", "32201", "=q4=Sparkling Empyrean Sapphire", "=ds=#sr# 375"};
+		{ 4, "s39718", "32203", "=q4=Stormy Empyrean Sapphire", "=ds=#sr# 375"};
+		{ 5, "s42590", "33135", "=q4=Falling Star", "=ds=#sr# 360"};
+		{ 6, "s31094", "24037", "=q3=Lustrous Star of Elune", "=ds=#sr# 350"};
+		{ 7, "s31092", "24033", "=q3=Solid Star of Elune", "=ds=#sr# 350"};
+		{ 8, "s31149", "24035", "=q3=Sparkling Star of Elune", "=ds=#sr# 350"};
+		{ 9, "s31095", "24039", "=q3=Stormy Star of Elune", "=ds=#sr# 350"};
+		{ 10, "s28957", "23121", "=q2=Lustrous Azure Moonstone", "=ds=#sr# 325"};
+		{ 11, "s28955", "23120", "=q2=Stormy Azure Moonstone", "=ds=#sr# 315"};
+		{ 12, "s28953", "23119", "=q2=Sparkling Azure Moonstone", "=ds=#sr# 305"};
+		{ 13, "s28950", "23118", "=q2=Solid Azure Moonstone", "=ds=#sr# 300"};
+		Prev = "JewelBlueWRATH";
+		Next = "JewelBlueWRATH";
+		Back = "JEWELCRAFTINGMENU";
+		Submenu = "Expansion";
+	};
+
+	AtlasLoot_Data["JewelBlueWRATH"] = {
 		{ 1, "s66500", "40121", "=q4=Lustrous Majestic Zircon", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
 		{ 2, "s66497", "40119", "=q4=Solid Majestic Zircon", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
 		{ 3, "s66498", "40120", "=q4=Sparkling Majestic Zircon", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
 		{ 4, "s66499", "40122", "=q4=Stormy Majestic Zircon", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
-		{ 5, "s39717", "32202", "=q4=Lustrous Empyrean Sapphire", "=ds=#sr# 375"};
-		{ 6, "s39715", "32200", "=q4=Solid Empyrean Sapphire", "=ds=#sr# 375"};
-		{ 7, "s39716", "32201", "=q4=Sparkling Empyrean Sapphire", "=ds=#sr# 375"};
-		{ 8, "s39718", "32203", "=q4=Stormy Empyrean Sapphire", "=ds=#sr# 375"};
-		{ 9, "s42590", "33135", "=q4=Falling Star", "=ds=#sr# 360"};
-		{ 10, "s53954", "40010", "=q3=Lustrous Sky Sapphire", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
-		{ 11, "s53952", "40008", "=q3=Solid Sky Sapphire", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
-		{ 12, "s53953", "40009", "=q3=Sparkling Sky Sapphire", "=ds="..AL["Trainer"] };
-		{ 13, "s53955", "40011", "=q3=Stormy Sky Sapphire", "=ds="..BabbleZone["Wintergrasp"].." 12 #wintergrasp#" };
-		{ 14, "s31094", "24037", "=q3=Lustrous Star of Elune", "=ds=#sr# 350"};
-		{ 15, "s31092", "24033", "=q3=Solid Star of Elune", "=ds=#sr# 350"};
-		{ 16, "s31149", "24035", "=q3=Sparkling Star of Elune", "=ds=#sr# 350"};
-		{ 17, "s31095", "24039", "=q3=Stormy Star of Elune", "=ds=#sr# 350"};
-		{ 18, "s53941", "39927", "=q2=Lustrous Chalcedony", "=ds="..AL["Trainer"] };
-		{ 19, "s53934", "39919", "=q2=Solid Chalcedony", "=ds="..AL["Trainer"] };
-		{ 20, "s53940", "39920", "=q2=Sparkling Chalcedony", "=ds="..AL["Trainer"] };
-		{ 21, "s53943", "39932", "=q2=Stormy Chalcedony", "=ds=1250 #faction#" };
-		{ 22, "s28957", "23121", "=q2=Lustrous Azure Moonstone", "=ds=#sr# 325"};
-		{ 23, "s28955", "23120", "=q2=Stormy Azure Moonstone", "=ds=#sr# 315"};
-		{ 24, "s28953", "23119", "=q2=Sparkling Azure Moonstone", "=ds=#sr# 305"};
-		{ 25, "s28950", "23118", "=q2=Solid Azure Moonstone", "=ds=#sr# 300"};
+		{ 5, "s53954", "40010", "=q3=Lustrous Sky Sapphire", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
+		{ 6, "s53952", "40008", "=q3=Solid Sky Sapphire", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
+		{ 7, "s53953", "40009", "=q3=Sparkling Sky Sapphire", "=ds="..AL["Trainer"] };
+		{ 8, "s53955", "40011", "=q3=Stormy Sky Sapphire", "=ds="..BabbleZone["Wintergrasp"].." 12 #wintergrasp#" };
+		{ 9, "s53941", "39927", "=q2=Lustrous Chalcedony", "=ds="..AL["Trainer"] };
+		{ 10, "s53934", "39919", "=q2=Solid Chalcedony", "=ds="..AL["Trainer"] };
+		{ 11, "s53940", "39920", "=q2=Sparkling Chalcedony", "=ds="..AL["Trainer"] };
+		{ 12, "s53943", "39932", "=q2=Stormy Chalcedony", "=ds=1250 #faction#" };
+		Prev = "JewelBlueTBC";
+		Next = "JewelBlueTBC";
 		Back = "JEWELCRAFTINGMENU";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["JewelYellow1"] = {
+	AtlasLoot_Data["JewelYellowCLASSIC"] = { 
+		Prev = "JewelYellowWRATH";
+		Next = "JewelYellowTBC";
+		Submenu = "Expansion";
+	};
+
+	AtlasLoot_Data["JewelYellowTBC"] = {
+		{ 1, "s39719", "32204", "=q4=Brilliant Lionseye", "=ds=#sr# 375"};
+		{ 2, "s39722", "32207", "=q4=Gleaming Lionseye", "=ds=#sr# 375"};
+		{ 3, "s39725", "32210", "=q4=Great Lionseye", "=ds=#sr# 375"};
+		{ 4, "s39724", "32209", "=q4=Mystic Lionseye", "=ds=#sr# 375"};
+		{ 5, "s47056", "35761", "=q4=Quick Lionseye", "=ds=#sr# 375"};
+		{ 6, "s39721", "32206", "=q4=Rigid Lionseye", "=ds=#sr# 375"};
+		{ 7, "s39720", "32205", "=q4=Smooth Lionseye", "=ds=#sr# 375"};
+		{ 8, "s39723", "32208", "=q4=Thick Lionseye", "=ds=#sr# 375"};
+		{ 9, "s42592", "33140", "=q4=Blood of Amber", "=ds=#sr# 360"};
+		{ 10, "s42593", "33144", "=q4=Facet of Eternity", "=ds=#sr# 360"};
+		{ 11, "s42591", "33143", "=q4=Stone of Blades", "=ds=#sr# 360"};
+		{ 16, "s31096", "24047", "=q3=Brilliant Dawnstone", "=ds=#sr# 350"};
+		{ 17, "s31099", "24050", "=q3=Gleaming Dawnstone", "=ds=#sr# 350"};
+		{ 18, "s39452", "31861", "=q3=Great Dawnstone", "=ds=#sr# 350"};
+		{ 19, "s31101", "24053", "=q3=Mystic Dawnstone", "=ds=#sr# 350"};
+		{ 20, "s46403", "35315", "=q3=Quick Dawnstone", "=ds=#sr# "..AL["Vendor"]};
+		{ 21, "s31098", "24051", "=q3=Rigid Dawnstone", "=ds=#sr# 350"};
+		{ 22, "s31097", "24048", "=q3=Smooth Dawnstone", "=ds=#sr# 350"};
+		{ 23, "s31100", "24052", "=q3=Thick Dawnstone", "=ds=#sr# 350"};
+		{ 24, "s39451", "31860", "=q2=Great Golden Draenite", "=ds=#sr# 325"};
+		{ 25, "s28948", "23116", "=q2=Rigid Golden Draenite", "=ds=#sr# 325"};
+		{ 26, "s34069", "28290", "=q2=Smooth Golden Draenite", "=ds=#sr# 325"};
+		{ 27, "s28947", "23115", "=q2=Thick Golden Draenite", "=ds=#sr# 315"};
+		{ 28, "s28944", "23114", "=q2=Gleaming Golden Draenite", "=ds=#sr# 305"};
+		{ 29, "s28938", "23113", "=q2=Brilliant Golden Draenite", "=ds=#sr# 300"};
+		Prev = "JewelYellowWRATH";
+		Next = "JewelYellowWRATH";
+		Back = "JEWELCRAFTINGMENU";
+		Submenu = "Expansion";
+	};
+
+	AtlasLoot_Data["JewelYellowWRATH"] = {
 		{ 1, "s66503", "40123", "=q4=Brilliant King's Amber", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
 		{ 2, "s66505", "40127", "=q4=Mystic King's Amber", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
 		{ 3, "s66506", "40128", "=q4=Quick King's Amber", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
 		{ 4, "s66501", "40125", "=q4=Rigid King's Amber", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
 		{ 5, "s66502", "40124", "=q4=Smooth King's Amber", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
 		{ 6, "s66504", "40126", "=q4=Thick King's Amber", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
-		{ 7, "s39719", "32204", "=q4=Brilliant Lionseye", "=ds=#sr# 375"};
-		{ 8, "s39722", "32207", "=q4=Gleaming Lionseye", "=ds=#sr# 375"};
-		{ 9, "s39725", "32210", "=q4=Great Lionseye", "=ds=#sr# 375"};
-		{ 10, "s39724", "32209", "=q4=Mystic Lionseye", "=ds=#sr# 375"};
-		{ 11, "s47056", "35761", "=q4=Quick Lionseye", "=ds=#sr# 375"};
-		{ 12, "s39721", "32206", "=q4=Rigid Lionseye", "=ds=#sr# 375"};
-		{ 13, "s39720", "32205", "=q4=Smooth Lionseye", "=ds=#sr# 375"};
-		{ 14, "s39723", "32208", "=q4=Thick Lionseye", "=ds=#sr# 375"};
-		{ 15, "s42592", "33140", "=q4=Blood of Amber", "=ds=#sr# 360"};
-		{ 16, "s42593", "33144", "=q4=Facet of Eternity", "=ds=#sr# 360"};
-		{ 17, "s42591", "33143", "=q4=Stone of Blades", "=ds=#sr# 360"};
-		{ 18, "s53956", "40012", "=q3=Brilliant Autumn's Glow", "=ds="..AL["Trainer"] };
-		{ 19, "s53960", "40016", "=q3=Mystic Autumn's Glow", "=ds="..BabbleZone["Wintergrasp"].." 12 #wintergrasp#" };
-		{ 20, "s53961", "40017", "=q3=Quick Autumn's Glow", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
-		{ 21, "s53958", "40014", "=q3=Rigid Autumn's Glow", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
-		{ 22, "s53957", "40013", "=q3=Smooth Autumn's Glow", "=ds="..BabbleFaction["The Sons of Hodir"]..": "..BabbleFaction["Exalted"] };
-		{ 23, "s53959", "40015", "=q3=Thick Autumn's Glow", "=ds="..BabbleBoss["Cyanigosa"].." ("..AL["Heroic"]..")" };
-		{ 24, "s31096", "24047", "=q3=Brilliant Dawnstone", "=ds=#sr# 350"};
-		{ 25, "s31099", "24050", "=q3=Gleaming Dawnstone", "=ds=#sr# 350"};
-		{ 26, "s39452", "31861", "=q3=Great Dawnstone", "=ds=#sr# 350"};
-		{ 27, "s31101", "24053", "=q3=Mystic Dawnstone", "=ds=#sr# 350"};
-		{ 28, "s46403", "35315", "=q3=Quick Dawnstone", "=ds=#sr# "..AL["Vendor"]};
-		{ 29, "s31098", "24051", "=q3=Rigid Dawnstone", "=ds=#sr# 350"};
-		{ 30, "s31097", "24048", "=q3=Smooth Dawnstone", "=ds=#sr# 350"};
-		Next = "JewelYellow2";
+		{ 7, "s53956", "40012", "=q3=Brilliant Autumn's Glow", "=ds="..AL["Trainer"] };
+		{ 8, "s53960", "40016", "=q3=Mystic Autumn's Glow", "=ds="..BabbleZone["Wintergrasp"].." 12 #wintergrasp#" };
+		{ 9, "s53961", "40017", "=q3=Quick Autumn's Glow", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
+		{ 10, "s53958", "40014", "=q3=Rigid Autumn's Glow", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
+		{ 11, "s53957", "40013", "=q3=Smooth Autumn's Glow", "=ds="..BabbleFaction["The Sons of Hodir"]..": "..BabbleFaction["Exalted"] };
+		{ 12, "s53959", "40015", "=q3=Thick Autumn's Glow", "=ds="..BabbleBoss["Cyanigosa"].." ("..AL["Heroic"]..")" };
+		{ 16, "s53852", "39912", "=q2=Brilliant Sun Crystal", "=ds="..AL["Trainer"] };
+		{ 17, "s53857", "39917", "=q2=Mystic Sun Crystal", "=ds=1250 #faction#" };
+		{ 18, "s53856", "39918", "=q2=Quick Sun Crystal", "=ds="..AL["Trainer"] };
+		{ 19, "s53854", "39915", "=q2=Rigid Sun Crystal", "=ds="..AL["Trainer"] };
+		{ 20, "s53853", "39914", "=q2=Smooth Sun Crystal", "=ds="..AL["Trainer"] };
+		{ 21, "s53855", "39916", "=q2=Thick Sun Crystal", "=ds="..AL["Trainer"] };
+		Prev = "JewelYellowTBC";
+		Next = "JewelYellowTBC";
 		Back = "JEWELCRAFTINGMENU";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["JewelYellow2"] = {
-		{ 1, "s31100", "24052", "=q3=Thick Dawnstone", "=ds=#sr# 350"};
-		{ 2, "s53852", "39912", "=q2=Brilliant Sun Crystal", "=ds="..AL["Trainer"] };
-		{ 3, "s53857", "39917", "=q2=Mystic Sun Crystal", "=ds=1250 #faction#" };
-		{ 4, "s53856", "39918", "=q2=Quick Sun Crystal", "=ds="..AL["Trainer"] };
-		{ 5, "s53854", "39915", "=q2=Rigid Sun Crystal", "=ds="..AL["Trainer"] };
-		{ 6, "s53853", "39914", "=q2=Smooth Sun Crystal", "=ds="..AL["Trainer"] };
-		{ 7, "s53855", "39916", "=q2=Thick Sun Crystal", "=ds="..AL["Trainer"] };
-		{ 8, "s39451", "31860", "=q2=Great Golden Draenite", "=ds=#sr# 325"};
-		{ 9, "s28948", "23116", "=q2=Rigid Golden Draenite", "=ds=#sr# 325"};
-		{ 10, "s34069", "28290", "=q2=Smooth Golden Draenite", "=ds=#sr# 325"};
-		{ 11, "s28947", "23115", "=q2=Thick Golden Draenite", "=ds=#sr# 315"};
-		{ 12, "s28944", "23114", "=q2=Gleaming Golden Draenite", "=ds=#sr# 305"};
-		{ 13, "s28938", "23113", "=q2=Brilliant Golden Draenite", "=ds=#sr# 300"};
-		Prev = "JewelYellow1";
-		Back = "JEWELCRAFTINGMENU";
+	AtlasLoot_Data["JewelGreenCLASSIC"] = { 
+		Prev = "JewelGreenWRATH";
+		Next = "JewelGreenTBC";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["JewelGreen1"] = {
+	AtlasLoot_Data["JewelGreenTBC"] = {
+		{ 1, "s39741", "32225", "=q4=Dazzling Seaspray Emerald", "=ds=#sr# 375"};
+		{ 2, "s39739", "32223", "=q4=Enduring Seaspray Emerald", "=ds=#sr# 375"};
+		{ 3, "s47053", "35759", "=q4=Forceful Seaspray Emerald", "=ds=#sr# 375"};
+		{ 4, "s39742", "32226", "=q4=Jagged Seaspray Emerald", "=ds=#sr# 375"};
+		{ 5, "s39740", "32224", "=q4=Radiant Seaspray Emerald", "=ds=#sr# 375"};
+		{ 6, "s47054", "35758", "=q4=Steady Seaspray Emerald", "=ds=#sr# 375"};
+		{ 7, "s31112", "24065", "=q3=Dazzling Talasite", "=ds=#sr# 350"};
+		{ 8, "s31110", "24062", "=q3=Enduring Talasite", "=ds=#sr# 350"};
+		{ 9, "s46405", "35318", "=q3=Forceful Talasite", "=ds=#sr# "..AL["Vendor"]};
+		{ 10, "s31113", "24067", "=q3=Jagged Talasite", "=ds=#sr# 350"};
+		{ 11, "s31111", "24066", "=q3=Radiant Talasite", "=ds=#sr# 350"};
+		{ 12, "s43493", "33782", "=q3=Steady Talasite", "=ds=#sr# 350"};
+		{ 16, "s28924", "23106", "=q2=Dazzling Deep Peridot", "=ds=#sr# 325"};
+		{ 17, "s28918", "23105", "=q2=Enduring Deep Peridot", "=ds=#sr# 315"};
+		{ 18, "s28917", "23104", "=q2=Jagged Deep Peridot", "=ds=#sr# 305"};
+		{ 19, "s28916", "23103", "=q2=Radiant Deep Peridot", "=ds=#sr# 300"};
+		Prev = "JewelGreen2WRATH";
+		Next = "JewelGreenWRATH";
+		Back = "JEWELCRAFTINGMENU";
+		Submenu = "Expansion";
+	};
+
+	AtlasLoot_Data["JewelGreenWRATH"] = {
 		{ 1, "s66430", "40175", "=q4=Dazzling Eye of Zul", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
 		{ 2, "s66338", "40167", "=q4=Enduring Eye of Zul", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
 		{ 3, "s66442", "40179", "=q4=Energized Eye of Zul", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
@@ -2889,76 +3138,90 @@ Type = "Crafting";
 		{ 17, "s66432", "40164", "=q4=Timeless Eye of Zul", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
 		{ 18, "s66445", "40173", "=q4=Turbid Eye of Zul", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
 		{ 19, "s66429", "40166", "=q4=Vivid Eye of Zul", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
-		{ 20, "s39741", "32225", "=q4=Dazzling Seaspray Emerald", "=ds=#sr# 375"};
-		{ 21, "s39739", "32223", "=q4=Enduring Seaspray Emerald", "=ds=#sr# 375"};
-		{ 22, "s47053", "35759", "=q4=Forceful Seaspray Emerald", "=ds=#sr# 375"};
-		{ 23, "s39742", "32226", "=q4=Jagged Seaspray Emerald", "=ds=#sr# 375"};
-		{ 24, "s39740", "32224", "=q4=Radiant Seaspray Emerald", "=ds=#sr# 375"};
-		{ 25, "s47054", "35758", "=q4=Steady Seaspray Emerald", "=ds=#sr# 375"};
-		{ 26, "s54007", "40094", "=q3=Dazzling Forest Emerald", "=ds="..AL["Trainer"] };
-		{ 27, "s53998", "40089", "=q3=Enduring Forest Emerald", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
-		{ 28, "s54011", "40105", "=q3=Energized Forest Emerald", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
-		{ 29, "s54001", "40091", "=q3=Forceful Forest Emerald", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
-		{ 30, "s54006", "40104", "=q3=Intricate Forest Emerald", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
-		Next = "JewelGreen2";
+		{ 20, "s54007", "40094", "=q3=Dazzling Forest Emerald", "=ds="..AL["Trainer"] };
+		{ 21, "s53998", "40089", "=q3=Enduring Forest Emerald", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
+		{ 22, "s54011", "40105", "=q3=Energized Forest Emerald", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
+		{ 23, "s54001", "40091", "=q3=Forceful Forest Emerald", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
+		{ 24, "s54006", "40104", "=q3=Intricate Forest Emerald", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
+		{ 25, "s53996", "40086", "=q3=Jagged Forest Emerald", "=ds="..BabbleFaction["Frenzyheart Tribe"]..": "..BabbleFaction["Revered"] };
+		{ 26, "s54009", "40100", "=q3=Lambent Forest Emerald", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
+		{ 27, "s54003", "40095", "=q3=Misty Forest Emerald", "=ds="..AL["Drop"]..""};
+		{ 28, "s54010", "40103", "=q3=Opaque Forest Emerald", "=ds="..BabbleZone["Wintergrasp"].." 12 #wintergrasp#" };
+		{ 29, "s54012", "40098", "=q3=Radiant Forest Emerald", "=ds="..AL["Drop"].." - "..BabbleZone["The Storm Peaks"] };
+		{ 30, "s54002", "40092", "=q3=Seer's Forest Emerald", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
+		Prev = "JewelGreenTBC";
+		Next = "JewelGreen2WRATH";
 		Back = "JEWELCRAFTINGMENU";
+		Submenu = "Expansion";
+	};
+	AtlasLoot_Data["JewelGreen2WRATH"] = {
+		{ 1, "s54014", "40106", "=q3=Shattered Forest Emerald", "=ds="..BabbleZone["Wintergrasp"].." 12 #wintergrasp#" };
+		{ 2, "s54004", "40099", "=q3=Shining Forest Emerald", "=ds="..AL["Drop"]..""};
+		{ 3, "s54000", "40090", "=q3=Steady Forest Emerald", "=ds="..BabbleZone["Wintergrasp"].." 12 #wintergrasp#" };
+		{ 4, "s54008", "40096", "=q3=Sundered Forest Emerald", "=ds="..BabbleFaction["The Oracles"]..": "..BabbleFaction["Revered"] };
+		{ 5, "s54013", "40101", "=q3=Tense Forest Emerald","=ds="..BabbleZone["Wintergrasp"].." 12 #wintergrasp#" };
+		{ 6, "s53995", "40085", "=q3=Timeless Forest Emerald", "=ds="..BabbleBoss["The Prophet Tharon'ja"].." ("..AL["Heroic"]..")" };
+		{ 7, "s54005", "40102", "=q3=Turbid Forest Emerald", "=ds="..BabbleZone["Wintergrasp"].." 12 #wintergrasp#" };
+		{ 8, "s53997", "40088", "=q3=Vivid Forest Emerald", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
+		{ 9, "s53926", "39984", "=q2=Dazzling Dark Jade", "=ds="..AL["Trainer"] };
+		{ 10, "s53918", "39976", "=q2=Enduring Dark Jade", "=ds="..AL["Trainer"] };
+		{ 11, "s53930", "39989", "=q2=Energized Dark Jade", "=ds="..AL["Trainer"] };
+		{ 12, "s53920", "39978", "=q2=Forceful Dark Jade", "=ds="..AL["Trainer"] };
+		{ 13, "s53925", "39983", "=q2=Intricate Dark Jade", "=ds="..AL["Trainer"] };
+		{ 14, "s53916", "39974", "=q2=Jagged Dark Jade", "=ds="..AL["Trainer"] };
+		{ 15, "s53928", "39986", "=q2=Lambent Dark Jade", "=ds="..AL["Trainer"] };
+		{ 16, "s53922", "39980", "=q2=Misty Dark Jade", "=ds="..AL["Trainer"] };
+		{ 17, "s53929", "39988", "=q2=Opaque Dark Jade", "=ds=1250 #faction#" };
+		{ 18, "s53931", "39990", "=q2=Radiant Dark Jade", "=ds="..AL["Trainer"] };
+		{ 19, "s53921", "39979", "=q2=Seer's Dark Jade", "=ds="..BabbleFaction["The Kalu'ak"]..": "..BabbleFaction["Friendly"] };
+		{ 20, "s53933", "39992", "=q2=Shattered Dark Jade", "=ds=1250 #faction#" };
+		{ 21, "s53923", "39981", "=q2=Shining Dark Jade", "=ds="..AL["Trainer"] };
+		{ 22, "s53919", "39977", "=q2=Steady Dark Jade", "=ds=1250 #faction#" };
+		{ 23, "s53927", "39985", "=q2=Sundered Dark Jade", "=ds="..AL["Trainer"] };
+		{ 24, "s53932", "39991", "=q2=Tense Dark Jade", "=ds=1250 #faction#" };
+		{ 25, "s53894", "39968", "=q2=Timeless Dark Jade", "=ds="..AL["Trainer"] };
+		{ 26, "s53924", "39982", "=q2=Turbid Dark Jade", "=ds=1250 #faction#" };
+		{ 27, "s53917", "39975", "=q2=Vivid Dark Jade", "=ds="..AL["Trainer"] };
+		Prev = "JewelGreenWRATH";
+		Next = "JewelGreenTBC";
+		Back = "JEWELCRAFTINGMENU";
+		Submenu = "Expansion";
+	};
+	
+	AtlasLoot_Data["JewelOrangeCLASSIC"] = { 
+		Prev = "JewelOrangeWRATH";
+		Next = "JewelOrangeTBC";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["JewelGreen2"] = {
-		{ 1, "s53996", "40086", "=q3=Jagged Forest Emerald", "=ds="..BabbleFaction["Frenzyheart Tribe"]..": "..BabbleFaction["Revered"] };
-		{ 2, "s54009", "40100", "=q3=Lambent Forest Emerald", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
-		{ 3, "s54003", "40095", "=q3=Misty Forest Emerald", "=ds="..AL["Drop"]..""};
-		{ 4, "s54010", "40103", "=q3=Opaque Forest Emerald", "=ds="..BabbleZone["Wintergrasp"].." 12 #wintergrasp#" };
-		{ 5, "s54012", "40098", "=q3=Radiant Forest Emerald", "=ds="..AL["Drop"].." - "..BabbleZone["The Storm Peaks"] };
-		{ 6, "s54002", "40092", "=q3=Seer's Forest Emerald", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
-		{ 7, "s54014", "40106", "=q3=Shattered Forest Emerald", "=ds="..BabbleZone["Wintergrasp"].." 12 #wintergrasp#" };
-		{ 8, "s54004", "40099", "=q3=Shining Forest Emerald", "=ds="..AL["Drop"]..""};
-		{ 9, "s54000", "40090", "=q3=Steady Forest Emerald", "=ds="..BabbleZone["Wintergrasp"].." 12 #wintergrasp#" };
-		{ 10, "s54008", "40096", "=q3=Sundered Forest Emerald", "=ds="..BabbleFaction["The Oracles"]..": "..BabbleFaction["Revered"] };
-		{ 11, "s54013", "40101", "=q3=Tense Forest Emerald","=ds="..BabbleZone["Wintergrasp"].." 12 #wintergrasp#" };
-		{ 12, "s53995", "40085", "=q3=Timeless Forest Emerald", "=ds="..BabbleBoss["The Prophet Tharon'ja"].." ("..AL["Heroic"]..")" };
-		{ 13, "s54005", "40102", "=q3=Turbid Forest Emerald", "=ds="..BabbleZone["Wintergrasp"].." 12 #wintergrasp#" };
-		{ 14, "s53997", "40088", "=q3=Vivid Forest Emerald", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
-		{ 15, "s31112", "24065", "=q3=Dazzling Talasite", "=ds=#sr# 350"};
-		{ 16, "s31110", "24062", "=q3=Enduring Talasite", "=ds=#sr# 350"};
-		{ 17, "s46405", "35318", "=q3=Forceful Talasite", "=ds=#sr# "..AL["Vendor"]};
-		{ 18, "s31113", "24067", "=q3=Jagged Talasite", "=ds=#sr# 350"};
-		{ 19, "s31111", "24066", "=q3=Radiant Talasite", "=ds=#sr# 350"};
-		{ 20, "s43493", "33782", "=q3=Steady Talasite", "=ds=#sr# 350"};
-		{ 21, "s53926", "39984", "=q2=Dazzling Dark Jade", "=ds="..AL["Trainer"] };
-		{ 22, "s53918", "39976", "=q2=Enduring Dark Jade", "=ds="..AL["Trainer"] };
-		{ 23, "s53930", "39989", "=q2=Energized Dark Jade", "=ds="..AL["Trainer"] };
-		{ 24, "s53920", "39978", "=q2=Forceful Dark Jade", "=ds="..AL["Trainer"] };
-		{ 25, "s53925", "39983", "=q2=Intricate Dark Jade", "=ds="..AL["Trainer"] };
-		{ 26, "s53916", "39974", "=q2=Jagged Dark Jade", "=ds="..AL["Trainer"] };
-		{ 27, "s53928", "39986", "=q2=Lambent Dark Jade", "=ds="..AL["Trainer"] };
-		{ 28, "s53922", "39980", "=q2=Misty Dark Jade", "=ds="..AL["Trainer"] };
-		{ 29, "s53929", "39988", "=q2=Opaque Dark Jade", "=ds=1250 #faction#" };
-		{ 30, "s53931", "39990", "=q2=Radiant Dark Jade", "=ds="..AL["Trainer"] };
-		Prev = "JewelGreen1";
-		Next = "JewelGreen3";
+	AtlasLoot_Data["JewelOrangeTBC"] = {
+		{ 1, "s39736", "32220", "=q4=Glinting Pyrestone", "=ds=#sr# 375"};
+		{ 2, "s39733", "32217", "=q4=Inscribed Pyrestone", "=ds=#sr# 375"};
+		{ 3, "s39735", "32219", "=q4=Luminous Pyrestone", "=ds=#sr# 375"};
+		{ 4, "s39734", "32218", "=q4=Potent Pyrestone", "=ds=#sr# 375"};
+		{ 5, "s47055", "35760", "=q4=Reckless Pyrestone", "=ds=#sr# 375"};
+		{ 6, "s39737", "32221", "=q4=Veiled Pyrestone", "=ds=#sr# 375"};
+		{ 7, "s39738", "32222", "=q4=Wicked Pyrestone", "=ds=#sr# 375"};
+		{ 8, "s31109", "24061", "=q3=Glinting Noble Topaz", "=ds=#sr# 350"};
+		{ 9, "s31106", "24058", "=q3=Inscribed Noble Topaz", "=ds=#sr# 350"};
+		{ 10, "s31108", "24060", "=q3=Luminous Noble Topaz", "=ds=#sr# 350"};
+		{ 11, "s31107", "24059", "=q3=Potent Noble Topaz", "=ds=#sr# 350"};
+		{ 12, "s46404", "35316", "=q3=Reckless Noble Topaz", "=ds=#sr# "..AL["Vendor"]};
+		{ 13, "s39470", "31867", "=q3=Veiled Noble Topaz", "=ds=#sr# 350"};
+		{ 14, "s39471", "31868", "=q3=Wicked Noble Topaz", "=ds=#sr# 350"};
+		{ 21, "s28915", "23101", "=q2=Potent Flame Spessarite", "=ds=#sr# 325"};
+		{ 16, "s39466", "31866", "=q2=Veiled Flame Spessarite", "=ds=#sr# 325"};
+		{ 17, "s39467", "31869", "=q2=Wicked Flame Spessarite", "=ds=#sr# 325"};
+		{ 18, "s28914", "23100", "=q2=Glinting Flame Spessarite", "=ds=#sr# 315"};
+		{ 19, "s28912", "23099", "=q2=Luminous Flame Spessarite", "=ds=#sr# 305"};
+		{ 20, "s28910", "23098", "=q2=Inscribed Flame Spessarite", "=ds=#sr# 300"};
+		Prev = "JewelOrange3WRATH";
+		Next = "JewelOrangeWRATH";
 		Back = "JEWELCRAFTINGMENU";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["JewelGreen3"] = {
-		{ 1, "s53921", "39979", "=q2=Seer's Dark Jade", "=ds="..BabbleFaction["The Kalu'ak"]..": "..BabbleFaction["Friendly"] };
-		{ 2, "s53933", "39992", "=q2=Shattered Dark Jade", "=ds=1250 #faction#" };
-		{ 3, "s53923", "39981", "=q2=Shining Dark Jade", "=ds="..AL["Trainer"] };
-		{ 4, "s53919", "39977", "=q2=Steady Dark Jade", "=ds=1250 #faction#" };
-		{ 5, "s53927", "39985", "=q2=Sundered Dark Jade", "=ds="..AL["Trainer"] };
-		{ 6, "s53932", "39991", "=q2=Tense Dark Jade", "=ds=1250 #faction#" };
-		{ 7, "s53894", "39968", "=q2=Timeless Dark Jade", "=ds="..AL["Trainer"] };
-		{ 8, "s53924", "39982", "=q2=Turbid Dark Jade", "=ds=1250 #faction#" };
-		{ 9, "s53917", "39975", "=q2=Vivid Dark Jade", "=ds="..AL["Trainer"] };
-		{ 10, "s28924", "23106", "=q2=Dazzling Deep Peridot", "=ds=#sr# 325"};
-		{ 11, "s28918", "23105", "=q2=Enduring Deep Peridot", "=ds=#sr# 315"};
-		{ 12, "s28917", "23104", "=q2=Jagged Deep Peridot", "=ds=#sr# 305"};
-		{ 13, "s28916", "23103", "=q2=Radiant Deep Peridot", "=ds=#sr# 300"};
-		Prev = "JewelGreen2";
-		Back = "JEWELCRAFTINGMENU";
-	};
-
-	AtlasLoot_Data["JewelOrange1"] = {
+	AtlasLoot_Data["JewelOrangeWRATH"] = {
 		{ 1, "s66576", "40162", "=q4=Accurate Ametrine", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
 		{ 2, "s66579", "40144", "=q4=Champion's Ametrine", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
 		{ 3, "s66568", "40147", "=q4=Deadly Ametrine", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
@@ -2981,86 +3244,105 @@ Type = "Crafting";
 		{ 20, "s66587", "40159", "=q4=Stark Ametrine", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
 		{ 21, "s66570", "40153", "=q4=Veiled Ametrine", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
 		{ 22, "s66577", "40156", "=q4=Wicked Ametrine", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
-		{ 23, "s39736", "32220", "=q4=Glinting Pyrestone", "=ds=#sr# 375"};
-		{ 24, "s39733", "32217", "=q4=Inscribed Pyrestone", "=ds=#sr# 375"};
-		{ 25, "s39735", "32219", "=q4=Luminous Pyrestone", "=ds=#sr# 375"};
-		{ 26, "s39734", "32218", "=q4=Potent Pyrestone", "=ds=#sr# 375"};
-		{ 27, "s47055", "35760", "=q4=Reckless Pyrestone", "=ds=#sr# 375"};
-		{ 28, "s39737", "32221", "=q4=Veiled Pyrestone", "=ds=#sr# 375"};
-		{ 29, "s39738", "32222", "=q4=Wicked Pyrestone", "=ds=#sr# 375"};
-		{ 30, "s53994", "40058", "=q3=Accurate Monarch Topaz", "=ds="..AL["Drop"] };
-		Next = "JewelOrange2";
+		Prev = "JewelOrangeTBC";
+		Next = "JewelOrange2WRATH";
 		Back = "JEWELCRAFTINGMENU";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["JewelOrange2"] = {
-		{ 1, "s53977", "40039", "=q3=Champion's Monarch Topaz", "=ds="..AL["Drop"]..""};
-		{ 2, "s53979", "40043", "=q3=Deadly Monarch Topaz", "=ds="..BabbleBoss["Keristrasza"].." ("..AL["Heroic"]..")" };
-		{ 3, "s53982", "40046", "=q3=Deft Monarch Topaz", "=ds="..BabbleBoss["Sjonnir The Ironshaper"].." ("..AL["Heroic"]..")" };
-		{ 4, "s53986", "40050", "=q3=Durable Monarch Topaz", "=ds="..BabbleZone["Wintergrasp"].." 12 #wintergrasp#" };
-		{ 5, "s53990", "40054", "=q3=Empowered Monarch Topaz", "=ds="..BabbleZone["Wintergrasp"].." 12 #wintergrasp#" };
-		{ 6, "s53976", "40038", "=q3=Etched Monarch Topaz", "=ds="..AL["Drop"]..""};
-		{ 7, "s54019", "40041", "=q3=Fierce Monarch Topaz", "=ds="..BabbleBoss["Ingvar the Plunderer"].." ("..AL["Heroic"]..")" };
-		{ 8, "s53993", "40057", "=q3=Glimmering Monarch Topaz", "=ds="..BabbleFaction["The Wyrmrest Accord"]..": "..BabbleFaction["Exalted"] };
-		{ 9, "s53980", "40044", "=q3=Glinting Monarch Topaz", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
-		{ 10, "s53975", "40037", "=q3=Inscribed Monarch Topaz", "=ds="..AL["Drop"]..""};
-		{ 11, "s53981", "40045", "=q3=Lucent Monarch Topaz", "=ds="..BabbleZone["Wintergrasp"].." 12 #wintergrasp#" };
-		{ 12, "s53983", "40047", "=q3=Luminous Monarch Topaz", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
-		{ 13, "s53984", "40048", "=q3=Potent Monarch Topaz", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
-		{ 14, "s53989", "40053", "=q3=Pristine Monarch Topaz", "=ds="..AL["Trainer"] };
-		{ 15, "s53987", "40051", "=q3=Reckless Monarch Topaz", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
-		{ 16, "s54023", "40059", "=q3=Resolute Monarch Topaz", "=ds="..AL["Drop"]..""};
-		{ 17, "s53978", "40040", "=q3=Resplendent Monarch Topaz", "=ds="..BabbleZone["Wintergrasp"].." 12 #wintergrasp#" };
-		{ 18, "s53992", "40056", "=q3=Stalwart Monarch Topaz", "=ds="..AL["Drop"]..""};
-		{ 19, "s53991", "40055", "=q3=Stark Monarch Topaz", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
-		{ 20, "s53985", "40049", "=q3=Veiled Monarch Topaz", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
-		{ 21, "s53988", "40052", "=q3=Wicked Monarch Topaz", "=ds="..BabbleFaction["Knights of the Ebon Blade"]..": "..BabbleFaction["Revered"] };
-		{ 22, "s31109", "24061", "=q3=Glinting Noble Topaz", "=ds=#sr# 350"};
-		{ 23, "s31106", "24058", "=q3=Inscribed Noble Topaz", "=ds=#sr# 350"};
-		{ 24, "s31108", "24060", "=q3=Luminous Noble Topaz", "=ds=#sr# 350"};
-		{ 25, "s31107", "24059", "=q3=Potent Noble Topaz", "=ds=#sr# 350"};
-		{ 26, "s46404", "35316", "=q3=Reckless Noble Topaz", "=ds=#sr# "..AL["Vendor"]};
-		{ 27, "s39470", "31867", "=q3=Veiled Noble Topaz", "=ds=#sr# 350"};
-		{ 28, "s39471", "31868", "=q3=Wicked Noble Topaz", "=ds=#sr# 350"};
-		{ 29, "s53891", "39965", "=q2=Glimmering Huge Citrine", "=ds="..AL["Trainer"] };
-		{ 30, "s53892", "39966", "=q2=Accurate Huge Citrine", "=ds="..AL["Trainer"] };
-		Prev = "JewelOrange1";
-		Next = "JewelOrange3";
+	AtlasLoot_Data["JewelOrange2WRATH"] = {
+		{ 1, "s53994", "40058", "=q3=Accurate Monarch Topaz", "=ds="..AL["Drop"] };
+		{ 2, "s53977", "40039", "=q3=Champion's Monarch Topaz", "=ds="..AL["Drop"]..""};
+		{ 3, "s53979", "40043", "=q3=Deadly Monarch Topaz", "=ds="..BabbleBoss["Keristrasza"].." ("..AL["Heroic"]..")" };
+		{ 4, "s53982", "40046", "=q3=Deft Monarch Topaz", "=ds="..BabbleBoss["Sjonnir The Ironshaper"].." ("..AL["Heroic"]..")" };
+		{ 5, "s53986", "40050", "=q3=Durable Monarch Topaz", "=ds="..BabbleZone["Wintergrasp"].." 12 #wintergrasp#" };
+		{ 6, "s53990", "40054", "=q3=Empowered Monarch Topaz", "=ds="..BabbleZone["Wintergrasp"].." 12 #wintergrasp#" };
+		{ 7, "s53976", "40038", "=q3=Etched Monarch Topaz", "=ds="..AL["Drop"]..""};
+		{ 8, "s54019", "40041", "=q3=Fierce Monarch Topaz", "=ds="..BabbleBoss["Ingvar the Plunderer"].." ("..AL["Heroic"]..")" };
+		{ 9, "s53993", "40057", "=q3=Glimmering Monarch Topaz", "=ds="..BabbleFaction["The Wyrmrest Accord"]..": "..BabbleFaction["Exalted"] };
+		{ 10, "s53980", "40044", "=q3=Glinting Monarch Topaz", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
+		{ 11, "s53975", "40037", "=q3=Inscribed Monarch Topaz", "=ds="..AL["Drop"]..""};
+		{ 12, "s53981", "40045", "=q3=Lucent Monarch Topaz", "=ds="..BabbleZone["Wintergrasp"].." 12 #wintergrasp#" };
+		{ 13, "s53983", "40047", "=q3=Luminous Monarch Topaz", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
+		{ 14, "s53984", "40048", "=q3=Potent Monarch Topaz", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
+		{ 15, "s53989", "40053", "=q3=Pristine Monarch Topaz", "=ds="..AL["Trainer"] };
+		{ 16, "s53987", "40051", "=q3=Reckless Monarch Topaz", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
+		{ 17, "s54023", "40059", "=q3=Resolute Monarch Topaz", "=ds="..AL["Drop"]..""};
+		{ 18, "s53978", "40040", "=q3=Resplendent Monarch Topaz", "=ds="..BabbleZone["Wintergrasp"].." 12 #wintergrasp#" };
+		{ 19, "s53992", "40056", "=q3=Stalwart Monarch Topaz", "=ds="..AL["Drop"]..""};
+		{ 20, "s53991", "40055", "=q3=Stark Monarch Topaz", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
+		{ 21, "s53985", "40049", "=q3=Veiled Monarch Topaz", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
+		{ 22, "s53988", "40052", "=q3=Wicked Monarch Topaz", "=ds="..BabbleFaction["Knights of the Ebon Blade"]..": "..BabbleFaction["Revered"] };
+		Prev = "JewelOrangeWRATH";
+		Next = "JewelOrange3WRATH";
 		Back = "JEWELCRAFTINGMENU";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["JewelOrange3"] = {
-		{ 1, "s53874", "39949", "=q2=Champion's Huge Citrine", "=ds="..AL["Trainer"] };
-		{ 2, "s53877", "39952", "=q2=Deadly Huge Citrine", "=ds="..BabbleFaction["Knights of the Ebon Blade"]..": "..BabbleFaction["Friendly"] };
-		{ 3, "s53880", "39955", "=q2=Deft Huge Citrine", "=ds="..AL["Trainer"] };
-		{ 4, "s53884", "39958", "=q2=Durable Huge Citrine", "=ds=1250 #faction#" };
-		{ 5, "s53888", "39962", "=q2=Empowered Huge Citrine", "=ds=1250 #faction#" };
-		{ 6, "s53873", "39948", "=q2=Etched Huge Citrine", "=ds="..AL["Trainer"] };
-		{ 7, "s53876", "39951", "=q2=Fierce Huge Citrine", "=ds="..AL["Trainer"] };
-		{ 8, "s53878", "39953", "=q2=Glinting Huge Citrine", "=ds="..AL["Trainer"] };
-		{ 9, "s53872", "39947", "=q2=Inscribed Huge Citrine", "=ds="..AL["Trainer"] };
-		{ 10, "s53879", "39954", "=q2=Lucent Huge Citrine", "=ds=1250 #faction#" };
-		{ 11, "s53881", "39946", "=q2=Luminous Huge Citrine", "=ds="..AL["Trainer"] };
-		{ 12, "s53882", "39956", "=q2=Potent Huge Citrine", "=ds="..AL["Trainer"] };
-		{ 13, "s53887", "39961", "=q2=Pristine Huge Citrine", "=ds="..AL["Trainer"] };
-		{ 14, "s53885", "39959", "=q2=Reckless Huge Citrine", "=ds="..BabbleFaction["Frenzyheart Tribe"]..": "..BabbleFaction["Friendly"] };
-		{ 15, "s53893", "39967", "=q2=Resolute Huge Citrine", "=ds="..AL["Trainer"] };
-		{ 16, "s53875", "39950", "=q2=Resplendent Huge Citrine", "=ds=1250 #faction#" };
-		{ 17, "s53890", "39964", "=q2=Stalwart Huge Citrine", "=ds="..AL["Trainer"] };
-		{ 18, "s53889", "39963", "=q2=Stark Huge Citrine", "=ds="..AL["Trainer"] };
-		{ 19, "s53883", "39957", "=q2=Veiled Huge Citrine", "=ds="..AL["Trainer"] };
-		{ 20, "s53886", "39960", "=q2=Wicked Huge Citrine", "=ds="..AL["Trainer"] };
-		{ 21, "s28915", "23101", "=q2=Potent Flame Spessarite", "=ds=#sr# 325"};
-		{ 22, "s39466", "31866", "=q2=Veiled Flame Spessarite", "=ds=#sr# 325"};
-		{ 23, "s39467", "31869", "=q2=Wicked Flame Spessarite", "=ds=#sr# 325"};
-		{ 24, "s28914", "23100", "=q2=Glinting Flame Spessarite", "=ds=#sr# 315"};
-		{ 25, "s28912", "23099", "=q2=Luminous Flame Spessarite", "=ds=#sr# 305"};
-		{ 26, "s28910", "23098", "=q2=Inscribed Flame Spessarite", "=ds=#sr# 300"};
-		Prev = "JewelOrange2";
+	AtlasLoot_Data["JewelOrange3WRATH"] = {
+		{ 1, "s53891", "39965", "=q2=Glimmering Huge Citrine", "=ds="..AL["Trainer"] };
+		{ 2, "s53892", "39966", "=q2=Accurate Huge Citrine", "=ds="..AL["Trainer"] };
+		{ 3, "s53874", "39949", "=q2=Champion's Huge Citrine", "=ds="..AL["Trainer"] };
+		{ 4, "s53877", "39952", "=q2=Deadly Huge Citrine", "=ds="..BabbleFaction["Knights of the Ebon Blade"]..": "..BabbleFaction["Friendly"] };
+		{ 5, "s53880", "39955", "=q2=Deft Huge Citrine", "=ds="..AL["Trainer"] };
+		{ 6, "s53884", "39958", "=q2=Durable Huge Citrine", "=ds=1250 #faction#" };
+		{ 7, "s53888", "39962", "=q2=Empowered Huge Citrine", "=ds=1250 #faction#" };
+		{ 8, "s53873", "39948", "=q2=Etched Huge Citrine", "=ds="..AL["Trainer"] };
+		{ 9, "s53876", "39951", "=q2=Fierce Huge Citrine", "=ds="..AL["Trainer"] };
+		{ 10, "s53878", "39953", "=q2=Glinting Huge Citrine", "=ds="..AL["Trainer"] };
+		{ 11, "s53872", "39947", "=q2=Inscribed Huge Citrine", "=ds="..AL["Trainer"] };
+		{ 12, "s53879", "39954", "=q2=Lucent Huge Citrine", "=ds=1250 #faction#" };
+		{ 13, "s53881", "39946", "=q2=Luminous Huge Citrine", "=ds="..AL["Trainer"] };
+		{ 14, "s53882", "39956", "=q2=Potent Huge Citrine", "=ds="..AL["Trainer"] };
+		{ 15, "s53887", "39961", "=q2=Pristine Huge Citrine", "=ds="..AL["Trainer"] };
+		{ 16, "s53885", "39959", "=q2=Reckless Huge Citrine", "=ds="..BabbleFaction["Frenzyheart Tribe"]..": "..BabbleFaction["Friendly"] };
+		{ 17, "s53893", "39967", "=q2=Resolute Huge Citrine", "=ds="..AL["Trainer"] };
+		{ 18, "s53875", "39950", "=q2=Resplendent Huge Citrine", "=ds=1250 #faction#" };
+		{ 19, "s53890", "39964", "=q2=Stalwart Huge Citrine", "=ds="..AL["Trainer"] };
+		{ 20, "s53889", "39963", "=q2=Stark Huge Citrine", "=ds="..AL["Trainer"] };
+		{ 21, "s53883", "39957", "=q2=Veiled Huge Citrine", "=ds="..AL["Trainer"] };
+		{ 22, "s53886", "39960", "=q2=Wicked Huge Citrine", "=ds="..AL["Trainer"] };
+		Prev = "JewelOrange2WRATH";
+		Next = "JewelOrangeTBC";
 		Back = "JEWELCRAFTINGMENU";
+		Submenu = "Expansion";
+	};
+	
+	AtlasLoot_Data["JewelPurpleCLASSIC"] = { 
+		Prev = "JewelPurpleWRATH";
+		Next = "JewelPurpleTBC";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["JewelPurple1"] = {
+	AtlasLoot_Data["JewelPurpleTBC"] = {
+		{ 1, "s39729", "32213", "=q4=Balanced Shadowsong Amethyst", "=ds=#sr# 375"};
+		{ 2, "s39731", "32215", "=q4=Glowing Shadowsong Amethyst", "=ds=#sr# 375"};
+		{ 3, "s39730", "32214", "=q4=Infused Shadowsong Amethyst", "=ds=#sr# 375"};
+		{ 4, "s48789", "37503", "=q4=Purified Shadowsong Amethyst", "=ds="..AL["Vendor"]..""};
+		{ 5, "s39732", "32216", "=q4=Royal Shadowsong Amethyst", "=ds=#sr# 375"};
+		{ 6, "s39728", "32212", "=q4=Shifting Shadowsong Amethyst", "=ds=#sr# 375"};
+		{ 7, "s39727", "32211", "=q4=Sovereign Shadowsong Amethyst", "=ds=#sr# 375"};
+		{ 8, "s39463", "31863", "=q3=Balanced Nightseye", "=ds=#sr# 350"};
+		{ 9, "s31104", "24056", "=q3=Glowing Nightseye", "=ds=#sr# 350"};
+		{ 10, "s39462", "31865", "=q3=Infused Nightseye", "=ds=#sr# 350"};
+		{ 11, "s46803", "35707", "=q3=Regal Nightseye", "=ds=#sr# 350"};
+		{ 12, "s31105", "24057", "=q3=Royal Nightseye", "=ds=#sr# 350"};
+		{ 13, "s31103", "24055", "=q3=Shifting Nightseye", "=ds=#sr# 350"};
+		{ 14, "s31102", "24054", "=q3=Sovereign Nightseye", "=ds=#sr# 350"};
+		{ 15, "s41429", "32836", "=q3=Purified Shadow Pearl", "=ds=#sr# 350"};
+		{ 16, "s39455", "31862", "=q2=Balanced Shadow Draenite", "=ds=#sr# 325"};
+		{ 17, "s39458", "31864", "=q2=Infused Shadow Draenite", "=ds=#sr# 325"};
+		{ 18, "s28936", "23111", "=q2=Sovereign Shadow Draenite", "=ds=#sr# 325"};
+		{ 19, "s28933", "23110", "=q2=Shifting Shadow Draenite", "=ds=#sr# 315"};
+		{ 20, "s28927", "23109", "=q2=Royal Shadow Draenite", "=ds=#sr# 305"};
+		{ 21, "s28925", "23108", "=q2=Glowing Shadow Draenite", "=ds=#sr# 300"};
+		Prev = "JewelPurple2WRATH";
+		Next = "JewelPurpleWRATH";
+		Back = "JEWELCRAFTINGMENU";
+		Submenu = "Expansion";
+	};
+
+	AtlasLoot_Data["JewelPurpleWRATH"] = {
 		{ 1, "s66553", "40136", "=q4=Balanced Dreadstone", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
 		{ 2, "s66560", "40139", "=q4=Defender's Dreadstone", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
 		{ 3, "s66555", "40132", "=q4=Glowing Dreadstone", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
@@ -3074,112 +3356,98 @@ Type = "Crafting";
 		{ 11, "s66557", "40130", "=q4=Shifting Dreadstone", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
 		{ 12, "s66554", "40129", "=q4=Sovereign Dreadstone", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
 		{ 13, "s66565", "40131", "=q4=Tenuous Dreadstone", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
-		{ 14, "s39729", "32213", "=q4=Balanced Shadowsong Amethyst", "=ds=#sr# 375"};
-		{ 15, "s39731", "32215", "=q4=Glowing Shadowsong Amethyst", "=ds=#sr# 375"};
-		{ 16, "s39730", "32214", "=q4=Infused Shadowsong Amethyst", "=ds=#sr# 375"};
-		{ 17, "s48789", "37503", "=q4=Purified Shadowsong Amethyst", "=ds="..AL["Vendor"]..""};
-		{ 18, "s39732", "32216", "=q4=Royal Shadowsong Amethyst", "=ds=#sr# 375"};
-		{ 19, "s39728", "32212", "=q4=Shifting Shadowsong Amethyst", "=ds=#sr# 375"};
-		{ 20, "s39727", "32211", "=q4=Sovereign Shadowsong Amethyst", "=ds=#sr# 375"};
-		{ 21, "s53969", "40029", "=q3=Balanced Twilight Opal", "=ds="..AL["Trainer"] };
-		{ 22, "s53972", "40032", "=q3=Defender's Twilight Opal", "=ds="..AL["Drop"].." - "..BabbleZone["The Storm Peaks"] };
-		{ 23, "s53965", "40025", "=q3=Glowing Twilight Opal", "=ds="..BabbleFaction["Knights of the Ebon Blade"]..": "..BabbleFaction["Exalted"] };
-		{ 24, "s53974", "40034", "=q3=Guardian's Twilight Opal", "=ds="..BabbleFaction["Argent Crusade"]..": "..BabbleFaction["Revered"] };
-		{ 25, "s53970", "40030", "=q3=Infused Twilight Opal", "=ds="..BabbleBoss["Anub'arak"].." ("..AL["Heroic"]..")" };
-		{ 26, "s53968", "40028", "=q3=Mysterious Twilight Opal", "=ds="..BabbleZone["Wintergrasp"].." 12 #wintergrasp#" };
-		{ 27, "s53973", "40033", "=q3=Puissant Twilight Opal", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
-		{ 28, "s53966", "40026", "=q3=Purified Twilight Opal", "=ds="..AL["Drop"]..""};
-		{ 29, "s53971", "40031", "=q3=Regal Twilight Opal", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
-		{ 30, "s53967", "40027", "=q3=Royal Twilight Opal", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
-		Next = "JewelPurple2";
+		{ 27, "s53969", "40029", "=q3=Balanced Twilight Opal", "=ds="..AL["Trainer"] };
+		{ 28, "s53972", "40032", "=q3=Defender's Twilight Opal", "=ds="..AL["Drop"].." - "..BabbleZone["The Storm Peaks"] };
+		{ 16, "s53965", "40025", "=q3=Glowing Twilight Opal", "=ds="..BabbleFaction["Knights of the Ebon Blade"]..": "..BabbleFaction["Exalted"] };
+		{ 17, "s53974", "40034", "=q3=Guardian's Twilight Opal", "=ds="..BabbleFaction["Argent Crusade"]..": "..BabbleFaction["Revered"] };
+		{ 18, "s53970", "40030", "=q3=Infused Twilight Opal", "=ds="..BabbleBoss["Anub'arak"].." ("..AL["Heroic"]..")" };
+		{ 19, "s53968", "40028", "=q3=Mysterious Twilight Opal", "=ds="..BabbleZone["Wintergrasp"].." 12 #wintergrasp#" };
+		{ 20, "s53973", "40033", "=q3=Puissant Twilight Opal", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
+		{ 21, "s53966", "40026", "=q3=Purified Twilight Opal", "=ds="..AL["Drop"]..""};
+		{ 22, "s53971", "40031", "=q3=Regal Twilight Opal", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
+		{ 23, "s53967", "40027", "=q3=Royal Twilight Opal", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
+		{ 24, "s53963", "40023", "=q3=Shifting Twilight Opal", "=ds="..AL["Drop"]};
+		{ 25, "s53962", "40022", "=q3=Sovereign Twilight Opal", "=ds="..AL["Drop"]};
+		{ 26, "s53964", "40024", "=q3=Tenuous Twilight Opal", "=ds="..AL["Drop"]..""};
+		Prev = "JewelPurpleTBC";
+		Next = "JewelPurple2WRATH";
 		Back = "JEWELCRAFTINGMENU";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["JewelPurple2"] = {
-		{ 1, "s53963", "40023", "=q3=Shifting Twilight Opal", "=ds="..AL["Drop"]};
-		{ 2, "s53962", "40022", "=q3=Sovereign Twilight Opal", "=ds="..AL["Drop"]};
-		{ 3, "s53964", "40024", "=q3=Tenuous Twilight Opal", "=ds="..AL["Drop"]..""};
-		{ 4, "s39463", "31863", "=q3=Balanced Nightseye", "=ds=#sr# 350"};
-		{ 5, "s31104", "24056", "=q3=Glowing Nightseye", "=ds=#sr# 350"};
-		{ 6, "s39462", "31865", "=q3=Infused Nightseye", "=ds=#sr# 350"};
-		{ 7, "s46803", "35707", "=q3=Regal Nightseye", "=ds=#sr# 350"};
-		{ 8, "s31105", "24057", "=q3=Royal Nightseye", "=ds=#sr# 350"};
-		{ 9, "s31103", "24055", "=q3=Shifting Nightseye", "=ds=#sr# 350"};
-		{ 10, "s31102", "24054", "=q3=Sovereign Nightseye", "=ds=#sr# 350"};
-		{ 11, "s41429", "32836", "=q3=Purified Shadow Pearl", "=ds=#sr# 350"};
-		{ 12, "s53868", "39938", "=q2=Regal Shadow Crystal", "=ds="..AL["Trainer"] };
-		{ 13, "s53866", "39937", "=q2=Balanced Shadow Crystal", "=ds="..AL["Trainer"] };
-		{ 14, "s53869", "39939", "=q2=Defender's Shadow Crystal", "=ds="..BabbleFaction["The Kalu'ak"]..": "..BabbleFaction["Honored"] };
-		{ 15, "s53862", "39936", "=q2=Glowing Shadow Crystal", "=ds="..AL["Trainer"] };
-		{ 16, "s53871", "39940", "=q2=Guardian's Shadow Crystal", "=ds="..AL["Trainer"] };
-		{ 17, "s53867", "39944", "=q2=Infused Shadow Crystal", "=ds="..AL["Trainer"] };
-		{ 18, "s53865", "39945", "=q2=Mysterious Shadow Crystal", "=ds=1250 #faction#" };
-		{ 19, "s53870", "39933", "=q2=Puissant Shadow Crystal", "=ds="..AL["Trainer"] };
-		{ 20, "s53863", "39941", "=q2=Purified Shadow Crystal", "=ds="..AL["Trainer"] };
-		{ 21, "s53864", "39943", "=q2=Royal Shadow Crystal", "=ds="..AL["Trainer"] };
-		{ 22, "s53860", "39935", "=q2=Shifting Shadow Crystal", "=ds="..AL["Trainer"] };
-		{ 23, "s53859", "39934", "=q2=Sovereign Shadow Crystal", "=ds="..AL["Trainer"] };
-		{ 24, "s53861", "39942", "=q2=Tenuous Shadow Crystal", "=ds="..AL["Trainer"] };
-		{ 25, "s41420", "32833", "=q2=Purified Jaggal Pearl", "=ds=#sr# 325"};
-		{ 26, "s39455", "31862", "=q2=Balanced Shadow Draenite", "=ds=#sr# 325"};
-		{ 27, "s39458", "31864", "=q2=Infused Shadow Draenite", "=ds=#sr# 325"};
-		{ 28, "s28936", "23111", "=q2=Sovereign Shadow Draenite", "=ds=#sr# 325"};
-		{ 29, "s28933", "23110", "=q2=Shifting Shadow Draenite", "=ds=#sr# 315"};
-		{ 30, "s28927", "23109", "=q2=Royal Shadow Draenite", "=ds=#sr# 305"};
-		Prev = "JewelPurple1";
-		Next = "JewelPurple3";
+	AtlasLoot_Data["JewelPurple2WRATH"] = {
+		{ 1, "s53871", "39940", "=q2=Guardian's Shadow Crystal", "=ds="..AL["Trainer"] };
+		{ 2, "s53867", "39944", "=q2=Infused Shadow Crystal", "=ds="..AL["Trainer"] };
+		{ 3, "s53865", "39945", "=q2=Mysterious Shadow Crystal", "=ds=1250 #faction#" };
+		{ 4, "s53870", "39933", "=q2=Puissant Shadow Crystal", "=ds="..AL["Trainer"] };
+		{ 5, "s53863", "39941", "=q2=Purified Shadow Crystal", "=ds="..AL["Trainer"] };
+		{ 6, "s53864", "39943", "=q2=Royal Shadow Crystal", "=ds="..AL["Trainer"] };
+		{ 7, "s53860", "39935", "=q2=Shifting Shadow Crystal", "=ds="..AL["Trainer"] };
+		{ 8, "s53859", "39934", "=q2=Sovereign Shadow Crystal", "=ds="..AL["Trainer"] };
+		{ 9, "s53861", "39942", "=q2=Tenuous Shadow Crystal", "=ds="..AL["Trainer"] };
+		{ 10, "s53868", "39938", "=q2=Regal Shadow Crystal", "=ds="..AL["Trainer"] };
+		{ 11, "s53866", "39937", "=q2=Balanced Shadow Crystal", "=ds="..AL["Trainer"] };
+		{ 12, "s53869", "39939", "=q2=Defender's Shadow Crystal", "=ds="..BabbleFaction["The Kalu'ak"]..": "..BabbleFaction["Honored"] };
+		{ 13, "s53862", "39936", "=q2=Glowing Shadow Crystal", "=ds="..AL["Trainer"] };
+		{ 14, "s41420", "32833", "=q2=Purified Jaggal Pearl", "=ds=#sr# 325"};
+		Prev = "JewelPurpleWRATH";
+		Next = "JewelPurpleTBC";
 		Back = "JEWELCRAFTINGMENU";
+		Submenu = "Expansion";
+	};
+	
+	AtlasLoot_Data["JewelMetaCLASSIC"] = { 
+		Prev = "JewelMetaWRATH";
+		Next = "JewelMetaTBC";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["JewelPurple3"] = {
-		{ 1, "s28925", "23108", "=q2=Glowing Shadow Draenite", "=ds=#sr# 300"};
-		Prev = "JewelPurple2";
+	AtlasLoot_Data["JewelMetaTBC"] = {
+		{ 1, "s46601", "35503", "=q3=Ember Skyfire Diamond", "=ds=#sr# 370"};
+		{ 2, "s44794", "34220", "=q3=Chaotic Skyfire Diamond", "=ds=#sr# 365"};
+		{ 3, "s32871", "25890", "=q3=Destructive Skyfire Diamond", "=ds=#sr# 365"};
+		{ 4, "s32874", "25895", "=q3=Enigmatic Skyfire Diamond", "=ds=#sr# 365"};
+		{ 5, "s32872", "25893", "=q3=Mystical Skyfire Diamond", "=ds=#sr# 365"};
+		{ 6, "s32873", "25894", "=q3=Swift Skyfire Diamond", "=ds=#sr# 365"};
+		{ 7, "s39963", "32410", "=q3=Thundering Skyfire Diamond", "=ds=#sr# 365"};
+		{ 16, "s46597", "35501", "=q3=Eternal Earthstorm Diamond", "=ds=#sr# 370"};
+		{ 17, "s32867", "25897", "=q3=Bracing Earthstorm Diamond", "=ds=#sr# 365"};
+		{ 18, "s32869", "25899", "=q3=Brutal Earthstorm Diamond", "=ds=#sr# 365"};
+		{ 19, "s32870", "25901", "=q3=Insightful Earthstorm Diamond", "=ds=#sr# 365"};
+		{ 20, "s32866", "25896", "=q3=Powerful Earthstorm Diamond", "=ds=#sr# 365"};
+		{ 21, "s39961", "32409", "=q3=Relentless Earthstorm Diamond", "=ds=#sr# 365"};
+		{ 22, "s32868", "25898", "=q3=Tenacious Earthstorm Diamond", "=ds=#sr# 365"};
+		Prev = "JewelMetaWRATH";
+		Next = "JewelMetaWRATH";
 		Back = "JEWELCRAFTINGMENU";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["JewelMeta1"] = {
-		{ 1, "s55401", "41380", "=q3=Austere Earthsiege Diamond", "=ds="..BabbleBoss["King Ymiron"] };
-		{ 2, "s55405", "41389", "=q3=Beaming Earthsiege Diamond", "=ds="..AL["Drop"]..""};
-		{ 3, "s55397", "41395", "=q3=Bracing Earthsiege Diamond", "=ds="..BabbleBoss["Ley-Guardian Eregos"] };
-		{ 4, "s55389", "41285", "=q3=Chaotic Skyflare Diamond", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
-		{ 5, "s55390", "41307", "=q3=Destructive Skyflare Diamond", "=ds="..AL["Drop"]..""};
-		{ 6, "s55384", "41377", "=q3=Effulgent Skyflare Diamond", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
-		{ 7, "s55392", "41333", "=q3=Ember Skyflare Diamond", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
-		{ 8, "s55393", "41335", "=q3=Enigmatic Skyflare Diamond", "=ds="..BabbleZone["Wintergrasp"].." 12 #wintergrasp#" };
-		{ 9, "s55398", "41396", "=q3=Eternal Earthsiege Diamond", "=ds="..BabbleBoss["Loken"] };
-		{ 10, "s55387", "41378", "=q3=Forlorn Skyflare Diamond", "=ds="..BabbleZone["Wintergrasp"].." 12 #wintergrasp#" };
-		{ 11, "s55388", "41379", "=q3=Impassive Skyflare Diamond", "=ds="..BabbleZone["Wintergrasp"].." 12 #wintergrasp#" };
-		{ 12, "s55396", "41401", "=q3=Insightful Earthsiege Diamond", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
-		{ 13, "s55404", "41385", "=q3=Invigorating Earthsiege Diamond", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
-		{ 14, "s55402", "41381", "=q3=Persistant Earthsiege Diamond", "=ds="..AL["Trainer"] };
-		{ 15, "s55399", "41397", "=q3=Powerful Earthsiege Diamond", "=ds="..AL["Trainer"] };
-		{ 16, "s55400", "41398", "=q3=Relentless Earthsiege Diamond", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
-		{ 17, "s55407", "41376", "=q3=Revitalizing Skyflare Diamond", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
-		{ 18, "s55394", "41339", "=q3=Swift Skyflare Diamond", "=ds="..AL["Trainer"] };
-		{ 19, "s55395", "41400", "=q3=Thundering Skyflare Diamond", "=ds="..AL["Drop"]..""};
-		{ 20, "s55386", "41375", "=q3=Tireless Skyflare Diamond", "=ds="..AL["Trainer"] };
-		{ 21, "s55403", "41382", "=q3=Trenchant Earthsiege Diamond", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
-		{ 22, "s46601", "35503", "=q3=Ember Skyfire Diamond", "=ds=#sr# 370"};
-		{ 23, "s46597", "35501", "=q3=Eternal Earthstorm Diamond", "=ds=#sr# 370"};
-		{ 24, "s32867", "25897", "=q3=Bracing Earthstorm Diamond", "=ds=#sr# 365"};
-		{ 25, "s32869", "25899", "=q3=Brutal Earthstorm Diamond", "=ds=#sr# 365"};
-		{ 26, "s44794", "34220", "=q3=Chaotic Skyfire Diamond", "=ds=#sr# 365"};
-		{ 27, "s32871", "25890", "=q3=Destructive Skyfire Diamond", "=ds=#sr# 365"};
-		{ 28, "s32874", "25895", "=q3=Enigmatic Skyfire Diamond", "=ds=#sr# 365"};
-		{ 29, "s32870", "25901", "=q3=Insightful Earthstorm Diamond", "=ds=#sr# 365"};
-		{ 30, "s32872", "25893", "=q3=Mystical Skyfire Diamond", "=ds=#sr# 365"};
-		Next = "JewelMeta2";
+	AtlasLoot_Data["JewelMetaWRATH"] = {
+		{ 1, "s55389", "41285", "=q3=Chaotic Skyflare Diamond", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
+		{ 2, "s55390", "41307", "=q3=Destructive Skyflare Diamond", "=ds="..AL["Drop"]..""};
+		{ 3, "s55384", "41377", "=q3=Effulgent Skyflare Diamond", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
+		{ 4, "s55392", "41333", "=q3=Ember Skyflare Diamond", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
+		{ 5, "s55393", "41335", "=q3=Enigmatic Skyflare Diamond", "=ds="..BabbleZone["Wintergrasp"].." 12 #wintergrasp#" };
+		{ 6, "s55387", "41378", "=q3=Forlorn Skyflare Diamond", "=ds="..BabbleZone["Wintergrasp"].." 12 #wintergrasp#" };
+		{ 7, "s55388", "41379", "=q3=Impassive Skyflare Diamond", "=ds="..BabbleZone["Wintergrasp"].." 12 #wintergrasp#" };
+		{ 8, "s55394", "41339", "=q3=Swift Skyflare Diamond", "=ds="..AL["Trainer"] };
+		{ 9, "s55395", "41400", "=q3=Thundering Skyflare Diamond", "=ds="..AL["Drop"]..""};
+		{ 10, "s55386", "41375", "=q3=Tireless Skyflare Diamond", "=ds="..AL["Trainer"] };
+		{ 16, "s55401", "41380", "=q3=Austere Earthsiege Diamond", "=ds="..BabbleBoss["King Ymiron"] };
+		{ 17, "s55405", "41389", "=q3=Beaming Earthsiege Diamond", "=ds="..AL["Drop"]..""};
+		{ 18, "s55397", "41395", "=q3=Bracing Earthsiege Diamond", "=ds="..BabbleBoss["Ley-Guardian Eregos"] };
+		{ 19, "s55398", "41396", "=q3=Eternal Earthsiege Diamond", "=ds="..BabbleBoss["Loken"] };
+		{ 20, "s55396", "41401", "=q3=Insightful Earthsiege Diamond", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
+		{ 21, "s55404", "41385", "=q3=Invigorating Earthsiege Diamond", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
+		{ 22, "s55402", "41381", "=q3=Persistant Earthsiege Diamond", "=ds="..AL["Trainer"] };
+		{ 23, "s55399", "41397", "=q3=Powerful Earthsiege Diamond", "=ds="..AL["Trainer"] };
+		{ 24, "s55400", "41398", "=q3=Relentless Earthsiege Diamond", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
+		{ 25, "s55403", "41382", "=q3=Trenchant Earthsiege Diamond", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"] };
+		Prev = "JewelMetaTBC";
+		Next = "JewelMetaTBC";
 		Back = "JEWELCRAFTINGMENU";
-	};
-
-	AtlasLoot_Data["JewelMeta2"] = {
-		{ 1, "s32866", "25896", "=q3=Powerful Earthstorm Diamond", "=ds=#sr# 365"};
-		{ 2, "s39961", "32409", "=q3=Relentless Earthstorm Diamond", "=ds=#sr# 365"};
-		{ 3, "s32873", "25894", "=q3=Swift Skyfire Diamond", "=ds=#sr# 365"};
-		{ 4, "s32868", "25898", "=q3=Tenacious Earthstorm Diamond", "=ds=#sr# 365"};
-		{ 5, "s39963", "32410", "=q3=Thundering Skyfire Diamond", "=ds=#sr# 365"};
-		Prev = "JewelMeta1";
-		Back = "JEWELCRAFTINGMENU";
+		Submenu = "Expansion";
 	};
 
 	AtlasLoot_Data["JewelPrismatic1"] = {
@@ -3422,7 +3690,7 @@ Type = "Crafting";
 		--- Leatherworking ---
 		----------------------
 
-	AtlasLoot_Data["LeatherLeatherArmorOld1"] = {
+	AtlasLoot_Data["LeatherLeatherArmorCLASSIC"] = {
 		{ 1, "s23709", "19162", "=q4=Corehound Belt", "=ds=#sr# 300"};
 		{ 2, "s22927", "18510", "=q4=Hide of the Wild", "=ds=#sr# 300"};
 		{ 3, "s23707", "19149", "=q4=Lava Belt", "=ds=#sr# 300"};
@@ -3453,12 +3721,13 @@ Type = "Crafting";
 		{ 28, "s19086", "15066", "=q3=Ironfeather Breastplate", "=ds=#sr# 290"};
 		{ 29, "s23703", "19044", "=q3=Might of the Timbermaw", "=ds=#sr# 290"};
 		{ 30, "s19078", "15060", "=q3=Living Leggings", "=ds=#sr# 285"};
-		Next = "LeatherLeatherArmorOld2";
+		Next = "LeatherLeatherArmorCLASSIC2";
 		Back = "LEATHERWORKINGMENU";
 		Type = "Crafting";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["LeatherLeatherArmorOld2"] = {
+	AtlasLoot_Data["LeatherLeatherArmorCLASSIC2"] = {
 		{ 1, "s19079", "15056", "=q3=Stormshroud Armor", "=ds=#sr# 285"};
 		{ 2, "s19080", "15065", "=q3=Warbear Woolies", "=ds=#sr# 285"};
 		{ 3, "s19067", "15057", "=q3=Stormshroud Pants", "=ds=#sr# 275"};
@@ -3489,13 +3758,14 @@ Type = "Crafting";
 		{ 28, "s19083", "15087", "=q2=Wicked Leather Pants", "=ds=#sr# 290"};
 		{ 29, "s19074", "15069", "=q2=Frostsaber Leggings", "=ds=#sr# 285"};
 		{ 30, "s19076", "15053", "=q2=Volcanic Breastplate", "=ds=#sr# 285"};
-		Prev = "LeatherLeatherArmorOld1";
-		Next = "LeatherLeatherArmorOld3";
+		Prev = "LeatherLeatherArmorCLASSIC";
+		Next = "LeatherLeatherArmorCLASSIC3";
 		Back = "LEATHERWORKINGMENU";
 		Type = "Crafting";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["LeatherLeatherArmorOld3"] = {
+	AtlasLoot_Data["LeatherLeatherArmorCLASSIC3"] = {
 		{ 1, "s19073", "15072", "=q2=Chimeric Leggings", "=ds=#sr# 280"};
 		{ 2, "s19072", "15093", "=q2=Runic Leather Belt", "=ds=#sr# 280"};
 		{ 3, "s19071", "15086", "=q2=Wicked Leather Headband", "=ds=#sr# 280"};
@@ -3526,13 +3796,14 @@ Type = "Crafting";
 		{ 28, "s9208", "7391", "=q2=Swift Boots", "=ds=#sr# 200"};
 		{ 29, "s9206", "7387", "=q2=Dusky Belt", "=ds=#sr# 195"};
 		{ 30, "s3777", "4260", "=q2=Guardian Leather Bracers", "=ds=#sr# 195"};
-		Prev = "LeatherLeatherArmorOld2";
-		Next = "LeatherLeatherArmorOld4";
+		Prev = "LeatherLeatherArmorCLASSIC2";
+		Next = "LeatherLeatherArmorCLASSIC4";
 		Back = "LEATHERWORKINGMENU";
 		Type = "Crafting";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["LeatherLeatherArmorOld4"] = {
+	AtlasLoot_Data["LeatherLeatherArmorCLASSIC4"] = {
 		{ 1, "s21943", "17721", "=q2=Gloves of the Greatfather", "=ds=#sr# 190"};
 		{ 2, "s9202", "7386", "=q2=Green Whelp Bracers", "=ds=#sr# 190"};
 		{ 3, "s6705", "5783", "=q2=Murloc Scale Bracers", "=ds=#sr# 190"};
@@ -3563,13 +3834,14 @@ Type = "Crafting";
 		{ 28, "s9145", "7348", "=q2=Fletcher's Gloves", "=ds=#sr# 125"};
 		{ 29, "s3767", "4250", "=q2=Hillman's Belt", "=ds=#sr# 120"};
 		{ 30, "s9074", "7285", "=q2=Nimble Leather Gloves", "=ds=#sr# 120"};
-		Prev = "LeatherLeatherArmorOld3";
-		Next = "LeatherLeatherArmorOld5";
+		Prev = "LeatherLeatherArmorCLASSIC3";
+		Next = "LeatherLeatherArmorCLASSIC5";
 		Back = "LEATHERWORKINGMENU";
 		Type = "Crafting";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["LeatherLeatherArmorOld5"] = {
+	AtlasLoot_Data["LeatherLeatherArmorCLASSIC5"] = {
 		{ 1, "s9072", "7284", "=q2=Red Whelp Gloves", "=ds=#sr# 120"};
 		{ 2, "s3765", "4248", "=q2=Dark Leather Gloves", "=ds=#sr# 120"};
 		{ 3, "s7135", "5961", "=q2=Dark Leather Pants", "=ds=#sr# 115"};
@@ -3600,23 +3872,25 @@ Type = "Crafting";
 		{ 28, "s3756", "4239", "=q1=Embossed Leather Gloves", "=ds=#sr# 55"};
 		{ 29, "s3753", "4237", "=q1=Handstitched Leather Belt", "=ds=#sr# 25"};
 		{ 30, "s2153", "2303", "=q1=Handstitched Leather Pants", "=ds=#sr# 15"};
-		Prev = "LeatherLeatherArmorOld4";
-		Next = "LeatherLeatherArmorOld6";
+		Prev = "LeatherLeatherArmorCLASSIC4";
+		Next = "LeatherLeatherArmorCLASSIC6";
 		Back = "LEATHERWORKINGMENU";
 		Type = "Crafting";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["LeatherLeatherArmorOld6"] = {
+	AtlasLoot_Data["LeatherLeatherArmorCLASSIC6"] = {
 		{ 1, "s2149", "2302", "=q1=Handstitched Leather Boots", "=ds=#sr# 1"};
 		{ 2, "s9059", "7277", "=q1=Handstitched Leather Bracers", "=ds=#sr# 1"};
 		{ 3, "s9058", "7276", "=q1=Handstitched Leather Cloak", "=ds=#sr# 1"};
 		{ 4, "s7126", "5957", "=q1=Handstitched Leather Vest", "=ds=#sr# 1"};
-		Prev = "LeatherLeatherArmorOld5";
+		Prev = "LeatherLeatherArmorCLASSIC5";
 		Back = "LEATHERWORKINGMENU";
 		Type = "Crafting";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["LeatherLeatherArmorBC1"] = {
+	AtlasLoot_Data["LeatherLeatherArmorTBC"] = {
 		{ 1, "s36351", "30040", "=q4=Belt of Deep Shadow", "=ds=#sr# 375"};
 		{ 2, "s36349", "30042", "=q4=Belt of Natural Power", "=ds=#sr# 375"};
 		{ 3, "s36355", "30041", "=q4=Boots of Natural Grace", "=ds=#sr# 375"};
@@ -3647,12 +3921,13 @@ Type = "Crafting";
 		{ 28, "s35560", "29504", "=q4=Windscale Hood", "=ds=#sr# 365"};
 		{ 29, "s35563", "29507", "=q4=Windslayer Wraps", "=ds=#sr# 365"};
 		{ 30, "s32495", "25689", "=q3=Heavy Clefthoof Vest", "=ds=#sr# 360"};
-		Next = "LeatherLeatherArmorBC2";
+		Next = "LeatherLeatherArmorTBC2";
 		Back = "LEATHERWORKINGMENU";
 		Type = "Crafting";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["LeatherLeatherArmorBC2"] = {
+	AtlasLoot_Data["LeatherLeatherArmorTBC2"] = {
 		{ 1, "s32497", "25691", "=q3=Heavy Clefthoof Boots", "=ds=#sr# 355"};
 		{ 2, "s32496", "25690", "=q3=Heavy Clefthoof Leggings", "=ds=#sr# 355"};
 		{ 3, "s35537", "29500", "=q3=Blastguard Belt", "=ds=#sr# 350"};
@@ -3676,12 +3951,13 @@ Type = "Crafting";
 		{ 21, "s32479", "25674", "=q2=Wild Draenish Gloves", "=ds=#sr# 310"};
 		{ 22, "s32470", "25669", "=q2=Thick Draenic Gloves", "=ds=#sr# 300"};
 		{ 23, "s32478", "25673", "=q2=Wild Draenish Boots", "=ds=#sr# 300"};
-		Prev = "LeatherLeatherArmorBC1";
+		Prev = "LeatherLeatherArmorTBC";
 		Back = "LEATHERWORKINGMENU";
 		Type = "Crafting";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["LeatherLeatherArmorWrath1"] = {
+	AtlasLoot_Data["LeatherLeatherArmorWRATH"] = {
         { 1, "s70556", "49899", "=q4=Bladeborn Leggings", "=ds="..AL["Vendor"]..""};
         { 2, "s70555", "49894", "=q4=Blessed Cenarion Boots", "=ds="..AL["Vendor"]..""};
         { 3, "s70557", "49895", "=q4=Footpads of Impending Death", "=ds="..AL["Vendor"]..""};
@@ -3712,12 +3988,13 @@ Type = "Crafting";
 		{ 28, "s60703", "43434", "=q3=Eviscerator's Chestguard", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"]};
 		{ 29, "s60704", "43435", "=q3=Eviscerator's Bindings", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"]};
 		{ 30, "s60705", "43436", "=q3=Eviscerator's Gauntlets", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"]};
-		Next = "LeatherLeatherArmorWrath2";
+		Next = "LeatherLeatherArmorWRATH2";
 		Back = "LEATHERWORKINGMENU";
 		Type = "Crafting";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["LeatherLeatherArmorWrath2"] = {
+	AtlasLoot_Data["LeatherLeatherArmorWRATH2"] = {
         { 1, "s60706", "43437", "=q3=Eviscerator's Waistguard", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"]};
 		{ 2, "s60711", "43438", "=q3=Eviscerator's Legguards", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"]};
 		{ 3, "s60712", "43439", "=q3=Eviscerator's Treads", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"]};
@@ -3748,13 +4025,14 @@ Type = "Crafting";
 		{ 28, "s50949", "38405", "=q2=Arctic Belt", "=ds="..AL["Trainer"]};
 		{ 29, "s50945", "38401", "=q2=Arctic Leggings", "=ds="..AL["Trainer"]};
 		{ 30, "s50948", "38404", "=q2=Arctic Boots", "=ds="..AL["Trainer"]};
-		Prev = "LeatherLeatherArmorWrath1";
-		Next = "LeatherLeatherArmorWrath3";
+		Prev = "LeatherLeatherArmorWRATH";
+		Next = "LeatherLeatherArmorWRATH3";
 		Back = "LEATHERWORKINGMENU";
 		Type = "Crafting";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["LeatherLeatherArmorWrath3"] = {
+	AtlasLoot_Data["LeatherLeatherArmorWRATH3"] = {
         { 1, "s60608", "38438", "=q2=Iceborne Helm", "=ds="..AL["Trainer"]};
 		{ 2, "s50940", "38411", "=q2=Iceborne Shoulderpads", "=ds="..AL["Trainer"]};
 		{ 3, "s50938", "38408", "=q2=Iceborne Chestguard", "=ds="..AL["Trainer"]};
@@ -3763,12 +4041,13 @@ Type = "Crafting";
 		{ 6, "s50943", "38406", "=q2=Iceborne Belt", "=ds="..AL["Trainer"]};
 		{ 7, "s50939", "38410", "=q2=Iceborne Leggings", "=ds="..AL["Trainer"]};
 		{ 8, "s50942", "38407", "=q2=Iceborne Boots", "=ds="..AL["Trainer"]};
-		Prev = "LeatherLeatherArmorWrath2";
+		Prev = "LeatherLeatherArmorWRATH2";
 		Back = "LEATHERWORKINGMENU";
 		Type = "Crafting";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["LeatherMailArmorOld1"] = {
+	AtlasLoot_Data["LeatherMailArmorCLASSIC"] = {
 		{ 1, "s28224", "22665", "=q4=Icy Scale Bracers", "=ds=#sr# 300"};
 		{ 2, "s28222", "22664", "=q4=Icy Scale Breastplate", "=ds=#sr# 300"};
 		{ 3, "s28223", "22666", "=q4=Icy Scale Gauntlets", "=ds=#sr# 300"};
@@ -3799,12 +4078,13 @@ Type = "Crafting";
 		{ 28, "s19088", "15080", "=q2=Heavy Scorpid Helm", "=ds=#sr# 295"};
 		{ 29, "s19075", "15079", "=q2=Heavy Scorpid Leggings", "=ds=#sr# 285"};
 		{ 30, "s19070", "15082", "=q2=Heavy Scorpid Belt", "=ds=#sr# 280"};
-		Next = "LeatherMailArmorOld2";
+		Next = "LeatherMailArmorCLASSIC2";
 		Back = "LEATHERWORKINGMENU";
 		Type = "Crafting";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["LeatherMailArmorOld2"] = {
+	AtlasLoot_Data["LeatherMailArmorCLASSIC2"] = {
 		{ 1, "s19064", "15078", "=q2=Heavy Scorpid Gauntlets", "=ds=#sr# 275"};
 		{ 2, "s19051", "15076", "=q2=Heavy Scorpid Vest", "=ds=#sr# 265"};
 		{ 3, "s19048", "15077", "=q2=Heavy Scorpid Bracers", "=ds=#sr# 255"};
@@ -3820,12 +4100,13 @@ Type = "Crafting";
 		{ 13, "s10518", "8198", "=q2=Turtle Scale Bracers", "=ds=#sr# 210"};
 		{ 14, "s10511", "8189", "=q2=Turtle Scale Breastplate", "=ds=#sr# 210"};
 		{ 15, "s10509", "8187", "=q2=Turtle Scale Gloves", "=ds=#sr# 205"};
-		Prev = "LeatherMailArmorOld1";
+		Prev = "LeatherMailArmorCLASSIC";
 		Back = "LEATHERWORKINGMENU";
 		Type = "Crafting";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["LeatherMailArmorBC1"] = {
+	AtlasLoot_Data["LeatherMailArmorTBC"] = {
 		{ 1, "s40002", "32397", "=q4=Waistguard of Shackled Souls", "=ds=#sr# 375"};
 		{ 2, "s41162", "32575", "=q4=Shoulders of Lightning Reflexes", "=ds=#sr# 375"};
 		{ 3, "s35582", "29520", "=q4=Netherstrike Belt", "=ds=#sr# 375"};
@@ -3856,12 +4137,13 @@ Type = "Crafting";
 		{ 28, "s35567", "29512", "=q4=Earthen Netherscale Boots", "=ds=#sr# 365"};
 		{ 29, "s32499", "25697", "=q3=Felstalker Bracer", "=ds=#sr# 360"};
 		{ 30, "s32500", "25696", "=q3=Felstalker Breastplate", "=ds=#sr# 360"};
-		Next = "LeatherMailArmorBC2";
+		Next = "LeatherMailArmorTBC2";
 		Back = "LEATHERWORKINGMENU";
 		Type = "Crafting";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["LeatherMailArmorBC2"] = {
+	AtlasLoot_Data["LeatherMailArmorTBC2"] = {
 		{ 1, "s32487", "25681", "=q3=Stylin' Adventure Hat", "=ds=#sr# 350"};
 		{ 2, "s32488", "25683", "=q3=Stylin' Crimson Hat", "=ds=#sr# 350"};
 		{ 3, "s32498", "25695", "=q3=Felstalker Belt", "=ds=#sr# 350"};
@@ -3883,12 +4165,13 @@ Type = "Crafting";
 		{ 19, "s32463", "25655", "=q2=Felscale Boots", "=ds=#sr# 310"};
 		{ 20, "s32466", "25662", "=q2=Scaled Draenic Pants", "=ds=#sr# 300"};
 		{ 21, "s32462", "25654", "=q2=Felscale Gloves", "=ds=#sr# 300"};
-		Prev = "LeatherMailArmorBC1";
+		Prev = "LeatherMailArmorTBC";
 		Back = "LEATHERWORKINGMENU";
 		Type = "Crafting";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["LeatherMailArmorWrath1"] = {
+	AtlasLoot_Data["LeatherMailArmorWRATH"] = {
         { 1, "s70560", "49901", "=q4=Draconic Bonesplinter Legguards", "=ds="..AL["Vendor"]..""};
         { 2, "s70559", "49896", "=q4=Earthsoul Boots", "=ds="..AL["Vendor"]..""};
         { 3, "s70558", "49900", "=q4=Lightning-Infused Leggings", "=ds="..AL["Vendor"]..""};
@@ -3919,12 +4202,13 @@ Type = "Crafting";
 		{ 28, "s60732", "43446", "=q3=Swiftarrow Gauntlets", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"]};
 		{ 29, "s60734", "43442", "=q3=Swiftarrow Belt", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"]};
 		{ 30, "s60735", "43448", "=q3=Swiftarrow Leggings", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"]};
-		Next = "LeatherMailArmorWrath2";
+		Next = "LeatherMailArmorWRATH2";
 		Back = "LEATHERWORKINGMENU";
 		Type = "Crafting";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["LeatherMailArmorWrath2"] = {
+	AtlasLoot_Data["LeatherMailArmorWRATH2"] = {
         { 1, "s60737", "43443", "=q3=Swiftarrow Boots", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"]};
 		{ 2, "s60743", "43455", "=q3=Stormhide Crown", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"]};
 		{ 3, "s60746", "43457", "=q3=Stormhide Shoulders", "=ds="..AL["Vendor"]..", "..BabbleZone["Dalaran"]};
@@ -3955,22 +4239,24 @@ Type = "Crafting";
 		{ 28, "s50954", "38413", "=q2=Frostscale Boots", "=ds="..AL["Trainer"]};
 		{ 29, "s60624", "38439", "=q2=Nerubian Helm", "=ds="..AL["Trainer"]};
 		{ 30, "s50958", "38417", "=q2=Nerubian Shoulders", "=ds="..AL["Trainer"]};
-		Prev = "LeatherMailArmorWrath1";
-		Next = "LeatherMailArmorWrath3";
+		Prev = "LeatherMailArmorWRATH";
+		Next = "LeatherMailArmorWRATH3";
 		Back = "LEATHERWORKINGMENU";
 		Type = "Crafting";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["LeatherMailArmorWrath3"] = {
+	AtlasLoot_Data["LeatherMailArmorWRATH3"] = {
         { 1, "s50956", "38420", "=q2=Nerubian Chestguard", "=ds="..AL["Trainer"]};
 		{ 2, "s60622", "38435", "=q2=Nerubian Bracers", "=ds="..AL["Trainer"]};
 		{ 3, "s50959", "38421", "=q2=Nerubian Gloves", "=ds="..AL["Trainer"]};
 		{ 4, "s50961", "38418", "=q2=Nerubian Belt", "=ds="..AL["Trainer"]};
 		{ 5, "s50957", "38422", "=q2=Nerubian Legguards", "=ds="..AL["Trainer"]};
 		{ 6, "s50960", "38419", "=q2=Nerubian Boots", "=ds="..AL["Trainer"]};
-		Prev = "LeatherMailArmorWrath2";
+		Prev = "LeatherMailArmorWRATH2";
 		Back = "LEATHERWORKINGMENU";
 		Type = "Crafting";
+		Submenu = "Expansion";
 	};
 
 	AtlasLoot_Data["LeatherCloaks1"] = {
@@ -4183,7 +4469,7 @@ Type = "Crafting";
 		--- Tailoring ---
 		-----------------
 
-	AtlasLoot_Data["TailoringArmorOld1"] = {
+	AtlasLoot_Data["TailoringArmorCLASSIC"] = {
 		{ 1, "s22866", "18405", "=q4=Belt of the Archmage", "=ds=#sr# 300"};
 		{ 2, "s20849", "16979", "=q4=Flarecore Gloves", "=ds=#sr# 300"};
 		{ 3, "s23667", "19165", "=q4=Flarecore Leggings", "=ds=#sr# 300"};
@@ -4214,12 +4500,13 @@ Type = "Crafting";
 		{ 28, "s18447", "14138", "=q3=Mooncloth Vest", "=ds=#sr# 300"};
 		{ 29, "s24902", "20539", "=q3=Runed Stygian Belt", "=ds=#sr# 300"};
 		{ 30, "s24903", "20537", "=q3=Runed Stygian Boots", "=ds=#sr# 300"};
-		Next = "TailoringArmorOld2";
+		Next = "TailoringArmorCLASSIC2";
 		Back = "TAILORINGMENU";
 		Type = "Crafting";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["TailoringArmorOld2"] = {
+	AtlasLoot_Data["TailoringArmorCLASSIC2"] = {
 		{ 1, "s24901", "20538", "=q3=Runed Stygian Leggings", "=ds=#sr# 300"};
 		{ 2, "s28481", "22757", "=q3=Sylvan Crown", "=ds=#sr# 300"};
 		{ 3, "s28482", "22758", "=q3=Sylvan Shoulders", "=ds=#sr# 300"};
@@ -4250,13 +4537,14 @@ Type = "Crafting";
 		{ 28, "s18438", "13865", "=q2=Runecloth Pants", "=ds=#sr# 285"};
 		{ 29, "s18434", "14045", "=q2=Cindercloth Pants", "=ds=#sr# 280"};
 		{ 30, "s18424", "13871", "=q2=Frostweave Pants", "=ds=#sr# 280"};
-		Next = "TailoringArmorOld3";
-		Prev = "TailoringArmorOld1";
+		Next = "TailoringArmorCLASSIC3";
+		Prev = "TailoringArmorCLASSIC";
 		Back = "TAILORINGMENU";
 		Type = "Crafting";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["TailoringArmorOld3"] = {
+	AtlasLoot_Data["TailoringArmorCLASSIC3"] = {
 		{ 1, "s18423", "13864", "=q2=Runecloth Boots", "=ds=#sr# 280"};
 		{ 2, "s18420", "14103", "=q2=Brightcloth Cloak", "=ds=#sr# 275"};
 		{ 3, "s18418", "14044", "=q2=Cindercloth Cloak", "=ds=#sr# 275"};
@@ -4287,13 +4575,14 @@ Type = "Crafting";
 		{ 28, "s12076", "10028", "=q2=Shadoweave Shoulders", "=ds=#sr# 235"};
 		{ 29, "s12073", "10026", "=q2=Black Mageweave Boots", "=ds=#sr# 230"};
 		{ 30, "s12072", "10024", "=q2=Black Mageweave Headband", "=ds=#sr# 230"};
-		Next = "TailoringArmorOld4";
-		Prev = "TailoringArmorOld2";
+		Next = "TailoringArmorCLASSIC4";
+		Prev = "TailoringArmorCLASSIC2";
 		Back = "TAILORINGMENU";
 		Type = "Crafting";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["TailoringArmorOld4"] = {
+	AtlasLoot_Data["TailoringArmorCLASSIC4"] = {
 		{ 1, "s12074", "10027", "=q2=Black Mageweave Shoulders", "=ds=#sr# 230"};
 		{ 2, "s12069", "10042", "=q2=Cindercloth Robe", "=ds=#sr# 225"};
 		{ 3, "s12066", "10018", "=q2=Red Mageweave Gloves", "=ds=#sr# 225"};
@@ -4324,13 +4613,14 @@ Type = "Crafting";
 		{ 28, "s8764", "7051", "=q2=Earthen Vest", "=ds=#sr# 170"};
 		{ 29, "s3858", "4323", "=q2=Shadow Hood", "=ds=#sr# 170"};
 		{ 30, "s3857", "4322", "=q2=Enchanter's Cowl", "=ds=#sr# 165"};
-		Next = "TailoringArmorOld5";
-		Prev = "TailoringArmorOld3";
+		Next = "TailoringArmorCLASSIC5";
+		Prev = "TailoringArmorCLASSIC3";
 		Back = "TAILORINGMENU";
 		Type = "Crafting";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["TailoringArmorOld5"] = {
+	AtlasLoot_Data["TailoringArmorCLASSIC5"] = {
 		{ 1, "s8784", "7065", "=q2=Green Silk Armor", "=ds=#sr# 165"};
 		{ 2, "s3859", "4324", "=q2=Azure Silk Vest", "=ds=#sr# 150"};
 		{ 3, "s6692", "5770", "=q2=Robes of Arcana", "=ds=#sr# 150"};
@@ -4361,13 +4651,14 @@ Type = "Crafting";
 		{ 28, "s7629", "6239", "=q2=Red Linen Vest", "=ds=#sr# 55"};
 		{ 29, "s2389", "2572", "=q2=Red Linen Robe", "=ds=#sr# 40"};
 		{ 30, "s7623", "6238", "=q2=Brown Linen Robe", "=ds=#sr# 30"};
-		Next = "TailoringArmorOld6";
-		Prev = "TailoringArmorOld4";
+		Next = "TailoringArmorCLASSIC6";
+		Prev = "TailoringArmorCLASSIC4";
 		Back = "TAILORINGMENU";
 		Type = "Crafting";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["TailoringArmorOld6"] = {
+	AtlasLoot_Data["TailoringArmorCLASSIC6"] = {
 		{ 1, "s7624", "6241", "=q2=White Linen Robe", "=ds=#sr# 30"};
 		{ 2, "s49677", "6836", "=q1=Dress Shoes", "=ds="..AL["Vendor"]..""};
 		{ 3, "s50644", "38277", "=q1=Haliscan Jacket", "=ds="..AL["Vendor"]..""};
@@ -4398,22 +4689,24 @@ Type = "Crafting";
 		{ 28, "s3914", "4343", "=q1=Brown Linen Pants", "=ds=#sr# 30"};
 		{ 29, "s12045", "10046", "=q1=Simple Linen Boots", "=ds=#sr# 20"};
 		{ 30, "s8776", "7026", "=q1=Linen Belt", "=ds=#sr# 15"};
-		Prev = "TailoringArmorOld5";
-		Next = "TailoringArmorOld7";
+		Prev = "TailoringArmorCLASSIC5";
+		Next = "TailoringArmorCLASSIC7";
 		Back = "TAILORINGMENU";
 		Type = "Crafting";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["TailoringArmorOld7"] = {
+	AtlasLoot_Data["TailoringArmorCLASSIC7"] = {
 		{ 1, "s2385", "2568", "=q1=Brown Linen Vest", "=ds=#sr# 10"};
 		{ 2, "s2387", "2570", "=q1=Linen Cloak", "=ds=#sr# 1"};
 		{ 3, "s12044", "10045", "=q1=Simple Linen Pants", "=ds=#sr# 1"};
-		Prev = "TailoringArmorOld6";
+		Prev = "TailoringArmorCLASSIC6";
 		Back = "TAILORINGMENU";
 		Type = "Crafting";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["TailoringArmorBC1"] = {
+	AtlasLoot_Data["TailoringArmorTBC"] = {
 		{ 1, "s31456", "24267", "=q4=Battlecast Hood", "=ds=#sr# 375"};
 		{ 2, "s31453", "24263", "=q4=Battlecast Pants", "=ds=#sr# 375"};
 		{ 3, "s36315", "30038", "=q4=Belt of Blasting", "=ds=#sr# 375"};
@@ -4444,12 +4737,13 @@ Type = "Crafting";
 		{ 28, "s31450", "24260", "=q4=Manaweave Cloak", "=ds=#sr# 365"};
 		{ 29, "s26761", "21874", "=q4=Primal Mooncloth Shoulders", "=ds=#sr# 365"};
 		{ 30, "s31448", "24258", "=q4=Resolute Cape", "=ds=#sr# 365"};
-		Next = "TailoringArmorBC2";
+		Next = "TailoringArmorTBC2";
 		Back = "TAILORINGMENU";
 		Type = "Crafting";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["TailoringArmorBC2"] = {
+	AtlasLoot_Data["TailoringArmorTBC2"] = {
 		{ 1, "s46131", "34365", "=q4=Robe of Eternal Light", "=ds=#sr# 365"};
 		{ 2, "s26780", "21864", "=q4=Soulcloth Shoulders", "=ds=#sr# 365"};
 		{ 3, "s26753", "21847", "=q4=Spellfire Gloves", "=ds=#sr# 365"};
@@ -4480,24 +4774,26 @@ Type = "Crafting";
 		{ 28, "s26775", "21859", "=q3=Imbued Netherweave Pants", "=ds=#sr# 340"};
 		{ 29, "s26774", "21855", "=q2=Netherweave Tunic", "=ds=#sr# 345"};
 		{ 30, "s26773", "21854", "=q2=Netherweave Robe", "=ds=#sr# 340"};
-		Prev = "TailoringArmorBC1";
-		Next = "TailoringArmorBC3";
+		Prev = "TailoringArmorTBC";
+		Next = "TailoringArmorTBC3";
 		Back = "TAILORINGMENU";
 		Type = "Crafting";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["TailoringArmorBC3"] = {
+	AtlasLoot_Data["TailoringArmorTBC3"] = {
 		{ 1, "s26772", "21853", "=q2=Netherweave Boots", "=ds=#sr# 335"};
 		{ 2, "s26771", "21852", "=q2=Netherweave Pants", "=ds=#sr# 325"};
 		{ 3, "s26770", "21851", "=q2=Netherweave Gloves", "=ds=#sr# 320"};
 		{ 4, "s26765", "21850", "=q2=Netherweave Belt", "=ds=#sr# 310"};
 		{ 5, "s26764", "21849", "=q2=Netherweave Bracers", "=ds=#sr# 310"};
-		Prev = "TailoringArmorBC2";
+		Prev = "TailoringArmorTBC2";
 		Back = "TAILORINGMENU";
 		Type = "Crafting";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["TailoringArmorWotLK1"] = {
+	AtlasLoot_Data["TailoringArmorWRATH"] = {
         { 1, "s70551", "49890", "=q4=Deathfrost Boots", "=ds="..AL["Vendor"]..""};
         { 2, "s70550", "49891", "=q4=Leggings of Woven Death", "=ds="..AL["Vendor"]..""};
         { 3, "s70552", "49892", "=q4=Lightweave Leggings", "=ds="..AL["Vendor"]..""};
@@ -4528,12 +4824,13 @@ Type = "Crafting";
 		{ 28, "s56021", "42093", "=q3=Frostmoon Pants", "=ds="..AL["Trainer"] };
 		{ 29, "s56018", "41984", "=q3=Hat of Wintry Doom", "=ds="..AL["Trainer"] };
 		{ 30, "s56023", "42096", "=q3=Aurora Slippers", "=ds="..AL["Trainer"] };
-		Next = "TailoringArmorWotLK2";
+		Next = "TailoringArmorWRATH2";
 		Back = "TAILORINGMENU";
 		Type = "Crafting";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["TailoringArmorWotLK2"] = {
+	AtlasLoot_Data["TailoringArmorWRATH2"] = {
         { 1, "s56020", "41986", "=q3=Deep Frozen Cord", "=ds="..AL["Trainer"] };
 		{ 2, "s59585", "43970", "=q3=Frostsavage Boots", "=ds="..AL["Trainer"] };
 		{ 3, "s59589", "43971", "=q3=Frostsavage Cowl", "=ds="..AL["Trainer"] };
@@ -4564,13 +4861,14 @@ Type = "Crafting";
 		{ 28, "s55919", "41546", "=q2=Duskweave Cowl", "=ds="..AL["Trainer"] };
 		{ 29, "s55901", "41548", "=q2=Duskweave Leggings", "=ds="..AL["Trainer"] };
 		{ 30, "s55907", "41521", "=q2=Frostwoven Cowl", "=ds="..AL["Trainer"] };
-		Prev = "TailoringArmorWotLK1";
-		Next = "TailoringArmorWotLK3";
+		Prev = "TailoringArmorWRATH";
+		Next = "TailoringArmorWRATH3";
 		Back = "TAILORINGMENU";
 		Type = "Crafting";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["TailoringArmorWotLK3"] = {
+	AtlasLoot_Data["TailoringArmorWRATH3"] = {
         { 1, "s56030", "41519", "=q2=Frostwoven Leggings", "=ds="..AL["Trainer"] };
 		{ 2, "s55906", "41520", "=q2=Frostwoven Boots", "=ds="..AL["Trainer"] };
 		{ 3, "s55908", "41522", "=q2=Frostwoven Belt", "=ds="..AL["Trainer"] };
@@ -4578,9 +4876,10 @@ Type = "Crafting";
 		{ 5, "s55903", "41515", "=q2=Frostwoven Robe", "=ds="..AL["Trainer"] };
 		{ 6, "s55902", "41513", "=q2=Frostwoven Shoulders", "=ds="..AL["Trainer"] };
 		{ 7, "s56031", "41512", "=q2=Frostwoven Wriststraps", "=ds="..AL["Trainer"] };
-		Prev = "TailoringArmorWotLK2";
+		Prev = "TailoringArmorWRATH2";
 		Back = "TAILORINGMENU";
 		Type = "Crafting";
+		Submenu = "Expansion";
 	};
 
 	AtlasLoot_Data["TailoringBags1"] = {
@@ -5389,12 +5688,12 @@ Type = "Crafting";
 		{ 3, 21871, "", "=q4=Frozen Shadoweave Vest", "=ds=#s5#, #a1#"};
 		{ 4, 21870, "", "=q4=Frozen Shadoweave Boots", "=ds=#s12#, #a1#"};
 		Prev = "TailoringPrimalMoon";
-		Next = "TailoringSpellfireWrath";
+		Next = "TailoringSpellfireWRATH";
 		Back = "CRAFTSET4";
 		Type = "Crafting";
 	};
 
-	AtlasLoot_Data["TailoringSpellfireWrath"] = {
+	AtlasLoot_Data["TailoringSpellfireWRATH"] = {
 		{ 1, 0, "INV_Fabric_Linen_02", "=q6=#crafttsf1#", "=q1=#p21#"};
 		{ 2, 21848, "", "=q4=Spellfire Robe", "=ds=#s5#, #a1#"};
 		{ 3, 21847, "", "=q4=Spellfire Gloves", "=ds=#s9#, #a1#"};
@@ -5415,7 +5714,7 @@ Type = "Crafting";
 		{ 7, 41522, "", "=q2=Frostwoven Belt", "=ds=#s10#, #a1#"};
 		{ 8, 41519, "", "=q2=Frostwoven Leggings", "=ds=#s11#, #a1#"};
 		{ 9, 41520, "", "=q2=Frostwoven Boots", "=ds=#s12#, #a1#"};
-		Prev = "TailoringSpellfireWrath";
+		Prev = "TailoringSpellfireWRATH";
 		Next = "TailoringDuskweaver";
 		Back = "CRAFTSET4";
 		Type = "Crafting";
