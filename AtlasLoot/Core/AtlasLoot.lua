@@ -703,9 +703,9 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 			end
 
 			if(toShow) then
-				IDfound = AL_FindId(string.sub(dataSource[dataID][i][4], 5), ItemindexID) or dataSource[dataID][i][2];
+				IDfound = AL_FindId(dataSource[dataID][i][2], ItemindexID) or dataSource[dataID][i][2];
 					if ((dataID == "SearchResult") or (dataID == "WishList")) then
-						IDfound = AL_FindId(string.sub(dataSource[dataID][i][4], 5), dataSource[dataID][i][AtlasLoot_Difficulty.DIF_SEARCH]) or dataSource[dataID][i][2];
+						IDfound = AL_FindId(dataSource[dataID][i][2], dataSource[dataID][i][AtlasLoot_Difficulty.DIF_SEARCH]) or dataSource[dataID][i][2];
 					end
 
 				if string.sub(IDfound, 1, 1) == "s" then
@@ -717,8 +717,6 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 				if isItem then
 					if ItemindexID == "Bloodforged" then
 						IDfound = "60"..dataSource[dataID][i][2];
-					elseif ItemindexID == 2 then
-						IDfound = dataSource[dataID][i][2];
 					else
 					--Sets ItemindexID to normal(2) if it is nil for min/max difficulties.
 						if not tonumber(ItemindexID) then ItemindexID = AtlasLoot_Difficulty.Normal end;
@@ -730,15 +728,15 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 
 						if dataSource[dataID][i][AtlasLoot_Difficulty.DUPLICATE] then
 							--Used if an item has more then 1 version with the same name eg Atiesh
-							IDfound = AL_FindId(string.sub(dataSource[dataID][i][4], 5) .. " " .. dataSource[dataID][i][AtlasLoot_Difficulty.DUPLICATE], ItemindexID) or dataSource[dataID][i][2];
+							IDfound = AL_FindId(dataSource[dataID][i][2], ItemindexID) or dataSource[dataID][i][2];
 							if ((dataID == "SearchResult") or (dataID == "WishList")) then
-								IDfound = AL_FindId(string.sub(dataSource[dataID][i][4], 5), dataSource[dataID][i][AtlasLoot_Difficulty.DIF_SEARCH]) or dataSource[dataID][i][2];
+								IDfound = AL_FindId(dataSource[dataID][i][2], dataSource[dataID][i][AtlasLoot_Difficulty.DIF_SEARCH]) or dataSource[dataID][i][2];
 							end
 						else
 							--If something was found in itemID database show that if not show default table item
-							IDfound = AL_FindId(string.sub(dataSource[dataID][i][4], 5), ItemindexID) or dataSource[dataID][i][2];
+							IDfound = AL_FindId(dataSource[dataID][i][2], ItemindexID) or dataSource[dataID][i][2];
 							if ((dataID == "SearchResult") or (dataID == "WishList")) then
-								IDfound = AL_FindId(string.sub(dataSource[dataID][i][4], 5), dataSource[dataID][i][AtlasLoot_Difficulty.DIF_SEARCH]) or dataSource[dataID][i][2];
+								IDfound = AL_FindId(dataSource[dataID][i][2], dataSource[dataID][i][AtlasLoot_Difficulty.DIF_SEARCH]) or dataSource[dataID][i][2];
 							end
 						end
 					end
@@ -1449,13 +1447,13 @@ function AtlasLoot_AddTooltip(frameb, tooltiptext)
 end
 
 --[[
-AL_FindId(name, difficulty)
-Finds the Ids of other difficulties based on the name of the item and the difficulty parameter given.
-On the form of {Name, {normal, heroic, mythic, mythic1, mythic2, ... ,mythicN}}
+AL_FindId(id, difficulty)
+Finds the Ids of other difficulties based on the normal id of the item and the difficulty parameter given.
+On the form of {ID, {normal, heroic, mythic, mythic1, mythic2, ... ,mythicN}}
 ]]
-function AL_FindId(name, difficulty)
-	if ItemIDsDatabase[name] ~= nil then
-		return ItemIDsDatabase[name][difficulty], true
+function AL_FindId(id, difficulty)
+	if ItemIDsDatabase[id] ~= nil then
+		return ItemIDsDatabase[id][difficulty], true
 	end
 	return nil, false;
 end
