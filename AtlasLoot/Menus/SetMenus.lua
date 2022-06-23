@@ -51,7 +51,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 4, "EMBLEMOFVALORMENU", "Spell_Holy_ProclaimChampion_02", "=ds="..AL["Emblem of Valor Rewards"], "=q5="..AL["Wrath of the Lich King"]};
 		{ 5, "EMBLEMOFHEROISMMENU", "Spell_Holy_ProclaimChampion", "=ds="..AL["Emblem of Heroism Rewards"], "=q5="..AL["Wrath of the Lich King"]};
 		{ 7, "Heirloom", "INV_Sword_43", "=ds="..AL["Heirloom"], ""};
-		{ 8, "WorldEpicsWrath1", "INV_Sword_109", "=ds=".."World Epics", ""};
+		{ 8, "WorldEpicsWrath", "INV_Sword_109", "=ds=".."World Epics", ""};
 		{ 9, "SETSWRATHOFLICHKING", "inv_misc_monsterscales_15", "=ds="..AL["Wrath of the Lich King Sets"], ""};
 		{ 10, "Legendaries", "INV_Staff_Medivh", "=ds="..AL["Legendary Items"], ""};
 		{ 16, "T7T8SET", "INV_Chest_Chain_15", "=ds="..AL["Tier 7/8 Sets"], "=q5="..AL["10/25 Man"]};

@@ -6115,6 +6115,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 25, 1168, "", "=q4=Skullflame Shield", "=ds=#w8#", "", ""};
 		{ 26, 2099, "", "=q4=Dwarven Hand Cannon", "=ds=#w5#", "", ""};
 		Back = "SETMENUCLASSIC";
+		Type = "ClassicDungeonExt";
 	};
 
 	-----------

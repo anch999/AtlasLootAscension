@@ -11273,7 +11273,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		--- BoE World Epics ---
 		-----------------------
 
-	AtlasLoot_Data["WorldEpicsWrath1"] = {
+	AtlasLoot_Data["WorldEpicsWrath"] = {
 		{ 1, 44309, "", "=q4=Sash of Jordan", "=ds=#s10#, #a1#"};
 		{ 2, 44312, "", "=q4=Wapach's Spaulders of Solidarity", "=ds=#s3#, #a4#"};
 		{ 3, 44308, "", "=q4=Signet of Edward the Odd", "=ds=#s13#"};

@@ -6980,4 +6980,5 @@ AtlasLoot_Data["T6WarriorFury"] = {
 		{ 23, 34622, "", "=q4=Spinesever", "=ds=#w11#", "", ""};
 		{ 24, 31323, "", "=q4=Don Santos' Famous Hunting Rifle", "=ds=#w5#", "", ""};
 		Back = "SETMENUTBC";
+		Type = "BCDungeon";
 	};
