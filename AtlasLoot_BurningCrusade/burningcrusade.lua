@@ -663,8 +663,8 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 6, 32483, "", "=q4=The Skull of Gul'dan", "=ds=#s14#", "", "16%"};
 		{ 7, 32496, "", "=q4=Memento of Tyrande", "=ds=#s14#", "", "15%"};
 		{ 9, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
-		{ 11, 32837, "", "=q5=Warglaive of Azzinoth", "=ds=#h3#, #w10#, =q1=#m1# =ds=#c9#, #c6#", "", "4%", [AtlasLoot_Difficulty.DUPLICATE] = "(Mainhand)"};
-		{ 12, 32838, "", "=q5=Warglaive of Azzinoth", "=ds=#h4#, #w10#, =q1=#m1# =ds=#c9#, #c6#", "", "4%", [AtlasLoot_Difficulty.DUPLICATE] = "(Offhand)"};
+		{ 11, 32837, "", "=q5=Warglaive of Azzinoth", "=ds=#h3#, #w10#, =q1=#m1# =ds=#c9#, #c6#", "", "4%"};
+		{ 12, 32838, "", "=q5=Warglaive of Azzinoth", "=ds=#h4#, #w10#, =q1=#m1# =ds=#c9#, #c6#", "", "4%"};
 		{ 16, 31089, "", "=q4=Chestguard of the Forgotten Conqueror", "=q1=#m1# =ds=#c4#, #c5#, #c8#", "", "78%"};
 		{ 17, 31091, "", "=q4=Chestguard of the Forgotten Protector", "=q1=#m1# =ds=#c9#, #c2#, #c7#", "", "79%"};
 		{ 18, 31090, "", "=q4=Chestguard of the Forgotten Vanquisher", "=q1=#m1# =ds=#c6#, #c3#, #c1#", "", "78%"};

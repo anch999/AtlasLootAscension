@@ -6110,7 +6110,11 @@ local MASTER = select(2, GetSpellInfo(28596));
 		---   High Risk   ---
 		---------------------
 		
-	AtlasLoot_Data["AlchemyHighRisk"] = {
+		---------------------
+		---	   Classic    ---
+		---------------------
+
+	AtlasLoot_Data["AlchemyHighRiskCLASSIC"] = {
 		{ 1, "s968402", "967443",  "=q2=Flask of Manifesting Power", 	"=ds=#sr# 300"};	
 		{ 2, "s968405", "967446",  "=q2=Flask of the Warsong", 			"=ds=#sr# 300"};	
 		{ 3, "s968408", "967449",  "=q2=Flask of the Kirin Tor", 		"=ds=#sr# 300"};			
@@ -6122,13 +6126,14 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 9, "s968426", "967467", "=q2=Flask of the Executioner", 		"=ds=#sr# 300"};
 		{ 10, "s968429", "967470", "=q2=Flask of Deep Meditation", 		"=ds=#sr# 300"};	
 		{ 11, "s968432", "967473", "=q2=Flask of Adept Striking", 		"=ds=#sr# 300"};
-		Prev = "TailorHighRisk";
-		Next = "SmithingHighRisk";	
+		Prev = "TailorHighRiskCLASSIC";
+		Next = "SmithingHighRiskCLASSIC";
 		Back = "ALCHEMYMENU";
 		Type = "CraftingExt";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["AlchemyHighRiskRare"] = {	
+	AtlasLoot_Data["AlchemyHighRiskRareCLASSIC"] = {	
 		{ 1, "s968403", "967444",  "=q3=Potent Flask of Manifesting Power", 	"=ds=#sr# 300"};
 		{ 2, "s968406", "967447",  "=q3=Potent Flask of the Warsong", 			"=ds=#sr# 300"};
 		{ 3, "s968409", "967450",  "=q3=Potent Flask of the Kirin Tor", 		"=ds=#sr# 300"};
@@ -6140,13 +6145,14 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 9, "s968427", "967468", "=q3=Potent Flask of the Executioner", 		"=ds=#sr# 300"};
 		{ 10, "s968430", "967471", "=q3=Potent Flask of Deep Meditation", 		"=ds=#sr# 300"};
 		{ 11, "s968433", "967474", "=q3=Potent Flask of Adept Striking", 		"=ds=#sr# 300"};
-		Prev = "TailorHighRisk";
-		Next = "SmithingHighRisk";
+		Prev = "TailorHighRiskCLASSIC";
+		Next = "SmithingHighRiskCLASSIC";
 		Back = "ALCHEMYMENU";
 		Type = "CraftingExt";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["AlchemyHighRiskEpic"] = {	
+	AtlasLoot_Data["AlchemyHighRiskEpicCLASSIC"] = {	
 		{ 1, "s968404", "967445",  "=q4=Distilled Flask of Manifesting Power", 	"=ds=#sr# 300"};
 		{ 2, "s968407", "967448",  "=q4=Distilled Flask of the Warsong", "=ds=#sr# 300"};
 		{ 3, "s968410", "967451",  "=q4=Distilled Flask of the Kirin Tor", "=ds=#sr# 300"};
@@ -6158,13 +6164,14 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 9, "s968428", "967469", "=q4=Distilled Flask of the Executioner", "=ds=#sr# 300"};
 		{ 10, "s968431", "967472", "=q4=Distilled Flask of Deep Meditation", "=ds=#sr# 300"};
 		{ 11, "s968434", "967475", "=q4=Distilled Flask of Adept Striking", "=ds=#sr# 300"};
-		Prev = "TailorHighRisk";
-		Next = "SmithingHighRisk";
+		Prev = "TailorHighRiskCLASSIC";
+		Next = "SmithingHighRiskCLASSIC";
 		Back = "ALCHEMYMENU";
 		Type = "CraftingExt";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["SmithingHighRisk"] = {
+	AtlasLoot_Data["SmithingHighRiskCLASSIC"] = {
         { 1, "s968018", "967172", "=q2=Living Belt Buckle", "=ds=#sr# 300"};
 		{ 2, "s968021", "967175", "=q2=Deflecting Buckle", "=ds=#sr# 300"};
 		{ 3, "s968024", "967178", "=q2=Roguish Belt Buckle", "=ds=#sr# 300"};
@@ -6174,13 +6181,14 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 7, "s968036", "967190", "=q2=Warlord's Belt Buckle", "=ds=#sr# 300"};
 		{ 8, "s968039", "967193", "=q2=Gaurdian's Belt Buckle", "=ds=#sr# 300"};
 		{ 10, "s968480", "967680", "=q2=Homicite Key", "=ds=#sr# 300"};
-		Prev = "AlchemyHighRisk";
-		Next = "LeatherHighRisk";	
+		Prev = "AlchemyHighRiskCLASSIC";
+		Next = "LeatherHighRiskCLASSIC";	
 		Back = "SMITHINGMENU";
 		Type = "CraftingExt";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["SmithingHighRiskRare"] = {
+	AtlasLoot_Data["SmithingHighRiskRareCLASSIC"] = {
 		{ 1, "s968019", "967173", "=q3=Sturdy Living Belt Buckle", "=ds=#sr# 300"};
 		{ 2, "s968022", "967176", "=q3=Sturdy Deflecting Belt Buckle", "=ds=#sr# 300"};
 		{ 3, "s968025", "967179", "=q3=Sturdy Roguish Belt Buckle", "=ds=#sr# 300"};
@@ -6190,13 +6198,14 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 7, "s968037", "967191", "=q3=Sturdy Warlord's Belt Buckle", "=ds=#sr# 300"};
 		{ 8, "s968040", "967194", "=q3=Sturdy Gaurdian's Belt Buckle", "=ds=#sr# 300"};
 		{ 10, "s968481", "967681", "=q3=Homicite Key", "=ds=#sr# 300"};
-		Prev = "AlchemyHighRisk";
-		Next = "LeatherHighRisk";
+		Prev = "AlchemyHighRiskCLASSIC";
+		Next = "LeatherHighRiskCLASSIC";
 		Back = "SMITHINGMENU";
 		Type = "CraftingExt";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["SmithingHighRiskEpic"] = {
+	AtlasLoot_Data["SmithingHighRiskEpicCLASSIC"] = {
 		{ 1, "s968020", "967174", "=q4=Mastercraft Living Belt Buckle", "=ds=#sr# 300"};
 		{ 2, "s968023", "967177", "=q4=Mastercraft Deflecting Belt Buckle", "=ds=#sr# 300"};
 		{ 3, "s968026", "967180", "=q4=Mastercraft Roguish Belt Buckle", "=ds=#sr# 300"};
@@ -6206,91 +6215,98 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 7, "s968038", "967192", "=q4=Mastercraft Warlord's Belt Buckle", "=ds=#sr# 300"};
 		{ 8, "s968041", "967195", "=q4=Mastercraft Gaurdian's Belt Buckle", "=ds=#sr# 300"};
 		{ 10, "s968482", "967682", "=q4=Homicite Key", "=ds=#sr# 300"};
-		Prev = "AlchemyHighRisk";
-		Next = "LeatherHighRisk";
+		Prev = "AlchemyHighRiskCLASSIC";
+		Next = "LeatherHighRiskCLASSIC";
 		Back = "SMITHINGMENU";
 		Type = "CraftingExt";
+		Submenu = "Expansion";
 	};
 	
-	AtlasLoot_Data["LeatherHighRisk"] = {
-        { 1, "s968000", "967154", "=q2=Yeti Gambeson", 						"=ds=#sr# 300"};
-		{ 2, "s968003", "967157", "=q2=Devilsaur Gambeson", 				"=ds=#sr# 300"};
-		{ 3, "s968006", "967160", "=q2=Plaguebat Gambeson", 				"=ds=#sr# 300"};
-		{ 4, "s968009", "967163", "=q2=Sandworm Gambeson", 				"=ds=#sr# 300"};
-		{ 5, "s968012", "967166", "=q2=Black Scale Gambeson", 				"=ds=#sr# 300"};
-		{ 6, "s968015", "967169", "=q2=Blue Scale Gambeson", 				"=ds=#sr# 300"};
-		Prev = "SmithingHighRisk";
-		Next = "EngineerHighRisk";	
+	AtlasLoot_Data["LeatherHighRiskCLASSIC"] = {
+        { 1, "s968000", "967154", "=q2=Yeti Gambeson", "=ds=#sr# 300"};
+		{ 2, "s968003", "967157", "=q2=Devilsaur Gambeson", "=ds=#sr# 300"};
+		{ 3, "s968006", "967160", "=q2=Plaguebat Gambeson", "=ds=#sr# 300"};
+		{ 4, "s968009", "967163", "=q2=Sandworm Gambeson", "=ds=#sr# 300"};
+		{ 5, "s968012", "967166", "=q2=Black Scale Gambeson", "=ds=#sr# 300"};
+		{ 6, "s968015", "967169", "=q2=Blue Scale Gambeson", "=ds=#sr# 300"};
+		Prev = "SmithingHighRiskCLASSIC";
+		Next = "EngineerHighRiskCLASSIC";
 		Back = "LEATHERWORKINGMENU";
 		Type = "CraftingExt";
+		Submenu = "Expansion";
 	};
 	
-	AtlasLoot_Data["LeatherHighRiskRare"] = {
-		{ 1, "s968001", "967155", "=q3=Sturdy Yeti Gambeson", 				"=ds=#sr# 300"};
-		{ 2, "s968004", "967158", "=q3=Sturdy Devilsaur Gambeson", 			"=ds=#sr# 300"};
-		{ 3, "s968007", "967161", "=q3=Sturdy Plaguebat Gambeson", 			"=ds=#sr# 300"};
-		{ 4, "s968010", "967164", "=q3=Sturdy Sandworm Gambeson", 			"=ds=#sr# 300"};
-		{ 5, "s968013", "967167", "=q3=Sturdy Black Scale Gambeson", 		"=ds=#sr# 300"};
-		{ 6, "s968016", "967170", "=q3=Sturdy Blue Scale Gambeson", 		"=ds=#sr# 300"};
-		Prev = "SmithingHighRisk";
-		Next = "EngineerHighRisk";
+	AtlasLoot_Data["LeatherHighRiskRareCLASSIC"] = {
+		{ 1, "s968001", "967155", "=q3=Sturdy Yeti Gambeson", "=ds=#sr# 300"};
+		{ 2, "s968004", "967158", "=q3=Sturdy Devilsaur Gambeson", "=ds=#sr# 300"};
+		{ 3, "s968007", "967161", "=q3=Sturdy Plaguebat Gambeson", "=ds=#sr# 300"};
+		{ 4, "s968010", "967164", "=q3=Sturdy Sandworm Gambeson", "=ds=#sr# 300"};
+		{ 5, "s968013", "967167", "=q3=Sturdy Black Scale Gambeson", "=ds=#sr# 300"};
+		{ 6, "s968016", "967170", "=q3=Sturdy Blue Scale Gambeson", "=ds=#sr# 300"};
+		Prev = "SmithingHighRiskCLASSIC";
+		Next = "EngineerHighRiskCLASSIC";
 		Back = "LEATHERWORKINGMENU";
 		Type = "CraftingExt";
+		Submenu = "Expansion";
 	};
 	
-	AtlasLoot_Data["LeatherHighRiskEpic"] = {
+	AtlasLoot_Data["LeatherHighRiskEpicCLASSIC"] = {
 		{ 1, "s968002", "967156", "=q4=Mastercraft Yeti Gambeson", 			"=ds=#sr# 300"};
 		{ 2, "s968005", "967159", "=q4=Mastercraft Devilsaur Gambeson", 	"=ds=#sr# 300"};
 		{ 3, "s968008", "967162", "=q4=Mastercraft Plaguebat Gambeson", 	"=ds=#sr# 300"};
 		{ 4, "s968011", "967165", "=q4=Mastercraft Sandworm Gambeson", 	"=ds=#sr# 300"};	
 		{ 5, "s968014", "967168", "=q4=Mastercraft Black Scale Gambeson", 	"=ds=#sr# 300"};
 		{ 6, "s968017", "967171", "=q4=Mastercraft Blue Scale Gambeson", 	"=ds=#sr# 300"};
-		Prev = "SmithingHighRisk";
-		Next = "EngineerHighRisk";
+		Prev = "SmithingHighRiskCLASSIC";
+		Next = "EngineerHighRiskCLASSIC";
 		Back = "LEATHERWORKINGMENU";
 		Type = "CraftingExt";
+		Submenu = "Expansion";
 	};
 	
-	AtlasLoot_Data["EngineerHighRisk"] = {
+	AtlasLoot_Data["EngineerHighRiskCLASSIC"] = {
         { 1, "s968042", "967196", "=q2=Gnomish Magnifying Lense I", "=ds=#sr# 300"};
 		{ 2, "s968045", "967199", "=q2=Gnomish Focusing Lense", "=ds=#sr# 300"};
 		{ 3, "s968048", "967202", "=q2=Gnomish Prismatic Lense", "=ds=#sr# 300"};
 		{ 4, "s968051", "967205", "=q2=Hipfire Scope", "=ds=#sr# 300"};
 		{ 5, "s968054", "967208", "=q2=Precision Scope", "=ds=#sr# 300"};
 		{ 6, "s968057", "967211", "=q2=Reflex Scope", "=ds=#sr# 300"};
-		Prev = "LeatherHighRisk";
-		Next = "EnchantingHighRisk";	
+		Prev = "LeatherHighRiskCLASSIC";
+		Next = "EnchantingHighRiskCLASSIC";	
 		Back = "ENGINEERINGMENU";
 		Type = "CraftingExt";
+		Submenu = "Expansion";
 	};
 	
-	AtlasLoot_Data["EngineerHighRiskRare"] = {
+	AtlasLoot_Data["EngineerHighRiskRareCLASSIC"] = {
 		{ 1, "s968043", "967197", "=q3=Focused Gnomish Magnifying Lense", "=ds=#sr# 300"};
 		{ 2, "s968046", "967200", "=q3=Focused Gnomish Focusing Lense", "=ds=#sr# 300"};
 		{ 3, "s968049", "967203", "=q3=Focused Gnomish Prismatic Lense", "=ds=#sr# 300"};
 		{ 4, "s968052", "967206", "=q3=Focused Hipfire Scope", "=ds=#sr# 300"};
 		{ 5, "s968055", "967209", "=q3=Focused Precision Scope", "=ds=#sr# 300"};
 		{ 6, "s968058", "967212", "=q3=Focused Reflex Scope", "=ds=#sr# 300"};
-		Prev = "LeatherHighRisk";
-		Next = "EnchantingHighRisk";
+		Prev = "LeatherHighRiskCLASSIC";
+		Next = "EnchantingHighRiskCLASSIC";
 		Back = "ENGINEERINGMENU";
 		Type = "CraftingExt";
+		Submenu = "Expansion";
 	};
 	
-	AtlasLoot_Data["EngineerHighRiskEpic"] = {
+	AtlasLoot_Data["EngineerHighRiskEpicCLASSIC"] = {
 		{ 1, "s968044", "967198", "=q4=Polished Gnomish Magnifying Lense", "=ds=#sr# 300"};
 		{ 2, "s968047", "967201", "=q4=Polished Gnomish Focusing Lense", "=ds=#sr# 300"};
 		{ 3, "s968050", "967204", "=q4=Polished Gnomish Prismatic Lense", "=ds=#sr# 300"};
 		{ 4, "s968053", "967207", "=q4=Polished Hipfire Scope", "=ds=#sr# 300"};
 		{ 5, "s968056", "967210", "=q4=Polished Precision Scope", "=ds=#sr# 300"};
 		{ 6, "s968059", "967213", "=q4=Polished Reflex Scope", "=ds=#sr# 300"};
-		Prev = "LeatherHighRisk";
-		Next = "EnchantingHighRisk";
+		Prev = "LeatherHighRiskCLASSIC";
+		Next = "EnchantingHighRiskCLASSIC";
 		Back = "ENGINEERINGMENU";
 		Type = "CraftingExt";
+		Submenu = "Expansion";
 	};
 	
-	AtlasLoot_Data["EnchantingHighRisk"] = {
+	AtlasLoot_Data["EnchantingHighRiskCLASSIC"] = {
         { 1, "s968676", "Spell_Holy_GreaterHeal", "=q2=Enchant Weapon - Lesser Unstoppable Assault", "=ds=#sr# 300"};
 		{ 2, "s968679", "Spell_Holy_GreaterHeal", "=q2=Enchant Weapon - Lesser Lucid Assault", "=ds=#sr# 300"};
 		{ 3, "s968682", "Spell_Holy_GreaterHeal", "=q2=Enchant Weapon - Lesser Spellbinder's Rage", "=ds=#sr# 300"};
@@ -6300,13 +6316,14 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 7, "s968694", "Spell_Holy_GreaterHeal", "=q2=Enchant Weapon - Lesser Arcane Dexterity", "=ds=#sr# 300"};
 		{ 8, "s968697", "Spell_Holy_GreaterHeal", "=q2=Enchant Weapon - Lesser Arcane Artillery", "=ds=#sr# 300"};
 		{ 9, "s968700", "Spell_Holy_GreaterHeal", "=q2=Enchant Weapon - Lesser Arcane Precision", "=ds=#sr# 300"};
-		Prev = "EngineerHighRisk";
-		Next = "TailorHighRisk";	
+		Prev = "EngineerHighRiskCLASSIC";
+		Next = "TailorHighRiskCLASSIC";	
 		Back = "ENCHANTINGMENU";
 		Type = "CraftingExt";
+		Submenu = "Expansion";
 	};
 	
-	AtlasLoot_Data["EnchantingHighRiskRare"] = {
+	AtlasLoot_Data["EnchantingHighRiskRareCLASSIC"] = {
 		{ 1, "s968677", "Spell_Holy_GreaterHeal", "=q3=Enchant Weapon - Unstoppable Assault", "=ds=#sr# 300"};
 		{ 2, "s968680", "Spell_Holy_GreaterHeal", "=q3=Enchant Weapon - Lucid Assault", "=ds=#sr# 300"};
 		{ 3, "s968683", "Spell_Holy_GreaterHeal", "=q3=Enchant Weapon - Spellbinder's Rage", "=ds=#sr# 300"};
@@ -6317,13 +6334,14 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 8, "s968698", "Spell_Holy_GreaterHeal", "=q3=Enchant Weapon - Arcane Artillery", "=ds=#sr# 300"};
 		{ 9, "s968701", "Spell_Holy_GreaterHeal", "=q3=Enchant Weapon - Arcane Precision", "=ds=#sr# 300"};
 		{ 10, "s968770", "Spell_Holy_GreaterHeal", "=q3=Enchant Weapon - Crusader II", "=ds=#sr# 300"};
-		Prev = "EngineerHighRisk";
-		Next = "TailorHighRisk";
+		Prev = "EngineerHighRiskCLASSIC";
+		Next = "TailorHighRiskCLASSIC";
 		Back = "ENCHANTINGMENU";
 		Type = "CraftingExt";
+		Submenu = "Expansion";
 	};
 	
-	AtlasLoot_Data["EnchantingHighRiskEpic"] = {
+	AtlasLoot_Data["EnchantingHighRiskEpicCLASSIC"] = {
 		{ 1, "s968678", "Spell_Holy_GreaterHeal", "=q4=Enchant Weapon - Greater Unstoppable Assault", "=ds=#sr# 300"};
 		{ 2, "s968681", "Spell_Holy_GreaterHeal", "=q4=Enchant Weapon - Greater Lucid Assualt", "=ds=#sr# 300"};
 		{ 3, "s968684", "Spell_Holy_GreaterHeal", "=q4=Enchant Weapon - Greater Spellbinder's Rage", "=ds=#sr# 300"};
@@ -6334,142 +6352,149 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 8, "s968699", "Spell_Holy_GreaterHeal", "=q4=Enchant Weapon - Greater Arcane Artillery", "=ds=#sr# 300"};
 		{ 9, "s968702", "Spell_Holy_GreaterHeal", "=q4=Enchant Weapon - Greater Arcane Precision", "=ds=#sr# 300"};
 		{ 10, "s968771", "Spell_Holy_GreaterHeal", "=q4=Enchant Weapon - Crusader III", "=ds=#sr# 300"};
-		Prev = "EngineerHighRisk";
-		Next = "TailorHighRisk";
+		Prev = "EngineerHighRiskCLASSIC";
+		Next = "TailorHighRiskCLASSIC";
 		Back = "ENCHANTINGMENU";
 		Type = "CraftingExt";
+		Submenu = "Expansion";
 	};
 	
-	AtlasLoot_Data["TailorHighRisk"] = {
+	AtlasLoot_Data["TailorHighRiskCLASSIC"] = {
         { 1, "s968060", "967214", "=q2=Dragonweave Cloak Lining", "=ds=#sr# 300"};
 		{ 2, "s968063", "967217", "=q2=Twilight Cloak Lining", "=ds=#sr# 300"};
 		{ 3, "s968066", "967220", "=q2=Scarlet Cloak Lining", "=ds=#sr# 300"};
 		{ 4, "s968069", "967223", "=q2=Rampager's Cloak Lining", "=ds=#sr# 300"};
 		{ 5, "s968072", "967226", "=q2=Deadwind Cloak Lining", "=ds=#sr# 300"};
 		{ 6, "s968075", "967229", "=q2=Slippery Cloak Lining", "=ds=#sr# 300"};
-		Prev = "EnchantingHighRisk";
-		Next = "AlchemyHighRisk";
+		Prev = "EnchantingHighRiskCLASSIC";
+		Next = "AlchemyHighRiskCLASSIC";
 		Back = "TAILORINGMENU";
 		Type = "CraftingExt";
+		Submenu = "Expansion";
 	};
 	
-	AtlasLoot_Data["TailorHighRiskRare"] = {
+	AtlasLoot_Data["TailorHighRiskRareCLASSIC"] = {
 		{ 1, "s968061", "967215", "=q3=Heavy Dragonweave Cloak Lining", "=ds=#sr# 300"};
 		{ 2, "s968064", "967218", "=q3=Heavy Twilight Cloak Lining", "=ds=#sr# 300"};
 		{ 3, "s968067", "967221", "=q3=Heavy Scarlet Cloak Lining", "=ds=#sr# 300"};
 		{ 4, "s968070", "967224", "=q3=Heavy Rampager's Cloak Lining", "=ds=#sr# 300"};
 		{ 5, "s968073", "967227", "=q3=Heavy Deadwind Cloak Lining", "=ds=#sr# 300"};
 		{ 6, "s968076", "967230", "=q3=Heavy Slippery Cloak Lining", "=ds=#sr# 300"};
-		Prev = "EnchantingHighRisk";
-		Next = "AlchemyHighRisk";
+		Prev = "EnchantingHighRiskCLASSIC";
+		Next = "AlchemyHighRiskCLASSIC";
 		Back = "TAILORINGMENU";
 		Type = "CraftingExt";
+		Submenu = "Expansion";
 	};
 	
-	AtlasLoot_Data["TailorHighRiskEpic"] = {
+	AtlasLoot_Data["TailorHighRiskEpicCLASSIC"] = {
 		{ 1, "s968062", "967216", "=q4=Illustrious Dragonweave Cloak Lining", "=ds=#sr# 300"};
 		{ 2, "s968065", "967219", "=q4=Illustrious Twilight Cloak Lining", "=ds=#sr# 300"};
 		{ 3, "s968068", "967222", "=q4=Illustrious Scarlet Cloak Lining", "=ds=#sr# 300"};
 		{ 4, "s968071", "967225", "=q4=Illustrious Rampager's Cloak Lining", "=ds=#sr# 300"};
 		{ 5, "s968074", "967228", "=q4=Illustrious Deadwind Cloak Lining", "=ds=#sr# 300"};
 		{ 6, "s968077", "967231", "=q4=Illustrious Slippery Cloak Lining", "=ds=#sr# 300"};
-		Prev = "EnchantingHighRisk";
-		Next = "AlchemyHighRisk";
+		Prev = "EnchantingHighRiskCLASSIC";
+		Next = "AlchemyHighRiskCLASSIC";
 		Back = "TAILORINGMENU";
 		Type = "CraftingExt";
+		Submenu = "Expansion";
 	};
 
-	AtlasLoot_Data["CookingHighRisk"] = {
-		{ 1, "s968279",	"967509",	"=q2=Animated Soup for the Soul", "=ds=#sr# 300"};
-		{ 2, "s968282",	"967512",	"=q2=Volcanic Sandwich", "=ds=#sr# 300"};
-		{ 3, "s968285",	"967515",	"=q2=Winter Wontons", "=ds=#sr# 300"};
-		{ 4, "s968288",	"967518",	"=q2=Storm Steak", "=ds=#sr# 300"};
-		{ 5, "s968291",	"967521",	"=q2=Void Touched Stew", "=ds=#sr# 300"};
-		{ 6, "s968294",	"967524",	"=q2=Spicy Vulture Steak", "=ds=#sr# 300"};
-		{ 7, "s968297",	"967527",	"=q2=Wizard Wontons", "=ds=#sr# 300"};
-		{ 8, "s968300",	"967530",	"=q2=Jurassic Burger", "=ds=#sr# 300"};
-		{ 9, "s968303",	"967533",	"=q2=Rough-alo wings", "=ds=#sr# 300"};
-		{ 10, "s968306",	"967536",	"=q2=The Whooper Sandwich", "=ds=#sr# 300"};
-		{ 11, "s968309",	"967539",	"=q2=Vulture a la King", "=ds=#sr# 300"};
-		{ 12, "s968312",	"967542",	"=q2=Scorching Hot Steak", "=ds=#sr# 300"};
-		{ 13, "s968315",	"967545",	"=q2=Lively Stew", "=ds=#sr# 300"};
-		{ 14, "s968318",	"967548",	"=q2=Crawling Steak", "=ds=#sr# 300"};
-		{ 15, "s968321",	"967551",	"=q2=Breakonator Sandwich", "=ds=#sr# 300"};
-		{ 16, "s968324",	"967554",	"=q2=Master Wontons", "=ds=#sr# 300"};
-		{ 17, "s968327",	"967557",	"=q2=Big Whack Sandwich", "=ds=#sr# 300"};
-		{ 18, "s968330",	"967560",	"=q2=Warping Wontons", "=ds=#sr# 300"};
-		{ 19, "s968333",	"967563",	"=q2=Duck Stew", "=ds=#sr# 300"};
-		{ 20, "s968336",	"967566",	"=q2=Mountainman Stew", "=ds=#sr# 300"};
-		{ 21, "s968339",	"967569",	"=q2=Scorched Stew", "=ds=#sr# 300"};
-		{ 22, "s968342",	"967572",	"=q2=Vulcan Wontons", "=ds=#sr# 300"};
-		{ 23, "s968345",	"967575",	"=q2=Jurassic Soup", "=ds=#sr# 300"};
-		{ 24, "s968348",	"967578",	"=q2=Heightened Wontons", "=ds=#sr# 300"};
-		{ 25, "s968351",	"967581",	"=q2=Hearty Spirit Soup", "=ds=#sr# 300"};
-		{ 26, "s968354",	"967584",	"=q2=Jurassic Steak", "=ds=#sr# 300"};
-		{ 27, "s968357",	"967587",	"=q2=Stormwich Sandwich", "=ds=#sr# 300"};
-		{ 28, "s968360",	"967590",	"=q2=Warding Wontons", "=ds=#sr# 300"};
-		{ 29, "s968363",	"967593",	"=q2=Rolling Meatballs", "=ds=#sr# 300"};
-		{ 30, "s968366",	"967596",	"=q2=Subtle Steak", "=ds=#sr# 300"};
-		Next = "CookingHighRiskTwo";
+	AtlasLoot_Data["CookingHighRiskCLASSIC"] = {
+		{ 1, "s968279",	"967509", "=q2=Animated Soup for the Soul", "=ds=#sr# 300"};
+		{ 2, "s968282",	"967512", "=q2=Volcanic Sandwich", "=ds=#sr# 300"};
+		{ 3, "s968285",	"967515", "=q2=Winter Wontons", "=ds=#sr# 300"};
+		{ 4, "s968288",	"967518", "=q2=Storm Steak", "=ds=#sr# 300"};
+		{ 5, "s968291",	"967521", "=q2=Void Touched Stew", "=ds=#sr# 300"};
+		{ 6, "s968294",	"967524", "=q2=Spicy Vulture Steak", "=ds=#sr# 300"};
+		{ 7, "s968297",	"967527", "=q2=Wizard Wontons", "=ds=#sr# 300"};
+		{ 8, "s968300",	"967530", "=q2=Jurassic Burger", "=ds=#sr# 300"};
+		{ 9, "s968303",	"967533", "=q2=Rough-alo wings", "=ds=#sr# 300"};
+		{ 10, "s968306", "967536", "=q2=The Whooper Sandwich", "=ds=#sr# 300"};
+		{ 11, "s968309", "967539", "=q2=Vulture a la King", "=ds=#sr# 300"};
+		{ 12, "s968312", "967542", "=q2=Scorching Hot Steak", "=ds=#sr# 300"};
+		{ 13, "s968315", "967545", "=q2=Lively Stew", "=ds=#sr# 300"};
+		{ 14, "s968318", "967548", "=q2=Crawling Steak", "=ds=#sr# 300"};
+		{ 15, "s968321", "967551", "=q2=Breakonator Sandwich", "=ds=#sr# 300"};
+		{ 16, "s968324", "967554", "=q2=Master Wontons", "=ds=#sr# 300"};
+		{ 17, "s968327", "967557", "=q2=Big Whack Sandwich", "=ds=#sr# 300"};
+		{ 18, "s968330", "967560", "=q2=Warping Wontons", "=ds=#sr# 300"};
+		{ 19, "s968333", "967563", "=q2=Duck Stew", "=ds=#sr# 300"};
+		{ 20, "s968336", "967566", "=q2=Mountainman Stew", "=ds=#sr# 300"};
+		{ 21, "s968339", "967569", "=q2=Scorched Stew", "=ds=#sr# 300"};
+		{ 22, "s968342", "967572", "=q2=Vulcan Wontons", "=ds=#sr# 300"};
+		{ 23, "s968345", "967575", "=q2=Jurassic Soup", "=ds=#sr# 300"};
+		{ 24, "s968348", "967578", "=q2=Heightened Wontons", "=ds=#sr# 300"};
+		{ 25, "s968351", "967581", "=q2=Hearty Spirit Soup", "=ds=#sr# 300"};
+		{ 26, "s968354", "967584", "=q2=Jurassic Steak", "=ds=#sr# 300"};
+		{ 27, "s968357", "967587", "=q2=Stormwich Sandwich", "=ds=#sr# 300"};
+		{ 28, "s968360", "967590", "=q2=Warding Wontons", "=ds=#sr# 300"};
+		{ 29, "s968363", "967593", "=q2=Rolling Meatballs", "=ds=#sr# 300"};
+		{ 30, "s968366", "967596", "=q2=Subtle Steak", "=ds=#sr# 300"};
+		Next = "CookingHighRiskTwoCLASSIC";
 		Back = "CRAFTINGMENU";
 		Type = "CraftingExt";
+		Submenu = "Expansion";
 	};
 	
-	AtlasLoot_Data["CookingHighRiskTwo"] = {
-		{ 1, "s968369",	"967599",	"=q2=Subtle Sandwich", "=ds=#sr# 300"};
-		{ 2, "s968372",	"967602",	"=q2=Subtle Wontons", "=ds=#sr# 300"};
-		{ 3, "s968375",	"967605",	"=q2=Subtle Sulferous Soup", "=ds=#sr# 300"};
-		{ 4, "s968378",	"967608",	"=q2=Strongman Stew", "=ds=#sr# 300"};
-		{ 5, "s968381",	"967611",	"=q2=Mysterious Void Roast", "=ds=#sr# 300"};
-		{ 6, "s968384",	"967614",	"=q2=Fire Charred Roast", "=ds=#sr# 300"};
-		{ 7, "s968387",	"967617",	"=q2=Storm Fried Roast", "=ds=#sr# 300"};
-		{ 8, "s968390",	"967620",	"=q2=Winter Roast", "=ds=#sr# 300"};
-		{ 9, "s968393",	"967623",	"=q2=Blackened Roast", "=ds=#sr# 300"};
-		{ 10, "s968396",	"967626",	"=q2=Dino Delight", "=ds=#sr# 300"};
-		{ 11, "s968399",	"967629",	"=q2=Slick-fil-A Sandwich", "=ds=#sr# 300"};
-		{ 13, "s968646",	"967703",	"=q2=Tempting Bait", "=ds=#sr# 300"};
-		Prev = "CookingHighRisk";
+	AtlasLoot_Data["CookingHighRiskTwoCLASSIC"] = {
+		{ 1, "s968369", "967599", "=q2=Subtle Sandwich", "=ds=#sr# 300"};
+		{ 2, "s968372", "967602", "=q2=Subtle Wontons", "=ds=#sr# 300"};
+		{ 3, "s968375", "967605", "=q2=Subtle Sulferous Soup", "=ds=#sr# 300"};
+		{ 4, "s968378", "967608", "=q2=Strongman Stew", "=ds=#sr# 300"};
+		{ 5, "s968381", "967611", "=q2=Mysterious Void Roast", "=ds=#sr# 300"};
+		{ 6, "s968384", "967614", "=q2=Fire Charred Roast", "=ds=#sr# 300"};
+		{ 7, "s968387", "967617", "=q2=Storm Fried Roast", "=ds=#sr# 300"};
+		{ 8, "s968390", "967620", "=q2=Winter Roast", "=ds=#sr# 300"};
+		{ 9, "s968393", "967623", "=q2=Blackened Roast", "=ds=#sr# 300"};
+		{ 10, "s968396", "967626", "=q2=Dino Delight", "=ds=#sr# 300"};
+		{ 11, "s968399", "967629", "=q2=Slick-fil-A Sandwich", "=ds=#sr# 300"};
+		{ 13, "s968646", "967703", "=q2=Tempting Bait", "=ds=#sr# 300"};
+		Prev = "CookingHighRiskCLASSIC";
 		Back = "CRAFTINGMENU";
 		Type = "CraftingExt";
+		Submenu = "Expansion";
 	};
 	
-	AtlasLoot_Data["CookingHighRiskRare"] = {
-		{ 1, "s968280",	"967510",	"=q3=Animated Soup for the Soul", "=ds=#sr# 300"};
-		{ 2, "s968283",	"967513",	"=q3=Volcanic Sandwich", "=ds=#sr# 300"};
-		{ 3, "s968286",	"967516",	"=q3=Winter Wontons", "=ds=#sr# 300"};
-		{ 4, "s968289",	"967519",	"=q3=Storm Steak", "=ds=#sr# 300"};
-		{ 5, "s968292",	"967522",	"=q3=Void Touched Stew", "=ds=#sr# 300"};
-		{ 6, "s968295",	"967525",	"=q3=Spicy Vulture Steak", "=ds=#sr# 300"};
-		{ 7, "s968298",	"967528",	"=q3=Wizard Wontons", "=ds=#sr# 300"};
-		{ 8, "s968301",	"967531",	"=q3=Jurassic Burger", "=ds=#sr# 300"};
-		{ 9, "s968304",	"967534",	"=q3=Rough-alo wings", "=ds=#sr# 300"};
-		{ 10, "s968307",	"967537",	"=q3=The Whooper Sandwich", "=ds=#sr# 300"};
-		{ 11, "s968310",	"967540",	"=q3=Vulture a la King", "=ds=#sr# 300"};
-		{ 12, "s968313",	"967543",	"=q3=Scorching Hot Steak", "=ds=#sr# 300"};
-		{ 13, "s968316",	"967546",	"=q3=Lively Stew", "=ds=#sr# 300"};
-		{ 14, "s968319",	"967549",	"=q3=Crawling Steak", "=ds=#sr# 300"};
-		{ 15, "s968322",	"967552",	"=q3=Breakonator Sandwich", "=ds=#sr# 300"};
-		{ 16, "s968325",	"967555",	"=q3=Master Wontons", "=ds=#sr# 300"};
-		{ 17, "s968328",	"967558",	"=q3=Big Whack Sandwich", "=ds=#sr# 300"};
-		{ 18, "s968331",	"967561",	"=q3=Warping Wontons", "=ds=#sr# 300"};
-		{ 19, "s968334",	"967564",	"=q3=Duck Stew", "=ds=#sr# 300"};
-		{ 20, "s968337",	"967567",	"=q3=Mountainman Stew", "=ds=#sr# 300"};
-		{ 21, "s968340",	"967570",	"=q3=Scorched Stew", "=ds=#sr# 300"};
-		{ 22, "s968343",	"967573",	"=q3=Vulcan Wontons", "=ds=#sr# 300"};
-		{ 23, "s968346",	"967576",	"=q3=Jurassic Soup", "=ds=#sr# 300"};
-		{ 24, "s968349",	"967579",	"=q3=Heightened Wontons", "=ds=#sr# 300"};
-		{ 25, "s968352",	"967582",	"=q3=Hearty Spirit Soup", "=ds=#sr# 300"};
-		{ 26, "s968355",	"967585",	"=q3=Jurassic Steak", "=ds=#sr# 300"};
-		{ 27, "s968358",	"967588",	"=q3=Stormwich Sandwich", "=ds=#sr# 300"};
-		{ 28, "s968361",	"967591",	"=q3=Warding Wontons", "=ds=#sr# 300"};
-		{ 29, "s968364",	"967594",	"=q3=Rolling Meatballs", "=ds=#sr# 300"};
-		{ 30, "s968367",	"967597",	"=q3=Subtle Steak", "=ds=#sr# 300"};
-		Next = "CookingHighRiskTwo";
+	AtlasLoot_Data["CookingHighRiskRareCLASSIC"] = {
+		{ 1, "s968280",	"967510", "=q3=Animated Soup for the Soul", "=ds=#sr# 300"};
+		{ 2, "s968283",	"967513", "=q3=Volcanic Sandwich", "=ds=#sr# 300"};
+		{ 3, "s968286",	"967516", "=q3=Winter Wontons", "=ds=#sr# 300"};
+		{ 4, "s968289",	"967519", "=q3=Storm Steak", "=ds=#sr# 300"};
+		{ 5, "s968292",	"967522", "=q3=Void Touched Stew", "=ds=#sr# 300"};
+		{ 6, "s968295",	"967525", "=q3=Spicy Vulture Steak", "=ds=#sr# 300"};
+		{ 7, "s968298",	"967528", "=q3=Wizard Wontons", "=ds=#sr# 300"};
+		{ 8, "s968301",	"967531", "=q3=Jurassic Burger", "=ds=#sr# 300"};
+		{ 9, "s968304",	"967534", "=q3=Rough-alo wings", "=ds=#sr# 300"};
+		{ 10, "s968307", "967537", "=q3=The Whooper Sandwich", "=ds=#sr# 300"};
+		{ 11, "s968310", "967540", "=q3=Vulture a la King", "=ds=#sr# 300"};
+		{ 12, "s968313", "967543", "=q3=Scorching Hot Steak", "=ds=#sr# 300"};
+		{ 13, "s968316", "967546", "=q3=Lively Stew", "=ds=#sr# 300"};
+		{ 14, "s968319", "967549", "=q3=Crawling Steak", "=ds=#sr# 300"};
+		{ 15, "s968322", "967552", "=q3=Breakonator Sandwich", "=ds=#sr# 300"};
+		{ 16, "s968325", "967555", "=q3=Master Wontons", "=ds=#sr# 300"};
+		{ 17, "s968328", "967558", "=q3=Big Whack Sandwich", "=ds=#sr# 300"};
+		{ 18, "s968331", "967561", "=q3=Warping Wontons", "=ds=#sr# 300"};
+		{ 19, "s968334", "967564", "=q3=Duck Stew", "=ds=#sr# 300"};
+		{ 20, "s968337", "967567", "=q3=Mountainman Stew", "=ds=#sr# 300"};
+		{ 21, "s968340", "967570", "=q3=Scorched Stew", "=ds=#sr# 300"};
+		{ 22, "s968343", "967573", "=q3=Vulcan Wontons", "=ds=#sr# 300"};
+		{ 23, "s968346", "967576", "=q3=Jurassic Soup", "=ds=#sr# 300"};
+		{ 24, "s968349", "967579", "=q3=Heightened Wontons", "=ds=#sr# 300"};
+		{ 25, "s968352", "967582", "=q3=Hearty Spirit Soup", "=ds=#sr# 300"};
+		{ 26, "s968355", "967585", "=q3=Jurassic Steak", "=ds=#sr# 300"};
+		{ 27, "s968358", "967588", "=q3=Stormwich Sandwich", "=ds=#sr# 300"};
+		{ 28, "s968361", "967591", "=q3=Warding Wontons", "=ds=#sr# 300"};
+		{ 29, "s968364", "967594", "=q3=Rolling Meatballs", "=ds=#sr# 300"};
+		{ 30, "s968367",	"967597", "=q3=Subtle Steak", "=ds=#sr# 300"};
+		Next = "CookingHighRiskTwoCLASSIC";
 		Back = "CRAFTINGMENU";
 		Type = "CraftingExt";
+		Submenu = "Expansion";
 	};
 	
-	AtlasLoot_Data["CookingHighRiskTwoRare"] = {
+	AtlasLoot_Data["CookingHighRiskTwoRareCLASSIC"] = {
 		{ 1, "s968370",	"967600",	"=q3=Subtle Sandwich", "=ds=#sr# 300"};
 		{ 2, "s968373",	"967603",	"=q3=Subtle Wontons", "=ds=#sr# 300"};
 		{ 3, "s968376",	"967606",	"=q3=Subtle Sulferous Soup", "=ds=#sr# 300"};
@@ -6482,61 +6507,415 @@ local MASTER = select(2, GetSpellInfo(28596));
 		{ 10, "s968397",	"967627",	"=q3=Dino Delight", "=ds=#sr# 300"};
 		{ 11, "s968400",	"967630",	"=q3=Slick-fil-A Sandwich", "=ds=#sr# 300"};
 		{ 13, "s968647",	"967704",	"=q3=Alluring Bait", "=ds=#sr# 300"};
-		Prev = "CookingHighRisk";
+		Prev = "CookingHighRiskCLASSIC";
 		Back = "CRAFTINGMENU";
 		Type = "CraftingExt";
+		Submenu = "Expansion";
 	};
 	
-	AtlasLoot_Data["CookingHighRiskEpic"] = {
-		{ 1, "s968281",	"967511", 		"=q4=Animated Soup for the Soul", "=ds=#sr# 300"};
-		{ 2, "s968284",	"967514",		"=q4=Volcanic Sandwich", "=ds=#sr# 300"};
-		{ 3, "s968287",	"967517",		"=q4=Winter Wontons", "=ds=#sr# 300"};
-		{ 4, "s968290",	"967520",		"=q4=Storm Steak", "=ds=#sr# 300"};
-		{ 5, "s968293",	"967523",		"=q4=Void Touched Stew", "=ds=#sr# 300"};
-		{ 6, "s968296",	"967526",		"=q4=Spicy Vulture Steak", "=ds=#sr# 300"};
-		{ 7, "s968299",	"967529",		"=q4=Wizard Wontons", "=ds=#sr# 300"};
-		{ 8, "s968302",	"967532",		"=q4=Jurassic Burger", "=ds=#sr# 300"};
-		{ 9, "s968305",	"967535",		"=q4=Rough-alo wings", "=ds=#sr# 300"};
-		{ 10, "s968308",	"967538",	"=q4=The Whooper Sandwich", "=ds=#sr# 300"};
-		{ 11, "s968311",	"967541",	"=q4=Vulture a la King", "=ds=#sr# 300"};
-		{ 12, "s968314",	"967542",	"=q4=Scorching Hot Steak", "=ds=#sr# 300"};
-		{ 13, "s968317",	"967547",	"=q4=Lively Stew", "=ds=#sr# 300"};
-		{ 14, "s968320",	"967550",	"=q4=Crawling Steak", "=ds=#sr# 300"};
-		{ 15, "s968323",	"967553",	"=q4=Breakonator Sandwich", "=ds=#sr# 300"};
-		{ 16, "s968326",	"967556",	"=q4=Master Wontons", "=ds=#sr# 300"};
-		{ 17, "s968329",	"967559",	"=q4=Big Whack Sandwich", "=ds=#sr# 300"};
-		{ 18, "s968332",	"967562",	"=q4=Warping Wontons", "=ds=#sr# 300"};
-		{ 19, "s968335",	"967565",	"=q4=Duck Stew", "=ds=#sr# 300"};
-		{ 20, "s968338",	"967568",	"=q4=Mountainman Stew", "=ds=#sr# 300"};
-		{ 21, "s968341",	"967571",	"=q4=Scorched Stew", "=ds=#sr# 300"};
-		{ 22, "s968344",	"967574",	"=q4=Vulcan Wontons", "=ds=#sr# 300"};
-		{ 23, "s968347",	"967577",	"=q4=Jurassic Soup", "=ds=#sr# 300"};
-		{ 24, "s968350",	"967580",	"=q4=Heightened Wontons", "=ds=#sr# 300"};
-		{ 25, "s968353",	"967583",	"=q4=Hearty Spirit Soup", "=ds=#sr# 300"};
-		{ 26, "s968356",	"967586",	"=q4=Jurassic Steak", "=ds=#sr# 300"};
-		{ 27, "s968359",	"967589",	"=q4=Stormwich Sandwich", "=ds=#sr# 300"};
-		{ 28, "s968362",	"967592",	"=q4=Warding Wontons", "=ds=#sr# 300"};
-		{ 29, "s968365",	"967595",	"=q4=Rolling Meatballs", "=ds=#sr# 300"};
-		{ 30, "s968368",	"967598",	"=q4=Subtle Steak", "=ds=#sr# 300"};
-		Next = "CookingHighRiskTwo";
+	AtlasLoot_Data["CookingHighRiskEpicCLASSIC"] = {
+		{ 1, "s968281",	"967511",  "=q4=Animated Soup for the Soul", "=ds=#sr# 300"};
+		{ 2, "s968284",	"967514", "=q4=Volcanic Sandwich", "=ds=#sr# 300"};
+		{ 3, "s968287",	"967517", "=q4=Winter Wontons", "=ds=#sr# 300"};
+		{ 4, "s968290",	"967520", "=q4=Storm Steak", "=ds=#sr# 300"};
+		{ 5, "s968293",	"967523", "=q4=Void Touched Stew", "=ds=#sr# 300"};
+		{ 6, "s968296",	"967526", "=q4=Spicy Vulture Steak", "=ds=#sr# 300"};
+		{ 7, "s968299",	"967529", "=q4=Wizard Wontons", "=ds=#sr# 300"};
+		{ 8, "s968302",	"967532", "=q4=Jurassic Burger", "=ds=#sr# 300"};
+		{ 9, "s968305",	"967535", "=q4=Rough-alo wings", "=ds=#sr# 300"};
+		{ 10, "s968308", "967538", "=q4=The Whooper Sandwich", "=ds=#sr# 300"};
+		{ 11, "s968311", "967541", "=q4=Vulture a la King", "=ds=#sr# 300"};
+		{ 12, "s968314", "967542", "=q4=Scorching Hot Steak", "=ds=#sr# 300"};
+		{ 13, "s968317", "967547", "=q4=Lively Stew", "=ds=#sr# 300"};
+		{ 14, "s968320", "967550", "=q4=Crawling Steak", "=ds=#sr# 300"};
+		{ 15, "s968323", "967553", "=q4=Breakonator Sandwich", "=ds=#sr# 300"};
+		{ 16, "s968326", "967556", "=q4=Master Wontons", "=ds=#sr# 300"};
+		{ 17, "s968329", "967559", "=q4=Big Whack Sandwich", "=ds=#sr# 300"};
+		{ 18, "s968332", "967562", "=q4=Warping Wontons", "=ds=#sr# 300"};
+		{ 19, "s968335", "967565", "=q4=Duck Stew", "=ds=#sr# 300"};
+		{ 20, "s968338", "967568", "=q4=Mountainman Stew", "=ds=#sr# 300"};
+		{ 21, "s968341", "967571", "=q4=Scorched Stew", "=ds=#sr# 300"};
+		{ 22, "s968344", "967574", "=q4=Vulcan Wontons", "=ds=#sr# 300"};
+		{ 23, "s968347", "967577", "=q4=Jurassic Soup", "=ds=#sr# 300"};
+		{ 24, "s968350", "967580", "=q4=Heightened Wontons", "=ds=#sr# 300"};
+		{ 25, "s968353", "967583", "=q4=Hearty Spirit Soup", "=ds=#sr# 300"};
+		{ 26, "s968356", "967586", "=q4=Jurassic Steak", "=ds=#sr# 300"};
+		{ 27, "s968359", "967589", "=q4=Stormwich Sandwich", "=ds=#sr# 300"};
+		{ 28, "s968362", "967592", "=q4=Warding Wontons", "=ds=#sr# 300"};
+		{ 29, "s968365", "967595", "=q4=Rolling Meatballs", "=ds=#sr# 300"};
+		{ 30, "s968368", "967598", "=q4=Subtle Steak", "=ds=#sr# 300"};
+		Next = "CookingHighRiskTwoEpicCLASSIC";
 		Back = "CRAFTINGMENU";
 		Type = "CraftingExt";
+		Submenu = "Expansion";
 	};
 	
-	AtlasLoot_Data["CookingHighRiskTwoEpic"] = {
-		{ 1, "s968371",	"967601",	"=q4=Subtle Sandwich", "=ds=#sr# 300"};
-		{ 2, "s968374",	"967604",	"=q4=Subtle Wontons", "=ds=#sr# 300"};
-		{ 3, "s968377",	"967607",	"=q4=Subtle Sulferous Soup", "=ds=#sr# 300"};
-		{ 4, "s968380",	"967610",	"=q4=Strongman Stew", "=ds=#sr# 300"};
-		{ 5, "s968383",	"967613",	"=q4=Mysterious Void Roast", "=ds=#sr# 300"};
-		{ 6, "s968386",	"967616",	"=q4=Fire Charred Roast", "=ds=#sr# 300"};
-		{ 7, "s968389",	"967619",	"=q4=Storm Fried Roast", "=ds=#sr# 300"};
-		{ 8, "s968392",	"967622",	"=q4=Winter Roast", "=ds=#sr# 300"};
-		{ 9, "s968395",	"967625",	"=q4=Blackened Roast", "=ds=#sr# 300"};
-		{ 10, "s968398",	"967628",	"=q4=Dino Delight", "=ds=#sr# 300"};
-		{ 11, "s968401",	"967631",	"=q4=Slick-fil-A Sandwich", "=ds=#sr# 300"};
-		{ 13, "s968648",	"967705",	"=q4=Irresistible Bait", "=ds=#sr# 300"};
-		Prev = "CookingHighRisk";
+	AtlasLoot_Data["CookingHighRiskTwoEpicCLASSIC"] = {
+		{ 1, "s968371", "967601", "=q4=Subtle Sandwich", "=ds=#sr# 300"};
+		{ 2, "s968374", "967604", "=q4=Subtle Wontons", "=ds=#sr# 300"};
+		{ 3, "s968377", "967607", "=q4=Subtle Sulferous Soup", "=ds=#sr# 300"};
+		{ 4, "s968380", "967610", "=q4=Strongman Stew", "=ds=#sr# 300"};
+		{ 5, "s968383", "967613", "=q4=Mysterious Void Roast", "=ds=#sr# 300"};
+		{ 6, "s968386", "967616", "=q4=Fire Charred Roast", "=ds=#sr# 300"};
+		{ 7, "s968389", "967619", "=q4=Storm Fried Roast", "=ds=#sr# 300"};
+		{ 8, "s968392", "967622", "=q4=Winter Roast", "=ds=#sr# 300"};
+		{ 9, "s968395", "967625", "=q4=Blackened Roast", "=ds=#sr# 300"};
+		{ 10, "s968398", "967628", "=q4=Dino Delight", "=ds=#sr# 300"};
+		{ 11, "s968401", "967631", "=q4=Slick-fil-A Sandwich", "=ds=#sr# 300"};
+		{ 13, "s968648", "967705", "=q4=Irresistible Bait", "=ds=#sr# 300"};
+		Prev = "CookingHighRiskEpicCLASSIC";
 		Back = "CRAFTINGMENU";
 		Type = "CraftingExt";
+		Submenu = "Expansion";
 	};
+
+		---------------------
+		---	     TBC      ---
+		---------------------
+	
+		AtlasLoot_Data["AlchemyHighRiskTBC"] = {	
+			{ 1, "s979362", "1203258",  "=q3=Impure Flask of Manifesting Power", 	"=ds=#sr# 300"};
+			{ 2, "s979364", "1203260",  "=q3=Impure Flask of the Warsong", 			"=ds=#sr# 300"};
+			{ 3, "s979366", "1203262",  "=q3=Impure Flask of the Kirin Tor", 		"=ds=#sr# 300"};
+			{ 4, "s979368", "1203264", "=q3=Impure Flask of Butchery", 				"=ds=#sr# 300"};
+			{ 5, "s979370", "1203266", "=q3=Impure Flask of the Unyielding", 		"=ds=#sr# 300"};
+			{ 6, "s979372", "1203268", "=q3=Impure Flask of Unrelenting Power", 		"=ds=#sr# 300"};
+			{ 7, "s979374", "1203270", "=q3=Impure Flask of Savage Assault", 		"=ds=#sr# 300"};
+			{ 8, "s979376", "1203272", "=q3=Impure Flask of Shattering Thunder", 	"=ds=#sr# 300"};
+			{ 9, "s979378", "1203274", "=q3=Impure Flask of the Executioner", 		"=ds=#sr# 300"};
+			{ 10, "s979380", "1203276", "=q3=Impure Flask of Deep Meditation", 		"=ds=#sr# 300"};
+			{ 11, "s979382", "1203278", "=q3=Impure Flask of Adept Striking", 		"=ds=#sr# 300"};
+			Prev = "JewlHighRiskTBC";
+			Next = "SmithingHighRiskTBC";
+			Back = "ALCHEMYMENU";
+			Type = "CraftingExtTBC";
+			Submenu = "Expansion";
+		};
+		
+		AtlasLoot_Data["AlchemyHighRiskRareTBC"] = AtlasLoot_Data["AlchemyHighRiskTBC"];
+		
+		AtlasLoot_Data["AlchemyHighRiskEpicTBC"] = {
+			{ 1, "s979363", "1203259",  "=q4=Pure Flask of Manifesting Power", 	"=ds=#sr# 300"};
+			{ 2, "s979365", "1203261",  "=q4=Pure Flask of the Warsong", "=ds=#sr# 300"};
+			{ 3, "s979367", "1203263",  "=q4=Pure Flask of the Kirin Tor", "=ds=#sr# 300"};
+			{ 4, "s979369", "1203265", "=q4=Pure Flask of Butchery", "=ds=#sr# 300"};
+			{ 5, "s979371", "1203267", "=q4=Pure Flask of the Unyielding", "=ds=#sr# 300"};
+			{ 6, "s979373", "1203269", "=q4=Pure Flask of Unrelenting Power", "=ds=#sr# 300"};
+			{ 7, "s979375", "1203271", "=q4=Pure Flask of Savage Assault", "=ds=#sr# 300"};
+			{ 8, "s979377", "1203273", "=q4=Pure Flask of Shattering Thunder", "=ds=#sr# 300"};
+			{ 9, "s979379", "1203275", "=q4=Pure Flask of the Executioner", "=ds=#sr# 300"};
+			{ 10, "s979381", "1203277", "=q4=Pure Flask of Deep Meditation", "=ds=#sr# 300"};
+			{ 11, "s979383", "1203279", "=q4=Pure Flask of Adept Striking", "=ds=#sr# 300"};
+			Prev = "JewlHighRiskTBC";
+			Next = "SmithingHighRiskTBC";
+			Back = "ALCHEMYMENU";
+			Type = "CraftingExtTBC";
+			Submenu = "Expansion";
+		};
+		
+		AtlasLoot_Data["SmithingHighRiskTBC"] = {
+			{ 1, "s979534", "1204033", "=q3=Hulking Belt Buckle", "=ds=#sr# 300"};
+			{ 2, "s979536", "1204035", "=q3=Blade Master's Belt Buckle", "=ds=#sr# 300"};
+			{ 3, "s979538", "1204037", "=q3=Agile Belt Buckle", "=ds=#sr# 300"};
+			{ 4, "s979540", "1204039", "=q3=Eluding Belt Buckle", "=ds=#sr# 300"};
+			{ 5, "s979542", "1204041", "=q3=Scholar's Belt Buckle", 	"=ds=#sr# 300"};
+			{ 6, "s979544", "1204043", "=q3=Priestly Belt Buckle", "=ds=#sr# 300"};
+			{ 7, "s979546", "1204045", "=q3=Champion\'s Belt Buckle", "=ds=#sr# 300"};
+			{ 8, "s979548", "1204047", "=q3=Guarded Belt Buckle", "=ds=#sr# 300"};
+			Prev = "AlchemyHighRiskTBC";
+			Next = "LeatherHighRiskTBC";					
+			Back = "SMITHINGMENU";
+			Type = "CraftingExtTBC";
+			Submenu = "Expansion";
+		};
+	
+		AtlasLoot_Data["SmithingHighRiskRareTBC"] = AtlasLoot_Data["SmithingHighRiskTBC"];
+
+		AtlasLoot_Data["SmithingHighRiskEpicTBC"] = {
+			{ 1, "s979535", "1204034", "=q4=Mastercraft Hulking Belt Buckle", "=ds=#sr# 300"};
+			{ 2, "s979537", "1204036", "=q4=Mastercraft Blade Master's Belt Buckle", "=ds=#sr# 300"};
+			{ 3, "s979539", "1204038", "=q4=Mastercraft Agile Belt Buckle", "=ds=#sr# 300"};
+			{ 4, "s979541", "1204040", "=q4=Mastercraft Eluding Belt Buckle", "=ds=#sr# 300"};
+			{ 5, "s979543", "1204042", "=q4=Mastercraft Scholar's Belt Buckle", 	"=ds=#sr# 300"};
+			{ 6, "s979545", "1204044", "=q4=Mastercraft Priestly Belt Buckle", "=ds=#sr# 300"};
+			{ 7, "s979547", "1204046", "=q4=Mastercraft Champion\'s Belt Buckle", "=ds=#sr# 300"};
+			{ 8, "s979549", "1204048", "=q4=Mastercraft Guarded Belt Buckle", "=ds=#sr# 300"};
+			Prev = "AlchemyHighRiskTBC";
+			Next = "LeatherHighRiskTBC";
+			Back = "SMITHINGMENU";
+			Type = "CraftingExtTBC";
+			Submenu = "Expansion";
+		};
+
+		AtlasLoot_Data["LeatherHighRiskTBC"] = {
+			{ 1, "s979522", "1204021", "=q3=Cobra Strike Gambeson", "=ds=#sr# 300"};
+			{ 2, "s979524", "1204023", "=q3=Fel Strike Gambeson", "=ds=#sr# 300"};
+			{ 3, "s979526", "1204025", "=q3=Wind Gambeson", "=ds=#sr# 300"};
+			{ 4, "s979528", "1204027", "=q3=True Strike Gambeson", "=ds=#sr# 300"};
+			{ 5, "s979530", "1204029", "=q3=Clefthoof Gambeson", "=ds=#sr# 300"};
+			{ 6, "s979532", "1204031", "=q3=Subtle Gambeson", "=ds=#sr# 300"};
+			Prev = "SmithingHighRiskTBC";
+			Next = "EngineerHighRiskTBC";
+			Back = "LEATHERWORKINGMENU";
+			Type = "CraftingExtTBC";
+			Submenu = "Expansion";
+		};
+		
+		AtlasLoot_Data["LeatherHighRiskRareTBC"] = AtlasLoot_Data["LeatherHighRiskTBC"];
+
+		AtlasLoot_Data["LeatherHighRiskEpicTBC"] = {
+			{ 1, "s979523", "1204022", "=q4=Mastercraft Cobra Strike Gambeson", "=ds=#sr# 300"};
+			{ 2, "s979525", "1204024", "=q4=Mastercraft Fel Strike Gambeson", "=ds=#sr# 300"};
+			{ 3, "s979527", "1204026", "=q4=Mastercraft Wind Gambeson", "=ds=#sr# 300"};
+			{ 4, "s979529", "1204028", "=q4=Mastercraft True Strike Gambeson", "=ds=#sr# 300"};	
+			{ 5, "s979531", "1204030", "=q4=Mastercraft Clefthoof Gambeson", "=ds=#sr# 300"};
+			{ 6, "s979533", "1204032", "=q4=Mastercraft Subtle Gambeson", "=ds=#sr# 300"};
+			Prev = "SmithingHighRiskTBC";
+			Next = "EngineerHighRiskTBC";
+			Back = "LEATHERWORKINGMENU";
+			Type = "CraftingExtTBC";
+			Submenu = "Expansion";
+		};
+		
+		AtlasLoot_Data["EngineerHighRiskTBC"] = {
+			{ 1, "s979550", "1204049", "=q3=Gnomish Magnification Polish", "=ds=#sr# 300"};
+			{ 2, "s979552", "1204051", "=q3=Gnomish Sharpening Polish", "=ds=#sr# 300"};
+			{ 3, "s979554", "1204053", "=q3=Gnomish Prismatic Polish", "=ds=#sr# 300"};
+			{ 4, "s979556", "1204055", "=q3=Felfire Scope", "=ds=#sr# 300"};
+			{ 5, "s979558", "1204057", "=q3=Sighted Scope", "=ds=#sr# 300"};
+			{ 6, "s979560", "1204059", "=q3=Quickshot Scope", "=ds=#sr# 300"};
+			Prev = "LeatherHighRiskTBC";
+			Next = "EnchantingHighRiskTBC";
+			Back = "ENGINEERINGMENU";
+			Type = "CraftingExtTBC";
+			Submenu = "Expansion";
+		};
+
+		AtlasLoot_Data["EngineerHighRiskRareTBC"] = AtlasLoot_Data["EngineerHighRiskTBC"];
+		
+		AtlasLoot_Data["EngineerHighRiskEpicTBC"] = {
+			{ 1, "s968044", "1204050", "=q4=Fine Gnomish Magnification Polish", "=ds=#sr# 300"};
+			{ 2, "s968047", "1204052", "=q4=Fine Gnomish Sharpening Polish", "=ds=#sr# 300"};
+			{ 3, "s968050", "1204054", "=q4=Fine Gnomish Prismatic Polish", "=ds=#sr# 300"};
+			{ 4, "s968053", "1204056", "=q4=Focused Felfire Scope", "=ds=#sr# 300"};
+			{ 5, "s968056", "1204058", "=q4=Focused Sighted Scope", "=ds=#sr# 300"};
+			{ 6, "s968059", "1204060", "=q4=Focused Quickshot Scope", "=ds=#sr# 300"};
+			Prev = "LeatherHighRiskTBC";
+			Next = "EnchantingHighRiskTBC";	
+			Back = "ENGINEERINGMENU";
+			Type = "CraftingExtTBC";
+			Submenu = "Expansion";
+		};
+
+		AtlasLoot_Data["EnchantingHighRiskTBC"] = {
+			{ 1, "s1968677", "Spell_Holy_GreaterHeal", "=q3=Enchant Weapon - Void Assault", "=ds=#sr# 300"};
+			{ 2, "s1968680", "Spell_Holy_GreaterHeal", "=q3=Enchant Weapon - Dread Assault", "=ds=#sr# 300"};
+			{ 3, "s1968683", "Spell_Holy_GreaterHeal", "=q3=Enchant Weapon - Twisted Evoker", "=ds=#sr# 300"};
+			{ 4, "s1968686", "Spell_Holy_GreaterHeal", "=q3=Enchant Weapon - Twisted Assault", "=ds=#sr# 300"};
+			{ 5, "s1968689", "Spell_Holy_GreaterHeal", "=q3=Enchant Weapon - Twisted Channeler", "=ds=#sr# 300"};
+			{ 6, "s1968692", "Spell_Holy_GreaterHeal", "=q3=Enchant Weapon - Dread Omen Strikes", "=ds=#sr# 300"};
+			{ 7, "s1968695", "Spell_Holy_GreaterHeal", "=q3=Enchant Weapon - Void Flows", "=ds=#sr# 300"};
+			{ 8, "s1968698", "Spell_Holy_GreaterHeal", "=q3=Enchant Weapon - Void Blasting", "=ds=#sr# 300"};
+			{ 9, "s1968701", "Spell_Holy_GreaterHeal", "=q3=Enchant Weapon - Dread Precision", "=ds=#sr# 300"};
+			{ 10, "s1968770", "Spell_Holy_GreaterHeal", "=q3=Enchant Weapon - Twisted Crusader", "=ds=#sr# 300"};
+			Prev = "EngineerHighRiskTBC";
+			Next = "TailorHighRiskTBC";
+			Back = "ENCHANTINGMENU";
+			Type = "CraftingExtTBC";
+			Submenu = "Expansion";
+		};
+		
+		AtlasLoot_Data["EnchantingHighRiskRareTBC"] = AtlasLoot_Data["EnchantingHighRiskTBC"];
+
+		AtlasLoot_Data["EnchantingHighRiskEpicTBC"] = {
+			{ 1, "s1968678", "Spell_Holy_GreaterHeal", "=q4=Enchant Weapon - Overpowering Void Assault", "=ds=#sr# 300"};
+			{ 2, "s1968681", "Spell_Holy_GreaterHeal", "=q4=Enchant Weapon - Overpowering Dread Assault", "=ds=#sr# 300"};
+			{ 3, "s1968684", "Spell_Holy_GreaterHeal", "=q4=Enchant Weapon - Overpowering Twisted Evoker", "=ds=#sr# 300"};
+			{ 4, "s1968687", "Spell_Holy_GreaterHeal", "=q4=Enchant Weapon - Overpowering Twisted Assault", "=ds=#sr# 300"};
+			{ 5, "s1968690", "Spell_Holy_GreaterHeal", "=q4=Enchant Weapon - Overpowering Twisted Channeler", "=ds=#sr# 300"};
+			{ 6, "s1968693", "Spell_Holy_GreaterHeal", "=q4=Enchant Weapon - Overpowering Dread Omen Strikes", "=ds=#sr# 300"};
+			{ 7, "s1968696", "Spell_Holy_GreaterHeal", "=q4=Enchant Weapon - Overpowering Void Flows", "=ds=#sr# 300"};
+			{ 8, "s1968699", "Spell_Holy_GreaterHeal", "=q4=Enchant Weapon - Overpowering Void Blasting", "=ds=#sr# 300"};
+			{ 9, "s1968702", "Spell_Holy_GreaterHeal", "=q4=Enchant Weapon - Overpowering Dread Precision", "=ds=#sr# 300"};
+			{ 10, "s1968771", "Spell_Holy_GreaterHeal", "=q4=Enchant Weapon - Overpowering Twisted Crusader", "=ds=#sr# 300"};
+			Prev = "EngineerHighRiskTBC";
+			Next = "TailorHighRiskTBC";
+			Back = "ENCHANTINGMENU";
+			Type = "CraftingExtTBC";
+			Submenu = "Expansion";
+		};
+
+		AtlasLoot_Data["TailorHighRiskTBC"] = {
+			{ 1, "s979562", "1204061", "=q3=Armored Cloak Lining", "=ds=#sr# 300"};
+			{ 2, "s979564", "1204063", "=q3=Chaneller\'s Cloak Lining", "=ds=#sr# 300"};
+			{ 3, "s979566", "1204065", "=q3=Energizing Cloak Lining", "=ds=#sr# 300"};
+			{ 4, "s979568", "1204067", "=q3=Rager\'s Cloak Lining", "=ds=#sr# 300"};
+			{ 5, "s979570", "1204069", "=q3=Steadfast Cloak Lining", "=ds=#sr# 300"};
+			{ 6, "s979572", "1204071", "=q3=Shifting Cloak Lining", "=ds=#sr# 300"};
+			Prev = "EnchantingHighRiskTBC";
+			Next = "JewlHighRiskTBC";
+			Back = "TAILORINGMENU";
+			Type = "CraftingExtTBC";
+			Submenu = "Expansion";
+		};
+
+		AtlasLoot_Data["TailorHighRiskRareTBC"] = AtlasLoot_Data["TailorHighRiskTBC"];
+
+		AtlasLoot_Data["TailorHighRiskEpicTBC"] = {
+			{ 1, "s979563", "1204062", "=q4=Fitted Armored Cloak Lining", "=ds=#sr# 300"};
+			{ 2, "s979565", "1204064", "=q4=Fitted Chaneller\'s Cloak Lining", "=ds=#sr# 300"};
+			{ 3, "s979567", "1204066", "=q4=Fitted Energizing Cloak Lining", "=ds=#sr# 300"};
+			{ 4, "s979569", "1204068", "=q4=Fitted Rager\'s Cloak Lining", "=ds=#sr# 300"};
+			{ 5, "s979571", "1204070", "=q4=Fitted Steadfast Cloak Lining", "=ds=#sr# 300"};
+			{ 6, "s979573", "1204072", "=q4=Fitted Shifting Cloak Lining", "=ds=#sr# 300"};
+			Prev = "EnchantingHighRiskTBC";
+			Next = "JewlHighRiskTBC";
+			Back = "TAILORINGMENU";
+			Type = "CraftingExtTBC";
+			Submenu = "Expansion";
+		};
+
+		AtlasLoot_Data["JewlHighRiskTBC"] = {
+			{ 1, "s979639", "1204165", "=q3=Deep Gold Twisted Pendant", "=ds=#sr# 300"};
+			{ 2, "s979641", "1204167", "=q3=Bloodshadow Twisted Pendant", "=ds=#sr# 300"};
+			{ 3, "s979643", "1204169", "=q3=Azureflame Twisted Pendant", "=ds=#sr# 300"};
+			{ 4, "s979645", "1204171", "=q3=Shadowgold Dread Pendant", "=ds=#sr# 300"};
+			{ 5, "s979647", "1204173", "=q3=Deep Azure Dread Pendant", 	"=ds=#sr# 300"};
+			{ 6, "s979649", "1204175", "=q3=Bloodflame Dread Pendant", "=ds=#sr# 300"};
+			{ 7, "s979651", "1204177", "=q3=Living Night Void Pendant", "=ds=#sr# 300"};
+			{ 8, "s979653", "1204179", "=q3=Dawnstar Void Pendant", "=ds=#sr# 300"};
+			{ 9, "s979655", "1204181", "=q3=Noble Talasite Void Pendant", "=ds=#sr# 300"};
+			Prev = "EnchantingHighRiskTBC";
+			Next = "AlchemyHighRiskTBC";
+			Back = "SMITHINGMENU";
+			Type = "CraftingExtTBC";
+		};
+
+		AtlasLoot_Data["JewlHighRiskEpicTBC"] = {
+			{ 1, "s979640", "1204166", "=q4=Engraved Deep Gold Twisted Pendant", "=ds=#sr# 300"};
+			{ 2, "s979642", "1204168", "=q4=Engraved Bloodshadow Twisted Pendant", "=ds=#sr# 300"};
+			{ 3, "s979644", "1204170", "=q4=Engraved Azureflame Twisted Pendant", "=ds=#sr# 300"};
+			{ 4, "s979646", "1204172", "=q4=Engraved Shadowgold Dread Pendant", "=ds=#sr# 300"};
+			{ 5, "s979648", "1204174", "=q4=Engraved Deep Azure Dread Pendant", "=ds=#sr# 300"};
+			{ 6, "s979650", "1204176", "=q4=Engraved Bloodflame Dread Pendant", "=ds=#sr# 300"};
+			{ 7, "s979652", "1204178", "=q4=Engraved Living Night Void Pendant", "=ds=#sr# 300"};
+			{ 8, "s979654", "1204180", "=q4=Engraved Dawnstar Void Pendant", "=ds=#sr# 300"};
+			{ 9, "s979656", "1204182", "=q4=Engraved Noble Talasite Void Pendant", "=ds=#sr# 300"};
+			Prev = "EnchantingHighRiskTBC";
+			Next = "AlchemyHighRiskTBC";
+			Back = "SMITHINGMENU";
+			Type = "CraftingExtTBC";
+		};
+
+		AtlasLoot_Data["CookingHighRiskTBC"] = {
+			{ 1, "s979384",	"1203280", "=q3=Infused Living Soup", "=ds=#sr# 300"};
+			{ 2, "s979386",	"1203282", "=q3=Infused Charred Steak", "=ds=#sr# 300"};
+			{ 3, "s979388",	"1203284", "=q3=Infused Steamed Wontons", "=ds=#sr# 300"};
+			{ 4, "s979390",	"1203286", "=q3=Infused Air Fried Chops", "=ds=#sr# 300"};
+			{ 5, "s979392",	"1203288", "=q3=Infused Rock\'s Stew (Airsick lowlander flavor text)", "=ds=#sr# 300"};
+			{ 6, "s979394",	"1203290", "=q3=Infused Clear-Cut Chops", "=ds=#sr# 300"};
+			{ 7, "s979396",	"1203292", "=q3=Infused Clear-Cut Wontons", "=ds=#sr# 300"};
+			{ 8, "s979398",	"1203294", "=q3=Infused Clear-Cut Steak", "=ds=#sr# 300"};
+			{ 9, "s979463",	"1203358", "=q3=Infused Bold Simmered Stew", "=ds=#sr# 300"};
+			{ 10, "s979465", "1203360", "=q3=Infused Bold Duck Stew", "=ds=#sr# 300"};
+			{ 11, "s979447", "1203338", "=q3=Infused Subtle Chops", "=ds=#sr# 300"};
+			{ 12, "s979445", "1203340", "=q3=Infused Subtle Steak", "=ds=#sr# 300"};
+			{ 13, "s979447", "1203342", "=q3=Infused Subtle Wontons", "=ds=#sr# 300"};
+			{ 14, "s979449", "1203344", "=q3=Infused Subtle Soup", "=ds=#sr# 300"};
+			{ 15, "s979451", "1203346", "=q3=Infused Bold Stew", "=ds=#sr# 300"};
+			{ 16, "s979400", "1203296", "=q3=Infused Piercing Chops", "=ds=#sr# 300"};
+			{ 17, "s979402", "1203298", "=q3=Infused Piercing Steak", "=ds=#sr# 300"};
+			{ 18, "s979404", "1203300", "=q3=Infused Seared Wontons", "=ds=#sr# 300"};
+			{ 19, "s979406", "1203302", "=q3=Infused Seared Chops", "=ds=#sr# 300"};
+			{ 20, "s979421", "1203316", "=q3=Infused Duck Stew", "=ds=#sr# 300"};
+			{ 21, "s979423", "1203318", "=q3=Infused Chunky Stew", "=ds=#sr# 300"};
+			{ 22, "s979425", "1203320", "=q3=Infused Simmered Stew", "=ds=#sr# 300"};
+			{ 23, "s979427", "1203322", "=q3=Infused Wizard Wontons", "=ds=#sr# 300"};
+			{ 24, "s979429", "1203324", "=q3=Infused Wizard Soup", "=ds=#sr# 300"};
+			{ 25, "s979431", "1203326", "=q3=Infused Heightened Wontons", "=ds=#sr# 300"};
+			{ 26, "s979441", "1203336", "=q3=Infused Vibrant Chops", "=ds=#sr# 300"};
+			{ 27, "s979408", "1203304", "=q3=Infused Savory Stew", "=ds=#sr# 300"};
+			{ 28, "s979410", "1203306", "=q3=Infused Savory Chops", "=ds=#sr# 300"};
+			Next = "CookingHighRiskTwoTBC";
+			Back = "CRAFTINGMENU";
+			Type = "CraftingExtTBC";
+			Submenu = "Expansion";
+		};
+
+		AtlasLoot_Data["CookingHighRiskTwoTBC"] = {
+			{ 1, "s979413",	"1203308", "=q3=Infused Savory Steak", "=ds=#sr# 300"};
+			{ 2, "s979415",	"1203310", "=q3=Infused Savory Wontons", "=ds=#sr# 300"};
+			{ 3, "s979417",	"1203312", "=q3=Infused Red-Hot Stew", "=ds=#sr# 300"};
+			{ 4, "s979419",	"1203314", "=q3=Infused Blazing Stew", "=ds=#sr# 300"};
+			{ 5, "s979433",	"1203328", "=q3=Infused Hearty Living Soup", "=ds=#sr# 300"};
+			{ 6, "s979435",	"1203330", "=q3=Infused Hearty Air Fried Chops", "=ds=#sr# 300"};
+			{ 7, "s979437",	"1203332", "=q3=Infused Hearty Charred Steak", "=ds=#sr# 300"};
+			{ 8, "s979439",	"1203334", "=q3=Infused Hearty Steamed Wontons", "=ds=#sr# 300"};
+			{ 9, "s979453",	"1203348", "=q3=Infused Mana Charged Roast", "=ds=#sr# 300"};
+			{ 10, "s979455", "1203350", "=q3=Infused Sizzling Roast", "=ds=#sr# 300"};
+			{ 11, "s979457", "1203352", "=q3=Infused Wild Roast", "=ds=#sr# 300"};
+			{ 12, "s979459", "1203354", "=q3=Infused Winter Roast", "=ds=#sr# 300"};
+			{ 13, "s979461", "1203356", "=q3=Infused Blackened Roast", "=ds=#sr# 300"};
+			Prev = "CookingHighRiskTBC";
+			Back = "CRAFTINGMENU";
+			Type = "CraftingExtTBC";
+			Submenu = "Expansion";
+		};
+
+		AtlasLoot_Data["CookingHighRiskRareTBC"] = AtlasLoot_Data["CookingHighRiskTBC"];
+		AtlasLoot_Data["CookingHighRiskTwoRareTBC"] = AtlasLoot_Data["CookingHighRiskTwoTBC"]
+
+		AtlasLoot_Data["CookingHighRiskEpicTBC"] = {
+			{ 1, "s979385",	"1203281", "=q4=Charged Living Soup", "=ds=#sr# 300"};
+			{ 2, "s979387",	"1203283", "=q4=Charged Charred Steak", "=ds=#sr# 300"};
+			{ 3, "s979389",	"1203285", "=q4=Charged Steamed Wontons", "=ds=#sr# 300"};
+			{ 4, "s979391",	"1203287", "=q4=Charged Air Fried Chops", "=ds=#sr# 300"};
+			{ 5, "s979393",	"1203289", "=q4=Charged Rock\'s Stew (Airsick lowlander flavor text)", "=ds=#sr# 300"};
+			{ 6, "s979395",	"1203291", "=q4=Charged Clear-Cut Chops", "=ds=#sr# 300"};
+			{ 7, "s979397",	"1203293", "=q4=Charged Clear-Cut Wontons", "=ds=#sr# 300"};
+			{ 8, "s979399",	"1203295", "=q4=Charged Clear-Cut Steak", "=ds=#sr# 300"};
+			{ 9, "s979464",	"1203359", "=q4=Charged Bold Simmered Stew", "=ds=#sr# 300"};
+			{ 10, "s979466", "1203361", "=q4=Charged Bold Duck Stew", "=ds=#sr# 300"};
+			{ 11, "s979444", "1203339", "=q4=Charged Subtle Chops", "=ds=#sr# 300"};
+			{ 12, "s979446", "1203341", "=q4=Charged Subtle Steak", "=ds=#sr# 300"};
+			{ 13, "s979448", "1203343", "=q4=Charged Subtle Wontons", "=ds=#sr# 300"};
+			{ 14, "s979450", "1203345", "=q4=Charged Subtle Soup", "=ds=#sr# 300"};
+			{ 15, "s979452", "1203347", "=q4=Charged Bold Stew", "=ds=#sr# 300"};
+			{ 16, "s979401", "1203297", "=q4=Charged Piercing Chops", "=ds=#sr# 300"};
+			{ 17, "s979403", "1203299", "=q4=Charged Piercing Steak", "=ds=#sr# 300"};
+			{ 18, "s979405", "1203301", "=q4=Charged Seared Wontons", "=ds=#sr# 300"};
+			{ 19, "s979407", "1203303", "=q4=Charged Seared Chops", "=ds=#sr# 300"};
+			{ 20, "s979422", "1203317", "=q4=Charged Duck Stew", "=ds=#sr# 300"};
+			{ 21, "s979424", "1203319", "=q4=Charged Chunky Stew", "=ds=#sr# 300"};
+			{ 22, "s979426", "1203321", "=q4=Charged Simmered Stew", "=ds=#sr# 300"};
+			{ 23, "s979428", "1203323", "=q4=Charged Wizard Wontons", "=ds=#sr# 300"};
+			{ 24, "s979430", "1203325", "=q4=Charged Wizard Soup", "=ds=#sr# 300"};
+			{ 25, "s979432", "1203327", "=q4=Charged Heightened Wontons", "=ds=#sr# 300"};
+			{ 26, "s979442", "1203337", "=q4=Charged Vibrant Chops", "=ds=#sr# 300"};
+			{ 27, "s979409", "1203305", "=q4=Charged Savory Stew", "=ds=#sr# 300"};
+			{ 28, "s979412", "1203307", "=q4=Charged Savory Chops", "=ds=#sr# 300"};
+			Next = "CookingHighRiskTwoEpicTBC";
+			Back = "CRAFTINGMENU";
+			Type = "CraftingExtTBC";
+			Submenu = "Expansion";
+		};
+
+		AtlasLoot_Data["CookingHighRiskTwoEpicTBC"] = {
+			{ 1, "s979414",	"1203309", "=q4=Charged Savory Steak", "=ds=#sr# 300"};
+			{ 2, "s979416",	"1203311", "=q4=Charged Savory Wontons", "=ds=#sr# 300"};
+			{ 3, "s979418",	"1203313", "=q4=Charged Red-Hot Stew", "=ds=#sr# 300"};
+			{ 4, "s979420",	"1203315", "=q4=Charged Blazing Stew", "=ds=#sr# 300"};
+			{ 5, "s979434",	"1203329", "=q4=Charged Hearty Living Soup", "=ds=#sr# 300"};
+			{ 6, "s979436",	"1203331", "=q4=Charged Hearty Air Fried Chops", "=ds=#sr# 300"};
+			{ 7, "s979438",	"1203333", "=q4=Charged Hearty Charred Steak", "=ds=#sr# 300"};
+			{ 8, "s979440",	"1203335", "=q4=Charged Hearty Steamed Wontons", "=ds=#sr# 300"};
+			{ 9, "s979454",	"1203349", "=q4=Charged Mana Charged Roast", "=ds=#sr# 300"};
+			{ 10, "s979456", "1203351", "=q4=Charged Sizzling Roast", "=ds=#sr# 300"};
+			{ 11, "s979458", "1203353", "=q4=Charged Wild Roast", "=ds=#sr# 300"};
+			{ 12, "s979460", "1203355", "=q4=Charged Winter Roast", "=ds=#sr# 300"};
+			{ 13, "s979462", "1203357", "=q4=Charged Blackened Roast", "=ds=#sr# 300"};
+			Prev = "CookingHighRiskEpicTBC";
+			Back = "CRAFTINGMENU";
+			Type = "CraftingExtTBC";
+			Submenu = "Expansion";
+		};

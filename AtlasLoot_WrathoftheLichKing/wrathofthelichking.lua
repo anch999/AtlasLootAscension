@@ -10504,8 +10504,8 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 
 	AtlasLoot_Data["Legendaries"] = {
 		{ 1, 34334, "", "=q5=Thori'dal, the Stars' Fury", "=ds=#w2#"};
-		{ 3, 32837, "", "=q5=Warglaive of Azzinoth", "=ds=#h3#, #w10#, =q1=#m1# =ds=#c9#, #c6#", "", "4%", [AtlasLoot_Difficulty.DUPLICATE] = "(Mainhand)"};
-		{ 4, 32838, "", "=q5=Warglaive of Azzinoth", "=ds=#h4#, #w10#, =q1=#m1# =ds=#c9#, #c6#", "", "4%", [AtlasLoot_Difficulty.DUPLICATE] = "(Offhand)"};
+		{ 3, 32837, "", "=q5=Warglaive of Azzinoth", "=ds=#h3#, #w10#, =q1=#m1# =ds=#c9#, #c6#"};
+		{ 4, 32838, "", "=q5=Warglaive of Azzinoth", "=ds=#h4#, #w10#, =q1=#m1# =ds=#c9#, #c6#"};
 		{ 6, 30312, "", "=q5=Infinity Blade", "=q1=#m26#: =ds=#h1#, #w4#"};
 		{ 7, 30311, "", "=q5=Warp Slicer", "=q1=#m26#: =ds=#h1#, #w10#"};
 		{ 8, 30317, "", "=q5=Cosmic Infuser", "=q1=#m26#: =ds=#h3#, #w6#"};
@@ -10518,10 +10518,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 17, 19019, "", "=q5=Thunderfury, Blessed Blade of the Windseeker", "=ds=#h1#, #w10#"};
 		{ 18, 17182, "", "=q5=Sulfuras, Hand of Ragnaros", "=ds=#h2#, #w6#"};
 		{ 19, 21176, "", "=q5=Black Qiraji Resonating Crystal", "=ds=#e12#"};
-		{ 21, 22632, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c1#", "", "", [AtlasLoot_Difficulty.DUPLICATE] = "(Druid)" },
-		{ 22, 22589, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c3#", "", "", [AtlasLoot_Difficulty.DUPLICATE] = "(Mage)" },
-		{ 23, 22631, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c5#", "", "", [AtlasLoot_Difficulty.DUPLICATE] = "(Priest)" },
-		{ 24, 22630, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c8#", "", "", [AtlasLoot_Difficulty.DUPLICATE] = "(Warlock)" },
+		{ 21, 22632, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c1#"},
+		{ 22, 22589, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c3#"},
+		{ 23, 22631, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c5#"},
+		{ 24, 22630, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c8#"},
 		{ 26, 49623, "", "=q5=Shadowmourne", "=ds=#h2# #w1#", "" };
 		{ 27, 46017, "", "=q5=Val'anyr, Hammer of Ancient Kings", "=ds=#h3# #w6#", "" };
 		Back = "SETMENU"..AtlasLoot_Expac;

@@ -199,6 +199,21 @@ AtlasLoot_Difficulty = {
         },
     };
 
+    ["CraftingExtTBC"] = {
+        [1] = {
+            {"Crafting Patterns Rare", "", [4] = "Submenu" },
+        },
+        [2] = {
+            {"Crafting Patterns Epic", "Epic", [4] = "Submenu" },
+        },
+        [3] = {
+            {"Item Rare", "=s=", [4] = "Submenu" },
+        },
+        [4] = {
+            {"Item Epic", "=s=Epic", [4] = "Submenu" }
+        },
+    };
+
     ["Expansion"] = {
         [1] = {
             {"Classic", "=ex=CLASSIC", [4] = "Submenu"}

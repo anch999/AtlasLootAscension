@@ -19,7 +19,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 20, "COOKINGDAILYMENU", "INV_Misc_Food_15", AL["Cooking Daily"], ""};
 		{ 21, "FISHINGDAILYMENU", "inv_fishingpole_03", AL["Fishing Daily"], ""};
 		{ 22, "JEWELCRAFTINGDAILYMENU", "INV_Misc_Gem_01", AL["Jewelcrafting Daily"], ""};
-		{ 27, "CookingHighRisk", "INV_Misc_Food_15", "=ds=Cooking High Risk", ""};
+		{ 27, "CookingHighRisk"..AtlasLoot_Expac, "INV_Misc_Food_15", "=ds=Cooking High Risk", ""};
 		Submenu = "Disable";
 	};
 
@@ -27,7 +27,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 2, "AlchemyBattleElixir"..AtlasLoot_Expac, "INV_Potion_23", "=ds="..AL["Battle Elixirs"], "" };
 		{ 3, "AlchemyPotion"..AtlasLoot_Expac, "INV_Potion_23", "=ds="..AL["Potions"], "" };
 		{ 4, "AlchemyTransmute"..AtlasLoot_Expac, "INV_Potion_23", "=ds="..AL["Transmutes"], "" };
-		{ 6, "AlchemyHighRisk", "INV_Potion_23", "=ds=High Risk", "" };
+		{ 6, "AlchemyHighRisk"..AtlasLoot_Expac, "INV_Potion_23", "=ds=High Risk", "" };
 		{ 17, "AlchemyGuardianElixir"..AtlasLoot_Expac, "INV_Potion_23", "=ds="..AL["Guardian Elixirs"], "" };
 		{ 18, "AlchemyFlask"..AtlasLoot_Expac, "INV_Potion_23", "=ds="..AL["Flasks"], "" };
 		{ 19, "AlchemyMisc"..AtlasLoot_Expac, "INV_Potion_23", "=ds="..AL["Miscellaneous"], "" };
@@ -41,7 +41,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 6, "Armorsmith1", "Trade_BlackSmithing", "=ds="..GetSpellInfo(9788), "" };
 		{ 7, "Axesmith1", "Trade_BlackSmithing", "=ds="..GetSpellInfo(17041), "" };
 		{ 8, "Swordsmith1", "Trade_BlackSmithing", "=ds="..GetSpellInfo(17039), "" };
-		{ 10, "SmithingHighRisk", "Trade_BlackSmithing", "=ds=High Risk", "" };
+		{ 10, "SmithingHighRisk"..AtlasLoot_Expac, "Trade_BlackSmithing", "=ds=High Risk", "" };
 		{ 17, "SmithingWeapon"..AtlasLoot_Expac, "Trade_BlackSmithing", "=ds="..BabbleInventory["Weapon"], "" };
 		{ 19, "SmithingMisc1", "Trade_BlackSmithing", "=ds="..AL["Miscellaneous"], "" };
 		{ 21, "Weaponsmith1", "Trade_BlackSmithing", "=ds="..GetSpellInfo(9787), "" };
@@ -57,7 +57,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 5, "EnchantingShield"..AtlasLoot_Expac, "Trade_Engraving", "=ds="..AL["Enchant Shield"], "" };
 		{ 6, "EnchantingTwoHWeapon"..AtlasLoot_Expac, "Trade_Engraving", "=ds="..AL["Enchant 2H Weapon"], "" };
 		{ 7, "EnchantingMisc"..AtlasLoot_Expac, "Trade_Engraving", "=ds="..AL["Miscellaneous"], "" };
-		{ 9, "EnchantingHighRisk", "Trade_Engraving", "=ds=High Risk", "" };
+		{ 9, "EnchantingHighRisk"..AtlasLoot_Expac, "Trade_Engraving", "=ds=High Risk", "" };
 		{ 17, "EnchantingBracer"..AtlasLoot_Expac, "Trade_Engraving", "=ds="..AL["Enchant Bracer"], "" };
 		{ 18, "EnchantingCloak"..AtlasLoot_Expac, "Trade_Engraving", "=ds="..AL["Enchant Cloak"], "" };
 		{ 19, "EnchantingRing1", "Trade_Engraving", "=ds="..AL["Enchant Ring"], "" };
@@ -73,7 +73,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 4, "EngineeringMisc1", "Trade_Engineering", "=ds="..AL["Miscellaneous"], "" };
 		{ 5, "EngineeringWeapon1", "Trade_Engineering", "=ds="..BabbleInventory["Weapon"], "" };
 		{ 7, "Gnomish1", "Trade_Engineering", "=ds="..GetSpellInfo(20220), "" };
-		{ 9, "EngineerHighRisk", "Trade_Engineering", "=ds=High Risk", "" };
+		{ 9, "EngineerHighRisk"..AtlasLoot_Expac, "Trade_Engineering", "=ds=High Risk", "" };
 		{ 17, "EngineeringArmor1", "Trade_Engineering", "=ds="..BabbleInventory["Armor"], "" };
 		{ 18, "EngineeringItemEnhancements1", "Trade_Engineering", "=ds="..AL["Item Enhancements"], "" };
 		{ 19, "EngineeringReagents1", "Trade_Engineering", "=ds="..AL["Reagents"], "" };
@@ -121,6 +121,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 7, "JewelMeta"..AtlasLoot_Expac, "INV_Misc_Gem_01", "=ds="..BabbleInventory["Meta"].." "..BabbleInventory["Gem"], "" };
 		{ 8, "JewelPrismatic1", "INV_Misc_Gem_01", "=ds="..BabbleInventory["Prismatic"].." "..BabbleInventory["Gem"], "" };
 		{ 9, "JewelDragonsEye1", "INV_Misc_Gem_01", "=ds="..AL["Dragon's Eye"], "" };
+		{ 11, "JewlHighRisk"..AtlasLoot_Expac, "INV_Misc_Gem_01", "=ds=High Risk", "" };
 		{ 16, "JewelNeck1", "INV_Misc_Gem_01", "=ds="..BabbleInventory["Neck"], "" };
 		{ 17, "JewelTrinket1", "INV_Misc_Gem_01", "=ds="..BabbleInventory["Trinket"], "" };
 		{ 18, "JewelRing1", "INV_Misc_Gem_01", "=ds="..BabbleInventory["Ring"], "" };
@@ -136,7 +137,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 6, "LeatherLeather1", "INV_Misc_ArmorKit_17", "=ds="..BabbleInventory["Leather"], "" };
 		{ 8, "Dragonscale1", "INV_Misc_ArmorKit_17", "=ds="..GetSpellInfo(10656), "" };
 		{ 9, "Tribal1", "INV_Misc_ArmorKit_17", "=ds="..GetSpellInfo(10660), "" };
-		{ 11, "LeatherHighRisk", "INV_Misc_ArmorKit_17", "=ds=High Risk", "" };
+		{ 11, "LeatherHighRisk"..AtlasLoot_Expac, "INV_Misc_ArmorKit_17", "=ds=High Risk", "" };
 		{ 17, "LeatherMailArmor"..AtlasLoot_Expac, "INV_Misc_ArmorKit_17", "=ds="..AL["Mail Armor"],"" };
 		{ 19, "LeatherItemEnhancement1", "INV_Misc_ArmorKit_17", "=ds="..AL["Item Enhancements"], "" };
 		{ 20, "LeatherDrumsBagsMisc1", "INV_Misc_ArmorKit_17", "=ds="..AL["Drums, Bags and Misc."], "" };
@@ -150,7 +151,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 4, "Mooncloth1", "Trade_Tailoring", "=ds="..GetSpellInfo(26798), "" };
 		{ 5, "Shadoweave1", "Trade_Tailoring", "=ds="..GetSpellInfo(26801), "" };
 		{ 6, "Spellfire1", "Trade_Tailoring", "=ds="..GetSpellInfo(26797), "" };
-		{ 8, "TailorHighRisk", "Trade_Tailoring", "=ds=High Risk", "" };
+		{ 8, "TailorHighRisk"..AtlasLoot_Expac, "Trade_Tailoring", "=ds=High Risk", "" };
 		{ 17, "TailoringBags1", "Trade_Tailoring", "=ds="..AL["Bags"], "" };
 		{ 18, "TailoringMisc1", "Trade_Tailoring", "=ds="..AL["Miscellaneous"], "" };
 		{ 19, "TailoringShirts1", "Trade_Tailoring", "=ds="..AL["Shirts"], "" };

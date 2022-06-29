@@ -630,11 +630,17 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 	end
 
 	if isTablereference and not notPattern then  		-- if the itemID is the item rather from a crafting pattern rather then the pattern itself
-		dataID = dataID .. tableReference;
+		local dataClean = dataID
+		dataID = AtlasLoot_CleandataID(dataID, 1);
+		dataClean = gsub(dataClean, dataID, "")
+		dataID = dataID .. tableReference .. dataClean;
 		DewDrop2Enable = true;
 		lastReference = tableReference;
 	elseif isTablereference and notPattern then			-- if the itemID is a new table reference rather then and itemID reference
-		dataID = dataID .. tableReference;
+		local dataClean = dataID
+		dataID = AtlasLoot_CleandataID(dataID, 1);
+		dataClean = gsub(dataClean, dataID, "")
+		dataID = dataID .. tableReference .. dataClean;
 		DewDrop2Enable = true;
 		lastReference = tableReference;
 	elseif isTableExpansion then
@@ -651,6 +657,7 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 	else
 		DewDrop2Enable = false;
 	end
+		
 		--Turns on the submenu to change expansion
 		if dataID == "SearchResult" or dataID == "WishList" then
 		elseif AtlasLoot_Data[dataID].Submenu == "Expansion" then
@@ -725,20 +732,11 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 						if dataSource[dataID][i][AtlasLoot_Difficulty.MAX_DIF] then
 							if tonumber(dataSource[dataID][i][AtlasLoot_Difficulty.MAX_DIF]) < ItemindexID then ItemindexID = dataSource[dataID][i][AtlasLoot_Difficulty.MAX_DIF] end;
 						end
-
-						if dataSource[dataID][i][AtlasLoot_Difficulty.DUPLICATE] then
-							--Used if an item has more then 1 version with the same name eg Atiesh
-							IDfound = AL_FindId(dataSource[dataID][i][2], ItemindexID) or dataSource[dataID][i][2];
-							if ((dataID == "SearchResult") or (dataID == "WishList")) then
-								IDfound = AL_FindId(dataSource[dataID][i][2], dataSource[dataID][i][AtlasLoot_Difficulty.DIF_SEARCH]) or dataSource[dataID][i][2];
-							end
-						else
 							--If something was found in itemID database show that if not show default table item
 							IDfound = AL_FindId(dataSource[dataID][i][2], ItemindexID) or dataSource[dataID][i][2];
 							if ((dataID == "SearchResult") or (dataID == "WishList")) then
 								IDfound = AL_FindId(dataSource[dataID][i][2], dataSource[dataID][i][AtlasLoot_Difficulty.DIF_SEARCH]) or dataSource[dataID][i][2];
 							end
-						end
 					end
 
 					itemName, itemLink, itemQuality, itemLevel, itemMinLevel, itemType, itemSubType, itemCount, itemEquipLoc, itemTexture = GetItemInfo(IDfound);

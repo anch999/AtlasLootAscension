@@ -524,10 +524,10 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 20, 21712, "", "=q4=Amulet of the Fallen God", "=q1=#m4#: =ds=#s2#"};
 		{ 21, 21709, "", "=q4=Ring of the Fallen God", "=q1=#m4#: =ds=#s13#"};
 		{ 23, 22734, "", "=q1=Base of Atiesh", "=ds=#m3#"};
-		{ 24, 22632, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c1#", "", "", [AtlasLoot_Difficulty.DUPLICATE] = "(Druid)" },
-		{ 25, 22589, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c3#", "", "", [AtlasLoot_Difficulty.DUPLICATE] = "(Mage)" },
-		{ 26, 22631, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c5#", "", "", [AtlasLoot_Difficulty.DUPLICATE] = "(Priest)" },
-		{ 27, 22630, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c8#", "", "", [AtlasLoot_Difficulty.DUPLICATE] = "(Warlock)" },
+		{ 24, 22632, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c1#"};
+		{ 25, 22589, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c3#"};
+		{ 26, 22631, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c5#"};
+		{ 27, 22630, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c8#"};
 		Prev = "AQ40Ouro";
 		Next = "AQ40Trash1";
 		Type = "ClassicRaid";
@@ -1510,7 +1510,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 14, 17105, "", "=q4=Aurastone Hammer", "=ds=#h3#, #w6#", "", "12.67%"};
 		{ 15, 17066, "", "=q4=Drillborer Disk", "=ds=#w8#", "", "11.85%"};
 		{ 16, 2522360, "", "=q4=Molten Headpiece", "=ds=#tt1#", "", "100%", "=LT=T1Helms"};
-		{ 18, 18564, "", "=q5=Bindings of the Windseeker", "=ds=#m3#, =q1=#m9#", "", "3.74%", [AtlasLoot_Difficulty.DUPLICATE] = "(Right)"};
+		{ 18, 18564, "", "=q5=Bindings of the Windseeker", "=ds=#m3#, =q1=#m9#", "", "3.74%"};
 		{ 19, 19019, "", "=q5=Thunderfury, Blessed Blade of the Windseeker", "=q1=#m4#: =ds=#h1#, #w10#"};
 		{ 21, 17782, "", "=q5=Talisman of Binding Shard", "=ds=#s2#", "", ""};        
 		{ 22, 11879, "", "=q5=Medallion of Binding Shard", "=ds=#s2#", "", ""}; 
@@ -1551,7 +1551,7 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 11, 19142, "", "=q4=Fire Runed Grimoire", "=ds=#s15#", "", "2.59%"};
 		{ 12, 18822, "", "=q4=Obsidian Edged Blade", "=ds=#h2#, #w10#", "", "2.70%"};
 		{ 16, 2522361, "", "=q4=Molten Spaulders", "=ds=#tt1#", "", "100%", "=LT=T1Shoulders"};
-		{ 18, 18563, "", "=q5=Bindings of the Windseeker", " =ds=#m3#, =q1=#m10#", "", "3.78%", [AtlasLoot_Difficulty.DUPLICATE] = "(Left)"};
+		{ 18, 18563, "", "=q5=Bindings of the Windseeker", " =ds=#m3#, =q1=#m10#", "", "3.78%"};
 		{ 19, 19019, "", "=q5=Thunderfury, Blessed Blade of the Windseeker", "=q1=#m4#: =ds=#h1#, #w10#"};
 		Prev = "MCShazzrah";
 		Next = "MCGolemagg";
@@ -4485,10 +4485,10 @@ local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 		{ 15, 23206, "", "=q4=Mark of the Champion", "=q1=#m4# =ds=#s14#" },
 		{ 16, 1510496, "", "=q4=Desecrated Ring", "=ds=#tt3#","", "100%" , "=LT=T3Rings"};
 		{ 18, 22733, "", "=q1=Staff Head of Atiesh", "=ds=#m3#" },
-		{ 19, 22632, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c1#", "", "", [AtlasLoot_Difficulty.DUPLICATE] = "(Druid)" },
-		{ 20, 22589, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c3#", "", "", [AtlasLoot_Difficulty.DUPLICATE] = "(Mage)" },
-		{ 21, 22631, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c5#", "", "", [AtlasLoot_Difficulty.DUPLICATE] = "(Priest)" },
-		{ 22, 22630, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c8#", "", "", [AtlasLoot_Difficulty.DUPLICATE] = "(Warlock)" },
+		{ 19, 22632, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c1#"},
+		{ 20, 22589, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c3#"},
+		{ 21, 22631, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c5#"},
+		{ 22, 22630, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c8#"},
 		Prev = "NAXSapphiron";
 		Next = "NAXTrash";
 		Type = "ClassicRaid";
