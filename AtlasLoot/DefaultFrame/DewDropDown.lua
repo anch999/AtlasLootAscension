@@ -14,23 +14,23 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0")
 --Entries have the text to display, loot table or sub table to link to and if the link is to a loot table or sub table
 AtlasLoot_DewDropDown = {
 	[1] = {				
-		[AL["Classic Instances"]] = {				
+		[AL["Classic Instances"]] = {
 			[1] = {			
 				{ "Raids:", "OldKeys", "Table", "Header" },		
-			},			
-			[2] = {			
+			},
+			[2] = {
 				{ BabbleZone["Molten Core"], "MoltenCore",  "Submenu" },		
-			},			
-			[3] = {			
+			},
+			[3] = {
 				{ BabbleZone["Zul'Gurub"], "ZulGurub",  "Submenu" },		
-			},			
-			[4] = {			
+			},
+			[4] = {
 				{ BabbleZone["Onyxia's Lair"], "Onyxia60", "Table" },	
-			},			
-			[5] = {			
+			},
+			[5] = {
 				{ BabbleZone["Blackwing Lair"], "BlackwingLair",  "Submenu" },	
-			},			
-			[6] = {			
+			},
+			[6] = {
 				{ BabbleZone["Ruins of Ahn'Qiraj"], "RuinsofAQ",  "Submenu" },		
 			},			
 			[7] = {			

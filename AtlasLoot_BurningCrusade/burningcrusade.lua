@@ -5505,6 +5505,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 28, 27948, "", "=q3=Trousers of Oblivion", "=ds="..BabbleBoss["Talon King Ikiss"].." ("..BabbleZone["Sethekk Halls"]..")"};
 		Next = "DS3Leather";
 		Back = "DS3SET";
+		Type = "D3Set";
 	};
 
 	AtlasLoot_Data["DS3Leather"] = {
@@ -5529,6 +5530,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "DS3Cloth";
 		Next = "DS3Mail";
 		Back = "DS3SET";
+		Type = "D3Set";
 	};
 
 	AtlasLoot_Data["DS3Mail"] = {
@@ -5553,6 +5555,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		Prev = "DS3Leather";
 		Next = "DS3Plate";
 		Back = "DS3SET";
+		Type = "D3Set";
 	};
 
 	AtlasLoot_Data["DS3Plate"] = {
@@ -5576,6 +5579,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 21, 27870, "", "=q3=Doomplate Legguards", "=ds="..BabbleBoss["Exarch Maladaar"].." ("..BabbleZone["Auchenai Crypts"]..") (#j3#)"};
 		Prev = "DS3Mail";
 		Back = "DS3SET";
+		Type = "D3Set";
 	};
 
 	--------------
