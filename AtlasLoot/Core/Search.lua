@@ -446,7 +446,7 @@ local function nameMatches(name, searchText)
 end
 
 local RelationalFunctions = {
-    ["ilv"] = {IsItemLevelFilterMatch, 3},
+    ["ilvl"] = {IsItemLevelFilterMatch, 3},
     ["minlvl"] = {IsMinLevelFilterMatch, 4},
     ["type"] = {IsItemTypeMatch, 6},
     ["slot"] = {IsItemSlotMatch, 5},
@@ -575,7 +575,7 @@ local RelationalFunctions = {
     ["resarcane"] = {IsItemStatMatch, 7},
     ["resarc"] = {IsItemStatMatch, 7},
 
-    ["dif"] = {IsItemDifficulty, 1}
+    ["dif"] = {IsItemDifficulty, 8},
 }
 
 local function GetItemDetails(itemId, atlasName)
@@ -681,7 +681,7 @@ local function DoSearch(searchText)
 
             if type(itemId) == "number" and itemId > 0 then
                 if difficulty ~= 2 then
-                    itemId = AL_FindId(string.sub(atlasName, 5), difficulty) or itemId;
+                        itemId = AL_FindId(itemId, difficulty) or itemId;
                 end
 
                 local itemDetails = {GetItemDetails(itemId, atlasName)};
