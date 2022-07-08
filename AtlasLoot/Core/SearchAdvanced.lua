@@ -191,7 +191,7 @@ AdvancedSearchOptions = {
 function AtlasLoot_AdvancedSearchSetup()
     AtlasLoot_AdvancedSearchRegister(AtlasLoot_QualityMenu, AtlasLootAdvancedSearch_Quality, AtlasLoot_AdvancedSearchMenus["Quality"]);
     AtlasLoot_AdvancedSearchRegister(AtlasLoot_EquipMenu, AtlasLootAdvancedSearch_Equip, AtlasLoot_AdvancedSearchMenus["Equip"]);
-    AtlasLoot_AdvancedSearchRegister(AtlasLoot_DifficultyMenu, AtlasLootAdvancedSearch_Difficulty, AtlasLoot_AdvancedSearchMenus["Difficulty"]);
+    --AtlasLoot_AdvancedSearchRegister(AtlasLoot_DifficultyMenu, AtlasLootAdvancedSearch_Difficulty, AtlasLoot_AdvancedSearchMenus["Difficulty"]);
 
     local addArg = CreateFrame("Button", "AtlasLootAdvancedSearch_ArgumentContainerAddArgBtn", AtlasLootAdvancedSearch_ArgumentContainer, "OptionsButtonTemplate");
     addArg:SetPoint("BOTTOMLEFT", AtlasLootAdvancedSearch_ArgumentContainer, "TOPLEFT", 110, 2);
@@ -375,7 +375,8 @@ function AtlasLoot_AdvancedSearchReset()
     AtlasLootAdvancedSearch_EquipSub:Disable();
     AtlasLootAdvancedSearch_EquipSub:SetText("Select Option")
 
-    AtlasLootAdvancedSearch_Difficulty:SetText("Select Difficulty");
+    --AtlasLootAdvancedSearch_Difficulty:SetText("Select Difficulty");
+    AtlasLootAdvancedSearch_Difficulty:Hide();
 end
 
 function AddArgumentContainer()

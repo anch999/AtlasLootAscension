@@ -575,7 +575,7 @@ local RelationalFunctions = {
     ["resarcane"] = {IsItemStatMatch, 7},
     ["resarc"] = {IsItemStatMatch, 7},
 
-    ["dif"] = {IsItemDifficulty, 8},
+    --["dif"] = {IsItemDifficulty, 8},
 }
 
 local function GetItemDetails(itemId, atlasName)
