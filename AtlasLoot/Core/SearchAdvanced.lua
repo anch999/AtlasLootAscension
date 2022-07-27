@@ -284,19 +284,10 @@ function AtlasLoot_AdvancedSearchShow()
     AdvSearchSubMenu2Enabled = 0;
     AdvSearchSubMenuText = "";
 
-    if AtlasLootDefaultFrame_SubMenu2:IsEnabled() then
-        AdvSearchSubMenu2Enabled = 1;
-        AdvSearchSubMenu2Text = AtlasLootDefaultFrame_SelectedTable2:GetText();
-        AtlasLootDefaultFrame_SubMenu2:Disable();
-        AtlasLootDefaultFrame_SelectedTable2:SetText("");
-        AtlasLootDefaultFrame_SelectedTable2:Hide();
-    end
+
 
     if AtlasLootDefaultFrame_SubMenu:IsEnabled() then
         AdvSearchSubMenuEnabled = 1;
-        AdvSearchSubMenuText = AtlasLootDefaultFrame_SelectedTable:GetText();
-        AtlasLootDefaultFrame_SubMenu:Disable();
-        AtlasLootDefaultFrame_SelectedTable:SetText("");
     end
 
     AtlasLootServerQueryButton:Hide();
@@ -328,11 +319,6 @@ end
 function AtlasLoot_AdvancedSearchClose()
     AtlasLootAdvancedSearch:Hide();
     AtlasLootServerQueryButton:Show();
-
-    if AdvSearchSubMenu2Enabled then
-        AtlasLootDefaultFrame_SubMenu2:Enable();
-        AtlasLootDefaultFrame_SelectedTable2:SetText(AdvSearchSubMenu2Text);
-    end
 
     if AdvSearchSubMenuEnabled then
         AtlasLootDefaultFrame_SubMenu:Enable();

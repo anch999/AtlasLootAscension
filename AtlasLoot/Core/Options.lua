@@ -146,15 +146,6 @@ function AtlasLootOptions_ItemIDToggle()
 end
 
 function AtlasLootOptions_SubtablePositionToggle()
-    if  AtlasLootOptionsFrameSubtablePosition:GetChecked() then
-		AtlasLootDefaultFrame_SubMenu2:SetPoint("TOP", 160, -40);
-		AtlasLootDefaultFrame_SubMenu:SetPoint("TOP", 0, -40);
-		AtlasLoot.db.profile.SubtablePosition = AtlasLootOptionsFrameSubtablePosition:GetChecked();
-	else
-		AtlasLootDefaultFrame_SubMenu:SetPoint("TOP", 160, -40);
-		AtlasLootDefaultFrame_SubMenu2:SetPoint("TOP", 0, -40);
-		AtlasLoot.db.profile.SubtablePosition = AtlasLootOptionsFrameSubtablePosition:GetChecked();
-	end
     AtlasLootOptions_Init();
 end
 

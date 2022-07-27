@@ -40,7 +40,8 @@ TableRegister\TableRegister.xml
 AtlasLayout\AtlasLayout.xml
 Add_Ons\Addons.xml
 Core\AtlasLoot.xml
-DefaultFrame\AtlaslootDefaultFrame.xml
 Menus\Menus.xml
+DefaultFrame\AtlaslootDefaultFrame.lua
+DefaultFrame\AtlaslootDefaultFrameCreate.lua
 
 modules.xml

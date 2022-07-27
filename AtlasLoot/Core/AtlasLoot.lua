@@ -14,7 +14,6 @@ AtlasLoot_OnLoad()
 AtlasLootBoss_OnClick()
 AtlasLoot_ShowItemsFrame()
 AtlasLoot_GenerateAtlasMenu(dataID, pFrame)
-AtlasLoot_SetupForAtlas()
 AtlasLootOptions_ItemAutoQuery()
 AtlasLoot_SetItemInfoFrame()
 AtlasLootItemsFrame_OnCloseButton()
@@ -46,7 +45,6 @@ ATLASLOOT_PREVIEW_ATLAS = {"1.17.3", "1.17.2"};
 
 ATLASLOOT_POSITION = AL["Position:"];
 ATLASLOOT_DEBUGMESSAGES = false;
-ATLASLOOT_FILTER_ENABLE = false;
 
 --Standard indent to line text up with Atlas text
 ATLASLOOT_INDENT = "   ";
@@ -54,10 +52,11 @@ ATLASLOOT_INDENT = "   ";
 --Make the Dewdrop menu in the standalone loot browser accessible here
 AtlasLoot_Dewdrop = AceLibrary("Dewdrop-2.0");
 AtlasLoot_DewdropSubMenu = AceLibrary("Dewdrop-2.0");
-AtlasLoot_DewdropSubMenu2 = AceLibrary("Dewdrop-2.0");
+AtlasLoot_DewdropExpansionMenu = AceLibrary("Dewdrop-2.0");
 AtlasLoot_DifficultyAtlas = AceLibrary("Dewdrop-2.0");
 --Variable to cap debug spam
 ATLASLOOT_DEBUGSHOWN = false;
+ATLASLOOT_FILTER_ENABLE = false;
 
 -- Colours stored for code readability
 local GREY = "|cff999999";
@@ -214,7 +213,10 @@ function AtlasLoot_OnVariablesLoaded()
 	    AtlasLoot_TableNames["AtlasLootFallback"] = { "AtlasLoot", "AtlasLootFallback" };
     end
     if AtlasLoot_Data then
-        AtlasLoot_Data["EmptyTable"] = {};
+        AtlasLoot_Data["EmptyTable"] = {
+			Name = AL["Select a Loot Table..."];
+			{Name = AL["Select a Loot Table..."]};
+		};
     end
     --Figure out if it is a compatible Atlas version
     for i=1,#ATLASLOOT_CURRENT_ATLAS do
@@ -237,10 +239,6 @@ function AtlasLoot_OnVariablesLoaded()
 	--Set up options frame
 	AtlasLootOptions_OnLoad();
     AtlasLoot_CreateOptionsInfoTooltips();
-	--Legacy code for those using the ultimately failed attempt at making Atlas load on demand
-	if AtlasButton_LoadAtlas then
-		AtlasButton_LoadAtlas();
-	end
 	--Hook the necessary Atlas functions
     Hooked_Atlas_Refresh = Atlas_Refresh;
     Atlas_Refresh = AtlasLoot_Refresh;
@@ -278,7 +276,6 @@ function AtlasLoot_OnVariablesLoaded()
 	end
 	--If Atlas is installed, set up for Atlas
 	if ( Hooked_Atlas_Refresh ) then
-		AtlasLoot_SetupForAtlas();
 		--If a first time user, set up options
 		if( (AtlasLoot.db.profile.AtlasLootVersion == nil) or (tonumber(AtlasLoot.db.profile.AtlasLootVersion) < 40500)) then
 			AtlasLoot.db.profile.SafeLinks = true;
@@ -359,23 +356,12 @@ function AtlasLoot_OnVariablesLoaded()
 	end
 	--Set up the menu in the loot browser
 	AtlasLoot_DewdropRegister();
+	AtlasLoot_DewdropExpansionMenuRegister();
 	--If EquipCompare is available, use it
 	if((EquipCompare_RegisterTooltip) and (AtlasLoot.db.profile.EquipCompare == true)) then
 		EquipCompare_RegisterTooltip(AtlasLootTooltip);
 	end
-	--Position relevant UI objects for loot browser and set up menu
-	AtlasLootDefaultFrame_SelectedCategory:SetPoint("TOP", "AtlasLootDefaultFrame_Menu", "BOTTOM", 0, -4);
-	AtlasLootDefaultFrame_SelectedTable:SetPoint("TOP", "AtlasLootDefaultFrame_SubMenu", "BOTTOM", 0, -4);
-	AtlasLootDefaultFrame_SelectedTable2:SetPoint("TOP", "AtlasLootDefaultFrame_SubMenu2", "BOTTOM", 0, -4);
-	AtlasLootDefaultFrame_SelectedCategory:SetText(AL["Choose Table ..."]);
-	AtlasLootDefaultFrame_SelectedTable:SetText("");
-	AtlasLootDefaultFrame_SelectedTable2:SetText("");
-	AtlasLootItemsFrame_DifficultyAtlasButton:SetText("Select Difficulty");
-	AtlasLootDefaultFrame_SelectedCategory:Show();
-	AtlasLootDefaultFrame_SelectedTable:Show();
-	AtlasLootDefaultFrame_SelectedTable2:Show();
-	AtlasLootDefaultFrame_SubMenu:Disable();
-	AtlasLootDefaultFrame_SubMenu2:Disable();
+
 	if (AtlasLoot.db.profile.LoadAllLoDStartup == true) then
 		AtlasLoot_LoadAllModules();
 	else
@@ -496,11 +482,11 @@ function AtlasLoot_OnLoad()
 
 	--Sets the default loot tables for the current expansion enabled on the server.
 	local function getExpac()
-		local xpaclist = { [0] = {"CLASSIC"} ,[1] = {"TBC"} ,[2] = {"WRATH"} };
-		AtlasLoot_Expac = xpaclist[GetAccountExpansionLevel()][1];
+		local xpaclist = {"CLASSIC", "TBC", "WRATH"};
+		AtlasLoot_Expac = xpaclist[GetAccountExpansionLevel()+1];
 	end
 	getExpac();
-	AtlasLoot_Expac_CurrentTable = AtlasLoot_Expac;
+	
 end
 
 function AtlasLoot_CleandataID(newID, listnum)
@@ -522,7 +508,7 @@ pFrame - Data structure describing how and where to anchor the item frame (more 
 This fuction is not normally called directly, it is usually invoked by AtlasLoot_ShowBossLoot.
 It is the workhorse of the mod and allows the loot tables to be displayed any way anywhere in any mod.
 ]]
-function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
+function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame, tablenum)
 	--Set up local variables needed for GetItemInfo, etc
 	local itemName, itemLink, itemQuality, itemLevel, itemType, itemSubType, itemCount, itemEquipLoc, itemTexture, itemColor;
 	local iconFrame, nameFrame, extraFrame, itemButton;
@@ -531,7 +517,7 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 	local isItem;
 	local spellName, spellIcon;
 
-	SearchPrevData = {dataID, dataSource, boss, pFrame};
+	SearchPrevData = {dataID, dataSource, boss, pFrame, tablenum};
 
     --If the loot table name has not been passed, throw up a debugging statement
 	if dataID==nil then
@@ -554,24 +540,11 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 	-- Hide the Filter Check-Box
 	AtlasLootFilterCheck:Hide();
 
-	-- Hide Selector
-	AtlasLootItemsFrame_DifficultyAtlasButton:Disable();
-	AtlasLootItemsFrame_DifficultyAtlasButton:Hide();
 
-	-- Updates AtlasLoot_Lastboss if your in a main loot table
-	if AtlasLoot_Hold == false or AtlasLoot_Lastboss == nil then
-		AtlasLoot_Lastboss = dataID;
-	end
     dataSource_backup = dataSource;
 
 	if dataID == "SearchResult" or dataID == "WishList" then
         ItemindexID = "";
-		AtlasLootItemsFrame_DifficultyAtlasButton:Disable();
-		AtlasLootItemsFrame_DifficultyAtlasButton:Hide();
-		AtlasLootDefaultFrame_SubMenu2:Disable();
-		AtlasLootDefaultFrame_SelectedTable2:SetText("");
-		AtlasLootDefaultFrame_SelectedTable2:Hide();
-        AtlasLootItemsFrame_DifficultyAtlasButton:SetText("Select Difficulty");
         dataSource = {};
 		-- Match the page number to display
         wlPage = tonumber(dataSource_backup:match("%d+$"));
@@ -588,131 +561,43 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
         dataSource = AtlasLoot_Data;
     end
 
-	if dataID == "FilterList" then
-		Type = lastType;
-	else
-		Type = dataSource[dataID].Type;
-	end
-
-	if Type ~= lastType then
-		AtlasLoot_DifficultyDisable()
-		if lastReference ~= nil then
-			dataID = gsub(dataID, lastReference, "");	-- removes old table reference before adding a new 1 if needed
-		end
-		ItemindexID = "";
-	end
-
-	if DewDrop2Enable or not dataID == nil or lastReference then
-		dataID = gsub(dataID, lastReference, "");	-- removes old table reference before adding a new 1 if needed
-	end
-
-	if dataID:match("MENU") and ATLASLOOT_FILTER_ENABLE then
-		AtlasLootFilterCheck:SetChecked(false);
-		ATLASLOOT_FILTER_ENABLE = false
-	end
-
-	if (AtlasLootItemsFrame:GetParent() == AlphaMapAlphaMapFrame or AtlasLootItemsFrame:GetParent() == AtlasFrame) then
-		AtlasMapMenu = true;
-	else
-		AtlasLootItemsFrame_DifficultyAtlasButton:Hide();
-		AtlasLootItemsFrame_DifficultyAtlasButton:Disable();
-		AtlasMapMenu = false;
-	end
-
-	if Type == nil and ATLASLOOT_FILTER_ENABLE == false or ATLASLOOT_FILTER_ENABLE and dataSource[AtlasLoot_CurrentBoss].Type == nil  then -- disable difficulty menu
-		AtlasLoot_DifficultyDisable()
-		AtlasLoot_CurrentBoss = dataID;
-	elseif ATLASLOOT_FILTER_ENABLE then
-		AtlasLoot_DifficultyEnable(AtlasLoot_CurrentBoss, dataSource)
-	elseif Type ~= nil then-- enable difficulty menu
-		AtlasLoot_DifficultyEnable(dataID, dataSource)
-		AtlasLoot_CurrentBoss = dataID
-	end
-
-	if isTablereference and not notPattern then  		-- if the itemID is the item rather from a crafting pattern rather then the pattern itself
-		local dataClean = dataID
-		dataID = AtlasLoot_CleandataID(dataID, 1);
-		dataClean = gsub(dataClean, dataID, "")
-		dataID = dataID .. tableReference .. dataClean;
-		DewDrop2Enable = true;
-		lastReference = tableReference;
-	elseif isTablereference and notPattern then			-- if the itemID is a new table reference rather then and itemID reference
-		local dataClean = dataID
-		dataID = AtlasLoot_CleandataID(dataID, 1);
-		dataClean = gsub(dataClean, dataID, "")
-		dataID = dataID .. tableReference .. dataClean;
-		DewDrop2Enable = true;
-		lastReference = tableReference;
-	elseif isTableExpansion then
-		local function cleanTableName(tid)
-			for i = 1, #ATLAS_EXPANSION do
-				tid = gsub(tid, ATLAS_EXPANSION[i], "");
-			end
-			return tid;
-		end
-		dataID = cleanTableName(dataID);
-		dataID = dataID..tableReference;
-		lastReference = "";
-		DewDrop2Enable = true;
-	else
-		DewDrop2Enable = false;
-	end
-		
-		--Turns on the submenu to change expansion
-		if dataID == "SearchResult" or dataID == "WishList" then
-		elseif AtlasLoot_Data[dataID].Submenu == "Expansion" then
-			Updated_dataID = AtlasLoot_CleandataID(dataID, 1);
-			AtlasLoot_Expac_CurrentTable = gsub(dataID, Updated_dataID, "")
-			AtlasLoot_Expac_CurrentTable = AtlasLoot_CleandataID(AtlasLoot_Expac_CurrentTable, 2);
-			AtlasLootDefaultFrame_SubMenu:Enable();
-			AtlasLoot_DewdropSubMenu:Unregister(AtlasLootDefaultFrame_SubMenu);
-			AtlasLoot_DewdropSubMenuRegister(AtlasLoot_DewDropDown_SubTables["Expansion"]);
-			AtlasLootDefaultFrame_SelectedTable:SetText(AtlasLoot_TableNames[AtlasLoot_Expac_CurrentTable][1]);
-			SelectedTableTextSet = true;
-		elseif AtlasLoot_Data[dataID].Submenu == "Disable" then
-			AtlasLoot_DewdropSubMenu:Unregister(AtlasLootDefaultFrame_SubMenu);
-			SelectedTableTextSet = false;
-			AtlasLootDefaultFrame_SubMenu:Disable();
-			AtlasLootDefaultFrame_SelectedTable:SetText("");
-			AtlasLoot_Expac_CurrentTable = "";
-		end
-	
-
 	--Hide UI objects so that only needed ones are shown
 	for i = 1, 30, 1 do
         getglobal("AtlasLootItem_"..i.."_Unsafe"):Hide();
-		getglobal("AtlasLootMenuItem_"..i):Hide();
         getglobal("AtlasLootItem_"..i):Hide();
         getglobal("AtlasLootItem_"..i).itemID = 0;
         getglobal("AtlasLootItem_"..i).spellitemID = 0;
 	end
 
-    if AtlasLoot_TableNames[dataID] ~= nil and AtlasLoot_TableNames[dataID][2] == "Menu" then
+--[[     if AtlasLoot_TableNames[dataID] ~= nil and AtlasLoot_TableNames[dataID][2] == "Menu" then
         AtlasLoot_GenerateAtlasMenu(dataID, pFrame);
 		lastType = dataSource[dataID].Type
         return;
-    end
-
+    end ]]
+	
+	AtlasLoot_CurrentType = dataSource[dataID].Type or "";
+	AtlasLootDefaultFrame_ScrollFrameUpdate();
+	
 	-- Create the loottable
-	if (dataID == "SearchResult") or (dataID == "WishList") or (AtlasLoot_IsLootTableAvailable(dataID)) then
+	if (dataID == "SearchResult") or (dataID == "WishList") or dataSource[dataID][tablenum] then
 		--Iterate through each item object and set its properties
 		for i = 1, 30, 1 do
 
 			--Check for a valid object (that it exists, and that it has a name)
 			local toShow = true;
-			if(dataSource[dataID][i] ~= nil and dataSource[dataID][i][4] ~= "") then
+			if(dataSource[dataID][tablenum][i] ~= nil and dataSource[dataID][tablenum][i][4] ~= "") then
 				--Checks if an item has a Minimum difficulty, this is to hide items that shouldn't show on lower difficulties
-				if dataSource[dataID][i][AtlasLoot_Difficulty.MIN_DIF] then
-					if dataSource[dataID][i][AtlasLoot_Difficulty.MIN_DIF] > ItemindexID then toShow = false end;
+				if dataSource[dataID][tablenum][i][AtlasLoot_Difficulty.MIN_DIF] then
+					if dataSource[dataID][tablenum][i][AtlasLoot_Difficulty.MIN_DIF] > ItemindexID then toShow = false end;
 				end
 			else
 				toShow = false;
 			end
 
 			if(toShow) then
-				IDfound = AL_FindId(dataSource[dataID][i][2], ItemindexID) or dataSource[dataID][i][2];
+				IDfound = AL_FindId(dataSource[dataID][tablenum][i][2], ItemindexID) or dataSource[dataID][tablenum][i][2];
 					if ((dataID == "SearchResult") or (dataID == "WishList")) then
-						IDfound = AL_FindId(dataSource[dataID][i][2], dataSource[dataID][i][AtlasLoot_Difficulty.DIF_SEARCH]) or dataSource[dataID][i][2];
+						IDfound = AL_FindId(dataSource[dataID][tablenum][i][2], dataSource[dataID][tablenum][i][AtlasLoot_Difficulty.DIF_SEARCH]) or dataSource[dataID][tablenum][i][2];
 					end
 
 				if string.sub(IDfound, 1, 1) == "s" then
@@ -723,19 +608,19 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 
 				if isItem then
 					if ItemindexID == "Bloodforged" then
-						IDfound = "60"..dataSource[dataID][i][2];
+						IDfound = "60"..dataSource[dataID][tablenum][i][2];
 					else
 					--Sets ItemindexID to normal(2) if it is nil for min/max difficulties.
 						if not tonumber(ItemindexID) then ItemindexID = AtlasLoot_Difficulty.Normal end;
 
 						--Checks if an item has a Maximum difficulty, this is to correct some items that have an entry for higher difficulties then they really do
-						if dataSource[dataID][i][AtlasLoot_Difficulty.MAX_DIF] then
-							if tonumber(dataSource[dataID][i][AtlasLoot_Difficulty.MAX_DIF]) < ItemindexID then ItemindexID = dataSource[dataID][i][AtlasLoot_Difficulty.MAX_DIF] end;
+						if dataSource[dataID][tablenum][i][AtlasLoot_Difficulty.MAX_DIF] then
+							if tonumber(dataSource[dataID][tablenum][i][AtlasLoot_Difficulty.MAX_DIF]) < ItemindexID then ItemindexID = dataSource[dataID][tablenum][i][AtlasLoot_Difficulty.MAX_DIF] end;
 						end
 							--If something was found in itemID database show that if not show default table item
-							IDfound = AL_FindId(dataSource[dataID][i][2], ItemindexID) or dataSource[dataID][i][2];
+							IDfound = AL_FindId(dataSource[dataID][tablenum][i][2], ItemindexID) or dataSource[dataID][tablenum][i][2];
 							if ((dataID == "SearchResult") or (dataID == "WishList")) then
-								IDfound = AL_FindId(dataSource[dataID][i][2], dataSource[dataID][i][AtlasLoot_Difficulty.DIF_SEARCH]) or dataSource[dataID][i][2];
+								IDfound = AL_FindId(dataSource[dataID][tablenum][i][2], dataSource[dataID][tablenum][i][AtlasLoot_Difficulty.DIF_SEARCH]) or dataSource[dataID][tablenum][i][2];
 							end
 					end
 
@@ -745,68 +630,68 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 					if(GetItemInfo(IDfound)) then
 						_, _, _, itemColor = GetItemQualityColor(itemQuality);
 						text = itemColor..itemName;
-					elseif dataSource[dataID][i][2] ~= IDfound and itemDefaultColour ~= nil and not dataSource[dataID][i][4]:match("=q5=") then
+					elseif dataSource[dataID][tablenum][i][2] ~= IDfound and itemDefaultColour ~= nil and not dataSource[dataID][tablenum][i][4]:match("=q5=") then
 						--If the item is not in cache, use the saved value and process it
-						text = (string.sub(dataSource[dataID][i][4], 5));
+						text = (string.sub(dataSource[dataID][tablenum][i][4], 5));
 						text = itemDefaultColour .. text;
 						text = AtlasLoot_FixText(text);
 					else
 						--If the item is not in cache, use the saved value and process it
-						text = dataSource[dataID][i][4];
+						text = dataSource[dataID][tablenum][i][4];
 						text = AtlasLoot_FixText(text);
 					end
 				else
 					spellName, _, spellIcon, _, _, _, _, _, _ = GetSpellInfo(string.sub(IDfound, 2));
 					if spellName then
-                        text = AtlasLoot_FixText(string.sub(dataSource[dataID][i][4], 1, 4)..spellName);
+                        text = AtlasLoot_FixText(string.sub(dataSource[dataID][tablenum][i][4], 1, 4)..spellName);
                     else
-                        text = dataSource[dataID][i][4];
+                        text = dataSource[dataID][tablenum][i][4];
                         text = AtlasLoot_FixText(text);
                     end
 				end
 
 				--Store data about the state of the items frame to allow minor tweaks or a recall of the current loot page
-				AtlasLootItemsFrame.refresh = {dataID, dataSource_backup, boss, pFrame};
+				AtlasLootItemsFrame.refresh = {dataID, dataSource_backup, boss, pFrame, tablenum};
 				if dataID ~= "FilterList" then
-					AtlasLootItemsFrame.refreshOri = {dataID, dataSource_backup, boss, pFrame}
+					AtlasLootItemsFrame.refreshOri = {dataID, dataSource_backup, boss, pFrame, tablenum}
 				end
 
 				--Insert the item description
-                if dataSource[dataID][i][6] and dataSource[dataID][i][6] ~= "" then
-                	extra = dataSource[dataID][i][6];
-                elseif dataSource[dataID][i][5] then
-                    extra = dataSource[dataID][i][5];
+                if dataSource[dataID][tablenum][i][6] and dataSource[dataID][tablenum][i][6] ~= "" then
+                	extra = dataSource[dataID][tablenum][i][6];
+                elseif dataSource[dataID][tablenum][i][5] then
+                    extra = dataSource[dataID][tablenum][i][5];
                 else
                     extra = "";
                 end
 				extra = AtlasLoot_FixText(extra);
 
 				--Use shortcuts for easier reference to parts of the item button
-				itemButton = getglobal("AtlasLootItem_"..dataSource[dataID][i][1]);
-				iconFrame  = getglobal("AtlasLootItem_"..dataSource[dataID][i][1].."_Icon");
-				nameFrame  = getglobal("AtlasLootItem_"..dataSource[dataID][i][1].."_Name");
-				extraFrame = getglobal("AtlasLootItem_"..dataSource[dataID][i][1].."_Extra");
+				itemButton = getglobal("AtlasLootItem_"..dataSource[dataID][tablenum][i][1]);
+				iconFrame  = getglobal("AtlasLootItem_"..dataSource[dataID][tablenum][i][1].."_Icon");
+				nameFrame  = getglobal("AtlasLootItem_"..dataSource[dataID][tablenum][i][1].."_Name");
+				extraFrame = getglobal("AtlasLootItem_"..dataSource[dataID][tablenum][i][1].."_Extra");
 
 				--If there is no data on the texture an item should have, show a big red question mark
-				if dataSource[dataID][i][3] == "?" then
+				if dataSource[dataID][tablenum][i][3] == "?" then
 					iconFrame:SetTexture("Interface\\Icons\\INV_Misc_QuestionMark");
-				elseif dataSource[dataID][i][3] == "" then
+				elseif dataSource[dataID][tablenum][i][3] == "" then
 					iconFrame:SetTexture(GetItemIcon(IDfound));
 				elseif (not isItem) and (spellIcon) then
-					if tonumber(dataSource[dataID][i][3]) then
-						iconFrame:SetTexture(GetItemIcon(tonumber(dataSource[dataID][i][3])));
-					elseif dataSource[dataID][i][3] == "" then
+					if tonumber(dataSource[dataID][tablenum][i][3]) then
+						iconFrame:SetTexture(GetItemIcon(tonumber(dataSource[dataID][tablenum][i][3])));
+					elseif dataSource[dataID][tablenum][i][3] == "" then
 						iconFrame:SetTexture(spellIcon);
-                    elseif type(dataSource[dataID][i][3]) == "string" then
-						iconFrame:SetTexture("Interface\\Icons\\"..dataSource[dataID][i][3]);
+                    elseif type(dataSource[dataID][tablenum][i][3]) == "string" then
+						iconFrame:SetTexture("Interface\\Icons\\"..dataSource[dataID][tablenum][i][3]);
 					else
 						iconFrame:SetTexture(spellIcon);
 					end
 				else
 					--else show the texture
-					iconFrame:SetTexture("Interface\\Icons\\"..dataSource[dataID][i][3]);
+					iconFrame:SetTexture("Interface\\Icons\\"..dataSource[dataID][tablenum][i][3]);
 				end
-				itemButton.itemTexture = dataSource[dataID][i][3];
+				itemButton.itemTexture = dataSource[dataID][tablenum][i][3];
                 if iconFrame:GetTexture() == nil then
 					iconFrame:SetTexture("Interface\\Icons\\INV_Misc_QuestionMark");
 				end
@@ -825,17 +710,17 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 				extraFrame:SetText(extra);
 				extraFrame:Show();
 				--For convenience, we store information about the objects in the objects so that it can be easily accessed later
-				if((string.sub(IDfound, 1, 1) == "s") and (AtlasLoot.db.profile.CraftingLink ~= 1) and (tonumber(dataSource[dataID][i][3]))) then
-                    itemButton.itemID = dataSource[dataID][i][3];
-                    itemButton.spellitemID = dataSource[dataID][i][3];
-				elseif ((string.sub(IDfound, 1, 1) == "s") and notPattern == true and (tonumber(dataSource[dataID][i][3]))) then
-                    itemButton.itemID = dataSource[dataID][i][3];
-                    itemButton.spellitemID = dataSource[dataID][i][3];
+				if((string.sub(IDfound, 1, 1) == "s") and (AtlasLoot.db.profile.CraftingLink ~= 1) and (tonumber(dataSource[dataID][tablenum][i][3]))) then
+                    itemButton.itemID = dataSource[dataID][tablenum][i][3];
+                    itemButton.spellitemID = dataSource[dataID][tablenum][i][3];
+				elseif ((string.sub(IDfound, 1, 1) == "s") and notPattern == true and (tonumber(dataSource[dataID][tablenum][i][3]))) then
+                    itemButton.itemID = dataSource[dataID][tablenum][i][3];
+                    itemButton.spellitemID = dataSource[dataID][tablenum][i][3];
 				else
 					itemButton.itemID = IDfound;
 
-						if tonumber(dataSource[dataID][i][3]) then
-							itemButton.spellitemID = dataSource[dataID][i][3];
+						if tonumber(dataSource[dataID][tablenum][i][3]) then
+							itemButton.spellitemID = dataSource[dataID][tablenum][i][3];
 						else
 							itemButton.spellitemID = 0;
 						end
@@ -848,42 +733,37 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 				    itemButton.storeID = IDfound;
                     itemButton.dressingroomID = IDfound;
                 else
-				    itemButton.iteminfo.idcore = dataSource[dataID][i][3];
-					itemButton.iteminfo.icontexture = GetItemIcon(dataSource[dataID][i][3]);
-                    itemButton.storeID = dataSource[dataID][i][3];
-                    itemButton.dressingroomID = dataSource[dataID][i][3];
+				    itemButton.iteminfo.idcore = dataSource[dataID][tablenum][i][3];
+					itemButton.iteminfo.icontexture = GetItemIcon(dataSource[dataID][tablenum][i][3]);
+                    itemButton.storeID = dataSource[dataID][tablenum][i][3];
+                    itemButton.dressingroomID = dataSource[dataID][tablenum][i][3];
 				end
-                if dataSource[dataID][i][5] then
-                    itemButton.desc = dataSource[dataID][i][5];
+                if dataSource[dataID][tablenum][i][5] then
+                    itemButton.desc = dataSource[dataID][tablenum][i][5];
                 else
                     itemButton.desc = nil;
                 end
-                if dataSource[dataID][i][6] then
-                    itemButton.price = dataSource[dataID][i][6];
+                if dataSource[dataID][tablenum][i][6] then
+                    itemButton.price = dataSource[dataID][tablenum][i][6];
                 else
                     itemButton.price = nil;
                 end
-                if dataSource[dataID][i][7] and dataSource[dataID][i][7] ~= "" then
-				    itemButton.droprate = dataSource[dataID][i][7];
+                if dataSource[dataID][tablenum][i][7] and dataSource[dataID][tablenum][i][7] ~= "" then
+				    itemButton.droprate = dataSource[dataID][tablenum][i][7];
                 else
                     itemButton.droprate = nil;
                 end
-				if (dataID == "SearchResult" or dataID == "WishList") and dataSource[dataID][i][8] then
-                    itemButton.sourcePage = dataSource[dataID][i][8];
-				elseif dataSource[dataID][i][8] ~= nil and dataSource[dataID][i][8]:match("=LT=") then
-					itemButton.sourcePage = string.sub(dataSource[dataID][i][8], 5);
+				if (dataID == "SearchResult" or dataID == "WishList") and dataSource[dataID][tablenum][i][8] then
+                    itemButton.sourcePage = dataSource[dataID][tablenum][i][8];
+				elseif dataSource[dataID][tablenum][i][8] ~= nil and dataSource[dataID][tablenum][i][8]:match("=LT=") then
+					itemButton.sourcePage = string.sub(dataSource[dataID][tablenum][i][8], 5);
 				else
 					itemButton.sourcePage = nil;
 				end
-				if dataSource[dataID][i][AtlasLoot_Difficulty.DIF_SEARCH] then
-					itemButton.difficulty = dataSource[dataID][i][AtlasLoot_Difficulty.DIF_SEARCH];
+				if dataSource[dataID][tablenum][i][AtlasLoot_Difficulty.DIF_SEARCH] then
+					itemButton.difficulty = dataSource[dataID][tablenum][i][AtlasLoot_Difficulty.DIF_SEARCH];
 				else
 					itemButton.difficulty = ItemindexID;
-					if dataSource[dataID].Type then
-						if string.find(dataSource[dataID].Type, "Raid") and ItemindexID == 4 then
-							itemButton.difficulty = 99;
-						end
-					end
 				end
 
 				itemButton.i = 1;
@@ -894,21 +774,9 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
             end
 		end
 
+        AtlasLootItemsFrame.refresh = {dataID, dataSource_backup, boss, pFrame, tablenum};
 		if dataID ~= "FilterList" then
-			lastType = dataSource[dataID].Type
-		end
-
-		if AtlasLoot_Expac_CurrentTable ~= "" then	
-			AtlasLootDefaultFrame_SelectedTable:SetText(AtlasLoot_TableNames[AtlasLoot_Expac_CurrentTable][1]);
-		elseif SelectedTableTextSet then
-            AtlasLootDefaultFrame_SelectedTable:SetText(AtlasLoot_TableNames[dataID][1]);
-        else
-            AtlasLootDefaultFrame_SelectedTable:SetText("");
-        end
-
-        AtlasLootItemsFrame.refresh = {dataID, dataSource_backup, boss, pFrame};
-		if dataID ~= "FilterList" then
-			AtlasLootItemsFrame.refreshOri = {dataID, dataSource_backup, boss, pFrame}
+			AtlasLootItemsFrame.refreshOri = {dataID, dataSource_backup, boss, pFrame, tablenum};
 		end
 
         --If the item is not in cache, querying the server may cause a disconnect
@@ -932,23 +800,17 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
         AtlasLootQuickLooksButton:Show();
 
 		-- Show the Filter Check-Box
-		if dataID ~= "WishList" and dataID ~= "SearchResult" and dataSource_backup ~= "AtlasLootCrafting"  then
+		if dataID ~= "WishList" and dataID ~= "SearchResult" and dataSource[dataID].NoFilter ~= true then
 			AtlasLootFilterCheck:Show();
 		end
+
 		--Hide navigation buttons by default, only show what we need
 		getglobal("AtlasLootItemsFrame_BACK"):Hide();
 		getglobal("AtlasLootItemsFrame_NEXT"):Hide();
 		getglobal("AtlasLootItemsFrame_PREV"):Hide();
-        if dataID ~= "SearchResult" and dataID ~= "WishList" then
-			local affix = "";
-			if AtlasLoot_Data[dataID].Dif ~= nil then
-					local d = AtlasLoot_Data[dataID].Type or "Dungeon"
-					affix = " ("..AtlasLoot_Difficulty[d][GetDifficultyTier()]..")"
-			end
-			AtlasLoot_BossName:SetText(AtlasLoot_TableNames[dataID][1]..affix);
-        else
-            AtlasLoot_BossName:SetText(boss);
-        end
+
+		AtlasLoot_BossName:SetText(dataSource[dataID][tablenum].Name);
+		AtlasLootDefaultFrame_SubMenu:SetText(dataSource[dataID].Name);
 
 		--Consult the button registry to determine what nav buttons are required
 		if dataID == "SearchResult" or dataID == "WishList" then
@@ -961,142 +823,34 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 				getglobal("AtlasLootItemsFrame_PREV").lootpage = dataID.."Page"..(wlPage - 1);
 			end
 		else
-			local tablebase = dataSource[dataID];
-			if tablebase.Next then
+				local tablebase = dataID;
+			if ATLASLOOT_FILTER_ENABLE and dataID == "FilterList" then
+				tablebase = AtlasLootItemsFrame.refreshOri[1];
+			end
+			
+			if tablenum + 1 ~= AtlasLoot_GetNumOfRows(dataSource[tablebase]) then
 				getglobal("AtlasLootItemsFrame_NEXT"):Show();
-				getglobal("AtlasLootItemsFrame_NEXT").lootpage = tablebase.Next;
+				getglobal("AtlasLootItemsFrame_NEXT").lootpage = tablebase;
+				getglobal("AtlasLootItemsFrame_NEXT").tablenum = tablenum + 1;
 			end
-			if tablebase.Prev then
+			if  tablenum -1 ~= 0 then
 				getglobal("AtlasLootItemsFrame_PREV"):Show();
-				getglobal("AtlasLootItemsFrame_PREV").lootpage = tablebase.Prev;
+				getglobal("AtlasLootItemsFrame_PREV").lootpage = tablebase;
+				getglobal("AtlasLootItemsFrame_PREV").tablenum = tablenum - 1;
 			end
-			if tablebase.Back then
+--[[ 			if tablebase.Back then
 				getglobal("AtlasLootItemsFrame_BACK"):Show();
 				getglobal("AtlasLootItemsFrame_BACK").lootpage = tablebase.Back;
 			end
-		end
-	end
-
-	--For Alphamap and Atlas integration, show a 'close' button to hide the loot table and restore the map view
-	if (AtlasLootItemsFrame:GetParent() == AlphaMapAlphaMapFrame or AtlasLootItemsFrame:GetParent() == AtlasFrame) then
-		AtlasLootItemsFrame_CloseButton:Show();
-	else
-		AtlasLootItemsFrame_CloseButton:Hide();
+ ]]		end
 	end
 
 	--Anchor the item frame where it is supposed to be
 	AtlasLoot_SetItemInfoFrame(pFrame);
-	if ATLASLOOT_FILTER_ENABLE == true and dataID ~= "FilterList" then
-		AtlasLoot_HideNoUsableItems()
+	if ATLASLOOT_FILTER_ENABLE and dataID ~= "FilterList" then
+		AtlasLoot_HideNoUsableItems();
 	end
 	if AtlasLoot.db.profile.ItemAutoQuery then AtlasLoot_QueryLootPage(); end
-end
-
---[[
-AtlasLoot_GenerateAtlasMenu(dataID, pFrame)
-dataID - Identifier of the loot table to show
-pFrame - Where to anchor the menu
-This function allows menus to be defined in essentially the same way as
-normal loot tables
-]]
-function AtlasLoot_GenerateAtlasMenu(dataID, pFrame)
-    local extra;
-    local text;
-    local dataSource = AtlasLoot_Data;
-    --Hide UI objects so that only needed ones are shown
-	for i = 1, 30, 1 do
-        getglobal("AtlasLootItem_"..i.."_Unsafe"):Hide();
-		getglobal("AtlasLootMenuItem_"..i):Hide();
-        getglobal("AtlasLootItem_"..i):Hide();
-	end
-    for i = 1, 30, 1 do
-        --Check for a valid object (that it exists, and that it has a name)
-        if(AtlasLoot_Data[dataID][i] ~= nil and AtlasLoot_Data[dataID][i][4] ~= "") then
-
-            text = AtlasLoot_Data[dataID][i][4];
-            text = AtlasLoot_FixText(text);
-
-            --Store data about the state of the items frame to allow minor tweaks or a recall of the current loot page
-            AtlasLootItemsFrame.refresh = {dataID, "", "", pFrame};
-
-            --Insert the item description
-            if AtlasLoot_Data[dataID][i][5] then
-                extra = AtlasLoot_Data[dataID][i][5];
-            else
-                extra = "";
-            end
-            extra = AtlasLoot_FixText(extra);
-
-            --Use shortcuts for easier reference to parts of the item button
-            itemButton = getglobal("AtlasLootMenuItem_"..AtlasLoot_Data[dataID][i][1]);
-            iconFrame  = getglobal("AtlasLootMenuItem_"..AtlasLoot_Data[dataID][i][1].."_Icon");
-            nameFrame  = getglobal("AtlasLootMenuItem_"..AtlasLoot_Data[dataID][i][1].."_Name");
-            extraFrame = getglobal("AtlasLootMenuItem_"..AtlasLoot_Data[dataID][i][1].."_Extra");
-
-            --If there is no data on the texture an item should have, show a big red question mark
-            if AtlasLoot_Data[dataID][i][3] == "?" then
-                iconFrame:SetTexture("Interface\\Icons\\INV_Misc_QuestionMark");
-            else
-                iconFrame:SetTexture("Interface\\Icons\\"..AtlasLoot_Data[dataID][i][3]);
-            end
-            itemButton.itemTexture = AtlasLoot_Data[dataID][i][3];
-            if iconFrame:GetTexture() == nil then
-                iconFrame:SetTexture("Interface\\Icons\\INV_Misc_QuestionMark");
-            end
-            itemButton.name = text;
-            itemButton.extra = extra;
-            --Store where we want the menu button to link to
-            itemButton.lootpage = AtlasLoot_Data[dataID][i][2];
-
-            --Set the name and description of the item
-            nameFrame:SetText(text);
-            extraFrame:SetText(extra);
-            extraFrame:Show();
-
-            itemButton.i = 1;
-            itemButton:Show();
-
-        end
-
-    end
-
-
-    AtlasLoot_BossName:SetText(AtlasLoot_TableNames[dataID][1]);
-
-    --This is not a valid QuickLook, so hide the UI objects
-    AtlasLoot_QuickLooks:Hide();
-    AtlasLootQuickLooksButton:Hide();
-	AtlasLootFilterCheck:Hide();
-
-    --Hide navigation buttons by default, only show what we need
-    getglobal("AtlasLootItemsFrame_BACK"):Hide();
-    getglobal("AtlasLootItemsFrame_NEXT"):Hide();
-    getglobal("AtlasLootItemsFrame_PREV"):Hide();
-
-    local tablebase = AtlasLoot_Data[dataID];
-    if tablebase.Next then
-        getglobal("AtlasLootItemsFrame_NEXT"):Show();
-        getglobal("AtlasLootItemsFrame_NEXT").lootpage = tablebase.Next;
-    end
-    if tablebase.Prev then
-        getglobal("AtlasLootItemsFrame_PREV"):Show();
-        getglobal("AtlasLootItemsFrame_PREV").lootpage = tablebase.Prev;
-    end
-	if tablebase.Back then
-		getglobal("AtlasLootItemsFrame_BACK"):Show();
-        getglobal("AtlasLootItemsFrame_BACK").lootpage = tablebase.Back;
-    end
-
-    --For Alphamap and Atlas integration, show a 'close' button to hide the loot table and restore the map view
-	if (AtlasLootItemsFrame:GetParent() == AlphaMapAlphaMapFrame or AtlasLootItemsFrame:GetParent() == AtlasFrame) then
-		AtlasLootItemsFrame_CloseButton:Show();
-	else
-		AtlasLootItemsFrame_CloseButton:Hide();
-	end
-
-	--Anchor the item frame where it is supposed to be
-	AtlasLoot_SetItemInfoFrame(pFrame);
-
 end
 
 --[[
@@ -1155,31 +909,26 @@ function AtlasLootItemsFrame_OnCloseButton()
 end
 
 --[[
-AtlasLootMenuItem_OnClick:
-Requests the relevant loot page from a menu screen
-]]
-function AtlasLootMenuItem_OnClick()
-	if this.lootpage ~= nil and this.lootpage ~= "" then
-		AtlasLoot_ShowBossLoot(this.lootpage, "", AtlasLoot_AnchorFrame);
-	end
-end
-
---[[
 AtlasLoot_NavButton_OnClick:
 Called when <-, -> are pressed and calls up the appropriate loot page
 ]]
 function AtlasLoot_NavButton_OnClick()
-	if AtlasLootItemsFrame.refresh and AtlasLootItemsFrame.refresh[4] then
-		if strsub(this.lootpage, 1, 16) == "SearchResultPage" then
-			AtlasLoot_ShowItemsFrame("SearchResult", this.lootpage, (AL["Search Result: %s"]):format(AtlasLootCharDB.LastSearchedText or ""), AtlasLootItemsFrame.refresh[4]);
-		elseif strsub(this.lootpage, 1, 12) == "WishListPage" then
-			AtlasLoot_ShowItemsFrame("WishList", this.lootpage, AL["Wishlist"], AtlasLootItemsFrame.refresh[4]);
+	local tabelname = this.lootpage;
+	local tablenum = this.tablenum;
+	local filtercheck = false;
+
+	if AtlasLootItemsFrame.refresh and AtlasLootItemsFrame.refresh[4] and AtlasLootItemsFrame.refresh[5] then
+		if strsub(tabelname, 1, 16) == "SearchResultPage" then
+			AtlasLoot_ShowItemsFrame("SearchResult", tabelname, (AL["Search Result: %s"]):format(AtlasLootCharDB.LastSearchedText or ""), AtlasLootItemsFrame.refresh[4],AtlasLootItemsFrame.refresh[5]);
+		elseif strsub(tabelname, 1, 12) == "WishListPage" then
+			AtlasLoot_ShowItemsFrame("WishList", tabelname, AL["Wishlist"], AtlasLootItemsFrame.refresh[4],AtlasLootItemsFrame.refresh[5]);
 		else
-			AtlasLoot_ShowItemsFrame(this.lootpage, AtlasLootItemsFrame.refresh[2], "", AtlasLootItemsFrame.refresh[4]);
+			AtlasLootDefaultFrame_SubTableScrollFrameUpdate(tabelname, AtlasLootItemsFrame.refresh[2],  AtlasLootItemsFrame.refresh[4], tablenum);
+			AtlasLoot_ShowItemsFrame(tabelname, AtlasLootItemsFrame.refresh[2], AtlasLootItemsFrame.refresh[3], AtlasLootItemsFrame.refresh[4], tablenum);
 		end
     else
 		--Fallback for if the requested loot page is a menu and does not have a .refresh instance
-		AtlasLoot_ShowItemsFrame(this.lootpage, "", "", AtlasFrame);
+		AtlasLoot_ShowItemsFrame(tabelname, "", "", AtlasFrame);
 	end
 end
 
@@ -1211,27 +960,9 @@ AtlasLoot_IsLootTableAvailable(dataID):
 Checks if a loot table is in memory and attempts to load the correct LoD module if it isn't
 dataID: Loot table dataID
 ]]
-function AtlasLoot_IsLootTableAvailable(dataID)
+function AtlasLoot_IsLootTableAvailable(dataID,dataSource)
 
-	local menu_check=false;
-
-	local moduleName=nil;
-
-	for k,v in pairs(AtlasLoot_MenuList) do
-		if v == dataID then
-			menu_check=true;
-		end
-	end
-
-	if menu_check then
-		return true;
-	else
-		if not AtlasLoot_TableNames[dataID] then
-			DEFAULT_CHAT_FRAME:AddMessage(RED..AL["AtlasLoot Error!"].." "..WHITE..dataID..AL[" not listed in loot table registry, please report this message to the AtlasLoot forums at https://discord.gg/uYCE2X2FgA"]);
-			return false;
-		end
-
-		local dataSource = AtlasLoot_TableNames[dataID][2];
+		local moduleName=nil;
 
 		moduleName = AtlasLoot_GetLODModule(dataSource);
 
@@ -1251,7 +982,7 @@ function AtlasLoot_IsLootTableAvailable(dataID)
                         end
                     end
                 end
-                if AtlasLoot_Data[dataID] then
+                --[[ if AtlasLoot_Data[dataID] then
                     if ATLASLOOT_DEBUGMESSAGES then
                         DEFAULT_CHAT_FRAME:AddMessage(GREEN..AL["AtlasLoot"]..": "..ORANGE..moduleName..WHITE.." "..AL["sucessfully loaded."]);
                     end
@@ -1260,13 +991,12 @@ function AtlasLoot_IsLootTableAvailable(dataID)
                 else
                     DEFAULT_CHAT_FRAME:AddMessage(RED..AL["AtlasLoot Error!"].." "..ORANGE..AtlasLoot_TableNames[dataID][1]..WHITE..AL[" could not be accessed, the following module may be out of date: "]..ORANGE..moduleName);
                     return false;
-                end
+                end ]]
             else
                 DEFAULT_CHAT_FRAME:AddMessage(RED..AL["AtlasLoot Error!"].." "..ORANGE..AL["Loot module returned as nil!"]);
                 return false;
             end
 		end
-	end
 end
 
 --[[
@@ -1344,7 +1074,7 @@ function AtlasLoot_ShowQuickLooks(button)
 				"tooltipTitle", AL["QuickLook"].." 1",
 				"tooltipText", AL["Assign this loot table\n to QuickLook"].." 1",
 				"func", function()
-                    AtlasLootCharDB["QuickLooks"][1]={AtlasLootItemsFrame.refreshOri[1], AtlasLootItemsFrame.refreshOri[2], AtlasLootItemsFrame.refreshOri[3], AtlasLootItemsFrame.refreshOri[4]};
+                    AtlasLootCharDB["QuickLooks"][1]={AtlasLootItemsFrame.refreshOri[1], AtlasLootItemsFrame.refreshOri[2], AtlasLootItemsFrame.refreshOri[3], AtlasLootItemsFrame.refreshOri[4], AtlasLootItemsFrame.refreshOri[5]};
                     AtlasLoot_RefreshQuickLookButtons();
                     dewdrop:Close(1);
 				end
@@ -1354,7 +1084,7 @@ function AtlasLoot_ShowQuickLooks(button)
 				"tooltipTitle", AL["QuickLook"].." 2",
 				"tooltipText", AL["Assign this loot table\n to QuickLook"].." 2",
 				"func", function()
-					AtlasLootCharDB["QuickLooks"][2]={AtlasLootItemsFrame.refreshOri[1], AtlasLootItemsFrame.refreshOri[2], AtlasLootItemsFrame.refreshOri[3], AtlasLootItemsFrame.refreshOri[4]};
+					AtlasLootCharDB["QuickLooks"][2]={AtlasLootItemsFrame.refreshOri[1], AtlasLootItemsFrame.refreshOri[2], AtlasLootItemsFrame.refreshOri[3], AtlasLootItemsFrame.refreshOri[4], AtlasLootItemsFrame.refreshOri[5]};
                     AtlasLoot_RefreshQuickLookButtons();
                     dewdrop:Close(1);
 				end
@@ -1364,7 +1094,7 @@ function AtlasLoot_ShowQuickLooks(button)
 				"tooltipTitle", AL["QuickLook"].." 3",
 				"tooltipText", AL["Assign this loot table\n to QuickLook"].." 3",
 				"func", function()
-					AtlasLootCharDB["QuickLooks"][3]={AtlasLootItemsFrame.refreshOri[1], AtlasLootItemsFrame.refreshOri[2], AtlasLootItemsFrame.refreshOri[3], AtlasLootItemsFrame.refreshOri[4]};
+					AtlasLootCharDB["QuickLooks"][3]={AtlasLootItemsFrame.refreshOri[1], AtlasLootItemsFrame.refreshOri[2], AtlasLootItemsFrame.refreshOri[3], AtlasLootItemsFrame.refreshOri[4], AtlasLootItemsFrame.refreshOri[5]};
                     AtlasLoot_RefreshQuickLookButtons();
                     dewdrop:Close(1);
 				end
@@ -1374,7 +1104,7 @@ function AtlasLoot_ShowQuickLooks(button)
 				"tooltipTitle", AL["QuickLook"].." 4",
 				"tooltipText", AL["Assign this loot table\n to QuickLook"].." 4",
 				"func", function()
-					AtlasLootCharDB["QuickLooks"][4]={AtlasLootItemsFrame.refreshOri[1], AtlasLootItemsFrame.refreshOri[2], AtlasLootItemsFrame.refreshOri[3], AtlasLootItemsFrame.refreshOri[4]};
+					AtlasLootCharDB["QuickLooks"][4]={AtlasLootItemsFrame.refreshOri[1], AtlasLootItemsFrame.refreshOri[2], AtlasLootItemsFrame.refreshOri[3], AtlasLootItemsFrame.refreshOri[4], AtlasLootItemsFrame.refreshOri[5]};
                     AtlasLoot_RefreshQuickLookButtons();
                     dewdrop:Close(1);
 				end

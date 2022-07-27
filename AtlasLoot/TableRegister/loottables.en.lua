@@ -618,7 +618,7 @@ end
 	AtlasLoot_TableNames["BRDImperatorDagranThaurissan"] = { BabbleBoss["Emperor Dagran Thaurissan"], "AtlasLootOriginalWoW" };
 	AtlasLoot_TableNames["BRDBSPlans"] = { "Blacksmith Plans".." ("..BabbleZone["Blackrock Depths"]..")", "AtlasLootOriginalWoW" };
 	AtlasLoot_TableNames["BRDTrash"] = { AL["Trash Mobs"].." ("..BabbleZone["Blackrock Depths"]..")", "AtlasLootOriginalWoW" };
-  -- Lower Blackrock Spire
+  -- Lower Blackrock Spirequ
 	AtlasLoot_TableNames["LBRSQuestItems"] = { BabbleZone["Lower Blackrock Spire"].." - "..AL["Quest Item"], "AtlasLootOriginalWoW" };
 	AtlasLoot_TableNames["LBRSSpirestoneButcher"] = { BabbleBoss["Spirestone Butcher"].." ("..AL["Rare"]..")", "AtlasLootOriginalWoW" };
 	AtlasLoot_TableNames["LBRSOmokk"] = { BabbleBoss["Highlord Omokk"], "AtlasLootOriginalWoW" };
@@ -1635,24 +1635,12 @@ end
   -- Alchemy
   	--AtlasLoot_TableNames["AlchemyBattleElixir"] = { AL["Battle Elixirs"], "AtlasLootCrafting" };
   	AtlasLoot_TableNames["AlchemyBattleElixirCLASSIC"] = { AL["Battle Elixirs"], "AtlasLootCrafting" };
-	AtlasLoot_TableNames["AlchemyBattleElixirTBC"] = { AL["Battle Elixirs"], "AtlasLootCrafting" };
-	AtlasLoot_TableNames["AlchemyBattleElixirWRATH"] = { AL["Battle Elixirs"], "AtlasLootCrafting" };
 	AtlasLoot_TableNames["AlchemyGuardianElixirCLASSIC"] = { AL["Guardian Elixirs"], "AtlasLootCrafting" };
-	AtlasLoot_TableNames["AlchemyGuardianElixirTBC"] = { AL["Guardian Elixirs"], "AtlasLootCrafting" };
-	AtlasLoot_TableNames["AlchemyGuardianElixirWRATH"] = { AL["Guardian Elixirs"], "AtlasLootCrafting" };
 	AtlasLoot_TableNames["AlchemyPotionCLASSIC"] = { AL["Potions"], "AtlasLootCrafting" };
 	AtlasLoot_TableNames["AlchemyPotion1CLASSIC"] = { AL["Potions"], "AtlasLootCrafting" };
-	AtlasLoot_TableNames["AlchemyPotionTBC"] = { AL["Potions"], "AtlasLootCrafting" };
-	AtlasLoot_TableNames["AlchemyPotionWRATH"] = { AL["Potions"], "AtlasLootCrafting" };
 	AtlasLoot_TableNames["AlchemyTransmuteCLASSIC"] = { AL["Transmutes"], "AtlasLootCrafting" };
-	AtlasLoot_TableNames["AlchemyTransmuteTBC"] = { AL["Transmutes"], "AtlasLootCrafting" };
-	AtlasLoot_TableNames["AlchemyTransmuteWRATH"] = { AL["Transmutes"], "AtlasLootCrafting" };
 	AtlasLoot_TableNames["AlchemyFlaskCLASSIC"] = { AL["Flasks"], "AtlasLootCrafting" };
-	AtlasLoot_TableNames["AlchemyFlaskTBC"] = { AL["Flasks"], "AtlasLootCrafting" };
-	AtlasLoot_TableNames["AlchemyFlaskWRATH"] = { AL["Flasks"], "AtlasLootCrafting" };
 	AtlasLoot_TableNames["AlchemyMiscCLASSIC"] = { AL["Miscellaneous"], "AtlasLootCrafting" };
-	AtlasLoot_TableNames["AlchemyMiscTBC"] = { AL["Miscellaneous"], "AtlasLootCrafting" };
-	AtlasLoot_TableNames["AlchemyMiscWRATH"] = { AL["Miscellaneous"], "AtlasLootCrafting" };
   -- BlackSmithing
 	AtlasLoot_TableNames["SmithingArmorCLASSIC"] = { BLACKSMITHING..": "..BabbleInventory["Armor"], "AtlasLootCrafting" };
 	AtlasLoot_TableNames["SmithingArmorCLASSIC2"] = { BLACKSMITHING..": "..BabbleInventory["Armor"], "AtlasLootCrafting" };

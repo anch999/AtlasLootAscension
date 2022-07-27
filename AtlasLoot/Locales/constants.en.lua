@@ -161,6 +161,7 @@ if AL then
 	AL["Search"] = true;
 
 	-- AtlasLoot Browser Menus
+	AL["Dungeons and Raids"] = true;
 	AL["Classic Instances"] = true;
 	AL["BC Instances"] = true;
 	AL["Sets/Collections"] = true;
@@ -376,6 +377,20 @@ if AL then
 	AL["Cloth Armor"] = true;
 	AL["Shirts"] = true;
 	AL["Bags"] = true;
+
+	-- JewelCrafting
+	AL["Red Gems"] = true;
+	AL["Yellow Gems"] = true;
+	AL["Blue Gems"] = true;
+	AL["Orange Gems"] = true;
+	AL["Purple Gems"] = true;
+	AL["Green Gems"] = true;
+	AL["Meta Gems"] = true;
+	AL["Prismatic Gems"] = true;
+	AL["Dragons Eye"] = true;
+	AL["Trinkets"] = true;
+	AL["Rings"] = true;
+	AL["Necks"] = true;
 
 	-- Labels for loot descriptions
 	AL["Classes:"] = true;

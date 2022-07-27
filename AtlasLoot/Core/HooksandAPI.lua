@@ -27,7 +27,6 @@ function AtlasLoot_Atlas_OnShow()
     --We don't want Atlas and the Loot Browser open at the same time, so the Loot Browser is close
     if AtlasLootDefaultFrame then
         AtlasLootDefaultFrame:Hide();
-        AtlasLoot_SetupForAtlas();
     end
     --Call the Atlas function
     Hooked_Atlas_OnShow();

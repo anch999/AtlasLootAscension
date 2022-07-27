@@ -14,7 +14,7 @@
     <Script file="Options.lua"/>
     <Script file="LootButtons.lua"/>
     <Script file="HooksandAPI.lua"/>
-    <Script file="AtlasIntegration.lua"/>
+    <!-- <Script file="AtlasIntegration.lua"/> -->
     <Script file="Launchers.lua"/>
 	<Script file="AtlasLoot.lua"/>
 	<Script file="WishList.lua"/>
@@ -313,7 +313,6 @@
                             end
                         end
                         AtlasLootOptionsFrameHidePanel:SetChecked(AtlasLoot.db.profile.HidePanel);
-                        AtlasLoot_SetupForAtlas();
                     </OnClick>
                 </Scripts>
             </Button>
@@ -348,53 +347,12 @@
 
 	<Frame name="AtlasLootItemsFrame" parent="UIParent" hidden="true">
 		<Size>
-			<AbsDimension x="510" y="510"/>
+			<AbsDimension x="535" y="510"/>
 		</Size>
 		<Anchors>
  			<Anchor point="CENTER"/>
  		</Anchors>
 		<Frames>
-            <Button name="$parent_CloseButton" inherits="UIPanelCloseButton">
-				<Anchors>
-					<Anchor point="TOPRIGHT" relativeTo="$parent" relativePoint="TOPRIGHT">
-						<Offset>
-							<AbsDimension x="-5" y="-5"/>
-						</Offset>
-					</Anchor>
-				</Anchors>
-                <Scripts>
-                    <OnClick>
-                        AtlasLootItemsFrame_OnCloseButton();
-                    </OnClick>
-                    <OnShow>
-				        this:SetFrameLevel( (this:GetParent()):GetFrameLevel() + 1 );
-			        </OnShow>
-                </Scripts>
-			</Button>
-			<Button name="$parent_DifficultyAtlasButton" inherits="OptionsButtonTemplate">
-				<Size>
-					<AbsDimension x="140" y="23" />
-				</Size>
-				<Anchors>
-					<Anchor point="BOTTOM" relativeTo="$parent" relativePoint="BOTTOM">
-						<Offset>
-							<AbsDimension x="-130" y="4"/>
-						</Offset>
-					</Anchor>
-				</Anchors>
-				<Scripts>
-					<OnShow>
-						this:SetFrameLevel( (this:GetParent()):GetFrameLevel() + 1 );
-					</OnShow>
-					<OnClick>
-						if AtlasLoot_DifficultyAtlas:IsOpen() then
-							AtlasLoot_DifficultyAtlas:Close();
-						else
-							AtlasLoot_DifficultyAtlas:Open(this);
-						end
-					</OnClick>
-				</Scripts>
-			</Button>
 			<Button name="AtlasLootItem_1" inherits="AtlasLootItem_Template" id="1">
 				<Anchors>
 					<Anchor point="TOPLEFT" relativeTo="$parent" relativePoint="TOPLEFT">
@@ -495,108 +453,6 @@
 				<Anchors><Anchor point="TOPLEFT" relativeTo="AtlasLootItem_28" relativePoint="BOTTOMLEFT"/></Anchors>
 			</Button>
 			<Button name="AtlasLootItem_30" inherits="AtlasLootItem_Template" id="30">
-				<Anchors><Anchor point="TOPLEFT" relativeTo="AtlasLootItem_29" relativePoint="BOTTOMLEFT"/></Anchors>
-			</Button>
-            <Button name="AtlasLootMenuItem_1" inherits="AtlasLootMenuItem_Template" id="1">
-				<Anchors>
-					<Anchor point="TOPLEFT" relativeTo="$parent" relativePoint="TOPLEFT">
-						<Offset>
-							<AbsDimension x="25" y="-35"/>
-						</Offset>
-					</Anchor>
-				</Anchors>
-			</Button>
-			<Button name="AtlasLootMenuItem_2" inherits="AtlasLootMenuItem_Template" id="2">
-				<Anchors><Anchor point="TOPLEFT" relativeTo="AtlasLootItem_1" relativePoint="BOTTOMLEFT"/></Anchors>
-			</Button>
-			<Button name="AtlasLootMenuItem_3" inherits="AtlasLootMenuItem_Template" id="3">
-				<Anchors><Anchor point="TOPLEFT" relativeTo="AtlasLootItem_2" relativePoint="BOTTOMLEFT"/></Anchors>
-			</Button>
-			<Button name="AtlasLootMenuItem_4" inherits="AtlasLootMenuItem_Template" id="4">
-				<Anchors><Anchor point="TOPLEFT" relativeTo="AtlasLootItem_3" relativePoint="BOTTOMLEFT"/></Anchors>
-			</Button>
-			<Button name="AtlasLootMenuItem_5" inherits="AtlasLootMenuItem_Template" id="5">
-				<Anchors><Anchor point="TOPLEFT" relativeTo="AtlasLootItem_4" relativePoint="BOTTOMLEFT"/></Anchors>
-			</Button>
-			<Button name="AtlasLootMenuItem_6" inherits="AtlasLootMenuItem_Template" id="6">
-				<Anchors><Anchor point="TOPLEFT" relativeTo="AtlasLootItem_5" relativePoint="BOTTOMLEFT"/></Anchors>
-			</Button>
-			<Button name="AtlasLootMenuItem_7" inherits="AtlasLootMenuItem_Template" id="7">
-				<Anchors><Anchor point="TOPLEFT" relativeTo="AtlasLootItem_6" relativePoint="BOTTOMLEFT"/></Anchors>
-			</Button>
-			<Button name="AtlasLootMenuItem_8" inherits="AtlasLootMenuItem_Template" id="8">
-				<Anchors><Anchor point="TOPLEFT" relativeTo="AtlasLootItem_7" relativePoint="BOTTOMLEFT"/></Anchors>
-			</Button>
-			<Button name="AtlasLootMenuItem_9" inherits="AtlasLootMenuItem_Template" id="9">
-				<Anchors><Anchor point="TOPLEFT" relativeTo="AtlasLootItem_8" relativePoint="BOTTOMLEFT"/></Anchors>
-			</Button>
-			<Button name="AtlasLootMenuItem_10" inherits="AtlasLootMenuItem_Template" id="10">
-				<Anchors><Anchor point="TOPLEFT" relativeTo="AtlasLootItem_9" relativePoint="BOTTOMLEFT"/></Anchors>
-			</Button>
-			<Button name="AtlasLootMenuItem_11" inherits="AtlasLootMenuItem_Template" id="11">
-				<Anchors><Anchor point="TOPLEFT" relativeTo="AtlasLootItem_10" relativePoint="BOTTOMLEFT"/></Anchors>
-			</Button>
-			<Button name="AtlasLootMenuItem_12" inherits="AtlasLootMenuItem_Template" id="12">
-				<Anchors><Anchor point="TOPLEFT" relativeTo="AtlasLootItem_11" relativePoint="BOTTOMLEFT"/></Anchors>
-			</Button>
-			<Button name="AtlasLootMenuItem_13" inherits="AtlasLootMenuItem_Template" id="13">
-				<Anchors><Anchor point="TOPLEFT" relativeTo="AtlasLootItem_12" relativePoint="BOTTOMLEFT"/></Anchors>
-			</Button>
-			<Button name="AtlasLootMenuItem_14" inherits="AtlasLootMenuItem_Template" id="14">
-				<Anchors><Anchor point="TOPLEFT" relativeTo="AtlasLootItem_13" relativePoint="BOTTOMLEFT"/></Anchors>
-			</Button>
-			<Button name="AtlasLootMenuItem_15" inherits="AtlasLootMenuItem_Template" id="15">
-				<Anchors><Anchor point="TOPLEFT" relativeTo="AtlasLootItem_14" relativePoint="BOTTOMLEFT"/></Anchors>
-			</Button>
-			<Button name="AtlasLootMenuItem_16" inherits="AtlasLootMenuItem_Template" id="16">
-				<Anchors>
-					<Anchor point="TOPLEFT" relativeTo="AtlasLootItem_1" relativePoint="TOPRIGHT">
-						<Offset>
-							<AbsDimension x="0" y="0"/>
-						</Offset>
-					</Anchor>
-				</Anchors>
-			</Button>
-			<Button name="AtlasLootMenuItem_17" inherits="AtlasLootMenuItem_Template" id="17">
-				<Anchors><Anchor point="TOPLEFT" relativeTo="AtlasLootItem_16" relativePoint="BOTTOMLEFT"/></Anchors>
-			</Button>
-			<Button name="AtlasLootMenuItem_18" inherits="AtlasLootMenuItem_Template" id="18">
-				<Anchors><Anchor point="TOPLEFT" relativeTo="AtlasLootItem_17" relativePoint="BOTTOMLEFT"/></Anchors>
-			</Button>
-			<Button name="AtlasLootMenuItem_19" inherits="AtlasLootMenuItem_Template" id="19">
-				<Anchors><Anchor point="TOPLEFT" relativeTo="AtlasLootItem_18" relativePoint="BOTTOMLEFT"/></Anchors>
-			</Button>
-			<Button name="AtlasLootMenuItem_20" inherits="AtlasLootMenuItem_Template" id="20">
-				<Anchors><Anchor point="TOPLEFT" relativeTo="AtlasLootItem_19" relativePoint="BOTTOMLEFT"/></Anchors>
-			</Button>
-			<Button name="AtlasLootMenuItem_21" inherits="AtlasLootMenuItem_Template" id="21">
-				<Anchors><Anchor point="TOPLEFT" relativeTo="AtlasLootItem_20" relativePoint="BOTTOMLEFT"/></Anchors>
-			</Button>
-			<Button name="AtlasLootMenuItem_22" inherits="AtlasLootMenuItem_Template" id="22">
-				<Anchors><Anchor point="TOPLEFT" relativeTo="AtlasLootItem_21" relativePoint="BOTTOMLEFT"/></Anchors>
-			</Button>
-			<Button name="AtlasLootMenuItem_23" inherits="AtlasLootMenuItem_Template" id="23">
-				<Anchors><Anchor point="TOPLEFT" relativeTo="AtlasLootItem_22" relativePoint="BOTTOMLEFT"/></Anchors>
-			</Button>
-			<Button name="AtlasLootMenuItem_24" inherits="AtlasLootMenuItem_Template" id="24">
-				<Anchors><Anchor point="TOPLEFT" relativeTo="AtlasLootItem_23" relativePoint="BOTTOMLEFT"/></Anchors>
-			</Button>
-			<Button name="AtlasLootMenuItem_25" inherits="AtlasLootMenuItem_Template" id="25">
-				<Anchors><Anchor point="TOPLEFT" relativeTo="AtlasLootItem_24" relativePoint="BOTTOMLEFT"/></Anchors>
-			</Button>
-			<Button name="AtlasLootMenuItem_26" inherits="AtlasLootMenuItem_Template" id="26">
-				<Anchors><Anchor point="TOPLEFT" relativeTo="AtlasLootItem_25" relativePoint="BOTTOMLEFT"/></Anchors>
-			</Button>
-			<Button name="AtlasLootMenuItem_27" inherits="AtlasLootMenuItem_Template" id="27">
-				<Anchors><Anchor point="TOPLEFT" relativeTo="AtlasLootItem_26" relativePoint="BOTTOMLEFT"/></Anchors>
-			</Button>
-			<Button name="AtlasLootMenuItem_28" inherits="AtlasLootMenuItem_Template" id="28">
-				<Anchors><Anchor point="TOPLEFT" relativeTo="AtlasLootItem_27" relativePoint="BOTTOMLEFT"/></Anchors>
-			</Button>
-			<Button name="AtlasLootMenuItem_29" inherits="AtlasLootMenuItem_Template" id="29">
-				<Anchors><Anchor point="TOPLEFT" relativeTo="AtlasLootItem_28" relativePoint="BOTTOMLEFT"/></Anchors>
-			</Button>
-			<Button name="AtlasLootMenuItem_30" inherits="AtlasLootMenuItem_Template" id="30">
 				<Anchors><Anchor point="TOPLEFT" relativeTo="AtlasLootItem_29" relativePoint="BOTTOMLEFT"/></Anchors>
 			</Button>
             <Button name="$parent_BACK" inherits="AtlasLootClassButtonTemplate" hidden="true">
@@ -1507,7 +1363,7 @@
                                 pFrame = { "TOPLEFT", AlphaMapAlphaMapFrame, "TOPLEFT", 0, 0 };
                                 AtlasLoot_ShowItemsFrame(AtlasLootCharDB["QuickLooks"][1][1], AtlasLootCharDB["QuickLooks"][1][2], AtlasLootCharDB["QuickLooks"][1][3], pFrame);
                             else
-                                AtlasLoot_ShowItemsFrame(AtlasLootCharDB["QuickLooks"][1][1], AtlasLootCharDB["QuickLooks"][1][2], AtlasLootCharDB["QuickLooks"][1][3], AtlasLootCharDB["QuickLooks"][1][4]);
+                                AtlasLoot_ShowItemsFrame(AtlasLootCharDB["QuickLooks"][1][1], AtlasLootCharDB["QuickLooks"][1][2], AtlasLootCharDB["QuickLooks"][1][3], AtlasLootCharDB["QuickLooks"][1][4] ,AtlasLootCharDB["QuickLooks"][1][5]);
                             end
                         end
 					</OnClick>
@@ -1551,7 +1407,7 @@
                                 pFrame = { "TOPLEFT", AlphaMapAlphaMapFrame, "TOPLEFT", 0, 0 };
                                 AtlasLoot_ShowItemsFrame(AtlasLootCharDB["QuickLooks"][2][1], AtlasLootCharDB["QuickLooks"][2][2], AtlasLootCharDB["QuickLooks"][2][3], pFrame);
                             else
-                                AtlasLoot_ShowItemsFrame(AtlasLootCharDB["QuickLooks"][2][1], AtlasLootCharDB["QuickLooks"][2][2], AtlasLootCharDB["QuickLooks"][2][3], AtlasLootCharDB["QuickLooks"][2][4]);
+                                AtlasLoot_ShowItemsFrame(AtlasLootCharDB["QuickLooks"][2][1], AtlasLootCharDB["QuickLooks"][2][2], AtlasLootCharDB["QuickLooks"][2][3], AtlasLootCharDB["QuickLooks"][2][4] ,AtlasLootCharDB["QuickLooks"][2][5]);
                             end
                         end
 					</OnClick>
@@ -1595,7 +1451,7 @@
                                 pFrame = { "TOPLEFT", AlphaMapAlphaMapFrame, "TOPLEFT", 0, 0 };
                                 AtlasLoot_ShowItemsFrame(AtlasLootCharDB["QuickLooks"][3][1], AtlasLootCharDB["QuickLooks"][3][2], AtlasLootCharDB["QuickLooks"][3][3], pFrame);
                             else
-                                AtlasLoot_ShowItemsFrame(AtlasLootCharDB["QuickLooks"][3][1], AtlasLootCharDB["QuickLooks"][3][2], AtlasLootCharDB["QuickLooks"][3][3], AtlasLootCharDB["QuickLooks"][3][4]);
+                                AtlasLoot_ShowItemsFrame(AtlasLootCharDB["QuickLooks"][3][1], AtlasLootCharDB["QuickLooks"][3][2], AtlasLootCharDB["QuickLooks"][3][3], AtlasLootCharDB["QuickLooks"][3][4] ,AtlasLootCharDB["QuickLooks"][3][5]);
                             end
                         end
 					</OnClick>
@@ -1639,7 +1495,7 @@
                                 pFrame = { "TOPLEFT", AlphaMapAlphaMapFrame, "TOPLEFT", 0, 0 };
                                 AtlasLoot_ShowItemsFrame(AtlasLootCharDB["QuickLooks"][4][1], AtlasLootCharDB["QuickLooks"][4][2], AtlasLootCharDB["QuickLooks"][4][3], pFrame);
                             else
-                                AtlasLoot_ShowItemsFrame(AtlasLootCharDB["QuickLooks"][4][1], AtlasLootCharDB["QuickLooks"][4][2], AtlasLootCharDB["QuickLooks"][4][3], AtlasLootCharDB["QuickLooks"][4][4]);
+                                AtlasLoot_ShowItemsFrame(AtlasLootCharDB["QuickLooks"][4][1], AtlasLootCharDB["QuickLooks"][4][2], AtlasLootCharDB["QuickLooks"][4][3], AtlasLootCharDB["QuickLooks"][4][4] ,AtlasLootCharDB["QuickLooks"][4][5]);
                             end
                         end
 					</OnClick>
