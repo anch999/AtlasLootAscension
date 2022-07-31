@@ -34,47 +34,6 @@ AtlasLoot_Data["AtlasLootFallback"] = {
 };
 
 --[[
-AtlasLoot_DewDropClick(tablename, text, tabletype):
-tablename - Name of the loot table in the database
-text - Heading for the loot table
-Called when a button in AtlasLoot_Dewdrop is clicked
-]]
-function AtlasLoot_DewDropClick(tablename, text, tablenum)
-    ATLASLOOT_FILTER_ENABLE = false;
-    AtlasLootFilterCheck:SetChecked(false);
-    AltasLoot_CurrentTable = tablename;
-    tablename = tablename .. AtlasLoot_Expac;
-    AtlasLootDefaultFrame_Menu:SetText(text);
-    AtlasLoot_IsLootTableAvailable(tablename,AtlasLoot_SubMenus[tablename].Module);
-    AtlasLoot_DewdropSubMenu:Unregister(AtlasLootDefaultFrame_SubMenu);
-    AtlasLoot_DewdropSubMenuRegister(AtlasLoot_SubMenus[tablename]);
-        if AtlasLoot_SubMenus[tablename].AutoLoad then
-            AtlasLoot_DewDropSubMenuClick(AtlasLoot_SubMenus[tablename][1][2])
-        end
-    AtlasLoot_Dewdrop:Close(1);
-end
-
---[[
-AtlasLoot_DewDropSubMenuClick(tablename, text):
-tablename - Name of the loot table in the database
-text - Heading for the loot table
-Called when a button in AtlasLoot_DewdropSubMenu is clicked
-]]
-function AtlasLoot_DewDropSubMenuClick(tablename, text)
-    --Definition of where I want the loot table to be shown
-    pFrame = { "TOPLEFT", "AtlasLootDefaultFrame_LootBackground", "TOPLEFT", "2", "-2" };
-    --Show the select loot table
-    local tablenum = AtlasLoot_Data[tablename].Loadfirst or 1;
-    ItemindexID = ItemindexID or 2;
-    AtlasLoot_ShowItemsFrame(tablename, AtlasLoot_Data, AtlasLoot_Data[tablename][tablenum].Name, pFrame, tablenum);
-    AtlasLootDefaultFrame_SubTableScrollFrameUpdate(tablename, AtlasLoot_Data, pFrame, tablenum);
-    --Save needed info for fuure re-display of the table
-    AtlasLoot.db.profile.LastBoss = {tablename, AtlasLoot_Data, AtlasLoot_Data[tablename][tablenum].Name, pFrame, tablenum};
-    --Show the table that has been selected
-    AtlasLoot_DewdropSubMenu:Close(1);
-end
-
---[[
 AtlasLootDefaultFrame_OnShow:
 Called whenever the loot browser is shown and sets up buttons and loot tables
 ]]
@@ -86,18 +45,23 @@ function AtlasLootDefaultFrame_OnShow()
     if AtlasFrame then
         AtlasFrame:Hide();
     end
-    
     --Remove the selection of a loot table in Atlas
     AtlasLootItemsFrame.activeBoss = nil;
     --Set the item table to the loot table
     AtlasLoot_SetItemInfoFrame(pFrame);
         --Show the last displayed loot table
     local lastboss = AtlasLoot.db.profile.LastBoss;
-        if AtlasLoot_IsLootTableAvailable(lastboss[2]) then
-            AtlasLoot_ShowItemsFrame(lastboss[1], lastboss[2], lastboss[3], lastboss[4], lastboss[5]);
-        else
-            AtlasLoot_ShowItemsFrame("EmptyTable", "",AL["Select a Loot Table..."], pFrame);
-        end
+    if lastboss then
+        ATLASLOOT_CURRENTTABLE = lastboss[7];
+        ATLASLOOT_LASTMODULE = lastboss[6];
+        AtlasLoot_IsLootTableAvailable(lastboss[6]);
+        AtlasLoot_ShowItemsFrame(lastboss[1], AtlasLoot_Data, AtlasLoot_Data[lastboss[1]][lastboss[5]].Name, pFrame, lastboss[5]);
+        AtlasLootDefaultFrame_SubTableScrollFrameUpdate(lastboss[1], AtlasLoot_Data, pFrame, lastboss[5]);
+        AtlasLoot_DewdropSubMenu:Unregister(AtlasLootDefaultFrame_SubMenu);
+        AtlasLoot_DewdropSubMenuRegister(AtlasLoot_SubMenus[lastboss[7]]);
+    else
+        AtlasLoot_ShowItemsFrame("EmptyTable", AtlasLoot_Data, AtlasLoot_Data["EmptyTable"].Name,pFrame,1);
+    end
 end
 
 --[[
@@ -111,13 +75,60 @@ function AtlasLootDefaultFrame_OnHide()
     AtlasLoot_DewdropExpansionMenu:Close(1);
 end
 
+--[[
+AtlasLoot_DewDropClick(tablename, text, tabletype):
+tablename - Name of the loot table in the database
+text - Heading for the loot table
+Called when a button in AtlasLoot_Dewdrop is clicked
+]]
+function AtlasLoot_DewDropClick(tablename, text, tablenum)
+    ATLASLOOT_FILTER_ENABLE = false;
+    AtlasLootFilterCheck:SetChecked(false);
+    tablename = tablename .. AtlasLoot_Expac;
+    ATLASLOOT_CURRENTTABLE = tablename;
+    tablenum = tablenum or 1;
+    ATLASLOOT_LASTMODULE = AtlasLoot_SubMenus[tablename].Module;
+    AtlasLootDefaultFrame_Menu:SetText(text);
+    AtlasLoot_IsLootTableAvailable(AtlasLoot_SubMenus[tablename].Module);
+    AtlasLoot_DewdropSubMenu:Unregister(AtlasLootDefaultFrame_SubMenu);
+    AtlasLoot_DewdropSubMenuRegister(AtlasLoot_SubMenus[tablename]);
+    AtlasLoot_DewDropSubMenuClick(AtlasLoot_SubMenus[tablename][tablenum][2])
+    AtlasLoot_Dewdrop:Close(1);
+end
+
+--[[
+AtlasLoot_DewDropSubMenuClick(tablename, text):
+tablename - Name of the loot table in the database
+text - Heading for the loot table
+Called when a button in AtlasLoot_DewdropSubMenu is clicked
+]]
+function AtlasLoot_DewDropSubMenuClick(tablename)
+    --Definition of where I want the loot table to be shown
+    pFrame = { "TOPLEFT", "AtlasLootDefaultFrame_LootBackground", "TOPLEFT", "2", "-2" };
+    --Show the select loot table
+    local tablenum = AtlasLoot_Data[tablename].Loadfirst or 1;
+    ItemindexID = ItemindexID or 2;
+    AtlasLoot_ShowItemsFrame(tablename, AtlasLoot_Data, AtlasLoot_Data[tablename][tablenum].Name, pFrame, tablenum);
+    AtlasLootDefaultFrame_SubTableScrollFrameUpdate(tablename, AtlasLoot_Data, pFrame, tablenum);
+    --Save needed info for fuure re-display of the table
+   -- AtlasLoot.db.profile.LastBoss = {tablename, AtlasLoot_Data, AtlasLoot_Data[tablename][tablenum].Name, pFrame, tablenum, ATLASLOOT_LASTMODULE, ATLASLOOT_CURRENTTABLE};
+    --Show the table that has been selected
+    AtlasLoot_DewdropSubMenu:Close(1);
+end
+
+--[[
+AtlasLoot_DewdropExpansionMenuClick(expansion, name):
+tablename - Name of the loot table in the database
+text - Heading for the loot table
+Called when a button in AtlasLoot_DewdropSubMenu is clicked
+]]
 function AtlasLoot_DewdropExpansionMenuClick(expansion, name)
 	AtlasLootDefaultFrame_ExpansionMenu:SetText(name);
     AtlasLoot_DewdropExpansionMenu:Close(1);
     AtlasLoot_Expac = expansion;
-    if AltasLoot_CurrentTable then
-    local tablename = AltasLoot_CurrentTable .. AtlasLoot_Expac;
-    AtlasLoot_IsLootTableAvailable(tablename,AtlasLoot_SubMenus[tablename].Module);
+    if ATLASLOOT_CURRENTTABLE then
+    local tablename = AtlasLoot_CleandataID(ATLASLOOT_CURRENTTABLE, 1) .. AtlasLoot_Expac;
+    AtlasLoot_IsLootTableAvailable(AtlasLoot_SubMenus[tablename].Module);
     AtlasLoot_DewdropSubMenu:Unregister(AtlasLootDefaultFrame_SubMenu);
     AtlasLoot_DewdropSubMenuRegister(AtlasLoot_SubMenus[tablename]);
     end
@@ -188,6 +199,7 @@ function AtlasLoot_DewdropSubMenuRegister(loottable)
                                     'func', AtlasLoot_DewDropSubMenuClick,
                                     'arg1', v[2],
                                     'arg2', v[1],
+                                    'arg2', v[3],
                                     'notCheckable', true
                                 )
                         else
@@ -228,18 +240,18 @@ function AtlasLoot_DewdropRegister()
 				if AtlasLoot_Modules then
                     for k,v in ipairs(AtlasLoot_Modules) do
                         --If a link to show a submenu
-                            local checked = false;
-                                AtlasLoot_Dewdrop:AddLine(
-                                    'text', v[1],
-                                    'textR', 1,
-                                    'textG', 0.82,
-                                    'textB', 0,
-                                    'func', AtlasLoot_DewDropClick,
-                                    'arg1', v[2],
-                                    'arg2', v[1],
-                                    'arg3', k,
-                                    'notCheckable', true
-                                )
+                        local checked = false;
+                        AtlasLoot_Dewdrop:AddLine(
+                            'text', v[1],
+                            'textR', 1,
+                            'textG', 0.82,
+                            'textB', 0,
+                            'func', AtlasLoot_DewDropClick,
+                            'arg1', v[2],
+                            'arg2', v[1],
+                            'arg3', v[3],
+                            'notCheckable', true
+                        )
                     end
                 end
                 --Close button

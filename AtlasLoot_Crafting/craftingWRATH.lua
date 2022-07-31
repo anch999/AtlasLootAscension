@@ -2232,6 +2232,25 @@ local MASTER = select(2, GetSpellInfo(28596));
 		Type = "Crafting";
 	};
 
+	AtlasLoot_Data["MiningWRATH"] = {
+		Name = MINING;
+				{
+		Name = MINING;
+		{ 1, "s55208", "37663", "=q2=Smelt Titansteel", "=ds=#sr# 450"};
+		{ 2, "s55211", "41163", "=q2=Smelt Titanium", "=ds=#sr# 450"};
+		{ 3, "s49258", "36913", "=q1=Smelt Saronite", "=ds=#sr# 400"};
+		{ 4, "s49252", "36916", "=q1=Smelt Cobalt", "=ds=#sr# 350"};
+	};
+};
+
+	AtlasLoot_Data["FirstAidWRATH"] = {
+			Name = FIRSTAID;
+		{
+			Name = FIRSTAID;
+			{ 1, "s45546", "34722", "=q1=Heavy Frostweave Bandage", "=ds=#sr# 400"};
+			{ 2, "s45545", "34721", "=q1=Frostweave Bandage", "=ds=#sr# 375"};
+		};
+	};
 		-----------------
 		--- Tailoring ---
 		-----------------

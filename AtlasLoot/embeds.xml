@@ -17,6 +17,7 @@
 <Include file="Libs\AceLocale-3.0\AceLocale-3.0.xml"/>
 <Include file="Libs\AceSerializer-3.0\AceSerializer-3.0.xml"/>
 <Include file="Libs\AceComm-3.0\AceComm-3.0.xml"/>
+<Include file="Libs\AceTimer-3.0\AceTimer-3.0.xml"/>
 
 <Include file="Libs\DewdropLib\embeds.xml"/>
 <Script file="Libs\DewdropLib\Dewdrop-2.0\Dewdrop-2.0.lua"/>

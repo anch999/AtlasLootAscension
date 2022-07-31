@@ -481,43 +481,6 @@
 	                </OnShow>
                 </Scripts>
             </Button>
-            <Button name="AtlasLootServerQueryButton" inherits="OptionsButtonTemplate">
-				<Size>
-					<AbsDimension x="140" y="23"/>
-				</Size>
-				<Anchors>
-					<Anchor point="BOTTOM" relativeTo="$parent" relativePoint="BOTTOM">
-						<Offset>
-							<AbsDimension x="130" y="4"/>
-						</Offset>
-					</Anchor>
-				</Anchors>
-				<Scripts>
-                    <OnShow>
-                        local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot");
-                        this:SetText(AL["Query Server"]);
-				        this:SetFrameLevel( (this:GetParent()):GetFrameLevel() + 1 );
-			        </OnShow>
-                    <OnEnter>
-                        local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot");
-                        GameTooltip:ClearLines();
-                        GameTooltip:SetOwner(this, "ANCHOR_RIGHT", -(this:GetWidth() / 2), 5);
-                        GameTooltip:AddLine("|cffff0000"..AL["Query Server"]);
-                        GameTooltip:AddLine(AL["Queries the server for all items"]);
-                        GameTooltip:AddLine(AL["on this page. The items will be"]);
-                        GameTooltip:AddLine(AL["refreshed when you next mouse"]);
-                        GameTooltip:AddLine(AL["over them. |cffff0000 (Includes Bloodforged)"]);
-                        GameTooltip:Show();
-			        </OnEnter>
-                    <OnLeave>
-                        GameTooltip:Hide();
-					</OnLeave>
-					<OnClick>
-                        GameTooltip:Hide();
-						AtlasLoot_QueryLootPage();
-					</OnClick>
-				</Scripts>
-			</Button>
             <Button name="AtlasLootQuickLooksButton">
 				<Size>
 					<AbsDimension x="25" y="25" />
@@ -763,24 +726,6 @@
 					</OnClick>
 				</Scripts>
 			</CheckButton>
-			<CheckButton name="$parentSubtablePosition" inherits="OptionsCheckButtonTemplate">
-				<Anchors>
-					<Anchor point="TOPLEFT">
-						<Offset>
-							<AbsDimension x="5" y="-190"/>
-						</Offset>
-					</Anchor>
-				</Anchors>
-				<Scripts>
-					<OnLoad>
-                        local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot");
-						getglobal(this:GetName().."Text"):SetText("Swap Subtable/Difficuilty Menus");
-					</OnLoad>
-					<OnClick>
-						AtlasLootOptions_SubtablePositionToggle();
-					</OnClick>
-				</Scripts>
-			</CheckButton>
             <CheckButton name="$parentLoDStartup" inherits="OptionsCheckButtonTemplate">
 				<Anchors>
 					<Anchor point="TOP">
@@ -863,26 +808,6 @@
 					</OnClick>
 				</Scripts>
 			</CheckButton>
-
-            <CheckButton name="$parentItemAutoQuery" inherits="OptionsCheckButtonTemplate">
-				<Anchors>
-					<Anchor point="TOP">
-						<Offset>
-							<AbsDimension x="5" y="-136"/>
-						</Offset>
-					</Anchor>
-				</Anchors>
-				<Scripts>
-					<OnLoad>
-                        local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot");
-						getglobal(this:GetName().."Text"):SetText(AL["Auto Query items on page load"]);
-					</OnLoad>
-					<OnClick>
-						AtlasLootOptions_ItemAutoQuery();
-					</OnClick>
-				</Scripts>
-			</CheckButton>
-
             <CheckButton name="$parentHidePanel" inherits="OptionsCheckButtonTemplate">
 				<Anchors>
 					<Anchor point="TOP">

@@ -9,40 +9,32 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 --		{ #, "CardGame1", "INV_Misc_Ticket_Tarot_Madness", "=ds="..AL["Upper Deck Card Game Items"], ""};
 --		{ #, "PVPMENU", "INV_Axe_02", "=ds="..AL["PvP Rewards"], ""};
 
-	AtlasLoot_Data["SETMENUCLASSIC"] = {
-		{ 1, "SETSCLASSIC", "INV_Sword_43", "=ds="..AL["Classic Sets"], ""};
-		{ 3, 0, "INV_Box_01", "=q6="..AL["BoE World Epics"], ""};
-		{ 4, "WorldEpics1", "INV_Jewelry_Ring_15", "=ds="..AL["Level 30-39"], ""};
-		{ 5, "WorldEpics2", "INV_Staff_29", "=ds="..AL["Level 40-49"], ""};
-		{ 6, "WorldEpics3", "INV_Jewelry_Amulet_01", "=ds="..AL["Level 50-60"], ""};
-		{ 8, "Heirloom", "INV_Sword_43", "=ds="..AL["Heirloom"], ""};
-		{ 9, "Legendaries", "INV_Staff_Medivh", "=ds="..AL["Legendary Items"], ""};
-		{ 16, "T0SET", "INV_Chest_Chain_03", "=ds="..AL["Dungeon 1/2 Sets"], ""};
-		{ 17, "ZGSets1", "INV_Misc_MonsterClaw_04", "=ds="..AL["Zul'Gurub Sets"], ""};
-		{ 18, "AQ20Sets1", "INV_Jewelry_Ring_AhnQiraj_03", "=ds="..AL["Ruins of Ahn'Qiraj Sets"], ""};
-		{ 19, "AQ40Sets1", "INV_Sword_59", "=ds="..AL["Temple of Ahn'Qiraj Sets"], ""};
-		{ 21, "T1SET", "INV_Pants_Mail_03", "=ds="..AL["Tier 1 Sets"], ""};
-		{ 22, "T2SET", "INV_Pants_Mail_26", "=ds="..AL["Tier 2 Sets"], ""};
-		{ 23, "T3SET", "INV_Pants_Mail_38v3", "=ds="..AL["Tier 3 Sets"], ""};
-		Prev = "SETMENUWRATH";
-		Next = "SETMENUTBC";
-		Submenu = "Expansion";
-	};
+		AtlasLoot_SubMenus["CollectionsCLASSIC"] = {
+			Module = "AtlasLootOriginalWoW";
+			{ "", "ClassicSets"};
+			{ "", "WorldEpicsCLASSIC"};
+			{ "", "ZGSets"};
+			{ "", "AQ20Sets"};
+			{ "", "T0"};
+			{ "", "T1"};
+			{ "", "T2"};
+			{ "", "T2.5"};
+			{ "", "T3"};
+		};
 
-	AtlasLoot_Data["SETMENUTBC"] = {
-		{ 1, "70TOKENMENU", "Spell_Holy_ChampionsBond", "=ds="..AL["Badge of Justice Rewards"], "=q5="..AL["Burning Crusade"]};
-		{ 3, "Heirloom", "INV_Sword_43", "=ds="..AL["Heirloom"], ""};
-		{ 4, "WorldEpics4", "INV_Sword_76", "=ds=".."World Epics", ""};
-		{ 5, "TBCSets", "INV_Weapon_Glave_01", "=ds="..AL["Burning Crusade Misc Sets"], ""};
-		{ 6, "Legendaries", "INV_Staff_Medivh", "=ds="..AL["Legendary Items"], ""};
-		{ 16, "DS3SET", "INV_Helmet_15", "=ds="..AL["Dungeon 3 Sets"], ""};
-		{ 18, "T4SET", "inv_helmet_58", "=ds="..AL["Tier 4 Sets"], ""};
-		{ 19, "T5SET", "inv_helmet_92", "=ds="..AL["Tier 5 Sets"], ""};
-		{ 20, "T6SET", "inv_helmet_98", "=ds="..AL["Tier 6 Sets"], ""};
-		Prev = "SETMENUCLASSIC";
-		Next = "SETMENUWRATH";
-		Submenu = "Expansion";	
-	};
+		AtlasLoot_SubMenus["CollectionsTBC"] = {
+			Module = "AtlasLootBurningCrusade";
+			{ "", "DS3"};
+			{ "", "WorldEpicsTBC"};
+			{ "", "TBCSets"};
+			{ AL["Badge of Justice Rewards"], "BadgeShatt", "Header"};
+			{ "", "BadgeShatt"};
+			{ "", "BadgeSunwell"};
+			{ "Teir Sets", "T4", "Header"};
+			{ "", "T4"};
+			{ "", "T5"};
+			{ "", "T6"};
+		};
 
 	AtlasLoot_Data["SETMENUWRATH"] = {
 		{ 1, "EMBLEMOFFROSTMENU", "inv_misc_frostemblem_01", "=ds="..AL["Emblem of Frost Rewards"], "=q5="..AL["Wrath of the Lich King"]};

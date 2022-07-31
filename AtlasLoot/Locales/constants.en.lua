@@ -19,6 +19,8 @@ local AL = AceLocale:NewLocale("AtlasLoot", "enUS", true);
 --Register translations
 if AL then
 
+	AL["Druid"] = true;
+
 	-- Text strings for UI objects
 	AL["AtlasLoot"] = true;
 	AL["Select Loot Table"] = true;
@@ -96,7 +98,6 @@ if AL then
 	AL["|cff9d9d9dShow Basic Minimap Button|r"] = true;
 	AL["Set Minimap Button Position"] = true;
 	AL["Suppress Item Query Text"] = true;
-	AL["Auto Query items on page load"] = true;
 	AL["Notify on LoD Module Load"] = true;
 	AL["Load Loot Modules at Startup"] = true;
 	AL["Loot Browser Scale: "] = true;
@@ -1153,6 +1154,7 @@ if AL then
 	AL["The Defiler's Determination"] = true;
 	AL["The Defiler's Fortitude"] = true;
 	AL["The Defiler's Resolution"] = true;
+	AL["The Defiler's Resolve"] = true;
 
 	-- PvP Level 60 Rare Sets - Alliance
 	AL["Lieutenant Commander's Refuge"] = true;

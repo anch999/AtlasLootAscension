@@ -676,29 +676,31 @@ local function DoSearch(searchText)
     local difficulty = TermsContainDifficulty(searchTerms);
 
     for dataID, data in pairs(AtlasLoot_Data) do
-        for _, v in ipairs(data) do
-            local _, itemId, itemType, atlasName = unpack(v)
+        for _, datatable in pairs(data) do
+            for _, v in ipairs(datatable) do
+                local _, itemId, itemType, atlasName = unpack(v)
 
-            if type(itemId) == "number" and itemId > 0 then
-                if difficulty ~= 2 then
-                        itemId = AL_FindId(itemId, difficulty) or itemId;
-                end
+                if type(itemId) == "number" and itemId > 0 then
+                    if difficulty ~= 2 then
+                            itemId = AL_FindId(itemId, difficulty) or itemId;
+                    end
 
-                local itemDetails = {GetItemDetails(itemId, atlasName)};
-                itemDetails[8] = difficulty;
+                    local itemDetails = {GetItemDetails(itemId, atlasName)};
+                    itemDetails[8] = difficulty;
 
-                if #searchTerms == 1 and searchTerms[1].name then
-                    if nameMatches(atlasName, searchTerms[1].name) then
+                    if #searchTerms == 1 and searchTerms[1].name then
+                        if nameMatches(atlasName, searchTerms[1].name) then
+                            AddItemToSearchResult(itemId, itemType, atlasName, dataID);
+                        end
+                    elseif ItemMatchesAllTerms(searchTerms, itemDetails) then
                         AddItemToSearchResult(itemId, itemType, atlasName, dataID);
                     end
-                elseif ItemMatchesAllTerms(searchTerms, itemDetails) then
-                    AddItemToSearchResult(itemId, itemType, atlasName, dataID);
-                end
-            elseif not equipableFilterOn and itemId and itemId ~= "" and string.sub(itemId, 1, 1) == "s" then
-                local spellName = GetSpellName(itemId, atlasName)
-                if nameMatches(spellName, searchText) then
-                    spellName = string.sub(atlasName, 1, 4) .. spellName;
-                    AddItemToSearchResult(itemId, itemType, spellName, dataID)
+                elseif not equipableFilterOn and itemId and itemId ~= "" and string.sub(itemId, 1, 1) == "s" then
+                    local spellName = GetSpellName(itemId, atlasName)
+                    if nameMatches(spellName, searchText) then
+                        spellName = string.sub(atlasName, 1, 4) .. spellName;
+                        AddItemToSearchResult(itemId, itemType, spellName, dataID)
+                    end
                 end
             end
         end

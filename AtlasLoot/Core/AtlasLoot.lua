@@ -14,7 +14,6 @@ AtlasLoot_OnLoad()
 AtlasLootBoss_OnClick()
 AtlasLoot_ShowItemsFrame()
 AtlasLoot_GenerateAtlasMenu(dataID, pFrame)
-AtlasLootOptions_ItemAutoQuery()
 AtlasLoot_SetItemInfoFrame()
 AtlasLootItemsFrame_OnCloseButton()
 AtlasLootMenuItem_OnClick()
@@ -28,11 +27,12 @@ AtlasLoot_AddTooltip(frameb, tooltiptext)
 AL_FindId(name, difficulty)
 ]]
 
-AtlasLoot = LibStub("AceAddon-3.0"):NewAddon("AtlasLoot");
+AtlasLoot = LibStub("AceAddon-3.0"):NewAddon("AtlasLoot", "AceTimer-3.0");
 
 --Instance required libraries
 local BabbleBoss = AtlasLoot_GetLocaleLibBabble("LibBabble-Boss-3.0")
 local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot");
+
 
 --Establish version number and compatible version of Atlas
 local VERSION_MAJOR = "5";
@@ -206,12 +206,6 @@ function AtlasLoot_OnVariablesLoaded()
 	if not AtlasLootCharDB["WishList"] then AtlasLootCharDB["WishList"] = {} end
     if not AtlasLootCharDB["QuickLooks"] then AtlasLootCharDB["QuickLooks"] = {} end
 	if not AtlasLootCharDB["SearchResult"] then AtlasLootCharDB["SearchResult"] = {} end
-	AtlasLoot.db.profile.LastBoss = "EmptyTable";
-    if AtlasLoot_TableNames then
-        AtlasLoot_TableNames["EmptyTable"] = { AL["Select a Loot Table..."], "Menu" };
-	    AtlasLoot_TableNames["EmptyInstance"] = { "AtlasLoot", "AtlasLootFallback" };
-	    AtlasLoot_TableNames["AtlasLootFallback"] = { "AtlasLoot", "AtlasLootFallback" };
-    end
     if AtlasLoot_Data then
         AtlasLoot_Data["EmptyTable"] = {
 			Name = AL["Select a Loot Table..."];
@@ -389,7 +383,6 @@ function AtlasLoot_Reset(data)
         AtlasFrame:Hide();
     end
     if data == "frames" then
-        AtlasLoot.db.profile.LastBoss = "EmptyTable";
 		AtlasLootDefaultFrame:ClearAllPoints();
 		AtlasLootDefaultFrame:SetPoint("CENTER", "UIParent", "CENTER", 0, 0);
         if AtlasLootFu then
@@ -400,16 +393,13 @@ function AtlasLoot_Reset(data)
         AtlasLoot.db.profile.LootBrowserScale = 1.0;
         AtlasLoot_UpdateLootBrowserScale();
     elseif data == "quicklooks" then
-        AtlasLoot.db.profile.LastBoss = "EmptyTable";
         AtlasLootCharDB["QuickLooks"] = {};
         AtlasLoot_RefreshQuickLookButtons();
     elseif data == "wishlist" then
-        AtlasLoot.db.profile.LastBoss = "EmptyTable";
         AtlasLootCharDB["WishList"] = {};
         AtlasLootCharDB["SearchResult"] = {};
         AtlasLootCharDB.LastSearchedText = "";
     elseif data == "all" then
-        AtlasLoot.db.profile.LastBoss = "EmptyTable";
 		AtlasLootDefaultFrame:ClearAllPoints();
 		AtlasLootDefaultFrame:SetPoint("CENTER", "UIParent", "CENTER", 0, 0);
         if AtlasLootFu then
@@ -490,13 +480,58 @@ function AtlasLoot_OnLoad()
 end
 
 function AtlasLoot_CleandataID(newID, listnum)
-	local cleanlist = {	[1] = {"CLASSIC", "TBC", "WRATH", "1", "2", "3", "4", "5", "6", "7", "8"},
-						[2] = {"1", "2", "3", "4", "5", "6", "7", "8"}
-					};
+	local cleanlist = {	[1] = {"CLASSIC", "TBC", "WRATH"} };
 	for i = 1, #cleanlist[listnum] do
 		newID = gsub(newID, cleanlist[listnum][i], "");
 	end
 	return newID;
+end
+
+--Creates tables for raid tokens from the collections tables
+function Atlasloot_CreateToken(dataID)
+	local itemType, slotType, itemName, itemType2
+	--orginal dataID
+	local orgID = dataID;
+	--list of item types to find
+	local names = { {"HEAD", "INVTYPE_HEAD", "Head"}, {"SHOULDER", "INVTYPE_SHOULDER", "Shoulders"}, {"CHEST", "INVTYPE_CHEST", "Chest", "INVTYPE_ROBE"}, {"WRIST", "INVTYPE_WRIST", "Wrists"}, {"HAND", "INVTYPE_HAND", "Hands"}, {"WAIST", "INVTYPE_WAIST", "Waist"}, {"LEGS", "INVTYPE_LEGS", "Legs"}, {"FEET", "INVTYPE_FEET", "Feet"}, {"FINGER", "INVTYPE_FINGER", "Rings"}};
+		--finds the item type to create a list of
+		for a, b in pairs(names) do
+			dataID = gsub(dataID, b[1], "");
+			slotType = gsub(orgID, dataID, "");
+			if slotType == b[1] then
+				itemType = b[2];
+				itemType2 = b[4];
+				itemName = b[3];
+			end
+		end
+	--Creates data set of the item type
+	AtlasLoot_Data[orgID] = {};
+	local newData = AtlasLoot_Data[orgID];
+		newData.Name = itemName;
+		newData.Type = AtlasLoot_Data[dataID].Type;
+		newData.Back = true;
+		newData[1] = {};
+		newData[1].Name = itemName;
+		--used to refresh the page after its loaded all the items
+		function AtlasLoot:callShowloot()
+			AtlasLoot_ShowItemsFrame(AtlasLootItemsFrame.refresh[1], AtlasLootItemsFrame.refresh[2], AtlasLootItemsFrame.refresh[3], AtlasLootItemsFrame.refresh[4], AtlasLootItemsFrame.refresh[5])
+		end
+		--Adds all the items to the new data set
+		--Uses a timer so that AtlasLoot:callShowloot() only fires once after all then items have been loaded
+		for i, v in ipairs(AtlasLoot_Data[dataID]) do
+			for t, id in ipairs(v) do
+				local itemID = id[2];
+				local item = Item:CreateFromID(itemID);
+				item:ContinueOnLoad(function(itemID)
+					AtlasLoot:CancelTimer(AtlasLoot.refreshTimer);
+					if itemType == select(9,GetItemInfo(itemID)) or itemType2 == select(9,GetItemInfo(itemID)) then
+						local newTable = rawset(id, 1, i);
+						table.insert(newData[1],newTable);
+					end
+					AtlasLoot.refreshTimer = AtlasLoot:ScheduleTimer("callShowloot", .5);
+				end)
+			end
+		end
 end
 
 --[[
@@ -505,6 +540,7 @@ dataID - Name of the loot table
 dataSource - Table in the database where the loot table is stored
 boss - Text string to use as a title for the loot page
 pFrame - Data structure describing how and where to anchor the item frame (more details, see the function AtlasLoot_SetItemInfoFrame)
+tablenum - Table number of the loot table being displayed
 This fuction is not normally called directly, it is usually invoked by AtlasLoot_ShowBossLoot.
 It is the workhorse of the mod and allows the loot tables to be displayed any way anywhere in any mod.
 ]]
@@ -531,7 +567,6 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame, tablenum)
 
 	--Hide Advanced search if it is up and reshow Querybutton
 	AtlasLootAdvancedSearch:Hide();
-	AtlasLootServerQueryButton:Show();
 
     --Ditch the Quicklook selector
     AtlasLoot_QuickLooks:Hide();
@@ -652,8 +687,8 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame, tablenum)
 
 				--Store data about the state of the items frame to allow minor tweaks or a recall of the current loot page
 				AtlasLootItemsFrame.refresh = {dataID, dataSource_backup, boss, pFrame, tablenum};
-				if dataID ~= "FilterList" then
-					AtlasLootItemsFrame.refreshOri = {dataID, dataSource_backup, boss, pFrame, tablenum}
+				if dataID ~= "FilterList" and dataSource[dataID].Back ~= true then
+					AtlasLootItemsFrame.refreshOri = {dataID, dataSource_backup, boss, pFrame, tablenum};
 				end
 
 				--Insert the item description
@@ -775,32 +810,29 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame, tablenum)
 		end
 
         AtlasLootItemsFrame.refresh = {dataID, dataSource_backup, boss, pFrame, tablenum};
-		if dataID ~= "FilterList" then
+		if dataID ~= "FilterList" and dataSource[dataID].Back ~= true then
 			AtlasLootItemsFrame.refreshOri = {dataID, dataSource_backup, boss, pFrame, tablenum};
+			AtlasLoot.db.profile.LastBoss = {dataID, dataSource_backup, boss, pFrame, tablenum, ATLASLOOT_LASTMODULE, ATLASLOOT_CURRENTTABLE};
 		end
-
-        --If the item is not in cache, querying the server may cause a disconnect
-        --Show a red box around the item to indicate this to the user
-        --((dataSource[dataID][i][2] ~= 0) and (not GetItemInfo(dataSource[dataID][i][2]))
-        for i = 1, 30, 1 do
-            itemID = getglobal("AtlasLootItem_"..i).itemID;
-            if itemID and itemID ~= 0 and (string.sub(itemID, 1, 1) ~= "s") then
-                if GetItemInfo(itemID) then
-                    getglobal("AtlasLootItem_"..i.."_Unsafe"):Hide();
-                else
-                    getglobal("AtlasLootItem_"..i.."_Unsafe"):Show();
-                end
-            else
-                getglobal("AtlasLootItem_"..i.."_Unsafe"):Hide();
-            end
-        end
 
         --This is a valid QuickLook, so show the UI objects
         AtlasLoot_QuickLooks:Show();
         AtlasLootQuickLooksButton:Show();
 
+		-- Checks dataID with submenus to stop filter button loading on certain tables
+		local function filterCheck(find)
+			local mtype = {"Crafting", "Reputations", "WorldEvents", "PVP", "Collections"}
+			for m, t in pairs (mtype) do
+				for i, v in ipairs (AtlasLoot_SubMenus[t..AtlasLoot_Expac]) do
+					if find == v[2] then
+						return true;
+					end
+				end
+			end
+		end
+
 		-- Show the Filter Check-Box
-		if dataID ~= "WishList" and dataID ~= "SearchResult" and dataSource[dataID].NoFilter ~= true then
+		if dataID ~= "WishList" and dataID ~= "SearchResult" and filterCheck(dataID) ~= true then
 			AtlasLootFilterCheck:Show();
 		end
 
@@ -809,8 +841,10 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame, tablenum)
 		getglobal("AtlasLootItemsFrame_NEXT"):Hide();
 		getglobal("AtlasLootItemsFrame_PREV"):Hide();
 
-		AtlasLoot_BossName:SetText(dataSource[dataID][tablenum].Name);
-		AtlasLootDefaultFrame_SubMenu:SetText(dataSource[dataID].Name);
+		if dataID ~= "FilterList" then
+			AtlasLoot_BossName:SetText(dataSource[dataID][tablenum].Name);
+			AtlasLootDefaultFrame_SubMenu:SetText(dataSource[dataID].Name);
+		end
 
 		--Consult the button registry to determine what nav buttons are required
 		if dataID == "SearchResult" or dataID == "WishList" then
@@ -823,11 +857,11 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame, tablenum)
 				getglobal("AtlasLootItemsFrame_PREV").lootpage = dataID.."Page"..(wlPage - 1);
 			end
 		else
-				local tablebase = dataID;
+			local tablebase = dataID;
 			if ATLASLOOT_FILTER_ENABLE and dataID == "FilterList" then
 				tablebase = AtlasLootItemsFrame.refreshOri[1];
 			end
-			
+
 			if tablenum + 1 ~= AtlasLoot_GetNumOfRows(dataSource[tablebase]) then
 				getglobal("AtlasLootItemsFrame_NEXT"):Show();
 				getglobal("AtlasLootItemsFrame_NEXT").lootpage = tablebase;
@@ -838,11 +872,10 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame, tablenum)
 				getglobal("AtlasLootItemsFrame_PREV").lootpage = tablebase;
 				getglobal("AtlasLootItemsFrame_PREV").tablenum = tablenum - 1;
 			end
---[[ 			if tablebase.Back then
+ 			if dataSource[tablebase].Back then
 				getglobal("AtlasLootItemsFrame_BACK"):Show();
-				getglobal("AtlasLootItemsFrame_BACK").lootpage = tablebase.Back;
 			end
- ]]		end
+		end
 	end
 
 	--Anchor the item frame where it is supposed to be
@@ -850,7 +883,9 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame, tablenum)
 	if ATLASLOOT_FILTER_ENABLE and dataID ~= "FilterList" then
 		AtlasLoot_HideNoUsableItems();
 	end
-	if AtlasLoot.db.profile.ItemAutoQuery then AtlasLoot_QueryLootPage(); end
+
+		AtlasLoot_QueryLootPage();
+
 end
 
 --[[
@@ -915,7 +950,6 @@ Called when <-, -> are pressed and calls up the appropriate loot page
 function AtlasLoot_NavButton_OnClick()
 	local tabelname = this.lootpage;
 	local tablenum = this.tablenum;
-	local filtercheck = false;
 
 	if AtlasLootItemsFrame.refresh and AtlasLootItemsFrame.refresh[4] and AtlasLootItemsFrame.refresh[5] then
 		if strsub(tabelname, 1, 16) == "SearchResultPage" then
@@ -937,22 +971,7 @@ AtlasLoot_NavButton_OnClick:
 Called when 'Back'Button is pressed and calls up the appropriate loot page
 ]]
 function AtlasLoot_BackButton_OnClick()
-	if AtlasLootItemsFrame.refresh and AtlasLootItemsFrame.refresh[4] then
-		if strsub(this.lootpage, 1, 16) == "SearchResultPage" then
-			AtlasLoot_ShowItemsFrame("SearchResult", this.lootpage, (AL["Search Result: %s"]):format(AtlasLootCharDB.LastSearchedText or ""), AtlasLootItemsFrame.refresh[4]);
-		elseif strsub(this.lootpage, 1, 12) == "WishListPage" then
-			AtlasLoot_ShowItemsFrame("WishList", this.lootpage, AL["Wishlist"], AtlasLootItemsFrame.refresh[4]);
-		elseif AtlasLoot_Hold == true then
-			AtlasLoot_ShowItemsFrame(AtlasLoot_Lastboss, AtlasLootItemsFrame.refresh[2], "", AtlasLootItemsFrame.refresh[4]);
-			-- Lets AtlasLoot_Lastboss be updated after going back to main table
-			AtlasLoot_Hold = false;
-		else
-			AtlasLoot_ShowItemsFrame(this.lootpage, AtlasLootItemsFrame.refresh[2], "", AtlasLootItemsFrame.refresh[4]);
-		end
-    else
-		--Fallback for if the requested loot page is a menu and does not have a .refresh instance
-		AtlasLoot_ShowItemsFrame(this.lootpage, "", "", AtlasFrame);
-	end
+	AtlasLoot_ShowItemsFrame(AtlasLootItemsFrame.refreshOri[1], AtlasLootItemsFrame.refreshOri[2], AtlasLootItemsFrame.refreshOri[3], AtlasLootItemsFrame.refreshOri[4], AtlasLootItemsFrame.refreshOri[5]);
 end
 
 --[[
@@ -960,16 +979,17 @@ AtlasLoot_IsLootTableAvailable(dataID):
 Checks if a loot table is in memory and attempts to load the correct LoD module if it isn't
 dataID: Loot table dataID
 ]]
-function AtlasLoot_IsLootTableAvailable(dataID,dataSource)
+function AtlasLoot_IsLootTableAvailable(dataSource)
 
 		local moduleName=nil;
 
 		moduleName = AtlasLoot_GetLODModule(dataSource);
 
-		if AtlasLoot_Data[dataID] then
+		if IsAddOnLoaded(moduleName) then
 			return true;
 		else
-			if moduleName then
+			LoadAddOn(moduleName);
+		--[[ 	if moduleName then
                 if not IsAddOnLoaded(moduleName) then
                     loaded, reason=LoadAddOn(moduleName);
                     if not loaded then
@@ -982,7 +1002,7 @@ function AtlasLoot_IsLootTableAvailable(dataID,dataSource)
                         end
                     end
                 end
-                --[[ if AtlasLoot_Data[dataID] then
+                if AtlasLoot_Data[dataID] then
                     if ATLASLOOT_DEBUGMESSAGES then
                         DEFAULT_CHAT_FRAME:AddMessage(GREEN..AL["AtlasLoot"]..": "..ORANGE..moduleName..WHITE.." "..AL["sucessfully loaded."]);
                     end
@@ -991,11 +1011,11 @@ function AtlasLoot_IsLootTableAvailable(dataID,dataSource)
                 else
                     DEFAULT_CHAT_FRAME:AddMessage(RED..AL["AtlasLoot Error!"].." "..ORANGE..AtlasLoot_TableNames[dataID][1]..WHITE..AL[" could not be accessed, the following module may be out of date: "]..ORANGE..moduleName);
                     return false;
-                end ]]
+                end
             else
                 DEFAULT_CHAT_FRAME:AddMessage(RED..AL["AtlasLoot Error!"].." "..ORANGE..AL["Loot module returned as nil!"]);
                 return false;
-            end
+            end ]]
 		end
 end
 
@@ -1074,7 +1094,7 @@ function AtlasLoot_ShowQuickLooks(button)
 				"tooltipTitle", AL["QuickLook"].." 1",
 				"tooltipText", AL["Assign this loot table\n to QuickLook"].." 1",
 				"func", function()
-                    AtlasLootCharDB["QuickLooks"][1]={AtlasLootItemsFrame.refreshOri[1], AtlasLootItemsFrame.refreshOri[2], AtlasLootItemsFrame.refreshOri[3], AtlasLootItemsFrame.refreshOri[4], AtlasLootItemsFrame.refreshOri[5]};
+                    AtlasLootCharDB["QuickLooks"][1]={AtlasLootItemsFrame.refreshOri[1], AtlasLootItemsFrame.refreshOri[2], AtlasLootItemsFrame.refreshOri[3], AtlasLootItemsFrame.refreshOri[4], AtlasLootItemsFrame.refreshOri[5], ATLASLOOT_LASTMODULE, ATLASLOOT_CURRENTTABLE};
                     AtlasLoot_RefreshQuickLookButtons();
                     dewdrop:Close(1);
 				end
@@ -1084,7 +1104,7 @@ function AtlasLoot_ShowQuickLooks(button)
 				"tooltipTitle", AL["QuickLook"].." 2",
 				"tooltipText", AL["Assign this loot table\n to QuickLook"].." 2",
 				"func", function()
-					AtlasLootCharDB["QuickLooks"][2]={AtlasLootItemsFrame.refreshOri[1], AtlasLootItemsFrame.refreshOri[2], AtlasLootItemsFrame.refreshOri[3], AtlasLootItemsFrame.refreshOri[4], AtlasLootItemsFrame.refreshOri[5]};
+					AtlasLootCharDB["QuickLooks"][2]={AtlasLootItemsFrame.refreshOri[1], AtlasLootItemsFrame.refreshOri[2], AtlasLootItemsFrame.refreshOri[3], AtlasLootItemsFrame.refreshOri[4], AtlasLootItemsFrame.refreshOri[5], ATLASLOOT_LASTMODULE, ATLASLOOT_CURRENTTABLE};
                     AtlasLoot_RefreshQuickLookButtons();
                     dewdrop:Close(1);
 				end
@@ -1094,7 +1114,7 @@ function AtlasLoot_ShowQuickLooks(button)
 				"tooltipTitle", AL["QuickLook"].." 3",
 				"tooltipText", AL["Assign this loot table\n to QuickLook"].." 3",
 				"func", function()
-					AtlasLootCharDB["QuickLooks"][3]={AtlasLootItemsFrame.refreshOri[1], AtlasLootItemsFrame.refreshOri[2], AtlasLootItemsFrame.refreshOri[3], AtlasLootItemsFrame.refreshOri[4], AtlasLootItemsFrame.refreshOri[5]};
+					AtlasLootCharDB["QuickLooks"][3]={AtlasLootItemsFrame.refreshOri[1], AtlasLootItemsFrame.refreshOri[2], AtlasLootItemsFrame.refreshOri[3], AtlasLootItemsFrame.refreshOri[4], AtlasLootItemsFrame.refreshOri[5], ATLASLOOT_LASTMODULE, ATLASLOOT_CURRENTTABLE};
                     AtlasLoot_RefreshQuickLookButtons();
                     dewdrop:Close(1);
 				end
@@ -1104,7 +1124,7 @@ function AtlasLoot_ShowQuickLooks(button)
 				"tooltipTitle", AL["QuickLook"].." 4",
 				"tooltipText", AL["Assign this loot table\n to QuickLook"].." 4",
 				"func", function()
-					AtlasLootCharDB["QuickLooks"][4]={AtlasLootItemsFrame.refreshOri[1], AtlasLootItemsFrame.refreshOri[2], AtlasLootItemsFrame.refreshOri[3], AtlasLootItemsFrame.refreshOri[4], AtlasLootItemsFrame.refreshOri[5]};
+					AtlasLootCharDB["QuickLooks"][4]={AtlasLootItemsFrame.refreshOri[1], AtlasLootItemsFrame.refreshOri[2], AtlasLootItemsFrame.refreshOri[3], AtlasLootItemsFrame.refreshOri[4], AtlasLootItemsFrame.refreshOri[5], ATLASLOOT_LASTMODULE, ATLASLOOT_CURRENTTABLE};
                     AtlasLoot_RefreshQuickLookButtons();
                     dewdrop:Close(1);
 				end
@@ -1142,19 +1162,16 @@ AtlasLoot_QueryLootPage()
 Querys all valid items on the current loot page.
 ]]
 function AtlasLoot_QueryLootPage()
-    i=1;
-    local querytime = 0;
-    local now = 0;
-    while i<31 do
-        now = GetTime();
-        if now - querytime > 0.01 then
-            querytime = GetTime();
-            button = getglobal("AtlasLootItem_"..i);
-            queryitem = button.itemID;
-            if (queryitem) and (queryitem ~= nil) and (queryitem ~= "") and (queryitem ~= 0) and (string.sub(queryitem, 1, 1) ~= "s") then
-				AtlasLootTooltip:SetHyperlink("item:"..queryitem..":0:0:0:0:0:0:0");
-            end
-            i=i+1;
+    for i = 1, 30, 1 do
+        button = getglobal("AtlasLootItem_"..i);
+        queryitem = button.itemID;
+        if (queryitem) and (queryitem ~= nil) and (queryitem ~= "") and (queryitem ~= 0) and (string.sub(queryitem, 1, 1) ~= "s") then
+			local item = Item:CreateFromID(queryitem);
+			item:ContinueOnLoad(function(itemId)
+				if item:GetInfo() then
+					AtlasLootTooltip:SetHyperlink("item:"..itemId..":0:0:0:0:0:0:0");
+				end
+			end)
         end
     end
 end

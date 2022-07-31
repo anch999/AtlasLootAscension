@@ -107,12 +107,10 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
 
     AtlasLoot_SubMenus["WorldBossesMenuCLASSIC"] = {
         Module = "AtlasLootOriginalWoW";
-        AutoLoad = true;
         { "","WorldBossesCLASSIC"};
     };
 
     AtlasLoot_SubMenus["WorldBossesMenuTBC"] = {
         Module = "AtlasLootBurningCrusade";
-        AutoLoad = true;
         { "","WorldBossesTBC"};
     };

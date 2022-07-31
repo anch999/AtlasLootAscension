@@ -10,10 +10,9 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ "", "EngineeringCLASSIC"};
 		{ "", "LeatherworkingCLASSIC"};
 		{ "", "TailoringCLASSIC"};
-		{ "", "Inscription"};
-		{ "", "Mining"};
+		{ "", "MiningCLASSIC"};
 		{ "", "CookingCLASSIC"};
-		{ "", "FirstAid"};
+		{ "", "FirstAidCLASSIC"};
 		{"High Risk:", "", "Header"};
 		{ "", "AlchemyHighRiskCLASSIC"};
 		{ "", "SmithingHighRiskCLASSIC"};
@@ -33,10 +32,9 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ "", "JewelcraftingTBC"};
 		{ "", "LeatherworkingTBC"};
 		{ "", "TailoringTBC"};
-		{ "", "Inscription"};
-		{ "", "Mining"};
+		{ "", "MiningTBC"};
 		{ "", "CookingTBC"};
-		{ "", "FirstAid"};
+		{ "", "FirstAidTBC"};
 		{"High Risk:", "", "Header"};
 		{ "", "AlchemyHighRiskTBC"};
 		{ "", "SmithingHighRiskTBC"};
@@ -58,9 +56,9 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ "", "LeatherworkingWRATH"};
 		{ "", "TailoringWRATH"};
 		{ "", "Inscription"};
-		{ "", "Mining"};
+		{ "", "MiningWRATH"};
 		{ "", "CookingWRATH"};
-		{ "", "FirstAid"};
+		{ "", "FirstAidWRATH"};
 		{"High Risk:", "", "Header"};
 --[[ 		{ "", "AlchemyHighRiskWRATH"};
 		{ "", "SmithingHighRiskWRATH"};

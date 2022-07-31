@@ -13,7 +13,6 @@ AtlasLootOptions_EquipCompareToggle()
 AtlasLootOptions_OpaqueToggle()
 AtlasLootOptions_ItemIDToggle()
 AtlasLootOptions_ItemSpam()
-AtlasLootOptions_ItemAutoQuery()
 AtlasLootOptions_MinimapToggle()
 AtlasLootOptions_LoDSpam()
 AtlasLootOptions_LoDStartup()
@@ -46,10 +45,8 @@ function AtlasLootOptions_Init()
 	AtlasLootOptionsFrameLootlinkTT:SetChecked(AtlasLoot.db.profile.LootlinkTT);
 	AtlasLootOptionsFrameItemSyncTT:SetChecked(AtlasLoot.db.profile.ItemSyncTT);
     AtlasLootOptionsFrameEquipCompare:SetChecked(AtlasLoot.db.profile.EquipCompare);
-    AtlasLootOptionsFrameItemAutoQuery:SetChecked(AtlasLoot.db.profile.ItemAutoQuery);
     AtlasLootOptionsFrameOpaque:SetChecked(AtlasLoot.db.profile.Opaque);
     AtlasLootOptionsFrameItemID:SetChecked(AtlasLoot.db.profile.ItemIDs);
-    AtlasLootOptionsFrameSubtablePosition:SetChecked(AtlasLoot.db.profile.SubtablePosition);
     AtlasLootOptionsFrameItemSpam:SetChecked(AtlasLoot.db.profile.ItemSpam);
     AtlasLootOptionsFrameLoDStartup:SetChecked(AtlasLoot.db.profile.LoadAllLoDStartup);
     AtlasLootOptionsFrameHidePanel:SetChecked(AtlasLoot.db.profile.HidePanel);
@@ -118,15 +115,6 @@ function AtlasLootOptions_ItemSpam()
         AtlasLoot.db.profile.ItemSpam = false;
     else
         AtlasLoot.db.profile.ItemSpam = true;
-    end
-    AtlasLootOptions_Init();
-end
-
-function AtlasLootOptions_ItemAutoQuery()
-    if (AtlasLoot.db.profile.ItemAutoQuery) then
-        AtlasLoot.db.profile.ItemAutoQuery = false;
-    else
-        AtlasLoot.db.profile.ItemAutoQuery = true;
     end
     AtlasLootOptions_Init();
 end
@@ -235,7 +223,6 @@ function AtlasLoot_CreateOptionsInfoTooltips()
       AtlasLoot_AddTooltip("AtlasLootOptionsFrameHidePanel", nil) -- AL["Hide AtlasLoot Panel"]
       AtlasLoot_AddTooltip("AtlasLootOptionsFrameItemSpam", nil) -- AL["Suppress Item Query Text"]
       AtlasLoot_AddTooltip("AtlasLootOptionsFrameLoDSpam", nil) -- AL["Notify on LoD Module Load"]
-      AtlasLoot_AddTooltip("AtlasLootOptionsFrameItemAutoQuery", nil) -- AL["Auto Query items on page load"]
       AtlasLoot_AddTooltip("AtlasLootOptionsFrameLootBrowserScale", nil) -- Scale SLIDER
       AtlasLoot_AddTooltip("AtlasLootOptionsFrame_ResetAtlasLoot", nil) -- AL["Reset Frames"]
       AtlasLoot_AddTooltip("AtlasLootOptionsFrame_ResetWishlist", nil) -- AL["Reset Wishlist"]
@@ -243,7 +230,6 @@ function AtlasLoot_CreateOptionsInfoTooltips()
       AtlasLoot_AddTooltip("AtlasLootOptionsFrame_FuBarShow", nil) -- AL["Show FuBar Plugin"]
       AtlasLoot_AddTooltip("AtlasLootOptionsFrame_FuBarHide", nil) -- AL["Hide FuBar Plugin"]
       AtlasLoot_AddTooltip("AtlasLoot_SelectLootBrowserStyle", nil) 
-      --AtlasLoot_AddTooltip("AtlasLoot_SelectMythicPlussTier", nil)
 end
 
 function AtlasLoot_OptionsOnShow()
@@ -255,10 +241,6 @@ function AtlasLoot_OptionsOnShow()
     UIDropDownMenu_Initialize(AtlasLoot_CraftingLink, AtlasLoot_CraftingLink_Initialize);
 	UIDropDownMenu_SetSelectedID(AtlasLoot_CraftingLink, AtlasLoot.db.profile.CraftingLink);
 	UIDropDownMenu_SetWidth(AtlasLoot_CraftingLink, 150);
-    -- AtlasLoot_SelectMythicPlussTier_Label:SetText(AL["Select Mythic Pluss Tier:"]);
-    -- UIDropDownMenu_Initialize(AtlasLoot_SelectMythicPlussTier, AtlasLoot_SelectMythicPlussTier_Initialize);
-	-- UIDropDownMenu_SetSelectedID(AtlasLoot_SelectMythicPlussTier, AtlasLoot.db.profile.MythicPlussTier);
-	-- UIDropDownMenu_SetWidth(AtlasLoot_SelectMythicPlussTier, 150);
 end
 
 function AtlasLoot_SelectLootBrowserStyle_Initialize()
@@ -306,34 +288,10 @@ function AtlasLoot_CraftingLink_OnClick()
     UIDropDownMenu_SetSelectedID(AtlasLoot_CraftingLink, thisID);
     AtlasLoot.db.profile.CraftingLink = thisID;
     if AtlasLootItemsFrame:IsVisible() and AtlasLootItemsFrame.refresh then
-        AtlasLoot_ShowItemsFrame(AtlasLootItemsFrame.refresh[1], AtlasLootItemsFrame.refresh[2], AtlasLootItemsFrame.refresh[3], AtlasLootItemsFrame.refresh[4]);
+        AtlasLoot_ShowItemsFrame(AtlasLootItemsFrame.refresh[1], AtlasLootItemsFrame.refresh[2], AtlasLootItemsFrame.refresh[3], AtlasLootItemsFrame.refresh[4], AtlasLootItemsFrame.refresh[5]);
     end
     AtlasLoot_OptionsOnShow();
 end
-
--- function AtlasLoot_SelectMythicPlussTier_Initialize()
-	-- local info;
-	
-	-- for t = 0, 10, 1 do
-		-- info = {
-			-- text = AL["Mythic Tier "..t];
-			-- func = AtlasLoot_MythicPlussTier_OnClick;
-		-- };
-		-- UIDropDownMenu_AddButton(info);
-	-- end
-	
--- end
-
--- function AtlasLoot_MythicPlussTier_OnClick()
-    -- local thisID = this:GetID();
-    -- UIDropDownMenu_SetSelectedID(AtlasLoot_SelectMythicPlussTier, thisID);
-    -- AtlasLoot.db.profile.MythicPlussTier = thisID;
-    -- if AtlasLootItemsFrame:IsVisible() and AtlasLootItemsFrame.refresh then
-		-- Mythic_Reload();
-        -- AtlasLoot_ShowItemsFrame(AtlasLootItemsFrame.refresh[1], AtlasLootItemsFrame.refresh[2], AtlasLootItemsFrame.refresh[3], AtlasLootItemsFrame.refresh[4]);
-    -- end
-    -- AtlasLoot_OptionsOnShow();
--- end
 
 local Authors = {
 	["Calî"] = "Arthas",
@@ -347,9 +305,9 @@ function AtlasLoot_UnitTarget()
 	local name = GameTooltip:GetUnit()
 	if UnitName("mouseover") == name then 
 		local _, realm = UnitName("mouseover")
-		if not realm then 
+		if not realm then
 			realm = GetRealmName()
-		end; 
+		end;
 		if name and Authors[name] then
 			if Authors[name] == realm then
 				GameTooltip:AddLine("AtlasLoot Author |TInterface\\AddOns\\AtlasLoot\\Images\\gold:0|t", 0, 1, 0 )

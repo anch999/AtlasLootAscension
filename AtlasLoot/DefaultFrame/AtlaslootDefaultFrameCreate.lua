@@ -1,11 +1,12 @@
 local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot");
-    
+
     --Main AtlasLoot Frame
 local mainframe = CreateFrame("FRAME", "AtlasLootDefaultFrame", UIParent, nil);
    mainframe:SetPoint("CENTER",0,0);
    mainframe:SetSize(880,690);
    mainframe:EnableMouse(true);
    mainframe:SetMovable(1);
+   mainframe:SetFrameStrata("HIGH");
    mainframe:SetBackdropColor(0.75,0,0,0.75);
    mainframe:RegisterForDrag("LeftButton");
    mainframe:SetMovable(true);
@@ -20,7 +21,6 @@ local mainframe = CreateFrame("FRAME", "AtlasLootDefaultFrame", UIParent, nil);
        titleSize = 32,
    });
    mainframe:SetScript("OnShow", function()
-    local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot");
     getglobal("AtlasLootDefaultFrame_Notice"):SetText(AL["This is a loot browser only.  To view maps as well, install either Atlas or Alphamap."]);
     AtlasLootDefaultFrame_OnShow();
     end);
@@ -71,7 +71,7 @@ local optionsbtn = CreateFrame("Button", "AtlasLootDefaultFrame_Options", AtlasL
 
     --Moduel Menu Button
 local menubtn = CreateFrame("Button", "AtlasLootDefaultFrame_Menu", AtlasLootDefaultFrame, "OptionsButtonTemplate");
-    menubtn:SetSize(179,25);
+    menubtn:SetSize(174,25);
     menubtn:SetPoint("TOPLEFT", AtlasLootDefaultFrame, "TOPLEFT",38,-55);
     menubtn.Lable = menubtn:CreateFontString("AtlasLootDefaultFrame_SelectedCategory", "OVERLAY","GameFontNormal")
     menubtn.Lable:SetPoint("TOP",menubtn,"BOTTOM",0,37);
@@ -91,8 +91,8 @@ local menubtn = CreateFrame("Button", "AtlasLootDefaultFrame_Menu", AtlasLootDef
 
     --SubMenu Button
 local submenubtn = CreateFrame("Button", "AtlasLootDefaultFrame_SubMenu", AtlasLootDefaultFrame, "OptionsButtonTemplate");
-    submenubtn:SetSize(179,25);
-    submenubtn:SetPoint("LEFT", "AtlasLootDefaultFrame_Menu", "RIGHT",5,0);
+    submenubtn:SetSize(200,25);
+    submenubtn:SetPoint("LEFT", "AtlasLootDefaultFrame_Menu", "RIGHT",0,0);
     submenubtn.Lable = submenubtn:CreateFontString("AtlasLootDefaultFrame_SelectedTable", "OVERLAY","GameFontNormal")
     submenubtn.Lable:SetPoint("TOP",submenubtn,"BOTTOM",0,37);
     submenubtn.Lable:SetText("Select Subcategory");
@@ -111,8 +111,8 @@ local submenubtn = CreateFrame("Button", "AtlasLootDefaultFrame_SubMenu", AtlasL
 
     --Expansion Menu Button
 local expansionmenubtn = CreateFrame("Button", "AtlasLootDefaultFrame_ExpansionMenu", AtlasLootDefaultFrame, "OptionsButtonTemplate");
-    expansionmenubtn:SetSize(179,25);
-    expansionmenubtn:SetPoint("LEFT", "AtlasLootDefaultFrame_SubMenu", "RIGHT",5,0);
+    expansionmenubtn:SetSize(174,25);
+    expansionmenubtn:SetPoint("LEFT", "AtlasLootDefaultFrame_SubMenu", "RIGHT",0,0);
     expansionmenubtn:SetText(AtlasLoot_ExpansionMenu[GetAccountExpansionLevel()+1][1]);
     expansionmenubtn.Lable = expansionmenubtn:CreateFontString("AtlasLootDefaultFrame_SelectedTable2", "OVERLAY","GameFontNormal")
     expansionmenubtn.Lable:SetPoint("TOP",expansionmenubtn,"BOTTOM",0,37);
@@ -145,7 +145,6 @@ local wishbtn = CreateFrame("Button", "AtlasLootDefaultFrameWishListButton", Atl
         wishbtn:SetSize(105,20);
         wishbtn:SetScript("OnClick", function(self)AtlasLoot_ShowWishListDropDown("","","","","",self,true) end);
         wishbtn:SetScript("OnShow", function(self)
-            local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot");
             self:SetText(AL["Wishlist"]);
             self:SetFrameLevel( (self:GetParent()):GetFrameLevel() + 1 );
         end);
@@ -167,14 +166,15 @@ local function presetcreate(preset,num)
         end
     end);
     preset:SetScript("OnClick", function()
-        if AtlasLoot_IsLootTableAvailable(AtlasLootCharDB["QuickLooks"][num][1]) then
+        if AtlasLoot_IsLootTableAvailable(AtlasLootCharDB["QuickLooks"][num][6]) then
             pFrame = { "TOPLEFT", "AtlasLootDefaultFrame_LootBackground", "TOPLEFT", "2", "-2" };
+            ATLASLOOT_LASTMODULE = AtlasLootCharDB["QuickLooks"][num][6];
+            ATLASLOOT_CURRENTTABLE = AtlasLootCharDB["QuickLooks"][num][7];
             AtlasLootDefaultFrame_SubTableScrollFrameUpdate(AtlasLootCharDB["QuickLooks"][num][1], AtlasLootCharDB["QuickLooks"][num][2], pFrame, AtlasLootCharDB["QuickLooks"][num][5])
             AtlasLoot_ShowItemsFrame(AtlasLootCharDB["QuickLooks"][num][1], AtlasLootCharDB["QuickLooks"][num][2], AtlasLootCharDB["QuickLooks"][num][3], pFrame, AtlasLootCharDB["QuickLooks"][num][5]);
         end
     end);
     preset:SetScript("OnShow", function(self)
-        local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot");
             self:SetText(AL["QuickLook"].." "..num);
         self:SetFrameLevel( (self:GetParent()):GetFrameLevel() + 1 );
             if ((not AtlasLootCharDB["QuickLooks"][num]) or (not AtlasLootCharDB["QuickLooks"][num][1])) or (AtlasLootCharDB["QuickLooks"][num][1]==nil) then
@@ -218,7 +218,6 @@ local searchbtn = CreateFrame("Button","AtlasLootDefaultFrameSearchButton",Atlas
     searchbtn:SetSize(69,32);
     searchbtn:SetPoint("LEFT","AtlasLootDefaultFrameSearchBox","RIGHT",2,0);
     searchbtn:SetScript("OnShow", function(self)
-        local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot");
 		self:SetText(AL["Search"]);
 		self:SetFrameLevel( (self:GetParent()):GetFrameLevel() + 1 );
     end);
@@ -243,7 +242,6 @@ local searchclear = CreateFrame("Button","AtlasLootDefaultFrameSearchClearButton
     searchclear:SetSize(58,32);
     searchclear:SetPoint("LEFT",AtlasLootDefaultFrameSearchOptionsButton,"RIGHT",-2,0);
     searchclear:SetScript("OnShow", function(self)
-        local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot");
         self:SetText(AL["Clear"]);
         self:SetFrameLevel( (self:GetParent()):GetFrameLevel() + 1 );
     end);
@@ -256,8 +254,7 @@ local searchclear = CreateFrame("Button","AtlasLootDefaultFrameSearchClearButton
 local lastresult = CreateFrame("Button","AtlasLootDefaultFrameLastResultButton",AtlasLootDefaultFrameSearchBox,"UIPanelButtonTemplate2");
     lastresult:SetSize(100,32);
     lastresult:SetPoint("LEFT",AtlasLootDefaultFrameSearchClearButton,"RIGHT",1,0);
-    lastresult:SetScript("OnShow", function(self)
-        local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot");
+    lastresult:SetScript("OnShow", function(self) 
         self:SetText(AL["Last Result"]);
         self:SetFrameLevel( (self:GetParent()):GetFrameLevel() + 1 );
     end);
@@ -267,8 +264,7 @@ local lastresult = CreateFrame("Button","AtlasLootDefaultFrameLastResultButton",
 local advSearch = CreateFrame("Button","AtlasLootDefaultFrameAdvancedSearchButton", AtlasLootDefaultFrame,"UIPanelButtonTemplate2");
     advSearch:SetSize(95,32);
     advSearch:SetPoint("LEFT",AtlasLootDefaultFrameLastResultButton,"RIGHT",2);
-    advSearch:SetScript("OnShow", function(self)
-        local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot");
+    advSearch:SetScript("OnShow", function(self) 
         self:SetText("Advanced");
         self:SetFrameLevel( (self:GetParent()):GetFrameLevel() + 1 );
     end)
@@ -346,7 +342,7 @@ local rows = setmetatable({}, { __index = function(t, i)
     row:SetCheckedTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD");
     row:SetScript("OnClick", function()
         ItemindexID = row.itemIndex;
-        AtlasLoot_ShowItemsFrame(AtlasLootItemsFrame.refreshOri[1], AtlasLootItemsFrame.refreshOri[2], AtlasLootItemsFrame.refreshOri[3], AtlasLootItemsFrame.refreshOri[4], AtlasLootItemsFrame.refreshOri[5]);
+        AtlasLoot_ShowItemsFrame(AtlasLootItemsFrame.refresh[1], AtlasLootItemsFrame.refresh[2], AtlasLootItemsFrame.refresh[3], AtlasLootItemsFrame.refresh[4], AtlasLootItemsFrame.refresh[5]);
         AtlasLootDefaultFrame_ScrollFrameUpdate();
     end)
 	if i == 1 then
@@ -372,7 +368,7 @@ local subtableFrame = CreateFrame("Frame", "Atlasloot_SubTableFrame", AtlasLootD
         edgeFile = "Interface\\Tooltips\\UI-Tooltip-Border", edgeSize = 16,
         insets = { left = 4, right = 4, top = 4, bottom = 4 },
     });
-  
+
 function AtlasLootDefaultFrame_SubTableScrollFrameUpdate(tablename, dataSource, pFrame, currenttablenum)
     if dataSource ~= nil then
         local maxValue = AtlasLoot_GetNumOfRows(dataSource[tablename]);
@@ -408,13 +404,13 @@ local scrollSlider2 = CreateFrame("ScrollFrame","AtlasLootDefaultFrameSubTableSc
         self.offset = math.floor(offset / ROW_HEIGHT + 0.5)
             AtlasLootDefaultFrame_SubTableScrollFrameUpdate(subtableFrame.tablename);
     end)
-    
+
     scrollSlider2:SetScript("OnShow", function()
         AtlasLootDefaultFrame_SubTableScrollFrameUpdate(subtableFrame.tablename);
     end)
-    
+
     subtableFrame.scrollBar = scrollSlider2
-    
+
 local rows2 = setmetatable({}, { __index = function(t, i)
     local row = CreateFrame("CheckButton", "$parentRow"..i, subtableFrame)
     row:SetSize(150, ROW_HEIGHT)
@@ -423,7 +419,6 @@ local rows2 = setmetatable({}, { __index = function(t, i)
     row:SetScript("OnClick", function()
         AtlasLootDefaultFrame_SubTableScrollFrameUpdate(row.tablename, row.dataSource, row.pFrame, row.tablenum);
         AtlasLoot_ShowItemsFrame(row.tablename, row.dataSource, row.dataSource[row.tablename][row.tablenum].Name, row.pFrame, row.tablenum);
-        AtlasLoot.db.profile.LastBoss = {row.tablename, row.dataSource, row.dataSource[row.tablename][row.tablenum].Name, row.pFrame, row.tablenum};
     end)
     if i == 1 then
         row:SetPoint("TOPLEFT", subtableFrame, 8, -8)
@@ -434,5 +429,5 @@ local rows2 = setmetatable({}, { __index = function(t, i)
     rawset(t, i, row)
     return row
 end })
-    
+
 subtableFrame.rows = rows2
