@@ -342,7 +342,9 @@ local rows = setmetatable({}, { __index = function(t, i)
     row:SetCheckedTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD");
     row:SetScript("OnClick", function()
         ItemindexID = row.itemIndex;
+        if not AtlasLootAdvancedSearch:IsVisible() then
         AtlasLoot_ShowItemsFrame(AtlasLootItemsFrame.refresh[1], AtlasLootItemsFrame.refresh[2], AtlasLootItemsFrame.refresh[3], AtlasLootItemsFrame.refresh[4], AtlasLootItemsFrame.refresh[5]);
+        end
         AtlasLootDefaultFrame_ScrollFrameUpdate();
     end)
 	if i == 1 then

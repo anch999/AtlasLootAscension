@@ -532,7 +532,7 @@ function Atlasloot_CreateToken(dataID)
 						newTable = rawset(id, 5, v.Name);
 						table.insert(newData[1],newTable);
 					end
-					AtlasLoot.refreshTimer = AtlasLoot:ScheduleTimer("callShowloot", .1);
+					AtlasLoot.refreshTimer = AtlasLoot:ScheduleTimer("callShowloot", .5);
 				end)
 			end
 		end
@@ -615,10 +615,6 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame, tablenum)
 
 			if(toShow) then
 				IDfound = AL_FindId(dataSource[dataID][tablenum][i][2], ItemindexID) or dataSource[dataID][tablenum][i][2];
-					if ((dataID == "SearchResult") or (dataID == "WishList")) then
-						IDfound = AL_FindId(dataSource[dataID][tablenum][i][2], dataSource[dataID][tablenum][i][AtlasLoot_Difficulty.DIF_SEARCH]) or dataSource[dataID][tablenum][i][2];
-					end
-
 				if string.sub(IDfound, 1, 1) == "s" then
 					isItem = false;
 				else
@@ -626,9 +622,6 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame, tablenum)
 				end
 
 				if isItem then
-					if ItemindexID == "Bloodforged" then
-						IDfound = "60"..dataSource[dataID][tablenum][i][2];
-					else
 					--Sets ItemindexID to normal(2) if it is nil for min/max difficulties.
 						if not tonumber(ItemindexID) then ItemindexID = AtlasLoot_Difficulty.Normal end;
 
@@ -638,10 +631,10 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame, tablenum)
 						end
 							--If something was found in itemID database show that if not show default table item
 							IDfound = AL_FindId(dataSource[dataID][tablenum][i][2], ItemindexID) or dataSource[dataID][tablenum][i][2];
-							if ((dataID == "SearchResult") or (dataID == "WishList")) then
-								IDfound = AL_FindId(dataSource[dataID][tablenum][i][2], dataSource[dataID][tablenum][i][AtlasLoot_Difficulty.DIF_SEARCH]) or dataSource[dataID][tablenum][i][2];
+
+							if ItemindexID ~= "" and dataID == "SearchResult" then
+								IDfound = AL_FindId(dataSource[dataID][tablenum][i][9], ItemindexID) or dataSource[dataID][tablenum][i][2];
 							end
-					end
 
 					itemName, itemLink, itemQuality, itemLevel, itemMinLevel, itemType, itemSubType, itemCount, itemEquipLoc, itemTexture = GetItemInfo(IDfound);
 					--If the client has the name of the item in cache, use that instead.
@@ -1145,7 +1138,7 @@ function AtlasLoot_QueryLootPage()
 				if item:GetInfo() then
 					AtlasLootTooltip:SetHyperlink("item:"..itemId..":0:0:0:0:0:0:0");
 				end
-				AtlasLoot.refreshTimer = AtlasLoot:ScheduleTimer("callShowloot", .1);
+				AtlasLoot.refreshTimer = AtlasLoot:ScheduleTimer("callShowloot", .5);
 			end)
         end
     end

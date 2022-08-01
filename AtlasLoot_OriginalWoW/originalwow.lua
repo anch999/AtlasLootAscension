@@ -4432,7 +4432,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 			{ 8, 16803, "", "=q4=Felheart Slippers", "=ds="..BabbleBoss["Shazzrah"], "", "15.28%"};
 		};
 		{
-			Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"];
+			Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"].." - Tank";
 			{ 1, 16866, "", "=q4=Helm of Might", "=ds="..BabbleBoss["Garr"], "", "11.39%"};
 			{ 2, 16868, "", "=q4=Pauldrons of Might", "=ds="..BabbleBoss["Sulfuron Harbinger"], "", "21.14%"};
 			{ 3, 16865, "", "=q4=Breastplate of Might", "=ds="..BabbleBoss["Golemagg the Incinerator"], "", "15.28%"};
@@ -4443,7 +4443,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 			{ 8, 16862, "", "=q4=Sabatons of Might", "=ds="..BabbleBoss["Gehennas"], "", "14.48%"};
 		};
 		{
-			Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"];
+			Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"].." - DPS";
 			{ 1, 10480, "", "=q4=Faceguard of Might", "=ds="..BabbleBoss["Garr"], ""};
 			{ 2, 10481, "", "=q4=Shoulderpads of Might", "=ds="..BabbleBoss["Sulfuron Harbinger"], ""};
 			{ 3, 10482, "", "=q4=Chesttplate of Might", "=ds="..BabbleBoss["Golemagg the Incinerator"], ""};
@@ -4548,7 +4548,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 			{ 8, 16927, "", "=q4=Nemesis Boots", "=ds="..BabbleBoss["Broodlord Lashlayer"], "", "15.32%"};
 		};
 		{
-			Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"];
+			Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"].." - Tank";
 			{ 1, 16963, "", "=q4=Helm of Wrath", "=ds="..BabbleBoss["Nefarian"], "", "13.65%"};
 			{ 2, 16961, "", "=q4=Pauldrons of Wrath", "=ds="..BabbleBoss["Chromaggus"], "", "16.83%"};
 			{ 3, 16966, "", "=q4=Breastplate of Wrath", "=ds="..BabbleBoss["Nefarian"], "", "15.06%"};
@@ -4559,7 +4559,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 			{ 8, 16965, "", "=q4=Sabatons of Wrath", "=ds="..BabbleBoss["Broodlord Lashlayer"], "", "16.84%"};
 		};
 		{
-			Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"];
+			Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"].." - DPS";
 			{ 1, 10904, "", "=q4=Faceguard of Wrath", "=ds="..BabbleBoss["Nefarian"], "", "13.65%"};
 			{ 2, 10902, "", "=q4=Shoulderpads of Wrath", "=ds="..BabbleBoss["Chromaggus"], "", "16.83%"};
 			{ 3, 10907, "", "=q4=Chestplate of Wrath", "=ds="..BabbleBoss["Nefarian"], "", "15.06%"};
@@ -4675,7 +4675,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 			{ 9, 23063, "", "=q4=Plagueheart Ring", "=ds="};
 		};
 		{
-			Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"];
+			Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"].." - Tank";
 			{ 1, 22418, "", "=q4=Dreadnaught Helmet", "=ds="};
 			{ 2, 22419, "", "=q4=Dreadnaught Pauldrons", "=ds="};
 			{ 3, 22416, "", "=q4=Dreadnaught Breastplate", "=ds="};
@@ -4687,7 +4687,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 			{ 9, 23059, "", "=q4=Ring of the Dreadnaught", "=ds="};
 		};
 		{
-			Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"];
+			Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"].." - DPS";
 			{ 1, 10490, "", "=q4=Dreadborne Helmet", "=ds="};
 			{ 2, 10491, "", "=q4=Dreadborne Pauldrons", "=ds="};
 			{ 3, 10488, "", "=q4=Dreadborne Breastplate", "=ds="};
@@ -5059,7 +5059,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 			{ 5, 21338, "", "=q4=Doomcaller's Footwraps", ""};
 		};
 		{
-			Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"];
+			Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"].." - Tank";
 			{ 1, 21331, "", "=q4=Conqueror's Breastplate", ""};
 			{ 2, 21329, "", "=q4=Conqueror's Crown", ""};
 			{ 3, 21332, "", "=q4=Conqueror's Legguards", ""};
@@ -5067,7 +5067,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 			{ 5, 21333, "", "=q4=Conqueror's Greaves", ""};
 		};
 		{
-			Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"];
+			Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"].." - DPS";
 			{ 1, 10912, "", "=q4=Conqueror's Chestplate", ""};
 			{ 2, 10910, "", "=q4=Conqueror's Headguard", ""};
 			{ 3, 10913, "", "=q4=Conqueror's Platelegs", ""};

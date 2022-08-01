@@ -667,17 +667,17 @@ local function DoSearch(searchText)
     AtlasLootCharDB.LastSearchedText = searchText;
     local count = 1;
     local tablenum = 1;
-    local function AddItemToSearchResult(itemId, itemType, itemName, dataID)
+    local function AddItemToSearchResult(itemId, itemType, itemName, dataID, itemIdBackup)
         local lootPage = AtlasLoot_Data[dataID].Name or "Argh!";
         if AtlasLootCharDB["SearchResult"][tablenum] == nil then
             AtlasLootCharDB["SearchResult"][tablenum] = {Name = "Page "..tablenum};
         end
         if count == 30 then
-            table.insert(AtlasLootCharDB["SearchResult"][tablenum], {count, itemId, itemType, itemName, lootPage, "", "", dataID .. "|" .. "\"\""});
+            table.insert(AtlasLootCharDB["SearchResult"][tablenum], {count, itemId, itemType, itemName, lootPage, "", "", dataID .. "|" .. "\"\"", itemIdBackup});
             tablenum = tablenum + 1
             count = 1;
         else
-            table.insert(AtlasLootCharDB["SearchResult"][tablenum], {count, itemId, itemType, itemName, lootPage, "", "", dataID .. "|" .. "\"\""});
+            table.insert(AtlasLootCharDB["SearchResult"][tablenum], {count, itemId, itemType, itemName, lootPage, "", "", dataID .. "|" .. "\"\"", itemIdBackup});
             count = count + 1;
         end
     end
@@ -692,21 +692,23 @@ local function DoSearch(searchText)
                 if type(v) == "table" then
                     local _, itemId, itemType, atlasName = unpack(v)
                     if type(itemId) == "number" and itemId > 0 then
+                        local itemIdBackup = itemId;
+                        itemId = AL_FindId(itemId, ItemindexID) or 2
                         local itemDetails = {GetItemDetails(itemId, atlasName)};
                         --itemDetails[8] = ItemindexID;
 
                         if #searchTerms == 1 and searchTerms[1].name then
                             if nameMatches(atlasName, searchTerms[1].name) then
-                                AddItemToSearchResult(itemId, itemType, atlasName, dataID);
+                                AddItemToSearchResult(itemId, itemType, atlasName, dataID, itemIdBackup);
                             end
                         elseif ItemMatchesAllTerms(searchTerms, itemDetails) then
-                            AddItemToSearchResult(itemId, itemType, atlasName, dataID);
+                            AddItemToSearchResult(itemId, itemType, atlasName, dataID, itemIdBackup);
                         end
                     elseif not equipableFilterOn and itemId and itemId ~= "" and string.sub(itemId, 1, 1) == "s" then
                         local spellName = GetSpellName(itemId, atlasName)
                         if nameMatches(spellName, searchText) then
                             spellName = string.sub(atlasName, 1, 4) .. spellName;
-                            AddItemToSearchResult(itemId, itemType, spellName, dataID)
+                            AddItemToSearchResult(itemId, itemType, spellName, dataID, itemIdBackup)
                         end
                     end
                 end

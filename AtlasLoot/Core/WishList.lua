@@ -55,11 +55,11 @@ Displays the WishList
 ]]
 function AtlasLoot_ShowWishList()
 	if lastWishListtyp == "addOwn" then
-		AtlasLoot_ShowItemsFrame("WishList", "WishListPage"..currentPage, AtlasLootWishList["Own"][playerName][lastWishListarg2]["info"][1], pFrame);
+		AtlasLoot_ShowItemsFrame("WishList", AtlasLootWishList, AtlasLootWishList["Own"][playerName][lastWishListarg2]["info"][1], pFrame, 1);
 	elseif lastWishListtyp == "addOther" then
-		AtlasLoot_ShowItemsFrame("WishList", "WishListPage"..currentPage, AtlasLootWishList["Own"][lastWishListarg2][lastWishListarg3]["info"][1], pFrame);
+		AtlasLoot_ShowItemsFrame("WishList", AtlasLootWishList, AtlasLootWishList["Own"][lastWishListarg2][lastWishListarg3]["info"][1], pFrame, 1);
 	elseif lastWishListtyp == "addShared" then
-		AtlasLoot_ShowItemsFrame("WishList", "WishListPage"..currentPage, AtlasLootWishList["Shared"][lastWishListarg2][lastWishListarg3]["info"][1], pFrame);
+		AtlasLoot_ShowItemsFrame("WishList", AtlasLootWishList, AtlasLootWishList["Shared"][lastWishListarg2][lastWishListarg3]["info"][1], pFrame, 1);
 	end
 end
 
