@@ -417,8 +417,9 @@ local rows2 = setmetatable({}, { __index = function(t, i)
     row:SetNormalFontObject(GameFontHighlightLeft)
     row:SetCheckedTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD");
     row:SetScript("OnClick", function()
-        AtlasLootDefaultFrame_SubTableScrollFrameUpdate(row.tablename, row.dataSource, row.pFrame, row.tablenum);
-        AtlasLoot_ShowItemsFrame(row.tablename, row.dataSource, row.dataSource[row.tablename][row.tablenum].Name, row.pFrame, row.tablenum);
+        pFrame = { "TOPLEFT", "AtlasLootDefaultFrame_LootBackground", "TOPLEFT", "2", "-2" };
+        AtlasLootDefaultFrame_SubTableScrollFrameUpdate(row.tablename, row.dataSource, pFrame, row.tablenum);
+        AtlasLoot_ShowItemsFrame(row.tablename, row.dataSource, row.dataSource[row.tablename][row.tablenum].Name, pFrame, row.tablenum);
     end)
     if i == 1 then
         row:SetPoint("TOPLEFT", subtableFrame, 8, -8)

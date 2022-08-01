@@ -663,12 +663,23 @@ local function GetSpellName(itemId, atlasName)
 end
 
 local function DoSearch(searchText)
-    AtlasLootCharDB["SearchResult"] = {};
+    AtlasLootCharDB["SearchResult"] = {Name = "Search Result" , Type = "Search", Back = true};
     AtlasLootCharDB.LastSearchedText = searchText;
-
+    local count = 1;
+    local tablenum = 1;
     local function AddItemToSearchResult(itemId, itemType, itemName, dataID)
-        local lootPage = AtlasLoot_TableNames[dataID] and AtlasLoot_TableNames[dataID][1] or "Argh!";
-        table.insert(AtlasLootCharDB["SearchResult"], {0, itemId, itemType, itemName, lootPage, "", "", dataID .. "|" .. "\"\""});
+        local lootPage = AtlasLoot_Data[dataID].Name or "Argh!";
+        if AtlasLootCharDB["SearchResult"][tablenum] == nil then
+            AtlasLootCharDB["SearchResult"][tablenum] = {Name = "Page "..tablenum};
+        end
+        if count == 30 then
+            table.insert(AtlasLootCharDB["SearchResult"][tablenum], {count, itemId, itemType, itemName, lootPage, "", "", dataID .. "|" .. "\"\""});
+            tablenum = tablenum + 1
+            count = 1;
+        else
+            table.insert(AtlasLootCharDB["SearchResult"][tablenum], {count, itemId, itemType, itemName, lootPage, "", "", dataID .. "|" .. "\"\""});
+            count = count + 1;
+        end
     end
 
     local searchTerms = ParseQuery(searchText);
@@ -676,30 +687,27 @@ local function DoSearch(searchText)
     local difficulty = TermsContainDifficulty(searchTerms);
 
     for dataID, data in pairs(AtlasLoot_Data) do
-        for _, datatable in pairs(data) do
-            for _, v in ipairs(datatable) do
-                local _, itemId, itemType, atlasName = unpack(v)
+        for _, t in ipairs(data) do
+            for _, v in ipairs(t) do
+                if type(v) == "table" then
+                    local _, itemId, itemType, atlasName = unpack(v)
+                    if type(itemId) == "number" and itemId > 0 then
+                        local itemDetails = {GetItemDetails(itemId, atlasName)};
+                        --itemDetails[8] = ItemindexID;
 
-                if type(itemId) == "number" and itemId > 0 then
-                    if difficulty ~= 2 then
-                            itemId = AL_FindId(itemId, difficulty) or itemId;
-                    end
-
-                    local itemDetails = {GetItemDetails(itemId, atlasName)};
-                    itemDetails[8] = difficulty;
-
-                    if #searchTerms == 1 and searchTerms[1].name then
-                        if nameMatches(atlasName, searchTerms[1].name) then
+                        if #searchTerms == 1 and searchTerms[1].name then
+                            if nameMatches(atlasName, searchTerms[1].name) then
+                                AddItemToSearchResult(itemId, itemType, atlasName, dataID);
+                            end
+                        elseif ItemMatchesAllTerms(searchTerms, itemDetails) then
                             AddItemToSearchResult(itemId, itemType, atlasName, dataID);
                         end
-                    elseif ItemMatchesAllTerms(searchTerms, itemDetails) then
-                        AddItemToSearchResult(itemId, itemType, atlasName, dataID);
-                    end
-                elseif not equipableFilterOn and itemId and itemId ~= "" and string.sub(itemId, 1, 1) == "s" then
-                    local spellName = GetSpellName(itemId, atlasName)
-                    if nameMatches(spellName, searchText) then
-                        spellName = string.sub(atlasName, 1, 4) .. spellName;
-                        AddItemToSearchResult(itemId, itemType, spellName, dataID)
+                    elseif not equipableFilterOn and itemId and itemId ~= "" and string.sub(itemId, 1, 1) == "s" then
+                        local spellName = GetSpellName(itemId, atlasName)
+                        if nameMatches(spellName, searchText) then
+                            spellName = string.sub(atlasName, 1, 4) .. spellName;
+                            AddItemToSearchResult(itemId, itemType, spellName, dataID)
+                        end
                     end
                 end
             end
@@ -708,7 +716,8 @@ local function DoSearch(searchText)
 end
 
 function AtlasLoot:ShowSearchResult()
-    AtlasLoot_ShowItemsFrame("SearchResult", "SearchResultPage" .. currentPage, (AL["Search Result: %s"]):format(AtlasLootCharDB.LastSearchedText or ""), pFrame);
+    AtlasLoot_ShowItemsFrame("SearchResult", AtlasLootCharDB, (AL["Search Result: %s"]):format(AtlasLootCharDB.LastSearchedText or ""), pFrame, 1);
+    AtlasLootDefaultFrame_SubTableScrollFrameUpdate("SearchResult", AtlasLootCharDB, pFrame, 1);
 end
 
 function AtlasLoot:Search(Text)
@@ -759,9 +768,9 @@ You might also have to query the server for item informations to load them into 
         end
         DEFAULT_CHAT_FRAME:AddMessage(RED .. AL["AtlasLoot"] .. ": " .. WHITE .. AL["No match found for"] .. " \"" .. Text .. "\"." .. itemFilterErrorMessage);
     else
-        currentPage = 1;
-        SearchResult = AtlasLoot_CategorizeWishList(AtlasLootCharDB["SearchResult"]);
-        AtlasLoot_ShowItemsFrame("SearchResult", "SearchResultPage1", (AL["Search Result: %s"]):format(AtlasLootCharDB.LastSearchedText or ""), pFrame);
+        --SearchResult = AtlasLoot_CategorizeWishList(AtlasLootCharDB["SearchResult"]);
+        AtlasLoot_ShowItemsFrame("SearchResult", AtlasLootCharDB, (AL["Search Result: %s"]):format(AtlasLootCharDB.LastSearchedText or ""), pFrame, 1);
+        AtlasLootDefaultFrame_SubTableScrollFrameUpdate("SearchResult", AtlasLootCharDB, pFrame, 1);
     end
 end
 

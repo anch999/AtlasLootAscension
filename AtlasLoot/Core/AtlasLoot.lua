@@ -45,6 +45,7 @@ ATLASLOOT_PREVIEW_ATLAS = {"1.17.3", "1.17.2"};
 
 ATLASLOOT_POSITION = AL["Position:"];
 ATLASLOOT_DEBUGMESSAGES = false;
+ATLASLOOT_LOOP = false;
 
 --Standard indent to line text up with Atlas text
 ATLASLOOT_INDENT = "   ";
@@ -89,8 +90,8 @@ notPattern = false;
 Updated_dataID = "";
 
 --Search panel open and close save variables
---dataID, dataSource, boss, pFrame
-SearchPrevData = {"", "", "", ""};
+--dataID, dataSource, boss, pFrame, tablenumber
+SearchPrevData = {"", "", "", "", ""};
 
 AtlasLootCharDB={};
 
@@ -479,6 +480,12 @@ function AtlasLoot_OnLoad()
 	
 end
 
+--Used to refresh the page after its loaded all the items
+function AtlasLoot:callShowloot()
+	ATLASLOOT_LOOP = true;
+	AtlasLoot_ShowItemsFrame(AtlasLootItemsFrame.refresh[1], AtlasLootItemsFrame.refresh[2], AtlasLootItemsFrame.refresh[3], AtlasLootItemsFrame.refresh[4], AtlasLootItemsFrame.refresh[5])
+end
+
 function AtlasLoot_CleandataID(newID, listnum)
 	local cleanlist = {	[1] = {"CLASSIC", "TBC", "WRATH"} };
 	for i = 1, #cleanlist[listnum] do
@@ -512,23 +519,20 @@ function Atlasloot_CreateToken(dataID)
 		newData.Back = true;
 		newData[1] = {};
 		newData[1].Name = itemName;
-		--used to refresh the page after its loaded all the items
-		function AtlasLoot:callShowloot()
-			AtlasLoot_ShowItemsFrame(AtlasLootItemsFrame.refresh[1], AtlasLootItemsFrame.refresh[2], AtlasLootItemsFrame.refresh[3], AtlasLootItemsFrame.refresh[4], AtlasLootItemsFrame.refresh[5])
-		end
 		--Adds all the items to the new data set
 		--Uses a timer so that AtlasLoot:callShowloot() only fires once after all then items have been loaded
 		for i, v in ipairs(AtlasLoot_Data[dataID]) do
 			for t, id in ipairs(v) do
-				local itemID = id[2];
+				local itemID = AL_FindId(id[2], ItemindexID);
 				local item = Item:CreateFromID(itemID);
 				item:ContinueOnLoad(function(itemID)
 					AtlasLoot:CancelTimer(AtlasLoot.refreshTimer);
 					if itemType == select(9,GetItemInfo(itemID)) or itemType2 == select(9,GetItemInfo(itemID)) then
 						local newTable = rawset(id, 1, i);
+						newTable = rawset(id, 5, v.Name);
 						table.insert(newData[1],newTable);
 					end
-					AtlasLoot.refreshTimer = AtlasLoot:ScheduleTimer("callShowloot", .5);
+					AtlasLoot.refreshTimer = AtlasLoot:ScheduleTimer("callShowloot", .1);
 				end)
 			end
 		end
@@ -541,7 +545,6 @@ dataSource - Table in the database where the loot table is stored
 boss - Text string to use as a title for the loot page
 pFrame - Data structure describing how and where to anchor the item frame (more details, see the function AtlasLoot_SetItemInfoFrame)
 tablenum - Table number of the loot table being displayed
-This fuction is not normally called directly, it is usually invoked by AtlasLoot_ShowBossLoot.
 It is the workhorse of the mod and allows the loot tables to be displayed any way anywhere in any mod.
 ]]
 function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame, tablenum)
@@ -575,26 +578,13 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame, tablenum)
 	-- Hide the Filter Check-Box
 	AtlasLootFilterCheck:Hide();
 
-
-    dataSource_backup = dataSource;
-
-	if dataID == "SearchResult" or dataID == "WishList" then
-        ItemindexID = "";
-        dataSource = {};
-		-- Match the page number to display
-        wlPage = tonumber(dataSource_backup:match("%d+$"));
-        -- Aquiring items of the page
-        if dataID == "SearchResult" then
-            dataSource[dataID], wlPageMax = AtlasLoot:GetSearchResultPage(wlPage);
-        elseif dataID == "WishList" then
-            dataSource[dataID], wlPageMax = AtlasLoot_GetWishListPage(wlPage);
-        end
-        -- Make page number reasonable
-        if wlPage < 1 then wlPage = 1 end
-        if wlPage > wlPageMax then wlPage = wlPageMax end
-    else
-        dataSource = AtlasLoot_Data;
+	if dataID ~= "SearchResult" and dataID ~= "WishList" then
+		dataSource = AtlasLoot_Data;
     end
+
+
+	AtlasLoot_CurrentType = dataSource[dataID].Type or "";
+	AtlasLootDefaultFrame_ScrollFrameUpdate();
 
 	--Hide UI objects so that only needed ones are shown
 	for i = 1, 30, 1 do
@@ -604,14 +594,8 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame, tablenum)
         getglobal("AtlasLootItem_"..i).spellitemID = 0;
 	end
 
---[[     if AtlasLoot_TableNames[dataID] ~= nil and AtlasLoot_TableNames[dataID][2] == "Menu" then
-        AtlasLoot_GenerateAtlasMenu(dataID, pFrame);
-		lastType = dataSource[dataID].Type
-        return;
-    end ]]
 	
-	AtlasLoot_CurrentType = dataSource[dataID].Type or "";
-	AtlasLootDefaultFrame_ScrollFrameUpdate();
+	
 	
 	-- Create the loottable
 	if (dataID == "SearchResult") or (dataID == "WishList") or dataSource[dataID][tablenum] then
@@ -809,10 +793,10 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame, tablenum)
             end
 		end
 
-        AtlasLootItemsFrame.refresh = {dataID, dataSource_backup, boss, pFrame, tablenum};
-		if dataID ~= "FilterList" and dataSource[dataID].Back ~= true then
-			AtlasLootItemsFrame.refreshOri = {dataID, dataSource_backup, boss, pFrame, tablenum};
-			AtlasLoot.db.profile.LastBoss = {dataID, dataSource_backup, boss, pFrame, tablenum, ATLASLOOT_LASTMODULE, ATLASLOOT_CURRENTTABLE};
+        AtlasLootItemsFrame.refresh = {dataID, dataSource, boss, pFrame, tablenum};
+		if dataID ~= "WishList" and dataID ~= "SearchResult" and dataID ~= "FilterList" and dataSource[dataID].Back ~= true then
+			AtlasLootItemsFrame.refreshOri = {dataID, dataSource, boss, pFrame, tablenum};
+			AtlasLoot.db.profile.LastBoss = {dataID, dataSource, boss, pFrame, tablenum, ATLASLOOT_LASTMODULE, ATLASLOOT_CURRENTTABLE};
 		end
 
         --This is a valid QuickLook, so show the UI objects
@@ -846,36 +830,20 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame, tablenum)
 			AtlasLootDefaultFrame_SubMenu:SetText(dataSource[dataID].Name);
 		end
 
-		--Consult the button registry to determine what nav buttons are required
-		if dataID == "SearchResult" or dataID == "WishList" then
-			if wlPage < wlPageMax then
+			if tablenum + 1 ~= AtlasLoot_GetNumOfRows(dataSource[dataID]) then
 				getglobal("AtlasLootItemsFrame_NEXT"):Show();
-				getglobal("AtlasLootItemsFrame_NEXT").lootpage = dataID.."Page"..(wlPage + 1);
-			end
-			if wlPage > 1 then
-				getglobal("AtlasLootItemsFrame_PREV"):Show();
-				getglobal("AtlasLootItemsFrame_PREV").lootpage = dataID.."Page"..(wlPage - 1);
-			end
-		else
-			local tablebase = dataID;
-			if ATLASLOOT_FILTER_ENABLE and dataID == "FilterList" then
-				tablebase = AtlasLootItemsFrame.refreshOri[1];
-			end
-
-			if tablenum + 1 ~= AtlasLoot_GetNumOfRows(dataSource[tablebase]) then
-				getglobal("AtlasLootItemsFrame_NEXT"):Show();
-				getglobal("AtlasLootItemsFrame_NEXT").lootpage = tablebase;
+				getglobal("AtlasLootItemsFrame_NEXT").lootpage = dataID;
 				getglobal("AtlasLootItemsFrame_NEXT").tablenum = tablenum + 1;
 			end
 			if  tablenum -1 ~= 0 then
 				getglobal("AtlasLootItemsFrame_PREV"):Show();
-				getglobal("AtlasLootItemsFrame_PREV").lootpage = tablebase;
+				getglobal("AtlasLootItemsFrame_PREV").lootpage = dataID;
 				getglobal("AtlasLootItemsFrame_PREV").tablenum = tablenum - 1;
 			end
- 			if dataSource[tablebase].Back then
+ 			if dataSource[dataID].Back then
 				getglobal("AtlasLootItemsFrame_BACK"):Show();
 			end
-		end
+
 	end
 
 	--Anchor the item frame where it is supposed to be
@@ -884,7 +852,11 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame, tablenum)
 		AtlasLoot_HideNoUsableItems();
 	end
 
+	if ATLASLOOT_LOOP then
+		ATLASLOOT_LOOP = false;
+	else
 		AtlasLoot_QueryLootPage();
+	end
 
 end
 
@@ -972,6 +944,7 @@ Called when 'Back'Button is pressed and calls up the appropriate loot page
 ]]
 function AtlasLoot_BackButton_OnClick()
 	AtlasLoot_ShowItemsFrame(AtlasLootItemsFrame.refreshOri[1], AtlasLootItemsFrame.refreshOri[2], AtlasLootItemsFrame.refreshOri[3], AtlasLootItemsFrame.refreshOri[4], AtlasLootItemsFrame.refreshOri[5]);
+	AtlasLootDefaultFrame_SubTableScrollFrameUpdate(AtlasLootItemsFrame.refreshOri[1], AtlasLootItemsFrame.refreshOri[2], AtlasLootItemsFrame.refreshOri[3], AtlasLootItemsFrame.refreshOri[5]);
 end
 
 --[[
@@ -1168,9 +1141,11 @@ function AtlasLoot_QueryLootPage()
         if (queryitem) and (queryitem ~= nil) and (queryitem ~= "") and (queryitem ~= 0) and (string.sub(queryitem, 1, 1) ~= "s") then
 			local item = Item:CreateFromID(queryitem);
 			item:ContinueOnLoad(function(itemId)
+				AtlasLoot:CancelTimer(AtlasLoot.refreshTimer);
 				if item:GetInfo() then
 					AtlasLootTooltip:SetHyperlink("item:"..itemId..":0:0:0:0:0:0:0");
 				end
+				AtlasLoot.refreshTimer = AtlasLoot:ScheduleTimer("callShowloot", .1);
 			end)
         end
     end

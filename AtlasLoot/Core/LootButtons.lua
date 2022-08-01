@@ -260,8 +260,8 @@ function AtlasLootItem_OnClick(arg1)
             end
         elseif((AtlasLootItemsFrame.refresh[1] == "SearchResult" or AtlasLootItemsFrame.refresh[1] == "WishList") and this.sourcePage) then
             local dataID, dataSource = strsplit("|", this.sourcePage);
-            if(dataID and dataSource and AtlasLoot_IsLootTableAvailable(dataID)) then
-                AtlasLoot_ShowItemsFrame(dataID, dataSource, AtlasLoot_TableNames[dataID][1], AtlasLootItemsFrame.refresh[4]);
+            if(dataID and dataSource) then
+                AtlasLoot_ShowItemsFrame(dataID, dataSource, dataSource[dataID].Name, AtlasLootItemsFrame.refresh[4], 1);
             end
         elseif (arg1=="LeftButton") and this.sourcePage ~= nil then
             --Holds AtlasLoot_Lastboss so back button works

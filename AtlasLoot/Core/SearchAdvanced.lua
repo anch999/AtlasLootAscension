@@ -290,8 +290,6 @@ function AtlasLoot_AdvancedSearchShow()
         AdvSearchSubMenuEnabled = 1;
     end
 
-    AtlasLootServerQueryButton:Hide();
-
     -- Ditch the Quicklook selector
     AtlasLoot_QuickLooks:Hide();
     AtlasLootQuickLooksButton:Hide();
@@ -301,7 +299,6 @@ function AtlasLoot_AdvancedSearchShow()
 
     for i = 1, 30, 1 do
         getglobal("AtlasLootItem_" .. i .. "_Unsafe"):Hide();
-        getglobal("AtlasLootMenuItem_" .. i):Hide();
         getglobal("AtlasLootItem_" .. i):Hide();
         getglobal("AtlasLootItem_" .. i).itemID = 0;
         getglobal("AtlasLootItem_" .. i).spellitemID = 0;
@@ -314,22 +311,20 @@ function AtlasLoot_AdvancedSearchShow()
     AtlasLootAdvancedSearch:ClearAllPoints();
     AtlasLootAdvancedSearch:SetPoint(pFrame[1], pFrame[2], pFrame[3], pFrame[4], pFrame[5]);
     AtlasLootAdvancedSearch:Show();
+
+    AtlasLoot_CurrentType = "Search";
+	AtlasLootDefaultFrame_ScrollFrameUpdate();
+    AtlasLootDefaultFrame_SubTableScrollFrameUpdate("", "", "", "");
 end
 
 function AtlasLoot_AdvancedSearchClose()
     AtlasLootAdvancedSearch:Hide();
-    AtlasLootServerQueryButton:Show();
-
-    if AdvSearchSubMenuEnabled then
-        AtlasLootDefaultFrame_SubMenu:Enable();
-        AtlasLootDefaultFrame_SelectedTable:SetText(AdvSearchSubMenuText);
-    end
 
     AdvSearchSubMenuEnabled = 0;
     AdvSearchSubMenu2Enabled = 0;
 
     if (SearchPrevData[1] ~= "") then
-        AtlasLoot_ShowItemsFrame(SearchPrevData[1], SearchPrevData[2], SearchPrevData[3], SearchPrevData[4]);
+        AtlasLoot_ShowItemsFrame(SearchPrevData[1], SearchPrevData[2], SearchPrevData[3], SearchPrevData[4], SearchPrevData[5]);
     end
 end
 
