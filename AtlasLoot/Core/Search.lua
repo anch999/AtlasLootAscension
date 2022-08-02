@@ -419,24 +419,6 @@ local function IsItemTypeMatch(term, itemEquipType)
     return type == itemEquipType;
 end
 
-local function IsItemDifficulty(term, itemName)
-    if term.left ~= "dif" then
-        return
-    end
-
-    if term.relational ~= "=" then
-        ThrowQueryError("difficulty searches should be in the form \"dif=[difficulty]\"")
-    end
-
-    if tonumber(term.right) > (#AtlasLoot_Difficulty.MythicPlus + 4) then
-        ThrowQueryError("difficulty should be a number: 1 - %i", #AtlasLoot_Difficulty.MythicPlus + 4)
-    end
-
-    local _, hasDifficulty = AL_FindId(itemName, tonumber(term.right));
-
-    return hasDifficulty;
-end
-
 local function nameMatches(name, searchText)
     if AtlasLoot.db.profile.PartialMatching then
         return string.find(string.lower(name), string.lower(searchText));
@@ -575,17 +557,7 @@ local RelationalFunctions = {
     ["resarcane"] = {IsItemStatMatch, 7},
     ["resarc"] = {IsItemStatMatch, 7},
 
-    --["dif"] = {IsItemDifficulty, 8},
 }
-
-local function GetItemDetails(itemId, atlasName)
-    -- Name, Link, Quality(num), iLvl(num), minLvl(num), itemType(localized string), itemSubType(localized string), stackCount(num), itemEquipLoc(enum), texture(link to a local file), displayId(num)
-    local itemName, _, itemQuality, itemLvl, minLvl, _, itemSubType, _, itemEquipLoc = GetItemInfo(itemId);
-    if not itemName then
-        itemName = gsub(atlasName, "=q%d=", "")
-    end
-    return itemName, itemQuality, itemLvl, minLvl, itemEquipLoc, itemSubType, GetItemStats("item:" .. itemId)
-end
 
 local function ItemMatchesTerm(term, itemDetails)
     if term.relational then
@@ -611,18 +583,6 @@ local function ItemMatchesAllTerms(searchTerms, itemDetails)
     end
 
     return true and IsItemEquipableMatch(itemDetails[5])
-end
-
-local function TermsContainDifficulty(searchTerms)
-    for _, term in ipairs(searchTerms) do
-        if term.relational then
-            if term.left == "dif" then
-                return tonumber(term.right)
-            end
-        end
-    end
-
-    return AtlasLoot_Difficulty.Normal;
 end
 
 local function ParseTerm(termText)
@@ -667,24 +627,9 @@ local function DoSearch(searchText)
     AtlasLootCharDB.LastSearchedText = searchText;
     local count = 1;
     local tablenum = 1;
-    local function AddItemToSearchResult(itemId, itemType, itemName, dataID, itemIdBackup)
-        local lootPage = AtlasLoot_Data[dataID].Name or "Argh!";
-        if AtlasLootCharDB["SearchResult"][tablenum] == nil then
-            AtlasLootCharDB["SearchResult"][tablenum] = {Name = "Page "..tablenum};
-        end
-        if count == 30 then
-            table.insert(AtlasLootCharDB["SearchResult"][tablenum], {count, itemId, itemType, itemName, lootPage, "", "", dataID .. "|" .. "\"\"", itemIdBackup});
-            tablenum = tablenum + 1
-            count = 1;
-        else
-            table.insert(AtlasLootCharDB["SearchResult"][tablenum], {count, itemId, itemType, itemName, lootPage, "", "", dataID .. "|" .. "\"\"", itemIdBackup});
-            count = count + 1;
-        end
-    end
 
     local searchTerms = ParseQuery(searchText);
     local equipableFilterOn = AtlasLoot.db.profile.EquipableFilter;
-    local difficulty = TermsContainDifficulty(searchTerms);
 
     for dataID, data in pairs(AtlasLoot_Data) do
         for _, t in ipairs(data) do
@@ -693,17 +638,48 @@ local function DoSearch(searchText)
                     local _, itemId, itemType, atlasName = unpack(v)
                     if type(itemId) == "number" and itemId > 0 then
                         local itemIdBackup = itemId;
-                        itemId = AL_FindId(itemId, ItemindexID) or 2
-                        local itemDetails = {GetItemDetails(itemId, atlasName)};
+                        itemId = AL_FindId(itemId, ItemindexID) or 2;
                         --itemDetails[8] = ItemindexID;
+                        local item = Item:CreateFromID(itemId);
+                            item:ContinueOnLoad(function(itemId)
+                                local function GetItemDetails(itemId, atlasName)
+                                    -- Name, Link, Quality(num), iLvl(num), minLvl(num), itemType(localized string), itemSubType(localized string), stackCount(num), itemEquipLoc(enum), texture(link to a local file), displayId(num)
+                                    local itemName, _, itemQuality, itemLvl, minLvl, _, itemSubType, _, itemEquipLoc = GetItemInfo(itemId);
+                                    if not itemName then
+                                        itemName = gsub(atlasName, "=q%d=", "")
+                                    end
+                                    return itemName, itemQuality, itemLvl, minLvl, itemEquipLoc, itemSubType, GetItemStats("item:" .. itemId)
+                                end
 
-                        if #searchTerms == 1 and searchTerms[1].name then
-                            if nameMatches(atlasName, searchTerms[1].name) then
-                                AddItemToSearchResult(itemId, itemType, atlasName, dataID, itemIdBackup);
-                            end
-                        elseif ItemMatchesAllTerms(searchTerms, itemDetails) then
-                            AddItemToSearchResult(itemId, itemType, atlasName, dataID, itemIdBackup);
-                        end
+                                local itemDetails = {GetItemDetails(itemId, atlasName)};
+                                local function AddItemToSearchResult(itemId, itemType, itemName, dataID, itemIdBackup)
+                                    local lootPage = AtlasLoot_Data[dataID].Name or "Argh!";
+                                    if AtlasLootCharDB["SearchResult"][tablenum] == nil then
+                                        AtlasLootCharDB["SearchResult"][tablenum] = {Name = "Page "..tablenum};
+                                    end
+                                    if count == 30 then
+                                        table.insert(AtlasLootCharDB["SearchResult"][tablenum], {count, itemId, itemType, itemName, lootPage, "", "", dataID .. "|" .. "\"\"", itemIdBackup});
+                                        tablenum = tablenum + 1
+                                        count = 1;
+                                    else
+                                        table.insert(AtlasLootCharDB["SearchResult"][tablenum], {count, itemId, itemType, itemName, lootPage, "", "", dataID .. "|" .. "\"\"", itemIdBackup});
+                                        count = count + 1;
+                                    end
+                                end
+                                AtlasLoot:CancelTimer(AtlasLoot.refreshTimer);
+                                if item:GetInfo() then
+                                    if #searchTerms == 1 and searchTerms[1].name then
+                                        if nameMatches(atlasName, searchTerms[1].name) then
+                                            AddItemToSearchResult(itemId, itemType, atlasName, dataID, itemIdBackup);
+                                        end
+                                    elseif ItemMatchesAllTerms(searchTerms, itemDetails) then
+                                        AddItemToSearchResult(itemId, itemType, atlasName, dataID, itemIdBackup);
+                                    end
+                                end
+                                AtlasLoot.refreshTimer = AtlasLoot:ScheduleTimer("callShowloot", .5);
+                            end)
+
+
                     elseif not equipableFilterOn and itemId and itemId ~= "" and string.sub(itemId, 1, 1) == "s" then
                         local spellName = GetSpellName(itemId, atlasName)
                         if nameMatches(spellName, searchText) then
@@ -822,7 +798,7 @@ end
 function AtlasLoot:GetOriginalDataFromSearchResult(itemID)
     for i, v in ipairs(AtlasLootCharDB["SearchResult"]) do
         if v[2] == itemID then
-            AtlasLoot_ShowWishListDropDown(v[2], v[3], v[4], v[5], v[8], this, nil, v[AtlasLoot_Difficulty.DIF_SEARCH]);
+            AtlasLoot_ShowWishListDropDown(v[2], v[3], v[4], v[5], v[8], this, nil);
         end
     end
 end
