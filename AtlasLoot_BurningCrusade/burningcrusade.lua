@@ -3917,7 +3917,7 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
 			{ 21, 35410, "", "=q3=Savage Plate Legguards", "=ds=#f5#, =ec1=#r3#"};
 		};
 		{
-			Name = BabbleInventory["Cloth"].." - Alliance";
+			Name = BabbleInventory["Cloth"].." - "..BabbleFaction["Alliance"];
 			{ 1,0, "INV_BannerPVP_02", "=q6=#pvprep705_1#", "=ec1=#c5#"};
 			{ 2,28705, "", "=q3=Grand Marshal's Satin Hood"};
 			{ 3,28707, "", "=q3=Grand Marshal's Satin Mantle"};
@@ -3945,7 +3945,7 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
 
 		};
 		{
-			Name = BabbleInventory["Leather"].." - Alliance";
+			Name = BabbleInventory["Leather"].." - "..BabbleFaction["Alliance"];
 			{ 1,0, "INV_BannerPVP_02", "=q6=#pvprep701_1#", "=ec1=#c1#"};
 			{ 2,28619, "", "=q3=Grand Marshal's Dragonhide Helm"};
 			{ 3,28622, "", "=q3=Grand Marshal's Dragonhide Spaulders"};
@@ -3972,7 +3972,7 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
 			{ 28,28686, "", "=q3=Grand Marshal's Leather Legguards"};
 		};
 		{
-			Name = BabbleInventory["Mail"].." - Alliance";
+			Name = BabbleInventory["Mail"].." - "..BabbleFaction["Alliance"];
 			{ 1,0, "INV_BannerPVP_02", "=q6=#pvprep707_1#", "=ec1=#c7#"};
 			{ 2,28691, "", "=q3=Grand Marshal's Linked Helm"};
 			{ 3,28693, "", "=q3=Grand Marshal's Linked Spaulders"};
@@ -3999,7 +3999,7 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
 			{ 28,28616, "", "=q3=Grand Marshal's Chain Leggings"};
 		};
 		{
-			Name = BabbleInventory["Plate"].." - Alliance";
+			Name = BabbleInventory["Plate"].." - "..BabbleFaction["Alliance"];
 			{ 1,0, "INV_BannerPVP_02", "=q6=#pvprep704_1#", "=ec1=#c4#"};
 			{ 2,28711, "", "=q3=Grand Marshal's Scaled Helm"};
 			{ 3,28713, "", "=q3=Grand Marshal's Scaled Shoulders"};
@@ -4145,7 +4145,7 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
 	AtlasLoot_Data["PvP70Accessories"] = {
 			Name = "Off Set";
 		{
-			Name = "PvP Accessories - Alliance";
+			Name = "PvP Accessories - "..BabbleFaction["Alliance"];
 			{ 1, 28235, "", "=q3=Medallion of the Alliance", "=ds=", "8000 #alliance#"};
 			{ 2, 28237, "", "=q3=Medallion of the Alliance", "=ds=", "8000 #alliance#"};
 			{ 3, 28238, "", "=q3=Medallion of the Alliance", "=ds=", "8000 #alliance#"};

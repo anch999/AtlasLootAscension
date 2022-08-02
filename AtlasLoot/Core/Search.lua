@@ -827,32 +827,3 @@ function AtlasLoot:GetOriginalDataFromSearchResult(itemID)
     end
 end
 
--- Copied and modified from AtlasLoot_GetWishListPage
-function AtlasLoot:GetSearchResultPage(page)
-    if not SearchResult then
-        SearchResult = AtlasLoot_CategorizeWishList(AtlasLootCharDB["SearchResult"])
-    end
-    -- Calc for maximal pages
-    local pageMax = math.ceil(#SearchResult / 30);
-    if page < 1 then
-        page = 1
-    end
-    if page > pageMax then
-        page = pageMax
-    end
-    currentPage = page;
-
-    -- Table copy
-    local k = 1;
-    local result = {};
-    local start = (page - 1) * 30 + 1;
-    for i = start, start + 29 do
-        if not SearchResult[i] then
-            break
-        end
-        SearchResult[i][1] = k;
-        table.insert(result, SearchResult[i]);
-        k = k + 1;
-    end
-    return result, pageMax;
-end

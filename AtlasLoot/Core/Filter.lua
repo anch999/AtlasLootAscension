@@ -104,9 +104,9 @@ end
 	
 	
 function AtlasLoot_HideNoUsableItems()
-	local dataID = AtlasLootItemsFrame.refreshOri[1] 
-	local dataSource = AtlasLootItemsFrame.refreshOri[2] 
-	local boss = AtlasLootItemsFrame.refreshOri[3] 
+	local dataID = AtlasLootItemsFrame.refreshOri[1]
+	local dataSource = AtlasLootItemsFrame.refreshOri[2]
+	local boss = AtlasLootItemsFrame.refreshOri[3]
 	local pFrame = AtlasLootItemsFrame.refreshOri[4]
 	local tablenum = AtlasLootItemsFrame.refreshOri[5]
 	local tablebase = AtlasLoot_Data[dataID][tablenum]
@@ -116,7 +116,7 @@ function AtlasLoot_HideNoUsableItems()
 	local count = 0
 	local leatherworking = GetSpellInfo(2108)
 
-	AtlasLoot_Data["FilterList"] = { Type = dataSource[dataID].Type; [tablenum] = {}; };
+	AtlasLoot_Data["FilterList"] = { Type = dataSource[dataID].Type; Name = dataSource[dataID].Name;[tablenum] = {Name = dataSource[dataID][tablenum].Name}; };
 
 	for i=1,30 do
 		local info = getglobal("AtlasLootItem_"..i.."_Extra"):GetText()

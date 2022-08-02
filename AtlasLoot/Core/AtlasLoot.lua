@@ -818,20 +818,20 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame, tablenum)
 		getglobal("AtlasLootItemsFrame_NEXT"):Hide();
 		getglobal("AtlasLootItemsFrame_PREV"):Hide();
 
-		if dataID ~= "FilterList" then
 			AtlasLoot_BossName:SetText(dataSource[dataID][tablenum].Name);
 			AtlasLootDefaultFrame_SubMenu:SetText(dataSource[dataID].Name);
-		end
 
 			if tablenum + 1 ~= AtlasLoot_GetNumOfRows(dataSource[dataID]) then
 				getglobal("AtlasLootItemsFrame_NEXT"):Show();
-				getglobal("AtlasLootItemsFrame_NEXT").lootpage = dataID;
+				if dataID ~= "FilterList" then
 				getglobal("AtlasLootItemsFrame_NEXT").tablenum = tablenum + 1;
+				end
 			end
 			if  tablenum -1 ~= 0 then
 				getglobal("AtlasLootItemsFrame_PREV"):Show();
-				getglobal("AtlasLootItemsFrame_PREV").lootpage = dataID;
+				if dataID ~= "FilterList" then
 				getglobal("AtlasLootItemsFrame_PREV").tablenum = tablenum - 1;
+				end
 			end
  			if dataSource[dataID].Back then
 				getglobal("AtlasLootItemsFrame_BACK"):Show();
@@ -913,22 +913,10 @@ AtlasLoot_NavButton_OnClick:
 Called when <-, -> are pressed and calls up the appropriate loot page
 ]]
 function AtlasLoot_NavButton_OnClick()
-	local tabelname = this.lootpage;
 	local tablenum = this.tablenum;
+	AtlasLootDefaultFrame_SubTableScrollFrameUpdate(AtlasLootItemsFrame.refreshOri[1], AtlasLootItemsFrame.refreshOri[2],  AtlasLootItemsFrame.refreshOri[4], tablenum);
+	AtlasLoot_ShowItemsFrame(AtlasLootItemsFrame.refreshOri[1], AtlasLootItemsFrame.refreshOri[2], AtlasLootItemsFrame.refreshOri[3], AtlasLootItemsFrame.refreshOri[4], tablenum);
 
-	if AtlasLootItemsFrame.refresh and AtlasLootItemsFrame.refresh[4] and AtlasLootItemsFrame.refresh[5] then
-		if strsub(tabelname, 1, 16) == "SearchResultPage" then
-			AtlasLoot_ShowItemsFrame("SearchResult", tabelname, (AL["Search Result: %s"]):format(AtlasLootCharDB.LastSearchedText or ""), AtlasLootItemsFrame.refresh[4],AtlasLootItemsFrame.refresh[5]);
-		elseif strsub(tabelname, 1, 12) == "WishListPage" then
-			AtlasLoot_ShowItemsFrame("WishList", tabelname, AL["Wishlist"], AtlasLootItemsFrame.refresh[4],AtlasLootItemsFrame.refresh[5]);
-		else
-			AtlasLootDefaultFrame_SubTableScrollFrameUpdate(tabelname, AtlasLootItemsFrame.refresh[2],  AtlasLootItemsFrame.refresh[4], tablenum);
-			AtlasLoot_ShowItemsFrame(tabelname, AtlasLootItemsFrame.refresh[2], AtlasLootItemsFrame.refresh[3], AtlasLootItemsFrame.refresh[4], tablenum);
-		end
-    else
-		--Fallback for if the requested loot page is a menu and does not have a .refresh instance
-		AtlasLoot_ShowItemsFrame(tabelname, "", "", AtlasFrame);
-	end
 end
 
 --[[

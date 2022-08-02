@@ -219,9 +219,7 @@ function AtlasLootItem_OnClick(arg1)
         end
     if isItem then
         local iteminfo = GetItemInfo(this.itemID);
-        local itemIDBloody = 6000000+(this.itemID);
         local itemName, itemLink, itemQuality, itemLevel, itemMinLevel, itemType, itemSubType, itemCount, itemEquipLoc, itemTexture = GetItemInfo(this.itemID);
-        local itemNameB, itemLinkB, itemQualityB, itemLevelB, itemMinLevelB, itemTypeB, itemSubTypeB, itemCountB, itemEquipLocB, itemTextureB = GetItemInfo(itemIDBloody);
         --If shift-clicked, link in the chat window
         if(arg1=="RightButton" and not iteminfo and this.itemID ~= 0) then
             AtlasLootTooltip:SetHyperlink("item:"..this.itemID..":0:0:0:0:0:0:0");
@@ -231,9 +229,6 @@ function AtlasLootItem_OnClick(arg1)
         elseif(arg1=="RightButton" and iteminfo) then
             if not AtlasLoot.db.profile.ItemSpam then
                 DEFAULT_CHAT_FRAME:AddMessage(itemLink..AL[" is safe."]);
-                if(itemLinkB) then
-                    DEFAULT_CHAT_FRAME:AddMessage(itemLinkB..AL[" is safe."]);
-                end
             end
         elseif(IsShiftKeyDown() and iteminfo and (AtlasLoot.db.profile.SafeLinks or AtlasLoot.db.profile.AllLinks)) then
             ChatEdit_InsertLink(itemLink);
@@ -247,18 +242,10 @@ function AtlasLootItem_OnClick(arg1)
         elseif(IsAltKeyDown() and (this.itemID ~= 0)) then
             if AtlasLootItemsFrame.refresh[1] == "WishList" then
                 AtlasLoot_DeleteFromWishList(this.itemID);
-            elseif AtlasLootItemsFrame.refresh[1] == "SearchResult" then
-                if this.difficulty then
-            	    AtlasLoot:GetOriginalDataFromSearchResult(this.itemID);
-                end
             else
-                if this.difficulty then
-                    AtlasLoot_ShowWishListDropDown(this.itemID, this.itemTexture, getglobal("AtlasLootItem_"..this:GetID().."_Name"):GetText(), AtlasLoot_BossName:GetText(), AtlasLootItemsFrame.refreshOri[1].."|"..AtlasLootItemsFrame.refreshOri[2], this, nil, this.difficulty);
-                else
-                    AtlasLoot_ShowWishListDropDown(this.itemID, this.itemTexture, getglobal("AtlasLootItem_"..this:GetID().."_Name"):GetText(), AtlasLoot_BossName:GetText(), AtlasLootItemsFrame.refreshOri[1].."|"..AtlasLootItemsFrame.refreshOri[2], this);
-                end
+                AtlasLoot_ShowWishListDropDown(this.itemID, this.itemTexture, getglobal("AtlasLootItem_"..this:GetID().."_Name"):GetText(), AtlasLoot_BossName:GetText(), "", this);
             end
-        elseif((AtlasLootItemsFrame.refresh[1] == "SearchResult" or AtlasLootItemsFrame.refresh[1] == "WishList") and this.sourcePage) then
+        elseif((AtlasLootItemsFrame.refresh[1] == "SearchResult") and this.sourcePage) then
             local dataID, dataSource = strsplit("|", this.sourcePage);
             if(dataID and dataSource) then
                 AtlasLoot_ShowItemsFrame(dataID, dataSource, dataSource[dataID].Name, AtlasLootItemsFrame.refresh[4], 1);
@@ -280,7 +267,7 @@ function AtlasLootItem_OnClick(arg1)
             else
                 spellName, _, _, _, _, _, _, _, _ = GetSpellInfo(string.sub(this.itemID, 2));
                 --spellIcon = GetItemIcon(this.dressingroomID);
-                AtlasLoot_ShowWishListDropDown(this.itemID, this.dressingroomID, "=ds="..spellName, "=ds="..AtlasLootItemsFrame.refresh[3], AtlasLootItemsFrame.refreshOri[1].."|"..AtlasLootItemsFrame.refreshOri[2],this);
+                AtlasLoot_ShowWishListDropDown(this.itemID, this.dressingroomID, "=ds="..spellName, "=ds="..AtlasLootItemsFrame.refresh[3], AtlasLootItemsFrame.refresh[1].."|"..AtlasLootItemsFrame.refresh[2],this);
             end
         elseif(IsControlKeyDown()) then
             DressUpItemLink("item:"..this.dressingroomID..":0:0:0:0:0:0:0");
