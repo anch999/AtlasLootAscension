@@ -66,8 +66,6 @@ local PURPLE = "|cff9F3FFF";
 local BLUE = "|cff0070dd";
 local ORANGE = "|cffFF8400";
 
-notPattern = false;
-
 --Search panel open and close save variables
 --dataID, dataSource, boss, pFrame, tablenumber
 SearchPrevData = {"", "", "", "", ""};

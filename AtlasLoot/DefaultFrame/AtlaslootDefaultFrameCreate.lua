@@ -364,7 +364,7 @@ local MAX_ROWS2 = 26;      -- How many rows can be shown at once?
 local subtableFrame = CreateFrame("Frame", "Atlasloot_SubTableFrame", AtlasLootDefaultFrame);
     subtableFrame:EnableMouse(true);
     subtableFrame:SetSize(265, ROW_HEIGHT * MAX_ROWS2 + 23);
-    subtableFrame:SetPoint("LEFT","Atlasloot_Difficulty_ScrollFrame","LEFT",0,-273);
+    subtableFrame:SetPoint("BOTTOMLEFT","Atlasloot_Difficulty_ScrollFrame",0,-446);
     subtableFrame:SetBackdrop({
         bgFile = "Interface\\DialogFrame\\UI-DialogBox-Background", tile = true, tileSize = 16,
         edgeFile = "Interface\\Tooltips\\UI-Tooltip-Border", edgeSize = 16,
@@ -435,3 +435,16 @@ local rows2 = setmetatable({}, { __index = function(t, i)
 end })
 
 subtableFrame.rows = rows2
+
+-- Map Button
+local mapbtn = CreateFrame("Button","AtlasLootDefaultFrame_MapButton", AtlasLootDefaultFrame,"UIPanelButtonTemplate2");
+    mapbtn:SetSize(95,32);
+    mapbtn:SetPoint("BOTTOMLEFT",Atlasloot_SubTableFrame,0,-30);
+    mapbtn:SetScript("OnShow", function(self)
+        self:SetText("Map");
+        self:SetFrameLevel( (self:GetParent()):GetFrameLevel() + 1 );
+    end)
+    mapbtn:SetScript("OnClick", function()
+        AtlasLoot_AdvancedSearchShow();
+        AtlasLootDefaultFrameSearchBox:ClearFocus();
+    end)

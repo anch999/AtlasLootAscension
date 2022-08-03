@@ -639,7 +639,6 @@ local function DoSearch(searchText)
                     if type(itemId) == "number" and itemId > 0 then
                         local itemIdBackup = itemId;
                         itemId = AL_FindId(itemId, ItemindexID) or 2;
-                        --itemDetails[8] = ItemindexID;
                         local item = Item:CreateFromID(itemId);
                             item:ContinueOnLoad(function(itemId)
                                 local function GetItemDetails(itemId, atlasName)

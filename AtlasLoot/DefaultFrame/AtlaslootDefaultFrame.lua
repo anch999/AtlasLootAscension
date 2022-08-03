@@ -292,11 +292,15 @@ function AtlasLoot_SetNewStyle(style)
 		"AtlasLootDefaultFrameLastResultButton",
 		"AtlasLootDefaultFrameWishListButton",
         "AtlasLootDefaultFrameAdvancedSearchButton",
+<<<<<<< Updated upstream
         "AtlasLootDefaultFrame_AdvancedSearchPanel_EquipButton",
         "AtlasLootDefaultFrame_AdvancedSearchPanel_EquipSubButton",
         "AtlasLootDefaultFrame_AdvancedSearchPanel_QualityButton",
         "AtlasLootDefaultFrame_AdvancedSearchPanel_SearchButton",
         "AtlasLootDefaultFrame_AdvancedSearchPanel_ClearButton",
+=======
+        "AtlasLootDefaultFrame_MapButton",
+>>>>>>> Stashed changes
 	}
 
 	if style == "new" then
