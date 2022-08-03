@@ -243,6 +243,7 @@ function AtlasLoot_AdvancedSearchClose()
     AtlasLootDefaultFrame_AdvancedSearchPanel:Hide();
 
     if (SearchPrevData[1] ~= "") then
+        AtlasLootDefaultFrame_SubTableScrollFrameUpdate(SearchPrevData[1], SearchPrevData[2], SearchPrevData[4], SearchPrevData[5]);
         AtlasLoot_ShowItemsFrame(SearchPrevData[1], SearchPrevData[2], SearchPrevData[3], SearchPrevData[4], SearchPrevData[5]);
     end
 end
