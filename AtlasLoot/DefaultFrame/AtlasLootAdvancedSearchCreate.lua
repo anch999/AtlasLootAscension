@@ -139,7 +139,7 @@ argpanel.title:SetText("Additional Filters: ");
 argpanel.title:SetPoint("TOPLEFT", argpanel, "TOPLEFT", 0, 0);
 
 local addArg = CreateFrame("Button", "AtlasLootDefaultFrame_AdvancedSearchPanel_ArgumentContainerAddArgBtn", AtlasLootDefaultFrame_AdvancedSearchPanel_ArgumentContainer, "OptionsButtonTemplate");
-addArg:SetPoint("TOP", useleveltick, "BOTTOM", 0, -20);
+addArg:SetPoint("TOP", useleveltick, "BOTTOM", 5, -20);
 addArg:SetSize(20, 20);
 addArg:SetText("+");
 addArg:SetScript("OnClick", function(self, button)
