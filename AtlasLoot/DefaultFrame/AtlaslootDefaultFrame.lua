@@ -292,6 +292,11 @@ function AtlasLoot_SetNewStyle(style)
 		"AtlasLootDefaultFrameLastResultButton",
 		"AtlasLootDefaultFrameWishListButton",
         "AtlasLootDefaultFrameAdvancedSearchButton",
+        "AtlasLootDefaultFrame_AdvancedSearchPanel_EquipButton",
+        "AtlasLootDefaultFrame_AdvancedSearchPanel_EquipSubButton",
+        "AtlasLootDefaultFrame_AdvancedSearchPanel_QualityButton",
+        "AtlasLootDefaultFrame_AdvancedSearchPanel_SearchButton",
+        "AtlasLootDefaultFrame_AdvancedSearchPanel_ClearButton",
 	}
 
 	if style == "new" then

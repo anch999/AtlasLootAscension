@@ -321,7 +321,7 @@ function AtlasLootDefaultFrame_ScrollFrameUpdate()
 	end
 end
 
-local scrollSlider = CreateFrame("ScrollFrame","AtlasLootDefaultFrameScroll",Atlasloot_Difficulty_ScrollFrame,"FauxScrollFrameTemplate");
+local scrollSlider = CreateFrame("ScrollFrame","AtlasLootDefaultFrameScroll", Atlasloot_Difficulty_ScrollFrame, "FauxScrollFrameTemplate");
     scrollSlider:SetPoint("TOPLEFT", 0, -8)
     scrollSlider:SetPoint("BOTTOMRIGHT", -30, 8)
     scrollSlider:SetScript("OnVerticalScroll", function(self, offset)
@@ -342,7 +342,7 @@ local rows = setmetatable({}, { __index = function(t, i)
     row:SetCheckedTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD");
     row:SetScript("OnClick", function()
         ItemindexID = row.itemIndex;
-        if not AtlasLootAdvancedSearch:IsVisible() then
+        if not AtlasLootDefaultFrame_AdvancedSearchPanel:IsVisible() then
         AtlasLoot_ShowItemsFrame(AtlasLootItemsFrame.refresh[1], AtlasLootItemsFrame.refresh[2], AtlasLootItemsFrame.refresh[3], AtlasLootItemsFrame.refresh[4], AtlasLootItemsFrame.refresh[5]);
         end
         AtlasLootDefaultFrame_ScrollFrameUpdate();
@@ -373,6 +373,7 @@ local subtableFrame = CreateFrame("Frame", "Atlasloot_SubTableFrame", AtlasLootD
 
 function AtlasLootDefaultFrame_SubTableScrollFrameUpdate(tablename, dataSource, pFrame, currenttablenum)
     if dataSource ~= nil then
+        if(string.find(tablename, "SearchResult")) then tablename = "SearchResult"; end
         local maxValue = AtlasLoot_GetNumOfRows(dataSource[tablename]);
         subtableFrame.tablename = tablename;
         FauxScrollFrame_Update(subtableFrame.scrollBar, maxValue, MAX_ROWS2, ROW_HEIGHT);

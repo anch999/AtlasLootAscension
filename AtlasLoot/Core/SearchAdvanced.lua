@@ -21,15 +21,8 @@ local BLUE = "|cff0070dd";
 local ORANGE = "|cffFF8400";
 local DEFAULT = "|cffFFd200";
 
-AdvSearchSubMenuEnabled = 0;
-AdvSearchSubMenuText = "";
-AdvSearchSubMenu2Enabled = 0;
-AdvSearchSubMenuText = "";
-
-AdvSearchSetup = false;
-
 AtlasLoot_FrameMenuList = {
-    ["EquipSubMenu"] = {AtlasLoot_EquipSubMenu, "AtlasLootAdvancedSearch_EquipSub", "Select Option", "type", ""}
+    ["EquipSubMenu"] = {AtlasLoot_EquipSubMenu, "AtlasLootDefaultFrame_AdvancedSearchPanel_EquipSubButton", "Select Option", "type", ""}
 }
 
 AtlasLoot_AdvancedSearchMenus = {
@@ -181,7 +174,7 @@ AtlasLoot_AdvancedSearchArguments = {
     }
 }
 
-AdvancedSearchOptions = {
+AtlasLoot_AdvSearchOptions = {
     ["quality"] = "",
     ["equip"] = "",
     ["type"] = "",
@@ -189,106 +182,35 @@ AdvancedSearchOptions = {
 }
 
 function AtlasLoot_AdvancedSearchSetup()
-    AtlasLoot_AdvancedSearchRegister(AtlasLoot_QualityMenu, AtlasLootAdvancedSearch_Quality, AtlasLoot_AdvancedSearchMenus["Quality"]);
-    AtlasLoot_AdvancedSearchRegister(AtlasLoot_EquipMenu, AtlasLootAdvancedSearch_Equip, AtlasLoot_AdvancedSearchMenus["Equip"]);
-    --AtlasLoot_AdvancedSearchRegister(AtlasLoot_DifficultyMenu, AtlasLootAdvancedSearch_Difficulty, AtlasLoot_AdvancedSearchMenus["Difficulty"]);
-
-    local addArg = CreateFrame("Button", "AtlasLootAdvancedSearch_ArgumentContainerAddArgBtn", AtlasLootAdvancedSearch_ArgumentContainer, "OptionsButtonTemplate");
-    addArg:SetPoint("BOTTOMLEFT", AtlasLootAdvancedSearch_ArgumentContainer, "TOPLEFT", 110, 2);
-    addArg:SetSize(20, 20);
-    addArg:SetText("+");
-    addArg:SetScript("OnClick", function(self, button)
-        AddArgumentContainer();
-    end)
-
-    local remArg = CreateFrame("Button", "AtlasLootAdvancedSearch_ArgumentContainerRemArgBtn", AtlasLootAdvancedSearch_ArgumentContainer, "OptionsButtonTemplate")
-    remArg:SetPoint("LEFT", AtlasLootAdvancedSearch_ArgumentContainerAddArgBtn, "RIGHT", 10, 0);
-    remArg:SetSize(20, 20);
-    remArg:SetText("-");
-    remArg:SetScript("OnClick", function(self, button)
-        RemoveArgumentContainer();
-    end)
-    remArg:Disable();
+    AtlasLoot_AdvancedSearchRegister(AtlasLoot_QualityMenu, AtlasLootDefaultFrame_AdvancedSearchPanel_QualityButton, AtlasLoot_AdvancedSearchMenus["Quality"]);
+    AtlasLoot_AdvancedSearchRegister(AtlasLoot_EquipMenu, AtlasLootDefaultFrame_AdvancedSearchPanel_EquipButton, AtlasLoot_AdvancedSearchMenus["Equip"]);
+    --AtlasLoot_AdvancedSearchRegister(AtlasLoot_DifficultyMenu, AtlasLootDefaultFrame_AdvancedSearchPanel_Difficulty, AtlasLoot_AdvancedSearchMenus["Difficulty"]);
 
     for n = 1, MAX_ARGUMENTS do
         AtlasLoot_ArgumentMenus[n] = AceLibrary("Dewdrop-2.0");
         AtlasLoot_ArgumentSubMenus[n] = AceLibrary("Dewdrop-2.0");
 
-        local btn = CreateFrame("Button", "AtlasLootAdvancedSearch_ArgumentContainer" .. tostring(n), AtlasLootAdvancedSearch_ArgumentContainer, "OptionsButtonTemplate");
-        btn:SetPoint("TOPLEFT", AtlasLootAdvancedSearch_ArgumentContainer, "TOPLEFT", 0, -((n - 1) * 35));
-        btn:SetSize(130, 20);
-        btn:SetScript("OnClick", function(self, button)
-            if AtlasLoot_ArgumentMenus[n]:IsOpen() then
-                AtlasLoot_ArgumentMenus[n]:Close();
-            else
-                AtlasLoot_ArgumentMenus[n]:Open(self);
-            end
-        end)
-        btn:Hide();
-        btn:SetText("Select Option");
-
-        local sub = CreateFrame("Button", "AtlasLootAdvancedSearch_ArgumentContainer" .. tostring(n) .. "Sub", AtlasLootAdvancedSearch_ArgumentContainer, "OptionsButtonTemplate");
-        sub:SetPoint("LEFT", btn, "RIGHT", 15, 0);
-        sub:SetSize(130, 20);
-        sub:SetScript("OnClick", function(self, button)
-            if AtlasLoot_ArgumentSubMenus[n]:IsOpen() then
-                AtlasLoot_ArgumentSubMenus[n]:Close();
-            else
-                AtlasLoot_ArgumentSubMenus[n]:Open(self);
-            end
-        end)
-        sub:Hide();
-        sub:Disable();
-
-        local txt = CreateFrame("EditBox", "AtlasLootAdvancedSearch_ArgumentContainer" .. tostring(n) .. "Value", AtlasLootAdvancedSearch_ArgumentContainer, "InputBoxTemplate")
-        txt:SetPoint("LEFT", sub, "RIGHT", 15, 0);
-        txt:SetSize(65, 35);
-        txt:SetAutoFocus(false);
-        txt:SetTextInsets(0, 8, 0, 0);
-        txt:SetScript("OnEnterPressed", function(self)
-            self:ClearFocus();
-        end)
-        txt:Hide();
-
-        AtlasLoot_AdvancedSearchArgumentRegister(AtlasLoot_ArgumentMenus[n], _G["AtlasLootAdvancedSearch_ArgumentContainer" .. tostring(n)], tostring(n), AtlasLoot_AdvancedSearchArguments["Arguments"]);
-        AtlasLoot_AdvancedSearchArgumentRegister(AtlasLoot_ArgumentSubMenus[n], _G["AtlasLootAdvancedSearch_ArgumentContainer" .. tostring(n) .. "Sub"], tostring(n),
+        AtlasLoot_AdvancedSearchArgumentRegister(AtlasLoot_ArgumentMenus[n], _G["AtlasLootDefaultFrame_AdvancedSearchPanel_ArgumentContainer" .. tostring(n)], tostring(n), AtlasLoot_AdvancedSearchArguments["Arguments"]);
+        AtlasLoot_AdvancedSearchArgumentRegister(AtlasLoot_ArgumentSubMenus[n], _G["AtlasLootDefaultFrame_AdvancedSearchPanel_ArgumentContainer" .. tostring(n) .. "Sub"], tostring(n),
                                                  AtlasLoot_AdvancedSearchArguments["Operators"]);
     end
 
     -- Reset Search options to defualt
     AtlasLoot_AdvancedSearchReset();
-
-    AdvSearchSetup = true;
 end
 
 function AtlasLoot_AdvancedSearchShow()
-    if (AtlasLootAdvancedSearch:IsVisible()) then
+    if (AtlasLootDefaultFrame_AdvancedSearchPanel:IsVisible()) then
         AtlasLoot_AdvancedSearchClose();
         return;
     end
 
     pFrame = {"TOPLEFT", "AtlasLootDefaultFrame_LootBackground", "TOPLEFT", "2", "-2"};
 
-    if not (AdvSearchSetup) then
-        AtlasLoot_AdvancedSearchSetup()
-    end
-
     -- Hide all elements that could be in the AtlasTable
     getglobal("AtlasLootItemsFrame_NEXT"):Hide();
     getglobal("AtlasLootItemsFrame_PREV"):Hide();
     getglobal("AtlasLootItemsFrame_BACK"):Hide();
-
-    -- Clear these values to defualt
-    AdvSearchSubMenuEnabled = 0;
-    AdvSearchSubMenuText = "";
-    AdvSearchSubMenu2Enabled = 0;
-    AdvSearchSubMenuText = "";
-
-
-
-    if AtlasLootDefaultFrame_SubMenu:IsEnabled() then
-        AdvSearchSubMenuEnabled = 1;
-    end
 
     -- Ditch the Quicklook selector
     AtlasLoot_QuickLooks:Hide();
@@ -306,11 +228,11 @@ function AtlasLoot_AdvancedSearchShow()
 
     AtlasLoot_BossName:SetText("Advanced Search");
 
-    AtlasLootAdvancedSearch:ClearAllPoints();
-    AtlasLootAdvancedSearch:SetParent(pFrame[2]);
-    AtlasLootAdvancedSearch:ClearAllPoints();
-    AtlasLootAdvancedSearch:SetPoint(pFrame[1], pFrame[2], pFrame[3], pFrame[4], pFrame[5]);
-    AtlasLootAdvancedSearch:Show();
+    AtlasLootDefaultFrame_AdvancedSearchPanel:ClearAllPoints();
+    AtlasLootDefaultFrame_AdvancedSearchPanel:SetParent(pFrame[2]);
+    AtlasLootDefaultFrame_AdvancedSearchPanel:ClearAllPoints();
+    AtlasLootDefaultFrame_AdvancedSearchPanel:SetPoint(pFrame[1], pFrame[2], pFrame[3], pFrame[4], pFrame[5]);
+    AtlasLootDefaultFrame_AdvancedSearchPanel:Show();
 
     AtlasLoot_CurrentType = "Search";
 	AtlasLootDefaultFrame_ScrollFrameUpdate();
@@ -318,10 +240,7 @@ function AtlasLoot_AdvancedSearchShow()
 end
 
 function AtlasLoot_AdvancedSearchClose()
-    AtlasLootAdvancedSearch:Hide();
-
-    AdvSearchSubMenuEnabled = 0;
-    AdvSearchSubMenu2Enabled = 0;
+    AtlasLootDefaultFrame_AdvancedSearchPanel:Hide();
 
     if (SearchPrevData[1] ~= "") then
         AtlasLoot_ShowItemsFrame(SearchPrevData[1], SearchPrevData[2], SearchPrevData[3], SearchPrevData[4], SearchPrevData[5]);
@@ -329,7 +248,7 @@ function AtlasLoot_AdvancedSearchClose()
 end
 
 function AtlasLoot_AdvancedSearchReset()
-    AdvancedSearchOptions = {
+    AtlasLoot_AdvSearchOptions = {
         ["quality"] = "",
         ["equip"] = "",
         ["type"] = "",
@@ -337,77 +256,74 @@ function AtlasLoot_AdvancedSearchReset()
     }
 
     for i = 1, MAX_ARGUMENTS do
-        AdvancedSearchOptions["arg" .. tostring(i)] = "";
-        AdvancedSearchOptions["arg" .. tostring(i) .. "op"] = "";
+        AtlasLoot_AdvSearchOptions["arg" .. tostring(i)] = "";
+        AtlasLoot_AdvSearchOptions["arg" .. tostring(i) .. "op"] = "";
 
-        RemoveArgumentContainer();
+        AtlasLoot_RemoveArgumentContainer();
     end
 
     local expansionLevels = {60, 70, 80}
 
-    AtlasLootAdvancedSearch_LevelMin:SetText(expansionLevels[GetAccountExpansionLevel() + 1]);
-    AtlasLootAdvancedSearch_LevelMax:SetText(expansionLevels[GetAccountExpansionLevel() + 1]);
-    AtlasLootAdvancedSearch_ILevelMin:SetText("");
-    AtlasLootAdvancedSearch_ILevelMax:SetText("");
+    AtlasLootDefaultFrame_AdvancedSearchPanel_LevelMin:SetText(expansionLevels[GetAccountExpansionLevel() + 1]);
+    AtlasLootDefaultFrame_AdvancedSearchPanel_LevelMax:SetText(expansionLevels[GetAccountExpansionLevel() + 1]);
+    AtlasLootDefaultFrame_AdvancedSearchPanel_iLevelMin:SetText("");
+    AtlasLootDefaultFrame_AdvancedSearchPanel_iLevelMax:SetText("");
 
-    AtlasLootAdvancedSearch_Quality:SetText("Select Quality");
+    AtlasLootDefaultFrame_AdvancedSearchPanel_QualityButton:SetText("Select Quality");
 
-    AtlasLootAdvancedSearch_Equip:SetText("Select Item Type");
-    AtlasLootAdvancedSearch_EquipSub:Disable();
-    AtlasLootAdvancedSearch_EquipSub:SetText("Select Option")
-
-    --AtlasLootAdvancedSearch_Difficulty:SetText("Select Difficulty");
-    AtlasLootAdvancedSearch_Difficulty:Hide();
+    AtlasLootDefaultFrame_AdvancedSearchPanel_EquipButton:SetText("Select Item Type");
+    AtlasLootDefaultFrame_AdvancedSearchPanel_EquipSubButton:Disable();
+    AtlasLootDefaultFrame_AdvancedSearchPanel_EquipSubButton:SetText("Select Option");
 end
 
-function AddArgumentContainer()
+function AtlasLoot_AddArgumentContainer()
     if ACTIVE_ARGUMENT == MAX_ARGUMENTS then
-        AdvSearchArgButtonToggle()
+        AtlasLoot_AdvSearchArgButtonToggle()
         return
     end
 
     ACTIVE_ARGUMENT = ACTIVE_ARGUMENT + 1;
 
-    _G["AtlasLootAdvancedSearch_ArgumentContainer" .. tostring(ACTIVE_ARGUMENT)]:Show();
-    _G["AtlasLootAdvancedSearch_ArgumentContainer" .. tostring(ACTIVE_ARGUMENT)]:SetText("Select Option");
-    _G["AtlasLootAdvancedSearch_ArgumentContainer" .. tostring(ACTIVE_ARGUMENT) .. "Sub"]:Show();
+    _G["AtlasLootDefaultFrame_AdvancedSearchPanel_ArgumentContainer" .. tostring(ACTIVE_ARGUMENT)]:Show();
+    _G["AtlasLootDefaultFrame_AdvancedSearchPanel_ArgumentContainer" .. tostring(ACTIVE_ARGUMENT)]:SetText("Select Option");
+    _G["AtlasLootDefaultFrame_AdvancedSearchPanel_ArgumentContainer" .. tostring(ACTIVE_ARGUMENT) .. "Sub"]:Show();
 
-    AdvSearchArgButtonToggle()
+    AtlasLoot_AdvSearchArgButtonToggle()
 end
 
-function RemoveArgumentContainer()
+function AtlasLoot_RemoveArgumentContainer()
     if ACTIVE_ARGUMENT == 0 then
-        AdvSearchArgButtonToggle()
+        AtlasLoot_AdvSearchArgButtonToggle()
         return
     end
 
-    AdvancedSearchOptions["arg" .. tostring(ACTIVE_ARGUMENT)] = "";
-    AdvancedSearchOptions["arg" .. tostring(ACTIVE_ARGUMENT) .. "op"] = "";
+    AtlasLoot_AdvSearchOptions["arg" .. tostring(ACTIVE_ARGUMENT)] = "";
+    AtlasLoot_AdvSearchOptions["arg" .. tostring(ACTIVE_ARGUMENT) .. "op"] = "";
 
-    _G["AtlasLootAdvancedSearch_ArgumentContainer" .. tostring(ACTIVE_ARGUMENT)]:Hide();
-    _G["AtlasLootAdvancedSearch_ArgumentContainer" .. tostring(ACTIVE_ARGUMENT) .. "Sub"]:Disable();
-    _G["AtlasLootAdvancedSearch_ArgumentContainer" .. tostring(ACTIVE_ARGUMENT) .. "Sub"]:Hide();
-    _G["AtlasLootAdvancedSearch_ArgumentContainer" .. tostring(ACTIVE_ARGUMENT) .. "Value"]:Hide();
+    _G["AtlasLootDefaultFrame_AdvancedSearchPanel_ArgumentContainer" .. tostring(ACTIVE_ARGUMENT)]:Hide();
+    _G["AtlasLootDefaultFrame_AdvancedSearchPanel_ArgumentContainer" .. tostring(ACTIVE_ARGUMENT) .. "Sub"]:Disable();
+    _G["AtlasLootDefaultFrame_AdvancedSearchPanel_ArgumentContainer" .. tostring(ACTIVE_ARGUMENT) .. "Sub"]:Hide();
+    _G["AtlasLootDefaultFrame_AdvancedSearchPanel_ArgumentContainer" .. tostring(ACTIVE_ARGUMENT) .. "Value"]:Hide();
 
     ACTIVE_ARGUMENT = ACTIVE_ARGUMENT - 1;
-    AdvSearchArgButtonToggle()
+    AtlasLoot_AdvSearchArgButtonToggle()
 end
 
-function AdvSearchArgButtonToggle()
+function AtlasLoot_AdvSearchArgButtonToggle()
     if ACTIVE_ARGUMENT == MAX_ARGUMENTS then
-        AtlasLootAdvancedSearch_ArgumentContainerAddArgBtn:Disable()
+        AtlasLootDefaultFrame_AdvancedSearchPanel_ArgumentContainerAddArgBtn:Disable()
     else
-        AtlasLootAdvancedSearch_ArgumentContainerAddArgBtn:Enable()
+        AtlasLootDefaultFrame_AdvancedSearchPanel_ArgumentContainerAddArgBtn:Enable()
     end
 
     if ACTIVE_ARGUMENT == 0 then
-        AtlasLootAdvancedSearch_ArgumentContainerRemArgBtn:Disable()
+        AtlasLootDefaultFrame_AdvancedSearchPanel_ArgumentContainerRemArgBtn:Disable()
     else
-        AtlasLootAdvancedSearch_ArgumentContainerRemArgBtn:Enable()
+        AtlasLootDefaultFrame_AdvancedSearchPanel_ArgumentContainerRemArgBtn:Enable()
     end
 end
 
-AdvSearchDefaultText = {
+AtlasLoot_AdvSearchDefaultText = {
     ["quality"] = "Select Quality",
     ["equip"] = "Select Item Type",
     ["type"] = "Select Option",
@@ -418,15 +334,15 @@ function AtlasLoot_AdvancedSearchMenuClick(Object, VariableToSet, VariableValue,
     -- Setups child menus and sets search options to default
     if (ChildMenu ~= nil) then
         if (ChildMenuRegister == "Disable") then
-            AdvancedSearchOptions[AtlasLoot_FrameMenuList[ChildMenu][4]] = AtlasLoot_FrameMenuList[ChildMenu][5];
+            AtlasLoot_AdvSearchOptions[AtlasLoot_FrameMenuList[ChildMenu][4]] = AtlasLoot_FrameMenuList[ChildMenu][5];
             getglobal(AtlasLoot_FrameMenuList[ChildMenu][2]):Disable();
             -- Disable assigned children menus as well
             if (AtlasLoot_FrameMenuList[ChildMenu][6]) then
                 getglobal(AtlasLoot_FrameMenuList[ChildMenu][6]):Disable();
             end
             if VariableValue == "reset" then
-                AdvancedSearchOptions[VariableToSet] = "";
-                Object[1]:SetText(AdvSearchDefaultText[VariableToSet]);
+                AtlasLoot_AdvSearchOptions[VariableToSet] = "";
+                Object[1]:SetText(AtlasLoot_AdvSearchDefaultText[VariableToSet]);
                 Object[2]:Close();
 
                 getglobal(AtlasLoot_FrameMenuList[ChildMenu][2]):SetText(AtlasLoot_FrameMenuList[ChildMenu][3])
@@ -434,7 +350,7 @@ function AtlasLoot_AdvancedSearchMenuClick(Object, VariableToSet, VariableValue,
             end
         else
             AtlasLoot_AdvancedSearchRegister(AtlasLoot_FrameMenuList[ChildMenu][1], getglobal(AtlasLoot_FrameMenuList[ChildMenu][2]), AtlasLoot_AdvancedSearchMenus[ChildMenuRegister]);
-            AdvancedSearchOptions[AtlasLoot_FrameMenuList[ChildMenu][4]] = AtlasLoot_FrameMenuList[ChildMenu][5];
+            AtlasLoot_AdvSearchOptions[AtlasLoot_FrameMenuList[ChildMenu][4]] = AtlasLoot_FrameMenuList[ChildMenu][5];
             getglobal(AtlasLoot_FrameMenuList[ChildMenu][2]):Enable();
             getglobal(AtlasLoot_FrameMenuList[ChildMenu][2]):SetText(AtlasLoot_FrameMenuList[ChildMenu][3]);
             -- Disable assigned children menus as well
@@ -444,12 +360,12 @@ function AtlasLoot_AdvancedSearchMenuClick(Object, VariableToSet, VariableValue,
         end
     end
     if VariableValue == "reset" then
-        AdvancedSearchOptions[VariableToSet] = "";
-        Object[1]:SetText(AdvSearchDefaultText[VariableToSet]);
+        AtlasLoot_AdvSearchOptions[VariableToSet] = "";
+        Object[1]:SetText(AtlasLoot_AdvSearchDefaultText[VariableToSet]);
         Object[2]:Close();
         return
     end
-    AdvancedSearchOptions[VariableToSet] = VariableValue;
+    AtlasLoot_AdvSearchOptions[VariableToSet] = VariableValue;
     Object[1]:SetText(Object[3]);
     Object[2]:Close();
 end
@@ -496,41 +412,41 @@ end
 
 function AtlasLoot_AdvancedSearchArgumentClick(Object, VariableToSet, VariableValue, IsOperator)
     if IsOperator and VariableValue == "reset" then
-        AdvancedSearchOptions["arg" .. VariableToSet .. "op"] = "";
+        AtlasLoot_AdvSearchOptions["arg" .. VariableToSet .. "op"] = "";
 
-        getglobal("AtlasLootAdvancedSearch_ArgumentContainer" .. VariableToSet .. "Value"):SetText("");
-        getglobal("AtlasLootAdvancedSearch_ArgumentContainer" .. VariableToSet .. "Value"):Hide();
+        getglobal("AtlasLootDefaultFrame_AdvancedSearchPanel_ArgumentContainer" .. VariableToSet .. "Value"):SetText("");
+        getglobal("AtlasLootDefaultFrame_AdvancedSearchPanel_ArgumentContainer" .. VariableToSet .. "Value"):Hide();
 
         Object[1]:SetText("Select Option");
         Object[2]:Close();
     elseif IsOperator then
-        AdvancedSearchOptions["arg" .. VariableToSet .. "op"] = VariableValue;
+        AtlasLoot_AdvSearchOptions["arg" .. VariableToSet .. "op"] = VariableValue;
 
-        getglobal("AtlasLootAdvancedSearch_ArgumentContainer" .. VariableToSet .. "Value"):Show();
+        getglobal("AtlasLootDefaultFrame_AdvancedSearchPanel_ArgumentContainer" .. VariableToSet .. "Value"):Show();
 
         Object[1]:SetText(Object[3]);
         Object[2]:Close();
     elseif VariableValue == "reset" then
-        getglobal("AtlasLootAdvancedSearch_ArgumentContainer" .. VariableToSet .. "Sub"):SetText("Select Option");
-        getglobal("AtlasLootAdvancedSearch_ArgumentContainer" .. VariableToSet .. "Sub"):Disable();
+        getglobal("AtlasLootDefaultFrame_AdvancedSearchPanel_ArgumentContainer" .. VariableToSet .. "Sub"):SetText("Select Option");
+        getglobal("AtlasLootDefaultFrame_AdvancedSearchPanel_ArgumentContainer" .. VariableToSet .. "Sub"):Disable();
 
-        getglobal("AtlasLootAdvancedSearch_ArgumentContainer" .. VariableToSet .. "Value"):SetText("");
-        getglobal("AtlasLootAdvancedSearch_ArgumentContainer" .. VariableToSet .. "Value"):Hide();
+        getglobal("AtlasLootDefaultFrame_AdvancedSearchPanel_ArgumentContainer" .. VariableToSet .. "Value"):SetText("");
+        getglobal("AtlasLootDefaultFrame_AdvancedSearchPanel_ArgumentContainer" .. VariableToSet .. "Value"):Hide();
 
-        AdvancedSearchOptions["arg" .. VariableToSet] = "";
-        AdvancedSearchOptions["arg" .. VariableToSet .. "op"] = "";
+        AtlasLoot_AdvSearchOptions["arg" .. VariableToSet] = "";
+        AtlasLoot_AdvSearchOptions["arg" .. VariableToSet .. "op"] = "";
 
         Object[1]:SetText("Select Option");
         Object[2]:Close();
     else
-        getglobal("AtlasLootAdvancedSearch_ArgumentContainer" .. VariableToSet .. "Sub"):SetText("Select Option");
-        getglobal("AtlasLootAdvancedSearch_ArgumentContainer" .. VariableToSet .. "Sub"):Enable();
-        AdvancedSearchOptions["arg" .. VariableToSet .. "op"] = "";
+        getglobal("AtlasLootDefaultFrame_AdvancedSearchPanel_ArgumentContainer" .. VariableToSet .. "Sub"):SetText("Select Option");
+        getglobal("AtlasLootDefaultFrame_AdvancedSearchPanel_ArgumentContainer" .. VariableToSet .. "Sub"):Enable();
+        AtlasLoot_AdvSearchOptions["arg" .. VariableToSet .. "op"] = "";
 
-        getglobal("AtlasLootAdvancedSearch_ArgumentContainer" .. VariableToSet .. "Value"):SetText("");
-        getglobal("AtlasLootAdvancedSearch_ArgumentContainer" .. VariableToSet .. "Value"):Hide();
+        getglobal("AtlasLootDefaultFrame_AdvancedSearchPanel_ArgumentContainer" .. VariableToSet .. "Value"):SetText("");
+        getglobal("AtlasLootDefaultFrame_AdvancedSearchPanel_ArgumentContainer" .. VariableToSet .. "Value"):Hide();
 
-        AdvancedSearchOptions["arg" .. VariableToSet] = VariableValue;
+        AtlasLoot_AdvSearchOptions["arg" .. VariableToSet] = VariableValue;
         Object[1]:SetText(Object[3]);
         Object[2]:Close();
     end
@@ -614,8 +530,8 @@ function AtlasLoot:AdvancedSearch(Text)
     end
 
     local function GetTextByName(name)
-        if (_G["AtlasLootAdvancedSearch_" .. name]) then
-            return _G["AtlasLootAdvancedSearch_" .. name]:GetText()
+        if (_G["AtlasLootDefaultFrame_AdvancedSearchPanel_" .. name]) then
+            return _G["AtlasLootDefaultFrame_AdvancedSearchPanel_" .. name]:GetText()
         end
 
         return nil;
@@ -630,51 +546,57 @@ function AtlasLoot:AdvancedSearch(Text)
         return "ranged";
     end
 
-    if AdvancedSearchOptions["quality"] ~= "" then
-        advSearchString = AppendSearchString(advSearchString, "quality=" .. AdvancedSearchOptions["quality"]);
+    if AtlasLoot_AdvSearchOptions["quality"] ~= "" then
+        advSearchString = AppendSearchString(advSearchString, "quality=" .. AtlasLoot_AdvSearchOptions["quality"]);
     end
 
-    if AdvancedSearchOptions["equip"] ~= "" then
-        if AdvancedSearchOptions["equip"] == "ranged" and AdvancedSearchOptions["type"] ~= "" then
-            AdvancedSearchOptions["equip"] = FixRangedSlot(AdvancedSearchOptions["type"]);
+    if AtlasLoot_AdvSearchOptions["equip"] ~= "" then
+        if AtlasLoot_AdvSearchOptions["equip"] == "ranged" and AtlasLoot_AdvSearchOptions["type"] ~= "" then
+            AtlasLoot_AdvSearchOptions["equip"] = FixRangedSlot(AtlasLoot_AdvSearchOptions["type"]);
         end
-        advSearchString = AppendSearchString(advSearchString, "slot=" .. AdvancedSearchOptions["equip"]);
+        advSearchString = AppendSearchString(advSearchString, "slot=" .. AtlasLoot_AdvSearchOptions["equip"]);
     end
 
-    if AdvancedSearchOptions["type"] ~= "" and AdvancedSearchOptions["type"] then
-        advSearchString = AppendSearchString(advSearchString, "type=" .. AdvancedSearchOptions["type"]);
+    if AtlasLoot_AdvSearchOptions["type"] ~= "" and AtlasLoot_AdvSearchOptions["type"] then
+        advSearchString = AppendSearchString(advSearchString, "type=" .. AtlasLoot_AdvSearchOptions["type"]);
     end
 
-    if AdvancedSearchOptions["difficulty"] ~= "" and AdvancedSearchOptions["difficulty"] ~= 2 then
-        advSearchString = AppendSearchString(advSearchString, "dif=" .. AdvancedSearchOptions["difficulty"]);
+    if AtlasLoot_AdvSearchOptions["difficulty"] ~= "" and AtlasLoot_AdvSearchOptions["difficulty"] ~= 2 then
+        advSearchString = AppendSearchString(advSearchString, "dif=" .. AtlasLoot_AdvSearchOptions["difficulty"]);
     end
 
-    if (GetTextByName("LevelMin") and GetTextByName("LevelMin") ~= "") then
-        advSearchString = AppendSearchString(advSearchString, "minlvl>=" .. GetTextByName("LevelMin"));
+    if(AtlasLootDefaultFrame_AdvancedSearchPanel_LevelToggle:GetChecked()) then
+        if (GetTextByName("LevelMin") and GetTextByName("LevelMin") ~= "") then
+            advSearchString = AppendSearchString(advSearchString, "minlvl>=" .. GetTextByName("LevelMin"));
+        end
+
+        if (GetTextByName("LevelMax") and GetTextByName("LevelMax") ~= "") then
+            advSearchString = AppendSearchString(advSearchString, "minlvl<=" .. GetTextByName("LevelMax"));
+        end
+    else
+        advSearchString = AppendSearchString(advSearchString, "minlvl>=" .. UnitLevel("player"));
+        advSearchString = AppendSearchString(advSearchString, "minlvl<=" .. UnitLevel("player"));
     end
 
-    if (GetTextByName("LevelMax") and GetTextByName("LevelMax") ~= "") then
-        advSearchString = AppendSearchString(advSearchString, "minlvl<=" .. GetTextByName("LevelMax"));
-    end
-
-    if (GetTextByName("ILevelMin") and GetTextByName("ILevelMin") ~= "") then
+    if (GetTextByName("iLevelMin") and GetTextByName("iLevelMin") ~= "") then
         advSearchString = AppendSearchString(advSearchString, "ilvl>=" .. GetTextByName("ILevelMin"));
     end
 
-    if (GetTextByName("ILevelMax") and GetTextByName("ILevelMax") ~= "") then
+    if (GetTextByName("iLevelMax") and GetTextByName("iLevelMax") ~= "") then
         advSearchString = AppendSearchString(advSearchString, "ilvl<=" .. GetTextByName("ILevelMax"));
     end
 
     for i = 1, ACTIVE_ARGUMENT, 1 do
-        if AdvancedSearchOptions["arg" .. i] ~= "" then
-            local arg = _G["AtlasLootAdvancedSearch_ArgumentContainer" .. tostring(i) .. "Value"]:GetText();
-            if AdvancedSearchOptions["arg" .. i .. "op"] == "" then
-                AdvancedSearchOptions["arg" .. i .. "op"] = ">"
+        if AtlasLoot_AdvSearchOptions["arg" .. i] ~= "" then
+            local arg = _G["AtlasLootDefaultFrame_AdvancedSearchPanel_ArgumentContainer" .. tostring(i) .. "Value"]:GetText();
+            if AtlasLoot_AdvSearchOptions["arg" .. i .. "op"] == "" then
+                AtlasLoot_AdvSearchOptions["arg" .. i .. "op"] = ">"
                 arg = "0";
             end
-            advSearchString = AppendSearchString(advSearchString, AdvancedSearchOptions["arg" .. i] .. AdvancedSearchOptions["arg" .. i .. "op"] .. arg);
+            advSearchString = AppendSearchString(advSearchString, AtlasLoot_AdvSearchOptions["arg" .. i] .. AtlasLoot_AdvSearchOptions["arg" .. i .. "op"] .. arg);
         end
     end
 
+    AtlasLoot_AdvancedSearchClose();
     AtlasLoot:Search(string.lower(advSearchString));
 end

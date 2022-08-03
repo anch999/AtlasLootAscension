@@ -43,5 +43,6 @@ Core\AtlasLoot.xml
 Menus\Menus.xml
 DefaultFrame\AtlaslootDefaultFrame.lua
 DefaultFrame\AtlaslootDefaultFrameCreate.lua
+DefaultFrame\AtlaslootAdvancedSearchCreate.lua
 
 modules.xml

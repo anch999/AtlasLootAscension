@@ -740,9 +740,9 @@ function AtlasLoot:Search(Text)
         local itemFilterErrorMessage = "";
         if operator then
             itemFilterErrorMessage = [[
-Please check if you have a typo in the filter.
-For help, type "/atlasloothelp".
-You might also have to query the server for item informations to load them into your client's Cache.]];
+                Please check if you have a typo in the filter.
+                For help, type "/atlasloothelp".
+                You might also have to query the server for item informations to load them into your client's Cache.]];
         end
         DEFAULT_CHAT_FRAME:AddMessage(RED .. AL["AtlasLoot"] .. ": " .. WHITE .. AL["No match found for"] .. " \"" .. Text .. "\"." .. itemFilterErrorMessage);
     else
