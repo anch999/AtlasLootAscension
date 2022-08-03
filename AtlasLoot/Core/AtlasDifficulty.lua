@@ -2,6 +2,7 @@ local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot");
 
 AtlasLoot_Difficulty = {
     -- table of difficulties and there itemID references
+
     ["ClassicDungeon"] = {
             {"Normal", 2,},
             {"Bloodforged", 1,},
@@ -112,3 +113,15 @@ AtlasLoot_Difficulty = {
     MIN_DIF = 18;
     MAX_DIF = 19;
 }
+
+function AtlasLoot_Difficulty:getMaxDifficulty(difficultyKey)
+    if(difficultyKey == "ClassicDungeon" or difficultyKey == "PVP") then
+        return 2;
+    elseif (difficultyKey == "ClassicDungeonExt" or difficultyKey == "BCDungeon" or difficultyKey == "WrathDungeon") then
+        return 44;
+    elseif (difficultyKey == "ClassicRaid" or difficultyKey == "BCRaid" or difficultyKey == "WrathRaid") then
+        return 4;
+    else
+        return 0;
+    end
+end

@@ -521,28 +521,29 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame, tablenum)
 		for i = 1, 30, 1 do
 			--Check for a valid object (that it exists, and that it has a name
 			if(dataSource[dataID][tablenum][i] ~= nil and dataSource[dataID][tablenum][i][4] ~= "") then
-				IDfound = AL_FindId(dataSource[dataID][tablenum][i][2], ItemindexID) or dataSource[dataID][tablenum][i][2];
+				local itemDif = ItemindexID;
+				IDfound = AL_FindId(dataSource[dataID][tablenum][i][2], min(AtlasLoot_Difficulty:getMaxDifficulty(dataSource[dataID].Type), itemDif)) or dataSource[dataID][tablenum][i][2];
 				if string.sub(IDfound, 1, 1) == "s" then
 					isItem = false;
-					IDfound = AL_FindId(dataSource[dataID][tablenum][i][2], ItemindexID) or dataSource[dataID][tablenum][i][2];
+					IDfound = AL_FindId(dataSource[dataID][tablenum][i][2], itemDif) or dataSource[dataID][tablenum][i][2];
 				else
 					isItem = true;
 				end
 
 				if isItem then
 					--Sets ItemindexID to normal(2) if it is nil for min/max difficulties.
-						if not tonumber(ItemindexID) then ItemindexID = AtlasLoot_Difficulty.Normal end;
+					if not tonumber(itemDif) then itemDif = AtlasLoot_Difficulty.Normal end;
 
-						--Checks if an item has a Maximum difficulty, this is to correct some items that have an entry for higher difficulties then they really do
-						if dataSource[dataID][tablenum][i][AtlasLoot_Difficulty.MAX_DIF] then
-							if tonumber(dataSource[dataID][tablenum][i][AtlasLoot_Difficulty.MAX_DIF]) < ItemindexID then ItemindexID = dataSource[dataID][tablenum][i][AtlasLoot_Difficulty.MAX_DIF] end;
-						end
-							--If something was found in itemID database show that if not show default table item
-							IDfound = AL_FindId(dataSource[dataID][tablenum][i][2], ItemindexID) or dataSource[dataID][tablenum][i][2];
+					--Checks if an item has a Maximum difficulty, this is to correct some items that have an entry for higher difficulties then they really do
+					if dataSource[dataID][tablenum][i][AtlasLoot_Difficulty.MAX_DIF] then
+						if tonumber(dataSource[dataID][tablenum][i][AtlasLoot_Difficulty.MAX_DIF]) < itemDif then itemDif = dataSource[dataID][tablenum][i][AtlasLoot_Difficulty.MAX_DIF] end;
+					end
+					--If something was found in itemID database show that if not show default table item
+					IDfound = AL_FindId(dataSource[dataID][tablenum][i][2], itemDif) or dataSource[dataID][tablenum][i][2];
 
-							if ItemindexID ~= "" and dataID == "SearchResult" then
-								IDfound = AL_FindId(dataSource[dataID][tablenum][i][9], ItemindexID) or dataSource[dataID][tablenum][i][2];
-							end
+					if ItemindexID ~= "" and dataID == "SearchResult" then
+						IDfound = AL_FindId(dataSource[dataID][tablenum][i][9], itemDif) or dataSource[dataID][tablenum][i][2];
+					end
 
 					itemName, itemLink, itemQuality, itemLevel, itemMinLevel, itemType, itemSubType, itemCount, itemEquipLoc, itemTexture = GetItemInfo(IDfound);
 					--If the client has the name of the item in cache, use that instead.
@@ -572,7 +573,8 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame, tablenum)
 
 				--Store data about the state of the items frame to allow minor tweaks or a recall of the current loot page
 				AtlasLootItemsFrame.refresh = {dataID, dataSource_backup, boss, pFrame, tablenum};
-				if dataID ~= "FilterList" and dataSource[dataID].Back ~= true then
+				--and dataSource[dataID].Back ~= true
+				if dataID ~= "FilterList"  then
 					AtlasLootItemsFrame.refreshOri = {dataID, dataSource_backup, boss, pFrame, tablenum};
 				end
 
@@ -683,7 +685,8 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame, tablenum)
 		end
 
         AtlasLootItemsFrame.refresh = {dataID, dataSource, boss, pFrame, tablenum};
-		if dataID ~= "WishList" and dataID ~= "FilterList" and dataID ~= "SearchResult" and dataSource[dataID].Back ~= true then
+		--and dataID ~= "SearchResult"
+		if dataID ~= "WishList" and dataID ~= "FilterList"  and dataSource[dataID].Back ~= true then
 			AtlasLootItemsFrame.refreshOri = {dataID, dataSource, boss, pFrame, tablenum};
 			AtlasLoot.db.profile.LastBoss = {dataID, dataSource, boss, pFrame, tablenum, ATLASLOOT_LASTMODULE, ATLASLOOT_CURRENTTABLE};
 		end
@@ -983,13 +986,11 @@ function AtlasLoot_QueryLootPage()
         local queryitem = button.itemID;
         if (queryitem) and (queryitem ~= nil) and (queryitem ~= "") and (queryitem ~= 0) and (string.sub(queryitem, 1, 1) ~= "s") then
 			local item = Item:CreateFromID(queryitem);
-			item:ContinueOnLoad(function(itemId)
-				AtlasLoot:CancelTimer(AtlasLoot.refreshTimer);
-				if item:GetInfo() then
-					AtlasLootTooltip:SetHyperlink("item:"..itemId..":0:0:0:0:0:0:0");
-				end
-				AtlasLoot.refreshTimer = AtlasLoot:ScheduleTimer("callShowloot", .5);
-			end)
+			if not (item:GetInfo()) then
+				item:ContinueOnLoad(function(itemId)
+					AtlasLoot:callShowloot();
+				end)
+			end
         end
     end
 end
