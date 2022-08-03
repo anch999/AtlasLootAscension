@@ -139,7 +139,7 @@ function AtlasLoot_WishListAddDropClick(typ, arg2, arg3, arg4)
 			table.insert(AtlasLootWishList["Own"][playerName][arg2], { 0, itemID, itemTexture, itemName, lootPage, "", "", sourcePage});
 
 			DEFAULT_CHAT_FRAME:AddMessage(RED..AL["AtlasLoot"]..": "..AtlasLoot_FixText(itemName)..GREY..AL[" added to the WishList."]..WHITE.." ("..AtlasLootWishList["Own"][playerName][arg2]["info"][1]..")");
-			AtlasLoot_WishList = AtlasLoot_CategorizeWishList(AtlasLootWishList["Own"][playerName][arg2]);
+			AtlasLoot_WishList = AtlasLootWishList["Own"][playerName][arg2];
 
 			AtlasLoot_WishListDrop:Close(1)
 		elseif typ == "addOther" then
@@ -151,7 +151,7 @@ function AtlasLoot_WishListAddDropClick(typ, arg2, arg3, arg4)
 			table.insert(AtlasLootWishList["Own"][arg2][arg3], { 0, itemID, itemTexture, itemName, lootPage, "", "", sourcePage, [AtlasLoot_Difficulty.DIF_SEARCH] = difficulty});
 
 			DEFAULT_CHAT_FRAME:AddMessage(RED..AL["AtlasLoot"]..": "..AtlasLoot_FixText(itemName)..GREY..AL[" added to the WishList."]..WHITE.." ("..AtlasLootWishList["Own"][arg2][arg3]["info"][1].." - "..arg2..")");
-			AtlasLoot_WishList = AtlasLoot_CategorizeWishList(AtlasLootWishList["Own"][arg2][arg3]);
+			AtlasLoot_WishList = AtlasLootWishList["Own"][arg2][arg3];
 
 			AtlasLoot_WishListDrop:Close(1)
 		elseif typ == "addShared" then
@@ -163,7 +163,7 @@ function AtlasLoot_WishListAddDropClick(typ, arg2, arg3, arg4)
 			table.insert(AtlasLootWishList["Shared"][arg2][arg3], { 0, itemID, itemTexture, itemName, lootPage, "", "", sourcePage, [AtlasLoot_Difficulty.DIF_SEARCH] = difficulty});
 
 			DEFAULT_CHAT_FRAME:AddMessage(RED..AL["AtlasLoot"]..": "..AtlasLoot_FixText(itemName)..GREY..AL[" added to the WishList."]..WHITE.." ("..AtlasLootWishList["Shared"][arg2][arg3]["info"][1].." - "..arg2..")");
-			AtlasLoot_WishList = AtlasLoot_CategorizeWishList(AtlasLootWishList["Shared"][arg2][arg3]);
+			AtlasLoot_WishList = AtlasLootWishList["Shared"][arg2][arg3];
 
 			AtlasLoot_WishListDrop:Close(1)
 		end

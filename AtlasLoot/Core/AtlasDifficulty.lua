@@ -73,7 +73,7 @@ AtlasLoot_Difficulty = {
      };
 
     ["Crafting"] = {
-        {"Crafting Patterns", "" },
+        {"Crafting Patterns", "Pattern" },
         {"Item Normal", 2 },
         {"Bloodforged", 1 },
     };

@@ -1099,25 +1099,7 @@ local SPELLFIRE = GetSpellInfo(26797);
 			Type = "Crafting";
 		{
 			Name = AL["Leather Armor"].." - Back";
-			{ 1, "s60640", "43565", "=q4=Durable Nerubhide Cape", "=ds="..AL["Trainer"]};
-			{ 2, "s60637", "43566", "=q4=Ice Striker's Cloak", "=ds="..AL["Trainer"]};
-			{ 3, "s42546", "33122", "=q4=Cloak of Darkness", "=ds=#sr# 360"};
-			{ 4, "s22926", "18509", "=q4=Chromatic Cloak", "=ds=#sr# 300"};
-			{ 5, "s22928", "18511", "=q4=Shifting Cloak", "=ds=#sr# 300"};
-			{ 6, "s55199", "41238", "=q3=Cloak of Tormented Skies", "=ds="..AL["Trainer"]};
-			{ 7, "s60631", "38441", "=q3=Cloak of Harsh Winds", "=ds="..AL["Trainer"]};
-			{ 8, "s19093", "15138", "=q3=Onyxia Scale Cloak", "=ds=#sr# 300"};
-			{ 9, "s10574", "8215", "=q2=Wild Leather Cloak", "=ds=#sr# 250"};
-			{ 10, "s10562", "8216", "=q2=Big Voodoo Cloak", "=ds=#sr# 240"};
-			{ 11, "s7153", "5965", "=q2=Guardian Cloak", "=ds=#sr# 185"};
-			{ 12, "s9198", "7377", "=q2=Frost Leather Cloak", "=ds=#sr# 180"};
-			{ 13, "s9070", "7283", "=q2=Black Whelp Cloak", "=ds=#sr# 100"};
-			{ 14, "s7953", "6466", "=q2=Deviate Scale Cloak", "=ds=#sr# 90"};
-			{ 15, "s2159", "2308", "=q2=Fine Leather Cloak", "=ds=#sr# 85"};
-			{ 16, "s3760", "3719", "=q1=Hillman's Cloak", "=ds=#sr# 150"};
-			{ 17, "s2168", "2316", "=q1=Dark Leather Cloak", "=ds=#sr# 110"};
-			{ 18, "s2162", "2310", "=q1=Embossed Leather Cloak", "=ds=#sr# 60"};
-
+			{ 1, "s42546", "33122", "=q4=Cloak of Darkness", "=ds=#sr# 360"};
 		};
 		{
 			Name = AL["Leather Armor"].." - Chest";

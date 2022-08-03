@@ -108,11 +108,12 @@ function AtlasLoot_DewDropSubMenuClick(tablename)
     --Show the select loot table
     local tablenum = AtlasLoot_Data[tablename].Loadfirst or 1;
     ItemindexID = ItemindexID or 2;
+    if AtlasLoot_Data[tablename].Type == "Crafting" then
+        ItemindexID = "Pattern";
+    end
+    --Show the table that has been selected
     AtlasLoot_ShowItemsFrame(tablename, AtlasLoot_Data, AtlasLoot_Data[tablename][tablenum].Name, pFrame, tablenum);
     AtlasLootDefaultFrame_SubTableScrollFrameUpdate(tablename, AtlasLoot_Data, pFrame, tablenum);
-    --Save needed info for fuure re-display of the table
-   -- AtlasLoot.db.profile.LastBoss = {tablename, AtlasLoot_Data, AtlasLoot_Data[tablename][tablenum].Name, pFrame, tablenum, ATLASLOOT_LASTMODULE, ATLASLOOT_CURRENTTABLE};
-    --Show the table that has been selected
     AtlasLoot_DewdropSubMenu:Close(1);
 end
 

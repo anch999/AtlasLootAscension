@@ -15,7 +15,6 @@ AtlasLootBoss_OnClick()
 AtlasLoot_ShowItemsFrame()
 AtlasLoot_GenerateAtlasMenu(dataID, pFrame)
 AtlasLoot_SetItemInfoFrame()
-AtlasLootItemsFrame_OnCloseButton()
 AtlasLootMenuItem_OnClick()
 AtlasLoot_NavButton_OnClick()
 AtlasLoot_IsLootTableAvailable(dataID)
@@ -54,7 +53,6 @@ ATLASLOOT_INDENT = "   ";
 AtlasLoot_Dewdrop = AceLibrary("Dewdrop-2.0");
 AtlasLoot_DewdropSubMenu = AceLibrary("Dewdrop-2.0");
 AtlasLoot_DewdropExpansionMenu = AceLibrary("Dewdrop-2.0");
-AtlasLoot_DifficultyAtlas = AceLibrary("Dewdrop-2.0");
 --Variable to cap debug spam
 ATLASLOOT_DEBUGSHOWN = false;
 ATLASLOOT_FILTER_ENABLE = false;
@@ -68,26 +66,7 @@ local PURPLE = "|cff9F3FFF";
 local BLUE = "|cff0070dd";
 local ORANGE = "|cffFF8400";
 
---Establish number of boss lines in the Atlas frame for scrolling
-local ATLAS_LOOT_BOSS_LINES	= 25;
-
---Flag so that error messages do not spam
-local ATLASLOOT_POPUPSHOWN = false;
-
---Set constants for expansions
-local ATLAS_EXPANSION = {"CLASSIC", "TBC", "WRATH"};
-
---Set the default anchor for the loot frame to the Atlas frame
-AtlasLoot_AnchorFrame = AtlasFrame;
-
---Variables to hold hooked Atlas functions
-Hooked_Atlas_Refresh = nil;
-Hooked_Atlas_OnShow = nil;
-Hooked_AtlasScrollBar_Update = nil;
-
-isTablereference = false;
 notPattern = false;
-Updated_dataID = "";
 
 --Search panel open and close save variables
 --dataID, dataSource, boss, pFrame, tablenumber
@@ -154,18 +133,6 @@ StaticPopupDialogs["ATLASLOOT_SETUP"] = {
   hideOnEscape = 1
 };
 
---Popup Box for an old version of Atlas
-StaticPopupDialogs["ATLASLOOT_OLD_ATLAS"] = {
-  text = AL["It has been detected that your version of Atlas does not match the version that Atlasloot is tuned for ("]..ATLASLOOT_CURRENT_ATLAS[1].."/"..ATLASLOOT_PREVIEW_ATLAS[1]..AL[").  Depending on changes, there may be the occasional error, so please visit http://www.atlasmod.com as soon as possible to update."],
-  button1 = AL["OK"],
-  OnAccept = function()
-	  DEFAULT_CHAT_FRAME:AddMessage(BLUE..AL["AtlasLoot"]..": "..RED..AL["Incompatible Atlas Detected"]);
-  end,
-  timeout = 0,
-  whileDead = 1,
-  hideOnEscape = 1
-};
-
 --[[
 AtlasLoot_OnEvent(event):
 event - Name of the event, passed from the API
@@ -213,38 +180,12 @@ function AtlasLoot_OnVariablesLoaded()
 			{Name = AL["Select a Loot Table..."]};
 		};
     end
-    --Figure out if it is a compatible Atlas version
-    for i=1,#ATLASLOOT_CURRENT_ATLAS do
-        if ATLAS_VERSION == ATLASLOOT_CURRENT_ATLAS[i] then
-            AtlasCheck = true;
-            AtlasLoot.db.profile.AtlasType = "Release";
-        end
-    end
-    for i=1,#ATLASLOOT_PREVIEW_ATLAS do
-        if ATLAS_VERSION == ATLASLOOT_PREVIEW_ATLAS[i] then
-            AtlasCheck = true;
-            AtlasLoot.db.profile.AtlasType = "Preview";
-        end
-    end
-    if AtlasCheck == false then
-        AtlasLoot.db.profile.AtlasType = "Unknown";
-    end
+
     --Add the loot browser to the special frames tables to enable closing wih the ESC key
 	tinsert(UISpecialFrames, "AtlasLootDefaultFrame");
 	--Set up options frame
 	AtlasLootOptions_OnLoad();
     AtlasLoot_CreateOptionsInfoTooltips();
-	--Hook the necessary Atlas functions
-    Hooked_Atlas_Refresh = Atlas_Refresh;
-    Atlas_Refresh = AtlasLoot_Refresh;
-	Hooked_Atlas_OnShow = Atlas_OnShow;
-	Atlas_OnShow = AtlasLoot_Atlas_OnShow;
-	--Instead of hooking, replace the scrollbar driver function
-    Hooked_AtlasScrollBar_Update = AtlasScrollBar_Update;
-	AtlasScrollBar_Update = AtlasLoot_AtlasScrollBar_Update;
-    if( not AtlasLoot.db.profile.LootBrowserStyle ) then
-        AtlasLoot.db.profile.LootBrowserStyle = 1;
-    end
     --Set visual style for the loot browser
     if( not AtlasLoot.db.profile.CraftingLink ) then
         AtlasLoot.db.profile.CraftingLink = 1;
@@ -269,28 +210,9 @@ function AtlasLoot_OnVariablesLoaded()
 	else
 		AtlasLootItemsFrame_Back:SetTexture(0, 0, 0, 0.65);
 	end
-	--If Atlas is installed, set up for Atlas
-	if ( Hooked_Atlas_Refresh ) then
-		--If a first time user, set up options
-		if( (AtlasLoot.db.profile.AtlasLootVersion == nil) or (tonumber(AtlasLoot.db.profile.AtlasLootVersion) < 40500)) then
-			AtlasLoot.db.profile.SafeLinks = true;
-			AtlasLoot.db.profile.AllLinks = false;
-			AtlasLoot.db.profile.AtlasLootVersion = VERSION_MAJOR..VERSION_MINOR..VERSION_BOSSES;
-			StaticPopup_Show ("ATLASLOOT_SETUP");
-		end
-		--If not the expected Atlas version, nag the user once
-		if( AtlasLoot.db.profile.AtlasType == "Unknown" and AtlasLoot.db.profile.AtlasNaggedVersion ~= ATLAS_VERSION ) then
-            StaticPopup_Show ("ATLASLOOT_OLD_ATLAS");
-            AtlasLoot.db.profile.AtlasNaggedVersion = ATLAS_VERSION;
-		end
-        if AtlasLoot.db.profile.AtlasType == "Preview" then
-            AtlasLootBossButtons = AtlasLootNewBossButtons;
-        end
-		Hooked_Atlas_Refresh();
-	else
-		--If we are not using Atlas, keep the items frame out of the way
-		AtlasLootItemsFrame:Hide();
-	end
+
+	AtlasLootItemsFrame:Hide();
+
 	--Check and migrate old WishList entry format to the newer one
 	if(((AtlasLootCharDB.AtlasLootVersion == nil) or (tonumber(AtlasLootCharDB.AtlasLootVersion) < 40301)) and AtlasLootCharDB and AtlasLootCharDB["WishList"] and #AtlasLootCharDB["WishList"]~=0) then
 		--Check if we really need to do a migration since it will load all modules
@@ -617,6 +539,7 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame, tablenum)
 				IDfound = AL_FindId(dataSource[dataID][tablenum][i][2], ItemindexID) or dataSource[dataID][tablenum][i][2];
 				if string.sub(IDfound, 1, 1) == "s" then
 					isItem = false;
+					IDfound = AL_FindId(dataSource[dataID][tablenum][i][2], ItemindexID) or dataSource[dataID][tablenum][i][2];
 				else
 					isItem = true;
 				end
@@ -722,11 +645,9 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame, tablenum)
 				extraFrame:SetText(extra);
 				extraFrame:Show();
 				--For convenience, we store information about the objects in the objects so that it can be easily accessed later
-				if((string.sub(IDfound, 1, 1) == "s") and (AtlasLoot.db.profile.CraftingLink ~= 1) and (tonumber(dataSource[dataID][tablenum][i][3]))) then
-                    itemButton.itemID = dataSource[dataID][tablenum][i][3];
-                    itemButton.spellitemID = dataSource[dataID][tablenum][i][3];
-				elseif ((string.sub(IDfound, 1, 1) == "s") and notPattern == true and (tonumber(dataSource[dataID][tablenum][i][3]))) then
-                    itemButton.itemID = dataSource[dataID][tablenum][i][3];
+				if((string.sub(IDfound, 1, 1) == "s") and (ItemindexID ~= "Pattern") and (tonumber(dataSource[dataID][tablenum][i][3]))) then
+                    IDfound = AL_FindId(tonumber(dataSource[dataID][tablenum][i][3]), ItemindexID) or tonumber(dataSource[dataID][tablenum][i][3]);
+					itemButton.itemID = IDfound;
                     itemButton.spellitemID = dataSource[dataID][tablenum][i][3];
 				else
 					itemButton.itemID = IDfound;
@@ -745,10 +666,10 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame, tablenum)
 				    itemButton.storeID = IDfound;
                     itemButton.dressingroomID = IDfound;
                 else
-				    itemButton.iteminfo.idcore = dataSource[dataID][tablenum][i][3];
-					itemButton.iteminfo.icontexture = GetItemIcon(dataSource[dataID][tablenum][i][3]);
-                    itemButton.storeID = dataSource[dataID][tablenum][i][3];
-                    itemButton.dressingroomID = dataSource[dataID][tablenum][i][3];
+				    itemButton.iteminfo.idcore = IDfound;
+					itemButton.iteminfo.icontexture = GetItemIcon(IDfound);
+                    itemButton.storeID = IDfound;
+                    itemButton.dressingroomID = IDfound;
 				end
                 if dataSource[dataID][tablenum][i][5] then
                     itemButton.desc = dataSource[dataID][tablenum][i][5];
@@ -861,22 +782,11 @@ If no pFrame is specified, the Atlas Frame is used if Atlas is installed.
 ]]
 function AtlasLoot_SetItemInfoFrame(pFrame)
 	if ( pFrame ) then
-		--If a pFrame is specified, use it
-		if(pFrame==AtlasFrame and AtlasFrame) then
-			AtlasLootItemsFrame:ClearAllPoints();
-			AtlasLootItemsFrame:SetParent(AtlasFrame);
-			AtlasLootItemsFrame:SetPoint("TOPLEFT", "AtlasFrame", "TOPLEFT", 18, -84);
-		else
-			AtlasLootItemsFrame:ClearAllPoints();
-			AtlasLootItemsFrame:SetParent(pFrame[2]);
-			AtlasLootItemsFrame:ClearAllPoints();
-			AtlasLootItemsFrame:SetPoint(pFrame[1], pFrame[2], pFrame[3], pFrame[4], pFrame[5]);
-		end
-	elseif ( AtlasFrame ) then
-		--If no pFrame is specified and Atlas is installed, anchor in Atlas
+		--Load pFrame
 		AtlasLootItemsFrame:ClearAllPoints();
-		AtlasLootItemsFrame:SetParent(AtlasFrame);
-		AtlasLootItemsFrame:SetPoint("TOPLEFT", "AtlasFrame", "TOPLEFT", 18, -84);
+		AtlasLootItemsFrame:SetParent(pFrame[2]);
+		AtlasLootItemsFrame:ClearAllPoints();
+		AtlasLootItemsFrame:SetPoint(pFrame[1], pFrame[2], pFrame[3], pFrame[4], pFrame[5]);
 	else
 		--Last resort, dump the items frame in the middle of the screen
 		AtlasLootItemsFrame:ClearAllPoints();
@@ -884,28 +794,6 @@ function AtlasLoot_SetItemInfoFrame(pFrame)
 		AtlasLootItemsFrame:SetPoint("CENTER", "UIParent", "CENTER", 0, 0);
 	end
 	AtlasLootItemsFrame:Show();
-end
-
---[[
-AtlasLootItemsFrame_OnCloseButton:
-Called when the close button on the item frame is clicked
-]]
-function AtlasLootItemsFrame_OnCloseButton()
-	--Set no loot table as currently selected
-	AtlasLootItemsFrame.activeBoss = nil;
-	--Fix the boss buttons so the correct icons are displayed
-    if AtlasFrame and AtlasFrame:IsVisible() then
-        if ATLAS_CUR_LINES then
-            for i=1,ATLAS_CUR_LINES do
-                if getglobal("AtlasBossLine"..i.."_Selected"):IsVisible() then
-                    getglobal("AtlasBossLine"..i.."_Selected"):Hide();
-                    getglobal("AtlasBossLine"..i.."_Loot"):Show();
-                end
-            end
-        end
-    end
-	--Hide the item frame
-	AtlasLootItemsFrame:Hide();
 end
 
 --[[
@@ -1118,7 +1006,7 @@ Querys all valid items on the current loot page.
 function AtlasLoot_QueryLootPage()
     for i = 1, 30, 1 do
         button = getglobal("AtlasLootItem_"..i);
-        queryitem = button.itemID;
+        local queryitem = button.itemID;
         if (queryitem) and (queryitem ~= nil) and (queryitem ~= "") and (queryitem ~= 0) and (string.sub(queryitem, 1, 1) ~= "s") then
 			local item = Item:CreateFromID(queryitem);
 			item:ContinueOnLoad(function(itemId)
