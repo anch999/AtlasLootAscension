@@ -440,7 +440,7 @@ function AtlasLoot:CreateToken(dataID)
 	if (AtlasLoot_TokenData[orgID] == nil) then
 		AtlasLoot_TokenData[orgID] = {
 			Name = itemName;
-			Type = AtlasLoot_Difficulty.Ascended;
+			Type = "ClassicRaid";
 			Back = true;
 			NoSubt = true;
 		};
