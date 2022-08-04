@@ -566,7 +566,7 @@ function AtlasLoot:AdvancedSearch(Text)
         advSearchString = AppendSearchString(advSearchString, "dif=" .. AtlasLoot_AdvSearchOptions["difficulty"]);
     end
 
-    if(AtlasLootDefaultFrame_AdvancedSearchPanel_LevelToggle:GetChecked()) then
+    if(not AtlasLootDefaultFrame_AdvancedSearchPanel_LevelToggle:GetChecked()) then
         if (GetTextByName("LevelMin") and GetTextByName("LevelMin") ~= "") then
             advSearchString = AppendSearchString(advSearchString, "minlvl>=" .. GetTextByName("LevelMin"));
         end
@@ -580,11 +580,11 @@ function AtlasLoot:AdvancedSearch(Text)
     end
 
     if (GetTextByName("iLevelMin") and GetTextByName("iLevelMin") ~= "") then
-        advSearchString = AppendSearchString(advSearchString, "ilvl>=" .. GetTextByName("ILevelMin"));
+        advSearchString = AppendSearchString(advSearchString, "ilvl>=" .. GetTextByName("iLevelMin"));
     end
 
     if (GetTextByName("iLevelMax") and GetTextByName("iLevelMax") ~= "") then
-        advSearchString = AppendSearchString(advSearchString, "ilvl<=" .. GetTextByName("ILevelMax"));
+        advSearchString = AppendSearchString(advSearchString, "ilvl<=" .. GetTextByName("iLevelMax"));
     end
 
     for i = 1, ACTIVE_ARGUMENT, 1 do
