@@ -1893,7 +1893,7 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
 			{ 11, 28773, "", "=q4=Gorehowl", "=ds=#h2#, #w1#", "", "12.63%"};
 			{ 12, 28771, "", "=q4=Light's Justice", "=ds=#h3#, #w6#", "", "11.17%"};
 			{ 13, 28772, "", "=q4=Sunfury Bow of the Phoenix", "=ds=#w2#", "", "9.97%"};
-			{ 16, 29761, "", "=q4=Helm of the Fallen Defender", "=ds=#tt4#", "", "100%", "=LT=T5HEAD"};
+			{ 16, 29761, "", "=q4=Helm of the Fallen Defender", "=ds=#tt4#", "", "100%", "=LT=T4HEAD"};
 			{ 18, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 			{ 20, 499438, "", "=q4=Smoldering Emberwyrm", "=ds=#e12#", [AtlasLoot_Difficulty.MIN_DIF] = AtlasLoot_Difficulty.Heroic, "" };
 		};

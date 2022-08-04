@@ -117,7 +117,6 @@ AtlasLoot_MenuList = {
 	"ARENA4SET",
 };
 
-
 -- Popup Box for first time users
 StaticPopupDialogs["ATLASLOOT_SETUP"] = {
   text = AL["Welcome to Atlasloot Enhanced.  Please take a moment to set your preferences."],
@@ -396,6 +395,7 @@ function AtlasLoot_OnLoad()
 		AtlasLoot_Expac = xpaclist[GetAccountExpansionLevel()+1];
 	end
 	getExpac();
+	AtlasLoot:GenerateTokenTables() 
 
 end
 
@@ -407,6 +407,17 @@ function AtlasLoot:CleandataID(newID, listnum)
 	return newID;
 end
 
+function AtlasLoot:GenerateTokenTables() 
+	local Tiers = {"T1", "T2", "T2.5", "T3", "T4", "T5", "T6"};
+	local Slots = {"HEAD", "SHOULDERS", "CHEST", "WRIST", "HAND", "WAIST", "LEGS", "FEET", "FINGER"};
+
+	for v = 1, #Tiers do
+		for k = 1, #Slots do
+			AtlasLoot:CreateToken(Tiers[v]..Slots[k]);
+		end
+	end
+end
+
 --Creates tables for raid tokens from the collections tables
 function AtlasLoot:CreateToken(dataID)
 	local itemType, slotType, itemName, itemType2
@@ -414,45 +425,44 @@ function AtlasLoot:CreateToken(dataID)
 	local orgID = dataID;
 	--list of item types to find
 	local names = { {"HEAD", "INVTYPE_HEAD", "Head"}, {"SHOULDER", "INVTYPE_SHOULDER", "Shoulders"}, {"CHEST", "INVTYPE_CHEST", "Chest", "INVTYPE_ROBE"}, {"WRIST", "INVTYPE_WRIST", "Wrists"}, {"HAND", "INVTYPE_HAND", "Hands"}, {"WAIST", "INVTYPE_WAIST", "Waist"}, {"LEGS", "INVTYPE_LEGS", "Legs"}, {"FEET", "INVTYPE_FEET", "Feet"}, {"FINGER", "INVTYPE_FINGER", "Rings"}};
-		--finds the item type to create a list of
-		for a, b in pairs(names) do
-			dataID = gsub(dataID, b[1], "");
-			slotType = gsub(orgID, dataID, "");
-			if slotType == b[1] then
-				itemType = b[2];
-				itemType2 = b[4];
-				itemName = b[3];
-			end
+	--finds the item type to create a list of
+	for a, b in pairs(names) do
+		dataID = gsub(dataID, b[1], "");
+		slotType = gsub(orgID, dataID, "");
+		if slotType == b[1] then
+			itemType = b[2];
+			itemType2 = b[4];
+			itemName = b[3];
+			break;
 		end
+	end
 	--Creates data set of the item type
-	AtlasLoot_TokenData[orgID] = {};
-	local newData = AtlasLoot_TokenData[orgID];
-		newData.Name = itemName;
-		newData.Type = AtlasLoot_Data[dataID].Type;
-		newData.Back = true;
-		newData.NoSubt = true;
-		newData[1] = {};
-		newData[1].Name = itemName;
-		--Adds all the items to the new data set
-		local keyNumber = AtlasLoot_GetNumOfRows(AtlasLoot_Data[dataID]);
-		local tableNumber;
-		for i, v in ipairs(AtlasLoot_Data[dataID]) do
-			tableNumber = AtlasLoot_GetNumOfRows(v);
-			for t, id in ipairs(v) do
-				local itemID = AL_FindId(id[2], ItemindexID);
+	if (AtlasLoot_TokenData[orgID] == nil) then
+		AtlasLoot_TokenData[orgID] = {
+			Name = itemName;
+			Type = AtlasLoot_Difficulty.Ascended;
+			Back = true;
+			NoSubt = true;
+		};
+	end
+
+	AtlasLoot_TokenData[orgID][1] = {
+		Name = itemName;
+	};
+
+	for _, t in ipairs(AtlasLoot_Data[dataID]) do
+		for _, v in ipairs(t) do
+			if type(v) == "table" then
+				local itemID = v[2]; --AL_FindId(id[2], ItemindexID);
 				local item = Item:CreateFromID(itemID);
 				item:ContinueOnLoad(function(itemID)
-					if itemType == select(9,GetItemInfo(itemID)) or itemType2 == select(9,GetItemInfo(itemID)) then
-						local newTable = rawset(id, 1, i);
-						newTable = rawset(id, 5, v.Name);
-						table.insert(newData[1],newTable);
-					end
-					if i == keyNumber and tableNumber == t then
-						AtlasLoot_ShowItemsFrame(orgID, AtlasLoot_TokenData, AtlasLootItemsFrame.refresh[3], AtlasLootItemsFrame.refresh[4], 1)
+					if itemType == select(9, GetItemInfo(itemID)) or itemType2 == select(9, GetItemInfo(itemID)) then
+						table.insert(AtlasLoot_TokenData[orgID][1], {#AtlasLoot_TokenData[orgID][1] + 1, v[2], v[3], v[4], v[5]});
 					end
 				end)
 			end
 		end
+	end
 end
 
 --[[
@@ -501,7 +511,7 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame, tablenum)
 	-- Hide the Filter Check-Box
 	AtlasLootFilterCheck:Hide();
 
-	if dataID ~= "SearchResult" and dataID ~= "WishList" then
+	if dataID ~= "SearchResult" and dataID ~= "WishList" and dataSource ~= AtlasLoot_TokenData then
 		dataSource = AtlasLoot_Data;
 	end
 	if dataID == "SearchResult" then

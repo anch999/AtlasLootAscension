@@ -646,11 +646,11 @@ local function DoSearch(searchText)
             AtlasLootCharDB["SearchResult"][tablenum] = {Name = "Page "..tablenum};
         end
         if count == 30 then
-            table.insert(AtlasLootCharDB["SearchResult"][tablenum], {count, itemId, itemType, itemName, lootPage, "", "", dataID .. "|" .. "\"\"", itemIdBackup, [AtlasLoot_Difficulty.MAX_DIF] = difCap});
+            table.insert(AtlasLootCharDB["SearchResult"][tablenum], {count, itemId, itemType, itemName, lootPage, "", "", dataID .. "|" .. "AtlasLoot_Data", itemIdBackup, [AtlasLoot_Difficulty.MAX_DIF] = difCap});
             tablenum = tablenum + 1
             count = 1;
         else
-            table.insert(AtlasLootCharDB["SearchResult"][tablenum], {count, itemId, itemType, itemName, lootPage, "", "", dataID .. "|" .. "\"\"", itemIdBackup, [AtlasLoot_Difficulty.MAX_DIF] = difCap});
+            table.insert(AtlasLootCharDB["SearchResult"][tablenum], {count, itemId, itemType, itemName, lootPage, "", "", dataID .. "|" .. "AtlasLoot_Data", itemIdBackup, [AtlasLoot_Difficulty.MAX_DIF] = difCap});
             count = count + 1;
         end
     end

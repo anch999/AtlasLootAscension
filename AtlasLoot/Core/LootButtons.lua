@@ -248,7 +248,7 @@ function AtlasLootItem_OnClick(arg1)
         elseif((AtlasLootItemsFrame.refresh[1] == "SearchResult") and this.sourcePage) then
             local dataID, dataSource = strsplit("|", this.sourcePage);
             if(dataID and dataSource) then
-                AtlasLoot_ShowItemsFrame(dataID, dataSource, dataSource[dataID].Name, AtlasLootItemsFrame.refresh[4], 1);
+                AtlasLoot_ShowItemsFrame(dataID, AtlasLoot_Data, dataID, AtlasLootItemsFrame.refresh[4], 1);
             end
         elseif (arg1=="LeftButton") and this.sourcePage ~= nil then
            --Create token table if there isnt one
@@ -256,7 +256,7 @@ function AtlasLootItem_OnClick(arg1)
                 AtlasLoot:CreateToken(this.sourcePage)
             end
             --Show token table
-            AtlasLoot_ShowItemsFrame(this.sourcePage, AtlasLoot_TokenData,this.sourcePage, pFrame,1);
+            AtlasLoot_ShowItemsFrame(this.sourcePage, AtlasLoot_TokenData, "", AtlasLootItemsFrame.refresh[4], 1);
         end
     else
         if IsShiftKeyDown() then
