@@ -469,7 +469,7 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame, tablenum)
 	local itemName, itemLink, itemQuality, itemLevel, itemType, itemSubType, itemCount, itemEquipLoc, itemTexture, itemColor;
 	local iconFrame, nameFrame, extraFrame, itemButton;
 	local text, extra;
-	local isItem;
+	local isValid, isItem, toShow, IDfound;
 	local spellName, spellIcon;
 
 	SearchPrevData = {dataID, dataSource, boss, pFrame, tablenum};
@@ -501,6 +501,9 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame, tablenum)
 	-- Hide the Filter Check-Box
 	AtlasLootFilterCheck:Hide();
 
+	if dataID ~= "SearchResult" and dataID ~= "WishList" then
+		dataSource = AtlasLoot_Data;
+	end
 	if dataID == "SearchResult" then
 		dataSource = AtlasLootCharDB;
     end
@@ -523,45 +526,62 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame, tablenum)
         getglobal("AtlasLootItem_"..i).spellitemID = 0;
 	end
 
+	local function getProperItemConditionals(item)
+		isValid = false; 
+		toShow = true; 
+		isItem = false;
+		local itemDif = ItemindexID;
+
+		if(item ~= nil and item ~= "") then
+			IDfound = item[2];
+			isValid = true;
+			if type(ItemindexID) == "string" then
+				IDfound = item[2];
+				toShow = true;
+			else
+				if(item[AtlasLoot_Difficulty.MIN_DIF]) then
+					if item[AtlasLoot_Difficulty.MIN_DIF] > itemDif then 
+						toShow = false; 
+					end
+				end
+				IDfound = AL_FindId(item[2], min(AtlasLoot_Difficulty:getMaxDifficulty(dataSource[dataID].Type), itemDif)) or item[2];
+			end
+
+			if string.sub(IDfound, 1, 1) == "s" then
+				IDfound = AL_FindId(item[2], itemDif) or item[2];
+			else
+				isItem = true;
+			end
+
+			if isItem and toShow then
+				--Sets ItemindexID to normal(2) if it is nil for min/max difficulties.
+				if not tonumber(itemDif) then itemDif = AtlasLoot_Difficulty.Normal end;
+
+				--Checks if an item has a Maximum difficulty, this is to correct some items that have an entry for higher difficulties then they really do
+				if item[AtlasLoot_Difficulty.MAX_DIF] then
+					if tonumber(item[AtlasLoot_Difficulty.MAX_DIF]) < itemDif then itemDif = item[AtlasLoot_Difficulty.MAX_DIF] end;
+				end
+				--If something was found in itemID database show that if not show default table item
+				IDfound = AL_FindId(item[2], itemDif) or item[2];
+
+				if ItemindexID ~= "" and dataID == "SearchResult" then
+					IDfound = AL_FindId(item[9], itemDif) or item[2];
+				end
+			end
+		end
+
+		return isValid, isItem, toShow, IDfound
+	end
+
 	-- Create the loottable
 	if (dataID == "SearchResult") or (dataID == "WishList") or dataSource[dataID][tablenum] then
 		--Iterate through each item object and set its properties
 		for i = 1, 30, 1 do
-			local toShow = true;
-			local itemDif = ItemindexID;
-		--[[ 	if(dataSource[dataID][tablenum][i][AtlasLoot_Difficulty.MIN_DIF]) then
-				if tonumber(dataSource[dataID][tablenum][i][AtlasLoot_Difficulty.MIN_DIF]) < itemDif then toShow = false; end
-			end ]]
 			--Check for a valid object (that it exists, and that it has a name
-			if(dataSource[dataID][tablenum][i] ~= nil and dataSource[dataID][tablenum][i][4] ~= "") and toShow then
-				
-				if type(ItemindexID) == "string" then
-					IDfound = dataSource[dataID][tablenum][i][2];
-				else
-					IDfound = AL_FindId(dataSource[dataID][tablenum][i][2], min(AtlasLoot_Difficulty:getMaxDifficulty(dataSource[dataID].Type), itemDif)) or dataSource[dataID][tablenum][i][2];
-				end
-				if string.sub(IDfound, 1, 1) == "s" then
-					isItem = false;
-					IDfound = AL_FindId(dataSource[dataID][tablenum][i][2], itemDif) or dataSource[dataID][tablenum][i][2];
-				else
-					isItem = true;
-				end
-
+			getProperItemConditionals(dataSource[dataID][tablenum][i]);
+			
+			if isValid and toShow then
 				if isItem then
-					--Sets ItemindexID to normal(2) if it is nil for min/max difficulties.
-					if not tonumber(itemDif) then itemDif = AtlasLoot_Difficulty.Normal end;
-
-					--Checks if an item has a Maximum difficulty, this is to correct some items that have an entry for higher difficulties then they really do
-					if dataSource[dataID][tablenum][i][AtlasLoot_Difficulty.MAX_DIF] then
-						if tonumber(dataSource[dataID][tablenum][i][AtlasLoot_Difficulty.MAX_DIF]) < itemDif then itemDif = dataSource[dataID][tablenum][i][AtlasLoot_Difficulty.MAX_DIF] end;
-					end
-					--If something was found in itemID database show that if not show default table item
-					IDfound = AL_FindId(dataSource[dataID][tablenum][i][2], itemDif) or dataSource[dataID][tablenum][i][2];
-
-					if ItemindexID ~= "" and dataID == "SearchResult" then
-						IDfound = AL_FindId(dataSource[dataID][tablenum][i][9], itemDif) or dataSource[dataID][tablenum][i][2];
-					end
-
 					itemName, itemLink, itemQuality, itemLevel, itemMinLevel, itemType, itemSubType, itemCount, itemEquipLoc, itemTexture = GetItemInfo(IDfound);
 					--If the client has the name of the item in cache, use that instead.
 					--This is poor man's localisation, English is replaced be whatever is needed
@@ -807,42 +827,41 @@ dataID: Loot table dataID
 ]]
 function AtlasLoot_IsLootTableAvailable(dataSource)
 
-		local moduleName=nil;
+	local moduleName = nil;
+	moduleName = AtlasLoot_GetLODModule(dataSource);
 
-		moduleName = AtlasLoot_GetLODModule(dataSource);
-
-		if IsAddOnLoaded(moduleName) then
-			return true;
+	if IsAddOnLoaded(moduleName) then
+		return true;
+	else
+		LoadAddOn(moduleName);
+	--[[ 	if moduleName then
+			if not IsAddOnLoaded(moduleName) then
+				loaded, reason=LoadAddOn(moduleName);
+				if not loaded then
+					if (reason == "MISSING") or (reason == "DISABLED") then
+						DEFAULT_CHAT_FRAME:AddMessage(GREEN..AL["AtlasLoot"]..": "..ORANGE..AtlasLoot_TableNames[dataID][1]..WHITE..AL[" is unavailable, the following load on demand module is required: "]..ORANGE..moduleName);
+						return false;
+					else
+						DEFAULT_CHAT_FRAME:AddMessage(RED..AL["AtlasLoot Error!"].." "..WHITE..AL["Status of the following module could not be determined: "]..ORANGE..moduleName);
+						return false;
+					end
+				end
+			end
+			if AtlasLoot_Data[dataID] then
+				if ATLASLOOT_DEBUGMESSAGES then
+					DEFAULT_CHAT_FRAME:AddMessage(GREEN..AL["AtlasLoot"]..": "..ORANGE..moduleName..WHITE.." "..AL["sucessfully loaded."]);
+				end
+				collectgarbage("collect");
+				return true;
+			else
+				DEFAULT_CHAT_FRAME:AddMessage(RED..AL["AtlasLoot Error!"].." "..ORANGE..AtlasLoot_TableNames[dataID][1]..WHITE..AL[" could not be accessed, the following module may be out of date: "]..ORANGE..moduleName);
+				return false;
+			end
 		else
-			LoadAddOn(moduleName);
-		--[[ 	if moduleName then
-                if not IsAddOnLoaded(moduleName) then
-                    loaded, reason=LoadAddOn(moduleName);
-                    if not loaded then
-                        if (reason == "MISSING") or (reason == "DISABLED") then
-                            DEFAULT_CHAT_FRAME:AddMessage(GREEN..AL["AtlasLoot"]..": "..ORANGE..AtlasLoot_TableNames[dataID][1]..WHITE..AL[" is unavailable, the following load on demand module is required: "]..ORANGE..moduleName);
-                            return false;
-                        else
-                            DEFAULT_CHAT_FRAME:AddMessage(RED..AL["AtlasLoot Error!"].." "..WHITE..AL["Status of the following module could not be determined: "]..ORANGE..moduleName);
-                            return false;
-                        end
-                    end
-                end
-                if AtlasLoot_Data[dataID] then
-                    if ATLASLOOT_DEBUGMESSAGES then
-                        DEFAULT_CHAT_FRAME:AddMessage(GREEN..AL["AtlasLoot"]..": "..ORANGE..moduleName..WHITE.." "..AL["sucessfully loaded."]);
-                    end
-                    collectgarbage("collect");
-                    return true;
-                else
-                    DEFAULT_CHAT_FRAME:AddMessage(RED..AL["AtlasLoot Error!"].." "..ORANGE..AtlasLoot_TableNames[dataID][1]..WHITE..AL[" could not be accessed, the following module may be out of date: "]..ORANGE..moduleName);
-                    return false;
-                end
-            else
-                DEFAULT_CHAT_FRAME:AddMessage(RED..AL["AtlasLoot Error!"].." "..ORANGE..AL["Loot module returned as nil!"]);
-                return false;
-            end ]]
-		end
+			DEFAULT_CHAT_FRAME:AddMessage(RED..AL["AtlasLoot Error!"].." "..ORANGE..AL["Loot module returned as nil!"]);
+			return false;
+		end ]]
+	end
 end
 
 --[[
@@ -983,11 +1002,46 @@ function AtlasLoot_RefreshQuickLookButtons()
     end
 end
 
+
+function AtlasLoot_QueryLootPage()
+	local START = 1;
+	local MAX_BUTTONS = 30;
+	local COUNTED = 0;
+	local REFRESHED = false;
+	
+	local function queryNextItem(pos)
+		if pos > MAX_BUTTONS then return end;
+
+		local button = getglobal("AtlasLootItem_"..pos);
+        local queryitem = button.itemID;
+
+        if (queryitem) and (queryitem ~= nil) and (queryitem ~= "") and (queryitem ~= 0) and (string.sub(queryitem, 1, 1) ~= "s") then
+			local item = Item:CreateFromID(queryitem);
+			if not (item:GetInfo()) then
+				item:ContinueOnLoad(function(itemId)
+					COUNTED = COUNTED + 1;
+					if not REFRESHED and (COUNTED == MAX_BUTTONS) then
+						REFRESHED = true;
+						AtlasLoot_ShowItemsFrame(AtlasLootItemsFrame.refresh[1], AtlasLootItemsFrame.refresh[2], AtlasLootItemsFrame.refresh[3], AtlasLootItemsFrame.refresh[4], AtlasLootItemsFrame.refresh[5]);
+					end
+				end)
+			else
+				COUNTED = COUNTED + 1;
+			end
+		else
+			COUNTED = COUNTED + 1;
+        end
+		
+		queryNextItem(pos + 1); 
+	end
+	queryNextItem(START);
+end
+
 --[[ 
 AtlasLoot_QueryLootPage()
 Querys all valid items on the current loot page.
 ]]
-function AtlasLoot_QueryLootPage()
+function AtlasLoot_QueryLootPageOLD()
 local lastitem
 	for t = 1, 30, 1 do
 		local xbutton = getglobal("AtlasLootItem_"..t);
