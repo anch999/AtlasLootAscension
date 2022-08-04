@@ -499,7 +499,8 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame, tablenum)
 
 	if dataID ~= "SearchResult" and dataID ~= "WishList" then
 		dataSource = AtlasLoot_Data;
-	else
+	end
+	if dataID == "SearchResult" then
 		dataSource = AtlasLootCharDB;
     end
 
@@ -518,8 +519,12 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame, tablenum)
 	if (dataID == "SearchResult") or (dataID == "WishList") or dataSource[dataID][tablenum] then
 		--Iterate through each item object and set its properties
 		for i = 1, 30, 1 do
+			local toShow = true;
+			if(dataSource[dataID][tablenum][i][AtlasLoot_Difficulty.MIN_DIF]) then
+				if tonumber(dataSource[dataID][tablenum][i][AtlasLoot_Difficulty.MIN_DIF]) < itemDif then toShow = false; end
+			end
 			--Check for a valid object (that it exists, and that it has a name
-			if(dataSource[dataID][tablenum][i] ~= nil and dataSource[dataID][tablenum][i][4] ~= "") then
+			if(dataSource[dataID][tablenum][i] ~= nil and dataSource[dataID][tablenum][i][4] ~= "") and toShow then
 				local itemDif = ItemindexID;
 				if type(ItemindexID) == "string" then
 					IDfound = dataSource[dataID][tablenum][i][2];
