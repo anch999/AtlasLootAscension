@@ -13,8 +13,7 @@
     <Script file="TextParsing.lua"/>
     <Script file="Options.lua"/>
     <Script file="LootButtons.lua"/>
-    <Script file="HooksandAPI.lua"/>
-    <!-- <Script file="AtlasIntegration.lua"/> -->
+    <Script file="Atlasloot_Maps.lua"/>
     <Script file="Launchers.lua"/>
 	<Script file="AtlasLoot.lua"/>
 	<Script file="WishList.lua"/>

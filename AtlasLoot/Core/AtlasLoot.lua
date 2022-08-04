@@ -472,7 +472,6 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame, tablenum)
 	local itemName, itemLink, itemQuality, itemLevel, itemType, itemSubType, itemCount, itemEquipLoc, itemTexture, itemColor;
 	local iconFrame, nameFrame, extraFrame, itemButton;
 	local text, extra;
-	local wlPage, wlPageMax = 1, 1;
 	local isItem;
 	local spellName, spellIcon;
 
@@ -522,7 +521,11 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame, tablenum)
 			--Check for a valid object (that it exists, and that it has a name
 			if(dataSource[dataID][tablenum][i] ~= nil and dataSource[dataID][tablenum][i][4] ~= "") then
 				local itemDif = ItemindexID;
-				IDfound = AL_FindId(dataSource[dataID][tablenum][i][2], min(AtlasLoot_Difficulty:getMaxDifficulty(dataSource[dataID].Type), itemDif)) or dataSource[dataID][tablenum][i][2];
+				if type(ItemindexID) == "string" then
+					IDfound = dataSource[dataID][tablenum][i][2];
+				else
+					IDfound = AL_FindId(dataSource[dataID][tablenum][i][2], min(AtlasLoot_Difficulty:getMaxDifficulty(dataSource[dataID].Type), itemDif)) or dataSource[dataID][tablenum][i][2];
+				end
 				if string.sub(IDfound, 1, 1) == "s" then
 					isItem = false;
 					IDfound = AL_FindId(dataSource[dataID][tablenum][i][2], itemDif) or dataSource[dataID][tablenum][i][2];
@@ -988,7 +991,9 @@ function AtlasLoot_QueryLootPage()
 			local item = Item:CreateFromID(queryitem);
 			if not (item:GetInfo()) then
 				item:ContinueOnLoad(function(itemId)
-					AtlasLoot:callShowloot();
+					if i == 30 then
+						AtlasLoot:callShowloot();
+					end
 				end)
 			end
         end

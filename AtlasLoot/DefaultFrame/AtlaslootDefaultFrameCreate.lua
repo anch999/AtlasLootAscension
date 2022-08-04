@@ -1,7 +1,7 @@
 local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot");
 
     --Main AtlasLoot Frame
-local mainframe = CreateFrame("FRAME", "AtlasLootDefaultFrame", UIParent, nil);
+local mainframe = CreateFrame("FRAME", "AtlasLootDefaultFrame", UIParent);
    mainframe:SetPoint("CENTER",0,0);
    mainframe:SetSize(880,690);
    mainframe:EnableMouse(true);
@@ -21,7 +21,6 @@ local mainframe = CreateFrame("FRAME", "AtlasLootDefaultFrame", UIParent, nil);
        titleSize = 32,
    });
    mainframe:SetScript("OnShow", function()
-    getglobal("AtlasLootDefaultFrame_Notice"):SetText(AL["This is a loot browser only.  To view maps as well, install either Atlas or Alphamap."]);
     AtlasLootDefaultFrame_OnShow();
     end);
     mainframe:SetScript("OnHide", function() AtlasLootDefaultFrame_OnHide() end)
@@ -133,11 +132,18 @@ local expansionmenubtn = CreateFrame("Button", "AtlasLootDefaultFrame_ExpansionM
 local lootbground = CreateFrame("Frame", "AtlasLootDefaultFrame_LootBackground", AtlasLootDefaultFrame);
         lootbground:SetSize(540,515);
         lootbground:SetPoint("BOTTOMLEFT", AtlasLootDefaultFrame, "BOTTOMLEFT",40,90);
+        lootbground:SetFrameStrata("HIGH");
         lootbground.Back = lootbground:CreateTexture("AtlasLootDefaultFrame_LootBackground_Back", "BACKGROUND");
         lootbground.Back:SetAllPoints();
         lootbground.Back:SetPoint("TOPLEFT","AtlasLootDefaultFrame_LootBackground","TOPLEFT");
         lootbground.Back:SetPoint("BOTTOMRIGHT","AtlasLootDefaultFrame_LootBackground","BOTTOMRIGHT");
-        lootbground:SetBackdropColor(0, 0, 0.5, 0.5);
+
+    --Atlas Map
+local map = CreateFrame("Frame", "AtlasLootDefaultFrame_Map", AtlasLootDefaultFrame);
+        map:SetSize(540,515);
+        map:SetPoint("BOTTOMLEFT", AtlasLootDefaultFrame, "BOTTOMLEFT",40,90);
+        map:SetFrameStrata("HIGH");
+        map:Hide();
 
     --Wish List Button
 local wishbtn = CreateFrame("Button", "AtlasLootDefaultFrameWishListButton", AtlasLootDefaultFrame, "OptionsButtonTemplate");
@@ -184,21 +190,22 @@ local function presetcreate(preset,num)
 
 end
     --QuickLook Button 1
+local presetsize = 3.75;
 local preset1 = CreateFrame("Button", "AtlasLootDefaultFrame_Preset1", AtlasLootDefaultFrame, "OptionsButtonTemplate");
     presetcreate(preset1,1);
-    preset1:SetPoint("LEFT", AtlasLootDefaultFrameWishListButton, "RIGHT", 5, 0);
+    preset1:SetPoint("LEFT", AtlasLootDefaultFrameWishListButton, "RIGHT", presetsize, 0);
     --QuickLook Button 2
 local preset2 = CreateFrame("Button", "AtlasLootDefaultFrame_Preset2", AtlasLootDefaultFrame, "OptionsButtonTemplate");
     presetcreate(preset2,2);
-    preset2:SetPoint("LEFT", "AtlasLootDefaultFrame_Preset1", "RIGHT", 5, 0);
+    preset2:SetPoint("LEFT", "AtlasLootDefaultFrame_Preset1", "RIGHT", presetsize, 0);
     --QuickLook Button 3
 local preset3 = CreateFrame("Button", "AtlasLootDefaultFrame_Preset3", AtlasLootDefaultFrame, "OptionsButtonTemplate");
     presetcreate(preset3,3);
-    preset3:SetPoint("LEFT", "AtlasLootDefaultFrame_Preset2", "RIGHT", 5, 0);
+    preset3:SetPoint("LEFT", "AtlasLootDefaultFrame_Preset2", "RIGHT", presetsize, 0);
     --QuickLook Button 4
 local preset4 = CreateFrame("Button", "AtlasLootDefaultFrame_Preset4", AtlasLootDefaultFrame, "OptionsButtonTemplate");
     presetcreate(preset4,4);
-    preset4:SetPoint("LEFT", "AtlasLootDefaultFrame_Preset3", "RIGHT", 5, 0);
+    preset4:SetPoint("LEFT", "AtlasLootDefaultFrame_Preset3", "RIGHT", presetsize, 0);
     
     --Search Edit Box
 local searchbox = CreateFrame("EditBox","AtlasLootDefaultFrameSearchBox",AtlasLootDefaultFrame,"InputBoxTemplate");
@@ -439,12 +446,9 @@ subtableFrame.rows = rows2
 -- Map Button
 local mapbtn = CreateFrame("Button","AtlasLootDefaultFrame_MapButton", AtlasLootDefaultFrame,"UIPanelButtonTemplate2");
     mapbtn:SetSize(95,32);
-    mapbtn:SetPoint("BOTTOMLEFT",Atlasloot_SubTableFrame,0,-30);
+    mapbtn:SetPoint("BOTTOMLEFT",Atlasloot_SubTableFrame,0,-27.5);
     mapbtn:SetScript("OnShow", function(self)
         self:SetText("Map");
         self:SetFrameLevel( (self:GetParent()):GetFrameLevel() + 1 );
     end)
-    mapbtn:SetScript("OnClick", function()
-        AtlasLoot_AdvancedSearchShow();
-        AtlasLootDefaultFrameSearchBox:ClearFocus();
-    end)
+    mapbtn:SetScript("OnClick", function() AtlasLoot_MapOnShow(); end)

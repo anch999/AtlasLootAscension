@@ -1664,6 +1664,7 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
 	AtlasLoot_Data["Karazhan"] = {
 			Name = "Karazhan";
 			Type = "BCRaid";
+			Map = "KarazhanStart";
 			Loadfirst = 3;
 		{
 			Name = "Charred Bone Fragment ("..AL["Quest Item"]..")";
