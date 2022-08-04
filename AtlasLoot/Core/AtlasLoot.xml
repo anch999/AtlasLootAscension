@@ -8,6 +8,7 @@
 	<Script file="ItemIDsDatabaseFixes.lua"/>
 
 	<!--Default Files-->
+	<Script file="AtlasLoot.lua"/>
 	<Script file="Filter.lua"/>
     <Script file="ExtraText.lua"/>
     <Script file="TextParsing.lua"/>
@@ -15,7 +16,6 @@
     <Script file="LootButtons.lua"/>
     <Script file="Atlasloot_Maps.lua"/>
     <Script file="Launchers.lua"/>
-	<Script file="AtlasLoot.lua"/>
 	<Script file="WishList.lua"/>
 	<Script file="SearchAdvanced.lua"/>
     <Script file="Search.lua"/>

@@ -112,6 +112,7 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
 	AtlasLoot_Data["AuchCrypts"] = {
 			Name = BabbleZone["Auchenai Crypts"];
 			Type = "BCDungeon";
+			Map = "AuchAuchenaiCrypts";
 		{
 			Name = BabbleBoss["Shirrak the Dead Watcher"];
 			{ 1, 0, "INV_Box_01", "=q6=#j1#", ""};
@@ -175,6 +176,7 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
 	AtlasLoot_Data["AuchManaTombs"] = {
 			Name = BabbleZone["Mana-Tombs"];
 			Type = "BCDungeon";
+			Map = "AuchManaTombs";
 		{
 			Name = BabbleBoss["Pandemonius"];
 			{ 1, 0, "INV_Box_01", "=q6=#j1#", ""};
@@ -280,6 +282,7 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
 	AtlasLoot_Data["AuchSethekk"] = {
 			Name = BabbleZone["Sethekk Halls"];
 			Type = "BCDungeon";
+			Map = "AuchSethekkHalls";
 		{
 			Name = BabbleBoss["Darkweaver Syth"];
 			{ 1, 27919, "", "=q3=Light-Woven Slippers", "=ds=#s12#, #a1#", "", "13.90%"};
@@ -345,6 +348,7 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
 	AtlasLoot_Data["AuchShadowLab"] = {
 			Name = BabbleZone["Shadow Labyrinth"];
 			Type = "BCDungeon";
+			Map = "AuchShadowLabyrinth";
 		{
 			Name = BabbleBoss["Ambassador Hellmaw"];
 			{ 1, 27889, "", "=q3=Jaedenfire Gloves of Annihilation", "=ds=#s9#, #a1#", "", "13.58%"};
@@ -448,6 +452,7 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
 	AtlasLoot_Data["BlackTemple"] = {
 			Name = BabbleZone["Black Temple"];
 			Type = "BCRaid";
+			Map = "BlackTempleStart";
 		{
 			Name = BabbleBoss["High Warlord Naj'entus"];
 			{ 1, 32239, "", "=q4=Slippers of the Seacaller", "=ds=#s12#, #a1#", "", "15%"};
@@ -653,6 +658,7 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
 	AtlasLoot_Data["CoTOldHillsbrad"] = {
 			Name = BabbleZone["Old Hillsbrad Foothills"];
 			Type = "BCDungeon";
+			Map = "CoTOldHillsbrad";
 		{
 			Name = BabbleBoss["Lieutenant Drake"];
 			{ 1, 27423, "", "=q3=Cloak of Impulsiveness", "=ds=#s4#", "", "19.68%"};
@@ -738,7 +744,6 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
 			{ 17, 25725, "", "=q1=Pattern: Riding Crop", "=ds=#p7# (350)"};
 			{ 19, 0, "INV_Box_01", "=q6="..AL["Aged Dalaran Wizard"], "=q5="..BabbleZone["Old Hillsbrad Foothills"]};
 			{ 20, 22539, "", "=q1=Formula: Enchant Shield - Intellect", "=ds=#p4# (325)"};
-			Type = "BCDungeon";
 		};
 	};
 
@@ -753,6 +758,7 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
 	AtlasLoot_Data["CoTBlackMorass"] = {
 			Name = BabbleZone["The Black Morass"];
 			Type = "BCDungeon";
+			Map = "CoTBlackMorass";
 		{
 			Name = BabbleBoss["Chrono Lord Deja"];
 			{ 1, 27988, "", "=q3=Burnoose of Shifting Ages", "=ds=#s4#", "", "13.87%"};
@@ -819,6 +825,7 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
 	AtlasLoot_Data["CoTHyjal"] = {
 			Name = BabbleZone["Hyjal Summit"];
 			Type = "BCRaid";
+			Map = "CoTHyjal";
 		{
 			Name = BabbleBoss["Rage Winterchill"];
 			{ 1, 30871, "", "=q4=Bracers of Martyrdom", "=ds=#s8#, #a1#", "", "17%"};
@@ -931,6 +938,7 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
 	AtlasLoot_Data["CFRSlavePens"] = {
 			Name = BabbleZone["The Slave Pens"];
 			Type = "BCDungeon";
+			Map = "CFRTheSlavePens";
 		{
 			Name = BabbleBoss["Mennu the Betrayer"];
 			{ 1, 0, "INV_Box_01", "=q6=#j1#", ""};
@@ -1013,6 +1021,7 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
 	AtlasLoot_Data["CFRSteamvault"] = {
 			Name = BabbleZone["The Steamvault"];
 			Type = "BCDungeon";
+			Map = "CFRTheSteamvault";
 		{
 			Name = BabbleBoss["Hydromancer Thespia"];
 			{ 1, 27508, "", "=q3=Incanter's Gloves", "=ds=#s9#, #a1# (D3)", "", "17.09%"};
@@ -1087,6 +1096,7 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
 	AtlasLoot_Data["CFRUnderbog"] = {
 			Name = BabbleZone["The Underbog"];
 			Type = "BCDungeon";
+			Map = "CFRTheUnderbog";
 		{
 			Name = BabbleBoss["Hungarfen"];
 			{ 1, 0, "INV_Box_01", "=q6=#j1#", ""};
@@ -1126,9 +1136,6 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
 			{ 25, 27758, "", "=q3=Hydra-fang Necklace", "=ds=#s2#", "", "12.00%"};
 			{ 26, 27761, "", "=q3=Ring of the Shadow Deeps", "=ds=#s13#", "", "18.67%"};
 			{ 27, 27757, "", "=q3=Greatstaff of the Leviathan", "=ds=#h2#, #w9#", "", "16.00%"};
-			Prev = "CFRUnderHungarfen";
-			Next = "CFRUnderSwamplord";
-			Type = "BCDungeon";
 		};
 		{
 			Name = BabbleBoss["Swamplord Musel'ek"];
@@ -1191,7 +1198,8 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
 
 	AtlasLoot_Data["CFRSerpentshrine"] = {
 			Name = BabbleZone["Serpentshrine Cavern"];
-			Type = "BCRaid"; 
+			Type = "BCRaid";
+			Map = "CFRSerpentshrineCavern";
 		{
 			Name = BabbleBoss["Hydross the Unstable"];
 			{ 1, 30056, "", "=q4=Robe of Hateful Echoes", "=ds=#s5#, #a1#", "", "18%"};
@@ -1323,6 +1331,7 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
 	AtlasLoot_Data["GruulsLair"] = {
 			Name =  BabbleZone["Gruul's Lair"];
 			Type = "BCRaid";
+			Map = "GruulsLair";
 		{
 			Name = BabbleBoss["High King Maulgar"];
 			{ 1, 28797, "", "=q4=Brute Cloak of the Ogre-Magi", "#s4#", "", "8.39%"};
@@ -1365,6 +1374,7 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
 	AtlasLoot_Data["HCRamparts"] = {
 			Name = BabbleZone["Hellfire Ramparts"];
 			Type = "BCDungeon";
+			Map = "HCHellfireRamparts";
 		{
 			Name = BabbleBoss["Watchkeeper Gargolmar"];
 			{ 1, 0, "INV_Box_01", "=q6=#j1#", ""};
@@ -1469,6 +1479,7 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
 	AtlasLoot_Data["HCFurnace"] = {
 			Name = BabbleZone["The Blood Furnace"];
 			Type = "BCDungeon";
+			Map = "HCBloodFurnace";
 		{
 			Name = BabbleBoss["The Maker"];
 			{ 1, 0, "INV_Box_01", "=q6=#j1#", ""};
@@ -1546,6 +1557,7 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
 	AtlasLoot_Data["HCShatteredHalls"] = {
 			Name = BabbleZone["The Shattered Halls"];
 			Type = "BCDungeon";
+			Map = "HCTheShatteredHalls";
 		{
 			Name = BabbleBoss["Grand Warlock Nethekurse"];
 			{ 1, 24312, "", "=q4=Pattern: Spellstrike Hood", "=ds=#p8# (375)", "", "0.47%"};
@@ -1629,6 +1641,7 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
 	AtlasLoot_Data["HCMagtheridon"] = {
 			Name = "Magtheridon";
 			Type = "BCRaid";
+			Map = "HCMagtheridonsLair";
 		{
 			Name = "Magtheridon";
 			{ 1, 28777, "", "=q4=Cloak of the Pit Stalker", "=ds=#s4#"};
@@ -1912,6 +1925,7 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
 	AtlasLoot_Data["MagistersTerrace"] = {
 			Name = BabbleZone["Magisters' Terrace"];
 			Type = "BCDungeon";
+			Map = "MagistersTerrace";
 		{
 			Name = BabbleBoss["Selin Fireheart"];
 			{ 1, 0, "INV_Box_01", "=q6=#j1#", ""};
@@ -2008,6 +2022,7 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
 	AtlasLoot_Data["SunwellPlateau"] = {
 			Name = BabbleZone["Sunwell Plateau"];
 			Type = "BCRaid";
+			Map = "SunwellPlateau";
 		{
 			Name = BabbleBoss["Kalecgos"];
 			{ 1, 34170, "", "=q4=Pantaloons of Calming Strife", "=ds=#s11#, #a1#"};
@@ -2214,6 +2229,7 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
 	AtlasLoot_Data["TKArc"] = {
 			Name = BabbleZone["The Arcatraz"];
 			Type = "BCDungeon";
+			Map = "TempestKeepArcatraz";
 		{
 			Name = BabbleBoss["Zereketh the Unbound"];
 			{ 1, 28373, "", "=q3=Cloak of Scintillating Auras", "=ds=#s4#", "", "17.13%"};
@@ -2305,6 +2321,7 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
 	AtlasLoot_Data["TKBot"] = {
 			Name = BabbleZone["The Botanica"];
 			Type = "BCDungeon";
+			Map = "TempestKeepBotanica";
 		{
 			Name = BabbleBoss["Commander Sarannis"];
 			{ 1, 28301, "", "=q3=Syrannis' Mystic Sheen", "=ds=#s4#", "", "28.54%"};
@@ -2417,6 +2434,7 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
 	AtlasLoot_Data["TKMech"] = {
 			Name = BabbleZone["The Mechanar"];
 			Type = "BCDungeon";
+			Map = "TempestKeepMechanar";
 		{
 			Name = AL["Cache of the Legion"];
 			{ 1, 0, "INV_Box_01", "=q6="..AL["Cache of the Legion"], ""};
@@ -2494,6 +2512,7 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
 	AtlasLoot_Data["TKEye"] = {
 			Name = BabbleZone["The Eye"];
 			Type = "BCRaid";
+			Map = "TempestKeepTheEye";
 		{
 			Name = BabbleBoss["Al'ar"];
 			{ 1, 29925, "", "=q4=Phoenix-Wing Cloak", "=ds=#s4#", "", "23%"};
@@ -2615,6 +2634,7 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
 	AtlasLoot_Data["ZulAman"] = {
 			Name = BabbleZone["Zul'Aman"];
 			Type = "BCRaid";
+			Map = "ZulAman";
 		{
 			Name = BabbleBoss["Nalorakk"];
 			{ 1, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};

@@ -36,7 +36,6 @@ embeds.xml
 
 
 Locales\Locales.xml
-TableRegister\TableRegister.xml
 AtlasLayout\AtlasLayout.xml
 Add_Ons\Addons.xml
 Core\AtlasLoot.xml

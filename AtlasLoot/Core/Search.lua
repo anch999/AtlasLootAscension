@@ -694,7 +694,6 @@ end
 
 function AtlasLoot:ShowSearchResult()
     AtlasLoot_ShowItemsFrame("SearchResult", AtlasLootCharDB, (AL["Search Result: %s"]):format(AtlasLootCharDB.LastSearchedText or ""), pFrame, 1);
-    AtlasLootDefaultFrame_SubTableScrollFrameUpdate("SearchResult", AtlasLootCharDB, pFrame, 1);
 end
 
 function AtlasLoot:Search(Text)
@@ -747,7 +746,6 @@ function AtlasLoot:Search(Text)
     else
         --SearchResult = AtlasLoot_CategorizeWishList(AtlasLootCharDB["SearchResult"]);
         AtlasLoot_ShowItemsFrame("SearchResult", AtlasLootCharDB, (AL["Search Result: %s"]):format(AtlasLootCharDB.LastSearchedText or ""), pFrame, 1);
-        AtlasLootDefaultFrame_SubTableScrollFrameUpdate("SearchResult", AtlasLootCharDB, pFrame, 1);
     end
 end
 

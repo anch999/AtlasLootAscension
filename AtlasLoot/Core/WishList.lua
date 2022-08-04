@@ -68,7 +68,6 @@ function AtlasLoot_ShowWishList()
 		AtlasLootWishList["WishList"].Name = "Wish List";
 		AtlasLootWishList["WishList"].Back = true;
 		AtlasLootWishList["WishList"][1].Name = AtlasLootWishList["Own"][playerName][lastWishListarg2]["info"][1];
-		AtlasLootDefaultFrame_SubTableScrollFrameUpdate("WishList", AtlasLootWishList, pFrame, 1);
 		AtlasLoot_ShowItemsFrame("WishList", AtlasLootWishList, AtlasLootWishList["Own"][playerName][lastWishListarg2]["info"][1], pFrame, 1);
 	elseif lastWishListtyp == "addOther" then
 		AtlasLootWishList["WishList"] = AtlasLootWishList["Own"][lastWishListarg2];
@@ -76,7 +75,6 @@ function AtlasLoot_ShowWishList()
 		AtlasLootWishList["WishList"].Name = "Wish List";
 		AtlasLootWishList["WishList"].Back = true;
 		AtlasLootWishList["WishList"][1].Name = AtlasLootWishList["Own"][lastWishListarg2][lastWishListarg3]["info"][1];
-		AtlasLootDefaultFrame_SubTableScrollFrameUpdate("WishList", AtlasLootWishList, pFrame, 1);
 		AtlasLoot_ShowItemsFrame("WishList", AtlasLootWishList, AtlasLootWishList["Own"][lastWishListarg2][lastWishListarg3]["info"][1], pFrame, 1);
 	elseif lastWishListtyp == "addShared" then
 		AtlasLootWishList["WishList"] = AtlasLootWishList["Shared"][lastWishListarg2];
@@ -84,7 +82,6 @@ function AtlasLoot_ShowWishList()
 		AtlasLootWishList["WishList"].Name = "Wish List";
 		AtlasLootWishList["WishList"].Back = true;
 		AtlasLootWishList["WishList"][1].Name = AtlasLootWishList["Shared"][lastWishListarg2][lastWishListarg3]["info"][1];
-		AtlasLootDefaultFrame_SubTableScrollFrameUpdate("WishList", AtlasLootWishList, pFrame, 1);
 		AtlasLoot_ShowItemsFrame("WishList", AtlasLootWishList, AtlasLootWishList["Shared"][lastWishListarg2][lastWishListarg3]["info"][1], pFrame, 1);
 	end
 end

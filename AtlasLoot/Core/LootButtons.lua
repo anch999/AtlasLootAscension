@@ -251,11 +251,12 @@ function AtlasLootItem_OnClick(arg1)
                 AtlasLoot_ShowItemsFrame(dataID, dataSource, dataSource[dataID].Name, AtlasLootItemsFrame.refresh[4], 1);
             end
         elseif (arg1=="LeftButton") and this.sourcePage ~= nil then
-            --Holds AtlasLoot_Lastboss so back button works
-           if AtlasLoot_Data[this.sourcePage] == nil then
-            Atlasloot_CreateToken(this.sourcePage)
-           end
-            AtlasLoot_ShowItemsFrame(this.sourcePage, "",this.sourcePage, pFrame,1);
+           --Create token table if there isnt one
+            if AtlasLoot_TokenData[this.sourcePage] == nil then
+                AtlasLoot:CreateToken(this.sourcePage)
+            end
+            --Show token table
+            AtlasLoot_ShowItemsFrame(this.sourcePage, AtlasLoot_TokenData,this.sourcePage, pFrame,1);
         end
     else
         if IsShiftKeyDown() then

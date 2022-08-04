@@ -235,15 +235,14 @@ function AtlasLoot_AdvancedSearchShow()
     AtlasLootDefaultFrame_AdvancedSearchPanel:Show();
 
     AtlasLoot_CurrentType = "Search";
-	AtlasLootDefaultFrame_ScrollFrameUpdate();
-    AtlasLootDefaultFrame_SubTableScrollFrameUpdate("", "", "", "");
+	AtlasLoot:ScrollFrameUpdate();
+    AtlasLoot:SubTableScrollFrameUpdate("", "", "", "");
 end
 
 function AtlasLoot_AdvancedSearchClose()
     AtlasLootDefaultFrame_AdvancedSearchPanel:Hide();
 
     if (SearchPrevData[1] ~= "") then
-        AtlasLootDefaultFrame_SubTableScrollFrameUpdate(SearchPrevData[1], SearchPrevData[2], SearchPrevData[4], SearchPrevData[5]);
         AtlasLoot_ShowItemsFrame(SearchPrevData[1], SearchPrevData[2], SearchPrevData[3], SearchPrevData[4], SearchPrevData[5]);
     end
 end

@@ -5,10 +5,6 @@ AtlasLoot_DewDropSubMenuClick(tablename, text)
 AtlasLoot_DewdropExpansionMenuClick(tablename, text)
 AtlasLoot_DefaultFrame_OnShow()
 AtlasLootDefaultFrame_OnHide()
-AtlasLoot_DewdropExpansionMenuClick(raidtablename, itemID, itemColour)
-AtlasLoot_DifficultyDisable()
-AtlasLoot_DifficultyEnable(dataID, dataSource)
-AtlasLootDefaultFrame_GetRaidDifficulty(raidtablename, itemID, itemColour)
 AtlasLoot_DewdropExpansionMenuRegister(loottable)
 AtlasLoot_DewdropSubMenuRegister(loottable)
 AtlasLoot_DewdropRegister()
@@ -56,7 +52,6 @@ function AtlasLootDefaultFrame_OnShow()
         ATLASLOOT_LASTMODULE = lastboss[6];
         AtlasLoot_IsLootTableAvailable(lastboss[6]);
         AtlasLoot_ShowItemsFrame(lastboss[1], AtlasLoot_Data, AtlasLoot_Data[lastboss[1]][lastboss[5]].Name, pFrame, lastboss[5]);
-        AtlasLootDefaultFrame_SubTableScrollFrameUpdate(lastboss[1], AtlasLoot_Data, pFrame, lastboss[5]);
         AtlasLoot_DewdropSubMenu:Unregister(AtlasLootDefaultFrame_SubMenu);
         AtlasLoot_DewdropSubMenuRegister(AtlasLoot_SubMenus[lastboss[7]]);
     else
@@ -107,13 +102,17 @@ function AtlasLoot_DewDropSubMenuClick(tablename)
     pFrame = { "TOPLEFT", "AtlasLootDefaultFrame_LootBackground", "TOPLEFT", "2", "-2" };
     --Show the select loot table
     local tablenum = AtlasLoot_Data[tablename].Loadfirst or 1;
-    ItemindexID = ItemindexID or 2;
+
     if AtlasLoot_Data[tablename].Type == "Crafting" then
         ItemindexID = "Pattern";
+    elseif ItemindexID == "Pattern" and AtlasLoot_Data[tablename].Type ~= "Crafting" then
+        ItemindexID = 2;
+    else
+        ItemindexID = ItemindexID or 2;
     end
+
     --Show the table that has been selected
     AtlasLoot_ShowItemsFrame(tablename, AtlasLoot_Data, AtlasLoot_Data[tablename][tablenum].Name, pFrame, tablenum);
-    AtlasLootDefaultFrame_SubTableScrollFrameUpdate(tablename, AtlasLoot_Data, pFrame, tablenum);
     AtlasLoot_DewdropSubMenu:Close(1);
 end
 
@@ -128,7 +127,7 @@ function AtlasLoot_DewdropExpansionMenuClick(expansion, name)
     AtlasLoot_DewdropExpansionMenu:Close(1);
     AtlasLoot_Expac = expansion;
     if ATLASLOOT_CURRENTTABLE then
-    local tablename = AtlasLoot_CleandataID(ATLASLOOT_CURRENTTABLE, 1) .. AtlasLoot_Expac;
+    local tablename = AtlasLoot:CleandataID(ATLASLOOT_CURRENTTABLE, 1) .. AtlasLoot_Expac;
     AtlasLoot_IsLootTableAvailable(AtlasLoot_SubMenus[tablename].Module);
     AtlasLoot_DewdropSubMenu:Unregister(AtlasLootDefaultFrame_SubMenu);
     AtlasLoot_DewdropSubMenuRegister(AtlasLoot_SubMenus[tablename]);
