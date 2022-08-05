@@ -234,7 +234,7 @@ function AtlasLoot_AdvancedSearchShow()
     AtlasLootDefaultFrame_AdvancedSearchPanel:SetPoint(pFrame[1], pFrame[2], pFrame[3], pFrame[4], pFrame[5]);
     AtlasLootDefaultFrame_AdvancedSearchPanel:Show();
 
-    AtlasLoot_CurrentType = "Search";
+    ATLASLOOT_CURRENTTYPE = "Search";
 	AtlasLoot:ScrollFrameUpdate();
     AtlasLoot:SubTableScrollFrameUpdate("", "", "", "");
 end

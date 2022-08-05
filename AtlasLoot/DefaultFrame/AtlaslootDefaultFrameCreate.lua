@@ -153,7 +153,7 @@ local map = CreateFrame("Frame", "AtlasLootDefaultFrame_Map", AtlasLootDefaultFr
         map:EnableMouse();
         map:SetScript("OnMouseDown", function(self, button)
             if button == "RightButton" then 
-                AtlasLoot:MapOnShow(); 
+                AtlasLoot:MapOnShow();
             end
         end);
 
@@ -217,7 +217,7 @@ local preset3 = CreateFrame("Button", "AtlasLootDefaultFrame_Preset3", AtlasLoot
 local preset4 = CreateFrame("Button", "AtlasLootDefaultFrame_Preset4", AtlasLootDefaultFrame, "OptionsButtonTemplate");
     presetcreate(preset4,4);
     preset4:SetPoint("LEFT", "AtlasLootDefaultFrame_Preset3", "RIGHT", presetsize, 0);
-    
+
     --Search Edit Box
 local searchbox = CreateFrame("EditBox","AtlasLootDefaultFrameSearchBox",AtlasLootDefaultFrame,"InputBoxTemplate");
     searchbox:SetSize(190,32);
@@ -305,38 +305,26 @@ local scrollFrame = CreateFrame("Frame", "Atlasloot_Difficulty_ScrollFrame", Atl
         insets = { left = 4, right = 4, top = 4, bottom = 4 },
     });
 
-function AtlasLoot_GetNumOfRows(tablename)
-    local num = 1
-        if tablename then
-            for n in ipairs(tablename) do
-                    num = num + 1
-            end
-        else
-            num = 0
-        end
-    return num
-end
-
 function AtlasLoot:ScrollFrameUpdate()
-    local maxValue = AtlasLoot_GetNumOfRows(AtlasLoot_Difficulty[AtlasLoot_CurrentType])
-	FauxScrollFrame_Update(scrollFrame.scrollBar, maxValue, MAX_ROWS, ROW_HEIGHT);
-	local offset = FauxScrollFrame_GetOffset(scrollFrame.scrollBar);
-	for i = 1, MAX_ROWS do
-		local value = i + offset
+    local maxValue = #AtlasLoot_Difficulty[ATLASLOOT_CURRENTTYPE];
+    FauxScrollFrame_Update(scrollFrame.scrollBar, maxValue, MAX_ROWS, ROW_HEIGHT);
+    local offset = FauxScrollFrame_GetOffset(scrollFrame.scrollBar);
+    for i = 1, MAX_ROWS do
+        local value = i + offset
         scrollFrame.rows[i]:SetChecked(false);
         scrollFrame.rows[i]:SetHighlightTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD");
-		if value <= maxValue and AtlasLoot_Difficulty[AtlasLoot_CurrentType][value] then
-			local row = scrollFrame.rows[i]
-            row:SetText("|cffFFd200"..AtlasLoot_Difficulty[AtlasLoot_CurrentType][value][1]);
-            row.itemIndex = AtlasLoot_Difficulty[AtlasLoot_CurrentType][value][2];
+        if value <= maxValue and AtlasLoot_Difficulty[ATLASLOOT_CURRENTTYPE][value] then
+            local row = scrollFrame.rows[i]
+            row:SetText("|cffFFd200"..AtlasLoot_Difficulty[ATLASLOOT_CURRENTTYPE][value][1]);
+            row.itemIndex = AtlasLoot_Difficulty[ATLASLOOT_CURRENTTYPE][value][2];
             if row.itemIndex == ItemindexID then
                 row:SetChecked(true);
             end
-			row:Show()
-		else
-			scrollFrame.rows[i]:Hide()
-		end
-	end
+            row:Show()
+        else
+            scrollFrame.rows[i]:Hide()
+        end
+    end
 end
 
 local scrollSlider = CreateFrame("ScrollFrame","AtlasLootDefaultFrameScroll", Atlasloot_Difficulty_ScrollFrame, "FauxScrollFrameTemplate");
@@ -392,7 +380,7 @@ local subtableFrame = CreateFrame("Frame", "Atlasloot_SubTableFrame", AtlasLootD
 function AtlasLoot:SubTableScrollFrameUpdate(tablename, dataSource, pFrame, currenttablenum)
     if dataSource ~= nil then
         if(string.find(tablename, "SearchResult")) then tablename = "SearchResult"; end
-        local maxValue = AtlasLoot_GetNumOfRows(dataSource[tablename]);
+        local maxValue = #dataSource[tablename];
         subtableFrame.tablename = tablename;
         FauxScrollFrame_Update(subtableFrame.scrollBar, maxValue, MAX_ROWS2, ROW_HEIGHT);
         local offset = FauxScrollFrame_GetOffset(subtableFrame.scrollBar);
@@ -402,14 +390,19 @@ function AtlasLoot:SubTableScrollFrameUpdate(tablename, dataSource, pFrame, curr
             subtableFrame.rows[i]:SetHighlightTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD");
             if value <= maxValue and dataSource[tablename][value] then
                 local row = subtableFrame.rows[i]
-                row:SetText("|cffFFd200"..dataSource[tablename][value].Name);
-                row.tablenum = value;
-                row.dataSource = dataSource;
-                row.tablename = tablename;
-                row.pFrame = pFrame;
-                if currenttablenum == value then
-                    row:SetChecked(true);
+                    row.dataSource = dataSource;
+                    row.tablename = tablename;
+                    row.tablenum = value;
+                    row.pFrame = pFrame;
+                if dataSource == AtlasLoot_MapData then
+                    row:SetText(string.sub(tostring(dataSource[tablename][value][1]),0,50));
+                else
+                    row:SetText("|cffFFd200"..dataSource[tablename][value].Name);
+                    if currenttablenum == value then
+                        row:SetChecked(true);
+                    end
                 end
+                
                 row:Show();
             else
                 subtableFrame.rows[i]:Hide()
@@ -423,11 +416,11 @@ local scrollSlider2 = CreateFrame("ScrollFrame","AtlasLootDefaultFrameSubTableSc
     scrollSlider2:SetPoint("BOTTOMRIGHT", -30, 8)
     scrollSlider2:SetScript("OnVerticalScroll", function(self, offset)
         self.offset = math.floor(offset / ROW_HEIGHT + 0.5)
-            AtlasLoot:SubTableScrollFrameUpdate(subtableFrame.tablename);
+            AtlasLoot:SubTableScrollFrameUpdate();
     end)
 
     scrollSlider2:SetScript("OnShow", function()
-        AtlasLoot:SubTableScrollFrameUpdate(subtableFrame.tablename);
+        AtlasLoot:SubTableScrollFrameUpdate();
     end)
 
     subtableFrame.scrollBar = scrollSlider2
@@ -439,7 +432,6 @@ local rows2 = setmetatable({}, { __index = function(t, i)
     row:SetCheckedTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD");
     row:SetScript("OnClick", function()
         pFrame = { "TOPLEFT", "AtlasLootDefaultFrame_LootBackground", "TOPLEFT", "2", "-2" };
-        AtlasLoot:SubTableScrollFrameUpdate(row.tablename, row.dataSource, pFrame, row.tablenum);
         AtlasLoot_ShowItemsFrame(row.tablename, row.dataSource, row.dataSource[row.tablename][row.tablenum].Name, pFrame, row.tablenum);
     end)
     if i == 1 then
@@ -454,7 +446,7 @@ end })
 
 subtableFrame.rows = rows2
 
--- Map Button
+    -- Map Button
 local mapbtn = CreateFrame("Button","AtlasLootDefaultFrame_MapButton", AtlasLootDefaultFrame,"UIPanelButtonTemplate2");
     mapbtn:SetSize(95,32);
     mapbtn:SetPoint("BOTTOMLEFT",Atlasloot_SubTableFrame,0,-27.5);

@@ -54,6 +54,7 @@ AtlasLoot_DewdropExpansionMenu = AceLibrary("Dewdrop-2.0");
 --Variable to cap debug spam
 ATLASLOOT_DEBUGSHOWN = false;
 ATLASLOOT_FILTER_ENABLE = false;
+ATLASLOOT_CURRENTTYPE = "Default";
 
 -- Colours stored for code readability
 local GREY = "|cff999999";
@@ -395,7 +396,7 @@ function AtlasLoot_OnLoad()
 		AtlasLoot_Expac = xpaclist[GetAccountExpansionLevel()+1];
 	end
 	getExpac();
-	AtlasLoot:GenerateTokenTables() 
+	--AtlasLoot:GenerateTokenTables();
 
 end
 
@@ -407,7 +408,7 @@ function AtlasLoot:CleandataID(newID, listnum)
 	return newID;
 end
 
-function AtlasLoot:GenerateTokenTables() 
+function AtlasLoot:GenerateTokenTables()
 	local Tiers = {"T1", "T2", "T2.5", "T3", "T4", "T5", "T6"};
 	local Slots = {"HEAD", "SHOULDERS", "CHEST", "WRIST", "HAND", "WAIST", "LEGS", "FEET", "FINGER"};
 
@@ -440,24 +441,21 @@ function AtlasLoot:CreateToken(dataID)
 	if (AtlasLoot_TokenData[orgID] == nil) then
 		AtlasLoot_TokenData[orgID] = {
 			Name = itemName;
-			Type = "ClassicRaid";
+			Type = AtlasLoot_Data[dataID].Type;
 			Back = true;
 			NoSubt = true;
+			[1] = { Name = itemName };
 		};
 	end
-
-	AtlasLoot_TokenData[orgID][1] = {
-		Name = itemName;
-	};
-
+	--Fills table with items
 	for _, t in ipairs(AtlasLoot_Data[dataID]) do
 		for _, v in ipairs(t) do
 			if type(v) == "table" then
-				local itemID = v[2]; --AL_FindId(id[2], ItemindexID);
+				local itemID = v[2];
 				local item = Item:CreateFromID(itemID);
 				item:ContinueOnLoad(function(itemID)
 					if itemType == select(9, GetItemInfo(itemID)) or itemType2 == select(9, GetItemInfo(itemID)) then
-						table.insert(AtlasLoot_TokenData[orgID][1], {#AtlasLoot_TokenData[orgID][1] + 1, v[2], v[3], v[4], v[5]});
+						table.insert(AtlasLoot_TokenData[orgID][1], {#AtlasLoot_TokenData[orgID][1] + 1, v[2], v[3], v[4], t.Name});
 					end
 				end)
 			end
@@ -518,9 +516,11 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame, tablenum)
 		dataSource = AtlasLootCharDB;
     end
 
-	AtlasLoot_CurrentType = dataSource[dataID].Type or "";
+	ATLASLOOT_CURRENTTYPE = dataSource[dataID].Type or "";
 	AtlasLoot:ScrollFrameUpdate();
 	AtlasLoot_BossName:SetText(dataSource[dataID][tablenum].Name);
+
+
 
 	--For stopping the subtable from changing if its a token table
 	if dataSource[dataID].NoSubt == nil then
@@ -537,8 +537,8 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame, tablenum)
 	end
 
 	local function getProperItemConditionals(item)
-		isValid = false; 
-		toShow = true; 
+		isValid = false;
+		toShow = true;
 		isItem = false;
 		local itemDif = ItemindexID;
 
@@ -550,7 +550,7 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame, tablenum)
 				toShow = true;
 			else
 				if(item[AtlasLoot_Difficulty.MIN_DIF]) then
-					if item[AtlasLoot_Difficulty.MIN_DIF] > itemDif then 
+					if item[AtlasLoot_Difficulty.MIN_DIF] > itemDif then
 						toShow = false; 
 					end
 				end
@@ -764,7 +764,7 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame, tablenum)
 		getglobal("AtlasLootItemsFrame_NEXT"):Hide();
 		getglobal("AtlasLootItemsFrame_PREV"):Hide();
 
-		if tablenum + 1 ~= AtlasLoot_GetNumOfRows(dataSource[dataID]) then
+		if tablenum + 1 ~= #dataSource[dataID] then
 			getglobal("AtlasLootItemsFrame_NEXT"):Show();
 			if dataID ~= "FilterList" then
 			getglobal("AtlasLootItemsFrame_NEXT").tablenum = tablenum + 1;
@@ -1041,8 +1041,8 @@ function AtlasLoot_QueryLootPage()
 		else
 			COUNTED = COUNTED + 1;
         end
-		
-		queryNextItem(pos + 1); 
+
+		queryNextItem(pos + 1);
 	end
 	queryNextItem(START);
 end

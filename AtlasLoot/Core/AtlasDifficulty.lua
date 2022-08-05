@@ -3,6 +3,8 @@ local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot");
 AtlasLoot_Difficulty = {
     -- table of difficulties and there itemID references
 
+    ["Default"] = {};
+
     ["ClassicDungeon"] = {
             {"Normal", 2,},
             {"Bloodforged", 1,},
