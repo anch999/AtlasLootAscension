@@ -750,13 +750,13 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame, tablenum)
 		getglobal("AtlasLootItemsFrame_NEXT"):Hide();
 		getglobal("AtlasLootItemsFrame_PREV"):Hide();
 
-		if tablenum + 1 ~= #dataSource[dataID] then
+		if tablenum ~= #dataSource[dataID] then
 			getglobal("AtlasLootItemsFrame_NEXT"):Show();
 			if dataID ~= "FilterList" then
 			getglobal("AtlasLootItemsFrame_NEXT").tablenum = tablenum + 1;
 			end
 		end
-		if tablenum - 1 ~= 0 then
+		if tablenum ~= 1 then
 			getglobal("AtlasLootItemsFrame_PREV"):Show();
 			if dataID ~= "FilterList" then
 			getglobal("AtlasLootItemsFrame_PREV").tablenum = tablenum - 1;
