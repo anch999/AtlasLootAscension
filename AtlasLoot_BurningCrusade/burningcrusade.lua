@@ -5177,7 +5177,7 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
 	--------------
 
 	AtlasLoot_Data["T4"] = {
-			Name = "Teir 4";
+			Name = "Tier 4";
 			Type = "BCRaid";
 		{
 			Name = "Druid".." - "..AL["Feral"];
@@ -5330,7 +5330,7 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
 	--------------
 
 	AtlasLoot_Data["T5"] = {
-			Name = "Teir 5";
+			Name = "Tier 5";
 			Type = "BCRaid";
 		{
 			Name = "Druid".." - "..AL["Feral"];
@@ -5508,7 +5508,7 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
 		--------------
 
 	AtlasLoot_Data["T6"] = {
-			Name = "Teir 6";
+			Name = "Tier 6";
 			Type = "BCRaid";
 		{
 			Name = "Druid".." - "..AL["Feral"];

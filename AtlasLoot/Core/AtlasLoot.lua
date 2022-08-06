@@ -174,7 +174,7 @@ function AtlasLoot_OnVariablesLoaded()
     if AtlasLoot_Data then
         AtlasLoot_Data["EmptyTable"] = {
 			Name = AL["Select a Loot Table..."];
-			{Name = AL["Select a Loot Table..."]};
+			{Name = ""};
 		};
     end
 
@@ -506,10 +506,8 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame, tablenum)
 	AtlasLoot:ScrollFrameUpdate();
 	AtlasLoot_BossName:SetText(dataSource[dataID][tablenum].Name);
 
-
-
 	--For stopping the subtable from changing if its a token table
-	if dataSource[dataID].NoSubt == nil then
+	if dataSource[dataID].NoSubt == nil and dataID ~= "FilterList" then
 		AtlasLootDefaultFrame_SubMenu:SetText(dataSource[dataID].Name);
 		AtlasLoot:SubTableScrollFrameUpdate(dataID, dataSource, pFrame, tablenum);
 	end
@@ -749,18 +747,21 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame, tablenum)
 		getglobal("AtlasLootItemsFrame_BACK"):Hide();
 		getglobal("AtlasLootItemsFrame_NEXT"):Hide();
 		getglobal("AtlasLootItemsFrame_PREV"):Hide();
-
-		if tablenum ~= #dataSource[dataID] then
+		local tablebase = {dataID, dataSource};
+		if dataID == "FilterList" then
+			tablebase = {AtlasLootItemsFrame.refreshOri[1],AtlasLootItemsFrame.refreshOri[2]};
+			tablenum = AtlasLootItemsFrame.refreshOri[5];
+		end
+		if tablenum ~= #tablebase[2][tablebase[1]] then
 			getglobal("AtlasLootItemsFrame_NEXT"):Show();
-			if dataID ~= "FilterList" then
 			getglobal("AtlasLootItemsFrame_NEXT").tablenum = tablenum + 1;
-			end
+			getglobal("AtlasLootItemsFrame_NEXT").tablebase = tablebase;
+
 		end
 		if tablenum ~= 1 then
 			getglobal("AtlasLootItemsFrame_PREV"):Show();
-			if dataID ~= "FilterList" then
 			getglobal("AtlasLootItemsFrame_PREV").tablenum = tablenum - 1;
-			end
+			getglobal("AtlasLootItemsFrame_PREV").tablebase = tablebase;
 		end
 		if dataSource[dataID].Back then
 			getglobal("AtlasLootItemsFrame_BACK"):Show();
@@ -804,8 +805,8 @@ AtlasLoot_NavButton_OnClick:
 Called when <-, -> are pressed and calls up the appropriate loot page
 ]]
 function AtlasLoot_NavButton_OnClick(self)
-	local tablenum = self.tablenum;
-	AtlasLoot_ShowItemsFrame(AtlasLootItemsFrame.refresh[1], AtlasLootItemsFrame.refresh[2], AtlasLootItemsFrame.refresh[3], AtlasLootItemsFrame.refresh[4], tablenum);
+	local tablenum, dataID, dataSource = self.tablenum, self.tablebase[1], self.tablebase[2];
+	AtlasLoot_ShowItemsFrame(dataID, dataSource, AtlasLootItemsFrame.refresh[3], AtlasLootItemsFrame.refresh[4], tablenum);
 end
 
 --[[

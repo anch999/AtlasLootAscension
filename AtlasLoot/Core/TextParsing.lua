@@ -699,7 +699,7 @@ function AtlasLoot_FixText(text)
     text = gsub(text, "#aq40s8#", AL["Doomcaller's Attire"]);
     text = gsub(text, "#aq40s9#", AL["Conqueror's Battlegear"]);
 
-    -- Teir Tokens
+    -- Tier Tokens
     text = gsub(text, "#tt1#", AL["Tier 1 Set Token (Click)"]);
     text = gsub(text, "#tt2#", AL["Tier 2 Set Token (Click)"]);
     text = gsub(text, "#tt2.5#", AL["Tier 2.5 Set Token (Click)"]);

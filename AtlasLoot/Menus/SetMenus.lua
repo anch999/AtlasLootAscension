@@ -30,7 +30,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 			{ AL["Badge of Justice Rewards"], "BadgeShatt", "Header"};
 			{ "", "BadgeShatt"};
 			{ "", "BadgeSunwell"};
-			{ "Teir Sets", "T4", "Header"};
+			{ "Tier Sets", "T4", "Header"};
 			{ "", "T4"};
 			{ "", "T5"};
 			{ "", "T6"};

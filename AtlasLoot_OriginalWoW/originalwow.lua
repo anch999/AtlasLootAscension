@@ -4143,8 +4143,8 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		------------------------------------
 
 		AtlasLoot_Data["T0"] = {
-				Name = "Teir 0";
-				Type = "ClassicRaid";
+				Name = "Tier 0";
+				Type = "ClassicDungeonExt";
 			{
 				Name = AL["Druid"];
 				{ 1, 0, "Spell_Nature_Regeneration", "=q6=#t0s1#", "=ec1=#j6#"};
@@ -4341,7 +4341,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		-----------------------------
 
 	AtlasLoot_Data["T1"] = {
-			Name = "Teir 1";
+			Name = "Tier 1";
 			Type = "ClassicRaid";
 		{
 			Name = AL["Druid"];
@@ -4457,7 +4457,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 
 	-- T2 Sets
 	AtlasLoot_Data["T2"] = {
-			Name = "Teir 2";
+			Name = "Tier 2";
 			Type = "ClassicRaid";
 		{
 			Name = AL["Druid"];
@@ -4576,7 +4576,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		------------------------
 
 	AtlasLoot_Data["T3"] = {
-			Name = "Teir 3";
+			Name = "Tier 3";
 			Type = "ClassicRaid";
 		{
 			Name = AL["Druid"];
@@ -4992,7 +4992,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		-----------------
 
 	AtlasLoot_Data["T2.5"] = {
-			Name = AL["AQ40 Class Sets"].." (Teir 2.5)";
+			Name = AL["AQ40 Class Sets"].." (Tier 2.5)";
 			Type = "ClassicRaid";
 		{
 			Name = AL["Druid"];

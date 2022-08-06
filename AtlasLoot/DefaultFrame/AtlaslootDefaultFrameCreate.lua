@@ -378,8 +378,6 @@ local subtableFrame = CreateFrame("Frame", "Atlasloot_SubTableFrame", AtlasLootD
     });
 
 function AtlasLoot:SubTableScrollFrameUpdate(tablename, dataSource, pFrame, currenttablenum)
-    if dataSource ~= nil then
-        if(string.find(tablename, "SearchResult")) then tablename = "SearchResult"; end
         local maxValue = #dataSource[tablename];
         subtableFrame.tablename = tablename;
         FauxScrollFrame_Update(subtableFrame.scrollBar, maxValue, MAX_ROWS2, ROW_HEIGHT);
@@ -402,13 +400,11 @@ function AtlasLoot:SubTableScrollFrameUpdate(tablename, dataSource, pFrame, curr
                         row:SetChecked(true);
                     end
                 end
-                
                 row:Show();
             else
                 subtableFrame.rows[i]:Hide()
             end
         end
-    end
 end
 
 local scrollSlider2 = CreateFrame("ScrollFrame","AtlasLootDefaultFrameSubTableScroll",Atlasloot_SubTableFrame,"FauxScrollFrameTemplate");
@@ -416,11 +412,7 @@ local scrollSlider2 = CreateFrame("ScrollFrame","AtlasLootDefaultFrameSubTableSc
     scrollSlider2:SetPoint("BOTTOMRIGHT", -30, 8)
     scrollSlider2:SetScript("OnVerticalScroll", function(self, offset)
         self.offset = math.floor(offset / ROW_HEIGHT + 0.5)
-            AtlasLoot:SubTableScrollFrameUpdate();
-    end)
-
-    scrollSlider2:SetScript("OnShow", function()
-        AtlasLoot:SubTableScrollFrameUpdate();
+            AtlasLoot:SubTableScrollFrameUpdate(AtlasLootItemsFrame.refresh[1], AtlasLootItemsFrame.refresh[2], AtlasLootItemsFrame.refresh[4], AtlasLootItemsFrame.refresh[5]);
     end)
 
     subtableFrame.scrollBar = scrollSlider2
