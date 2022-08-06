@@ -1658,7 +1658,7 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
 			{ 12, 28783, "", "=q4=Eredar Wand of Obliteration", "=ds=#w12#"};
 			{ 14, 34845, "", "=q4=Pit Lord's Satchel", "=ds=#e1# #m15#"};
 			{ 15, 34846, "", "=q2=Black Sack of Gems", "=ds=#e1#"};
-			{ 16, 29753, "", "=q4=Chestguard of the Fallen Defender", "=ds=#tt4#", "", "100%", "=LT=T5CHEST"};
+			{ 16, 29753, "", "=q4=Chestguard of the Fallen Defender", "=ds=#tt4#", "", "100%", "=LT=T4CHEST"};
 			{ 18, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%"};
 			{ 19, 32385, "", "=q4=Magtheridon's Head", "=ds=#m2#", "", "100%"};
 			{ 20, 28791, "", "=q4=Ring of the Recalcitrant", "=q1=#m4#: =ds=#s13#"};

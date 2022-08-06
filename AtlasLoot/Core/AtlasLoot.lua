@@ -396,8 +396,6 @@ function AtlasLoot_OnLoad()
 		AtlasLoot_Expac = xpaclist[GetAccountExpansionLevel()+1];
 	end
 	getExpac();
-	--AtlasLoot:GenerateTokenTables();
-
 end
 
 function AtlasLoot:CleandataID(newID, listnum)
@@ -406,17 +404,6 @@ function AtlasLoot:CleandataID(newID, listnum)
 		newID = gsub(newID, cleanlist[listnum][i], "");
 	end
 	return newID;
-end
-
-function AtlasLoot:GenerateTokenTables()
-	local Tiers = {"T1", "T2", "T2.5", "T3", "T4", "T5", "T6"};
-	local Slots = {"HEAD", "SHOULDERS", "CHEST", "WRIST", "HAND", "WAIST", "LEGS", "FEET", "FINGER"};
-
-	for v = 1, #Tiers do
-		for k = 1, #Slots do
-			AtlasLoot:CreateToken(Tiers[v]..Slots[k]);
-		end
-	end
 end
 
 --Creates tables for raid tokens from the collections tables
@@ -451,8 +438,7 @@ function AtlasLoot:CreateToken(dataID)
 	for _, t in ipairs(AtlasLoot_Data[dataID]) do
 		for _, v in ipairs(t) do
 			if type(v) == "table" then
-				local itemID = v[2];
-				local item = Item:CreateFromID(itemID);
+				local item = Item:CreateFromID(v[2]);
 				item:ContinueOnLoad(function(itemID)
 					if itemType == select(9, GetItemInfo(itemID)) or itemType2 == select(9, GetItemInfo(itemID)) then
 						table.insert(AtlasLoot_TokenData[orgID][1], {#AtlasLoot_TokenData[orgID][1] + 1, v[2], v[3], v[4], t.Name});

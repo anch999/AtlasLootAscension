@@ -47,7 +47,7 @@ function AtlasLootDefaultFrame_OnShow()
     AtlasLoot_SetItemInfoFrame(pFrame);
         --Show the last displayed loot table
     local lastboss = AtlasLoot.db.profile.LastBoss;
-    if lastboss then
+    if lastboss and lastboss[6] then
         ATLASLOOT_CURRENTTABLE = lastboss[7];
         ATLASLOOT_LASTMODULE = lastboss[6];
         AtlasLoot_IsLootTableAvailable(lastboss[6]);
