@@ -304,8 +304,12 @@ local scrollFrame = CreateFrame("Frame", "Atlasloot_Difficulty_ScrollFrame", Atl
         edgeFile = "Interface\\Tooltips\\UI-Tooltip-Border", edgeSize = 16,
         insets = { left = 4, right = 4, top = 4, bottom = 4 },
     });
+    scrollFrame.Lable = scrollFrame:CreateFontString("Atlasloot_HeaderLabel", "OVERLAY","GameFontNormal")
+    scrollFrame.Lable:SetPoint("TOPLEFT",Atlasloot_Difficulty_ScrollFrame,10,-10);
+    scrollFrame.Lable:SetJustifyH("LEFT");
+    scrollFrame.Lable:SetFont("GameFontNormal", 24);
 
-function AtlasLoot:ScrollFrameUpdate()
+function AtlasLoot:ScrollFrameUpdate(hide)
     local maxValue = #AtlasLoot_Difficulty[ATLASLOOT_CURRENTTYPE];
     FauxScrollFrame_Update(scrollFrame.scrollBar, maxValue, MAX_ROWS, ROW_HEIGHT);
     local offset = FauxScrollFrame_GetOffset(scrollFrame.scrollBar);
@@ -313,7 +317,7 @@ function AtlasLoot:ScrollFrameUpdate()
         local value = i + offset
         scrollFrame.rows[i]:SetChecked(false);
         scrollFrame.rows[i]:SetHighlightTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD");
-        if value <= maxValue and AtlasLoot_Difficulty[ATLASLOOT_CURRENTTYPE][value] then
+        if value <= maxValue and AtlasLoot_Difficulty[ATLASLOOT_CURRENTTYPE][value] and hide == nil then
             local row = scrollFrame.rows[i]
             row:SetText("|cffFFd200"..AtlasLoot_Difficulty[ATLASLOOT_CURRENTTYPE][value][1]);
             row.itemIndex = AtlasLoot_Difficulty[ATLASLOOT_CURRENTTYPE][value][2];
@@ -343,8 +347,8 @@ scrollFrame.scrollBar = scrollSlider
 
 local rows = setmetatable({}, { __index = function(t, i)
 	local row = CreateFrame("CheckButton", "$parentRow"..i, scrollFrame)
-	row:SetSize(150, ROW_HEIGHT)
-	row:SetNormalFontObject(GameFontHighlightLeft)
+	row:SetSize(150, ROW_HEIGHT);
+	row:SetNormalFontObject(GameFontHighlightLeft);
     row:SetCheckedTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD");
     row:SetScript("OnClick", function()
         ItemindexID = row.itemIndex;
@@ -377,9 +381,12 @@ local subtableFrame = CreateFrame("Frame", "Atlasloot_SubTableFrame", AtlasLootD
         insets = { left = 4, right = 4, top = 4, bottom = 4 },
     });
 
-function AtlasLoot:SubTableScrollFrameUpdate(tablename, dataSource, pFrame, currenttablenum)
+function AtlasLoot:SubTableScrollFrameUpdate(tablename, dataSource, pFrame, tablenum)
         local maxValue = #dataSource[tablename];
         subtableFrame.tablename = tablename;
+        subtableFrame.dataSource = dataSource;
+        subtableFrame.tablenum = tablenum;
+        subtableFrame.pFrame = pFrame;
         FauxScrollFrame_Update(subtableFrame.scrollBar, maxValue, MAX_ROWS2, ROW_HEIGHT);
         local offset = FauxScrollFrame_GetOffset(subtableFrame.scrollBar);
         for i = 1, MAX_ROWS2 do
@@ -396,7 +403,7 @@ function AtlasLoot:SubTableScrollFrameUpdate(tablename, dataSource, pFrame, curr
                     row:SetText(string.sub(tostring(dataSource[tablename][value][1]),0,50));
                 else
                     row:SetText("|cffFFd200"..dataSource[tablename][value].Name);
-                    if currenttablenum == value then
+                    if tablenum == value and dataSource ~= AtlasLoot_MapData then
                         row:SetChecked(true);
                     end
                 end
@@ -412,7 +419,7 @@ local scrollSlider2 = CreateFrame("ScrollFrame","AtlasLootDefaultFrameSubTableSc
     scrollSlider2:SetPoint("BOTTOMRIGHT", -30, 8)
     scrollSlider2:SetScript("OnVerticalScroll", function(self, offset)
         self.offset = math.floor(offset / ROW_HEIGHT + 0.5)
-            AtlasLoot:SubTableScrollFrameUpdate(AtlasLootItemsFrame.refresh[1], AtlasLootItemsFrame.refresh[2], AtlasLootItemsFrame.refresh[4], AtlasLootItemsFrame.refresh[5]);
+            AtlasLoot:SubTableScrollFrameUpdate(subtableFrame.tablename, subtableFrame.dataSource, subtableFrame.pFrame, subtableFrame.tablenum);
     end)
 
     subtableFrame.scrollBar = scrollSlider2
@@ -423,8 +430,11 @@ local rows2 = setmetatable({}, { __index = function(t, i)
     row:SetNormalFontObject(GameFontHighlightLeft)
     row:SetCheckedTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD");
     row:SetScript("OnClick", function()
-        pFrame = { "TOPLEFT", "AtlasLootDefaultFrame_LootBackground", "TOPLEFT", "2", "-2" };
-        AtlasLoot_ShowItemsFrame(row.tablename, row.dataSource, row.dataSource[row.tablename][row.tablenum].Name, pFrame, row.tablenum);
+        if row.dataSource ~= AtlasLoot_MapData then
+            AtlasLoot_ShowItemsFrame(row.tablename, row.dataSource, row.dataSource[row.tablename][row.tablenum].Name, row.pFrame, row.tablenum);
+        else
+            row:SetChecked(false);
+        end
     end)
     if i == 1 then
         row:SetPoint("TOPLEFT", subtableFrame, 8, -8)

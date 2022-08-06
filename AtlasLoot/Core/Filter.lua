@@ -116,7 +116,7 @@ function AtlasLoot_HideNoUsableItems()
 	local count = 0
 	local leatherworking = GetSpellInfo(2108)
 
-	AtlasLoot_Data["FilterList"] = { Type = dataSource[dataID].Type; Name = dataSource[dataID].Name;[tablenum] = {Name = dataSource[dataID][tablenum].Name}; };
+	AtlasLoot_Data["FilterList"] = { Type = dataSource[dataID].Type; Name = dataSource[dataID].Name;Map = dataSource[dataID].Map; [tablenum] = {Name = dataSource[dataID][tablenum].Name}; };
 
 	for i=1,30 do
 		local info = getglobal("AtlasLootItem_"..i.."_Extra"):GetText()
