@@ -47,13 +47,13 @@ function AtlasLootDefaultFrame_OnShow()
     AtlasLoot_SetItemInfoFrame(pFrame);
         --Show the last displayed loot table
     local lastboss = AtlasLoot.db.profile.LastBoss;
-    if lastboss and lastboss[6] then
-        ATLASLOOT_CURRENTTABLE = lastboss[7];
-        ATLASLOOT_LASTMODULE = lastboss[6];
-        AtlasLoot_IsLootTableAvailable(lastboss[6]);
-        AtlasLoot_ShowItemsFrame(lastboss[1], AtlasLoot_Data, pFrame, lastboss[5]);
+    if lastboss and lastboss[5] then
+        ATLASLOOT_CURRENTTABLE = lastboss[6];
+        ATLASLOOT_LASTMODULE = lastboss[5];
+        AtlasLoot_IsLootTableAvailable(lastboss[5]);
+        AtlasLoot_ShowItemsFrame(lastboss[1], AtlasLoot_Data, pFrame, lastboss[4]);
         AtlasLoot_DewdropSubMenu:Unregister(AtlasLootDefaultFrame_SubMenu);
-        AtlasLoot_DewdropSubMenuRegister(AtlasLoot_SubMenus[lastboss[7]]);
+        AtlasLoot_DewdropSubMenuRegister(AtlasLoot_SubMenus[lastboss[6]]);
     else
         AtlasLoot_ShowItemsFrame("EmptyTable", AtlasLoot_Data, pFrame,1);
     end
