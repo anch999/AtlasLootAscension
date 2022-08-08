@@ -297,6 +297,7 @@ function AtlasLoot_SetNewStyle(style)
         "AtlasLootDefaultFrame_AdvancedSearchPanel_SearchButton",
         "AtlasLootDefaultFrame_AdvancedSearchPanel_ClearButton",
         "AtlasLootDefaultFrame_MapButton",
+        "AtlasLootDefaultFrame_MapSelectButton",
 	}
 
 	if style == "new" then

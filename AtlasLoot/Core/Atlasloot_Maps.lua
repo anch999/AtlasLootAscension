@@ -3,6 +3,8 @@ local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot");
 local BabbleSubZone = AtlasLoot_GetLocaleLibBabble("LibBabble-SubZone-3.0");
 local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 
+AtlasLoot_MapMenu = AceLibrary("Dewdrop-2.0");
+
 local BLUE = "|cff6666ff";
 local GREY = "|cff999999";
 local GREN = "|cff66cc33";
@@ -31,8 +33,7 @@ function AtlasLoot:MapOnShow()
         Atlasloot_HeaderLabel:Hide();
         AtlasLoot:ScrollFrameUpdate();
     else
-        local map =  AtlasLootItemsFrame.refresh[2][AtlasLootItemsFrame.refresh[1]].Map;
-        if map then
+        if ATLASLOOT_CURRENT_MAP then
             AtlasLoot_BossName:Hide();
             --Ditch the Quicklook selector
             AtlasLoot_QuickLooks:Hide();
@@ -51,22 +52,103 @@ function AtlasLoot:MapOnShow()
                 getglobal("AtlasLootItem_"..i).itemID = 0;
                 getglobal("AtlasLootItem_"..i).spellitemID = 0;
             end
-                AtlasLoot:SubTableScrollFrameUpdate(map, AtlasLoot_MapData);
-                AtlasLootDefaultFrame_Map:SetBackdrop({bgFile = "Interface\\AddOns\\Atlas\\Images\\Maps\\"..map});   
                 AtlasLootDefaultFrame_Map:Show();
-                Atlasloot_HeaderLabel:SetText(
-                AtlasLoot_MapData[map].ZoneName[1].._RED.." ["..AtlasLoot_MapData[map].Acronym.."]\n"..
-                WHITE.."Location: "..AtlasLoot_MapData[map].Location[1].."\n"..
-                "Level Range: "..AtlasLoot_MapData[map].LevelRange.."\n"..
-                "Minimum Level: "..AtlasLoot_MapData[map].MinLevel.."\n"..
-                "Player Limit: "..AtlasLoot_MapData[map].PlayerLimit
-                );
                 Atlasloot_HeaderLabel:Show();
                 AtlasLoot:ScrollFrameUpdate(true);
-
+                AtlasLoot:SubTableScrollFrameUpdate(ATLASLOOT_CURRENT_MAP, AtlasLoot_MapData);
         end
     end
 end
+
+function AtlasLoot:MapSelect(mapID)
+    AtlasLootDefaultFrame_Map:SetBackdrop({bgFile = "Interface\\AddOns\\Atlas\\Images\\Maps\\"..mapID});   
+    Atlasloot_HeaderLabel:SetText(
+    AtlasLoot_MapData[mapID].ZoneName[1].._RED.." ["..AtlasLoot_MapData[mapID].Acronym.."]\n"..
+    WHITE.."Location: "..AtlasLoot_MapData[mapID].Location[1].."\n"..
+    "Level Range: "..AtlasLoot_MapData[mapID].LevelRange.."\n"..
+    "Minimum Level: "..AtlasLoot_MapData[mapID].MinLevel.."\n"..
+    "Player Limit: "..AtlasLoot_MapData[mapID].PlayerLimit
+    );
+    AtlasLootDefaultFrame_MapSelectButton:SetText(AtlasLoot_MapData[mapID].ZoneName[1]);
+end
+
+function AtlasLoot_MapMenuClick(mapID)
+    if AtlasLootDefaultFrame_Map:IsVisible() then
+        AtlasLoot:SubTableScrollFrameUpdate(mapID, AtlasLoot_MapData);
+    end
+    AtlasLoot:MapSelect(mapID);
+    AtlasLootDefaultFrame_MapSelectButton:SetText(AtlasLoot_MapData[mapID].ZoneName[1]);
+    ATLASLOOT_CURRENT_MAP = mapID;
+    AtlasLoot_MapMenu:Close();
+end
+
+function AtlasLoot:MapMenuRegister(mapID)
+	AtlasLoot_MapMenu:Register(AtlasLootDefaultFrame_MapSelectButton,
+        'point', function(parent)
+            return "TOP", "BOTTOM"
+        end,
+        'children', function(level, value)
+                for k,v in pairs(AtlasLoot_MultiMapData[mapID]) do
+                    AtlasLoot_MapMenu:AddLine(
+                        'text', AtlasLoot_MapData[v].ZoneName[1],
+                        'func', AtlasLoot_MapMenuClick,
+                        'arg1', v,
+                        'notCheckable', true
+                    )
+                end
+                --Close button
+                AtlasLoot_MapMenu:AddLine(
+					'text', AL["Close Menu"],
+                    'textR', 0,
+                    'textG', 1,
+                    'textB', 1,
+					'func', function() AtlasLoot_MapMenu:Close() end,
+					'notCheckable', true
+				)
+		end,
+		'dontHook', true
+	)
+end
+
+AtlasLoot_MultiMapData = {
+	["AuchManaTombs"] =		        {"AuchindounEnt","AuchManaTombs","AuchAuchenaiCrypts","AuchSethekkHalls","AuchShadowLabyrinth"};
+    ["AuchAuchenaiCrypts"] =		{"AuchindounEnt","AuchManaTombs","AuchAuchenaiCrypts","AuchSethekkHalls","AuchShadowLabyrinth"};
+	["AuchSethekkHalls"] =		    {"AuchindounEnt","AuchManaTombs","AuchAuchenaiCrypts","AuchSethekkHalls","AuchShadowLabyrinth"};
+	["AuchShadowLabyrinth"] =		{"AuchindounEnt","AuchManaTombs","AuchAuchenaiCrypts","AuchSethekkHalls","AuchShadowLabyrinth"};
+	["BlackfathomDeeps"] =	        {"BlackfathomDeepsEnt","BlackfathomDeeps"};
+	["BlackrockDepths"] =           {"BlackrockSpireEnt","BlackrockDepths"};
+    ["BlackrockSpireLower"] =       {"BlackrockSpireEnt","BlackrockSpireLower","BlackrockSpireUpper"};
+	["BlackrockSpireUpper"] =       {"BlackrockSpireEnt","BlackrockSpireLower","BlackrockSpireUpper"};
+	["BlackwingLair"] =             {"BlackrockSpireEnt","BlackwingLair",};
+    ["MoltenCore"] =                {"BlackrockSpireEnt","MoltenCore"};
+	["CFRTheSlavePens"] =	        {"CoilfangReservoirEnt","CFRTheSlavePens","CFRTheUnderbog","CFRTheSteamvault"};
+    ["CFRTheUnderbog"] =	        {"CoilfangReservoirEnt","CFRTheSlavePens","CFRTheUnderbog","CFRTheSteamvault"};
+    ["CFRTheSteamvault"] =	        {"CoilfangReservoirEnt","CFRTheSlavePens","CFRTheUnderbog","CFRTheSteamvault"};
+    ["CFRSerpentshrineCavern"] =    {"CoilfangReservoirEnt","CFRSerpentshrineCavern"};
+	["Gnomeregan"] =		        {"GnomereganEnt","Gnomeregan"};
+	["HCBloodFurnace"] =            {"HCEnt","HCBloodFurnace", "HCHellfireRamparts","HCTheShatteredHalls"};
+    ["HCHellfireRamparts"] =        {"HCEnt","HCBloodFurnace", "HCHellfireRamparts", "HCTheShatteredHalls"};
+	["HCTheShatteredHalls"] =       {"HCEnt","HCBloodFurnace", "HCHellfireRamparts", "HCTheShatteredHalls"};
+	["HCMagtheridonsLair"] =        {"HCEnt", "HCMagtheridonsLair"};
+	["Maraudon"] =			        {"MaraudonEnt","Maraudon"};
+	["TheDeadmines"] =		        {"TheDeadminesEnt","TheDeadmines"};
+	["TheSunkenTemple"] =	        {"TheSunkenTempleEnt","TheSunkenTemple"};
+	["Uldaman"] =			        {"UldamanEnt","Uldaman"};
+	["WailingCaverns"] =            {"WailingCavernsEnt","WailingCaverns"};
+	["DireMaulEast"] =		        {"DireMaulEnt","DireMaulNorth","DireMaulEast","DireMaulWest"};
+    ["DireMaulNorth"] =		        {"DireMaulEnt","DireMaulNorth","DireMaulEast","DireMaulWest"};
+    ["DireMaulWest"] =		        {"DireMaulEnt","DireMaulNorth","DireMaulEast","DireMaulWest"};
+	["CoTHyjal"] =			        {"CoTEnt","CoTHyjal"};
+    ["CoTBlackMorass"] =		    {"CoTEnt","CoTHyjal","CoTBlackMorass","CoTOldHillsbrad"};
+    ["CoTOldHillsbrad"] =		    {"CoTEnt","CoTHyjal","CoTBlackMorass","CoTOldHillsbrad"};
+    ["CoTOldStratholme"] =	        {"CoTEnt","CoTOldStratholme"};
+	["KarazhanStart"] =		        {"KarazhanEnt","KarazhanStart","KarazhanEnd"};
+	["SMArmory"] =			        {"SMEnt","SMArmory","SMLibrary","SMCathedral","SMGraveyard"};
+    ["SMLibrary"] =			        {"SMEnt","SMArmory","SMLibrary","SMCathedral","SMGraveyard"};
+    ["SMCathedral"] =	            {"SMEnt","SMArmory","SMLibrary","SMCathedral","SMGraveyard"};
+    ["SMGraveyard"] =	            {"SMEnt","SMArmory","SMLibrary","SMCathedral","SMGraveyard"};
+    ["BlackTempleStart"] =          {"BlackTempleStart","BlackTempleTop","BlackTempleBasement"};
+};
 
 AtlasLoot_MapData = {
 
@@ -75,7 +157,7 @@ AtlasLoot_MapData = {
 --************************************************
 
 ["AuchindounEnt"] = {
-    ZoneName = { BabbleZone["Auchindoun"].." ("..AtlasLocale["Entrance"]..")" };
+    ZoneName = {AtlasLocale["Entrance"]};
     Location = { BabbleZone["Terokkar Forest"], 3519 };
     LevelRange = "63-70";
     MinLevel = "55";
@@ -104,17 +186,17 @@ AtlasLoot_MapData = {
     { WHITE.."5) "..AtlasLocale["Meeting Stone"] };
 };
 ["BlackfathomDeepsEnt"] = {
-    ZoneName = { BabbleZone["Blackfathom Deeps"].." ("..AtlasLocale["Entrance"]..")", 719 };
+    ZoneName = {AtlasLocale["Entrance"], 719 };
     Location = { BabbleZone["Ashenvale"], 331 };
     LevelRange = "20-28";
     MinLevel = "19";
-    PlayerLimit = "10";
+    PlayerLimit = "5";
     Acronym = AtlasLocale["BFD"];
     { BLUE.."A) "..AtlasLocale["Entrance"] };
     { BLUE.."B) "..BabbleZone["Blackfathom Deeps"], ZONE, 719 };
 };
 ["BlackrockSpireEnt"] = {
-    ZoneName = { BabbleZone["Blackrock Mountain"].." ("..AtlasLocale["Entrance"]..")", 25 };
+    ZoneName = { AtlasLocale["Entrance"], 25 };
     Location = { BabbleZone["Searing Gorge"].." / "..BabbleZone["Burning Steppes"], 51, 46 };
     LevelRange = "54-60";
     MinLevel = "45";
@@ -137,7 +219,7 @@ AtlasLoot_MapData = {
     { WHITE.."7) "..AtlasLocale["Scarshield Quartermaster <Scarshield Legion>"], NPC, 9046 };
 };
 ["CoilfangReservoirEnt"] = {
-    ZoneName = { BabbleZone["Coilfang Reservoir"].." ("..AtlasLocale["Entrance"]..")" };
+    ZoneName = { AtlasLocale["Entrance"]};
     Location = { BabbleZone["Zangarmarsh"], 3521 };
     LevelRange = "61-70";
     MinLevel = "55";
@@ -153,7 +235,7 @@ AtlasLoot_MapData = {
     { WHITE.."2) "..AtlasLocale["Mortog Steamhead"], NPC, 23373 };
 };
 ["CoTEnt"] = {
-    ZoneName = { BabbleZone["Caverns of Time"].." ("..AtlasLocale["Entrance"]..")" };
+    ZoneName = { AtlasLocale["Entrance"]};
     Location = { BabbleZone["Tanaris"], 440 };
     LevelRange = "66-70";
     MinLevel = "66";
@@ -181,7 +263,7 @@ AtlasLoot_MapData = {
     { WHITE..INDENT..AtlasLocale["Nozari <Keepers of Time>"].." ("..AtlasLocale["Adult"]..")", NPC, 20131 };
 };
 ["DireMaulEnt"] = {
-    ZoneName = { BabbleZone["Dire Maul"].." ("..AtlasLocale["Entrance"]..")", 2557 };
+    ZoneName = { AtlasLocale["Entrance"], 2557 };
     Location = { BabbleZone["Feralas"], 357 };
     LevelRange = "55-60";
     MinLevel = "45";
@@ -199,11 +281,11 @@ AtlasLoot_MapData = {
     { WHITE..INDENT..AtlasLocale["Elder Mistwalker"].." ("..AtlasLocale["Lunar Festival"]..")", NPC, 15587 };
 };
 ["GnomereganEnt"] = {
-    ZoneName = { BabbleZone["Gnomeregan"].." ("..AtlasLocale["Entrance"]..")", 133 };
+    ZoneName = { AtlasLocale["Entrance"], 133 };
     Location = { BabbleZone["Dun Morogh"], 1 };
     LevelRange = "24-32";
     MinLevel = "20";
-    PlayerLimit = "10";
+    PlayerLimit = "5";
     Acronym = AtlasLocale["Gnome"];
     { BLUE.."A) "..AtlasLocale["Entrance"] };
     { BLUE..INDENT..AtlasLocale["Meeting Stone"] };
@@ -217,7 +299,7 @@ AtlasLoot_MapData = {
     { WHITE.."4) "..AtlasLocale["Techbot"], NPC, 6231 };
 };
 ["HCEnt"] = {
-    ZoneName = { BabbleZone["Hellfire Citadel"].." ("..AtlasLocale["Entrance"]..")", 3545 };
+    ZoneName = { AtlasLocale["Entrance"], 3545 };
     Location = { BabbleZone["Hellfire Peninsula"], 3483 };
     LevelRange = "59-70";
     MinLevel = "55";
@@ -233,7 +315,7 @@ AtlasLoot_MapData = {
     { GREN.."2') "..AtlasLocale["Path to the Hellfire Ramparts and Shattered Halls"] };
 };
 ["KarazhanEnt"] = {
-    ZoneName = { BabbleZone["Karazhan"].." ("..AtlasLocale["Entrance"]..")", 2562 };
+    ZoneName = { AtlasLocale["Entrance"], 2562 };
     Location = { BabbleZone["Deadwind Pass"], 41 };
     LevelRange = "70";
     MinLevel = "68";
@@ -251,11 +333,11 @@ AtlasLoot_MapData = {
     { WHITE.."6) "..AtlasLocale["Charred Bone Fragment"], OBJECT, 181963 };
 };
 ["MaraudonEnt"] = {
-    ZoneName = { BabbleZone["Maraudon"].." ("..AtlasLocale["Entrance"]..")", 2100 };
+    ZoneName = { AtlasLocale["Entrance"], 2100 };
     Location = { BabbleZone["Desolace"], 405 };
     LevelRange = "42-51";
     MinLevel = "30";
-    PlayerLimit = "10";
+    PlayerLimit = "5";
     Acronym = AtlasLocale["Mara"];
     { BLUE.."A) "..AtlasLocale["Entrance"] };
     { BLUE..INDENT..AtlasLocale["The Nameless Prophet"], NPC, 13718 };
@@ -268,11 +350,11 @@ AtlasLoot_MapData = {
     { WHITE.."4) "..AtlasLocale["Cavindra"], NPC, 13697 };
 };
 ["SMEnt"] = {
-    ZoneName = { BabbleZone["Scarlet Monastery"].." ("..AtlasLocale["Entrance"]..")", 796 };
+    ZoneName = { AtlasLocale["Entrance"], 796 };
     Location = { BabbleZone["Tirisfal Glades"], 85 };
     LevelRange = "28-42";
     MinLevel = "20";
-    PlayerLimit = "10";
+    PlayerLimit = "5";
     Acronym = AtlasLocale["SM"];
     { BLUE.."A) "..AtlasLocale["Entrance"] };
     { BLUE.."B) "..BabbleZone["Graveyard"], ZONE, 796 };
@@ -281,11 +363,11 @@ AtlasLoot_MapData = {
     { BLUE.."E) "..BabbleZone["Library"], ZONE, 796 };
 };
 ["TheDeadminesEnt"] = {
-    ZoneName = { BabbleZone["The Deadmines"].." ("..AtlasLocale["Entrance"]..")", 1581 };
+    ZoneName = { AtlasLocale["Entrance"], 1581 };
     Location = { BabbleZone["Westfall"], 40 };
     LevelRange = "16-22";
     MinLevel = "10";
-    PlayerLimit = "10";
+    PlayerLimit = "5";
     Acronym = AtlasLocale["VC"];
     { BLUE.."A) "..AtlasLocale["Entrance"] };
     { BLUE.."B) "..BabbleZone["The Deadmines"], ZONE, 1581 };
@@ -294,11 +376,11 @@ AtlasLoot_MapData = {
     { WHITE.."3) "..AtlasLocale["Foreman Thistlenettle"], NPC, 626 };
 };
 ["TheSunkenTempleEnt"] = {
-    ZoneName = { BabbleZone["Sunken Temple"].." ("..AtlasLocale["Entrance"]..")", 1417 };
+    ZoneName = {AtlasLocale["Entrance"], 1417 };
     Location = { BabbleZone["Swamp of Sorrows"], 8 };
     LevelRange = "46-53";
     MinLevel = "35";
-    PlayerLimit = "10";
+    PlayerLimit = "5";
     Acronym = AtlasLocale["ST"];
     { BLUE.."A) "..AtlasLocale["Entrance"] };
     { BLUE..INDENT..AtlasLocale["Meeting Stone"] };
@@ -309,11 +391,11 @@ AtlasLoot_MapData = {
     { WHITE.."3) "..AtlasLocale["Zekkis"].." ("..AtlasLocale["Rare"]..", "..AtlasLocale["Lower"]..")", NPC, 5400 };
 };
 ["UldamanEnt"] = {
-    ZoneName = { BabbleZone["Uldaman"].." ("..AtlasLocale["Entrance"]..")", 1337 };
+    ZoneName = { AtlasLocale["Entrance"], 1337 };
     Location = { BabbleZone["Badlands"], 3 };
     LevelRange = "36-42";
     MinLevel = "30";
-    PlayerLimit = "10";
+    PlayerLimit = "5";
     Acronym = AtlasLocale["Ulda"];
     { BLUE.."A) "..AtlasLocale["Entrance"] };
     { BLUE.."B) "..BabbleZone["Uldaman"], ZONE, 1337 };
@@ -325,11 +407,11 @@ AtlasLoot_MapData = {
     { GREN.."1') "..AtlasLocale["Digmaster Shovelphlange"].." ("..AtlasLocale["Rare"]..", "..AtlasLocale["Varies"]..")", NPC, 7057 };
 };
 ["WailingCavernsEnt"] = {
-    ZoneName = { BabbleZone["Wailing Caverns"].." ("..AtlasLocale["Entrance"]..")", 718 };
+    ZoneName = { AtlasLocale["Entrance"], 718 };
     Location = { BabbleZone["The Barrens"], 17 };
     LevelRange = "16-25";
     MinLevel = "10";
-    PlayerLimit = "10";
+    PlayerLimit = "5";
     Acronym = AtlasLocale["WC"];
     { BLUE.."A) "..AtlasLocale["Entrance"] };
     { BLUE.."B) "..BabbleZone["Wailing Caverns"], ZONE, 718 };
@@ -353,7 +435,7 @@ AtlasLoot_MapData = {
     Location = { BabbleZone["Ashenvale"], 331 };
     LevelRange = "20-28";
     MinLevel = "19";
-    PlayerLimit = "10";
+    PlayerLimit = "5";
     Acronym = AtlasLocale["BFD"];
     { BLUE.."A) "..AtlasLocale["Entrance"] };
     { WHITE.."1) "..AtlasLocale["Ghamoo-ra"], NPC, 4887 };
@@ -447,7 +529,7 @@ AtlasLoot_MapData = {
     Location = { BabbleZone["Desolace"], 405 };
     LevelRange = "42-51";
     MinLevel = "30";
-    PlayerLimit = "10";
+    PlayerLimit = "5";
     Acronym = AtlasLocale["Mara"];
     { BLUE.."A) "..AtlasLocale["Entrance"].." ("..AtlasLocale["Orange"]..")" };
     { BLUE.."B) "..AtlasLocale["Entrance"].." ("..AtlasLocale["Purple"]..")" };
@@ -470,7 +552,7 @@ AtlasLoot_MapData = {
     Location = { BabbleZone["Orgrimmar"], 1637 };
     LevelRange = "12-18";
     MinLevel = "8";
-    PlayerLimit = "10";
+    PlayerLimit = "5";
     Acronym = AtlasLocale["RFC"];
     { BLUE.."A) "..AtlasLocale["Entrance"] };
     { WHITE.."1) "..AtlasLocale["Maur Grimtotem"], NPC, 11834 };
@@ -485,7 +567,7 @@ AtlasLoot_MapData = {
     Location = { BabbleZone["The Barrens"], 17 };
     LevelRange = "33-42";
     MinLevel = "25";
-    PlayerLimit = "10";
+    PlayerLimit = "5";
     Acronym = AtlasLocale["RFD"];
     { BLUE.."A) "..AtlasLocale["Entrance"] };
     { WHITE.."1) "..AtlasLocale["Tuten'kash"], NPC, 7355 };
@@ -503,7 +585,7 @@ AtlasLoot_MapData = {
     Location = { BabbleZone["The Barrens"], 17 };
     LevelRange = "23-33";
     MinLevel = "17";
-    PlayerLimit = "10";
+    PlayerLimit = "5";
     Acronym = AtlasLocale["RFK"];
     { BLUE.."A) "..AtlasLocale["Entrance"] };
     { WHITE.."1) "..AtlasLocale["Roogug"], NPC, 6168 };
@@ -519,7 +601,7 @@ AtlasLoot_MapData = {
     { WHITE.."9) "..AtlasLocale["Earthcaller Halmgar"].." ("..AtlasLocale["Rare"]..")", NPC, 4842 };
 };
 ["TheRuinsofAhnQiraj"] = {
-    ZoneName = { BabbleZone["Ahn'Qiraj"]..": "..BabbleZone["Ruins of Ahn'Qiraj"], 3429 };
+    ZoneName = { BabbleZone["Ruins of Ahn'Qiraj"], 3429 };
     Location = { BabbleZone["Silithus"], 1377 };
     LevelRange = "60-70";
     MinLevel = "50";
@@ -545,11 +627,11 @@ AtlasLoot_MapData = {
     { GREN.."1') "..AtlasLocale["Safe Room"] };
 };
 ["TheTempleofAhnQiraj"] = {
-    ZoneName = { BabbleZone["Ahn'Qiraj"]..": "..BabbleZone["Temple of Ahn'Qiraj"], 3428 };
+    ZoneName = { BabbleZone["Temple of Ahn'Qiraj"], 3428 };
     Location = { BabbleZone["Silithus"], 1377 };
     LevelRange = "60-70";
     MinLevel = "50";
-    PlayerLimit = "40";
+    PlayerLimit = "10-25";
     Acronym = AtlasLocale["AQ40"];
     { ORNG..AtlasLocale["Reputation"]..": "..AtlasLocale["Brood of Nozdormu"], FACTION, 910 };
     { BLUE.."A) "..AtlasLocale["Entrance"] };
@@ -580,7 +662,7 @@ AtlasLoot_MapData = {
     Location = { BabbleZone["The Barrens"], 17 };
     LevelRange = "16-25";
     MinLevel = "10";
-    PlayerLimit = "10";
+    PlayerLimit = "5";
     Acronym = AtlasLocale["WC"];
     { BLUE.."A) "..AtlasLocale["Entrance"] };
     { WHITE.."1) "..AtlasLocale["Disciple of Naralex"], NPC, 3678 };
@@ -600,7 +682,7 @@ AtlasLoot_MapData = {
     Location = { BabbleZone["Tanaris"], 440 };
     LevelRange = "42-48";
     MinLevel = "35";
-    PlayerLimit = "10";
+    PlayerLimit = "5";
     Acronym = AtlasLocale["ZF"];
     { BLUE.."A) "..AtlasLocale["Entrance"] };
     { WHITE.."1) "..AtlasLocale["Antu'sul <Overseer of Sul>"], NPC, 8127 };
@@ -630,10 +712,10 @@ AtlasLoot_MapData = {
 --************************************************
 
 ["BlackrockDepths"] = {
-    ZoneName = { BabbleZone["Blackrock Mountain"]..": "..BabbleZone["Blackrock Depths"], 1584 };
+    ZoneName = { BabbleZone["Blackrock Depths"], 1584 };
     Location = { BabbleZone["Searing Gorge"].." / "..BabbleZone["Burning Steppes"], 51, 46 };
     LevelRange = "52-58";
-    MinLevel = "40";
+    MinLevel = "10-25";
     PlayerLimit = "5";
     Acronym = AtlasLocale["BRD"];
     { ORNG..AtlasLocale["Key"]..": "..AtlasLocale["Shadowforge Key"], ITEM, 11000 };
@@ -702,11 +784,11 @@ AtlasLoot_MapData = {
     { WHITE.."25) "..AtlasLocale["Blacksmithing Plans"], OBJECT, 173232 };
 };
 ["BlackrockSpireLower"] = {
-    ZoneName = { BabbleZone["Blackrock Mountain"]..": "..BabbleZone["Blackrock Spire"].." ("..AtlasLocale["Lower"]..")", 1583 };
+    ZoneName = { BabbleZone["Blackrock Spire"].." ("..AtlasLocale["Lower"]..")", 1583 };
     Location = { BabbleZone["Searing Gorge"].." / "..BabbleZone["Burning Steppes"], 51, 46 };
     LevelRange = "54-60";
     MinLevel = "45";
-    PlayerLimit = "10";
+    PlayerLimit = "5";
     Acronym = AtlasLocale["LBRS"];
     { ORNG..AtlasLocale["Key"]..": "..AtlasLocale["Brazier of Invocation"].." ("..AtlasLocale["DS2"]..")", ITEM, 22057 };
     { BLUE.."A) "..AtlasLocale["Entrance"] };
@@ -742,11 +824,11 @@ AtlasLoot_MapData = {
     { GREN.."1') "..AtlasLocale["Burning Felguard"].." ("..AtlasLocale["Rare"]..", "..AtlasLocale["Summon"]..")", NPC, 10263 };
 };
 ["BlackrockSpireUpper"] = {
-    ZoneName = { BabbleZone["Blackrock Mountain"]..": "..BabbleZone["Blackrock Spire"].." ("..AtlasLocale["Upper"]..")", 1583 };
+    ZoneName = { BabbleZone["Blackrock Spire"].." ("..AtlasLocale["Upper"]..")", 1583 };
     Location = { BabbleZone["Searing Gorge"].." / "..BabbleZone["Burning Steppes"], 51, 46 };
     LevelRange = "56-61";
     MinLevel = "45";
-    PlayerLimit = "10";
+    PlayerLimit = "5";
     Acronym = AtlasLocale["UBRS"];
     { ORNG..AtlasLocale["Key"]..": "..AtlasLocale["Brazier of Invocation"].." ("..AtlasLocale["DS2"]..")", ITEM, 22057 };
     { BLUE.."A) "..AtlasLocale["Entrance"] };
@@ -770,11 +852,11 @@ AtlasLoot_MapData = {
     { WHITE.."10) "..BabbleZone["Blackwing Lair"], ZONE, 2677 };
 };
 ["BlackwingLair"] = {
-    ZoneName = { BabbleZone["Blackrock Mountain"]..": "..BabbleZone["Blackwing Lair"], 2677 };
+    ZoneName = { BabbleZone["Blackwing Lair"], 2677 };
     Location = { BabbleZone["Searing Gorge"].." / "..BabbleZone["Burning Steppes"], 51, 46 };
     LevelRange = "60-70";
     MinLevel = "60";
-    PlayerLimit = "40";
+    PlayerLimit = "10-25";
     Acronym = AtlasLocale["BWL"];
     { ORNG..AtlasLocale["Attunement Required"] };
     { BLUE.."A) "..AtlasLocale["Entrance"] };
@@ -796,7 +878,7 @@ AtlasLoot_MapData = {
     Location = { BabbleZone["Dun Morogh"], 1 };
     LevelRange = "24-32";
     MinLevel = "20";
-    PlayerLimit = "10";
+    PlayerLimit = "5";
     Acronym = AtlasLocale["Gnome"];
     { ORNG..AtlasLocale["Key"]..": "..AtlasLocale["Workshop Key"].." ("..AtlasLocale["Back"]..")", ITEM, 6893 };
     { BLUE.."A) "..AtlasLocale["Entrance"].." ("..AtlasLocale["Front"]..")" };
@@ -820,11 +902,11 @@ AtlasLoot_MapData = {
     { WHITE.."8) "..AtlasLocale["Mekgineer Thermaplugg"], NPC, 7800 };
 };
 ["MoltenCore"] = {
-    ZoneName = { BabbleZone["Blackrock Mountain"]..": "..BabbleZone["Molten Core"], 2717 };
+    ZoneName = { BabbleZone["Molten Core"], 2717 };
     Location = { BabbleZone["Searing Gorge"].." / "..BabbleZone["Burning Steppes"], 51, 46 };
     LevelRange = "60-70";
     MinLevel = "50";
-    PlayerLimit = "40";
+    PlayerLimit = "10-25";
     Acronym = AtlasLocale["MC"];
     { ORNG..AtlasLocale["Attunement Required"] };
     { ORNG..AtlasLocale["Reputation"]..": "..AtlasLocale["Hydraxian Waterlords"], FACTION, 749 };
@@ -885,7 +967,7 @@ AtlasLoot_MapData = {
     Location = { BabbleZone["Silverpine Forest"], 130 };
     LevelRange = "17-25";
     MinLevel = "10";
-    PlayerLimit = "10";
+    PlayerLimit = "5";
     Acronym = AtlasLocale["SFK"];
     { BLUE.."A) "..AtlasLocale["Entrance"] };
     { WHITE.."1) "..AtlasLocale["Rethilgore <The Cell Keeper>"], NPC, 3914 };
@@ -913,22 +995,22 @@ AtlasLoot_MapData = {
     { WHITE.."13) "..AtlasLocale["Archmage Arugal"], NPC, 4275 };
 };
 ["SMArmory"] = {
-    ZoneName = { BabbleZone["Scarlet Monastery"]..": "..BabbleZone["Armory"], 796 };
+    ZoneName = { BabbleZone["Armory"], 796 };
     Location = { BabbleZone["Tirisfal Glades"], 85 };
     LevelRange = "33-40";
     MinLevel = "20";
-    PlayerLimit = "10";
+    PlayerLimit = "5";
     Acronym = AtlasLocale["Armory"];
     { ORNG..AtlasLocale["Key"]..": "..AtlasLocale["The Scarlet Key"], ITEM, 7146 };
     { BLUE.."A) "..AtlasLocale["Entrance"] };
     { WHITE.."1) "..AtlasLocale["Herod <The Scarlet Champion>"], NPC, 3975 };
 };
 ["SMCathedral"] = {
-    ZoneName = { BabbleZone["Scarlet Monastery"]..": "..BabbleZone["Cathedral"], 796 };
+    ZoneName = { BabbleZone["Cathedral"], 796 };
     Location = { BabbleZone["Tirisfal Glades"], 85 };
     LevelRange = "36-42";
     MinLevel = "20";
-    PlayerLimit = "10";
+    PlayerLimit = "5";
     Acronym = AtlasLocale["Cath"];
     { ORNG..AtlasLocale["Key"]..": "..AtlasLocale["The Scarlet Key"], ITEM, 7146 };
     { BLUE.."A) "..AtlasLocale["Entrance"] };
@@ -937,11 +1019,11 @@ AtlasLoot_MapData = {
     { WHITE..INDENT..AtlasLocale["High Inquisitor Whitemane"], NPC, 3977 };
 };
 ["SMGraveyard"] = {
-    ZoneName = { BabbleZone["Scarlet Monastery"]..": "..BabbleZone["Graveyard"], 796 };
+    ZoneName = { BabbleZone["Graveyard"], 796 };
     Location = { BabbleZone["Tirisfal Glades"], 85 };
     LevelRange = "28-35";
     MinLevel = "20";
-    PlayerLimit = "10";
+    PlayerLimit = "5";
     Acronym = AtlasLocale["GY"];
     { BLUE.."A) "..AtlasLocale["Entrance"] };
     { WHITE.."1) "..AtlasLocale["Interrogator Vishas"], NPC, 3983 };
@@ -954,11 +1036,11 @@ AtlasLoot_MapData = {
     { GREN..INDENT..AtlasLocale["Fallen Champion"].." ("..AtlasLocale["Rare"]..")", NPC, 6488 };
 };
 ["SMLibrary"] = {
-    ZoneName = { BabbleZone["Scarlet Monastery"]..": "..BabbleZone["Library"], 796 };
+    ZoneName = { BabbleZone["Library"], 796 };
     Location = { BabbleZone["Tirisfal Glades"], 85 };
     LevelRange = "31-37";
     MinLevel = "20";
-    PlayerLimit = "10";
+    PlayerLimit = "5";
     Acronym = AtlasLocale["Lib"];
     { BLUE.."A) "..AtlasLocale["Entrance"] };
     { WHITE.."1) "..AtlasLocale["Houndmaster Loksey"], NPC, 3974 };
@@ -1020,7 +1102,7 @@ AtlasLoot_MapData = {
     Location = { BabbleZone["Westfall"], 40 };
     LevelRange = "16-22";
     MinLevel = "10";
-    PlayerLimit = "10";
+    PlayerLimit = "5";
     Acronym = AtlasLocale["VC"];
     { BLUE.."A) "..AtlasLocale["Entrance"] };
     { BLUE.."B) "..AtlasLocale["Exit"] };
@@ -1040,7 +1122,7 @@ AtlasLoot_MapData = {
     Location = { BabbleZone["Stormwind City"], 1519 };
     LevelRange = "21-27";
     MinLevel = "15";
-    PlayerLimit = "10";
+    PlayerLimit = "5";
     Acronym = AtlasLocale["Stocks"];
     { BLUE.."A) "..AtlasLocale["Entrance"] };
     { WHITE.."1) "..AtlasLocale["Targorr the Dread"].." ("..AtlasLocale["Varies"]..")", NPC, 1696 };
@@ -1055,7 +1137,7 @@ AtlasLoot_MapData = {
     Location = { BabbleZone["Swamp of Sorrows"], 8 };
     LevelRange = "46-53";
     MinLevel = "35";
-    PlayerLimit = "10";
+    PlayerLimit = "5";
     Acronym = AtlasLocale["ST"];
     { ORNG..AtlasLocale["AKA"]..": "..BabbleZone["The Temple of Atal'Hakkar"] };
     { ORNG..AtlasLocale["Key"]..": "..AtlasLocale["Yeh'kinya's Scroll"].." ("..AtlasLocale["Avatar of Hakkar"]..")", ITEM, 10818 };
@@ -1088,7 +1170,7 @@ AtlasLoot_MapData = {
     Location = { BabbleZone["Badlands"], 3 };
     LevelRange = "36-42";
     MinLevel = "30";
-    PlayerLimit = "10";
+    PlayerLimit = "5";
     Acronym = AtlasLocale["Ulda"];
     { ORNG..AtlasLocale["Key"]..": "..AtlasLocale["Staff of Prehistoria"].." ("..AtlasLocale["Ironaya"]..")", ITEM, 7733 };
     { BLUE.."A) "..AtlasLocale["Entrance"].." ("..AtlasLocale["Front"]..")" };
@@ -1149,7 +1231,7 @@ AtlasLoot_MapData = {
 --************************************************
 
 ["AuchAuchenaiCrypts"] = {
-    ZoneName = { BabbleZone["Auchindoun"]..": "..BabbleZone["Auchenai Crypts"], 3790 };
+    ZoneName = { BabbleZone["Auchenai Crypts"], 3790 };
     Location = { BabbleZone["Terokkar Forest"], 3519 };
     LevelRange = "64-70";
     MinLevel = "55";
@@ -1164,7 +1246,7 @@ AtlasLoot_MapData = {
     { WHITE..INDENT..AtlasLocale["D'ore"], NPC, 19412 };
 };
 ["AuchManaTombs"] = {
-    ZoneName = { BabbleZone["Auchindoun"]..": "..BabbleZone["Mana-Tombs"], 3792 };
+    ZoneName = { BabbleZone["Mana-Tombs"], 3792 };
     Location = { BabbleZone["Terokkar Forest"], 3519 };
     LevelRange = "63-70";
     MinLevel = "55";
@@ -1184,7 +1266,7 @@ AtlasLoot_MapData = {
     { WHITE..INDENT..AtlasLocale["Yor <Void Hound of Shaffar>"].." ("..AtlasLocale["Summon"]..", "..AtlasLocale["Heroic"]..")", NPC, 22930 };
 };
 ["AuchSethekkHalls"] = {
-    ZoneName = { BabbleZone["Auchindoun"]..": "..BabbleZone["Sethekk Halls"], 3791 };
+    ZoneName = {BabbleZone["Sethekk Halls"], 3791 };
     Location = { BabbleZone["Terokkar Forest"], 3519 };
     LevelRange = "66-70";
     MinLevel = "55";
@@ -1201,7 +1283,7 @@ AtlasLoot_MapData = {
     { WHITE.."3) "..AtlasLocale["Talon King Ikiss"], NPC, 18473 };
 };
 ["AuchShadowLabyrinth"] = {
-    ZoneName = { BabbleZone["Auchindoun"]..": "..BabbleZone["Shadow Labyrinth"], 3789 };
+    ZoneName = { BabbleZone["Shadow Labyrinth"], 3789 };
     Location = { BabbleZone["Terokkar Forest"], 3519 };
     LevelRange = "69-70";
     MinLevel = "65";
@@ -1225,7 +1307,7 @@ AtlasLoot_MapData = {
     Location = { BabbleZone["Shadowmoon Valley"], 3520 };
     LevelRange = "70";
     MinLevel = "70";
-    PlayerLimit = "25";
+    PlayerLimit = "10-25";
     Acronym = AtlasLocale["BT"];
     { ORNG..AtlasLocale["Reputation"]..": "..AtlasLocale["Ashtongue Deathsworn"], FACTION, 1012 };
     { BLUE.."A) "..AtlasLocale["Entrance"] };
@@ -1246,7 +1328,7 @@ AtlasLoot_MapData = {
     Location = { BabbleZone["Shadowmoon Valley"], 3520 };
     LevelRange = "70";
     MinLevel = "70";
-    PlayerLimit = "25";
+    PlayerLimit = "10-25";
     Acronym = AtlasLocale["BT"];
     { ORNG..AtlasLocale["Reputation"]..": "..AtlasLocale["Ashtongue Deathsworn"], FACTION, 1012 };
     { BLUE.."B) "..AtlasLocale["Entrance"] };
@@ -1263,7 +1345,7 @@ AtlasLoot_MapData = {
     Location = { BabbleZone["Shadowmoon Valley"], 3520 };
     LevelRange = "70";
     MinLevel = "70";
-    PlayerLimit = "25";
+    PlayerLimit = "10-25";
     Acronym = AtlasLocale["BT"];
     { ORNG..AtlasLocale["Reputation"]..": "..AtlasLocale["Ashtongue Deathsworn"], FACTION, 1012 };
     { BLUE.."D) "..AtlasLocale["Entrance"] };
@@ -1276,11 +1358,11 @@ AtlasLoot_MapData = {
     { WHITE.."11) "..AtlasLocale["Illidan Stormrage <The Betrayer>"], NPC, 22917 };
 };
 ["CFRSerpentshrineCavern"] = {
-    ZoneName = { BabbleZone["Coilfang Reservoir"]..": "..BabbleZone["Serpentshrine Cavern"], 3607 };
+    ZoneName = { BabbleZone["Serpentshrine Cavern"], 3607 };
     Location = { BabbleZone["Zangarmarsh"], 3521 };
     LevelRange = "70";
     MinLevel = "70";
-    PlayerLimit = "25";
+    PlayerLimit = "10-25";
     Acronym = AtlasLocale["SC"];
     { ORNG..AtlasLocale["Reputation"]..": "..AtlasLocale["Cenarion Expedition"], FACTION, 942 };
     { BLUE.."A) "..AtlasLocale["Entrance"] };
@@ -1293,7 +1375,7 @@ AtlasLoot_MapData = {
     { WHITE.."6) "..AtlasLocale["Lady Vashj <Coilfang Matron>"], NPC, 21212 };
 };
 ["CFRTheSlavePens"] = {
-    ZoneName = { BabbleZone["Coilfang Reservoir"]..": "..BabbleZone["The Slave Pens"], 3717 };
+    ZoneName = { BabbleZone["The Slave Pens"], 3717 };
     Location = { BabbleZone["Zangarmarsh"], 3521 };
     LevelRange = "61-69";
     MinLevel = "55";
@@ -1311,7 +1393,7 @@ AtlasLoot_MapData = {
     { WHITE.."7) "..AtlasLocale["Quagmirran"], NPC, 17942 };
 };
 ["CFRTheSteamvault"] = {
-    ZoneName = { BabbleZone["Coilfang Reservoir"]..": "..BabbleZone["The Steamvault"], 3715 };
+    ZoneName = { BabbleZone["The Steamvault"], 3715 };
     Location = { BabbleZone["Zangarmarsh"], 3521 };
     LevelRange = "69-70";
     MinLevel = "55";
@@ -1329,7 +1411,7 @@ AtlasLoot_MapData = {
     { WHITE.."4) "..AtlasLocale["Warlord Kalithresh"], NPC, 17798 };
 };
 ["CFRTheUnderbog"] = {
-    ZoneName = { BabbleZone["Coilfang Reservoir"]..": "..BabbleZone["The Underbog"], 3716 };
+    ZoneName = { BabbleZone["The Underbog"], 3716 };
     Location = { BabbleZone["Zangarmarsh"], 3521 };
     LevelRange = "62-70";
     MinLevel = "55";
@@ -1347,7 +1429,7 @@ AtlasLoot_MapData = {
     { WHITE.."5) "..AtlasLocale["The Black Stalker"], NPC, 17882 };
 };
 ["CoTBlackMorass"] = {
-    ZoneName = { BabbleZone["Caverns of Time"]..": "..BabbleZone["The Black Morass"], 2366 };
+    ZoneName = { BabbleZone["The Black Morass"], 2366 };
     Location = { BabbleZone["Tanaris"], 440 };
     LevelRange = "68-70";
     MinLevel = "66";
@@ -1367,11 +1449,11 @@ AtlasLoot_MapData = {
     { WHITE..INDENT..AtlasLocale["Medivh"], NPC, 15608 };
 };
 ["CoTHyjal"] = {
-    ZoneName = { BabbleZone["Caverns of Time"]..": "..BabbleZone["Hyjal Summit"], 3606 };
+    ZoneName = { BabbleZone["Hyjal Summit"], 3606 };
     Location = { BabbleZone["Tanaris"], 440 };
     LevelRange = "70";
     MinLevel = "70";
-    PlayerLimit = "25";
+    PlayerLimit = "10-25";
     Acronym = AtlasLocale["CoT3"];
     { PURP..AtlasLocale["Event"]..": "..AtlasLocale["Battle for Mount Hyjal"] };
     { ORNG..AtlasLocale["Reputation"]..": "..AtlasLocale["The Scale of the Sands"], FACTION, 990 };
@@ -1390,7 +1472,7 @@ AtlasLoot_MapData = {
     { WHITE..INDENT..AtlasLocale["Tydormu <Keeper of Lost Artifacts>"], NPC, 23381 };
 };
 ["CoTOldHillsbrad"] = {
-    ZoneName = { BabbleZone["Caverns of Time"]..": "..BabbleZone["Old Hillsbrad Foothills"], 2367 };
+    ZoneName = { BabbleZone["Old Hillsbrad Foothills"], 2367 };
     Location = { BabbleZone["Tanaris"], 440 };
     LevelRange = "66-70";
     MinLevel = "66";
@@ -1469,7 +1551,7 @@ AtlasLoot_MapData = {
     Location = { BabbleZone["Blade's Edge Mountains"], 3522 };
     LevelRange = "70";
     MinLevel = "65";
-    PlayerLimit = "25";
+    PlayerLimit = "10-25";
     Acronym = AtlasLocale["GL"];
     { BLUE.."A) "..AtlasLocale["Entrance"] };
     { WHITE.."1) "..AtlasLocale["High King Maulgar <Lord of the Ogres>"], NPC, 18831 };
@@ -1480,7 +1562,7 @@ AtlasLoot_MapData = {
     { WHITE.."2) "..AtlasLocale["Gruul the Dragonkiller"], NPC, 19044 };
 };
 ["HCBloodFurnace"] = {
-    ZoneName = { BabbleZone["Hellfire Citadel"]..": "..BabbleZone["The Blood Furnace"], 3713 };
+    ZoneName = { BabbleZone["The Blood Furnace"], 3713 };
     Location = { BabbleZone["Hellfire Peninsula"], 3483 };
     LevelRange = "60-68";
     MinLevel = "55";
@@ -1495,7 +1577,7 @@ AtlasLoot_MapData = {
     { WHITE.."3) "..AtlasLocale["Keli'dan the Breaker"], NPC, 17377 };
 };
 ["HCHellfireRamparts"] = {
-    ZoneName = { BabbleZone["Hellfire Citadel"]..": "..BabbleZone["Hellfire Ramparts"], 3562 };
+    ZoneName = { BabbleZone["Hellfire Ramparts"], 3562 };
     Location = { BabbleZone["Hellfire Peninsula"], 3483 };
     LevelRange = "59-67";
     MinLevel = "55";
@@ -1512,17 +1594,17 @@ AtlasLoot_MapData = {
     { WHITE..INDENT..AtlasLocale["Reinforced Fel Iron Chest"], OBJECT, 185168 };
 };
 ["HCMagtheridonsLair"] = {
-    ZoneName = { BabbleZone["Hellfire Citadel"]..": "..BabbleZone["Magtheridon's Lair"], 3836 };
+    ZoneName = { BabbleZone["Magtheridon's Lair"], 3836 };
     Location = { BabbleZone["Hellfire Peninsula"], 3483 };
     LevelRange = "70";
     MinLevel = "65";
-    PlayerLimit = "25";
+    PlayerLimit = "10-25";
     Acronym = AtlasLocale["Mag"];
     { BLUE.."A) "..AtlasLocale["Entrance"] };
     { WHITE.."1) "..AtlasLocale["Magtheridon"], NPC, 17257 };
 };
 ["HCTheShatteredHalls"] = {
-    ZoneName = { BabbleZone["Hellfire Citadel"]..": "..BabbleZone["The Shattered Halls"], 3714 };
+    ZoneName = { BabbleZone["The Shattered Halls"], 3714 };
     Location = { BabbleZone["Hellfire Peninsula"], 3483 };
     LevelRange = "69-70";
     MinLevel = "55";
@@ -1552,7 +1634,7 @@ AtlasLoot_MapData = {
     Location = { BabbleZone["Deadwind Pass"], 41 };
     LevelRange = "70";
     MinLevel = "68";
-    PlayerLimit = "10";
+    PlayerLimit = "5";
     Acronym = AtlasLocale["Kara"];
     { ORNG..AtlasLocale["Reputation"]..": "..AtlasLocale["The Violet Eye"], FACTION, 967 };
     { ORNG..AtlasLocale["Key"]..": "..AtlasLocale["The Master's Key"], ITEM, 24490 };
@@ -1609,7 +1691,7 @@ AtlasLoot_MapData = {
     Location = { BabbleZone["Deadwind Pass"], 41 };
     LevelRange = "70";
     MinLevel = "68";
-    PlayerLimit = "10";
+    PlayerLimit = "5";
     Acronym = AtlasLocale["Kara"];
     { ORNG..AtlasLocale["Reputation"]..": "..AtlasLocale["The Violet Eye"], FACTION, 967 };
     { ORNG..AtlasLocale["Key"]..": "..AtlasLocale["The Master's Key"], ITEM, 24490 };
@@ -1667,7 +1749,7 @@ AtlasLoot_MapData = {
     Location = { BabbleZone["Isle of Quel'Danas"], 4080 };
     LevelRange = "70";
     MinLevel = "70";
-    PlayerLimit = "25";
+    PlayerLimit = "10-25";
     Acronym = AtlasLocale["SuP"];
     { BLUE.."A) "..AtlasLocale["Entrance"] };
     { WHITE.."1) "..AtlasLocale["Kalecgos"], NPC, 24850 };
@@ -1683,7 +1765,7 @@ AtlasLoot_MapData = {
     { WHITE.."4) "..AtlasLocale["Kil'jaeden <The Deceiver>"], NPC, 25315 };
 };
 ["TempestKeepArcatraz"] = {
-    ZoneName = { BabbleZone["Tempest Keep"]..": "..BabbleZone["The Arcatraz"], 3846 };
+    ZoneName = {BabbleZone["The Arcatraz"], 3846 };
     Location = { BabbleZone["Netherstorm"], 3523 };
     LevelRange = "69-70";
     MinLevel = "68";
@@ -1704,7 +1786,7 @@ AtlasLoot_MapData = {
     { WHITE..INDENT..AtlasLocale["Millhouse Manastorm"], NPC, 20977 };
 };
 ["TempestKeepBotanica"] = {
-    ZoneName = { BabbleZone["Tempest Keep"]..": "..BabbleZone["The Botanica"], 3847 };
+    ZoneName = { BabbleZone["The Botanica"], 3847 };
     Location = { BabbleZone["Netherstorm"], 3523 };
     LevelRange = "69-70";
     MinLevel = "68";
@@ -1721,7 +1803,7 @@ AtlasLoot_MapData = {
     { WHITE.."5) "..AtlasLocale["Warp Splinter"], NPC, 17977 };
 };
 ["TempestKeepMechanar"] = {
-    ZoneName = { BabbleZone["Tempest Keep"]..": "..BabbleZone["The Mechanar"], 3849 };
+    ZoneName = { BabbleZone["The Mechanar"], 3849 };
     Location = { BabbleZone["Netherstorm"], 3523 };
     LevelRange = "68-70";
     MinLevel = "68";
@@ -1740,11 +1822,11 @@ AtlasLoot_MapData = {
     { WHITE.."5) "..AtlasLocale["Pathaleon the Calculator"], NPC, 19220 };
 };
 ["TempestKeepTheEye"] = {
-    ZoneName = { BabbleZone["Tempest Keep"]..": "..BabbleZone["The Eye"], 3842 };
+    ZoneName = { BabbleZone["The Eye"], 3842 };
     Location = { BabbleZone["Netherstorm"], 3523 };
     LevelRange = "70";
     MinLevel = "70";
-    PlayerLimit = "25";
+    PlayerLimit = "10-25";
     Acronym = AtlasLocale["Eye"];
     { ORNG..AtlasLocale["Reputation"]..": "..AtlasLocale["The Sha'tar"], FACTION, 935 };
     { BLUE.."A) "..AtlasLocale["Entrance"] };
@@ -1762,7 +1844,7 @@ AtlasLoot_MapData = {
     Location = { BabbleZone["Ghostlands"], 3433 };
     LevelRange = "70";
     MinLevel = "68";
-    PlayerLimit = "10";
+    PlayerLimit = "5";
     Acronym = AtlasLocale["ZA"];
     { BLUE.."A) "..AtlasLocale["Entrance"] };
     { BLUE..INDENT..AtlasLocale["Harrison Jones"], NPC, 24358 };
@@ -2012,8 +2094,8 @@ AtlasLoot_MapData = {
     Location = { BabbleZone["Eastern Plaguelands"], 65 };
     LevelRange = "60+";
     MinLevel = "60";
-    PlayerLimit = "40";
-    Acronym = AtlasLocale["Nax60"];
+    PlayerLimit = "10-25";
+    Acronym = "Nax60";
     { BLUE.."A) "..AtlasLocale["Entrance"] };
     { WHITE..INDENT.."1) "..AtlasLocale["Patchwerk"], NPC, 16028 };
     { WHITE..INDENT.."2) "..AtlasLocale["Grobbulus"], NPC, 15931 };
@@ -2098,8 +2180,11 @@ AtlasLoot_MapData = {
     Location = { BabbleZone["Dustwallow Marsh"], 15 };
     LevelRange = "60+";
     MinLevel = "60";
-    PlayerLimit = "40";
-    { WHITE.."3) "..AtlasLocale["Onyxia"], NPC, 10183 };
+    PlayerLimit = "10-25";
+    { BLUE.."A) "..AtlasLocale["Entrance"] };
+    { WHITE.."1) "..AtlasLocale["Onyxian Warders"], NPC, 12129 };
+    { WHITE.."2) "..AtlasLocale["Whelp Eggs"] };
+    { WHITE.."3) "..AtlasLocale["Onyxia"], NPC, 10184 };
     };
 ["RubySanctum"] = {
     ZoneName = { BabbleSubZone["Chamber of the Aspects"]..": "..BabbleZone["The Ruby Sanctum"], 4987 };

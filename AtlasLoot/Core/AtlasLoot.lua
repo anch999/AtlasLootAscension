@@ -11,11 +11,8 @@ AtlasLoot_OnVariablesLoaded()
 AtlasLoot_SlashCommand(msg)
 AtlasLootOptions_Toggle()
 AtlasLoot_OnLoad()
-AtlasLootBoss_OnClick()
 AtlasLoot_ShowItemsFrame()
-AtlasLoot_GenerateAtlasMenu(dataID, pFrame)
 AtlasLoot_SetItemInfoFrame()
-AtlasLootMenuItem_OnClick()
 AtlasLoot_NavButton_OnClick()
 AtlasLoot_IsLootTableAvailable(dataID)
 AtlasLoot_GetLODModule(dataSource)
@@ -26,7 +23,7 @@ AtlasLoot_AddTooltip(frameb, tooltiptext)
 AL_FindId(name, difficulty)
 ]]
 
-AtlasLoot = LibStub("AceAddon-3.0"):NewAddon("AtlasLoot", "AceTimer-3.0");
+AtlasLoot = LibStub("AceAddon-3.0"):NewAddon("AtlasLoot");
 
 --Instance required libraries
 local BabbleBoss = AtlasLoot_GetLocaleLibBabble("LibBabble-Boss-3.0")
@@ -164,7 +161,6 @@ Invoked by the VARIABLES_LOADED event.  Now that we are sure all the assets
 the addon needs are in place, we can properly set up the mod
 ]]
 function AtlasLoot_OnVariablesLoaded()
-	local AtlasCheck = false;
     AtlasLoot.db = LibStub("AceDB-3.0"):New("AtlasLootDB");
     AtlasLoot.db:RegisterDefaults(AtlasLootDBDefaults);
 	if not AtlasLootCharDB then AtlasLootCharDB = {} end
@@ -177,6 +173,12 @@ function AtlasLoot_OnVariablesLoaded()
 			{Name = ""};
 		};
     end
+
+	if IsAddOnLoaded("Atlas") then
+		ATLASLOOT_ATLASLOADED = true;
+		AtlasLootDefaultFrame_MapButton:Show();
+		AtlasLootDefaultFrame_MapSelectButton:Show();
+	end
 
     --Add the loot browser to the special frames tables to enable closing wih the ESC key
 	tinsert(UISpecialFrames, "AtlasLootDefaultFrame");
@@ -435,8 +437,8 @@ function AtlasLoot:CreateToken(dataID)
 		};
 	end
 	--Fills table with items
-	for _, t in ipairs(AtlasLoot_Data[dataID]) do
-		for _, v in ipairs(t) do
+	for n, t in ipairs(AtlasLoot_Data[dataID]) do
+		for c, v in ipairs(t) do
 			if type(v) == "table" then
 				local item = Item:CreateFromID(v[2]);
 				item:ContinueOnLoad(function(itemID)
@@ -444,6 +446,9 @@ function AtlasLoot:CreateToken(dataID)
 						table.insert(AtlasLoot_TokenData[orgID][1], {#AtlasLoot_TokenData[orgID][1] + 1, v[2], v[3], v[4], t.Name});
 					end
 				end)
+				if #AtlasLoot_Data[dataID] == n and #t == c then
+					AtlasLoot_ShowItemsFrame(AtlasLootItemsFrame.refresh[1], AtlasLootItemsFrame.refresh[2], AtlasLootItemsFrame.refresh[3], AtlasLootItemsFrame.refresh[4], AtlasLootItemsFrame.refresh[5]);
+				end
 			end
 		end
 	end
@@ -474,13 +479,6 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame, tablenum)
         return;
 	end
 
-	--Check to see if Atlas is loaded and the table has a map
-	if dataSource[dataID].Map and IsAddOnLoaded("Atlas") then
-		AtlasLootDefaultFrame_MapButton:Show();
-	else
-		AtlasLootDefaultFrame_MapButton:Hide();
-	end
-
 	--Hide Advanced search if it is up and reshow Querybutton
 	AtlasLootDefaultFrame_AdvancedSearchPanel:Hide();
 
@@ -495,6 +493,9 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame, tablenum)
 	-- Hide the Filter Check-Box
 	AtlasLootFilterCheck:Hide();
 
+	-- Hide the map header lable
+	Atlasloot_HeaderLabel:Hide();
+
 	if dataID ~= "SearchResult" and dataID ~= "WishList" and dataSource ~= AtlasLoot_TokenData then
 		dataSource = AtlasLoot_Data;
 	end
@@ -502,7 +503,26 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame, tablenum)
 		dataSource = AtlasLootCharDB;
     end
 
-	ATLASLOOT_CURRENTTYPE = dataSource[dataID].Type or "";
+	-- Check to see if Atlas is loaded and the table has a map
+	if dataSource[dataID].Map and ATLASLOOT_ATLASLOADED then
+		AtlasLootDefaultFrame_MapButton:Enable();
+		AtlasLootDefaultFrame_MapSelectButton:Enable();
+		-- Stops map reseting to default while still in the same raid/instance table
+		if AtlasLootItemsFrame.refresh == nil or dataID ~= AtlasLootItemsFrame.refresh[1] then
+			AtlasLoot_MapMenu:Unregister(AtlasLootDefaultFrame_MapSelectButton);
+			ATLASLOOT_CURRENT_MAP = dataSource[dataID].Map
+			if AtlasLoot_MultiMapData[ATLASLOOT_CURRENT_MAP] ~= nil then
+				AtlasLoot:MapMenuRegister(ATLASLOOT_CURRENT_MAP);
+			end
+			AtlasLoot:MapSelect(ATLASLOOT_CURRENT_MAP);
+		end
+	else
+		AtlasLootDefaultFrame_MapSelectButton:Disable();
+		AtlasLootDefaultFrame_MapButton:Disable();
+		AtlasLootDefaultFrame_MapSelectButton:SetText("No Map");
+	end
+
+	ATLASLOOT_CURRENTTYPE = dataSource[dataID].Type or "Default";
 	AtlasLoot:ScrollFrameUpdate();
 	AtlasLoot_BossName:SetText(dataSource[dataID][tablenum].Name);
 
@@ -535,7 +555,7 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame, tablenum)
 			else
 				if(item[AtlasLoot_Difficulty.MIN_DIF]) then
 					if item[AtlasLoot_Difficulty.MIN_DIF] > itemDif then
-						toShow = false; 
+						toShow = false;
 					end
 				end
 				IDfound = AL_FindId(item[2], min(AtlasLoot_Difficulty:getMaxDifficulty(dataSource[dataID].Type), itemDif)) or item[2];

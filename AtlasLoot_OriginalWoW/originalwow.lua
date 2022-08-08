@@ -112,6 +112,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 	AtlasLoot_Data["RuinsofAQ"] = {
 			Name = BabbleZone["Ruins of Ahn'Qiraj"];
 			Type = "ClassicRaid";
+			Map = "TheRuinsofAhnQiraj";
 		{
 			Name = BabbleBoss["Kurinnaxx"];
 			{ 1, 21499, "", "=q4=Vestments of the Shifting Sands", "=ds=#s5#, #a1#", "", "7.34%"};
@@ -298,6 +299,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 	AtlasLoot_Data["TempleofAQ"] = {
 			Name = BabbleZone["Temple of Ahn'Qiraj"];
 			Type = "ClassicRaid";
+			Map = "TheTempleofAhnQiraj";
 		{
 			Name = BabbleBoss["The Prophet Skeram"];
 			{ 1, 21701, "", "=q4=Cloak of Concentrated Hatred", "=ds=#s4#", "", "11.81%"};
@@ -581,7 +583,8 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		-------------------------
 
 	AtlasLoot_Data["BlackfathomDeeps"] = {
-			Name = BabbleZone["Blackfathom Deeps"];	
+			Name = BabbleZone["Blackfathom Deeps"];
+			Map = "BlackfathomDeeps";
 		{
 			Name = BabbleBoss["Ghamoo-ra"];
 			{ 1, 6908, "", "=q3=Ghamoo-ra's Bind", "=ds=#s10#, #a1#", "", "45.81%"};
@@ -649,6 +652,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 	AtlasLoot_Data["BlackrockDepths"] = {
 			Name = BabbleZone["Blackrock Depths"];
 			Type = "ClassicDungeonExt";
+			Map = "BlackrockDepths";
 		{
 			Name = AL["Overmaster Pyron"];
 			{ 1, 14486, "", "=q3=Pattern: Cloak of Fire", "=ds=#p8# (275)", "", "17.95%"};
@@ -937,6 +941,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 			Name = BabbleZone["Lower Blackrock Spire"];
 			Type = "ClassicDungeonExt";
 			Loadfirst = 3;
+			Map = "BlackrockSpireLower";
 		{
 			Name = AL["Scarshield Quartermaster"];
 			{ 1, 18987, "", "=q1=Blackhand's Command", "=ds=#m2#", "", "100%"};
@@ -1111,6 +1116,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 	AtlasLoot_Data["UpperBlackrock"] = {
 			Name = BabbleZone["Upper Blackrock Spire"];
 			Type = "ClassicDungeonExt";
+			Map = "BlackrockSpireUpper";
 		{
 			Name = BabbleBoss["Pyroguard Emberseer"];
 			{ 1, 12905, "", "=q3=Wildfire Cape", "=ds=#s4#", "", "15.20%"};
@@ -1264,6 +1270,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 	AtlasLoot_Data["MoltenCore"] = {
 			Name = BabbleZone["Molten Core"];
 			Type = "ClassicRaid";
+			Map = "MoltenCore";
 		{
 			Name = BabbleBoss["Lucifron"];
 			{ 1, 18872, "", "=q4=Manastorm Leggings", "=ds=#s11#, #a1#", "", "1.93%"};
@@ -1486,6 +1493,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 	AtlasLoot_Data["BlackwingLair"] = {
 			Name = BabbleZone["Blackwing Lair"];
 			Type = "ClassicRaid";
+			Map = "BlackwingLair";
 		{
 			Name = BabbleBoss["Razorgore the Untamed"];
 			{ 1, 19337, "", "=q4=The Black Book", "=ds=#s14#, =q1=#m1# =ds=#c8#", "", "20%"};
@@ -1641,6 +1649,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 	AtlasLoot_Data["DireMaulEast"] = {
 			Name = BabbleZone["Dire Maul"].." East";
 			Type = "ClassicDungeonExt";
+			Map = "DireMaulEast";
 		{
 			Name = BabbleBoss["Pusillin"];
 			{ 1, 18267, "", "=q2=Recipe: Runn Tum Tuber Surprise", "=ds=#p3# (275)", "", "71.55%"};
@@ -1743,6 +1752,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 	AtlasLoot_Data["DireMaulNorth"] = {
 			Name = BabbleZone["Dire Maul"].." North";
 			Type = "ClassicDungeonExt";
+			Map = "DireMaulNorth";
 		{
 			Name = BabbleBoss["Guard Mol'dar"];
 			{ 1, 18496, "", "=q3=Heliotrope Cloak", "=ds=#s4#", "", "4.68%"};
@@ -1883,6 +1893,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 	AtlasLoot_Data["DireMaulWest"] = {
 			Name = BabbleZone["Dire Maul"].." West";
 			Type = "ClassicDungeonExt";
+			Map = "DireMaulWest";
 		{
 			Name = BabbleBoss["Tendris Warpwood"];
 			{ 1, 18390, "", "=q3=Tanglemoss Leggings", "=ds=#s11#, #a2#", "", "22.55%"};
@@ -1964,6 +1975,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 
 	AtlasLoot_Data["Gnomeregan"] = {
 			Name = BabbleZone["Gnomeregan"];
+			Map = "Gnomeregan";
 		{
 			Name = AL["Namdo Bizzfizzle"];
 			{ 1, 14639, "", "=q1=Schematic: Minor Recombobulator", "=ds=#p5# (140)"};
@@ -2036,6 +2048,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		
 	AtlasLoot_Data["Maraudon"] = {
 			Name = BabbleZone["Maraudon"];
+			Map = "Maraudon";
 		{
 			Name = BabbleBoss["Noxxion"];
 			{ 1, 17746, "", "=q3=Noxxion's Shackles", "=ds=#s8#, #a4#", "", "32.50%"};
@@ -2110,6 +2123,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		----------------------
 	AtlasLoot_Data["RagefireChasm"] = {
 			Name = BabbleZone["Ragefire Chasm"];
+			Map = "RagefireChasm";
 		{
 			Name = BabbleBoss["Taragaman the Hungerer"];
 			{ 1, 14149, "", "=q3=Subterranean Cape", "=ds=#s4#", "", "31.59%"};
@@ -2135,6 +2149,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		
 	AtlasLoot_Data["RazorfenDowns"] = {
 			Name = BabbleZone["Razorfen Downs"];
+			Map = "RazorfenDowns";
 		{
 			Name = BabbleBoss["Tuten'kash"];
 			{ 1, 0, "INV_Box_01", "=q6="..BabbleBoss["Tuten'kash"], ""};
@@ -2200,6 +2215,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		
 	AtlasLoot_Data["RazorfenKraul"] = {
 			Name = BabbleZone["Razorfen Kraul"];
+			Map = "RazorfenKraul";
 		{
 			Name = AL["Roogug"];
 			{ 1, 6841, "", "=q1=Vial of Phlogiston", "=ds=#m3#"};
@@ -2268,6 +2284,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 
 	AtlasLoot_Data["Scarlet Monastery"] = {
 			Name = BabbleZone["Scarlet Monastery"];
+			Map = "SMArmory";
 		{
 			Name = "Armory";
 			{ 1, 7719, "", "=q3=Raging Berserker's Helm", "=ds=#s1#, #a3#", "", "30.62%"};
@@ -2369,6 +2386,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 			Name = BabbleZone["Scholomance"];
 			Type = "ClassicDungeonExt";
 			Loadfirst = 3;
+			Map = "Scholomance";
 		{
 			Name =  AL["Quest Item"];
 			{ 1, 13873, "", "=q1=Viewing Room Key", "=ds=#e9#"};
@@ -2712,6 +2730,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 
 	AtlasLoot_Data["ShadowfangKeep"] = {
 			Name = BabbleZone["Shadowfang Keep"];
+			Map = "ShadowfangKeep";
 		{
 			Name = BabbleBoss["Deathsworn Captain"];
 			{ 1, 6642, "", "=q3=Phantom Armor", "=ds=#s5#, #a3#", "", "30.49%"};
@@ -2793,6 +2812,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 	AtlasLoot_Data["Stratholme"] = {
 			Name = BabbleZone["Stratholme"];
 			Type = "ClassicDungeonExt";
+			Map = "Stratholme";
 		{
 			Name = BabbleBoss["Skul"];
 			{ 1, 13395, "", "=q3=Skul's Fingerbone Claws", "=ds=#s9#, #a2#", "", "36.52%"};
@@ -3056,6 +3076,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 
 	AtlasLoot_Data["TheDeadmines"] = {
 			Name = BabbleZone["The Deadmines"];
+			Map = "TheDeadmines";
 		{
 			Name = BabbleBoss["Marisa du'Paige"];
 			{ 1, 3019, "", "=q2=Noble's Robe", "=ds=#s5#, #a1#", "", "22.4%"};
@@ -3130,6 +3151,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 
 	AtlasLoot_Data["TheStockade"] = {
 			Name = BabbleZone["The Stockade"];
+			Map = "TheStockade";
 		{
 			Name = BabbleBoss["Targorr the Dread"];
 			{ 1, 3630, "", "=q1=Head of Targorr", "=ds=#m3#", "", "100%"};
@@ -3165,6 +3187,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 
 	AtlasLoot_Data["SunkenTemple"] = {
 			Name = "Sunken Temple";
+			Map = "TheSunkenTemple";
 		{
 			Name = "Spawn of Hakkar";
 			{ 1, 10802, "", "=q3=Wingveil Cloak", "=ds=#s4#", "", "25.6%"};
@@ -3299,6 +3322,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 
 	AtlasLoot_Data["Uldaman"] = {
 			Name = BabbleZone["Uldaman"];
+			Map = "Uldaman";
 		{
 			Name = AL["Magregan Deepshadow"];
 			{ 1, 4635, "", "=q1=Hammertoe's Amulet", "=ds=#m3#", "", "100%"};
@@ -3428,6 +3452,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		
 	AtlasLoot_Data["WailingCaverns"] = {
 			Name = BabbleZone["Wailing Caverns"];
+			Map = "WailingCaverns";
 		{
 			Name = AL["Kalldan Felmoon"];	
 			{ 1, 6475, "", "=q1=Pattern: Deviate Scale Gloves", "=ds=#p7# (105)"};
@@ -3507,6 +3532,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 
 	AtlasLoot_Data["ZulFarrak"] = {
 			Name = BabbleZone["Zul'Farrak"];
+			Map = "ZulFarrak";
 		{
 			Name = BabbleBoss["Antu'sul"];
 			{ 1, 9640, "", "=q3=Vice Grips", "=ds=#s9#, #a4#", "", "31.30%"};
@@ -3598,6 +3624,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 	AtlasLoot_Data["ZulGurub"] = {
 			Name = BabbleZone["Zul'Gurub"];
 			Type = "ClassicRaid";
+			Map = "ZulGurub";
 		{
 			Name = BabbleBoss["High Priestess Jeklik"];
 			{ 1, 19717, "", "=q4=Primal Hakkari Armsplint", "=ds=#m3#", "", "11.41%"};
@@ -3888,6 +3915,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 	AtlasLoot_Data["Naxxramas60"] = {
 			Name = BabbleZone["Naxxramas"];
 			Type = "ClassicRaid";
+			Map = "Naxxramas60";
 		{
 			Name = BabbleBoss["Patchwerk"];
 			{ 1, 22960, "", "=q4=Cloak of Suturing", "=ds=#s4#","", "20%" },
@@ -4112,6 +4140,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 	AtlasLoot_Data["Onyxia60"] = {
 			Name = BabbleZone["Onyxia's Lair"];
 			Type = "ClassicRaid";
+			Map = "Onyxia60";
 		{
 			Name = BabbleZone["Onyxia's Lair"];
 			{ 1, 17078, "", "=q4=Sapphiron Drape", "=ds=#s4#","", "28.57%" },
