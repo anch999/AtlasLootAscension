@@ -178,7 +178,7 @@ local function presetcreate(preset,num)
             pFrame = { "TOPLEFT", "AtlasLootDefaultFrame_LootBackground", "TOPLEFT", "2", "-2" };
             ATLASLOOT_LASTMODULE = AtlasLootCharDB["QuickLooks"][num][6];
             ATLASLOOT_CURRENTTABLE = AtlasLootCharDB["QuickLooks"][num][7];
-            AtlasLoot_ShowItemsFrame(AtlasLootCharDB["QuickLooks"][num][1], AtlasLootCharDB["QuickLooks"][num][2], AtlasLootCharDB["QuickLooks"][num][3], pFrame, AtlasLootCharDB["QuickLooks"][num][5]);
+            AtlasLoot_ShowItemsFrame(AtlasLootCharDB["QuickLooks"][num][1], AtlasLootCharDB["QuickLooks"][num][2], pFrame, AtlasLootCharDB["QuickLooks"][num][5]);
         end
     end);
     preset:SetScript("OnShow", function(self)
@@ -331,13 +331,13 @@ scrollFrame.scrollBar = scrollSlider
 
 local rows = setmetatable({}, { __index = function(t, i)
 	local row = CreateFrame("CheckButton", "$parentRow"..i, scrollFrame)
-	row:SetSize(150, ROW_HEIGHT);
+	row:SetSize(230, ROW_HEIGHT);
 	row:SetNormalFontObject(GameFontHighlightLeft);
     row:SetCheckedTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD");
     row:SetScript("OnClick", function()
         ItemindexID = row.itemIndex;
         if not AtlasLootDefaultFrame_AdvancedSearchPanel:IsVisible() then
-        AtlasLoot_ShowItemsFrame(AtlasLootItemsFrame.refresh[1], AtlasLootItemsFrame.refresh[2], AtlasLootItemsFrame.refresh[3], AtlasLootItemsFrame.refresh[4], AtlasLootItemsFrame.refresh[5]);
+        AtlasLoot_ShowItemsFrame(AtlasLootItemsFrame.refresh[1], AtlasLootItemsFrame.refresh[2], AtlasLootItemsFrame.refresh[3], AtlasLootItemsFrame.refresh[4]);
         end
         AtlasLoot:ScrollFrameUpdate();
     end)
@@ -384,7 +384,7 @@ function AtlasLoot:SubTableScrollFrameUpdate(tablename, dataSource, pFrame, tabl
                     row.tablenum = value;
                     row.pFrame = pFrame;
                 if dataSource == AtlasLoot_MapData then
-                    row:SetText(string.sub(tostring(dataSource[tablename][value][1]),0,50));
+                    row:SetText(string.sub(dataSource[tablename][value][1],0,48));
                 else
                     row:SetText("|cffFFd200"..dataSource[tablename][value].Name);
                     if tablenum == value and dataSource ~= AtlasLoot_MapData then
@@ -410,12 +410,12 @@ local scrollSlider2 = CreateFrame("ScrollFrame","AtlasLootDefaultFrameSubTableSc
 
 local rows2 = setmetatable({}, { __index = function(t, i)
     local row = CreateFrame("CheckButton", "$parentRow"..i, subtableFrame)
-    row:SetSize(150, ROW_HEIGHT)
+    row:SetSize(230, ROW_HEIGHT)
     row:SetNormalFontObject(GameFontHighlightLeft)
     row:SetCheckedTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD");
     row:SetScript("OnClick", function()
         if row.dataSource ~= AtlasLoot_MapData then
-            AtlasLoot_ShowItemsFrame(row.tablename, row.dataSource, row.dataSource[row.tablename][row.tablenum].Name, row.pFrame, row.tablenum);
+            AtlasLoot_ShowItemsFrame(row.tablename, row.dataSource, row.pFrame, row.tablenum);
         else
             row:SetChecked(false);
         end

@@ -51,11 +51,11 @@ function AtlasLootDefaultFrame_OnShow()
         ATLASLOOT_CURRENTTABLE = lastboss[7];
         ATLASLOOT_LASTMODULE = lastboss[6];
         AtlasLoot_IsLootTableAvailable(lastboss[6]);
-        AtlasLoot_ShowItemsFrame(lastboss[1], AtlasLoot_Data, AtlasLoot_Data[lastboss[1]][lastboss[5]].Name, pFrame, lastboss[5]);
+        AtlasLoot_ShowItemsFrame(lastboss[1], AtlasLoot_Data, pFrame, lastboss[5]);
         AtlasLoot_DewdropSubMenu:Unregister(AtlasLootDefaultFrame_SubMenu);
         AtlasLoot_DewdropSubMenuRegister(AtlasLoot_SubMenus[lastboss[7]]);
     else
-        AtlasLoot_ShowItemsFrame("EmptyTable", AtlasLoot_Data, AtlasLoot_Data["EmptyTable"].Name,pFrame,1);
+        AtlasLoot_ShowItemsFrame("EmptyTable", AtlasLoot_Data, pFrame,1);
     end
 end
 
@@ -103,16 +103,8 @@ function AtlasLoot_DewDropSubMenuClick(tablename)
     --Show the select loot table
     local tablenum = AtlasLoot_Data[tablename].Loadfirst or 1;
 
-    if AtlasLoot_Data[tablename].Type == "Crafting" then
-        ItemindexID = "Pattern";
-    elseif ItemindexID == "Pattern" and AtlasLoot_Data[tablename].Type ~= "Crafting" then
-        ItemindexID = 2;
-    else
-        ItemindexID = ItemindexID or 2;
-    end
-
     --Show the table that has been selected
-    AtlasLoot_ShowItemsFrame(tablename, AtlasLoot_Data, AtlasLoot_Data[tablename][tablenum].Name, pFrame, tablenum);
+    AtlasLoot_ShowItemsFrame(tablename, AtlasLoot_Data, pFrame, tablenum);
     AtlasLoot_DewdropSubMenu:Close(1);
 end
 

@@ -248,7 +248,7 @@ function AtlasLootItem_OnClick(arg1)
         elseif((AtlasLootItemsFrame.refresh[1] == "SearchResult") and this.sourcePage) then
             local dataID, dataSource = strsplit("|", this.sourcePage);
             if(dataID and dataSource) then
-                AtlasLoot_ShowItemsFrame(dataID, AtlasLoot_Data, dataID, AtlasLootItemsFrame.refresh[4], 1);
+                AtlasLoot_ShowItemsFrame(dataID, AtlasLoot_Data, AtlasLootItemsFrame.refresh[3], 1);
             end
         elseif (arg1=="LeftButton") and this.sourcePage ~= nil then
            --Create token table if there isnt one
@@ -256,7 +256,7 @@ function AtlasLootItem_OnClick(arg1)
                 AtlasLoot:CreateToken(this.sourcePage)
             end
             --Show token table
-            AtlasLoot_ShowItemsFrame(this.sourcePage, AtlasLoot_TokenData, "", AtlasLootItemsFrame.refresh[4], 1);
+            AtlasLoot_ShowItemsFrame(this.sourcePage, AtlasLoot_TokenData, AtlasLootItemsFrame.refresh[3], 1);
         end
     else
         if IsShiftKeyDown() then
@@ -268,14 +268,14 @@ function AtlasLootItem_OnClick(arg1)
             else
                 spellName, _, _, _, _, _, _, _, _ = GetSpellInfo(string.sub(this.itemID, 2));
                 --spellIcon = GetItemIcon(this.dressingroomID);
-                AtlasLoot_ShowWishListDropDown(this.itemID, this.dressingroomID, "=ds="..spellName, "=ds="..AtlasLootItemsFrame.refresh[3], AtlasLootItemsFrame.refresh[1].."|"..AtlasLootItemsFrame.refresh[2],this);
+                AtlasLoot_ShowWishListDropDown(this.itemID, this.dressingroomID, "=ds="..spellName, AtlasLootItemsFrame.refresh[1].."|"..AtlasLootItemsFrame.refresh[2],this);
             end
         elseif(IsControlKeyDown()) then
             DressUpItemLink("item:"..this.dressingroomID..":0:0:0:0:0:0:0");
         elseif((AtlasLootItemsFrame.refresh[1] == "SearchResult" or AtlasLootItemsFrame.refresh[1] == "WishList") and this.sourcePage) then
             local dataID, dataSource = strsplit("|", this.sourcePage);
             if(dataID and dataSource and AtlasLoot_IsLootTableAvailable(dataID)) then
-                AtlasLoot_ShowItemsFrame(dataID, dataSource, AtlasLootItemsFrame.refresh[3], AtlasLootItemsFrame.refresh[4]);
+                AtlasLoot_ShowItemsFrame(dataID, dataSource, AtlasLootItemsFrame.refresh[3]);
             end
         end
     end

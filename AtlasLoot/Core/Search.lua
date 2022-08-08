@@ -623,7 +623,7 @@ local function GetSpellName(itemId, atlasName)
 end
 
 local function DoSearch(searchText)
-    AtlasLootCharDB["SearchResult"] = {Name = "Search Result" , Type = "ClassicDungeonExt", Back = true};
+    AtlasLootCharDB["SearchResult"] = {Name = "Search Result" , Type = "Search", Back = true};
     AtlasLootCharDB.LastSearchedText = searchText;
     local count = 1;
     local tablenum = 1;
@@ -693,7 +693,7 @@ local function DoSearch(searchText)
 end
 
 function AtlasLoot:ShowSearchResult()
-    AtlasLoot_ShowItemsFrame("SearchResult", AtlasLootCharDB, (AL["Search Result: %s"]):format(AtlasLootCharDB.LastSearchedText or ""), pFrame, 1);
+    AtlasLoot_ShowItemsFrame("SearchResult", AtlasLootCharDB, pFrame, 1);
 end
 
 function AtlasLoot:Search(Text)
@@ -745,7 +745,7 @@ function AtlasLoot:Search(Text)
         DEFAULT_CHAT_FRAME:AddMessage(RED .. AL["AtlasLoot"] .. ": " .. WHITE .. AL["No match found for"] .. " \"" .. Text .. "\"." .. itemFilterErrorMessage);
     else
         --SearchResult = AtlasLoot_CategorizeWishList(AtlasLootCharDB["SearchResult"]);
-        AtlasLoot_ShowItemsFrame("SearchResult", AtlasLootCharDB, (AL["Search Result: %s"]):format(AtlasLootCharDB.LastSearchedText or ""), pFrame, 1);
+        AtlasLoot_ShowItemsFrame("SearchResult", AtlasLootCharDB, pFrame, 1);
     end
 end
 

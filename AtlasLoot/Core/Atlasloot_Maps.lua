@@ -55,6 +55,7 @@ function AtlasLoot:MapOnShow()
                 AtlasLootDefaultFrame_Map:Show();
                 Atlasloot_HeaderLabel:Show();
                 AtlasLoot:ScrollFrameUpdate(true);
+                AtlasLootDefaultFrameScroll:Hide();
                 AtlasLoot:SubTableScrollFrameUpdate(ATLASLOOT_CURRENT_MAP, AtlasLoot_MapData);
         end
     end

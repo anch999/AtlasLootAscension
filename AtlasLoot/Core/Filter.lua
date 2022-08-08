@@ -106,9 +106,8 @@ end
 function AtlasLoot_HideNoUsableItems()
 	local dataID = AtlasLootItemsFrame.refreshOri[1]
 	local dataSource = AtlasLootItemsFrame.refreshOri[2]
-	local boss = AtlasLootItemsFrame.refreshOri[3]
-	local pFrame = AtlasLootItemsFrame.refreshOri[4]
-	local tablenum = AtlasLootItemsFrame.refreshOri[5]
+	local pFrame = AtlasLootItemsFrame.refreshOri[3]
+	local tablenum = AtlasLootItemsFrame.refreshOri[4]
 	local tablebase = AtlasLoot_Data[dataID][tablenum]
 	if not tablebase or dataID == "WishList" or dataID == "SearchResult" then return end
 	local itemCount = 0
@@ -209,13 +208,13 @@ function AtlasLoot_HideNoUsableItems()
 		end		
 	end
 	
-	AtlasLoot_ShowItemsFrame("FilterList", AtlasLootItemsFrame.refresh[2], AtlasLootItemsFrame.refresh[3], AtlasLootItemsFrame.refresh[4], AtlasLootItemsFrame.refresh[5])
+	AtlasLoot_ShowItemsFrame("FilterList", AtlasLootItemsFrame.refresh[2], AtlasLootItemsFrame.refresh[3], AtlasLootItemsFrame.refresh[4])
 end
 
 function AtlasLoot_FilterEnableButton()
 	if ATLASLOOT_FILTER_ENABLE == true then
 		ATLASLOOT_FILTER_ENABLE = false;
-		AtlasLoot_ShowItemsFrame(AtlasLootItemsFrame.refreshOri[1], AtlasLootItemsFrame.refreshOri[2], AtlasLootItemsFrame.refreshOri[3], AtlasLootItemsFrame.refreshOri[4], AtlasLootItemsFrame.refreshOri[5]);
+		AtlasLoot_ShowItemsFrame(AtlasLootItemsFrame.refreshOri[1], AtlasLootItemsFrame.refreshOri[2], AtlasLootItemsFrame.refreshOri[3], AtlasLootItemsFrame.refreshOri[4]);
 	else
 		ATLASLOOT_FILTER_ENABLE = true
 		AtlasLoot_HideNoUsableItems();
