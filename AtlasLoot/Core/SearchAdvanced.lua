@@ -590,6 +590,6 @@ function AtlasLoot:AdvancedSearch(Text)
         end
     end
 
-    AtlasLoot_AdvancedSearchClose();
+    AtlasLootDefaultFrame_AdvancedSearchPanel:Hide();
     AtlasLoot:Search(string.lower(advSearchString));
 end
