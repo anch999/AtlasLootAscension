@@ -1,14 +1,14 @@
 --[[
 Functions:
-AtlasLoot_DewDropClick(tablename, text, tabletype, tabletype2)
-AtlasLoot_DewDropSubMenuClick(tablename, text)
-AtlasLoot_DewdropExpansionMenuClick(tablename, text)
+AtlasLoot:DewDropClick(tablename, text, tabletype, tabletype2)
+AtlasLoot:DewDropSubMenuClick(tablename, text)
+AtlasLoot:DewdropExpansionMenuClick(tablename, text)
 AtlasLoot_DefaultFrame_OnShow()
 AtlasLootDefaultFrame_OnHide()
-AtlasLoot_DewdropExpansionMenuRegister(loottable)
-AtlasLoot_DewdropSubMenuRegister(loottable)
-AtlasLoot_DewdropRegister()
-AtlasLoot_SetNewStyle(style)
+AtlasLoot:DewdropExpansionMenuRegister(loottable)
+AtlasLoot:DewdropSubMenuRegister(loottable)
+AtlasLoot:DewdropRegister()
+AtlasLoot:SetNewStyle(style)
 ]]
 
 --Include all needed libraries
@@ -35,27 +35,20 @@ Called whenever the loot browser is shown and sets up buttons and loot tables
 ]]
 function AtlasLootDefaultFrame_OnShow()
     --Definition of where I want the loot table to be shown
-    pFrame = { "TOPLEFT", "AtlasLootDefaultFrame_LootBackground", "TOPLEFT", "2", "-2" };
-    --Having the Atlas and loot browser frames shown at the same time would
-    --cause conflicts, so I hide the Atlas frame when the loot browser appears
-    if AtlasFrame then
-        AtlasFrame:Hide();
-    end
     --Remove the selection of a loot table in Atlas
     AtlasLootItemsFrame.activeBoss = nil;
     --Set the item table to the loot table
-    AtlasLoot_SetItemInfoFrame(pFrame);
         --Show the last displayed loot table
     local lastboss = AtlasLoot.db.profile.LastBoss;
     if lastboss and lastboss[5] then
         ATLASLOOT_CURRENTTABLE = lastboss[6];
         ATLASLOOT_LASTMODULE = lastboss[5];
-        AtlasLoot_IsLootTableAvailable(lastboss[5]);
-        AtlasLoot_ShowItemsFrame(lastboss[1], AtlasLoot_Data, pFrame, lastboss[4]);
+        AtlasLoot:IsLootTableAvailable(lastboss[5]);
+        AtlasLoot:ShowItemsFrame(lastboss[1], AtlasLoot_Data, pFrame, lastboss[4]);
         AtlasLoot_DewdropSubMenu:Unregister(AtlasLootDefaultFrame_SubMenu);
-        AtlasLoot_DewdropSubMenuRegister(AtlasLoot_SubMenus[lastboss[6]]);
+        AtlasLoot:DewdropSubMenuRegister(AtlasLoot_SubMenus[lastboss[6]]);
     else
-        AtlasLoot_ShowItemsFrame("EmptyTable", AtlasLoot_Data, pFrame,1);
+        AtlasLoot:ShowItemsFrame("EmptyTable", AtlasLoot_Data, pFrame,1);
     end
 end
 
@@ -71,12 +64,12 @@ function AtlasLootDefaultFrame_OnHide()
 end
 
 --[[
-AtlasLoot_DewDropClick(tablename, text, tabletype):
+AtlasLoot:DewDropClick(tablename, text, tabletype):
 tablename - Name of the loot table in the database
 text - Heading for the loot table
 Called when a button in AtlasLoot_Dewdrop is clicked
 ]]
-function AtlasLoot_DewDropClick(tablename, text, tablenum)
+function AtlasLoot:DewDropClick(tablename, text, tablenum)
     ATLASLOOT_FILTER_ENABLE = false;
     AtlasLootFilterCheck:SetChecked(false);
     tablename = tablename .. AtlasLoot_Expac;
@@ -84,53 +77,52 @@ function AtlasLoot_DewDropClick(tablename, text, tablenum)
     tablenum = tablenum or 1;
     ATLASLOOT_LASTMODULE = AtlasLoot_SubMenus[tablename].Module;
     AtlasLootDefaultFrame_Menu:SetText(text);
-    AtlasLoot_IsLootTableAvailable(AtlasLoot_SubMenus[tablename].Module);
+    AtlasLoot:IsLootTableAvailable(AtlasLoot_SubMenus[tablename].Module);
     AtlasLoot_DewdropSubMenu:Unregister(AtlasLootDefaultFrame_SubMenu);
-    AtlasLoot_DewdropSubMenuRegister(AtlasLoot_SubMenus[tablename]);
-    AtlasLoot_DewDropSubMenuClick(AtlasLoot_SubMenus[tablename][tablenum][2])
+    AtlasLoot:DewdropSubMenuRegister(AtlasLoot_SubMenus[tablename]);
+    AtlasLoot:DewDropSubMenuClick(AtlasLoot_SubMenus[tablename][tablenum][2])
     AtlasLoot_Dewdrop:Close(1);
 end
 
 --[[
-AtlasLoot_DewDropSubMenuClick(tablename, text):
+AtlasLoot:DewDropSubMenuClick(tablename, text):
 tablename - Name of the loot table in the database
 text - Heading for the loot table
 Called when a button in AtlasLoot_DewdropSubMenu is clicked
 ]]
-function AtlasLoot_DewDropSubMenuClick(tablename)
+function AtlasLoot:DewDropSubMenuClick(tablename)
     --Definition of where I want the loot table to be shown
-    pFrame = { "TOPLEFT", "AtlasLootDefaultFrame_LootBackground", "TOPLEFT", "2", "-2" };
     --Show the select loot table
     local tablenum = AtlasLoot_Data[tablename].Loadfirst or 1;
 
     --Show the table that has been selected
-    AtlasLoot_ShowItemsFrame(tablename, AtlasLoot_Data, pFrame, tablenum);
+    AtlasLoot:ShowItemsFrame(tablename, AtlasLoot_Data, pFrame, tablenum);
     AtlasLoot_DewdropSubMenu:Close(1);
 end
 
 --[[
-AtlasLoot_DewdropExpansionMenuClick(expansion, name):
+AtlasLoot:DewdropExpansionMenuClick(expansion, name):
 tablename - Name of the loot table in the database
 text - Heading for the loot table
 Called when a button in AtlasLoot_DewdropSubMenu is clicked
 ]]
-function AtlasLoot_DewdropExpansionMenuClick(expansion, name)
+function AtlasLoot:DewdropExpansionMenuClick(expansion, name)
 	AtlasLootDefaultFrame_ExpansionMenu:SetText(name);
     AtlasLoot_DewdropExpansionMenu:Close(1);
     AtlasLoot_Expac = expansion;
     if ATLASLOOT_CURRENTTABLE then
     local tablename = AtlasLoot:CleandataID(ATLASLOOT_CURRENTTABLE, 1) .. AtlasLoot_Expac;
-    AtlasLoot_IsLootTableAvailable(AtlasLoot_SubMenus[tablename].Module);
+    AtlasLoot:IsLootTableAvailable(AtlasLoot_SubMenus[tablename].Module);
     AtlasLoot_DewdropSubMenu:Unregister(AtlasLootDefaultFrame_SubMenu);
-    AtlasLoot_DewdropSubMenuRegister(AtlasLoot_SubMenus[tablename]);
+    AtlasLoot:DewdropSubMenuRegister(AtlasLoot_SubMenus[tablename]);
     end
 end
 
 --[[
-AtlasLoot_DewdropExpansionMenuRegister():
+AtlasLoot:DewdropExpansionMenuRegister():
 Adds expansion menu from expansion table in mainmenus.lua
 ]]
-function AtlasLoot_DewdropExpansionMenuRegister()
+function AtlasLoot:DewdropExpansionMenuRegister()
     AtlasLoot_DewdropExpansionMenu:Register(AtlasLootDefaultFrame_ExpansionMenu,
         'point', function(parent)
             return "TOP", "BOTTOM"
@@ -146,7 +138,7 @@ function AtlasLoot_DewdropExpansionMenuRegister()
                                 'textR', 1,
                                 'textG', 0.82,
                                 'textB', 0,
-                                'func', AtlasLoot_DewdropExpansionMenuClick,
+                                'func', function(arg1,arg2,arg3) AtlasLoot:DewdropExpansionMenuClick(arg1,arg2,arg3) end,
                                 'arg1', v[2],
                                 'arg2', v[1],
                                 'arg3', k,
@@ -170,11 +162,11 @@ function AtlasLoot_DewdropExpansionMenuRegister()
 end
 
 --[[
-AtlasLoot_DewdropSubMenuRegister(loottable):
+AtlasLoot:DewdropSubMenuRegister(loottable):
 loottable - Table defining the sub menu
 Generates the sub menu needed by passing a table of loot tables and titles
 ]]
-function AtlasLoot_DewdropSubMenuRegister(loottable)
+function AtlasLoot:DewdropSubMenuRegister(loottable)
 	AtlasLoot_DewdropSubMenu:Register(AtlasLootDefaultFrame_SubMenu,
         'point', function(parent)
             return "TOP", "BOTTOM"
@@ -188,7 +180,7 @@ function AtlasLoot_DewdropSubMenuRegister(loottable)
                                     'textR', 0.2,
                                     'textG', 0.82,
                                     'textB', 0.5,
-                                    'func', AtlasLoot_DewDropSubMenuClick,
+                                    'func', function(arg1,arg2) AtlasLoot:DewDropSubMenuClick(arg1,arg2) end,
                                     'arg1', v[2],
                                     'arg2', v[1],
                                     'arg2', v[3],
@@ -197,7 +189,7 @@ function AtlasLoot_DewdropSubMenuRegister(loottable)
                         else
                             AtlasLoot_DewdropSubMenu:AddLine(
                                 'text', AtlasLoot_Data[v[2]].Name,
-                                'func', AtlasLoot_DewDropSubMenuClick,
+                                'func', function(arg1,arg2) AtlasLoot:DewDropSubMenuClick(arg1,arg2) end,
                                 'arg1', v[2],
                                 'arg2', AtlasLoot_Data[v[2]].Name,
                                 'notCheckable', true
@@ -220,10 +212,10 @@ function AtlasLoot_DewdropSubMenuRegister(loottable)
 end
 
 --[[
-AtlasLoot_DewdropRegister:
+AtlasLoot:DewdropRegister:
 Constructs the main category menu from a tiered table
 ]]
-function AtlasLoot_DewdropRegister()
+function AtlasLoot:DewdropRegister()
 	AtlasLoot_Dewdrop:Register(AtlasLootDefaultFrame_Menu,
         'point', function(parent)
             return "TOP", "BOTTOM"
@@ -238,7 +230,7 @@ function AtlasLoot_DewdropRegister()
                             'textR', 1,
                             'textG', 0.82,
                             'textB', 0,
-                            'func', AtlasLoot_DewDropClick,
+                            'func', function(arg1,arg2,arg3) AtlasLoot:DewDropClick(arg1,arg2,arg3) end,
                             'arg1', v[2],
                             'arg2', v[1],
                             'arg3', v[3],
@@ -261,12 +253,12 @@ function AtlasLoot_DewdropRegister()
 end
 
 --[[
-AtlasLoot_SetNewStyle:
+AtlasLoot:SetNewStyle:
 Create the new Default Frame style
 	style = "new"
 	style = "old"
 ]]
-function AtlasLoot_SetNewStyle(style)
+function AtlasLoot:SetNewStyle(style)
 
 	local buttons = {
 		"AtlasLootDefaultFrame_Options",
@@ -294,7 +286,8 @@ function AtlasLoot_SetNewStyle(style)
 
 	if style == "new" then
 		AtlasLootDefaultFrame_LootBackground:SetBackdrop({bgFile = "Interface/AchievementFrame/UI-Achievement-StatsBackground"});
-		AtlasLootDefaultFrame_LootBackground:SetBackdropColor(1,1,1,0.5)
+		AtlasLootDefaultFrame_LootBackground:SetBackdropColor(1,1,1,0.5);
+
 		AtlasLootDefaultFrame:SetBackdrop({bgFile = "Interface/AchievementFrame/UI-Achievement-AchievementBackground",
 			  edgeFile = "Interface/Tooltips/UI-Tooltip-Border",
 			  edgeSize = 16,
@@ -332,7 +325,7 @@ function AtlasLoot_SetNewStyle(style)
 	elseif style == "old" then
 
 		AtlasLootDefaultFrame_LootBackground:SetBackdrop({bgFile = ""});
-		AtlasLootDefaultFrame_LootBackground:SetBackdropColor(0,0,0.5,0.5)
+		AtlasLootDefaultFrame_LootBackground:SetBackdropColor(0,0,0.5,0.5);
 
 		AtlasLootDefaultFrame:SetBackdrop({bgFile = "Interface/DialogFrame/UI-DialogBox-Background",
 			  edgeFile = "Interface/DialogFrame/UI-DialogBox-Border",

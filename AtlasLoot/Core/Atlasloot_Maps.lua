@@ -28,7 +28,7 @@ function AtlasLoot:MapOnShow()
     if AtlasLootDefaultFrame_Map:IsVisible() then
         AtlasLootDefaultFrame_Map:Hide();
         AtlasLootDefaultFrame_LootBackground:Show();
-        AtlasLoot_BackButton_OnClick();
+        AtlasLoot:BackButton_OnClick();
         AtlasLoot_BossName:Show();
         Atlasloot_HeaderLabel:Hide();
         AtlasLoot:ScrollFrameUpdate();

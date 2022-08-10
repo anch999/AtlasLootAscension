@@ -112,7 +112,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 17, "MountsHorde1", "achievement_pvp_h_16", "=ds="..AL["Horde Mounts"], ""};
 		{ 18, "MountsPvP1", "ability_mount_netherdrakeelite", "=ds="..AL["PvP Mounts"], ""};
 		{ 19, "MountsCraftQuestPromotion1", "INV_Misc_QirajiCrystal_05", "=ds="..AL["Quest"].." / "..AL["Promotional"].." / "..AL["Crafted Mounts"], ""};
-		Back = "SETMENU"..AtlasLoot_Expac;
+		Back = "SETMENU";
 		Submenu = "Expansion";
 	};
 
@@ -124,7 +124,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 17, "PetsQuestCrafted1", "inv_drink_19", "=ds="..AL["Quest"].." / "..AL["Crafted"], ""};
 		{ 18, "PetsEvent1", "inv_pet_egbert", "=ds="..AL["World Events"], ""};
 		{ 19, "PetsPetStore1", "INV_Misc_Coin_01", "=ds="..AL["Pet Store"], ""};
-		Back = "SETMENU"..AtlasLoot_Expac;
+		Back = "SETMENU";
 		Submenu = "Expansion";
 	};
 

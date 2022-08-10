@@ -663,7 +663,7 @@ local function DoSearch(searchText)
                     if type(itemId) == "number" and itemId > 0 then
                         local itemIdBackup = itemId;
                         local difficultyCap = min(AtlasLoot_Difficulty:getMaxDifficulty(data.Type), ItemindexID);
-                        itemId = AL_FindId(itemId, difficultyCap) or 2;
+                        itemId = AtlasLoot:FindId(itemId, difficultyCap) or 2;
 
                         local item = Item:CreateFromID(itemId);
 
@@ -693,7 +693,7 @@ local function DoSearch(searchText)
 end
 
 function AtlasLoot:ShowSearchResult()
-    AtlasLoot_ShowItemsFrame("SearchResult", AtlasLootCharDB, pFrame, 1);
+    AtlasLoot:ShowItemsFrame("SearchResult", AtlasLootCharDB, pFrame, 1);
 end
 
 function AtlasLoot:Search(Text)
@@ -720,7 +720,7 @@ function AtlasLoot:Search(Text)
         return;
     end
     if self.db.profile.SearchOn.All then
-        AtlasLoot_LoadAllModules();
+        AtlasLoot:LoadAllModules();
     else
         for k, v in pairs(self.db.profile.SearchOn) do
             if k ~= "All" and v == true and not IsAddOnLoaded(k) and LoadAddOn(k) and self.db.profile.LoDNotify then
@@ -745,7 +745,7 @@ function AtlasLoot:Search(Text)
         DEFAULT_CHAT_FRAME:AddMessage(RED .. AL["AtlasLoot"] .. ": " .. WHITE .. AL["No match found for"] .. " \"" .. Text .. "\"." .. itemFilterErrorMessage);
     else
         --SearchResult = AtlasLoot_CategorizeWishList(AtlasLootCharDB["SearchResult"]);
-        AtlasLoot_ShowItemsFrame("SearchResult", AtlasLootCharDB, pFrame, 1);
+        AtlasLoot:ShowItemsFrame("SearchResult", AtlasLootCharDB, pFrame, 1);
     end
 end
 

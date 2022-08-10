@@ -10524,7 +10524,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 24, 22630, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c8#"},
 		{ 26, 49623, "", "=q5=Shadowmourne", "=ds=#h2# #w1#", "" };
 		{ 27, 46017, "", "=q5=Val'anyr, Hammer of Ancient Kings", "=ds=#h3# #w6#", "" };
-		Back = "SETMENU"..AtlasLoot_Expac;
+		Back = "SETMENU";
 		Type = "BCRaid";
 	};
 
@@ -11318,7 +11318,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 29, 42947, "", "=q7=Dignified Headmaster's Charge", "=ds=#w9#", "65 #eofheroism#  / 95 #champseal#"};
 		{ 30, 42946, "", "=q7=Charmed Ancient Bone Bow", "=ds=#w2#", "65 #eofheroism#  / 95 #champseal#"};
 		Next = "Heirloom2";
-		Back = "SETMENU"..AtlasLoot_Expac;
+		Back = "SETMENU";
 	};
 
 	AtlasLoot_Data["Heirloom2"] = {
@@ -11339,7 +11339,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 20, 44095, "", "=q7=Grand Staff of Jordan", "=ds=#w9#", "325 #wintergrasp#"};
 		{ 21, 44093, "", "=q7=Upgraded Dwarven Hand Cannon", "=ds=#w5#", "325 #wintergrasp#"};
 		Prev = "Heirloom";
-		Back = "SETMENU"..AtlasLoot_Expac;
+		Back = "SETMENU";
 	};
 
 		-------------------------------

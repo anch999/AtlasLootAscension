@@ -6,7 +6,7 @@ local framename = "AtlasLootDefaultFrame_AdvancedSearchPanel";
 
 --Create Main Search Panel
 local searchpanel = CreateFrame("FRAME", framename, AtlasLootDefaultFrame, nil);
-searchpanel:SetPoint("CENTER", 0, 0);
+searchpanel:SetPoint("TOPLEFT", AtlasLootDefaultFrame_LootBackground, "TOPLEFT", 2, -2);
 searchpanel:SetSize(510, 510);
 searchpanel.closebtn = CreateFrame("Button", framename.."_CloseButton", searchpanel, "UIPanelCloseButton");
 searchpanel.closebtn:SetPoint("TOPRIGHT", searchpanel, "TOPRIGHT", -10, -10);

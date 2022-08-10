@@ -208,13 +208,13 @@ function AtlasLoot_HideNoUsableItems()
 		end		
 	end
 	
-	AtlasLoot_ShowItemsFrame("FilterList", AtlasLootItemsFrame.refresh[2], AtlasLootItemsFrame.refresh[3], AtlasLootItemsFrame.refresh[4])
+	AtlasLoot:ShowItemsFrame("FilterList", AtlasLootItemsFrame.refresh[2], AtlasLootItemsFrame.refresh[3], AtlasLootItemsFrame.refresh[4])
 end
 
 function AtlasLoot_FilterEnableButton()
 	if ATLASLOOT_FILTER_ENABLE == true then
 		ATLASLOOT_FILTER_ENABLE = false;
-		AtlasLoot_ShowItemsFrame(AtlasLootItemsFrame.refreshOri[1], AtlasLootItemsFrame.refreshOri[2], AtlasLootItemsFrame.refreshOri[3], AtlasLootItemsFrame.refreshOri[4]);
+		AtlasLoot:ShowItemsFrame(AtlasLootItemsFrame.refreshOri[1], AtlasLootItemsFrame.refreshOri[2], AtlasLootItemsFrame.refreshOri[3], AtlasLootItemsFrame.refreshOri[4]);
 	else
 		ATLASLOOT_FILTER_ENABLE = true
 		AtlasLoot_HideNoUsableItems();

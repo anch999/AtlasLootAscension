@@ -205,8 +205,6 @@ function AtlasLoot_AdvancedSearchShow()
         return;
     end
 
-    pFrame = {"TOPLEFT", "AtlasLootDefaultFrame_LootBackground", "TOPLEFT", "2", "-2"};
-
     -- Hide all elements that could be in the AtlasTable
     getglobal("AtlasLootItemsFrame_NEXT"):Hide();
     getglobal("AtlasLootItemsFrame_PREV"):Hide();
@@ -228,10 +226,10 @@ function AtlasLoot_AdvancedSearchShow()
 
     AtlasLoot_BossName:SetText("Advanced Search");
 
-    AtlasLootDefaultFrame_AdvancedSearchPanel:ClearAllPoints();
-    AtlasLootDefaultFrame_AdvancedSearchPanel:SetParent(pFrame[2]);
-    AtlasLootDefaultFrame_AdvancedSearchPanel:ClearAllPoints();
-    AtlasLootDefaultFrame_AdvancedSearchPanel:SetPoint(pFrame[1], pFrame[2], pFrame[3], pFrame[4], pFrame[5]);
+    --AtlasLootDefaultFrame_AdvancedSearchPanel:ClearAllPoints();
+    --AtlasLootDefaultFrame_AdvancedSearchPanel:SetParent(pFrame[2]);
+   -- AtlasLootDefaultFrame_AdvancedSearchPanel:ClearAllPoints();
+    --AtlasLootDefaultFrame_AdvancedSearchPanel:SetPoint(pFrame[1], pFrame[2], pFrame[3], pFrame[4], pFrame[5]);
     AtlasLootDefaultFrame_AdvancedSearchPanel:Show();
 
     ATLASLOOT_CURRENTTYPE = "Search";
@@ -242,7 +240,7 @@ function AtlasLoot_AdvancedSearchClose()
     AtlasLootDefaultFrame_AdvancedSearchPanel:Hide();
 
     if (SearchPrevData[1] ~= "") then
-        AtlasLoot_ShowItemsFrame(SearchPrevData[1], SearchPrevData[2], SearchPrevData[3], SearchPrevData[4]);
+        AtlasLoot:ShowItemsFrame(SearchPrevData[1], SearchPrevData[2], SearchPrevData[3], SearchPrevData[4]);
     end
 end
 
