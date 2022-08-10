@@ -225,14 +225,11 @@ function AtlasLoot_AdvancedSearchShow()
 
     AtlasLoot_BossName:SetText("Advanced Search");
 
-    --AtlasLootDefaultFrame_AdvancedSearchPanel:ClearAllPoints();
-    --AtlasLootDefaultFrame_AdvancedSearchPanel:SetParent(pFrame[2]);
-   -- AtlasLootDefaultFrame_AdvancedSearchPanel:ClearAllPoints();
-    --AtlasLootDefaultFrame_AdvancedSearchPanel:SetPoint(pFrame[1], pFrame[2], pFrame[3], pFrame[4], pFrame[5]);
     AtlasLootDefaultFrame_AdvancedSearchPanel:Show();
 
     ATLASLOOT_CURRENTTYPE = "Search";
 	AtlasLoot:ScrollFrameUpdate();
+    AtlasLoot:SubTableScrollFrameUpdate("EmptyTable",AtlasLoot_Data);
 end
 
 function AtlasLoot_AdvancedSearchClose()

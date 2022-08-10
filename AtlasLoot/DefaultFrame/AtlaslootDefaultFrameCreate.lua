@@ -53,7 +53,9 @@ local lootbground = CreateFrame("Frame", "AtlasLootDefaultFrame_LootBackground",
     lootbground:EnableMouse();
     lootbground:SetScript("OnMouseDown",function(self, button)
         if AtlasLootItemsFrame.refresh[2][AtlasLootItemsFrame.refresh[1]].Back and button == "RightButton" then
-            AtlasLoot:BackButton_OnClick()
+            AtlasLoot:BackButton_OnClick();
+        elseif AtlasLootDefaultFrame_AdvancedSearchPanel:IsVisible() and button == "RightButton" then
+            AtlasLoot_AdvancedSearchClose();
         end
     end);
 
@@ -495,7 +497,7 @@ function AtlasLoot:SubTableScrollFrameUpdate(tablename, dataSource, pFrame, tabl
         local value = i + offset
         subtableFrame.rows[i]:SetChecked(false);
         subtableFrame.rows[i]:SetHighlightTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD");
-        if value <= maxValue and dataSource[tablename][value] then
+        if value <= maxValue and dataSource[tablename][value] and tablename ~= "SearchMENU" then
             local row = subtableFrame.rows[i]
                 row.dataSource = dataSource;
                 row.tablename = tablename;
