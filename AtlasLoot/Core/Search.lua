@@ -625,7 +625,7 @@ end
 local function DoSearch(searchText)
     AtlasLootCharDB["SearchResult"] = {Name = "Search Result" , Type = "Search", Back = true};
     AtlasLootCharDB.LastSearchedText = searchText;
-    local count = 1;
+    local count = 0;
     local tablenum = 1;
 
     local searchTerms = ParseQuery(searchText);
@@ -640,23 +640,22 @@ local function DoSearch(searchText)
         return itemName, itemQuality, itemLvl, minLvl, itemEquipLoc, itemSubType, GetItemStats("item:" .. itemId)
     end
 
-    local function AddItemToSearchResult(itemId, itemType, itemName, dataID, itemIdBackup, difCap)
+    local function AddItemToSearchResult(itemId, itemType, itemName, dataID, itemIdBackup, difCap, dataPage)
         local lootPage = AtlasLoot_Data[dataID].Name or "Argh!";
         if AtlasLootCharDB["SearchResult"][tablenum] == nil then
             AtlasLootCharDB["SearchResult"][tablenum] = {Name = "Page "..tablenum};
         end
-        if count == 30 then
-            table.insert(AtlasLootCharDB["SearchResult"][tablenum], {count, itemId, itemType, itemName, lootPage, "", "", dataID .. "|" .. "AtlasLoot_Data", itemIdBackup, [AtlasLoot_Difficulty.MAX_DIF] = difCap});
-            tablenum = tablenum + 1
-            count = 1;
-        else
-            table.insert(AtlasLootCharDB["SearchResult"][tablenum], {count, itemId, itemType, itemName, lootPage, "", "", dataID .. "|" .. "AtlasLoot_Data", itemIdBackup, [AtlasLoot_Difficulty.MAX_DIF] = difCap});
-            count = count + 1;
+
+        table.insert(AtlasLootCharDB["SearchResult"][tablenum], {(count % 30) + 1, itemId, itemType, itemName, lootPage, "", "", dataID .. "|" .. "AtlasLoot_Data" .. "|" .. tostring(dataPage), itemIdBackup, [AtlasLoot_Difficulty.MAX_DIF] = difCap});
+
+        if (count + 1) % 31 == 0 then
+            tablenum = tablenum + 1;  
         end
+        count = count + 1;
     end
 
     for dataID, data in pairs(AtlasLoot_Data) do
-        for _, t in ipairs(data) do
+        for dataPage, t in ipairs(data) do
             for _, v in ipairs(t) do
                 if type(v) == "table" then
                     local _, itemId, itemType, atlasName = unpack(v)
@@ -672,10 +671,10 @@ local function DoSearch(searchText)
                                 local itemDetails = {GetItemDetails(item.itemID, atlasName)};
                                 if #searchTerms == 1 and searchTerms[1].name then
                                     if nameMatches(atlasName, searchTerms[1].name) then
-                                        AddItemToSearchResult(itemId, itemType, atlasName, dataID, itemIdBackup, AtlasLoot_Difficulty:getMaxDifficulty(data.Type));
+                                        AddItemToSearchResult(itemId, itemType, atlasName, dataID, itemIdBackup, AtlasLoot_Difficulty:getMaxDifficulty(data.Type), dataPage);
                                     end
                                 elseif ItemMatchesAllTerms(searchTerms, itemDetails) then
-                                    AddItemToSearchResult(itemId, itemType, atlasName, dataID, itemIdBackup, AtlasLoot_Difficulty:getMaxDifficulty(data.Type));
+                                    AddItemToSearchResult(itemId, itemType, atlasName, dataID, itemIdBackup, AtlasLoot_Difficulty:getMaxDifficulty(data.Type), dataPage);
                                 end
                             end
                         end)

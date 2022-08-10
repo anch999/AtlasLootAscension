@@ -459,9 +459,6 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource, pFrame, tablenum)
 	-- Hide the map header lable
 	Atlasloot_HeaderLabel:Hide();
 
-	if dataID ~= "SearchResult" and dataID ~= "WishList" and dataSource ~= AtlasLoot_TokenData then
-		dataSource = AtlasLoot_Data;
-	end
 	if dataID == "SearchResult" then
 		dataSource = AtlasLootCharDB;
     end
@@ -685,6 +682,9 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource, pFrame, tablenum)
                     itemButton.dressingroomID = IDfound;
 				end
 
+				itemButton.tablenum = tablenum;
+				itemButton.dataID = dataID;
+				itemButton.dataSource = dataSource;
 				itemButton.desc = dataSource[dataID][tablenum][i][5] or nil;
 				itemButton.price = dataSource[dataID][tablenum][i][6] or nil;
 				itemButton.droprate = dataSource[dataID][tablenum][i][7] or nil;

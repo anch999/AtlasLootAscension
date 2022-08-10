@@ -243,14 +243,21 @@ function AtlasLootItem_OnClick(self ,arg1)
             if AtlasLootItemsFrame.refresh[1] == "WishList" then
                 AtlasLoot_DeleteFromWishList(self.itemID);
             else
-                AtlasLoot_ShowWishListDropDown(self.itemID, self.itemTexture, getglobal("AtlasLootItem_"..self:GetID().."_Name"):GetText(), AtlasLoot_BossName:GetText(), "", self);
+                if(AtlasLootItemsFrame.refresh[1] == "SearchResult") then
+                    local datID, _, datPage = strsplit("|", self.sourcePage);
+                    AtlasLoot_ShowWishListDropDown(self.itemID, self.itemTexture, getglobal("AtlasLootItem_"..self:GetID().."_Name"):GetText(), 
+                                                        AtlasLoot_Data[datID][tonumber(datPage)].Name, self.sourcePage, self);
+                else
+                    AtlasLoot_ShowWishListDropDown(self.itemID, self.itemTexture, getglobal("AtlasLootItem_"..self:GetID().."_Name"):GetText(), 
+                                                        AtlasLoot_BossName:GetText(), self.dataID .. "|" .. "AtlasLoot_Data" .. "|" .. tostring(self.tablenum), self);
+                end
             end
-        elseif((AtlasLootItemsFrame.refresh[1] == "SearchResult") and self.sourcePage) then
-            local dataID, dataSource = strsplit("|", self.sourcePage);
+        elseif((AtlasLootItemsFrame.refresh[1] == "SearchResult" or AtlasLootItemsFrame.refresh[1] == "WishList") and self.sourcePage) then
+            local dataID, dataSource, dataPage = strsplit("|", self.sourcePage);
             if(dataID and dataSource) then
-                AtlasLoot:ShowItemsFrame(dataID, AtlasLoot_Data, AtlasLootItemsFrame.refresh[3], 1);
+                AtlasLoot:ShowItemsFrame(dataID, AtlasLoot_Data, AtlasLootItemsFrame.refresh[3], tonumber(dataPage));
             end
-        elseif (arg1=="LeftButton") and self.sourcePage ~= nil then
+        elseif (arg1=="LeftButton") and self.sourcePage then
            --Create token table if there isnt one
             if AtlasLoot_TokenData[self.sourcePage] == nil then
                 AtlasLoot:CreateToken(self.sourcePage)
@@ -268,14 +275,14 @@ function AtlasLootItem_OnClick(self ,arg1)
             else
                 spellName, _, _, _, _, _, _, _, _ = GetSpellInfo(string.sub(self.itemID, 2));
                 --spellIcon = GetItemIcon(self.dressingroomID);
-                AtlasLoot_ShowWishListDropDown(self.itemID, self.dressingroomID, "=ds="..spellName, AtlasLootItemsFrame.refresh[1].."|"..AtlasLootItemsFrame.refresh[2],self);
+                AtlasLoot_ShowWishListDropDown(self.itemID, self.dressingroomID, "=ds="..spellName, AtlasLoot_BossName:GetText(), self.dataID .. "|" .. "AtlasLoot_Data" .. "|" .. tostring(self.tablenum), self);
             end
         elseif(IsControlKeyDown()) then
             DressUpItemLink("item:"..self.dressingroomID..":0:0:0:0:0:0:0");
         elseif((AtlasLootItemsFrame.refresh[1] == "SearchResult" or AtlasLootItemsFrame.refresh[1] == "WishList") and self.sourcePage) then
-            local dataID, dataSource = strsplit("|", self.sourcePage);
-            if(dataID and dataSource and AtlasLoot:IsLootTableAvailable(dataID)) then
-                AtlasLoot:ShowItemsFrame(dataID, dataSource, AtlasLootItemsFrame.refresh[3]);
+            local dataID, dataSource, dataPage = strsplit("|", self.sourcePage);
+            if(dataID and dataSource) then
+                AtlasLoot:ShowItemsFrame(dataID, AtlasLoot_Data, AtlasLootItemsFrame.refresh[3], tonumber(dataPage));
             end
         end
     end
