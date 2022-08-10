@@ -505,6 +505,12 @@ function AtlasLoot:SubTableScrollFrameUpdate(tablename, dataSource, pFrame, tabl
                 row.pFrame = pFrame;
             if dataSource == AtlasLoot_MapData then
                 row.Text:SetText(dataSource[tablename][value][1]);
+                row:SetScript("OnEnter", function(self)
+                    GameTooltip:SetOwner(self, "ANCHOR_RIGHT");
+                    GameTooltip:SetText(dataSource[tablename][value][1]);
+                    GameTooltip:Show();
+                end)
+                row:SetScript("OnLeave", function() GameTooltip:Hide() end)
             else
                 row.Text:SetText("|cffFFd200"..dataSource[tablename][value].Name);
                 if tablenum == value and dataSource ~= AtlasLoot_MapData then
