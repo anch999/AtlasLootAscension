@@ -211,7 +211,6 @@ function AtlasLoot_AdvancedSearchShow()
     getglobal("AtlasLootItemsFrame_BACK"):Hide();
 
     -- Ditch the Quicklook selector
-    AtlasLoot_QuickLooks:Hide();
     AtlasLootQuickLooksButton:Hide();
 
     -- Hide the Filter Check-Box

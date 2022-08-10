@@ -36,7 +36,6 @@ function AtlasLoot:MapOnShow()
         if ATLASLOOT_CURRENT_MAP then
             AtlasLoot_BossName:Hide();
             --Ditch the Quicklook selector
-            AtlasLoot_QuickLooks:Hide();
             AtlasLootQuickLooksButton:Hide();
             -- Hide the Filter Check-Box
 	        AtlasLootFilterCheck:Hide();
@@ -73,7 +72,7 @@ function AtlasLoot:MapSelect(mapID)
     AtlasLootDefaultFrame_MapSelectButton:SetText(AtlasLoot_MapData[mapID].ZoneName[1]);
 end
 
-function AtlasLoot_MapMenuClick(mapID)
+function AtlasLoot:MapMenuClick(mapID)
     if AtlasLootDefaultFrame_Map:IsVisible() then
         AtlasLoot:SubTableScrollFrameUpdate(mapID, AtlasLoot_MapData);
     end
@@ -92,7 +91,7 @@ function AtlasLoot:MapMenuRegister(mapID)
                 for k,v in pairs(AtlasLoot_MultiMapData[mapID]) do
                     AtlasLoot_MapMenu:AddLine(
                         'text', AtlasLoot_MapData[v].ZoneName[1],
-                        'func', AtlasLoot_MapMenuClick,
+                        'func', function(arg1) AtlasLoot:MapMenuClick(arg1) end,
                         'arg1', v,
                         'notCheckable', true
                     )

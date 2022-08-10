@@ -118,7 +118,7 @@ end
     for i = 1, 30 do
         createLootItemButtons(i);
     end
-        
+
         -- LootInfo
 local lootinfo = CreateFrame("Frame", "AtlasLootInfo")
         lootinfo:SetSize(128,75);
@@ -152,7 +152,6 @@ local nextbtn = CreateFrame("Button", "AtlasLootItemsFrame_NEXT", AtlasLootItems
 local prevbtn = CreateFrame("Button", "AtlasLootItemsFrame_PREV", AtlasLootItemsFrame);
         prevbtn:SetPoint("BOTTOMLEFT", "AtlasLootItemsFrame", "BOTTOMLEFT",5,5);
         prevbtn:SetSize(32,32);
-        prevbtn:SetFrameStrata("HIGH");
         prevbtn.texture = prevbtn:CreateTexture(nil, "BACKGROUND");
         prevbtn.texture:SetTexture("Interface\\Buttons\\UI-PageButton-Background");
         prevbtn.texture:SetSize(32,32);
@@ -167,12 +166,7 @@ local prevbtn = CreateFrame("Button", "AtlasLootItemsFrame_PREV", AtlasLootItems
         -- Back button
 local backbtn = CreateFrame("Button", "AtlasLootItemsFrame_BACK", AtlasLootItemsFrame, "OptionsButtonTemplate");
         backbtn:SetPoint("BOTTOM", "AtlasLootItemsFrame", "BOTTOM",0,4);
-        backbtn:SetFrameStrata("HIGH");
         backbtn:SetText(AL["Back"]);
-        backbtn.texture = backbtn:CreateTexture("AtlasLootItemsFrame_Back", "BACKGROUND");
-        backbtn.texture:SetPoint("TOPLEFT","AtlasLootItemsFrame","TOPLEFT");
-        backbtn.texture:SetPoint("BOTTOMRIGHT","AtlasLootItemsFrame","BOTTOMRIGHT");
-        backbtn.texture:SetVertexColor(0,0,0,0.7);
         backbtn:SetScript("OnClick", function(self) AtlasLoot:BackButton_OnClick() end)
         backbtn:Hide();
 
@@ -188,12 +182,11 @@ local filterbtn = CreateFrame("CheckButton","AtlasLootFilterCheck",AtlasLootItem
 local looksbtn = CreateFrame("Button", "AtlasLootQuickLooksButton", AtlasLootItemsFrame);
         looksbtn:SetPoint("BOTTOM", "AtlasLootItemsFrame", "BOTTOM",58,28);
         looksbtn:SetSize(25,25);
-        looksbtn:SetFrameStrata("HIGH");
-        looksbtn.Label = nextbtn:CreateFontString("AtlasLoot_QuickLooks","OVERLAY","GameFontNormal");
+        looksbtn.Label = looksbtn:CreateFontString("AtlasLoot_QuickLooks","OVERLAY","GameFontNormal");
         looksbtn.Label:SetSize(200,25);
         looksbtn.Label:SetText(AL["Add to QuickLooks:"]);
-        looksbtn.Label:SetPoint("BOTTOM", "AtlasLootItemsFrame","BOTTOM", -57, 28);
-        looksbtn.Label:SetJustifyH("RIGHT");
+        looksbtn.Label:SetPoint("LEFT", "AtlasLootQuickLooksButton", -125, 0);
+        looksbtn.Label:SetJustifyH("LEFT");
         looksbtn:SetNormalTexture("Interface\\Buttons\\UI-SpellbookIcon-NextPage-Up");
         looksbtn:SetPushedTexture("Interface\\Buttons\\UI-SpellbookIcon-NextPage-Down");
         looksbtn:SetDisabledTexture("Interface\\Buttons\\UI-SpellbookIcon-NextPage-Disabled");
@@ -207,7 +200,7 @@ local looksbtn = CreateFrame("Button", "AtlasLootQuickLooksButton", AtlasLootIte
             end
         end)
         looksbtn:Hide();
-
+        
 ------------------------------------ Buttons at the top of the frame ---------------------------------------
 
     --Close Button
@@ -279,43 +272,6 @@ local expansionmenubtn = CreateFrame("Button", "AtlasLootDefaultFrame_ExpansionM
             AtlasLoot_DewdropExpansionMenu:Open(self);
         end
     end);
-
---------------------------------- Atlas Map and map buttons -----------------------------------------------
-
-    --Atlas Map
-local map = CreateFrame("Frame", "AtlasLootDefaultFrame_Map", AtlasLootDefaultFrame);
-        map:SetSize(540,515);
-        map:SetPoint("BOTTOMLEFT", AtlasLootDefaultFrame, "BOTTOMLEFT",40,90);
-        map:SetFrameStrata("HIGH");
-        map:Hide();
-        map:EnableMouse();
-        map:SetScript("OnMouseDown", function(self, button)
-            if button == "RightButton" then 
-                AtlasLoot:MapOnShow();
-            end
-        end);
-
-    -- Map Button
-local mapbtn = CreateFrame("Button","AtlasLootDefaultFrame_MapButton", AtlasLootDefaultFrame,"OptionsButtonTemplate");
-    mapbtn:SetSize(90,24);
-    mapbtn:SetPoint("BOTTOMLEFT",Atlasloot_SubTableFrame,0,-27.5);
-    mapbtn:SetText("Map");
-    mapbtn:SetScript("OnClick", function() AtlasLoot:MapOnShow(); end)
-    mapbtn:Hide();
-
-    -- Map Select Button
-local mapSelbtn = CreateFrame("Button","AtlasLootDefaultFrame_MapSelectButton", AtlasLootDefaultFrame,"OptionsButtonTemplate");
-    mapSelbtn:SetSize(180,24);
-    mapSelbtn:SetPoint("BOTTOMRIGHT",Atlasloot_SubTableFrame,5,-27.5);
-    mapSelbtn:SetScript("OnClick", function(self)
-        if AtlasLoot_MapMenu:IsOpen() then
-            AtlasLoot_MapMenu:Close();
-        else
-            AtlasLoot_MapMenu:Open(self);
-        end
-    end);
-    mapSelbtn:SetText("No Map");
-    mapSelbtn:Hide();
 
 ---------------------------------------- Buttons Under the loot and subtable frames -------------------------------------------
 
@@ -528,36 +484,36 @@ local subtableFrame = CreateFrame("Frame", "Atlasloot_SubTableFrame", AtlasLootD
     });
 
 function AtlasLoot:SubTableScrollFrameUpdate(tablename, dataSource, pFrame, tablenum)
-        local maxValue = #dataSource[tablename];
-        subtableFrame.tablename = tablename;
-        subtableFrame.dataSource = dataSource;
-        subtableFrame.tablenum = tablenum;
-        subtableFrame.pFrame = pFrame;
-        FauxScrollFrame_Update(subtableFrame.scrollBar, maxValue, MAX_ROWS2, ROW_HEIGHT);
-        local offset = FauxScrollFrame_GetOffset(subtableFrame.scrollBar);
-        for i = 1, MAX_ROWS2 do
-            local value = i + offset
-            subtableFrame.rows[i]:SetChecked(false);
-            subtableFrame.rows[i]:SetHighlightTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD");
-            if value <= maxValue and dataSource[tablename][value] then
-                local row = subtableFrame.rows[i]
-                    row.dataSource = dataSource;
-                    row.tablename = tablename;
-                    row.tablenum = value;
-                    row.pFrame = pFrame;
-                if dataSource == AtlasLoot_MapData then
-                    row:SetText(string.sub(dataSource[tablename][value][1],0,48));
-                else
-                    row:SetText("|cffFFd200"..dataSource[tablename][value].Name);
-                    if tablenum == value and dataSource ~= AtlasLoot_MapData then
-                        row:SetChecked(true);
-                    end
-                end
-                row:Show();
+    local maxValue = #dataSource[tablename];
+    subtableFrame.tablename = tablename;
+    subtableFrame.dataSource = dataSource;
+    subtableFrame.tablenum = tablenum;
+    subtableFrame.pFrame = pFrame;
+    FauxScrollFrame_Update(subtableFrame.scrollBar, maxValue, MAX_ROWS2, ROW_HEIGHT);
+    local offset = FauxScrollFrame_GetOffset(subtableFrame.scrollBar);
+    for i = 1, MAX_ROWS2 do
+        local value = i + offset
+        subtableFrame.rows[i]:SetChecked(false);
+        subtableFrame.rows[i]:SetHighlightTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD");
+        if value <= maxValue and dataSource[tablename][value] then
+            local row = subtableFrame.rows[i]
+                row.dataSource = dataSource;
+                row.tablename = tablename;
+                row.tablenum = value;
+                row.pFrame = pFrame;
+            if dataSource == AtlasLoot_MapData then
+                row.Text:SetText(dataSource[tablename][value][1]);
             else
-                subtableFrame.rows[i]:Hide()
+                row.Text:SetText("|cffFFd200"..dataSource[tablename][value].Name);
+                if tablenum == value and dataSource ~= AtlasLoot_MapData then
+                    row:SetChecked(true);
+                end
             end
+            row:Show();
+        else
+            subtableFrame.rows[i]:Hide()
         end
+    end
 end
 
 local scrollSlider2 = CreateFrame("ScrollFrame","AtlasLootDefaultFrameSubTableScroll",Atlasloot_SubTableFrame,"FauxScrollFrameTemplate");
@@ -575,6 +531,10 @@ local rows2 = setmetatable({}, { __index = function(t, i)
     row:SetSize(230, ROW_HEIGHT)
     row:SetNormalFontObject(GameFontHighlightLeft)
     row:SetCheckedTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD");
+    row.Text = row:CreateFontString("$parentRow"..i.."Text","OVERLAY","GameFontNormal");
+    row.Text:SetSize(230, ROW_HEIGHT);
+    row.Text:SetPoint("LEFT",row);
+    row.Text:SetJustifyH("LEFT");
     row:SetScript("OnClick", function()
         if row.dataSource ~= AtlasLoot_MapData then
             AtlasLoot:ShowItemsFrame(row.tablename, row.dataSource, row.pFrame, row.tablenum);
@@ -593,3 +553,40 @@ local rows2 = setmetatable({}, { __index = function(t, i)
 end })
 
 subtableFrame.rows = rows2
+
+--------------------------------- Atlas Map and map buttons -----------------------------------------------
+
+    --Atlas Map
+local map = CreateFrame("Frame", "AtlasLootDefaultFrame_Map", AtlasLootDefaultFrame);
+    map:SetSize(540,515);
+    map:SetPoint("BOTTOMLEFT", AtlasLootDefaultFrame, "BOTTOMLEFT",40,90);
+    map:SetFrameStrata("HIGH");
+    map:Hide();
+    map:EnableMouse();
+    map:SetScript("OnMouseDown", function(self, button)
+        if button == "RightButton" then
+            AtlasLoot:MapOnShow();
+        end
+    end);
+
+    -- Map Button
+local mapbtn = CreateFrame("Button","AtlasLootDefaultFrame_MapButton", AtlasLootDefaultFrame,"OptionsButtonTemplate");
+    mapbtn:SetSize(90,24);
+    mapbtn:SetPoint("BOTTOMLEFT",Atlasloot_SubTableFrame,0,-27.5);
+    mapbtn:SetText("Map");
+    mapbtn:SetScript("OnClick", function() AtlasLoot:MapOnShow(); end)
+    mapbtn:Hide();
+
+    -- Map Select Button
+local mapSelbtn = CreateFrame("Button","AtlasLootDefaultFrame_MapSelectButton", AtlasLootDefaultFrame,"OptionsButtonTemplate");
+    mapSelbtn:SetSize(180,24);
+    mapSelbtn:SetPoint("BOTTOMRIGHT",Atlasloot_SubTableFrame,5,-27.5);
+    mapSelbtn:SetScript("OnClick", function(self)
+        if AtlasLoot_MapMenu:IsOpen() then
+            AtlasLoot_MapMenu:Close();
+        else
+            AtlasLoot_MapMenu:Open(self);
+        end
+    end);
+    mapSelbtn:SetText("No Map");
+    mapSelbtn:Hide();

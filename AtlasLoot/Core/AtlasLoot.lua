@@ -446,7 +446,6 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource, pFrame, tablenum)
 	AtlasLootDefaultFrame_AdvancedSearchPanel:Hide();
 
     --Ditch the Quicklook selector
-    AtlasLoot_QuickLooks:Hide();
     AtlasLootQuickLooksButton:Hide();
 
 	--Hide Map and reshow lootbackground
@@ -719,7 +718,6 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource, pFrame, tablenum)
 		end
 
         --This is a valid QuickLook, so show the UI objects
-        AtlasLoot_QuickLooks:Show();
         AtlasLootQuickLooksButton:Show();
 
 		-- Checks dataID with submenus to stop filter button loading on certain tables
