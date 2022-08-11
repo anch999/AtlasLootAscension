@@ -301,10 +301,10 @@ local function presetcreate(preset,num)
         end
     end);
     preset:SetScript("OnClick", function()
-        if AtlasLoot:IsLootTableAvailable(AtlasLootCharDB["QuickLooks"][num][5]) then
-            ATLASLOOT_LASTMODULE = AtlasLootCharDB["QuickLooks"][num][5];
-            ATLASLOOT_CURRENTTABLE = AtlasLootCharDB["QuickLooks"][num][6];
-            AtlasLoot:ShowItemsFrame(AtlasLootCharDB["QuickLooks"][num][1], AtlasLootCharDB["QuickLooks"][num][2], pFrame, AtlasLootCharDB["QuickLooks"][num][4]);
+        if AtlasLoot:IsLootTableAvailable(AtlasLootCharDB["QuickLooks"][num][4]) then
+            ATLASLOOT_LASTMODULE = AtlasLootCharDB["QuickLooks"][num][4];
+            ATLASLOOT_CURRENTTABLE = AtlasLootCharDB["QuickLooks"][num][5];
+            AtlasLoot:ShowItemsFrame(AtlasLootCharDB["QuickLooks"][num][1], AtlasLootCharDB["QuickLooks"][num][2], AtlasLootCharDB["QuickLooks"][num][3]);
         end
     end);
     preset:SetScript("OnShow", function(self)
@@ -457,7 +457,7 @@ local rows = setmetatable({}, { __index = function(t, i)
     row:SetScript("OnClick", function()
         ItemindexID = row.itemIndex;
         if not AtlasLootDefaultFrame_AdvancedSearchPanel:IsVisible() then
-        AtlasLoot:ShowItemsFrame(AtlasLootItemsFrame.refresh[1], AtlasLootItemsFrame.refresh[2], AtlasLootItemsFrame.refresh[3], AtlasLootItemsFrame.refresh[4]);
+        AtlasLoot:ShowItemsFrame(AtlasLootItemsFrame.refresh[1], AtlasLootItemsFrame.refresh[2], AtlasLootItemsFrame.refresh[3]);
         end
         AtlasLoot:ScrollFrameUpdate();
     end)
@@ -485,12 +485,11 @@ local subtableFrame = CreateFrame("Frame", "Atlasloot_SubTableFrame", AtlasLootD
         insets = { left = 4, right = 4, top = 4, bottom = 4 },
     });
 
-function AtlasLoot:SubTableScrollFrameUpdate(tablename, dataSource, pFrame, tablenum)
+function AtlasLoot:SubTableScrollFrameUpdate(tablename, dataSource, tablenum)
     local maxValue = #dataSource[tablename];
     subtableFrame.tablename = tablename;
     subtableFrame.dataSource = dataSource;
     subtableFrame.tablenum = tablenum;
-    subtableFrame.pFrame = pFrame;
     FauxScrollFrame_Update(subtableFrame.scrollBar, maxValue, MAX_ROWS2, ROW_HEIGHT);
     local offset = FauxScrollFrame_GetOffset(subtableFrame.scrollBar);
     for i = 1, MAX_ROWS2 do
@@ -502,7 +501,6 @@ function AtlasLoot:SubTableScrollFrameUpdate(tablename, dataSource, pFrame, tabl
                 row.dataSource = dataSource;
                 row.tablename = tablename;
                 row.tablenum = value;
-                row.pFrame = pFrame;
             if dataSource == AtlasLoot_MapData then
                 row.Text:SetText(dataSource[tablename][value][1]);
                 row:SetScript("OnEnter", function(self)
@@ -549,7 +547,7 @@ local rows2 = setmetatable({}, { __index = function(t, i)
     row.Text:SetJustifyH("LEFT");
     row:SetScript("OnClick", function()
         if row.dataSource ~= AtlasLoot_MapData then
-            AtlasLoot:ShowItemsFrame(row.tablename, row.dataSource, row.pFrame, row.tablenum);
+            AtlasLoot:ShowItemsFrame(row.tablename, row.dataSource, row.tablenum);
         else
             row:SetChecked(false);
         end

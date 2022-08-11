@@ -40,15 +40,15 @@ function AtlasLootDefaultFrame_OnShow()
     --Set the item table to the loot table
         --Show the last displayed loot table
     local lastboss = AtlasLoot.db.profile.LastBoss;
-    if lastboss and lastboss[5] then
-        ATLASLOOT_CURRENTTABLE = lastboss[6];
-        ATLASLOOT_LASTMODULE = lastboss[5];
-        AtlasLoot:IsLootTableAvailable(lastboss[5]);
-        AtlasLoot:ShowItemsFrame(lastboss[1], AtlasLoot_Data, pFrame, lastboss[4]);
+    if lastboss and lastboss[4] then
+        ATLASLOOT_CURRENTTABLE = lastboss[5];
+        ATLASLOOT_LASTMODULE = lastboss[4];
+        AtlasLoot:IsLootTableAvailable(lastboss[4]);
+        AtlasLoot:ShowItemsFrame(lastboss[1], AtlasLoot_Data, lastboss[3]);
         AtlasLoot_DewdropSubMenu:Unregister(AtlasLootDefaultFrame_SubMenu);
-        AtlasLoot:DewdropSubMenuRegister(AtlasLoot_SubMenus[lastboss[6]]);
+        AtlasLoot:DewdropSubMenuRegister(AtlasLoot_SubMenus[lastboss[5]]);
     else
-        AtlasLoot:ShowItemsFrame("EmptyTable", AtlasLoot_Data, pFrame,1);
+        AtlasLoot:ShowItemsFrame("EmptyTable", AtlasLoot_Data, 1);
     end
 end
 
@@ -91,12 +91,10 @@ text - Heading for the loot table
 Called when a button in AtlasLoot_DewdropSubMenu is clicked
 ]]
 function AtlasLoot:DewDropSubMenuClick(tablename)
-    --Definition of where I want the loot table to be shown
     --Show the select loot table
     local tablenum = AtlasLoot_Data[tablename].Loadfirst or 1;
-
     --Show the table that has been selected
-    AtlasLoot:ShowItemsFrame(tablename, AtlasLoot_Data, pFrame, tablenum);
+    AtlasLoot:ShowItemsFrame(tablename, AtlasLoot_Data, tablenum);
     AtlasLoot_DewdropSubMenu:Close(1);
 end
 

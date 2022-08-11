@@ -5,7 +5,7 @@ Loot browser associating loot with instance bosses
 Can be integrated with Atlas (http://www.atlasmod.com)
 
 Functions:
-AtlasLoot_HideNoUsableItems()
+AtlasLoot:HideNoUsableItems()
 AtlasLoot_FilterEnableButton()
 <local> CreateCheckButton(parrent, text, num)
 AtlasLoote_CreateFilterOptions()
@@ -92,7 +92,7 @@ local ClassHides = {
 
 -- **********************************************************************
 -- ItemFilter:
---	AtlasLoot_HideNoUsableItems()
+--	AtlasLoot:HideNoUsableItems()
 --	AtlasLoot_FilterEnableButton()
 -- **********************************************************************
 
@@ -100,15 +100,12 @@ AtlasLoot_Data["FilterList"] = { [1] = {}; };
 
 function AtlasLoot_Testabc()
 		print(BabbleInventory["Two-Hand"])
-end	
-	
-	
-function AtlasLoot_HideNoUsableItems()
-	local dataID = AtlasLootItemsFrame.refreshOri[1]
-	local dataSource = AtlasLootItemsFrame.refreshOri[2]
-	local pFrame = AtlasLootItemsFrame.refreshOri[3]
-	local tablenum = AtlasLootItemsFrame.refreshOri[4]
-	local tablebase = AtlasLoot_Data[dataID][tablenum]
+end
+
+function AtlasLoot:HideNoUsableItems()
+	local dataID, dataSource, tablenum = AtlasLootItemsFrame.refreshOri[1], AtlasLootItemsFrame.refreshOri[2], AtlasLootItemsFrame.refreshOri[3];
+
+ 	local tablebase = dataSource[dataID][tablenum]
 	if not tablebase or dataID == "WishList" or dataID == "SearchResult" then return end
 	local itemCount = 0
 	local countAll = 1
@@ -133,7 +130,7 @@ function AtlasLoot_HideNoUsableItems()
 			-- remove the "-"
 			xitemExtraText = gsub(xitemExtraText, "-", "") 
 			local xitemNameText = getglobal("AtlasLootItem_"..i.."_Name"):GetText()
-			
+
 			if xitemExtraText and xitemExtraText ~= "" then
 				for k = 1,#FilterSort do
 					k = FilterSort[k]
@@ -165,7 +162,7 @@ function AtlasLoot_HideNoUsableItems()
 					end
 				end
 			end
-			
+
 			-- Sort the items
 			if xgo == true then
 				if i==16 and countOld > 0 then
@@ -183,7 +180,7 @@ function AtlasLoot_HideNoUsableItems()
 				else
 					AtlasLoot_Data["FilterList"][tablenum][countAll] = { countAll, xitemID, xitemTexture, xitemNameText, xitemExtraTextSave}					
 				end
-				
+
 				if tablebase[itemCount][6] and countAll==16 then
 					AtlasLoot_Data["FilterList"][tablenum][16][6] = tablebase[itemCount][6]
 				elseif tablebase[itemCount][6] and countAll~=16 then
@@ -205,25 +202,25 @@ function AtlasLoot_HideNoUsableItems()
 			end
 		else
 			count = count + 1
-		end		
+		end
 	end
-	
-	AtlasLoot:ShowItemsFrame("FilterList", AtlasLootItemsFrame.refresh[2], AtlasLootItemsFrame.refresh[3], AtlasLootItemsFrame.refresh[4])
+
+	AtlasLoot:ShowItemsFrame("FilterList", AtlasLootItemsFrame.refresh[2], AtlasLootItemsFrame.refresh[3])
 end
 
 function AtlasLoot_FilterEnableButton()
 	if ATLASLOOT_FILTER_ENABLE == true then
 		ATLASLOOT_FILTER_ENABLE = false;
-		AtlasLoot:ShowItemsFrame(AtlasLootItemsFrame.refreshOri[1], AtlasLootItemsFrame.refreshOri[2], AtlasLootItemsFrame.refreshOri[3], AtlasLootItemsFrame.refreshOri[4]);
+		AtlasLoot:ShowItemsFrame(AtlasLootItemsFrame.refreshOri[1], AtlasLootItemsFrame.refreshOri[2], AtlasLootItemsFrame.refreshOri[3]);
 	else
 		ATLASLOOT_FILTER_ENABLE = true
-		AtlasLoot_HideNoUsableItems();
+		AtlasLoot:HideNoUsableItems();
 	end
 end
 
 -- **********************************************************************
 -- Options:
---	AtlasLoot_HideNoUsableItems()
+--	AtlasLoot:HideNoUsableItems()
 --	<local> CreateCheckButton(parrent, text, num)
 --	AtlasLoote_CreateFilterOptions()
 -- **********************************************************************

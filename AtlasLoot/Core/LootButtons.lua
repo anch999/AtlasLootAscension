@@ -255,7 +255,7 @@ function AtlasLootItem_OnClick(self ,arg1)
         elseif((AtlasLootItemsFrame.refresh[1] == "SearchResult" or AtlasLootItemsFrame.refresh[1] == "WishList") and self.sourcePage) then
             local dataID, dataSource, dataPage = strsplit("|", self.sourcePage);
             if(dataID and dataSource) then
-                AtlasLoot:ShowItemsFrame(dataID, AtlasLoot_Data, AtlasLootItemsFrame.refresh[3], tonumber(dataPage));
+                AtlasLoot:ShowItemsFrame(dataID, AtlasLoot_Data, tonumber(dataPage));
             end
         elseif (arg1=="LeftButton") and self.sourcePage then
            --Create token table if there isnt one
@@ -263,7 +263,7 @@ function AtlasLootItem_OnClick(self ,arg1)
                 AtlasLoot:CreateToken(self.sourcePage)
             end
             --Show token table
-            AtlasLoot:ShowItemsFrame(self.sourcePage, AtlasLoot_TokenData, AtlasLootItemsFrame.refresh[3], 1);
+            AtlasLoot:ShowItemsFrame(self.sourcePage, AtlasLoot_TokenData, 1);
         end
     else
         if IsShiftKeyDown() then
@@ -288,7 +288,7 @@ function AtlasLootItem_OnClick(self ,arg1)
         elseif((AtlasLootItemsFrame.refresh[1] == "SearchResult" or AtlasLootItemsFrame.refresh[1] == "WishList") and self.sourcePage) then
             local dataID, dataSource, dataPage = strsplit("|", self.sourcePage);
             if(dataID and dataSource) then
-                AtlasLoot:ShowItemsFrame(dataID, AtlasLoot_Data, AtlasLootItemsFrame.refresh[3], tonumber(dataPage));
+                AtlasLoot:ShowItemsFrame(dataID, AtlasLoot_Data, tonumber(dataPage));
             end
         end
     end
