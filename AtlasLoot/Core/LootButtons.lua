@@ -275,7 +275,13 @@ function AtlasLootItem_OnClick(self ,arg1)
             else
                 spellName, _, _, _, _, _, _, _, _ = GetSpellInfo(string.sub(self.itemID, 2));
                 --spellIcon = GetItemIcon(self.dressingroomID);
-                AtlasLoot_ShowWishListDropDown(self.itemID, self.dressingroomID, "=ds="..spellName, AtlasLoot_BossName:GetText(), self.dataID .. "|" .. "AtlasLoot_Data" .. "|" .. tostring(self.tablenum), self);
+                if(AtlasLootItemsFrame.refresh[1] == "SearchResult") then
+                    local datID, _, datPage = strsplit("|", self.sourcePage);
+                    AtlasLoot_ShowWishListDropDown(self.itemID, self.dressingroomID, "=ds="..spellName, 
+                                                        AtlasLoot_Data[datID][tonumber(datPage)].Name, self.sourcePage, self);
+                else
+                    AtlasLoot_ShowWishListDropDown(self.itemID, self.dressingroomID, "=ds="..spellName, AtlasLoot_BossName:GetText(), self.dataID .. "|" .. "AtlasLoot_Data" .. "|" .. tostring(self.tablenum), self);
+                end
             end
         elseif(IsControlKeyDown()) then
             DressUpItemLink("item:"..self.dressingroomID..":0:0:0:0:0:0:0");

@@ -682,7 +682,7 @@ local function DoSearch(searchText)
                         local spellName = GetSpellName(itemId, atlasName)
                         if nameMatches(spellName, searchText) then
                             spellName = string.sub(atlasName, 1, 4) .. spellName;
-                            AddItemToSearchResult(itemId, itemType, spellName, dataID, itemIdBackup)
+                            AddItemToSearchResult(itemId, itemType, spellName, dataID, itemIdBackup, AtlasLoot_Difficulty:getMaxDifficulty(data.Type), dataPage);
                         end
                     end
                 end
