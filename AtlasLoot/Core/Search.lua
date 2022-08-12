@@ -625,6 +625,11 @@ end
 local function DoSearch(searchText)
     AtlasLootCharDB["SearchResult"] = {Name = "Search Result" , Type = "Search", Back = true};
     AtlasLootCharDB.LastSearchedText = searchText;
+    AtlasLoot_SearchProgress:Show();
+    AtlasLoot_SearchProgress.Loop:Play();
+    local items_total = 0;
+    local items_checked = 0;
+    local items_queried = false;
     local count = 0;
     local tablenum = 1;
 
@@ -676,8 +681,14 @@ local function DoSearch(searchText)
                                 elseif ItemMatchesAllTerms(searchTerms, itemDetails) then
                                     AddItemToSearchResult(itemId, itemType, atlasName, dataID, itemIdBackup, AtlasLoot_Difficulty:getMaxDifficulty(data.Type), dataPage);
                                 end
+                                items_checked = items_checked + 1;
+                                if(items_checked >= items_total and items_queried) then 
+                                    AtlasLoot_SearchProgress.Loop:Stop();
+                                    AtlasLoot_SearchProgress:Hide()
+                                end
                             end
                         end)
+                        items_total = items_total + 1;
                     elseif not equipableFilterOn and itemId and itemId ~= "" and string.sub(itemId, 1, 1) == "s" then
                         local spellName = GetSpellName(itemId, atlasName)
                         if nameMatches(spellName, searchText) then
@@ -689,6 +700,7 @@ local function DoSearch(searchText)
             end
         end
     end
+    items_queried = true;
 end
 
 function AtlasLoot:ShowSearchResult()

@@ -222,3 +222,59 @@ clearbtn:SetScript("OnClick", function()
 end);
 
 AtlasLoot_AdvancedSearchSetup()
+
+function StreamingIcon_UpdateIcon(status, tooltip)
+	if(status > 0) then
+        AtlasLoot_SearchProgressSpinner:SetVertexColor(0,1,0);
+        AtlasLoot_SearchProgressFrameBackground:SetVertexColor(0,1,0);
+        AtlasLoot_SearchProgress.tooltip = tooltip;
+		AtlasLoot_SearchProgress.Loop:Play();
+		AtlasLoot_SearchProgress:Show();
+	else
+        AtlasLoot_SearchProgress.Loop:Stop();
+        AtlasLoot_SearchProgress:Hide();
+	end
+end
+
+local streamIcon = CreateFrame("Frame", "AtlasLoot_SearchProgress", AtlasLootDefaultFrame_LootBackground);
+streamIcon:SetPoint("TOPRIGHT", AtlasLootDefaultFrame_LootBackground, "TOPRIGHT");
+streamIcon:SetSize(48, 48);
+streamIcon.tooltip = "Searching...";
+
+streamIcon.icon = streamIcon:CreateTexture("$parentSpinner", "BACKGROUND");
+streamIcon.icon:SetTexture("Interface\\Addons\\AtlasLoot\\Images\\streamcircle");
+streamIcon.icon:SetVertexColor(0,1,0);
+streamIcon.icon:SetAllPoints();
+streamIcon.spark = streamIcon:CreateTexture("OVERLAY");
+streamIcon.spark:SetTexture("Interface\\Addons\\AtlasLoot\\Images\\streamspark");
+streamIcon.spark:SetAllPoints();
+
+streamIcon.frame = CreateFrame("Frame", "$parentFrame", AtlasLoot_SearchProgress);
+streamIcon.frame:SetAllPoints();
+streamIcon.frame.bg = streamIcon.frame:CreateTexture("$parentBackground", "BACKGROUND");
+streamIcon.frame.bg:SetTexture("Interface\\Addons\\AtlasLoot\\Images\\streambackground");
+streamIcon.frame.bg:SetVertexColor(0,1,0);
+streamIcon.frame.bg:SetAllPoints();
+streamIcon.frame.alpha = streamIcon.frame:CreateTexture("$parentAlpha", "ARTWORK");
+streamIcon.frame.alpha:SetTexture("Interface\\Addons\\AtlasLoot\\Images\\streamframe");
+streamIcon.frame.alpha:SetAllPoints();
+
+streamIcon.Loop = streamIcon:CreateAnimationGroup("$parentLoopAnim");
+streamIcon.Loop:SetLooping("REPEAT");
+local rotAnim = streamIcon.Loop:CreateAnimation("ROTATION");
+rotAnim:SetOrder(1);
+rotAnim:SetDuration(8);
+rotAnim:SetDegrees(-360);
+
+streamIcon:SetScript("OnEnter", 
+    function(self) 
+        if(self.tooltip ~= nil) then
+            GameTooltip:SetOwner(self, "ANCHOR_LEFT");
+            GameTooltip:SetText(self.tooltip, nil, nil, nil, nil, true);
+        end
+    end);
+streamIcon:SetScript("OnLeave", GameTooltip_Hide);
+streamIcon:SetScript("OnShow", function(self) self:SetFrameLevel( (self:GetParent()):GetFrameLevel() + 1 ) end);
+
+streamIcon:SetPoint("TOPRIGHT", AtlasLootDefaultFrame_LootBackground, "TOPRIGHT");
+streamIcon:Hide();
