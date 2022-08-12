@@ -13,7 +13,7 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0")
 --This is a multi-layer table defining the main loot listing.
 --Entries have the text to display, loot table or sub table to link to and if the link is to a loot table or sub table
 AtlasLoot_Modules = {
-	{AL["Dungeons and Raids"], "Dungeons and Raids ", 2};
+	{AL["Dungeons and Raids"], "Dungeons and Raids", 2};
 	{AL["Crafting"], "Crafting"};
 	{AL["Sets/Collections"], "Collections"};
 	{AL["PvP Rewards"], "PVP"};

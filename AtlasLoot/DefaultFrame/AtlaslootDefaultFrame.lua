@@ -80,7 +80,12 @@ function AtlasLoot:DewDropClick(tablename, text, tablenum)
     AtlasLoot:IsLootTableAvailable(AtlasLoot_SubMenus[tablename].Module);
     AtlasLoot_DewdropSubMenu:Unregister(AtlasLootDefaultFrame_SubMenu);
     AtlasLoot:DewdropSubMenuRegister(AtlasLoot_SubMenus[tablename]);
-    AtlasLoot:DewDropSubMenuClick(AtlasLoot_SubMenus[tablename][tablenum][2])
+    local lasttable = AtlasLoot.db.profile[ATLASLOOT_CURRENTTABLE];
+        if lasttable then
+            AtlasLoot:ShowItemsFrame(lasttable[1], lasttable[2], lasttable[3]);
+        else
+            AtlasLoot:DewDropSubMenuClick(AtlasLoot_SubMenus[tablename][tablenum][2])
+        end
     AtlasLoot_Dewdrop:Close(1);
 end
 
@@ -109,11 +114,20 @@ function AtlasLoot:DewdropExpansionMenuClick(expansion, name)
     AtlasLoot_DewdropExpansionMenu:Close(1);
     AtlasLoot_Expac = expansion;
     if ATLASLOOT_CURRENTTABLE then
-    local tablename = AtlasLoot:CleandataID(ATLASLOOT_CURRENTTABLE, 1) .. AtlasLoot_Expac;
-    AtlasLoot:IsLootTableAvailable(AtlasLoot_SubMenus[tablename].Module);
-    AtlasLoot_DewdropSubMenu:Unregister(AtlasLootDefaultFrame_SubMenu);
-    AtlasLoot:DewdropSubMenuRegister(AtlasLoot_SubMenus[tablename]);
+        ATLASLOOT_CURRENTTABLE = AtlasLoot:CleandataID(ATLASLOOT_CURRENTTABLE, 1) .. AtlasLoot_Expac;
+        AtlasLoot:IsLootTableAvailable(AtlasLoot_SubMenus[ATLASLOOT_CURRENTTABLE].Module);
+        local tablename = AtlasLoot_SubMenus[ATLASLOOT_CURRENTTABLE][1][2];
+        local lasttable = AtlasLoot.db.profile[ATLASLOOT_CURRENTTABLE];
+        AtlasLoot_DewdropSubMenu:Unregister(AtlasLootDefaultFrame_SubMenu);
+        AtlasLoot:DewdropSubMenuRegister(AtlasLoot_SubMenus[ATLASLOOT_CURRENTTABLE]);
+        if lasttable then
+            AtlasLoot:ShowItemsFrame(lasttable[1], lasttable[2], lasttable[3]);
+        else
+            local tablenum = AtlasLoot_Data[tablename].Loadfirst or 1;
+            AtlasLoot:ShowItemsFrame(tablename, AtlasLoot_Data, tablenum);
+        end
     end
+
 end
 
 --[[

@@ -7,7 +7,7 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
 
 --Dungeon and Raid Menus
 
-    AtlasLoot_SubMenus["Dungeons and Raids CLASSIC"] = {
+    AtlasLoot_SubMenus["Dungeons and RaidsCLASSIC"] = {
         Module = "AtlasLootOriginalWoW";
         {"Raids:", "OldKeys", "Header"};
         {"", "MoltenCore"};
@@ -42,7 +42,7 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
         {"", "ZulFarrak"};
     };
 
-    AtlasLoot_SubMenus["Dungeons and Raids TBC"] = {
+    AtlasLoot_SubMenus["Dungeons and RaidsTBC"] = {
         Module = "AtlasLootBurningCrusade";
         {"Raids:", "BCKeys", "Header"};
         {"", "Karazhan"};
@@ -74,7 +74,7 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
         {"", "MagistersTerrace"};
     };
 
-    AtlasLoot_SubMenus["Dungeons and Raids WRATH"] = {
+    AtlasLoot_SubMenus["Dungeons and RaidsWRATH"] = {
         Module = "AtlasLootWotLK";
         {"Raids:", "WrathKeys", "Header"};
         {"", "Naxxramas80"};
