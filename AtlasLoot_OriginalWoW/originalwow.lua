@@ -6095,7 +6095,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 			{ 1, 16506, "", "=q3=Champion's Leather Helm, =ds=", "9435 #horde#", ""};
 			{ 2, 16507, "", "=q3=Champion's Leather Shoulders, =ds=", "6885 #horde#", ""};
 			{ 3, 16505, "", "=q3=Legionnaire's Leather Chestpiece, =ds=", "9435 #horde#", ""};
-			{ 4, 15499, "", "=q3=Blood Guard's Leather Grips, =ds=", "5000 #horde#", ""};
+			{ 4, 16499, "", "=q3=Blood Guard's Leather Grips, =ds=", "5000 #horde#", ""};
 			{ 5, 16508, "", "=q3=Legionnaire's Leather Legguards, =ds=", "9435 #horde#", ""};
 			{ 6, 16498, "", "=q3=Blood Guard's Leather Walkers, =ds=", "5000 #horde#", ""};
 		};
