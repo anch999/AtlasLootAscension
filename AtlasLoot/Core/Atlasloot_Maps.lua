@@ -40,16 +40,16 @@ function AtlasLoot:MapOnShow()
             -- Hide the Filter Check-Box
 	        AtlasLootFilterCheck:Hide();
             --Hide navigation buttons by default, only show what we need
-            getglobal("AtlasLootItemsFrame_BACK"):Hide();
-            getglobal("AtlasLootItemsFrame_NEXT"):Hide();
-            getglobal("AtlasLootItemsFrame_PREV"):Hide();
+            _G["AtlasLootItemsFrame_BACK"]:Hide();
+            _G["AtlasLootItemsFrame_NEXT"]:Hide();
+            _G["AtlasLootItemsFrame_PREV"]:Hide();
             AtlasLootDefaultFrame_LootBackground:Hide();
             --Hide UI objects so that only needed ones are shown
             for i = 1, 30, 1 do
-                getglobal("AtlasLootItem_"..i.."_Unsafe"):Hide();
-                getglobal("AtlasLootItem_"..i):Hide();
-                getglobal("AtlasLootItem_"..i).itemID = 0;
-                getglobal("AtlasLootItem_"..i).spellitemID = 0;
+                _G["AtlasLootItem_"..i.."_Unsafe"]:Hide();
+                _G["AtlasLootItem_"..i]:Hide();
+                _G["AtlasLootItem_"..i].itemID = 0;
+                _G["AtlasLootItem_"..i].spellitemID = 0;
             end
                 AtlasLootDefaultFrame_Map:Show();
                 Atlasloot_HeaderLabel:Show();

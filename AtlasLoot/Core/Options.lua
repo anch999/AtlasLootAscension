@@ -121,10 +121,10 @@ function AtlasLootOptions_ItemIDToggle()
 end
 
 function AtlasLoot_SetupLootBrowserSlider(frame, mymin, mymax, step)
-    getglobal(frame:GetName().."Text"):SetText(AL["Loot Browser Scale: "].." ("..frame:GetValue()..")");
+    _G[frame:GetName().."Text"]:SetText(AL["Loot Browser Scale: "].." ("..frame:GetValue()..")");
 	frame:SetMinMaxValues(mymin, mymax);
-	getglobal(frame:GetName().."Low"):SetText(mymin);
-	getglobal(frame:GetName().."High"):SetText(mymax);
+	_G[frame:GetName().."Low"]:SetText(mymin);
+	_G[frame:GetName().."High"]:SetText(mymax);
 	frame:SetValueStep(step);
 end
 
@@ -135,7 +135,7 @@ local function round(num, idp)
 end
 
 function AtlasLoot_UpdateLootBrowserSlider(frame)
-    getglobal(frame:GetName().."Text"):SetText(AL["Loot Browser Scale: "].." ("..round(frame:GetValue(),2)..")");
+    _G[frame:GetName().."Text"]:SetText(AL["Loot Browser Scale: "].." ("..round(frame:GetValue(),2)..")");
 end
 
 function AtlasLoot_UpdateLootBrowserScale()
@@ -143,7 +143,7 @@ function AtlasLoot_UpdateLootBrowserScale()
 end
 
 function AtlasLoot_DisplayHelp()
-	if not getglobal("AtlasLootHelpFrame_HelpText") then
+	if not _G["AtlasLootHelpFrame_HelpText"] then
 		local framewidht = InterfaceOptionsFramePanelContainer:GetWidth()
 		local panel3 = CreateFrame("ScrollFrame", "AtlasLootHelpFrame_HelpTextFrameScroll", AtlasLootHelpFrame, "UIPanelScrollFrameTemplate")
 		local scc = CreateFrame("Frame", "AtlasLootHelpFrame_HelpTextFrame", panel3)

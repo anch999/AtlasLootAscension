@@ -246,10 +246,14 @@ local submenubtn = CreateFrame("Button", "AtlasLootDefaultFrame_SubMenu", AtlasL
     submenubtn:SetSize(200,25);
     submenubtn:SetPoint("LEFT", "AtlasLootDefaultFrame_Menu", "RIGHT",0,0);
     submenubtn.Lable = submenubtn:CreateFontString("AtlasLootDefaultFrame_SelectedTable", "OVERLAY","GameFontNormal")
-    submenubtn.Lable:SetPoint("TOP",submenubtn,"BOTTOM",0,37);
+    submenubtn.Lable:SetPoint("TOP","AtlasLootDefaultFrame_SubMenu","BOTTOM",0,37);
     submenubtn.Lable:SetText("Select Subcategory");
     submenubtn.Lable:Show();
-    submenubtn:SetText(AL["Select Sub-Table"]);
+    submenubtn.Text = submenubtn:CreateFontString("AtlasLootDefaultFrame_SubMenuText", "OVERLAY","GameFontNormal")
+    submenubtn.Text:SetPoint("LEFT","AtlasLootDefaultFrame_SubMenu","RIGHT",0,0);
+    submenubtn.Text:SetJustifyH("CENTER");
+    submenubtn.Text:SetSize(190,25);
+    submenubtn.Text:Show();
     submenubtn:SetScript("OnClick", function(self)
         if AtlasLoot_DewdropSubMenu:IsOpen() then
             AtlasLoot_DewdropSubMenu:Close();

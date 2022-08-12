@@ -1338,7 +1338,7 @@ function AtlasLoot_CreateWishlistOptions()
 		WishListMark:SetWidth(25)
 		WishListMark:SetHeight(25)
 		WishListMark:SetScript("OnShow", function()
-			getglobal(this:GetName().."Text"):SetText(AL["Mark items in loot tables"]);
+			_G[this:GetName().."Text"]:SetText(AL["Mark items in loot tables"]);
 			if AtlasLootWishList["Options"][playerName]["Mark"] then
 				this:SetChecked(1);
 			else
@@ -1364,7 +1364,7 @@ function AtlasLoot_CreateWishlistOptions()
 		WishListMarkOwn:SetWidth(25)
 		WishListMarkOwn:SetHeight(25)
 		WishListMarkOwn:SetScript("OnShow", function()
-			getglobal(this:GetName().."Text"):SetText(AL["Mark items from own Wishlist"]);
+			_G[this:GetName().."Text"]:SetText(AL["Mark items from own Wishlist"]);
 			if AtlasLootWishList["Options"][playerName]["markInTable"] == "own" then
 				this:SetChecked(1);
 			else
@@ -1386,7 +1386,7 @@ function AtlasLoot_CreateWishlistOptions()
 		WishListMarkAll:SetWidth(25)
 		WishListMarkAll:SetHeight(25)
 		WishListMarkAll:SetScript("OnShow", function()
-			getglobal(this:GetName().."Text"):SetText(AL["Mark items from all Wishlists"]);
+			_G[this:GetName().."Text"]:SetText(AL["Mark items from all Wishlists"]);
 			if AtlasLootWishList["Options"][playerName]["markInTable"] == "all" then
 				this:SetChecked(1);
 			else
@@ -1408,7 +1408,7 @@ function AtlasLoot_CreateWishlistOptions()
 		WishListShare:SetWidth(25)
 		WishListShare:SetHeight(25)
 		WishListShare:SetScript("OnShow", function()
-			getglobal(this:GetName().."Text"):SetText(AL["Enable Wishlist Sharing"]);
+			_G[this:GetName().."Text"]:SetText(AL["Enable Wishlist Sharing"]);
 			if AtlasLootWishList["Options"][playerName]["AllowShareWishlist"] then
 				this:SetChecked(1);
 			else
@@ -1430,7 +1430,7 @@ function AtlasLoot_CreateWishlistOptions()
 		WishListShareInCombat:SetWidth(25)
 		WishListShareInCombat:SetHeight(25)
 		WishListShareInCombat:SetScript("OnShow", function()
-			getglobal(this:GetName().."Text"):SetText(AL["Auto reject in combat"]);
+			_G[this:GetName().."Text"]:SetText(AL["Auto reject in combat"]);
 			if AtlasLootWishList["Options"][playerName]["AllowShareWishlistInCombat"] then
 				this:SetChecked(1);
 			else
@@ -1450,7 +1450,7 @@ function AtlasLoot_CreateWishlistOptions()
 		WishListAutoAdd:SetWidth(25)
 		WishListAutoAdd:SetHeight(25)
 		WishListAutoAdd:SetScript("OnShow", function()
-			getglobal(this:GetName().."Text"):SetText(AL["Always use default Wishlist"]);
+			_G[this:GetName().."Text"]:SetText(AL["Always use default Wishlist"]);
 			if AtlasLootWishList["Options"][playerName]["UseDefaultWishlist"] == true then
 				this:SetChecked(1);
 			else
@@ -1699,7 +1699,7 @@ StaticPopupDialogs["ATLASLOOT_SEND_WISHLIST"] = {
 		this:SetFrameStrata("TOOLTIP");
 	end,
 	OnAccept = function()
-		local name = getglobal(this:GetParent():GetName().."EditBox"):GetText()
+		local name = _G[this:GetParent():GetName().."EditBox"]:GetText()
 		if string.lower(name) == string.lower(playerName) then
 			DEFAULT_CHAT_FRAME:AddMessage(BLUE..AL["AtlasLoot"]..": "..RED..AL["You can't send Wishlists to yourself."]);
 			curtabname = ""

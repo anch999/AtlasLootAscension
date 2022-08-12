@@ -253,13 +253,13 @@ function AtlasLoot:OnEnable()
 	else
 		collectgarbage("collect");
 	end
-    panel = getglobal("AtlasLootOptionsFrame");
+    panel = _G["AtlasLootOptionsFrame"];
     panel.name=AL["AtlasLoot"];
     InterfaceOptions_AddCategory(panel);
     --Filter and wishlist options menus creates as part of the next 2 commands
     AtlasLoot_CreateFilterOptions();
 	AtlasLoot_CreateWishlistOptions();
-    panel = getglobal("AtlasLootHelpFrame");
+    panel = _G["AtlasLootHelpFrame"];
     panel.name=AL["Help"];
     panel.parent=AL["AtlasLoot"];
     InterfaceOptions_AddCategory(panel);
@@ -500,16 +500,16 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource, tablenum)
 
 	--For stopping the subtable from changing if its a token table
 	if dataSource[dataID].NoSubt == nil and dataID ~= "FilterList" then
-		AtlasLootDefaultFrame_SubMenu:SetText(dataSource[dataID].Name);
+		AtlasLootDefaultFrame_SubMenuText:SetText(dataSource[dataID].Name);
 		AtlasLoot:SubTableScrollFrameUpdate(dataID, dataSource, tablenum);
 	end
 
 	--Hide UI objects so that only needed ones are shown
 	for i = 1, 30, 1 do
-        getglobal("AtlasLootItem_"..i.."_Unsafe"):Hide();
-        getglobal("AtlasLootItem_"..i):Hide();
-        getglobal("AtlasLootItem_"..i).itemID = 0;
-        getglobal("AtlasLootItem_"..i).spellitemID = 0;
+        _G["AtlasLootItem_"..i.."_Unsafe"]:Hide();
+        _G["AtlasLootItem_"..i]:Hide();
+        _G["AtlasLootItem_"..i].itemID = 0;
+        _G["AtlasLootItem_"..i].spellitemID = 0;
 	end
 
 	local function getProperItemConditionals(item)
@@ -612,10 +612,10 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource, tablenum)
 				extra = AtlasLoot_FixText(extra);
 
 				--Use shortcuts for easier reference to parts of the item button
-				itemButton = getglobal("AtlasLootItem_"..dataSource[dataID][tablenum][i][1]);
-				iconFrame  = getglobal("AtlasLootItem_"..dataSource[dataID][tablenum][i][1].."_Icon");
-				nameFrame  = getglobal("AtlasLootItem_"..dataSource[dataID][tablenum][i][1].."_Name");
-				extraFrame = getglobal("AtlasLootItem_"..dataSource[dataID][tablenum][i][1].."_Extra");
+				itemButton = _G["AtlasLootItem_"..dataSource[dataID][tablenum][i][1]];
+				iconFrame  = _G["AtlasLootItem_"..dataSource[dataID][tablenum][i][1].."_Icon"];
+				nameFrame  = _G["AtlasLootItem_"..dataSource[dataID][tablenum][i][1].."_Name"];
+				extraFrame = _G["AtlasLootItem_"..dataSource[dataID][tablenum][i][1].."_Extra"];
 
 				--If there is no data on the texture an item should have, show a big red question mark
 				if dataSource[dataID][tablenum][i][3] == "?" then
@@ -706,13 +706,13 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource, tablenum)
 				itemButton.i = 1;
 				itemButton:Show();
 
-				if IDfound == 0 then getglobal("AtlasLootItem_"..i.."_Unsafe"):Hide(); end
+				if IDfound == 0 then _G["AtlasLootItem_"..i.."_Unsafe"]:Hide(); end
 			end
 		end
 
         AtlasLootItemsFrame.refresh = {dataID, dataSource, tablenum};
 
-		if dataID ~= "WishList" and dataID ~= "FilterList"  and dataSource[dataID].Back ~= true then
+		if dataID ~= "WishList" and dataID ~= "FilterList"  and dataSource[dataID].Back ~= true and dataID ~= "EmptyTable" then
 			AtlasLootItemsFrame.refreshOri = {dataID, dataSource, tablenum};
 			AtlasLoot.db.profile.LastBoss = {dataID, dataSource, tablenum, ATLASLOOT_LASTMODULE, ATLASLOOT_CURRENTTABLE};
 			AtlasLoot.db.profile[ATLASLOOT_CURRENTTABLE] = {dataID, dataSource, tablenum, ATLASLOOT_LASTMODULE, ATLASLOOT_CURRENTTABLE};
@@ -739,27 +739,27 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource, tablenum)
 		end
 
 		--Hide navigation buttons by default, only show what we need
-		getglobal("AtlasLootItemsFrame_BACK"):Hide();
-		getglobal("AtlasLootItemsFrame_NEXT"):Hide();
-		getglobal("AtlasLootItemsFrame_PREV"):Hide();
+		_G["AtlasLootItemsFrame_BACK"]:Hide();
+		_G["AtlasLootItemsFrame_NEXT"]:Hide();
+		_G["AtlasLootItemsFrame_PREV"]:Hide();
 		local tablebase = {dataID, dataSource};
 		if dataID == "FilterList" then
 			tablebase = {AtlasLootItemsFrame.refreshOri[1],AtlasLootItemsFrame.refreshOri[2]};
 			tablenum = AtlasLootItemsFrame.refreshOri[3];
 		end
 		if tablenum ~= #tablebase[2][tablebase[1]] then
-			getglobal("AtlasLootItemsFrame_NEXT"):Show();
-			getglobal("AtlasLootItemsFrame_NEXT").tablenum = tablenum + 1;
-			getglobal("AtlasLootItemsFrame_NEXT").tablebase = tablebase;
+			_G["AtlasLootItemsFrame_NEXT"]:Show();
+			_G["AtlasLootItemsFrame_NEXT"].tablenum = tablenum + 1;
+			_G["AtlasLootItemsFrame_NEXT"].tablebase = tablebase;
 
 		end
 		if tablenum ~= 1 then
-			getglobal("AtlasLootItemsFrame_PREV"):Show();
-			getglobal("AtlasLootItemsFrame_PREV").tablenum = tablenum - 1;
-			getglobal("AtlasLootItemsFrame_PREV").tablebase = tablebase;
+			_G["AtlasLootItemsFrame_PREV"]:Show();
+			_G["AtlasLootItemsFrame_PREV"].tablenum = tablenum - 1;
+			_G["AtlasLootItemsFrame_PREV"].tablebase = tablebase;
 		end
 		if dataSource[dataID].Back then
-			getglobal("AtlasLootItemsFrame_BACK"):Show();
+			_G["AtlasLootItemsFrame_BACK"]:Show();
 		end
 
 	end
@@ -949,9 +949,9 @@ function AtlasLoot:RefreshQuickLookButtons()
     local i=1;
     while i<5 do
         if ((not AtlasLootCharDB["QuickLooks"][i]) or (not AtlasLootCharDB["QuickLooks"][i][1])) or (AtlasLootCharDB["QuickLooks"][i][1]==nil) then
-            getglobal("AtlasLootDefaultFrame_Preset"..i):Disable();
+            _G["AtlasLootDefaultFrame_Preset"..i]:Disable();
         else
-            getglobal("AtlasLootDefaultFrame_Preset"..i):Enable();
+            _G["AtlasLootDefaultFrame_Preset"..i]:Enable();
         end
         i=i+1;
     end
@@ -967,7 +967,7 @@ function AtlasLoot:QueryLootPage()
 	local function queryNextItem(pos)
 		if pos > MAX_BUTTONS then return end;
 
-		local button = getglobal("AtlasLootItem_"..pos);
+		local button = _G["AtlasLootItem_"..pos];
         local queryitem = button.itemID;
 
         if (queryitem) and (queryitem ~= nil) and (queryitem ~= "") and (queryitem ~= 0) and (string.sub(queryitem, 1, 1) ~= "s") then
@@ -999,14 +999,14 @@ Querys all valid items on the current loot page.
 function AtlasLoot:QueryLootPageOLD()
 local lastitem
 	for t = 1, 30, 1 do
-		local xbutton = getglobal("AtlasLootItem_"..t);
+		local xbutton = _G["AtlasLootItem_"..t];
     	local xqueryitem = xbutton.itemID;
 		if (xqueryitem) and (xqueryitem ~= nil) and (xqueryitem ~= "") and (xqueryitem ~= 0) and (string.sub(xqueryitem, 1, 1) ~= "s") then
 			lastitem = t;
 		end
 	end
 	for i = 1, 30, 1 do
-        local button = getglobal("AtlasLootItem_"..i);
+        local button = _G["AtlasLootItem_"..i];
         local queryitem = button.itemID;
         if (queryitem) and (queryitem ~= nil) and (queryitem ~= "") and (queryitem ~= 0) and (string.sub(queryitem, 1, 1) ~= "s") then
 			local item = Item:CreateFromID(queryitem);
@@ -1027,7 +1027,7 @@ Adds explanatory tooltips to UI objects.
 ]]
 function AtlasLoot:AddTooltip(frameb, tooltiptext)
    if not tooltiptext or not frameb then return end
-   local frame = getglobal(frameb)
+   local frame = _G[frameb]
    frame:SetScript("OnEnter", function()
       GameTooltip:SetOwner(frame, "ANCHOR_RIGHT")
       GameTooltip:SetText(tooltiptext)

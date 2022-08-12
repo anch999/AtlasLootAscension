@@ -19,7 +19,7 @@ function AtlasLoot_GetEnchantLink(enchantID)
    AtlasLootScanTooltip:ClearLines();
    AtlasLootScanTooltip:SetHyperlink("enchant:"..enchantID);
    AtlasLootScanTooltip:Show()
-   local tooltipline = getglobal("AtlasLootScanTooltipTextLeft1")
+   local tooltipline = _G["AtlasLootScanTooltipTextLeft1"]
    local text = tooltipline:GetText()
    if text and string.find(text, ":") then
       EnchantLink = "|cffffd000|Henchant:"..enchantID.."|h["..text.."]|h|r"
@@ -38,8 +38,8 @@ function AtlasLootItem_OnEnter(self)
     local isItem;
     AtlasLootTooltip:ClearLines();
     for i=1, 30, 1 do
-        if (getglobal("AtlasLootTooltipTextRight"..i) ~= nil) then
-            getglobal("AtlasLootTooltipTextRight"..i):SetText("");
+        if (_G["AtlasLootTooltipTextRight"..i] ~= nil) then
+            _G["AtlasLootTooltipTextRight"..i]:SetText("");
         end
     end
     if self.itemID and (self.itemID ~= 0) then
@@ -49,8 +49,8 @@ function AtlasLootItem_OnEnter(self)
             isItem = true;
         end
         if isItem then
-            local color = strsub(getglobal("AtlasLootItem_"..self:GetID().."_Name"):GetText(), 3, 10);
-            local name = strsub(getglobal("AtlasLootItem_"..self:GetID().."_Name"):GetText(), 11);
+            local color = strsub(_G["AtlasLootItem_"..self:GetID().."_Name"]:GetText(), 3, 10);
+            local name = strsub(_G["AtlasLootItem_"..self:GetID().."_Name"]:GetText(), 11);
             if(self.itemID ~= 0 and self.itemID ~= "" and self.itemID ~= nil and AtlasLootDKPValues and AtlasLootClassPriority) then
                 Identifier = "Item"..self.itemID;
                 DKP = AtlasLootDKPValues[Identifier];
@@ -63,7 +63,7 @@ function AtlasLootItem_OnEnter(self)
             if( AtlasLoot.db.profile.LootlinkTT ) then
                 --If we have seen the item, use the game tooltip to minimise same name item problems
                 if(GetItemInfo(self.itemID) ~= nil) then
-                    getglobal(self:GetName().."_Unsafe"):Hide();
+                    _G[self:GetName().."_Unsafe"]:Hide();
                     AtlasLootTooltip:SetOwner(self, "ANCHOR_RIGHT", -(self:GetWidth() / 2), 24);
                     AtlasLootTooltip:SetHyperlink("item:"..self.itemID..":0:0:0");
                     if ( AtlasLoot.db.profile.ItemIDs ) then
@@ -86,12 +86,12 @@ function AtlasLootItem_OnEnter(self)
                         LootLink_AddItem(name, self.itemID..":0:0:0", color);
                     end
                 else
-                    getglobal(self:GetName().."_Unsafe"):Show();
+                    _G[self:GetName().."_Unsafe"]:Show();
                     AtlasLootTooltip:SetOwner(self, "ANCHOR_RIGHT", -(self:GetWidth() / 2), 24);
                     if (LootLink_Database and LootLink_Database[self.itemID]) then
                        LootLink_SetTooltip(AtlasLootTooltip, LootLink_Database[self.itemID][1], 1);
                     else
-                       LootLink_SetTooltip(AtlasLootTooltip,strsub(getglobal("AtlasLootItem_"..self:GetID().."_Name"):GetText(), 11), 1);
+                       LootLink_SetTooltip(AtlasLootTooltip,strsub(_G["AtlasLootItem_"..self:GetID().."_Name"]:GetText(), 11), 1);
                     end
                     if ( AtlasLoot.db.profile.ItemIDs ) then
                         AtlasLootTooltip:AddLine(BLUE..AL["ItemID:"].." "..self.itemID, nil, nil, nil, 1);
@@ -112,7 +112,7 @@ function AtlasLootItem_OnEnter(self)
             --Item Sync tooltips
             elseif( AtlasLoot.db.profile.ItemSyncTT ) then
                 if(GetItemInfo(self.itemID) ~= nil) then
-                    getglobal(self:GetName().."_Unsafe"):Hide();
+                    _G[self:GetName().."_Unsafe"]:Hide();
                 end
                 ItemSync:ButtonEnter();
                 if ( AtlasLoot.db.profile.ItemIDs ) then
@@ -135,7 +135,7 @@ function AtlasLootItem_OnEnter(self)
             else
                 if(self.itemID ~= nil) then
                     if(GetItemInfo(self.itemID) ~= nil) then
-                        getglobal(self:GetName().."_Unsafe"):Hide();
+                        _G[self:GetName().."_Unsafe"]:Hide();
                         AtlasLootTooltip:SetOwner(self, "ANCHOR_RIGHT", -(self:GetWidth() / 2), 24);
                         AtlasLootTooltip:SetHyperlink("item:"..self.itemID..":0:0:0");
                         if ( AtlasLoot.db.profile.ItemIDs ) then
@@ -209,9 +209,9 @@ end
 --------------------------------------------------------------------------------
 function AtlasLootItem_OnClick(self ,arg1)
     local isItem;
-	local color = strsub(getglobal("AtlasLootItem_"..self:GetID().."_Name"):GetText(), 1, 10);
+	local color = strsub(_G["AtlasLootItem_"..self:GetID().."_Name"]:GetText(), 1, 10);
 	local id = self:GetID();
-	local name = strsub(getglobal("AtlasLootItem_"..self:GetID().."_Name"):GetText(), 11);
+	local name = strsub(_G["AtlasLootItem_"..self:GetID().."_Name"]:GetText(), 11);
     if string.sub(self.itemID, 1, 1) == "s" then
             isItem = false;
         else
@@ -245,10 +245,10 @@ function AtlasLootItem_OnClick(self ,arg1)
             else
                 if(AtlasLootItemsFrame.refresh[1] == "SearchResult") then
                     local datID, _, datPage = strsplit("|", self.sourcePage);
-                    AtlasLoot_ShowWishListDropDown(self.itemID, self.itemTexture, getglobal("AtlasLootItem_"..self:GetID().."_Name"):GetText(), 
+                    AtlasLoot_ShowWishListDropDown(self.itemID, self.itemTexture, _G["AtlasLootItem_"..self:GetID().."_Name"]:GetText(), 
                                                         AtlasLoot_Data[datID][tonumber(datPage)].Name, self.sourcePage, self);
                 else
-                    AtlasLoot_ShowWishListDropDown(self.itemID, self.itemTexture, getglobal("AtlasLootItem_"..self:GetID().."_Name"):GetText(), 
+                    AtlasLoot_ShowWishListDropDown(self.itemID, self.itemTexture, _G["AtlasLootItem_"..self:GetID().."_Name"]:GetText(), 
                                                         AtlasLoot_BossName:GetText(), self.dataID .. "|" .. "AtlasLoot_Data" .. "|" .. tostring(self.tablenum), self);
                 end
             end

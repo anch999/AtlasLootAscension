@@ -84,7 +84,7 @@ function AtlasLoot:DewDropClick(tablename, text, tablenum)
         if lasttable then
             AtlasLoot:ShowItemsFrame(lasttable[1], lasttable[2], lasttable[3]);
         else
-            AtlasLoot:DewDropSubMenuClick(AtlasLoot_SubMenus[tablename][tablenum][2])
+            AtlasLoot:ShowItemsFrame(AtlasLoot_SubMenus[tablename][tablenum][2], AtlasLoot_Data, tablenum);
         end
     AtlasLoot_Dewdrop:Close(1);
 end
@@ -318,15 +318,15 @@ function AtlasLoot:SetNewStyle(style)
 		AtlasLootDefaultFrame_Options:SetHeight(24)
 
 		local function SetButtons(path)
-		   getglobal(path):SetNormalTexture("Interface/AchievementFrame/UI-Achievement-Category-Background")
-		   getglobal(path):SetHeight(24)
-		   getglobal(path):SetPushedTexture("Interface/AchievementFrame/UI-Achievement-Category-Background")
-		   getglobal(path):SetHeight(24)
-		   local tex = getglobal(path):GetNormalTexture();
+		   _G[path]:SetNormalTexture("Interface/AchievementFrame/UI-Achievement-Category-Background")
+		   _G[path]:SetHeight(24)
+		   _G[path]:SetPushedTexture("Interface/AchievementFrame/UI-Achievement-Category-Background")
+		   _G[path]:SetHeight(24)
+		   local tex = _G[path]:GetNormalTexture();
 		   tex:SetTexCoord(0, 0.6640625, 0, 0.8);
 		   tex:SetHeight(32)
 
-		   local tex2 = getglobal(path):GetPushedTexture();
+		   local tex2 = _G[path]:GetPushedTexture();
 		   tex2:SetTexCoord(0, 0.6640625, 0, 0.8);
 		   tex2:SetHeight(32)
 		end
@@ -359,15 +359,15 @@ function AtlasLoot:SetNewStyle(style)
 		AtlasLootDefaultFrame_Options:SetHeight(20)
 
 		local function SetButtons(path)
-		   getglobal(path):SetNormalTexture("Interface/Buttons/UI-Panel-Button-Up")
-		   getglobal(path):SetHeight(20)
-		   getglobal(path):SetPushedTexture("Interface/Buttons/UI-Panel-Button-Down")
-		   getglobal(path):SetHeight(20)
-		   local tex = getglobal(path):GetNormalTexture();
+		   _G[path]:SetNormalTexture("Interface/Buttons/UI-Panel-Button-Up")
+		   _G[path]:SetHeight(20)
+		   _G[path]:SetPushedTexture("Interface/Buttons/UI-Panel-Button-Down")
+		   _G[path]:SetHeight(20)
+		   local tex = _G[path]:GetNormalTexture();
 		   tex:SetTexCoord(0, 0.625, 0, 0.6875);
 		   tex:SetHeight(20)
 
-		   local tex2 = getglobal(path):GetPushedTexture();
+		   local tex2 = _G[path]:GetPushedTexture();
 		   tex2:SetTexCoord(0, 0.625, 0, 0.6875);
 		   tex2:SetHeight(20)
 		end
