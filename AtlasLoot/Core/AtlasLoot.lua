@@ -779,19 +779,8 @@ Called when <-, -> are pressed and calls up the appropriate loot page
 function AtlasLoot:NavButton_OnClick(self)
 	local tablenum, dataID, dataSource = self.tablenum, self.tablebase[1], self.tablebase[2];
 	if #dataSource[dataID] > 26 then
-		local offset = math.floor(AtlasLootDefaultFrameSubTableScrollScrollBar:GetValue());
 		local min, max = AtlasLootDefaultFrameSubTableScrollScrollBar:GetMinMaxValues();
-		
-
-		if self == AtlasLootItemsFrame_NEXT then
-			AtlasLootDefaultFrameSubTableScrollScrollBar:SetValue(offset * math.floor((max / #dataSource[dataID])));
-			--AtlasLootDefaultFrameSubTableScrollScrollBarScrollDownButton:Click()
-		elseif self == AtlasLootItemsFrame_PREV then
-			AtlasLootDefaultFrameSubTableScrollScrollBar:SetValue(offset * math.floor((max / #dataSource[dataID])));
-			--AtlasLootDefaultFrameSubTableScrollScrollBarScrollUpButton:Click()
-		end
-		AtlasLootDefaultFrameSubTableScroll.offset = math.floor(offset / 16.5)
-		--AtlasLoot:SubTableScrollFrameUpdate(dataID, dataSource, tablenum);
+		AtlasLootDefaultFrameSubTableScrollScrollBar:SetValue(tablenum * (max / #dataSource[dataID]));
 	end
 	AtlasLoot:ShowItemsFrame(dataID, dataSource, tablenum);
 end

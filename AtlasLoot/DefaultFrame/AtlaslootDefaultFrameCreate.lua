@@ -535,7 +535,7 @@ local scrollSlider2 = CreateFrame("ScrollFrame","AtlasLootDefaultFrameSubTableSc
     scrollSlider2:SetPoint("BOTTOMRIGHT", -30, 8)
     scrollSlider2:SetScript("OnVerticalScroll", function(self, offset)
         self.offset = math.floor(offset / ROW_HEIGHT + 0.5)
-            AtlasLoot:SubTableScrollFrameUpdate(subtableFrame.tablename, subtableFrame.dataSource, subtableFrame.pFrame, subtableFrame.tablenum);
+            AtlasLoot:SubTableScrollFrameUpdate(subtableFrame.tablename, subtableFrame.dataSource, subtableFrame.tablenum);
     end)
 
     subtableFrame.scrollBar = scrollSlider2
