@@ -799,10 +799,8 @@ Checks if a loot table is in memory and attempts to load the correct LoD module 
 dataID: Loot table dataID
 ]]
 function AtlasLoot:IsLootTableAvailable(dataSource)
-
 	local moduleName = nil;
 	moduleName = AtlasLoot:GetLODModule(dataSource);
-
 	if IsAddOnLoaded(moduleName) then
 		return true;
 	else

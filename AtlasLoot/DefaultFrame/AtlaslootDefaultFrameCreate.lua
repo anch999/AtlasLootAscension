@@ -508,7 +508,7 @@ function AtlasLoot:SubTableScrollFrameUpdate(tablename, dataSource, tablenum)
             if dataSource == AtlasLoot_MapData then
                 row.Text:SetText(dataSource[tablename][value][1]);
                 row:SetScript("OnEnter", function(self)
-                    GameTooltip:SetOwner(self, "ANCHOR_RIGHT");
+                    GameTooltip:SetOwner(self, "ANCHOR_TOP");
                     GameTooltip:SetText(dataSource[tablename][value][1]);
                     GameTooltip:Show();
                 end)
@@ -516,7 +516,6 @@ function AtlasLoot:SubTableScrollFrameUpdate(tablename, dataSource, tablenum)
             else
                 row.Text:SetText("|cffFFd200"..dataSource[tablename][value].Name);
                 row:SetScript("OnEnter", function(self)
-                    GameTooltip:SetOwner(self, "ANCHOR_RIGHT");
                     GameTooltip:Hide();
                 end)
                 if tablenum == value and dataSource ~= AtlasLoot_MapData then
