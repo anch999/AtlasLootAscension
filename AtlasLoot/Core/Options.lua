@@ -355,7 +355,7 @@ local sStyle = CreateFrame("Button", "AtlasLoot_SelectLootBrowserStyle", AtlasLo
 local bscale = CreateFrame("Slider", "AtlasLootOptionsFrameLootBrowserScale", AtlasLootOptionsFrame,"OptionsSliderTemplate");
         bscale:SetSize(240,16);
         bscale:SetPoint("TOP", 0,-300);
-        bscale:SetScript("OnLoad", function(self) AtlasLoot_SetupLootBrowserSlider(self, 0.25, 1.5, 0.01) end);
+        bscale:SetScript("OnShow", function(self) AtlasLoot_SetupLootBrowserSlider(self, 0.25, 1.5, 0.01) end);
         bscale:SetScript("OnValueChanged", function(self)
             AtlasLoot_UpdateLootBrowserSlider(self);
             AtlasLoot.db.profile.LootBrowserScale = self:GetValue();
