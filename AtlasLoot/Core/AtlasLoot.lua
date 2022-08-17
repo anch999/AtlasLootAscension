@@ -68,6 +68,7 @@ SearchPrevData = {"", "", ""};
 AtlasLootCharDB = {};
 AtlasLoot_TokenData = {};
 
+
 local AtlasLootDBDefaults = {
     profile = {
         SavedTooltips = {},
@@ -99,15 +100,6 @@ local AtlasLootDBDefaults = {
         AtlasType = "Release";
     }
 }
-
-AtlasLoot_MenuList = {
-	"PVPSET",
-	"PVP70RepSET",
-	"ARENASET",
-	"ARENA2SET",
-	"ARENA3SET",
-	"ARENA4SET",
-};
 
 -- Popup Box for first time users
 StaticPopupDialogs["ATLASLOOT_SETUP"] = {
@@ -435,6 +427,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource, tablenum)
 	local spellName, spellIcon;
 
 	SearchPrevData = {dataID, dataSource, tablenum};
+	
 
     --If the loot table name has not been passed, throw up a debugging statement
 	if dataID == nil then
@@ -459,8 +452,16 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource, tablenum)
 	-- Hide the map header lable
 	Atlasloot_HeaderLabel:Hide();
 
-	if dataID == "SearchResult" then
+	local dataSource_backup = dataSource;
+
+	if dataID == "SearchResult" or dataSource == " AtlasLootCharDB" then
 		dataSource = AtlasLootCharDB;
+	elseif dataSource == "AtlasLoot_TokenData" then
+		dataSource = AtlasLoot_TokenData;
+	elseif dataSource == "AtlasLootWishList" then
+		dataSource = AtlasLootWishList;
+	else
+		dataSource = AtlasLoot_Data;
     end
 
 	-- Check to see if Atlas is loaded and the table has a map
@@ -501,7 +502,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource, tablenum)
 	--For stopping the subtable from changing if its a token table
 	if dataSource[dataID].NoSubt == nil and dataID ~= "FilterList" then
 		AtlasLootDefaultFrame_SubMenuText:SetText(dataSource[dataID].Name);
-		AtlasLoot:SubTableScrollFrameUpdate(dataID, dataSource, tablenum);
+		AtlasLoot:SubTableScrollFrameUpdate(dataID, dataSource_backup, tablenum);
 	end
 
 	--Hide UI objects so that only needed ones are shown
@@ -684,7 +685,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource, tablenum)
 
 				itemButton.tablenum = tablenum;
 				itemButton.dataID = dataID;
-				itemButton.dataSource = dataSource;
+				itemButton.dataSource = dataSource_backup;
 				itemButton.desc = dataSource[dataID][tablenum][i][5] or nil;
 				itemButton.price = dataSource[dataID][tablenum][i][6] or nil;
 				itemButton.droprate = dataSource[dataID][tablenum][i][7] or nil;
@@ -710,12 +711,12 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource, tablenum)
 			end
 		end
 
-        AtlasLootItemsFrame.refresh = {dataID, dataSource, tablenum};
+        AtlasLootItemsFrame.refresh = {dataID, dataSource_backup, tablenum};
 
 		if dataID ~= "WishList" and dataID ~= "FilterList"  and dataSource[dataID].Back ~= true and dataID ~= "EmptyTable" then
-			AtlasLootItemsFrame.refreshOri = {dataID, dataSource, tablenum};
-			AtlasLoot.db.profile.LastBoss = {dataID, dataSource, tablenum, ATLASLOOT_LASTMODULE, ATLASLOOT_CURRENTTABLE};
-			AtlasLoot.db.profile[ATLASLOOT_CURRENTTABLE] = {dataID, dataSource, tablenum, ATLASLOOT_LASTMODULE, ATLASLOOT_CURRENTTABLE};
+			AtlasLootItemsFrame.refreshOri = {dataID, dataSource_backup, tablenum};
+			AtlasLoot.db.profile.LastBoss = {dataID, dataSource_backup, tablenum, ATLASLOOT_LASTMODULE, ATLASLOOT_CURRENTTABLE};
+			AtlasLoot.db.profile[ATLASLOOT_CURRENTTABLE] = {dataID, dataSource_backup, tablenum, ATLASLOOT_LASTMODULE, ATLASLOOT_CURRENTTABLE};
 		end
 
         --This is a valid QuickLook, so show the UI objects
@@ -742,12 +743,12 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource, tablenum)
 		_G["AtlasLootItemsFrame_BACK"]:Hide();
 		_G["AtlasLootItemsFrame_NEXT"]:Hide();
 		_G["AtlasLootItemsFrame_PREV"]:Hide();
-		local tablebase = {dataID, dataSource};
+		local tablebase = {dataID, dataSource_backup};
 		if dataID == "FilterList" then
 			tablebase = {AtlasLootItemsFrame.refreshOri[1],AtlasLootItemsFrame.refreshOri[2]};
 			tablenum = AtlasLootItemsFrame.refreshOri[3];
 		end
-		if tablenum ~= #tablebase[2][tablebase[1]] then
+		if tablenum ~= #dataSource[dataID] then
 			_G["AtlasLootItemsFrame_NEXT"]:Show();
 			_G["AtlasLootItemsFrame_NEXT"].tablenum = tablenum + 1;
 			_G["AtlasLootItemsFrame_NEXT"].tablebase = tablebase;
@@ -778,9 +779,9 @@ Called when <-, -> are pressed and calls up the appropriate loot page
 ]]
 function AtlasLoot:NavButton_OnClick(self)
 	local tablenum, dataID, dataSource = self.tablenum, self.tablebase[1], self.tablebase[2];
-	if #dataSource[dataID] > 26 then
+	if #_G[dataSource][dataID] > 26 then
 		local min, max = AtlasLootDefaultFrameSubTableScrollScrollBar:GetMinMaxValues();
-		AtlasLootDefaultFrameSubTableScrollScrollBar:SetValue(tablenum * (max / #dataSource[dataID]));
+		AtlasLootDefaultFrameSubTableScrollScrollBar:SetValue(tablenum * (max / #_G[dataSource][dataID]));
 	end
 	AtlasLoot:ShowItemsFrame(dataID, dataSource, tablenum);
 end

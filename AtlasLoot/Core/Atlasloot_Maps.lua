@@ -55,7 +55,7 @@ function AtlasLoot:MapOnShow()
                 Atlasloot_HeaderLabel:Show();
                 AtlasLoot:ScrollFrameUpdate(true);
                 AtlasLootDefaultFrameScroll:Hide();
-                AtlasLoot:SubTableScrollFrameUpdate(ATLASLOOT_CURRENT_MAP, AtlasLoot_MapData);
+                AtlasLoot:SubTableScrollFrameUpdate(ATLASLOOT_CURRENT_MAP, "AtlasLoot_MapData");
         end
     end
 end
@@ -74,7 +74,7 @@ end
 
 function AtlasLoot:MapMenuClick(mapID)
     if AtlasLootDefaultFrame_Map:IsVisible() then
-        AtlasLoot:SubTableScrollFrameUpdate(mapID, AtlasLoot_MapData);
+        AtlasLoot:SubTableScrollFrameUpdate(mapID, "AtlasLoot_MapData");
     end
     AtlasLoot:MapSelect(mapID);
     AtlasLootDefaultFrame_MapSelectButton:SetText(AtlasLoot_MapData[mapID].ZoneName[1]);

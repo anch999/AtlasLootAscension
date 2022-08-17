@@ -490,7 +490,7 @@ local subtableFrame = CreateFrame("Frame", "Atlasloot_SubTableFrame", AtlasLootD
     });
 
 function AtlasLoot:SubTableScrollFrameUpdate(tablename, dataSource, tablenum)
-    local maxValue = #dataSource[tablename];
+    local maxValue = #_G[dataSource][tablename];
     subtableFrame.tablename = tablename;
     subtableFrame.dataSource = dataSource;
     subtableFrame.tablenum = tablenum;
@@ -500,25 +500,25 @@ function AtlasLoot:SubTableScrollFrameUpdate(tablename, dataSource, tablenum)
         local value = i + offset
         subtableFrame.rows[i]:SetChecked(false);
         subtableFrame.rows[i]:SetHighlightTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD");
-        if value <= maxValue and dataSource[tablename][value] and tablename ~= "SearchMENU" then
+        if value <= maxValue and _G[dataSource][tablename][value] and tablename ~= "SearchMENU" then
             local row = subtableFrame.rows[i]
                 row.dataSource = dataSource;
                 row.tablename = tablename;
                 row.tablenum = value;
-            if dataSource == AtlasLoot_MapData then
-                row.Text:SetText(dataSource[tablename][value][1]);
+            if dataSource == "AtlasLoot_MapData" then
+                row.Text:SetText(_G[dataSource][tablename][value][1]);
                 row:SetScript("OnEnter", function(self)
                     GameTooltip:SetOwner(self, "ANCHOR_TOP");
-                    GameTooltip:SetText(dataSource[tablename][value][1]);
+                    GameTooltip:SetText(_G[dataSource][tablename][value][1]);
                     GameTooltip:Show();
                 end)
                 row:SetScript("OnLeave", function() GameTooltip:Hide() end)
             else
-                row.Text:SetText("|cffFFd200"..dataSource[tablename][value].Name);
+                row.Text:SetText("|cffFFd200".._G[dataSource][tablename][value].Name);
                 row:SetScript("OnEnter", function(self)
                     GameTooltip:Hide();
                 end)
-                if tablenum == value and dataSource ~= AtlasLoot_MapData then
+                if tablenum == value and dataSource ~= "AtlasLoot_MapData" then
                     row:SetChecked(true);
                 end
             end
@@ -549,7 +549,7 @@ local rows2 = setmetatable({}, { __index = function(t, i)
     row.Text:SetPoint("LEFT",row);
     row.Text:SetJustifyH("LEFT");
     row:SetScript("OnClick", function()
-        if row.dataSource ~= AtlasLoot_MapData then
+        if row.dataSource ~= "AtlasLoot_MapData" then
             AtlasLoot:ShowItemsFrame(row.tablename, row.dataSource, row.tablenum);
         else
             row:SetChecked(false);

@@ -704,7 +704,7 @@ local function DoSearch(searchText)
 end
 
 function AtlasLoot:ShowSearchResult()
-    AtlasLoot:ShowItemsFrame("SearchResult", AtlasLootCharDB, 1);
+    AtlasLoot:ShowItemsFrame("SearchResult", "AtlasLootCharDB", 1);
 end
 
 function AtlasLoot:Search(Text)
@@ -755,7 +755,7 @@ function AtlasLoot:Search(Text)
         end
         DEFAULT_CHAT_FRAME:AddMessage(RED .. AL["AtlasLoot"] .. ": " .. WHITE .. AL["No match found for"] .. " \"" .. Text .. "\"." .. itemFilterErrorMessage);
     else
-        AtlasLoot:ShowItemsFrame("SearchResult", AtlasLootCharDB, 1);
+        AtlasLoot:ShowItemsFrame("SearchResult", "AtlasLootCharDB", 1);
     end
 end
 

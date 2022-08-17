@@ -44,11 +44,11 @@ function AtlasLootDefaultFrame_OnShow()
         ATLASLOOT_CURRENTTABLE = lastboss[5];
         ATLASLOOT_LASTMODULE = lastboss[4];
         AtlasLoot:IsLootTableAvailable(lastboss[4]);
-        AtlasLoot:ShowItemsFrame(lastboss[1], AtlasLoot_Data, lastboss[3]);
+        AtlasLoot:ShowItemsFrame(lastboss[1], "AtlasLoot_Data", lastboss[3]);
         AtlasLoot_DewdropSubMenu:Unregister(AtlasLootDefaultFrame_SubMenu);
         AtlasLoot:DewdropSubMenuRegister(AtlasLoot_SubMenus[lastboss[5]]);
     else
-        AtlasLoot:ShowItemsFrame("EmptyTable", AtlasLoot_Data, 1);
+        AtlasLoot:ShowItemsFrame("EmptyTable", "AtlasLoot_Data", 1);
     end
 end
 
@@ -84,7 +84,7 @@ function AtlasLoot:DewDropClick(tablename, text, tablenum)
         if lasttable then
             AtlasLoot:ShowItemsFrame(lasttable[1], lasttable[2], lasttable[3]);
         else
-            AtlasLoot:ShowItemsFrame(AtlasLoot_SubMenus[tablename][tablenum][2], AtlasLoot_Data, tablenum);
+            AtlasLoot:ShowItemsFrame(AtlasLoot_SubMenus[tablename][tablenum][2], "AtlasLoot_Data", tablenum);
         end
     AtlasLoot_Dewdrop:Close(1);
 end
@@ -99,7 +99,7 @@ function AtlasLoot:DewDropSubMenuClick(tablename)
     --Show the select loot table
     local tablenum = AtlasLoot_Data[tablename].Loadfirst or 1;
     --Show the table that has been selected
-    AtlasLoot:ShowItemsFrame(tablename, AtlasLoot_Data, tablenum);
+    AtlasLoot:ShowItemsFrame(tablename, "AtlasLoot_Data", tablenum);
     AtlasLoot_DewdropSubMenu:Close(1);
 end
 
@@ -124,7 +124,7 @@ function AtlasLoot:DewdropExpansionMenuClick(expansion, name)
             AtlasLoot:ShowItemsFrame(lasttable[1], lasttable[2], lasttable[3]);
         else
             local tablenum = AtlasLoot_Data[tablename].Loadfirst or 1;
-            AtlasLoot:ShowItemsFrame(tablename, AtlasLoot_Data, tablenum);
+            AtlasLoot:ShowItemsFrame(tablename, "AtlasLoot_Data", tablenum);
         end
     end
 
