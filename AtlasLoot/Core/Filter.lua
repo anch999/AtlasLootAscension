@@ -103,7 +103,7 @@ function AtlasLoot_Testabc()
 end
 
 function AtlasLoot:HideNoUsableItems()
-	local dataID, dataSource, tablenum = AtlasLootItemsFrame.refreshOri[1], AtlasLootItemsFrame.refreshOri[2], AtlasLootItemsFrame.refreshOri[3];
+	local dataID, dataSource, tablenum = AtlasLootItemsFrame.refreshOri[1], _G[AtlasLootItemsFrame.refreshOri[2]], AtlasLootItemsFrame.refreshOri[3];
 
  	local tablebase = dataSource[dataID][tablenum]
 	if not tablebase or dataID == "WishList" or dataID == "SearchResult" then return end

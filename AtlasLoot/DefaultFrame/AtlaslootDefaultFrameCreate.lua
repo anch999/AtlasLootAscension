@@ -52,7 +52,7 @@ local lootbground = CreateFrame("Frame", "AtlasLootDefaultFrame_LootBackground",
     lootbground:SetBackdropColor(0,0,0.5,0.5);
     lootbground:EnableMouse();
     lootbground:SetScript("OnMouseDown",function(self, button)
-        if AtlasLootItemsFrame.refresh[2][AtlasLootItemsFrame.refresh[1]].Back and button == "RightButton" then
+        if _G[AtlasLootItemsFrame.refresh[2]][AtlasLootItemsFrame.refresh[1]].Back and button == "RightButton" then
             AtlasLoot:BackButton_OnClick();
         elseif AtlasLootDefaultFrame_AdvancedSearchPanel:IsVisible() and button == "RightButton" then
             AtlasLoot_AdvancedSearchClose();
