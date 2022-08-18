@@ -221,8 +221,9 @@ clearbtn:SetScript("OnClick", function()
 	AtlasLootDefaultFrame_AdvancedSearchPanel_SearchBox:ClearFocus();
 end);
 
-AtlasLoot_AdvancedSearchSetup()
+AtlasLoot_AdvancedSearchSetup();
 
+--[[
 function StreamingIcon_UpdateIcon(status, tooltip)
 	if(status > 0) then
         AtlasLoot_SearchProgressSpinner:SetVertexColor(0,1,0);
@@ -240,6 +241,7 @@ local streamIcon = CreateFrame("Frame", "AtlasLoot_SearchProgress", AtlasLootDef
 streamIcon:SetPoint("TOPRIGHT", AtlasLootDefaultFrame_LootBackground, "TOPRIGHT");
 streamIcon:SetSize(48, 48);
 streamIcon.tooltip = "Searching...";
+streamIcon:EnableMouse(true);
 
 streamIcon.icon = streamIcon:CreateTexture("$parentSpinner", "BACKGROUND");
 streamIcon.icon:SetTexture("Interface\\Addons\\AtlasLoot\\Images\\streamcircle");
@@ -277,4 +279,4 @@ streamIcon:SetScript("OnLeave", GameTooltip_Hide);
 streamIcon:SetScript("OnShow", function(self) self:SetFrameLevel( (self:GetParent()):GetFrameLevel() + 1 ) end);
 
 streamIcon:SetPoint("TOPRIGHT", AtlasLootDefaultFrame_LootBackground, "TOPRIGHT");
-streamIcon:Hide();
+streamIcon:Hide();]]

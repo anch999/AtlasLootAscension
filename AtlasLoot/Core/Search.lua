@@ -625,11 +625,6 @@ end
 local function DoSearch(searchText)
     AtlasLootCharDB["SearchResult"] = {Name = "Search Result" , Type = "Search", Back = true};
     AtlasLootCharDB.LastSearchedText = searchText;
-    AtlasLoot_SearchProgress:Show();
-    AtlasLoot_SearchProgress.Loop:Play();
-    local items_total = 0;
-    local items_checked = 0;
-    local items_queried = false;
     local count = 0;
     local tablenum = 1;
 
@@ -650,13 +645,11 @@ local function DoSearch(searchText)
         if AtlasLootCharDB["SearchResult"][tablenum] == nil then
             AtlasLootCharDB["SearchResult"][tablenum] = {Name = "Page "..tablenum};
         end
-
         table.insert(AtlasLootCharDB["SearchResult"][tablenum], {(count % 30) + 1, itemId, itemType, itemName, lootPage, "", "", dataID .. "|" .. "AtlasLoot_Data" .. "|" .. tostring(dataPage), itemIdBackup, [AtlasLoot_Difficulty.MAX_DIF] = difCap});
-
-        if (count + 1) % 31 == 0 then
+        count = count + 1;
+        if (count) % 30 == 0 then
             tablenum = tablenum + 1;  
         end
-        count = count + 1;
     end
 
     for dataID, data in pairs(AtlasLoot_Data) do
@@ -666,29 +659,23 @@ local function DoSearch(searchText)
                     local _, itemId, itemType, atlasName = unpack(v)
                     if type(itemId) == "number" and itemId > 0 then
                         local itemIdBackup = itemId;
-                        local difficultyCap = min(AtlasLoot_Difficulty:getMaxDifficulty(data.Type), ItemindexID);
-                        itemId = AtlasLoot:FindId(itemId, difficultyCap) or 2;
+                        if #searchTerms == 1 and searchTerms[1].name then
+                            if nameMatches(atlasName, searchTerms[1].name) then
+                                AddItemToSearchResult(itemId, itemType, atlasName, dataID, itemIdBackup, AtlasLoot_Difficulty:getMaxDifficulty(data.Type), dataPage);
+                            end
+                        else
+                            local difficultyCap = min(AtlasLoot_Difficulty:getMaxDifficulty(data.Type), ItemindexID);
+                            itemId = AtlasLoot:FindId(itemId, difficultyCap) or 2;
 
-                        local item = Item:CreateFromID(itemId);
+                            local item = Item:CreateFromID(itemId);
 
-                        item:ContinueOnLoad(function()
-                            if item:GetInfo() then
+                            item:ContinueOnLoad(function()
                                 local itemDetails = {GetItemDetails(item.itemID, atlasName)};
-                                if #searchTerms == 1 and searchTerms[1].name then
-                                    if nameMatches(atlasName, searchTerms[1].name) then
-                                        AddItemToSearchResult(itemId, itemType, atlasName, dataID, itemIdBackup, AtlasLoot_Difficulty:getMaxDifficulty(data.Type), dataPage);
-                                    end
-                                elseif ItemMatchesAllTerms(searchTerms, itemDetails) then
+                                if ItemMatchesAllTerms(searchTerms, itemDetails) then
                                     AddItemToSearchResult(itemId, itemType, atlasName, dataID, itemIdBackup, AtlasLoot_Difficulty:getMaxDifficulty(data.Type), dataPage);
                                 end
-                                items_checked = items_checked + 1;
-                                if(items_checked >= items_total and items_queried) then 
-                                    AtlasLoot_SearchProgress.Loop:Stop();
-                                    AtlasLoot_SearchProgress:Hide()
-                                end
-                            end
-                        end)
-                        items_total = items_total + 1;
+                            end)
+                        end
                     elseif not equipableFilterOn and itemId and itemId ~= "" and string.sub(itemId, 1, 1) == "s" then
                         local spellName = GetSpellName(itemId, atlasName)
                         if nameMatches(spellName, searchText) then
@@ -700,7 +687,6 @@ local function DoSearch(searchText)
             end
         end
     end
-    items_queried = true;
 end
 
 function AtlasLoot:ShowSearchResult()

@@ -761,7 +761,9 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource, tablenum)
 		AtlasLoot:HideNoUsableItems();
 	end
 
-	AtlasLoot:QueryLootPage();
+	if dataID ~= "SearchResult" then
+		AtlasLoot:QueryLootPage();
+	end
 end
 
 --[[
