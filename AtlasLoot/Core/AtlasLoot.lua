@@ -453,16 +453,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource, tablenum)
 	Atlasloot_HeaderLabel:Hide();
 
 	local dataSource_backup = dataSource;
-
-	if dataID == "SearchResult" or dataSource == " AtlasLootCharDB" then
-		dataSource = AtlasLootCharDB;
-	elseif dataSource == "AtlasLoot_TokenData" then
-		dataSource = AtlasLoot_TokenData;
-	elseif dataSource == "AtlasLootWishList" then
-		dataSource = AtlasLootWishList;
-	else
-		dataSource = AtlasLoot_Data;
-    end
+	dataSource = _G[dataSource] or AtlasLoot_Data;
 
 	-- Check to see if Atlas is loaded and the table has a map
 	if dataSource[dataID].Map and ATLASLOOT_ATLASLOADED then

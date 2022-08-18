@@ -40,7 +40,7 @@ local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot");
      mainframe.header.txt:SetText(ATLASLOOT_VERSION);
      mainframe.header.notice = mainframe:CreateFontString("AtlasLootDefaultFrame_Notice","ARTWORK","GameFontNormal");
      mainframe.header.notice:SetPoint("BOTTOM",0,17);
- 
+
     --Loot Background
 local lootbground = CreateFrame("Frame", "AtlasLootDefaultFrame_LootBackground",AtlasLootDefaultFrame);
     lootbground:SetSize(540,515);
