@@ -309,6 +309,7 @@ if AL then
 	AL["Send"] = true;
 	AL["Cancel"] = true;
 	AL["Delete Wishlist %s?"] = true;
+	AL["Delete Wishlist"] = true;
 	AL["%s sends you a Wishlist. Accept?"] = true;
 	AL[" tried to send you a Wishlist. Rejected because you are in combat."] = true;
 	AL[" rejects your Wishlist."] = true;

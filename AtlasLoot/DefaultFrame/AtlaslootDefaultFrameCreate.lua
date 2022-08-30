@@ -295,7 +295,7 @@ local function presetcreate(preset,num)
         if self:IsEnabled() then
             GameTooltip:ClearLines();
             GameTooltip:SetOwner(self, "ANCHOR_RIGHT", -(self:GetWidth() / 2), 5);
-            GameTooltip:AddLine(AtlasLootCharDB["QuickLooks"][num][3]);
+            GameTooltip:AddLine(AtlasLootCharDB["QuickLooks"][num][6]);
             GameTooltip:Show();
         end
     end);

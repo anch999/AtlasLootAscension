@@ -240,7 +240,7 @@ function AtlasLootItem_OnClick(self ,arg1)
         elseif(IsControlKeyDown() and iteminfo) then
             DressUpItemLink(itemLink);
         elseif(IsAltKeyDown() and (self.itemID ~= 0)) then
-            if AtlasLootItemsFrame.refresh[1] == "WishList" then
+            if AtlasLootItemsFrame.refresh[2] == "AtlasLootWishList" then
                 AtlasLoot_DeleteFromWishList(self.itemID);
             else
                 if(AtlasLootItemsFrame.refresh[1] == "SearchResult") then
@@ -270,7 +270,7 @@ function AtlasLootItem_OnClick(self ,arg1)
             spellID = string.sub(self.itemID, 2);
             ChatEdit_InsertLink(AtlasLoot_GetEnchantLink(spellID));
         elseif(IsAltKeyDown() and (self.itemID ~= 0)) then
-            if AtlasLootItemsFrame.refresh[1] == "WishList" then
+            if AtlasLootItemsFrame.refresh[2] == "AtlasLootWishList" then
                 AtlasLoot_DeleteFromWishList(self.itemID);
             else
                 spellName, _, _, _, _, _, _, _, _ = GetSpellInfo(string.sub(self.itemID, 2));

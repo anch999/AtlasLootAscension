@@ -103,7 +103,7 @@ function AtlasLoot_Testabc()
 end
 
 function AtlasLoot:HideNoUsableItems()
-	local dataID, dataSource, tablenum = AtlasLootItemsFrame.refreshOri[1], _G[AtlasLootItemsFrame.refreshOri[2]], AtlasLootItemsFrame.refreshOri[3];
+	local dataID, dataSource, tablenum = AtlasLootItemsFrame.refreshFilter[1], _G[AtlasLootItemsFrame.refreshFilter[2]], AtlasLootItemsFrame.refreshFilter[3];
 
  	local tablebase = dataSource[dataID][tablenum]
 	if not tablebase or dataID == "WishList" or dataID == "SearchResult" then return end
@@ -112,7 +112,7 @@ function AtlasLoot:HideNoUsableItems()
 	local count = 0
 	local leatherworking = GetSpellInfo(2108)
 
-	AtlasLoot_Data["FilterList"] = { Type = dataSource[dataID].Type; Name = dataSource[dataID].Name;Map = dataSource[dataID].Map; [tablenum] = {Name = dataSource[dataID][tablenum].Name}; };
+	AtlasLoot_Data["FilterList"] = { Type = dataSource[dataID].Type; Name = dataSource[dataID].Name; Back = dataSource[dataID].Back; Map = dataSource[dataID].Map; [tablenum] = {Name = dataSource[dataID][tablenum].Name}; };
 
 	for i=1,30 do
 		local info = _G["AtlasLootItem_"..i.."_Extra"]:GetText()
@@ -205,13 +205,13 @@ function AtlasLoot:HideNoUsableItems()
 		end
 	end
 
-	AtlasLoot:ShowItemsFrame("FilterList", AtlasLootItemsFrame.refresh[2], AtlasLootItemsFrame.refresh[3])
+	AtlasLoot:ShowItemsFrame("FilterList", "AtlasLoot_Data", AtlasLootItemsFrame.refresh[3])
 end
 
 function AtlasLoot_FilterEnableButton()
 	if ATLASLOOT_FILTER_ENABLE == true then
 		ATLASLOOT_FILTER_ENABLE = false;
-		AtlasLoot:ShowItemsFrame(AtlasLootItemsFrame.refreshOri[1], AtlasLootItemsFrame.refreshOri[2], AtlasLootItemsFrame.refreshOri[3]);
+		AtlasLoot:ShowItemsFrame(AtlasLootItemsFrame.refreshFilter[1], AtlasLootItemsFrame.refreshFilter[2], AtlasLootItemsFrame.refreshFilter[3]);
 	else
 		ATLASLOOT_FILTER_ENABLE = true
 		AtlasLoot:HideNoUsableItems();
