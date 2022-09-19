@@ -252,7 +252,7 @@ function AtlasLootItem_OnClick(self ,arg1)
                                                         AtlasLoot_BossName:GetText(), self.dataID .. "|" .. "AtlasLoot_Data" .. "|" .. tostring(self.tablenum), self);
                 end
             end
-        elseif((AtlasLootItemsFrame.refresh[1] == "SearchResult" or AtlasLootItemsFrame.refresh[1] == "WishList") and self.sourcePage) then
+        elseif((AtlasLootItemsFrame.refresh[1] == "SearchResult" or AtlasLootItemsFrame.refresh[2] == "AtlasLootWishList") and self.sourcePage) then
             local dataID, dataSource, dataPage = strsplit("|", self.sourcePage);
             if(dataID and dataSource) then
                 AtlasLoot:ShowItemsFrame(dataID, "AtlasLoot_Data", tonumber(dataPage));

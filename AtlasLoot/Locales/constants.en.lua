@@ -34,6 +34,10 @@ if AL then
 	AL["This is a loot browser only.  To view maps as well, install either Atlas or Alphamap."] = true;
 	AL["Toggle AL Panel"] = true;
 	AL["Back"] = true;
+	AL["Add"] = true;
+	AL["Delete"] = true;
+	AL["Edit"] = true;
+	AL["Share"] = true;
 	AL["Level 60"] = true;
 	AL["Level 70"] = true;
 	AL["Level 80"] = true;

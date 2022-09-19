@@ -2646,6 +2646,12 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
 			{ 7, 33191, "", "=q4=Jungle Stompers", "=ds=#s12#, #a4#", "", "13%"};
 			{ 8, 33640, "", "=q4=Fury", "=ds=#h4#, #w13#", "", "14%"};
 			{ 10, 33307, "", "=q3=Formula: Enchant Weapon - Executioner", "=ds=#p4# (375)", "", "3%"};
+			{ 16, 33496, "", "=q4=Signet of Primal Wrath", "=ds=#s13#", "", "23%"};
+			{ 17, 33498, "", "=q4=Signet of the Quiet Forest", "=ds=#s13#", "", "21%"};
+			{ 18, 33971, "", "=q4=Elunite Imbued Leggings", "=ds=#s11#, #a2#", "", "10%"};
+			{ 19, 33495, "", "=q4=Rage", "=ds=#h3#, #w13#", "", "12%"};
+			{ 20, 33480, "", "=q4=Cord of BBCRaided Troll Hair", "=ds=#s10#, #a1#", "", "10%"};
+
 		};
 		{
 			Name = BabbleBoss["Akil'zon"];
@@ -2658,6 +2664,14 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
 			{ 7, 33214, "", "=q4=Akil'zon's Talonblade", "=ds=#h1#, #w10#", "", "13%"};
 			{ 8, 33283, "", "=q4=Amani Punisher", "=ds=#h3#, #w6#", "", "14%"};
 			{ 10, 33307, "", "=q3=Formula: Enchant Weapon - Executioner", "=ds=#p4# (375)", "", "3%"};
+			{ 16, 33591, "", "=q4=Shadowcaster's Drape", "=ds=#s4#", "", "11%"};
+			{ 17, 33590, "", "=q4=Cloak of Fiends", "=ds=#s4#", "", "10%"};
+			{ 18, 33481, "", "=q4=Pauldrons of Stone Resolve", "=ds=#s3#, #a4#", "", "11%"};
+			{ 19, 33492, "", "=q4=Trollbane", "=ds=#h2#, #w1#", "", "11%"};
+			{ 20, 33500, "", "=q4=Signet of Eternal Life", "=ds=#s13#", "", "20%"};
+
+
+
 		};
 		{
 			Name = BabbleBoss["Jan'alai"];
@@ -2670,6 +2684,11 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
 			{ 7, 33326, "", "=q4=Bulwark of the Amani Empire", "=ds=#w8#", "", "13%"};
 			{ 8, 33332, "", "=q4=Enamelled Disc of Mojo", "=ds=#w8#", "", "12%"};
 			{ 10, 33307, "", "=q3=Formula: Enchant Weapon - Executioner", "=ds=#p4# (375)", "", "3%"};
+			{ 16, 33499, "", "=q4=Signet of the Last Defender", "=ds=#s13#", "", "18%"};
+			{ 17, 33805, "", "=q4=Shadowhunter's Treads", "=ds=#s12#, #a3#", "", "10%"};
+			{ 18, 33491, "", "=q4=Tuskbreaker", "=ds=#w5#", "", "12%"};
+			{ 19, 33490, "", "=q4=Staff of Dark Mending", "=ds=#h2#, #w9#", "", "13%"};
+			{ 20, 33489, "", "=q4=Mantle of Ill Intent", "=ds=#s3#, #a1#", "", "11%"};
 		};
 		{
 			Name = BabbleBoss["Halazzi"];
@@ -2682,6 +2701,9 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
 			{ 7, 33303, "", "=q4=Skullshatter Warboots", "=ds=#s12#, #a4#", "", "14%"};
 			{ 8, 33297, "", "=q4=The Savage's Choker", "=ds=#s2#", "", "13%"};
 			{ 10, 33307, "", "=q3=Formula: Enchant Weapon - Executioner", "=ds=#p4# (375)", "", "3%"};
+			{ 16, 33483, "", "=q4=Life-step Belt", "=ds=#s10#, #a2#", "", "12%"};
+			{ 17, 33493, "", "=q4=Umbral Shiv", "=ds=#h1#, #w4#", "", "12%"};
+			{ 18, 33497, "", "=q4=Mana Attuned Band", "=ds=#s13#", "", "18%"};
 		};
 		{
 			Name = BabbleBoss["Hex Lord Malacrass"];
@@ -2701,6 +2723,7 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
 			{ 20, 33298, "", "=q4=Prowler's Strikeblade", "=ds=#h1#, #w4#", "", "14%"};
 			{ 21, 33388, "", "=q4=Heartless", "=ds=#h1#, #w10#", "", "15%"};
 			{ 22, 33465, "", "=q4=Staff of Primal Fury", "=ds=#h2#, #w9#", "", "13%"};
+			{ 21, 33494, "", "=q4=Amani Divining Staff", "=ds=#h2#, #w9#", "", "11%"};
 		};
 		{
 			Name = BabbleBoss["Zul'jin"];
@@ -2721,31 +2744,6 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
 			{ 22, 33102, "", "=q4=Blood of Zul'Jin", "=ds=#m2#", "", "87%"};
 		};
 		{
-			Name = "Timed Reward Chest";
-			{ 1, 0, "INV_Box_01", "=q6=#x30#", ""};
-			{ 2, 33590, "", "=q4=Cloak of Fiends", "=ds=#s4#", "", "10%"};
-			{ 3, 33591, "", "=q4=Shadowcaster's Drape", "=ds=#s4#", "", "11%"};
-			{ 4, 33489, "", "=q4=Mantle of Ill Intent", "=ds=#s3#, #a1#", "", "11%"};
-			{ 5, 33480, "", "=q4=Cord of BBCRaided Troll Hair", "=ds=#s10#, #a1#", "", "10%"};
-			{ 6, 33483, "", "=q4=Life-step Belt", "=ds=#s10#, #a2#", "", "12%"};
-			{ 7, 33971, "", "=q4=Elunite Imbued Leggings", "=ds=#s11#, #a2#", "", "10%"};
-			{ 8, 33805, "", "=q4=Shadowhunter's Treads", "=ds=#s12#, #a3#", "", "10%"};
-			{ 9, 33481, "", "=q4=Pauldrons of Stone Resolve", "=ds=#s3#, #a4#", "", "11%"};
-			{ 16, 0, "INV_Box_01", "=q6=#x31#", ""};
-			{ 17, 33495, "", "=q4=Rage", "=ds=#h3#, #w13#", "", "12%"};
-			{ 18, 33493, "", "=q4=Umbral Shiv", "=ds=#h1#, #w4#", "", "12%"};
-			{ 19, 33492, "", "=q4=Trollbane", "=ds=#h2#, #w1#", "", "11%"};
-			{ 20, 33490, "", "=q4=Staff of Dark Mending", "=ds=#h2#, #w9#", "", "13%"};
-			{ 21, 33494, "", "=q4=Amani Divining Staff", "=ds=#h2#, #w9#", "", "11%"};
-			{ 22, 33491, "", "=q4=Tuskbreaker", "=ds=#w5#", "", "12%"};
-			{ 24, 0, "INV_Box_01", "=q6=#x32#", ""};
-			{ 25, 33497, "", "=q4=Mana Attuned Band", "=ds=#s13#", "", "18%"};
-			{ 26, 33500, "", "=q4=Signet of Eternal Life", "=ds=#s13#", "", "20%"};
-			{ 27, 33496, "", "=q4=Signet of Primal Wrath", "=ds=#s13#", "", "23%"};
-			{ 28, 33499, "", "=q4=Signet of the Last Defender", "=ds=#s13#", "", "18%"};
-			{ 29, 33498, "", "=q4=Signet of the Quiet Forest", "=ds=#s13#", "", "21%"};
-		};
-		{
 			Name = AL["Trash Mobs"];
 			{ 1, 33993, "", "=q3=Mojo", "=ds=#e13#"};
 			{ 3, 33865, "", "=q2=Amani Hex Stick", "=ds=#m20#", "", "40%"};
@@ -2753,6 +2751,12 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
 			{ 5, 33932, "", "=q2=Amani Charm of the Witch Doctor", "=ds=#m26#", "", "24%"};
 			{ 6, 33931, "", "=q2=Amani Charm of Mighty Mojo", "=ds=#m26#", "", "25%"};
 			{ 7, 33933, "", "=q2=Amani Charm of the Raging Defender", "=ds=#m26#", "", "25%"};
+			{ 16, 21824, "", "=q4=The Krakmon Wand", "", "", ""};
+			{ 17, 24574, "", "=q4=Massacre Cloak", "", "", ""};
+			{ 18, 28354, "", "=q4=Throat Crushers", "", "", ""};
+			{ 19, 33059, "", "=q4=Seal of the Amani\'shi Berserker", "", "", ""};
+			{ 20, 33983, "", "=q4=Staff of Blazing Glory", "", "", ""};
+			{ 21, 39755, "", "=q4=String of Ears", "", "", ""};
 		};
 	};
 

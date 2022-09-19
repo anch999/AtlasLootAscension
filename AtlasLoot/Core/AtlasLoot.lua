@@ -641,7 +641,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource, tablenum)
 				itemButton.extra = extra;
 
 				--Highlight items in the wishlist
-				if IDfound ~= "" and IDfound ~= 0 and dataID ~= "WishList" and AtlasLootWishList["Options"][UnitName("player")]["Mark"] == true then
+				if IDfound ~= "" and IDfound ~= 0 and dataSource_backup ~= "AtlasLootWishList" and AtlasLootWishList["Options"][UnitName("player")]["Mark"] == true then
 					local xitemexistwish, itemwishicons = AtlasLoot_WishListCheck(IDfound, true)
 					if xitemexistwish then
 						text = itemwishicons.." "..text;
@@ -686,7 +686,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource, tablenum)
 				itemButton.price = dataSource[dataID][tablenum][i][6] or nil;
 				itemButton.droprate = dataSource[dataID][tablenum][i][7] or nil;
 
-				if (dataID == "SearchResult" or dataID == "WishList") and dataSource[dataID][tablenum][i][8] then
+				if (dataID == "SearchResult" or dataSource_backup == "AtlasLootWishList") and dataSource[dataID][tablenum][i][8] then
 					itemButton.sourcePage = dataSource[dataID][tablenum][i][8];
 				elseif dataSource[dataID][tablenum][i][8] ~= nil and dataSource[dataID][tablenum][i][8]:match("=LT=") then
 					itemButton.sourcePage = string.sub(dataSource[dataID][tablenum][i][8], 5);
@@ -743,6 +743,17 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource, tablenum)
 		_G["AtlasLootItemsFrame_BACK"]:Hide();
 		_G["AtlasLootItemsFrame_NEXT"]:Hide();
 		_G["AtlasLootItemsFrame_PREV"]:Hide();
+		_G["AtlasLootItemsFrame_Wishlist_EDIT"]:Hide();
+		_G["AtlasLootItemsFrame_Wishlist_DELETE"]:Hide();
+		_G["AtlasLootItemsFrame_Wishlist_ADD"]:Hide();
+		_G["AtlasLootItemsFrame_Wishlist_Share"]:Hide();
+
+		if dataSource_backup == "AtlasLootWishList" then
+			_G["AtlasLootItemsFrame_Wishlist_EDIT"]:Show();
+			_G["AtlasLootItemsFrame_Wishlist_DELETE"]:Show();
+			_G["AtlasLootItemsFrame_Wishlist_ADD"]:Show();
+			_G["AtlasLootItemsFrame_Wishlist_Share"]:Show();
+		end
 		local tablebase = {dataID, dataSource_backup};
 		if dataID == "FilterList" then
 			tablebase = {AtlasLootItemsFrame.refreshOri[1],AtlasLootItemsFrame.refreshOri[2]};
