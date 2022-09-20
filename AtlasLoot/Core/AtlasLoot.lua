@@ -400,9 +400,9 @@ function AtlasLoot:CreateToken(dataID)
 				item:ContinueOnLoad(function(itemID)
 					if itemType == select(9, GetItemInfo(itemID)) or itemType2 == select(9, GetItemInfo(itemID)) then
 						table.insert(AtlasLoot_TokenData[orgID][1], {#AtlasLoot_TokenData[orgID][1] + 1, v[2], v[3], v[4], t.Name});
-						if #AtlasLoot_Data[dataID] == n and #t == c then
-							AtlasLoot:ShowItemsFrame(AtlasLootItemsFrame.refresh[1], AtlasLootItemsFrame.refresh[2], AtlasLootItemsFrame.refresh[3]);
-						end
+					end
+					if #AtlasLoot_Data[dataID] == n and #t == c then
+						AtlasLoot:ShowItemsFrame(AtlasLootItemsFrame.refresh[1], AtlasLootItemsFrame.refresh[2], AtlasLootItemsFrame.refresh[3]);
 					end
 				end)
 			end
@@ -743,17 +743,15 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource, tablenum)
 		_G["AtlasLootItemsFrame_BACK"]:Hide();
 		_G["AtlasLootItemsFrame_NEXT"]:Hide();
 		_G["AtlasLootItemsFrame_PREV"]:Hide();
-		_G["AtlasLootItemsFrame_Wishlist_EDIT"]:Hide();
-		_G["AtlasLootItemsFrame_Wishlist_DELETE"]:Hide();
-		_G["AtlasLootItemsFrame_Wishlist_ADD"]:Hide();
+		_G["AtlasLootItemsFrame_Wishlist_Options"]:Hide();
 		_G["AtlasLootItemsFrame_Wishlist_Share"]:Hide();
 
+		-- Show Wishlist buttons when a wishlist in showing
 		if dataSource_backup == "AtlasLootWishList" then
-			_G["AtlasLootItemsFrame_Wishlist_EDIT"]:Show();
-			_G["AtlasLootItemsFrame_Wishlist_DELETE"]:Show();
-			_G["AtlasLootItemsFrame_Wishlist_ADD"]:Show();
+			_G["AtlasLootItemsFrame_Wishlist_Options"]:Show();
 			_G["AtlasLootItemsFrame_Wishlist_Share"]:Show();
 		end
+
 		local tablebase = {dataID, dataSource_backup};
 		if dataID == "FilterList" then
 			tablebase = {AtlasLootItemsFrame.refreshOri[1],AtlasLootItemsFrame.refreshOri[2]};

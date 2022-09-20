@@ -57,6 +57,11 @@ local lootbground = CreateFrame("Frame", "AtlasLootDefaultFrame_LootBackground",
         elseif AtlasLootDefaultFrame_AdvancedSearchPanel:IsVisible() and button == "RightButton" then
             AtlasLoot_AdvancedSearchClose();
         end
+        AtlasLoot_Dewdrop:Close();
+        AtlasLoot_DewdropSubMenu:Close();
+        AtlasLoot_DewdropExpansionMenu:Close();
+        AtlasLoot_WishListDrop:Close();
+        AtlasLoot_WishListOptions:Close();
     end);
 
 ----------------------------------- Item Loot Panel -------------------------------------------
@@ -172,30 +177,22 @@ local backbtn = CreateFrame("Button", "AtlasLootItemsFrame_BACK", AtlasLootItems
         backbtn:SetScript("OnClick", function(self) AtlasLoot:BackButton_OnClick() end)
         backbtn:Hide();
 
-        -- Wishlist Edit button
-local editbtn = CreateFrame("Button", "AtlasLootItemsFrame_Wishlist_EDIT", AtlasLootItemsFrame, "OptionsButtonTemplate");
-        editbtn:SetPoint("BOTTOM", "AtlasLootItemsFrame", "BOTTOM",-50,4);
-        editbtn:SetText(AL["Edit"]);
-        editbtn:SetScript("OnClick", function() AtlasLoot:EditWishList() end)
-        editbtn:Hide();
-
-        -- Wishlist Add button
-local addbtn = CreateFrame("Button", "AtlasLootItemsFrame_Wishlist_ADD", AtlasLootItemsFrame, "OptionsButtonTemplate");
-        addbtn:SetPoint("BOTTOM", "AtlasLootItemsFrame_Wishlist_EDIT", "BOTTOM",-100,0);
-        addbtn:SetText(AL["Add"]);
-        addbtn:SetScript("OnClick", function() AtlasLoot:AddWishList() end)
-        addbtn:Hide();
-
-        -- Wishlist Delete button
-local deletebtn = CreateFrame("Button", "AtlasLootItemsFrame_Wishlist_DELETE", AtlasLootItemsFrame, "OptionsButtonTemplate");
-        deletebtn:SetPoint("BOTTOM", "AtlasLootItemsFrame_Wishlist_EDIT", "BOTTOM",100,0);
-        deletebtn:SetText(AL["Delete"]);
-        deletebtn:SetScript("OnClick", function() AtlasLoot:DeleteWishList() end)
-        deletebtn:Hide();
+        -- Wishlist Options button
+local optionsbtn = CreateFrame("Button", "AtlasLootItemsFrame_Wishlist_Options", AtlasLootItemsFrame, "OptionsButtonTemplate");
+        optionsbtn:SetPoint("BOTTOM", "AtlasLootItemsFrame", "BOTTOM",-50,4);
+        optionsbtn:SetText(AL["Options"]);
+        optionsbtn:SetScript("OnClick", function(self) 
+            if AtlasLoot_WishListOptions:IsOpen() then
+                AtlasLoot_WishListOptions:Close();
+            else
+                AtlasLoot_WishListOptions:Open(self);
+            end
+        end);
+        optionsbtn:Hide();
 
         -- Wishlist Share button
 local sharebtn = CreateFrame("Button", "AtlasLootItemsFrame_Wishlist_Share", AtlasLootItemsFrame, "OptionsButtonTemplate");
-        sharebtn:SetPoint("BOTTOM", "AtlasLootItemsFrame_Wishlist_DELETE", "BOTTOM",100,0);
+        sharebtn:SetPoint("BOTTOM", "AtlasLootItemsFrame_Wishlist_Options", "BOTTOM",100,0);
         sharebtn:SetText(AL["Share"]);
         sharebtn:SetScript("OnClick", function() AtlasLoot:ShareWishList() end)
         sharebtn:Hide();
@@ -313,7 +310,8 @@ local expansionmenubtn = CreateFrame("Button", "AtlasLootDefaultFrame_ExpansionM
 local wishbtn = CreateFrame("Button", "AtlasLootDefaultFrameWishListButton", AtlasLootDefaultFrame, "OptionsButtonTemplate");
         wishbtn:SetPoint("BOTTOMLEFT", "AtlasLootDefaultFrame", "BOTTOMLEFT", 40, 63);
         wishbtn:SetSize(105,20);
-        wishbtn:SetScript("OnClick", function(self)AtlasLoot_ShowWishListDropDown("","","","","",self,true) end);
+        wishbtn:RegisterForClicks("LeftButtonDown","RightButtonDown");
+        wishbtn:SetScript("OnClick", function(self, btnclick)AtlasLoot:WishListButton("","","","","",self,true,btnclick) end);
         wishbtn:SetText(AL["Wishlist"]);
 
     --Quick Look Buttons

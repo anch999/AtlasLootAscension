@@ -21,7 +21,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 AtlasLoot_Dewdrop = AceLibrary("Dewdrop-2.0");
 AtlasLoot_DewdropSubMenu = AceLibrary("Dewdrop-2.0");
 AtlasLoot_DewdropExpansionMenu = AceLibrary("Dewdrop-2.0");
-AtlasLoot_DifficultyAtlas = AceLibrary("Dewdrop-2.0");
 
 ItemindexID = 2;
 
@@ -47,6 +46,7 @@ function AtlasLootDefaultFrame_OnShow()
         AtlasLoot:ShowItemsFrame(lastboss[1], "AtlasLoot_Data", lastboss[3]);
         AtlasLoot_DewdropSubMenu:Unregister(AtlasLootDefaultFrame_SubMenu);
         AtlasLoot:DewdropSubMenuRegister(AtlasLoot_SubMenus[lastboss[5]]);
+        AtlasLoot:WishListOptionsRegister();
     else
         AtlasLoot:ShowItemsFrame("EmptyTable", "AtlasLoot_Data", 1);
     end
@@ -144,7 +144,6 @@ function AtlasLoot:DewdropExpansionMenuRegister()
                 for k,v in ipairs(AtlasLoot_ExpansionMenu) do
                     if type(v) == "table" then
                     --If a link to show a expansion menu
-                        local checked = false;
                             AtlasLoot_Dewdrop:AddLine(
                                 'text', v[1],
                                 'textR', 1,
@@ -236,7 +235,6 @@ function AtlasLoot:DewdropRegister()
 				if AtlasLoot_Modules then
                     for k,v in ipairs(AtlasLoot_Modules) do
                         --If a link to show a submenu
-                        local checked = false;
                         AtlasLoot_Dewdrop:AddLine(
                             'text', v[1],
                             'textR', 1,
