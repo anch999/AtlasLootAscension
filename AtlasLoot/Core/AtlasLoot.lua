@@ -130,7 +130,6 @@ function AtlasLoot:OnEnable()
     AtlasLoot.db = LibStub("AceDB-3.0"):New("AtlasLootDB");
     AtlasLoot.db:RegisterDefaults(AtlasLootDBDefaults);
 	if not AtlasLootCharDB then AtlasLootCharDB = {} end
-	if not AtlasLootCharDB["WishList"] then AtlasLootCharDB["WishList"] = {} end
     if not AtlasLootCharDB["QuickLooks"] then AtlasLootCharDB["QuickLooks"] = {} end
 	if not AtlasLootCharDB["SearchResult"] then AtlasLootCharDB["SearchResult"] = {} end
     if AtlasLoot_Data then
@@ -175,36 +174,6 @@ function AtlasLoot:OnEnable()
 
 	AtlasLootItemsFrame:Hide();
 
-	--Check and migrate old WishList entry format to the newer one
-	if(((AtlasLootCharDB.AtlasLootVersion == nil) or (tonumber(AtlasLootCharDB.AtlasLootVersion) < 40301)) and AtlasLootCharDB and AtlasLootCharDB["WishList"] and #AtlasLootCharDB["WishList"]~=0) then
-		--Check if we really need to do a migration since it will load all modules
-		--We also create a helper table here which store IDs that need to search for
-		local idsToSearch = {};
-		for i = 1, #AtlasLootCharDB["WishList"] do
-			if (AtlasLootCharDB["WishList"][i][1] > 0 and not AtlasLootCharDB["WishList"][i][5]) then
-				tinsert(idsToSearch, i, AtlasLootCharDB["WishList"][i][1]);
-			end
-		end
-		if #idsToSearch > 0 then
-			--Let's do this
-			AtlasLoot:LoadAllModules();
-			for _, dataSource in ipairs(AtlasLoot_SearchTables) do
-				if AtlasLoot_Data[dataSource] then
-					for dataID, lootTable in pairs(AtlasLoot_Data[dataSource]) do
-						for _, entry in ipairs(lootTable) do
-							for k, v in pairs(idsToSearch) do
-								if(entry[1] == v)then
-									AtlasLootCharDB["WishList"][k][5] = dataID.."|"..dataSource;
-									break;
-								end
-							end
-						end
-					end
-				end
-			end
-		end
-		AtlasLootCharDB.AtlasLootVersion = VERSION_MAJOR..VERSION_MINOR..VERSION_BOSSES;
-	end
 	if((AtlasLootCharDB.AtlasLootVersion == nil) or (tonumber(AtlasLootCharDB.AtlasLootVersion) < 40301)) then
 		AtlasLootCharDB.AtlasLootVersion = VERSION_MAJOR..VERSION_MINOR..VERSION_BOSSES;
 		AtlasLootOptions_Init();
@@ -277,7 +246,8 @@ function AtlasLoot_Reset(data)
         AtlasLootCharDB["QuickLooks"] = {};
         AtlasLoot:RefreshQuickLookButtons();
     elseif data == "wishlist" then
-        AtlasLootCharDB["WishList"] = {};
+		AtlasLootWishList = {};
+		AtlasLoot:WishlistSetup();
         AtlasLootCharDB["SearchResult"] = {};
         AtlasLootCharDB.LastSearchedText = "";
     elseif data == "all" then
@@ -292,9 +262,10 @@ function AtlasLoot_Reset(data)
         AtlasLoot_UpdateLootBrowserScale();
         AtlasLootCharDB["QuickLooks"] = {};
         AtlasLoot:RefreshQuickLookButtons();
-        AtlasLootCharDB["WishList"] = {};
         AtlasLootCharDB["SearchResult"] = {};
         AtlasLootCharDB.LastSearchedText = "";
+		AtlasLootWishList = {};
+		AtlasLoot:WishlistSetup();
     end
     DEFAULT_CHAT_FRAME:AddMessage(BLUE..AL["AtlasLoot"]..": "..RED..AL["Reset complete!"]);
 end

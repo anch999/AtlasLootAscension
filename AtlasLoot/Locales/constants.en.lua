@@ -323,6 +323,7 @@ if AL then
 	AL["You can't send Wishlists to yourself"] = true;
 	AL["Please set a default Wishlist."] = true;
 	AL["Set as default Wishlist"] = true;
+	AL["Please Create a Wishlist First."] = true;
 
 	-- Misc Inventory related words
 	AL["Enchant"] = true;

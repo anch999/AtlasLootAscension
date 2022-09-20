@@ -141,7 +141,11 @@ function AtlasLoot:WishListButton(xitemID, xitemTexture, xitemName, xlootPage, x
 	if buttonclick == "RightButton" then
 		AtlasLoot_ShowWishListDropDown(xitemID, xitemTexture, xitemName, xlootPage, xsourcePage, button, show, "Enable")
 	elseif buttonclick == "LeftButton" then
-		AtlasLoot_WishListAddDropClick("addOwn", AtlasLootWishList["Options"][playerName]["DefaultWishList"][3] or 1, "", show)
+		if AtlasLootWishList["Own"][1] then
+			AtlasLoot_WishListAddDropClick("addOwn", AtlasLootWishList["Options"][playerName]["DefaultWishList"][3] or 1, "", show)
+		else
+			DEFAULT_CHAT_FRAME:AddMessage(RED..AL["AtlasLoot"]..": "..AL["Please Create a Wishlist First."]);
+		end
 	end
 end
 
@@ -486,18 +490,26 @@ local function AddTexture(par, num)
 		xpos = xpos + 20
 	end
 end
+function AtlasLoot:WishlistSetup()
+	if not AtlasLootWishList["Own"] then AtlasLootWishList["Own"] = {Name = "Wishlists"} end
+	if not AtlasLootWishList["Shared"] then AtlasLootWishList["Shared"] = {Name = "Shared Wishlists"} end
+	if not AtlasLootWishList["Options"] then AtlasLootWishList["Options"] = {} end
+	if not AtlasLootWishList["Options"][playerName] then AtlasLootWishList["Options"][playerName] = {} end
+	if AtlasLootWishList["Options"][playerName]["Mark"] ~= true and AtlasLootWishList["Options"][playerName]["Mark"] ~= false then AtlasLootWishList["Options"][playerName]["Mark"] = true end
+	if not AtlasLootWishList["Options"][playerName]["markInTable"] then AtlasLootWishList["Options"][playerName]["markInTable"] = "own" end
+	if AtlasLootWishList["Options"][playerName]["AllowShareWishlist"] ~= true and AtlasLootWishList["Options"][playerName]["AllowShareWishlist"] ~= false then AtlasLootWishList["Options"][playerName]["AllowShareWishlist"] = true end
+	if AtlasLootWishList["Options"][playerName]["AllowShareWishlistInCombat"] ~= true and AtlasLootWishList["Options"][playerName]["AllowShareWishlistInCombat"] ~= false then AtlasLootWishList["Options"][playerName]["AllowShareWishlistInCombat"] = true end
+	if AtlasLootWishList["Options"][playerName]["UseDefaultWishlist"] ~= true and AtlasLootWishList["Options"][playerName]["UseDefaultWishlist"] ~= false then AtlasLootWishList["Options"][playerName]["UseDefaultWishlist"] = false end
+	if AtlasLootWishList["Options"][playerName]["DefaultWishList"] ~= true then AtlasLootWishList["Options"][playerName]["DefaultWishList"] = {"Own", "AtlasLootWishList", 1} end
 
+end
 --[[
 AtlasLoot_CreateWishlistOptions()
 Create the Options for the Wishlists(called on variables loadet)
 ]]
 function AtlasLoot_CreateWishlistOptions()
 	if OptionsLoadet then return end
-	if not AtlasLootWishList["Own"] then AtlasLootWishList["Own"] = {} end
-	if not AtlasLootWishList["Shared"] then AtlasLootWishList["Shared"] = {} end
-	if not AtlasLootWishList["Options"] then AtlasLootWishList["Options"] = {} end
-	if not AtlasLootWishList["Options"][playerName] then AtlasLootWishList["Options"][playerName] = {} end
-
+	AtlasLoot:WishlistSetup();
 	-- Add wishlistframe --
 	local WishListAddFrame = CreateFrame("FRAME","AtlasLootWishList_AddFrame",UIParent)
 		WishListAddFrame:Hide()
@@ -624,11 +636,6 @@ function AtlasLoot_CreateWishlistOptions()
 	-- Add wishlistframe --
 	
 	local framewidht = InterfaceOptionsFramePanelContainer:GetWidth()
-	if AtlasLootWishList["Options"][playerName]["Mark"] ~= true and AtlasLootWishList["Options"][playerName]["Mark"] ~= false then AtlasLootWishList["Options"][playerName]["Mark"] = true end
-	if not AtlasLootWishList["Options"][playerName]["markInTable"] then AtlasLootWishList["Options"][playerName]["markInTable"] = "own" end
-	if AtlasLootWishList["Options"][playerName]["AllowShareWishlist"] ~= true and AtlasLootWishList["Options"][playerName]["AllowShareWishlist"] ~= false then AtlasLootWishList["Options"][playerName]["AllowShareWishlist"] = true end
-	if AtlasLootWishList["Options"][playerName]["AllowShareWishlistInCombat"] ~= true and AtlasLootWishList["Options"][playerName]["AllowShareWishlistInCombat"] ~= false then AtlasLootWishList["Options"][playerName]["AllowShareWishlistInCombat"] = true end
-	if AtlasLootWishList["Options"][playerName]["UseDefaultWishlist"] ~= true and AtlasLootWishList["Options"][playerName]["UseDefaultWishlist"] ~= false then AtlasLootWishList["Options"][playerName]["UseDefaultWishlist"] = false end
 
 	local WishlistOptionsFrame = CreateFrame("FRAME", nil)
 		WishlistOptionsFrame.name = AL["Wishlist"]
