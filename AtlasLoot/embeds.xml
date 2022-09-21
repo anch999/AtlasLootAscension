@@ -9,6 +9,7 @@
 <Include file="Libs\LibBabble-Faction-3.0\lib.xml"/>
 <Include file="Libs\LibBabble-Inventory-3.0\lib.xml"/>
 <Include file="Libs\LibBabble-Zone-3.0\lib.xml"/>
+<Include file="Libs\LibBabble-SubZone-3.0\lib.xml"/>
 
 <Include file="Libs\LibAboutPanel\lib.xml"/>
 
