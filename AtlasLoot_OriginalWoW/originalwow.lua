@@ -4172,7 +4172,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		------------------------------------
 
 		AtlasLoot_Data["T0"] = {
-				Name = "Tier 0";
+				Name = "Dungeon Sets";
 				Type = "ClassicDungeonExt";
 			{
 				Name = AL["Druid"];

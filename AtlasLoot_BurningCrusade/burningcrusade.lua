@@ -3753,7 +3753,7 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
 	AtlasLoot_Data["PVPHalaa"] = {
 			Name = BabbleZone["Nagrand"]..": "..AL["Halaa"];
 		{
-			Name = "1";
+			Name = "Page 1";
 			{ 1, 28915, "", "=q4=Reins of the Dark Riding Talbuk", "=ds=#e12#", "70 #halaabattle# 15 #halaaresearch#", ""};
 			{ 2, 27679, "", "=q4=Sublime Mystic Dawnstone", "=ds=#e7#", "100 #halaabattle#", ""};
 			{ 3, 27649, "", "=q3=Hierophant's Leggings", "=ds=#a1# #s11#", "40 #halaabattle# 2 #halaaresearch#", ""};
@@ -3779,7 +3779,7 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
 			{ 29, 26044, "", "=q2=Halaa Research Token", "=ds=#m17#"};
 		};
 		{
-			Name = " - 2";
+			Name = "Page 2";
 			{ 1, 30611, "", "=q3=Halaani Razorshaft", "=ds=#w17#"};
 			{ 2, 30615, "", "=q1=Halaani Whiskey", "=ds=#e4#"};
 			{ 4, 0, "INV_BannerPVP_02", "=q6=#m7#", ""};
@@ -5483,31 +5483,6 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
 			{ 3, 30118, "", "=q4=Destroyer Breastplate", "=ds="..BabbleBoss["Kael'thas Sunstrider"].." ("..BabbleZone["The Eye"]..")"};
 			{ 4, 30119, "", "=q4=Destroyer Gauntlets", "=ds="..BabbleBoss["Leotheras the Blind"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
 			{ 5, 30121, "", "=q4=Destroyer Greaves", "=ds="..BabbleBoss["Fathom-Lord Karathress"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-		};
-	};
-
-	AtlasLoot_Data["SSC"] = {
-			Name = "ssc";
-		{
-			Name = "SSC";
-			{ 1, 30228, "", "=q4=Nordrassil Headdress", "=ds="..BabbleBoss["Lady Vashj"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-			{ 2, 30219, "", "=q4=Nordrassil Headguard", "=ds="..BabbleBoss["Lady Vashj"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-			{ 3, 30233, "", "=q4=Nordrassil Headpiece", "=ds="..BabbleBoss["Lady Vashj"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-			{ 4, 30141, "", "=q4=Rift Stalker Helm", "=ds="..BabbleBoss["Lady Vashj"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-			{ 5, 30206, "", "=q4=Cowl of Tirisfal", "=ds="..BabbleBoss["Lady Vashj"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-			{ 6, 30125, "", "=q4=Crystalforge Faceguard", "=ds="..BabbleBoss["Lady Vashj"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-			{ 7, 30131, "", "=q4=Crystalforge War-Helm", "=ds="..BabbleBoss["Lady Vashj"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-			{ 8, 30136, "", "=q4=Crystalforge Greathelm", "=ds="..BabbleBoss["Lady Vashj"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-			{ 9, 30152, "", "=q4=Cowl of the Avatar", "=ds="..BabbleBoss["Lady Vashj"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-			{ 16, 30161, "", "=q4=Hood of the Avatar", "=ds="..BabbleBoss["Lady Vashj"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-			{ 17, 30146, "", "=q4=Deathmantle Helm", "=ds="..BabbleBoss["Lady Vashj"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-			{ 18, 30190, "", "=q4=Cataclysm Helm", "=ds="..BabbleBoss["Lady Vashj"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-			{ 19, 30166, "", "=q4=Cataclysm Headguard", "=ds="..BabbleBoss["Lady Vashj"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-			{ 20, 30171, "", "=q4=Cataclysm Headpiece", "=ds="..BabbleBoss["Lady Vashj"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-			{ 21, 30212, "", "=q4=Hood of the Corruptor", "=ds="..BabbleBoss["Lady Vashj"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-			{ 22, 30115, "", "=q4=Destroyer Greathelm", "=ds="..BabbleBoss["Lady Vashj"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-			{ 23, 14992, "", "=q4=Destroyer Helmet", "=ds="..BabbleBoss["Lady Vashj"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
-			{ 24, 30120, "", "=q4=Destroyer Battle-Helm", "=ds="..BabbleBoss["Lady Vashj"].." ("..BabbleZone["Serpentshrine Cavern"]..")"};
 		};
 	};
 
