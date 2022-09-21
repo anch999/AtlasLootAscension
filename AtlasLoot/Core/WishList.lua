@@ -132,6 +132,21 @@ function AtlasLoot:ShareWishList()
 	StaticPopup_Show ("ATLASLOOT_SEND_WISHLIST",AtlasLootWishList["Own"][AtlasLootItemsFrame.refresh[3]].Name);
 end
 
+--[[ 
+AtlasLoot:WishListSwapButton
+Main panel wishlistswap button
+ ]]
+ function AtlasLoot:WishListSwapButton(xitemID, xitemTexture, xitemName, xlootPage, xsourcePage, button, show)
+	if AtlasLootItemsFrame.refresh[1] == "Own" then
+		if AtlasLootWishList["Shared"][1] then
+			AtlasLoot_WishListAddDropClick("addShared", 1, "", show);
+			AtlasLootItemsFrame_Wishlist_Swap:SetText("Own");
+		end
+	elseif AtlasLootItemsFrame.refresh[1] == "Shared" then
+		AtlasLoot_WishListAddDropClick("addOwn", AtlasLootWishList["Options"][playerName]["DefaultWishList"][3] or 1, "", show);
+		AtlasLootItemsFrame_Wishlist_Swap:SetText("Shared");
+	end
+end
 
 --[[ 
 AtlasLoot:WishListButton
@@ -362,7 +377,7 @@ function AtlasLoot:WishListOptionsRegister()
 				end
 				if AtlasLootItemsFrame.refresh[1] == "Own" then
 					AtlasLoot_WishListOptions:AddLine(
-						"text", AL["Make Default Wishlist"],
+						"text", AL["Make Wishlist Default"],
 						"func", function() AtlasLoot:SetDefaultWishList() end,
 						"notCheckable", true
 					);

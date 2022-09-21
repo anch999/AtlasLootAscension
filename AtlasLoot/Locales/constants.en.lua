@@ -300,7 +300,7 @@ if AL then
 	AL["Add Wishlist"] = true;
 	AL["Edit Wishlist"] = true;
 	AL["Copy Wishlist To Own"] = true;
-	AL["Make Default Wishlist"] = true;
+	AL["Make Wishlist Default"] = true;
 	AL["Delete Wishlist"] = true;
 	AL["Show More Icons"] = true;
 	AL["Wishlist name:"] = true;

@@ -1,9 +1,9 @@
 ﻿## Interface: 30300
 ## Title: AtlasLoot Ascension Edition
 ## Notes: Shows the possible loot from the bosses
-## Author: Original: Hegarol, Ascension: Skray/Szyler/Anch/Rvng
-## Version: v6.4.2
-## X-eMail: manager@atlasloot.net
+## Author: v7 Rebuid Done by: Anch/Rvng (Original: Hegarol, Ascension: Skray/Szyler/Anch/Rvng)
+## Version: v7.0.0
+## X-eMail: 
 ## X-Credits: Daviesh, Lag, Cellelach, Asurn, Pernicus and many others.
 ## X-Category: Map
 ## X-License: GPL v2

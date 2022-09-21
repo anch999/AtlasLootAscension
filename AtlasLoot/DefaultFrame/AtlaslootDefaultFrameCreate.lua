@@ -177,9 +177,15 @@ local backbtn = CreateFrame("Button", "AtlasLootItemsFrame_BACK", AtlasLootItems
         backbtn:SetScript("OnClick", function(self) AtlasLoot:BackButton_OnClick() end)
         backbtn:Hide();
 
+        -- Wishlist Own/Swap button
+local swapbtn = CreateFrame("Button", "AtlasLootItemsFrame_Wishlist_Swap", AtlasLootItemsFrame, "OptionsButtonTemplate");
+        swapbtn:SetPoint("BOTTOM", "AtlasLootItemsFrame", "BOTTOM",0,4);
+        swapbtn:SetScript("OnClick", function(self) AtlasLoot:WishListSwapButton("","","","","",self,true) end)
+        swapbtn:Hide();
+
         -- Wishlist Options button
 local optionsbtn = CreateFrame("Button", "AtlasLootItemsFrame_Wishlist_Options", AtlasLootItemsFrame, "OptionsButtonTemplate");
-        optionsbtn:SetPoint("BOTTOM", "AtlasLootItemsFrame", "BOTTOM",-50,4);
+        optionsbtn:SetPoint("BOTTOM", "AtlasLootItemsFrame_Wishlist_Swap", "BOTTOM",-100,0);
         optionsbtn:SetText(AL["Options"]);
         optionsbtn:SetScript("OnClick", function(self) 
             if AtlasLoot_WishListOptions:IsOpen() then
@@ -192,7 +198,7 @@ local optionsbtn = CreateFrame("Button", "AtlasLootItemsFrame_Wishlist_Options",
 
         -- Wishlist Share button
 local sharebtn = CreateFrame("Button", "AtlasLootItemsFrame_Wishlist_Share", AtlasLootItemsFrame, "OptionsButtonTemplate");
-        sharebtn:SetPoint("BOTTOM", "AtlasLootItemsFrame_Wishlist_Options", "BOTTOM",100,0);
+        sharebtn:SetPoint("BOTTOM", "AtlasLootItemsFrame_Wishlist_Swap", "BOTTOM",100,0);
         sharebtn:SetText(AL["Share"]);
         sharebtn:SetScript("OnClick", function() AtlasLoot:ShareWishList() end)
         sharebtn:Hide();

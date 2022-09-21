@@ -716,11 +716,18 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource, tablenum)
 		_G["AtlasLootItemsFrame_PREV"]:Hide();
 		_G["AtlasLootItemsFrame_Wishlist_Options"]:Hide();
 		_G["AtlasLootItemsFrame_Wishlist_Share"]:Hide();
+		_G["AtlasLootItemsFrame_Wishlist_Swap"]:Hide();
 
 		-- Show Wishlist buttons when a wishlist in showing
 		if dataSource_backup == "AtlasLootWishList" then
 			_G["AtlasLootItemsFrame_Wishlist_Options"]:Show();
 			_G["AtlasLootItemsFrame_Wishlist_Share"]:Show();
+			_G["AtlasLootItemsFrame_Wishlist_Swap"]:Show();
+			if dataID == "Shared" then
+				AtlasLootItemsFrame_Wishlist_Swap:SetText("Own");
+			elseif dataID == "Own" then
+				AtlasLootItemsFrame_Wishlist_Swap:SetText("Shared");
+			end
 		end
 
 		local tablebase = {dataID, dataSource_backup};
