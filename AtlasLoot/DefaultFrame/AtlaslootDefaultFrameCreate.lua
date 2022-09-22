@@ -319,6 +319,17 @@ local wishbtn = CreateFrame("Button", "AtlasLootDefaultFrameWishListButton", Atl
         wishbtn:RegisterForClicks("LeftButtonDown","RightButtonDown");
         wishbtn:SetScript("OnClick", function(self, btnclick)AtlasLoot:WishListButton("","","","","",self,true,btnclick) end);
         wishbtn:SetText(AL["Wishlist"]);
+        wishbtn:SetScript("OnEnter", function(self)
+                GameTooltip:ClearLines();
+                GameTooltip:SetOwner(self, "ANCHOR_RIGHT", -(self:GetWidth() / 2), 5);
+                GameTooltip:AddLine("Right Click For Menu");
+                GameTooltip:Show();
+        end);
+        wishbtn:SetScript("OnLeave", function()
+            if(GameTooltip:IsVisible()) then
+                GameTooltip:Hide();
+            end
+        end);
 
     --Quick Look Buttons
 local function presetcreate(preset,num)
