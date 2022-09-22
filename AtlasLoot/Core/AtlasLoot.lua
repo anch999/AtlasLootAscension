@@ -141,6 +141,7 @@ function AtlasLoot:OnEnable()
     end
 
 	if IsAddOnLoaded("Atlas") then
+		AtlasLoot:LoadMapData();
 		ATLASLOOT_ATLASLOADED = true;
 		AtlasLootDefaultFrame_MapButton:Show();
 		AtlasLootDefaultFrame_MapSelectButton:Show();
@@ -389,7 +390,7 @@ dataSource - Table in the database where the loot table is stored
 tablenum - Number of the table with the loot in it
 It is the workhorse of the mod and allows the loot tables to be displayed any way anywhere in any mod.
 ]]
-function AtlasLoot:ShowItemsFrame(dataID, dataSource, tablenum)
+function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 	--Set up local variables needed for GetItemInfo, etc
 	local itemName, itemLink, itemQuality, itemLevel, itemType, itemSubType, itemCount, itemEquipLoc, itemTexture, itemColor;
 	local iconFrame, nameFrame, extraFrame, itemButton;
@@ -397,7 +398,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource, tablenum)
 	local isValid, isItem, toShow, IDfound;
 	local spellName, spellIcon;
 
-	SearchPrevData = {dataID, dataSource, tablenum};
+	SearchPrevData = {dataID, dataSource_backup, tablenum};
 	
 
     --If the loot table name has not been passed, throw up a debugging statement
@@ -423,8 +424,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource, tablenum)
 	-- Hide the map header lable
 	Atlasloot_HeaderLabel:Hide();
 
-	local dataSource_backup = dataSource;
-	dataSource = _G[dataSource] or AtlasLoot_Data;
+	local dataSource = _G[dataSource_backup] or AtlasLoot_Data;
 
 	-- Check to see if Atlas is loaded and the table has a map
 	if dataSource_backup ~= "AtlasLoot_TokenData" and dataSource[dataID].Map and ATLASLOOT_ATLASLOADED then
@@ -750,7 +750,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource, tablenum)
 			tablenum = AtlasLootItemsFrame.refreshOri[3];
 		end
 
-		if tablenum ~= #_G[AtlasLootItemsFrame.refreshOri[2]][AtlasLootItemsFrame.refreshOri[1]] and dataSource_backup ~= "AtlasLoot_TokenData" then
+		if AtlasLootItemsFrame.refreshOri and tablenum ~= #_G[AtlasLootItemsFrame.refreshOri[2]][AtlasLootItemsFrame.refreshOri[1]] and dataSource_backup ~= "AtlasLoot_TokenData" then
 			_G["AtlasLootItemsFrame_NEXT"]:Show();
 			_G["AtlasLootItemsFrame_NEXT"].tablenum = tablenum + 1;
 			_G["AtlasLootItemsFrame_NEXT"].tablebase = tablebase;

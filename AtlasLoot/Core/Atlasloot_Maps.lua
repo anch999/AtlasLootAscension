@@ -110,6 +110,7 @@ function AtlasLoot:MapMenuRegister(mapID)
 	)
 end
 
+function AtlasLoot:LoadMapData()
 AtlasLoot_MultiMapData = {
 	["AuchManaTombs"] =		        {"AuchindounEnt","AuchManaTombs","AuchAuchenaiCrypts","AuchSethekkHalls","AuchShadowLabyrinth"};
     ["AuchAuchenaiCrypts"] =		{"AuchindounEnt","AuchManaTombs","AuchAuchenaiCrypts","AuchSethekkHalls","AuchShadowLabyrinth"};
@@ -2462,3 +2463,4 @@ AtlasLoot_MapData = {
     { WHITE.."6) "..AtlasLocale["Cyanigosa"].." ("..AtlasLocale["Wave 18"]..")", NPC, 31134 };
 };
 };
+end
