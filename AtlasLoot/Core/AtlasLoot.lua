@@ -51,6 +51,7 @@ AtlasLoot_DewdropExpansionMenu = AceLibrary("Dewdrop-2.0");
 ATLASLOOT_DEBUGSHOWN = false;
 ATLASLOOT_FILTER_ENABLE = false;
 ATLASLOOT_CURRENTTYPE = "Default";
+ATLASLOOT_TYPE = {};
 
 -- Colours stored for code readability
 local GREY = "|cff999999";
@@ -386,7 +387,6 @@ AtlasLoot:ShowItemsFrame(dataID, dataSource, tablenum):
 dataID - Name of the loot table
 dataSource - Table in the database where the loot table is stored
 tablenum - Number of the table with the loot in it
-tablenum - Table number of the loot table being displayed
 It is the workhorse of the mod and allows the loot tables to be displayed any way anywhere in any mod.
 ]]
 function AtlasLoot:ShowItemsFrame(dataID, dataSource, tablenum)
@@ -444,7 +444,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource, tablenum)
 		AtlasLootDefaultFrame_MapButton:Disable();
 		AtlasLootDefaultFrame_MapSelectButton:SetText("No Map");
 	end
-
+	local difType = false;
 	-- Checks to see if type is the same
 	if ATLASLOOT_CURRENTTYPE ~= dataSource[dataID].Type then
 		if dataSource[dataID].Type == "Crafting" then
@@ -452,15 +452,23 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource, tablenum)
 		elseif ItemindexID == "Pattern" and dataSource[dataID].Type ~= "Crafting" then
 			ItemindexID = 2;
 		else
-			ItemindexID = 2;
+			ItemindexID = ATLASLOOT_TYPE[dataSource[dataID].Type] or 2;
 		end
+		difType = true;
 	end
+
+	ATLASLOOT_TYPE[dataSource[dataID].Type] = ItemindexID;
 
 	-- Set current type
 	ATLASLOOT_CURRENTTYPE = dataSource[dataID].Type or "Default";
 
 	AtlasLoot:ScrollFrameUpdate();
 	AtlasLoot_BossName:SetText(dataSource[dataID][tablenum].Name);
+
+	if difType and #AtlasLoot_Difficulty[dataSource[dataID].Type] > 5 then
+		local min, max = AtlasLootDefaultFrameScrollScrollBar:GetMinMaxValues();
+		AtlasLootDefaultFrameScrollScrollBar:SetValue(ItemindexID * (max / #AtlasLoot_Difficulty[dataSource[dataID].Type]));
+	end
 
 	--For stopping the subtable from changing if its a token table
 	if dataSource[dataID].NoSubt == nil and dataID ~= "FilterList" then
