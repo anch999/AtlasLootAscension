@@ -457,14 +457,19 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource, tablenum)
 		difType = true;
 	end
 
+	-- Saves current types ItemindexID 
 	ATLASLOOT_TYPE[dataSource[dataID].Type] = ItemindexID;
 
 	-- Set current type
 	ATLASLOOT_CURRENTTYPE = dataSource[dataID].Type or "Default";
 
+	-- Loads the difficultys into the scrollFrame
 	AtlasLoot:ScrollFrameUpdate();
+
+	-- Sets the main page lable
 	AtlasLoot_BossName:SetText(dataSource[dataID][tablenum].Name);
 
+	-- Moves the difficulty scrollslider if the difficulty has changed
 	if difType and #AtlasLoot_Difficulty[dataSource[dataID].Type] > 5 then
 		local min, max = AtlasLootDefaultFrameScrollScrollBar:GetMinMaxValues();
 		AtlasLootDefaultFrameScrollScrollBar:SetValue(ItemindexID * (max / #AtlasLoot_Difficulty[dataSource[dataID].Type]));
