@@ -1063,6 +1063,13 @@ function AtlasLoot_FixText(text)
     text = gsub(text, "#arenas9#", AL["Gladiator's Battlegear"]);
     text = gsub(text, "#arenas10#", AL["Gladiator's Desecration"]);
 
+    -- PVP Seasons
+
+    text = gsub(text, "#arenas1L#", AL["Arena Season 1"]);
+    text = gsub(text, "#arenas2L#", AL["Arena Season 2"]);
+    text = gsub(text, "#arenas3L#", AL["Arena Season 3"]);
+    text = gsub(text, "#arenas4L#", AL["Arena Season 4"]);
+
     -- Crafting
     text = gsub(text, "#sr#", AL["Skill Required:"]);
 

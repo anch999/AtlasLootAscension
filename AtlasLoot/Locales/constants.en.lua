@@ -1265,6 +1265,12 @@ if AL then
 	AL["Gladiator's Battlegear"] = true;
 	AL["Gladiator's Desecration"] = true;
 
+	-- Arena Seasons
+	AL["Arena Season 1"] = true;
+	AL["Arena Season 2"] = true;
+	AL["Arena Season 3"] = true;
+	AL["Arena Season 4"] = true;
+
 	-- Level 80 PvP Weapons
 	AL["Savage Gladiator\'s Weapons"] = true; --unused
 	AL["Deadly Gladiator\'s Weapons"] = true; --unused
