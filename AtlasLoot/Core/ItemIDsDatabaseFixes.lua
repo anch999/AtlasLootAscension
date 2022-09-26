@@ -112,3 +112,7 @@ ItemIDsDatabase[33497] = {6033497, 33497, 333497, 233497};
 ItemIDsDatabase[33494] = {6033494, 33494, 333494, 233494};
 --ZA Bears
 ItemIDsDatabase[1333809] = {1333809, 1333809, 1433809, 1233809};
+
+--intact vial of kael'thas sunstrider
+ItemIDsDatabase[450001] = {450001, 450001, 450003, 450005};
+ItemIDsDatabase[450000] = {450000, 450000, 450002, 450004};
