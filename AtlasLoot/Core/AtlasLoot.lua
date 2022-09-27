@@ -478,7 +478,11 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 
 	--For stopping the subtable from changing if its a token table
 	if dataSource[dataID].NoSubt == nil and dataID ~= "FilterList" then
-		AtlasLootDefaultFrame_SubMenuText:SetText(dataSource[dataID].Name);
+		if dataSource[dataID].DisplayName then
+			AtlasLootDefaultFrame_SubMenuText:SetText(dataSource[dataID].DisplayName);
+		else
+			AtlasLootDefaultFrame_SubMenuText:SetText(dataSource[dataID].Name);
+		end
 		AtlasLoot:SubTableScrollFrameUpdate(dataID, dataSource_backup, tablenum);
 	end
 

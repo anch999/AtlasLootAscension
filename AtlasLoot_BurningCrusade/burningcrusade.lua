@@ -110,7 +110,8 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
 		-----------------------------------
 
 	AtlasLoot_Data["AuchCrypts"] = {
-			Name = BabbleZone["Auchenai Crypts"];
+			Name = BabbleZone["Auchindoun"]..": "..BabbleZone["Auchenai Crypts"];
+			DisplayName = BabbleZone["Auchenai Crypts"];
 			Type = "BCDungeon";
 			Map = "AuchAuchenaiCrypts";
 		{
@@ -174,7 +175,8 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
 		------------------------------
 
 	AtlasLoot_Data["AuchManaTombs"] = {
-			Name = BabbleZone["Mana-Tombs"];
+			Name = BabbleZone["Auchindoun"]..": "..BabbleZone["Mana-Tombs"];
+			DisplayName = BabbleZone["Mana-Tombs"];
 			Type = "BCDungeon";
 			Map = "AuchManaTombs";
 		{
@@ -280,7 +282,8 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
 		---------------------------------
 
 	AtlasLoot_Data["AuchSethekk"] = {
-			Name = BabbleZone["Sethekk Halls"];
+			Name = BabbleZone["Auchindoun"]..": "..BabbleZone["Sethekk Halls"];
+			DisplayName = BabbleZone["Sethekk Halls"];
 			Type = "BCDungeon";
 			Map = "AuchSethekkHalls";
 		{
@@ -346,7 +349,8 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
 		------------------------------------
 
 	AtlasLoot_Data["AuchShadowLab"] = {
-			Name = BabbleZone["Shadow Labyrinth"];
+			Name = BabbleZone["Auchindoun"]..": "..BabbleZone["Shadow Labyrinth"];
+			DisplayName = BabbleZone["Shadow Labyrinth"];
 			Type = "BCDungeon";
 			Map = "AuchShadowLabyrinth";
 		{
@@ -656,7 +660,8 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
 		------------------------------------------------
 
 	AtlasLoot_Data["CoTOldHillsbrad"] = {
-			Name = BabbleZone["Old Hillsbrad Foothills"];
+			Name = BabbleZone["Caverns of Time"]..": "..BabbleZone["Old Hillsbrad Foothills"];
+			DisplayName = BabbleZone["Old Hillsbrad Foothills"];
 			Type = "BCDungeon";
 			Map = "CoTOldHillsbrad";
 		{
@@ -756,7 +761,8 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
 		-----------------------------------------
 
 	AtlasLoot_Data["CoTBlackMorass"] = {
-			Name = BabbleZone["The Black Morass"];
+			Name = BabbleZone["Caverns of Time"]..": "..BabbleZone["The Black Morass"];
+			DisplayName = BabbleZone["The Black Morass"];
 			Type = "BCDungeon";
 			Map = "CoTBlackMorass";
 		{
@@ -823,7 +829,8 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
 		-------------------------------------
 
 	AtlasLoot_Data["CoTHyjal"] = {
-			Name = BabbleZone["Hyjal Summit"];
+			Name = BabbleZone["Caverns of Time"]..": "..BabbleZone["Hyjal Summit"];
+			DisplayName = BabbleZone["Hyjal Summit"];
 			Type = "BCRaid";
 			Map = "CoTHyjal";
 		{
@@ -936,7 +943,8 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
 		------------------------------------------
 
 	AtlasLoot_Data["CFRSlavePens"] = {
-			Name = BabbleZone["The Slave Pens"];
+			Name = BabbleZone["Coilfang Reservoir"]..": "..BabbleZone["The Slave Pens"];
+			DisplayName = BabbleZone["The Slave Pens"];
 			Type = "BCDungeon";
 			Map = "CFRTheSlavePens";
 		{
@@ -1019,7 +1027,8 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
 		------------------------------------------
 
 	AtlasLoot_Data["CFRSteamvault"] = {
-			Name = BabbleZone["The Steamvault"];
+			Name = BabbleZone["Coilfang Reservoir"]..": "..BabbleZone["The Steamvault"];
+			DisplayName = BabbleZone["The Steamvault"];
 			Type = "BCDungeon";
 			Map = "CFRTheSteamvault";
 		{
@@ -1094,7 +1103,8 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
 		----------------------------------------
 
 	AtlasLoot_Data["CFRUnderbog"] = {
-			Name = BabbleZone["The Underbog"];
+			Name = BabbleZone["Coilfang Reservoir"]..": "..BabbleZone["The Underbog"];
+			DisplayName = BabbleZone["The Underbog"];
 			Type = "BCDungeon";
 			Map = "CFRTheUnderbog";
 		{
@@ -1197,7 +1207,8 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
 		------------------------------------------------
 
 	AtlasLoot_Data["CFRSerpentshrine"] = {
-			Name = BabbleZone["Serpentshrine Cavern"];
+			Name = BabbleZone["Coilfang Reservoir"]..": "..BabbleZone["Serpentshrine Cavern"];
+			DisplayName = BabbleZone["Serpentshrine Cavern"];
 			Type = "BCRaid";
 			Map = "CFRSerpentshrineCavern";
 		{
@@ -1372,7 +1383,8 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
 		-------------------------------------------
 
 	AtlasLoot_Data["HCRamparts"] = {
-			Name = BabbleZone["Hellfire Ramparts"];
+			Name = BabbleZone["Hellfire Citadel"]..": "..BabbleZone["Hellfire Ramparts"];
+			DisplayName = BabbleZone["Hellfire Ramparts"];
 			Type = "BCDungeon";
 			Map = "HCHellfireRamparts";
 		{
@@ -1477,7 +1489,8 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
 		-------------------------------------------
 
 	AtlasLoot_Data["HCFurnace"] = {
-			Name = BabbleZone["The Blood Furnace"];
+			Name = BabbleZone["Hellfire Citadel"]..": "..BabbleZone["The Blood Furnace"];
+			DisplayName = BabbleZone["The Blood Furnace"];
 			Type = "BCDungeon";
 			Map = "HCBloodFurnace";
 		{
@@ -1555,7 +1568,7 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
 		---------------------------------------------
 
 	AtlasLoot_Data["HCShatteredHalls"] = {
-			Name = BabbleZone["The Shattered Halls"];
+			Name = BabbleZone["Hellfire Citadel"]..": "..BabbleZone["The Shattered Halls"];
 			Type = "BCDungeon";
 			Map = "HCTheShatteredHalls";
 		{
@@ -1639,11 +1652,12 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
 		--------------------------------------------
 
 	AtlasLoot_Data["HCMagtheridon"] = {
-			Name = "Magtheridon";
+			Name = BabbleZone["Hellfire Citadel"]..": "..BabbleZone["Magtheridon's Lair"];
+			DisplayName = BabbleZone["Magtheridon's Lair"];
 			Type = "BCRaid";
 			Map = "HCMagtheridonsLair";
 		{
-			Name = "Magtheridon";
+			Name = BabbleBoss["Magtheridon"];
 			{ 1, 28777, "", "=q4=Cloak of the Pit Stalker", "=ds=#s4#"};
 			{ 2, 28780, "", "=q4=Soul-Eater's Handwraps", "=ds=#s9#, #a1#"};
 			{ 3, 28776, "", "=q4=Liar's Tongue Gloves", "=ds=#s9#, #a2#"};
@@ -1923,7 +1937,8 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
 		----------------------------------------
 
 	AtlasLoot_Data["MagistersTerrace"] = {
-			Name = BabbleZone["Magisters' Terrace"];
+			Name = AL["Sunwell Isle"]..": "..BabbleZone["Magisters' Terrace"];
+			DisplayName = BabbleZone["Magisters' Terrace"];
 			Type = "BCDungeon";
 			Map = "MagistersTerrace";
 		{
@@ -2020,7 +2035,8 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
 		-------------------------------------
 
 	AtlasLoot_Data["SunwellPlateau"] = {
-			Name = BabbleZone["Sunwell Plateau"];
+			Name = AL["Sunwell Isle"]..": "..BabbleZone["Sunwell Plateau"];
+			DisplayName = BabbleZone["Sunwell Plateau"];
 			Type = "BCRaid";
 			Map = "SunwellPlateau";
 		{
@@ -2227,7 +2243,8 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
 		----------------------------------
 
 	AtlasLoot_Data["TKArc"] = {
-			Name = BabbleZone["The Arcatraz"];
+			Name = BabbleZone["Tempest Keep"]..": "..BabbleZone["The Arcatraz"];
+			DisplayName = BabbleZone["The Arcatraz"];
 			Type = "BCDungeon";
 			Map = "TempestKeepArcatraz";
 		{
@@ -2319,7 +2336,8 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
 		----------------------------------
 
 	AtlasLoot_Data["TKBot"] = {
-			Name = BabbleZone["The Botanica"];
+			Name = BabbleZone["Tempest Keep"]..": "..BabbleZone["The Botanica"];
+			DisplayName = BabbleZone["The Botanica"];
 			Type = "BCDungeon";
 			Map = "TempestKeepBotanica";
 		{
@@ -2432,7 +2450,8 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
 		----------------------------------
 
 	AtlasLoot_Data["TKMech"] = {
-			Name = BabbleZone["The Mechanar"];
+			Name = BabbleZone["Tempest Keep"]..": "..BabbleZone["The Mechanar"];
+			DisplayName = BabbleZone["The Mechanar"];
 			Type = "BCDungeon";
 			Map = "TempestKeepMechanar";
 		{
@@ -2510,7 +2529,8 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
 		-----------------------------
 
 	AtlasLoot_Data["TKEye"] = {
-			Name = BabbleZone["The Eye"];
+			Name = BabbleZone["Tempest Keep"]..": "..BabbleZone["The Eye"];
+			DisplayName = BabbleZone["The Eye"];
 			Type = "BCRaid";
 			Map = "TempestKeepTheEye";
 		{

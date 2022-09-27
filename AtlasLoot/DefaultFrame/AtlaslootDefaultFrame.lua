@@ -1,7 +1,7 @@
 --[[
 Functions:
 AtlasLoot:DewDropClick(tablename, text, tabletype, tabletype2)
-AtlasLoot:DewDropSubMenuClick(tablename, text)
+AtlasLoot:DewDropSubMenuClick(tablename)
 AtlasLoot:DewdropExpansionMenuClick(tablename, text)
 AtlasLoot_DefaultFrame_OnShow()
 AtlasLootDefaultFrame_OnHide()
@@ -90,7 +90,7 @@ function AtlasLoot:DewDropClick(tablename, text, tablenum)
 end
 
 --[[
-AtlasLoot:DewDropSubMenuClick(tablename, text):
+AtlasLoot:DewDropSubMenuClick(tablename):
 tablename - Name of the loot table in the database
 text - Heading for the loot table
 Called when a button in AtlasLoot_DewdropSubMenu is clicked
@@ -191,18 +191,15 @@ function AtlasLoot:DewdropSubMenuRegister(loottable)
                                     'textR', 0.2,
                                     'textG', 0.82,
                                     'textB', 0.5,
-                                    'func', function(arg1,arg2) AtlasLoot:DewDropSubMenuClick(arg1,arg2) end,
+                                    'func', function(arg1) AtlasLoot:DewDropSubMenuClick(arg1) end,
                                     'arg1', v[2],
-                                    'arg2', v[1],
-                                    'arg2', v[3],
                                     'notCheckable', true
                                 )
                         else
                             AtlasLoot_DewdropSubMenu:AddLine(
                                 'text', AtlasLoot_Data[v[2]].Name,
-                                'func', function(arg1,arg2) AtlasLoot:DewDropSubMenuClick(arg1,arg2) end,
+                                'func', function(arg1,arg2) AtlasLoot:DewDropSubMenuClick(arg1) end,
                                 'arg1', v[2],
-                                'arg2', AtlasLoot_Data[v[2]].Name,
                                 'notCheckable', true
                             )
                         end
