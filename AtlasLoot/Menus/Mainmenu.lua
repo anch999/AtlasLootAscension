@@ -27,7 +27,7 @@ AtlasLoot_SubMenus = {};
 AtlasLoot_ExpansionMenu = {
 		{ AL["Classic"], "CLASSIC" };
 		{ AL["Burning Crusade"], "TBC" };
-		--{ AL["Wrath of the Lich King"], "WRATH" };
+		{ AL["Wrath of the Lich King"], "WRATH" };
 };
 
 AtlasLoot_Data["EmptyTable"] = {

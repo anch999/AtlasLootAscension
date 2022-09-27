@@ -1113,7 +1113,6 @@ local SPELLFIRE = GetSpellInfo(26797);
 			{ 8, "s36077", "29973", "=q3=Primalstorm Breastplate", "=ds=#sr# 330"};
 			{ 9, "s32473", "25671", "=q2=Thick Draenic Vest", "=ds=#sr# 330"};
 			{ 10, "s32481", "25676", "=q2=Wild Draenish Vest", "=ds=#sr# 330"};
-
 		};
 		{
 			Name = AL["Leather Armor"].." - Feet";
@@ -1147,7 +1146,6 @@ local SPELLFIRE = GetSpellInfo(26797);
 			{ 3, "s35560", "29504", "=q4=Windscale Hood", "=ds=#sr# 365"};
 			{ 4, "s32489", "25682", "=q3=Stylin' Jungle Hat", "=ds=#sr# 350"};
 			{ 5, "s32485", "25680", "=q3=Stylin' Purple Hat", "=ds=#sr# 350"};
-
 		};
 		{
 			Name = AL["Leather Armor"].." - Legs";
@@ -1158,8 +1156,6 @@ local SPELLFIRE = GetSpellInfo(26797);
 			{ 5, "s32494", "25687", "=q3=Fel Leather Leggings", "=ds=#sr# 350"};
 			{ 6, "s32480", "25675", "=q2=Wild Draenish Leggings", "=ds=#sr# 320"};
 			{ 7, "s32471", "25670", "=q2=Thick Draenic Pants", "=ds=#sr# 315"};
-
-
 		};
 		{
 			Name = AL["Leather Armor"].." - Shoulder";
@@ -1395,7 +1391,6 @@ local SPELLFIRE = GetSpellInfo(26797);
 			{ 5, "s26783", "21867", "=q3=Arcanoweave Boots", "=ds=#sr# 360"};
 			{ 6, "s26776", "21860", "=q3=Imbued Netherweave Boots", "=ds=#sr# 350"};
 			{ 7, "s26772", "21853", "=q2=Netherweave Boots", "=ds=#sr# 335"};
-
 		};
 		{
 			Name = AL["Cloth Armor"].." - Hands";
@@ -1423,7 +1418,6 @@ local SPELLFIRE = GetSpellInfo(26797);
 			{ 4, "s31451", "24261", "=q4=Whitemend Pants", "=ds=#sr# 375"};
 			{ 5, "s26775", "21859", "=q3=Imbued Netherweave Pants", "=ds=#sr# 340"};
 			{ 6, "s26771", "21852", "=q2=Netherweave Pants", "=ds=#sr# 325"};
-
 		};
 		{
 			Name = AL["Cloth Armor"].." - Shoulder";
@@ -1432,7 +1426,6 @@ local SPELLFIRE = GetSpellInfo(26797);
 			{ 3, "s26761", "21874", "=q4=Primal Mooncloth Shoulders", "=ds=#sr# 365"};
 			{ 4, "s26780", "21864", "=q4=Soulcloth Shoulders", "=ds=#sr# 365"};
 			{ 5, "s26756", "21869", "=q4=Frozen Shadoweave Shoulders", "=ds=#sr# 355"};
-
 		};
 		{
 			Name = AL["Cloth Armor"].." - Waist";
@@ -1456,7 +1449,6 @@ local SPELLFIRE = GetSpellInfo(26797);
 			{ 6, "s31434", "24249", "=q3=Unyielding Bracers", "=ds=#sr# 350"};
 			{ 7, "s31435", "24250", "=q3=Bracers of Havok", "=ds=#sr# 350"};
 			{ 8, "s26764", "21849", "=q2=Netherweave Bracers", "=ds=#sr# 310"};
-
 		};
 		{
 			Name = AL["Bags"];
