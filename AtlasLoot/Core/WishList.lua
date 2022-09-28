@@ -256,7 +256,7 @@ end
 --[[
 AtlasLoot_DeleteFromWishList(itemID)
 Deletes the specified items from the wishlist
-]]	
+]]
 function AtlasLoot_DeleteFromWishList(itemID)
 	if itemID and itemID == 0 then return end
 	if AtlasLootItemsFrame.refresh[2] == "AtlasLootWishList" then
@@ -264,6 +264,10 @@ function AtlasLoot_DeleteFromWishList(itemID)
 			if v[2] == itemID then
 				DEFAULT_CHAT_FRAME:AddMessage(RED..AL["AtlasLoot"]..": "..AtlasLoot_FixText(v[4])..GREY..AL[" deleted from the WishList."]..WHITE.." (".._G[AtlasLootItemsFrame.refresh[2]][AtlasLootItemsFrame.refresh[1]][AtlasLootItemsFrame.refresh[3]].Name..")");
 				table.remove(_G[AtlasLootItemsFrame.refresh[2]][AtlasLootItemsFrame.refresh[1]][AtlasLootItemsFrame.refresh[3]], i);
+					--Sort wishlist after deleting an item
+					for n,table in ipairs(_G[AtlasLootItemsFrame.refresh[2]][AtlasLootItemsFrame.refresh[1]][AtlasLootItemsFrame.refresh[3]]) do
+						table[1] = n;
+					end
 				break;
 			end
 		end
