@@ -136,7 +136,7 @@ function AtlasLoot:OnEnable()
     if AtlasLoot_Data then
         AtlasLoot_Data["EmptyTable"] = {
 			Name = AL["Select a Loot Table..."];
-			{Name = ""};
+			{Name = AL["Select a Loot Table..."]};
 		};
     end
 
