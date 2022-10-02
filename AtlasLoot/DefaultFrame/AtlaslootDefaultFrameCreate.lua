@@ -458,7 +458,7 @@ local scrollFrame = CreateFrame("Frame", "Atlasloot_Difficulty_ScrollFrame", Atl
     scrollFrame.Lable:SetJustifyH("LEFT");
     scrollFrame.Lable:SetFont("GameFontNormal", 24);
 
-function AtlasLoot:ScrollFrameUpdate()
+function AtlasLoot:ScrollFrameUpdate(hide)
     if AtlasLoot_Difficulty then
         local maxValue = #AtlasLoot_Difficulty[ATLASLOOT_CURRENTTYPE];
         FauxScrollFrame_Update(scrollFrame.scrollBar, maxValue, MAX_ROWS, ROW_HEIGHT);
