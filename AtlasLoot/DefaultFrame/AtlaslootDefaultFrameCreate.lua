@@ -105,6 +105,7 @@ local function createLootItemButtons(num)
         button.extra:SetPoint("TOPLEFT","AtlasLootItem_"..num.."_Name","BOTTOMLEFT",0,-1);
         button.extra:SetJustifyH("LEFT");
         button:RegisterForClicks("AnyDown");
+        button.number = num;
         button:SetScript("OnEnter", function(self) AtlasLootItem_OnEnter(self) end);
         button:SetScript("OnLeave", function(self) AtlasLootItem_OnLeave(self) end);
         button:SetScript("OnClick", function(self, arg1) AtlasLootItem_OnClick(self, arg1) end);
@@ -179,7 +180,7 @@ local backbtn = CreateFrame("Button", "AtlasLootItemsFrame_BACK", AtlasLootItems
 
         -- Wishlist Own/Swap button
 local swapbtn = CreateFrame("Button", "AtlasLootItemsFrame_Wishlist_Swap", AtlasLootItemsFrame, "OptionsButtonTemplate");
-        swapbtn:SetPoint("BOTTOM", "AtlasLootItemsFrame", "BOTTOM",0,4);
+        swapbtn:SetPoint("BOTTOM", "AtlasLootItemsFrame", "BOTTOM",50,4);
         swapbtn:SetScript("OnClick", function(self) AtlasLoot:WishListSwapButton("","","","","",self,true) end)
         swapbtn:Hide();
 
@@ -187,7 +188,7 @@ local swapbtn = CreateFrame("Button", "AtlasLootItemsFrame_Wishlist_Swap", Atlas
 local optionsbtn = CreateFrame("Button", "AtlasLootItemsFrame_Wishlist_Options", AtlasLootItemsFrame, "OptionsButtonTemplate");
         optionsbtn:SetPoint("BOTTOM", "AtlasLootItemsFrame_Wishlist_Swap", "BOTTOM",-100,0);
         optionsbtn:SetText(AL["Options"]);
-        optionsbtn:SetScript("OnClick", function(self) 
+        optionsbtn:SetScript("OnClick", function(self)
             if AtlasLoot_WishListOptions:IsOpen() then
                 AtlasLoot_WishListOptions:Close();
             else
@@ -196,13 +197,41 @@ local optionsbtn = CreateFrame("Button", "AtlasLootItemsFrame_Wishlist_Options",
         end);
         optionsbtn:Hide();
 
-        -- Wishlist Share button
+        -- Wishlist Item Lock button
+ATLASLOOT_ITEM_UNLOCK = false;
+local lockbtn = CreateFrame("Button", "AtlasLootItemsFrame_Wishlist_UnLock", AtlasLootItemsFrame, "OptionsButtonTemplate");
+        lockbtn:SetPoint("BOTTOM", "AtlasLootItemsFrame_Wishlist_Options", "BOTTOM",-100,0);
+        lockbtn:SetScript("OnClick", function(self)
+            if ATLASLOOT_ITEM_UNLOCK then
+                ATLASLOOT_ITEM_UNLOCK = false;
+                lockbtn:SetText("Locked");
+            else
+                ATLASLOOT_ITEM_UNLOCK = true;
+                lockbtn:SetText("UnLocked");
+            end
+        end)
+        lockbtn:SetScript("OnEnter", function(self)
+            GameTooltip:ClearLines();
+            GameTooltip:SetOwner(self, "ANCHOR_RIGHT", -(self:GetWidth() / 2), 5);
+            GameTooltip:AddLine("Toggle Item Moving");
+            GameTooltip:AddLine("Left Click to move item up");
+            GameTooltip:AddLine("Right Click to move item down");
+            GameTooltip:AddLine("Alt + Left Click to add a divider");
+            GameTooltip:Show();
+        end);
+        lockbtn:SetScript("OnLeave", function()
+        if(GameTooltip:IsVisible()) then
+            GameTooltip:Hide();
+        end
+        end);
+        lockbtn:SetText("Locked");
+        lockbtn:Hide();
+    -- Wishlist Share button
 local sharebtn = CreateFrame("Button", "AtlasLootItemsFrame_Wishlist_Share", AtlasLootItemsFrame, "OptionsButtonTemplate");
         sharebtn:SetPoint("BOTTOM", "AtlasLootItemsFrame_Wishlist_Swap", "BOTTOM",100,0);
         sharebtn:SetText(AL["Share"]);
         sharebtn:SetScript("OnClick", function() AtlasLoot:ShareWishList() end)
         sharebtn:Hide();
-
         -- Filter Button
 local filterbtn = CreateFrame("CheckButton","AtlasLootFilterCheck",AtlasLootItemsFrame,"OptionsCheckButtonTemplate");
         filterbtn:SetPoint("BOTTOM", "AtlasLootItemsFrame", "BOTTOM",85 ,27);
@@ -351,7 +380,11 @@ local function presetcreate(preset,num)
         if AtlasLoot:IsLootTableAvailable(AtlasLootCharDB["QuickLooks"][num][4]) then
             ATLASLOOT_LASTMODULE = AtlasLootCharDB["QuickLooks"][num][4];
             ATLASLOOT_CURRENTTABLE = AtlasLootCharDB["QuickLooks"][num][5];
-            AtlasLoot:ShowItemsFrame(AtlasLootCharDB["QuickLooks"][num][1], AtlasLootCharDB["QuickLooks"][num][2], AtlasLootCharDB["QuickLooks"][num][3]);
+            if AtlasLootCharDB["QuickLooks"][num][2] == "AtlasLootWishList" then
+                AtlasLoot:ShowWishList(AtlasLootCharDB["QuickLooks"][num][1], AtlasLootCharDB["QuickLooks"][num][3]);
+            else
+                AtlasLoot:ShowItemsFrame(AtlasLootCharDB["QuickLooks"][num][1], AtlasLootCharDB["QuickLooks"][num][2], AtlasLootCharDB["QuickLooks"][num][3]);
+            end
         end
     end);
     preset:SetScript("OnShow", function(self)
@@ -458,17 +491,40 @@ local scrollFrame = CreateFrame("Frame", "Atlasloot_Difficulty_ScrollFrame", Atl
     scrollFrame.Lable:SetJustifyH("LEFT");
     scrollFrame.Lable:SetFont("GameFontNormal", 24);
 
-function AtlasLoot:ScrollFrameUpdate(hide)
-    if AtlasLoot_Difficulty then
-        local maxValue = #AtlasLoot_Difficulty[ATLASLOOT_CURRENTTYPE];
+function AtlasLoot:ScrollFrameUpdate(hide,wishlist)
+    local maxValue,offset,row,value;
+    scrollFrame.wishList = nil;
+    if wishlist then
+        scrollFrame.wishList = wishlist;
+        maxValue = #AtlasLootWishList[wishlist];
         FauxScrollFrame_Update(scrollFrame.scrollBar, maxValue, MAX_ROWS, ROW_HEIGHT);
-        local offset = FauxScrollFrame_GetOffset(scrollFrame.scrollBar);
+        offset = FauxScrollFrame_GetOffset(scrollFrame.scrollBar);
         for i = 1, MAX_ROWS do
-            local value = i + offset
+            value = i + offset
+            scrollFrame.rows[i]:SetChecked(false);
+            scrollFrame.rows[i]:SetHighlightTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD");
+            if value <= maxValue and AtlasLootWishList[wishlist][value] then
+                row = scrollFrame.rows[i]
+                row:SetText("|cffFFd200"..AtlasLootWishList[wishlist][value].Name);
+                row.itemIndex = value;
+                if row.itemIndex == ATLASLOOT_CURRENT_WISHLIST_NUM then
+                    row:SetChecked(true);
+                end
+                row:Show()
+            else
+                scrollFrame.rows[i]:Hide()
+            end
+        end
+    elseif AtlasLoot_Difficulty then
+        maxValue = #AtlasLoot_Difficulty[ATLASLOOT_CURRENTTYPE];
+        FauxScrollFrame_Update(scrollFrame.scrollBar, maxValue, MAX_ROWS, ROW_HEIGHT);
+        offset = FauxScrollFrame_GetOffset(scrollFrame.scrollBar);
+        for i = 1, MAX_ROWS do
+            value = i + offset
             scrollFrame.rows[i]:SetChecked(false);
             scrollFrame.rows[i]:SetHighlightTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD");
             if value <= maxValue and AtlasLoot_Difficulty[ATLASLOOT_CURRENTTYPE][value] and hide == nil then
-                local row = scrollFrame.rows[i]
+                row = scrollFrame.rows[i]
                 row:SetText("|cffFFd200"..AtlasLoot_Difficulty[ATLASLOOT_CURRENTTYPE][value][1]);
                 row.itemIndex = AtlasLoot_Difficulty[ATLASLOOT_CURRENTTYPE][value][2];
                 if row.itemIndex == ItemindexID then
@@ -483,15 +539,23 @@ function AtlasLoot:ScrollFrameUpdate(hide)
 end
 
 local scrollSlider = CreateFrame("ScrollFrame","AtlasLootDefaultFrameScroll", Atlasloot_Difficulty_ScrollFrame, "FauxScrollFrameTemplate");
-    scrollSlider:SetPoint("TOPLEFT", 0, -8)
-    scrollSlider:SetPoint("BOTTOMRIGHT", -30, 8)
+    scrollSlider:SetPoint("TOPLEFT", 0, -8);
+    scrollSlider:SetPoint("BOTTOMRIGHT", -30, 8);
     scrollSlider:SetScript("OnVerticalScroll", function(self, offset)
-    self.offset = math.floor(offset / ROW_HEIGHT + 0.5)
-        AtlasLoot:ScrollFrameUpdate()
+    self.offset = math.floor(offset / ROW_HEIGHT + 0.5);
+    if scrollFrame.wishList then
+        AtlasLoot:ScrollFrameUpdate(nil,scrollFrame.wishList);
+    else
+        AtlasLoot:ScrollFrameUpdate();
+    end
 end)
 
 scrollSlider:SetScript("OnShow", function()
-    AtlasLoot:ScrollFrameUpdate()
+    if scrollFrame.wishList then
+        AtlasLoot:ScrollFrameUpdate(nil,scrollFrame.wishList);
+    else
+        AtlasLoot:ScrollFrameUpdate()
+    end
 end)
 
 scrollFrame.scrollBar = scrollSlider
@@ -502,11 +566,18 @@ local rows = setmetatable({}, { __index = function(t, i)
 	row:SetNormalFontObject(GameFontHighlightLeft);
     row:SetCheckedTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD");
     row:SetScript("OnClick", function()
-        ItemindexID = row.itemIndex;
-        if not AtlasLootDefaultFrame_AdvancedSearchPanel:IsVisible() then
-        AtlasLoot:ShowItemsFrame(AtlasLootItemsFrame.refresh[1], AtlasLootItemsFrame.refresh[2], AtlasLootItemsFrame.refresh[3]);
+        if scrollFrame.wishList then
+            AtlasLoot:ShowWishList(scrollFrame.wishList,row.itemIndex);
+            AtlasLoot_CurrentWishList["Show"].ListNum = row.itemIndex;
+            AtlasLoot:ScrollFrameUpdate(nil,scrollFrame.wishList);
+        else
+            ItemindexID = row.itemIndex;
+            if not AtlasLootDefaultFrame_AdvancedSearchPanel:IsVisible() then
+            AtlasLoot:ShowItemsFrame(AtlasLootItemsFrame.refresh[1], AtlasLootItemsFrame.refresh[2], AtlasLootItemsFrame.refresh[3]);
+            end
+            AtlasLoot:ScrollFrameUpdate();
         end
-        AtlasLoot:ScrollFrameUpdate();
+       
     end)
 	if i == 1 then
 		row:SetPoint("TOPLEFT", scrollFrame, 8, -8)
