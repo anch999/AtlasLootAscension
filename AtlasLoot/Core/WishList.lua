@@ -106,8 +106,8 @@ local function CloneTable(t)				-- return a copy of the table t
 	return new;
 end
 
--- Add divider 
-function AtlasLoot:AddItemDivider(num,text)
+-- Add CustomHeader 
+function AtlasLoot:AddItemCustomHeader(num,text)
 	for i,v in ipairs(AtlasLootWishList[AtlasLoot_CurrentWishList["Show"].ListType][AtlasLoot_CurrentWishList["Show"].ListNum]) do
 		if num <= v[1] then
 			v[1] = v[1] + 1;
@@ -1050,11 +1050,11 @@ StaticPopupDialogs["ATLASLOOT_SEND_WISHLIST"] = {
 };
 
 --[[
-StaticPopupDialogs["ATLASLOOT_ADD_DIVIDER"]
-This is shown, if you want too add a divider to a wishlist
+StaticPopupDialogs["ATLASLOOT_ADD_CUSTOMHEADER"]
+This is shown, if you want too add a CustomHeader to a wishlist
 ]]
-StaticPopupDialogs["ATLASLOOT_ADD_DIVIDER"] = {
-	text = "Add text for a divider or leave blank for a blank",
+StaticPopupDialogs["ATLASLOOT_ADD_CUSTOMHEADER"] = {
+	text = "Add text for a Custom Header or leave blank for a blank",
 	button1 = "Set Text",
 	button2 = AL["Cancel"],
 	OnShow = function(self)
@@ -1062,7 +1062,7 @@ StaticPopupDialogs["ATLASLOOT_ADD_DIVIDER"] = {
 	end,
 	OnAccept = function()
 		local text = _G[this:GetParent():GetName().."EditBox"]:GetText();
-		AtlasLoot:AddItemDivider(StaticPopupDialogs.ATLASLOOT_ADD_DIVIDER.num,text);
+		AtlasLoot:AddItemCustomHeader(StaticPopupDialogs.ATLASLOOT_ADD_CUSTOMHEADER.num,text);
 	end,
 	hasEditBox = 1,
 	timeout = 0,

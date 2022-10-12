@@ -224,8 +224,8 @@ function AtlasLootItem_OnClick(self ,arg1)
         if arg1=="RightButton" and ATLASLOOT_ITEM_UNLOCK then
             AtlasLoot:MoveWishlistItem("Down",self.number);
         elseif IsAltKeyDown() and arg1=="LeftButton" and ATLASLOOT_ITEM_UNLOCK then
-            StaticPopup_Show ("ATLASLOOT_ADD_DIVIDER");
-            StaticPopupDialogs.ATLASLOOT_ADD_DIVIDER.num = self.number;
+            StaticPopup_Show ("ATLASLOOT_ADD_CUSTOMHEADER");
+            StaticPopupDialogs.ATLASLOOT_ADD_CUSTOMHEADER.num = self.number;
         elseif (arg1=="LeftButton") and ATLASLOOT_ITEM_UNLOCK then
             AtlasLoot:MoveWishlistItem("Up",self.number);
         elseif(arg1=="RightButton" and not iteminfo and self.itemID ~= 0) then

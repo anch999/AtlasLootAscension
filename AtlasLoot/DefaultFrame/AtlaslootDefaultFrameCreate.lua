@@ -216,7 +216,7 @@ local lockbtn = CreateFrame("Button", "AtlasLootItemsFrame_Wishlist_UnLock", Atl
             GameTooltip:AddLine("Toggle Item Moving");
             GameTooltip:AddLine("Left Click to move item up");
             GameTooltip:AddLine("Right Click to move item down");
-            GameTooltip:AddLine("Alt + Left Click to add a divider");
+            GameTooltip:AddLine("Alt + Left Click to add a Custom Header");
             GameTooltip:Show();
         end);
         lockbtn:SetScript("OnLeave", function()
@@ -563,6 +563,7 @@ scrollFrame.scrollBar = scrollSlider
 local rows = setmetatable({}, { __index = function(t, i)
 	local row = CreateFrame("CheckButton", "$parentRow"..i, scrollFrame)
 	row:SetSize(230, ROW_HEIGHT);
+    row:SetFrameStrata("Dialog");
 	row:SetNormalFontObject(GameFontHighlightLeft);
     row:SetCheckedTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD");
     row:SetScript("OnClick", function()
@@ -655,8 +656,9 @@ local scrollSlider2 = CreateFrame("ScrollFrame","AtlasLootDefaultFrameSubTableSc
 
 local rows2 = setmetatable({}, { __index = function(t, i)
     local row = CreateFrame("CheckButton", "$parentRow"..i, subtableFrame)
-    row:SetSize(230, ROW_HEIGHT)
-    row:SetNormalFontObject(GameFontHighlightLeft)
+    row:SetSize(230, ROW_HEIGHT);
+    row:SetFrameStrata("Dialog");
+    row:SetNormalFontObject(GameFontHighlightLeft);
     row:SetCheckedTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD");
     row.Text = row:CreateFontString("$parentRow"..i.."Text","OVERLAY","GameFontNormal");
     row.Text:SetSize(230, ROW_HEIGHT);
