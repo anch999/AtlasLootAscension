@@ -49,9 +49,11 @@ function AtlasLoot:ShowWishList(listType,arg2,arg3)
 		table.insert(AtlasLoot_CurrentWishList["Show"], {Name = "Page "..n})
 	end
 		for i,v in ipairs(AtlasLootWishList[listType][arg2]) do
-			local itemNum = v[1];
-			if v[1] >= 31 then
-			itemNum = v[1]-(math.floor(v[1]/30)*30);
+			local itemNum
+			if (v[1]-(math.floor(v[1]/30)*30)) == 0 then
+				itemNum = 30;
+			else
+				itemNum = v[1]-(math.floor(v[1]/30)*30);
 			end
 			table.insert(AtlasLoot_CurrentWishList["Show"][math.ceil(v[1]/30)], {itemNum,v[2],v[3],v[4],v[5],v[6],v[7],v[8]});
 		end
