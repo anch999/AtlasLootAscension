@@ -45,6 +45,7 @@ function AtlasLootOptions_Init()
 	AtlasLootOptionsFrameItemSyncTT:SetChecked(AtlasLoot.db.profile.ItemSyncTT);
     AtlasLootOptionsFrameEquipCompare:SetChecked(AtlasLoot.db.profile.EquipCompare);
     AtlasLootOptionsFrameOpaque:SetChecked(AtlasLoot.db.profile.Opaque);
+    AtlasLootOptionsFrameAutoInstance:SetChecked(AtlasLoot.db.profile.AutoCurrentInstance);
     AtlasLootOptionsFrameItemID:SetChecked(AtlasLoot.db.profile.ItemIDs);
     AtlasLootOptionsFrameLoDStartup:SetChecked(AtlasLoot.db.profile.LoadAllLoDStartup);
     AtlasLootOptionsFrameLootBrowserScale:SetValue(AtlasLoot.db.profile.LootBrowserScale);
@@ -104,6 +105,10 @@ function AtlasLootOptions_OpaqueToggle()
         AtlasLootItemsFrame_Back:SetTexture(0, 0, 0, 0.65);
     end
     AtlasLootOptions_Init();
+end
+
+function AtlasLoot:Options_AutoInstanceToggle()
+    AtlasLoot.db.profile.AutoCurrentInstance = AtlasLootOptionsFrameAutoInstance:GetChecked();
 end
 
 function AtlasLootOptions_LoDStartup()
@@ -314,6 +319,11 @@ local opaque = CreateFrame("CheckButton", "AtlasLootOptionsFrameOpaque", AtlasLo
         opaque:SetPoint("TOPLEFT",5,-130);
         AtlasLootOptionsFrameOpaqueText:SetText(AL["Make Loot Table Opaque"]);
         opaque:SetScript("OnClick", function() AtlasLootOptions_OpaqueToggle() end);
+
+local autoInstance = CreateFrame("CheckButton", "AtlasLootOptionsFrameAutoInstance", AtlasLootOptionsFrame, "OptionsCheckButtonTemplate");
+        autoInstance:SetPoint("TOPLEFT",5,-160);
+        AtlasLootOptionsFrameAutoInstanceText:SetText(AL["Auto Load Instance Loot Pages"]);
+        autoInstance:SetScript("OnClick", function() AtlasLoot:Options_AutoInstanceToggle() end);
 
 local itemid = CreateFrame("CheckButton", "AtlasLootOptionsFrameItemID", AtlasLootOptionsFrame, "OptionsCheckButtonTemplate");
         itemid:SetPoint("TOP",5,-130);
