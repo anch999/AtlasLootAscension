@@ -299,6 +299,8 @@ if AL then
 	AL["Always use default Wishlist"] = true;
 	AL["Add Wishlist"] = true;
 	AL["Edit Wishlist"] = true;
+	AL["Sort Wishlist"] = true;
+	AL["Auto Sort WishLists"] = true;
 	AL["Copy Wishlist To Own"] = true;
 	AL["Make Wishlist Default"] = true;
 	AL["Delete Wishlist"] = true;
