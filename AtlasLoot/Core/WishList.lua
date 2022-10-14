@@ -151,21 +151,26 @@ end
 
 --Sort wishlist
 function AtlasLoot:SortWishList(refresh)
-	local sorted = {};
+	Sorted = {};
 	local name = AtlasLootWishList[AtlasLoot_CurrentWishList["Show"].ListType][AtlasLoot_CurrentWishList["Show"].ListNum].Name;
 	local icon = AtlasLootWishList[AtlasLoot_CurrentWishList["Show"].ListType][AtlasLoot_CurrentWishList["Show"].ListNum].Icon;
 		for i,v in ipairs(AtlasLootWishList[AtlasLoot_CurrentWishList["Show"].ListType][AtlasLoot_CurrentWishList["Show"].ListNum]) do
-			if sorted[v[5]] and v[2] ~= 0 then
-				table.insert(sorted[v[5]],v);
-			elseif v[2] ~= 0 then
-				sorted[v[5]] = {};
-				table.insert(sorted[v[5]],{0, 0, "INV_Box_01", WHITE..v[5], ""});
-				table.insert(sorted[v[5]],v);
+			local function tableCheck()
+				for n,t in ipairs(Sorted) do
+					if t[2][5] == v[5] then
+						return t
+					end
+				end
 			end
+				if tableCheck() and v[2] ~= 0 then
+					table.insert(tableCheck(),v);
+				elseif v[2] ~= 0 then
+					table.insert(Sorted,{{0, 0, "INV_Box_01", WHITE..v[5], ""},v});
+				end
 		end
 	AtlasLootWishList[AtlasLoot_CurrentWishList["Show"].ListType][AtlasLoot_CurrentWishList["Show"].ListNum] = {};
 		local num = 1
-		for i,v in pairs(sorted) do
+		for i,v in ipairs(Sorted) do
 			for n,t in ipairs(v) do
 				if num ~= 1 and t[3] == "INV_Box_01" then
 					table.insert(AtlasLootWishList[AtlasLoot_CurrentWishList["Show"].ListType][AtlasLoot_CurrentWishList["Show"].ListNum],{num, 0, "Blank", WHITE.." ", ""});
