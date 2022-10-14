@@ -22,7 +22,7 @@ AtlasLoot:AddTooltip(frameb, tooltiptext)
 AtlasLoot:FindId(name, difficulty)
 ]]
 
-AtlasLoot = LibStub("AceAddon-3.0"):NewAddon("AtlasLoot", "AceEvent-3.0");
+AtlasLoot = LibStub("AceAddon-3.0"):NewAddon("AtlasLoot", "AceEvent-3.0", "AceTimer-3.0")
 
 --Instance required libraries
 local BabbleBoss = AtlasLoot_GetLocaleLibBabble("LibBabble-Boss-3.0")
@@ -374,13 +374,19 @@ function AtlasLoot:CreateToken(dataID)
 					if itemType == select(9, GetItemInfo(itemID)) or itemType2 == select(9, GetItemInfo(itemID)) then
 						table.insert(AtlasLoot_TokenData[orgID][1], {#AtlasLoot_TokenData[orgID][1] + 1, v[2], v[3], v[4], t.Name});
 					end
-					if #AtlasLoot_Data[dataID] == n and #t == c then
-						AtlasLoot:ShowItemsFrame(AtlasLootItemsFrame.refresh[1], AtlasLootItemsFrame.refresh[2], AtlasLootItemsFrame.refresh[3]);
+					if #t == n then
+						AtlasLoot:CancelTimer(AtlasLoot.refreshTimer);
+						AtlasLoot.refreshTimer = AtlasLoot:ScheduleTimer("Refresh", 2);
 					end
 				end)
 			end
 		end
 	end
+end
+
+-- Refresh loottable after token table creation.
+function AtlasLoot:Refresh()
+	AtlasLoot:ShowItemsFrame(AtlasLootItemsFrame.refresh[1], AtlasLootItemsFrame.refresh[2], AtlasLootItemsFrame.refresh[3]);
 end
 
 --[[
