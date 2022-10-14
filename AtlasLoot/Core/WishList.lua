@@ -162,7 +162,7 @@ function AtlasLoot:SortWishList(refresh)
 					end
 				end
 			end
-				if tableCheck() and v[2] ~= 0 then
+				if v[2] ~= 0 and tableCheck() then
 					table.insert(tableCheck(),v);
 				elseif v[2] ~= 0 then
 					table.insert(Sorted,{{0, 0, "INV_Box_01", WHITE..v[5], ""},v});
