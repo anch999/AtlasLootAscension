@@ -554,7 +554,7 @@ scrollSlider:SetScript("OnShow", function()
     if scrollFrame.wishList then
         AtlasLoot:ScrollFrameUpdate(nil,scrollFrame.wishList);
     else
-        AtlasLoot:ScrollFrameUpdate()
+        AtlasLoot:ScrollFrameUpdate();
     end
 end)
 
@@ -704,7 +704,6 @@ local mapbtn = CreateFrame("Button","AtlasLootDefaultFrame_MapButton", AtlasLoot
     mapbtn:SetPoint("BOTTOMLEFT",Atlasloot_SubTableFrame,0,-27.5);
     mapbtn:SetText("Map");
     mapbtn:SetScript("OnClick", function() AtlasLoot:MapOnShow(); end)
-    mapbtn:Hide();
 
     -- Map Select Button
 local mapSelbtn = CreateFrame("Button","AtlasLootDefaultFrame_MapSelectButton", AtlasLootDefaultFrame,"OptionsButtonTemplate");
@@ -718,4 +717,10 @@ local mapSelbtn = CreateFrame("Button","AtlasLootDefaultFrame_MapSelectButton", 
         end
     end);
     mapSelbtn:SetText("No Map");
-    mapSelbtn:Hide();
+
+    -- Load Current Instance Button
+local currentInstance = CreateFrame("Button","AtlasLootDefaultFrame_LoadInstanceButton", AtlasLootDefaultFrame,"OptionsButtonTemplate");
+    currentInstance:SetSize(283,24);
+    currentInstance:SetPoint("BOTTOMRIGHT",Atlasloot_SubTableFrame,10,-58);
+    currentInstance:SetScript("OnClick", function() AtlasLoot:ShowInstance(); end)
+    currentInstance:SetText("Load Current Instance");

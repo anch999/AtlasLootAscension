@@ -35,28 +35,11 @@ Called whenever the loot browser is shown and sets up buttons and loot tables
 function AtlasLootDefaultFrame_OnShow()
     --Definition of where I want the loot table to be shown
     --Remove the selection of a loot table in Atlas
-    AtlasLootItemsFrame.activeBoss = nil;
-        -- checks to see if there is an instance to auto load its loottable
-        local function findInstance()
-            for i,v in pairs(AtlasLoot_SubMenus) do
-                for n,t in ipairs(v) do
-                    if t[4] == BabbleZone[GetRealZoneText()] then
-                        ATLASLOOT_CURRENTTABLE = v.SubMenu;
-                        ATLASLOOT_LASTMODULE = v.Module;
-                        AtlasLoot:IsLootTableAvailable(ATLASLOOT_LASTMODULE);
-                        AtlasLoot:ShowItemsFrame(t[2], "AtlasLoot_Data", 1);
-                        AtlasLoot_DewdropSubMenu:Unregister(AtlasLootDefaultFrame_SubMenu);
-                        AtlasLoot:DewdropSubMenuRegister(AtlasLoot_SubMenus[ATLASLOOT_CURRENTTABLE]);
-                        AtlasLoot:WishListOptionsRegister();
-                        return true;
-                    end
-                end
-            end
-        end
+    AtlasLootItemsFrame.activeBoss = nil;  
     --Set the item table to the loot table
     --Show the last displayed loot table
     local lastboss = AtlasLoot.db.profile.LastBoss;
-    if AtlasLoot.db.profile.AutoCurrentInstance and findInstance() then elseif lastboss and lastboss[4] then
+    if AtlasLoot.db.profile.AutoCurrentInstance and AtlasLoot:ShowInstance() then elseif lastboss and lastboss[4] then
         ATLASLOOT_CURRENTTABLE = lastboss[5];
         ATLASLOOT_LASTMODULE = lastboss[4];
         AtlasLoot:IsLootTableAvailable(lastboss[4]);
@@ -66,6 +49,24 @@ function AtlasLootDefaultFrame_OnShow()
         AtlasLoot:WishListOptionsRegister();
     else
         AtlasLoot:ShowItemsFrame("EmptyTable", "AtlasLoot_Data", 1);
+    end
+end
+
+-- Show the Instance you are in
+function AtlasLoot:ShowInstance()
+    for i,v in pairs(AtlasLoot_SubMenus) do
+        for n,t in ipairs(v) do
+            if t[4] == BabbleZone[GetRealZoneText()] then
+                ATLASLOOT_CURRENTTABLE = v.SubMenu;
+                ATLASLOOT_LASTMODULE = v.Module;
+                AtlasLoot:IsLootTableAvailable(ATLASLOOT_LASTMODULE);
+                AtlasLoot:ShowItemsFrame(t[2], "AtlasLoot_Data", 1);
+                AtlasLoot_DewdropSubMenu:Unregister(AtlasLootDefaultFrame_SubMenu);
+                AtlasLoot:DewdropSubMenuRegister(AtlasLoot_SubMenus[ATLASLOOT_CURRENTTABLE]);
+                AtlasLoot:WishListOptionsRegister();
+                return true;
+            end
+        end
     end
 end
 
@@ -306,6 +307,7 @@ function AtlasLoot:SetNewStyle(style)
         "AtlasLootDefaultFrame_AdvancedSearchPanel_ClearButton",
         "AtlasLootDefaultFrame_MapButton",
         "AtlasLootDefaultFrame_MapSelectButton",
+        "AtlasLootDefaultFrame_LoadInstanceButton",
 	}
 
 	if style == "new" then

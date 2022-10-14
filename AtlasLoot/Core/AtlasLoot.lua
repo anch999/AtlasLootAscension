@@ -143,8 +143,8 @@ function AtlasLoot:OnEnable()
 	if IsAddOnLoaded("Atlas") then
 		AtlasLoot:LoadMapData();
 		ATLASLOOT_ATLASLOADED = true;
-		AtlasLootDefaultFrame_MapButton:Show();
-		AtlasLootDefaultFrame_MapSelectButton:Show();
+		AtlasLootDefaultFrame_MapButton:Enable();
+		AtlasLootDefaultFrame_MapSelectButton:Enable();
 	end
 
     --Add the loot browser to the special frames tables to enable closing wih the ESC key
@@ -230,6 +230,12 @@ function AtlasLoot:OnEnable()
         LibStub("LibAboutPanel").new(AL["AtlasLoot"], "AtlasLoot");
     end
     AtlasLoot_UpdateLootBrowserScale();
+	local playerName = UnitName("player");
+	if AtlasLootWishList["Options"][playerName]["AutoSortWishlist"] then
+		AtlasLootItemsFrame_Wishlist_UnLock:Disable();
+	else
+		AtlasLootItemsFrame_Wishlist_UnLock:Enable();
+	end
 end
 
 function AtlasLoot_Reset(data)
@@ -477,19 +483,27 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 		AtlasLoot:ScrollFrameUpdate();
 	end
 
-	-- Sets the main page lable
-	AtlasLoot_BossName:SetText(dataSource[dataID][tablenum].Name);
+	-- Finds the tablenumber to set where the difficulty slider should be.
+	local typeNumber = 1;
+	local function findTypeNumber()
+		for i,v in ipairs(AtlasLoot_Difficulty[dataSource[dataID].Type]) do
+			if v[2] == ItemindexID then
+				typeNumber = i;
+				return i;
+			end
+		end
+	end
 
 	-- Moves the difficulty scrollslider if the difficulty has changed
-	if dataSource[dataID].Type and difType and #AtlasLoot_Difficulty[dataSource[dataID].Type] > 5 then
+	if dataSource[dataID].Type and difType and #AtlasLoot_Difficulty[dataSource[dataID].Type] > 5 and findTypeNumber() > 5 then
 		local min, max = AtlasLootDefaultFrameScrollScrollBar:GetMinMaxValues();
-		AtlasLootDefaultFrameScrollScrollBar:SetValue(ItemindexID * (max / #AtlasLoot_Difficulty[dataSource[dataID].Type]));
+		AtlasLootDefaultFrameScrollScrollBar:SetValue(typeNumber * (max / #AtlasLoot_Difficulty[dataSource[dataID].Type]));
 	end
 
 	-- Moves the difficulty scrollslider if wishlist
 	if dataSource_backup == "AtlasLoot_CurrentWishList" and dataSource[dataID].ListNum > 5 then
 		local min, max = AtlasLootDefaultFrameScrollScrollBar:GetMinMaxValues();
-		AtlasLootDefaultFrameScrollScrollBar:SetValue(tablenum * (max / #AtlasLootWishList[dataSource[dataID].ListType][dataSource[dataID].ListNum]));
+		AtlasLootDefaultFrameScrollScrollBar:SetValue(dataSource[dataID].ListNum * (max / #AtlasLootWishList[dataSource[dataID].ListType][dataSource[dataID].ListNum]));
 	end
 
 	--For stopping the subtable from changing if its a token table
@@ -508,6 +522,14 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
         _G["AtlasLootItem_"..i]:Hide();
         _G["AtlasLootItem_"..i].itemID = 0;
         _G["AtlasLootItem_"..i].spellitemID = 0;
+	end
+
+	-- Sets the main page lable
+	if dataSource[dataID][tablenum] and dataSource[dataID][tablenum].Name then
+		AtlasLoot_BossName:SetText(dataSource[dataID][tablenum].Name);
+	else
+		AtlasLoot_BossName:SetText("This Is Empty");
+		return
 	end
 
 	local function getProperItemConditionals(item)

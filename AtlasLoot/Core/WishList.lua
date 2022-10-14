@@ -41,9 +41,6 @@ local ORANGE = "|cffFF8400";
 
 function AtlasLoot:ShowWishList(listType,arg2,arg3)
 	AtlasLoot_CurrentWishList = {["Show"] = {ListType = listType, ListNum = arg2 ,Name = "WishLists", Icon = AtlasLootWishList[listType][arg2].Icon}};
-		if AtlasLootWishList["Options"][playerName]["AutoSortWishlist"] then
-			AtlasLoot:SortWishList(true);
-		end
 	local numPages = math.ceil(#AtlasLootWishList[listType][arg2]/30);
 	for n = 1 ,numPages, 1 do
 		table.insert(AtlasLoot_CurrentWishList["Show"], {Name = "Page "..n})
@@ -81,6 +78,9 @@ function AtlasLoot_WishListAddDropClick(typ, arg2, arg3, arg4)
 				return;
 			end
 			table.insert(AtlasLootWishList["Own"][arg2], { #AtlasLootWishList["Own"][arg2] + 1, itemID, itemTexture, itemName, AtlasLoot_Data[AtlasLootItemsFrame.refresh[1]].Name, "", "", sourcePage});
+			if AtlasLootWishList["Options"][playerName]["AutoSortWishlist"] then
+				AtlasLoot:SortWishList(nil,"Own", arg2);
+			end
 			DEFAULT_CHAT_FRAME:AddMessage(RED..AL["AtlasLoot"]..": "..AtlasLoot_FixText(itemName)..GREY..AL[" added to the WishList."]..WHITE.." ("..AtlasLootWishList["Own"][arg2].Name..")");
 			AtlasLoot_WishListDrop:Close(1)
 		elseif typ == "addShared" then
@@ -89,6 +89,9 @@ function AtlasLoot_WishListAddDropClick(typ, arg2, arg3, arg4)
 				return;
 			end
 			table.insert(AtlasLootWishList["Shared"][arg2], { #AtlasLootWishList["Shared"][arg2] + 1, itemID, itemTexture, itemName, lootPage, "", "", sourcePage});
+			if AtlasLootWishList["Options"][playerName]["AutoSortWishlist"] then
+				AtlasLoot:SortWishList(nil,"Shared", arg2);
+			end
 			DEFAULT_CHAT_FRAME:AddMessage(RED..AL["AtlasLoot"]..": "..AtlasLoot_FixText(itemName)..GREY..AL[" added to the WishList."]..WHITE.." ("..AtlasLootWishList["Shared"][arg2].Name..")");
 			AtlasLoot_WishListDrop:Close(1)
 		end
@@ -150,13 +153,13 @@ function AtlasLoot:MoveWishlistItem(pos,itemNum,replaceNum,replaceNum2)
 end
 
 --Sort wishlist
-function AtlasLoot:SortWishList(refresh)
-	Sorted = {};
-	local name = AtlasLootWishList[AtlasLoot_CurrentWishList["Show"].ListType][AtlasLoot_CurrentWishList["Show"].ListNum].Name;
-	local icon = AtlasLootWishList[AtlasLoot_CurrentWishList["Show"].ListType][AtlasLoot_CurrentWishList["Show"].ListNum].Icon;
-		for i,v in ipairs(AtlasLootWishList[AtlasLoot_CurrentWishList["Show"].ListType][AtlasLoot_CurrentWishList["Show"].ListNum]) do
+function AtlasLoot:SortWishList(refresh,type,tNumb)
+	local sorted = {};
+	local name = AtlasLootWishList[type][tNumb].Name;
+	local icon = AtlasLootWishList[type][tNumb].Icon;
+		for i,v in ipairs(AtlasLootWishList[type][tNumb]) do
 			local function tableCheck()
-				for n,t in ipairs(Sorted) do
+				for n,t in ipairs(sorted) do
 					if t[2][5] == v[5] then
 						return t
 					end
@@ -165,25 +168,25 @@ function AtlasLoot:SortWishList(refresh)
 				if v[2] ~= 0 and tableCheck() then
 					table.insert(tableCheck(),v);
 				elseif v[2] ~= 0 then
-					table.insert(Sorted,{{0, 0, "INV_Box_01", WHITE..v[5], ""},v});
+					table.insert(sorted,{{0, 0, "INV_Box_01", WHITE..v[5], ""},v});
 				end
 		end
-	AtlasLootWishList[AtlasLoot_CurrentWishList["Show"].ListType][AtlasLoot_CurrentWishList["Show"].ListNum] = {};
+		AtlasLootWishList[type][tNumb] = {};
 		local num = 1
-		for i,v in ipairs(Sorted) do
+		for i,v in ipairs(sorted) do
 			for n,t in ipairs(v) do
 				if num ~= 1 and t[3] == "INV_Box_01" then
-					table.insert(AtlasLootWishList[AtlasLoot_CurrentWishList["Show"].ListType][AtlasLoot_CurrentWishList["Show"].ListNum],{num, 0, "Blank", WHITE.." ", ""});
+					table.insert(AtlasLootWishList[type][tNumb],{num, 0, "Blank", WHITE.." ", ""});
 					num = num + 1;
 				end
-					table.insert(AtlasLootWishList[AtlasLoot_CurrentWishList["Show"].ListType][AtlasLoot_CurrentWishList["Show"].ListNum],{num,t[2],t[3],t[4],t[5],t[6],t[7],t[8]});
+					table.insert(AtlasLootWishList[type][tNumb],{num,t[2],t[3],t[4],t[5],t[6],t[7],t[8]});
 					num = num + 1;
 			end
 		end
-		AtlasLootWishList[AtlasLoot_CurrentWishList["Show"].ListType][AtlasLoot_CurrentWishList["Show"].ListNum].Name = name;
-		AtlasLootWishList[AtlasLoot_CurrentWishList["Show"].ListType][AtlasLoot_CurrentWishList["Show"].ListNum].Icon = icon;
-		if refresh == nil then
-		AtlasLoot:ShowWishList(AtlasLoot_CurrentWishList["Show"].ListType, AtlasLoot_CurrentWishList["Show"].ListNum);
+		AtlasLootWishList[type][tNumb].Name = name;
+		AtlasLootWishList[type][tNumb].Icon = icon;
+		if refresh then
+		AtlasLoot:ShowWishList(type, tNumb);
 		end
 end
 
@@ -466,7 +469,7 @@ function AtlasLoot:WishListOptionsRegister()
 				);
 				AtlasLoot_WishListOptions:AddLine(
 					"text", AL["Sort Wishlist"],
-					"func", function() AtlasLoot:SortWishList() end,
+					"func", function() AtlasLoot:SortWishList(true,AtlasLoot_CurrentWishList["Show"].ListType,AtlasLoot_CurrentWishList["Show"].ListNum) end,
 					"notCheckable", true
 				);
 				if  AtlasLootItemsFrame.refresh[2] == "AtlasLoot_CurrentWishList" and AtlasLoot_CurrentWishList["Show"].ListType == "Shared" then
@@ -903,8 +906,10 @@ function AtlasLoot_CreateWishlistOptions()
 		WishListAutoSort:SetScript("OnClick", function()
 			if AtlasLootWishList["Options"][playerName]["AutoSortWishlist"] then
 				AtlasLootWishList["Options"][playerName]["AutoSortWishlist"] = false;
+				AtlasLootItemsFrame_Wishlist_UnLock:Enable();
 			else
 				AtlasLootWishList["Options"][playerName]["AutoSortWishlist"] = true;
+				AtlasLootItemsFrame_Wishlist_UnLock:Disable();
 			end
 		end)
 
