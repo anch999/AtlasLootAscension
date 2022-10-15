@@ -805,7 +805,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 			tablenum = AtlasLootItemsFrame.refreshOri[3];
 		end
 
-		if AtlasLootItemsFrame.refreshOri and tablenum ~= #_G[AtlasLootItemsFrame.refreshOri[2]][AtlasLootItemsFrame.refreshOri[1]] and dataSource_backup ~= "AtlasLoot_TokenData" then
+		if AtlasLootItemsFrame.refresh and tablenum ~= #_G[AtlasLootItemsFrame.refresh[2]][AtlasLootItemsFrame.refresh[1]] and dataSource_backup ~= "AtlasLoot_TokenData" then
 			_G["AtlasLootItemsFrame_NEXT"]:Show();
 			_G["AtlasLootItemsFrame_NEXT"].tablenum = tablenum + 1;
 			_G["AtlasLootItemsFrame_NEXT"].tablebase = tablebase;
