@@ -154,7 +154,7 @@ function AtlasLootItem_OnEnter(self)
                         if((AtlasLoot.db.profile.EquipCompare and ((not EquipCompare_RegisterTooltip) or (not EquipCompare_Enabled)))) or IsShiftKeyDown() then
                             AtlasLootItem_ShowCompareItem(self); --- CALL MISSING METHOD TO SHOW 2 TOOLTIPS (Item Compare)
                         end
-                    else
+--[[                     else
                         AtlasLootTooltip:SetOwner(self, "ANCHOR_RIGHT", -(self:GetWidth() / 2), 24);
                         AtlasLootTooltip:ClearLines();
                         AtlasLootTooltip:AddLine(RED..AL["Item Unavailable"], nil, nil, nil, 1);
@@ -162,7 +162,7 @@ function AtlasLootItem_OnEnter(self)
                         AtlasLootTooltip:AddLine(AL["self item is unsafe.  To view self item without the risk of disconnection, you need to have first seen it in the game world. This is a restriction enforced by Blizzard since Patch 1.10."], nil, nil, nil, 1);
                         AtlasLootTooltip:AddLine(" ");
                         AtlasLootTooltip:AddLine(AL["You can right-click to attempt to query the server.  You may be disconnected."], nil, nil, nil, 1);
-                        AtlasLootTooltip:Show();
+                        AtlasLootTooltip:Show(); ]]
                     end
                 end
             end
@@ -224,7 +224,7 @@ function AtlasLootItem_OnClick(self ,arg1)
         if arg1=="RightButton" and ATLASLOOT_ITEM_UNLOCK then
             AtlasLoot:MoveWishlistItem("Down",self.number);
         elseif IsAltKeyDown() and arg1=="LeftButton" and ATLASLOOT_ITEM_UNLOCK then
-            StaticPopup_Show ("ATLASLOOT_ADD_CUSTOMHEADER");
+            StaticPopup_Show("ATLASLOOT_ADD_CUSTOMHEADER");
             StaticPopupDialogs.ATLASLOOT_ADD_CUSTOMHEADER.num = self.number;
         elseif (arg1=="LeftButton") and ATLASLOOT_ITEM_UNLOCK then
             AtlasLoot:MoveWishlistItem("Up",self.number);

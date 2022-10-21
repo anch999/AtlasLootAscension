@@ -235,8 +235,6 @@ function AtlasLoot_OptionsOnShow()
 	UIDropDownMenu_SetWidth(AtlasLoot_SelectLootBrowserStyle, 150);
 end
 
-
-
 function AtlasLoot_SelectLootBrowserStyle_OnClick()
     local thisID = this:GetID();
 	UIDropDownMenu_SetSelectedID(AtlasLoot_SelectLootBrowserStyle, thisID);
@@ -248,32 +246,6 @@ function AtlasLoot_SelectLootBrowserStyle_OnClick()
     end
     AtlasLoot_OptionsOnShow();
 end
-
-local Authors = {
-	["Calî"] = "Arthas",
-	["Lâg"] = "Arthas",
-	--["Daviesh"] = "Thaurissan",
-	["Hegarol"] = "Dun Morogh",
-	
-}
-
-function AtlasLoot_UnitTarget()
-	local name = GameTooltip:GetUnit()
-	if UnitName("mouseover") == name then
-		local _, realm = UnitName("mouseover")
-		if not realm then
-			realm = GetRealmName()
-		end;
-		if name and Authors[name] then
-			if Authors[name] == realm then
-				GameTooltip:AddLine("AtlasLoot Author |TInterface\\AddOns\\AtlasLoot\\Images\\gold:0|t", 0, 1, 0 )
-			end
-		end
-	end
-end
-GameTooltip:HookScript("OnTooltipSetUnit", AtlasLoot_UnitTarget)
-
-
 
 local helpframe = CreateFrame("Frame", "AtlasLootHelpFrame")
         helpframe:SetSize(425,450);
@@ -403,7 +375,7 @@ local fooshow = CreateFrame("Button", "AtlasLootOptionsFrame_FuBarShow", AtlasLo
             end
         end);
 
-        local foohide = CreateFrame("Button", "AtlasLootOptionsFrame_FuBarShow", AtlasLootOptionsFrame, "OptionsButtonTemplate");
+local foohide = CreateFrame("Button", "AtlasLootOptionsFrame_FuBarHide", AtlasLootOptionsFrame, "OptionsButtonTemplate");
         foohide:SetSize(150,25);
         foohide:SetText(AL["Hide FuBar Plugin"]);
         foohide:SetPoint("TOP", "AtlasLootOptionsFrame", "TOP", 85, -390);
