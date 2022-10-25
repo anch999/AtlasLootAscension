@@ -1,3 +1,4 @@
+function AtlasLoot:ItemIdFixs()
 --Items not added from generated file
 ItemIDsDatabase[18563] = {18563, 18563, 318563, 218563};
 ItemIDsDatabase[18564] = {18564, 18564, 318564, 218564};
@@ -56,14 +57,6 @@ ItemIDsDatabase[22356] = {22356, 22356, 102300, 222356};
 ItemIDsDatabase[22352] = {22352, 22352, 102284, 222352};
 ItemIDsDatabase[22358] = {22358, 22358, 102290, 222358};
 
---Tier 4 Tokens
-
-ItemIDsDatabase[29761] = {29761, 29761, 329761, 229761};
-ItemIDsDatabase[29764] = {29764, 29764, 329764, 229764};
-ItemIDsDatabase[29753] = {29753, 29753, 329753, 229753};
-ItemIDsDatabase[29758] = {29758, 29758, 329758, 229758};
-ItemIDsDatabase[29767] = {29767, 29767, 329767, 229767};
-
 --Tier 5 Tokens
 
 ItemIDsDatabase[30243] = {30243, 30243, 330243, 230243};
@@ -117,3 +110,4 @@ ItemIDsDatabase[1333809] = {1333809, 1333809, 1433809, 1233809};
 --intact vial of kael'thas sunstrider
 ItemIDsDatabase[450001] = {450001, 450001, 450003, 450005};
 ItemIDsDatabase[450000] = {450000, 450000, 450002, 450004};
+end

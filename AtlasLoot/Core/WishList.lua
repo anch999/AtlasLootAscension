@@ -98,12 +98,12 @@ function AtlasLoot_WishListAddDropClick(typ, arg2, arg3, arg4)
 	end
 end
 
-local function CloneTable(t)				-- return a copy of the table t
+function AtlasLoot:CloneTable(t)				-- return a copy of the table t
 	local new = {};					-- create a new table
 	local i, v = next(t, nil);		-- i is an index of t, v = t[i]
 	while i do
 		if type(v)=="table" then 
-			v=CloneTable(v);
+			v=AtlasLoot:CloneTable(v);
 		end
 		new[i] = v;
 		i, v = next(t, i);			-- get next index
@@ -986,7 +986,7 @@ function ALModule:OnCommReceived(prefix, message, distribution, sender)
 	elseif message == "FinishSend" then
 		SpamFilter[string.lower(sender)] = GetTime()
 	elseif message == "AcceptWishlist" then
-		local wsltable = CloneTable(_G[curtable[2]][curtable[1]][curtable[3]]);
+		local wsltable = AtlasLoot:CloneTable(_G[curtable[2]][curtable[1]][curtable[3]]);
 			for i,v in ipairs(wsltable) do
 				v[4] = ""
 				local dataID, dataSource, dataPage = strsplit("|", v[8])

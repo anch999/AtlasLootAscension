@@ -101,7 +101,7 @@ function AtlasLoot:HideFilteredItems()
 	AtlasLootFilter["FilterList"][tablenum] = {Name = dataSource[dataID][tablenum].Name};
 
 	local function getStats(itemID,sType)
-		for i,v in pairs(AtlasLootFilterDB["FilterLists"][AtlasLootFilterDB.SelectedFilter]) do
+		for i,v in pairs(AtlasLootFilterDB["FilterLists"][AtlasLootCharDB.SelectedFilter]) do
 			if type(v) == "table" then
 				if v[1] and v[3] == sType then
 					local ItemStats = {};
@@ -117,8 +117,8 @@ function AtlasLoot:HideFilteredItems()
 	local count = 0
 	local function getFilterType(itemID)
 		local filterSelect3, filterSelect2,_ , filterSelect1 = select(6,GetItemInfo(itemID));
-		local filter1 = AtlasLootFilterDB["FilterLists"][AtlasLootFilterDB.SelectedFilter][filterSelect1];
-		local filter2 = AtlasLootFilterDB["FilterLists"][AtlasLootFilterDB.SelectedFilter][filterSelect2];
+		local filter1 = AtlasLootFilterDB["FilterLists"][AtlasLootCharDB.SelectedFilter][filterSelect1];
+		local filter2 = AtlasLootFilterDB["FilterLists"][AtlasLootCharDB.SelectedFilter][filterSelect2];
 		if 	filter1 and filter1[1] and filter1[3] == "InvType" and getStats(itemID,"Stat") or
 			filter2 and filter2[1] and filter2[3] == "ArmorType" and getStats(itemID,"Stat")
 		then
@@ -187,10 +187,13 @@ function AtlasLoot:FilterMenuRegister()
 		'children', function(level, value)
 				for i,v in ipairs(AtlasLootFilterDB["FilterLists"]) do
 					local setFilter = false;
-					if AtlasLootFilterDB.SelectedFilter == i then setFilter = true end
+					if AtlasLootCharDB.SelectedFilter == i then setFilter = true end
 					AtlasLoot_FilterMenu:AddLine(
 						"text", v.Name,
-						"func", function() AtlasLootFilterDB.SelectedFilter = i end,
+						"func", function()
+							AtlasLootCharDB.SelectedFilter = i;
+							AtlasLoot_FilterMenu:Close();
+						end,
 						"checked", setFilter
 					);
 				end
@@ -215,7 +218,7 @@ end
 
 --Sets all the filter check boxs for current filter
 local function setFilterChecks()
-	local filterList = AtlasLootFilterDB["FilterLists"][AtlasLootFilterDB.SelectedFilter];
+	local filterList = AtlasLootFilterDB["FilterLists"][AtlasLootCharDB.SelectedFilter];
 	local count = 1;
 	for i,v in ipairs(FilterTable) do
 		count = count + 1;
@@ -231,10 +234,10 @@ local function setFilterChecks()
 end
 
 local function setFilter(arg1,type)
-	if AtlasLootFilterDB["FilterLists"][AtlasLootFilterDB.SelectedFilter][arg1] and AtlasLootFilterDB["FilterLists"][AtlasLootFilterDB.SelectedFilter][arg1][1] then
-		AtlasLootFilterDB["FilterLists"][AtlasLootFilterDB.SelectedFilter][arg1] = {false,arg1,type};
+	if AtlasLootFilterDB["FilterLists"][AtlasLootCharDB.SelectedFilter][arg1] and AtlasLootFilterDB["FilterLists"][AtlasLootCharDB.SelectedFilter][arg1][1] then
+		AtlasLootFilterDB["FilterLists"][AtlasLootCharDB.SelectedFilter][arg1] = {false,arg1,type};
 	else
-		AtlasLootFilterDB["FilterLists"][AtlasLootFilterDB.SelectedFilter][arg1] = {true,arg1,type};
+		AtlasLootFilterDB["FilterLists"][AtlasLootCharDB.SelectedFilter][arg1] = {true,arg1,type};
 	end
 end
 
@@ -291,11 +294,17 @@ function AtlasLoot:OpenFilterCreate()
 		local createFilterButton = CreateFrame("Button", "AtlasLootFilterCreate", AtlasLootItemsFrame, "OptionsButtonTemplate");
 			createFilterButton:SetSize(130,20);
 			createFilterButton:SetPoint("LEFT", "AtlasLootItemsFrame_BACK", "LEFT",-150,0);
-			createFilterButton:SetText(AL["Add New Filter"]);
+			createFilterButton:SetText(AL["Add/Edit Filter"]);
 			createFilterButton:SetScript("OnClick", function(self) StaticPopup_Show("ATLASLOOT_ADD_FILTER_LIST") end);
+
+		local deleteFilterButton = CreateFrame("Button", "AtlasLootFilterDelete", AtlasLootItemsFrame, "OptionsButtonTemplate");
+			deleteFilterButton:SetSize(130,20);
+			deleteFilterButton:SetPoint("RIGHT", "AtlasLootItemsFrame_BACK", "RIGHT",150,0);
+			deleteFilterButton:SetText(AL["Delete Filter"]);
+			deleteFilterButton:SetScript("OnClick", function(self) StaticPopup_Show("ATLASLOOT_DELETE_FILTERLIST") end);
 	end
 	UIDropDownMenu_Initialize(AtlasLootFilterSelect, AtlasLoot.FilterSelectorMenuInitialize);
-	UIDropDownMenu_SetSelectedID(AtlasLootFilterSelect, AtlasLootFilterDB.SelectedFilter);
+	UIDropDownMenu_SetSelectedID(AtlasLootFilterSelect, AtlasLootCharDB.SelectedFilter);
 
 	setFilterChecks();
 
@@ -326,8 +335,8 @@ function AtlasLoot:OpenFilterCreate()
 end
 
 local function FilterSelectOnClick()
-	AtlasLootFilterDB.SelectedFilter = this:GetID();
-	UIDropDownMenu_SetSelectedID(AtlasLootFilterSelect, AtlasLootFilterDB.SelectedFilter);
+	AtlasLootCharDB.SelectedFilter = this:GetID();
+	UIDropDownMenu_SetSelectedID(AtlasLootFilterSelect, AtlasLootCharDB.SelectedFilter);
 	setFilterChecks();
 end
 
@@ -343,21 +352,51 @@ end
 
 --[[
 StaticPopupDialogs["ATLASLOOT_ADD_FILTER_LIST"]
-This is shown, if you want too add a CustomHeader to a wishlist
+This is shown, if you want too add a add/edit a filter list
 ]]
 StaticPopupDialogs["ATLASLOOT_ADD_FILTER_LIST"] = {
 	text = "Filter Name",
 	button1 = "Add Filter",
+	button3 = "Edit Filter",
 	button2 = AL["Cancel"],
 	OnShow = function(self)
+		self.editBox:SetText(UIDropDownMenu_GetText(AtlasLootFilterSelect))
 		self:SetFrameStrata("TOOLTIP");
 	end,
-	OnAccept = function()
-		local text = _G[this:GetParent():GetName().."EditBox"]:GetText();
-		currentFilter.Name = text;
-		table.insert(AtlasLootFilterDB["FilterLists"],currentFilter);
+	OnAccept = function(self)
+		local text = self.editBox:GetText();
+		table.insert(AtlasLootFilterDB["FilterLists"],AtlasLoot:CloneTable(AtlasLootFilterDB["FilterLists"][UIDropDownMenu_GetSelectedID(AtlasLootFilterSelect)]));
+		AtlasLootFilterDB["FilterLists"][#AtlasLootFilterDB["FilterLists"]].Name = text;
+		UIDropDownMenu_SetSelectedID(AtlasLootFilterSelect,#AtlasLootFilterDB["FilterLists"]);
+		UIDropDownMenu_SetText(AtlasLootFilterSelect,text);
+	end,
+	OnButton3 = function(self)
+		local text = self.editBox:GetText();
+		AtlasLootFilterDB["FilterLists"][UIDropDownMenu_GetSelectedID(AtlasLootFilterSelect)].Name = self.editBox:GetText();
+		UIDropDownMenu_SetText(AtlasLootFilterSelect,text);
 	end,
 	hasEditBox = 1,
+	timeout = 0,
+	whileDead = 1,
+	hideOnEscape = 1
+};
+
+--[[
+StaticPopupDialogs["ATLASLOOT_DELETE_FILTERLIST"]
+This is shown, if you want too delete a filter list
+]]
+StaticPopupDialogs["ATLASLOOT_DELETE_FILTERLIST"] = {
+	text = AL["Delete Filter"],
+	button1 = AL["Delete"],
+	button2 = AL["Cancel"],
+	OnShow = function()
+		this:SetFrameStrata("TOOLTIP");
+	end,
+	OnAccept = function()
+		table.remove(AtlasLootFilterDB["FilterLists"],UIDropDownMenu_GetSelectedID(AtlasLootFilterSelect));
+		UIDropDownMenu_SetSelectedID(AtlasLootFilterSelect,1);
+		UIDropDownMenu_SetText(AtlasLootFilterSelect,UIDropDownMenu_GetText(AtlasLootFilterSelect));
+	end,
 	timeout = 0,
 	whileDead = 1,
 	hideOnEscape = 1

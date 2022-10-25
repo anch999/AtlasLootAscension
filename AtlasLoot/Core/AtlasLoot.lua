@@ -132,9 +132,10 @@ function AtlasLoot:OnEnable()
     AtlasLoot.db:RegisterDefaults(AtlasLootDBDefaults);
 	if not AtlasLootCharDB then AtlasLootCharDB = {} end
     if not AtlasLootCharDB["QuickLooks"] then AtlasLootCharDB["QuickLooks"] = {} end
+	if not AtlasLootCharDB.SelectedFilter then AtlasLootCharDB.SelectedFilter = 1 end
 	if not AtlasLootCharDB["SearchResult"] then AtlasLootCharDB["SearchResult"] = {Name = "Search Result" , Type = "Search", Back = true}; end
 	if not AtlasLootFilterDB then AtlasLootFilterDB = {["FilterLists"] = {}} end;
-	if AtlasLootFilterDB and not AtlasLootFilterDB["FilterLists"] then AtlasLootFilterDB = {["FilterLists"] = {}} end;
+	if AtlasLootFilterDB and not AtlasLootFilterDB["FilterLists"] then AtlasLootFilterDB = {["FilterLists"] = {{Name = "Default" }}} end;
     if AtlasLoot_Data then
         AtlasLoot_Data["EmptyTable"] = {
 			Name = AL["Select a Loot Table..."];
@@ -1083,3 +1084,26 @@ function AtlasLoot:FindId(id, difficulty)
 	end
 	return nil, false;
 end
+-- Loads the Item Variations into a table from the data content folder
+function AtlasLoot:LoadItemIDsDatabase()
+	local content = C_ContentLoader:Load("ItemVariationData")
+	ItemIDsDatabase = {};
+	content:SetParser(function(index, data)
+		-- run for each item in the data
+		   if index ~= 0 and data.Normal ~= 0 then
+			ItemIDsDatabase[data.Normal] = {}
+			if data.Bloodforged ~= 0 then table.insert(ItemIDsDatabase[data.Normal],data.Bloodforged) end
+			if data.Normal ~= 0 then table.insert(ItemIDsDatabase[data.Normal],data.Normal) end
+			if data.Heroic ~= 0 then table.insert(ItemIDsDatabase[data.Normal],data.Heroic) end
+				for i,v in ipairs(data["Mythic"]) do
+					if v ~= 0 then
+						table.insert(ItemIDsDatabase[data.Normal],v)
+					end
+				end
+		end
+	end)
+
+	-- This will run over time (usually about 30s for a file this size), but will maintain playable fps while running.
+	content:ParseAsync()
+	AtlasLoot:ItemIdFixs()
+	end

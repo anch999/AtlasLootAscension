@@ -327,7 +327,8 @@ if AL then
 	AL["Please set a default Wishlist."] = true;
 	AL["Set as default Wishlist"] = true;
 	AL["Please Create a Wishlist First."] = true;
-	AL["Add New Filter"] = true;
+	AL["Add/Edit Filter"] = true;
+	AL["Delete Filter"] = true;
 
 	-- Misc Inventory related words
 	AL["Enchant"] = true;
