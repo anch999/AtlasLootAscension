@@ -1092,8 +1092,8 @@ function AtlasLoot:LoadItemIDsDatabase()
 		-- run for each item in the data
 		   if index ~= 0 and data.Normal ~= 0 then
 			ItemIDsDatabase[data.Normal] = {}
-			if data.Bloodforged ~= 0 then table.insert(ItemIDsDatabase[data.Normal],data.Bloodforged) end
-			if data.Normal ~= 0 then table.insert(ItemIDsDatabase[data.Normal],data.Normal) end
+			table.insert(ItemIDsDatabase[data.Normal],data.Bloodforged);
+			table.insert(ItemIDsDatabase[data.Normal],data.Normal);
 			if data.Heroic ~= 0 then table.insert(ItemIDsDatabase[data.Normal],data.Heroic) end
 				for i,v in ipairs(data["Mythic"]) do
 					if v ~= 0 then
