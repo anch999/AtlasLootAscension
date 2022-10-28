@@ -22,7 +22,7 @@ AtlasLoot_SetFiltersMenu = AceLibrary("Dewdrop-2.0");
 local FilterTable = {
 	{
 		Name = AL["Primary Stats"],
-		Type = "Stat",
+		Type = "PrimaryStat",
 		{"Strength", "ITEM_MOD_STRENGTH_SHORT"},
 		{"Agility", "ITEM_MOD_AGILITY_SHORT"},
 		{"Intellect", "ITEM_MOD_INTELLECT_SHORT"},
@@ -93,12 +93,12 @@ function AtlasLoot:HideFilteredItems()
 	local dataID, dataSource, tablenum = AtlasLootItemsFrame.refreshFilter[1], _G[AtlasLootItemsFrame.refreshFilter[2]], AtlasLootItemsFrame.refreshFilter[3];
  	local tablebase = dataSource[dataID][tablenum]
 	if not tablebase or dataID == "WishList" or dataID == "SearchResult" then return end
-
+	AtlasLootFilter["FilterList"] = {};
 	AtlasLootFilter["FilterList"].Type = dataSource[dataID].Type;
 	AtlasLootFilter["FilterList"].Name = dataSource[dataID].Name;
 	AtlasLootFilter["FilterList"].Back = dataSource[dataID].Back;
 	AtlasLootFilter["FilterList"].Map = dataSource[dataID].Map;
-	AtlasLootFilter["FilterList"][tablenum] = {Name = dataSource[dataID][tablenum].Name};
+	AtlasLootFilter["FilterList"][1] = {Name = dataSource[dataID][tablenum].Name};
 
 	local function getStats(itemID,sType)
 		for i,v in pairs(AtlasLootFilterDB["FilterLists"][AtlasLootCharDB.SelectedFilter]) do
@@ -139,7 +139,7 @@ function AtlasLoot:HideFilteredItems()
 			if v[1] == 16 then
 				count = 0;
 			end
-			table.insert(AtlasLootFilter["FilterList"][tablenum],{v[1] - count,v[2],v[3],v[4],v[5],v[6],v[7],v[8]});
+			table.insert(AtlasLootFilter["FilterList"][1],{v[1] - count,v[2],v[3],v[4],v[5],v[6],v[7],v[8]});
 		elseif v[1] == 16 then
 			count = 1
 		else
@@ -147,7 +147,7 @@ function AtlasLoot:HideFilteredItems()
 		end
 	end
 
-	AtlasLoot:ShowItemsFrame("FilterList", "AtlasLootFilter", AtlasLootItemsFrame.refresh[3])
+	AtlasLoot:ShowItemsFrame("FilterList", "AtlasLootFilter", 1)
 end
 
 function AtlasLoot_FilterEnableButton(self, btnclick)
@@ -248,6 +248,7 @@ function AtlasLoot:HideFilterCreateButtons()
 	end
 	AtlasLootFilterSelect:Hide();
 	AtlasLootFilterCreate:Hide();
+	AtlasLootFilterDelete:Hide();
 end
 
 -- **********************************************************************
@@ -288,7 +289,7 @@ function AtlasLoot:OpenFilterCreate()
 		end
 
 		local filterSelectButton = CreateFrame("Button", "AtlasLootFilterSelect", AtlasLootItemsFrame, "UIDropDownMenuTemplate");
-			filterSelectButton:SetSize(130,24);
+			filterSelectButton:SetSize(190,24);
 			filterSelectButton:SetPoint("Top", "AtlasLootItemsFrame", "TOP",-110,-35);
 
 		local createFilterButton = CreateFrame("Button", "AtlasLootFilterCreate", AtlasLootItemsFrame, "OptionsButtonTemplate");

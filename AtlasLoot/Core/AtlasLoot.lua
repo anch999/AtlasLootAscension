@@ -558,11 +558,11 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 						toShow = false;
 					end
 				end
-				IDfound = AtlasLoot:FindId(item[2], min(AtlasLoot_Difficulty:getMaxDifficulty(dataSource[dataID].Type), itemDif)) or item[2];
+				IDfound = AtlasLoot:FindId(item[2], min(AtlasLoot_Difficulty:getMaxDifficulty(dataSource[dataID].Type), itemDif),dataSource[dataID].Type) or item[2];
 			end
 
 			if string.sub(IDfound, 1, 1) == "s" then
-				IDfound = AtlasLoot:FindId(item[2], itemDif) or item[2];
+				IDfound = AtlasLoot:FindId(item[2], itemDif, dataSource[dataID].Type) or item[2];
 			else
 				isItem = true;
 			end
@@ -576,10 +576,10 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 					if tonumber(item[AtlasLoot_Difficulty.MAX_DIF]) < itemDif then itemDif = item[AtlasLoot_Difficulty.MAX_DIF] end;
 				end
 				--If something was found in itemID database show that if not show default table item
-				IDfound = AtlasLoot:FindId(item[2], itemDif) or item[2];
+				IDfound = AtlasLoot:FindId(item[2], itemDif, dataSource[dataID].Type) or item[2];
 
 				if ItemindexID ~= "" and dataID == "SearchResult" then
-					IDfound = AtlasLoot:FindId(item[9], itemDif) or item[2];
+					IDfound = AtlasLoot:FindId(item[9], itemDif, dataSource[dataID].Type) or item[2];
 				end
 			end
 		end
@@ -690,7 +690,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 				extraFrame:Show();
 				--For convenience, we store information about the objects in the objects so that it can be easily accessed later
 				if((string.sub(IDfound, 1, 1) == "s") and (ItemindexID ~= "Pattern") and (tonumber(dataSource[dataID][tablenum][i][3]))) then
-                    IDfound = AtlasLoot:FindId(tonumber(dataSource[dataID][tablenum][i][3]), ItemindexID) or tonumber(dataSource[dataID][tablenum][i][3]);
+                    IDfound = AtlasLoot:FindId(tonumber(dataSource[dataID][tablenum][i][3]), ItemindexID, dataSource[dataID].Type) or tonumber(dataSource[dataID][tablenum][i][3]);
 					itemButton.itemID = IDfound;
                     itemButton.spellitemID = dataSource[dataID][tablenum][i][3];
 				else
@@ -1078,11 +1078,14 @@ AtlasLoot:FindId(id, difficulty)
 Finds the Ids of other difficulties based on the normal id of the item and the difficulty parameter given.
 On the form of {ID, {normal, heroic, mythic, mythic1, mythic2, ... ,mythicN}}
 ]]
-function AtlasLoot:FindId(id, difficulty)
-	if ItemIDsDatabase[id] ~= nil then
+function AtlasLoot:FindId(id, difficulty, type)
+	if not ItemIDsDatabase[id] then return nil, false end
+
+	if type == "BCRaid"  and difficulty == 5 then
+		return ItemIDsDatabase[id]["MythicRaid"], true
+	else
 		return ItemIDsDatabase[id][difficulty], true
 	end
-	return nil, false;
 end
 -- Loads the Item Variations into a table from the data content folder
 function AtlasLoot:LoadItemIDsDatabase()
@@ -1092,6 +1095,7 @@ function AtlasLoot:LoadItemIDsDatabase()
 		-- run for each item in the data
 		   if index ~= 0 and data.Normal ~= 0 then
 			ItemIDsDatabase[data.Normal] = {}
+			ItemIDsDatabase[data.Normal]["MythicRaid"] = data.Normal + 1300000
 			table.insert(ItemIDsDatabase[data.Normal],data.Bloodforged);
 			table.insert(ItemIDsDatabase[data.Normal],data.Normal);
 			if data.Heroic ~= 0 then table.insert(ItemIDsDatabase[data.Normal],data.Heroic) end

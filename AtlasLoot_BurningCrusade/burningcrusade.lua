@@ -1569,6 +1569,7 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
 
 	AtlasLoot_Data["HCShatteredHalls"] = {
 			Name = BabbleZone["Hellfire Citadel"]..": "..BabbleZone["The Shattered Halls"];
+			DisplayName = BabbleZone["The Shattered Halls"];
 			Type = "BCDungeon";
 			Map = "HCTheShatteredHalls";
 		{

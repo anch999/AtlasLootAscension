@@ -33,8 +33,8 @@ AtlasLoot_Difficulty = {
     ["ClassicRaid"] = {
             {"Normal Flex", 2},
             {"Heroic Flex", 3},
-            {"Mythic", 4},
-            {"Ascended", 5},
+            {"Mythic", 5},
+            {"Ascended", 4},
             {"Bloodforged", 1},
     };
 
@@ -55,8 +55,8 @@ AtlasLoot_Difficulty = {
     ["BCRaid"] = {
         {"Normal Flex", 2},
         {"Heroic Flex", 3},
-        {"Mythic", 4},
-        {"Ascended", 5},
+        {"Mythic", 5},
+        {"Ascended", 4},
         {"Bloodforged", 1},
      };
 
