@@ -252,10 +252,10 @@ function AtlasLootItem_OnClick(self ,arg1)
             else
                 if(AtlasLootItemsFrame.refresh[1] == "SearchResult") then
                     local datID, _, datPage = strsplit("|", self.sourcePage);
-                    AtlasLoot_ShowWishListDropDown(self.itemID, self.itemTexture, _G["AtlasLootItem_"..self:GetID().."_Name"]:GetText(), 
-                                                        AtlasLoot_Data[datID][tonumber(datPage)].Name, self.sourcePage, self);
+                    AtlasLoot_ShowWishListDropDown(self.itemID, self.itemTexture, _G["AtlasLootItem_"..self:GetID().."_Name"]:GetText(), AtlasLoot_Data[dataID][tonumber(dataPage)].Name, 
+                                                    datID .. "|" .. "AtlasLoot_Data" .. "|" .. tostring(datPage), self);
                 else
-                    AtlasLoot_ShowWishListDropDown(self.itemID, self.itemTexture, _G["AtlasLootItem_"..self:GetID().."_Name"]:GetText(), 
+                    AtlasLoot_ShowWishListDropDown(self.itemID, self.itemTexture, _G["AtlasLootItem_"..self:GetID().."_Name"]:GetText(),
                                                         AtlasLoot_BossName:GetText(), self.dataID .. "|" .. "AtlasLoot_Data" .. "|" .. tostring(self.tablenum), self);
                 end
             end
