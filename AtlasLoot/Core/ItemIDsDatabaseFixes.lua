@@ -26,17 +26,12 @@ ItemIDsDatabase[30104] = {6033482, 30104, 330104, 230104};
 
 --Druid
 
-ItemIDsDatabase[29098] = {6029098, 29098, 314712, 214712};
-ItemIDsDatabase[29100] = {6029100, 29100, 314714, 214714};
-ItemIDsDatabase[29096] = {6029096, 29096, 314710, 214710};
-ItemIDsDatabase[29097] = {6029097, 29097, 314711, 214711};
-ItemIDsDatabase[29099] = {6029099, 29099, 314713, 214713};
+ItemIDsDatabase[29098] = {6029098, 29098, 314712, 214712, ["MythicRaid"] = 1329098};
+ItemIDsDatabase[29100] = {6029100, 29100, 314714, 214714, ["MythicRaid"] = 1329100};
+ItemIDsDatabase[29096] = {6029096, 29096, 314710, 214710, ["MythicRaid"] = 1329096};
+ItemIDsDatabase[29097] = {6029097, 29097, 314711, 214711, ["MythicRaid"] = 1329097};
+ItemIDsDatabase[29099] = {6029099, 29099, 314713, 214713, ["MythicRaid"] = 1329099};
 
 --ZA Bears
 ItemIDsDatabase[1333809] = {1333809, 1333809, 1433809, 1233809};
-
---intact vial of kael'thas sunstrider
---[[ ItemIDsDatabase[450001] = {450001, 450001, 450003, 450005, ["MythicRaid"] = 450007};
-ItemIDsDatabase[450000] = {450000, 450000, 450002, 450004, ["MythicRaid"] = 450006};
- ]]
 end
