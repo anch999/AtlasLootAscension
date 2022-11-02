@@ -21,26 +21,6 @@ AtlasLoot_SetFiltersMenu = AceLibrary("Dewdrop-2.0");
 
 local FilterTable = {
 	{
-		Name = AL["Primary Stats"],
-		Type = "PrimaryStat",
-		{"Strength", "ITEM_MOD_STRENGTH_SHORT"},
-		{"Agility", "ITEM_MOD_AGILITY_SHORT"},
-		{"Intellect", "ITEM_MOD_INTELLECT_SHORT"},
-		{"Spirit", "ITEM_MOD_SPIRIT_SHORT"}
-	},
-	{
-		Name = AL["Secondary Stats"],
-		Type = "Stat",
-		{"Attack Power", "ITEM_MOD_ATTACK_POWER_SHORT"},
-		{"Spell Power", "ITEM_MOD_SPELL_POWER_SHORT"},
-		{"Crit", "ITEM_MOD_CRIT_RATING_SHORT"},
-		{"Hit", "ITEM_MOD_HIT_RATING_SHORT"},
-		{"Haste", "ITEM_MOD_HASTE_RATING_SHORT"},
-		{"Expertise", "ITEM_MOD_EXPERTISE_RATING_SHORT"},
-		{"Armor Pen", "ITEM_MOD_ARMOR_PENETRATION_RATING_SHORT"},
-		{"Spell Pen", "ITEM_MOD_SPELL_PENETRATION_SHORT"}
-	},
-	{
 		Name = AL["Armor Type"],
 		Type = "ArmorType",
         {"Cloth", "Cloth"},
@@ -68,6 +48,26 @@ local FilterTable = {
 		{"Back", "INVTYPE_CLOAK"},
 		{"Ring", "INVTYPE_FINGER"},
         {"Trinket", "INVTYPE_TRINKET"}
+	},
+	{
+		Name = AL["Secondary Stats"],
+		Type = "Stat",
+		{"Attack Power", "ITEM_MOD_ATTACK_POWER_SHORT"},
+		{"Spell Power", "ITEM_MOD_SPELL_POWER_SHORT"},
+		{"Crit", "ITEM_MOD_CRIT_RATING_SHORT"},
+		{"Hit", "ITEM_MOD_HIT_RATING_SHORT"},
+		{"Haste", "ITEM_MOD_HASTE_RATING_SHORT"},
+		{"Expertise", "ITEM_MOD_EXPERTISE_RATING_SHORT"},
+		{"Armor Pen", "ITEM_MOD_ARMOR_PENETRATION_RATING_SHORT"},
+		{"Spell Pen", "ITEM_MOD_SPELL_PENETRATION_SHORT"}
+	},
+	{
+		Name = AL["Primary Stats"],
+		Type = "PrimaryStat",
+		{"Strength", "ITEM_MOD_STRENGTH_SHORT"},
+		{"Agility", "ITEM_MOD_AGILITY_SHORT"},
+		{"Intellect", "ITEM_MOD_INTELLECT_SHORT"},
+		{"Spirit", "ITEM_MOD_SPIRIT_SHORT"}
 	},
 	{
 		Name = AL["Defensive Stats"],
@@ -119,8 +119,8 @@ function AtlasLoot:HideFilteredItems()
 		local filterSelect3, filterSelect2,_ , filterSelect1 = select(6,GetItemInfo(itemID));
 		local filter1 = AtlasLootFilterDB["FilterLists"][AtlasLootCharDB.SelectedFilter][filterSelect1];
 		local filter2 = AtlasLootFilterDB["FilterLists"][AtlasLootCharDB.SelectedFilter][filterSelect2];
-		if 	filter1 and filter1[1] and filter1[3] == "InvType" and getStats(itemID,"Stat") or
-			filter2 and filter2[1] and filter2[3] == "ArmorType" and getStats(itemID,"Stat")
+		if 	(filter1 and filter1[1] and filter1[3] == "InvType" and getStats(itemID,"Stat")) or
+			(filter2 and filter2[1] and filter2[3] == "ArmorType" and getStats(itemID,"Stat"))
 		then
 			return true;
 		else
@@ -267,7 +267,7 @@ function AtlasLoot:OpenFilterCreate()
 			filterCatLable:Show();
 			if count == 1 then
 				filterCatLable:SetPoint("TOP", "AtlasLootItemsFrame", "TOP",-150,-90);
-			elseif count == 15 then
+			elseif count == 16 then
 				filterCatLable:SetPoint("TOP", "AtlasLootItemsFrame", "TOP",0,-90);
 			elseif count == 30 then
 				filterCatLable:SetPoint("TOP", "AtlasLootItemsFrame", "TOP",150,-90);
@@ -314,6 +314,7 @@ function AtlasLoot:OpenFilterCreate()
 	end
 	AtlasLootFilterSelect:Show();
 	AtlasLootFilterCreate:Show();
+	AtlasLootFilterDelete:Show();
 
 	--Ditch the Quicklook selector
 	AtlasLootQuickLooksButton:Hide();

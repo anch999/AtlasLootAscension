@@ -89,6 +89,7 @@ Called when a button in AtlasLoot_Dewdrop is clicked
 ]]
 function AtlasLoot:DewDropClick(tablename, text, tablenum)
     ATLASLOOT_FILTER_ENABLE = false;
+    ATLASLOOT_BACKENABLED = false;
     AtlasLootFilterCheck:SetChecked(false);
     tablename = tablename .. AtlasLoot_Expac;
     ATLASLOOT_CURRENTTABLE = tablename;
@@ -114,6 +115,7 @@ text - Heading for the loot table
 Called when a button in AtlasLoot_DewdropSubMenu is clicked
 ]]
 function AtlasLoot:DewDropSubMenuClick(tablename)
+    ATLASLOOT_BACKENABLED = false;
     --Show the select loot table
     local tablenum = AtlasLoot_Data[tablename].Loadfirst or 1;
     --Show the table that has been selected
@@ -123,11 +125,12 @@ end
 
 --[[
 AtlasLoot:DewdropExpansionMenuClick(expansion, name):
-tablename - Name of the loot table in the database
-text - Heading for the loot table
-Called when a button in AtlasLoot_DewdropSubMenu is clicked
+expansion - expansion to load
+name - label for the expansion
+Called when a button in DewdropExpansionMenuClick is clicked
 ]]
 function AtlasLoot:DewdropExpansionMenuClick(expansion, name)
+    ATLASLOOT_BACKENABLED = false;
 	AtlasLootDefaultFrame_ExpansionMenu:SetText(name);
     AtlasLoot_DewdropExpansionMenu:Close(1);
     AtlasLoot_Expac = expansion;

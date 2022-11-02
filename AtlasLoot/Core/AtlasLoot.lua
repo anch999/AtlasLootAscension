@@ -52,6 +52,7 @@ ATLASLOOT_DEBUGSHOWN = false;
 ATLASLOOT_FILTER_ENABLE = false;
 ATLASLOOT_CURRENTTYPE = "Default";
 ATLASLOOT_TYPE = {};
+ATLASLOOT_BACKENABLED = false;
 
 -- Colours stored for code readability
 local GREY = "|cff999999";
@@ -725,8 +726,10 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 
 				if (dataID == "SearchResult" or dataSource_backup == "AtlasLoot_CurrentWishList") and dataSource[dataID][tablenum][i][8] then
 					itemButton.sourcePage = dataSource[dataID][tablenum][i][8];
-				elseif dataSource[dataID][tablenum][i][8] ~= nil and dataSource[dataID][tablenum][i][8]:match("=LT=") then
+				elseif dataSource[dataID][tablenum][i][8] ~= nil and dataSource[dataID][tablenum][i][8]:match("=TT=") then
 					itemButton.sourcePage = string.sub(dataSource[dataID][tablenum][i][8], 5);
+				elseif dataSource[dataID][tablenum][i][8] ~= nil and dataSource[dataID][tablenum][i][8]:match("=LT=") then
+					itemButton.sourcePage = dataSource[dataID][tablenum][i][8];
 				else
 					itemButton.sourcePage = nil;
 				end
@@ -819,10 +822,11 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 			_G["AtlasLootItemsFrame_PREV"].tablebase = tablebase;
 		end
 
-		if dataSource[dataID].Back then
+		if dataSource[dataID].Back or ATLASLOOT_BACKENABLED then
 			_G["AtlasLootItemsFrame_BACK"]:Show();
+		else
+			AtlasLootItemsFrame.refreshBack = {dataID, dataSource_backup, tablenum};
 		end
-
 	end
 
 	--Anchor the item frame where it is supposed to be
@@ -853,7 +857,8 @@ AtlasLoot:NavButton_OnClick:
 Called when 'Back'Button is pressed and calls up the appropriate loot page
 ]]
 function AtlasLoot:BackButton_OnClick()
-	AtlasLoot:ShowItemsFrame(AtlasLootItemsFrame.refreshOri[1], AtlasLootItemsFrame.refreshOri[2], AtlasLootItemsFrame.refreshOri[3]);
+	ATLASLOOT_BACKENABLED = false;
+	AtlasLoot:ShowItemsFrame(AtlasLootItemsFrame.refreshBack[1], AtlasLootItemsFrame.refreshBack[2], AtlasLootItemsFrame.refreshBack[3]);
 end
 
 --[[
