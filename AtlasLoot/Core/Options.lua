@@ -181,6 +181,8 @@ function AtlasLoot_DisplayHelp()
             WHITE..AL["While on the wishlist screen, just Alt+Left Click on an item to delete it."].."\n\n"..
             ORANGE..AL["What else does the wishlist do?"].."\n"..
             WHITE..AL["If you Left Click any item on the wishlist, you can jump to the loot page the item comes from.  Also, on a loot page any item already in your wishlist is marked with a yellow star."].."\n\n"..
+            ORANGE..AL["How to set of change a page filter:"].."\n"..
+            WHITE..AL["If you Right Click on the filter check box you will get a drop downmenu with a list of filters. Click the filter you want to use or click add filter set to add new custom filters."].."\n\n"..
             ORANGE..AL["HELP!! I have broken the mod somehow!"].."\n"..
             WHITE..AL["Use the reset buttons available in the options menu, or type '/al reset' in your chat window."].."\n\n"..
             GREY..AL["For further help, see our website and forums: "]..GREEN.."https://discord.gg/uYCE2X2FgA"

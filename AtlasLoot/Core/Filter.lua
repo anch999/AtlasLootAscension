@@ -52,8 +52,6 @@ local FilterTable = {
 	{
 		Name = AL["Secondary Stats"],
 		Type = "Stat",
-		{"Attack Power", "ITEM_MOD_ATTACK_POWER_SHORT"},
-		{"Spell Power", "ITEM_MOD_SPELL_POWER_SHORT"},
 		{"Crit", "ITEM_MOD_CRIT_RATING_SHORT"},
 		{"Hit", "ITEM_MOD_HIT_RATING_SHORT"},
 		{"Haste", "ITEM_MOD_HASTE_RATING_SHORT"},
@@ -67,7 +65,9 @@ local FilterTable = {
 		{"Strength", "ITEM_MOD_STRENGTH_SHORT"},
 		{"Agility", "ITEM_MOD_AGILITY_SHORT"},
 		{"Intellect", "ITEM_MOD_INTELLECT_SHORT"},
-		{"Spirit", "ITEM_MOD_SPIRIT_SHORT"}
+		{"Spirit", "ITEM_MOD_SPIRIT_SHORT"},
+		{"Attack Power", "ITEM_MOD_ATTACK_POWER_SHORT"},
+		{"Spell Power", "ITEM_MOD_SPELL_POWER_SHORT"}
 	},
 	{
 		Name = AL["Defensive Stats"],
@@ -92,7 +92,7 @@ AtlasLootFilter["FilterList"] = {};
 function AtlasLoot:HideFilteredItems()
 	local dataID, dataSource, tablenum = AtlasLootItemsFrame.refreshFilter[1], _G[AtlasLootItemsFrame.refreshFilter[2]], AtlasLootItemsFrame.refreshFilter[3];
  	local tablebase = dataSource[dataID][tablenum]
-	if not tablebase or dataID == "WishList" or dataID == "SearchResult" then return end
+	if not tablebase or dataID == "WishList" or dataID == "SearchResult" or AtlasLootCharDB.SelectedFilter == nil then return end
 	AtlasLootFilter["FilterList"] = {};
 	AtlasLootFilter["FilterList"].Type = dataSource[dataID].Type;
 	AtlasLootFilter["FilterList"].Name = dataSource[dataID].Name;
@@ -114,13 +114,25 @@ function AtlasLoot:HideFilteredItems()
 		end
 	end
 
+	local function checkNofilter(itemID, filter)
+		if getStats(itemID,filter) then return true end;
+		for i,v in pairs(AtlasLootFilterDB["FilterLists"][AtlasLootCharDB.SelectedFilter]) do
+			for n,t in ipairs(FilterTable) do
+				if t.Type == filter and v[1] then
+					return true;
+				end
+			end
+		end
+	end
+
 	local count = 0
 	local function getFilterType(itemID)
 		local filterSelect3, filterSelect2,_ , filterSelect1 = select(6,GetItemInfo(itemID));
 		local filter1 = AtlasLootFilterDB["FilterLists"][AtlasLootCharDB.SelectedFilter][filterSelect1];
 		local filter2 = AtlasLootFilterDB["FilterLists"][AtlasLootCharDB.SelectedFilter][filterSelect2];
-		if 	(filter1 and filter1[1] and filter1[3] == "InvType" and getStats(itemID,"Stat")) or
-			(filter2 and filter2[1] and filter2[3] == "ArmorType" and getStats(itemID,"Stat"))
+
+		if 	(filter1 and filter1[1] and filter1[3] == "InvType" and getStats(itemID,"PrimaryStat") and checkNofilter(itemID, "Stat")) or
+			(filter2 and filter2[1] and filter2[3] == "ArmorType" and getStats(itemID,"PrimaryStat") and checkNofilter(itemID, "Stat"))
 		then
 			return true;
 		else
@@ -269,7 +281,7 @@ function AtlasLoot:OpenFilterCreate()
 				filterCatLable:SetPoint("TOP", "AtlasLootItemsFrame", "TOP",-150,-90);
 			elseif count == 16 then
 				filterCatLable:SetPoint("TOP", "AtlasLootItemsFrame", "TOP",0,-90);
-			elseif count == 30 then
+			elseif count == 28 then
 				filterCatLable:SetPoint("TOP", "AtlasLootItemsFrame", "TOP",150,-90);
 			else
 				filterCatLable:SetPoint("LEFT", "AtlasLootFilterButton_"..(count - 1), "LEFT",0,-25);

@@ -284,6 +284,9 @@ if AL then
 	AL["Ranged weapons:"] = true;
 	AL["Relics:"] = true;
 	AL["Other:"] = true;
+	AL["How to set of change a page filter:"] = true;
+	AL["If you Right Click on the filter check box you will get a drop downmenu with a list of filters. Click the filter you want to use or click add filter set to add new custom filters."] = true;
+
 
 	-- Wishlist
 	AL["Close"] = true;

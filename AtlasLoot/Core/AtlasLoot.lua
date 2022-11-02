@@ -135,7 +135,7 @@ function AtlasLoot:OnEnable()
     if not AtlasLootCharDB["QuickLooks"] then AtlasLootCharDB["QuickLooks"] = {} end
 	if not AtlasLootCharDB.SelectedFilter then AtlasLootCharDB.SelectedFilter = 1 end
 	if not AtlasLootCharDB["SearchResult"] then AtlasLootCharDB["SearchResult"] = {Name = "Search Result" , Type = "Search", Back = true}; end
-	if not AtlasLootFilterDB then AtlasLootFilterDB = {["FilterLists"] = {}} end;
+	if not AtlasLootFilterDB then AtlasLootFilterDB = {["FilterLists"] = {{Name = "Default" }}} end;
 	if AtlasLootFilterDB and not AtlasLootFilterDB["FilterLists"] then AtlasLootFilterDB = {["FilterLists"] = {{Name = "Default" }}} end;
     if AtlasLoot_Data then
         AtlasLoot_Data["EmptyTable"] = {
@@ -824,7 +824,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 
 		if dataSource[dataID].Back or ATLASLOOT_BACKENABLED then
 			_G["AtlasLootItemsFrame_BACK"]:Show();
-		else
+		elseif dataID ~= "FilterList" then
 			AtlasLootItemsFrame.refreshBack = {dataID, dataSource_backup, tablenum};
 		end
 	end
