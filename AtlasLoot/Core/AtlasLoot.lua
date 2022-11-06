@@ -1083,20 +1083,9 @@ end
 -- Loads the Item Variations into a table from the data content folder
 function AtlasLoot:LoadItemIDsDatabase()
 	local content = C_ContentLoader:Load("ItemVariationData")
-	ItemIDsDatabase = {};
 	content:SetParser(function(index, data)
 		-- run for each item in the data
-		if ItemIDsDatabaseFixs[data.Normal] then
-			ItemIDsDatabase[data.Normal] = {};
-			for _,v in pairs(ItemIDsDatabaseFixs[data.Normal]) do
-				table.insert(ItemIDsDatabase[data.Normal],v);
-			end
-			if ItemIDsDatabaseFixs[data.Normal]["MythicRaid"] then
-				ItemIDsDatabase[data.Normal]["MythicRaid"] = ItemIDsDatabaseFixs[data.Normal]["MythicRaid"];
-			else
-				ItemIDsDatabase[data.Normal]["MythicRaid"] = ItemIDsDatabaseFixs[data.Normal][3] + 1000000;
-			end
-		elseif index ~= 0 and data.Normal ~= 0 then
+	if index ~= 0 and data.Normal ~= 0 and not ItemIDsDatabase[data.Normal] then
 			ItemIDsDatabase[data.Normal] = {}
 			ItemIDsDatabase[data.Normal]["MythicRaid"] = data.Heroic + 1000000
 			table.insert(ItemIDsDatabase[data.Normal],data.Bloodforged);
