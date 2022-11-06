@@ -35,11 +35,13 @@ Called whenever the loot browser is shown and sets up buttons and loot tables
 function AtlasLootDefaultFrame_OnShow()
     --Definition of where I want the loot table to be shown
     --Remove the selection of a loot table in Atlas
-    AtlasLootItemsFrame.activeBoss = nil;  
+    AtlasLootItemsFrame.activeBoss = nil;
     --Set the item table to the loot table
     --Show the last displayed loot table
-    local lastboss = AtlasLoot.db.profile.LastBoss;
-    if AtlasLoot.db.profile.AutoCurrentInstance and AtlasLoot:ShowInstance() then elseif lastboss and lastboss[4] then
+    local lastboss = AtlasLoot.db.profile.LastBoss[AtlasLoot_Expac];
+    if AtlasLoot.db.profile.AutoCurrentInstance and AtlasLoot:ShowInstance() then
+        return;
+    elseif lastboss and lastboss[4] then
         ATLASLOOT_CURRENTTABLE = lastboss[5];
         ATLASLOOT_LASTMODULE = lastboss[4];
         AtlasLoot:IsLootTableAvailable(lastboss[4]);

@@ -14,7 +14,6 @@ AtlasLoot_OnLoad()
 AtlasLoot:ShowItemsFrame()
 AtlasLoot:NavButton_OnClick()
 AtlasLoot:IsLootTableAvailable(dataID)
-AtlasLoot:GetLODModule(dataSource)
 AtlasLoot:LoadAllModules()
 AtlasLoot:ShowQuickLooks(button)
 AtlasLoot:RefreshQuickLookButtons()
@@ -333,11 +332,9 @@ function AtlasLoot:OnInitialize()
 	end
 
 	--Sets the default loot tables for the current expansion enabled on the server.
-	local function getExpac()
-		local xpaclist = {"CLASSIC", "TBC", "WRATH"};
-		AtlasLoot_Expac = xpaclist[GetAccountExpansionLevel()+1];
-	end
-	getExpac();
+	local xpaclist = {"CLASSIC", "TBC", "WRATH"};
+	AtlasLoot_Expac = xpaclist[GetAccountExpansionLevel()+1];
+
 end
 
 function AtlasLoot:CleandataID(newID, listnum)
@@ -758,7 +755,8 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 		end
 
 		if dataSource_backup ~= "AtlasLoot_CurrentWishList" and dataID ~= "FilterList"  and dataSource[dataID].Back ~= true and dataID ~= "EmptyTable" then
-			AtlasLoot.db.profile.LastBoss = {dataID, dataSource_backup, tablenum, ATLASLOOT_LASTMODULE, ATLASLOOT_CURRENTTABLE};
+			if not AtlasLoot.db.profile.LastBoss then AtlasLoot.db.profile.LastBoss = {} end;
+			AtlasLoot.db.profile.LastBoss[AtlasLoot_Expac] = {dataID, dataSource_backup, tablenum, ATLASLOOT_LASTMODULE, ATLASLOOT_CURRENTTABLE};
 			AtlasLoot.db.profile[ATLASLOOT_CURRENTTABLE] = {dataID, dataSource_backup, tablenum, ATLASLOOT_LASTMODULE, ATLASLOOT_CURRENTTABLE};
 		end
 
@@ -868,7 +866,7 @@ dataID: Loot table dataID
 ]]
 function AtlasLoot:IsLootTableAvailable(dataSource)
 	local moduleName = nil;
-	moduleName = AtlasLoot:GetLODModule(dataSource);
+	moduleName = AtlasLoot.ModuleName[dataSource];
 	if IsAddOnLoaded(moduleName) then
 		return true;
 	else
@@ -876,24 +874,14 @@ function AtlasLoot:IsLootTableAvailable(dataSource)
 	end
 end
 
---[[
-AtlasLoot:GetLODModule(dataSource)
-Returns the name of the module that needs to be loaded
-dataSource: Location of the loot table
-]]
-function AtlasLoot:GetLODModule(dataSource)
-	if (dataSource=="AtlasLootOriginalWoW") then
-		return "AtlasLoot_OriginalWoW";
-	elseif (dataSource=="AtlasLootBurningCrusade") then
-		return "AtlasLoot_BurningCrusade";
-	elseif (dataSource=="AtlasLootCrafting") then
-		return "AtlasLoot_Crafting";
-	elseif (dataSource=="AtlasLootWorldEvents") then
-		return "AtlasLoot_WorldEvents";
-	elseif (dataSource=="AtlasLootWotLK") then
-		return "AtlasLoot_WrathoftheLichKing";
-	end
-end
+-- List of Moduel Names
+AtlasLoot.ModuleName = {
+	["AtlasLootOriginalWoW"] = "AtlasLoot_OriginalWoW";
+	["AtlasLootBurningCrusade"] = "AtlasLoot_BurningCrusade";
+	["AtlasLootCrafting"] = "AtlasLoot_Crafting";
+	["AtlasLootWorldEvents"] = "AtlasLoot_WorldEvents";
+	["AtlasLootWotLK"] = "AtlasLoot_WrathoftheLichKing"
+}
 
 --[[
 AtlasLoot:LoadAllModules()
@@ -1098,13 +1086,23 @@ function AtlasLoot:LoadItemIDsDatabase()
 	ItemIDsDatabase = {};
 	content:SetParser(function(index, data)
 		-- run for each item in the data
-		   if index ~= 0 and data.Normal ~= 0 then
+		if ItemIDsDatabaseFixs[data.Normal] then
+			ItemIDsDatabase[data.Normal] = {};
+			for _,v in pairs(ItemIDsDatabaseFixs[data.Normal]) do
+				table.insert(ItemIDsDatabase[data.Normal],v);
+			end
+			if ItemIDsDatabaseFixs[data.Normal]["MythicRaid"] then
+				ItemIDsDatabase[data.Normal]["MythicRaid"] = ItemIDsDatabaseFixs[data.Normal]["MythicRaid"];
+			else
+				ItemIDsDatabase[data.Normal]["MythicRaid"] = ItemIDsDatabaseFixs[data.Normal][3] + 1000000;
+			end
+		elseif index ~= 0 and data.Normal ~= 0 then
 			ItemIDsDatabase[data.Normal] = {}
-			ItemIDsDatabase[data.Normal]["MythicRaid"] = data.Normal + 1300000
+			ItemIDsDatabase[data.Normal]["MythicRaid"] = data.Heroic + 1000000
 			table.insert(ItemIDsDatabase[data.Normal],data.Bloodforged);
 			table.insert(ItemIDsDatabase[data.Normal],data.Normal);
 			if data.Heroic ~= 0 then table.insert(ItemIDsDatabase[data.Normal],data.Heroic) end
-				for i,v in ipairs(data["Mythic"]) do
+				for _,v in ipairs(data["Mythic"]) do
 					if v ~= 0 then
 						table.insert(ItemIDsDatabase[data.Normal],v)
 					end
@@ -1114,5 +1112,4 @@ function AtlasLoot:LoadItemIDsDatabase()
 
 	-- This will run over time (usually about 30s for a file this size), but will maintain playable fps while running.
 	content:ParseAsync()
-	AtlasLoot:ItemIdFixs()
 	end
