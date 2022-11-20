@@ -1,9 +1,11 @@
+ItemIDsDatabase = {};
+
 --Items not added from generated file
 ItemIDsDatabase[18563] = {18563, 18563, 318563, 218563};
 ItemIDsDatabase[18564] = {18564, 18564, 318564, 218564};
 ItemIDsDatabase[17204] = {17204, 17204, 317204, 217204};
 ItemIDsDatabase[19017] = {19017, 19017, 319017, 219017};
-ItemIDsDatabase[11879] = {11879, 11879, 311879, 211879}; 
+ItemIDsDatabase[11879] = {11879, 11879, 311879, 211879};
 
 
 ItemIDsDatabase[22589] = {6022589, 22589, 322589, 222589};
@@ -110,9 +112,16 @@ ItemIDsDatabase[33483] = {6033483, 33483, 333483, 233483};
 ItemIDsDatabase[33493] = {6033493, 33493, 333493, 233493};
 ItemIDsDatabase[33497] = {6033497, 33497, 333497, 233497};
 ItemIDsDatabase[33494] = {6033494, 33494, 333494, 233494};
+ItemIDsDatabase[24537] = {6024537, 24537, 324537, 224537};
 --ZA Bears
 ItemIDsDatabase[1333809] = {1333809, 1333809, 1433809, 1233809};
 
 --intact vial of kael'thas sunstrider
 ItemIDsDatabase[450001] = {450001, 450001, 450003, 450005};
 ItemIDsDatabase[450000] = {450000, 450000, 450002, 450004};
+
+for _,v in pairs(ItemIDsDatabase) do
+    if not v["MythicRaid"] then
+        v["MythicRaid"] = v[3] + 1000000;
+    end
+end

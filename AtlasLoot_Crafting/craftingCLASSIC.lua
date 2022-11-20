@@ -97,7 +97,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 		---------------
 	AtlasLoot_Data["AlchemyCLASSIC"] = {
 			Name = ALCHEMY;
-			Type = "Crafting";
+			Type = "CraftingNoBF";
 					{
 			Name = AL["Battle Elixirs"];
 			{ 1, "s17573", "13454", "=q1=Greater Arcane Elixir", "=ds="..AL["Trainer"]};
@@ -549,6 +549,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 
 	AtlasLoot_Data["CookingCLASSIC"] = {
 			Name = COOKING;
+			Type = "CraftingNoBF";
 		{
 			Name = COOKING;
 			{ 1, "s25659", "21023", "=q1=Dirge's Kickin' Chimaerok Chops", "=ds="..AL["Quest"]..""};
@@ -683,6 +684,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 
 	AtlasLoot_Data["EnchantingCLASSIC"] = {
 			Name = ENCHANTING;
+			Type = "CraftingNoBF";
 					{
 			Name = AL["Enchant Boots"];
 			{ 1, "s20023", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Greater Agility", "=ds=#sr# 295"};
@@ -1084,6 +1086,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 
 	AtlasLoot_Data["FirstAidCLASSIC"] = {
 			Name = FIRSTAID;
+			Type = "CraftingNoBF";
 					{
 			Name = FIRSTAID;
 			{ 1, "s23787", "19440", "=q1=Powerful Anti-Venom", "=ds=#sr# 300"};
@@ -1107,6 +1110,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 
 	AtlasLoot_Data["Inscription"] = {
 			Name = INSCRIPTION;
+			Type = "CraftingNoBF";
 					{
 			Name = AL["Off-Hand Items"];
 			{ 1, "s59498", "44210", "=q4=Faces of Doom", "=ds=" };
@@ -1963,6 +1967,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 
 	AtlasLoot_Data["MiningCLASSIC"] = {
 			Name = MINING;
+			Type = "CraftingNoBF";
 					{
 			Name = MINING;
 			{ 1, "s22967", "17771", "=q5=Smelt Elementium", "=ds=#sr# 300"};
@@ -1991,23 +1996,23 @@ local MASTER = select(2, GetSpellInfo(28596));
 					{
 			Name = AL["Cloth Armor"].." - Back";
 			{ 1, "s28208", "22658", "=q4=Glacial Cloak", "=ds=#sr# 300"};
-			{ 2, "s22870", "18413", "=q3=Cloak of Warding", "=ds=#sr# 300"};
-			{ 3, "s23662", "19047", "=q3=Wisdom of the Timbermaw", "=ds=#sr# 290"};
-			{ 4, "s18422", "14134", "=q3=Cloak of Fire", "=ds=#sr# 275"};
-			{ 5, "s18409", "13860", "=q2=Runecloth Cloak", "=ds=#sr# 265"};
-			{ 6, "s3862", "4327", "=q3=Icy Cloak", "=ds=#sr# 200"};
-			{ 7, "s63742", "45626", "=q3=Spidersilk Drape", "=ds=#sr# 125"};
-			{ 8, "s18420", "14103", "=q2=Brightcloth Cloak", "=ds=#sr# 275"};
-			{ 9, "s18418", "14044", "=q2=Cindercloth Cloak", "=ds=#sr# 275"};
-			{ 10, "s3861", "4326", "=q2=Long Silken Cloak", "=ds=#sr# 185"};
-			{ 11, "s8789", "7056", "=q2=Crimson Silk Cloak", "=ds=#sr# 180"};
-			{ 12, "s8786", "7053", "=q2=Azure Silk Cloak", "=ds=#sr# 175"};
-			{ 13, "s8780", "7047", "=q2=Hands of Darkness", "=ds=#sr# 145"};
-			{ 14, "s3856", "4321", "=q2=Spider Silk Slippers", "=ds=#sr# 140"};
+			{ 2, "s28210", "22660", "=q3=Gaea's Embrace", "=ds=#sr# 300"};
+			{ 3, "s22870", "18413", "=q3=Cloak of Warding", "=ds=#sr# 300"};
+			{ 4, "s23662", "19047", "=q3=Wisdom of the Timbermaw", "=ds=#sr# 290"};
+			{ 5, "s18422", "14134", "=q3=Cloak of Fire", "=ds=#sr# 275"};
+			{ 6, "s18409", "13860", "=q2=Runecloth Cloak", "=ds=#sr# 265"};
+			{ 7, "s3862", "4327", "=q3=Icy Cloak", "=ds=#sr# 200"};
+			{ 8, "s63742", "45626", "=q3=Spidersilk Drape", "=ds=#sr# 125"};
+			{ 9, "s18420", "14103", "=q2=Brightcloth Cloak", "=ds=#sr# 275"};
+			{ 10, "s18418", "14044", "=q2=Cindercloth Cloak", "=ds=#sr# 275"};
+			{ 11, "s3861", "4326", "=q2=Long Silken Cloak", "=ds=#sr# 185"};
+			{ 12, "s8789", "7056", "=q2=Crimson Silk Cloak", "=ds=#sr# 180"};
+			{ 13, "s8786", "7053", "=q2=Azure Silk Cloak", "=ds=#sr# 175"};
+			{ 14, "s8780", "7047", "=q2=Hands of Darkness", "=ds=#sr# 145"};	
 			{ 15, "s3844", "4311", "=q2=Heavy Woolen Cloak", "=ds=#sr# 100"};
 			{ 16, "s6521", "5542", "=q2=Pearl-clasped Cloak", "=ds=#sr# 90"};
-			{ 17, "s3842", "4309", "=q2=Handstitched Linen Britches", "=ds=#sr# 70"};
-			{ 18, "s2402", "2584", "=q1=Woolen Cape", "=ds=#sr# 75"};
+			{ 17, "s2402", "2584", "=q1=Woolen Cape", "=ds=#sr# 75"};
+			{ 18, "s2397", "2580", "=q1=Reinforced Linen Cape", "=ds=#sr# 60"};
 			{ 19, "s2387", "2570", "=q1=Linen Cloak", "=ds=#sr# 1"};
 		};
 		{
@@ -2021,27 +2026,26 @@ local MASTER = select(2, GetSpellInfo(28596));
 			{ 7, "s22902", "18486", "=q3=Mooncloth Robe", "=ds=#sr# 300"};
 			{ 8, "s18447", "14138", "=q3=Mooncloth Vest", "=ds=#sr# 300"};
 			{ 9, "s28480", "22756", "=q3=Sylvan Vest", "=ds=#sr# 300"};
-			{ 10, "s18436", "14136", "=q3=Robe of Winter Night", "=ds=#sr# 285"};
-			{ 11, "s12070", "10021", "=q3=Dreamweave Vest", "=ds=#sr# 225"};
-			{ 12, "s8770", "7054", "=q3=Robe of Power", "=ds=#sr# 190"};
-			{ 13, "s18451", "14106", "=q2=Felcloth Robe", "=ds=#sr# 300"};
-			{ 14, "s18446", "14128", "=q2=Wizardweave Robe", "=ds=#sr# 300"};
-			{ 15, "s18416", "14141", "=q2=Ghostweave Vest", "=ds=#sr# 275"};
-			{ 16, "s22813", "18258", "=q2=Gordok Ogre Suit", "=ds=#sr# 275"};
-			{ 17, "s18414", "14100", "=q2=Brightcloth Robe", "=ds=#sr# 270"};
-			{ 18, "s18408", "14042", "=q2=Cindercloth Vest", "=ds=#sr# 260"};
-			{ 19, "s18406", "13858", "=q2=Runecloth Robe", "=ds=#sr# 260"};
-			{ 20, "s18407", "13857", "=q2=Runecloth Tunic", "=ds=#sr# 260"};
-			{ 21, "s18404", "13868", "=q2=Frostweave Robe", "=ds=#sr# 255"};
-			{ 22, "s18403", "13869", "=q2=Frostweave Tunic", "=ds=#sr# 255"};
-			{ 23, "s26407", "21542", "=q1=Festive Red Pant Suit", "=ds=#sr# 250"};
-			{ 24, "s26403", "21154", "=q1=Festival Dress", "=ds=#sr# 250"};
-			{ 25, "s12093", "10036", "=q1=Tuxedo Jacket", "=ds=#sr# 250"};
-			{ 26, "s44950", "34087", "=q1=Green Winter Clothes", "=ds=#sr# 250"};
-			{ 27, "s44958", "34085", "=q1=Red Winter Clothes", "=ds=#sr# 250"};
-			{ 28, "s12091", "10040", "=q1=White Wedding Dress", "=ds=#sr# 250"};
-			{ 29, "s12077", "10053", "=q1=Simple Black Dress", "=ds=#sr# 235"};
-			{ 30, "s12069", "10042", "=q2=Cindercloth Robe", "=ds=#sr# 225"};
+			{ 10, "s18451", "14106", "=q2=Felcloth Robe", "=ds=#sr# 300"};
+			{ 11, "s18446", "14128", "=q2=Wizardweave Robe", "=ds=#sr# 300"};
+			{ 12, "s18436", "14136", "=q3=Robe of Winter Night", "=ds=#sr# 285"};
+			{ 13, "s12070", "10021", "=q3=Dreamweave Vest", "=ds=#sr# 225"};
+			{ 14, "s18416", "14141", "=q2=Ghostweave Vest", "=ds=#sr# 275"};
+			{ 15, "s22813", "18258", "=q2=Gordok Ogre Suit", "=ds=#sr# 275"};
+			{ 16, "s18414", "14100", "=q2=Brightcloth Robe", "=ds=#sr# 270"};
+			{ 17, "s18408", "14042", "=q2=Cindercloth Vest", "=ds=#sr# 260"};
+			{ 18, "s18406", "13858", "=q2=Runecloth Robe", "=ds=#sr# 260"};
+			{ 19, "s18407", "13857", "=q2=Runecloth Tunic", "=ds=#sr# 260"};
+			{ 20, "s18404", "13868", "=q2=Frostweave Robe", "=ds=#sr# 255"};
+			{ 21, "s18403", "13869", "=q2=Frostweave Tunic", "=ds=#sr# 255"};
+			{ 22, "s26407", "21542", "=q1=Festive Red Pant Suit", "=ds=#sr# 250"};
+			{ 23, "s26403", "21154", "=q1=Festival Dress", "=ds=#sr# 250"};
+			{ 24, "s12093", "10036", "=q1=Tuxedo Jacket", "=ds=#sr# 250"};
+			{ 25, "s44950", "34087", "=q1=Green Winter Clothes", "=ds=#sr# 250"};
+			{ 26, "s44958", "34085", "=q1=Red Winter Clothes", "=ds=#sr# 250"};
+			{ 27, "s12091", "10040", "=q1=White Wedding Dress", "=ds=#sr# 250"};
+			{ 28, "s12077", "10053", "=q1=Simple Black Dress", "=ds=#sr# 235"};
+			{ 29, "s12069", "10042", "=q2=Cindercloth Robe", "=ds=#sr# 225"};
 		};
 		{
 			Name = AL["Cloth Armor"].." - Chest";
@@ -2050,29 +2054,28 @@ local MASTER = select(2, GetSpellInfo(28596));
 			{ 3, "s12050", "10001", "=q2=Black Mageweave Robe", "=ds=#sr# 210"};
 			{ 4, "s12048", "9998", "=q2=Black Mageweave Vest", "=ds=#sr# 205"};
 			{ 5, "s8802", "7063", "=q2=Crimson Silk Robe", "=ds=#sr# 205"};
+			{ 12, "s8770", "7054", "=q3=Robe of Power", "=ds=#sr# 190"};
 			{ 6, "s8791", "7058", "=q1=Crimson Silk Vest", "=ds=#sr# 185"};
 			{ 7, "s8764", "7051", "=q2=Earthen Vest", "=ds=#sr# 170"};
 			{ 8, "s8784", "7065", "=q2=Green Silk Armor", "=ds=#sr# 165"};
 			{ 9, "s3859", "4324", "=q2=Azure Silk Vest", "=ds=#sr# 150"};
 			{ 10, "s6692", "5770", "=q2=Robes of Arcana", "=ds=#sr# 150"};
 			{ 11, "s6690", "5766", "=q2=Lesser Wizard's Robe", "=ds=#sr# 135"};
-			{ 12, "s12047", "10048", "=q2=Colorful Kilt", "=ds=#sr# 120"};
-			{ 13, "s7643", "6264", "=q2=Greater Adept's Robe", "=ds=#sr# 115"};
-			{ 14, "s8467", "6787", "=q1=White Woolen Dress", "=ds=#sr# 110"};
-			{ 15, "s2403", "2585", "=q2=Gray Woolen Robe", "=ds=#sr# 105"};
-			{ 16, "s7639", "6263", "=q2=Blue Overalls", "=ds=#sr# 100"};
-			{ 17, "s2399", "2582", "=q1=Green Woolen Vest", "=ds=#sr# 85"};
-			{ 18, "s12046", "10047", "=q1=Simple Kilt", "=ds=#sr# 75"};
-			{ 19, "s2395", "2578", "=q2=Barbaric Linen Vest", "=ds=#sr# 70"};
-			{ 20, "s7633", "6242", "=q2=Blue Linen Robe", "=ds=#sr# 70"};
-			{ 21, "s7630", "6240", "=q2=Blue Linen Vest", "=ds=#sr# 55"};
-			{ 22, "s7629", "6239", "=q2=Red Linen Vest", "=ds=#sr# 55"};
-			{ 23, "s8465", "6786", "=q1=Simple Dress", "=ds=#sr# 40"};
-			{ 24, "s2389", "2572", "=q2=Red Linen Robe", "=ds=#sr# 40"};
-			{ 25, "s7623", "6238", "=q2=Brown Linen Robe", "=ds=#sr# 30"};
-			{ 26, "s7624", "6241", "=q2=White Linen Robe", "=ds=#sr# 30"};
-			{ 27, "s2385", "2568", "=q1=Brown Linen Vest", "=ds=#sr# 10"};
-			{ 28, "s50644", "38277", "=q1=Haliscan Jacket", "=ds="..AL["Vendor"]..""};
+			{ 12, "s7643", "6264", "=q2=Greater Adept's Robe", "=ds=#sr# 115"};
+			{ 13, "s8467", "6787", "=q1=White Woolen Dress", "=ds=#sr# 110"};
+			{ 14, "s2403", "2585", "=q2=Gray Woolen Robe", "=ds=#sr# 105"};
+			{ 15, "s7639", "6263", "=q2=Blue Overalls", "=ds=#sr# 100"};
+			{ 16, "s2399", "2582", "=q1=Green Woolen Vest", "=ds=#sr# 85"};
+			{ 17, "s2395", "2578", "=q2=Barbaric Linen Vest", "=ds=#sr# 70"};
+			{ 18, "s7633", "6242", "=q2=Blue Linen Robe", "=ds=#sr# 70"};
+			{ 19, "s7630", "6240", "=q2=Blue Linen Vest", "=ds=#sr# 55"};
+			{ 20, "s7629", "6239", "=q2=Red Linen Vest", "=ds=#sr# 55"};
+			{ 21, "s8465", "6786", "=q1=Simple Dress", "=ds=#sr# 40"};
+			{ 22, "s2389", "2572", "=q2=Red Linen Robe", "=ds=#sr# 40"};
+			{ 23, "s7623", "6238", "=q2=Brown Linen Robe", "=ds=#sr# 30"};
+			{ 24, "s7624", "6241", "=q2=White Linen Robe", "=ds=#sr# 30"};
+			{ 25, "s2385", "2568", "=q1=Brown Linen Vest", "=ds=#sr# 10"};
+			{ 26, "s50644", "38277", "=q1=Haliscan Jacket", "=ds="..AL["Vendor"]..""};
 		};
 		{
 			Name = AL["Cloth Armor"].." - Feet";
@@ -2086,60 +2089,57 @@ local MASTER = select(2, GetSpellInfo(28596));
 			{ 8, "s12082", "10031", "=q2=Shadoweave Boots", "=ds=#sr# 240"};
 			{ 9, "s12073", "10026", "=q2=Black Mageweave Boots", "=ds=#sr# 230"};
 			{ 10, "s3860", "4325", "=q2=Boots of the Enchanter", "=ds=#sr# 175"};
-			{ 11, "s3855", "4320", "=q3=Spidersilk Boots", "=ds=#sr# 125"};
-			{ 12, "s3847", "4313", "=q2=Red Woolen Boots", "=ds=#sr# 95"};
-			{ 13, "s2401", "2583", "=q2=Woolen Boots", "=ds=#sr# 95"};
-			{ 14, "s3845", "4312", "=q2=Soft-soled Linen Boots", "=ds=#sr# 80"};
-			{ 15, "s2386", "2569", "=q1=Linen Boots", "=ds=#sr# 65"};
-			{ 16, "s12045", "10046", "=q1=Simple Linen Boots", "=ds=#sr# 20"};
-			{ 17, "s49677", "6836", "=q1=Dress Shoes", "=ds="..AL["Vendor"]..""};
+			{ 11, "s3856", "4321", "=q2=Spider Silk Slippers", "=ds=#sr# 140"};
+			{ 12, "s3855", "4320", "=q3=Spidersilk Boots", "=ds=#sr# 125"};
+			{ 13, "s3847", "4313", "=q2=Red Woolen Boots", "=ds=#sr# 95"};
+			{ 14, "s2401", "2583", "=q2=Woolen Boots", "=ds=#sr# 95"};
+			{ 15, "s3845", "4312", "=q2=Soft-soled Linen Boots", "=ds=#sr# 80"};
+			{ 16, "s2386", "2569", "=q1=Linen Boots", "=ds=#sr# 65"};
+			{ 17, "s12045", "10046", "=q1=Simple Linen Boots", "=ds=#sr# 20"};
+			{ 18, "s49677", "6836", "=q1=Dress Shoes", "=ds="..AL["Vendor"]..""};
 		};
 		{
 			Name = AL["Cloth Armor"].." - Hands";
-			{ 1, "s22759", "18263", "=q4=Flarecore Wraps", "=ds=#sr# 300"};
-			{ 2, "s20849", "16979", "=q4=Flarecore Gloves", "=ds=#sr# 300"};
-			{ 3, "s28205", "22654", "=q4=Glacial Gloves", "=ds=#sr# 300"};
-			{ 4, "s18454", "14146", "=q4=Gloves of Spell Mastery", "=ds=#sr# 300"};
-			{ 5, "s22867", "18407", "=q3=Felcloth Gloves", "=ds=#sr# 300"};
-			{ 6, "s22868", "18408", "=q3=Inferno Gloves", "=ds=#sr# 300"};
-			{ 7, "s22869", "18409", "=q3=Mooncloth Gloves", "=ds=#sr# 300"};
-			{ 8, "s12067", "10019", "=q3=Dreamweave Gloves", "=ds=#sr# 225"};
-			{ 9, "s18417", "13863", "=q2=Runecloth Gloves", "=ds=#sr# 275"};
-			{ 10, "s18415", "14101", "=q2=Brightcloth Gloves", "=ds=#sr# 270"};
-			{ 11, "s18412", "14043", "=q2=Cindercloth Gloves", "=ds=#sr# 270"};
-			{ 12, "s18413", "14142", "=q2=Ghostweave Gloves", "=ds=#sr# 270"};
-			{ 13, "s18411", "13870", "=q2=Frostweave Gloves", "=ds=#sr# 265"};
-			{ 14, "s12066", "10018", "=q2=Red Mageweave Gloves", "=ds=#sr# 225"};
-			{ 15, "s12071", "10023", "=q2=Shadoweave Gloves", "=ds=#sr# 225"};
-			{ 16, "s12053", "10003", "=q2=Black Mageweave Gloves", "=ds=#sr# 215"};
-			{ 17, "s8804", "7064", "=q2=Crimson Silk Gloves", "=ds=#sr# 210"};
-			{ 18, "s8782", "7049", "=q2=Truefaith Gloves", "=ds=#sr# 150"};
-			{ 19, "s3854", "4319", "=q2=Azure Silk Gloves", "=ds=#sr# 145"};
-			{ 20, "s3852", "4318", "=q2=Gloves of Meditation", "=ds=#sr# 130"};
-			{ 21, "s3868", "4331", "=q2=Phoenix Gloves", "=ds=#sr# 125"};
-			{ 22, "s3843", "4310", "=q2=Heavy Woolen Gloves", "=ds=#sr# 85"};
-			{ 23, "s3840", "4307", "=q1=Heavy Linen Gloves", "=ds=#sr# 35"};
+			{ 1, "s20849", "16979", "=q4=Flarecore Gloves", "=ds=#sr# 300"};
+			{ 2, "s28205", "22654", "=q4=Glacial Gloves", "=ds=#sr# 300"};
+			{ 3, "s18454", "14146", "=q4=Gloves of Spell Mastery", "=ds=#sr# 300"};
+			{ 4, "s22867", "18407", "=q3=Felcloth Gloves", "=ds=#sr# 300"};
+			{ 5, "s22868", "18408", "=q3=Inferno Gloves", "=ds=#sr# 300"};
+			{ 6, "s22869", "18409", "=q3=Mooncloth Gloves", "=ds=#sr# 300"};
+			{ 7, "s12067", "10019", "=q3=Dreamweave Gloves", "=ds=#sr# 225"};
+			{ 8, "s18417", "13863", "=q2=Runecloth Gloves", "=ds=#sr# 275"};
+			{ 9, "s18415", "14101", "=q2=Brightcloth Gloves", "=ds=#sr# 270"};
+			{ 10, "s18412", "14043", "=q2=Cindercloth Gloves", "=ds=#sr# 270"};
+			{ 11, "s18413", "14142", "=q2=Ghostweave Gloves", "=ds=#sr# 270"};
+			{ 12, "s18411", "13870", "=q2=Frostweave Gloves", "=ds=#sr# 265"};
+			{ 13, "s12066", "10018", "=q2=Red Mageweave Gloves", "=ds=#sr# 225"};
+			{ 14, "s12071", "10023", "=q2=Shadoweave Gloves", "=ds=#sr# 225"};
+			{ 15, "s12053", "10003", "=q2=Black Mageweave Gloves", "=ds=#sr# 215"};
+			{ 16, "s8804", "7064", "=q2=Crimson Silk Gloves", "=ds=#sr# 210"};
+			{ 17, "s8782", "7049", "=q2=Truefaith Gloves", "=ds=#sr# 150"};
+			{ 18, "s3854", "4319", "=q2=Azure Silk Gloves", "=ds=#sr# 145"};
+			{ 19, "s3852", "4318", "=q2=Gloves of Meditation", "=ds=#sr# 130"};
+			{ 20, "s3868", "4331", "=q2=Phoenix Gloves", "=ds=#sr# 125"};
+			{ 21, "s3843", "4310", "=q2=Heavy Woolen Gloves", "=ds=#sr# 85"};
+			{ 22, "s3840", "4307", "=q1=Heavy Linen Gloves", "=ds=#sr# 35"};
 		};
 		{
 			Name = AL["Cloth Armor"].." - Head";
-			{ 1, "s28210", "22660", "=q3=Gaea's Embrace", "=ds=#sr# 300"};
-			{ 2, "s18452", "14140", "=q3=Mooncloth Circlet", "=ds=#sr# 300"};
-			{ 3, "s28481", "22757", "=q3=Sylvan Crown", "=ds=#sr# 300"};
-			{ 4, "s18450", "14130", "=q2=Wizardweave Turban", "=ds=#sr# 300"};
-			{ 5, "s12092", "10041", "=q3=Dreamweave Circlet", "=ds=#sr# 250"};
-			{ 6, "s18442", "14111", "=q2=Felcloth Hood", "=ds=#sr# 290"};
-			{ 7, "s18444", "13866", "=q2=Runecloth Headband", "=ds=#sr# 295"};
-			{ 8, "s12086", "10025", "=q2=Shadoweave Mask", "=ds=#sr# 245"};
-			{ 9, "s12081", "10030", "=q2=Admiral's Hat", "=ds=#sr# 240"};
-			{ 10, "s12084", "10033", "=q2=Red Mageweave Headband", "=ds=#sr# 240"};
-			{ 11, "s12072", "10024", "=q2=Black Mageweave Headband", "=ds=#sr# 230"};
-			{ 12, "s12059", "10008", "=q2=White Bandit Mask", "=ds=#sr# 215"};
-			{ 13, "s3858", "4323", "=q2=Shadow Hood", "=ds=#sr# 170"};
-			{ 14, "s3857", "4322", "=q2=Enchanter's Cowl", "=ds=#sr# 165"};
-			{ 15, "s8762", "7050", "=q1=Silk Headband", "=ds=#sr# 160"};
-			{ 16, "s8760", "7048", "=q1=Azure Silk Hood", "=ds=#sr# 145"};
-			{ 17, "s2397", "2580", "=q1=Reinforced Linen Cape", "=ds=#sr# 60"};
-
+			{ 1, "s18452", "14140", "=q3=Mooncloth Circlet", "=ds=#sr# 300"};
+			{ 2, "s28481", "22757", "=q3=Sylvan Crown", "=ds=#sr# 300"};
+			{ 3, "s18450", "14130", "=q2=Wizardweave Turban", "=ds=#sr# 300"};
+			{ 4, "s18444", "13866", "=q2=Runecloth Headband", "=ds=#sr# 295"};
+			{ 5, "s18442", "14111", "=q2=Felcloth Hood", "=ds=#sr# 290"};
+			{ 6, "s12092", "10041", "=q3=Dreamweave Circlet", "=ds=#sr# 250"};
+			{ 7, "s12086", "10025", "=q2=Shadoweave Mask", "=ds=#sr# 245"};
+			{ 8, "s12081", "10030", "=q2=Admiral's Hat", "=ds=#sr# 240"};
+			{ 9, "s12084", "10033", "=q2=Red Mageweave Headband", "=ds=#sr# 240"};
+			{ 10, "s12072", "10024", "=q2=Black Mageweave Headband", "=ds=#sr# 230"};
+			{ 11, "s12059", "10008", "=q2=White Bandit Mask", "=ds=#sr# 215"};
+			{ 12, "s3858", "4323", "=q2=Shadow Hood", "=ds=#sr# 170"};
+			{ 13, "s3857", "4322", "=q2=Enchanter's Cowl", "=ds=#sr# 165"};
+			{ 14, "s8762", "7050", "=q1=Silk Headband", "=ds=#sr# 160"};
+			{ 15, "s8760", "7048", "=q1=Azure Silk Hood", "=ds=#sr# 145"};
 		};
 		{
 			Name = AL["Cloth Armor"].." - Legs";
@@ -2154,17 +2154,19 @@ local MASTER = select(2, GetSpellInfo(28596));
 			{ 9, "s18424", "13871", "=q2=Frostweave Pants", "=ds=#sr# 280"};
 			{ 10, "s18419", "14107", "=q2=Felcloth Pants", "=ds=#sr# 275"};
 			{ 11, "s18421", "14132", "=q2=Wizardweave Leggings", "=ds=#sr# 275"};
-			{ 12, "s50647", "38278", "=q1=Haliscan Pantaloons", "=ds="..AL["Vendor"]..""};
-			{ 13, "s12060", "10009", "=q2=Red Mageweave Pants", "=ds=#sr# 215"};
-			{ 14, "s12052", "10002", "=q2=Shadoweave Pants", "=ds=#sr# 210"};
-			{ 15, "s12049", "9999", "=q2=Black Mageweave Leggings", "=ds=#sr# 205"};
-			{ 16, "s8758", "7046", "=q2=Azure Silk Pants", "=ds=#sr# 140"};
-			{ 17, "s3851", "4317", "=q2=Phoenix Pants", "=ds=#sr# 125"};
-			{ 18, "s3850", "4316", "=q2=Heavy Woolen Pants", "=ds=#sr# 110"};
-			{ 19, "s12089", "10035", "=q1=Tuxedo Pants", "=ds=#sr# 245"};
-			{ 20, "s3914", "4343", "=q1=Brown Linen Pants", "=ds=#sr# 30"};
-			{ 21, "s12044", "10045", "=q1=Simple Linen Pants", "=ds=#sr# 1"};
-
+			{ 12, "s12089", "10035", "=q1=Tuxedo Pants", "=ds=#sr# 245"};
+			{ 13, "s50647", "38278", "=q1=Haliscan Pantaloons", "=ds="..AL["Vendor"]..""};
+			{ 14, "s12060", "10009", "=q2=Red Mageweave Pants", "=ds=#sr# 215"};
+			{ 15, "s12052", "10002", "=q2=Shadoweave Pants", "=ds=#sr# 210"};
+			{ 16, "s12049", "9999", "=q2=Black Mageweave Leggings", "=ds=#sr# 205"};
+			{ 17, "s8758", "7046", "=q2=Azure Silk Pants", "=ds=#sr# 140"};
+			{ 18, "s3851", "4317", "=q2=Phoenix Pants", "=ds=#sr# 125"};
+			{ 19, "s12047", "10048", "=q2=Colorful Kilt", "=ds=#sr# 120"};
+			{ 20, "s3850", "4316", "=q2=Heavy Woolen Pants", "=ds=#sr# 110"};
+			{ 21, "s12046", "10047", "=q1=Simple Kilt", "=ds=#sr# 75"};
+			{ 22, "s3842", "4309", "=q2=Handstitched Linen Britches", "=ds=#sr# 70"};
+			{ 23, "s3914", "4343", "=q1=Brown Linen Pants", "=ds=#sr# 30"};
+			{ 24, "s12044", "10045", "=q1=Simple Linen Pants", "=ds=#sr# 1"};
 		};
 		{
 			Name = AL["Cloth Armor"].." - Shoulder";
@@ -2200,8 +2202,9 @@ local MASTER = select(2, GetSpellInfo(28596));
 		};
 		{
 			Name = AL["Cloth Armor"].." - Wrist";
-			{ 1, "s28209", "22655", "=q4=Glacial Wrists", "=ds=#sr# 300"};
-			{ 2, "s3841", "4308", "=q1=Green Linen Bracers", "=ds=#sr# 60"};
+			{ 1, "s22759", "18263", "=q4=Flarecore Wraps", "=ds=#sr# 300"};
+			{ 2, "s28209", "22655", "=q4=Glacial Wrists", "=ds=#sr# 300"};
+			{ 3, "s3841", "4308", "=q1=Green Linen Bracers", "=ds=#sr# 60"};
 		};
 		{
 			Name = AL["Bags"];
@@ -2261,583 +2264,6 @@ local MASTER = select(2, GetSpellInfo(28596));
 			{ 21, "s2393", "2576", "=q1=White Linen Shirt", "=ds=#sr# 1"};
 			{ 22, "s3915", "4344", "=q1=Brown Linen Shirt", "=ds=#sr# 1"};
 		};
-	};
-
-	-----------------------
-	--- Profession Sets ---
-	-----------------------
-
-		-------------------------------
-		--- Blacksmithing Mail Sets ---
-		-------------------------------
-
-	AtlasLoot_Data["BlacksmithingMailBloodsoulEmbrace"] = {
-		{ 1, 0, "INV_Hammer_20", "=q6=#craftbm1#", ""};
-		{ 2, 19691, "", "=q3=Bloodsoul Shoulders", "=ds=#s3#, #a3#"};
-		{ 3, 19690, "", "=q3=Bloodsoul Breastplate", "=ds=#s5#, #a3#"};
-		{ 4, 19692, "", "=q3=Bloodsoul Gauntlets", "=ds=#s9#, #a3#"};
-	};
-
-	AtlasLoot_Data["BlacksmithingMailFelIronChain"] = {
-		{ 1, 0, "INV_Hammer_20", "=q6=#craftbm2#", ""};
-		{ 2, 23493, "", "=q2=Fel Iron Chain Coif", "=ds=#s1#, #a3#"};
-		{ 3, 23490, "", "=q2=Fel Iron Chain Tunic", "=ds=#s5#, #a3#"};
-		{ 4, 23494, "", "=q2=Fel Iron Chain Bracers", "=ds=#s8#, #a3#"};
-		{ 5, 23491, "", "=q2=Fel Iron Chain Gloves", "=ds=#s9#, #a3#"};
-	};
-
-		--------------------------------
-		--- Blacksmithing Plate Sets ---
-		--------------------------------
-
-	AtlasLoot_Data["BlacksmithingPlateImperialPlate"] = {
-		{ 1, 0, "INV_Hammer_20", "=q6=#craftbp1#", ""};
-		{ 2, 12427, "", "=q2=Imperial Plate Helm", "=ds=#s1#, #a4#"};
-		{ 3, 12428, "", "=q2=Imperial Plate Shoulders", "=ds=#s3#, #a4#"};
-		{ 4, 12422, "", "=q2=Imperial Plate Chest", "=ds=#s5#, #a4#"};
-		{ 5, 12425, "", "=q2=Imperial Plate Bracers", "=ds=#s8#, #a4#"};
-		{ 6, 12424, "", "=q2=Imperial Plate Belt", "=ds=#s10#, #a4#"};
-		{ 7, 12429, "", "=q2=Imperial Plate Leggings", "=ds=#s11#, #a4#"};
-		{ 8, 12426, "", "=q2=Imperial Plate Boots", "=ds=#s12#, #a4#"};
-	};
-
-	AtlasLoot_Data["BlacksmithingPlateTheDarksoul"] = {
-		{ 1, 0, "INV_Hammer_20", "=q6=#craftbp2#", ""};
-		{ 2, 19695, "", "=q3=Darksoul Shoulders", "=ds=#s3#, #a4#"};
-		{ 3, 19693, "", "=q3=Darksoul Breastplate", "=ds=#s5#, #a4#"};
-		{ 4, 19694, "", "=q3=Darksoul Leggings", "=ds=#s11#, #a4#"};
-	};
-
-	AtlasLoot_Data["BlacksmithingPlateFelIronPlate"] = {
-		{ 1, 0, "INV_Hammer_20", "=q6=#craftbp3#", ""};
-		{ 2, 23489, "", "=q2=Fel Iron Breastplate", "=ds=#s5#, #a4#"};
-		{ 3, 23482, "", "=q2=Fel Iron Plate Gloves", "=ds=#s9#, #a4#"};
-		{ 4, 23484, "", "=q2=Fel Iron Plate Belt", "=ds=#s10#, #a4#"};
-		{ 5, 23488, "", "=q2=Fel Iron Plate Pants", "=ds=#s11#, #a4#"};
-		{ 6, 23487, "", "=q2=Fel Iron Plate Boots", "=ds=#s12#, #a4#"};
-	};
-
-	AtlasLoot_Data["BlacksmithingPlateAdamantiteB"] = {
-		{ 1, 0, "INV_Hammer_20", "=q6=#craftbp4#", ""};
-		{ 2, 23507, "", "=q3=Adamantite Breastplate", "=ds=#s5#, #a4#"};
-		{ 3, 23506, "", "=q3=Adamantite Plate Bracers", "=ds=#s8#, #a4#"};
-		{ 4, 23508, "", "=q3=Adamantite Plate Gloves", "=ds=#s9#, #a4#"};
-	};
-
-	AtlasLoot_Data["BlacksmithingPlateFlameG"] = {
-		{ 1, 0, "INV_Hammer_20", "=q6=#craftbp5#", "=q1=#j11#"};
-		{ 2, 23516, "", "=q3=Flamebane Helm", "=ds=#s1#, #a4#"};
-		{ 3, 23513, "", "=q3=Flamebane Breastplate", "=ds=#s5#, #a4#"};
-		{ 4, 23515, "", "=q3=Flamebane Bracers", "=ds=#s8#, #a4#"};
-		{ 5, 23514, "", "=q3=Flamebane Gloves", "=ds=#s9#, #a4#"};
-	};
-
-	AtlasLoot_Data["BlacksmithingPlateEnchantedAdaman"] = {
-		{ 1, 0, "INV_Hammer_20", "=q6=#craftbp6#", "=q1=#j12#"};
-		{ 2, 23509, "", "=q3=Enchanted Adamantite Breastplate", "=ds=#s5#, #a4#"};
-		{ 3, 23510, "", "=q3=Enchanted Adamantite Belt", "=ds=#s10#, #a4#"};
-		{ 4, 23512, "", "=q3=Enchanted Adamantite Leggings", "=ds=#s11#, #a4#"};
-		{ 5, 23511, "", "=q3=Enchanted Adamantite Boots", "=ds=#s12#, #a4#"};
-	};
-
-	AtlasLoot_Data["BlacksmithingPlateKhoriumWard"] = {
-		{ 1, 0, "INV_Hammer_20", "=q6=#craftbp7#", ""};
-		{ 2, 23524, "", "=q3=Khorium Belt", "=ds=#s10#, #a4#"};
-		{ 3, 23523, "", "=q3=Khorium Pants", "=ds=#s11#, #a4#"};
-		{ 4, 23525, "", "=q3=Khorium Boots", "=ds=#s12#, #a4#"};
-	};
-
-	AtlasLoot_Data["BlacksmithingPlateFaithFelsteel"] = {
-		{ 1, 0, "INV_Hammer_20", "=q6=#craftbp8#", ""};
-		{ 2, 23519, "", "=q3=Felsteel Helm", "=ds=#s1#, #a4#"};
-		{ 3, 23517, "", "=q3=Felsteel Gloves", "=ds=#s9#, #a4#"};
-		{ 4, 23518, "", "=q3=Felsteel Leggings", "=ds=#s11#, #a4#"};
-	};
-
-	AtlasLoot_Data["BlacksmithingPlateBurningRage"] = {
-		{ 1, 0, "INV_Hammer_20", "=q6=#craftbp9#", ""};
-		{ 2, 23521, "", "=q3=Ragesteel Helm", "=ds=#s1#, #a4#"};
-		{ 3, 33173, "", "=q3=Ragesteel Shoulders", "=ds=#s3#, #a4#"};
-		{ 4, 23522, "", "=q3=Ragesteel Breastplate", "=ds=#s5#, #a4#"};
-		{ 5, 23520, "", "=q3=Ragesteel Gloves", "=ds=#s9#, #a4#"};
-	};
-
-	AtlasLoot_Data["BlacksmithingPlateOrnateSaroniteBattlegear"] = {
-		{ 1, 0, "INV_Hammer_20", "=q6=#craftbp10#", ""};
-		{ 2, 42728, "", "=q3=Ornate Saronite Skullshield", "=ds=#s1#, #a4#"};
-		{ 3, 42727, "", "=q3=Ornate Saronite Pauldrons", "=ds=#s3#, #a4#"};
-		{ 4, 42725, "", "=q3=Ornate Saronite Hauberk", "=ds=#s5#, #a4#"};
-		{ 5, 42723, "", "=q3=Ornate Saronite Bracers", "=ds=#s8#, #a4#"};
-		{ 6, 42724, "", "=q3=Ornate Saronite Gauntlets", "=ds=#s9#, #a4#"};
-		{ 7, 42729, "", "=q3=Ornate Saronite Waistguard", "=ds=#s10#, #a4#"};
-		{ 8, 42726, "", "=q3=Ornate Saronite Legplates", "=ds=#s11#, #a4#"};
-		{ 9, 42730, "", "=q3=Ornate Saronite Walkers", "=ds=#s12#, #a4#"};
-	};
-
-	AtlasLoot_Data["BlacksmithingPlateSavageSaroniteBattlegear"] = {
-		{ 1, 0, "INV_Hammer_20", "=q6=#craftbp11#", ""};
-		{ 2, 41350, "", "=q3=Savage Saronite Skullshield", "=ds=#s1#, #a4#"};
-		{ 3, 41351, "", "=q3=Savage Saronite Pauldrons", "=ds=#s3#, #a4#"};
-		{ 4, 41353, "", "=q3=Savage Saronite Hauberk", "=ds=#s5#, #a4#"};
-		{ 5, 41354, "", "=q3=Savage Saronite Bracers", "=ds=#s8#, #a4#"};
-		{ 6, 41349, "", "=q3=Savage Saronite Gauntlets", "=ds=#s9#, #a4#"};
-		{ 7, 41352, "", "=q3=Savage Saronite Waistguard", "=ds=#s10#, #a4#"};
-		{ 8, 41347, "", "=q3=Savage Saronite Legplates", "=ds=#s11#, #a4#"};
-		{ 9, 41348, "", "=q3=Savage Saronite Walkers", "=ds=#s12#, #a4#"};
-	};
-
-		-----------------------------------
-		--- Leatherworking Leather Sets ---
-		-----------------------------------
-
-	AtlasLoot_Data["LeatherworkingLeatherVolcanicArmor"] = {
-		{ 1, 0, "INV_Box_01", "=q6=#craftlwl1#", "=q1=#j11#"};
-		{ 2, 15055, "", "=q2=Volcanic Shoulders", "=ds=#s3#, #a2#"};
-		{ 3, 15053, "", "=q2=Volcanic Breastplate", "=ds=#s5#, #a2#"};
-		{ 4, 15054, "", "=q2=Volcanic Leggings", "=ds=#s11#, #a2#"};
-	};
-
-	AtlasLoot_Data["LeatherworkingLeatherIronfeatherArmor"] = {
-		{ 1, 0, "INV_Box_01", "=q6=#craftlwl2#", ""};
-		{ 2, 15067, "", "=q3=Ironfeather Shoulders", "=ds=#s3#, #a2#"};
-		{ 3, 15066, "", "=q3=Ironfeather Breastplate", "=ds=#s5#, #a2#"};
-	};
-
-	AtlasLoot_Data["LeatherworkingLeatherStormshroudArmor"] = {
-		{ 1, 0, "INV_Box_01", "=q6=#craftlwl3#", ""};
-		{ 2, 15058, "", "=q3=Stormshroud Shoulders", "=ds=#s3#, #a2#"};
-		{ 3, 15056, "", "=q3=Stormshroud Armor", "=ds=#s5#, #a2#"};
-		{ 4, 21278, "", "=q3=Stormshroud Gloves", "=ds=#s9#, #a2#"};
-		{ 5, 15057, "", "=q3=Stormshroud Pants", "=ds=#s11#, #a2#"};
-	};
-
-	AtlasLoot_Data["LeatherworkingLeatherDevilsaurArmor"] = {
-		{ 1, 0, "INV_Box_01", "=q6=#craftlwl4#", ""};
-		{ 2, 15063, "", "=q3=Devilsaur Gauntlets", "=ds=#s9#, #a2#"};
-		{ 3, 15062, "", "=q3=Devilsaur Leggings", "=ds=#s11#, #a2#"};
-	};
-
-	AtlasLoot_Data["LeatherworkingLeatherBloodTigerH"] = {
-		{ 1, 0, "INV_Box_01", "=q6=#craftlwl5#", ""};
-		{ 2, 19689, "", "=q3=Blood Tiger Shoulders", "=ds=#s3#, #a2#"};
-		{ 3, 19688, "", "=q3=Blood Tiger Breastplate", "=ds=#s5#, #a2#"};
-	};
-
-	AtlasLoot_Data["LeatherworkingLeatherPrimalBatskin"] = {
-		{ 1, 0, "INV_Box_01", "=q6=#craftlwl6#", ""};
-		{ 2, 19685, "", "=q3=Primal Batskin Jerkin", "=ds=#s5#, #a2#"};
-		{ 3, 19687, "", "=q3=Primal Batskin Bracers", "=ds=#s8#, #a2#"};
-		{ 4, 19686, "", "=q3=Primal Batskin Gloves", "=ds=#s9#, #a2#"};
-	};
-
-	AtlasLoot_Data["LeatherworkingLeatherWildDraenishA"] = {
-		{ 1, 0, "INV_Box_01", "=q6=#craftlwl7#", ""};
-		{ 2, 25676, "", "=q2=Wild Draenish Vest", "=ds=#s5#, #a2#"};
-		{ 3, 25674, "", "=q2=Wild Draenish Gloves", "=ds=#s9#, #a2#"};
-		{ 4, 25675, "", "=q2=Wild Draenish Leggings", "=ds=#s11#, #a2#"};
-		{ 5, 25673, "", "=q2=Wild Draenish Boots", "=ds=#s12#, #a2#"};
-	};
-
-	AtlasLoot_Data["LeatherworkingLeatherThickDraenicA"] = {
-		{ 1, 0, "INV_Box_01", "=q6=#craftlwl8#", ""};
-		{ 2, 25671, "", "=q2=Thick Draenic Vest", "=ds=#s5#, #a2#"};
-		{ 3, 25669, "", "=q2=Thick Draenic Gloves", "=ds=#s9#, #a2#"};
-		{ 4, 25670, "", "=q2=Thick Draenic Pants", "=ds=#s11#, #a2#"};
-		{ 5, 25668, "", "=q2=Thick Draenic Boots", "=ds=#s12#, #a2#"};
-	};
-
-	AtlasLoot_Data["LeatherworkingLeatherFelSkin"] = {
-		{ 1, 0, "INV_Box_01", "=q6=#craftlwl9#", ""};
-		{ 2, 25685, "", "=q3=Fel Leather Gloves", "=ds=#s9#, #a2#"};
-		{ 3, 25687, "", "=q3=Fel Leather Leggings", "=ds=#s11#, #a2#"};
-		{ 4, 25686, "", "=q3=Fel Leather Boots", "=ds=#s12#, #a2#"};
-	};
-
-	AtlasLoot_Data["LeatherworkingLeatherSClefthoof"] = {
-		{ 1, 0, "INV_Box_01", "=q6=#craftlwl10#", ""};
-		{ 2, 25689, "", "=q3=Heavy Clefthoof Vest", "=ds=#s5#, #a2#"};
-		{ 3, 25690, "", "=q3=Heavy Clefthoof Leggings", "=ds=#s11#, #a2#"};
-		{ 4, 25691, "", "=q3=Heavy Clefthoof Boots", "=ds=#s12#, #a2#"};
-	};
-
-	AtlasLoot_Data["LeatherworkingLeatherPrimalIntent"] = {
-		{ 1, 0, "INV_Box_01", "=q6=#craftlwe1#", "=q1=#p11#"};
-		{ 2, 29525, "", "=q4=Primalstrike Vest", "=ds=#s5#, #a2#"};
-		{ 3, 29527, "", "=q4=Primalstrike Bracers", "=ds=#s8#, #a2#"};
-		{ 4, 29526, "", "=q4=Primalstrike Belt", "=ds=#s10#, #a2#"};
-	};
-
-	AtlasLoot_Data["LeatherworkingLeatherWindhawkArmor"] = {
-		{ 1, 0, "INV_Box_01", "=q6=#craftlwt1#", "=q1=#p10#"};
-		{ 2, 29522, "", "=q4=Windhawk Hauberk", "=ds=#s5#, #a2#"};
-		{ 3, 29523, "", "=q4=Windhawk Bracers", "=ds=#s8#, #a2#"};
-		{ 4, 29524, "", "=q4=Windhawk Belt", "=ds=#s10#, #a2#"};
-	};
-
-	AtlasLoot_Data["LeatherworkingLeatherBoreanEmbrace"] = {
-		{ 1, 0, "INV_Box_01", "=q6=#craftlwl11#", ""};
-		{ 2, 38437, "", "=q2=Arctic Helm", "=ds=#s1#, #a2#"};
-		{ 3, 38402, "", "=q2=Arctic Shoulderpads", "=ds=#s3#, #a2#"};
-		{ 4, 38400, "", "=q2=Arctic Chestpiece", "=ds=#s5#, #a2#"};
-		{ 5, 38433, "", "=q2=Arctic Wristguards", "=ds=#s8#, #a2#"};
-		{ 6, 38403, "", "=q2=Arctic Gloves", "=ds=#s9#, #a2#"};
-		{ 7, 38405, "", "=q2=Arctic Belt", "=ds=#s10#, #a2#"};
-		{ 8, 38401, "", "=q2=Arctic Leggings", "=ds=#s11#, #a2#"};
-		{ 9, 38404, "", "=q2=Arctic Boots", "=ds=#s12#, #a2#"};
-	};
-
-	AtlasLoot_Data["LeatherworkingLeatherIceborneEmbrace"] = {
-		{ 1, 0, "INV_Box_01", "=q6=#craftlwl12#", ""};
-		{ 2, 38438, "", "=q2=Iceborne Helm", "=ds=#s1#, #a2#"};
-		{ 3, 38411, "", "=q2=Iceborne Shoulderpads", "=ds=#s3#, #a2#"};
-		{ 4, 38408, "", "=q2=Iceborne Chestguard", "=ds=#s5#, #a2#"};
-		{ 5, 38434, "", "=q2=Iceborne Wristguards", "=ds=#s8#, #a2#"};
-		{ 6, 38409, "", "=q2=Iceborne Gloves", "=ds=#s9#, #a2#"};
-		{ 7, 38406, "", "=q2=Iceborne Belt", "=ds=#s10#, #a2#"};
-		{ 8, 38410, "", "=q2=Iceborne Leggings", "=ds=#s11#, #a2#"};
-		{ 9, 38407, "", "=q2=Iceborne Boots", "=ds=#s12#, #a2#"};
-	};
-
-	AtlasLoot_Data["LeatherworkingLeatherEvisceratorBattlegear"] = {
-		{ 1, 0, "INV_Box_01", "=q6=#craftlwl13#", ""};
-		{ 2, 43260, "", "=q3=Eviscerator's Facemask", "=ds=#s1#, #a2#"};
-		{ 3, 43433, "", "=q3=Eviscerator's Shoulderpads", "=ds=#s3#, #a2#"};
-		{ 4, 43434, "", "=q3=Eviscerator's Chestguard", "=ds=#s5#, #a2#"};
-		{ 5, 43435, "", "=q3=Eviscerator's Bindings", "=ds=#s8#, #a2#"};
-		{ 6, 43436, "", "=q3=Eviscerator's Gauntlets", "=ds=#s9#, #a2#"};
-		{ 7, 43437, "", "=q3=Eviscerator's Waistguard", "=ds=#s10#, #a2#"};
-		{ 8, 43438, "", "=q3=Eviscerator's Legguards", "=ds=#s11#, #a2#"};
-		{ 9, 43439, "", "=q3=Eviscerator's Treads", "=ds=#s12#, #a2#"};
-	};
-
-	AtlasLoot_Data["LeatherworkingLeatherOvercasterBattlegear"] = {
-		{ 1, 0, "INV_Box_01", "=q6=#craftlwl14#", ""};
-		{ 2, 43261, "", "=q3=Overcast Headguard", "=ds=#s1#, #a2#"};
-		{ 3, 43262, "", "=q3=Overcast Spaulders", "=ds=#s3#, #a2#"};
-		{ 4, 43263, "", "=q3=Overcast Chestguard", "=ds=#s5#, #a2#"};
-		{ 5, 43264, "", "=q3=Overcast Bracers", "=ds=#s8#, #a2#"};
-		{ 6, 43265, "", "=q3=Overcast Handwraps", "=ds=#s9#, #a2#"};
-		{ 7, 43266, "", "=q3=Overcast Belt", "=ds=#s10#, #a2#"};
-		{ 8, 43271, "", "=q3=Overcast Leggings", "=ds=#s11#, #a2#"};
-		{ 9, 43273, "", "=q3=Overcast Boots", "=ds=#s12#, #a2#"};
-	};
-
-		--------------------------------
-		--- Leatherworking Mail Sets ---
-		--------------------------------
-
-	AtlasLoot_Data["LeatherworkingMailGreenDragonM"] = {
-		{ 1, 0, "INV_Box_01", "=q6=#craftlwm1#", "=q1=#j13#"};
-		{ 2, 15045, "", "=q3=Green Dragonscale Breastplate", "=ds=#s5#, #a3#"};
-		{ 3, 20296, "", "=q3=Green Dragonscale Gauntlets", "=ds=#s9#, #a3#"};
-		{ 4, 15046, "", "=q3=Green Dragonscale Leggings", "=ds=#s11#, #a3#"};
-	};
-
-	AtlasLoot_Data["LeatherworkingMailBlueDragonM"] = {
-		{ 1, 0, "INV_Box_01", "=q6=#craftlwm2#", "=q1=#j12#"};
-		{ 2, 15049, "", "=q3=Blue Dragonscale Shoulders", "=ds=#s3#, #a3#"};
-		{ 3, 15048, "", "=q3=Blue Dragonscale Breastplate", "=ds=#s5#, #a3#"};
-		{ 4, 20295, "", "=q3=Blue Dragonscale Leggings", "=ds=#s11#, #a3#"};
-	};
-
-	AtlasLoot_Data["LeatherworkingMailBlackDragonM"] = {
-		{ 1, 0, "INV_Box_01", "=q6=#craftlwm3#", "=q1=#j11#"};
-		{ 2, 15051, "", "=q3=Black Dragonscale Shoulders", "=ds=#s3#, #a3#"};
-		{ 3, 15050, "", "=q3=Black Dragonscale Breastplate", "=ds=#s5#, #a3#"};
-		{ 4, 15052, "", "=q3=Black Dragonscale Leggings", "=ds=#s11#, #a3#"};
-		{ 5, 16984, "", "=q4=Black Dragonscale Boots", "=ds=#s12#, #a3#"};
-	};
-
-	AtlasLoot_Data["LeatherworkingMailScaledDraenicA"] = {
-		{ 1, 0, "INV_Box_01", "=q6=#craftlwm4#", ""};
-		{ 2, 25660, "", "=q2=Scaled Draenic Vest", "=ds=#s5#, #a3#"};
-		{ 3, 25661, "", "=q2=Scaled Draenic Gloves", "=ds=#s9#, #a3#"};
-		{ 4, 25662, "", "=q2=Scaled Draenic Pants", "=ds=#s11#, #a3#"};
-		{ 5, 25659, "", "=q2=Scaled Draenic Boots", "=ds=#s12#, #a3#"};
-	};
-
-	AtlasLoot_Data["LeatherworkingMailFelscaleArmor"] = {
-		{ 1, 0, "INV_Box_01", "=q6=#craftlwm5#", ""};
-		{ 2, 25657, "", "=q2=Felscale Breastplate", "=ds=#s5#, #a3#"};
-		{ 3, 25654, "", "=q2=Felscale Gloves", "=ds=#s9#, #a3#"};
-		{ 4, 25656, "", "=q2=Felscale Pants", "=ds=#s11#, #a3#"};
-		{ 5, 25655, "", "=q2=Felscale Boots", "=ds=#s12#, #a3#"};
-	};
-
-	AtlasLoot_Data["LeatherworkingMailFelstalkerArmor"] = {
-		{ 1, 0, "INV_Box_01", "=q6=#craftlwm6#", ""};
-		{ 2, 25696, "", "=q3=Felstalker Breastplate", "=ds=#s5#, #a3#"};
-		{ 3, 25697, "", "=q3=Felstalker Bracers", "=ds=#s8#, #a3#"};
-		{ 4, 25695, "", "=q3=Felstalker Belt", "=ds=#s10#, #a3#"};
-	};
-
-	AtlasLoot_Data["LeatherworkingMailNetherFury"] = {
-		{ 1, 0, "INV_Box_01", "=q6=#craftlwm7#", ""};
-		{ 2, 25694, "", "=q3=Netherfury Belt", "=ds=#s10#, #a3#"};
-		{ 3, 25692, "", "=q3=Netherfury Leggings", "=ds=#s11#, #a3#"};
-		{ 4, 25693, "", "=q3=Netherfury Boots", "=ds=#s12#, #a3#"};
-	};
-
-	AtlasLoot_Data["LeatherworkingMailNetherscaleArmor"] = {
-		{ 1, 0, "INV_Box_01", "=q6=#craftlwd1#", "=q1=#p9#"};
-		{ 2, 29515, "", "=q4=Ebon Netherscale Breastplate", "=ds=#s5#, #a3#"};
-		{ 3, 29517, "", "=q4=Ebon Netherscale Bracers", "=ds=#s8#, #a3#"};
-		{ 4, 29516, "", "=q4=Ebon Netherscale Belt", "=ds=#s10#, #a3#"};
-	};
-
-	AtlasLoot_Data["LeatherworkingMailNetherstrikeArmor"] = {
-		{ 1, 0, "INV_Box_01", "=q6=#craftlwd2#", "=q1=#p9#"};
-		{ 2, 29519, "", "=q4=Netherstrike Breastplate", "=ds=#s5#, #a3#"};
-		{ 3, 29521, "", "=q4=Netherstrike Bracers", "=ds=#s8#, #a3#"};
-		{ 4, 29520, "", "=q4=Netherstrike Belt", "=ds=#s10#, #a3#"};
-	};
-
-	AtlasLoot_Data["LeatherworkingMailFrostscaleBinding"] = {
-		{ 1, 0, "INV_Box_01", "=q6=#craftlwm8#", ""};
-		{ 2, 38440, "", "=q2=Frostscale Helm", "=ds=#s1#, #a3#"};
-		{ 3, 38424, "", "=q2=Frostscale Shoulders", "=ds=#s3#, #a3#"};
-		{ 4, 38414, "", "=q2=Frostscale Chestguard", "=ds=#s5#, #a3#"};
-		{ 5, 38436, "", "=q2=Frostscale Bracers", "=ds=#s8#, #a3#"};
-		{ 6, 38415, "", "=q2=Frostscale Gloves", "=ds=#s9#, #a3#"};
-		{ 7, 38412, "", "=q2=Frostscale Belt", "=ds=#s10#, #a3#"};
-		{ 8, 38416, "", "=q2=Frostscale Leggings", "=ds=#s11#, #a3#"};
-		{ 9, 38413, "", "=q2=Frostscale Boots", "=ds=#s12#, #a3#"};
-	};
-
-	AtlasLoot_Data["LeatherworkingMailNerubianHive"] = {
-		{ 1, 0, "INV_Box_01", "=q6=#craftlwm9#", ""};
-		{ 2, 38439, "", "=q2=Nerubian Helm", "=ds=#s1#, #a3#"};
-		{ 3, 38417, "", "=q2=Nerubian Shoulders", "=ds=#s3#, #a3#"};
-		{ 4, 38420, "", "=q2=Nerubian Chestguard", "=ds=#s5#, #a3#"};
-		{ 5, 38435, "", "=q2=Nerubian Bracers", "=ds=#s8#, #a3#"};
-		{ 6, 38421, "", "=q2=Nerubian Gloves", "=ds=#s9#, #a3#"};
-		{ 7, 38418, "", "=q2=Nerubian Belt", "=ds=#s10#, #a3#"};
-		{ 8, 38422, "", "=q2=Nerubian Legguards", "=ds=#s11#, #a3#"};
-		{ 9, 38419, "", "=q2=Nerubian Boots", "=ds=#s12#, #a3#"};
-	};
-
-	AtlasLoot_Data["LeatherworkingMailStormhideBattlegear"] = {
-		{ 1, 0, "INV_Box_01", "=q6=#craftlwm10#", ""};
-		{ 2, 43455, "", "=q3=Stormhide Crown", "=ds=#s1#, #a3#"};
-		{ 3, 43457, "", "=q3=Stormhide Shoulders", "=ds=#s3#, #a3#"};
-		{ 4, 43453, "", "=q3=Stormhide Hauberk", "=ds=#s5#, #a3#"};
-		{ 5, 43452, "", "=q3=Stormhide Wristguards", "=ds=#s8#, #a3#"};
-		{ 6, 43454, "", "=q3=Stormhide Grips", "=ds=#s9#, #a3#"};
-		{ 7, 43450, "", "=q3=Stormhide Belt", "=ds=#s10#, #a3#"};
-		{ 8, 43456, "", "=q3=Stormhide Legguards", "=ds=#s11#, #a3#"};
-		{ 9, 43451, "", "=q3=Stormhide Stompers", "=ds=#s12#, #a3#"};
-	};
-
-	AtlasLoot_Data["LeatherworkingMailSwiftarrowBattlefear"] = {
-		{ 1, 0, "INV_Box_01", "=q6=#craftlwm11#", ""};
-		{ 2, 43447, "", "=q3=Swiftarrow Helm", "=ds=#s1#, #a3#"};
-		{ 3, 43449, "", "=q3=Swiftarrow Shoulderguards", "=ds=#s3#, #a3#"};
-		{ 4, 43445, "", "=q3=Swiftarrow Hauberk", "=ds=#s5#, #a3#"};
-		{ 5, 43444, "", "=q3=Swiftarrow Bracers", "=ds=#s8#, #a3#"};
-		{ 6, 43446, "", "=q3=Swiftarrow Gauntlets", "=ds=#s9#, #a3#"};
-		{ 7, 43442, "", "=q3=Swiftarrow Belt", "=ds=#s10#, #a3#"};
-		{ 8, 43448, "", "=q3=Swiftarrow Leggings", "=ds=#s11#, #a3#"};
-		{ 9, 43443, "", "=q3=Swiftarrow Boots", "=ds=#s12#, #a3#"};
-	};
-
-		----------------------
-		--- Tailoring Sets ---
-		----------------------
-
-	AtlasLoot_Data["TailoringBloodvineG"] = {
-		{ 1, 0, "INV_Fabric_Linen_02", "=q6=#craftt1#", ""};
-		{ 2, 19682, "", "=q3=Bloodvine Vest", "=ds=#s5#, #a1#"};
-		{ 3, 19683, "", "=q3=Bloodvine Leggings", "=ds=#s11#, #a1#"};
-		{ 4, 19684, "", "=q3=Bloodvine Boots", "=ds=#s12#, #a1#"};
-	};
-
-	AtlasLoot_Data["TailoringNeatherVest"] = {
-		{ 1, 0, "INV_Fabric_Linen_02", "=q6=#craftt2#", ""};
-		{ 2, 21855, "", "=q2=Netherweave Tunic", "=ds=#s5#, #a1#"};
-		{ 3, 21854, "", "=q2=Netherweave Robe", "=ds=#s5#, #a1#"};
-		{ 4, 21849, "", "=q2=Netherweave Bracers", "=ds=#s8#, #a1#"};
-		{ 5, 21851, "", "=q2=Netherweave Gloves", "=ds=#s9#, #a1##"};
-		{ 6, 21850, "", "=q2=Netherweave Belt", "=ds=#s10#, #a1#"};
-		{ 7, 21852, "", "=q2=Netherweave Pants", "=ds=#s11#, #a1#"};
-		{ 8, 21853, "", "=q2=Netherweave Boots", "=ds=#s12#, #a1#"};
-	};
-
-	AtlasLoot_Data["TailoringImbuedNeather"] = {
-		{ 1, 0, "INV_Fabric_Linen_02", "=q6=#craftt3#", ""};
-		{ 2, 21862, "", "=q3=Imbued Netherweave Tunic", "=ds=#s5#, #a1#"};
-		{ 3, 21861, "", "=q3=Imbued Netherweave Robe", "=ds=#s5#, #a1#"};
-		{ 4, 21859, "", "=q3=Imbued Netherweave Pants", "=ds=#s11#, #a1#"};
-		{ 5, 21860, "", "=q3=Imbued Netherweave Boots", "=ds=#s12#, #a1#"};
-	};
-
-	AtlasLoot_Data["TailoringArcanoVest"] = {
-		{ 1, 0, "INV_Fabric_Linen_02", "=q6=#craftt4#", "=q1=#j12#"};
-		{ 2, 21868, "", "=q3=Arcanoweave Robe", "=ds=#s5#, #a1#"};
-		{ 3, 21866, "", "=q3=Arcanoweave Bracers", "=ds=#s8#, #a1#"};
-		{ 4, 21867, "", "=q3=Arcanoweave Boots", "=ds=#s12#, #a1#"};
-	};
-
-	AtlasLoot_Data["TailoringTheUnyielding"] = {
-		{ 1, 0, "INV_Fabric_Linen_02", "=q6=#craftt5#", ""};
-		{ 2, 24249, "", "=q3=Unyielding Bracers", "=ds=#s8#, #a1#"};
-		{ 3, 24255, "", "=q4=Unyielding Girdle", "=ds=#s10#, #a1#"};
-	};
-
-	AtlasLoot_Data["TailoringWhitemendWis"] = {
-		{ 1, 0, "INV_Fabric_Linen_02", "=q6=#craftt6#", ""};
-		{ 2, 24264, "", "=q4=Whitemend Hood", "=ds=#s1#, #a1#"};
-		{ 3, 24261, "", "=q4=Whitemend Pants", "=ds=#s11#, #a1#"};
-	};
-
-	AtlasLoot_Data["TailoringSpellstrikeInfu"] = {
-		{ 1, 0, "INV_Fabric_Linen_02", "=q6=#craftt7#", ""};
-		{ 2, 24266, "", "=q4=Spellstrike Hood", "=ds=#s1#, #a1#"};
-		{ 3, 24262, "", "=q4=Spellstrike Pants", "=ds=#s11#, #a1#"};
-	};
-
-	AtlasLoot_Data["TailoringBattlecastG"] = {
-		{ 1, 0, "INV_Fabric_Linen_02", "=q6=#craftt8#", ""};
-		{ 2, 24267, "", "=q4=Battlecast Hood", "=ds=#s1#, #a1#"};
-		{ 3, 24263, "", "=q4=Battlecast Pants", "=ds=#s11#, #a1#"};
-	};
-
-	AtlasLoot_Data["TailoringSoulclothEm"] = {
-		{ 1, 0, "INV_Fabric_Linen_02", "=q6=#craftt9#", "=q1=#j12#"};
-		{ 2, 21864, "", "=q4=Soulcloth Shoulders", "=ds=#s3#, #a1#"};
-		{ 3, 21865, "", "=q4=Soulcloth Vest", "=ds=#s5#, #a1#"};
-		{ 4, 21863, "", "=q4=Soulcloth Gloves", "=ds=#s9#, #a1#"};
-	};
-
-	AtlasLoot_Data["TailoringPrimalMoon"] = {
-		{ 1, 0, "INV_Fabric_Linen_02", "=q6=#crafttm1#", "=q1=#p19#"};
-		{ 2, 21874, "", "=q4=Primal Mooncloth Shoulders", "=ds=#s3#, #a1#"};
-		{ 3, 21875, "", "=q4=Primal Mooncloth Robe", "=ds=#s5#, #a1#"};
-		{ 4, 21873, "", "=q4=Primal Mooncloth Belt", "=ds=#s10#, #a1#"};
-	};
-
-	AtlasLoot_Data["TailoringShadowEmbrace"] = {
-		{ 1, 0, "INV_Fabric_Linen_02", "=q6=#crafttsh1#", "=q1=#p20#"};
-		{ 2, 21869, "", "=q4=Frozen Shadoweave Shoulders", "=ds=#s3#, #a1#"};
-		{ 3, 21871, "", "=q4=Frozen Shadoweave Vest", "=ds=#s5#, #a1#"};
-		{ 4, 21870, "", "=q4=Frozen Shadoweave Boots", "=ds=#s12#, #a1#"};
-	};
-
-	AtlasLoot_Data["TailoringSpellfireWRATH"] = {
-		{ 1, 0, "INV_Fabric_Linen_02", "=q6=#crafttsf1#", "=q1=#p21#"};
-		{ 2, 21848, "", "=q4=Spellfire Robe", "=ds=#s5#, #a1#"};
-		{ 3, 21847, "", "=q4=Spellfire Gloves", "=ds=#s9#, #a1#"};
-		{ 4, 21846, "", "=q4=Spellfire Belt", "=ds=#s10#, #a1#"};
-	};
-
-	AtlasLoot_Data["TailoringFrostwovenPower"] = {
-		{ 1, 0, "INV_Fabric_Linen_02", "=q6=#craftt10#", ""};
-		{ 2, 41521, "", "=q2=Frostwoven Cowl", "=ds=#s1#, #a1#"};
-		{ 3, 41513, "", "=q2=Frostwoven Shoulders", "=ds=#s3#, #a1#"};
-		{ 4, 41515, "", "=q2=Frostwoven Robe", "=ds=#s5#, #a1#"};
-		{ 5, 41512, "", "=q2=Frostwoven Wristwraps", "=ds=#s8#, #a1#"};
-		{ 6, 44211, "", "=q2=Frostwoven Gloves", "=ds=#s9#, #a1#"};
-		{ 7, 41522, "", "=q2=Frostwoven Belt", "=ds=#s10#, #a1#"};
-		{ 8, 41519, "", "=q2=Frostwoven Leggings", "=ds=#s11#, #a1#"};
-		{ 9, 41520, "", "=q2=Frostwoven Boots", "=ds=#s12#, #a1#"};
-	};
-
-	AtlasLoot_Data["TailoringDuskweaver"] = {
-		{ 1, 0, "INV_Fabric_Linen_02", "=q6=#craftt11#", ""};
-		{ 2, 41546, "", "=q2=Duskweave Cowl", "=ds=#s1#, #a1#"};
-		{ 3, 41550, "", "=q2=Duskweave Shoulders", "=ds=#s3#, #a1#"};
-		{ 4, 41549, "", "=q2=Duskweave Robe", "=ds=#s5#, #a1#"};
-		{ 5, 41551, "", "=q2=Duskweave Wristwraps", "=ds=#s8#, #a1#"};
-		{ 6, 41545, "", "=q2=Duskweave Gloves", "=ds=#s9#, #a1#"};
-		{ 7, 41543, "", "=q2=Duskweave Belt", "=ds=#s10#, #a1#"};
-		{ 8, 41548, "", "=q2=Duskweave Leggings", "=ds=#s11#, #a1#"};
-		{ 9, 41544, "", "=q2=Duskweave Boots", "=ds=#s12#, #a1#"};
-	};
-
-	AtlasLoot_Data["TailoringFrostsavageBattlegear"] = {
-		{ 1, 0, "INV_Fabric_Linen_02", "=q6=#craftt12#", ""};
-		{ 2, 43971, "", "=q3=Frostsavage Cowl", "=ds=#s1#, #a1#"};
-		{ 3, 43973, "", "=q3=Frostsavage Shoulders", "=ds=#s3#, #a1#"};
-		{ 4, 43972, "", "=q3=Frostsavage Robe", "=ds=#s5#, #a1#"};
-		{ 5, 43974, "", "=q3=Frostsavage Bracers", "=ds=#s8#, #a1#"};
-		{ 6, 41516, "", "=q3=Frostsavage Gloves", "=ds=#s9#, #a1#"};
-		{ 7, 43969, "", "=q3=Frostsavage Belt", "=ds=#s10#, #a1#"};
-		{ 8, 43975, "", "=q3=Frostsavage Leggings", "=ds=#s11#, #a1#"};
-		{ 9, 43970, "", "=q3=Frostsavage Boots", "=ds=#s12#, #a1#"};
-	};
-
-	-------------
-	--- Other ---
-	-------------
-
-		----------------------------
-		--- Crafted Epic Weapons ---
-		----------------------------
-
-	AtlasLoot_Data["CraftedWeapons1"] = {
-		{ 1, 49888, "", "=q4=Shadow's Edge", "=ds=#h2#, #w1#"};
-		{ 3, 0, "INV_Box_01", "=q6=#p2#", "=q1=#j54#"};
-		{ 4, 45085, "", "=q4=Titansteel Spellblade", "=ds=#h3#, #w4#"};
-		{ 5, 42435, "", "=q4=Titansteel Shanker", "=ds=#h1#, #w4#"};
-		{ 6, 41383, "", "=q4=Titansteel Bonecrusher", "=ds=#h3#, #w6#"};
-		{ 7, 41384, "", "=q4=Titansteel Guardian", "=ds=#h3#, #w6#"};
-		{ 8, 41257, "", "=q4=Titansteel Destroyer", "=ds=#h2#, #w6#"};
-		{ 9, 42508, "", "=q4=Titansteel Shield Wall", "=ds=#w8#"};
-		{ 11, 0, "INV_Box_01", "=q6=#p5#", "=q1=#j54#"};
-		{ 12, 41168, "", "=q4=Armor Plated Combat Shotgun", "=ds=#w5#"};
-		{ 13, 44504, "", "=q4=Nesingwary 4000", "=ds=#w5#"};
-		{ 16, 0, "INV_Box_01", "=q6=#p2#", "=q1=#j10#"};
-		{ 17, 23554, "", "=q4=Eternium Runed Blade", "=ds=#h3#, #w4#"};
-		{ 18, 23555, "", "=q4=Dirge", "=ds=#h1#, #w4#"};
-		{ 19, 23540, "", "=q4=Felsteel Longblade", "=ds=#h1#, #w10#"};
-		{ 20, 23541, "", "=q4=Khorium Champion", "=ds=#h2#, #w10#"};
-		{ 21, 23542, "", "=q4=Fel Edged Battleaxe", "=ds=#h1#, #w1#"};
-		{ 22, 23543, "", "=q4=Felsteel Reaper", "=ds=#h2#, #w1#"};
-		{ 23, 23556, "", "=q4=Hand of Eternity", "=ds=#h3#, #w6#"};
-		{ 24, 23544, "", "=q4=Runic Hammer", "=ds=#h1#, #w6#"};
-		{ 25, 23546, "", "=q4=Fel Hardened Maul", "=ds=#h2#, #w6#"};
-		{ 26, 32854, "", "=q4=Hammer of Righteous Might", "=ds=#h2#, #w6#"};
-		{ 28, 0, "INV_Box_01", "=q6=#p5#", "=q1=#j10#"};
-		{ 29, 32756, "", "=q4=Gyro-balanced Khorium Destroyer", "=ds=#w5#"};
-	};
-
-	AtlasLoot_Data["CraftedWeapons2"] = {
-		{ 1, 0, "INV_Box_01", "=q6=#p2#", "=q1=#j9#"};
-		{ 2, 19166, "", "=q4=Black Amnesty", "=ds=#h1#, #w4#"};
-		{ 3, 22383, "", "=q4=Sageblade", "=ds=#h3#, #w10#"};
-		{ 4, 19168, "", "=q4=Blackguard", "=ds=#h1#, #w10#"};
-		{ 5, 19169, "", "=q4=Nightfall", "=ds=#h2#, #w1#"};
-		{ 6, 19170, "", "=q4=Ebon Hand", "=ds=#h1#, #w6#"};
-		{ 7, 22384, "", "=q4=Persuader", "=ds=#h1#, #w6#"};
-		{ 8, 17193, "", "=q4=Sulfuron Hammer", "=ds=#h2#, #w6#"};
-		{ 9, 19167, "", "=q4=Blackfury", "=ds=#w7#"};
-		{ 10, 22198, "", "=q4=Jagged Obsidian Shield", "=ds=#w8#"};
-		{ 12, 0, "INV_Box_01", "=q6=#p5#", "=q1=#j9#"};
-		{ 13, 18282, "", "=q4=Core Marksman Rifle", "=ds=#w5#"};
-		{ 14, 18168, "", "=q4=Force Reactive Disk", "=ds=#w8#"};
-	};
-
-	AtlasLoot_Data["CraftedWeapons3"] = {
-		{ 1, 0, "INV_Box_01", "=q6=#p15#", ""};
-		{ 2, 28425, "", "=q4=Fireguard", "=ds=#h1#, #w10#"};
-		{ 3, 28426, "", "=q4=Blazeguard", "=ds=#h1#, #w10#"};
-		{ 4, 28427, "", "=q4=Blazefury", "=ds=#h1#, #w10#"};
-		{ 5, 28428, "", "=q4=Lionheart Blade", "=ds=#h2#, #w10#"};
-		{ 6, 28429, "", "=q4=Lionheart Champion", "=ds=#h2#, #w10#"};
-		{ 7, 28430, "", "=q4=Lionheart Executioner", "=ds=#h2#, #w10#"};
-		{ 9, 0, "INV_Box_01", "=q6=#p14#", ""};
-		{ 10, 28431, "", "=q4=The Planar Edge", "=ds=#h3#, #w1#"};
-		{ 11, 28432, "", "=q4=Black Planar Edge", "=ds=#h3#, #w1#"};
-		{ 12, 28433, "", "=q4=Wicked Edge of the Planes", "=ds=#h3#, #w1#"};
-		{ 13, 28434, "", "=q4=Lunar Crescent", "=ds=#h2#, #w1#"};
-		{ 14, 28435, "", "=q4=Mooncleaver", "=ds=#h2#, #w1#"};
-		{ 15, 28436, "", "=q4=Bloodmoon", "=ds=#h2#, #w1#"};
-		{ 16, 0, "INV_Box_01", "=q6=#p22#", ""};
-		{ 17, 28437, "", "=q4=Drakefist Hammer", "=ds=#h3#, #w6#"};
-		{ 18, 28438, "", "=q4=Dragonmaw", "=ds=#h3#, #w6#"};
-		{ 19, 28439, "", "=q4=Dragonstrike", "=ds=#h3#, #w6#"};
-		{ 20, 28440, "", "=q4=Thunder", "=ds=#h2#, #w6#"};
-		{ 21, 28441, "", "=q4=Deep Thunder", "=ds=#h2#, #w6#"};
-		{ 22, 28442, "", "=q4=Stormherald", "=ds=#h2#, #w6#"};
 	};
 
 	--------------------------------
@@ -2943,6 +2369,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 
 	AtlasLoot_Data["AlchemyHighRiskCLASSIC"] = {
 			Name = ALCHEMY.." High Risk";
+			Type = "CraftingNoBF";
 					{
 			Name = "Common";
 			{ 1, "s968402", "967443",  "=q2=Flask of Manifesting Power", 	"=ds=#sr# 300"};	
@@ -2989,6 +2416,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 
 	AtlasLoot_Data["SmithingHighRiskCLASSIC"] = {
 			Name = BLACKSMITHING.." High Risk";
+			Type = "CraftingNoBF";
 					{
 			Name = "Common";
 			{ 1, "s968018", "967172", "=q2=Living Belt Buckle", "=ds=#sr# 300"};
@@ -3029,6 +2457,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 	
 	AtlasLoot_Data["LeatherworkingHighRiskCLASSIC"] = {
 			Name = LEATHERWORKING.." High Risk";
+			Type = "CraftingNoBF";
 						{
 			Name = "Common";
 			{ 1, "s968000", "967154", "=q2=Yeti Gambeson", "=ds=#sr# 300"};
@@ -3060,6 +2489,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 	
 	AtlasLoot_Data["EngineeringHighRiskCLASSIC"] = {
 			Name = ENGINEERING.." High Risk";
+			Type = "CraftingNoBF";
 					{
 			Name = "Common";
 			{ 1, "s968042", "967196", "=q2=Gnomish Magnifying Lense I", "=ds=#sr# 300"};
@@ -3090,7 +2520,8 @@ local MASTER = select(2, GetSpellInfo(28596));
 	};
 
 	AtlasLoot_Data["EnchantingHighRiskCLASSIC"] = {
-		Name = ENCHANTING.." High Risk";
+			Name = ENCHANTING.." High Risk";
+			Type = "CraftingNoBF";
 				{
 			Name = "Common";
 			{ 1, "s968676", "Spell_Holy_GreaterHeal", "=q2=Enchant Weapon - Lesser Unstoppable Assault", "=ds=#sr# 300"};
@@ -3132,8 +2563,9 @@ local MASTER = select(2, GetSpellInfo(28596));
 	};
 	
 	AtlasLoot_Data["TailoringHighRiskCLASSIC"] = {
-		Name = TAILORING.." High Risk";
-				{
+			Name = TAILORING.." High Risk";
+			Type = "CraftingNoBF";
+		{
 			Name = "Common";
 			{ 1, "s968060", "967214", "=q2=Dragonweave Cloak Lining", "=ds=#sr# 300"};
 			{ 2, "s968063", "967217", "=q2=Twilight Cloak Lining", "=ds=#sr# 300"};
@@ -3163,8 +2595,9 @@ local MASTER = select(2, GetSpellInfo(28596));
 	};
 
 	AtlasLoot_Data["CookingHighRiskCLASSIC"] = {
-		Name = COOKING.." High Risk";
-				{
+			Name = COOKING.." High Risk";
+			Type = "CraftingNoBF";
+		{
 			Name = "Common";
 			{ 1, "s968279",	"967509", "=q2=Animated Soup for the Soul", "=ds=#sr# 300"};
 			{ 2, "s968282",	"967512", "=q2=Volcanic Sandwich", "=ds=#sr# 300"};
@@ -3295,17 +2728,17 @@ local MASTER = select(2, GetSpellInfo(28596));
 		};
 		{
 			Name = "Epic";
-		{ 1, "s968371", "967601", "=q4=Subtle Sandwich", "=ds=#sr# 300"};
-		{ 2, "s968374", "967604", "=q4=Subtle Wontons", "=ds=#sr# 300"};
-		{ 3, "s968377", "967607", "=q4=Subtle Sulferous Soup", "=ds=#sr# 300"};
-		{ 4, "s968380", "967610", "=q4=Strongman Stew", "=ds=#sr# 300"};
-		{ 5, "s968383", "967613", "=q4=Mysterious Void Roast", "=ds=#sr# 300"};
-		{ 6, "s968386", "967616", "=q4=Fire Charred Roast", "=ds=#sr# 300"};
-		{ 7, "s968389", "967619", "=q4=Storm Fried Roast", "=ds=#sr# 300"};
-		{ 8, "s968392", "967622", "=q4=Winter Roast", "=ds=#sr# 300"};
-		{ 9, "s968395", "967625", "=q4=Blackened Roast", "=ds=#sr# 300"};
-		{ 10, "s968398", "967628", "=q4=Dino Delight", "=ds=#sr# 300"};
-		{ 11, "s968401", "967631", "=q4=Slick-fil-A Sandwich", "=ds=#sr# 300"};
-		{ 13, "s968648", "967705", "=q4=Irresistible Bait", "=ds=#sr# 300"};
+			{ 1, "s968371", "967601", "=q4=Subtle Sandwich", "=ds=#sr# 300"};
+			{ 2, "s968374", "967604", "=q4=Subtle Wontons", "=ds=#sr# 300"};
+			{ 3, "s968377", "967607", "=q4=Subtle Sulferous Soup", "=ds=#sr# 300"};
+			{ 4, "s968380", "967610", "=q4=Strongman Stew", "=ds=#sr# 300"};
+			{ 5, "s968383", "967613", "=q4=Mysterious Void Roast", "=ds=#sr# 300"};
+			{ 6, "s968386", "967616", "=q4=Fire Charred Roast", "=ds=#sr# 300"};
+			{ 7, "s968389", "967619", "=q4=Storm Fried Roast", "=ds=#sr# 300"};
+			{ 8, "s968392", "967622", "=q4=Winter Roast", "=ds=#sr# 300"};
+			{ 9, "s968395", "967625", "=q4=Blackened Roast", "=ds=#sr# 300"};
+			{ 10, "s968398", "967628", "=q4=Dino Delight", "=ds=#sr# 300"};
+			{ 11, "s968401", "967631", "=q4=Slick-fil-A Sandwich", "=ds=#sr# 300"};
+			{ 13, "s968648", "967705", "=q4=Irresistible Bait", "=ds=#sr# 300"};
+		};
 	};
-};

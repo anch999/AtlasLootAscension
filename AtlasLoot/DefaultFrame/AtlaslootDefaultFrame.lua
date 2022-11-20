@@ -37,9 +37,11 @@ function AtlasLootDefaultFrame_OnShow()
     --Remove the selection of a loot table in Atlas
     AtlasLootItemsFrame.activeBoss = nil;
     --Set the item table to the loot table
-        --Show the last displayed loot table
-    local lastboss = AtlasLoot.db.profile.LastBoss;
-    if lastboss and lastboss[4] then
+    --Show the last displayed loot table
+    local lastboss = AtlasLoot.db.profile.LastBoss[AtlasLoot_Expac];
+    if AtlasLoot.db.profile.AutoCurrentInstance and AtlasLoot:ShowInstance() then
+        return;
+    elseif lastboss and lastboss[4] then
         ATLASLOOT_CURRENTTABLE = lastboss[5];
         ATLASLOOT_LASTMODULE = lastboss[4];
         AtlasLoot:IsLootTableAvailable(lastboss[4]);
@@ -49,6 +51,24 @@ function AtlasLootDefaultFrame_OnShow()
         AtlasLoot:WishListOptionsRegister();
     else
         AtlasLoot:ShowItemsFrame("EmptyTable", "AtlasLoot_Data", 1);
+    end
+end
+
+-- Show the Instance you are in
+function AtlasLoot:ShowInstance()
+    for i,v in pairs(AtlasLoot_SubMenus) do
+        for n,t in ipairs(v) do
+            if t[4] == BabbleZone[GetRealZoneText()] then
+                ATLASLOOT_CURRENTTABLE = v.SubMenu;
+                ATLASLOOT_LASTMODULE = v.Module;
+                AtlasLoot:IsLootTableAvailable(ATLASLOOT_LASTMODULE);
+                AtlasLoot:ShowItemsFrame(t[2], "AtlasLoot_Data", 1);
+                AtlasLoot_DewdropSubMenu:Unregister(AtlasLootDefaultFrame_SubMenu);
+                AtlasLoot:DewdropSubMenuRegister(AtlasLoot_SubMenus[ATLASLOOT_CURRENTTABLE]);
+                AtlasLoot:WishListOptionsRegister();
+                return true;
+            end
+        end
     end
 end
 
@@ -71,6 +91,7 @@ Called when a button in AtlasLoot_Dewdrop is clicked
 ]]
 function AtlasLoot:DewDropClick(tablename, text, tablenum)
     ATLASLOOT_FILTER_ENABLE = false;
+    ATLASLOOT_BACKENABLED = false;
     AtlasLootFilterCheck:SetChecked(false);
     tablename = tablename .. AtlasLoot_Expac;
     ATLASLOOT_CURRENTTABLE = tablename;
@@ -96,6 +117,7 @@ text - Heading for the loot table
 Called when a button in AtlasLoot_DewdropSubMenu is clicked
 ]]
 function AtlasLoot:DewDropSubMenuClick(tablename)
+    ATLASLOOT_BACKENABLED = false;
     --Show the select loot table
     local tablenum = AtlasLoot_Data[tablename].Loadfirst or 1;
     --Show the table that has been selected
@@ -105,11 +127,12 @@ end
 
 --[[
 AtlasLoot:DewdropExpansionMenuClick(expansion, name):
-tablename - Name of the loot table in the database
-text - Heading for the loot table
-Called when a button in AtlasLoot_DewdropSubMenu is clicked
+expansion - expansion to load
+name - label for the expansion
+Called when a button in DewdropExpansionMenuClick is clicked
 ]]
 function AtlasLoot:DewdropExpansionMenuClick(expansion, name)
+    ATLASLOOT_BACKENABLED = false;
 	AtlasLootDefaultFrame_ExpansionMenu:SetText(name);
     AtlasLoot_DewdropExpansionMenu:Close(1);
     AtlasLoot_Expac = expansion;
@@ -125,7 +148,7 @@ function AtlasLoot:DewdropExpansionMenuClick(expansion, name)
         else
             local tablenum = AtlasLoot_Data[tablename].Loadfirst or 1;
             AtlasLoot:ShowItemsFrame(tablename, "AtlasLoot_Data", tablenum);
-        end
+        end 
     end
 
 end
@@ -289,6 +312,7 @@ function AtlasLoot:SetNewStyle(style)
         "AtlasLootDefaultFrame_AdvancedSearchPanel_ClearButton",
         "AtlasLootDefaultFrame_MapButton",
         "AtlasLootDefaultFrame_MapSelectButton",
+        "AtlasLootDefaultFrame_LoadInstanceButton",
 	}
 
 	if style == "new" then

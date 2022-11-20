@@ -154,15 +154,6 @@ function AtlasLootItem_OnEnter(self)
                         if((AtlasLoot.db.profile.EquipCompare and ((not EquipCompare_RegisterTooltip) or (not EquipCompare_Enabled)))) or IsShiftKeyDown() then
                             AtlasLootItem_ShowCompareItem(self); --- CALL MISSING METHOD TO SHOW 2 TOOLTIPS (Item Compare)
                         end
-                    else
-                        AtlasLootTooltip:SetOwner(self, "ANCHOR_RIGHT", -(self:GetWidth() / 2), 24);
-                        AtlasLootTooltip:ClearLines();
-                        AtlasLootTooltip:AddLine(RED..AL["Item Unavailable"], nil, nil, nil, 1);
-                        AtlasLootTooltip:AddLine(BLUE..AL["ItemID:"].." "..self.itemID, nil, nil, nil, 1);
-                        AtlasLootTooltip:AddLine(AL["self item is unsafe.  To view self item without the risk of disconnection, you need to have first seen it in the game world. This is a restriction enforced by Blizzard since Patch 1.10."], nil, nil, nil, 1);
-                        AtlasLootTooltip:AddLine(" ");
-                        AtlasLootTooltip:AddLine(AL["You can right-click to attempt to query the server.  You may be disconnected."], nil, nil, nil, 1);
-                        AtlasLootTooltip:Show();
                     end
                 end
             end
@@ -221,7 +212,14 @@ function AtlasLootItem_OnClick(self ,arg1)
         local iteminfo = GetItemInfo(self.itemID);
         local itemName, itemLink, itemQuality, itemLevel, itemMinLevel, itemType, itemSubType, itemCount, itemEquipLoc, itemTexture = GetItemInfo(self.itemID);
         --If shift-clicked, link in the chat window
-        if(arg1=="RightButton" and not iteminfo and self.itemID ~= 0) then
+        if arg1=="RightButton" and ATLASLOOT_ITEM_UNLOCK then
+            AtlasLoot:MoveWishlistItem("Down",self.number);
+        elseif IsAltKeyDown() and arg1=="LeftButton" and ATLASLOOT_ITEM_UNLOCK then
+            StaticPopup_Show("ATLASLOOT_ADD_CUSTOMHEADER");
+            StaticPopupDialogs.ATLASLOOT_ADD_CUSTOMHEADER.num = self.number;
+        elseif (arg1=="LeftButton") and ATLASLOOT_ITEM_UNLOCK then
+            AtlasLoot:MoveWishlistItem("Up",self.number);
+        elseif(arg1=="RightButton" and not iteminfo and self.itemID ~= 0) then
             AtlasLootTooltip:SetHyperlink("item:"..self.itemID..":0:0:0:0:0:0:0");
             if not AtlasLoot.db.profile.ItemSpam then
                 DEFAULT_CHAT_FRAME:AddMessage(AL["Server queried for "]..color.."["..name.."]".."|r"..AL[".  Right click on any other item to refresh the loot page."]);
@@ -239,24 +237,30 @@ function AtlasLootItem_OnClick(self ,arg1)
         --If control-clicked, use the dressing room
         elseif(IsControlKeyDown() and iteminfo) then
             DressUpItemLink(itemLink);
-        elseif(IsAltKeyDown() and (self.itemID ~= 0)) then
-            if AtlasLootItemsFrame.refresh[2] == "AtlasLootWishList" then
-                AtlasLoot_DeleteFromWishList(self.itemID);
+        elseif IsAltKeyDown() then
+            if AtlasLootItemsFrame.refresh[2] == "AtlasLoot_CurrentWishList" then
+                AtlasLoot_DeleteFromWishList(self.itemID,self.number);
             else
                 if(AtlasLootItemsFrame.refresh[1] == "SearchResult") then
                     local datID, _, datPage = strsplit("|", self.sourcePage);
-                    AtlasLoot_ShowWishListDropDown(self.itemID, self.itemTexture, _G["AtlasLootItem_"..self:GetID().."_Name"]:GetText(), 
-                                                        AtlasLoot_Data[datID][tonumber(datPage)].Name, self.sourcePage, self);
+                    AtlasLoot_ShowWishListDropDown(self.itemID, self.itemTexture, _G["AtlasLootItem_"..self:GetID().."_Name"]:GetText(), AtlasLoot_Data[datID][tonumber(datPage)].Name, 
+                                                    datID .. "|" .. "AtlasLoot_Data" .. "|" .. tostring(datPage), self);
                 else
-                    AtlasLoot_ShowWishListDropDown(self.itemID, self.itemTexture, _G["AtlasLootItem_"..self:GetID().."_Name"]:GetText(), 
+                    AtlasLoot_ShowWishListDropDown(self.itemID, self.itemTexture, _G["AtlasLootItem_"..self:GetID().."_Name"]:GetText(),
                                                         AtlasLoot_BossName:GetText(), self.dataID .. "|" .. "AtlasLoot_Data" .. "|" .. tostring(self.tablenum), self);
                 end
             end
-        elseif((AtlasLootItemsFrame.refresh[1] == "SearchResult" or AtlasLootItemsFrame.refresh[2] == "AtlasLootWishList") and self.sourcePage) then
+        elseif((AtlasLootItemsFrame.refresh[1] == "SearchResult" or AtlasLootItemsFrame.refresh[2] == "AtlasLoot_CurrentWishList") and self.sourcePage) then
             local dataID, dataSource, dataPage = strsplit("|", self.sourcePage);
             if(dataID and dataSource) then
                 AtlasLoot:ShowItemsFrame(dataID, "AtlasLoot_Data", tonumber(dataPage));
             end
+        elseif( self.sourcePage and self.sourcePage:match("=LT=") ) then
+            local dataID, dataSource, dataPage = strsplit("|", string.sub(self.sourcePage, 5));
+                if(dataID and dataSource) then
+                    ATLASLOOT_BACKENABLED = true;
+                    AtlasLoot:ShowItemsFrame(dataID, "AtlasLoot_Data", tonumber(dataPage));
+                end
         elseif (arg1=="LeftButton") and self.sourcePage then
            --Create token table if there isnt one
             if AtlasLoot_TokenData[self.sourcePage] == nil then
@@ -269,9 +273,9 @@ function AtlasLootItem_OnClick(self ,arg1)
         if IsShiftKeyDown() then
             spellID = string.sub(self.itemID, 2);
             ChatEdit_InsertLink(AtlasLoot_GetEnchantLink(spellID));
-        elseif(IsAltKeyDown() and (self.itemID ~= 0)) then
-            if AtlasLootItemsFrame.refresh[2] == "AtlasLootWishList" then
-                AtlasLoot_DeleteFromWishList(self.itemID);
+        elseif IsAltKeyDown() then
+            if AtlasLootItemsFrame.refresh[2] == "AtlasLoot_CurrentWishList" then
+                AtlasLoot_DeleteFromWishList(self.itemID, self.number);
             else
                 spellName, _, _, _, _, _, _, _, _ = GetSpellInfo(string.sub(self.itemID, 2));
                 --spellIcon = GetItemIcon(self.dressingroomID);
@@ -288,6 +292,12 @@ function AtlasLootItem_OnClick(self ,arg1)
         elseif((AtlasLootItemsFrame.refresh[1] == "SearchResult" or AtlasLootItemsFrame.refresh[1] == "WishList") and self.sourcePage) then
             local dataID, dataSource, dataPage = strsplit("|", self.sourcePage);
             if(dataID and dataSource) then
+                AtlasLoot:ShowItemsFrame(dataID, "AtlasLoot_Data", tonumber(dataPage));
+            end
+        elseif( self.sourcePage and self.sourcePage:match("=LT=") ) then
+        local dataID, dataSource, dataPage = strsplit("|", string.sub(self.sourcePage, 5));
+            if(dataID and dataSource) then
+                ATLASLOOT_BACKENABLED = true;
                 AtlasLoot:ShowItemsFrame(dataID, "AtlasLoot_Data", tonumber(dataPage));
             end
         end
