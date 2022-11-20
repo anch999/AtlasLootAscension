@@ -148,7 +148,7 @@ function AtlasLoot:DewdropExpansionMenuClick(expansion, name)
         else
             local tablenum = AtlasLoot_Data[tablename].Loadfirst or 1;
             AtlasLoot:ShowItemsFrame(tablename, "AtlasLoot_Data", tablenum);
-        end
+        end 
     end
 
 end
