@@ -465,9 +465,9 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 	local difType = false;
 	-- Checks to see if type is the same
 	if ATLASLOOT_CURRENTTYPE ~= dataSource[dataID].Type then
-		if dataSource[dataID].Type == "Crafting" then
+		if dataSource[dataID].Type == "Crafting" or dataSource[dataID].Type == "CraftingNoBF" then
 			ItemindexID = "Pattern";
-		elseif ItemindexID == "Pattern" and dataSource[dataID].Type ~= "Crafting" then
+		elseif (ItemindexID == "Pattern" and dataSource[dataID].Type ~= "Crafting") or (ItemindexID == "Pattern" and dataSource[dataID].Type ~= "CraftingNoBF") then
 			ItemindexID = 2;
 		else
 			ItemindexID = ATLASLOOT_TYPE[dataSource[dataID].Type] or 2;
