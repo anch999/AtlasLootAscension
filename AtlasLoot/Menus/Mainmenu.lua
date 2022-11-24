@@ -17,7 +17,7 @@ AtlasLoot_Modules = {
 	{AL["Crafting"], "Crafting"};
 	{AL["Sets/Collections"], "Collections"};
 	{AL["PvP Rewards"], "PVP"};
-	{AL["World Bosses"], "WorldBossesMenu"};
+	{AL["Vanity"], "Vanity"};
 	{AL["Reputation Factions"], "Reputations"};
 	{AL["World Events"], "WorldEvents"};
 };

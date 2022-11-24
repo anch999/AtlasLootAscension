@@ -767,9 +767,11 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 		local function filterCheck(find)
 			local mtype = {"Crafting", "Reputations", "WorldEvents", "PVP", "Collections"}
 			for m, t in pairs (mtype) do
-				for i, v in ipairs (AtlasLoot_SubMenus[t..AtlasLoot_Expac]) do
-					if find == v[2] then
-						return true;
+				if AtlasLoot_SubMenus[t..AtlasLoot_Expac] then
+					for i, v in ipairs (AtlasLoot_SubMenus[t..AtlasLoot_Expac]) do
+						if find == v[2] then
+							return true;
+						end
 					end
 				end
 			end
@@ -808,7 +810,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 			tablenum = AtlasLootItemsFrame.refreshOri[3];
 		end
 
-		if AtlasLootItemsFrame.refresh and tablenum ~= #_G[AtlasLootItemsFrame.refreshOri[2]][AtlasLootItemsFrame.refreshOri[1]] and dataSource_backup ~= "AtlasLoot_TokenData" and dataID ~= "SearchResult" or tablenum ~= #_G[AtlasLootItemsFrame.refresh[2]][AtlasLootItemsFrame.refresh[1]] and dataID == "SearchResult" then
+		if AtlasLootItemsFrame.refresh and AtlasLootItemsFrame.refreshOri and tablenum ~= #_G[AtlasLootItemsFrame.refreshOri[2]][AtlasLootItemsFrame.refreshOri[1]] and dataSource_backup ~= "AtlasLoot_TokenData" and dataID ~= "SearchResult" or tablenum ~= #_G[AtlasLootItemsFrame.refresh[2]][AtlasLootItemsFrame.refresh[1]] and dataID == "SearchResult" then
 			_G["AtlasLootItemsFrame_NEXT"]:Show();
 			_G["AtlasLootItemsFrame_NEXT"].tablenum = tablenum + 1;
 			_G["AtlasLootItemsFrame_NEXT"].tablebase = tablebase;
@@ -880,7 +882,8 @@ AtlasLoot.ModuleName = {
 	["AtlasLootBurningCrusade"] = "AtlasLoot_BurningCrusade";
 	["AtlasLootCrafting"] = "AtlasLoot_Crafting";
 	["AtlasLootWorldEvents"] = "AtlasLoot_WorldEvents";
-	["AtlasLootWotLK"] = "AtlasLoot_WrathoftheLichKing"
+	["AtlasLootWotLK"] = "AtlasLoot_WrathoftheLichKing";
+	["AtlasLootVanity"] = "AtlasLoot_Vanity"
 }
 
 --[[
@@ -888,12 +891,13 @@ AtlasLoot:LoadAllModules()
 Used to load all available LoD modules
 ]]
 function AtlasLoot:LoadAllModules()
-	local orig, bc, wotlk, craft, world;
+	local orig, bc, wotlk, craft, world, vanity;
     orig, _ = LoadAddOn("AtlasLoot_OriginalWoW");
     bc, _ = LoadAddOn("AtlasLoot_BurningCrusade");
     craft, _ = LoadAddOn("AtlasLoot_Crafting");
     world, _ = LoadAddOn("AtlasLoot_WorldEvents");
     wotlk, _ = LoadAddOn("AtlasLoot_WrathoftheLichKing");
+	vanity, _ = LoadAddon("AtlasLoot_Vanity");
     local flag=0;
 	if not orig then
 		LoadAddOn("AtlasLoot_OriginalWoW");
@@ -913,6 +917,10 @@ function AtlasLoot:LoadAllModules()
 	end
     if not wotlk then
 		LoadAddOn("AtlasLoot_WrathoftheLichKing");
+		flag=1;
+	end
+	if not vanity then
+		LoadAddOn("AtlasLoot_Vanity");
 		flag=1;
 	end
 	if flag == 1 then

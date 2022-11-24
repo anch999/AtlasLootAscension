@@ -203,6 +203,7 @@ if AL then
 	AL["Legendary Items"] = true;
 	AL["Mounts"] = true;
 	AL["Vanity Pets"] = true;
+	AL["Vanity"] = true;
 	AL["Misc Sets"] = true;
 	AL["Classic Sets"] = true;
 	AL["Burning Crusade Sets"] = true;
