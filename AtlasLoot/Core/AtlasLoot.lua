@@ -897,7 +897,7 @@ function AtlasLoot:LoadAllModules()
     craft, _ = LoadAddOn("AtlasLoot_Crafting");
     world, _ = LoadAddOn("AtlasLoot_WorldEvents");
     wotlk, _ = LoadAddOn("AtlasLoot_WrathoftheLichKing");
-	vanity, _ = LoadAddon("AtlasLoot_Vanity");
+	vanity, _ = LoadAddOn("AtlasLoot_Vanity");
     local flag=0;
 	if not orig then
 		LoadAddOn("AtlasLoot_OriginalWoW");
