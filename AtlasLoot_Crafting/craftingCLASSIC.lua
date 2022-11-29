@@ -872,12 +872,13 @@ AtlasLoot_Data["EngineeringCLASSIC"] = {
 	Type = "Crafting";
 	{
 		Name = AL["Ammunition"];
-		{ 1, "s19800", "15997", "=q2=Thorium Shells", "=ds=#sr# 285" };
-		{ 2, "s12621", "10513", "=q2=Mithril Gyro-Shot", "=ds=#sr# 245" };
-		{ 3, "s12596", "10512", "=q2=Hi-Impact Mithril Slugs", "=ds=#sr# 210" };
-		{ 4, "s3947", "8069", "=q1=Crafted Solid Shot", "=ds=#sr# 125" };
-		{ 5, "s3930", "8068", "=q1=Crafted Heavy Shot", "=ds=#sr# 75" };
-		{ 6, "s3920", "8067", "=q1=Crafted Light Shot", "=ds=#sr# 1" };
+		{ 1, 18042, "", "=q2=Thorium Headed Arrow", "Quest See Tooltip", "", "=EI=Trade Thorium Shells With\nArtilleryman Sheldonore in Ironforge\nBounty Hunter Kolark in Orgrimmar" };
+		{ 2, "s19800", "15997", "=q2=Thorium Shells", "=ds=#sr# 285" };
+		{ 3, "s12621", "10513", "=q2=Mithril Gyro-Shot", "=ds=#sr# 245" };
+		{ 4, "s12596", "10512", "=q2=Hi-Impact Mithril Slugs", "=ds=#sr# 210" };
+		{ 5, "s3947", "8069", "=q1=Crafted Solid Shot", "=ds=#sr# 125" };
+		{ 6, "s3930", "8068", "=q1=Crafted Heavy Shot", "=ds=#sr# 75" };
+		{ 7, "s3920", "8067", "=q1=Crafted Light Shot", "=ds=#sr# 1" };
 	};
 	{
 		Name = BabbleInventory["Armor"];

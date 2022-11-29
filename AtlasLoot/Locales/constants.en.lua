@@ -26,6 +26,7 @@ if AL then
 	AL["Select Sub-Table"] = true;
 	AL["Select Difficulty"] = true;
 	AL["Drop Rate: "] = true;
+	AL["Extra Info: "] = true;
 	AL["DKP"] = true;
 	AL["Priority:"] = true;
 	AL["Click boss name to view loot."] = true;
