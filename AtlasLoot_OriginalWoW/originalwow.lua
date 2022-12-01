@@ -4320,7 +4320,7 @@ AtlasLoot_Data["T1"] = {
 	Name = "Tier 1";
 	Type = "ClassicRaid";
 	{
-		Name = AL["Druid"];
+		Name = "Druid".." - "..AL["Restoration"];
 		{ 1, 16834, "", "=q4=Cenarion Helm", "=ds=" .. BabbleBoss["Garr"], "", "11.51%" };
 		{ 2, 16836, "", "=q4=Cenarion Spaulders", "=ds=" .. BabbleBoss["Baron Geddon"], "", "19.52%" };
 		{ 3, 16833, "", "=q4=Cenarion Vestments", "=ds=" .. BabbleBoss["Golemagg the Incinerator"], "", "15.21%" };
@@ -4329,6 +4329,17 @@ AtlasLoot_Data["T1"] = {
 		{ 6, 16828, "", "=q4=Cenarion Belt", "=ds=" .. AL["Trash Mobs"], "", "0.16%" };
 		{ 7, 16835, "", "=q4=Cenarion Leggings", "=ds=" .. BabbleBoss["Magmadar"], "", "12.90%" };
 		{ 8, 16829, "", "=q4=Cenarion Boots", "=ds=" .. BabbleBoss["Lucifron"], "", "10.72%" };
+	};
+	{
+		Name = "Druid" .. " - Tank";
+		{ 1, 13437, "", "=q4=Cenarion Cover", "=ds=" .. BabbleBoss["Garr"], "", "11.51%" };
+		{ 2, 13439, "", "=q4=Cenarion Pauldrons", "=ds=" .. BabbleBoss["Baron Geddon"], "", "19.52%" };
+		{ 3, 13436, "", "=q4=Cenarion Tunic", "=ds=" .. BabbleBoss["Golemagg the Incinerator"], "", "15.21%" };
+		{ 4, 13434, "", "=q4=Cenarion Bands", "=ds=" .. AL["Trash Mobs"], "", "0.17%" };
+		{ 5, 13435, "", "=q4=Cenarion Handguards", "=ds=" .. BabbleBoss["Shazzrah"], "", "19.53%" };
+		{ 6, 13432, "", "=q4=Cenarion Girdle", "=ds=" .. AL["Trash Mobs"], "", "0.16%" };
+		{ 7, 13438, "", "=q4=Cenarion Pants", "=ds=" .. BabbleBoss["Magmadar"], "", "12.90%" };
+		{ 8, 13433, "", "=q4=Cenarion Treads", "=ds=" .. BabbleBoss["Lucifron"], "", "10.72%" };
 	};
 	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["HUNTER"];
@@ -4353,7 +4364,7 @@ AtlasLoot_Data["T1"] = {
 		{ 8, 16800, "", "=q4=Arcanist Boots", "=ds=" .. BabbleBoss["Lucifron"], "", "12.06%" };
 	};
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"];
+		Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"].." - "..AL["Holy"];
 		{ 1, 16854, "", "=q4=Lawbringer Helm", "=ds=" .. BabbleBoss["Garr"], "", "7.23%" };
 		{ 2, 16856, "", "=q4=Lawbringer Spaulders", "=ds=" .. BabbleBoss["Baron Geddon"], "", "12.62%" };
 		{ 3, 16853, "", "=q4=Lawbringer Chestguard", "=ds=" .. BabbleBoss["Golemagg the Incinerator"], "", "9.53%" };
@@ -4362,6 +4373,17 @@ AtlasLoot_Data["T1"] = {
 		{ 6, 16858, "", "=q4=Lawbringer Belt", "=ds=" .. AL["Trash Mobs"], "", "0.10%" };
 		{ 7, 16855, "", "=q4=Lawbringer Legplates", "=ds=" .. BabbleBoss["Magmadar"], "", "8.54%" };
 		{ 8, 16859, "", "=q4=Lawbringer Boots", "=ds=" .. BabbleBoss["Lucifron"], "", "7.20%" };
+	};
+	{
+		Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"].." - "..AL["Protection"];
+		{ 1, 11536, "", "=q4=Lawbringer Greathelm", "=ds=" .. BabbleBoss["Garr"], "", "7.23%" };
+		{ 2, 11538, "", "=q4=Lawbringer Pauldrons", "=ds=" .. BabbleBoss["Baron Geddon"], "", "12.62%" };
+		{ 3, 11535, "", "=q4=Lawbringer Breastplate", "=ds=" .. BabbleBoss["Golemagg the Incinerator"], "", "9.53%" };
+		{ 4, 11531, "", "=q4=Lawbringer Wristguards", "=ds=" .. AL["Trash Mobs"], "", "0.11%" };
+		{ 5, 11533, "", "=q4=Lawbringer Handguards", "=ds=" .. BabbleBoss["Gehennas"], "", "11.77%" };
+		{ 6, 11534, "", "=q4=Lawbringer Waistguard", "=ds=" .. AL["Trash Mobs"], "", "0.10%" };
+		{ 7, 11537, "", "=q4=Lawbringer Legguards", "=ds=" .. BabbleBoss["Magmadar"], "", "8.54%" };
+		{ 8, 11532, "", "=q4=Lawbringer Stompers", "=ds=" .. BabbleBoss["Lucifron"], "", "7.20%" };
 	};
 	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["PRIEST"];
@@ -4386,7 +4408,7 @@ AtlasLoot_Data["T1"] = {
 		{ 8, 16824, "", "=q4=Nightslayer Boots", "=ds=" .. BabbleBoss["Shazzrah"], "", "15.58%" };
 	};
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"];
+		Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"].." - "..AL["Restoration"];
 		{ 1, 16842, "", "=q4=Earthfury Helmet", "=ds=" .. BabbleBoss["Garr"], "", "3.91%" };
 		{ 2, 16844, "", "=q4=Earthfury Epaulets", "=ds=" .. BabbleBoss["Baron Geddon"], "", "7.29%" };
 		{ 3, 16841, "", "=q4=Earthfury Vestments", "=ds=" .. BabbleBoss["Golemagg the Incinerator"], "", "6.08%" };
@@ -4395,6 +4417,17 @@ AtlasLoot_Data["T1"] = {
 		{ 6, 16838, "", "=q4=Earthfury Belt", "=ds=" .. AL["Trash Mobs"], "", "0.07%" };
 		{ 7, 16843, "", "=q4=Earthfury Legguards", "=ds=" .. BabbleBoss["Magmadar"], "", "4.73%" };
 		{ 8, 16837, "", "=q4=Earthfury Boots", "=ds=" .. BabbleBoss["Lucifron"], "", "4.16%" };
+	};
+	{
+		Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"].." - "..AL["Enhancement"];
+		{ 1, 11794, "", "=q4=Earthfury Cover", "=ds=" .. BabbleBoss["Garr"], "", "3.91%" };
+		{ 2, 11796, "", "=q4=Earthfury Pauldrons", "=ds=" .. BabbleBoss["Baron Geddon"], "", "7.29%" };
+		{ 3, 11792, "", "=q4=Earthfury Tunic", "=ds=" .. BabbleBoss["Golemagg the Incinerator"], "", "6.08%" };
+		{ 4, 11793, "", "=q4=Earthfury Bands", "=ds=" .. AL["Trash Mobs"], "", "0.06%" };
+		{ 5, 11791, "", "=q4=Earthfury Gloves", "=ds=" .. BabbleBoss["Gehennas"], "", "7.38%" };
+		{ 6, 11790, "", "=q4=Earthfury Girdle", "=ds=" .. AL["Trash Mobs"], "", "0.07%" };
+		{ 7, 11789, "", "=q4=Earthfury Leggings", "=ds=" .. BabbleBoss["Magmadar"], "", "4.73%" };
+		{ 8, 11795, "", "=q4=Earthfury Treads", "=ds=" .. BabbleBoss["Lucifron"], "", "4.16%" };
 	};
 	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["WARLOCK"];

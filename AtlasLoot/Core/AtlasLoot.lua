@@ -755,7 +755,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 		end
 
 		if dataSource_backup ~= "AtlasLoot_CurrentWishList" and dataID ~= "FilterList"  and dataSource[dataID].Back ~= true and dataID ~= "EmptyTable" then
-			if not AtlasLoot.db.profile.LastBoss then AtlasLoot.db.profile.LastBoss = {} end;
+			if not AtlasLoot.db.profile.LastBoss or type(AtlasLoot.db.profile.LastBoss) ~= "table" then AtlasLoot.db.profile.LastBoss = {} end;
 			AtlasLoot.db.profile.LastBoss[AtlasLoot_Expac] = {dataID, dataSource_backup, tablenum, ATLASLOOT_LASTMODULE, ATLASLOOT_CURRENTTABLE};
 			AtlasLoot.db.profile[ATLASLOOT_CURRENTTABLE] = {dataID, dataSource_backup, tablenum, ATLASLOOT_LASTMODULE, ATLASLOOT_CURRENTTABLE};
 		end
