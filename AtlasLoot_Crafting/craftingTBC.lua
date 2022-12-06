@@ -611,11 +611,6 @@ AtlasLoot_Data["EnchantingTBC"] = {
 		{ 16, "s27967", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Major Striking", "=ds=#sr# 340" };
 	};
 	{
-		Name = "Enchant Staff";
-		{ 1, "s62948", "Spell_Holy_GreaterHeal", "=ds=Enchant Staff - Greater Spellpower", "=ds=" };
-		{ 2, "s62959", "Spell_Holy_GreaterHeal", "=ds=Enchant Staff - Spellpower", "=ds=" };
-	};
-	{
 		Name = AL["Miscellaneous"];
 		{ 1, "s32667", "22463", "=q3=Runed Eternium Rod", "=ds=#sr# 375" };
 		{ 2, "s45765", "22449", "=q3=Void Shatter", "=ds=#sr# 360" };
