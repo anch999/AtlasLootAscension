@@ -1284,7 +1284,7 @@ AtlasLoot_Data["MoltenCore"] = {
 		{ 9, 19147, "", "=q4=Ring of Spell Power", "=ds=#s13#", "", "2.23%" };
 		{ 10, 18878, "", "=q4=Sorcerous Dagger", "=ds=#h3#, #w4#", "", "2.23%" };
 		{ 11, 17077, "", "=q4=Crimson Shocker", "=ds=#w12#", "", "1.60%" };
-		{ 16, 2522362, "", "=q4=Molten Wristgaurds", "=ds=#tt1#", "", "100%", "=TT=T1WRIST" };
+		{ 16, 2522362, "", "=q4=Molten Wristguards", "=ds=#tt1#", "", "100%", "=TT=T1WRIST" };
 		{ 18, 17329, "", "=q1=Hand of Lucifron", "=ds=#m3#" };
 	};
 	{
@@ -1506,7 +1506,7 @@ AtlasLoot_Data["BlackwingLair"] = {
 		{ 9, 19397, "", "=q4=Ring of Blackrock", "=ds=#s13#", "", "6.67%" };
 		{ 10, 19357, "", "=q4=Herald of Woe", "=ds=#h2#, #w6#", "", "16.67%" };
 		{ 11, 19405, "", "=q4=Malfurion's Blessed Bulwark", "=ds=#s5#, #a2#", "", "16.67%" };
-		{ 16, 2522462, "", "=q4=Chromatic Wristgaurds", "=ds=#tt2#", "", "100%", "=TT=T2WRIST" };
+		{ 16, 2522462, "", "=q4=Chromatic Wristguards", "=ds=#tt2#", "", "100%", "=TT=T2WRIST" };
 	};
 	{
 		Name = BabbleBoss["Vaelastrasz the Corrupt"];
