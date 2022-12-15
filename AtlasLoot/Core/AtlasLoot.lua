@@ -1095,7 +1095,7 @@ function AtlasLoot:LoadItemIDsDatabase()
 		-- run for each item in the data
 	if index ~= 0 and data.Normal ~= 0 and not ItemIDsDatabase[data.Normal] then
 			ItemIDsDatabase[data.Normal] = {}
-			ItemIDsDatabase[data.Normal]["MythicRaid"] = data.Heroic + 1000000
+			ItemIDsDatabase[data.Normal]["MythicRaid"] = tonumber("13"..data.Normal);
 			table.insert(ItemIDsDatabase[data.Normal],data.Bloodforged);
 			table.insert(ItemIDsDatabase[data.Normal],data.Normal);
 			if data.Heroic ~= 0 then table.insert(ItemIDsDatabase[data.Normal],data.Heroic) end

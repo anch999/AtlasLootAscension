@@ -1425,13 +1425,10 @@ AtlasLoot_Data["MoltenCore"] = {
 		{ 8, 19140, "", "=q4=Cauterizing Band", "=ds=#s13#", "", "15.10%" };
 		{ 9, 18805, "", "=q4=Core Hound Tooth", "=ds=#h1#, #w4#", "", "16.06%" };
 		{ 10, 18803, "", "=q4=Finkle's Lava Dredger", "=ds=#h2#, #w6#", "", "12.43%" };
-		{ 16, 18703, "", "=q4=Ancient Petrified Leaf", "=ds=#m2# =q1=(#c2#)", "", "35.25%" };
-		{ 17, 18715, "", "=q4=Lok'delar, Stave of the Ancient Keepers", "=q1=#m4#: =ds=#w9#, =q1=#m1# =ds=#c2#" };
-		{ 18, 18713, "", "=q4=Rhok'delar, Longbow of the Ancient Keepers", "=q1=#m4#: =ds=#w2#, =q1=#m1# =ds=#c2#" };
-		{ 19, 18714, "", "=q4=Ancient Sinew Wrapped Lamina", "=q1=#m4#: =ds=#w19#, =q1=#m1# =ds=#c2#" };
-		{ 21, 18646, "", "=q4=The Eye of Divinity", "=ds=#m2# =q1=(#c5#)", "", "28.30%" };
-		{ 22, 18608, "", "=q4=Benediction", "=q1=#m4#: =ds=#w9#, =q1=#m1# =ds=#c5#" };
-		{ 23, 18609, "", "=q4=Anathema", "=q1=#m4#: =ds=#w9#, =q1=#m1# =ds=#c5#" };
+		{ 16, 18715, "", "=q4=Lok'delar, Stave of the Ancient Keepers", "=ds=#w9#" };
+		{ 17, 18713, "", "=q4=Rhok'delar, Longbow of the Ancient Keepers", "=ds=#w2#" };
+		{ 19, 18608, "", "=q4=Benediction", "=ds=#w9#" };
+		{ 20, 18609, "", "=q4=Anathema", "=ds=#w9#" };
 	};
 	{
 		Name = BabbleBoss["Ragnaros"];
@@ -1448,13 +1445,14 @@ AtlasLoot_Data["MoltenCore"] = {
 		{ 11, 17076, "", "=q4=Bonereaver's Edge", "=ds=#h2#, #w10#", "", "5.12%" };
 		{ 12, 17104, "", "=q4=Spinal Reaper", "=ds=#h2#, #w1#", "", " 4.63%" };
 		{ 13, 17106, "", "=q4=Malistar's Defender", "=ds=#w8#", "", "13.88%" };
-		{ 15, 21110, "", "=q1=Draconic for Dummies", "=ds=#m3#", "", "100%" };
+		{ 14, 17083, "", "=q4=Blade of Dragon Bone", "=ds=#h3#, #w10#", "", "13.88%" };
 		{ 16, 2522459, "", "=q4=Chromatic Leggaurds", "=ds=#tt2#", "", "100%", "=TT=T2LEGS" };
-		{ 18, 17204, "", "=q5=Eye of Sulfuras", "=ds=#m3#", "", "3.42%" };
-		{ 19, 17182, "", "=q5=Sulfuras, Hand of Ragnaros", "=q1=#m4#: =ds=#h2#, #w6#" };
-		{ 21, 19017, "", "=q1=Essence of the Firelord", "=ds=#m3#", "", "0.46%" };
-		{ 22, 19019, "", "=q5=Thunderfury, Blessed Blade of the Windseeker", "=q1=#m4#: =ds=#h1#, #w10#" };
-		{ 24, 102107, "", "=q4=Reins of the Magmatic Steed", "=ds=#e12#", [AtlasLoot_Difficulty.MIN_DIF] = AtlasLoot_Difficulty.Heroic };
+		{ 18, 21110, "", "=q1=Draconic for Dummies", "=ds=#m3#", "", "100%" };
+		{ 20, 17204, "", "=q5=Eye of Sulfuras", "=ds=#m3#", "", "3.42%" };
+		{ 21, 17182, "", "=q5=Sulfuras, Hand of Ragnaros", "=q1=#m4#: =ds=#h2#, #w6#" };
+		{ 23, 19017, "", "=q1=Essence of the Firelord", "=ds=#m3#", "", "0.46%" };
+		{ 24, 19019, "", "=q5=Thunderfury, Blessed Blade of the Windseeker", "=q1=#m4#: =ds=#h1#, #w10#" };
+		{ 25, 102107, "", "=q4=Reins of the Magmatic Steed", "=ds=#e12#", [AtlasLoot_Difficulty.MIN_DIF] = AtlasLoot_Difficulty.Heroic };
 	};
 	{
 		Name = "Random Boss Drops";
@@ -4097,16 +4095,19 @@ AtlasLoot_Data["Onyxia60"] = {
 		{ 5, 17067, "", "=q4=Ancient Cornerstone Grimoire", "=ds=#s15#", "", "28.57%" },
 		{ 6, 17075, "", "=q4=Vis'kag the Bloodletter", "=ds=#h1#, #w10#", "", "28.57%" },
 		{ 7, 17068, "", "=q4=Deathbringer", "=ds=#h1#, #w1#", "", "28.57%" },
-		{ 9, 18705, "", "=q4=Mature Black Dragon Sinew", "=ds=#m3# =q1=#m1# =ds=#c2#", "", "100%" },
-		{ 10, 18713, "", "=q4=Rhok'delar, Longbow of the Ancient Keepers", "=q1=#m4#: =ds=#w2#, =q1=#m1# =ds=#c2#" },
-		{ 12, 15410, "", "=q3=Scale of Onyxia", "=ds=#e8#" },
-		{ 13, 17966, "", "=q2=Onyxia Hide Backpack", "=ds=#m14# #e1#", "", "100%" },
+		{ 8, 18215, "", "=q4=Insignia of the Dragon", "=ds=#s14#", "", "28.57%" },
+		{ 9, 18216, "", "=q4=Neltharion's Badge", "=ds=#s14#", "", "28.57%" },
+		{ 10, 18211, "", "=q4=Wand of the Noble", "=ds=#w12#", "", "28.57%" },
+		{ 11, 17084, "", "=q4=Mace of the Dragon Knight", "=ds=#h2#, #w6#", "", "28.57%" },
+		{ 12, 18212, "", "=q4=Band of Nyxondra", "=ds=#s13#", "", "28.57%" },
 		{ 16, 2522460, "", "=q4=Chromatic Headpiece", "=ds=#tt2#", "", "100%", "=TT=T2HEAD" };
 		{ 18, 18423, "", "=q4=Head of Onyxia", "=ds=#m2#", "", "100%" },
 		{ 19, 18404, "", "=q4=Onyxia Tooth Pendant", "=q1=#m4#: =ds=#s2#" },
 		{ 20, 18403, "", "=q4=Dragonslayer's Signet", "=q1=#m4#: =ds=#s13#" },
 		{ 21, 18406, "", "=q4=Onyxia Blood Talisman", "=q1=#m4#: =ds=#s14#" },
-		{ 23, 49636, "", "=q4=Reins of the Onyxian Drake", "=ds=#e12#", [AtlasLoot_Difficulty.MIN_DIF] = AtlasLoot_Difficulty.Heroic };
+		{ 23, 15410, "", "=q3=Scale of Onyxia", "=ds=#e8#" },
+		{ 24, 17966, "", "=q2=Onyxia Hide Backpack", "=ds=#m14# #e1#", "", "100%" },
+		{ 26, 49636, "", "=q4=Reins of the Onyxian Drake", "=ds=#e12#", [AtlasLoot_Difficulty.MIN_DIF] = AtlasLoot_Difficulty.Heroic };
 	};
 };
 
