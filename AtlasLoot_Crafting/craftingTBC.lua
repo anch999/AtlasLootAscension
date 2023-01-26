@@ -1858,21 +1858,21 @@ AtlasLoot_Data["EngineeringHighRiskTBC"] = {
 	Type = "CraftingNoBF";
 	{
 		Name = "Rare";
-		{ 1, "s979550", "1204049", "=q3=Gnomish Magnification Polish", "Dungeon Bosses/Raid Trash" };
-		{ 2, "s979552", "1204051", "=q3=Gnomish Sharpening Polish", "Dungeon Bosses/Raid Trash" };
-		{ 3, "s979554", "1204053", "=q3=Gnomish Prismatic Polish", "Dungeon Bosses/Raid Trash" };
-		{ 4, "s979556", "1204055", "=q3=Felfire Scope", "Dungeon Bosses/Raid Trash" };
-		{ 5, "s979558", "1204057", "=q3=Sighted Scope", "Dungeon Bosses/Raid Trash" };
-		{ 6, "s979560", "1204059", "=q3=Quickshot Scope", "Dungeon Bosses/Raid Trash" };
+		{ 1, "s979550", "1204101", "=q3=Gnomish Magnification Polish", "Dungeon Bosses/Raid Trash" };
+		{ 2, "s979552", "1204103", "=q3=Gnomish Sharpening Polish", "Dungeon Bosses/Raid Trash" };
+		{ 3, "s979554", "1204105", "=q3=Gnomish Prismatic Polish", "Dungeon Bosses/Raid Trash" };
+		{ 4, "s979556", "1204107", "=q3=Felfire Scope", "Dungeon Bosses/Raid Trash" };
+		{ 5, "s979558", "1204109", "=q3=Sighted Scope", "Dungeon Bosses/Raid Trash" };
+		{ 6, "s979560", "1204111", "=q3=Quickshot Scope", "Dungeon Bosses/Raid Trash" };
 	};
 	{
 		Name = "Epic";
-		{ 1, "s968044", "1204050", "=q4=Fine Gnomish Magnification Polish", "Dungeon Bosses/Raid Trash" };
-		{ 2, "s968047", "1204052", "=q4=Fine Gnomish Sharpening Polish", "Dungeon Bosses/Raid Trash" };
-		{ 3, "s968050", "1204054", "=q4=Fine Gnomish Prismatic Polish", "Dungeon Bosses/Raid Trash" };
-		{ 4, "s968053", "1204056", "=q4=Focused Felfire Scope", "Dungeon Bosses/Raid Trash" };
-		{ 5, "s968056", "1204058", "=q4=Focused Sighted Scope", "Dungeon Bosses/Raid Trash" };
-		{ 6, "s968059", "1204060", "=q4=Focused Quickshot Scope", "Dungeon Bosses/Raid Trash" };
+		{ 1, "s979551", "1204102", "=q4=Fine Gnomish Magnification Polish", "Dungeon Bosses/Raid Trash" };
+		{ 2, "s979553", "1204104", "=q4=Fine Gnomish Sharpening Polish", "Dungeon Bosses/Raid Trash" };
+		{ 3, "s979555", "1204106", "=q4=Fine Gnomish Prismatic Polish", "Dungeon Bosses/Raid Trash" };
+		{ 4, "s979557", "1204108", "=q4=Focused Felfire Scope", "Dungeon Bosses/Raid Trash" };
+		{ 5, "s979559", "1204110", "=q4=Focused Sighted Scope", "Dungeon Bosses/Raid Trash" };
+		{ 6, "s979561", "1204112", "=q4=Focused Quickshot Scope", "Dungeon Bosses/Raid Trash" };
 	};
 };
 
