@@ -373,21 +373,28 @@ function AtlasLoot:CreateToken(dataID)
 			[1] = { Name = itemName };
 		};
 	end
-	--Fills table with items
 	local count = #AtlasLoot_Data[dataID][1] * #AtlasLoot_Data[dataID];
+	local function addItem(itemID, v, t)
+		if itemType == select(9, GetItemInfo(itemID)) or itemType2 == select(9, GetItemInfo(itemID)) then
+			table.insert(AtlasLoot_TokenData[orgID][1], {#AtlasLoot_TokenData[orgID][1] + 1, v[2], v[3], v[4], t.Name});
+		end
+		if count == 1 then
+			AtlasLoot:ShowItemsFrame(AtlasLootItemsFrame.refresh[1], AtlasLootItemsFrame.refresh[2], AtlasLootItemsFrame.refresh[3]);
+		end
+		count = count - 1;
+	end
+	--Fills table with items
 	for n, t in ipairs(AtlasLoot_Data[dataID]) do
 		for c, v in ipairs(t) do
 			if type(v) == "table" then
-				local item = Item:CreateFromID(v[2]);
-				item:ContinueOnLoad(function(itemID)
-					if itemType == select(9, GetItemInfo(itemID)) or itemType2 == select(9, GetItemInfo(itemID)) then
-						table.insert(AtlasLoot_TokenData[orgID][1], {#AtlasLoot_TokenData[orgID][1] + 1, v[2], v[3], v[4], t.Name});
-					end
-					if count == 1 then
-						AtlasLoot:ShowItemsFrame(AtlasLootItemsFrame.refresh[1], AtlasLootItemsFrame.refresh[2], AtlasLootItemsFrame.refresh[3]);
-					end
-					count = count - 1;
-				end)
+				if GetItemInfo(v[2]) then
+					addItem(v[2], v, t)
+				else
+					local item = Item:CreateFromID(v[2]);
+					item:ContinueOnLoad(function(itemID)
+						addItem(itemID, v, t)
+					end)
+				end
 			end
 		end
 	end
