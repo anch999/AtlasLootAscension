@@ -1494,9 +1494,10 @@ AtlasLoot_Data["BlackwingLair"] = {
 	Map = "BlackwingLair";
 	{
 		Name = BabbleBoss["Razorgore the Untamed"];
-		{ 1, 19337, "", "=q4=The Black Book", "=ds=#s14#, =q1=#m1# =ds=#c8#", "", "20%" };
-		{ 2, 19336, "", "=q4=Arcane Infused Gem", "=ds=#s14#, =q1=#m1# =ds=#c2#", "", "20%" };
-		{ 3, 19344, "", "=q4=Natural Alignment Crystal", "=ds=#s14#, =q1=#m1# =ds=#c7#", "", "6.67%" };
+		{ 1, 19337, "", "=q4=The Black Book", "=ds=#s14#", "", "" };
+		{ 2, 19336, "", "=q4=Arcane Infused Gem", "=ds=#s14#", "", "" };
+		{ 3, 1506015, "", "=q4=Soulsong Crystal", "=ds=#s14#", "", "" };
+		{ 4, 1506014, "", "=q4=Living Blood Gem", "=ds=#s14#", "", "" };
 		{ 5, 19370, "", "=q4=Mantle of the Blackwing Cabal", "=ds=#s3#, #a1#", "", "20%" };
 		{ 6, 19369, "", "=q4=Gloves of Rapid Evolution", "=ds=#s9#, #a1#", "", "20%" };
 		{ 7, 19334, "", "=q4=The Untamed Blade", "=ds=#h2#, #w10#", "", "10%" };
@@ -1517,6 +1518,7 @@ AtlasLoot_Data["BlackwingLair"] = {
 		{ 7, 19430, "", "=q4=Shroud of Pure Thought", "=ds=#s4#", "", "16.67%" };
 		{ 8, 19403, "", "=q4=Band of Forced Concentration", "=ds=#s13#", "", "16.67%" };
 		{ 9, 19367, "", "=q4=Dragon's Touch", "=ds=#w12#", "", "16.67%" };
+		{ 10, 14000, "", "=q4=Ring of Trinity Force", "=ds=#h3#, #w13#", "", "12.5%" };
 		{ 16, 2522463, "", "=q4=Chromatic Girdle", "=ds=#tt2#", "", "100%", "=TT=T2WAIST" };
 	};
 	{
@@ -1530,8 +1532,7 @@ AtlasLoot_Data["BlackwingLair"] = {
 		{ 7, 19350, "", "=q4=Heartstriker", "=ds=#w2#", "", "10%" };
 		{ 8, 19402, "", "=q4=Legguards of the Fallen Crusader", "=ds=#s11#, #a4#", "", "12.5%" };
 		{ 9, 19365, "", "=q4=Claw of the Black Drake", "=ds=#h3#, #w13#", "", "12.5%" };
-		{ 10, 14000, "", "=q4=Ring of Trinity Force", "=ds=#h3#, #w13#", "", "12.5%" };
-		{ 11, 19432, "", "=q4=Circle of Applied Force", "=ds=#s13#", "", "16.67%" };
+		{ 10, 19432, "", "=q4=Circle of Applied Force", "=ds=#s13#", "", "16.67%" };
 		{ 16, 2522465, "", "=q4=Chromatic Boots", "=ds=#tt2#", "", "100%", "=TT=T2FEET" };
 		{ 18, 20383, "", "=q1=Head of the Broodlord Lashlayer", "=ds=#m3#", "", "100%" };
 	};
