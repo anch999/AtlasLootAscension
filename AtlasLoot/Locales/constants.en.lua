@@ -924,6 +924,14 @@ if AL then
 	AL["Gift of the Gathering Storm"] = true;
 	AL["Implements of Unspoken Names"] = true;
 	AL["Battlegear of Unyielding Strength"] = true;
+	AL["Keepsakes of Endless Machinations"] = true;
+	AL["Regalia of Roaring Earth"] = true;
+	AL["Relics of Ferocious Vigor"] = true;
+	AL["Laurels of the Faithful Zealot"] = true;
+	AL["Instruments of Masterful Technique"] = true;
+	AL["Decorations of Martial Prowess"] = true;
+	AL["Trophies of Unrivaled Rage"] = true;
+	AL["Remnants of Expansive Research"] = true;
 
 	-- AQ40 Sets
 	AL["Genesis Raiment"] = true;

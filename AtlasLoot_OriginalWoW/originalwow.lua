@@ -238,8 +238,10 @@ AtlasLoot_Data["RuinsofAQ"] = {
 		{ 6, 20871, "", "=q3=Obsidian Idol", "=ds=#e15#", "", "0.41%" };
 		{ 7, 20867, "", "=q3=Onyx Idol", "=ds=#e15#", "", "0.36%" };
 		{ 8, 20872, "", "=q3=Vermillion Idol", "=ds=#e15#", "", "0.31%" };
-		{ 10, 22202, "", "=q1=Small Obsidian Shard", "=ds=#e8#" };
-		{ 11, 22203, "", "=q1=Large Obsidian Shard", "=ds=#e8#" };
+
+		{ 9, 22202, "", "=q1=Small Obsidian Shard", "=ds=#e8#" };
+		{ 10, 22203, "", "=q1=Large Obsidian Shard", "=ds=#e8#" };
+
 		{ 16, 20864, "", "=q2=Bone Scarab", "=ds=#e15#", "", "0.84%" };
 		{ 17, 20861, "", "=q2=Bronze Scarab", "=ds=#e15#", "", "0.88%" };
 		{ 18, 20863, "", "=q2=Clay Scarab", "=ds=#e15#", "", "0.95%" };
@@ -248,7 +250,18 @@ AtlasLoot_Data["RuinsofAQ"] = {
 		{ 21, 20865, "", "=q2=Ivory Scarab", "=ds=#e15#", "", "0.93%" };
 		{ 22, 20860, "", "=q2=Silver Scarab", "=ds=#e15#", "", "1.82%" };
 		{ 23, 20858, "", "=q2=Stone Scarab", "=ds=#e15#", "", "0.86%" };
-		{ 25, 21761, "", "=q1=Scarab Coffer Key", "=ds=#e9#", "", "7.27%" };
+		{ 24, 21761, "", "=q1=Scarab Coffer Key", "=ds=#e9#", "", "7.27%" };
+
+		{ 12, 21404, "", "=q4=Dagger of Veiled Shadows", "=ds=#h1#, #w4#", "", "" };
+		{ 13, 21416, "", "=q4=Kris of Unspoken Names", "=ds=#h3#, #w4#", "", "" };
+		{ 14, 21413, "", "=q4=Blade of Vaulted Secrets", "=ds=#h3#, #w10#", "", "" };
+		{ 15, 21395, "", "=q4=Blade of Eternal Justice", "=ds=#h1#, #w10#", "", "" };
+		
+		{ 26, 21407, "", "=q4=Mace of Unending Life", "=ds=#h3#, #w6#", "", "" };
+		{ 27, 21410, "", "=q4=Gavel of Infinite Wisdom", "=ds=#h3#, #w6#", "", "" };
+		{ 28, 21398, "", "=q4=Hammer of the Gathering Storm", "=ds=#h3#, #w6#", "", "" };
+		{ 29, 21401, "", "=q4=Scythe of the Unseen Path", "=ds=#h1#, #w1#", "", "" };
+		{ 30, 21392, "", "=q4=Sickle of Unyielding Strength", "=ds=#h1#, #w1#", "", "" };
 	};
 	{
 		Name = "AQ Class Books";
@@ -310,11 +323,13 @@ AtlasLoot_Data["TempleofAQ"] = {
 		{ 6, 21814, "", "=q4=Breastplate of Annihilation", "=ds=#s5#, #a4#", "", "11.01%" };
 		{ 7, 21704, "", "=q4=Boots of the Redeemed Prophecy", "=ds=#s12#, #a4#", "", "7.75%" };
 		{ 8, 21706, "", "=q4=Boots of the Unwavering Will", "=ds=#s12#, #a4#", "", "12.23%" };
+
 		{ 10, 21702, "", "=q4=Amulet of Foul Warding", "=ds=#s2#", "", "12.20%" };
 		{ 11, 21700, "", "=q4=Pendant of the Qiraji Guardian", "=ds=#s2#", "", "11.57%" };
 		{ 12, 21707, "", "=q4=Ring of Swarming Thought", "=ds=#s13#", "", "12.57%" };
 		{ 13, 21703, "", "=q4=Hammer of Ji'zhi", "=ds=#h2#, #w6#", "", "7.14%" };
 		{ 14, 21128, "", "=q4=Staff of the Qiraji Prophets", "=ds=#w9#", "", " 6.32%" };
+		
 		{ 16, 21237, "", "=q4=Imperial Qiraji Regalia", "=ds=#m3#", "", "1.74%" };
 		{ 17, 21273, "", "=q4=Blessed Qiraji Acolyte Staff", "=q1=#m4#, =ds=#w9#" };
 		{ 18, 21275, "", "=q4=Blessed Qiraji Augur Staff", "=q1=#m4#, =ds=#w9#" };
@@ -326,30 +341,37 @@ AtlasLoot_Data["TempleofAQ"] = {
 		{ 25, 21269, "", "=q4=Blessed Qiraji Bulwark", "=q1=#m4#, =ds=#w8#" };
 		{ 27, 22222, "", "=q3=Plans: Thick Obsidian Breastplate", "=ds=#p2# (300)", "", "5.00%" };
 		{ 28, 22196, "", "=q4=Thick Obsidian Breastplate", "=ds=#s5#, #a4#" };
+
+		{ 30, 20928, "", "=q4=Bindings of the Lost Nomad", "=ds=#tt2.5#", "", "100%", "=TT=T2.5FEET" };
 	};
 	{
 		Name = BabbleBoss["The Bug Family"];
-		{ 1, 21697, "", "=q4=Cape of the Trinity", "=ds=#s4# =q2=#m5#", "", "14%" };
-		{ 2, 21694, "", "=q4=Ternary Mantle", "=ds=#s3#, #a1# =q2=#m5#", "", "16%" };
-		{ 3, 21696, "", "=q4=Robes of the Triumvirate", "=ds=#s5#, #a1# =q2=#m5#", "", "13%" };
-		{ 4, 21693, "", "=q4=Guise of the Devourer", "=ds=#s1#, #a2# =q2=#m5#", "", "16%" };
-		{ 5, 21692, "", "=q4=Triad Girdle", "=ds=#s10#, #a4# =q2=#m5#", "", "16%" };
-		{ 6, 21695, "", "=q4=Angelista's Touch", "=ds=#s13# =q2=#m5#", "", "14%" };
-		{ 8, 21237, "", "=q4=Imperial Qiraji Regalia", "=ds=#m3# =q2=#m5#", "", "7%" };
-		{ 9, 21232, "", "=q4=Imperial Qiraji Armaments", "=ds=#m3# =q2=#m5#", "", "7%" };
-		{ 11, 21680, "", "=q4=Vest of Swift Execution", "=ds=#s5#, #a2# =q2=#n115#", "", "21%" };
-		{ 12, 21603, "", "=q4=Wand of Qiraji Nobility", "=ds=#w12# =q2=#n115#", "", "25%" };
-		{ 13, 21681, "", "=q4=Ring of the Devoured", "=ds=#s13# =q2=#n115#", "", "17%" };
-		{ 14, 21685, "", "=q4=Petrified Scarab", "=ds=#s14# =q2=#n115#", "", "21%" };
-		{ 16, 21689, "", "=q4=Gloves of Ebru", "=ds=#s9#, #a2# =q2=#n116#", "", "18%" };
-		{ 17, 21691, "", "=q4=Ooze-ridden Gauntlets", "=ds=#s9#, #a4# =q2=#n116#", "", "20%" };
-		{ 18, 21688, "", "=q4=Boots of the Fallen Hero", "=ds=#s12#, #a4# =q2=#n116#", "", "18%" };
-		{ 19, 21690, "", "=q4=Angelista's Charm", "=ds=#s2# =q2=#n116#", "", "20%" };
-		{ 21, 21686, "", "=q4=Mantle of Phrenic Power", "=ds=#s3#, #a1# =q2=#n117#", "", "13%" };
-		{ 22, 21682, "", "=q4=Bile-Covered Gauntlets", "=ds=#s9#, #a2# =q2=#n117#", "", "19%" };
-		{ 23, 21684, "", "=q4=Mantle of the Desert's Fury", "=ds=#s3#, #a3# =q2=#n117#", "", "16%" };
-		{ 24, 21683, "", "=q4=Mantle of the Desert Crusade", "=ds=#s3#, #a4# =q2=#n117#", "", "14%" };
-		{ 25, 21687, "", "=q4=Ukko's Ring of Darkness", "=ds=#s13# =q2=#n117#", "", "20%" };
+		{ 1, 21697, "", "=q4=Cape of the Trinity", "=ds=#s4#", "", "14%" };
+		{ 2, 21694, "", "=q4=Ternary Mantle", "=ds=#s3#, #a1#", "", "16%" };
+		{ 3, 21696, "", "=q4=Robes of the Triumvirate", "=ds=#s5#, #a1#", "", "13%" };
+		{ 4, 21693, "", "=q4=Guise of the Devourer", "=ds=#s1#, #a2#", "", "16%" };
+		{ 5, 21692, "", "=q4=Triad Girdle", "=ds=#s10#, #a4#", "", "16%" };
+		{ 6, 21695, "", "=q4=Angelista's Touch", "=ds=#s13#", "", "14%" };
+		{ 8, 21237, "", "=q4=Imperial Qiraji Regalia", "=ds=#m3#", "", "7%" };
+		{ 9, 21232, "", "=q4=Imperial Qiraji Armaments", "=ds=#m3#", "", "7%" };
+
+		{ 11, 21680, "", "=q4=Vest of Swift Execution", "=ds=#s5#, #a2#", "", "21%" };
+		{ 12, 21603, "", "=q4=Wand of Qiraji Nobility", "=ds=#w12#", "", "25%" };
+		{ 13, 21681, "", "=q4=Ring of the Devoured", "=ds=#s13#", "", "17%" };
+		{ 14, 21685, "", "=q4=Petrified Scarab", "=ds=#s14#", "", "21%" };
+
+		{ 16, 21689, "", "=q4=Gloves of Ebru", "=ds=#s9#, #a2#", "", "18%" };
+		{ 17, 21691, "", "=q4=Ooze-ridden Gauntlets", "=ds=#s9#, #a4#", "", "20%" };
+		{ 18, 21688, "", "=q4=Boots of the Fallen Hero", "=ds=#s12#, #a4#", "", "18%" };
+		{ 19, 21690, "", "=q4=Angelista's Charm", "=ds=#s2#", "", "20%" };
+
+		{ 21, 21686, "", "=q4=Mantle of Phrenic Power", "=ds=#s3#, #a1#", "", "13%" };
+		{ 22, 21682, "", "=q4=Bile-Covered Gauntlets", "=ds=#s9#, #a2#", "", "19%" };
+		{ 23, 21684, "", "=q4=Mantle of the Desert's Fury", "=ds=#s3#, #a3#", "", "16%" };
+		{ 24, 21683, "", "=q4=Mantle of the Desert Crusade", "=ds=#s3#, #a4#", "", "14%" };
+		{ 25, 21687, "", "=q4=Ukko's Ring of Darkness", "=ds=#s13#", "", "20%" };
+
+		{ 27, 20928, "", "=q4=Bindings of the Lost Nomad", "=ds=#tt2.5#", "", "100%", "=TT=T2.5FEET" };
 	};
 	{
 		Name = BabbleBoss["Battleguard Sartura"];
@@ -362,19 +384,24 @@ AtlasLoot_Data["TempleofAQ"] = {
 		{ 7, 21668, "", "=q4=Scaled Leggings of Qiraji Fury", "=ds=#s11#, #a3#", "", "4.03%" };
 		{ 8, 21674, "", "=q4=Gauntlets of Steadfast Determination", "=ds=#s9#, #a4#", "", "11.07%" };
 		{ 9, 21667, "", "=q4=Legplates of Blazing Light", "=ds=#s11#, #a4#", "", "7.44%" };
+
 		{ 11, 21678, "", "=q4=Necklace of Purity", "=ds=#s2#", "", "" };
 		{ 12, 21670, "", "=q4=Badge of the Swarmguard", "=ds=#s14#", "", "13.22%" };
 		{ 13, 21666, "", "=q4=Sartura's Might", "=ds=#s15#", "", "6.47%" };
 		{ 14, 21673, "", "=q4=Silithid Claw", "=ds=#h3#, #w13#", "", "7.16%" };
+
 		{ 16, 21237, "", "=q4=Imperial Qiraji Regalia", "=ds=#m3#", "", "4.01%" };
 		{ 17, 21273, "", "=q4=Blessed Qiraji Acolyte Staff", "=q1=#m4#, =ds=#w9#" };
 		{ 18, 21275, "", "=q4=Blessed Qiraji Augur Staff", "=q1=#m4#, =ds=#w9#" };
 		{ 19, 21268, "", "=q4=Blessed Qiraji War Hammer", "=q1=#m4#, =ds=#h1#, #w6#" };
+
 		{ 21, 21232, "", "=q4=Imperial Qiraji Armaments", "=ds=#m3#", "", "4.02%" };
 		{ 22, 21242, "", "=q4=Blessed Qiraji War Axe", "=q1=#m4#, =ds=#h1#, #w1#" };
 		{ 23, 21272, "", "=q4=Blessed Qiraji Musket", "=q1=#m4#, =ds=#w5#" };
 		{ 24, 21244, "", "=q4=Blessed Qiraji Pugio", "=q1=#m4#, =ds=#h1#, #w4#" };
 		{ 25, 21269, "", "=q4=Blessed Qiraji Bulwark", "=q1=#m4#, =ds=#w8#" };
+
+		{ 27, 20932, "", "=q4=Spaulders of the Imperial Guard", "=ds=#tt2.5#", "", "100%", "=TT=T2.5SHOULDER" };
 	};
 	{
 		Name = BabbleBoss["Fankriss the Unyielding"];
@@ -385,12 +412,14 @@ AtlasLoot_Data["TempleofAQ"] = {
 		{ 5, 21651, "", "=q4=Scaled Sand Reaver Leggings", "=ds=#s11#, #a3#", "", "12.91%" };
 		{ 6, 21639, "", "=q4=Pauldrons of the Unrelenting", "=ds=#s3#, #a4#", "", "14.78%" };
 		{ 7, 21652, "", "=q4=Silithid Carapace Chestguard", "=ds=#s5#, #a4#", "", "10.29%" };
+
 		{ 9, 21647, "", "=q4=Fetish of the Sand Reaver", "=ds=#s14#", "", "13.82%" };
 		{ 10, 21664, "", "=q4=Barbed Choker", "=ds=#s2#", "", "12.63%" };
 		{ 11, 22402, "", "=q4=Libram of Grace", "=ds=#s16#, #w16#", "", "4.21%" };
 		{ 12, 22396, "", "=q4=Totem of Life", "=ds=#s16#, #w15#", "", "1.69%" };
 		{ 13, 21650, "", "=q4=Ancient Qiraji Ripper", "=ds=#h1#, #w10#", "", " 7.19%" };
 		{ 14, 21635, "", "=q4=Barb of the Sand Reaver", "=ds=#w7#", "", "6.61%" };
+
 		{ 16, 21237, "", "=q4=Imperial Qiraji Regalia", "=ds=#m3#", "", "4.84%" };
 		{ 17, 21273, "", "=q4=Blessed Qiraji Acolyte Staff", "=q1=#m4#, =ds=#w9#" };
 		{ 18, 21275, "", "=q4=Blessed Qiraji Augur Staff", "=q1=#m4#, =ds=#w9#" };
@@ -400,18 +429,23 @@ AtlasLoot_Data["TempleofAQ"] = {
 		{ 23, 21272, "", "=q4=Blessed Qiraji Musket", "=q1=#m4#, =ds=#w5#" };
 		{ 24, 21244, "", "=q4=Blessed Qiraji Pugio", "=q1=#m4#, =ds=#h1#, #w4#" };
 		{ 25, 21269, "", "=q4=Blessed Qiraji Bulwark", "=q1=#m4#, =ds=#w8#" };
+
+		{ 27, 20932, "", "=q4=Spaulders of the Imperial Guard", "=ds=#tt2.5#", "", "100%", "=TT=T2.5SHOULDER" };
 	};
 	{
 		Name = BabbleBoss["Viscidus"];
 		{ 1, 21624, "", "=q4=Gauntlets of Kalimdor", "=ds=#s9#, #a3#", "", "3.90%" };
 		{ 2, 21626, "", "=q4=Slime-coated Leggings", "=ds=#s11#, #a3#", "", "13.66%" };
 		{ 3, 21623, "", "=q4=Gauntlets of the Righteous Champion", "=ds=#s9#, #a4#", "", "5.37%" };
-		{ 5, 21677, "", "=q4=Ring of the Qiraji Fury", "=ds=#s13#", "", "2.93%" };
-		{ 6, 21625, "", "=q4=Scarab Brooch", "=ds=#s14#", "", "21.46%" };
-		{ 7, 22399, "", "=q4=Idol of Health", "=ds=#s16#, #w14#", "", "7.32%" };
-		{ 8, 21622, "", "=q4=Sharpened Silithid Femur", "=ds=#h3#, #w10#", "", "15.12%" };
-		{ 10, 20932, "", "=q4=Spaulders of the Imperial Guard", "=ds=#tt2.5#", "", "100%", "=TT=T2.5SHOULDER" };
-		{ 11, 20928, "", "=q4=Bindings of the Lost Nomad", "=ds=#tt2.5#", "", "100%", "=TT=T2.5FEET" };
+		{ 4, 21691, "", "=q4=Ooze-ridden Gauntlets", "=ds=#s9#, #a4#", "", "5.37%" };
+		{ 5, 21688, "", "=q4=Boots of the Fallen Hero", "=ds=#s12#, #a4#", "", "18%" };
+		{ 6, 21682, "", "=q4=Bile-Covered Gauntlets", "=ds=#s9#, #a2#", "", "19%" };
+
+		{ 8, 21677, "", "=q4=Ring of the Qiraji Fury", "=ds=#s13#", "", "2.93%" };
+		{ 9, 21625, "", "=q4=Scarab Brooch", "=ds=#s14#", "", "21.46%" };
+		{ 10, 22399, "", "=q4=Idol of Health", "=ds=#s16#, #w14#", "", "7.32%" };
+		{ 11, 21622, "", "=q4=Sharpened Silithid Femur", "=ds=#h3#, #w10#", "", "15.12%" };
+
 		{ 16, 21237, "", "=q4=Imperial Qiraji Regalia", "=ds=#m3#", "", "3.19%" };
 		{ 17, 21273, "", "=q4=Blessed Qiraji Acolyte Staff", "=q1=#m4#, =ds=#w9#" };
 		{ 18, 21275, "", "=q4=Blessed Qiraji Augur Staff", "=q1=#m4#, =ds=#w9#" };
@@ -421,26 +455,40 @@ AtlasLoot_Data["TempleofAQ"] = {
 		{ 23, 21272, "", "=q4=Blessed Qiraji Musket", "=q1=#m4#, =ds=#w5#" };
 		{ 24, 21244, "", "=q4=Blessed Qiraji Pugio", "=q1=#m4#, =ds=#h1#, #w4#" };
 		{ 25, 21269, "", "=q4=Blessed Qiraji Bulwark", "=q1=#m4#, =ds=#w8#" };
+
+		{ 27, 20932, "", "=q4=Spaulders of the Imperial Guard", "=ds=#tt2.5#", "", "100%", "=TT=T2.5SHOULDER" };
+		{ 28, 20931, "", "=q4=Hardened Qiraj Chitin", "=ds=#tt2.5#", "", "100%", "=TT=T2.5LEGS" };
+		{ 29, 20930, "", "=q4=Diadem of the Desert Prince", "=ds=#tt2.5#", "", "100%", "=TT=T2.5HEAD" };
+		{ 30, 20928, "", "=q4=Bindings of the Lost Nomad", "=ds=#tt2.5#", "", "100%", "=TT=T2.5FEET" };
 	};
-	{
+	{ 
 		Name = BabbleBoss["Princess Huhuran"];
 		{ 1, 21619, "", "=q4=Gloves of the Messiah", "=ds=#s9#, #a1#", "", "12.01%" };
 		{ 2, 21621, "", "=q4=Cloak of the Golden Hive", "=ds=#s4#", "", "12.56%" };
 		{ 3, 21617, "", "=q4=Wasphide Gauntlets", "=ds=#s9#, #a2#", "", "11.97%" };
 		{ 4, 21618, "", "=q4=Hive Defiler Wristguards", "=ds=#s8#, #a4#", "", "10.34%" };
-		{ 6, 21620, "", "=q4=Ring of the Martyr", "=ds=#s13#", "", "12.97%" };
-		{ 7, 21616, "", "=q4=Huhuran's Stinger", "=ds=#w2#", "", "5.71%" };
-		{ 9, 20932, "", "=q4=Spaulders of the Imperial Guard", "=ds=#tt2.5#", "", "100%", "=TT=T2.5SHOULDER" };
-		{ 10, 20928, "", "=q4=Bindings of the Lost Nomad", "=ds=#tt2.5#", "", "100%", "=TT=T2.5FEET" };
+		{ 5, 21694, "", "=q4=Ternary Mantle", "=ds=#s3#, #a1#", "", "16%" };
+		{ 6, 21683, "", "=q4=Mantle of the Desert Crusade", "=ds=#s3#, #a4#", "", "14%" };
+		{ 7, 21680, "", "=q4=Vest of Swift Execution", "=ds=#s5#, #a2#", "", "21%" };
+		{ 8, 21668, "", "=q4=Scaled Leggings of Qiraji Fury", "=ds=#s11#, #a3#", "", "4.03%" };
+
+		{ 10, 21603, "", "=q4=Wand of Qiraji Nobility", "=ds=#w12#", "", "25%" };
+		{ 11, 21620, "", "=q4=Ring of the Martyr", "=ds=#s13#", "", "12.97%" };
+		{ 12, 21616, "", "=q4=Huhuran's Stinger", "=ds=#w2#", "", "5.71%" };
+
 		{ 16, 21237, "", "=q4=Imperial Qiraji Regalia", "=ds=#m3#", "", "4.31%" };
 		{ 17, 21273, "", "=q4=Blessed Qiraji Acolyte Staff", "=q1=#m4#, =ds=#w9#" };
 		{ 18, 21275, "", "=q4=Blessed Qiraji Augur Staff", "=q1=#m4#, =ds=#w9#" };
 		{ 19, 21268, "", "=q4=Blessed Qiraji War Hammer", "=q1=#m4#, =ds=#h1#, #w6#" };
+		
 		{ 21, 21232, "", "=q4=Imperial Qiraji Armaments", "=ds=#m3#", "", "4.11%" };
 		{ 22, 21242, "", "=q4=Blessed Qiraji War Axe", "=q1=#m4#, =ds=#h1#, #w1#" };
 		{ 23, 21272, "", "=q4=Blessed Qiraji Musket", "=q1=#m4#, =ds=#w5#" };
 		{ 24, 21244, "", "=q4=Blessed Qiraji Pugio", "=q1=#m4#, =ds=#h1#, #w4#" };
 		{ 25, 21269, "", "=q4=Blessed Qiraji Bulwark", "=q1=#m4#, =ds=#w8#" };
+
+		{ 27, 20932, "", "=q4=Spaulders of the Imperial Guard", "=ds=#tt2.5#", "", "100%", "=TT=T2.5SHOULDER" };
+		{ 28, 20931, "", "=q4=Hardened Qiraj Chitin", "=ds=#tt2.5#", "", "100%", "=TT=T2.5LEGS" };
 	};
 	{
 		Name = BabbleBoss["The Twin Emperors"];
@@ -451,12 +499,14 @@ AtlasLoot_Data["TempleofAQ"] = {
 		{ 5, 21597, "", "=q4=Royal Scepter of Vek'lor", "=ds=#s15#", "", "6.99%" };
 		{ 6, 21601, "", "=q4=Ring of Emperor Vek'lor", "=ds=#s13#", "", "17.27%" };
 		{ 7, 20735, "", "=q3=Formula: Enchant Cloak - Subtlety", "=ds=#p4# (300)", "", "6.62%" };
+
 		{ 9, 21232, "", "=q4=Imperial Qiraji Armaments", "=ds=#m3#", "", "6.25%" };
 		{ 10, 21242, "", "=q4=Blessed Qiraji War Axe", "=q1=#m4#, =ds=#h1#, #w1#" };
 		{ 11, 21272, "", "=q4=Blessed Qiraji Musket", "=q1=#m4#, =ds=#w5#" };
 		{ 12, 21244, "", "=q4=Blessed Qiraji Pugio", "=q1=#m4#, =ds=#h1#, #w4#" };
 		{ 13, 21269, "", "=q4=Blessed Qiraji Bulwark", "=q1=#m4#, =ds=#w8#" };
 		{ 15, 20930, "", "=q4=Diadem of the Desert Prince", "=ds=#tt2.5#", "", "100%", "=TT=T2.5HEAD" };
+
 		{ 16, 21604, "", "=q4=Bracelets of Royal Redemption", "=ds=#s8#, #a1#", "", "12.51%" };
 		{ 17, 21605, "", "=q4=Gloves of the Hidden Temple", "=ds=#s9#, #a2#", "", "15.45%" };
 		{ 18, 21609, "", "=q4=Regenerating Belt of Vek'nilash", "=ds=#s10#, #a2#", "", "13.35%" };
@@ -465,6 +515,7 @@ AtlasLoot_Data["TempleofAQ"] = {
 		{ 21, 21679, "", "=q4=Kalimdor's Revenge", "=ds=#h2#, #w10#", "", "9.25%" };
 		{ 22, 21608, "", "=q4=Amulet of Vek'nilash", "=ds=#s2#", "", "14.25%" };
 		{ 23, 20726, "", "=q3=Formula: Enchant Gloves - Threat", "=ds=#p4# (300)", "", "6.24%" };
+
 		{ 25, 21237, "", "=q4=Imperial Qiraji Regalia", "=ds=#m3#", "", "5.00%" };
 		{ 26, 21273, "", "=q4=Blessed Qiraji Acolyte Staff", "=q1=#m4#, =ds=#w9#" };
 		{ 27, 21275, "", "=q4=Blessed Qiraji Augur Staff", "=q1=#m4#, =ds=#w9#" };
@@ -478,16 +529,23 @@ AtlasLoot_Data["TempleofAQ"] = {
 		{ 4, 23570, "", "=q4=Jom Gabbar", "=ds=#s14#", "", "2.80%" };
 		{ 5, 23557, "", "=q4=Larvae of the Great Worm", "=ds=#w5#", "", "3.95%" };
 		{ 6, 21610, "", "=q4=Wormscale Blocker", "=ds=#w8#", "", "16.54%" };
-		{ 8, 20931, "", "=q4=Hardened Qiraj Chitin", "=ds=#tt2.5#", "", "100%", "=TT=T2.5LEGS" };
+		{ 7, 21708, "", "=q4=Beetle Scaled Wristguards", "=ds=#s8#, #a2#", "", "12.85%" };
+		{ 8, 21645, "", "=q4=Hive Tunneler's Boots", "=ds=#s12#, #a2#", "", "14.04%" };
+		{ 9, 21605, "", "=q4=Gloves of the Hidden Temple", "=ds=#s9#, #a2#", "", "15.45%" };
+		{ 10, 22254, "", "=q3=Aera's Poison Gland", "=ds=#w12#", "", "3.65%" };
+
 		{ 16, 21237, "", "=q4=Imperial Qiraji Regalia", "=ds=#m3#", "", "5.20%" };
 		{ 17, 21273, "", "=q4=Blessed Qiraji Acolyte Staff", "=q1=#m4# =ds=#w9#" };
 		{ 18, 21275, "", "=q4=Blessed Qiraji Augur Staff", "=q1=#m4# =ds=#w9#" };
 		{ 19, 21268, "", "=q4=Blessed Qiraji War Hammer", "=q1=#m4# =ds=#h1#, #w6#" };
+
 		{ 21, 21232, "", "=q4=Imperial Qiraji Armaments", "=ds=#m3#", "", "4.10%" };
 		{ 22, 21242, "", "=q4=Blessed Qiraji War Axe", "=q1=#m4# =ds=#h1#, #w1#" };
 		{ 23, 21272, "", "=q4=Blessed Qiraji Musket", "=q1=#m4# =ds=#w5#" };
 		{ 24, 21244, "", "=q4=Blessed Qiraji Pugio", "=q1=#m4# =ds=#h1#, #w4#" };
 		{ 25, 21269, "", "=q4=Blessed Qiraji Bulwark", "=q1=#m4# =ds=#w8#" };
+
+		{ 27, 20931, "", "=q4=Hardened Qiraj Chitin", "=ds=#tt2.5#", "", "100%", "=TT=T2.5LEGS" };
 	};
 	{
 		Name = BabbleBoss["C'Thun"];
@@ -498,22 +556,26 @@ AtlasLoot_Data["TempleofAQ"] = {
 		{ 5, 21582, "", "=q4=Grasp of the Old God", "=ds=#s10#, #a1#", "", "15.04%" };
 		{ 6, 21586, "", "=q4=Belt of Never-ending Agony", "=ds=#s10#, #a2#", "", "11.24%" };
 		{ 7, 21581, "", "=q4=Gauntlets of Annihilation", "=ds=#s9#, #a4#", "", "12.04%" };
+
 		{ 9, 22732, "", "=q4=Mark of C'Thun", "=ds=#s2#", "", "10.62%" };
 		{ 10, 21596, "", "=q4=Ring of the Godslayer", "=ds=#s13#", "", "11.83%" };
 		{ 11, 21579, "", "=q4=Vanquished Tentacle of C'Thun", "=ds=#s14#", "", "12.18%" };
 		{ 12, 21126, "", "=q4=Death's Sting", "=ds=#h1#, #w4#", "", "" };
 		{ 13, 21134, "", "=q4=Dark Edge of Insanity", "=ds=#h2#, #w1#", "", "" };
 		{ 14, 21839, "", "=q4=Scepter of the False Prophet", "=ds=#h3#, #w6#", "", "4.75%" };
-		{ 16, 20933, "", "=q4=Husk of the Old God", "=ds=#tt2.5#", "", "100%", "=TT=T2.5CHEST" };
-		{ 18, 21221, "", "=q4=Eye of C'Thun", "=ds=#m2#", "", "100%" };
-		{ 19, 21710, "", "=q4=Cloak of the Fallen God", "=q1=#m4#: =ds=#s4#" };
-		{ 20, 21712, "", "=q4=Amulet of the Fallen God", "=q1=#m4#: =ds=#s2#" };
-		{ 21, 21709, "", "=q4=Ring of the Fallen God", "=q1=#m4#: =ds=#s13#" };
-		{ 23, 22734, "", "=q1=Base of Atiesh", "=ds=#m3#" };
-		{ 24, 22632, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c1#" };
-		{ 25, 22589, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c3#" };
-		{ 26, 22631, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c5#" };
-		{ 27, 22630, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c8#" };
+
+		{ 15, 21221, "", "=q4=Eye of C'Thun", "=ds=#m2#", "", "100%" };
+		{ 16, 21710, "", "=q4=Cloak of the Fallen God", "=q1=#m4#: =ds=#s4#" };
+		{ 17, 21712, "", "=q4=Amulet of the Fallen God", "=q1=#m4#: =ds=#s2#" };
+		{ 18, 21709, "", "=q4=Ring of the Fallen God", "=q1=#m4#: =ds=#s13#" };
+
+		{ 20, 22734, "", "=q1=Base of Atiesh", "=ds=#m3#" };
+		{ 21, 22632, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c1#" };
+		{ 22, 22589, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c3#" };
+		{ 23, 22631, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c5#" };
+		{ 24, 22630, "", "=q5=Atiesh, Greatstaff of the Guardian", "=ds=#m4#, =q1=#m1# =ds=#c8#" };
+		
+		{ 26, 20933, "", "=q4=Husk of the Old God", "=ds=#tt2.5#", "", "100%", "=TT=T2.5CHEST" };
 	};
 	{
 		Name = AL["Trash Mobs"];
@@ -1518,7 +1580,7 @@ AtlasLoot_Data["BlackwingLair"] = {
 		{ 7, 19430, "", "=q4=Shroud of Pure Thought", "=ds=#s4#", "", "16.67%" };
 		{ 8, 19403, "", "=q4=Band of Forced Concentration", "=ds=#s13#", "", "16.67%" };
 		{ 9, 19367, "", "=q4=Dragon's Touch", "=ds=#w12#", "", "16.67%" };
-		{ 10, 14000, "", "=q4=Ring of Trinity Force", "=ds=#h3#, #w13#", "", "12.5%" };
+		{ 10, 14000, "", "=q4=Ring of Trinity Force", "=ds=#s13#", "", "12.5%" };
 		{ 16, 2522463, "", "=q4=Chromatic Girdle", "=ds=#tt2#", "", "100%", "=TT=T2WAIST" };
 	};
 	{
@@ -5010,57 +5072,105 @@ AtlasLoot_Data["AQ20Sets"] = {
 	Type = "ClassicRaid";
 	{
 		Name = AL["Symbols of Unending Life"];
-		{ 1, 21407, "", "=q4=Mace of Unending Life", "=q4=#aq20t1#, =ds=#r5#" };
+		{ 1, 1506017, "", "=q4=Locket of Unending Life", "=q4=#aq20t1#, =ds=#r5#" };
 		{ 2, 21409, "", "=q4=Cloak of Unending Life", "=q3=#aq20t5#, =ds=#r4#" };
 		{ 3, 21408, "", "=q4=Band of Unending Life", "=q3=#aq20t3#, =ds=#r3#" };
 	};
 	{
 		Name = AL["Trappings of the Unseen Path"];
-		{ 1, 21401, "", "=q4=Scythe of the Unseen Path", "=q4=#aq20t6#, =ds=#r5#" };
+		{ 1, 1506018, "", "=q4=Choker of the Unseen Path", "=q4=#aq20t6#, =ds=#r5#" };
 		{ 2, 21403, "", "=q4=Cloak of the Unseen Path", "=q3=#aq20t5#, =ds=#r4#" };
 		{ 3, 21402, "", "=q4=Signet of the Unseen Path", "=q3=#aq20t4#, =ds=#r3#" };
 	};
 	{
 		Name = AL["Trappings of Vaulted Secrets"];
-		{ 1, 21413, "", "=q4=Blade of Vaulted Secrets", "=q4=#aq20t1#, =ds=#r5#" };
+		{ 1, 1506021, "", "=q4=Charm of Vaulted Secrets", "=q4=#aq20t1#, =ds=#r5#" };
 		{ 2, 21415, "", "=q4=Drape of Vaulted Secrets", "=q3=#aq20t2#, =ds=#r4#" };
 		{ 3, 21414, "", "=q4=Band of Vaulted Secrets", "=q3=#aq20t3#, =ds=#r3#" };
 	};
 	{
 		Name = AL["Battlegear of Eternal Justice"];
-		{ 1, 21395, "", "=q4=Blade of Eternal Justice", "=q4=#aq20t6#, =ds=#r5#" };
+		{ 1, 1506020, "", "=q4=Medallion of Eternal Justice", "=q4=#aq20t6#, =ds=#r5#" };
 		{ 2, 21397, "", "=q4=Cape of Eternal Justice", "=q3=#aq20t5#, =ds=#r4#" };
 		{ 3, 21396, "", "=q4=Ring of Eternal Justice", "=q3=#aq20t3#, =ds=#r3#" };
 	};
 	{
 		Name = AL["Finery of Infinite Wisdom"];
-		{ 1, 21410, "", "=q4=Gavel of Infinite Wisdom", "=q4=#aq20t1#, =ds=#r5#" };
+		{ 1, 1506023, "", "=q4=Bayadere of Infinite Wisdom", "=q4=#aq20t1#, =ds=#r5#" };
 		{ 2, 21412, "", "=q4=Shroud of Infinite Wisdom", "=q3=#aq20t2#, =ds=#r4#" };
 		{ 3, 21411, "", "=q4=Ring of Infinite Wisdom", "=q3=#aq20t4#, =ds=#r3#" };
 	};
 	{
 		Name = AL["Emblems of Veiled Shadows"];
-		{ 1, 21404, "", "=q4=Dagger of Veiled Shadows", "=q4=#aq20t6#, =ds=#r5#" };
+		{ 1, 1506021, "", "=q4=Charm of Vaulted Secrets", "=q4=#aq20t6#, =ds=#r5#" };
 		{ 2, 21406, "", "=q4=Cloak of Veiled Shadows", "=q3=#aq20t2#, =ds=#r4#" };
 		{ 3, 21405, "", "=q4=Band of Veiled Shadows", "=q3=#aq20t4#, =ds=#r3#" };
 	};
 	{
 		Name = AL["Gift of the Gathering Storm"];
-		{ 1, 21398, "", "=q4=Hammer of the Gathering Storm", "=q4=#aq20t6#, =ds=#r5#" };
+		{ 1, 1506024, "", "=q4=Necklace of the Gathering Storm", "=q4=#aq20t6#, =ds=#r5#" };
 		{ 2, 21400, "", "=q4=Cloak of the Gathering Storm", "=q3=#aq20t5#, =ds=#r4#" };
 		{ 3, 21399, "", "=q4=Ring of the Gathering Storm", "=q3=#aq20t3#, =ds=#r3#" };
 	};
 	{
 		Name = AL["Implements of Unspoken Names"];
-		{ 1, 21416, "", "=q4=Kris of Unspoken Names", "=q4=#aq20t1#, =ds=#r5#" };
+		{ 1, 1506026, "", "=q4=Bayadere of Unspoken Names", "=q4=#aq20t1#, =ds=#r5#" };
 		{ 2, 21418, "", "=q4=Shroud of Unspoken Names", "=q3=#aq20t5#, =ds=#r4#" };
 		{ 3, 21417, "", "=q4=Ring of Unspoken Names", "=q3=#aq20t4#, =ds=#r3#" };
 	};
 	{
 		Name = AL["Battlegear of Unyielding Strength"];
-		{ 1, 21392, "", "=q4=Sickle of Unyielding Strength", "=q4=#aq20t6#, =ds=#r5#" };
+		{ 1, 1506025, "", "=q4=Collar of Unyielding Strength", "=q4=#aq20t6#, =ds=#r5#" };
 		{ 2, 21394, "", "=q4=Drape of Unyielding Strength", "=q3=#aq20t2#, =ds=#r4#" };
 		{ 3, 21393, "", "=q4=Signet of Unyielding Strength", "=q3=#aq20t3#=ds=, #r3#" };
+	};
+	{
+		Name = AL["Keepsakes of Endless Machinations"];
+		{ 1, 1506025, "", "=q4=Choker of Endless Machinations", "=q4=#aq20t6#, =ds=#r5#" };
+		{ 2, 1506028, "", "=q4=Shroud of Endless Machinations", "=q3=#aq20t2#, =ds=#r4#" };
+		{ 3, 1506029, "", "=q4=Loop of Endless Machinations", "=q3=#aq20t3#=ds=, #r3#" };
+	};
+	{
+		Name = AL["Regalia of Roaring Earth"];
+		{ 1, 1506019, "", "=q4=Pendant of Roaring Earth", "=q4=#aq20t6#, =ds=#r5#" };
+		{ 2, 1506031, "", "=q4=Drape of Roaring Earth", "=q3=#aq20t2#, =ds=#r4#" };
+		{ 3, 1506030, "", "=q4=Signet of Roaring Earth", "=q3=#aq20t3#=ds=, #r3#" };
+	};
+	{
+		Name = AL["Relics of Ferocious Vigor"];
+		{ 1, 1506034, "", "=q4=Choker of Ferocious Vigor", "=q4=#aq20t6#, =ds=#r5#" };
+		{ 2, 1506036, "", "=q4=Shroud of the Faithful Zealot", "=q3=#aq20t2#, =ds=#r4#" };
+		{ 3, 1506035, "", "=q4=Band of the Faithful Zealot", "=q3=#aq20t3#=ds=, #r3#" };
+	};
+	{
+		Name = AL["Laurels of the Faithful Zealot"];
+		{ 1, 1506037, "", "=q4=Locket of the Faithful Zealot", "=q4=#aq20t6#, =ds=#r5#" };
+		{ 2, 1506036, "", "=q4=Shroud of the Faithful Zealot", "=q3=#aq20t2#, =ds=#r4#" };
+		{ 3, 1506035, "", "=q4=Band of the Faithful Zealot", "=q3=#aq20t3#=ds=, #r3#" };
+	};
+	{
+		Name = AL["Instruments of Masterful Technique"];
+		{ 1, 1506040, "", "=q4=Locket of Masterful Technique", "=q4=#aq20t6#, =ds=#r5#" };
+		{ 2, 1506039, "", "=q4=Drape of Masterful Technique", "=q3=#aq20t2#, =ds=#r4#" };
+		{ 3, 1506038, "", "=q4=Band of Masterful Technique", "=q3=#aq20t3#=ds=, #r3#" };
+	};
+	{
+		Name = AL["Decorations of Martial Prowess"];
+		{ 1, 1506043, "", "=q4=Lariat of Martial Prowess", "=q4=#aq20t6#, =ds=#r5#" };
+		{ 2, 1506042, "", "=q4=Cloak of Martial Prowess", "=q3=#aq20t2#, =ds=#r4#" };
+		{ 3, 1506041, "", "=q4=Ring of Martial Prowess", "=q3=#aq20t3#=ds=, #r3#" };
+	};
+	{
+		Name = AL["Trophies of Unrivaled Rage"];
+		{ 1, 1506046, "", "=q4=Collar of Unrivaled Rage", "=q4=#aq20t6#, =ds=#r5#" };
+		{ 2, 1506045, "", "=q4=Cloak of Unrivaled Rage", "=q3=#aq20t2#, =ds=#r4#" };
+		{ 3, 1506044, "", "=q4=Signet of Unrivaled Rage", "=q3=#aq20t3#=ds=, #r3#" };
+	};
+	{
+		Name = AL["Remnants of Expansive Research"];
+		{ 1, 1506049, "", "=q4=Bayadere of Expansive Research", "=q4=#aq20t6#, =ds=#r5#" };
+		{ 2, 1506048, "", "=q4=Drape of Expansive Research", "=q3=#aq20t2#, =ds=#r4#" };
+		{ 3, 1506047, "", "=q4=Loop of Expansive Research", "=q3=#aq20t3#=ds=, #r3#" };
 	};
 };
 
@@ -5078,6 +5188,22 @@ AtlasLoot_Data["T2.5"] = {
 		{ 3, 21356, "", "=q4=Genesis Trousers", "" };
 		{ 4, 21354, "", "=q4=Genesis Shoulderpads", "" };
 		{ 5, 21355, "", "=q4=Genesis Boots", "" };
+	};
+	{
+		Name = AL["Druid"] .. " - Tank";
+		{ 1, 1507029, "", "=q4=Genesis Carapace", "" };
+		{ 2, 1507025, "", "=q4=Genesis Mask", "" };
+		{ 3, 1507028, "", "=q4=Genesis Pants", "" };
+		{ 4, 1507026, "", "=q4=Genesis Shoulderpads", "" };
+		{ 5, 1507027, "", "=q4=Genesis Treads", "" };
+	};
+	{
+		Name = AL["Druid"] .. " - Feral";
+		{ 1, 1507024, "", "=q4=Genesis Garb", "" };
+		{ 2, 1507020, "", "=q4=Genesis Visor", "" };
+		{ 3, 1507023, "", "=q4=Genesis Legguards", "" };
+		{ 4, 1507021, "", "=q4=Genesis Pauldrons", "" };
+		{ 5, 1507022, "", "=q4=Genesis Footwraps", "" };
 	};
 	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["HUNTER"];

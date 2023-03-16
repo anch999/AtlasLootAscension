@@ -145,6 +145,86 @@ ItemIDsDatabase[2522463] = { 2522463, 2522463, 2622463, 2722463, MythicRaid = 37
 ItemIDsDatabase[2522459] = { 2522459, 2522459, 2622459, 2722459, MythicRaid = 3722459 };
 ItemIDsDatabase[2522465] = { 2522465, 2522465, 2622465, 2722465, MythicRaid = 3722465 };
 
+
+--AQR New Sets
+--Heroic = Normal + 300'000
+--Mythic = Normal + 1'300'000
+--Ascended = Normal + 200'000
+--Bloodforged = Normal + 6'000'000
+--Heroic Bloodforged = Normal + 6'300'000
+ItemIDsDatabase[1506017] = { 7506017, 1506017, 1806017, 1706017, MythicRaid = 2806017 }--, Locket of Unending Life
+ItemIDsDatabase[1506018] = { 7506018, 1506018, 1806018, 1706018, MythicRaid = 2806018 }--, Choker of the Unseen Path
+ItemIDsDatabase[1506019] = { 7506019, 1506019, 1806019, 1706019, MythicRaid = 2806019 }--, Pendant of Roaring Earth
+ItemIDsDatabase[1506020] = { 7506020, 1506020, 1806020, 1706020, MythicRaid = 2806020 }--, Medallion of Eternal Justice
+ItemIDsDatabase[1506021] = { 7506021, 1506021, 1806021, 1706021, MythicRaid = 2806021 }--, Charm of Vaulted Secrets
+ItemIDsDatabase[1506022] = { 7506022, 1506022, 1806022, 1706022, MythicRaid = 2806022 }--, Lariat of Veiled Shadows
+ItemIDsDatabase[1506023] = { 7506023, 1506023, 1806023, 1706023, MythicRaid = 2806023 }--, Bayadere of Infinite Wisdom
+ItemIDsDatabase[1506024] = { 7506024, 1506024, 1806024, 1706024, MythicRaid = 2806024 }--, Necklace of the Gathering Storm
+ItemIDsDatabase[1506025] = { 7506025, 1506025, 1806025, 1706025, MythicRaid = 2806025 }--, Collar of Unyielding Strength
+ItemIDsDatabase[1506026] = { 7506026, 1506026, 1806026, 1706026, MythicRaid = 2806026 }--, Bayadere of Unspoken Names
+ItemIDsDatabase[1506027] = { 7506027, 1506027, 1806027, 1706027, MythicRaid = 2806027 }--, Choker of Endless Machinations
+ItemIDsDatabase[1506028] = { 7506028, 1506028, 1806028, 1706028, MythicRaid = 2806028 }--, Shroud of Endless Machinations
+ItemIDsDatabase[1506029] = { 7506029, 1506029, 1806029, 1706029, MythicRaid = 2806029 }--, Loop of Endless Machinations
+ItemIDsDatabase[1506030] = { 7506030, 1506030, 1806030, 1706030, MythicRaid = 2806030 }--, Signet of Roaring Earth
+ItemIDsDatabase[1506031] = { 7506031, 1506031, 1806031, 1706031, MythicRaid = 2806031 }--, Drape of Roaring Earth
+ItemIDsDatabase[1506032] = { 7506032, 1506032, 1806032, 1706032, MythicRaid = 2806032 }--, Signet of Ferocious Vigor
+ItemIDsDatabase[1506033] = { 7506033, 1506033, 1806033, 1706033, MythicRaid = 2806033 }--, Cape of Ferocious Vigor
+ItemIDsDatabase[1506034] = { 7506034, 1506034, 1806034, 1706034, MythicRaid = 2806034 }--, Choker of Ferocious Vigor
+ItemIDsDatabase[1506035] = { 7506035, 1506035, 1806035, 1706035, MythicRaid = 2806035 }--, Band of the Faithful Zealot
+ItemIDsDatabase[1506036] = { 7506036, 1506036, 1806036, 1706036, MythicRaid = 2806036 }--, Shroud of the Faithful Zealot
+ItemIDsDatabase[1506037] = { 7506037, 1506037, 1806037, 1706037, MythicRaid = 2806037 }--, Locket of the Faithful Zealot
+ItemIDsDatabase[1506038] = { 7506038, 1506038, 1806038, 1706038, MythicRaid = 2806038 }--, Band of Masterful Technique
+ItemIDsDatabase[1506039] = { 7506039, 1506039, 1806039, 1706039, MythicRaid = 2806039 }--, Drape of Masterful Technique
+ItemIDsDatabase[1506040] = { 7506040, 1506040, 1806040, 1706040, MythicRaid = 2806040 }--, Locket of Masterful Technique
+ItemIDsDatabase[1506041] = { 7506041, 1506041, 1806041, 1706041, MythicRaid = 2806041 }--, Ring of Martial Prowess
+ItemIDsDatabase[1506042] = { 7506042, 1506042, 1806042, 1706042, MythicRaid = 2806042 }--, Cloak of Martial Prowess
+ItemIDsDatabase[1506043] = { 7506043, 1506043, 1806043, 1706043, MythicRaid = 2806043 }--, Lariat of Martial Prowess
+ItemIDsDatabase[1506044] = { 7506044, 1506044, 1806044, 1706044, MythicRaid = 2806044 }--, Signet of Unrivaled Rage
+ItemIDsDatabase[1506045] = { 7506045, 1506045, 1806045, 1706045, MythicRaid = 2806045 }--, Cloak of Unrivaled Rage
+ItemIDsDatabase[1506046] = { 7506046, 1506046, 1806046, 1706046, MythicRaid = 2806046 }--, Collar of Unrivaled Rage
+ItemIDsDatabase[1506047] = { 7506047, 1506047, 1806047, 1706047, MythicRaid = 2806047 }--, Loop of Expansive Research
+ItemIDsDatabase[1506048] = { 7506048, 1506048, 1806048, 1706048, MythicRaid = 2806048 }--, Drape of Expansive Research
+ItemIDsDatabase[1506049] = { 7506049, 1506049, 1806049, 1706049, MythicRaid = 2806049 }--, Bayadere of Expansive Research
+
+
+--Tier 2.5 New Sets
+--Heroic = Normal + 300'000
+--Mythic = Normal + 1'300'000
+--Ascended = Normal + 200'000
+--Bloodforged = Normal + 6'000'000
+--Heroic Bloodforged = Normal + 6'300'000
+ItemIDsDatabase[1507000] = { 7507000, 1507000, 1807000, 1707000, MythicRaid = 2807000 };-- Conqueror's Tusks
+ItemIDsDatabase[1507001] = { 7507001, 1507001, 1807001, 1707001, MythicRaid = 2807001 };-- Conqueror's Shoulderplates
+ItemIDsDatabase[1507002] = { 7507002, 1507002, 1807002, 1707002, MythicRaid = 2807002 };-- Conqueror's Carapace
+ItemIDsDatabase[1507003] = { 7507003, 1507003, 1807003, 1707003, MythicRaid = 2807003 };-- Conqueror's Tassets
+ItemIDsDatabase[1507004] = { 7507004, 1507004, 1807004, 1707004, MythicRaid = 2807004 };-- Conqueror's Advance
+
+ItemIDsDatabase[1507015] = { 7507015, 1507015, 1807015, 1707015, MythicRaid = 2807015 };-- Stormcaller's Crown
+ItemIDsDatabase[1507016] = { 7507016, 1507016, 1807016, 1707016, MythicRaid = 2807016 };-- Stormcaller's Stompers
+ItemIDsDatabase[1507017] = { 7507017, 1507017, 1807017, 1707017, MythicRaid = 2807017 };-- Stormcaller's Chestguard
+ItemIDsDatabase[1507018] = { 7507018, 1507018, 1807018, 1707018, MythicRaid = 2807018 };-- Stormcaller's Greaves
+ItemIDsDatabase[1507019] = { 7507019, 1507019, 1807019, 1707019, MythicRaid = 2807019 };-- Stormcaller's Epaulets
+
+ItemIDsDatabase[1507020] = { 7507020, 1507020, 1807020, 1707020, MythicRaid = 2807020 };-- Genesis Visor
+ItemIDsDatabase[1507021] = { 7507021, 1507021, 1807021, 1707021, MythicRaid = 2807021 };-- Genesis Pauldrons
+ItemIDsDatabase[1507022] = { 7507022, 1507022, 1807022, 1707022, MythicRaid = 2807022 };-- Genesis Footwraps
+ItemIDsDatabase[1507023] = { 7507023, 1507023, 1807023, 1707023, MythicRaid = 2807023 };-- Genesis Legguards
+ItemIDsDatabase[1507024] = { 7507024, 1507024, 1807024, 1707024, MythicRaid = 2807024 };-- Genesis Garb
+
+ItemIDsDatabase[1507025] = { 7507025, 1507025, 1807025, 1707025, MythicRaid = 2807025 };-- Genesis Mask
+ItemIDsDatabase[1507026] = { 7507026, 1507026, 1807026, 1707026, MythicRaid = 2807026 };-- Genesis Shoulderpads
+ItemIDsDatabase[1507027] = { 7507027, 1507027, 1807027, 1707027, MythicRaid = 2807027 };-- Genesis Treads
+ItemIDsDatabase[1507028] = { 7507028, 1507028, 1807028, 1707028, MythicRaid = 2807028 };-- Genesis Pants
+ItemIDsDatabase[1507029] = { 7507029, 1507029, 1807029, 1707029, MythicRaid = 2807029 };-- Genesis Carapace
+
+ItemIDsDatabase[1507030] = { 7507030, 1507030, 1807030, 1707030, MythicRaid = 2807030 };-- Avenger's Carapace
+ItemIDsDatabase[1507031] = { 7507031, 1507031, 1807031, 1707031, MythicRaid = 2807031 };-- Avenger's Laurels
+ItemIDsDatabase[1507032] = { 7507032, 1507032, 1807032, 1707032, MythicRaid = 2807032 };-- Avenger's Sabatons
+ItemIDsDatabase[1507033] = { 7507033, 1507033, 1807033, 1707033, MythicRaid = 2807033 };-- Avenger's Legplates
+ItemIDsDatabase[1507034] = { 7507034, 1507034, 1807034, 1707034, MythicRaid = 2807034 };-- Avenger's Shoulderguards
+
+
+
 --Tier 3 Tokens
 
 ItemIDsDatabase[22353] = { 22353, 22353, 102278, 222353 };

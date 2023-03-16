@@ -687,6 +687,14 @@ function AtlasLoot_FixText(text)
     text = gsub(text, "#aq20s7#", AL["Gift of the Gathering Storm"]);
     text = gsub(text, "#aq20s8#", AL["Implements of Unspoken Names"]);
     text = gsub(text, "#aq20s9#", AL["Battlegear of Unyielding Strength"]);
+    text = gsub(text, "#aq20s10#", AL["Keepsakes of Endless Machinations"]);
+    text = gsub(text, "#aq20s11#", AL["Regalia of Roaring Earth"]);
+    text = gsub(text, "#aq20s12#", AL["Relics of Ferocious Vigor"]);
+    text = gsub(text, "#aq20s13#", AL["Laurels of the Faithful Zealot"]);
+    text = gsub(text, "#aq20s14#", AL["Instruments of Masterful Technique"]);
+    text = gsub(text, "#aq20s15#", AL["Decorations of Martial Prowess"]);
+    text = gsub(text, "#aq20s16#", AL["Trophies of Unrivaled Rage"]);
+    text = gsub(text, "#aq20s17#", AL["Remnants of Expansive Research"]);
 
     -- AQ40 Sets
     text = gsub(text, "#aq40s1#", AL["Genesis Raiment"]);
