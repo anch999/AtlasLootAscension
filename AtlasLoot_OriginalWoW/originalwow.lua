@@ -5230,6 +5230,14 @@ AtlasLoot_Data["T2.5"] = {
 		{ 5, 21388, "", "=q4=Avenger's Greaves", "" };
 	};
 	{
+		Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"] .. " - Tank";
+		{ 1, 1507030, "", "=q4=Avenger's Carapace", "" };
+		{ 2, 1507031, "", "=q4=Avenger's Laurels", "" };
+		{ 3, 1507033, "", "=q4=Avenger's Legplates", "" };
+		{ 4, 1507034, "", "=q4=Avenger's Shoulderguards", "" };
+		{ 5, 1507032, "", "=q4=Avenger's Sabatons", "" };
+	};
+	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["PRIEST"];
 		{ 1, 21351, "", "=q4=Vestments of the Oracle", "" };
 		{ 2, 21348, "", "=q4=Tiara of the Oracle", "" };
@@ -5254,6 +5262,14 @@ AtlasLoot_Data["T2.5"] = {
 		{ 5, 21373, "", "=q4=Stormcaller's Footguards", "" };
 	};
 	{
+		Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"] .. " - Hybrid";
+		{ 1, 1507017, "", "=q4=Stormcaller's Chestguard", "" };
+		{ 2, 1507015, "", "=q4=Stormcaller's Crown", "" };
+		{ 3, 1507018, "", "=q4=Stormcaller's Greaves", "" };
+		{ 4, 1507019, "", "=q4=Stormcaller's Epaulets", "" };
+		{ 5, 1507016, "", "=q4=Stormcaller's Stompers", "" };
+	};
+	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["WARLOCK"];
 		{ 1, 21334, "", "=q4=Doomcaller's Robes", "" };
 		{ 2, 21337, "", "=q4=Doomcaller's Circlet", "" };
@@ -5268,6 +5284,14 @@ AtlasLoot_Data["T2.5"] = {
 		{ 3, 21332, "", "=q4=Conqueror's Legguards", "" };
 		{ 4, 21330, "", "=q4=Conqueror's Spaulders", "" };
 		{ 5, 21333, "", "=q4=Conqueror's Greaves", "" };
+	};
+	{
+		Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"] .. " - Parry Tank";
+		{ 1, 1507002, "", "=q4=Conqueror's Carapace", "" };
+		{ 2, 1507000, "", "=q4=Conqueror's Tusks", "" };
+		{ 3, 1507003, "", "=q4=Conqueror's Tassets", "" };
+		{ 4, 1507001, "", "=q4=Conqueror's Shoulderplates", "" };
+		{ 5, 1507004, "", "=q4=Conqueror's Advance", "" };
 	};
 	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"] .. " - DPS";
