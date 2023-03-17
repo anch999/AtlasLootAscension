@@ -5126,7 +5126,7 @@ AtlasLoot_Data["AQ20Sets"] = {
 	};
 	{
 		Name = AL["Keepsakes of Endless Machinations"];
-		{ 1, 1506025, "", "=q4=Choker of Endless Machinations", "=q4=#aq20t6#, =ds=#r5#" };
+		{ 1, 1506027, "", "=q4=Choker of Endless Machinations", "=q4=#aq20t6#, =ds=#r5#" };
 		{ 2, 1506028, "", "=q4=Shroud of Endless Machinations", "=q3=#aq20t2#, =ds=#r4#" };
 		{ 3, 1506029, "", "=q4=Loop of Endless Machinations", "=q3=#aq20t3#=ds=, #r3#" };
 	};
