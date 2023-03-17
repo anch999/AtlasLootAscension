@@ -5139,8 +5139,8 @@ AtlasLoot_Data["AQ20Sets"] = {
 	{
 		Name = AL["Relics of Ferocious Vigor"];
 		{ 1, 1506034, "", "=q4=Choker of Ferocious Vigor", "=q4=#aq20t6#, =ds=#r5#" };
-		{ 2, 1506036, "", "=q4=Shroud of the Faithful Zealot", "=q3=#aq20t2#, =ds=#r4#" };
-		{ 3, 1506035, "", "=q4=Band of the Faithful Zealot", "=q3=#aq20t3#=ds=, #r3#" };
+		{ 2, 1506033, "", "=q4=Cape of Ferocious Vigor", "=q3=#aq20t2#, =ds=#r4#" };
+		{ 3, 1506032, "", "=q4=Signet of Ferocious Vigor", "=q3=#aq20t3#=ds=, #r3#" };
 	};
 	{
 		Name = AL["Laurels of the Faithful Zealot"];
