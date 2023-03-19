@@ -532,7 +532,7 @@ AtlasLoot_Data["TempleofAQ"] = {
 		{ 7, 21708, "", "=q4=Beetle Scaled Wristguards", "=ds=#s8#, #a2#", "", "12.85%" };
 		{ 8, 21645, "", "=q4=Hive Tunneler's Boots", "=ds=#s12#, #a2#", "", "14.04%" };
 		{ 9, 21605, "", "=q4=Gloves of the Hidden Temple", "=ds=#s9#, #a2#", "", "15.45%" };
-		{ 10, 22254, "", "=q3=Aera's Poison Gland", "=ds=#w12#", "", "3.65%" };
+		{ 10, 15029, "", "=q3=Aera's Poison Gland", "=ds=#w12#", "", "3.65%" };
 
 		{ 16, 21237, "", "=q4=Imperial Qiraji Regalia", "=ds=#m3#", "", "5.20%" };
 		{ 17, 21273, "", "=q4=Blessed Qiraji Acolyte Staff", "=q1=#m4# =ds=#w9#" };
