@@ -479,7 +479,7 @@ AtlasLoot_Data["TempleofAQ"] = {
 		{ 7, 21708, "", "=q4=Beetle Scaled Wristguards", "=ds=#s8#, #a2#", "", "12.85%" };
 		{ 8, 21645, "", "=q4=Hive Tunneler's Boots", "=ds=#s12#, #a2#", "", "14.04%" };
 		{ 9, 21605, "", "=q4=Gloves of the Hidden Temple", "=ds=#s9#, #a2#", "", "15.45%" };
-		{ 10, 22254, "", "=q3=Aera's Poison Gland", "=ds=#w12#", "", "3.65%" };
+		{ 10, 15029, "", "=q3=Aera's Poison Gland", "=ds=#w12#", "", "3.65%" };
 
 		{ 16, 21237, "", "=q4=Imperial Qiraji Regalia", "=ds=#m3#", "", "5.20%" };
 		{ 17, 21273, "", "=q4=Blessed Qiraji Acolyte Staff", "=q1=#m4# =ds=#w9#" };
@@ -5073,7 +5073,7 @@ AtlasLoot_Data["AQ20Sets"] = {
 	};
 	{
 		Name = AL["Keepsakes of Endless Machinations"];
-		{ 1, 1506025, "", "=q4=Choker of Endless Machinations", "=q4=#aq20t6#, =ds=#r5#" };
+		{ 1, 1506027, "", "=q4=Choker of Endless Machinations", "=q4=#aq20t6#, =ds=#r5#" };
 		{ 2, 1506028, "", "=q4=Shroud of Endless Machinations", "=q3=#aq20t2#, =ds=#r4#" };
 		{ 3, 1506029, "", "=q4=Loop of Endless Machinations", "=q3=#aq20t3#=ds=, #r3#" };
 	};
@@ -5086,8 +5086,8 @@ AtlasLoot_Data["AQ20Sets"] = {
 	{
 		Name = AL["Relics of Ferocious Vigor"];
 		{ 1, 1506034, "", "=q4=Choker of Ferocious Vigor", "=q4=#aq20t6#, =ds=#r5#" };
-		{ 2, 1506036, "", "=q4=Shroud of the Faithful Zealot", "=q3=#aq20t2#, =ds=#r4#" };
-		{ 3, 1506035, "", "=q4=Band of the Faithful Zealot", "=q3=#aq20t3#=ds=, #r3#" };
+		{ 2, 1506033, "", "=q4=Cape of Ferocious Vigor", "=q3=#aq20t2#, =ds=#r4#" };
+		{ 3, 1506032, "", "=q4=Signet of Ferocious Vigor", "=q3=#aq20t3#=ds=, #r3#" };
 	};
 	{
 		Name = AL["Laurels of the Faithful Zealot"];
