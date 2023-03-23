@@ -138,6 +138,7 @@ if AL then
 	AL["Tier 1 Set Token (Click)"] = true;
 	AL["Tier 2 Set Token (Click)"] = true;
 	AL["Tier 2.5 Set Token (Click)"] = true;
+	AL["Set Token (Click)"] = true;
 	AL["Tier 3 Set Token (Click)"] = true;
 	AL["Tier 4 Set Token (Click)"] = true;
 	AL["Tier 5 Set Token (Click)"] = true;

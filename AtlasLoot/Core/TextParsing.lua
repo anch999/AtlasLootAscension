@@ -711,6 +711,7 @@ function AtlasLoot_FixText(text)
     text = gsub(text, "#tt1#", AL["Tier 1 Set Token (Click)"]);
     text = gsub(text, "#tt2#", AL["Tier 2 Set Token (Click)"]);
     text = gsub(text, "#tt2.5#", AL["Tier 2.5 Set Token (Click)"]);
+    text = gsub(text, "#tt2.5A#", AL["Set Token (Click)"]); --Accessory tokens
     text = gsub(text, "#tt3#", AL["Tier 3 Set Token (Click)"]);
     text = gsub(text, "#tt4#", AL["Tier 4 Set Token (Click)"]);
     text = gsub(text, "#tt5#", AL["Tier 5 Set Token (Click)"]);

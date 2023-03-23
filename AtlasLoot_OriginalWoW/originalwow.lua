@@ -122,11 +122,7 @@ AtlasLoot_Data["RuinsofAQ"] = {
 		{ 6, 21502, "", "=q3=Sand Reaver Wristguards", "=ds=#s8#, #a3#", "", "13.79%" };
 		{ 7, 21503, "", "=q3=Belt of the Sand Reaver", "=ds=#s10#, #a4#", "", "14.38%" };
 		{ 9, 22217, "", "=q1=Kurinnaxx's Venom Sac", "=ds=#m3#", "", "100%" };
-		{ 16, 20889, "", "=q3=Qiraji Regal Drape", "#m3#", "", "30.83%" };
-		{ 17, 20885, "", "=q3=Qiraji Martial Drape", "#m3#", "", "30.25%" };
-		{ 18, 20884, "", "=q3=Qiraji Magisterial Ring", "#m3#", "", "7.98%" };
-		{ 19, 20888, "", "=q3=Qiraji Ceremonial Ring", "#m3#", "", "7.80%" };
-
+		{ 16, 1506051, "", "=q4=Ceremonial Qiraji Drape", "=ds=#tt2.5A#", "", "100%", "=TT=AQ20SetsBACK" };
 	};
 	{
 		Name = BabbleBoss["General Rajaxx"];
@@ -140,13 +136,10 @@ AtlasLoot_Data["RuinsofAQ"] = {
 		{ 10, 21810, "", "=q3=Treads of the Wandering Nomad", "=ds=#s12#, #a1#", "", "3.11%" };
 		{ 11, 21809, "", "=q3=Fury of the Forgotten Swarm", "=ds=#s2#", "", "3.20%" };
 		{ 12, 21806, "", "=q3=Gavel of Qiraji Authority", "=ds=#h2#, #w6#", "", "3.04%" };
-		{ 16, 20889, "", "=q3=Qiraji Regal Drape", "#m3#", "", "36.51%" };
-		{ 17, 20885, "", "=q3=Qiraji Martial Drape", "#m3#", "", "33.97%" };
-		{ 18, 20884, "", "=q3=Qiraji Magisterial Ring", "#m3#", "", "8.82%" };
-		{ 19, 20888, "", "=q3=Qiraji Ceremonial Ring", "#m3#", "", "8.56%" };
-		{ 21, 0, "INV_Box_01", "=q6=" .. BabbleBoss["Lieutenant General Andorov"], "" };
-		{ 22, 22221, "", "=q1=Plans: Obsidian Mail Tunic", "=ds=#p2# (300)" };
-		{ 23, 22219, "", "=q1=Plans: Jagged Obsidian Shield", "=ds=#p2# (300)" };
+		{ 16, 1506051, "", "=q4=Ceremonial Qiraji Drape", "=ds=#tt2.5A#", "", "100%", "=TT=AQ20SetsBACK" };
+		{ 18, 0, "INV_Box_01", "=q6=" .. BabbleBoss["Lieutenant General Andorov"], "" };
+		{ 19, 22221, "", "=q1=Plans: Obsidian Mail Tunic", "=ds=#p2# (300)" };
+		{ 20, 22219, "", "=q1=Plans: Jagged Obsidian Shield", "=ds=#p2# (300)" };
 	};
 	{
 		Name = BabbleBoss["Moam"];
@@ -163,12 +156,9 @@ AtlasLoot_Data["RuinsofAQ"] = {
 		{ 12, 21475, "", "=q3=Legplates of the Destroyer", "=ds=#s11#, #a4#", "", "10.39%" };
 		{ 13, 21477, "", "=q3=Ring of Fury", "=ds=#s13#", "", "14.42%" };
 		{ 14, 21473, "", "=q3=Eye of Moam", "=ds=#s14#", "", "14.74%" };
-		{ 16, 20886, "", "=q4=Qiraji Spiked Hilt", "#m3#", "", "36.38%" };
-		{ 17, 20890, "", "=q4=Qiraji Ornate Hilt", "#m3#", "", "33.16%" };
-		{ 18, 20884, "", "=q3=Qiraji Magisterial Ring", "#m3#", "", "7.56%" };
-		{ 19, 20888, "", "=q3=Qiraji Ceremonial Ring", "#m3#", "", "8.34%" };
-		{ 21, 22220, "", "=q3=Plans: Black Grasp of the Destroyer", "=ds=#p2# (300)", "", "4.11%" };
-		{ 22, 22194, "", "=q4=Black Grasp of the Destroyer", "=ds=#s9#, #a3#" };
+		{ 16, 1506053, "", "=q4=Ceremonial Qiraji Pendant", "=ds=#tt2.5A#", "", "100%", "=TT=AQ20SetsNECK" };
+		{ 18, 22220, "", "=q3=Plans: Black Grasp of the Destroyer", "=ds=#p2# (300)", "", "4.11%" };
+		{ 19, 22194, "", "=q4=Black Grasp of the Destroyer", "=ds=#s9#, #a3#" };
 	};
 	{
 		Name = BabbleBoss["Buru the Gorger"];
@@ -179,12 +169,7 @@ AtlasLoot_Data["RuinsofAQ"] = {
 		{ 6, 21491, "", "=q3=Scaled Bracers of the Gorger", "=ds=#s8#, #a2#", "", "16.51%" };
 		{ 7, 21490, "", "=q3=Slime Kickers", "=ds=#s12#, #a4#", "", "15.99%" };
 		{ 8, 21488, "", "=q3=Fetish of Chitinous Spikes", "=ds=#s14#", "", "17.22%" };
-		{ 16, 20886, "", "=q4=Qiraji Spiked Hilt", "#m3#", "", "8.31%" };
-		{ 17, 20890, "", "=q4=Qiraji Ornate Hilt", "#m3#", "", "8.98%" };
-		{ 18, 20889, "", "=q3=Qiraji Regal Drape", "#m3#", "", "9.77%" };
-		{ 19, 20885, "", "=q3=Qiraji Martial Drape", "#m3#", "", "9.84%" };
-		{ 20, 20884, "", "=q3=Qiraji Magisterial Ring", "#m3#", "", "26.98%" };
-		{ 21, 20888, "", "=q3=Qiraji Ceremonial Ring", "#m3#", "", "25.58%" };
+		{ 16, 1506052, "", "=q4=Ceremonial Qiraji Ring", "=ds=#tt2.5A#", "", "100%", "=TT=AQ20SetsFINGER" };
 	};
 	{
 		Name = BabbleBoss["Ayamiss the Hunter"];
@@ -196,12 +181,7 @@ AtlasLoot_Data["RuinsofAQ"] = {
 		{ 7, 21482, "", "=q3=Boots of the Fiery Sands", "=ds=#s12#, #a3#", "", "4.92%" };
 		{ 8, 21481, "", "=q3=Boots of the Desert Protector", "=ds=#s12#, #a4#", "", "11.08%" };
 		{ 9, 21483, "", "=q3=Ring of the Desert Winds", "=ds=#s13#", "", "16.32%" };
-		{ 16, 20886, "", "=q4=Qiraji Spiked Hilt", "#m3#", "", "8.24%" };
-		{ 17, 20890, "", "=q4=Qiraji Ornate Hilt", "#m3#", "", "8.21%" };
-		{ 18, 20889, "", "=q3=Qiraji Regal Drape", "#m3#", "", "8.85%" };
-		{ 19, 20885, "", "=q3=Qiraji Martial Drape", "#m3#", "", "10.97%" };
-		{ 20, 20884, "", "=q3=Qiraji Magisterial Ring", "#m3#", "", "26.98%" };
-		{ 21, 20888, "", "=q3=Qiraji Ceremonial Ring", "#m3#", "", "27.50%" };
+		{ 16, 1506052, "", "=q4=Ceremonial Qiraji Ring", "=ds=#tt2.5A#", "", "100%", "=TT=AQ20SetsFINGER" };
 	};
 	{
 		Name = BabbleBoss["Ossirian the Unscarred"];
@@ -223,10 +203,7 @@ AtlasLoot_Data["RuinsofAQ"] = {
 		{ 18, 21507, "", "=q4=Amulet of the Shifting Sands", "=q1=#m4#: =ds=#s2#" };
 		{ 19, 21505, "", "=q4=Choker of the Shifting Sands", "=q1=#m4#: =ds=#s2#" };
 		{ 20, 21506, "", "=q4=Pendant of the Shifting Sands", "=q1=#m4#: =ds=#s2#" };
-		{ 22, 20886, "", "=q4=Qiraji Spiked Hilt", "#m3#", "", "35.27%" };
-		{ 23, 20890, "", "=q4=Qiraji Ornate Hilt", "#m3#", "", "30.69%" };
-		{ 24, 20884, "", "=q3=Qiraji Magisterial Ring", "#m3#", "", "9.65%" };
-		{ 25, 20888, "", "=q3=Qiraji Ceremonial Ring", "#m3#", "", "8.53%" };
+		{ 22, 1506053, "", "=q4=Ceremonial Qiraji Pendant", "=ds=#tt2.5A#", "", "100%", "=TT=AQ20SetsNECK" };
 	};
 	{
 		Name = AL["Trash Mobs"];
@@ -262,36 +239,6 @@ AtlasLoot_Data["RuinsofAQ"] = {
 		{ 28, 21398, "", "=q4=Hammer of the Gathering Storm", "=ds=#h3#, #w6#", "", "" };
 		{ 29, 21401, "", "=q4=Scythe of the Unseen Path", "=ds=#h1#, #w1#", "", "" };
 		{ 30, 21392, "", "=q4=Sickle of Unyielding Strength", "=ds=#h1#, #w1#", "", "" };
-	};
-	{
-		Name = "AQ Class Books";
-		{ 1, 21294, "", "=q3=Book of Healing Touch XI", "=q1=#m1# =ds=#c1#", "", "4.12%" };
-		{ 2, 21296, "", "=q3=Book of Rejuvenation XI", "=q1=#m1# =ds=#c1#", "", "4.20%" };
-		{ 3, 21295, "", "=q3=Book of Starfire VII", "=q1=#m1# =ds=#c1#", "", "4.00%" };
-		{ 4, 21306, "", "=q3=Guide: Serpent Sting IX", "=q1=#m1# =ds=#c2#", "", "4.85%" };
-		{ 5, 21304, "", "=q3=Guide: Multi-Shot V", "=q1=#m1# =ds=#c2#", "", "4.66%" };
-		{ 6, 21307, "", "=q3=Guide: Aspect of the Hawk VII", "=q1=#m1# =ds=#c2#", "", "4.65%" };
-		{ 7, 21279, "", "=q3=Tome of Fireball XII", "=q1=#m1# =ds=#c3#", "", "5.15%" };
-		{ 8, 21214, "", "=q3=Tome of Frostbolt XI", "=q1=#m1# =ds=#c3#", "", "5.10%" };
-		{ 9, 21280, "", "=q3=Tome of Arcane Missiles VIII", "=q1=#m1# =ds=#c3#", "", "5.03%" };
-		{ 10, 21288, "", "=q3=Libram: Blessing of Wisdom VI", "=q1=#m1# =ds=#c4#", "", "3.50%" };
-		{ 11, 21289, "", "=q3=Libram: Blessing of Might VII", "=q1=#m1# =ds=#c4#", "", "3.07%" };
-		{ 12, 21290, "", "=q3=Libram: Holy Light IX", "=q1=#m1# =ds=#c4#", "", "3.09%" };
-		{ 13, 21284, "", "=q3=Codex of Greater Heal V", "=q1=#m1# =ds=#c5#", "", "5.15%" };
-		{ 14, 21287, "", "=q3=Codex of Prayer of Healing V", "=q1=#m1# =ds=#c5#", "", "4.89%" };
-		{ 15, 21285, "", "=q3=Codex of Renew X", "=q1=#m1# =ds=#c5#", "", "4.91%" };
-		{ 16, 21300, "", "=q3=Handbook of Backstab IX", "=q1=#m1# =ds=#c6#", "", "4.29%" };
-		{ 17, 21303, "", "=q3=Handbook of Feint V", "=q1=#m1# =ds=#c6#", "", "4.79%" };
-		{ 18, 21302, "", "=q3=Handbook of Deadly Poison V", "=q1=#m1# =ds=#c6#", "", "5.47%" };
-		{ 19, 21291, "", "=q3=Tablet of Healing Wave X", "=q1=#m1# =ds=#c7#", "", "2.05%" };
-		{ 20, 21292, "", "=q3=Tablet of Strength of Earth Totem V", "=q1=#m1# =ds=#c7#", "", "1.67%" };
-		{ 21, 21293, "", "=q3=Tablet of Grace of Air Totem III", "=q1=#m1# =ds=#c7#", "", "1.81%" };
-		{ 22, 21281, "", "=q3=Grimoire of Shadow Bolt X", "=q1=#m1# =ds=#c8#", "", "4.23%" };
-		{ 23, 21283, "", "=q3=Grimoire of Corruption VII", "=q1=#m1# =ds=#c8#", "", "3.82%" };
-		{ 24, 21282, "", "=q3=Grimoire of Immolate VIII", "=q1=#m1# =ds=#c8#", "", "4.51%" };
-		{ 25, 21298, "", "=q3=Manual of Battle Shout VII", "=q1=#m1# =ds=#c9#", "", "4.84%" };
-		{ 26, 21299, "", "=q3=Manual of Revenge VI", "=q1=#m1# =ds=#c9#", "", "4.78%" };
-		{ 27, 21297, "", "=q3=Manual of Heroic Strike IX", "=q1=#m1# =ds=#c9#", "", "4.83%" };
 	};
 	{
 		Name = "AQ Enchants";

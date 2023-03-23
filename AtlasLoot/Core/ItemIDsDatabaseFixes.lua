@@ -145,6 +145,10 @@ ItemIDsDatabase[2522463] = { 2522463, 2522463, 2622463, 2722463, MythicRaid = 37
 ItemIDsDatabase[2522459] = { 2522459, 2522459, 2622459, 2722459, MythicRaid = 3722459 };
 ItemIDsDatabase[2522465] = { 2522465, 2522465, 2622465, 2722465, MythicRaid = 3722465 };
 
+--Tier 2.5 Accessories
+ItemIDsDatabase[1506053] = { 1506053, 1506053, 1806053, 1706053, MythicRaid = 2806053 }; --Ceremonial Qiraji Pendant
+ItemIDsDatabase[1506052] = { 1506052, 1506052, 1806052, 1706052, MythicRaid = 2806052 }; --Ceremonial Qiraji Ring
+ItemIDsDatabase[1506051] = { 1506051, 1506051, 1806051, 1706051, MythicRaid = 2806051 }; --Ceremonial Qiraji Drape
 
 --AQR New Sets
 --Heroic = Normal + 300'000
@@ -152,39 +156,39 @@ ItemIDsDatabase[2522465] = { 2522465, 2522465, 2622465, 2722465, MythicRaid = 37
 --Ascended = Normal + 200'000
 --Bloodforged = Normal + 6'000'000
 --Heroic Bloodforged = Normal + 6'300'000
-ItemIDsDatabase[1506017] = { 7506017, 1506017, 1806017, 1706017, MythicRaid = 2806017 }--, Locket of Unending Life
-ItemIDsDatabase[1506018] = { 7506018, 1506018, 1806018, 1706018, MythicRaid = 2806018 }--, Choker of the Unseen Path
-ItemIDsDatabase[1506019] = { 7506019, 1506019, 1806019, 1706019, MythicRaid = 2806019 }--, Pendant of Roaring Earth
-ItemIDsDatabase[1506020] = { 7506020, 1506020, 1806020, 1706020, MythicRaid = 2806020 }--, Medallion of Eternal Justice
-ItemIDsDatabase[1506021] = { 7506021, 1506021, 1806021, 1706021, MythicRaid = 2806021 }--, Charm of Vaulted Secrets
-ItemIDsDatabase[1506022] = { 7506022, 1506022, 1806022, 1706022, MythicRaid = 2806022 }--, Lariat of Veiled Shadows
-ItemIDsDatabase[1506023] = { 7506023, 1506023, 1806023, 1706023, MythicRaid = 2806023 }--, Bayadere of Infinite Wisdom
-ItemIDsDatabase[1506024] = { 7506024, 1506024, 1806024, 1706024, MythicRaid = 2806024 }--, Necklace of the Gathering Storm
-ItemIDsDatabase[1506025] = { 7506025, 1506025, 1806025, 1706025, MythicRaid = 2806025 }--, Collar of Unyielding Strength
-ItemIDsDatabase[1506026] = { 7506026, 1506026, 1806026, 1706026, MythicRaid = 2806026 }--, Bayadere of Unspoken Names
-ItemIDsDatabase[1506027] = { 7506027, 1506027, 1806027, 1706027, MythicRaid = 2806027 }--, Choker of Endless Machinations
-ItemIDsDatabase[1506028] = { 7506028, 1506028, 1806028, 1706028, MythicRaid = 2806028 }--, Shroud of Endless Machinations
-ItemIDsDatabase[1506029] = { 7506029, 1506029, 1806029, 1706029, MythicRaid = 2806029 }--, Loop of Endless Machinations
-ItemIDsDatabase[1506030] = { 7506030, 1506030, 1806030, 1706030, MythicRaid = 2806030 }--, Signet of Roaring Earth
-ItemIDsDatabase[1506031] = { 7506031, 1506031, 1806031, 1706031, MythicRaid = 2806031 }--, Drape of Roaring Earth
-ItemIDsDatabase[1506032] = { 7506032, 1506032, 1806032, 1706032, MythicRaid = 2806032 }--, Signet of Ferocious Vigor
-ItemIDsDatabase[1506033] = { 7506033, 1506033, 1806033, 1706033, MythicRaid = 2806033 }--, Cape of Ferocious Vigor
-ItemIDsDatabase[1506034] = { 7506034, 1506034, 1806034, 1706034, MythicRaid = 2806034 }--, Choker of Ferocious Vigor
-ItemIDsDatabase[1506035] = { 7506035, 1506035, 1806035, 1706035, MythicRaid = 2806035 }--, Band of the Faithful Zealot
-ItemIDsDatabase[1506036] = { 7506036, 1506036, 1806036, 1706036, MythicRaid = 2806036 }--, Shroud of the Faithful Zealot
-ItemIDsDatabase[1506037] = { 7506037, 1506037, 1806037, 1706037, MythicRaid = 2806037 }--, Locket of the Faithful Zealot
-ItemIDsDatabase[1506038] = { 7506038, 1506038, 1806038, 1706038, MythicRaid = 2806038 }--, Band of Masterful Technique
-ItemIDsDatabase[1506039] = { 7506039, 1506039, 1806039, 1706039, MythicRaid = 2806039 }--, Drape of Masterful Technique
-ItemIDsDatabase[1506040] = { 7506040, 1506040, 1806040, 1706040, MythicRaid = 2806040 }--, Locket of Masterful Technique
-ItemIDsDatabase[1506041] = { 7506041, 1506041, 1806041, 1706041, MythicRaid = 2806041 }--, Ring of Martial Prowess
-ItemIDsDatabase[1506042] = { 7506042, 1506042, 1806042, 1706042, MythicRaid = 2806042 }--, Cloak of Martial Prowess
-ItemIDsDatabase[1506043] = { 7506043, 1506043, 1806043, 1706043, MythicRaid = 2806043 }--, Lariat of Martial Prowess
-ItemIDsDatabase[1506044] = { 7506044, 1506044, 1806044, 1706044, MythicRaid = 2806044 }--, Signet of Unrivaled Rage
-ItemIDsDatabase[1506045] = { 7506045, 1506045, 1806045, 1706045, MythicRaid = 2806045 }--, Cloak of Unrivaled Rage
-ItemIDsDatabase[1506046] = { 7506046, 1506046, 1806046, 1706046, MythicRaid = 2806046 }--, Collar of Unrivaled Rage
-ItemIDsDatabase[1506047] = { 7506047, 1506047, 1806047, 1706047, MythicRaid = 2806047 }--, Loop of Expansive Research
-ItemIDsDatabase[1506048] = { 7506048, 1506048, 1806048, 1706048, MythicRaid = 2806048 }--, Drape of Expansive Research
-ItemIDsDatabase[1506049] = { 7506049, 1506049, 1806049, 1706049, MythicRaid = 2806049 }--, Bayadere of Expansive Research
+ItemIDsDatabase[1506017] = { 7506017, 1506017, 1806017, 1706017, MythicRaid = 2806017 }; --Locket of Unending Life
+ItemIDsDatabase[1506018] = { 7506018, 1506018, 1806018, 1706018, MythicRaid = 2806018 }; --Choker of the Unseen Path
+ItemIDsDatabase[1506019] = { 7506019, 1506019, 1806019, 1706019, MythicRaid = 2806019 }; --Pendant of Roaring Earth
+ItemIDsDatabase[1506020] = { 7506020, 1506020, 1806020, 1706020, MythicRaid = 2806020 }; --Medallion of Eternal Justice
+ItemIDsDatabase[1506021] = { 7506021, 1506021, 1806021, 1706021, MythicRaid = 2806021 }; --Charm of Vaulted Secrets
+ItemIDsDatabase[1506022] = { 7506022, 1506022, 1806022, 1706022, MythicRaid = 2806022 }; --Lariat of Veiled Shadows
+ItemIDsDatabase[1506023] = { 7506023, 1506023, 1806023, 1706023, MythicRaid = 2806023 }; --Bayadere of Infinite Wisdom
+ItemIDsDatabase[1506024] = { 7506024, 1506024, 1806024, 1706024, MythicRaid = 2806024 }; --Necklace of the Gathering Storm
+ItemIDsDatabase[1506025] = { 7506025, 1506025, 1806025, 1706025, MythicRaid = 2806025 }; --Collar of Unyielding Strength
+ItemIDsDatabase[1506026] = { 7506026, 1506026, 1806026, 1706026, MythicRaid = 2806026 }; --Bayadere of Unspoken Names
+ItemIDsDatabase[1506027] = { 7506027, 1506027, 1806027, 1706027, MythicRaid = 2806027 }; --Choker of Endless Machinations
+ItemIDsDatabase[1506028] = { 7506028, 1506028, 1806028, 1706028, MythicRaid = 2806028 }; --Shroud of Endless Machinations
+ItemIDsDatabase[1506029] = { 7506029, 1506029, 1806029, 1706029, MythicRaid = 2806029 }; --Loop of Endless Machinations
+ItemIDsDatabase[1506030] = { 7506030, 1506030, 1806030, 1706030, MythicRaid = 2806030 }; --Signet of Roaring Earth
+ItemIDsDatabase[1506031] = { 7506031, 1506031, 1806031, 1706031, MythicRaid = 2806031 }; --Drape of Roaring Earth
+ItemIDsDatabase[1506032] = { 7506032, 1506032, 1806032, 1706032, MythicRaid = 2806032 }; --Signet of Ferocious Vigor
+ItemIDsDatabase[1506033] = { 7506033, 1506033, 1806033, 1706033, MythicRaid = 2806033 }; --Cape of Ferocious Vigor
+ItemIDsDatabase[1506034] = { 7506034, 1506034, 1806034, 1706034, MythicRaid = 2806034 }; --Choker of Ferocious Vigor
+ItemIDsDatabase[1506035] = { 7506035, 1506035, 1806035, 1706035, MythicRaid = 2806035 }; --Band of the Faithful Zealot
+ItemIDsDatabase[1506036] = { 7506036, 1506036, 1806036, 1706036, MythicRaid = 2806036 }; --Shroud of the Faithful Zealot
+ItemIDsDatabase[1506037] = { 7506037, 1506037, 1806037, 1706037, MythicRaid = 2806037 }; --Locket of the Faithful Zealot
+ItemIDsDatabase[1506038] = { 7506038, 1506038, 1806038, 1706038, MythicRaid = 2806038 }; --Band of Masterful Technique
+ItemIDsDatabase[1506039] = { 7506039, 1506039, 1806039, 1706039, MythicRaid = 2806039 }; --Drape of Masterful Technique
+ItemIDsDatabase[1506040] = { 7506040, 1506040, 1806040, 1706040, MythicRaid = 2806040 }; --Locket of Masterful Technique
+ItemIDsDatabase[1506041] = { 7506041, 1506041, 1806041, 1706041, MythicRaid = 2806041 }; --Ring of Martial Prowess
+ItemIDsDatabase[1506042] = { 7506042, 1506042, 1806042, 1706042, MythicRaid = 2806042 }; --Cloak of Martial Prowess
+ItemIDsDatabase[1506043] = { 7506043, 1506043, 1806043, 1706043, MythicRaid = 2806043 }; --Lariat of Martial Prowess
+ItemIDsDatabase[1506044] = { 7506044, 1506044, 1806044, 1706044, MythicRaid = 2806044 }; --Signet of Unrivaled Rage
+ItemIDsDatabase[1506045] = { 7506045, 1506045, 1806045, 1706045, MythicRaid = 2806045 }; --Cloak of Unrivaled Rage
+ItemIDsDatabase[1506046] = { 7506046, 1506046, 1806046, 1706046, MythicRaid = 2806046 }; --Collar of Unrivaled Rage
+ItemIDsDatabase[1506047] = { 7506047, 1506047, 1806047, 1706047, MythicRaid = 2806047 }; --Loop of Expansive Research
+ItemIDsDatabase[1506048] = { 7506048, 1506048, 1806048, 1706048, MythicRaid = 2806048 }; --Drape of Expansive Research
+ItemIDsDatabase[1506049] = { 7506049, 1506049, 1806049, 1706049, MythicRaid = 2806049 }; --Bayadere of Expansive Research
 
 
 --Tier 2.5 New Sets
