@@ -4055,7 +4055,7 @@ AtlasLoot_Data["Naxxramas60"] = {
 		{ 9, 22819, "", "=q4=Shield of Condemnation", "=ds=#w8#", "", "18.18%" },
 		{ 10, 23057, "", "=q4=Gem of Trapped Innocents", "=ds=#s2#", "", "18.18%" },
 		{ 11, 23053, "", "=q4=Stormrage's Talisman of Seething", "=ds=#s2#", "", "18.18%" },
-		{ 13, 691119, "", "=q4=The Phylactery of Kel'Thuzad", "=ds=#m2#", "", "100%" },
+		{ 13, 22520, "", "=q4=The Phylactery of Kel'Thuzad", "=ds=#m2#", "", "100%" },
 		{ 14, 23207, "", "=q4=Mark of the Champion", "=q1=#m4# =ds=#s14#" },
 		{ 15, 23206, "", "=q4=Mark of the Champion", "=q1=#m4# =ds=#s14#" },
 		{ 16, 1510496, "", "=q4=Desecrated Ring", "=ds=#tt3#", "", "100%", "=TT=T3FINGER" };
