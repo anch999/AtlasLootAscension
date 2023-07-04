@@ -1586,6 +1586,8 @@ if AL then
 	AL["How to view an 'unsafe' item:"] = true;
 	AL["Unsafe items have a red border around the icon and are marked because you have not seen the item since the last patch or server restart. Right-click the item, then move your mouse back over the item or click the 'Query Server' button at the bottom of the loot page. This will also load any Bloodforged items."] = true;
 	AL["How to view an item in the Dressing Room:"] = true;
+	AL["How to open an item to its AscensionDB page in your browser window:"] = true;
+	AL["Alt+Right Click any item to open it in a browser window."] = true;
 	AL["Simply Ctrl+Left Click on the item.  Sometimes the dressing room window is hidden behind the Atlas or AtlasLoot windows, so if nothing seems to happen move your Atlas or AtlasLoot windows and see if anything is hidden."] = true;
 	AL["How to link an item to someone else:"] = true;
 	AL["Shift+Left Click the item like you would for any other in-game item"] = true;
