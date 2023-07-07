@@ -44,8 +44,7 @@ ATLASLOOT_INDENT = "   ";
 
 --Make the Dewdrop menu in the standalone loot browser accessible here
 AtlasLoot_Dewdrop = AceLibrary("Dewdrop-2.0");
-AtlasLoot_DewdropSubMenu = AceLibrary("Dewdrop-2.0");
-AtlasLoot_DewdropExpansionMenu = AceLibrary("Dewdrop-2.0");
+
 --Variable to cap debug spam
 ATLASLOOT_DEBUGSHOWN = false;
 ATLASLOOT_FILTER_ENABLE = false;
@@ -206,9 +205,6 @@ function AtlasLoot:OnEnable()
 			AtlasLoot_ShowMenu
 		);
 	end
-	--Set up the menu in the loot browser
-	AtlasLoot:DewdropRegister();
-	AtlasLoot:DewdropExpansionMenuRegister();
 	--If EquipCompare is available, use it
 	if((EquipCompare_RegisterTooltip) and (AtlasLoot.db.profile.EquipCompare == true)) then
 		EquipCompare_RegisterTooltip(AtlasLootTooltip);

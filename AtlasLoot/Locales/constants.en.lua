@@ -295,6 +295,7 @@ if AL then
 	AL["Close"] = true;
 	AL["Wishlist"] = true;
 	AL["Own Wishlists"] = true;
+	AL["Wishlists"] = true;
 	AL["Other Wishlists"] = true;
 	AL["Shared Wishlists"] = true;
 	AL["Mark items in loot tables"] = true;

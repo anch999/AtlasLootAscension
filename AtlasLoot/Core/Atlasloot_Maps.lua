@@ -158,7 +158,7 @@ AtlasLoot_MapData = {
 --************************************************
 
 ["AuchindounEnt"] = {
-    ZoneName = {AL["Entrance"]};
+    ZoneName = {AL["Entrance"], 3519};
     Location = { BabbleZone["Terokkar Forest"], 3519 };
     LevelRange = "63-70";
     MinLevel = "55";
@@ -220,7 +220,7 @@ AtlasLoot_MapData = {
     { WHITE.."7) "..AL["Scarshield Quartermaster <Scarshield Legion>"], NPC, 9046 };
 };
 ["CoilfangReservoirEnt"] = {
-    ZoneName = { AL["Entrance"]};
+    ZoneName = { AL["Entrance"], 3521};
     Location = { BabbleZone["Zangarmarsh"], 3521 };
     LevelRange = "61-70";
     MinLevel = "55";
@@ -236,7 +236,7 @@ AtlasLoot_MapData = {
     { WHITE.."2) "..AL["Mortog Steamhead"], NPC, 23373 };
 };
 ["CoTEnt"] = {
-    ZoneName = { AL["Entrance"]};
+    ZoneName = { AL["Entrance"], 440};
     Location = { BabbleZone["Tanaris"], 440 };
     LevelRange = "66-70";
     MinLevel = "66";
@@ -1823,7 +1823,7 @@ AtlasLoot_MapData = {
     { WHITE.."5) "..AL["Pathaleon the Calculator"], NPC, 19220 };
 };
 ["TempestKeepTheEye"] = {
-    ZoneName = { BabbleZone["The Eye"], 3842 };
+    ZoneName = { BabbleZone["The Eye"], 3845 };
     Location = { BabbleZone["Netherstorm"], 3523 };
     LevelRange = "70";
     MinLevel = "70";
