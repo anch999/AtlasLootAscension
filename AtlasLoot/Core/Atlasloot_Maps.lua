@@ -1548,7 +1548,7 @@ AtlasLoot_MapData = {
     { WHITE..INDENT..AL["Young Blanchy"], NPC, 18651 };
 };
 ["GruulsLair"] = {
-    ZoneName = { BabbleZone["Gruul's Lair"], 3618 };
+    ZoneName = { BabbleZone["Gruul's Lair"], 3923 };
     Location = { BabbleZone["Blade's Edge Mountains"], 3522 };
     LevelRange = "70";
     MinLevel = "65";
@@ -1631,7 +1631,7 @@ AtlasLoot_MapData = {
     { WHITE..INDENT..AL["Captain Boneshatter"].." ("..AL["Horde"]..", "..AL["Heroic"]..")", NPC, 17296 };
 };
 ["KarazhanStart"] = {
-    ZoneName = { BabbleZone["Karazhan"].." [A] ("..AL["Start"]..")", 2562 };
+    ZoneName = { BabbleZone["Karazhan"].." [A] ("..AL["Start"]..")", 3457 };
     Location = { BabbleZone["Deadwind Pass"], 41 };
     LevelRange = "70";
     MinLevel = "68";
@@ -1688,7 +1688,7 @@ AtlasLoot_MapData = {
     { WHITE..INDENT..AL["Nightbane"].." ("..AL["Summon"]..")", NPC, 17225 };
 };
 ["KarazhanEnd"] = {
-    ZoneName = { BabbleZone["Karazhan"].." [B] ("..AL["End"]..")", 2562 };
+    ZoneName = { BabbleZone["Karazhan"].." [B] ("..AL["End"]..")", 3457 };
     Location = { BabbleZone["Deadwind Pass"], 41 };
     LevelRange = "70";
     MinLevel = "68";
