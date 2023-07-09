@@ -7,6 +7,9 @@ local PURPLE = "|cff9F3FFF";
 local BLUE = "|cff0070dd";
 local ORANGE = "|cffFF8400";
 local DEFAULT = "|cffFFd200";
+local LIGHTBLUE = "|cff00ccff";
+local ORANGE2 = "|cFFFFA500";
+local GOLD  = "|cFFFFD700";
 local AtlasLootScanTooltip = CreateFrame("GAMETOOLTIP","AtlasLootScanTooltip",nil,"GameTooltipTemplate");
 AtlasLootScanTooltip:SetOwner(UIParent, "ANCHOR_NONE");
 
@@ -387,6 +390,14 @@ function AtlasLoot:OpenDBURL(ID, Type)
     OpenAscensionDBURL("?"..Type.."="..ID);
 end
 
+function AtlasLoot:Chatlink(ID,chatType,Type)
+    if Type == "spell" then
+        SendChatMessage(AtlasLoot_GetEnchantLink(ID) ,chatType);
+    else
+        SendChatMessage(select(2,GetItemInfo(ID)) ,chatType);
+    end
+end
+
 function AtlasLoot:ItemContextMenu(itemID, itemTexture, itemName, lootPage, sourcePage, self, Type)
     if AtlasLoot_Dewdrop:IsOpen(self) then AtlasLoot_Dewdrop:Close() return end
     AtlasLoot_Dewdrop:Register(self,
@@ -396,7 +407,14 @@ function AtlasLoot:ItemContextMenu(itemID, itemTexture, itemName, lootPage, sour
         'children', function(level, value)
             if level == 1 then
                 AtlasLoot_Dewdrop:AddLine(
-                    'text', ORANGE.."Open In AscensionDB",
+                    'text', AL["Links"],
+                    'notCheckable', true,
+                    'isTitle', true,
+                    'textHeight', 13,
+                    'textWidth', 13
+                )
+                AtlasLoot_Dewdrop:AddLine(
+                    'text', ORANGE..AL["Open In AscensionDB"],
                     'func', function(arg1,arg2) AtlasLoot:OpenDBURL(arg1,arg2) end,
                     'arg1',itemID,
                     'arg2',Type,
@@ -406,48 +424,64 @@ function AtlasLoot:ItemContextMenu(itemID, itemTexture, itemName, lootPage, sour
                     'closeWhenClicked', true
                 )
                 AtlasLoot_Dewdrop:AddLine(
-                    'text', ""
-                )
-                AtlasLoot_Dewdrop:AddLine(
-                    "text", AL["Wishlists"],
-                    "tooltipTitle", AL["Wishlists"],
-                    "value", "Wishlists",
-                    "arg1", "1",
-                    "arg2", self,
-                    "hasArrow", true,
-                    'textHeight', 12,
-                    'textWidth', 12,
-                    "func", AtlasLoot_WishListAddDropClick,
-                    "notCheckable", true
-                );
+                        "text", GREEN..AL["Guild"],
+                        "func", function() AtlasLoot:Chatlink(itemID,"GUILD",Type) end,
+                        'closeWhenClicked', true,
+                        'textHeight', 12,
+                        'textWidth', 12,
+                        "notCheckable", true
+                    );
+                    AtlasLoot_Dewdrop:AddLine(
+                        "text", LIGHTBLUE..AL["Party"],
+                        "func", function() AtlasLoot:Chatlink(itemID,"PARTY",Type) end,
+                        'closeWhenClicked', true,
+                        'textHeight', 12,
+                        'textWidth', 12,
+                        "notCheckable", true
+                    );
+                    AtlasLoot_Dewdrop:AddLine(
+                        "text", ORANGE2..AL["Raid"],
+                        "func", function() AtlasLoot:Chatlink(itemID,"RAID",Type) end,
+                        'closeWhenClicked', true,
+                        'textHeight', 12,
+                        'textWidth', 12,
+                        "notCheckable", true
+                    );
+                    AtlasLoot_Dewdrop:AddLine()
+                    AtlasLoot_Dewdrop:AddLine(
+                    'text', AL["WishLists"],
+                    'notCheckable', true,
+                    'isTitle', true,
+                    'textHeight', 13,
+                    'textWidth', 13
+                    )
+                    AtlasLoot_Dewdrop:AddLine(
+                        "text", AL["Own Wishlists"],
+                        "tooltipTitle", AL["Own Wishlists"],
+                        "value", "OwnWishlists",
+                        "hasArrow", true,
+                        'textHeight', 12,
+                        'textWidth', 12,
+                        "notCheckable", true
+                    );
+                    AtlasLoot_Dewdrop:AddLine(
+                        "text", AL["Shared Wishlists"],
+                        "tooltipTitle", AL["Shared Wishlists"],
+                        "value", "SharedWishlists",
+                        "hasArrow", true,
+                        'textHeight', 12,
+                        'textWidth', 12,
+                        "notCheckable", true
+                    );
+                    AtlasLoot_Dewdrop:AddLine(
+                        "text", AL["Add Wishlist"],
+                        "func", function() AtlasLoot:AddWishList() end,
+                        'closeWhenClicked', true,
+                        'textHeight', 12,
+                        'textWidth', 12,
+                        "notCheckable", true
+                    );
             elseif level == 2 then
-                AtlasLoot_Dewdrop:AddLine(
-                    "text", AL["Own Wishlists"],
-                    "tooltipTitle", AL["Own Wishlists"],
-                    "value", "OwnWishlists",
-                    "hasArrow", true,
-                    'textHeight', 12,
-                    'textWidth', 12,
-                    "notCheckable", true
-                );
-                AtlasLoot_Dewdrop:AddLine(
-                    "text", AL["Shared Wishlists"],
-                    "tooltipTitle", AL["Shared Wishlists"],
-                    "value", "SharedWishlists",
-                    "hasArrow", true,
-                    'textHeight', 12,
-                    'textWidth', 12,
-                    "notCheckable", true
-                );
-                AtlasLoot_Dewdrop:AddLine(
-                    "text", AL["Add Wishlist"],
-                    "func", function() AtlasLoot:AddWishList() end,
-                    'closeWhenClicked', true,
-                    'textHeight', 12,
-                    'textWidth', 12,
-                    "notCheckable", true
-                );
-            elseif level == 3 then
                 if value == "OwnWishlists" then
                     for k,v in pairs(AtlasLootWishList["Own"]) do
                         if type(v) == "table" then
@@ -479,6 +513,7 @@ function AtlasLoot:ItemContextMenu(itemID, itemTexture, itemName, lootPage, sour
                 end
             end
             --Close button
+            AtlasLoot_Dewdrop:AddLine()
             AtlasLoot_Dewdrop:AddLine(
                 'text', AL["Close Menu"],
                 'textR', 0,

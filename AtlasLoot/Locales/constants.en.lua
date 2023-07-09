@@ -20,6 +20,8 @@ if AL then
 
 	AL["Druid"] = true;
 
+	AL["Open In AscensionDB"] = true;
+	AL["Links"] = true;
 	-- Text strings for UI objects
 	AL["AtlasLoot"] = true;
 	AL["Select Loot Table"] = true;
@@ -176,6 +178,9 @@ if AL then
 	AL["WotLK Instances"] = true;
 	AL["World Bosses"] = true;
 	AL["Close Menu"] = true;
+	AL["Guild"] = true;
+	AL["Party"] = true;
+	AL["Raid"] = true;
 
 	-- Crafting Menu
 	AL["Crafting Daily Quests"] = true;
@@ -296,6 +301,7 @@ if AL then
 	AL["Wishlist"] = true;
 	AL["Own Wishlists"] = true;
 	AL["Wishlists"] = true;
+	AL["Chatlinks"] = true;
 	AL["Other Wishlists"] = true;
 	AL["Shared Wishlists"] = true;
 	AL["Mark items in loot tables"] = true;

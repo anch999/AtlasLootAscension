@@ -446,11 +446,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 		AtlasLootDefaultFrame_MapSelectButton:Enable();
 		-- Stops map reseting to default while still in the same raid/instance table
 		if AtlasLootItemsFrame.refresh == nil or dataID ~= AtlasLootItemsFrame.refresh[1] then
-			AtlasLoot_MapMenu:Unregister(AtlasLootDefaultFrame_MapSelectButton);
 			ATLASLOOT_CURRENT_MAP = dataSource[dataID].Map
-			if AtlasLoot_MultiMapData[ATLASLOOT_CURRENT_MAP] ~= nil then
-				AtlasLoot:MapMenuRegister(ATLASLOOT_CURRENT_MAP);
-			end
 			AtlasLoot:MapSelect(ATLASLOOT_CURRENT_MAP);
 		end
 	else

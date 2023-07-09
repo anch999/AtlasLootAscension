@@ -3,7 +3,6 @@ local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot");
 local BabbleSubZone = AtlasLoot_GetLocaleLibBabble("LibBabble-SubZone-3.0");
 local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 
-AtlasLoot_MapMenu = AceLibrary("Dewdrop-2.0");
 
 local BLUE = "|cff6666ff";
 local GREY = "|cff999999";
@@ -79,35 +78,43 @@ function AtlasLoot:MapMenuClick(mapID)
     AtlasLoot:MapSelect(mapID);
     AtlasLootDefaultFrame_MapSelectButton:SetText(AtlasLoot_MapData[mapID].ZoneName[1]);
     ATLASLOOT_CURRENT_MAP = mapID;
-    AtlasLoot_MapMenu:Close();
 end
 
-function AtlasLoot:MapMenuRegister(mapID)
-	AtlasLoot_MapMenu:Register(AtlasLootDefaultFrame_MapSelectButton,
+function AtlasLoot:MapMenuOpen()
+    local mapID = ATLASLOOT_CURRENT_MAP;
+    local frame = AtlasLootDefaultFrame_MapSelectButton;
+    if AtlasLoot_Dewdrop:IsOpen(frame) then AtlasLoot_Dewdrop:Close() return end
+	AtlasLoot_Dewdrop:Register(frame,
         'point', function(parent)
             return "TOP", "BOTTOM"
         end,
         'children', function(level, value)
                 for k,v in pairs(AtlasLoot_MultiMapData[mapID]) do
-                    AtlasLoot_MapMenu:AddLine(
+                    AtlasLoot_Dewdrop:AddLine(
                         'text', AtlasLoot_MapData[v].ZoneName[1],
                         'func', function(arg1) AtlasLoot:MapMenuClick(arg1) end,
                         'arg1', v,
+                        'textHeight', 12,
+                        'textWidth', 12,
                         'notCheckable', true
                     )
                 end
                 --Close button
-                AtlasLoot_MapMenu:AddLine(
+                AtlasLoot_Dewdrop:AddLine()
+                AtlasLoot_Dewdrop:AddLine(
 					'text', AL["Close Menu"],
                     'textR', 0,
                     'textG', 1,
                     'textB', 1,
-					'func', function() AtlasLoot_MapMenu:Close() end,
+                    'textHeight', 12,
+                    'textWidth', 12,
+					'func', function() AtlasLoot_Dewdrop:Close() end,
 					'notCheckable', true
 				)
 		end,
 		'dontHook', true
 	)
+    AtlasLoot_Dewdrop:Open(frame)
 end
 
 function AtlasLoot:LoadMapData()

@@ -183,9 +183,7 @@ local swapbtn = CreateFrame("Button", "AtlasLootItemsFrame_Wishlist_Swap", Atlas
 local optionsbtn = CreateFrame("Button", "AtlasLootItemsFrame_Wishlist_Options", AtlasLootItemsFrame, "OptionsButtonTemplate");
         optionsbtn:SetPoint("BOTTOM", "AtlasLootItemsFrame_Wishlist_Swap", "BOTTOM",-100,0);
         optionsbtn:SetText(AL["Options"]);
-        optionsbtn:SetScript("OnClick", function(self)
-            AtlasLoot_Dewdrop:Open(self);
-        end);
+        optionsbtn:SetScript("OnClick", function(self) AtlasLoot:WishListOptionsOpen(); end);
         optionsbtn:Hide();
 
         -- Wishlist Item Lock button
@@ -689,13 +687,7 @@ local mapbtn = CreateFrame("Button","AtlasLootDefaultFrame_MapButton", AtlasLoot
 local mapSelbtn = CreateFrame("Button","AtlasLootDefaultFrame_MapSelectButton", AtlasLootDefaultFrame,"OptionsButtonTemplate");
     mapSelbtn:SetSize(180,24);
     mapSelbtn:SetPoint("BOTTOMRIGHT",Atlasloot_SubTableFrame,5,-27.5);
-    mapSelbtn:SetScript("OnClick", function(self)
-        if AtlasLoot_MapMenu:IsOpen() then
-            AtlasLoot_MapMenu:Close();
-        else
-            AtlasLoot_MapMenu:Open(self);
-        end
-    end);
+    mapSelbtn:SetScript("OnClick", function(self) AtlasLoot:MapMenuOpen() end);
     mapSelbtn:SetText("No Map");
 
     -- Load Current Instance Button

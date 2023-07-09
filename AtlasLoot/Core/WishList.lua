@@ -243,7 +243,9 @@ function AtlasLoot:WishListButton(xitemID, xitemTexture, xitemName, xlootPage, x
 		AtlasLoot_ShowWishListDropDown(xitemID, xitemTexture, xitemName, xlootPage, xsourcePage, button, show, "Enable")
 	elseif buttonclick == "LeftButton" then
 		if AtlasLootWishList["Own"][1] then
-			AtlasLoot_WishListAddDropClick("addOwn", AtlasLootWishList["Options"][playerName]["DefaultWishList"][3] or 1, "", show)
+			local listNum = AtlasLootWishList["Options"][playerName]["DefaultWishList"]
+			if not AtlasLootWishList[listNum[1]][listNum[3]] then listNum[3] = 1 end
+			AtlasLoot_WishListAddDropClick("addOwn", listNum[3], "", show)
 		else
 			DEFAULT_CHAT_FRAME:AddMessage(RED..AL["AtlasLoot"]..": "..AL["Please Create a Wishlist First."]);
 		end
@@ -460,12 +462,12 @@ function AtlasLoot_WishListCheck(itemID, all)
 end
 
 --[[
-AtlasLoot:WishListOptionsRegister:
+AtlasLoot:WishListOptionsOpen:
 Constructs the wishlist options category menu.
 ]]
-function AtlasLoot:WishListOptionsRegister()
+function AtlasLoot:WishListOptionsOpen()
 	local frame = AtlasLootItemsFrame_Wishlist_Options
-	if AtlasLoot_Dewdrop:IsOpen(frame) then AtlasLoot_Dewdrop:Close() return	end
+	if AtlasLoot_Dewdrop:IsOpen(frame) then AtlasLoot_Dewdrop:Close() return end
 	AtlasLoot_Dewdrop:Register(frame,
 		'point', function(parent)
 			return "TOP", "BOTTOM"
@@ -474,21 +476,33 @@ function AtlasLoot:WishListOptionsRegister()
 				AtlasLoot_Dewdrop:AddLine(
 					"text", AL["Add Wishlist"],
 					"func", function() AtlasLoot:AddWishList() end,
+					'textHeight', 12,
+					'textWidth', 12,
+					'closeWhenClicked', true,
 					"notCheckable", true
 				);
 				AtlasLoot_Dewdrop:AddLine(
 					"text", AL["Edit Wishlist"],
 					"func", function() AtlasLoot:EditWishList() end,
+					'textHeight', 12,
+					'textWidth', 12,
+					'closeWhenClicked', true,
 					"notCheckable", true
 				);
 				AtlasLoot_Dewdrop:AddLine(
 					"text", AL["Sort Wishlist"],
+					'textHeight', 12,
+					'textWidth', 12,
+					'closeWhenClicked', true,
 					"func", function() AtlasLoot:SortWishList(true,AtlasLoot_CurrentWishList["Show"].ListType,AtlasLoot_CurrentWishList["Show"].ListNum) end,
 					"notCheckable", true
 				);
 				if  AtlasLootItemsFrame.refresh[2] == "AtlasLoot_CurrentWishList" and AtlasLoot_CurrentWishList["Show"].ListType == "Shared" then
 					AtlasLoot_Dewdrop:AddLine(
 						"text", AL["Copy Wishlist To Own"],
+						'textHeight', 12,
+						'textWidth', 12,
+						'closeWhenClicked', true,
 						"func", function() AtlasLoot:CloneSharedWishList() end,
 						"notCheckable", true
 					);
@@ -496,18 +510,27 @@ function AtlasLoot:WishListOptionsRegister()
 				if AtlasLootItemsFrame.refresh[2] == "AtlasLoot_CurrentWishList" and AtlasLoot_CurrentWishList["Show"].ListType == "Own" then
 					AtlasLoot_Dewdrop:AddLine(
 						"text", AL["Make Wishlist Default"],
+						'textHeight', 12,
+						'textWidth', 12,
+						'closeWhenClicked', true,
 						"func", function() AtlasLoot:SetDefaultWishList() end,
 						"notCheckable", true
 					);
 				end
 				AtlasLoot_Dewdrop:AddLine(
 					"text", AL["Delete Wishlist"],
+					'textHeight', 12,
+					'textWidth', 12,
+					'closeWhenClicked', true,
 					"func", function() AtlasLoot:DeleteWishList() end,
 					"notCheckable", true
 				);
 				--Close button
+				AtlasLoot_Dewdrop:AddLine()
 				AtlasLoot_Dewdrop:AddLine(
 					'text', AL["Close Menu"],
+					'textHeight', 12,
+					'textWidth', 12,
 					'textR', 0,
 					'textG', 1,
 					'textB', 1,
@@ -517,6 +540,7 @@ function AtlasLoot:WishListOptionsRegister()
 			end,
 			'dontHook', true
 		)
+		AtlasLoot_Dewdrop:Open(frame)
 end
 
 -- **********************************************************************
