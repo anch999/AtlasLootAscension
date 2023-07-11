@@ -22,6 +22,7 @@ if AL then
 
 	AL["Open In AscensionDB"] = true;
 	AL["Links"] = true;
+	AL["Add To Default"] = true;
 	-- Text strings for UI objects
 	AL["AtlasLoot"] = true;
 	AL["Select Loot Table"] = true;

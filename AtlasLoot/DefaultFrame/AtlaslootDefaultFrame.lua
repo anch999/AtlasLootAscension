@@ -40,7 +40,9 @@ function AtlasLootDefaultFrame_OnShow()
     elseif lastboss and lastboss[4] then
         ATLASLOOT_CURRENTTABLE = lastboss[5];
         ATLASLOOT_LASTMODULE = lastboss[4];
+        ATLASLOOT_MODUELNAME = lastboss[6];
         AtlasLoot:IsLootTableAvailable(lastboss[4]);
+        AtlasLootDefaultFrame_Menu:SetText(ATLASLOOT_MODUELNAME);
         AtlasLoot:ShowItemsFrame(lastboss[1], "AtlasLoot_Data", lastboss[3]);
     else
         AtlasLoot:ShowItemsFrame("EmptyTable", "AtlasLoot_Data", 1);
@@ -80,6 +82,7 @@ Called when a button in AtlasLoot_Dewdrop is clicked
 function AtlasLoot:DewDropClick(tablename, text, tablenum)
     ATLASLOOT_FILTER_ENABLE = false;
     ATLASLOOT_BACKENABLED = false;
+    ATLASLOOT_MODUELNAME = text;
     AtlasLootFilterCheck:SetChecked(false);
     tablename = tablename .. AtlasLoot_Expac;
     ATLASLOOT_CURRENTTABLE = tablename;
@@ -153,9 +156,7 @@ function AtlasLoot:DewdropExpansionMenuOpen()
                             'textR', 1,
                             'textG', 0.82,
                             'textB', 0,
-                            'func', function(arg1, arg2, arg3) AtlasLoot:DewdropExpansionMenuClick(arg1, arg2) end,
-                            'arg1', v[2],
-                            'arg2', v[1],
+                            'func', function() AtlasLoot:DewdropExpansionMenuClick(v[2], v[1]) end,
                             'textHeight', 12,
                             'textWidth', 12,
                             'closeWhenClicked', true,
@@ -261,10 +262,7 @@ function AtlasLoot:DewdropOpen()
                         'textR', 1,
                         'textG', 0.82,
                         'textB', 0,
-                        'func', function(arg1, arg2, arg3) AtlasLoot:DewDropClick(arg1, arg2, arg3) end,
-                        'arg1', v[2],
-                        'arg2', v[1],
-                        'arg3', v[3],
+                        'func', function() AtlasLoot:DewDropClick(v[2], v[1], v[3]) end,
                         'textHeight', 12,
                         'textWidth', 12,
                         'closeWhenClicked', true,

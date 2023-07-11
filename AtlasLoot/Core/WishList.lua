@@ -60,15 +60,15 @@ Add a item too the wishlist or show the selected wishlist
 ]]
 function AtlasLoot_WishListAddDropClick(typ, arg2, arg3, arg4, itemID, itemTexture, itemName, lootPage, sourcePage)
 	if arg4 == true then
-		if typ == "addOwn" then
+		if typ == "Own" then
 			AtlasLoot:ShowWishList("Own",arg2);
-		elseif typ == "addShared" then
+		elseif typ == "Shared" then
 			AtlasLoot:ShowWishList("Shared",arg2);
 		end
 	else
 		xtyp = typ
 		xarg2 = arg2
-		if typ == "addOwn" then
+		if typ == "Own" then
 			if AtlasLoot_WishListCheck(itemID) then
 				DEFAULT_CHAT_FRAME:AddMessage(BLUE..AL["AtlasLoot"]..": "..AtlasLoot_FixText(itemName)..RED..AL[" already in the WishList!"]..WHITE.." ("..AtlasLootWishList["Own"][arg2].Name..")");
 				return;
@@ -83,7 +83,7 @@ function AtlasLoot_WishListAddDropClick(typ, arg2, arg3, arg4, itemID, itemTextu
 				AtlasLoot:SortWishList(nil,"Own", arg2);
 			end
 			DEFAULT_CHAT_FRAME:AddMessage(RED..AL["AtlasLoot"]..": "..AtlasLoot_FixText(itemName)..GREY..AL[" added to the WishList."]..WHITE.." ("..AtlasLootWishList["Own"][arg2].Name..")");
-		elseif typ == "addShared" then
+		elseif typ == "Shared" then
 			if AtlasLoot_WishListCheck(itemID) then
 				DEFAULT_CHAT_FRAME:AddMessage(BLUE..AL["AtlasLoot"]..": "..AtlasLoot_FixText(itemName)..RED..AL[" already in the WishList!"]..WHITE.." ("..AtlasLootWishList["Shared"][arg2].Name);
 				return;
@@ -225,11 +225,11 @@ Main panel wishlistswap button
  function AtlasLoot:WishListSwapButton(xitemID, xitemTexture, xitemName, xlootPage, xsourcePage, button, show)
 	if AtlasLoot_CurrentWishList["Show"].ListType == "Own" then
 		if AtlasLootWishList["Shared"][1] then
-			AtlasLoot_WishListAddDropClick("addShared", 1, "", show);
+			AtlasLoot_WishListAddDropClick("Shared", 1, "", show);
 			AtlasLootItemsFrame_Wishlist_Swap:SetText("Own");
 		end
 	elseif AtlasLoot_CurrentWishList["Show"].ListType == "Shared" then
-		AtlasLoot_WishListAddDropClick("addOwn", AtlasLootWishList["Options"][playerName]["DefaultWishList"][3] or 1, "", show);
+		AtlasLoot_WishListAddDropClick("Own", AtlasLootWishList["Options"][playerName]["DefaultWishList"][3] or 1, "", show);
 		AtlasLootItemsFrame_Wishlist_Swap:SetText("Shared");
 	end
 end
@@ -245,7 +245,7 @@ function AtlasLoot:WishListButton(xitemID, xitemTexture, xitemName, xlootPage, x
 		if AtlasLootWishList["Own"][1] then
 			local listNum = AtlasLootWishList["Options"][playerName]["DefaultWishList"]
 			if not AtlasLootWishList[listNum[1]][listNum[3]] then listNum[3] = 1 end
-			AtlasLoot_WishListAddDropClick("addOwn", listNum[3], "", show)
+			AtlasLoot_WishListAddDropClick("Own", listNum[3], "", show)
 		else
 			DEFAULT_CHAT_FRAME:AddMessage(RED..AL["AtlasLoot"]..": "..AL["Please Create a Wishlist First."]);
 		end
@@ -259,7 +259,7 @@ Show the dropdownlist with the wishlists
 function AtlasLoot_ShowWishListDropDown(xitemID, xitemTexture, xitemName, xlootPage, xsourcePage, button, show, panelButton)
 	itemID, itemTexture, itemName, lootPage, sourcePage = xitemID, xitemTexture, xitemName, xlootPage, xsourcePage
 	if AtlasLootWishList["Options"][playerName]["UseDefaultWishlist"] == true and panelButton ~= "Enable" then
-		AtlasLoot_WishListAddDropClick("addOwn", AtlasLootWishList["Options"][playerName]["DefaultWishList"][3], "", nil)
+		AtlasLoot_WishListAddDropClick("Own", AtlasLootWishList["Options"][playerName]["DefaultWishList"][3], "", nil)
 		return
 	else
 		if AtlasLoot_Dewdrop:IsOpen(button) then
@@ -305,7 +305,7 @@ function AtlasLoot_ShowWishListDropDown(xitemID, xitemTexture, xitemName, xlootP
 									"text", v.Name,
 									"tooltipTitle", v.Name,
 									"func", AtlasLoot_WishListAddDropClick,
-									"arg1", "addOwn",
+									"arg1", "Own",
 									"arg2", k,
 									"arg3", "",
 									"arg4", show,
@@ -323,7 +323,7 @@ function AtlasLoot_ShowWishListDropDown(xitemID, xitemTexture, xitemName, xlootP
 									"text", v.Name,
 									"tooltipTitle", v.Name,
 									"func", AtlasLoot_WishListAddDropClick,
-									"arg1", "addShared",
+									"arg1", "Shared",
 									"arg2", k,
 									"arg3", "",
 									"arg4", show,
@@ -444,13 +444,13 @@ function AtlasLoot_WishListCheck(itemID, all)
 			return true, rettex
 		end
 	else
-		if xtyp == "addOwn" then
+		if xtyp == "Own" then
 			for _, v in ipairs(AtlasLootWishList["Own"][xarg2]) do
 				if v[2] == itemID then
 					return true;
 				end
 			end
-		elseif xtyp == "addShared" then
+		elseif xtyp == "Shared" then
 			for _, v in ipairs(AtlasLootWishList["Shared"][xarg2]) do
 				if v[2] == itemID then
 					return true;

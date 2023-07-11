@@ -13,6 +13,7 @@ local GOLD  = "|cFFFFD700";
 local AtlasLootScanTooltip = CreateFrame("GAMETOOLTIP","AtlasLootScanTooltip",nil,"GameTooltipTemplate");
 AtlasLootScanTooltip:SetOwner(UIParent, "ANCHOR_NONE");
 
+local playerName = UnitName("player");
 
 function AtlasLoot_GetEnchantLink(enchantID)
    if not enchantID then return end
@@ -230,14 +231,17 @@ function AtlasLootItem_OnClick(self ,arg1)
             StaticPopupDialogs.ATLASLOOT_ADD_CUSTOMHEADER.num = self.number;
         elseif (arg1=="LeftButton") and ATLASLOOT_ITEM_UNLOCK then
             AtlasLoot:MoveWishlistItem("Up",self.number);
+        elseif(arg1=="RightButton" and self.itemID ~= 0 and IsAltKeyDown() and AtlasLootItemsFrame.refresh[2] ~= "AtlasLoot_CurrentWishList") then
+            local listID = AtlasLootWishList["Options"][playerName]["DefaultWishList"]
+            AtlasLoot_WishListAddDropClick(listID[1], listID[3], "", nil, self.itemID, itemTexture, itemName, self.lootPage, self.sourcePage)
         elseif(arg1=="RightButton" and self.itemID ~= 0) then
             if(AtlasLootItemsFrame.refresh[1] == "SearchResult") then
                 local datID, _, datPage = strsplit("|", self.sourcePage);
                 AtlasLoot:ItemContextMenu(self.itemID, self.itemTexture, _G["AtlasLootItem_"..self:GetID().."_Name"]:GetText(), AtlasLoot_Data[datID][tonumber(datPage)].Name, 
-                                                datID .. "|" .. "AtlasLoot_Data" .. "|" .. tostring(datPage), self, "item");
+                                                datID .. "|" .. "AtlasLoot_Data" .. "|" .. tostring(datPage), self, "item", self.number);
             else
                 AtlasLoot:ItemContextMenu(self.itemID, self.itemTexture, _G["AtlasLootItem_"..self:GetID().."_Name"]:GetText(),
-                                                    AtlasLoot_BossName:GetText(), self.dataID .. "|" .. "AtlasLoot_Data" .. "|" .. tostring(self.tablenum), self, "item");
+                                                    AtlasLoot_BossName:GetText(), self.dataID .. "|" .. "AtlasLoot_Data" .. "|" .. tostring(self.tablenum), self, "item", self.number);
             end
         elseif(IsShiftKeyDown() and iteminfo and (AtlasLoot.db.profile.SafeLinks or AtlasLoot.db.profile.AllLinks)) then
             ChatEdit_InsertLink(itemLink);
@@ -398,7 +402,7 @@ function AtlasLoot:Chatlink(ID,chatType,Type)
     end
 end
 
-function AtlasLoot:ItemContextMenu(itemID, itemTexture, itemName, lootPage, sourcePage, self, Type)
+function AtlasLoot:ItemContextMenu(itemID, itemTexture, itemName, lootPage, sourcePage, self, Type, number)
     if AtlasLoot_Dewdrop:IsOpen(self) then AtlasLoot_Dewdrop:Close() return end
     AtlasLoot_Dewdrop:Register(self,
         'point', function(parent)
@@ -449,38 +453,58 @@ function AtlasLoot:ItemContextMenu(itemID, itemTexture, itemName, lootPage, sour
                     );
                     AtlasLoot_Dewdrop:AddLine()
                     AtlasLoot_Dewdrop:AddLine(
-                    'text', AL["WishLists"],
+                    'text', AL["Wishlists"],
                     'notCheckable', true,
                     'isTitle', true,
                     'textHeight', 13,
                     'textWidth', 13
                     )
-                    AtlasLoot_Dewdrop:AddLine(
-                        "text", AL["Own Wishlists"],
-                        "tooltipTitle", AL["Own Wishlists"],
-                        "value", "OwnWishlists",
-                        "hasArrow", true,
-                        'textHeight', 12,
-                        'textWidth', 12,
-                        "notCheckable", true
-                    );
-                    AtlasLoot_Dewdrop:AddLine(
-                        "text", AL["Shared Wishlists"],
-                        "tooltipTitle", AL["Shared Wishlists"],
-                        "value", "SharedWishlists",
-                        "hasArrow", true,
-                        'textHeight', 12,
-                        'textWidth', 12,
-                        "notCheckable", true
-                    );
-                    AtlasLoot_Dewdrop:AddLine(
-                        "text", AL["Add Wishlist"],
-                        "func", function() AtlasLoot:AddWishList() end,
-                        'closeWhenClicked', true,
-                        'textHeight', 12,
-                        'textWidth', 12,
-                        "notCheckable", true
-                    );
+                    if AtlasLootItemsFrame.refresh[2] == "AtlasLoot_CurrentWishList" then
+                        AtlasLoot_Dewdrop:AddLine(
+                            "text", AL["Delete"],
+                            "func", function() AtlasLoot_DeleteFromWishList(itemID,number); end,
+                            'closeWhenClicked', true,
+                            'textHeight', 12,
+                            'textWidth', 12,
+                            "notCheckable", true
+                        );
+                    else
+                        local listID = AtlasLootWishList["Options"][playerName]["DefaultWishList"]
+                        AtlasLoot_Dewdrop:AddLine(
+                            "text", AL["Add To Default"],
+                            "func", function() AtlasLoot_WishListAddDropClick(listID[1], listID[3], "", nil, itemID, itemTexture, itemName, lootPage, sourcePage) end,
+                            'closeWhenClicked', true,
+                            'textHeight', 12,
+                            'textWidth', 12,
+                            "notCheckable", true
+                        );
+                        AtlasLoot_Dewdrop:AddLine(
+                            "text", AL["Own Wishlists"],
+                            "tooltipTitle", AL["Own Wishlists"],
+                            "value", "OwnWishlists",
+                            "hasArrow", true,
+                            'textHeight', 12,
+                            'textWidth', 12,
+                            "notCheckable", true
+                        );
+                        AtlasLoot_Dewdrop:AddLine(
+                            "text", AL["Shared Wishlists"],
+                            "tooltipTitle", AL["Shared Wishlists"],
+                            "value", "SharedWishlists",
+                            "hasArrow", true,
+                            'textHeight', 12,
+                            'textWidth', 12,
+                            "notCheckable", true
+                        );
+                        AtlasLoot_Dewdrop:AddLine(
+                            "text", AL["Add Wishlist"],
+                            "func", function() AtlasLoot:AddWishList() end,
+                            'closeWhenClicked', true,
+                            'textHeight', 12,
+                            'textWidth', 12,
+                            "notCheckable", true
+                        );
+                    end
             elseif level == 2 then
                 if value == "OwnWishlists" then
                     for k,v in pairs(AtlasLootWishList["Own"]) do
@@ -491,7 +515,7 @@ function AtlasLoot:ItemContextMenu(itemID, itemTexture, itemName, lootPage, sour
                                 'closeWhenClicked', true,
                                 'textHeight', 12,
                                 'textWidth', 12,
-                                "func", function() AtlasLoot_WishListAddDropClick("addOwn", k, "", nil,itemID, itemTexture, itemName, lootPage, sourcePage) end,
+                                "func", function() AtlasLoot_WishListAddDropClick("Own", k, "", nil,itemID, itemTexture, itemName, lootPage, sourcePage) end,
                                 "notCheckable", true
                             );
                         end
@@ -505,7 +529,7 @@ function AtlasLoot:ItemContextMenu(itemID, itemTexture, itemName, lootPage, sour
                                 'closeWhenClicked', true,
                                 'textHeight', 12,
                                 'textWidth', 12,
-                                "func", function() AtlasLoot_WishListAddDropClick("addShared", k, "", nil, itemID, itemTexture, itemName, lootPage, sourcePage) end,
+                                "func", function() AtlasLoot_WishListAddDropClick("Shared", k, "", nil, itemID, itemTexture, itemName, lootPage, sourcePage) end,
                                 "notCheckable", true
                             );
                         end

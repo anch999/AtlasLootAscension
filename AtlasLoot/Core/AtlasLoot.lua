@@ -100,6 +100,29 @@ local AtlasLootDBDefaults = {
         AtlasType = "Release";
     }
 }
+local currentTradeSkills = {}
+local function tradeSkill()
+	local tradeSkillIDs = {
+		["Alchemy"] = {2259,3101,3464,11611,28596,51304},
+		["Blacksmithing"] = {2018,3100,3538,9785,29844,51300},
+		["Enchanting"] = {7411,7413,7413,13920,28029,51313},
+		["Engineering"] = {4036,4037,4038,12656,30350,51306},
+		["Herb Gathering"] = {2366,2368,3570,11993,28695,50300},
+		["Inscription"] = {45357,45358,45359,45360,45361,45363},
+		["Jewelcrafting"] = {25229,51311,28897,28895,28894,25230},
+		["Leatherworking"] = {51302,32549,10662,3811,3104,2108},
+		["Mining"] = {50310,29354,10248,3564,2576,2575},
+		["Skining"] = {50305,32678,10768,8618,8617,8613},
+		["Tailoring"] = {51309,26790,12180,3910,3909,3908}
+	}
+	for prof,v in pairs(tradeSkillIDs)do
+		for _,id in pairs(v) do
+			if CA_IsSpellKnown(id) then
+				currentTradeSkills[prof] = true;
+			end
+		end
+	end
+end
 
 -- Popup Box for first time users
 StaticPopupDialogs["ATLASLOOT_SETUP"] = {
@@ -236,6 +259,7 @@ function AtlasLoot:OnEnable()
 		AtlasLootItemsFrame_Wishlist_UnLock:Enable();
 	end
 	AtlasLoot:LoadItemIDsDatabase();
+	tradeSkill();
 end
 
 function AtlasLoot_Reset(data)
@@ -613,6 +637,13 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 					spellName, _, spellIcon, _, _, _, _, _, _ = GetSpellInfo(string.sub(IDfound, 2));
 					if spellName then
 						text = AtlasLoot_FixText(string.sub(dataSource[dataID][tablenum][i][4], 1, 4)..spellName);
+						if currentTradeSkills[dataSource[dataID].Name] then
+							if CA_IsSpellKnown(string.sub(IDfound, 2)) then
+								text = text.." |cff1EFF00(Known)"
+							else
+								text = text.." |cffFF3F40(Unknown)"
+							end
+						end
 					else
 						text = dataSource[dataID][tablenum][i][4];
 						text = AtlasLoot_FixText(text);
@@ -755,8 +786,8 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 
 		if dataSource_backup ~= "AtlasLoot_CurrentWishList" and dataID ~= "FilterList"  and dataSource[dataID].Back ~= true and dataID ~= "EmptyTable" then
 			if not AtlasLoot.db.profile.LastBoss or type(AtlasLoot.db.profile.LastBoss) ~= "table" then AtlasLoot.db.profile.LastBoss = {} end;
-			AtlasLoot.db.profile.LastBoss[AtlasLoot_Expac] = {dataID, dataSource_backup, tablenum, ATLASLOOT_LASTMODULE, ATLASLOOT_CURRENTTABLE};
-			AtlasLoot.db.profile[ATLASLOOT_CURRENTTABLE] = {dataID, dataSource_backup, tablenum, ATLASLOOT_LASTMODULE, ATLASLOOT_CURRENTTABLE};
+			AtlasLoot.db.profile.LastBoss[AtlasLoot_Expac] = {dataID, dataSource_backup, tablenum, ATLASLOOT_LASTMODULE, ATLASLOOT_CURRENTTABLE, ATLASLOOT_MODUELNAME};
+			AtlasLoot.db.profile[ATLASLOOT_CURRENTTABLE] = {dataID, dataSource_backup, tablenum, ATLASLOOT_LASTMODULE, ATLASLOOT_CURRENTTABLE, ATLASLOOT_MODUELNAME};
 		end
 
         --This is a valid QuickLook, so show the UI objects
