@@ -442,7 +442,7 @@ AtlasLoot_Data["CookingTBC"] = {
 	Name = COOKING;
 	Type = "CraftingNoBF";
 	{
-		Name = COOKING;
+		Name = "Page 1";
 		{ 1, "s42302", "33052", "=q1=Fisherman's Feast", "=ds=" .. AL["Trainer"] };
 		{ 2, "s45561", "34760", "=q1=Grilled Bonescale", "=ds=" .. AL["Trainer"] };
 		{ 3, "s45563", "34762", "=q1=Grilled Sculpin", "=ds=" .. AL["Trainer"] };
@@ -476,7 +476,7 @@ AtlasLoot_Data["CookingTBC"] = {
 
 	};
 	{
-		Name = COOKING;
+		Name = "Page 2";
 		{ 1, "s42296", "33048", "=q1=Stewed Trout", "=ds=" .. AL["Trainer"] };
 		{ 2, "s33286", "27657", "=q1=Blackened Basilisk", "=ds=" .. AL["Vendor"] .. ", " .. BabbleZone["Terokkar Forest"] };
 		{ 3, "s33292", "27663", "=q1=Blackened Sporefish", "=ds=" .. AL["Vendor"] .. ", " .. BabbleZone["Zangarmarsh"] };
