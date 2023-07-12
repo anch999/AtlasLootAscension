@@ -14,6 +14,7 @@ local AtlasLootScanTooltip = CreateFrame("GAMETOOLTIP","AtlasLootScanTooltip",ni
 AtlasLootScanTooltip:SetOwner(UIParent, "ANCHOR_NONE");
 
 local playerName = UnitName("player");
+local realmName = GetRealmName();
 
 function AtlasLoot_GetEnchantLink(enchantID)
    if not enchantID then return end
@@ -38,7 +39,7 @@ end
 -- Called when a loot item is moused over
 --------------------------------------------------------------------------------
 function AtlasLootItem_OnEnter(self)
-    local isItem;
+    local isItem, priority;
     AtlasLootTooltip:ClearLines();
     for i=1, 30, 1 do
         if (_G["AtlasLootTooltipTextRight"..i] ~= nil) then
@@ -112,8 +113,6 @@ function AtlasLootItem_OnEnter(self)
                     if( priority ~= nil and priority ~= "" ) then
                         AtlasLootTooltip:AddLine(GREEN..AL["Priority:"].." "..priority, 1, 1, 0);
                     end
-                    AtlasLootTooltip:AddLine(" ");
-                    AtlasLootTooltip:AddLine(AL["You can right-click to attempt to query the server.  You may be disconnected."], nil, nil, nil, 1);
                     AtlasLootTooltip:Show();
                 end
             --Item Sync tooltips
@@ -169,14 +168,44 @@ function AtlasLootItem_OnEnter(self)
                 end
             end
         else
-            spellID = string.sub(self.itemID, 2);
+            local spellID = tonumber(string.sub(self.itemID, 2));
             AtlasLootTooltip:SetOwner(self, "ANCHOR_RIGHT", -(self:GetWidth() / 2), 24);
             AtlasLootTooltip:ClearLines();
             AtlasLootTooltip:SetHyperlink(AtlasLoot_GetEnchantLink(spellID));
+            local hasSpace = false
+            local showOwn = nil
+            --adds tooltip showing if you know a recipe and it is one of your chars trade skills
+            if self.hasTrade then
+                hasSpace = true
+                if CA_IsSpellKnown(spellID) then
+                    showOwn = "|cff1EFF00You know this Recipe"
+                else
+                    showOwn = " |cffFF3F40You don't know this Recipe";
+                end
+            end
+            local text = ""
+            local showOther = false
+            local firstChar = false
+            --adds a tooltip if any of your other charaters knows a recipe 
+            for key,v in pairs(AtlasLoot.db.profiles) do
+                if gsub(key,"-",""):match(gsub(realmName,"-","")) and not gsub(key,"-",""):match(gsub(playerName,"-","")) and v.knownRecipes and v.knownRecipes[spellID] then
+                    local charName = strsplit("-", key, 5)
+                    if firstChar then text = text..", " end
+                    text = text..gsub(charName, " ", "")
+                    showOther = true
+                    hasSpace = true
+                    firstChar = true
+                end
+            end
+            text = "|cff1EFF00Recipe known by: ".."|cffffffff"..text
+            if hasSpace then AtlasLootTooltip:AddLine(" ") end
+            if showOwn then AtlasLootTooltip:AddLine(showOwn) end
+            if showOther then AtlasLootTooltip:AddLine(text) end
+
             AtlasLootTooltip:Show();
             if(self.spellitemID and ((AtlasLoot.db.profile.EquipCompare and ((not EquipCompare_RegisterTooltip) or (not EquipCompare_Enabled))) or IsShiftKeyDown())) then
                 AtlasLootItem_ShowCompareItem(self); --- CALL MISSING METHOD TO SHOW 2 TOOLTIPS (Item Compare)
-            end    
+            end
         end
     end
 end

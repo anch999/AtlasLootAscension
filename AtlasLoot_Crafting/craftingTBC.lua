@@ -560,15 +560,14 @@ AtlasLoot_Data["EnchantingTBC"] = {
 	};
 	{
 		Name = AL["Enchant Gloves"];
-		{ 1, "s44592", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Exceptional Spellpower", "=ds=" .. AL["Trainer"] };
-		{ 2, "s33997", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Major Spellpower", "=ds=#sr# 360" };
-		{ 3, "s33994", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Spell Strike", "=ds=#sr# 360" };
-		{ 4, "s33999", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Major Healing", "=ds=#sr# 350" };
-		{ 5, "s33995", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Major Strength", "=ds=#sr# 340" };
-		{ 6, "s33996", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Assault", "=ds=#sr# 310" };
-		{ 7, "s33993", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Blasting", "=ds=#sr# 305" };
-		{ 8, "s25080", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Superior Agility", "=ds=#sr# 300" };
-		{ 9, "s25072", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Threat", "=ds=#sr# 300" };
+		{ 1, "s33997", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Major Spellpower", "=ds=#sr# 360" };
+		{ 2, "s33994", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Spell Strike", "=ds=#sr# 360" };
+		{ 3, "s33999", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Major Healing", "=ds=#sr# 350" };
+		{ 4, "s33995", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Major Strength", "=ds=#sr# 340" };
+		{ 5, "s33996", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Assault", "=ds=#sr# 310" };
+		{ 6, "s33993", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Blasting", "=ds=#sr# 305" };
+		{ 7, "s25080", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Superior Agility", "=ds=#sr# 300" };
+		{ 8, "s25072", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Threat", "=ds=#sr# 300" };
 	};
 	{
 		Name = AL["Enchant Ring"];
@@ -680,10 +679,9 @@ AtlasLoot_Data["EngineeringTBC"] = {
 		Name = AL["Explosives"];
 		{ 1, "s30547", "23819", "=q1=Elemental Seaforium Charge", "=ds=#sr# 350" };
 		{ 2, "s30560", "23827", "=q1=Super Sapper Charge", "=ds=#sr# 340" };
-		{ 3, "s39973", "32413", "=q1=Frost Grenades", "=ds=#sr# 335" };
-		{ 4, "s30311", "23737", "=q1=Adamantite Grenade", "=ds=#sr# 325" };
-		{ 5, "s30558", "23826", "=q1=The Bigger One", "=ds=#sr# 325" };
-		{ 6, "s30310", "23736", "=q1=Fel Iron Bomb", "=ds=#sr# 300" };
+		{ 3, "s30311", "23737", "=q1=Adamantite Grenade", "=ds=#sr# 325" };
+		{ 4, "s30558", "23826", "=q1=The Bigger One", "=ds=#sr# 325" };
+		{ 5, "s30310", "23736", "=q1=Fel Iron Bomb", "=ds=#sr# 300" };
 	};
 	{
 		Name = AL["Item Enhancements"];
@@ -698,15 +696,14 @@ AtlasLoot_Data["EngineeringTBC"] = {
 		{ 2, "s44155", "34060", "=q3=Flying Machine", "=ds=#sr# 350" };
 		{ 3, "s30348", "23774", "=q2=Fel Iron Toolbox", "=ds=#sr# 325" };
 		{ 4, "s30337", "23767", "=q2=Crashin' Thrashin' Robot", "=ds=#sr# 325" };
-		{ 5, "s56459", "40892", "=q1=Hammer Pick", "=ds=#sr# 375" };
-		{ 6, "s44391", "34113", "=q1=Field Repair Bot 110G", "=ds=#sr# 360" };
-		{ 7, "s30552", "33093", "=q1=Mana Potion Injector", "=ds=#sr# 345" };
-		{ 8, "s30344", "23771", "=q1=Green Smoke Flare", "=ds=#sr# 335" };
-		{ 9, "s32814", "25886", "=q1=Purple Smoke Flare", "=ds=#sr# 335" };
-		{ 10, "s30341", "23768", "=q1=White Smoke Flare", "=ds=#sr# 335" };
-		{ 11, "s30551", "33092", "=q1=Healing Potion Injector", "=ds=#sr# 330" };
-		{ 12, "s30568", "23841", "=q1=Gnomish Flame Turret", "=ds=#sr# 325" };
-		{ 13, "s30548", "23821", "=q1=Zapthrottle Mote Extractor", "=ds=#sr# 305" };
+		{ 5, "s44391", "34113", "=q1=Field Repair Bot 110G", "=ds=#sr# 360" };
+		{ 6, "s30552", "33093", "=q1=Mana Potion Injector", "=ds=#sr# 345" };
+		{ 7, "s30344", "23771", "=q1=Green Smoke Flare", "=ds=#sr# 335" };
+		{ 8, "s32814", "25886", "=q1=Purple Smoke Flare", "=ds=#sr# 335" };
+		{ 9, "s30341", "23768", "=q1=White Smoke Flare", "=ds=#sr# 335" };
+		{ 10, "s30551", "33092", "=q1=Healing Potion Injector", "=ds=#sr# 330" };
+		{ 11, "s30568", "23841", "=q1=Gnomish Flame Turret", "=ds=#sr# 325" };
+		{ 12, "s30548", "23821", "=q1=Zapthrottle Mote Extractor", "=ds=#sr# 305" };
 	};
 	{
 		Name = AL["Reagents"];

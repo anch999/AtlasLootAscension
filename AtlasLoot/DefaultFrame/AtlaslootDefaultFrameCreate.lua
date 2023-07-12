@@ -95,6 +95,11 @@ for num = 1, 30 do
         button.icon = button:CreateTexture("AtlasLootItem_"..num.."_Icon","ARTWORK");
         button.icon:SetSize(25,25);
         button.icon:SetPoint("TOPLEFT", "AtlasLootItem_"..num,"TOPLEFT",1,-1);
+        button.Highlight = button:CreateTexture("AtlasLootItem_"..num.."_Highlight", "OVERLAY");
+        button.Highlight:SetSize(26,26);
+        button.Highlight:SetPoint("CENTER", button.icon, 0, 0);
+        button.Highlight:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\knownGreen");
+        button.Highlight:Hide();
         button.name = button:CreateFontString("AtlasLootItem_"..num.."_Name","ARTWORK","GameFontNormal");
         button.name:SetSize(205,12);
         button.name:SetPoint("TOPLEFT","AtlasLootItem_"..num.."_Icon","TOPRIGHT",3,0);

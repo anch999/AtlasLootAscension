@@ -68,6 +68,7 @@ SearchPrevData = {"", "", ""};
 AtlasLootCharDB = {};
 AtlasLoot_TokenData = {};
 
+local realmName = GetRealmName()
 
 local AtlasLootDBDefaults = {
     profile = {
@@ -100,28 +101,17 @@ local AtlasLootDBDefaults = {
         AtlasType = "Release";
     }
 }
+
+--makes a list of trade skills
+local profCheck = false
 local currentTradeSkills = {}
 local function tradeSkill()
-	local tradeSkillIDs = {
-		["Alchemy"] = {2259,3101,3464,11611,28596,51304},
-		["Blacksmithing"] = {2018,3100,3538,9785,29844,51300},
-		["Enchanting"] = {7411,7413,7413,13920,28029,51313},
-		["Engineering"] = {4036,4037,4038,12656,30350,51306},
-		["Herb Gathering"] = {2366,2368,3570,11993,28695,50300},
-		["Inscription"] = {45357,45358,45359,45360,45361,45363},
-		["Jewelcrafting"] = {25229,51311,28897,28895,28894,25230},
-		["Leatherworking"] = {51302,32549,10662,3811,3104,2108},
-		["Mining"] = {50310,29354,10248,3564,2576,2575},
-		["Skining"] = {50305,32678,10768,8618,8617,8613},
-		["Tailoring"] = {51309,26790,12180,3910,3909,3908}
-	}
-	for prof,v in pairs(tradeSkillIDs)do
-		for _,id in pairs(v) do
-			if CA_IsSpellKnown(id) then
-				currentTradeSkills[prof] = true;
-			end
-		end
-	end
+	currentTradeSkills[C_Professions:GetFirstProfession().Name] = true;
+	currentTradeSkills[C_Professions:GetSecondProfession().Name] = true;
+	currentTradeSkills[C_Professions:GetCooking().Name] = true;
+	currentTradeSkills[C_Professions:GetFishing().Name] = true;
+	currentTradeSkills[C_Professions:GetFirstAid().Name] = true;
+	profCheck = true;
 end
 
 -- Popup Box for first time users
@@ -259,7 +249,8 @@ function AtlasLoot:OnEnable()
 		AtlasLootItemsFrame_Wishlist_UnLock:Enable();
 	end
 	AtlasLoot:LoadItemIDsDatabase();
-	tradeSkill();
+	AtlasLoot:LoadTradeskillRecipes();
+	AtlasLoot:PopulateProfessions();
 end
 
 function AtlasLoot_Reset(data)
@@ -434,8 +425,10 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 	local text, extra;
 	local isValid, isItem, toShow, IDfound;
 	local spellName, spellIcon;
-
 	SearchPrevData = {dataID, dataSource_backup, tablenum};
+
+	--builds a list of tradeskills
+	if not profCheck then tradeSkill() end
 
     --If the loot table name has not been passed, throw up a debugging statement
 	if dataID == nil then
@@ -551,6 +544,8 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
         _G["AtlasLootItem_"..i]:Hide();
         _G["AtlasLootItem_"..i].itemID = 0;
         _G["AtlasLootItem_"..i].spellitemID = 0;
+		_G["AtlasLootItem_"..i.."_Highlight"]:Hide();
+		_G["AtlasLootItem_"..i].hasTrade = false;
 	end
 
 	-- Sets the main page lable
@@ -637,16 +632,25 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 					spellName, _, spellIcon, _, _, _, _, _, _ = GetSpellInfo(string.sub(IDfound, 2));
 					if spellName then
 						text = AtlasLoot_FixText(string.sub(dataSource[dataID][tablenum][i][4], 1, 4)..spellName);
-						if currentTradeSkills[dataSource[dataID].Name] then
-							if CA_IsSpellKnown(string.sub(IDfound, 2)) then
-								text = text.." |cff1EFF00(Known)"
-							else
-								text = text.." |cffFF3F40(Unknown)"
-							end
-						end
 					else
 						text = dataSource[dataID][tablenum][i][4];
 						text = AtlasLoot_FixText(text);
+					end
+
+					--Adds button highlights if you know a recipe or have a char that knows one
+					if currentTradeSkills[dataSource[dataID].Name] then
+						_G["AtlasLootItem_"..dataSource[dataID][tablenum][i][1]].hasTrade = true;
+						if CA_IsSpellKnown(string.sub(IDfound, 2)) then
+							_G["AtlasLootItem_"..dataSource[dataID][tablenum][i][1].."_Highlight"]:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\knownGreen");
+							_G["AtlasLootItem_"..dataSource[dataID][tablenum][i][1].."_Highlight"]:Show();
+						end
+					else
+						for key,v in pairs(AtlasLoot.db.profiles) do
+							if gsub(key,"-",""):match(gsub(realmName,"-","")) and v.knownRecipes and v.knownRecipes[tonumber(string.sub(IDfound, 2))] then
+								_G["AtlasLootItem_"..dataSource[dataID][tablenum][i][1].."_Highlight"]:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\knownBlue");
+								_G["AtlasLootItem_"..dataSource[dataID][tablenum][i][1].."_Highlight"]:Show();
+							end
+						end
 					end
 				end
 
@@ -1140,3 +1144,75 @@ function AtlasLoot:LoadItemIDsDatabase()
 	-- This will run over time (usually about 30s for a file this size), but will maintain playable fps while running.
 	content:ParseAsync()
 	end
+
+function AtlasLoot:PopulateProfessions()
+	if not AtlasLoot.db.profile.knownRecipes then AtlasLoot.db.profile.knownRecipes = {} end
+	for _,prof in pairs(TRADESKILL_RECIPES) do
+	   for _,cat in pairs(prof) do
+		  for _,recipe in pairs(cat) do
+			 if CA_IsSpellKnown(recipe.SpellEntry) then
+				AtlasLoot.db.profile.knownRecipes[recipe.SpellEntry] = true;
+			 end
+		  end
+	   end
+	end
+end
+
+function AtlasLoot:LoadTradeskillRecipes()
+	if TRADESKILL_RECIPES then return end
+		TRADESKILL_RECIPES = {}
+		TRADESKILL_CRAFTS = {}
+
+		local fmtSubClass = "ITEM_SUBCLASS_%d_%d"
+		local fmtTotem = "SPELL_TOTEM_%d"
+		local fmtObject = "SPELL_FOCUS_OBJECT_%d"
+
+		local content = C_ContentLoader:Load("TradeSkillRecipeData")
+
+		local function GetToolName(toolID)
+			return _G[format(fmtTotem, toolID)]
+		end
+
+		content:SetParser(function(_, data)
+			if not TRADESKILL_RECIPES[data.SkillIndex] then
+				TRADESKILL_RECIPES[data.SkillIndex] = {}
+			end
+			
+			data.Category = _G[format(fmtSubClass, data.CreatedItemClass, data.CreatedItemSubClass)]
+
+			if not TRADESKILL_RECIPES[data.SkillIndex][data.Category] then
+				TRADESKILL_RECIPES[data.SkillIndex][data.Category] = {}
+			end
+			
+			data.IsHighRisk = toboolean(data.IsHighRisk)
+
+			-- reformat reagents
+			data.Reagents = {}
+			local reagents = data.ReagentData:SplitToTable(",")
+			for _, reagentString in ipairs(reagents) do
+				local item, count = reagentString:match("(%d*):(%d*)")
+				item = tonumber(item)
+				count = tonumber(count)
+				if item and item ~= 0 and count and count ~= 0 then
+					tinsert(data.Reagents, {item, count})
+				end
+			end
+
+			if #data.Reagents > 0 then
+				data.ReagentData = nil
+
+				-- reformat tools (totems)
+				data.Tools = data.TotemCategories:SplitToTable(",", GetToolName)
+				data.TotemCategories = nil
+				
+				data.SpellFocusObject = _G[format(fmtObject, data.SpellFocusObject)]
+
+				tinsert(TRADESKILL_RECIPES[data.SkillIndex][data.Category], data)
+				if data.CreatedItemEntry > 0 then
+					TRADESKILL_CRAFTS[data.CreatedItemEntry] = data
+				end
+			end
+		end)
+
+		content:Parse()
+end

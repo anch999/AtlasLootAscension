@@ -542,6 +542,7 @@ AtlasLoot_Data["EnchantingWRATH"] = {
 		{ 6, "s44484", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Expertise", "=ds=" .. AL["Trainer"] };
 		{ 7, "s44513", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Greater Assault", "=ds=" .. AL["Trainer"] };
 		{ 8, "s44506", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Gatherer", "=ds=" .. AL["Trainer"] };
+		{ 9, "s44592", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Exceptional Spellpower", "=ds=" .. AL["Trainer"] };
 	};
 	{
 		Name = AL["Enchant Ring"];
@@ -625,6 +626,7 @@ AtlasLoot_Data["EngineeringWRATH"] = {
 		{ 2, "s56468", "44951", "=q1=Box of Bombs", "=ds=#sr# 405" };
 		{ 3, "s56463", "40536", "=q1=Explosive Decoy", "=ds=#sr# 375" };
 		{ 4, "s56460", "40771", "=q1=Cobalt Frag Bomb", "=ds=#sr# 350" };
+		{ 5, "s39973", "32413", "=q1=Frost Grenades", "=ds=#sr# 335" };
 	};
 	{
 		Name = AL["Item Enhancements"];
@@ -654,6 +656,7 @@ AtlasLoot_Data["EngineeringWRATH"] = {
 		{ 4, "s56472", "40768", "=q3=MOLL-E", "=ds=#sr# 425" };
 		{ 5, "s67920", "48933", "=q3=Wormhole Generator: Northrend", "=ds=#sr# 415" };
 		{ 6, "s30349", "23775", "=q3=Titanium Toolbox", "=ds=#sr# 405" };
+		{ 7, "s56459", "40892", "=q1=Hammer Pick", "=ds=#sr# 375" };
 	};
 	{
 		Name = AL["Reagents"];
