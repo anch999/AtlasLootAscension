@@ -106,11 +106,11 @@ local AtlasLootDBDefaults = {
 local profCheck = false
 local currentTradeSkills = {}
 local function tradeSkill()
-	currentTradeSkills[C_Professions:GetFirstProfession().Name] = true;
-	currentTradeSkills[C_Professions:GetSecondProfession().Name] = true;
-	currentTradeSkills[C_Professions:GetCooking().Name] = true;
-	currentTradeSkills[C_Professions:GetFishing().Name] = true;
-	currentTradeSkills[C_Professions:GetFirstAid().Name] = true;
+	if C_Professions:GetFirstProfession() then currentTradeSkills[C_Professions:GetFirstProfession().Name] = true end
+	if C_Professions:GetSecondProfession() then currentTradeSkills[C_Professions:GetSecondProfession().Name] = true end
+	if C_Professions:GetCooking() then currentTradeSkills[C_Professions:GetCooking().Name] = true end
+	if C_Professions:GetFishing() then currentTradeSkills[C_Professions:GetFishing().Name] = true end
+	if C_Professions:GetFirstAid() then currentTradeSkills[C_Professions:GetFirstAid().Name] = true end
 	profCheck = true;
 end
 
@@ -638,12 +638,10 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 					end
 
 					--Adds button highlights if you know a recipe or have a char that knows one
-					if currentTradeSkills[dataSource[dataID].Name] then
+					if currentTradeSkills[dataSource[dataID].Name] and CA_IsSpellKnown(string.sub(IDfound, 2)) then
 						_G["AtlasLootItem_"..dataSource[dataID][tablenum][i][1]].hasTrade = true;
-						if CA_IsSpellKnown(string.sub(IDfound, 2)) then
-							_G["AtlasLootItem_"..dataSource[dataID][tablenum][i][1].."_Highlight"]:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\knownGreen");
-							_G["AtlasLootItem_"..dataSource[dataID][tablenum][i][1].."_Highlight"]:Show();
-						end
+						_G["AtlasLootItem_"..dataSource[dataID][tablenum][i][1].."_Highlight"]:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\knownGreen");
+						_G["AtlasLootItem_"..dataSource[dataID][tablenum][i][1].."_Highlight"]:Show();
 					else
 						for key,v in pairs(AtlasLoot.db.profiles) do
 							if gsub(key,"-",""):match(gsub(realmName,"-","")) and v.knownRecipes and v.knownRecipes[tonumber(string.sub(IDfound, 2))] then
@@ -745,7 +743,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 				    itemButton.iteminfo.idcore = IDfound;
 					itemButton.iteminfo.icontexture = GetItemIcon(IDfound);
                     itemButton.storeID = IDfound;
-                    itemButton.dressingroomID = IDfound;
+                    itemButton.dressingroomID = dataSource[dataID][tablenum][i][3];
 				end
 
 				itemButton.tablenum = tablenum;

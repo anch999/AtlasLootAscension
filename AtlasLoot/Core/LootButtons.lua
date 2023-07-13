@@ -7,9 +7,9 @@ local PURPLE = "|cff9F3FFF";
 local BLUE = "|cff0070dd";
 local ORANGE = "|cffFF8400";
 local DEFAULT = "|cffFFd200";
-local LIGHTBLUE = "|cff00ccff";
+local LIGHTBLUE = "|cFFADD8E6";
 local ORANGE2 = "|cFFFFA500";
-local GOLD  = "|cFFFFD700";
+
 local AtlasLootScanTooltip = CreateFrame("GAMETOOLTIP","AtlasLootScanTooltip",nil,"GameTooltipTemplate");
 AtlasLootScanTooltip:SetOwner(UIParent, "ANCHOR_NONE");
 
@@ -197,7 +197,7 @@ function AtlasLootItem_OnEnter(self)
                     firstChar = true
                 end
             end
-            text = "|cff1EFF00Recipe known by: ".."|cffffffff"..text
+            text = BLUE.."Recipe known by: "..WHITE..text
             if hasSpace then AtlasLootTooltip:AddLine(" ") end
             if showOwn then AtlasLootTooltip:AddLine(showOwn) end
             if showOther then AtlasLootTooltip:AddLine(text) end
