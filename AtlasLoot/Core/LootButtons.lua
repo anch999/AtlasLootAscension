@@ -73,9 +73,10 @@ function AtlasLootItem_OnEnter(self)
                     if ( AtlasLoot.db.profile.ItemIDs ) then
                         AtlasLootTooltip:AddLine(BLUE..AL["ItemID:"].." "..self.itemID, nil, nil, nil, 1);
                     end
-                    if( self.droprate ~= nil) and ( self.droprate:match("=EI=") ) then
-                        AtlasLootTooltip:AddLine(AL["Extra Info: "]..string.sub(self.droprate, 5), 1, 1, 0);
-                    elseif( self.droprate ~= nil) then
+                    if self.extraInfo then
+                        AtlasLootTooltip:AddLine(AL["Extra Info: "]..self.extraInfo, 1, 1, 0);
+                    end
+                    if self.droprate then
                         AtlasLootTooltip:AddLine(AL["Drop Rate: "]..self.droprate, 1, 1, 0);
                     end
                     if( DKP ~= nil and DKP ~= "" ) then
@@ -102,9 +103,10 @@ function AtlasLootItem_OnEnter(self)
                     if ( AtlasLoot.db.profile.ItemIDs ) then
                         AtlasLootTooltip:AddLine(BLUE..AL["ItemID:"].." "..self.itemID, nil, nil, nil, 1);
                     end
-                    if( self.droprate ~= nil) and (self.droprate:match("=EI=")) then
-                        AtlasLootTooltip:AddLine(AL["Extra Info: "]..string.sub(self.droprate, 5), 1, 1, 0);
-                    elseif( self.droprate ~= nil) then
+                    if self.extraInfo then
+                        AtlasLootTooltip:AddLine(AL["Extra Info: "]..self.extraInfo, 1, 1, 0);
+                    end
+                    if self.droprate then
                         AtlasLootTooltip:AddLine(AL["Drop Rate: "]..self.droprate, 1, 1, 0);
                     end
                     if( DKP ~= nil and DKP ~= "" ) then
@@ -124,9 +126,10 @@ function AtlasLootItem_OnEnter(self)
                 if ( AtlasLoot.db.profile.ItemIDs ) then
                     GameTooltip:AddLine(BLUE..AL["ItemID:"].." "..self.itemID, nil, nil, nil, 1);
                 end
-                if( self.droprate ~= nil) and ( self.droprate:match("=EI=") ) then
-                    AtlasLootTooltip:AddLine(AL["Extra Info: "]..string.sub(self.droprate, 5), 1, 1, 0);
-                elseif( self.droprate ~= nil) then
+                if self.extraInfo then
+                    AtlasLootTooltip:AddLine(AL["Extra Info: "]..self.extraInfo, 1, 1, 0);
+                end
+                if self.droprate then
                     AtlasLootTooltip:AddLine(AL["Drop Rate: "]..self.droprate, 1, 1, 0);
                 end
                 if( DKP ~= nil and DKP ~= "" ) then
@@ -149,9 +152,10 @@ function AtlasLootItem_OnEnter(self)
                         if ( AtlasLoot.db.profile.ItemIDs ) then
                             AtlasLootTooltip:AddLine(BLUE..AL["ItemID:"].." "..self.itemID, nil, nil, nil, 1);
                         end
-                        if( self.droprate ~= nil) and ( self.droprate:match("=EI=") ) then
-                            AtlasLootTooltip:AddLine(AL["Extra Info: "]..string.sub(self.droprate, 5), 1, 1, 0);
-                        elseif( self.droprate ~= nil) then
+                        if self.extraInfo then
+                            AtlasLootTooltip:AddLine(AL["Extra Info: "]..WHITE..self.extraInfo, 1, 1, 0);
+                        end
+                        if self.droprate then
                             AtlasLootTooltip:AddLine(AL["Drop Rate: "]..self.droprate, 1, 1, 0);
                         end
                         if( DKP ~= nil and DKP ~= "" ) then
