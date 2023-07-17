@@ -643,6 +643,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 						_G["AtlasLootItem_"..dataSource[dataID][tablenum][i][1].."_Highlight"]:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\knownGreen");
 						_G["AtlasLootItem_"..dataSource[dataID][tablenum][i][1].."_Highlight"]:Show();
 					else
+						_G["AtlasLootItem_"..dataSource[dataID][tablenum][i][1]].hasTrade = false;
 						for key,v in pairs(AtlasLoot.db.profiles) do
 							if gsub(key,"-",""):match(gsub(realmName,"-","")) and v.knownRecipes and v.knownRecipes[tonumber(string.sub(IDfound, 2))] then
 								_G["AtlasLootItem_"..dataSource[dataID][tablenum][i][1].."_Highlight"]:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\knownBlue");
@@ -666,6 +667,8 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 				--Insert the item description
 				if dataSource[dataID][tablenum][i][6] and dataSource[dataID][tablenum][i][6] ~= "" then
 					extra = dataSource[dataID][tablenum][i][6];
+				elseif AtlasLoot_Data["ExtraCraftingData"] and AtlasLoot_Data["ExtraCraftingData"][tonumber(string.sub(dataSource[dataID][tablenum][i][2],2))] then
+					extra = "#sr# "..AtlasLoot_Data["ExtraCraftingData"][tonumber(string.sub(dataSource[dataID][tablenum][i][2],2))][1];
 				elseif dataSource[dataID][tablenum][i][5] then
 					extra = dataSource[dataID][tablenum][i][5];
 				else
@@ -756,10 +759,8 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 
 				if (dataID == "SearchResult" or dataSource_backup == "AtlasLoot_CurrentWishList") and dataSource[dataID][tablenum][i][8] then
 					itemButton.sourcePage = dataSource[dataID][tablenum][i][8];
-				elseif dataSource[dataID][tablenum][i][8] ~= nil and dataSource[dataID][tablenum][i][8]:match("=TT=") then
-					itemButton.sourcePage = string.sub(dataSource[dataID][tablenum][i][8], 5);
-				elseif dataSource[dataID][tablenum][i][8] ~= nil and dataSource[dataID][tablenum][i][8]:match("=LT=") then
-					itemButton.sourcePage = dataSource[dataID][tablenum][i][8];
+				elseif dataSource[dataID][tablenum][i].lootTable then
+					itemButton.sourcePage = dataSource[dataID][tablenum][i].lootTable;
 				else
 					itemButton.sourcePage = nil;
 				end

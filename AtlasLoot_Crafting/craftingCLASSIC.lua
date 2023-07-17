@@ -2372,20 +2372,6 @@ AtlasLoot_Data["AlchemyHighRiskCLASSIC"] = {
 	Name = ALCHEMY .. " High Risk";
 	Type = "CraftingNoBF";
 	{
-		Name = "Common";
-		{ 1, "s968402", "967443", "=q2=Flask of Manifesting Power", "=ds=#sr# 300" };
-		{ 2, "s968405", "967446", "=q2=Flask of the Warsong", "=ds=#sr# 300" };
-		{ 3, "s968408", "967449", "=q2=Flask of the Kirin Tor", "=ds=#sr# 300" };
-		{ 4, "s968411", "967452", "=q2=Flask of Butchery", "=ds=#sr# 300" };
-		{ 5, "s968414", "967455", "=q2=Flask of the Unyielding", "=ds=#sr# 300" };
-		{ 6, "s968417", "967458", "=q2=Flask of Unrelenting Power", "=ds=#sr# 300" };
-		{ 7, "s968420", "967461", "=q2=Flask of Savage Assault", "=ds=#sr# 300" };
-		{ 8, "s968423", "967464", "=q2=Flask of Shattering Thunder", "=ds=#sr# 300" };
-		{ 9, "s968426", "967467", "=q2=Flask of the Executioner", "=ds=#sr# 300" };
-		{ 10, "s968429", "967470", "=q2=Flask of Deep Meditation", "=ds=#sr# 300" };
-		{ 11, "s968432", "967473", "=q2=Flask of Adept Striking", "=ds=#sr# 300" };
-	};
-	{
 		Name = "Rare";
 		{ 1, "s968403", "967444", "=q3=Potent Flask of Manifesting Power", "=ds=#sr# 300" };
 		{ 2, "s968406", "967447", "=q3=Potent Flask of the Warsong", "=ds=#sr# 300" };
@@ -2419,18 +2405,6 @@ AtlasLoot_Data["SmithingHighRiskCLASSIC"] = {
 	Name = BLACKSMITHING .. " High Risk";
 	Type = "CraftingNoBF";
 	{
-		Name = "Common";
-		{ 1, "s968018", "967172", "=q2=Living Belt Buckle", "=ds=#sr# 300" };
-		{ 2, "s968021", "967175", "=q2=Deflecting Buckle", "=ds=#sr# 300" };
-		{ 3, "s968024", "967178", "=q2=Roguish Belt Buckle", "=ds=#sr# 300" };
-		{ 4, "s968027", "967181", "=q2=Dancing Belt Buckle", "=ds=#sr# 300" };
-		{ 5, "s968030", "967184", "=q2=Magus Belt Buckle", "=ds=#sr# 300" };
-		{ 6, "s968033", "967187", "=q2=Cleric's Belt Buckle", "=ds=#sr# 300" };
-		{ 7, "s968036", "967190", "=q2=Warlord's Belt Buckle", "=ds=#sr# 300" };
-		{ 8, "s968039", "967193", "=q2=Gaurdian's Belt Buckle", "=ds=#sr# 300" };
-		{ 10, "s968480", "967680", "=q2=Homicite Key", "=ds=#sr# 300" };
-	};
-	{
 		Name = "Rare";
 		{ 1, "s968019", "967173", "=q3=Sturdy Living Belt Buckle", "=ds=#sr# 300" };
 		{ 2, "s968022", "967176", "=q3=Sturdy Deflecting Belt Buckle", "=ds=#sr# 300" };
@@ -2460,15 +2434,6 @@ AtlasLoot_Data["LeatherworkingHighRiskCLASSIC"] = {
 	Name = LEATHERWORKING .. " High Risk";
 	Type = "CraftingNoBF";
 	{
-		Name = "Common";
-		{ 1, "s968000", "967154", "=q2=Yeti Gambeson", "=ds=#sr# 300" };
-		{ 2, "s968003", "967157", "=q2=Devilsaur Gambeson", "=ds=#sr# 300" };
-		{ 3, "s968006", "967160", "=q2=Plaguebat Gambeson", "=ds=#sr# 300" };
-		{ 4, "s968009", "967163", "=q2=Sandworm Gambeson", "=ds=#sr# 300" };
-		{ 5, "s968012", "967166", "=q2=Black Scale Gambeson", "=ds=#sr# 300" };
-		{ 6, "s968015", "967169", "=q2=Blue Scale Gambeson", "=ds=#sr# 300" };
-	};
-	{
 		Name = "Rare";
 		{ 1, "s968001", "967155", "=q3=Sturdy Yeti Gambeson", "=ds=#sr# 300" };
 		{ 2, "s968004", "967158", "=q3=Sturdy Devilsaur Gambeson", "=ds=#sr# 300" };
@@ -2492,15 +2457,6 @@ AtlasLoot_Data["EngineeringHighRiskCLASSIC"] = {
 	Name = ENGINEERING .. " High Risk";
 	Type = "CraftingNoBF";
 	{
-		Name = "Common";
-		{ 1, "s968042", "967196", "=q2=Gnomish Magnifying Lense I", "=ds=#sr# 300" };
-		{ 2, "s968045", "967199", "=q2=Gnomish Focusing Lense", "=ds=#sr# 300" };
-		{ 3, "s968048", "967202", "=q2=Gnomish Prismatic Lense", "=ds=#sr# 300" };
-		{ 4, "s968051", "967205", "=q2=Hipfire Scope", "=ds=#sr# 300" };
-		{ 5, "s968054", "967208", "=q2=Precision Scope", "=ds=#sr# 300" };
-		{ 6, "s968057", "967211", "=q2=Reflex Scope", "=ds=#sr# 300" };
-	};
-	{
 		Name = "Rare";
 		{ 1, "s968043", "967197", "=q3=Focused Gnomish Magnifying Lense", "=ds=#sr# 300" };
 		{ 2, "s968046", "967200", "=q3=Focused Gnomish Focusing Lense", "=ds=#sr# 300" };
@@ -2523,18 +2479,6 @@ AtlasLoot_Data["EngineeringHighRiskCLASSIC"] = {
 AtlasLoot_Data["EnchantingHighRiskCLASSIC"] = {
 	Name = ENCHANTING .. " High Risk";
 	Type = "CraftingNoBF";
-	{
-		Name = "Common";
-		{ 1, "s968676", "Spell_Holy_GreaterHeal", "=q2=Enchant Weapon - Lesser Unstoppable Assault", "=ds=#sr# 300" };
-		{ 2, "s968679", "Spell_Holy_GreaterHeal", "=q2=Enchant Weapon - Lesser Lucid Assault", "=ds=#sr# 300" };
-		{ 3, "s968682", "Spell_Holy_GreaterHeal", "=q2=Enchant Weapon - Lesser Spellbinder's Rage", "=ds=#sr# 300" };
-		{ 4, "s968685", "Spell_Holy_GreaterHeal", "=q2=Enchant Weapon - Lesser Ninja's Focus", "=ds=#sr# 300" };
-		{ 5, "s968688", "Spell_Holy_GreaterHeal", "=q2=Enchant Weapon - Lesser Grovewarden's Blessing", "=ds=#sr# 300" };
-		{ 6, "s968691", "Spell_Holy_GreaterHeal", "=q2=Enchant Weapon - Lesser Viscious Assault", "=ds=#sr# 300" };
-		{ 7, "s968694", "Spell_Holy_GreaterHeal", "=q2=Enchant Weapon - Lesser Arcane Dexterity", "=ds=#sr# 300" };
-		{ 8, "s968697", "Spell_Holy_GreaterHeal", "=q2=Enchant Weapon - Lesser Arcane Artillery", "=ds=#sr# 300" };
-		{ 9, "s968700", "Spell_Holy_GreaterHeal", "=q2=Enchant Weapon - Lesser Arcane Precision", "=ds=#sr# 300" };
-	};
 	{
 		Name = "Rare";
 		{ 1, "s968677", "Spell_Holy_GreaterHeal", "=q3=Enchant Weapon - Unstoppable Assault", "=ds=#sr# 300" };
@@ -2567,15 +2511,6 @@ AtlasLoot_Data["TailoringHighRiskCLASSIC"] = {
 	Name = TAILORING .. " High Risk";
 	Type = "CraftingNoBF";
 	{
-		Name = "Common";
-		{ 1, "s968060", "967214", "=q2=Dragonweave Cloak Lining", "=ds=#sr# 300" };
-		{ 2, "s968063", "967217", "=q2=Twilight Cloak Lining", "=ds=#sr# 300" };
-		{ 3, "s968066", "967220", "=q2=Scarlet Cloak Lining", "=ds=#sr# 300" };
-		{ 4, "s968069", "967223", "=q2=Rampager's Cloak Lining", "=ds=#sr# 300" };
-		{ 5, "s968072", "967226", "=q2=Deadwind Cloak Lining", "=ds=#sr# 300" };
-		{ 6, "s968075", "967229", "=q2=Slippery Cloak Lining", "=ds=#sr# 300" };
-	};
-	{
 		Name = "Rare";
 		{ 1, "s968061", "967215", "=q3=Heavy Dragonweave Cloak Lining", "=ds=#sr# 300" };
 		{ 2, "s968064", "967218", "=q3=Heavy Twilight Cloak Lining", "=ds=#sr# 300" };
@@ -2598,54 +2533,6 @@ AtlasLoot_Data["TailoringHighRiskCLASSIC"] = {
 AtlasLoot_Data["CookingHighRiskCLASSIC"] = {
 	Name = COOKING .. " High Risk";
 	Type = "CraftingNoBF";
-	{
-		Name = "Common";
-		{ 1, "s968279", "967509", "=q2=Animated Soup for the Soul", "=ds=#sr# 300" };
-		{ 2, "s968282", "967512", "=q2=Volcanic Sandwich", "=ds=#sr# 300" };
-		{ 3, "s968285", "967515", "=q2=Winter Wontons", "=ds=#sr# 300" };
-		{ 4, "s968288", "967518", "=q2=Storm Steak", "=ds=#sr# 300" };
-		{ 5, "s968291", "967521", "=q2=Void Touched Stew", "=ds=#sr# 300" };
-		{ 6, "s968294", "967524", "=q2=Spicy Vulture Steak", "=ds=#sr# 300" };
-		{ 7, "s968297", "967527", "=q2=Wizard Wontons", "=ds=#sr# 300" };
-		{ 8, "s968300", "967530", "=q2=Jurassic Burger", "=ds=#sr# 300" };
-		{ 9, "s968303", "967533", "=q2=Rough-alo wings", "=ds=#sr# 300" };
-		{ 10, "s968306", "967536", "=q2=The Whooper Sandwich", "=ds=#sr# 300" };
-		{ 11, "s968309", "967539", "=q2=Vulture a la King", "=ds=#sr# 300" };
-		{ 12, "s968312", "967542", "=q2=Scorching Hot Steak", "=ds=#sr# 300" };
-		{ 13, "s968315", "967545", "=q2=Lively Stew", "=ds=#sr# 300" };
-		{ 14, "s968318", "967548", "=q2=Crawling Steak", "=ds=#sr# 300" };
-		{ 15, "s968321", "967551", "=q2=Breakonator Sandwich", "=ds=#sr# 300" };
-		{ 16, "s968324", "967554", "=q2=Master Wontons", "=ds=#sr# 300" };
-		{ 17, "s968327", "967557", "=q2=Big Whack Sandwich", "=ds=#sr# 300" };
-		{ 18, "s968330", "967560", "=q2=Warping Wontons", "=ds=#sr# 300" };
-		{ 19, "s968333", "967563", "=q2=Duck Stew", "=ds=#sr# 300" };
-		{ 20, "s968336", "967566", "=q2=Mountainman Stew", "=ds=#sr# 300" };
-		{ 21, "s968339", "967569", "=q2=Scorched Stew", "=ds=#sr# 300" };
-		{ 22, "s968342", "967572", "=q2=Vulcan Wontons", "=ds=#sr# 300" };
-		{ 23, "s968345", "967575", "=q2=Jurassic Soup", "=ds=#sr# 300" };
-		{ 24, "s968348", "967578", "=q2=Heightened Wontons", "=ds=#sr# 300" };
-		{ 25, "s968351", "967581", "=q2=Hearty Spirit Soup", "=ds=#sr# 300" };
-		{ 26, "s968354", "967584", "=q2=Jurassic Steak", "=ds=#sr# 300" };
-		{ 27, "s968357", "967587", "=q2=Stormwich Sandwich", "=ds=#sr# 300" };
-		{ 28, "s968360", "967590", "=q2=Warding Wontons", "=ds=#sr# 300" };
-		{ 29, "s968363", "967593", "=q2=Rolling Meatballs", "=ds=#sr# 300" };
-		{ 30, "s968366", "967596", "=q2=Subtle Steak", "=ds=#sr# 300" };
-	};
-	{
-		Name = "Common";
-		{ 1, "s968369", "967599", "=q2=Subtle Sandwich", "=ds=#sr# 300" };
-		{ 2, "s968372", "967602", "=q2=Subtle Wontons", "=ds=#sr# 300" };
-		{ 3, "s968375", "967605", "=q2=Subtle Sulferous Soup", "=ds=#sr# 300" };
-		{ 4, "s968378", "967608", "=q2=Strongman Stew", "=ds=#sr# 300" };
-		{ 5, "s968381", "967611", "=q2=Mysterious Void Roast", "=ds=#sr# 300" };
-		{ 6, "s968384", "967614", "=q2=Fire Charred Roast", "=ds=#sr# 300" };
-		{ 7, "s968387", "967617", "=q2=Storm Fried Roast", "=ds=#sr# 300" };
-		{ 8, "s968390", "967620", "=q2=Winter Roast", "=ds=#sr# 300" };
-		{ 9, "s968393", "967623", "=q2=Blackened Roast", "=ds=#sr# 300" };
-		{ 10, "s968396", "967626", "=q2=Dino Delight", "=ds=#sr# 300" };
-		{ 11, "s968399", "967629", "=q2=Slick-fil-A Sandwich", "=ds=#sr# 300" };
-		{ 13, "s968646", "967703", "=q2=Tempting Bait", "=ds=#sr# 300" };
-	};
 	{
 		Name = "Rare";
 		{ 1, "s968280", "967510", "=q3=Animated Soup for the Soul", "=ds=#sr# 300" };

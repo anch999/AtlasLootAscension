@@ -249,42 +249,45 @@ Constructs the main category menu from a tiered table
 function AtlasLoot:DewdropOpen()
     local frame = AtlasLootDefaultFrame_Menu
     if AtlasLoot_Dewdrop:IsOpen(frame) then AtlasLoot_Dewdrop:Close() return end
-    AtlasLoot_Dewdrop:Register(frame,
-        'point', function(parent)
-            return "TOP", "BOTTOM"
-        end,
-        'children', function(level, value)
-            if AtlasLoot_Modules then
-                for k, v in ipairs(AtlasLoot_Modules) do
-                    --If a link to show a submenu
-                    AtlasLoot_Dewdrop:AddLine(
-                        'text', v[1],
-                        'textR', 1,
-                        'textG', 0.82,
-                        'textB', 0,
-                        'func', function() AtlasLoot:DewDropClick(v[2], v[1], v[3]) end,
-                        'textHeight', 12,
-                        'textWidth', 12,
-                        'closeWhenClicked', true,
-                        'notCheckable', true
-                    )
+    local loaded
+    if not loaded then
+        AtlasLoot_Dewdrop:Register(frame,
+            'point', function(parent)
+                return "TOP", "BOTTOM"
+            end,
+            'children', function(level, value)
+                if AtlasLoot_Modules then
+                    for k, v in ipairs(AtlasLoot_Modules) do
+                        --If a link to show a submenu
+                        AtlasLoot_Dewdrop:AddLine(
+                            'text', v[1],
+                            'textR', 1,
+                            'textG', 0.82,
+                            'textB', 0,
+                            'func', function() AtlasLoot:DewDropClick(v[2], v[1], v[3]) end,
+                            'textHeight', 12,
+                            'textWidth', 12,
+                            'closeWhenClicked', true,
+                            'notCheckable', true
+                        )
+                    end
                 end
-            end
-            --Close button
-            AtlasLoot_Dewdrop:AddLine()
-            AtlasLoot_Dewdrop:AddLine(
-                'text', AL["Close Menu"],
-                'textR', 0,
-                'textG', 1,
-                'textB', 1,
-                'textHeight', 12,
-                'textWidth', 12,
-                'closeWhenClicked', true,
-                'notCheckable', true
-            )
-        end,
-        'dontHook', true
-    )
+                --Close button
+                AtlasLoot_Dewdrop:AddLine()
+                AtlasLoot_Dewdrop:AddLine(
+                    'text', AL["Close Menu"],
+                    'textR', 0,
+                    'textG', 1,
+                    'textB', 1,
+                    'textHeight', 12,
+                    'textWidth', 12,
+                    'closeWhenClicked', true,
+                    'notCheckable', true
+                )
+            end,
+            'dontHook', true
+        )
+    end
     AtlasLoot_Dewdrop:Open(frame)
 end
 
@@ -357,7 +360,7 @@ function AtlasLoot:SetNewStyle(style)
             tex2:SetHeight(32)
         end
 
-        for k, v in pairs(buttons) do
+        for _, v in pairs(buttons) do
             SetButtons(v)
         end
     elseif style == "old" then
@@ -398,7 +401,7 @@ function AtlasLoot:SetNewStyle(style)
             tex2:SetHeight(20)
         end
 
-        for k, v in pairs(buttons) do
+        for _, v in pairs(buttons) do
             SetButtons(v)
         end
 
