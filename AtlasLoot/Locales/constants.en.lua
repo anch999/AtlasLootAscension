@@ -903,10 +903,22 @@ if AL then
 	AL["Quest"] = true;
 	AL["Crafted"] = true;
 	AL["Seasonal"] = true;
-	AL["Learned from"] = true;
+	AL["Reputation Vendor"] = true;
+	AL["Source"] = true;
 	AL["Zone"] = true;
 	AL["Trainer/Book of Artisans"] = true;
+	AL["Required Reputation"] = true;
+	AL["Hold Control for source"] = true;
+	AL["Click to only show recipe while holding control"] = true;
+	AL["Click to show recipe source in tooltips"] = true;
+	AL["Hide recipe source"] = true;
+	AL["Show recipe source"] = true;
+	AL["Recipe Waypoints"] = true;
 	
+	--quest giver names
+	AL["Bounty Hunter Kolark"] = true;
+	AL["Artilleryman Sheldonore"] = true;
+
 	-- Scourge Invasion
 	AL["Scourge Invasion"] = true;
 	AL["Scourge Invasion Sets"] = true;

@@ -356,6 +356,112 @@ function AtlasLoot:CleandataID(newID, listnum)
 	return newID;
 end
 
+function AtlasLoot:RecipeSource(itemID)
+	local craftingData = AtlasLoot_CraftingData["ExtraCraftingData"][itemID]
+	if not craftingData then return end
+	local data = {}
+	 --extra information on where to find the recipe
+	 local aquireType = AtlasLoot_CraftingData["AquireType"][craftingData[2]]
+		local sources = {[1] = true, [5] = true, [7] = true}
+	 	if sources[craftingData[2]] then
+			tinsert(data, {AL["Source"]..": "..WHITE..aquireType})
+		elseif craftingData[2] == 8 then
+			if type(aquireType[craftingData[3]]) == "table" then
+				tinsert(data, {AL["Source"]..": "..WHITE..aquireType[craftingData[3]][1]})
+					local cords
+					if aquireType[craftingData[3]][3] ~= 0 or aquireType[craftingData[3]][4] ~= 0 then
+						cords = {aquireType[craftingData[3]][3], aquireType[craftingData[3]][4]}
+					end
+				tinsert(data, {AL["Zone"]..": "..WHITE..aquireType[craftingData[3]][2], cords})
+			else
+				tinsert(data, {AL["Source"]..": "..WHITE..aquireType[craftingData[3]]})
+			end
+		end
+		 --vendor recipe
+		if craftingData.vendor then
+			tinsert(data, {AL["Source"]..": "..WHITE..AtlasLoot_CraftingData["AquireType"][2]})
+			for _,v in pairs(craftingData.vendor) do
+				local vendor = AtlasLoot_CraftingData["VendorList"][v]
+				tinsert(data, {vendor[1], vendor[2], cords = {vendor[3], vendor[4]}, fac = vendor[5]})
+			end
+		end
+		 --limited vendor recipes
+		if craftingData.limitedVendor then
+			tinsert(data, {AL["Source"]..": "..WHITE..AtlasLoot_CraftingData["AquireType"][2]})
+			local sort = {}
+			local limited = false
+			for i,v in pairs(craftingData.limitedVendor) do
+				 if limited then
+					 tinsert(sort[i-1],v)
+					 limited = false
+				 else
+					 sort[i] = {v}
+					 limited = true
+				 end
+			end
+			for _,v in pairs(sort) do
+				 local vendor = AtlasLoot_CraftingData["VendorList"][v[1]]
+				 tinsert(data, {vendor[1], vendor[2], cords = {vendor[3], vendor[4]}, fac = vendor[5], limited = v[2]})
+			end
+		end
+		 --mob drop
+		if craftingData.mobDrop then
+			tinsert(data, {AL["Source"]..": "..WHITE..AtlasLoot_CraftingData["AquireType"][3]})
+			for _,v in pairs(craftingData.mobDrop) do
+				local mob = AtlasLoot_CraftingData["MobList"][v]
+				local cords = nil
+				if mob[3] ~= 0 and mob[4] ~= 0 then
+					cords = {mob[3], mob[4]}
+				end
+				tinsert(data, {mob[1], WHITE..mob[2], cords})
+			end
+		end
+		 --quest
+		if craftingData.quest then
+			tinsert(data, {AL["Source"]..": "..WHITE..AtlasLoot_CraftingData["AquireType"][4]})
+			for _,v in pairs(craftingData.quest) do
+				local quest = AtlasLoot_CraftingData["QuestList"][v]
+				tinsert(data, {quest[1], cords = {quest[2], quest[3]}, fac = quest[4]})
+			end
+		end
+		 --rep vendor
+		if craftingData.repVendor then
+			tinsert(data, {AL["Source"]..": "..WHITE..AtlasLoot_CraftingData["AquireType"][6]})
+			local line1, line2
+			local repVendor = {}
+			for i,v in pairs(craftingData.repVendor) do
+				 if type(v) == "table" then
+					 for i,v in pairs(v) do
+						 if i == 1 then
+							 line1 = AL["Faction"]..": "..WHITE..v
+						 elseif i == 2 then
+							 line2 = AL["Required Reputation"]..": "..WHITE..v
+						 else
+							 tinsert(repVendor,AtlasLoot_CraftingData["VendorList"][v])
+						 end
+					 end
+				 else
+					 if i == 1 then
+						 line1 = AL["Faction"]..": "..WHITE..v
+					 elseif i == 2 then
+						 line2 = AL["Required Reputation"]..": "..WHITE..v
+					 else
+						 tinsert(repVendor,AtlasLoot_CraftingData["VendorList"][v])
+					 end
+				 end
+			end
+			tinsert(data, {line1, line2})
+			for _,v in pairs(repVendor) do
+				local cords
+				if v[3] ~= 0 and v[4] ~= 0 then
+					cords = {v[3], v[4]}
+				end
+				tinsert(data, {v[1], WHITE..v[2], cords, fac = v[5]})
+			end
+		end
+	return data
+end
+
 --Creates tables for raid tokens from the collections tables
 function AtlasLoot:CreateToken(dataID)
 	local itemType, slotType, itemName, itemType2
@@ -636,7 +742,6 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 						text = dataSource[dataID][tablenum][i][4];
 						text = AtlasLoot_FixText(text);
 					end
-
 					--Adds button highlights if you know a recipe or have a char that knows one
 					if currentTradeSkills[dataSource[dataID].Name] and CA_IsSpellKnown(string.sub(IDfound, 2)) then
 						_G["AtlasLootItem_"..dataSource[dataID][tablenum][i][1]].hasTrade = true;
@@ -667,8 +772,8 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 				--Insert the item description
 				if dataSource[dataID][tablenum][i][6] and dataSource[dataID][tablenum][i][6] ~= "" then
 					extra = dataSource[dataID][tablenum][i][6];
-				elseif AtlasLoot_Data["ExtraCraftingData"] and AtlasLoot_Data["ExtraCraftingData"][tonumber(string.sub(dataSource[dataID][tablenum][i][2],2))] then
-					extra = "#sr# "..AtlasLoot_Data["ExtraCraftingData"][tonumber(string.sub(dataSource[dataID][tablenum][i][2],2))][1];
+				elseif AtlasLoot_CraftingData["ExtraCraftingData"] and AtlasLoot_CraftingData["ExtraCraftingData"][tonumber(string.sub(dataSource[dataID][tablenum][i][2],2))] then
+					extra = "#sr# "..WHITE..AtlasLoot_CraftingData["ExtraCraftingData"][tonumber(string.sub(dataSource[dataID][tablenum][i][2],2))][1];
 				elseif dataSource[dataID][tablenum][i][5] then
 					extra = dataSource[dataID][tablenum][i][5];
 				else
@@ -747,6 +852,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 					itemButton.iteminfo.icontexture = GetItemIcon(IDfound);
                     itemButton.storeID = IDfound;
                     itemButton.dressingroomID = dataSource[dataID][tablenum][i][3];
+					itemButton.craftingData = AtlasLoot:RecipeSource(tonumber(string.sub(IDfound, 2)))
 				end
 
 				itemButton.tablenum = tablenum;
@@ -756,6 +862,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 				itemButton.price = dataSource[dataID][tablenum][i][6] or nil;
 				itemButton.droprate = dataSource[dataID][tablenum][i][7] or nil;
 				itemButton.extraInfo = dataSource[dataID][tablenum][i].extraInfo or nil;
+				itemButton.quest = dataSource[dataID][tablenum][i].quest or nil;
 
 				if (dataID == "SearchResult" or dataSource_backup == "AtlasLoot_CurrentWishList") and dataSource[dataID][tablenum][i][8] then
 					itemButton.sourcePage = dataSource[dataID][tablenum][i][8];

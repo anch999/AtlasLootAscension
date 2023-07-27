@@ -2,6 +2,7 @@ local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot");
 
 	AtlasLoot_SubMenus["CraftingCLASSIC"] = {
 		Module = "AtlasLootCrafting";
+		{"Normal:", "", "Header"};
 		{ "", "AlchemyCLASSIC"};
 		{ "", "SmithingCLASSIC"};
 		{ "", "EnchantingCLASSIC"};
@@ -23,6 +24,7 @@ local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot");
 
 	AtlasLoot_SubMenus["CraftingTBC"] = {
 		Module = "AtlasLootCrafting";
+		{"Normal:", "", "Header"};
 		{ "", "AlchemyTBC"};
 		{ "", "SmithingTBC"};
 		{ "", "EnchantingTBC"};
@@ -46,6 +48,7 @@ local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot");
 
 	AtlasLoot_SubMenus["CraftingWRATH"] = {
 		Module = "AtlasLootCrafting";
+		{"Normal:", "", "Header"};
 		{ "", "AlchemyWRATH"};
 		{ "", "SmithingWRATH"};
 		{ "", "EnchantingWRATH"};

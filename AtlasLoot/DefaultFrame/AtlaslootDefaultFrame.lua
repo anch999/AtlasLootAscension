@@ -110,6 +110,33 @@ function AtlasLoot:DewDropSubMenuClick(tablename)
     --Show the table that has been selected
     AtlasLoot:ShowItemsFrame(tablename, "AtlasLoot_Data", tablenum);
 end
+local WHITE = "|cffFFFFFF";
+function AtlasLoot:AddDividerLine(maxLenght)
+    local text = WHITE.."----------------------------------------------------------------------------------------------------"
+    AtlasLoot_Dewdrop:AddLine(
+        'text' , text:sub(1, maxLenght),
+        'textHeight', 12,
+        'textWidth', 12,
+        'isTitle', true,
+        "notCheckable", true
+    );
+end
+
+function AtlasLoot:CloseDewDrop(divider, maxLenght)
+    if divider then
+        AtlasLoot:AddDividerLine(maxLenght)
+    end
+    AtlasLoot_Dewdrop:AddLine(
+        'text', AL["Close Menu"],
+        'textR', 0,
+        'textG', 1,
+        'textB', 1,
+        'textHeight', 12,
+        'textWidth', 12,
+        'closeWhenClicked', true,
+        'notCheckable', true
+    )
+end
 
 --[[
 AtlasLoot:DewdropExpansionMenuClick(expansion, name):
@@ -166,17 +193,7 @@ function AtlasLoot:DewdropExpansionMenuOpen()
                 end
             end
             --Close button
-            AtlasLoot_Dewdrop:AddLine()
-            AtlasLoot_Dewdrop:AddLine(
-                'text', AL["Close Menu"],
-                'textR', 0,
-                'textG', 1,
-                'textB', 1,
-                'textHeight', 12,
-                'textWidth', 12,
-                'closeWhenClicked', true,
-                'notCheckable', true
-            )
+            AtlasLoot:CloseDewDrop(true,35)
         end,
         'dontHook', true
     )
@@ -199,7 +216,7 @@ function AtlasLoot:DewdropSubMenuOpen(loottable)
             for k, v in pairs(loottable) do
                 if type(v) == "table" then
                     if v[3] == "Header" then
-                        if k ~= 1 then AtlasLoot_Dewdrop:AddLine() end
+                        if k ~= 1 then AtlasLoot:AddDividerLine(40) end
                         AtlasLoot_Dewdrop:AddLine(
                             'text', v[1],
                             'textR', 0.2,
@@ -225,17 +242,7 @@ function AtlasLoot:DewdropSubMenuOpen(loottable)
                 end
             end
             --Close button
-            AtlasLoot_Dewdrop:AddLine()
-            AtlasLoot_Dewdrop:AddLine(
-                'text', AL["Close Menu"],
-                'textR', 0,
-                'textG', 1,
-                'textB', 1,
-                'textHeight', 12,
-                'textWidth', 12,
-                'closeWhenClicked', true,
-                'notCheckable', true
-            )
+            AtlasLoot:CloseDewDrop(true,40)
         end,
         'dontHook', true
     )
@@ -273,17 +280,7 @@ function AtlasLoot:DewdropOpen()
                     end
                 end
                 --Close button
-                AtlasLoot_Dewdrop:AddLine()
-                AtlasLoot_Dewdrop:AddLine(
-                    'text', AL["Close Menu"],
-                    'textR', 0,
-                    'textG', 1,
-                    'textB', 1,
-                    'textHeight', 12,
-                    'textWidth', 12,
-                    'closeWhenClicked', true,
-                    'notCheckable', true
-                )
+                AtlasLoot:CloseDewDrop(true,35)
             end,
             'dontHook', true
         )

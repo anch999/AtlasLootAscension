@@ -20,6 +20,8 @@ AtlasLoot_Modules = {
 
 AtlasLoot_SubMenus = {};
 
+AtlasLoot_CraftingData = {};
+
 AtlasLoot_ExpansionMenu = {
 		{ AL["Classic"], "CLASSIC" };
 		{ AL["Burning Crusade"], "TBC" };
