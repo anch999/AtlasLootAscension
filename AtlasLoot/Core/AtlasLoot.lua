@@ -162,6 +162,10 @@ function AtlasLoot:OnEnable()
 		AtlasLootDefaultFrame_MapSelectButton:Enable();
 	end
 
+	if IsAddOnLoaded("TomTom") then
+		ATLASLOOT_TOMTOM_LOADED = true;
+	end
+
     --Add the loot browser to the special frames tables to enable closing wih the ESC key
 	tinsert(UISpecialFrames, "AtlasLootDefaultFrame");
 	--Set up options frame

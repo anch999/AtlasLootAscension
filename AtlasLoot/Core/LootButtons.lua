@@ -613,41 +613,45 @@ function AtlasLoot:ItemContextMenu(itemID, itemTexture, itemName, lootPage, sour
                             "notCheckable", true
                         );
                     end
-                    if not AtlasLoot.db.profile.waypointList then AtlasLoot.db.profile.waypointList = {} end
-                    local wayPoint
-                    if (craftingData and AtlasLoot.db.profile.recipeExtraInfoSwitch and IsControlKeyDown()) or (craftingData and not AtlasLoot.db.profile.recipeExtraInfoSwitch) then
-                        AtlasLootTooltip:AddLine(" ")
-                        for _,v in pairs(craftingData) do
-                            if v.cords and tonumber(v.cords[1]) ~= 0 and tonumber(v.cords[2]) ~= 0 then
-                                local line1 = v[1]
-                                local line2 = v[2]
-                                if v.fac and (v.fac[2] == playerFaction or v.fac[2] == "Netural") then line1 = v.fac[1]..line1 end
-                                if not wayPoint then wayPoint = {} end
-                                tinsert(wayPoint, { line2, tonumber(v.cords[1]), tonumber(v.cords[2]), line1})
+                    if ATLASLOOT_TOMTOM_LOADED then
+                        if not AtlasLoot.db.profile.waypointList then AtlasLoot.db.profile.waypointList = {} end
+                        local wayPoint
+                        if (craftingData and AtlasLoot.db.profile.recipeExtraInfoSwitch and IsControlKeyDown()) or (craftingData and not AtlasLoot.db.profile.recipeExtraInfoSwitch) then
+                            AtlasLootTooltip:AddLine(" ")
+                            for _,v in pairs(craftingData) do
+                                if v.cords and tonumber(v.cords[1]) ~= 0 and tonumber(v.cords[2]) ~= 0 then
+                                    local line1 = v[1]
+                                    local line2 = v[2]
+                                    if v.fac and (v.fac[2] == playerFaction or v.fac[2] == "Netural") then line1 = v.fac[1]..line1 end
+                                    if not wayPoint then wayPoint = {} end
+                                    tinsert(wayPoint, { line2, tonumber(v.cords[1]), tonumber(v.cords[2]), line1})
+                                end
                             end
                         end
+                        if craftingData and wayPoint then
+
+                            AtlasLoot:AddDividerLine(35)
+                            AtlasLoot_Dewdrop:AddLine(
+                            'text', AL["Recipe Waypoints"],
+                            'notCheckable', true,
+                            'isTitle', true,
+                            'textHeight', 13,
+                            'textWidth', 13
+                            )
+                            AtlasLoot_Dewdrop:AddLine(
+                            "text", "Add pin to map",
+                            "func", function()
+                                for _,v in pairs(wayPoint) do
+                                    AtlasLoot:AddWayPoint(v)
+                                end
+                            end,
+                            'closeWhenClicked', true,
+                            'textHeight', 12,
+                            'textWidth', 12,
+                            "notCheckable", true
+                            );
+                        end
                     end
-                    if craftingData and wayPoint then
-                        AtlasLoot:AddDividerLine(35)
-                        AtlasLoot_Dewdrop:AddLine(
-                        'text', AL["Recipe Waypoints"],
-                        'notCheckable', true,
-                        'isTitle', true,
-                        'textHeight', 13,
-                        'textWidth', 13
-                        )
-                        AtlasLoot_Dewdrop:AddLine(
-                        "text", "Add pin to map",
-                        "func", function()
-                            for _,v in pairs(wayPoint) do
-                                AtlasLoot:AddWayPoint(v)
-                            end
-                        end,
-                        'closeWhenClicked', true,
-                        'textHeight', 12,
-                        'textWidth', 12,
-                        "notCheckable", true
-                        );
                         AtlasLoot:AddDividerLine(35)
                         local text, tooltip
                         if AtlasLoot.db.profile.recipeExtraInfoSwitch then
@@ -666,7 +670,6 @@ function AtlasLoot:ItemContextMenu(itemID, itemTexture, itemName, lootPage, sour
                         'textWidth', 12,
                         "notCheckable", true
                         );
-                    end
             elseif level == 2 then
                 if value == "OwnWishlists" then
                     for k,v in pairs(AtlasLootWishList["Own"]) do
