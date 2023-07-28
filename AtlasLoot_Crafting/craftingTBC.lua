@@ -662,6 +662,7 @@ AtlasLoot_Data["EngineeringTBC"] = {
 		{ 20, "s41311", "32472", "=q4=Justicebringer 2000 Specs",  };
 		{ 21, "s41316", "32475", "=q4=Living Replicator Specs",  };
 		{ 22, "s41319", "32480", "=q4=Magnified Moon Specs",  };
+		{ 23, "s41312",	"32473", "=q4=Tankatronic Goggles",}
 	};
 	{
 		Name = BabbleInventory["Armor"];
