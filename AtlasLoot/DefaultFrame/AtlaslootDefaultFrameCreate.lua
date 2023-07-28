@@ -3,7 +3,7 @@ local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot");
     --Main AtlasLoot Frame
     local mainframe = CreateFrame("FRAME", "AtlasLootDefaultFrame", UIParent);
     mainframe:SetPoint("CENTER",0,0);
-    mainframe:SetSize(880,690);
+    mainframe:SetSize(1110,690);
     mainframe:EnableMouse(true);
     mainframe:SetMovable(1);
     mainframe:SetFrameStrata("HIGH");
@@ -46,7 +46,7 @@ local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot");
 
     --Loot Background
 local lootbground = CreateFrame("Frame", "AtlasLootDefaultFrame_LootBackground",AtlasLootDefaultFrame);
-    lootbground:SetSize(540,515);
+    lootbground:SetSize(770,515);
     lootbground:SetPoint("BOTTOMLEFT", AtlasLootDefaultFrame, "BOTTOMLEFT",40,90);
     lootbground.Back = lootbground:CreateTexture("AtlasLootDefaultFrame_LootBackground_Back", "BACKGROUND");
     lootbground.Back:SetAllPoints();
@@ -65,7 +65,7 @@ local lootbground = CreateFrame("Frame", "AtlasLootDefaultFrame_LootBackground",
 
 ----------------------------------- Item Loot Panel -------------------------------------------
 local itemframe = CreateFrame("Frame", "AtlasLootItemsFrame", AtlasLootDefaultFrame_LootBackground);
-        itemframe:SetSize(535,510);
+        itemframe:SetSize(765,510);
         itemframe:Hide();
         itemframe:SetPoint("TOPLEFT", AtlasLootDefaultFrame_LootBackground, "TOPLEFT", 2, -2);
         itemframe.Label = itemframe:CreateFontString("AtlasLoot_BossName","OVERLAY","GameFontHighlightLarge");
@@ -463,7 +463,7 @@ local MAX_ROWS = 5;      -- How many rows can be shown at once?
 local scrollFrame = CreateFrame("Frame", "Atlasloot_Difficulty_ScrollFrame", AtlasLootDefaultFrame);
     scrollFrame:EnableMouse(true);
     scrollFrame:SetSize(265, ROW_HEIGHT * MAX_ROWS + 16);
-    scrollFrame:SetPoint("LEFT","AtlasLootDefaultFrame_ExpansionMenu","RIGHT",0,-39);
+    scrollFrame:SetPoint("TOPRIGHT","AtlasLootDefaultFrame",-22,-60);
     scrollFrame:SetBackdrop({
         bgFile = "Interface\\DialogFrame\\UI-DialogBox-Background", tile = true, tileSize = 16,
         edgeFile = "Interface\\Tooltips\\UI-Tooltip-Border", edgeSize = 16,
@@ -670,7 +670,7 @@ subtableFrame.rows = rows2
 
     --Atlas Map
 local map = CreateFrame("Frame", "AtlasLootDefaultFrame_Map", AtlasLootDefaultFrame);
-    map:SetSize(540,515);
+    map:SetSize(770,513);
     map:SetPoint("BOTTOMLEFT", AtlasLootDefaultFrame, "BOTTOMLEFT",40,90);
     map:SetFrameStrata("HIGH");
     map:Hide();
@@ -680,6 +680,38 @@ local map = CreateFrame("Frame", "AtlasLootDefaultFrame_Map", AtlasLootDefaultFr
             AtlasLoot:MapOnShow();
         end
     end);
+
+for i=1, 12 do
+    map.tile = map:CreateTexture("AtlasLoot_MapDetailTile"..i, "BACKGROUND");
+    map.tile:SetSize(196,196)
+    map.tile:Show()
+end
+
+AtlasLoot_MapDetailTile1:SetPoint("TOPLEFT", map)
+AtlasLoot_MapDetailTile2:SetPoint("TOPLEFT", AtlasLoot_MapDetailTile1,"TOPRIGHT")
+AtlasLoot_MapDetailTile3:SetPoint("TOPLEFT", AtlasLoot_MapDetailTile2,"TOPRIGHT")
+AtlasLoot_MapDetailTile4:SetPoint("TOPLEFT", AtlasLoot_MapDetailTile3,"TOPRIGHT")
+AtlasLoot_MapDetailTile5:SetPoint("TOPLEFT", AtlasLoot_MapDetailTile1,"BOTTOMLEFT")
+AtlasLoot_MapDetailTile6:SetPoint("TOPLEFT", AtlasLoot_MapDetailTile5,"TOPRIGHT")
+AtlasLoot_MapDetailTile7:SetPoint("TOPLEFT", AtlasLoot_MapDetailTile6,"TOPRIGHT")
+AtlasLoot_MapDetailTile8:SetPoint("TOPLEFT", AtlasLoot_MapDetailTile7,"TOPRIGHT")
+AtlasLoot_MapDetailTile9:SetPoint("TOPLEFT", AtlasLoot_MapDetailTile5,"BOTTOMLEFT")
+AtlasLoot_MapDetailTile10:SetPoint("TOPLEFT", AtlasLoot_MapDetailTile9,"TOPRIGHT")
+AtlasLoot_MapDetailTile11:SetPoint("TOPLEFT", AtlasLoot_MapDetailTile10,"TOPRIGHT")
+AtlasLoot_MapDetailTile12:SetPoint("TOPLEFT", AtlasLoot_MapDetailTile11,"TOPRIGHT")
+
+AtlasLoot_MapDetailTile1:SetTexture("Interface\\Worldmap\\TheStockade\\TheStockade1");
+AtlasLoot_MapDetailTile2:SetTexture("Interface\\Worldmap\\TheStockade\\TheStockade2");
+AtlasLoot_MapDetailTile3:SetTexture("Interface\\Worldmap\\TheStockade\\TheStockade3");
+AtlasLoot_MapDetailTile4:SetTexture("Interface\\Worldmap\\TheStockade\\TheStockade4");
+AtlasLoot_MapDetailTile5:SetTexture("Interface\\Worldmap\\TheStockade\\TheStockade5");
+AtlasLoot_MapDetailTile6:SetTexture("Interface\\Worldmap\\TheStockade\\TheStockade6");
+AtlasLoot_MapDetailTile7:SetTexture("Interface\\Worldmap\\TheStockade\\TheStockade7");
+AtlasLoot_MapDetailTile8:SetTexture("Interface\\Worldmap\\TheStockade\\TheStockade8");
+AtlasLoot_MapDetailTile9:SetTexture("Interface\\Worldmap\\TheStockade\\TheStockade9");
+AtlasLoot_MapDetailTile10:SetTexture("Interface\\Worldmap\\TheStockade\\TheStockade10");
+AtlasLoot_MapDetailTile11:SetTexture("Interface\\Worldmap\\TheStockade\\TheStockade11");
+AtlasLoot_MapDetailTile12:SetTexture("Interface\\Worldmap\\TheStockade\\TheStockade12");
 
     -- Map Button
 local mapbtn = CreateFrame("Button","AtlasLootDefaultFrame_MapButton", AtlasLootDefaultFrame,"OptionsButtonTemplate");

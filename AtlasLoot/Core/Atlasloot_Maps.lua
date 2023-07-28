@@ -60,7 +60,7 @@ function AtlasLoot:MapOnShow()
 end
 
 function AtlasLoot:MapSelect(mapID)
-    AtlasLootDefaultFrame_Map:SetBackdrop({bgFile = "Interface\\AddOns\\Atlas\\Images\\Maps\\"..mapID});   
+    --AtlasLootDefaultFrame_Map:SetBackdrop({bgFile = "Interface\\AddOns\\Atlas\\Images\\Maps\\"..mapID});   
     Atlasloot_HeaderLabel:SetText(
     AtlasLoot_MapData[mapID].ZoneName[1].._RED.." ["..AtlasLoot_MapData[mapID].Acronym.."]\n"..
     WHITE.."Location: "..AtlasLoot_MapData[mapID].Location[1].."\n"..
