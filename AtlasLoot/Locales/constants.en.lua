@@ -914,6 +914,8 @@ if AL then
 	AL["Hide recipe source"] = true;
 	AL["Show recipe source"] = true;
 	AL["Recipe Waypoints"] = true;
+	AL["Random Level 70 instance drop"] = true;
+	AL["Shady Dealer"] = true;
 	
 	--quest giver names
 	AL["Bounty Hunter Kolark"] = true;

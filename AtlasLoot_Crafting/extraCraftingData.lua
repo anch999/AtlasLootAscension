@@ -41,7 +41,7 @@ AtlasLoot_CraftingData["AquireType"] = {
 			[31] = {  	AL["STRATH_BS_PLANS"], BabbleZone["Stratholme"], 0, 0 },
 			[32] = {  	AL["DM_TRIBUTE"], BabbleZone["Dire Maul"], 59.04, 48.82 },
 			[34] = {  	AL["BT_RANDOM"], BabbleZone["Black Temple"], 0, 0 },
-			[35] =   	AL["Custom35"] ,
+			[35] =   	AL["Random Level 70 instance drop"],
 			[36] =   	AL["Custom36"] ,
 			[37] = {  	AL["SSC_RANDOM"], BabbleZone["Serpentshrine Cavern"], 0, 0 },
 			[38] = {  	AL["DAILY_COOKING_DAL"], BabbleZone["Dalaran"], 0, 0 },
@@ -328,12 +328,12 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[36390] = {
 		375,
 		8,
-		37, 
+		37,
 	},
 	[67096] = {
 		450,
 		8,
-		42, 
+		42,
 	},
 	[16973] = {
 		280,
@@ -343,8 +343,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		},
 	},
 	[23632] = {
-		290,                     
-		6,                       
+		290,
+		6,
 		["repVendor"] = {
 			BabbleFaction["Argent Dawn"],
 			BabbleFaction["Honored"],
@@ -356,7 +356,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[41133] = {
 			375,
 			8,
-			34, 
+			34,
 		},
 		[54946] = {
 			395,
@@ -393,7 +393,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[67131] = {
 			450,
 			8,
-			42, 
+			42,
 		},
 		[52567] = {
 			370,
@@ -429,7 +429,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[16662] = {
 			300,
 			1,
-			7, 
+			7,
 		},
 		[16990] = {
 			300,
@@ -445,7 +445,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[67094] = {
 			450,
 			8,
-			42, 
+			42,
 		},
 		[55298] = {
 			420,
@@ -464,13 +464,13 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["Cenarion Circle"],
 				BabbleFaction["Friendly"],
-				15176, 
+				15176,
 			},
 		},
 		[67130] = {
 			450,
 			8,
-			42, 
+			42,
 		},
 		[16726] = {
 			300,
@@ -485,7 +485,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["Thorium Brotherhood"],
 				BabbleFaction["Exalted"],
-				12944, 
+				12944,
 			},
 		},
 		[16742] = {
@@ -505,12 +505,12 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[15293] = {
 			270,
 			8,
-			25, 
+			25,
 		},
 		[41134] = {
 			375,
 			8,
-			34, 
+			34,
 		},
 		[29549] = {
 			315,
@@ -534,7 +534,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[63187] = {
 			450,
 			8,
-			39, 
+			39,
 		},
 		[32655] = {
 			300,
@@ -558,7 +558,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["The Scryers"],
 				BabbleFaction["Exalted"],
-				19331, 
+				19331,
 			},
 		},
 		[29621] = {
@@ -574,7 +574,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["Cenarion Circle"],
 				BabbleFaction["Friendly"],
-				15176, 
+				15176,
 			},
 		},
 		[52568] = {
@@ -587,7 +587,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["mobDrop"] = {
 				23305,
 				23324,
-				21454, 
+				21454,
 			},
 		},
 		[59436] = {
@@ -612,7 +612,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["vendor"] = {
 				16670,
 				16713,
-				19662, 
+				19662,
 			},
 		},
 		[29693] = {
@@ -634,7 +634,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[36392] = {
 			375,
 			8,
-			37, 
+			37,
 		},
 		[9939] = {
 			215,
@@ -647,7 +647,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[67132] = {
 			450,
 			8,
-			42, 
+			42,
 		},
 		[24136] = {
 			300,
@@ -655,7 +655,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["Zandalar Tribe"],
 				BabbleFaction["Revered"],
-				14921, 
+				14921,
 			},
 		},
 		[23633] = {
@@ -664,9 +664,9 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["Argent Dawn"],
 				BabbleFaction["Revered"],
-				10856, 
-				11536, 
-				10857, 
+				10856,
+				11536,
+				10857,
 			},
 		},
 		[9931] = {
@@ -680,12 +680,12 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[16983] = {
 			285,
 			8,
-			31, 
+			31,
 		},
 		[41135] = {
 			375,
 			8,
-			27, 
+			27,
 		},
 		[54948] = {
 			400,
@@ -709,7 +709,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[63188] = {
 			450,
 			8,
-			39, 
+			39,
 		},
 		[7221] = {
 			150,
@@ -730,7 +730,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[67133] = {
 			450,
 			8,
-			42, 
+			42,
 		},
 		[3507] = {
 			170,
@@ -743,7 +743,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[16985] = {
 			290,
 			8,
-			31, 
+			31,
 		},
 		[55839] = {
 			420,
@@ -764,7 +764,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[3115] = {
 			1,
 			8,
-			8, 
+			8,
 		},
 		[3116] = {
 			65,
@@ -809,7 +809,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[67134] = {
 			450,
 			8,
-			42, 
+			42,
 		},
 		[40034] = {
 			375,
@@ -817,7 +817,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["Ashtongue Deathsworn"],
 				BabbleFaction["Friendly"],
-				23159, 
+				23159,
 			},
 		},
 		[9916] = {
@@ -858,12 +858,12 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[16653] = {
 			280,
 			1,
-			7, 
+			7,
 		},
 		[63189] = {
 			450,
 			8,
-			39, 
+			39,
 		},
 		[32656] = {
 			350,
@@ -886,13 +886,13 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["The Aldor"],
 				BabbleFaction["Friendly"],
-				19321, 
+				19321,
 			},
 		},
 		[67135] = {
 			450,
 			8,
-			42, 
+			42,
 		},
 		[27586] = {
 			300,
@@ -900,7 +900,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["Cenarion Circle"],
 				BabbleFaction["Revered"],
-				15471, 
+				15471,
 			},
 		},
 		[9980] = {
@@ -944,7 +944,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[63190] = {
 			450,
 			8,
-			39, 
+			39,
 		},
 		[2665] = {
 			65,
@@ -976,7 +976,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["Zandalar Tribe"],
 				BabbleFaction["Honored"],
-				14921, 
+				14921,
 			},
 		},
 		[16991] = {
@@ -999,7 +999,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["Thorium Brotherhood"],
 				BabbleFaction["Exalted"],
-				12944, 
+				12944,
 			},
 		},
 		[54918] = {
@@ -1013,23 +1013,23 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[63191] = {
 			450,
 			8,
-			39, 
+			39,
 		},
 		[62202] = {
 			450,
 			2,
-			6, 
+			6,
 			["repVendor"] = {
 				BabbleFaction["Horde Expedition"],
 				BabbleFaction["Exalted"],
-				32565, 
-				32774, 
+				32565,
+				32774,
 				{
 					BabbleFaction["Alliance Vanguard"],
 					BabbleFaction["Exalted"],
-					32564, 
-					32773, 
-				}, 
+					32564,
+					32773,
+				},
 			},
 		},
 		[34542] = {
@@ -1062,13 +1062,13 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["Zandalar Tribe"],
 				BabbleFaction["Friendly"],
-				14921, 
+				14921,
 			},
 		},
 		[2660] = {
 			1,
 			8,
-			8, 
+			8,
 		},
 		[2661] = {
 			35,
@@ -1081,7 +1081,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[2663] = {
 			1,
 			8,
-			8, 
+			8,
 		},
 		[2664] = {
 			90,
@@ -1182,7 +1182,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["Thorium Brotherhood"],
 				BabbleFaction["Honored"],
-				12944, 
+				12944,
 			},
 		},
 		[34543] = {
@@ -1208,7 +1208,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[12260] = {
 			1,
 			8,
-			8, 
+			8,
 		},
 		[54552] = {
 			400,
@@ -1220,7 +1220,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["The Aldor"],
 				BabbleFaction["Exalted"],
-				19321, 
+				19321,
 			},
 		},
 		[2666] = {
@@ -1275,7 +1275,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[11454] = {
 			200,
 			8,
-			9, 
+			9,
 		},
 		[55305] = {
 			420,
@@ -1299,7 +1299,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["Zandalar Tribe"],
 				BabbleFaction["Revered"],
-				14921, 
+				14921,
 			},
 		},
 		[56357] = {
@@ -1327,12 +1327,12 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[28242] = {
 			300,
 			2,
-			8, 
-			61, 
+			8,
+			61,
 			["repVendor"] = {
 				BabbleFaction["Argent Dawn"],
 				BabbleFaction["Exalted"],
-				16365, 
+				16365,
 			},
 		},
 		[36126] = {
@@ -1349,7 +1349,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["Ashtongue Deathsworn"],
 				BabbleFaction["Friendly"],
-				23159, 
+				23159,
 			},
 		},
 		[42688] = {
@@ -1377,7 +1377,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[63192] = {
 			450,
 			8,
-			39, 
+			39,
 		},
 		[36125] = {
 			260,
@@ -1389,7 +1389,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["Cenarion Expedition"],
 				BabbleFaction["Honored"],
-				17904, 
+				17904,
 			},
 		},
 		[54553] = {
@@ -1406,7 +1406,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["Timbermaw Hold"],
 				BabbleFaction["Honored"],
-				11557, 
+				11557,
 			},
 		},
 		[19667] = {
@@ -1427,7 +1427,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[22757] = {
 			300,
 			8,
-			26, 
+			26,
 		},
 		[54555] = {
 			405,
@@ -1472,7 +1472,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[46140] = {
 			365,
 			8,
-			24, 
+			24,
 		},
 		[2737] = {
 			15,
@@ -1488,7 +1488,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["Cenarion Expedition"],
 				BabbleFaction["Exalted"],
-				17904, 
+				17904,
 			},
 		},
 		[59440] = {
@@ -1516,7 +1516,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["The Scryers"],
 				BabbleFaction["Honored"],
-				19331, 
+				19331,
 			},
 		},
 		[29603] = {
@@ -1549,7 +1549,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["vendor"] = {
 				16670,
 				16713,
-				19662, 
+				19662,
 			},
 		},
 		[55370] = {
@@ -1562,7 +1562,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["Thorium Brotherhood"],
 				BabbleFaction["Honored"],
-				12944, 
+				12944,
 			},
 		},
 		[9957] = {
@@ -1586,7 +1586,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["The Aldor"],
 				BabbleFaction["Honored"],
-				19321, 
+				19321,
 			},
 		},
 		[20874] = {
@@ -1595,7 +1595,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["Thorium Brotherhood"],
 				BabbleFaction["Friendly"],
-				12944, 
+				12944,
 			},
 		},
 		[27588] = {
@@ -1604,7 +1604,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["Cenarion Circle"],
 				BabbleFaction["Honored"],
-				15176, 
+				15176,
 			},
 		},
 		[3321] = {
@@ -1621,7 +1621,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["Cenarion Expedition"],
 				BabbleFaction["Honored"],
-				17904, 
+				17904,
 			},
 		},
 		[9993] = {
@@ -1657,7 +1657,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["vendor"] = {
 				16670,
 				16713,
-				19662, 
+				19662,
 			},
 		},
 		[20876] = {
@@ -1666,7 +1666,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["Thorium Brotherhood"],
 				BabbleFaction["Revered"],
-				12944, 
+				12944,
 			},
 		},
 		[29728] = {
@@ -1683,13 +1683,13 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["vendor"] = {
 				16670,
 				16713,
-				19662, 
+				19662,
 			},
 		},
 		[16969] = {
 			275,
 			1,
-			2, 
+			2,
 			["vendor"] = {
 				11278,
 			},
@@ -1708,18 +1708,18 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["Thorium Brotherhood"],
 				BabbleFaction["Honored"],
-				12944, 
+				12944,
 			},
 		},
 		[28243] = {
 			300,
 			2,
-			8, 
-			61, 
+			8,
+			61,
 			["repVendor"] = {
 				BabbleFaction["Argent Dawn"],
 				BabbleFaction["Revered"],
-				16365, 
+				16365,
 			},
 		},
 		[23652] = {
@@ -1728,7 +1728,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["Thorium Brotherhood"],
 				BabbleFaction["Exalted"],
-				12944, 
+				12944,
 			},
 		},
 		[29617] = {
@@ -1737,7 +1737,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["The Aldor"],
 				BabbleFaction["Revered"],
-				19321, 
+				19321,
 			},
 		},
 		[55179] = {
@@ -1814,7 +1814,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["Zandalar Tribe"],
 				BabbleFaction["Honored"],
-				14921, 
+				14921,
 			},
 		},
 		[38479] = {
@@ -1823,13 +1823,13 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["The Violet Eye"],
 				BabbleFaction["Honored"],
-				16388, 
+				16388,
 			},
 		},
 		[16642] = {
 			250,
 			1,
-			7, 
+			7,
 		},
 		[16650] = {
 			270,
@@ -1859,7 +1859,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["The Ashen Verdict"],
 				BabbleFaction["Honored"],
-				37687, 
+				37687,
 			},
 		},
 		[38476] = {
@@ -1868,7 +1868,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["Cenarion Expedition"],
 				BabbleFaction["Revered"],
-				17904, 
+				17904,
 			},
 		},
 		[55306] = {
@@ -1888,7 +1888,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["Cenarion Expedition"],
 				BabbleFaction["Revered"],
-				17904, 
+				17904,
 			},
 		},
 		[59442] = {
@@ -1943,7 +1943,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["Thorium Brotherhood"],
 				BabbleFaction["Honored"],
-				12944, 
+				12944,
 			},
 		},
 		[3326] = {
@@ -1988,16 +1988,16 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[29657] = {
 			360,
 			2,
-			6, 
+			6,
 			["repVendor"] = {
 				BabbleFaction["Honor Hold"],
 				BabbleFaction["Exalted"],
-				17657, 
+				17657,
 				{
 					BabbleFaction["Thrallmar"],
 					BabbleFaction["Exalted"],
-					17585, 
-				}, 
+					17585,
+				},
 			},
 		},
 		[3336] = {
@@ -2030,7 +2030,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["The Ashen Verdict"],
 				BabbleFaction["Revered"],
-				37687, 
+				37687,
 			},
 		},
 		[28462] = {
@@ -2039,7 +2039,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["Cenarion Circle"],
 				BabbleFaction["Honored"],
-				15176, 
+				15176,
 			},
 		},
 		[55307] = {
@@ -2074,18 +2074,18 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["Thorium Brotherhood"],
 				BabbleFaction["Revered"],
-				12944, 
+				12944,
 			},
 		},
 		[28244] = {
 			300,
 			2,
-			8, 
-			61, 
+			8,
+			61,
 			["repVendor"] = {
 				BabbleFaction["Argent Dawn"],
 				BabbleFaction["Revered"],
-				16365, 
+				16365,
 			},
 		},
 		[23653] = {
@@ -2094,7 +2094,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["Thorium Brotherhood"],
 				BabbleFaction["Exalted"],
-				12944, 
+				12944,
 			},
 		},
 		[70566] = {
@@ -2103,7 +2103,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["The Ashen Verdict"],
 				BabbleFaction["Honored"],
-				37687, 
+				37687,
 			},
 		},
 		[36136] = {
@@ -2155,7 +2155,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[46142] = {
 			365,
 			8,
-			24, 
+			24,
 		},
 		[19669] = {
 			275,
@@ -2180,7 +2180,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[16643] = {
 			250,
 			1,
-			7, 
+			7,
 		},
 		[16651] = {
 			275,
@@ -2203,7 +2203,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["The Ashen Verdict"],
 				BabbleFaction["Honored"],
-				37687, 
+				37687,
 			},
 		},
 		[70567] = {
@@ -2212,7 +2212,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["The Ashen Verdict"],
 				BabbleFaction["Revered"],
-				37687, 
+				37687,
 			},
 		},
 		[36122] = {
@@ -2233,7 +2233,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["The Violet Eye"],
 				BabbleFaction["Honored"],
-				16388, 
+				16388,
 			},
 		},
 		[2668] = {
@@ -2255,7 +2255,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[21913] = {
 			190,
 			8,
-			1, 
+			1,
 		},
 		[9926] = {
 			205,
@@ -2318,7 +2318,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["Cenarion Circle"],
 				BabbleFaction["Exalted"],
-				15471, 
+				15471,
 			},
 		},
 		[29642] = {
@@ -2370,7 +2370,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["The Violet Eye"],
 				BabbleFaction["Revered"],
-				16388, 
+				16388,
 			},
 		},
 		[32285] = {
@@ -2379,7 +2379,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["Cenarion Expedition"],
 				BabbleFaction["Honored"],
-				17904, 
+				17904,
 			},
 		},
 		[23638] = {
@@ -2388,13 +2388,13 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["Thorium Brotherhood"],
 				BabbleFaction["Revered"],
-				12944, 
+				12944,
 			},
 		},
 		[16971] = {
 			280,
 			1,
-			2, 
+			2,
 			["vendor"] = {
 				11278,
 			},
@@ -2405,7 +2405,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["Zandalar Tribe"],
 				BabbleFaction["Friendly"],
-				14921, 
+				14921,
 			},
 		},
 		[55373] = {
@@ -2433,8 +2433,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["mobDrop"] = {
 				21061,
 				21059,
-				21060, 
-				21050, 
+				21060,
+				21050,
 			},
 		},
 		[34548] = {
@@ -2455,7 +2455,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["The Scryers"],
 				BabbleFaction["Revered"],
-				19331, 
+				19331,
 			},
 		},
 		[63182] = {
@@ -2480,7 +2480,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["Ashtongue Deathsworn"],
 				BabbleFaction["Honored"],
-				23159, 
+				23159,
 			},
 		},
 		[27830] = {
@@ -2517,12 +2517,12 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[16644] = {
 			255,
 			1,
-			7, 
+			7,
 		},
 		[16652] = {
 			280,
 			1,
-			7, 
+			7,
 		},
 		[16660] = {
 			290,
@@ -2546,7 +2546,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["Timbermaw Hold"],
 				BabbleFaction["Revered"],
-				11557, 
+				11557,
 			},
 		},
 		[55310] = {
@@ -2559,13 +2559,13 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["Cenarion Circle"],
 				BabbleFaction["Revered"],
-				15176, 
+				15176,
 			},
 		},
 		[46144] = {
 			365,
 			8,
-			24, 
+			24,
 		},
 		[16724] = {
 			300,
@@ -2624,7 +2624,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[15295] = {
 			280,
 			8,
-			25, 
+			25,
 		},
 		[55055] = {
 			395,
@@ -2633,7 +2633,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[67091] = {
 			450,
 			8,
-			42, 
+			42,
 		},
 		[29619] = {
 			360,
@@ -2645,7 +2645,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[46141] = {
 			365,
 			8,
-			24, 
+			24,
 		},
 		[40033] = {
 			375,
@@ -2653,7 +2653,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["Ashtongue Deathsworn"],
 				BabbleFaction["Honored"],
-				23159, 
+				23159,
 			},
 		},
 		[29643] = {
@@ -2689,7 +2689,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["The Scryers"],
 				BabbleFaction["Friendly"],
-				19331, 
+				19331,
 			},
 		},
 		[29699] = {
@@ -2713,7 +2713,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["Thorium Brotherhood"],
 				BabbleFaction["Revered"],
-				12944, 
+				12944,
 			},
 		},
 		[55311] = {
@@ -2723,7 +2723,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[67092] = {
 			450,
 			8,
-			42, 
+			42,
 		},
 		[2740] = {
 			110,
@@ -2743,7 +2743,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["Thorium Brotherhood"],
 				BabbleFaction["Revered"],
-				12944, 
+				12944,
 			},
 		},
 		[70562] = {
@@ -2752,7 +2752,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["The Ashen Verdict"],
 				BabbleFaction["Revered"],
-				37687, 
+				37687,
 			},
 		},
 		[34983] = {
@@ -2807,7 +2807,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[67093] = {
 			450,
 			8,
-			42, 
+			42,
 		},
 		[43846] = {
 			365,
@@ -2835,12 +2835,12 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["limitedVendor"] = {
 				9179,
 				1,
-				8878, 
-				1, 
-				1471, 
-				1, 
-				26081, 
-				1, 
+				8878,
+				1,
+				1471,
+				1,
+				26081,
+				1,
 			},
 		},
 		[36261] = {
@@ -2866,7 +2866,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[16661] = {
 			295,
 			2,
-			7, 
+			7,
 			["vendor"] = {
 				11278,
 			},
@@ -2886,7 +2886,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[36389] = {
 			375,
 			8,
-			37, 
+			37,
 		},
 		[55312] = {
 			425,
@@ -2926,7 +2926,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[41132] = {
 			375,
 			8,
-			27, 
+			27,
 		},
 		[54945] = {
 			390,
@@ -2966,7 +2966,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[67095] = {
 			450,
 			8,
-			42, 
+			42,
 		},
 		[29620] = {
 			360,
@@ -3020,11 +3020,11 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[36391] = {
 			375,
 			8,
-			37, 
+			37,
 		},
 
 		--cooking
-		
+
 		[33276] = {
 			1,
 			2,
@@ -3053,7 +3053,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["vendor"] = {
 				31031,
 				31032,
-				33595, 
+				33595,
 			},
 		},
 		[15853] = {
@@ -3070,11 +3070,11 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["vendor"] = {
 				1148,
 				734,
-				12245, 
-				2821, 
-				4897, 
-				2810, 
-				4879, 
+				12245,
+				2821,
+				4897,
+				2810,
+				4879,
 			},
 		},
 		[6414] = {
@@ -3097,7 +3097,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["vendor"] = {
 				1148,
 				734,
-				12245, 
+				12245,
 			},
 		},
 		[15863] = {
@@ -3106,14 +3106,14 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["vendor"] = {
 				12245,
 				4879,
-				989, 
-				9636, 
+				989,
+				9636,
 			},
 		},
 		[15865] = {
 			175,
 			2,
-			2, 
+			2,
 			["vendor"] = {
 				4897,
 				8150,
@@ -3141,13 +3141,13 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["vendor"] = {
 				31031,
 				31032,
-				33595, 
+				33595,
 			},
 		},
 		[62044] = {
 			100,
 			8,
-			5, 
+			5,
 		},
 		[33277] = {
 			1,
@@ -3188,7 +3188,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["vendor"] = {
 				4305,
 				1149,
-				989, 
+				989,
 			},
 		},
 		[45565] = {
@@ -3215,7 +3215,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["vendor"] = {
 				2803,
 				2806,
-				11187, 
+				11187,
 			},
 		},
 		[15935] = {
@@ -3264,7 +3264,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["vendor"] = {
 				31031,
 				31032,
-				33595, 
+				33595,
 			},
 		},
 		[57439] = {
@@ -3273,13 +3273,13 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["vendor"] = {
 				31031,
 				31032,
-				33595, 
+				33595,
 			},
 		},
 		[62045] = {
 			330,
 			8,
-			5, 
+			5,
 		},
 		[37836] = {
 			1,
@@ -3311,7 +3311,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[3372] = {
 			90,
 			2,
-			2, 
+			2,
 			["vendor"] = {
 				340,
 			},
@@ -3325,13 +3325,13 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["vendor"] = {
 				31031,
 				31032,
-				33595, 
+				33595,
 			},
 		},
 		[3373] = {
 			120,
 			2,
-			2, 
+			2,
 			["vendor"] = {
 				340,
 			},
@@ -3345,9 +3345,9 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["vendor"] = {
 				5162,
 				4305,
-				3550, 
-				5942, 
-				10118, 
+				3550,
+				5942,
+				10118,
 			},
 		},
 		[7753] = {
@@ -3356,12 +3356,12 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["vendor"] = {
 				5748,
 				1684,
-				4574, 
-				66, 
-				4265, 
-				5940, 
-				3027, 
-				5162, 
+				4574,
+				66,
+				4265,
+				5940,
+				3027,
+				5162,
 			},
 		},
 		[7754] = {
@@ -3377,21 +3377,21 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["vendor"] = {
 				3497,
 				4553,
-				2383, 
-				3027, 
-				2397, 
-				5494, 
-				3029, 
+				2383,
+				3027,
+				2397,
+				5494,
+				3029,
 			},
 		},
 		[3376] = {
 			130,
 			2,
-			2, 
+			2,
 			["vendor"] = {
 				1148,
 				2821,
-				340, 
+				340,
 			},
 			["quest"] = {
 				296,
@@ -3400,7 +3400,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[3377] = {
 			110,
 			2,
-			2, 
+			2,
 			["vendor"] = {
 				340,
 			},
@@ -3411,7 +3411,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[8604] = {
 			1,
 			8,
-			8, 
+			8,
 		},
 		[64054] = {
 			250,
@@ -3426,7 +3426,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["vendor"] = {
 				31031,
 				31032,
-				33595, 
+				33595,
 			},
 		},
 		[6499] = {
@@ -3485,7 +3485,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["vendor"] = {
 				31031,
 				31032,
-				33595, 
+				33595,
 			},
 		},
 		[45567] = {
@@ -3494,7 +3494,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["vendor"] = {
 				31031,
 				31032,
-				33595, 
+				33595,
 			},
 		},
 		[25704] = {
@@ -3503,31 +3503,31 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["vendor"] = {
 				2397,
 				16718,
-				3085, 
-				17246, 
-				3027, 
-				14738, 
-				5160, 
-				4265, 
-				8307, 
-				4223, 
-				5483, 
-				3400, 
-				2381, 
-				2664, 
-				4553, 
-				19195, 
-				26868, 
-				16253, 
-				12033, 
-				16677, 
+				3085,
+				17246,
+				3027,
+				14738,
+				5160,
+				4265,
+				8307,
+				4223,
+				5483,
+				3400,
+				2381,
+				2664,
+				4553,
+				19195,
+				26868,
+				16253,
+				12033,
+				16677,
 			},
 		},
 		[3397] = {
 			110,
 			2,
-			2, 
-			2, 
+			2,
+			2,
 			["quest"] = {
 				498,
 			},
@@ -3545,13 +3545,13 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["vendor"] = {
 				31031,
 				31032,
-				33595, 
+				33595,
 			},
 		},
 		[3398] = {
 			125,
 			2,
-			2, 
+			2,
 			["vendor"] = {
 				3489,
 				12245,
@@ -3578,7 +3578,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[66034] = {
 			270,
 			8,
-			5, 
+			5,
 		},
 		[58525] = {
 			350,
@@ -3614,13 +3614,13 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["vendor"] = {
 				31031,
 				31032,
-				33595, 
+				33595,
 			},
 		},
 		[15856] = {
 			175,
 			2,
-			2, 
+			2,
 			["vendor"] = {
 				8145,
 				7947,
@@ -3633,7 +3633,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[66035] = {
 			210,
 			8,
-			5, 
+			5,
 		},
 		[7827] = {
 			50,
@@ -3641,14 +3641,14 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["vendor"] = {
 				4305,
 				4307,
-				5748, 
-				5494, 
-				3333, 
-				4553, 
-				3178, 
-				10118, 
-				3497, 
-				5942, 
+				5748,
+				5494,
+				3333,
+				4553,
+				3178,
+				10118,
+				3497,
+				5942,
 			},
 		},
 		[7828] = {
@@ -3657,13 +3657,13 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["vendor"] = {
 				4307,
 				2664,
-				3333, 
-				12962, 
-				2383, 
-				12033, 
-				3178, 
-				4574, 
-				5162, 
+				3333,
+				12962,
+				2383,
+				12033,
+				3178,
+				4574,
+				5162,
 			},
 		},
 		[8238] = {
@@ -3676,12 +3676,12 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["vendor"] = {
 				31031,
 				31032,
-				33595, 
+				33595,
 			},
 		},
 		[38867] = {
 			335,
-			2, 
+			2,
 			["vendor"] = {
 				20916,
 				21113,
@@ -3693,17 +3693,17 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[66038] = {
 			90,
 			8,
-			5, 
+			5,
 		},
 		[66036] = {
 			100,
 			8,
-			5, 
+			5,
 		},
 		[15906] = {
 			200,
 			2,
-			2, 
+			2,
 			["vendor"] = {
 				4897,
 				4879,
@@ -3727,7 +3727,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["vendor"] = {
 				12245,
 				9636,
-				8150, 
+				8150,
 			},
 		},
 		[18246] = {
@@ -3761,7 +3761,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[62051] = {
 			270,
 			8,
-			5, 
+			5,
 		},
 		[33291] = {
 			300,
@@ -3774,12 +3774,12 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[62049] = {
 			210,
 			8,
-			5, 
+			5,
 		},
 		[65454] = {
 			45,
 			8,
-			6, 
+			6,
 		},
 		[42302] = {
 			350,
@@ -3795,13 +3795,13 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["vendor"] = {
 				31031,
 				31032,
-				33595, 
+				33595,
 			},
 		},
 		[66037] = {
 			330,
 			8,
-			5, 
+			5,
 		},
 		[24418] = {
 			150,
@@ -3831,13 +3831,13 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["vendor"] = {
 				5940,
 				8508,
-				5494, 
-				3550, 
-				66, 
-				4265, 
-				3029, 
-				4574, 
-				1684, 
+				5494,
+				3550,
+				66,
+				4265,
+				3029,
+				4574,
+				1684,
 			},
 		},
 		[58065] = {
@@ -3847,7 +3847,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[28267] = {
 			60,
 			2,
-			2, 
+			2,
 			["vendor"] = {
 				16253,
 				18427,
@@ -3862,7 +3862,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["vendor"] = {
 				31031,
 				31032,
-				33595, 
+				33595,
 			},
 		},
 		[57443] = {
@@ -3871,28 +3871,28 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["vendor"] = {
 				31031,
 				31032,
-				33595, 
+				33595,
 			},
 		},
 		[2538] = {
 			1,
 			8,
-			8, 
+			8,
 		},
 		[21143] = {
 			1,
 			2,
-			8, 
-			1, 
+			8,
+			1,
 			["vendor"] = {
 				23064,
 				23010,
-				13435, 
-				13432, 
-				13429, 
-				13433, 
-				23012, 
-				13420, 
+				13435,
+				13432,
+				13429,
+				13433,
+				23012,
+				13420,
 			},
 		},
 		[2539] = {
@@ -3905,13 +3905,13 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["vendor"] = {
 				31031,
 				31032,
-				33595, 
+				33595,
 			},
 		},
 		[2795] = {
 			10,
 			2,
-			2, 
+			2,
 			["vendor"] = {
 				340,
 			},
@@ -3922,7 +3922,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[2542] = {
 			50,
 			2,
-			2, 
+			2,
 			["vendor"] = {
 				340,
 			},
@@ -3940,7 +3940,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["vendor"] = {
 				31031,
 				31032,
-				33595, 
+				33595,
 			},
 		},
 		[33290] = {
@@ -3958,7 +3958,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[2543] = {
 			75,
 			2,
-			2, 
+			2,
 			["vendor"] = {
 				340,
 			},
@@ -3980,13 +3980,13 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["vendor"] = {
 				31031,
 				31032,
-				33595, 
+				33595,
 			},
 		},
 		[2545] = {
 			85,
 			2,
-			7, 
+			7,
 			["vendor"] = {
 				340,
 			},
@@ -3997,7 +3997,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["vendor"] = {
 				31031,
 				31032,
-				33595, 
+				33595,
 			},
 		},
 		[2546] = {
@@ -4015,7 +4015,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[2547] = {
 			100,
 			2,
-			2, 
+			2,
 			["vendor"] = {
 				340,
 			},
@@ -4026,8 +4026,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[53056] = {
 			375,
 			2,
-			8, 
-			36, 
+			8,
+			36,
 			["quest"] = {
 				13571,
 			},
@@ -4035,7 +4035,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[2548] = {
 			110,
 			2,
-			7, 
+			7,
 			["vendor"] = {
 				340,
 			},
@@ -4051,7 +4051,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[2549] = {
 			100,
 			2,
-			2, 
+			2,
 			["vendor"] = {
 				340,
 			},
@@ -4069,23 +4069,23 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[45695] = {
 			100,
 			2,
-			8, 
-			7, 
+			8,
+			7,
 			["quest"] = {
 				11666,
 				11668,
-				11667, 
-				11669, 
-				13100, 
-				13101, 
-				13102, 
-				13103, 
-				13107, 
-				13112, 
-				13113, 
-				13114, 
-				13115, 
-				13116, 
+				11667,
+				11669,
+				13100,
+				13101,
+				13102,
+				13103,
+				13107,
+				13112,
+				13113,
+				13114,
+				13115,
+				13116,
 			},
 		},
 		[45557] = {
@@ -4094,7 +4094,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["vendor"] = {
 				31031,
 				31032,
-				33595, 
+				33595,
 			},
 		},
 		[45566] = {
@@ -4108,13 +4108,13 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[43772] = {
 			300,
 			2,
-			8, 
-			5, 
+			8,
+			5,
 			["quest"] = {
 				11381,
 				11377,
-				11379, 
-				11380, 
+				11379,
+				11380,
 			},
 		},
 		[45562] = {
@@ -4127,7 +4127,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["vendor"] = {
 				31031,
 				31032,
-				33595, 
+				33595,
 			},
 		},
 		[6413] = {
@@ -4143,18 +4143,18 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["vendor"] = {
 				4782,
 				8125,
-				7733, 
+				7733,
 			},
 		},
 		[62050] = {
 			90,
 			8,
-			5, 
+			5,
 		},
 		[6416] = {
 			50,
 			2,
-			2, 
+			2,
 			["vendor"] = {
 				3482,
 			},
@@ -4169,7 +4169,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[6417] = {
 			90,
 			2,
-			2, 
+			2,
 			["vendor"] = {
 				3392,
 			},
@@ -4194,7 +4194,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["vendor"] = {
 				31031,
 				31032,
-				33595, 
+				33595,
 			},
 		},
 		[18239] = {
@@ -4225,7 +4225,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["vendor"] = {
 				31031,
 				31032,
-				33595, 
+				33595,
 			},
 		},
 		[45563] = {
@@ -4238,19 +4238,19 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["vendor"] = {
 				31031,
 				31032,
-				33595, 
+				33595,
 			},
 		},
 		[43761] = {
 			300,
 			2,
-			8, 
-			6, 
+			8,
+			6,
 			["quest"] = {
 				11381,
 				11377,
-				11379, 
-				11380, 
+				11379,
+				11380,
 			},
 		},
 		[43765] = {
@@ -4260,15 +4260,15 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["quest"] = {
 				11381,
 				11377,
-				11379, 
-				11380, 
+				11379,
+				11380,
 			},
 		},
 		[45022] = {
 			325,
 			2,
-			8, 
-			1, 
+			8,
+			1,
 			["vendor"] = {
 				13420,
 				13433,
@@ -4277,23 +4277,23 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[43779] = {
 			1,
 			2,
-			8, 
-			5, 
+			8,
+			5,
 			["quest"] = {
 				11381,
 				11377,
-				11379, 
-				11380, 
-				13100, 
-				13101, 
-				13102, 
-				13103, 
-				13107, 
-				13112, 
-				13113, 
-				13114, 
-				13115, 
-				13116, 
+				11379,
+				11380,
+				13100,
+				13101,
+				13102,
+				13103,
+				13107,
+				13112,
+				13113,
+				13114,
+				13115,
+				13116,
 			},
 		},
 		[42296] = {
@@ -4303,31 +4303,31 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[43758] = {
 			300,
 			2,
-			8, 
-			5, 
+			8,
+			5,
 			["quest"] = {
 				11381,
 				11377,
-				11379, 
-				11380, 
-				13100, 
-				13101, 
-				13102, 
-				13103, 
-				13107, 
-				13112, 
-				13113, 
-				13114, 
-				13115, 
-				13116, 
+				11379,
+				11380,
+				13100,
+				13101,
+				13102,
+				13103,
+				13107,
+				13112,
+				13113,
+				13114,
+				13115,
+				13116,
 			},
 		},
 		[4094] = {
 			175,
 			1,
-			2, 
-			2, 
-			2, 
+			2,
+			2,
+			2,
 			["quest"] = {
 				703,
 			},
@@ -4342,7 +4342,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[3370] = {
 			80,
 			2,
-			2, 
+			2,
 			["vendor"] = {
 				340,
 			},
@@ -4382,7 +4382,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[9513] = {
 			60,
 			2,
-			2, 
+			2,
 			["vendor"] = {
 				6779,
 			},
@@ -4394,7 +4394,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[38868] = {
 			335,
 			2,
-			2, 
+			2,
 			["vendor"] = {
 				20916,
 				21113,
@@ -4409,8 +4409,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["quest"] = {
 				13088,
 				13087,
-				13089, 
-				13090, 
+				13089,
+				13090,
 			},
 		},
 		[20916] = {
@@ -4419,13 +4419,13 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["vendor"] = {
 				4307,
 				2664,
-				3333, 
-				12962, 
-				2383, 
-				12033, 
-				3178, 
-				4574, 
-				5162, 
+				3333,
+				12962,
+				2383,
+				12033,
+				3178,
+				4574,
+				5162,
 			},
 		},
 		[57437] = {
@@ -4434,7 +4434,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["vendor"] = {
 				31031,
 				31032,
-				33595, 
+				33595,
 			},
 		},
 		[20626] = {
@@ -4447,45 +4447,45 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[2540] = {
 			1,
 			8,
-			8, 
+			8,
 		},
 		[21144] = {
 			35,
 			2,
-			8, 
-			1, 
+			8,
+			1,
 			["vendor"] = {
 				23064,
 				23010,
-				13435, 
-				13432, 
-				13429, 
-				13433, 
-				23012, 
-				13420, 
+				13435,
+				13432,
+				13429,
+				13433,
+				23012,
+				13420,
 			},
 		},
 		[13028] = {
 			175,
 			8,
-			13, 
+			13,
 		},
 		[43707] = {
 			325,
 			2,
-			8, 
-			6, 
+			8,
+			6,
 			["quest"] = {
 				11381,
 				11377,
-				11379, 
-				11380, 
+				11379,
+				11380,
 			},
 		},
 		[3371] = {
 			60,
 			2,
-			2, 
+			2,
 			["vendor"] = {
 				340,
 			},
@@ -4501,11 +4501,11 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			},
 		},
 		--enchanting
-		
+
 		[46578] = {
 			350,
 			8,
-			4, 
+			4,
 		},
 		[46594] = {
 			360,
@@ -4513,7 +4513,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["Shattered Sun Offensive"],
 				BabbleFaction["Honored"],
-				25032, 
+				25032,
 			},
 		},
 		[25125] = {
@@ -4522,24 +4522,24 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["vendor"] = {
 				28714,
 				15419,
-				4617, 
-				18951, 
-				5757, 
-				16722, 
-				27030, 
-				19234, 
-				3012, 
-				5758, 
-				26569, 
-				18773, 
-				4228, 
-				5158, 
-				16635, 
-				19663, 
-				3346, 
-				1318, 
-				27054, 
-				27147, 
+				4617,
+				18951,
+				5757,
+				16722,
+				27030,
+				19234,
+				3012,
+				5758,
+				26569,
+				18773,
+				4228,
+				5158,
+				16635,
+				19663,
+				3346,
+				1318,
+				27054,
+				27147,
 				19537, -- [21]
 				18753, -- [22]
 				19540, -- [23]
@@ -4559,9 +4559,9 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["mobDrop"] = {
 				1054,
 				1051,
-				1052, 
-				1364, 
-				1053, 
+				1052,
+				1364,
+				1053,
 			},
 		},
 		[351530] = {
@@ -4595,9 +4595,9 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["mobDrop"] = {
 				2377,
 				2374,
-				2375, 
-				2376, 
-				14276, 
+				2375,
+				2376,
+				14276,
 			},
 		},
 		[13628] = {
@@ -4637,7 +4637,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["Timbermaw Hold"],
 				BabbleFaction["Honored"],
-				11557, 
+				11557,
 			},
 		},
 		[17181] = {
@@ -4650,7 +4650,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["The Consortium"],
 				BabbleFaction["Revered"],
-				17518, 
+				17518,
 			},
 		},
 		[27944] = {
@@ -4660,16 +4660,16 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[27960] = {
 			345,
 			2,
-			2, 
+			2,
 			["repVendor"] = {
 				BabbleFaction["Honor Hold"],
 				BabbleFaction["Revered"],
-				17657, 
+				17657,
 				{
 					BabbleFaction["Thrallmar"],
 					BabbleFaction["Revered"],
-					17585, 
-				}, 
+					17585,
+				},
 			},
 		},
 		[44631] = {
@@ -4692,7 +4692,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["vendor"] = {
 				19663,
 				16722,
-				16635, 
+				16635,
 			},
 		},
 		[45765] = {
@@ -4701,7 +4701,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["Shattered Sun Offensive"],
 				BabbleFaction["Honored"],
-				25032, 
+				25032,
 			},
 		},
 		[60616] = {
@@ -4719,7 +4719,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[25078] = {
 			300,
 			8,
-			22, 
+			22,
 		},
 		[13836] = {
 			215,
@@ -4750,9 +4750,9 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["mobDrop"] = {
 				764,
 				766,
-				14448, 
-				1081, 
-				765, 
+				14448,
+				1081,
+				765,
 			},
 		},
 		[42620] = {
@@ -4761,7 +4761,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["The Violet Eye"],
 				BabbleFaction["Exalted"],
-				18255, 
+				18255,
 			},
 		},
 		[33997] = {
@@ -4770,7 +4770,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["Keepers of Time"],
 				BabbleFaction["Honored"],
-				21643, 
+				21643,
 			},
 		},
 		[13421] = {
@@ -4787,9 +4787,9 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["Argent Dawn"],
 				BabbleFaction["Honored"],
-				10856, 
-				11536, 
-				10857, 
+				10856,
+				11536,
+				10857,
 			},
 		},
 		[44489] = {
@@ -4864,7 +4864,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[25079] = {
 			300,
 			8,
-			22, 
+			22,
 		},
 		[44506] = {
 			375,
@@ -4899,15 +4899,15 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["mobDrop"] = {
 				4029,
 				3834,
-				3919, 
-				4028, 
-				4030, 
+				3919,
+				4028,
+				4030,
 			},
 		},
 		[64579] = {
 			450,
 			8,
-			39, 
+			39,
 		},
 		[13637] = {
 			160,
@@ -4919,7 +4919,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["The Sha'tar"],
 				BabbleFaction["Honored"],
-				21432, 
+				21432,
 			},
 		},
 		[13653] = {
@@ -4948,9 +4948,9 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["Argent Dawn"],
 				BabbleFaction["Revered"],
-				10856, 
-				11536, 
-				10857, 
+				10856,
+				11536,
+				10857,
 			},
 		},
 		[27906] = {
@@ -5006,7 +5006,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[7421] = {
 			1,
 			8,
-			8, 
+			8,
 		},
 		[13817] = {
 			210,
@@ -5015,25 +5015,25 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[25072] = {
 			300,
 			2,
-			2, 
+			2,
 			["mobDrop"] = {
 				15275,
 			},
 			["repVendor"] = {
 				BabbleFaction["The Sha'tar"],
 				BabbleFaction["Exalted"],
-				21432, 
+				21432,
 			},
 		},
 		[25080] = {
 			300,
 			2,
-			8, 
-			22, 
+			8,
+			22,
 			["repVendor"] = {
 				BabbleFaction["Keepers of Time"],
 				BabbleFaction["Exalted"],
-				21643, 
+				21643,
 			},
 		},
 		[44492] = {
@@ -5127,7 +5127,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[22749] = {
 			300,
 			8,
-			26, 
+			26,
 		},
 		[23803] = {
 			300,
@@ -5135,7 +5135,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["Thorium Brotherhood"],
 				BabbleFaction["Honored"],
-				12944, 
+				12944,
 			},
 		},
 		[27899] = {
@@ -5174,7 +5174,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["vendor"] = {
 				19663,
 				16722,
-				16635, 
+				16635,
 			},
 		},
 		[28027] = {
@@ -5192,7 +5192,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[25073] = {
 			300,
 			8,
-			22, 
+			22,
 		},
 		[25081] = {
 			300,
@@ -5200,7 +5200,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["Cenarion Circle"],
 				BabbleFaction["Friendly"],
-				15419, 
+				15419,
 			},
 		},
 		[44494] = {
@@ -5224,7 +5224,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["Zandalar Tribe"],
 				BabbleFaction["Honored"],
-				14921, 
+				14921,
 			},
 		},
 		[44590] = {
@@ -5262,8 +5262,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["The Consortium"],
 				BabbleFaction["Friendly"],
-				20242, 
-				23007, 
+				20242,
+				23007,
 			},
 		},
 		[13646] = {
@@ -5272,8 +5272,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["limitedVendor"] = {
 				2381,
 				1,
-				2821, 
-				1, 
+				2821,
+				1,
 			},
 		},
 		[60623] = {
@@ -5287,7 +5287,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[22750] = {
 			300,
 			8,
-			26, 
+			26,
 		},
 		[13698] = {
 			200,
@@ -5295,8 +5295,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["mobDrop"] = {
 				2556,
 				2558,
-				2557, 
-				2606, 
+				2557,
+				2606,
 			},
 		},
 		[13702] = {
@@ -5309,7 +5309,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["Thorium Brotherhood"],
 				BabbleFaction["Revered"],
-				12944, 
+				12944,
 			},
 		},
 		[27924] = {
@@ -5318,7 +5318,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["Keepers of Time"],
 				BabbleFaction["Honored"],
-				21643, 
+				21643,
 			},
 		},
 		[44575] = {
@@ -5370,7 +5370,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[25074] = {
 			300,
 			8,
-			22, 
+			22,
 		},
 		[25082] = {
 			300,
@@ -5378,7 +5378,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["Cenarion Circle"],
 				BabbleFaction["Honored"],
-				15419, 
+				15419,
 			},
 		},
 		[47051] = {
@@ -5391,7 +5391,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[64441] = {
 			450,
 			8,
-			39, 
+			39,
 		},
 		[13846] = {
 			220,
@@ -5422,7 +5422,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["mobDrop"] = {
 				5623,
 				7805,
-				2246, 
+				2246,
 			},
 		},
 		[13890] = {
@@ -5457,7 +5457,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[13419] = {
 			110,
 			2,
-			7, 
+			7,
 			["vendor"] = {
 				3954,
 				12043,
@@ -5469,7 +5469,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["Timbermaw Hold"],
 				BabbleFaction["Friendly"],
-				11557, 
+				11557,
 			},
 		},
 		[7745] = {
@@ -5534,8 +5534,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["vendor"] = {
 				3012,
 				5158,
-				3346, 
-				5758, 
+				3346,
+				5758,
 			},
 		},
 		[7795] = {
@@ -5556,12 +5556,12 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[25083] = {
 			300,
 			2,
-			8, 
-			22, 
+			8,
+			22,
 			["repVendor"] = {
 				BabbleFaction["Cenarion Expedition"],
 				BabbleFaction["Exalted"],
-				17904, 
+				17904,
 			},
 		},
 		[20013] = {
@@ -5701,7 +5701,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["The Sha'tar"],
 				BabbleFaction["Revered"],
-				21432, 
+				21432,
 			},
 		},
 		[62959] = {
@@ -5773,7 +5773,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["vendor"] = {
 				19663,
 				16722,
-				16635, 
+				16635,
 			},
 		},
 		[47672] = {
@@ -5809,7 +5809,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[7418] = {
 			1,
 			8,
-			8, 
+			8,
 		},
 		[7420] = {
 			15,
@@ -5830,7 +5830,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[7428] = {
 			1,
 			8,
-			8, 
+			8,
 		},
 		[25124] = {
 			45,
@@ -5838,24 +5838,24 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["vendor"] = {
 				28714,
 				15419,
-				4617, 
-				18951, 
-				5757, 
-				16722, 
-				27030, 
-				19234, 
-				3012, 
-				5758, 
-				26569, 
-				18773, 
-				4228, 
-				5158, 
-				16635, 
-				19663, 
-				3346, 
-				1318, 
-				27054, 
-				27147, 
+				4617,
+				18951,
+				5757,
+				16722,
+				27030,
+				19234,
+				3012,
+				5758,
+				26569,
+				18773,
+				4228,
+				5158,
+				16635,
+				19663,
+				3346,
+				1318,
+				27054,
+				27147,
 				19537, -- [21]
 				18753, -- [22]
 				19540, -- [23]
@@ -5875,20 +5875,20 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[25084] = {
 			300,
 			2,
-			2, 
-			2, 
+			2,
+			2,
 			["mobDrop"] = {
 				15276,
 			},
 			["repVendor"] = {
 				BabbleFaction["Honor Hold"],
 				BabbleFaction["Exalted"],
-				17657, 
+				17657,
 				{
 					BabbleFaction["Thrallmar"],
 					BabbleFaction["Exalted"],
-					17585, 
-				}, 
+					17585,
+				},
 			},
 		},
 		[44500] = {
@@ -5941,12 +5941,12 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[25086] = {
 			300,
 			2,
-			8, 
-			22, 
+			8,
+			22,
 			["repVendor"] = {
 				BabbleFaction["Lower City"],
 				BabbleFaction["Exalted"],
-				21655, 
+				21655,
 			},
 		},
 		[34002] = {
@@ -6012,7 +6012,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["mobDrop"] = {
 				26343,
 				26336,
-				26344, 
+				26344,
 			},
 		},
 		[13931] = {
@@ -6042,7 +6042,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[32667] = {
 			375,
 			1,
-			2, 
+			2,
 			["vendor"] = {
 				19663,
 			},
@@ -6057,7 +6057,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["Thorium Brotherhood"],
 				BabbleFaction["Friendly"],
-				12944, 
+				12944,
 			},
 		},
 		[13945] = {
@@ -6071,16 +6071,16 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		[27911] = {
 			325,
 			2,
-			2, 
+			2,
 			["repVendor"] = {
 				BabbleFaction["Honor Hold"],
 				BabbleFaction["Friendly"],
-				17657, 
+				17657,
 				{
 					BabbleFaction["Thrallmar"],
 					BabbleFaction["Friendly"],
-					17585, 
-				}, 
+					17585,
+				},
 			},
 		},
 		[13464] = {
@@ -6093,7 +6093,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["Lower City"],
 				BabbleFaction["Honored"],
-				21655, 
+				21655,
 			},
 		},
 		[7771] = {
@@ -6128,8 +6128,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["The Consortium"],
 				BabbleFaction["Honored"],
-				20242, 
-				23007, 
+				20242,
+				23007,
 			},
 		},
 		[27975] = {
@@ -6167,7 +6167,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["Cenarion Expedition"],
 				BabbleFaction["Revered"],
-				17904, 
+				17904,
 			},
 		},
 		[34010] = {
@@ -6176,7 +6176,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["The Sha'tar"],
 				BabbleFaction["Revered"],
-				21432, 
+				21432,
 			},
 		},
 		[27982] = {
@@ -6273,7 +6273,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["repVendor"] = {
 				BabbleFaction["Zandalar Tribe"],
 				BabbleFaction["Friendly"],
-				14921, 
+				14921,
 			},
 		},
 		[13948] = {
@@ -6286,31 +6286,31 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 			["vendor"] = {
 				28714,
 				15419,
-				4617, 
-				18951, 
-				5757, 
-				16722, 
-				27030, 
-				19234, 
-				3012, 
-				5758, 
-				26569, 
-				18773, 
-				4228, 
-				5158, 
-				16635, 
-				19663, 
-				3346, 
-				1318, 
-				27054, 
-				27147, 
+				4617,
+				18951,
+				5757,
+				16722,
+				27030,
+				19234,
+				3012,
+				5758,
+				26569,
+				18773,
+				4228,
+				5158,
+				16635,
+				19663,
+				3346,
+				1318,
+				27054,
+				27147,
 				19537, -- [21]
 				18753, -- [22]
 				19540, -- [23]
 			},
 		},
 	--engineering
-	
+
 	[23081] = {
 		290,
 		2,
@@ -6321,7 +6321,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[46115] = {
 		375,
 		8,
-		24, 
+		24,
 	},
 	[12586] = {
 		175,
@@ -6360,13 +6360,13 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			16657,
 			16782,
-			18484, 
+			18484,
 		},
 	},
 	[28327] = {
 		275,
 		2,
-		2, 
+		2,
 		["vendor"] = {
 			3413,
 			5175,
@@ -6390,13 +6390,13 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[46116] = {
 		375,
 		8,
-		24, 
+		24,
 	},
 	[26427] = {
 		275,
 		2,
-		8, 
-		2, 
+		8,
+		2,
 		["vendor"] = {
 			15909,
 		},
@@ -6415,8 +6415,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Consortium"],
 			BabbleFaction["Revered"],
-			20242, 
-			23007, 
+			20242,
+			23007,
 		},
 	},
 	[30563] = {
@@ -6438,7 +6438,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[21940] = {
 		190,
 		8,
-		1, 
+		1,
 	},
 	[23489] = {
 		260,
@@ -6461,7 +6461,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[8243] = {
 		185,
 		2,
-		2, 
+		2,
 		["mobDrop"] = {
 			7800,
 		},
@@ -6472,7 +6472,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[9269] = {
 		125,
 		2,
-		2, 
+		2,
 		["mobDrop"] = {
 			7800,
 		},
@@ -6484,14 +6484,14 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[9273] = {
 		165,
 		2,
-		2, 
+		2,
 		["mobDrop"] = {
 			7800,
 		},
 		["vendor"] = {
 			4086,
 			3134,
-			3537, 
+			3537,
 		},
 	},
 	[30308] = {
@@ -6519,7 +6519,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			16657,
 			16782,
-			18484, 
+			18484,
 		},
 	},
 	[12902] = {
@@ -6541,7 +6541,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[22795] = {
 		300,
 		8,
-		26, 
+		26,
 	},
 	[55252] = {
 		415,
@@ -6553,8 +6553,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[26420] = {
 		175,
 		2,
-		8, 
-		2, 
+		8,
+		2,
 		["vendor"] = {
 			15909,
 		},
@@ -6562,8 +6562,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[26428] = {
 		275,
 		2,
-		8, 
-		2, 
+		8,
+		2,
 		["vendor"] = {
 			15909,
 		},
@@ -6606,7 +6606,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[15633] = {
 		205,
 		8,
-		16, 
+		16,
 	},
 	[23067] = {
 		150,
@@ -6729,7 +6729,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Ashen Verdict"],
 			BabbleFaction["Honored"],
-			37687, 
+			37687,
 		},
 	},
 	[23068] = {
@@ -6798,7 +6798,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[22797] = {
 		300,
 		8,
-		26, 
+		26,
 	},
 	[54793] = {
 		380,
@@ -6807,8 +6807,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[26422] = {
 		175,
 		2,
-		8, 
-		2, 
+		8,
+		2,
 		["vendor"] = {
 			15909,
 		},
@@ -6869,7 +6869,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[46107] = {
 		375,
 		8,
-		24, 
+		24,
 	},
 	[12584] = {
 		150,
@@ -6913,13 +6913,13 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[46108] = {
 		375,
 		8,
-		24, 
+		24,
 	},
 	[26423] = {
 		225,
 		2,
-		8, 
-		2, 
+		8,
+		2,
 		["vendor"] = {
 			15909,
 		},
@@ -6976,7 +6976,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[46109] = {
 		375,
 		8,
-		24, 
+		24,
 	},
 	[61471] = {
 		390,
@@ -7000,7 +7000,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Cenarion Expedition"],
 			BabbleFaction["Friendly"],
-			17904, 
+			17904,
 		},
 	},
 	[12908] = {
@@ -7018,7 +7018,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[60867] = {
 		450,
 		8,
-		"ALLIANCE_VANGUARD", 
+		"ALLIANCE_VANGUARD",
 	},
 	[72953] = {
 		450,
@@ -7026,7 +7026,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Ashen Verdict"],
 			BabbleFaction["Honored"],
-			37687, 
+			37687,
 		},
 	},
 	[68067] = {
@@ -7051,19 +7051,19 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Zandalar Tribe"],
 			BabbleFaction["Honored"],
-			14921, 
+			14921,
 		},
 	},
 	[46110] = {
 		375,
 		8,
-		24, 
+		24,
 	},
 	[26416] = {
 		125,
 		2,
-		8, 
-		2, 
+		8,
+		2,
 		["vendor"] = {
 			15909,
 		},
@@ -7071,8 +7071,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[26424] = {
 		225,
 		2,
-		8, 
-		2, 
+		8,
+		2,
 		["vendor"] = {
 			15909,
 		},
@@ -7186,8 +7186,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Horde Expedition"],
 			BabbleFaction["Exalted"],
-			32565, 
-			32774, 
+			32565,
+			32774,
 		},
 	},
 	[56467] = {
@@ -7201,11 +7201,11 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[23079] = {
 		275,
 		8,
-		32, 
+		32,
 	},
 	[3919] = {
 		1,
-		1, 
+		1,
 	},
 	[12585] = {
 		175,
@@ -7274,7 +7274,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[22704] = {
 		300,
 		8,
-		17, 
+		17,
 	},
 	[3936] = {
 		105,
@@ -7346,7 +7346,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[46112] = {
 		375,
 		8,
-		24, 
+		24,
 	},
 	[3952] = {
 		140,
@@ -7354,7 +7354,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			3495,
 			2683,
-			2682, 
+			2682,
 		},
 	},
 	[12717] = {
@@ -7442,7 +7442,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[3971] = {
 		200,
 		2,
-		2, 
+		2,
 		["mobDrop"] = {
 			7800,
 		},
@@ -7489,7 +7489,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[46106] = {
 		375,
 		8,
-		24, 
+		24,
 	},
 	[19799] = {
 		285,
@@ -7508,7 +7508,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[46113] = {
 		375,
 		8,
-		24, 
+		24,
 	},
 	[23096] = {
 		265,
@@ -7616,7 +7616,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			16657,
 			19661,
-			16782, 
+			16782,
 		},
 	},
 	[8334] = {
@@ -7634,12 +7634,12 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[46111] = {
 		375,
 		8,
-		24, 
+		24,
 	},
 	[22793] = {
 		300,
 		8,
-		26, 
+		26,
 	},
 	[44155] = {
 		300,
@@ -7651,7 +7651,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Zandalar Tribe"],
 			BabbleFaction["Friendly"],
-			14921, 
+			14921,
 		},
 	},
 	[12716] = {
@@ -7665,13 +7665,13 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[46114] = {
 		375,
 		8,
-		24, 
+		24,
 	},
 	[26418] = {
 		125,
 		2,
-		8, 
-		2, 
+		8,
+		2,
 		["vendor"] = {
 			15909,
 		},
@@ -7679,8 +7679,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[26426] = {
 		275,
 		2,
-		8, 
-		2, 
+		8,
+		2,
 		["vendor"] = {
 			15909,
 		},
@@ -7692,8 +7692,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[26442] = {
 		225,
 		2,
-		8, 
-		2, 
+		8,
+		2,
 		["vendor"] = {
 			15909,
 		},
@@ -7731,8 +7731,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			16657,
 			18484,
-			19383, 
-			16782, 
+			19383,
+			16782,
 		},
 	},
 	[30337] = {
@@ -7760,8 +7760,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[26417] = {
 		125,
 		2,
-		8, 
-		2, 
+		8,
+		2,
 		["vendor"] = {
 			15909,
 		},
@@ -7772,11 +7772,11 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	},
 	[3918] = {
 		1,
-		1, 
+		1,
 	},
 	[3920] = {
 		1,
-		1, 
+		1,
 	},
 	[41321] = {
 		350,
@@ -7785,8 +7785,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[26443] = {
 		275,
 		2,
-		8, 
-		2, 
+		8,
+		2,
 		["vendor"] = {
 			15909,
 		},
@@ -7798,8 +7798,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[26425] = {
 		225,
 		2,
-		8, 
-		2, 
+		8,
+		2,
 		["vendor"] = {
 			15909,
 		},
@@ -7818,8 +7818,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[26421] = {
 		175,
 		2,
-		8, 
-		2, 
+		8,
+		2,
 		["vendor"] = {
 			15909,
 		},
@@ -7827,7 +7827,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[15628] = {
 		205,
 		8,
-		16, 
+		16,
 	},
 	[3959] = {
 		160,
@@ -7837,7 +7837,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		},
 	},
 	--firstaid
-	
+
 	[7934] = {
 		80,
 		1,
@@ -7848,14 +7848,14 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Argent Dawn"],
 			BabbleFaction["Honored"],
-			10856, 
-			11536, 
-			10857, 
+			10856,
+			11536,
+			10857,
 		},
 	},
 	[3275] = {
 		1,
-		1, 
+		1,
 	},
 	[3277] = {
 		80,
@@ -7914,21 +7914,21 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		1,
 	},
 	--inscription
-	
+
 	[58315] = {
 		95,
 		8,
-		14, 
+		14,
 	},
 	[58331] = {
 		120,
 		8,
-		14, 
+		14,
 	},
 	[58347] = {
 		320,
 		8,
-		14, 
+		14,
 	},
 	[59497] = {
 		400,
@@ -7937,7 +7937,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[56958] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[56974] = {
 		155,
@@ -7946,7 +7946,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[56990] = {
 		310,
 		8,
-		14, 
+		14,
 	},
 	[57006] = {
 		375,
@@ -7959,22 +7959,22 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[64256] = {
 		425,
 		8,
-		40, 
+		40,
 	},
 	[64288] = {
 		425,
 		8,
-		40, 
+		40,
 	},
 	[64304] = {
 		425,
 		8,
-		40, 
+		40,
 	},
 	[57166] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[57198] = {
 		375,
@@ -7983,12 +7983,12 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[57214] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[57230] = {
 		300,
 		8,
-		14, 
+		14,
 	},
 	[57246] = {
 		95,
@@ -8001,17 +8001,17 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[58300] = {
 		75,
 		8,
-		14, 
+		14,
 	},
 	[58316] = {
 		150,
 		8,
-		14, 
+		14,
 	},
 	[58332] = {
 		95,
 		8,
-		14, 
+		14,
 	},
 	[56943] = {
 		350,
@@ -8024,7 +8024,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[56975] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[56991] = {
 		315,
@@ -8045,7 +8045,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[64257] = {
 		425,
 		8,
-		40, 
+		40,
 	},
 	[57119] = {
 		95,
@@ -8053,7 +8053,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	},
 	[45382] = {
 		1,
-		1, 
+		1,
 	},
 	[57151] = {
 		220,
@@ -8070,12 +8070,12 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[57199] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[57215] = {
 		300,
 		8,
-		14, 
+		14,
 	},
 	[50604] = {
 		410,
@@ -8088,17 +8088,17 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[58301] = {
 		75,
 		8,
-		14, 
+		14,
 	},
 	[58317] = {
 		75,
 		8,
-		14, 
+		14,
 	},
 	[58333] = {
 		150,
 		8,
-		14, 
+		14,
 	},
 	[59387] = {
 		200,
@@ -8111,12 +8111,12 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[56944] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[56960] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[56976] = {
 		80,
@@ -8141,7 +8141,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[57152] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[57168] = {
 		320,
@@ -8162,7 +8162,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[57232] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[50605] = {
 		75,
@@ -8171,21 +8171,21 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[57264] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[58302] = {
 		150,
 		8,
-		14, 
+		14,
 	},
 	[58318] = {
 		75,
 		8,
-		14, 
+		14,
 	},
 	[48114] = {
 		1,
-		1, 
+		1,
 	},
 	[64051] = {
 		350,
@@ -8193,8 +8193,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["mobDrop"] = {
 			27676,
 			26708,
-			26679, 
-			27546, 
+			26679,
+			27546,
 		},
 	},
 	[59484] = {
@@ -8212,7 +8212,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[56977] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[57009] = {
 		90,
@@ -8237,17 +8237,17 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[64291] = {
 		425,
 		8,
-		40, 
+		40,
 	},
 	[57153] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[57169] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[57185] = {
 		270,
@@ -8260,12 +8260,12 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[57217] = {
 		320,
 		8,
-		14, 
+		14,
 	},
 	[57233] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[50606] = {
 		160,
@@ -8278,17 +8278,17 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[58303] = {
 		75,
 		8,
-		14, 
+		14,
 	},
 	[58319] = {
 		170,
 		8,
-		14, 
+		14,
 	},
 	[56946] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[56978] = {
 		90,
@@ -8301,7 +8301,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[57010] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[57026] = {
 		300,
@@ -8322,7 +8322,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[57170] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[57186] = {
 		120,
@@ -8331,17 +8331,17 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[57202] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[57218] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[57234] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[50607] = {
 		210,
@@ -8354,16 +8354,16 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[59326] = {
 		95,
 		8,
-		14, 
+		14,
 	},
 	[58320] = {
 		95,
 		8,
-		14, 
+		14,
 	},
 	[48116] = {
 		1,
-		1, 
+		1,
 	},
 	[64053] = {
 		350,
@@ -8376,7 +8376,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[56947] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[56963] = {
 		85,
@@ -8393,7 +8393,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[57011] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[57027] = {
 		90,
@@ -8410,17 +8410,17 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[64312] = {
 		425,
 		8,
-		40, 
+		40,
 	},
 	[57155] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[64313] = {
 		425,
 		8,
-		40, 
+		40,
 	},
 	[57187] = {
 		315,
@@ -8437,7 +8437,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[57235] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[50608] = {
 		255,
@@ -8446,22 +8446,22 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[57267] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[58305] = {
 		95,
 		8,
-		14, 
+		14,
 	},
 	[58321] = {
 		150,
 		8,
-		14, 
+		14,
 	},
 	[58337] = {
 		75,
 		8,
-		14, 
+		14,
 	},
 	[71015] = {
 		375,
@@ -8477,7 +8477,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[64286] = {
 		425,
 		8,
-		40, 
+		40,
 	},
 	[67600] = {
 		100,
@@ -8490,12 +8490,12 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[64318] = {
 		425,
 		8,
-		40, 
+		40,
 	},
 	[64317] = {
 		425,
 		8,
-		40, 
+		40,
 	},
 	[59487] = {
 		175,
@@ -8508,7 +8508,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[64316] = {
 		425,
 		8,
-		40, 
+		40,
 	},
 	[56980] = {
 		375,
@@ -8517,27 +8517,27 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[56996] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[57012] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[57028] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[64315] = {
 		425,
 		8,
-		40, 
+		40,
 	},
 	[64314] = {
 		425,
 		8,
-		40, 
+		40,
 	},
 	[71101] = {
 		250,
@@ -8545,13 +8545,13 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			28723,
 			30734,
-			30735, 
+			30735,
 		},
 	},
 	[64246] = {
 		425,
 		8,
-		40, 
+		40,
 	},
 	[64262] = {
 		255,
@@ -8560,12 +8560,12 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[57124] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[64294] = {
 		425,
 		8,
-		40, 
+		40,
 	},
 	[57156] = {
 		285,
@@ -8586,7 +8586,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[57220] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[57236] = {
 		300,
@@ -8599,22 +8599,22 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[57268] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[58306] = {
 		75,
 		8,
-		14, 
+		14,
 	},
 	[58322] = {
 		345,
 		8,
-		14, 
+		14,
 	},
 	[58338] = {
 		150,
 		8,
-		14, 
+		14,
 	},
 	[71102] = {
 		375,
@@ -8626,32 +8626,32 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[64311] = {
 		425,
 		8,
-		40, 
+		40,
 	},
 	[64310] = {
 		425,
 		8,
-		40, 
+		40,
 	},
 	[64309] = {
 		425,
 		8,
-		40, 
+		40,
 	},
 	[64308] = {
 		425,
 		8,
-		40, 
+		40,
 	},
 	[64307] = {
 		425,
 		8,
-		40, 
+		40,
 	},
 	[64305] = {
 		425,
 		8,
-		40, 
+		40,
 	},
 	[59488] = {
 		235,
@@ -8660,12 +8660,12 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[56949] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[56965] = {
 		310,
 		8,
-		14, 
+		14,
 	},
 	[56981] = {
 		175,
@@ -8678,7 +8678,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[57013] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[57029] = {
 		105,
@@ -8699,7 +8699,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[64247] = {
 		425,
 		8,
-		40, 
+		40,
 	},
 	[59338] = {
 		310,
@@ -8712,7 +8712,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[64295] = {
 		425,
 		8,
-		40, 
+		40,
 	},
 	[57157] = {
 		125,
@@ -8725,7 +8725,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[57189] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[57716] = {
 		375,
@@ -8738,12 +8738,12 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[57237] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[57253] = {
 		355,
 		8,
-		14, 
+		14,
 	},
 	[57269] = {
 		140,
@@ -8752,17 +8752,17 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[58307] = {
 		120,
 		8,
-		14, 
+		14,
 	},
 	[58323] = {
 		75,
 		8,
-		14, 
+		14,
 	},
 	[58339] = {
 		150,
 		8,
-		14, 
+		14,
 	},
 	[59339] = {
 		320,
@@ -8771,32 +8771,32 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[64279] = {
 		425,
 		8,
-		40, 
+		40,
 	},
 	[64289] = {
 		425,
 		8,
-		40, 
+		40,
 	},
 	[64287] = {
 		425,
 		8,
-		40, 
+		40,
 	},
 	[68166] = {
 		355,
 		8,
-		14, 
+		14,
 	},
 	[64285] = {
 		425,
 		8,
-		40, 
+		40,
 	},
 	[64284] = {
 		425,
 		8,
-		40, 
+		40,
 	},
 	[48247] = {
 		110,
@@ -8805,12 +8805,12 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[56950] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[64283] = {
 		425,
 		8,
-		40, 
+		40,
 	},
 	[56982] = {
 		205,
@@ -8819,12 +8819,12 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[56998] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[57014] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[57030] = {
 		120,
@@ -8833,37 +8833,37 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[64282] = {
 		425,
 		8,
-		40, 
+		40,
 	},
 	[64281] = {
 		425,
 		8,
-		40, 
+		40,
 	},
 	[61677] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[64248] = {
 		425,
 		8,
-		40, 
+		40,
 	},
 	[64280] = {
 		425,
 		8,
-		40, 
+		40,
 	},
 	[57126] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[64296] = {
 		425,
 		8,
-		40, 
+		40,
 	},
 	[57158] = {
 		95,
@@ -8872,17 +8872,17 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[64278] = {
 		425,
 		8,
-		40, 
+		40,
 	},
 	[57190] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[64277] = {
 		425,
 		8,
-		40, 
+		40,
 	},
 	[57222] = {
 		350,
@@ -8903,52 +8903,52 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[58308] = {
 		75,
 		8,
-		14, 
+		14,
 	},
 	[58324] = {
 		120,
 		8,
-		14, 
+		14,
 	},
 	[58340] = {
 		120,
 		8,
-		14, 
+		14,
 	},
 	[64276] = {
 		425,
 		8,
-		40, 
+		40,
 	},
 	[64275] = {
 		425,
 		8,
-		40, 
+		40,
 	},
 	[64274] = {
 		425,
 		8,
-		40, 
+		40,
 	},
 	[64273] = {
 		425,
 		8,
-		40, 
+		40,
 	},
 	[64271] = {
 		425,
 		8,
-		40, 
+		40,
 	},
 	[64270] = {
 		425,
 		8,
-		40, 
+		40,
 	},
 	[64268] = {
 		425,
 		8,
-		40, 
+		40,
 	},
 	[48248] = {
 		35,
@@ -8965,12 +8965,12 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[56983] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[56999] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[64266] = {
 		275,
@@ -8983,7 +8983,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[57247] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[57704] = {
 		100,
@@ -8992,12 +8992,12 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[58299] = {
 		75,
 		8,
-		14, 
+		14,
 	},
 	[64249] = {
 		425,
 		8,
-		40, 
+		40,
 	},
 	[58480] = {
 		270,
@@ -9006,17 +9006,17 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[57127] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[64297] = {
 		425,
 		8,
-		40, 
+		40,
 	},
 	[57159] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[59504] = {
 		400,
@@ -9025,17 +9025,17 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[57191] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[57207] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[57223] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[57239] = {
 		85,
@@ -9056,7 +9056,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[58325] = {
 		95,
 		8,
-		14, 
+		14,
 	},
 	[48121] = {
 		100,
@@ -9121,42 +9121,42 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[59561] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[59560] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[59559] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[64250] = {
 		425,
 		8,
-		40, 
+		40,
 	},
 	[57112] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[57128] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[64298] = {
 		425,
 		8,
-		40, 
+		40,
 	},
 	[57160] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[59502] = {
 		275,
@@ -9169,7 +9169,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[57208] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[57224] = {
 		330,
@@ -9190,17 +9190,17 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[58310] = {
 		75,
 		8,
-		14, 
+		14,
 	},
 	[58326] = {
 		75,
 		8,
-		14, 
+		14,
 	},
 	[58342] = {
 		75,
 		8,
-		14, 
+		14,
 	},
 	[59500] = {
 		350,
@@ -9265,7 +9265,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[58336] = {
 		95,
 		8,
-		14, 
+		14,
 	},
 	[59340] = {
 		340,
@@ -9274,7 +9274,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[64251] = {
 		425,
 		8,
-		40, 
+		40,
 	},
 	[57113] = {
 		340,
@@ -9287,7 +9287,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[64299] = {
 		425,
 		8,
-		40, 
+		40,
 	},
 	[57161] = {
 		170,
@@ -9296,17 +9296,17 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[59315] = {
 		150,
 		8,
-		14, 
+		14,
 	},
 	[57193] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[57209] = {
 		320,
 		8,
-		14, 
+		14,
 	},
 	[57225] = {
 		375,
@@ -9323,26 +9323,26 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[57273] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[58311] = {
 		95,
 		8,
-		14, 
+		14,
 	},
 	[58327] = {
 		195,
 		8,
-		14, 
+		14,
 	},
 	[58343] = {
 		75,
 		8,
-		14, 
+		14,
 	},
 	[52738] = {
 		1,
-		1, 
+		1,
 	},
 	[58565] = {
 		110,
@@ -9375,7 +9375,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[56954] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[58485] = {
 		80,
@@ -9384,7 +9384,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[56986] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[57002] = {
 		260,
@@ -9397,7 +9397,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[57034] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[58483] = {
 		420,
@@ -9414,7 +9414,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[64252] = {
 		425,
 		8,
-		40, 
+		40,
 	},
 	[57114] = {
 		80,
@@ -9423,12 +9423,12 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[57130] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[64300] = {
 		425,
 		8,
-		40, 
+		40,
 	},
 	[57162] = {
 		85,
@@ -9457,7 +9457,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[57258] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[57274] = {
 		240,
@@ -9466,17 +9466,17 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[58312] = {
 		75,
 		8,
-		14, 
+		14,
 	},
 	[58328] = {
 		120,
 		8,
-		14, 
+		14,
 	},
 	[58344] = {
 		75,
 		8,
-		14, 
+		14,
 	},
 	[52739] = {
 		35,
@@ -9493,17 +9493,17 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[57250] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[58288] = {
 		95,
 		8,
-		14, 
+		14,
 	},
 	[58341] = {
 		345,
 		8,
-		14, 
+		14,
 	},
 	[59478] = {
 		125,
@@ -9532,17 +9532,17 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[57019] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[57035] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[58289] = {
 		75,
 		8,
-		14, 
+		14,
 	},
 	[57703] = {
 		85,
@@ -9551,17 +9551,17 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[58296] = {
 		75,
 		8,
-		14, 
+		14,
 	},
 	[64253] = {
 		425,
 		8,
-		40, 
+		40,
 	},
 	[57115] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[57131] = {
 		210,
@@ -9570,7 +9570,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[58298] = {
 		75,
 		8,
-		14, 
+		14,
 	},
 	[57163] = {
 		110,
@@ -9579,17 +9579,17 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[58297] = {
 		195,
 		8,
-		14, 
+		14,
 	},
 	[57195] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[57211] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[57227] = {
 		345,
@@ -9610,32 +9610,32 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[58313] = {
 		75,
 		8,
-		14, 
+		14,
 	},
 	[58329] = {
 		150,
 		8,
-		14, 
+		14,
 	},
 	[58345] = {
 		95,
 		8,
-		14, 
+		14,
 	},
 	[58287] = {
 		150,
 		8,
-		14, 
+		14,
 	},
 	[58286] = {
 		75,
 		8,
-		14, 
+		14,
 	},
 	[57719] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[57713] = {
 		290,
@@ -9668,7 +9668,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[56988] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[57004] = {
 		80,
@@ -9697,12 +9697,12 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[64254] = {
 		425,
 		8,
-		40, 
+		40,
 	},
 	[57116] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[57132] = {
 		235,
@@ -9711,12 +9711,12 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[64302] = {
 		425,
 		8,
-		40, 
+		40,
 	},
 	[57164] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[50617] = {
 		250,
@@ -9729,12 +9729,12 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[57212] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[57228] = {
 		300,
 		8,
-		14, 
+		14,
 	},
 	[50601] = {
 		260,
@@ -9743,27 +9743,27 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[57260] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[57276] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[58314] = {
 		75,
 		8,
-		14, 
+		14,
 	},
 	[58330] = {
 		150,
 		8,
-		14, 
+		14,
 	},
 	[58346] = {
 		75,
 		8,
-		14, 
+		14,
 	},
 	[50602] = {
 		310,
@@ -9780,7 +9780,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[57263] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[57262] = {
 		125,
@@ -9789,7 +9789,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[57243] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[59480] = {
 		125,
@@ -9810,7 +9810,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[56989] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[57005] = {
 		130,
@@ -9819,7 +9819,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[57021] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[57251] = {
 		275,
@@ -9832,7 +9832,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[65245] = {
 		425,
 		8,
-		40, 
+		40,
 	},
 	[57248] = {
 		375,
@@ -9841,12 +9841,12 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[64255] = {
 		425,
 		8,
-		40, 
+		40,
 	},
 	[57117] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[57133] = {
 		285,
@@ -9855,7 +9855,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[64303] = {
 		425,
 		8,
-		40, 
+		40,
 	},
 	[57165] = {
 		190,
@@ -9864,7 +9864,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[57181] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[57197] = {
 		160,
@@ -9877,7 +9877,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[57229] = {
 		300,
 		8,
-		14, 
+		14,
 	},
 	[57245] = {
 		140,
@@ -9886,7 +9886,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[57261] = {
 		385,
 		8,
-		15, 
+		15,
 	},
 	[57277] = {
 		190,
@@ -9897,15 +9897,15 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		1,
 	},
 	--jewlcrafting
-	
+
 	[66557] = {
 		450,
 		2,
 		["vendor"] = {
 			33637,
 			33680,
-			28701, 
-			19065, 
+			28701,
+			19065,
 		},
 	},
 	[53834] = {
@@ -9930,9 +9930,9 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["mobDrop"] = {
 			30260,
 			28379,
-			29402, 
-			28851, 
-			30448, 
+			29402,
+			28851,
+			30448,
 		},
 	},
 	[62242] = {
@@ -9949,8 +9949,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			33637,
 			33680,
-			28701, 
-			19065, 
+			28701,
+			19065,
 		},
 	},
 	[25622] = {
@@ -9970,7 +9970,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Lower City"],
 			BabbleFaction["Friendly"],
-			21655, 
+			21655,
 		},
 	},
 	[26885] = {
@@ -9983,8 +9983,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Consortium"],
 			BabbleFaction["Honored"],
-			20242, 
-			23007, 
+			20242,
+			23007,
 		},
 	},
 	[53835] = {
@@ -10023,13 +10023,13 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Shattered Sun Offensive"],
 			BabbleFaction["Friendly"],
-			25950, 
-			27666, 
+			25950,
+			27666,
 			{
 				BabbleFaction["The Scale of the Sands"],
 				BabbleFaction["Friendly"],
-				23437, 
-			}, 
+				23437,
+			},
 		},
 	},
 	[39737] = {
@@ -10038,8 +10038,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Shattered Sun Offensive"],
 			BabbleFaction["Exalted"],
-			27666, 
-			25950, 
+			27666,
+			25950,
 		},
 	},
 	[56201] = {
@@ -10052,8 +10052,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			33637,
 			33680,
-			28701, 
-			19065, 
+			28701,
+			19065,
 		},
 	},
 	[39961] = {
@@ -10062,8 +10062,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Consortium"],
 			BabbleFaction["Exalted"],
-			20242, 
-			23007, 
+			20242,
+			23007,
 		},
 	},
 	[55402] = {
@@ -10072,7 +10072,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	},
 	[25255] = {
 		1,
-		1,		 
+		1,
 	},
 	[25287] = {
 		70,
@@ -10084,8 +10084,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			33637,
 			33680,
-			28701, 
-			19065, 
+			28701,
+			19065,
 		},
 	},
 	[66497] = {
@@ -10094,8 +10094,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			33637,
 			33680,
-			28701, 
-			19065, 
+			28701,
+			19065,
 		},
 	},
 	[66561] = {
@@ -10104,8 +10104,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			33637,
 			33680,
-			28701, 
-			19065, 
+			28701,
+			19065,
 		},
 	},
 	[53868] = {
@@ -10130,7 +10130,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Frenzyheart Tribe"],
 			BabbleFaction["Revered"],
-			31911, 
+			31911,
 		},
 	},
 	[39706] = {
@@ -10139,13 +10139,13 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Shattered Sun Offensive"],
 			BabbleFaction["Friendly"],
-			25950, 
-			27666, 
+			25950,
+			27666,
 			{
 				BabbleFaction["The Scale of the Sands"],
 				BabbleFaction["Friendly"],
-				23437, 
-			}, 
+				23437,
+			},
 		},
 	},
 	[39738] = {
@@ -10154,13 +10154,13 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Shattered Sun Offensive"],
 			BabbleFaction["Revered"],
-			25950, 
-			27666, 
+			25950,
+			27666,
 			{
 				BabbleFaction["The Scale of the Sands"],
 				BabbleFaction["Revered"],
-				23437, 
-			}, 
+				23437,
+			},
 		},
 	},
 	[56202] = {
@@ -10173,8 +10173,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			33637,
 			33680,
-			28701, 
-			19065, 
+			28701,
+			19065,
 		},
 	},
 	[66498] = {
@@ -10183,8 +10183,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			33637,
 			33680,
-			28701, 
-			19065, 
+			28701,
+			19065,
 		},
 	},
 	[32801] = {
@@ -10209,8 +10209,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			33637,
 			33680,
-			28701, 
-			19065, 
+			28701,
+			19065,
 		},
 	},
 	[28948] = {
@@ -10223,8 +10223,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Kalu'ak"],
 			BabbleFaction["Honored"],
-			31916, 
-			32763, 
+			31916,
+			32763,
 		},
 	},
 	[31058] = {
@@ -10245,7 +10245,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Knights of the Ebon Blade"],
 			BabbleFaction["Exalted"],
-			32538, 
+			32538,
 		},
 	},
 	[53997] = {
@@ -10262,13 +10262,13 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Shattered Sun Offensive"],
 			BabbleFaction["Revered"],
-			25950, 
-			27666, 
+			25950,
+			27666,
 			{
 				BabbleFaction["The Scale of the Sands"],
 				BabbleFaction["Revered"],
-				23437, 
-			}, 
+				23437,
+			},
 		},
 	},
 	[56203] = {
@@ -10281,8 +10281,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			33637,
 			33680,
-			28701, 
-			19065, 
+			28701,
+			19065,
 		},
 	},
 	[66500] = {
@@ -10291,8 +10291,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			33637,
 			33680,
-			28701, 
-			19065, 
+			28701,
+			19065,
 		},
 	},
 	[39963] = {
@@ -10305,7 +10305,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Consortium"],
 			BabbleFaction["Honored"],
-			17518, 
+			17518,
 		},
 	},
 	[55404] = {
@@ -10322,12 +10322,12 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["limitedVendor"] = {
 			17512,
 			1,
-			16624, 
-			1, 
-			3367, 
-			1, 
-			1286, 
-			1, 
+			16624,
+			1,
+			3367,
+			1,
+			1286,
+			1,
 		},
 	},
 	[66437] = {
@@ -10336,8 +10336,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			33637,
 			33680,
-			28701, 
-			19065, 
+			28701,
+			19065,
 		},
 	},
 	[66501] = {
@@ -10346,8 +10346,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			33637,
 			33680,
-			28701, 
-			19065, 
+			28701,
+			19065,
 		},
 	},
 	[39452] = {
@@ -10388,13 +10388,13 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Shattered Sun Offensive"],
 			BabbleFaction["Honored"],
-			25950, 
-			27666, 
+			25950,
+			27666,
 			{
 				BabbleFaction["The Scale of the Sands"],
 				BabbleFaction["Honored"],
-				23437, 
-			}, 
+				23437,
+			},
 		},
 	},
 	[66438] = {
@@ -10403,8 +10403,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			33637,
 			33680,
-			28701, 
-			19065, 
+			28701,
+			19065,
 		},
 	},
 	[66502] = {
@@ -10413,8 +10413,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			33637,
 			33680,
-			28701, 
-			19065, 
+			28701,
+			19065,
 		},
 	},
 	[66566] = {
@@ -10423,8 +10423,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			33637,
 			33680,
-			28701, 
-			19065, 
+			28701,
+			19065,
 		},
 	},
 	[32867] = {
@@ -10433,7 +10433,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Consortium"],
 			BabbleFaction["Revered"],
-			17518, 
+			17518,
 		},
 	},
 	[55405] = {
@@ -10450,8 +10450,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Consortium"],
 			BabbleFaction["Friendly"],
-			20242, 
-			23007, 
+			20242,
+			23007,
 		},
 	},
 	[26903] = {
@@ -10496,13 +10496,13 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Shattered Sun Offensive"],
 			BabbleFaction["Honored"],
-			25950, 
-			27666, 
+			25950,
+			27666,
 			{
 				BabbleFaction["The Scale of the Sands"],
 				BabbleFaction["Honored"],
-				23437, 
-			}, 
+				23437,
+			},
 		},
 	},
 	[32178] = {
@@ -10519,7 +10519,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Sha'tar"],
 			BabbleFaction["Honored"],
-			21432, 
+			21432,
 		},
 	},
 	[66504] = {
@@ -10528,8 +10528,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			33637,
 			33680,
-			28701, 
-			19065, 
+			28701,
+			19065,
 		},
 	},
 	[66568] = {
@@ -10538,8 +10538,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			33637,
 			33680,
-			28701, 
-			19065, 
+			28701,
+			19065,
 		},
 	},
 	[32868] = {
@@ -10572,8 +10572,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			33637,
 			33680,
-			28701, 
-			19065, 
+			28701,
+			19065,
 		},
 	},
 	[66505] = {
@@ -10582,8 +10582,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			33637,
 			33680,
-			28701, 
-			19065, 
+			28701,
+			19065,
 		},
 	},
 	[66569] = {
@@ -10592,8 +10592,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			33637,
 			33680,
-			28701, 
-			19065, 
+			28701,
+			19065,
 		},
 	},
 	[53872] = {
@@ -10606,8 +10606,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Shattered Sun Offensive"],
 			BabbleFaction["Exalted"],
-			25950, 
-			27666, 
+			25950,
+			27666,
 		},
 	},
 	[46775] = {
@@ -10616,7 +10616,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Shattered Sun Offensive"],
 			BabbleFaction["Revered"],
-			25032, 
+			25032,
 		},
 	},
 	[53968] = {
@@ -10625,7 +10625,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			32296,
 			32294,
-			30489, 
+			30489,
 		},
 	},
 	[54000] = {
@@ -10634,7 +10634,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			32296,
 			32294,
-			30489, 
+			30489,
 		},
 	},
 	[39710] = {
@@ -10643,13 +10643,13 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Shattered Sun Offensive"],
 			BabbleFaction["Friendly"],
-			25950, 
-			27666, 
+			25950,
+			27666,
 			{
 				BabbleFaction["The Scale of the Sands"],
 				BabbleFaction["Friendly"],
-				23437, 
-			}, 
+				23437,
+			},
 		},
 	},
 	[39742] = {
@@ -10658,13 +10658,13 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Shattered Sun Offensive"],
 			BabbleFaction["Honored"],
-			25950, 
-			27666, 
+			25950,
+			27666,
 			{
 				BabbleFaction["The Scale of the Sands"],
 				BabbleFaction["Honored"],
-				23437, 
-			}, 
+				23437,
+			},
 		},
 	},
 	[56206] = {
@@ -10677,8 +10677,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			33637,
 			33680,
-			28701, 
-			19065, 
+			28701,
+			19065,
 		},
 	},
 	[66506] = {
@@ -10687,8 +10687,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			33637,
 			33680,
-			28701, 
-			19065, 
+			28701,
+			19065,
 		},
 	},
 	[66570] = {
@@ -10697,8 +10697,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			33637,
 			33680,
-			28701, 
-			19065, 
+			28701,
+			19065,
 		},
 	},
 	[32869] = {
@@ -10720,7 +10720,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[39455] = {
 		325,
 		8,
-		35, 
+		35,
 	},
 	[42588] = {
 		360,
@@ -10728,7 +10728,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Sha'tar"],
 			BabbleFaction["Honored"],
-			21432, 
+			21432,
 		},
 	},
 	[53873] = {
@@ -10745,7 +10745,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Shattered Sun Offensive"],
 			BabbleFaction["Revered"],
-			25032, 
+			25032,
 		},
 	},
 	[53969] = {
@@ -10766,13 +10766,13 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Shattered Sun Offensive"],
 			BabbleFaction["Friendly"],
-			25950, 
-			27666, 
+			25950,
+			27666,
 			{
 				BabbleFaction["The Scale of the Sands"],
 				BabbleFaction["Friendly"],
-				23437, 
-			}, 
+				23437,
+			},
 		},
 	},
 	[32179] = {
@@ -10785,8 +10785,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			33637,
 			33680,
-			28701, 
-			19065, 
+			28701,
+			19065,
 		},
 	},
 	[32259] = {
@@ -10799,8 +10799,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			33637,
 			33680,
-			28701, 
-			19065, 
+			28701,
+			19065,
 		},
 	},
 	[32870] = {
@@ -10809,7 +10809,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Sha'tar"],
 			BabbleFaction["Friendly"],
-			21432, 
+			21432,
 		},
 	},
 	[66445] = {
@@ -10818,8 +10818,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			33637,
 			33680,
-			28701, 
-			19065, 
+			28701,
+			19065,
 		},
 	},
 	[66573] = {
@@ -10828,8 +10828,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			33637,
 			33680,
-			28701, 
-			19065, 
+			28701,
+			19065,
 		},
 	},
 	[42589] = {
@@ -10838,8 +10838,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Consortium"],
 			BabbleFaction["Revered"],
-			20242, 
-			23007, 
+			20242,
+			23007,
 		},
 	},
 	[53874] = {
@@ -10852,7 +10852,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Shattered Sun Offensive"],
 			BabbleFaction["Revered"],
-			25032, 
+			25032,
 		},
 	},
 	[53970] = {
@@ -10884,8 +10884,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			33637,
 			33680,
-			28701, 
-			19065, 
+			28701,
+			19065,
 		},
 	},
 	[25610] = {
@@ -10926,8 +10926,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			33637,
 			33680,
-			28701, 
-			19065, 
+			28701,
+			19065,
 		},
 	},
 	[42558] = {
@@ -10936,8 +10936,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Consortium"],
 			BabbleFaction["Revered"],
-			20242, 
-			23007, 
+			20242,
+			23007,
 		},
 	},
 	[53843] = {
@@ -10962,7 +10962,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Shattered Sun Offensive"],
 			BabbleFaction["Revered"],
-			25032, 
+			25032,
 		},
 	},
 	[53971] = {
@@ -10991,8 +10991,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			33637,
 			33680,
-			28701, 
-			19065, 
+			28701,
+			19065,
 		},
 	},
 	[32808] = {
@@ -11017,8 +11017,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["limitedVendor"] = {
 			3499,
 			1,
-			3954, 
-			1, 
+			3954,
+			1,
 		},
 	},
 	[25339] = {
@@ -11027,18 +11027,18 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["limitedVendor"] = {
 			16624,
 			1,
-			4561, 
-			1, 
-			4229, 
-			1, 
-			17512, 
-			1, 
+			4561,
+			1,
+			4229,
+			1,
+			17512,
+			1,
 		},
 	},
 	[39458] = {
 		325,
 		8,
-		35, 
+		35,
 	},
 	[42591] = {
 		360,
@@ -11046,7 +11046,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Keepers of Time"],
 			BabbleFaction["Revered"],
-			21643, 
+			21643,
 		},
 	},
 	[53876] = {
@@ -11059,7 +11059,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Shattered Sun Offensive"],
 			BabbleFaction["Revered"],
-			25032, 
+			25032,
 		},
 	},
 	[53972] = {
@@ -11068,8 +11068,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["mobDrop"] = {
 			30208,
 			29370,
-			30222, 
-			29376, 
+			30222,
+			29376,
 		},
 	},
 	[54004] = {
@@ -11082,8 +11082,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Shattered Sun Offensive"],
 			BabbleFaction["Exalted"],
-			27666, 
-			25950, 
+			27666,
+			25950,
 		},
 	},
 	[66450] = {
@@ -11092,8 +11092,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			33637,
 			33680,
-			28701, 
-			19065, 
+			28701,
+			19065,
 		},
 	},
 	[32809] = {
@@ -11106,8 +11106,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Consortium"],
 			BabbleFaction["Honored"],
-			20242, 
-			23007, 
+			20242,
+			23007,
 		},
 	},
 	[56498] = {
@@ -11152,7 +11152,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Sha'tar"],
 			BabbleFaction["Revered"],
-			21432, 
+			21432,
 		},
 	},
 	[53877] = {
@@ -11161,7 +11161,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Knights of the Ebon Blade"],
 			BabbleFaction["Friendly"],
-			32538, 
+			32538,
 		},
 	},
 	[31062] = {
@@ -11170,7 +11170,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Keepers of Time"],
 			BabbleFaction["Revered"],
-			21643, 
+			21643,
 		},
 	},
 	[53941] = {
@@ -11203,8 +11203,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			33637,
 			33680,
-			28701, 
-			19065, 
+			28701,
+			19065,
 		},
 	},
 	[66580] = {
@@ -11213,8 +11213,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			33637,
 			33680,
-			28701, 
-			19065, 
+			28701,
+			19065,
 		},
 	},
 	[32874] = {
@@ -11223,7 +11223,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Keepers of Time"],
 			BabbleFaction["Honored"],
-			21643, 
+			21643,
 		},
 	},
 	[56499] = {
@@ -11244,8 +11244,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			33637,
 			33680,
-			28701, 
-			19065, 
+			28701,
+			19065,
 		},
 	},
 	[66581] = {
@@ -11254,8 +11254,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			33637,
 			33680,
-			28701, 
-			19065, 
+			28701,
+			19065,
 		},
 	},
 	[42593] = {
@@ -11264,7 +11264,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Keepers of Time"],
 			BabbleFaction["Honored"],
-			21643, 
+			21643,
 		},
 	},
 	[53878] = {
@@ -11277,7 +11277,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Argent Crusade"],
 			BabbleFaction["Revered"],
-			30431, 
+			30431,
 		},
 	},
 	[56052] = {
@@ -11294,13 +11294,13 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Shattered Sun Offensive"],
 			BabbleFaction["Friendly"],
-			25950, 
-			27666, 
+			25950,
+			27666,
 			{
 				BabbleFaction["The Scale of the Sands"],
 				BabbleFaction["Friendly"],
-				23437, 
-			}, 
+				23437,
+			},
 		},
 	},
 	[25612] = {
@@ -11309,8 +11309,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["limitedVendor"] = {
 			2381,
 			1,
-			2393, 
-			1, 
+			2393,
+			1,
 		},
 	},
 	[66582] = {
@@ -11319,8 +11319,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			33637,
 			33680,
-			28701, 
-			19065, 
+			28701,
+			19065,
 		},
 	},
 	[56500] = {
@@ -11361,7 +11361,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Lower City"],
 			BabbleFaction["Revered"],
-			21655, 
+			21655,
 		},
 	},
 	[31079] = {
@@ -11370,7 +11370,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Lower City"],
 			BabbleFaction["Revered"],
-			21655, 
+			21655,
 		},
 	},
 	[31095] = {
@@ -11387,13 +11387,13 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Shattered Sun Offensive"],
 			BabbleFaction["Friendly"],
-			25950, 
-			27666, 
+			25950,
+			27666,
 			{
 				BabbleFaction["The Scale of the Sands"],
 				BabbleFaction["Friendly"],
-				23437, 
-			}, 
+				23437,
+			},
 		},
 	},
 	[66584] = {
@@ -11402,8 +11402,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			33637,
 			33680,
-			28701, 
-			19065, 
+			28701,
+			19065,
 		},
 	},
 	[56501] = {
@@ -11424,7 +11424,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Violet Eye"],
 			BabbleFaction["Honored"],
-			18255, 
+			18255,
 		},
 	},
 	[53880] = {
@@ -11441,7 +11441,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Oracles"],
 			BabbleFaction["Revered"],
-			31910, 
+			31910,
 		},
 	},
 	[39718] = {
@@ -11450,8 +11450,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Shattered Sun Offensive"],
 			BabbleFaction["Exalted"],
-			27666, 
-			25950, 
+			27666,
+			25950,
 		},
 	},
 	[25613] = {
@@ -11464,8 +11464,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			33637,
 			33680,
-			28701, 
-			19065, 
+			28701,
+			19065,
 		},
 	},
 	[34955] = {
@@ -11478,7 +11478,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Scryers"],
 			BabbleFaction["Friendly"],
-			19331, 
+			19331,
 		},
 	},
 	[26876] = {
@@ -11499,7 +11499,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Cenarion Expedition"],
 			BabbleFaction["Exalted"],
-			17904, 
+			17904,
 		},
 	},
 	[31048] = {
@@ -11512,7 +11512,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Scryers"],
 			BabbleFaction["Revered"],
-			19331, 
+			19331,
 		},
 	},
 	[31080] = {
@@ -11521,12 +11521,12 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Honor Hold"],
 			BabbleFaction["Revered"],
-			17657, 
+			17657,
 			{
 				BabbleFaction["Thrallmar"],
 				BabbleFaction["Revered"],
-				17585, 
-			}, 
+				17585,
+			},
 		},
 	},
 	[31096] = {
@@ -11543,13 +11543,13 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Shattered Sun Offensive"],
 			BabbleFaction["Friendly"],
-			25950, 
-			27666, 
+			25950,
+			27666,
 			{
 				BabbleFaction["The Scale of the Sands"],
 				BabbleFaction["Friendly"],
-				23437, 
-			}, 
+				23437,
+			},
 		},
 	},
 	[55384] = {
@@ -11582,7 +11582,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Kirin Tor"],
 			BabbleFaction["Exalted"],
-			32287, 
+			32287,
 		},
 	},
 	[53978] = {
@@ -11591,7 +11591,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			32296,
 			32294,
-			30489, 
+			30489,
 		},
 	},
 	[54010] = {
@@ -11600,7 +11600,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			32296,
 			32294,
-			30489, 
+			30489,
 		},
 	},
 	[39720] = {
@@ -11609,13 +11609,13 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Shattered Sun Offensive"],
 			BabbleFaction["Friendly"],
-			25950, 
-			27666, 
+			25950,
+			27666,
 			{
 				BabbleFaction["The Scale of the Sands"],
 				BabbleFaction["Friendly"],
-				23437, 
-			}, 
+				23437,
+			},
 		},
 	},
 	[68253] = {
@@ -11624,8 +11624,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			33637,
 			33680,
-			28701, 
-			19065, 
+			28701,
+			19065,
 		},
 	},
 	[41415] = {
@@ -11646,7 +11646,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	},
 	[26925] = {
 		1,
-		1, 
+		1,
 	},
 	[31049] = {
 		310,
@@ -11658,7 +11658,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Aldor"],
 			BabbleFaction["Revered"],
-			19321, 
+			19321,
 		},
 	},
 	[31081] = {
@@ -11667,7 +11667,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Keepers of Time"],
 			BabbleFaction["Revered"],
-			21643, 
+			21643,
 		},
 	},
 	[31097] = {
@@ -11684,13 +11684,13 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Shattered Sun Offensive"],
 			BabbleFaction["Revered"],
-			25950, 
-			27666, 
+			25950,
+			27666,
 			{
 				BabbleFaction["The Scale of the Sands"],
 				BabbleFaction["Revered"],
-				23437, 
-			}, 
+				23437,
+			},
 		},
 	},
 	[55386] = {
@@ -11703,14 +11703,14 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Shattered Sun Offensive"],
 			BabbleFaction["Exalted"],
-			25950, 
-			27666, 
+			25950,
+			27666,
 		},
 	},
 	[39466] = {
 		325,
 		8,
-		35, 
+		35,
 	},
 	[53852] = {
 		350,
@@ -11758,13 +11758,13 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Shattered Sun Offensive"],
 			BabbleFaction["Friendly"],
-			25950, 
-			27666, 
+			25950,
+			27666,
 			{
 				BabbleFaction["The Scale of the Sands"],
 				BabbleFaction["Friendly"],
-				23437, 
-			}, 
+				23437,
+			},
 		},
 	},
 	[66338] = {
@@ -11773,8 +11773,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			33637,
 			33680,
-			28701, 
-			19065, 
+			28701,
+			19065,
 		},
 	},
 	[25615] = {
@@ -11787,7 +11787,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			32296,
 			32294,
-			30489, 
+			30489,
 		},
 	},
 	[34959] = {
@@ -11800,8 +11800,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Shattered Sun Offensive"],
 			BabbleFaction["Exalted"],
-			25950, 
-			27666, 
+			25950,
+			27666,
 		},
 	},
 	[26878] = {
@@ -11810,14 +11810,14 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["limitedVendor"] = {
 			2810,
 			1,
-			2821, 
-			1, 
+			2821,
+			1,
 		},
 	},
 	[39467] = {
 		325,
 		8,
-		35, 
+		35,
 	},
 	[26926] = {
 		5,
@@ -11833,7 +11833,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Frenzyheart Tribe"],
 			BabbleFaction["Friendly"],
-			31911, 
+			31911,
 		},
 	},
 	[53917] = {
@@ -11842,7 +11842,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Oracles"],
 			BabbleFaction["Friendly"],
-			31910, 
+			31910,
 		},
 	},
 	[53949] = {
@@ -11866,7 +11866,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			32296,
 			32294,
-			30489, 
+			30489,
 		},
 	},
 	[39723] = {
@@ -11875,13 +11875,13 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Shattered Sun Offensive"],
 			BabbleFaction["Friendly"],
-			25950, 
-			27666, 
+			25950,
+			27666,
 			{
 				BabbleFaction["The Scale of the Sands"],
 				BabbleFaction["Friendly"],
-				23437, 
-			}, 
+				23437,
+			},
 		},
 	},
 	[55388] = {
@@ -11890,7 +11890,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			32296,
 			32294,
-			30489, 
+			30489,
 		},
 	},
 	[34960] = {
@@ -11903,8 +11903,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Shattered Sun Offensive"],
 			BabbleFaction["Exalted"],
-			25950, 
-			27666, 
+			25950,
+			27666,
 		},
 	},
 	[25280] = {
@@ -11921,7 +11921,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Shattered Sun Offensive"],
 			BabbleFaction["Revered"],
-			25032, 
+			25032,
 		},
 	},
 	[53854] = {
@@ -11956,7 +11956,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			32296,
 			32294,
-			30489, 
+			30489,
 		},
 	},
 	[39724] = {
@@ -11965,8 +11965,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Shattered Sun Offensive"],
 			BabbleFaction["Exalted"],
-			27666, 
-			25950, 
+			27666,
+			25950,
 		},
 	},
 	[55389] = {
@@ -12030,8 +12030,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Shattered Sun Offensive"],
 			BabbleFaction["Exalted"],
-			27666, 
-			25950, 
+			27666,
+			25950,
 		},
 	},
 	[55390] = {
@@ -12088,8 +12088,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["limitedVendor"] = {
 			2381,
 			1,
-			9636, 
-			1, 
+			9636,
+			1,
 		},
 	},
 	[58492] = {
@@ -12142,8 +12142,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Kalu'ak"],
 			BabbleFaction["Friendly"],
-			31916, 
-			32763, 
+			31916,
+			32763,
 		},
 	},
 	[53953] = {
@@ -12168,8 +12168,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Shattered Sun Offensive"],
 			BabbleFaction["Exalted"],
-			27666, 
-			25950, 
+			27666,
+			25950,
 		},
 	},
 	[55392] = {
@@ -12194,7 +12194,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Shattered Sun Offensive"],
 			BabbleFaction["Revered"],
-			25032, 
+			25032,
 		},
 	},
 	[53890] = {
@@ -12219,7 +12219,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			32296,
 			32294,
-			30489, 
+			30489,
 		},
 	},
 	[25490] = {
@@ -12237,7 +12237,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[46122] = {
 		365,
 		8,
-		24, 
+		24,
 	},
 	[55393] = {
 		420,
@@ -12245,7 +12245,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			32296,
 			32294,
-			30489, 
+			30489,
 		},
 	},
 	[64728] = {
@@ -12258,8 +12258,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["limitedVendor"] = {
 			1148,
 			1,
-			4897, 
-			1, 
+			4897,
+			1,
 		},
 	},
 	[26897] = {
@@ -12268,12 +12268,12 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["limitedVendor"] = {
 			17512,
 			1,
-			5163, 
-			1, 
-			16624, 
-			1, 
-			8363, 
-			1, 
+			5163,
+			1,
+			16624,
+			1,
+			8363,
+			1,
 		},
 	},
 	[66587] = {
@@ -12282,8 +12282,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			33637,
 			33680,
-			28701, 
-			19065, 
+			28701,
+			19065,
 		},
 	},
 	[53859] = {
@@ -12304,7 +12304,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			32296,
 			32294,
-			30489, 
+			30489,
 		},
 	},
 	[53987] = {
@@ -12336,8 +12336,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			33637,
 			33680,
-			28701, 
-			19065, 
+			28701,
+			19065,
 		},
 	},
 	[56193] = {
@@ -12350,8 +12350,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			33637,
 			33680,
-			28701, 
-			19065, 
+			28701,
+			19065,
 		},
 	},
 	[66579] = {
@@ -12360,8 +12360,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			33637,
 			33680,
-			28701, 
-			19065, 
+			28701,
+			19065,
 		},
 	},
 	[66578] = {
@@ -12370,8 +12370,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			33637,
 			33680,
-			28701, 
-			19065, 
+			28701,
+			19065,
 		},
 	},
 	[66577] = {
@@ -12380,14 +12380,14 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			33637,
 			33680,
-			28701, 
-			19065, 
+			28701,
+			19065,
 		},
 	},
 	[46123] = {
 		365,
 		8,
-		24, 
+		24,
 	},
 	[66576] = {
 		450,
@@ -12395,8 +12395,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			33637,
 			33680,
-			28701, 
-			19065, 
+			28701,
+			19065,
 		},
 	},
 	[55394] = {
@@ -12409,8 +12409,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			33637,
 			33680,
-			28701, 
-			19065, 
+			28701,
+			19065,
 		},
 	},
 	[66571] = {
@@ -12419,8 +12419,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			33637,
 			33680,
-			28701, 
-			19065, 
+			28701,
+			19065,
 		},
 	},
 	[66567] = {
@@ -12429,8 +12429,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			33637,
 			33680,
-			28701, 
-			19065, 
+			28701,
+			19065,
 		},
 	},
 	[66565] = {
@@ -12439,8 +12439,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			33637,
 			33680,
-			28701, 
-			19065, 
+			28701,
+			19065,
 		},
 	},
 	[66564] = {
@@ -12449,8 +12449,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			33637,
 			33680,
-			28701, 
-			19065, 
+			28701,
+			19065,
 		},
 	},
 	[66563] = {
@@ -12459,8 +12459,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			33637,
 			33680,
-			28701, 
-			19065, 
+			28701,
+			19065,
 		},
 	},
 	[66562] = {
@@ -12469,8 +12469,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			33637,
 			33680,
-			28701, 
-			19065, 
+			28701,
+			19065,
 		},
 	},
 	[25283] = {
@@ -12483,8 +12483,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			33637,
 			33680,
-			28701, 
-			19065, 
+			28701,
+			19065,
 		},
 	},
 	[66559] = {
@@ -12493,8 +12493,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			33637,
 			33680,
-			28701, 
-			19065, 
+			28701,
+			19065,
 		},
 	},
 	[66558] = {
@@ -12503,8 +12503,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			33637,
 			33680,
-			28701, 
-			19065, 
+			28701,
+			19065,
 		},
 	},
 	[53975] = {
@@ -12517,8 +12517,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			33637,
 			33680,
-			28701, 
-			19065, 
+			28701,
+			19065,
 		},
 	},
 	[66554] = {
@@ -12527,8 +12527,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			33637,
 			33680,
-			28701, 
-			19065, 
+			28701,
+			19065,
 		},
 	},
 	[56079] = {
@@ -12565,7 +12565,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Knights of the Ebon Blade"],
 			BabbleFaction["Revered"],
-			32538, 
+			32538,
 		},
 	},
 	[66503] = {
@@ -12574,8 +12574,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			33637,
 			33680,
-			28701, 
-			19065, 
+			28701,
+			19065,
 		},
 	},
 	[58144] = {
@@ -12604,13 +12604,13 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Shattered Sun Offensive"],
 			BabbleFaction["Friendly"],
-			25950, 
-			27666, 
+			25950,
+			27666,
 			{
 				BabbleFaction["The Scale of the Sands"],
 				BabbleFaction["Friendly"],
-				23437, 
-			}, 
+				23437,
+			},
 		},
 	},
 	[39728] = {
@@ -12619,8 +12619,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Shattered Sun Offensive"],
 			BabbleFaction["Exalted"],
-			27666, 
-			25950, 
+			27666,
+			25950,
 		},
 	},
 	[25619] = {
@@ -12629,18 +12629,18 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["limitedVendor"] = {
 			17512,
 			1,
-			16624, 
-			1, 
-			4775, 
-			1, 
-			5163, 
-			1, 
+			16624,
+			1,
+			4775,
+			1,
+			5163,
+			1,
 		},
 	},
 	[46124] = {
 		365,
 		8,
-		24, 
+		24,
 	},
 	[66451] = {
 		450,
@@ -12648,8 +12648,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			33637,
 			33680,
-			28701, 
-			19065, 
+			28701,
+			19065,
 		},
 	},
 	[55395] = {
@@ -12662,8 +12662,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			33637,
 			33680,
-			28701, 
-			19065, 
+			28701,
+			19065,
 		},
 	},
 	[38068] = {
@@ -12688,12 +12688,12 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Honor Hold"],
 			BabbleFaction["Friendly"],
-			17657, 
+			17657,
 			{
 				BabbleFaction["Thrallmar"],
 				BabbleFaction["Friendly"],
-				17585, 
-			}, 
+				17585,
+			},
 		},
 	},
 	[31050] = {
@@ -12710,8 +12710,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Consortium"],
 			BabbleFaction["Revered"],
-			20242, 
-			23007, 
+			20242,
+			23007,
 		},
 	},
 	[66443] = {
@@ -12720,8 +12720,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			33637,
 			33680,
-			28701, 
-			19065, 
+			28701,
+			19065,
 		},
 	},
 	[53845] = {
@@ -12734,8 +12734,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Consortium"],
 			BabbleFaction["Friendly"],
-			20242, 
-			23007, 
+			20242,
+			23007,
 		},
 	},
 	[26882] = {
@@ -12748,7 +12748,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Aldor"],
 			BabbleFaction["Friendly"],
-			19321, 
+			19321,
 		},
 	},
 	[26914] = {
@@ -12764,7 +12764,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Sha'tar"],
 			BabbleFaction["Revered"],
-			21432, 
+			21432,
 		},
 	},
 	[53861] = {
@@ -12785,7 +12785,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Sons of Hodir"],
 			BabbleFaction["Exalted"],
-			32540, 
+			32540,
 		},
 	},
 	[31102] = {
@@ -12806,7 +12806,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Shattered Sun Offensive"],
 			BabbleFaction["Revered"],
-			25032, 
+			25032,
 		},
 	},
 	[31106] = {
@@ -12823,13 +12823,13 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Shattered Sun Offensive"],
 			BabbleFaction["Honored"],
-			25950, 
-			27666, 
+			25950,
+			27666,
 			{
 				BabbleFaction["The Scale of the Sands"],
 				BabbleFaction["Honored"],
-				23437, 
-			}, 
+				23437,
+			},
 		},
 	},
 	[54005] = {
@@ -12838,7 +12838,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			32296,
 			32294,
-			30489, 
+			30489,
 		},
 	},
 	[39713] = {
@@ -12847,13 +12847,13 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Shattered Sun Offensive"],
 			BabbleFaction["Friendly"],
-			25950, 
-			27666, 
+			25950,
+			27666,
 			{
 				BabbleFaction["The Scale of the Sands"],
 				BabbleFaction["Friendly"],
-				23437, 
-			}, 
+				23437,
+			},
 		},
 	},
 	[39729] = {
@@ -12862,19 +12862,19 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Shattered Sun Offensive"],
 			BabbleFaction["Honored"],
-			25950, 
-			27666, 
+			25950,
+			27666,
 			{
 				BabbleFaction["The Scale of the Sands"],
 				BabbleFaction["Honored"],
-				23437, 
-			}, 
+				23437,
+			},
 		},
 	},
 	[46125] = {
 		365,
 		8,
-		24, 
+		24,
 	},
 	[58141] = {
 		350,
@@ -12894,8 +12894,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			33637,
 			33680,
-			28701, 
-			19065, 
+			28701,
+			19065,
 		},
 	},
 	[66435] = {
@@ -12904,8 +12904,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			33637,
 			33680,
-			28701, 
-			19065, 
+			28701,
+			19065,
 		},
 	},
 	[31077] = {
@@ -12936,8 +12936,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			33637,
 			33680,
-			28701, 
-			19065, 
+			28701,
+			19065,
 		},
 	},
 	[28927] = {
@@ -12946,7 +12946,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Aldor"],
 			BabbleFaction["Honored"],
-			19321, 
+			19321,
 		},
 	},
 	[25284] = {
@@ -12959,8 +12959,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			33637,
 			33680,
-			28701, 
-			19065, 
+			28701,
+			19065,
 		},
 	},
 	[26907] = {
@@ -12973,13 +12973,13 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Shattered Sun Offensive"],
 			BabbleFaction["Revered"],
-			25950, 
-			27666, 
+			25950,
+			27666,
 			{
 				BabbleFaction["The Scale of the Sands"],
 				BabbleFaction["Revered"],
-				23437, 
-			}, 
+				23437,
+			},
 		},
 	},
 	[62941] = {
@@ -12992,13 +12992,13 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Shattered Sun Offensive"],
 			BabbleFaction["Honored"],
-			25950, 
-			27666, 
+			25950,
+			27666,
 			{
 				BabbleFaction["The Scale of the Sands"],
 				BabbleFaction["Honored"],
-				23437, 
-			}, 
+				23437,
+			},
 		},
 	},
 	[28924] = {
@@ -13007,7 +13007,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Scryers"],
 			BabbleFaction["Honored"],
-			19331, 
+			19331,
 		},
 	},
 	[53830] = {
@@ -13044,7 +13044,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			32296,
 			32294,
-			30489, 
+			30489,
 		},
 	},
 	[53991] = {
@@ -13084,14 +13084,14 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Shattered Sun Offensive"],
 			BabbleFaction["Revered"],
-			25032, 
-			25950, 
-			27666, 
+			25032,
+			25950,
+			27666,
 			{
 				BabbleFaction["The Scale of the Sands"],
 				BabbleFaction["Honored"],
-				23437, 
-			}, 
+				23437,
+			},
 		},
 	},
 	[31083] = {
@@ -13100,7 +13100,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Cenarion Expedition"],
 			BabbleFaction["Revered"],
-			17904, 
+			17904,
 		},
 	},
 	[25620] = {
@@ -13110,7 +13110,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[46126] = {
 		365,
 		8,
-		24, 
+		24,
 	},
 	[31099] = {
 		350,
@@ -13133,13 +13133,13 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Shattered Sun Offensive"],
 			BabbleFaction["Friendly"],
-			25950, 
-			27666, 
+			25950,
+			27666,
 			{
 				BabbleFaction["The Scale of the Sands"],
 				BabbleFaction["Friendly"],
-				23437, 
-			}, 
+				23437,
+			},
 		},
 	},
 	[39731] = {
@@ -13148,13 +13148,13 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Shattered Sun Offensive"],
 			BabbleFaction["Honored"],
-			25950, 
-			27666, 
+			25950,
+			27666,
 			{
 				BabbleFaction["The Scale of the Sands"],
 				BabbleFaction["Honored"],
-				23437, 
-			}, 
+				23437,
+			},
 		},
 	},
 	[58147] = {
@@ -13178,7 +13178,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Lower City"],
 			BabbleFaction["Revered"],
-			21655, 
+			21655,
 		},
 	},
 	[56055] = {
@@ -13268,8 +13268,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Shattered Sun Offensive"],
 			BabbleFaction["Exalted"],
-			27666, 
-			25950, 
+			27666,
+			25950,
 		},
 	},
 	[56056] = {
@@ -13306,14 +13306,14 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Scale of the Sands"],
 			BabbleFaction["Honored"],
-			23437, 
+			23437,
 			{
 				BabbleFaction["Shattered Sun Offensive"],
 				BabbleFaction["Revered"],
-				25032, 
-				25950, 
-				27666, 
-			}, 
+				25032,
+				25950,
+				27666,
+			},
 		},
 	},
 	[56087] = {
@@ -13335,7 +13335,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[46127] = {
 		365,
 		8,
-		24, 
+		24,
 	},
 	[26908] = {
 		280,
@@ -13408,7 +13408,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Wyrmrest Accord"],
 			BabbleFaction["Exalted"],
-			32533, 
+			32533,
 		},
 	},
 	[54009] = {
@@ -13425,8 +13425,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			33637,
 			33680,
-			28701, 
-			19065, 
+			28701,
+			19065,
 		},
 	},
 	[56074] = {
@@ -13463,7 +13463,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			32296,
 			32294,
-			30489, 
+			30489,
 		},
 	},
 	[53992] = {
@@ -13504,8 +13504,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			33637,
 			33680,
-			28701, 
-			19065, 
+			28701,
+			19065,
 		},
 	},
 	[31053] = {
@@ -13521,14 +13521,14 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Shattered Sun Offensive"],
 			BabbleFaction["Revered"],
-			25032, 
-			25950, 
-			27666, 
+			25032,
+			25950,
+			27666,
 			{
 				BabbleFaction["The Scale of the Sands"],
 				BabbleFaction["Honored"],
-				23437, 
-			}, 
+				23437,
+			},
 		},
 	},
 	[36525] = {
@@ -13576,13 +13576,13 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Shattered Sun Offensive"],
 			BabbleFaction["Honored"],
-			25950, 
-			27666, 
+			25950,
+			27666,
 			{
 				BabbleFaction["The Scale of the Sands"],
 				BabbleFaction["Honored"],
-				23437, 
-			}, 
+				23437,
+			},
 		},
 	},
 	[63743] = {
@@ -13603,13 +13603,13 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Shattered Sun Offensive"],
 			BabbleFaction["Honored"],
-			25950, 
-			27666, 
+			25950,
+			27666,
 			{
 				BabbleFaction["The Scale of the Sands"],
 				BabbleFaction["Honored"],
-				23437, 
-			}, 
+				23437,
+			},
 		},
 	},
 	[53989] = {
@@ -13706,7 +13706,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			32296,
 			32294,
-			30489, 
+			30489,
 		},
 	},
 	[47056] = {
@@ -13715,14 +13715,14 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Shattered Sun Offensive"],
 			BabbleFaction["Revered"],
-			25032, 
-			25950, 
-			27666, 
+			25032,
+			25950,
+			27666,
 			{
 				BabbleFaction["The Scale of the Sands"],
 				BabbleFaction["Honored"],
-				23437, 
-			}, 
+				23437,
+			},
 		},
 	},
 	[53977] = {
@@ -13735,8 +13735,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			33637,
 			33680,
-			28701, 
-			19065, 
+			28701,
+			19065,
 		},
 	},
 	[53883] = {
@@ -13777,8 +13777,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Consortium"],
 			BabbleFaction["Honored"],
-			20242, 
-			23007, 
+			20242,
+			23007,
 		},
 	},
 	[53945] = {
@@ -13799,14 +13799,14 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			33637,
 			33680,
-			28701, 
-			19065, 
+			28701,
+			19065,
 		},
 	},
 	[39451] = {
 		325,
 		8,
-		35, 
+		35,
 	},
 	[31071] = {
 		360,
@@ -13830,8 +13830,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			33637,
 			33680,
-			28701, 
-			19065, 
+			28701,
+			19065,
 		},
 	},
 	[28955] = {
@@ -13844,16 +13844,16 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Consortium"],
 			BabbleFaction["Honored"],
-			20242, 
-			23007, 
+			20242,
+			23007,
 		},
 	},
 	--leatherworking
-	
+
 	[63201] = {
 		450,
 		8,
-		39, 
+		39,
 	},
 	[50957] = {
 		370,
@@ -13877,7 +13877,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Timbermaw Hold"],
 			BabbleFaction["Revered"],
-			11557, 
+			11557,
 		},
 	},
 	[60996] = {
@@ -13893,18 +13893,18 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Honor Hold"],
 			BabbleFaction["Honored"],
-			17657, 
+			17657,
 			{
 				BabbleFaction["Thrallmar"],
 				BabbleFaction["Honored"],
-				17585, 
-			}, 
+				17585,
+			},
 		},
 	},
 	[22921] = {
 		300,
 		8,
-		23, 
+		23,
 	},
 	[50958] = {
 		380,
@@ -13960,7 +13960,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[67136] = {
 		450,
 		8,
-		42, 
+		42,
 	},
 	[32464] = {
 		320,
@@ -13972,12 +13972,12 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	},
 	[2149] = {
 		1,
-		1, 
+		1,
 	},
 	[36349] = {
 		375,
 		8,
-		37, 
+		37,
 	},
 	[2153] = {
 		15,
@@ -14017,12 +14017,12 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[67137] = {
 		450,
 		8,
-		42, 
+		42,
 	},
 	[46132] = {
 		365,
 		8,
-		24, 
+		24,
 	},
 	[23705] = {
 		290,
@@ -14030,15 +14030,15 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Argent Dawn"],
 			BabbleFaction["Honored"],
-			10856, 
-			11536, 
-			10857, 
+			10856,
+			11536,
+			10857,
 		},
 	},
 	[67138] = {
 		450,
 		8,
-		42, 
+		42,
 	},
 	[60998] = {
 		420,
@@ -14050,7 +14050,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[22922] = {
 		300,
 		8,
-		23, 
+		23,
 	},
 	[50960] = {
 		380,
@@ -14059,12 +14059,12 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[67139] = {
 		450,
 		8,
-		42, 
+		42,
 	},
 	[46133] = {
 		365,
 		8,
-		24, 
+		24,
 	},
 	[24121] = {
 		300,
@@ -14072,7 +14072,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Zandalar Tribe"],
 			BabbleFaction["Revered"],
-			14921, 
+			14921,
 		},
 	},
 	[19054] = {
@@ -14092,7 +14092,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Knights of the Ebon Blade"],
 			BabbleFaction["Honored"],
-			32538, 
+			32538,
 		},
 	},
 	[19102] = {
@@ -14132,13 +14132,13 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Cenarion Expedition"],
 			BabbleFaction["Friendly"],
-			17904, 
+			17904,
 		},
 	},
 	[36351] = {
 		375,
 		8,
-		37, 
+		37,
 	},
 	[60999] = {
 		425,
@@ -14165,7 +14165,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[67141] = {
 		450,
 		8,
-		42, 
+		42,
 	},
 	[9207] = {
 		200,
@@ -14178,7 +14178,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[46134] = {
 		365,
 		8,
-		24, 
+		24,
 	},
 	[60584] = {
 		400,
@@ -14190,9 +14190,9 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Argent Dawn"],
 			BabbleFaction["Revered"],
-			10856, 
-			11536, 
-			10857, 
+			10856,
+			11536,
+			10857,
 		},
 	},
 	[44344] = {
@@ -14206,7 +14206,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[36352] = {
 		375,
 		8,
-		37, 
+		37,
 	},
 	[61000] = {
 		420,
@@ -14233,7 +14233,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[67143] = {
 		450,
 		8,
-		42, 
+		42,
 	},
 	[10518] = {
 		210,
@@ -14245,7 +14245,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Ashtongue Deathsworn"],
 			BabbleFaction["Friendly"],
-			23159, 
+			23159,
 		},
 	},
 	[24122] = {
@@ -14254,7 +14254,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Zandalar Tribe"],
 			BabbleFaction["Honored"],
-			14921, 
+			14921,
 		},
 	},
 	[10542] = {
@@ -14267,7 +14267,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[19055] = {
 		270,
 		1,
-		7, 
+		7,
 	},
 	[19071] = {
 		280,
@@ -14307,7 +14307,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[36353] = {
 		375,
 		8,
-		37, 
+		37,
 	},
 	[35522] = {
 		340,
@@ -14322,12 +14322,12 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Honor Hold"],
 			BabbleFaction["Exalted"],
-			17657, 
+			17657,
 			{
 				BabbleFaction["Thrallmar"],
 				BabbleFaction["Exalted"],
-				17585, 
-			}, 
+				17585,
+			},
 		},
 	},
 	[50963] = {
@@ -14337,8 +14337,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[44953] = {
 		285,
 		2,
-		8, 
-		1, 
+		8,
+		1,
 		["vendor"] = {
 			13420,
 			13433,
@@ -14347,7 +14347,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[46136] = {
 		365,
 		8,
-		24, 
+		24,
 	},
 	[23707] = {
 		300,
@@ -14355,7 +14355,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Thorium Brotherhood"],
 			BabbleFaction["Honored"],
-			12944, 
+			12944,
 		},
 	},
 	[60746] = {
@@ -14389,7 +14389,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Cenarion Expedition"],
 			BabbleFaction["Honored"],
-			17904, 
+			17904,
 		},
 	},
 	[35587] = {
@@ -14403,7 +14403,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[46137] = {
 		365,
 		8,
-		24, 
+		24,
 	},
 	[24123] = {
 		300,
@@ -14411,7 +14411,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Zandalar Tribe"],
 			BabbleFaction["Friendly"],
-			14921, 
+			14921,
 		},
 	},
 	[19072] = {
@@ -14460,18 +14460,18 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Honor Hold"],
 			BabbleFaction["Honored"],
-			17657, 
+			17657,
 			{
 				BabbleFaction["Thrallmar"],
 				BabbleFaction["Honored"],
-				17585, 
-			}, 
+				17585,
+			},
 		},
 	},
 	[36355] = {
 		375,
 		8,
-		37, 
+		37,
 	},
 	[7133] = {
 		105,
@@ -14503,7 +14503,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[46138] = {
 		365,
 		8,
-		24, 
+		24,
 	},
 	[60620] = {
 		400,
@@ -14519,7 +14519,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Thorium Brotherhood"],
 			BabbleFaction["Revered"],
-			12944, 
+			12944,
 		},
 	},
 	[60716] = {
@@ -14546,7 +14546,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Scryers"],
 			BabbleFaction["Exalted"],
-			19331, 
+			19331,
 		},
 	},
 	[35557] = {
@@ -14555,7 +14555,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Cenarion Expedition"],
 			BabbleFaction["Exalted"],
-			17904, 
+			17904,
 		},
 	},
 	[35589] = {
@@ -14577,7 +14577,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[46139] = {
 		365,
 		8,
-		24, 
+		24,
 	},
 	[24124] = {
 		300,
@@ -14585,7 +14585,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Zandalar Tribe"],
 			BabbleFaction["Revered"],
-			14921, 
+			14921,
 		},
 	},
 	[19073] = {
@@ -14616,18 +14616,18 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Honor Hold"],
 			BabbleFaction["Honored"],
-			17657, 
+			17657,
 			{
 				BabbleFaction["Thrallmar"],
 				BabbleFaction["Honored"],
-				17585, 
-			}, 
+				17585,
+			},
 		},
 	},
 	[36357] = {
 		375,
 		8,
-		37, 
+		37,
 	},
 	[10647] = {
 		250,
@@ -14639,7 +14639,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Cenarion Circle"],
 			BabbleFaction["Revered"],
-			15293, 
+			15293,
 		},
 	},
 	[35526] = {
@@ -14648,7 +14648,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Scryers"],
 			BabbleFaction["Honored"],
-			19331, 
+			19331,
 		},
 	},
 	[35558] = {
@@ -14669,8 +14669,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["mobDrop"] = {
 			22144,
 			22148,
-			22143, 
-			23022, 
+			22143,
+			23022,
 		},
 	},
 	[60622] = {
@@ -14683,7 +14683,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Thorium Brotherhood"],
 			BabbleFaction["Revered"],
-			12944, 
+			12944,
 		},
 	},
 	[60718] = {
@@ -14703,7 +14703,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[36358] = {
 		375,
 		8,
-		37, 
+		37,
 	},
 	[3756] = {
 		55,
@@ -14719,7 +14719,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Scryers"],
 			BabbleFaction["Revered"],
-			19331, 
+			19331,
 		},
 	},
 	[35559] = {
@@ -14774,7 +14774,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Ashtongue Deathsworn"],
 			BabbleFaction["Honored"],
-			23159, 
+			23159,
 		},
 	},
 	[24125] = {
@@ -14783,7 +14783,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Zandalar Tribe"],
 			BabbleFaction["Honored"],
-			14921, 
+			14921,
 		},
 	},
 	[19058] = {
@@ -14828,13 +14828,13 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Kurenai"],
 			BabbleFaction["Friendly"],
-			20240, 
+			20240,
 		},
 	},
 	[36359] = {
 		375,
 		8,
-		37, 
+		37,
 	},
 	[3816] = {
 		35,
@@ -14850,7 +14850,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Cenarion Circle"],
 			BabbleFaction["Honored"],
-			15293, 
+			15293,
 		},
 	},
 	[9145] = {
@@ -14863,7 +14863,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Aldor"],
 			BabbleFaction["Revered"],
-			19321, 
+			19321,
 		},
 	},
 	[35560] = {
@@ -14884,7 +14884,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Ashtongue Deathsworn"],
 			BabbleFaction["Honored"],
-			23159, 
+			23159,
 		},
 	},
 	[60624] = {
@@ -14894,7 +14894,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[6702] = {
 		90,
 		2,
-		2, 
+		2,
 		["mobDrop"] = {
 			1732,
 			3385,
@@ -14902,7 +14902,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			843,
 			3556,
-			4186, 
+			4186,
 		},
 	},
 	[60720] = {
@@ -14939,7 +14939,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Aldor"],
 			BabbleFaction["Exalted"],
-			19321, 
+			19321,
 		},
 	},
 	[35561] = {
@@ -14949,7 +14949,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[22927] = {
 		300,
 		8,
-		23, 
+		23,
 	},
 	[50970] = {
 		415,
@@ -14957,13 +14957,13 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Kalu'ak"],
 			BabbleFaction["Revered"],
-			31916, 
-			32763, 
+			31916,
+			32763,
 		},
 	},
 	[2881] = {
 		1,
-		1, 
+		1,
 	},
 	[10520] = {
 		215,
@@ -14975,7 +14975,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Ashtongue Deathsworn"],
 			BabbleFaction["Friendly"],
-			23159, 
+			23159,
 		},
 	},
 	[10544] = {
@@ -14993,7 +14993,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[41156] = {
 		375,
 		8,
-		34, 
+		34,
 	},
 	[10568] = {
 		245,
@@ -15034,7 +15034,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Kurenai"],
 			BabbleFaction["Honored"],
-			20240, 
+			20240,
 		},
 	},
 	[28474] = {
@@ -15043,7 +15043,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Cenarion Circle"],
 			BabbleFaction["Friendly"],
-			15293, 
+			15293,
 		},
 	},
 	[35530] = {
@@ -15052,7 +15052,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Kurenai"],
 			BabbleFaction["Honored"],
-			20240, 
+			20240,
 		},
 	},
 	[35562] = {
@@ -15072,7 +15072,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Sons of Hodir"],
 			BabbleFaction["Honored"],
-			32540, 
+			32540,
 		},
 	},
 	[62448] = {
@@ -15094,7 +15094,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[41157] = {
 		375,
 		8,
-		27, 
+		27,
 	},
 	[36074] = {
 		260,
@@ -15121,7 +15121,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Cenarion Circle"],
 			BabbleFaction["Friendly"],
-			15293, 
+			15293,
 		},
 	},
 	[35531] = {
@@ -15130,7 +15130,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Aldor"],
 			BabbleFaction["Honored"],
-			19321, 
+			19321,
 		},
 	},
 	[35563] = {
@@ -15140,23 +15140,23 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[22928] = {
 		300,
 		8,
-		23, 
+		23,
 	},
 	[28219] = {
 		300,
 		2,
-		8, 
-		41, 
+		8,
+		41,
 		["repVendor"] = {
 			BabbleFaction["Argent Dawn"],
 			BabbleFaction["Exalted"],
-			16365, 
+			16365,
 		},
 	},
 	[41158] = {
 		375,
 		8,
-		27, 
+		27,
 	},
 	[36075] = {
 		260,
@@ -15168,7 +15168,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	},
 	[9058] = {
 		1,
-		1, 
+		1,
 	},
 	[60755] = {
 		440,
@@ -15199,12 +15199,12 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Kurenai"],
 			BabbleFaction["Revered"],
-			20240, 
+			20240,
 		},
 	},
 	[7126] = {
 		1,
-		1, 
+		1,
 	},
 	[9146] = {
 		135,
@@ -15219,7 +15219,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Scryers"],
 			BabbleFaction["Exalted"],
-			19331, 
+			19331,
 		},
 	},
 	[35564] = {
@@ -15240,8 +15240,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			7854,
 			7852,
-			4589, 
-			4225, 
+			4589,
+			4225,
 		},
 	},
 	[4097] = {
@@ -15257,7 +15257,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Ashen Verdict"],
 			BabbleFaction["Revered"],
-			37687, 
+			37687,
 		},
 	},
 	[24655] = {
@@ -15270,7 +15270,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Cenarion Circle"],
 			BabbleFaction["Exalted"],
-			15293, 
+			15293,
 		},
 	},
 	[60660] = {
@@ -15290,7 +15290,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Ashen Verdict"],
 			BabbleFaction["Honored"],
-			37687, 
+			37687,
 		},
 	},
 	[24847] = {
@@ -15299,7 +15299,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Cenarion Circle"],
 			BabbleFaction["Honored"],
-			15293, 
+			15293,
 		},
 	},
 	[35533] = {
@@ -15308,7 +15308,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Scryers"],
 			BabbleFaction["Revered"],
-			19331, 
+			19331,
 		},
 	},
 	[50942] = {
@@ -15328,7 +15328,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Ashen Verdict"],
 			BabbleFaction["Revered"],
-			37687, 
+			37687,
 		},
 	},
 	[10529] = {
@@ -15342,18 +15342,18 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[28220] = {
 		300,
 		2,
-		8, 
-		41, 
+		8,
+		41,
 		["repVendor"] = {
 			BabbleFaction["Argent Dawn"],
 			BabbleFaction["Revered"],
-			16365, 
+			16365,
 		},
 	},
 	[41160] = {
 		375,
 		8,
-		34, 
+		34,
 	},
 	[36077] = {
 		330,
@@ -15362,8 +15362,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[19093] = {
 		300,
 		2,
-		8, 
-		10, 
+		8,
+		10,
 		["quest"] = {
 			7493,
 			7497,
@@ -15404,7 +15404,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Ashen Verdict"],
 			BabbleFaction["Honored"],
-			37687, 
+			37687,
 		},
 	},
 	[52733] = {
@@ -15413,7 +15413,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Ashtongue Deathsworn"],
 			BabbleFaction["Friendly"],
-			23159, 
+			23159,
 		},
 	},
 	[2158] = {
@@ -15434,7 +15434,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Scryers"],
 			BabbleFaction["Honored"],
-			19331, 
+			19331,
 		},
 	},
 	[2166] = {
@@ -15451,13 +15451,13 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Ashen Verdict"],
 			BabbleFaction["Revered"],
-			37687, 
+			37687,
 		},
 	},
 	[41161] = {
 		375,
 		8,
-		27, 
+		27,
 	},
 	[36078] = {
 		330,
@@ -15476,7 +15476,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Ashen Verdict"],
 			BabbleFaction["Honored"],
-			37687, 
+			37687,
 		},
 	},
 	[24848] = {
@@ -15485,7 +15485,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Cenarion Circle"],
 			BabbleFaction["Revered"],
-			15293, 
+			15293,
 		},
 	},
 	[35535] = {
@@ -15494,7 +15494,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Aldor"],
 			BabbleFaction["Exalted"],
-			19321, 
+			19321,
 		},
 	},
 	[35567] = {
@@ -15511,24 +15511,24 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Ashen Verdict"],
 			BabbleFaction["Revered"],
-			37687, 
+			37687,
 		},
 	},
 	[28221] = {
 		300,
 		2,
-		8, 
-		41, 
+		8,
+		41,
 		["repVendor"] = {
 			BabbleFaction["Argent Dawn"],
 			BabbleFaction["Revered"],
-			16365, 
+			16365,
 		},
 	},
 	[41162] = {
 		375,
 		8,
-		34, 
+		34,
 	},
 	[19078] = {
 		285,
@@ -15546,7 +15546,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	},
 	[9059] = {
 		1,
-		1, 
+		1,
 	},
 	[57690] = {
 		400,
@@ -15558,7 +15558,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Aldor"],
 			BabbleFaction["Revered"],
-			19321, 
+			19321,
 		},
 	},
 	[32473] = {
@@ -15579,7 +15579,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Ashen Verdict"],
 			BabbleFaction["Honored"],
-			37687, 
+			37687,
 		},
 	},
 	[9147] = {
@@ -15595,7 +15595,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Aldor"],
 			BabbleFaction["Revered"],
-			19321, 
+			19321,
 		},
 	},
 	[35568] = {
@@ -15616,12 +15616,12 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[41163] = {
 		375,
 		8,
-		34, 
+		34,
 	},
 	[6703] = {
 		95,
 		2,
-		2, 
+		2,
 		["mobDrop"] = {
 			657,
 			3386,
@@ -15629,7 +15629,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			843,
 			3556,
-			4186, 
+			4186,
 		},
 	},
 	[60728] = {
@@ -15649,7 +15649,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Cenarion Circle"],
 			BabbleFaction["Friendly"],
-			15293, 
+			15293,
 		},
 	},
 	[20853] = {
@@ -15674,12 +15674,12 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[28222] = {
 		300,
 		2,
-		8, 
-		41, 
+		8,
+		41,
 		["repVendor"] = {
 			BabbleFaction["Argent Dawn"],
 			BabbleFaction["Exalted"],
-			16365, 
+			16365,
 		},
 	},
 	[10546] = {
@@ -15704,7 +15704,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["mobDrop"] = {
 			5623,
 			7805,
-			7883, 
+			7883,
 		},
 	},
 	[19095] = {
@@ -15741,7 +15741,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Scryers"],
 			BabbleFaction["Revered"],
-			19331, 
+			19331,
 		},
 	},
 	[32490] = {
@@ -15750,8 +15750,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Consortium"],
 			BabbleFaction["Friendly"],
-			20242, 
-			23007, 
+			20242,
+			23007,
 		},
 	},
 	[10650] = {
@@ -15764,7 +15764,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Keepers of Time"],
 			BabbleFaction["Honored"],
-			21643, 
+			21643,
 		},
 	},
 	[42731] = {
@@ -15773,7 +15773,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Violet Eye"],
 			BabbleFaction["Revered"],
-			18255, 
+			18255,
 		},
 	},
 	[50947] = {
@@ -15809,7 +15809,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Cenarion Circle"],
 			BabbleFaction["Honored"],
-			15293, 
+			15293,
 		},
 	},
 	[35539] = {
@@ -15818,7 +15818,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Kurenai"],
 			BabbleFaction["Honored"],
-			20240, 
+			20240,
 		},
 	},
 	[50948] = {
@@ -15832,12 +15832,12 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[28223] = {
 		300,
 		2,
-		8, 
-		41, 
+		8,
+		41,
 		["repVendor"] = {
 			BabbleFaction["Argent Dawn"],
 			BabbleFaction["Revered"],
-			16365, 
+			16365,
 		},
 	},
 	[19048] = {
@@ -15860,7 +15860,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Timbermaw Hold"],
 			BabbleFaction["Friendly"],
-			11557, 
+			11557,
 		},
 	},
 	[9060] = {
@@ -15912,7 +15912,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Cenarion Circle"],
 			BabbleFaction["Revered"],
-			15293, 
+			15293,
 		},
 	},
 	[20855] = {
@@ -15921,7 +15921,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Thorium Brotherhood"],
 			BabbleFaction["Honored"],
-			12944, 
+			12944,
 		},
 	},
 	[35573] = {
@@ -15954,12 +15954,12 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[28224] = {
 		300,
 		2,
-		8, 
-		41, 
+		8,
+		41,
 		["repVendor"] = {
 			BabbleFaction["Argent Dawn"],
 			BabbleFaction["Revered"],
-			16365, 
+			16365,
 		},
 	},
 	[19049] = {
@@ -15996,7 +15996,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[67142] = {
 		450,
 		8,
-		42, 
+		42,
 	},
 	[35574] = {
 		365,
@@ -16009,47 +16009,47 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[67140] = {
 		450,
 		8,
-		42, 
+		42,
 	},
 	[67087] = {
 		450,
 		8,
-		42, 
+		42,
 	},
 	[67086] = {
 		450,
 		8,
-		42, 
+		42,
 	},
 	[67085] = {
 		450,
 		8,
-		42, 
+		42,
 	},
 	[67084] = {
 		450,
 		8,
-		42, 
+		42,
 	},
 	[67083] = {
 		450,
 		8,
-		42, 
+		42,
 	},
 	[67082] = {
 		450,
 		8,
-		42, 
+		42,
 	},
 	[67081] = {
 		450,
 		8,
-		42, 
+		42,
 	},
 	[67080] = {
 		450,
 		8,
-		42, 
+		42,
 	},
 	[69386] = {
 		450,
@@ -16111,8 +16111,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["mobDrop"] = {
 			6559,
 			6556,
-			9477, 
-			6557, 
+			9477,
+			6557,
 		},
 	},
 	[50938] = {
@@ -16133,7 +16133,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Lower City"],
 			BabbleFaction["Revered"],
-			21655, 
+			21655,
 		},
 	},
 	[3753] = {
@@ -16153,7 +16153,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			16748,
 			16689,
-			19196, 
+			19196,
 		},
 	},
 	[3759] = {
@@ -16170,7 +16170,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Sha'tar"],
 			BabbleFaction["Honored"],
-			21432, 
+			21432,
 		},
 	},
 	[35575] = {
@@ -16188,7 +16188,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[21943] = {
 		190,
 		8,
-		1, 
+		1,
 	},
 	[3773] = {
 		175,
@@ -16227,17 +16227,17 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[63200] = {
 		450,
 		8,
-		39, 
+		39,
 	},
 	[63199] = {
 		450,
 		8,
-		39, 
+		39,
 	},
 	[63198] = {
 		450,
 		8,
-		39, 
+		39,
 	},
 	[19050] = {
 		260,
@@ -16286,7 +16286,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[63194] = {
 		450,
 		8,
-		39, 
+		39,
 	},
 	[32493] = {
 		350,
@@ -16294,19 +16294,19 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Consortium"],
 			BabbleFaction["Honored"],
-			20242, 
-			23007, 
+			20242,
+			23007,
 		},
 	},
 	[63196] = {
 		450,
 		8,
-		39, 
+		39,
 	},
 	[63195] = {
 		450,
 		8,
-		39, 
+		39,
 	},
 	[3817] = {
 		100,
@@ -16329,8 +16329,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			3958,
 			2810,
-			4877, 
-			2821, 
+			4877,
+			2821,
 		},
 	},
 	[9149] = {
@@ -16343,12 +16343,12 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Mag'har"],
 			BabbleFaction["Honored"],
-			20241, 
+			20241,
 			{
 				BabbleFaction["Kurenai"],
 				BabbleFaction["Honored"],
-				20240, 
-			}, 
+				20240,
+			},
 		},
 	},
 	[35576] = {
@@ -16426,7 +16426,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Ashtongue Deathsworn"],
 			BabbleFaction["Honored"],
-			23159, 
+			23159,
 		},
 	},
 	[19066] = {
@@ -16439,7 +16439,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[6704] = {
 		170,
 		2,
-		2, 
+		2,
 		["mobDrop"] = {
 			938,
 			1160,
@@ -16447,10 +16447,10 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["limitedVendor"] = {
 			2381,
 			1,
-			2393, 
-			1, 
-			2846, 
-			1, 
+			2393,
+			1,
+			2846,
+			1,
 		},
 	},
 	[60608] = {
@@ -16482,7 +16482,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[22727] = {
 		300,
 		8,
-		26, 
+		26,
 	},
 	[50940] = {
 		380,
@@ -16506,7 +16506,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Cenarion Expedition"],
 			BabbleFaction["Honored"],
-			17904, 
+			17904,
 		},
 	},
 	[60655] = {
@@ -16519,7 +16519,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Violet Eye"],
 			BabbleFaction["Exalted"],
-			18255, 
+			18255,
 		},
 	},
 	[40002] = {
@@ -16528,7 +16528,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Ashtongue Deathsworn"],
 			BabbleFaction["Honored"],
-			23159, 
+			23159,
 		},
 	},
 	[60747] = {
@@ -16541,7 +16541,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[22923] = {
 		300,
 		8,
-		23, 
+		23,
 	},
 	[36079] = {
 		330,
@@ -16618,7 +16618,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Thorium Brotherhood"],
 			BabbleFaction["Revered"],
-			12944, 
+			12944,
 		},
 	},
 	[60731] = {
@@ -16630,7 +16630,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	},
 	[2152] = {
 		1,
-		1, 
+		1,
 	},
 	[10548] = {
 		230,
@@ -16646,7 +16646,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["mobDrop"] = {
 			5623,
 			7805,
-			7883, 
+			7883,
 		},
 	},
 	[10572] = {
@@ -16693,8 +16693,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Consortium"],
 			BabbleFaction["Revered"],
-			20242, 
-			23007, 
+			20242,
+			23007,
 		},
 	},
 	[2168] = {
@@ -16735,8 +16735,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Kalu'ak"],
 			BabbleFaction["Honored"],
-			31916, 
-			32763, 
+			31916,
+			32763,
 		},
 	},
 	[62176] = {
@@ -16772,7 +16772,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Ashtongue Deathsworn"],
 			BabbleFaction["Friendly"],
-			23159, 
+			23159,
 		},
 	},
 	[19060] = {
@@ -16788,7 +16788,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Timbermaw Hold"],
 			BabbleFaction["Friendly"],
-			11557, 
+			11557,
 		},
 	},
 	[19076] = {
@@ -16820,7 +16820,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[63197] = {
 		450,
 		8,
-		39, 
+		39,
 	},
 	[57683] = {
 		400,
@@ -16832,12 +16832,12 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Honor Hold"],
 			BabbleFaction["Friendly"],
-			17657, 
+			17657,
 			{
 				BabbleFaction["Thrallmar"],
 				BabbleFaction["Friendly"],
-				17585, 
-			}, 
+				17585,
+			},
 		},
 	},
 	[23703] = {
@@ -16846,7 +16846,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Timbermaw Hold"],
 			BabbleFaction["Honored"],
-			11557, 
+			11557,
 		},
 	},
 	[60706] = {
@@ -16951,13 +16951,13 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Aldor"],
 			BabbleFaction["Honored"],
-			19321, 
+			19321,
 		},
 	},
 	[22926] = {
 		300,
 		8,
-		23, 
+		23,
 	},
 	[4096] = {
 		165,
@@ -16970,7 +16970,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[46135] = {
 		365,
 		8,
-		24, 
+		24,
 	},
 	[19062] = {
 		270,
@@ -16982,7 +16982,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[6705] = {
 		190,
 		2,
-		2, 
+		2,
 		["mobDrop"] = {
 			2636,
 			1561,
@@ -16997,18 +16997,18 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Thrallmar"],
 			BabbleFaction["Revered"],
-			17585, 
+			17585,
 			{
 				BabbleFaction["Honor Hold"],
 				BabbleFaction["Revered"],
-				17657, 
-			}, 
+				17657,
+			},
 		},
 	},
 	[41164] = {
 		375,
 		8,
-		27, 
+		27,
 	},
 	[19052] = {
 		265,
@@ -17064,7 +17064,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Cenarion Expedition"],
 			BabbleFaction["Honored"],
-			17904, 
+			17904,
 		},
 	},
 	[50936] = {
@@ -17080,7 +17080,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		},
 	},
 	--Runeforging
-	
+
 	[53323] = {
 		1,
 		1,
@@ -17122,14 +17122,14 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		1,
 	},
 	--smelting
-	
+
 	[3304] = {
 		65,
 		1,
 	},
 	[2657] = {
 		1,
-		1, 
+		1,
 	},
 	[2659] = {
 		65,
@@ -17174,7 +17174,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[46353] = {
 		375,
 		8,
-		24, 
+		24,
 	},
 	[29359] = {
 		350,
@@ -17235,7 +17235,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		},
 	},
  	--tailoring
-	
+
 	 [18458] = {
 		300,
 		2,
@@ -17261,8 +17261,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["limitedVendor"] = {
 			3364,
 			1,
-			8681, 
-			1, 
+			8681,
+			1,
 		},
 	},
 	[12079] = {
@@ -17275,8 +17275,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["limitedVendor"] = {
 			1347,
 			1,
-			3005, 
-			1, 
+			3005,
+			1,
 		},
 	},
 	[55920] = {
@@ -17289,9 +17289,9 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Argent Dawn"],
 			BabbleFaction["Honored"],
-			10856, 
-			11536, 
-			10857, 
+			10856,
+			11536,
+			10857,
 		},
 	},
 	[26746] = {
@@ -17329,7 +17329,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[67065] = {
 		450,
 		8,
-		42, 
+		42,
 	},
 	[31433] = {
 		375,
@@ -17337,7 +17337,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Aldor"],
 			BabbleFaction["Exalted"],
-			19321, 
+			19321,
 		},
 	},
 	[31441] = {
@@ -17355,19 +17355,19 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[7630] = {
 		55,
 		2,
-		2, 
+		2,
 		["vendor"] = {
 			66,
 		},
 		["limitedVendor"] = {
 			3364,
 			1,
-			4189, 
-			1, 
-			3485, 
-			1, 
-			3522, 
-			1, 
+			4189,
+			1,
+			3485,
+			1,
+			3522,
+			1,
 		},
 	},
 	[55777] = {
@@ -17377,8 +17377,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[26403] = {
 		250,
 		2,
-		8, 
-		2, 
+		8,
+		2,
 		["vendor"] = {
 			15909,
 		},
@@ -17386,7 +17386,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[67066] = {
 		450,
 		8,
-		42, 
+		42,
 	},
 	[24902] = {
 		300,
@@ -17398,7 +17398,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[22866] = {
 		300,
 		8,
-		23, 
+		23,
 	},
 	[55921] = {
 		405,
@@ -17411,13 +17411,13 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[56017] = {
 		420,
 		1,
-		8, 
-		44, 
+		8,
+		44,
 	},
 	[63203] = {
 		450,
 		8,
-		39, 
+		39,
 	},
 	[18403] = {
 		255,
@@ -17438,17 +17438,17 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[18451] = {
 		300,
 		1,
-		7, 
+		7,
 	},
 	[28208] = {
 		300,
 		2,
-		8, 
-		41, 
+		8,
+		41,
 		["repVendor"] = {
 			BabbleFaction["Argent Dawn"],
 			BabbleFaction["Honored"],
-			16365, 
+			16365,
 		},
 	},
 	[8758] = {
@@ -17481,8 +17481,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["limitedVendor"] = {
 			6574,
 			1,
-			6576, 
-			1, 
+			6576,
+			1,
 		},
 	},
 	[26747] = {
@@ -17491,13 +17491,13 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			19213,
 			16767,
-			16638, 
+			16638,
 		},
 	},
 	[26755] = {
 		375,
 		2,
-		2, 
+		2,
 		["mobDrop"] = {
 			20134,
 			20135,
@@ -17510,7 +17510,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[26763] = {
 		375,
 		2,
-		2, 
+		2,
 		["mobDrop"] = {
 			18872,
 		},
@@ -17533,8 +17533,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["limitedVendor"] = {
 			19015,
 			1,
-			19017, 
-			1, 
+			19017,
+			1,
 		},
 	},
 	[31434] = {
@@ -17568,7 +17568,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Ashen Verdict"],
 			BabbleFaction["Honored"],
-			37687, 
+			37687,
 		},
 	},
 	[60969] = {
@@ -17585,7 +17585,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[22867] = {
 		300,
 		8,
-		23, 
+		23,
 	},
 	[55907] = {
 		380,
@@ -17609,13 +17609,13 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Ashen Verdict"],
 			BabbleFaction["Revered"],
-			37687, 
+			37687,
 		},
 	},
 	[63205] = {
 		450,
 		8,
-		39, 
+		39,
 	},
 	[18404] = {
 		255,
@@ -17661,8 +17661,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["limitedVendor"] = {
 			3005,
 			1,
-			4168, 
-			1, 
+			4168,
+			1,
 		},
 	},
 	[12072] = {
@@ -17679,8 +17679,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["limitedVendor"] = {
 			3364,
 			1,
-			8681, 
-			1, 
+			8681,
+			1,
 		},
 	},
 	[12084] = {
@@ -17705,7 +17705,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Thorium Brotherhood"],
 			BabbleFaction["Honored"],
-			12944, 
+			12944,
 		},
 	},
 	[26756] = {
@@ -17752,14 +17752,14 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Consortium"],
 			BabbleFaction["Honored"],
-			20242, 
-			23007, 
+			20242,
+			23007,
 		},
 	},
 	[36315] = {
 		375,
 		8,
-		37, 
+		37,
 	},
 	[7892] = {
 		120,
@@ -17771,7 +17771,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Ashtongue Deathsworn"],
 			BabbleFaction["Honored"],
-			23159, 
+			23159,
 		},
 	},
 	[28481] = {
@@ -17780,13 +17780,13 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Cenarion Circle"],
 			BabbleFaction["Honored"],
-			15179, 
+			15179,
 		},
 	},
 	[22868] = {
 		300,
 		8,
-		23, 
+		23,
 	},
 	[55925] = {
 		415,
@@ -17798,7 +17798,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Thorium Brotherhood"],
 			BabbleFaction["Honored"],
-			12944, 
+			12944,
 		},
 	},
 	[56005] = {
@@ -17807,7 +17807,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Sons of Hodir"],
 			BabbleFaction["Exalted"],
-			32540, 
+			32540,
 		},
 	},
 	[56021] = {
@@ -17840,7 +17840,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[18453] = {
 		300,
 		1,
-		7, 
+		7,
 	},
 	[27659] = {
 		275,
@@ -17855,7 +17855,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Cenarion Circle"],
 			BabbleFaction["Revered"],
-			15179, 
+			15179,
 		},
 	},
 	[40021] = {
@@ -17864,7 +17864,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Ashtongue Deathsworn"],
 			BabbleFaction["Friendly"],
-			23159, 
+			23159,
 		},
 	},
 	[55910] = {
@@ -17874,7 +17874,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[67147] = {
 		450,
 		8,
-		42, 
+		42,
 	},
 	[23667] = {
 		300,
@@ -17882,13 +17882,13 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Thorium Brotherhood"],
 			BabbleFaction["Revered"],
-			12944, 
+			12944,
 		},
 	},
 	[67146] = {
 		450,
 		8,
-		42, 
+		42,
 	},
 	[26749] = {
 		340,
@@ -17916,7 +17916,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			19213,
 			16767,
-			16638, 
+			16638,
 		},
 	},
 	[26781] = {
@@ -17933,7 +17933,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[67144] = {
 		450,
 		8,
-		42, 
+		42,
 	},
 	[59589] = {
 		420,
@@ -17942,7 +17942,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[67064] = {
 		450,
 		8,
-		42, 
+		42,
 	},
 	[70553] = {
 		450,
@@ -17950,7 +17950,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Ashen Verdict"],
 			BabbleFaction["Honored"],
-			37687, 
+			37687,
 		},
 	},
 	[70550] = {
@@ -17959,7 +17959,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Ashen Verdict"],
 			BabbleFaction["Revered"],
-			37687, 
+			37687,
 		},
 	},
 	[55769] = {
@@ -17988,7 +17988,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[36317] = {
 		375,
 		8,
-		37, 
+		37,
 	},
 	[3755] = {
 		45,
@@ -18000,7 +18000,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Aldor"],
 			BabbleFaction["Friendly"],
-			19321, 
+			19321,
 		},
 	},
 	[22813] = {
@@ -18020,7 +18020,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Sporeggar"],
 			BabbleFaction["Revered"],
-			18382, 
+			18382,
 		},
 	},
 	[63924] = {
@@ -18029,8 +18029,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Kalu'ak"],
 			BabbleFaction["Revered"],
-			31916, 
-			32763, 
+			31916,
+			32763,
 		},
 	},
 	[6692] = {
@@ -18039,13 +18039,13 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["mobDrop"] = {
 			10760,
 			910,
-			2337, 
+			2337,
 		},
 	},
 	[63206] = {
 		450,
 		8,
-		39, 
+		39,
 	},
 	[28482] = {
 		300,
@@ -18053,13 +18053,13 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Cenarion Circle"],
 			BabbleFaction["Friendly"],
-			15179, 
+			15179,
 		},
 	},
 	[22869] = {
 		300,
 		8,
-		23, 
+		23,
 	},
 	[55911] = {
 		390,
@@ -18068,7 +18068,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[63204] = {
 		450,
 		8,
-		39, 
+		39,
 	},
 	[20849] = {
 		300,
@@ -18076,7 +18076,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Thorium Brotherhood"],
 			BabbleFaction["Friendly"],
-			12944, 
+			12944,
 		},
 	},
 	[60994] = {
@@ -18114,7 +18114,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[67079] = {
 		450,
 		8,
-		42, 
+		42,
 	},
 	[59588] = {
 		420,
@@ -18135,7 +18135,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[18406] = {
 		260,
 		1,
-		2, 
+		2,
 		["vendor"] = {
 			7940,
 		},
@@ -18248,12 +18248,12 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["limitedVendor"] = {
 			19015,
 			1,
-			16638, 
-			1, 
-			19017, 
-			1, 
-			16767, 
-			1, 
+			16638,
+			1,
+			19017,
+			1,
+			16767,
+			1,
 		},
 	},
 	[26758] = {
@@ -18267,7 +18267,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[41205] = {
 		375,
 		8,
-		34, 
+		34,
 	},
 	[26774] = {
 		345,
@@ -18275,7 +18275,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			19213,
 			16767,
-			16638, 
+			16638,
 		},
 	},
 	[26782] = {
@@ -18291,8 +18291,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["limitedVendor"] = {
 			2394,
 			1,
-			2669, 
-			1, 
+			2669,
+			1,
 		},
 	},
 	[3851] = {
@@ -18310,7 +18310,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[67145] = {
 		450,
 		8,
-		42, 
+		42,
 	},
 	[56027] = {
 		435,
@@ -18354,14 +18354,14 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["limitedVendor"] = {
 			4168,
 			1,
-			3499, 
-			1, 
-			3556, 
-			1, 
-			3485, 
-			1, 
-			1250, 
-			1, 
+			3499,
+			1,
+			3556,
+			1,
+			3485,
+			1,
+			1250,
+			1,
 		},
 	},
 	[56018] = {
@@ -18371,21 +18371,21 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[56016] = {
 		420,
 		1,
-		8, 
-		45, 
+		8,
+		45,
 	},
 	[26407] = {
 		250,
 		2,
-		8, 
-		2, 
+		8,
+		2,
 		["vendor"] = {
 			15909,
 		},
 	},
 	[2387] = {
 		1,
-		1, 
+		1,
 	},
 	[7643] = {
 		115,
@@ -18393,16 +18393,16 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["limitedVendor"] = {
 			1474,
 			1,
-			3499, 
-			1, 
-			1454, 
-			1, 
-			2669, 
-			1, 
-			4577, 
-			1, 
-			4168, 
-			1, 
+			3499,
+			1,
+			1454,
+			1,
+			2669,
+			1,
+			4577,
+			1,
+			4168,
+			1,
 		},
 	},
 	[40024] = {
@@ -18411,7 +18411,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Ashtongue Deathsworn"],
 			BabbleFaction["Friendly"],
-			23159, 
+			23159,
 		},
 	},
 	[56014] = {
@@ -18421,7 +18421,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[22870] = {
 		300,
 		8,
-		23, 
+		23,
 	},
 	[55913] = {
 		385,
@@ -18457,13 +18457,13 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Argent Crusade"],
 			BabbleFaction["Exalted"],
-			30431, 
+			30431,
 		},
 	},
 	[41206] = {
 		375,
 		8,
-		27, 
+		27,
 	},
 	[56006] = {
 		440,
@@ -18471,7 +18471,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Wyrmrest Accord"],
 			BabbleFaction["Revered"],
-			32533, 
+			32533,
 		},
 	},
 	[56004] = {
@@ -18480,7 +18480,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Knights of the Ebon Blade"],
 			BabbleFaction["Revered"],
-			32538, 
+			32538,
 		},
 	},
 	[3839] = {
@@ -18545,7 +18545,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Zandalar Tribe"],
 			BabbleFaction["Honored"],
-			14921, 
+			14921,
 		},
 	},
 	[3854] = {
@@ -18554,8 +18554,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["limitedVendor"] = {
 			2679,
 			1,
-			9636, 
-			1, 
+			9636,
+			1,
 		},
 	},
 	[3855] = {
@@ -18666,7 +18666,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Scryers"],
 			BabbleFaction["Honored"],
-			19331, 
+			19331,
 		},
 	},
 	[31438] = {
@@ -18676,7 +18676,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[22759] = {
 		300,
 		8,
-		26, 
+		26,
 	},
 	[31454] = {
 		375,
@@ -18730,7 +18730,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Cenarion Circle"],
 			BabbleFaction["Friendly"],
-			15179, 
+			15179,
 		},
 	},
 	[55914] = {
@@ -18759,7 +18759,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Zandalar Tribe"],
 			BabbleFaction["Revered"],
-			14921, 
+			14921,
 		},
 	},
 	[6695] = {
@@ -18768,7 +18768,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["mobDrop"] = {
 			4834,
 			2434,
-			2242, 
+			2242,
 		},
 	},
 	[55901] = {
@@ -18785,13 +18785,13 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Kirin Tor"],
 			BabbleFaction["Exalted"],
-			32287, 
+			32287,
 		},
 	},
 	[41208] = {
 		375,
 		8,
-		34, 
+		34,
 	},
 	[64730] = {
 		405,
@@ -18807,13 +18807,13 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Lower City"],
 			BabbleFaction["Honored"],
-			21655, 
+			21655,
 		},
 	},
 	[21945] = {
 		190,
 		8,
-		1, 
+		1,
 	},
 	[50644] = {
 		250,
@@ -18832,7 +18832,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[46131] = {
 		365,
 		8,
-		24, 
+		24,
 	},
 	[8489] = {
 		175,
@@ -18852,7 +18852,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[18424] = {
 		280,
 		1,
-		7, 
+		7,
 	},
 	[8465] = {
 		40,
@@ -18868,7 +18868,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	},
 	[3915] = {
 		1,
-		1, 
+		1,
 	},
 	[3863] = {
 		180,
@@ -18880,7 +18880,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Zandalar Tribe"],
 			BabbleFaction["Friendly"],
-			14921, 
+			14921,
 		},
 	},
 	[12066] = {
@@ -18928,7 +18928,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Timbermaw Hold"],
 			BabbleFaction["Honored"],
-			11557, 
+			11557,
 		},
 	},
 	[2395] = {
@@ -18961,8 +18961,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["limitedVendor"] = {
 			18011,
 			1,
-			19722, 
-			1, 
+			19722,
+			1,
 		},
 	},
 	[2401] = {
@@ -18980,8 +18980,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[44958] = {
 		250,
 		2,
-		8, 
-		1, 
+		8,
+		1,
 		["vendor"] = {
 			13433,
 		},
@@ -18989,8 +18989,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[44950] = {
 		250,
 		2,
-		8, 
-		1, 
+		8,
+		1,
 		["vendor"] = {
 			13420,
 		},
@@ -19005,13 +19005,13 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Aldor"],
 			BabbleFaction["Honored"],
-			19321, 
+			19321,
 		},
 	},
 	[41207] = {
 		375,
 		8,
-		27, 
+		27,
 	},
 	[26771] = {
 		325,
@@ -19030,7 +19030,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Ashtongue Deathsworn"],
 			BabbleFaction["Honored"],
-			23159, 
+			23159,
 		},
 	},
 	[37884] = {
@@ -19039,7 +19039,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Aldor"],
 			BabbleFaction["Exalted"],
-			19321, 
+			19321,
 		},
 	},
 	[37883] = {
@@ -19048,7 +19048,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Aldor"],
 			BabbleFaction["Honored"],
-			19321, 
+			19321,
 		},
 	},
 	[50647] = {
@@ -19061,12 +19061,12 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[36318] = {
 		375,
 		8,
-		37, 
+		37,
 	},
 	[36316] = {
 		375,
 		8,
-		37, 
+		37,
 	},
 	[7893] = {
 		120,
@@ -19082,7 +19082,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[46128] = {
 		365,
 		8,
-		24, 
+		24,
 	},
 	[18407] = {
 		260,
@@ -19094,8 +19094,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["limitedVendor"] = {
 			18011,
 			1,
-			19722, 
-			1, 
+			19722,
+			1,
 		},
 	},
 	[31437] = {
@@ -19108,7 +19108,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Ashtongue Deathsworn"],
 			BabbleFaction["Honored"],
-			23159, 
+			23159,
 		},
 	},
 	[31373] = {
@@ -19125,18 +19125,18 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Cenarion Circle"],
 			BabbleFaction["Revered"],
-			15179, 
+			15179,
 		},
 	},
 	[28209] = {
 		300,
 		2,
-		8, 
-		41, 
+		8,
+		41,
 		["repVendor"] = {
 			BabbleFaction["Argent Dawn"],
 			BabbleFaction["Revered"],
-			16365, 
+			16365,
 		},
 	},
 	[3849] = {
@@ -19154,12 +19154,12 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[28207] = {
 		300,
 		2,
-		8, 
-		41, 
+		8,
+		41,
 		["repVendor"] = {
 			BabbleFaction["Argent Dawn"],
 			BabbleFaction["Exalted"],
-			16365, 
+			16365,
 		},
 	},
 	[56029] = {
@@ -19172,24 +19172,24 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["vendor"] = {
 			28714,
 			15419,
-			4617, 
-			18951, 
-			5757, 
-			16722, 
-			27030, 
-			19234, 
-			3012, 
-			5758, 
-			26569, 
-			18773, 
-			4228, 
-			5158, 
-			16635, 
-			19663, 
-			3346, 
-			1318, 
-			27054, 
-			27147, 
+			4617,
+			18951,
+			5757,
+			16722,
+			27030,
+			19234,
+			3012,
+			5758,
+			26569,
+			18773,
+			4228,
+			5158,
+			16635,
+			19663,
+			3346,
+			1318,
+			27054,
+			27147,
 			19537, -- [21]
 			18753, -- [22]
 			19540, -- [23]
@@ -19197,7 +19197,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	},
 	[12044] = {
 		1,
-		1, 
+		1,
 	},
 	[63742] = {
 		125,
@@ -19229,7 +19229,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[18409] = {
 		265,
 		1,
-		2, 
+		2,
 		["vendor"] = {
 			7940,
 		},
@@ -19245,23 +19245,23 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[6686] = {
 		70,
 		2,
-		2, 
+		2,
 		["mobDrop"] = {
 			3531,
 			3530,
-			590, 
+			590,
 		},
 		["limitedVendor"] = {
 			16224,
 			1,
-			843, 
-			1, 
-			3005, 
-			1, 
-			4189, 
-			1, 
-			3556, 
-			1, 
+			843,
+			1,
+			3005,
+			1,
+			4189,
+			1,
+			3556,
+			1,
 		},
 	},
 	[18441] = {
@@ -19271,7 +19271,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[18449] = {
 		300,
 		1,
-		7, 
+		7,
 	},
 	[18457] = {
 		300,
@@ -19294,8 +19294,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["limitedVendor"] = {
 			2381,
 			1,
-			6567, 
-			1, 
+			6567,
+			1,
 		},
 	},
 	[6690] = {
@@ -19305,11 +19305,11 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[46129] = {
 		365,
 		8,
-		24, 
+		24,
 	},
 	[2963] = {
 		1,
-		1, 
+		1,
 	},
 	[2964] = {
 		75,
@@ -19330,12 +19330,12 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[28205] = {
 		300,
 		2,
-		8, 
-		41, 
+		8,
+		41,
 		["repVendor"] = {
 			BabbleFaction["Argent Dawn"],
 			BabbleFaction["Revered"],
-			16365, 
+			16365,
 		},
 	},
 	[23663] = {
@@ -19344,7 +19344,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Timbermaw Hold"],
 			BabbleFaction["Revered"],
-			11557, 
+			11557,
 		},
 	},
 	[3869] = {
@@ -19421,7 +19421,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["The Scryers"],
 			BabbleFaction["Exalted"],
-			19331, 
+			19331,
 		},
 	},
 	[31440] = {
@@ -19453,7 +19453,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Cenarion Circle"],
 			BabbleFaction["Revered"],
-			15179, 
+			15179,
 		},
 	},
 	[18440] = {
@@ -19474,7 +19474,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[6688] = {
 		115,
 		2,
-		2, 
+		2,
 		["mobDrop"] = {
 			450,
 			2264,
@@ -19482,24 +19482,24 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["limitedVendor"] = {
 			777,
 			1,
-			1454, 
-			1, 
-			1474, 
-			1, 
-			3005, 
-			1, 
-			3364, 
-			1, 
-			3485, 
-			1, 
-			3537, 
-			1, 
-			3683, 
-			1, 
-			4189, 
-			2, 
-			4577, 
-			1, 
+			1454,
+			1,
+			1474,
+			1,
+			3005,
+			1,
+			3364,
+			1,
+			3485,
+			1,
+			3537,
+			1,
+			3683,
+			1,
+			4189,
+			2,
+			4577,
+			1,
 			5944, -- [21]
 			1, -- [22]
 		},
@@ -19511,12 +19511,12 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[46130] = {
 		365,
 		8,
-		24, 
+		24,
 	},
 	[26087] = {
 		300,
 		8,
-		26, 
+		26,
 	},
 	[24901] = {
 		300,
@@ -19528,8 +19528,8 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[26086] = {
 		280,
 		2,
-		8, 
-		30, 
+		8,
+		30,
 		["mobDrop"] = {
 			10503,
 		},
@@ -19548,9 +19548,9 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["repVendor"] = {
 			BabbleFaction["Argent Dawn"],
 			BabbleFaction["Revered"],
-			10856, 
-			11536, 
-			10857, 
+			10856,
+			11536,
+			10857,
 		},
 	},
 	[18560] = {
@@ -19614,7 +19614,7 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 	[18438] = {
 		285,
 		1,
-		7, 
+		7,
 	},
 	[18402] = {
 		255,
@@ -19656,22 +19656,391 @@ AtlasLoot_CraftingData["ExtraCraftingData"] =  {
 		["limitedVendor"] = {
 			843,
 			1,
-			1347, 
-			1, 
-			2394, 
-			1, 
-			3364, 
-			1, 
-			5944, 
-			1, 
+			1347,
+			1,
+			2394,
+			1,
+			3364,
+			1,
+			5944,
+			1,
 		},
 	},
+	--High Risk
+		--classic
+
+
+		[968403] = {300, 2, vendor = {970032}},
+		[968406] = {300, 2, vendor = {970026}},
+		[968409] = {300, 2, vendor = {970022}},
+		[968412] = {300, 2, vendor = {970023}},
+		[968415] = {300, 2, vendor = {970028}},
+		[968418] = {300, 2, vendor = {970024}},
+		[968421] = {300, 2, vendor = {970018}},
+		[968424] = {300, 2, vendor = {970019}},
+		[968427] = {300, 2, vendor = {970034}},
+		[968430] = {300, 2, vendor = {970031}},
+		[968433] = {300, 2, vendor = {970025}},
+		[968404] = {300, 2, vendor = {970032}},
+		[968407] = {300, 2, vendor = {970026}},
+		[968410] = {300, 2, vendor = {970022}},
+		[968413] = {300, 2, vendor = {970023}},
+		[968416] = {300, 2, vendor = {970028}},
+		[968419] = {300, 2, vendor = {970024}},
+		[968422] = {300, 2, vendor = {970018}},
+		[968425] = {300, 2, vendor = {970019}},
+		[968428] = {300, 2, vendor = {970034}},
+		[968431] = {300, 2, vendor = {970031}},
+		[968434] = {300, 2, vendor = {970025}},
+		[968019] = {300, 2, vendor = {970006}},
+		[968022] = {300, 2, vendor = {970006}},
+		[968025] = {300, 2, vendor = {970000}},
+		[968028] = {300, 2, vendor = {970011}},
+		[968031] = {300, 2, vendor = {970007}},
+		[968034] = {300, 2, vendor = {970002}},
+		[968037] = {300, 2, vendor = {970004}},
+		[968040] = {300, 2, vendor = {970001}},
+		[968020] = {300, 2, vendor = {970006}},
+		[968023] = {300, 2, vendor = {970006}},
+		[968026] = {300, 2, vendor = {970000}},
+		[968029] = {300, 2, vendor = {970011}},
+		[968032] = {300, 2, vendor = {970007}},
+		[968035] = {300, 2, vendor = {970002}},
+		[968038] = {300, 2, vendor = {970004}},
+		[968041] = {300, 2, vendor = {970001}},
+		[968001] = {300, 2, vendor = {970000}},
+		[968004] = {300, 2, vendor = {970001}},
+		[968007] = {300, 2, vendor = {970002}},
+		[968010] = {300, 2, vendor = {970003}},
+		[968013] = {300, 2, vendor = {970004}},
+		[968016] = {300, 2, vendor = {970005}},
+		[968002] = {300, 2, vendor = {970000}},
+		[968005] = {300, 2, vendor = {970001}},
+		[968008] = {300, 2, vendor = {970002}},
+		[968011] = {300, 2, vendor = {970003}},
+		[968014] = {300, 2, vendor = {970004}},
+		[968017] = {300, 2, vendor = {970005}},
+		[968043] = {300, 2, vendor = {970013}},
+		[968046] = {300, 2, vendor = {970005}},
+		[968049] = {300, 2, vendor = {970014}},
+		[968052] = {300, 2, vendor = {970010}},
+		[968055] = {300, 2, vendor = {970008}},
+		[968058] = {300, 2, vendor = {970012}},
+		[968044] = {300, 2, vendor = {970013}},
+		[968047] = {300, 2, vendor = {970005}},
+		[968050] = {300, 2, vendor = {970014}},
+		[968053] = {300, 2, vendor = {970010}},
+		[968056] = {300, 2, vendor = {970008}},
+		[968059] = {300, 2, vendor = {970012}},
+		[968677] = {300, 2, vendor = {970010}},
+		[968680] = {300, 2, vendor = {970016}},
+		[968683] = {300, 2, vendor = {970013}},
+		[968686] = {300, 2, vendor = {970003}},
+		[968689] = {300, 2, vendor = {970017}},
+		[968692] = {300, 2, vendor = {970012}},
+		[968695] = {300, 2, vendor = {970014}},
+		[968698] = {300, 2, vendor = {970007}},
+		[968701] = {300, 2, vendor = {970009}},
+		[968770] = {300, 2, vendor = {970015}},
+		[968678] = {300, 2, vendor = {970010}},
+		[968681] = {300, 2, vendor = {970016}},
+		[968684] = {300, 2, vendor = {970013}},
+		[968687] = {300, 2, vendor = {970003}},
+		[968690] = {300, 2, vendor = {970017}},
+		[968693] = {300, 2, vendor = {970012}},
+		[968696] = {300, 2, vendor = {970014}},
+		[968699] = {300, 2, vendor = {970007}},
+		[968702] = {300, 2, vendor = {970009}},
+		[968771] = {300, 2, vendor = {970015}},
+		[968061] = {300, 2, vendor = {970015}},
+		[968064] = {300, 2, vendor = {970017}},
+		[968067] = {300, 2, vendor = {970009}},
+		[968070] = {300, 2, vendor = {970016}},
+		[968073] = {300, 2, vendor = {970008}},
+		[968076] = {300, 2, vendor = {970011}},
+		[968062] = {300, 2, vendor = {970015}},
+		[968065] = {300, 2, vendor = {970017}},
+		[968068] = {300, 2, vendor = {970009}},
+		[968071] = {300, 2, vendor = {970016}},
+		[968074] = {300, 2, vendor = {970008}},
+		[968077] = {300, 2, vendor = {970011}},
+		[968280] = {300, 2, vendor = {970018}},
+		[968283] = {300, 2, vendor = {970004}},
+		[968286] = {300, 2, vendor = {970022}},
+		[968289] = {300, 2, vendor = {970029}},
+		[968292] = {300, 2, vendor = {970035}},
+		[968295] = {300, 2, vendor = {970040}},
+		[968298] = {300, 2, vendor = {970034}},
+		[968301] = {300, 2, vendor = {970036}},
+		[968304] = {300, 2, vendor = {970026}},
+		[968307] = {300, 2, vendor = {970042}},
+		[968310] = {300, 2, vendor = {970033}},
+		[968313] = {300, 2, vendor = {970035}},
+		[968316] = {300, 2, vendor = {970042}},
+		[968319] = {300, 2, vendor = {970028}},
+		[968322] = {300, 2, vendor = {970030}},
+		[968325] = {300, 2, vendor = {970029}},
+		[968328] = {300, 2, vendor = {970039}},
+		[968331] = {300, 2, vendor = {970041}},
+		[968334] = {300, 2, vendor = {970032}},
+		[968337] = {300, 2, vendor = {970038}},
+		[968340] = {300, 2, vendor = {970037}},
+		[968343] = {300, 2, vendor = {970025}},
+		[968346] = {300, 2, vendor = {970021}},
+		[968349] = {300, 2, vendor = {970020}},
+		[968352] = {300, 2, vendor = {970037}},
+		[968355] = {300, 2, vendor = {970038}},
+		[968358] = {300, 2, vendor = {970032}},
+		[968361] = {300, 2, vendor = {970027}},
+		[968364] = {300, 2, vendor = {970040}},
+		[968367] = {300, 2, vendor = {970021}},
+		[968370] = {300, 2, vendor = {970020}},
+		[968373] = {300, 2, vendor = {970031}},
+		[968376] = {300, 2, vendor = {970030}},
+		[968379] = {300, 2, vendor = {970041}},
+		[968382] = {300, 2, vendor = {970024}},
+		[968385] = {300, 2, vendor = {970036}},
+		[968388] = {300, 2, vendor = {970027}},
+		[968391] = {300, 2, vendor = {970023}},
+		[968394] = {300, 2, vendor = {970034}},
+		[968397] = {300, 2, vendor = {970019}},
+		[968400] = {300, 2, vendor = {970039}},
+		[968281] = {300, 2, vendor = {970018}},
+		[968284] = {300, 2, vendor = {970004}},
+		[968287] = {300, 2, vendor = {970022}},
+		[968290] = {300, 2, vendor = {970029}},
+		[968293] = {300, 2, vendor = {970035}},
+		[968296] = {300, 2, vendor = {970040}},
+		[968299] = {300, 2, vendor = {970034}},
+		[968302] = {300, 2, vendor = {970036}},
+		[968305] = {300, 2, vendor = {970026}},
+		[968308] = {300, 2, vendor = {970042}},
+		[968311] = {300, 2, vendor = {970033}},
+		[968314] = {300, 2, vendor = {970035}},
+		[968317] = {300, 2, vendor = {970042}},
+		[968320] = {300, 2, vendor = {970028}},
+		[968323] = {300, 2, vendor = {970030}},
+		[968326] = {300, 2, vendor = {970029}},
+		[968329] = {300, 2, vendor = {970039}},
+		[968332] = {300, 2, vendor = {970041}},
+		[968335] = {300, 2, vendor = {970032}},
+		[968338] = {300, 2, vendor = {970038}},
+		[968341] = {300, 2, vendor = {970037}},
+		[968344] = {300, 2, vendor = {970025}},
+		[968347] = {300, 2, vendor = {970021}},
+		[968350] = {300, 2, vendor = {970020}},
+		[968353] = {300, 2, vendor = {970037}},
+		[968356] = {300, 2, vendor = {970038}},
+		[968359] = {300, 2, vendor = {970032}},
+		[968362] = {300, 2, vendor = {970027}},
+		[968365] = {300, 2, vendor = {970040}},
+		[968368] = {300, 2, vendor = {970021}},
+		[968371] = {300, 2, vendor = {970020}},
+		[968374] = {300, 2, vendor = {970031}},
+		[968377] = {300, 2, vendor = {970030}},
+		[968380] = {300, 2, vendor = {970041}},
+		[968383] = {300, 2, vendor = {970024}},
+		[968386] = {300, 2, vendor = {970036}},
+		[968389] = {300, 2, vendor = {970027}},
+		[968392] = {300, 2, vendor = {970023}},
+		[968395] = {300, 2, vendor = {970034}},
+		[968398] = {300, 2, vendor = {970019}},
+		[968401] = {300, 2, vendor = {970039}},
+
+		--tbc
+		[979362]	= { 375, 8, 35 },
+		[979364]	= { 375, 8, 35 },
+		[979366]	= { 375, 8, 35 },
+		[979368]	= { 375, 8, 35 },
+		[979370]	= { 375, 8, 35 },
+		[979372]	= { 375, 8, 35 },
+		[979374]	= { 375, 8, 35 },
+		[979376]	= { 375, 8, 35 },
+		[979378]	= { 375, 8, 35 },
+		[979380]	= { 375, 8, 35 },
+		[979382]	= { 375, 8, 35 },
+		[979363]	= { 375, 8, 35 },
+		[979365]	= { 375, 8, 35 },
+		[979367]	= { 375, 8, 35 },
+		[979369]	= { 375, 8, 35 },
+		[979371]	= { 375, 8, 35 },
+		[979373]	= { 375, 8, 35 },
+		[979375]	= { 375, 8, 35 },
+		[979377]	= { 375, 8, 35 },
+		[979379]	= { 375, 8, 35 },
+		[979381]	= { 375, 8, 35 },
+		[979383]	= { 375, 8, 35 },
+		[979534]	= { 375, 8, 35 },
+		[979536]	= { 375, 8, 35 },
+		[979538]	= { 375, 8, 35 },
+		[979540]	= { 375, 8, 35 },
+		[979542]	= { 375, 8, 35 },
+		[979544]	= { 375, 8, 35 },
+		[979546]	= { 375, 8, 35 },
+		[979548]	= { 375, 8, 35 },
+		[979535]	= { 375, 8, 35 },
+		[979537]	= { 375, 8, 35 },
+		[979539]	= { 375, 8, 35 },
+		[979541]	= { 375, 8, 35 },
+		[979543]	= { 375, 8, 35 },
+		[979545]	= { 375, 8, 35 },
+		[979547]	= { 375, 8, 35 },
+		[979549]	= { 375, 8, 35 },
+		[979522]	= { 375, 8, 35 },
+		[979524]	= { 375, 8, 35 },
+		[979526]	= { 375, 8, 35 },
+		[979528]	= { 375, 8, 35 },
+		[979530]	= { 375, 8, 35 },
+		[979532]	= { 375, 8, 35 },
+		[979523]	= { 375, 8, 35 },
+		[979525]	= { 375, 8, 35 },
+		[979527]	= { 375, 8, 35 },
+		[979529]	= { 375, 8, 35 },
+		[979531]	= { 375, 8, 35 },
+		[979533]	= { 375, 8, 35 },
+		[979550]	= { 375, 8, 35 },
+		[979552]	= { 375, 8, 35 },
+		[979554]	= { 375, 8, 35 },
+		[979556]	= { 375, 8, 35 },
+		[979558]	= { 375, 8, 35 },
+		[979560]	= { 375, 8, 35 },
+		[979551]	= { 375, 8, 35 },
+		[979553]	= { 375, 8, 35 },
+		[979555]	= { 375, 8, 35 },
+		[979557]	= { 375, 8, 35 },
+		[979559]	= { 375, 8, 35 },
+		[979561]	= { 375, 8, 35 },
+		[1968677]	= { 375, 8, 35 },
+		[1968680]	= { 375, 8, 35 },
+		[1968683]	= { 375, 8, 35 },
+		[1968686]	= { 375, 8, 35 },
+		[1968689]	= { 375, 8, 35 },
+		[1968692]	= { 375, 8, 35 },
+		[1968695]	= { 375, 8, 35 },
+		[1968698]	= { 375, 8, 35 },
+		[1968701]	= { 375, 8, 35 },
+		[1968770]	= { 375, 8, 35 },
+		[1968678]	= { 375, 8, 35 },
+		[1968681]	= { 375, 8, 35 },
+		[1968684]	= { 375, 8, 35 },
+		[1968687]	= { 375, 8, 35 },
+		[1968690]	= { 375, 8, 35 },
+		[1968693]	= { 375, 8, 35 },
+		[1968696]	= { 375, 8, 35 },
+		[1968699]	= { 375, 8, 35 },
+		[1968702]	= { 375, 8, 35 },
+		[1968771]	= { 375, 8, 35 },
+		[979562]	= { 375, 8, 35 },
+		[979564]	= { 375, 8, 35 },
+		[979566]	= { 375, 8, 35 },
+		[979568]	= { 375, 8, 35 },
+		[979570]	= { 375, 8, 35 },
+		[979572]	= { 375, 8, 35 },
+		[979563]	= { 375, 8, 35 },
+		[979565]	= { 375, 8, 35 },
+		[979567]	= { 375, 8, 35 },
+		[979569]	= { 375, 8, 35 },
+		[979571]	= { 375, 8, 35 },
+		[979573]	= { 375, 8, 35 },
+		[979639]	= { 375, 8, 35 },
+		[979641]	= { 375, 8, 35 },
+		[979643]	= { 375, 8, 35 },
+		[979645]	= { 375, 8, 35 },
+		[979647]	= { 375, 8, 35 },
+		[979649]	= { 375, 8, 35 },
+		[979651]	= { 375, 8, 35 },
+		[979653]	= { 375, 8, 35 },
+		[979655]	= { 375, 8, 35 },
+		[979640]	= { 375, 8, 35 },
+		[979642]	= { 375, 8, 35 },
+		[979644]	= { 375, 8, 35 },
+		[979646]	= { 375, 8, 35 },
+		[979648]	= { 375, 8, 35 },
+		[979650]	= { 375, 8, 35 },
+		[979652]	= { 375, 8, 35 },
+		[979654]	= { 375, 8, 35 },
+		[979656]	= { 375, 8, 35 },
+		[979384]	= { 375, 8, 35 },
+		[979386]	= { 375, 8, 35 },
+		[979388]	= { 375, 8, 35 },
+		[979390]	= { 375, 8, 35 },
+		[979392]	= { 375, 8, 35 },
+		[979394]	= { 375, 8, 35 },
+		[979396]	= { 375, 8, 35 },
+		[979398]	= { 375, 8, 35 },
+		[979463]	= { 375, 8, 35 },
+		[979465]	= { 375, 8, 35 },
+		[979447]	= { 375, 8, 35 },
+		[979445]	= { 375, 8, 35 },
+		[979447]	= { 375, 8, 35 },
+		[979449]	= { 375, 8, 35 },
+		[979451]	= { 375, 8, 35 },
+		[979400]	= { 375, 8, 35 },
+		[979402]	= { 375, 8, 35 },
+		[979404]	= { 375, 8, 35 },
+		[979406]	= { 375, 8, 35 },
+		[979421]	= { 375, 8, 35 },
+		[979423]	= { 375, 8, 35 },
+		[979425]	= { 375, 8, 35 },
+		[979427]	= { 375, 8, 35 },
+		[979429]	= { 375, 8, 35 },
+		[979431]	= { 375, 8, 35 },
+		[979441]	= { 375, 8, 35 },
+		[979408]	= { 375, 8, 35 },
+		[979410]	= { 375, 8, 35 },
+		[979413]	= { 375, 8, 35 },
+		[979415]	= { 375, 8, 35 },
+		[979417]	= { 375, 8, 35 },
+		[979419]	= { 375, 8, 35 },
+		[979433]	= { 375, 8, 35 },
+		[979435]	= { 375, 8, 35 },
+		[979437]	= { 375, 8, 35 },
+		[979439]	= { 375, 8, 35 },
+		[979453]	= { 375, 8, 35 },
+		[979455]	= { 375, 8, 35 },
+		[979457]	= { 375, 8, 35 },
+		[979459]	= { 375, 8, 35 },
+		[979461]	= { 375, 8, 35 },
+		[979385]	= { 375, 8, 35 },
+		[979387]	= { 375, 8, 35 },
+		[979389]	= { 375, 8, 35 },
+		[979391]	= { 375, 8, 35 },
+		[979393]	= { 375, 8, 35 },
+		[979395]	= { 375, 8, 35 },
+		[979397]	= { 375, 8, 35 },
+		[979399]	= { 375, 8, 35 },
+		[979464]	= { 375, 8, 35 },
+		[979466]	= { 375, 8, 35 },
+		[979444]	= { 375, 8, 35 },
+		[979446]	= { 375, 8, 35 },
+		[979448]	= { 375, 8, 35 },
+		[979450]	= { 375, 8, 35 },
+		[979452]	= { 375, 8, 35 },
+		[979401]	= { 375, 8, 35 },
+		[979403]	= { 375, 8, 35 },
+		[979405]	= { 375, 8, 35 },
+		[979407]	= { 375, 8, 35 },
+		[979422]	= { 375, 8, 35 },
+		[979424]	= { 375, 8, 35 },
+		[979426]	= { 375, 8, 35 },
+		[979428]	= { 375, 8, 35 },
+		[979430]	= { 375, 8, 35 },
+		[979432]	= { 375, 8, 35 },
+		[979442]	= { 375, 8, 35 },
+		[979409]	= { 375, 8, 35 },
+		[979412]	= { 375, 8, 35 },
+		[979414]	= { 375, 8, 35 },
+		[979416]	= { 375, 8, 35 },
+		[979418]	= { 375, 8, 35 },
+		[979420]	= { 375, 8, 35 },
+		[979434]	= { 375, 8, 35 },
+		[979436]	= { 375, 8, 35 },
+		[979438]	= { 375, 8, 35 },
+		[979440]	= { 375, 8, 35 },
+		[979454]	= { 375, 8, 35 },
+		[979456]	= { 375, 8, 35 },
+		[979458]	= { 375, 8, 35 },
+		[979460]	= { 375, 8, 35 },
+		[979462]	= { 375, 8, 35 },
+
 };
-
-
-
-
-
-
-
-

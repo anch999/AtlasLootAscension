@@ -375,6 +375,51 @@ AtlasLoot_CraftingData["VendorList"] = {
 [34079] =	{ AL["Captain O'Neal"],			BabbleZone["Stormwind City"],		75.7, 66.6, ALLIANCE},
 [37687] =	{ AL["Alchemist Finklestein"],		BabbleZone["Icecrown Citadel"],		   0,	 0, NEUTRAL},
 [40160] =	{ AL["Frozo the Renowned"],		BabbleZone["Dalaran"],			41.0, 28.5, NEUTRAL},
+
+--Shady Dealers 
+[970000] 	=   {	AL["Shady Dealer"],		BabbleZone["Wetlands"], 70.8, 79.4, NEUTRAL },
+[970001] 	=   {	AL["Shady Dealer"],		BabbleZone["Un'Goro Crater"], 71.7, 75.8, NEUTRAL },
+[970002] 	=   {	AL["Shady Dealer"],		BabbleZone["Azshara"], 42.6, 80.3, NEUTRAL },
+[970003] 	=   {	AL["Shady Dealer"],		BabbleZone["Tanaris"], 66.8, 22.2, NEUTRAL },
+[970004] 	=   {	AL["Shady Dealer"],		BabbleZone["Burning Steppes"], 95.1, 31.7, NEUTRAL },
+[970005] 	=   {	AL["Shady Dealer"],		BabbleZone["Stranglethorn Vale"], 35.7, 10.6, NEUTRAL },
+[970006] 	=   {	AL["Shady Dealer"],		BabbleZone["Searing Gorge"], 37.8, 49.5, NEUTRAL },
+[970007] 	=   {	AL["Shady Dealer"],		BabbleZone["Alterac Mountains"], 20.2, 85.6, NEUTRAL },
+[970008] 	=   {	AL["Shady Dealer"],		BabbleZone["Blasted Lands"], 50.7, 14.6, NEUTRAL },
+[970009] 	=   {	AL["Shady Dealer"],		BabbleZone["Deadwind Pass"], 50.0, 74.8, NEUTRAL },
+[970010] 	=   {	AL["Shady Dealer"],		BabbleZone["Thousand Needles"], 80.2, 77.1, NEUTRAL },
+[970011] 	=   {	AL["Shady Dealer"],		BabbleZone["Felwood"], 64.8, 8.0, NEUTRAL },
+[970012] 	=   {	AL["Shady Dealer"],		BabbleZone["Eastern Plaguelands"], 43.5, 18.5, NEUTRAL },
+[970013] 	=   {	AL["Shady Dealer"],		BabbleZone["The Barrens"], 49.4, 50.6, NEUTRAL },
+[970014] 	=   {	AL["Shady Dealer"],		BabbleZone["Duskwood"], 81.8, 19.8, NEUTRAL },
+[970015] 	=   {	AL["Shady Dealer"],		BabbleZone["Western Plaguelands"], 45.0, 15.8, NEUTRAL },
+[970016] 	=   {	AL["Shady Dealer"],		BabbleZone["Hillsbrad Foothills"], 77.2, 46.3, NEUTRAL },
+[970017] 	=   {	AL["Shady Dealer"],		BabbleZone["Moonglade"], 54.4, 37.0, NEUTRAL },
+[970018] 	=   {	AL["Shady Dealer"],		BabbleZone["Un'Goro Crater"], 45.2, 5.7, NEUTRAL },
+[970019] 	=   {	AL["Shady Dealer"],		BabbleZone["Azshara"], 45.3, 90.9, NEUTRAL },
+[970020] 	=   {	AL["Shady Dealer"],		BabbleZone["Azshara"], 50.1, 63.8, NEUTRAL },
+[970021] 	=   {	AL["Shady Dealer"],		BabbleZone["Western Plaguelands"], 69.3, 49.8, NEUTRAL },
+[970022] 	=   {	AL["Shady Dealer"],		BabbleZone["Western Plaguelands"], 39.5, 66.7, NEUTRAL },
+[970023] 	=   {	AL["Shady Dealer"],		BabbleZone["Winterspring"], 49.9, 9.9, NEUTRAL },
+[970024] 	=   {	AL["Shady Dealer"],		BabbleZone["Winterspring"], 65.9, 65.2, NEUTRAL },
+[970025] 	=   {	AL["Shady Dealer"],		BabbleZone["Winterspring"], 61.9, 37.6, NEUTRAL },
+[970026] 	=   {	AL["Shady Dealer"],		BabbleZone["Silithus"], 49.5, 37.6, NEUTRAL },
+[970027] 	=   {	AL["Shady Dealer"],		BabbleZone["Silithus"], 41.5, 88.8, NEUTRAL },
+[970028] 	=   {	AL["Shady Dealer"],		BabbleZone["Eastern Plaguelands"], 75.2, 51.4, NEUTRAL },
+[970029] 	=   {	AL["Shady Dealer"],		BabbleZone["The Barrens"], 62.6, 38.3, NEUTRAL },
+[970030] 	=   {	AL["Shady Dealer"],		BabbleZone["Dustwallow Marsh"], 41.8, 74.1, NEUTRAL },
+[970031] 	=   {	AL["Shady Dealer"],		BabbleZone["Felwood"], 51.0, 81.4, NEUTRAL },
+[970032] 	=   {	AL["Shady Dealer"],		BabbleZone["Stranglethorn Vale"], 26.8, 76.4, NEUTRAL },
+[970033] 	=   {	AL["Shady Dealer"],		BabbleZone["Feralas"], 32.0, 77.6, NEUTRAL },
+[970034] 	=   {	AL["Shady Dealer"],		BabbleZone["Dustwallow Marsh"], 77.9, 17.2, NEUTRAL },
+[970035] 	=   {	AL["Shady Dealer"],		BabbleZone["Desolace"], 61.2, 62.1, NEUTRAL },
+[970036] 	=   {	AL["Shady Dealer"],		BabbleZone["Stonetalon Mountains"], 59.0, 62.7, NEUTRAL },
+[970037] 	=   {	AL["Shady Dealer"],		BabbleZone["The Hinterlands"], 26.9, 48.8, NEUTRAL },
+[970038] 	=   {	AL["Shady Dealer"],		BabbleZone["Ashenvale"], 69.8, 70.4, NEUTRAL },
+[970039] 	=   {	AL["Shady Dealer"],		BabbleZone["Badlands"], 62.0, 54.2, NEUTRAL },
+[970040] 	=   {	AL["Shady Dealer"],		BabbleZone["Arathi Highlands"], 32.1, 82.9, NEUTRAL },
+[970041] 	=   {	AL["Shady Dealer"],		BabbleZone["Arathi Highlands"], 33.8, 27.5, NEUTRAL },
+[970042] 	=   {	AL["Shady Dealer"],		BabbleZone["Swamp of Sorrows"], 13.7, 68.6, NEUTRAL },
 };
 
 AtlasLoot_CraftingData["MobList"] = {
@@ -820,6 +865,7 @@ AtlasLoot_CraftingData["MobList"] = {
 
 -- Utgarde Pinnacle
 [26861] =   { 	BabbleBoss["King Ymiron"],			BabbleZone["Utgarde Pinnacle"], 0, 0},
+
 };
 
 AtlasLoot_CraftingData["QuestList"] = {
