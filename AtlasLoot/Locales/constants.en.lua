@@ -908,7 +908,7 @@ if AL then
 	AL["Zone"] = true;
 	AL["Trainer/Book of Artisans"] = true;
 	AL["Required Reputation"] = true;
-	AL["Hold Control for source"] = true;
+	AL["Hold CTRL for source"] = true;
 	AL["Click to only show recipe while holding control"] = true;
 	AL["Click to show recipe source in tooltips"] = true;
 	AL["Hide recipe source"] = true;
@@ -1522,6 +1522,7 @@ if AL then
 	-- Zones
 	AL["World Drop"] = true;
 	AL["Sunwell Isle"] = true;
+	AL["Gordok Commons"] = true;
 
 	-- Shortcuts for Bossname files
 	AL["LBRS"] = true;

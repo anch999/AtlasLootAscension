@@ -3,7 +3,7 @@ local BabbleBoss = AtlasLoot_GetLocaleLibBabble("LibBabble-Boss-3.0")
 local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0")
 local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
-
+local WHITE = "|cffFFFFFF"
 --------------------------------------------------------------------------------
 -- Text replacement function
 --------------------------------------------------------------------------------
@@ -1081,6 +1081,8 @@ function AtlasLoot_FixText(text)
 
     -- Crafting
     text = gsub(text, "#sr#", AL["Skill Required:"]);
+    text = gsub(text, "#source#", AL["Source"]..": "..WHITE);
+    text = gsub(text, "#zone#", AL["Zone"]..": "..WHITE);
 
     -- Misc PvP Set Text
     text = gsub(text, "#pvps1#", AL["Epic Set"]);

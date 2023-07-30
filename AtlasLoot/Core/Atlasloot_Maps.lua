@@ -21,8 +21,9 @@ local OBJECT = 4;
 local FACTION = 5;
 local QUEST = 6;
 
+local lastMapNum, lastMap
 
-
+--called everytime you on a map hiding the loot item buttons 
 function AtlasLoot:MapOnShow()
     if AtlasLootDefaultFrame_Map:IsVisible() then
         AtlasLootDefaultFrame_Map:Hide();
@@ -54,13 +55,23 @@ function AtlasLoot:MapOnShow()
                 Atlasloot_HeaderLabel:Show();
                 AtlasLoot:ScrollFrameUpdate(true);
                 AtlasLootDefaultFrameScroll:Hide();
-                AtlasLoot:SubTableScrollFrameUpdate(ATLASLOOT_CURRENT_MAP, "AtlasLoot_MapData");
+                local mapNum = 1
+                if lastMap == ATLASLOOT_CURRENT_MAP then mapNum = lastMapNum end
+                AtlasLoot:SubTableScrollFrameUpdate(ATLASLOOT_CURRENT_MAP, "AtlasLoot_MapData", mapNum);
+                lastMapNum = mapNum
         end
     end
+    if not AtlasLoot.db.profile.FrameExpanded then AtlasLoot:ExpandFrame(false, false) end
 end
 
-function AtlasLoot:MapSelect(mapID)
-    --AtlasLootDefaultFrame_Map:SetBackdrop({bgFile = "Interface\\AddOns\\Atlas\\Images\\Maps\\"..mapID});   
+--called to change the current displayed map
+function AtlasLoot:MapSelect(mapID, mapNum)
+    mapNum = mapNum or 1
+    if AtlasLoot_MapData[mapID].MapName then
+        for i = 1, 12 do
+            _G["AtlasLoot_MapDetailTile"..i]:SetTexture("Interface\\Worldmap\\"..AtlasLoot_MapData[mapID].MapName.."\\"..AtlasLoot_MapData[mapID].MapName..mapNum.."_"..i);
+        end
+    end  
     Atlasloot_HeaderLabel:SetText(
     AtlasLoot_MapData[mapID].ZoneName[1].._RED.." ["..AtlasLoot_MapData[mapID].Acronym.."]\n"..
     WHITE.."Location: "..AtlasLoot_MapData[mapID].Location[1].."\n"..
@@ -68,372 +79,55 @@ function AtlasLoot:MapSelect(mapID)
     "Minimum Level: "..AtlasLoot_MapData[mapID].MinLevel.."\n"..
     "Player Limit: "..AtlasLoot_MapData[mapID].PlayerLimit
     );
-    AtlasLootDefaultFrame_MapSelectButton:SetText(AtlasLoot_MapData[mapID].ZoneName[1]);
+    AtlasLootDefaultFrame_MapSelectButton:SetText(AtlasLoot_MapData[mapID][mapNum][1][1]);
 end
 
-function AtlasLoot:MapMenuClick(mapID)
+--called when you click on a map in the drop down menu
+function AtlasLoot:MapMenuClick(mapID, mapNum)
+    mapNum = mapNum or 1
     if AtlasLootDefaultFrame_Map:IsVisible() then
-        AtlasLoot:SubTableScrollFrameUpdate(mapID, "AtlasLoot_MapData");
+        AtlasLoot:SubTableScrollFrameUpdate(mapID, "AtlasLoot_MapData", mapNum);
+        lastMapNum = mapNum
     end
-    AtlasLoot:MapSelect(mapID);
-    AtlasLootDefaultFrame_MapSelectButton:SetText(AtlasLoot_MapData[mapID].ZoneName[1]);
+    AtlasLoot:MapSelect(mapID, mapNum);
+    AtlasLootDefaultFrame_MapSelectButton:SetText(AtlasLoot_MapData[mapID][mapNum][1][1]);
     ATLASLOOT_CURRENT_MAP = mapID;
 end
 
-function AtlasLoot:MapMenuOpen()
+--drop down map menu
+local lastMapLoaded
+function AtlasLoot:MapMenuOpen(self)
     local mapID = ATLASLOOT_CURRENT_MAP;
-    local frame = AtlasLootDefaultFrame_MapSelectButton;
-    if AtlasLoot_Dewdrop:IsOpen(frame) then AtlasLoot_Dewdrop:Close() return end
-	AtlasLoot_Dewdrop:Register(frame,
-        'point', function(parent)
-            return "TOP", "BOTTOM"
-        end,
-        'children', function(level, value)
-                for k,v in pairs(AtlasLoot_MultiMapData[mapID]) do
-                    AtlasLoot_Dewdrop:AddLine(
-                        'text', AtlasLoot_MapData[v].ZoneName[1],
-                        'func', function(arg1) AtlasLoot:MapMenuClick(arg1) end,
-                        'arg1', v,
-                        'textHeight', 12,
-                        'textWidth', 12,
-                        'notCheckable', true
-                    )
-                end
-                --Close button
-                AtlasLoot_Dewdrop:AddLine()
-                AtlasLoot_Dewdrop:AddLine(
-					'text', AL["Close Menu"],
-                    'textR', 0,
-                    'textG', 1,
-                    'textB', 1,
-                    'textHeight', 12,
-                    'textWidth', 12,
-					'func', function() AtlasLoot_Dewdrop:Close() end,
-					'notCheckable', true
-				)
-		end,
-		'dontHook', true
-	)
-    AtlasLoot_Dewdrop:Open(frame)
+    if AtlasLoot_Dewdrop:IsOpen(self) then AtlasLoot_Dewdrop:Close() return end
+    if lastMapLoaded ~= mapID then
+        AtlasLoot_Dewdrop:Register(self,
+            'point', function(parent)
+                return "TOP", "BOTTOM"
+            end,
+            'children', function(level, value)
+                    for i,v in ipairs(AtlasLoot_MapData[mapID]) do
+                        AtlasLoot_Dewdrop:AddLine(
+                            'text', v[1][1],
+                            'func', function() AtlasLoot:MapMenuClick(mapID, i) end,
+                            'textHeight', 12,
+                            'textWidth', 12,
+                            'closeWhenClicked', true,
+                            'notCheckable', true
+                        )
+                    end
+                    --Close button
+                    AtlasLoot:CloseDewDrop(true,35)
+            end,
+            'dontHook', true
+        )
+    end
+    AtlasLoot_Dewdrop:Open(self)
 end
 
-function AtlasLoot:LoadMapData()
-AtlasLoot_MultiMapData = {
-	["AuchManaTombs"] =		        {"AuchindounEnt","AuchManaTombs","AuchAuchenaiCrypts","AuchSethekkHalls","AuchShadowLabyrinth"};
-    ["AuchAuchenaiCrypts"] =		{"AuchindounEnt","AuchManaTombs","AuchAuchenaiCrypts","AuchSethekkHalls","AuchShadowLabyrinth"};
-	["AuchSethekkHalls"] =		    {"AuchindounEnt","AuchManaTombs","AuchAuchenaiCrypts","AuchSethekkHalls","AuchShadowLabyrinth"};
-	["AuchShadowLabyrinth"] =		{"AuchindounEnt","AuchManaTombs","AuchAuchenaiCrypts","AuchSethekkHalls","AuchShadowLabyrinth"};
-	["BlackfathomDeeps"] =	        {"BlackfathomDeepsEnt","BlackfathomDeeps"};
-	["BlackrockDepths"] =           {"BlackrockSpireEnt","BlackrockDepths"};
-    ["BlackrockSpireLower"] =       {"BlackrockSpireEnt","BlackrockSpireLower","BlackrockSpireUpper"};
-	["BlackrockSpireUpper"] =       {"BlackrockSpireEnt","BlackrockSpireLower","BlackrockSpireUpper"};
-	["BlackwingLair"] =             {"BlackrockSpireEnt","BlackwingLair",};
-    ["MoltenCore"] =                {"BlackrockSpireEnt","MoltenCore"};
-	["CFRTheSlavePens"] =	        {"CoilfangReservoirEnt","CFRTheSlavePens","CFRTheUnderbog","CFRTheSteamvault"};
-    ["CFRTheUnderbog"] =	        {"CoilfangReservoirEnt","CFRTheSlavePens","CFRTheUnderbog","CFRTheSteamvault"};
-    ["CFRTheSteamvault"] =	        {"CoilfangReservoirEnt","CFRTheSlavePens","CFRTheUnderbog","CFRTheSteamvault"};
-    ["CFRSerpentshrineCavern"] =    {"CoilfangReservoirEnt","CFRSerpentshrineCavern"};
-	["Gnomeregan"] =		        {"GnomereganEnt","Gnomeregan"};
-	["HCBloodFurnace"] =            {"HCEnt","HCBloodFurnace", "HCHellfireRamparts","HCTheShatteredHalls"};
-    ["HCHellfireRamparts"] =        {"HCEnt","HCBloodFurnace", "HCHellfireRamparts", "HCTheShatteredHalls"};
-	["HCTheShatteredHalls"] =       {"HCEnt","HCBloodFurnace", "HCHellfireRamparts", "HCTheShatteredHalls"};
-	["HCMagtheridonsLair"] =        {"HCEnt", "HCMagtheridonsLair"};
-	["Maraudon"] =			        {"MaraudonEnt","Maraudon"};
-	["TheDeadmines"] =		        {"TheDeadminesEnt","TheDeadmines"};
-	["TheSunkenTemple"] =	        {"TheSunkenTempleEnt","TheSunkenTemple"};
-	["Uldaman"] =			        {"UldamanEnt","Uldaman"};
-	["WailingCaverns"] =            {"WailingCavernsEnt","WailingCaverns"};
-	["DireMaulEast"] =		        {"DireMaulEnt","DireMaulNorth","DireMaulEast","DireMaulWest"};
-    ["DireMaulNorth"] =		        {"DireMaulEnt","DireMaulNorth","DireMaulEast","DireMaulWest"};
-    ["DireMaulWest"] =		        {"DireMaulEnt","DireMaulNorth","DireMaulEast","DireMaulWest"};
-	["CoTHyjal"] =			        {"CoTEnt","CoTHyjal"};
-    ["CoTBlackMorass"] =		    {"CoTEnt","CoTHyjal","CoTBlackMorass","CoTOldHillsbrad"};
-    ["CoTOldHillsbrad"] =		    {"CoTEnt","CoTHyjal","CoTBlackMorass","CoTOldHillsbrad"};
-    ["CoTOldStratholme"] =	        {"CoTEnt","CoTOldStratholme"};
-	["KarazhanStart"] =		        {"KarazhanEnt","KarazhanStart","KarazhanEnd"};
-	["SMArmory"] =			        {"SMEnt","SMArmory","SMLibrary","SMCathedral","SMGraveyard"};
-    ["SMLibrary"] =			        {"SMEnt","SMArmory","SMLibrary","SMCathedral","SMGraveyard"};
-    ["SMCathedral"] =	            {"SMEnt","SMArmory","SMLibrary","SMCathedral","SMGraveyard"};
-    ["SMGraveyard"] =	            {"SMEnt","SMArmory","SMLibrary","SMCathedral","SMGraveyard"};
-    ["BlackTempleStart"] =          {"BlackTempleStart","BlackTempleTop","BlackTempleBasement"};
-};
 
+
+--all the map data
 AtlasLoot_MapData = {
-
---************************************************
--- Instance Entrance Maps
---************************************************
-
-["AuchindounEnt"] = {
-    ZoneName = {AL["Entrance"], 3519};
-    Location = { BabbleZone["Terokkar Forest"], 3519 };
-    LevelRange = "63-70";
-    MinLevel = "55";
-    PlayerLimit = "5";
-    Acronym = AL["Auch"];
-    { BLUE.."A) "..BabbleZone["Auchenai Crypts"], ZONE, 3790 };
-    { BLUE.."B) "..BabbleZone["Mana-Tombs"], ZONE, 3792 };
-    { BLUE.."C) "..BabbleZone["Sethekk Halls"], ZONE, 3791 };
-    { BLUE.."D) "..BabbleZone["Shadow Labyrinth"], ZONE, 3789 };
-    { BLUE.."E) "..AL["Entrance"] };
-    { WHITE.."1) "..AL["Ha'Lei"], NPC, 19697 };
-    { WHITE..INDENT..AL["Greatfather Aldrimus"], NPC, 19698 };
-    { WHITE..INDENT..AL["Clarissa"], NPC, 19693 };
-    { WHITE..INDENT..AL["Ramdor the Mad"], NPC, 19417 };
-    { WHITE..INDENT..AL["Horvon the Armorer <Armorsmith>"], NPC, 19879 };
-    { WHITE.."2) "..AL["Nexus-Prince Haramad"], NPC, 19674 };
-    { WHITE..INDENT..AL["Artificer Morphalius"], NPC, 19670 };
-    { WHITE..INDENT..AL["Mamdy the \"Ologist\""], NPC, 19669 };
-    { WHITE..INDENT..AL["\"Slim\" <Shady Dealer>"], NPC, 19679 };
-    { WHITE..INDENT..AL["\"Captain\" Kaftiz"], NPC, 19676 };
-    { WHITE.."3) "..AL["Isfar"], NPC, 18933 };
-    { WHITE.."4) "..AL["Field Commander Mahfuun"], NPC, 19542 };
-    { WHITE..INDENT..AL["Spy Grik'tha"], NPC, 19496 };
-    { WHITE..INDENT..AL["Provisioner Tsaalt"], NPC, 19718 };
-    { WHITE..INDENT..AL["Dealer Tariq <Shady Dealer>"], NPC, 20986 };
-    { WHITE.."5) "..AL["Meeting Stone"] };
-};
-["BlackfathomDeepsEnt"] = {
-    ZoneName = {AL["Entrance"], 719 };
-    Location = { BabbleZone["Ashenvale"], 331 };
-    LevelRange = "20-28";
-    MinLevel = "19";
-    PlayerLimit = "5";
-    Acronym = AL["BFD"];
-    { BLUE.."A) "..AL["Entrance"] };
-    { BLUE.."B) "..BabbleZone["Blackfathom Deeps"], ZONE, 719 };
-};
-["BlackrockSpireEnt"] = {
-    ZoneName = { AL["Entrance"], 25 };
-    Location = { BabbleZone["Searing Gorge"].." / "..BabbleZone["Burning Steppes"], 51, 46 };
-    LevelRange = "54-60";
-    MinLevel = "45";
-    PlayerLimit = "5/10/40";
-    Acronym = AL["BRM"];
-    { BLUE.."A) "..BabbleZone["Searing Gorge"], ZONE, 51 };
-    { BLUE.."B) "..BabbleZone["Burning Steppes"], ZONE, 46 };
-    { BLUE.."C) "..BabbleZone["Blackrock Depths"].." ("..AL["BRD"]..")", ZONE, 1584 };
-    { BLUE..INDENT..BabbleZone["Molten Core"].." ("..AL["MC"]..")", ZONE, 2717 };
-    { BLUE.."D) "..BabbleZone["Blackrock Spire"].." ("..AL["Lower"]..", "..AL["LBRS"]..")", ZONE, 1583 };
-    { BLUE..INDENT..BabbleZone["Blackrock Spire"].." ("..AL["Upper"]..", "..AL["UBRS"]..")", ZONE, 1583 };
-    { BLUE..INDENT..BabbleZone["Blackwing Lair"].." ("..AL["BWL"]..")", ZONE, 2677 };
-    { BLUE..INDENT..AL["Bodley"].." ("..AL["Ghost"]..")", NPC, 16033 };
-    { WHITE.."1) "..AL["Overmaster Pyron"].." ("..AL["Wanders"]..")", NPC, 9026 };
-    { WHITE.."2) "..AL["Lothos Riftwaker"], NPC, 14387 };
-    { WHITE.."3) "..AL["Franclorn Forgewright"].." ("..AL["Ghost"]..")", NPC, 8888 };
-    { WHITE.."4) "..AL["Meeting Stone"].." ("..AL["BRD"]..")" };
-    { WHITE.."5) "..AL["Orb of Command"], OBJECT, 179879 };
-    { WHITE.."6) "..AL["Meeting Stone"].." ("..AL["LBRS"]..", "..AL["UBRS"]..")" };
-    { WHITE.."7) "..AL["Scarshield Quartermaster <Scarshield Legion>"], NPC, 9046 };
-};
-["CoilfangReservoirEnt"] = {
-    ZoneName = { AL["Entrance"], 3521};
-    Location = { BabbleZone["Zangarmarsh"], 3521 };
-    LevelRange = "61-70";
-    MinLevel = "55";
-    PlayerLimit = "5/25";
-    Acronym = AL["CR"];
-    { BLUE.."A) "..BabbleZone["The Slave Pens"], ZONE, 3717 };
-    { BLUE.."B) "..BabbleZone["The Steamvault"], ZONE, 3715 };
-    { BLUE.."C) "..BabbleZone["Serpentshrine Cavern"], ZONE, 3607 };
-    { BLUE.."D) "..BabbleZone["The Underbog"], ZONE, 3716 };
-    { BLUE.."E) "..AL["Entrance"].." ("..AL["Underwater"]..")" };
-    { WHITE.."1) "..AL["Watcher Jhang"], NPC, 17884 };
-    { WHITE..INDENT..AL["Meeting Stone"] };
-    { WHITE.."2) "..AL["Mortog Steamhead"], NPC, 23373 };
-};
-["CoTEnt"] = {
-    ZoneName = { AL["Entrance"], 440};
-    Location = { BabbleZone["Tanaris"], 440 };
-    LevelRange = "66-70";
-    MinLevel = "66";
-    PlayerLimit = "5/25";
-    Acronym = AL["CoT"];
-    { BLUE.."A) "..AL["Entrance"] };
-    { BLUE.."B) "..BabbleZone["Hyjal Summit"], ZONE, 3606 };
-    { BLUE.."C) "..BabbleZone["Old Hillsbrad Foothills"], ZONE, 2367 };
-    { BLUE.."D) "..BabbleZone["The Black Morass"], ZONE, 2366 };
-    { BLUE.."E) "..BabbleZone["The Culling of Stratholme"], ZONE, 4100 };
-    { WHITE.."1) "..AL["Steward of Time <Keepers of Time>"], NPC, 20142 };
-    { WHITE.."2) "..AL["Alexston Chrome <Tavern of Time>"], NPC, 18542 };
-    { WHITE.."3) "..BabbleZone["Graveyard"] };
-    { WHITE.."4) "..AL["Yarley <Armorer>"], NPC, 20082 };
-    { WHITE.."5) "..AL["Bortega <Reagents & Poison Supplies>"], NPC, 20081 };
-    { WHITE..INDENT..AL["Galgrom <Provisioner>"], NPC, 20080 };
-    { WHITE..INDENT..AL["Alurmi <Keepers of Time Quartermaster>"], NPC, 21643 };
-    { WHITE.."6) "..AL["Zaladormu"], NPC, 19934 };
-    { WHITE..INDENT..AL["Soridormi <The Scale of Sands>"].." ("..AL["Wanders"]..")", NPC, 19935 };
-    { WHITE..INDENT..AL["Arazmodu <The Scale of Sands>"].." ("..AL["Wanders"]..")", NPC, 19936 };
-    { WHITE.."7) "..AL["Moonwell"] };
-    { WHITE.."8) "..AL["Andormu <Keepers of Time>"].." ("..AL["Child"]..")", NPC, 19932 };
-    { WHITE..INDENT..AL["Nozari <Keepers of Time>"].." ("..AL["Child"]..")", NPC, 19933 };
-    { WHITE.."9) "..AL["Andormu <Keepers of Time>"].." ("..AL["Adult"]..")", NPC, 20130 };
-    { WHITE..INDENT..AL["Nozari <Keepers of Time>"].." ("..AL["Adult"]..")", NPC, 20131 };
-};
-["DireMaulEnt"] = {
-    ZoneName = { AL["Entrance"], 2557 };
-    Location = { BabbleZone["Feralas"], 357 };
-    LevelRange = "55-60";
-    MinLevel = "45";
-    PlayerLimit = "5";
-    Acronym = AL["DM"];
-    { BLUE.."A) "..AL["Entrance"] };
-    { BLUE.."B) "..BabbleZone["Dire Maul (East)"], ZONE, 2557 };
-    { BLUE.."C) "..BabbleZone["Dire Maul (North)"], ZONE, 2557 };
-    { BLUE.."D) "..BabbleZone["Dire Maul (West)"], ZONE, 2557 };
-    { WHITE.."1) "..AL["Dire Pool"] };
-    { WHITE.."2) "..AL["Dire Maul Arena"] };
-    { WHITE..INDENT..AL["Mushgog"].." ("..AL["Random"]..")", NPC, 11447 };
-    { WHITE..INDENT..AL["Skarr the Unbreakable"].." ("..AL["Random"]..")", NPC, 11498 };
-    { WHITE..INDENT..AL["The Razza"].." ("..AL["Random"]..")", NPC, 11497 };
-    { WHITE..INDENT..AL["Elder Mistwalker"].." ("..AL["Lunar Festival"]..")", NPC, 15587 };
-};
-["GnomereganEnt"] = {
-    ZoneName = { AL["Entrance"], 133 };
-    Location = { BabbleZone["Dun Morogh"], 1 };
-    LevelRange = "24-32";
-    MinLevel = "20";
-    PlayerLimit = "5";
-    Acronym = AL["Gnome"];
-    { BLUE.."A) "..AL["Entrance"] };
-    { BLUE..INDENT..AL["Meeting Stone"] };
-    { BLUE.."B) "..BabbleZone["Gnomeregan"].." ("..AL["Front"]..")", ZONE, 133 };
-    { BLUE.."C) "..BabbleZone["Gnomeregan"].." ("..AL["Back"]..")", ZONE, 133 };
-    { WHITE.."1) "..AL["Elevator"] };
-    { WHITE.."2) "..AL["Transpolyporter"] };
-    { WHITE..INDENT..AL["Sprok <Away Team>"], NPC, 8320 };
-    { WHITE.."3) "..AL["Matrix Punchograph 3005-A"], OBJECT, 142345 };
-    { WHITE..INDENT..AL["Namdo Bizzfizzle <Engineering Supplies>"], NPC, 2683 };
-    { WHITE.."4) "..AL["Techbot"], NPC, 6231 };
-};
-["HCEnt"] = {
-    ZoneName = { AL["Entrance"], 3545 };
-    Location = { BabbleZone["Hellfire Peninsula"], 3483 };
-    LevelRange = "59-70";
-    MinLevel = "55";
-    PlayerLimit = "5/25";
-    Acronym = AL["HC"];
-    { BLUE.."A) "..BabbleZone["Hellfire Ramparts"], ZONE, 3562 };
-    { BLUE.."B) "..BabbleZone["The Shattered Halls"], ZONE, 3714 };
-    { BLUE.."C) "..BabbleZone["The Blood Furnace"], ZONE, 3713 };
-    { BLUE.."D) "..BabbleZone["Magtheridon's Lair"], ZONE, 3836 };
-    { WHITE.."1) "..AL["Meeting Stone of Magtheridon's Lair"] };
-    { WHITE.."2) "..AL["Meeting Stone of Hellfire Citadel"] };
-    { GREN.."1') "..AL["Steps and path to the Blood Furnace"] };
-    { GREN.."2') "..AL["Path to the Hellfire Ramparts and Shattered Halls"] };
-};
-["KarazhanEnt"] = {
-    ZoneName = { AL["Entrance"], 2562 };
-    Location = { BabbleZone["Deadwind Pass"], 41 };
-    LevelRange = "70";
-    MinLevel = "68";
-    PlayerLimit = "10-25";
-    Acronym = AL["Kara"];
-    { BLUE.."A) "..BabbleZone["Karazhan"].." ("..AL["Front"]..")", ZONE, 2562 };
-    { BLUE.."B) "..BabbleZone["Karazhan"].." ("..AL["Back"]..")", ZONE, 2562 };
-    { BLUE.."C) "..AL["Meeting Stone"] };
-    { BLUE.."D) "..BabbleZone["Graveyard"] };
-    { WHITE.."1) "..AL["Archmage Leryda"], NPC, 18253 };
-    { WHITE.."2) "..AL["Apprentice Darius"], NPC, 18255 };
-    { WHITE.."3) "..AL["Archmage Alturus"], NPC, 17613 };
-    { WHITE.."4) "..AL["Stairs to Underground Pond"] };
-    { WHITE.."5) "..AL["Stairs to Underground Well"] };
-    { WHITE.."6) "..AL["Charred Bone Fragment"], OBJECT, 181963 };
-};
-["MaraudonEnt"] = {
-    ZoneName = { AL["Entrance"], 2100 };
-    Location = { BabbleZone["Desolace"], 405 };
-    LevelRange = "42-51";
-    MinLevel = "30";
-    PlayerLimit = "5";
-    Acronym = AL["Mara"];
-    { BLUE.."A) "..AL["Entrance"] };
-    { BLUE..INDENT..AL["The Nameless Prophet"], NPC, 13718 };
-    { BLUE.."B) "..BabbleZone["Maraudon"].." ("..AL["Purple"]..")", ZONE, 2100 };
-    { BLUE.."C) "..BabbleZone["Maraudon"].." ("..AL["Orange"]..")", ZONE, 2100 };
-    { BLUE.."D) "..BabbleZone["Maraudon"].." ("..AL["Portal"]..")", ZONE, 2100 };
-    { WHITE.."1) "..AL["Kolk <The First Kahn>"], NPC, 13742 };
-    { WHITE.."2) "..AL["Gelk <The Second Kahn>"], NPC, 13741 };
-    { WHITE.."3) "..AL["Magra <The Third Kahn>"], NPC, 13740 };
-    { WHITE.."4) "..AL["Cavindra"], NPC, 13697 };
-};
-["SMEnt"] = {
-    ZoneName = { AL["Entrance"], 796 };
-    Location = { BabbleZone["Tirisfal Glades"], 85 };
-    LevelRange = "28-42";
-    MinLevel = "20";
-    PlayerLimit = "5";
-    Acronym = AL["SM"];
-    { BLUE.."A) "..AL["Entrance"] };
-    { BLUE.."B) "..BabbleZone["Graveyard"], ZONE, 796 };
-    { BLUE.."C) "..BabbleZone["Cathedral"], ZONE, 796 };
-    { BLUE.."D) "..BabbleZone["Armory"], ZONE, 796 };
-    { BLUE.."E) "..BabbleZone["Library"], ZONE, 796 };
-};
-["TheDeadminesEnt"] = {
-    ZoneName = { AL["Entrance"], 1581 };
-    Location = { BabbleZone["Westfall"], 40 };
-    LevelRange = "16-22";
-    MinLevel = "10";
-    PlayerLimit = "5";
-    Acronym = AL["VC"];
-    { BLUE.."A) "..AL["Entrance"] };
-    { BLUE.."B) "..BabbleZone["The Deadmines"], ZONE, 1581 };
-    { WHITE.."1) "..AL["Marisa du'Paige"].." ("..AL["Varies"]..")", NPC, 599 };
-    { WHITE.."2) "..AL["Brainwashed Noble"].." ("..AL["Rare"]..")", NPC, 596 };
-    { WHITE.."3) "..AL["Foreman Thistlenettle"], NPC, 626 };
-};
-["TheSunkenTempleEnt"] = {
-    ZoneName = {AL["Entrance"], 1417 };
-    Location = { BabbleZone["Swamp of Sorrows"], 8 };
-    LevelRange = "46-53";
-    MinLevel = "35";
-    PlayerLimit = "5";
-    Acronym = AL["ST"];
-    { BLUE.."A) "..AL["Entrance"] };
-    { BLUE..INDENT..AL["Meeting Stone"] };
-    { BLUE..INDENT..AL["Jade"].." ("..AL["Rare"]..")", NPC, 1063 };
-    { BLUE.."B) "..BabbleZone["Sunken Temple"], ZONE, 1417 };
-    { WHITE.."1) "..AL["Kazkaz the Unholy"].." ("..AL["Upper"]..")", NPC, 5401 };
-    { WHITE.."2) "..AL["Veyzhak the Cannibal"], NPC, 5399 };
-    { WHITE.."3) "..AL["Zekkis"].." ("..AL["Rare"]..", "..AL["Lower"]..")", NPC, 5400 };
-};
-["UldamanEnt"] = {
-    ZoneName = { AL["Entrance"], 1337 };
-    Location = { BabbleZone["Badlands"], 3 };
-    LevelRange = "36-42";
-    MinLevel = "30";
-    PlayerLimit = "5";
-    Acronym = AL["Ulda"];
-    { BLUE.."A) "..AL["Entrance"] };
-    { BLUE.."B) "..BabbleZone["Uldaman"], ZONE, 1337 };
-    { WHITE.."1) "..AL["Hammertoe Grez"], NPC, 2909 };
-    { WHITE.."2) "..AL["Magregan Deepshadow"].." ("..AL["Wanders"]..")", NPC, 2932 };
-    { WHITE.."3) "..AL["Tablet of Ryun'Eh"], ITEM, 4631 };
-    { WHITE.."4) "..AL["Krom Stoutarm's Chest"], OBJECT, 124389 };
-    { WHITE.."5) "..AL["Garrett Family Chest"], OBJECT, 124388 };
-    { GREN.."1') "..AL["Digmaster Shovelphlange"].." ("..AL["Rare"]..", "..AL["Varies"]..")", NPC, 7057 };
-};
-["WailingCavernsEnt"] = {
-    ZoneName = { AL["Entrance"], 718 };
-    Location = { BabbleZone["The Barrens"], 17 };
-    LevelRange = "16-25";
-    MinLevel = "10";
-    PlayerLimit = "5";
-    Acronym = AL["WC"];
-    { BLUE.."A) "..AL["Entrance"] };
-    { BLUE.."B) "..BabbleZone["Wailing Caverns"], ZONE, 718 };
-    { WHITE.."1) "..AL["Mad Magglish"].." ("..AL["Varies"]..")", NPC, 3655 };
-    { WHITE.."2) "..AL["Trigore the Lasher"].." ("..AL["Rare"]..")", NPC, 3652 };
-    { WHITE.."3) "..AL["Boahn <Druid of the Fang>"].." ("..AL["Rare"]..")", NPC, 3672 };
-    { "" };
-    { ORNG..AL["Above the Entrance:"] };
-    { WHITE..INDENT..AL["Ebru <Disciple of Naralex>"], NPC, 5768 };
-    { WHITE..INDENT..AL["Nalpak <Disciple of Naralex>"], NPC, 5767 };
-    { WHITE..INDENT..AL["Kalldan Felmoon <Specialist Leatherworking Supplies>"], NPC, 5783 };
-    { WHITE..INDENT..AL["Waldor <Leatherworking Trainer>"], NPC, 5784 };
-};
-
 --************************************************
 -- Kalimdor Instances (Classic)
 --************************************************
@@ -445,92 +139,93 @@ AtlasLoot_MapData = {
     MinLevel = "19";
     PlayerLimit = "5";
     Acronym = AL["BFD"];
-    { BLUE.."A) "..AL["Entrance"] };
-    { WHITE.."1) "..AL["Ghamoo-ra"], NPC, 4887 };
-    { WHITE.."2) "..AL["Lorgalis Manuscript"], ITEM, 5359 };
-    { WHITE.."3) "..AL["Lady Sarevess"], NPC, 4831 };
-    { WHITE.."4) "..AL["Argent Guard Thaelrid <The Argent Dawn>"], NPC, 4787 };
-    { WHITE.."5) "..AL["Gelihast"], NPC, 6243 };
-    { WHITE..INDENT..AL["Shrine of Gelihast"] };
-    { WHITE.."6) "..AL["Lorgus Jett"].." ("..AL["Varies"]..")", NPC, 12902 };
-    { WHITE.."7) "..AL["Fathom Stone"], OBJECT, 177964 };
-    { WHITE..INDENT..AL["Baron Aquanis"], NPC, 12876 };
-    { WHITE.."8) "..AL["Twilight Lord Kelris"], NPC, 4832 };
-    { WHITE.."9) "..AL["Old Serra'kis"], NPC, 4830 };
-    { WHITE.."10) "..AL["Aku'mai"], NPC, 4829 };
-    { WHITE..INDENT..AL["Morridune"], NPC, 6729 };
-    { WHITE..INDENT..AL["Altar of the Deeps"] };
+    MapName = "BlackFathomDeeps";
+    [1] = {
+        { BabbleSubZone["The Pool of Ask'ar"]};
+        { WHITE.."1) "..AL["Ghamoo-ra"], NPC, 4887, cords = {32.9,59.9}};
+        { WHITE.."2) "..AL["Lorgalis Manuscript"], ITEM, 5359 };
+        { WHITE.."3) "..AL["Lady Sarevess"], NPC, 4831, cords = {10.1,36}};
+        { WHITE.."4) "..AL["Argent Guard Thaelrid <The Argent Dawn>"], NPC, 4787 };
+        { WHITE.."5) "..AL["Gelihast"], NPC, 6243, cords = {52.3,55.1} };
+        { WHITE..INDENT..AL["Shrine of Gelihast"] };
+    };
+    [2] = {
+        { BabbleSubZone["Moonshrine Sanctum"]};
+        { WHITE.."6) "..AL["Lorgus Jett"].." ("..AL["Varies"]..")", NPC, 12902, cords = {46,68.9} };
+        { WHITE.."7) "..AL["Fathom Stone"], OBJECT, 177964 };
+        { WHITE..INDENT..AL["Baron Aquanis"], NPC, 12876 };
+        { WHITE.."9) "..AL["Old Serra'kis"], NPC, 4830, cords = {53.4,69.4} };
+        { WHITE.."10) "..AL["Aku'mai"], NPC, 4829, cords = {81.7,84.5} };
+        { WHITE..INDENT..AL["Morridune"], NPC, 6729 };
+        { WHITE..INDENT..AL["Altar of the Deeps"] };
+    };
+    [3] = {
+        { BabbleSubZone["The Forgotten Pool"]};
+        { WHITE.."8) "..AL["Twilight Lord Kelris"], NPC, 4832, cords = {55.8,69.2} };
+    };
 };
-["DireMaulEast"] = {
-    ZoneName = { BabbleZone["Dire Maul (East)"], 2557 };
-    Location = { BabbleZone["Feralas"], 357 };
-    LevelRange = "55-58";
-    MinLevel = "45";
-    PlayerLimit = "5";
-    Acronym = AL["DM"];
-    { ORNG..AL["Key"]..": "..AL["Brazier of Invocation"].." ("..AL["DS2"]..")", ITEM, 22057 };
-    { BLUE.."A) "..AL["Entrance"] };
-    { BLUE.."B) "..AL["Entrance"] };
-    { BLUE.."C) "..AL["Entrance"] };
-    { BLUE.."D) "..AL["Exit"] };
-    { WHITE.."1) "..AL["Pusillin"].." ("..AL["Chase Begins"]..")", NPC, 14354 };
-    { WHITE.."2) "..AL["Pusillin"].." ("..AL["Chase Ends"]..")", NPC, 14354 };
-    { WHITE.."3) "..AL["Zevrim Thornhoof"], NPC, 11490 };
-    { WHITE..INDENT..AL["Hydrospawn"], NPC, 13280 };
-    { WHITE..INDENT..AL["Lethtendris"], NPC, 14327 };
-    { WHITE..INDENT..AL["Pimgib"], NPC, 14349 };
-    { WHITE.."4) "..AL["Old Ironbark"], NPC, 11491 };
-    { WHITE.."5) "..AL["Alzzin the Wildshaper"], NPC, 11492 };
-    { WHITE..INDENT..AL["Isalien"].." ("..AL["Summon"]..")", NPC, 16097 };
-};
-["DireMaulNorth"] = {
-    ZoneName = { BabbleZone["Dire Maul (North)"], 2557 };
+
+["DireMaul"] = {
+    ZoneName = { BabbleZone["Dire Maul"], 2557 };
     Location = { BabbleZone["Feralas"], 357 };
     LevelRange = "57-60";
     MinLevel = "45";
     PlayerLimit = "5";
     Acronym = AL["DM"];
-    { ORNG..AL["Key"]..": "..AL["Crescent Key"], ITEM, 18249 };
-    { BLUE.."A) "..AL["Entrance"] };
-    { BLUE.."B) "..BabbleZone["Library"] };
-    { WHITE.."1) "..AL["Guard Mol'dar"], NPC, 14326 };
-    { WHITE.."2) "..AL["Stomper Kreeg <The Drunk>"], NPC, 14322 };
-    { WHITE.."3) "..AL["Guard Fengus"], NPC, 14321 };
-    { WHITE.."4) "..AL["Knot Thimblejack"], NPC, 14338 };
-    { WHITE..INDENT..AL["Guard Slip'kik"], NPC, 14323 };
-    { WHITE.."5) "..AL["Captain Kromcrush"], NPC, 14325 };
-    { WHITE.."6) "..AL["King Gordok"], NPC, 11501 };
-    { WHITE..INDENT..AL["Cho'Rush the Observer"], NPC, 14324 };
-};
-["DireMaulWest"] = {
-    ZoneName = { BabbleZone["Dire Maul (West)"], 2557 };
-    Location = { BabbleZone["Feralas"], 357 };
-    LevelRange = "57-60";
-    MinLevel = "45";
-    PlayerLimit = "5";
-    Acronym = AL["DM"];
-    { ORNG..AL["Key"]..": "..AL["Crescent Key"], ITEM, 18249 };
-    { ORNG..AL["Key"]..": "..AL["J'eevee's Jar"].." ("..AL["Lord Hel'nurath"]..")", ITEM, 18663 };
-    { BLUE.."A) "..AL["Entrance"] };
-    { BLUE.."B) "..AL["Pylons"] };
-    { WHITE.."1) "..AL["Shen'dralar Ancient"], NPC, 14358 };
-    { WHITE.."2) "..AL["Tendris Warpwood"], NPC, 11489 };
-    { WHITE..INDENT..AL["Ancient Equine Spirit"], NPC, 14566 };
-    { WHITE.."3) "..AL["Illyanna Ravenoak"], NPC, 11488 };
-    { WHITE..INDENT..AL["Ferra"], NPC, 14308 };
-    { WHITE.."4) "..AL["Magister Kalendris"], NPC, 11487 };
-    { WHITE.."5) "..AL["Tsu'zee"].." ("..AL["Rare"]..")", NPC, 11467 };
-    { WHITE.."6) "..AL["Immol'thar"], NPC, 11496 };
-    { WHITE..INDENT..AL["Lord Hel'nurath"].." ("..AL["Summon"]..")", NPC, 14506 };
-    { WHITE.."7) "..AL["Prince Tortheldrin"], NPC, 11486 };
-    { GREN.."1') "..BabbleZone["Library"] };
-    { GREN..INDENT..AL["Falrin Treeshaper"], NPC, 16032 };
-    { GREN..INDENT..AL["Lorekeeper Lydros"], NPC, 14368 };
-    { GREN..INDENT..AL["Lorekeeper Javon"], NPC, 14381 };
-    { GREN..INDENT..AL["Lorekeeper Kildrath"], NPC, 14383 };
-    { GREN..INDENT..AL["Lorekeeper Mykos"], NPC, 14382 };
-    { GREN..INDENT..AL["Shen'dralar Provisioner"], NPC, 14371 };
-    { GREN..INDENT..AL["Skeletal Remains of Kariel Winthalus"], OBJECT, 179544 };
+    MapName = "DireMaul";
+    [1] = {
+        { AL["Gordok Commons"].." (North)" };
+        { BLUE.."B) "..BabbleZone["Library"].." "..AL["Entrance"] };
+        { WHITE.."1) "..AL["Guard Mol'dar"], NPC, 14326, cords = {69.9,76} };
+        { WHITE.."2) "..AL["Stomper Kreeg <The Drunk>"], NPC, 14322, cords = {} };
+        { WHITE.."3) "..AL["Guard Fengus"], NPC, 14321, cords = {42.9,77.6} };
+        { WHITE.."4) "..AL["Knot Thimblejack"], NPC, 14338 };
+        { WHITE..INDENT..AL["Guard Slip'kik"], NPC, 14323, cords = {26.5,57.8} };
+        { WHITE.."5) "..AL["Captain Kromcrush"], NPC, 14325, cords = {31.8,51.4} };
+        { WHITE.."6) "..AL["King Gordok"], NPC, 11501, cords = {32,27.7} };
+        { WHITE..INDENT..AL["Cho'Rush the Observer"], NPC, 14324, cords = {31.4,26.2} };
+    };
+    [2] = {
+        { BabbleSubZone["Capital Gardens"].." (West)" };
+        { BLUE.."B) "..AL["Pylons"] };
+    };
+    [3] = {
+        { BabbleSubZone["Court of the Highborne"].." (West)" };
+        { WHITE.."1) "..AL["Shen'dralar Ancient"], NPC, 14358 };
+        { WHITE.."2) "..AL["Tendris Warpwood"], NPC, 11489, cords = {49.4,49.5} };
+    };
+    [4] = {
+        { BabbleSubZone["Prison of Immol'thar"].." (West)" };
+        { WHITE..INDENT..AL["Ancient Equine Spirit"], NPC, 14566 };
+        { WHITE.."3) "..AL["Illyanna Ravenoak"], NPC, 11488, cords = {36.2,57.4} };
+        { WHITE..INDENT..AL["Ferra"], NPC, 14308 };
+        { WHITE.."4) "..AL["Magister Kalendris"], NPC, 11487, cords = {66.1,47.3} };
+        { WHITE.."5) "..AL["Tsu'zee"].." ("..AL["Rare"]..")", NPC, 11467, cords = {68.3,23.9} };
+        { WHITE.."6) "..AL["Immol'thar"], NPC, 11496, cords = {35.2,58.1} };
+        { WHITE..INDENT..AL["Lord Hel'nurath"].." ("..AL["Summon"]..")", NPC, 14506, cords = {14.9,57.7} };
+        { WHITE.."7) "..AL["Prince Tortheldrin"], NPC, 11486, cords = {61.4,15.1} };
+        { GREN.."1') "..BabbleZone["Library"] };
+        { GREN..INDENT..AL["Falrin Treeshaper"], NPC, 16032 };
+        { GREN..INDENT..AL["Lorekeeper Lydros"], NPC, 14368 };
+        { GREN..INDENT..AL["Lorekeeper Javon"], NPC, 14381 };
+        { GREN..INDENT..AL["Lorekeeper Kildrath"], NPC, 14383 };
+        { GREN..INDENT..AL["Lorekeeper Mykos"], NPC, 14382 };
+        { GREN..INDENT..AL["Shen'dralar Provisioner"], NPC, 14371 };
+        { GREN..INDENT..AL["Skeletal Remains of Kariel Winthalus"], OBJECT, 179544 };
+    };
+    [5] = {
+        { BabbleSubZone["Warpwood Quarter"].." (East)" };
+        { WHITE.."3) "..AL["Zevrim Thornhoof"], NPC, 11490 };
+        { WHITE..INDENT..AL["Hydrospawn"], NPC, 13280, cords = {41,49.2} };
+        { WHITE..INDENT..AL["Lethtendris"], NPC, 14327, cords = {44.5,46.6} };
+        { WHITE..INDENT..AL["Pimgib"], NPC, 14349 };
+    };
+    [6] = {
+        { BabbleSubZone["The Shrine of Eldretharr"].." (East)" };
+        { WHITE.."4) "..AL["Old Ironbark"], NPC, 11491 };
+        { WHITE.."5) "..AL["Alzzin the Wildshaper"], NPC, 11492, cords = {57.3,28.9} };
+        { WHITE..INDENT..AL["Isalien"].." ("..AL["Summon"]..")", NPC, 16097 };
+    };
 };
 ["Maraudon"] = {
     ZoneName = { BabbleZone["Maraudon"], 2100 };
@@ -539,6 +234,8 @@ AtlasLoot_MapData = {
     MinLevel = "30";
     PlayerLimit = "5";
     Acronym = AL["Mara"];
+    MapName = "Maraudon";
+    [1] = {
     { BLUE.."A) "..AL["Entrance"].." ("..AL["Orange"]..")" };
     { BLUE.."B) "..AL["Entrance"].." ("..AL["Purple"]..")" };
     { BLUE.."C) "..AL["Entrance"].." ("..AL["Portal"]..")" };
@@ -554,6 +251,7 @@ AtlasLoot_MapData = {
     { WHITE.."10) "..AL["Rotgrip"], NPC, 13596 };
     { WHITE.."11) "..AL["Princess Theradras"], NPC, 12201 };
     { WHITE.."12) "..AL["Elder Splitrock"].." ("..AL["Lunar Festival"]..")", NPC, 15556 };
+    };
 };
 ["RagefireChasm"] = {
     ZoneName = { BabbleZone["Ragefire Chasm"], 2437 };
@@ -562,6 +260,8 @@ AtlasLoot_MapData = {
     MinLevel = "8";
     PlayerLimit = "5";
     Acronym = AL["RFC"];
+    MapName = "RagefireChasm";
+    [1] = {
     { BLUE.."A) "..AL["Entrance"] };
     { WHITE.."1) "..AL["Maur Grimtotem"], NPC, 11834 };
     { WHITE..INDENT..AL["Oggleflint <Ragefire Chieftain>"], NPC, 11517 };
@@ -569,6 +269,7 @@ AtlasLoot_MapData = {
     { WHITE.."3) "..AL["Jergosh the Invoker"], NPC, 11518 };
     { WHITE..INDENT..AL["Zelemar the Wrathful"].." ("..AL["Summon"]..")", NPC, 17830 };
     { WHITE.."4) "..AL["Bazzalan"], NPC, 11519 };
+    };
 };
 ["RazorfenDowns"] = {
     ZoneName = { BabbleZone["Razorfen Downs"], 722 };
@@ -577,6 +278,8 @@ AtlasLoot_MapData = {
     MinLevel = "25";
     PlayerLimit = "5";
     Acronym = AL["RFD"];
+    MapName = "RazorfenDowns";
+    [1] = {
     { BLUE.."A) "..AL["Entrance"] };
     { WHITE.."1) "..AL["Tuten'kash"], NPC, 7355 };
     { WHITE.."2) "..AL["Henry Stern"], NPC, 8696 };
@@ -587,6 +290,7 @@ AtlasLoot_MapData = {
     { WHITE.."5) "..AL["Ragglesnout"].." ("..AL["Rare"]..", "..AL["Varies"]..")", NPC, 7354 };
     { WHITE.."6) "..AL["Amnennar the Coldbringer"], NPC, 7358 };
     { WHITE.."7) "..AL["Plaguemaw the Rotting"], NPC, 7356 };
+    };
 };
 ["RazorfenKraul"] = {
     ZoneName = { BabbleZone["Razorfen Kraul"], 491 };
@@ -595,6 +299,8 @@ AtlasLoot_MapData = {
     MinLevel = "17";
     PlayerLimit = "5";
     Acronym = AL["RFK"];
+    MapName = "RazorfenKraul";
+    [1] = {
     { BLUE.."A) "..AL["Entrance"] };
     { WHITE.."1) "..AL["Roogug"], NPC, 6168 };
     { WHITE.."2) "..AL["Aggem Thorncurse <Death's Head Prophet>"], NPC, 4424 };
@@ -607,6 +313,7 @@ AtlasLoot_MapData = {
     { WHITE.."8) "..AL["Willix the Importer"], NPC, 4508 };
     { WHITE..INDENT..AL["Heralath Fallowbrook"], NPC, 4510 };
     { WHITE.."9) "..AL["Earthcaller Halmgar"].." ("..AL["Rare"]..")", NPC, 4842 };
+    };
 };
 ["TheRuinsofAhnQiraj"] = {
     ZoneName = { BabbleZone["Ruins of Ahn'Qiraj"], 3429 };
@@ -615,6 +322,8 @@ AtlasLoot_MapData = {
     MinLevel = "50";
     PlayerLimit = "20";
     Acronym = AL["AQ20"];
+    MapName = "RuinsofAhnQiraj";
+    [1] = {
     { ORNG..AL["Reputation"]..": "..AL["Cenarion Circle"], FACTION, 609 };
     { BLUE.."A) "..AL["Entrance"] };
     { WHITE.."1) "..AL["Kurinnaxx"], NPC, 15348 };
@@ -633,6 +342,7 @@ AtlasLoot_MapData = {
     { WHITE.."5) "..AL["Ayamiss the Hunter"].." ("..AL["Optional"]..")", NPC, 15369 };
     { WHITE.."6) "..AL["Ossirian the Unscarred"], NPC, 15339 };
     { GREN.."1') "..AL["Safe Room"] };
+    };
 };
 ["TheTempleofAhnQiraj"] = {
     ZoneName = { BabbleZone["Temple of Ahn'Qiraj"], 3428 };
@@ -641,6 +351,8 @@ AtlasLoot_MapData = {
     MinLevel = "50";
     PlayerLimit = "10-25";
     Acronym = AL["AQ40"];
+    MapName = "AhnQiraj";
+    [1] = {
     { ORNG..AL["Reputation"]..": "..AL["Brood of Nozdormu"], FACTION, 910 };
     { BLUE.."A) "..AL["Entrance"] };
     { WHITE.."1) "..AL["The Prophet Skeram"].." ("..AL["Outside"]..")", NPC, 15263 };
@@ -664,6 +376,7 @@ AtlasLoot_MapData = {
     { GREN.."2') "..AL["Arygos"], NPC, 15380 };
     { GREN..INDENT..AL["Caelestrasz"], NPC, 15379 };
     { GREN..INDENT..AL["Merithra of the Dream"], NPC, 15378 };
+    };
 };
 ["WailingCaverns"] = {
     ZoneName = { BabbleZone["Wailing Caverns"], 718 };
@@ -672,6 +385,8 @@ AtlasLoot_MapData = {
     MinLevel = "10";
     PlayerLimit = "5";
     Acronym = AL["WC"];
+    MapName = "WailingCaverns";
+    [1] = {
     { BLUE.."A) "..AL["Entrance"] };
     { WHITE.."1) "..AL["Disciple of Naralex"], NPC, 3678 };
     { WHITE.."2) "..AL["Lord Cobrahn <Fanglord>"], NPC, 3669 };
@@ -684,6 +399,7 @@ AtlasLoot_MapData = {
     { WHITE.."9) "..AL["Mutanus the Devourer"], NPC, 3654 };
     { WHITE..INDENT..AL["Naralex"], NPC, 3679 };
     { WHITE.."10) "..AL["Deviate Faerie Dragon"].." ("..AL["Rare"]..")", NPC, 5912 };
+    };
 };
 ["ZulFarrak"] = {
     ZoneName = { BabbleZone["Zul'Farrak"], 978 };
@@ -692,6 +408,8 @@ AtlasLoot_MapData = {
     MinLevel = "35";
     PlayerLimit = "5";
     Acronym = AL["ZF"];
+    MapName = "ZulFarrak";
+    [1] = {
     { BLUE.."A) "..AL["Entrance"] };
     { WHITE.."1) "..AL["Antu'sul <Overseer of Sul>"], NPC, 8127 };
     { WHITE.."2) "..AL["Theka the Martyr"], NPC, 7272 };
@@ -713,6 +431,7 @@ AtlasLoot_MapData = {
     { WHITE..INDENT..AL["Ruuzlu"], NPC, 7797 };
     { WHITE.."8) "..AL["Zerillis"].." ("..AL["Rare"]..", "..AL["Wanders"]..")", NPC, 10082 };
     { WHITE.."9) "..AL["Sandarr Dunereaver"].." ("..AL["Rare"]..")", NPC, 10080 };
+    };
 };
 
 --************************************************
@@ -726,6 +445,8 @@ AtlasLoot_MapData = {
     MinLevel = "10-25";
     PlayerLimit = "5";
     Acronym = AL["BRD"];
+    MapName = "BlackrockDepths";
+    [1] = {
     { ORNG..AL["Key"]..": "..AL["Shadowforge Key"], ITEM, 11000 };
     { ORNG..AL["Key"]..": "..AL["Prison Cell Key"].." ("..AL["Jail Break!"]..")", ITEM, 11140 };
     { ORNG..AL["Key"]..": "..AL["Banner of Provocation"].." ("..AL["Theldren"]..")", ITEM, 21986 };
@@ -790,6 +511,7 @@ AtlasLoot_MapData = {
     { WHITE..INDENT..AL["Core Fragment"], OBJECT, 179553 };
     { WHITE.."24) "..AL["Overmaster Pyron"], NPC, 9026 };
     { WHITE.."25) "..AL["Blacksmithing Plans"], OBJECT, 173232 };
+    };
 };
 ["BlackrockSpireLower"] = {
     ZoneName = { BabbleZone["Blackrock Spire"].." ("..AL["Lower"]..")", 1583 };
@@ -798,6 +520,8 @@ AtlasLoot_MapData = {
     MinLevel = "45";
     PlayerLimit = "5";
     Acronym = AL["LBRS"];
+    MapName = "BlackrockSpire";
+    [1] = {
     { ORNG..AL["Key"]..": "..AL["Brazier of Invocation"].." ("..AL["DS2"]..")", ITEM, 22057 };
     { BLUE.."A) "..AL["Entrance"] };
     { BLUE.."B) "..BabbleZone["Blackrock Spire"].." ("..AL["Upper"]..")", ZONE, 1583 };
@@ -830,14 +554,8 @@ AtlasLoot_MapData = {
     { WHITE.."18) "..AL["Ghok Bashguud <Bloodaxe Champion>"].." ("..AL["Rare"]..")", NPC, 9718 };
     { WHITE.."19) "..AL["Overlord Wyrmthalak"], NPC, 9568 };
     { GREN.."1') "..AL["Burning Felguard"].." ("..AL["Rare"]..", "..AL["Summon"]..")", NPC, 10263 };
-};
-["BlackrockSpireUpper"] = {
-    ZoneName = { BabbleZone["Blackrock Spire"].." ("..AL["Upper"]..")", 1583 };
-    Location = { BabbleZone["Searing Gorge"].." / "..BabbleZone["Burning Steppes"], 51, 46 };
-    LevelRange = "56-61";
-    MinLevel = "45";
-    PlayerLimit = "5";
-    Acronym = AL["UBRS"];
+    };
+    [2] = {
     { ORNG..AL["Key"]..": "..AL["Brazier of Invocation"].." ("..AL["DS2"]..")", ITEM, 22057 };
     { BLUE.."A) "..AL["Entrance"] };
     { BLUE.."B) "..BabbleZone["Blackrock Spire"].." ("..AL["Lower"]..")", ZONE, 1583 };
@@ -858,6 +576,7 @@ AtlasLoot_MapData = {
     { WHITE.."9) "..AL["General Drakkisath"], NPC, 10363 };
     { WHITE..INDENT..AL["Drakkisath's Brand"], OBJECT, 179880 };
     { WHITE.."10) "..BabbleZone["Blackwing Lair"], ZONE, 2677 };
+    };
 };
 ["BlackwingLair"] = {
     ZoneName = { BabbleZone["Blackwing Lair"], 2677 };
@@ -866,6 +585,8 @@ AtlasLoot_MapData = {
     MinLevel = "60";
     PlayerLimit = "10-25";
     Acronym = AL["BWL"];
+    MapName = "BlackwingLair";
+    [1] = {
     { ORNG..AL["Attunement Required"] };
     { BLUE.."A) "..AL["Entrance"] };
     { BLUE.."B) "..AL["Connection"] };
@@ -880,6 +601,7 @@ AtlasLoot_MapData = {
     { WHITE.."8) "..AL["Flamegor"], NPC, 11981 };
     { WHITE.."9) "..AL["Chromaggus"], NPC, 14020 };
     { WHITE.."10) "..AL["Nefarian"], NPC, 11583 };
+    };
 };
 ["Gnomeregan"] = {
     ZoneName = { BabbleZone["Gnomeregan"], 133 };
@@ -888,6 +610,8 @@ AtlasLoot_MapData = {
     MinLevel = "20";
     PlayerLimit = "5";
     Acronym = AL["Gnome"];
+    MapName = "Gnomeregan";
+    [1] = {
     { ORNG..AL["Key"]..": "..AL["Workshop Key"].." ("..AL["Back"]..")", ITEM, 6893 };
     { BLUE.."A) "..AL["Entrance"].." ("..AL["Front"]..")" };
     { BLUE.."B) "..AL["Entrance"].." ("..AL["Back"]..")" };
@@ -908,6 +632,7 @@ AtlasLoot_MapData = {
     { WHITE..INDENT..AL["Matrix Punchograph 3005-D"], OBJECT, 142696 };
     { WHITE.."7) "..AL["Dark Iron Ambassador"], NPC, 6228 };
     { WHITE.."8) "..AL["Mekgineer Thermaplugg"], NPC, 7800 };
+    };
 };
 ["MoltenCore"] = {
     ZoneName = { BabbleZone["Molten Core"], 2717 };
@@ -916,6 +641,8 @@ AtlasLoot_MapData = {
     MinLevel = "50";
     PlayerLimit = "10-25";
     Acronym = AL["MC"];
+    MapName = "MoltenCore";
+    [1] = {
     { ORNG..AL["Attunement Required"] };
     { ORNG..AL["Reputation"]..": "..AL["Hydraxian Waterlords"], FACTION, 749 };
     { BLUE.."A) "..AL["Entrance"] };
@@ -929,6 +656,7 @@ AtlasLoot_MapData = {
     { WHITE.."8) "..AL["Sulfuron Harbinger"], NPC, 12098 };
     { WHITE.."9) "..AL["Majordomo Executus"], NPC, 12018 };
     { WHITE.."10) "..AL["Ragnaros"], NPC, 11502 };
+    };
 };
 ["Scholomance"] = {
     ZoneName = { BabbleZone["Scholomance"], 2057 };
@@ -937,6 +665,8 @@ AtlasLoot_MapData = {
     MinLevel = "45";
     PlayerLimit = "5";
     Acronym = AL["Scholo"];
+    MapName = "Scholomance";
+    [1] = {
     { ORNG..AL["Reputation"]..": "..AL["Argent Dawn"], FACTION, 529 };
     { ORNG..AL["Key"]..": "..AL["Skeleton Key"], ITEM, 13704 };
     { ORNG..AL["Key"]..": "..AL["Viewing Room Key"].." ("..AL["Viewing Room"]..")", ITEM, 13873 };
@@ -969,6 +699,7 @@ AtlasLoot_MapData = {
     { GREN.."1') "..AL["Torch Lever"] };
     { GREN.."2') "..AL["Secret Chest"] };
     { GREN.."3') "..AL["Alchemy Lab"] };
+    };
 };
 ["ShadowfangKeep"] = {
     ZoneName = { BabbleZone["Shadowfang Keep"], 209 };
@@ -977,6 +708,8 @@ AtlasLoot_MapData = {
     MinLevel = "10";
     PlayerLimit = "5";
     Acronym = AL["SFK"];
+    MapName = "ShadowfangKeep";
+    [1] = {
     { BLUE.."A) "..AL["Entrance"] };
     { WHITE.."1) "..AL["Rethilgore <The Cell Keeper>"], NPC, 3914 };
     { WHITE..INDENT..AL["Sorcerer Ashcrombe"], NPC, 3850 };
@@ -1001,38 +734,29 @@ AtlasLoot_MapData = {
     { WHITE..INDENT..AL["The Book of Ur"], OBJECT, 36738 };
     { WHITE.."12) "..AL["Wolf Master Nandos"], NPC, 3927 };
     { WHITE.."13) "..AL["Archmage Arugal"], NPC, 4275 };
+    };
 };
-["SMArmory"] = {
+["ScarletMonastery"] = {
     ZoneName = { BabbleZone["Armory"], 796 };
     Location = { BabbleZone["Tirisfal Glades"], 85 };
     LevelRange = "33-40";
     MinLevel = "20";
     PlayerLimit = "5";
     Acronym = AL["Armory"];
+    MapName = "ScarletMonastery";
+    [1] = {
     { ORNG..AL["Key"]..": "..AL["The Scarlet Key"], ITEM, 7146 };
     { BLUE.."A) "..AL["Entrance"] };
     { WHITE.."1) "..AL["Herod <The Scarlet Champion>"], NPC, 3975 };
-};
-["SMCathedral"] = {
-    ZoneName = { BabbleZone["Cathedral"], 796 };
-    Location = { BabbleZone["Tirisfal Glades"], 85 };
-    LevelRange = "36-42";
-    MinLevel = "20";
-    PlayerLimit = "5";
-    Acronym = AL["Cath"];
+    };
+    [2] = {
     { ORNG..AL["Key"]..": "..AL["The Scarlet Key"], ITEM, 7146 };
     { BLUE.."A) "..AL["Entrance"] };
     { WHITE.."1) "..AL["High Inquisitor Fairbanks"], NPC, 4542 };
     { WHITE.."2) "..AL["Scarlet Commander Mograine"], NPC, 3976 };
     { WHITE..INDENT..AL["High Inquisitor Whitemane"], NPC, 3977 };
-};
-["SMGraveyard"] = {
-    ZoneName = { BabbleZone["Graveyard"], 796 };
-    Location = { BabbleZone["Tirisfal Glades"], 85 };
-    LevelRange = "28-35";
-    MinLevel = "20";
-    PlayerLimit = "5";
-    Acronym = AL["GY"];
+    };
+    [3] = {
     { BLUE.."A) "..AL["Entrance"] };
     { WHITE.."1) "..AL["Interrogator Vishas"], NPC, 3983 };
     { WHITE..INDENT..AL["Vorrel Sengutz"], NPC, 3981 };
@@ -1042,17 +766,12 @@ AtlasLoot_MapData = {
     { GREN.."1') "..AL["Ironspine"].." ("..AL["Rare"]..")", NPC, 6489 };
     { GREN..INDENT..AL["Azshir the Sleepless"].." ("..AL["Rare"]..")", NPC, 6490 };
     { GREN..INDENT..AL["Fallen Champion"].." ("..AL["Rare"]..")", NPC, 6488 };
-};
-["SMLibrary"] = {
-    ZoneName = { BabbleZone["Library"], 796 };
-    Location = { BabbleZone["Tirisfal Glades"], 85 };
-    LevelRange = "31-37";
-    MinLevel = "20";
-    PlayerLimit = "5";
-    Acronym = AL["Lib"];
+    };
+    [4] = {
     { BLUE.."A) "..AL["Entrance"] };
     { WHITE.."1) "..AL["Houndmaster Loksey"], NPC, 3974 };
     { WHITE.."2) "..AL["Arcanist Doan"], NPC, 6487 };
+    };
 };
 ["Stratholme"] = {
     ZoneName = { BabbleZone["Stratholme"], 2017 };
@@ -1061,6 +780,8 @@ AtlasLoot_MapData = {
     MinLevel = "45";
     PlayerLimit = "5";
     Acronym = AL["Strat"];
+    MapName = "Stratholme";
+    [1] = {
     { ORNG..AL["Reputation"]..": "..AL["Argent Dawn"], FACTION, 529 };
     { ORNG..AL["Key"]..": "..AL["The Scarlet Key"].." ("..AL["Living Side"]..")", ITEM, 7146 };
     { ORNG..AL["Key"]..": "..AL["Key to the City"].." ("..AL["Undead Side"]..")", ITEM, 12382 };
@@ -1104,6 +825,7 @@ AtlasLoot_MapData = {
     { GREN.."5') "..AL["King's Square Postbox"] };
     { GREN.."6') "..AL["Fras Siabi's Postbox"] };
     { GREN..AL["3rd Box Opened"]..": "..AL["Postmaster Malown"], NPC, 11143 };
+    };
 };
 ["TheDeadmines"] = {
     ZoneName = { BabbleZone["The Deadmines"], 1581 };
@@ -1112,6 +834,8 @@ AtlasLoot_MapData = {
     MinLevel = "10";
     PlayerLimit = "5";
     Acronym = AL["VC"];
+    MapName = "TheDeadmines";
+    [1] = {
     { BLUE.."A) "..AL["Entrance"] };
     { BLUE.."B) "..AL["Exit"] };
     { WHITE.."1) "..AL["Rhahk'Zor <The Foreman>"], NPC, 644 };
@@ -1124,6 +848,7 @@ AtlasLoot_MapData = {
     { WHITE..INDENT..AL["Edwin VanCleef <Defias Kingpin>"], NPC, 639 };
     { WHITE..INDENT..AL["Mr. Smite <The Ship's First Mate>"], NPC, 646 };
     { WHITE..INDENT..AL["Cookie <The Ship's Cook>"], NPC, 645 };
+    };
 };
 ["TheStockade"] = {
     ZoneName = { BabbleZone["The Stockade"], 717 };
@@ -1132,6 +857,8 @@ AtlasLoot_MapData = {
     MinLevel = "15";
     PlayerLimit = "5";
     Acronym = AL["Stocks"];
+    MapName = "TheStockade";
+    [1] = {
     { BLUE.."A) "..AL["Entrance"] };
     { WHITE.."1) "..AL["Targorr the Dread"].." ("..AL["Varies"]..")", NPC, 1696 };
     { WHITE.."2) "..AL["Kam Deepfury"], NPC, 1666 };
@@ -1139,6 +866,7 @@ AtlasLoot_MapData = {
     { WHITE.."4) "..AL["Bazil Thredd"], NPC, 1716 };
     { WHITE.."5) "..AL["Dextren Ward"], NPC, 1663 };
     { WHITE.."6) "..AL["Bruegal Ironknuckle"].." ("..AL["Rare"]..")", NPC, 1720 };
+    };
 };
 ["TheSunkenTemple"] = {
     ZoneName = { BabbleZone["Sunken Temple"], 1417 };
@@ -1147,6 +875,8 @@ AtlasLoot_MapData = {
     MinLevel = "35";
     PlayerLimit = "5";
     Acronym = AL["ST"];
+    MapName = "TheTempleOfAtalHakkar";
+    [1] = {
     { ORNG..AL["AKA"]..": "..BabbleZone["The Temple of Atal'Hakkar"] };
     { ORNG..AL["Key"]..": "..AL["Yeh'kinya's Scroll"].." ("..AL["Avatar of Hakkar"]..")", ITEM, 10818 };
     { BLUE.."A) "..AL["Entrance"] };
@@ -1172,6 +902,7 @@ AtlasLoot_MapData = {
     { GREN..INDENT..AL["Zolo"], NPC, 5712 };
     { GREN..INDENT..AL["Mijan"], NPC, 5717 };
     { GREN..INDENT..AL["Zul'Lor"], NPC, 5716 };
+    };
 };
 ["Uldaman"] = {
     ZoneName = { BabbleZone["Uldaman"], 1337 };
@@ -1180,6 +911,8 @@ AtlasLoot_MapData = {
     MinLevel = "30";
     PlayerLimit = "5";
     Acronym = AL["Ulda"];
+    MapName = "Uldaman";
+    [1] = {
     { ORNG..AL["Key"]..": "..AL["Staff of Prehistoria"].." ("..AL["Ironaya"]..")", ITEM, 7733 };
     { BLUE.."A) "..AL["Entrance"].." ("..AL["Front"]..")" };
     { BLUE.."B) "..AL["Entrance"].." ("..AL["Back"]..")" };
@@ -1201,6 +934,7 @@ AtlasLoot_MapData = {
     { WHITE.."10) "..AL["Archaedas <Ancient Stone Watcher>"].." ("..AL["Lower"]..")", NPC, 2748 };
     { WHITE.."11) "..AL["The Discs of Norgannon"].." ("..AL["Lower"]..")", OBJECT, 131474 };
     { WHITE..INDENT..AL["Ancient Treasure"].." ("..AL["Lower"]..")", OBJECT, 141979 };
+    };
 };
 ["ZulGurub"] = {
     ZoneName = { BabbleZone["Zul'Gurub"], 19 };
@@ -1209,6 +943,8 @@ AtlasLoot_MapData = {
     MinLevel = "50";
     PlayerLimit = "20";
     Acronym = AL["ZG"];
+    MapName = "ZulGurub";
+    [1] = {
     { ORNG..AL["Reputation"]..": "..AL["Zandalar Tribe"], FACTION, 270 };
     { ORNG..AL["Key"]..": "..AL["Mudskunk Lure"].." ("..AL["Gahz'ranka"]..")", ITEM, 19974 };
     { ORNG..AL["Key"]..": "..AL["Gurubashi Mojo Madness"].." ("..AL["Edge of Madness"]..")", ITEM, 19931 };
@@ -1232,6 +968,7 @@ AtlasLoot_MapData = {
     { WHITE.."10) "..AL["Jin'do the Hexxer"].." ("..AL["Undead"]..", "..AL["Optional"]..")", NPC, 11380 };
     { WHITE.."11) "..AL["Hakkar"], NPC, 14834 };
     { GREN.."1') "..AL["Muddy Churning Waters"] };
+    };
 };
 
 --************************************************
@@ -1245,6 +982,8 @@ AtlasLoot_MapData = {
     MinLevel = "55";
     PlayerLimit = "5";
     Acronym = AL["AC"];
+    MapName = "AuchenaiCrypts";
+    [1] = {
     { ORNG..AL["Reputation"]..": "..AL["Lower City"], FACTION, 1011 };
     { ORNG..AL["Key"]..": "..AL["Auchenai Key"].." ("..AL["Heroic"]..")", ITEM, 30633 };
     { BLUE.."A) "..AL["Entrance"] };
@@ -1252,6 +991,7 @@ AtlasLoot_MapData = {
     { WHITE.."2) "..AL["Exarch Maladaar"], NPC, 18373 };
     { WHITE..INDENT..AL["Avatar of the Martyred"], NPC, 18478 };
     { WHITE..INDENT..AL["D'ore"], NPC, 19412 };
+    };
 };
 ["AuchManaTombs"] = {
     ZoneName = { BabbleZone["Mana-Tombs"], 3792 };
@@ -1260,6 +1000,8 @@ AtlasLoot_MapData = {
     MinLevel = "55";
     PlayerLimit = "5";
     Acronym = AL["MT"];
+    MapName = "ManaTombs";
+    [1] = {
     { ORNG..AL["Reputation"]..": "..AL["The Consortium"], FACTION, 933 };
     { ORNG..AL["Key"]..": "..AL["Auchenai Key"].." ("..AL["Heroic"]..")", ITEM, 30633 };
     { ORNG..AL["Key"]..": "..AL["The Eye of Haramad"].." ("..AL["Exalted"]..", "..AL["Yor <Void Hound of Shaffar>"]..")", ITEM, 32092 };
@@ -1272,6 +1014,7 @@ AtlasLoot_MapData = {
     { WHITE..INDENT..AL["Ethereal Transporter Control Panel"], OBJECT, 183877 };
     { WHITE.."5) "..AL["Nexus-Prince Shaffar"], NPC, 18344 };
     { WHITE..INDENT..AL["Yor <Void Hound of Shaffar>"].." ("..AL["Summon"]..", "..AL["Heroic"]..")", NPC, 22930 };
+    };
 };
 ["AuchSethekkHalls"] = {
     ZoneName = {BabbleZone["Sethekk Halls"], 3791 };
@@ -1280,6 +1023,8 @@ AtlasLoot_MapData = {
     MinLevel = "55";
     PlayerLimit = "5";
     Acronym = AL["Seth"];
+    MapName = "SethekkHalls";
+    [1] = {
     { ORNG..AL["Reputation"]..": "..AL["Lower City"], FACTION, 1011 };
     { ORNG..AL["Key"]..": "..AL["Auchenai Key"].." ("..AL["Heroic"]..")", ITEM, 30633 };
     { ORNG..AL["Key"]..": "..AL["Essence-Infused Moonstone"].." ("..AL["Anzu"]..")", ITEM, 32449 };
@@ -1289,6 +1034,7 @@ AtlasLoot_MapData = {
     { WHITE.."2) "..AL["The Saga of Terokk"], OBJECT, 183050 };
     { WHITE..INDENT..AL["Anzu"].." ("..AL["Summon"]..", "..AL["Heroic"]..")", NPC, 23035 };
     { WHITE.."3) "..AL["Talon King Ikiss"], NPC, 18473 };
+    };
 };
 ["AuchShadowLabyrinth"] = {
     ZoneName = { BabbleZone["Shadow Labyrinth"], 3789 };
@@ -1297,6 +1043,8 @@ AtlasLoot_MapData = {
     MinLevel = "65";
     PlayerLimit = "5";
     Acronym = AL["SL"];
+    MapName = "ShadowLabyrinthb";
+    [1] = {
     { ORNG..AL["Reputation"]..": "..AL["Lower City"], FACTION, 1011 };
     { ORNG..AL["Key"]..": "..AL["Shadow Labyrinth Key"], ITEM, 27991 };
     { ORNG..AL["Key"]..": "..AL["Auchenai Key"].." ("..AL["Heroic"]..")", ITEM, 30633 };
@@ -1309,14 +1057,17 @@ AtlasLoot_MapData = {
     { WHITE.."5) "..AL["Murmur"], NPC, 18708 };
     { WHITE.."6) "..AL["Arcane Container"], OBJECT, 182196 };
     { WHITE..INDENT..AL["First Fragment Guardian"], NPC, 22890 };
+    };
 };
-["BlackTempleStart"] = {
+["BlackTemple"] = {
     ZoneName = { BabbleZone["Black Temple"].." [A] ("..AL["Start"]..")", 3959 };
     Location = { BabbleZone["Shadowmoon Valley"], 3520 };
     LevelRange = "70";
     MinLevel = "70";
     PlayerLimit = "10-25";
     Acronym = AL["BT"];
+    MapName = "BlackTemple";
+    [1] = {
     { ORNG..AL["Reputation"]..": "..AL["Ashtongue Deathsworn"], FACTION, 1012 };
     { BLUE.."A) "..AL["Entrance"] };
     { BLUE.."B) "..AL["Towards Reliquary of Souls"] };
@@ -1330,14 +1081,8 @@ AtlasLoot_MapData = {
     { WHITE..INDENT..AL["Aluyen <Reagents>"], NPC, 23157 };
     { WHITE..INDENT..AL["Okuno <Ashtongue Deathsworn Quartermaster>"], NPC, 23159 };
     { WHITE..INDENT..AL["Seer Kanai"], NPC, 23158 };
-};
-["BlackTempleBasement"] = {
-    ZoneName = { BabbleZone["Black Temple"].." [B] ("..AL["Basement"]..")", 3959 };
-    Location = { BabbleZone["Shadowmoon Valley"], 3520 };
-    LevelRange = "70";
-    MinLevel = "70";
-    PlayerLimit = "10-25";
-    Acronym = AL["BT"];
+    };
+    [2] = {
     { ORNG..AL["Reputation"]..": "..AL["Ashtongue Deathsworn"], FACTION, 1012 };
     { BLUE.."B) "..AL["Entrance"] };
     { BLUE.."C) "..AL["Entrance"] };
@@ -1347,14 +1092,8 @@ AtlasLoot_MapData = {
     { WHITE..INDENT..AL["Essence of Desire"], NPC, 23419 };
     { WHITE..INDENT..AL["Essence of Anger"], NPC, 23420 };
     { WHITE.."8) "..AL["Teron Gorefiend"], NPC, 22871 };
-};
-["BlackTempleTop"] = {
-    ZoneName = { BabbleZone["Black Temple"].." [C] ("..AL["Top"]..")", 3959 };
-    Location = { BabbleZone["Shadowmoon Valley"], 3520 };
-    LevelRange = "70";
-    MinLevel = "70";
-    PlayerLimit = "10-25";
-    Acronym = AL["BT"];
+    };
+    [3] = {
     { ORNG..AL["Reputation"]..": "..AL["Ashtongue Deathsworn"], FACTION, 1012 };
     { BLUE.."D) "..AL["Entrance"] };
     { WHITE.."9) "..AL["Mother Shahraz"], NPC, 22947 };
@@ -1364,6 +1103,7 @@ AtlasLoot_MapData = {
     { WHITE..INDENT..AL["High Nethermancer Zerevor"].." ("..AL["Mage"]..")", NPC, 22950 };
     { WHITE..INDENT..AL["Veras Darkshadow"].." ("..AL["Rogue"]..")", NPC, 22952 };
     { WHITE.."11) "..AL["Illidan Stormrage <The Betrayer>"], NPC, 22917 };
+    };
 };
 ["CFRSerpentshrineCavern"] = {
     ZoneName = { BabbleZone["Serpentshrine Cavern"], 3607 };
@@ -1372,6 +1112,8 @@ AtlasLoot_MapData = {
     MinLevel = "70";
     PlayerLimit = "10-25";
     Acronym = AL["SC"];
+    MapName = "CoilfangReservoir";
+    [1] = {
     { ORNG..AL["Reputation"]..": "..AL["Cenarion Expedition"], FACTION, 942 };
     { BLUE.."A) "..AL["Entrance"] };
     { WHITE.."1) "..AL["Hydross the Unstable <Duke of Currents>"], NPC, 21216 };
@@ -1381,6 +1123,7 @@ AtlasLoot_MapData = {
     { WHITE..INDENT..AL["Seer Olum"], NPC, 22820 };
     { WHITE.."5) "..AL["Morogrim Tidewalker"], NPC, 21213 };
     { WHITE.."6) "..AL["Lady Vashj <Coilfang Matron>"], NPC, 21212 };
+    };
 };
 ["CFRTheSlavePens"] = {
     ZoneName = { BabbleZone["The Slave Pens"], 3717 };
@@ -1389,6 +1132,8 @@ AtlasLoot_MapData = {
     MinLevel = "55";
     PlayerLimit = "5";
     Acronym = AL["SP"];
+    MapName = "TheSlavePens";
+    [1] = {
     { ORNG..AL["Reputation"]..": "..AL["Cenarion Expedition"], FACTION, 942 };
     { ORNG..AL["Key"]..": "..AL["Reservoir Key"].." ("..AL["Heroic"]..")", ITEM, 30623 };
     { BLUE.."A) "..AL["Entrance"] };
@@ -1399,6 +1144,7 @@ AtlasLoot_MapData = {
     { WHITE.."5) "..AL["Rokmar the Crackler"], NPC, 17991 };
     { WHITE.."6) "..AL["Naturalist Bite"], NPC, 17893 };
     { WHITE.."7) "..AL["Quagmirran"], NPC, 17942 };
+    };
 };
 ["CFRTheSteamvault"] = {
     ZoneName = { BabbleZone["The Steamvault"], 3715 };
@@ -1407,6 +1153,8 @@ AtlasLoot_MapData = {
     MinLevel = "55";
     PlayerLimit = "5";
     Acronym = AL["SV"];
+    MapName = "TheSteamvault";
+    [1] = {
     { ORNG..AL["Reputation"]..": "..AL["Cenarion Expedition"], FACTION, 942 };
     { ORNG..AL["Key"]..": "..AL["Reservoir Key"].." ("..AL["Heroic"]..")", ITEM, 30623 };
     { BLUE.."A) "..AL["Entrance"] };
@@ -1417,6 +1165,7 @@ AtlasLoot_MapData = {
     { WHITE.."3) "..AL["Mekgineer Steamrigger"], NPC, 17796 };
     { WHITE..INDENT..AL["Main Chambers Access Panel"] };
     { WHITE.."4) "..AL["Warlord Kalithresh"], NPC, 17798 };
+    };
 };
 ["CFRTheUnderbog"] = {
     ZoneName = { BabbleZone["The Underbog"], 3716 };
@@ -1425,6 +1174,8 @@ AtlasLoot_MapData = {
     MinLevel = "55";
     PlayerLimit = "5";
     Acronym = AL["UB"];
+    MapName = "TheUnderbog";
+    [1] = {
     { ORNG..AL["Reputation"]..": "..AL["Cenarion Expedition"], FACTION, 942 };
     { ORNG..AL["Key"]..": "..AL["Reservoir Key"].." ("..AL["Heroic"]..")", ITEM, 30623 };
     { BLUE.."A) "..AL["Entrance"] };
@@ -1435,6 +1186,7 @@ AtlasLoot_MapData = {
     { WHITE.."4) "..AL["Swamplord Musel'ek"], NPC, 17826 };
     { WHITE..INDENT..AL["Claw <Swamplord Musel'ek's Pet>"], NPC, 17827 };
     { WHITE.."5) "..AL["The Black Stalker"], NPC, 17882 };
+    };
 };
 ["CoTBlackMorass"] = {
     ZoneName = { BabbleZone["The Black Morass"], 2366 };
@@ -1443,6 +1195,8 @@ AtlasLoot_MapData = {
     MinLevel = "66";
     PlayerLimit = "5";
     Acronym = AL["CoT2"];
+    MapName = "CoTTheBlackMorass";
+    [1] = {
     { PURP..AL["Event"]..": "..AL["Opening of the Dark Portal"] };
     { ORNG..AL["Attunement Required"] };
     { ORNG..AL["Reputation"]..": "..AL["Keepers of Time"], FACTION, 989 };
@@ -1455,6 +1209,7 @@ AtlasLoot_MapData = {
     { ORNG..INDENT..AL["Wave 18"]..": "..AL["Aeonus"], NPC, 17881 };
     { WHITE.."1) "..AL["The Dark Portal"] };
     { WHITE..INDENT..AL["Medivh"], NPC, 15608 };
+    };
 };
 ["CoTHyjal"] = {
     ZoneName = { BabbleZone["Hyjal Summit"], 3606 };
@@ -1463,6 +1218,8 @@ AtlasLoot_MapData = {
     MinLevel = "70";
     PlayerLimit = "10-25";
     Acronym = AL["CoT3"];
+    MapName = "CoTMountHyjal";
+    [1] = {
     { PURP..AL["Event"]..": "..AL["Battle for Mount Hyjal"] };
     { ORNG..AL["Reputation"]..": "..AL["The Scale of the Sands"], FACTION, 990 };
     { BLUE.."A) "..AL["Alliance Base"] };
@@ -1478,6 +1235,7 @@ AtlasLoot_MapData = {
     { WHITE.."5) "..AL["Archimonde"], NPC, 17968 };
     { WHITE.."?) "..AL["Indormi <Keeper of Ancient Gem Lore>"], NPC, 23437 };
     { WHITE..INDENT..AL["Tydormu <Keeper of Lost Artifacts>"], NPC, 23381 };
+    };
 };
 ["CoTOldHillsbrad"] = {
     ZoneName = { BabbleZone["Old Hillsbrad Foothills"], 2367 };
@@ -1486,6 +1244,8 @@ AtlasLoot_MapData = {
     MinLevel = "66";
     PlayerLimit = "5";
     Acronym = AL["CoT1"];
+    MapName = "CoTHillsbradFoothills";
+    [1] = {
     { PURP..AL["Event"]..": "..AL["Escape from Durnholde Keep"] };
     { ORNG..AL["Attunement Required"] };
     { ORNG..AL["Reputation"]..": "..AL["Keepers of Time"], FACTION, 989 };
@@ -1553,6 +1313,7 @@ AtlasLoot_MapData = {
     { WHITE..INDENT..AL["Julie Honeywell"], NPC, 18656 };
     { WHITE..INDENT..AL["Jay Lemieux"], NPC, 18655 };
     { WHITE..INDENT..AL["Young Blanchy"], NPC, 18651 };
+    };
 };
 ["GruulsLair"] = {
     ZoneName = { BabbleZone["Gruul's Lair"], 3923 };
@@ -1561,6 +1322,8 @@ AtlasLoot_MapData = {
     MinLevel = "65";
     PlayerLimit = "10-25";
     Acronym = AL["GL"];
+    MapName = "GruulsLair";
+    [1] = {
     { BLUE.."A) "..AL["Entrance"] };
     { WHITE.."1) "..AL["High King Maulgar <Lord of the Ogres>"], NPC, 18831 };
     { WHITE..INDENT..AL["Kiggler the Crazed"].." ("..AL["Shaman"]..")", NPC, 18835 };
@@ -1568,6 +1331,7 @@ AtlasLoot_MapData = {
     { WHITE..INDENT..AL["Olm the Summoner"].." ("..AL["Warlock"]..")", NPC, 18834 };
     { WHITE..INDENT..AL["Krosh Firehand"].." ("..AL["Mage"]..")", NPC, 18832 };
     { WHITE.."2) "..AL["Gruul the Dragonkiller"], NPC, 19044 };
+    };
 };
 ["HCBloodFurnace"] = {
     ZoneName = { BabbleZone["The Blood Furnace"], 3713 };
@@ -1576,6 +1340,8 @@ AtlasLoot_MapData = {
     MinLevel = "55";
     PlayerLimit = "5";
     Acronym = AL["BF"];
+    MapName = "TheBloodFurnace";
+    [1] = {
     { ORNG..AL["Reputation"]..": "..AL["Thrallmar"].." ("..AL["Horde"]..")", FACTION, 947 };
     { ORNG..AL["Reputation"]..": "..AL["Honor Hold"].." ("..AL["Alliance"]..")", FACTION, 946 };
     { ORNG..AL["Key"]..": "..AL["Flamewrought Key"].." ("..AL["Heroic"]..")", ITEM, 30637 };
@@ -1583,6 +1349,7 @@ AtlasLoot_MapData = {
     { WHITE.."1) "..AL["The Maker"], NPC, 17381 };
     { WHITE.."2) "..AL["Broggok"], NPC, 17380 };
     { WHITE.."3) "..AL["Keli'dan the Breaker"], NPC, 17377 };
+    };
 };
 ["HCHellfireRamparts"] = {
     ZoneName = { BabbleZone["Hellfire Ramparts"], 3562 };
@@ -1591,6 +1358,8 @@ AtlasLoot_MapData = {
     MinLevel = "55";
     PlayerLimit = "5";
     Acronym = AL["Ramp"];
+    MapName = "HellfireRamparts";
+    [1] = {
     { ORNG..AL["Reputation"]..": "..AL["Thrallmar"].." ("..AL["Horde"]..")", FACTION, 947 };
     { ORNG..AL["Reputation"]..": "..AL["Honor Hold"].." ("..AL["Alliance"]..")", FACTION, 946 };
     { ORNG..AL["Key"]..": "..AL["Flamewrought Key"].." ("..AL["Heroic"]..")", ITEM, 30637 };
@@ -1600,6 +1369,7 @@ AtlasLoot_MapData = {
     { WHITE.."3) "..AL["Vazruden"], NPC, 17537 };
     { WHITE..INDENT..AL["Nazan <Vazruden's Mount>"], NPC, 17536 };
     { WHITE..INDENT..AL["Reinforced Fel Iron Chest"], OBJECT, 185168 };
+    };
 };
 ["HCMagtheridonsLair"] = {
     ZoneName = { BabbleZone["Magtheridon's Lair"], 3836 };
@@ -1608,8 +1378,11 @@ AtlasLoot_MapData = {
     MinLevel = "65";
     PlayerLimit = "10-25";
     Acronym = AL["Mag"];
+    MapName = "Magtheridonslair";
+    [1] = {
     { BLUE.."A) "..AL["Entrance"] };
     { WHITE.."1) "..AL["Magtheridon"], NPC, 17257 };
+    };
 };
 ["HCTheShatteredHalls"] = {
     ZoneName = { BabbleZone["The Shattered Halls"], 3714 };
@@ -1618,6 +1391,8 @@ AtlasLoot_MapData = {
     MinLevel = "55";
     PlayerLimit = "5";
     Acronym = AL["SH"];
+    MapName = "TheShatteredHalls";
+    [1] = {
     { ORNG..AL["Reputation"]..": "..AL["Thrallmar"].." ("..AL["Horde"]..")", FACTION, 947 };
     { ORNG..AL["Reputation"]..": "..AL["Honor Hold"].." ("..AL["Alliance"]..")", FACTION, 946 };
     { ORNG..AL["Key"]..": "..AL["Shattered Halls Key"], ITEM, 28395 };
@@ -1636,14 +1411,17 @@ AtlasLoot_MapData = {
     { WHITE..INDENT..AL["Scout Orgarr"].." ("..AL["Horde"]..", "..AL["Heroic"]..")", NPC, 17297 };
     { WHITE..INDENT..AL["Korag Proudmane"].." ("..AL["Horde"]..", "..AL["Heroic"]..")", NPC, 17295 };
     { WHITE..INDENT..AL["Captain Boneshatter"].." ("..AL["Horde"]..", "..AL["Heroic"]..")", NPC, 17296 };
+    };
 };
-["KarazhanStart"] = {
+["Karazhan"] = {
     ZoneName = { BabbleZone["Karazhan"].." [A] ("..AL["Start"]..")", 3457 };
     Location = { BabbleZone["Deadwind Pass"], 41 };
     LevelRange = "70";
     MinLevel = "68";
     PlayerLimit = "5";
     Acronym = AL["Kara"];
+    MapName = "Karazhan";
+    [1] = {
     { ORNG..AL["Reputation"]..": "..AL["The Violet Eye"], FACTION, 967 };
     { ORNG..AL["Key"]..": "..AL["The Master's Key"], ITEM, 24490 };
     { BLUE.."A) "..AL["Entrance"].." ("..AL["Front"]..")" };
@@ -1693,14 +1471,8 @@ AtlasLoot_MapData = {
     { WHITE..INDENT..INDENT..AL["Julianne"], NPC, 17534 };
     { WHITE.."15) "..AL["The Master's Terrace"] };
     { WHITE..INDENT..AL["Nightbane"].." ("..AL["Summon"]..")", NPC, 17225 };
-};
-["KarazhanEnd"] = {
-    ZoneName = { BabbleZone["Karazhan"].." [B] ("..AL["End"]..")", 3457 };
-    Location = { BabbleZone["Deadwind Pass"], 41 };
-    LevelRange = "70";
-    MinLevel = "68";
-    PlayerLimit = "5";
-    Acronym = AL["Kara"];
+    };
+    [2] = {
     { ORNG..AL["Reputation"]..": "..AL["The Violet Eye"], FACTION, 967 };
     { ORNG..AL["Key"]..": "..AL["The Master's Key"], ITEM, 24490 };
     { BLUE.."I) "..AL["Path to the Broken Stairs"] };
@@ -1723,6 +1495,7 @@ AtlasLoot_MapData = {
     { WHITE.."24) "..AL["Echo of Medivh"], NPC, 16816 };
     { WHITE.."25) "..AL["Dust Covered Chest"].." ("..AL["Chess Event"]..")", OBJECT, 185119 };
     { WHITE.."26) "..AL["Prince Malchezaar"], NPC, 15690 };
+    };
 };
 ["MagistersTerrace"] = {
     ZoneName = { BabbleZone["Magisters' Terrace"], 4095 };
@@ -1731,6 +1504,8 @@ AtlasLoot_MapData = {
     MinLevel = "68";
     PlayerLimit = "5";
     Acronym = AL["MaT"];
+    MapName = "MagistersTerrace";
+    [1] = {
     { ORNG..AL["Reputation"]..": "..AL["Shattered Sun Offensive"], FACTION, 1077 };
     { BLUE.."A) "..AL["Entrance"] };
     { WHITE.."1) "..AL["Selin Fireheart"], NPC, 24723 };
@@ -1751,6 +1526,7 @@ AtlasLoot_MapData = {
     { WHITE..INDENT..AL["Yazzai"].." ("..AL["Lower"]..", "..AL["Random"]..", "..AL["Mage"]..")", NPC, 24561 };
     { WHITE..INDENT..AL["Zelfan"].." ("..AL["Lower"]..", "..AL["Random"]..", "..AL["Engineer"]..")", NPC, 24556 };
     { WHITE.."6) "..AL["Kael'thas Sunstrider <Lord of the Blood Elves>"], NPC, 24664 };
+    };
 };
 ["SunwellPlateau"] = {
     ZoneName = { BabbleZone["Sunwell Plateau"], 4075 };
@@ -1759,6 +1535,8 @@ AtlasLoot_MapData = {
     MinLevel = "70";
     PlayerLimit = "10-25";
     Acronym = AL["SuP"];
+    MapName = "SunwellPlateau";
+    [1] = {
     { BLUE.."A) "..AL["Entrance"] };
     { WHITE.."1) "..AL["Kalecgos"], NPC, 24850 };
     { WHITE..INDENT..AL["Sathrovarr the Corruptor"], NPC, 24892 };
@@ -1771,6 +1549,7 @@ AtlasLoot_MapData = {
     { WHITE..INDENT..AL["M'uru"].." ("..AL["Upper"]..")", NPC, 25741 };
     { WHITE..INDENT..AL["Entropius"].." ("..AL["Upper"]..")", NPC, 25840 };
     { WHITE.."4) "..AL["Kil'jaeden <The Deceiver>"], NPC, 25315 };
+    };
 };
 ["TempestKeepArcatraz"] = {
     ZoneName = {BabbleZone["The Arcatraz"], 3846 };
@@ -1779,6 +1558,8 @@ AtlasLoot_MapData = {
     MinLevel = "68";
     PlayerLimit = "5";
     Acronym = AL["Arca"];
+    MapName = "TheArcatraz";
+    [1] = {
     { ORNG..AL["Reputation"]..": "..AL["The Sha'tar"], FACTION, 935 };
     { ORNG..AL["Key"]..": "..AL["Key to the Arcatraz"], ITEM, 31084 };
     { ORNG..AL["Key"]..": "..AL["Warpforged Key"].." ("..AL["Heroic"]..")", ITEM, 30634 };
@@ -1792,6 +1573,7 @@ AtlasLoot_MapData = {
     { WHITE.."6) "..AL["Harbinger Skyriss"], NPC, 20912 };
     { WHITE..INDENT..AL["Warden Mellichar"], NPC, 20904 };
     { WHITE..INDENT..AL["Millhouse Manastorm"], NPC, 20977 };
+    };
 };
 ["TempestKeepBotanica"] = {
     ZoneName = { BabbleZone["The Botanica"], 3847 };
@@ -1800,6 +1582,8 @@ AtlasLoot_MapData = {
     MinLevel = "68";
     PlayerLimit = "5";
     Acronym = AL["Bota"];
+    MapName = "TheBotanica";
+    [1] = {
     { ORNG..AL["Reputation"]..": "..AL["The Sha'tar"], FACTION, 935 };
     { ORNG..AL["Key"]..": "..AL["Warpforged Key"].." ("..AL["Heroic"]..")", ITEM, 30634 };
     { BLUE.."A) "..AL["Entrance"] };
@@ -1809,6 +1593,7 @@ AtlasLoot_MapData = {
     { WHITE.."3) "..AL["Thorngrin the Tender"], NPC, 17978 };
     { WHITE.."4) "..AL["Laj"], NPC, 17980 };
     { WHITE.."5) "..AL["Warp Splinter"], NPC, 17977 };
+    };
 };
 ["TempestKeepMechanar"] = {
     ZoneName = { BabbleZone["The Mechanar"], 3849 };
@@ -1817,6 +1602,8 @@ AtlasLoot_MapData = {
     MinLevel = "68";
     PlayerLimit = "5";
     Acronym = AL["Mech"];
+    MapName = "TheMechanar";
+    [1] = {
     { ORNG..AL["Reputation"]..": "..AL["The Sha'tar"], FACTION, 935 };
     { ORNG..AL["Key"]..": "..AL["Warpforged Key"].." ("..AL["Heroic"]..")", ITEM, 30634 };
     { BLUE.."A) "..AL["Entrance"] };
@@ -1828,6 +1615,7 @@ AtlasLoot_MapData = {
     { WHITE..INDENT..AL["Overcharged Manacell"], OBJECT, 185015 };
     { WHITE.."4) "..AL["Nethermancer Sepethrea"], NPC, 19221 };
     { WHITE.."5) "..AL["Pathaleon the Calculator"], NPC, 19220 };
+    };
 };
 ["TempestKeepTheEye"] = {
     ZoneName = { BabbleZone["The Eye"], 3845 };
@@ -1836,6 +1624,8 @@ AtlasLoot_MapData = {
     MinLevel = "70";
     PlayerLimit = "10-25";
     Acronym = AL["Eye"];
+    MapName = "TempestKeep";
+    [1] = {
     { ORNG..AL["Reputation"]..": "..AL["The Sha'tar"], FACTION, 935 };
     { BLUE.."A) "..AL["Entrance"] };
     { WHITE.."1) "..AL["Al'ar <Phoenix God>"], NPC, 19514 };
@@ -1846,6 +1636,7 @@ AtlasLoot_MapData = {
     { WHITE..INDENT..AL["Master Engineer Telonicus <Advisor to Kael'thas>"].." ("..AL["Hunter"]..")", NPC, 20063 };
     { WHITE..INDENT..AL["Grand Astromancer Capernian <Advisor to Kael'thas>"].." ("..AL["Mage"]..")", NPC, 20062 };
     { WHITE..INDENT..AL["Lord Sanguinar <The Blood Hammer>"].." ("..AL["Paladin"]..")", NPC, 20060 };
+    };
 };
 ["ZulAman"] = {
     ZoneName = { BabbleZone["Zul'Aman"], 3805 };
@@ -1854,6 +1645,8 @@ AtlasLoot_MapData = {
     MinLevel = "68";
     PlayerLimit = "5";
     Acronym = AL["ZA"];
+    MapName = "ZulAman";
+    [1] = {
     { BLUE.."A) "..AL["Entrance"] };
     { BLUE..INDENT..AL["Harrison Jones"], NPC, 24358 };
     { WHITE.."1) "..AL["Nalorakk <Bear Avatar>"], NPC, 23576 };
@@ -1886,6 +1679,7 @@ AtlasLoot_MapData = {
     { GREN..INDENT..AL["Galathryn"], NPC, 24404 };
     { GREN..INDENT..AL["Mitzi"], NPC, 24445 };
     { GREN..INDENT..AL["Mannuth"], NPC, 24397 };
+    };
 };	
 
 --************************************************
@@ -1899,6 +1693,8 @@ AtlasLoot_MapData = {
     MinLevel = "68";
     PlayerLimit = "5";
     Acronym = AL["AK, Kahet"];
+    MapName = "DireMaul";
+    [1] = {
     { BLUE.."A) "..AL["Entrance"] };
     { BLUE.."B) "..AL["Exit"] };
     { WHITE.."1) "..AL["Elder Nadox"], NPC, 29309 };
@@ -1907,6 +1703,7 @@ AtlasLoot_MapData = {
     { WHITE.."4) "..AL["Jedoga Shadowseeker"], NPC, 29310 };
     { WHITE.."5) "..AL["Herald Volazj"], NPC, 29311 };
     { WHITE.."6) "..AL["Ahn'kahet Brazier"] };
+    };
 };
 ["AzjolNerub"] = {
     ZoneName = { BabbleZone["Azjol-Nerub"], 3477 };
@@ -1915,6 +1712,9 @@ AtlasLoot_MapData = {
     MinLevel = "67";
     PlayerLimit = "5";
     Acronym = AL["AN, Nerub"];
+    MapName = "DireMaul";
+    MapName = "DireMaul";
+    [1] = {
     { BLUE.."A) "..AL["Entrance"] };
     { BLUE.."B) "..AL["Connection"] };
     { BLUE.."C) "..AL["Exit"] };
@@ -1925,6 +1725,7 @@ AtlasLoot_MapData = {
     { WHITE.."2) "..AL["Hadronox"], NPC, 28921 };
     { WHITE.."3) "..AL["Elder Nurgen"].." ("..AL["Lunar Festival"]..")", NPC, 30533 };
     { WHITE.."4) "..AL["Anub'arak"], NPC, 29120 };
+    };
 };
 ["CoTOldStratholme"] = {
     ZoneName = { BabbleZone["Caverns of Time"]..": "..BabbleZone["The Culling of Stratholme"], 4100 };
@@ -1933,6 +1734,8 @@ AtlasLoot_MapData = {
     MinLevel = "75";
     PlayerLimit = "5";
     Acronym = AL["CoT-Strat"];
+    MapName = "DireMaul";
+    [1] = {
     { PURP..AL["Event"]..": "..AL["The Culling of Stratholme"] };
     { BLUE.."A) "..AL["Entrance"] };
     { BLUE.."B) "..AL["Exit"].." ("..AL["Portal"]..")" };
@@ -1946,6 +1749,7 @@ AtlasLoot_MapData = {
     { WHITE..INDENT..AL["Guardian of Time"], NPC, 32281 };
     { WHITE.."5) "..AL["Mal'Ganis"], NPC, 26533 };
     { WHITE..INDENT..AL["Chromie"], NPC, 30997 };
+    };
 };
 ["DrakTharonKeep"] = {
     ZoneName = { BabbleZone["Drak'Tharon Keep"], 4196 };
@@ -1954,6 +1758,8 @@ AtlasLoot_MapData = {
     MinLevel = "69";
     PlayerLimit = "5";
     Acronym = AL["DTK"];
+    MapName = "DireMaul";
+    [1] = {
     { BLUE.."A) "..AL["Entrance"] };
     { BLUE.."B) "..AL["Connection"] };
     { BLUE.."C) "..AL["Connection"] };
@@ -1964,6 +1770,7 @@ AtlasLoot_MapData = {
     { WHITE.."5) "..AL["King Dred"], NPC, 27483 };
     { WHITE.."6) "..AL["The Prophet Tharon'ja"], NPC, 26632 };
     { WHITE.."7) "..AL["Drakuru's Brazier"] };
+    };
 };
 ["FHHallsOfReflection"] = {
     ZoneName = { BabbleSubZone["The Frozen Halls"]..": "..BabbleZone["Halls of Reflection"], 4820 };
@@ -1972,6 +1779,8 @@ AtlasLoot_MapData = {
     MinLevel = "80";
     PlayerLimit = "5";
     Acronym = AL["HoR"]..", "..AL["FH3"];
+    MapName = "DireMaul";
+    [1] = {
     { ORNG..AL["Attunement Required"] };
     { BLUE.."A) "..AL["Entrance"] };
     { BLUE.."B) "..AL["Portal"].." ("..BabbleZone["Dalaran"]..")", ZONE, 4395 };
@@ -1983,6 +1792,7 @@ AtlasLoot_MapData = {
     { WHITE.."3) "..AL["Marwyn"].." ("..AL["Wave 10"]..")", NPC, 38113 };
     { WHITE.."4) "..AL["Wrath of the Lich King"].." ("..AL["Event"]..")", NPC, 37226 };
     { WHITE..INDENT..AL["The Captain's Chest"], OBJECT, 201710 };
+    };
 };
 ["FHPitOfSaron"] = {
     ZoneName = { BabbleSubZone["The Frozen Halls"]..": "..BabbleZone["Pit of Saron"], 4813 };
@@ -1991,6 +1801,8 @@ AtlasLoot_MapData = {
     MinLevel = "80";
     PlayerLimit = "5";
     Acronym = AL["PoS"]..", "..AL["FH2"];
+    MapName = "DireMaul";
+    [1] = {
     { ORNG..AL["Attunement Required"] };
     { BLUE.."A) "..AL["Entrance"] };
     { BLUE.."B) "..AL["Portal"].." ("..BabbleZone["Halls of Reflection"]..")", ZONE, 4820 };
@@ -2006,6 +1818,7 @@ AtlasLoot_MapData = {
     { WHITE.."3) "..AL["Krick and Ick"], NPC, 36477 };
     { WHITE.."4) "..AL["Scourgelord Tyrannus"], NPC, 36658 };
     { WHITE..INDENT..AL["Rimefang"], NPC, 36661 };
+    };
 };
 ["FHTheForgeOfSouls"] = {
     ZoneName = { BabbleSubZone["The Frozen Halls"]..": "..BabbleZone["The Forge of Souls"], 4809 };
@@ -2014,6 +1827,8 @@ AtlasLoot_MapData = {
     MinLevel = "80";
     PlayerLimit = "5";
     Acronym = AL["FoS"]..", "..AL["FH1"];
+    MapName = "DireMaul";
+    [1] = {
     { BLUE.."A) "..AL["Entrance"] };
     { BLUE.."B) "..AL["Portal"].." ("..BabbleZone["Pit of Saron"]..")", ZONE, 4813 };
     { WHITE.."1) "..AL["Lady Jaina Proudmoore"].." ("..AL["Alliance"]..")", NPC, 37597 };
@@ -2024,6 +1839,7 @@ AtlasLoot_MapData = {
     { WHITE..INDENT..AL["Dark Ranger Kalira"].." ("..AL["Horde"]..")", NPC, 37583 };
     { WHITE.."2) "..AL["Bronjahm <Godfather of Souls>"], NPC, 36497 };
     { WHITE.."3) "..AL["Devourer of Souls"], NPC, 36502 };
+    };
 };
 ["Gundrak"] = {
     ZoneName = { BabbleZone["Gundrak"], 4375 };
@@ -2032,6 +1848,8 @@ AtlasLoot_MapData = {
     MinLevel = "71";
     PlayerLimit = "5";
     Acronym = AL["Gun"];
+    MapName = "DireMaul";
+    [1] = {
     { BLUE.."A) "..AL["Entrance"] };
     { BLUE.."B) "..AL["Exit"] };
     { WHITE.."1) "..AL["Slad'ran <High Prophet of Sseratus>"], NPC, 29304 };
@@ -2040,6 +1858,7 @@ AtlasLoot_MapData = {
     { WHITE.."4) "..AL["Moorabi <High Prophet of Mam'toth>"], NPC, 29305 };
     { WHITE.."5) "..AL["Eck the Ferocious"].." ("..AL["Heroic"]..", "..AL["Summon"]..")", NPC, 29932 };
     { WHITE.."6) "..AL["Gal'darah <High Prophet of Akali>"], NPC, 29306 };
+    };
 };
 ["IcecrownCitadelA"] = {
     ZoneName = { BabbleZone["Icecrown Citadel"].." [A] ("..AL["Lower"]..")", 4812 };
@@ -2048,6 +1867,8 @@ AtlasLoot_MapData = {
     MinLevel = "80";
     PlayerLimit = "10/25";
     Acronym = AL["IC"];
+    MapName = "DireMaul";
+    [1] = {
     { ORNG..AL["Reputation"]..": "..AL["The Ashen Verdict"], FACTION, 1156 };
     { BLUE.."A) "..AL["Entrance"] };
     { BLUE.."B) "..AL["Connection"] };
@@ -2061,6 +1882,7 @@ AtlasLoot_MapData = {
     { GREN.."2') "..BabbleSubZone["Oratory of the Damned"].." ("..AL["Teleporter"]..")" };
     { GREN.."3') "..BabbleSubZone["Rampart of Skulls"].." ("..AL["Teleporter"]..", "..AL["Lower"]..")" };
     { GREN..INDENT..BabbleSubZone["Deathbringer's Rise"].." ("..AL["Teleporter"]..", "..AL["Upper"]..")" };
+    };
 };
 ["IcecrownCitadelB"] = {
     ZoneName = { BabbleZone["Icecrown Citadel"].." [B] ("..AL["Upper"]..")", 4812 };
@@ -2069,6 +1891,8 @@ AtlasLoot_MapData = {
     MinLevel = "80";
     PlayerLimit = "10/25";
     Acronym = AL["IC"];
+    MapName = "DireMaul";
+    [1] = {
     { ORNG..AL["Reputation"]..": "..AL["The Ashen Verdict"], FACTION, 1156 };
     { BLUE.."C) "..AL["From previous map"] };
     { BLUE.."D-H) "..AL["Connection"] };
@@ -2085,6 +1909,7 @@ AtlasLoot_MapData = {
     { WHITE.."12) "..AL["Sindragosa <Queen of the Frostbrood>"], NPC, 37755 };
     { GREN.."4') "..AL["Upper Spire"].." ("..AL["Teleporter"]..")" };
     { GREN.."5') "..AL["Sindragosa's Lair"].." ("..AL["Teleporter"]..")" };
+    };
 };
 ["IcecrownCitadelC"] = {
     ZoneName = { BabbleZone["Icecrown Citadel"].." [C] ("..BabbleSubZone["The Frozen Throne"]..")", 4812 };
@@ -2093,9 +1918,12 @@ AtlasLoot_MapData = {
     MinLevel = "80";
     PlayerLimit = "10/25";
     Acronym = AL["IC"];
+    MapName = "DireMaul";
+    [1] = {
     { ORNG..AL["Reputation"]..": "..AL["The Ashen Verdict"], FACTION, 1156 };
     { BLUE.."I) "..AL["From previous map"] };
     { WHITE.."13) "..AL["The Lich King"], NPC, 36597 };
+    };
 };
 ["Naxxramas60"] = {
     ZoneName = { BabbleZone["Naxxramas"], 3456 };
@@ -2104,6 +1932,8 @@ AtlasLoot_MapData = {
     MinLevel = "60";
     PlayerLimit = "10-25";
     Acronym = "Nax60";
+    MapName = "DireMaul";
+    [1] = {
     { BLUE.."A) "..AL["Entrance"] };
     { WHITE..INDENT.."1) "..AL["Patchwerk"], NPC, 16028 };
     { WHITE..INDENT.."2) "..AL["Grobbulus"], NPC, 15931 };
@@ -2120,6 +1950,7 @@ AtlasLoot_MapData = {
     { PURP..INDENT.."3) "..AL["Loatheb"], NPC, 16011 };
     { GREN..INDENT.."1) "..AL["Sapphiron"], NPC, 15989 };
     { GREN..INDENT.."2) "..AL["Kel'Thuzad"], NPC, 15990 };
+    };
 };
 ["Naxxramas"] = {
     ZoneName = { BabbleZone["Naxxramas"], 3456 };
@@ -2128,6 +1959,8 @@ AtlasLoot_MapData = {
     MinLevel = "80";
     PlayerLimit = "10/25";
     Acronym = AL["Nax"];
+    MapName = "DireMaul";
+    [1] = {
     { BLUE.."A) "..AL["Entrance"] };
     { BLUE..INDENT..AL["Mr. Bigglesworth"].." ("..AL["Wanders"]..")", NPC, 16998 };
     { WHITE..BabbleSubZone["The Construct Quarter"] };
@@ -2155,6 +1988,7 @@ AtlasLoot_MapData = {
     { GREN..AL["Frostwyrm Lair"] };
     { GREN..INDENT.."1) "..AL["Sapphiron"], NPC, 15989 };
     { GREN..INDENT.."2) "..AL["Kel'Thuzad"], NPC, 15990 };
+    };
 };
 ["ObsidianSanctum"] = {
     ZoneName = { BabbleSubZone["Chamber of the Aspects"]..": "..BabbleZone["The Obsidian Sanctum"], 4493 };
@@ -2163,37 +1997,46 @@ AtlasLoot_MapData = {
     MinLevel = "80";
     PlayerLimit = "10/25";
     Acronym = AL["OS"];
+    MapName = "DireMaul";
+    [1] = {
     { ORNG..AL["AKA"]..": "..AL["Black Dragonflight Chamber"] };
     { BLUE.."A) "..AL["Entrance"] };
     { WHITE.."1) "..AL["Tenebron"], NPC, 30452 };
     { WHITE.."2) "..AL["Shadron"], NPC, 30451 };
     { WHITE.."3) "..AL["Vesperon"], NPC, 30449 };
     { WHITE.."4) "..AL["Sartharion <The Onyx Guardian>"], NPC, 28860 };
+    };
 };
 ["OnyxiasLair"] = {
     ZoneName = { BabbleZone["Onyxia's Lair"], 2159 };
     Acronym = AL["Ony"];
+    MapName = "DireMaul";
     Location = { BabbleZone["Dustwallow Marsh"], 15 };
     LevelRange = "80+";
     MinLevel = "80";
     PlayerLimit = "10/25";
-    { BLUE.."A) "..AL["Entrance"] };
-    { WHITE.."1) "..AL["Onyxian Warders"], NPC, 12129 };
-    { WHITE.."2) "..AL["Whelp Eggs"] };
-    { WHITE.."3) "..AL["Onyxia"], NPC, 10184 };
-};
-["Onyxia60"] = {
-    ZoneName = { BabbleZone["Onyxia's Lair"], 2159 };
-    Acronym = AL["Ony"];
-    Location = { BabbleZone["Dustwallow Marsh"], 15 };
-    LevelRange = "60+";
-    MinLevel = "60";
-    PlayerLimit = "10-25";
+    [1] = {
     { BLUE.."A) "..AL["Entrance"] };
     { WHITE.."1) "..AL["Onyxian Warders"], NPC, 12129 };
     { WHITE.."2) "..AL["Whelp Eggs"] };
     { WHITE.."3) "..AL["Onyxia"], NPC, 10184 };
     };
+};
+["Onyxia60"] = {
+    ZoneName = { BabbleZone["Onyxia's Lair"], 2159 };
+    Acronym = AL["Ony"];
+    MapName = "DireMaul";
+    Location = { BabbleZone["Dustwallow Marsh"], 15 };
+    LevelRange = "60+";
+    MinLevel = "60";
+    PlayerLimit = "10-25";
+    [1] = {
+    { BLUE.."A) "..AL["Entrance"] };
+    { WHITE.."1) "..AL["Onyxian Warders"], NPC, 12129 };
+    { WHITE.."2) "..AL["Whelp Eggs"] };
+    { WHITE.."3) "..AL["Onyxia"], NPC, 10184 };
+    };
+};
 ["RubySanctum"] = {
     ZoneName = { BabbleSubZone["Chamber of the Aspects"]..": "..BabbleZone["The Ruby Sanctum"], 4987 };
     Location = { BabbleZone["Dragonblight"], 65 };
@@ -2201,12 +2044,15 @@ AtlasLoot_MapData = {
     MinLevel = "80";
     PlayerLimit = "10/25";
     Acronym = AL["RS"];
+    MapName = "DireMaul";
+    [1] = {
     { ORNG..AL["AKA"]..": "..AL["Red Dragonflight Chamber"] };
     { BLUE.."A) "..AL["Entrance"] };
     { WHITE.."1) "..AL["Baltharus the Warborn"], NPC, 39751 };
     { WHITE.."2) "..AL["Saviana Ragefire"], NPC, 39747 };
     { WHITE.."3) "..AL["General Zarithrian"], NPC, 39746 };
     { WHITE.."4) "..AL["Halion <The Twilight Destroyer>"], NPC, 39863 };		
+    };
 };
 ["TheEyeOfEternity"] = {
     ZoneName = { BabbleZone["The Nexus"]..": "..BabbleZone["The Eye of Eternity"], 4500 };
@@ -2215,8 +2061,11 @@ AtlasLoot_MapData = {
     MinLevel = "80";
     PlayerLimit = "10/25";
     Acronym = AL["TEoE"];
+    MapName = "DireMaul";
+    [1] = {
     { ORNG..AL["Key"]..": "..AL["Key to the Focusing Iris"], ITEM, 44582 };
     { WHITE.."1) "..AL["Malygos"], NPC, 28859 };
+    };
 };
 ["TheNexus"] = {
     ZoneName = { BabbleZone["The Nexus"]..": "..BabbleZone["The Nexus"], 4120 };
@@ -2225,6 +2074,8 @@ AtlasLoot_MapData = {
     MinLevel = "66";
     PlayerLimit = "5";
     Acronym = AL["Nex, Nexus"];
+    MapName = "DireMaul";
+    [1] = {
     { BLUE.."A) "..AL["Entrance"] };
     { WHITE.."1) "..AL["Berinand's Research"], OBJECT, 192788 };
     { WHITE..INDENT..AL["Commander Stoutbeard"].." ("..AL["Horde"]..", "..AL["Heroic"]..")", NPC, 26796 };
@@ -2234,6 +2085,7 @@ AtlasLoot_MapData = {
     { WHITE.."4) "..AL["Elder Igasho"].." ("..AL["Lunar Festival"]..")", NPC, 30536 };
     { WHITE.."5) "..AL["Ormorok the Tree-Shaper"], NPC, 26794 };
     { WHITE.."6) "..AL["Keristrasza"], NPC, 26723 };
+    };
 };
 ["TheOculus"] = {
     ZoneName = { BabbleZone["The Nexus"]..": "..BabbleZone["The Oculus"], 4228 };
@@ -2242,6 +2094,8 @@ AtlasLoot_MapData = {
     MinLevel = "75";
     PlayerLimit = "5";
     Acronym = AL["Ocu"];
+    MapName = "DireMaul";
+    [1] = {
     { BLUE.."A) "..AL["Entrance"] };
     { BLUE.."B) "..AL["Portal"] };
     { WHITE.."1) "..AL["Drakos the Interrogator"], NPC, 27654 };
@@ -2250,6 +2104,7 @@ AtlasLoot_MapData = {
     { WHITE.."4) "..AL["Ley-Guardian Eregos"], NPC, 27656 };
     { WHITE.."5) "..AL["Cache of Eregos"], OBJECT, 191349};
     { GREN.."1') "..AL["Centrifuge Construct"], NPC, 27641 };
+    };
 };
 ["TrialOfTheChampion"] = {
     ZoneName = { AL["Crusaders' Coliseum"]..": "..BabbleZone["Trial of the Champion"], 4723 };
@@ -2258,6 +2113,8 @@ AtlasLoot_MapData = {
     MinLevel = "80";
     PlayerLimit = "5";
     Acronym = AL["Champ"];
+    MapName = "DireMaul";
+    [1] = {
     { BLUE.."A) "..AL["Entrance"] };
     { WHITE.."1) "..AL["Grand Champions"] };
     { WHITE..INDENT..AL["Champions of the Alliance"] };
@@ -2275,6 +2132,7 @@ AtlasLoot_MapData = {
     { WHITE..INDENT..AL["Eadric the Pure <Grand Champion of the Argent Crusade>"], NPC, 35119 };
     { WHITE..INDENT..AL["Argent Confessor Paletress"], NPC, 34928 };
     { WHITE..INDENT..AL["The Black Knight"], NPC, 35451 };
+    };
 };
 ["TrialOfTheCrusader"] = {
     ZoneName = { AL["Crusaders' Coliseum"]..": "..BabbleZone["Trial of the Crusader"], 4722 };
@@ -2283,6 +2141,8 @@ AtlasLoot_MapData = {
     MinLevel = "80";
     PlayerLimit = "10/25";
     Acronym = AL["Crus"];
+    MapName = "DireMaul";
+    [1] = {
     { ORNG..AL["Heroic: Trial of the Grand Crusader"] };
     { BLUE.."A) "..AL["Entrance"] };
     { BLUE.."B) "..AL["Cavern Entrance"] };
@@ -2297,6 +2157,7 @@ AtlasLoot_MapData = {
     { WHITE..INDENT..INDENT..AL["Fjola Lightbane"], NPC, 34497 };
     { WHITE..INDENT..INDENT..AL["Eydis Darkbane"], NPC, 34496 };
     { WHITE.."2) "..AL["Anub'arak"], NPC, 34564 };
+    };
 };
 ["UlduarA"] = {
     ZoneName = { BabbleZone["Ulduar"].." [A] ("..AL["The Siege"]..")", 4273 };
@@ -2305,6 +2166,8 @@ AtlasLoot_MapData = {
     MinLevel = "80";
     PlayerLimit = "10/25";
     Acronym = AL["Uldu"];
+    MapName = "DireMaul";
+    [1] = {
     { BLUE.."A) "..AL["Entrance"] };
     { BLUE.."B) "..BabbleSubZone["The Antechamber"] };
     { ORNG.."A') "..AL["Tower of Life"] };
@@ -2319,6 +2182,7 @@ AtlasLoot_MapData = {
     { GREN.."2') "..BabbleSubZone["Formation Grounds"].." ("..AL["Teleporter"]..")", OBJECT, 194569 };
     { GREN.."3') "..BabbleSubZone["The Colossal Forge"].." ("..AL["Teleporter"]..")", OBJECT, 194569 };
     { GREN.."4') "..BabbleSubZone["The Scrapyard"].." ("..AL["Teleporter"]..")", OBJECT, 194569 };
+    };
 };
 ["UlduarB"] = {
     ZoneName = { BabbleZone["Ulduar"].." [B] ("..BabbleSubZone["The Antechamber"]..")", 4273 };
@@ -2327,6 +2191,8 @@ AtlasLoot_MapData = {
     MinLevel = "80";
     PlayerLimit = "10/25";
     Acronym = AL["Uldu"];
+    MapName = "DireMaul";
+    [1] = {
     { ORNG..AL["Key"]..": "..AL["Celestial Planetarium Key"], ITEM, 45796 };
     { BLUE.."B) "..AL["The Siege"] };
     { BLUE.."C) "..AL["The Keepers"] };
@@ -2339,6 +2205,7 @@ AtlasLoot_MapData = {
     { WHITE.."7) "..AL["Kologarn"], NPC, 32930 };
     { WHITE.."8) "..AL["Algalon the Observer"].." ("..AL["Optional"]..")" };
     { GREN.."5') "..BabbleSubZone["The Antechamber"].." ("..AL["Teleporter"]..")", OBJECT, 194569 };
+    };
 };
 ["UlduarC"] = {
     ZoneName = { BabbleZone["Ulduar"].." [C] ("..AL["The Keepers"]..")", 4273 };
@@ -2347,6 +2214,8 @@ AtlasLoot_MapData = {
     MinLevel = "80";
     PlayerLimit = "10/25";
     Acronym = AL["Uldu"];
+    MapName = "DireMaul";
+    [1] = {
     { BLUE.."C) "..BabbleSubZone["The Antechamber"] };
     { BLUE.."D) "..BabbleSubZone["The Spark of Imagination"] };
     { BLUE.."E) "..BabbleSubZone["The Descent into Madness"] };
@@ -2356,6 +2225,7 @@ AtlasLoot_MapData = {
     { WHITE.."12) "..AL["Freya"], NPC, 32906 };
     { GREN.."6') "..BabbleSubZone["The Shattered Walkway"].." ("..AL["Teleporter"]..")", OBJECT, 194569 };
     { GREN.."7') "..BabbleSubZone["The Conservatory of Life"].." ("..AL["Teleporter"]..")", OBJECT, 194569 };
+    };
 };
 ["UlduarD"] = {
     ZoneName = { BabbleZone["Ulduar"].." [D] ("..BabbleSubZone["The Spark of Imagination"]..")", 4273 };
@@ -2364,9 +2234,12 @@ AtlasLoot_MapData = {
     MinLevel = "80";
     PlayerLimit = "10/25";
     Acronym = AL["Uldu"];
+    MapName = "DireMaul";
+    [1] = {
     { BLUE.."D) "..AL["The Keepers"] };
     { WHITE.."13) "..AL["Mimiron"], NPC, 33412 };
     { GREN.."8') "..BabbleSubZone["The Spark of Imagination"].." ("..AL["Teleporter"]..")", OBJECT, 194569 };
+    };
 };
 ["UlduarE"] = {
     ZoneName = { BabbleZone["Ulduar"].." [E] ("..BabbleSubZone["The Descent into Madness"]..")", 4273 };
@@ -2375,10 +2248,13 @@ AtlasLoot_MapData = {
     MinLevel = "80";
     PlayerLimit = "10/25";
     Acronym = AL["Uldu"];
+    MapName = "DireMaul";
+    [1] = {
     { BLUE.."E) "..AL["The Keepers"] };
     { WHITE.."14) "..AL["General Vezax"], NPC, 33271 };
     { WHITE.."15) "..AL["Yogg-Saron"], NPC, 33288 };
     { GREN.."9') "..BabbleSubZone["The Prison of Yogg-Saron"].." ("..AL["Teleporter"]..")", OBJECT, 194569 };
+    };
 };
 ["UlduarHallsofLightning"] = {
     ZoneName = { BabbleZone["Ulduar"]..": "..BabbleZone["Halls of Lightning"], 4272 };
@@ -2387,11 +2263,14 @@ AtlasLoot_MapData = {
     MinLevel = "75";
     PlayerLimit = "5";
     Acronym = AL["HoL"];
+    MapName = "DireMaul";
+    [1] = {
     { BLUE.."A) "..AL["Entrance"] };
     { WHITE.."1) "..AL["General Bjarngrim"].." ("..AL["Wanders"]..")", NPC, 28586 };
     { WHITE.."2) "..AL["Volkhan"], NPC, 28587 };
     { WHITE.."3) "..AL["Ionar"], NPC, 28546 };
     { WHITE.."4) "..AL["Loken"], NPC, 28923 };
+    };
 };
 ["UlduarHallsofStone"] = {
     ZoneName = { BabbleZone["Ulduar"]..": "..BabbleZone["Halls of Stone"], 4264 };
@@ -2400,6 +2279,8 @@ AtlasLoot_MapData = {
     MinLevel = "72";
     PlayerLimit = "5";
     Acronym = AL["HoS"];
+    MapName = "DireMaul";
+    [1] = {
     { BLUE.."A) "..AL["Entrance"] };
     { WHITE.."1) "..AL["Elder Yurauk"].." ("..AL["Lunar Festival"]..")", NPC, 30535 };
     { WHITE.."2) "..AL["Krystallus"], NPC, 27977 };
@@ -2407,6 +2288,7 @@ AtlasLoot_MapData = {
     { WHITE.."4) "..AL["Brann Bronzebeard"], NPC, 28070 };
     { WHITE.."5) "..AL["Tribunal Chest"], OBJECT, 190586 };
     { WHITE.."6) "..AL["Sjonnir the Ironshaper"], NPC, 27978 };
+    };
 };
 ["UtgardeKeep"] = {
     ZoneName = { BabbleZone["Utgarde Keep"]..": "..BabbleZone["Utgarde Keep"], 206 };
@@ -2415,6 +2297,8 @@ AtlasLoot_MapData = {
     MinLevel = "65";
     PlayerLimit = "5";
     Acronym = AL["UK, Keep"];
+    MapName = "DireMaul";
+    [1] = {
     { BLUE.."A) "..AL["Entrance"] };
     { BLUE..INDENT..AL["Dark Ranger Marrah"], NPC, 24137 };
     { BLUE.."B-C) "..AL["Connection"] };
@@ -2423,6 +2307,7 @@ AtlasLoot_MapData = {
     { WHITE.."3) "..AL["Dalronn the Controller"], NPC, 24201 };
     { WHITE..INDENT..AL["Skarvald the Constructor"], NPC, 24200 };
     { WHITE.."4) "..AL["Ingvar the Plunderer"], NPC, 23980 };
+    };
 };
 ["UtgardePinnacle"] = {
     ZoneName = { BabbleZone["Utgarde Keep"]..": "..BabbleZone["Utgarde Pinnacle"], 1196 };
@@ -2431,6 +2316,8 @@ AtlasLoot_MapData = {
     MinLevel = "75";
     PlayerLimit = "5";
     Acronym = AL["UP, Pinn"];
+    MapName = "DireMaul";
+    [1] = {
     { BLUE.."A) "..AL["Entrance"] };
     { BLUE..INDENT..AL["Brigg Smallshanks"], NPC, 30871 };
     { WHITE.."1) "..AL["Svala Sorrowgrave"], NPC, 26668 };
@@ -2438,6 +2325,7 @@ AtlasLoot_MapData = {
     { WHITE.."3) "..AL["Skadi the Ruthless"], NPC, 26693 };
     { WHITE.."4) "..AL["Elder Chogan'gada"].." ("..AL["Lunar Festival"]..")", NPC, 30538 };
     { WHITE.."5) "..AL["King Ymiron"], NPC, 26861 };
+    };
 };
 ["VaultOfArchavon"] = {
     ZoneName = { BabbleZone["Vault of Archavon"], 4603 };
@@ -2446,11 +2334,14 @@ AtlasLoot_MapData = {
     MinLevel = "80";
     PlayerLimit = "10/25";
     Acronym = AL["VoA"];
+    MapName = "DireMaul";
+    [1] = {
     { BLUE.."A) "..AL["Entrance"] };
     { WHITE.."1) "..AL["Archavon the Stone Watcher"], NPC, 31125 };
     { WHITE.."2) "..AL["Emalon the Storm Watcher"], NPC, 33993 };
     { WHITE.."3) "..AL["Koralon the Flame Watcher"], NPC, 35013 };
     { WHITE.."4) "..AL["Toravon the Ice Watcher"], NPC, 38433 };
+    };
 };
 ["VioletHold"] = {
     ZoneName = { BabbleZone["The Violet Hold"], 4415 };
@@ -2459,6 +2350,8 @@ AtlasLoot_MapData = {
     MinLevel = "70";
     PlayerLimit = "5";
     Acronym = AL["VH"];
+    MapName = "DireMaul";
+    [1] = {
     { ORNG..AL["Key"]..": "..AL["The Violet Hold Key"], ITEM, 42482 };
     { BLUE.."A) "..AL["Entrance"] };
     { WHITE.."1) "..AL["Erekem"].." ("..AL["Random"]..")", NPC, 29315 };
@@ -2468,6 +2361,6 @@ AtlasLoot_MapData = {
     { WHITE.."4) "..AL["Moragg"].." ("..AL["Random"]..")", NPC, 29316 };
     { WHITE.."5) "..AL["Lavanthor"].." ("..AL["Random"]..")", NPC, 29312 };
     { WHITE.."6) "..AL["Cyanigosa"].." ("..AL["Wave 18"]..")", NPC, 31134 };
+    };
 };
 };
-end

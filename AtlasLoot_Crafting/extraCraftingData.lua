@@ -19,6 +19,7 @@ AtlasLoot_CraftingData["AquireType"] = {
 			[5] =  {  	AL["DAILY_COOKING_MEAT"], BabbleZone["Shattrath"], 0, 0 },
 			[6] =  {  	AL["DAILY_COOKING_FISH"], BabbleZone["Shattrath"], 0, 0 },
 			[7] =  {  	AL["DAILY_FISHING_SHATT"], BabbleZone["Shattrath"], 0, 0 },
+			[8] = 		AL["Trainer/Book of Artisans"],
 			[9] =    	AL["CRAFTED_ENGINEERS"] ,
 			[10] = {  	AL["ONYXIA_HEAD_QUEST"], BabbleZone["Onyxia's Lair"], 0, 0 },
 			[11] = {  	AL["EDGE_OF_MADNESS"], BabbleZone["Zul'Gurub"], 0, 0 },

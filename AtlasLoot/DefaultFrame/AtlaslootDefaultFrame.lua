@@ -64,6 +64,55 @@ function AtlasLoot:ShowInstance()
     end
 end
 
+
+--Expand Frame Size
+function AtlasLoot:ExpandFrame(setup, updatedb)
+    local function buttonResize(expanded)
+        if expanded then
+            for num = 1, 30 do
+                _G["AtlasLootItem_"..num.."_Name"]:SetSize(400,12)
+            end
+            AtlasLootItem_1:ClearAllPoints()
+            AtlasLootItem_1:SetPoint("TOP", "AtlasLootItemsFrame", "TOP",-180,-35);
+            AtlasLootItem_16:ClearAllPoints()
+            AtlasLootItem_16:SetPoint("TOP", "AtlasLootItemsFrame", "TOP", 180,-35);
+        else
+            for num = 1, 30 do
+                _G["AtlasLootItem_"..num.."_Name"]:SetSize(205,12)
+            end
+            AtlasLootItem_1:ClearAllPoints()
+            AtlasLootItem_1:SetPoint("TOP", "AtlasLootItemsFrame", "TOP",-125,-35);
+            AtlasLootItem_16:ClearAllPoints()
+            AtlasLootItem_16:SetPoint("TOP", "AtlasLootItemsFrame", "TOP", 125,-35);
+        end
+    end
+    local function expand()
+        AtlasLootDefaultFrame:SetSize(1110,690);
+        AtlasLootDefaultFrame_LootBackground:SetSize(770,515)
+        AtlasLootItemsFrame:SetSize(765,510)
+    end
+    local function compact()
+        AtlasLootDefaultFrame:SetSize(880,690);
+        AtlasLootDefaultFrame_LootBackground:SetSize(540,515)
+        AtlasLootItemsFrame:SetSize(535,510)
+    end
+    if setup then
+        expand()
+        buttonResize(true)
+    else
+        if not ATLASLOOT_FRAMEEXPANDED then
+            expand()
+            buttonResize(true)
+            ATLASLOOT_FRAMEEXPANDED = true
+        else
+            compact()
+            buttonResize(false)
+            ATLASLOOT_FRAMEEXPANDED = false
+        end
+    end
+    if updatedb then AtlasLoot.db.profile.FrameExpanded = ATLASLOOT_FRAMEEXPANDED end
+end
+
 --[[
 AtlasLootDefaultFrame_OnHide:
 When we close the loot browser, re-bind the item table to Atlas
@@ -111,6 +160,8 @@ function AtlasLoot:DewDropSubMenuClick(tablename)
     AtlasLoot:ShowItemsFrame(tablename, "AtlasLoot_Data", tablenum);
 end
 local WHITE = "|cffFFFFFF";
+
+--for a adding a divider to dew drop menus 
 function AtlasLoot:AddDividerLine(maxLenght)
     local text = WHITE.."----------------------------------------------------------------------------------------------------"
     AtlasLoot_Dewdrop:AddLine(
@@ -286,6 +337,42 @@ function AtlasLoot:DewdropOpen()
         )
     end
     AtlasLoot_Dewdrop:Open(frame)
+end
+
+function AtlasLoot:OptionsDropDownOpen(self)
+    if AtlasLoot_Dewdrop:IsOpen(self) then AtlasLoot_Dewdrop:Close() return end
+    local loaded
+    if not loaded then
+        AtlasLoot_Dewdrop:Register(self,
+            'point', function(parent)
+                return "TOP", "BOTTOM"
+            end,
+            'children', function(level, value)
+                AtlasLoot_Dewdrop:AddLine(
+                    "text", "Expanded frame",
+                    "func", function() AtlasLoot:ExpandFrame(false, true) end,
+                    'tooltipTitle',"Toggle expanded loot frame",
+                    'closeWhenClicked', true,
+                    'textHeight', 12,
+                    'textWidth', 12,
+                    "checked", ATLASLOOT_FRAMEEXPANDED
+                    );
+                AtlasLoot_Dewdrop:AddLine(
+                    "text", "Hide recipe source",
+                    "func", function() AtlasLoot.db.profile.recipeExtraInfoSwitch = not AtlasLoot.db.profile.recipeExtraInfoSwitch end,
+                    'tooltipTitle',"Toggle showing recipe only while told CTRL",
+                    'closeWhenClicked', true,
+                    'textHeight', 12,
+                    'textWidth', 12,
+                    "checked", AtlasLoot.db.profile.recipeExtraInfoSwitch
+                    );
+                --Close button
+                AtlasLoot:CloseDewDrop(true,35)
+            end,
+            'dontHook', true
+        )
+    end 
+    AtlasLoot_Dewdrop:Open(self)
 end
 
 --[[

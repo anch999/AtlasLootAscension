@@ -1657,7 +1657,7 @@ AtlasLoot_Data["BlackwingLair"] = {
 AtlasLoot_Data["DireMaulEast"] = {
 	Name = BabbleZone["Dire Maul"] .. " East";
 	Type = "ClassicDungeonExt";
-	Map = "DireMaulEast";
+	Map = "DireMaul";
 	{
 		Name = BabbleBoss["Pusillin"];
 		{ 1, 18267, "", "=q2=Recipe: Runn Tum Tuber Surprise", "=ds=#p3# (275)", "", "71.55%" };
@@ -1760,7 +1760,7 @@ AtlasLoot_Data["DireMaulEast"] = {
 AtlasLoot_Data["DireMaulNorth"] = {
 	Name = BabbleZone["Dire Maul"] .. " North";
 	Type = "ClassicDungeonExt";
-	Map = "DireMaulNorth";
+	Map = "DireMaul";
 	{
 		Name = BabbleBoss["Guard Mol'dar"];
 		{ 1, 18496, "", "=q3=Heliotrope Cloak", "=ds=#s4#", "", "4.68%" };
@@ -1901,7 +1901,7 @@ AtlasLoot_Data["DireMaulNorth"] = {
 AtlasLoot_Data["DireMaulWest"] = {
 	Name = BabbleZone["Dire Maul"] .. " West";
 	Type = "ClassicDungeonExt";
-	Map = "DireMaulWest";
+	Map = "DireMaul";
 	{
 		Name = BabbleBoss["Tendris Warpwood"];
 		{ 1, 18390, "", "=q3=Tanglemoss Leggings", "=ds=#s11#, #a2#", "", "22.55%" };
@@ -2292,7 +2292,7 @@ AtlasLoot_Data["RazorfenKraul"] = {
 
 AtlasLoot_Data["Scarlet Monastery"] = {
 	Name = BabbleZone["Scarlet Monastery"];
-	Map = "SMArmory";
+	Map = "ScarletMonastery";
 	{
 		Name = "Armory";
 		{ 1, 7719, "", "=q3=Raging Berserker's Helm", "=ds=#s1#, #a3#", "", "30.62%" };

@@ -155,13 +155,6 @@ function AtlasLoot:OnEnable()
 		};
     end
 
-	if IsAddOnLoaded("Atlas") then
-		AtlasLoot:LoadMapData();
-		ATLASLOOT_ATLASLOADED = true;
-		AtlasLootDefaultFrame_MapButton:Enable();
-		AtlasLootDefaultFrame_MapSelectButton:Enable();
-	end
-
 	if IsAddOnLoaded("TomTom") then
 		ATLASLOOT_TOMTOM_LOADED = true;
 	end
@@ -255,6 +248,9 @@ function AtlasLoot:OnEnable()
 	AtlasLoot:LoadItemIDsDatabase();
 	AtlasLoot:LoadTradeskillRecipes();
 	AtlasLoot:PopulateProfessions();
+
+	ATLASLOOT_FRAMEEXPANDED = AtlasLoot.db.profile.FrameExpanded
+	if ATLASLOOT_FRAMEEXPANDED then AtlasLoot:ExpandFrame(true) end
 end
 
 function AtlasLoot_Reset(data)
@@ -360,8 +356,8 @@ function AtlasLoot:CleandataID(newID, listnum)
 	return newID;
 end
 
-function AtlasLoot:RecipeSource(itemID)
-	local craftingData = AtlasLoot_CraftingData["ExtraCraftingData"][itemID]
+function AtlasLoot:RecipeSource(spellID)
+	local craftingData = AtlasLoot_CraftingData["ExtraCraftingData"][spellID]
 	if not craftingData then return end
 	local data = {}
 	 --extra information on where to find the recipe
@@ -568,7 +564,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 	local dataSource = _G[dataSource_backup] or AtlasLoot_Data;
 
 	-- Check to see if Atlas is loaded and the table has a map
-	if dataSource_backup ~= "AtlasLoot_TokenData" and dataSource[dataID].Map and ATLASLOOT_ATLASLOADED then
+	if dataSource_backup ~= "AtlasLoot_TokenData" and dataSource[dataID].Map then
 		AtlasLootDefaultFrame_MapButton:Enable();
 		AtlasLootDefaultFrame_MapSelectButton:Enable();
 		-- Stops map reseting to default while still in the same raid/instance table

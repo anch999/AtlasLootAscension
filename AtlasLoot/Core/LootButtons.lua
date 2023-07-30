@@ -210,7 +210,7 @@ function AtlasLootItem_OnEnter(self)
                 end
             elseif craftingData then
                 AtlasLootTooltip:AddLine(" ")
-                AtlasLootTooltip:AddLine(AL["Hold Control for source"])
+                AtlasLootTooltip:AddLine(WHITE..AL["Hold CTRL for source"])
             end
 
             local hasSpace = false
@@ -652,24 +652,6 @@ function AtlasLoot:ItemContextMenu(itemID, itemTexture, itemName, lootPage, sour
                             );
                         end
                     end
-                        AtlasLoot:AddDividerLine(35)
-                        local text, tooltip
-                        if AtlasLoot.db.profile.recipeExtraInfoSwitch then
-                            text = "Show recipe source"
-                            tooltip = "Click to show recipe source in tooltips"
-                        else
-                            text = "Hide recipe source"
-                            tooltip = "Click to only show recipe while holding control"
-                        end
-                        AtlasLoot_Dewdrop:AddLine(
-                        "text", text,
-                        "func", function() AtlasLoot.db.profile.recipeExtraInfoSwitch = not AtlasLoot.db.profile.recipeExtraInfoSwitch end,
-                        'tooltipTitle',tooltip,
-                        'closeWhenClicked', true,
-                        'textHeight', 12,
-                        'textWidth', 12,
-                        "notCheckable", true
-                        );
             elseif level == 2 then
                 if value == "OwnWishlists" then
                     for k,v in pairs(AtlasLootWishList["Own"]) do

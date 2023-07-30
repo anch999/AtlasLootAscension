@@ -456,7 +456,7 @@ AtlasLoot_Data["AuchShadowLab"] = {
 AtlasLoot_Data["BlackTemple"] = {
 	Name = BabbleZone["Black Temple"];
 	Type = "BCRaid";
-	Map = "BlackTempleStart";
+	Map = "BlackTemple";
 	{
 		Name = BabbleBoss["High Warlord Naj'entus"];
 		{ 1, 32239, "", "=q4=Slippers of the Seacaller", "=ds=#s12#, #a1#", "", "15%" };
@@ -1691,7 +1691,7 @@ AtlasLoot_Data["HCMagtheridon"] = {
 AtlasLoot_Data["Karazhan"] = {
 	Name = "Karazhan";
 	Type = "BCRaid";
-	Map = "KarazhanStart";
+	Map = "Karazhan";
 	Loadfirst = 3;
 	{
 		Name = "Charred Bone Fragment (" .. AL["Quest Item"] .. ")";
