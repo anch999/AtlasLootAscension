@@ -51,8 +51,8 @@ end
 
 -- Show the Instance you are in
 function AtlasLoot:ShowInstance()
-    for i, v in pairs(AtlasLoot_SubMenus) do
-        for n, t in ipairs(v) do
+    for _, v in pairs(AtlasLoot_SubMenus) do
+        for _, t in ipairs(v) do
             if t[4] == BabbleZone[GetRealZoneText()] then
                 ATLASLOOT_CURRENTTABLE = v.SubMenu;
                 ATLASLOOT_LASTMODULE = v.Module;

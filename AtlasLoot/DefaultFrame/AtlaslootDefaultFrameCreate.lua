@@ -1,5 +1,6 @@
 local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot");
 local BLUE = "|cff6666ff";
+local WHITE = "|cFFFFFFFF"
 
     --Main AtlasLoot Frame
     local mainframe = CreateFrame("FRAME", "AtlasLootDefaultFrame", UIParent);
@@ -607,14 +608,14 @@ function AtlasLoot:SubTableScrollFrameUpdate(tablename, dataSource, tablenum)
         local value = i + offset
         subtableFrame.rows[i]:SetChecked(false);
         subtableFrame.rows[i]:SetHighlightTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD");
-        if value <= maxValue and _G[dataSource][tablename][value] and tablename ~= "SearchMENU" then
+        if value <= maxValue and (_G[dataSource][tablename][value] or _G[dataSource][tablename][tablenum][value]) and tablename ~= "SearchMENU" then
             local row = subtableFrame.rows[i]
                 row.dataSource = dataSource;
                 row.tablename = tablename;
                 row.tablenum = value;
             if dataSource == "AtlasLoot_MapData" then
                 local text = _G[dataSource][tablename][tablenum][value][1]
-                if value ==  1 then text = BLUE..text end
+                if value ==  1 then text = BLUE..text else text = WHITE..text end
                 row.Text:SetText(text);
                 row:SetScript("OnEnter", function(self)
                     GameTooltip:SetOwner(self, "ANCHOR_TOP");
@@ -711,7 +712,22 @@ AtlasLoot_MapDetailTile10:SetPoint("TOPLEFT", AtlasLoot_MapDetailTile9,"TOPRIGHT
 AtlasLoot_MapDetailTile11:SetPoint("TOPLEFT", AtlasLoot_MapDetailTile10,"TOPRIGHT")
 AtlasLoot_MapDetailTile12:SetPoint("TOPLEFT", AtlasLoot_MapDetailTile11,"TOPRIGHT")
 
-
+local playerPin = CreateFrame("Button", "AtlasLoot_PlayerMapPin", AtlasLootDefaultFrame_Map)
+    playerPin:SetSize(35,35)
+    playerPin:SetFrameStrata("HIGH")
+    playerPin.texture = playerPin:CreateTexture(nil, "ARTWORK");
+    playerPin.texture:SetTexture("Interface\\Minimap\\MinimapArrow");
+    playerPin.texture:SetSize(35,35);
+    playerPin.texture:SetPoint("CENTER",0,0);
+    playerPin:SetScript("OnEnter", function(self)
+        GameTooltip:SetOwner(self, "ANCHOR_TOPLEFT");
+        GameTooltip:AddLine("You are here")
+        GameTooltip:Show()
+    end)
+    playerPin:SetScript("OnLeave", function()
+        GameTooltip:Hide()
+    end)
+    playerPin:Hide()
 
     -- Map Button
 local mapbtn = CreateFrame("Button","AtlasLootDefaultFrame_MapButton", AtlasLootDefaultFrame,"OptionsButtonTemplate");
