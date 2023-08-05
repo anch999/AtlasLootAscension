@@ -898,7 +898,7 @@ AtlasLoot_Data["CoTHyjal"] = {
 		{ 4, 30896, "", "=q4=Glory of the Defender", "=ds=#s5#, #a4#", "", "15%" };
 		{ 5, 30897, "", "=q4=Girdle of Hope", "=ds=#s10#, #a4#", "", "15%" };
 		{ 6, 30901, "", "=q4=Boundless Agony", "=ds=#h1#, #w4#", "", "16%" };
-		{ 16, 31092, "", "=q4=Gloves of the Forgotten Conqueror", "=q1=#m1# =ds=#c4#, #c5#, #c8#", "", "100%" };
+		{ 16, 31092, "", "=q4=Gloves of the Forgotten Conqueror", "", "", "100%", lootTable = {"T6HAND","Token"} };
 		{ 18, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%" };
 		{ 19, 32428, "", "=q4=Heart of Darkness", "=ds=#e15#", "", "100%" };
 		{ 20, 400751, "", "=Raider's Commendation", "=ds=#e15#", "", "100%" };
@@ -918,7 +918,7 @@ AtlasLoot_Data["CoTHyjal"] = {
 		{ 11, 30908, "", "=q4=Apostle of Argus", "=ds=#h2#, #w9#", "", "15%" };
 		{ 12, 30909, "", "=q4=Antonidas's Aegis of Rapt Concentration", "=ds=#w8#", "", "15%" };
 		{ 13, 30906, "", "=q4=Bristleblitz Striker", "=ds=#w2#", "", "16%" };
-		{ 16, 31097, "", "=q4=Helm of the Forgotten Conqueror", "=q1=#m1# =ds=#c4#, #c5#, #c8#", "", "70%" };
+		{ 16, 31097, "", "=q4=Helm of the Forgotten Conqueror", "", "", "100%", lootTable = {"T6HEAD","Token"} };
 		{ 18, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%" };
 		{ 19, 32428, "", "=q4=Heart of Darkness", "=ds=#e15#", "", "100%" };
 		{ 20, 400751, "", "=Raider's Commendation", "=ds=#e15#", "", "100%" };
