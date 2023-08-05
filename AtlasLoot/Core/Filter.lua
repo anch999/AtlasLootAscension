@@ -175,11 +175,11 @@ function AtlasLoot_FilterEnableButton(self, btnclick)
 			AtlasLootFilterCheck:SetChecked(true);
 		end
 	else
-		if ATLASLOOT_FILTER_ENABLE then
-			ATLASLOOT_FILTER_ENABLE = false;
+		if AtlasLoot.filterEnable then
+			AtlasLoot.filterEnable = false;
 			AtlasLoot:ShowItemsFrame(AtlasLootItemsFrame.refreshFilter[1], AtlasLootItemsFrame.refreshFilter[2], AtlasLootItemsFrame.refreshFilter[3]);
 		else
-			ATLASLOOT_FILTER_ENABLE = true
+			AtlasLoot.filterEnable = true
 			AtlasLoot:HideFilteredItems();
 		end
 	end

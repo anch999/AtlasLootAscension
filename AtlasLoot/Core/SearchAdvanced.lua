@@ -226,7 +226,7 @@ function AtlasLoot_AdvancedSearchShow()
 
     AtlasLootDefaultFrame_AdvancedSearchPanel:Show();
 
-    ATLASLOOT_CURRENTTYPE = "Search";
+    AtlasLoot.CurrentType = "Search";
 	AtlasLoot:ScrollFrameUpdate();
     AtlasLoot:SubTableScrollFrameUpdate("EmptyTable","AtlasLoot_Data");
 end

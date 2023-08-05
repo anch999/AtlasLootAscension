@@ -33,10 +33,6 @@ function AtlasLoot_GetEnchantLink(enchantID)
    return EnchantLink
 end
 
-local function AtlasLoot_SetCraftingTooltip()
-
-end
-
 --------------------------------------------------------------------------------
 -- Item OnEnter
 -- Called when a loot item is moused over
@@ -280,7 +276,7 @@ end
 -- Called when a loot item is clicked on
 --------------------------------------------------------------------------------
 function AtlasLootItem_OnClick(self ,arg1)
-    AtlasLoot_Dewdrop:Close()
+    AtlasLoot.Dewdrop:Close()
     local isItem, spellID;
 	local color = strsub(_G["AtlasLootItem_"..self:GetID().."_Name"]:GetText(), 1, 10);
 	local name = strsub(_G["AtlasLootItem_"..self:GetID().."_Name"]:GetText(), 11);
@@ -293,14 +289,14 @@ function AtlasLootItem_OnClick(self ,arg1)
         local iteminfo = GetItemInfo(self.itemID);
         local itemName, itemLink, itemQuality, itemLevel, itemMinLevel, itemType, itemSubType, itemCount, itemEquipLoc, itemTexture = GetItemInfo(self.itemID);
         --If shift-clicked, link in the chat window
-        if arg1=="RightButton" and ATLASLOOT_ITEM_UNLOCK then
+        if arg1=="RightButton" and AtlasLoot.itemUnlock then
             --move wishlist item down
             AtlasLoot:MoveWishlistItem("Down",self.number);
-        elseif IsAltKeyDown() and arg1=="LeftButton" and ATLASLOOT_ITEM_UNLOCK then
+        elseif IsAltKeyDown() and arg1=="LeftButton" and AtlasLoot.itemUnlock then
             --add custom wishlist header
             StaticPopup_Show("ATLASLOOT_ADD_CUSTOMHEADER");
             StaticPopupDialogs.ATLASLOOT_ADD_CUSTOMHEADER.num = self.number;
-        elseif (arg1=="LeftButton") and ATLASLOOT_ITEM_UNLOCK then
+        elseif (arg1=="LeftButton") and AtlasLoot.itemUnlock then
             --move wishlist item up
             AtlasLoot:MoveWishlistItem("Up",self.number);
         elseif(arg1=="RightButton" and self.itemID ~= 0 and IsAltKeyDown() and AtlasLootItemsFrame.refresh[2] ~= "AtlasLoot_CurrentWishList") then
@@ -343,7 +339,7 @@ function AtlasLootItem_OnClick(self ,arg1)
             if self.sourcePage[2] == "Source" then
                 dataID, dataSource, dataPage = strsplit("|", self.sourcePage[1]);
                 if(dataID and dataSource) then
-                    ATLASLOOT_BACKENABLED = true;
+                    AtlasLoot.backEnabled = true;
                 end
             elseif self.sourcePage[2] == "Token" then
                 --Create token table if there isnt one
@@ -388,7 +384,7 @@ function AtlasLootItem_OnClick(self ,arg1)
             if self.sourcePage[2] == "Source" then
                 dataID, dataSource, dataPage = strsplit("|", self.sourcePage[1]);
                 if(dataID and dataSource) then
-                    ATLASLOOT_BACKENABLED = true;
+                    AtlasLoot.backEnabled = true;
                 end
             elseif self.sourcePage[2] == "Token" then
                 --Create token table if there isnt one
@@ -511,21 +507,21 @@ function AtlasLoot:AddWayPoint(waypoint)
 end
 
 function AtlasLoot:ItemContextMenu(itemID, itemTexture, itemName, lootPage, sourcePage, self, Type, number, craftingData)
-    if AtlasLoot_Dewdrop:IsOpen(self) then AtlasLoot_Dewdrop:Close() return end
-    AtlasLoot_Dewdrop:Register(self,
+    if AtlasLoot.Dewdrop:IsOpen(self) then AtlasLoot.Dewdrop:Close() return end
+    AtlasLoot.Dewdrop:Register(self,
         'point', function(parent)
             return "TOP", "BOTTOM"
         end,
         'children', function(level, value)
             if level == 1 then
-                AtlasLoot_Dewdrop:AddLine(
+                AtlasLoot.Dewdrop:AddLine(
                     'text', AL["Links"],
                     'notCheckable', true,
                     'isTitle', true,
                     'textHeight', 13,
                     'textWidth', 13
                 )
-                AtlasLoot_Dewdrop:AddLine(
+                AtlasLoot.Dewdrop:AddLine(
                     'text', ORANGE..AL["Open In AscensionDB"],
                     'func', function(arg1,arg2) AtlasLoot:OpenDBURL(arg1,arg2) end,
                     'arg1',itemID,
@@ -535,7 +531,7 @@ function AtlasLoot:ItemContextMenu(itemID, itemTexture, itemName, lootPage, sour
                     'notCheckable', true,
                     'closeWhenClicked', true
                 )
-                AtlasLoot_Dewdrop:AddLine(
+                AtlasLoot.Dewdrop:AddLine(
                         "text", GREEN..AL["Guild"],
                         "func", function() AtlasLoot:Chatlink(itemID,"GUILD",Type) end,
                         'closeWhenClicked', true,
@@ -543,7 +539,7 @@ function AtlasLoot:ItemContextMenu(itemID, itemTexture, itemName, lootPage, sour
                         'textWidth', 12,
                         "notCheckable", true
                     );
-                    AtlasLoot_Dewdrop:AddLine(
+                    AtlasLoot.Dewdrop:AddLine(
                         "text", LIGHTBLUE..AL["Party"],
                         "func", function() AtlasLoot:Chatlink(itemID,"PARTY",Type) end,
                         'closeWhenClicked', true,
@@ -551,7 +547,7 @@ function AtlasLoot:ItemContextMenu(itemID, itemTexture, itemName, lootPage, sour
                         'textWidth', 12,
                         "notCheckable", true
                     );
-                    AtlasLoot_Dewdrop:AddLine(
+                    AtlasLoot.Dewdrop:AddLine(
                         "text", ORANGE2..AL["Raid"],
                         "func", function() AtlasLoot:Chatlink(itemID,"RAID",Type) end,
                         'closeWhenClicked', true,
@@ -560,7 +556,7 @@ function AtlasLoot:ItemContextMenu(itemID, itemTexture, itemName, lootPage, sour
                         "notCheckable", true
                     );
                     AtlasLoot:AddDividerLine(35)
-                    AtlasLoot_Dewdrop:AddLine(
+                    AtlasLoot.Dewdrop:AddLine(
                     'text', AL["Wishlists"],
                     'notCheckable', true,
                     'isTitle', true,
@@ -568,7 +564,7 @@ function AtlasLoot:ItemContextMenu(itemID, itemTexture, itemName, lootPage, sour
                     'textWidth', 13
                     )
                     if AtlasLootItemsFrame.refresh[2] == "AtlasLoot_CurrentWishList" then
-                        AtlasLoot_Dewdrop:AddLine(
+                        AtlasLoot.Dewdrop:AddLine(
                             "text", AL["Delete"],
                             "func", function() AtlasLoot_DeleteFromWishList(itemID,number); end,
                             'closeWhenClicked', true,
@@ -578,7 +574,7 @@ function AtlasLoot:ItemContextMenu(itemID, itemTexture, itemName, lootPage, sour
                         );
                     else
                         local listID = AtlasLootWishList["Options"][playerName]["DefaultWishList"]
-                        AtlasLoot_Dewdrop:AddLine(
+                        AtlasLoot.Dewdrop:AddLine(
                             "text", AL["Add To Default"],
                             "func", function() AtlasLoot_WishListAddDropClick(listID[1], listID[3], "", nil, itemID, itemTexture, itemName, lootPage, sourcePage) end,
                             'closeWhenClicked', true,
@@ -586,7 +582,7 @@ function AtlasLoot:ItemContextMenu(itemID, itemTexture, itemName, lootPage, sour
                             'textWidth', 12,
                             "notCheckable", true
                         );
-                        AtlasLoot_Dewdrop:AddLine(
+                        AtlasLoot.Dewdrop:AddLine(
                             "text", AL["Own Wishlists"],
                             "tooltipTitle", AL["Own Wishlists"],
                             "value", "OwnWishlists",
@@ -595,7 +591,7 @@ function AtlasLoot:ItemContextMenu(itemID, itemTexture, itemName, lootPage, sour
                             'textWidth', 12,
                             "notCheckable", true
                         );
-                        AtlasLoot_Dewdrop:AddLine(
+                        AtlasLoot.Dewdrop:AddLine(
                             "text", AL["Shared Wishlists"],
                             "tooltipTitle", AL["Shared Wishlists"],
                             "value", "SharedWishlists",
@@ -604,7 +600,7 @@ function AtlasLoot:ItemContextMenu(itemID, itemTexture, itemName, lootPage, sour
                             'textWidth', 12,
                             "notCheckable", true
                         );
-                        AtlasLoot_Dewdrop:AddLine(
+                        AtlasLoot.Dewdrop:AddLine(
                             "text", AL["Add Wishlist"],
                             "func", function() AtlasLoot:AddWishList() end,
                             'closeWhenClicked', true,
@@ -613,7 +609,7 @@ function AtlasLoot:ItemContextMenu(itemID, itemTexture, itemName, lootPage, sour
                             "notCheckable", true
                         );
                     end
-                    if ATLASLOOT_TOMTOM_LOADED then
+                    if AtlasLoot.TomTomLoaded then
                         if not AtlasLoot.db.profile.waypointList then AtlasLoot.db.profile.waypointList = {} end
                         local wayPoint
                         if (craftingData and AtlasLoot.db.profile.recipeExtraInfoSwitch and IsControlKeyDown()) or (craftingData and not AtlasLoot.db.profile.recipeExtraInfoSwitch) then
@@ -631,14 +627,14 @@ function AtlasLoot:ItemContextMenu(itemID, itemTexture, itemName, lootPage, sour
                         if craftingData and wayPoint then
 
                             AtlasLoot:AddDividerLine(35)
-                            AtlasLoot_Dewdrop:AddLine(
+                            AtlasLoot.Dewdrop:AddLine(
                             'text', AL["Recipe Waypoints"],
                             'notCheckable', true,
                             'isTitle', true,
                             'textHeight', 13,
                             'textWidth', 13
                             )
-                            AtlasLoot_Dewdrop:AddLine(
+                            AtlasLoot.Dewdrop:AddLine(
                             "text", "Add pin to map",
                             "func", function()
                                 for _,v in pairs(wayPoint) do
@@ -656,7 +652,7 @@ function AtlasLoot:ItemContextMenu(itemID, itemTexture, itemName, lootPage, sour
                 if value == "OwnWishlists" then
                     for k,v in pairs(AtlasLootWishList["Own"]) do
                         if type(v) == "table" then
-                            AtlasLoot_Dewdrop:AddLine(
+                            AtlasLoot.Dewdrop:AddLine(
                                 "text", v.Name,
                                 "tooltipTitle", v.Name,
                                 'closeWhenClicked', true,
@@ -670,7 +666,7 @@ function AtlasLoot:ItemContextMenu(itemID, itemTexture, itemName, lootPage, sour
                 elseif value == "SharedWishlists" then
                     for k,v in pairs(AtlasLootWishList["Shared"]) do
                         if type(v) == "table" then
-                            AtlasLoot_Dewdrop:AddLine(
+                            AtlasLoot.Dewdrop:AddLine(
                                 "text", v.Name,
                                 "tooltipTitle", v.Name,
                                 'closeWhenClicked', true,
@@ -688,6 +684,6 @@ function AtlasLoot:ItemContextMenu(itemID, itemTexture, itemName, lootPage, sour
         end,
         'dontHook', true
     )
-    AtlasLoot_Dewdrop:Open(self)
+    AtlasLoot.Dewdrop:Open(self)
 end
 

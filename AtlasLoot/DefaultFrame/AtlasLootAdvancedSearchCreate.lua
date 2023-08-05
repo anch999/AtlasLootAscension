@@ -6,7 +6,7 @@ local framename = "AtlasLootDefaultFrame_AdvancedSearchPanel";
 
 --Create Main Search Panel
 local searchpanel = CreateFrame("FRAME", framename, AtlasLootDefaultFrame, nil);
-searchpanel:SetPoint("TOPLEFT", AtlasLootDefaultFrame_LootBackground, "TOPLEFT", 2, -2);
+searchpanel:SetPoint("TOPLEFT", AtlasLootDefaultFrame.lootBackground, "TOPLEFT", 2, -2);
 searchpanel:SetSize(510, 510);
 searchpanel.closebtn = CreateFrame("Button", framename.."_CloseButton", searchpanel, "UIPanelCloseButton");
 searchpanel.closebtn:SetPoint("TOPRIGHT", searchpanel, "TOPRIGHT", -10, -10);
@@ -237,8 +237,8 @@ function StreamingIcon_UpdateIcon(status, tooltip)
 	end
 end
 
-local streamIcon = CreateFrame("Frame", "AtlasLoot_SearchProgress", AtlasLootDefaultFrame_LootBackground);
-streamIcon:SetPoint("TOPRIGHT", AtlasLootDefaultFrame_LootBackground, "TOPRIGHT");
+local streamIcon = CreateFrame("Frame", "AtlasLoot_SearchProgress", AtlasLootDefaultFrame.lootBackground);
+streamIcon:SetPoint("TOPRIGHT", AtlasLootDefaultFrame.lootBackground, "TOPRIGHT");
 streamIcon:SetSize(48, 48);
 streamIcon.tooltip = "Searching...";
 streamIcon:EnableMouse(true);
@@ -278,5 +278,5 @@ streamIcon:SetScript("OnEnter",
 streamIcon:SetScript("OnLeave", GameTooltip_Hide);
 streamIcon:SetScript("OnShow", function(self) self:SetFrameLevel( (self:GetParent()):GetFrameLevel() + 1 ) end);
 
-streamIcon:SetPoint("TOPRIGHT", AtlasLootDefaultFrame_LootBackground, "TOPRIGHT");
+streamIcon:SetPoint("TOPRIGHT", AtlasLootDefaultFrame.lootBackground, "TOPRIGHT");
 streamIcon:Hide();]]

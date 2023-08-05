@@ -262,12 +262,12 @@ function AtlasLoot_ShowWishListDropDown(xitemID, xitemTexture, xitemName, xlootP
 		AtlasLoot_WishListAddDropClick("Own", AtlasLootWishList["Options"][playerName]["DefaultWishList"][3], "", nil)
 		return
 	else
-		if AtlasLoot_Dewdrop:IsOpen(button) then
-			AtlasLoot_Dewdrop:Close(1);
+		if AtlasLoot.Dewdrop:IsOpen(button) then
+			AtlasLoot.Dewdrop:Close(1);
 		else
 			local setOptions = function(level, value)
 				if level == 1 then
-					AtlasLoot_Dewdrop:AddLine(
+					AtlasLoot.Dewdrop:AddLine(
 						"text", AL["Own Wishlists"],
 						"tooltipTitle", AL["Own Wishlists"],
 						"value", "OwnWishlists",
@@ -278,7 +278,7 @@ function AtlasLoot_ShowWishListDropDown(xitemID, xitemTexture, xitemName, xlootP
 						"func", AtlasLoot_WishListAddDropClick,
 						"notCheckable", true
 					);
-					AtlasLoot_Dewdrop:AddLine(
+					AtlasLoot.Dewdrop:AddLine(
 						"text", AL["Shared Wishlists"],
 						"tooltipTitle", AL["Shared Wishlists"],
 						"value", "SharedWishlists",
@@ -289,7 +289,7 @@ function AtlasLoot_ShowWishListDropDown(xitemID, xitemTexture, xitemName, xlootP
 						"func", AtlasLoot_WishListAddDropClick,
 						"notCheckable", true
 					);
-					AtlasLoot_Dewdrop:AddLine(
+					AtlasLoot.Dewdrop:AddLine(
 						"text", AL["Add Wishlist"],
 						"func", function() AtlasLoot:AddWishList() end,
 						'closeWhenClicked', true,
@@ -301,7 +301,7 @@ function AtlasLoot_ShowWishListDropDown(xitemID, xitemTexture, xitemName, xlootP
 					if value == "OwnWishlists" then
 						for k,v in pairs(AtlasLootWishList["Own"]) do
 							if type(v) == "table" then
-								AtlasLoot_Dewdrop:AddLine(
+								AtlasLoot.Dewdrop:AddLine(
 									"text", v.Name,
 									"tooltipTitle", v.Name,
 									"func", AtlasLoot_WishListAddDropClick,
@@ -319,7 +319,7 @@ function AtlasLoot_ShowWishListDropDown(xitemID, xitemTexture, xitemName, xlootP
 					elseif value == "SharedWishlists" then
 						for k,v in pairs(AtlasLootWishList["Shared"]) do
 							if type(v) == "table" then
-								AtlasLoot_Dewdrop:AddLine(
+								AtlasLoot.Dewdrop:AddLine(
 									"text", v.Name,
 									"tooltipTitle", v.Name,
 									"func", AtlasLoot_WishListAddDropClick,
@@ -336,7 +336,7 @@ function AtlasLoot_ShowWishListDropDown(xitemID, xitemTexture, xitemName, xlootP
 						end
 					end
 				end
-				AtlasLoot_Dewdrop:AddLine(
+				AtlasLoot.Dewdrop:AddLine(
                 'text', AL["Close Menu"],
                 'textR', 0,
                 'textG', 1,
@@ -347,7 +347,7 @@ function AtlasLoot_ShowWishListDropDown(xitemID, xitemTexture, xitemName, xlootP
                 'notCheckable', true
             )
 			end
-			AtlasLoot_Dewdrop:Open(button,
+			AtlasLoot.Dewdrop:Open(button,
 				"point", function(parent)
 					return "TOP", "BOTTOM";
 				end,
@@ -467,13 +467,13 @@ Constructs the wishlist options category menu.
 ]]
 function AtlasLoot:WishListOptionsOpen()
 	local frame = AtlasLootItemsFrame_Wishlist_Options
-	if AtlasLoot_Dewdrop:IsOpen(frame) then AtlasLoot_Dewdrop:Close() return end
-	AtlasLoot_Dewdrop:Register(frame,
+	if AtlasLoot.Dewdrop:IsOpen(frame) then AtlasLoot.Dewdrop:Close() return end
+	AtlasLoot.Dewdrop:Register(frame,
 		'point', function(parent)
 			return "TOP", "BOTTOM"
 		end,
 		'children', function(level, value)
-				AtlasLoot_Dewdrop:AddLine(
+				AtlasLoot.Dewdrop:AddLine(
 					"text", AL["Add Wishlist"],
 					"func", function() AtlasLoot:AddWishList() end,
 					'textHeight', 12,
@@ -481,7 +481,7 @@ function AtlasLoot:WishListOptionsOpen()
 					'closeWhenClicked', true,
 					"notCheckable", true
 				);
-				AtlasLoot_Dewdrop:AddLine(
+				AtlasLoot.Dewdrop:AddLine(
 					"text", AL["Edit Wishlist"],
 					"func", function() AtlasLoot:EditWishList() end,
 					'textHeight', 12,
@@ -489,7 +489,7 @@ function AtlasLoot:WishListOptionsOpen()
 					'closeWhenClicked', true,
 					"notCheckable", true
 				);
-				AtlasLoot_Dewdrop:AddLine(
+				AtlasLoot.Dewdrop:AddLine(
 					"text", AL["Sort Wishlist"],
 					'textHeight', 12,
 					'textWidth', 12,
@@ -498,7 +498,7 @@ function AtlasLoot:WishListOptionsOpen()
 					"notCheckable", true
 				);
 				if  AtlasLootItemsFrame.refresh[2] == "AtlasLoot_CurrentWishList" and AtlasLoot_CurrentWishList["Show"].ListType == "Shared" then
-					AtlasLoot_Dewdrop:AddLine(
+					AtlasLoot.Dewdrop:AddLine(
 						"text", AL["Copy Wishlist To Own"],
 						'textHeight', 12,
 						'textWidth', 12,
@@ -508,7 +508,7 @@ function AtlasLoot:WishListOptionsOpen()
 					);
 				end
 				if AtlasLootItemsFrame.refresh[2] == "AtlasLoot_CurrentWishList" and AtlasLoot_CurrentWishList["Show"].ListType == "Own" then
-					AtlasLoot_Dewdrop:AddLine(
+					AtlasLoot.Dewdrop:AddLine(
 						"text", AL["Make Wishlist Default"],
 						'textHeight', 12,
 						'textWidth', 12,
@@ -517,7 +517,7 @@ function AtlasLoot:WishListOptionsOpen()
 						"notCheckable", true
 					);
 				end
-				AtlasLoot_Dewdrop:AddLine(
+				AtlasLoot.Dewdrop:AddLine(
 					"text", AL["Delete Wishlist"],
 					'textHeight', 12,
 					'textWidth', 12,
@@ -526,8 +526,8 @@ function AtlasLoot:WishListOptionsOpen()
 					"notCheckable", true
 				);
 				--Close button
-				AtlasLoot_Dewdrop:AddLine()
-				AtlasLoot_Dewdrop:AddLine(
+				AtlasLoot.Dewdrop:AddLine()
+				AtlasLoot.Dewdrop:AddLine(
 					'text', AL["Close Menu"],
 					'textHeight', 12,
 					'textWidth', 12,
@@ -540,7 +540,7 @@ function AtlasLoot:WishListOptionsOpen()
 			end,
 			'dontHook', true
 		)
-		AtlasLoot_Dewdrop:Open(frame)
+		AtlasLoot.Dewdrop:Open(frame)
 end
 
 -- **********************************************************************
@@ -579,10 +579,10 @@ StaticPopupDialogs["ATLASLOOT_DELETE_WISHLIST"] = {
 		else
 			AtlasLoot:ShowWishList(AtlasLoot_CurrentWishList["Show"].ListType, 1);
 		end
-		AtlasLoot_Dewdrop:Close(1);
+		AtlasLoot.Dewdrop:Close(1);
 	end,
 	OnCancel = function ()
-		AtlasLoot_Dewdrop:Close(1);
+		AtlasLoot.Dewdrop:Close(1);
 	end,
 	timeout = 0,
 	whileDead = 1,

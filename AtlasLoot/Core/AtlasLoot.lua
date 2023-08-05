@@ -6,11 +6,10 @@ Can be integrated with Atlas (http://www.atlasmod.com)
 
 Functions:
 AtlasLoot_OnEvent(event)
-AtlasLoot_ShowMenu()
-AtlasLoot_OnVariablesLoaded()
+AtlasLoot:OnEnable()
 AtlasLoot_SlashCommand(msg)
 AtlasLootOptions_Toggle()
-AtlasLoot_OnLoad()
+AtlasLoot:OnInitialize()
 AtlasLoot:ShowItemsFrame()
 AtlasLoot:NavButton_OnClick()
 AtlasLoot:IsLootTableAvailable(dataID)
@@ -27,30 +26,20 @@ AtlasLoot = LibStub("AceAddon-3.0"):NewAddon("AtlasLoot", "AceEvent-3.0", "AceTi
 local BabbleBoss = AtlasLoot_GetLocaleLibBabble("LibBabble-Boss-3.0")
 local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot");
 
---Establish version number and compatible version of Atlas
-local VERSION_MAJOR = "5";
-local VERSION_MINOR = "11";
-local VERSION_BOSSES = "04";
-ATLASLOOT_VERSION = "|cffFF8400AtlasLoot Ascension Edition|r";
---Now allows for multiple compatible Atlas versions.  Always put the newest first
-ATLASLOOT_CURRENT_ATLAS = {"1.17.1", "1.17.0"};
-ATLASLOOT_PREVIEW_ATLAS = {"1.17.3", "1.17.2"};
+AtlasLoot.Version = "|cffFF8400AtlasLoot Ascension Edition|r";
 
 ATLASLOOT_POSITION = AL["Position:"];
 ATLASLOOT_DEBUGMESSAGES = false;
 
---Standard indent to line text up with Atlas text
-ATLASLOOT_INDENT = "   ";
-
 --Make the Dewdrop menu in the standalone loot browser accessible here
-AtlasLoot_Dewdrop = AceLibrary("Dewdrop-2.0");
+AtlasLoot.Dewdrop = AceLibrary("Dewdrop-2.0");
 
 --Variable to cap debug spam
 ATLASLOOT_DEBUGSHOWN = false;
-ATLASLOOT_FILTER_ENABLE = false;
-ATLASLOOT_CURRENTTYPE = "Default";
-ATLASLOOT_TYPE = {};
-ATLASLOOT_BACKENABLED = false;
+AtlasLoot.filterEnable = false;
+AtlasLoot.CurrentType = "Default";
+AtlasLoot.type = {};
+AtlasLoot.backEnabled = false;
 
 -- Colours stored for code readability
 local GREY = "|cff999999";
@@ -127,15 +116,7 @@ StaticPopupDialogs["ATLASLOOT_SETUP"] = {
 };
 
 --[[
-AtlasLoot_ShowMenu:
-Legacy function used in Cosmos integration to open the loot browser
-]]
-function AtlasLoot_ShowMenu()
-	AtlasLootDefaultFrame:Show();
-end
-
---[[
-AtlasLoot_OnVariablesLoaded:
+AtlasLoot:OnEnable():
 Invoked by the VARIABLES_LOADED event.  Now that we are sure all the assets
 the addon needs are in place, we can properly set up the mod
 ]]
@@ -156,7 +137,7 @@ function AtlasLoot:OnEnable()
     end
 
 	if IsAddOnLoaded("TomTom") then
-		ATLASLOOT_TOMTOM_LOADED = true;
+		AtlasLoot.TomTomLoaded = true;
 	end
 
     --Add the loot browser to the special frames tables to enable closing wih the ESC key
@@ -192,29 +173,7 @@ function AtlasLoot:OnEnable()
 		AtlasLootCharDB.AtlasLootVersion = VERSION_MAJOR..VERSION_MINOR..VERSION_BOSSES;
 		AtlasLootOptions_Init();
 	end
-	--Adds an AtlasLoot button to the Feature Frame in Cosmos
-	if(EarthFeature_AddButton) then
-		EarthFeature_AddButton(
-			{
-				id = string.sub(ATLASLOOT_VERSION, 11, 28);
-				name = string.sub(ATLASLOOT_VERSION, 11, 28);
-				subtext = string.sub(ATLASLOOT_VERSION, 30, 39);
-				tooltip = "";
-				icon = "Interface\\Icons\\INV_Box_01";
-				callback = AtlasLoot_ShowMenu;
-				test = nil;
-			}
-	);
-	--Adds AtlasLoot to old style Cosmos installations
-	elseif(Cosmos_RegisterButton) then
-		Cosmos_RegisterButton(
-			string.sub(ATLASLOOT_VERSION, 11, 28),
-			string.sub(ATLASLOOT_VERSION, 11, 28),
-			"",
-			"Interface\\Icons\\INV_Box_01",
-			AtlasLoot_ShowMenu
-		);
-	end
+
 	--If EquipCompare is available, use it
 	if((EquipCompare_RegisterTooltip) and (AtlasLoot.db.profile.EquipCompare == true)) then
 		EquipCompare_RegisterTooltip(AtlasLootTooltip);
@@ -249,8 +208,8 @@ function AtlasLoot:OnEnable()
 	AtlasLoot:LoadTradeskillRecipes();
 	AtlasLoot:PopulateProfessions();
 
-	ATLASLOOT_FRAMEEXPANDED = AtlasLoot.db.profile.FrameExpanded
-	if ATLASLOOT_FRAMEEXPANDED then AtlasLoot:ExpandFrame(true) end
+	AtlasLoot.frameExpanded = AtlasLoot.db.profile.FrameExpanded
+	if AtlasLoot.frameExpanded then AtlasLoot:ExpandFrame(true) end
 end
 
 function AtlasLoot_Reset(data)
@@ -330,7 +289,7 @@ function AtlasLootOptions_Toggle()
 end
 
 --[[
-AtlasLoot_OnLoad:
+AtlasLoot:OnInitialize()
 Performs inital setup of the mod and registers it for further setup when
 the required resources are in place
 ]]
@@ -552,7 +511,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 
 	--Hide Map and reshow lootbackground
 	AtlasLootDefaultFrame_Map:Hide();
-    AtlasLootDefaultFrame_LootBackground:Show();
+    AtlasLootDefaultFrame.lootBackground:Show();
 	AtlasLootItemsFrame:Show();
 
 	-- Hide the Filter Check-Box
@@ -569,8 +528,8 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 		AtlasLootDefaultFrame_MapSelectButton:Enable();
 		-- Stops map reseting to default while still in the same raid/instance table
 		if AtlasLootItemsFrame.refresh == nil or dataID ~= AtlasLootItemsFrame.refresh[1] then
-			ATLASLOOT_CURRENT_MAP = dataSource[dataID].Map
-			AtlasLoot:MapSelect(ATLASLOOT_CURRENT_MAP);
+			AtlasLoot.CurrentMap = dataSource[dataID].Map
+			AtlasLoot:MapSelect(AtlasLoot.CurrentMap);
 		end
 	else
 		AtlasLootDefaultFrame_MapSelectButton:Disable();
@@ -581,28 +540,28 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 	if dataSource_backup == "AtlasLoot_CurrentWishList" then
 		ATLASLOOT_CURRENT_WISHLIST_NUM = AtlasLoot_CurrentWishList["Show"].ListNum;
 	else
-		ATLASLOOT_ITEM_UNLOCK = false;
+		AtlasLoot.itemUnlock = false;
 	end
 
 	local difType = false;
 	-- Checks to see if type is the same
-	if ATLASLOOT_CURRENTTYPE ~= dataSource[dataID].Type then
+	if AtlasLoot.CurrentType ~= dataSource[dataID].Type then
 		if dataSource[dataID].Type == "Crafting" or dataSource[dataID].Type == "CraftingNoBF" then
 			ItemindexID = "Pattern";
 		elseif (ItemindexID == "Pattern" and dataSource[dataID].Type ~= "Crafting") or (ItemindexID == "Pattern" and dataSource[dataID].Type ~= "CraftingNoBF") then
 			ItemindexID = 2;
 		else
-			ItemindexID = ATLASLOOT_TYPE[dataSource[dataID].Type] or 2;
+			ItemindexID = AtlasLoot.type[dataSource[dataID].Type] or 2;
 		end
 		difType = true;
 	end
 
 	-- Saves current types ItemindexID
 	if dataSource[dataID].Type then
-		ATLASLOOT_TYPE[dataSource[dataID].Type] = ItemindexID;
+		AtlasLoot.type[dataSource[dataID].Type] = ItemindexID;
 	end
 	-- Set current type
-	ATLASLOOT_CURRENTTYPE = dataSource[dataID].Type or "Default";
+	AtlasLoot.CurrentType = dataSource[dataID].Type or "Default";
 
 	-- Loads the difficultys into the scrollFrame
 	if dataSource[dataID].ListType then
@@ -897,8 +856,8 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 
 		if dataSource_backup ~= "AtlasLoot_CurrentWishList" and dataID ~= "FilterList"  and dataSource[dataID].Back ~= true and dataID ~= "EmptyTable" then
 			if not AtlasLoot.db.profile.LastBoss or type(AtlasLoot.db.profile.LastBoss) ~= "table" then AtlasLoot.db.profile.LastBoss = {} end;
-			AtlasLoot.db.profile.LastBoss[AtlasLoot_Expac] = {dataID, dataSource_backup, tablenum, ATLASLOOT_LASTMODULE, ATLASLOOT_CURRENTTABLE, ATLASLOOT_MODUELNAME};
-			AtlasLoot.db.profile[ATLASLOOT_CURRENTTABLE] = {dataID, dataSource_backup, tablenum, ATLASLOOT_LASTMODULE, ATLASLOOT_CURRENTTABLE, ATLASLOOT_MODUELNAME};
+			AtlasLoot.db.profile.LastBoss[AtlasLoot_Expac] = {dataID, dataSource_backup, tablenum, AtlasLoot.lastModule, AtlasLoot.currentTable, AtlasLoot.moduleName};
+			AtlasLoot.db.profile[AtlasLoot.currentTable] = {dataID, dataSource_backup, tablenum, AtlasLoot.lastModule, AtlasLoot.currentTable, AtlasLoot.moduleName};
 		end
 
         --This is a valid QuickLook, so show the UI objects
@@ -927,6 +886,12 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 		_G["AtlasLootItemsFrame_BACK"]:Hide();
 		_G["AtlasLootItemsFrame_NEXT"]:Hide();
 		_G["AtlasLootItemsFrame_PREV"]:Hide();
+		_G["AtlasLootItemsFrame_NEXT"]:SetParent("AtlasLootItemsFrame")
+		_G["AtlasLootItemsFrame_PREV"]:SetParent("AtlasLootItemsFrame")
+		_G["AtlasLootItemsFrame_NEXT"]:ClearAllPoints()
+		_G["AtlasLootItemsFrame_NEXT"]:SetPoint("BOTTOMRIGHT", "AtlasLootItemsFrame", "BOTTOMRIGHT",-5,5);
+		_G["AtlasLootItemsFrame_PREV"]:ClearAllPoints()
+		_G["AtlasLootItemsFrame_PREV"]:SetPoint("BOTTOMLEFT", "AtlasLootItemsFrame", "BOTTOMLEFT",5,5);
 		_G["AtlasLootItemsFrame_Wishlist_Options"]:Hide();
 		_G["AtlasLootItemsFrame_Wishlist_Share"]:Hide();
 		_G["AtlasLootItemsFrame_Wishlist_Swap"]:Hide();
@@ -963,7 +928,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 			_G["AtlasLootItemsFrame_PREV"].tablebase = tablebase;
 		end
 
-		if dataSource[dataID].Back or ATLASLOOT_BACKENABLED then
+		if dataSource[dataID].Back or AtlasLoot.backEnabled then
 			_G["AtlasLootItemsFrame_BACK"]:Show();
 		elseif dataID ~= "FilterList" then
 			AtlasLootItemsFrame.refreshBack = {dataID, dataSource_backup, tablenum};
@@ -971,7 +936,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 	end
 
 	--Anchor the item frame where it is supposed to be
-	if ATLASLOOT_FILTER_ENABLE and dataID ~= "FilterList" then
+	if AtlasLoot.filterEnable and dataID ~= "FilterList" then
 		AtlasLoot:HideFilteredItems();
 	end
 
@@ -985,12 +950,16 @@ AtlasLoot:NavButton_OnClick:
 Called when <-, -> are pressed and calls up the appropriate loot page
 ]]
 function AtlasLoot:NavButton_OnClick(self)
-	local tablenum, dataID, dataSource = self.tablenum, self.tablebase[1], self.tablebase[2];
-	if #_G[dataSource][dataID] > 26 then
-		local min, max = AtlasLootDefaultFrameSubTableScrollScrollBar:GetMinMaxValues();
-		AtlasLootDefaultFrameSubTableScrollScrollBar:SetValue(tablenum * (max / #_G[dataSource][dataID]));
+	if AtlasLootDefaultFrame_Map:IsVisible() then
+		AtlasLoot:MapMenuClick(self.mapID, self.mapNum)
+	else
+		local tablenum, dataID, dataSource = self.tablenum, self.tablebase[1], self.tablebase[2];
+		if #_G[dataSource][dataID] > 26 then
+			local min, max = AtlasLootDefaultFrameSubTableScrollScrollBar:GetMinMaxValues();
+			AtlasLootDefaultFrameSubTableScrollScrollBar:SetValue(tablenum * (max / #_G[dataSource][dataID]));
+		end
+		AtlasLoot:ShowItemsFrame(dataID, dataSource, tablenum);
 	end
-	AtlasLoot:ShowItemsFrame(dataID, dataSource, tablenum);
 end
 
 --[[
@@ -998,7 +967,7 @@ AtlasLoot:NavButton_OnClick:
 Called when 'Back'Button is pressed and calls up the appropriate loot page
 ]]
 function AtlasLoot:BackButton_OnClick()
-	ATLASLOOT_BACKENABLED = false;
+	AtlasLoot.backEnabled = false;
 	AtlasLoot:ShowItemsFrame(AtlasLootItemsFrame.refreshBack[1], AtlasLootItemsFrame.refreshBack[2], AtlasLootItemsFrame.refreshBack[3]);
 end
 
@@ -1089,9 +1058,9 @@ function AtlasLoot:ShowQuickLooks(button)
 				"tooltipText", AL["Assign this loot table\n to QuickLook"].." 1",
 				"func", function()
                     if AtlasLootItemsFrame.refresh[2] == "AtlasLoot_CurrentWishList" then
-						AtlasLootCharDB["QuickLooks"][1]={AtlasLoot_CurrentWishList["Show"].ListType, "AtlasLootWishList", AtlasLoot_CurrentWishList["Show"].ListNum, ATLASLOOT_LASTMODULE, ATLASLOOT_CURRENTTABLE, _G["AtlasLootWishList"][AtlasLoot_CurrentWishList["Show"].ListType][AtlasLoot_CurrentWishList["Show"].ListNum].Name};
+						AtlasLootCharDB["QuickLooks"][1]={AtlasLoot_CurrentWishList["Show"].ListType, "AtlasLootWishList", AtlasLoot_CurrentWishList["Show"].ListNum, AtlasLoot.lastModule, AtlasLoot.currentTable, _G["AtlasLootWishList"][AtlasLoot_CurrentWishList["Show"].ListType][AtlasLoot_CurrentWishList["Show"].ListNum].Name};
 					else
-						AtlasLootCharDB["QuickLooks"][1]={AtlasLootItemsFrame.refreshOri[1], AtlasLootItemsFrame.refreshOri[2], AtlasLootItemsFrame.refreshOri[3], ATLASLOOT_LASTMODULE, ATLASLOOT_CURRENTTABLE, _G[AtlasLootItemsFrame.refreshOri[2]][AtlasLootItemsFrame.refreshOri[1]][AtlasLootItemsFrame.refreshOri[3]].Name};
+						AtlasLootCharDB["QuickLooks"][1]={AtlasLootItemsFrame.refreshOri[1], AtlasLootItemsFrame.refreshOri[2], AtlasLootItemsFrame.refreshOri[3], AtlasLoot.lastModule, AtlasLoot.currentTable, _G[AtlasLootItemsFrame.refreshOri[2]][AtlasLootItemsFrame.refreshOri[1]][AtlasLootItemsFrame.refreshOri[3]].Name};
 					end
                     AtlasLoot:RefreshQuickLookButtons();
                     dewdrop:Close(1);
@@ -1103,9 +1072,9 @@ function AtlasLoot:ShowQuickLooks(button)
 				"tooltipText", AL["Assign this loot table\n to QuickLook"].." 2",
 				"func", function()
 					if AtlasLootItemsFrame.refresh[2] == "AtlasLoot_CurrentWishList" then
-						AtlasLootCharDB["QuickLooks"][2]={AtlasLoot_CurrentWishList["Show"].ListType, "AtlasLootWishList", AtlasLoot_CurrentWishList["Show"].ListNum, ATLASLOOT_LASTMODULE, ATLASLOOT_CURRENTTABLE, _G["AtlasLootWishList"][AtlasLoot_CurrentWishList["Show"].ListType][AtlasLoot_CurrentWishList["Show"].ListNum].Name};
+						AtlasLootCharDB["QuickLooks"][2]={AtlasLoot_CurrentWishList["Show"].ListType, "AtlasLootWishList", AtlasLoot_CurrentWishList["Show"].ListNum, AtlasLoot.lastModule, AtlasLoot.currentTable, _G["AtlasLootWishList"][AtlasLoot_CurrentWishList["Show"].ListType][AtlasLoot_CurrentWishList["Show"].ListNum].Name};
 					else
-						AtlasLootCharDB["QuickLooks"][2]={AtlasLootItemsFrame.refreshOri[1], AtlasLootItemsFrame.refreshOri[2], AtlasLootItemsFrame.refreshOri[3], ATLASLOOT_LASTMODULE, ATLASLOOT_CURRENTTABLE, _G[AtlasLootItemsFrame.refreshOri[2]][AtlasLootItemsFrame.refreshOri[1]][AtlasLootItemsFrame.refreshOri[3]].Name};
+						AtlasLootCharDB["QuickLooks"][2]={AtlasLootItemsFrame.refreshOri[1], AtlasLootItemsFrame.refreshOri[2], AtlasLootItemsFrame.refreshOri[3], AtlasLoot.lastModule, AtlasLoot.currentTable, _G[AtlasLootItemsFrame.refreshOri[2]][AtlasLootItemsFrame.refreshOri[1]][AtlasLootItemsFrame.refreshOri[3]].Name};
                     end
 					AtlasLoot:RefreshQuickLookButtons();
                     dewdrop:Close(1);
@@ -1117,9 +1086,9 @@ function AtlasLoot:ShowQuickLooks(button)
 				"tooltipText", AL["Assign this loot table\n to QuickLook"].." 3",
 				"func", function()
 					if AtlasLootItemsFrame.refresh[2] == "AtlasLoot_CurrentWishList" then
-						AtlasLootCharDB["QuickLooks"][3]={AtlasLoot_CurrentWishList["Show"].ListType, "AtlasLootWishList", AtlasLoot_CurrentWishList["Show"].ListNum, ATLASLOOT_LASTMODULE, ATLASLOOT_CURRENTTABLE, _G["AtlasLootWishList"][AtlasLoot_CurrentWishList["Show"].ListType][AtlasLoot_CurrentWishList["Show"].ListNum].Name};
+						AtlasLootCharDB["QuickLooks"][3]={AtlasLoot_CurrentWishList["Show"].ListType, "AtlasLootWishList", AtlasLoot_CurrentWishList["Show"].ListNum, AtlasLoot.lastModule, AtlasLoot.currentTable, _G["AtlasLootWishList"][AtlasLoot_CurrentWishList["Show"].ListType][AtlasLoot_CurrentWishList["Show"].ListNum].Name};
 					else
-						AtlasLootCharDB["QuickLooks"][3]={AtlasLootItemsFrame.refreshOri[1], AtlasLootItemsFrame.refreshOri[2], AtlasLootItemsFrame.refreshOri[3], ATLASLOOT_LASTMODULE, ATLASLOOT_CURRENTTABLE, _G[AtlasLootItemsFrame.refreshOri[2]][AtlasLootItemsFrame.refreshOri[1]][AtlasLootItemsFrame.refreshOri[3]].Name};
+						AtlasLootCharDB["QuickLooks"][3]={AtlasLootItemsFrame.refreshOri[1], AtlasLootItemsFrame.refreshOri[2], AtlasLootItemsFrame.refreshOri[3], AtlasLoot.lastModule, AtlasLoot.currentTable, _G[AtlasLootItemsFrame.refreshOri[2]][AtlasLootItemsFrame.refreshOri[1]][AtlasLootItemsFrame.refreshOri[3]].Name};
                     end
 					AtlasLoot:RefreshQuickLookButtons();
                     dewdrop:Close(1);
@@ -1131,9 +1100,9 @@ function AtlasLoot:ShowQuickLooks(button)
 				"tooltipText", AL["Assign this loot table\n to QuickLook"].." 4",
 				"func", function()
 					if AtlasLootItemsFrame.refresh[2] == "AtlasLoot_CurrentWishList" then
-						AtlasLootCharDB["QuickLooks"][4]={AtlasLoot_CurrentWishList["Show"].ListType, "AtlasLootWishList", AtlasLoot_CurrentWishList["Show"].ListNum, ATLASLOOT_LASTMODULE, ATLASLOOT_CURRENTTABLE, _G["AtlasLootWishList"][AtlasLoot_CurrentWishList["Show"].ListType][AtlasLoot_CurrentWishList["Show"].ListNum].Name};
+						AtlasLootCharDB["QuickLooks"][4]={AtlasLoot_CurrentWishList["Show"].ListType, "AtlasLootWishList", AtlasLoot_CurrentWishList["Show"].ListNum, AtlasLoot.lastModule, AtlasLoot.currentTable, _G["AtlasLootWishList"][AtlasLoot_CurrentWishList["Show"].ListType][AtlasLoot_CurrentWishList["Show"].ListNum].Name};
 					else
-						AtlasLootCharDB["QuickLooks"][4]={AtlasLootItemsFrame.refreshOri[1], AtlasLootItemsFrame.refreshOri[2], AtlasLootItemsFrame.refreshOri[3], ATLASLOOT_LASTMODULE, ATLASLOOT_CURRENTTABLE, _G[AtlasLootItemsFrame.refreshOri[2]][AtlasLootItemsFrame.refreshOri[1]][AtlasLootItemsFrame.refreshOri[3]].Name};
+						AtlasLootCharDB["QuickLooks"][4]={AtlasLootItemsFrame.refreshOri[1], AtlasLootItemsFrame.refreshOri[2], AtlasLootItemsFrame.refreshOri[3], AtlasLoot.lastModule, AtlasLoot.currentTable, _G[AtlasLootItemsFrame.refreshOri[2]][AtlasLootItemsFrame.refreshOri[1]][AtlasLootItemsFrame.refreshOri[3]].Name};
                     end
 					AtlasLoot:RefreshQuickLookButtons();
                     dewdrop:Close(1);
@@ -1284,13 +1253,13 @@ function AtlasLoot:LoadTradeskillRecipes()
 			if not TRADESKILL_RECIPES[data.SkillIndex] then
 				TRADESKILL_RECIPES[data.SkillIndex] = {}
 			end
-			
+
 			data.Category = _G[format(fmtSubClass, data.CreatedItemClass, data.CreatedItemSubClass)]
 
 			if not TRADESKILL_RECIPES[data.SkillIndex][data.Category] then
 				TRADESKILL_RECIPES[data.SkillIndex][data.Category] = {}
 			end
-			
+
 			data.IsHighRisk = toboolean(data.IsHighRisk)
 
 			-- reformat reagents
@@ -1311,7 +1280,7 @@ function AtlasLoot:LoadTradeskillRecipes()
 				-- reformat tools (totems)
 				data.Tools = data.TotemCategories:SplitToTable(",", GetToolName)
 				data.TotemCategories = nil
-				
+
 				data.SpellFocusObject = _G[format(fmtObject, data.SpellFocusObject)]
 
 				tinsert(TRADESKILL_RECIPES[data.SkillIndex][data.Category], data)

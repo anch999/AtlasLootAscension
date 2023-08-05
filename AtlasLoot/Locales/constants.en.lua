@@ -1523,6 +1523,8 @@ if AL then
 	AL["World Drop"] = true;
 	AL["Sunwell Isle"] = true;
 	AL["Gordok Commons"] = true;
+	AL["Expanded Frame Size"] = true;
+	AL["Only show crafting source while colding CTRL"] = true;
 
 	-- Shortcuts for Bossname files
 	AL["LBRS"] = true;
