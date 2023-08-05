@@ -851,7 +851,7 @@ AtlasLoot_Data["CoTHyjal"] = {
 		{ 20, 32428, "", "=q4=Heart of Darkness", "=ds=#e15#", "", "100%" };
 		{ 21, 400751, "", "=Raider's Commendation", "=ds=#e15#", "", "100%" };
 		{ 23, 32459, "", "=q1=Time-Phased Phylactery", "=ds=#m3#", "", "8%" };
-		{ 25, 61196, "", "Sigil of Winterchill", "=ds=#e15#", "", "100%" };
+		{ 25, 61196, "", "Sigil of Winterchill", "=ds=#e15#", "", "" };
 	};
 	{
 		Name = BabbleBoss["Anetheron"];
@@ -898,13 +898,11 @@ AtlasLoot_Data["CoTHyjal"] = {
 		{ 4, 30896, "", "=q4=Glory of the Defender", "=ds=#s5#, #a4#", "", "15%" };
 		{ 5, 30897, "", "=q4=Girdle of Hope", "=ds=#s10#, #a4#", "", "15%" };
 		{ 6, 30901, "", "=q4=Boundless Agony", "=ds=#h1#, #w4#", "", "16%" };
-		{ 16, 31092, "", "=q4=Gloves of the Forgotten Conqueror", "=q1=#m1# =ds=#c4#, #c5#, #c8#", "", "74%" };
-		{ 17, 31094, "", "=q4=Gloves of the Forgotten Protector", "=q1=#m1# =ds=#c9#, #c2#, #c7#", "", "73%" };
-		{ 18, 31093, "", "=q4=Gloves of the Forgotten Vanquisher", "=q1=#m1# =ds=#c6#, #c3#, #c1#", "", "73%" };
-		{ 20, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%" };
-		{ 21, 32428, "", "=q4=Heart of Darkness", "=ds=#e15#", "", "100%" };
-		{ 22, 400751, "", "=Raider's Commendation", "=ds=#e15#", "", "100%" };
-		{ 20, 61289, "", "Sigil of Azgalor", "=ds=#e15#", "", "100%" };
+		{ 16, 31092, "", "=q4=Gloves of the Forgotten Conqueror", "=q1=#m1# =ds=#c4#, #c5#, #c8#", "", "100%" };
+		{ 18, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%" };
+		{ 19, 32428, "", "=q4=Heart of Darkness", "=ds=#e15#", "", "100%" };
+		{ 20, 400751, "", "=Raider's Commendation", "=ds=#e15#", "", "100%" };
+		{ 22, 61289, "", "Sigil of Azgalor", "=ds=#e15#", "", "%" };
 	};
 	{
 		Name = BabbleBoss["Archimonde"];
@@ -921,11 +919,9 @@ AtlasLoot_Data["CoTHyjal"] = {
 		{ 12, 30909, "", "=q4=Antonidas's Aegis of Rapt Concentration", "=ds=#w8#", "", "15%" };
 		{ 13, 30906, "", "=q4=Bristleblitz Striker", "=ds=#w2#", "", "16%" };
 		{ 16, 31097, "", "=q4=Helm of the Forgotten Conqueror", "=q1=#m1# =ds=#c4#, #c5#, #c8#", "", "70%" };
-		{ 17, 31095, "", "=q4=Helm of the Forgotten Protector", "=q1=#m1# =ds=#c9#, #c2#, #c7#", "", "72%" };
-		{ 18, 31096, "", "=q4=Helm of the Forgotten Vanquisher", "=q1=#m1# =ds=#c6#, #c3#, #c1#", "", "73%" };
-		{ 20, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%" };
-		{ 21, 32428, "", "=q4=Heart of Darkness", "=ds=#e15#", "", "100%" };
-		{ 22, 400751, "", "=Raider's Commendation", "=ds=#e15#", "", "100%" };
+		{ 18, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%" };
+		{ 19, 32428, "", "=q4=Heart of Darkness", "=ds=#e15#", "", "100%" };
+		{ 20, 400751, "", "=Raider's Commendation", "=ds=#e15#", "", "100%" };
 	};
 	{
 		Name = AL["Trash Mobs"];
