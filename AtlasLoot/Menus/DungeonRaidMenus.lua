@@ -21,9 +21,9 @@ AtlasLoot_SubMenus["Dungeons and RaidsCLASSIC"] = {
     { "", "LowerBlackrock", "", "Lower Blackrock Spire" };
     { "", "UpperBlackrock", "", "Upper Blackrock Spire" };
     { "", "TheDeadmines", "", "The Deadmines" };
-    { "", "DireMaulNorth", "", "Dire Maul (North)" };
-    { "", "DireMaulEast", "", "Dire Maul (East)" };
-    { "", "DireMaulWest", "", "Dire Maul (West)" };
+    { "", "DireMaulNorth", "", "Dire Maul (North)", "Dire Maul" };
+    { "", "DireMaulEast", "", "Dire Maul (East)", "Dire Maul" };
+    { "", "DireMaulWest", "", "Dire Maul (West)", "Dire Maul" };
     { "", "Gnomeregan", "", "Gnomeregan" };
     { "", "Maraudon", "", "Maraudon" };
     { "", "RagefireChasm", "", "Ragefire Chasm" };

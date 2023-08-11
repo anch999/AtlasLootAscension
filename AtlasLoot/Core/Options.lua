@@ -102,9 +102,9 @@ end
 function AtlasLootOptions_OpaqueToggle()
     AtlasLoot.db.profile.Opaque=AtlasLootOptionsFrameOpaque:GetChecked();
     if (AtlasLoot.db.profile.Opaque) then
-        AtlasLootItemsFrame_Back:SetTexture(0, 0, 0, 1);
+       -- AtlasLootItemsFrame_Back:SetTexture(0, 0, 0, 1);
     else
-        AtlasLootItemsFrame_Back:SetTexture(0, 0, 0, 0.65);
+        --AtlasLootItemsFrame_Back:SetTexture(0, 0, 0, 0.65);
     end
     AtlasLootOptions_Init();
 end
@@ -177,10 +177,9 @@ function AtlasLoot_DisplayHelp()
             WHITE..AL["Shift+Left Click the item like you would for any other in-game item"].."\n\n"..
             ORANGE..AL["How to view an item in the Dressing Room:"].."\n"..
             WHITE..AL["Simply Ctrl+Left Click on the item.  Sometimes the dressing room window is hidden behind the Atlas or AtlasLoot windows, so if nothing seems to happen move your Atlas or AtlasLoot windows and see if anything is hidden."].."\n\n"..
-            ORANGE..AL["How to open an item to its AscensionDB page in your browser window:"].."\n"..
-            WHITE..AL["Alt+Right Click any item to open it in a browser window."].."\n\n"..
             ORANGE..AL["How to add an item to the wishlist:"].."\n"..
-            WHITE..AL["Alt+Left Click any item to add it to the wishlist."].."\n\n"..
+            WHITE..AL["Right Click any item and open the context menu and click add to wishlist."].."\n\n"..
+            WHITE..AL["Or Alt+Left Click any item to add it to the default wishlist."].."\n\n"..
             ORANGE..AL["How to delete an item from the wishlist:"].."\n"..
             WHITE..AL["While on the wishlist screen, just Alt+Left Click on an item to delete it."].."\n\n"..
             ORANGE..AL["What else does the wishlist do?"].."\n"..

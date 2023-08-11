@@ -1535,6 +1535,7 @@ if AL then
 	AL["Strat"] = true;
 	AL["Serpentshrine"] = true;
 	AL["Avatar"] = true; -- Avatar of the Martyred
+	AL["Crafting Reagent"] = true;
 
 	-- Chests, etc
 	AL["Dark Coffer"] = true;
@@ -1615,13 +1616,12 @@ if AL then
 	AL["How to view an 'unsafe' item:"] = true;
 	AL["Unsafe items have a red border around the icon and are marked because you have not seen the item since the last patch or server restart. Right-click the item, then move your mouse back over the item or click the 'Query Server' button at the bottom of the loot page. This will also load any Bloodforged items."] = true;
 	AL["How to view an item in the Dressing Room:"] = true;
-	AL["How to open an item to its AscensionDB page in your browser window:"] = true;
-	AL["Alt+Right Click any item to open it in a browser window."] = true;
 	AL["Simply Ctrl+Left Click on the item.  Sometimes the dressing room window is hidden behind the Atlas or AtlasLoot windows, so if nothing seems to happen move your Atlas or AtlasLoot windows and see if anything is hidden."] = true;
 	AL["How to link an item to someone else:"] = true;
 	AL["Shift+Left Click the item like you would for any other in-game item"] = true;
 	AL["How to add an item to the wishlist:"] = true;
-	AL["Alt+Left Click any item to add it to the wishlist."] = true;
+	AL["Right Click any item and open the context menu and click add to wishlist."] = true;
+	AL["Or Alt+Left Click any item to add it to the default wishlist."] = true;
 	AL["How to delete an item from the wishlist:"] = true;
 	AL["While on the wishlist screen, just Alt+Left Click on an item to delete it."] = true;
 	AL["What else does the wishlist do?"] = true;
@@ -1775,8 +1775,8 @@ if AL then
 
 	--Classic Acronyms
 	AL["AQ"] = true;
-	AL["AQ20"] = true;
-	AL["AQ40"] = true;
+	AL["AQR"] = true;
+	AL["AQT"] = true;
 	AL["Armory"] = true;
 	AL["BFD"] = true;
 	AL["BRD"] = true;
@@ -2062,6 +2062,8 @@ if AL then
 	AL["Rotgrip"] = true;
 	AL["Princess Theradras"] = true;
 	AL["Elder Splitrock"] = true;
+	AL["Caverns of Maraudon"] = true;
+	AL["Zaetar's Grave"] = true;
 
 	--Ragefire Chasm
 	AL["Maur Grimtotem"] = true;
@@ -2668,7 +2670,7 @@ if AL then
 	AL["Horde Encampment"] = true;
 	AL["Thrall <Warchief>"] = true;
 	AL["Night Elf Village"] = true;
-	AL["Tyrande Whisperwind <High Priestess of Elune>"] = true;
+	AL["Tyrande Whisperwind\n<High Priestess of Elune>"] = true;
 	AL["Rage Winterchill"] = true;
 	AL["Anetheron"] = true;
 	AL["Kaz'rogal"] = true;

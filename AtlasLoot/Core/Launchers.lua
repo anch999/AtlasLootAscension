@@ -15,7 +15,7 @@ LibStub:GetLibrary("LibDataBroker-1.1"):NewDataObject("AtlasLoot", {
     icon = "Interface\\Icons\\INV_Box_01",
     OnClick = function()
         if IsShiftKeyDown() then
-            AtlasLootOptions_Toggle();
+            AtlasLoot:OptionsToggle();
         else
             if AtlasLootDefaultFrame:IsVisible() then
                 AtlasLootDefaultFrame:Hide();
@@ -28,7 +28,7 @@ LibStub:GetLibrary("LibDataBroker-1.1"):NewDataObject("AtlasLoot", {
 
 function AtlasLoot_OnBarButtonClick(button)
     if IsShiftKeyDown() then
-        AtlasLootOptions_Toggle();
+        AtlasLoot:OptionsToggle();
     else
         if AtlasLootDefaultFrame:IsVisible() then
             AtlasLootDefaultFrame:Hide();
@@ -141,7 +141,7 @@ end]]
     end
     
     function AtlasLootFu:OpenMenu()
-        AtlasLootOptions_Toggle();
+        AtlasLoot:OptionsToggle();
     end
     
 end]]

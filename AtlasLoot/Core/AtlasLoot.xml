@@ -15,7 +15,8 @@
     <Script file="TextParsing.lua"/>
     <Script file="Options.lua"/>
     <Script file="LootButtons.lua"/>
-    <Script file="Atlasloot_Maps.lua"/>
+	<Script file="MapData.lua"/>
+    <Script file="Maps.lua"/>
     <Script file="Launchers.lua"/>
 	<Script file="WishList.lua"/>
 	<Script file="SearchAdvanced.lua"/>

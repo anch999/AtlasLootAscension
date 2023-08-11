@@ -46,7 +46,7 @@ function AtlasLootFu:OnClick(button)
     --Shift Left Click -> show options menu
     --Right click -> standard FuBar options
 	if IsShiftKeyDown() then
-        AtlasLootOptions_Toggle();
+        AtlasLoot:OptionsToggle();
     else
         if AtlasLootDefaultFrame:IsVisible() then
             AtlasLootDefaultFrame:Hide();

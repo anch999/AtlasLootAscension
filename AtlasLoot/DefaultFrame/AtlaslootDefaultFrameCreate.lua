@@ -1,26 +1,21 @@
 local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot");
 local BLUE = "|cff6666ff";
 local WHITE = "|cFFFFFFFF"
+local INDENT = "    ";
 
     --Main AtlasLoot Frame
-    local mainframe = CreateFrame("FRAME", "AtlasLootDefaultFrame", UIParent);
+    local mainframe = CreateFrame("FRAME", "AtlasLootDefaultFrame", UIParent,"PortraitFrameTemplate");
     mainframe:SetPoint("CENTER",0,0);
     mainframe:SetSize(880,690);
     mainframe:EnableMouse(true);
     mainframe:SetMovable(1);
+    mainframe.portrait:SetPortraitTexture("Interface\\Icons\\INV_Box_01")
     mainframe:SetFrameStrata("HIGH");
+    mainframe.TitleText:SetText(AtlasLoot.Version);
     mainframe:RegisterForDrag("LeftButton");
     mainframe:SetMovable(true);
     mainframe:EnableKeyboard(true)
     mainframe:Hide()
-    mainframe:SetBackdrop({
-        bgFile = "Interface\\DialogFrame\\UI-DialogBox-Background",
-        edgeFile = "Interface\\DialogFrame\\UI-DialogBox-Border",
-        tile = "true",
-        insets = {left = "11", right = "12", top = "12", bottom = "11"},
-        edgeSize = 32,
-        titleSize = 32,
-    });
     mainframe:SetScript("OnShow", function()
         AtlasLootDefaultFrame_OnShow();
     end);
@@ -36,26 +31,13 @@ local WHITE = "|cFFFFFFFF"
         self:StopMovingOrSizing();
         self.isMoving = false;
      end);
-    mainframe.header = mainframe:CreateTexture(nil,"ARTWORK");
-    mainframe.header:SetSize(425,64);
-    mainframe.header:SetPoint("TOP",0,12);
-    mainframe.header:SetTexture("Interface\\DialogFrame\\UI-DialogBox-Header");
-    mainframe.header.txt = mainframe:CreateFontString(nil,"ARTWORK","GameFontNormal");
-    mainframe.header.txt:SetPoint("TOP",0,-1);
-    mainframe.header.txt:SetText(AtlasLoot.Version);
-    mainframe.header.notice = mainframe:CreateFontString("AtlasLootDefaultFrame_Notice","ARTWORK","GameFontNormal");
-    mainframe.header.notice:SetPoint("BOTTOM",0,17);
 
     --Loot Background
-local lootBackground = CreateFrame("Frame", nil, mainframe);
+local lootBackground = CreateFrame("Frame", "AtlaslLoot_LootBackground", mainframe);
     lootBackground:SetSize(540,515);
     lootBackground:SetPoint("BOTTOMLEFT", mainframe, "BOTTOMLEFT",40,90);
-    lootBackground.Back = lootBackground:CreateTexture(nil, "BACKGROUND");
-    lootBackground.Back:SetAllPoints();
-    lootBackground.Back:SetPoint("TOPLEFT",lootBackground,"TOPLEFT");
-    lootBackground.Back:SetPoint("BOTTOMRIGHT",lootBackground,"BOTTOMRIGHT");
-    lootBackground:SetBackdropColor(0,0,0.5,0.5);
     lootBackground:EnableMouse();
+    lootBackground:EnableMouseWheel();
     lootBackground:SetScript("OnMouseDown",function(self, button)
         if _G["AtlasLootItemsFrame_BACK"]:IsVisible() and button == "RightButton" then
             AtlasLoot:BackButton_OnClick();
@@ -64,7 +46,14 @@ local lootBackground = CreateFrame("Frame", nil, mainframe);
         end
         AtlasLoot.Dewdrop:Close();
     end);
-    mainframe.lootBackground = lootBackground
+    lootBackground:SetScript("OnMouseWheel", function(self,delta)
+            if AtlasLootItemsFrame_NEXT:IsVisible() and delta == -1 then
+                AtlasLootItemsFrame_NEXT:Click();
+            end
+            if AtlasLootItemsFrame_PREV:IsVisible() and delta == 1 then
+                AtlasLootItemsFrame_PREV:Click();
+            end
+    end);
 
 ----------------------------------- Item Loot Panel -------------------------------------------
 local itemframe = CreateFrame("Frame", "AtlasLootItemsFrame", lootBackground);
@@ -79,16 +68,6 @@ local itemframe = CreateFrame("Frame", "AtlasLootItemsFrame", lootBackground);
         itemframe.Back:SetAllPoints();
         itemframe.Back:SetPoint("TOPLEFT",lootBackground,"TOPLEFT");
         itemframe.Back:SetPoint("BOTTOMRIGHT",lootBackground,"BOTTOMRIGHT");
-        itemframe:SetBackdropColor(0,0,0,0.7);
-        itemframe:EnableMouseWheel(true);
-        itemframe:SetScript("OnMouseWheel", function(self,delta)
-            if AtlasLootItemsFrame_NEXT:IsVisible() and delta == -1 then
-                AtlasLootItemsFrame_NEXT:Click();
-            end
-            if AtlasLootItemsFrame_PREV:IsVisible() and delta == 1 then
-                AtlasLootItemsFrame_PREV:Click();
-            end
-        end);
 
 for num = 1, 30 do
     local button = CreateFrame("Button","AtlasLootItem_"..num, AtlasLootItemsFrame);
@@ -188,11 +167,11 @@ local swapbtn = CreateFrame("Button", "AtlasLootItemsFrame_Wishlist_Swap", Atlas
         swapbtn:Hide();
 
         -- Wishlist Options button
-local optionsbtn = CreateFrame("Button", "AtlasLootItemsFrame_Wishlist_Options", AtlasLootItemsFrame, "OptionsButtonTemplate");
-        optionsbtn:SetPoint("BOTTOM", "AtlasLootItemsFrame_Wishlist_Swap", "BOTTOM",-100,0);
-        optionsbtn:SetText(AL["Options"]);
-        optionsbtn:SetScript("OnClick", function(self) AtlasLoot:WishListOptionsOpen(); end);
-        optionsbtn:Hide();
+local wishOptionsbtn = CreateFrame("Button", "AtlasLootItemsFrame_Wishlist_Options", AtlasLootItemsFrame, "OptionsButtonTemplate");
+    wishOptionsbtn:SetPoint("BOTTOM", "AtlasLootItemsFrame_Wishlist_Swap", "BOTTOM",-100,0);
+    wishOptionsbtn:SetText(AL["Options"]);
+    wishOptionsbtn:SetScript("OnClick", function(self) AtlasLoot:WishListOptionsOpen(); end);
+    wishOptionsbtn:Hide();
 
         -- Wishlist Item Lock button
 local lockbtn = CreateFrame("Button", "AtlasLootItemsFrame_Wishlist_UnLock", AtlasLootItemsFrame, "OptionsButtonTemplate");
@@ -262,55 +241,24 @@ local looksbtn = CreateFrame("Button", "AtlasLootQuickLooksButton", AtlasLootIte
         
 ------------------------------------ Buttons at the top of the frame ---------------------------------------
 
-    --Close Button
-local closebtn = CreateFrame("Button", "AtlasLootDefaultFrame_CloseButton", AtlasLootDefaultFrame, "UIPanelCloseButton");
-    closebtn:SetPoint("TOPRIGHT", AtlasLootDefaultFrame, "TOPRIGHT",-10,-10);
-    closebtn:SetScript("OnClick", function() AtlasLootDefaultFrame:Hide() end);
-
-    --Load All Addon Moduels Button
-local loadModulebtn = CreateFrame("Button", "AtlasLootDefaultFrame_LoadModules", AtlasLootDefaultFrame, "OptionsButtonTemplate");
-    loadModulebtn:SetSize(105,20);
-    loadModulebtn:SetPoint("TOPRIGHT", AtlasLootDefaultFrame, "TOPRIGHT",-38,-15);
-    loadModulebtn:SetText(AL["Load Modules"]);
-    loadModulebtn:SetScript("OnClick", function() AtlasLoot:LoadAllModules() end);
-
-    --Options Button
-local optionsbtn = CreateFrame("Button", "AtlasLootDefaultFrame_Options", AtlasLootDefaultFrame, "OptionsButtonTemplate");
-    optionsbtn:SetSize(105,20);
-    optionsbtn:SetPoint("TOPLEFT", AtlasLootDefaultFrame, "TOPLEFT",40,-15);
-    optionsbtn:SetText(AL["Options"]);
-    optionsbtn:RegisterForClicks("AnyDown");
-    optionsbtn:SetScript("OnClick", function(self,button) 
-        if button == "RightButton" then
-            AtlasLoot:OptionsDropDownOpen(self)
-        else
-            AtlasLootOptions_Toggle()
-        end
-    end);
-
     --SubMenu Button
-local submenubtn = CreateFrame("Button", "AtlasLootDefaultFrame_SubMenu", AtlasLootDefaultFrame, "OptionsButtonTemplate");
-    submenubtn:SetSize(200,25);
-    submenubtn:SetPoint("TOP", lootBackground, "TOP",0,30);
-    submenubtn.Lable = submenubtn:CreateFontString("AtlasLootDefaultFrame_SelectedTable", "OVERLAY","GameFontNormal")
-    submenubtn.Lable:SetPoint("TOP","AtlasLootDefaultFrame_SubMenu","BOTTOM",0,37);
+local submenubtn = CreateFrame("Button", "AtlasLootDefaultFrame_SubMenu", AtlasLootDefaultFrame, "FilterDropDownMenuTemplate");
+    submenubtn:SetSize(275,25);
+    submenubtn:SetPoint("TOP", AtlaslLoot_LootBackground,"TOP",56,30)
+    submenubtn.Lable = submenubtn:CreateFontString(nil, "OVERLAY","GameFontNormal")
+    submenubtn.Lable:SetPoint("TOP",submenubtn,"BOTTOM",0,39);
     submenubtn.Lable:SetText("Select Subcategory");
     submenubtn.Lable:Show();
-    submenubtn.Text = submenubtn:CreateFontString("AtlasLootDefaultFrame_SubMenuText", "OVERLAY","GameFontNormal")
-    submenubtn.Text:SetPoint("LEFT","AtlasLootDefaultFrame_SubMenu","RIGHT",0,0);
-    submenubtn.Text:SetJustifyH("CENTER");
-    submenubtn.Text:SetSize(190,25);
-    submenubtn.Text:Show();
     submenubtn:SetScript("OnClick", function(self)
         AtlasLoot:DewdropSubMenuOpen(AtlasLoot_SubMenus[AtlasLoot.currentTable]);
     end);
 
     --Moduel Menu Button
-local menubtn = CreateFrame("Button", "AtlasLootDefaultFrame_Menu", AtlasLootDefaultFrame, "OptionsButtonTemplate");
-    menubtn:SetSize(174,25);
+local menubtn = CreateFrame("Button", "AtlasLootDefaultFrame_Menu", AtlasLootDefaultFrame, "FilterDropDownMenuTemplate");
+    menubtn:SetSize(275,25);
     menubtn:SetPoint("RIGHT", "AtlasLootDefaultFrame_SubMenu", "LEFT",0,0);
-    menubtn.Lable = menubtn:CreateFontString("AtlasLootDefaultFrame_SelectedCategory", "OVERLAY","GameFontNormal")
-    menubtn.Lable:SetPoint("TOP",menubtn,"BOTTOM",0,37);
+    menubtn.Lable = menubtn:CreateFontString(nil, "OVERLAY","GameFontNormal")
+    menubtn.Lable:SetPoint("TOP",menubtn,"BOTTOM",0,39);
     menubtn.Lable:SetText("Select Module");
     menubtn.Lable:Show();
     menubtn:SetText(AL["Select Loot Table"]);
@@ -318,13 +266,25 @@ local menubtn = CreateFrame("Button", "AtlasLootDefaultFrame_Menu", AtlasLootDef
         AtlasLoot:DewdropOpen()
     end);
 
+    --Options Button
+local optionsbtn = CreateFrame("Button", nil, AtlasLootDefaultFrame, "SettingsGearButtonTemplate");
+    optionsbtn:SetPoint("LEFT", "AtlasLootDefaultFrame_Menu",-27,0);
+    optionsbtn:SetScript("OnClick", function(self,button) AtlasLoot:OptionsToggle() end);
+    optionsbtn:SetScript("OnEnter", function(self)
+        GameTooltip:SetOwner(self, "ANCHOR_RIGHT");
+        GameTooltip:AddLine("Options");
+        GameTooltip:Show();
+    end);
+    optionsbtn:SetScript("OnLeave", function() GameTooltip:Hide() end);
+    mainframe.optionsbtn = optionsbtn
+
     --Expansion Menu Button
-local expansionmenubtn = CreateFrame("Button", "AtlasLootDefaultFrame_ExpansionMenu", AtlasLootDefaultFrame, "OptionsButtonTemplate");
-    expansionmenubtn:SetSize(174,25);
-    expansionmenubtn:SetPoint("LEFT", "AtlasLootDefaultFrame_SubMenu", "RIGHT",0,0);
+local expansionmenubtn = CreateFrame("Button", "AtlasLootDefaultFrame_ExpansionMenu", AtlasLootDefaultFrame, "FilterDropDownMenuTemplate");
+    expansionmenubtn:SetSize(185,25);
+    expansionmenubtn:SetPoint("LEFT", "AtlasLootDefaultFrame_SubMenu", "RIGHT",5,0);
     expansionmenubtn:SetText(AtlasLoot_ExpansionMenu[GetAccountExpansionLevel()+1][1]);
-    expansionmenubtn.Lable = expansionmenubtn:CreateFontString("AtlasLootDefaultFrame_SelectedTable2", "OVERLAY","GameFontNormal")
-    expansionmenubtn.Lable:SetPoint("TOP",expansionmenubtn,"BOTTOM",0,37);
+    expansionmenubtn.Lable = expansionmenubtn:CreateFontString(nil, "OVERLAY","GameFontNormal")
+    expansionmenubtn.Lable:SetPoint("TOP",expansionmenubtn,"BOTTOM",0,39);
     expansionmenubtn.Lable:SetText("Select Expansion");
     expansionmenubtn.Lable:Show();
     expansionmenubtn:SetScript("OnClick", function(self)
@@ -616,7 +576,12 @@ function AtlasLoot:SubTableScrollFrameUpdate(tablename, dataSource, tablenum)
             if dataSource == "AtlasLoot_MapData" then
                 local text = _G[dataSource][tablename][tablenum][value][1]
                 if _G[dataSource][tablename][tablenum][value][2] then text = text.._G[dataSource][tablename][tablenum][value][2] end
-                if value ==  1 then text = BLUE..text else text = WHITE..text end
+                if _G[dataSource][tablename][tablenum][value].SubZone then
+                    text = BLUE..text
+                elseif not _G[dataSource][tablename][tablenum][value].Zone then
+                    text = WHITE..text
+                end
+                if not _G[dataSource][tablename][tablenum][value].cords and not _G[dataSource][tablename][tablenum][value].Zone and not _G[dataSource][tablename][tablenum][value].SubZone then text = INDENT..text end
                 row.Text:SetText(text);
                 row:SetScript("OnEnter", function(self)
                     GameTooltip:SetOwner(self, "ANCHOR_TOP");
@@ -679,91 +644,161 @@ end })
 
 subtableFrame.rows = rows2
 
---------------------------------- Atlas Map and map buttons -----------------------------------------------
+--------------------------------- Map Frame and buttons -----------------------------------------------
+
     --AtlasLoot Maps
-local mapFrame = CreateFrame("Frame", "AtlasLootDefaultFrame_Map", AtlasLootDefaultFrame);
-    mapFrame:SetSize(770,513);
-    mapFrame:SetPoint("BOTTOMLEFT", AtlasLootDefaultFrame,"BOTTOMLEFT",40,90);
-    mapFrame:SetFrameStrata("HIGH");
-    mapFrame:Hide();
-    mapFrame:EnableMouse();
-    mapFrame:SetScript("OnMouseDown", function(self, button)
-        if button == "RightButton" then
-            AtlasLoot:MapOnShow();
-        end
-    end);
-    mapFrame:EnableMouseWheel(true);
-    mapFrame:SetScript("OnMouseWheel", function(self,delta)
-        if AtlasLootItemsFrame_NEXT:IsVisible() and delta == -1 then
-            AtlasLootItemsFrame_NEXT:Click();
-        end
-        if AtlasLootItemsFrame_PREV:IsVisible() and delta == 1 then
-            AtlasLootItemsFrame_PREV:Click();
-        end
-    end);
+    local mapFrame = CreateFrame("Frame", "AtlasLootDefaultFrame_Map", AtlasLootDefaultFrame);
+        mapFrame:SetSize(770,513);
+        mapFrame:SetPoint("BOTTOMLEFT", AtlasLootDefaultFrame,"BOTTOMLEFT",40,90);
+        mapFrame:SetFrameStrata("HIGH");
+        mapFrame:Hide();
+        mapFrame:EnableMouse();
+        mapFrame:SetScript("OnMouseDown", function(self, button)
+            if button == "RightButton" then
+                AtlasLoot:MapOnShow();
+            end
+        end);
+        mapFrame:EnableMouseWheel(true);
+        mapFrame.cursorCords = mapFrame:CreateFontString(nil,"ARTWORK","GameFontNormal")
+        mapFrame.cursorCords:SetPoint("TOPRIGHT", mapFrame, -10, 0)
+        mapFrame.cursorCords:Show()
+        mapFrame.cursorCords:SetSize(100, 25)
+        mapFrame:SetScript("OnMouseWheel", function(self,delta)
+            if AtlasLootItemsFrame_NEXT:IsVisible() and delta == -1 then
+                AtlasLootItemsFrame_NEXT:Click();
+            end
+            if AtlasLootItemsFrame_PREV:IsVisible() and delta == 1 then
+                AtlasLootItemsFrame_PREV:Click();
+            end
+        end);
+    local lastCord1, lastCord2 = 0,0
+        mapFrame:SetScript("OnShow", function() mapFrame.cursorCords:SetText(WHITE.."Cursor: ---") end)
+        mapFrame:SetScript("OnUpdate", function(self)
+            if AtlasLoot.showCords then
+                local scale,x, y = mapFrame:GetEffectiveScale(), GetCursorPosition()
+                local width, height = mapFrame:GetWidth()/100, mapFrame:GetHeight()/100
+                x, y = math.ceil(((x/scale) - mapFrame:GetLeft())/width), math.ceil((((y/scale) - mapFrame:GetTop())/height) * -1)
+                if lastCord1 ~= x and lastCord2 ~= y then 
+                    mapFrame.cursorCords:SetText(WHITE.."Cursor: "..x.." , "..y)
+                    lastCord1 = x
+                    lastCord2 = y
+                end
+            end
+        end)
+        mapFrame:SetScript("OnEnter", function() AtlasLoot.showCords = true end)
+        mapFrame:SetScript("OnLeave", function()
+            AtlasLoot.showCords = false
+            mapFrame.cursorCords:SetText(WHITE.."Cursor: ---")
+        end)
+
+    for i=1, 12 do
+        mapFrame.tile = mapFrame:CreateTexture("AtlasLoot_MapDetailTile"..i, "BACKGROUND");
+        mapFrame.tile:SetSize(196,196)
+        mapFrame.tile:Show()
+    end
+
+    AtlasLoot_MapDetailTile1:SetPoint("TOPLEFT", mapFrame)
+    AtlasLoot_MapDetailTile2:SetPoint("TOPLEFT", AtlasLoot_MapDetailTile1,"TOPRIGHT")
+    AtlasLoot_MapDetailTile3:SetPoint("TOPLEFT", AtlasLoot_MapDetailTile2,"TOPRIGHT")
+    AtlasLoot_MapDetailTile4:SetPoint("TOPLEFT", AtlasLoot_MapDetailTile3,"TOPRIGHT")
+    AtlasLoot_MapDetailTile5:SetPoint("TOPLEFT", AtlasLoot_MapDetailTile1,"BOTTOMLEFT")
+    AtlasLoot_MapDetailTile6:SetPoint("TOPLEFT", AtlasLoot_MapDetailTile5,"TOPRIGHT")
+    AtlasLoot_MapDetailTile7:SetPoint("TOPLEFT", AtlasLoot_MapDetailTile6,"TOPRIGHT")
+    AtlasLoot_MapDetailTile8:SetPoint("TOPLEFT", AtlasLoot_MapDetailTile7,"TOPRIGHT")
+    AtlasLoot_MapDetailTile9:SetPoint("TOPLEFT", AtlasLoot_MapDetailTile5,"BOTTOMLEFT")
+    AtlasLoot_MapDetailTile10:SetPoint("TOPLEFT", AtlasLoot_MapDetailTile9,"TOPRIGHT")
+    AtlasLoot_MapDetailTile11:SetPoint("TOPLEFT", AtlasLoot_MapDetailTile10,"TOPRIGHT")
+    AtlasLoot_MapDetailTile12:SetPoint("TOPLEFT", AtlasLoot_MapDetailTile11,"TOPRIGHT")
+
+        mapFrame.playerPin = CreateFrame("Button", "AtlasLoot_PlayerMapPin", AtlasLootDefaultFrame_Map)
+        mapFrame.playerPin:SetSize(35,35)
+        mapFrame.playerPin:SetFrameStrata("HIGH")
+        mapFrame.playerPin.texture = mapFrame.playerPin:CreateTexture(nil, "ARTWORK");
+        mapFrame.playerPin.texture:SetTexture("Interface\\Minimap\\MinimapArrow");
+        mapFrame.playerPin.texture:SetSize(35,35);
+        mapFrame.playerPin.texture:SetPoint("CENTER",0,0);
+        mapFrame.playerPin:SetScript("OnEnter", function(self)
+            GameTooltip:SetOwner(self, "ANCHOR_TOPLEFT");
+            GameTooltip:AddLine("You are here")
+            GameTooltip:Show()
+        end)
+        mapFrame.playerPin:SetScript("OnLeave", function()
+            GameTooltip:Hide()
+        end)
+        mapFrame.playerPin:Hide()
+
+        -- Map Button
+        mainframe.mapButton = CreateFrame("Button","AtlasLootDefaultFrame_MapButton", AtlasLootDefaultFrame,"OptionsButtonTemplate");
+        mainframe.mapButton:SetSize(90,24);
+        mainframe.mapButton:SetPoint("BOTTOMLEFT",Atlasloot_SubTableFrame,0,-27.5);
+        mainframe.mapButton:SetText("Map");
+        mainframe.mapButton:SetScript("OnClick", function() AtlasLoot:MapOnShow(); end)
+
+        -- Map Select Button
+        mainframe.mapSelbutton = CreateFrame("Button","AtlasLootDefaultFrame_MapSelectButton", AtlasLootDefaultFrame,"OptionsButtonTemplate");
+        mainframe.mapSelbutton:SetSize(180,24);
+        mainframe.mapSelbutton:SetPoint("BOTTOMRIGHT",Atlasloot_SubTableFrame,5,-27.5);
+        mainframe.mapSelbutton:SetScript("OnClick", function(self) AtlasLoot:MapMenuOpen(self) end);
+        mainframe.mapSelbutton:SetText("No Map");
+
+        -- Load Current Instance Button
+        mainframe.currentInstance = CreateFrame("Button","AtlasLootDefaultFrame_LoadInstanceButton", AtlasLootDefaultFrame,"OptionsButtonTemplate");
+        mainframe.currentInstance:SetSize(135,24);
+        mainframe.currentInstance:SetPoint("BOTTOMRIGHT",Atlasloot_SubTableFrame,-133,-58);
+        mainframe.currentInstance:SetScript("OnClick", function() AtlasLoot:ShowInstance(); end)
+        mainframe.currentInstance:SetText("Current Instance");
+
+        -- Load Current Map in ascension db
+        mainframe.openDB = CreateFrame("Button","AtlasLootDefaultFrame_LoadInstanceDBButton", AtlasLootDefaultFrame,"OptionsButtonTemplate");
+        mainframe.openDB:SetSize(135,24);
+        mainframe.openDB:SetPoint("RIGHT",AtlasLootDefaultFrame_LoadInstanceButton,135,0);
+        mainframe.openDB:SetScript("OnClick", function() AtlasLoot:OpenDBURL(AtlasLoot_MapData[AtlasLoot.CurrentMap].ZoneName[2] , "zone") end)
+        mainframe.openDB:SetText("Open In DB");
 
 
+        
 
-for i=1, 12 do
-    mapFrame.tile = mapFrame:CreateTexture("AtlasLoot_MapDetailTile"..i, "BACKGROUND");
-    mapFrame.tile:SetSize(196,196)
-    mapFrame.tile:Show()
-end
 
-AtlasLoot_MapDetailTile1:SetPoint("TOPLEFT", mapFrame)
-AtlasLoot_MapDetailTile2:SetPoint("TOPLEFT", AtlasLoot_MapDetailTile1,"TOPRIGHT")
-AtlasLoot_MapDetailTile3:SetPoint("TOPLEFT", AtlasLoot_MapDetailTile2,"TOPRIGHT")
-AtlasLoot_MapDetailTile4:SetPoint("TOPLEFT", AtlasLoot_MapDetailTile3,"TOPRIGHT")
-AtlasLoot_MapDetailTile5:SetPoint("TOPLEFT", AtlasLoot_MapDetailTile1,"BOTTOMLEFT")
-AtlasLoot_MapDetailTile6:SetPoint("TOPLEFT", AtlasLoot_MapDetailTile5,"TOPRIGHT")
-AtlasLoot_MapDetailTile7:SetPoint("TOPLEFT", AtlasLoot_MapDetailTile6,"TOPRIGHT")
-AtlasLoot_MapDetailTile8:SetPoint("TOPLEFT", AtlasLoot_MapDetailTile7,"TOPRIGHT")
-AtlasLoot_MapDetailTile9:SetPoint("TOPLEFT", AtlasLoot_MapDetailTile5,"BOTTOMLEFT")
-AtlasLoot_MapDetailTile10:SetPoint("TOPLEFT", AtlasLoot_MapDetailTile9,"TOPRIGHT")
-AtlasLoot_MapDetailTile11:SetPoint("TOPLEFT", AtlasLoot_MapDetailTile10,"TOPRIGHT")
-AtlasLoot_MapDetailTile12:SetPoint("TOPLEFT", AtlasLoot_MapDetailTile11,"TOPRIGHT")
+local streamIcon = CreateFrame("Frame", "AtlasLoot_ItemsLoading", AtlaslLoot_LootBackground);
+    streamIcon:SetPoint("TOPRIGHT", AtlaslLoot_LootBackground, "TOPRIGHT");
+    streamIcon:SetSize(48, 48);
+    streamIcon.tooltip = "Searching...";
+    streamIcon:EnableMouse(true);
 
-    mapFrame.playerPin = CreateFrame("Button", "AtlasLoot_PlayerMapPin", AtlasLootDefaultFrame_Map)
-    mapFrame.playerPin:SetSize(35,35)
-    mapFrame.playerPin:SetFrameStrata("HIGH")
-    mapFrame.playerPin.texture = mapFrame.playerPin:CreateTexture(nil, "ARTWORK");
-    mapFrame.playerPin.texture:SetTexture("Interface\\Minimap\\MinimapArrow");
-    mapFrame.playerPin.texture:SetSize(35,35);
-    mapFrame.playerPin.texture:SetPoint("CENTER",0,0);
-    mapFrame.playerPin:SetScript("OnEnter", function(self)
-        GameTooltip:SetOwner(self, "ANCHOR_TOPLEFT");
-        GameTooltip:AddLine("You are here")
-        GameTooltip:Show()
-    end)
-    mapFrame.playerPin:SetScript("OnLeave", function()
-        GameTooltip:Hide()
-    end)
-    mapFrame.playerPin:Hide()
+    streamIcon.icon = streamIcon:CreateTexture("$parentSpinner", "BACKGROUND");
+    streamIcon.icon:SetTexture("Interface\\Addons\\AtlasLoot\\Images\\streamcircle");
+    streamIcon.icon:SetVertexColor(0,1,0);
+    streamIcon.icon:SetAllPoints();
+    streamIcon.spark = streamIcon:CreateTexture("OVERLAY");
+    streamIcon.spark:SetTexture("Interface\\Addons\\AtlasLoot\\Images\\streamspark");
+    streamIcon.spark:SetAllPoints();
 
-    -- Map Button
-    mainframe.mapButton = CreateFrame("Button","AtlasLootDefaultFrame_MapButton", AtlasLootDefaultFrame,"OptionsButtonTemplate");
-    mainframe.mapButton:SetSize(90,24);
-    mainframe.mapButton:SetPoint("BOTTOMLEFT",Atlasloot_SubTableFrame,0,-27.5);
-    mainframe.mapButton:SetText("Map");
-    mainframe.mapButton:SetScript("OnClick", function() AtlasLoot:MapOnShow(); end)
+    streamIcon.frame = CreateFrame("Frame", "$parentFrame", AtlasLoot_ItemsLoading);
+    streamIcon.frame:SetAllPoints();
+    streamIcon.frame.bg = streamIcon.frame:CreateTexture("$parentBackground", "BACKGROUND");
+    streamIcon.frame.bg:SetTexture("Interface\\Addons\\AtlasLoot\\Images\\streambackground");
+    streamIcon.frame.bg:SetVertexColor(0,1,0);
+    streamIcon.frame.bg:SetAllPoints();
+    streamIcon.frame.alpha = streamIcon.frame:CreateTexture("$parentAlpha", "ARTWORK");
+    streamIcon.frame.alpha:SetTexture("Interface\\Addons\\AtlasLoot\\Images\\streamframe");
+    streamIcon.frame.alpha:SetAllPoints();
 
-    -- Map Select Button
-    mainframe.mapSelbutton = CreateFrame("Button","AtlasLootDefaultFrame_MapSelectButton", AtlasLootDefaultFrame,"OptionsButtonTemplate");
-    mainframe.mapSelbutton:SetSize(180,24);
-    mainframe.mapSelbutton:SetPoint("BOTTOMRIGHT",Atlasloot_SubTableFrame,5,-27.5);
-    mainframe.mapSelbutton:SetScript("OnClick", function(self) AtlasLoot:MapMenuOpen(self) end);
-    mainframe.mapSelbutton:SetText("No Map");
+    streamIcon.Loop = streamIcon:CreateAnimationGroup("$parentLoopAnim");
+    streamIcon.Loop:SetLooping("REPEAT");
+local rotAnim = streamIcon.Loop:CreateAnimation("ROTATION");
+    rotAnim:SetOrder(1);
+    rotAnim:SetDuration(8);
+    rotAnim:SetDegrees(-360);
 
-    -- Load Current Instance Button
-    mainframe.currentInstance = CreateFrame("Button","AtlasLootDefaultFrame_LoadInstanceButton", AtlasLootDefaultFrame,"OptionsButtonTemplate");
-    mainframe.currentInstance:SetSize(135,24);
-    mainframe.currentInstance:SetPoint("BOTTOMRIGHT",Atlasloot_SubTableFrame,-133,-58);
-    mainframe.currentInstance:SetScript("OnClick", function() AtlasLoot:ShowInstance(); end)
-    mainframe.currentInstance:SetText("Current Instance");
+    streamIcon:SetScript("OnEnter",
+        function(self) 
+            if(self.tooltip ~= nil) then
+                GameTooltip:SetOwner(self, "ANCHOR_LEFT");
+                GameTooltip:SetText(self.tooltip, nil, nil, nil, nil, true);
+            end
+        end);
+    streamIcon:SetScript("OnLeave", GameTooltip_Hide);
+    streamIcon:SetScript("OnShow", function(self) self:SetFrameLevel( (self:GetParent()):GetFrameLevel() + 1 ) end);
 
-    -- Load Current Map in ascension db
-    mainframe.openDB = CreateFrame("Button","AtlasLootDefaultFrame_LoadInstanceDBButton", AtlasLootDefaultFrame,"OptionsButtonTemplate");
-    mainframe.openDB:SetSize(135,24);
-    mainframe.openDB:SetPoint("RIGHT",AtlasLootDefaultFrame_LoadInstanceButton,135,0);
-    mainframe.openDB:SetScript("OnClick", function() AtlasLoot:OpenDBURL(AtlasLoot_MapData[AtlasLoot.CurrentMap].ZoneName[2] , "zone") end)
-    mainframe.openDB:SetText("Open In DB");
+    streamIcon:SetPoint("TOPRIGHT", AtlaslLoot_LootBackground, "TOPRIGHT");
+    streamIcon:Hide();

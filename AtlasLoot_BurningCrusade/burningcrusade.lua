@@ -848,10 +848,9 @@ AtlasLoot_Data["CoTHyjal"] = {
 		{ 16, 30865, "", "=q4=Tracker's Blade", "=ds=#h1#, #w4#", "", "15%" };
 		{ 17, 30872, "", "=q4=Chronicle of Dark Secrets", "=ds=#s15#", "", "16%" };
 		{ 19, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%" };
-		{ 20, 32428, "", "=q4=Heart of Darkness", "=ds=#e15#", "", "100%" };
-		{ 21, 400751, "", "=Raider's Commendation", "=ds=#e15#", "", "100%" };
-		{ 23, 32459, "", "=q1=Time-Phased Phylactery", "=ds=#m3#", "", "8%" };
-		{ 25, 61196, "", "Sigil of Winterchill", "=ds=#e15#", "", "" };
+		{ 20, 32428, "", "=q4=Heart of Darkness", "=ds=#e25#", "", "100%" };
+		{ 22, 32459, "", "=q1=Time-Phased Phylactery", "=ds=#m3#", "", "8%" };
+		{ 24, 61196, "", "Sigil of Winterchill", "=ds=#e13#", "", "" };
 	};
 	{
 		Name = BabbleBoss["Anetheron"];
@@ -868,9 +867,8 @@ AtlasLoot_Data["CoTHyjal"] = {
 		{ 18, 30883, "", "=q4=Pillar of Ferocity", "=ds=#h2#, #w9#", "", "16%" };
 		{ 19, 30882, "", "=q4=Bastion of Light", "=ds=#w8#", "", "15%" };
 		{ 21, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%" };
-		{ 21, 32428, "", "=q4=Heart of Darkness", "=ds=#e15#", "", "100%" };
-		{ 22, 400751, "", "=Raider's Commendation", "=ds=#e15#", "", "100%" };
-		{ 24, 61287, "", "Sigil of Anetheron", "=ds=#e15#", "", "" };
+		{ 22, 32428, "", "=q4=Heart of Darkness", "=ds=#e25#", "", "100%" };
+		{ 24, 61287, "", "Sigil of Anetheron", "=ds=#e13#", "", "" };
 	};
 	{
 		Name = BabbleBoss["Kaz'rogal"];
@@ -887,8 +885,7 @@ AtlasLoot_Data["CoTHyjal"] = {
 		{ 16, 30918, "", "=q4=Hammer of Atonement", "=ds=#h3#, #w6#", "", "17%" };
 		{ 17, 30889, "", "=q4=Kaz'rogal's Hardened Heart", "=ds=#w8#", "", "16%" };
 		{ 19, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%" };
-		{ 20, 32428, "", "=q4=Heart of Darkness", "=ds=#e15#", "", "100%" };
-		{ 21, 400751, "", "=Raider's Commendation", "=ds=#e15#", "", "100%" };
+		{ 20, 32428, "", "=q4=Heart of Darkness", "=ds=#e25#", "", "100%" };
 	};
 	{
 		Name = BabbleBoss["Azgalor"];
@@ -900,9 +897,8 @@ AtlasLoot_Data["CoTHyjal"] = {
 		{ 6, 30901, "", "=q4=Boundless Agony", "=ds=#h1#, #w4#", "", "16%" };
 		{ 16, 31092, "", "=q4=Gloves of the Forgotten Conqueror", "", "=ds=#tt6#", "100%", lootTable = {"T6HAND","Token"} };
 		{ 18, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%" };
-		{ 19, 32428, "", "=q4=Heart of Darkness", "=ds=#e15#", "", "100%" };
-		{ 20, 400751, "", "=Raider's Commendation", "=ds=#e15#", "", "100%" };
-		{ 22, 61289, "", "Sigil of Azgalor", "=ds=#e15#", "", "%" };
+		{ 19, 32428, "", "=q4=Heart of Darkness", "=ds=#e25#", "", "100%" };
+		{ 21, 61289, "", "Sigil of Azgalor", "=ds=#e13#", "", "%" };
 	};
 	{
 		Name = BabbleBoss["Archimonde"];
@@ -920,8 +916,8 @@ AtlasLoot_Data["CoTHyjal"] = {
 		{ 13, 30906, "", "=q4=Bristleblitz Striker", "=ds=#w2#", "", "16%" };
 		{ 16, 31097, "", "=q4=Helm of the Forgotten Conqueror", "", "=ds=#tt6#", "100%", lootTable = {"T6HEAD","Token"} };
 		{ 18, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%" };
-		{ 19, 32428, "", "=q4=Heart of Darkness", "=ds=#e15#", "", "100%" };
-		{ 20, 400751, "", "=Raider's Commendation", "=ds=#e15#", "", "100%" };
+		{ 19, 32428, "", "=q4=Heart of Darkness", "=ds=#e25#", "", "100%" };
+		{ 21, 61557, "", "Sigil of Archimonde", "=ds=#e13#", "", "%" };
 	};
 	{
 		Name = AL["Trash Mobs"];

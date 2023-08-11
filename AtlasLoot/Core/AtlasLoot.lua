@@ -8,7 +8,7 @@ Functions:
 AtlasLoot_OnEvent(event)
 AtlasLoot:OnEnable()
 AtlasLoot_SlashCommand(msg)
-AtlasLootOptions_Toggle()
+AtlasLoot:OptionsToggle()
 AtlasLoot:OnInitialize()
 AtlasLoot:ShowItemsFrame()
 AtlasLoot:NavButton_OnClick()
@@ -27,15 +27,11 @@ local BabbleBoss = AtlasLoot_GetLocaleLibBabble("LibBabble-Boss-3.0")
 local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot");
 
 AtlasLoot.Version = "|cffFF8400AtlasLoot Ascension Edition|r";
-
-ATLASLOOT_POSITION = AL["Position:"];
-ATLASLOOT_DEBUGMESSAGES = false;
+AtlasLoot.DebugMessages = false;
 
 --Make the Dewdrop menu in the standalone loot browser accessible here
 AtlasLoot.Dewdrop = AceLibrary("Dewdrop-2.0");
 
---Variable to cap debug spam
-ATLASLOOT_DEBUGSHOWN = false;
 AtlasLoot.filterEnable = false;
 AtlasLoot.CurrentType = "Default";
 AtlasLoot.type = {};
@@ -49,6 +45,10 @@ local GREEN = "|cff1eff00";
 local PURPLE = "|cff9F3FFF";
 local BLUE = "|cff0070dd";
 local ORANGE = "|cffFF8400";
+local itemHighlightBlue = "Interface\\AddOns\\AtlasLoot\\Images\\knownBlue"
+local itemHighlightGreen = "Interface\\AddOns\\AtlasLoot\\Images\\knownGreen"
+--local itemHighlightBlue = "Interface\\AddOns\\AwAddons\\Textures\\LootTex\\Loot_Icon_Blue"
+--local itemHighlightGreen = "Interface\\AddOns\\AwAddons\\Textures\\LootTex\\Loot_Icon_green"
 
 --Search panel open and close save variables
 --dataID, dataSource, pFrame, tablenumber
@@ -108,7 +108,7 @@ StaticPopupDialogs["ATLASLOOT_SETUP"] = {
   text = AL["Welcome to Atlasloot Enhanced.  Please take a moment to set your preferences."],
   button1 = AL["Setup"],
   OnAccept = function()
-	  AtlasLootOptions_Toggle();
+	  AtlasLoot:OptionsToggle();
   end,
   timeout = 0,
   whileDead = 1,
@@ -162,9 +162,9 @@ function AtlasLoot:OnEnable()
 	end
 	--If using an opaque items frame, change the alpha value of the backing texture
 	if (AtlasLoot.db.profile.Opaque) then
-		AtlasLootItemsFrame_Back:SetTexture(0, 0, 0, 1);
+		--AtlasLootItemsFrame_Back:SetTexture(0, 0, 0, 1);
 	else
-		AtlasLootItemsFrame_Back:SetTexture(0, 0, 0, 0.65);
+		--AtlasLootItemsFrame_Back:SetTexture(0, 0, 0, 0.65);
 	end
 
 	AtlasLootItemsFrame:Hide();
@@ -262,21 +262,21 @@ function AtlasLoot_SlashCommand(msg)
 	if msg == AL["reset"] then
 		AtlasLoot_Reset("frames");
 	elseif msg == AL["options"] then
-		AtlasLootOptions_Toggle();
+		AtlasLoot:OptionsToggle();
 	else
 		AtlasLootDefaultFrame:Show();
 	end
 end
 
 --[[
-AtlasLootOptions_Toggle:
+AtlasLoot:OptionsToggle:
 Toggle on/off the options window
 ]]
-function AtlasLootOptions_Toggle()
-    if InterfaceOptionsFrame_OpenToCategory then
-	    InterfaceOptionsFrame_OpenToCategory(AL["AtlasLoot"]);
-    else
-        InterfaceOptionsFrame_OpenToFrame(AL["AtlasLoot"]);
+function AtlasLoot:OptionsToggle()
+    if InterfaceOptionsFrame_OpenToCategory and not InterfaceOptionsFrame:IsVisible() then
+	    InterfaceOptionsFrame_OpenToCategory(AL["AtlasLoot"])
+	else
+		InterfaceOptionsFrame:Hide()
     end
     InterfaceOptionsFrame:SetFrameStrata("DIALOG");
     if(AtlasLoot.db.profile.DefaultTT == true) then
@@ -423,6 +423,7 @@ end
 
 --Creates tables for raid tokens from the collections tables
 function AtlasLoot:CreateToken(dataID)
+	AtlasLoot:ItemsLoading(1, "Items still loading")
 	local itemType, slotType, itemName, itemType2
 	--orginal dataID
 	local orgID = dataID;
@@ -458,18 +459,23 @@ function AtlasLoot:CreateToken(dataID)
 			AtlasLoot:ShowItemsFrame(AtlasLootItemsFrame.refresh[1], AtlasLootItemsFrame.refresh[2], AtlasLootItemsFrame.refresh[3]);
 		end
 		count = count - 1;
+		return count
 	end
 	--Fills table with items
-	for n, t in ipairs(AtlasLoot_Data[dataID]) do
-		for c, v in ipairs(t) do
+	for _, t in ipairs(AtlasLoot_Data[dataID]) do
+		for _, v in ipairs(t) do
 			if type(v) == "table" then
+				local count
 				if GetItemInfo(v[2]) then
-					addItem(v[2], v, t)
+					count = addItem(v[2], v, t)
 				else
 					local item = Item:CreateFromID(v[2]);
 					item:ContinueOnLoad(function(itemID)
-						addItem(itemID, v, t)
+						count = addItem(itemID, v, t)
 					end)
+				end
+				if count == 0 then
+					AtlasLoot:ItemsLoading(0, "Items Loaded")
 				end
 			end
 		end
@@ -511,7 +517,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 
 	--Hide Map and reshow lootbackground
 	AtlasLootDefaultFrame_Map:Hide();
-    AtlasLootDefaultFrame.lootBackground:Show();
+    AtlaslLoot_LootBackground:Show();
 	AtlasLootItemsFrame:Show();
 
 	-- Hide the Filter Check-Box
@@ -596,9 +602,9 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 	--For stopping the subtable from changing if its a token table
 	if dataSource[dataID].NoSubt == nil and dataID ~= "FilterList" then
 		if dataSource[dataID].DisplayName then
-			AtlasLootDefaultFrame_SubMenuText:SetText(dataSource[dataID].DisplayName);
+			AtlasLootDefaultFrame_SubMenu:SetText(dataSource[dataID].DisplayName);
 		else
-			AtlasLootDefaultFrame_SubMenuText:SetText(dataSource[dataID].Name);
+			AtlasLootDefaultFrame_SubMenu:SetText(dataSource[dataID].Name);
 		end
 		AtlasLoot:SubTableScrollFrameUpdate(dataID, dataSource_backup, tablenum);
 	end
@@ -704,13 +710,13 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 					--Adds button highlights if you know a recipe or have a char that knows one
 					if currentTradeSkills[dataSource[dataID].Name] and CA_IsSpellKnown(string.sub(IDfound, 2)) then
 						_G["AtlasLootItem_"..dataSource[dataID][tablenum][i][1]].hasTrade = true;
-						_G["AtlasLootItem_"..dataSource[dataID][tablenum][i][1].."_Highlight"]:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\knownGreen");
+						_G["AtlasLootItem_"..dataSource[dataID][tablenum][i][1].."_Highlight"]:SetTexture(itemHighlightGreen);
 						_G["AtlasLootItem_"..dataSource[dataID][tablenum][i][1].."_Highlight"]:Show();
 					else
 						_G["AtlasLootItem_"..dataSource[dataID][tablenum][i][1]].hasTrade = false;
 						for key,v in pairs(AtlasLoot.db.profiles) do
 							if gsub(key,"-",""):match(gsub(realmName,"-","")) and v.knownRecipes and v.knownRecipes[tonumber(string.sub(IDfound, 2))] then
-								_G["AtlasLootItem_"..dataSource[dataID][tablenum][i][1].."_Highlight"]:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\knownBlue");
+								_G["AtlasLootItem_"..dataSource[dataID][tablenum][i][1].."_Highlight"]:SetTexture(itemHighlightBlue);
 								_G["AtlasLootItem_"..dataSource[dataID][tablenum][i][1].."_Highlight"]:Show();
 							end
 						end
@@ -1034,7 +1040,7 @@ function AtlasLoot:LoadAllModules()
 		flag=1;
 	end
 	if flag == 1 then
-		if ATLASLOOT_DEBUGMESSAGES then
+		if AtlasLoot.DebugMessages then
 			DEFAULT_CHAT_FRAME:AddMessage(GREEN..AL["AtlasLoot"]..": "..WHITE..AL["All Available Modules Loaded"]);
 		end
 		collectgarbage("collect");
@@ -1134,13 +1140,25 @@ function AtlasLoot:RefreshQuickLookButtons()
     end
 end
 
+function AtlasLoot:ItemsLoading(status, tooltip)
+	if(status > 0) then
+        AtlasLoot_ItemsLoadingSpinner:SetVertexColor(0,1,0);
+        AtlasLoot_ItemsLoadingFrameBackground:SetVertexColor(0,1,0);
+        AtlasLoot_ItemsLoading.tooltip = tooltip;
+		AtlasLoot_ItemsLoading.Loop:Play();
+		AtlasLoot_ItemsLoading:Show();
+	else
+        AtlasLoot_ItemsLoading.Loop:Stop();
+        AtlasLoot_ItemsLoading:Hide();
+	end
+end
 
 function AtlasLoot:QueryLootPage()
 	local START = 1;
 	local MAX_BUTTONS = 30;
 	local COUNTED = 0;
 	local REFRESHED = false;
-
+	AtlasLoot:ItemsLoading(1, "Items still loading")
 	local function queryNextItem(pos)
 		if pos > MAX_BUTTONS then return end;
 
@@ -1154,6 +1172,7 @@ function AtlasLoot:QueryLootPage()
 					COUNTED = COUNTED + 1;
 					if not REFRESHED and (COUNTED == MAX_BUTTONS) then
 						REFRESHED = true;
+						
 						AtlasLoot:ShowItemsFrame(AtlasLootItemsFrame.refresh[1], AtlasLootItemsFrame.refresh[2], AtlasLootItemsFrame.refresh[3]);
 					end
 				end)
@@ -1163,7 +1182,7 @@ function AtlasLoot:QueryLootPage()
 		else
 			COUNTED = COUNTED + 1;
         end
-
+		AtlasLoot:ItemsLoading(MAX_BUTTONS - COUNTED, "Items Loaded")
 		queryNextItem(pos + 1);
 	end
 	queryNextItem(START);
@@ -1198,6 +1217,7 @@ function AtlasLoot:FindId(id, difficulty, type)
 		return ItemIDsDatabase[id][difficulty], true
 	end
 end
+
 -- Loads the Item Variations into a table from the data content folder
 function AtlasLoot:LoadItemIDsDatabase()
 	local content = C_ContentLoader:Load("ItemVariationData")

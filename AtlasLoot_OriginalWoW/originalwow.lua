@@ -593,6 +593,7 @@ AtlasLoot_Data["AQOpening"] = {
 
 AtlasLoot_Data["BlackfathomDeeps"] = {
 	Name = BabbleZone["Blackfathom Deeps"];
+	Type = "ClassicDungeon";
 	Map = "BlackfathomDeeps";
 	{
 		Name = BabbleBoss["Ghamoo-ra"];
@@ -950,7 +951,7 @@ AtlasLoot_Data["LowerBlackrock"] = {
 	Name = BabbleZone["Lower Blackrock Spire"];
 	Type = "ClassicDungeonExt";
 	Loadfirst = 3;
-	Map = "BlackrockSpireLower";
+	Map = "BlackrockSpire";
 	{
 		Name = AL["Scarshield Quartermaster"];
 		{ 1, 18987, "", "=q1=Blackhand's Command", "=ds=#m2#", "", "100%" };
@@ -1125,7 +1126,7 @@ AtlasLoot_Data["LowerBlackrock"] = {
 AtlasLoot_Data["UpperBlackrock"] = {
 	Name = BabbleZone["Upper Blackrock Spire"];
 	Type = "ClassicDungeonExt";
-	Map = "BlackrockSpireUpper";
+	Map = "BlackrockSpire";
 	{
 		Name = BabbleBoss["Pyroguard Emberseer"];
 		{ 1, 12905, "", "=q3=Wildfire Cape", "=ds=#s4#", "", "15.20%" };
@@ -1983,6 +1984,7 @@ AtlasLoot_Data["DireMaulWest"] = {
 
 AtlasLoot_Data["Gnomeregan"] = {
 	Name = BabbleZone["Gnomeregan"];
+	Type = "ClassicDungeon";
 	Map = "Gnomeregan";
 	{
 		Name = AL["Namdo Bizzfizzle"];
@@ -2056,6 +2058,7 @@ AtlasLoot_Data["Gnomeregan"] = {
 
 AtlasLoot_Data["Maraudon"] = {
 	Name = BabbleZone["Maraudon"];
+	Type = "ClassicDungeon";
 	Map = "Maraudon";
 	{
 		Name = BabbleBoss["Noxxion"];
@@ -2131,6 +2134,7 @@ AtlasLoot_Data["Maraudon"] = {
 ----------------------
 AtlasLoot_Data["RagefireChasm"] = {
 	Name = BabbleZone["Ragefire Chasm"];
+	Type = "ClassicDungeon";
 	Map = "RagefireChasm";
 	{
 		Name = BabbleBoss["Taragaman the Hungerer"];
@@ -2157,6 +2161,7 @@ AtlasLoot_Data["RagefireChasm"] = {
 
 AtlasLoot_Data["RazorfenDowns"] = {
 	Name = BabbleZone["Razorfen Downs"];
+	Type = "ClassicDungeon";
 	Map = "RazorfenDowns";
 	{
 		Name = BabbleBoss["Tuten'kash"];
@@ -2223,6 +2228,7 @@ AtlasLoot_Data["RazorfenDowns"] = {
 
 AtlasLoot_Data["RazorfenKraul"] = {
 	Name = BabbleZone["Razorfen Kraul"];
+	Type = "ClassicDungeon";
 	Map = "RazorfenKraul";
 	{
 		Name = AL["Roogug"];
@@ -2292,6 +2298,7 @@ AtlasLoot_Data["RazorfenKraul"] = {
 
 AtlasLoot_Data["Scarlet Monastery"] = {
 	Name = BabbleZone["Scarlet Monastery"];
+	Type = "ClassicDungeon";
 	Map = "ScarletMonastery";
 	{
 		Name = "Armory";
@@ -2738,6 +2745,7 @@ AtlasLoot_Data["Scholomance"] = {
 
 AtlasLoot_Data["ShadowfangKeep"] = {
 	Name = BabbleZone["Shadowfang Keep"];
+	Type = "ClassicDungeon";
 	Map = "ShadowfangKeep";
 	{
 		Name = BabbleBoss["Deathsworn Captain"];
@@ -3084,6 +3092,7 @@ AtlasLoot_Data["Stratholme"] = {
 
 AtlasLoot_Data["TheDeadmines"] = {
 	Name = BabbleZone["The Deadmines"];
+	Type = "ClassicDungeon";
 	Map = "TheDeadmines";
 	{
 		Name = BabbleBoss["Marisa du'Paige"];
@@ -3159,6 +3168,7 @@ AtlasLoot_Data["TheDeadmines"] = {
 
 AtlasLoot_Data["TheStockade"] = {
 	Name = BabbleZone["The Stockade"];
+	Type = "ClassicDungeon";
 	Map = "TheStockade";
 	{
 		Name = BabbleBoss["Targorr the Dread"];
@@ -3195,6 +3205,7 @@ AtlasLoot_Data["TheStockade"] = {
 
 AtlasLoot_Data["SunkenTemple"] = {
 	Name = "Sunken Temple";
+	Type = "ClassicDungeon";
 	Map = "TheSunkenTemple";
 	{
 		Name = "Spawn of Hakkar";
@@ -3330,6 +3341,7 @@ AtlasLoot_Data["SunkenTemple"] = {
 
 AtlasLoot_Data["Uldaman"] = {
 	Name = BabbleZone["Uldaman"];
+	Type = "ClassicDungeon";
 	Map = "Uldaman";
 	{
 		Name = AL["Magregan Deepshadow"];
@@ -3460,6 +3472,7 @@ AtlasLoot_Data["Uldaman"] = {
 
 AtlasLoot_Data["WailingCaverns"] = {
 	Name = BabbleZone["Wailing Caverns"];
+	Type = "ClassicDungeon";
 	Map = "WailingCaverns";
 	{
 		Name = AL["Kalldan Felmoon"];
@@ -3540,6 +3553,7 @@ AtlasLoot_Data["WailingCaverns"] = {
 
 AtlasLoot_Data["ZulFarrak"] = {
 	Name = BabbleZone["Zul'Farrak"];
+	Type = "ClassicDungeon";
 	Map = "ZulFarrak";
 	{
 		Name = BabbleBoss["Antu'sul"];

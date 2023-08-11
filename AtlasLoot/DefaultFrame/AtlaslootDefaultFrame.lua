@@ -14,7 +14,7 @@ AtlasLoot:SetNewStyle(style)
 --Include all needed libraries
 local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot");
 local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
-
+local WHITE = "|cffFFFFFF";
 ItemindexID = 2;
 
 AtlasLoot_Data["AtlasLootFallback"] = {
@@ -50,7 +50,7 @@ end
 function AtlasLoot:ShowInstance()
     for _, v in pairs(AtlasLoot_SubMenus) do
         for _, t in ipairs(v) do
-            if t[4] == BabbleZone[GetRealZoneText()] then
+            if t[4] == BabbleZone[GetRealZoneText()] or (t[5] and t[5] == BabbleZone[GetRealZoneText()]) then
                 AtlasLoot.currentTable = v.SubMenu;
                 AtlasLoot.lastModule = v.Module;
                 AtlasLoot:IsLootTableAvailable(AtlasLoot.lastModule);
@@ -85,12 +85,12 @@ function AtlasLoot:ExpandFrame(setup, updatedb)
     end
     local function expand()
         AtlasLootDefaultFrame:SetSize(1110,690);
-        AtlasLootDefaultFrame.lootBackground:SetSize(770,515)
+        AtlaslLoot_LootBackground:SetSize(770,515)
         AtlasLootItemsFrame:SetSize(765,510)
     end
     local function compact()
         AtlasLootDefaultFrame:SetSize(880,690);
-        AtlasLootDefaultFrame.lootBackground:SetSize(540,515)
+        AtlaslLoot_LootBackground:SetSize(540,515)
         AtlasLootItemsFrame:SetSize(535,510)
     end
     if setup then
@@ -156,7 +156,7 @@ function AtlasLoot:DewDropSubMenuClick(tablename)
     --Show the table that has been selected
     AtlasLoot:ShowItemsFrame(tablename, "AtlasLoot_Data", tablenum);
 end
-local WHITE = "|cffFFFFFF";
+
 
 --for a adding a divider to dew drop menus 
 function AtlasLoot:AddDividerLine(maxLenght)
@@ -336,42 +336,6 @@ function AtlasLoot:DewdropOpen()
     AtlasLoot.Dewdrop:Open(frame)
 end
 
-function AtlasLoot:OptionsDropDownOpen(self)
-    if AtlasLoot.Dewdrop:IsOpen(self) then AtlasLoot.Dewdrop:Close() return end
-    local loaded
-    if not loaded then
-        AtlasLoot.Dewdrop:Register(self,
-            'point', function(parent)
-                return "TOP", "BOTTOM"
-            end,
-            'children', function(level, value)
-                AtlasLoot.Dewdrop:AddLine(
-                    "text", "Expanded frame",
-                    "func", function() AtlasLoot:ExpandFrame(false, true) end,
-                    'tooltipTitle',"Toggle expanded loot frame",
-                    'closeWhenClicked', true,
-                    'textHeight', 12,
-                    'textWidth', 12,
-                    "checked", AtlasLoot.frameExpanded
-                    );
-                AtlasLoot.Dewdrop:AddLine(
-                    "text", "Hide recipe source",
-                    "func", function() AtlasLoot.db.profile.recipeExtraInfoSwitch = not AtlasLoot.db.profile.recipeExtraInfoSwitch end,
-                    'tooltipTitle',"Toggle showing recipe only while told CTRL",
-                    'closeWhenClicked', true,
-                    'textHeight', 12,
-                    'textWidth', 12,
-                    "checked", AtlasLoot.db.profile.recipeExtraInfoSwitch
-                    );
-                --Close button
-                AtlasLoot:CloseDewDrop(true,35)
-            end,
-            'dontHook', true
-        )
-    end 
-    AtlasLoot.Dewdrop:Open(self)
-end
-
 --[[
 AtlasLoot:SetNewStyle:
 Create the new Default Frame style
@@ -381,11 +345,9 @@ Create the new Default Frame style
 function AtlasLoot:SetNewStyle(style)
 
     local buttons = {
-        "AtlasLootDefaultFrame_Options",
-        "AtlasLootDefaultFrame_LoadModules",
-        "AtlasLootDefaultFrame_Menu",
-        "AtlasLootDefaultFrame_SubMenu",
-        "AtlasLootDefaultFrame_ExpansionMenu",
+        --"AtlasLootDefaultFrame_Menu",
+        --"AtlasLootDefaultFrame_SubMenu",
+        --"AtlasLootDefaultFrame_ExpansionMenu",
         "AtlasLootDefaultFrame_Preset1",
         "AtlasLootDefaultFrame_Preset2",
         "AtlasLootDefaultFrame_Preset3",
@@ -407,25 +369,21 @@ function AtlasLoot:SetNewStyle(style)
     }
 
     if style == "new" then
-        AtlasLootDefaultFrame.lootBackground:SetBackdrop({ bgFile = "Interface/AchievementFrame/UI-Achievement-StatsBackground" });
-        AtlasLootDefaultFrame.lootBackground:SetBackdropColor(1, 1, 1, 0.5);
-
-        AtlasLootDefaultFrame:SetBackdrop({ bgFile = "Interface/AchievementFrame/UI-Achievement-AchievementBackground",
-            edgeFile = "Interface/Tooltips/UI-Tooltip-Border",
-            edgeSize = 16,
-            insets = { left = 4, right = 4, top = 4, bottom = 4 } });
-        AtlasLootDefaultFrame:SetBackdropColor(1, 1, 1, 0.5)
-        AtlasLootDefaultFrame:SetBackdropBorderColor(1, 0.675, 0.125, 1)
-        AtlasLootDefaultFrame.header:SetTexture("Interface\\AchievementFrame\\UI-Achievement-Alert-Background.blp")
-        AtlasLootDefaultFrame.header:SetTexCoord(0, 0.605, 0, 0.703)
-        AtlasLootDefaultFrame.header:SetWidth(299)
-        AtlasLootDefaultFrame.header:SetHeight(60)
-        AtlasLootDefaultFrame.header:SetPoint("TOP", AtlasLootDefaultFrame, "TOP", -3, 22)
-
-        AtlasLootDefaultFrame_Options:SetNormalTexture("Interface/AchievementFrame/UI-Achievement-Category-Background")
-        AtlasLootDefaultFrame_Options:SetHeight(24)
-        AtlasLootDefaultFrame_Options:SetPushedTexture("Interface/AchievementFrame/UI-Achievement-Category-Background")
-        AtlasLootDefaultFrame_Options:SetHeight(24)
+        --AtlaslLoot_LootBackground:SetBackdrop({ bgFile = "Interface/AchievementFrame/UI-Achievement-StatsBackground" });
+        --AtlaslLoot_LootBackground:SetBackdropColor(1, 1, 1, 0.5);
+ 
+        AtlaslLoot_LootBackground:SetBackdrop({
+            bgFile = "Interface\\DialogFrame\\UI-DialogBox-Background", tile = true, tileSize = 16,
+            edgeFile = "Interface\\Tooltips\\UI-Tooltip-Border", edgeSize = 16,
+            insets = { left = 4, right = 4, top = 4, bottom = 4 },
+        });
+        --AtlasLootDefaultFrame:SetBackdropColor(1, 1, 1, 0.5)
+        --AtlasLootDefaultFrame:SetBackdropBorderColor(1, 0.675, 0.125, 1)
+        --AtlasLootDefaultFrame.header:SetTexture("Interface\\AchievementFrame\\UI-Achievement-Alert-Background.blp")
+        --AtlasLootDefaultFrame.header:SetTexCoord(0, 0.605, 0, 0.703)
+        --AtlasLootDefaultFrame.header:SetWidth(299)
+        --AtlasLootDefaultFrame.header:SetHeight(60)
+        --AtlasLootDefaultFrame.header:SetPoint("TOP", AtlasLootDefaultFrame, "TOP", -3, 22) ]]
 
         local function SetButtons(path)
             _G[path]:SetNormalTexture("Interface/AchievementFrame/UI-Achievement-Category-Background")
@@ -446,8 +404,8 @@ function AtlasLoot:SetNewStyle(style)
         end
     elseif style == "old" then
 
-        AtlasLootDefaultFrame.lootBackground:SetBackdrop({ bgFile = "" });
-        AtlasLootDefaultFrame.lootBackground:SetBackdropColor(0, 0, 0.5, 0.5);
+        AtlaslLoot_LootBackground:SetBackdrop({ bgFile = "" });
+        AtlaslLoot_LootBackground:SetBackdropColor(0, 0, 0.5, 0.5);
 
         AtlasLootDefaultFrame:SetBackdrop({ bgFile = "Interface/DialogFrame/UI-DialogBox-Background",
             edgeFile = "Interface/DialogFrame/UI-DialogBox-Border",
@@ -462,11 +420,6 @@ function AtlasLoot:SetNewStyle(style)
         AtlasLootDefaultFrame.header:SetWidth(425)
         AtlasLootDefaultFrame.header:SetHeight(64)
         AtlasLootDefaultFrame.header:SetPoint("TOP", AtlasLootDefaultFrame, "TOP", 0, 12)
-
-        AtlasLootDefaultFrame_Options:SetNormalTexture("Interface/Buttons/UI-Panel-Button-Up")
-        AtlasLootDefaultFrame_Options:SetHeight(20)
-        AtlasLootDefaultFrame_Options:SetPushedTexture("Interface/Buttons/UI-Panel-Button-Down")
-        AtlasLootDefaultFrame_Options:SetHeight(20)
 
         local function SetButtons(path)
             _G[path]:SetNormalTexture("Interface/Buttons/UI-Panel-Button-Up")
