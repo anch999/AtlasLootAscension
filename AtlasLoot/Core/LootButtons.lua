@@ -349,8 +349,9 @@ function AtlasLootItem_OnClick(self ,arg1)
                 --Create token table if there isnt one
                 if AtlasLoot_TokenData[self.sourcePage[1]] == nil then
                     AtlasLoot:CreateToken(self.sourcePage[1])
-                    dataID, dataSource, dataPage = self.sourcePage[1], "AtlasLoot_TokenData", 1
+                    
                 end
+                dataID, dataSource, dataPage = self.sourcePage[1], "AtlasLoot_TokenData", 1
             end
             --Show token table
             AtlasLoot:ShowItemsFrame(dataID, dataSource, tonumber(dataPage));
