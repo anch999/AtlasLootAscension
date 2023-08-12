@@ -246,7 +246,7 @@ local submenubtn = CreateFrame("Button", "AtlasLootDefaultFrame_SubMenu", AtlasL
     submenubtn:SetSize(275,25);
     submenubtn:SetPoint("TOP", AtlaslLoot_LootBackground,"TOP",56,30)
     submenubtn.Lable = submenubtn:CreateFontString(nil, "OVERLAY","GameFontNormal")
-    submenubtn.Lable:SetPoint("TOP",submenubtn,"BOTTOM",0,39);
+    submenubtn.Lable:SetPoint("TOP",submenubtn,"BOTTOM",0,42);
     submenubtn.Lable:SetText("Select Subcategory");
     submenubtn.Lable:Show();
     submenubtn:SetScript("OnClick", function(self)
@@ -256,9 +256,9 @@ local submenubtn = CreateFrame("Button", "AtlasLootDefaultFrame_SubMenu", AtlasL
     --Moduel Menu Button
 local menubtn = CreateFrame("Button", "AtlasLootDefaultFrame_Menu", AtlasLootDefaultFrame, "FilterDropDownMenuTemplate");
     menubtn:SetSize(275,25);
-    menubtn:SetPoint("RIGHT", "AtlasLootDefaultFrame_SubMenu", "LEFT",0,0);
+    menubtn:SetPoint("RIGHT", "AtlasLootDefaultFrame_SubMenu", "LEFT",-5,0);
     menubtn.Lable = menubtn:CreateFontString(nil, "OVERLAY","GameFontNormal")
-    menubtn.Lable:SetPoint("TOP",menubtn,"BOTTOM",0,39);
+    menubtn.Lable:SetPoint("TOP",menubtn,"BOTTOM",0,42);
     menubtn.Lable:SetText("Select Module");
     menubtn.Lable:Show();
     menubtn:SetText(AL["Select Loot Table"]);
@@ -284,7 +284,7 @@ local expansionmenubtn = CreateFrame("Button", "AtlasLootDefaultFrame_ExpansionM
     expansionmenubtn:SetPoint("LEFT", "AtlasLootDefaultFrame_SubMenu", "RIGHT",5,0);
     expansionmenubtn:SetText(AtlasLoot_ExpansionMenu[GetAccountExpansionLevel()+1][1]);
     expansionmenubtn.Lable = expansionmenubtn:CreateFontString(nil, "OVERLAY","GameFontNormal")
-    expansionmenubtn.Lable:SetPoint("TOP",expansionmenubtn,"BOTTOM",0,39);
+    expansionmenubtn.Lable:SetPoint("TOP",expansionmenubtn,"BOTTOM",0,42);
     expansionmenubtn.Lable:SetText("Select Expansion");
     expansionmenubtn.Lable:Show();
     expansionmenubtn:SetScript("OnClick", function(self)

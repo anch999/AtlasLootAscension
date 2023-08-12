@@ -10,8 +10,7 @@ local INDENT = "      ";
 local YELLOW = "|cffFFd200"
 local WHITE = "|cFFFFFFFF"
 local CYAN =  "|cff00ffff"
-local questPin = "Interface\\AddOns\\AwAddons\\Textures\\EnchOverhaul\\QuestionMark"
-local DefaultPin = "Interface\\AddOns\\AtlasLoot\\Images\\pin-yellow-new"
+local DefaultPin = "questlog-questtypeicon-daily"
 -- Map Functions
 
 local lastMap
@@ -63,9 +62,10 @@ function AtlasLoot:CreateMapPins(list)
             _G["AtlasLoot_MapPin"..i].tex:SetTexCoord(tex.leftTexCoord, tex.rightTexCoord, tex.topTexCoord, tex.bottomTexCoord)
             _G["AtlasLoot_MapPin"..i].tex:SetSize(25,25)
         else
-            _G["AtlasLoot_MapPin"..i].tex:SetTexCoord(0,1,0,1)
-            _G["AtlasLoot_MapPin"..i].tex:SetTexture(DefaultPin)
-            _G["AtlasLoot_MapPin"..i].tex:SetSize(35,35)
+            local tex = AtlasUtil:GetAtlasInfo(DefaultPin)
+            _G["AtlasLoot_MapPin"..i].tex:SetTexture(tex.filename)
+            _G["AtlasLoot_MapPin"..i].tex:SetTexCoord(tex.leftTexCoord, tex.rightTexCoord, tex.topTexCoord, tex.bottomTexCoord)
+            _G["AtlasLoot_MapPin"..i].tex:SetSize(25,25)
         end
         _G["AtlasLoot_MapPin"..i].text:SetText(CYAN..v[1]);
         _G["AtlasLoot_MapPin"..i]:ClearAllPoints();
