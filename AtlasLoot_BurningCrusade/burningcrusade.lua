@@ -882,7 +882,7 @@ AtlasLoot_Data["CoTHyjal"] = {
 		{ 6, 30900, "", "Bow-stitched Leggings", "", "", "" };
 		{ 7, 30915, "", "Belt of Seething Fury", "", "", "" };
 		{ 8, 30918, "", "Hammer of Atonement", "", "", "" };
-		{ 16, 31092, "", "Gloves of the Forgotten Conqueror", "", "", "100%" };
+		{ 16, 31092, "", "Gloves of the Forgotten Conqueror", "=ds=#tt6#", "", "100%", lootTable = {"T6HANDS","Token"} };
 		{ 18, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%" };
 		{ 19, 98570, "", "Mystic Orbs", "", "", "100%" };
 	};
@@ -894,7 +894,7 @@ AtlasLoot_Data["CoTHyjal"] = {
 		{ 4, 30899, "", "Don Rodrigo\'s Poncho", "", "", "" };
 		{ 5, 30901, "", "Boundless Agony", "", "", "" };
 		{ 6, 30917, "", "Razorfury Mantle", "", "", "" };
-		{ 16, 31098, "", "=q4=Leggings of the Forgotten Conqueror", "=q1=#m1# =ds=#c4#, #c5#, #c8#", "", "100%" };
+		{ 16, 31098, "", "=q4=Leggings of the Forgotten Conqueror", "=ds=#tt6#", "", "100%", lootTable = {"T6LEGS","Token"} };
 		{ 18, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%" };
 		{ 19, 98570, "", "Mystic Orbs", "", "", "100%" };
 	};
@@ -912,7 +912,7 @@ AtlasLoot_Data["CoTHyjal"] = {
 		{ 11, 30908, "", "=q4=Apostle of Argus", "=ds=#h2#, #w9#", "", "15%" };
 		{ 12, 30909, "", "=q4=Antonidas's Aegis of Rapt Concentration", "=ds=#w8#", "", "15%" };
 		{ 13, 30906, "", "=q4=Bristleblitz Striker", "=ds=#w2#", "", "16%" };
-		{ 16, 31097, "", "=q4=Helm of the Forgotten Conqueror", "=q1=#m1# =ds=#c4#, #c5#, #c8#", "", "100%" };
+		{ 16, 31097, "", "=q4=Helm of the Forgotten Conqueror", "=ds=#tt6#", "", "100%", lootTable = {"T6HEAD","Token"} };
 		{ 18, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%" };
 		{ 19, 98570, "", "Mystic Orbs", "", "", "100%" };
 		{ 21, 1001620, "", "Annihilator Mount", "", "", "1%"};
