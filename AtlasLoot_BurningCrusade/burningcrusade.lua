@@ -850,8 +850,9 @@ AtlasLoot_Data["CoTHyjal"] = {
 		{ 18, 30891 , "", "Black Featherlight Boots", "", "",""};
 		{ 19, 30914 , "", "Belt of the Crescent Moon", "", "",""};
 		{ 21, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%" };
-		{ 22, 98570, "", "Mystic Orbs", "", "", "100%" };
+		{ 19, 98570, "", "Mystic Orbs", "=ds=#m17#", "", "100%" };
 		{ 24, 32459, "", "=q1=Time-Phased Phylactery", "=ds=#m3#", "", "8%" };
+		{ 26, 61196, "", "Sigil of Winterchill", "=ds=#e13#", "", "1%" };
 	};
 	{
 		Name = BabbleBoss["Anetheron"];
@@ -870,7 +871,8 @@ AtlasLoot_Data["CoTHyjal"] = {
 		{ 20, 30916, "", "Leggings of Channeled Elements", "", "", ""};
 		{ 21, 30919, "", "Valestalker Girdle", "", "", ""};
 		{ 23, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%" };
-		{ 24, 98570, "", "Mystic Orbs", "", "", "100%" };
+		{ 19, 98570, "", "Mystic Orbs", "=ds=#m17#", "", "100%" };
+		{ 26, 61287, "", "Sigil of Anetheron", "=ds=#e13#", "", "1%" };
 	};
 	{
 		Name = BabbleBoss["Kaz'rogal"];
@@ -884,7 +886,7 @@ AtlasLoot_Data["CoTHyjal"] = {
 		{ 8, 30918, "", "Hammer of Atonement", "", "", "" };
 		{ 16, 31092, "", "Gloves of the Forgotten Conqueror", "=ds=#tt6#", "", "100%", lootTable = {"T6HANDS","Token"} };
 		{ 18, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%" };
-		{ 19, 98570, "", "Mystic Orbs", "", "", "100%" };
+		{ 19, 98570, "", "Mystic Orbs", "=ds=#m17#", "", "100%" };
 	};
 	{
 		Name = BabbleBoss["Azgalor"];
@@ -896,7 +898,8 @@ AtlasLoot_Data["CoTHyjal"] = {
 		{ 6, 30917, "", "Razorfury Mantle", "", "", "" };
 		{ 16, 31098, "", "=q4=Leggings of the Forgotten Conqueror", "=ds=#tt6#", "", "100%", lootTable = {"T6LEGS","Token"} };
 		{ 18, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%" };
-		{ 19, 98570, "", "Mystic Orbs", "", "", "100%" };
+		{ 19, 98570, "", "Mystic Orbs", "=ds=#m17#", "", "100%" };
+		{ 21, 61289, "", "Sigil of Azgalor", "=ds=#e15#", "", "1%" };
 	};
 	{
 		Name = BabbleBoss["Archimonde"];
@@ -914,8 +917,9 @@ AtlasLoot_Data["CoTHyjal"] = {
 		{ 13, 30906, "", "=q4=Bristleblitz Striker", "=ds=#w2#", "", "16%" };
 		{ 16, 31097, "", "=q4=Helm of the Forgotten Conqueror", "=ds=#tt6#", "", "100%", lootTable = {"T6HEAD","Token"} };
 		{ 18, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%" };
-		{ 19, 98570, "", "Mystic Orbs", "", "", "100%" };
-		{ 21, 1001620, "", "Annihilator Mount", "", "", "1%"};
+		{ 19, 98570, "", "Mystic Orbs", "=ds=#m17#", "", "100%" };
+		{ 21, 61557, "", "Sigil of Archimonde", "=ds=#e13#", "", "1%" };
+		{ 23, 1001620, "", "Annihilator Mount", "=ds=#e12#", "", "1%"};
 	};
 	{
 		Name = AL["Trash Mobs"].." - Items";
