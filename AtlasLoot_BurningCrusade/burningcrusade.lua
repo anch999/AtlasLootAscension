@@ -850,7 +850,7 @@ AtlasLoot_Data["CoTHyjal"] = {
 		{ 18, 30891 , "", "Black Featherlight Boots", "", "",""};
 		{ 19, 30914 , "", "Belt of the Crescent Moon", "", "",""};
 		{ 21, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%" };
-		{ 19, 98570, "", "Mystic Orbs", "=ds=#m17#", "", "100%" };
+		{ 22, 98570, "", "Mystic Orbs", "=ds=#m17#", "", "100%" };
 		{ 24, 32459, "", "=q1=Time-Phased Phylactery", "=ds=#m3#", "", "8%" };
 		{ 26, 61196, "", "Sigil of Winterchill", "=ds=#e13#", "", "1%" };
 	};
@@ -871,7 +871,7 @@ AtlasLoot_Data["CoTHyjal"] = {
 		{ 20, 30916, "", "Leggings of Channeled Elements", "", "", ""};
 		{ 21, 30919, "", "Valestalker Girdle", "", "", ""};
 		{ 23, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%" };
-		{ 19, 98570, "", "Mystic Orbs", "=ds=#m17#", "", "100%" };
+		{ 24, 98570, "", "Mystic Orbs", "=ds=#m17#", "", "100%" };
 		{ 26, 61287, "", "Sigil of Anetheron", "=ds=#e13#", "", "1%" };
 	};
 	{
@@ -884,7 +884,7 @@ AtlasLoot_Data["CoTHyjal"] = {
 		{ 6, 30900, "", "Bow-stitched Leggings", "", "", "" };
 		{ 7, 30915, "", "Belt of Seething Fury", "", "", "" };
 		{ 8, 30918, "", "Hammer of Atonement", "", "", "" };
-		{ 16, 31092, "", "Gloves of the Forgotten Conqueror", "=ds=#tt6#", "", "100%", lootTable = {"T6HANDS","Token"} };
+		{ 16, 31092, "", "Gloves of the Forgotten Conqueror", "=ds=#tt6#", "", "100%", lootTable = {"T6HAND","Token"} };
 		{ 18, 29434, "", "=q4=Badge of Justice", "=ds=#e15#", "", "100%" };
 		{ 19, 98570, "", "Mystic Orbs", "=ds=#m17#", "", "100%" };
 	};
