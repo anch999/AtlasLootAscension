@@ -78,6 +78,31 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
 --- Dungeons & BCRaids ---
 ------------------------
 
+-- The scale of the sand rep rings
+local scaleOfSandsRings = {
+	Name = "Rings";
+	{ 1, 29298, "", "=q4=Band of Eternity", "=ds=#s13#, =q1=#r2#" };
+	{ 2, 29299, "", "=q4=Band of Eternity", "=ds=#s13#, =q1=#r3#" };
+	{ 3, 29300, "", "=q4=Band of Eternity", "=ds=#s13#, =q1=#r4#" };
+	{ 4, 29301, "", "=q4=Band of the Eternal Champion", "=ds=#s13#, =q1=#r5#" };
+	{ 6, 29294, "", "=q4=Band of Eternity", "=ds=#s13#, =q1=#r2#" };
+	{ 7, 29295, "", "=q4=Band of Eternity", "=ds=#s13#, =q1=#r3#" };
+	{ 8, 29296, "", "=q4=Band of Eternity", "=ds=#s13#, =q1=#r4#" };
+	{ 9, 29297, "", "=q4=Band of the Eternal Defender", "=ds=#s13#, =q1=#r5#" };
+	{ 11, 15037, "", "=q4=Band of Eternity", "=ds=#s13#, =q1=#r2#" };
+	{ 12, 15038, "", "=q4=Band of Eternity", "=ds=#s13#, =q1=#r3#" };
+	{ 13, 15039, "", "=q4=Band of Eternity", "=ds=#s13#, =q1=#r4#" };
+	{ 14, 15040, "", "=q4=Flawless Band of the Eternal Assassin", "=ds=#s13#, =q1=#r5#" };
+	{ 16, 29302, "", "=q4=Band of Eternity", "=ds=#s13#, =q1=#r2#" };
+	{ 17, 29303, "", "=q4=Band of Eternity", "=ds=#s13#, =q1=#r3#" };
+	{ 18, 29304, "", "=q4=Band of Eternity", "=ds=#s13#, =q1=#r4#" };
+	{ 19, 29305, "", "=q4=Band of the Eternal Sage", "=ds=#s13#, =q1=#r5#" };
+	{ 21, 29307, "", "=q4=Band of Eternity", "=ds=#s13#, =q1=#r2#" };
+	{ 22, 29306, "", "=q4=Band of Eternity", "=ds=#s13#, =q1=#r3#" };
+	{ 23, 29308, "", "=q4=Band of Eternity", "=ds=#s13#, =q1=#r4#" };
+	{ 24, 29309, "", "=q4=Band of the Eternal Restorer", "=ds=#s13#, =q1=#r5#" };
+};
+
 ------------
 --- Keys ---
 ------------
@@ -921,6 +946,7 @@ AtlasLoot_Data["CoTHyjal"] = {
 		{ 21, 61557, "", "Sigil of Archimonde", "=ds=#e13#", "", "1%" };
 		{ 23, 1001620, "", "Annihilator Mount", "=ds=#e12#", "", "1%"};
 	};
+	scaleOfSandsRings;
 	{
 		Name = AL["Trash Mobs"].." - Items";
 		{ 1, 32590, "", "=q4=Nethervoid Cloak", "=ds=#s4#", "", "1%" };
@@ -3494,25 +3520,7 @@ AtlasLoot_Data["Maghar"] = {
 
 AtlasLoot_Data["ScaleSands"] = {
 	Name = BabbleFaction["The Scale of the Sands"];
-	{
-		Name = "Rings";
-		{ 1, 29298, "", "=q4=Band of Eternity", "=ds=#s13#, =q1=#r2#" };
-		{ 2, 29299, "", "=q4=Band of Eternity", "=ds=#s13#, =q1=#r3#" };
-		{ 3, 29300, "", "=q4=Band of Eternity", "=ds=#s13#, =q1=#r4#" };
-		{ 4, 29301, "", "=q4=Band of the Eternal Champion", "=ds=#s13#, =q1=#r5#" };
-		{ 6, 29294, "", "=q4=Band of Eternity", "=ds=#s13#, =q1=#r2#" };
-		{ 7, 29295, "", "=q4=Band of Eternity", "=ds=#s13#, =q1=#r3#" };
-		{ 8, 29296, "", "=q4=Band of Eternity", "=ds=#s13#, =q1=#r4#" };
-		{ 9, 29297, "", "=q4=Band of the Eternal Defender", "=ds=#s13#, =q1=#r5#" };
-		{ 16, 29302, "", "=q4=Band of Eternity", "=ds=#s13#, =q1=#r2#" };
-		{ 17, 29303, "", "=q4=Band of Eternity", "=ds=#s13#, =q1=#r3#" };
-		{ 18, 29304, "", "=q4=Band of Eternity", "=ds=#s13#, =q1=#r4#" };
-		{ 19, 29305, "", "=q4=Band of the Eternal Sage", "=ds=#s13#, =q1=#r5#" };
-		{ 21, 29307, "", "=q4=Band of Eternity", "=ds=#s13#, =q1=#r2#" };
-		{ 22, 29306, "", "=q4=Band of Eternity", "=ds=#s13#, =q1=#r3#" };
-		{ 23, 29308, "", "=q4=Band of Eternity", "=ds=#s13#, =q1=#r4#" };
-		{ 24, 29309, "", "=q4=Band of the Eternal Restorer", "=ds=#s13#, =q1=#r5#" };
-	};
+	scaleOfSandsRings;
 	{
 		Name = BabbleFaction["Friendly"];
 		{ 1, 32274, "", "=q4=Design: Bold Crimson Spinel", "=ds=#p12# (375)" };
@@ -5577,7 +5585,7 @@ AtlasLoot_Data["T5"] = {
 			{ 4, 34444, "", "=q4=Thunderheart Wristguards", "=ds="..BabbleBoss["Kalecgos"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 			{ 5, 31034, "", "=q4=Thunderheart Gauntlets", "=ds="..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")"};
 			{ 6, 34556, "", "=q4=Thunderheart Waistguard", "=ds="..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")"};
-			{ 7, 31044, "", "=q4=Thunderheart Leggings", "=ds="..BabbleBoss["The Illidari Council"].." ("..BabbleZone["Black Temple"]..")"};
+			{ 7, 31044, "", "=q4=Thunderheart Leggings", "=ds="..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")"};
 			{ 8, 34573, "", "=q4=Thunderheart Treads", "=ds="..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 		};
 		{
@@ -5588,7 +5596,7 @@ AtlasLoot_Data["T5"] = {
 			{ 4, 34445, "", "=q4=Thunderheart Bracers", "=ds="..BabbleBoss["Kalecgos"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 			{ 5, 31032, "", "=q4=Thunderheart Gloves", "=ds="..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")"};
 			{ 6, 34554, "", "=q4=Thunderheart Belt", "=ds="..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")"};
-			{ 7, 31045, "", "=q4=Thunderheart Legguards", "=ds="..BabbleBoss["The Illidari Council"].." ("..BabbleZone["Black Temple"]..")"};
+			{ 7, 31045, "", "=q4=Thunderheart Legguards", "=ds="..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")"};
 			{ 8, 34571, "", "=q4=Thunderheart Boots", "=ds="..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 		};
 		{
@@ -5599,7 +5607,7 @@ AtlasLoot_Data["T5"] = {
 			{ 4, 34446, "", "=q4=Thunderheart Bands", "=ds="..BabbleBoss["Kalecgos"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 			{ 5, 31035, "", "=q4=Thunderheart Handguards", "=ds="..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")"};
 			{ 6, 34555, "", "=q4=Thunderheart Cord", "=ds="..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")"};
-			{ 7, 31046, "", "=q4=Thunderheart Pants", "=ds="..BabbleBoss["The Illidari Council"].." ("..BabbleZone["Black Temple"]..")"};
+			{ 7, 31046, "", "=q4=Thunderheart Pants", "=ds="..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")"};
 			{ 8, 34572, "", "=q4=Thunderheart Footwraps", "=ds="..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 		};
 		{
@@ -5610,7 +5618,7 @@ AtlasLoot_Data["T5"] = {
 			{ 4, 34443, "", "=q4=Gronnstalker's Bracers", "=ds="..BabbleBoss["Kalecgos"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 			{ 5, 31001, "", "=q4=Gronnstalker's Gloves", "=ds="..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")"};
 			{ 6, 34549, "", "=q4=Gronnstalker's Belt", "=ds="..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")"};
-			{ 7, 31005, "", "=q4=Gronnstalker's Leggings", "=ds="..BabbleBoss["The Illidari Council"].." ("..BabbleZone["Black Temple"]..")"};
+			{ 7, 31005, "", "=q4=Gronnstalker's Leggings", "=ds="..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")"};
 			{ 8, 34570, "", "=q4=Gronnstalker's Boots", "=ds="..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 		};
 		{
@@ -5621,7 +5629,7 @@ AtlasLoot_Data["T5"] = {
 			{ 4, 34447, "", "=q4=Bracers of the Tempest", "=ds="..BabbleBoss["Kalecgos"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 			{ 5, 31055, "", "=q4=Gloves of the Tempest", "=ds="..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")"};
 			{ 6, 34557, "", "=q4=Belt of the Tempest", "=ds="..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")"};
-			{ 7, 31058, "", "=q4=Leggings of the Tempest", "=ds="..BabbleBoss["The Illidari Council"].." ("..BabbleZone["Black Temple"]..")"};
+			{ 7, 31058, "", "=q4=Leggings of the Tempest", "=ds="..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")"};
 			{ 8, 34574, "", "=q4=Boots of the Tempest", "=ds="..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 		};
 		{
@@ -5632,7 +5640,7 @@ AtlasLoot_Data["T5"] = {
 			{ 4, 34433, "", "=q4=Lightbringer Wristguards", "=ds="..BabbleBoss["Kalecgos"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 			{ 5, 30985, "", "=q4=Lightbringer Handguards", "=ds="..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")"};
 			{ 6, 34488, "", "=q4=Lightbringer Waistguard", "=ds="..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")"};
-			{ 7, 30995, "", "=q4=Lightbringer Legguards", "=ds="..BabbleBoss["The Illidari Council"].." ("..BabbleZone["Black Temple"]..")"};
+			{ 7, 30995, "", "=q4=Lightbringer Legguards", "=ds="..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")"};
 			{ 8, 34560, "", "=q4=Lightbringer Greaves", "=ds="..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 		};
 		{
@@ -5643,7 +5651,7 @@ AtlasLoot_Data["T5"] = {
 			{ 4, 34431, "", "=q4=Lightbringer Bands", "=ds="..BabbleBoss["Kalecgos"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 			{ 5, 30982, "", "=q4=Lightbringer Gauntlets", "=ds="..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")"};
 			{ 6, 34485, "", "=q4=Lightbringer Girdle", "=ds="..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")"};
-			{ 7, 30993, "", "=q4=Lightbringer Greaves", "=ds="..BabbleBoss["The Illidari Council"].." ("..BabbleZone["Black Temple"]..")"};
+			{ 7, 30993, "", "=q4=Lightbringer Greaves", "=ds="..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")"};
 			{ 8, 34561, "", "=q4=Lightbringer Boots", "=ds="..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 		};
 		{
@@ -5654,7 +5662,7 @@ AtlasLoot_Data["T5"] = {
 			{ 4, 34432, "", "=q4=Lightbringer Bracers", "=ds="..BabbleBoss["Kalecgos"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 			{ 5, 30983, "", "=q4=Lightbringer Gloves", "=ds="..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")"};
 			{ 6, 34487, "", "=q4=Lightbringer Belt", "=ds="..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")"};
-			{ 7, 30994, "", "=q4=Lightbringer Leggings", "=ds="..BabbleBoss["The Illidari Council"].." ("..BabbleZone["Black Temple"]..")"};
+			{ 7, 30994, "", "=q4=Lightbringer Leggings", "=ds="..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")"};
 			{ 8, 34559, "", "=q4=Lightbringer Treads", "=ds="..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 		};
 		{
@@ -5665,7 +5673,7 @@ AtlasLoot_Data["T5"] = {
 			{ 4, 34435, "", "=q4=Cuffs of Absolution", "=ds="..BabbleBoss["Kalecgos"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 			{ 5, 31060, "", "=q4=Gloves of Absolution", "=ds="..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")"};
 			{ 6, 34527, "", "=q4=Belt of Absolution", "=ds="..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")"};
-			{ 7, 31068, "", "=q4=Breeches of Absolution", "=ds="..BabbleBoss["The Illidari Council"].." ("..BabbleZone["Black Temple"]..")"};
+			{ 7, 31068, "", "=q4=Breeches of Absolution", "=ds="..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")"};
 			{ 8, 34562, "", "=q4=Boots of Absolution", "=ds="..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 		};
 		{
@@ -5676,7 +5684,7 @@ AtlasLoot_Data["T5"] = {
 			{ 4, 34434, "", "=q4=Bracers of Absolution", "=ds="..BabbleBoss["Kalecgos"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 			{ 5, 31061, "", "=q4=Handguards of Absolution", "=ds="..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")"};
 			{ 6, 34528, "", "=q4=Cord of Absolution", "=ds="..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")"};
-			{ 7, 31067, "", "=q4=Leggings of Absolution", "=ds="..BabbleBoss["The Illidari Council"].." ("..BabbleZone["Black Temple"]..")"};
+			{ 7, 31067, "", "=q4=Leggings of Absolution", "=ds="..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")"};
 			{ 8, 34563, "", "=q4=Treads of Absolution", "=ds="..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 		};
 		{
@@ -5687,7 +5695,7 @@ AtlasLoot_Data["T5"] = {
 			{ 4, 34448, "", "=q4=Slayer's Bracers", "=ds="..BabbleBoss["Kalecgos"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 			{ 5, 31026, "", "=q4=Slayer's Handguards", "=ds="..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")"};
 			{ 6, 34558, "", "=q4=Slayer's Belt", "=ds="..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")"};
-			{ 7, 31029, "", "=q4=Slayer's Legguards", "=ds="..BabbleBoss["The Illidari Council"].." ("..BabbleZone["Black Temple"]..")"};
+			{ 7, 31029, "", "=q4=Slayer's Legguards", "=ds="..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")"};
 			{ 8, 34575, "", "=q4=Slayer's Boots", "=ds="..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 		};
 		{
@@ -5698,7 +5706,7 @@ AtlasLoot_Data["T5"] = {
 			{ 4, 34439, "", "=q4=Skyshatter Wristguards", "=ds="..BabbleBoss["Kalecgos"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 			{ 5, 31011, "", "=q4=Skyshatter Grips", "=ds="..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")"};
 			{ 6, 34545, "", "=q4=Skyshatter Girdle", "=ds="..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")"};
-			{ 7, 31021, "", "=q4=Skyshatter Pants", "=ds="..BabbleBoss["The Illidari Council"].." ("..BabbleZone["Black Temple"]..")"};
+			{ 7, 31021, "", "=q4=Skyshatter Pants", "=ds="..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")"};
 			{ 8, 34567, "", "=q4=Skyshatter Greaves", "=ds="..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 		};
 		{
@@ -5709,7 +5717,7 @@ AtlasLoot_Data["T5"] = {
 			{ 4, 34438, "", "=q4=Skyshatter Bracers", "=ds="..BabbleBoss["Kalecgos"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 			{ 5, 31007, "", "=q4=Skyshatter Gloves", "=ds="..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")"};
 			{ 6, 34543, "", "=q4=Skyshatter Belt", "=ds="..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")"};
-			{ 7, 31019, "", "=q4=Skyshatter Leggings", "=ds="..BabbleBoss["The Illidari Council"].." ("..BabbleZone["Black Temple"]..")"};
+			{ 7, 31019, "", "=q4=Skyshatter Leggings", "=ds="..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")"};
 			{ 8, 34565, "", "=q4=Skyshatter Boots", "=ds="..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 		};
 		{
@@ -5720,7 +5728,7 @@ AtlasLoot_Data["T5"] = {
 			{ 4, 34437, "", "=q4=Skyshatter Bands", "=ds="..BabbleBoss["Kalecgos"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 			{ 5, 31008, "", "=q4=Skyshatter Gauntlets", "=ds="..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")"};
 			{ 6, 34542, "", "=q4=Skyshatter Cord", "=ds="..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")"};
-			{ 7, 31020, "", "=q4=Skyshatter Legguards", "=ds="..BabbleBoss["The Illidari Council"].." ("..BabbleZone["Black Temple"]..")"};
+			{ 7, 31020, "", "=q4=Skyshatter Legguards", "=ds="..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")"};
 			{ 8, 34566, "", "=q4=Skyshatter Treads", "=ds="..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 		};
 		{
@@ -5731,7 +5739,7 @@ AtlasLoot_Data["T5"] = {
 			{ 4, 34436, "", "=q4=Bracers of the Malefic", "=ds="..BabbleBoss["Kalecgos"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 			{ 5, 31050, "", "=q4=Gloves of the Malefic", "=ds="..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")"};
 			{ 6, 34541, "", "=q4=Belt of the Malefic", "=ds="..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")"};
-			{ 7, 31053, "", "=q4=Leggings of the Malefic", "=ds="..BabbleBoss["The Illidari Council"].." ("..BabbleZone["Black Temple"]..")"};
+			{ 7, 31053, "", "=q4=Leggings of the Malefic", "=ds="..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")"};
 			{ 8, 34564, "", "=q4=Boots of the Malefic", "=ds="..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 		};
 		{
@@ -5742,7 +5750,7 @@ AtlasLoot_Data["T5"] = {
 			{ 4, 34442, "", "=q4=Onslaught Wristguards", "=ds="..BabbleBoss["Kalecgos"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 			{ 5, 30970, "", "=q4=Onslaught Handguards", "=ds="..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")"};
 			{ 6, 34547, "", "=q4=Onslaught Waistguard", "=ds="..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")"};
-			{ 7, 30978, "", "=q4=Onslaught Legguards", "=ds="..BabbleBoss["The Illidari Council"].." ("..BabbleZone["Black Temple"]..")"};
+			{ 7, 30978, "", "=q4=Onslaught Legguards", "=ds="..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")"};
 			{ 8, 34568, "", "=q4=Onslaught Boots", "=ds="..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 		};
 		{
@@ -5753,7 +5761,7 @@ AtlasLoot_Data["T5"] = {
 			{ 4, 34441, "", "=q4=Onslaught Bracers", "=ds="..BabbleBoss["Kalecgos"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 			{ 5, 30969, "", "=q4=Onslaught Gauntlets", "=ds="..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")"};
 			{ 6, 34546, "", "=q4=Onslaught Belt", "=ds="..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")"};
-			{ 7, 30977, "", "=q4=Onslaught Greaves", "=ds="..BabbleBoss["The Illidari Council"].." ("..BabbleZone["Black Temple"]..")"};
+			{ 7, 30977, "", "=q4=Onslaught Greaves", "=ds="..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")"};
 			{ 8, 34569, "", "=q4=Onslaught Treads", "=ds="..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")"};
 		};
 	};

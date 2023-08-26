@@ -4217,5 +4217,18 @@ if AL then
 	AL["Zula Slagfury"] = true
 	AL["Zurai"] = true
 	AL["Zurii"] = true
+	AL["Hide minimap icon"] = true
 
+	-- Subzones
+	AL["The Headmaster's Study"] = true
+	AL["The Courtyard"] = true
+	AL["Dining Hall"] = true
+	AL["The Vacant Den"] = true
+	AL["Upper Observatory"] = true
+	AL["Lower Observatory"] = true
+	AL["Lord Godfrey's Chamber"] = true
+	AL["The Wall Walk"] = true
+	AL["Crusader's Square"] = true
+	AL["Upper Ring"] = true
+	AL["Lower Pool"] = true
 end

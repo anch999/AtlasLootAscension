@@ -241,6 +241,11 @@ local looksbtn = CreateFrame("Button", "AtlasLootQuickLooksButton", AtlasLootIte
         
 ------------------------------------ Buttons at the top of the frame ---------------------------------------
 
+
+--        "Interface\\ChatFrame\\ChatFrameExpandArrow"
+  --      "Interface\\Buttons\\UI-Silver-Button-Up"
+    --    "Interface\\Buttons\\UI-Silver-Button-Highlight"
+
     --SubMenu Button
 local submenubtn = CreateFrame("Button", "AtlasLootDefaultFrame_SubMenu", AtlasLootDefaultFrame, "FilterDropDownMenuTemplate");
     submenubtn:SetSize(275,25);
@@ -263,7 +268,7 @@ local menubtn = CreateFrame("Button", "AtlasLootDefaultFrame_Menu", AtlasLootDef
     menubtn.Lable:Show();
     menubtn:SetText(AL["Select Loot Table"]);
     menubtn:SetScript("OnClick", function(self)
-        AtlasLoot:DewdropOpen()
+        AtlasLoot:DewdropModuleMenuOpen()
     end);
 
     --Options Button
@@ -671,21 +676,10 @@ subtableFrame.rows = rows2
                 AtlasLootItemsFrame_PREV:Click();
             end
         end);
-    local lastCord1, lastCord2 = 0,0
+
         mapFrame:SetScript("OnShow", function() mapFrame.cursorCords:SetText(WHITE.."Cursor: ---") end)
-        mapFrame:SetScript("OnUpdate", function(self)
-            if AtlasLoot.showCords then
-                local scale,x, y = mapFrame:GetEffectiveScale(), GetCursorPosition()
-                local width, height = mapFrame:GetWidth()/100, mapFrame:GetHeight()/100
-                x, y = math.ceil(((x/scale) - mapFrame:GetLeft())/width), math.ceil((((y/scale) - mapFrame:GetTop())/height) * -1)
-                if lastCord1 ~= x and lastCord2 ~= y then 
-                    mapFrame.cursorCords:SetText(WHITE.."Cursor: "..x.." , "..y)
-                    lastCord1 = x
-                    lastCord2 = y
-                end
-            end
-        end)
-        mapFrame:SetScript("OnEnter", function() AtlasLoot.showCords = true end)
+        mapFrame:SetScript("OnEnter", function() AtlasLoot.showCords = true AtlasLoot:CursorCords() end)
+        mapFrame:SetScript("OnUpdate", function() AtlasLoot:CursorCords() end)
         mapFrame:SetScript("OnLeave", function()
             AtlasLoot.showCords = false
             mapFrame.cursorCords:SetText(WHITE.."Cursor: ---")

@@ -7,7 +7,7 @@ AtlasLoot_DefaultFrame_OnShow()
 AtlasLootDefaultFrame_OnHide()
 AtlasLoot:DewdropExpansionMenuOpen(loottable)
 AtlasLoot:DewdropSubMenuOpen(loottable)
-AtlasLoot:DewdropOpen()
+AtlasLoot:DewdropModuleMenuOpen()
 AtlasLoot:SetNewStyle(style)
 ]]
 
@@ -214,37 +214,41 @@ end
 AtlasLoot:DewdropExpansionMenuOpen():
 Adds expansion menu from expansion table in mainmenus.lua
 ]]
+local expansionMenuLoaded
 function AtlasLoot:DewdropExpansionMenuOpen()
     local frame = AtlasLootDefaultFrame_ExpansionMenu;
     if AtlasLoot.Dewdrop:IsOpen(frame) then AtlasLoot.Dewdrop:Close() return end
-    AtlasLoot.Dewdrop:Register(frame,
-        'point', function(parent)
-            return "TOP", "BOTTOM"
-        end,
-        'children', function(level, value)
-            if AtlasLoot_ExpansionMenu then
-                for k, v in ipairs(AtlasLoot_ExpansionMenu) do
-                    if type(v) == "table" then
-                        --If a link to show a expansion menu
-                        AtlasLoot.Dewdrop:AddLine(
-                            'text', v[1],
-                            'textR', 1,
-                            'textG', 0.82,
-                            'textB', 0,
-                            'func', function() AtlasLoot:DewdropExpansionMenuClick(v[2], v[1]) end,
-                            'textHeight', 12,
-                            'textWidth', 12,
-                            'closeWhenClicked', true,
-                            'notCheckable', true
-                        )
+    if not expansionMenuLoaded then
+        AtlasLoot.Dewdrop:Register(frame,
+            'point', function(parent)
+                return "TOP", "BOTTOM"
+            end,
+            'children', function(level, value)
+                if AtlasLoot_ExpansionMenu then
+                    for k, v in ipairs(AtlasLoot_ExpansionMenu) do
+                        if type(v) == "table" then
+                            --If a link to show a expansion menu
+                            AtlasLoot.Dewdrop:AddLine(
+                                'text', v[1],
+                                'textR', 1,
+                                'textG', 0.82,
+                                'textB', 0,
+                                'func', function() AtlasLoot:DewdropExpansionMenuClick(v[2], v[1]) end,
+                                'textHeight', 12,
+                                'textWidth', 12,
+                                'closeWhenClicked', true,
+                                'notCheckable', true
+                            )
+                        end
                     end
                 end
-            end
-            --Close button
-            AtlasLoot:CloseDewDrop(true,35)
-        end,
-        'dontHook', true
-    )
+                --Close button
+                AtlasLoot:CloseDewDrop(true,35)
+            end,
+            'dontHook', true
+        )
+        expansionMenuLoaded = true
+    end
     AtlasLoot.Dewdrop:Open(frame)
 end
 
@@ -298,14 +302,14 @@ function AtlasLoot:DewdropSubMenuOpen(loottable)
 end
 
 --[[
-AtlasLoot:DewdropOpen:
+AtlasLoot:DewdropModuleMenuOpen:
 Constructs the main category menu from a tiered table
 ]]
-function AtlasLoot:DewdropOpen()
+local moduleMenuLoaded
+function AtlasLoot:DewdropModuleMenuOpen()
     local frame = AtlasLootDefaultFrame_Menu
     if AtlasLoot.Dewdrop:IsOpen(frame) then AtlasLoot.Dewdrop:Close() return end
-    local loaded
-    if not loaded then
+    if not moduleMenuLoaded then
         AtlasLoot.Dewdrop:Register(frame,
             'point', function(parent)
                 return "TOP", "BOTTOM"
@@ -332,6 +336,7 @@ function AtlasLoot:DewdropOpen()
             end,
             'dontHook', true
         )
+        moduleMenuLoaded = true
     end
     AtlasLoot.Dewdrop:Open(frame)
 end
