@@ -4,13 +4,13 @@ local BabbleSubZone = AtlasLoot_GetLocaleLibBabble("LibBabble-SubZone-3.0");
 local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 
 
-local BLUE = "|cff6666ff";
-local GREY = "|cff999999";
-local GREN = "|cff66cc33";
-local _RED = "|cffcc6666";
-local ORNG = "|cffcc9933";
-local PURP = "|cff9900ff";
-local INDENT = "      ";
+local BLUE = "|cff6666ff"
+local GREY = "|cff999999"
+local GREN = "|cff66cc33"
+local _RED = "|cffcc6666"
+local ORNG = "|cffcc9933"
+local PURP = "|cff9900ff"
+local INDENT = "      "
 local YELLOW = "|cffFFd200"
 local WHITE = "|cFFFFFFFF"
 local CYAN =  "|cff00ffff"
@@ -30,29 +30,25 @@ AtlasLoot_MapData = {
         Acronym = AL["ZG"];
         MapName = "ZulGurub";
         [1] = {
-            { AL["Reputation"]..": "..AL["Zandalar Tribe"] };
-            { AL["Key"]..": "..AL["Mudskunk Lure"].." ("..AL["Gahz'ranka"]..")" };
-            { AL["Key"]..": "..AL["Gurubashi Mojo Madness"].." ("..AL["Edge of Madness"]..")" };
-            { AL["Entrance"] };
-            { AL["High Priestess Jeklik"].." ("..AL["Bat"]..")" };
-            { AL["High Priest Venoxis"].." ("..AL["Snake"]..")" };
+            { BabbleZone["Zul'Gurub"], SubZone = true };
+            { AL["High Priestess Jeklik"].." ("..AL["Bat"]..")" , cords = {40,73}, pinType = boss};
+            { AL["High Priest Venoxis"].." ("..AL["Snake"]..")" , cords = {51,54}, pinType = boss};
             { AL["Zanza the Restless"] };
-            { AL["High Priestess Mar'li"].." ("..AL["Spider"]..")" };
-            { AL["Bloodlord Mandokir"].." ("..AL["Raptor"]..")" };
+            { AL["High Priestess Mar'li"].." ("..AL["Spider"]..")" , cords = {48,78}, pinType = boss};
+            { AL["Bloodlord Mandokir"].." ("..AL["Raptor"]..")" , cords = {62,68}, pinType = boss};
             { AL["Ohgan"] };
-            { AL["Edge of Madness"].." ("..AL["Optional"]..")" };
+            { AL["Edge of Madness"].." ("..AL["Optional"]..")" , cords = {60,51}, pinType = boss};
             { AL["Gri'lek"].." ("..AL["Random"]..")" };
             { AL["Hazza'rah"].." ("..AL["Random"]..")" };
             { AL["Renataki"].." ("..AL["Random"]..")" };
             { AL["Wushoolay"].." ("..AL["Random"]..")" };
-            { AL["Gahz'ranka"].." ("..AL["Optional"]..")" };
-            { AL["High Priest Thekal"].." ("..AL["Tiger"]..")" };
+            { AL["Gahz'ranka"].." ("..AL["Optional"]..")" , cords = {57,36}, pinType = boss};
+            { AL["High Priest Thekal"].." ("..AL["Tiger"]..")" , cords = {62,35}, pinType = boss};
             { AL["Zealot Zath"] };
             { AL["Zealot Lor'Khan"] };
-            { AL["High Priestess Arlokk"].." ("..AL["Panther"]..")" };
-            { AL["Jin'do the Hexxer"].." ("..AL["Undead"]..")" };
-            { AL["Hakkar"] };
-            { AL["Muddy Churning Waters"] };
+            { AL["High Priestess Arlokk"].." ("..AL["Panther"]..")" , cords = {48,22}, pinType = boss};
+            { AL["Jin'do the Hexxer"].." ("..AL["Undead"]..")" , cords = {32,25}, pinType = boss};
+            { AL["Hakkar"] , cords = {50,37}, pinType = boss};
         };
     };
     ["MoltenCore"] = {
@@ -802,7 +798,7 @@ AtlasLoot_MapData = {
             { AL["Hazzas"] };
             { AL["Shade of Eranikus"] , cords = {68,87}, pinType = boss};
             { AL["Essence Font"] };
-            { AL["Upper Ring"] };
+            { AL["Upper Ring"], SubZone = true };
             { AL["Spawn of Hakkar"].." ("..AL["Rare"]..")" };
             { AL["Elder Starsong"].." ("..AL["Lunar Festival"]..")" };
             { "1'-6') "..AL["Statue Activation Order"] };
@@ -813,7 +809,7 @@ AtlasLoot_MapData = {
             { AL["Zolo"] };
             { AL["Mijan"] };
             { AL["Zul'Lor"] };
-            { AL["Lower Pool"]};
+            { AL["Lower Pool"], SubZone = true};
             { AL["Altar of Hakkar"] };
             { AL["Atal'alarion <Guardian of the Idol>"] };
         };
@@ -849,7 +845,7 @@ AtlasLoot_MapData = {
 
         };
         [2] = {
-            { BabbleSubZone["Khaz'Goroth's Seat"], SubZone = true  };
+            { BabbleSubZone["Khaz'goroth's Seat"], SubZone = true  };
             { AL["Archaedas <Ancient Stone Watcher>"].." ("..AL["Lower"]..")" , cords = {55,52}, pinType = boss};
             { AL["The Discs of Norgannon"].." ("..AL["Lower"]..")" , cords = {50,34}};
             { AL["Ancient Treasure"].." ("..AL["Lower"]..")" };
@@ -864,18 +860,18 @@ AtlasLoot_MapData = {
         Acronym = AL["WC"];
         MapName = "WailingCaverns";
         [1] = {
-        { AL["Entrance"] };
-        { AL["Disciple of Naralex"] };
-        { AL["Lord Cobrahn <Fanglord>"] };
-        { AL["Lady Anacondra <Fanglord>"].." ("..AL["Varies"]..")" };
-        { AL["Kresh"].." ("..AL["Varies"]..")" };
-        { AL["Lord Pythas <Fanglord>"] };
-        { AL["Skum"] };
-        { AL["Lord Serpentis <Fanglord>"].." ("..AL["Upper"]..")" };
-        { AL["Verdan the Everliving"].." ("..AL["Upper"]..")" };
-        { AL["Mutanus the Devourer"] };
-        { AL["Naralex"] };
-        { AL["Deviate Faerie Dragon"].." ("..AL["Rare"]..")" };
+            { BabbleZone["Wailing Caverns"], SubZone = true };
+            { AL["Disciple of Naralex"], cords = {47,53} };
+            { AL["Lord Cobrahn <Fanglord>"] , cords = {16,57}, pinType = boss};
+            { AL["Lady Anacondra <Fanglord>"].." ("..AL["Varies"]..")" , cords = {31,44}, pinType = boss};
+            { AL["Kresh"].." ("..AL["Varies"]..")" , cords = {45,38}, pinType = boss};
+            { AL["Lord Pythas <Fanglord>"], cords = {64,58}, pinType = boss};
+            { AL["Skum"] , cords = {74,82}, pinType = boss};
+            { AL["Lord Serpentis <Fanglord>"].." ("..AL["Upper"]..")" , cords = {62,54}, pinType = boss};
+            { AL["Verdan the Everliving"].." ("..AL["Upper"]..")" , cords = {56,47}, pinType = boss};
+            { AL["Mutanus the Devourer"] , cords = {35,13}, pinType = boss};
+            { AL["Naralex"] };
+            { AL["Deviate Faerie Dragon"].." ("..AL["Rare"]..")" };
         };
     };
     ["ZulFarrak"] = {
@@ -887,27 +883,27 @@ AtlasLoot_MapData = {
         Acronym = AL["ZF"];
         MapName = "ZulFarrak";
         [1] = {
-        { AL["Entrance"] };
-        { AL["Antu'sul <Overseer of Sul>"] };
-        { AL["Theka the Martyr"] };
-        { AL["Witch Doctor Zum'rah"] };
-        { AL["Zul'Farrak Dead Hero"] };
-        { AL["Nekrum Gutchewer"] };
-        { AL["Shadowpriest Sezz'ziz"] };
-        { AL["Dustwraith"].." ("..AL["Rare"]..")" };
-        { AL["Sergeant Bly"] };
-        { AL["Weegli Blastfuse"] };
-        { AL["Murta Grimgut"] };
-        { AL["Raven"] };
-        { AL["Oro Eyegouge"] };
-        { AL["Sandfury Executioner"] };
-        { AL["Hydromancer Velratha"] };
-        { AL["Gahz'rilla"].." ("..AL["Summon"]..")" };
-        { AL["Elder Wildmane"].." ("..AL["Lunar Festival"]..")" };
-        { AL["Chief Ukorz Sandscalp"] };
-        { AL["Ruuzlu"] };
-        { AL["Zerillis"].." ("..AL["Rare"]..", "..AL["Wanders"]..")" };
-        { AL["Sandarr Dunereaver"].." ("..AL["Rare"]..")" };
+            { BabbleZone["Zul'Farrak"], SubZone = true };
+            { AL["Antu'sul <Overseer of Sul>"] , cords = {66,27}, pinType = boss};
+            { AL["Theka the Martyr"] , cords = {54,28}, pinType = boss};
+            { AL["Witch Doctor Zum'rah"] , cords = {45,17}, pinType = boss};
+            { AL["Zul'Farrak Dead Hero"] };
+            { AL["Nekrum Gutchewer"] , cords = {34,18}, pinType = boss};
+            { AL["Shadowpriest Sezz'ziz"] };
+            { AL["Dustwraith"].." ("..AL["Rare"]..")" };
+            { AL["Sergeant Bly"] , cords = {28,18}, pinType = boss};
+            { AL["Weegli Blastfuse"] };
+            { AL["Murta Grimgut"] };
+            { AL["Raven"] };
+            { AL["Oro Eyegouge"] };
+            { AL["Sandfury Executioner"] , cords = {25,18}, pinType = boss};
+            { AL["Hydromancer Velratha"] , cords = {32,41}, pinType = boss};
+            { AL["Gahz'rilla"].." ("..AL["Summon"]..")" };
+            { AL["Elder Wildmane"].." ("..AL["Lunar Festival"]..")" };
+            { AL["Chief Ukorz Sandscalp"] , cords = {42,34}, pinType = boss};
+            { AL["Ruuzlu"] };
+            { AL["Zerillis"].." ("..AL["Rare"]..", "..AL["Wanders"]..")", cords = {53,42}, pinType = boss};
+            { AL["Sandarr Dunereaver"].." ("..AL["Rare"]..")", cords = {46,57}, pinType = boss};
         };
     };
 

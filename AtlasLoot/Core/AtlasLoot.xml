@@ -7,7 +7,6 @@
 	<Script file="AtlasLoot.lua"/>
 	<Script file="ItemIDsDatabaseFixes.lua"/>
 	<Script file="Filter.lua"/>
-    <Script file="ExtraText.lua"/>
     <Script file="TextParsing.lua"/>
     <Script file="Options.lua"/>
     <Script file="LootButtons.lua"/>

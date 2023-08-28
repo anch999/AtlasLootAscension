@@ -76,7 +76,6 @@ end
 
 local lastCord1, lastCord2 = 0,0
 function AtlasLoot:CursorCords()
-    --AtlasLoot:CancelTimer(AtlasLoot.cursorRefreshTimer)
     if AtlasLoot.showCords then
         local scale,x, y = AtlasLootDefaultFrame_Map:GetEffectiveScale(), GetCursorPosition()
         local width, height = AtlasLootDefaultFrame_Map:GetWidth()/100, AtlasLootDefaultFrame_Map:GetHeight()/100
@@ -86,7 +85,6 @@ function AtlasLoot:CursorCords()
             lastCord1 = x
             lastCord2 = y
         end
-        --AtlasLoot.cursorRefreshTimer = AtlasLoot:ScheduleTimer("CursorCords", .01)
     end
 end
 
@@ -151,7 +149,6 @@ function AtlasLoot:MapOnShow()
             AtlaslLoot_LootBackground:Hide()
             --Hide UI objects so that only needed ones are shown
             for i = 1, 30, 1 do
-                _G["AtlasLootItem_"..i.."_Unsafe"]:Hide()
                 _G["AtlasLootItem_"..i]:Hide()
                 _G["AtlasLootItem_"..i].itemID = 0
                 _G["AtlasLootItem_"..i].spellitemID = 0
@@ -214,7 +211,7 @@ function AtlasLoot:MapSelect(mapID, mapNum, text)
     else
         text = map[mapNum][1][1]
     end
-    AtlasLootDefaultFrame_MapSelectButton:SetText(text)
+    AtlasLootDefaultFrame_MapButton:SetText(text)
 end
 
 --called when you click on a map in the drop down menu

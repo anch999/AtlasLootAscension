@@ -17,7 +17,7 @@ AtlasLootOptions_LoDSpam()
 AtlasLootOptions_LoDStartup()
 AtlasLoot_SetupLootBrowserSlider(frame, mymin, mymax, step)
 AtlasLoot_UpdateLootBrowserSlider(frame)
-AtlasLoot_DisplayHelp();
+AtlasLoot_DisplayHelp()
 AtlasLoot_CreateOptionsInfoTooltips()
 ]]
 
@@ -190,7 +190,7 @@ function AtlasLoot_DisplayHelp()
             ORANGE..AL["HELP!! I have broken the mod somehow!"].."\n"..
             WHITE..AL["Use the reset buttons available in the options menu, or type '/al reset' in your chat window."].."\n\n"..
             GREY..AL["For further help, see our website and forums: "]..GREEN.."https://discord.gg/uYCE2X2FgA"
-            );
+            )
 			Text:SetWidth(framewidht-80)
 			Text:SetJustifyH("LEFT")
 			Text:SetJustifyV("TOP")

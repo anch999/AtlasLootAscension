@@ -2,7 +2,6 @@
 Atlasloot Enhanced
 Author Daviesh / Reworked by Deim of PrimalWoW / Reworked again for Ascension
 Loot browser associating loot with instance bosses
-Can be integrated with Atlas (http://www.atlasmod.com)
 
 Functions:
 AtlasLoot:OnEnable()
@@ -491,7 +490,7 @@ It is the workhorse of the mod and allows the loot tables to be displayed any wa
 ]]
 function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 	--Set up local variables needed for GetItemInfo, etc
-	local itemName, itemLink, itemQuality, itemLevel, itemType, itemSubType, itemCount, itemEquipLoc, itemTexture, itemColor
+	local itemName, itemLink, itemQuality, itemLevel, itemType, itemSubType, itemCount, itemEquipLoc, itemTexture, itemColor, itemMinLevel
 	local iconFrame, nameFrame, extraFrame, itemButton
 	local text, extra
 	local isValid, isItem, toShow, IDfound
@@ -531,16 +530,14 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 	-- Check to see if Atlas is loaded and the table has a map
 	if dataSource_backup ~= "AtlasLoot_TokenData" and dataSource[dataID].Map then
 		AtlasLootDefaultFrame_MapButton:Enable()
-		AtlasLootDefaultFrame_MapSelectButton:Enable()
 		-- Stops map reseting to default while still in the same raid/instance table
 		if AtlasLootItemsFrame.refresh == nil or dataID ~= AtlasLootItemsFrame.refresh[1] then
 			AtlasLoot.CurrentMap = dataSource[dataID].Map
 			AtlasLoot:MapSelect(AtlasLoot.CurrentMap)
 		end
 	else
-		AtlasLootDefaultFrame_MapSelectButton:Disable()
 		AtlasLootDefaultFrame_MapButton:Disable()
-		AtlasLootDefaultFrame_MapSelectButton:SetText("No Map")
+		AtlasLootDefaultFrame_MapButton:SetText("No Map")
 	end
 
 	if dataSource_backup == "AtlasLoot_CurrentWishList" then
@@ -611,7 +608,6 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 
 	--Hide UI objects so that only needed ones are shown
 	for i = 1, 30, 1 do
-        _G["AtlasLootItem_"..i.."_Unsafe"]:Hide()
         _G["AtlasLootItem_"..i]:Hide()
         _G["AtlasLootItem_"..i].itemID = 0
         _G["AtlasLootItem_"..i].spellitemID = 0
@@ -680,7 +676,6 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 		for i = 1, 30, 1 do
 			--Check for a valid object (that it exists, and that it has a name
 			getProperItemConditionals(dataSource[dataID][tablenum][i])
-
 			if isValid and toShow then
 				if isItem then
 					itemName, itemLink, itemQuality, itemLevel, itemMinLevel, itemType, itemSubType, itemCount, itemEquipLoc, itemTexture = GetItemInfo(IDfound)
@@ -689,23 +684,23 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 					if(GetItemInfo(IDfound)) then
 						_, _, _, itemColor = GetItemQualityColor(itemQuality)
 						text = itemColor..itemName
-					elseif dataSource[dataID][tablenum][i][2] ~= IDfound and itemDefaultColour ~= nil and not dataSource[dataID][tablenum][i][4]:match("=q5=") then
+--[[ 					elseif dataSource[dataID][tablenum][i][2] ~= IDfound then
 						--If the item is not in cache, use the saved value and process it
 						text = (string.sub(dataSource[dataID][tablenum][i][4], 5))
-						text = itemDefaultColour .. text
-						text = AtlasLoot_FixText(text)
+						text = AtlasLoot:FixText(text) ]]
 					else
 						--If the item is not in cache, use the saved value and process it
-						text = dataSource[dataID][tablenum][i][4]
-						text = AtlasLoot_FixText(text)
+						--text = dataSource[dataID][tablenum][i][4]
+						--text = AtlasLoot:FixText(text)
+						text = ""
 					end
 				else
 					spellName, _, spellIcon, _, _, _, _, _, _ = GetSpellInfo(string.sub(IDfound, 2))
 					if spellName then
-						text = AtlasLoot_FixText(string.sub(dataSource[dataID][tablenum][i][4], 1, 4)..spellName)
+						text = AtlasLoot:FixText(string.sub(dataSource[dataID][tablenum][i][4], 1, 4)..spellName)
 					else
 						text = dataSource[dataID][tablenum][i][4]
-						text = AtlasLoot_FixText(text)
+						text = AtlasLoot:FixText(text)
 					end
 					--Adds button highlights if you know a recipe or have a char that knows one
 					if currentTradeSkills[dataSource[dataID].Name] and CA_IsSpellKnown(string.sub(IDfound, 2)) then
@@ -733,19 +728,22 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 				if dataID ~= "FilterList"  and dataSource[dataID].Back ~= true then
 					AtlasLootItemsFrame.refreshOri = {dataID, dataSource_backup, tablenum}
 				end
-
 				--Insert the item description
-				if dataSource[dataID][tablenum][i][6] and dataSource[dataID][tablenum][i][6] ~= "" then
+--[[ 				if dataSource[dataID][tablenum][i][6] and dataSource[dataID][tablenum][i][6] ~= "" then
 					extra = dataSource[dataID][tablenum][i][6]
-				elseif AtlasLoot_CraftingData["ExtraCraftingData"] and AtlasLoot_CraftingData["ExtraCraftingData"][tonumber(string.sub(dataSource[dataID][tablenum][i][2],2))] then
+				else ]]
+				if AtlasLoot.FixTextItem[dataSource[dataID][tablenum][i][2]] then
+					extra = AtlasLoot.FixTextItem[dataSource[dataID][tablenum][i][2]]
+				elseif AtlasLoot_CraftingData["ExtraCraftingData"] and (string.sub(IDfound, 1, 1) == "s") and AtlasLoot_CraftingData["ExtraCraftingData"][tonumber(string.sub(dataSource[dataID][tablenum][i][2],2))] then
 					extra = "#sr# "..WHITE..AtlasLoot_CraftingData["ExtraCraftingData"][tonumber(string.sub(dataSource[dataID][tablenum][i][2],2))][1]
-				elseif dataSource[dataID][tablenum][i][5] then
-					extra = dataSource[dataID][tablenum][i][5]
+				elseif dataSource[dataID][tablenum][i].lootTable and dataSource[dataID][tablenum][i].lootTable[2] == "Token" then
+					extra = "#setToken#"
+				elseif itemEquipLoc and itemSubType then
+					extra = "=ds="..itemEquipLoc..", "..itemSubType
 				else
 					extra = ""
 				end
-				extra = AtlasLoot_FixText(extra)
-
+				extra = AtlasLoot:FixText(extra)
 				--Use shortcuts for easier reference to parts of the item button
 				itemButton = _G["AtlasLootItem_"..dataSource[dataID][tablenum][i][1]]
 				iconFrame  = _G["AtlasLootItem_"..dataSource[dataID][tablenum][i][1].."_Icon"]
@@ -823,9 +821,8 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 				itemButton.tablenum = tablenum
 				itemButton.dataID = dataID
 				itemButton.dataSource = dataSource_backup
-				itemButton.desc = dataSource[dataID][tablenum][i][5] or nil
-				itemButton.price = dataSource[dataID][tablenum][i][6] or nil
-				itemButton.droprate = dataSource[dataID][tablenum][i][7] or nil
+				itemButton.price = dataSource[dataID][tablenum][i].price or nil
+				itemButton.droprate = dataSource[dataID][tablenum][i].droprate or nil
 				itemButton.extraInfo = dataSource[dataID][tablenum][i].extraInfo or nil
 				itemButton.quest = dataSource[dataID][tablenum][i].quest or nil
 
@@ -845,8 +842,6 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 
 				itemButton.i = 1
 				itemButton:Show()
-
-				if IDfound == 0 then _G["AtlasLootItem_"..i.."_Unsafe"]:Hide() end
 			end
 		end
 
