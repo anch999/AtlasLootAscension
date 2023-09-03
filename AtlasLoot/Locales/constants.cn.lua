@@ -115,7 +115,7 @@ if AL then
 	AL["Load Modules"] = "载入所有数据";
 	AL["Options"] = "设置";
 	AL["PvP Rewards"] = "PvP奖励";
-	AL["QuickLook"] = "快捷浏览";
+	AL["Favorite"] = "快捷浏览";
 	AL["World Events"] = "世界事件";
 
 	--AtlasLoot Panel - Search

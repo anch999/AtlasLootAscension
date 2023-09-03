@@ -38,29 +38,25 @@ end
 -- Called when a loot item is moused over
 --------------------------------------------------------------------------------
 function AtlasLootItem_OnEnter(self)
-    local isItem
     AtlasLootTooltip:ClearLines()
     for i=1, 30, 1 do
-        if (_G["AtlasLootTooltipTextRight"..i] ~= nil) then
+        if _G["AtlasLootTooltipTextRight"..i] then
             _G["AtlasLootTooltipTextRight"..i]:SetText("")
         end
     end
-    if self.itemID and (self.itemID ~= 0) then
-        if string.sub(self.itemID, 1, 1) == "s" then
-            isItem = false
-        else
-            isItem = true
-        end
-        if isItem then
-            local color = strsub(_G["AtlasLootItem_"..self:GetID().."_Name"]:GetText(), 3, 10)
-            local name = strsub(_G["AtlasLootItem_"..self:GetID().."_Name"]:GetText(), 11)
+    local spellID = self.spellID
+    local itemID = self.itemID
+    if itemID or spellID then
+        if not spellID then
+            local color = WHITE
+            local name, _, _, _, _, _, _, _, _, _ = GetItemInfo(itemID)
             --Lootlink tooltips
             if( AtlasLoot.db.profile.LootlinkTT ) then
                 --If we have seen the item, use the game tooltip to minimise same name item problems
                     AtlasLootTooltip:SetOwner(self, "ANCHOR_RIGHT", -(self:GetWidth() / 2), 24)
-                    AtlasLootTooltip:SetHyperlink("item:"..self.itemID..":0:0:0")
+                    AtlasLootTooltip:SetHyperlink("item:"..itemID..":0:0:0")
                     if ( AtlasLoot.db.profile.ItemIDs ) then
-                        AtlasLootTooltip:AddLine(BLUE..AL["ItemID:"].." "..self.itemID, nil, nil, nil, 1)
+                        AtlasLootTooltip:AddLine(BLUE..AL["ItemID:"].." "..itemID, nil, nil, nil, 1)
                     end
                     if self.quest then
                         for i,v in ipairs(self.quest) do
@@ -84,13 +80,13 @@ function AtlasLootItem_OnEnter(self)
                         AtlasLootItem_ShowCompareItem(self) --- CALL MISSING METHOD TO SHOW 2 TOOLTIPS (Item Compare)
                     end
                     if (LootLink_AddItem) then
-                        LootLink_AddItem(name, self.itemID..":0:0:0", color)
+                        LootLink_AddItem(name, itemID..":0:0:0", color)
                     end
             --Item Sync tooltips
             elseif( AtlasLoot.db.profile.ItemSyncTT ) then
                 ItemSync:ButtonEnter()
                 if ( AtlasLoot.db.profile.ItemIDs ) then
-                    GameTooltip:AddLine(BLUE..AL["ItemID:"].." "..self.itemID, nil, nil, nil, 1)
+                    GameTooltip:AddLine(BLUE..AL["ItemID:"].." "..itemID, nil, nil, nil, 1)
                 end
                 if self.quest then
                     for i,v in ipairs(self.quest) do
@@ -115,13 +111,13 @@ function AtlasLootItem_OnEnter(self)
                 end
             --Default game tooltips
             else
-                if(self.itemID ~= nil) then
-                    if(GetItemInfo(self.itemID) ~= nil) then
+                if(itemID ~= nil) then
+                    if(GetItemInfo(itemID) ~= nil) then
 
                         AtlasLootTooltip:SetOwner(self, "ANCHOR_RIGHT", -(self:GetWidth() / 2), 24)
-                        AtlasLootTooltip:SetHyperlink("item:"..self.itemID..":0:0:0")
+                        AtlasLootTooltip:SetHyperlink("item:"..itemID..":0:0:0")
                         if ( AtlasLoot.db.profile.ItemIDs ) then
-                            AtlasLootTooltip:AddLine(BLUE..AL["ItemID:"].." "..self.itemID, nil, nil, nil, 1)
+                            AtlasLootTooltip:AddLine(BLUE..AL["ItemID:"].." "..itemID, nil, nil, nil, 1)
                         end
                         if self.quest then
                             for i,v in ipairs(self.quest) do
@@ -148,10 +144,10 @@ function AtlasLootItem_OnEnter(self)
                 end
             end
         else
-            local spellID = tonumber(string.sub(self.itemID, 2))
             AtlasLootTooltip:SetOwner(self, "ANCHOR_RIGHT", -(self:GetWidth() / 2), 24)
             AtlasLootTooltip:ClearLines()
             AtlasLootTooltip:SetHyperlink(AtlasLoot_GetEnchantLink(spellID))
+
             --extra information on where to find the recipe
             local craftingData = self.craftingData
             if (craftingData and AtlasLoot.db.profile.recipeExtraInfoSwitch and IsControlKeyDown()) or (craftingData and not AtlasLoot.db.profile.recipeExtraInfoSwitch) then
@@ -173,7 +169,6 @@ function AtlasLootItem_OnEnter(self)
                 AtlasLootTooltip:AddLine(" ")
                 AtlasLootTooltip:AddLine(WHITE..AL["Hold CTRL for source"])
             end
-
             local hasSpace = false
             local showOwn = nil
             --adds tooltip showing if you know a recipe and it is one of your chars trade skills
@@ -203,9 +198,8 @@ function AtlasLootItem_OnEnter(self)
             if hasSpace then AtlasLootTooltip:AddLine(" ") end
             if showOwn then AtlasLootTooltip:AddLine(showOwn) end
             if showOther then AtlasLootTooltip:AddLine(text) end
-
             AtlasLootTooltip:Show()
-            if(self.spellitemID and ((AtlasLoot.db.profile.EquipCompare and ((not EquipCompare_RegisterTooltip) or (not EquipCompare_Enabled))) or IsShiftKeyDown())) then
+            if(itemID and ((AtlasLoot.db.profile.EquipCompare and ((not EquipCompare_RegisterTooltip) or (not EquipCompare_Enabled))) or IsShiftKeyDown())) then
                 AtlasLootItem_ShowCompareItem(self) --- CALL MISSING METHOD TO SHOW 2 TOOLTIPS (Item Compare)
             end
         end
@@ -225,10 +219,8 @@ function AtlasLootItem_OnLeave(self)
             GameTooltip:Hide()
         end
     else
-        if(self.itemID ~= nil) then
-		    AtlasLootTooltip:Hide()
-            GameTooltip:Hide()
-	    end
+		AtlasLootTooltip:Hide()
+        GameTooltip:Hide()
     end
     if ( ShoppingTooltip2:IsVisible() or ShoppingTooltip1.IsVisible) then
        ShoppingTooltip2:Hide()
@@ -242,17 +234,14 @@ end
 --------------------------------------------------------------------------------
 function AtlasLootItem_OnClick(self ,arg1)
     AtlasLoot.Dewdrop:Close()
-    local isItem, spellID
 	local color = strsub(_G["AtlasLootItem_"..self:GetID().."_Name"]:GetText(), 1, 10)
 	local name = strsub(_G["AtlasLootItem_"..self:GetID().."_Name"]:GetText(), 11)
-    if string.sub(self.itemID, 1, 1) == "s" then
-            isItem = false
-        else
-            isItem = true
-        end
-    if isItem then
-        local iteminfo = GetItemInfo(self.itemID)
-        local itemName, itemLink, itemQuality, itemLevel, itemMinLevel, itemType, itemSubType, itemCount, itemEquipLoc, itemTexture = GetItemInfo(self.itemID)
+    local spellID = self.spellID
+    local itemID = self.itemID
+    if not spellID then
+
+        local iteminfo = GetItemInfo(itemID)
+        local itemName, itemLink, itemQuality, itemLevel, itemMinLevel, itemType, itemSubType, itemCount, itemEquipLoc, itemTexture = GetItemInfo(itemID)
         --If shift-clicked, link in the chat window
         if arg1=="RightButton" and AtlasLoot.itemUnlock then
             --move wishlist item down
@@ -264,25 +253,25 @@ function AtlasLootItem_OnClick(self ,arg1)
         elseif (arg1=="LeftButton") and AtlasLoot.itemUnlock then
             --move wishlist item up
             AtlasLoot:MoveWishlistItem("Up",self.number)
-        elseif(arg1=="RightButton" and self.itemID ~= 0 and IsAltKeyDown() and AtlasLootItemsFrame.refresh[2] ~= "AtlasLoot_CurrentWishList") then
+        elseif(arg1=="RightButton" and itemID and IsAltKeyDown() and AtlasLootItemsFrame.refresh[2] ~= "AtlasLoot_CurrentWishList") then
             --add to defauly wishlist
             local listID = AtlasLootWishList["Options"][playerName]["DefaultWishList"]
-            AtlasLoot_WishListAddDropClick(listID[1], listID[3], "", nil, self.itemID, itemTexture, itemName, self.lootPage, self.sourcePage)
-        elseif(arg1=="RightButton" and self.itemID ~= 0) then
+            AtlasLoot_WishListAddDropClick(listID[1], listID[3], "", nil, itemID, itemTexture, itemName, self.lootPage, self.sourcePage)
+        elseif(arg1=="RightButton" and itemID) then
             --item context menu
             if(AtlasLootItemsFrame.refresh[1] == "SearchResult") then
                 local datID, _, datPage = strsplit("|", self.sourcePage)
-                AtlasLoot:ItemContextMenu(self.itemID, self.itemTexture, _G["AtlasLootItem_"..self:GetID().."_Name"]:GetText(), AtlasLoot_Data[datID][tonumber(datPage)].Name, 
+                AtlasLoot:ItemContextMenu(itemID, self.itemTexture, _G["AtlasLootItem_"..self:GetID().."_Name"]:GetText(), AtlasLoot_Data[datID][tonumber(datPage)].Name, 
                                                 datID .. "|" .. "AtlasLoot_Data" .. "|" .. tostring(datPage), self, "item", self.number, self.craftingData)
             else
-                AtlasLoot:ItemContextMenu(self.itemID, self.itemTexture, _G["AtlasLootItem_"..self:GetID().."_Name"]:GetText(),
+                AtlasLoot:ItemContextMenu(itemID, self.itemTexture, _G["AtlasLootItem_"..self:GetID().."_Name"]:GetText(),
                                                     AtlasLoot_BossName:GetText(), self.dataID .. "|" .. "AtlasLoot_Data" .. "|" .. tostring(self.tablenum), self, "item", self.number,self.craftingData)
             end
         elseif(IsShiftKeyDown() and iteminfo and (AtlasLoot.db.profile.SafeLinks or AtlasLoot.db.profile.AllLinks)) then
             --insert to chat link
             ChatEdit_InsertLink(itemLink)
         elseif(IsShiftKeyDown() and AtlasLoot.db.profile.AllLinks) then
-            ChatEdit_InsertLink(color.."|Hitem:"..self.itemID..":0:0:0:0:0:0:0|h["..name.."]|h|r")
+            ChatEdit_InsertLink(color.."|Hitem:"..itemID..":0:0:0:0:0:0:0|h["..name.."]|h|r")
         elseif(ChatFrameEditBox and ChatFrameEditBox:IsVisible() and IsShiftKeyDown()) then
             ChatFrameEditBox:Insert(name)  -- <-- this line just inserts plain text, does not need any adjustment
             --If control-clicked, use the dressing room
@@ -291,7 +280,7 @@ function AtlasLootItem_OnClick(self ,arg1)
             DressUpItemLink(itemLink)
         elseif IsAltKeyDown() then
             if AtlasLootItemsFrame.refresh[2] == "AtlasLoot_CurrentWishList" then
-                AtlasLoot_DeleteFromWishList(self.itemID,self.number)
+                AtlasLoot_DeleteFromWishList(itemID,self.number)
             end
         elseif((AtlasLootItemsFrame.refresh[1] == "SearchResult" or AtlasLootItemsFrame.refresh[2] == "AtlasLoot_CurrentWishList") and self.sourcePage) then
             --goto loot table of wishlist or search result
@@ -318,23 +307,21 @@ function AtlasLootItem_OnClick(self ,arg1)
         end
     else
         if IsShiftKeyDown() then
-            spellID = string.sub(self.itemID, 2)
             ChatEdit_InsertLink(AtlasLoot_GetEnchantLink(spellID))
-        elseif(arg1=="RightButton" and self.itemID ~= 0) then
-            spellID = string.sub(self.itemID, 2)
+        elseif arg1=="RightButton" then
             AtlasLoot:ItemContextMenu(spellID, "", "", "", "", self, "spell","",self.craftingData)
         elseif IsAltKeyDown() then
             if AtlasLootItemsFrame.refresh[2] == "AtlasLoot_CurrentWishList" then
-                AtlasLoot_DeleteFromWishList(self.itemID, self.number)
+                AtlasLoot_DeleteFromWishList(itemID, self.number)
             else
-                spellName, _, _, _, _, _, _, _, _ = GetSpellInfo(string.sub(self.itemID, 2))
-                --spellIcon = GetItemIcon(self.dressingroomID)
+                local spellName, _, _, _, _, _, _, _, _ = GetSpellInfo(spellID)
+
                 if(AtlasLootItemsFrame.refresh[1] == "SearchResult") then
                     local datID, _, datPage = strsplit("|", self.sourcePage)
-                    AtlasLoot_ShowWishListDropDown(self.itemID, self.dressingroomID, "=ds="..spellName, 
+                    AtlasLoot_ShowWishListDropDown(itemID, self.dressingroomID, "=ds="..spellName, 
                                                         AtlasLoot_Data[datID][tonumber(datPage)].Name, self.sourcePage, self)
                 else
-                    AtlasLoot_ShowWishListDropDown(self.itemID, self.dressingroomID, "=ds="..spellName, AtlasLoot_BossName:GetText(), self.dataID .. "|" .. "AtlasLoot_Data" .. "|" .. tostring(self.tablenum), self)
+                    AtlasLoot_ShowWishListDropDown(itemID, self.dressingroomID, "=ds="..spellName, AtlasLoot_BossName:GetText(), self.dataID .. "|" .. "AtlasLoot_Data" .. "|" .. tostring(self.tablenum), self)
                 end
             end
         elseif(IsControlKeyDown()) then
@@ -371,9 +358,9 @@ end
 function AtlasLootItem_ShowCompareItem(self)
    local shift = 1
    local item,link = nil,nil
-   if self.spellitemID and self.spellitemID ~= "" and self.spellitemID ~= 0 then
+   if self.spellID then
       item = AtlasLootTooltip:GetSpell()
-      _,link = GetItemInfo(self.spellitemID)
+      _,link = GetItemInfo(self.itemID)
    else
       item,link = AtlasLootTooltip:GetItem()
    end
@@ -487,7 +474,7 @@ function AtlasLoot:ItemContextMenu(itemID, itemTexture, itemName, lootPage, sour
                     'textWidth', 13
                 )
                 AtlasLoot.Dewdrop:AddLine(
-                    'text', ORANGE..AL["Open In AscensionDB"],
+                    'text', ORANGE..AL["Open AscensionDB To Entry"],
                     'func', function(arg1,arg2) AtlasLoot:OpenDBURL(arg1,arg2) end,
                     'arg1',itemID,
                     'arg2',Type,

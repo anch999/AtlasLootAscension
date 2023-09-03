@@ -115,7 +115,7 @@ if AL then
 	AL["Load Modules"] = "載入模組";
 	AL["Options"] = "選項";
 	AL["PvP Rewards"] = "PvP 榮譽獎勵";
-	AL["QuickLook"] = "快速瀏覽";
+	AL["Favorite"] = "快速瀏覽";
 	AL["World Events"] = "世界事件";
 
 	--AtlasLoot Panel - Search

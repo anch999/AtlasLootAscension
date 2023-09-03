@@ -112,7 +112,7 @@ if AL then
 	AL["Load Modules"] = "Cargar módulos";
 	AL["Options"] = "Opciones";
 	AL["PvP Rewards"] = "Recompensas JcJ";
-	AL["QuickLook"] = "VistaRapida"
+	AL["Favorite"] = "VistaRapida"
 	AL["World Events"] = "Eventos mundo";
 
 	-- AtlasLoot Panel - Search

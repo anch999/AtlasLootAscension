@@ -209,16 +209,12 @@ function AtlasLoot_AdvancedSearchShow()
     _G["AtlasLootItemsFrame_PREV"]:Hide()
     _G["AtlasLootItemsFrame_BACK"]:Hide()
 
-    -- Ditch the Quicklook selector
-    AtlasLootQuickLooksButton:Hide()
-
     -- Hide the Filter Check-Box
     AtlasLootFilterCheck:Hide()
 
     for i = 1, 30, 1 do
         _G["AtlasLootItem_" .. i]:Hide()
         _G["AtlasLootItem_" .. i].itemID = 0
-        _G["AtlasLootItem_" .. i].spellitemID = 0
     end
 
     AtlasLoot_BossName:SetText("Advanced Search")

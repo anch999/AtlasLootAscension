@@ -223,6 +223,11 @@ end
 local function AtlasLoot_SelectLootBrowserStyle_Initialize()
 	local info
 	info = {
+        text = AL["Modern Style"],
+        func = AtlasLoot_SelectLootBrowserStyle_OnClick,
+    }
+	UIDropDownMenu_AddButton(info)
+    info = {
         text = AL["New Style"],
         func = AtlasLoot_SelectLootBrowserStyle_OnClick,
     }
@@ -245,9 +250,11 @@ function AtlasLoot_SelectLootBrowserStyle_OnClick()
     local thisID = this:GetID()
 	UIDropDownMenu_SetSelectedID(AtlasLoot_SelectLootBrowserStyle, thisID)
     AtlasLoot.db.profile.LootBrowserStyle = thisID
-    if( AtlasLoot.db.profile.LootBrowserStyle == 1 ) then
-        AtlasLoot:SetNewStyle("new")
-    else
+    if AtlasLoot.db.profile.LootBrowserStyle == 1 then
+        AtlasLoot:SetNewStyle("modern")
+	elseif AtlasLoot.db.profile.LootBrowserStyle == 2 then
+		AtlasLoot:SetNewStyle("new")
+	elseif AtlasLoot.db.profile.LootBrowserStyle == 3 then
         AtlasLoot:SetNewStyle("old")
     end
     AtlasLoot_OptionsOnShow()

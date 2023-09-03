@@ -97,19 +97,6 @@ function AtlasLoot_WishListAddDropClick(typ, arg2, arg3, arg4, itemID, itemTextu
 	end
 end
 
-function AtlasLoot:CloneTable(t)				-- return a copy of the table t
-	local new = {}					-- create a new table
-	local i, v = next(t, nil)		-- i is an index of t, v = t[i]
-	while i do
-		if type(v)=="table" then 
-			v=AtlasLoot:CloneTable(v)
-		end
-		new[i] = v
-		i, v = next(t, i)			-- get next index
-	end
-	return new
-end
-
 -- Add CustomHeader 
 function AtlasLoot:AddItemCustomHeader(num,text)
 	for i,v in ipairs(AtlasLootWishList[AtlasLoot_CurrentWishList["Show"].ListType][AtlasLoot_CurrentWishList["Show"].ListNum]) do

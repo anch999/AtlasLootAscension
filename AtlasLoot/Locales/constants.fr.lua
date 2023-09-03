@@ -114,7 +114,7 @@ if AL then
 	AL["Load Modules"] = "Charger les modules";
 	--AL["Options"] = true;
 	AL["PvP Rewards"] = "Récompenses JcJ";
-	--AL["QuickLook"] = true;
+	--AL["Favorite"] = true;
 	--AL["World Events"] = true;
 
 	-- AtlasLoot Panel - Search

@@ -117,7 +117,7 @@ if AL then
 --	AL["Load Modules"] = true;
 	AL["Options"] = "설정";
 	AL["PvP Rewards"] = "PvP 보상";
---	AL["QuickLook"] = true;
+--	AL["Favorite"] = true;
 --	AL["World Events"] = true;
 
 	-- AtlasLoot Panel - Search

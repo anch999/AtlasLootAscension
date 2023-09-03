@@ -7,7 +7,7 @@ local WHITE = "|cffFFFFFF"
 --------------------------------------------------------------------------------
 -- Text replacement function
 --------------------------------------------------------------------------------
-AtlasLoot.FixTextItem = {
+AtlasLoot.FixedItemText = {
     --Intact Vial of Lady Vashj
     [450000] = BabbleInventory["Quest"],
     [450002] = BabbleInventory["Quest"],
@@ -25,10 +25,10 @@ AtlasLoot.FixTextItem = {
     [232385] = BabbleInventory["Quest"],
     [32405] = BabbleInventory["Quest"], -- Verdant Sphere
     [29906] = BabbleInventory["Quest"], -- Vashj's Vial Remnant
-    [29906] = BabbleInventory["Quest"], -- Vashj's Vial Remnant
-
+    [29905] = BabbleInventory["Quest"], -- Kael's Vial Remnant
+    [98570] = AL["Mystic Enchanting"],
 }
-    
+
 
 
 function AtlasLoot:FixText(text)

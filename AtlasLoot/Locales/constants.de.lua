@@ -102,7 +102,7 @@ if AL then
 	AL["Load Modules"] = "Module laden";
 	AL["Options"] = "Optionen";
 	AL["PvP Rewards"] = "PvP Belohnungen";
-	AL["QuickLook"] = "Lesezeichen";
+	AL["Favorite"] = "Lesezeichen";
 	AL["World Events"] = "Weltevents";
 
 	-- AtlasLoot Panel - Search

@@ -18,11 +18,13 @@ local AL = AceLocale:NewLocale("AtlasLoot", "enUS", true)
 --Register translations
 if AL then
 
+	AL["Mystic Enchanting"] = true
 	AL["Druid"] = true
-
-	AL["Open In AscensionDB"] = true
+	AL["Open AscensionDB To Zone Map"] = true
+	AL["Open AscensionDB To Entry"] = true
 	AL["Links"] = true
 	AL["Add To Default"] = true
+	AL["Clear Search"] = true
 	-- Text strings for UI objects
 	AL["AtlasLoot"] = true
 	AL["Select Loot Table"] = true
@@ -159,7 +161,7 @@ if AL then
 	AL["Load Modules"] = true
 	AL["Options"] = true
 	AL["PvP Rewards"] = true
-	AL["QuickLook"] = true
+	AL["Favorite"] = true
 	AL["World Events"] = true
 	AL["Auto Load Instance Loot Pages"] = true
 

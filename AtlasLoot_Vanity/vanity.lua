@@ -218,12 +218,9 @@ AtlasLoot_Data["VanityPets"] = {
 		{ 16, 8498, "", "=q1=Tiny Emerald Whelpling" };
 		{ 18, 0, "INV_Box_01", "=q6=" .. AL["Dungeon/Raid"] };
 		{ 19, 33993, "", "=q3=Mojo", "=q1=" .. BabbleZone["Zul'Aman"] };
-		{ 20, 35504, "", "=q3=Phoenix Hatchling",
-			"=q2=" .. BabbleBoss["Kael'thas Sunstrider"] .. ", =q1=" .. BabbleZone["Magisters' Terrace"] };
-		{ 21, 38658, "", "=q3=Vampiric Batling", "=q2=" ..
-			BabbleBoss["Prince Tenris Mirkblood"] .. ", =q1=" .. BabbleZone["Karazhan"] };
-		{ 22, 48114, "", "=q1=Deviate Hatchling",
-			"=q2=" .. AL["Deviate Ravager/Deviate Guardian"] .. ", =q1=" .. BabbleZone["Wailing Caverns"] };
+		{ 20, 35504, "", "=q3=Phoenix Hatchling", "=q2=" .. BabbleBoss["Kael'thas Sunstrider"] .. ", =q1=" .. BabbleZone["Magisters' Terrace"] };
+		{ 21, 38658, "", "=q3=Vampiric Batling", "=q2=" .. BabbleBoss["Prince Tenris Mirkblood"] .. ", =q1=" .. BabbleZone["Karazhan"] };
+		{ 22, 48114, "", "=q1=Deviate Hatchling", "=q2=" .. AL["Deviate Ravager/Deviate Guardian"] .. ", =q1=" .. BabbleZone["Wailing Caverns"] };
 		{ 23, 48126, "", "=q1=Razzashi Hatchling", "=q2=" .. AL["Razzashi Raptor"] .. ", =q1=" .. BabbleZone["Zul'Gurub"] };
 	};
 	{
@@ -507,14 +504,11 @@ AtlasLoot_Data["Mounts"] = {
 		{ 1, 0, "INV_Box_01", "=q6=" .. AL["Dungeon/Raid"] };
 		{ 2, 33809, "", "=q4=Amani War Bear", "=q2=#x33#, =q1=#z29#" };
 		{ 3, 32458, "", "=q4=Ashes of Al'ar", "=q2=#n59#, =q1=#z19#" };
-		{ 4, 49098, "", "=q4=Crusader's Black Warhorse",
-			"=q2=" .. AL["A Tribute to Immortality"] .. ", =q1=" .. BabbleZone["Trial of the Crusader"] };
-		{ 5, 49096, "", "=q4=Crusader's White Warhorse",
-			"=q2=" .. AL["A Tribute to Immortality"] .. ", =q1=" .. BabbleZone["Trial of the Crusader"] };
+		{ 4, 49098, "", "=q4=Crusader's Black Warhorse","=q2=" .. AL["A Tribute to Immortality"] .. ", =q1=" .. BabbleZone["Trial of the Crusader"] };
+		{ 5, 49096, "", "=q4=Crusader's White Warhorse","=q2=" .. AL["A Tribute to Immortality"] .. ", =q1=" .. BabbleZone["Trial of the Crusader"] };
 		{ 6, 13335, "", "=q4=Deathcharger's Reins", "=q2=#n52#, =q1=#z6#", "", droprate = "0.10%" };
 		{ 7, 30480, "", "=q4=Fiery Warhorse's Reins", "=q2=#n53#, =q1=#z12#", "", "0.25%" };
-		{ 8, 50818, "", "=q4=Invincible's Reins", "=q2=" ..
-			BabbleBoss["The Lich King"] .. ", =q1=" .. BabbleZone["Icecrown Citadel"] };
+		{ 8, 50818, "", "=q4=Invincible's Reins", "=q2=" ..BabbleBoss["The Lich King"] .. ", =q1=" .. BabbleZone["Icecrown Citadel"] };
 		{ 9, 45693, "", "=q4=Mimiron's Head", "=q2=" .. AL["Alone in the Darkness"] .. ", =q1=" .. BabbleZone["Ulduar"] };
 		{ 10, 43986, "", "=q4=Reins of the Black Drake", "=q2=#n153#, =q1=#j37# #z38# #j46#" };
 		{ 11, 43954, "", "=q4=Reins of the Twilight Drake", "=q2=#n153#, =q1=#j38# #z38# #j46#" };
@@ -522,15 +516,12 @@ AtlasLoot_Data["Mounts"] = {
 		{ 13, 43952, "", "=q4=Reins of the Azure Drake", "=q2=#n154#, =q1=#j38# #z39#" };
 		{ 14, 44151, "", "=q4=Reins of the Blue Proto-Drake", "=q2=#n151#, =q1=#j47# #z35#" };
 		{ 15, 43951, "", "=q4=Reins of the Bronze Drake", "=q2=#n152#, =q1=#j47# #z36#" };
-		{ 17, 52200, "", "=q4=Reins of the Crimson Deathcharger",
-			"=q2=" .. BabbleBoss["The Lich King"] .. ", =q1=" .. BabbleZone["Icecrown Citadel"] };
+		{ 17, 52200, "", "=q4=Reins of the Crimson Deathcharger","=q2=" .. BabbleBoss["The Lich King"] .. ", =q1=" .. BabbleZone["Icecrown Citadel"] };
 		{ 18, 44083, "", "=q4=Reins of the Grand Black War Mammoth", "=ds=#e12# =ec1=#m7#" };
 		{ 19, 43959, "", "=q4=Reins of the Grand Black War Mammoth", "=ds=#e12# =ec1=#m6#" };
 		{ 20, 32768, "", "=q4=Reins of the Raven Lord", "=q2=#n58#, =q1=#z16#" };
-		{ 21, 49046, "", "=q4=Swift Horde Wolf",
-			"=q2=" .. AL["A Tribute to Insanity (50)"] .. ", =q1=" .. BabbleZone["Trial of the Crusader"] }; --Horde
-		{ 22, 49044, "", "=q4=Swift Alliance Steed",
-			"=q2=" .. AL["A Tribute to Insanity (50)"] .. ", =q1=" .. BabbleZone["Trial of the Crusader"] }; --Alliance
+		{ 21, 49046, "", "=q4=Swift Horde Wolf", "=q2=" .. AL["A Tribute to Insanity (50)"] .. ", =q1=" .. BabbleZone["Trial of the Crusader"] }; --Horde
+		{ 22, 49044, "", "=q4=Swift Alliance Steed", "=q2=" .. AL["A Tribute to Insanity (50)"] .. ", =q1=" .. BabbleZone["Trial of the Crusader"] }; --Alliance
 		{ 23, 35513, "", "=q4=Swift White Hawkstrider", "=q2=#n59#, =q1=#z30#" };
 		{ 24, 19872, "", "=q4=Swift Razzashi Raptor", "=q2=#n33#, =q1=#z8#", "", "0.43%" };
 		{ 25, 19902, "", "=q4=Swift Zulian Tiger", "=q2=#n28#, =q1=#z8#", "", " 0.70%" };

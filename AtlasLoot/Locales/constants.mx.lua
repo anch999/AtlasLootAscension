@@ -54,7 +54,7 @@ if AL then
 	AL["Close Menu"] = "Cerrar menú";
 	AL["Unknown"] = "Desconocido";
 	AL["Skill Required:"] = "Habilidad necesaria";
-	AL["QuickLook"] = "VistaRápida";
+	AL["Favorite"] = "VistaRápida";
 	AL["Add to QuickLooks:"] = "Añade a VistaRápida";
 	AL["Rating:"] = "Indice:";	--Shorthand for 'Required Rating' for the personal/team ratings in Arena S4 
 	AL["Query Server"] = "Pregun. Servidor";

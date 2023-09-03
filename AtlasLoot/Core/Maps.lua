@@ -4,7 +4,7 @@ local BLUE = "|cff6666ff"
 local GREY = "|cff999999"
 local GREN = "|cff66cc33"
 local _RED = "|cffcc6666"
-local ORNG = "|cffcc9933"
+local ORANGE = "|cffFF8400"
 local PURP = "|cff9900ff"
 local INDENT = "      "
 local YELLOW = "|cffFFd200"
@@ -142,8 +142,6 @@ function AtlasLoot:MapOnShow()
     else
         if AtlasLoot.CurrentMap then
             AtlasLoot_BossName:Hide()
-            --Ditch the Quicklook selector
-            AtlasLootQuickLooksButton:Hide()
             -- Hide the Filter Check-Box
 	        AtlasLootFilterCheck:Hide()
             AtlaslLoot_LootBackground:Hide()
@@ -151,7 +149,6 @@ function AtlasLoot:MapOnShow()
             for i = 1, 30, 1 do
                 _G["AtlasLootItem_"..i]:Hide()
                 _G["AtlasLootItem_"..i].itemID = 0
-                _G["AtlasLootItem_"..i].spellitemID = 0
             end
                 AtlasLootDefaultFrame_Map:Show()
                 Atlasloot_HeaderLabel:Show()
@@ -175,7 +172,7 @@ function AtlasLoot:MapOnShow()
 end
 
 --called to change the current displayed map
-function AtlasLoot:MapSelect(mapID, mapNum, text)
+function AtlasLoot:MapSelect(mapID, mapNum)
     mapNum = mapNum or 1
     local map = AtlasLoot_MapData[mapID]
     if map.MapName then
@@ -206,6 +203,13 @@ function AtlasLoot:MapSelect(mapID, mapNum, text)
     "Minimum Level: "..map.MinLevel.."\n"..
     "Player Limit: "..map.PlayerLimit
     )
+    AtlasLoot:SetMapButtonText(mapID, mapNum)
+end
+
+function AtlasLoot:SetMapButtonText(mapID, mapNum)
+    mapNum = mapNum or 1
+    local map = AtlasLoot_MapData[mapID]
+    local text
     if map[mapNum][1].Zone then
         text = map[mapNum][2][1]
     else
@@ -225,38 +229,24 @@ function AtlasLoot:MapMenuClick(mapID, mapNum)
 end
 
 --drop down map menu
-local lastMapLoaded
 function AtlasLoot:MapMenuOpen(self)
     local mapID = AtlasLoot.CurrentMap
     local map = AtlasLoot_MapData[mapID]
-    if AtlasLoot.Dewdrop:IsOpen(self) then AtlasLoot.Dewdrop:Close() return end
-    if lastMapLoaded ~= mapID then
-        AtlasLoot.Dewdrop:Register(self,
-            'point', function(parent)
-                return "TOP", "BOTTOM"
-            end,
-            'children', function(level, value)
-                    for i,v in ipairs(map) do
-                        local text
-                        if v[1].Zone then
-                            text = map[i][2][1]
-                        else
-                            text = v[1][1]
-                        end
-                        AtlasLoot.Dewdrop:AddLine(
-                            'text', WHITE..text,
-                            'func', function() AtlasLoot:MapMenuClick(mapID, i) end,
-                            'textHeight', 12,
-                            'textWidth', 12,
-                            'closeWhenClicked', true,
-                            'notCheckable', true
-                        )
-                    end
-                    --Close button
-                    AtlasLoot:CloseDewDrop(true,35)
-            end,
-            'dontHook', true
-        )
-    end
-    AtlasLoot.Dewdrop:Open(self)
+
+    local menuList = { [1] = {} }
+        for i,v in ipairs(map) do
+            local text
+            if v[1].Zone then
+                text = map[i][2][1]
+            else
+                text = v[1][1]
+            end
+            tinsert(menuList[1], {text = WHITE..text, func = function() AtlasLoot:MapMenuClick(mapID, i) end, notCheckable = true, closeWhenClicked = true, textHeight = 12, textWidth = 12})
+        end
+
+        tinsert(menuList[1], {divider = 35})
+        tinsert(menuList[1], {text = ORANGE..AL["Open AscensionDB To Zone Map"], func = function() AtlasLoot:OpenDBURL(AtlasLoot_MapData[AtlasLoot.CurrentMap].ZoneName[2] , "zone") end, notCheckable = true, closeWhenClicked = true, textHeight = 12, textWidth = 12})
+		tinsert(menuList[1], {close = true, divider = 35})
+
+    AtlasLoot:OpenDewdropMenu(self, menuList)
 end

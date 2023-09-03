@@ -326,8 +326,6 @@ function AtlasLoot:OpenFilterCreate()
 	AtlasLootFilterCreate:Show()
 	AtlasLootFilterDelete:Show()
 
-	--Ditch the Quicklook selector
-	AtlasLootQuickLooksButton:Hide()
 	-- Hide the Filter Check-Box
 	AtlasLootFilterCheck:Hide()
 	--Hide navigation buttons by default, only show what we need
@@ -338,7 +336,6 @@ function AtlasLoot:OpenFilterCreate()
 	for i = 1, 30, 1 do
 		_G["AtlasLootItem_"..i]:Hide()
 		_G["AtlasLootItem_"..i].itemID = 0
-		_G["AtlasLootItem_"..i].spellitemID = 0
 	end
 	--Set Page Title
 	AtlasLoot_BossName:SetText("Create Filter Set")
