@@ -63,59 +63,60 @@ local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
 AtlasLoot_Data["Heirloom"] = {
 	Name = AL["Heirloom"],
 	{
-		Name = "Chests",
-		{ 1, 48691, "", "=q7=Tattered Dreadmist Robe", "", "1200 #tokenofprestige#" },
-		{ 2, 48687, "", "=q7=Preened Ironfeather Breastplate", "", "1200 #tokenofprestige#" },
-		{ 3, 48689, "", "=q7=Stained Shadowcraft Tunic", "", "1200 #tokenofprestige#" },
-		{ 4, 48677, "", "=q7=Champion's Deathdealer Breastplate", "", "1200 #tokenofprestige#" },
-		{ 5, 48683, "", "=q7=Mystical Vest of Elements", "", "1200 #tokenofprestige#" },
-		{ 6, 48685, "", "=q7=Polished Breastplate of Valor", "", "1200 #tokenofprestige#" },
-		{ 7, 1548685, "", "=q7=Polished Breastplate of Might", "", "1200 #tokenofprestige#" },
+		Name = "Chests";
+		[1] = { itemID = 48691, price = "1200 #tokenofprestige#"  }; --Tattered Dreadmist Robe
+		[2] = { itemID = 48687, price = "1200 #tokenofprestige#"  }; --Preened Ironfeather Breastplate
+		[3] = { itemID = 48689, price = "1200 #tokenofprestige#"  }; --Stained Shadowcraft Tunic
+		[4] = { itemID = 48677, price = "1200 #tokenofprestige#"  }; --Champion's Deathdealer Breastplate
+		[5] = { itemID = 48683, price = "1200 #tokenofprestige#"  }; --Mystical Vest of Elements
+		[6] = { itemID = 48685, price = "1200 #tokenofprestige#"  }; --Polished Breastplate of Valor
+		[7] = { itemID = 1548685, price = "1200 #tokenofprestige#"  }; --Polished Breastplate of Might
 
 	},
 	{
-		Name = "Shoulders",
-		{ 1, 42985, "", "=q7=Tattered Dreadmist Mantle", "", "800 #tokenofprestige#" },
-		{ 2, 42984, "", "=q7=Preened Ironfeather Shoulders", "", "800 #tokenofprestige#" },
-		{ 3, 42952, "", "=q7=Stained Shadowcraft Spaulders", "", "800 #tokenofprestige#" },
-		{ 4, 42950, "", "=q7=Champion Herod's Shoulder", "", "800 #tokenofprestige#" },
-		{ 5, 42951, "", "=q7=Mystical Pauldrons of Elements", "", "800 #tokenofprestige#" },
-		{ 6, 42949, "", "=q7=Polished Spaulders of Valor", "", "800 #tokenofprestige#" },
-		{ 7, 1542949, "", "=q7=Polished Spaulders of Might", "", "800 #tokenofprestige#" },
-		{ 16, 44107, "", "=q7=Exquisite Sunderseer Mantle", "", "800 #tokenofprestige#" },
-		{ 17, 44103, "", "=q7=Exceptional Stormshroud Shoulders", "", "800 #tokenofprestige#" },
-		{ 18, 44105, "", "=q7=Lasting Feralheart Spaulders", "", "800 #tokenofprestige#" },
-		{ 19, 44102, "", "=q7=Aged Pauldrons of The Five Thunders", "", "800 #tokenofprestige#" },
-		{ 20, 44101, "", "=q7=Prized Beastmaster's Mantle", "", "800 #tokenofprestige#" },
-		{ 21, 44100, "", "=q7=Pristine Lightforge Spaulders", "", "800 #tokenofprestige#" },
-		{ 22, 44099, "", "=q7=Strengthened Stockade Pauldrons", "", "800 #tokenofprestige#" },
+		Name = "Shoulders";
+		[1] = { itemID = 42985, price = "800 #tokenofprestige#"  }; --Tattered Dreadmist Mantle
+		[2] = { itemID = 42984, price = "800 #tokenofprestige#"  }; --Preened Ironfeather Shoulders
+		[3] = { itemID = 42952, price = "800 #tokenofprestige#"  }; --Stained Shadowcraft Spaulders
+		[4] = { itemID = 42950, price = "800 #tokenofprestige#"  }; --Champion Herod's Shoulder
+		[5] = { itemID = 42951, price = "800 #tokenofprestige#"  }; --Mystical Pauldrons of Elements
+		[6] = { itemID = 42949, price = "800 #tokenofprestige#"  }; --Polished Spaulders of Valor
+		[7] = { itemID = 1542949, price = "800 #tokenofprestige#"  }; --Polished Spaulders of Might
+		[16] = { itemID = 44107, price = "800 #tokenofprestige#"  }; --Exquisite Sunderseer Mantle
+		[17] = { itemID = 44103, price = "800 #tokenofprestige#"  }; --Exceptional Stormshroud Shoulders
+		[18] = { itemID = 44105, price = "800 #tokenofprestige#"  }; --Lasting Feralheart Spaulders
+		[19] = { itemID = 44102, price = "800 #tokenofprestige#"  }; --Aged Pauldrons of The Five Thunders
+		[20] = { itemID = 44101, price = "800 #tokenofprestige#"  }; --Prized Beastmaster's Mantle
+		[21] = { itemID = 44100, price = "800 #tokenofprestige#"  }; --Pristine Lightforge Spaulders
+		[22] = { itemID = 44099, price = "800 #tokenofprestige#"  }; --Strengthened Stockade Pauldrons
 	},
 	{
-		Name = "Trinkets/Rings",
-		{ 1, 42992, "", "=q7=Discerning Eye of the Beast", "", "500 #tokenofprestige#" },
-		{ 2, 42991, "", "=q7=Swift Hand of Justice", "", "500 #tokenofprestige#" },
-		{ 3, 44098, "", "=q7=Inherited Insignia of the Alliance", "500 #tokenofprestige#" },
-		{ 4, 44097, "", "=q7=Inherited Insignia of the Horde", "500 #tokenofprestige#" },
-		{ 6, 50255, "", "=q7=Dread Pirate Ring", "", "" },
+		Name = "Trinkets/Rings";
+		[1] = { itemID = 42992, price = "500 #tokenofprestige#"  }; --Discerning Eye of the Beast
+		[2] = { itemID = 42991, price = "500 #tokenofprestige#"  }; --Swift Hand of Justice
+		[3] = { itemID = 44098, price = "500 #tokenofprestige#"  }; --Inherited Insignia of the Alliance
+		[4] = { itemID = 44097, price = "500 #tokenofprestige#"  }; --Inherited Insignia of the Horde
+		[5] = { itemID = 50255 }; --Dread Pirate Ring
 	},
 	{
-		Name = "Weapons",
-		{ 1, 42944, "", "=q7=Balanced Heartseeker", "=ds=#w4#, #h1#", "600 #tokenofprestige#" },
-		{ 2, 42945, "", "=q7=Venerable Dal'Rend's Sacred Charge", "=ds=#w10#, #h3#", "600 #tokenofprestige#" },
-		{ 3, 42948, "", "=q7=Devout Aurastone Hammer", "600 #tokenofprestige#" },
-		{ 4, 48716, "", "=q7=Venerable Mass of McGowan", "600 #tokenofprestige#" },
-		{ 5, 44091, "", "=q7=Sharpened Scarlet Kris", "", "600 #tokenofprestige#" },
-		{ 6, 44096, "", "=q7=Battleworn Thrash Blade", "", "600 #tokenofprestige#" },
-		{ 7, 44094, "", "=q7=The Blessed Hammer of Grace", "", "600 #tokenofprestige#" },
-		{ 7, 1540350, "", "=q7=Urn of Aspiring Light", "", "600 #tokenofprestige#" },
-		{ 16, 42943, "", "=q7=Bloodied Arcanite Reaper", "=ds=#w1#, #h2#", "1000 #tokenofprestige#" },
-		{ 17, 1542943, "", "=q7=Sturdied Arcanite Spear", "=ds=#w1#, #h2#", "1000 #tokenofprestige#" },
-		{ 18, 48718, "", "=q7=Repurposed Lava Dredger", "", "1000 #tokenofprestige#" },
-		{ 19, 42947, "", "=q7=Dignified Headmaster's Charge", "", "1000 #tokenofprestige#" },
-		{ 20, 44092, "", "=q7=Reforged Truesilver Champion", "", "1000 #tokenofprestige#" },
-		{ 21, 44095, "", "=q7=Grand Staff of Jordan", "", "1000 #tokenofprestige#" },
-		{ 23, 42946, "", "=q7=Charmed Ancient Bone Bow", "", "1000 #tokenofprestige#" },
-		{ 24, 44093, "", "=q7=Upgraded Dwarven Hand Cannon", "", "1000 #tokenofprestige#" },
+		Name = "Weapons";
+		[1] = { itemID = 42944, price = "600 #tokenofprestige#"  }; --Balanced Heartseeker
+		[2] = { itemID = 42945, price = "600 #tokenofprestige#"  }; --Venerable Dal'Rend's Sacred Charge
+		[3] = { itemID = 42948, price = "600 #tokenofprestige#"  }; --Devout Aurastone Hammer
+		[4] = { itemID = 48716, price = "600 #tokenofprestige#"  }; --Venerable Mass of McGowan
+		[5] = { itemID = 44091, price = "600 #tokenofprestige#"  }; --Sharpened Scarlet Kris
+		[6] = { itemID = 44096, price = "600 #tokenofprestige#"  }; --Battleworn Thrash Blade
+		[7] = { itemID = 44094, price = "600 #tokenofprestige#"  }; --The Blessed Hammer of Grace
+		[9] = { itemID = 1540350, price = "600 #tokenofprestige#"  }; --Urn of Aspiring Light
+		[10] = { itemID = 1548335, price = "600 #tokenofprestige#"  }; --Polished Observer's Shield
+		[16] = { itemID = 42943, price = "1000 #tokenofprestige#"  }; --Bloodied Arcanite Reaper
+		[17] = { itemID = 1542943, price = "1000 #tokenofprestige#"  }; --Sturdied Arcanite Spear
+		[18] = { itemID = 48718, price = "1000 #tokenofprestige#"  }; --Repurposed Lava Dredger
+		[19] = { itemID = 42947, price = "1000 #tokenofprestige#"  }; --Dignified Headmaster's Charge
+		[20] = { itemID = 44092, price = "1000 #tokenofprestige#"  }; --Reforged Truesilver Champion
+		[21] = { itemID = 44095, price = "1000 #tokenofprestige#"  }; --Grand Staff of Jordan
+		[23] = { itemID = 42946, price = "1000 #tokenofprestige#"  }; --Charmed Ancient Bone Bow
+		[24] = { itemID = 44093, price = "1000 #tokenofprestige#"  }; --Upgraded Dwarven Hand Cannon
 	},
 }
 

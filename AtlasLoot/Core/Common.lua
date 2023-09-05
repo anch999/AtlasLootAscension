@@ -103,3 +103,9 @@ function AtlasLoot:CloneTable(t)				-- return a copy of the table t
 	end
 	return new
 end
+
+function AtlasLoot:GetRecipeSpellID(findID)
+	for spellID, itemID in pairs(AtlasLoot_CraftingData["SpellToRecipe"]) do
+		if itemID == findID then return spellID end
+	end
+end

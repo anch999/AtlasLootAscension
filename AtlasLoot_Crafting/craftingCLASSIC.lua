@@ -78,10 +78,6 @@ local SPELLFIRE = GetSpellInfo(26797);
 ---- Tailoring Sets
 --- Other
 ---- Crafted Epic Weapons
---- Daily Profession Rewards
----- Cooking
----- Fishing
----- Jewelcrafting
 
 -----------------------
 --- Tradeskill List ---
@@ -95,132 +91,132 @@ AtlasLoot_Data["AlchemyCLASSIC"] = {
 	Type = "CraftingNoBF";
 	{
 		Name = AL["Battle Elixirs"];
-		{ 1, "s17573", "13454", "=q1=Greater Arcane Elixir", "" };
-		{ 2, "s17571", "13452", "=q1=Elixir of the Mongoose", "" };
-		{ 3, "s17557", "13453", "=q1=Elixir of Brute Force", "" };
-		{ 4, "s11477", "9224", "=q1=Elixir of Demonslaying", "" };
-		{ 5, "s26277", "21546", "=q1=Elixir of Greater Firepower", "" };
-		{ 6, "s11476", "9264", "=q1=Elixir of Shadow Power", "" };
-		{ 7, "s11472", "9206", "=q1=Elixir of Giants", "" };
-		{ 8, "s11467", "9187", "=q1=Elixir of Greater Agility", "" };
-		{ 9, "s11461", "9155", "=q1=Arcane Elixir", "" };
-		{ 10, "s21923", "17708", "=q1=Elixir of Frost Power", "" };
-		{ 11, "s11449", "8949", "=q1=Elixir of Agility", "" };
-		{ 12, "s63732", "45621", "=q1=Elixir of Minor Accuracy", "" };
-		{ 13, "s3188", "3391", "=q1=Elixir of Ogre's Strength", "" };
-		{ 14, "s2333", "3390", "=q1=Elixir of Lesser Agility", "" };
-		{ 15, "s7845", "6373", "=q1=Elixir of Firepower", "" };
-		{ 16, "s8240", "6662", "=q1=Elixir of Giant Growth", "" };
-		{ 17, "s3230", "2457", "=q1=Elixir of Minor Agility", "" };
-		{ 18, "s2329", "2454", "=q1=Elixir of Lion's Strength", "" };
+		[1] = {itemID = 13454, spellID = 17573 }; --Greater Arcane Elixir
+		[2] = {itemID = 13452, spellID = 17571 }; --Elixir of the Mongoose
+		[3] = {itemID = 13453, spellID = 17557 }; --Elixir of Brute Force
+		[4] = {itemID = 9224, spellID = 11477 }; --Elixir of Demonslaying
+		[5] = {itemID = 21546, spellID = 26277 }; --Elixir of Greater Firepower
+		[6] = {itemID = 9264, spellID = 11476 }; --Elixir of Shadow Power
+		[7] = {itemID = 9206, spellID = 11472 }; --Elixir of Giants
+		[8] = {itemID = 9187, spellID = 11467 }; --Elixir of Greater Agility
+		[9] = {itemID = 9155, spellID = 11461 }; --Arcane Elixir
+		[10] = {itemID = 17708, spellID = 21923 }; --Elixir of Frost Power
+		[11] = {itemID = 8949, spellID = 11449 }; --Elixir of Agility
+		[12] = {itemID = 45621, spellID = 63732 }; --Elixir of Minor Accuracy
+		[13] = {itemID = 3391, spellID = 3188 }; --Elixir of Ogre's Strength
+		[14] = {itemID = 3390, spellID = 2333 }; --Elixir of Lesser Agility
+		[15] = {itemID = 6373, spellID = 7845 }; --Elixir of Firepower
+		[16] = {itemID = 6662, spellID = 8240 }; --Elixir of Giant Growth
+		[17] = {itemID = 2457, spellID = 3230 }; --Elixir of Minor Agility
+		[18] = {itemID = 2454, spellID = 2329 }; --Elixir of Lion's Strength
 	};
 	{
 		Name = AL["Guardian Elixirs"];
-		{ 1, "s24368", "20004", "=q1=Major Troll's Blood Elixir", "" };
-		{ 2, "s24365", "20007", "=q1=Mageblood Elixir", "" };
-		{ 3, "s17554", "13445", "=q1=Elixir of Superior Defense", "" };
-		{ 4, "s17555", "13447", "=q1=Elixir of the Sages", "" };
-		{ 5, "s11466", "9088", "=q1=Gift of Arthas", "" };
-		{ 6, "s11465", "9179", "=q1=Elixir of Greater Intellect", "" };
-		{ 7, "s11450", "8951", "=q1=Elixir of Greater Defense", "" };
-		{ 8, "s3451", "3826", "=q1=Mighty Troll's Blood Elixir", "" };
-		{ 9, "s3450", "3825", "=q1=Elixir of Fortitude", "" };
-		{ 10, "s3177", "3389", "=q1=Elixir of Defense", "" };
-		{ 11, "s3176", "3388", "=q1=Strong Troll's Blood Potion", "" };
-		{ 12, "s3171", "3383", "=q1=Elixir of Wisdom", "" };
-		{ 13, "s2334", "2458", "=q1=Elixir of Minor Fortitude", "" };
-		{ 14, "s3170", "3382", "=q1=Weak Troll's Blood Elixir", "" };
-		{ 15, "s7183", "5997", "=q1=Elixir of Minor Defense", "" };
+		[1] = {itemID = 20004, spellID = 24368 }; --Major Troll's Blood Elixir
+		[2] = {itemID = 20007, spellID = 24365 }; --Mageblood Elixir
+		[3] = {itemID = 13445, spellID = 17554 }; --Elixir of Superior Defense
+		[4] = {itemID = 13447, spellID = 17555 }; --Elixir of the Sages
+		[5] = {itemID = 9088, spellID = 11466 }; --Gift of Arthas
+		[6] = {itemID = 9179, spellID = 11465 }; --Elixir of Greater Intellect
+		[7] = {itemID = 8951, spellID = 11450 }; --Elixir of Greater Defense
+		[8] = {itemID = 3826, spellID = 3451 }; --Mighty Troll's Blood Elixir
+		[9] = {itemID = 3825, spellID = 3450 }; --Elixir of Fortitude
+		[10] = {itemID = 3389, spellID = 3177 }; --Elixir of Defense
+		[11] = {itemID = 3388, spellID = 3176 }; --Strong Troll's Blood Potion
+		[12] = {itemID = 3383, spellID = 3171 }; --Elixir of Wisdom
+		[13] = {itemID = 2458, spellID = 2334 }; --Elixir of Minor Fortitude
+		[14] = {itemID = 3382, spellID = 3170 }; --Weak Troll's Blood Elixir
+		[15] = {itemID = 5997, spellID = 7183 }; --Elixir of Minor Defense
 	};
 	{
 		Name = AL["Potions"] .. " 1";
-		{ 1, "s22732", "18253", "=q1=Major Rejuvenation Potion", "" };
-		{ 2, "s17580", "13444", "=q1=Major Mana Potion", "" };
-		{ 3, "s17577", "13461", "=q1=Greater Arcane Protection Potion", "" };
-		{ 4, "s17574", "13457", "=q1=Greater Fire Protection Potion", "" };
-		{ 5, "s17575", "13456", "=q1=Greater Frost Protection Potion", "" };
-		{ 6, "s17576", "13458", "=q1=Greater Nature Protection Potion", "" };
-		{ 7, "s17578", "13459", "=q1=Greater Shadow Protection Potion", "" };
-		{ 8, "s24367", "20008", "=q1=Living Action Potion", "" };
-		{ 9, "s17572", "13462", "=q1=Purification Potion", "" };
-		{ 10, "s17570", "13455", "=q1=Greater Stoneshield Potion", "" };
-		{ 11, "s24366", "20002", "=q1=Greater Dreamless Sleep Potion", "" };
-		{ 12, "s17556", "13446", "=q1=Major Healing Potion", "" };
-		{ 13, "s17553", "13443", "=q1=Superior Mana Potion", "" };
-		{ 14, "s17552", "13442", "=q1=Mighty Rage Potion", "" };
-		{ 15, "s3175", "3387", "=q1=Limited Invulnerability Potion", "" };
-		{ 16, "s11464", "9172", "=q1=Invisibility Potion", "" };
-		{ 17, "s15833", "12190", "=q1=Dreamless Sleep Potion", "" };
-		{ 18, "s11458", "9144", "=q1=Wildvine Potion", "" };
-		{ 19, "s4942", "4623", "=q1=Lesser Stoneshield Potion", "" };
-		{ 20, "s11457", "3928", "=q1=Superior Healing Potion", "" };
-		{ 21, "s11453", "9036", "=q1=Magic Resistance Potion", "" };
+		[1] = {itemID = 18253, spellID = 22732 }; --Major Rejuvenation Potion
+		[2] = {itemID = 13444, spellID = 17580 }; --Major Mana Potion
+		[3] = {itemID = 13461, spellID = 17577 }; --Greater Arcane Protection Potion
+		[4] = {itemID = 13457, spellID = 17574 }; --Greater Fire Protection Potion
+		[5] = {itemID = 13456, spellID = 17575 }; --Greater Frost Protection Potion
+		[6] = {itemID = 13458, spellID = 17576 }; --Greater Nature Protection Potion
+		[7] = {itemID = 13459, spellID = 17578 }; --Greater Shadow Protection Potion
+		[8] = {itemID = 20008, spellID = 24367 }; --Living Action Potion
+		[9] = {itemID = 13462, spellID = 17572 }; --Purification Potion
+		[10] = {itemID = 13455, spellID = 17570 }; --Greater Stoneshield Potion
+		[11] = {itemID = 20002, spellID = 24366 }; --Greater Dreamless Sleep Potion
+		[12] = {itemID = 13446, spellID = 17556 }; --Major Healing Potion
+		[13] = {itemID = 13443, spellID = 17553 }; --Superior Mana Potion
+		[14] = {itemID = 13442, spellID = 17552 }; --Mighty Rage Potion
+		[15] = {itemID = 3387, spellID = 3175 }; --Limited Invulnerability Potion
+		[16] = {itemID = 9172, spellID = 11464 }; --Invisibility Potion
+		[17] = {itemID = 12190, spellID = 15833 }; --Dreamless Sleep Potion
+		[18] = {itemID = 9144, spellID = 11458 }; --Wildvine Potion
+		[19] = {itemID = 4623, spellID = 4942 }; --Lesser Stoneshield Potion
+		[20] = {itemID = 3928, spellID = 11457 }; --Superior Healing Potion
+		[21] = {itemID = 9036, spellID = 11453 }; --Magic Resistance Potion
 	};
 	{
 		Name = AL["Potions"] .. " 2";
-		{ 1, "s11452", "9030", "=q1=Restorative Potion", "" };
-		{ 2, "s11448", "6149", "=q1=Greater Mana Potion", "" };
-		{ 3, "s7258", "6050", "=q1=Frost Protection Potion", "" };
-		{ 4, "s7259", "6052", "=q1=Nature Protection Potion", "" };
-		{ 5, "s6618", "5633", "=q1=Great Rage Potion", "" };
-		{ 6, "s3448", "3823", "=q1=Lesser Invisibility Potion", "" };
-		{ 7, "s7257", "6049", "=q1=Fire Protection Potion", "" };
-		{ 8, "s3452", "3827", "=q1=Mana Potion", "" };
-		{ 9, "s7181", "1710", "=q1=Greater Healing Potion", "" };
-		{ 10, "s6624", "5634", "=q1=Free Action Potion", "" };
-		{ 11, "s7256", "6048", "=q1=Shadow Protection Potion", "" };
-		{ 12, "s3173", "3385", "=q1=Lesser Mana Potion", "" };
-		{ 13, "s3174", "3386", "=q1=Potion of Curing", "" };
-		{ 14, "s3447", "929", "=q1=Healing Potion", "" };
-		{ 15, "s3172", "3384", "=q1=Minor Magic Resistance Potion", "" };
-		{ 16, "s7255", "6051", "=q1=Holy Protection Potion", "" };
-		{ 17, "s7841", "6372", "=q1=Swim Speed Potion", "" };
-		{ 18, "s6617", "5631", "=q1=Rage Potion", "" };
-		{ 19, "s2335", "2459", "=q1=Swiftness Potion", "" };
-		{ 20, "s2337", "858", "=q1=Lesser Healing Potion", "" };
-		{ 21, "s4508", "4596", "=q1=Discolored Healing Potion", "" };
-		{ 22, "s2332", "2456", "=q1=Minor Rejuvenation Potion", "" };
-		{ 23, "s2331", "2455", "=q1=Minor Mana Potion", "" };
-		{ 24, "s2330", "118", "=q1=Minor Healing Potion", "" };
+		[1] = {itemID = 9030, spellID = 11452 }; --Restorative Potion
+		[2] = {itemID = 6149, spellID = 11448 }; --Greater Mana Potion
+		[3] = {itemID = 6050, spellID = 7258 }; --Frost Protection Potion
+		[4] = {itemID = 6052, spellID = 7259 }; --Nature Protection Potion
+		[5] = {itemID = 5633, spellID = 6618 }; --Great Rage Potion
+		[6] = {itemID = 3823, spellID = 3448 }; --Lesser Invisibility Potion
+		[7] = {itemID = 6049, spellID = 7257 }; --Fire Protection Potion
+		[8] = {itemID = 3827, spellID = 3452 }; --Mana Potion
+		[9] = {itemID = 1710, spellID = 7181 }; --Greater Healing Potion
+		[10] = {itemID = 5634, spellID = 6624 }; --Free Action Potion
+		[11] = {itemID = 6048, spellID = 7256 }; --Shadow Protection Potion
+		[12] = {itemID = 3385, spellID = 3173 }; --Lesser Mana Potion
+		[13] = {itemID = 3386, spellID = 3174 }; --Potion of Curing
+		[14] = {itemID = 929, spellID = 3447 }; --Healing Potion
+		[15] = {itemID = 3384, spellID = 3172 }; --Minor Magic Resistance Potion
+		[16] = {itemID = 6051, spellID = 7255 }; --Holy Protection Potion
+		[17] = {itemID = 6372, spellID = 7841 }; --Swim Speed Potion
+		[18] = {itemID = 5631, spellID = 6617 }; --Rage Potion
+		[19] = {itemID = 2459, spellID = 2335 }; --Swiftness Potion
+		[20] = {itemID = 858, spellID = 2337 }; --Lesser Healing Potion
+		[21] = {itemID = 4596, spellID = 4508 }; --Discolored Healing Potion
+		[22] = {itemID = 2456, spellID = 2332 }; --Minor Rejuvenation Potion
+		[23] = {itemID = 2455, spellID = 2331 }; --Minor Mana Potion
+		[24] = {itemID = 118, spellID = 2330 }; --Minor Healing Potion
 	};
 	{
 		Name = AL["Flasks"];
-		{ 1, "s17638", "13513", "=q1=Flask of Chromatic Resistance", "" };
-		{ 2, "s17636", "13511", "=q1=Flask of Distilled Wisdom", "" };
-		{ 3, "s17634", "13506", "=q1=Flask of Petrification", "" };
-		{ 4, "s17637", "13512", "=q1=Flask of Supreme Power", "" };
-		{ 5, "s17635", "13510", "=q1=Flask of the Titans", "" };
+		[1] = {itemID = 13513, spellID = 17638 }; --Flask of Chromatic Resistance
+		[2] = {itemID = 13511, spellID = 17636 }; --Flask of Distilled Wisdom
+		[3] = {itemID = 13506, spellID = 17634 }; --Flask of Petrification
+		[4] = {itemID = 13512, spellID = 17637 }; --Flask of Supreme Power
+		[5] = {itemID = 13510, spellID = 17635 }; --Flask of the Titans
 	};
 	{
 		Name = AL["Transmutes"];
-		{ 1, "s11479", "3577", "=q2=Transmute: Iron to Gold", "" };
-		{ 2, "s11480", "6037", "=q2=Transmute: Mithril to Truesilver", "" };
-		{ 3, "s17187", "12360", "=q2=Transmute: Arcanite Bar", "" };
-		{ 4, "s17559", "7078", "=q2=Transmute: Air to Fire", "" };
-		{ 5, "s17566", "12803", "=q2=Transmute: Earth to Life", "" };
-		{ 6, "s17561", "7080", "=q2=Transmute: Earth to Water", "" };
-		{ 7, "s17560", "7076", "=q2=Transmute: Fire to Earth", "" };
-		{ 8, "s17565", "7076", "=q2=Transmute: Life to Earth", "" };
-		{ 9, "s17563", "7080", "=q2=Transmute: Undeath to Water", "" };
-		{ 10, "s17562", "7082", "=q2=Transmute: Water to Air", "" };
-		{ 11, "s17564", "12808", "=q2=Transmute: Water to Undeath", "" };
-		{ 12, "s25146", "7068", "=q1=Transmute: Elemental Fire", "" };
+		[1] = {itemID = 3577, spellID = 11479 }; --Transmute: Iron to Gold
+		[2] = {itemID = 6037, spellID = 11480 }; --Transmute: Mithril to Truesilver
+		[3] = {itemID = 12360, spellID = 17187 }; --Transmute: Arcanite Bar
+		[4] = {itemID = 7078, spellID = 17559 }; --Transmute: Air to Fire
+		[5] = {itemID = 12803, spellID = 17566 }; --Transmute: Earth to Life
+		[6] = {itemID = 7080, spellID = 17561 }; --Transmute: Earth to Water
+		[7] = {itemID = 7076, spellID = 17560 }; --Transmute: Fire to Earth
+		[8] = {itemID = 7076, spellID = 17565 }; --Transmute: Life to Earth
+		[9] = {itemID = 7080, spellID = 17563 }; --Transmute: Undeath to Water
+		[10] = {itemID = 7082, spellID = 17562 }; --Transmute: Water to Air
+		[11] = {itemID = 12808, spellID = 17564 }; --Transmute: Water to Undeath
+		[12] = {itemID = 7068, spellID = 25146 }; --Transmute: Elemental Fire
 	};
 	{
 		Name = AL["Miscellaneous"];
-		{ 1, "s24266", "19931", "=q3=Gurubashi Mojo Madness", "" };
-		{ 2, "s11460", "9154", "=q1=Elixir of Detect Undead", "" };
-		{ 3, "s22808", "18294", "=q1=Elixir of Greater Water Breathing", "" };
-		{ 4, "s11456", "9061", "=q1=Goblin Rocket Fuel", "" };
-		{ 5, "s11451", "8956", "=q1=Oil of Immolation", "" };
-		{ 6, "s12609", "10592", "=q1=Catseye Elixir", "" };
-		{ 7, "s3454", "3829", "=q1=Frost Oil", "" };
-		{ 8, "s11459", "9149", "=q1=Philosopher's Stone", "" };
-		{ 9, "s3453", "3828", "=q1=Elixir of Detect Lesser Invisibility", "" };
-		{ 10, "s3449", "3824", "=q1=Shadow Oil", "" };
-		{ 11, "s7837", "6371", "=q1=Fire Oil", "" };
-		{ 12, "s7179", "5996", "=q1=Elixir of Water Breathing", "" };
-		{ 13, "s7836", "6370", "=q1=Blackmouth Oil", "" };
+		[1] = {itemID = 19931, spellID = 24266 }; --Gurubashi Mojo Madness
+		[2] = {itemID = 9154, spellID = 11460 }; --Elixir of Detect Undead
+		[3] = {itemID = 18294, spellID = 22808 }; --Elixir of Greater Water Breathing
+		[4] = {itemID = 9061, spellID = 11456 }; --Goblin Rocket Fuel
+		[5] = {itemID = 8956, spellID = 11451 }; --Oil of Immolation
+		[6] = {itemID = 10592, spellID = 12609 }; --Catseye Elixir
+		[7] = {itemID = 3829, spellID = 3454 }; --Frost Oil
+		[8] = {itemID = 9149, spellID = 11459 }; --Philosopher's Stone
+		[9] = {itemID = 3828, spellID = 3453 }; --Elixir of Detect Lesser Invisibility
+		[10] = {itemID = 3824, spellID = 3449 }; --Shadow Oil
+		[11] = {itemID = 6371, spellID = 7837 }; --Fire Oil
+		[12] = {itemID = 5996, spellID = 7179 }; --Elixir of Water Breathing
+		[13] = {itemID = 6370, spellID = 7836 }; --Blackmouth Oil
 	};
 };
 ---------------------
@@ -231,311 +227,311 @@ AtlasLoot_Data["SmithingCLASSIC"] = {
 	Type = "Crafting";
 	{
 		Name = BabbleInventory["Armor"] .. WHITE .. " - Chest";
-		{ 1, "s28242", "22669", "=q4=Icebane Breastplate", "" };
-		{ 2, "s16746", "12641", "=q4=Invulnerable Mail", "" };
-		{ 3, "s27590", "22191", "=q4=Obsidian Mail Tunic", "" };
-		{ 4, "s27587", "22196", "=q4=Thick Obsidian Breastplate", "" };
-		{ 5, "s24136", "19690", "=q3=Bloodsoul Breastplate", "" };
-		{ 6, "s24914", "20550", "=q3=Darkrune Breastplate", "" };
-		{ 7, "s24139", "19693", "=q3=Darksoul Breastplate", "" };
-		{ 8, "s28461", "22762", "=q3=Ironvine Breastplate", "" };
-		{ 9, "s16745", "12618", "=q3=Enchanted Thorium Breastplate", "" };
-		{ 10, "s16663", "12422", "=q2=Imperial Plate Chest", "" };
-		{ 11, "s16731", "12613", "=q2=Runic Breastplate", "" };
-		{ 12, "s16667", "12628", "=q3=Demon Forged Breastplate", "" };
-		{ 13, "s15296", "11604", "=q3=Dark Iron Plate", "" };
-		{ 14, "s16650", "12624", "=q3=Wildthorn Mail", "" };
-		{ 15, "s16648", "12415", "=q2=Radiant Breastplate", "" };
-		{ 16, "s16642", "12405", "=q2=Thorium Armor", "" };
-		{ 17, "s9959", "7930", "=q2=Heavy Mithril Breastplate", "" };
-		{ 18, "s9974", "7939", "=q3=Truesilver Breastplate", "" };
-		{ 19, "s9916", "7963", "=q2=Steel Breastplate", "" };
-		{ 20, "s3511", "3845", "=q2=Golden Scale Cuirass", "" };
-		{ 21, "s3508", "3844", "=q3=Green Iron Hauberk", "" };
-		{ 22, "s9813", "7914", "=q2=Barbaric Iron Breastplate", "" };
-		{ 23, "s2675", "2870", "=q3=Shining Silver Breastplate", "" };
-		{ 24, "s2673", "2869", "=q2=Silvered Bronze Breastplate", "" };
-		{ 25, "s9972", "7935", "=q2=Ornate Mithril Breastplate", "" };
-		{ 26, "s8367", "6731", "=q2=Ironforge Breastplate", "" };
-		{ 27, "s2670", "2866", "=q1=Rough Bronze Cuirass", "" };
-		{ 28, "s2667", "2864", "=q2=Runed Copper Breastplate", "" };
-		{ 29, "s3321", "3471", "=q2=Copper Chain Vest", "" };
-		{ 30, "s12260", "10421", "=q1=Rough Copper Vest", "" };
+		[1] = {itemID = 22669, spellID = 28242 }; --Icebane Breastplate
+		[2] = {itemID = 12641, spellID = 16746 }; --Invulnerable Mail
+		[3] = {itemID = 22191, spellID = 27590 }; --Obsidian Mail Tunic
+		[4] = {itemID = 22196, spellID = 27587 }; --Thick Obsidian Breastplate
+		[5] = {itemID = 19690, spellID = 24136 }; --Bloodsoul Breastplate
+		[6] = {itemID = 20550, spellID = 24914 }; --Darkrune Breastplate
+		[7] = {itemID = 19693, spellID = 24139 }; --Darksoul Breastplate
+		[8] = {itemID = 22762, spellID = 28461 }; --Ironvine Breastplate
+		[9] = {itemID = 12618, spellID = 16745 }; --Enchanted Thorium Breastplate
+		[10] = {itemID = 12422, spellID = 16663 }; --Imperial Plate Chest
+		[11] = {itemID = 12613, spellID = 16731 }; --Runic Breastplate
+		[12] = {itemID = 12628, spellID = 16667 }; --Demon Forged Breastplate
+		[13] = {itemID = 11604, spellID = 15296 }; --Dark Iron Plate
+		[14] = {itemID = 12624, spellID = 16650 }; --Wildthorn Mail
+		[15] = {itemID = 12415, spellID = 16648 }; --Radiant Breastplate
+		[16] = {itemID = 12405, spellID = 16642 }; --Thorium Armor
+		[17] = {itemID = 7930, spellID = 9959 }; --Heavy Mithril Breastplate
+		[18] = {itemID = 7939, spellID = 9974 }; --Truesilver Breastplate
+		[19] = {itemID = 7963, spellID = 9916 }; --Steel Breastplate
+		[20] = {itemID = 3845, spellID = 3511 }; --Golden Scale Cuirass
+		[21] = {itemID = 3844, spellID = 3508 }; --Green Iron Hauberk
+		[22] = {itemID = 7914, spellID = 9813 }; --Barbaric Iron Breastplate
+		[23] = {itemID = 2870, spellID = 2675 }; --Shining Silver Breastplate
+		[24] = {itemID = 2869, spellID = 2673 }; --Silvered Bronze Breastplate
+		[25] = {itemID = 7935, spellID = 9972 }; --Ornate Mithril Breastplate
+		[26] = {itemID = 6731, spellID = 8367 }; --Ironforge Breastplate
+		[27] = {itemID = 2866, spellID = 2670 }; --Rough Bronze Cuirass
+		[28] = {itemID = 2864, spellID = 2667 }; --Runed Copper Breastplate
+		[29] = {itemID = 3471, spellID = 3321 }; --Copper Chain Vest
+		[30] = {itemID = 10421, spellID = 12260 }; --Rough Copper Vest
 	};
 	{ Name = BabbleInventory["Armor"] .. WHITE .. " - Feet";
-		{ 1, "s24399", "20039", "=q4=Dark Iron Boots", "" };
-		{ 2, "s23629", "19048", "=q3=Heavy Timbermaw Boots", "" };
-		{ 3, "s16665", "12611", "=q2=Runic Plate Boots", "" };
-		{ 4, "s16657", "12426", "=q2=Imperial Plate Boots", "" };
-		{ 5, "s16656", "12419", "=q2=Radiant Boots", "" };
-		{ 6, "s16652", "12409", "=q2=Thorium Boots", "" };
-		{ 7, "s9979", "7936", "=q2=Ornate Mithril Boots", "" };
-		{ 8, "s9968", "7933", "=q2=Heavy Mithril Boots", "" };
-		{ 9, "s3515", "3847", "=q2=Golden Scale Boots", "" };
-		{ 10, "s3513", "3846", "=q2=Polished Steel Boots", "" };
-		{ 11, "s9818", "7916", "=q2=Barbaric Iron Boots", "" };
-		{ 12, "s3334", "3484", "=q2=Green Iron Boots", "" };
-		{ 13, "s3331", "3482", "=q2=Silvered Bronze Boots", "" };
-		{ 14, "s7817", "6350", "=q1=Rough Bronze Boots", "" };
-		{ 15, "s3319", "3469", "=q1=Copper Chain Boots", "" };
+		[1] = {itemID = 20039, spellID = 24399 }; --Dark Iron Boots
+		[2] = {itemID = 19048, spellID = 23629 }; --Heavy Timbermaw Boots
+		[3] = {itemID = 12611, spellID = 16665 }; --Runic Plate Boots
+		[4] = {itemID = 12426, spellID = 16657 }; --Imperial Plate Boots
+		[5] = {itemID = 12419, spellID = 16656 }; --Radiant Boots
+		[6] = {itemID = 12409, spellID = 16652 }; --Thorium Boots
+		[7] = {itemID = 7936, spellID = 9979 }; --Ornate Mithril Boots
+		[8] = {itemID = 7933, spellID = 9968 }; --Heavy Mithril Boots
+		[9] = {itemID = 3847, spellID = 3515 }; --Golden Scale Boots
+		[10] = {itemID = 3846, spellID = 3513 }; --Polished Steel Boots
+		[11] = {itemID = 7916, spellID = 9818 }; --Barbaric Iron Boots
+		[12] = {itemID = 3484, spellID = 3334 }; --Green Iron Boots
+		[13] = {itemID = 3482, spellID = 3331 }; --Silvered Bronze Boots
+		[14] = {itemID = 6350, spellID = 7817 }; --Rough Bronze Boots
+		[15] = {itemID = 3469, spellID = 3319 }; --Copper Chain Boots
 	};
 	{
 		Name = BabbleInventory["Armor"] .. WHITE .. " - Hands";
-		{ 1, "s23637", "19164", "=q4=Dark Iron Gauntlets", "" };
-		{ 2, "s28243", "22670", "=q4=Icebane Gauntlets", "" };
-		{ 3, "s16741", "12639", "=q4=Stronghold Gauntlets", "" };
-		{ 4, "s24138", "19692", "=q3=Bloodsoul Gauntlets", "" };
-		{ 5, "s24912", "20549", "=q3=Darkrune Gauntlets", "" };
-		{ 6, "s23633", "19057", "=q3=Gloves of the Dawn", "" };
-		{ 7, "s28462", "22763", "=q3=Ironvine Gloves", "" };
-		{ 8, "s27589", "22194", "=q4=Black Grasp of the Destroyer", "" };
-		{ 9, "s16661", "12632", "=q3=Storm Gauntlets", "" };
-		{ 10, "s16655", "12631", "=q3=Fiery Plate Gauntlets", "" };
-		{ 11, "s9954", "7938", "=q3=Truesilver Gauntlets", "" };
-		{ 12, "s16654", "12418", "=q2=Radiant Gloves", "" };
-		{ 13, "s9950", "7927", "=q2=Ornate Mithril Gloves", "" };
-		{ 14, "s11643", "9366", "=q2=Golden Scale Gauntlets", "" };
-		{ 15, "s9928", "7919", "=q2=Heavy Mithril Gauntlet", "" };
-		{ 16, "s9820", "7917", "=q2=Barbaric Iron Gloves", "" };
-		{ 17, "s3336", "3485", "=q2=Green Iron Gauntlets", "" };
-		{ 18, "s3333", "3483", "=q2=Silvered Bronze Gauntlets", "" };
-		{ 19, "s3325", "3474", "=q2=Gemmed Copper Gauntlets", "" };
-		{ 20, "s3323", "3472", "=q1=Runed Copper Gauntlets", "" };
+		[1] = {itemID = 19164, spellID = 23637 }; --Dark Iron Gauntlets
+		[2] = {itemID = 22670, spellID = 28243 }; --Icebane Gauntlets
+		[3] = {itemID = 12639, spellID = 16741 }; --Stronghold Gauntlets
+		[4] = {itemID = 19692, spellID = 24138 }; --Bloodsoul Gauntlets
+		[5] = {itemID = 20549, spellID = 24912 }; --Darkrune Gauntlets
+		[6] = {itemID = 19057, spellID = 23633 }; --Gloves of the Dawn
+		[7] = {itemID = 22763, spellID = 28462 }; --Ironvine Gloves
+		[8] = {itemID = 22194, spellID = 27589 }; --Black Grasp of the Destroyer
+		[9] = {itemID = 12632, spellID = 16661 }; --Storm Gauntlets
+		[10] = {itemID = 12631, spellID = 16655 }; --Fiery Plate Gauntlets
+		[11] = {itemID = 7938, spellID = 9954 }; --Truesilver Gauntlets
+		[12] = {itemID = 12418, spellID = 16654 }; --Radiant Gloves
+		[13] = {itemID = 7927, spellID = 9950 }; --Ornate Mithril Gloves
+		[14] = {itemID = 9366, spellID = 11643 }; --Golden Scale Gauntlets
+		[15] = {itemID = 7919, spellID = 9928 }; --Heavy Mithril Gauntlet
+		[16] = {itemID = 7917, spellID = 9820 }; --Barbaric Iron Gloves
+		[17] = {itemID = 3485, spellID = 3336 }; --Green Iron Gauntlets
+		[18] = {itemID = 3483, spellID = 3333 }; --Silvered Bronze Gauntlets
+		[19] = {itemID = 3474, spellID = 3325 }; --Gemmed Copper Gauntlets
+		[20] = {itemID = 3472, spellID = 3323 }; --Runed Copper Gauntlets
 	};
 	{
 		Name = BabbleInventory["Armor"] .. WHITE .. " - Head";
-		{ 1, "s23636", "19148", "=q4=Dark Iron Helm", "" };
-		{ 2, "s16729", "12640", "=q4=Lionheart Helm", "" };
-		{ 3, "s24913", "20551", "=q3=Darkrune Helm", "" };
-		{ 4, "s16742", "12620", "=q3=Enchanted Thorium Helm", "" };
-		{ 5, "s16728", "12636", "=q3=Helm of the Great Chief", "" };
-		{ 6, "s16724", "12633", "=q3=Whitesoul Helm", "" };
-		{ 7, "s16726", "12612", "=q2=Runic Plate Helm", "" };
-		{ 8, "s16658", "12427", "=q2=Imperial Plate Helm", "" };
-		{ 9, "s16659", "12417", "=q2=Radiant Circlet", "" };
-		{ 10, "s16653", "12410", "=q2=Thorium Helm", "" };
-		{ 11, "s15293", "11606", "=q2=Dark Iron Mail", "" };
-		{ 12, "s9980", "7937", "=q2=Ornate Mithril Helm", "" };
-		{ 13, "s9970", "7934", "=q2=Heavy Mithril Helm", "" };
-		{ 14, "s9961", "7931", "=q2=Mithril Coif", "" };
-		{ 15, "s9935", "7922", "=q1=Steel Plate Helm", "" };
-		{ 16, "s3503", "3837", "=q2=Golden Scale Coif", "" };
-		{ 17, "s16726", "12612", "=q2=Runic Plate Helm", "" };
-		{ 18, "s9814", "7915", "=q2=Barbaric Iron Helm", "" };
-		{ 19, "s3502", "3836", "=q2=Green Iron Helm", "" };
+		[1] = {itemID = 19148, spellID = 23636 }; --Dark Iron Helm
+		[2] = {itemID = 12640, spellID = 16729 }; --Lionheart Helm
+		[3] = {itemID = 20551, spellID = 24913 }; --Darkrune Helm
+		[4] = {itemID = 12620, spellID = 16742 }; --Enchanted Thorium Helm
+		[5] = {itemID = 12636, spellID = 16728 }; --Helm of the Great Chief
+		[6] = {itemID = 12633, spellID = 16724 }; --Whitesoul Helm
+		[7] = {itemID = 12612, spellID = 16726 }; --Runic Plate Helm
+		[8] = {itemID = 12427, spellID = 16658 }; --Imperial Plate Helm
+		[9] = {itemID = 12417, spellID = 16659 }; --Radiant Circlet
+		[10] = {itemID = 12410, spellID = 16653 }; --Thorium Helm
+		[11] = {itemID = 11606, spellID = 15293 }; --Dark Iron Mail
+		[12] = {itemID = 7937, spellID = 9980 }; --Ornate Mithril Helm
+		[13] = {itemID = 7934, spellID = 9970 }; --Heavy Mithril Helm
+		[14] = {itemID = 7931, spellID = 9961 }; --Mithril Coif
+		[15] = {itemID = 7922, spellID = 9935 }; --Steel Plate Helm
+		[16] = {itemID = 3837, spellID = 3503 }; --Golden Scale Coif
+		[17] = {itemID = 12612, spellID = 16726 }; --Runic Plate Helm
+		[18] = {itemID = 7915, spellID = 9814 }; --Barbaric Iron Helm
+		[19] = {itemID = 3836, spellID = 3502 }; --Green Iron Helm
 	};
 	{
 		Name = BabbleInventory["Armor"] .. WHITE .. " - Legs";
-		{ 1, "s20876", "17013", "=q4=Dark Iron Leggings", "" };
-		{ 3, "s16662", "12414", "=q2=Thorium Leggings", "" };
-		{ 2, "s27829", "22385", "=q4=Titanic Leggings", "" };
-		{ 4, "s24140", "19694", "=q3=Darksoul Leggings", "" };
-		{ 5, "s16744", "12619", "=q3=Enchanted Thorium Leggings", "" };
-		{ 6, "s16730", "12429", "=q2=Imperial Plate Leggings", "" };
-		{ 7, "s16725", "12420", "=q2=Radiant Leggings", "" };
-		{ 8, "s16732", "12614", "=q2=Runic Plate Leggings", "" };
-		{ 9, "s36122", "30069", "=q3=Earthforged Leggings", "" };
-		{ 10, "s36124", "30070", "=q3=Windforged Leggings", "" };
-		{ 11, "s9945", "7926", "=q2=Ornate Mithril Pants", "" };
-		{ 12, "s9931", "7920", "=q2=Mithril Scale Pants", "" };
-		{ 13, "s9933", "7921", "=q2=Heavy Mithril Pants", "" };
-		{ 14, "s9957", "7929", "=q2=Orcish War Leggings", "" };
-		{ 15, "s3507", "3843", "=q2=Golden Scale Leggings", "" };
-		{ 16, "s3506", "3842", "=q2=Green Iron Leggings", "" };
-		{ 17, "s12259", "10423", "=q2=Silvered Bronze Leggings", "" };
-		{ 18, "s2668", "2865", "=q2=Rough Bronze Leggings", "" };
-		{ 19, "s3324", "3473", "=q2=Runed Copper Pants", "" };
-		{ 20, "s2662", "2852", "=q1=Copper Chain Pants", "" };
+		[1] = {itemID = 17013, spellID = 20876 }; --Dark Iron Leggings
+		[3] = {itemID = 12414, spellID = 16662 }; --Thorium Leggings
+		[2] = {itemID = 22385, spellID = 27829 }; --Titanic Leggings
+		[4] = {itemID = 19694, spellID = 24140 }; --Darksoul Leggings
+		[5] = {itemID = 12619, spellID = 16744 }; --Enchanted Thorium Leggings
+		[6] = {itemID = 12429, spellID = 16730 }; --Imperial Plate Leggings
+		[7] = {itemID = 12420, spellID = 16725 }; --Radiant Leggings
+		[8] = {itemID = 12614, spellID = 16732 }; --Runic Plate Leggings
+		[9] = {itemID = 30069, spellID = 36122 }; --Earthforged Leggings
+		[10] = {itemID = 30070, spellID = 36124 }; --Windforged Leggings
+		[11] = {itemID = 7926, spellID = 9945 }; --Ornate Mithril Pants
+		[12] = {itemID = 7920, spellID = 9931 }; --Mithril Scale Pants
+		[13] = {itemID = 7921, spellID = 9933 }; --Heavy Mithril Pants
+		[14] = {itemID = 7929, spellID = 9957 }; --Orcish War Leggings
+		[15] = {itemID = 3843, spellID = 3507 }; --Golden Scale Leggings
+		[16] = {itemID = 3842, spellID = 3506 }; --Green Iron Leggings
+		[17] = {itemID = 10423, spellID = 12259 }; --Silvered Bronze Leggings
+		[18] = {itemID = 2865, spellID = 2668 }; --Rough Bronze Leggings
+		[19] = {itemID = 3473, spellID = 3324 }; --Runed Copper Pants
+		[20] = {itemID = 2852, spellID = 2662 }; --Copper Chain Pants
 	};
 	{
 		Name = BabbleInventory["Armor"] .. WHITE .. " - Shoulder";
-		{ 1, "s20873", "16988", "=q4=Fiery Chain Shoulders", "" };
-		{ 2, "s24137", "19691", "=q3=Bloodsoul Shoulders", "" };
-		{ 3, "s24141", "19695", "=q3=Darksoul Shoulders", "" };
-		{ 4, "s16664", "12610", "=q2=Runic Plate Shoulders", "" };
-		{ 5, "s16660", "12625", "=q3=Dawnbringer Shoulders", "" };
-		{ 6, "s15295", "11605", "=q2=Dark Iron Shoulders", "" };
-		{ 7, "s16646", "12428", "=q2=Imperial Plate Shoulders", "" };
-		{ 8, "s9966", "7932", "=q2=Mithril Scale Shoulders", "" };
-		{ 9, "s9952", "7928", "=q2=Ornate Mithril Shoulder", "" };
-		{ 10, "s9926", "7918", "=q2=Heavy Mithril Shoulder", "" };
-		{ 11, "s3505", "3841", "=q2=Golden Scale Shoulders", "" };
-		{ 12, "s9811", "7913", "=q2=Barbaric Iron Shoulders", "" };
-		{ 13, "s3504", "3840", "=q2=Green Iron Shoulders", "" };
-		{ 14, "s3330", "3481", "=q2=Silvered Bronze Shoulders", "" };
-		{ 15, "s3328", "3480", "=q1=Rough Bronze Shoulders", "" };
+		[1] = {itemID = 16988, spellID = 20873 }; --Fiery Chain Shoulders
+		[2] = {itemID = 19691, spellID = 24137 }; --Bloodsoul Shoulders
+		[3] = {itemID = 19695, spellID = 24141 }; --Darksoul Shoulders
+		[4] = {itemID = 12610, spellID = 16664 }; --Runic Plate Shoulders
+		[5] = {itemID = 12625, spellID = 16660 }; --Dawnbringer Shoulders
+		[6] = {itemID = 11605, spellID = 15295 }; --Dark Iron Shoulders
+		[7] = {itemID = 12428, spellID = 16646 }; --Imperial Plate Shoulders
+		[8] = {itemID = 7932, spellID = 9966 }; --Mithril Scale Shoulders
+		[9] = {itemID = 7928, spellID = 9952 }; --Ornate Mithril Shoulder
+		[10] = {itemID = 7918, spellID = 9926 }; --Heavy Mithril Shoulder
+		[11] = {itemID = 3841, spellID = 3505 }; --Golden Scale Shoulders
+		[12] = {itemID = 7913, spellID = 9811 }; --Barbaric Iron Shoulders
+		[13] = {itemID = 3840, spellID = 3504 }; --Green Iron Shoulders
+		[14] = {itemID = 3481, spellID = 3330 }; --Silvered Bronze Shoulders
+		[15] = {itemID = 3480, spellID = 3328 }; --Rough Bronze Shoulders
 	};
 	{
 		Name = BabbleInventory["Armor"] .. WHITE .. " - Waist";
-		{ 1, "s27585", "22197", "=q3=Heavy Obsidian Belt", "" };
-		{ 2, "s28463", "22764", "=q3=Ironvine Belt", "" };
-		{ 3, "s27588", "22195", "=q3=Light Obsidian Belt", "" };
-		{ 4, "s20872", "16989", "=q4=Fiery Chain Girdle", "" };
-		{ 5, "s23632", "19051", "=q3=Girdle of the Dawn", "" };
-		{ 6, "s23628", "19043", "=q3=Heavy Timbermaw Belt", "" };
-		{ 7, "s16647", "12424", "=q2=Imperial Plate Belt", "" };
-		{ 8, "s16645", "12416", "=q2=Radiant Belt", "" };
-		{ 9, "s16643", "12406", "=q2=Thorium Belt", "" };
-		{ 10, "s2666", "2857", "=q1=Runed Copper Belt", "" };
-		{ 11, "s2661", "2851", "=q1=Copper Chain Belt", "" };
+		[1] = {itemID = 22197, spellID = 27585 }; --Heavy Obsidian Belt
+		[2] = {itemID = 22764, spellID = 28463 }; --Ironvine Belt
+		[3] = {itemID = 22195, spellID = 27588 }; --Light Obsidian Belt
+		[4] = {itemID = 16989, spellID = 20872 }; --Fiery Chain Girdle
+		[5] = {itemID = 19051, spellID = 23632 }; --Girdle of the Dawn
+		[6] = {itemID = 19043, spellID = 23628 }; --Heavy Timbermaw Belt
+		[7] = {itemID = 12424, spellID = 16647 }; --Imperial Plate Belt
+		[8] = {itemID = 12416, spellID = 16645 }; --Radiant Belt
+		[9] = {itemID = 12406, spellID = 16643 }; --Thorium Belt
+		[10] = {itemID = 2857, spellID = 2666 }; --Runed Copper Belt
+		[11] = {itemID = 2851, spellID = 2661 }; --Copper Chain Belt
 	};
 	{
 		Name = BabbleInventory["Armor"] .. WHITE .. " - Wrist";
-		{ 1, "s28244", "22671", "=q4=Icebane Bracers", "" };
-		{ 2, "s20874", "17014", "=q4=Dark Iron Bracers", "" };
-		{ 3, "s16649", "12425", "=q2=Imperial Plate Bracers", "" };
-		{ 4, "s16644", "12408", "=q2=Thorium Bracers", "" };
-		{ 5, "s9937", "7924", "=q2=Mithril Scale Bracers", "" };
-		{ 6, "s7223", "6040", "=q1=Golden Scale Bracers", "" };
-		{ 7, "s3501", "3835", "=q1=Green Iron Bracers", "" };
-		{ 8, "s2672", "2868", "=q2=Patterned Bronze Bracers", "" };
-		{ 9, "s2664", "2854", "=q1=Runed Copper Bracers", "" };
-		{ 10, "s2663", "2853", "=q1=Copper Bracers", "" };
+		[1] = {itemID = 22671, spellID = 28244 }; --Icebane Bracers
+		[2] = {itemID = 17014, spellID = 20874 }; --Dark Iron Bracers
+		[3] = {itemID = 12425, spellID = 16649 }; --Imperial Plate Bracers
+		[4] = {itemID = 12408, spellID = 16644 }; --Thorium Bracers
+		[5] = {itemID = 7924, spellID = 9937 }; --Mithril Scale Bracers
+		[6] = {itemID = 6040, spellID = 7223 }; --Golden Scale Bracers
+		[7] = {itemID = 3835, spellID = 3501 }; --Green Iron Bracers
+		[8] = {itemID = 2868, spellID = 2672 }; --Patterned Bronze Bracers
+		[9] = {itemID = 2854, spellID = 2664 }; --Runed Copper Bracers
+		[10] = {itemID = 2853, spellID = 2663 }; --Copper Bracers
 	};
 	{
 		Name = "Weapon - One Handed";
-		{ 1, "s23638", "19166", "=q4=Black Amnesty", "" };
-		{ 2, "s23652", "19168", "=q4=Blackguard", "" };
-		{ 3, "s23650", "19170", "=q4=Ebon Hand", "" };
-		{ 4, "s27830", "22384", "=q4=Persuader", "" };
-		{ 5, "s27832", "22383", "=q4=Sageblade", "" };
-		{ 6, "s16991", "12798", "=q3=Annihilator", "" };
-		{ 7, "s20897", "17016", "=q3=Dark Iron Destroyer", "" };
-		{ 8, "s20890", "17015", "=q3=Dark Iron Reaver", "" };
-		{ 9, "s16992", "12797", "=q3=Frostguard", "" };
-		{ 10, "s16995", "12783", "=q3=Heartseeker", "" };
-		{ 11, "s16993", "12794", "=q3=Masterwork Stormhammer", "" };
-		{ 12, "s16983", "12781", "=q3=Serenity", "" };
-		{ 13, "s16978", "12777", "=q3=Blazing Rapier", "" };
-		{ 14, "s16970", "12774", "=q3=Dawn's Edge", "" };
-		{ 15, "s36125", "30071", "=q3=Light Earthforged Blade", "" };
-		{ 16, "s36128", "30073", "=q3=Light Emberforged Hammer", "" };
-		{ 17, "s36126", "30072", "=q3=Light Skyforged Axe", "" };
-		{ 18, "s10007", "7961", "=q3=Phantom Blade", "" };
-		{ 19, "s10003", "7954", "=q3=The Shatterer", "" };
-		{ 20, "s16984", "12792", "=q2=Volcanic Hammer", "" };
-		{ 21, "s16969", "12773", "=q2=Ornate Thorium Handaxe", "" };
-		{ 22, "s10013", "7947", "=q2=Ebon Shiv", "" };
-		{ 23, "s10009", "7946", "=q2=Runed Mithril Hammer", "" };
-		{ 24, "s10005", "7944", "=q2=Dazzling Mithril Rapier", "" };
-		{ 25, "s10001", "7945", "=q2=Big Black Mace", "" };
-		{ 26, "s9997", "7943", "=q2=Wicked Mithril Blade", "" };
-		{ 27, "s9995", "7942", "=q2=Blue Glittering Axe", "" };
-		{ 28, "s9993", "7941", "=q2=Heavy Mithril Axe", "" };
-		{ 29, "s15973", "12260", "=q2=Searing Golden Blade", "" };
-		{ 30, "s21913", "17704", "=q2=Edge of Winter", "" };
+		[1] = {itemID = 19166, spellID = 23638 }; --Black Amnesty
+		[2] = {itemID = 19168, spellID = 23652 }; --Blackguard
+		[3] = {itemID = 19170, spellID = 23650 }; --Ebon Hand
+		[4] = {itemID = 22384, spellID = 27830 }; --Persuader
+		[5] = {itemID = 22383, spellID = 27832 }; --Sageblade
+		[6] = {itemID = 12798, spellID = 16991 }; --Annihilator
+		[7] = {itemID = 17016, spellID = 20897 }; --Dark Iron Destroyer
+		[8] = {itemID = 17015, spellID = 20890 }; --Dark Iron Reaver
+		[9] = {itemID = 12797, spellID = 16992 }; --Frostguard
+		[10] = {itemID = 12783, spellID = 16995 }; --Heartseeker
+		[11] = {itemID = 12794, spellID = 16993 }; --Masterwork Stormhammer
+		[12] = {itemID = 12781, spellID = 16983 }; --Serenity
+		[13] = {itemID = 12777, spellID = 16978 }; --Blazing Rapier
+		[14] = {itemID = 12774, spellID = 16970 }; --Dawn's Edge
+		[15] = {itemID = 30071, spellID = 36125 }; --Light Earthforged Blade
+		[16] = {itemID = 30073, spellID = 36128 }; --Light Emberforged Hammer
+		[17] = {itemID = 30072, spellID = 36126 }; --Light Skyforged Axe
+		[18] = {itemID = 7961, spellID = 10007 }; --Phantom Blade
+		[19] = {itemID = 7954, spellID = 10003 }; --The Shatterer
+		[20] = {itemID = 12792, spellID = 16984 }; --Volcanic Hammer
+		[21] = {itemID = 12773, spellID = 16969 }; --Ornate Thorium Handaxe
+		[22] = {itemID = 7947, spellID = 10013 }; --Ebon Shiv
+		[23] = {itemID = 7946, spellID = 10009 }; --Runed Mithril Hammer
+		[24] = {itemID = 7944, spellID = 10005 }; --Dazzling Mithril Rapier
+		[25] = {itemID = 7945, spellID = 10001 }; --Big Black Mace
+		[26] = {itemID = 7943, spellID = 9997 }; --Wicked Mithril Blade
+		[27] = {itemID = 7942, spellID = 9995 }; --Blue Glittering Axe
+		[28] = {itemID = 7941, spellID = 9993 }; --Heavy Mithril Axe
+		[29] = {itemID = 12260, spellID = 15973 }; --Searing Golden Blade
+		[30] = {itemID = 17704, spellID = 21913 }; --Edge of Winter
 	};
 	{
 		Name = "Weapon - One Handed";
-		{ 1, "s15972", "12259", "=q2=Glinting Steel Dagger", "" };
-		{ 2, "s3493", "3850", "=q2=Jade Serpentblade", "" };
-		{ 3, "s3492", "3849", "=q2=Hardened Iron Shortsword", "" };
-		{ 4, "s3297", "3492", "=q2=Mighty Iron Hammer", "" };
-		{ 5, "s6518", "5541", "=q2=Iridescent Hammer", "" };
-		{ 6, "s3296", "3491", "=q2=Heavy Bronze Mace", "" };
-		{ 7, "s3295", "3490", "=q2=Deadly Bronze Poniard", "" };
-		{ 8, "s6517", "5540", "=q2=Pearl-handled Dagger", "" };
-		{ 9, "s3491", "3848", "=q2=Big Bronze Knife", "" };
-		{ 10, "s3294", "3489", "=q2=Thick War Axe", "" };
-		{ 11, "s43549", "33791", "=q2=Heavy Copper Longsword", "" };
-		{ 12, "s2742", "2850", "=q1=Bronze Shortsword", "" };
-		{ 13, "s2741", "2849", "=q1=Bronze Axe", "" };
-		{ 14, "s2740", "2848", "=q1=Bronze Mace", "" };
-		{ 15, "s2738", "2845", "=q1=Copper Axe", "" };
-		{ 16, "s2737", "2844", "=q1=Copper Mace", "" };
+		[1] = {itemID = 12259, spellID = 15972 }; --Glinting Steel Dagger
+		[2] = {itemID = 3850, spellID = 3493 }; --Jade Serpentblade
+		[3] = {itemID = 3849, spellID = 3492 }; --Hardened Iron Shortsword
+		[4] = {itemID = 3492, spellID = 3297 }; --Mighty Iron Hammer
+		[5] = {itemID = 5541, spellID = 6518 }; --Iridescent Hammer
+		[6] = {itemID = 3491, spellID = 3296 }; --Heavy Bronze Mace
+		[7] = {itemID = 3490, spellID = 3295 }; --Deadly Bronze Poniard
+		[8] = {itemID = 5540, spellID = 6517 }; --Pearl-handled Dagger
+		[9] = {itemID = 3848, spellID = 3491 }; --Big Bronze Knife
+		[10] = {itemID = 3489, spellID = 3294 }; --Thick War Axe
+		[11] = {itemID = 33791, spellID = 43549 }; --Heavy Copper Longsword
+		[12] = {itemID = 2850, spellID = 2742 }; --Bronze Shortsword
+		[13] = {itemID = 2849, spellID = 2741 }; --Bronze Axe
+		[14] = {itemID = 2848, spellID = 2740 }; --Bronze Mace
+		[15] = {itemID = 2845, spellID = 2738 }; --Copper Axe
+		[16] = {itemID = 2844, spellID = 2737 }; --Copper Mace
 	};
 	{
 		Name = "Weapon - Two Handed";
-		{ 1, "s23639", "19167", "=q4=Blackfury", "" };
-		{ 2, "s23653", "19169", "=q4=Nightfall", "" };
-		{ 3, "s21161", "17193", "=q4=Sulfuron Hammer", "" };
-		{ 4, "s16990", "12790", "=q3=Arcanite Champion", "" };
-		{ 5, "s16994", "12784", "=q3=Arcanite Reaper", "" };
-		{ 6, "s16988", "12796", "=q3=Hammer of the Titans", "" };
-		{ 7, "s16985", "12782", "=q3=Corruption", "" };
-		{ 8, "s16973", "12776", "=q3=Enchanted Battlehammer", "" };
-		{ 9, "s15294", "11607", "=q3=Dark Iron Sunderer", "" };
-		{ 10, "s15292", "11608", "=q3=Dark Iron Pulverizer", "" };
-		{ 11, "s10015", "7960", "=q3=Truesilver Champion", "" };
-		{ 12, "s10011", "7959", "=q3=Blight", "" };
-		{ 13, "s16971", "12775", "=q2=Huge Thorium Battleaxe", "" };
-		{ 14, "s3500", "3856", "=q2=Shadow Crescent Axe", "" };
-		{ 15, "s3497", "3854", "=q2=Frost Tiger Blade", "" };
-		{ 16, "s3498", "3855", "=q2=Massive Iron Axe", "" };
-		{ 17, "s3496", "3853", "=q2=Moonsteel Broadsword", "" };
-		{ 18, "s3495", "3852", "=q2=Golden Iron Destroyer", "" };
-		{ 19, "s3494", "3851", "=q2=Solid Iron Maul", "" };
-		{ 20, "s3292", "3487", "=q2=Heavy Copper Broadsword", "" };
-		{ 21, "s3293", "3488", "=q2=Copper Battle Axe", "" };
-		{ 22, "s9987", "7958", "=q1=Bronze Battle Axe", "" };
-		{ 23, "s9986", "7957", "=q1=Bronze Greatsword", "" };
-		{ 24, "s9985", "7956", "=q1=Bronze Warhammer", "" };
-		{ 25, "s7408", "6214", "=q1=Heavy Copper Maul", "" };
-		{ 26, "s9983", "7955", "=q1=Copper Claymore", "" };
-		{ 27, "s8880", "7166", "=q1=Copper Dagger", "" };
-		{ 28, "s2739", "2847", "=q1=Copper Shortsword", "" };
+		[1] = {itemID = 19167, spellID = 23639 }; --Blackfury
+		[2] = {itemID = 19169, spellID = 23653 }; --Nightfall
+		[3] = {itemID = 17193, spellID = 21161 }; --Sulfuron Hammer
+		[4] = {itemID = 12790, spellID = 16990 }; --Arcanite Champion
+		[5] = {itemID = 12784, spellID = 16994 }; --Arcanite Reaper
+		[6] = {itemID = 12796, spellID = 16988 }; --Hammer of the Titans
+		[7] = {itemID = 12782, spellID = 16985 }; --Corruption
+		[8] = {itemID = 12776, spellID = 16973 }; --Enchanted Battlehammer
+		[9] = {itemID = 11607, spellID = 15294 }; --Dark Iron Sunderer
+		[10] = {itemID = 11608, spellID = 15292 }; --Dark Iron Pulverizer
+		[11] = {itemID = 7960, spellID = 10015 }; --Truesilver Champion
+		[12] = {itemID = 7959, spellID = 10011 }; --Blight
+		[13] = {itemID = 12775, spellID = 16971 }; --Huge Thorium Battleaxe
+		[14] = {itemID = 3856, spellID = 3500 }; --Shadow Crescent Axe
+		[15] = {itemID = 3854, spellID = 3497 }; --Frost Tiger Blade
+		[16] = {itemID = 3855, spellID = 3498 }; --Massive Iron Axe
+		[17] = {itemID = 3853, spellID = 3496 }; --Moonsteel Broadsword
+		[18] = {itemID = 3852, spellID = 3495 }; --Golden Iron Destroyer
+		[19] = {itemID = 3851, spellID = 3494 }; --Solid Iron Maul
+		[20] = {itemID = 3487, spellID = 3292 }; --Heavy Copper Broadsword
+		[21] = {itemID = 3488, spellID = 3293 }; --Copper Battle Axe
+		[22] = {itemID = 7958, spellID = 9987 }; --Bronze Battle Axe
+		[23] = {itemID = 7957, spellID = 9986 }; --Bronze Greatsword
+		[24] = {itemID = 7956, spellID = 9985 }; --Bronze Warhammer
+		[25] = {itemID = 6214, spellID = 7408 }; --Heavy Copper Maul
+		[26] = {itemID = 7955, spellID = 9983 }; --Copper Claymore
+		[27] = {itemID = 7166, spellID = 8880 }; --Copper Dagger
+		[28] = {itemID = 2847, spellID = 2739 }; --Copper Shortsword
 
 	};
 	{
 		Name = "Weapon " .. WHITE .." - Thrown";
-		{ 1, "s34979", "29201", "=q2=Thick Bronze Darts", "" };
-		{ 2, "s34982", "29203", "=q2=Enchanted Thorium Blades", "" };
-		{ 3, "s34981", "29202", "=q2=Whirling Steel Axes", "" };
+		[1] = {itemID = 29201, spellID = 34979 }; --Thick Bronze Darts
+		[2] = {itemID = 29203, spellID = 34982 }; --Enchanted Thorium Blades
+		[3] = {itemID = 29202, spellID = 34981 }; --Whirling Steel Axes
 	};
 	{
 		Name = "Shield";
-		{ 1, "s27586", "22198", "=q4=Jagged Obsidian Shield", "" };
+		[1] = {itemID = 22198, spellID = 27586 }; --Jagged Obsidian Shield
 	};
 	{
 		Name = AL["Item Enhancements"];
-		{ 1, "s16641", "12404", "=q1=Dense Sharpening Stone", "" };
-		{ 2, "s16640", "12643", "=q1=Dense Weightstone", "" };
-		{ 3, "s9918", "7964", "=q1=Solid Sharpening Stone", "" };
-		{ 4, "s9921", "7965", "=q1=Solid Weightstone", "" };
-		{ 5, "s7224", "6041", "=q1=Steel Weapon Chain", "" };
-		{ 6, "s7222", "6043", "=q1=Iron Counterweight", "" };
-		{ 7, "s7221", "6042", "=q1=Iron Shield Spike", "" };
-		{ 8, "s2674", "2871", "=q1=Heavy Sharpening Stone", "" };
-		{ 9, "s3117", "3241", "=q1=Heavy Weightstone", "" };
-		{ 10, "s2665", "2863", "=q1=Coarse Sharpening Stone", "" };
-		{ 11, "s3116", "3240", "=q1=Coarse Weightstone", "" };
-		{ 12, "s2660", "2862", "=q1=Rough Sharpening Stone", "" };
-		{ 13, "s3115", "3239", "=q1=Rough Weightstone", "" };
+		[1] = {itemID = 12404, spellID = 16641 }; --Dense Sharpening Stone
+		[2] = {itemID = 12643, spellID = 16640 }; --Dense Weightstone
+		[3] = {itemID = 7964, spellID = 9918 }; --Solid Sharpening Stone
+		[4] = {itemID = 7965, spellID = 9921 }; --Solid Weightstone
+		[5] = {itemID = 6041, spellID = 7224 }; --Steel Weapon Chain
+		[6] = {itemID = 6043, spellID = 7222 }; --Iron Counterweight
+		[7] = {itemID = 6042, spellID = 7221 }; --Iron Shield Spike
+		[8] = {itemID = 2871, spellID = 2674 }; --Heavy Sharpening Stone
+		[9] = {itemID = 3241, spellID = 3117 }; --Heavy Weightstone
+		[10] = {itemID = 2863, spellID = 2665 }; --Coarse Sharpening Stone
+		[11] = {itemID = 3240, spellID = 3116 }; --Coarse Weightstone
+		[12] = {itemID = 2862, spellID = 2660 }; --Rough Sharpening Stone
+		[13] = {itemID = 3239, spellID = 3115 }; --Rough Weightstone
 	};
 	{
 		Name = AL["Miscellaneous"];
-		{ 1, "s59406", "43853", "=q2=Titanium Skeleton Key", "" };
-		{ 2, "s59405", "43854", "=q2=Cobalt Skeleton Key", "" };
-		{ 3, "s19669", "15872", "=q2=Arcanite Skeleton Key", "" };
-		{ 4, "s19668", "15871", "=q2=Truesilver Skeleton Key", "" };
-		{ 5, "s19667", "15870", "=q2=Golden Skeleton Key", "" };
-		{ 6, "s19666", "15869", "=q2=Silver Skeleton Key", "" };
-		{ 7, "s55732", "41745", "=q1=Titanium Rod", "" };
-		{ 8, "s32657", "25845", "=q1=Eternium Rod", "=ds=#sr# 360" };
-		{ 9, "s32656", "25844", "=q1=Adamantite Rod", "=ds=#sr# 350" };
-		{ 10, "s32655", "25843", "=q1=Fel Iron Rod", "" };
-		{ 11, "s20201", "16206", "=q1=Arcanite Rod", "" };
-		{ 12, "s16639", "12644", "=q1=Dense Grinding Stone", "" };
-		{ 13, "s11454", "9060", "=q1=Inlaid Mithril Cylinder", "" };
-		{ 14, "s14380", "11144", "=q1=Truesilver Rod", "" };
-		{ 15, "s9920", "7966", "=q1=Solid Grinding Stone", "" };
-		{ 16, "s14379", "11128", "=q1=Golden Rod", "" };
-		{ 17, "s8768", "7071", "=q1=Iron Buckle", "" };
-		{ 18, "s3337", "3486", "=q1=Heavy Grinding Stone", "" };
-		{ 19, "s7818", "6338", "=q1=Silver Rod", "" };
-		{ 20, "s3326", "3478", "=q1=Coarse Grinding Stone", "" };
-		{ 21, "s3320", "3470", "=q1=Rough Grinding Stone", "" };
+		[1] = {itemID = 43853, spellID = 59406 }; --Titanium Skeleton Key
+		[2] = {itemID = 43854, spellID = 59405 }; --Cobalt Skeleton Key
+		[3] = {itemID = 15872, spellID = 19669 }; --Arcanite Skeleton Key
+		[4] = {itemID = 15871, spellID = 19668 }; --Truesilver Skeleton Key
+		[5] = {itemID = 15870, spellID = 19667 }; --Golden Skeleton Key
+		[6] = {itemID = 15869, spellID = 19666 }; --Silver Skeleton Key
+		[7] = {itemID = 41745, spellID = 55732 }; --Titanium Rod
+		[8] = {itemID = 25845, spellID = 32657 }; --Eternium Rod", "=ds=#sr# 360
+		[9] = {itemID = 25844, spellID = 32656 }; --Adamantite Rod", "=ds=#sr# 350
+		[10] = {itemID = 25843, spellID = 32655 }; --Fel Iron Rod
+		[11] = {itemID = 16206, spellID = 20201 }; --Arcanite Rod
+		[12] = {itemID = 12644, spellID = 16639 }; --Dense Grinding Stone
+		[13] = {itemID = 9060, spellID = 11454 }; --Inlaid Mithril Cylinder
+		[14] = {itemID = 11144, spellID = 14380 }; --Truesilver Rod
+		[15] = {itemID = 7966, spellID = 9920 }; --Solid Grinding Stone
+		[16] = {itemID = 11128, spellID = 14379 }; --Golden Rod
+		[17] = {itemID = 7071, spellID = 8768 }; --Iron Buckle
+		[18] = {itemID = 3486, spellID = 3337 }; --Heavy Grinding Stone
+		[19] = {itemID = 6338, spellID = 7818 }; --Silver Rod
+		[20] = {itemID = 3478, spellID = 3326 }; --Coarse Grinding Stone
+		[21] = {itemID = 3470, spellID = 3320 }; --Rough Grinding Stone
 	};
 	{
 		Name = ARMORSMITH;
-		{ 1, "s36122", "30069", "=q3=Earthforged Leggings", "" };
-		{ 2, "s36124", "30070", "=q3=Windforged Leggings", "" };
+		[1] = {itemID = 30069, spellID = 36122 }; --Earthforged Leggings
+		[2] = {itemID = 30070, spellID = 36124 }; --Windforged Leggings
 	};
 	{
 		Name = WEAPONSMITH;
-		{ 1, "s36125", "30071", "=q3=Light Earthforged Blade", "" };
-		{ 2, "s36128", "30073", "=q3=Light Emberforged Hammer", "" };
-		{ 3, "s36126", "30072", "=q3=Light Skyforged Axe", "" };
+		[1] = {itemID = 30071, spellID = 36125 }; --Light Earthforged Blade
+		[2] = {itemID = 30073, spellID = 36128 }; --Light Emberforged Hammer
+		[3] = {itemID = 30072, spellID = 36126 }; --Light Skyforged Axe
 	};
 };
 ---------------
@@ -547,129 +543,129 @@ AtlasLoot_Data["CookingCLASSIC"] = {
 	Type = "CraftingNoBF";
 	{
 		Name = "Page 1";
-		{ 1, "s25659", "21023", "=q1=Dirge's Kickin' Chimaerok Chops", "" };
-		{ 2, "s966455", "100626", "=q1=Azerothian Schmorgus Boards", "" };
-		{ 3, "s966436", "100609", "=q1=Chilled Lava Eels", "" };
-		{ 4, "s966435", "100608", "=q1=Chillwind Flank Steaks", "" };
-		{ 5, "s966434", "100607", "=q1=Hippogryph Steaks", "" };
-		{ 6, "s966433", "100606", "=q1=Steamed Makrinni Claws", "" };
-		{ 7, "s966432", "100605", "=q1=Rubbed Ravasaur Ribss", "" };
-		{ 8, "s966431", "100604", "=q1=Hearty Stegodon Stews", "" };
-		{ 9, "s966430", "100603", "=q1=Crispy Pterrordax Wings", "" };
-		{ 10, "s966429", "100602", "=q1=Spicy Dino Jerkys", "" };
-		{ 11, "s966428", "100601", "=q1=Dirge's Nevermelt Ice Creams", "" };
-		{ 12, "s966427", "100599", "=q1=Silithid Snacks", "" };
-		{ 13, "s966426", "100598", "=q1=Hydra Scale Soups", "" };
-		{ 14, "s966425", "100597", "=q1=Ghostly Goulashs", "" };
-		{ 15, "s966398", "100583", "=q1=Seared Cunning Carps", "" };
+		[1] = {itemID = 21023, spellID = 25659 }; --Dirge's Kickin' Chimaerok Chops
+		[2] = {itemID = 100626, spellID = 966455 }; --Azerothian Schmorgus Boards
+		[3] = {itemID = 100609, spellID = 966436 }; --Chilled Lava Eels
+		[4] = {itemID = 100608, spellID = 966435 }; --Chillwind Flank Steaks
+		[5] = {itemID = 100607, spellID = 966434 }; --Hippogryph Steaks
+		[6] = {itemID = 100606, spellID = 966433 }; --Steamed Makrinni Claws
+		[7] = {itemID = 100605, spellID = 966432 }; --Rubbed Ravasaur Ribss
+		[8] = {itemID = 100604, spellID = 966431 }; --Hearty Stegodon Stews
+		[9] = {itemID = 100603, spellID = 966430 }; --Crispy Pterrordax Wings
+		[10] = {itemID = 100602, spellID = 966429 }; --Spicy Dino Jerkys
+		[11] = {itemID = 100601, spellID = 966428 }; --Dirge's Nevermelt Ice Creams
+		[12] = {itemID = 100599, spellID = 966427 }; --Silithid Snacks
+		[13] = {itemID = 100598, spellID = 966426 }; --Hydra Scale Soups
+		[14] = {itemID = 100597, spellID = 966425 }; --Ghostly Goulashs
+		[15] = {itemID = 100583, spellID = 966398 }; --Seared Cunning Carps
 	};
 	{
 		Name = "Page 2";
-		{ 1, "s24801", "20452", "=q1=Smoked Desert Dumplings", "" };
-		{ 2, "s18247", "13935", "=q1=Baked Salmon", "" };
-		{ 3, "s18245", "13933", "=q1=Lobster Stew", "" };
-		{ 4, "s18246", "13934", "=q1=Mightfish Steak", "" };
-		{ 5, "s22761", "18254", "=q1=Runn Tum Tuber Surprise", "" };
-		{ 6, "s46684", "35563", "=q1=Charred Bear Kabobs", "" };
-		{ 7, "s46688", "35565", "=q1=Juicy Bear Burger", "" };
-		{ 8, "s18243", "13931", "=q1=Nightfin Soup", "" };
-		{ 9, "s18244", "13932", "=q1=Poached Sunscale Salmon", "" };
-		{ 10, "s18240", "13928", "=q1=Grilled Squid", "" };
-		{ 11, "s18242", "13929", "=q1=Hot Smoked Bass", "" };
-		{ 12, "s64054", "INV_Misc_Shell_03", "=q1=Clamlette Magnifique", "" };
-		{ 13, "s18239", "13927", "=q1=Cooked Glossy Mightfish", "" };
-		{ 14, "s18241", "13930", "=q1=Filet of Redgill", "" };
-		{ 15, "s15933", "12218", "=q1=Monster Omelet", "" };
-		{ 16, "s15915", "12216", "=q1=Spiced Chili Crab", "" };
-		{ 17, "s18238", "6887", "=q1=Spotted Yellowtail", "" };
-		{ 18, "s22480", "18045", "=q1=Tender Wolf Steak", "" };
-		{ 19, "s20626", "16766", "=q1=Undermine Clam Chowder", "" };
-		{ 20, "s15906", "12217", "=q1=Dragonbreath Chili", "" };
-		{ 21, "s15910", "12215", "=q1=Heavy Kodo Stew", "" };
-		{ 22, "s21175", "17222", "=q1=Spider Sausage", "" };
-		{ 23, "s4094", "4457", "=q1=Barbecued Buzzard Wing", "" };
-		{ 24, "s15863", "12213", "=q1=Carrion Surprise", "" };
-		{ 25, "s7213", "6038", "=q1=Giant Clam Scorcho", "" };
-		{ 26, "s13028", "10841", "=q1=Goldthorn Tea", "" };
-		{ 27, "s15856", "13851", "=q1=Hot Wolf Ribs", "" };
+		[1] = {itemID = 20452, spellID = 24801 }; --Smoked Desert Dumplings
+		[2] = {itemID = 13935, spellID = 18247 }; --Baked Salmon
+		[3] = {itemID = 13933, spellID = 18245 }; --Lobster Stew
+		[4] = {itemID = 13934, spellID = 18246 }; --Mightfish Steak
+		[5] = {itemID = 18254, spellID = 22761 }; --Runn Tum Tuber Surprise
+		[6] = {itemID = 35563, spellID = 46684 }; --Charred Bear Kabobs
+		[7] = {itemID = 35565, spellID = 46688 }; --Juicy Bear Burger
+		[8] = {itemID = 13931, spellID = 18243 }; --Nightfin Soup
+		[9] = {itemID = 13932, spellID = 18244 }; --Poached Sunscale Salmon
+		[10] = {itemID = 13928, spellID = 18240 }; --Grilled Squid
+		[11] = {itemID = 13929, spellID = 18242 }; --Hot Smoked Bass
+		[12] = {itemID = INV_Misc_Shell_03, spellID = 64054 }; --Clamlette Magnifique
+		[13] = {itemID = 13927, spellID = 18239 }; --Cooked Glossy Mightfish
+		[14] = {itemID = 13930, spellID = 18241 }; --Filet of Redgill
+		[15] = {itemID = 12218, spellID = 15933 }; --Monster Omelet
+		[16] = {itemID = 12216, spellID = 15915 }; --Spiced Chili Crab
+		[17] = {itemID = 6887, spellID = 18238 }; --Spotted Yellowtail
+		[18] = {itemID = 18045, spellID = 22480 }; --Tender Wolf Steak
+		[19] = {itemID = 16766, spellID = 20626 }; --Undermine Clam Chowder
+		[20] = {itemID = 12217, spellID = 15906 }; --Dragonbreath Chili
+		[21] = {itemID = 12215, spellID = 15910 }; --Heavy Kodo Stew
+		[22] = {itemID = 17222, spellID = 21175 }; --Spider Sausage
+		[23] = {itemID = 4457, spellID = 4094 }; --Barbecued Buzzard Wing
+		[24] = {itemID = 12213, spellID = 15863 }; --Carrion Surprise
+		[25] = {itemID = 6038, spellID = 7213 }; --Giant Clam Scorcho
+		[26] = {itemID = 10841, spellID = 13028 }; --Goldthorn Tea
+		[27] = {itemID = 13851, spellID = 15856 }; --Hot Wolf Ribs
 	};
 	{
 		Name = "Page 3";
-		{ 1, "s15861", "12212", "=q1=Jungle Stew", "" };
-		{ 2, "s20916", "8364", "=q1=Mithril Head Trout", "" };
-		{ 3, "s15865", "12214", "=q1=Mystery Stew", "" };
-		{ 4, "s15855", "12210", "=q1=Roast Raptor", "" };
-		{ 5, "s7828", "4594", "=q1=Rockscale Cod", "" };
-		{ 6, "s25954", "21217", "=q1=Sagefish Delight", "" };
-		{ 7, "s3400", "3729", "=q1=Soothing Turtle Bisque", "" };
-		{ 8, "s24418", "20074", "=q1=Heavy Crocolisk Stew", ""};
-		{ 9, "s3399", "3728", "=q1=Tasty Lion Steak", "" };
-		{ 10, "s3376", "3665", "=q1=Curiously Tasty Omelet", "" };
-		{ 11, "s6500", "5527", "=q1=Goblin Deviled Clams", "" };
-		{ 12, "s3398", "3727", "=q1=Hot Lion Chops", "" };
-		{ 13, "s15853", "12209", "=q1=Lean Wolf Steak", "" };
-		{ 14, "s3373", "3664", "=q1=Crocolisk Gumbo", "" };
-		{ 15, "s3397", "3726", "=q1=Big Bear Steak", "" };
-		{ 16, "s3377", "3666", "=q1=Gooey Spider Cake", "" };
-		{ 17, "s6419", "5480", "=q1=Lean Venison", "" };
-		{ 18, "s2548", "2685", "=q1=Succulent Pork Ribs", "" };
-		{ 19, "s7755", "4593", "=q1=Bristle Whisker Catfish", "" };
-		{ 20, "s45695", "34832", "=q1=Captain Rumsey's Lager", "" };
-		{ 21, "s6418", "5479", "=q1=Crispy Lizard Tail", "" };
-		{ 22, "s2547", "1082", "=q1=Redridge Goulash", "" };
-		{ 23, "s2549", "1017", "=q1=Seasoned Wolf Kabob", "" };
-		{ 24, "s6501", "5526", "=q1=Clam Chowder", "" };
-		{ 25, "s6417", "5478", "=q1=Dig Rat Stew", "" };
-		{ 26, "s3372", "3663", "=q1=Murloc Fin Soup", "" };
-		{ 27, "s2545", "2682", "=q1=Cooked Crab Claw", "" };
-		{ 28, "s8238", "6657", "=q1=Savory Deviate Delight", "" };
-		{ 29, "s3370", "3662", "=q1=Crocolisk Steak", "" };
-		{ 30, "s8607", "6890", "=q1=Smoked Bear Meat", "" };
+		[1] = {itemID = 12212, spellID = 15861 }; --Jungle Stew
+		[2] = {itemID = 8364, spellID = 20916 }; --Mithril Head Trout
+		[3] = {itemID = 12214, spellID = 15865 }; --Mystery Stew
+		[4] = {itemID = 12210, spellID = 15855 }; --Roast Raptor
+		[5] = {itemID = 4594, spellID = 7828 }; --Rockscale Cod
+		[6] = {itemID = 21217, spellID = 25954 }; --Sagefish Delight
+		[7] = {itemID = 3729, spellID = 3400 }; --Soothing Turtle Bisque
+		{ 8, "s24418", "20074", "=q1=Heavy Crocolisk Stew"};
+		[9] = {itemID = 3728, spellID = 3399 }; --Tasty Lion Steak
+		[10] = {itemID = 3665, spellID = 3376 }; --Curiously Tasty Omelet
+		[11] = {itemID = 5527, spellID = 6500 }; --Goblin Deviled Clams
+		[12] = {itemID = 3727, spellID = 3398 }; --Hot Lion Chops
+		[13] = {itemID = 12209, spellID = 15853 }; --Lean Wolf Steak
+		[14] = {itemID = 3664, spellID = 3373 }; --Crocolisk Gumbo
+		[15] = {itemID = 3726, spellID = 3397 }; --Big Bear Steak
+		[16] = {itemID = 3666, spellID = 3377 }; --Gooey Spider Cake
+		[17] = {itemID = 5480, spellID = 6419 }; --Lean Venison
+		[18] = {itemID = 2685, spellID = 2548 }; --Succulent Pork Ribs
+		[19] = {itemID = 4593, spellID = 7755 }; --Bristle Whisker Catfish
+		[20] = {itemID = 34832, spellID = 45695 }; --Captain Rumsey's Lager
+		[21] = {itemID = 5479, spellID = 6418 }; --Crispy Lizard Tail
+		[22] = {itemID = 1082, spellID = 2547 }; --Redridge Goulash
+		[23] = {itemID = 1017, spellID = 2549 }; --Seasoned Wolf Kabob
+		[24] = {itemID = 5526, spellID = 6501 }; --Clam Chowder
+		[25] = {itemID = 5478, spellID = 6417 }; --Dig Rat Stew
+		[26] = {itemID = 3663, spellID = 3372 }; --Murloc Fin Soup
+		[27] = {itemID = 2682, spellID = 2545 }; --Cooked Crab Claw
+		[28] = {itemID = 6657, spellID = 8238 }; --Savory Deviate Delight
+		[29] = {itemID = 3662, spellID = 3370 }; --Crocolisk Steak
+		[30] = {itemID = 6890, spellID = 8607 }; --Smoked Bear Meat
 	};
 	{
 		Name = "Page 4";
-		{ 1, "s2546", "2687", "=q1=Dry Pork Ribs", "" };
-		{ 2, "s25704", "21072", "=q1=Smoked Sagefish", "" };
-		{ 3, "s2544", "2683", "=q1=Crab Cake", "" };
-		{ 4, "s62050", "44837", "=q1=Cornbread Stuffing", "" };
-		{ 5, "s2543", "733", "=q1=Westfall Stew", "" };
-		{ 6, "s3371", "3220", "=q1=Blood Sausage", "" };
-		{ 7, "s28267", "22645", "=q1=Crunchy Spider Surprise", "" };
-		{ 8, "s9513", "7676", "=q1=Thistle Tea", "" };
-		{ 9, "s33278", "27636", "=q1=Bat Bites", "" };
-		{ 10, "s6499", "5525", "=q1=Boiled Clams", "" };
-		{ 11, "s2541", "2684", "=q1=Coyote Steak", "" };
-		{ 12, "s6415", "5476", "=q1=Fillet of Frenzy", "" };
-		{ 13, "s2542", "724", "=q1=Goretusk Liver Pie", "" };
-		{ 14, "s7754", "6316", "=q1=Loch Frenzy Delight", "" };
-		{ 15, "s7753", "4592", "=q1=Longjaw Mud Snapper", "" };
-		{ 16, "s7827", "5095", "=q1=Rainbow Fin Albacore", "" };
-		{ 17, "s62045", "34112", "=q1=Roasted Turkey", "" };
-		{ 18, "s6416", "5477", "=q1=Strider Stew", "" };
-		{ 19, "s62044", "1645", "=q1=Tasty Cranberries", "" };
-		{ 20, "s62051", "44839", "=q1=Candied Yam", "" };
-		{ 21, "s21144", "17198", "=q1=Egg Nog", "" };
-		{ 22, "s6414", "5474", "=q1=Roasted Kodo Meat", "" };
-		{ 23, "s62049", "44840", "=q1=Cranberry Chutney", "" };
-		{ 24, "s6413", "5473", "=q1=Scorpid Surprise", "" };
-		{ 25, "s2795", "2888", "=q1=Beer Basted Boar Ribs", "" };
-		{ 26, "s6412", "5472", "=q1=Kaldorei Spider Kabob", "" };
-		{ 27, "s2539", "2680", "=q1=Spiced Wolf Meat", "" };
-		{ 28, "s7751", "6290", "=q1=Brilliant Smallfish", "" };
-		{ 29, "s2538", "2679", "=q1=Charred Wolf Meat", "" };
-		{ 30, "s33276", "27635", "=q1=Lynx Steak", "" };
+		[1] = {itemID = 2687, spellID = 2546 }; --Dry Pork Ribs
+		[2] = {itemID = 21072, spellID = 25704 }; --Smoked Sagefish
+		[3] = {itemID = 2683, spellID = 2544 }; --Crab Cake
+		[4] = {itemID = 44837, spellID = 62050 }; --Cornbread Stuffing
+		[5] = {itemID = 733, spellID = 2543 }; --Westfall Stew
+		[6] = {itemID = 3220, spellID = 3371 }; --Blood Sausage
+		[7] = {itemID = 22645, spellID = 28267 }; --Crunchy Spider Surprise
+		[8] = {itemID = 7676, spellID = 9513 }; --Thistle Tea
+		[9] = {itemID = 27636, spellID = 33278 }; --Bat Bites
+		[10] = {itemID = 5525, spellID = 6499 }; --Boiled Clams
+		[11] = {itemID = 2684, spellID = 2541 }; --Coyote Steak
+		[12] = {itemID = 5476, spellID = 6415 }; --Fillet of Frenzy
+		[13] = {itemID = 724, spellID = 2542 }; --Goretusk Liver Pie
+		[14] = {itemID = 6316, spellID = 7754 }; --Loch Frenzy Delight
+		[15] = {itemID = 4592, spellID = 7753 }; --Longjaw Mud Snapper
+		[16] = {itemID = 5095, spellID = 7827 }; --Rainbow Fin Albacore
+		[17] = {itemID = 34112, spellID = 62045 }; --Roasted Turkey
+		[18] = {itemID = 5477, spellID = 6416 }; --Strider Stew
+		[19] = {itemID = 1645, spellID = 62044 }; --Tasty Cranberries
+		[20] = {itemID = 44839, spellID = 62051 }; --Candied Yam
+		[21] = {itemID = 17198, spellID = 21144 }; --Egg Nog
+		[22] = {itemID = 5474, spellID = 6414 }; --Roasted Kodo Meat
+		[23] = {itemID = 44840, spellID = 62049 }; --Cranberry Chutney
+		[24] = {itemID = 5473, spellID = 6413 }; --Scorpid Surprise
+		[25] = {itemID = 2888, spellID = 2795 }; --Beer Basted Boar Ribs
+		[26] = {itemID = 5472, spellID = 6412 }; --Kaldorei Spider Kabob
+		[27] = {itemID = 2680, spellID = 2539 }; --Spiced Wolf Meat
+		[28] = {itemID = 6290, spellID = 7751 }; --Brilliant Smallfish
+		[29] = {itemID = 2679, spellID = 2538 }; --Charred Wolf Meat
+		[30] = {itemID = 27635, spellID = 33276 }; --Lynx Steak
 	};
 	{
 		Name = "Page 5";
-		{ 1, "s15935", "12224", "=q1=Crispy Bat Wing", "" };
-		{ 2, "s43779", "33924", "=q1=Delicious Chocolate Cake", "" };
-		{ 3, "s21143", "17197", "=q1=Gingerbread Cookie", "" };
-		{ 4, "s8604", "6888", "=q1=Herb Baked Egg", "" };
-		{ 5, "s2540", "2681", "=q1=Roasted Boar Meat", "" };
-		{ 6, "s33277", "24105", "=q1=Roasted Moongraze Tenderloin", "" };
-		{ 7, "s7752", "787", "=q1=Slitherskin Mackerel", "" };
-		{ 8, "s37836", "30816", "=q1=Spice Bread", "" };
-		{ 9, "s65454", "46691", "=q1=Bread of the Dead", "" };
+		[1] = {itemID = 12224, spellID = 15935 }; --Crispy Bat Wing
+		[2] = {itemID = 33924, spellID = 43779 }; --Delicious Chocolate Cake
+		[3] = {itemID = 17197, spellID = 21143 }; --Gingerbread Cookie
+		[4] = {itemID = 6888, spellID = 8604 }; --Herb Baked Egg
+		[5] = {itemID = 2681, spellID = 2540 }; --Roasted Boar Meat
+		[6] = {itemID = 24105, spellID = 33277 }; --Roasted Moongraze Tenderloin
+		[7] = {itemID = 787, spellID = 7752 }; --Slitherskin Mackerel
+		[8] = {itemID = 30816, spellID = 37836 }; --Spice Bread
+		[9] = {itemID = 46691, spellID = 65454 }; --Bread of the Dead
 	};
 };
 
@@ -682,179 +678,179 @@ AtlasLoot_Data["EnchantingCLASSIC"] = {
 	Type = "CraftingNoBF";
 	{
 		Name = AL["Enchant Boots"];
-		{ 1, "s20023", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Greater Agility", "" };
-		{ 2, "s20024", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Spirit", "" };
-		{ 3, "s20020", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Greater Stamina", "" };
-		{ 4, "s63746", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Lesser Accuracy", "" };
-		{ 5, "s13935", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Agility", "" };
-		{ 6, "s13890", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Minor Speed", "" };
-		{ 16, "s13836", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Stamina", "" };
-		{ 17, "s13687", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Lesser Spirit", "" };
-		{ 18, "s13644", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Lesser Stamina", "" };
-		{ 19, "s13637", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Lesser Agility", "" };
-		{ 20, "s7867", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Minor Agility", "" };
-		{ 21, "s7863", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Minor Stamina", "" };
+		[1] = {spellID = 20023, icon = "Spell_Holy_GreaterHeal" }; --Enchant Boots - Greater Agility
+		[2] = {spellID = 20024, icon = "Spell_Holy_GreaterHeal" }; --Enchant Boots - Spirit
+		[3] = {spellID = 20020, icon = "Spell_Holy_GreaterHeal" }; --Enchant Boots - Greater Stamina
+		[4] = {spellID = 63746, icon = "Spell_Holy_GreaterHeal" }; --Enchant Boots - Lesser Accuracy
+		[5] = {spellID = 13935, icon = "Spell_Holy_GreaterHeal" }; --Enchant Boots - Agility
+		[6] = {spellID = 13890, icon = "Spell_Holy_GreaterHeal" }; --Enchant Boots - Minor Speed
+		[16] = {spellID = 13836, icon = "Spell_Holy_GreaterHeal" }; --Enchant Boots - Stamina
+		[17] = {spellID = 13687, icon = "Spell_Holy_GreaterHeal" }; --Enchant Boots - Lesser Spirit
+		[18] = {spellID = 13644, icon = "Spell_Holy_GreaterHeal" }; --Enchant Boots - Lesser Stamina
+		[19] = {spellID = 13637, icon = "Spell_Holy_GreaterHeal" }; --Enchant Boots - Lesser Agility
+		[20] = {spellID = 7867, icon = "Spell_Holy_GreaterHeal" }; --Enchant Boots - Minor Agility
+		[21] = {spellID = 7863, icon = "Spell_Holy_GreaterHeal" }; --Enchant Boots - Minor Stamina
 	};
 	{
 		Name = AL["Enchant Bracer"];
-		{ 1, "s23802", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Healing Power", "" };
-		{ 2, "s20011", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Superior Stamina", "" };
-		{ 3, "s20010", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Superior Strength", "" };
-		{ 4, "s23801", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Mana Regeneration", "" };
-		{ 5, "s20009", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Superior Spirit", "" };
-		{ 6, "s20008", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Greater Intellect", "" };
-		{ 7, "s13939", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Greater Strength", "" };
-		{ 8, "s13945", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Greater Stamina", "" };
-		{ 9, "s13931", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Deflection", "" };
-		{ 10, "s13846", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Greater Spirit", "" };
-		{ 11, "s13822", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Intellect", "" };
-		{ 12, "s13661", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Strength", "" };
-		{ 13, "s13646", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Lesser Deflection", "" };
-		{ 14, "s13648", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Stamina", "" };
-		{ 15, "s13642", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Spirit", "" };
-		{ 16, "s13622", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Lesser Intellect", "" };
-		{ 17, "s13536", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Lesser Strength", "" };
-		{ 18, "s13501", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Lesser Stamina", "" };
-		{ 19, "s7859", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Lesser Spirit", "" };
-		{ 20, "s7779", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Minor Agility", "" };
-		{ 21, "s7782", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Minor Strength", "" };
-		{ 22, "s7457", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Minor Stamina", "" };
-		{ 23, "s7766", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Minor Spirit", "" };
-		{ 24, "s7418", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Minor Health", "" };
-		{ 25, "s7428", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracers - Minor Deflection", "" };
+		[1] = {spellID = 23802, icon = "Spell_Holy_GreaterHeal" }; --Enchant Bracers - Healing Power
+		[2] = {spellID = 20011, icon = "Spell_Holy_GreaterHeal" }; --Enchant Bracers - Superior Stamina
+		[3] = {spellID = 20010, icon = "Spell_Holy_GreaterHeal" }; --Enchant Bracers - Superior Strength
+		[4] = {spellID = 23801, icon = "Spell_Holy_GreaterHeal" }; --Enchant Bracers - Mana Regeneration
+		[5] = {spellID = 20009, icon = "Spell_Holy_GreaterHeal" }; --Enchant Bracers - Superior Spirit
+		[6] = {spellID = 20008, icon = "Spell_Holy_GreaterHeal" }; --Enchant Bracers - Greater Intellect
+		[7] = {spellID = 13939, icon = "Spell_Holy_GreaterHeal" }; --Enchant Bracers - Greater Strength
+		[8] = {spellID = 13945, icon = "Spell_Holy_GreaterHeal" }; --Enchant Bracers - Greater Stamina
+		[9] = {spellID = 13931, icon = "Spell_Holy_GreaterHeal" }; --Enchant Bracers - Deflection
+		[10] = {spellID = 13846, icon = "Spell_Holy_GreaterHeal" }; --Enchant Bracers - Greater Spirit
+		[11] = {spellID = 13822, icon = "Spell_Holy_GreaterHeal" }; --Enchant Bracers - Intellect
+		[12] = {spellID = 13661, icon = "Spell_Holy_GreaterHeal" }; --Enchant Bracers - Strength
+		[13] = {spellID = 13646, icon = "Spell_Holy_GreaterHeal" }; --Enchant Bracers - Lesser Deflection
+		[14] = {spellID = 13648, icon = "Spell_Holy_GreaterHeal" }; --Enchant Bracers - Stamina
+		[15] = {spellID = 13642, icon = "Spell_Holy_GreaterHeal" }; --Enchant Bracers - Spirit
+		[16] = {spellID = 13622, icon = "Spell_Holy_GreaterHeal" }; --Enchant Bracers - Lesser Intellect
+		[17] = {spellID = 13536, icon = "Spell_Holy_GreaterHeal" }; --Enchant Bracers - Lesser Strength
+		[18] = {spellID = 13501, icon = "Spell_Holy_GreaterHeal" }; --Enchant Bracers - Lesser Stamina
+		[19] = {spellID = 7859, icon = "Spell_Holy_GreaterHeal" }; --Enchant Bracers - Lesser Spirit
+		[20] = {spellID = 7779, icon = "Spell_Holy_GreaterHeal" }; --Enchant Bracers - Minor Agility
+		[21] = {spellID = 7782, icon = "Spell_Holy_GreaterHeal" }; --Enchant Bracers - Minor Strength
+		[22] = {spellID = 7457, icon = "Spell_Holy_GreaterHeal" }; --Enchant Bracers - Minor Stamina
+		[23] = {spellID = 7766, icon = "Spell_Holy_GreaterHeal" }; --Enchant Bracers - Minor Spirit
+		[24] = {spellID = 7418, icon = "Spell_Holy_GreaterHeal" }; --Enchant Bracers - Minor Health
+		[25] = {spellID = 7428, icon = "Spell_Holy_GreaterHeal" }; --Enchant Bracers - Minor Deflection
 	};
 	{
 		Name = AL["Enchant Chest"];
-		{ 1, "s20025", "Spell_Holy_GreaterHeal", "=ds=Enchant Chest - Greater Stats", "" };
-		{ 2, "s33991", "Spell_Holy_GreaterHeal", "=ds=Enchant Chest - Restore Mana Prime", "" };
-		{ 3, "s20028", "Spell_Holy_GreaterHeal", "=ds=Enchant Chest - Major Mana", "" };
-		{ 4, "s20026", "Spell_Holy_GreaterHeal", "=ds=Enchant Chest - Major Health", "" };
-		{ 5, "s13941", "Spell_Holy_GreaterHeal", "=ds=Enchant Chest - Stats", "" };
-		{ 6, "s13917", "Spell_Holy_GreaterHeal", "=ds=Enchant Chest - Superior Mana", "" };
-		{ 7, "s13858", "Spell_Holy_GreaterHeal", "=ds=Enchant Chest - Superior Health", "" };
-		{ 8, "s13700", "Spell_Holy_GreaterHeal", "=ds=Enchant Chest - Lesser Stats", "" };
-		{ 9, "s13663", "Spell_Holy_GreaterHeal", "=ds=Enchant Chest - Greater Mana", "" };
-		{ 10, "s13640", "Spell_Holy_GreaterHeal", "=ds=Enchant Chest - Greater Health", "" };
-		{ 11, "s13626", "Spell_Holy_GreaterHeal", "=ds=Enchant Chest - Minor Stats", "" };
-		{ 12, "s13607", "Spell_Holy_GreaterHeal", "=ds=Enchant Chest - Mana", "" };
-		{ 13, "s13538", "Spell_Holy_GreaterHeal", "=ds=Enchant Chest - Lesser Absorption", "" };
-		{ 14, "s7857", "Spell_Holy_GreaterHeal", "=ds=Enchant Chest - Health", "" };
-		{ 15, "s7776", "Spell_Holy_GreaterHeal", "=ds=Enchant Chest - Lesser Mana", "" };
-		{ 16, "s7748", "Spell_Holy_GreaterHeal", "=ds=Enchant Chest - Lesser Health", "" };
-		{ 17, "s7443", "Spell_Holy_GreaterHeal", "=ds=Enchant Chest - Minor Mana", "" };
-		{ 18, "s7420", "Spell_Holy_GreaterHeal", "=ds=Enchant Chest - Minor Health", "" };
+		[1] = {spellID = 20025, icon = "Spell_Holy_GreaterHeal" }; --Enchant Chest - Greater Stats
+		[2] = {spellID = 33991, icon = "Spell_Holy_GreaterHeal" }; --Enchant Chest - Restore Mana Prime
+		[3] = {spellID = 20028, icon = "Spell_Holy_GreaterHeal" }; --Enchant Chest - Major Mana
+		[4] = {spellID = 20026, icon = "Spell_Holy_GreaterHeal" }; --Enchant Chest - Major Health
+		[5] = {spellID = 13941, icon = "Spell_Holy_GreaterHeal" }; --Enchant Chest - Stats
+		[6] = {spellID = 13917, icon = "Spell_Holy_GreaterHeal" }; --Enchant Chest - Superior Mana
+		[7] = {spellID = 13858, icon = "Spell_Holy_GreaterHeal" }; --Enchant Chest - Superior Health
+		[8] = {spellID = 13700, icon = "Spell_Holy_GreaterHeal" }; --Enchant Chest - Lesser Stats
+		[9] = {spellID = 13663, icon = "Spell_Holy_GreaterHeal" }; --Enchant Chest - Greater Mana
+		[10] = {spellID = 13640, icon = "Spell_Holy_GreaterHeal" }; --Enchant Chest - Greater Health
+		[11] = {spellID = 13626, icon = "Spell_Holy_GreaterHeal" }; --Enchant Chest - Minor Stats
+		[12] = {spellID = 13607, icon = "Spell_Holy_GreaterHeal" }; --Enchant Chest - Mana
+		[13] = {spellID = 13538, icon = "Spell_Holy_GreaterHeal" }; --Enchant Chest - Lesser Absorption
+		[14] = {spellID = 7857, icon = "Spell_Holy_GreaterHeal" }; --Enchant Chest - Health
+		[15] = {spellID = 7776, icon = "Spell_Holy_GreaterHeal" }; --Enchant Chest - Lesser Mana
+		[16] = {spellID = 7748, icon = "Spell_Holy_GreaterHeal" }; --Enchant Chest - Lesser Health
+		[17] = {spellID = 7443, icon = "Spell_Holy_GreaterHeal" }; --Enchant Chest - Minor Mana
+		[18] = {spellID = 7420, icon = "Spell_Holy_GreaterHeal" }; --Enchant Chest - Minor Health
 	};
 	{
 		Name = AL["Enchant Cloak"];
-		{ 1, "s25081", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Greater Fire Resistance", "" };
-		{ 2, "s20015", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Superior Defense", "" };
-		{ 3, "s20014", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Greater Resistance", "" };
-		{ 4, "s13882", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Lesser Agility", "" };
-		{ 5, "s13746", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Greater Defense", "" };
-		{ 6, "s13794", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Resistance", "" };
-		{ 7, "s13657", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Fire Resistance", "" };
-		{ 8, "s13635", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Defense", "" };
-		{ 9, "s13522", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Lesser Shadow Resistance", "" };
-		{ 10, "s7861", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Lesser Fire Resistance", "" };
-		{ 11, "s13419", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Minor Agility", "" };
-		{ 12, "s13421", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Lesser Protection", "" };
-		{ 13, "s7771", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Minor Protection", "" };
-		{ 14, "s7454", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Minor Resistance", "" };
-		{ 15, "s7426", "Spell_Holy_GreaterHeal", "=ds=Enchant Chest - Minor Absorption", "" };
+		[1] = {spellID = 25081, icon = "Spell_Holy_GreaterHeal" }; --Enchant Cloak - Greater Fire Resistance
+		[2] = {spellID = 20015, icon = "Spell_Holy_GreaterHeal" }; --Enchant Cloak - Superior Defense
+		[3] = {spellID = 20014, icon = "Spell_Holy_GreaterHeal" }; --Enchant Cloak - Greater Resistance
+		[4] = {spellID = 13882, icon = "Spell_Holy_GreaterHeal" }; --Enchant Cloak - Lesser Agility
+		[5] = {spellID = 13746, icon = "Spell_Holy_GreaterHeal" }; --Enchant Cloak - Greater Defense
+		[6] = {spellID = 13794, icon = "Spell_Holy_GreaterHeal" }; --Enchant Cloak - Resistance
+		[7] = {spellID = 13657, icon = "Spell_Holy_GreaterHeal" }; --Enchant Cloak - Fire Resistance
+		[8] = {spellID = 13635, icon = "Spell_Holy_GreaterHeal" }; --Enchant Cloak - Defense
+		[9] = {spellID = 13522, icon = "Spell_Holy_GreaterHeal" }; --Enchant Cloak - Lesser Shadow Resistance
+		[10] = {spellID = 7861, icon = "Spell_Holy_GreaterHeal" }; --Enchant Cloak - Lesser Fire Resistance
+		[11] = {spellID = 13419, icon = "Spell_Holy_GreaterHeal" }; --Enchant Cloak - Minor Agility
+		[12] = {spellID = 13421, icon = "Spell_Holy_GreaterHeal" }; --Enchant Cloak - Lesser Protection
+		[13] = {spellID = 7771, icon = "Spell_Holy_GreaterHeal" }; --Enchant Cloak - Minor Protection
+		[14] = {spellID = 7454, icon = "Spell_Holy_GreaterHeal" }; --Enchant Cloak - Minor Resistance
+		[15] = {spellID = 7426, icon = "Spell_Holy_GreaterHeal" }; --Enchant Chest - Minor Absorption
 	};
 	{
 		Name = AL["Enchant Gloves"];
-		{ 1, "s25078", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Fire Power", "" };
-		{ 2, "s25074", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Frost Power", "" };
-		{ 3, "s25079", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Healing Power", "" };
-		{ 4, "s25073", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Shadow Power", "" };
-		{ 5, "s25080", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Superior Agility", "" };
-		{ 6, "s25072", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Threat", "" };
-		{ 7, "s20013", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Greater Strength", "" };
-		{ 8, "s20012", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Greater Agility", "" };
-		{ 9, "s13948", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Minor Haste", "" };
-		{ 10, "s13947", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Riding Skill", "" };
-		{ 11, "s13868", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Advanced Herbalism", "" };
-		{ 12, "s13887", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Strength", "" };
-		{ 13, "s13841", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Advanced Mining", "" };
-		{ 14, "s13815", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Agility", "" };
-		{ 15, "s13698", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Skinning", "" };
-		{ 16, "s13620", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Fishing", "" };
-		{ 17, "s13617", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Herbalism", "" };
-		{ 18, "s13612", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Mining", "" };
+		[1] = {spellID = 25078, icon = "Spell_Holy_GreaterHeal" }; --Enchant Gloves - Fire Power
+		[2] = {spellID = 25074, icon = "Spell_Holy_GreaterHeal" }; --Enchant Gloves - Frost Power
+		[3] = {spellID = 25079, icon = "Spell_Holy_GreaterHeal" }; --Enchant Gloves - Healing Power
+		[4] = {spellID = 25073, icon = "Spell_Holy_GreaterHeal" }; --Enchant Gloves - Shadow Power
+		[5] = {spellID = 25080, icon = "Spell_Holy_GreaterHeal" }; --Enchant Gloves - Superior Agility
+		[6] = {spellID = 25072, icon = "Spell_Holy_GreaterHeal" }; --Enchant Gloves - Threat
+		[7] = {spellID = 20013, icon = "Spell_Holy_GreaterHeal" }; --Enchant Gloves - Greater Strength
+		[8] = {spellID = 20012, icon = "Spell_Holy_GreaterHeal" }; --Enchant Gloves - Greater Agility
+		[9] = {spellID = 13948, icon = "Spell_Holy_GreaterHeal" }; --Enchant Gloves - Minor Haste
+		[10] = {spellID = 13947, icon = "Spell_Holy_GreaterHeal" }; --Enchant Gloves - Riding Skill
+		[11] = {spellID = 13868, icon = "Spell_Holy_GreaterHeal" }; --Enchant Gloves - Advanced Herbalism
+		[12] = {spellID = 13887, icon = "Spell_Holy_GreaterHeal" }; --Enchant Gloves - Strength
+		[13] = {spellID = 13841, icon = "Spell_Holy_GreaterHeal" }; --Enchant Gloves - Advanced Mining
+		[14] = {spellID = 13815, icon = "Spell_Holy_GreaterHeal" }; --Enchant Gloves - Agility
+		[15] = {spellID = 13698, icon = "Spell_Holy_GreaterHeal" }; --Enchant Gloves - Skinning
+		[16] = {spellID = 13620, icon = "Spell_Holy_GreaterHeal" }; --Enchant Gloves - Fishing
+		[17] = {spellID = 13617, icon = "Spell_Holy_GreaterHeal" }; --Enchant Gloves - Herbalism
+		[18] = {spellID = 13612, icon = "Spell_Holy_GreaterHeal" }; --Enchant Gloves - Mining
 	};
 	{
 		Name = AL["Enchant Shield"];
-		{ 1, "s20016", "Spell_Holy_GreaterHeal", "=ds=Enchant Shield - Superior Spirit", "" };
-		{ 2, "s20017", "Spell_Holy_GreaterHeal", "=ds=Enchant Shield - Greater Stamina", "" };
-		{ 3, "s13933", "Spell_Holy_GreaterHeal", "=ds=Enchant Shield - Frost Resistance", "" };
-		{ 4, "s13905", "Spell_Holy_GreaterHeal", "=ds=Enchant Shield - Greater Spirit", "" };
-		{ 5, "s13817", "Spell_Holy_GreaterHeal", "=ds=Enchant Shield - Stamina", "" };
-		{ 6, "s13689", "Spell_Holy_GreaterHeal", "=ds=Enchant Shield - Lesser Block", "" };
-		{ 7, "s13659", "Spell_Holy_GreaterHeal", "=ds=Enchant Shield - Spirit", "" };
-		{ 8, "s13631", "Spell_Holy_GreaterHeal", "=ds=Enchant Shield - Lesser Stamina", "" };
-		{ 9, "s13485", "Spell_Holy_GreaterHeal", "=ds=Enchant Shield - Lesser Spirit", "" };
-		{ 10, "s13464", "Spell_Holy_GreaterHeal", "=ds=Enchant Shield - Lesser Protection", "" };
-		{ 11, "s13378", "Spell_Holy_GreaterHeal", "=ds=Enchant Shield - Minor Stamina", "" };
+		[1] = {spellID = 20016, icon = "Spell_Holy_GreaterHeal" }; --Enchant Shield - Superior Spirit
+		[2] = {spellID = 20017, icon = "Spell_Holy_GreaterHeal" }; --Enchant Shield - Greater Stamina
+		[3] = {spellID = 13933, icon = "Spell_Holy_GreaterHeal" }; --Enchant Shield - Frost Resistance
+		[4] = {spellID = 13905, icon = "Spell_Holy_GreaterHeal" }; --Enchant Shield - Greater Spirit
+		[5] = {spellID = 13817, icon = "Spell_Holy_GreaterHeal" }; --Enchant Shield - Stamina
+		[6] = {spellID = 13689, icon = "Spell_Holy_GreaterHeal" }; --Enchant Shield - Lesser Block
+		[7] = {spellID = 13659, icon = "Spell_Holy_GreaterHeal" }; --Enchant Shield - Spirit
+		[8] = {spellID = 13631, icon = "Spell_Holy_GreaterHeal" }; --Enchant Shield - Lesser Stamina
+		[9] = {spellID = 13485, icon = "Spell_Holy_GreaterHeal" }; --Enchant Shield - Lesser Spirit
+		[10] = {spellID = 13464, icon = "Spell_Holy_GreaterHeal" }; --Enchant Shield - Lesser Protection
+		[11] = {spellID = 13378, icon = "Spell_Holy_GreaterHeal" }; --Enchant Shield - Minor Stamina
 	};
 	{
 		Name = AL["Enchant 2H Weapon"];
-		{ 1, "s20036", "Spell_Holy_GreaterHeal", "=ds=Enchant 2H Weapon - Major Intellect", "" };
-		{ 2, "s20035", "Spell_Holy_GreaterHeal", "=ds=Enchant 2H Weapon - Major Spirit", "" };
-		{ 3, "s20030", "Spell_Holy_GreaterHeal", "=ds=Enchant 2H Weapon - Superior Impact", "" };
-		{ 4, "s27837", "Spell_Holy_GreaterHeal", "=ds=Enchant 2H Weapon - Agility", "" };
-		{ 5, "s13937", "Spell_Holy_GreaterHeal", "=ds=Enchant 2H Weapon - Greater Impact", "" };
-		{ 6, "s13695", "Spell_Holy_GreaterHeal", "=ds=Enchant 2H Weapon - Impact", "" };
-		{ 7, "s13529", "Spell_Holy_GreaterHeal", "=ds=Enchant 2H Weapon - Lesser Impact", "" };
-		{ 8, "s13380", "Spell_Holy_GreaterHeal", "=ds=Enchant 2H Weapon - Lesser Spirit", "" };
-		{ 9, "s7793", "Spell_Holy_GreaterHeal", "=ds=Enchant 2H Weapon - Lesser Intellect", "" };
-		{ 10, "s7745", "Spell_Holy_GreaterHeal", "=ds=Enchant 2H Weapon - Minor Impact", "" };
+		[1] = {spellID = 20036, icon = "Spell_Holy_GreaterHeal" }; --Enchant 2H Weapon - Major Intellect
+		[2] = {spellID = 20035, icon = "Spell_Holy_GreaterHeal" }; --Enchant 2H Weapon - Major Spirit
+		[3] = {spellID = 20030, icon = "Spell_Holy_GreaterHeal" }; --Enchant 2H Weapon - Superior Impact
+		[4] = {spellID = 27837, icon = "Spell_Holy_GreaterHeal" }; --Enchant 2H Weapon - Agility
+		[5] = {spellID = 13937, icon = "Spell_Holy_GreaterHeal" }; --Enchant 2H Weapon - Greater Impact
+		[6] = {spellID = 13695, icon = "Spell_Holy_GreaterHeal" }; --Enchant 2H Weapon - Impact
+		[7] = {spellID = 13529, icon = "Spell_Holy_GreaterHeal" }; --Enchant 2H Weapon - Lesser Impact
+		[8] = {spellID = 13380, icon = "Spell_Holy_GreaterHeal" }; --Enchant 2H Weapon - Lesser Spirit
+		[9] = {spellID = 7793, icon = "Spell_Holy_GreaterHeal" }; --Enchant 2H Weapon - Lesser Intellect
+		[10] = {spellID = 7745, icon = "Spell_Holy_GreaterHeal" }; --Enchant 2H Weapon - Minor Impact
 	};
 	{
 		Name = AL["Enchant Weapon"];
-		{ 1, "s20034", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Crusader", "" };
-		{ 2, "s22750", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Healing Power", "" };
-		{ 3, "s20032", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Lifestealing", "" };
-		{ 4, "s23804", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Mighty Intellect", "" };
-		{ 5, "s23803", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Mighty Spirit", "" };
-		{ 6, "s22749", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Spell Power", "" };
-		{ 7, "s20031", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Superior Striking", "" };
-		{ 8, "s20033", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Unholy Weapon", "" };
-		{ 9, "s23800", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Agility", "" };
-		{ 10, "s23799", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Strength", "" };
-		{ 11, "s20029", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Icy Chill", "" };
-		{ 12, "s13898", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Fiery Weapon", "" };
-		{ 13, "s13943", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Greater Striking", "" };
-		{ 14, "s13915", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Demonslaying", "" };
-		{ 15, "s13693", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Striking", "" };
-		{ 16, "s21931", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Winter's Might", "" };
-		{ 17, "s13655", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Lesser Elemental Slayer", "" };
-		{ 18, "s13653", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Lesser Beastslayer", "" };
-		{ 19, "s13503", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Lesser Striking", "" };
-		{ 20, "s7786", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Minor Beastslayer", "" };
-		{ 21, "s7788", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Minor Striking", "" };
+		[1] = {spellID = 20034, icon = "Spell_Holy_GreaterHeal" }; --Enchant Weapon - Crusader
+		[2] = {spellID = 22750, icon = "Spell_Holy_GreaterHeal" }; --Enchant Weapon - Healing Power
+		[3] = {spellID = 20032, icon = "Spell_Holy_GreaterHeal" }; --Enchant Weapon - Lifestealing
+		[4] = {spellID = 23804, icon = "Spell_Holy_GreaterHeal" }; --Enchant Weapon - Mighty Intellect
+		[5] = {spellID = 23803, icon = "Spell_Holy_GreaterHeal" }; --Enchant Weapon - Mighty Spirit
+		[6] = {spellID = 22749, icon = "Spell_Holy_GreaterHeal" }; --Enchant Weapon - Spell Power
+		[7] = {spellID = 20031, icon = "Spell_Holy_GreaterHeal" }; --Enchant Weapon - Superior Striking
+		[8] = {spellID = 20033, icon = "Spell_Holy_GreaterHeal" }; --Enchant Weapon - Unholy Weapon
+		[9] = {spellID = 23800, icon = "Spell_Holy_GreaterHeal" }; --Enchant Weapon - Agility
+		[10] = {spellID = 23799, icon = "Spell_Holy_GreaterHeal" }; --Enchant Weapon - Strength
+		[11] = {spellID = 20029, icon = "Spell_Holy_GreaterHeal" }; --Enchant Weapon - Icy Chill
+		[12] = {spellID = 13898, icon = "Spell_Holy_GreaterHeal" }; --Enchant Weapon - Fiery Weapon
+		[13] = {spellID = 13943, icon = "Spell_Holy_GreaterHeal" }; --Enchant Weapon - Greater Striking
+		[14] = {spellID = 13915, icon = "Spell_Holy_GreaterHeal" }; --Enchant Weapon - Demonslaying
+		[15] = {spellID = 13693, icon = "Spell_Holy_GreaterHeal" }; --Enchant Weapon - Striking
+		[16] = {spellID = 21931, icon = "Spell_Holy_GreaterHeal" }; --Enchant Weapon - Winter's Might
+		[17] = {spellID = 13655, icon = "Spell_Holy_GreaterHeal" }; --Enchant Weapon - Lesser Elemental Slayer
+		[18] = {spellID = 13653, icon = "Spell_Holy_GreaterHeal" }; --Enchant Weapon - Lesser Beastslayer
+		[19] = {spellID = 13503, icon = "Spell_Holy_GreaterHeal" }; --Enchant Weapon - Lesser Striking
+		[20] = {spellID = 7786, icon = "Spell_Holy_GreaterHeal" }; --Enchant Weapon - Minor Beastslayer
+		[21] = {spellID = 7788, icon = "Spell_Holy_GreaterHeal" }; --Enchant Weapon - Minor Striking
 	};
 	{
 		Name = AL["Miscellaneous"];
-		{ 1, "s25130", "20748", "=q1=Brilliant Mana Oil", "" };
-		{ 2, "s25129", "20749", "=q1=Brilliant Wizard Oil", "" };
-		{ 3, "s32664", "22461", "=q1=Runed Fel Iron Rod", "" };
-		{ 4, "s20051", "16207", "=q1=Runed Arcanite Rod", "" };
-		{ 5, "s25128", "20750", "=q1=Wizard Oil", "" };
-		{ 6, "s17180", "12655", "=q1=Enchanted Thorium", "" };
-		{ 7, "s25127", "20747", "=q1=Lesser Mana Oil", "" };
-		{ 8, "s17181", "12810", "=q1=Enchanted Leather", "" };
-		{ 9, "s25126", "20746", "=q1=Lesser Wizard Oil", "" };
-		{ 10, "s13702", "11145", "=q1=Runed Truesilver Rod", "" };
-		{ 11, "s25125", "20745", "=q1=Minor Mana Oil", "" };
-		{ 12, "s13628", "11130", "=q1=Runed Golden Rod", "" };
-		{ 13, "s7795", "6339", "=q1=Runed Silver Rod", "" };
-		{ 14, "s25124", "20744", "=q1=Minor Wizard Oil", "" };
-		{ 15, "s7421", "6218", "=q1=Runed Copper Rod", "" };
-		{ 16, "s14810", "11290", "=q2=Greater Mystic Wand", "" };
-		{ 17, "s14809", "11289", "=q2=Lesser Mystic Wand", "" };
-		{ 18, "s14807", "11288", "=q2=Greater Magic Wand", "" };
-		{ 19, "s14293", "11287", "=q2=Lesser Magic Wand", "" };
+		[1] = {itemID = 20748, spellID = 25130 }; --Brilliant Mana Oil
+		[2] = {itemID = 20749, spellID = 25129 }; --Brilliant Wizard Oil
+		[3] = {itemID = 22461, spellID = 32664 }; --Runed Fel Iron Rod
+		[4] = {itemID = 16207, spellID = 20051 }; --Runed Arcanite Rod
+		[5] = {itemID = 20750, spellID = 25128 }; --Wizard Oil
+		[6] = {itemID = 12655, spellID = 17180 }; --Enchanted Thorium
+		[7] = {itemID = 20747, spellID = 25127 }; --Lesser Mana Oil
+		[8] = {itemID = 12810, spellID = 17181 }; --Enchanted Leather
+		[9] = {itemID = 20746, spellID = 25126 }; --Lesser Wizard Oil
+		[10] = {itemID = 11145, spellID = 13702 }; --Runed Truesilver Rod
+		[11] = {itemID = 20745, spellID = 25125 }; --Minor Mana Oil
+		[12] = {itemID = 11130, spellID = 13628 }; --Runed Golden Rod
+		[13] = {itemID = 6339, spellID = 7795 }; --Runed Silver Rod
+		[14] = {itemID = 20744, spellID = 25124 }; --Minor Wizard Oil
+		[15] = {itemID = 6218, spellID = 7421 }; --Runed Copper Rod
+		[16] = {itemID = 11290, spellID = 14810 }; --Greater Mystic Wand
+		[17] = {itemID = 11289, spellID = 14809 }; --Lesser Mystic Wand
+		[18] = {itemID = 11288, spellID = 14807 }; --Greater Magic Wand
+		[19] = {itemID = 11287, spellID = 14293 }; --Lesser Magic Wand
 	};
 };
 
@@ -867,211 +863,211 @@ AtlasLoot_Data["EngineeringCLASSIC"] = {
 	Type = "Crafting";
 	{
 		Name = AL["Ammunition"];
-		{ 1, 18042, "", "=q2=Thorium Headed Arrow", "Quest See Tooltip", "", quest = {14183,14182, text = "Trade Thorium Shells for Arrows"}};
-		{ 2, "s19800", "15997", "=q2=Thorium Shells", "" };
-		{ 3, "s12621", "10513", "=q2=Mithril Gyro-Shot", "" };
-		{ 4, "s12596", "10512", "=q2=Hi-Impact Mithril Slugs", "" };
-		{ 5, "s3947", "8069", "=q1=Crafted Solid Shot", "" };
-		{ 6, "s3930", "8068", "=q1=Crafted Heavy Shot", "" };
-		{ 7, "s3920", "8067", "=q1=Crafted Light Shot", "" };
+		{ 1, 18042, "=q2=Thorium Headed Arrow", "Quest See Tooltip", quest = {14183,14182, text = "Trade Thorium Shells for Arrows"}};
+		[2] = {itemID = 15997, spellID = 19800 }; --Thorium Shells
+		[3] = {itemID = 10513, spellID = 12621 }; --Mithril Gyro-Shot
+		[4] = {itemID = 10512, spellID = 12596 }; --Hi-Impact Mithril Slugs
+		[5] = {itemID = 8069, spellID = 3947 }; --Crafted Solid Shot
+		[6] = {itemID = 8068, spellID = 3930 }; --Crafted Heavy Shot
+		[7] = {itemID = 8067, spellID = 3920 }; --Crafted Light Shot
 	};
 	{
 		Name = BabbleInventory["Armor"];
-		{ 1, "s19830", "16022", "=q3=Arcanite Dragonling", "" };
-		{ 2, "s24356", "19999", "=q3=Bloodvine Goggles", "" };
-		{ 3, "s24357", "19998", "=q3=Bloodvine Lens", "" };
-		{ 4, "s23082", "18639", "=q3=Ultra-Flash Shadow Reflector", "" };
-		{ 5, "s23081", "18638", "=q3=Hyper-Radiant Flame Reflector", "" };
-		{ 6, "s23077", "18634", "=q3=Gyrofreeze Ice Reflector", "" };
-		{ 7, "s12622", "10504", "=q3=Green Lens", "" };
-		{ 8, "s19825", "16008", "=q2=Master Engineer's Goggles", "" };
-		{ 9, "s19819", "16009", "=q2=Voice Amplification Modulator", "" };
-		{ 10, "s23079", "18637", "=q2=Major Recombobulator", "" };
-		{ 11, "s19794", "15999", "=q2=Spellpower Goggles Xtreme Plus", "" };
-		{ 12, "s12624", "10576", "=q2=Mithril Mechanical Dragonling", "" };
-		{ 13, "s12617", "10506", "=q2=Deepdive Helmet", "" };
-		{ 14, "s12618", "10503", "=q2=Rose Colored Goggles", "" };
-		{ 15, "s12616", "10518", "=q2=Parachute Cloak", "" };
-		{ 16, "s12615", "10502", "=q2=Spellpower Goggles Xtreme", "" };
-		{ 17, "s12607", "10501", "=q2=Catseye Ultra Goggles", "" };
-		{ 18, "s12594", "10500", "=q2=Fire Goggles", "" };
-		{ 19, "s3969", "4396", "=q1=Mechanical Dragonling", "" };
-		{ 20, "s3966", "4393", "=q2=Craftsman's Monocle", "" };
-		{ 21, "s12587", "10499", "=q2=Bright-Eye Goggles", "" };
-		{ 22, "s3956", "4385", "=q2=Green Tinted Goggles", "" };
-		{ 23, "s3952", "4381", "=q2=Minor Recombobulator", "" };
-		{ 24, "s3940", "4373", "=q2=Shadow Goggles", "" };
-		{ 25, "s3934", "4368", "=q2=Flying Tiger Goggles", "" };
+		[1] = {itemID = 16022, spellID = 19830 }; --Arcanite Dragonling
+		[2] = {itemID = 19999, spellID = 24356 }; --Bloodvine Goggles
+		[3] = {itemID = 19998, spellID = 24357 }; --Bloodvine Lens
+		[4] = {itemID = 18639, spellID = 23082 }; --Ultra-Flash Shadow Reflector
+		[5] = {itemID = 18638, spellID = 23081 }; --Hyper-Radiant Flame Reflector
+		[6] = {itemID = 18634, spellID = 23077 }; --Gyrofreeze Ice Reflector
+		[7] = {itemID = 10504, spellID = 12622 }; --Green Lens
+		[8] = {itemID = 16008, spellID = 19825 }; --Master Engineer's Goggles
+		[9] = {itemID = 16009, spellID = 19819 }; --Voice Amplification Modulator
+		[10] = {itemID = 18637, spellID = 23079 }; --Major Recombobulator
+		[11] = {itemID = 15999, spellID = 19794 }; --Spellpower Goggles Xtreme Plus
+		[12] = {itemID = 10576, spellID = 12624 }; --Mithril Mechanical Dragonling
+		[13] = {itemID = 10506, spellID = 12617 }; --Deepdive Helmet
+		[14] = {itemID = 10503, spellID = 12618 }; --Rose Colored Goggles
+		[15] = {itemID = 10518, spellID = 12616 }; --Parachute Cloak
+		[16] = {itemID = 10502, spellID = 12615 }; --Spellpower Goggles Xtreme
+		[17] = {itemID = 10501, spellID = 12607 }; --Catseye Ultra Goggles
+		[18] = {itemID = 10500, spellID = 12594 }; --Fire Goggles
+		[19] = {itemID = 4396, spellID = 3969 }; --Mechanical Dragonling
+		[20] = {itemID = 4393, spellID = 3966 }; --Craftsman's Monocle
+		[21] = {itemID = 10499, spellID = 12587 }; --Bright-Eye Goggles
+		[22] = {itemID = 4385, spellID = 3956 }; --Green Tinted Goggles
+		[23] = {itemID = 4381, spellID = 3952 }; --Minor Recombobulator
+		[24] = {itemID = 4373, spellID = 3940 }; --Shadow Goggles
+		[25] = {itemID = 4368, spellID = 3934 }; --Flying Tiger Goggles
 	};
 	{
 		Name = AL["Explosives"];
-		{ 1, "s19831", "16040", "=q1=Arcane Bomb", "" };
-		{ 2, "s19799", "16005", "=q1=Dark Iron Bomb", "" };
-		{ 3, "s23080", "18594", "=q1=Powerful Seaforium Charge", "" };
-		{ 4, "s19790", "15993", "=q1=Thorium Grenade", "" };
-		{ 5, "s23070", "18641", "=q1=Dense Dynamite", "" };
-		{ 6, "s12619", "10562", "=q1=Hi-Explosive Bomb", "" };
-		{ 7, "s12754", "10586", "=q1=The Big One", "" };
-		{ 8, "s12603", "10514", "=q1=Mithril Frag Bomb", "" };
-		{ 9, "s12716", "10577", "=q1=Goblin Mortar", "" };
-		{ 10, "s12760", "10646", "=q1=Goblin Sapper Charge", "" };
-		{ 11, "s13240", "10577", "=q1=The Mortar: Reloaded", "" };
-		{ 12, "s23069", "18588", "=q1=EZ-Thro Dynamite II", "" };
-		{ 13, "s3972", "4398", "=q1=Large Seaforium Charge", "" };
-		{ 14, "s3968", "4395", "=q1=Goblin Land Mine", "" };
-		{ 15, "s3967", "4394", "=q1=Big Iron Bomb", "" };
-		{ 16, "s3962", "4390", "=q1=Iron Grenade", "" };
-		{ 17, "s12586", "10507", "=q1=Solid Dynamite", "" };
-		{ 18, "s3960", "4403", "=q1=Portable Bronze Mortar", "" };
-		{ 19, "s3950", "4380", "=q1=Big Bronze Bomb", "" };
-		{ 20, "s3946", "4378", "=q1=Heavy Dynamite", "" };
-		{ 21, "s3941", "4374", "=q1=Small Bronze Bomb", "" };
-		{ 22, "s3937", "4370", "=q1=Large Copper Bomb", "" };
-		{ 23, "s8339", "6714", "=q1=EZ-Thro Dynamite", "" };
-		{ 24, "s3933", "4367", "=q1=Small Seaforium Charge", "" };
-		{ 25, "s3931", "4365", "=q1=Coarse Dynamite", "" };
-		{ 26, "s3923", "4360", "=q1=Rough Copper Bomb", "" };
-		{ 27, "s3919", "4358", "=q1=Rough Dynamite", "" };
+		[1] = {itemID = 16040, spellID = 19831 }; --Arcane Bomb
+		[2] = {itemID = 16005, spellID = 19799 }; --Dark Iron Bomb
+		[3] = {itemID = 18594, spellID = 23080 }; --Powerful Seaforium Charge
+		[4] = {itemID = 15993, spellID = 19790 }; --Thorium Grenade
+		[5] = {itemID = 18641, spellID = 23070 }; --Dense Dynamite
+		[6] = {itemID = 10562, spellID = 12619 }; --Hi-Explosive Bomb
+		[7] = {itemID = 10586, spellID = 12754 }; --The Big One
+		[8] = {itemID = 10514, spellID = 12603 }; --Mithril Frag Bomb
+		[9] = {itemID = 10577, spellID = 12716 }; --Goblin Mortar
+		[10] = {itemID = 10646, spellID = 12760 }; --Goblin Sapper Charge
+		[11] = {itemID = 10577, spellID = 13240 }; --The Mortar: Reloaded
+		[12] = {itemID = 18588, spellID = 23069 }; --EZ-Thro Dynamite II
+		[13] = {itemID = 4398, spellID = 3972 }; --Large Seaforium Charge
+		[14] = {itemID = 4395, spellID = 3968 }; --Goblin Land Mine
+		[15] = {itemID = 4394, spellID = 3967 }; --Big Iron Bomb
+		[16] = {itemID = 4390, spellID = 3962 }; --Iron Grenade
+		[17] = {itemID = 10507, spellID = 12586 }; --Solid Dynamite
+		[18] = {itemID = 4403, spellID = 3960 }; --Portable Bronze Mortar
+		[19] = {itemID = 4380, spellID = 3950 }; --Big Bronze Bomb
+		[20] = {itemID = 4378, spellID = 3946 }; --Heavy Dynamite
+		[21] = {itemID = 4374, spellID = 3941 }; --Small Bronze Bomb
+		[22] = {itemID = 4370, spellID = 3937 }; --Large Copper Bomb
+		[23] = {itemID = 6714, spellID = 8339 }; --EZ-Thro Dynamite
+		[24] = {itemID = 4367, spellID = 3933 }; --Small Seaforium Charge
+		[25] = {itemID = 4365, spellID = 3931 }; --Coarse Dynamite
+		[26] = {itemID = 4360, spellID = 3923 }; --Rough Copper Bomb
+		[27] = {itemID = 4358, spellID = 3919 }; --Rough Dynamite
 	};
 	{
 		Name = AL["Item Enhancements"];
-		{ 1, "s22793", "18283", "=q3=Biznicks 247x128 Accurascope", "" };
-		{ 2, "s12620", "10548", "=q1=Sniper Scope", "" };
-		{ 3, "s12597", "10546", "=q1=Deadly Scope", "" };
-		{ 4, "s3979", "4407", "=q2=Accurate Scope", "" };
-		{ 5, "s3978", "4406", "=q1=Standard Scope", "" };
-		{ 6, "s3977", "4405", "=q1=Crude Scope", "" };
+		[1] = {itemID = 18283, spellID = 22793 }; --Biznicks 247x128 Accurascope
+		[2] = {itemID = 10548, spellID = 12620 }; --Sniper Scope
+		[3] = {itemID = 10546, spellID = 12597 }; --Deadly Scope
+		[4] = {itemID = 4407, spellID = 3979 }; --Accurate Scope
+		[5] = {itemID = 4406, spellID = 3978 }; --Standard Scope
+		[6] = {itemID = 4405, spellID = 3977 }; --Crude Scope
 	};
 	{
 		Name = AL["Miscellaneous"];
-		{ 1, "s22704", "18232", "=q1=Field Repair Bot 74A", "" };
-		{ 2, "s30573", "23832", "=q1=Gnomish Tonk Controller", "" };
-		{ 3, "s30561", "23831", "=q1=Goblin Tonk Controller", "" };
-		{ 4, "s26443", "21570", "=q1=Firework Cluster Launcher", "" };
-		{ 5, "s19814", "16023", "=q1=Masterwork Target Dummy", "" };
-		{ 6, "s26426", "21714", "=q1=Large Blue Rocket Cluster", "" };
-		{ 7, "s26427", "21716", "=q1=Large Green Rocket Cluster", "" };
-		{ 8, "s26428", "21718", "=q1=Large Red Rocket Cluster", "" };
-		{ 9, "s23096", "18645", "=q1=Alarm-O-Bot", "" };
-		{ 10, "s23078", "18587", "=q1=Goblin Jumper Cables XL", "" };
-		{ 11, "s19793", "15996", "=q1=Lifelike Mechanical Toad", "" };
-		{ 12, "s19567", "15846", "=q1=Salt Shaker", "" };
-		{ 13, "s26011", "21277", "=q1=Tranquil Mechanical Yeti", "" };
-		{ 14, "s23507", "19026", "=q1=Snake Burst Firework", "" };
-		{ 15, "s26442", "21569", "=q1=Firework Launcher", "" };
-		{ 16, "s26423", "21571", "=q1=Blue Rocket Cluster", "" };
-		{ 17, "s26424", "21574", "=q1=Green Rocket Cluster", "" };
-		{ 18, "s26425", "21576", "=q1=Red Rocket Cluster", "" };
-		{ 19, "s12902", "10720", "=q1=Gnomish Net-o-Matic Projector", "" };
-		{ 20, "s12715", "10644", "=q1=Goblin Rocket Fuel Recipe", "" };
-		{ 21, "s12895", "10713", "=q1=Inlaid Mithril Cylinder Plans", "" };
-		{ 22, "s15633", "11826", "=q1=Lil' Smoky", "" };
-		{ 23, "s15628", "11825", "=q1=Pet Bombling", "" };
-		{ 24, "s15255", "11590", "=q1=Mechanical Repair Kit", "" };
-		{ 25, "s21940", "17716", "=q1=Snowmaster 9000", "" };
-		{ 26, "s3965", "4392", "=q1=Advanced Target Dummy", "" };
-		{ 27, "s8243", "4852", "=q1=Flash Bomb", "" };
-		{ 28, "s26420", "21589", "=q1=Large Blue Rocket", "" };
-		{ 29, "s26421", "21590", "=q1=Large Green Rocket", "" };
-		{ 30, "s26422", "21592", "=q1=Large Red Rocket", "" };
+		[1] = {itemID = 18232, spellID = 22704 }; --Field Repair Bot 74A
+		[2] = {itemID = 23832, spellID = 30573 }; --Gnomish Tonk Controller
+		[3] = {itemID = 23831, spellID = 30561 }; --Goblin Tonk Controller
+		[4] = {itemID = 21570, spellID = 26443 }; --Firework Cluster Launcher
+		[5] = {itemID = 16023, spellID = 19814 }; --Masterwork Target Dummy
+		[6] = {itemID = 21714, spellID = 26426 }; --Large Blue Rocket Cluster
+		[7] = {itemID = 21716, spellID = 26427 }; --Large Green Rocket Cluster
+		[8] = {itemID = 21718, spellID = 26428 }; --Large Red Rocket Cluster
+		[9] = {itemID = 18645, spellID = 23096 }; --Alarm-O-Bot
+		[10] = {itemID = 18587, spellID = 23078 }; --Goblin Jumper Cables XL
+		[11] = {itemID = 15996, spellID = 19793 }; --Lifelike Mechanical Toad
+		[12] = {itemID = 15846, spellID = 19567 }; --Salt Shaker
+		[13] = {itemID = 21277, spellID = 26011 }; --Tranquil Mechanical Yeti
+		[14] = {itemID = 19026, spellID = 23507 }; --Snake Burst Firework
+		[15] = {itemID = 21569, spellID = 26442 }; --Firework Launcher
+		[16] = {itemID = 21571, spellID = 26423 }; --Blue Rocket Cluster
+		[17] = {itemID = 21574, spellID = 26424 }; --Green Rocket Cluster
+		[18] = {itemID = 21576, spellID = 26425 }; --Red Rocket Cluster
+		[19] = {itemID = 10720, spellID = 12902 }; --Gnomish Net-o-Matic Projector
+		[20] = {itemID = 10644, spellID = 12715 }; --Goblin Rocket Fuel Recipe
+		[21] = {itemID = 10713, spellID = 12895 }; --Inlaid Mithril Cylinder Plans
+		[22] = {itemID = 11826, spellID = 15633 }; --Lil' Smoky
+		[23] = {itemID = 11825, spellID = 15628 }; --Pet Bombling
+		[24] = {itemID = 11590, spellID = 15255 }; --Mechanical Repair Kit
+		[25] = {itemID = 17716, spellID = 21940 }; --Snowmaster 9000
+		[26] = {itemID = 4392, spellID = 3965 }; --Advanced Target Dummy
+		[27] = {itemID = 4852, spellID = 8243 }; --Flash Bomb
+		[28] = {itemID = 21589, spellID = 26420 }; --Large Blue Rocket
+		[29] = {itemID = 21590, spellID = 26421 }; --Large Green Rocket
+		[30] = {itemID = 21592, spellID = 26422 }; --Large Red Rocket
 	};
 	{
 		Name = AL["Miscellaneous"];
-		{ 1, "s3963", "4391", "=q1=Compact Harvest Reaper Kit", "" };
-		{ 2, "s9273", "7148", "=q1=Goblin Jumper Cables", "" };
-		{ 3, "s3959", "4388", "=q1=Discombobulator Ray", "" };
-		{ 4, "s3957", "4386", "=q1=Ice Deflector", "" };
-		{ 5, "s3955", "4384", "=q1=Explosive Sheep", "" };
-		{ 6, "s9271", "6533", "=q1=Aquadynamic Fish Attractor", "" };
-		{ 7, "s23067", "9312", "=q1=Blue Firework", "" };
-		{ 8, "s23068", "9313", "=q1=Green Firework", "" };
-		{ 9, "s23066", "9318", "=q1=Red Firework", "" };
-		{ 10, "s6458", "5507", "=q1=Ornate Spyglass", "" };
-		{ 11, "s26416", "21558", "=q1=Small Blue Rocket", "" };
-		{ 12, "s26417", "21559", "=q1=Small Green Rocket", "" };
-		{ 13, "s26418", "21557", "=q1=Small Red Rocket", "" };
-		{ 14, "s3944", "4376", "=q1=Flame Deflector", "" };
-		{ 15, "s8334", "6712", "=q1=Practice Lock", "" };
-		{ 16, "s3932", "4366", "=q1=Target Dummy", "" };
-		{ 17, "s3928", "4401", "=q1=Mechanical Squirrel", "" };
+		[1] = {itemID = 4391, spellID = 3963 }; --Compact Harvest Reaper Kit
+		[2] = {itemID = 7148, spellID = 9273 }; --Goblin Jumper Cables
+		[3] = {itemID = 4388, spellID = 3959 }; --Discombobulator Ray
+		[4] = {itemID = 4386, spellID = 3957 }; --Ice Deflector
+		[5] = {itemID = 4384, spellID = 3955 }; --Explosive Sheep
+		[6] = {itemID = 6533, spellID = 9271 }; --Aquadynamic Fish Attractor
+		[7] = {itemID = 9312, spellID = 23067 }; --Blue Firework
+		[8] = {itemID = 9313, spellID = 23068 }; --Green Firework
+		[9] = {itemID = 9318, spellID = 23066 }; --Red Firework
+		[10] = {itemID = 5507, spellID = 6458 }; --Ornate Spyglass
+		[11] = {itemID = 21558, spellID = 26416 }; --Small Blue Rocket
+		[12] = {itemID = 21559, spellID = 26417 }; --Small Green Rocket
+		[13] = {itemID = 21557, spellID = 26418 }; --Small Red Rocket
+		[14] = {itemID = 4376, spellID = 3944 }; --Flame Deflector
+		[15] = {itemID = 6712, spellID = 8334 }; --Practice Lock
+		[16] = {itemID = 4366, spellID = 3932 }; --Target Dummy
+		[17] = {itemID = 4401, spellID = 3928 }; --Mechanical Squirrel
 	};
 	{
 		Name = AL["Reagents"];
-		{ 1, "s19815", "16006", "=q1=Delicate Arcanite Converter", "" };
-		{ 2, "s19795", "16000", "=q1=Thorium Tube", "" };
-		{ 3, "s39895", "7191", "=q1=Fused Wiring", "" };
-		{ 4, "s19791", "15994", "=q1=Thorium Widget", "" };
-		{ 5, "s23071", "18631", "=q1=Truesilver Transformer", "" };
-		{ 6, "s19788", "15992", "=q1=Dense Blasting Powder", "" };
-		{ 7, "s12599", "10561", "=q1=Mithril Casing", "" };
-		{ 8, "s12591", "10560", "=q1=Unstable Trigger", "" };
-		{ 9, "s12589", "10559", "=q1=Mithril Tube", "" };
-		{ 10, "s12590", "10498", "=q1=Gyromatic Micro-Adjustor", "" };
-		{ 11, "s12585", "10505", "=q1=Solid Blasting Powder", "" };
-		{ 12, "s3961", "4389", "=q1=Gyrochronatom", "" };
-		{ 13, "s3958", "4387", "=q1=Iron Strut", "" };
-		{ 14, "s12584", "10558", "=q1=Gold Power Core", "" };
-		{ 15, "s3953", "4382", "=q1=Bronze Framework", "" };
-		{ 16, "s3942", "4375", "=q1=Whirring Bronze Gizmo", "" };
-		{ 17, "s3945", "4377", "=q1=Heavy Blasting Powder", "" };
-		{ 18, "s3938", "4371", "=q1=Bronze Tube", "" };
-		{ 19, "s3973", "4404", "=q1=Silver Contact", "" };
-		{ 20, "s3929", "4364", "=q1=Coarse Blasting Powder", "" };
-		{ 21, "s3926", "4363", "=q1=Copper Modulator", "" };
-		{ 22, "s3924", "4361", "=q1=Copper Tube", "" };
-		{ 23, "s3922", "4359", "=q1=Handful of Copper Bolts", "" };
-		{ 24, "s3918", "4357", "=q1=Rough Blasting Powder", "" };
+		[1] = {itemID = 16006, spellID = 19815 }; --Delicate Arcanite Converter
+		[2] = {itemID = 16000, spellID = 19795 }; --Thorium Tube
+		[3] = {itemID = 7191, spellID = 39895 }; --Fused Wiring
+		[4] = {itemID = 15994, spellID = 19791 }; --Thorium Widget
+		[5] = {itemID = 18631, spellID = 23071 }; --Truesilver Transformer
+		[6] = {itemID = 15992, spellID = 19788 }; --Dense Blasting Powder
+		[7] = {itemID = 10561, spellID = 12599 }; --Mithril Casing
+		[8] = {itemID = 10560, spellID = 12591 }; --Unstable Trigger
+		[9] = {itemID = 10559, spellID = 12589 }; --Mithril Tube
+		[10] = {itemID = 10498, spellID = 12590 }; --Gyromatic Micro-Adjustor
+		[11] = {itemID = 10505, spellID = 12585 }; --Solid Blasting Powder
+		[12] = {itemID = 4389, spellID = 3961 }; --Gyrochronatom
+		[13] = {itemID = 4387, spellID = 3958 }; --Iron Strut
+		[14] = {itemID = 10558, spellID = 12584 }; --Gold Power Core
+		[15] = {itemID = 4382, spellID = 3953 }; --Bronze Framework
+		[16] = {itemID = 4375, spellID = 3942 }; --Whirring Bronze Gizmo
+		[17] = {itemID = 4377, spellID = 3945 }; --Heavy Blasting Powder
+		[18] = {itemID = 4371, spellID = 3938 }; --Bronze Tube
+		[19] = {itemID = 4404, spellID = 3973 }; --Silver Contact
+		[20] = {itemID = 4364, spellID = 3929 }; --Coarse Blasting Powder
+		[21] = {itemID = 4363, spellID = 3926 }; --Copper Modulator
+		[22] = {itemID = 4361, spellID = 3924 }; --Copper Tube
+		[23] = {itemID = 4359, spellID = 3922 }; --Handful of Copper Bolts
+		[24] = {itemID = 4357, spellID = 3918 }; --Rough Blasting Powder
 	};
 	{
 		Name = BabbleInventory["Weapon"];
-		{ 1, "s22795", "18282", "=q4=Core Marksman Rifle", "" };
-		{ 2, "s19833", "16007", "=q3=Flawless Arcanite Rifle", "" };
-		{ 3, "s19796", "16004", "=q3=Dark Iron Rifle", "" };
-		{ 4, "s19792", "15995", "=q2=Thorium Rifle", "" };
-		{ 5, "s12614", "10510", "=q2=Mithril Heavy-bore Rifle", "" };
-		{ 6, "s12595", "10508", "=q2=Mithril Blunderbuss", "" };
-		{ 7, "s3954", "4383", "=q2=Moonsight Rifle", "" };
-		{ 8, "s3949", "4379", "=q2=Silver-plated Shotgun", "" };
-		{ 9, "s3939", "4372", "=q2=Lovingly Crafted Boomstick", "" };
-		{ 10, "s3936", "4369", "=q2=Deadly Blunderbuss", "" };
-		{ 11, "s3925", "4362", "=q2=Rough Boomstick", "" };
-		{ 12, "s7430", "6219", "=q1=Arclight Spanner", "" };
+		[1] = {itemID = 18282, spellID = 22795 }; --Core Marksman Rifle
+		[2] = {itemID = 16007, spellID = 19833 }; --Flawless Arcanite Rifle
+		[3] = {itemID = 16004, spellID = 19796 }; --Dark Iron Rifle
+		[4] = {itemID = 15995, spellID = 19792 }; --Thorium Rifle
+		[5] = {itemID = 10510, spellID = 12614 }; --Mithril Heavy-bore Rifle
+		[6] = {itemID = 10508, spellID = 12595 }; --Mithril Blunderbuss
+		[7] = {itemID = 4383, spellID = 3954 }; --Moonsight Rifle
+		[8] = {itemID = 4379, spellID = 3949 }; --Silver-plated Shotgun
+		[9] = {itemID = 4372, spellID = 3939 }; --Lovingly Crafted Boomstick
+		[10] = {itemID = 4369, spellID = 3936 }; --Deadly Blunderbuss
+		[11] = {itemID = 4362, spellID = 3925 }; --Rough Boomstick
+		[12] = {itemID = 6219, spellID = 7430 }; --Arclight Spanner
 	};
 	{
 		Name = GNOMISH;
-		{ 1, "s23489", "18986", "=q2=Ultrasafe Transporter - Gadgetzan", "" };
-		{ 2, "s23129", "18660", "=q2=World Enlarger", "" };
-		{ 3, "s12907", "10726", "=q2=Gnomish Mind Control Cap", "" };
-		{ 4, "s12905", "10724", "=q2=Gnomish Rocket Boots", "" };
-		{ 5, "s12903", "10721", "=q2=Gnomish Harm Prevention Belt", "" };
-		{ 6, "s12897", "10545", "=q2=Gnomish Goggles", "" };
-		{ 7, "s30568", "23841", "=q1=Gnomish Flame Turret", "" };
-		{ 8, "s23096", "18645", "=q1=Alarm-O-Bot", "" };
-		{ 9, "s12759", "10645", "=q1=Gnomish Death Ray", "" };
-		{ 10, "s12906", "10725", "=q1=Gnomish Battle Chicken", "" };
-		{ 11, "s12902", "10720", "=q1=Gnomish Net-o-Matic Projector", "" };
-		{ 12, "s12899", "10716", "=q1=Gnomish Shrink Ray", "" };
-		{ 13, "s12895", "10713", "=q1=Inlaid Mithril Cylinder Plans", "" };
-		{ 14, "s3971", "4397", "=q1=Gnomish Cloaking Device", "" };
-		{ 15, "s9269", "7506", "=q2=Gnomish Universal Remote", "" };
+		[1] = {itemID = 18986, spellID = 23489 }; --Ultrasafe Transporter - Gadgetzan
+		[2] = {itemID = 18660, spellID = 23129 }; --World Enlarger
+		[3] = {itemID = 10726, spellID = 12907 }; --Gnomish Mind Control Cap
+		[4] = {itemID = 10724, spellID = 12905 }; --Gnomish Rocket Boots
+		[5] = {itemID = 10721, spellID = 12903 }; --Gnomish Harm Prevention Belt
+		[6] = {itemID = 10545, spellID = 12897 }; --Gnomish Goggles
+		[7] = {itemID = 23841, spellID = 30568 }; --Gnomish Flame Turret
+		[8] = {itemID = 18645, spellID = 23096 }; --Alarm-O-Bot
+		[9] = {itemID = 10645, spellID = 12759 }; --Gnomish Death Ray
+		[10] = {itemID = 10725, spellID = 12906 }; --Gnomish Battle Chicken
+		[11] = {itemID = 10720, spellID = 12902 }; --Gnomish Net-o-Matic Projector
+		[12] = {itemID = 10716, spellID = 12899 }; --Gnomish Shrink Ray
+		[13] = {itemID = 10713, spellID = 12895 }; --Inlaid Mithril Cylinder Plans
+		[14] = {itemID = 4397, spellID = 3971 }; --Gnomish Cloaking Device
+		[15] = {itemID = 7506, spellID = 9269 }; --Gnomish Universal Remote
 	};
 	{
 		Name = GOBLIN;
-		{ 1, "s23486", "18984", "=q2=Dimensional Ripper - Everlook", "" };
-		{ 2, "s12758", "10588", "=q2=Goblin Rocket Helmet", "" };
-		{ 3, "s8895", "7189", "=q2=Goblin Rocket Boots", "" };
-		{ 4, "s12718", "10543", "=q2=Goblin Construction Helmet", "" };
-		{ 5, "s12717", "10542", "=q2=Goblin Mining Helmet", "" };
-		{ 6, "s30560", "23827", "=q1=Super Sapper Charge", "" };
-		{ 7, "s30558", "23826", "=q1=The Bigger One", "" };
-		{ 8, "s23078", "18587", "=q1=Goblin Jumper Cables XL", "" };
-		{ 9, "s12908", "10727", "=q1=Goblin Dragon Gun", "" };
-		{ 10, "s12754", "10586", "=q1=The Big One", "" };
-		{ 11, "s12755", "10587", "=q1=Goblin Bomb Dispenser", "" };
-		{ 12, "s12716", "10577", "=q1=Goblin Mortar", "" };
-		{ 13, "s12715", "10644", "=q1=Goblin Rocket Fuel Recipe", "" };
-		{ 14, "s12760", "10646", "=q1=Goblin Sapper Charge", "" };
-		{ 15, "s13240", "10577", "=q1=The Mortar: Reloaded", "" };
+		[1] = {itemID = 18984, spellID = 23486 }; --Dimensional Ripper - Everlook
+		[2] = {itemID = 10588, spellID = 12758 }; --Goblin Rocket Helmet
+		[3] = {itemID = 7189, spellID = 8895 }; --Goblin Rocket Boots
+		[4] = {itemID = 10543, spellID = 12718 }; --Goblin Construction Helmet
+		[5] = {itemID = 10542, spellID = 12717 }; --Goblin Mining Helmet
+		[6] = {itemID = 23827, spellID = 30560 }; --Super Sapper Charge
+		[7] = {itemID = 23826, spellID = 30558 }; --The Bigger One
+		[8] = {itemID = 18587, spellID = 23078 }; --Goblin Jumper Cables XL
+		[9] = {itemID = 10727, spellID = 12908 }; --Goblin Dragon Gun
+		[10] = {itemID = 10586, spellID = 12754 }; --The Big One
+		[11] = {itemID = 10587, spellID = 12755 }; --Goblin Bomb Dispenser
+		[12] = {itemID = 10577, spellID = 12716 }; --Goblin Mortar
+		[13] = {itemID = 10644, spellID = 12715 }; --Goblin Rocket Fuel Recipe
+		[14] = {itemID = 10646, spellID = 12760 }; --Goblin Sapper Charge
+		[15] = {itemID = 10577, spellID = 13240 }; --The Mortar: Reloaded
 	};
 };
 
@@ -1084,19 +1080,19 @@ AtlasLoot_Data["FirstAidCLASSIC"] = {
 	Type = "CraftingNoBF";
 	{
 		Name = FIRSTAID;
-		{ 1, "s23787", "19440", "=q1=Powerful Anti-Venom", "" };
-		{ 2, "s18630", "14530", "=q1=Heavy Runecloth Bandage", "" };
-		{ 3, "s18629", "14529", "=q1=Runecloth Bandage", "" };
-		{ 4, "s10841", "8545", "=q1=Heavy Mageweave Bandage", "" };
-		{ 5, "s10840", "8544", "=q1=Mageweave Bandage", "" };
-		{ 6, "s7929", "6451", "=q1=Heavy Silk Bandage", "" };
-		{ 7, "s7928", "6450", "=q1=Silk Bandage", "" };
-		{ 8, "s7935", "6453", "=q1=Strong Anti-Venom", "" };
-		{ 9, "s3278", "3531", "=q1=Heavy Wool Bandage", "" };
-		{ 10, "s3277", "3530", "=q1=Wool Bandage", "" };
-		{ 11, "s7934", "6452", "=q1=Anti-Venom", "" };
-		{ 12, "s3276", "2581", "=q1=Heavy Linen Bandage", "" };
-		{ 13, "s3275", "1251", "=q1=Linen Bandage", "" };
+		[1] = {itemID = 19440, spellID = 23787 }; --Powerful Anti-Venom
+		[2] = {itemID = 14530, spellID = 18630 }; --Heavy Runecloth Bandage
+		[3] = {itemID = 14529, spellID = 18629 }; --Runecloth Bandage
+		[4] = {itemID = 8545, spellID = 10841 }; --Heavy Mageweave Bandage
+		[5] = {itemID = 8544, spellID = 10840 }; --Mageweave Bandage
+		[6] = {itemID = 6451, spellID = 7929 }; --Heavy Silk Bandage
+		[7] = {itemID = 6450, spellID = 7928 }; --Silk Bandage
+		[8] = {itemID = 6453, spellID = 7935 }; --Strong Anti-Venom
+		[9] = {itemID = 3531, spellID = 3278 }; --Heavy Wool Bandage
+		[10] = {itemID = 3530, spellID = 3277 }; --Wool Bandage
+		[11] = {itemID = 6452, spellID = 7934 }; --Anti-Venom
+		[12] = {itemID = 2581, spellID = 3276 }; --Heavy Linen Bandage
+		[13] = {itemID = 1251, spellID = 3275 }; --Linen Bandage
 	};
 };
 -------------------
@@ -1108,517 +1104,517 @@ AtlasLoot_Data["Inscription"] = {
 	Type = "CraftingNoBF";
 	{
 		Name = AL["Off-Hand Items"];
-		{ 1, "s59498", "44210", "=q4=Faces of Doom", "" };
-		{ 2, "s59497", "38322", "=q4=Iron-bound Tome", "" };
-		{ 3, "s64051", "45854", "=q3=Rituals of the New Moon", "" };
-		{ 4, "s64053", "45849", "=q3=Twilight Tome", "" };
-		{ 5, "s59496", "43667", "=q3=Book of Clever Tricks", "" };
-		{ 6, "s59495", "43666", "=q3=Hellfire Tome", "" };
-		{ 7, "s59494", "43664", "=q3=Manual of Clouds", "" };
-		{ 8, "s59493", "43663", "=q3=Stormbound Tome", "" };
-		{ 9, "s59490", "43661", "=q3=Book of Stars", "" };
-		{ 10, "s59489", "43660", "=q3=Fire Eater's Guide", "" };
-		{ 11, "s59486", "43657", "=q3=Royal Guide of Escape Routes", "" };
-		{ 12, "s59484", "43656", "=q3=Tome of Kings", "" };
-		{ 13, "s59478", "43655", "=q3=Book of Survival", "" };
-		{ 14, "s59475", "43654", "=q3=Tome of the Dawn", "" };
-		{ 15, "s58565", "43515", "=q3=Mystic Tome", "" };
+		[1] = {itemID = 44210, spellID = 59498 }; --Faces of Doom
+		[2] = {itemID = 38322, spellID = 59497 }; --Iron-bound Tome
+		[3] = {itemID = 45854, spellID = 64051 }; --Rituals of the New Moon
+		[4] = {itemID = 45849, spellID = 64053 }; --Twilight Tome
+		[5] = {itemID = 43667, spellID = 59496 }; --Book of Clever Tricks
+		[6] = {itemID = 43666, spellID = 59495 }; --Hellfire Tome
+		[7] = {itemID = 43664, spellID = 59494 }; --Manual of Clouds
+		[8] = {itemID = 43663, spellID = 59493 }; --Stormbound Tome
+		[9] = {itemID = 43661, spellID = 59490 }; --Book of Stars
+		[10] = {itemID = 43660, spellID = 59489 }; --Fire Eater's Guide
+		[11] = {itemID = 43657, spellID = 59486 }; --Royal Guide of Escape Routes
+		[12] = {itemID = 43656, spellID = 59484 }; --Tome of Kings
+		[13] = {itemID = 43655, spellID = 59478 }; --Book of Survival
+		[14] = {itemID = 43654, spellID = 59475 }; --Tome of the Dawn
+		[15] = {itemID = 43515, spellID = 58565 }; --Mystic Tome
 	};
 	{
 		Name = AL["Reagents"];
-		{ 1, "s57716", "43127", "=q2=Snowfall Ink", "" };
-		{ 2, "s57714", "43125", "=q2=Darkflame Ink", "" };
-		{ 3, "s57712", "43123", "=q2=Ink of the Sky", "" };
-		{ 4, "s57710", "43121", "=q2=Fiery Ink", "" };
-		{ 5, "s57708", "43119", "=q2=Royal Ink", "" };
-		{ 6, "s57706", "43117", "=q2=Dawnstar Ink", "" };
-		{ 7, "s57703", "43115", "=q2=Hunter's Ink", "" };
-		{ 8, "s57715", "43126", "=q1=Ink of the Sea", "" };
-		{ 9, "s57713", "43124", "=q1=Ethereal Ink", "" };
-		{ 10, "s57711", "43122", "=q1=Shimmering Ink", "" };
-		{ 11, "s57709", "43120", "=q1=Celestial Ink", "" };
-		{ 12, "s57707", "43118", "=q1=Jadefire Ink", "" };
-		{ 13, "s57704", "43116", "=q1=Lion's Ink", "" };
-		{ 14, "s53462", "39774", "=q1=Midnight Ink", "" };
-		{ 15, "s52843", "39469", "=q1=Moonglow Ink", "" };
-		{ 16, "s52738", "37101", "=q1=Ivory Ink", "" };
+		[1] = {itemID = 43127, spellID = 57716 }; --Snowfall Ink
+		[2] = {itemID = 43125, spellID = 57714 }; --Darkflame Ink
+		[3] = {itemID = 43123, spellID = 57712 }; --Ink of the Sky
+		[4] = {itemID = 43121, spellID = 57710 }; --Fiery Ink
+		[5] = {itemID = 43119, spellID = 57708 }; --Royal Ink
+		[6] = {itemID = 43117, spellID = 57706 }; --Dawnstar Ink
+		[7] = {itemID = 43115, spellID = 57703 }; --Hunter's Ink
+		[8] = {itemID = 43126, spellID = 57715 }; --Ink of the Sea
+		[9] = {itemID = 43124, spellID = 57713 }; --Ethereal Ink
+		[10] = {itemID = 43122, spellID = 57711 }; --Shimmering Ink
+		[11] = {itemID = 43120, spellID = 57709 }; --Celestial Ink
+		[12] = {itemID = 43118, spellID = 57707 }; --Jadefire Ink
+		[13] = {itemID = 43116, spellID = 57704 }; --Lion's Ink
+		[14] = {itemID = 39774, spellID = 53462 }; --Midnight Ink
+		[15] = {itemID = 39469, spellID = 52843 }; --Moonglow Ink
+		[16] = {itemID = 37101, spellID = 52738 }; --Ivory Ink
 	};
 	{
 		Name = AL["Scrolls"];
-		{ 1, "s69385", "49632", "=q1=Runescroll of Fortitude", "" };
-		{ 3, "s60337", "44315", "=q1=Scroll of Recall III", "" };
-		{ 4, "s60336", "44314", "=q1=Scroll of Recall II", "" };
-		{ 5, "s48248", "37118", "=q1=Scroll of Recall", "" };
-		{ 6, "s58483", "3012", "=q1=Scroll of Agility VIII", "" };
-		{ 7, "s58482", "3012", "=q1=Scroll of Agility VII", "" };
-		{ 8, "s58481", "3012", "=q1=Scroll of Agility VI", "" };
-		{ 9, "s58480", "3012", "=q1=Scroll of Agility V", "" };
-		{ 10, "s58478", "3012", "=q1=Scroll of Agility IV", "" };
-		{ 11, "s58476", "3012", "=q1=Scroll of Agility III", "" };
-		{ 12, "s58473", "3012", "=q1=Scroll of Agility II", "" };
-		{ 13, "s58472", "3012", "=q1=Scroll of Agility", "" };
-		{ 14, "s50604", "955", "=q1=Scroll of Intellect VIII", "" };
-		{ 15, "s50603", "955", "=q1=Scroll of Intellect VII", "" };
-		{ 16, "s50602", "955", "=q1=Scroll of Intellect VI", "" };
-		{ 17, "s50601", "955", "=q1=Scroll of Intellect V", "" };
-		{ 18, "s50600", "955", "=q1=Scroll of Intellect IV", "" };
-		{ 19, "s50599", "955", "=q1=Scroll of Intellect III", "" };
-		{ 20, "s50598", "955", "=q1=Scroll of Intellect II", "" };
-		{ 21, "s48114", "955", "=q1=Scroll of Intellect", "" };
-		{ 23, "s50611", "955", "=q1=Scroll of Spirit VIII", "" };
-		{ 24, "s50610", "955", "=q1=Scroll of Spirit VII", "" };
-		{ 25, "s50609", "955", "=q1=Scroll of Spirit VI", "" };
-		{ 26, "s50608", "955", "=q1=Scroll of Spirit V", "" };
-		{ 27, "s50607", "955", "=q1=Scroll of Spirit IV", "" };
-		{ 28, "s50606", "955", "=q1=Scroll of Spirit III", "" };
-		{ 29, "s50605", "955", "=q1=Scroll of Spirit II", "" };
-		{ 30, "s48116", "955", "=q1=Scroll of Spirit", "" };
+		[1] = {itemID = 49632, spellID = 69385 }; --Runescroll of Fortitude
+		[3] = {itemID = 44315, spellID = 60337 }; --Scroll of Recall III
+		[4] = {itemID = 44314, spellID = 60336 }; --Scroll of Recall II
+		[5] = {itemID = 37118, spellID = 48248 }; --Scroll of Recall
+		[6] = {itemID = 3012, spellID = 58483 }; --Scroll of Agility VIII
+		[7] = {itemID = 3012, spellID = 58482 }; --Scroll of Agility VII
+		[8] = {itemID = 3012, spellID = 58481 }; --Scroll of Agility VI
+		[9] = {itemID = 3012, spellID = 58480 }; --Scroll of Agility V
+		[10] = {itemID = 3012, spellID = 58478 }; --Scroll of Agility IV
+		[11] = {itemID = 3012, spellID = 58476 }; --Scroll of Agility III
+		[12] = {itemID = 3012, spellID = 58473 }; --Scroll of Agility II
+		[13] = {itemID = 3012, spellID = 58472 }; --Scroll of Agility
+		[14] = {itemID = 955, spellID = 50604 }; --Scroll of Intellect VIII
+		[15] = {itemID = 955, spellID = 50603 }; --Scroll of Intellect VII
+		[16] = {itemID = 955, spellID = 50602 }; --Scroll of Intellect VI
+		[17] = {itemID = 955, spellID = 50601 }; --Scroll of Intellect V
+		[18] = {itemID = 955, spellID = 50600 }; --Scroll of Intellect IV
+		[19] = {itemID = 955, spellID = 50599 }; --Scroll of Intellect III
+		[20] = {itemID = 955, spellID = 50598 }; --Scroll of Intellect II
+		[21] = {itemID = 955, spellID = 48114 }; --Scroll of Intellect
+		[23] = {itemID = 955, spellID = 50611 }; --Scroll of Spirit VIII
+		[24] = {itemID = 955, spellID = 50610 }; --Scroll of Spirit VII
+		[25] = {itemID = 955, spellID = 50609 }; --Scroll of Spirit VI
+		[26] = {itemID = 955, spellID = 50608 }; --Scroll of Spirit V
+		[27] = {itemID = 955, spellID = 50607 }; --Scroll of Spirit IV
+		[28] = {itemID = 955, spellID = 50606 }; --Scroll of Spirit III
+		[29] = {itemID = 955, spellID = 50605 }; --Scroll of Spirit II
+		[30] = {itemID = 955, spellID = 48116 }; --Scroll of Spirit
 	};
 	{
 		Name = AL["Scrolls"];
-		{ 1, "s50620", "1180", "=q1=Scroll of Stamina VIII", "" };
-		{ 2, "s50619", "1180", "=q1=Scroll of Stamina VII", "" };
-		{ 3, "s50618", "1180", "=q1=Scroll of Stamina VI", "" };
-		{ 4, "s50617", "1180", "=q1=Scroll of Stamina V", "" };
-		{ 5, "s50616", "1180", "=q1=Scroll of Stamina IV", "" };
-		{ 6, "s50614", "1180", "=q1=Scroll of Stamina III", "" };
-		{ 7, "s50612", "1180", "=q1=Scroll of Stamina II", "" };
-		{ 8, "s45382", "1180", "=q1=Scroll of Stamina", "" };
-		{ 16, "s58491", "3012", "=q1=Scroll of Strength VIII", "" };
-		{ 17, "s58490", "3012", "=q1=Scroll of Strength VII", "" };
-		{ 18, "s58489", "3012", "=q1=Scroll of Strength VI", "" };
-		{ 19, "s58488", "3012", "=q1=Scroll of Strength V", "" };
-		{ 20, "s58487", "3012", "=q1=Scroll of Strength IV", "" };
-		{ 21, "s58486", "3012", "=q1=Scroll of Strength III", "" };
-		{ 22, "s58485", "3012", "=q1=Scroll of Strength II", "" };
-		{ 23, "s58484", "3012", "=q1=Scroll of Strength", "" };
+		[1] = {itemID = 1180, spellID = 50620 }; --Scroll of Stamina VIII
+		[2] = {itemID = 1180, spellID = 50619 }; --Scroll of Stamina VII
+		[3] = {itemID = 1180, spellID = 50618 }; --Scroll of Stamina VI
+		[4] = {itemID = 1180, spellID = 50617 }; --Scroll of Stamina V
+		[5] = {itemID = 1180, spellID = 50616 }; --Scroll of Stamina IV
+		[6] = {itemID = 1180, spellID = 50614 }; --Scroll of Stamina III
+		[7] = {itemID = 1180, spellID = 50612 }; --Scroll of Stamina II
+		[8] = {itemID = 1180, spellID = 45382 }; --Scroll of Stamina
+		[16] = {itemID = 3012, spellID = 58491 }; --Scroll of Strength VIII
+		[17] = {itemID = 3012, spellID = 58490 }; --Scroll of Strength VII
+		[18] = {itemID = 3012, spellID = 58489 }; --Scroll of Strength VI
+		[19] = {itemID = 3012, spellID = 58488 }; --Scroll of Strength V
+		[20] = {itemID = 3012, spellID = 58487 }; --Scroll of Strength IV
+		[21] = {itemID = 3012, spellID = 58486 }; --Scroll of Strength III
+		[22] = {itemID = 3012, spellID = 58485 }; --Scroll of Strength II
+		[23] = {itemID = 3012, spellID = 58484 }; --Scroll of Strength
 	};
 	{
 		Name = AL["Miscellaneous"];
-		{ 1, "s59504", "INV_Feather_05", "=ds=Darkmoon Card of the North", "" };
-		{ 2, "s59503", "INV_Feather_05", "=ds=Greater Darkmoon Card", "" };
-		{ 3, "s59502", "INV_Feather_05", "=ds=Darkmoon Card", "" };
-		{ 4, "s59491", "INV_Feather_05", "=ds=Shadowy Tarot", "" };
-		{ 5, "s59487", "INV_Feather_05", "=ds=Arcane Tarot", "" };
-		{ 6, "s48247", "INV_Feather_05", "=ds=Mysterious Tarot", "" .. "" };
-		{ 7, "s59480", "INV_Feather_05", "=ds=Strange Tarot", "" };
-		{ 9, "s61117", "INV_Inscription_Tradeskill01", "=ds=Master's Inscription of the Axe", "" };
-		{ 10, "s61118", "INV_Inscription_Tradeskill01", "=ds=Master's Inscription of the Crag", "" };
-		{ 11, "s61119", "INV_Inscription_Tradeskill01", "=ds=Master's Inscription of the Pinnacle", "" };
-		{ 12, "s61120", "INV_Inscription_Tradeskill01", "=ds=Master's Inscription of the Storm", "" };
-		{ 14, "s52175", "INV_Misc_Book_11", "=ds=Decipher", "" };
-		{ 16, "s59500", "43145", "=q1=Armor Vellum III", "" };
-		{ 17, "s59499", "37602", "=q1=Armor Vellum II", "" };
-		{ 18, "s52739", "38682", "=q1=Armor Vellum", "" };
-		{ 20, "s59501", "43146", "=q1=Weapon Vellum III", "" };
-		{ 21, "s59488", "39350", "=q1=Weapon Vellum II", "" };
-		{ 22, "s52840", "39349", "=q1=Weapon Vellum", "" };
-		{ 24, "s59387", "43850", "=q1=Certificate of Ownership", "" };
+		[1] = {spellID = 59504, icon = "INV_Feather_05" }; --Darkmoon Card of the North
+		[2] = {spellID = 59503, icon = "INV_Feather_05" }; --Greater Darkmoon Card
+		[3] = {spellID = 59502, icon = "INV_Feather_05" }; --Darkmoon Card
+		[4] = {spellID = 59491, icon = "INV_Feather_05" }; --Shadowy Tarot
+		[5] = {spellID = 59487, icon = "INV_Feather_05" }; --Arcane Tarot
+		[6] = {spellID = 48247, icon = "INV_Feather_05" }; --Mysterious Tarot" .. "
+		[7] = {spellID = 59480, icon = "INV_Feather_05" }; --Strange Tarot
+		[9] = {spellID = 61117, icon = "INV_Inscription_Tradeskill01" }; --Master's Inscription of the Axe
+		[10] = {spellID = 61118, icon = "INV_Inscription_Tradeskill01" }; --Master's Inscription of the Crag
+		[11] = {spellID = 61119, icon = "INV_Inscription_Tradeskill01" }; --Master's Inscription of the Pinnacle
+		[12] = {spellID = 61120, icon = "INV_Inscription_Tradeskill01" }; --Master's Inscription of the Storm
+		[14] = {spellID = 52175, icon = "INV_Misc_Book_11" }; --Decipher
+		[16] = {itemID = 43145, spellID = 59500 }; --Armor Vellum III
+		[17] = {itemID = 37602, spellID = 59499 }; --Armor Vellum II
+		[18] = {itemID = 38682, spellID = 52739 }; --Armor Vellum
+		[20] = {itemID = 43146, spellID = 59501 }; --Weapon Vellum III
+		[21] = {itemID = 39350, spellID = 59488 }; --Weapon Vellum II
+		[22] = {itemID = 39349, spellID = 52840 }; --Weapon Vellum
+		[24] = {itemID = 43850, spellID = 59387 }; --Certificate of Ownership
 	};
 	{
 		Name = AL["Major Glyph"] .. " - " .. LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"];
-		{ 1, "s57207", "43533", "=q1=Glyph of Anti-Magic Shell", "" };
-		{ 2, "s59339", "43826", "=q1=Glyph of Blood Strike", "" };
-		{ 3, "s57210", "43536", "=q1=Glyph of Bone Shield", "" };
-		{ 4, "s57211", "43537", "=q1=Glyph of Chains of Ice", "" };
-		{ 5, "s64297", "45799", "=q1=Glyph of Dancing Rune Weapon", "" };
-		{ 6, "s57212", "43538", "=q1=Glyph of Dark Command", "" };
-		{ 7, "s64266", "45804", "=q1=Glyph of Dark Death", "" };
-		{ 8, "s57214", "43542", "=q1=Glyph of Death and Decay", "" };
-		{ 9, "s57213", "43541", "=q1=Glyph of Death Grip", "" };
-		{ 10, "s59340", "43827", "=q1=Glyph of Death Strike", "" };
-		{ 11, "s64267", "45805", "=q1=Glyph of Disease", "" };
-		{ 12, "s57216", "43543", "=q1=Glyph of Frost Strike", "" };
-		{ 13, "s57208", "43534", "=q1=Glyph of Heart Strike", "" };
-		{ 14, "s64300", "45806", "=q1=Glyph of Howling Blast", "" };
-		{ 15, "s64298", "45800", "=q1=Glyph of Hungering Cold", "" };
-		{ 16, "s57218", "43545", "=q1=Glyph of Icebound Fortitude", "" };
-		{ 17, "s57219", "43546", "=q1=Glyph of Icy Touch", "" };
-		{ 18, "s57220", "43547", "=q1=Glyph of Obliterate", "" };
-		{ 19, "s57221", "43548", "=q1=Glyph of Plague Strike", "" };
-		{ 20, "s57223", "43550", "=q1=Glyph of Rune Strike", "" };
-		{ 21, "s59338", "43825", "=q1=Glyph of Rune Tap", "" };
-		{ 22, "s57224", "43551", "=q1=Glyph of Scourge Strike", "" };
-		{ 23, "s57225", "43552", "=q1=Glyph of Strangulate", "" };
-		{ 24, "s57222", "43549", "=q1=Glyph of the Ghoul", "" };
-		{ 25, "s57226", "43553", "=q1=Glyph of Unbreakable Armor", "" };
-		{ 26, "s64299", "45803", "=q1=Glyph of Unholy Blight", "" };
-		{ 27, "s57227", "43554", "=q1=Glyph of Vampiric Blood", "" };
+		[1] = {itemID = 43533, spellID = 57207 }; --Glyph of Anti-Magic Shell
+		[2] = {itemID = 43826, spellID = 59339 }; --Glyph of Blood Strike
+		[3] = {itemID = 43536, spellID = 57210 }; --Glyph of Bone Shield
+		[4] = {itemID = 43537, spellID = 57211 }; --Glyph of Chains of Ice
+		[5] = {itemID = 45799, spellID = 64297 }; --Glyph of Dancing Rune Weapon
+		[6] = {itemID = 43538, spellID = 57212 }; --Glyph of Dark Command
+		[7] = {itemID = 45804, spellID = 64266 }; --Glyph of Dark Death
+		[8] = {itemID = 43542, spellID = 57214 }; --Glyph of Death and Decay
+		[9] = {itemID = 43541, spellID = 57213 }; --Glyph of Death Grip
+		[10] = {itemID = 43827, spellID = 59340 }; --Glyph of Death Strike
+		[11] = {itemID = 45805, spellID = 64267 }; --Glyph of Disease
+		[12] = {itemID = 43543, spellID = 57216 }; --Glyph of Frost Strike
+		[13] = {itemID = 43534, spellID = 57208 }; --Glyph of Heart Strike
+		[14] = {itemID = 45806, spellID = 64300 }; --Glyph of Howling Blast
+		[15] = {itemID = 45800, spellID = 64298 }; --Glyph of Hungering Cold
+		[16] = {itemID = 43545, spellID = 57218 }; --Glyph of Icebound Fortitude
+		[17] = {itemID = 43546, spellID = 57219 }; --Glyph of Icy Touch
+		[18] = {itemID = 43547, spellID = 57220 }; --Glyph of Obliterate
+		[19] = {itemID = 43548, spellID = 57221 }; --Glyph of Plague Strike
+		[20] = {itemID = 43550, spellID = 57223 }; --Glyph of Rune Strike
+		[21] = {itemID = 43825, spellID = 59338 }; --Glyph of Rune Tap
+		[22] = {itemID = 43551, spellID = 57224 }; --Glyph of Scourge Strike
+		[23] = {itemID = 43552, spellID = 57225 }; --Glyph of Strangulate
+		[24] = {itemID = 43549, spellID = 57222 }; --Glyph of the Ghoul
+		[25] = {itemID = 43553, spellID = 57226 }; --Glyph of Unbreakable Armor
+		[26] = {itemID = 45803, spellID = 64299 }; --Glyph of Unholy Blight
+		[27] = {itemID = 43554, spellID = 57227 }; --Glyph of Vampiric Blood
 	};
 	{
 		Name = AL["Minor Glyph"] .. " - " .. LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"];
-		{ 1, "s57209", "43535", "=q1=Glyph of Blood Tap", "" };
-		{ 2, "s57229", "43671", "=q1=Glyph of Corpse Explosion", "" };
-		{ 3, "s57215", "43539", "=q1=Glyph of Death's Embrace", "" };
-		{ 4, "s57217", "43544", "=q1=Glyph of Horn of Winter", "" };
-		{ 5, "s57230", "43672", "=q1=Glyph of Pestilence", "" };
-		{ 6, "s57228", "43673", "=q1=Glyph of Raise Dead", "" };
+		[1] = {itemID = 43535, spellID = 57209 }; --Glyph of Blood Tap
+		[2] = {itemID = 43671, spellID = 57229 }; --Glyph of Corpse Explosion
+		[3] = {itemID = 43539, spellID = 57215 }; --Glyph of Death's Embrace
+		[4] = {itemID = 43544, spellID = 57217 }; --Glyph of Horn of Winter
+		[5] = {itemID = 43672, spellID = 57230 }; --Glyph of Pestilence
+		[6] = {itemID = 43673, spellID = 57228 }; --Glyph of Raise Dead
 	};
 	{
 		Name = AL["Major Glyph"] .. " - " .. AL["Druid"];
-		{ 1, "s64256", "45623", "=q1=Glyph of Barkskin", "" };
-		{ 2, "s64268", "45601", "=q1=Glyph of Berserk", "" };
-		{ 3, "s67600", "48720", "=q1=Glyph of Claw", "" };
-		{ 4, "s48121", "40924", "=q1=Glyph of Entangling Roots", "" };
-		{ 5, "s62162", "44928", "=q1=Glyph of Focus", "" };
-		{ 6, "s56943", "40896", "=q1=Glyph of Frenzied Regeneration", "" };
-		{ 7, "s56944", "40899", "=q1=Glyph of Growl", "" };
-		{ 8, "s56945", "40914", "=q1=Glyph of Healing Touch", "" };
-		{ 9, "s56946", "40920", "=q1=Glyph of Hurricane", "" };
-		{ 10, "s56947", "40908", "=q1=Glyph of Innervate", "" };
-		{ 11, "s56948", "40919", "=q1=Glyph of Insect Swarm", "" };
-		{ 12, "s56949", "40915", "=q1=Glyph of Lifebloom", "" };
-		{ 13, "s56950", "40900", "=q1=Glyph of Mangle", "" };
-		{ 14, "s56961", "40897", "=q1=Glyph of Maul", "" };
-		{ 15, "s64258", "45622", "=q1=Glyph of Monsoon", "" };
-		{ 16, "s56951", "40923", "=q1=Glyph of Moonfire", "" };
-		{ 17, "s64313", "45603", "=q1=Glyph of Nourish", "" };
-		{ 18, "s56952", "40903", "=q1=Glyph of Rake", "" };
-		{ 19, "s71015", "50125", "=q1=Glyph of Rapid Rejuvenation", "" };
-		{ 20, "s56953", "40909", "=q1=Glyph of Rebirth", "" };
-		{ 21, "s56954", "40912", "=q1=Glyph of Regrowth", "" };
-		{ 22, "s56955", "40913", "=q1=Glyph of Rejuvenation", "" };
-		{ 23, "s56956", "40902", "=q1=Glyph of Rip", "" };
-		{ 24, "s64307", "45604", "=q1=Glyph of Savage Roar", "" };
-		{ 25, "s56957", "40901", "=q1=Glyph of Shred", "" };
-		{ 26, "s56958", "40921", "=q1=Glyph of Starfall", "" };
-		{ 27, "s56959", "40916", "=q1=Glyph of Starfire", "" };
-		{ 28, "s65245", "46372", "=q1=Glyph of Survival Instincts", "" };
-		{ 29, "s56960", "40906", "=q1=Glyph of Swiftmend", "" };
-		{ 30, "s56963", "40922", "=q1=Glyph of WRATH", "" };
+		[1] = {itemID = 45623, spellID = 64256 }; --Glyph of Barkskin
+		[2] = {itemID = 45601, spellID = 64268 }; --Glyph of Berserk
+		[3] = {itemID = 48720, spellID = 67600 }; --Glyph of Claw
+		[4] = {itemID = 40924, spellID = 48121 }; --Glyph of Entangling Roots
+		[5] = {itemID = 44928, spellID = 62162 }; --Glyph of Focus
+		[6] = {itemID = 40896, spellID = 56943 }; --Glyph of Frenzied Regeneration
+		[7] = {itemID = 40899, spellID = 56944 }; --Glyph of Growl
+		[8] = {itemID = 40914, spellID = 56945 }; --Glyph of Healing Touch
+		[9] = {itemID = 40920, spellID = 56946 }; --Glyph of Hurricane
+		[10] = {itemID = 40908, spellID = 56947 }; --Glyph of Innervate
+		[11] = {itemID = 40919, spellID = 56948 }; --Glyph of Insect Swarm
+		[12] = {itemID = 40915, spellID = 56949 }; --Glyph of Lifebloom
+		[13] = {itemID = 40900, spellID = 56950 }; --Glyph of Mangle
+		[14] = {itemID = 40897, spellID = 56961 }; --Glyph of Maul
+		[15] = {itemID = 45622, spellID = 64258 }; --Glyph of Monsoon
+		[16] = {itemID = 40923, spellID = 56951 }; --Glyph of Moonfire
+		[17] = {itemID = 45603, spellID = 64313 }; --Glyph of Nourish
+		[18] = {itemID = 40903, spellID = 56952 }; --Glyph of Rake
+		[19] = {itemID = 50125, spellID = 71015 }; --Glyph of Rapid Rejuvenation
+		[20] = {itemID = 40909, spellID = 56953 }; --Glyph of Rebirth
+		[21] = {itemID = 40912, spellID = 56954 }; --Glyph of Regrowth
+		[22] = {itemID = 40913, spellID = 56955 }; --Glyph of Rejuvenation
+		[23] = {itemID = 40902, spellID = 56956 }; --Glyph of Rip
+		[24] = {itemID = 45604, spellID = 64307 }; --Glyph of Savage Roar
+		[25] = {itemID = 40901, spellID = 56957 }; --Glyph of Shred
+		[26] = {itemID = 40921, spellID = 56958 }; --Glyph of Starfall
+		[27] = {itemID = 40916, spellID = 56959 }; --Glyph of Starfire
+		[28] = {itemID = 46372, spellID = 65245 }; --Glyph of Survival Instincts
+		[29] = {itemID = 40906, spellID = 56960 }; --Glyph of Swiftmend
+		[30] = {itemID = 40922, spellID = 56963 }; --Glyph of WRATH
 	};
 	{
 		Name = AL["Minor Glyph"] .. " - " .. AL["Druid"];
-		{ 1, "s64270", "45602", "=q1=Glyph of Wild Growth", "" };
-		{ 2, "s58286", "43316", "=q1=Glyph of Aquatic Form", "" };
-		{ 3, "s58287", "43334", "=q1=Glyph of Challenging Roar", "" };
-		{ 4, "s59315", "43674", "=q1=Glyph of Dash", "" };
-		{ 5, "s58296", "43335", "=q1=Glyph of the Wild", "" };
-		{ 6, "s58289", "43332", "=q1=Glyph of Thorns", "" };
-		{ 7, "s56965", "44922", "=q1=Glyph of Typhoon", "" };
-		{ 8, "s58288", "43331", "=q1=Glyph of Unburdened Rebirth", "" };
+		[1] = {itemID = 45602, spellID = 64270 }; --Glyph of Wild Growth
+		[2] = {itemID = 43316, spellID = 58286 }; --Glyph of Aquatic Form
+		[3] = {itemID = 43334, spellID = 58287 }; --Glyph of Challenging Roar
+		[4] = {itemID = 43674, spellID = 59315 }; --Glyph of Dash
+		[5] = {itemID = 43335, spellID = 58296 }; --Glyph of the Wild
+		[6] = {itemID = 43332, spellID = 58289 }; --Glyph of Thorns
+		[7] = {itemID = 44922, spellID = 56965 }; --Glyph of Typhoon
+		[8] = {itemID = 43331, spellID = 58288 }; --Glyph of Unburdened Rebirth
 	};
 	{
 		Name = AL["Major Glyph"] .. " - " .. LOCALIZED_CLASS_NAMES_MALE["HUNTER"];
-		{ 1, "s56994", "42897", "=q1=Glyph of Aimed Shot", "" };
-		{ 2, "s56995", "42898", "=q1=Glyph of Arcane Shot", "" };
-		{ 3, "s56996", "42899", "=q1=Glyph of Aspect of the Beast", "" };
-		{ 4, "s56997", "42900", "=q1=Glyph of Aspect of the Monkey", "" };
-		{ 5, "s56998", "42901", "=q1=Glyph of Aspect of the Viper", "" };
-		{ 6, "s56999", "42902", "=q1=Glyph of Beastial WRATH", "" };
-		{ 7, "s64271", "45625", "=q1=Glyph of Chimera Shot", "" };
-		{ 8, "s57000", "42903", "=q1=Glyph of Deterrence", "" };
-		{ 9, "s57001", "42904", "=q1=Glyph of Disengage", "" };
-		{ 10, "s64273", "45731", "=q1=Glyph of Explosive Shot", "" };
-		{ 11, "s64253", "45733", "=q1=Glyph of Explosive Trap", "" };
-		{ 12, "s57002", "42905", "=q1=Glyph of Freezing Trap", "" };
-		{ 13, "s57003", "42906", "=q1=Glyph of Frost Trap", "" };
-		{ 14, "s57004", "42907", "=q1=Glyph of Hunter's Mark", "" };
-		{ 15, "s57005", "42908", "=q1=Glyph of Immolation Trap", "" };
-		{ 16, "s57006", "42909", "=q1=Glyph of Improved Aspect of the Hawk", "" };
-		{ 17, "s64304", "45732", "=q1=Glyph of Kill Shot", "" };
-		{ 18, "s57007", "42910", "=q1=Glyph of Multi-Shot", "" };
-		{ 19, "s57008", "42911", "=q1=Glyph of Rapid Fire", "" };
-		{ 20, "s64246", "45735", "=q1=Glyph of Raptor Strike", "" };
-		{ 21, "s64249", "45734", "=q1=Glyph of Scatter Shot", "" };
-		{ 22, "s57009", "42912", "=q1=Glyph of Serpent Sting", "" };
-		{ 23, "s57010", "42913", "=q1=Glyph of Snake Trap", "" };
-		{ 24, "s57011", "42914", "=q1=Glyph of Steady Shot", "" };
-		{ 25, "s57012", "42915", "=q1=Glyph of Trueshot Aura", "" };
-		{ 26, "s57013", "42916", "=q1=Glyph of Volley", "" };
-		{ 27, "s57014", "42917", "=q1=Glyph of Wyvern Sting", "" };
+		[1] = {itemID = 42897, spellID = 56994 }; --Glyph of Aimed Shot
+		[2] = {itemID = 42898, spellID = 56995 }; --Glyph of Arcane Shot
+		[3] = {itemID = 42899, spellID = 56996 }; --Glyph of Aspect of the Beast
+		[4] = {itemID = 42900, spellID = 56997 }; --Glyph of Aspect of the Monkey
+		[5] = {itemID = 42901, spellID = 56998 }; --Glyph of Aspect of the Viper
+		[6] = {itemID = 42902, spellID = 56999 }; --Glyph of Beastial WRATH
+		[7] = {itemID = 45625, spellID = 64271 }; --Glyph of Chimera Shot
+		[8] = {itemID = 42903, spellID = 57000 }; --Glyph of Deterrence
+		[9] = {itemID = 42904, spellID = 57001 }; --Glyph of Disengage
+		[10] = {itemID = 45731, spellID = 64273 }; --Glyph of Explosive Shot
+		[11] = {itemID = 45733, spellID = 64253 }; --Glyph of Explosive Trap
+		[12] = {itemID = 42905, spellID = 57002 }; --Glyph of Freezing Trap
+		[13] = {itemID = 42906, spellID = 57003 }; --Glyph of Frost Trap
+		[14] = {itemID = 42907, spellID = 57004 }; --Glyph of Hunter's Mark
+		[15] = {itemID = 42908, spellID = 57005 }; --Glyph of Immolation Trap
+		[16] = {itemID = 42909, spellID = 57006 }; --Glyph of Improved Aspect of the Hawk
+		[17] = {itemID = 45732, spellID = 64304 }; --Glyph of Kill Shot
+		[18] = {itemID = 42910, spellID = 57007 }; --Glyph of Multi-Shot
+		[19] = {itemID = 42911, spellID = 57008 }; --Glyph of Rapid Fire
+		[20] = {itemID = 45735, spellID = 64246 }; --Glyph of Raptor Strike
+		[21] = {itemID = 45734, spellID = 64249 }; --Glyph of Scatter Shot
+		[22] = {itemID = 42912, spellID = 57009 }; --Glyph of Serpent Sting
+		[23] = {itemID = 42913, spellID = 57010 }; --Glyph of Snake Trap
+		[24] = {itemID = 42914, spellID = 57011 }; --Glyph of Steady Shot
+		[25] = {itemID = 42915, spellID = 57012 }; --Glyph of Trueshot Aura
+		[26] = {itemID = 42916, spellID = 57013 }; --Glyph of Volley
+		[27] = {itemID = 42917, spellID = 57014 }; --Glyph of Wyvern Sting
 	};
 	{
 		Name = AL["Minor Glyph"] .. " - " .. LOCALIZED_CLASS_NAMES_MALE["HUNTER"];
-		{ 1, "s58302", "43351", "=q1=Glyph of Feign Death", "" };
-		{ 2, "s58301", "43350", "=q1=Glyph of Mend Pet", "" };
-		{ 3, "s58300", "43354", "=q1=Glyph of Possessed Strength", "" };
-		{ 4, "s58299", "43338", "=q1=Glyph of Revive Pet", "" };
-		{ 5, "s58298", "43356", "=q1=Glyph of Scare Beast", "" };
-		{ 6, "s58297", "43355", "=q1=Glyph of the Pack", "" };
+		[1] = {itemID = 43351, spellID = 58302 }; --Glyph of Feign Death
+		[2] = {itemID = 43350, spellID = 58301 }; --Glyph of Mend Pet
+		[3] = {itemID = 43354, spellID = 58300 }; --Glyph of Possessed Strength
+		[4] = {itemID = 43338, spellID = 58299 }; --Glyph of Revive Pet
+		[5] = {itemID = 43356, spellID = 58298 }; --Glyph of Scare Beast
+		[6] = {itemID = 43355, spellID = 58297 }; --Glyph of the Pack
 	};
 	{
 		Name = AL["Major Glyph"] .. " - " .. LOCALIZED_CLASS_NAMES_MALE["MAGE"];
-		{ 1, "s64276", "45738", "=q1=Glyph of Arcane Barrage", "" };
-		{ 2, "s56991", "44955", "=q1=Glyph of Arcane Blast", "" };
-		{ 3, "s56968", "42734", "=q1=Glyph of Arcane Explosion", "" };
-		{ 4, "s56971", "42735", "=q1=Glyph of Arcane Missiles", "" };
-		{ 5, "s56972", "42736", "=q1=Glyph of Arcane Power", "" };
-		{ 6, "s56973", "42737", "=q1=Glyph of Blink", "" };
-		{ 7, "s64274", "45736", "=q1=Glyph of Deep Freeze", "" };
-		{ 8, "s71101", "50045", "=q1=Glyph of Eternal Water", "" };
-		{ 9, "s56974", "42738", "=q1=Glyph of Evocation", "" };
-		{ 10, "s57719", "42740", "=q1=Glyph of Fire Blast", "" };
-		{ 11, "s56975", "42739", "=q1=Glyph of Fireball", "" };
-		{ 12, "s56976", "42741", "=q1=Glyph of Frost Nova", "" };
-		{ 13, "s56977", "42742", "=q1=Glyph of Frostbolt", "" };
-		{ 14, "s61677", "44684", "=q1=Glyph of Frostfire", "" };
-		{ 15, "s56978", "42743", "=q1=Glyph of Ice Armor", "" };
-		{ 16, "s64257", "45740", "=q1=Glyph of Ice Barrier", "" };
-		{ 17, "s56979", "42744", "=q1=Glyph of Ice Block", "" };
-		{ 18, "s56980", "42745", "=q1=Glyph of Ice Lance", "" };
-		{ 19, "s56981", "42746", "=q1=Glyph of Icy Veins", "" };
-		{ 20, "s56982", "42747", "=q1=Glyph of Improved Scorch", "" };
-		{ 21, "s56983", "42748", "=q1=Glyph of Invisibility", "" };
-		{ 22, "s64275", "45737", "=q1=Glyph of Living Bomb", "" };
-		{ 23, "s56984", "42749", "=q1=Glyph of Mage Armor", "" };
-		{ 24, "s56985", "42750", "=q1=Glyph of Mana Gem", "" };
-		{ 25, "s64314", "45739", "=q1=Glyph of Mirror Image", "" };
-		{ 26, "s56986", "42751", "=q1=Glyph of Molten Armor", "" };
-		{ 27, "s56987", "42752", "=q1=Glyph of Polymorph", "" };
-		{ 28, "s56988", "42753", "=q1=Glyph of Remove Curse", "" };
-		{ 29, "s56989", "42754", "=q1=Glyph of Water Elemental", "" };
+		[1] = {itemID = 45738, spellID = 64276 }; --Glyph of Arcane Barrage
+		[2] = {itemID = 44955, spellID = 56991 }; --Glyph of Arcane Blast
+		[3] = {itemID = 42734, spellID = 56968 }; --Glyph of Arcane Explosion
+		[4] = {itemID = 42735, spellID = 56971 }; --Glyph of Arcane Missiles
+		[5] = {itemID = 42736, spellID = 56972 }; --Glyph of Arcane Power
+		[6] = {itemID = 42737, spellID = 56973 }; --Glyph of Blink
+		[7] = {itemID = 45736, spellID = 64274 }; --Glyph of Deep Freeze
+		[8] = {itemID = 50045, spellID = 71101 }; --Glyph of Eternal Water
+		[9] = {itemID = 42738, spellID = 56974 }; --Glyph of Evocation
+		[10] = {itemID = 42740, spellID = 57719 }; --Glyph of Fire Blast
+		[11] = {itemID = 42739, spellID = 56975 }; --Glyph of Fireball
+		[12] = {itemID = 42741, spellID = 56976 }; --Glyph of Frost Nova
+		[13] = {itemID = 42742, spellID = 56977 }; --Glyph of Frostbolt
+		[14] = {itemID = 44684, spellID = 61677 }; --Glyph of Frostfire
+		[15] = {itemID = 42743, spellID = 56978 }; --Glyph of Ice Armor
+		[16] = {itemID = 45740, spellID = 64257 }; --Glyph of Ice Barrier
+		[17] = {itemID = 42744, spellID = 56979 }; --Glyph of Ice Block
+		[18] = {itemID = 42745, spellID = 56980 }; --Glyph of Ice Lance
+		[19] = {itemID = 42746, spellID = 56981 }; --Glyph of Icy Veins
+		[20] = {itemID = 42747, spellID = 56982 }; --Glyph of Improved Scorch
+		[21] = {itemID = 42748, spellID = 56983 }; --Glyph of Invisibility
+		[22] = {itemID = 45737, spellID = 64275 }; --Glyph of Living Bomb
+		[23] = {itemID = 42749, spellID = 56984 }; --Glyph of Mage Armor
+		[24] = {itemID = 42750, spellID = 56985 }; --Glyph of Mana Gem
+		[25] = {itemID = 45739, spellID = 64314 }; --Glyph of Mirror Image
+		[26] = {itemID = 42751, spellID = 56986 }; --Glyph of Molten Armor
+		[27] = {itemID = 42752, spellID = 56987 }; --Glyph of Polymorph
+		[28] = {itemID = 42753, spellID = 56988 }; --Glyph of Remove Curse
+		[29] = {itemID = 42754, spellID = 56989 }; --Glyph of Water Elemental
 	};
 	{
 		Name = AL["Minor Glyph"] .. " - " .. LOCALIZED_CLASS_NAMES_MALE["MAGE"];
-		{ 1, "s58303", "43339", "=q1=Glyph of Arcane Intellect", "" };
-		{ 2, "s56990", "44920", "=q1=Glyph of Blast Wave", "" };
-		{ 3, "s58305", "43357", "=q1=Glyph of Fire Ward", "" };
-		{ 4, "s58306", "43359", "=q1=Glyph of Frost Armor", "" };
-		{ 5, "s58307", "43360", "=q1=Glyph of Frost Ward", "" };
-		{ 6, "s58308", "43364", "=q1=Glyph of Slow Fall", "" };
-		{ 7, "s58310", "43361", "=q1=Glyph of the Penguin", "" };
+		[1] = {itemID = 43339, spellID = 58303 }; --Glyph of Arcane Intellect
+		[2] = {itemID = 44920, spellID = 56990 }; --Glyph of Blast Wave
+		[3] = {itemID = 43357, spellID = 58305 }; --Glyph of Fire Ward
+		[4] = {itemID = 43359, spellID = 58306 }; --Glyph of Frost Armor
+		[5] = {itemID = 43360, spellID = 58307 }; --Glyph of Frost Ward
+		[6] = {itemID = 43364, spellID = 58308 }; --Glyph of Slow Fall
+		[7] = {itemID = 43361, spellID = 58310 }; --Glyph of the Penguin
 	};
 	{
 		Name = AL["Major Glyph"] .. " - " .. LOCALIZED_CLASS_NAMES_MALE["PALADIN"];
-		{ 1, "s57019", "41101", "=q1=Glyph of Avenger's Shield", "" };
-		{ 2, "s57021", "41107", "=q1=Glyph of Avenging WRATH", "" };
-		{ 3, "s64277", "45741", "=q1=Glyph of Beacon of Light", "" };
-		{ 4, "s57020", "41104", "=q1=Glyph of Cleansing", "" };
-		{ 5, "s57023", "41099", "=q1=Glyph of Consecration", "" };
-		{ 6, "s57024", "41098", "=q1=Glyph of Crusader Strike", "" };
-		{ 7, "s64305", "45745", "=q1=Glyph of Divine Plea", "" };
-		{ 8, "s64279", "45743", "=q1=Glyph of Divine Storm", "" };
-		{ 9, "s57031", "41108", "=q1=Glyph of Divinity", "" };
-		{ 10, "s57025", "41103", "=q1=Glyph of Exorcism", "" };
-		{ 11, "s57026", "41105", "=q1=Glyph of Flash of Light", "" };
-		{ 12, "s57027", "41095", "=q1=Glyph of Hammer of Justice", "" };
-		{ 13, "s64278", "45742", "=q1=Glyph of Hammer of the Righteous", "" };
-		{ 14, "s57028", "41097", "=q1=Glyph of Hammer of WRATH", "" };
-		{ 15, "s57029", "41106", "=q1=Glyph of Holy Light", "" };
-		{ 16, "s64254", "45746", "=q1=Glyph of Holy Shock", "" };
-		{ 17, "s57030", "41092", "=q1=Glyph of Judgement", "" };
-		{ 18, "s57032", "41100", "=q1=Glyph of Righteous Defense", "" };
-		{ 19, "s64251", "45747", "=q1=Glyph of Salvation", "" };
-		{ 20, "s59559", "43867", "=q1=Glyph of Seal of Blood", "" };
-		{ 21, "s57033", "41094", "=q1=Glyph of Seal of Command", "" };
-		{ 22, "s57034", "41110", "=q1=Glyph of Seal of Light", "" };
-		{ 23, "s59560", "43868", "=q1=Glyph of Seal of Righteousness", "" };
-		{ 24, "s59561", "43869", "=q1=Glyph of Seal of Vengeance", "" };
-		{ 25, "s57035", "41109", "=q1=Glyph of Seal of Wisdom", "" };
-		{ 26, "s64308", "45744", "=q1=Glyph of Shield of Righteousness", "" };
-		{ 27, "s57022", "41096", "=q1=Glyph of Spiritual Attunement", "" };
-		{ 28, "s57036", "41102", "=q1=Glyph of Turn Evil", "" };
+		[1] = {itemID = 41101, spellID = 57019 }; --Glyph of Avenger's Shield
+		[2] = {itemID = 41107, spellID = 57021 }; --Glyph of Avenging WRATH
+		[3] = {itemID = 45741, spellID = 64277 }; --Glyph of Beacon of Light
+		[4] = {itemID = 41104, spellID = 57020 }; --Glyph of Cleansing
+		[5] = {itemID = 41099, spellID = 57023 }; --Glyph of Consecration
+		[6] = {itemID = 41098, spellID = 57024 }; --Glyph of Crusader Strike
+		[7] = {itemID = 45745, spellID = 64305 }; --Glyph of Divine Plea
+		[8] = {itemID = 45743, spellID = 64279 }; --Glyph of Divine Storm
+		[9] = {itemID = 41108, spellID = 57031 }; --Glyph of Divinity
+		[10] = {itemID = 41103, spellID = 57025 }; --Glyph of Exorcism
+		[11] = {itemID = 41105, spellID = 57026 }; --Glyph of Flash of Light
+		[12] = {itemID = 41095, spellID = 57027 }; --Glyph of Hammer of Justice
+		[13] = {itemID = 45742, spellID = 64278 }; --Glyph of Hammer of the Righteous
+		[14] = {itemID = 41097, spellID = 57028 }; --Glyph of Hammer of WRATH
+		[15] = {itemID = 41106, spellID = 57029 }; --Glyph of Holy Light
+		[16] = {itemID = 45746, spellID = 64254 }; --Glyph of Holy Shock
+		[17] = {itemID = 41092, spellID = 57030 }; --Glyph of Judgement
+		[18] = {itemID = 41100, spellID = 57032 }; --Glyph of Righteous Defense
+		[19] = {itemID = 45747, spellID = 64251 }; --Glyph of Salvation
+		[20] = {itemID = 43867, spellID = 59559 }; --Glyph of Seal of Blood
+		[21] = {itemID = 41094, spellID = 57033 }; --Glyph of Seal of Command
+		[22] = {itemID = 41110, spellID = 57034 }; --Glyph of Seal of Light
+		[23] = {itemID = 43868, spellID = 59560 }; --Glyph of Seal of Righteousness
+		[24] = {itemID = 43869, spellID = 59561 }; --Glyph of Seal of Vengeance
+		[25] = {itemID = 41109, spellID = 57035 }; --Glyph of Seal of Wisdom
+		[26] = {itemID = 45744, spellID = 64308 }; --Glyph of Shield of Righteousness
+		[27] = {itemID = 41096, spellID = 57022 }; --Glyph of Spiritual Attunement
+		[28] = {itemID = 41102, spellID = 57036 }; --Glyph of Turn Evil
 	};
 	{
 		Name = AL["Minor Glyph"] .. " - " .. LOCALIZED_CLASS_NAMES_MALE["PALADIN"];
-		{ 1, "s58311", "43365", "=q1=Glyph of Blessing of Kings", "" };
-		{ 2, "s58314", "43340", "=q1=Glyph of Blessing of Might", "" };
-		{ 3, "s58312", "43366", "=q1=Glyph of Blessing of Wisdom", "" };
-		{ 4, "s58313", "43367", "=q1=Glyph of Lay on Hands", "" };
-		{ 5, "s58315", "43368", "=q1=Glyph of Sense Undead", "" };
-		{ 6, "s58316", "43369", "=q1=Glyph of the Wise", "" };
+		[1] = {itemID = 43365, spellID = 58311 }; --Glyph of Blessing of Kings
+		[2] = {itemID = 43340, spellID = 58314 }; --Glyph of Blessing of Might
+		[3] = {itemID = 43366, spellID = 58312 }; --Glyph of Blessing of Wisdom
+		[4] = {itemID = 43367, spellID = 58313 }; --Glyph of Lay on Hands
+		[5] = {itemID = 43368, spellID = 58315 }; --Glyph of Sense Undead
+		[6] = {itemID = 43369, spellID = 58316 }; --Glyph of the Wise
 	};
 	{
 		Name = AL["Major Glyph"] .. " - " .. LOCALIZED_CLASS_NAMES_MALE["PRIEST"];
-		{ 1, "s57181", "42396", "=q1=Glyph of Circle of Healing", "" };
-		{ 2, "s57183", "42397", "=q1=Glyph of Dispel Magic", "" };
-		{ 3, "s64280", "45753", "=q1=Glyph of Dispersion", "" };
-		{ 4, "s57184", "42398", "=q1=Glyph of Fade", "" };
-		{ 5, "s57185", "42399", "=q1=Glyph of Fear Ward", "" };
-		{ 6, "s57186", "42400", "=q1=Glyph of Flash Heal", "" };
-		{ 7, "s64281", "45755", "=q1=Glyph of Guardian Spirit", "" };
-		{ 8, "s57187", "42401", "=q1=Glyph of Holy Nova", "" };
-		{ 9, "s64283", "45758", "=q1=Glyph of Hymn of Hope", "" };
-		{ 10, "s57188", "42402", "=q1=Glyph of Inner Fire", "" };
-		{ 11, "s57189", "42403", "=q1=Glyph of Lightwell", "" };
-		{ 12, "s57190", "42404", "=q1=Glyph of Mass Dispel", "" };
-		{ 13, "s57191", "42405", "=q1=Glyph of Mind Control", "" };
-		{ 14, "s57192", "42406", "=q1=Glyph of Mind Flay", "" };
-		{ 15, "s64309", "45757", "=q1=Glyph of Mind Sear", "" };
-		{ 16, "s64259", "45760", "=q1=Glyph of Pain Suppression", "" };
-		{ 17, "s64282", "45756", "=q1=Glyph of Penance", "" };
-		{ 18, "s57194", "42408", "=q1=Glyph of Power Word: Shield", "" };
-		{ 19, "s57195", "42409", "=q1=Glyph of Prayer of Healing", "" };
-		{ 20, "s57196", "42410", "=q1=Glyph of Psychic Scream", "" };
-		{ 21, "s57197", "42411", "=q1=Glyph of Renew", "" };
-		{ 22, "s57198", "42412", "=q1=Glyph of Scourge Imprisonment", "" };
-		{ 23, "s57193", "42407", "=q1=Glyph of Shadow", "" };
-		{ 24, "s57199", "42414", "=q1=Glyph of Shadow Word: Death", "" };
-		{ 25, "s57200", "42415", "=q1=Glyph of Shadow Word: Pain", "" };
-		{ 26, "s57201", "42416", "=q1=Glyph of Smite", "" };
-		{ 27, "s57202", "42417", "=q1=Glyph of Spirit of Redemption", "" };
+		[1] = {itemID = 42396, spellID = 57181 }; --Glyph of Circle of Healing
+		[2] = {itemID = 42397, spellID = 57183 }; --Glyph of Dispel Magic
+		[3] = {itemID = 45753, spellID = 64280 }; --Glyph of Dispersion
+		[4] = {itemID = 42398, spellID = 57184 }; --Glyph of Fade
+		[5] = {itemID = 42399, spellID = 57185 }; --Glyph of Fear Ward
+		[6] = {itemID = 42400, spellID = 57186 }; --Glyph of Flash Heal
+		[7] = {itemID = 45755, spellID = 64281 }; --Glyph of Guardian Spirit
+		[8] = {itemID = 42401, spellID = 57187 }; --Glyph of Holy Nova
+		[9] = {itemID = 45758, spellID = 64283 }; --Glyph of Hymn of Hope
+		[10] = {itemID = 42402, spellID = 57188 }; --Glyph of Inner Fire
+		[11] = {itemID = 42403, spellID = 57189 }; --Glyph of Lightwell
+		[12] = {itemID = 42404, spellID = 57190 }; --Glyph of Mass Dispel
+		[13] = {itemID = 42405, spellID = 57191 }; --Glyph of Mind Control
+		[14] = {itemID = 42406, spellID = 57192 }; --Glyph of Mind Flay
+		[15] = {itemID = 45757, spellID = 64309 }; --Glyph of Mind Sear
+		[16] = {itemID = 45760, spellID = 64259 }; --Glyph of Pain Suppression
+		[17] = {itemID = 45756, spellID = 64282 }; --Glyph of Penance
+		[18] = {itemID = 42408, spellID = 57194 }; --Glyph of Power Word: Shield
+		[19] = {itemID = 42409, spellID = 57195 }; --Glyph of Prayer of Healing
+		[20] = {itemID = 42410, spellID = 57196 }; --Glyph of Psychic Scream
+		[21] = {itemID = 42411, spellID = 57197 }; --Glyph of Renew
+		[22] = {itemID = 42412, spellID = 57198 }; --Glyph of Scourge Imprisonment
+		[23] = {itemID = 42407, spellID = 57193 }; --Glyph of Shadow
+		[24] = {itemID = 42414, spellID = 57199 }; --Glyph of Shadow Word: Death
+		[25] = {itemID = 42415, spellID = 57200 }; --Glyph of Shadow Word: Pain
+		[26] = {itemID = 42416, spellID = 57201 }; --Glyph of Smite
+		[27] = {itemID = 42417, spellID = 57202 }; --Glyph of Spirit of Redemption
 	};
 	{
 		Name = AL["Minor Glyph"] .. " - " .. LOCALIZED_CLASS_NAMES_MALE["PRIEST"];
-		{ 1, "s58317", "43342", "=q1=Glyph of Fading", "" };
-		{ 2, "s58318", "43371", "=q1=Glyph of Fortitude", "" };
-		{ 3, "s58319", "43370", "=q1=Glyph of Levitate", "" };
-		{ 4, "s58320", "43373", "=q1=Glyph of Shackle Undead", "" };
-		{ 5, "s58321", "43372", "=q1=Glyph of Shadow Protection", "" };
-		{ 6, "s58322", "43374", "=q1=Glyph of Shadowfiend", "" };
+		[1] = {itemID = 43342, spellID = 58317 }; --Glyph of Fading
+		[2] = {itemID = 43371, spellID = 58318 }; --Glyph of Fortitude
+		[3] = {itemID = 43370, spellID = 58319 }; --Glyph of Levitate
+		[4] = {itemID = 43373, spellID = 58320 }; --Glyph of Shackle Undead
+		[5] = {itemID = 43372, spellID = 58321 }; --Glyph of Shadow Protection
+		[6] = {itemID = 43374, spellID = 58322 }; --Glyph of Shadowfiend
 	};
 	{
 		Name = AL["Major Glyph"] .. " - " .. LOCALIZED_CLASS_NAMES_MALE["ROGUE"];
-		{ 1, "s57112", "42954", "=q1=Glyph of Adrenaline Rush", "" };
-		{ 2, "s57113", "42955", "=q1=Glyph of Ambush", "" };
-		{ 3, "s57114", "42956", "=q1=Glyph of Backstab", "" };
-		{ 4, "s57115", "42957", "=q1=Glyph of Blade Flurry", "" };
-		{ 5, "s64303", "45769", "=q1=Glyph of Cloak of Shadows", "" };
-		{ 6, "s57116", "42958", "=q1=Glyph of Crippling Poison", "" };
-		{ 7, "s57117", "42959", "=q1=Glyph of Deadly Throw", "" };
-		{ 8, "s57119", "42960", "=q1=Glyph of Evasion", "" };
-		{ 9, "s57120", "42961", "=q1=Glyph of Eviscerate", "" };
-		{ 10, "s57121", "42962", "=q1=Glyph of Expose Armor", "" };
-		{ 11, "s64315", "45766", "=q1=Glyph of Fan of Knives", "" };
-		{ 12, "s57122", "42963", "=q1=Glyph of Feint", "" };
-		{ 13, "s57123", "42964", "=q1=Glyph of Garrote", "" };
-		{ 14, "s57124", "42965", "=q1=Glyph of Ghostly Strike", "" };
-		{ 15, "s57125", "42966", "=q1=Glyph of Gouge", "" };
-		{ 16, "s57126", "42967", "=q1=Glyph of Hemorrhage", "" };
-		{ 17, "s64284", "45761", "=q1=Glyph of Hunger for Blood", "" };
-		{ 18, "s64285", "45762", "=q1=Glyph of Killing Spree", "" };
-		{ 19, "s64260", "45768", "=q1=Glyph of Mutilate", "" };
-		{ 20, "s57127", "42968", "=q1=Glyph of Preparation", "" };
-		{ 21, "s57128", "42969", "=q1=Glyph of Rupture", "" };
-		{ 22, "s57129", "42970", "=q1=Glyph of Sap", "" };
-		{ 23, "s64286", "45764", "=q1=Glyph of Shadow Dance", "" };
-		{ 24, "s57131", "42972", "=q1=Glyph of Sinister Strike", "" };
-		{ 25, "s57132", "42973", "=q1=Glyph of Slice and Dice", "" };
-		{ 26, "s57133", "42974", "=q1=Glyph of Sprint", "" };
-		{ 27, "s64310", "45767", "=q1=Glyph of Tricks of the Trade", "" };
-		{ 28, "s57130", "42971", "=q1=Glyph of Vigor", "" };
+		[1] = {itemID = 42954, spellID = 57112 }; --Glyph of Adrenaline Rush
+		[2] = {itemID = 42955, spellID = 57113 }; --Glyph of Ambush
+		[3] = {itemID = 42956, spellID = 57114 }; --Glyph of Backstab
+		[4] = {itemID = 42957, spellID = 57115 }; --Glyph of Blade Flurry
+		[5] = {itemID = 45769, spellID = 64303 }; --Glyph of Cloak of Shadows
+		[6] = {itemID = 42958, spellID = 57116 }; --Glyph of Crippling Poison
+		[7] = {itemID = 42959, spellID = 57117 }; --Glyph of Deadly Throw
+		[8] = {itemID = 42960, spellID = 57119 }; --Glyph of Evasion
+		[9] = {itemID = 42961, spellID = 57120 }; --Glyph of Eviscerate
+		[10] = {itemID = 42962, spellID = 57121 }; --Glyph of Expose Armor
+		[11] = {itemID = 45766, spellID = 64315 }; --Glyph of Fan of Knives
+		[12] = {itemID = 42963, spellID = 57122 }; --Glyph of Feint
+		[13] = {itemID = 42964, spellID = 57123 }; --Glyph of Garrote
+		[14] = {itemID = 42965, spellID = 57124 }; --Glyph of Ghostly Strike
+		[15] = {itemID = 42966, spellID = 57125 }; --Glyph of Gouge
+		[16] = {itemID = 42967, spellID = 57126 }; --Glyph of Hemorrhage
+		[17] = {itemID = 45761, spellID = 64284 }; --Glyph of Hunger for Blood
+		[18] = {itemID = 45762, spellID = 64285 }; --Glyph of Killing Spree
+		[19] = {itemID = 45768, spellID = 64260 }; --Glyph of Mutilate
+		[20] = {itemID = 42968, spellID = 57127 }; --Glyph of Preparation
+		[21] = {itemID = 42969, spellID = 57128 }; --Glyph of Rupture
+		[22] = {itemID = 42970, spellID = 57129 }; --Glyph of Sap
+		[23] = {itemID = 45764, spellID = 64286 }; --Glyph of Shadow Dance
+		[24] = {itemID = 42972, spellID = 57131 }; --Glyph of Sinister Strike
+		[25] = {itemID = 42973, spellID = 57132 }; --Glyph of Slice and Dice
+		[26] = {itemID = 42974, spellID = 57133 }; --Glyph of Sprint
+		[27] = {itemID = 45767, spellID = 64310 }; --Glyph of Tricks of the Trade
+		[28] = {itemID = 42971, spellID = 57130 }; --Glyph of Vigor
 	};
 	{
 		Name = AL["Minor Glyph"] .. " - " .. LOCALIZED_CLASS_NAMES_MALE["ROGUE"];
-		{ 1, "s58323", "43379", "=q1=Glyph of Blurred Speed", "" };
-		{ 2, "s58324", "43376", "=q1=Glyph of Distract", "" };
-		{ 3, "s58325", "43377", "=q1=Glyph of Pick Lock", "" };
-		{ 4, "s58326", "43343", "=q1=Glyph of Pick Pocket", "" };
-		{ 5, "s58327", "43378", "=q1=Glyph of Safe Fall", "" };
-		{ 6, "s58328", "43380", "=q1=Glyph of Vanish", "" };
+		[1] = {itemID = 43379, spellID = 58323 }; --Glyph of Blurred Speed
+		[2] = {itemID = 43376, spellID = 58324 }; --Glyph of Distract
+		[3] = {itemID = 43377, spellID = 58325 }; --Glyph of Pick Lock
+		[4] = {itemID = 43343, spellID = 58326 }; --Glyph of Pick Pocket
+		[5] = {itemID = 43378, spellID = 58327 }; --Glyph of Safe Fall
+		[6] = {itemID = 43380, spellID = 58328 }; --Glyph of Vanish
 	};
 	{
 		Name = AL["Major Glyph"] .. " - " .. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"];
-		{ 1, "s57232", "41517", "=q1=Glyph of Chain Heal", "" };
-		{ 2, "s57233", "41518", "=q1=Glyph of Chain Lightning", "" };
-		{ 3, "s64261", "45775", "=q1=Glyph of Earth Shield", "" };
-		{ 4, "s57235", "41526", "=q1=Glyph of Earth Shock", "" };
-		{ 5, "s57236", "41527", "=q1=Glyph of Earthliving Weapon", "" };
-		{ 6, "s57250", "41552", "=q1=Glyph of Elemental Mastery", "" };
-		{ 7, "s64288", "45771", "=q1=Glyph of Feral Spirit", "" };
-		{ 8, "s57237", "41529", "=q1=Glyph of Fire Elemental Totem", "" };
-		{ 9, "s57238", "41530", "=q1=Glyph of Fire Nova Totem", "" };
-		{ 10, "s57239", "41531", "=q1=Glyph of Flame Shock", "" };
-		{ 11, "s57240", "41532", "=q1=Glyph of Flametongue Weapon", "" };
-		{ 12, "s57241", "41547", "=q1=Glyph of Frost Shock", "" };
-		{ 13, "s57242", "41533", "=q1=Glyph of Healing Stream Totem", "" };
-		{ 14, "s57243", "41534", "=q1=Glyph of Healing Wave", "" };
-		{ 15, "s64316", "45777", "=q1=Glyph of Hex", "" };
-		{ 16, "s57234", "41524", "=q1=Glyph of Lava", "" };
-		{ 17, "s57249", "41540", "=q1=Glyph of Lava Lash", "" };
-		{ 18, "s57244", "41535", "=q1=Glyph of Lesser Healing Wave", "" };
-		{ 19, "s57245", "41536", "=q1=Glyph of Lightning Bolt", "" };
-		{ 20, "s57246", "41537", "=q1=Glyph of Lightning Shield", "" };
-		{ 21, "s57247", "41538", "=q1=Glyph of Mana Tide Totem", "" };
-		{ 22, "s64289", "45772", "=q1=Glyph of Riptide", "" };
-		{ 23, "s64247", "45778", "=q1=Glyph of Stoneclaw Totem", "" };
-		{ 24, "s57248", "41539", "=q1=Glyph of Stormstrike", "" };
-		{ 25, "s64287", "45770", "=q1=Glyph of Thunder", "" };
-		{ 26, "s64262", "45776", "=q1=Glyph of Totem of WRATH", "" };
-		{ 27, "s57251", "41541", "=q1=Glyph of Water Mastery", "" };
-		{ 28, "s57252", "41542", "=q1=Glyph of Windfury Weapon", "" };
+		[1] = {itemID = 41517, spellID = 57232 }; --Glyph of Chain Heal
+		[2] = {itemID = 41518, spellID = 57233 }; --Glyph of Chain Lightning
+		[3] = {itemID = 45775, spellID = 64261 }; --Glyph of Earth Shield
+		[4] = {itemID = 41526, spellID = 57235 }; --Glyph of Earth Shock
+		[5] = {itemID = 41527, spellID = 57236 }; --Glyph of Earthliving Weapon
+		[6] = {itemID = 41552, spellID = 57250 }; --Glyph of Elemental Mastery
+		[7] = {itemID = 45771, spellID = 64288 }; --Glyph of Feral Spirit
+		[8] = {itemID = 41529, spellID = 57237 }; --Glyph of Fire Elemental Totem
+		[9] = {itemID = 41530, spellID = 57238 }; --Glyph of Fire Nova Totem
+		[10] = {itemID = 41531, spellID = 57239 }; --Glyph of Flame Shock
+		[11] = {itemID = 41532, spellID = 57240 }; --Glyph of Flametongue Weapon
+		[12] = {itemID = 41547, spellID = 57241 }; --Glyph of Frost Shock
+		[13] = {itemID = 41533, spellID = 57242 }; --Glyph of Healing Stream Totem
+		[14] = {itemID = 41534, spellID = 57243 }; --Glyph of Healing Wave
+		[15] = {itemID = 45777, spellID = 64316 }; --Glyph of Hex
+		[16] = {itemID = 41524, spellID = 57234 }; --Glyph of Lava
+		[17] = {itemID = 41540, spellID = 57249 }; --Glyph of Lava Lash
+		[18] = {itemID = 41535, spellID = 57244 }; --Glyph of Lesser Healing Wave
+		[19] = {itemID = 41536, spellID = 57245 }; --Glyph of Lightning Bolt
+		[20] = {itemID = 41537, spellID = 57246 }; --Glyph of Lightning Shield
+		[21] = {itemID = 41538, spellID = 57247 }; --Glyph of Mana Tide Totem
+		[22] = {itemID = 45772, spellID = 64289 }; --Glyph of Riptide
+		[23] = {itemID = 45778, spellID = 64247 }; --Glyph of Stoneclaw Totem
+		[24] = {itemID = 41539, spellID = 57248 }; --Glyph of Stormstrike
+		[25] = {itemID = 45770, spellID = 64287 }; --Glyph of Thunder
+		[26] = {itemID = 45776, spellID = 64262 }; --Glyph of Totem of WRATH
+		[27] = {itemID = 41541, spellID = 57251 }; --Glyph of Water Mastery
+		[28] = {itemID = 41542, spellID = 57252 }; --Glyph of Windfury Weapon
 	};
 	{
 		Name = AL["Minor Glyph"] .. " - " .. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"];
-		{ 1, "s58329", "43381", "=q1=Glyph of Astral Recall", "" };
-		{ 2, "s59326", "43725", "=q1=Glyph of Ghost Wolf", "" };
-		{ 3, "s58330", "43385", "=q1=Glyph of Renewed Life", "" };
-		{ 4, "s57253", "44923", "=q1=Glyph of Thunderstorm", "" };
-		{ 5, "s58331", "43344", "=q1=Glyph of Water Breathing", "" };
-		{ 6, "s58332", "43386", "=q1=Glyph of Water Shield", "" };
-		{ 7, "s58333", "43388", "=q1=Glyph of Water Walking", "" };
+		[1] = {itemID = 43381, spellID = 58329 }; --Glyph of Astral Recall
+		[2] = {itemID = 43725, spellID = 59326 }; --Glyph of Ghost Wolf
+		[3] = {itemID = 43385, spellID = 58330 }; --Glyph of Renewed Life
+		[4] = {itemID = 44923, spellID = 57253 }; --Glyph of Thunderstorm
+		[5] = {itemID = 43344, spellID = 58331 }; --Glyph of Water Breathing
+		[6] = {itemID = 43386, spellID = 58332 }; --Glyph of Water Shield
+		[7] = {itemID = 43388, spellID = 58333 }; --Glyph of Water Walking
 	};
 	{
 		Name = AL["Major Glyph"] .. " - " .. LOCALIZED_CLASS_NAMES_MALE["WARLOCK"];
-		{ 1, "s64294", "45781", "=q1=Glyph of Chaos Bolt", "" };
-		{ 2, "s57258", "42454", "=q1=Glyph of Conflagrate", "" };
-		{ 3, "s57259", "42455", "=q1=Glyph of Corruption", "" };
-		{ 4, "s57260", "42456", "=q1=Glyph of Curse of Agony", "" };
-		{ 5, "s57261", "42457", "=q1=Glyph of Death Coil", "" };
-		{ 6, "s64317", "45782", "=q1=Glyph of Demonic Circle", "" };
-		{ 7, "s57262", "42458", "=q1=Glyph of Fear", "" };
-		{ 8, "s57263", "42459", "=q1=Glyph of Felguard", "" };
-		{ 9, "s57264", "42460", "=q1=Glyph of Felhunter", "" };
-		{ 10, "s64291", "45779", "=q1=Glyph of Haunt", "" };
-		{ 11, "s57265", "42461", "=q1=Glyph of Health Funnel", "" };
-		{ 12, "s57266", "42462", "=q1=Glyph of Healthstone", "" };
-		{ 13, "s57267", "42463", "=q1=Glyph of Howl of Terror", "" };
-		{ 14, "s57268", "42464", "=q1=Glyph of Immolate", "" };
-		{ 15, "s57269", "42465", "=q1=Glyph of Imp", "" };
-		{ 16, "s57257", "42453", "=q1=Glyph of Incinerate", "" };
-		{ 17, "s64248", "45785", "=q1=Glyph of Life Tap", "" };
-		{ 18, "s64318", "45780", "=q1=Glyph of Metamorphosis", "" };
-		{ 19, "s71102", "50077", "=q1=Glyph of Quick Decay", "" };
-		{ 20, "s57270", "42466", "=q1=Glyph of Searing Pain", "" };
-		{ 21, "s57271", "42467", "=q1=Glyph of Shadow Bolt", "" };
-		{ 22, "s57272", "42468", "=q1=Glyph of Shadowburn", "" };
-		{ 23, "s64311", "45783", "=q1=Glyph of Shadowflame", "" };
-		{ 24, "s57273", "42469", "=q1=Glyph of Siphon Life", "" };
-		{ 25, "s64250", "45789", "=q1=Glyph of Soul Link", "" };
-		{ 26, "s57274", "42470", "=q1=Glyph of Soulstone", "" };
-		{ 27, "s57275", "42471", "=q1=Glyph of Succubus", "" };
-		{ 28, "s57276", "42472", "=q1=Glyph of Unstable Affliction", "" };
-		{ 29, "s57277", "42473", "=q1=Glyph of Voidwalker", "" };
+		[1] = {itemID = 45781, spellID = 64294 }; --Glyph of Chaos Bolt
+		[2] = {itemID = 42454, spellID = 57258 }; --Glyph of Conflagrate
+		[3] = {itemID = 42455, spellID = 57259 }; --Glyph of Corruption
+		[4] = {itemID = 42456, spellID = 57260 }; --Glyph of Curse of Agony
+		[5] = {itemID = 42457, spellID = 57261 }; --Glyph of Death Coil
+		[6] = {itemID = 45782, spellID = 64317 }; --Glyph of Demonic Circle
+		[7] = {itemID = 42458, spellID = 57262 }; --Glyph of Fear
+		[8] = {itemID = 42459, spellID = 57263 }; --Glyph of Felguard
+		[9] = {itemID = 42460, spellID = 57264 }; --Glyph of Felhunter
+		[10] = {itemID = 45779, spellID = 64291 }; --Glyph of Haunt
+		[11] = {itemID = 42461, spellID = 57265 }; --Glyph of Health Funnel
+		[12] = {itemID = 42462, spellID = 57266 }; --Glyph of Healthstone
+		[13] = {itemID = 42463, spellID = 57267 }; --Glyph of Howl of Terror
+		[14] = {itemID = 42464, spellID = 57268 }; --Glyph of Immolate
+		[15] = {itemID = 42465, spellID = 57269 }; --Glyph of Imp
+		[16] = {itemID = 42453, spellID = 57257 }; --Glyph of Incinerate
+		[17] = {itemID = 45785, spellID = 64248 }; --Glyph of Life Tap
+		[18] = {itemID = 45780, spellID = 64318 }; --Glyph of Metamorphosis
+		[19] = {itemID = 50077, spellID = 71102 }; --Glyph of Quick Decay
+		[20] = {itemID = 42466, spellID = 57270 }; --Glyph of Searing Pain
+		[21] = {itemID = 42467, spellID = 57271 }; --Glyph of Shadow Bolt
+		[22] = {itemID = 42468, spellID = 57272 }; --Glyph of Shadowburn
+		[23] = {itemID = 45783, spellID = 64311 }; --Glyph of Shadowflame
+		[24] = {itemID = 42469, spellID = 57273 }; --Glyph of Siphon Life
+		[25] = {itemID = 45789, spellID = 64250 }; --Glyph of Soul Link
+		[26] = {itemID = 42470, spellID = 57274 }; --Glyph of Soulstone
+		[27] = {itemID = 42471, spellID = 57275 }; --Glyph of Succubus
+		[28] = {itemID = 42472, spellID = 57276 }; --Glyph of Unstable Affliction
+		[29] = {itemID = 42473, spellID = 57277 }; --Glyph of Voidwalker
 	};
 	{
 		Name = AL["Minor Glyph"] .. " - " .. LOCALIZED_CLASS_NAMES_MALE["WARLOCK"];
-		{ 1, "s58338", "43392", "=q1=Glyph of Curse of Exhaustion", "" };
-		{ 2, "s58337", "43390", "=q1=Glyph of Drain Soul", "" };
-		{ 3, "s58339", "43393", "=q1=Glyph of Enslave Demon", "" };
-		{ 4, "s58340", "43391", "=q1=Glyph of Kilrogg", "" };
-		{ 5, "s58341", "43394", "=q1=Glyph of Souls", "" };
-		{ 6, "s58336", "43389", "=q1=Glyph of Unending Breath", "" };
+		[1] = {itemID = 43392, spellID = 58338 }; --Glyph of Curse of Exhaustion
+		[2] = {itemID = 43390, spellID = 58337 }; --Glyph of Drain Soul
+		[3] = {itemID = 43393, spellID = 58339 }; --Glyph of Enslave Demon
+		[4] = {itemID = 43391, spellID = 58340 }; --Glyph of Kilrogg
+		[5] = {itemID = 43394, spellID = 58341 }; --Glyph of Souls
+		[6] = {itemID = 43389, spellID = 58336 }; --Glyph of Unending Breath
 	};
 	{
 		Name = AL["Major Glyph"] .. " - " .. LOCALIZED_CLASS_NAMES_MALE["WARRIOR"];
-		{ 1, "s57151", "43420", "=q1=Glyph of Barbaric Insults", "" };
-		{ 2, "s64295", "45790", "=q1=Glyph of Bladestorm", "" };
-		{ 3, "s57152", "43425", "=q1=Glyph of Blocking", "" };
-		{ 4, "s57153", "43412", "=q1=Glyph of Bloodthirst", "" };
-		{ 5, "s57154", "43414", "=q1=Glyph of Cleaving", "" };
-		{ 6, "s57155", "43415", "=q1=Glyph of Devastate", "" };
-		{ 7, "s64312", "45794", "=q1=Glyph of Enraged Regeneration", "" };
-		{ 8, "s57156", "43416", "=q1=Glyph of Execution", "" };
-		{ 9, "s57157", "43417", "=q1=Glyph of Hamstring", "" };
-		{ 10, "s57158", "43418", "=q1=Glyph of Heroic Strike", "" };
-		{ 11, "s57159", "43419", "=q1=Glyph of Intervene", "" };
-		{ 12, "s57166", "43426", "=q1=Glyph of Last Stand", "" };
-		{ 13, "s57160", "43421", "=q1=Glyph of Mortal Strike", "" };
-		{ 14, "s57161", "43422", "=q1=Glyph of Overpower", "" };
-		{ 15, "s57162", "43413", "=q1=Glyph of Rapid Charge", "" };
-		{ 16, "s57163", "43423", "=q1=Glyph of Rending", "" };
-		{ 17, "s57164", "43430", "=q1=Glyph of Resonating Power", "" };
-		{ 18, "s57165", "43424", "=q1=Glyph of Revenge", "" };
-		{ 19, "s64252", "45797", "=q1=Glyph of Shield Wall", "" };
-		{ 20, "s64296", "45792", "=q1=Glyph of Shockwave", "" };
-		{ 21, "s64302", "45795", "=q1=Glyph of Spell Reflection", "" };
-		{ 22, "s57167", "43427", "=q1=Glyph of Sunder Armor", "" };
-		{ 23, "s57168", "43428", "=q1=Glyph of Sweeping Strikes", "" };
-		{ 24, "s57169", "43429", "=q1=Glyph of Taunt", "" };
-		{ 25, "s57170", "43431", "=q1=Glyph of Victory Rush", "" };
-		{ 26, "s64255", "45793", "=q1=Glyph of Vigilance", "" };
-		{ 27, "s57172", "43432", "=q1=Glyph of Whirlwind", "" };
+		[1] = {itemID = 43420, spellID = 57151 }; --Glyph of Barbaric Insults
+		[2] = {itemID = 45790, spellID = 64295 }; --Glyph of Bladestorm
+		[3] = {itemID = 43425, spellID = 57152 }; --Glyph of Blocking
+		[4] = {itemID = 43412, spellID = 57153 }; --Glyph of Bloodthirst
+		[5] = {itemID = 43414, spellID = 57154 }; --Glyph of Cleaving
+		[6] = {itemID = 43415, spellID = 57155 }; --Glyph of Devastate
+		[7] = {itemID = 45794, spellID = 64312 }; --Glyph of Enraged Regeneration
+		[8] = {itemID = 43416, spellID = 57156 }; --Glyph of Execution
+		[9] = {itemID = 43417, spellID = 57157 }; --Glyph of Hamstring
+		[10] = {itemID = 43418, spellID = 57158 }; --Glyph of Heroic Strike
+		[11] = {itemID = 43419, spellID = 57159 }; --Glyph of Intervene
+		[12] = {itemID = 43426, spellID = 57166 }; --Glyph of Last Stand
+		[13] = {itemID = 43421, spellID = 57160 }; --Glyph of Mortal Strike
+		[14] = {itemID = 43422, spellID = 57161 }; --Glyph of Overpower
+		[15] = {itemID = 43413, spellID = 57162 }; --Glyph of Rapid Charge
+		[16] = {itemID = 43423, spellID = 57163 }; --Glyph of Rending
+		[17] = {itemID = 43430, spellID = 57164 }; --Glyph of Resonating Power
+		[18] = {itemID = 43424, spellID = 57165 }; --Glyph of Revenge
+		[19] = {itemID = 45797, spellID = 64252 }; --Glyph of Shield Wall
+		[20] = {itemID = 45792, spellID = 64296 }; --Glyph of Shockwave
+		[21] = {itemID = 45795, spellID = 64302 }; --Glyph of Spell Reflection
+		[22] = {itemID = 43427, spellID = 57167 }; --Glyph of Sunder Armor
+		[23] = {itemID = 43428, spellID = 57168 }; --Glyph of Sweeping Strikes
+		[24] = {itemID = 43429, spellID = 57169 }; --Glyph of Taunt
+		[25] = {itemID = 43431, spellID = 57170 }; --Glyph of Victory Rush
+		[26] = {itemID = 45793, spellID = 64255 }; --Glyph of Vigilance
+		[27] = {itemID = 43432, spellID = 57172 }; --Glyph of Whirlwind
 	};
 	{
 		Name = AL["Minor Glyph"] .. " - " .. LOCALIZED_CLASS_NAMES_MALE["WARRIOR"];
-		{ 1, "s58342", "43395", "=q1=Glyph of Battle", "" };
-		{ 2, "s58343", "43396", "=q1=Glyph of Bloodrage", "" };
-		{ 3, "s58344", "43397", "=q1=Glyph of Charge", "" };
-		{ 4, "s68166", "49084", "=q1=Glyph of Command", "" };
-		{ 5, "s58347", "43400", "=q1=Glyph of Enduring Victory", "" };
-		{ 6, "s58345", "43398", "=q1=Glyph of Mocking Blow", "" };
-		{ 7, "s58346", "43399", "=q1=Glyph of Thunder Clap", "" };
+		[1] = {itemID = 43395, spellID = 58342 }; --Glyph of Battle
+		[2] = {itemID = 43396, spellID = 58343 }; --Glyph of Bloodrage
+		[3] = {itemID = 43397, spellID = 58344 }; --Glyph of Charge
+		[4] = {itemID = 49084, spellID = 68166 }; --Glyph of Command
+		[5] = {itemID = 43400, spellID = 58347 }; --Glyph of Enduring Victory
+		[6] = {itemID = 43398, spellID = 58345 }; --Glyph of Mocking Blow
+		[7] = {itemID = 43399, spellID = 58346 }; --Glyph of Thunder Clap
 	};
 };
 
@@ -1631,328 +1627,328 @@ AtlasLoot_Data["LeatherworkingCLASSIC"] = {
 	Type = "Crafting";
 	{
 		Name = AL["Leather Armor"] .. WHITE .. " - Back";
-		{ 1, "s22926", "18509", "=q4=Chromatic Cloak", "" };
-		{ 2, "s22928", "18511", "=q4=Shifting Cloak", "" };
-		{ 3, "s22927", "18510", "=q4=Hide of the Wild", "" };
-		{ 4, "s19093", "15138", "=q3=Onyxia Scale Cloak", "" };
-		{ 5, "s10574", "8215", "=q2=Wild Leather Cloak", "" };
-		{ 6, "s10562", "8216", "=q2=Big Voodoo Cloak", "" };
-		{ 7, "s7153", "5965", "=q2=Guardian Cloak", "" };
-		{ 8, "s9198", "7377", "=q2=Frost Leather Cloak", "" };
-		{ 9, "s9070", "7283", "=q2=Black Whelp Cloak", "" };
-		{ 10, "s7953", "6466", "=q2=Deviate Scale Cloak", "" };
-		{ 11, "s2159", "2308", "=q2=Fine Leather Cloak", "" };
-		{ 12, "s3760", "3719", "=q1=Hillman's Cloak", "" };
-		{ 13, "s2168", "2316", "=q1=Dark Leather Cloak", "" };
-		{ 14, "s2162", "2310", "=q1=Embossed Leather Cloak", "" };
-		{ 15, "s9058", "7276", "=q1=Handstitched Leather Cloak", "" };
+		[1] = {itemID = 18509, spellID = 22926 }; --Chromatic Cloak
+		[2] = {itemID = 18511, spellID = 22928 }; --Shifting Cloak
+		[3] = {itemID = 18510, spellID = 22927 }; --Hide of the Wild
+		[4] = {itemID = 15138, spellID = 19093 }; --Onyxia Scale Cloak
+		[5] = {itemID = 8215, spellID = 10574 }; --Wild Leather Cloak
+		[6] = {itemID = 8216, spellID = 10562 }; --Big Voodoo Cloak
+		[7] = {itemID = 5965, spellID = 7153 }; --Guardian Cloak
+		[8] = {itemID = 7377, spellID = 9198 }; --Frost Leather Cloak
+		[9] = {itemID = 7283, spellID = 9070 }; --Black Whelp Cloak
+		[10] = {itemID = 6466, spellID = 7953 }; --Deviate Scale Cloak
+		[11] = {itemID = 2308, spellID = 2159 }; --Fine Leather Cloak
+		[12] = {itemID = 3719, spellID = 3760 }; --Hillman's Cloak
+		[13] = {itemID = 2316, spellID = 2168 }; --Dark Leather Cloak
+		[14] = {itemID = 2310, spellID = 2162 }; --Embossed Leather Cloak
+		[15] = {itemID = 7276, spellID = 9058 }; --Handstitched Leather Cloak
 	};
 	{
 		Name = AL["Leather Armor"] .. WHITE .. " - Chest";
-		{ 1, "s28219", "22661", "=q4=Polar Tunic", "" };
-		{ 2, "s19095", "15059", "=q3=Living Breastplate", "" };
-		{ 3, "s24121", "19685", "=q3=Primal Batskin Jerkin", "" };
-		{ 4, "s24124", "19688", "=q3=Blood Tiger Breastplate", "" };
-		{ 5, "s19104", "15068", "=q2=Frostsaber Tunic", "" };
-		{ 6, "s19102", "15090", "=q2=Runic Leather Armor", "" };
-		{ 7, "s19098", "15085", "=q2=Wicked Leather Armor", "" };
-		{ 8, "s19081", "15075", "=q2=Chimeric Vest", "" };
-		{ 9, "s19086", "15066", "=q3=Ironfeather Breastplate", "" };
-		{ 10, "s19079", "15056", "=q3=Stormshroud Armor", "" };
-		{ 11, "s19076", "15053", "=q2=Volcanic Breastplate", "" };
-		{ 12, "s19068", "15064", "=q3=Warbear Harness", "" };
-		{ 13, "s10647", "8349", "=q3=Feathered Breastplate", "" };
-		{ 14, "s10630", "8346", "=q3=Gauntlets of the Sea", "" };
-		{ 15, "s10544", "8211", "=q2=Wild Leather Vest", "" };
-		{ 16, "s10520", "8200", "=q2=Big Voodoo Robe", "" };
+		[1] = {itemID = 22661, spellID = 28219 }; --Polar Tunic
+		[2] = {itemID = 15059, spellID = 19095 }; --Living Breastplate
+		[3] = {itemID = 19685, spellID = 24121 }; --Primal Batskin Jerkin
+		[4] = {itemID = 19688, spellID = 24124 }; --Blood Tiger Breastplate
+		[5] = {itemID = 15068, spellID = 19104 }; --Frostsaber Tunic
+		[6] = {itemID = 15090, spellID = 19102 }; --Runic Leather Armor
+		[7] = {itemID = 15085, spellID = 19098 }; --Wicked Leather Armor
+		[8] = {itemID = 15075, spellID = 19081 }; --Chimeric Vest
+		[9] = {itemID = 15066, spellID = 19086 }; --Ironfeather Breastplate
+		[10] = {itemID = 15056, spellID = 19079 }; --Stormshroud Armor
+		[11] = {itemID = 15053, spellID = 19076 }; --Volcanic Breastplate
+		[12] = {itemID = 15064, spellID = 19068 }; --Warbear Harness
+		[13] = {itemID = 8349, spellID = 10647 }; --Feathered Breastplate
+		[14] = {itemID = 8346, spellID = 10630 }; --Gauntlets of the Sea
+		[15] = {itemID = 8211, spellID = 10544 }; --Wild Leather Vest
+		[16] = {itemID = 8200, spellID = 10520 }; --Big Voodoo Robe
 	};
 	{
 		Name = AL["Leather Armor"] .. WHITE .. " - Chest";
-		{ 1, "s10499", "8175", "=q2=Nightscape Tunic", "" };
-		{ 2, "s6661", "5739", "=q1=Barbaric Harness", "" };
-		{ 3, "s9196", "7374", "=q2=Dusky Leather Armor", "" };
-		{ 4, "s9197", "7375", "=q2=Green Whelp Armor", "" };
-		{ 5, "s3773", "4256", "=q2=Guardian Armor", "" };
-		{ 6, "s6704", "5782", "=q2=Thick Murloc Armor", "" };
-		{ 7, "s4096", "4455", "=q2=Raptor Hide Harness", "" };
-		{ 8, "s2166", "2314", "=q1=Toughened Leather Armor", "" };
-		{ 9, "s24940", "20575", "=q2=Black Whelp Tunic", "" };
-		{ 10, "s2169", "2317", "=q2=Dark Leather Tunic", "" };
-		{ 11, "s3762", "4244", "=q2=Hillman's Leather Vest", "" };
-		{ 12, "s6703", "5781", "=q2=Murloc Scale Breastplate", "" };
-		{ 13, "s8322", "6709", "=q2=Moonglow Vest", "" };
-		{ 14, "s3761", "4243", "=q2=Fine Leather Tunic", "" };
-		{ 15, "s2160", "2300", "=q2=Embossed Leather Vest", "" };
-		{ 16, "s2163", "2311", "=q1=White Leather Jerkin", "" };
-		{ 17, "s7126", "5957", "=q1=Handstitched Leather Vest", "" };
+		[1] = {itemID = 8175, spellID = 10499 }; --Nightscape Tunic
+		[2] = {itemID = 5739, spellID = 6661 }; --Barbaric Harness
+		[3] = {itemID = 7374, spellID = 9196 }; --Dusky Leather Armor
+		[4] = {itemID = 7375, spellID = 9197 }; --Green Whelp Armor
+		[5] = {itemID = 4256, spellID = 3773 }; --Guardian Armor
+		[6] = {itemID = 5782, spellID = 6704 }; --Thick Murloc Armor
+		[7] = {itemID = 4455, spellID = 4096 }; --Raptor Hide Harness
+		[8] = {itemID = 2314, spellID = 2166 }; --Toughened Leather Armor
+		[9] = {itemID = 20575, spellID = 24940 }; --Black Whelp Tunic
+		[10] = {itemID = 2317, spellID = 2169 }; --Dark Leather Tunic
+		[11] = {itemID = 4244, spellID = 3762 }; --Hillman's Leather Vest
+		[12] = {itemID = 5781, spellID = 6703 }; --Murloc Scale Breastplate
+		[13] = {itemID = 6709, spellID = 8322 }; --Moonglow Vest
+		[14] = {itemID = 4243, spellID = 3761 }; --Fine Leather Tunic
+		[15] = {itemID = 2300, spellID = 2160 }; --Embossed Leather Vest
+		[16] = {itemID = 2311, spellID = 2163 }; --White Leather Jerkin
+		[17] = {itemID = 5957, spellID = 7126 }; --Handstitched Leather Vest
 	};
 
 	{
 		Name = AL["Leather Armor"] .. WHITE .. " - Feet";
-		{ 1, "s28473", "22760", "=q3=Bramblewood Boots", "" };
-		{ 2, "s22922", "18506", "=q3=Mongoose Boots", "" };
-		{ 3, "s20853", "16982", "=q4=Corehound Boots", "" };
-		{ 4, "s23705", "19052", "=q3=Dawn Treaders", "" };
-		{ 5, "s44953", "34086", "=q1=Winter Boots", "" };
-		{ 6, "s19063", "15073", "=q2=Chimeric Boots", "" };
-		{ 7, "s19066", "15071", "=q2=Frostsaber Boots", "" };
-		{ 8, "s10566", "8213", "=q2=Wild Leather Boots", "" };
-		{ 9, "s10558", "8197", "=q2=Nightscape Boots", "" };
-		{ 10, "s9207", "7390", "=q2=Dusky Boots", "" };
-		{ 11, "s9208", "7391", "=q2=Swift Boots", "" };
-		{ 12, "s2167", "2315", "=q1=Dark Leather Boots", "" };
-		{ 13, "s2158", "2307", "=q1=Fine Leather Boots", "" };
-		{ 14, "s2161", "2309", "=q2=Embossed Leather Boots", "" };
-		{ 15, "s2149", "2302", "=q1=Handstitched Leather Boots", "" };
+		[1] = {itemID = 22760, spellID = 28473 }; --Bramblewood Boots
+		[2] = {itemID = 18506, spellID = 22922 }; --Mongoose Boots
+		[3] = {itemID = 16982, spellID = 20853 }; --Corehound Boots
+		[4] = {itemID = 19052, spellID = 23705 }; --Dawn Treaders
+		[5] = {itemID = 34086, spellID = 44953 }; --Winter Boots
+		[6] = {itemID = 15073, spellID = 19063 }; --Chimeric Boots
+		[7] = {itemID = 15071, spellID = 19066 }; --Frostsaber Boots
+		[8] = {itemID = 8213, spellID = 10566 }; --Wild Leather Boots
+		[9] = {itemID = 8197, spellID = 10558 }; --Nightscape Boots
+		[10] = {itemID = 7390, spellID = 9207 }; --Dusky Boots
+		[11] = {itemID = 7391, spellID = 9208 }; --Swift Boots
+		[12] = {itemID = 2315, spellID = 2167 }; --Dark Leather Boots
+		[13] = {itemID = 2307, spellID = 2158 }; --Fine Leather Boots
+		[14] = {itemID = 2309, spellID = 2161 }; --Embossed Leather Boots
+		[15] = {itemID = 2302, spellID = 2149 }; --Handstitched Leather Boots
 	};
 	{
 		Name = AL["Leather Armor"] .. WHITE .. " - Hands";
-		{ 1, "s28220", "22662", "=q4=Polar Gloves", "" };
-		{ 2, "s24122", "19686", "=q3=Primal Batskin Gloves", "" };
-		{ 3, "s26279", "21278", "=q3=Stormshroud Gloves", "" };
-		{ 4, "s19087", "15070", "=q2=Frostsaber Gloves", "" };
-		{ 5, "s19084", "15063", "=q3=Devilsaur Gauntlets", "" };
-		{ 6, "s19055", "15091", "=q2=Runic Leather Gauntlets", "" };
-		{ 7, "s19053", "15074", "=q2=Chimeric Gloves", "" };
-		{ 8, "s19049", "15083", "=q2=Wicked Leather Gauntlets", "" };
-		{ 9, "s22711", "18238", "=q3=Shadowskin Gloves", "" };
-		{ 10, "s21943", "17721", "=q2=Gloves of the Greatfather", "" };
-		{ 11, "s7156", "5966", "=q1=Guardian Gloves", "" };
-		{ 12, "s3771", "4254", "=q2=Barbaric Gloves", "" };
-		{ 13, "s9149", "7359", "=q2=Heavy Earthen Gloves", "" };
-		{ 14, "s3764", "4247", "=q2=Hillman's Leather Gloves", "" };
-		{ 15, "s9148", "7358", "=q2=Pilferer's Gloves", "" };
-		{ 16, "s3770", "4253", "=q3=Toughened Leather Gloves", "" };
-		{ 17, "s9146", "7349", "=q2=Herbalist's Gloves", "" };
-		{ 18, "s9145", "7348", "=q2=Fletcher's Gloves", "" };
-		{ 19, "s3765", "4248", "=q2=Dark Leather Gloves", "" };
-		{ 20, "s9074", "7285", "=q2=Nimble Leather Gloves", "" };
-		{ 21, "s9072", "7284", "=q2=Red Whelp Gloves", "" };
-		{ 22, "s7954", "6467", "=q2=Deviate Scale Gloves", "" };
-		{ 23, "s2164", "2312", "=q2=Fine Leather Gloves", "" };
-		{ 24, "s3756", "4239", "=q1=Embossed Leather Gloves", "" };
+		[1] = {itemID = 22662, spellID = 28220 }; --Polar Gloves
+		[2] = {itemID = 19686, spellID = 24122 }; --Primal Batskin Gloves
+		[3] = {itemID = 21278, spellID = 26279 }; --Stormshroud Gloves
+		[4] = {itemID = 15070, spellID = 19087 }; --Frostsaber Gloves
+		[5] = {itemID = 15063, spellID = 19084 }; --Devilsaur Gauntlets
+		[6] = {itemID = 15091, spellID = 19055 }; --Runic Leather Gauntlets
+		[7] = {itemID = 15074, spellID = 19053 }; --Chimeric Gloves
+		[8] = {itemID = 15083, spellID = 19049 }; --Wicked Leather Gauntlets
+		[9] = {itemID = 18238, spellID = 22711 }; --Shadowskin Gloves
+		[10] = {itemID = 17721, spellID = 21943 }; --Gloves of the Greatfather
+		[11] = {itemID = 5966, spellID = 7156 }; --Guardian Gloves
+		[12] = {itemID = 4254, spellID = 3771 }; --Barbaric Gloves
+		[13] = {itemID = 7359, spellID = 9149 }; --Heavy Earthen Gloves
+		[14] = {itemID = 4247, spellID = 3764 }; --Hillman's Leather Gloves
+		[15] = {itemID = 7358, spellID = 9148 }; --Pilferer's Gloves
+		[16] = {itemID = 4253, spellID = 3770 }; --Toughened Leather Gloves
+		[17] = {itemID = 7349, spellID = 9146 }; --Herbalist's Gloves
+		[18] = {itemID = 7348, spellID = 9145 }; --Fletcher's Gloves
+		[19] = {itemID = 4248, spellID = 3765 }; --Dark Leather Gloves
+		[20] = {itemID = 7285, spellID = 9074 }; --Nimble Leather Gloves
+		[21] = {itemID = 7284, spellID = 9072 }; --Red Whelp Gloves
+		[22] = {itemID = 6467, spellID = 7954 }; --Deviate Scale Gloves
+		[23] = {itemID = 2312, spellID = 2164 }; --Fine Leather Gloves
+		[24] = {itemID = 4239, spellID = 3756 }; --Embossed Leather Gloves
 	};
 	{
 		Name = AL["Leather Armor"] .. WHITE .. " - Head";
-		{ 1, "s20854", "16983", "=q4=Molten Helm", "" };
-		{ 2, "s28472", "22759", "=q3=Bramblewood Helm", "" };
-		{ 3, "s19082", "15094", "=q2=Runic Leather Headband", "" };
-		{ 4, "s19071", "15086", "=q2=Wicked Leather Headband", "" };
-		{ 5, "s10632", "8348", "=q3=Helm of Fire", "" };
-		{ 6, "s10546", "8214", "=q2=Wild Leather Helmet", "" };
-		{ 7, "s10621", "8345", "=q3=Wolfshead Helm", "" };
-		{ 8, "s10531", "8201", "=q2=Big Voodoo Mask", "" };
-		{ 9, "s10507", "8176", "=q2=Nightscape Headband", "" };
-		{ 10, "s10490", "8174", "=q2=Comfortable Leather Hat", "" };
+		[1] = {itemID = 16983, spellID = 20854 }; --Molten Helm
+		[2] = {itemID = 22759, spellID = 28472 }; --Bramblewood Helm
+		[3] = {itemID = 15094, spellID = 19082 }; --Runic Leather Headband
+		[4] = {itemID = 15086, spellID = 19071 }; --Wicked Leather Headband
+		[5] = {itemID = 8348, spellID = 10632 }; --Helm of Fire
+		[6] = {itemID = 8214, spellID = 10546 }; --Wild Leather Helmet
+		[7] = {itemID = 8345, spellID = 10621 }; --Wolfshead Helm
+		[8] = {itemID = 8201, spellID = 10531 }; --Big Voodoo Mask
+		[9] = {itemID = 8176, spellID = 10507 }; --Nightscape Headband
+		[10] = {itemID = 8174, spellID = 10490 }; --Comfortable Leather Hat
 	};
 	{
 		Name = AL["Leather Armor"] .. WHITE .. " - Legs";
-		{ 1, "s19091", "15095", "=q2=Runic Leather Pants", "" };
-		{ 2, "s19097", "15062", "=q3=Devilsaur Leggings", "" };
-		{ 3, "s19083", "15087", "=q2=Wicked Leather Pants", "" };
-		{ 4, "s19074", "15069", "=q2=Frostsaber Leggings", "" };
-		{ 5, "s19080", "15065", "=q3=Warbear Woolies", "" };
-		{ 6, "s19078", "15060", "=q3=Living Leggings", "" };
-		{ 7, "s19073", "15072", "=q2=Chimeric Leggings", "" };
-		{ 8, "s19067", "15057", "=q3=Stormshroud Pants", "" };
-		{ 9, "s19059", "15054", "=q2=Volcanic Leggings", "" };
-		{ 10, "s36074", "29964", "=q3=Blackstorm Leggings", "" };
-		{ 11, "s36075", "29970", "=q3=Wildfeather Leggings", "" };
-		{ 12, "s10572", "8212", "=q2=Wild Leather Leggings", "" };
-		{ 13, "s10560", "8202", "=q2=Big Voodoo Pants", "" };
-		{ 14, "s10548", "8193", "=q2=Nightscape Pants", "" };
-		{ 15, "s7149", "5963", "=q2=Barbaric Leggings", "" };
-		{ 16, "s9195", "7373", "=q2=Dusky Leather Leggings", "" };
-		{ 17, "s7147", "5962", "=q2=Guardian Pants", "" };
-		{ 18, "s3772", "4255", "=q2=Green Leather Armor", "" };
-		{ 19, "s7133", "5958", "=q2=Fine Leather Pants", "" };
-		{ 20, "s7135", "5961", "=q2=Dark Leather Pants", "" };
-		{ 21, "s9068", "7282", "=q2=Light Leather Pants", "" };
-		{ 22, "s3759", "4242", "=q2=Embossed Leather Pants", "" };
-		{ 23, "s9064", "7280", "=q2=Rugged Leather Pants", "" };
-		{ 24, "s2153", "2303", "=q1=Handstitched Leather Pants", "" };
+		[1] = {itemID = 15095, spellID = 19091 }; --Runic Leather Pants
+		[2] = {itemID = 15062, spellID = 19097 }; --Devilsaur Leggings
+		[3] = {itemID = 15087, spellID = 19083 }; --Wicked Leather Pants
+		[4] = {itemID = 15069, spellID = 19074 }; --Frostsaber Leggings
+		[5] = {itemID = 15065, spellID = 19080 }; --Warbear Woolies
+		[6] = {itemID = 15060, spellID = 19078 }; --Living Leggings
+		[7] = {itemID = 15072, spellID = 19073 }; --Chimeric Leggings
+		[8] = {itemID = 15057, spellID = 19067 }; --Stormshroud Pants
+		[9] = {itemID = 15054, spellID = 19059 }; --Volcanic Leggings
+		[10] = {itemID = 29964, spellID = 36074 }; --Blackstorm Leggings
+		[11] = {itemID = 29970, spellID = 36075 }; --Wildfeather Leggings
+		[12] = {itemID = 8212, spellID = 10572 }; --Wild Leather Leggings
+		[13] = {itemID = 8202, spellID = 10560 }; --Big Voodoo Pants
+		[14] = {itemID = 8193, spellID = 10548 }; --Nightscape Pants
+		[15] = {itemID = 5963, spellID = 7149 }; --Barbaric Leggings
+		[16] = {itemID = 7373, spellID = 9195 }; --Dusky Leather Leggings
+		[17] = {itemID = 5962, spellID = 7147 }; --Guardian Pants
+		[18] = {itemID = 4255, spellID = 3772 }; --Green Leather Armor
+		[19] = {itemID = 5958, spellID = 7133 }; --Fine Leather Pants
+		[20] = {itemID = 5961, spellID = 7135 }; --Dark Leather Pants
+		[21] = {itemID = 7282, spellID = 9068 }; --Light Leather Pants
+		[22] = {itemID = 4242, spellID = 3759 }; --Embossed Leather Pants
+		[23] = {itemID = 7280, spellID = 9064 }; --Rugged Leather Pants
+		[24] = {itemID = 2303, spellID = 2153 }; --Handstitched Leather Pants
 
 	};
 	{
 		Name = AL["Leather Armor"] .. WHITE .. " - Shoulder";
-		{ 1, "s23704", "19049", "=q3=Timbermaw Brawlers", "" };
-		{ 2, "s24125", "19689", "=q3=Blood Tiger Shoulders", "" };
-		{ 3, "s23706", "19058", "=q3=Golden Mantle of the Dawn", "" };
-		{ 4, "s19103", "15096", "=q2=Runic Leather Shoulders", "" };
-		{ 5, "s19101", "15055", "=q2=Volcanic Shoulders", "" };
-		{ 6, "s19090", "15058", "=q3=Stormshroud Shoulders", "" };
-		{ 7, "s23703", "19044", "=q3=Might of the Timbermaw", "" };
-		{ 8, "s19062", "15067", "=q3=Ironfeather Shoulders", "" };
-		{ 9, "s19061", "15061", "=q3=Living Shoulders", "" };
-		{ 10, "s10529", "8210", "=q2=Wild Leather Shoulders", "" };
-		{ 11, "s10516", "8192", "=q2=Nightscape Shoulders", "" };
-		{ 12, "s7151", "5964", "=q2=Barbaric Shoulders", "" };
-		{ 13, "s3769", "4252", "=q2=Dark Leather Shoulders", "" };
-		{ 14, "s9147", "7352", "=q2=Earthen Leather Shoulders", "" };
-		{ 15, "s3768", "4251", "=q2=Hillman's Shoulders", "" };
+		[1] = {itemID = 19049, spellID = 23704 }; --Timbermaw Brawlers
+		[2] = {itemID = 19689, spellID = 24125 }; --Blood Tiger Shoulders
+		[3] = {itemID = 19058, spellID = 23706 }; --Golden Mantle of the Dawn
+		[4] = {itemID = 15096, spellID = 19103 }; --Runic Leather Shoulders
+		[5] = {itemID = 15055, spellID = 19101 }; --Volcanic Shoulders
+		[6] = {itemID = 15058, spellID = 19090 }; --Stormshroud Shoulders
+		[7] = {itemID = 19044, spellID = 23703 }; --Might of the Timbermaw
+		[8] = {itemID = 15067, spellID = 19062 }; --Ironfeather Shoulders
+		[9] = {itemID = 15061, spellID = 19061 }; --Living Shoulders
+		[10] = {itemID = 8210, spellID = 10529 }; --Wild Leather Shoulders
+		[11] = {itemID = 8192, spellID = 10516 }; --Nightscape Shoulders
+		[12] = {itemID = 5964, spellID = 7151 }; --Barbaric Shoulders
+		[13] = {itemID = 4252, spellID = 3769 }; --Dark Leather Shoulders
+		[14] = {itemID = 7352, spellID = 9147 }; --Earthen Leather Shoulders
+		[15] = {itemID = 4251, spellID = 3768 }; --Hillman's Shoulders
 	};
 	{
 		Name = AL["Leather Armor"] .. WHITE .. " - Waist";
-		{ 1, "s23709", "19162", "=q4=Corehound Belt", "" };
-		{ 2, "s23707", "19149", "=q4=Lava Belt", "" };
-		{ 3, "s23710", "19163", "=q4=Molten Belt", "" };
-		{ 4, "s22921", "18504", "=q3=Girdle of Insight", "" };
-		{ 5, "s28474", "22761", "=q3=Bramblewood Belt", "" };
-		{ 6, "s19092", "15088", "=q2=Wicked Leather Belt", "" };
-		{ 7, "s19072", "15093", "=q2=Runic Leather Belt", "" };
-		{ 8, "s3779", "4264", "=q2=Barbaric Belt", "" };
-		{ 9, "s9206", "7387", "=q2=Dusky Belt", "" };
-		{ 10, "s3778", "4262", "=q3=Gem-studded Leather Belt", "" };
-		{ 11, "s3775", "4258", "=q2=Guardian Belt", "" };
-		{ 12, "s4097", "4456", "=q2=Raptor Hide Belt", "" };
-		{ 13, "s3774", "4257", "=q2=Green Leather Belt", "" };
-		{ 14, "s3766", "4249", "=q2=Dark Leather Belt", "" };
-		{ 15, "s3767", "4250", "=q2=Hillman's Belt", "" };
-		{ 16, "s7955", "6468", "=q3=Deviate Scale Belt", "" };
-		{ 17, "s6702", "5780", "=q2=Murloc Scale Belt", "" };
-		{ 18, "s3763", "4246", "=q1=Fine Leather Belt", "" };
-		{ 19, "s3753", "4237", "=q1=Handstitched Leather Belt", "" };
+		[1] = {itemID = 19162, spellID = 23709 }; --Corehound Belt
+		[2] = {itemID = 19149, spellID = 23707 }; --Lava Belt
+		[3] = {itemID = 19163, spellID = 23710 }; --Molten Belt
+		[4] = {itemID = 18504, spellID = 22921 }; --Girdle of Insight
+		[5] = {itemID = 22761, spellID = 28474 }; --Bramblewood Belt
+		[6] = {itemID = 15088, spellID = 19092 }; --Wicked Leather Belt
+		[7] = {itemID = 15093, spellID = 19072 }; --Runic Leather Belt
+		[8] = {itemID = 4264, spellID = 3779 }; --Barbaric Belt
+		[9] = {itemID = 7387, spellID = 9206 }; --Dusky Belt
+		[10] = {itemID = 4262, spellID = 3778 }; --Gem-studded Leather Belt
+		[11] = {itemID = 4258, spellID = 3775 }; --Guardian Belt
+		[12] = {itemID = 4456, spellID = 4097 }; --Raptor Hide Belt
+		[13] = {itemID = 4257, spellID = 3774 }; --Green Leather Belt
+		[14] = {itemID = 4249, spellID = 3766 }; --Dark Leather Belt
+		[15] = {itemID = 4250, spellID = 3767 }; --Hillman's Belt
+		[16] = {itemID = 6468, spellID = 7955 }; --Deviate Scale Belt
+		[17] = {itemID = 5780, spellID = 6702 }; --Murloc Scale Belt
+		[18] = {itemID = 4246, spellID = 3763 }; --Fine Leather Belt
+		[19] = {itemID = 4237, spellID = 3753 }; --Handstitched Leather Belt
 	};
 	{
 		Name = AL["Leather Armor"] .. WHITE .. " - Wrist";
-		{ 1, "s28221", "22663", "=q4=Polar Bracers", "" };
-		{ 2, "s24123", "19687", "=q3=Primal Batskin Bracers", "" };
-		{ 3, "s19065", "15092", "=q2=Runic Leather Bracers", "" };
-		{ 4, "s19052", "15084", "=q2=Wicked Leather Bracers", "" };
-		{ 5, "s3777", "4260", "=q2=Guardian Leather Bracers", "" };
-		{ 6, "s9202", "7386", "=q2=Green Whelp Bracers", "" };
-		{ 7, "s6705", "5783", "=q2=Murloc Scale Bracers", "" };
-		{ 8, "s9201", "7378", "=q2=Dusky Bracers", "" };
-		{ 9, "s3776", "4259", "=q2=Green Leather Bracers", "" };
-		{ 10, "s23399", "18948", "=q3=Barbaric Bracers", "" };
-		{ 11, "s9065", "7281", "=q1=Light Leather Bracers", "" };
-		{ 12, "s9059", "7277", "=q1=Handstitched Leather Bracers", "" };
+		[1] = {itemID = 22663, spellID = 28221 }; --Polar Bracers
+		[2] = {itemID = 19687, spellID = 24123 }; --Primal Batskin Bracers
+		[3] = {itemID = 15092, spellID = 19065 }; --Runic Leather Bracers
+		[4] = {itemID = 15084, spellID = 19052 }; --Wicked Leather Bracers
+		[5] = {itemID = 4260, spellID = 3777 }; --Guardian Leather Bracers
+		[6] = {itemID = 7386, spellID = 9202 }; --Green Whelp Bracers
+		[7] = {itemID = 5783, spellID = 6705 }; --Murloc Scale Bracers
+		[8] = {itemID = 7378, spellID = 9201 }; --Dusky Bracers
+		[9] = {itemID = 4259, spellID = 3776 }; --Green Leather Bracers
+		[10] = {itemID = 18948, spellID = 23399 }; --Barbaric Bracers
+		[11] = {itemID = 7281, spellID = 9065 }; --Light Leather Bracers
+		[12] = {itemID = 7277, spellID = 9059 }; --Handstitched Leather Bracers
 	};
 	{
 		Name = AL["Mail Armor"] .. WHITE .. " - Chest";
-		{ 1, "s28222", "22664", "=q4=Icy Scale Breastplate", "" };
-		{ 2, "s24703", "20380", "=q4=Dreamscale Breastplate", "" };
-		{ 3, "s24851", "20478", "=q3=Sandstalker Breastplate", "" };
-		{ 4, "s24848", "20479", "=q3=Spitfire Breastplate", "" };
-		{ 5, "s19054", "15047", "=q3=Red Dragonscale Breastplate", "" };
-		{ 6, "s19085", "15050", "=q3=Black Dragonscale Breastplate", "" };
-		{ 7, "s19077", "15048", "=q3=Blue Dragonscale Breastplate", "" };
-		{ 8, "s19050", "15045", "=q3=Green Dragonscale Breastplate", "" };
-		{ 9, "s19051", "15076", "=q2=Heavy Scorpid Vest", "" };
-		{ 10, "s10650", "8367", "=q3=Dragonscale Breastplate", "" };
-		{ 11, "s10525", "8203", "=q2=Tough Scorpid Breastplate", "" };
-		{ 12, "s10511", "8189", "=q2=Turtle Scale Breastplate", "" };
+		[1] = {itemID = 22664, spellID = 28222 }; --Icy Scale Breastplate
+		[2] = {itemID = 20380, spellID = 24703 }; --Dreamscale Breastplate
+		[3] = {itemID = 20478, spellID = 24851 }; --Sandstalker Breastplate
+		[4] = {itemID = 20479, spellID = 24848 }; --Spitfire Breastplate
+		[5] = {itemID = 15047, spellID = 19054 }; --Red Dragonscale Breastplate
+		[6] = {itemID = 15050, spellID = 19085 }; --Black Dragonscale Breastplate
+		[7] = {itemID = 15048, spellID = 19077 }; --Blue Dragonscale Breastplate
+		[8] = {itemID = 15045, spellID = 19050 }; --Green Dragonscale Breastplate
+		[9] = {itemID = 15076, spellID = 19051 }; --Heavy Scorpid Vest
+		[10] = {itemID = 8367, spellID = 10650 }; --Dragonscale Breastplate
+		[11] = {itemID = 8203, spellID = 10525 }; --Tough Scorpid Breastplate
+		[12] = {itemID = 8189, spellID = 10511 }; --Turtle Scale Breastplate
 	};
 	{
 		Name = AL["Mail Armor"] .. WHITE .. " - Feet";
-		{ 1, "s20855", "16984", "=q4=Black Dragonscale Boots", "" };
-		{ 2, "s10554", "8209", "=q2=Tough Scorpid Boots", "" };
+		[1] = {itemID = 16984, spellID = 20855 }; --Black Dragonscale Boots
+		[2] = {itemID = 8209, spellID = 10554 }; --Tough Scorpid Boots
 	};
 	{
 		Name = AL["Mail Armor"] .. WHITE .. " - Hands";
-		{ 1, "s28223", "22666", "=q4=Icy Scale Gauntlets", "" };
-		{ 2, "s23708", "19157", "=q4=Chromatic Gauntlets", "" };
-		{ 3, "s24850", "20477", "=q3=Sandstalker Gauntlets", "" };
-		{ 4, "s24847", "20480", "=q3=Spitfire Gauntlets", "" };
-		{ 5, "s24655", "20296", "=q3=Green Dragonscale Gauntlets", "" };
-		{ 6, "s19064", "15078", "=q2=Heavy Scorpid Gauntlets", "" };
-		{ 7, "s10619", "8347", "=q3=Dragonscale Gauntlets", "" };
-		{ 8, "s10542", "8204", "=q2=Tough Scorpid Gloves", "" };
-		{ 9, "s10509", "8187", "=q2=Turtle Scale Gloves", "" };
+		[1] = {itemID = 22666, spellID = 28223 }; --Icy Scale Gauntlets
+		[2] = {itemID = 19157, spellID = 23708 }; --Chromatic Gauntlets
+		[3] = {itemID = 20477, spellID = 24850 }; --Sandstalker Gauntlets
+		[4] = {itemID = 20480, spellID = 24847 }; --Spitfire Gauntlets
+		[5] = {itemID = 20296, spellID = 24655 }; --Green Dragonscale Gauntlets
+		[6] = {itemID = 15078, spellID = 19064 }; --Heavy Scorpid Gauntlets
+		[7] = {itemID = 8347, spellID = 10619 }; --Dragonscale Gauntlets
+		[8] = {itemID = 8204, spellID = 10542 }; --Tough Scorpid Gloves
+		[9] = {itemID = 8187, spellID = 10509 }; --Turtle Scale Gloves
 	};
 	{
 		Name = AL["Mail Armor"] .. WHITE .. " - Head";
-		{ 1, "s19088", "15080", "=q2=Heavy Scorpid Helm", "" };
-		{ 2, "s10570", "8208", "=q2=Tough Scorpid Helm", "" };
-		{ 3, "s10552", "8191", "=q2=Turtle Scale Helm", "" };
+		[1] = {itemID = 15080, spellID = 19088 }; --Heavy Scorpid Helm
+		[2] = {itemID = 8208, spellID = 10570 }; --Tough Scorpid Helm
+		[3] = {itemID = 8191, spellID = 10552 }; --Turtle Scale Helm
 	};
 	{
 		Name = AL["Mail Armor"] .. WHITE .. " - Legs";
-		{ 1, "s24654", "20295", "=q3=Blue Dragonscale Leggings", "" };
-		{ 2, "s19107", "15052", "=q3=Black Dragonscale Leggings", "" };
-		{ 3, "s19075", "15079", "=q2=Heavy Scorpid Leggings", "" };
-		{ 4, "s19060", "15046", "=q3=Green Dragonscale Leggings", "" };
-		{ 5, "s36076", "29971", "=q3=Dragonstrike Leggings", "" };
-		{ 6, "s10568", "8206", "=q2=Tough Scorpid Leggings", "" };
-		{ 7, "s10556", "8185", "=q2=Turtle Scale Leggings", "" };
+		[1] = {itemID = 20295, spellID = 24654 }; --Blue Dragonscale Leggings
+		[2] = {itemID = 15052, spellID = 19107 }; --Black Dragonscale Leggings
+		[3] = {itemID = 15079, spellID = 19075 }; --Heavy Scorpid Leggings
+		[4] = {itemID = 15046, spellID = 19060 }; --Green Dragonscale Leggings
+		[5] = {itemID = 29971, spellID = 36076 }; --Dragonstrike Leggings
+		[6] = {itemID = 8206, spellID = 10568 }; --Tough Scorpid Leggings
+		[7] = {itemID = 8185, spellID = 10556 }; --Turtle Scale Leggings
 	};
 	{
 		Name = AL["Mail Armor"] .. WHITE .. " - Shoulder";
-		{ 1, "s19094", "15051", "=q3=Black Dragonscale Shoulders", "" };
-		{ 2, "s19100", "15081", "=q2=Heavy Scorpid Shoulders", "" };
-		{ 3, "s19089", "15049", "=q3=Blue Dragonscale Shoulders", "" };
-		{ 4, "s10564", "8207", "=q2=Tough Scorpid Shoulders", "" };
+		[1] = {itemID = 15051, spellID = 19094 }; --Black Dragonscale Shoulders
+		[2] = {itemID = 15081, spellID = 19100 }; --Heavy Scorpid Shoulders
+		[3] = {itemID = 15049, spellID = 19089 }; --Blue Dragonscale Shoulders
+		[4] = {itemID = 8207, spellID = 10564 }; --Tough Scorpid Shoulders
 
 	};
 	{
 		Name = AL["Mail Armor"] .. WHITE .. " - Waist";
-		{ 1, "s19070", "15082", "=q2=Heavy Scorpid Belt", "" };
+		[1] = {itemID = 15082, spellID = 19070 }; --Heavy Scorpid Belt
 	};
 	{
 		Name = AL["Mail Armor"] .. WHITE .. " - Wrist";
-		{ 1, "s28224", "22665", "=q4=Icy Scale Bracers", "" };
-		{ 2, "s22923", "18508", "=q3=Swift Flight Bracers", "" };
-		{ 3, "s24849", "20476", "=q3=Sandstalker Bracers", "" };
-		{ 4, "s24846", "20481", "=q3=Spitfire Bracers", "" };
-		{ 5, "s19048", "15077", "=q2=Heavy Scorpid Bracers", "" };
-		{ 6, "s10533", "8205", "=q2=Tough Scorpid Bracers", "" };
-		{ 7, "s10518", "8198", "=q2=Turtle Scale Bracers", "" };
+		[1] = {itemID = 22665, spellID = 28224 }; --Icy Scale Bracers
+		[2] = {itemID = 18508, spellID = 22923 }; --Swift Flight Bracers
+		[3] = {itemID = 20476, spellID = 24849 }; --Sandstalker Bracers
+		[4] = {itemID = 20481, spellID = 24846 }; --Spitfire Bracers
+		[5] = {itemID = 15077, spellID = 19048 }; --Heavy Scorpid Bracers
+		[6] = {itemID = 8205, spellID = 10533 }; --Tough Scorpid Bracers
+		[7] = {itemID = 8198, spellID = 10518 }; --Turtle Scale Bracers
 	};
 	{
 		Name = AL["Item Enhancements"];
-		{ 1, "s19058", "15564", "=q1=Rugged Armor Kit", "" };
-		{ 2, "s10487", "8173", "=q1=Thick Armor Kit", "" };
-		{ 3, "s3780", "4265", "=q1=Heavy Armor Kit", "" };
-		{ 4, "s2165", "2313", "=q1=Medium Armor Kit", "" };
-		{ 5, "s2152", "2304", "=q1=Light Armor Kit", "" };
+		[1] = {itemID = 15564, spellID = 19058 }; --Rugged Armor Kit
+		[2] = {itemID = 8173, spellID = 10487 }; --Thick Armor Kit
+		[3] = {itemID = 4265, spellID = 3780 }; --Heavy Armor Kit
+		[4] = {itemID = 2313, spellID = 2165 }; --Medium Armor Kit
+		[5] = {itemID = 2304, spellID = 2152 }; --Light Armor Kit
 	};
 	{
 		Name = AL["Quivers and Ammo Pouches"];
-		{ 1, "s14930", "8217", "=q2=Quickdraw Quiver", "" };
-		{ 2, "s14932", "8218", "=q2=Thick Leather Ammo Pouch", "" };
-		{ 3, "s9194", "7372", "=q2=Heavy Leather Ammo Pouch", "" };
-		{ 4, "s9193", "7371", "=q2=Heavy Quiver", "" };
-		{ 5, "s9060", "7278", "=q1=Light Leather Quiver", "" };
-		{ 6, "s9062", "7279", "=q1=Small Leather Ammo Pouch", "" };
+		[1] = {itemID = 8217, spellID = 14930 }; --Quickdraw Quiver
+		[2] = {itemID = 8218, spellID = 14932 }; --Thick Leather Ammo Pouch
+		[3] = {itemID = 7372, spellID = 9194 }; --Heavy Leather Ammo Pouch
+		[4] = {itemID = 7371, spellID = 9193 }; --Heavy Quiver
+		[5] = {itemID = 7278, spellID = 9060 }; --Light Leather Quiver
+		[6] = {itemID = 7279, spellID = 9062 }; --Small Leather Ammo Pouch
 	};
 	{
 		Name = AL["Drums, Bags and Misc."];
-		{ 1, "s22815", "18258", "=q2=Gordok Ogre Suit", "" };
-		{ 2, "s23190", "18662", "=q1=Heavy Leather Ball", "" };
-		{ 3, "s5244", "5081", "=q1=Kodo Hide Bag", "" };
+		[1] = {itemID = 18258, spellID = 22815 }; --Gordok Ogre Suit
+		[2] = {itemID = 18662, spellID = 23190 }; --Heavy Leather Ball
+		[3] = {itemID = 5081, spellID = 5244 }; --Kodo Hide Bag
 	};
 	{
 		Name = BabbleInventory["Leather"];
-		{ 1, "s22331", "8170", "=q1=Rugged Leather", "" };
-		{ 2, "s19047", "15407", "=q1=Cured Rugged Hide", "" };
-		{ 3, "s20650", "4304", "=q1=Thick Leather", "" };
-		{ 4, "s10482", "8172", "=q1=Cured Thick Hide", "" };
-		{ 5, "s20649", "4234", "=q1=Heavy Leather", "" };
-		{ 6, "s3818", "4236", "=q1=Cured Heavy Hide", "" };
-		{ 7, "s20648", "2319", "=q1=Medium Leather", "" };
-		{ 8, "s3817", "4233", "=q1=Cured Medium Hide", "" };
-		{ 9, "s3816", "4231", "=q1=Cured Light Hide", "" };
-		{ 10, "s2881", "2318", "=q1=Light Leather", "" };
+		[1] = {itemID = 8170, spellID = 22331 }; --Rugged Leather
+		[2] = {itemID = 15407, spellID = 19047 }; --Cured Rugged Hide
+		[3] = {itemID = 4304, spellID = 20650 }; --Thick Leather
+		[4] = {itemID = 8172, spellID = 10482 }; --Cured Thick Hide
+		[5] = {itemID = 4234, spellID = 20649 }; --Heavy Leather
+		[6] = {itemID = 4236, spellID = 3818 }; --Cured Heavy Hide
+		[7] = {itemID = 2319, spellID = 20648 }; --Medium Leather
+		[8] = {itemID = 4233, spellID = 3817 }; --Cured Medium Hide
+		[9] = {itemID = 4231, spellID = 3816 }; --Cured Light Hide
+		[10] = {itemID = 2318, spellID = 2881 }; --Light Leather
 	};
 	{
 		Name = DRAGONSCALE;
-		{ 1, "s24654", "20295", "=q3=Blue Dragonscale Leggings", "" };
-		{ 2, "s24655", "20296", "=q3=Green Dragonscale Gauntlets", "" };
-		{ 3, "s36076", "29971", "=q3=Dragonstrike Leggings", "" };
-		{ 4, "s10650", "8367", "=q3=Dragonscale Breastplate", "" };
-		{ 5, "s10619", "8347", "=q3=Dragonscale Gauntlets", "" };
+		[1] = {itemID = 20295, spellID = 24654 }; --Blue Dragonscale Leggings
+		[2] = {itemID = 20296, spellID = 24655 }; --Green Dragonscale Gauntlets
+		[3] = {itemID = 29971, spellID = 36076 }; --Dragonstrike Leggings
+		[4] = {itemID = 8367, spellID = 10650 }; --Dragonscale Breastplate
+		[5] = {itemID = 8347, spellID = 10619 }; --Dragonscale Gauntlets
 	};
 	{
 		Name = ELEMENTAL;
-		{ 3, "s10630", "8346", "=q3=Gauntlets of the Sea", "" };
-		{ 2, "s10632", "8348", "=q3=Helm of Fire", "" };
-		{ 1, "s36074", "29964", "=q3=Blackstorm Leggings", "" };
+		[3] = {itemID = 8346, spellID = 10630 }; --Gauntlets of the Sea
+		[2] = {itemID = 8348, spellID = 10632 }; --Helm of Fire
+		[1] = {itemID = 29964, spellID = 36074 }; --Blackstorm Leggings
 	};
 	{
 		Name = TRIBAL;
-		{ 3, "s10621", "8345", "=q3=Wolfshead Helm", "" };
-		{ 2, "s10647", "8349", "=q3=Feathered Breastplate", "" };
-		{ 1, "s36075", "29970", "=q3=Wildfeather Leggings", "" };
+		[3] = {itemID = 8345, spellID = 10621 }; --Wolfshead Helm
+		[2] = {itemID = 8349, spellID = 10647 }; --Feathered Breastplate
+		[1] = {itemID = 29970, spellID = 36075 }; --Wildfeather Leggings
 	};
 };
 
@@ -1965,19 +1961,19 @@ AtlasLoot_Data["MiningCLASSIC"] = {
 	Type = "CraftingNoBF";
 	{
 		Name = MINING;
-		{ 1, "s22967", "17771", "=q5=Smelt Elementium", "" };
-		{ 2, "s70524", "12655", "=q1=Enchanted Thorium", "" };
-		{ 3, "s16153", "12359", "=q1=Smelt Thorium", "" };
-		{ 4, "s14891", "11371", "=q1=Smelt Dark Iron", "" };
-		{ 5, "s10098", "6037", "=q2=Smelt Truesilver", "" };
-		{ 6, "s10097", "3860", "=q1=Smelt Mithril", "" };
-		{ 7, "s3569", "3859", "=q1=Smelt Steel", "" };
-		{ 8, "s3308", "3577", "=q2=Smelt Gold", "" };
-		{ 9, "s3307", "3575", "=q1=Smelt Iron", "" };
-		{ 10, "s2658", "2842", "=q2=Smelt Silver", "" };
-		{ 11, "s2659", "2841", "=q1=Smelt Bronze", "" };
-		{ 12, "s3304", "3576", "=q1=Smelt Tin", "" };
-		{ 13, "s2657", "2840", "=q1=Smelt Copper", "" };
+		[1] = {itemID = 17771, spellID = 22967 }; --Smelt Elementium
+		[2] = {itemID = 12655, spellID = 70524 }; --Enchanted Thorium
+		[3] = {itemID = 12359, spellID = 16153 }; --Smelt Thorium
+		[4] = {itemID = 11371, spellID = 14891 }; --Smelt Dark Iron
+		[5] = {itemID = 6037, spellID = 10098 }; --Smelt Truesilver
+		[6] = {itemID = 3860, spellID = 10097 }; --Smelt Mithril
+		[7] = {itemID = 3859, spellID = 3569 }; --Smelt Steel
+		[8] = {itemID = 3577, spellID = 3308 }; --Smelt Gold
+		[9] = {itemID = 3575, spellID = 3307 }; --Smelt Iron
+		[10] = {itemID = 2842, spellID = 2658 }; --Smelt Silver
+		[11] = {itemID = 2841, spellID = 2659 }; --Smelt Bronze
+		[12] = {itemID = 3576, spellID = 3304 }; --Smelt Tin
+		[13] = {itemID = 2840, spellID = 2657 }; --Smelt Copper
 	};
 };
 
@@ -1990,372 +1986,275 @@ AtlasLoot_Data["TailoringCLASSIC"] = {
 	Type = "Crafting";
 	{
 		Name = AL["Cloth Armor"] .. WHITE .. " - Back";
-		{ 1, "s28208", "22658", "=q4=Glacial Cloak", "" };
-		{ 2, "s28210", "22660", "=q3=Gaea's Embrace", "" };
-		{ 3, "s22870", "18413", "=q3=Cloak of Warding", "" };
-		{ 4, "s23662", "19047", "=q3=Wisdom of the Timbermaw", "" };
-		{ 5, "s18422", "14134", "=q3=Cloak of Fire", "" };
-		{ 6, "s18409", "13860", "=q2=Runecloth Cloak", "" };
-		{ 7, "s3862", "4327", "=q3=Icy Cloak", "" };
-		{ 8, "s63742", "45626", "=q3=Spidersilk Drape", "" };
-		{ 9, "s18420", "14103", "=q2=Brightcloth Cloak", "" };
-		{ 10, "s18418", "14044", "=q2=Cindercloth Cloak", "" };
-		{ 11, "s3861", "4326", "=q2=Long Silken Cloak", "" };
-		{ 12, "s8789", "7056", "=q2=Crimson Silk Cloak", "" };
-		{ 13, "s8786", "7053", "=q2=Azure Silk Cloak", "" };
-		{ 14, "s8780", "7047", "=q2=Hands of Darkness", "" };
-		{ 15, "s3844", "4311", "=q2=Heavy Woolen Cloak", "" };
-		{ 16, "s6521", "5542", "=q2=Pearl-clasped Cloak", "" };
-		{ 17, "s2402", "2584", "=q1=Woolen Cape", "" };
-		{ 18, "s2397", "2580", "=q1=Reinforced Linen Cape", "" };
-		{ 19, "s2387", "2570", "=q1=Linen Cloak", "" };
+		[1] = {itemID = 22658, spellID = 28208 }; --Glacial Cloak
+		[2] = {itemID = 22660, spellID = 28210 }; --Gaea's Embrace
+		[3] = {itemID = 18413, spellID = 22870 }; --Cloak of Warding
+		[4] = {itemID = 19047, spellID = 23662 }; --Wisdom of the Timbermaw
+		[5] = {itemID = 14134, spellID = 18422 }; --Cloak of Fire
+		[6] = {itemID = 13860, spellID = 18409 }; --Runecloth Cloak
+		[7] = {itemID = 4327, spellID = 3862 }; --Icy Cloak
+		[8] = {itemID = 45626, spellID = 63742 }; --Spidersilk Drape
+		[9] = {itemID = 14103, spellID = 18420 }; --Brightcloth Cloak
+		[10] = {itemID = 14044, spellID = 18418 }; --Cindercloth Cloak
+		[11] = {itemID = 4326, spellID = 3861 }; --Long Silken Cloak
+		[12] = {itemID = 7056, spellID = 8789 }; --Crimson Silk Cloak
+		[13] = {itemID = 7053, spellID = 8786 }; --Azure Silk Cloak
+		[14] = {itemID = 7047, spellID = 8780 }; --Hands of Darkness
+		[15] = {itemID = 4311, spellID = 3844 }; --Heavy Woolen Cloak
+		[16] = {itemID = 5542, spellID = 6521 }; --Pearl-clasped Cloak
+		[17] = {itemID = 2584, spellID = 2402 }; --Woolen Cape
+		[18] = {itemID = 2580, spellID = 2397 }; --Reinforced Linen Cape
+		[19] = {itemID = 2570, spellID = 2387 }; --Linen Cloak
 	};
 	{
 		Name = AL["Cloth Armor"] .. WHITE .. " - Chest 1";
-		{ 1, "s23666", "19156", "=q4=Flarecore Robe", "" };
-		{ 2, "s28207", "22652", "=q4=Glacial Vest", "" };
-		{ 3, "s18457", "14152", "=q4=Robe of the Archmage", "" };
-		{ 4, "s18458", "14153", "=q4=Robe of the Void", "" };
-		{ 5, "s18456", "14154", "=q4=Truefaith Vestments", "" };
-		{ 6, "s24091", "19682", "=q3=Bloodvine Vest", "" };
-		{ 7, "s22902", "18486", "=q3=Mooncloth Robe", "" };
-		{ 8, "s18447", "14138", "=q3=Mooncloth Vest", "" };
-		{ 9, "s28480", "22756", "=q3=Sylvan Vest", "" };
-		{ 10, "s18451", "14106", "=q2=Felcloth Robe", "" };
-		{ 11, "s18446", "14128", "=q2=Wizardweave Robe", "" };
-		{ 12, "s18436", "14136", "=q3=Robe of Winter Night", "" };
-		{ 13, "s12070", "10021", "=q3=Dreamweave Vest", "" };
-		{ 14, "s18416", "14141", "=q2=Ghostweave Vest", "" };
-		{ 15, "s22813", "18258", "=q2=Gordok Ogre Suit", "" };
-		{ 16, "s18414", "14100", "=q2=Brightcloth Robe", "" };
-		{ 17, "s18408", "14042", "=q2=Cindercloth Vest", "" };
-		{ 18, "s18406", "13858", "=q2=Runecloth Robe", "" };
-		{ 19, "s18407", "13857", "=q2=Runecloth Tunic", "" };
-		{ 20, "s18404", "13868", "=q2=Frostweave Robe", "" };
-		{ 21, "s18403", "13869", "=q2=Frostweave Tunic", "" };
-		{ 22, "s26407", "21542", "=q1=Festive Red Pant Suit", "" };
-		{ 23, "s26403", "21154", "=q1=Festival Dress", "" };
-		{ 24, "s12093", "10036", "=q1=Tuxedo Jacket", "" };
-		{ 25, "s44950", "34087", "=q1=Green Winter Clothes", "" };
-		{ 26, "s44958", "34085", "=q1=Red Winter Clothes", "" };
-		{ 27, "s12091", "10040", "=q1=White Wedding Dress", "" };
-		{ 28, "s50644", "38277", "=q1=Haliscan Jacket", "" };
-		{ 29, "s12077", "10053", "=q1=Simple Black Dress", "" };
-		{ 30, "s12069", "10042", "=q2=Cindercloth Robe", "" };
+		[1] = {itemID = 19156, spellID = 23666 }; --Flarecore Robe
+		[2] = {itemID = 22652, spellID = 28207 }; --Glacial Vest
+		[3] = {itemID = 14152, spellID = 18457 }; --Robe of the Archmage
+		[4] = {itemID = 14153, spellID = 18458 }; --Robe of the Void
+		[5] = {itemID = 14154, spellID = 18456 }; --Truefaith Vestments
+		[6] = {itemID = 19682, spellID = 24091 }; --Bloodvine Vest
+		[7] = {itemID = 18486, spellID = 22902 }; --Mooncloth Robe
+		[8] = {itemID = 14138, spellID = 18447 }; --Mooncloth Vest
+		[9] = {itemID = 22756, spellID = 28480 }; --Sylvan Vest
+		[10] = {itemID = 14106, spellID = 18451 }; --Felcloth Robe
+		[11] = {itemID = 14128, spellID = 18446 }; --Wizardweave Robe
+		[12] = {itemID = 14136, spellID = 18436 }; --Robe of Winter Night
+		[13] = {itemID = 10021, spellID = 12070 }; --Dreamweave Vest
+		[14] = {itemID = 14141, spellID = 18416 }; --Ghostweave Vest
+		[15] = {itemID = 18258, spellID = 22813 }; --Gordok Ogre Suit
+		[16] = {itemID = 14100, spellID = 18414 }; --Brightcloth Robe
+		[17] = {itemID = 14042, spellID = 18408 }; --Cindercloth Vest
+		[18] = {itemID = 13858, spellID = 18406 }; --Runecloth Robe
+		[19] = {itemID = 13857, spellID = 18407 }; --Runecloth Tunic
+		[20] = {itemID = 13868, spellID = 18404 }; --Frostweave Robe
+		[21] = {itemID = 13869, spellID = 18403 }; --Frostweave Tunic
+		[22] = {itemID = 21542, spellID = 26407 }; --Festive Red Pant Suit
+		[23] = {itemID = 21154, spellID = 26403 }; --Festival Dress
+		[24] = {itemID = 10036, spellID = 12093 }; --Tuxedo Jacket
+		[25] = {itemID = 34087, spellID = 44950 }; --Green Winter Clothes
+		[26] = {itemID = 34085, spellID = 44958 }; --Red Winter Clothes
+		[27] = {itemID = 10040, spellID = 12091 }; --White Wedding Dress
+		[28] = {itemID = 38277, spellID = 50644 }; --Haliscan Jacket
+		[29] = {itemID = 10053, spellID = 12077 }; --Simple Black Dress
+		[30] = {itemID = 10042, spellID = 12069 }; --Cindercloth Robe
 	};
 	{
 		Name = AL["Cloth Armor"] .. WHITE .. " - Chest 2";
-		{ 1, "s12056", "10007", "=q2=Red Mageweave Vest", "" };
-		{ 2, "s12055", "10004", "=q2=Shadoweave Robe", "" };
-		{ 3, "s12050", "10001", "=q2=Black Mageweave Robe", "" };
-		{ 4, "s12048", "9998", "=q2=Black Mageweave Vest", "" };
-		{ 5, "s8802", "7063", "=q2=Crimson Silk Robe", "" };
-		{ 12, "s8770", "7054", "=q3=Robe of Power", "" };
-		{ 6, "s8791", "7058", "=q1=Crimson Silk Vest", "" };
-		{ 7, "s8764", "7051", "=q2=Earthen Vest", "" };
-		{ 8, "s8784", "7065", "=q2=Green Silk Armor", "" };
-		{ 9, "s3859", "4324", "=q2=Azure Silk Vest", "" };
-		{ 10, "s6692", "5770", "=q2=Robes of Arcana", "" };
-		{ 11, "s6690", "5766", "=q2=Lesser Wizard's Robe", "" };
-		{ 12, "s7643", "6264", "=q2=Greater Adept's Robe", "" };
-		{ 13, "s8467", "6787", "=q1=White Woolen Dress", "" };
-		{ 14, "s2403", "2585", "=q2=Gray Woolen Robe", "" };
-		{ 15, "s7639", "6263", "=q2=Blue Overalls", "" };
-		{ 16, "s2399", "2582", "=q1=Green Woolen Vest", "" };
-		{ 17, "s2395", "2578", "=q2=Barbaric Linen Vest", "" };
-		{ 18, "s7633", "6242", "=q2=Blue Linen Robe", "" };
-		{ 19, "s7630", "6240", "=q2=Blue Linen Vest", "" };
-		{ 20, "s7629", "6239", "=q2=Red Linen Vest", "" };
-		{ 21, "s8465", "6786", "=q1=Simple Dress", "" };
-		{ 22, "s2389", "2572", "=q2=Red Linen Robe", "" };
-		{ 23, "s7623", "6238", "=q2=Brown Linen Robe", "" };
-		{ 24, "s7624", "6241", "=q2=White Linen Robe", "" };
-		{ 25, "s2385", "2568", "=q1=Brown Linen Vest", "" };
+		[1] = {itemID = 10007, spellID = 12056 }; --Red Mageweave Vest
+		[2] = {itemID = 10004, spellID = 12055 }; --Shadoweave Robe
+		[3] = {itemID = 10001, spellID = 12050 }; --Black Mageweave Robe
+		[4] = {itemID = 9998, spellID = 12048 }; --Black Mageweave Vest
+		[5] = {itemID = 7063, spellID = 8802 }; --Crimson Silk Robe
+		[12] = {itemID = 7054, spellID = 8770 }; --Robe of Power
+		[6] = {itemID = 7058, spellID = 8791 }; --Crimson Silk Vest
+		[7] = {itemID = 7051, spellID = 8764 }; --Earthen Vest
+		[8] = {itemID = 7065, spellID = 8784 }; --Green Silk Armor
+		[9] = {itemID = 4324, spellID = 3859 }; --Azure Silk Vest
+		[10] = {itemID = 5770, spellID = 6692 }; --Robes of Arcana
+		[11] = {itemID = 5766, spellID = 6690 }; --Lesser Wizard's Robe
+		[12] = {itemID = 6264, spellID = 7643 }; --Greater Adept's Robe
+		[13] = {itemID = 6787, spellID = 8467 }; --White Woolen Dress
+		[14] = {itemID = 2585, spellID = 2403 }; --Gray Woolen Robe
+		[15] = {itemID = 6263, spellID = 7639 }; --Blue Overalls
+		[16] = {itemID = 2582, spellID = 2399 }; --Green Woolen Vest
+		[17] = {itemID = 2578, spellID = 2395 }; --Barbaric Linen Vest
+		[18] = {itemID = 6242, spellID = 7633 }; --Blue Linen Robe
+		[19] = {itemID = 6240, spellID = 7630 }; --Blue Linen Vest
+		[20] = {itemID = 6239, spellID = 7629 }; --Red Linen Vest
+		[21] = {itemID = 6786, spellID = 8465 }; --Simple Dress
+		[22] = {itemID = 2572, spellID = 2389 }; --Red Linen Robe
+		[23] = {itemID = 6238, spellID = 7623 }; --Brown Linen Robe
+		[24] = {itemID = 6241, spellID = 7624 }; --White Linen Robe
+		[25] = {itemID = 2568, spellID = 2385 }; --Brown Linen Vest
 	};
 	{
 		Name = AL["Cloth Armor"] .. WHITE .. " - Feet";
-		{ 1, "s24093", "19684", "=q3=Bloodvine Boots", "" };
-		{ 2, "s24903", "20537", "=q3=Runed Stygian Boots", "" };
-		{ 3, "s19435", "15802", "=q3=Mooncloth Boots", "" };
-		{ 4, "s23664", "19056", "=q3=Argent Boots", "" };
-		{ 5, "s18437", "14108", "=q2=Felcloth Boots", "" };
-		{ 6, "s18423", "13864", "=q2=Runecloth Boots", "" };
-		{ 7, "s12088", "10044", "=q2=Cindercloth Boots", "" };
-		{ 8, "s12082", "10031", "=q2=Shadoweave Boots", "" };
-		{ 9, "s12073", "10026", "=q2=Black Mageweave Boots", "" };
-		{ 10, "s3860", "4325", "=q2=Boots of the Enchanter", "" };
-		{ 11, "s3856", "4321", "=q2=Spider Silk Slippers", "" };
-		{ 12, "s3855", "4320", "=q3=Spidersilk Boots", "" };
-		{ 13, "s3847", "4313", "=q2=Red Woolen Boots", "" };
-		{ 14, "s2401", "2583", "=q2=Woolen Boots", "" };
-		{ 15, "s3845", "4312", "=q2=Soft-soled Linen Boots", "" };
-		{ 16, "s2386", "2569", "=q1=Linen Boots", "" };
-		{ 17, "s12045", "10046", "=q1=Simple Linen Boots", "" };
-		{ 18, "s49677", "6836", "=q1=Dress Shoes", "" };
+		[1] = {itemID = 19684, spellID = 24093 }; --Bloodvine Boots
+		[2] = {itemID = 20537, spellID = 24903 }; --Runed Stygian Boots
+		[3] = {itemID = 15802, spellID = 19435 }; --Mooncloth Boots
+		[4] = {itemID = 19056, spellID = 23664 }; --Argent Boots
+		[5] = {itemID = 14108, spellID = 18437 }; --Felcloth Boots
+		[6] = {itemID = 13864, spellID = 18423 }; --Runecloth Boots
+		[7] = {itemID = 10044, spellID = 12088 }; --Cindercloth Boots
+		[8] = {itemID = 10031, spellID = 12082 }; --Shadoweave Boots
+		[9] = {itemID = 10026, spellID = 12073 }; --Black Mageweave Boots
+		[10] = {itemID = 4325, spellID = 3860 }; --Boots of the Enchanter
+		[11] = {itemID = 4321, spellID = 3856 }; --Spider Silk Slippers
+		[12] = {itemID = 4320, spellID = 3855 }; --Spidersilk Boots
+		[13] = {itemID = 4313, spellID = 3847 }; --Red Woolen Boots
+		[14] = {itemID = 2583, spellID = 2401 }; --Woolen Boots
+		[15] = {itemID = 4312, spellID = 3845 }; --Soft-soled Linen Boots
+		[16] = {itemID = 2569, spellID = 2386 }; --Linen Boots
+		[17] = {itemID = 10046, spellID = 12045 }; --Simple Linen Boots
+		[18] = {itemID = 6836, spellID = 49677 }; --Dress Shoes
 	};
 	{
 		Name = AL["Cloth Armor"] .. WHITE .. " - Hands";
-		{ 1, "s20849", "16979", "=q4=Flarecore Gloves", "" };
-		{ 2, "s28205", "22654", "=q4=Glacial Gloves", "" };
-		{ 3, "s18454", "14146", "=q4=Gloves of Spell Mastery", "" };
-		{ 4, "s22867", "18407", "=q3=Felcloth Gloves", "" };
-		{ 5, "s22868", "18408", "=q3=Inferno Gloves", "" };
-		{ 6, "s22869", "18409", "=q3=Mooncloth Gloves", "" };
-		{ 7, "s12067", "10019", "=q3=Dreamweave Gloves", "" };
-		{ 8, "s18417", "13863", "=q2=Runecloth Gloves", "" };
-		{ 9, "s18415", "14101", "=q2=Brightcloth Gloves", "" };
-		{ 10, "s18412", "14043", "=q2=Cindercloth Gloves", "" };
-		{ 11, "s18413", "14142", "=q2=Ghostweave Gloves", "" };
-		{ 12, "s18411", "13870", "=q2=Frostweave Gloves", "" };
-		{ 13, "s12066", "10018", "=q2=Red Mageweave Gloves", "" };
-		{ 14, "s12071", "10023", "=q2=Shadoweave Gloves", "" };
-		{ 15, "s12053", "10003", "=q2=Black Mageweave Gloves", "" };
-		{ 16, "s8804", "7064", "=q2=Crimson Silk Gloves", "" };
-		{ 17, "s8782", "7049", "=q2=Truefaith Gloves", "" };
-		{ 18, "s3854", "4319", "=q2=Azure Silk Gloves", "" };
-		{ 19, "s3852", "4318", "=q2=Gloves of Meditation", "" };
-		{ 20, "s3868", "4331", "=q2=Phoenix Gloves", "" };
-		{ 21, "s3843", "4310", "=q2=Heavy Woolen Gloves", "" };
-		{ 22, "s3840", "4307", "=q1=Heavy Linen Gloves", "" };
+		[1] = {itemID = 16979, spellID = 20849 }; --Flarecore Gloves
+		[2] = {itemID = 22654, spellID = 28205 }; --Glacial Gloves
+		[3] = {itemID = 14146, spellID = 18454 }; --Gloves of Spell Mastery
+		[4] = {itemID = 18407, spellID = 22867 }; --Felcloth Gloves
+		[5] = {itemID = 18408, spellID = 22868 }; --Inferno Gloves
+		[6] = {itemID = 18409, spellID = 22869 }; --Mooncloth Gloves
+		[7] = {itemID = 10019, spellID = 12067 }; --Dreamweave Gloves
+		[8] = {itemID = 13863, spellID = 18417 }; --Runecloth Gloves
+		[9] = {itemID = 14101, spellID = 18415 }; --Brightcloth Gloves
+		[10] = {itemID = 14043, spellID = 18412 }; --Cindercloth Gloves
+		[11] = {itemID = 14142, spellID = 18413 }; --Ghostweave Gloves
+		[12] = {itemID = 13870, spellID = 18411 }; --Frostweave Gloves
+		[13] = {itemID = 10018, spellID = 12066 }; --Red Mageweave Gloves
+		[14] = {itemID = 10023, spellID = 12071 }; --Shadoweave Gloves
+		[15] = {itemID = 10003, spellID = 12053 }; --Black Mageweave Gloves
+		[16] = {itemID = 7064, spellID = 8804 }; --Crimson Silk Gloves
+		[17] = {itemID = 7049, spellID = 8782 }; --Truefaith Gloves
+		[18] = {itemID = 4319, spellID = 3854 }; --Azure Silk Gloves
+		[19] = {itemID = 4318, spellID = 3852 }; --Gloves of Meditation
+		[20] = {itemID = 4331, spellID = 3868 }; --Phoenix Gloves
+		[21] = {itemID = 4310, spellID = 3843 }; --Heavy Woolen Gloves
+		[22] = {itemID = 4307, spellID = 3840 }; --Heavy Linen Gloves
 	};
 	{
 		Name = AL["Cloth Armor"] .. WHITE .. " - Head";
-		{ 1, "s18452", "14140", "=q3=Mooncloth Circlet", "" };
-		{ 2, "s28481", "22757", "=q3=Sylvan Crown", "" };
-		{ 3, "s18450", "14130", "=q2=Wizardweave Turban", "" };
-		{ 4, "s18444", "13866", "=q2=Runecloth Headband", "" };
-		{ 5, "s18442", "14111", "=q2=Felcloth Hood", "" };
-		{ 6, "s12092", "10041", "=q3=Dreamweave Circlet", "" };
-		{ 7, "s12086", "10025", "=q2=Shadoweave Mask", "" };
-		{ 8, "s12081", "10030", "=q2=Admiral's Hat", "" };
-		{ 9, "s12084", "10033", "=q2=Red Mageweave Headband", "" };
-		{ 10, "s12072", "10024", "=q2=Black Mageweave Headband", "" };
-		{ 11, "s12059", "10008", "=q2=White Bandit Mask", "" };
-		{ 12, "s3858", "4323", "=q2=Shadow Hood", "" };
-		{ 13, "s3857", "4322", "=q2=Enchanter's Cowl", "" };
-		{ 14, "s8762", "7050", "=q1=Silk Headband", "" };
-		{ 15, "s8760", "7048", "=q1=Azure Silk Hood", "" };
+		[1] = {itemID = 14140, spellID = 18452 }; --Mooncloth Circlet
+		[2] = {itemID = 22757, spellID = 28481 }; --Sylvan Crown
+		[3] = {itemID = 14130, spellID = 18450 }; --Wizardweave Turban
+		[4] = {itemID = 13866, spellID = 18444 }; --Runecloth Headband
+		[5] = {itemID = 14111, spellID = 18442 }; --Felcloth Hood
+		[6] = {itemID = 10041, spellID = 12092 }; --Dreamweave Circlet
+		[7] = {itemID = 10025, spellID = 12086 }; --Shadoweave Mask
+		[8] = {itemID = 10030, spellID = 12081 }; --Admiral's Hat
+		[9] = {itemID = 10033, spellID = 12084 }; --Red Mageweave Headband
+		[10] = {itemID = 10024, spellID = 12072 }; --Black Mageweave Headband
+		[11] = {itemID = 10008, spellID = 12059 }; --White Bandit Mask
+		[12] = {itemID = 4323, spellID = 3858 }; --Shadow Hood
+		[13] = {itemID = 4322, spellID = 3857 }; --Enchanter's Cowl
+		[14] = {itemID = 7050, spellID = 8762 }; --Silk Headband
+		[15] = {itemID = 7048, spellID = 8760 }; --Azure Silk Hood
 	};
 	{
 		Name = AL["Cloth Armor"] .. WHITE .. " - Legs";
-		{ 1, "s23667", "19165", "=q4=Flarecore Leggings", "" };
-		{ 2, "s24092", "19683", "=q3=Bloodvine Leggings", "" };
-		{ 3, "s24901", "20538", "=q3=Runed Stygian Leggings", "" };
-		{ 4, "s18440", "14137", "=q3=Mooncloth Leggings", "" };
-		{ 5, "s18439", "14104", "=q2=Brightcloth Pants", "" };
-		{ 6, "s18441", "14144", "=q2=Ghostweave Pants", "" };
-		{ 7, "s18438", "13865", "=q2=Runecloth Pants", "" };
-		{ 8, "s18434", "14045", "=q2=Cindercloth Pants", "" };
-		{ 9, "s18424", "13871", "=q2=Frostweave Pants", "" };
-		{ 10, "s18419", "14107", "=q2=Felcloth Pants", "" };
-		{ 11, "s18421", "14132", "=q2=Wizardweave Leggings", "" };
-		{ 12, "s12089", "10035", "=q1=Tuxedo Pants", "" };
-		{ 13, "s50647", "38278", "=q1=Haliscan Pantaloons", "" };
-		{ 14, "s12060", "10009", "=q2=Red Mageweave Pants", "" };
-		{ 15, "s12052", "10002", "=q2=Shadoweave Pants", "" };
-		{ 16, "s12049", "9999", "=q2=Black Mageweave Leggings", "" };
-		{ 17, "s8758", "7046", "=q2=Azure Silk Pants", "" };
-		{ 18, "s3851", "4317", "=q2=Phoenix Pants", "" };
-		{ 19, "s12047", "10048", "=q2=Colorful Kilt", "" };
-		{ 20, "s3850", "4316", "=q2=Heavy Woolen Pants", "" };
-		{ 21, "s12046", "10047", "=q1=Simple Kilt", "" };
-		{ 22, "s3842", "4309", "=q2=Handstitched Linen Britches", "" };
-		{ 23, "s3914", "4343", "=q1=Brown Linen Pants", "" };
-		{ 24, "s12044", "10045", "=q1=Simple Linen Pants", "" };
+		[1] = {itemID = 19165, spellID = 23667 }; --Flarecore Leggings
+		[2] = {itemID = 19683, spellID = 24092 }; --Bloodvine Leggings
+		[3] = {itemID = 20538, spellID = 24901 }; --Runed Stygian Leggings
+		[4] = {itemID = 14137, spellID = 18440 }; --Mooncloth Leggings
+		[5] = {itemID = 14104, spellID = 18439 }; --Brightcloth Pants
+		[6] = {itemID = 14144, spellID = 18441 }; --Ghostweave Pants
+		[7] = {itemID = 13865, spellID = 18438 }; --Runecloth Pants
+		[8] = {itemID = 14045, spellID = 18434 }; --Cindercloth Pants
+		[9] = {itemID = 13871, spellID = 18424 }; --Frostweave Pants
+		[10] = {itemID = 14107, spellID = 18419 }; --Felcloth Pants
+		[11] = {itemID = 14132, spellID = 18421 }; --Wizardweave Leggings
+		[12] = {itemID = 10035, spellID = 12089 }; --Tuxedo Pants
+		[13] = {itemID = 38278, spellID = 50647 }; --Haliscan Pantaloons
+		[14] = {itemID = 10009, spellID = 12060 }; --Red Mageweave Pants
+		[15] = {itemID = 10002, spellID = 12052 }; --Shadoweave Pants
+		[16] = {itemID = 9999, spellID = 12049 }; --Black Mageweave Leggings
+		[17] = {itemID = 7046, spellID = 8758 }; --Azure Silk Pants
+		[18] = {itemID = 4317, spellID = 3851 }; --Phoenix Pants
+		[19] = {itemID = 10048, spellID = 12047 }; --Colorful Kilt
+		[20] = {itemID = 4316, spellID = 3850 }; --Heavy Woolen Pants
+		[21] = {itemID = 10047, spellID = 12046 }; --Simple Kilt
+		[22] = {itemID = 4309, spellID = 3842 }; --Handstitched Linen Britches
+		[23] = {itemID = 4343, spellID = 3914 }; --Brown Linen Pants
+		[24] = {itemID = 10045, spellID = 12044 }; --Simple Linen Pants
 	};
 	{
 		Name = AL["Cloth Armor"] .. WHITE .. " - Shoulder";
-		{ 1, "s20848", "16980", "=q4=Flarecore Mantle", "" };
-		{ 2, "s23665", "19059", "=q3=Argent Shoulders", "" };
-		{ 3, "s23663", "19050", "=q3=Mantle of the Timbermaw", "" };
-		{ 4, "s18448", "14139", "=q3=Mooncloth Shoulders", "" };
-		{ 5, "s28482", "22758", "=q3=Sylvan Shoulders", "" };
-		{ 6, "s18453", "14112", "=q2=Felcloth Shoulders", "" };
-		{ 7, "s18449", "13867", "=q2=Runecloth Shoulders", "" };
-		{ 8, "s12078", "10029", "=q2=Red Mageweave Shoulders", "" };
-		{ 9, "s12076", "10028", "=q2=Shadoweave Shoulders", "" };
-		{ 10, "s12074", "10027", "=q2=Black Mageweave Shoulders", "" };
-		{ 11, "s8799", "7062", "=q1=Crimson Silk Pantaloons", "" };
-		{ 12, "s8795", "7060", "=q2=Azure Shoulders", "" };
-		{ 13, "s8793", "7059", "=q2=Crimson Silk Shoulders", "" };
-		{ 14, "s8774", "7057", "=q2=Green Silken Shoulders", "" };
-		{ 15, "s3849", "4315", "=q1=Reinforced Woolen Shoulders", "" };
-		{ 16, "s3848", "4314", "=q1=Double-stitched Woolen Shoulders", "" };
+		[1] = {itemID = 16980, spellID = 20848 }; --Flarecore Mantle
+		[2] = {itemID = 19059, spellID = 23665 }; --Argent Shoulders
+		[3] = {itemID = 19050, spellID = 23663 }; --Mantle of the Timbermaw
+		[4] = {itemID = 14139, spellID = 18448 }; --Mooncloth Shoulders
+		[5] = {itemID = 22758, spellID = 28482 }; --Sylvan Shoulders
+		[6] = {itemID = 14112, spellID = 18453 }; --Felcloth Shoulders
+		[7] = {itemID = 13867, spellID = 18449 }; --Runecloth Shoulders
+		[8] = {itemID = 10029, spellID = 12078 }; --Red Mageweave Shoulders
+		[9] = {itemID = 10028, spellID = 12076 }; --Shadoweave Shoulders
+		[10] = {itemID = 10027, spellID = 12074 }; --Black Mageweave Shoulders
+		[11] = {itemID = 7062, spellID = 8799 }; --Crimson Silk Pantaloons
+		[12] = {itemID = 7060, spellID = 8795 }; --Azure Shoulders
+		[13] = {itemID = 7059, spellID = 8793 }; --Crimson Silk Shoulders
+		[14] = {itemID = 7057, spellID = 8774 }; --Green Silken Shoulders
+		[15] = {itemID = 4315, spellID = 3849 }; --Reinforced Woolen Shoulders
+		[16] = {itemID = 4314, spellID = 3848 }; --Double-stitched Woolen Shoulders
 	};
 	{
 		Name = AL["Cloth Armor"] .. WHITE .. " - Waist";
-		{ 1, "s22866", "18405", "=q4=Belt of the Archmage", "" };
-		{ 2, "s24902", "20539", "=q3=Runed Stygian Belt", "" };
-		{ 3, "s18410", "14143", "=q2=Ghostweave Belt", "" };
-		{ 4, "s18402", "13856", "=q2=Runecloth Belt", "" };
-		{ 5, "s3864", "4329", "=q2=Star Belt", "" };
-		{ 6, "s8797", "7061", "=q2=Earthen Silk Belt", "" };
-		{ 7, "s3863", "4328", "=q2=Spider Belt", "" };
-		{ 8, "s8766", "7052", "=q2=Azure Silk Belt", "" };
-		{ 9, "s8772", "7055", "=q2=Crimson Silk Belt", "" };
-		{ 10, "s8776", "7026", "=q1=Linen Belt", "" };
+		[1] = {itemID = 18405, spellID = 22866 }; --Belt of the Archmage
+		[2] = {itemID = 20539, spellID = 24902 }; --Runed Stygian Belt
+		[3] = {itemID = 14143, spellID = 18410 }; --Ghostweave Belt
+		[4] = {itemID = 13856, spellID = 18402 }; --Runecloth Belt
+		[5] = {itemID = 4329, spellID = 3864 }; --Star Belt
+		[6] = {itemID = 7061, spellID = 8797 }; --Earthen Silk Belt
+		[7] = {itemID = 4328, spellID = 3863 }; --Spider Belt
+		[8] = {itemID = 7052, spellID = 8766 }; --Azure Silk Belt
+		[9] = {itemID = 7055, spellID = 8772 }; --Crimson Silk Belt
+		[10] = {itemID = 7026, spellID = 8776 }; --Linen Belt
 	};
 	{
 		Name = AL["Cloth Armor"] .. WHITE .. " - Wrist";
-		{ 1, "s22759", "18263", "=q4=Flarecore Wraps", "" };
-		{ 2, "s28209", "22655", "=q4=Glacial Wrists", "" };
-		{ 3, "s3841", "4308", "=q1=Green Linen Bracers", "" };
+		[1] = {itemID = 18263, spellID = 22759 }; --Flarecore Wraps
+		[2] = {itemID = 22655, spellID = 28209 }; --Glacial Wrists
+		[3] = {itemID = 4308, spellID = 3841 }; --Green Linen Bracers
 	};
 	{
 		Name = AL["Bags"];
-		{ 1, "s26087", "21342", "=q4=Core Felcloth Bag", "" };
-		{ 2, "s18455", "14156", "=q3=Bottomless Bag", "" };
-		{ 3, "s26086", "21341", "=q3=Felcloth Bag", "" };
-		{ 4, "s27660", "22249", "=q2=Big Bag of Enchantment", "" };
-		{ 5, "s18445", "14155", "=q2=Mooncloth Bag", "" };
-		{ 6, "s27725", "22252", "=q2=Satchel of Cenarius", "" };
-		{ 7, "s27659", "22248", "=q2=Enchanted Runecloth Bag", "" };
-		{ 8, "s27724", "22251", "=q2=Cenarion Herb Bag", "" };
-		{ 9, "s26085", "21340", "=q2=Soul Pouch", "" };
-		{ 10, "s27658", "22246", "=q2=Enchanted Mageweave Pouch", "" };
-		{ 11, "s18405", "14046", "=q1=Runecloth Bag", "" };
-		{ 12, "s12079", "10051", "=q1=Red Mageweave Bag", "" };
-		{ 13, "s12065", "10050", "=q1=Mageweave Bag", "" };
-		{ 14, "s6695", "5765", "=q1=Black Silk Pack", "" };
-		{ 15, "s6693", "5764", "=q1=Green Silk Pack", "" };
-		{ 16, "s3813", "4245", "=q1=Small Silk Pack", "" };
-		{ 17, "s6688", "5763", "=q1=Red Woolen Bag", "" };
-		{ 18, "s3758", "4241", "=q1=Green Woolen Bag", "" };
-		{ 19, "s3757", "4240", "=q1=Woolen Bag", "" };
-		{ 20, "s6686", "5762", "=q1=Red Linen Bag", "" };
-		{ 21, "s3755", "4238", "=q1=Linen Bag", "" };
+		[1] = {itemID = 21342, spellID = 26087 }; --Core Felcloth Bag
+		[2] = {itemID = 14156, spellID = 18455 }; --Bottomless Bag
+		[3] = {itemID = 21341, spellID = 26086 }; --Felcloth Bag
+		[4] = {itemID = 22249, spellID = 27660 }; --Big Bag of Enchantment
+		[5] = {itemID = 14155, spellID = 18445 }; --Mooncloth Bag
+		[6] = {itemID = 22252, spellID = 27725 }; --Satchel of Cenarius
+		[7] = {itemID = 22248, spellID = 27659 }; --Enchanted Runecloth Bag
+		[8] = {itemID = 22251, spellID = 27724 }; --Cenarion Herb Bag
+		[9] = {itemID = 21340, spellID = 26085 }; --Soul Pouch
+		[10] = {itemID = 22246, spellID = 27658 }; --Enchanted Mageweave Pouch
+		[11] = {itemID = 14046, spellID = 18405 }; --Runecloth Bag
+		[12] = {itemID = 10051, spellID = 12079 }; --Red Mageweave Bag
+		[13] = {itemID = 10050, spellID = 12065 }; --Mageweave Bag
+		[14] = {itemID = 5765, spellID = 6695 }; --Black Silk Pack
+		[15] = {itemID = 5764, spellID = 6693 }; --Green Silk Pack
+		[16] = {itemID = 4245, spellID = 3813 }; --Small Silk Pack
+		[17] = {itemID = 5763, spellID = 6688 }; --Red Woolen Bag
+		[18] = {itemID = 4241, spellID = 3758 }; --Green Woolen Bag
+		[19] = {itemID = 4240, spellID = 3757 }; --Woolen Bag
+		[20] = {itemID = 5762, spellID = 6686 }; --Red Linen Bag
+		[21] = {itemID = 4238, spellID = 3755 }; --Linen Bag
 	};
 	{
 		Name = AL["Miscellaneous"];
-		{ 1, "s18560", "14342", "=q1=Mooncloth", "" };
-		{ 2, "s18401", "14048", "=q1=Bolt of Runecloth", "" };
-		{ 3, "s3865", "4339", "=q1=Bolt of Mageweave", "" };
-		{ 4, "s3839", "4305", "=q1=Bolt of Silk Cloth", "" };
-		{ 5, "s2964", "2997", "=q1=Bolt of Woolen Cloth", "" };
-		{ 6, "s2963", "2996", "=q1=Bolt of Linen Cloth", "" };
+		[1] = {itemID = 14342, spellID = 18560 }; --Mooncloth
+		[2] = {itemID = 14048, spellID = 18401 }; --Bolt of Runecloth
+		[3] = {itemID = 4339, spellID = 3865 }; --Bolt of Mageweave
+		[4] = {itemID = 4305, spellID = 3839 }; --Bolt of Silk Cloth
+		[5] = {itemID = 2997, spellID = 2964 }; --Bolt of Woolen Cloth
+		[6] = {itemID = 2996, spellID = 2963 }; --Bolt of Linen Cloth
 	};
 	{
 		Name = AL["Shirts"];
-		{ 1, "s12085", "10034", "=q1=Tuxedo Shirt", "" };
-		{ 2, "s12080", "10055", "=q1=Pink Mageweave Shirt", "" };
-		{ 3, "s12075", "10054", "=q1=Lavender Mageweave Shirt", "" };
-		{ 4, "s12064", "10052", "=q1=Orange Martial Shirt", "" };
-		{ 5, "s12061", "10056", "=q1=Orange Mageweave Shirt", "" };
-		{ 6, "s3873", "4336", "=q1=Black Swashbuckler's Shirt", "" };
-		{ 7, "s21945", "17723", "=q1=Green Holiday Shirt", "" };
-		{ 8, "s3872", "4335", "=q1=Rich Purple Silk Shirt", "" };
-		{ 9, "s8489", "6796", "=q1=Red Swashbuckler's Shirt", "" };
-		{ 10, "s3871", "4334", "=q1=Formal White Shirt", "" };
-		{ 11, "s8483", "6795", "=q1=White Swashbuckler's Shirt", "" };
-		{ 12, "s3870", "4333", "=q1=Dark Silk Shirt", "" };
-		{ 13, "s3869", "4332", "=q1=Bright Yellow Shirt", "" };
-		{ 14, "s7892", "6384", "=q1=Stylish Blue Shirt", "" };
-		{ 15, "s7893", "6385", "=q1=Stylish Green Shirt", "" };
-		{ 16, "s3866", "4330", "=q1=Stylish Red Shirt", "" };
-		{ 17, "s2406", "2587", "=q1=Gray Woolen Shirt", "" };
-		{ 18, "s2396", "2579", "=q1=Green Linen Shirt", "" };
-		{ 19, "s2394", "2577", "=q1=Blue Linen Shirt", "" };
-		{ 20, "s2392", "2575", "=q1=Red Linen Shirt", "" };
-		{ 21, "s2393", "2576", "=q1=White Linen Shirt", "" };
-		{ 22, "s3915", "4344", "=q1=Brown Linen Shirt", "" };
+		[1] = {itemID = 10034, spellID = 12085 }; --Tuxedo Shirt
+		[2] = {itemID = 10055, spellID = 12080 }; --Pink Mageweave Shirt
+		[3] = {itemID = 10054, spellID = 12075 }; --Lavender Mageweave Shirt
+		[4] = {itemID = 10052, spellID = 12064 }; --Orange Martial Shirt
+		[5] = {itemID = 10056, spellID = 12061 }; --Orange Mageweave Shirt
+		[6] = {itemID = 4336, spellID = 3873 }; --Black Swashbuckler's Shirt
+		[7] = {itemID = 17723, spellID = 21945 }; --Green Holiday Shirt
+		[8] = {itemID = 4335, spellID = 3872 }; --Rich Purple Silk Shirt
+		[9] = {itemID = 6796, spellID = 8489 }; --Red Swashbuckler's Shirt
+		[10] = {itemID = 4334, spellID = 3871 }; --Formal White Shirt
+		[11] = {itemID = 6795, spellID = 8483 }; --White Swashbuckler's Shirt
+		[12] = {itemID = 4333, spellID = 3870 }; --Dark Silk Shirt
+		[13] = {itemID = 4332, spellID = 3869 }; --Bright Yellow Shirt
+		[14] = {itemID = 6384, spellID = 7892 }; --Stylish Blue Shirt
+		[15] = {itemID = 6385, spellID = 7893 }; --Stylish Green Shirt
+		[16] = {itemID = 4330, spellID = 3866 }; --Stylish Red Shirt
+		[17] = {itemID = 2587, spellID = 2406 }; --Gray Woolen Shirt
+		[18] = {itemID = 2579, spellID = 2396 }; --Green Linen Shirt
+		[19] = {itemID = 2577, spellID = 2394 }; --Blue Linen Shirt
+		[20] = {itemID = 2575, spellID = 2392 }; --Red Linen Shirt
+		[21] = {itemID = 2576, spellID = 2393 }; --White Linen Shirt
+		[22] = {itemID = 4344, spellID = 3915 }; --Brown Linen Shirt
 	};
-};
-
---------------------------------
---- Daily Profession Rewards ---
---------------------------------
-
----------------
---- Cooking ---
----------------
-
-AtlasLoot_Data["CookingDaily1"] = {
-	{ 1, 33925, "", "=q3=Recipe: Delicious Chocolate Cake", "=ds=#p3# (1)", "", "" };
-	{ 2, 33871, "", "=q3=Recipe: Stormchops", "=ds=#p3# (300)", "", "" };
-	{ 3, 33869, "", "=q3=Recipe: Broiled Bloodfin", "=ds=#p3# (300)", "", "" };
-	{ 4, 33875, "", "=q2=Recipe: Kibler's Bits", "=ds=#p3# (300)", "", "" };
-	{ 5, 33870, "", "=q2=Recipe: Skullfish Soup", "=ds=#p3# (325)", "", "" };
-	{ 6, 33873, "", "=q2=Recipe: Spicy Hot Talbuk", "=ds=#p3# (300)", "", "" };
-};
-
-AtlasLoot_Data["CookingDaily2"] = {
-	{ 1, 43035, "", "=q2=Recipe: Blackened Dragonfin", "=ds=#p3# (400)" };
-	{ 2, 43032, "", "=q2=Recipe: Blackened Worg Steak", "=ds=#p3# (400)" };
-	{ 3, 43029, "", "=q2=Recipe: Critter Bites", "=ds=#p3# (400)" };
-	{ 4, 43033, "", "=q2=Recipe: Cuttlesteak", "=ds=#p3# (400)" };
-	{ 5, 43036, "", "=q2=Recipe: Dragonfin Filet", "=ds=#p3# (400)" };
-	{ 6, 43024, "", "=q2=Recipe: Firecracker Salmon", "=ds=#p3# (400)" };
-	{ 7, 43030, "", "=q2=Recipe: Hearty Rhino", "=ds=#p3# (400)" };
-	{ 8, 43026, "", "=q2=Recipe: Imperial Manta Steak", "=ds=#p3# (400)" };
-	{ 9, 43018, "", "=q2=Recipe: Mega Mammoth Meal", "=ds=#p3# (400)" };
-	{ 10, 43022, "", "=q2=Recipe: Mighty Rhino Dogs", "=ds=#p3# (400)" };
-	{ 11, 43023, "", "=q2=Recipe: Poached Northern Sculpin", "=ds=#p3# (400)" };
-	{ 12, 43028, "", "=q2=Recipe: Rhinolicious Wyrmsteak", "=ds=#p3# (400)" };
-	{ 13, 43031, "", "=q2=Recipe: Snapper Extreme", "=ds=#p3# (400)" };
-	{ 14, 43034, "", "=q2=Recipe: Spiced Mammoth Treats", "=ds=#p3# (400)" };
-	{ 15, 43020, "", "=q2=Recipe: Spiced Wyrm Burger", "=ds=#p3# (400)" };
-	{ 16, 43025, "", "=q2=Recipe: Spicy Blue Nettlefish", "=ds=#p3# (400)" };
-	{ 17, 43027, "", "=q2=Recipe: Spicy Fried Herring", "=ds=#p3# (400)" };
-	{ 18, 43019, "", "=q2=Recipe: Tender Shoveltusk Steak", "=ds=#p3# (400)" };
-	{ 19, 43037, "", "=q2=Recipe: Tracker Snacks", "=ds=#p3# (400)" };
-	{ 20, 43021, "", "=q2=Recipe: Very Burnt Worg", "=ds=#p3# (400)" };
-	{ 22, 46349, "", "=q3=Chef's Hat", "=ds=#s1#" };
-	{ 23, 43007, "", "=q1=Northern Spices", "=ds=#e8#" };
-	{ 25, 0, "inv_misc_bag_11", "=q6=" .. AL["Small Spice Bag"], "" };
-	{ 26, 33925, "", "=q3=Recipe: Delicious Chocolate Cake", "=ds=#p3# (1)", "", "" };
-	{ 27, 33871, "", "=q3=Recipe: Stormchops", "=ds=#p3# (300)", "", "" };
-	{ 28, 44228, "", "=q1=Baby Spice", "", "", "" };
-	{ 29, 44114, "", "=q1=Old Spices", "", "", "" };
-};
-
----------------
---- Fishing ---
----------------
-
-AtlasLoot_Data["FishingDaily1"] = {
-	{ 1, 34837, "", "=q4=The 2 Ring", "=ds=#s13#", "", "" };
-	{ 2, 33820, "", "=q3=Weather-Beaten Fishing Hat", "=ds=#s1#, #a1#", "", "" };
-	{ 3, 35350, "", "=q3=Chuck's Bucket", "=ds=#e13#", "", "" };
-	{ 4, 33818, "", "=q3=Muckbreath's Bucket", "=ds=#e13#", "", "" };
-	{ 5, 35349, "", "=q3=Snarly's Bucket", "=ds=#e13#", "", "" };
-	{ 6, 33816, "", "=q3=Toothy's Bucket", "=ds=#e13#", "", "" };
-	{ 7, 34831, "", "=q3=Eye of the Sea", "=ds=#e7#", "", "" };
-	{ 8, 34834, "", "=q2=Recipe: Captain Rumsey's Lager", "=ds=#p3# (100)", "", "" };
-	{ 9, 34836, "", "=q2=Spun Truesilver Fishing Line", "=ds=#p24# #e17#", "", "" };
-	{ 16, 34827, "", "=q1=Noble's Monocle", "=ds=#s1#", "", "" };
-	{ 17, 34828, "", "=q1=Antique Silver Cufflinks", "=ds=#s8#", "", "" };
-	{ 18, 34826, "", "=q1=Gold Wedding Band", "=ds=#s13#", "", "" };
-	{ 19, 34829, "", "=q1=Ornate Drinking Stein", "=ds=#s15#", "", "" };
-	{ 20, 34859, "", "=q1=Razor Sharp Fillet Knife", "=ds=#h1#, #w4#", "", "" };
-	{ 21, 34109, "", "=q1=Weather-Beaten Journal", "=ds=#e10#", "", "" };
-	{ 22, 8827, "", "=q1=Elixir of Water Walking", "=ds=#e2#", "", "" };
-	{ 23, 34861, "", "=q1=Sharpened Fish Hook", "=ds=#e24#", "", "" };
-};
-
-AtlasLoot_Data["FishingDaily2"] = {
-	{ 1, 45862, "", "=q4=Bold Stormjewel", "=ds=#e7#", "", "" };
-	{ 2, 45882, "", "=q4=Brilliant Stormjewel", "=ds=#e7#", "", "" };
-	{ 3, 45879, "", "=q4=Delicate Stormjewel", "=ds=#e7#", "", "" };
-	{ 4, 45987, "", "=q4=Rigid Stormjewel", "=ds=#e7#", "", "" };
-	{ 5, 45883, "", "=q4=Runed Stormjewel", "=ds=#e7#", "", "" };
-	{ 6, 45880, "", "=q4=Solid Stormjewel", "=ds=#e7#", "", "" };
-	{ 7, 45881, "", "=q4=Sparkling Stormjewel", "=ds=#e7#", "", "" };
-	{ 8, 33820, "", "=q3=Weather-Beaten Fishing Hat", "=ds=#s1#, #a1#", "", "" };
-	{ 9, 45991, "", "=q3=Bone Fishing Pole", "=ds=#e20#", "", "" };
-	{ 10, 45992, "", "=q3=Jeweled Fishing Pole", "=ds=#e20#", "", "" };
-	{ 11, 44983, "", "=q3=Strand Crawler", "=ds=#e13#", "", "" };
-	{ 12, 36784, "", "=q3=Siren's Tear", "=ds=#e7#", "", "" };
-	{ 13, 45986, "", "=q3=Titanium Lockbox", "", "", "" };
-	{ 14, 34834, "", "=q2=Recipe: Captain Rumsey's Lager", "=ds=#p3# (100)", "", "" };
-	{ 15, 19971, "", "=q2=High Test Eternium Fishing Line", "=ds=#p24# #e17#", "", "" };
-	{ 16, 45998, "", "=q1=Battered Jungle Hat", "=ds=#s1#", "", "" };
-	{ 17, 45861, "", "=q1=Diamond-tipped Cane", "=ds=#h2#", "", "" };
-	{ 18, 46006, "", "=q1=Glow Worm", "=ds=#e24#", "", "" };
-	{ 19, 45984, "", "=q1=Unusual Compass", "", "", "" };
-	{ 20, 40195, "", "=q1=Pygmy Oil", "=ds=#e2#", "", "" };
-	{ 21, 8827, "", "=q1=Elixir of Water Walking", "=ds=#e2#", "", "" };
-	{ 22, 46004, "", "=q1=Sealed Vial of Poison", "=ds=#m2#", "", "" };
-	{ 23, 48679, "", "=q1=Waterlogged Recipe", "=ds=#m2# #p3# (350)", "", "" };
 };
 
 ---------------------
@@ -2367,31 +2266,31 @@ AtlasLoot_Data["AlchemyHighRiskCLASSIC"] = {
 	Type = "CraftingNoBF";
 	{
 		Name = "Rare";
-		{ 1, "s968403", "967444", "=q3=Potent Flask of Manifesting Power", "" };
-		{ 2, "s968406", "967447", "=q3=Potent Flask of the Warsong", "" };
-		{ 3, "s968409", "967450", "=q3=Potent Flask of the Kirin Tor", "" };
-		{ 4, "s968412", "967453", "=q3=Potent Flask of Butchery", "" };
-		{ 5, "s968415", "967456", "=q3=Potent Flask of the Unyielding", "" };
-		{ 6, "s968418", "967459", "=q3=Potent Flask of Unrelenting Power", "" };
-		{ 7, "s968421", "967462", "=q3=Potent Flask of Savage Assault", "" };
-		{ 8, "s968424", "967465", "=q3=Potent Flask of Shattering Thunder", "" };
-		{ 9, "s968427", "967468", "=q3=Potent Flask of the Executioner", "" };
-		{ 10, "s968430", "967471", "=q3=Potent Flask of Deep Meditation", "" };
-		{ 11, "s968433", "967474", "=q3=Potent Flask of Adept Striking", "" };
+		[1] = {itemID = 967444, spellID = 968403 }; --Potent Flask of Manifesting Power
+		[2] = {itemID = 967447, spellID = 968406 }; --Potent Flask of the Warsong
+		[3] = {itemID = 967450, spellID = 968409 }; --Potent Flask of the Kirin Tor
+		[4] = {itemID = 967453, spellID = 968412 }; --Potent Flask of Butchery
+		[5] = {itemID = 967456, spellID = 968415 }; --Potent Flask of the Unyielding
+		[6] = {itemID = 967459, spellID = 968418 }; --Potent Flask of Unrelenting Power
+		[7] = {itemID = 967462, spellID = 968421 }; --Potent Flask of Savage Assault
+		[8] = {itemID = 967465, spellID = 968424 }; --Potent Flask of Shattering Thunder
+		[9] = {itemID = 967468, spellID = 968427 }; --Potent Flask of the Executioner
+		[10] = {itemID = 967471, spellID = 968430 }; --Potent Flask of Deep Meditation
+		[11] = {itemID = 967474, spellID = 968433 }; --Potent Flask of Adept Striking
 	};
 	{
 		Name = "Epic";
-		{ 1, "s968404", "967445", "=q4=Distilled Flask of Manifesting Power", "" };
-		{ 2, "s968407", "967448", "=q4=Distilled Flask of the Warsong", "" };
-		{ 3, "s968410", "967451", "=q4=Distilled Flask of the Kirin Tor", "" };
-		{ 4, "s968413", "967454", "=q4=Distilled Flask of Butchery", "" };
-		{ 5, "s968416", "967457", "=q4=Distilled Flask of the Unyielding", "" };
-		{ 6, "s968419", "967460", "=q4=Distilled Flask of Unrelenting Power", "" };
-		{ 7, "s968422", "967463", "=q4=Distilled Flask of Savage Assault", "" };
-		{ 8, "s968425", "967466", "=q4=Distilled Flask of Shattering Thunder", "" };
-		{ 9, "s968428", "967469", "=q4=Distilled Flask of the Executioner", "" };
-		{ 10, "s968431", "967472", "=q4=Distilled Flask of Deep Meditation", "" };
-		{ 11, "s968434", "967475", "=q4=Distilled Flask of Adept Striking", "" };
+		[1] = {itemID = 967445, spellID = 968404 }; --Distilled Flask of Manifesting Power
+		[2] = {itemID = 967448, spellID = 968407 }; --Distilled Flask of the Warsong
+		[3] = {itemID = 967451, spellID = 968410 }; --Distilled Flask of the Kirin Tor
+		[4] = {itemID = 967454, spellID = 968413 }; --Distilled Flask of Butchery
+		[5] = {itemID = 967457, spellID = 968416 }; --Distilled Flask of the Unyielding
+		[6] = {itemID = 967460, spellID = 968419 }; --Distilled Flask of Unrelenting Power
+		[7] = {itemID = 967463, spellID = 968422 }; --Distilled Flask of Savage Assault
+		[8] = {itemID = 967466, spellID = 968425 }; --Distilled Flask of Shattering Thunder
+		[9] = {itemID = 967469, spellID = 968428 }; --Distilled Flask of the Executioner
+		[10] = {itemID = 967472, spellID = 968431 }; --Distilled Flask of Deep Meditation
+		[11] = {itemID = 967475, spellID = 968434 }; --Distilled Flask of Adept Striking
 	};
 };
 
@@ -2400,27 +2299,27 @@ AtlasLoot_Data["SmithingHighRiskCLASSIC"] = {
 	Type = "CraftingNoBF";
 	{
 		Name = "Rare";
-		{ 1, "s968019", "967173", "=q3=Sturdy Living Belt Buckle", "" };
-		{ 2, "s968022", "967176", "=q3=Sturdy Deflecting Belt Buckle", "" };
-		{ 3, "s968025", "967179", "=q3=Sturdy Roguish Belt Buckle", "" };
-		{ 4, "s968028", "967182", "=q3=Sturdy Dancing Belt Buckle", "" };
-		{ 5, "s968031", "967185", "=q3=Sturdy Magus Belt Buckle", "" };
-		{ 6, "s968034", "967188", "=q3=Sturdy Cleric's Belt Buckle", "" };
-		{ 7, "s968037", "967191", "=q3=Sturdy Warlord's Belt Buckle", "" };
-		{ 8, "s968040", "967194", "=q3=Sturdy Gaurdian's Belt Buckle", "" };
-		{ 10, "s968481", "967681", "=q3=Homicite Key", "" };
+		[1] = {itemID = 967173, spellID = 968019 }; --Sturdy Living Belt Buckle
+		[2] = {itemID = 967176, spellID = 968022 }; --Sturdy Deflecting Belt Buckle
+		[3] = {itemID = 967179, spellID = 968025 }; --Sturdy Roguish Belt Buckle
+		[4] = {itemID = 967182, spellID = 968028 }; --Sturdy Dancing Belt Buckle
+		[5] = {itemID = 967185, spellID = 968031 }; --Sturdy Magus Belt Buckle
+		[6] = {itemID = 967188, spellID = 968034 }; --Sturdy Cleric's Belt Buckle
+		[7] = {itemID = 967191, spellID = 968037 }; --Sturdy Warlord's Belt Buckle
+		[8] = {itemID = 967194, spellID = 968040 }; --Sturdy Gaurdian's Belt Buckle
+		[10] = {itemID = 967681, spellID = 968481 }; --Homicite Key
 	};
 	{
 		Name = "Epic";
-		{ 1, "s968020", "967174", "=q4=Mastercraft Living Belt Buckle", "" };
-		{ 2, "s968023", "967177", "=q4=Mastercraft Deflecting Belt Buckle", "" };
-		{ 3, "s968026", "967180", "=q4=Mastercraft Roguish Belt Buckle", "" };
-		{ 4, "s968029", "967183", "=q4=Mastercraft Dancing Belt Buckle", "" };
-		{ 5, "s968032", "967186", "=q4=Mastercraft Magus Belt Buckle", "" };
-		{ 6, "s968035", "967189", "=q4=Mastercraft Cleric's Belt Buckle", "" };
-		{ 7, "s968038", "967192", "=q4=Mastercraft Warlord's Belt Buckle", "" };
-		{ 8, "s968041", "967195", "=q4=Mastercraft Gaurdian's Belt Buckle", "" };
-		{ 10, "s968482", "967682", "=q4=Homicite Key", "" };
+		[1] = {itemID = 967174, spellID = 968020 }; --Mastercraft Living Belt Buckle
+		[2] = {itemID = 967177, spellID = 968023 }; --Mastercraft Deflecting Belt Buckle
+		[3] = {itemID = 967180, spellID = 968026 }; --Mastercraft Roguish Belt Buckle
+		[4] = {itemID = 967183, spellID = 968029 }; --Mastercraft Dancing Belt Buckle
+		[5] = {itemID = 967186, spellID = 968032 }; --Mastercraft Magus Belt Buckle
+		[6] = {itemID = 967189, spellID = 968035 }; --Mastercraft Cleric's Belt Buckle
+		[7] = {itemID = 967192, spellID = 968038 }; --Mastercraft Warlord's Belt Buckle
+		[8] = {itemID = 967195, spellID = 968041 }; --Mastercraft Gaurdian's Belt Buckle
+		[10] = {itemID = 967682, spellID = 968482 }; --Homicite Key
 	};
 };
 
@@ -2429,21 +2328,21 @@ AtlasLoot_Data["LeatherworkingHighRiskCLASSIC"] = {
 	Type = "CraftingNoBF";
 	{
 		Name = "Rare";
-		{ 1, "s968001", "967155", "=q3=Sturdy Yeti Gambeson", "" };
-		{ 2, "s968004", "967158", "=q3=Sturdy Devilsaur Gambeson", "" };
-		{ 3, "s968007", "967161", "=q3=Sturdy Plaguebat Gambeson", "" };
-		{ 4, "s968010", "967164", "=q3=Sturdy Sandworm Gambeson", "" };
-		{ 5, "s968013", "967167", "=q3=Sturdy Black Scale Gambeson", "" };
-		{ 6, "s968016", "967170", "=q3=Sturdy Blue Scale Gambeson", "" };
+		[1] = {itemID = 967155, spellID = 968001 }; --Sturdy Yeti Gambeson
+		[2] = {itemID = 967158, spellID = 968004 }; --Sturdy Devilsaur Gambeson
+		[3] = {itemID = 967161, spellID = 968007 }; --Sturdy Plaguebat Gambeson
+		[4] = {itemID = 967164, spellID = 968010 }; --Sturdy Sandworm Gambeson
+		[5] = {itemID = 967167, spellID = 968013 }; --Sturdy Black Scale Gambeson
+		[6] = {itemID = 967170, spellID = 968016 }; --Sturdy Blue Scale Gambeson
 	};
 	{
 		Name = "Epic";
-		{ 1, "s968002", "967156", "=q4=Mastercraft Yeti Gambeson", "" };
-		{ 2, "s968005", "967159", "=q4=Mastercraft Devilsaur Gambeson", "" };
-		{ 3, "s968008", "967162", "=q4=Mastercraft Plaguebat Gambeson", "" };
-		{ 4, "s968011", "967165", "=q4=Mastercraft Sandworm Gambeson", "" };
-		{ 5, "s968014", "967168", "=q4=Mastercraft Black Scale Gambeson", "" };
-		{ 6, "s968017", "967171", "=q4=Mastercraft Blue Scale Gambeson", "" };
+		[1] = {itemID = 967156, spellID = 968002 }; --Mastercraft Yeti Gambeson
+		[2] = {itemID = 967159, spellID = 968005 }; --Mastercraft Devilsaur Gambeson
+		[3] = {itemID = 967162, spellID = 968008 }; --Mastercraft Plaguebat Gambeson
+		[4] = {itemID = 967165, spellID = 968011 }; --Mastercraft Sandworm Gambeson
+		[5] = {itemID = 967168, spellID = 968014 }; --Mastercraft Black Scale Gambeson
+		[6] = {itemID = 967171, spellID = 968017 }; --Mastercraft Blue Scale Gambeson
 	};
 };
 
@@ -2452,21 +2351,21 @@ AtlasLoot_Data["EngineeringHighRiskCLASSIC"] = {
 	Type = "CraftingNoBF";
 	{
 		Name = "Rare";
-		{ 1, "s968043", "967197", "=q3=Focused Gnomish Magnifying Lense", "" };
-		{ 2, "s968046", "967200", "=q3=Focused Gnomish Focusing Lense", "" };
-		{ 3, "s968049", "967203", "=q3=Focused Gnomish Prismatic Lense", "" };
-		{ 4, "s968052", "967206", "=q3=Focused Hipfire Scope", "" };
-		{ 5, "s968055", "967209", "=q3=Focused Precision Scope", "" };
-		{ 6, "s968058", "967212", "=q3=Focused Reflex Scope", "" };
+		[1] = {itemID = 967197, spellID = 968043 }; --Focused Gnomish Magnifying Lense
+		[2] = {itemID = 967200, spellID = 968046 }; --Focused Gnomish Focusing Lense
+		[3] = {itemID = 967203, spellID = 968049 }; --Focused Gnomish Prismatic Lense
+		[4] = {itemID = 967206, spellID = 968052 }; --Focused Hipfire Scope
+		[5] = {itemID = 967209, spellID = 968055 }; --Focused Precision Scope
+		[6] = {itemID = 967212, spellID = 968058 }; --Focused Reflex Scope
 	};
 	{
 		Name = "Epic";
-		{ 1, "s968044", "967198", "=q4=Polished Gnomish Magnifying Lense", "" };
-		{ 2, "s968047", "967201", "=q4=Polished Gnomish Focusing Lense", "" };
-		{ 3, "s968050", "967204", "=q4=Polished Gnomish Prismatic Lense", "" };
-		{ 4, "s968053", "967207", "=q4=Polished Hipfire Scope", "" };
-		{ 5, "s968056", "967210", "=q4=Polished Precision Scope", "" };
-		{ 6, "s968059", "967213", "=q4=Polished Reflex Scope", "" };
+		[1] = {itemID = 967198, spellID = 968044 }; --Polished Gnomish Magnifying Lense
+		[2] = {itemID = 967201, spellID = 968047 }; --Polished Gnomish Focusing Lense
+		[3] = {itemID = 967204, spellID = 968050 }; --Polished Gnomish Prismatic Lense
+		[4] = {itemID = 967207, spellID = 968053 }; --Polished Hipfire Scope
+		[5] = {itemID = 967210, spellID = 968056 }; --Polished Precision Scope
+		[6] = {itemID = 967213, spellID = 968059 }; --Polished Reflex Scope
 	};
 };
 
@@ -2475,29 +2374,29 @@ AtlasLoot_Data["EnchantingHighRiskCLASSIC"] = {
 	Type = "CraftingNoBF";
 	{
 		Name = "Rare";
-		{ 1, "s968677", "Spell_Holy_GreaterHeal", "=q3=Enchant Weapon - Unstoppable Assault", "" };
-		{ 2, "s968680", "Spell_Holy_GreaterHeal", "=q3=Enchant Weapon - Lucid Assault", "" };
-		{ 3, "s968683", "Spell_Holy_GreaterHeal", "=q3=Enchant Weapon - Spellbinder's Rage", "" };
-		{ 4, "s968686", "Spell_Holy_GreaterHeal", "=q3=Enchant Weapon - Ninja's Focus", "" };
-		{ 5, "s968689", "Spell_Holy_GreaterHeal", "=q3=Enchant Weapon - Grovewarden's Blessing", "" };
-		{ 6, "s968692", "Spell_Holy_GreaterHeal", "=q3=Enchant Weapon - Viscious Assault", "" };
-		{ 7, "s968695", "Spell_Holy_GreaterHeal", "=q3=Enchant Weapon - Arcane Dexterity", "" };
-		{ 8, "s968698", "Spell_Holy_GreaterHeal", "=q3=Enchant Weapon - Arcane Artillery", "" };
-		{ 9, "s968701", "Spell_Holy_GreaterHeal", "=q3=Enchant Weapon - Arcane Precision", "" };
-		{ 10, "s968770", "Spell_Holy_GreaterHeal", "=q3=Enchant Weapon - Crusader II", "" };
+		[1] = {icon = "Spell_Holy_GreaterHeal", spellID = 968677 }; --Enchant Weapon - Unstoppable Assault
+		[2] = {icon = "Spell_Holy_GreaterHeal", spellID = 968680 }; --Enchant Weapon - Lucid Assault
+		[3] = {icon = "Spell_Holy_GreaterHeal", spellID = 968683 }; --Enchant Weapon - Spellbinder's Rage
+		[4] = {icon = "Spell_Holy_GreaterHeal", spellID = 968686 }; --Enchant Weapon - Ninja's Focus
+		[5] = {icon = "Spell_Holy_GreaterHeal", spellID = 968689 }; --Enchant Weapon - Grovewarden's Blessing
+		[6] = {icon = "Spell_Holy_GreaterHeal", spellID = 968692 }; --Enchant Weapon - Viscious Assault
+		[7] = {icon = "Spell_Holy_GreaterHeal", spellID = 968695 }; --Enchant Weapon - Arcane Dexterity
+		[8] = {icon = "Spell_Holy_GreaterHeal", spellID = 968698 }; --Enchant Weapon - Arcane Artillery
+		[9] = {icon = "Spell_Holy_GreaterHeal", spellID = 968701 }; --Enchant Weapon - Arcane Precision
+		[10] = {icon = "Spell_Holy_GreaterHeal", spellID = 968770 }; --Enchant Weapon - Crusader II
 	};
 	{
 		Name = "Epic";
-		{ 1, "s968678", "Spell_Holy_GreaterHeal", "=q4=Enchant Weapon - Greater Unstoppable Assault", "" };
-		{ 2, "s968681", "Spell_Holy_GreaterHeal", "=q4=Enchant Weapon - Greater Lucid Assualt", "" };
-		{ 3, "s968684", "Spell_Holy_GreaterHeal", "=q4=Enchant Weapon - Greater Spellbinder's Rage", "" };
-		{ 4, "s968687", "Spell_Holy_GreaterHeal", "=q4=Enchant Weapon - Greater Ninja's Focus", "" };
-		{ 5, "s968690", "Spell_Holy_GreaterHeal", "=q4=Enchant Weapon - Greater Grovewarden's Blessing", "" };
-		{ 6, "s968693", "Spell_Holy_GreaterHeal", "=q4=Enchant Weapon - Greater Viscious Assault", "" };
-		{ 7, "s968696", "Spell_Holy_GreaterHeal", "=q4=Enchant Weapon - Greater Arcane Dexterity", "" };
-		{ 8, "s968699", "Spell_Holy_GreaterHeal", "=q4=Enchant Weapon - Greater Arcane Artillery", "" };
-		{ 9, "s968702", "Spell_Holy_GreaterHeal", "=q4=Enchant Weapon - Greater Arcane Precision", "" };
-		{ 10, "s968771", "Spell_Holy_GreaterHeal", "=q4=Enchant Weapon - Crusader III", "" };
+		[1] = {icon = "Spell_Holy_GreaterHeal", spellID = 968678 }; --Enchant Weapon - Greater Unstoppable Assault
+		[2] = {icon = "Spell_Holy_GreaterHeal", spellID = 968681 }; --Enchant Weapon - Greater Lucid Assualt
+		[3] = {icon = "Spell_Holy_GreaterHeal", spellID = 968684 }; --Enchant Weapon - Greater Spellbinder's Rage
+		[4] = {icon = "Spell_Holy_GreaterHeal", spellID = 968687 }; --Enchant Weapon - Greater Ninja's Focus
+		[5] = {icon = "Spell_Holy_GreaterHeal", spellID = 968690 }; --Enchant Weapon - Greater Grovewarden's Blessing
+		[6] = {icon = "Spell_Holy_GreaterHeal", spellID = 968693 }; --Enchant Weapon - Greater Viscious Assault
+		[7] = {icon = "Spell_Holy_GreaterHeal", spellID = 968696 }; --Enchant Weapon - Greater Arcane Dexterity
+		[8] = {icon = "Spell_Holy_GreaterHeal", spellID = 968699 }; --Enchant Weapon - Greater Arcane Artillery
+		[9] = {icon = "Spell_Holy_GreaterHeal", spellID = 968702 }; --Enchant Weapon - Greater Arcane Precision
+		[10] = {icon = "Spell_Holy_GreaterHeal", spellID = 968771 }; --Enchant Weapon - Crusader III
 	};
 };
 
@@ -2506,21 +2405,21 @@ AtlasLoot_Data["TailoringHighRiskCLASSIC"] = {
 	Type = "CraftingNoBF";
 	{
 		Name = "Rare";
-		{ 1, "s968061", "967215", "=q3=Heavy Dragonweave Cloak Lining", "" };
-		{ 2, "s968064", "967218", "=q3=Heavy Twilight Cloak Lining", "" };
-		{ 3, "s968067", "967221", "=q3=Heavy Scarlet Cloak Lining", "" };
-		{ 4, "s968070", "967224", "=q3=Heavy Rampager's Cloak Lining", "" };
-		{ 5, "s968073", "967227", "=q3=Heavy Deadwind Cloak Lining", "" };
-		{ 6, "s968076", "967230", "=q3=Heavy Slippery Cloak Lining", "" };
+		[1] = {itemID = 967215, spellID = 968061 }; --Heavy Dragonweave Cloak Lining
+		[2] = {itemID = 967218, spellID = 968064 }; --Heavy Twilight Cloak Lining
+		[3] = {itemID = 967221, spellID = 968067 }; --Heavy Scarlet Cloak Lining
+		[4] = {itemID = 967224, spellID = 968070 }; --Heavy Rampager's Cloak Lining
+		[5] = {itemID = 967227, spellID = 968073 }; --Heavy Deadwind Cloak Lining
+		[6] = {itemID = 967230, spellID = 968076 }; --Heavy Slippery Cloak Lining
 	};
 	{
 		Name = "Epic";
-		{ 1, "s968062", "967216", "=q4=Illustrious Dragonweave Cloak Lining", "" };
-		{ 2, "s968065", "967219", "=q4=Illustrious Twilight Cloak Lining", "" };
-		{ 3, "s968068", "967222", "=q4=Illustrious Scarlet Cloak Lining", "" };
-		{ 4, "s968071", "967225", "=q4=Illustrious Rampager's Cloak Lining", "" };
-		{ 5, "s968074", "967228", "=q4=Illustrious Deadwind Cloak Lining", "" };
-		{ 6, "s968077", "967231", "=q4=Illustrious Slippery Cloak Lining", "" };
+		[1] = {itemID = 967216, spellID = 968062 }; --Illustrious Dragonweave Cloak Lining
+		[2] = {itemID = 967219, spellID = 968065 }; --Illustrious Twilight Cloak Lining
+		[3] = {itemID = 967222, spellID = 968068 }; --Illustrious Scarlet Cloak Lining
+		[4] = {itemID = 967225, spellID = 968071 }; --Illustrious Rampager's Cloak Lining
+		[5] = {itemID = 967228, spellID = 968074 }; --Illustrious Deadwind Cloak Lining
+		[6] = {itemID = 967231, spellID = 968077 }; --Illustrious Slippery Cloak Lining
 	};
 };
 
@@ -2529,98 +2428,98 @@ AtlasLoot_Data["CookingHighRiskCLASSIC"] = {
 	Type = "CraftingNoBF";
 	{
 		Name = "Rare";
-		{ 1, "s968280", "967510", "=q3=Animated Soup for the Soul", "" };
-		{ 2, "s968283", "967513", "=q3=Volcanic Sandwich", "" };
-		{ 3, "s968286", "967516", "=q3=Winter Wontons", "" };
-		{ 4, "s968289", "967519", "=q3=Storm Steak", "" };
-		{ 5, "s968292", "967522", "=q3=Void Touched Stew", "" };
-		{ 6, "s968295", "967525", "=q3=Spicy Vulture Steak", "" };
-		{ 7, "s968298", "967528", "=q3=Wizard Wontons", "" };
-		{ 8, "s968301", "967531", "=q3=Jurassic Burger", "" };
-		{ 9, "s968304", "967534", "=q3=Rough-alo wings", "" };
-		{ 10, "s968307", "967537", "=q3=The Whooper Sandwich", "" };
-		{ 11, "s968310", "967540", "=q3=Vulture a la King", "" };
-		{ 12, "s968313", "967543", "=q3=Scorching Hot Steak", "" };
-		{ 13, "s968316", "967546", "=q3=Lively Stew", "" };
-		{ 14, "s968319", "967549", "=q3=Crawling Steak", "" };
-		{ 15, "s968322", "967552", "=q3=Breakonator Sandwich", "" };
-		{ 16, "s968325", "967555", "=q3=Master Wontons", "" };
-		{ 17, "s968328", "967558", "=q3=Big Whack Sandwich", "" };
-		{ 18, "s968331", "967561", "=q3=Warping Wontons", "" };
-		{ 19, "s968334", "967564", "=q3=Duck Stew", "" };
-		{ 20, "s968337", "967567", "=q3=Mountainman Stew", "" };
-		{ 21, "s968340", "967570", "=q3=Scorched Stew", "" };
-		{ 22, "s968343", "967573", "=q3=Vulcan Wontons", "" };
-		{ 23, "s968346", "967576", "=q3=Jurassic Soup", "" };
-		{ 24, "s968349", "967579", "=q3=Heightened Wontons", "" };
-		{ 25, "s968352", "967582", "=q3=Hearty Spirit Soup", "" };
-		{ 26, "s968355", "967585", "=q3=Jurassic Steak", "" };
-		{ 27, "s968358", "967588", "=q3=Stormwich Sandwich", "" };
-		{ 28, "s968361", "967591", "=q3=Warding Wontons", "" };
-		{ 29, "s968364", "967594", "=q3=Rolling Meatballs", "" };
-		{ 30, "s968367", "967597", "=q3=Subtle Steak", "" };
+		[1] = {itemID = 967510, spellID = 968280 }; --Animated Soup for the Soul
+		[2] = {itemID = 967513, spellID = 968283 }; --Volcanic Sandwich
+		[3] = {itemID = 967516, spellID = 968286 }; --Winter Wontons
+		[4] = {itemID = 967519, spellID = 968289 }; --Storm Steak
+		[5] = {itemID = 967522, spellID = 968292 }; --Void Touched Stew
+		[6] = {itemID = 967525, spellID = 968295 }; --Spicy Vulture Steak
+		[7] = {itemID = 967528, spellID = 968298 }; --Wizard Wontons
+		[8] = {itemID = 967531, spellID = 968301 }; --Jurassic Burger
+		[9] = {itemID = 967534, spellID = 968304 }; --Rough-alo wings
+		[10] = {itemID = 967537, spellID = 968307 }; --The Whooper Sandwich
+		[11] = {itemID = 967540, spellID = 968310 }; --Vulture a la King
+		[12] = {itemID = 967543, spellID = 968313 }; --Scorching Hot Steak
+		[13] = {itemID = 967546, spellID = 968316 }; --Lively Stew
+		[14] = {itemID = 967549, spellID = 968319 }; --Crawling Steak
+		[15] = {itemID = 967552, spellID = 968322 }; --Breakonator Sandwich
+		[16] = {itemID = 967555, spellID = 968325 }; --Master Wontons
+		[17] = {itemID = 967558, spellID = 968328 }; --Big Whack Sandwich
+		[18] = {itemID = 967561, spellID = 968331 }; --Warping Wontons
+		[19] = {itemID = 967564, spellID = 968334 }; --Duck Stew
+		[20] = {itemID = 967567, spellID = 968337 }; --Mountainman Stew
+		[21] = {itemID = 967570, spellID = 968340 }; --Scorched Stew
+		[22] = {itemID = 967573, spellID = 968343 }; --Vulcan Wontons
+		[23] = {itemID = 967576, spellID = 968346 }; --Jurassic Soup
+		[24] = {itemID = 967579, spellID = 968349 }; --Heightened Wontons
+		[25] = {itemID = 967582, spellID = 968352 }; --Hearty Spirit Soup
+		[26] = {itemID = 967585, spellID = 968355 }; --Jurassic Steak
+		[27] = {itemID = 967588, spellID = 968358 }; --Stormwich Sandwich
+		[28] = {itemID = 967591, spellID = 968361 }; --Warding Wontons
+		[29] = {itemID = 967594, spellID = 968364 }; --Rolling Meatballs
+		[30] = {itemID = 967597, spellID = 968367 }; --Subtle Steak
 	};
 	{
 		Name = "Rare";
-		{ 1, "s968370", "967600", "=q3=Subtle Sandwich", "" };
-		{ 2, "s968373", "967603", "=q3=Subtle Wontons", "" };
-		{ 3, "s968376", "967606", "=q3=Subtle Sulferous Soup", "" };
-		{ 4, "s968379", "967609", "=q3=Strongman Stew", "" };
-		{ 5, "s968382", "967612", "=q3=Mysterious Void Roast", "" };
-		{ 6, "s968385", "967615", "=q3=Fire Charred Roast", "" };
-		{ 7, "s968388", "967618", "=q3=Storm Fried Roast", "" };
-		{ 8, "s968391", "967621", "=q3=Winter Roast", "" };
-		{ 9, "s968394", "967624", "=q3=Blackened Roast", "" };
-		{ 10, "s968397", "967627", "=q3=Dino Delight", "" };
-		{ 11, "s968400", "967630", "=q3=Slick-fil-A Sandwich", "" };
-		{ 13, "s968647", "967704", "=q3=Alluring Bait", "" };
+		[1] = {itemID = 967600, spellID = 968370 }; --Subtle Sandwich
+		[2] = {itemID = 967603, spellID = 968373 }; --Subtle Wontons
+		[3] = {itemID = 967606, spellID = 968376 }; --Subtle Sulferous Soup
+		[4] = {itemID = 967609, spellID = 968379 }; --Strongman Stew
+		[5] = {itemID = 967612, spellID = 968382 }; --Mysterious Void Roast
+		[6] = {itemID = 967615, spellID = 968385 }; --Fire Charred Roast
+		[7] = {itemID = 967618, spellID = 968388 }; --Storm Fried Roast
+		[8] = {itemID = 967621, spellID = 968391 }; --Winter Roast
+		[9] = {itemID = 967624, spellID = 968394 }; --Blackened Roast
+		[10] = {itemID = 967627, spellID = 968397 }; --Dino Delight
+		[11] = {itemID = 967630, spellID = 968400 }; --Slick-fil-A Sandwich
+		[13] = {itemID = 967704, spellID = 968647 }; --Alluring Bait
 	};
 	{
 		Name = "Epic";
-		{ 1, "s968281", "967511", "=q4=Animated Soup for the Soul", "" };
-		{ 2, "s968284", "967514", "=q4=Volcanic Sandwich", "" };
-		{ 3, "s968287", "967517", "=q4=Winter Wontons", "" };
-		{ 4, "s968290", "967520", "=q4=Storm Steak", "" };
-		{ 5, "s968293", "967523", "=q4=Void Touched Stew", "" };
-		{ 6, "s968296", "967526", "=q4=Spicy Vulture Steak", "" };
-		{ 7, "s968299", "967529", "=q4=Wizard Wontons", "" };
-		{ 8, "s968302", "967532", "=q4=Jurassic Burger", "" };
-		{ 9, "s968305", "967535", "=q4=Rough-alo wings", "" };
-		{ 10, "s968308", "967538", "=q4=The Whooper Sandwich", "" };
-		{ 11, "s968311", "967541", "=q4=Vulture a la King", "" };
-		{ 12, "s968314", "967542", "=q4=Scorching Hot Steak", "" };
-		{ 13, "s968317", "967547", "=q4=Lively Stew", "" };
-		{ 14, "s968320", "967550", "=q4=Crawling Steak", "" };
-		{ 15, "s968323", "967553", "=q4=Breakonator Sandwich", "" };
-		{ 16, "s968326", "967556", "=q4=Master Wontons", "" };
-		{ 17, "s968329", "967559", "=q4=Big Whack Sandwich", "" };
-		{ 18, "s968332", "967562", "=q4=Warping Wontons", "" };
-		{ 19, "s968335", "967565", "=q4=Duck Stew", "" };
-		{ 20, "s968338", "967568", "=q4=Mountainman Stew", "" };
-		{ 21, "s968341", "967571", "=q4=Scorched Stew", "" };
-		{ 22, "s968344", "967574", "=q4=Vulcan Wontons", "" };
-		{ 23, "s968347", "967577", "=q4=Jurassic Soup", "" };
-		{ 24, "s968350", "967580", "=q4=Heightened Wontons", "" };
-		{ 25, "s968353", "967583", "=q4=Hearty Spirit Soup", "" };
-		{ 26, "s968356", "967586", "=q4=Jurassic Steak", "" };
-		{ 27, "s968359", "967589", "=q4=Stormwich Sandwich", "" };
-		{ 28, "s968362", "967592", "=q4=Warding Wontons", "" };
-		{ 29, "s968365", "967595", "=q4=Rolling Meatballs", "" };
-		{ 30, "s968368", "967598", "=q4=Subtle Steak", "" };
+		[1] = {itemID = 967511, spellID = 968281 }; --Animated Soup for the Soul
+		[2] = {itemID = 967514, spellID = 968284 }; --Volcanic Sandwich
+		[3] = {itemID = 967517, spellID = 968287 }; --Winter Wontons
+		[4] = {itemID = 967520, spellID = 968290 }; --Storm Steak
+		[5] = {itemID = 967523, spellID = 968293 }; --Void Touched Stew
+		[6] = {itemID = 967526, spellID = 968296 }; --Spicy Vulture Steak
+		[7] = {itemID = 967529, spellID = 968299 }; --Wizard Wontons
+		[8] = {itemID = 967532, spellID = 968302 }; --Jurassic Burger
+		[9] = {itemID = 967535, spellID = 968305 }; --Rough-alo wings
+		[10] = {itemID = 967538, spellID = 968308 }; --The Whooper Sandwich
+		[11] = {itemID = 967541, spellID = 968311 }; --Vulture a la King
+		[12] = {itemID = 967542, spellID = 968314 }; --Scorching Hot Steak
+		[13] = {itemID = 967547, spellID = 968317 }; --Lively Stew
+		[14] = {itemID = 967550, spellID = 968320 }; --Crawling Steak
+		[15] = {itemID = 967553, spellID = 968323 }; --Breakonator Sandwich
+		[16] = {itemID = 967556, spellID = 968326 }; --Master Wontons
+		[17] = {itemID = 967559, spellID = 968329 }; --Big Whack Sandwich
+		[18] = {itemID = 967562, spellID = 968332 }; --Warping Wontons
+		[19] = {itemID = 967565, spellID = 968335 }; --Duck Stew
+		[20] = {itemID = 967568, spellID = 968338 }; --Mountainman Stew
+		[21] = {itemID = 967571, spellID = 968341 }; --Scorched Stew
+		[22] = {itemID = 967574, spellID = 968344 }; --Vulcan Wontons
+		[23] = {itemID = 967577, spellID = 968347 }; --Jurassic Soup
+		[24] = {itemID = 967580, spellID = 968350 }; --Heightened Wontons
+		[25] = {itemID = 967583, spellID = 968353 }; --Hearty Spirit Soup
+		[26] = {itemID = 967586, spellID = 968356 }; --Jurassic Steak
+		[27] = {itemID = 967589, spellID = 968359 }; --Stormwich Sandwich
+		[28] = {itemID = 967592, spellID = 968362 }; --Warding Wontons
+		[29] = {itemID = 967595, spellID = 968365 }; --Rolling Meatballs
+		[30] = {itemID = 967598, spellID = 968368 }; --Subtle Steak
 	};
 	{
 		Name = "Epic";
-		{ 1, "s968371", "967601", "=q4=Subtle Sandwich", "" };
-		{ 2, "s968374", "967604", "=q4=Subtle Wontons", "" };
-		{ 3, "s968377", "967607", "=q4=Subtle Sulferous Soup", "" };
-		{ 4, "s968380", "967610", "=q4=Strongman Stew", "" };
-		{ 5, "s968383", "967613", "=q4=Mysterious Void Roast", "" };
-		{ 6, "s968386", "967616", "=q4=Fire Charred Roast", "" };
-		{ 7, "s968389", "967619", "=q4=Storm Fried Roast", "" };
-		{ 8, "s968392", "967622", "=q4=Winter Roast", "" };
-		{ 9, "s968395", "967625", "=q4=Blackened Roast", "" };
-		{ 10, "s968398", "967628", "=q4=Dino Delight", "" };
-		{ 11, "s968401", "967631", "=q4=Slick-fil-A Sandwich", "" };
-		{ 13, "s968648", "967705", "=q4=Irresistible Bait", "" };
+		[1] = {itemID = 967601, spellID = 968371 }; --Subtle Sandwich
+		[2] = {itemID = 967604, spellID = 968374 }; --Subtle Wontons
+		[3] = {itemID = 967607, spellID = 968377 }; --Subtle Sulferous Soup
+		[4] = {itemID = 967610, spellID = 968380 }; --Strongman Stew
+		[5] = {itemID = 967613, spellID = 968383 }; --Mysterious Void Roast
+		[6] = {itemID = 967616, spellID = 968386 }; --Fire Charred Roast
+		[7] = {itemID = 967619, spellID = 968389 }; --Storm Fried Roast
+		[8] = {itemID = 967622, spellID = 968392 }; --Winter Roast
+		[9] = {itemID = 967625, spellID = 968395 }; --Blackened Roast
+		[10] = {itemID = 967628, spellID = 968398 }; --Dino Delight
+		[11] = {itemID = 967631, spellID = 968401 }; --Slick-fil-A Sandwich
+		[13] = {itemID = 967705, spellID = 968648 }; --Irresistible Bait
 	};
 };

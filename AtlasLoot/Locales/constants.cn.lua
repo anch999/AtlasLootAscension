@@ -44,7 +44,7 @@ if AL then
 	AL["Choose Table ..."] = "请选择……";
 	AL["Unknown"] = "未知";
 	AL["Add to QuickLooks:"] = "添加到快捷浏览";
-	AL["Assign this loot table\n to QuickLook"] = "分配此物品表\n至快捷浏览";
+	AL["Assign this loot table\n to Favorite"] = "分配此物品表\n至快捷浏览";
 	AL["Query Server"] = "查询物品";
 	AL["Reset Frames"] = "重置框体";
 	AL["Reset Wishlist"] = "重置需求表";

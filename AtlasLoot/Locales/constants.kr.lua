@@ -46,7 +46,7 @@ if AL then
 	AL["Choose Table ..."] = "테이블 선택 ...";
 --	AL["Unknown"] = true;
 --	AL["Add to QuickLooks:"] = true;
---	AL["Assign this loot table\n to QuickLook"] = true;
+--	AL["Assign this loot table\n to Favorite"] = true;
 --	AL["Query Server"] = true;
 --	AL["Reset Frames"] = true;
 --	AL["Reset Wishlist"] = true;

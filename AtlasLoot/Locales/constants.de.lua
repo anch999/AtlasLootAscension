@@ -31,7 +31,7 @@ if AL then
 	AL["Choose Table ..."] = "Verzeichnis wählen ...";
 	AL["Unknown"] = "Unbekannt";
 	AL["Add to QuickLooks:"] = "Lesezeichen hinzufügen";
-	AL["Assign this loot table\n to QuickLook"] = "Dieses Beuteverzeichnis dem\n Lesezeichen hinzufügen";
+	AL["Assign this loot table\n to Favorite"] = "Dieses Beuteverzeichnis dem\n Lesezeichen hinzufügen";
 	AL["Query Server"] = "Serverabfrage";
 	AL["Reset Frames"] = "Fenster zurücksetzen";
 	AL["Reset Wishlist"] = "Wunschzettel zurücksetzen";

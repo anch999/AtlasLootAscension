@@ -27,6 +27,7 @@ AtlasLoot.FixedItemText = {
     [29906] = BabbleInventory["Quest"], -- Vashj's Vial Remnant
     [29905] = BabbleInventory["Quest"], -- Kael's Vial Remnant
     [98570] = AL["Mystic Enchanting"],
+    [229739] = AL["Epic Shoulder Enchants"]
 }
 
 
@@ -110,7 +111,7 @@ function AtlasLoot:FixText(text)
     text = gsub(text, "INVTYPE_CHEST", BabbleInventory["Chest"])
     text = gsub(text, "INVTYPE_BODY", BabbleInventory["Shirt"])
     text = gsub(text, "INVTYPE_ROBE", BabbleInventory["Chest"])
-    text = gsub(text, "INVTYPE_TABARD", BabbleInventory["Tabard"])
+    text = gsub(text, "INVTYPE_TABARD, Miscellaneous", BabbleInventory["Tabard"])
     text = gsub(text, "INVTYPE_WRIST", BabbleInventory["Wrist"])
     text = gsub(text, "INVTYPE_HAND", BabbleInventory["Hands"])
     text = gsub(text, "INVTYPE_WAIST", BabbleInventory["Waist"])

@@ -84,10 +84,6 @@ local SPELLFIRE = GetSpellInfo(26797);
 ---- Tailoring Sets
 --- Other
 ---- Crafted Epic Weapons
---- Daily Profession Rewards
----- Cooking
----- Fishing
----- Jewelcrafting
 
 -----------------------
 --- Tradeskill List ---

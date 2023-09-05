@@ -43,7 +43,7 @@ if AL then
     AL["Choose Table ..."] = "Выбор таблицы";
     AL["Unknown"] = "Неизвестно";
     AL["Add to QuickLooks:"] = "В БыстрыйОсмотр:";
-	AL["Assign this loot table\n to QuickLook"] = "Определить эту таблицу в\n в БыстрыйОсмотр";
+	AL["Assign this loot table\n to Favorite"] = "Определить эту таблицу в\n в БыстрыйОсмотр";
     AL["Query Server"] = "Запрос с серв.";
     AL["Reset Frames"] = "Сброс фреймов";
     AL["Reset Wishlist"] = "Сброс списка нужного";

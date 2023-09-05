@@ -41,7 +41,7 @@ if AL then
 	AL["Choose Table ..."] = "Elige una tabla...";
 	AL["Unknown"] = "Desconocido";
 	AL["Add to QuickLooks:"] = "Añade a VistaRápida";
-	AL["Assign this loot table\n to QuickLook"] = "Asignar esta tabla\n a VistaRapida";
+	AL["Assign this loot table\n to Favorite"] = "Asignar esta tabla\n a VistaRapida";
 	AL["Query Server"] = "Pregun. Servidor";
 	AL["Reset Frames"] = "Restaurar marcos";
 	AL["Reset Wishlist"] = "Res. ListaDeseada";

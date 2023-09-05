@@ -11,7 +11,6 @@ AtlasLoot_FilterEnableButton()
 AtlasLoote_CreateFilterOptions()
 
 ]]
-local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0")
 local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
 
 AtlasLoot_FilterMenu = AceLibrary("Dewdrop-2.0")
@@ -145,12 +144,12 @@ function AtlasLoot:HideFilteredItems()
 		end
 	end
 	for i,v in ipairs(tablebase) do
-		if getFilterType(v[2]) or v[2] == 0 then
-			if v[1] == 16 then
+		if getFilterType(v.itemID) or v.icon then
+			if i == 16 then
 				count = 0
 			end
-			table.insert(AtlasLootFilter["FilterList"][1],{v[1] - count,v[2],v[3],v[4],v[5],v[6],v[7],v[8]})
-		elseif v[1] == 16 then
+			AtlasLootFilter["FilterList"][1][i-count] = v
+		elseif i == 16 then
 			count = 1
 		else
 			count = count + 1

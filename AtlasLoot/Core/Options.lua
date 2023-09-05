@@ -146,7 +146,7 @@ function AtlasLoot_UpdateLootBrowserSlider(frame)
     _G[frame:GetName().."Text"]:SetText(AL["Loot Browser Scale: "].." ("..round(frame:GetValue(),2)..")")
 end
 
-function AtlasLoot_UpdateLootBrowserScale()
+function AtlasLoot:UpdateLootBrowserScale()
 	AtlasLootDefaultFrame:SetScale(AtlasLoot.db.profile.LootBrowserScale)
 end
 
@@ -366,7 +366,7 @@ local bscale = CreateFrame("Slider", "AtlasLootOptionsFrameLootBrowserScale", At
         bscale:SetScript("OnValueChanged", function(self)
             AtlasLoot_UpdateLootBrowserSlider(self)
             AtlasLoot.db.profile.LootBrowserScale = self:GetValue()
-            AtlasLoot_UpdateLootBrowserScale()
+            AtlasLoot:UpdateLootBrowserScale()
         end)
 
 local resetwish = CreateFrame("Button", "AtlasLootOptionsFrame_ResetWishlist", AtlasLootOptionsFrame, "OptionsButtonTemplate")
