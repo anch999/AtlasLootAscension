@@ -238,9 +238,8 @@ function AtlasLootItem_OnClick(self ,arg1)
 	local name = strsub(_G["AtlasLootItem_"..self:GetID().."_Name"]:GetText(), 11)
     local spellID = self.spellID
     local itemID = self.itemID
-    if not spellID then
+    if not spellID and itemID then
 
-        local iteminfo = GetItemInfo(itemID)
         local itemName, itemLink, itemQuality, itemLevel, itemMinLevel, itemType, itemSubType, itemCount, itemEquipLoc, itemTexture = GetItemInfo(itemID)
         --If shift-clicked, link in the chat window
         if arg1=="RightButton" and AtlasLoot.itemUnlock then
@@ -267,7 +266,7 @@ function AtlasLootItem_OnClick(self ,arg1)
                 AtlasLoot:ItemContextMenu(itemID, self.itemTexture, _G["AtlasLootItem_"..self:GetID().."_Name"]:GetText(),
                                                     AtlasLoot_BossName:GetText(), self.dataID .. "|" .. "AtlasLoot_Data" .. "|" .. tostring(self.tablenum), self, "item", self.number,self.craftingData)
             end
-        elseif(IsShiftKeyDown() and iteminfo and (AtlasLoot.db.profile.SafeLinks or AtlasLoot.db.profile.AllLinks)) then
+        elseif(IsShiftKeyDown() and itemName and (AtlasLoot.db.profile.SafeLinks or AtlasLoot.db.profile.AllLinks)) then
             --insert to chat link
             ChatEdit_InsertLink(itemLink)
         elseif(IsShiftKeyDown() and AtlasLoot.db.profile.AllLinks) then
@@ -275,7 +274,7 @@ function AtlasLootItem_OnClick(self ,arg1)
         elseif(ChatFrameEditBox and ChatFrameEditBox:IsVisible() and IsShiftKeyDown()) then
             ChatFrameEditBox:Insert(name)  -- <-- this line just inserts plain text, does not need any adjustment
             --If control-clicked, use the dressing room
-        elseif(IsControlKeyDown() and iteminfo) then
+        elseif(IsControlKeyDown() and itemName) then
             --view item in dressing room
             DressUpItemLink(itemLink)
         elseif IsAltKeyDown() then

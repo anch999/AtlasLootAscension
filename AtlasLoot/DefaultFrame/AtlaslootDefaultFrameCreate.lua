@@ -6,7 +6,7 @@ local INDENT = "    "
     --Main AtlasLoot Frame
     local mainframe = CreateFrame("FRAME", "AtlasLootDefaultFrame", UIParent,"PortraitFrameTemplate")
     mainframe:SetPoint("CENTER",0,0)
-    mainframe:SetSize(1110,670)
+    mainframe:SetSize(1110,640)
     mainframe:EnableMouse(true)
     mainframe:SetMovable(1)
     mainframe.portrait:SetPortraitTexture("Interface\\Icons\\INV_Box_01")
@@ -270,7 +270,7 @@ local searchbox = CreateFrame("EditBox","AtlasLootDefaultFrameSearchBox",AtlasLo
     searchbox:SetSize(190,32)
     searchbox:SetMaxLetters(100)
     searchbox:SetAutoFocus(false)
-    searchbox:SetPoint("BOTTOMLEFT", "AtlasLootDefaultFrame", "BOTTOMLEFT", 45, 8)
+    searchbox:SetPoint("BOTTOMLEFT", "AtlasLootDefaultFrame", "BOTTOMLEFT", 45, 6)
     searchbox:SetTextInsets(0, 8, 0, 0)
     searchbox:SetScript("OnEnterPressed", function(self)
         AtlasLoot:Search(self:GetText())
@@ -364,11 +364,7 @@ local wishbtn = CreateFrame("Button", "AtlasLootDefaultFrameWishListButton", Atl
                 GameTooltip:AddLine("Right Click For Menu")
                 GameTooltip:Show()
         end)
-        wishbtn:SetScript("OnLeave", function()
-            if(GameTooltip:IsVisible()) then
-                GameTooltip:Hide()
-            end
-        end)
+        wishbtn:SetScript("OnLeave", function() GameTooltip:Hide() end)
 
 local favorites = CreateFrame("Button", "AtlasLoot_Favorites", AtlasLootDefaultFrame, "FilterDropDownMenuTemplate")
     favorites:SetPoint("LEFT", "AtlasLootDefaultFrameWishListButton", "RIGHT", 2, 0)
@@ -376,8 +372,15 @@ local favorites = CreateFrame("Button", "AtlasLoot_Favorites", AtlasLootDefaultF
     favorites:SetSize(150,25)
     favorites:SetScript("OnClick", function(self) AtlasLoot:ShowFavorites(self) end)
     favorites.template = "FilterDropDownMenuTemplate"
-    favorites:SetScript("OnEnter", function() AtlasLoot_FavoritesPopupFrame:Show() end)
+    favorites:SetScript("OnEnter", function(self) 
+        GameTooltip:ClearLines()
+        GameTooltip:SetOwner(self, "ANCHOR_RIGHT", -(self:GetWidth() / 2), 5)
+        GameTooltip:AddLine("Left click to add to favorites")
+        GameTooltip:Show()
+        AtlasLoot_FavoritesPopupFrame:Show() 
+    end)
     favorites:SetScript("OnLeave", function()
+        GameTooltip:Hide()
         if GetMouseFocus():GetName() ~= "AtlasLoot_FavoritesPopupFrame" then
             AtlasLoot_FavoritesPopupFrame:Hide()
         end
@@ -393,6 +396,13 @@ local currentInstance = CreateFrame("Button","AtlasLootDefaultFrame_LoadInstance
         currentInstance.template = "FilterDropDownMenuTemplate"
         currentInstance:SetPoint("LEFT", "AtlasLoot_Favorites", "RIGHT", 2, 0)
         currentInstance:SetScript("OnClick", function() AtlasLoot:ShowInstance() end)
+        currentInstance:SetScript("OnLeave", function() GameTooltip:Hide() end)
+        currentInstance:SetScript("OnEnter", function(self)
+            GameTooltip:ClearLines()
+            GameTooltip:SetOwner(self, "ANCHOR_RIGHT", -(self:GetWidth() / 2), 5)
+            GameTooltip:AddLine("Load the instance you are in")
+            GameTooltip:Show()
+    end)
         currentInstance:SetText("Current Instance")
 
 local popupframe = CreateFrame("Frame", "AtlasLoot_FavoritesPopupFrame", AtlasLoot_Favorites)
@@ -695,7 +705,7 @@ subtableFrame.rows = rows2
     --AtlasLoot Maps
     local mapFrame = CreateFrame("Frame", "AtlasLootDefaultFrame_Map", AtlasLootDefaultFrame)
         mapFrame:SetSize(770,513)
-        mapFrame:SetPoint("BOTTOMLEFT", AtlasLootDefaultFrame,"BOTTOMLEFT",40,90)
+        mapFrame:SetPoint("TOPLEFT", AtlasLootDefaultFrame, "TOPLEFT",40,-86)
         mapFrame:SetFrameStrata("HIGH")
         mapFrame:Hide()
         mapFrame:EnableMouse()
@@ -765,7 +775,7 @@ subtableFrame.rows = rows2
         -- Map Button
         mainframe.mapButton = CreateFrame("Button","AtlasLootDefaultFrame_MapButton", AtlasLootDefaultFrame, "FilterDropDownMenuTemplate")
         mainframe.mapButton:SetSize(265,25)
-        mainframe.mapButton:SetPoint("BOTTOM",Atlasloot_SubTableFrame,0,-29.1)
+        mainframe.mapButton:SetPoint("LEFT",AtlasLootDefaultFrame_LoadInstanceButton,"RIGHT",12,0)
         mainframe.mapButton.template = "FilterDropDownMenuTemplate"
         mainframe.mapButton:SetText("No Map")
         mainframe.mapButton:RegisterForClicks("AnyDown")

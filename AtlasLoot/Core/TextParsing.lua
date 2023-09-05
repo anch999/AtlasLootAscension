@@ -180,8 +180,6 @@ function AtlasLoot:FixText(text)
     text = gsub(text, ", Other", AL["Misc"])
     text = gsub(text, ", Junk", AL["Misc"])
     text = gsub(text, "%(OBSOLETE%)", "")
-    text = gsub(text, ", Cloth", BabbleInventory["Cloth"])
-    text = gsub(text, ", Leather", BabbleInventory["Leather"])
     text = gsub(text, ", Food & Drink", BabbleInventory["Food & Drink"])
 
     text = gsub(text, ", Red", AL["Red Gem"])

@@ -127,6 +127,7 @@ if AL then
 	AL["Loot Browser Style:"] = true
 	AL["New Style"] = true
 	AL["Classic Style"] = true
+	AL["Modern Style"] = true
 	AL["Select Mythic Pluss Tier:"] = true
 	AL["Mythic Tier 0"] = true
 	AL["Mythic Tier 1"] = true
