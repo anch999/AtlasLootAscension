@@ -60,55 +60,6 @@ function AtlasLoot:ShowInstance()
     end
 end
 
-
---Expand Frame Size
-function AtlasLoot:ExpandFrame(setup, updatedb)
-    local function buttonResize(expanded)
-        if expanded then
-            for num = 1, 30 do
-                _G["AtlasLootItem_"..num.."_Name"]:SetSize(400,12)
-            end
-            AtlasLootItem_1:ClearAllPoints()
-            AtlasLootItem_1:SetPoint("TOP", "AtlasLootItemsFrame", "TOP",-180,-35)
-            AtlasLootItem_16:ClearAllPoints()
-            AtlasLootItem_16:SetPoint("TOP", "AtlasLootItemsFrame", "TOP", 180,-35)
-        else
-            for num = 1, 30 do
-                _G["AtlasLootItem_"..num.."_Name"]:SetSize(205,12)
-            end
-            AtlasLootItem_1:ClearAllPoints()
-            AtlasLootItem_1:SetPoint("TOP", "AtlasLootItemsFrame", "TOP",-125,-35)
-            AtlasLootItem_16:ClearAllPoints()
-            AtlasLootItem_16:SetPoint("TOP", "AtlasLootItemsFrame", "TOP", 125,-35)
-        end
-    end
-    local function expand()
-        AtlasLootDefaultFrame:SetSize(1110,690)
-        AtlaslLoot_LootBackground:SetSize(770,515)
-        AtlasLootItemsFrame:SetSize(765,510)
-    end
-    local function compact()
-        AtlasLootDefaultFrame:SetSize(880,690)
-        AtlaslLoot_LootBackground:SetSize(540,515)
-        AtlasLootItemsFrame:SetSize(535,510)
-    end
-    if setup then
-        expand()
-        buttonResize(true)
-    else
-        if not AtlasLoot.frameExpanded then
-            expand()
-            buttonResize(true)
-            AtlasLoot.frameExpanded = true
-        else
-            compact()
-            buttonResize(false)
-            AtlasLoot.frameExpanded = false
-        end
-    end
-    if updatedb then AtlasLoot.db.profile.FrameExpanded = AtlasLoot.frameExpanded end
-end
-
 --[[
 AtlasLoot:DewDropClick(tablename, text, tabletype):
 tablename - Name of the loot table in the database

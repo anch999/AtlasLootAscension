@@ -168,7 +168,6 @@ function AtlasLoot:MapOnShow()
                 AtlasLoot:MapSelect(AtlasLoot.CurrentMap, mapNum)
         end
     end
-    if not AtlasLoot.db.profile.FrameExpanded then AtlasLoot:ExpandFrame(false, false) end
 end
 
 --called to change the current displayed map

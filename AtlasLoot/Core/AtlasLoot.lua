@@ -207,8 +207,6 @@ function AtlasLoot:OnEnable()
 	AtlasLoot:LoadItemIDsDatabase()
 	AtlasLoot:LoadTradeskillRecipes()
 	AtlasLoot:PopulateProfessions()
-	AtlasLoot.frameExpanded = AtlasLoot.db.profile.FrameExpanded
-	if AtlasLoot.frameExpanded then AtlasLoot:ExpandFrame(true) end
 end
 
 function AtlasLoot:Reset(data)
@@ -1146,20 +1144,7 @@ function AtlasLoot:PreLoadLootTable(dataSource, dataID)
 end
 
 
---[[
-AtlasLoot:FindId(id, difficulty)
-Finds the Ids of other difficulties based on the normal id of the item and the difficulty parameter given.
-On the form of {ID, {normal, heroic, mythic, mythic1, mythic2, ... ,mythicN}}
-]]
-function AtlasLoot:FindId(id, difficulty, type)
-	if not ItemIDsDatabase[id] then return nil, false end
 
-	if difficulty == 5 and (type == "BCRaid" or type == "ClassicRaid") then
-		return ItemIDsDatabase[id]["MythicRaid"], true
-	else
-		return ItemIDsDatabase[id][difficulty], true
-	end
-end
 
 -- Loads the Item Variations into a table from the data content folder
 function AtlasLoot:LoadItemIDsDatabase()

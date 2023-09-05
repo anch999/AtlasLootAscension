@@ -91,7 +91,8 @@ function AtlasLoot:CloseDewDrop(divider, maxLenght)
     )
 end
 
-function AtlasLoot:CloneTable(t)				-- return a copy of the table t
+-- return a copy of the table t
+function AtlasLoot:CloneTable(t)				
 	local new = {}					-- create a new table
 	local i, v = next(t, nil)		-- i is an index of t, v = t[i]
 	while i do
@@ -104,8 +105,24 @@ function AtlasLoot:CloneTable(t)				-- return a copy of the table t
 	return new
 end
 
+--Return the spellID of a crafting recipe
 function AtlasLoot:GetRecipeSpellID(findID)
 	for spellID, itemID in pairs(AtlasLoot_CraftingData["SpellToRecipe"]) do
 		if itemID == findID then return spellID end
+	end
+end
+
+--[[
+AtlasLoot:FindId(id, difficulty)
+Finds the Ids of other difficulties based on the normal id of the item and the difficulty parameter given.
+On the form of {ID, {normal, heroic, mythic, mythic1, mythic2, ... ,mythicN}}
+]]
+function AtlasLoot:FindId(id, difficulty, type)
+	if not ItemIDsDatabase[id] then return nil, false end
+
+	if difficulty == 5 and (type == "BCRaid" or type == "ClassicRaid") then
+		return ItemIDsDatabase[id]["MythicRaid"], true
+	else
+		return ItemIDsDatabase[id][difficulty], true
 	end
 end

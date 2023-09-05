@@ -49,7 +49,6 @@ function AtlasLootOptions_Init()
     AtlasLootOptionsFrameItemID:SetChecked(AtlasLoot.db.profile.ItemIDs)
     AtlasLootOptionsFrameLoDStartup:SetChecked(AtlasLoot.db.profile.LoadAllLoDStartup)
     AtlasLootOptionsFrameLootBrowserScale:SetValue(AtlasLoot.db.profile.LootBrowserScale)
-    AtlasLootOptionsFrameExpandFrame:SetChecked(AtlasLoot.db.profile.FrameExpanded)
     AtlasLootOptionsMinimapIcon:SetChecked(AtlasLoot.db.profile.minimap.hide)
     AtlasLootOptionsFrameCraftingInfo:SetChecked(AtlasLoot.db.profile.recipeExtraInfoSwitch)
 end
@@ -317,15 +316,10 @@ local itemid = CreateFrame("CheckButton", "AtlasLootOptionsFrameItemID", AtlasLo
         AtlasLootOptionsFrameItemIDText:SetText(AL["Show itemIDs at all times"])
         itemid:SetScript("OnClick", function() AtlasLootOptions_ItemIDToggle() end)
 
-local expandFrame = CreateFrame("CheckButton", "AtlasLootOptionsFrameExpandFrame", AtlasLootOptionsFrame, "OptionsCheckButtonTemplate")
-        expandFrame:SetPoint("TOP",5,-160)
-        AtlasLootOptionsFrameExpandFrameText:SetText(AL["Expanded Frame Size"])
-        expandFrame:SetScript("OnClick", function() AtlasLoot:ExpandFrame(false, true) end)
-
-local expandFrame = CreateFrame("CheckButton", "AtlasLootOptionsMinimapIcon", AtlasLootOptionsFrame, "OptionsCheckButtonTemplate")
-        expandFrame:SetPoint("TOP",5,-190)
+local miniMap = CreateFrame("CheckButton", "AtlasLootOptionsMinimapIcon", AtlasLootOptionsFrame, "OptionsCheckButtonTemplate")
+        miniMap:SetPoint("TOP",5,-190)
         AtlasLootOptionsMinimapIconText:SetText(AL["Hide minimap icon"])
-        expandFrame:SetScript("OnClick", function() AtlasLoot:ToggleMinimap() end)
+        miniMap:SetScript("OnClick", function() AtlasLoot:ToggleMinimap() end)
 
 local lod = CreateFrame("CheckButton", "AtlasLootOptionsFrameLoDStartup", AtlasLootOptionsFrame, "OptionsCheckButtonTemplate")
         lod:SetPoint("TOP",5,-40)
