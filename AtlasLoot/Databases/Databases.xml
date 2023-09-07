@@ -2,4 +2,5 @@
 ..\FrameXML\UI.xsd">
     <Script file="Databases.lua"/>
     <Script file="extraCraftingData.lua"/>
+    <Script file="SpellIdToItemIdDatabase.lua"/>
 </Ui>

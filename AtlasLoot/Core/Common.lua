@@ -109,6 +109,7 @@ end
 
 --Return the spellID of a crafting recipe
 function AtlasLoot:GetRecipeSpellID(findID)
+	if not findID then return end
 	for spellID, itemID in pairs(AtlasLoot_CraftingData["SpellToRecipe"]) do
 		if itemID == findID then return spellID end
 	end
@@ -148,31 +149,46 @@ function AtlasLoot:GetRecipeData(recipeID)
 		for _,cat in pairs(prof) do
 		   for _,recipe in pairs(cat) do
 			  if recipeID == recipe.SpellEntry then
-				 return recipe.Reagents
+				local info = {{recipe.CreatedItemEntry}, "blank", "blank", "blank", "blank", "blank"}
+				if ItemIDsDatabase[recipe.CreatedItemEntry] and ItemIDsDatabase[recipe.CreatedItemEntry][1] then
+					info[2] = {ItemIDsDatabase[recipe.CreatedItemEntry][1]}
+				end
+				if recipe.RecipeItemEntry and recipe.RecipeItemEntry ~= 0 then
+					local number = 3
+					if info[2] == "blank" then
+						number = 2
+					end
+					info[number] = {recipe.RecipeItemEntry}
+				end
+				for _,v in pairs(recipe.Reagents) do
+					tinsert(info, v)
+				end
+				return info
 			  end
 		   end
 		end
 	 end
 end
 
--- Get Rep Faction
-function AtlasLoot:GetReputationFaction(data)
+-- Get rep faction for when you have 2 loot tables and want to show a different one depending on rep
+function AtlasLoot:GetReputationFaction(factions)
 	local factionIndex = 1
 	local lastFactionName
 	repeat
-	local name, _, standingId = GetFactionInfo(factionIndex)
-	if name == lastFactionName then return data end
-	lastFactionName  = name
-		if data[name] and standingId and standingId > 1 then
-			return data[name]
-		end
-		if data[name] then
-			data = data[name]
+	local name, _, _, _, _, totalRep = GetFactionInfo(factionIndex)
+			for _, faction in pairs(factions) do
+			if name == faction and totalRep and totalRep >= 1 then
+				return faction
+			end
+			if name == faction then
+				lastFactionName = faction
+			end
 		end
 	factionIndex = factionIndex + 1
 	until factionIndex > 200
-	return data
+	return lastFactionName
 end
+
 --[[
 AtlasLoot:PopoupItemFrame(self, data)
 Used to create a popup item frame for items like gem sacks to show what they contain
@@ -196,7 +212,7 @@ function AtlasLoot:PopoupItemFrame(self, data)
 		popupframe:SetScript("OnEnter", function()
 			AtlasLoot_PopupFrame:Show()
 		end)
-		popupframe:SetWidth(181)
+		popupframe:SetWidth(211)
     	popupframe:Hide()
 		popupFrameLoaded = true
 	end
@@ -212,16 +228,16 @@ function AtlasLoot:PopoupItemFrame(self, data)
 		if _G["AtlasLoot_PopupButton_"..num] then return end
 		local button = CreateFrame("Button", "AtlasLoot_PopupButton_"..num, AtlasLoot_PopupFrame)
 		button:SetID(num)
-		button:SetSize(25,25)
+		button:SetSize(30,30)
 		button:EnableMouse()
 		button:RegisterForClicks("AnyDown")
 		button:SetHighlightTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD")
 		button.icon = button:CreateTexture(nil,"ARTWORK")
-		button.icon:SetSize(25,25)
+		button.icon:SetSize(30,30)
 		button.icon:SetPoint("CENTER")
 		button.name = button:CreateFontString(nil,"ARTWORK","GameFontHighlightLarge")
-		button.name:SetFont("GameFontHighlightLarge", 15)
-        button.name:SetSize(25,25)
+		button.name:SetFont("GameFontHighlightLarge", 30)
+        button.name:SetSize(30,30)
         button.name:SetPoint("CENTER", button.icon,0,0)
         button.name:SetJustifyH("CENTER")
 		button.name:Hide()
@@ -232,29 +248,43 @@ function AtlasLoot:PopoupItemFrame(self, data)
 			AtlasLoot_PopupFrame:Show()
 		end)
 		button:SetScript("OnLeave", function(self)
-			AtlasLootItem_OnLeave(self)
+			if not AtlasLoot.Dewdrop:IsOpen(_G["AtlasLoot_PopupButton_"..num]) then
+				AtlasLootItem_OnLeave(self)
+			end
 		end)
 		
 		if num == 1 then
 			button:SetPoint("TOPLEFT", "AtlasLoot_PopupFrame", 9, -8)
 		elseif num == 7 then
-			button:SetPoint("BOTTOM", "AtlasLoot_PopupButton_1", 0, -28)
+			button:SetPoint("BOTTOM", "AtlasLoot_PopupButton_1", 0, -33)
 		elseif num == 13 then
-			button:SetPoint("BOTTOM", "AtlasLoot_PopupButton_6", 0, -28)
+			button:SetPoint("BOTTOM", "AtlasLoot_PopupButton_6", 0, -33)
 		else
 			button:SetPoint("LEFT", _G["AtlasLoot_PopupButton_"..(num-1)],"RIGHT",3,0)
 		end
 	end
 	if data.Faction then
-		data = AtlasLoot:GetReputationFaction(data)
+		data = data[AtlasLoot:GetReputationFaction(data.Faction)]
 	end
 
 	local numberBtns
 	for i, item in ipairs(data) do
 		createButton(i)
 		local button = _G["AtlasLoot_PopupButton_"..i]
-		button.icon:SetTexture(GetItemIcon(item.itemID or item[1]))
-		button.itemID = item.itemID or item[1]
+		if item == "blank" then
+			button:Hide()
+		else
+			local itemID = item.itemID or item[1]
+			local itemData = Item:CreateFromID(itemID)
+				if itemID and not itemData:GetInfo() then
+					AtlasLoot:ItemsLoading(1)
+					itemData:ContinueOnLoad(function(itemID)
+						AtlasLoot:ItemsLoading(-1)
+					end)
+				end
+			button.icon:SetTexture(GetItemIcon(itemID))
+			button.itemID = itemID
+			button.itemTexture = self.itemTexture
 		if item[2] then
 			button.name:SetText(WHITE..item[2])
 			button.name:Show()
@@ -262,22 +292,23 @@ function AtlasLoot:PopoupItemFrame(self, data)
 			button.name:Hide()
 		end
 		button:Show()
+		end
 		numberBtns = i
 	end
 	if numberBtns < 6 then
-		popupframe:SetWidth((numberBtns*27.5)+16)
+		popupframe:SetWidth((numberBtns*33)+16)
 	else
-		popupframe:SetWidth(181)
+		popupframe:SetWidth(214)
 	end
 	if numberBtns > 6 then
-		popupframe:SetHeight(69)
+		popupframe:SetHeight(79)
 	elseif numberBtns > 12 then
-		popupframe:SetHeight(97)
+		popupframe:SetHeight(107)
 	else
-		popupframe:SetHeight(41)
+		popupframe:SetHeight(46)
 	end
 	popupframe:SetParent(self)
 	popupframe:ClearAllPoints()
-	popupframe:SetPoint("BOTTOMLEFT",self,0,-65)
+	popupframe:SetPoint("TOPLEFT",self,0,-25)
 	popupframe:Show()
 end

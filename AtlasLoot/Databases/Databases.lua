@@ -8,6 +8,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 AtlasLoot_Data = {}
 AtlasLoot_MapData = {}
 AtlasLoot_ExtraData = {}
+AtlasLoot_CraftingData = {}
 
 ----------------------
 --- Heirloom Items ---

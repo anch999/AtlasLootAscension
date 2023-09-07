@@ -94,7 +94,7 @@ local SPELLFIRE = GetSpellInfo(26797);
 ---------------
 AtlasLoot_Data["AlchemyTBC"] = {
 	Name = ALCHEMY;
-	Type = "CraftingNoBF";
+	Type = "Crafting";
 	{
 		Name = AL["Battle Elixirs"];
 		[1] = { itemID = 22835, spellID = 28558 }; --Elixir of Major Shadow Power
@@ -436,7 +436,7 @@ AtlasLoot_Data["SmithingTBC"] = {
 
 AtlasLoot_Data["CookingTBC"] = {
 	Name = COOKING;
-	Type = "CraftingNoBF";
+	Type = "Crafting";
 	{
 		Name = "Page 1";
 		[1] = { itemID = 33052, spellID = 42302 }; --Fisherman's Feast
@@ -508,7 +508,7 @@ AtlasLoot_Data["CookingTBC"] = {
 
 AtlasLoot_Data["EnchantingTBC"] = {
 	Name = ENCHANTING;
-	Type = "CraftingNoBF";
+	Type = "Crafting";
 	{
 		Name = AL["Enchant Boots"];
 		[1] = { icon = "Spell_Holy_GreaterHeal", spellID = 27954 }; --Enchant Boots - Surefooted
@@ -768,7 +768,7 @@ AtlasLoot_Data["FirstAid"] = {
 
 AtlasLoot_Data["JewelcraftingTBC"] = {
 	Name = JEWELCRAFTING;
-	Type = "CraftingNoBF";
+	Type = "Crafting";
 	{
 		Name = AL["Red Gems"];
 		[1] = { itemID = 32193, spellID = 39705 }; --Bold Crimson Spinel
@@ -1497,7 +1497,7 @@ AtlasLoot_Data["TailoringTBC"] = {
 
 AtlasLoot_Data["AlchemyHighRiskTBC"] = {
 	Name = ALCHEMY .. " High Risk";
-	Type = "CraftingNoBF";
+	Type = "Crafting";
 	{
 		Name = "Rare";
 		[1] = { itemID = 1203258, spellID = 979362 }; --Impure Flask of Manifesting Power
@@ -1530,7 +1530,7 @@ AtlasLoot_Data["AlchemyHighRiskTBC"] = {
 
 AtlasLoot_Data["SmithingHighRiskTBC"] = {
 	Name = BLACKSMITHING .. " High Risk";
-	Type = "CraftingNoBF";
+	Type = "Crafting";
 	{
 		Name = "Rare";
 		[1] = { itemID = 1204033, spellID = 979534 }; --Hulking Belt Buckle
@@ -1557,7 +1557,7 @@ AtlasLoot_Data["SmithingHighRiskTBC"] = {
 
 AtlasLoot_Data["LeatherworkingHighRiskTBC"] = {
 	Name = LEATHERWORKING .. " High Risk";
-	Type = "CraftingNoBF";
+	Type = "Crafting";
 	{
 		Name = "Rare";
 		[1] = { itemID = 1204021, spellID = 979522 }; --Cobra Strike Gambeson
@@ -1580,7 +1580,7 @@ AtlasLoot_Data["LeatherworkingHighRiskTBC"] = {
 
 AtlasLoot_Data["EngineeringHighRiskTBC"] = {
 	Name = ENGINEERING .. " High Risk";
-	Type = "CraftingNoBF";
+	Type = "Crafting";
 	{
 		Name = "Rare";
 		[1] = { itemID = 1204101, spellID = 979550 }; --Gnomish Magnification Polish
@@ -1603,7 +1603,7 @@ AtlasLoot_Data["EngineeringHighRiskTBC"] = {
 
 AtlasLoot_Data["EnchantingHighRiskTBC"] = {
 	Name = ENCHANTING .. " High Risk";
-	Type = "CraftingNoBF";
+	Type = "Crafting";
 	{
 		Name = "Rare";
 		[1] = { icon = "Spell_Holy_GreaterHeal", spellID = 1968677 }; --Enchant Weapon - Void Assault
@@ -1634,7 +1634,7 @@ AtlasLoot_Data["EnchantingHighRiskTBC"] = {
 
 AtlasLoot_Data["TailoringHighRiskTBC"] = {
 	Name = TAILORING .. " High Risk";
-	Type = "CraftingNoBF";
+	Type = "Crafting";
 	{
 		Name = "Rare";
 		[1] = { itemID = 1204061, spellID = 979562 }; --Armored Cloak Lining
@@ -1657,7 +1657,7 @@ AtlasLoot_Data["TailoringHighRiskTBC"] = {
 
 AtlasLoot_Data["JewelcraftingHighRiskTBC"] = {
 	Name = JEWELCRAFTING .. " High Risk";
-	Type = "CraftingNoBF";
+	Type = "Crafting";
 	{
 		Name = "Rare";
 		[1] = { itemID = 1204165, spellID = 979639 }; --Deep Gold Twisted Pendant
@@ -1686,7 +1686,7 @@ AtlasLoot_Data["JewelcraftingHighRiskTBC"] = {
 
 AtlasLoot_Data["CookingHighRiskTBC"] = {
 	Name = COOKING .. " High Risk";
-	Type = "CraftingNoBF";
+	Type = "Crafting";
 	{
 		Name = "Rare";
 		[1] = { itemID = 1203280, spellID = 979384 }; --Infused Living Soup

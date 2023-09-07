@@ -535,13 +535,6 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 	local difType = false
 	-- Checks to see if type is the same
 	if AtlasLoot.CurrentType ~= dataSource[dataID].Type then
---[[ 	if dataSource[dataID].Type == "Crafting" or dataSource[dataID].Type == "CraftingNoBF" then
-			ItemindexID = "Pattern"
-		elseif (ItemindexID == "Pattern" and dataSource[dataID].Type ~= "Crafting") or (ItemindexID == "Pattern" and dataSource[dataID].Type ~= "CraftingNoBF") then
-			ItemindexID = 2
-		else
-			ItemindexID = AtlasLoot.type[dataSource[dataID].Type] or 2
-		end ]]
 		ItemindexID = AtlasLoot.type[dataSource[dataID].Type] or 2
 		difType = true
 	end
@@ -705,7 +698,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 		elseif dataSource[dataID][tablenum][i].desc then
 			extra = dataSource[dataID][tablenum][i].desc
 		elseif AtlasLoot_CraftingData["ExtraCraftingData"] and spellID and AtlasLoot_CraftingData["ExtraCraftingData"][spellID] then
-			extra = "#sr# "..WHITE..AtlasLoot_CraftingData["ExtraCraftingData"][spellID][1]
+			extra = LIMEGREEN .. "L-Click:|r "..WHITE..dataSource[dataID].Name.." | "..AtlasLoot_CraftingData["ExtraCraftingData"][spellID][1]
 		elseif dataSource[dataID][tablenum][i].lootTable and dataSource[dataID][tablenum][i].lootTable[2] == "Token" then
 			extra = "#setToken#"
 		elseif itemEquipLoc and itemSubType then
@@ -780,7 +773,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 			itemButton.dressingroomID = itemID
 		end
  
-		itemButton.craftingData = AtlasLoot:RecipeSource(spellID)
+		itemButton.craftingData = AtlasLoot:RecipeSource(spellID) or AtlasLoot:RecipeSource(AtlasLoot:GetRecipeSpellID(itemID))
 		itemButton.tablenum = tablenum
 		itemButton.dataID = dataID
 		itemButton.dataSource = dataSource_backup
@@ -815,6 +808,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 			isValid, toShow, itemID = getProperItemConditionals(dataSource[dataID][tablenum][i])
 			local item = Item:CreateFromID(itemID)
 			if isValid and toShow then
+				_G["AtlasLootItem_"..i.."_Highlight"]:Hide()
 				if itemID and not item:GetInfo() then
 					AtlasLoot:ItemsLoading(1)
 					item:ContinueOnLoad(function(itemID)
@@ -1200,6 +1194,7 @@ function AtlasLoot:PopulateProfessions()
 	   end
 	end
 end
+
 
 function AtlasLoot:LoadTradeskillRecipes()
 	if TRADESKILL_RECIPES then return end

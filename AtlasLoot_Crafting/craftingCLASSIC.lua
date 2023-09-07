@@ -88,7 +88,7 @@ local SPELLFIRE = GetSpellInfo(26797);
 ---------------
 AtlasLoot_Data["AlchemyCLASSIC"] = {
 	Name = ALCHEMY;
-	Type = "CraftingNoBF";
+	Type = "Crafting";
 	{
 		Name = AL["Battle Elixirs"];
 		[1] = {itemID = 13454, spellID = 17573 }; --Greater Arcane Elixir
@@ -540,7 +540,7 @@ AtlasLoot_Data["SmithingCLASSIC"] = {
 
 AtlasLoot_Data["CookingCLASSIC"] = {
 	Name = COOKING;
-	Type = "CraftingNoBF";
+	Type = "Crafting";
 	{
 		Name = "Page 1";
 		[1] = {itemID = 21023, spellID = 25659 }; --Dirge's Kickin' Chimaerok Chops
@@ -675,7 +675,7 @@ AtlasLoot_Data["CookingCLASSIC"] = {
 
 AtlasLoot_Data["EnchantingCLASSIC"] = {
 	Name = ENCHANTING;
-	Type = "CraftingNoBF";
+	Type = "Crafting";
 	{
 		Name = AL["Enchant Boots"];
 		[1] = {spellID = 20023, icon = "Spell_Holy_GreaterHeal" }; --Enchant Boots - Greater Agility
@@ -1077,7 +1077,7 @@ AtlasLoot_Data["EngineeringCLASSIC"] = {
 
 AtlasLoot_Data["FirstAidCLASSIC"] = {
 	Name = FIRSTAID;
-	Type = "CraftingNoBF";
+	Type = "Crafting";
 	{
 		Name = FIRSTAID;
 		[1] = {itemID = 19440, spellID = 23787 }; --Powerful Anti-Venom
@@ -1101,7 +1101,7 @@ AtlasLoot_Data["FirstAidCLASSIC"] = {
 
 AtlasLoot_Data["Inscription"] = {
 	Name = INSCRIPTION;
-	Type = "CraftingNoBF";
+	Type = "Crafting";
 	{
 		Name = AL["Off-Hand Items"];
 		[1] = {itemID = 44210, spellID = 59498 }; --Faces of Doom
@@ -1958,7 +1958,7 @@ AtlasLoot_Data["LeatherworkingCLASSIC"] = {
 
 AtlasLoot_Data["MiningCLASSIC"] = {
 	Name = MINING;
-	Type = "CraftingNoBF";
+	Type = "Crafting";
 	{
 		Name = MINING;
 		[1] = {itemID = 17771, spellID = 22967 }; --Smelt Elementium
@@ -2263,7 +2263,7 @@ AtlasLoot_Data["TailoringCLASSIC"] = {
 
 AtlasLoot_Data["AlchemyHighRiskCLASSIC"] = {
 	Name = ALCHEMY .. " High Risk";
-	Type = "CraftingNoBF";
+	Type = "Crafting";
 	{
 		Name = "Rare";
 		[1] = {itemID = 967444, spellID = 968403 }; --Potent Flask of Manifesting Power
@@ -2296,7 +2296,7 @@ AtlasLoot_Data["AlchemyHighRiskCLASSIC"] = {
 
 AtlasLoot_Data["SmithingHighRiskCLASSIC"] = {
 	Name = BLACKSMITHING .. " High Risk";
-	Type = "CraftingNoBF";
+	Type = "Crafting";
 	{
 		Name = "Rare";
 		[1] = {itemID = 967173, spellID = 968019 }; --Sturdy Living Belt Buckle
@@ -2325,7 +2325,7 @@ AtlasLoot_Data["SmithingHighRiskCLASSIC"] = {
 
 AtlasLoot_Data["LeatherworkingHighRiskCLASSIC"] = {
 	Name = LEATHERWORKING .. " High Risk";
-	Type = "CraftingNoBF";
+	Type = "Crafting";
 	{
 		Name = "Rare";
 		[1] = {itemID = 967155, spellID = 968001 }; --Sturdy Yeti Gambeson
@@ -2348,7 +2348,7 @@ AtlasLoot_Data["LeatherworkingHighRiskCLASSIC"] = {
 
 AtlasLoot_Data["EngineeringHighRiskCLASSIC"] = {
 	Name = ENGINEERING .. " High Risk";
-	Type = "CraftingNoBF";
+	Type = "Crafting";
 	{
 		Name = "Rare";
 		[1] = {itemID = 967197, spellID = 968043 }; --Focused Gnomish Magnifying Lense
@@ -2371,7 +2371,7 @@ AtlasLoot_Data["EngineeringHighRiskCLASSIC"] = {
 
 AtlasLoot_Data["EnchantingHighRiskCLASSIC"] = {
 	Name = ENCHANTING .. " High Risk";
-	Type = "CraftingNoBF";
+	Type = "Crafting";
 	{
 		Name = "Rare";
 		[1] = {icon = "Spell_Holy_GreaterHeal", spellID = 968677 }; --Enchant Weapon - Unstoppable Assault
@@ -2402,7 +2402,7 @@ AtlasLoot_Data["EnchantingHighRiskCLASSIC"] = {
 
 AtlasLoot_Data["TailoringHighRiskCLASSIC"] = {
 	Name = TAILORING .. " High Risk";
-	Type = "CraftingNoBF";
+	Type = "Crafting";
 	{
 		Name = "Rare";
 		[1] = {itemID = 967215, spellID = 968061 }; --Heavy Dragonweave Cloak Lining
@@ -2425,7 +2425,7 @@ AtlasLoot_Data["TailoringHighRiskCLASSIC"] = {
 
 AtlasLoot_Data["CookingHighRiskCLASSIC"] = {
 	Name = COOKING .. " High Risk";
-	Type = "CraftingNoBF";
+	Type = "Crafting";
 	{
 		Name = "Rare";
 		[1] = {itemID = 967510, spellID = 968280 }; --Animated Soup for the Soul

@@ -6250,7 +6250,7 @@ AtlasLoot_ExtraData[34846] = {
 };
 
 AtlasLoot_ExtraData[229739] = {
-	Faction = true;
+	Faction = {"The Scryers", "The Aldor"};
 	["The Scryers"] = {
 		[1] = { itemID = 228910, desc = AL["Shoulder Enchants"] }; --Masters Inscription of the Blade
 		[2] = { itemID = 228911, desc = AL["Shoulder Enchants"] }; --Masters Inscription of the Knight

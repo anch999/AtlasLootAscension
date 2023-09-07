@@ -96,7 +96,7 @@ local MASTER = select(2, GetSpellInfo(28596));
 
 AtlasLoot_Data["AlchemyWRATH"] = {
 	Name = ALCHEMY;
-	Type = "CraftingNoBF";
+	Type = "Crafting";
 	{
 		Name = AL["Battle Elixirs"];
 		[1] = {itemID = 44330, spellID = 60365 }; --Elixir of Armor Piercing
@@ -435,7 +435,7 @@ AtlasLoot_Data["SmithingWRATH"] = {
 
 AtlasLoot_Data["CookingWRATH"] = {
 	Name = COOKING;
-	Type = "CraftingNoBF";
+	Type = "Crafting";
 	{
 		Name = COOKING;
 		[1] = {itemID = 43015, spellID = 57423 }; --Fish Feast
@@ -717,7 +717,7 @@ AtlasLoot_Data["EngineeringWRATH"] = {
 
 AtlasLoot_Data["JewelcraftingWRATH"] = {
 	Name = JEWELCRAFTING;
-	Type = "CraftingNoBF";
+	Type = "Crafting";
 	{
 		Name = AL["Red Gems"];
 		[1] = {itemID = 40111, spellID = 66447 }; --Bold Cardinal Ruby

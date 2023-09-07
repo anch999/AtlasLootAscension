@@ -33,6 +33,56 @@ function AtlasLoot_GetEnchantLink(enchantID)
    return EnchantLink
 end
 
+--Set Tooltip for extra crafting data
+function AtlasLoot:SetCraftingTooltip(self)
+    --extra information on where to find the recipe
+    local craftingData = self.craftingData
+    if (craftingData and AtlasLoot.db.profile.recipeExtraInfoSwitch and IsControlKeyDown()) or (craftingData and not AtlasLoot.db.profile.recipeExtraInfoSwitch) then
+        AtlasLootTooltip:AddLine(" ")
+        for _,v in pairs(craftingData) do
+            local line1 = v[1]
+            local line2 = v[2]
+            if v.fac  then line1 = v.fac[1]..line1 end
+            if v.cords and v.cords[1] ~= 0 and v.cords[2] ~= 0 then
+                if line2 then
+                    line2 = WHITE..line2..WHITE.." ("..GOLD..v.cords[1]..WHITE..", "..GOLD..v.cords[2]..WHITE..")"
+                else
+                    line2 = WHITE.." ("..GOLD..v.cords[1]..WHITE..", "..GOLD..v.cords[2]..WHITE..")"
+                end
+            end
+            AtlasLootTooltip:AddDoubleLine(line1, line2)
+        end
+    elseif craftingData then
+        AtlasLootTooltip:AddLine(" ")
+        AtlasLootTooltip:AddLine(WHITE..AL["Hold CTRL for source"])
+    end
+end
+
+--Set quest tooltip info
+function AtlasLoot:SetQuestTooltip(self)
+    if not self.quest then return end
+    for _,v in ipairs(self.quest) do
+        local quest = AtlasLoot_CraftingData["QuestList"][v]
+        local text = ""
+        if quest.text then
+            text = self.quest.text
+        end
+        AtlasLootTooltip:AddDoubleLine(AL["Quest"], WHITE..text)
+        AtlasLootTooltip:AddDoubleLine(quest[4]..quest[1], WHITE.." ("..GOLD..quest[2]..WHITE..", "..GOLD..quest[3]..WHITE..")")
+    end
+end
+
+--Set droprate tooltip
+function AtlasLoot:SetDroprateTooltip(self)
+    if self.droprate then return end
+    AtlasLootTooltip:AddLine(AL["Drop Rate: "]..self.droprate, 1, 1, 0)
+end
+
+--Set extra info tooltip
+function AtlasLoot:SetExtraTooltip(self)
+    if not self.extraInfo then return end
+    AtlasLootTooltip:AddLine(AL["Extra Info: "]..self.extraInfo, 1, 1, 0)
+end
 --------------------------------------------------------------------------------
 -- Item OnEnter
 -- Called when a loot item is moused over
@@ -58,23 +108,11 @@ function AtlasLootItem_OnEnter(self)
                     if ( AtlasLoot.db.profile.ItemIDs ) then
                         AtlasLootTooltip:AddLine(BLUE..AL["ItemID:"].." "..itemID, nil, nil, nil, 1)
                     end
-                    if self.quest then
-                        for i,v in ipairs(self.quest) do
-                            local quest = AtlasLoot_CraftingData["QuestList"][v]
-                            local text = ""
-                            if quest.text then
-                                text = self.quest.text
-                            end
-                            AtlasLootTooltip:AddDoubleLine(AL["Quest"], WHITE..text)
-                            AtlasLootTooltip:AddDoubleLine(quest[4]..quest[1], WHITE.." ("..GOLD..quest[2]..WHITE..", "..GOLD..quest[3]..WHITE..")")
-                        end
-                    end
-                    if self.extraInfo then
-                        AtlasLootTooltip:AddLine(AL["Extra Info: "]..self.extraInfo, 1, 1, 0)
-                    end
-                    if self.droprate then
-                        AtlasLootTooltip:AddLine(AL["Drop Rate: "]..self.droprate, 1, 1, 0)
-                    end
+                    AtlasLoot:SetQuestTooltip(self)
+                    AtlasLoot:SetExtraTooltip(self)
+                    AtlasLoot:SetDroprateTooltip(self)
+                    AtlasLoot:SetCraftingTooltip(self)
+
                     AtlasLootTooltip:Show()
                     if((AtlasLoot.db.profile.EquipCompare and ((not EquipCompare_RegisterTooltip) or (not EquipCompare_Enabled)))) or IsShiftKeyDown() then
                         AtlasLootItem_ShowCompareItem(self) --- CALL MISSING METHOD TO SHOW 2 TOOLTIPS (Item Compare)
@@ -88,23 +126,12 @@ function AtlasLootItem_OnEnter(self)
                 if ( AtlasLoot.db.profile.ItemIDs ) then
                     GameTooltip:AddLine(BLUE..AL["ItemID:"].." "..itemID, nil, nil, nil, 1)
                 end
-                if self.quest then
-                    for i,v in ipairs(self.quest) do
-                        local quest = AtlasLoot_CraftingData["QuestList"][v]
-                        local text = ""
-                        if quest.text then
-                            text = self.quest.text
-                        end
-                        AtlasLootTooltip:AddDoubleLine(AL["Quest"], WHITE..text)
-                        AtlasLootTooltip:AddDoubleLine(quest[4]..quest[1], WHITE.." ("..GOLD..quest[2]..WHITE..", "..GOLD..quest[3]..WHITE..")")
-                    end
-                end
-                if self.extraInfo then
-                    AtlasLootTooltip:AddLine(AL["Extra Info: "]..self.extraInfo, 1, 1, 0)
-                end
-                if self.droprate then
-                    AtlasLootTooltip:AddLine(AL["Drop Rate: "]..self.droprate, 1, 1, 0)
-                end
+                
+                AtlasLoot:SetQuestTooltip(self)
+                AtlasLoot:SetExtraTooltip(self)
+                AtlasLoot:SetDroprateTooltip(self)
+                AtlasLoot:SetCraftingTooltip(self)
+
                 GameTooltip:Show()
                 if((AtlasLoot.db.profile.EquipCompare and ((not EquipCompare_RegisterTooltip) or (not EquipCompare_Enabled)))) or IsShiftKeyDown() then
                     GameTooltip_ShowCompareItem() --- CALL MISSING METHOD TO SHOW 2 TOOLTIPS (Item Compare)
@@ -119,23 +146,12 @@ function AtlasLootItem_OnEnter(self)
                         if ( AtlasLoot.db.profile.ItemIDs ) then
                             AtlasLootTooltip:AddLine(BLUE..AL["ItemID:"].." "..itemID, nil, nil, nil, 1)
                         end
-                        if self.quest then
-                            for i,v in ipairs(self.quest) do
-                                local quest = AtlasLoot_CraftingData["QuestList"][v]
-                                local text = ""
-                                if quest.text then
-                                    text = self.quest.text
-                                end
-                                AtlasLootTooltip:AddDoubleLine(AL["Quest"], WHITE..text)
-                                AtlasLootTooltip:AddDoubleLine(quest[4]..quest[1], WHITE.." ("..GOLD..quest[2]..WHITE..", "..GOLD..quest[3]..WHITE..")")
-                            end
-                        end
-                        if self.extraInfo then
-                            AtlasLootTooltip:AddLine(AL["Extra Info: "]..WHITE..self.extraInfo, 1, 1, 0)
-                        end
-                        if self.droprate then
-                            AtlasLootTooltip:AddLine(AL["Drop Rate: "]..self.droprate, 1, 1, 0)
-                        end
+
+                        AtlasLoot:SetQuestTooltip(self)
+                        AtlasLoot:SetExtraTooltip(self)
+                        AtlasLoot:SetDroprateTooltip(self)
+                        AtlasLoot:SetCraftingTooltip(self)
+
                         AtlasLootTooltip:Show()
                         if((AtlasLoot.db.profile.EquipCompare and ((not EquipCompare_RegisterTooltip) or (not EquipCompare_Enabled)))) or IsShiftKeyDown() then
                             AtlasLootItem_ShowCompareItem(self) --- CALL MISSING METHOD TO SHOW 2 TOOLTIPS (Item Compare)
@@ -148,27 +164,8 @@ function AtlasLootItem_OnEnter(self)
             AtlasLootTooltip:ClearLines()
             AtlasLootTooltip:SetHyperlink(AtlasLoot_GetEnchantLink(spellID))
 
-            --extra information on where to find the recipe
-            local craftingData = self.craftingData
-            if (craftingData and AtlasLoot.db.profile.recipeExtraInfoSwitch and IsControlKeyDown()) or (craftingData and not AtlasLoot.db.profile.recipeExtraInfoSwitch) then
-                AtlasLootTooltip:AddLine(" ")
-                for _,v in pairs(craftingData) do
-                    local line1 = v[1]
-                    local line2 = v[2]
-                    if v.fac  then line1 = v.fac[1]..line1 end
-                    if v.cords and v.cords[1] ~= 0 and v.cords[2] ~= 0 then
-                        if line2 then
-                            line2 = WHITE..line2..WHITE.." ("..GOLD..v.cords[1]..WHITE..", "..GOLD..v.cords[2]..WHITE..")"
-                        else
-                            line2 = WHITE.." ("..GOLD..v.cords[1]..WHITE..", "..GOLD..v.cords[2]..WHITE..")"
-                        end
-                    end
-                    AtlasLootTooltip:AddDoubleLine(line1, line2)
-                end
-            elseif craftingData then
-                AtlasLootTooltip:AddLine(" ")
-                AtlasLootTooltip:AddLine(WHITE..AL["Hold CTRL for source"])
-            end
+            AtlasLoot:SetCraftingTooltip(self)
+
             local hasSpace = false
             local showOwn = nil
             --adds tooltip showing if you know a recipe and it is one of your chars trade skills
@@ -240,10 +237,9 @@ function AtlasLoot:ItemOnClick(self ,arg1)
     local spellID = self.spellID
     local itemID = self.itemID
 
-
-    if AtlasLoot_PopupFrame and AtlasLoot_PopupFrame:IsVisible() then
+--[[     if AtlasLoot_PopupFrame and AtlasLoot_PopupFrame:IsVisible() and not AtlasLoot.Dewdrop:IsOpen(self:GetParent()) then
         AtlasLoot_PopupFrame:Hide()
-    end
+    end ]]
     if not spellID and itemID then
         local itemName, itemLink, itemQuality, itemLevel, itemMinLevel, itemType, itemSubType, itemCount, itemEquipLoc, itemTexture = GetItemInfo(itemID)
         --If shift-clicked, link in the chat window
@@ -270,9 +266,11 @@ function AtlasLoot:ItemOnClick(self ,arg1)
                 local datID, _, datPage = strsplit("|", self.sourcePage)
                 AtlasLoot:ItemContextMenu(itemID, self.itemTexture, _G["AtlasLootItem_"..self:GetID().."_Name"]:GetText(), AtlasLoot_Data[datID][tonumber(datPage)].Name, 
                                                 datID .. "|" .. "AtlasLoot_Data" .. "|" .. tostring(datPage), self, "item", self.number, self.craftingData)
+            elseif AtlasLoot_PopupFrame and AtlasLoot_PopupFrame:IsVisible() then
+                AtlasLoot:ItemContextMenu(itemID, self.itemTexture, nil, nil, nil, self, "item",nil,nil)
+
             else
-                AtlasLoot:ItemContextMenu(itemID, self.itemTexture, _G["AtlasLootItem_"..self:GetID().."_Name"]:GetText(),
-                                                    AtlasLoot_BossName:GetText(), self.dataID .. "|" .. "AtlasLoot_Data" .. "|" .. tostring(self.tablenum), self, "item", self.number,self.craftingData)
+                AtlasLoot:ItemContextMenu(itemID, self.itemTexture, _G["AtlasLootItem_"..self:GetID().."_Name"]:GetText(), "", "", self, "item", self.number)
             end
         elseif(IsShiftKeyDown() and itemName and (AtlasLoot.db.profile.SafeLinks or AtlasLoot.db.profile.AllLinks)) then
             --insert to chat link
@@ -320,7 +318,7 @@ function AtlasLoot:ItemOnClick(self ,arg1)
         elseif IsShiftKeyDown() then
             ChatEdit_InsertLink(AtlasLoot_GetEnchantLink(spellID))
         elseif arg1=="RightButton" then
-            AtlasLoot:ItemContextMenu(spellID, "", "", "", "", self, "spell","",self.craftingData)
+            AtlasLoot:ItemContextMenu(spellID,nil, nil, nil, nil, self, "spell",nil,nil)
         elseif IsAltKeyDown() then
             if AtlasLootItemsFrame.refresh[2] == "AtlasLoot_CurrentWishList" then
                 AtlasLoot_DeleteFromWishList(itemID, self.number)
@@ -508,97 +506,100 @@ function AtlasLoot:ItemContextMenu(itemID, itemTexture, itemName, lootPage, sour
                         'textWidth', 12,
                         "notCheckable", true
                     )
-                    AtlasLoot:AddDividerLine(35)
-                    AtlasLoot.Dewdrop:AddLine(
-                    'text', AL["Wishlists"],
-                    'notCheckable', true,
-                    'isTitle', true,
-                    'textHeight', 13,
-                    'textWidth', 13
-                    )
-                    if AtlasLootItemsFrame.refresh[2] == "AtlasLoot_CurrentWishList" then
+
+                    if not AtlasLoot_PopupFrame or AtlasLoot_PopupFrame and not AtlasLoot_PopupFrame:IsVisible()  then
+                        AtlasLoot:AddDividerLine(35)
                         AtlasLoot.Dewdrop:AddLine(
-                            "text", AL["Delete"],
-                            "func", function() AtlasLoot_DeleteFromWishList(itemID,number) end,
-                            'closeWhenClicked', true,
-                            'textHeight', 12,
-                            'textWidth', 12,
-                            "notCheckable", true
+                        'text', AL["Wishlists"],
+                        'notCheckable', true,
+                        'isTitle', true,
+                        'textHeight', 13,
+                        'textWidth', 13
                         )
-                    else
-                        local listID = AtlasLootWishList["Options"][playerName]["DefaultWishList"]
-                        AtlasLoot.Dewdrop:AddLine(
-                            "text", AL["Add To Default"],
-                            "func", function() AtlasLoot_WishListAddDropClick(listID[1], listID[3], "", nil, itemID, itemTexture, itemName, lootPage, sourcePage) end,
-                            'closeWhenClicked', true,
-                            'textHeight', 12,
-                            'textWidth', 12,
-                            "notCheckable", true
-                        )
-                        AtlasLoot.Dewdrop:AddLine(
-                            "text", AL["Own Wishlists"],
-                            "tooltipTitle", AL["Own Wishlists"],
-                            "value", "OwnWishlists",
-                            "hasArrow", true,
-                            'textHeight', 12,
-                            'textWidth', 12,
-                            "notCheckable", true
-                        )
-                        AtlasLoot.Dewdrop:AddLine(
-                            "text", AL["Shared Wishlists"],
-                            "tooltipTitle", AL["Shared Wishlists"],
-                            "value", "SharedWishlists",
-                            "hasArrow", true,
-                            'textHeight', 12,
-                            'textWidth', 12,
-                            "notCheckable", true
-                        )
-                        AtlasLoot.Dewdrop:AddLine(
-                            "text", AL["Add Wishlist"],
-                            "func", function() AtlasLoot:AddWishList() end,
-                            'closeWhenClicked', true,
-                            'textHeight', 12,
-                            'textWidth', 12,
-                            "notCheckable", true
-                        )
-                    end
-                    if AtlasLoot.TomTomLoaded then
-                        if not AtlasLoot.db.profile.waypointList then AtlasLoot.db.profile.waypointList = {} end
-                        local wayPoint
-                        if (craftingData and AtlasLoot.db.profile.recipeExtraInfoSwitch and IsControlKeyDown()) or (craftingData and not AtlasLoot.db.profile.recipeExtraInfoSwitch) then
-                            AtlasLootTooltip:AddLine(" ")
-                            for _,v in pairs(craftingData) do
-                                if v.cords and tonumber(v.cords[1]) ~= 0 and tonumber(v.cords[2]) ~= 0 then
-                                    local line1 = v[1]
-                                    local line2 = v[2]
-                                    if v.fac and (v.fac[2] == playerFaction or v.fac[2] == "Netural") then line1 = v.fac[1]..line1 end
-                                    if not wayPoint then wayPoint = {} end
-                                    tinsert(wayPoint, { line2, tonumber(v.cords[1]), tonumber(v.cords[2]), line1})
+                        if AtlasLootItemsFrame.refresh[2] == "AtlasLoot_CurrentWishList" then
+                            AtlasLoot.Dewdrop:AddLine(
+                                "text", AL["Delete"],
+                                "func", function() AtlasLoot_DeleteFromWishList(itemID,number) end,
+                                'closeWhenClicked', true,
+                                'textHeight', 12,
+                                'textWidth', 12,
+                                "notCheckable", true
+                            )
+                        else
+                            local listID = AtlasLootWishList["Options"][playerName]["DefaultWishList"]
+                            AtlasLoot.Dewdrop:AddLine(
+                                "text", AL["Add To Default"],
+                                "func", function() AtlasLoot_WishListAddDropClick(listID[1], listID[3], "", nil, itemID, itemTexture, itemName, lootPage, sourcePage) end,
+                                'closeWhenClicked', true,
+                                'textHeight', 12,
+                                'textWidth', 12,
+                                "notCheckable", true
+                            )
+                            AtlasLoot.Dewdrop:AddLine(
+                                "text", AL["Own Wishlists"],
+                                "tooltipTitle", AL["Own Wishlists"],
+                                "value", "OwnWishlists",
+                                "hasArrow", true,
+                                'textHeight', 12,
+                                'textWidth', 12,
+                                "notCheckable", true
+                            )
+                            AtlasLoot.Dewdrop:AddLine(
+                                "text", AL["Shared Wishlists"],
+                                "tooltipTitle", AL["Shared Wishlists"],
+                                "value", "SharedWishlists",
+                                "hasArrow", true,
+                                'textHeight', 12,
+                                'textWidth', 12,
+                                "notCheckable", true
+                            )
+                            AtlasLoot.Dewdrop:AddLine(
+                                "text", AL["Add Wishlist"],
+                                "func", function() AtlasLoot:AddWishList() end,
+                                'closeWhenClicked', true,
+                                'textHeight', 12,
+                                'textWidth', 12,
+                                "notCheckable", true
+                            )
+                        end
+                        if AtlasLoot.TomTomLoaded then
+                            if not AtlasLoot.db.profile.waypointList then AtlasLoot.db.profile.waypointList = {} end
+                            local wayPoint
+                            if (craftingData and AtlasLoot.db.profile.recipeExtraInfoSwitch and IsControlKeyDown()) or (craftingData and not AtlasLoot.db.profile.recipeExtraInfoSwitch) then
+                                AtlasLootTooltip:AddLine(" ")
+                                for _,v in pairs(craftingData) do
+                                    if v.cords and tonumber(v.cords[1]) ~= 0 and tonumber(v.cords[2]) ~= 0 then
+                                        local line1 = v[1]
+                                        local line2 = v[2]
+                                        if v.fac and (v.fac[2] == playerFaction or v.fac[2] == "Netural") then line1 = v.fac[1]..line1 end
+                                        if not wayPoint then wayPoint = {} end
+                                        tinsert(wayPoint, { line2, tonumber(v.cords[1]), tonumber(v.cords[2]), line1})
+                                    end
                                 end
                             end
-                        end
-                        if craftingData and wayPoint then
+                            if craftingData and wayPoint then
 
-                            AtlasLoot:AddDividerLine(35)
-                            AtlasLoot.Dewdrop:AddLine(
-                            'text', AL["Recipe Waypoints"],
-                            'notCheckable', true,
-                            'isTitle', true,
-                            'textHeight', 13,
-                            'textWidth', 13
-                            )
-                            AtlasLoot.Dewdrop:AddLine(
-                            "text", "Add pin to map",
-                            "func", function()
-                                for _,v in pairs(wayPoint) do
-                                    AtlasLoot:AddWayPoint(v)
-                                end
-                            end,
-                            'closeWhenClicked', true,
-                            'textHeight', 12,
-                            'textWidth', 12,
-                            "notCheckable", true
-                            )
+                                AtlasLoot:AddDividerLine(35)
+                                AtlasLoot.Dewdrop:AddLine(
+                                'text', AL["Recipe Waypoints"],
+                                'notCheckable', true,
+                                'isTitle', true,
+                                'textHeight', 13,
+                                'textWidth', 13
+                                )
+                                AtlasLoot.Dewdrop:AddLine(
+                                "text", "Add pin to map",
+                                "func", function()
+                                    for _,v in pairs(wayPoint) do
+                                        AtlasLoot:AddWayPoint(v)
+                                    end
+                                end,
+                                'closeWhenClicked', true,
+                                'textHeight', 12,
+                                'textWidth', 12,
+                                "notCheckable", true
+                                )
+                            end
                         end
                     end
             elseif level == 2 then
