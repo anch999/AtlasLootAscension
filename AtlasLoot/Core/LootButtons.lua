@@ -74,7 +74,7 @@ end
 
 --Set droprate tooltip
 function AtlasLoot:SetDroprateTooltip(self)
-    if self.droprate then return end
+    if not self.droprate then return end
     AtlasLootTooltip:AddLine(AL["Drop Rate: "]..self.droprate, 1, 1, 0)
 end
 
@@ -99,7 +99,7 @@ function AtlasLootItem_OnEnter(self)
     if itemID or spellID then
         if not spellID then
             local color = WHITE
-            local name, _, _, _, _, _, _, _, _, _ = GetItemInfo(itemID)
+            local name = GetItemInfo(itemID)
             --Lootlink tooltips
             if( AtlasLoot.db.profile.LootlinkTT ) then
                 --If we have seen the item, use the game tooltip to minimise same name item problems
@@ -126,7 +126,7 @@ function AtlasLootItem_OnEnter(self)
                 if ( AtlasLoot.db.profile.ItemIDs ) then
                     GameTooltip:AddLine(BLUE..AL["ItemID:"].." "..itemID, nil, nil, nil, 1)
                 end
-                
+
                 AtlasLoot:SetQuestTooltip(self)
                 AtlasLoot:SetExtraTooltip(self)
                 AtlasLoot:SetDroprateTooltip(self)
