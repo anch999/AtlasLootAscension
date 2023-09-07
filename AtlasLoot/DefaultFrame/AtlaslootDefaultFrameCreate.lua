@@ -6,7 +6,7 @@ local INDENT = "    "
     --Main AtlasLoot Frame
     local mainframe = CreateFrame("FRAME", "AtlasLootDefaultFrame", UIParent,"PortraitFrameTemplate")
     mainframe:SetPoint("CENTER",0,0)
-    mainframe:SetSize(1110,640)
+    mainframe:SetSize(1105,640)
     mainframe:EnableMouse(true)
     mainframe:SetMovable(1)
     mainframe.portrait:SetPortraitTexture("Interface\\Icons\\INV_Box_01")
@@ -36,7 +36,7 @@ local INDENT = "    "
     --Loot Background
 local lootBackground = CreateFrame("Frame", "AtlaslLoot_LootBackground", mainframe)
     lootBackground:SetSize(770,515)
-    lootBackground:SetPoint("TOPLEFT", mainframe, "TOPLEFT",40,-86)
+    lootBackground:SetPoint("TOPLEFT", mainframe, "TOPLEFT",30,-86)
     lootBackground:EnableMouse()
     lootBackground:EnableMouseWheel()
     lootBackground:SetScript("OnMouseDown",function(self, button)
@@ -85,6 +85,7 @@ for num = 1, 30 do
     local button = CreateFrame("Button","AtlasLootItem_"..num, AtlasLootItemsFrame)
         button:SetID(num)
         button:SetSize(236,29)
+        
         button:SetHighlightTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD")
         button.icon = button:CreateTexture("AtlasLootItem_"..num.."_Icon","ARTWORK")
         button.icon:SetSize(25,25)
@@ -106,7 +107,7 @@ for num = 1, 30 do
         button.number = num
         button:SetScript("OnEnter", function(self) AtlasLootItem_OnEnter(self) end)
         button:SetScript("OnLeave", function(self) AtlasLootItem_OnLeave(self) end)
-        button:SetScript("OnClick", function(self, arg1) AtlasLootItem_OnClick(self, arg1) end)
+        button:SetScript("OnClick", function(self, arg1) AtlasLoot:ItemOnClick(self, arg1) end)
         if num == 1 then
             button:SetPoint("TOP", "AtlasLootItemsFrame", "TOP",-180,-35)
         elseif num == 16 then
@@ -266,22 +267,17 @@ local expansionmenubtn = CreateFrame("Button", "AtlasLootDefaultFrame_ExpansionM
 
 ---------------------------------------- Buttons Under the loot and subtable frames -------------------------------------------
     --Search Edit Box
-local searchbox = CreateFrame("EditBox","AtlasLootDefaultFrameSearchBox",AtlasLootDefaultFrame,"InputBoxTemplate")
-    searchbox:SetSize(190,32)
-    searchbox:SetMaxLetters(100)
-    searchbox:SetAutoFocus(false)
-    searchbox:SetPoint("BOTTOMLEFT", "AtlasLootDefaultFrame", "BOTTOMLEFT", 45, 6)
-    searchbox:SetTextInsets(0, 8, 0, 0)
+local searchbox = CreateFrame("EditBox", "AtlasLootDefaultFrameSearchBox", AtlasLootDefaultFrame, "SearchBoxTemplate")
+    searchbox:SetSize(190,25)
+    searchbox:SetPoint("BOTTOMLEFT", "AtlasLootDefaultFrame", "BOTTOMLEFT", 35, 10)
     searchbox:SetScript("OnEnterPressed", function(self)
         AtlasLoot:Search(self:GetText())
         self:ClearFocus()
     end)
     searchbox:SetScript("OnTextChanged", function(self)
-        if self:GetText() == "" then
-            AtlasLootDefaultFrameSearchClearButton:Hide()
-        else
-            AtlasLootDefaultFrameSearchClearButton:Show()
-        end
+		if self:HasFocus() then
+			SearchBoxTemplate_OnTextChanged(self)
+		end
     end)
 
    --Search Button
@@ -299,29 +295,6 @@ local searchbtn = CreateFrame("Button","AtlasLootDefaultFrameSearchButton",Atlas
            AtlasLoot:ShowSearchOptions(self)
        end
    end)
-
-   --Clear Search Button
-local searchclear = CreateFrame("Button","AtlasLootDefaultFrameSearchClearButton",AtlasLootDefaultFrameSearchBox)
-   searchclear:SetSize(19,19)
-   searchclear.NormalTexture = searchclear:CreateTexture(nil, "ARTWORK")
-   searchclear.NormalTexture:SetPoint("CENTER")
-   local tex = AtlasUtil:GetAtlasInfo("auctionhouse-ui-filter-redx")
-   searchclear.NormalTexture:SetTexture(tex.filename)
-   searchclear.NormalTexture:SetTexCoord(tex.leftTexCoord, tex.rightTexCoord, tex.topTexCoord, tex.bottomTexCoord)
-   searchclear.NormalTexture:SetSize(19,19)
-   searchclear:Hide()
-   searchclear:SetHighlightTexture("Interface\\Buttons\\UI-Panel-MinimizeButton-Highlight","ADD")
-   searchclear:SetPoint("RIGHT",AtlasLootDefaultFrameSearchBox,0,0)
-   searchclear:SetScript("OnClick", function()
-       AtlasLootDefaultFrameSearchBox:SetText("")
-       AtlasLootDefaultFrameSearchBox:ClearFocus()
-   end)
-   searchclear:SetScript("OnEnter", function(self)
-       GameTooltip:SetOwner(self, "ANCHOR_TOP")
-       GameTooltip:SetText(AL["Clear Search"])
-       GameTooltip:Show()
-   end)
-   searchclear:SetScript("OnLeave", function() GameTooltip:Hide() end)
 
    --Last Result Button
 local lastresult = CreateFrame("Button","AtlasLootDefaultFrameLastResultButton",AtlasLootDefaultFrameSearchBox,"FilterDropDownMenuTemplate")
@@ -487,7 +460,7 @@ local MAX_ROWS = 5      -- How many rows can be shown at once?
 local scrollFrame = CreateFrame("Frame", "Atlasloot_Difficulty_ScrollFrame", AtlasLootDefaultFrame)
     scrollFrame:EnableMouse(true)
     scrollFrame:SetSize(265, ROW_HEIGHT * MAX_ROWS + 16)
-    scrollFrame:SetPoint("TOPRIGHT","AtlasLootDefaultFrame",-22,-55.5)
+    scrollFrame:SetPoint("TOPRIGHT","AtlasLootDefaultFrame",-30,-55.5)
     scrollFrame:SetBackdrop({
         bgFile = "Interface\\DialogFrame\\UI-DialogBox-Background", tile = true, tileSize = 16,
         edgeFile = "Interface\\Tooltips\\UI-Tooltip-Border", edgeSize = 16,
@@ -705,7 +678,7 @@ subtableFrame.rows = rows2
     --AtlasLoot Maps
     local mapFrame = CreateFrame("Frame", "AtlasLootDefaultFrame_Map", AtlasLootDefaultFrame)
         mapFrame:SetSize(770,513)
-        mapFrame:SetPoint("TOPLEFT", AtlasLootDefaultFrame, "TOPLEFT",40,-86)
+        mapFrame:SetPoint("TOPLEFT", AtlasLootDefaultFrame, "TOPLEFT",30,-86)
         mapFrame:SetFrameStrata("HIGH")
         mapFrame:Hide()
         mapFrame:EnableMouse()
@@ -755,37 +728,37 @@ subtableFrame.rows = rows2
     AtlasLoot_MapDetailTile11:SetPoint("TOPLEFT", AtlasLoot_MapDetailTile10,"TOPRIGHT")
     AtlasLoot_MapDetailTile12:SetPoint("TOPLEFT", AtlasLoot_MapDetailTile11,"TOPRIGHT")
 
-        mapFrame.playerPin = CreateFrame("Button", "AtlasLoot_PlayerMapPin", AtlasLootDefaultFrame_Map)
-        mapFrame.playerPin:SetSize(35,35)
-        mapFrame.playerPin:SetFrameStrata("HIGH")
-        mapFrame.playerPin.texture = mapFrame.playerPin:CreateTexture(nil, "ARTWORK")
-        mapFrame.playerPin.texture:SetTexture("Interface\\Minimap\\MinimapArrow")
-        mapFrame.playerPin.texture:SetSize(35,35)
-        mapFrame.playerPin.texture:SetPoint("CENTER",0,0)
-        mapFrame.playerPin:SetScript("OnEnter", function(self)
-            GameTooltip:SetOwner(self, "ANCHOR_TOPLEFT")
-            GameTooltip:AddLine("You are here")
-            GameTooltip:Show()
-        end)
-        mapFrame.playerPin:SetScript("OnLeave", function()
-            GameTooltip:Hide()
-        end)
-        mapFrame.playerPin:Hide()
+    mapFrame.playerPin = CreateFrame("Button", "AtlasLoot_PlayerMapPin", AtlasLootDefaultFrame_Map)
+    mapFrame.playerPin:SetSize(35,35)
+    mapFrame.playerPin:SetFrameStrata("HIGH")
+    mapFrame.playerPin.texture = mapFrame.playerPin:CreateTexture(nil, "ARTWORK")
+    mapFrame.playerPin.texture:SetTexture("Interface\\Minimap\\MinimapArrow")
+    mapFrame.playerPin.texture:SetSize(35,35)
+    mapFrame.playerPin.texture:SetPoint("CENTER",0,0)
+    mapFrame.playerPin:SetScript("OnEnter", function(self)
+        GameTooltip:SetOwner(self, "ANCHOR_TOPLEFT")
+        GameTooltip:AddLine("You are here")
+        GameTooltip:Show()
+    end)
+    mapFrame.playerPin:SetScript("OnLeave", function()
+        GameTooltip:Hide()
+    end)
+    mapFrame.playerPin:Hide()
 
-        -- Map Button
-        mainframe.mapButton = CreateFrame("Button","AtlasLootDefaultFrame_MapButton", AtlasLootDefaultFrame, "FilterDropDownMenuTemplate")
-        mainframe.mapButton:SetSize(265,25)
-        mainframe.mapButton:SetPoint("LEFT",AtlasLootDefaultFrame_LoadInstanceButton,"RIGHT",12,0)
-        mainframe.mapButton.template = "FilterDropDownMenuTemplate"
-        mainframe.mapButton:SetText("No Map")
-        mainframe.mapButton:RegisterForClicks("AnyDown")
-        mainframe.mapButton:SetScript("OnClick", function(self, button)
-            if button == "LeftButton" then
-                AtlasLoot:MapOnShow()
-            else
-                AtlasLoot:MapMenuOpen(self)
-            end
-        end)
+    -- Map Button
+    mainframe.mapButton = CreateFrame("Button","AtlasLootDefaultFrame_MapButton", AtlasLootDefaultFrame, "FilterDropDownMenuTemplate")
+    mainframe.mapButton:SetSize(265,25)
+    mainframe.mapButton:SetPoint("LEFT",AtlasLootDefaultFrame_LoadInstanceButton,"RIGHT",11,0)
+    mainframe.mapButton.template = "FilterDropDownMenuTemplate"
+    mainframe.mapButton:SetText("No Map")
+    mainframe.mapButton:RegisterForClicks("AnyDown")
+    mainframe.mapButton:SetScript("OnClick", function(self, button)
+        if button == "LeftButton" then
+            AtlasLoot:MapOnShow()
+        else
+            AtlasLoot:MapMenuOpen(self)
+        end
+    end)
 
 local streamIcon = CreateFrame("Frame", "AtlasLoot_ItemsLoading", AtlaslLoot_LootBackground)
     streamIcon:SetPoint("TOPRIGHT", AtlaslLoot_LootBackground, "TOPRIGHT")

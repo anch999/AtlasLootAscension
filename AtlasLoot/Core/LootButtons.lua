@@ -226,20 +226,25 @@ function AtlasLootItem_OnLeave(self)
        ShoppingTooltip2:Hide()
        ShoppingTooltip1:Hide()
     end
+    if AtlasLoot_PopupFrame and AtlasLoot_PopupFrame:IsVisible() then AtlasLoot_PopupFrame:Hide() end
 end
 
 --------------------------------------------------------------------------------
 -- Item OnClick
 -- Called when a loot item is clicked on
 --------------------------------------------------------------------------------
-function AtlasLootItem_OnClick(self ,arg1)
+function AtlasLoot:ItemOnClick(self ,arg1)
     AtlasLoot.Dewdrop:Close()
 	local color = strsub(_G["AtlasLootItem_"..self:GetID().."_Name"]:GetText(), 1, 10)
 	local name = strsub(_G["AtlasLootItem_"..self:GetID().."_Name"]:GetText(), 11)
     local spellID = self.spellID
     local itemID = self.itemID
-    if not spellID and itemID then
 
+
+    if AtlasLoot_PopupFrame and AtlasLoot_PopupFrame:IsVisible() then
+        AtlasLoot_PopupFrame:Hide()
+    end
+    if not spellID and itemID then
         local itemName, itemLink, itemQuality, itemLevel, itemMinLevel, itemType, itemSubType, itemCount, itemEquipLoc, itemTexture = GetItemInfo(itemID)
         --If shift-clicked, link in the chat window
         if arg1=="RightButton" and AtlasLoot.itemUnlock then
@@ -252,6 +257,9 @@ function AtlasLootItem_OnClick(self ,arg1)
         elseif (arg1=="LeftButton") and AtlasLoot.itemUnlock then
             --move wishlist item up
             AtlasLoot:MoveWishlistItem("Up",self.number)
+        elseif arg1 == "LeftButton" and itemID and AtlasLoot_ExtraData[itemID] then
+            AtlasLoot:PopoupItemFrame(self, _G["AtlasLoot_ExtraData"][itemID] )
+            AtlasLoot_PopupFrame:Show()
         elseif(arg1=="RightButton" and itemID and IsAltKeyDown() and AtlasLootItemsFrame.refresh[2] ~= "AtlasLoot_CurrentWishList") then
             --add to defauly wishlist
             local listID = AtlasLootWishList["Options"][playerName]["DefaultWishList"]
@@ -305,7 +313,11 @@ function AtlasLootItem_OnClick(self ,arg1)
             AtlasLoot:ShowItemsFrame(dataID, dataSource, tonumber(dataPage))
         end
     else
-        if IsShiftKeyDown() then
+        local recipeData = AtlasLoot:GetRecipeData(spellID)
+        if arg1 == "LeftButton" and recipeData then
+            AtlasLoot:PopoupItemFrame(self, recipeData)
+            AtlasLoot_PopupFrame:Show()
+        elseif IsShiftKeyDown() then
             ChatEdit_InsertLink(AtlasLoot_GetEnchantLink(spellID))
         elseif arg1=="RightButton" then
             AtlasLoot:ItemContextMenu(spellID, "", "", "", "", self, "spell","",self.craftingData)
@@ -427,17 +439,7 @@ function AtlasLootItem_ShowCompareItem(self)
 
 end
 
-function AtlasLoot:OpenDBURL(ID, Type)
-    OpenAscensionDBURL("?"..Type.."="..ID)
-end
 
-function AtlasLoot:Chatlink(ID,chatType,Type)
-    if Type == "spell" then
-        SendChatMessage(AtlasLoot_GetEnchantLink(ID) ,chatType)
-    else
-        SendChatMessage(select(2,GetItemInfo(ID)) ,chatType)
-    end
-end
 
 local zoneList
 --Creates a zone list for use in adding vendor and mob drop waypoints to tomtom

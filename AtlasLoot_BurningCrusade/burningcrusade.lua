@@ -876,9 +876,9 @@ AtlasLoot_Data["CoTHyjal"] = {
 		[18] = { itemID = 30891 }; --Black Featherlight Boots
 		[19] = { itemID = 30914 }; --Belt of the Crescent Moon
 		[21] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
-		[19] = { itemID = 98570, droprate = "100%" };
+		[22] = { itemID = 98570, droprate = "100%" };
 		[24] = { itemID = 32459, droprate = "%" }; --Time-Phased Phylactery
-		[26] = { itemID = 61196, droprate = "%" };
+		[26] = { itemID = 61196, droprate = "%" }; --Pet
 	};
 	{
 		Name = BabbleBoss["Anetheron"];
@@ -897,7 +897,7 @@ AtlasLoot_Data["CoTHyjal"] = {
 		[20] = { itemID = 30916 }; --Leggings of Channeled Elements
 		[21] = { itemID = 30919 }; --Valestalker Girdle
 		[23] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
-		[25] = { itemID = 98570, droprate = "100%" };
+		[24] = { itemID = 98570, droprate = "100%" };
 		[26] = { itemID = 61287, droprate = "%" };
 	};
 	{
@@ -3385,21 +3385,25 @@ AtlasLoot_Data["Aldor"] = {
 	};
 	{
 		Name = BabbleFaction["Honored"];
-		[1] = { itemID = 29129, desc = "=ds=#a1#, #s5#"  }; --Anchorite's Robes
-		[2] = { itemID = 28881, desc = "=ds=#s3# #e17#"  }; --Inscription of Discipline
-		[3] = { itemID = 28878, desc = "=ds=#s3# #e17#"  }; --Inscription of Faith
-		[4] = { itemID = 28885, desc = "=ds=#s3# #e17#"  }; --Inscription of Vengeance
-		[5] = { itemID = 28882, desc = "=ds=#s3# #e17#"  }; --Inscription of Warding
-		[6] = { itemID = 23145 }; --Design: Royal Shadow Draenite
-		[7] = { itemID = 23603 }; --Plans: Flamebane Gloves
-		[8] = { itemID = 29704 }; --Pattern: Blastguard Belt
-		[9] = { itemID = 29693 }; --Pattern: Flamescale Belt
-		[10] = { itemID = 30843 }; --Pattern: Flameheart Gloves
-		[11] = { itemID = 24293 }; --Pattern: Silver Spellthread
+		[1] = { itemID = 29129 }; --Anchorite's Robes
+		[2] = { itemID = 23145 }; --Design: Royal Shadow Draenite
+		[3] = { itemID = 23603 }; --Plans: Flamebane Gloves
+		[4] = { itemID = 29704 }; --Pattern: Blastguard Belt
+		[5] = { itemID = 29693 }; --Pattern: Flamescale Belt
+		[6] = { itemID = 30843 }; --Pattern: Flameheart Gloves
+		[7] = { itemID = 24293 }; --Pattern: Silver Spellthread
+		[16] = { itemID = 2028907, desc = AL["Shoulder Enchants"] }; --Inscription Inscription of the Blade
+		[17] = { itemID = 2028908, desc = AL["Shoulder Enchants"] }; --Inscription Inscription of the Knight
+		[18] = { itemID = 2028904, desc = AL["Shoulder Enchants"] }; --Inscription Inscription of the Oracle
+		[19] = { itemID = 2028903, desc = AL["Shoulder Enchants"] }; --Inscription Inscription of the Orb
+		[20] = { itemID = 28881, desc = AL["Shoulder Enchants"] }; --Inscription of Discipline
+		[21] = { itemID = 28878, desc = AL["Shoulder Enchants"] }; --Inscription of Faith
+		[22] = { itemID = 28885, desc = AL["Shoulder Enchants"] }; --Inscription of Vengeance
+		[23] = { itemID = 28882, desc = AL["Shoulder Enchants"] }; --Inscription of Warding
 	};
 	{
 		Name = BabbleFaction["Revered"];
-		[1] = { itemID = 29127, desc = "=ds=#s5#, #a4#"  }; --Vindicator's Hauberk
+		[1] = { itemID = 29127 }; --Vindicator's Hauberk
 		[2] = { itemID = 29128 }; --Lightwarden's Band
 		[3] = { itemID = 29130 }; --Auchenai Staff
 		[4] = { itemID = 24177 }; --Design: Pendant of Shadow's End
@@ -3407,21 +3411,37 @@ AtlasLoot_Data["Aldor"] = {
 		[6] = { itemID = 29703 }; --Pattern: Blastguard Boots
 		[7] = { itemID = 29691 }; --Pattern: Flamescale Boots
 		[8] = { itemID = 25721 }; --Pattern: Vindicator's Armor Kit
+		[16] = { itemID = 2028910, desc = AL["Shoulder Enchants"] }; --Greater Inscription of the Blade
+		[17] = { itemID = 2028911, desc = AL["Shoulder Enchants"] }; --Greater Inscription of the Knight
+		[18] = { itemID = 2028912, desc = AL["Shoulder Enchants"] }; --Greater Inscription of the Oracle
+		[19] = { itemID = 2028909, desc = AL["Shoulder Enchants"] }; --Greater Inscription of the Orb
+		[20] = { itemID = 28886, desc = AL["Shoulder Enchants"] }; --Greater Inscription of Discipline
+		[21] = { itemID = 28887, desc = AL["Shoulder Enchants"] }; --Greater Inscription of Faith
+		[22] = { itemID = 28888, desc = AL["Shoulder Enchants"] }; --Greater Inscription of Vengeance
+		[23] = { itemID = 28889, desc = AL["Shoulder Enchants"] }; --Greater Inscription of Warding
 	};
 	{
 		Name = BabbleFaction["Exalted"];
 		[1] = { itemID = 29123 }; --Medallion of the Lightbearer
 		[2] = { itemID = 29124 }; --Vindicator's Brand
-		[3] = { itemID = 28886, desc = "=ds=#s3# #e17#"  }; --Greater Inscription of Discipline
-		[4] = { itemID = 28887, desc = "=ds=#s3# #e17#"  }; --Greater Inscription of Faith
-		[5] = { itemID = 28888, desc = "=ds=#s3# #e17#"  }; --Greater Inscription of Vengeance
-		[6] = { itemID = 28889, desc = "=ds=#s3# #e17#"  }; --Greater Inscription of Warding
-		[7] = { itemID = 23602 }; --Plans: Flamebane Helm
-		[8] = { itemID = 29702 }; --Pattern: Blastguard Pants
-		[9] = { itemID = 29689 }; --Pattern: Flamescale Leggings
-		[10] = { itemID = 24295 }; --Pattern: Golden Spellthread
-		[11] = { itemID = 30844 }; --Pattern: Flameheart Vest
-		[12] = { itemID = 31779 }; --Aldor Tabard
+		[3] = { itemID = 23602 }; --Plans: Flamebane Helm
+		[4] = { itemID = 29702 }; --Pattern: Blastguard Pants
+		[5] = { itemID = 29689 }; --Pattern: Flamescale Leggings
+		[6] = { itemID = 24295 }; --Pattern: Golden Spellthread
+		[7] = { itemID = 30844 }; --Pattern: Flameheart Vest
+		[8] = { itemID = 31779 }; --Aldor Tabard
+		[16] = { itemID = 2228910, desc = AL["Shoulder Enchants"] }; --Masters Inscription of the Blade
+		[17] = { itemID = 2228911, desc = AL["Shoulder Enchants"] }; --Masters Inscription of the Knight
+		[18] = { itemID = 2228912, desc = AL["Shoulder Enchants"] }; --Masters Inscription of the Oracle
+		[19] = { itemID = 2228909, desc = AL["Shoulder Enchants"] }; --Masters Inscription of the Orb
+		[20] = { itemID = 228886, desc = AL["Shoulder Enchants"] }; --Masters Inscription of Discipline
+		[21] = { itemID = 228887, desc = AL["Shoulder Enchants"] }; --Masters Inscription of Faith
+		[22] = { itemID = 228888, desc = AL["Shoulder Enchants"] }; --Masters Inscription of Vengeance
+		[23] = { itemID = 228889, desc = AL["Shoulder Enchants"] }; --Masters Inscription of Warding
+		[24] = { itemID = 2228913, desc = AL["Shoulder Enchants"] }; --Masters Inscription of Guardian
+		[25] = { itemID = 2228914, desc = AL["Shoulder Enchants"] }; --Masters Inscription of Phalanx
+		[26] = { itemID = 228891, desc = AL["Shoulder Enchants"] }; --Masters Inscription of Protection
+		[27] = { itemID = 228890, desc = AL["Shoulder Enchants"] }; --Masters Inscription of Vigilance
 	};
 };
 
@@ -3584,20 +3604,24 @@ AtlasLoot_Data["Scryer"] = {
 	};
 	{
 		Name = BabbleFaction["Honored"];
-		[1] = { itemID = 28907, desc = "=ds=#s3# #e17#"  }; --Inscription of the Blade
-		[2] = { itemID = 28908, desc = "=ds=#s3# #e17#"  }; --Inscription of the Knight
-		[3] = { itemID = 28904, desc = "=ds=#s3# #e17#"  }; --Inscription of the Oracle
-		[4] = { itemID = 28903, desc = "=ds=#s3# #e17#"  }; --Inscription of the Orb
-		[5] = { itemID = 23143 }; --Design: Dazzling Deep Peridot
-		[6] = { itemID = 23598 }; --Plans: Enchanted Adamantite Boots
-		[7] = { itemID = 29701 }; --Pattern: Enchanted Clefthoof Boots
-		[8] = { itemID = 29682 }; --Pattern: Enchanted Felscale Gloves
-		[9] = { itemID = 24292 }; --Pattern: Mystic Spellthread
+		[1] = { itemID = 23143 }; --Design: Dazzling Deep Peridot
+		[2] = { itemID = 23598 }; --Plans: Enchanted Adamantite Boots
+		[3] = { itemID = 29701 }; --Pattern: Enchanted Clefthoof Boots
+		[4] = { itemID = 29682 }; --Pattern: Enchanted Felscale Gloves
+		[5] = { itemID = 24292 }; --Pattern: Mystic Spellthread
+		[16] = { itemID = 28907, desc = AL["Shoulder Enchants"] }; --Inscription Inscription of the Blade
+		[17] = { itemID = 28908, desc = AL["Shoulder Enchants"] }; --Inscription Inscription of the Knight
+		[18] = { itemID = 28904, desc = AL["Shoulder Enchants"] }; --Inscription Inscription of the Oracle
+		[19] = { itemID = 28903, desc = AL["Shoulder Enchants"] }; --Inscription Inscription of the Orb
+		[20] = { itemID = 2028881, desc = AL["Shoulder Enchants"] }; --Inscription of Discipline
+		[21] = { itemID = 2028878, desc = AL["Shoulder Enchants"] }; --Inscription of Faith
+		[22] = { itemID = 2028885, desc = AL["Shoulder Enchants"] }; --Inscription of Vengeance
+		[23] = { itemID = 2028882, desc = AL["Shoulder Enchants"] }; --Inscription of Warding
 	};
 	{
 		Name = BabbleFaction["Revered"];
-		[1] = { itemID = 29131, desc = "=ds=#s11#, #a2# "  }; --Retainer's Leggings
-		[2] = { itemID = 29134, desc = "=ds=#s9#, #a4# "  }; --Gauntlets of the Chosen
+		[1] = { itemID = 29131 }; --Retainer's Leggings
+		[2] = { itemID = 29134 }; --Gauntlets of the Chosen
 		[3] = { itemID = 29132 }; --Scryer's Bloodgem
 		[4] = { itemID = 29133 }; --Seer's Cane
 		[5] = { itemID = 24176 }; --Design: Pendant of Withering
@@ -3605,21 +3629,37 @@ AtlasLoot_Data["Scryer"] = {
 		[7] = { itemID = 23599 }; --Plans: Enchanted Adamantite Breastplate
 		[8] = { itemID = 29700 }; --Pattern: Enchanted Clefthoof Gloves
 		[9] = { itemID = 29684 }; --Pattern: Enchanted Felscale Boots
-		[10] = { itemID = 25722 }; --Pattern: Magister's Armor Kit
+		[10] = { itemID = 25722, desc = AL["Shoulder Enchants"] }; --Pattern: Magister's Armor Kit
+		[16] = { itemID = 28910, desc = AL["Shoulder Enchants"] }; --Greater Inscription of the Blade
+		[17] = { itemID = 28911, desc = AL["Shoulder Enchants"] }; --Greater Inscription of the Knight
+		[18] = { itemID = 28912, desc = AL["Shoulder Enchants"] }; --Greater Inscription of the Oracle
+		[19] = { itemID = 28909, desc = AL["Shoulder Enchants"] }; --Greater Inscription of the Orb
+		[20] = { itemID = 2028886, desc = AL["Shoulder Enchants"] }; --Greater Inscription of Discipline
+		[21] = { itemID = 2028887, desc = AL["Shoulder Enchants"] }; --Greater Inscription of Faith
+		[22] = { itemID = 2028888, desc = AL["Shoulder Enchants"] }; --Greater Inscription of Vengeance
+		[23] = { itemID = 2028889, desc = AL["Shoulder Enchants"] }; --Greater Inscription of Warding
 	};
 	{
 		Name = BabbleFaction["Exalted"];
 		[1] = { itemID = 29126 }; --Seer's Signet
 		[2] = { itemID = 29125 }; --Retainer's Blade
-		[3] = { itemID = 28910, desc = "=ds=#s3# #e17#"  }; --Greater Inscription of the Blade
-		[4] = { itemID = 28911, desc = "=ds=#s3# #e17#"  }; --Greater Inscription of the Knight
-		[5] = { itemID = 28912, desc = "=ds=#s3# #e17#"  }; --Greater Inscription of the Oracle
-		[6] = { itemID = 28909, desc = "=ds=#s3# #e17#"  }; --Greater Inscription of the Orb
-		[7] = { itemID = 23600 }; --Plans: Enchanted Adamantite Leggings
-		[8] = { itemID = 29698 }; --Pattern: Enchanted Clefthoof Leggings
-		[9] = { itemID = 29677 }; --Pattern: Enchanted Felscale Leggings
-		[10] = { itemID = 24294 }; --Pattern: Runic Spellthread
-		[11] = { itemID = 31780 }; --Scryers Tabard
+		[3] = { itemID = 23600 }; --Plans: Enchanted Adamantite Leggings
+		[4] = { itemID = 29698 }; --Pattern: Enchanted Clefthoof Leggings
+		[5] = { itemID = 29677 }; --Pattern: Enchanted Felscale Leggings
+		[6] = { itemID = 24294 }; --Pattern: Runic Spellthread
+		[7] = { itemID = 31780 }; --Scryers Tabard
+		[16] = { itemID = 228910, desc = AL["Shoulder Enchants"] }; --Masters Inscription of the Blade
+		[17] = { itemID = 228911, desc = AL["Shoulder Enchants"] }; --Masters Inscription of the Knight
+		[18] = { itemID = 228912, desc = AL["Shoulder Enchants"] }; --Masters Inscription of the Oracle
+		[19] = { itemID = 228909, desc = AL["Shoulder Enchants"] }; --Masters Inscription of the Orb
+		[20] = { itemID = 2228886, desc = AL["Shoulder Enchants"] }; --Masters Inscription of Discipline
+		[21] = { itemID = 2228887, desc = AL["Shoulder Enchants"] }; --Masters Inscription of Faith
+		[22] = { itemID = 2228888, desc = AL["Shoulder Enchants"] }; --Masters Inscription of Vengeance
+		[23] = { itemID = 2228889, desc = AL["Shoulder Enchants"] }; --Masters Inscription of Warding
+		[24] = { itemID = 228913, desc = AL["Shoulder Enchants"] }; --Masters Inscription of Guardian
+		[25] = { itemID = 228914, desc = AL["Shoulder Enchants"] }; --Masters Inscription of Phalanx
+		[26] = { itemID = 2228891, desc = AL["Shoulder Enchants"] }; --Masters Inscription of Protection
+		[27] = { itemID = 2228890, desc = AL["Shoulder Enchants"] }; --Masters Inscription of Vigilance
 	};
 };
 
@@ -6188,4 +6228,55 @@ AtlasLoot_Data["WorldBossesTBC"] = {
 		[9] = { itemID = 30722, desc = "=ds=#h2#, #w1#", droprate = "6.0%" }; --Ethereum Nexus-Reaver
 		[10] = { itemID = 30724, desc = "=ds=#w5#", droprate = "0.0%" }; --Barrel-Blade Longrifle
 	}
+};
+
+------------------------
+---- Item Sacks TBC ----
+------------------------
+
+AtlasLoot_ExtraData[34846] = {
+	[1] = {itemID = 23437 };
+	[2] = {itemID = 23438 };
+	[3] = {itemID = 23439 };
+	[4] = {itemID = 23441 };
+	[5] = {itemID = 23436 };
+	[6] = {itemID = 23440 };
+	[7] = {itemID = 32230 };
+	[8] = {itemID = 32249 };
+	[9] = {itemID = 32231 };
+	[10] = {itemID = 32229 };
+	[11] = {itemID = 32228 };
+	[12] = {itemID = 32227 };
+};
+
+AtlasLoot_ExtraData[229739] = {
+	Faction = true;
+	["The Scryers"] = {
+		[1] = { itemID = 228910, desc = AL["Shoulder Enchants"] }; --Masters Inscription of the Blade
+		[2] = { itemID = 228911, desc = AL["Shoulder Enchants"] }; --Masters Inscription of the Knight
+		[3] = { itemID = 228912, desc = AL["Shoulder Enchants"] }; --Masters Inscription of the Oracle
+		[4] = { itemID = 228909, desc = AL["Shoulder Enchants"] }; --Masters Inscription of the Orb
+		[5] = { itemID = 2228886, desc = AL["Shoulder Enchants"] }; --Masters Inscription of Discipline
+		[6] = { itemID = 2228887, desc = AL["Shoulder Enchants"] }; --Masters Inscription of Faith
+		[7] = { itemID = 2228888, desc = AL["Shoulder Enchants"] }; --Masters Inscription of Vengeance
+		[8] = { itemID = 2228889, desc = AL["Shoulder Enchants"] }; --Masters Inscription of Warding
+		[9] = { itemID = 228913, desc = AL["Shoulder Enchants"] }; --Masters Inscription of Guardian
+		[10] = { itemID = 228914, desc = AL["Shoulder Enchants"] }; --Masters Inscription of Phalanx
+		[11] = { itemID = 2228891, desc = AL["Shoulder Enchants"] }; --Masters Inscription of Protection
+		[12] = { itemID = 2228890, desc = AL["Shoulder Enchants"] }; --Masters Inscription of Vigilance
+	};
+	["The Aldor"] = {
+		[1] = { itemID = 2228910, desc = AL["Shoulder Enchants"] }; --Masters Inscription of the Blade
+		[2] = { itemID = 2228911, desc = AL["Shoulder Enchants"] }; --Masters Inscription of the Knight
+		[3] = { itemID = 2228912, desc = AL["Shoulder Enchants"] }; --Masters Inscription of the Oracle
+		[4] = { itemID = 2228909, desc = AL["Shoulder Enchants"] }; --Masters Inscription of the Orb
+		[5] = { itemID = 228886, desc = AL["Shoulder Enchants"] }; --Masters Inscription of Discipline
+		[6] = { itemID = 228887, desc = AL["Shoulder Enchants"] }; --Masters Inscription of Faith
+		[7] = { itemID = 228888, desc = AL["Shoulder Enchants"] }; --Masters Inscription of Vengeance
+		[8] = { itemID = 228889, desc = AL["Shoulder Enchants"] }; --Masters Inscription of Warding
+		[9] = { itemID = 2228913, desc = AL["Shoulder Enchants"] }; --Masters Inscription of Guardian
+		[10] = { itemID = 2228914, desc = AL["Shoulder Enchants"] }; --Masters Inscription of Phalanx
+		[11] = { itemID = 228891, desc = AL["Shoulder Enchants"] }; --Masters Inscription of Protection
+		[12] = { itemID = 228890, desc = AL["Shoulder Enchants"] }; --Masters Inscription of Vigilance
+	};
 };

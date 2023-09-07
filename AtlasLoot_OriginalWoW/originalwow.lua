@@ -950,7 +950,7 @@ AtlasLoot_Data["LowerBlackrock"] = {
 	Name = BabbleZone["Lower Blackrock Spire"];
 	Type = "ClassicDungeonExt";
 	Loadfirst = 3;
-	Map = "BlackrockSpireLower";
+	Map = "BlackrockSpire";
 	{
 		Name = AL["Scarshield Quartermaster"];
 		[1] = {  itemID = 18987, droprate = "100%" }; --Blackhand's Command
@@ -1125,7 +1125,7 @@ AtlasLoot_Data["LowerBlackrock"] = {
 AtlasLoot_Data["UpperBlackrock"] = {
 	Name = BabbleZone["Upper Blackrock Spire"];
 	Type = "ClassicDungeonExt";
-	Map = "BlackrockSpireUpper";
+	Map = "BlackrockSpire";
 	{
 		Name = BabbleBoss["Pyroguard Emberseer"];
 		[1] = {  itemID = 12905, droprate = "15.20%" }; --Wildfire Cape
@@ -7229,4 +7229,20 @@ AtlasLoot_Data["WorldBossesCLASSIC"] = {
 		[5] = { itemID = 20619, droprate = "8.85%" }; --Acid Inscribed Greaves
 		[7] = { itemID = 20637, droprate = "10.13%" }; --Acid Inscribed Pauldrons
 	};
+};
+
+------------------------
+-- Item Sacks Classic --
+------------------------
+
+AtlasLoot_ExtraData[22637] = {
+	[1] = {  itemID = 19790 }; --Animist's Caress
+	[2] = {  itemID = 19785 }; --Falcon's Call
+	[3] = {  itemID = 19787 }; --Presence of Sight
+	[4] = {  itemID = 19783 }; --Syncretist's Sigil
+	[5] = {  itemID = 19789 }; --Prophetic Aura
+	[6] = {  itemID = 19784 }; --Death's Embrace
+	[7] = {  itemID = 19786 }; --Vodouisant's Vigilant Embrace
+	[8] = {  itemID = 19788 }; --Hoodoo Hex
+	[9] = {  itemID = 19782 }; --Presence of Might
 };

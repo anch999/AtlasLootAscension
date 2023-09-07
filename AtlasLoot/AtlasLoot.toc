@@ -31,10 +31,9 @@
 embeds.xml
 
 Locales\Locales.xml
-
+Databases\Databases.xml
 Core\AtlasLoot.xml
 Menus\Menus.xml
 
 DefaultFrame\Frames.xml
 
-modules.xml

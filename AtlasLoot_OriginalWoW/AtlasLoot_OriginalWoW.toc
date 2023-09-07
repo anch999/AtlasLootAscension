@@ -20,5 +20,6 @@
 ## X-Curse-Project-ID: atlasloot-enhanced
 ## X-Curse-Repository-ID: wow/atlasloot-enhanced/mainline
 
+MapData.lua
 originalwow.lua
 localization.lua

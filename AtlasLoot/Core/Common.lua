@@ -7,6 +7,8 @@ local GREEN = "|cff1eff00"
 local PURPLE = "|cff9F3FFF"
 local BLUE = "|cff0070dd"
 local ORANGE = "|cffFF8400"
+local CYAN =  "|cff00ffff"
+local SPRINGGREEN = "|cFF00FF7F"
 
 -- Used to create a dewdrop menu from a table
 function AtlasLoot:OpenDewdropMenu(self, menuList, skipRegister)
@@ -125,4 +127,157 @@ function AtlasLoot:FindId(id, difficulty, type)
 	else
 		return ItemIDsDatabase[id][difficulty], true
 	end
+end
+
+-- Open a ascension db link
+function AtlasLoot:OpenDBURL(ID, Type)
+    OpenAscensionDBURL("?"..Type.."="..ID)
+end
+
+-- create a enchant or item chat link!
+function AtlasLoot:Chatlink(ID,chatType,Type)
+    if Type == "spell" then
+        SendChatMessage(AtlasLoot_GetEnchantLink(ID) ,chatType)
+    else
+        SendChatMessage(select(2,GetItemInfo(ID)) ,chatType)
+    end
+end
+
+function AtlasLoot:GetRecipeData(recipeID)
+	for _,prof in pairs(TRADESKILL_RECIPES) do
+		for _,cat in pairs(prof) do
+		   for _,recipe in pairs(cat) do
+			  if recipeID == recipe.SpellEntry then
+				 return recipe.Reagents
+			  end
+		   end
+		end
+	 end
+end
+
+-- Get Rep Faction
+function AtlasLoot:GetReputationFaction(data)
+	local factionIndex = 1
+	local lastFactionName
+	repeat
+	local name, _, standingId = GetFactionInfo(factionIndex)
+	if name == lastFactionName then return data end
+	lastFactionName  = name
+		if data[name] and standingId and standingId > 1 then
+			return data[name]
+		end
+		if data[name] then
+			data = data[name]
+		end
+	factionIndex = factionIndex + 1
+	until factionIndex > 200
+	return data
+end
+--[[
+AtlasLoot:PopoupItemFrame(self, data)
+Used to create a popup item frame for items like gem sacks to show what they contain
+]] 
+local popupFrameLoaded
+local popupframe
+function AtlasLoot:PopoupItemFrame(self, data)
+	if not data then AtlasLoot_PopupFrame:Hide() return end
+	--only create frame first time its used
+	if not popupFrameLoaded then
+		popupframe = CreateFrame("Frame", "AtlasLoot_PopupFrame")
+		popupframe:SetBackdrop({
+			bgFile = "Interface\\DialogFrame\\UI-DialogBox-Background", tile = true, tileSize = 16,
+			edgeFile = "Interface\\Tooltips\\UI-Tooltip-Border", edgeSize = 16,
+			insets = { left = 4, right = 4, top = 4, bottom = 4 },
+		})
+		popupframe:EnableMouse()
+		popupframe:SetScript("OnLeave", function()
+			AtlasLootItem_OnLeave(self)
+		end)
+		popupframe:SetScript("OnEnter", function()
+			AtlasLoot_PopupFrame:Show()
+		end)
+		popupframe:SetWidth(181)
+    	popupframe:Hide()
+		popupFrameLoaded = true
+	end
+	--hide the unused buttons
+	for i = 1, 15 do
+		local button = _G["AtlasLoot_PopupButton_"..i]
+		if button then
+			button:Hide()
+		end
+	end
+	--creates a button only if one dosnt already exist re use old one if it does
+	local function createButton(num)
+		if _G["AtlasLoot_PopupButton_"..num] then return end
+		local button = CreateFrame("Button", "AtlasLoot_PopupButton_"..num, AtlasLoot_PopupFrame)
+		button:SetID(num)
+		button:SetSize(25,25)
+		button:EnableMouse()
+		button:RegisterForClicks("AnyDown")
+		button:SetHighlightTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD")
+		button.icon = button:CreateTexture(nil,"ARTWORK")
+		button.icon:SetSize(25,25)
+		button.icon:SetPoint("CENTER")
+		button.name = button:CreateFontString(nil,"ARTWORK","GameFontHighlightLarge")
+		button.name:SetFont("GameFontHighlightLarge", 15)
+        button.name:SetSize(25,25)
+        button.name:SetPoint("CENTER", button.icon,0,0)
+        button.name:SetJustifyH("CENTER")
+		button.name:Hide()
+		button.number = num
+		button:SetScript("OnClick", function(self, arg1) AtlasLoot:ItemOnClick(self, arg1) end)
+		button:SetScript("OnEnter", function(self)
+			AtlasLootItem_OnEnter(self)
+			AtlasLoot_PopupFrame:Show()
+		end)
+		button:SetScript("OnLeave", function(self)
+			AtlasLootItem_OnLeave(self)
+		end)
+		
+		if num == 1 then
+			button:SetPoint("TOPLEFT", "AtlasLoot_PopupFrame", 9, -8)
+		elseif num == 7 then
+			button:SetPoint("BOTTOM", "AtlasLoot_PopupButton_1", 0, -28)
+		elseif num == 13 then
+			button:SetPoint("BOTTOM", "AtlasLoot_PopupButton_6", 0, -28)
+		else
+			button:SetPoint("LEFT", _G["AtlasLoot_PopupButton_"..(num-1)],"RIGHT",3,0)
+		end
+	end
+	if data.Faction then
+		data = AtlasLoot:GetReputationFaction(data)
+	end
+
+	local numberBtns
+	for i, item in ipairs(data) do
+		createButton(i)
+		local button = _G["AtlasLoot_PopupButton_"..i]
+		button.icon:SetTexture(GetItemIcon(item.itemID or item[1]))
+		button.itemID = item.itemID or item[1]
+		if item[2] then
+			button.name:SetText(WHITE..item[2])
+			button.name:Show()
+		else
+			button.name:Hide()
+		end
+		button:Show()
+		numberBtns = i
+	end
+	if numberBtns < 6 then
+		popupframe:SetWidth((numberBtns*27.5)+16)
+	else
+		popupframe:SetWidth(181)
+	end
+	if numberBtns > 6 then
+		popupframe:SetHeight(69)
+	elseif numberBtns > 12 then
+		popupframe:SetHeight(97)
+	else
+		popupframe:SetHeight(41)
+	end
+	popupframe:SetParent(self)
+	popupframe:ClearAllPoints()
+	popupframe:SetPoint("BOTTOMLEFT",self,0,-65)
+	popupframe:Show()
 end

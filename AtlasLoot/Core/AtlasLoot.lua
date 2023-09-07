@@ -40,6 +40,7 @@ local RED = "|cffff0000"
 local WHITE = "|cffFFFFFF"
 local GREEN = "|cff1eff00"
 local PURPLE = "|cff9F3FFF"
+local LIMEGREEN = "|cFF32CD32"
 local BLUE = "|cff0070dd"
 local ORANGE = "|cffFF8400"
 local itemHighlightBlue = "Interface\\AddOns\\AtlasLoot\\Images\\knownBlue"
@@ -712,13 +713,20 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 		else
 			extra = ""
 		end
+
+		if AtlasLoot_ExtraData[dataSource[dataID][tablenum][i].itemID] then
+			extra = LIMEGREEN .. "L-Click:|r " .. extra
+		end
+
 		if dataSource[dataID][tablenum][i].price then
 			extra = extra ..WHITE.." ("..dataSource[dataID][tablenum][i].price..")"
 		end
+
 		local recipeSpellID = AtlasLoot:GetRecipeSpellID(dataSource[dataID][tablenum][i].itemID)
 		if recipeSpellID then
 			extra = extra ..WHITE.." ("..AtlasLoot_CraftingData["ExtraCraftingData"][recipeSpellID][1]..")"
 		end
+
 		extra = AtlasLoot:FixText(extra)
 		itemButton.extra = extra
 
@@ -822,6 +830,17 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 				_G["AtlasLootItem_"..i].spellID = nil
 				_G["AtlasLootItem_"..i.."_Highlight"]:Hide()
 				_G["AtlasLootItem_"..i].hasTrade = false
+			end
+			if dataSource[itemID] then
+				for _,ID in pairs(dataSource[itemID]) do
+					local item = Item:CreateFromID(ID.itemID)
+					if ID.itemID and not item:GetInfo() then
+						AtlasLoot:ItemsLoading(1)
+						item:ContinueOnLoad(function(itemID)
+							AtlasLoot:ItemsLoading(-1)
+						end)
+					end
+				end
 			end
 		end
 
@@ -940,7 +959,7 @@ Called when <-, -> are pressed and calls up the appropriate loot page
 ]]
 function AtlasLoot:NavButton_OnClick(self)
 	if AtlasLootDefaultFrame_Map:IsVisible() then
-		AtlasLoot:MapMenuClick(self.mapID, self.mapNum)
+		AtlasLoot:MapSelect(self.mapID, self.mapNum)
 	else
 		local tablenum, dataID, dataSource = self.tablenum, self.tablebase[1], self.tablebase[2]
 		if #_G[dataSource][dataID] > 26 then
@@ -994,7 +1013,7 @@ function AtlasLoot:LoadAllModules()
 	local loadedModules = {}
 	local flag = 0
 	for _, module in pairs(modules) do
-		loadedModules[module] = LoadAddOn(modules)
+		loadedModules[module] = LoadAddOn(module)
 	end
 
 	for module, state in pairs(loadedModules) do

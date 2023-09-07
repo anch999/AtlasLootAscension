@@ -8,6 +8,7 @@ local ORANGE = "|cffFF8400"
 local PURP = "|cff9900ff"
 local INDENT = "      "
 local YELLOW = "|cffFFd200"
+local GOLD  = "|cffffcc00"
 local WHITE = "|cFFFFFFFF"
 local CYAN =  "|cff00ffff"
 local DefaultPin = "questlog-questtypeicon-daily"
@@ -130,9 +131,9 @@ function AtlasLoot:SetNavButtons(mapID, mapNum)
         end
 end
 
---called everytime you on a map hiding the loot item buttons 
-function AtlasLoot:MapOnShow()
-    if AtlasLootDefaultFrame_Map:IsVisible() then
+--called everytime you open a map hiding the loot item buttons 
+function AtlasLoot:MapOnShow(mapID, mapNum, refresh)
+    if not refresh and AtlasLootDefaultFrame_Map:IsVisible() then
         AtlasLootDefaultFrame_Map:Hide()
         AtlaslLoot_LootBackground:Show()
         AtlasLoot:BackButton_OnClick()
@@ -154,7 +155,7 @@ function AtlasLoot:MapOnShow()
                 Atlasloot_HeaderLabel:Show()
                 AtlasLoot:ScrollFrameUpdate(true)
                 AtlasLootDefaultFrameScroll:Hide()
-                local mapNum = 1
+                mapNum = mapNum or 1
                 SetMapToCurrentZone()
                 if AtlasLoot_MapData[AtlasLoot.CurrentMap].ZoneName[1] == GetRealZoneText() then
                     if GetCurrentMapDungeonLevel() == 0 then
@@ -162,9 +163,12 @@ function AtlasLoot:MapOnShow()
                     else
                         mapNum = GetCurrentMapDungeonLevel()
                     end
+                elseif mapID then
+                    AtlasLoot.CurrentMap = mapID
                 elseif lastMap == AtlasLoot.CurrentMap then
                     mapNum = AtlasLoot.MapNum
                 end
+                lastMap = AtlasLoot.CurrentMap
                 AtlasLoot:MapSelect(AtlasLoot.CurrentMap, mapNum)
         end
     end
@@ -189,19 +193,23 @@ function AtlasLoot:MapSelect(mapID, mapNum)
         end
     end
     AtlasLoot.MapNum = mapNum
+    AtlasLoot.CurrentMap = mapID
     AtlasLoot:SubTableScrollFrameUpdate(mapID, "AtlasLoot_MapData", mapNum)
     AtlasLoot:SetNavButtons(mapID, mapNum)
     AtlasLoot:CreateMapPins(pinsList)
     AtlasLoot:CancelTimer(AtlasLoot.playerPinTimer)
     AtlasLoot:PlayerPin(true)
 
-    Atlasloot_HeaderLabel:SetText(
-    map.ZoneName[1].._RED.." ["..map.Acronym.."]\n"..
-    "Location: "..map.Location[1].."\n"..
-    "Level Range: "..map.LevelRange.."\n"..
-    "Minimum Level: "..map.MinLevel.."\n"..
-    "Player Limit: "..map.PlayerLimit
-    )
+    local text = map.ZoneName[1]..WHITE.." ["..map.Acronym.."]\n"..
+    GOLD .. "Location: ".. WHITE..map.Location[1].."\n"..
+    GOLD .. "Level Range: ".. WHITE..map.LevelRange.."\n"..
+    GOLD .. "Minimum Level: ".. WHITE..map.MinLevel.."\n"..
+    GOLD .. "Player Limit: ".. WHITE..map.PlayerLimit
+
+    if map.Reputation then
+        text = text .. "\n" .. GOLD .. AL["Reputation"] .. ": ".. WHITE .. map.Reputation
+    end
+    Atlasloot_HeaderLabel:SetText(text)
     AtlasLoot:SetMapButtonText(mapID, mapNum)
 end
 
@@ -217,16 +225,6 @@ function AtlasLoot:SetMapButtonText(mapID, mapNum)
     AtlasLootDefaultFrame_MapButton:SetText(text)
 end
 
---called when you click on a map in the drop down menu
-function AtlasLoot:MapMenuClick(mapID, mapNum)
-    mapNum = mapNum or 1
-    if AtlasLootDefaultFrame_Map:IsVisible() then
-        AtlasLoot:MapSelect(mapID, mapNum)
-    end
-    AtlasLoot.MapNum = mapNum
-    AtlasLoot.CurrentMap = mapID
-end
-
 --drop down map menu
 function AtlasLoot:MapMenuOpen(self)
     local mapID = AtlasLoot.CurrentMap
@@ -240,7 +238,7 @@ function AtlasLoot:MapMenuOpen(self)
             else
                 text = v[1][1]
             end
-            tinsert(menuList[1], {text = WHITE..text, func = function() AtlasLoot:MapMenuClick(mapID, i) end, notCheckable = true, closeWhenClicked = true, textHeight = 12, textWidth = 12})
+            tinsert(menuList[1], {text = WHITE..text, func = function() AtlasLoot:MapOnShow(mapID, i, true) end, notCheckable = true, closeWhenClicked = true, textHeight = 12, textWidth = 12})
         end
 
         tinsert(menuList[1], {divider = 35})

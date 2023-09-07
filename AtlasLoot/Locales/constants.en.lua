@@ -7,9 +7,6 @@ back to the English translation.
 The AL["text"] = true shortcut can ONLY be used for English (the root translation).
 ]]
 
---Table holding all loot tables is initialised here as it loads early
-AtlasLoot_Data = {}
-
 --Create the library instance
 local AceLocale = LibStub:GetLibrary("AceLocale-3.0")
 
@@ -26,6 +23,7 @@ if AL then
 	AL["Add To Default"] = true
 	AL["Clear Search"] = true
 	AL["Epic Shoulder Enchants"] = true
+	AL["Shoulder Enchants"] = true
 	-- Text strings for UI objects
 	AL["AtlasLoot"] = true
 	AL["Select Loot Table"] = true
@@ -4247,6 +4245,6 @@ if AL then
 	AL["Crusader's Square"] = true
 	AL["Upper Ring"] = true
 	AL["Lower Pool"] = true
-
+	AL["Crimson Laboratories"] = true
 
 end

@@ -250,7 +250,6 @@ function AtlasLoot:SetNewStyle(style)
         "AtlasLootDefaultFrame_Preset3",
         "AtlasLootDefaultFrame_Preset4",
         "AtlasLootDefaultFrameSearchButton",
-        "AtlasLootDefaultFrameSearchClearButton",
         "AtlasLootDefaultFrameLastResultButton",
         "AtlasLootDefaultFrameWishListButton",
         "AtlasLootDefaultFrameAdvancedSearchButton",
