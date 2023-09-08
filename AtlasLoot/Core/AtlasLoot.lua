@@ -772,8 +772,8 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 			itemButton.storeID = itemID
 			itemButton.dressingroomID = itemID
 		end
- 
-		itemButton.craftingData = AtlasLoot:RecipeSource(spellID) or AtlasLoot:RecipeSource(AtlasLoot:GetRecipeSpellID(itemID))
+
+		itemButton.craftingData = AtlasLoot:RecipeSource(spellID)
 		itemButton.tablenum = tablenum
 		itemButton.dataID = dataID
 		itemButton.dataSource = dataSource_backup

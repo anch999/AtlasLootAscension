@@ -285,6 +285,7 @@ function AtlasLoot:PopoupItemFrame(self, data)
 			button.icon:SetTexture(GetItemIcon(itemID))
 			button.itemID = itemID
 			button.itemTexture = self.itemTexture
+			button.craftingData = AtlasLoot:RecipeSource(AtlasLoot:GetRecipeSpellID(itemID))
 		if item[2] then
 			button.name:SetText(WHITE..item[2])
 			button.name:Show()

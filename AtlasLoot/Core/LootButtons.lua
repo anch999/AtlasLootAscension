@@ -35,9 +35,10 @@ end
 
 --Set Tooltip for extra crafting data
 function AtlasLoot:SetCraftingTooltip(self)
-    --extra information on where to find the recipe
     local craftingData = self.craftingData
-    if (craftingData and AtlasLoot.db.profile.recipeExtraInfoSwitch and IsControlKeyDown()) or (craftingData and not AtlasLoot.db.profile.recipeExtraInfoSwitch) then
+    if not craftingData then return end
+    --extra information on where to find the recipe
+    if (AtlasLoot.db.profile.recipeExtraInfoSwitch and IsControlKeyDown()) or (not AtlasLoot.db.profile.recipeExtraInfoSwitch) then
         AtlasLootTooltip:AddLine(" ")
         for _,v in pairs(craftingData) do
             local line1 = v[1]
@@ -52,7 +53,7 @@ function AtlasLoot:SetCraftingTooltip(self)
             end
             AtlasLootTooltip:AddDoubleLine(line1, line2)
         end
-    elseif craftingData then
+    else
         AtlasLootTooltip:AddLine(" ")
         AtlasLootTooltip:AddLine(WHITE..AL["Hold CTRL for source"])
     end
@@ -138,9 +139,8 @@ function AtlasLootItem_OnEnter(self)
                 end
             --Default game tooltips
             else
-                if(itemID ~= nil) then
-                    if(GetItemInfo(itemID) ~= nil) then
-
+                if itemID then
+                    if GetItemInfo(itemID) then
                         AtlasLootTooltip:SetOwner(self, "ANCHOR_RIGHT", -(self:GetWidth() / 2), 24)
                         AtlasLootTooltip:SetHyperlink("item:"..itemID..":0:0:0")
                         if ( AtlasLoot.db.profile.ItemIDs ) then

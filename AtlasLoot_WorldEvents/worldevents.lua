@@ -302,13 +302,13 @@ brewfest.d = {
 
 brewfest.corenCLASSIC = {
 	Name = AL["Coren Direbrew"];
-	[1] = { itemID = 2037128, desc = "=ds=#s14#" }; --Balebrew Charm
-	[2] = { itemID = 2037127, desc = "=ds=#s14#" }; --Brightbrew Charm
-	[3] = { itemID = 2038289, desc = "=ds=#s14#" }; --Coren's Lucky Coin
-	[4] = { itemID = 2038290, desc = "=ds=#s14#" }; --Dark Iron Smoking Pipe
-	[5] = { itemID = 2038288, desc = "=ds=#s14#" }; --Direbrew Hops
-	[6] = { itemID = 2038287, desc = "=ds=#s14#" }; --Empty Mug Of Direbrew
-	[7] = { itemID = 2037597, desc = "=ds=#h1#, #w4#" }; --Direbrew's Shanker
+	[1] = { itemID = 2037128 }; --Balebrew Charm
+	[2] = { itemID = 2037127 }; --Brightbrew Charm
+	[3] = { itemID = 2038289 }; --Coren's Lucky Coin
+	[4] = { itemID = 2038290 }; --Dark Iron Smoking Pipe
+	[5] = { itemID = 2038288 }; --Direbrew Hops
+	[6] = { itemID = 2038287 }; --Empty Mug Of Direbrew
+	[7] = { itemID = 2037597 }; --Direbrew's Shanker
 	[16] = { itemID = 38281, desc = "=ds=#m2#" }; --Direbrew's Dire Brew
 	[17] = { itemID = 34140, desc = "=q1=#m4#: =ds=#s15#" }; --Dark Iron Tankard
 	[19] = { itemID = 37828, desc = "=ds=#e12#" }; --Great Brewfest Kodo
@@ -319,13 +319,13 @@ brewfest.corenCLASSIC = {
 
 brewfest.corenTBC = {
 	Name = AL["Coren Direbrew"];
-	[1] = { itemID = 37128, desc = "=ds=#s14#" }; --Balebrew Charm
-	[2] = { itemID = 37127, desc = "=ds=#s14#" }; --Brightbrew Charm
-	[3] = { itemID = 38289, desc = "=ds=#s14#" }; --Coren's Lucky Coin
-	[4] = { itemID = 38290, desc = "=ds=#s14#" }; --Dark Iron Smoking Pipe
-	[5] = { itemID = 38288, desc = "=ds=#s14#" }; --Direbrew Hops
-	[6] = { itemID = 38287, desc = "=ds=#s14#" }; --Empty Mug Of Direbrew
-	[7] = { itemID = 37597, desc = "=ds=#h1#, #w4#" }; --Direbrew's Shanker
+	[1] = { itemID = 37128 }; --Balebrew Charm
+	[2] = { itemID = 37127 }; --Brightbrew Charm
+	[3] = { itemID = 38289 }; --Coren's Lucky Coin
+	[4] = { itemID = 38290 }; --Dark Iron Smoking Pipe
+	[5] = { itemID = 38288 }; --Direbrew Hops
+	[6] = { itemID = 38287 }; --Empty Mug Of Direbrew
+	[7] = { itemID = 37597 }; --Direbrew's Shanker
 	[16] = { itemID = 38281, desc = "=ds=#m2#" }; --Direbrew's Dire Brew
 	[17] = { itemID = 34140, desc = "=q1=#m4#: =ds=#s15#" }; --Dark Iron Tankard
 	[19] = { itemID = 37828, desc = "=ds=#e12#" }; --Great Brewfest Kodo
@@ -336,14 +336,14 @@ brewfest.corenTBC = {
 
 brewfest.corenWRATH = {
 	Name = AL["Coren Direbrew"];
-	[1] = { itemID = 49078, desc = "=ds=#s14#" }; --Ancient Pickled Egg
-	[2] = { itemID = 49118, desc = "=ds=#s14#" }; --Bubbling Balebrew Charm
-	[3] = { itemID = 49116, desc = "=ds=#s14#" }; --Bitter Brightbrew Charm
-	[4] = { itemID = 49080, desc = "=ds=#s14#" }; --Brawler's Souvenir
-	[5] = { itemID = 49074, desc = "=ds=#s14#" }; --Coren's Chromium Coaster
-	[6] = { itemID = 49076, desc = "=ds=#s14#" }; --Mithril Pocketwatch
-	[7] = { itemID = 49120, desc = "=ds=#h1#, #w4#" }; --Direbrew's Shanker 2.0
-	[8] = { itemID = 48663, desc = "=ds=#h1#, #w6#" }; --Tankard O' Terror
+	[1] = { itemID = 49078 }; --Ancient Pickled Egg
+	[2] = { itemID = 49118 }; --Bubbling Balebrew Charm
+	[3] = { itemID = 49116 }; --Bitter Brightbrew Charm
+	[4] = { itemID = 49080 }; --Brawler's Souvenir
+	[5] = { itemID = 49074 }; --Coren's Chromium Coaster
+	[6] = { itemID = 49076 }; --Mithril Pocketwatch
+	[7] = { itemID = 49120 }; --Direbrew's Shanker 2.0
+	[8] = { itemID = 48663 }; --Tankard O' Terror
 	[16] = { itemID = 38281, desc = "=ds=#m2#" }; --Direbrew's Dire Brew
 	[17] = { itemID = 34140, desc = "=q1=#m4#: =ds=#s15#" }; --Dark Iron Tankard
 	[19] = { itemID = 37828, desc = "=ds=#e12#" }; --Great Brewfest Kodo
@@ -494,46 +494,46 @@ AtlasLoot_Data["Winterviel"] = {
 --------------------
 local HorsemanCLASSIC = {
 	Name = AL["Headless Horseman"];
-	[1] = { itemID = 2033808, desc = "=ds=#s1#, #a4#" }; --The Horseman's Helm
-	[2] = { itemID = 2034075, desc = "=ds=#s13#" }; --Ring of Ghoulish Delight
-	[3] = { itemID = 2034073, desc = "=ds=#s13#" }; --The Horseman's Signet Ring
-	[4] = { itemID = 2034074, desc = "=ds=#s13#" }; --Witching Band
-	[5] = { itemID = 2038175, desc = "=ds=#h3#, #w10#" }; --The Horseman's Blade
+	[1] = { itemID = 2033808 }; --The Horseman's Helm
+	[2] = { itemID = 2034075 }; --Ring of Ghoulish Delight
+	[3] = { itemID = 2034073 }; --The Horseman's Signet Ring
+	[4] = { itemID = 2034074 }; --Witching Band
+	[5] = { itemID = 2038175 }; --The Horseman's Blade
 	[16] = { itemID = 34068, desc = "=ds=#m20#", droprate = "100%" }; --Weighted Jack-o'-Lantern
 	[17] = { itemID = 33226, desc = "=ds=#m20#" }; --Tricky Treat
 	[18] = { itemID = 37012, desc = "=ds=#e12#" }; --The Horseman's Reins
 	[19] = { itemID = 37011, desc = "=ds=#e12#" }; --Magic Broom
-	[20] = { itemID = 33292, desc = "=ds=#s1#, #a1#" }; --Hallowed Helm
+	[20] = { itemID = 33292 }; --Hallowed Helm
 	[21] = { itemID = 33154, desc = "=ds=#e13#" }; --Sinister Squashling
 };
 
 local HorsemanTBC = {
 	Name = AL["Headless Horseman"];
-	[1] = { itemID = 33808, desc = "=ds=#s1#, #a4#" }; --The Horseman's Helm
-	[2] = { itemID = 34075, desc = "=ds=#s13#" }; --Ring of Ghoulish Delight
-	[3] = { itemID = 34073, desc = "=ds=#s13#" }; --The Horseman's Signet Ring
-	[4] = { itemID = 34074, desc = "=ds=#s13#" }; --Witching Band
-	[5] = { itemID = 38175, desc = "=ds=#h3#, #w10#" }; --The Horseman's Blade
+	[1] = { itemID = 33808 }; --The Horseman's Helm
+	[2] = { itemID = 34075 }; --Ring of Ghoulish Delight
+	[3] = { itemID = 34073 }; --The Horseman's Signet Ring
+	[4] = { itemID = 34074 }; --Witching Band
+	[5] = { itemID = 38175 }; --The Horseman's Blade
 	[16] = { itemID = 34068, desc = "=ds=#m20#", droprate = "100%" }; --Weighted Jack-o'-Lantern
 	[17] = { itemID = 33226, desc = "=ds=#m20#" }; --Tricky Treat
 	[18] = { itemID = 37012, desc = "=ds=#e12#" }; --The Horseman's Reins
 	[19] = { itemID = 37011, desc = "=ds=#e12#" }; --Magic Broom
-	[20] = { itemID = 33292, desc = "=ds=#s1#, #a1#" }; --Hallowed Helm
+	[20] = { itemID = 33292 }; --Hallowed Helm
 	[21] = { itemID = 33154, desc = "=ds=#e13#" }; --Sinister Squashling
 };
 
 local HorsemanWRATH = {
 	Name = AL["Headless Horseman"];
-	[1] = { itemID = 49126, desc = "=ds=#s1#, #a4#" }; --The Horseman's Horrific Helm
-	[2] = { itemID = 49121, desc = "=ds=#s13#" }; --Ring of Ghoulish Glee
-	[3] = { itemID = 49123, desc = "=ds=#s13#" }; --The Horseman's Seal
-	[4] = { itemID = 49124, desc = "=ds=#s13#" }; --Wicked Witch's Band
-	[5] = { itemID = 49128, desc = "=ds=#h3#, #w10#" }; --The Horseman's Baleful Blade
+	[1] = { itemID = 49126 }; --The Horseman's Horrific Helm
+	[2] = { itemID = 49121 }; --Ring of Ghoulish Glee
+	[3] = { itemID = 49123 }; --The Horseman's Seal
+	[4] = { itemID = 49124 }; --Wicked Witch's Band
+	[5] = { itemID = 49128 }; --The Horseman's Baleful Blade
 	[16] = { itemID = 34068, desc = "=ds=#m20#", droprate = "100%" }; --Weighted Jack-o'-Lantern
 	[17] = { itemID = 33226, desc = "=ds=#m20#" }; --Tricky Treat
 	[18] = { itemID = 37012, desc = "=ds=#e12#" }; --The Horseman's Reins
 	[19] = { itemID = 37011, desc = "=ds=#e12#" }; --Magic Broom
-	[20] = { itemID = 33292, desc = "=ds=#s1#, #a1#" }; --Hallowed Helm
+	[20] = { itemID = 33292 }; --Hallowed Helm
 	[21] = { itemID = 33154, desc = "=ds=#e13#" }; --Sinister Squashling
 }
 
@@ -552,7 +552,7 @@ local HallowsEnd = {
 	[14] = { itemID = 37582, desc = "=ds=#m20#" }; --Pyroblast Cinnamon Ball
 	[15] = { itemID = 37584, desc = "=ds=#m20#" }; --Soothing Spearmint Candy
 	[16] = { icon = "INV_Misc_Bag_11", name = "=q6=#x18#" };
-	[17] = { itemID = 33292, desc = "=ds=#s1#, #a1#" }; --Hallowed Helm
+	[17] = { itemID = 33292 }; --Hallowed Helm
 	[18] = { itemID = 33154, desc = "=ds=#e13#" }; --Sinister Squashling
 	[19] = { itemID = 20410, desc = "=ds=#m20#" }; --Hallowed Wand - Bat
 	[20] = { itemID = 20409, desc = "=ds=#m20#" }; --Hallowed Wand - Ghost
@@ -570,26 +570,26 @@ local HallowsEnd = {
 local HallowsEndMasks = {
 	Name = "Masks";
 	[1] = { icon = "INV_Misc_Bag_11", name = "=q6=#x18#" };
-	[2] = { itemID = 34003, desc = "=ds=#s1#" }; --Flimsy Male Draenei Mask
-	[3] = { itemID = 20561, desc = "=ds=#s1#" }; --Flimsy Male Dwarf Mask
-	[4] = { itemID = 20391, desc = "=ds=#s1#" }; --Flimsy Male Gnome Mask
-	[5] = { itemID = 20566, desc = "=ds=#s1#" }; --Flimsy Male Human Mask
-	[6] = { itemID = 20564, desc = "=ds=#s1#" }; --Flimsy Male Nightelf Mask
-	[7] = { itemID = 34002, desc = "=ds=#s1#" }; --Flimsy Male Blood Elf Mask
-	[8] = { itemID = 20570, desc = "=ds=#s1#" }; --Flimsy Male Orc Mask
-	[9] = { itemID = 20572, desc = "=ds=#s1#" }; --Flimsy Male Tauren Mask
-	[10] = { itemID = 20568, desc = "=ds=#s1#" }; --Flimsy Male Troll Mask
-	[11] = { itemID = 20573, desc = "=ds=#s1#" }; --Flimsy Male Undead Mask
-	[17] = { itemID = 34001, desc = "=ds=#s1#" }; --Flimsy Female Draenei Mask
-	[18] = { itemID = 20562, desc = "=ds=#s1#" }; --Flimsy Female Dwarf Mask
-	[19] = { itemID = 20392, desc = "=ds=#s1#" }; --Flimsy Female Gnome Mask
-	[20] = { itemID = 20565, desc = "=ds=#s1#" }; --Flimsy Female Human Mask
-	[21] = { itemID = 20563, desc = "=ds=#s1#" }; --Flimsy Female Nightelf Mask
-	[22] = { itemID = 34000, desc = "=ds=#s1#" }; --Flimsy Female Blood Elf Mask
-	[23] = { itemID = 20569, desc = "=ds=#s1#" }; --Flimsy Female Orc Mask
-	[24] = { itemID = 20571, desc = "=ds=#s1#" }; --Flimsy Female Tauren Mask
-	[25] = { itemID = 20567, desc = "=ds=#s1#" }; --Flimsy Female Troll Mask
-	[26] = { itemID = 20574, desc = "=ds=#s1#" }; --Flimsy Female Undead Mask
+	[2] = { itemID = 34003 }; --Flimsy Male Draenei Mask
+	[3] = { itemID = 20561 }; --Flimsy Male Dwarf Mask
+	[4] = { itemID = 20391 }; --Flimsy Male Gnome Mask
+	[5] = { itemID = 20566 }; --Flimsy Male Human Mask
+	[6] = { itemID = 20564 }; --Flimsy Male Nightelf Mask
+	[7] = { itemID = 34002 }; --Flimsy Male Blood Elf Mask
+	[8] = { itemID = 20570 }; --Flimsy Male Orc Mask
+	[9] = { itemID = 20572 }; --Flimsy Male Tauren Mask
+	[10] = { itemID = 20568 }; --Flimsy Male Troll Mask
+	[11] = { itemID = 20573 }; --Flimsy Male Undead Mask
+	[17] = { itemID = 34001 }; --Flimsy Female Draenei Mask
+	[18] = { itemID = 20562 }; --Flimsy Female Dwarf Mask
+	[19] = { itemID = 20392 }; --Flimsy Female Gnome Mask
+	[20] = { itemID = 20565 }; --Flimsy Female Human Mask
+	[21] = { itemID = 20563 }; --Flimsy Female Nightelf Mask
+	[22] = { itemID = 34000 }; --Flimsy Female Blood Elf Mask
+	[23] = { itemID = 20569 }; --Flimsy Female Orc Mask
+	[24] = { itemID = 20571 }; --Flimsy Female Tauren Mask
+	[25] = { itemID = 20567 }; --Flimsy Female Troll Mask
+	[26] = { itemID = 20574 }; --Flimsy Female Undead Mask
 };
 
 AtlasLoot_Data["HalloweenCLASSIC"] = {
@@ -663,10 +663,10 @@ AtlasLoot_Data["Valentineday"] = {
 	{
 		Name = "Page 2";
 		[1] = { icon = "INV_Box_02", name = "=q6=" .. AL["Lovely Dress Box"] };
-		[2] = { itemID = 22279, desc = "=ds=#s5#" }; --Lovely Black Dress
-		[3] = { itemID = 22276, desc = "=ds=#s5#" }; --Lovely Red Dress
-		[4] = { itemID = 22278, desc = "=ds=#s5#" }; --Lovely Blue Dress
-		[5] = { itemID = 22280, desc = "=ds=#s5#" }; --Lovely Purple Dress
+		[2] = { itemID = 22279 }; --Lovely Black Dress
+		[3] = { itemID = 22276 }; --Lovely Red Dress
+		[4] = { itemID = 22278 }; --Lovely Blue Dress
+		[5] = { itemID = 22280 }; --Lovely Purple Dress
 		[7] = { icon = "INV_Box_01", name = "=q6=" .. AL["Dinner Suit Box"] };
 		[8] = { itemID = 22277, desc = "=q1=#m4#: =ds=#s5#" }; --Red Dinner Suit
 		[9] = { itemID = 22281, desc = "=q1=#m4#: =ds=#s5#" }; --Blue Dinner Suit
@@ -688,13 +688,13 @@ AtlasLoot_Data["Valentineday"] = {
 	};
 	{
 		Name = "Page 3";
-		[1] = { itemID = 51804, desc = "=ds=#s2#" }; --Winking Eye of Love
-		[2] = { itemID = 51805, desc = "=ds=#s2#" }; --Heartbreak Charm
-		[3] = { itemID = 51806, desc = "=ds=#s2#" }; --Shard of Pirouetting Happiness
-		[4] = { itemID = 51807, desc = "=ds=#s2#" }; --Sweet Perfume Broach
-		[5] = { itemID = 51808, desc = "=ds=#s2#" }; --Choker of the Pure Heart
-		[7] = { itemID = 49715, desc = "=ds=#s1#" }; --Forever-Lovely Rose
-		[8] = { itemID = 50741, desc = "=ds=#s1#" }; --Vile Fumigator's Mask
+		[1] = { itemID = 51804 }; --Winking Eye of Love
+		[2] = { itemID = 51805 }; --Heartbreak Charm
+		[3] = { itemID = 51806 }; --Shard of Pirouetting Happiness
+		[4] = { itemID = 51807 }; --Sweet Perfume Broach
+		[5] = { itemID = 51808 }; --Choker of the Pure Heart
+		[7] = { itemID = 49715 }; --Forever-Lovely Rose
+		[8] = { itemID = 50741 }; --Vile Fumigator's Mask
 		[16] = { itemID = 50446, desc = "=ds=#e13#" }; --Toxic Wasteling
 		[17] = { itemID = 50471, desc = "=ds=#m20#" }; --The Heartbreaker
 		[19] = { itemID = 50250, desc = "=ds=#e12#" }; --Big Love Rocket
@@ -710,12 +710,12 @@ AtlasLoot_Data["LunarFestival"] = {
 	{
 		Name = AL["Miscellaneous"];
 		[1] = { itemID = 21540, desc = "=q1=#m4#: =ds=#m20#" }; --Elune's Lantern
-		[3] = { itemID = 21157, desc = "=ds=#s5#" }; --Festive Green Dress
-		[4] = { itemID = 21538, desc = "=ds=#s5#" }; --Festive Pink Dress
-		[5] = { itemID = 21539, desc = "=ds=#s5#" }; --Festive Purple Dress
-		[7] = { itemID = 21541, desc = "=ds=#s5#" }; --Festive Black Pant Suit
-		[8] = { itemID = 21544, desc = "=ds=#s5#" }; --Festive Blue Pant Suit
-		[9] = { itemID = 21543, desc = "=ds=#s5#" }; --Festive Teal Pant Suit
+		[3] = { itemID = 21157 }; --Festive Green Dress
+		[4] = { itemID = 21538 }; --Festive Pink Dress
+		[5] = { itemID = 21539 }; --Festive Purple Dress
+		[7] = { itemID = 21541 }; --Festive Black Pant Suit
+		[8] = { itemID = 21544 }; --Festive Blue Pant Suit
+		[9] = { itemID = 21543 }; --Festive Teal Pant Suit
 		[11] = { itemID = 21537, desc = "=ds=#e3#" }; --Festival Dumplings
 		[13] = { itemID = 21713, desc = "=ds=#m20#" }; --Elune's Candle
 		[15] = { itemID = 21100, desc = "=ds=#m17#" }; --Coin of Ancestry
@@ -765,35 +765,35 @@ AtlasLoot_Data["LunarFestival"] = {
 
 local lordAhuneTBC = {
 	Name = AL["Lord Ahune"];
-	[1] = { itemID = 35507, desc = "=ds=#s2#" }; --Amulet of Bitter Hatred
-	[2] = { itemID = 35509, desc = "=ds=#s2#" }; --Amulet of Glacial Tranquility
-	[3] = { itemID = 35508, desc = "=ds=#s2#" }; --Choker of the Arctic Flow
-	[4] = { itemID = 35511, desc = "=ds=#s2#" }; --Hailstone Pendant
+	[1] = { itemID = 35507 }; --Amulet of Bitter Hatred
+	[2] = { itemID = 35509 }; --Amulet of Glacial Tranquility
+	[3] = { itemID = 35508 }; --Choker of the Arctic Flow
+	[4] = { itemID = 35511 }; --Hailstone Pendant
 	[6] = { itemID = 35498, desc = "=ds=#p4# (350)" }; --Formula: Enchant Weapon - Deathfrost
 	[7] = { itemID = 34955, desc = "=ds=#e13#" }; --Scorched Stone
 	[9] = { itemID = 35723, desc = "=ds=#m2#" }; --Shards of Ahune
 	[10] = { itemID = 35279, desc = "=q1=#m4#: =ds=#s7#" }; --Tabard of Summer Skies
 	[11] = { itemID = 35280, desc = "=q1=#m4#: =ds=#s7#" }; --Tabard of Summer Flames
-	[16] = { itemID = 35497, desc = "=ds=#s4#" }; --Cloak of the Frigid Winds
-	[17] = { itemID = 35496, desc = "=ds=#s4#" }; --Icebound Cloak
-	[18] = { itemID = 35494, desc = "=ds=#s4#" }; --Shroud of Winter's Chill
-	[19] = { itemID = 35495, desc = "=ds=#s4#" }; --The Frost Lord's War Cloak
-	[20] = { itemID = 35514, desc = "=ds=#w9#" }; --Frostscythe of Lord Ahune
+	[16] = { itemID = 35497 }; --Cloak of the Frigid Winds
+	[17] = { itemID = 35496 }; --Icebound Cloak
+	[18] = { itemID = 35494 }; --Shroud of Winter's Chill
+	[19] = { itemID = 35495 }; --The Frost Lord's War Cloak
+	[20] = { itemID = 35514 }; --Frostscythe of Lord Ahune
 };
 
 local lordAhuneWRATH = {
 	Name = AL["Lord Ahune"];
-	[1] = { itemID = 54805, desc = "=ds=#s4#" }; --Cloak of the Frigid Winds
-	[2] = { itemID = 54801, desc = "=ds=#s4#" }; --Icebound Cloak
-	[3] = { itemID = 54804, desc = "=ds=#s4#" }; --Shroud of Winter's Chill
-	[4] = { itemID = 54803, desc = "=ds=#s4#" }; --The Frost Lord's Battle Shroud
-	[5] = { itemID = 54802, desc = "=ds=#s4#" }; --The Frost Lord's War Cloak
+	[1] = { itemID = 54805 }; --Cloak of the Frigid Winds
+	[2] = { itemID = 54801 }; --Icebound Cloak
+	[3] = { itemID = 54804 }; --Shroud of Winter's Chill
+	[4] = { itemID = 54803 }; --The Frost Lord's Battle Shroud
+	[5] = { itemID = 54802 }; --The Frost Lord's War Cloak
 	[7] = { itemID = 35498, desc = "=ds=#p4# (350)" }; --Formula: Enchant Weapon - Deathfrost
 	[9] = { itemID = 35723, desc = "=ds=#m2#" }; --Shards of Ahune
 	[10] = { itemID = 35279, desc = "=q1=#m4#: =ds=#s7#" }; --Tabard of Summer Skies
 	[11] = { itemID = 35280, desc = "=q1=#m4#: =ds=#s7#" }; --Tabard of Summer Flames
 	[16] = { itemID = 54536, desc = "=ds=" }; --Satchel of Chilled Goods
-	[17] = { itemID = 54806, desc = "=ds=#w9#" }; --Frostscythe of Lord Ahune
+	[17] = { itemID = 54806 }; --Frostscythe of Lord Ahune
 	[18] = { itemID = 53641, desc = "=ds=#e13#" }; --Ice Chip
 };
 
@@ -811,7 +811,7 @@ local midSummerMain = {
 	[12] = { itemID = 23215, desc = "5 #fireflower#" }; --Bag of Smorc Ingredients
 	[13] = { itemID = 34599, desc = "5 #fireflower#" }; --Juggling Torch
 	[15] = { itemID = 23247, desc = "=ds=#m17#" }; --Burning Blossom
-	[16] = { itemID = 23323, desc = "=ds=#s1#, #a1#, #m4#" }; --Crown of the Fire Festival
+	[16] = { itemID = 23323, desc = "=ds=#s1#, #m4#" }; --Crown of the Fire Festival
 	[17] = { itemID = 23324, desc = "=ds=#s3#, 100 #fireflower#" }; --Mantle of the Fire Festival
 	[18] = { itemID = 34685, desc = "=ds=#s5#, 100 #fireflower#" }; --Vestment of Summer
 	[19] = { itemID = 34683, desc = "=ds=#s11#, 200 #fireflower#" }; --Sandals of Summer
@@ -844,12 +844,12 @@ AtlasLoot_Data["Noblegarden"] = {
 		Name = AL["Noblegarden"];
 		[2] = { itemID = 44793, desc = "=ds=#e10#", price = "100 #noblegarden#" }; --Tome of Polymorph: Rabbit
 		[3] = { itemID = 44794, price = "100 #noblegarden#" }; --Spring Rabbit's Foot
-		[4] = { itemID = 44803, desc = "=ds=#s1#", price = "50 #noblegarden#" }; --Spring Circlet
-		[5] = { itemID = 19028, desc = "=ds=#s5#", price = "50 #noblegarden#" }; --Elegant Dress
-		[6] = { itemID = 44800, desc = "=ds=#s5#", price = "50 #noblegarden#" }; --Spring Robes
-		[7] = { itemID = 45073, desc = "=ds=#h1#", price = "50 #noblegarden#" }; --Spring Flowers
-		[8] = { itemID = 6833, desc = "=ds=#s6#", price = "25 #noblegarden#" }; --White Tuxedo Shirt
-		[9] = { itemID = 6835, desc = "=ds=#s11#", price = "25 #noblegarden#" }; --Black Tuxedo Pants
+		[4] = { itemID = 44803, price = "50 #noblegarden#" }; --Spring Circlet
+		[5] = { itemID = 19028, price = "50 #noblegarden#" }; --Elegant Dress
+		[6] = { itemID = 44800, price = "50 #noblegarden#" }; --Spring Robes
+		[7] = { itemID = 45073, price = "50 #noblegarden#" }; --Spring Flowers
+		[8] = { itemID = 6833, price = "25 #noblegarden#" }; --White Tuxedo Shirt
+		[9] = { itemID = 6835, price = "25 #noblegarden#" }; --Black Tuxedo Pants
 		[10] = { itemID = 44792, price = "10 #noblegarden#" }; --Blossoming Branch
 		[11] = { itemID = 44818, price = "5 #noblegarden#" }; --Noblegarden Egg
 		[13] = { itemID = 45067, desc = "=q1=#m4#: =ds=#s15#" }; --Egg Basket
@@ -941,10 +941,10 @@ AtlasLoot_Data["Darkmoon"] = {
 		[7] = { itemID = 19293, price = "50 #darkmoon#" }; --Last Year's Mutton
 		[8] = { itemID = 22729, desc = "=ds=#p5# (275)", "40 #darkmoon#" }; --Schematic: Steam Tonk Controller
 		[9] = { itemID = 19292, price = "10 #darkmoon#" }; --Last Month's Mutton
-		[10] = { itemID = 19295, desc = "=ds=#s15#", "5 #darkmoon#" }; --Darkmoon Flower
+		[10] = { itemID = 19295, "5 #darkmoon#" }; --Darkmoon Flower
 		[12] = { itemID = 19182, desc = "=ds=#m17#" }; --Darkmoon Faire Prize Ticket
-		[16] = { itemID = 19302, desc = "=ds=#s13#" }; --Darkmoon Ring
-		[17] = { itemID = 19303, desc = "=ds=#s2#" }; --Darkmoon Necklace
+		[16] = { itemID = 19302 }; --Darkmoon Ring
+		[17] = { itemID = 19303 }; --Darkmoon Necklace
 		[19] = { itemID = 11026, desc = "=ds=#e13#" }; --Tree Frog Box
 		[20] = { itemID = 11027, desc = "=ds=#e13#" }; --Wood Frog Box
 		[21] = { itemID = 19450, desc = "=q1=#m4#: =ds=#e13#" }; --A Jubling's Tiny Home
@@ -952,19 +952,19 @@ AtlasLoot_Data["Darkmoon"] = {
 	{
 		Name = AL["Low Level Decks"];
 		[1] = { itemID = 37163, desc = "=ds=#m2#" }; --Rogues Deck
-		[2] = { itemID = 38318, desc = "=q1=#m4#: =ds=#s5#, #a1# =q2=#m16#" }; --Darkmoon Robe
-		[3] = { itemID = 39509, desc = "=q1=#m4#: =ds=#s5#, #a2# =q2=#m16#" }; --Darkmoon Vest
-		[4] = { itemID = 39507, desc = "=q1=#m4#: =ds=#s5#, #a3# =q2=#m16#" }; --Darkmoon Chain Shirt
+		[2] = { itemID = 38318, desc = "=q1=#m4#: =ds=#s5# =q2=#m16#" }; --Darkmoon Robe
+		[3] = { itemID = 39509, desc = "=q1=#m4#: =ds=#s5# =q2=#m16#" }; --Darkmoon Vest
+		[4] = { itemID = 39507, desc = "=q1=#m4#: =ds=#s5# =q2=#m16#" }; --Darkmoon Chain Shirt
 		[6] = { itemID = 37164, desc = "=ds=#m2#" }; --Swords Deck
-		[7] = { itemID = 39894, desc = "=q1=#m4#: =ds=#s3#, #a1# =q2=#m16#" }; --Darkcloth Shoulders
-		[8] = { itemID = 39895, desc = "=q1=#m4#: =ds=#s3#, #a2# =q2=#m16#" }; --Cloaked Shoulderpads
-		[9] = { itemID = 39897, desc = "=q1=#m4#: =ds=#s3#, #a3# =q2=#m16#" }; --Azure Shoulderguards
+		[7] = { itemID = 39894, desc = "=q1=#m4#: =ds=#s3# =q2=#m16#" }; --Darkcloth Shoulders
+		[8] = { itemID = 39895, desc = "=q1=#m4#: =ds=#s3# =q2=#m16#" }; --Cloaked Shoulderpads
+		[9] = { itemID = 39897, desc = "=q1=#m4#: =ds=#s3# =q2=#m16#" }; --Azure Shoulderguards
 		[16] = { itemID = 44148, desc = "=ds=#m2#" }; --Mages Deck
 		[17] = { itemID = 44215, desc = "=q1=#m4#: =ds=#s2#" }; --Darkmoon Necklace
 		[18] = { itemID = 44213, desc = "=q1=#m4#: =ds=#s2#" }; --Darkmoon Pendant
 		[21] = { itemID = 44158, desc = "=ds=#m2#" }; --Demons Deck
-		[22] = { itemID = 44217, desc = "=q1=#m4#: =ds=#h1#, #w4#" }; --Darkmoon Dirk
-		[23] = { itemID = 44218, desc = "=q1=#m4#: =ds=#h2#, #w1#" }; --Darkmoon Executioner
+		[22] = { itemID = 44217, desc = "=q1=#m4#: =ds=#h1#" }; --Darkmoon Dirk
+		[23] = { itemID = 44218, desc = "=q1=#m4#: =ds=#h2#" }; --Darkmoon Executioner
 		[24] = { itemID = 44219, desc = "=q1=#m4#: =ds=#w9#" }; --Darkmoon Magestaff
 	};
 	{
@@ -1013,21 +1013,21 @@ AtlasLoot_Data["ElementalInvasion"] = {
 		[1] = { icon = "INV_Box_01", name = "=q6=#n108#", "=q1=#j19#, #z20#" };
 		[2] = { itemID = 18671, droprate = "12.18%" }; --Baron Charr's Sceptre
 		[3] = { itemID = 19268, desc = "=ds=#e16#", droprate = "10.14%" }; --Ace of Elementals
-		[4] = { itemID = 18672, desc = "=ds=#s15#", droprate = "53.31%" }; --Elemental Ember
+		[4] = { itemID = 18672, droprate = "53.31%" }; --Elemental Ember
 		[6] = { icon = "INV_Box_01", name = "=q6=#n109#", "=q1=#j20#, #z21#" };
 		[7] = { itemID = 18678, droprate = "12.33%" }; --Tempestria's Frozen Necklace
 		[8] = { itemID = 19268, desc = "=ds=#e16#", droprate = "5.24%" }; --Ace of Elementals
 		[9] = { itemID = 21548, desc = "=ds=#p7# (300)", droprate = "25.00%" }; --Pattern: Stormshroud Gloves
-		[10] = { itemID = 18679, desc = "=ds=#s13#", droprate = "51.01%" }; --Frigid Ring
+		[10] = { itemID = 18679, droprate = "51.01%" }; --Frigid Ring
 		[16] = { icon = "INV_Box_01", name = "=q6=#n110#", "=q1=#j22#, #z22#" };
 		[17] = { itemID = 18673, desc = "=ds=#w8#", droprate = "14.56%" }; --Avalanchion's Stony Hide
 		[18] = { itemID = 19268, desc = "=ds=#e16#", droprate = "5.89%" }; --Ace of Elementals
-		[19] = { itemID = 18674, desc = "=ds=#s13#", droprate = "41.50%" }; --Hardened Stone Band
+		[19] = { itemID = 18674, droprate = "41.50%" }; --Hardened Stone Band
 		[21] = { icon = "INV_Box_01", name = "=q6=#n111#", "=q1=#j21#, #z23#" };
 		[22] = { itemID = 18676, droprate = "16.76%" }; --Sash of the Windreaver
 		[23] = { itemID = 19268, desc = "=ds=#e16#", droprate = "9.76%" }; --Ace of Elementals
 		[24] = { itemID = 21548, desc = "=ds=#p7# (300)", droprate = "36.28%" }; --Pattern: Stormshroud Gloves
-		[25] = { itemID = 18677, desc = "=ds=#s4#", droprate = "52.47%" }; --Zephyr Cloak
+		[25] = { itemID = 18677, droprate = "52.47%" }; --Zephyr Cloak
 	};
 };
 
@@ -1039,10 +1039,10 @@ AtlasLoot_Data["GurubashiArena"] = {
 	Name = AL["Gurubashi Arena Booty Run"];
 	{
 		Name = AL["Gurubashi Arena Booty Run"];
-		[1] = { itemID = 18709, desc = "=ds=#s8#, #a1#", droprate = "5.0%" }; --Arena Wristguards
-		[2] = { itemID = 18710, desc = "=ds=#s8#, #a2#", droprate = "6.4%" }; --Arena Bracers
-		[3] = { itemID = 18711, desc = "=ds=#s8#, #a3#", droprate = "6.0%" }; --Arena Bands
-		[4] = { itemID = 18712, desc = "=ds=#s8#, #a4#", droprate = "6.8%" }; --Arena Vambraces
+		[1] = { itemID = 18709, droprate = "5.0%" }; --Arena Wristguards
+		[2] = { itemID = 18710, droprate = "6.4%" }; --Arena Bracers
+		[3] = { itemID = 18711, droprate = "6.0%" }; --Arena Bands
+		[4] = { itemID = 18712, droprate = "6.8%" }; --Arena Vambraces
 		[16] = { itemID = 18706, desc = "=ds=#s14#, =q1=#m2#", droprate = "100%" }; --Arena Master
 		[17] = { itemID = 19024, desc = "=q1=#m4#: =ds=#s14#" }; --Arena Grand Master
 	};
@@ -1058,12 +1058,12 @@ AtlasLoot_Data["FishingExtravaganza"] = {
 		Name = AL["Stranglethorn Fishing Extravaganza"];
 		[1] = { icon = "INV_Box_01", name = "=q6=#j24#", "=q1=#j23#" };
 		[2] = { itemID = 19970, desc = "=ds=#e20#" }; --Arcanite Fishing Pole
-		[3] = { itemID = 19979, desc = "=ds=#s14#" }; --Hook of the Master Angler
+		[3] = { itemID = 19979 }; --Hook of the Master Angler
 		[5] = { icon = "INV_Box_01", name = "=q6=#j26#" };
 		[6] = { itemID = 19805, desc = "=ds=#e21#" }; --Keefer's Angelfish
 		[7] = { itemID = 19803, desc = "=ds=#e21#" }; --Brownell's Blue Striped Racer
 		[8] = { itemID = 19806, desc = "=ds=#e21#" }; --Dezian Queenfish
-		[9] = { itemID = 19808, desc = "=ds=#h1#, #w6#" }; --Rockhide Strongfish
+		[9] = { itemID = 19808 }; --Rockhide Strongfish
 		[20] = { icon = "INV_Box_01", name = "=q6=#j25#" };
 		[21] = { itemID = 19972 }; --Lucky Fishing Hat
 		[22] = { itemID = 19969 }; --Nat Pagle's Extreme Anglin' Boots
@@ -1085,71 +1085,71 @@ AtlasLoot_Data["AbyssalCouncil"] = {
 		Name = AL["Templars"];
 		[1] = { icon = "INV_Box_01", name = "=q6=#n96#", "=q1=#j19#" };
 		[2] = { itemID = 20657, droprate = "2.31%" }; --Crystal Tipped Stiletto
-		[3] = { itemID = 20655, desc = "=ds=#s9#, #a1#, =q2=#m16#", droprate = "13.03%" }; --Abyssal Cloth Handwraps
-		[4] = { itemID = 20656, desc = "=ds=#s12#, #a3# =q2=#m16#", droprate = "12.89%" }; --Abyssal Mail Sabatons
+		[3] = { itemID = 20655, desc = "=ds=#s9#, =q2=#m16#", droprate = "13.03%" }; --Abyssal Cloth Handwraps
+		[4] = { itemID = 20656, desc = "=ds=#s12# =q2=#m16#", droprate = "12.89%" }; --Abyssal Mail Sabatons
 		[5] = { itemID = 20513, desc = "=ds=#m3#", droprate = "100%" }; --Abyssal Crest
 		[7] = { icon = "INV_Box_01", name = "=q6=#n97#", "=q1=#j20#" };
 		[8] = { itemID = 20654, droprate = "2.38%" }; --Amethyst War Staff
-		[9] = { itemID = 20652, desc = "=ds=#s12#, #a1# =q2=#m16#", droprate = "12.94%" }; --Abyssal Cloth Slippers
-		[10] = { itemID = 20653, desc = "=ds=#s9#, #a4# =q2=#m16#", droprate = "13.61%" }; --Abyssal Plate Gauntlets
+		[9] = { itemID = 20652, desc = "=ds=#s12# =q2=#m16#", droprate = "12.94%" }; --Abyssal Cloth Slippers
+		[10] = { itemID = 20653, desc = "=ds=#s9# =q2=#m16#", droprate = "13.61%" }; --Abyssal Plate Gauntlets
 		[11] = { itemID = 20513, desc = "=ds=#m3#", droprate = "100%" }; --Abyssal Crest
 		[16] = { icon = "INV_Box_01", name = "=q6=#n98#", "=q1=#j21#" };
 		[17] = { itemID = 20660, desc = "=ds=#w7#", droprate = "2.22%" }; --Stonecutting Glaive
-		[18] = { itemID = 20658, desc = "=ds=#s12#, #a2# =q2=#m16#", droprate = "13.16%" }; --Abyssal Leather Boots
-		[19] = { itemID = 20659, desc = "=ds=#s9#, #a3# =q2=#m16#", droprate = "12.64%" }; --Abyssal Mail Handguards
+		[18] = { itemID = 20658, desc = "=ds=#s12# =q2=#m16#", droprate = "13.16%" }; --Abyssal Leather Boots
+		[19] = { itemID = 20659, desc = "=ds=#s9# =q2=#m16#", droprate = "12.64%" }; --Abyssal Mail Handguards
 		[20] = { itemID = 20513, desc = "=ds=#m3#", droprate = "100%" }; --Abyssal Crest
 		[22] = { icon = "INV_Box_01", name = "=q6=#n99#", "=q1=#j22#" };
-		[23] = { itemID = 20663, desc = "=ds=#w2#", droprate = "2.55%" }; --Deep Strike Bow
-		[24] = { itemID = 20661, desc = "=ds=#s9#, #a2# =q2=#m16#", droprate = "13.16%" }; --Abyssal Leather Gloves
-		[25] = { itemID = 20662, desc = "=ds=#s12#, #a4# =q2=#m16#", droprate = "12.93%" }; --Abyssal Plate Greaves
+		[23] = { itemID = 20663, droprate = "2.55%" }; --Deep Strike Bow
+		[24] = { itemID = 20661, desc = "=ds=#s9# =q2=#m16#", droprate = "13.16%" }; --Abyssal Leather Gloves
+		[25] = { itemID = 20662, desc = "=ds=#s12# =q2=#m16#", droprate = "12.93%" }; --Abyssal Plate Greaves
 		[26] = { itemID = 20513, desc = "=ds=#m3#", droprate = "100%" }; --Abyssal Crest
 	};
 	{
 		Name = AL["Dukes"];
 		[1] = { icon = "INV_Box_01", name = "=q6=#n100#", "=q1=#j19#" };
-		[2] = { itemID = 20665, desc = "=ds=#s11#, #a2# =q2=#m16#", droprate = "22.50%" }; --Abyssal Leather Leggings
-		[3] = { itemID = 20666, desc = "=ds=#h3#, #w6#", droprate = "30.47%" }; --Hardened Steel Warhammer
+		[2] = { itemID = 20665, desc = "=ds=#s11# =q2=#m16#", droprate = "22.50%" }; --Abyssal Leather Leggings
+		[3] = { itemID = 20666, droprate = "30.47%" }; --Hardened Steel Warhammer
 		[4] = { itemID = 20514, desc = "=ds=#m3#", droprate = "100%" }; --Abyssal Signet
-		[5] = { itemID = 20664, desc = "=ds=#s10#, #a1# =q2=#m16#", droprate = "27.08%" }; --Abyssal Cloth Sash
+		[5] = { itemID = 20664, desc = "=ds=#s10# =q2=#m16#", droprate = "27.08%" }; --Abyssal Cloth Sash
 		[6] = { itemID = 21989, desc = "=ds=#m3#", droprate = "100%" }; --Cinder of Cynders
 		[8] = { icon = "INV_Box_01", name = "=q6=#n101#", "=q1=#j20#" };
-		[9] = { itemID = 20668, desc = "=ds=#s11#, #a3# =q2=#m16#", droprate = "22.40%" }; --Abyssal Mail Legguards
+		[9] = { itemID = 20668, desc = "=ds=#s11# =q2=#m16#", droprate = "22.40%" }; --Abyssal Mail Legguards
 		[10] = { itemID = 20669, price = "29.62%" }; --Darkstone Claymore
 		[11] = { itemID = 20514, desc = "=ds=#m3#", droprate = "100%" }; --Abyssal Signet
-		[12] = { itemID = 20667, desc = "=ds=#s10#, #a2# =q2=#m16#", droprate = "29.04%" }; --Abyssal Leather Belt
+		[12] = { itemID = 20667, desc = "=ds=#s10# =q2=#m16#", droprate = "29.04%" }; --Abyssal Leather Belt
 		[16] = { icon = "INV_Box_01", name = "=q6=#n102#", "=q1=#j21#" };
-		[17] = { itemID = 20674, desc = "=ds=#s11#, #a1# =q2=#m16#", droprate = "21.83%" }; --Abyssal Cloth Pants
+		[17] = { itemID = 20674, desc = "=ds=#s11# =q2=#m16#", droprate = "21.83%" }; --Abyssal Cloth Pants
 		[18] = { itemID = 20675, price = "29.73%" }; --Soulrender
 		[19] = { itemID = 20514, desc = "=ds=#m3#", droprate = "100%" }; --Abyssal Signet
-		[20] = { itemID = 20673, desc = "=ds=#s10#, #a4# =q2=#m16#", droprate = "27.11%" }; --Abyssal Plate Girdle
+		[20] = { itemID = 20673, desc = "=ds=#s10# =q2=#m16#", droprate = "27.11%" }; --Abyssal Plate Girdle
 		[23] = { icon = "INV_Box_01", name = "=q6=#n103#", "=q1=#j22#" };
-		[24] = { itemID = 20671, desc = "=ds=#s11#, #a4# =q2=#m16#", droprate = "22.63%" }; --Abyssal Plate Legplates
-		[25] = { itemID = 20672, desc = "=ds=#w12#", droprate = "28.90%" }; --Sparkling Crystal Wand
+		[24] = { itemID = 20671, desc = "=ds=#s11# =q2=#m16#", droprate = "22.63%" }; --Abyssal Plate Legplates
+		[25] = { itemID = 20672, droprate = "28.90%" }; --Sparkling Crystal Wand
 		[26] = { itemID = 20514, desc = "=ds=#m3#", droprate = "100%" }; --Abyssal Signet
-		[27] = { itemID = 20670, desc = "=ds=#s10#, #a3# =q2=#m16#", droprate = "28.16%" }; --Abyssal Mail Clutch
+		[27] = { itemID = 20670, desc = "=ds=#s10# =q2=#m16#", droprate = "28.16%" }; --Abyssal Mail Clutch
 	};
 	{
 		Name = AL["High Council"];
 		[1] = { icon = "INV_Box_01", name = "=q6=#n104#", "=q1=#j19#" };
-		[2] = { itemID = 20682, desc = "=ds=#s13#", droprate = "22.83%" }; --Elemental Focus Band
+		[2] = { itemID = 20682, droprate = "22.83%" }; --Elemental Focus Band
 		[3] = { itemID = 20515, desc = "=ds=#m3#", droprate = "100%" }; --Abyssal Scepter
-		[4] = { itemID = 20681, desc = "=ds=#s8#, #a2# =q2=#m16#", droprate = "24.70%" }; --Abyssal Leather Bracers
-		[5] = { itemID = 20680, desc = "=ds=#s3#, #a3# =q2=#m16#", droprate = "24.21%" }; --Abyssal Mail Pauldrons
+		[4] = { itemID = 20681, desc = "=ds=#s8# =q2=#m16#", droprate = "24.70%" }; --Abyssal Leather Bracers
+		[5] = { itemID = 20680, desc = "=ds=#s3# =q2=#m16#", droprate = "24.21%" }; --Abyssal Mail Pauldrons
 		[7] = { icon = "INV_Box_01", name = "=q6=#n105#", "=q1=#j20#" };
 		[8] = { itemID = 20685, price = "24.48%" }; --Wavefront Necklace
 		[9] = { itemID = 20515, desc = "=ds=#m3#", droprate = "100%" }; --Abyssal Scepter
-		[10] = { itemID = 20684, desc = "=ds=#s8#, #a3# =q2=#m16#", droprate = "27.68%" }; --Abyssal Mail Armguards
-		[11] = { itemID = 20683, desc = "=ds=#s3#, #a4# =q2=#m16#", droprate = "21.52%" }; --Abyssal Plate Epaulets
+		[10] = { itemID = 20684, desc = "=ds=#s8# =q2=#m16#", droprate = "27.68%" }; --Abyssal Mail Armguards
+		[11] = { itemID = 20683, desc = "=ds=#s3# =q2=#m16#", droprate = "21.52%" }; --Abyssal Plate Epaulets
 		[16] = { icon = "INV_Box_01", name = "=q6=#n106#", "=q1=#j21#" };
-		[17] = { itemID = 20691, desc = "=ds=#s4#", droprate = "22.08%" }; --Windshear Cape
+		[17] = { itemID = 20691, droprate = "22.08%" }; --Windshear Cape
 		[18] = { itemID = 20515, desc = "=ds=#m3#", droprate = "100%" }; --Abyssal Scepter
-		[19] = { itemID = 20690, desc = "=ds=#s8#, #a1# =q2=#m16#", droprate = "23.60%" }; --Abyssal Cloth Wristbands
-		[20] = { itemID = 20689, desc = "=ds=#s3#, #a3# =q2=#m16#", droprate = "23.40%" }; --Abyssal Leather Shoulders
+		[19] = { itemID = 20690, desc = "=ds=#s8# =q2=#m16#", droprate = "23.60%" }; --Abyssal Cloth Wristbands
+		[20] = { itemID = 20689, desc = "=ds=#s3# =q2=#m16#", droprate = "23.40%" }; --Abyssal Leather Shoulders
 		[22] = { icon = "INV_Box_01", name = "=q6=#n107#", "=q1=#j22#" };
 		[23] = { itemID = 20688, desc = "=ds=#w8#", droprate = "20.64%" }; --Earthen Guard
 		[24] = { itemID = 20515, desc = "=ds=#m3#", droprate = "100%" }; --Abyssal Scepter
-		[25] = { itemID = 20686, desc = "=ds=#s3#, #a1# =q2=#m16#", droprate = "23.96%" }; --Abyssal Cloth Amice
-		[26] = { itemID = 20687, desc = "=ds=#s8#, #a4# =q2=#m16#", droprate = "23.66%" }; --Abyssal Plate Vambraces
+		[25] = { itemID = 20686, desc = "=ds=#s3# =q2=#m16#", droprate = "23.96%" }; --Abyssal Cloth Amice
+		[26] = { itemID = 20687, desc = "=ds=#s8# =q2=#m16#", droprate = "23.66%" }; --Abyssal Plate Vambraces
 	};
 };
 
@@ -1176,7 +1176,7 @@ AtlasLoot_Data["EthereumPrison"] = {
 	};
 	{
 		Name = AL["Fel Tinkerer Zortan"];
-		[1] = { itemID = 31573, desc = "=ds=#s12#, #a3# =q2=#m16#", droprate = "9.7%" }; --Mistshroud Boots
+		[1] = { itemID = 31573, desc = "=ds=#s12# =q2=#m16#", droprate = "9.7%" }; --Mistshroud Boots
 		[3] = { itemID = 31939, desc = "=ds=#s4# =q2=#m16#", droprate = "0.94%" }; --Dark Cloak
 		[4] = { itemID = 31938, desc = "=ds=#s4# =q2=#m16#", droprate = "1.0%" }; --Enigmatic Cloak
 		[5] = { itemID = 31936, desc = "=ds=#s4# =q2=#m16#", droprate = "0.94%" }; --Fiery Cloak
@@ -1191,7 +1191,7 @@ AtlasLoot_Data["EthereumPrison"] = {
 	};
 	{
 		Name = AL["Forgosh"];
-		[1] = { itemID = 31565, desc = "=ds=#s12#, #a2# =q2=#m16#", droprate = "8.5%" }; --Skystalker's Boots
+		[1] = { itemID = 31565, desc = "=ds=#s12# =q2=#m16#", droprate = "8.5%" }; --Skystalker's Boots
 		[3] = { itemID = 31939, desc = "=ds=#s4# =q2=#m16#", droprate = "2.63%" }; --Dark Cloak
 		[4] = { itemID = 31938, desc = "=ds=#s4# =q2=#m16#", droprate = "0.29%" }; --Enigmatic Cloak
 		[5] = { itemID = 31936, desc = "=ds=#s4# =q2=#m16#", droprate = "0.9%" }; --Fiery Cloak
@@ -1221,7 +1221,7 @@ AtlasLoot_Data["EthereumPrison"] = {
 	};
 	{
 		Name = AL["Malevus the Mad"];
-		[1] = { itemID = 31581, desc = "=ds=#s12#, #a4# =q2=#m16#", droprate = "10.5%" }; --Slatesteel Boots
+		[1] = { itemID = 31581, desc = "=ds=#s12# =q2=#m16#", droprate = "10.5%" }; --Slatesteel Boots
 		[3] = { itemID = 31939, desc = "=ds=#s4# =q2=#m16#", droprate = "2.46%" }; --Dark Cloak
 		[4] = { itemID = 31938, desc = "=ds=#s4# =q2=#m16#", droprate = "0.70%" }; --Enigmatic Cloak
 		[5] = { itemID = 31936, desc = "=ds=#s4# =q2=#m16#", droprate = "1.5%" }; --Fiery Cloak
@@ -1236,7 +1236,7 @@ AtlasLoot_Data["EthereumPrison"] = {
 	};
 	{
 		Name = AL["Porfus the Gem Gorger"];
-		[1] = { itemID = 31557, desc = "=ds=#s12#, #a1# =q2=#m16#", droprate = "7.9%" }; --Windchanneller's Boots
+		[1] = { itemID = 31557, desc = "=ds=#s12# =q2=#m16#", droprate = "7.9%" }; --Windchanneller's Boots
 		[3] = { itemID = 31939, desc = "=ds=#s4# =q2=#m16#", droprate = "1.89%" }; --Dark Cloak
 		[4] = { itemID = 31938, desc = "=ds=#s4# =q2=#m16#", droprate = "0.81%" }; --Enigmatic Cloak
 		[5] = { itemID = 31936, desc = "=ds=#s4# =q2=#m16#", droprate = "1.0%" }; --Fiery Cloak
@@ -1270,16 +1270,16 @@ AtlasLoot_Data["EthereumPrison"] = {
 		[2] = { itemID = 32522, desc = "=ds=#w8# =q2=#m16#" }; --Demonic Bulwark
 		[3] = { itemID = 31941, desc = "=ds=#m3#" }; --Mark of the Nexus-King
 		[5] = { icon = "INV_Box_01", name = "=q6=#n119#" };
-		[6] = { itemID = 31577, desc = "=ds=#s3#, #a4# =q2=#m16#" }; --Slatesteel Shoulders
+		[6] = { itemID = 31577, desc = "=ds=#s3# =q2=#m16#" }; --Slatesteel Shoulders
 		[7] = { itemID = 31941, desc = "=ds=#m3#" }; --Mark of the Nexus-King
 		[9] = { icon = "INV_Box_01", name = "=q6=#n120#" };
-		[10] = { itemID = 31569, desc = "=ds=#s3#, #a3# =q2=#m16#" }; --Mistshroud Shoulders
+		[10] = { itemID = 31569, desc = "=ds=#s3# =q2=#m16#" }; --Mistshroud Shoulders
 		[11] = { itemID = 31941, desc = "=ds=#m3#" }; --Mark of the Nexus-King
 		[16] = { icon = "INV_Box_01", name = "=q6=#n121#" };
-		[17] = { itemID = 31553, desc = "=ds=#s3#, #a1# =q2=#m16#" }; --Windchanneller's Mantle
+		[17] = { itemID = 31553, desc = "=ds=#s3# =q2=#m16#" }; --Windchanneller's Mantle
 		[18] = { itemID = 31941, desc = "=ds=#m3#" }; --Mark of the Nexus-King
 		[20] = { icon = "INV_Box_01", name = "=q6=#n122#" };
-		[21] = { itemID = 31561, desc = "=ds=#s3#, #a2# =q2=#m16#" }; --Skystalker's Shoulders
+		[21] = { itemID = 31561, desc = "=ds=#s3# =q2=#m16#" }; --Skystalker's Shoulders
 		[22] = { itemID = 31941, desc = "=ds=#m3#" }; --Mark of the Nexus-King
 	};
 };
@@ -1292,7 +1292,7 @@ AtlasLoot_Data["Shartuul"] = {
 	Name = AL["Shartuul"];
 	{
 		Name = AL["Shartuul"];
-		[1] = { itemID = 32941, desc = "=ds=#s13#", droprate = "6.0%" }; --Corruptor's Signet
+		[1] = { itemID = 32941, droprate = "6.0%" }; --Corruptor's Signet
 		[3] = { itemID = 32676, desc = "=ds=#m20#", droprate = "5.0%" }; --Depleted Cloth Bracers
 		[4] = { itemID = 32675, desc = "=ds=#m20#", droprate = "7.0%" }; --Depleted Mail Gauntlets
 		[5] = { itemID = 32677, desc = "=ds=#m20#", droprate = "9.0%" }; --Depleted Cloak
@@ -1303,17 +1303,17 @@ AtlasLoot_Data["Shartuul"] = {
 		[10] = { itemID = 32670, desc = "=ds=#m20#", droprate = "0.02%" }; --Depleted Two-Handed Axe
 		[11] = { itemID = 32671, desc = "=ds=#m20#", droprate = "11.0%" }; --Depleted Mace
 		[12] = { itemID = 32679, desc = "=ds=#m20#", droprate = "6.0%" }; --Depleted Staff
-		[16] = { itemID = 32942, desc = "=ds=#s13#", droprate = "1.4%" }; --Ring of the Overseer
-		[18] = { itemID = 32655, desc = "=ds=#s8#, #a1#" }; --Crystalweave Bracers
-		[19] = { itemID = 32656, desc = "=ds=#s9#, #a3#" }; --Crystalhide Handwraps
-		[20] = { itemID = 32665, desc = "=ds=#s4#" }; --Crystalweave Cape
-		[21] = { itemID = 32664, desc = "=ds=#s13#" }; --Dreamcrystal Band
-		[22] = { itemID = 32658, desc = "=ds=#s14#" }; --Badge of Tenacity
-		[23] = { itemID = 32659, desc = "=ds=#h1#, #w4#" }; --Crystal-Infused Shiv
-		[24] = { itemID = 32660, desc = "=ds=#h3#, #w10#" }; --Crystalforged Sword
-		[25] = { itemID = 32663, desc = "=ds=#h2#, #w1#" }; --Apexis Cleaver
-		[26] = { itemID = 32661, desc = "=ds=#h1#, #w6#" }; --Apexis Crystal Mace
-		[27] = { itemID = 32662, desc = "=ds=#w9#" }; --Flaming Quartz Staff
+		[16] = { itemID = 32942, droprate = "1.4%" }; --Ring of the Overseer
+		[18] = { itemID = 32655 }; --Crystalweave Bracers
+		[19] = { itemID = 32656 }; --Crystalhide Handwraps
+		[20] = { itemID = 32665 }; --Crystalweave Cape
+		[21] = { itemID = 32664 }; --Dreamcrystal Band
+		[22] = { itemID = 32658 }; --Badge of Tenacity
+		[23] = { itemID = 32659 }; --Crystal-Infused Shiv
+		[24] = { itemID = 32660 }; --Crystalforged Sword
+		[25] = { itemID = 32663 }; --Apexis Cleaver
+		[26] = { itemID = 32661 }; --Apexis Crystal Mace
+		[27] = { itemID = 32662 }; --Flaming Quartz Staff
 	};
 };
 
@@ -1327,71 +1327,71 @@ AtlasLoot_Data["Skettis"] = {
 		Name = AL["Darkscreecher Akkarai"];
 		[1] = { itemID = 32529, price = "17.3%" }; --Heretic's Gauntlets
 		[2] = { itemID = 32715, desc = "=ds=#m3#", droprate = "100%" }; --Akkarai's Talons
-		[4] = { itemID = 31558, desc = "=ds=#s8#, #a1# =q2=#m16#", droprate = "5.3%" }; --Windchanneller's Bindings
-		[5] = { itemID = 31555, desc = "=ds=#s10#, #a1# =q2=#m16#", droprate = "4.3%" }; --Windchanneller's Ceinture
-		[6] = { itemID = 31566, desc = "=ds=#s8#, #a2# =q2=#m16#", droprate = "6.8%" }; --Skystalker's Bracers
-		[7] = { itemID = 31563, desc = "=ds=#s10#, #a2# =q2=#m16#", droprate = "6.2%" }; --Skystalker's Cord
-		[8] = { itemID = 31574, desc = "=ds=#s8#, #a3# =q2=#m16#", droprate = "4.1%" }; --Mistshroud Bracers
-		[9] = { itemID = 31571, desc = "=ds=#s10#, #a3# =q2=#m16#", droprate = "4.5%" }; --Mistshroud Belt
-		[10] = { itemID = 31582, desc = "=ds=#s8#, #a4# =q2=#m16#", droprate = "6.7%" }; --Slatesteel Bracers
-		[11] = { itemID = 31579, desc = "=ds=#s10#, #a4# =q2=#m16#", droprate = "5.5%" }; --Slatesteel Girdle
+		[4] = { itemID = 31558, desc = "=ds=#s8# =q2=#m16#", droprate = "5.3%" }; --Windchanneller's Bindings
+		[5] = { itemID = 31555, desc = "=ds=#s10# =q2=#m16#", droprate = "4.3%" }; --Windchanneller's Ceinture
+		[6] = { itemID = 31566, desc = "=ds=#s8# =q2=#m16#", droprate = "6.8%" }; --Skystalker's Bracers
+		[7] = { itemID = 31563, desc = "=ds=#s10# =q2=#m16#", droprate = "6.2%" }; --Skystalker's Cord
+		[8] = { itemID = 31574, desc = "=ds=#s8# =q2=#m16#", droprate = "4.1%" }; --Mistshroud Bracers
+		[9] = { itemID = 31571, desc = "=ds=#s10# =q2=#m16#", droprate = "4.5%" }; --Mistshroud Belt
+		[10] = { itemID = 31582, desc = "=ds=#s8# =q2=#m16#", droprate = "6.7%" }; --Slatesteel Bracers
+		[11] = { itemID = 31579, desc = "=ds=#s10# =q2=#m16#", droprate = "5.5%" }; --Slatesteel Girdle
 		[12] = { itemID = 32514, desc = "=ds=#s13# =q2=#m16#", droprate = "31.5%" }; --Skettis Band
 	};
 	{
 		Name = AL["Karrog"];
-		[1] = { itemID = 32533, desc = "=ds=#s15#", droprate = "15.0%" }; --Karrog's Shard
+		[1] = { itemID = 32533, droprate = "15.0%" }; --Karrog's Shard
 		[2] = { itemID = 32717, desc = "=ds=#m3#", droprate = "100%" }; --Karrog's Spine
-		[4] = { itemID = 31558, desc = "=ds=#s8#, #a1# =q2=#m16#", droprate = "5.6%" }; --Windchanneller's Bindings
-		[5] = { itemID = 31555, desc = "=ds=#s10#, #a1# =q2=#m16#", droprate = "6.8%" }; --Windchanneller's Ceinture
-		[6] = { itemID = 31566, desc = "=ds=#s8#, #a2# =q2=#m16#", droprate = "6.0%" }; --Skystalker's Bracers
-		[7] = { itemID = 31563, desc = "=ds=#s10#, #a2# =q2=#m16#", droprate = "8.0%" }; --Skystalker's Cord
-		[8] = { itemID = 31574, desc = "=ds=#s8#, #a3# =q2=#m16#", droprate = "5.6%" }; --Mistshroud Bracers
-		[9] = { itemID = 31571, desc = "=ds=#s10#, #a3# =q2=#m16#", droprate = "3.6%" }; --Mistshroud Belt
-		[10] = { itemID = 31582, desc = "=ds=#s8#, #a4# =q2=#m16#", droprate = "4.3%" }; --Slatesteel Bracers
-		[11] = { itemID = 31579, desc = "=ds=#s10#, #a4# =q2=#m16#", droprate = "5.3%" }; --Slatesteel Girdle
+		[4] = { itemID = 31558, desc = "=ds=#s8# =q2=#m16#", droprate = "5.6%" }; --Windchanneller's Bindings
+		[5] = { itemID = 31555, desc = "=ds=#s10# =q2=#m16#", droprate = "6.8%" }; --Windchanneller's Ceinture
+		[6] = { itemID = 31566, desc = "=ds=#s8# =q2=#m16#", droprate = "6.0%" }; --Skystalker's Bracers
+		[7] = { itemID = 31563, desc = "=ds=#s10# =q2=#m16#", droprate = "8.0%" }; --Skystalker's Cord
+		[8] = { itemID = 31574, desc = "=ds=#s8# =q2=#m16#", droprate = "5.6%" }; --Mistshroud Bracers
+		[9] = { itemID = 31571, desc = "=ds=#s10# =q2=#m16#", droprate = "3.6%" }; --Mistshroud Belt
+		[10] = { itemID = 31582, desc = "=ds=#s8# =q2=#m16#", droprate = "4.3%" }; --Slatesteel Bracers
+		[11] = { itemID = 31579, desc = "=ds=#s10# =q2=#m16#", droprate = "5.3%" }; --Slatesteel Girdle
 		[12] = { itemID = 32514, desc = "=ds=#s13# =q2=#m16#", droprate = "24.9%" }; --Skettis Band
 	};
 	{
 		Name = AL["Gezzarak the Huntress"];
 		[1] = { itemID = 32531, price = "16.9%" }; --Gezzarak's Fang
 		[2] = { itemID = 32716, desc = "=ds=#m3#", droprate = "100%" }; --Gezzarak's Claws
-		[4] = { itemID = 31558, desc = "=ds=#s8#, #a1# =q2=#m16#", droprate = "5.2%" }; --Windchanneller's Bindings
-		[5] = { itemID = 31555, desc = "=ds=#s10#, #a1# =q2=#m16#", droprate = "6.9%" }; --Windchanneller's Ceinture
-		[6] = { itemID = 31566, desc = "=ds=#s8#, #a2# =q2=#m16#", droprate = "5.2%" }; --Skystalker's Bracers
-		[7] = { itemID = 31563, desc = "=ds=#s10#, #a2# =q2=#m16#", droprate = "4.9%" }; --Skystalker's Cord
-		[8] = { itemID = 31574, desc = "=ds=#s8#, #a3# =q2=#m16#", droprate = "5.8%" }; --Mistshroud Bracers
-		[9] = { itemID = 31571, desc = "=ds=#s10#, #a3# =q2=#m16#", droprate = "5.4%" }; --Mistshroud Belt
-		[10] = { itemID = 31582, desc = "=ds=#s8#, #a4# =q2=#m16#", droprate = "6.2%" }; --Slatesteel Bracers
-		[11] = { itemID = 31579, desc = "=ds=#s10#, #a4# =q2=#m16#", droprate = "4.6%" }; --Slatesteel Girdle
+		[4] = { itemID = 31558, desc = "=ds=#s8# =q2=#m16#", droprate = "5.2%" }; --Windchanneller's Bindings
+		[5] = { itemID = 31555, desc = "=ds=#s10# =q2=#m16#", droprate = "6.9%" }; --Windchanneller's Ceinture
+		[6] = { itemID = 31566, desc = "=ds=#s8# =q2=#m16#", droprate = "5.2%" }; --Skystalker's Bracers
+		[7] = { itemID = 31563, desc = "=ds=#s10# =q2=#m16#", droprate = "4.9%" }; --Skystalker's Cord
+		[8] = { itemID = 31574, desc = "=ds=#s8# =q2=#m16#", droprate = "5.8%" }; --Mistshroud Bracers
+		[9] = { itemID = 31571, desc = "=ds=#s10# =q2=#m16#", droprate = "5.4%" }; --Mistshroud Belt
+		[10] = { itemID = 31582, desc = "=ds=#s8# =q2=#m16#", droprate = "6.2%" }; --Slatesteel Bracers
+		[11] = { itemID = 31579, desc = "=ds=#s10# =q2=#m16#", droprate = "4.6%" }; --Slatesteel Girdle
 		[12] = { itemID = 32514, desc = "=ds=#s13# =q2=#m16#", droprate = "25.7%" }; --Skettis Band
 	};
 	{
 		Name = AL["Vakkiz the Windrager"];
-		[1] = { itemID = 32532, desc = "=ds=#s8#, #a3#", droprate = "18.1%" }; --Windrager's Coils
+		[1] = { itemID = 32532, droprate = "18.1%" }; --Windrager's Coils
 		[2] = { itemID = 32718, desc = "=ds=#m3#", droprate = "100%" }; --Vakkiz's Scale
-		[4] = { itemID = 31558, desc = "=ds=#s8#, #a1# =q2=#m16#", droprate = "5.0%" }; --Windchanneller's Bindings
-		[5] = { itemID = 31555, desc = "=ds=#s10#, #a1# =q2=#m16#", droprate = "4.4%" }; --Windchanneller's Ceinture
-		[6] = { itemID = 31566, desc = "=ds=#s8#, #a2# =q2=#m16#", droprate = "4.1%" }; --Skystalker's Bracers
-		[7] = { itemID = 31563, desc = "=ds=#s10#, #a2# =q2=#m16#", droprate = "3.9%" }; --Skystalker's Cord
-		[8] = { itemID = 31574, desc = "=ds=#s8#, #a3# =q2=#m16#", droprate = "5.7%" }; --Mistshroud Bracers
-		[9] = { itemID = 31571, desc = "=ds=#s10#, #a3# =q2=#m16#", droprate = "6.3%" }; --Mistshroud Belt
-		[10] = { itemID = 31582, desc = "=ds=#s8#, #a4# =q2=#m16#", droprate = "5.8%" }; --Slatesteel Bracers
-		[11] = { itemID = 31579, desc = "=ds=#s10#, #a4# =q2=#m16#", droprate = "2.7%" }; --Slatesteel Girdle
+		[4] = { itemID = 31558, desc = "=ds=#s8# =q2=#m16#", droprate = "5.0%" }; --Windchanneller's Bindings
+		[5] = { itemID = 31555, desc = "=ds=#s10# =q2=#m16#", droprate = "4.4%" }; --Windchanneller's Ceinture
+		[6] = { itemID = 31566, desc = "=ds=#s8# =q2=#m16#", droprate = "4.1%" }; --Skystalker's Bracers
+		[7] = { itemID = 31563, desc = "=ds=#s10# =q2=#m16#", droprate = "3.9%" }; --Skystalker's Cord
+		[8] = { itemID = 31574, desc = "=ds=#s8# =q2=#m16#", droprate = "5.7%" }; --Mistshroud Bracers
+		[9] = { itemID = 31571, desc = "=ds=#s10# =q2=#m16#", droprate = "6.3%" }; --Mistshroud Belt
+		[10] = { itemID = 31582, desc = "=ds=#s8# =q2=#m16#", droprate = "5.8%" }; --Slatesteel Bracers
+		[11] = { itemID = 31579, desc = "=ds=#s10# =q2=#m16#", droprate = "2.7%" }; --Slatesteel Girdle
 		[12] = { itemID = 32514, desc = "=ds=#s13# =q2=#m16#", droprate = "28.7%" }; --Skettis Band
 	};
 	{
 		Name = AL["Terokk"];
-		[1] = { itemID = 32540, desc = "=ds=#s4#", droprate = "4.6%" }; --Terokk's Might
-		[2] = { itemID = 32541, desc = "=ds=#s4#", droprate = "4.6%" }; --Terokk's Wisdom
-		[3] = { itemID = 31556, desc = "=ds=#s11#, #a1# =q2=#m16#", droprate = "14.3%" }; --Windchanneller's Leggings
-		[4] = { itemID = 31564, desc = "=ds=#s11#, #a2# =q2=#m16#", droprate = "13.9%" }; --Skystalker's Leggings
-		[5] = { itemID = 31572, desc = "=ds=#s11#, #a3# =q2=#m16#", droprate = "10.7%" }; --Mistshroud Pants
-		[6] = { itemID = 31580, desc = "=ds=#s11#, #a4# =q2=#m16#", droprate = "11.6%" }; --Slatesteel Leggings
-		[7] = { itemID = 32535, desc = "=ds=#s13#", droprate = "7.9%" }; --Gift of the Talonpriests
+		[1] = { itemID = 32540, droprate = "4.6%" }; --Terokk's Might
+		[2] = { itemID = 32541, droprate = "4.6%" }; --Terokk's Wisdom
+		[3] = { itemID = 31556, desc = "=ds=#s11# =q2=#m16#", droprate = "14.3%" }; --Windchanneller's Leggings
+		[4] = { itemID = 31564, desc = "=ds=#s11# =q2=#m16#", droprate = "13.9%" }; --Skystalker's Leggings
+		[5] = { itemID = 31572, desc = "=ds=#s11# =q2=#m16#", droprate = "10.7%" }; --Mistshroud Pants
+		[6] = { itemID = 31580, desc = "=ds=#s11# =q2=#m16#", droprate = "11.6%" }; --Slatesteel Leggings
+		[7] = { itemID = 32535, droprate = "7.9%" }; --Gift of the Talonpriests
 		[8] = { itemID = 32534, price = "11.2%" }; --Brooch of the Immortal King
-		[9] = { itemID = 32782, desc = "=ds=#s14#" }; --Time-Lost Figurine
-		[10] = { itemID = 32536, desc = "=ds=#h1#, #w6# =q2=#m16#", droprate = "6.7%" }; --Terokk's Gavel
-		[11] = { itemID = 32537, desc = "=ds=#h1#, #w6# =q2=#m16#", droprate = "7.9%" }; --Terokk's Gavel
+		[9] = { itemID = 32782 }; --Time-Lost Figurine
+		[10] = { itemID = 32536, desc = "=ds=#h1# =q2=#m16#", droprate = "6.7%" }; --Terokk's Gavel
+		[11] = { itemID = 32537, desc = "=ds=#h1# =q2=#m16#", droprate = "7.9%" }; --Terokk's Gavel
 	};
 	{
 		Name = "Talonpriest Ishaal";
@@ -1415,43 +1415,43 @@ AtlasLoot_Data["ScourgeInvasionEvent"] = {
 	Name = AL["Scourge Invasion"];
 	{
 		Name = "Page 1";
-		[1] = { itemID = 40601, desc = "=ds=#s14#" }; --Argent Dawn Banner
-		[2] = { itemID = 40593, desc = "=ds=#s14#" }; --Argent Tome
-		[3] = { itemID = 40492, desc = "=ds=#s14#" }; --Argent War Horn
+		[1] = { itemID = 40601 }; --Argent Dawn Banner
+		[2] = { itemID = 40593 }; --Argent Tome
+		[3] = { itemID = 40492 }; --Argent War Horn
 		[5] = { itemID = 23123, desc = "=ds=#m20#" }; --Blessed Wizard Oil
 		[6] = { itemID = 23122, desc = "=ds=#m20#" }; --Consecrated Sharpening Stone
-		[8] = { itemID = 22999, desc = "=ds=#s7#" }; --Tabard of the Argent Dawn
+		[8] = { itemID = 22999 }; --Tabard of the Argent Dawn
 		[9] = { itemID = 43531, desc = "=ds=#e2#" }; --Argent Healing Potion
 		[10] = { itemID = 43530, desc = "=ds=#e2#" }; --Argent Mana Potion
 		[12] = { itemID = 22484, desc = "=ds=#m17#" }; --Necrotic Rune
 		[16] = { itemID = 40110, desc = "=ds=#m20#" }; --Haunted Memento
 		[18] = { icon = "INV_Box_01", name = "=q6=" .. AL["Prince Tenris Mirkblood"], "=q5=" .. BabbleZone["Karazhan"] };
 		[19] = { itemID = 29434, desc = "=ds=#e15#", droprate = "100%" }; --Badge of Justice
-		[20] = { itemID = 39769, desc = "=ds=#h3#, #w1#" }; --Arcanite Ripper
+		[20] = { itemID = 39769 }; --Arcanite Ripper
 		[21] = { itemID = 38658, desc = "=ds=#e13#" }; --Vampiric Batling
 	};
 	{
 		Name = "Page 2";
 		[1] = { icon = "INV_Box_01", name = "=q6=" .. AL["Blessed Regalia of Undead Cleansing"], "=q1=#a1#" };
-		[2] = { itemID = 43074, desc = "=ds=#s3#, #a1#" }; --Blessed Mantle of Undead Cleansing
-		[3] = { itemID = 43072, desc = "=ds=#s5#, #a1#" }; --Blessed Robe of Undead Cleansing
-		[4] = { itemID = 43073, desc = "=ds=#s9#, #a1#" }; --Blessed Gloves of Undead Cleansing
-		[5] = { itemID = 43075, desc = "=ds=#s11#, #a1#" }; --Blessed Trousers of Undead Cleansing
+		[2] = { itemID = 43074 }; --Blessed Mantle of Undead Cleansing
+		[3] = { itemID = 43072 }; --Blessed Robe of Undead Cleansing
+		[4] = { itemID = 43073 }; --Blessed Gloves of Undead Cleansing
+		[5] = { itemID = 43075 }; --Blessed Trousers of Undead Cleansing
 		[7] = { icon = "INV_Box_01", name = "=q6=" .. AL["Undead Slayer's Blessed Armor"], "=q1=#a2#" };
-		[8] = { itemID = 43077, desc = "=ds=#s3#, #a1#" }; --Blessed Shoulderpads of Undead Slaying
-		[9] = { itemID = 43076, desc = "=ds=#s5#, #a1#" }; --Blessed Tunic of Undead Slaying
-		[10] = { itemID = 43078, desc = "=ds=#s9#, #a1#" }; --Blessed Grips of Undead Slaying
-		[11] = { itemID = 43079, desc = "=ds=#s11#, #a1#" }; --Blessed Leggings of Undead Slaying
+		[8] = { itemID = 43077 }; --Blessed Shoulderpads of Undead Slaying
+		[9] = { itemID = 43076 }; --Blessed Tunic of Undead Slaying
+		[10] = { itemID = 43078 }; --Blessed Grips of Undead Slaying
+		[11] = { itemID = 43079 }; --Blessed Leggings of Undead Slaying
 		[16] = { icon = "INV_Box_01", name = "=q6=" .. AL["Blessed Garb of the Undead Slayer"], "=q1=#a3#" };
-		[17] = { itemID = 43081, desc = "=ds=#s3#, #a1#" }; --Blessed Pauldrons of Undead Slaying
-		[18] = { itemID = 43080, desc = "=ds=#s5#, #a1#" }; --Blessed Hauberk of Undead Slaying
-		[19] = { itemID = 43082, desc = "=ds=#s9#, #a1#" }; --Blessed Handguards of Undead Slaying
-		[20] = { itemID = 43083, desc = "=ds=#s11#, #a1#" }; --Blessed Greaves of Undead Slaying
+		[17] = { itemID = 43081 }; --Blessed Pauldrons of Undead Slaying
+		[18] = { itemID = 43080 }; --Blessed Hauberk of Undead Slaying
+		[19] = { itemID = 43082 }; --Blessed Handguards of Undead Slaying
+		[20] = { itemID = 43083 }; --Blessed Greaves of Undead Slaying
 		[22] = { icon = "INV_Box_01", name = "=q6=" .. AL["Blessed Battlegear of Undead Slaying"], "=q1=#a4#" };
-		[23] = { itemID = 43068, desc = "=ds=#s3#, #a1#" }; --Blessed Spaulders of Undead Slaying
-		[24] = { itemID = 43069, desc = "=ds=#s5#, #a1#" }; --Blessed Breastplate of Undead Slaying
-		[25] = { itemID = 43070, desc = "=ds=#s9#, #a1#" }; --Blessed Gauntlets of Undead Slaying
-		[26] = { itemID = 43071, desc = "=ds=#s11#, #a1#" }; --Blessed Legplates of Undead Slaying
+		[23] = { itemID = 43068 }; --Blessed Spaulders of Undead Slaying
+		[24] = { itemID = 43069 }; --Blessed Breastplate of Undead Slaying
+		[25] = { itemID = 43070 }; --Blessed Gauntlets of Undead Slaying
+		[26] = { itemID = 43071 }; --Blessed Legplates of Undead Slaying
 	};
 	{
 		Name = "Page 3";
@@ -1460,22 +1460,22 @@ AtlasLoot_Data["ScourgeInvasionEvent"] = {
 		[3] = { itemID = 23125, droprate = "19.89%" }; --Chains of the Lich
 		[4] = { itemID = 23124, droprate = "24.74%" }; --Staff of Balzaphon
 		[6] = { icon = "INV_Box_01", name = "=q6=#n124#", "=q1=#z5#" };
-		[7] = { itemID = 23156, desc = "=ds=#s15#", droprate = "22.60%" }; --Blackwood's Thigh
-		[8] = { itemID = 23132, desc = "=ds=#h1#, #w10#", droprate = "23.80%" }; --Lord Blackwood's Blade
+		[7] = { itemID = 23156, droprate = "22.60%" }; --Blackwood's Thigh
+		[8] = { itemID = 23132, droprate = "23.80%" }; --Lord Blackwood's Blade
 		[9] = { itemID = 23139, desc = "=ds=#w8#", droprate = "26.91%" }; --Lord Blackwood's Buckler
 		[11] = { icon = "INV_Box_01", name = "=q6=#n125#", "=q1=#z13#" };
-		[12] = { itemID = 23127, desc = "=ds=#s4#", droprate = "23.56%" }; --Cloak of Revanchion
-		[13] = { itemID = 23129, desc = "=ds=#s8#, #a1#", droprate = "22.67%" }; --Bracers of Mending
-		[14] = { itemID = 23128, desc = "=ds=#s9#, #a1#", droprate = "30.67%" }; --The Shadow's Grasp
+		[12] = { itemID = 23127, droprate = "23.56%" }; --Cloak of Revanchion
+		[13] = { itemID = 23129, droprate = "22.67%" }; --Bracers of Mending
+		[14] = { itemID = 23128, droprate = "30.67%" }; --The Shadow's Grasp
 		[16] = { icon = "INV_Box_01", name = "=q6=#n126#", "=q1=#z3# - #z28#" };
-		[17] = { itemID = 23170, desc = "=ds=#s9#, #a3#", droprate = "28.94%" }; --The Frozen Clutch
+		[17] = { itemID = 23170, droprate = "28.94%" }; --The Frozen Clutch
 		[18] = { itemID = 23169, droprate = "30.39%" }; --Scorn's Icy Choker
 		[19] = { itemID = 23168, droprate = "32.56%" }; --Scorn's Focal Dagger
 		[21] = { icon = "INV_Box_01", name = "=q6=#n127#", "=q1=#z26#" };
-		[22] = { itemID = 23173, desc = "=ds=#s11#, #a1#", droprate = "43.81%" }; --Abomination Skin Leggings
-		[23] = { itemID = 23171, desc = "=ds=#h2#, #w1#", droprate = "49.31%" }; --The Axe of Severing
+		[22] = { itemID = 23173, droprate = "43.81%" }; --Abomination Skin Leggings
+		[23] = { itemID = 23171, droprate = "49.31%" }; --The Axe of Severing
 		[26] = { icon = "INV_Box_01", name = "=q6=#n128#", "=q1=#z27#" };
-		[27] = { itemID = 23178, desc = "=ds=#s4#", droprate = "39.13%" }; --Mantle of Lady Falther'ess
-		[28] = { itemID = 23177, desc = "=ds=#w12#", droprate = "46.86%" }; --Lady Falther'ess' Finger
+		[27] = { itemID = 23178, droprate = "39.13%" }; --Mantle of Lady Falther'ess
+		[28] = { itemID = 23177, droprate = "46.86%" }; --Lady Falther'ess' Finger
 	};
 };

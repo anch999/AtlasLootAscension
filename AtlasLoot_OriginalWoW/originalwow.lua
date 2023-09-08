@@ -4852,18 +4852,18 @@ AtlasLoot_Data["ClassicSets"] = {
 	{
 		Name = AL["Spirit of Eskhandar"];
 		[1] = { itemID = 18204, desc =  "=ds=#s4#, =q2=#n37#", droprate = "9.16%" }; --Eskhandar's Pelt
-		[2] = { itemID = 18203, desc =  "=ds=#h3#, #w13#, =q2=#n38# (#z14#)", droprate = "16.97%" }; --Eskhandar's Right Claw
-		[3] = { itemID = 18202, desc =  "=ds=#h4#, #w13#, =q2=#n39#", droprate = "12.36%" }; --Eskhandar's Left Claw
+		[2] = { itemID = 18203, desc =  "=ds=#h3#, =q2=#n38# (#z14#)", droprate = "16.97%" }; --Eskhandar's Right Claw
+		[3] = { itemID = 18202, desc =  "=ds=#h4#, =q2=#n39#", droprate = "12.36%" }; --Eskhandar's Left Claw
 	};
 	{
 		Name = AL["Spider's Kiss"];
-		[1] = { itemID = 13218, desc =  "=ds=#h1#, #w4#, =q2=#n41#", droprate = "15.46%" }; --Fang of the Crystal Spider
-		[2] = { itemID = 13183, desc =  "=ds=#h1#, #w6#, =q2=#n42#", droprate = "13.07%" }; --Venomspitter
+		[1] = { itemID = 13218, desc =  "=ds=#h1#, =q2=#n41#", droprate = "15.46%" }; --Fang of the Crystal Spider
+		[2] = { itemID = 13183, desc =  "=ds=#h1#, =q2=#n42#", droprate = "13.07%" }; --Venomspitter
 	};
 	{
 		Name = AL["Dal'Rend's Arms"];
-		[1] = { itemID = 12940, desc =  "=ds=#h3#, #w10#, =q2=#n40#", droprate = "6.62%" }; --Dal'Rend's Sacred Charge
-		[2] = { itemID = 12939, desc =  "=ds=#h4#, #w10#, =q2=#n40#", droprate = "7.44%" }; --Dal'Rend's Tribal Guardian
+		[1] = { itemID = 12940, desc =  "=ds=#h3#, =q2=#n40#", droprate = "6.62%" }; --Dal'Rend's Sacred Charge
+		[2] = { itemID = 12939, desc =  "=ds=#h4#, =q2=#n40#", droprate = "7.44%" }; --Dal'Rend's Tribal Guardian
 	};
 	{
 		Name = AL["Necropile Raiment"];
@@ -4909,8 +4909,8 @@ AtlasLoot_Data["ClassicSets"] = {
 	};
 	{
 		Name = AL["Primal Blessing"];
-		[1] = { itemID = 19896, desc =  "=ds=#h3#, #w13#, =q2=#n28#", droprate = "5.20%" }; --Thekal's Grasp
-		[2] = { itemID = 19910, desc =  "=ds=#h4#, #w13#, =q2=#n30#", droprate = "4.54%" }; --Arlokk's Grasp
+		[1] = { itemID = 19896, desc =  "=ds=#h3#, =q2=#n28#", droprate = "5.20%" }; --Thekal's Grasp
+		[2] = { itemID = 19910, desc =  "=ds=#h4#, =q2=#n30#", droprate = "4.54%" }; --Arlokk's Grasp
 	};
 	{
 		Name = AL["Prayer of the Primal"];
@@ -4924,8 +4924,8 @@ AtlasLoot_Data["ClassicSets"] = {
 	};
 	{
 		Name = AL["The Twin Blades of Hakkari"];
-		[1] = { itemID = 19865, desc =  "=ds=#h3#, #w10#, =q2=#n34#", droprate = "5.18%" }; --Warblade of the Hakkari
-		[2] = { itemID = 19866, desc =  "=ds=#h4#, #w10#, =q2=#n33#", droprate = "4.55%" }; --Warblade of the Hakkari
+		[1] = { itemID = 19865, desc =  "=ds=#h3#, =q2=#n34#", droprate = "5.18%" }; --Warblade of the Hakkari
+		[2] = { itemID = 19866, desc =  "=ds=#h4#, =q2=#n33#", droprate = "4.55%" }; --Warblade of the Hakkari
 	};
 };
 
@@ -5259,33 +5259,33 @@ AtlasLoot_Data["WorldEpicsCLASSIC"] = {
 	Type = "ClassicDungeonExt";
 	{
 		Name = AL["Level 30-39"];
-		[1] = { itemID = 867, desc =  "=ds=#s9#, #a2#"  };--Gloves of Holy Might
-		[2] = { itemID = 1981, desc =  "=ds=#s5#, #a3#"  };--Icemail Jerkin
+		[1] = { itemID = 867, desc =  "=ds=#s9#"  };--Gloves of Holy Might
+		[2] = { itemID = 1981, desc =  "=ds=#s5#"  };--Icemail Jerkin
 		[3] = { itemID = 1980 }; -- =q4=Underworld Band" 
 		[16] = { itemID = 869 }; -- =q4=Dazzling Longsword" 
-		[17] = { itemID = 1982, desc =  "=ds=#h2#, #w10#"  };--Nightblade
-		[18] = { itemID = 870, desc =  "=ds=#h2#, #w1#"  };--Fiery War Axe
-		[19] = { itemID = 868, desc =  "=ds=#h1#, #w6#"  };--Ardent Custodian
+		[17] = { itemID = 1982, desc =  "=ds=#h2#"  };--Nightblade
+		[18] = { itemID = 870, desc =  "=ds=#h2#"  };--Fiery War Axe
+		[19] = { itemID = 868, desc =  "=ds=#h1#"  };--Ardent Custodian
 		[20] = { itemID = 873, desc =  "=ds=#w9#"  };--Staff of Jordan
 		[21] = { itemID = 1204, desc =  "=ds=#w8#"  };--The Green Tower
 		[22] = { itemID = 2825, desc =  "=ds=#w2#"  };--Bow of Searing Arrows
 	};
 	{
 		Name = AL["Level 40-49"];
-		[1] = { itemID = 3075, desc =  "=ds=#s1#, #a1#"  };--Eye of Flame
-		[2] = { itemID = 940, desc =  "=ds=#s5#, #a1#"  };--Robes of Insight
-		[3] = { itemID = 14551, desc =  "=ds=#s9#, #a3#"  };--Edgemaster's Handguards
-		[4] = { itemID = 17007, desc =  "=ds=#s9#, #a3#"  };--Stonerender Gauntlets
-		[5] = { itemID = 14549, desc =  "=ds=#s12#, #a4#"  };--Boots of Avoidance
+		[1] = { itemID = 3075, desc =  "=ds=#s1#"  };--Eye of Flame
+		[2] = { itemID = 940, desc =  "=ds=#s5#"  };--Robes of Insight
+		[3] = { itemID = 14551, desc =  "=ds=#s9#"  };--Edgemaster's Handguards
+		[4] = { itemID = 17007, desc =  "=ds=#s9#"  };--Stonerender Gauntlets
+		[5] = { itemID = 14549, desc =  "=ds=#s12#"  };--Boots of Avoidance
 		[6] = { itemID = 1315 }; -- =q4=Lei of Lilies" 
 		[7] = { itemID = 942 }; -- =q4=Freezing Band" 
 		[8] = { itemID = 1447 }; -- =q4=Ring of Saviors" 
-		[16] = { itemID = 2164, desc =  "=ds=#h1#, #w4#"  };--Gut Ripper
-		[17] = { itemID = 2163, desc =  "=ds=#h1#, #w4#"  };--Shadowblade
+		[16] = { itemID = 2164, desc =  "=ds=#h1#"  };--Gut Ripper
+		[17] = { itemID = 2163, desc =  "=ds=#h1#"  };--Shadowblade
 		[18] = { itemID = 809 }; -- =q4=Bloodrazor" 
 		[19] = { itemID = 871 }; -- =q4=Flurry Axe" 
-		[20] = { itemID = 2291, desc =  "=ds=#h2#, #w1#"  };--Kang the Decapitator
-		[21] = { itemID = 810, desc =  "=ds=#h1#, #w6#"  };--Hammer of the Northern Wind
+		[20] = { itemID = 2291, desc =  "=ds=#h2#"  };--Kang the Decapitator
+		[21] = { itemID = 810, desc =  "=ds=#h1#"  };--Hammer of the Northern Wind
 		[22] = { itemID = 2915 }; -- =q4=Taran Icebreaker" 
 		[23] = { itemID = 812, desc =  "=ds=#w9#"  };--Glowing Brightwood Staff
 		[24] = { itemID = 943, desc =  "=ds=#w9#"  };--Warden Staff
@@ -5297,23 +5297,23 @@ AtlasLoot_Data["WorldEpicsCLASSIC"] = {
 	{
 		Name = AL["Level 50-60"];
 		[1] = { itemID = 3475 }; -- =q4=Cloak of Flames" 
-		[2] = { itemID = 14553, desc =  "=ds=#s10#, #a2#"  };--Sash of Mercy
-		[3] = { itemID = 2245, desc =  "=ds=#s1#, #a3#"  };--Helm of Narv
-		[4] = { itemID = 14552, desc =  "=ds=#s3#, #a4#"  };--Stockade Pauldrons
-		[5] = { itemID = 14554, desc =  "=ds=#s11#, #a4#"  };--Cloudkeeper Legplates
+		[2] = { itemID = 14553, desc =  "=ds=#s10#"  };--Sash of Mercy
+		[3] = { itemID = 2245, desc =  "=ds=#s1#"  };--Helm of Narv
+		[4] = { itemID = 14552, desc =  "=ds=#s3#"  };--Stockade Pauldrons
+		[5] = { itemID = 14554, desc =  "=ds=#s11#"  };--Cloudkeeper Legplates
 		[6] = { itemID = 1443 }; -- =q4=Jeweled Amulet of Cainwyn" 
 		[7] = { itemID = 14558 }; -- =q4=Lady Maye's Pendant" 
 		[8] = { itemID = 2246 }; -- =q4=Myrmidon's Signet" 
 		[9] = { itemID = 833 }; -- =q4=Lifestone" 
 		[10] = { itemID = 14557 }; -- =q4=The Lion Horn of Stormwind" 
-		[16] = { itemID = 14555, desc =  "=ds=#h1#, #w4#"  };--Alcor's Sunrazor
+		[16] = { itemID = 14555, desc =  "=ds=#h1#"  };--Alcor's Sunrazor
 		[17] = { itemID = 2244 }; -- =q4=Krol Blade" 
 		[18] = { itemID = 1728 }; -- =q4=Teebu's Blazing Longsword" 
-		[19] = { itemID = 2801, desc =  "=ds=#h2#, #w10#"  };--Blade of Hanna
-		[20] = { itemID = 647, desc =  "=ds=#h2#, #w10#"  };--Destiny
+		[19] = { itemID = 2801, desc =  "=ds=#h2#"  };--Blade of Hanna
+		[20] = { itemID = 647, desc =  "=ds=#h2#"  };--Destiny
 		[21] = { itemID = 811 }; -- =q4=Axe of the Deep Woods" 
-		[22] = { itemID = 1263, desc =  "=ds=#h2#, #w1#"  };--Brain Hacker
-		[23] = { itemID = 2243, desc =  "=ds=#h1#, #w6#"  };--Hand of Edward the Odd
+		[22] = { itemID = 1263, desc =  "=ds=#h2#"  };--Brain Hacker
+		[23] = { itemID = 2243, desc =  "=ds=#h1#"  };--Hand of Edward the Odd
 		[24] = { itemID = 944, desc =  "=ds=#w9#"  };--Elemental Mage Staff
 		[25] = { itemID = 1168, desc =  "=ds=#w8#"  };--Skullflame Shield
 		[26] = { itemID = 2099, desc =  "=ds=#w5#"  };--Dwarven Hand Cannon
@@ -7174,7 +7174,7 @@ AtlasLoot_Data["WorldBossesCLASSIC"] = {
 		[18] = { itemID = 18202, droprate = "11.76%" }; --Eskhandar's Left Claw
 		[19] = {itemID = 20577, droprate = "12.07%" }; --Nightmare Blade
 		[20] = { itemID = 20578, droprate = "9.95%" }; --Emerald Dragonfang
-		[21] = {itemID = 17112, desc = "=ds=#h1#, #w6#%" }; --Empyrean Demolisher
+		[21] = {itemID = 17112, desc = "=ds=#h1#%" }; --Empyrean Demolisher
 		[22] = { itemID = 18542, droprate = "16.89%" }; --Typhoon
 		[29] = { itemID = 20644, droprate = "80.05%" }; --Nightmare Engulfed Object
 		[30] = { itemID = 20600, "=q4=Malfurion's Signet Ring" };
@@ -7196,7 +7196,7 @@ AtlasLoot_Data["WorldBossesCLASSIC"] = {
 	};
 	{
 		Name = "Caster Gear";
-		[1] = {itemID = 19132, desc = "=ds=#s1#, #a1#%" }; --Crystal Adorned Crown
+		[1] = {itemID = 19132, desc = "=ds=#s1#%" }; --Crystal Adorned Crown
 		[2] = { itemID = 18546, droprate = "22.89%" }; --Infernal Headcage
 		[3] = { itemID = 20628, droprate = "15.80%" }; --Deviate Growth Cap
 		[5] = { itemID = 18545, droprate = "16.39%" }; --Leggings of Arcane Supremacy
