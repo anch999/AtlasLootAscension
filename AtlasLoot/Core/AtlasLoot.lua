@@ -715,9 +715,9 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 			extra = extra ..WHITE.." ("..dataSource[dataID][tablenum][i].price..")"
 		end
 
-		local recipeSpellID = AtlasLoot:GetRecipeSpellID(dataSource[dataID][tablenum][i].itemID)
+		local recipeSpellID = AtlasLoot:GetRecipeData(dataSource[dataID][tablenum][i].itemID)
 		if recipeSpellID then
-			extra = extra ..WHITE.." ("..AtlasLoot_CraftingData["ExtraCraftingData"][recipeSpellID][1]..")"
+			extra = extra ..WHITE.." ("..AtlasLoot_CraftingData["ExtraCraftingData"][recipeSpellID.spellID][1]..")"
 		end
 
 		extra = AtlasLoot:FixText(extra)

@@ -107,14 +107,6 @@ function AtlasLoot:CloneTable(t)
 	return new
 end
 
---Return the spellID of a crafting recipe
-function AtlasLoot:GetRecipeSpellID(findID)
-	if not findID then return end
-	for spellID, itemID in pairs(AtlasLoot_CraftingData["SpellToRecipe"]) do
-		if itemID == findID then return spellID end
-	end
-end
-
 --[[
 AtlasLoot:FindId(id, difficulty)
 Finds the Ids of other difficulties based on the normal id of the item and the difficulty parameter given.
@@ -148,8 +140,8 @@ function AtlasLoot:GetRecipeData(recipeID)
 	for _,prof in pairs(TRADESKILL_RECIPES) do
 		for _,cat in pairs(prof) do
 		   for _,recipe in pairs(cat) do
-			  if recipeID == recipe.SpellEntry then
-				local info = {{recipe.CreatedItemEntry}, "blank", "blank", "blank", "blank", "blank"}
+			  if recipeID == recipe.SpellEntry or recipeID == recipe.RecipeItemEntry then
+				local info = {{recipe.CreatedItemEntry}, "blank", "blank", "blank", "blank", "blank",spellID = recipe.SpellEntry}
 				if ItemIDsDatabase[recipe.CreatedItemEntry] and ItemIDsDatabase[recipe.CreatedItemEntry][1] then
 					info[2] = {ItemIDsDatabase[recipe.CreatedItemEntry][1]}
 				end
@@ -159,6 +151,7 @@ function AtlasLoot:GetRecipeData(recipeID)
 						number = 2
 					end
 					info[number] = {recipe.RecipeItemEntry}
+
 				end
 				for _,v in pairs(recipe.Reagents) do
 					tinsert(info, v)
@@ -285,7 +278,10 @@ function AtlasLoot:PopoupItemFrame(self, data)
 			button.icon:SetTexture(GetItemIcon(itemID))
 			button.itemID = itemID
 			button.itemTexture = self.itemTexture
-			button.craftingData = AtlasLoot:RecipeSource(AtlasLoot:GetRecipeSpellID(itemID))
+			local recipe = AtlasLoot:GetRecipeData(itemID)
+			if recipe then
+			button.craftingData = AtlasLoot:RecipeSource(recipe.spellID)
+			end
 		if item[2] then
 			button.name:SetText(WHITE..item[2])
 			button.name:Show()

@@ -253,9 +253,6 @@ function AtlasLoot:ItemOnClick(self ,arg1)
         elseif (arg1=="LeftButton") and AtlasLoot.itemUnlock then
             --move wishlist item up
             AtlasLoot:MoveWishlistItem("Up",self.number)
-        elseif arg1 == "LeftButton" and itemID and AtlasLoot_ExtraData[itemID] then
-            AtlasLoot:PopoupItemFrame(self, _G["AtlasLoot_ExtraData"][itemID] )
-            AtlasLoot_PopupFrame:Show()
         elseif(arg1=="RightButton" and itemID and IsAltKeyDown() and AtlasLootItemsFrame.refresh[2] ~= "AtlasLoot_CurrentWishList") then
             --add to defauly wishlist
             local listID = AtlasLootWishList["Options"][playerName]["DefaultWishList"]
@@ -277,8 +274,8 @@ function AtlasLoot:ItemOnClick(self ,arg1)
             ChatEdit_InsertLink(itemLink)
         elseif(IsShiftKeyDown() and AtlasLoot.db.profile.AllLinks) then
             ChatEdit_InsertLink(color.."|Hitem:"..itemID..":0:0:0:0:0:0:0|h["..name.."]|h|r")
-        elseif(ChatFrameEditBox and ChatFrameEditBox:IsVisible() and IsShiftKeyDown()) then
-            ChatFrameEditBox:Insert(name)  -- <-- this line just inserts plain text, does not need any adjustment
+        elseif(ChatFrame1EditBox and ChatFrame1EditBox:IsVisible() and IsShiftKeyDown()) then
+            ChatFrame1EditBox:Insert(name)  -- <-- this line just inserts plain text, does not need any adjustment
             --If control-clicked, use the dressing room
         elseif(IsControlKeyDown() and itemName) then
             --view item in dressing room
@@ -309,13 +306,14 @@ function AtlasLoot:ItemOnClick(self ,arg1)
             end
             --Show token table
             AtlasLoot:ShowItemsFrame(dataID, dataSource, tonumber(dataPage))
+        elseif arg1 == "LeftButton" and itemID and AtlasLoot_ExtraData[itemID] then
+            AtlasLoot:PopoupItemFrame(self, _G["AtlasLoot_ExtraData"][itemID] )
+            AtlasLoot_PopupFrame:Show()
         end
     else
         local recipeData = AtlasLoot:GetRecipeData(spellID)
-        if arg1 == "LeftButton" and recipeData then
-            AtlasLoot:PopoupItemFrame(self, recipeData)
-            AtlasLoot_PopupFrame:Show()
-        elseif IsShiftKeyDown() then
+        
+        if IsShiftKeyDown() then
             ChatEdit_InsertLink(AtlasLoot_GetEnchantLink(spellID))
         elseif arg1=="RightButton" then
             AtlasLoot:ItemContextMenu(spellID,nil, nil, nil, nil, self, "spell",nil,nil)
@@ -356,6 +354,9 @@ function AtlasLoot:ItemOnClick(self ,arg1)
             end
             --Show token table
             AtlasLoot:ShowItemsFrame(dataID, dataSource, tonumber(dataPage))
+        elseif arg1 == "LeftButton" and recipeData then
+            AtlasLoot:PopoupItemFrame(self, recipeData)
+            AtlasLoot_PopupFrame:Show()
         end
     end
 end
