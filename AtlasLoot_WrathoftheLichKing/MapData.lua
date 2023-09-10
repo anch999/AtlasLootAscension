@@ -270,34 +270,6 @@ local boss = "dungeonskull"
         };
     };
 
-    AtlasLoot_MapData["Naxxramas60"] = {
-        ZoneName = { BabbleZone["Naxxramas"], 3456 };
-        Location = { BabbleZone["Eastern Plaguelands"], 65 };
-        LevelRange = "60+";
-        MinLevel = "60";
-        PlayerLimit = "10-25";
-        Acronym = "Nax60";
-        MapName = "DireMaul";
-        [1] = {
-        { AL["Entrance"] };
-        { AL["Patchwerk"] };
-        { AL["Grobbulus"] };
-        { AL["Gluth"] };
-        { AL["Thaddius"] };
-        { AL["Anub'Rekhan"] };
-        { AL["Grand Widow Faerlina"] };
-        { AL["Maexxna"] };
-        { _RED..AL["Instructor Razuvious"] };
-        { _RED..AL["Gothik the Harvester"] };
-        { _RED..AL["Four Horsemen Chest"] };
-        { PURP..AL["Noth the Plaguebringer"] };
-        { PURP..AL["Heigan the Unclean"] };
-        { PURP..AL["Loatheb"] };
-        { AL["Sapphiron"] };
-        { AL["Kel'Thuzad"] };
-        };
-    };
-
     AtlasLoot_MapData["Naxxramas"] = {
         ZoneName = { BabbleZone["Naxxramas"], 3456 };
         Location = { BabbleZone["Dragonblight"], 65 };

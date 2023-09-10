@@ -136,11 +136,11 @@ function AtlasLoot:Chatlink(ID,chatType,Type)
     end
 end
 
-function AtlasLoot:GetRecipeData(recipeID)
+function AtlasLoot:GetRecipeData(recipeID, idType)
 	for _,prof in pairs(TRADESKILL_RECIPES) do
 		for _,cat in pairs(prof) do
 		   for _,recipe in pairs(cat) do
-			  if recipeID == recipe.SpellEntry or recipeID == recipe.RecipeItemEntry then
+			  if (idType == "spell" and recipeID == recipe.SpellEntry) or (idType == "item" and recipeID == recipe.RecipeItemEntry) then
 				local info = {{recipe.CreatedItemEntry}, "blank", "blank", "blank", "blank", "blank",spellID = recipe.SpellEntry}
 				if ItemIDsDatabase[recipe.CreatedItemEntry] and ItemIDsDatabase[recipe.CreatedItemEntry][1] then
 					info[2] = {ItemIDsDatabase[recipe.CreatedItemEntry][1]}
@@ -278,7 +278,7 @@ function AtlasLoot:PopoupItemFrame(self, data)
 			button.icon:SetTexture(GetItemIcon(itemID))
 			button.itemID = itemID
 			button.itemTexture = self.itemTexture
-			local recipe = AtlasLoot:GetRecipeData(itemID)
+			local recipe = AtlasLoot:GetRecipeData(itemID, "item")
 			if recipe then
 			button.craftingData = AtlasLoot:RecipeSource(recipe.spellID)
 			end

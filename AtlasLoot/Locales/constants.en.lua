@@ -930,6 +930,7 @@ if AL then
 	AL["Show recipe source"] = true
 	AL["Recipe Waypoints"] = true
 	AL["Random Level 70 instance drop"] = true
+	AL["Random Level 70 instance drop/Raid Trash Drop"] = true
 	AL["Shady Dealer"] = true
 	
 	--quest giver names
@@ -1609,11 +1610,18 @@ if AL then
 	AL["Lovely Dress Box"] = true
 	AL["Dinner Suit Box"] = true
 	AL["Bag of Heart Candies"] = true
+	AL["The Hive Undergrounds"] = true
+	AL["The Temple Gates"] = true
+	AL["Vault of C'Thun"] = true
+	AL["Overview"] = true
+	AL["Mob Drop"] = true
+	AL["TBC Callboard Cache"] = true
 
 	-- The next 4 lines are the tooltip for the Server Query Button
 	-- The translation doesn't have to be literal, just re-write the
 	-- sentences as you would naturally and break them up into 4 roughly
 	-- equal lines.
+	
 	AL["Queries the server for all items"] = true
 	AL["on this page. The items will be"] = true
 	AL["refreshed when you next mouse"] = true

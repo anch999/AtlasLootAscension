@@ -6,7 +6,6 @@
 	<!--Default Files-->
 	<Script file="AtlasLoot.lua"/>
 	<Script file="Common.lua"/>
-	<Script file="ItemIDsDatabaseFixes.lua"/>
 	<Script file="Filter.lua"/>
     <Script file="TextParsing.lua"/>
     <Script file="Options.lua"/>

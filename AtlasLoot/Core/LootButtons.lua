@@ -311,7 +311,7 @@ function AtlasLoot:ItemOnClick(self ,arg1)
             AtlasLoot_PopupFrame:Show()
         end
     else
-        local recipeData = AtlasLoot:GetRecipeData(spellID)
+        local recipeData = AtlasLoot:GetRecipeData(spellID, "spell")
         
         if IsShiftKeyDown() then
             ChatEdit_InsertLink(AtlasLoot_GetEnchantLink(spellID))

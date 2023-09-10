@@ -27,7 +27,8 @@ AtlasLoot.FixedItemText = {
     [29906] = BabbleInventory["Quest"], -- Vashj's Vial Remnant
     [29905] = BabbleInventory["Quest"], -- Kael's Vial Remnant
     [98570] = AL["Mystic Enchanting"],
-    [229739] = AL["Epic Shoulder Enchants"]
+    [229739] = AL["Epic Shoulder Enchants"],
+    [29434] = AL["Token"],
 }
 
 
@@ -1236,6 +1237,8 @@ function AtlasLoot:FixText(text)
     text = gsub(text, "#spiritshard#", "|TInterface\\Icons\\INV_Jewelry_FrostwolfTrinket_04:0|t")
     text = gsub(text, "#wintergrasp#", "|TInterface\\Icons\\INV_Misc_Platnumdisks:0|t")
     text = gsub(text, "#tokenofprestige#", "|TInterface\\Icons\\Spell_Holy_MindSooth:0|t")
+    text = gsub(text, "#marks#", "|TInterface\\Icons\\Mail_GMIcon:0|t")
+    text = gsub(text, "#bazaar#", "|TInterface\\Icons\\Spell_Shadow_Teleport:0|t")
     text = gsub(text, "#wintergraspmark#", "|TInterface\\Icons\\INV_Jewelry_Ring_66:0|t")
     text = gsub(text, "#venturecoin#", "|TInterface\\Icons\\INV_Misc_Coin_16:0|t")
     text = gsub(text, "#heroic#", "|TInterface\\Icons\\Spell_Holy_ChampionsBond:0|t")

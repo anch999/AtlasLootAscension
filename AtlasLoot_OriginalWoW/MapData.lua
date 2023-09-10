@@ -117,22 +117,23 @@ local boss = "dungeonskull"
         MapName = "RuinsofAhnQiraj";
         Reputation = AL["Cenarion Circle"];
         [1] = {
-            { AL["Kurinnaxx"] };
+            {BabbleZone["Ruins of Ahn'Qiraj"], SubZone = true};
+            { AL["Kurinnaxx"], cords = {56,35}, pinType = boss };
             { AL["Lieutenant General Andorov"] };
             { AL["Four Kaldorei Elites"] };
-            { AL["General Rajaxx"] };
+            { AL["General Rajaxx"], cords = {57,53}, pinType = boss };
             { AL["Captain Qeez"] };
             { AL["Captain Tuubid"] };
             { AL["Captain Drenn"] };
             { AL["Captain Xurrem"] };
             { AL["Major Yeggeth"] };
             { AL["Major Pakkon"] };
-            { AL["Colonel Zerran"] };
-            { AL["Moam"].." ("..AL["Optional"]..")" };
-            { AL["Buru the Gorger"].." ("..AL["Optional"]..")" };
-            { AL["Ayamiss the Hunter"].." ("..AL["Optional"]..")" };
-            { AL["Ossirian the Unscarred"] };
-            { AL["Safe Room"] };
+            { AL["Colonel Zerran"]  };
+            { AL["Moam"].." ("..AL["Optional"]..")", cords = {32,38}, pinType = boss };
+            { AL["Buru the Gorger"].." ("..AL["Optional"]..")", cords = {71,60}, pinType = boss };
+            { AL["Ayamiss the Hunter"].." ("..AL["Optional"]..")", cords = {60,89}, pinType = boss };
+            { AL["Ossirian the Unscarred"], cords = {41,73}, pinType = boss };
+            { AL["Safe Room"], cords = {63,74} };
         };
     };
 
@@ -144,30 +145,80 @@ local boss = "dungeonskull"
         PlayerLimit = "10-25";
         Acronym = AL["AQT"];
         MapName = "AhnQiraj";
+        Reputation = AL["Brood of Nozdormu"];
         [1] = {
-            { AL["Reputation"]..": "..AL["Brood of Nozdormu"] };
-            { AL["Entrance"] };
-            { AL["The Prophet Skeram"].." ("..AL["Outside"]..")" };
-            { AL["The Bug Family"].." ("..AL["Optional"]..")" };
+            { AL["The Hive Undergrounds"], SubZone = true};
+            { AL["The Bug Family"].." ("..AL["Optional"]..")", cords = {28,50}, pinType = boss };
             { AL["Vem"] };
             { AL["Lord Kri"] };
             { AL["Princess Yauj"] };
-            { AL["Battleguard Sartura"] };
-            { AL["Fankriss the Unyielding"] };
-            { AL["Viscidus"].." ("..AL["Optional"]..")" };
-            { AL["Princess Huhuran"] };
-            { AL["Twin Emperors"] };
+            { AL["Battleguard Sartura"], cords = {45,35}, pinType = boss };
+            { AL["Fankriss the Unyielding"], cords = {63,23}, pinType = boss };
+            { AL["Viscidus"].." ("..AL["Optional"]..")", cords = {73,18}, pinType = boss };
+            { AL["Princess Huhuran"], cords = {44,50}, pinType = boss };
+            { AL["Twin Emperors"], cords = {61,71}, pinType = boss };
             { AL["Emperor Vek'lor"] };
             { AL["Emperor Vek'nilash"] };
-            { AL["Ouro"].." ("..AL["Optional"]..")" };
-            { AL["Eye of C'Thun"] };
+            { AL["Ouro"].." ("..AL["Optional"]..")", cords = {31,81}, pinType = boss };
+        };
+        [2] = {
+            { AL["The Temple Gates"], SubZone = true};
+            { AL["The Prophet Skeram"].." ("..AL["Outside"]..")", cords = {46,53}, pinType = boss };
+        };
+        [3] = {
+            { AL["Vault of C'Thun"], SubZone = true};
+            { AL["Eye of C'Thun"], cords = {57,63}, pinType = boss };
             { AL["C'Thun"] };
-            { AL["Andorgos <Brood of Malygos>"] };
+            { AL["Andorgos <Brood of Malygos>"] , cords = {50,19} };
             { AL["Vethsera <Brood of Ysera>"] };
             { AL["Kandrostrasz <Brood of Alexstrasza>"] };
-            { AL["Arygos"] };
+            { AL["Arygos"], cords = {41,26} };
             { AL["Caelestrasz"] };
             { AL["Merithra of the Dream"] };
+        };
+    };
+
+    AtlasLoot_MapData["Naxxramas60"] = {
+        ZoneName = { BabbleZone["Naxxramas"], 3456 };
+        Location = { BabbleZone["Eastern Plaguelands"], 65 };
+        LevelRange = "60+";
+        MinLevel = "60";
+        PlayerLimit = "10-25";
+        Acronym = "Nax60";
+        MapName = "Naxxramas";
+        [1] = {
+            { BabbleSubZone["The Construct Quarter"], SubZone = true };
+            { AL["Patchwerk"], cords = {54,41}, pinType = boss };
+            { AL["Grobbulus"], cords = {62,53}, pinType = boss };
+            { AL["Gluth"], cords = {46,44}, pinType = boss };
+            { AL["Thaddius"], cords = {28,15}, pinType = boss };
+        };
+        [2] = {
+            { BabbleSubZone["The Arachnid Quarter"], SubZone = true };
+            { AL["Anub'Rekhan"], cords = {31,47}, pinType = boss};
+            { AL["Grand Widow Faerlina"], cords = {44,36}, pinType = boss };
+            { AL["Maexxna"], cords = {69,15}, pinType = boss };
+            };
+        [3] = {
+            { BabbleSubZone["The Military Quarter"], SubZone = true };
+            { _RED..AL["Instructor Razuvious"], cords = {43,46}, pinType = boss};
+            { _RED..AL["Gothik the Harvester"], cords = {67,60}, pinType = boss};
+            { _RED..AL["Four Horsemen Chest"], cords = {30,77}, pinType = boss};
+        };
+        [4] = {
+            { BabbleSubZone["The Plague Quarter"], SubZone = true };
+            { AL["Noth the Plaguebringer"], cords = {35,57}, pinType = boss };
+            { AL["Heigan the Unclean"], cords = {50,46}, pinType = boss };
+            { AL["Loatheb"], cords = {76,28}, pinType = boss };
+        };
+        [5] = {
+            { AL["Overview"], SubZone = true };
+
+        };
+        [6] = {
+            { BabbleSubZone["Frostwyrm Lair"], SubZone = true };
+            { AL["Sapphiron"], cords = {37,23}, pinType = boss };
+            { AL["Kel'Thuzad"], cords = {57,68}, pinType = boss };
         };
     };
 

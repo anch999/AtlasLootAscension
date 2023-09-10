@@ -1818,7 +1818,9 @@ AtlasLoot_Data["Karazhan"] = {
 		[18] = { itemID = 28504, droprate = "2.44%" }; --Steelhawk Crossbow
 		[19] = { itemID = 30480, droprate = ".25%" }; --Fiery Warhorse's Reins
 		[21] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
-		[23] = { itemID = 23809, droprate = ".100" }; --Schematic: Stabilized Eternium Scope
+		[22] = { itemID = 400751, droprate = "100%" }; --Raider's Commendations
+		[24] = { itemID = 23809, droprate = ".100" }; --Schematic: Stabilized Eternium Scope
+		[26] = { itemID = 60198, droprate = "1%" }; --Pet Sigil
 	};
 	{
 		Name = BabbleBoss["Moroes"];
@@ -1829,13 +1831,15 @@ AtlasLoot_Data["Karazhan"] = {
 		[5] = { itemID = 28567, droprate = "2.05%" }; --Belt of Gale Force
 		[6] = { itemID = 28566, droprate = "0.81%" }; --Crimson Girdle of the Indomitable
 		[7] = { itemID = 28569, droprate = "1.33%" }; --Boots of Valiance
-		[9] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 		[16] = { itemID = 28530, droprate = "2.25%" }; --Brooch of Unquenchable Fury
 		[17] = { itemID = 28528, droprate = "2.05%" }; --Moroes' Lucky Pocket Watch
 		[18] = { itemID = 28525, droprate = "4.54%" }; --Signet of Unshakable Faith
 		[19] = { itemID = 28568, droprate = "4.08%" }; --Idol of the Avian Heart
 		[20] = { itemID = 28524, droprate = "2.90%" }; --Emerald Ripper
-		[22] = { itemID = 22559, droprate = "N:2%/H:5%/A:10" }; --Formula: Enchant Weapon - Mongoose
+		[22] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
+		[23] = { itemID = 400751, droprate = "100%" }; --Raider's Commendations
+		[25] = { itemID = 22559, droprate = "N:2%/H:5%/A:10" }; --Formula: Enchant Weapon - Mongoose
+		[27] = { itemID = 60166, droprate = "1%" }; --Pet Sigil
 	};
 	{
 		Name = "Keanna's Log (" .. AL["Quest Item"] .. ")";
@@ -1856,8 +1860,9 @@ AtlasLoot_Data["Karazhan"] = {
 		[17] = { itemID = 28523, droprate = "4.58%" }; --Totem of Healing Rains
 		[18] = { itemID = 28522, droprate = "0.69%" }; --Shard of the Virtuous
 		[20] = { itemID = 229739, droprate = "100%" }; --Tome of Untold Secrets
-		[21] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
-		[22] = { itemID = 816253, droprate = "N:2%/H:5%/A:10" }; --Formula: Enchant Weapon - Faith
+		[22] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
+		[23] = { itemID = 400751, droprate = "100%" }; --Raider's Commendations
+		[25] = { itemID = 816253, droprate = "N:2%/H:5%/A:10" }; --Formula: Enchant Weapon - Faith
 	};
 	{
 		Name = "Opera Event";
@@ -1902,7 +1907,8 @@ AtlasLoot_Data["Karazhan"] = {
 		[19] = { itemID = 28611, droprate = "3.57%" }; --Dragonheart Flameshield
 		[20] = { itemID = 28606, droprate = "2.14%" }; --Shield of Impenetrable Darkness
 		[22] = { itemID = 229739, droprate = "100%" }; --Tome of Untold Secrets
-		[23] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
+		[24] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
+		[25] = { itemID = 400751, droprate = "100%" }; --Raider's Commendations
 	};
 	{
 		Name = BabbleBoss["The Curator"];
@@ -1912,8 +1918,11 @@ AtlasLoot_Data["Karazhan"] = {
 		[4] = { itemID = 28621, droprate = "1.85%" }; --Wrynn Dynasty Greaves
 		[5] = { itemID = 28649, droprate = "2.07%" }; --Garona's Signet Ring
 		[6] = { itemID = 28633, droprate = "2.28%" }; --Staff of Infinite Mysteries
-		[8] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 		[16] = { itemID = 29758, droprate = "100%", lootTable = {"T4HAND","Token"} }; --Gloves of the Fallen Defender
+		[18] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
+		[19] = { itemID = 400751, droprate = "100%" }; --Raider's Commendations
+		[20] = { itemID = 98570, droprate = "100%" }; --Mystic Orbs
+		[22] = { itemID = 60170, droprate = "1%" }; --Sigil of The Curator
 	};
 	{
 		Name = BabbleBoss["Terestian Illhoof"];
@@ -1924,14 +1933,16 @@ AtlasLoot_Data["Karazhan"] = {
 		[5] = { itemID = 28655, droprate = "4.93%" }; --Cord of Nature's Sustenance
 		[6] = { itemID = 28656, droprate = "7.91%" }; --Girdle of the Prowler
 		[7] = { itemID = 28662, droprate = "7.31%" }; --Breastplate of the Lightbinder
-		[9] = { itemID = 229739, droprate = "100%" }; --Tome of Untold Secrets
-		[10] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 		[16] = { itemID = 28661, droprate = "1.64%" }; --Mender's Heart-Ring
 		[17] = { itemID = 28785, droprate = "0.75%" }; --The Lightning Capacitor
 		[18] = { itemID = 28657, droprate = "4.63%" }; --Fool's Bane
 		[19] = { itemID = 28658, droprate = ".46%" }; --Terestian's Stranglestaff
 		[20] = { itemID = 28659, droprate = "3.43%" }; --Xavian Stiletto
-		[22] = { itemID = 22561, droprate = "N:2%/H:5%/A:10" }; --Formula: Enchant Weapon - Soulfrost
+		[22] = { itemID = 229739, droprate = "100%" }; --Tome of Untold Secrets
+		[24] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
+		[25] = { itemID = 400751, droprate = "100%" }; --Raider's Commendations
+		[27] = { itemID = 22561, droprate = "N:2%/H:5%/A:10" }; --Formula: Enchant Weapon - Soulfrost
+		[29] = { itemID = 60167, droprate = "1%" }; --Sigil of Terestain Illhoof
 	};
 	{
 		Name = BabbleBoss["Shade of Aran"];
@@ -1942,14 +1953,17 @@ AtlasLoot_Data["Karazhan"] = {
 		[5] = { itemID = 28669, droprate = "1.32%" }; --Rapscallion Boots
 		[6] = { itemID = 28671, droprate = "2.21%" }; --Steelspine Faceguard
 		[7] = { itemID = 28666, droprate = "1.58%" }; --Pauldrons of the Justice-Seeker
-		[9] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
-		[11] = { itemID = 23933, droprate = "100%" }; --Medivh's Journal
+		[9] = { itemID = 23933, droprate = "100%" }; --Medivh's Journal
 		[16] = { itemID = 28674, droprate = "1.20%" }; --Saberclaw Talisman
 		[17] = { itemID = 28675, droprate = "0.43%" }; --Shermanar Great-Ring
 		[18] = { itemID = 28727, droprate = "5.39%" }; --Pendant of the Violet Eye
 		[19] = { itemID = 28728, droprate = "2.72%" }; --Aran's Soothing Sapphire
 		[20] = { itemID = 28673, droprate = ".25%" }; --Tirisfal Wand of Ascendancy
-		[22] = { itemID = 22560, droprate = "N:2%/H:5%/A:10" }; --Formula: Enchant Weapon - Sunfire
+		[22] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
+		[23] = { itemID = 400751, droprate = "100%" }; --Raider's Commendations
+		[24] = { itemID = 98570, droprate = "100%" }; --Mystic Orbs
+		[26] = { itemID = 22560, droprate = "N:2%/H:5%/A:10" }; --Formula: Enchant Weapon - Sunfire
+		[28] = { itemID = 60372, droprate = "1%" }; --Pet Sigil
 	};
 	{
 		Name = BabbleBoss["Netherspite"];
@@ -1966,7 +1980,8 @@ AtlasLoot_Data["Karazhan"] = {
 		[18] = { itemID = 28734, droprate = "1.64%" }; --Jewel of Infinite Possibilities
 		[19] = { itemID = 28729, droprate = ".32%" }; --Spiteblade
 		[21] = { itemID = 229739, droprate = "100%" }; --Tome of Untold Secrets
-		[22] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
+		[23] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
+		[24] = { itemID = 400751, droprate = "100%" }; --Raider's Commendations
 	};
 	{
 		Name = BabbleBoss["Chess Event"];
@@ -2000,8 +2015,10 @@ AtlasLoot_Data["Karazhan"] = {
 		[13] = { itemID = 28772, droprate = ".97%" }; --Sunfury Bow of the Phoenix
 		[16] = { itemID = 29761, droprate = "100%", lootTable = {"T4HEAD","Token"} }; --Helm of the Fallen Defender
 		[18] = { itemID = 229739, droprate = "100%" }; --Tome of Untold Secrets
-		[19] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
-		[21] = { itemID = 499438, [AtlasLoot_Difficulty.MIN_DIF] = AtlasLoot_Difficulty.Heroic,"" }; --Smoldering Emberwyrm
+		[20] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
+		[21] = { itemID = 400751, droprate = "100%" }; --Raider's Commendations
+		[23] = { itemID = 60169, droprate = "1%" }; --Pet Sigil
+		[25] = { itemID = 499438, [AtlasLoot_Difficulty.MIN_DIF] = AtlasLoot_Difficulty.Heroic }; --Smoldering Emberwyrm
 	};
 	{ --Trash Mobs
 		Name = AL["Trash Mobs"];

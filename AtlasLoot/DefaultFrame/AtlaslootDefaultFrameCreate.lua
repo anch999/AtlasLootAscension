@@ -109,9 +109,9 @@ for num = 1, 30 do
         button:SetScript("OnLeave", function(self) AtlasLootItem_OnLeave(self) end)
         button:SetScript("OnClick", function(self, arg1) AtlasLoot:ItemOnClick(self, arg1) end)
         if num == 1 then
-            button:SetPoint("TOP", "AtlasLootItemsFrame", "TOP",-180,-35)
+            button:SetPoint("TOP", "AtlasLootItemsFrame", "TOP",-210,-35)
         elseif num == 16 then
-            button:SetPoint("TOP", "AtlasLootItemsFrame", "TOP",180,-35)
+            button:SetPoint("TOP", "AtlasLootItemsFrame", "TOP",150,-35)
         else
             button:SetPoint("TOPLEFT", "AtlasLootItem_"..(num - 1), "BOTTOMLEFT")
         end

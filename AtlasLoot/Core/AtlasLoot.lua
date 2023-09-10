@@ -43,6 +43,7 @@ local PURPLE = "|cff9F3FFF"
 local LIMEGREEN = "|cFF32CD32"
 local BLUE = "|cff0070dd"
 local ORANGE = "|cffFF8400"
+local YELLOW = "|cffFFd200"
 local itemHighlightBlue = "Interface\\AddOns\\AtlasLoot\\Images\\knownBlue"
 local itemHighlightGreen = "Interface\\AddOns\\AtlasLoot\\Images\\knownGreen"
 --local itemHighlightBlue = "Interface\\AddOns\\AwAddons\\Textures\\LootTex\\Loot_Icon_Blue"
@@ -313,108 +314,125 @@ end
 
 function AtlasLoot:RecipeSource(spellID)
 	if not spellID then return end
-	local craftingData = AtlasLoot_CraftingData["ExtraCraftingData"][spellID]
-	if not craftingData then return end
+	local cData = AtlasLoot_CraftingData
 	local data = {}
-	 --extra information on where to find the recipe
-	 local aquireType = AtlasLoot_CraftingData["AquireType"][craftingData[2]]
-		local sources = {[1] = true, [5] = true, [7] = true}
-	 	if sources[craftingData[2]] then
-			tinsert(data, {AL["Source"]..": "..WHITE..aquireType})
-		elseif craftingData[2] == 8 then
-			if type(aquireType[craftingData[3]]) == "table" then
-				tinsert(data, {AL["Source"]..": "..WHITE..aquireType[craftingData[3]][1]})
-					local cords
-					if aquireType[craftingData[3]][3] ~= 0 or aquireType[craftingData[3]][4] ~= 0 then
-						cords = {aquireType[craftingData[3]][3], aquireType[craftingData[3]][4]}
-					end
-				tinsert(data, {AL["Zone"]..": "..WHITE..aquireType[craftingData[3]][2], cords})
-			else
-				tinsert(data, {AL["Source"]..": "..WHITE..aquireType[craftingData[3]]})
+	-- extra information on where to find the recipe
+	-- trainer learnt
+	local trainer = cData["Trainer"][spellID]
+	if trainer then tinsert(data, {AL["Source"]..": "..WHITE..trainer}) end
+	-- aquire type
+	local aquireType = cData["AquireType"][spellID]
+	if aquireType then
+		tinsert(data, {AL["Source"]..": "..WHITE..cData[aquireType[1]][aquireType[2]][1]})
+	end
+	-- vendor recipe
+	local vendor = cData["Vendor"][spellID]
+	if vendor then
+		tinsert(data, {AL["Source"]..": "..WHITE..AL["Vendor"]})
+		for _,v in pairs(vendor) do
+			local vendor = AtlasLoot_CraftingData["VendorList"][v]
+			tinsert(data, {vendor[1], vendor[2], cords = {vendor[3], vendor[4]}, fac = vendor[5]})
+		end
+	end
+	-- vendor recipe
+	local recipeRepVendor = cData["RecipeRepVendor"][spellID]
+	if recipeRepVendor then
+		tinsert(data, {AL["Source"]..": "..WHITE..AL["Vendor"]})
+		local vendor = AtlasLoot_CraftingData["VendorList"][spellID]
+		for	i = 3, 6 do
+			if vendor and vendor[i] then
+			tinsert(data, {vendor[1], vendor[2], fac = vendor[i]})
 			end
 		end
-		 --vendor recipe
-		if craftingData.vendor then
-			tinsert(data, {AL["Source"]..": "..WHITE..AtlasLoot_CraftingData["AquireType"][2]})
-			for _,v in pairs(craftingData.vendor) do
-				local vendor = AtlasLoot_CraftingData["VendorList"][v]
-				tinsert(data, {vendor[1], vendor[2], cords = {vendor[3], vendor[4]}, fac = vendor[5]})
-			end
+	end
+	--limited vendor recipes
+	local limitedVendor = cData["LimitedVendor"][spellID]
+	if limitedVendor then
+		tinsert(data, {AL["Source"]..": "..WHITE..AL["Limited Stock"]})
+		local sort = {}
+		local limited = false
+		for i,v in pairs(limitedVendor) do
+			 if limited then
+				 tinsert(sort[i-1],v)
+				 limited = false
+			 else
+				 sort[i] = {v}
+				 limited = true
+			 end
 		end
-		 --limited vendor recipes
-		if craftingData.limitedVendor then
-			tinsert(data, {AL["Source"]..": "..WHITE..AtlasLoot_CraftingData["AquireType"][2]})
-			local sort = {}
-			local limited = false
-			for i,v in pairs(craftingData.limitedVendor) do
-				 if limited then
-					 tinsert(sort[i-1],v)
-					 limited = false
-				 else
-					 sort[i] = {v}
-					 limited = true
-				 end
-			end
-			for _,v in pairs(sort) do
-				 local vendor = AtlasLoot_CraftingData["VendorList"][v[1]]
-				 tinsert(data, {vendor[1], vendor[2], cords = {vendor[3], vendor[4]}, fac = vendor[5], limited = v[2]})
-			end
+		for _,v in pairs(sort) do
+			 local vendor = AtlasLoot_CraftingData["VendorList"][v[1]]
+			 tinsert(data, {vendor[1], vendor[2], cords = {vendor[3], vendor[4]}, fac = vendor[5], limited = v[2]})
 		end
-		 --mob drop
-		if craftingData.mobDrop then
-			tinsert(data, {AL["Source"]..": "..WHITE..AtlasLoot_CraftingData["AquireType"][3]})
-			for _,v in pairs(craftingData.mobDrop) do
-				local mob = AtlasLoot_CraftingData["MobList"][v]
-				local cords = nil
-				if mob[3] ~= 0 and mob[4] ~= 0 then
-					cords = {mob[3], mob[4]}
-				end
-				tinsert(data, {mob[1], WHITE..mob[2], cords})
+	end
+	--mob drop
+	local mobDrop = cData["MobDrop"][spellID]
+	if mobDrop then
+		tinsert(data, {AL["Source"]..": "..WHITE..AL["Mob Drop"]})
+		for _,v in pairs(mobDrop) do
+			local mob = AtlasLoot_CraftingData["MobList"][v]
+			local cords = nil
+			if mob[3] ~= 0 and mob[4] ~= 0 then
+				cords = {mob[3], mob[4]}
 			end
+			tinsert(data, {mob[1], WHITE..mob[2], cords})
 		end
-		 --quest
-		if craftingData.quest then
-			tinsert(data, {AL["Source"]..": "..WHITE..AtlasLoot_CraftingData["AquireType"][4]})
-			for _,v in pairs(craftingData.quest) do
-				local quest = AtlasLoot_CraftingData["QuestList"][v]
-				tinsert(data, {quest[1], cords = {quest[2], quest[3]}, fac = quest[4]})
-			end
+	end
+	-- World Drop
+	local worldDrop = cData["WorldDrop"][spellID]
+	if worldDrop then
+		tinsert(data, {AL["Source"]..": "..WHITE..AL["World Drop"]})
+		local text = worldDrop[1]
+		if worldDrop[2] then
+			text = text.." / "..worldDrop[2]
 		end
-		 --rep vendor
-		if craftingData.repVendor then
-			tinsert(data, {AL["Source"]..": "..WHITE..AtlasLoot_CraftingData["AquireType"][6]})
-			local line1, line2
-			local repVendor = {}
-			for i,v in pairs(craftingData.repVendor) do
-				 if type(v) == "table" then
-					 for i,v in pairs(v) do
-						 if i == 1 then
-							 line1 = AL["Faction"]..": "..WHITE..v
-						 elseif i == 2 then
-							 line2 = AL["Required Reputation"]..": "..WHITE..v
-						 else
-							 tinsert(repVendor,AtlasLoot_CraftingData["VendorList"][v])
-						 end
-					 end
-				 else
+		tinsert(data, {text})
+	end
+	--quest
+	local questDrop = cData["QuestDrop"][spellID]
+	if questDrop then
+		tinsert(data, {AL["Source"]..": "..WHITE..AL["Quest"]})
+		for _,v in pairs(questDrop) do
+			local quest = AtlasLoot_CraftingData["QuestList"][v]
+			tinsert(data, {quest[1], cords = {quest[2], quest[3]}, fac = quest[4]})
+		end
+	end
+	--rep vendor
+	local repVendor = cData["RepVendor"][spellID]
+	if repVendor then
+		tinsert(data, {AL["Source"]..": "..WHITE..AL["Reputation Vendor"]})
+		local line1, line2
+		local list = {}
+		for i,v in pairs(repVendor) do
+			 if type(v) == "table" then
+				 for i,v in pairs(v) do
 					 if i == 1 then
 						 line1 = AL["Faction"]..": "..WHITE..v
 					 elseif i == 2 then
 						 line2 = AL["Required Reputation"]..": "..WHITE..v
 					 else
-						 tinsert(repVendor,AtlasLoot_CraftingData["VendorList"][v])
+						 tinsert(list,AtlasLoot_CraftingData["VendorList"][v])
 					 end
 				 end
-			end
-			tinsert(data, {line1, line2})
-			for _,v in pairs(repVendor) do
-				local cords
-				if v[3] ~= 0 and v[4] ~= 0 then
-					cords = {v[3], v[4]}
-				end
-				tinsert(data, {v[1], WHITE..v[2], cords, fac = v[5]})
-			end
+			 else
+				 if i == 1 then
+					 line1 = AL["Faction"]..": "..WHITE..v
+				 elseif i == 2 then
+					 line2 = AL["Required Reputation"]..": "..WHITE..v
+				 else
+					 tinsert(list,AtlasLoot_CraftingData["VendorList"][v])
+				 end
+			 end
 		end
+		tinsert(data, {line1, line2})
+		for _,v in pairs(list) do
+			local cords
+			if v[3] ~= 0 and v[4] ~= 0 then
+				cords = {v[3], v[4]}
+			end
+			tinsert(data, {v[1], WHITE..v[2], cords, fac = v[5]})
+		end
+	end
 	return data
 end
 
@@ -697,8 +715,9 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 			extra = AtlasLoot.FixedItemText[dataSource[dataID][tablenum][i].itemID]
 		elseif dataSource[dataID][tablenum][i].desc then
 			extra = dataSource[dataID][tablenum][i].desc
-		elseif AtlasLoot_CraftingData["ExtraCraftingData"] and spellID and AtlasLoot_CraftingData["ExtraCraftingData"][spellID] then
-			extra = LIMEGREEN .. "L-Click:|r "..WHITE..dataSource[dataID].Name.." | "..AtlasLoot_CraftingData["ExtraCraftingData"][spellID][1]
+		elseif AtlasLoot_CraftingData["CraftingLevels"] and spellID and AtlasLoot_CraftingData["CraftingLevels"][spellID] then
+			local lvls = AtlasLoot_CraftingData["CraftingLevels"][spellID]
+			extra = LIMEGREEN .. "L-Click:|r "..WHITE..dataSource[dataID].Name.." ( "..ORANGE..lvls[1].."|r "..YELLOW..lvls[2].."|r "..GREEN..lvls[3].."|r "..GREY..lvls[4]..WHITE.." )"
 		elseif dataSource[dataID][tablenum][i].lootTable and dataSource[dataID][tablenum][i].lootTable[2] == "Token" then
 			extra = "#setToken#"
 		elseif itemEquipLoc and itemSubType then
@@ -715,9 +734,10 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 			extra = extra ..WHITE.." ("..dataSource[dataID][tablenum][i].price..")"
 		end
 
-		local recipeSpellID = AtlasLoot:GetRecipeData(dataSource[dataID][tablenum][i].itemID)
-		if recipeSpellID then
-			extra = extra ..WHITE.." ("..AtlasLoot_CraftingData["ExtraCraftingData"][recipeSpellID.spellID][1]..")"
+		local recipe = AtlasLoot:GetRecipeData(itemID, "item")
+		if recipe and AtlasLoot_CraftingData["CraftingLevels"] and AtlasLoot_CraftingData["CraftingLevels"][recipe.spellID] then
+			local lvls = AtlasLoot_CraftingData["CraftingLevels"][recipe.spellID]
+			extra = extra ..WHITE.." ( "..ORANGE..lvls[1].."|r "..YELLOW..lvls[2].."|r "..GREEN..lvls[3].."|r "..GREY..lvls[4]..WHITE.." )"
 		end
 
 		extra = AtlasLoot:FixText(extra)
@@ -944,7 +964,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 		AtlasLoot:HideFilteredItems()
 	end
 	--preload items from the rest of the instance table
-	AtlasLoot:PreLoadLootTable(dataSource, dataID)
+	AtlasLoot:PreLoadLootTable(dataSource, dataID, ItemindexID)
 end
 
 --[[
@@ -1138,12 +1158,13 @@ end
 
 -- Used to precache all the items in a raid/instance
 local isLoaded = {}
-function AtlasLoot:PreLoadLootTable(dataSource, dataID)
-	if isLoaded[dataID] then return end
+function AtlasLoot:PreLoadLootTable(dataSource, dataID, ItemindexID)
+	if isLoaded[dataID] and isLoaded[dataID][ItemindexID] then return end
 	for _, instance in ipairs(dataSource[dataID]) do
 		for _, boss in pairs(instance) do
-			if boss.itemID then
-				local item = Item:CreateFromID(boss.itemID)
+			local itemID = ItemIDsDatabase[boss.itemID] and ItemIDsDatabase[boss.itemID][ItemindexID] or boss.itemID
+			if itemID then
+				local item = Item:CreateFromID(itemID)
 				if item and not item:GetInfo() then
 					AtlasLoot:ItemsLoading(1)
 					item:ContinueOnLoad(function(itemID)
@@ -1153,7 +1174,8 @@ function AtlasLoot:PreLoadLootTable(dataSource, dataID)
 			end
 		end
 	end
-	isLoaded[dataID] = true
+	if not isLoaded[dataID] then isLoaded[dataID] = {} end
+	isLoaded[dataID][ItemindexID] = true
 end
 
 

@@ -76,12 +76,6 @@ local SPELLFIRE = GetSpellInfo(26797);
 ---- Leatherworking
 ---- Mining
 ---- Tailoring
---- Profession Sets
----- Blacksmithing Mail Sets
----- Blacksmithing Plate Sets
----- Leatherworking Leather Sets
----- Leatherworking Mail Sets
----- Tailoring Sets
 --- Other
 ---- Crafted Epic Weapons
 
@@ -788,11 +782,11 @@ AtlasLoot_Data["JewelcraftingTBC"] = {
 		[20] = { itemID = 24030, spellID = 31088 }; --Runed Living Ruby
 		[21] = { itemID = 24032, spellID = 31090 }; --Subtle Living Ruby
 		[22] = { itemID = 24029, spellID = 31087 }; --Teardrop Living Ruby
-		[23] = { itemID = 23097, spellID = 28907 }; --Delicate Blood Garnet
-		[24] = { itemID = 23096, spellID = 28906 }; --Runed Blood Garnet
-		[25] = { itemID = 23095, spellID = 28905 }; --Bold Blood Garnet
-		[26] = { itemID = 28595, spellID = 34590 }; --Bright Blood Garnet
-		[27] = { itemID = 23094, spellID = 28903 }; --Teardrop Blood Garnet
+		[24] = { itemID = 23097, spellID = 28907 }; --Delicate Blood Garnet
+		[25] = { itemID = 23096, spellID = 28906 }; --Runed Blood Garnet
+		[26] = { itemID = 23095, spellID = 28905 }; --Bold Blood Garnet
+		[27] = { itemID = 28595, spellID = 34590 }; --Bright Blood Garnet
+		[28] = { itemID = 23094, spellID = 28903 }; --Teardrop Blood Garnet
 	};
 	{
 		Name = AL["Blue Gems"];
@@ -801,14 +795,14 @@ AtlasLoot_Data["JewelcraftingTBC"] = {
 		[3] = { itemID = 32201, spellID = 39716 }; --Sparkling Empyrean Sapphire
 		[4] = { itemID = 32203, spellID = 39718 }; --Stormy Empyrean Sapphire
 		[5] = { itemID = 33135, spellID = 42590 }; --Falling Star
-		[6] = { itemID = 24037, spellID = 31094 }; --Lustrous Star of Elune
-		[7] = { itemID = 24033, spellID = 31092 }; --Solid Star of Elune
-		[8] = { itemID = 24035, spellID = 31149 }; --Sparkling Star of Elune
-		[9] = { itemID = 24039, spellID = 31095 }; --Stormy Star of Elune
-		[10] = { itemID = 23121, spellID = 28957 }; --Lustrous Azure Moonstone
-		[11] = { itemID = 23120, spellID = 28955 }; --Stormy Azure Moonstone
-		[12] = { itemID = 23119, spellID = 28953 }; --Sparkling Azure Moonstone
-		[13] = { itemID = 23118, spellID = 28950 }; --Solid Azure Moonstone
+		[7] = { itemID = 24037, spellID = 31094 }; --Lustrous Star of Elune
+		[8] = { itemID = 24033, spellID = 31092 }; --Solid Star of Elune
+		[9] = { itemID = 24035, spellID = 31149 }; --Sparkling Star of Elune
+		[10] = { itemID = 24039, spellID = 31095 }; --Stormy Star of Elune
+		[16] = { itemID = 23121, spellID = 28957 }; --Lustrous Azure Moonstone
+		[17] = { itemID = 23120, spellID = 28955 }; --Stormy Azure Moonstone
+		[18] = { itemID = 23119, spellID = 28953 }; --Sparkling Azure Moonstone
+		[19] = { itemID = 23118, spellID = 28950 }; --Solid Azure Moonstone
 	};
 	{
 		Name = AL["Yellow Gems"];
@@ -831,12 +825,12 @@ AtlasLoot_Data["JewelcraftingTBC"] = {
 		[21] = { itemID = 24051, spellID = 31098 }; --Rigid Dawnstone
 		[22] = { itemID = 24048, spellID = 31097 }; --Smooth Dawnstone
 		[23] = { itemID = 24052, spellID = 31100 }; --Thick Dawnstone
-		[24] = { itemID = 31860, spellID = 39451 }; --Great Golden Draenite
-		[25] = { itemID = 23116, spellID = 28948 }; --Rigid Golden Draenite
-		[26] = { itemID = 28290, spellID = 34069 }; --Smooth Golden Draenite
-		[27] = { itemID = 23115, spellID = 28947 }; --Thick Golden Draenite
-		[28] = { itemID = 23114, spellID = 28944 }; --Gleaming Golden Draenite
-		[29] = { itemID = 23113, spellID = 28938 }; --Brilliant Golden Draenite
+		[25] = { itemID = 31860, spellID = 39451 }; --Great Golden Draenite
+		[26] = { itemID = 23116, spellID = 28948 }; --Rigid Golden Draenite
+		[27] = { itemID = 28290, spellID = 34069 }; --Smooth Golden Draenite
+		[28] = { itemID = 23115, spellID = 28947 }; --Thick Golden Draenite
+		[29] = { itemID = 23114, spellID = 28944 }; --Gleaming Golden Draenite
+		[30] = { itemID = 23113, spellID = 28938 }; --Brilliant Golden Draenite
 	};
 	{
 		Name = AL["Green Gems"];
@@ -846,12 +840,12 @@ AtlasLoot_Data["JewelcraftingTBC"] = {
 		[4] = { itemID = 32226, spellID = 39742 }; --Jagged Seaspray Emerald
 		[5] = { itemID = 32224, spellID = 39740 }; --Radiant Seaspray Emerald
 		[6] = { itemID = 35758, spellID = 47054 }; --Steady Seaspray Emerald
-		[7] = { itemID = 24065, spellID = 31112 }; --Dazzling Talasite
-		[8] = { itemID = 24062, spellID = 31110 }; --Enduring Talasite
-		[9] = { itemID = 35318, spellID = 46405 }; --Forceful Talasite
-		[10] = { itemID = 24067, spellID = 31113 }; --Jagged Talasite
-		[11] = { itemID = 24066, spellID = 31111 }; --Radiant Talasite
-		[12] = { itemID = 33782, spellID = 43493 }; --Steady Talasite
+		[8] = { itemID = 24065, spellID = 31112 }; --Dazzling Talasite
+		[9] = { itemID = 24062, spellID = 31110 }; --Enduring Talasite
+		[10] = { itemID = 35318, spellID = 46405 }; --Forceful Talasite
+		[11] = { itemID = 24067, spellID = 31113 }; --Jagged Talasite
+		[12] = { itemID = 24066, spellID = 31111 }; --Radiant Talasite
+		[13] = { itemID = 33782, spellID = 43493 }; --Steady Talasite
 		[16] = { itemID = 23106, spellID = 28924 }; --Dazzling Deep Peridot
 		[17] = { itemID = 23105, spellID = 28918 }; --Enduring Deep Peridot
 		[18] = { itemID = 23104, spellID = 28917 }; --Jagged Deep Peridot
@@ -866,19 +860,19 @@ AtlasLoot_Data["JewelcraftingTBC"] = {
 		[5] = { itemID = 35760, spellID = 47055 }; --Reckless Pyrestone
 		[6] = { itemID = 32221, spellID = 39737 }; --Veiled Pyrestone
 		[7] = { itemID = 32222, spellID = 39738 }; --Wicked Pyrestone
-		[8] = { itemID = 24061, spellID = 31109 }; --Glinting Noble Topaz
-		[9] = { itemID = 24058, spellID = 31106 }; --Inscribed Noble Topaz
-		[10] = { itemID = 24060, spellID = 31108 }; --Luminous Noble Topaz
-		[11] = { itemID = 24059, spellID = 31107 }; --Potent Noble Topaz
-		[12] = { itemID = 35316, spellID = 46404 }; --Reckless Noble Topaz
-		[13] = { itemID = 31867, spellID = 39470 }; --Veiled Noble Topaz
-		[14] = { itemID = 31868, spellID = 39471 }; --Wicked Noble Topaz
-		[21] = { itemID = 23101, spellID = 28915 }; --Potent Flame Spessarite
+		[9] = { itemID = 24061, spellID = 31109 }; --Glinting Noble Topaz
+		[10] = { itemID = 24058, spellID = 31106 }; --Inscribed Noble Topaz
+		[11] = { itemID = 24060, spellID = 31108 }; --Luminous Noble Topaz
+		[12] = { itemID = 24059, spellID = 31107 }; --Potent Noble Topaz
+		[13] = { itemID = 35316, spellID = 46404 }; --Reckless Noble Topaz
+		[14] = { itemID = 31867, spellID = 39470 }; --Veiled Noble Topaz
+		[15] = { itemID = 31868, spellID = 39471 }; --Wicked Noble Topaz
 		[16] = { itemID = 31866, spellID = 39466 }; --Veiled Flame Spessarite
 		[17] = { itemID = 31869, spellID = 39467 }; --Wicked Flame Spessarite
 		[18] = { itemID = 23100, spellID = 28914 }; --Glinting Flame Spessarite
 		[19] = { itemID = 23099, spellID = 28912 }; --Luminous Flame Spessarite
 		[20] = { itemID = 23098, spellID = 28910 }; --Inscribed Flame Spessarite
+		[21] = { itemID = 23101, spellID = 28915 }; --Potent Flame Spessarite
 	};
 	{
 		Name = AL["Purple Gems"];
@@ -889,20 +883,20 @@ AtlasLoot_Data["JewelcraftingTBC"] = {
 		[5] = { itemID = 32216, spellID = 39732 }; --Royal Shadowsong Amethyst
 		[6] = { itemID = 32212, spellID = 39728 }; --Shifting Shadowsong Amethyst
 		[7] = { itemID = 32211, spellID = 39727 }; --Sovereign Shadowsong Amethyst
-		[8] = { itemID = 31863, spellID = 39463 }; --Balanced Nightseye
-		[9] = { itemID = 24056, spellID = 31104 }; --Glowing Nightseye
-		[10] = { itemID = 31865, spellID = 39462 }; --Infused Nightseye
-		[11] = { itemID = 35707, spellID = 46803 }; --Regal Nightseye
-		[12] = { itemID = 24057, spellID = 31105 }; --Royal Nightseye
-		[13] = { itemID = 24055, spellID = 31103 }; --Shifting Nightseye
-		[14] = { itemID = 24054, spellID = 31102 }; --Sovereign Nightseye
-		[15] = { itemID = 32836, spellID = 41429 }; --Purified Shadow Pearl
-		[16] = { itemID = 31862, spellID = 39455 }; --Balanced Shadow Draenite
-		[17] = { itemID = 31864, spellID = 39458 }; --Infused Shadow Draenite
-		[18] = { itemID = 23111, spellID = 28936 }; --Sovereign Shadow Draenite
-		[19] = { itemID = 23110, spellID = 28933 }; --Shifting Shadow Draenite
-		[20] = { itemID = 23109, spellID = 28927 }; --Royal Shadow Draenite
-		[21] = { itemID = 23108, spellID = 28925 }; --Glowing Shadow Draenite
+		[9] = { itemID = 31863, spellID = 39463 }; --Balanced Nightseye
+		[10] = { itemID = 24056, spellID = 31104 }; --Glowing Nightseye
+		[11] = { itemID = 31865, spellID = 39462 }; --Infused Nightseye
+		[12] = { itemID = 35707, spellID = 46803 }; --Regal Nightseye
+		[13] = { itemID = 24057, spellID = 31105 }; --Royal Nightseye
+		[14] = { itemID = 24055, spellID = 31103 }; --Shifting Nightseye
+		[15] = { itemID = 24054, spellID = 31102 }; --Sovereign Nightseye
+		[16] = { itemID = 32836, spellID = 41429 }; --Purified Shadow Pearl
+		[18] = { itemID = 31862, spellID = 39455 }; --Balanced Shadow Draenite
+		[19] = { itemID = 31864, spellID = 39458 }; --Infused Shadow Draenite
+		[20] = { itemID = 23111, spellID = 28936 }; --Sovereign Shadow Draenite
+		[21] = { itemID = 23110, spellID = 28933 }; --Shifting Shadow Draenite
+		[22] = { itemID = 23109, spellID = 28927 }; --Royal Shadow Draenite
+		[23] = { itemID = 23108, spellID = 28925 }; --Glowing Shadow Draenite
 	};
 	{
 		Name = AL["Meta Gems"];
@@ -924,10 +918,9 @@ AtlasLoot_Data["JewelcraftingTBC"] = {
 	{
 		Name = AL["Prismatic Gems"];
 		[1] = { itemID = 22459, spellID = 28028 }; --Void Sphere
-		[2] = { itemID = 42702, spellID = 56531 }; --Enchanted Tear
-		[3] = { itemID = 22460, spellID = 28027 }; --Prismatic Sphere
-		[4] = { itemID = 42701, spellID = 56530 }; --Enchanted Pearl
-		[5] = { itemID = 42701, spellID = 62941 }; --Prismatic Black Diamond
+		[2] = { itemID = 22460, spellID = 28027 }; --Prismatic Sphere
+		[3] = { itemID = 42701, spellID = 56530 }; --Enchanted Pearl
+		[4] = { itemID = 42701, spellID = 62941 }; --Prismatic Black Diamond
 	};
 	{
 		Name = AL["Trinkets"];
@@ -936,16 +929,11 @@ AtlasLoot_Data["JewelcraftingTBC"] = {
 		[3] = { itemID = 35694, spellID = 46776 }; --Figurine - Khorium Boar
 		[4] = { itemID = 35703, spellID = 46779 }; --Figurine - Seaspray Albatross
 		[5] = { itemID = 35702, spellID = 46778 }; --Figurine - Shadowsong Panther
-		[6] = { itemID = 42418, spellID = 56203 }; --Figurine - Emerald Boar
-		[7] = { itemID = 44063, spellID = 59759 }; --Figurine - Monarch Crab
-		[8] = { itemID = 42341, spellID = 56199 }; --Figurine - Ruby Hare
-		[9] = { itemID = 42413, spellID = 56202 }; --Figurine - Sapphire Owl
-		[10] = { itemID = 42395, spellID = 56201 }; --Figurine - Twilight Serpent
-		[11] = { itemID = 24125, spellID = 31080 }; --Figurine - Dawnstone Crab
-		[12] = { itemID = 24124, spellID = 31079 }; --Figurine - Felsteel Boar
-		[13] = { itemID = 24126, spellID = 31081 }; --Figurine - Living Ruby Serpent
-		[14] = { itemID = 24128, spellID = 31083 }; --Figurine - Nightseye Panther
-		[15] = { itemID = 24127, spellID = 31082 }; --Figurine - Talasite Owl
+		[6] = { itemID = 24125, spellID = 31080 }; --Figurine - Dawnstone Crab
+		[7] = { itemID = 24124, spellID = 31079 }; --Figurine - Felsteel Boar
+		[8] = { itemID = 24126, spellID = 31081 }; --Figurine - Living Ruby Serpent
+		[9] = { itemID = 24128, spellID = 31083 }; --Figurine - Nightseye Panther
+		[10] = { itemID = 24127, spellID = 31082 }; --Figurine - Talasite Owl
 		[16] = { itemID = 21784, spellID = 26912 }; --Figurine - Black Diamond Crab
 		[17] = { itemID = 21789, spellID = 26914 }; --Figurine - Dark Iron Scorpid
 		[18] = { itemID = 21777, spellID = 26909 }; --Figurine - Emerald Owl
@@ -957,7 +945,7 @@ AtlasLoot_Data["JewelcraftingTBC"] = {
 		[24] = { itemID = 21758, spellID = 26875 }; --Figurine - Black Pearl Panther
 	};
 	{
-		Name = AL["Rings"];
+		Name = AL["Rings"]..WHITE.." - Page 1";
 		[1] = { itemID = 24086, spellID = 31057 }; --Arcane Khorium Band
 		[2] = { itemID = 24089, spellID = 31061 }; --Blazing Eternium Band
 		[3] = { itemID = 24085, spellID = 31056 }; --Khorium Band of Leaves
@@ -966,59 +954,56 @@ AtlasLoot_Data["JewelcraftingTBC"] = {
 		[6] = { itemID = 24080, spellID = 31054 }; --Khorium Band of Frost
 		[7] = { itemID = 24082, spellID = 31055 }; --Khorium Inferno Band
 		[8] = { itemID = 24079, spellID = 31053 }; --Khorium Band of Shadows
-		[9] = { itemID = 24087, spellID = 31058 }; --Heavy Felsteel Ring
-		[10] = { itemID = 32774, spellID = 41415 }; --The Black Pearl
-		[11] = { itemID = 32772, spellID = 41414 }; --Brilliant Pearl Band
-		[12] = { itemID = 21779, spellID = 26916 }; --Band of Natural Fire
-		[13] = { itemID = 21768, spellID = 26903 }; --Sapphire Signet
-		[14] = { itemID = 21753, spellID = 26896 }; --Gem Studded Band
-		[15] = { itemID = 20964, spellID = 26874 }; --Aquamarine Signet
-		[16] = { itemID = 29158, spellID = 34959 }; --Truesilver Commander's Ring
-		[17] = { itemID = 29157, spellID = 34955 }; --Golden Ring of Power
-		[18] = { itemID = 30804, spellID = 37818 }; --Bronze Band of Force
-		[19] = { itemID = 20826, spellID = 25305 }; --Heavy Silver Ring
-		[20] = { itemID = 43249, spellID = 58146 }; --Shadowmight Ring
-		[21] = { itemID = 43248, spellID = 58145 }; --Stoneguard Band
-		[22] = { itemID = 42336, spellID = 56193 }; --Bloodstone Band
-		[23] = { itemID = 42337, spellID = 56194 }; --Sun Rock Ring
-		[24] = { itemID = 24078, spellID = 31052 }; --Heavy Adamantite Ring
-		[25] = { itemID = 24076, spellID = 31050 }; --Azure Moonstone Ring
-		[26] = { itemID = 24074, spellID = 31048 }; --Fel Iron Blood Ring
-		[27] = { itemID = 24075, spellID = 31049 }; --Golden Draenite Ring
-		[28] = { itemID = 29160, spellID = 34961 }; --Emerald Lion Ring
-		[29] = { itemID = 21778, spellID = 26910 }; --Ring of Bitter Shadows
-		[30] = { itemID = 29159, spellID = 34960 }; --Glowing Thorium Band
-
+		[9] = { itemID = 42337, spellID = 56194 }; --Sun Rock Ring
+		[10] = { itemID = 42336, spellID = 56193 }; --Bloodstone Band	
+		[11] = { itemID = 24087, spellID = 31058 }; --Heavy Felsteel Ring
+		[16] = { itemID = 24078, spellID = 31052 }; --Heavy Adamantite Ring
+		[17] = { itemID = 32774, spellID = 41415 }; --The Black Pearl
+		[18] = { itemID = 32772, spellID = 41414 }; --Brilliant Pearl Band
+		[19] = { itemID = 24076, spellID = 31050 }; --Azure Moonstone Ring
+		[20] = { itemID = 21779, spellID = 26916 }; --Band of Natural Fire
+		[21] = { itemID = 24074, spellID = 31048 }; --Fel Iron Blood Ring
+		[22] = { itemID = 24075, spellID = 31049 }; --Golden Draenite Ring
+		[23] = { itemID = 29160, spellID = 34961 }; --Emerald Lion Ring
+		[24] = { itemID = 21778, spellID = 26910 }; --Ring of Bitter Shadows
+		[25] = { itemID = 29159, spellID = 34960 }; --Glowing Thorium Band
+		[26] = { itemID = 21775, spellID = 26907 }; --Onslaught Ring
 	};
 	{
-		Name = AL["Rings"];
-		[1] = { itemID = 21775, spellID = 26907 }; --Onslaught Ring
+		Name = AL["Rings"]..WHITE.." - Page 2";
+		[1] = { itemID = 21768, spellID = 26903 }; --Sapphire Signet
 		[2] = { itemID = 30422, spellID = 36526 }; --Diamond Focus Ring
 		[3] = { itemID = 21767, spellID = 26902 }; --Simple Opal Ring
-		[4] = { itemID = 21754, spellID = 26887 }; --The Aquamarine Ward
-		[5] = { itemID = 21765, spellID = 26885 }; --Truesilver Healing Ring
-		[6] = { itemID = 30421, spellID = 36525 }; --Red Ring of Destruction
-		[7] = { itemID = 20961, spellID = 25621 }; --Citrine Ring of Rapid Healing
-		[8] = { itemID = 20960, spellID = 25620 }; --Engraved Truesilver Ring
-		[9] = { itemID = 20959, spellID = 25619 }; --The Jade Eye
-		[10] = { itemID = 20958, spellID = 25617 }; --Blazing Citrine Ring
-		[11] = { itemID = 20955, spellID = 25613 }; --Golden Dragon Ring
-		[12] = { itemID = 20833, spellID = 25323 }; --Wicked Moonstone Ring
-		[13] = { itemID = 30420, spellID = 36524 }; --Heavy Jade Ring
-		[14] = { itemID = 20828, spellID = 25318 }; --Ring of Twilight Shadows
-		[15] = { itemID = 20827, spellID = 25317 }; --Ring of Silver Might
-		[16] = { itemID = 20823, spellID = 25287 }; --Gloom Band
-		[17] = { itemID = 20820, spellID = 25284 }; --Simple Pearl Ring
-		[18] = { itemID = 20907, spellID = 25490 }; --Solid Bronze Ring
-		[19] = { itemID = 20818, spellID = 25280 }; --Elegant Silver Ring
-		[20] = { itemID = 20821, spellID = 25283 }; --Inlaid Malachite Ring
-		[21] = { itemID = 25439, spellID = 32179 }; --Tigerseye Band
-		[22] = { itemID = 21932, spellID = 26926 }; --Heavy Copper Ring
-		[23] = { itemID = 20906, spellID = 25493 }; --Braided Copper Ring
-		[24] = { itemID = 21931, spellID = 26925 }; --Woven Copper Ring
+		[4] = { itemID = 21753, spellID = 26896 }; --Gem Studded Band
+		[5] = { itemID = 21754, spellID = 26887 }; --The Aquamarine Ward
+		[6] = { itemID = 21765, spellID = 26885 }; --Truesilver Healing Ring
+		[7] = { itemID = 30421, spellID = 36525 }; --Red Ring of Destruction
+		[8] = { itemID = 20964, spellID = 26874 }; --Aquamarine Signet
+		[9] = { itemID = 29158, spellID = 34959 }; --Truesilver Commander's Ring
+		[10] = { itemID = 29157, spellID = 34955 }; --Golden Ring of Power
+		[11] = { itemID = 20961, spellID = 25621 }; --Citrine Ring of Rapid Healing
+		[12] = { itemID = 20960, spellID = 25620 }; --Engraved Truesilver Ring
+		[13] = { itemID = 20959, spellID = 25619 }; --The Jade Eye
+		[14] = { itemID = 20958, spellID = 25617 }; --Blazing Citrine Ring
+		[15] = { itemID = 20955, spellID = 25613 }; --Golden Dragon Ring
+		[16] = { itemID = 20833, spellID = 25323 }; --Wicked Moonstone Ring
+		[17] = { itemID = 30420, spellID = 36524 }; --Heavy Jade Ring
+		[18] = { itemID = 20828, spellID = 25318 }; --Ring of Twilight Shadows
+		[19] = { itemID = 20826, spellID = 25305 }; --Heavy Silver Ring
+		[20] = { itemID = 20827, spellID = 25317 }; --Ring of Silver Might
+		[21] = { itemID = 20823, spellID = 25287 }; --Gloom Band
+		[22] = { itemID = 30804, spellID = 37818 }; --Bronze Band of Force
+		[23] = { itemID = 20820, spellID = 25284 }; --Simple Pearl Ring
+		[24] = { itemID = 20907, spellID = 25490 }; --Solid Bronze Ring
+		[25] = { itemID = 20818, spellID = 25280 }; --Elegant Silver Ring
+		[26] = { itemID = 20821, spellID = 25283 }; --Inlaid Malachite Ring
+		[27] = { itemID = 25439, spellID = 32179 }; --Tigerseye Band
+		[28] = { itemID = 21932, spellID = 26926 }; --Heavy Copper Ring
+		[29] = { itemID = 20906, spellID = 25493 }; --Braided Copper Ring
+		[30] = { itemID = 21931, spellID = 26925 }; --Woven Copper Ring
 	};
 	{
-		Name = AL["Necks"];
+		Name = AL["Necks"]..WHITE.." - Page 1";
 		[1] = { itemID = 24117, spellID = 31072 }; --Embrace of the Dawn
 		[2] = { itemID = 24114, spellID = 31070 }; --Braided Eternium Chain
 		[3] = { itemID = 24116, spellID = 31071 }; --Eye of the Night
@@ -1027,57 +1012,57 @@ AtlasLoot_Data["JewelcraftingTBC"] = {
 		[6] = { itemID = 24093, spellID = 31063 }; --Pendant of Thawing
 		[7] = { itemID = 24098, spellID = 31066 }; --Pendant of the Null Rune
 		[8] = { itemID = 24095, spellID = 31064 }; --Pendant of Withering
-		[9] = { itemID = 24110, spellID = 31068 }; --Living Ruby Pendant
-		[10] = { itemID = 24106, spellID = 31067 }; --Thick Felsteel Necklace
-		[11] = { itemID = 32508, spellID = 40514 }; --Necklace of the Deep
-		[12] = { itemID = 21792, spellID = 26915 }; --Necklace of the Diamond Tower
-		[13] = { itemID = 21791, spellID = 26911 }; --Living Emerald Pendant
-		[14] = { itemID = 21766, spellID = 26897 }; --Opal Necklace of Impact
-		[15] = { itemID = 45627, spellID = 63743 }; --Amulet of Truesight
-		[16] = { itemID = 43245, spellID = 58142 }; --Crystal Chalcedony Amulet
-		[17] = { itemID = 43244, spellID = 58141 }; --Crystal Citrine Necklace
-		[18] = { itemID = 24077, spellID = 31051 }; --Thick Adamantite Necklace
-		[19] = { itemID = 21790, spellID = 26908 }; --Sapphire Pendant of Winter Night
+		[16] = { itemID = 24110, spellID = 31068 }; --Living Ruby Pendant
+		[17] = { itemID = 24106, spellID = 31067 }; --Thick Felsteel Necklace
+		[18] = { itemID = 43245, spellID = 58142 }; --Crystal Chalcedony Amulet
+		[19] = { itemID = 43244, spellID = 58141 }; --Crystal Citrine Necklace
+		[20] = { itemID = 32508, spellID = 40514 }; --Necklace of the Deep
+		[21] = { itemID = 24077, spellID = 31051 }; --Thick Adamantite Necklace
+		[22] = { itemID = 21792, spellID = 26915 }; --Necklace of the Diamond Tower
 	};
 	{
-		Name = AL["Necks"];
-		[1] = { itemID = 21764, spellID = 26883 }; --Ruby Pendant of Fire
-		[2] = { itemID = 21755, spellID = 26876 }; --Aquamarine Pendant of the Warrior
-		[3] = { itemID = 20967, spellID = 25622 }; --Citrine Pendant of Golden Healing
-		[4] = { itemID = 20966, spellID = 25618 }; --Jade Pendant of Blasting
-		[5] = { itemID = 20831, spellID = 25320 }; --Heavy Golden Necklace of Battle
-		[6] = { itemID = 20950, spellID = 25610 }; --Pendant of the Agate Shield
-		[7] = { itemID = 20830, spellID = 25339 }; --Amulet of the Moon
-		[8] = { itemID = 20909, spellID = 25498 }; --Barbaric Iron Collar
-		[9] = { itemID = 31154, spellID = 38175 }; --Bronze Torc
-		[10] = { itemID = 30419, spellID = 36523 }; --Brilliant Necklace
-		[11] = { itemID = 21933, spellID = 26927 }; --Thick Bronze Necklace
-		[12] = { itemID = 21934, spellID = 26928 }; --Ornate Tigerseye Necklace
-		[13] = { itemID = 25438, spellID = 32178 }; --Malachite Pendant
+		Name = AL["Necks"]..WHITE.." - Page 2";
+		[1] = { itemID = 21791, spellID = 26911 }; --Living Emerald Pendant
+		[2] = { itemID = 21790, spellID = 26908 }; --Sapphire Pendant of Winter Night
+		[3] = { itemID = 21766, spellID = 26897 }; --Opal Necklace of Impact
+		[4] = { itemID = 21764, spellID = 26883 }; --Ruby Pendant of Fire
+		[5] = { itemID = 21755, spellID = 26876 }; --Aquamarine Pendant of the Warrior
+		[6] = { itemID = 45627, spellID = 63743 }; --Amulet of Truesight
+		[7] = { itemID = 20967, spellID = 25622 }; --Citrine Pendant of Golden Healing
+		[8] = { itemID = 20966, spellID = 25618 }; --Jade Pendant of Blasting
+		[9] = { itemID = 20831, spellID = 25320 }; --Heavy Golden Necklace of Battle
+		[16] = { itemID = 20950, spellID = 25610 }; --Pendant of the Agate Shield
+		[17] = { itemID = 20830, spellID = 25339 }; --Amulet of the Moon
+		[18] = { itemID = 20909, spellID = 25498 }; --Barbaric Iron Collar
+		[19] = { itemID = 31154, spellID = 38175 }; --Bronze Torc
+		[20] = { itemID = 30419, spellID = 36523 }; --Brilliant Necklace
+		[21] = { itemID = 21933, spellID = 26927 }; --Thick Bronze Necklace
+		[22] = { itemID = 21934, spellID = 26928 }; --Ornate Tigerseye Necklace
+		[23] = { itemID = 25438, spellID = 32178 }; --Malachite Pendant
 	};
 	{
 		Name = AL["Miscellaneous"];
 		[1] = { itemID = 24123, spellID = 31078 }; --Circlet of Arcane Might
 		[2] = { itemID = 24122, spellID = 31077 }; --Coronet of the Verdant Flame
-		[4] = { itemID = 32776, spellID = 41418 }; --Crown of the Sea Witch
-		[5] = { itemID = 35945, spellID = 47280 }; --Brilliant Glass
-		[6] = { itemID = 31079, spellID = 38068 }; --Mercurial Adamantite
-		[7] = { itemID = 21774, spellID = 26906 }; --Emerald Crown of Destruction
-		[8] = { itemID = 20969, spellID = 26878 }; --Ruby Crown of Restoration
-		[9] = { itemID = 20832, spellID = 25321 }; --Moonsoul Crown
-		[10] = { itemID = 42421, spellID = 56208 }; --Shadow Jade Focusing Lens
-		[11] = { itemID = 42420, spellID = 56206 }; --Shadow Crystal Focusing Lens
-		[12] = { itemID = 41367, spellID = 56205 }; --Dark Jade Focusing Lens
-		[13] = { itemID = 20954, spellID = 25612 }; --Heavy Iron Knuckles
-		[14] = { itemID = 21752, spellID = 26880 }; --Thorium Setting
-		[15] = { itemID = 25883, spellID = 32809 }; --Dense Stone Statue
-		[16] = { itemID = 25882, spellID = 32808 }; --Solid Stone Statue
-		[17] = { itemID = 20963, spellID = 25615 }; --Mithril Filigree
-		[18] = { itemID = 25881, spellID = 32807 }; --Heavy Stone Statue
-		[19] = { itemID = 20817, spellID = 25278 }; --Bronze Setting
-		[20] = { itemID = 25880, spellID = 32801 }; --Coarse Stone Statue
-		[21] = { itemID = 20816, spellID = 25255 }; --Delicate Copper Wire
-		[22] = { itemID = 25498, spellID = 32259 }; --Rough Stone Statue
+		[3] = { itemID = 42421, spellID = 56208 }; --Shadow Jade Focusing Lens
+		[4] = { itemID = 42420, spellID = 56206 }; --Shadow Crystal Focusing Lens
+		[5] = { itemID = 32776, spellID = 41418 }; --Crown of the Sea Witch
+		[6] = { itemID = 41367, spellID = 56205 }; --Dark Jade Focusing Lens
+		[7] = { itemID = 35945, spellID = 47280 }; --Brilliant Glass
+		[8] = { itemID = 31079, spellID = 38068 }; --Mercurial Adamantite
+		[9] = { itemID = 21774, spellID = 26906 }; --Emerald Crown of Destruction
+		[10] = { itemID = 20969, spellID = 26878 }; --Ruby Crown of Restoration
+		[11] = { itemID = 21752, spellID = 26880 }; --Thorium Setting
+		[16] = { itemID = 25883, spellID = 32809 }; --Dense Stone Statue
+		[17] = { itemID = 25882, spellID = 32808 }; --Solid Stone Statue
+		[18] = { itemID = 20963, spellID = 25615 }; --Mithril Filigree
+		[19] = { itemID = 20954, spellID = 25612 }; --Heavy Iron Knuckles
+		[20] = { itemID = 20832, spellID = 25321 }; --Moonsoul Crown
+		[21] = { itemID = 25881, spellID = 32807 }; --Heavy Stone Statue
+		[22] = { itemID = 20817, spellID = 25278 }; --Bronze Setting
+		[23] = { itemID = 25880, spellID = 32801 }; --Coarse Stone Statue
+		[24] = { itemID = 20816, spellID = 25255 }; --Delicate Copper Wire
+		[25] = { itemID = 25498, spellID = 32259 }; --Rough Stone Statue
 	};
 };
 
