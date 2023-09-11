@@ -13,7 +13,7 @@ local WHITE = "|cFFFFFFFF"
 local CYAN =  "|cff00ffff"
 local DefaultPin = "questlog-questtypeicon-daily"
 -- Map Functions
-
+local playerFaction = UnitFactionGroup("player")
 local lastMap
 local totalPins = 0
 
@@ -75,17 +75,13 @@ function AtlasLoot:CreateMapPins(list)
     end
 end
 
-local lastCord1, lastCord2 = 0,0
+-- Track the coordinates off the mouse while it is on the map frame
 function AtlasLoot:CursorCords()
     if AtlasLoot.showCords then
         local scale,x, y = AtlasLootDefaultFrame_Map:GetEffectiveScale(), GetCursorPosition()
         local width, height = AtlasLootDefaultFrame_Map:GetWidth()/100, AtlasLootDefaultFrame_Map:GetHeight()/100
         x, y = math.ceil(((x/scale) - AtlasLootDefaultFrame_Map:GetLeft())/width), math.ceil((((y/scale) - AtlasLootDefaultFrame_Map:GetTop())/height) * -1)
-        if lastCord1 ~= x and lastCord2 ~= y then
-            AtlasLootDefaultFrame_Map.cursorCords:SetText(WHITE.."Cursor: "..x.." , "..y)
-            lastCord1 = x
-            lastCord2 = y
-        end
+        AtlasLootDefaultFrame_Map.cursorCords:SetText(WHITE.."Cursor: "..x.." , "..y)
     end
 end
 
@@ -176,7 +172,6 @@ end
 
 --called to change the current displayed map
 function AtlasLoot:MapSelect(mapID, mapNum)
-    mapNum = mapNum or 1
     local map = AtlasLoot_MapData[mapID]
     if map.MapName then
         for i = 1, 12 do
@@ -206,7 +201,9 @@ function AtlasLoot:MapSelect(mapID, mapNum)
     GOLD .. "Minimum Level: ".. WHITE..map.MinLevel.."\n"..
     GOLD .. "Player Limit: ".. WHITE..map.PlayerLimit
 
-    if map.Reputation then
+    if map.Reputation and type(map.Reputation) == "table" then
+        text = text .. "\n" .. GOLD .. AL["Reputation"] .. ": ".. WHITE .. map.Reputation[playerFaction]
+    elseif map.Reputation then
         text = text .. "\n" .. GOLD .. AL["Reputation"] .. ": ".. WHITE .. map.Reputation
     end
     Atlasloot_HeaderLabel:SetText(text)
@@ -214,8 +211,8 @@ function AtlasLoot:MapSelect(mapID, mapNum)
 end
 
 function AtlasLoot:SetMapButtonText(mapID, mapNum)
-    mapNum = mapNum or 1
     local map = AtlasLoot_MapData[mapID]
+    mapNum = mapNum or 1
     local text
     if map[mapNum][1].Zone then
         text = map[mapNum][2][1]

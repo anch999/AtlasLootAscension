@@ -638,7 +638,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 					if tonumber(item[AtlasLoot_Difficulty.MAX_DIF]) < itemDif then itemDif = item[AtlasLoot_Difficulty.MAX_DIF] end
 				end
 				--If something was found in itemID database show that if not show default table item
-				itemID = AtlasLoot:FindId(item.itemID, itemDif, dataSource[dataID].Type) or item.itemID
+				itemID = itemDif ~= 2 and AtlasLoot:FindId(item.itemID, itemDif, dataSource[dataID].Type) or item.itemID
 
 				if ItemindexID ~= "" and dataID == "SearchResult" then
 					itemID = AtlasLoot:FindId(item[9], itemDif, dataSource[dataID].Type) or item.itemID

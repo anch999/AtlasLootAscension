@@ -239,7 +239,7 @@ AtlasLoot_Data["TheNexus"] = {
 		[22] = { itemID = 37165, droprate = "0%" }; --Crystal-Infused Tunic
 		[23] = { itemID = 37167, droprate = "0%" }; --Dragon Slayer's Sabatons
 		[24] = { itemID = 37166, droprate = "0%" }; --Sphere of Red Dragon's Blood
-		[25] = { itemID = 37162, desc = "=ds=#w8#", droprate = "0%" }; --Bulwark of the Noble Protector
+		[25] = { itemID = 37162, droprate = "0%" }; --Bulwark of the Noble Protector
 		[26] = { itemID = 41794, desc = "=ds=#p12# (390)", droprate = "%" }; --Design: Deadly Monarch Topaz
 		[27] = { itemID = 43102, desc = "=ds=#e6#", droprate = "00%" }; --Frozen Orb
 	};
@@ -263,7 +263,7 @@ AtlasLoot_Data["AzjolNerub"] = {
 		[18] = { itemID = 37218, droprate = "1%" }; --Stone-Worn Footwraps
 		[19] = { itemID = 37219, droprate = "1%" }; --Custodian's Chestpiece
 		[20] = { itemID = 37217, droprate = "2%" }; --Golden Limb Bands
-		[21] = { itemID = 37216, desc = "=ds=#w8#", droprate = "2%" }; --Facade Shield of Glyphs
+		[21] = { itemID = 37216, droprate = "2%" }; --Facade Shield of Glyphs
 	};
 	{
 		Name = BabbleBoss["Hadronox"];
@@ -443,7 +443,7 @@ AtlasLoot_Data["DrakTharonKeep"] = {
 		[1] = { itemID = 0,  desc = "INV_Box_01", "=q6=#j1#" };
 		[2] = { itemID = 35638, droprate = "3%" }; --Helmet of Living Flesh
 		[3] = { itemID = 35637, droprate = "8%" }; --Muradin's Lost Greaves
-		[4] = { itemID = 35636, desc = "=ds=#w8#", droprate = "0%" }; --Tharon'ja's Aegis
+		[4] = { itemID = 35636, droprate = "0%" }; --Tharon'ja's Aegis
 		[16] = { itemID = 0,  desc = "INV_Box_01", "=q6=#j3#" };
 		[17] = { itemID = 47241, desc = "=ds=#e15#", droprate = "00%" }; --Emblem of Triumph
 		[18] = { itemID = 37798, droprate = "9%" }; --Overlook Handguards
@@ -503,7 +503,7 @@ AtlasLoot_Data["TheVioletHold"] = {
 		Name = BabbleBoss["Xevozz"];
 		[1] = { itemID = 0,  desc = "INV_Box_01", "=q6=#j1#" };
 		[2] = { itemID = 35644, droprate = "3%" }; --Xevozz's Belt
-		[3] = { itemID = 35642, desc = "=ds=#w8#", droprate = "2%" }; --Riot Shield
+		[3] = { itemID = 35642, droprate = "2%" }; --Riot Shield
 		[16] = { itemID = 0,  desc = "INV_Box_01", "=q6=#j3#" };
 		[17] = { itemID = 47241, desc = "=ds=#e15#", droprate = "00%" }; --Emblem of Triumph
 		[18] = { itemID = 37867, droprate = "9%" }; --Footwraps of Teleportation
@@ -892,14 +892,14 @@ AtlasLoot_Data["CoTStratholme"] = {
 		[6] = { itemID = 37111, droprate = "4%" }; --Soul Preserver
 		[7] = { itemID = 37108, droprate = "6%" }; --Dreadlord's Blade
 		[8] = { itemID = 37112, droprate = "9%" }; --Beguiling Scepter
-		[9] = { itemID = 37107, desc = "=ds=#w8#", droprate = "8%" }; --Leeka's Shield
+		[9] = { itemID = 37107, droprate = "8%" }; --Leeka's Shield
 		[16] = { itemID = 0,  desc = "INV_Box_01", "=q6=#j3#" };
 		[17] = { itemID = 47241, desc = "=ds=#e15#", droprate = "00%" }; --Emblem of Triumph
 		[18] = { itemID = 37696, droprate = "1%" }; --Plague-Infected Bracers
 		[19] = { itemID = 37695, droprate = "1%" }; --Legguards of Nature's Power
 		[20] = { itemID = 37694, droprate = "1%" }; --Band of Guile
 		[21] = { itemID = 37693, droprate = "1%" }; --Greed
-		[22] = { itemID = 43085, desc = "=ds=#w8#", droprate = "0%" }; --Royal Crest of Lordaeron
+		[22] = { itemID = 43085, droprate = "0%" }; --Royal Crest of Lordaeron
 		[23] = { itemID = 37691, droprate = "4%" }; --Mantle of Deceit
 		[24] = { itemID = 37690, droprate = "4%" }; --Pauldrons of Destiny
 		[25] = { itemID = 37689, droprate = "4%" }; --Pendant of the Nathrezim
@@ -974,7 +974,7 @@ AtlasLoot_Data["UtgardePinnacle"] = {
 		[6] = { itemID = 37064, droprate = "4%" }; --Vestige of Haldor
 		[7] = { itemID = 37060, droprate = "0%" }; --Jeweled Coronation Sword
 		[8] = { itemID = 37065, droprate = "0%" }; --Ymiron's Blade
-		[9] = { itemID = 37061, desc = "=ds=#w8#", droprate = "3%" }; --Tor's Crest
+		[9] = { itemID = 37061, droprate = "3%" }; --Tor's Crest
 		[10] = { itemID = 41797, desc = "=ds=#p12# (420)", droprate = "0%" }; --Design: Austere Earthsiege Diamond
 		[16] = { itemID = 0,  desc = "INV_Box_01", "=q6=#j3#" };
 		[17] = { itemID = 47241, desc = "=ds=#e15#", droprate = "00%" }; --Emblem of Triumph
@@ -3326,7 +3326,7 @@ AtlasLoot_Data["Naxxramas80"] = {
 		[19] = { itemID = 40267, desc = "=ds=#s16#", droprate = "%" }; --Totem of Hex
 		[20] = { itemID = 40268, desc = "=ds=#s16#", droprate = "9%" }; --Libram of Tolerance
 		[21] = { itemID = 40264, droprate = "%" }; --Split Greathammer
-		[22] = { itemID = 40266, desc = "=ds=#w8#", droprate = "%" }; --Hero's Surrender
+		[22] = { itemID = 40266, droprate = "%" }; --Hero's Surrender
 		[23] = { itemID = 40265, droprate = "9%" }; --Arrowsong
 	};
 	{
@@ -3340,7 +3340,7 @@ AtlasLoot_Data["Naxxramas80"] = {
 		[7] = { itemID = 39282, droprate = "0%" }; --Bone-Linked Amulet
 		[8] = { itemID = 39277, droprate = "%" }; --Sealing Ring of Grobbulus
 		[9] = { itemID = 39281, droprate = "9%" }; --Infection Repulser
-		[10] = { itemID = 39276, desc = "=ds=#w8#", droprate = "%" }; --The Skull of Ruin
+		[10] = { itemID = 39276, droprate = "%" }; --The Skull of Ruin
 	};
 	{
 		Name = BabbleBoss["Grobbulus"];
@@ -3448,7 +3448,7 @@ AtlasLoot_Data["Naxxramas80"] = {
 		[4] = { itemID = 40343, droprate = "%" }; --Armageddon
 		[5] = { itemID = 40239, droprate = "9%" }; --The Hand of Nerub
 		[6] = { itemID = 40280, droprate = "%" }; --Origin of Nightmares
-		[7] = { itemID = 39716, desc = "=ds=#w8#", droprate = "4%" }; --Shield of Assimilation
+		[7] = { itemID = 39716, droprate = "4%" }; --Shield of Assimilation
 		[8] = { itemID = 40265, droprate = "9%" }; --Arrowsong
 		[9] = { itemID = 40346, droprate = "%" }; --Final Voyage
 		[16] = { itemID = 40637, desc = "=ds=#e15#", droprate = "7%" }; --Mantle of the Lost Conqueror
@@ -3524,7 +3524,7 @@ AtlasLoot_Data["Naxxramas80"] = {
 		[19] = { itemID = 40074, droprate = "2%" }; --Strong-Handed Ring
 		[20] = { itemID = 39714, droprate = "4%" }; --Webbed Death
 		[21] = { itemID = 40208, desc = "=ds=#w7#", droprate = "0%" }; --Cryptfiend's Bite
-		[22] = { itemID = 39716, desc = "=ds=#w8#", droprate = "4%" }; --Shield of Assimilation
+		[22] = { itemID = 39716, droprate = "4%" }; --Shield of Assimilation
 		[23] = { itemID = 39712, droprate = "4%" }; --Gemmed Wand of the Nerubians
 	};
 	{
@@ -3578,7 +3578,7 @@ AtlasLoot_Data["Naxxramas80"] = {
 		[7] = { itemID = 39229, droprate = "1%" }; --Embrace of the Spider
 		[8] = { itemID = 39226, droprate = "0%" }; --Maexxna's Femur
 		[9] = { itemID = 39221, desc = "=ds=#w7#", droprate = "0%" }; --Wraith Spear
-		[10] = { itemID = 39233, desc = "=ds=#w8#", droprate = "0%" }; --Aegis of Damnation
+		[10] = { itemID = 39233, droprate = "0%" }; --Aegis of Damnation
 	};
 	{
 		Name = BabbleBoss["Maexxna"];
@@ -3888,8 +3888,8 @@ AtlasLoot_Data["Naxxramas80"] = {
 		[10] = { itemID = 40384, droprate = "7%" }; --Betrayer of Humanity
 		[11] = { itemID = 40395, droprate = "8%" }; --Torch of Holy Fire
 		[12] = { itemID = 40388, droprate = "8%" }; --Journey's End
-		[13] = { itemID = 40401, desc = "=ds=#w8#", droprate = "7%" }; --Voice of Reason
-		[14] = { itemID = 40400, desc = "=ds=#w8#", droprate = "8%" }; --Wall of Terror
+		[13] = { itemID = 40401, droprate = "7%" }; --Voice of Reason
+		[14] = { itemID = 40400, droprate = "8%" }; --Wall of Terror
 		[15] = { itemID = 40385, desc = "=ds=#w5#", droprate = "7%" }; --Envoy of Mortality
 		[16] = { itemID = 40631, desc = "=ds=#e15#", droprate = "4%" }; --Crown of the Lost Conqueror
 		[17] = { itemID = 40632, desc = "=ds=#e15#", droprate = "7%" }; --Crown of the Lost Protector
@@ -4001,7 +4001,7 @@ AtlasLoot_Data["Malygos"] = {
 		[7] = { itemID = 40488, droprate = "2%" }; --Ice Spire Scepter
 		[8] = { itemID = 40489, droprate = "2%" }; --Greatstaff of the Nexus
 		[9] = { itemID = 40497, desc = "=ds=#w7#", droprate = "0%" }; --Black Ice
-		[10] = { itemID = 40475, desc = "=ds=#w8#", droprate = "1%" }; --Barricade of Eternity
+		[10] = { itemID = 40475, droprate = "1%" }; --Barricade of Eternity
 		[11] = { itemID = 43952, desc = "=ds=#e12#", droprate = "%" }; --Reins of the Azure Drake
 		[13] = { itemID = 44569, desc = "=ds=#m3#", droprate = "1%" }; --Key to the Focusing Iris
 		[16] = { itemID = 44650, desc = "=ds=#m3#", droprate = "00%" }; --Heart of Magic
@@ -4170,7 +4170,7 @@ AtlasLoot_Data["Ulduar"] = {
 		[7] = { itemID = 45680, droprate = "8%" }; --Armbands of the Construct
 		[8] = { itemID = 45675, droprate = "0%" }; --Power Enhancing Loop
 		[9] = { itemID = 45685, droprate = "2%" }; --Plasma Foil
-		[10] = { itemID = 45682, desc = "=ds=#w8#", droprate = "4%" }; --Pulsing Spellshield
+		[10] = { itemID = 45682, droprate = "4%" }; --Pulsing Spellshield
 		[16] = { itemID = 0,  desc = "INV_Box_01", "=q6=#j53#" };
 		[17] = { itemID = 45869, droprate = "%" }; --Fluxing Energy Coils
 		[18] = { itemID = 45867, droprate = "%" }; --Breastplate of the Stoneshaper
@@ -4342,7 +4342,7 @@ AtlasLoot_Data["Ulduar"] = {
 		[6] = { itemID = 45712, droprate = "0%" }; --Chestplate of Titanic Fury
 		[7] = { itemID = 45708, droprate = "0%" }; --Archaedas' Lost Legplates
 		[8] = { itemID = 45866, droprate = "9%" }; --Elemental Focus Stone
-		[9] = { itemID = 45707, desc = "=ds=#w8#", droprate = "9%" }; --Shieldwall of the Breaker
+		[9] = { itemID = 45707, droprate = "9%" }; --Shieldwall of the Breaker
 		[10] = { itemID = 45713, droprate = "1%" }; --Nurturing Touch
 	};
 	{
@@ -4379,8 +4379,8 @@ AtlasLoot_Data["Ulduar"] = {
 		[17] = { itemID = 45888, droprate = "8%" }; --Bitter Cold Armguards
 		[18] = { itemID = 45876, droprate = "6%" }; --Shiver
 		[19] = { itemID = 45886, droprate = "0%" }; --Icecore Staff
-		[20] = { itemID = 45887, desc = "=ds=#w8#", droprate = "8%" }; --Ice Layered Barrier
-		[21] = { itemID = 45877, desc = "=ds=#w8#", droprate = "7%" }; --The Boreal Guard
+		[20] = { itemID = 45887, droprate = "8%" }; --Ice Layered Barrier
+		[21] = { itemID = 45877, droprate = "7%" }; --The Boreal Guard
 		[23] = { itemID = 45786, desc = "=ds=#m3#", droprate = "3%" }; --Hodir's Sigil
 	};
 	{
@@ -4391,7 +4391,7 @@ AtlasLoot_Data["Ulduar"] = {
 		[5] = { itemID = 45454, droprate = "8%" }; --Frost-bound Chain Bracers
 		[6] = { itemID = 45452, droprate = "6%" }; --Frostplate Greaves
 		[7] = { itemID = 45451, droprate = "5%" }; --Frozen Loop
-		[8] = { itemID = 45450, desc = "=ds=#w8#", droprate = "9%" }; --Northern Barrier
+		[8] = { itemID = 45450, droprate = "9%" }; --Northern Barrier
 		[10] = { itemID = 45632, desc = "=ds=#e15#", droprate = "2%" }; --Breastplate of the Wayward Conqueror
 		[11] = { itemID = 45633, desc = "=ds=#e15#", droprate = "0%" }; --Breastplate of the Wayward Protector
 		[12] = { itemID = 45634, desc = "=ds=#e15#", droprate = "1%" }; --Breastplate of the Wayward Vanquisher
@@ -4440,7 +4440,7 @@ AtlasLoot_Data["Ulduar"] = {
 		[19] = { itemID = 45472, droprate = "%" }; --Warhelm of the Champion
 		[20] = { itemID = 45471, droprate = "%" }; --Fate's Clutch
 		[21] = { itemID = 45570, droprate = "%" }; --Skyforge Crossbow
-		[22] = { itemID = 45470, desc = "=ds=#w8#", droprate = "%" }; --Wisdom's Hold
+		[22] = { itemID = 45470, droprate = "%" }; --Wisdom's Hold
 		[24] = { itemID = 45817, desc = "=ds=#m3#", droprate = "%" }; --Thorim's Sigil
 	};
 	{
@@ -6900,14 +6900,14 @@ AtlasLoot_Data["WinterfinRetreat"] = {
 	Name = BabbleFaction["Winterfin Retreat"];
 	{
 		Name = BabbleFaction["Winterfin Retreat"];
-		[1] = { itemID = 36784, desc = "=ds=#e7#", "100 #winterfinclam#" }; --Siren's Tear
+		[1] = { itemID = 36784, "100 #winterfinclam#" }; --Siren's Tear
 		[2] = { itemID = 37462, "30 #winterfinclam#" }; --Sea King's Crown
 		[3] = { itemID = 37463, "30 #winterfinclam#" }; --Winterfin Patch of Honor
 		[4] = { itemID = 37461, desc = "=ds=#w7#", "50 #winterfinclam#" }; --Tidebreaker Trident
-		[5] = { itemID = 36783, desc = "=ds=#e7#", "30 #winterfinclam#" }; --Northsea Pearl
+		[5] = { itemID = 36783, "30 #winterfinclam#" }; --Northsea Pearl
 		[6] = { itemID = 37464, desc = "=ds=#e22#", "5 #winterfinclam#" }; --Winterfin Horn of Distress
-		[7] = { itemID = 37449, desc = "=ds=#e2#", "5 #winterfinclam#" }; --Breath of Murloc
-		[8] = { itemID = 38351, desc = "=ds=#e2#", "2 #winterfinclam#" }; --Murliver Oil
+		[7] = { itemID = 37449, "5 #winterfinclam#" }; --Breath of Murloc
+		[8] = { itemID = 38351, "2 #winterfinclam#" }; --Murliver Oil
 		[9] = { itemID = 38350, desc = "=ds=#e4#", "1 #winterfinclam#" }; --Winterfin \"Depth Charge\"
 		[10] = { itemID = 34597, "=ds=#m17#" }; --Winterfin Clam
 	};
@@ -7939,9 +7939,9 @@ AtlasLoot_Data["WeaponsWRATH"] = {
 	};
 	{
 		Name = "Page 3";
-		[1] = { itemID = 51452, desc = "=ds=#w8#", "350 #arena# #reqrating# 1800" }; --Wrathful Gladiator's Barrier
-		[2] = { itemID = 51455, desc = "=ds=#w8#", "350 #arena# #reqrating# 1800" }; --Wrathful Gladiator's Redoubt
-		[3] = { itemID = 51533, desc = "=ds=#w8#", "350 #arena# #reqrating# 1800" }; --Wrathful Gladiator's Shield Wall
+		[1] = { itemID = 51452, "350 #arena# #reqrating# 1800" }; --Wrathful Gladiator's Barrier
+		[2] = { itemID = 51455, "350 #arena# #reqrating# 1800" }; --Wrathful Gladiator's Redoubt
+		[3] = { itemID = 51533, "350 #arena# #reqrating# 1800" }; --Wrathful Gladiator's Shield Wall
 		[4] = { itemID = 51535, "1260 #arena# #reqrating# 1700" }; --Wrathful Gladiator's War Edge
 		[5] = { itemID = 51532, "1260 #arena# #reqrating# 1700" }; --Wrathful Gladiator's Baton of Light
 		[6] = { itemID = 51531, "1260 #arena# #reqrating# 1700" }; --Wrathful Gladiator's Piercing Touch
@@ -8008,24 +8008,24 @@ AtlasLoot_Data["PvP80Misc"] = {
 		[1] = { itemID = 51534, "550 #arena# #reqrating# 2300" }; --Wrathful Gladiator's Tabard
 		[2] = { itemID = 44957, desc = "=ds=#s3# #e17#", "10000 #faction#" }; --Greater Inscription of the Gladiator
 		[3] = { itemID = 45706, desc = "=ds=", "100 #arena#" }; --Commendation of Bravery
-		[5] = { itemID = 36931, desc = "=ds=#e7#", "10000 #faction#" }; --Ametrine
-		[6] = { itemID = 36919, desc = "=ds=#e7#", "10000 #faction#" }; --Cardinal Ruby
-		[7] = { itemID = 36928, desc = "=ds=#e7#", "10000 #faction#" }; --Dreadstone
-		[8] = { itemID = 36934, desc = "=ds=#e7#", "10000 #faction#" }; --Eye of Zul
-		[9] = { itemID = 36922, desc = "=ds=#e7#", "10000 #faction#" }; --King's Amber
-		[10] = { itemID = 36925, desc = "=ds=#e7#", "10000 #faction#" }; --Majestic Zircon
-		[16] = { itemID = 41563, desc = "=ds=#p12# (350)", "1250 #faction#" }; --Design: Durable Huge Citrine
-		[17] = { itemID = 41564, desc = "=ds=#p12# (350)", "1250 #faction#" }; --Design: Empowered Huge Citrine
-		[18] = { itemID = 41565, desc = "=ds=#p12# (350)", "1250 #faction#" }; --Design: Lucent Huge Citrine
-		[19] = { itemID = 41575, desc = "=ds=#p12# (350)", "1250 #faction#" }; --Design: Mysterious Shadow Crystal
-		[20] = { itemID = 41559, desc = "=ds=#p12# (350)", "1250 #faction#" }; --Design: Mystic Sun Crystal
-		[21] = { itemID = 41573, desc = "=ds=#p12# (350)", "1250 #faction#" }; --Design: Opaque Dark Jade
-		[22] = { itemID = 41566, desc = "=ds=#p12# (350)", "1250 #faction#" }; --Design: Resplendent Huge Citrine
-		[23] = { itemID = 41569, desc = "=ds=#p12# (350)", "1250 #faction#" }; --Design: Shattered Dark Jade
-		[24] = { itemID = 41572, desc = "=ds=#p12# (350)", "1250 #faction#" }; --Design: Steady Dark Jade
-		[25] = { itemID = 41560, desc = "=ds=#p12# (350)", "1250 #faction#" }; --Design: Stormy Chalcedony
-		[26] = { itemID = 41570, desc = "=ds=#p12# (350)", "1250 #faction#" }; --Design: Tense Dark Jade
-		[27] = { itemID = 41571, desc = "=ds=#p12# (350)", "1250 #faction#" }; --Design: Turbid Dark Jade
+		[5] = { itemID = 36931, "10000 #faction#" }; --Ametrine
+		[6] = { itemID = 36919, "10000 #faction#" }; --Cardinal Ruby
+		[7] = { itemID = 36928, "10000 #faction#" }; --Dreadstone
+		[8] = { itemID = 36934, "10000 #faction#" }; --Eye of Zul
+		[9] = { itemID = 36922, "10000 #faction#" }; --King's Amber
+		[10] = { itemID = 36925, "10000 #faction#" }; --Majestic Zircon
+		[16] = { itemID = 41563, "1250 #faction#" }; --Design: Durable Huge Citrine
+		[17] = { itemID = 41564, "1250 #faction#" }; --Design: Empowered Huge Citrine
+		[18] = { itemID = 41565, "1250 #faction#" }; --Design: Lucent Huge Citrine
+		[19] = { itemID = 41575, "1250 #faction#" }; --Design: Mysterious Shadow Crystal
+		[20] = { itemID = 41559, "1250 #faction#" }; --Design: Mystic Sun Crystal
+		[21] = { itemID = 41573, "1250 #faction#" }; --Design: Opaque Dark Jade
+		[22] = { itemID = 41566, "1250 #faction#" }; --Design: Resplendent Huge Citrine
+		[23] = { itemID = 41569, "1250 #faction#" }; --Design: Shattered Dark Jade
+		[24] = { itemID = 41572, "1250 #faction#" }; --Design: Steady Dark Jade
+		[25] = { itemID = 41560, "1250 #faction#" }; --Design: Stormy Chalcedony
+		[26] = { itemID = 41570, "1250 #faction#" }; --Design: Tense Dark Jade
+		[27] = { itemID = 41571, "1250 #faction#" }; --Design: Turbid Dark Jade
 	};
 };
 
@@ -8139,15 +8139,15 @@ AtlasLoot_Data["LakeWintergrasp"] = {
 	};
 	{
 		Name = "Page 6";
-		[1] = { itemID = 44066, desc = "=ds=#e7#", "20 #wintergrasp#" }; --Kharmaa's Grace
-		[2] = { itemID = 44081, desc = "=ds=#e7#", "15 #wintergrasp#" }; --Enigmatic Starflare Diamond
-		[3] = { itemID = 44084, desc = "=ds=#e7#", "15 #wintergrasp#" }; --Forlorn Starflare Diamond
-		[4] = { itemID = 44082, desc = "=ds=#e7#", "15 #wintergrasp#" }; --Impassive Starflare Diamond
-		[5] = { itemID = 44076, desc = "=ds=#e7#", "15 #wintergrasp#" }; --Swift Starflare Diamond
-		[6] = { itemID = 44078, desc = "=ds=#e7#", "15 #wintergrasp#" }; --Swift Starflare Diamond
-		[7] = { itemID = 44087, desc = "=ds=#e7#", "15 #wintergrasp#" }; --Persistent Earthshatter Diamond
-		[8] = { itemID = 44088, desc = "=ds=#e7#", "15 #wintergrasp#" }; --Powerful Earthshatter Diamond
-		[9] = { itemID = 44089, desc = "=ds=#e7#", "15 #wintergrasp#" }; --Trenchant Earthshatter Diamond
+		[1] = { itemID = 44066, "20 #wintergrasp#" }; --Kharmaa's Grace
+		[2] = { itemID = 44081, "15 #wintergrasp#" }; --Enigmatic Starflare Diamond
+		[3] = { itemID = 44084, "15 #wintergrasp#" }; --Forlorn Starflare Diamond
+		[4] = { itemID = 44082, "15 #wintergrasp#" }; --Impassive Starflare Diamond
+		[5] = { itemID = 44076, "15 #wintergrasp#" }; --Swift Starflare Diamond
+		[6] = { itemID = 44078, "15 #wintergrasp#" }; --Swift Starflare Diamond
+		[7] = { itemID = 44087, "15 #wintergrasp#" }; --Persistent Earthshatter Diamond
+		[8] = { itemID = 44088, "15 #wintergrasp#" }; --Powerful Earthshatter Diamond
+		[9] = { itemID = 44089, "15 #wintergrasp#" }; --Trenchant Earthshatter Diamond
 		[11] = { itemID = 44075, desc = "=ds=#s1# #e17#", "40 #wintergrasp#" }; --Arcanum of Dominance
 		[12] = { itemID = 44069, desc = "=ds=#s1# #e17#", "40 #wintergrasp#" }; --Arcanum of Triumph
 		[13] = { itemID = 44068, desc = "=ds=#s3# #e17#", "30 #wintergrasp#" }; --Inscription of Dominance
@@ -10104,8 +10104,8 @@ AtlasLoot_Data["EmblemofHeroism"] = {
 		[17] = { itemID = 40702, desc = "=ds=#w4#, #h4#", "50 #eofheroism#" }; --Rolfsen's Ripper
 		[18] = { itemID = 40703, desc = "=ds=#w10#, #h4#", "50 #eofheroism#" }; --Grasscutter
 		[19] = { itemID = 40716, "15 #eofheroism#" }; --Lillehoff's Winged Blades
-		[20] = { itemID = 40701, desc = "=ds=#w8#", "35 #eofheroism#" }; --Crygil's Discarded Plate Panel
-		[21] = { itemID = 40700, desc = "=ds=#w8#", "35 #eofheroism#" }; --Protective Barricade of the Light
+		[20] = { itemID = 40701, "35 #eofheroism#" }; --Crygil's Discarded Plate Panel
+		[21] = { itemID = 40700, "35 #eofheroism#" }; --Protective Barricade of the Light
 		[22] = { itemID = 40699, "25 #eofheroism#" }; --Handbook of Obscure Remedies
 		[23] = { itemID = 40698, "25 #eofheroism#" }; --Ward of the Violet Citadel
 	};
@@ -10141,12 +10141,12 @@ AtlasLoot_Data["EmblemofHeroism"] = {
 		[7] = { itemID = 40615, desc = "=ds=#e15#", "60 #eofheroism#" }; --Gloves of the Lost Vanquisher
 		[9] = { itemID = 44230, desc = "=ds=#e12# =ec1=#m7#", "200 #eofheroism#" }; --Reins of the Wooly Mammoth
 		[10] = { itemID = 44231, desc = "=ds=#e12# =ec1=#m6#", "200 #eofheroism#" }; --Reins of the Wooly Mammoth
-		[16] = { itemID = 36919, desc = "=ds=#e7#", "20 #eofheroism#" }; --Cardinal Ruby
-		[17] = { itemID = 36922, desc = "=ds=#e7#", "20 #eofheroism#" }; --King's Amber
-		[18] = { itemID = 36925, desc = "=ds=#e7#", "20 #eofheroism#" }; --Majestic Zircon
-		[19] = { itemID = 36931, desc = "=ds=#e7#", "10 #eofheroism#" }; --Ametrine
-		[20] = { itemID = 36928, desc = "=ds=#e7#", "10 #eofheroism#" }; --Dreadstone
-		[21] = { itemID = 36934, desc = "=ds=#e7#", "10 #eofheroism#" }; --Eye of Zul
+		[16] = { itemID = 36919, "20 #eofheroism#" }; --Cardinal Ruby
+		[17] = { itemID = 36922, "20 #eofheroism#" }; --King's Amber
+		[18] = { itemID = 36925, "20 #eofheroism#" }; --Majestic Zircon
+		[19] = { itemID = 36931, "10 #eofheroism#" }; --Ametrine
+		[20] = { itemID = 36928, "10 #eofheroism#" }; --Dreadstone
+		[21] = { itemID = 36934, "10 #eofheroism#" }; --Eye of Zul
 		[23] = { itemID = 43102, desc = "=ds=#e6#", "10 #eofheroism#" }; --Frozen Orb
 	};
 	{

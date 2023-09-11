@@ -29,6 +29,7 @@ AtlasLoot.FixedItemText = {
     [98570] = AL["Mystic Enchanting"],
     [229739] = AL["Epic Shoulder Enchants"],
     [29434] = AL["Token"],
+    [400751] = AL["Token"],
 }
 
 

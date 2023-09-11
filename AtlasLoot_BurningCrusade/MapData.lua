@@ -31,80 +31,106 @@ local boss = "dungeonskull"
         PlayerLimit = "5";
         Acronym = AL["Kara"];
         MapName = "Karazhan";
+        Reputation = AL["The Violet Eye"];
         [1] = {
-        { AL["Reputation"]..": "..AL["The Violet Eye"] };
-        { AL["Key"]..": "..AL["The Master's Key"] };
-        { AL["Entrance"].." ("..AL["Front"]..")" };
-        { AL["Staircase to the Ballroom"].." ("..AL["Moroes <Tower Steward>"]..")" };
-        { AL["Stairs to Upper Stable"] };
-        { "D) "..AL["Ramp to the Guest Chambers"].." ("..AL["Maiden of Virtue"]..")" };
-        { "E) "..AL["Stairs to Opera House Orchestra Level"] };
-        { "F) "..AL["Ramp from Mezzanine to Balcony"] };
-        { "G) "..AL["Entrance"].." ("..AL["Back"]..")" };
-        { "H) "..AL["Connection to Master's Terrace"].." ("..AL["Nightbane"]..")" };
-        { "I) "..AL["Path to the Broken Stairs"] };
-        { AL["Hastings <The Caretaker>"] };
-        { AL["Servant Quarters"] };
-        { AL["Hyakiss the Lurker"].." ("..AL["Rare"]..", "..AL["Random"]..")" };
-        { AL["Rokad the Ravager"].." ("..AL["Rare"]..", "..AL["Random"]..")" };
-        { AL["Shadikith the Glider"].." ("..AL["Rare"]..", "..AL["Random"]..")" };
-        { AL["Berthold <The Doorman>"] };
-        { AL["Calliard <The Nightman>"] };
-        { AL["Attumen the Huntsman"] };
-        { AL["Midnight"] };
-        { AL["Koren <The Blacksmith>"] };
-        { AL["Moroes <Tower Steward>"] };
-        { AL["Baroness Dorothea Millstipe"].." ("..AL["Random"]..", "..AL["Shadow Priest"]..")" };
-        { AL["Lady Catriona Von'Indi"].." ("..AL["Random"]..", "..AL["Holy Priest"]..")" };
-        { AL["Lady Keira Berrybuck"].." ("..AL["Random"]..", "..AL["Holy Paladin"]..")" };
-        { AL["Baron Rafe Dreuger"].." ("..AL["Random"]..", "..AL["Retribution Paladin"]..")" };
-        { AL["Lord Robin Daris"].." ("..AL["Random"]..", "..AL["Arms Warrior"]..")" };
-        { AL["Lord Crispin Ference"].." ("..AL["Random"]..", "..AL["Protection Warrior"]..")" };
-        { AL["Bennett <The Sergeant at Arms>"] };
-        { AL["Ebonlocke <The Noble>"] };
-        { AL["Keanna's Log"] };
-        { AL["Maiden of Virtue"] };
-        { AL["Sebastian <The Organist>"] };
-        { AL["Barnes <The Stage Manager>"] };
-        { AL["The Opera Event"] };
-        { AL["Red Riding Hood"].." ("..AL["Random"]..")" };
-        { AL["The Big Bad Wolf"] };
-        { AL["Wizard of Oz"].." ("..AL["Random"]..")" };
-        { AL["Dorothee"] };
-        { AL["Tito"] };
-        { AL["Strawman"] };
-        { AL["Tinhead"] };
-        { AL["Roar"] };
-        { AL["The Crone"] };
-        { AL["Romulo and Julianne"].." ("..AL["Random"]..")" };
-        { AL["Romulo"] };
-        { AL["Julianne"] };
-        { AL["The Master's Terrace"] };
-        { AL["Nightbane"].." ("..AL["Summon"]..")" };
+            { AL["Servant's Quarters"], SubZone = true };
+            { AL["Hastings <The Caretaker>"], cords = {62,67} };
+            { AL["Random Servant's Quarter Boss"], cords = {67,30}, pinType = boss};
+            { AL["Hyakiss the Lurker"].." ("..AL["Rare"]..", "..AL["Random"]..")" };
+            { AL["Rokad the Ravager"].." ("..AL["Rare"]..", "..AL["Random"]..")" };
+            { AL["Shadikith the Glider"].." ("..AL["Rare"]..", "..AL["Random"]..")" };
+            { AL["Berthold <The Doorman>"], cords = {53,64} };
+            { AL["Calliard <The Nightman>"], cords = {48,89} };
+            { AL["Attumen the Huntsman"], cords = {46, 83}, pinType = boss };
+            { AL["Midnight"] };
+            { AL["Koren <The Blacksmith>"], cords = {46, 74} };
         };
         [2] = {
-        { AL["Reputation"]..": "..AL["The Violet Eye"] };
-        { AL["Key"]..": "..AL["The Master's Key"] };
-        { "I) "..AL["Path to the Broken Stairs"] };
-        { "J) "..AL["Broken Stairs"] };
-        { "K) "..AL["Ramp to Guardian's Library"].." ("..AL["Shade of Aran"]..")" };
-        { "L) "..AL["Suspicious Bookshelf"].." ("..AL["Terestian Illhoof"]..")" };
-        { "M) "..AL["Ramp up to the Celestial Watch"].." ("..AL["Netherspite"]..")" };
-        { AL["Ramp down to the Gamesman's Hall"].." ("..AL["Chess Event"]..")" };
-        { "N) "..AL["Ramp to Medivh's Chamber"] };
-        { "O) "..AL["Spiral Stairs to Netherspace"].." ("..AL["Prince Malchezaar"]..")" };
-        { AL["The Curator"] };
-        { AL["Wravien <The Mage>"] };
-        { AL["Gradav <The Warlock>"] };
-        { AL["Kamsis <The Conjurer>"] };
-        { AL["Terestian Illhoof"] };
-        { AL["Kil'rek"].." ("..AL["Imp"]..")" };
-        { AL["Shade of Aran"] };
-        { AL["Netherspite"] };
-        { AL["Ythyar"].." ("..AL["Repair"]..", "..AL["Rewards"]..")" };
-        { AL["Echo of Medivh"] };
-        { AL["Dust Covered Chest"].." ("..AL["Chess Event"]..")" };
-        { AL["Prince Malchezaar"] };
+            { AL["Upper Livery Stables"], SubZone = true };
+            { AL["Bennett <The Sergeant at Arms>"], cords = {40,63} };
+        };
+        [3] = {
+            { AL["The Banquet Hall"], SubZone = true };
+            { AL["Moroes <Tower Steward>"], cords = {26,64}, pinType = boss };
+            { AL["Baroness Dorothea Millstipe"].." ("..AL["Random"]..", "..AL["Shadow Priest"]..")" };
+            { AL["Lady Catriona Von'Indi"].." ("..AL["Random"]..", "..AL["Holy Priest"]..")" };
+            { AL["Lady Keira Berrybuck"].." ("..AL["Random"]..", "..AL["Holy Paladin"]..")" };
+            { AL["Baron Rafe Dreuger"].." ("..AL["Random"]..", "..AL["Retribution Paladin"]..")" };
+            { AL["Lord Robin Daris"].." ("..AL["Random"]..", "..AL["Arms Warrior"]..")" };
+            { AL["Lord Crispin Ference"].." ("..AL["Random"]..", "..AL["Protection Warrior"]..")" };
+        };
+        [4] = {
+            { AL["The Guest Chambers"], SubZone = true };
+            { AL["Ebonlocke <The Noble>"], cords = {56,63} };
+            { AL["Keanna's Log"], cords = {70,21} };
+            { AL["Maiden of Virtue"], cords = {84,48}, pinType = boss };
+            { AL["Sebastian <The Organist>"], cords = {26,49} };
+            { AL["Barnes <The Stage Manager>"], cords = {20,27} };
+            { AL["The Opera Event"], cords = {18,32}, pinType = boss };
+            { AL["Red Riding Hood"].." ("..AL["Random"]..")" };
+            { AL["The Big Bad Wolf"] };
+            { AL["Wizard of Oz"].." ("..AL["Random"]..")" };
+            { AL["Dorothee"] };
+            { AL["Tito"] };
+            { AL["Strawman"] };
+            { AL["Tinhead"] };
+            { AL["Roar"] };
+            { AL["The Crone"] };
+            { AL["Romulo and Julianne"].." ("..AL["Random"]..")" };
+            { AL["Romulo"] };
+            { AL["Julianne"] };
+        };
+        [5] = {
+            { AL["Opera Hall Balcony"], SubZone = true };
+        };
+        [6] = {
+            { AL["Master's Terrace"], SubZone = true };
+            { AL["Nightbane"].." ("..AL["Summon"]..")", cords = {48,91}, pinType = boss };
+        };
+        [7] = {
+            { AL["Lower Broken Stair"], SubZone = true };
+        };
+        [8] = {
+            { AL["Upper Broken Stair"], SubZone = true };
+        };
+        [9] = {
+            { AL["The Menagerie"], SubZone = true };
+            { AL["The Curator"] , cords = {50,36}, pinType = boss};
+            { AL["Wravien <The Mage>"], cords = {39,45} };
+            { AL["Gradav <The Warlock>"], cords = {30,48} };
+            { AL["Kamsis <The Conjurer>"], cords = {30,60} };
+        };
+        [10] = {
+            { AL["Guardian's Library"], SubZone = true };
+            { AL["Shade of Aran"], cords = {73,27}, pinType = boss };
+        };
+        [11] = {
+            { AL["The Repository"], SubZone = true };
+            { AL["Terestian Illhoof"], cords = {53,69}, pinType = boss };
+            { AL["Kil'rek"].." ("..AL["Imp"]..")" };
+        };
+        [12] = {
+            { AL["Upper Library"], SubZone = true };
+            { AL["Ythyar"].." ("..AL["Repair"]..", "..AL["Rewards"]..")", cords = {46,26} };
+        };
+        [13] = {
+            { AL["The Celestial Watch"], SubZone = true };
+            { AL["Netherspite"], cords = {36,41}, pinType = boss };
+        };
+        [14] = {
+            { AL["Gamesman's Hall"], SubZone = true };
+            { AL["Echo of Medivh"], cords = {23,79} };
+            { AL["Dust Covered Chest"].." ("..AL["Chess Event"]..")" , cords = {37,62}, pinType = boss};
+        };
+        [15] = {
+            { AL["Medivh's Chambers"], SubZone = true };
+        };
+        [16] = {
+            { AL["The Power Station"], SubZone = true };
+        };
+        [17] = {
+            { AL["Netherspace"], SubZone = true };
+            { AL["Prince Malchezaar"], cords = {60,38.5}, pinType = boss };
         };
     };
 
@@ -117,8 +143,8 @@ local boss = "dungeonskull"
         Acronym = AL["Mag"];
         MapName = "Magtheridonslair";
         [1] = {
-        { AL["Entrance"] };
-        { AL["Magtheridon"] };
+        { BabbleZone["Magtheridon's Lair"], SubZone = true };
+        { AL["Magtheridon"], cords = {69,74}, pinType = boss };
         };
     };
 
@@ -131,13 +157,13 @@ local boss = "dungeonskull"
         Acronym = AL["GL"];
         MapName = "GruulsLair";
         [1] = {
-        { AL["Entrance"] };
-        { AL["High King Maulgar <Lord of the Ogres>"] };
+        { BabbleZone["Gruul's Lair"], SubZone = true };
+        { AL["High King Maulgar <Lord of the Ogres>"], cords = {55,57}, pinType = boss };
         { AL["Kiggler the Crazed"].." ("..AL["Shaman"]..")" };
         { AL["Blindeye the Seer"].." ("..AL["Priest"]..")" };
         { AL["Olm the Summoner"].." ("..AL["Warlock"]..")" };
         { AL["Krosh Firehand"].." ("..AL["Mage"]..")" };
-        { AL["Gruul the Dragonkiller"] };
+        { AL["Gruul the Dragonkiller"], cords = {20,29}, pinType = boss };
         };
     };
 
@@ -149,16 +175,16 @@ local boss = "dungeonskull"
         PlayerLimit = "10-25";
         Acronym = AL["SC"];
         MapName = "CoilfangReservoir";
+        Reputation = AL["Cenarion Expedition"];
         [1] = {
-        { AL["Reputation"]..": "..AL["Cenarion Expedition"] };
-        { AL["Entrance"] };
-        { AL["Hydross the Unstable <Duke of Currents>"] };
-        { AL["The Lurker Below"] };
-        { AL["Leotheras the Blind"] };
-        { AL["Fathom-Lord Karathress"] };
+        { BabbleZone["Serpentshrine Cavern"], SubZone = true };
+        { AL["Hydross the Unstable <Duke of Currents>"], cords = {38,85}, pinType = boss };
+        { AL["The Lurker Below"], cords = {37,59}, pinType = boss };
+        { AL["Leotheras the Blind"], cords = {42,23}, pinType = boss };
+        { AL["Fathom-Lord Karathress"], cords = {48,14}, pinType = boss };
         { AL["Seer Olum"] };
-        { AL["Morogrim Tidewalker"] };
-        { AL["Lady Vashj <Coilfang Matron>"] };
+        { AL["Morogrim Tidewalker"], cords = {59,27}, pinType = boss };
+        { AL["Lady Vashj <Coilfang Matron>"], cords = {73,59}, pinType = boss };
         };
     };
 
@@ -172,10 +198,11 @@ local boss = "dungeonskull"
         MapName = "TempestKeep";
         Reputation = AL["The Sha'tar"];
         [1] = {
-        { AL["Al'ar <Phoenix God>"] };
-        { AL["Void Reaver"] };
-        { AL["High Astromancer Solarian"] };
-        { AL["Kael'thas Sunstrider <Lord of the Blood Elves>"] };
+        { BabbleZone["The Eye"], SubZone = true };
+        { AL["Al'ar <Phoenix God>"], cords = {51,60}, pinType = boss };
+        { AL["Void Reaver"], cords = {26,49}, pinType = boss };
+        { AL["High Astromancer Solarian"], cords = {74,48}, pinType = boss };
+        { AL["Kael'thas Sunstrider <Lord of the Blood Elves>"], cords = {50,15}, pinType = boss };
         { AL["Thaladred the Darkener <Advisor to Kael'thas>"].." ("..AL["Warrior"]..")" };
         { AL["Master Engineer Telonicus <Advisor to Kael'thas>"].." ("..AL["Hunter"]..")" };
         { AL["Grand Astromancer Capernian <Advisor to Kael'thas>"].." ("..AL["Mage"]..")" };
@@ -192,19 +219,19 @@ local boss = "dungeonskull"
         Acronym = AL["ZA"];
         MapName = "ZulAman";
         [1] = {
-        { AL["Entrance"] };
-        { AL["Harrison Jones"] };
-        { AL["Nalorakk <Bear Avatar>"] };
+        { BabbleZone["Zul'Aman"], SubZone = true };
+        { AL["Harrison Jones"], cords = {12,53} };
+        { AL["Nalorakk <Bear Avatar>"], cords = {41,74}, pinType = boss };
         { AL["Tanzar"] };
         { AL["The Map of Zul'Aman"] };
-        { AL["Akil'Zon <Eagle Avatar>"] };
+        { AL["Akil'Zon <Eagle Avatar>"], cords = {35,23}, pinType = boss };
         { AL["Harkor"] };
-        { AL["Jan'Alai <Dragonhawk Avatar>"] };
+        { AL["Jan'Alai <Dragonhawk Avatar>"], cords = {56,71}, pinType = boss };
         { AL["Kraz"] };
-        { AL["Halazzi <Lynx Avatar>"] };
+        { AL["Halazzi <Lynx Avatar>"], cords = {58,24}, pinType = boss };
         { AL["Ashli"] };
-        { AL["Zungam"] };
-        { AL["Hex Lord Malacrass"] };
+        { AL["Zungam"], cords = {67.4,37.6}, pinType = quest };
+        { AL["Hex Lord Malacrass"], cords = {72,54}, pinType = boss };
         { AL["Thurg"].." ("..AL["Random"]..")" };
         { AL["Gazakroth"].." ("..AL["Random"]..")" };
         { AL["Lord Raadan"].." ("..AL["Random"]..")" };
@@ -213,8 +240,8 @@ local boss = "dungeonskull"
         { AL["Slither"].." ("..AL["Random"]..")" };
         { AL["Fenstalker"].." ("..AL["Random"]..")" };
         { AL["Koragg"].." ("..AL["Random"]..")" };
-        { AL["Zul'jin"] };
-        { AL["Forest Frogs"] };
+        { AL["Zul'jin"], cords = {91,54}, pinType = boss };
+        { AL["Forest Frogs"], cords = {45,56} };
         { AL["Kyren <Reagents>"] };
         { AL["Gunter <Food Vendor>"] };
         { AL["Adarrah"] };
@@ -260,43 +287,53 @@ local boss = "dungeonskull"
         PlayerLimit = "10-25";
         Acronym = AL["BT"];
         MapName = "BlackTemple";
+        Reputation = AL["Ashtongue Deathsworn"];
         [1] = {
-        { AL["Reputation"]..": "..AL["Ashtongue Deathsworn"] };
-        { AL["Entrance"] };
-        { AL["Towards Reliquary of Souls"] };
-        { AL["Towards Teron Gorefiend"] };
-        { "D) "..AL["Towards Illidan Stormrage"] };
-        { AL["Spirit of Olum"] };
-        { AL["High Warlord Naj'entus"] };
-        { AL["Supremus"] };
-        { AL["Shade of Akama"] };
-        { AL["Spirit of Udalo"] };
-        { AL["Aluyen <Reagents>"] };
-        { AL["Okuno <Ashtongue Deathsworn Quartermaster>"] };
-        { AL["Seer Kanai"] };
+            { BabbleSubZone["Karabor Sewers"], SubZone = true };
+            { AL["High Warlord Naj'entus"], cords = {42.9,19.2}, pinType = boss };
+            { AL["Spirit of Olum"] };
+            { AL["Supremus"] };
         };
         [2] = {
-        { AL["Reputation"]..": "..AL["Ashtongue Deathsworn"] };
-        { AL["Entrance"] };
-        { AL["Entrance"] };
-        { AL["Gurtogg Bloodboil"] };
-        { AL["Reliquary of Souls"] };
-        { AL["Essence of Suffering"] };
-        { AL["Essence of Desire"] };
-        { AL["Essence of Anger"] };
-        { AL["Teron Gorefiend"] };
+            { BabbleSubZone["Sanctuary of Shadows"], SubZone = true };
+            { AL["Spirit of Udalo"], cords = {62,50} };
+            { AL["Aluyen <Reagents>"] };
+            { AL["Okuno <Ashtongue Deathsworn Quartermaster>"] };
+            { AL["Seer Kanai"] };
+            { AL["Shade of Akama"], cords = {40,89}, pinType = boss };
         };
         [3] = {
-        { AL["Reputation"]..": "..AL["Ashtongue Deathsworn"] };
-        { "D) "..AL["Entrance"] };
-        { AL["Mother Shahraz"] };
-        { AL["The Illidari Council"] };
-        { AL["Lady Malande"].." ("..AL["Priest"]..")" };
-        { AL["Gathios the Shatterer"].." ("..AL["Paladin"]..")" };
-        { AL["High Nethermancer Zerevor"].." ("..AL["Mage"]..")" };
-        { AL["Veras Darkshadow"].." ("..AL["Rogue"]..")" };
-        { AL["Illidan Stormrage <The Betrayer>"] };
+            { BabbleSubZone["Halls of Anguish"], SubZone = true };
+            { AL["Gurtogg Bloodboil"], cords = {53,47}, pinType = boss };
+            { AL["Reliquary of Souls"], cords = {62,84}, pinType = boss };
+            { AL["Essence of Suffering"] };
+            { AL["Essence of Desire"] };
+            { AL["Essence of Anger"] };
         };
+        [4] = {
+            { BabbleSubZone["Gorefiend's Vigil"], SubZone = true };
+            { AL["Teron Gorefiend"], cords = {40,12}, pinType = boss }; 
+        };
+        [5] = {
+            { BabbleSubZone["Den of Mortal Delights"], SubZone = true };
+            { AL["Mother Shahraz"], cords = {67,38}, pinType = boss };
+        };
+        [6] = {
+            { BabbleSubZone["Chamber of Command"], SubZone = true };
+            { AL["The Illidari Council"], cords = {48,43}, pinType = boss };
+            { AL["Lady Malande"].." ("..AL["Priest"]..")" };
+            { AL["High Nethermancer Zerevor"].." ("..AL["Mage"]..")" };
+            { AL["Veras Darkshadow"].." ("..AL["Rogue"]..")" };
+        };
+        [7] = {
+            { BabbleSubZone["Temple Summit"], SubZone = true };
+            { AL["Illidan Stormrage <The Betrayer>"], cords = {53,71}, pinType = boss };
+        };
+        [8] = {
+            { BabbleSubZone["Illidari Training Grounds"], SubZone = true };
+            { AL["Gathios the Shatterer"].." ("..AL["Paladin"]..")", cords = {67,47}, pinType = boss };
+        };
+
     };
 
     AtlasLoot_MapData["SunwellPlateau"] = {
@@ -307,19 +344,23 @@ local boss = "dungeonskull"
         PlayerLimit = "10-25";
         Acronym = AL["SuP"];
         MapName = "SunwellPlateau";
+        [2] = {
+            { BabbleSubZone["Shrine of the Eclipse"], SubZone = true };
+            { AL["Kalecgos"], cords = {30,51}, pinType = boss };
+            { AL["Sathrovarr the Corruptor"] };
+            { AL["Madrigosa"], cords = {67,87}, pinType = boss };
+            { AL["Brutallus"] };
+            { AL["Felmyst"] };
+            { AL["Kil'jaeden <The Deceiver>"], cords = {64,33}, pinType = boss };
+        };
         [1] = {
-        { AL["Entrance"] };
-        { AL["Kalecgos"] };
-        { AL["Sathrovarr the Corruptor"] };
-        { AL["Madrigosa"] };
-        { AL["Brutallus"] };
-        { AL["Felmyst"] };
-        { AL["Eredar Twins"].." ("..AL["Lower"]..")" };
-        { AL["Grand Warlock Alythess"].." ("..AL["Lower"]..")" };
-        { AL["Lady Sacrolash"].." ("..AL["Lower"]..")" };
-        { AL["M'uru"].." ("..AL["Upper"]..")" };
-        { AL["Entropius"].." ("..AL["Upper"]..")" };
-        { AL["Kil'jaeden <The Deceiver>"] };
+            { BabbleSubZone["Sunwell Plateau"], SubZone = true };
+            { AL["Eredar Twins"].." ("..AL["Lower"]..")", cords = {46,24}, pinType = boss };
+            { AL["Grand Warlock Alythess"].." ("..AL["Lower"]..")" };
+            { AL["Lady Sacrolash"].." ("..AL["Lower"]..")" };
+            { AL["M'uru"].." ("..AL["Upper"]..")" };
+            { AL["Entropius"].." ("..AL["Upper"]..")" };
+            { AL["Kil'jaeden <The Deceiver>"], cords = {46,64}, pinType = boss };
         };
     };
 
@@ -333,16 +374,14 @@ local boss = "dungeonskull"
         PlayerLimit = "5";
         Acronym = AL["Ramp"];
         MapName = "HellfireRamparts";
+        Reputation = { Horde = AL["Thrallmar"], Alliance = AL["Honor Hold"] };
         [1] = {
-        { AL["Reputation"]..": "..AL["Thrallmar"].." ("..AL["Horde"]..")" };
-        { AL["Reputation"]..": "..AL["Honor Hold"].." ("..AL["Alliance"]..")" };
-        { AL["Key"]..": "..AL["Flamewrought Key"].." ("..AL["Heroic"]..")" };
-        { AL["Entrance"] };
-        { AL["Watchkeeper Gargolmar"] };
-        { AL["Omor the Unscarred"] };
-        { AL["Vazruden"] };
-        { AL["Nazan <Vazruden's Mount>"] };
-        { AL["Reinforced Fel Iron Chest"] };
+            { BabbleZone["Hellfire Ramparts"], SubZone = true };
+            { AL["Watchkeeper Gargolmar"], cords = {73,32}, pinType = boss };
+            { AL["Omor the Unscarred"], cords = {40,20}, pinType = boss };
+            { AL["Vazruden"] , cords = {36,82}, pinType = boss};
+            { AL["Nazan <Vazruden's Mount>"] };
+            { AL["Reinforced Fel Iron Chest"], cords = {33,87} };
         };
     };
 
@@ -354,25 +393,22 @@ local boss = "dungeonskull"
         PlayerLimit = "5";
         Acronym = AL["SH"];
         MapName = "TheShatteredHalls";
+        Reputation = { Horde = AL["Thrallmar"], Alliance = AL["Honor Hold"] };
         [1] = {
-        { AL["Reputation"]..": "..AL["Thrallmar"].." ("..AL["Horde"]..")" };
-        { AL["Reputation"]..": "..AL["Honor Hold"].." ("..AL["Alliance"]..")" };
-        { AL["Key"]..": "..AL["Shattered Halls Key"] };
-        { AL["Key"]..": "..AL["Flamewrought Key"].." ("..AL["Heroic"]..")" };
-        { AL["Entrance"] };
-        { AL["Randy Whizzlesprocket"].." ("..AL["Alliance"]..", "..AL["Heroic"]..")" };
-        { AL["Drisella"].." ("..AL["Horde"]..", "..AL["Heroic"]..")" };
-        { AL["Grand Warlock Nethekurse"] };
-        { AL["Blood Guard Porung"].." ("..AL["Heroic"]..")" };
-        { AL["Warbringer O'mrogg"] };
-        { AL["Warchief Kargath Bladefist"] };
-        { AL["Shattered Hand Executioner"].." ("..AL["Heroic"]..")" };
-        { AL["Private Jacint"].." ("..AL["Alliance"]..", "..AL["Heroic"]..")" };
-        { AL["Rifleman Brownbeard"].." ("..AL["Alliance"]..", "..AL["Heroic"]..")" };
-        { AL["Captain Alina"].." ("..AL["Alliance"]..", "..AL["Heroic"]..")" };
-        { AL["Scout Orgarr"].." ("..AL["Horde"]..", "..AL["Heroic"]..")" };
-        { AL["Korag Proudmane"].." ("..AL["Horde"]..", "..AL["Heroic"]..")" };
-        { AL["Captain Boneshatter"].." ("..AL["Horde"]..", "..AL["Heroic"]..")" };
+            { BabbleZone["The Shattered Halls"], SubZone = true };
+            { AL["Randy Whizzlesprocket"].." ("..AL["Alliance"]..", "..AL["Heroic"]..")", cords = {35,71}, pinType = boss };
+            { AL["Drisella"].." ("..AL["Horde"]..", "..AL["Heroic"]..")" };
+            { AL["Grand Warlock Nethekurse"], cords = {33,62}, pinType = boss };
+            { AL["Blood Guard Porung"].." ("..AL["Heroic"]..")", cords = {30,14}, pinType = boss };
+            { AL["Warbringer O'mrogg"], cords = {54,35}, pinType = boss };
+            { AL["Warchief Kargath Bladefist"], cords = {68,50}, pinType = boss };
+            { AL["Shattered Hand Executioner"].." ("..AL["Heroic"]..")" };
+            { AL["Private Jacint"].." ("..AL["Alliance"]..", "..AL["Heroic"]..")" };
+            { AL["Rifleman Brownbeard"].." ("..AL["Alliance"]..", "..AL["Heroic"]..")" };
+            { AL["Captain Alina"].." ("..AL["Alliance"]..", "..AL["Heroic"]..")" };
+            { AL["Scout Orgarr"].." ("..AL["Horde"]..", "..AL["Heroic"]..")" };
+            { AL["Korag Proudmane"].." ("..AL["Horde"]..", "..AL["Heroic"]..")" };
+            { AL["Captain Boneshatter"].." ("..AL["Horde"]..", "..AL["Heroic"]..")" };
         };
     };
 
@@ -384,14 +420,12 @@ local boss = "dungeonskull"
         PlayerLimit = "5";
         Acronym = AL["BF"];
         MapName = "TheBloodFurnace";
+        Reputation = { Horde = AL["Thrallmar"], Alliance = AL["Honor Hold"] };
         [1] = {
-        { AL["Reputation"]..": "..AL["Thrallmar"].." ("..AL["Horde"]..")" };
-        { AL["Reputation"]..": "..AL["Honor Hold"].." ("..AL["Alliance"]..")" };
-        { AL["Key"]..": "..AL["Flamewrought Key"].." ("..AL["Heroic"]..")" };
-        { AL["Entrance"] };
-        { AL["The Maker"] };
-        { AL["Broggok"] };
-        { AL["Keli'dan the Breaker"] };
+            { BabbleZone["The Blood Furnace"], SubZone = true };
+            { AL["The Maker"], cords = {39,41}, pinType = boss };
+            { AL["Broggok"], cords = {42,22}, pinType = boss };
+            { AL["Keli'dan the Breaker"], cords = {58,41}, pinType = boss };
         };
     };
 
@@ -403,16 +437,14 @@ local boss = "dungeonskull"
         PlayerLimit = "5";
         Acronym = AL["Bota"];
         MapName = "TheBotanica";
+        Reputation = AL["The Sha'tar"];
         [1] = {
-        { AL["Reputation"]..": "..AL["The Sha'tar"] };
-        { AL["Key"]..": "..AL["Warpforged Key"].." ("..AL["Heroic"]..")" };
-        { AL["Entrance"] };
-        { AL["Exit"] };
-        { AL["Commander Sarannis"] };
-        { AL["High Botanist Freywinn"] };
-        { AL["Thorngrin the Tender"] };
-        { AL["Laj"] };
-        { AL["Warp Splinter"] };
+            { BabbleZone["The Botanica"], SubZone = true };
+            { AL["Commander Sarannis"], cords = {45,23}, pinType = boss };
+            { AL["High Botanist Freywinn"], cords = {24,23}, pinType = boss };
+            { AL["Thorngrin the Tender"], cords = {8,48}, pinType = boss };
+            { AL["Laj"], cords = {34,86}, pinType = boss };
+            { AL["Warp Splinter"], cords = {34,36}, pinType = boss };
         };
     };
 
@@ -424,20 +456,24 @@ local boss = "dungeonskull"
         PlayerLimit = "5";
         Acronym = AL["Arca"];
         MapName = "TheArcatraz";
+        Reputation = AL["The Sha'tar"];
         [1] = {
-        { AL["Reputation"]..": "..AL["The Sha'tar"] };
-        { AL["Key"]..": "..AL["Key to the Arcatraz"] };
-        { AL["Key"]..": "..AL["Warpforged Key"].." ("..AL["Heroic"]..")" };
-        { AL["Entrance"] };
-        { AL["Zereketh the Unbound"] };
-        { AL["Arcane Container"] };
-        { AL["Third Fragment Guardian"] };
-        { AL["Dalliah the Doomsayer"] };
-        { AL["Wrath-Scryer Soccothrates"] };
-        { AL["Udalo"] };
-        { AL["Harbinger Skyriss"] };
-        { AL["Warden Mellichar"] };
-        { AL["Millhouse Manastorm"] };
+            { BabbleSubZone["Stasis Block: Trion"], SubZone = true };
+            { AL["Zereketh the Unbound"], cords = {60,25}, pinType = boss };
+        };
+        [2] = {
+            { BabbleSubZone["Stasis Block: Maximus"], SubZone = true };
+            { AL["Arcane Container"], cords = {59,27} };
+            { AL["Third Fragment Guardian"] };
+            { AL["Dalliah the Doomsayer"], cords = {37,79}, pinType = boss };
+            { AL["Wrath-Scryer Soccothrates"], cords = {21,79}, pinType = boss };
+        };
+        [3] = {
+            { BabbleSubZone["Containment Core"], SubZone = true };
+            { AL["Udalo"], cords = {29,28}, pinType = boss };
+            { AL["Harbinger Skyriss"], cords = {62,30}, pinType = boss };
+            { AL["Warden Mellichar"] };
+            { AL["Millhouse Manastorm"] };
         };
     };
 
@@ -449,18 +485,19 @@ local boss = "dungeonskull"
         PlayerLimit = "5";
         Acronym = AL["Mech"];
         MapName = "TheMechanar";
+        Reputation = AL["The Sha'tar"];
         [1] = {
-        { AL["Reputation"]..": "..AL["The Sha'tar"] };
-        { AL["Key"]..": "..AL["Warpforged Key"].." ("..AL["Heroic"]..")" };
-        { AL["Entrance"] };
-        { AL["Exit"] };
-        { AL["Gatewatcher Gyro-Kill"] };
-        { AL["Gatewatcher Iron-Hand"] };
-        { AL["Cache of the Legion"] };
-        { AL["Mechano-Lord Capacitus"] };
-        { AL["Overcharged Manacell"] };
-        { AL["Nethermancer Sepethrea"] };
-        { AL["Pathaleon the Calculator"] };
+            { BabbleSubZone["The Mechanar"], SubZone = true };
+            { AL["Gatewatcher Gyro-Kill"], cords = {47,58}, pinType = boss };
+            { AL["Gatewatcher Iron-Hand"], cords = {61,53}, pinType = boss };
+            { AL["Cache of the Legion"] };
+            { AL["Mechano-Lord Capacitus"], cords = {52,32}, pinType = boss };
+            { AL["Overcharged Manacell"] };
+        };
+        [2] = {
+            { AL["Calculation Chamber"], SubZone = true };
+            { AL["Nethermancer Sepethrea"], cords = {48,20}, pinType = boss };
+            { AL["Pathaleon the Calculator"], cords = {28,62}, pinType = boss };
         };
     };
 
@@ -472,14 +509,16 @@ local boss = "dungeonskull"
         PlayerLimit = "5";
         Acronym = AL["AC"];
         MapName = "AuchenaiCrypts";
+        Reputation = AL["Lower City"];
         [1] = {
-        { AL["Reputation"]..": "..AL["Lower City"] };
-        { AL["Key"]..": "..AL["Auchenai Key"].." ("..AL["Heroic"]..")" };
-        { AL["Entrance"] };
-        { AL["Shirrak the Dead Watcher"] };
-        { AL["Exarch Maladaar"] };
-        { AL["Avatar of the Martyred"] };
-        { AL["D'ore"] };
+            { BabbleSubZone["Halls of the Hereafter"], SubZone = true };
+        };
+        [2] = {
+            { BabbleSubZone["Bridge of Souls"], SubZone = true };
+            { AL["Shirrak the Dead Watcher"], cords = {47,67}, pinType = boss };
+            { AL["Exarch Maladaar"], cords = {74,50}, pinType = boss };
+            { AL["Avatar of the Martyred"] };
+            { AL["D'ore"] };
         };
     };
 
@@ -491,19 +530,17 @@ local boss = "dungeonskull"
         PlayerLimit = "5";
         Acronym = AL["MT"];
         MapName = "ManaTombs";
+        Reputation = AL["The Consortium"];
         [1] = {
-        { AL["Reputation"]..": "..AL["The Consortium"] };
-        { AL["Key"]..": "..AL["Auchenai Key"].." ("..AL["Heroic"]..")" };
-        { AL["Key"]..": "..AL["The Eye of Haramad"].." ("..AL["Exalted"]..")" };
-        { AL["Entrance"] };
-        { AL["Pandemonius"] };
-        { AL["Shadow Lord Xiraxis"] };
-        { AL["Ambassador Pax'ivi"].." ("..AL["Heroic"]..")" };
-        { AL["Tavarok"] };
-        { AL["Cryo-Engineer Sha'heen"] };
-        { AL["Ethereal Transporter Control Panel"] };
-        { AL["Nexus-Prince Shaffar"] };
-        { AL["Yor <Void Hound of Shaffar>"].." ("..AL["Summon"]..")" };
+            { BabbleZone["Mana-Tombs"], SubZone = true };
+            { AL["Pandemonius"], cords = {49,29}, pinType = boss };
+            { AL["Shadow Lord Xiraxis"] };
+            { AL["Ambassador Pax'ivi"].." ("..AL["Heroic"]..")", cords = {61,15}, pinType = boss };
+            { AL["Tavarok"], cords = {61,74}, pinType = boss };
+            { AL["Cryo-Engineer Sha'heen"], cords = {43,84}, pinType = boss };
+            { AL["Ethereal Transporter Control Panel"] };
+            { AL["Nexus-Prince Shaffar"], cords = {33,49}, pinType = boss };
+            { AL["Yor <Void Hound of Shaffar>"].." ("..AL["Summon"]..")" };
         };
     };
 
@@ -515,16 +552,18 @@ local boss = "dungeonskull"
         PlayerLimit = "5";
         Acronym = AL["Seth"];
         MapName = "SethekkHalls";
+        Reputation = AL["Lower City"];
         [1] = {
-        { AL["Reputation"]..": "..AL["Lower City"] };
-        { AL["Key"]..": "..AL["Auchenai Key"].." ("..AL["Heroic"]..")" };
-        { AL["Key"]..": "..AL["Essence-Infused Moonstone"].." ("..AL["Anzu"]..")" };
-        { AL["Entrance"] };
-        { AL["Darkweaver Syth"] };
-        { AL["Lakka"] };
-        { AL["The Saga of Terokk"] };
-        { AL["Anzu"].." ("..AL["Summon"]..")" };
-        { AL["Talon King Ikiss"] };
+            { BabbleSubZone["Veil Sethekk"], SubZone = true };
+            { AL["Darkweaver Syth"], cords = {49,68}, pinType = boss };
+            { AL["Lakka"] };
+
+        };
+        [2] = {
+            { BabbleSubZone["Halls of Mourning"], SubZone = true };
+            { AL["The Saga of Terokk"], cords = {33,55}, pinType = boss };
+            { AL["Anzu"].." ("..AL["Summon"]..")" };
+            { AL["Talon King Ikiss"], cords = {33,27}, pinType = boss };
         };
     };
 
@@ -535,20 +574,18 @@ local boss = "dungeonskull"
         MinLevel = "65";
         PlayerLimit = "5";
         Acronym = AL["SL"];
-        MapName = "ShadowLabyrinthb";
+        MapName = "ShadowLabyrinth";
+        Reputation = AL["Lower City"];
         [1] = {
-        { AL["Reputation"]..": "..AL["Lower City"] };
-        { AL["Key"]..": "..AL["Shadow Labyrinth Key"] };
-        { AL["Key"]..": "..AL["Auchenai Key"].." ("..AL["Heroic"]..")" };
-        { AL["Entrance"] };
-        { AL["Spy To'gun"] };
-        { AL["Ambassador Hellmaw"] };
-        { AL["Blackheart the Inciter"] };
-        { AL["Grandmaster Vorpil"] };
-        { AL["The Codex of Blood"] };
-        { AL["Murmur"] };
-        { AL["Arcane Container"] };
-        { AL["First Fragment Guardian"] };
+            { BabbleZone["Shadow Labyrinth"], SubZone = true };
+            { AL["Spy To'gun"], cords = {17,24} };
+            { AL["Ambassador Hellmaw"], cords = {23,39}, pinType = boss };
+            { AL["Blackheart the Inciter"], cords = {27,71}, pinType = boss };
+            { AL["Grandmaster Vorpil"], cords = {54,54}, pinType = boss };
+            { AL["The Codex of Blood"] };
+            { AL["Murmur"], cords = {81,39}, pinType = boss };
+            { AL["Arcane Container"], cords = {83,32} };
+            { AL["First Fragment Guardian"] };
         };
     };
 
@@ -560,74 +597,19 @@ local boss = "dungeonskull"
         PlayerLimit = "5";
         Acronym = AL["CoT1"];
         MapName = "CoTHillsbradFoothills";
+        Reputation = AL["Keepers of Time"];
         [1] = {
-        { PURP..AL["Event"]..": "..AL["Escape from Durnholde Keep"] };
-        { AL["Attunement Required"] };
-        { AL["Reputation"]..": "..AL["Keepers of Time"] };
-        { AL["Key"]..": "..AL["Key of Time"].." ("..AL["Heroic"]..")" };
-        { AL["Entrance"] };
-        { AL["Erozion"] };
-        { AL["Brazen"] };
-        { AL["Landing Spot"] };
-        { BabbleSubZone["Southshore"] };
-        { "D) "..BabbleSubZone["Tarren Mill"] };
-        { AL["Lieutenant Drake"] };
-        { AL["Thrall"].." ("..AL["Lower"]..")" };
-        { AL["Captain Skarloc"] };
-        { AL["Thrall"].." ("..AL["Second Stop"]..")" };
-        { AL["Thrall"].." ("..AL["Third Stop"]..")" };
-        { AL["Epoch Hunter"] };
-        { AL["Thrall"].." ("..AL["Fourth Stop"]..", "..AL["Upper"]..")" };
-        { AL["Taretha"].." ("..AL["Upper"]..")" };
-        { AL["Jonathan Revah"] };
-        { AL["Jerry Carter"] };
-        { "" };
-        { AL["Traveling"] };
-        { AL["Thomas Yance <Travelling Salesman>"] };
-        { AL["Aged Dalaran Wizard"] };
-        { AL["Don Carlos"] };
-        { AL["Guerrero"] };
-        { "" };
-        { BabbleSubZone["Southshore"] };
-        { AL["Kel'Thuzad <The Kirin Tor>"] };
-        { AL["Helcular"] };
-        { AL["Farmer Kent"] };
-        { AL["Sally Whitemane"] };
-        { AL["Renault Mograine"] };
-        { AL["Little Jimmy Vishas"] };
-        { AL["Herod the Bully"] };
-        { AL["Nat Pagle"] };
-        { AL["Hal McAllister"] };
-        { AL["Zixil <Aspiring Merchant>"] };
-        { AL["Overwatch Mark 0 <Protector>"] };
-        { "" };
-        { AL["Southshore Inn"] };
-        { AL["Captain Edward Hanes"] };
-        { AL["Captain Sanders"] };
-        { AL["Commander Mograine"] };
-        { AL["Isillien"] };
-        { AL["Abbendis"] };
-        { AL["Fairbanks"] };
-        { AL["Tirion Fordring"] };
-        { AL["Arcanist Doan"] };
-        { AL["Taelan"].." ("..AL["Upper"]..")" };
-        { AL["Barkeep Kelly <Bartender>"] };
-        { AL["Frances Lin <Barmaid>"] };
-        { AL["Chef Jessen <Speciality Meat & Slop>"] };
-        { AL["Stalvan Mistmantle"].." ("..AL["Upper"]..")" };
-        { AL["Phin Odelic <The Kirin Tor>"].." ("..AL["Upper"]..")" };
-        { "" };
-        { BabbleSubZone["Southshore Town Hall"] };
-        { AL["Magistrate Henry Maleb"] };
-        { AL["Raleigh the True"] };
-        { AL["Nathanos Marris"] };
-        { AL["Bilger the Straight-laced"] };
-        { "" };
-        { BabbleSubZone["Tarren Mill"] };
-        { AL["Innkeeper Monica"] };
-        { AL["Julie Honeywell"] };
-        { AL["Jay Lemieux"] };
-        { AL["Young Blanchy"] };
+            { BabbleZone["Old Hillsbrad Foothills"], SubZone = true };
+            { AL["Lieutenant Drake"], cords = {76,66}, pinType = boss };
+            { AL["Thrall"].." ("..AL["Lower"]..")", cords = {74,59} };
+            { AL["Captain Skarloc"], cords = {69,70}, pinType = boss };
+            { AL["Thrall"].." ("..AL["Second Stop"]..")" };
+            { AL["Thrall"].." ("..AL["Third Stop"]..")", cords = {53,44} };
+            { AL["Epoch Hunter"], cords = {51,32}, pinType = boss };
+            { AL["Thrall"].." ("..AL["Fourth Stop"]..", "..AL["Upper"]..")" };
+            { AL["Taretha"].." ("..AL["Upper"]..")" };
+            { AL["Jonathan Revah"], cords = {41,53} };
+            { AL["Jerry Carter"] };
         };
     };
 
@@ -639,19 +621,19 @@ local boss = "dungeonskull"
         PlayerLimit = "5";
         Acronym = AL["CoT2"];
         MapName = "CoTTheBlackMorass";
+        Reputation = AL["Keepers of Time"];
         [1] = {
-        { PURP..AL["Event"]..": "..AL["Opening of the Dark Portal"] };
-        { AL["Attunement Required"] };
-        { AL["Reputation"]..": "..AL["Keepers of Time"] };
-        { AL["Key"]..": "..AL["Key of Time"].." ("..AL["Heroic"]..")" };
-        { AL["Entrance"] };
-        { AL["Sa'at <Keepers of Time>"] };
-        { "X) "..AL["Portal"].." ("..AL["Spawn Point"]..")" };
-        { AL["Wave 6"]..": "..AL["Chrono Lord Deja"] };
-        { AL["Wave 12"]..": "..AL["Temporus"] };
-        { AL["Wave 18"]..": "..AL["Aeonus"] };
-        { AL["The Dark Portal"] };
-        { AL["Medivh"] };
+            {BabbleZone["The Black Morass"], SubZone = true }; 
+            { AL["Sa'at <Keepers of Time>"], cords = {51,18} };
+            { AL["Portal"].." ("..AL["Spawn Point"]..")", cords = {51,52}, pinType = boss };
+            { AL["Portal"].." ("..AL["Spawn Point"]..")", cords = {60,62}, pinType = boss };
+            { AL["Portal"].." ("..AL["Spawn Point"]..")", cords = {46,61}, pinType = boss };
+            { AL["Portal"].." ("..AL["Spawn Point"]..")", cords = {59,70}, pinType = boss };
+            { AL["Wave 6"]..": "..AL["Chrono Lord Deja"] };
+            { AL["Wave 12"]..": "..AL["Temporus"] };
+            { AL["Wave 18"]..": "..AL["Aeonus"] };
+            { AL["The Dark Portal"], cords = {48,74} };
+            { AL["Medivh"] };
         };
     };
 
@@ -663,17 +645,16 @@ local boss = "dungeonskull"
         PlayerLimit = "5";
         Acronym = AL["SP"];
         MapName = "TheSlavePens";
+        Reputation = AL["Cenarion Expedition"];
         [1] = {
-        { AL["Reputation"]..": "..AL["Cenarion Expedition"] };
-        { AL["Key"]..": "..AL["Reservoir Key"].." ("..AL["Heroic"]..")" };
-        { AL["Entrance"] };
-        { AL["Ahune <The Frost Lord>"].." ("..AL["Midsummer Festival"]..")" };
-        { AL["Mennu the Betrayer"] };
-        { AL["Weeder Greenthumb"] };
-        { AL["Skar'this the Heretic"].." ("..AL["Heroic"]..")" };
-        { AL["Rokmar the Crackler"] };
-        { AL["Naturalist Bite"] };
-        { AL["Quagmirran"] };
+            { BabbleZone["The Slave Pens"], SubZone = true };
+            { AL["Ahune <The Frost Lord>"].." ("..AL["Midsummer Festival"]..")", cords = {33,51}, pinType = boss };
+            { AL["Mennu the Betrayer"], cords = {49,27}, pinType = boss };
+            { AL["Weeder Greenthumb"], cords = {49,83}, pinType = boss };
+            { AL["Skar'this the Heretic"].." ("..AL["Heroic"]..")", cords = {58,85}, pinType = boss };
+            { AL["Rokmar the Crackler"], cords = {58,41}, pinType = boss };
+            { AL["Naturalist Bite"], cords = {95,67}, pinType = boss };
+            { AL["Quagmirran"], cords = {82,77}, pinType = boss };
         };
     };
 
@@ -685,17 +666,16 @@ local boss = "dungeonskull"
         PlayerLimit = "5";
         Acronym = AL["SV"];
         MapName = "TheSteamvault";
+        Reputation = AL["Cenarion Expedition"];
         [1] = {
-        { AL["Reputation"]..": "..AL["Cenarion Expedition"] };
-        { AL["Key"]..": "..AL["Reservoir Key"].." ("..AL["Heroic"]..")" };
-        { AL["Entrance"] };
-        { AL["Hydromancer Thespia"] };
-        { AL["Main Chambers Access Panel"] };
-        { AL["Arcane Container"] };
-        { AL["Second Fragment Guardian"] };
-        { AL["Mekgineer Steamrigger"] };
-        { AL["Main Chambers Access Panel"] };
-        { AL["Warlord Kalithresh"] };
+            { BabbleZone["The Steamvault"], SubZone = true };
+            { AL["Hydromancer Thespia"], cords = {54,14}, pinType = boss };
+            { AL["Main Chambers Access Panel"] };
+            { AL["Arcane Container"], cords = {55,23} };
+            { AL["Second Fragment Guardian"] };
+            { AL["Mekgineer Steamrigger"], cords = {34,82}, pinType = boss };
+            { AL["Main Chambers Access Panel"] };
+            { AL["Warlord Kalithresh"], cords = {76,44}, pinType = boss };
         };
     };
 
@@ -707,17 +687,16 @@ local boss = "dungeonskull"
         PlayerLimit = "5";
         Acronym = AL["UB"];
         MapName = "TheUnderbog";
+        Reputation = AL["Cenarion Expedition"];
         [1] = {
-        { AL["Reputation"]..": "..AL["Cenarion Expedition"] };
-        { AL["Key"]..": "..AL["Reservoir Key"].." ("..AL["Heroic"]..")" };
-        { AL["Entrance"] };
-        { AL["Hungarfen"] };
-        { AL["The Underspore"] };
-        { AL["Ghaz'an"] };
-        { AL["Earthbinder Rayge"] };
-        { AL["Swamplord Musel'ek"] };
-        { AL["Claw <Swamplord Musel'ek's Pet>"] };
-        { AL["The Black Stalker"] };
+            { BabbleZone["The Steamvault"], SubZone = true };
+            { AL["Hungarfen"], cords = {70,90}, pinType = boss };
+            { AL["The Underspore"] };
+            { AL["Ghaz'an"], cords = {79,29}, pinType = boss };
+            { AL["Earthbinder Rayge"], cords = {69,27} };
+            { AL["Swamplord Musel'ek"], cords = {42,25}, pinType = boss };
+            { AL["Claw <Swamplord Musel'ek's Pet>"] };
+            { AL["The Black Stalker"], cords = {25,46}, pinType = boss };
         };
     };
 
@@ -729,26 +708,29 @@ local boss = "dungeonskull"
         PlayerLimit = "5";
         Acronym = AL["MaT"];
         MapName = "MagistersTerrace";
+        Reputation = AL["Shattered Sun Offensive"];
         [1] = {
-        { AL["Reputation"]..": "..AL["Shattered Sun Offensive"] };
-        { AL["Entrance"] };
-        { AL["Selin Fireheart"] };
-        { AL["Fel Crystals"] };
-        { AL["Tyrith"] };
-        { AL["Vexallus"] };
-        { AL["Scrying Orb"] };
-        { AL["Kalecgos"] };
-        { AL["Priestess Delrissa"].." ("..AL["Lower"]..")" };
-        { AL["Apoko"].." ("..AL["Lower"]..", "..AL["Random"]..", "..AL["Shaman"]..")" };
-        { AL["Eramas Brightblaze"].." ("..AL["Lower"]..", "..AL["Random"]..", "..AL["Monk"]..")" };
-        { AL["Ellrys Duskhallow"].." ("..AL["Lower"]..", "..AL["Random"]..", "..AL["Warlock"]..")" };
-        { AL["Fizzle"].." ("..AL["Lower"]..", "..AL["Random"]..")" };
-        { AL["Garaxxas"].." ("..AL["Lower"]..", "..AL["Random"]..", "..AL["Hunter"]..")" };
-        { AL["Sliver <Garaxxas' Pet>"].." ("..AL["Lower"]..", "..AL["Random"]..")" };
-        { AL["Kagani Nightstrike"].." ("..AL["Lower"]..", "..AL["Random"]..", "..AL["Rogue"]..")" };
-        { AL["Warlord Salaris"].." ("..AL["Lower"]..", "..AL["Random"]..", "..AL["Warrior"]..")" };
-        { AL["Yazzai"].." ("..AL["Lower"]..", "..AL["Random"]..", "..AL["Mage"]..")" };
-        { AL["Zelfan"].." ("..AL["Lower"]..", "..AL["Random"]..", "..AL["Engineer"]..")" };
-        { AL["Kael'thas Sunstrider <Lord of the Blood Elves>"] };
+            { BabbleZone["Magisters' Terrace"], SubZone = true };
+            { AL["Priestess Delrissa"].." ("..AL["Lower"]..")", cords = {40,56}, pinType = boss };
+            { AL["Apoko"].." ("..AL["Lower"]..", "..AL["Random"]..", "..AL["Shaman"]..")" };
+            { AL["Eramas Brightblaze"].." ("..AL["Lower"]..", "..AL["Random"]..", "..AL["Monk"]..")" };
+            { AL["Ellrys Duskhallow"].." ("..AL["Lower"]..", "..AL["Random"]..", "..AL["Warlock"]..")" };
+            { AL["Fizzle"].." ("..AL["Lower"]..", "..AL["Random"]..")" };
+            { AL["Garaxxas"].." ("..AL["Lower"]..", "..AL["Random"]..", "..AL["Hunter"]..")" };
+            { AL["Sliver <Garaxxas' Pet>"].." ("..AL["Lower"]..", "..AL["Random"]..")" };
+            { AL["Kagani Nightstrike"].." ("..AL["Lower"]..", "..AL["Random"]..", "..AL["Rogue"]..")" };
+            { AL["Warlord Salaris"].." ("..AL["Lower"]..", "..AL["Random"]..", "..AL["Warrior"]..")" };
+            { AL["Yazzai"].." ("..AL["Lower"]..", "..AL["Random"]..", "..AL["Mage"]..")" };
+            { AL["Zelfan"].." ("..AL["Lower"]..", "..AL["Random"]..", "..AL["Engineer"]..")" };
+            { AL["Kael'thas Sunstrider <Lord of the Blood Elves>"], cords = {9,50}, pinType = boss };
+        };
+        [2] = {
+            { BabbleZone["Magisters' Terrace"], SubZone = true };
+            { AL["Selin Fireheart"], cords = {43,23}, pinType = boss };
+            { AL["Fel Crystals"] };
+            { AL["Tyrith"], cords = {63,27}, pinType = boss };
+            { AL["Vexallus"], cords = {84,27}, pinType = boss };
+            { AL["Scrying Orb"], cords = {95,27} };
+            { AL["Kalecgos"] };
         };
     };

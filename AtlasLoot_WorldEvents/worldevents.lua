@@ -388,17 +388,17 @@ AtlasLoot_Data["ChildrensWeek"] = {
 	{
 		Name = AL["Children's Week"];
 		[1] = { icon = "INV_Box_01", name = "=q6=#z24#" };
-		[2] = { itemID = 23007, desc = "=ds=#e13#" }; --Piglet's Collar
-		[3] = { itemID = 23015, desc = "=ds=#e13#" }; --Rat Cage
-		[4] = { itemID = 23002, desc = "=ds=#e13#" }; --Turtle Box
+		[2] = { itemID = 23007 }; --Piglet's Collar
+		[3] = { itemID = 23015 }; --Rat Cage
+		[4] = { itemID = 23002 }; --Turtle Box
 		[5] = { itemID = 23022, desc = "=ds=" }; --Curmudgeon's Payoff
 		[7] = { icon = "INV_Box_01", name = "=q6=#z25#" };
-		[8] = { itemID = 32616, desc = "=ds=#e13#" }; --Egbert's Egg
-		[9] = { itemID = 32622, desc = "=ds=#e13#" }; --Elekk Training Collar
-		[10] = { itemID = 32617, desc = "=ds=#e13#" }; --Sleepy Willy
+		[8] = { itemID = 32616 }; --Egbert's Egg
+		[9] = { itemID = 32622 }; --Elekk Training Collar
+		[10] = { itemID = 32617 }; --Sleepy Willy
 		[16] = { icon = "INV_Box_01", name = "=q6=#z40#" };
-		[17] = { itemID = 46545, desc = "=ds=#e13#" }; --Curious Oracle Hatchling
-		[18] = { itemID = 46544, desc = "=ds=#e13#" }; --Curious Wolvar Pup
+		[17] = { itemID = 46545 }; --Curious Oracle Hatchling
+		[18] = { itemID = 46544 }; --Curious Wolvar Pup
 	};
 };
 
@@ -462,14 +462,14 @@ AtlasLoot_Data["Winterviel"] = {
 	{
 		Name = "Presents";
 		[1] = { icon = "INV_Holiday_Christmas_Present_01", name = "=q6=#x19#" };
-		[2] = { itemID = 21301, desc = "=ds=#e13#" }; --Green Helper Box
-		[3] = { itemID = 21308, desc = "=ds=#e13#" }; --Jingling Bell
-		[4] = { itemID = 21305, desc = "=ds=#e13#" }; --Red Helper Box
-		[5] = { itemID = 21309, desc = "=ds=#e13#" }; --Snowman Kit
+		[2] = { itemID = 21301 }; --Green Helper Box
+		[3] = { itemID = 21308 }; --Jingling Bell
+		[4] = { itemID = 21305 }; --Red Helper Box
+		[5] = { itemID = 21309 }; --Snowman Kit
 		[7] = { icon = "INV_Holiday_Christmas_Present_01", name = "=q6=#x20#" };
 		[8] = { itemID = 21328, desc = "=ds=#m20#" }; --Wand of Holiday Cheer
 		[10] = { icon = "INV_Holiday_Christmas_Present_01", name = "=q6=#x35#" };
-		[11] = { itemID = 34425, desc = "=ds=#e13#" }; --Clockwork Rocket Bot
+		[11] = { itemID = 34425 }; --Clockwork Rocket Bot
 		[13] = { icon = "INV_Holiday_Christmas_Present_01", name = "=q6=#x22#" };
 		[14] = { itemID = 21235, desc = "=ds=#e3#" }; --Winter Veil Roast
 		[15] = { itemID = 21241, desc = "=ds=#e4#" }; --Winter Veil Eggnog
@@ -504,7 +504,7 @@ local HorsemanCLASSIC = {
 	[18] = { itemID = 37012, desc = "=ds=#e12#" }; --The Horseman's Reins
 	[19] = { itemID = 37011, desc = "=ds=#e12#" }; --Magic Broom
 	[20] = { itemID = 33292 }; --Hallowed Helm
-	[21] = { itemID = 33154, desc = "=ds=#e13#" }; --Sinister Squashling
+	[21] = { itemID = 33154 }; --Sinister Squashling
 };
 
 local HorsemanTBC = {
@@ -519,7 +519,7 @@ local HorsemanTBC = {
 	[18] = { itemID = 37012, desc = "=ds=#e12#" }; --The Horseman's Reins
 	[19] = { itemID = 37011, desc = "=ds=#e12#" }; --Magic Broom
 	[20] = { itemID = 33292 }; --Hallowed Helm
-	[21] = { itemID = 33154, desc = "=ds=#e13#" }; --Sinister Squashling
+	[21] = { itemID = 33154 }; --Sinister Squashling
 };
 
 local HorsemanWRATH = {
@@ -534,7 +534,7 @@ local HorsemanWRATH = {
 	[18] = { itemID = 37012, desc = "=ds=#e12#" }; --The Horseman's Reins
 	[19] = { itemID = 37011, desc = "=ds=#e12#" }; --Magic Broom
 	[20] = { itemID = 33292 }; --Hallowed Helm
-	[21] = { itemID = 33154, desc = "=ds=#e13#" }; --Sinister Squashling
+	[21] = { itemID = 33154 }; --Sinister Squashling
 }
 
 local HallowsEnd = {
@@ -553,7 +553,7 @@ local HallowsEnd = {
 	[15] = { itemID = 37584, desc = "=ds=#m20#" }; --Soothing Spearmint Candy
 	[16] = { icon = "INV_Misc_Bag_11", name = "=q6=#x18#" };
 	[17] = { itemID = 33292 }; --Hallowed Helm
-	[18] = { itemID = 33154, desc = "=ds=#e13#" }; --Sinister Squashling
+	[18] = { itemID = 33154 }; --Sinister Squashling
 	[19] = { itemID = 20410, desc = "=ds=#m20#" }; --Hallowed Wand - Bat
 	[20] = { itemID = 20409, desc = "=ds=#m20#" }; --Hallowed Wand - Ghost
 	[21] = { itemID = 20399, desc = "=ds=#m20#" }; --Hallowed Wand - Leper Gnome
@@ -695,7 +695,7 @@ AtlasLoot_Data["Valentineday"] = {
 		[5] = { itemID = 51808 }; --Choker of the Pure Heart
 		[7] = { itemID = 49715 }; --Forever-Lovely Rose
 		[8] = { itemID = 50741 }; --Vile Fumigator's Mask
-		[16] = { itemID = 50446, desc = "=ds=#e13#" }; --Toxic Wasteling
+		[16] = { itemID = 50446 }; --Toxic Wasteling
 		[17] = { itemID = 50471, desc = "=ds=#m20#" }; --The Heartbreaker
 		[19] = { itemID = 50250, desc = "=ds=#e12#" }; --Big Love Rocket
 	};
@@ -770,7 +770,7 @@ local lordAhuneTBC = {
 	[3] = { itemID = 35508 }; --Choker of the Arctic Flow
 	[4] = { itemID = 35511 }; --Hailstone Pendant
 	[6] = { itemID = 35498, desc = "=ds=#p4# (350)" }; --Formula: Enchant Weapon - Deathfrost
-	[7] = { itemID = 34955, desc = "=ds=#e13#" }; --Scorched Stone
+	[7] = { itemID = 34955 }; --Scorched Stone
 	[9] = { itemID = 35723, desc = "=ds=#m2#" }; --Shards of Ahune
 	[10] = { itemID = 35279, desc = "=q1=#m4#: =ds=#s7#" }; --Tabard of Summer Skies
 	[11] = { itemID = 35280, desc = "=q1=#m4#: =ds=#s7#" }; --Tabard of Summer Flames
@@ -794,7 +794,7 @@ local lordAhuneWRATH = {
 	[11] = { itemID = 35280, desc = "=q1=#m4#: =ds=#s7#" }; --Tabard of Summer Flames
 	[16] = { itemID = 54536, desc = "=ds=" }; --Satchel of Chilled Goods
 	[17] = { itemID = 54806 }; --Frostscythe of Lord Ahune
-	[18] = { itemID = 53641, desc = "=ds=#e13#" }; --Ice Chip
+	[18] = { itemID = 53641 }; --Ice Chip
 };
 
 local midSummerMain = {
@@ -899,20 +899,20 @@ AtlasLoot_Data["BashirLanding"] = {
 	{
 		Name = AL["Bash'ir Landing Skyguard Raid"];
 		[1] = { icon = "INV_Box_01", name = "=q6=#j16#", "=q1=#n112#" };
-		[2] = { itemID = 32596, desc = "=ds=#e2#" }; --Unstable Flask of the Elder
-		[3] = { itemID = 32600, desc = "=ds=#e2#" }; --Unstable Flask of the Physician
-		[4] = { itemID = 32599, desc = "=ds=#e2#" }; --Unstable Flask of the Bandit
-		[5] = { itemID = 32597, desc = "=ds=#e2#" }; --Unstable Flask of the Soldier
+		[2] = { itemID = 32596 }; --Unstable Flask of the Elder
+		[3] = { itemID = 32600 }; --Unstable Flask of the Physician
+		[4] = { itemID = 32599 }; --Unstable Flask of the Bandit
+		[5] = { itemID = 32597 }; --Unstable Flask of the Soldier
 		[7] = { icon = "INV_Box_01", name = "=q6=#j17#", "=q1=#n113#" };
-		[8] = { itemID = 32634, desc = "=ds=#e7#" }; --Unstable Amethyst
-		[9] = { itemID = 32637, desc = "=ds=#e7#" }; --Unstable Citrine
-		[10] = { itemID = 32635, desc = "=ds=#e7#" }; --Unstable Peridot
-		[11] = { itemID = 32636, desc = "=ds=#e7#" }; --Unstable Sapphire
-		[12] = { itemID = 32639, desc = "=ds=#e7#" }; --Unstable Talasite
-		[13] = { itemID = 32638, desc = "=ds=#e7#" }; --Unstable Topaz
+		[8] = { itemID = 32634 }; --Unstable Amethyst
+		[9] = { itemID = 32637 }; --Unstable Citrine
+		[10] = { itemID = 32635 }; --Unstable Peridot
+		[11] = { itemID = 32636 }; --Unstable Sapphire
+		[12] = { itemID = 32639 }; --Unstable Talasite
+		[13] = { itemID = 32638 }; --Unstable Topaz
 		[16] = { icon = "INV_Box_01", name = "=q6=#j18#", "=q1=#n114#" };
-		[17] = { itemID = 32641, desc = "=ds=#e7#" }; --Imbued Unstable Diamond
-		[18] = { itemID = 32640, desc = "=ds=#e7#" }; --Potent Unstable Diamond
+		[17] = { itemID = 32641 }; --Imbued Unstable Diamond
+		[18] = { itemID = 32640 }; --Potent Unstable Diamond
 		[19] = { itemID = 32759, desc = "=ds=" }; --Accelerator Module
 		[20] = { itemID = 32630, desc = "=ds=" }; --Small Gold Metamorphosis Geode
 		[21] = { itemID = 32631, desc = "=ds=" }; --Small Silver Metamorphosis Geode
@@ -945,8 +945,8 @@ AtlasLoot_Data["Darkmoon"] = {
 		[12] = { itemID = 19182, desc = "=ds=#m17#" }; --Darkmoon Faire Prize Ticket
 		[16] = { itemID = 19302 }; --Darkmoon Ring
 		[17] = { itemID = 19303 }; --Darkmoon Necklace
-		[19] = { itemID = 11026, desc = "=ds=#e13#" }; --Tree Frog Box
-		[20] = { itemID = 11027, desc = "=ds=#e13#" }; --Wood Frog Box
+		[19] = { itemID = 11026 }; --Tree Frog Box
+		[20] = { itemID = 11027 }; --Wood Frog Box
 		[21] = { itemID = 19450, desc = "=q1=#m4#: =ds=#e13#" }; --A Jubling's Tiny Home
 	};
 	{
@@ -970,35 +970,35 @@ AtlasLoot_Data["Darkmoon"] = {
 	{
 		Name = AL["Original and BC Trinkets"];
 		[1] = { itemID = 19228, desc = "=ds=#m2#" }; --Beasts Deck
-		[2] = { itemID = 19288, desc = "=q1=#m4#: =ds=#s14#" }; --Darkmoon Card: Blue Dragon
+		[2] = { itemID = 19288 }; --Darkmoon Card: Blue Dragon
 		[4] = { itemID = 19267, desc = "=ds=#m2#" }; --Elementals Deck
-		[5] = { itemID = 19289, desc = "=q1=#m4#: =ds=#s14#" }; --Darkmoon Card: Maelstrom
+		[5] = { itemID = 19289 }; --Darkmoon Card: Maelstrom
 		[7] = { itemID = 19277, desc = "=ds=#m2#" }; --Portals Deck
-		[8] = { itemID = 19290, desc = "=q1=#m4#: =ds=#s14#" }; --Darkmoon Card: Twisting Nether
+		[8] = { itemID = 19290 }; --Darkmoon Card: Twisting Nether
 		[10] = { itemID = 19257, desc = "=ds=#m2#" }; --Warlords Deck
-		[11] = { itemID = 19287, desc = "=q1=#m4#: =ds=#s14#" }; --Darkmoon Card: Heroism
+		[11] = { itemID = 19287 }; --Darkmoon Card: Heroism
 		[16] = { itemID = 31890, desc = "=ds=#m2#" }; --Blessings Deck
-		[17] = { itemID = 31856, desc = "=q1=#m4#: =ds=#s14#" }; --Darkmoon Card: Crusade
+		[17] = { itemID = 31856 }; --Darkmoon Card: Crusade
 		[19] = { itemID = 31907, desc = "=ds=#m2#" }; --Furies Deck
-		[20] = { itemID = 31858, desc = "=q1=#m4#: =ds=#s14#" }; --Darkmoon Card: Vengeance
+		[20] = { itemID = 31858 }; --Darkmoon Card: Vengeance
 		[22] = { itemID = 31914, desc = "=ds=#m2#" }; --Lunacy Deck
-		[23] = { itemID = 31859, desc = "=q1=#m4#: =ds=#s14#" }; --Darkmoon Card: Madness
+		[23] = { itemID = 31859 }; --Darkmoon Card: Madness
 		[25] = { itemID = 31891, desc = "=ds=#m2#" }; --Storms Deck
-		[26] = { itemID = 31857, desc = "=q1=#m4#: =ds=#s14#" }; --Darkmoon Card: Wrath
+		[26] = { itemID = 31857 }; --Darkmoon Card: Wrath
 	};
 	{
 		Name = AL["WotLK Trinkets"];
 		[1] = { itemID = 44276, desc = "=ds=#m2#" }; --Chaos Deck
-		[2] = { itemID = 42989, desc = "=q1=#m4#: =ds=#s14#" }; --Darkmoon Card: Berserker!
+		[2] = { itemID = 42989 }; --Darkmoon Card: Berserker!
 		[4] = { itemID = 44259, desc = "=ds=#m2#" }; --Prisms Deck
-		[5] = { itemID = 42988, desc = "=q1=#m4#: =ds=#s14#" }; --Darkmoon Card: Illusion
+		[5] = { itemID = 42988 }; --Darkmoon Card: Illusion
 		[7] = { itemID = 44294, desc = "=ds=#m2#" }; --Undeath Deck
-		[8] = { itemID = 42990, desc = "=q1=#m4#: =ds=#s14#" }; --Darkmoon Card: Death
+		[8] = { itemID = 42990 }; --Darkmoon Card: Death
 		[16] = { itemID = 44326, desc = "=ds=#m2#" }; --Nobles Deck
-		[17] = { itemID = 44253, desc = "=q1=#m4#: =ds=#s14#" }; --Darkmoon Card: Greatness
-		[18] = { itemID = 42987, desc = "=q1=#m4#: =ds=#s14#" }; --Darkmoon Card: Greatness
-		[19] = { itemID = 44254, desc = "=q1=#m4#: =ds=#s14#" }; --Darkmoon Card: Greatness
-		[20] = { itemID = 44255, desc = "=q1=#m4#: =ds=#s14#" }; --Darkmoon Card: Greatness
+		[17] = { itemID = 44253 }; --Darkmoon Card: Greatness
+		[18] = { itemID = 42987 }; --Darkmoon Card: Greatness
+		[19] = { itemID = 44254 }; --Darkmoon Card: Greatness
+		[20] = { itemID = 44255 }; --Darkmoon Card: Greatness
 	};
 };
 
@@ -1020,7 +1020,7 @@ AtlasLoot_Data["ElementalInvasion"] = {
 		[9] = { itemID = 21548, desc = "=ds=#p7# (300)", droprate = "25.00%" }; --Pattern: Stormshroud Gloves
 		[10] = { itemID = 18679, droprate = "51.01%" }; --Frigid Ring
 		[16] = { icon = "INV_Box_01", name = "=q6=#n110#", "=q1=#j22#, #z22#" };
-		[17] = { itemID = 18673, desc = "=ds=#w8#", droprate = "14.56%" }; --Avalanchion's Stony Hide
+		[17] = { itemID = 18673, droprate = "14.56%" }; --Avalanchion's Stony Hide
 		[18] = { itemID = 19268, desc = "=ds=#e16#", droprate = "5.89%" }; --Ace of Elementals
 		[19] = { itemID = 18674, droprate = "41.50%" }; --Hardened Stone Band
 		[21] = { icon = "INV_Box_01", name = "=q6=#n111#", "=q1=#j21#, #z23#" };
@@ -1044,7 +1044,7 @@ AtlasLoot_Data["GurubashiArena"] = {
 		[3] = { itemID = 18711, droprate = "6.0%" }; --Arena Bands
 		[4] = { itemID = 18712, droprate = "6.8%" }; --Arena Vambraces
 		[16] = { itemID = 18706, desc = "=ds=#s14#, =q1=#m2#", droprate = "100%" }; --Arena Master
-		[17] = { itemID = 19024, desc = "=q1=#m4#: =ds=#s14#" }; --Arena Grand Master
+		[17] = { itemID = 19024 }; --Arena Grand Master
 	};
 };
 
@@ -1146,7 +1146,7 @@ AtlasLoot_Data["AbyssalCouncil"] = {
 		[19] = { itemID = 20690, desc = "=ds=#s8# =q2=#m16#", droprate = "23.60%" }; --Abyssal Cloth Wristbands
 		[20] = { itemID = 20689, desc = "=ds=#s3# =q2=#m16#", droprate = "23.40%" }; --Abyssal Leather Shoulders
 		[22] = { icon = "INV_Box_01", name = "=q6=#n107#", "=q1=#j22#" };
-		[23] = { itemID = 20688, desc = "=ds=#w8#", droprate = "20.64%" }; --Earthen Guard
+		[23] = { itemID = 20688, droprate = "20.64%" }; --Earthen Guard
 		[24] = { itemID = 20515, desc = "=ds=#m3#", droprate = "100%" }; --Abyssal Scepter
 		[25] = { itemID = 20686, desc = "=ds=#s3# =q2=#m16#", droprate = "23.96%" }; --Abyssal Cloth Amice
 		[26] = { itemID = 20687, desc = "=ds=#s8# =q2=#m16#", droprate = "23.66%" }; --Abyssal Plate Vambraces
@@ -1421,14 +1421,14 @@ AtlasLoot_Data["ScourgeInvasionEvent"] = {
 		[5] = { itemID = 23123, desc = "=ds=#m20#" }; --Blessed Wizard Oil
 		[6] = { itemID = 23122, desc = "=ds=#m20#" }; --Consecrated Sharpening Stone
 		[8] = { itemID = 22999 }; --Tabard of the Argent Dawn
-		[9] = { itemID = 43531, desc = "=ds=#e2#" }; --Argent Healing Potion
-		[10] = { itemID = 43530, desc = "=ds=#e2#" }; --Argent Mana Potion
+		[9] = { itemID = 43531 }; --Argent Healing Potion
+		[10] = { itemID = 43530 }; --Argent Mana Potion
 		[12] = { itemID = 22484, desc = "=ds=#m17#" }; --Necrotic Rune
 		[16] = { itemID = 40110, desc = "=ds=#m20#" }; --Haunted Memento
 		[18] = { icon = "INV_Box_01", name = "=q6=" .. AL["Prince Tenris Mirkblood"], "=q5=" .. BabbleZone["Karazhan"] };
 		[19] = { itemID = 29434, desc = "=ds=#e15#", droprate = "100%" }; --Badge of Justice
 		[20] = { itemID = 39769 }; --Arcanite Ripper
-		[21] = { itemID = 38658, desc = "=ds=#e13#" }; --Vampiric Batling
+		[21] = { itemID = 38658 }; --Vampiric Batling
 	};
 	{
 		Name = "Page 2";
@@ -1462,7 +1462,7 @@ AtlasLoot_Data["ScourgeInvasionEvent"] = {
 		[6] = { icon = "INV_Box_01", name = "=q6=#n124#", "=q1=#z5#" };
 		[7] = { itemID = 23156, droprate = "22.60%" }; --Blackwood's Thigh
 		[8] = { itemID = 23132, droprate = "23.80%" }; --Lord Blackwood's Blade
-		[9] = { itemID = 23139, desc = "=ds=#w8#", droprate = "26.91%" }; --Lord Blackwood's Buckler
+		[9] = { itemID = 23139, droprate = "26.91%" }; --Lord Blackwood's Buckler
 		[11] = { icon = "INV_Box_01", name = "=q6=#n125#", "=q1=#z13#" };
 		[12] = { itemID = 23127, droprate = "23.56%" }; --Cloak of Revanchion
 		[13] = { itemID = 23129, droprate = "22.67%" }; --Bracers of Mending

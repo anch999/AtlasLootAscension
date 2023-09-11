@@ -72,7 +72,7 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
 ---- The Burning Crusade Sets
 ---- Badge of Justice Rewards
 ---- BoE World Epics
---- World Bosses
+---- World Bosses
 
 
 -- The scale of the sand rep rings
@@ -482,7 +482,7 @@ AtlasLoot_Data["AuchShadowLab"] = {
 AtlasLoot_Data["BlackTemple"] = {
 	Name = BabbleZone["Black Temple"];
 	Type = "BCRaid";
-	Map = "BlackTempleStart";
+	Map = "BlackTemple";
 	{
 		Name = BabbleBoss["High Warlord Naj'entus"];
 		[1] = { itemID = 32239, droprate = "5%" }; --Slippers of the Seacaller
@@ -2926,15 +2926,15 @@ AtlasLoot_Data["Ashtongue"] = {
 	};
 	{
 		Name = BabbleFaction["Exalted"];
-		[1] = { itemID = 32486, desc = "=ds=#s14#, =q1=#m1# =ds=#c1#"  }; --Ashtongue Talisman of Equilibrium
-		[2] = { itemID = 32487, desc = "=ds=#s14#, =q1=#m1# =ds=#c2#"  }; --Ashtongue Talisman of Swiftness
-		[3] = { itemID = 32488, desc = "=ds=#s14#, =q1=#m1# =ds=#c3#"  }; --Ashtongue Talisman of Insight
-		[4] = { itemID = 32489, desc = "=ds=#s14#, =q1=#m1# =ds=#c4#"  }; --Ashtongue Talisman of Zeal
-		[5] = { itemID = 32490, desc = "=ds=#s14#, =q1=#m1# =ds=#c5#"  }; --Ashtongue Talisman of Acumen
-		[6] = { itemID = 32492, desc = "=ds=#s14#, =q1=#m1# =ds=#c6#"  }; --Ashtongue Talisman of Lethality
-		[7] = { itemID = 32491, desc = "=ds=#s14#, =q1=#m1# =ds=#c7#"  }; --Ashtongue Talisman of Vision
-		[8] = { itemID = 32493, desc = "=ds=#s14#, =q1=#m1# =ds=#c8#"  }; --Ashtongue Talisman of Shadows
-		[9] = { itemID = 32485, desc = "=ds=#s14#, =q1=#m1# =ds=#c9#"  }; --Ashtongue Talisman of Valor
+		[1] = { itemID = 32486 }; --Ashtongue Talisman of Equilibrium
+		[2] = { itemID = 32487 }; --Ashtongue Talisman of Swiftness
+		[3] = { itemID = 32488 }; --Ashtongue Talisman of Insight
+		[4] = { itemID = 32489 }; --Ashtongue Talisman of Zeal
+		[5] = { itemID = 32490 }; --Ashtongue Talisman of Acumen
+		[6] = { itemID = 32492 }; --Ashtongue Talisman of Lethality
+		[7] = { itemID = 32491 }; --Ashtongue Talisman of Vision
+		[8] = { itemID = 32493 }; --Ashtongue Talisman of Shadows
+		[9] = { itemID = 32485 }; --Ashtongue Talisman of Valor
 	};
 };
 
@@ -3091,7 +3091,7 @@ AtlasLoot_Data["Kurenai"] = {
 	};
 	{
 		Name = BabbleFaction["Honored"];
-		[1] = { itemID = 29144, desc = "=ds=#m14# #w19# =q1=#m1# =ds=#c2#"  }; --Worg Hide Quiver
+		[1] = { itemID = 29144  }; --Worg Hide Quiver
 		[2] = { itemID = 29219 }; --Pattern: Netherfury Leggings
 		[3] = { itemID = 34175 }; --Pattern: Drums of Restoration
 		[4] = { itemID = 34173 }; --Pattern: Drums of Speed
@@ -3175,7 +3175,7 @@ AtlasLoot_Data["Netherwing"] = {
 	{
 		Name = BabbleFaction["Honored"];
 		[1] = { itemID = 32695 }; --Captain's Badge
-		[2] = { itemID = 32863, desc = "=q1=#m4#: =ds=#s14#"  }; --Skybreaker Whip
+		[2] = { itemID = 32863  }; --Skybreaker Whip
 	};
 	{
 		Name = BabbleFaction["Revered"];
@@ -3200,20 +3200,20 @@ AtlasLoot_Data["Ogrila"] = {
 	Name = BabbleFaction["Ogri'la"];
 	{
 		Name = BabbleFaction["Friendly"];
-		[1] = { itemID = 32910, desc = "=q1=#m4#: =ds=#e2#"  }; --Red Ogre Brew Special
-		[2] = { itemID = 32909, desc = "=q1=#m4#: =ds=#e2#"  }; --Blue Ogre Brew Special
+		[1] = { itemID = 32910  }; --Red Ogre Brew Special
+		[2] = { itemID = 32909  }; --Blue Ogre Brew Special
 	};
 	{
 		Name = BabbleFaction["Honored"];
-		[1] = { itemID = 32784, desc = "=ds=#e2#", price = "2 #ogrilashard#"  }; --Red Ogre Brew
-		[2] = { itemID = 32783, desc = "=ds=#e2#", price = "3 #ogrilashard#"  }; --Blue Ogre Brew
+		[1] = { itemID = 32784, price = "2 #ogrilashard#"  }; --Red Ogre Brew
+		[2] = { itemID = 32783, price = "3 #ogrilashard#"  }; --Blue Ogre Brew
 		[3] = { itemID = 32572, desc = "=ds=#m17#"  }; --Apexis Crystal
 	};
 	{
 		Name = BabbleFaction["Revered"];
 		[1] = { itemID = 32653, price = "1 #ogrilacrystal# 50 #ogrilashard#"  }; --Apexis Cloak
 		[2] = { itemID = 32654, price = "1 #ogrilacrystal# 50 #ogrilashard#"  }; --Crystalforged Trinket
-		[3] = { itemID = 32652, desc = "=ds=#w8#", price = "1 #ogrilacrystal# 50 #ogrilashard#"  }; --Ogri'la Aegis
+		[3] = { itemID = 32652, price = "1 #ogrilacrystal# 50 #ogrilashard#"  }; --Ogri'la Aegis
 		[4] = { itemID = 32650, price = "1 #ogrilacrystal# 50 #ogrilashard#"  }; --Cerulean Crystal Rod
 	};
 	{
@@ -3255,7 +3255,7 @@ AtlasLoot_Data["Skyguard"] = {
 		[5] = { itemID = 32317 }; --Red Riding Nether Ray
 		[6] = { itemID = 32316 }; --Purple Riding Nether Ray
 		[7] = { itemID = 32318 }; --Silver Riding Nether Ray
-		[8] = { itemID = 38628, desc = "=ds=#e13#"  }; --Nether Ray Fry
+		[8] = { itemID = 38628  }; --Nether Ray Fry
 		[9] = { itemID = 32445 }; --Skyguard Tabard
 	};
 };
@@ -3323,7 +3323,7 @@ AtlasLoot_Data["SunOffensive"] = {
 		[22] = { itemID = 35271 }; --Design: Wicked Pyrestone
 		[23] = { itemID = 35505 }; --Design: Ember Skyfire Diamond
 		[24] = { itemID = 35502 }; --Design: Eternal Earthstorm Diamond
-		[25] = { itemID = 35708, desc = "=ds=#p12# (350)"  }; --Design: Regal Nightseye
+		[25] = { itemID = 35708  }; --Design: Regal Nightseye
 	};
 	{
 		Name = BabbleFaction["Exalted"];
@@ -3331,11 +3331,11 @@ AtlasLoot_Data["SunOffensive"] = {
 		[2] = { itemID = 34679 }; --Shattered Sun Pendant of Might
 		[3] = { itemID = 34680 }; --Shattered Sun Pendant of Resolve
 		[4] = { itemID = 34677 }; --Shattered Sun Pendant of Restoration
-		[5] = { itemID = 34676, desc = "=ds=#w8#"  }; --Dawnforged Defender
-		[6] = { itemID = 34675, desc = "=ds=#w8#"  }; --Sunward Crest
-		[7] = { itemID = 35325, desc = "=ds=#p12# (350)"  }; --Design: Forceful Talasite
-		[8] = { itemID = 35322, desc = "=ds=#p12# (350)"  }; --Design: Quick Dawnstone
-		[9] = { itemID = 35323, desc = "=ds=#p12# (350)"  }; --Design: Reckless Noble Topaz
+		[5] = { itemID = 34676  }; --Dawnforged Defender
+		[6] = { itemID = 34675  }; --Sunward Crest
+		[7] = { itemID = 35325  }; --Design: Forceful Talasite
+		[8] = { itemID = 35322  }; --Design: Quick Dawnstone
+		[9] = { itemID = 35323  }; --Design: Reckless Noble Topaz
 		[10] = { itemID = 35221 }; --Tabard of the Shattered Sun
 		[11] = { itemID = 35247 }; --Design: Flashing Crimson Spinel
 		[12] = { itemID = 35257 }; --Design: Great Lionseye
@@ -3361,15 +3361,15 @@ AtlasLoot_Data["Sporeggar"] = {
 	Name = BabbleFaction["Sporeggar"];
 	{
 		Name = BabbleFaction["Friendly"];
-		[1] = { itemID = 27689, desc = "=ds=#p3# (310)", price = "2 #glowcap#"  }; --Recipe: Sporeling Snack
-		[2] = { itemID = 30156, desc = "=q1=Recipe: Clam Bar"  , "1 #glowcap#" };
+		[1] = { itemID = 27689, price = "2 #glowcap#"  }; --Recipe: Sporeling Snack
+		[2] = { itemID = 30156, price = "1 #glowcap#" };
 		[3] = { itemID = 25548 , price = "1 #glowcap#"  }; --Tallstalk Mushroom
 		[4] = { itemID = 24539 , price = "2 #glowcap#"  }; --Marsh Lichen
 	};
 	{
 		Name = BabbleFaction["Honored"];
 		[1] = { itemID = 25827, price = "25 #glowcap#"  }; --Muck-Covered Drape
-		[2] = { itemID = 25828, desc = "=ds=#w8#", price = "15 #glowcap#"  }; --Petrified Lichen Guard
+		[2] = { itemID = 25828, price = "15 #glowcap#"  }; --Petrified Lichen Guard
 		[3] = { itemID = 25550 , price = "1 #glowcap#"  }; --Redcap Toadstool
 		[4] = { itemID = 24245, desc = "=ds=#m17#"  }; --Glowcap
 	};
@@ -3377,12 +3377,12 @@ AtlasLoot_Data["Sporeggar"] = {
 		Name = BabbleFaction["Revered"];
 		[1] = { itemID = 29150, price = "45 #glowcap#"  }; --Hardened Stone Shard
 		[2] = { itemID = 29149, price = "20 #glowcap#"  }; --Sporeling's Firestick
-		[3] = { itemID = 22916, desc = "25 #glowcap#"  }; --Recipe: Transmute Primal Earth to Water
-		[4] = { itemID = 38229, desc = "=q1=Pattern: Mycah's Botanical Bag"  , "25 #glowcap#" };
+		[3] = { itemID = 22916, price = "25 #glowcap#"  }; --Recipe: Transmute Primal Earth to Water
+		[4] = { itemID = 38229, price = "25 #glowcap#" };
 	};
 	{
 		Name = BabbleFaction["Exalted"];
-		[1] = { itemID = 34478, desc = "=ds=#e13#", price = "30 #glowcap#"  }; --Tiny Sporebat
+		[1] = { itemID = 34478, price = "30 #glowcap#"  }; --Tiny Sporebat
 		[2] = { itemID = 22906, price = "30 #glowcap#"  }; --Recipe: Shrouding Potion
 		[3] = { itemID = 31775 , price = "10 #glowcap#"  }; --Sporeggar Tabard
 	};
@@ -3479,7 +3479,7 @@ AtlasLoot_Data["Consortium"] = {
 		Name = BabbleFaction["Honored"];
 		[1] = { itemID = 29457  }; --Nethershard
 		[2] = { itemID = 29456 }; --Gift of the Ethereal
-		[3] = { itemID = 29118, desc = "=ds=#m14# #w20# =q1=#m1# =ds=#c2#"  }; --Smuggler's Ammo Pouch
+		[3] = { itemID = 29118 }; --Smuggler's Ammo Pouch
 		[4] = { itemID = 25733 }; --Pattern: Fel Leather Boots
 		[5] = { itemID = 23134 }; --Design: Delicate Blood Garnet
 		[6] = { itemID = 23155 }; --Design: Lustrous Azure Moonstone
@@ -3487,7 +3487,7 @@ AtlasLoot_Data["Consortium"] = {
 		[8] = { itemID = 22552 }; --Formula: Enchant Weapon - Major Striking
 		[9] = { itemID = 25908 }; --Design: Swift Skyfire Diamond
 		[10] = { itemID = 25902 }; --Design: Powerful Earthstorm Diamond
-		[11] = { itemID = 24314, desc = "=ds=#p8# (340)"  }; --Pattern: Bag of Jewels
+		[11] = { itemID = 24314 }; --Pattern: Bag of Jewels
 	};
 	{
 		Name = BabbleFaction["Revered"];
@@ -3524,7 +3524,7 @@ AtlasLoot_Data["Maghar"] = {
 	};
 	{
 		Name = BabbleFaction["Honored"];
-		[1] = { itemID = 29143, desc = "=ds=#m14# #w19# =q1=#m1# =ds=#c2#"  }; --Clefthoof Hide Quiver
+		[1] = { itemID = 29143  }; --Clefthoof Hide Quiver
 		[2] = { itemID = 25742 }; --Pattern: Netherfury Leggings
 		[3] = { itemID = 34174 }; --Pattern: Drums of Restoration
 		[4] = { itemID = 34172 }; --Pattern: Drums of Speed
@@ -3715,7 +3715,7 @@ AtlasLoot_Data["Shatar"] = {
 		Name = BabbleFaction["Exalted"];
 		[1] = { itemID = 29177 }; --A'dal's Command
 		[2] = { itemID = 29175 }; --Gavel of Pure Light
-		[3] = { itemID = 29176, desc = "=ds=#w8#"  }; --Crest of the Sha'tar
+		[3] = { itemID = 29176  }; --Crest of the Sha'tar
 		[4] = { itemID = 33153 }; --Formula: Enchant Gloves - Threat
 		[5] = { itemID = 31354 }; --Recipe: Flask of the Titans
 		[6] = { itemID = 31781 }; --Sha'tar Tabard
@@ -3731,29 +3731,29 @@ AtlasLoot_Data["VioletEye"] = {
 	{
 		Name = "Rings";
 		[1] = { icon = "INV_Jewelry_Ring_62", name = "=q6=" .. AL["Path of the Violet Assassin"] };
-		[2] = { itemID = 29280, desc = "=ds=#s13#, =q1=#r2#"  }; --Violet Signet
-		[3] = { itemID = 29281, desc = "=ds=#s13#, =q1=#r3#"  }; --Violet Signet
-		[4] = { itemID = 29282, desc = "=ds=#s13#, =q1=#r4#"  }; --Violet Signet
-		[5] = { itemID = 29283, desc = "=ds=#s13#, =q1=#r5#"  }; --Violet Signet of the Master Assassin
+		[2] = { itemID = 29280  }; --Violet Signet
+		[3] = { itemID = 29281  }; --Violet Signet
+		[4] = { itemID = 29282  }; --Violet Signet
+		[5] = { itemID = 29283  }; --Violet Signet of the Master Assassin
 		[7] = { icon = "INV_Jewelry_Ring_62", name = "=q6=" .. AL["Path of the Violet Mage"] };
-		[8] = { itemID = 29284, desc = "=ds=#s13#, =q1=#r2#"  }; --Violet Signet
-		[9] = { itemID = 29285, desc = "=ds=#s13#, =q1=#r3#"  }; --Violet Signet
-		[10] = { itemID = 29286, desc = "=ds=#s13#, =q1=#r4#"  }; --Violet Signet
-		[11] = { itemID = 29287, desc = "=ds=#s13#, =q1=#r5#"  }; --Violet Signet of the Archmage
+		[8] = { itemID = 29284  }; --Violet Signet
+		[9] = { itemID = 29285  }; --Violet Signet
+		[10] = { itemID = 29286  }; --Violet Signet
+		[11] = { itemID = 29287  }; --Violet Signet of the Archmage
 		[16] = { icon = "INV_Jewelry_Ring_62", name = "=q6=" .. AL["Path of the Violet Restorer"] };
-		[17] = { itemID = 29288, desc = "=ds=#s13#, =q1=#r2#"  }; --Violet Signet
-		[18] = { itemID = 29289, desc = "=ds=#s13#, =q1=#r3#"  }; --Violet Signet
-		[19] = { itemID = 29291, desc = "=ds=#s13#, =q1=#r4#"  }; --Violet Signet
-		[20] = { itemID = 29290, desc = "=ds=#s13#, =q1=#r5#"  }; --Violet Signet of the Grand Restorer
+		[17] = { itemID = 29288  }; --Violet Signet
+		[18] = { itemID = 29289  }; --Violet Signet
+		[19] = { itemID = 29291  }; --Violet Signet
+		[20] = { itemID = 29290  }; --Violet Signet of the Grand Restorer
 		[22] = { icon = "INV_Jewelry_Ring_62", name = "=q6=" .. AL["Path of the Violet Protector"] };
-		[23] = { itemID = 29276, desc = "=ds=#s13#, =q1=#r2#"  }; --Violet Signet
-		[24] = { itemID = 29277, desc = "=ds=#s13#, =q1=#r3#"  }; --Violet Signet
-		[25] = { itemID = 29278, desc = "=ds=#s13#, =q1=#r4#"  }; --Violet Signet
-		[26] = { itemID = 29279, desc = "=ds=#s13#, =q1=#r5#"  }; --Violet Signet of the Great Protector
+		[23] = { itemID = 29276  }; --Violet Signet
+		[24] = { itemID = 29277  }; --Violet Signet
+		[25] = { itemID = 29278  }; --Violet Signet
+		[26] = { itemID = 29279  }; --Violet Signet of the Great Protector
 	};
 	{
 		Name = BabbleFaction["Honored"];
-		[1] = { itemID = 31113, desc = "=q1=#m4#: =ds=#s14#"  }; --Violet Badge
+		[1] = { itemID = 31113  }; --Violet Badge
 		[2] = { itemID = 31395 }; --Plans: Iceguard Helm
 		[3] = { itemID = 31393 }; --Plans: Iceguard Breastplate
 		[4] = { itemID = 31401 }; --Design: The Frozen Eye
@@ -3861,10 +3861,10 @@ AtlasLoot_Data["ShattrathFlasks"] = {
 	Name = "Shattrath Flasks";
 	{
 		Name = "Shattrath Flasks";
-		[1] = { itemID = 32898, desc = "=ds=#e2#"  }; --Shattrath Flask of Fortification
-		[2] = { itemID = 32899, desc = "=ds=#e2#"  }; --Shattrath Flask of Mighty
-		[3] = { itemID = 32901, desc = "=ds=#e2#"  }; --Shattrath Flask of Relentless
-		[4] = { itemID = 32900, desc = "=ds=#e2#"  }; --Shattrath Flask of Supreme Power
+		[1] = { itemID = 32898  }; --Shattrath Flask of Fortification
+		[2] = { itemID = 32899  }; --Shattrath Flask of Mighty
+		[3] = { itemID = 32901  }; --Shattrath Flask of Relentless
+		[4] = { itemID = 32900  }; --Shattrath Flask of Supreme Power
 	};
 };
 
@@ -3900,26 +3900,26 @@ AtlasLoot_Data["PVPHalaa"] = {
 	{
 		Name = "Page 1";
 		[1] = { itemID = 28915 , price = "70 #halaabattle# 15 #halaaresearch#"  }; --Reins of the Dark Riding Talbuk
-		[2] = { itemID = 27679, desc = "=ds=#e7#", price = "100 #halaabattle#"  }; --Sublime Mystic Dawnstone
-		[3] = { itemID = 27649, desc = "=ds=#a1# #s11#", price = "40 #halaabattle# 2 #halaaresearch#"  }; --Hierophant's Leggings
+		[2] = { itemID = 27679, price = "100 #halaabattle#"  }; --Sublime Mystic Dawnstone
+		[3] = { itemID = 27649, desc = "#s11#", price = "40 #halaabattle# 2 #halaaresearch#"  }; --Hierophant's Leggings
 		[4] = { itemID = 27648, desc = "=ds=#a2# #s11#", price = "40 #halaabattle# 2 #halaaresearch#"  }; --Dreamstalker Leggings
 		[5] = { itemID = 27650, desc = "=ds=#a2# #s11#", price = "40 #halaabattle# 2 #halaaresearch#"  }; --Shadowstalker's Leggings
 		[6] = { itemID = 27647, desc = "=ds=#a3# #s11#", price = "40 #halaabattle# 2 #halaaresearch#"  }; --Marksman's Legguards
 		[7] = { itemID = 27652, desc = "=ds=#a3# #s11#", price = "40 #halaabattle# 2 #halaaresearch#"  }; --Stormbreaker's Leggings
 		[8] = { itemID = 27654, desc = "=ds=#a4# #s11#", price = "40 #halaabattle# 2 #halaaresearch#"  }; --Avenger's Legguards
 		[9] = { itemID = 27653, desc = "=ds=#a4# #s11#", price = "40 #halaabattle# 2 #halaaresearch#"  }; --Slayer's Legguards
-		[11] = { itemID = 24208, desc = "=ds=#p12# (350)"  }; --Design: Mystic Dawnstone
+		[11] = { itemID = 24208  }; --Design: Mystic Dawnstone
 		[14] = { itemID = 26045, desc = "=ds=#m17#"  }; --Halaa Battle Token
 		[16] = { itemID = 29228 , price = "100 #halaabattle# 20 #halaaresearch#"  }; --Reins of the Dark War Talbuk
 		[17] = { itemID = 27680, desc = "=ds=#m14# #e1#", price = "8 #halaaresearch#"  }; --Halaani Bag
-		[18] = { itemID = 27638, desc = "=ds=#a1# #s10#", price = "20 #halaabattle# 1 #halaaresearch#"  }; --Hierophant's Sash
+		[18] = { itemID = 27638, desc = "#s10#", price = "20 #halaabattle# 1 #halaaresearch#"  }; --Hierophant's Sash
 		[19] = { itemID = 27645, desc = "=ds=#a2# #s10#", price = "20 #halaabattle# 1 #halaaresearch#"  }; --Dreamstalker Sash
 		[20] = { itemID = 27637, desc = "=ds=#a2# #s10#", price = "20 #halaabattle# 1 #halaaresearch#"  }; --Shadowstalker's Sash
 		[21] = { itemID = 27646, desc = "=ds=#a3# #s10#", price = "20 #halaabattle# 1 #halaaresearch#"  }; --Marksman's Belt
 		[22] = { itemID = 27643, desc = "=ds=#a3# #s10#", price = "20 #halaabattle# 1 #halaaresearch#"  }; --Stormbreaker's Girdle
 		[23] = { itemID = 27644, desc = "=ds=#a4# #s10#", price = "20 #halaabattle# 1 #halaaresearch#"  }; --Avenger's Waistguard
 		[24] = { itemID = 27639, desc = "=ds=#a4# #s10#", price = "20 #halaabattle# 1 #halaaresearch#"  }; --Slayer's Waistguard
-		[26] = { itemID = 33783, desc = "=ds=#p12# (350)", price = "4 #halaaresearch#"  }; --Design: Steady Talasite
+		[26] = { itemID = 33783, price = "4 #halaaresearch#"  }; --Design: Steady Talasite
 		[27] = { itemID = 32071, desc = "2 #halaaresearch#"  }; --Recipe: Elixir of Ironskin
 		[29] = { itemID = 26044, desc = "=ds=#m17#"  }; --Halaa Research Token
 	};
@@ -3928,12 +3928,12 @@ AtlasLoot_Data["PVPHalaa"] = {
 		[1] = { itemID = 30611 }; --Halaani Razorshaft
 		[2] = { itemID = 30615 }; --Halaani Whiskey
 		[4] = { icon = "INV_BannerPVP_02", name = "=q6=#m7#" };
-		[5] = { itemID = 30598, desc = "=ds=#e7#"  }; --Don Amancio's Heart
+		[5] = { itemID = 30598  }; --Don Amancio's Heart
 		[6] = { itemID = 30597  }; --Halaani Claymore
 		[7] = { itemID = 30599  }; --Avenging Blades
 		[16] = { itemID = 30612 }; --Halaani Grimshot
 		[19] = { icon = "INV_BannerPVP_01", name = "=q6=#m6#" };
-		[20] = { itemID = 30571, desc = "=ds=#e7#"  }; --Don Rodrigo's Heart
+		[20] = { itemID = 30571  }; --Don Rodrigo's Heart
 		[21] = { itemID = 30570  }; --Arkadian Claymore
 		[22] = { itemID = 30568  }; --The Sharp Cookie
 	};
@@ -3944,23 +3944,23 @@ AtlasLoot_Data["PVPSpiritTowers"] = {
 	{
 		Name = BabbleZone["Terokkar Forest"] .. ": " .. AL["Spirit Towers"];
 		[1] = { itemID = 28553 , price = "50 #spiritshard#"  }; --Band of the Exorcist
-		[2] = { itemID = 28557, desc = "=ds=#e7#", price = "8 #spiritshard#"  }; --Swift Starfire Diamond
-		[3] = { itemID = 28759, desc = "=ds=#a1# #s1#", price = "18 #spiritshard#"  }; --Exorcist's Dreadweave Hood
-		[4] = { itemID = 28574, desc = "=ds=#a2# #s1#", price = "18 #spiritshard#"  }; --Exorcist's Dragonhide Helm
-		[5] = { itemID = 28575, desc = "=ds=#a2# #s1#", price = "18 #spiritshard#"  }; --Exorcist's Wyrmhide Helm
-		[6] = { itemID = 28577, desc = "=ds=#a3# #s1#", price = "18 #spiritshard#"  }; --Exorcist's Linked Helm
-		[7] = { itemID = 28560, desc = "=ds=#a4# #s1#", price = "18 #spiritshard#"  }; --Exorcist's Lamellar Helm
-		[8] = { itemID = 28761, desc = "=ds=#a4# #s1#", price = "18 #spiritshard#"  }; --Exorcist's Scaled Helm
-		[10] = { itemID = 32947, desc = "=ds=#e2#", price = "2 #spiritshard#"  }; --Auchenai Healing Potion
+		[2] = { itemID = 28557, price = "8 #spiritshard#"  }; --Swift Starfire Diamond
+		[3] = { itemID = 28759, price = "18 #spiritshard#"  }; --Exorcist's Dreadweave Hood
+		[4] = { itemID = 28574, price = "18 #spiritshard#"  }; --Exorcist's Dragonhide Helm
+		[5] = { itemID = 28575, price = "18 #spiritshard#"  }; --Exorcist's Wyrmhide Helm
+		[6] = { itemID = 28577, price = "18 #spiritshard#"  }; --Exorcist's Linked Helm
+		[7] = { itemID = 28560, price = "18 #spiritshard#"  }; --Exorcist's Lamellar Helm
+		[8] = { itemID = 28761, price = "18 #spiritshard#"  }; --Exorcist's Scaled Helm
+		[10] = { itemID = 32947, price = "2 #spiritshard#"  }; --Auchenai Healing Potion
 		[12] = { itemID = 28558, desc = "=ds=#m17#"  }; --Spirit Shard
 		[16] = { itemID = 28555 , price = "50 #spiritshard#"  }; --Seal of the Exorcist
-		[17] = { itemID = 28556, desc = "=ds=#e7#", price = "8 #spiritshard#"  }; --Swift Windfire Diamond
-		[18] = { itemID = 28760, desc = "=ds=#a1# #s1#", price = "18 #spiritshard#"  }; --Exorcist's Silk Hood
-		[19] = { itemID = 28561, desc = "=ds=#a2# #s1#", price = "18 #spiritshard#"  }; --Exorcist's Leather Helm
-		[20] = { itemID = 28576, desc = "=ds=#a3# #s1#", price = "18 #spiritshard#"  }; --Exorcist's Chain Helm
-		[21] = { itemID = 28758, desc = "=ds=#a3# #s1#", price = "18 #spiritshard#"  }; --Exorcist's Mail Helm
-		[22] = { itemID = 28559, desc = "=ds=#a4# #s1#", price = "18 #spiritshard#"  }; --Exorcist's Plate Helm
-		[25] = { itemID = 32948, desc = "=ds=#e2#", price = "2 #spiritshard#"  }; --Auchenai Mana Potion
+		[17] = { itemID = 28556, price = "8 #spiritshard#"  }; --Swift Windfire Diamond
+		[18] = { itemID = 28760, price = "18 #spiritshard#"  }; --Exorcist's Silk Hood
+		[19] = { itemID = 28561, price = "18 #spiritshard#"  }; --Exorcist's Leather Helm
+		[20] = { itemID = 28576, price = "18 #spiritshard#"  }; --Exorcist's Chain Helm
+		[21] = { itemID = 28758, price = "18 #spiritshard#"  }; --Exorcist's Mail Helm
+		[22] = { itemID = 28559, price = "18 #spiritshard#"  }; --Exorcist's Plate Helm
+		[25] = { itemID = 32948, price = "2 #spiritshard#"  }; --Auchenai Mana Potion
 	};
 };
 
@@ -5183,9 +5183,9 @@ AtlasLoot_Data["WeaponsTBC"] = {
 	};
 	{
 		Name = "Weapons Season 4";
-		[1] = { itemID = 34986, desc = "=ds=#w8#", price = "1875 #arena#"  }; --Brutal Gladiator's Barrier
-		[2] = { itemID = 35073, desc = "=ds=#w8#", price = "1875 #arena#"  }; --Brutal Gladiator's Redoubt
-		[3] = { itemID = 35094, desc = "=ds=#w8#", price = "1875 #arena#"  }; --Brutal Gladiator's Shield Wall
+		[1] = { itemID = 34986, price = "1875 #arena#"  }; --Brutal Gladiator's Barrier
+		[2] = { itemID = 35073, price = "1875 #arena#"  }; --Brutal Gladiator's Redoubt
+		[3] = { itemID = 35094, price = "1875 #arena#"  }; --Brutal Gladiator's Shield Wall
 		[4] = { itemID = 35108, price = "1000 #arena#"  }; --Brutal Gladiator's War Edge
 		[5] = { itemID = 35047, price = "3750 #arena#"  }; --Brutal Gladiator's Longbow
 		[6] = { itemID = 35018, price = "3750 #arena#"  }; --Brutal Gladiator's Heavy Crossbow
@@ -5971,9 +5971,9 @@ AtlasLoot_Data["BadgeShatt"] = {
 		Name = AL["Weapons"];
 		[1] = { itemID = 29275, price = "50 #heroic#"  }; --Searing Sunblade
 		[2] = { itemID = 33192, price = "25 #heroic#"  }; --Carved Witch Doctor's Stick
-		[3] = { itemID = 29266, desc = "=ds=#w8#", price = "33 #heroic#"  }; --Azure-Shield of Coldarra
-		[4] = { itemID = 29267, desc = "=ds=#w8#", price = "33 #heroic#"  }; --Light-Bearer's Faith Shield
-		[5] = { itemID = 29268, desc = "=ds=#w8#", price = "33 #heroic#"  }; --Mazthoril Honor Shield
+		[3] = { itemID = 29266, price = "33 #heroic#"  }; --Azure-Shield of Coldarra
+		[4] = { itemID = 29267, price = "33 #heroic#"  }; --Light-Bearer's Faith Shield
+		[5] = { itemID = 29268, price = "33 #heroic#"  }; --Mazthoril Honor Shield
 		[6] = { itemID = 33334 , price = "35 #heroic#"  }; --Fetish of the Primal Gods
 		[7] = { itemID = 29270 , price = "25 #heroic#"  }; --Flametounge Seal
 		[8] = { itemID = 29273 , price = "25 #heroic#"  }; --Khadgar's Knapsack
@@ -5995,9 +5995,9 @@ AtlasLoot_Data["BadgeShatt"] = {
 		[8] = { itemID = 29367 , price = "25 #heroic#"  }; --Ring of Cryptic Dreams
 		[9] = { itemID = 29384 , price = "25 #heroic#"  }; --Ring of Unyielding Force
 		[10] = { itemID = 23572, desc = "=ds=#e8#", price = "10 #heroic#"  }; --Primal Nether
-		[11] = { itemID = 32227, desc = "=ds=#e7#", price = "15 #heroic#"  }; --Crimson Spinel
-		[12] = { itemID = 32229, desc = "=ds=#e7#", price = "15 #heroic#"  }; --Lionseye
-		[13] = { itemID = 32249, desc = "=ds=#e7#", price = "15 #heroic#"  }; --Seaspray Emerald
+		[11] = { itemID = 32227, price = "15 #heroic#"  }; --Crimson Spinel
+		[12] = { itemID = 32229, price = "15 #heroic#"  }; --Lionseye
+		[13] = { itemID = 32249, price = "15 #heroic#"  }; --Seaspray Emerald
 		[14] = { itemID = 35326, price = "75 #heroic#"  }; --Battlemaster's Alacrity
 		[15] = { itemID = 34049, price = "75 #heroic#"  }; --Battlemaster's Audacity
 		[16] = { itemID = 34163, price = "75 #heroic#"  }; --Battlemaster's Cruelty
@@ -6009,33 +6009,33 @@ AtlasLoot_Data["BadgeShatt"] = {
 		[22] = { itemID = 29387, price = "41 #heroic#"  }; --Gnomeregan Auto-Blocker 600
 		[23] = { itemID = 29370, price = "41 #heroic#"  }; --Icon of the Silver Crescent
 		[24] = { itemID = 30183, desc = "=ds=#e8#", price = "15 #heroic#"  }; --Nether Vortex
-		[25] = { itemID = 32228, desc = "=ds=#e7#", price = "15 #heroic#"  }; --Empyrean Sapphire
-		[26] = { itemID = 32231, desc = "=ds=#e7#", price = "15 #heroic#"  }; --Pyrestone
-		[27] = { itemID = 32230, desc = "=ds=#e7#", price = "15 #heroic#"  }; --Shadowsong Amethyst
+		[25] = { itemID = 32228, price = "15 #heroic#"  }; --Empyrean Sapphire
+		[26] = { itemID = 32231, price = "15 #heroic#"  }; --Pyrestone
+		[27] = { itemID = 32230, price = "15 #heroic#"  }; --Shadowsong Amethyst
 	};
 	{
 		Name = AL["Fire Resistance Gear"];
 		[1] = { icon = "INV_Box_01", name = "=q6=#a1#" };
-		[2] = { itemID = 30762, desc = "=ds=#a1#, #s5#", price = "30 #heroic#"  }; --Infernoweave Robe
-		[3] = { itemID = 30764, desc = "=ds=#a1#, #s9#", price = "20 #heroic#"  }; --Infernoweave Gloves
-		[4] = { itemID = 30761, desc = "=ds=#a1#, #s11#", price = "30 #heroic#"  }; --Infernoweave Leggings
-		[5] = { itemID = 30763, desc = "=ds=#a1#, #s12#", price = "20 #heroic#"  }; --Infernoweave Boots
+		[2] = { itemID = 30762, price = "30 #heroic#"  }; --Infernoweave Robe
+		[3] = { itemID = 30764, desc = "#s9#", price = "20 #heroic#"  }; --Infernoweave Gloves
+		[4] = { itemID = 30761, desc = "#s11#", price = "30 #heroic#"  }; --Infernoweave Leggings
+		[5] = { itemID = 30763, desc = "#s12#", price = "20 #heroic#"  }; --Infernoweave Boots
 		[7] = { icon = "INV_Box_01", name = "=q6=#a2#" };
-		[8] = { itemID = 30776, desc = "=ds=#a2#, #s5#", price = "30 #heroic#"  }; --Inferno Hardened Chestguard
-		[9] = { itemID = 30780, desc = "=ds=#a2#, #s9#", price = "20 #heroic#"  }; --Inferno Hardened Gloves
-		[10] = { itemID = 30778, desc = "=ds=#a2#, #s11#", price = "30 #heroic#"  }; --Inferno Hardened Leggings
-		[11] = { itemID = 30779, desc = "=ds=#a2#, #s12#", price = "20 #heroic#"  }; --Inferno Hardened Boots
+		[8] = { itemID = 30776, price = "30 #heroic#"  }; --Inferno Hardened Chestguard
+		[9] = { itemID = 30780, desc = "#s9#", price = "20 #heroic#"  }; --Inferno Hardened Gloves
+		[10] = { itemID = 30778, desc = "#s11#", price = "30 #heroic#"  }; --Inferno Hardened Leggings
+		[11] = { itemID = 30779, desc = "#s12#", price = "20 #heroic#"  }; --Inferno Hardened Boots
 		[13] = { itemID = 29434, desc = "=ds=#m17#"  }; --Badge of Justice
 		[16] = { icon = "INV_Box_01", name = "=q6=#a3#" };
-		[17] = { itemID = 30773, desc = "=ds=#a3#, #s5#", price = "30 #heroic#"  }; --Inferno Forged Hauberk
-		[18] = { itemID = 30774, desc = "=ds=#a3#, #s9#", price = "20 #heroic#"  }; --Inferno Forged Gloves
-		[19] = { itemID = 30772, desc = "=ds=#a3#, #s11#", price = "30 #heroic#"  }; --Inferno Forged Leggings
-		[20] = { itemID = 30770, desc = "=ds=#a3#, #s12#", price = "20 #heroic#"  }; --Inferno Forged Boots
+		[17] = { itemID = 30773, price = "30 #heroic#"  }; --Inferno Forged Hauberk
+		[18] = { itemID = 30774, desc = "#s9#", price = "20 #heroic#"  }; --Inferno Forged Gloves
+		[19] = { itemID = 30772, desc = "#s11#", price = "30 #heroic#"  }; --Inferno Forged Leggings
+		[20] = { itemID = 30770, desc = "#s12#", price = "20 #heroic#"  }; --Inferno Forged Boots
 		[22] = { icon = "INV_Box_01", name = "=q6=#a4#" };
-		[23] = { itemID = 30769, desc = "=ds=#a4#, #s5#", price = "30 #heroic#"  }; --Inferno Tempered Chestguard
-		[24] = { itemID = 30767, desc = "=ds=#a4#, #s9#", price = "20 #heroic#"  }; --Inferno Tempered Gauntlets
-		[25] = { itemID = 30766, desc = "=ds=#a4#, #s11#", price = "30 #heroic#"  }; --Inferno Tempered Leggings
-		[26] = { itemID = 30768, desc = "=ds=#a4#, #s12#", price = "20 #heroic#"  }; --Inferno Tempered Boots
+		[23] = { itemID = 30769, price = "30 #heroic#"  }; --Inferno Tempered Chestguard
+		[24] = { itemID = 30767, desc = "#s9#", price = "20 #heroic#"  }; --Inferno Tempered Gauntlets
+		[25] = { itemID = 30766, desc = "#s11#", price = "30 #heroic#"  }; --Inferno Tempered Leggings
+		[26] = { itemID = 30768, desc = "#s12#", price = "20 #heroic#"  }; --Inferno Tempered Boots
 	};
 };
 

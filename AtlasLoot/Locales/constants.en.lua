@@ -4254,5 +4254,26 @@ if AL then
 	AL["Upper Ring"] = true
 	AL["Lower Pool"] = true
 	AL["Crimson Laboratories"] = true
+	AL["Calculation Chamber"] = true
+
+	-- Karazhan
+	AL["Servant's Quarters"] = true
+	AL["Upper Livery Stables"] = true
+	AL["Random Servant's Quarter Boss"] = true
+	AL["Netherspace"] = true
+	AL["The Power Station"] = true
+	AL["Medivh's Chambers"] = true
+	AL["Gamesman's Hall"] = true
+	AL["The Celestial Watch"] = true
+	AL["Upper Library"] = true
+	AL["The Repository"] = true
+	AL["Guardian's Library"] = true
+	AL["The Menagerie"] = true
+	AL["Upper Broken Stair"] = true
+	AL["Lower Broken Stair"] = true
+	AL["Master's Terrace"] = true
+	AL["Opera Hall Balcony"] = true
+	AL["The Guest Chambers"] = true
+	AL["The Banquet Hall"] = true
 
 end
