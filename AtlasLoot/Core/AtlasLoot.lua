@@ -502,7 +502,7 @@ It is the workhorse of the mod and allows the loot tables to be displayed any wa
 ]]
 function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 
-	local isValid, toShow, itemID
+	local isValid, toShow, itemID, orgItemID
 	SearchPrevData = {dataID, dataSource_backup, tablenum}
 
 	--builds a list of tradeskills
@@ -617,8 +617,8 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 		isValid = false
 		toShow = true
 		local itemDif = ItemindexID
-		local itemID
-		if item and item.itemID then
+		local itemID = item and item.itemID
+		if item and item.itemID and itemDif ~= 2 then
 			itemID = item.itemID
 			isValid = true
 
@@ -644,7 +644,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 					itemID = AtlasLoot:FindId(item[9], itemDif, dataSource[dataID].Type) or item.itemID
 				end
 			end
-		elseif item and (item.spellID or item.icon) then
+		elseif item and (item.spellID or item.icon) or item and itemID then
 			isValid = true
 			toShow = true
 		end
@@ -730,6 +730,10 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 			extra = LIMEGREEN .. "L-Click:|r " .. extra
 		end
 
+		if dataSource[dataID][tablenum][i].rep then
+			extra = extra ..WHITE.." ("..dataSource[dataID][tablenum][i].rep..")"
+		end
+
 		if dataSource[dataID][tablenum][i].price then
 			extra = extra ..WHITE.." ("..dataSource[dataID][tablenum][i].price..")"
 		end
@@ -737,7 +741,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 		local recipe = AtlasLoot:GetRecipeData(itemID, "item")
 		if recipe and AtlasLoot_CraftingData["CraftingLevels"] and AtlasLoot_CraftingData["CraftingLevels"][recipe.spellID] then
 			local lvls = AtlasLoot_CraftingData["CraftingLevels"][recipe.spellID]
-			extra = extra ..WHITE.." ( "..ORANGE..lvls[1].."|r "..YELLOW..lvls[2].."|r "..GREEN..lvls[3].."|r "..GREY..lvls[4]..WHITE.." )"
+			extra = extra ..WHITE.." ( "..lvls[1].." )"
 		end
 
 		extra = AtlasLoot:FixText(extra)

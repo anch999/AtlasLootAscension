@@ -210,7 +210,7 @@ local filterbtn = CreateFrame("CheckButton","AtlasLootFilterCheck",AtlasLootItem
         filterbtn.Label:SetText(AL["Filter"])
         filterbtn.Label:SetPoint("RIGHT", AtlasLootFilterCheck, 30, 2)
         filterbtn:RegisterForClicks("LeftButtonDown","RightButtonDown")
-        filterbtn:SetScript("OnClick", function(self, btnclick) AtlasLoot_FilterEnableButton(self, btnclick) end)
+        filterbtn:SetScript("OnClick", function(self, btnclick) AtlasLoot:FilterEnableButton(self, btnclick) end)
         
 ------------------------------------ Buttons at the top of the frame ---------------------------------------
 

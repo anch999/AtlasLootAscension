@@ -47,63 +47,12 @@ function AtlasLoot:FixText(text)
     text = gsub(text, "#c9#", LOCALIZED_CLASS_NAMES_MALE["WARRIOR"])
     text = gsub(text, "#c10#", LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"])
 
-    -- Professions
-    text = gsub(text, "#p1#", (GetSpellInfo(2259)))	-- Alchemy
-    text = gsub(text, "#p2#", (GetSpellInfo(2018)))	-- Blacksmithing
-    text = gsub(text, "#p3#", (GetSpellInfo(2550)))	-- Cooking
-    text = gsub(text, "#p4#", (GetSpellInfo(7411)))	-- Enchanting
-    text = gsub(text, "#p5#", (GetSpellInfo(4036)))	-- Engineering
-    text = gsub(text, "#p6#", (GetSpellInfo(3273)))	-- First Aid
-    text = gsub(text, "#p7#", (GetSpellInfo(2108)))	-- Leatherworking
-    text = gsub(text, "#p8#", (GetSpellInfo(3908)))	-- Tailoring
-    text = gsub(text, "#p9#", (GetSpellInfo(10656)))	-- Dragonscale Leatherworking
-    text = gsub(text, "#p10#", (GetSpellInfo(10660)))	-- Tribal Leatherworking
-    text = gsub(text, "#p11#", (GetSpellInfo(10658)))	-- Elemental Leatherworking
-    text = gsub(text, "#p12#", (GetSpellInfo(25229)))	-- Jewelcrafting
-    text = gsub(text, "#p13#", (GetSpellInfo(9788)))	-- Armorsmith
-    text = gsub(text, "#p14#", (GetSpellInfo(17041)))	-- Master Axesmith
-    text = gsub(text, "#p15#", (GetSpellInfo(17039)))	-- Master Swordsmith
-    text = gsub(text, "#p16#", (GetSpellInfo(9787)))	-- Weaponsmith
-    text = gsub(text, "#p17#", (GetSpellInfo(20220)))	-- Gnomish Engineering
-    text = gsub(text, "#p18#", (GetSpellInfo(20221)))	-- Goblin Engineering
-    text = gsub(text, "#p19#", (GetSpellInfo(26798)))	-- Mooncloth Tailoring
-    text = gsub(text, "#p20#", (GetSpellInfo(26801)))	-- Shadoweave Tailoring
-    text = gsub(text, "#p21#", (GetSpellInfo(26797)))	-- Spellfire Tailoring
-    text = gsub(text, "#p22#", (GetSpellInfo(17040)))	-- Master Hammersmith
-    text = gsub(text, "#p23#", (GetSpellInfo(2575)))	-- Mining
-    text = gsub(text, "#p24#", (GetSpellInfo(63275)))	-- Fishing
-
     -- Reputation
     text = gsub(text, "#r1#", BabbleFaction["Neutral"])
     text = gsub(text, "#r2#", BabbleFaction["Friendly"])
     text = gsub(text, "#r3#", BabbleFaction["Honored"])
     text = gsub(text, "#r4#", BabbleFaction["Revered"])
     text = gsub(text, "#r5#", BabbleFaction["Exalted"])
-
-    -- Armour Class
-    text = gsub(text, "#a1#", BabbleInventory["Cloth"])
-    text = gsub(text, "#a2#", BabbleInventory["Leather"])
-    text = gsub(text, "#a3#", BabbleInventory["Mail"])
-    text = gsub(text, "#a4#", BabbleInventory["Plate"])
-
-
-    -- Body Slot
-    text = gsub(text, "#s1#", BabbleInventory["Head"])
-    text = gsub(text, "#s2#", BabbleInventory["Neck"])
-    text = gsub(text, "#s3#", BabbleInventory["Shoulder"])
-    text = gsub(text, "#s4#", BabbleInventory["Back"])
-    text = gsub(text, "#s5#", BabbleInventory["Chest"])
-    text = gsub(text, "#s6#", BabbleInventory["Shirt"])
-    text = gsub(text, "#s7#", BabbleInventory["Tabard"])
-    text = gsub(text, "#s8#", BabbleInventory["Wrist"])
-    text = gsub(text, "#s9#", BabbleInventory["Hands"])
-    text = gsub(text, "#s10#", BabbleInventory["Waist"])
-    text = gsub(text, "#s11#", BabbleInventory["Legs"])
-    text = gsub(text, "#s12#", BabbleInventory["Feet"])
-    text = gsub(text, "#s13#", BabbleInventory["Ring"])
-    text = gsub(text, "#s14#", BabbleInventory["Trinket"])
-    text = gsub(text, "#s15#", BabbleInventory["Held in Off-Hand"])
-    text = gsub(text, "#s16#", BabbleInventory["Relic"])
 
     -- Body Slot
     text = gsub(text, "INVTYPE_HEAD", BabbleInventory["Head"])
@@ -190,35 +139,6 @@ function AtlasLoot:FixText(text)
     text = gsub(text, ", Purple", AL["Purple Gem"])
     text = gsub(text, ", Orange", AL["Orange Gem"])
     text = gsub(text, ", Green", AL["Green Gem"])
-
-    -- Weapon Weilding
-    text = gsub(text, "#h1#", BabbleInventory["One-Hand"])
-    text = gsub(text, "#h2#", BabbleInventory["Two-Hand"])
-    text = gsub(text, "#h3#", BabbleInventory["Main Hand"])
-    text = gsub(text, "#h4#", BabbleInventory["Off Hand"])
-
-    -- Weapon Type
-    text = gsub(text, "#w1#", BabbleInventory["Axe"])
-    text = gsub(text, "#w2#", BabbleInventory["Bow"])
-    text = gsub(text, "#w3#", BabbleInventory["Crossbow"])
-    text = gsub(text, "#w4#", BabbleInventory["Dagger"])
-    text = gsub(text, "#w5#", BabbleInventory["Gun"])
-    text = gsub(text, "#w6#", BabbleInventory["Mace"])
-    text = gsub(text, "#w7#", BabbleInventory["Polearm"])
-    text = gsub(text, "#w8#", BabbleInventory["Shield"])
-    text = gsub(text, "#w9#", BabbleInventory["Staff"])
-    text = gsub(text, "#w10#", BabbleInventory["Sword"])
-    text = gsub(text, "#w11#", BabbleInventory["Thrown"])
-    text = gsub(text, "#w12#", BabbleInventory["Wand"])
-    text = gsub(text, "#w13#", BabbleInventory["Fist Weapon"])
-    text = gsub(text, "#w14#", BabbleInventory["Idol"])
-    text = gsub(text, "#w15#", BabbleInventory["Totem"])
-    text = gsub(text, "#w16#", BabbleInventory["Libram"])
-    text = gsub(text, "#w17#", BabbleInventory["Arrow"])
-    text = gsub(text, "#w18#", BabbleInventory["Bullet"])
-    text = gsub(text, "#w19#", BabbleInventory["Quiver"])
-    text = gsub(text, "#w20#", BabbleInventory["Ammo Pouch"])
-    text = gsub(text, "#w21#", AL["Sigil"])
 
     -- Misc Inventory related words
     text = gsub(text, "#e1#", BabbleInventory["Bag"])

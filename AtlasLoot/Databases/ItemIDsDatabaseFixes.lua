@@ -441,7 +441,7 @@ ItemIDsDatabase[30969] = { 6030969, 30969, 330969, 230969 }
 ItemIDsDatabase[34546] = { 6034546, 34546, 334546, 234546 }
 ItemIDsDatabase[30977] = { 6030977, 30977, 330977, 230977 }
 ItemIDsDatabase[34569] = { 6034569, 34569, 334569, 234569 }
-
+ItemIDsDatabase[14986] = { 6014986, 14986, 314986, 214986 }
 
 for _, v in pairs(ItemIDsDatabase) do
     if not v["MythicRaid"] then

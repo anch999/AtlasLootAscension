@@ -94,7 +94,8 @@ function AtlasLoot:CloseDewDrop(divider, maxLenght)
 end
 
 -- return a copy of the table t
-function AtlasLoot:CloneTable(t)				
+function AtlasLoot:CloneTable(t)
+	if type(t) ~= "table" then return end
 	local new = {}					-- create a new table
 	local i, v = next(t, nil)		-- i is an index of t, v = t[i]
 	while i do

@@ -22,75 +22,75 @@ AtlasLoot_Data["Tabards"] = {
 		[8] = { itemID = 49052, desc = "=ds=#m32# =ec1=#m7#" }; --Tabard of Conquest
 		[9] = { itemID = 49054, desc = "=ds=#m32# =ec1=#m6#" }; --Tabard of Conquest
 		[11] = { itemID = 46874 }; --Argent Crusader's Tabard
-		[12] = { itemID = 46817, desc = "=ds=#s7# =ec1=#m7#" }; --Silver Covenant Tabard
-		[13] = { itemID = 46818, desc = "=ds=#s7# =ec1=#m6#" }; --Sunreaver Tabard
+		[12] = { itemID = 46817 }; --Silver Covenant Tabard
+		[13] = { itemID = 46818 }; --Sunreaver Tabard
 		[16] = { itemID = 43154 }; --Tabard of the Argent Crusade
 		[17] = { itemID = 43157 }; --Tabard of the Kirin Tor
 		[18] = { itemID = 43155 }; --Tabard of the Ebon Blade
 		[19] = { itemID = 43156 }; --Tabard of the Wyrmrest Accord
-		[21] = { itemID = 45579, desc = "=ds=#s7# =ec1=#m7#" }; --Darnassus Tabard
-		[22] = { itemID = 45580, desc = "=ds=#s7# =ec1=#m7#" }; --Exodar Tabard
-		[23] = { itemID = 45578, desc = "=ds=#s7# =ec1=#m7#" }; --Gnomeregan Tabard
-		[24] = { itemID = 45577, desc = "=ds=#s7# =ec1=#m7#" }; --Ironforge Tabard
-		[25] = { itemID = 45574, desc = "=ds=#s7# =ec1=#m7#" }; --Stormwind Tabard
-		[26] = { itemID = 45581, desc = "=ds=#s7# =ec1=#m6#" }; --Orgrimmar Tabard
-		[27] = { itemID = 45582, desc = "=ds=#s7# =ec1=#m6#" }; --Sen'jin Tabard
-		[28] = { itemID = 45585, desc = "=ds=#s7# =ec1=#m6#" }; --Silvermoon City Tabard
-		[29] = { itemID = 45584, desc = "=ds=#s7# =ec1=#m6#" }; --Thunder Bluff Tabard
-		[30] = { itemID = 45583, desc = "=ds=#s7# =ec1=#m6#" }; --Undercity Tabard
+		[21] = { itemID = 45579 }; --Darnassus Tabard
+		[22] = { itemID = 45580 }; --Exodar Tabard
+		[23] = { itemID = 45578 }; --Gnomeregan Tabard
+		[24] = { itemID = 45577 }; --Ironforge Tabard
+		[25] = { itemID = 45574 }; --Stormwind Tabard
+		[26] = { itemID = 45581 }; --Orgrimmar Tabard
+		[27] = { itemID = 45582 }; --Sen'jin Tabard
+		[28] = { itemID = 45585 }; --Silvermoon City Tabard
+		[29] = { itemID = 45584 }; --Thunder Bluff Tabard
+		[30] = { itemID = 45583 }; --Undercity Tabard
 	};
 	{
 		Name = "Page 2";
-		[1] = { itemID = 38312, desc = "=ds=#s7#, =q1=#m24#" }; --Tabard of Brilliance
-		[2] = { itemID = 23705, desc = "=ds=#s7#, =q1=#m24#" }; --Tabard of Flame
-		[3] = { itemID = 23709, desc = "=ds=#s7#, =q1=#m24#" }; --Tabard of Frost
-		[4] = { itemID = 38313, desc = "=ds=#s7#, =q1=#m24#" }; --Tabard of Fury
-		[5] = { itemID = 38309, desc = "=ds=#s7#, =q1=#m24#" }; --Tabard of Nature
-		[6] = { itemID = 38310, desc = "=ds=#s7#, =q1=#m24#" }; --Tabard of the Arcane
-		[7] = { itemID = 38314, desc = "=ds=#s7#, =q1=#m24#" }; --Tabard of the Defender
-		[8] = { itemID = 38311, desc = "=ds=#s7#, =q1=#m24#" }; --Tabard of the Void
-		[9] = { itemID = 35279, desc = "=ds=#s7#, =q1=#m4#" }; --Tabard of Summer Skies
-		[11] = { itemID = 35280, desc = "=ds=#s7#, =q1=#m4#" }; --Tabard of Summer Flames
-		[12] = { itemID = 31404, desc = "=ds=#s7#, =q1=#m4#" }; --Green Trophy Tabard of the Illidari
-		[13] = { itemID = 31405, desc = "=ds=#s7#, =q1=#m4#" }; --Purple Trophy Tabard of the Illidari
-		[14] = { itemID = 24344, desc = "=ds=#s7#, =q1=#m4#, =ec1=#m7#" }; --Tabard of the Hand
-		[15] = { itemID = 25549, desc = "=ds=#s7#, =ec1=#m6#" }; --Blood Knight Tabard
+		[1] = { itemID = 38312 }; --Tabard of Brilliance
+		[2] = { itemID = 23705 }; --Tabard of Flame
+		[3] = { itemID = 23709 }; --Tabard of Frost
+		[4] = { itemID = 38313 }; --Tabard of Fury
+		[5] = { itemID = 38309 }; --Tabard of Nature
+		[6] = { itemID = 38310 }; --Tabard of the Arcane
+		[7] = { itemID = 38314 }; --Tabard of the Defender
+		[8] = { itemID = 38311 }; --Tabard of the Void
+		[9] = { itemID = 35279 }; --Tabard of Summer Skies
+		[11] = { itemID = 35280 }; --Tabard of Summer Flames
+		[12] = { itemID = 31404 }; --Green Trophy Tabard of the Illidari
+		[13] = { itemID = 31405 }; --Purple Trophy Tabard of the Illidari
+		[14] = { itemID = 24344 }; --Tabard of the Hand
+		[15] = { itemID = 25549 }; --Blood Knight Tabard
 		[16] = { itemID = 31779 }; --Aldor Tabard
 		[17] = { itemID = 31804 }; --Cenarion Expedition Tabard
 		[18] = { itemID = 31776 }; --Consortium Tabard
-		[19] = { itemID = 23999, desc = "=ds=#s7#, =ec1=#m7#" }; --Honor Hold Tabard
+		[19] = { itemID = 23999 }; --Honor Hold Tabard
 		[20] = { itemID = 31777 }; --Keepers of Time Tabard
-		[21] = { itemID = 31774, desc = "=ds=#s7#, =ec1=#m7#" }; --Kurenai Tabard
+		[21] = { itemID = 31774 }; --Kurenai Tabard
 		[22] = { itemID = 31778 }; --Lower City Tabard
-		[23] = { itemID = 31773, desc = "=ds=#s7#, =ec1=#m6#" }; --Mag'har Tabard
+		[23] = { itemID = 31773 }; --Mag'har Tabard
 		[24] = { itemID = 32828 }; --Ogri'la Tabard
 		[25] = { itemID = 31781 }; --Sha'tar Tabard
 		[26] = { itemID = 31775 }; --Sporeggar Tabard
 		[27] = { itemID = 31780 }; --Scryers Tabard
 		[28] = { itemID = 32445 }; --Skyguard Tabard
 		[29] = { itemID = 35221 }; --Tabard of the Shattered Sun
-		[30] = { itemID = 24004, desc = "=ds=#s7#, =ec1=#m6#" }; --Thrallmar Tabard
+		[30] = { itemID = 24004 }; --Thrallmar Tabard
 	};
 	{
 		Name = "Page 3";
 		[1] = { icon = "INV_BannerPVP_02", name = "=q6=#m7#" };
 		[2] = { itemID = 15196 }; --Private's Tabard
 		[3] = { itemID = 15198 }; --Knight's Colors
-		[4] = { itemID = 20132, desc = "=ds=#s7#, =q1=#m4#" }; --Arathor Battle Tabard
+		[4] = { itemID = 20132 }; --Arathor Battle Tabard
 		[5] = { itemID = 19032 }; --Stormpike Battle Tabard
 		[6] = { itemID = 19506 }; --Silverwing Battle Tabard
 		[8] = { icon = "INV_BannerPVP_01", name = "=q6=#m6#" };
 		[9] = { itemID = 15197 }; --Scout's Tabard
 		[10] = { itemID = 15199 }; --Stone Guard's Herald
-		[11] = { itemID = 20131, desc = "=ds=#s7#, =q1=#m4#" }; --Battle Tabard of the Defilers
+		[11] = { itemID = 20131 }; --Battle Tabard of the Defilers
 		[12] = { itemID = 19031 }; --Frostwolf Battle Tabard
 		[13] = { itemID = 19505 }; --Warsong Battle Tabard
 		[16] = { itemID = 23192 }; --Tabard of the Scarlet Crusade",  "0%
 		[17] = { itemID = 5976 }; --Guild Tabard
 		[19] = { icon = "INV_Box_01", name = "=q6=#j29#" };
 		[20] = { itemID = 36941 }; --Competitor's Tabard
-		[21] = { itemID = 22999, desc = "=ds=#s7#, =q1=#m4#" }; --Tabard of the Agent Dawn
-		[22] = { itemID = 28788, desc = "=ds=#s7#, =q1=#m4#" }; --Tabard of the Protector
+		[21] = { itemID = 22999 }; --Tabard of the Agent Dawn
+		[22] = { itemID = 28788 }; --Tabard of the Protector
 		[23] = { itemID = 19160 }; --Contest Winner's Tabard
 	};
 };
@@ -541,8 +541,8 @@ AtlasLoot_Data["Mounts"] = {
 		[11] = { itemID = 45802 }; --Reins of the Rusted Proto-Drake
 		[12] = { itemID = 44177 }; --Reins of the Violet Proto-Drake
 		[16] = { icon = "INV_Box_01", name = "=q6=" .. AL["Rare Mounts"] };
-		[17] = { itemID = 44168, desc = "=q2=#n155#, =q1=#z37#" }; --Reins of the Time-Lost Proto-Drake
-		[18] = { itemID = 46109, desc = "=q2=#p24#" }; --Sea Turtle
+		[17] = { itemID = 44168 }; --Reins of the Time-Lost Proto-Drake
+		[18] = { itemID = 46109 }; --Sea Turtle
 		[20] = { itemID = 21218, desc = "=q2=#n11#, =q1=#z11#", droprate = "10%" }; --Blue Qiraji Resonating Crystal
 		[21] = { itemID = 21323, desc = "=q2=#n11#, =q1=#z11#", droprate = "11%" }; --Green Qiraji Resonating Crystal
 		[22] = { itemID = 21321, desc = "=q2=#n11#, =q1=#z11#", droprate = "1%" }; --Red Qiraji Resonating Crystal
@@ -556,13 +556,13 @@ AtlasLoot_Data["Mounts"] = {
 	};
 	{
 		Name = AL["Crafted Mounts"];
-		[1] = { itemID = 54797, desc = "=q2=#p8#" }; --Frosty Flying Carpet
-		[2] = { itemID = 44558, desc = "=q2=#p8#" }; --Magnificent Flying Carpet
-		[3] = { itemID = 44413, desc = "=q2=#p5# =ec1=#m7#" }; --Mekgineer's Chopper
-		[4] = { itemID = 41508, desc = "=q2=#p5# =ec1=#m6#" }; --Mechano-hog
-		[5] = { itemID = 34061, desc = "=q2=#p5#" }; --Turbo-Charged Flying Machine Control
-		[6] = { itemID = 44554, desc = "=q2=#p8#" }; --Flying Carpet
-		[7] = { itemID = 34060, desc = "=q2=#p5#" }; --Flying Machine Control
+		[1] = { itemID = 54797 }; --Frosty Flying Carpet
+		[2] = { itemID = 44558 }; --Magnificent Flying Carpet
+		[3] = { itemID = 44413 }; --Mekgineer's Chopper
+		[4] = { itemID = 41508 }; --Mechano-hog
+		[5] = { itemID = 34061 }; --Turbo-Charged Flying Machine Control
+		[6] = { itemID = 44554 }; --Flying Carpet
+		[7] = { itemID = 34060 }; --Flying Machine Control
 	};
 	{
 		Name = AL["Promotional Mounts"];
@@ -571,14 +571,14 @@ AtlasLoot_Data["Mounts"] = {
 		[3] = { itemID = 37719 }; --Swift Zhevra
 		[4] = { itemID = 54860 }; --X-53 Touring Rocket
 		[5] = { icon = "INV_Box_01", name = "=q6=" .. AL["Card Game Mounts"] };
-		[6] = { itemID = 54068, desc = "=q2=#m24#" }; --Wooly White Rhino 
-		[7] = { itemID = 49282, desc = "=q2=#m24#" }; --Big Battle Bear
-		[8] = { itemID = 49290, desc = "=q2=#m24#" }; --Magic Rooster Egg
-		[9] = { itemID = 49284, desc = "=q2=#m24#" }; --Reins of the Swift Spectral Tiger
-		[10] = { itemID = 23720, desc = "=q2=#m24#" }; --Riding Turtle
-		[12] = { itemID = 49286, desc = "=q2=#m24#" }; --X-51 Nether-Rocket X-TREME
-		[13] = { itemID = 49283, desc = "=q2=#m24#" }; --Reins of the Spectral Tiger
-		[14] = { itemID = 49285, desc = "=q2=#m24#" }; --X-51 Nether-Rocket
+		[6] = { itemID = 54068 }; --Wooly White Rhino 
+		[7] = { itemID = 49282 }; --Big Battle Bear
+		[8] = { itemID = 49290 }; --Magic Rooster Egg
+		[9] = { itemID = 49284 }; --Reins of the Swift Spectral Tiger
+		[10] = { itemID = 23720 }; --Riding Turtle
+		[12] = { itemID = 49286 }; --X-51 Nether-Rocket X-TREME
+		[13] = { itemID = 49283 }; --Reins of the Spectral Tiger
+		[14] = { itemID = 49285 }; --X-51 Nether-Rocket
 	};
 	{
 		Name = AL["World Events"].." Page 1";
