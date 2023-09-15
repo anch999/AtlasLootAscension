@@ -148,7 +148,7 @@ AtlasLoot_Data["ArgentTournament"] = {
 	{
 		Name = AL["Vanity Pets"];
 		[1] = { icon = "INV_BannerPVP_02", name = "=q6=#m7#" };
-		[2] = { itemID = 44998, desc = "=ds=#m4#" }; --Argent Squire
+		[2] = { itemID = 44998, desc = AL["Quest Reward"] }; --Argent Squire
 		[4] = { itemID = 44984, price = "40 #champseal#" }; --Ammen Vale Lashling
 		[5] = { itemID = 44965, price = "40 #champseal#" }; --Teldrassil Sproutling
 		[6] = { itemID = 44970, price = "40 #champseal#" }; --Dun Morogh Cub
@@ -159,7 +159,7 @@ AtlasLoot_Data["ArgentTournament"] = {
 		[12] = { itemID = 47541, price = "150 #champseal#" }; --Argent Pony Bridle
 		[15] = { itemID = 44990 }; --Champion's Seal
 		[16] = { icon = "INV_BannerPVP_01", name = "=q6=#m6#" };
-		[17] = { itemID = 45022, desc = "=ds=#m4#" }; --Argent Gruntling
+		[17] = { itemID = 45022, desc = AL["Quest Reward"] }; --Argent Gruntling
 		[19] = { itemID = 44980, price = "40 #champseal#" }; --Mulgore Hatchling
 		[20] = { itemID = 45606, price = "40 #champseal#" }; --Sen'jin Fetish
 		[21] = { itemID = 44971, price = "40 #champseal#" }; --Tirisfal Batling
@@ -243,11 +243,11 @@ brewfest.a = {
 
 brewfest.b = {
 	Name = AL["Brewfest"] .. " 2";
-	[1] = { itemID = 37892, desc = "=ec1=2009 =q1=#m34#: =ds=" }; --Green Brewfest Stein
-	[2] = { itemID = 33016, desc = "=ec1=2008 =q1=#m34#: =ds=" }; --Blue Brewfest Stein
-	[3] = { itemID = 32912, desc = "=ec1=2007 =q1=#m34#: =ds=" }; --Yellow Brewfest Stein
-	[4] = { itemID = 34140, desc = "=ec1=2007 =q1=#m34#: " }; --Dark Iron Tankard
-	[6] = { itemID = 33976, desc = "=ec1=2007 =q1=#m34#: =ds=#e12#" }; --Brewfest Ram
+	[1] = { itemID = 37892 }; --Green Brewfest Stein
+	[2] = { itemID = 33016 }; --Blue Brewfest Stein
+	[3] = { itemID = 32912 }; --Yellow Brewfest Stein
+	[4] = { itemID = 34140 }; --Dark Iron Tankard
+	[6] = { itemID = 33976 }; --Brewfest Ram
 	[16] = { itemID = 33929 }; --Brewfest Brew
 	[17] = { itemID = 34063 }; --Dried Sausage
 	[18] = { itemID = 33024 }; --Pickled Sausage
@@ -468,7 +468,7 @@ AtlasLoot_Data["Winterviel"] = {
 		[5] = { itemID = 21309 }; --Snowman Kit
 		[7] = { icon = "INV_Holiday_Christmas_Present_01", name = "=q6=#x20#" };
 		[8] = { itemID = 21328 }; --Wand of Holiday Cheer
-		[10] = { icon = "INV_Holiday_Christmas_Present_01", name = "=q6=#x35#" };
+		[10] = { icon = "INV_Holiday_Christmas_Present_01", name = AL["Winter Veil Gift"] };
 		[11] = { itemID = 34425 }; --Clockwork Rocket Bot
 		[13] = { icon = "INV_Holiday_Christmas_Present_01", name = "=q6=#x22#" };
 		[14] = { itemID = 21235 }; --Winter Veil Roast
@@ -482,9 +482,9 @@ AtlasLoot_Data["Winterviel"] = {
 		[22] = { itemID = 17722 }; --Pattern: Gloves of the Greatfather
 		[23] = { itemID = 17709 }; --Recipe: Elixir of Frost Power
 		[24] = { itemID = 17724 }; --Pattern: Green Holiday Shirt
-		[26] = { icon = "INV_Holiday_Christmas_Present_01", name = "=q6=#x34#" };
+		[26] = { icon = "INV_Holiday_Christmas_Present_01", name = AL["Carefully Wrapped Present"] };
 		[27] = { itemID = 21254 }; --Winter Veil Cookie
-		[29] = { icon = "INV_Holiday_Christmas_Present_01", name = "=q6=#x36#" };
+		[29] = { icon = "INV_Holiday_Christmas_Present_01", name = AL["Smokywood Pastures Extra-Special Gift"] };
 		[30] = { itemID = 21215 }; --Graccu's Mince Meat Fruitcake
 	};
 };
@@ -546,7 +546,7 @@ local HallowsEnd = {
 	[7] = { itemID = 18632 }; --Moonbrook Riot Taffy
 	[8] = { itemID = 18635 }; --Bellara's Nutterbar
 	[9] = { itemID = 20557 }; --Hallow's End Pumpkin Treat
-	[11] = { icon = "inv_gauntlets_06", name = "=q6=#x40#" };
+	[11] = { icon = "inv_gauntlets_06", name = AL["Handful of Candy"] };
 	[12] = { itemID = 37585 }; --Chewy Fel Taffy
 	[13] = { itemID = 37583 }; --G.N.E.R.D.S.
 	[14] = { itemID = 37582 }; --Pyroblast Cinnamon Ball
@@ -622,8 +622,8 @@ AtlasLoot_Data["HarvestFestival"] = {
 	{
 		Name = AL["Harvest Festival"];
 		[1] = { itemID = 19697 }; --Bounty of the Harvest
-		[2] = { itemID = 20009, desc = "=q1=#m4#: =ds=#e10# =ec1=#m7#" }; --For the Light!
-		[3] = { itemID = 20010, desc = "=q1=#m4#: =ds=#e10# =ec1=#m6#" }; --The Horde's Hellscream
+		[2] = { itemID = 20009 }; --For the Light!
+		[3] = { itemID = 20010 }; --The Horde's Hellscream
 		[5] = { itemID = 19995 }; --Harvest Boar
 		[6] = { itemID = 19996 }; --Harvest Fish
 		[7] = { itemID = 19994 }; --Harvest Fruit
@@ -718,40 +718,40 @@ AtlasLoot_Data["LunarFestival"] = {
 		[9] = { itemID = 21543 }; --Festive Teal Pant Suit
 		[11] = { itemID = 21537 }; --Festival Dumplings
 		[13] = { itemID = 21713 }; --Elune's Candle
-		[15] = { itemID = 21100, desc = "=ds=#m17#" }; --Coin of Ancestry
-		[16] = { icon = "INV_Box_02", name = "=q6=#x24#", "=ds=#e23#" };
-		[17] = { itemID = 21558, desc = "=ds=#e23#" }; --Small Blue Rocket
-		[18] = { itemID = 21559, desc = "=ds=#e23#" }; --Small Green Rocket
-		[19] = { itemID = 21557, desc = "=ds=#e23#" }; --Small Red Rocket
-		[20] = { itemID = 21561, desc = "=ds=#e23#" }; --Small White Rocket
-		[21] = { itemID = 21562, desc = "=ds=#e23#" }; --Small Yellow Rocket
-		[22] = { itemID = 21589, desc = "=ds=#e23#" }; --Large Blue Rocket
-		[23] = { itemID = 21590, desc = "=ds=#e23#" }; --Large Green Rocket
-		[24] = { itemID = 21592, desc = "=ds=#e23#" }; --Large Red Rocket
-		[25] = { itemID = 21593, desc = "=ds=#e23#" }; --Large White Rocket
-		[26] = { itemID = 21595, desc = "=ds=#e23#" }; --Large Yellow Rocket
-		[28] = { icon = "INV_Misc_LuckyMoneyEnvelope", name = "=q6=#x25#" };
-		[29] = { itemID = 21744, desc = "=ds=#e23#" }; --Lucky Rocket Cluster
+		[15] = { itemID = 21100 }; --Coin of Ancestry
+		[16] = { icon = "INV_Box_02", name = AL["Lunar Festival Fireworks Pack"] };
+		[17] = { itemID = 21558 }; --Small Blue Rocket
+		[18] = { itemID = 21559 }; --Small Green Rocket
+		[19] = { itemID = 21557 }; --Small Red Rocket
+		[20] = { itemID = 21561 }; --Small White Rocket
+		[21] = { itemID = 21562 }; --Small Yellow Rocket
+		[22] = { itemID = 21589 }; --Large Blue Rocket
+		[23] = { itemID = 21590 }; --Large Green Rocket
+		[24] = { itemID = 21592 }; --Large Red Rocket
+		[25] = { itemID = 21593 }; --Large White Rocket
+		[26] = { itemID = 21595 }; --Large Yellow Rocket
+		[28] = { icon = "INV_Misc_LuckyMoneyEnvelope", name = AL["Lucky Red Envelope"] };
+		[29] = { itemID = 21744 }; --Lucky Rocket Cluster
 		[30] = { itemID = 21745 }; --Elder's Moonstone
 	};
 	{
 		Name = AL["Crafting Patterns"];
 		[1] = { itemID = 21738 }; --Schematic: Firework Launcher 
-		[3] = { icon = "INV_Scroll_03", name = "=q6=#x26#" };
+		[3] = { icon = "INV_Scroll_03", name = AL["Small Rocket Recipes"] };
 		[4] = { itemID = 21724 }; --Schematic: Small Blue Rocket
 		[5] = { itemID = 21725 }; --Schematic: Small Green Rocket
 		[6] = { itemID = 21726 }; --Schematic: Small Red Rocket
-		[8] = { icon = "INV_Scroll_04", name = "=q6=#x27#" };
+		[8] = { icon = "INV_Scroll_04", name = AL["Large Rocket Recipes"] };
 		[9] = { itemID = 21727 }; --Schematic: Large Blue Rocket
 		[10] = { itemID = 21728 }; --Schematic: Large Green Rocket
 		[11] = { itemID = 21729 }; --Schematic: Large Red Rocket
 		[13] = { itemID = 21722 }; --Pattern: Festival Dress
 		[16] = { itemID = 21737 }; --Schematic: Cluster Launcher
-		[18] = { icon = "INV_Scroll_05", name = "=q6=#x28#" };
+		[18] = { icon = "INV_Scroll_05", name = AL["Cluster Rocket Recipes"] };
 		[19] = { itemID = 21730 }; --Schematic: Blue Rocket Cluster
 		[20] = { itemID = 21731 }; --Schematic: Green Rocket Cluster
 		[21] = { itemID = 21732 }; --Schematic: Red Rocket Cluster
-		[23] = { icon = "INV_Scroll_06", name = "=q6=#x29#" };
+		[23] = { icon = "INV_Scroll_06", name = AL["Large Cluster Rocket Recipes"] };
 		[24] = { itemID = 21733 }; --Schematic: Large Blue Rocket Cluster
 		[25] = { itemID = 21734 }; --Schematic: Large Green Rocket Cluster
 		[26] = { itemID = 21735 }; --Schematic: Large Red Rocket Cluster
@@ -1057,12 +1057,12 @@ AtlasLoot_Data["FishingExtravaganza"] = {
 	{
 		Name = AL["Stranglethorn Fishing Extravaganza"];
 		[1] = { icon = "INV_Box_01", name = "=q6=#j24#", "=q1=#j23#" };
-		[2] = { itemID = 19970, desc = "=ds=#e20#" }; --Arcanite Fishing Pole
+		[2] = { itemID = 19970 }; --Arcanite Fishing Pole
 		[3] = { itemID = 19979 }; --Hook of the Master Angler
 		[5] = { icon = "INV_Box_01", name = "=q6=#j26#" };
-		[6] = { itemID = 19805, desc = "=ds=#e21#" }; --Keefer's Angelfish
-		[7] = { itemID = 19803, desc = "=ds=#e21#" }; --Brownell's Blue Striped Racer
-		[8] = { itemID = 19806, desc = "=ds=#e21#" }; --Dezian Queenfish
+		[6] = { itemID = 19805 }; --Keefer's Angelfish
+		[7] = { itemID = 19803 }; --Brownell's Blue Striped Racer
+		[8] = { itemID = 19806 }; --Dezian Queenfish
 		[9] = { itemID = 19808 }; --Rockhide Strongfish
 		[20] = { icon = "INV_Box_01", name = "=q6=#j25#" };
 		[21] = { itemID = 19972 }; --Lucky Fishing Hat
@@ -1426,7 +1426,7 @@ AtlasLoot_Data["ScourgeInvasionEvent"] = {
 		[12] = { itemID = 22484, desc = "=ds=#m17#" }; --Necrotic Rune
 		[16] = { itemID = 40110 }; --Haunted Memento
 		[18] = { icon = "INV_Box_01", name = "=q6=" .. AL["Prince Tenris Mirkblood"], "=q5=" .. BabbleZone["Karazhan"] };
-		[19] = { itemID = 29434, desc = "=ds=#e15#", droprate = "100%" }; --Badge of Justice
+		[19] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 		[20] = { itemID = 39769 }; --Arcanite Ripper
 		[21] = { itemID = 38658 }; --Vampiric Batling
 	};

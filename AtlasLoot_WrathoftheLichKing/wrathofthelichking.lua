@@ -97,11 +97,11 @@ AtlasLoot_Data["WrathKeys"] = {
 	Name = "Keys";
 	{
 		Name = "Keys";
-		[1] = { itemID = 44582, "=ds=#e9#" }; --Key to the Focusing Iris
-		[2] = { itemID = 44581, "=ds=#e9#" }; --Heroic Key to the Focusing Iris
-		[3] = { itemID = 45796, "=ds=#e9#" }; --Celestial Planetarium Key
-		[4] = { itemID = 45798, "=ds=#e9#" }; --Heroic Celestial Planetarium Key
-		[5] = { itemID = 42482, "=ds=#e9#" }; --The Violet Hold Key
+		[1] = { itemID = 44582 }; --Key to the Focusing Iris
+		[2] = { itemID = 44581 }; --Heroic Key to the Focusing Iris
+		[3] = { itemID = 45796 }; --Celestial Planetarium Key
+		[4] = { itemID = 45798 }; --Heroic Celestial Planetarium Key
+		[5] = { itemID = 42482 }; --The Violet Hold Key
 	};
 };
 --------------------
@@ -1307,15 +1307,15 @@ AtlasLoot_Data["HallsofReflection"] = {
 		[17] = { itemID = 50318 }; --Ghostly Wristwraps
 		[18] = { itemID = 50315 }; --Seven-Fingered Claws
 		[19] = { itemID = 50319 }; --Unsharpened Ice Razor
-		[21] = { itemID = 50380, "=ds=#m2#" }; --Battered Hilt
-		[22] = { itemID = 50379, "=ds=#m2#" }; --Battered Hilt
-		[23] = { itemID = 50047, "=q1=#m4#: =ds=" }; --Quel'Delar, Lens of the Mind
+		[21] = { itemID = 50380 }; --Battered Hilt
+		[22] = { itemID = 50379 }; --Battered Hilt
+		[23] = { itemID = 50047 }; --Quel'Delar, Lens of the Mind
 		[24] = { itemID = 50046 }; --Quel'Delar, Cunning of the Shadows
-		[25] = { itemID = 50049, "=q1=#m4#: =ds=" }; --Quel'Delar, Ferocity of the Scorned
-		[26] = { itemID = 50048, "=q1=#m4#: =ds=" }; --Quel'Delar, Might of the Faithful
-		[27] = { itemID = 50051, "=q1=#m4#: =ds=" }; --Hammer of Purified Flame
+		[25] = { itemID = 50049 }; --Quel'Delar, Ferocity of the Scorned
+		[26] = { itemID = 50048 }; --Quel'Delar, Might of the Faithful
+		[27] = { itemID = 50051 }; --Hammer of Purified Flame
 		[28] = { itemID = 50050 }; --Cudgel of Furious Justice
-		[29] = { itemID = 50052, "=q1=#m4#: =ds=" }; --Lightborn Spire
+		[29] = { itemID = 50052 }; --Lightborn Spire
 	};
 }
 
@@ -3831,7 +3831,7 @@ AtlasLoot_Data["Naxxramas80"] = {
 		[9] = { itemID = 39401, droprate = "9%" }; --Circle of Death
 		[10] = { itemID = 39407, droprate = "8%" }; --Circle of Life
 		[11] = { itemID = 44569, droprate = "1%" }; --Key to the Focusing Iris
-		[12] = { itemID = 44582, "=q1=#m4#: =ds=#e9#" }; --Key to the Focusing Iris
+		[12] = { itemID = 44582 }; --Key to the Focusing Iris
 	};
 	{
 		Name = BabbleBoss["Sapphiron"];
@@ -3856,7 +3856,7 @@ AtlasLoot_Data["Naxxramas80"] = {
 		[19] = { itemID = 40382, droprate = "0%" }; --Soul of the Dead
 		[20] = { itemID = 40368, droprate = "9%" }; --Murder
 		[22] = { itemID = 44577, droprate = "2%" }; --Heroic Key to the Focusing Iris
-		[23] = { itemID = 44581, "=q1=#m4#: =ds=#e9#" }; --Heroic Key to the Focusing Iris
+		[23] = { itemID = 44581 }; --Heroic Key to the Focusing Iris
 	};
 	{
 		Name = BabbleBoss["Kel'Thuzad"];
@@ -3931,7 +3931,7 @@ AtlasLoot_Data["Sartharion"] = {
 		[4] = { itemID = 40433 }; --Wyrmrest Band
 		[5] = { itemID = 40430, droprate = "8%" }; --Majestic Dragon Figurine
 		[6] = { itemID = 40429, droprate = "8%" }; --Crimson Steel
-		[7] = { itemID = 43345, desc = "=ds=#e1#", droprate = "00%" }; --Dragon Hide Bag
+		[7] = { itemID = 43345, droprate = "00%" }; --Dragon Hide Bag
 		[8] = { itemID = 43347, droprate = "00%" }; --Satchel of Spoils
 		[10] = { icon = "INV_Box_01", name = "=q6=" .. AL["Bonus Loot"], desc = "=q5=" .. AL["One Drake Left"] };
 		[11] = { itemID = 43988 }; --Gale-Proof Cloak
@@ -3963,7 +3963,7 @@ AtlasLoot_Data["Sartharion"] = {
 		[8] = { itemID = 40431, droprate = "7%" }; --Fury of the Five Flights
 		[9] = { itemID = 40432, droprate = "9%" }; --Illustration of the Dragon Soul
 		[10] = { itemID = 40455, droprate = "9%" }; --Staff of Restraint
-		[11] = { itemID = 43345, desc = "=ds=#e1#", droprate = "00%" }; --Dragon Hide Bag
+		[11] = { itemID = 43345, droprate = "00%" }; --Dragon Hide Bag
 		[12] = { itemID = 43346, droprate = "00%" }; --Large Satchel of Spoils
 		[13] = { itemID = 40628, droprate = "1%" }; --Gauntlets of the Lost Conqueror
 		[14] = { itemID = 40629, droprate = "3%" }; --Gauntlets of the Lost Protector
@@ -6649,10 +6649,10 @@ AtlasLoot_Data["FrenzyheartTribe"] = {
 	{
 		Name = BabbleFaction["Honored"];
 		[1] = { itemID = 44719 }; --Frenzyheart Brew
-		[2] = { itemID = 39671, "=ds=#e2#" }; --Resurgent Healing Potion
-		[3] = { itemID = 40067, "=ds=#e2#" }; --Icy Mana Potion
-		[4] = { itemID = 40087, "=ds=#e2#" }; --Powerful Rejuvenation Potion
-		[5] = { itemID = 44716, "=ds=#e4#" }; --Mysterious Fermented Liquid
+		[2] = { itemID = 39671 }; --Resurgent Healing Potion
+		[3] = { itemID = 40067 }; --Icy Mana Potion
+		[4] = { itemID = 40087 }; --Powerful Rejuvenation Potion
+		[5] = { itemID = 44716 }; --Mysterious Fermented Liquid
 	};
 	{
 		Name = BabbleFaction["Revered"];
@@ -6821,7 +6821,7 @@ AtlasLoot_Data["TheOracles"] = {
 	{
 		Name = BabbleFaction["Friendly"];
 		[1] = { itemID = 41567 }; --Design: Vivid Dark Jade
-		[2] = { itemID = 44065, "=ds=#e2#" }; --Oracle Secret Solution
+		[2] = { itemID = 44065 }; --Oracle Secret Solution
 	};
 	{
 		Name = BabbleFaction["Honored"];

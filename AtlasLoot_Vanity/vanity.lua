@@ -155,8 +155,8 @@ AtlasLoot_Data["VanityPets"] = {
 	{
 		Name = AL["Quest"].." / "..AL["Crafted"];
 		[1] = { icon = "INV_Box_01", name = "=q6=" .. AL["Quest"] };
-		[2] = { itemID = 45022, desc = "=ds=#e13# =ec1=#m6#" }; --Argent Gruntling
-		[3] = { itemID = 44998, desc = "=ds=#e13# =ec1=#m7#" }; --Argent Squire
+		[2] = { itemID = 45022 }; --Argent Gruntling
+		[3] = { itemID = 44998 }; --Argent Squire
 		[4] = { itemID = 35350 }; --Chuck's Bucket
 		[5] = { itemID = 33818 }; --Muckbreath's Bucket
 		[6] = { itemID = 35349 }; --Snarly's Bucket
@@ -190,8 +190,8 @@ AtlasLoot_Data["VanityPets"] = {
 		[16] = { icon = "INV_Box_01", name = "=q6=" .. AL["Faction"] };
 		[17] = { itemID = 38628 }; --Nether Ray Fry
 		[18] = { itemID = 44723 }; --Nurtured Penguin Egg
-		[19] = { itemID = 46820, desc = "=ds=#e13# =ec1=#m7#" }; --Shimmering Wyrmling
-		[20] = { itemID = 46821, desc = "=ds=#e13# =ec1=#m6#" }; --Shimmering Wyrmling
+		[19] = { itemID = 46820 }; --Shimmering Wyrmling
+		[20] = { itemID = 46821 }; --Shimmering Wyrmling
 		[21] = { itemID = 34478 }; --Tiny Sporebat
 		[22] = { itemID = 39898 }; --Cobra Hatchling
 		[23] = { itemID = 44721 }; --Proto-Drake Whelp
@@ -462,14 +462,14 @@ AtlasLoot_Data["Mounts"] = {
 		[16] = { icon = "INV_Box_01", name = "=q6=" .. BabbleFaction["Cenarion Expedition"] .. " #j30#" };
 		[17] = { itemID = 33999 }; --Cenarion War Hippogryph
 		[19] = { icon = "INV_Box_01", name = "=q6=" .. BabbleFaction["The Sons of Hodir"] .. " #j30#" };
-		[20] = { itemID = 43958, desc = "=ds=#e12# =ec1=#m7#" }; --Reins of the Ice Mammoth
-		[21] = { itemID = 44080, desc = "=ds=#e12# =ec1=#m6#" }; --Reins of the Ice Mammoth
-		[22] = { itemID = 43961, desc = "=ds=#e12# =ec1=#m7#" }; --Reins of the Grand Ice Mammoth
-		[23] = { itemID = 44086, desc = "=ds=#e12# =ec1=#m6#" }; --Reins of the Grand Ice Mammoth
+		[20] = { itemID = 43958 }; --Reins of the Ice Mammoth
+		[21] = { itemID = 44080 }; --Reins of the Ice Mammoth
+		[22] = { itemID = 43961 }; --Reins of the Grand Ice Mammoth
+		[23] = { itemID = 44086 }; --Reins of the Grand Ice Mammoth
 		[25] = { icon = "INV_Box_01", name = "=q6=" .. BabbleFaction["The Wyrmrest Accord"] .. " #j30#" };
 		[26] = { itemID = 43955 }; --Reins of the Red Drake
 		[28] = { icon = "INV_Box_01", name = "=q6=" .. BabbleFaction["The Oracles"] .. " #j30#" };
-		[29] = { itemID = 44707, desc = "=q2=#x38#" }; --Reins of the Green Proto-Drake
+		[29] = { itemID = 44707, desc = AL["Mysterious Egg"] }; --Reins of the Green Proto-Drake
 	};
 	{
 		Name = AL["PvP Mounts"];
@@ -480,30 +480,30 @@ AtlasLoot_Data["Mounts"] = {
 		[5] = { itemID = 43516 }; --Brutal Nether Drake
 		[6] = { itemID = 46171 }; --Deadly Gladiator's Frostwyrm
 		[8] = { icon = "INV_Box_01", name = "=q6=" .. AL["Alliance PvP Mounts"] };
-		[9] = { itemID = 29465, desc = "=ds=#e12# =ec1=#m7#" }; --Black Battlestrider
-		[10] = { itemID = 29467, desc = "=ds=#e12# =ec1=#m7#" }; --Black War Ram
-		[11] = { itemID = 29468, desc = "=ds=#e12# =ec1=#m7#" }; --Black War Steed Bridle
-		[12] = { itemID = 35906, desc = "=ds=#e12# =ec1=#m7#" }; --Reins of the Black War Elekk
-		[13] = { itemID = 29471, desc = "=ds=#e12# =ec1=#m7#" }; --Reins of the Black War Tiger
-		[14] = { itemID = 19030, desc = "=ds=#e12# =ec1=#m7#" }; --Stormpike Battle Charger
-		[15] = { itemID = 43956, desc = "=ds=#e12# =ec1=#m7#" }; --Reins of the Black War Mammoth
+		[9] = { itemID = 29465 }; --Black Battlestrider
+		[10] = { itemID = 29467 }; --Black War Ram
+		[11] = { itemID = 29468 }; --Black War Steed Bridle
+		[12] = { itemID = 35906 }; --Reins of the Black War Elekk
+		[13] = { itemID = 29471 }; --Reins of the Black War Tiger
+		[14] = { itemID = 19030 }; --Stormpike Battle Charger
+		[15] = { itemID = 43956 }; --Reins of the Black War Mammoth
 		[16] = { icon = "INV_Box_01", name = "=q6=" .. AL["Halaa PvP Mounts"] };
 		[17] = { itemID = 28915 }; --Reins of the Dark Riding Talbuk
 		[18] = { itemID = 29228 }; --Reins of the Dark War Talbuk
 		[23] = { icon = "INV_Box_01", name = "=q6=" .. AL["Horde PvP Mounts"] };
-		[24] = { itemID = 29466, desc = "=ds=#e12# =ec1=#m6#" }; --Black War Kodo
-		[25] = { itemID = 29469, desc = "=ds=#e12# =ec1=#m6#" }; --Horn of the Black War Wolf
-		[26] = { itemID = 29470, desc = "=ds=#e12# =ec1=#m6#" }; --Red Skeletal Warhorse
-		[27] = { itemID = 34129, desc = "=ds=#e12# =ec1=#m6#" }; --Swift Warstrider
-		[28] = { itemID = 29472, desc = "=ds=#e12# =ec1=#m6#" }; --Whistle of the Black War Raptor
-		[29] = { itemID = 19029, desc = "=ds=#e12# =ec1=#m6#" }; --Horn of the Frostwolf Howler
-		[30] = { itemID = 44077, desc = "=ds=#e12# =ec1=#m6#" }; --Reins of the Black War Mammoth
+		[24] = { itemID = 29466 }; --Black War Kodo
+		[25] = { itemID = 29469 }; --Horn of the Black War Wolf
+		[26] = { itemID = 29470 }; --Red Skeletal Warhorse
+		[27] = { itemID = 34129 }; --Swift Warstrider
+		[28] = { itemID = 29472 }; --Whistle of the Black War Raptor
+		[29] = { itemID = 19029 }; --Horn of the Frostwolf Howler
+		[30] = { itemID = 44077 }; --Reins of the Black War Mammoth
 	};
 	{
 		Name = AL["Rare Mounts"].." Page 1";
 		[1] = { icon = "INV_Box_01", name = "=q6=" .. AL["Dungeon/Raid"] };
-		[2] = { itemID = 33809, desc = "=q2=#x33#, =q1=#z29#" }; --Amani War Bear
-		[3] = { itemID = 32458, desc = "=q2=#n59#, =q1=#z19#" }; --Ashes of Al'ar
+		[2] = { itemID = 33809 }; --Amani War Bear
+		[3] = { itemID = 32458 }; --Ashes of Al'ar
 		[4] = { itemID = "49098", desc = "=q1=" .. BabbleZone["Trial of the Crusader"] }; --Crusader's Black Warhorse","=q2=" .. AL["A Tribute to Immortality"] .. 
 		[5] = { itemID = "49096", desc = "=q1=" .. BabbleZone["Trial of the Crusader"] }; --Crusader's White Warhorse","=q2=" .. AL["A Tribute to Immortality"] .. 
 		[6] = { itemID = 13335, desc = "=q2=#n52#, =q1=#z6#", droprate = "0.10%" }; --Deathcharger's Reins
@@ -517,8 +517,8 @@ AtlasLoot_Data["Mounts"] = {
 		[14] = { itemID = 44151, desc = "=q2=#n151#, =q1=#j47# #z35#" }; --Reins of the Blue Proto-Drake
 		[15] = { itemID = 43951, desc = "=q2=#n152#, =q1=#j47# #z36#" }; --Reins of the Bronze Drake
 		[17] = { itemID = "52200", desc = "=q1=" .. BabbleZone["Icecrown Citadel"] }; --Reins of the Crimson Deathcharger","=q2=" .. BabbleBoss["The Lich King"] .. 
-		[18] = { itemID = 44083, desc = "=ds=#e12# =ec1=#m7#" }; --Reins of the Grand Black War Mammoth
-		[19] = { itemID = 43959, desc = "=ds=#e12# =ec1=#m6#" }; --Reins of the Grand Black War Mammoth
+		[18] = { itemID = 44083 }; --Reins of the Grand Black War Mammoth
+		[19] = { itemID = 43959 }; --Reins of the Grand Black War Mammoth
 		[20] = { itemID = 32768, desc = "=q2=#n58#, =q1=#z16#" }; --Reins of the Raven Lord
 		[21] = { itemID = 49046, desc = "=q2=" .. AL["A Tribute to Insanity (50)"] .. ", =q1=" .. BabbleZone["Trial of the Crusader"] }; --Swift Horde Wolf --Horde
 		[22] = { itemID = 49044, desc = "=q2=" .. AL["A Tribute to Insanity (50)"] .. ", =q1=" .. BabbleZone["Trial of the Crusader"] }; --Swift Alliance Steed --Alliance
@@ -529,10 +529,10 @@ AtlasLoot_Data["Mounts"] = {
 	{
 		Name = AL["Rare Mounts"].." Page 2";
 		[1] = { icon = "INV_Box_01", name = "=q6=" .. AL["Achievement Reward"] };
-		[2] = { itemID = 44223, desc = "=ds=#e12# =ec1=#m7#" }; --Reins of the Black War Bear
-		[3] = { itemID = 44224, desc = "=ds=#e12# =ec1=#m6#" }; --Reins of the Black War Bear
-		[4] = { itemID = 44843, desc = "=ds=#e12# =ec1=#m7#" }; --Blue Dragonhawk Mount
-		[5] = { itemID = 44842, desc = "=ds=#e12# =ec1=#m6#" }; --Red Dragonhawk Mount
+		[2] = { itemID = 44223 }; --Reins of the Black War Bear
+		[3] = { itemID = 44224 }; --Reins of the Black War Bear
+		[4] = { itemID = 44843 }; --Blue Dragonhawk Mount
+		[5] = { itemID = 44842 }; --Red Dragonhawk Mount
 		[6] = { itemID = 44178 }; --Reins of the Albino Drake
 		[7] = { itemID = 44164 }; --Reins of the Black Proto-Drake
 		[8] = { itemID = 45801 }; --Reins of the Ironbound Proto-Drake
@@ -551,8 +551,8 @@ AtlasLoot_Data["Mounts"] = {
 	{
 		Name = AL["Rare Mounts"].." Page 3";
 		[1] = { icon = "INV_Box_01", name = "=q6=" .. AL["Quest Reward"] };
-		[2] = { itemID = 21176, desc = "=q2=#m4#" }; --Black Qiraji Resonating Crystal
-		[3] = { itemID = 43962, desc = "=q2=#m4#: #x39#" }; --Reins of the White Polar Bear
+		[2] = { itemID = 21176, desc = AL["Quest Reward"] }; --Black Qiraji Resonating Crystal
+		[3] = { itemID = 43962, desc = AL["Quest Reward"]..": "..AL["Hyldnir Spoils"] }; --Reins of the White Polar Bear
 	};
 	{
 		Name = AL["Crafted Mounts"];

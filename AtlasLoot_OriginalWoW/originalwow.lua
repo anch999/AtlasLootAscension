@@ -83,7 +83,7 @@ AtlasLoot_Data["OldKeys"] = {
 	Name = "Old Keys";
 	{
 		Name = "Old Keys";
-		[1] = { icon = "INV_Box_01", "=q6=#e9#" };
+		[1] = { icon = "INV_Box_01", name = "=q6="..BabbleInventory["Key"].."s" };
 		[2] = { itemID = 7146 }; --The Scarlet Key
 		[3] = { itemID = 12382 }; --Key to the City
 		[4] = { itemID = 6893 }; --Workshop Key

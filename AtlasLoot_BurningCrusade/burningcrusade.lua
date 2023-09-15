@@ -117,8 +117,8 @@ AtlasLoot_Data["BCKeys"] = {
 		[3] = { itemID = 28395 }; --Shattered Halls Key
 		[4] = { itemID = 31084 }; --Key to the Arcatraz
 		[6] = { icon = "INV_Box_01", name = "#j27#" };
-		[7] = { itemID = 30622, desc = "=ds=#e9# =ec1=#m7#" }; --Flamewrought Key
-		[8] = { itemID = 30637, desc = "=ds=#e9# =ec1=#m6#" }; --Flamewrought Key
+		[7] = { itemID = 30622 }; --Flamewrought Key
+		[8] = { itemID = 30637 }; --Flamewrought Key
 		[9] = { itemID = 30623 }; --Reservoir Key
 		[10] = { itemID = 30633 }; --Auchenai Key
 		[11] = { itemID = 30635 }; --Key of Time
@@ -126,8 +126,8 @@ AtlasLoot_Data["BCKeys"] = {
 		[16] = { icon = "INV_Box_01", name = "=q6=#j2#" };
 		[17] = { itemID = 24490 }; --The Master's Key
 		[19] = { icon = "INV_Box_01", name = "=q6=#m20#" };
-		[20] = { itemID = 32092, desc = "=ds=#m27#" }; --The Eye of Haramad
-		[21] = { itemID = 32449, desc = "=ds=#m27#" }; --Essence-Infused Moonstone
+		[20] = { itemID = 32092 }; --The Eye of Haramad
+		[21] = { itemID = 32449 }; --Essence-Infused Moonstone
 	};
 };
 
@@ -5995,7 +5995,7 @@ AtlasLoot_Data["BadgeShatt"] = {
 		[7] = { itemID = 29379 , price = "25 #heroic#" }; --Ring of Arathi Warlords
 		[8] = { itemID = 29367 , price = "25 #heroic#" }; --Ring of Cryptic Dreams
 		[9] = { itemID = 29384 , price = "25 #heroic#" }; --Ring of Unyielding Force
-		[10] = { itemID = 23572, desc = "=ds=#e8#", price = "10 #heroic#" }; --Primal Nether
+		[10] = { itemID = 23572, price = "10 #heroic#" }; --Primal Nether
 		[11] = { itemID = 32227, price = "15 #heroic#" }; --Crimson Spinel
 		[12] = { itemID = 32229, price = "15 #heroic#" }; --Lionseye
 		[13] = { itemID = 32249, price = "15 #heroic#" }; --Seaspray Emerald
@@ -6009,7 +6009,7 @@ AtlasLoot_Data["BadgeShatt"] = {
 		[21] = { itemID = 29376, price = "41 #heroic#" }; --Essence of the Martyr
 		[22] = { itemID = 29387, price = "41 #heroic#" }; --Gnomeregan Auto-Blocker 600
 		[23] = { itemID = 29370, price = "41 #heroic#" }; --Icon of the Silver Crescent
-		[24] = { itemID = 30183, desc = "=ds=#e8#", price = "15 #heroic#" }; --Nether Vortex
+		[24] = { itemID = 30183, price = "15 #heroic#" }; --Nether Vortex
 		[25] = { itemID = 32228, price = "15 #heroic#" }; --Empyrean Sapphire
 		[26] = { itemID = 32231, price = "15 #heroic#" }; --Pyrestone
 		[27] = { itemID = 32230, price = "15 #heroic#" }; --Shadowsong Amethyst
