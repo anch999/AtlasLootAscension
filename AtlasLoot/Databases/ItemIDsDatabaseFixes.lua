@@ -443,6 +443,21 @@ ItemIDsDatabase[30977] = { 6030977, 30977, 330977, 230977 }
 ItemIDsDatabase[34569] = { 6034569, 34569, 334569, 234569 }
 ItemIDsDatabase[14986] = { 6014986, 14986, 314986, 214986 }
 
+ItemIDsDatabase[15839] = { 6015839, 15839, 315839, 215839 }
+ItemIDsDatabase[15899] = { 6015899, 15899, 315899, 215899 }
+ItemIDsDatabase[15896] = { 6015896, 15896, 315896, 215896 }
+ItemIDsDatabase[18764] = { 6018764, 18764, 318764, 218764 }
+ItemIDsDatabase[15828] = { 6015828, 15828, 315828, 215828 }
+ItemIDsDatabase[15838] = { 6015838, 15838, 315838, 215838 }
+ItemIDsDatabase[15831] = { 6015831, 15831, 315831, 215831 }
+ItemIDsDatabase[15834] = { 6015834, 15834, 315834, 215834 }
+ItemIDsDatabase[15898] = { 6015898, 15898, 315898, 215898 }
+ItemIDsDatabase[15830] = { 6015830, 15830, 315830, 215830 }
+ItemIDsDatabase[15041] = { 6015041, 15041, 315041, 215041 }
+ItemIDsDatabase[15836] = { 6015836, 15836, 315836, 215836 }
+ItemIDsDatabase[15835] = { 6015835, 15835, 315835, 215835 }
+ItemIDsDatabase[15840] = { 6015840, 15840, 315840, 215840 }
+
 for _, v in pairs(ItemIDsDatabase) do
     if not v["MythicRaid"] then
         v["MythicRaid"] = tonumber("13"..v[2])

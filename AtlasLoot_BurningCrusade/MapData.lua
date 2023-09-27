@@ -265,17 +265,17 @@ local boss = "dungeonskull"
         Reputation = AL["The Scale of the Sands"];
         [1] = {
         { AL["Battle for Mount Hyjal"], SubZone = true };
-        { AL["Alliance Base"] };
-        { AL["Lady Jaina Proudmoore"], cords = {10.6,63.7} };
-        { AL["Horde Encampment"] };
-        { AL["Thrall <Warchief>"], cords = {48,41.7} };
-        { AL["Night Elf Village"] };
-        { AL["Tyrande Whisperwind\n<High Priestess of Elune>"], cords = {74.3,57.7} };
-        { AL["Rage Winterchill"], cords = {7,72}, pinType = boss };
-        { AL["Anetheron"], cords = {7,74}, pinType = boss };
-        { AL["Kaz'rogal"], cords = {34.4,37.7}, pinType = boss };
-        { AL["Azgalor"], cords = {33.1,40.5}, pinType = boss };
-        { AL["Archimonde"], cords = {78,28}, pinType = boss };
+        { AL["Alliance Base"], cords = {10.6,63.7} };
+        { AL["Lady Jaina Proudmoore"] };
+        { AL["Rage Winterchill"], cords = {9,70}, pinType = boss };
+        { AL["Anetheron"] };
+        { AL["Horde Encampment"], cords = {48,41.7} };
+        { AL["Thrall <Warchief>"] };
+        { AL["Night Elf Village"], cords = {74.3,57.7} };
+        { AL["Tyrande Whisperwind\n<High Priestess of Elune>"] };
+        { AL["Kaz'rogal"], cords = {43,36}, pinType = boss };
+        { AL["Azgalor"] };
+        { AL["Archimonde"], cords = {77,28}, pinType = boss };
         };
     };
 

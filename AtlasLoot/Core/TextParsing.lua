@@ -28,6 +28,7 @@ AtlasLoot.FixedItemText = {
     [29905] = BabbleInventory["Quest"], -- Kael's Vial Remnant
     [98570] = AL["Mystic Enchanting"],
     [229739] = AL["Epic Shoulder Enchants"],
+    [222637] = AL["Head Enchants"],
     [29434] = AL["Token"],
     [400751] = AL["Token"],
 }

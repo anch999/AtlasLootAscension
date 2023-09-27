@@ -73,12 +73,12 @@ AtlasLoot_CraftingData["Custom"] = {
 }
 
 AtlasLoot_CraftingData["Seasonal"] = {
-[1] = GetCategoryInfo(156); -- Winter's Veil
-[2] = GetCategoryInfo(160); -- Lunar Festival
-[3] = AL["Darkmoon Faire"]; -- Darkmoon Faire
-[4] = GetCategoryInfo(161); -- Midsummer
-[5] = GetCategoryInfo(14981); -- Pilgrim's Bounty
-[6] = AL["Day of the Dead"]; -- Day of the Dead
+[1] = { GetCategoryInfo(156) }; -- Winter's Veil
+[2] = { GetCategoryInfo(160) }; -- Lunar Festival
+[3] = { AL["Darkmoon Faire"] }; -- Darkmoon Faire
+[4] = { GetCategoryInfo(161) }; -- Midsummer
+[5] = { GetCategoryInfo(14981) }; -- Pilgrim's Bounty
+[6] = { AL["Day of the Dead"] }; -- Day of the Dead
 }
 
 

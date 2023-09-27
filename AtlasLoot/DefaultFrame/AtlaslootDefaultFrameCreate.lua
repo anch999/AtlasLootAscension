@@ -105,8 +105,8 @@ for num = 1, 30 do
         button.extra:SetJustifyH("LEFT")
         button:RegisterForClicks("AnyDown")
         button.number = num
-        button:SetScript("OnEnter", function(self) AtlasLootItem_OnEnter(self) end)
-        button:SetScript("OnLeave", function(self) AtlasLootItem_OnLeave(self) end)
+        button:SetScript("OnEnter", function(self) AtlasLoot:ItemOnEnter(self) end)
+        button:SetScript("OnLeave", function(self) AtlasLoot:ItemOnLeave(self) end)
         button:SetScript("OnClick", function(self, arg1) AtlasLoot:ItemOnClick(self, arg1) end)
         if num == 1 then
             button:SetPoint("TOP", "AtlasLootItemsFrame", "TOP",-210,-35)
@@ -157,7 +157,7 @@ local backbtn = CreateFrame("Button", "AtlasLootItemsFrame_BACK", AtlasLootItems
         -- Wishlist Own/Swap button
 local swapbtn = CreateFrame("Button", "AtlasLootItemsFrame_Wishlist_Swap", AtlasLootItemsFrame, "OptionsButtonTemplate")
         swapbtn:SetPoint("BOTTOM", "AtlasLootItemsFrame", "BOTTOM",50,4)
-        swapbtn:SetScript("OnClick", function(self) AtlasLoot:WishListSwapButton("","","","","",self,true) end)
+        swapbtn:SetScript("OnClick", function(self) AtlasLoot:WishListSwapButton(true) end)
         swapbtn:Hide()
 
         -- Wishlist Options button
@@ -329,7 +329,7 @@ local wishbtn = CreateFrame("Button", "AtlasLootDefaultFrameWishListButton", Atl
         wishbtn:SetSize(80,25)
         wishbtn.template = "FilterDropDownMenuTemplate"
         wishbtn:RegisterForClicks("LeftButtonDown","RightButtonDown")
-        wishbtn:SetScript("OnClick", function(self, btnclick)AtlasLoot:WishListButton("","","","","",self,true,btnclick) end)
+        wishbtn:SetScript("OnClick", function(self, btnclick)AtlasLoot:WishListButton(self,true,btnclick) end)
         wishbtn:SetText(AL["Wishlist"])
         wishbtn:SetScript("OnEnter", function(self)
                 GameTooltip:ClearLines()

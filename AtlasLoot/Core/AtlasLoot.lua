@@ -5,7 +5,7 @@ Loot browser associating loot with instance bosses
 
 Functions:
 AtlasLoot:OnEnable()
-AtlasLoot_SlashCommand(msg)
+AtlasLoot:SlashCommand(msg)
 AtlasLoot:OptionsToggle()
 AtlasLoot:OnInitialize()
 AtlasLoot:ShowItemsFrame()
@@ -25,6 +25,7 @@ local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
 
 AtlasLoot.Version = "AtlasLoot Ascension Edition"
 AtlasLoot.DebugMessages = false
+AtlasLoot.WishListVersion = 1
 
 --Make the Dewdrop menu in the standalone loot browser accessible here
 AtlasLoot.Dewdrop = AceLibrary("Dewdrop-2.0")
@@ -143,8 +144,8 @@ function AtlasLoot:OnEnable()
     --Add the loot browser to the special frames tables to enable closing wih the ESC key
 	tinsert(UISpecialFrames, "AtlasLootDefaultFrame")
 	--Set up options frame
-	AtlasLootOptions_OnLoad()
-    AtlasLoot_CreateOptionsInfoTooltips()
+	AtlasLoot:OptionsOnLoad()
+    AtlasLoot:CreateOptionsInfoTooltips()
     --Set visual style for the loot browser
     if AtlasLoot.db.profile.LootBrowserStyle == 1 then
         AtlasLoot:SetNewStyle("modern")
@@ -173,7 +174,7 @@ function AtlasLoot:OnEnable()
 
 	if((AtlasLootCharDB.AtlasLootVersion == nil) or (tonumber(AtlasLootCharDB.AtlasLootVersion) < 40301)) then
 		AtlasLootCharDB.AtlasLootVersion = VERSION_MAJOR..VERSION_MINOR..VERSION_BOSSES
-		AtlasLootOptions_Init()
+		AtlasLoot:OptionsInit()
 	end
 
 	--If EquipCompare is available, use it
@@ -251,11 +252,11 @@ end
 
 
 --[[
-AtlasLoot_SlashCommand(msg):
+AtlasLoot:SlashCommand(msg):
 msg - takes the argument for the /atlasloot command so that the appropriate action can be performed
 If someone types /atlasloot, bring up the options box
 ]]
-function AtlasLoot_SlashCommand(msg)
+function AtlasLoot:SlashCommand(msg)
 	if msg == AL["reset"] then
 		AtlasLoot:Reset("frames")
 	elseif msg == AL["options"] then
@@ -277,11 +278,11 @@ function AtlasLoot:OptionsToggle()
     end
     InterfaceOptionsFrame:SetFrameStrata("DIALOG")
     if(AtlasLoot.db.profile.DefaultTT == true) then
-		AtlasLootOptions_DefaultTTToggle()
+		AtlasLoot:OptionsDefaultTTToggle()
 	elseif(AtlasLoot.db.profile.LootlinkTT == true) then
-		AtlasLootOptions_LootlinkTTToggle()
+		AtlasLoot:OptionsLootlinkTTToggle()
 	elseif(AtlasLoot.db.profile.ItemSyncTT == true) then
-		AtlasLootOptions_ItemSyncTTToggle()
+		AtlasLoot:OptionsItemSyncTTToggle()
     end
 end
 
@@ -295,21 +296,12 @@ function AtlasLoot:OnInitialize()
 	SLASH_ATLASLOOT1 = "/atlasloot"
 	SLASH_ATLASLOOT2 = "/al"
 	SlashCmdList["ATLASLOOT"] = function(msg)
-		AtlasLoot_SlashCommand(msg)
+		AtlasLoot:SlashCommand(msg)
 	end
 
 	--Sets the default loot tables for the current expansion enabled on the server.
 	local xpaclist = {"CLASSIC", "TBC", "WRATH"}
 	AtlasLoot_Expac = xpaclist[GetAccountExpansionLevel()+1]
-
-end
-
-function AtlasLoot:CleandataID(newID, listnum)
-	local cleanlist = {	[1] = {"CLASSIC", "TBC", "WRATH"} }
-	for i = 1, #cleanlist[listnum] do
-		newID = gsub(newID, cleanlist[listnum][i], "")
-	end
-	return newID
 end
 
 function AtlasLoot:RecipeSource(spellID)
@@ -530,7 +522,6 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 	-- Hide the map header lable
 	Atlasloot_HeaderLabel:Hide()
 	local dataSource = _G[dataSource_backup] or AtlasLoot_Data
-
 	-- Check to see if Atlas is loaded and the table has a map
 	if dataSource_backup ~= "AtlasLoot_TokenData" and dataSource[dataID].Map then
 		AtlasLootDefaultFrame_MapButton:Enable()
@@ -618,7 +609,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 		toShow = true
 		local itemDif = ItemindexID
 		local itemID = item and item.itemID
-		if item and item.itemID and itemDif ~= 2 then
+		if item and item.itemID then
 			itemID = item.itemID
 			isValid = true
 
@@ -672,7 +663,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 				text = AtlasLoot:FixText(text)
 			end
 			--Adds button highlights if you know a recipe or have a char that knows one
-			if currentTradeSkills[dataSource[dataID].Name] and CA_IsSpellKnown(spellID) then
+			if CA_IsSpellKnown(spellID) then
 				_G["AtlasLootItem_"..i].hasTrade = true
 				_G["AtlasLootItem_"..i.."_Highlight"]:SetTexture(itemHighlightGreen)
 				_G["AtlasLootItem_"..i.."_Highlight"]:Show()
@@ -745,7 +736,6 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 		end
 
 		extra = AtlasLoot:FixText(extra)
-		itemButton.extra = extra
 
 		--If there is no data on the texture an item should have, show a big red question mark
 		if dataSource[dataID][tablenum][i].icon == "Blank" then
@@ -770,7 +760,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 
 		--Highlight items in the wishlist
 		if itemID and dataSource_backup ~= "AtlasLoot_CurrentWishList" and AtlasLootWishList["Options"][UnitName("player")]["Mark"] == true then
-			local xitemexistwish, itemwishicons = AtlasLoot_WishListCheck(itemID, true)
+			local xitemexistwish, itemwishicons = AtlasLoot:WishListCheck(itemID, true)
 			if xitemexistwish then
 				text = itemwishicons.." "..text
 			end
@@ -805,9 +795,10 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 		itemButton.droprate = dataSource[dataID][tablenum][i].droprate or nil
 		itemButton.extraInfo = dataSource[dataID][tablenum][i].extraInfo or nil
 		itemButton.quest = dataSource[dataID][tablenum][i].quest or nil
+		itemButton.item = dataSource[dataID][tablenum][i]
 
-		if (dataID == "SearchResult" or dataSource_backup == "AtlasLoot_CurrentWishList") and dataSource[dataID][tablenum][i][8] then
-			itemButton.sourcePage = dataSource[dataID][tablenum][i][8]
+		if (dataID == "SearchResult" or dataSource_backup == "AtlasLoot_CurrentWishList") and dataSource[dataID][tablenum][i].lootTable then
+			itemButton.sourcePage = dataSource[dataID][tablenum][i].lootTable
 		elseif dataSource[dataID][tablenum][i].lootTable then
 			itemButton.sourcePage = dataSource[dataID][tablenum][i].lootTable
 		else
@@ -971,47 +962,6 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 	AtlasLoot:PreLoadLootTable(dataSource, dataID, ItemindexID)
 end
 
---[[
-AtlasLoot:NavButton_OnClick:
-Called when <-, -> are pressed and calls up the appropriate loot page
-]]
-function AtlasLoot:NavButton_OnClick(self)
-	if AtlasLootDefaultFrame_Map:IsVisible() then
-		AtlasLoot:MapSelect(self.mapID, self.mapNum)
-	else
-		local tablenum, dataID, dataSource = self.tablenum, self.tablebase[1], self.tablebase[2]
-		if #_G[dataSource][dataID] > 26 then
-			local min, max = AtlasLootDefaultFrameSubTableScrollScrollBar:GetMinMaxValues()
-			AtlasLootDefaultFrameSubTableScrollScrollBar:SetValue(tablenum * (max / #_G[dataSource][dataID]))
-		end
-		AtlasLoot:ShowItemsFrame(dataID, dataSource, tablenum)
-	end
-end
-
---[[
-AtlasLoot:NavButton_OnClick:
-Called when 'Back'Button is pressed and calls up the appropriate loot page
-]]
-function AtlasLoot:BackButton_OnClick()
-	AtlasLoot.backEnabled = false
-	AtlasLoot:ShowItemsFrame(AtlasLootItemsFrame.refreshBack[1], AtlasLootItemsFrame.refreshBack[2], AtlasLootItemsFrame.refreshBack[3])
-end
-
---[[
-AtlasLoot:IsLootTableAvailable(dataID):
-Checks if a loot table is in memory and attempts to load the correct LoD module if it isn't
-dataID: Loot table dataID
-]]
-function AtlasLoot:IsLootTableAvailable(dataSource)
-	local moduleName = nil
-	moduleName = AtlasLoot.ModuleName[dataSource]
-	if IsAddOnLoaded(moduleName) then
-		return true
-	else
-		LoadAddOn(moduleName)
-	end
-end
-
 -- List of Moduel Names
 AtlasLoot.ModuleName = {
 	["AtlasLootOriginalWoW"] = "AtlasLoot_OriginalWoW";
@@ -1143,21 +1093,6 @@ function AtlasLoot:ItemsLoading(count)
         AtlasLoot_ItemsLoading.Loop:Stop()
         AtlasLoot_ItemsLoading:Hide()
 	end
-end
-
---[[
-AtlasLoot:AddTooltip(frameb, tooltiptext)
-Adds explanatory tooltips to UI objects.
-]]
-function AtlasLoot:AddTooltip(frameb, tooltiptext)
-   if not tooltiptext or not frameb then return end
-   local frame = _G[frameb]
-   frame:SetScript("OnEnter", function()
-      GameTooltip:SetOwner(frame, "ANCHOR_RIGHT")
-      GameTooltip:SetText(tooltiptext)
-      GameTooltip:Show()
-   end)
-   frame:SetScript("OnLeave", function() GameTooltip:Hide() end)
 end
 
 -- Used to precache all the items in a raid/instance

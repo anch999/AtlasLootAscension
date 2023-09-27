@@ -60,6 +60,15 @@ function AtlasLoot:ShowInstance()
     end
 end
 
+-- Used to strip the expansion out of the dataID
+function AtlasLoot:CleandataID(newID, listnum)
+	local cleanlist = {	[1] = {"CLASSIC", "TBC", "WRATH"} }
+	for i = 1, #cleanlist[listnum] do
+		newID = gsub(newID, cleanlist[listnum][i], "")
+	end
+	return newID
+end
+
 --[[
 AtlasLoot:DewDropClick(tablename, text, tabletype):
 tablename - Name of the loot table in the database

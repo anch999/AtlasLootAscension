@@ -93,17 +93,15 @@ function AtlasLoot:CloseDewDrop(divider, maxLenght)
     )
 end
 
--- return a copy of the table t
-function AtlasLoot:CloneTable(t)
-	if type(t) ~= "table" then return end
-	local new = {}					-- create a new table
-	local i, v = next(t, nil)		-- i is an index of t, v = t[i]
-	while i do
-		if type(v)=="table" then 
-			v=AtlasLoot:CloneTable(v)
+-- return a copy of the table table
+function AtlasLoot:CloneTable(table)
+	if type(table) ~= "table" then return end
+	local new = {}	-- create a new table
+	for i, v in pairs(table) do
+		if type(v) == "table" then
+			v = AtlasLoot:CloneTable(v)
 		end
 		new[i] = v
-		i, v = next(t, i)			-- get next index
 	end
 	return new
 end
@@ -123,6 +121,25 @@ function AtlasLoot:FindId(id, difficulty, type)
 	end
 end
 
+-- Create enchant tooltip
+function AtlasLoot:GetEnchantLink(enchantID)
+	if not enchantID then return end
+	local EnchantLink = nil
+	AtlasLootScanTooltip:SetOwner(UIParent, "ANCHOR_NONE")
+	AtlasLootScanTooltip:ClearLines()
+	AtlasLootScanTooltip:SetHyperlink("enchant:"..enchantID)
+	AtlasLootScanTooltip:Show()
+	local tooltipline = _G["AtlasLootScanTooltipTextLeft1"]
+	local text = tooltipline:GetText()
+	if text and string.find(text, ":") then
+	   EnchantLink = "|cffffd000|Henchant:"..enchantID.."|h["..text.."]|h|r"
+	else
+	   EnchantLink = GetSpellLink(enchantID)
+	end
+	AtlasLootScanTooltip:Hide()
+	return EnchantLink
+ end
+
 -- Open a ascension db link
 function AtlasLoot:OpenDBURL(ID, Type)
     OpenAscensionDBURL("?"..Type.."="..ID)
@@ -131,7 +148,7 @@ end
 -- create a enchant or item chat link!
 function AtlasLoot:Chatlink(ID,chatType,Type)
     if Type == "spell" then
-        SendChatMessage(AtlasLoot_GetEnchantLink(ID) ,chatType)
+        SendChatMessage(AtlasLoot:GetEnchantLink(ID) ,chatType)
     else
         SendChatMessage(select(2,GetItemInfo(ID)) ,chatType)
     end
@@ -201,7 +218,7 @@ function AtlasLoot:PopoupItemFrame(self, data)
 		})
 		popupframe:EnableMouse()
 		popupframe:SetScript("OnLeave", function()
-			AtlasLootItem_OnLeave(self)
+			AtlasLoot:ItemOnLeave(self)
 		end)
 		popupframe:SetScript("OnEnter", function()
 			AtlasLoot_PopupFrame:Show()
@@ -238,12 +255,12 @@ function AtlasLoot:PopoupItemFrame(self, data)
 		button.number = num
 		button:SetScript("OnClick", function(self, arg1) AtlasLoot:ItemOnClick(self, arg1) end)
 		button:SetScript("OnEnter", function(self)
-			AtlasLootItem_OnEnter(self)
+			AtlasLoot:ItemOnEnter(self)
 			AtlasLoot_PopupFrame:Show()
 		end)
 		button:SetScript("OnLeave", function(self)
 			if not AtlasLoot.Dewdrop:IsOpen(_G["AtlasLoot_PopupButton_"..num]) then
-				AtlasLootItem_OnLeave(self)
+				AtlasLoot:ItemOnLeave(self)
 			end
 		end)
 		
@@ -310,3 +327,61 @@ function AtlasLoot:PopoupItemFrame(self, data)
 	popupframe:SetPoint("TOPLEFT",self,0,-25)
 	popupframe:Show()
 end
+
+--[[
+AtlasLoot:AddTooltip(frameb, tooltiptext)
+Adds explanatory tooltips to UI objects.
+]]
+function AtlasLoot:AddTooltip(frameb, tooltiptext)
+	if not tooltiptext or not frameb then return end
+	local frame = _G[frameb]
+	frame:SetScript("OnEnter", function()
+	   GameTooltip:SetOwner(frame, "ANCHOR_RIGHT")
+	   GameTooltip:SetText(tooltiptext)
+	   GameTooltip:Show()
+	end)
+	frame:SetScript("OnLeave", function() GameTooltip:Hide() end)
+ end
+
+ --[[
+AtlasLoot:NavButton_OnClick:
+Called when 'Back'Button is pressed and calls up the appropriate loot page
+]]
+function AtlasLoot:BackButton_OnClick()
+	AtlasLoot.backEnabled = false
+	AtlasLoot:ShowItemsFrame(AtlasLootItemsFrame.refreshBack[1], AtlasLootItemsFrame.refreshBack[2], AtlasLootItemsFrame.refreshBack[3])
+end
+
+--[[
+AtlasLoot:IsLootTableAvailable(dataID):
+Checks if a loot table is in memory and attempts to load the correct LoD module if it isn't
+dataID: Loot table dataID
+]]
+function AtlasLoot:IsLootTableAvailable(dataSource)
+	local moduleName = nil
+	moduleName = AtlasLoot.ModuleName[dataSource]
+	if IsAddOnLoaded(moduleName) then
+		return true
+	else
+		LoadAddOn(moduleName)
+	end
+end
+
+--[[
+AtlasLoot:NavButton_OnClick:
+Called when <-, -> are pressed and calls up the appropriate loot page
+]]
+function AtlasLoot:NavButton_OnClick(self)
+	if AtlasLootDefaultFrame_Map:IsVisible() then
+		AtlasLoot:MapSelect(self.mapID, self.mapNum)
+	else
+		local tablenum, dataID, dataSource = self.tablenum, self.tablebase[1], self.tablebase[2]
+		if #_G[dataSource][dataID] > 26 then
+			local min, max = AtlasLootDefaultFrameSubTableScrollScrollBar:GetMinMaxValues()
+			AtlasLootDefaultFrameSubTableScrollScrollBar:SetValue(tablenum * (max / #_G[dataSource][dataID]))
+		end
+		AtlasLoot:ShowItemsFrame(dataID, dataSource, tablenum)
+	end
+end
+
+

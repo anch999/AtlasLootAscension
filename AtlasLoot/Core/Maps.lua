@@ -28,7 +28,7 @@ function AtlasLoot:CreateMapPins(list)
     end
     -- Creates buttons on the map for pins if a button dosnt already exist
     -- If a button exists reuse it
-    for i,v in ipairs(list) do
+    for i,map in ipairs(list) do
         --create pin buttons
         if not _G["AtlasLoot_MapPin"..i] then
             -- Map Pins
@@ -45,20 +45,27 @@ function AtlasLoot:CreateMapPins(list)
             totalPins = totalPins + 1
         end
         -- converts a standard coordinate x,y to stardard anchor points
-        local x = ((AtlasLootDefaultFrame_Map:GetWidth()/100) * v[2][1]) - (_G["AtlasLoot_MapPin"..i]:GetWidth()/2)
-        local y = (-(AtlasLootDefaultFrame_Map:GetHeight()/100) * v[2][2]) + (_G["AtlasLoot_MapPin"..i]:GetHeight()/2)
+        local x = ((AtlasLootDefaultFrame_Map:GetWidth()/100) * map[2][1]) - (_G["AtlasLoot_MapPin"..i]:GetWidth()/2)
+        local y = (-(AtlasLootDefaultFrame_Map:GetHeight()/100) * map[2][2]) + (_G["AtlasLoot_MapPin"..i]:GetHeight()/2)
         _G["AtlasLoot_MapPin"..i]:SetScript("OnEnter", function(self)
             AtlasLoot.showCords = true
             GameTooltip:SetOwner(self, "ANCHOR_TOPLEFT")
-            GameTooltip:AddLine(WHITE..v[1])
-            GameTooltip:AddLine("("..v[2][1]..", "..v[2][2]..")")
+            GameTooltip:AddLine(WHITE..map[1])
+            if map[4] and list.groups[map[4]] then
+                for _,v in ipairs(list.groups[map[4]]) do
+                    if v ~= map[1] then
+                        GameTooltip:AddLine(WHITE..v)
+                    end
+                end
+            end
+            GameTooltip:AddLine("("..map[2][1]..", "..map[2][2]..")")
             GameTooltip:Show()
         end)
         _G["AtlasLoot_MapPin"..i]:SetScript("OnLeave", function()
             GameTooltip:Hide()
         end)
-        if v[3] then
-            local tex = AtlasUtil:GetAtlasInfo(v[3])
+        if map[3] then
+            local tex = AtlasUtil:GetAtlasInfo(map[3])
             _G["AtlasLoot_MapPin"..i].tex:SetTexture(tex.filename)
             _G["AtlasLoot_MapPin"..i].tex:SetTexCoord(tex.leftTexCoord, tex.rightTexCoord, tex.topTexCoord, tex.bottomTexCoord)
             _G["AtlasLoot_MapPin"..i].tex:SetSize(25,25)
@@ -68,7 +75,7 @@ function AtlasLoot:CreateMapPins(list)
             _G["AtlasLoot_MapPin"..i].tex:SetTexCoord(tex.leftTexCoord, tex.rightTexCoord, tex.topTexCoord, tex.bottomTexCoord)
             _G["AtlasLoot_MapPin"..i].tex:SetSize(25,25)
         end
-        _G["AtlasLoot_MapPin"..i].text:SetText(CYAN..v[1])
+        _G["AtlasLoot_MapPin"..i].text:SetText(CYAN..map[1])
         _G["AtlasLoot_MapPin"..i]:ClearAllPoints()
         _G["AtlasLoot_MapPin"..i]:SetPoint("TOPLEFT",AtlasLootDefaultFrame_Map,x ,y)
         _G["AtlasLoot_MapPin"..i]:Show()
@@ -181,10 +188,16 @@ function AtlasLoot:MapSelect(mapID, mapNum)
             end
         end
     end
-    local pinsList = {}
+    local pinsList = {groups = {}}
+    local group = 0
     for _, v in ipairs (map[mapNum]) do
         if v.cords then
-            tinsert(pinsList,{v[1],v.cords,v.pinType})
+            group = group + 1
+            tinsert(pinsList,{v[1],v.cords,v.pinType, group})
+        end
+        if group ~= 0 then
+            if not pinsList.groups[group] then pinsList.groups[group] = {} end
+            tinsert(pinsList.groups[group], v[1])
         end
     end
     AtlasLoot.MapNum = mapNum

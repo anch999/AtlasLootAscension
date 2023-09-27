@@ -78,26 +78,26 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
 -- The scale of the sand rep rings
 local scaleOfSandsRings = {
 	Name = "Rings";
-	[1] = { itemID = 29298, rep = "#r2#" }; --Band of the Eternal Champion
-	[2] = { itemID = 29299, rep = "#r3#" }; --Superior Band of the Eternal Champion
-	[3] = { itemID = 29300, rep = "#r4#" }; --Exquisite Band of the Eternal Champion
-	[4] = { itemID = 29301, rep = "#r5#" }; --Flawless Band of the Eternal Champion
-	[6] = { itemID = 29294, rep = "#r2#" }; --Band of the Eternal Defender
-	[7] = { itemID = 29295, rep = "#r3#" }; --Superior Band of the Eternal Defender
-	[8] = { itemID = 29296, rep = "#r4#" }; --Exquisite Band of the Eternal Defender
-	[9] = { itemID = 29297, rep = "#r5#" }; --Flawless Band of the Eternal Defender
-	[11] = { itemID = 15037, rep = "#r2#" }; --Band of the Eternal Assassin
-	[12] = { itemID = 15038, rep = "#r3#" }; --Superior Band of the Eternal Assassin
-	[13] = { itemID = 15039, rep = "#r4#" }; --Exquisite Band of the Eternal Assassin
-	[14] = { itemID = 15040, rep = "#r5#" }; --Flawless Band of the Eternal Assassin
-	[16] = { itemID = 29302, rep = "#r2#" }; --Band of the Eternal Sage
-	[17] = { itemID = 29303, rep = "#r3#" }; --Superior Band of the Eternal Sage
-	[18] = { itemID = 29304, rep = "#r4#" }; --Exquisite Band of the Eternal Sage
-	[19] = { itemID = 29305, rep = "#r5#" }; --Flawless Band of the Eternal Sage
-	[21] = { itemID = 29307, rep = "#r2#" }; --Band of the Eternal Restorer
-	[22] = { itemID = 29306, rep = "#r3#" }; --Superior Band of the Eternal Restorer
-	[23] = { itemID = 29308, rep = "#r4#" }; --Exquisite Band of the Eternal Restorer
-	[24] = { itemID = 29309, rep = "#r5#" }; --Flawless Band of the Eternal Restorer
+	[1] = { itemID = 29298, rep = "#r2#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal }; --Band of the Eternal Champion
+	[2] = { itemID = 29299, rep = "#r3#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal }; --Superior Band of the Eternal Champion
+	[3] = { itemID = 29300, rep = "#r4#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal }; --Exquisite Band of the Eternal Champion
+	[4] = { itemID = 29301, rep = "#r5#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal }; --Flawless Band of the Eternal Champion
+	[6] = { itemID = 29294, rep = "#r2#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal }; --Band of the Eternal Defender
+	[7] = { itemID = 29295, rep = "#r3#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal }; --Superior Band of the Eternal Defender
+	[8] = { itemID = 29296, rep = "#r4#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal }; --Exquisite Band of the Eternal Defender
+	[9] = { itemID = 29297, rep = "#r5#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal }; --Flawless Band of the Eternal Defender
+	[11] = { itemID = 15037, rep = "#r2#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal }; --Band of the Eternal Assassin
+	[12] = { itemID = 15038, rep = "#r3#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal }; --Superior Band of the Eternal Assassin
+	[13] = { itemID = 15039, rep = "#r4#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal }; --Exquisite Band of the Eternal Assassin
+	[14] = { itemID = 15040, rep = "#r5#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal }; --Flawless Band of the Eternal Assassin
+	[16] = { itemID = 29302, rep = "#r2#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal }; --Band of the Eternal Sage
+	[17] = { itemID = 29303, rep = "#r3#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal }; --Superior Band of the Eternal Sage
+	[18] = { itemID = 29304, rep = "#r4#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal }; --Exquisite Band of the Eternal Sage
+	[19] = { itemID = 29305, rep = "#r5#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal }; --Flawless Band of the Eternal Sage
+	[21] = { itemID = 29307, rep = "#r2#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal }; --Band of the Eternal Restorer
+	[22] = { itemID = 29306, rep = "#r3#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal }; --Superior Band of the Eternal Restorer
+	[23] = { itemID = 29308, rep = "#r4#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal }; --Exquisite Band of the Eternal Restorer
+	[24] = { itemID = 29309, rep = "#r5#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal }; --Flawless Band of the Eternal Restorer
 };
 
 ------------------------
@@ -594,9 +594,9 @@ AtlasLoot_Data["BlackTemple"] = {
 		[4] = { itemID = 32370, droprate = "5%" }; --Nadina's Pendant of Purity
 		[5] = { itemID = 32368, droprate = "5%" }; --Tome of the Lightbringer
 		[6] = { itemID = 32369, droprate = "5%" }; --Blade of Savagery
-		[16] = { itemID = 31101, droprate = "6%" }; --Pauldrons of the Forgotten Conqueror --#m1# =ds=#c4#, #c5#, #c8#
-		[17] = { itemID = 31103, droprate = "0%" }; --Pauldrons of the Forgotten Protector --#m1# =ds=#c9#, #c2#, #c7#
-		[18] = { itemID = 31102, droprate = "7%" }; --Pauldrons of the Forgotten Vanquisher --#m1# =ds=#c6#, #c3#, #c1#
+		[16] = { itemID = 31101, droprate = "6%" }; --Pauldrons of the Forgotten Conqueror
+		[17] = { itemID = 31103, droprate = "0%" }; --Pauldrons of the Forgotten Protector
+		[18] = { itemID = 31102, droprate = "7%" }; --Pauldrons of the Forgotten Vanquisher
 		[20] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 	};
 	{
@@ -607,9 +607,9 @@ AtlasLoot_Data["BlackTemple"] = {
 		[4] = { itemID = 32376, droprate = "7%" }; --Forest Prowler's Helm
 		[5] = { itemID = 32373, droprate = "7%" }; --Helm of the Illidari Shatterer
 		[6] = { itemID = 32505, droprate = "6%" }; --Madness of the Betrayer
-		[16] = { itemID = 31098, droprate = "4%" }; --Leggings of the Forgotten Conqueror --#m1# =ds=#c4#, #c5#, #c8#
-		[17] = { itemID = 31100, droprate = "3%" }; --Leggings of the Forgotten Protector --#m1# =ds=#c9#, #c2#, #c7#
-		[18] = { itemID = 31099, droprate = "4%" }; --Leggings of the Forgotten Vanquisher --#m1# =ds=#c6#, #c3#, #c1#
+		[16] = { itemID = 31098, droprate = "4%" }; --Leggings of the Forgotten Conqueror
+		[17] = { itemID = 31100, droprate = "3%" }; --Leggings of the Forgotten Protector
+		[18] = { itemID = 31099, droprate = "4%" }; --Leggings of the Forgotten Vanquisher
 		[20] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 	};
 	{
@@ -624,9 +624,9 @@ AtlasLoot_Data["BlackTemple"] = {
 		[9] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 		[11] = { itemID = 32837 }; --Warglaive of Azzinoth
 		[12] = { itemID = 32838 }; --Warglaive of Azzinoth
-		[16] = { itemID = 31089, droprate = "8%" }; --Chestguard of the Forgotten Conqueror --#m1# =ds=#c4#, #c5#, #c8#
-		[17] = { itemID = 31091, droprate = "9%" }; --Chestguard of the Forgotten Protector --#m1# =ds=#c9#, #c2#, #c7#
-		[18] = { itemID = 31090, droprate = "8%" }; --Chestguard of the Forgotten Vanquisher --#m1# =ds=#c6#, #c3#, #c1#
+		[16] = { itemID = 31089, droprate = "8%" }; --Chestguard of the Forgotten Conqueror
+		[17] = { itemID = 31091, droprate = "9%" }; --Chestguard of the Forgotten Protector
+		[18] = { itemID = 31090, droprate = "8%" }; --Chestguard of the Forgotten Vanquisher
 		[20] = { itemID = 32471, droprate = "6%" }; --Shard of Azzinoth
 		[21] = { itemID = 32500, droprate = "5%" }; --Crystal Spire of Karabor
 		[22] = { itemID = 32374, droprate = "4%" }; --Zhar'doom, Greatstaff of the Devourer
@@ -946,6 +946,25 @@ AtlasLoot_Data["CoTHyjal"] = {
 		[19] = { itemID = 98570, droprate = "100%" };
 		[21] = { itemID = 61557, droprate = "1%" }; --Pet Sigil
 		[23] = { itemID = 1001620, droprate = "?%" };
+	};
+	{
+		Name = AL["Chromius"].." Mythic/Ascended";
+		[1] = { itemID = 15828, [AtlasLoot_Difficulty.MIN_DIF] = AtlasLoot_Difficulty.Mythic }; --Final Countdown Bands
+		[2] = { itemID = 15831, [AtlasLoot_Difficulty.MIN_DIF] = AtlasLoot_Difficulty.Mythic }; --Girdle of Falling Sand
+		[3] = { itemID = 15898, [AtlasLoot_Difficulty.MIN_DIF] = AtlasLoot_Difficulty.Mythic }; --Hourglass Casing
+		[4] = { itemID = 15835, [AtlasLoot_Difficulty.MIN_DIF] = AtlasLoot_Difficulty.Mythic }; --Time Reaver's Gown
+		[5] = { itemID = 15840, [AtlasLoot_Difficulty.MIN_DIF] = AtlasLoot_Difficulty.Mythic }; --Timewaker's Treads
+		[6] = { itemID = 15896, [AtlasLoot_Difficulty.MIN_DIF] = AtlasLoot_Difficulty.Mythic }; --Cloak of the Final Hour
+		[7] = { itemID = 15834, [AtlasLoot_Difficulty.MIN_DIF] = AtlasLoot_Difficulty.Mythic }; --Aetherflux Shroud
+		[9] = { itemID = 15839, [AtlasLoot_Difficulty.MIN_DIF] = AtlasLoot_Difficulty.Mythic }; --Charm of the Chronomender
+		[10] = { itemID = 15899, [AtlasLoot_Difficulty.MIN_DIF] = AtlasLoot_Difficulty.Mythic }; --Amulet of Futures Past
+		[11] = { itemID = 15838, [AtlasLoot_Difficulty.MIN_DIF] = AtlasLoot_Difficulty.Mythic }; --Flickering Amulet
+		[12] = { itemID = 15836, [AtlasLoot_Difficulty.MIN_DIF] = AtlasLoot_Difficulty.Mythic }; --Pendant of the Evil Twin
+		[13] = { itemID = 15830, [AtlasLoot_Difficulty.MIN_DIF] = AtlasLoot_Difficulty.Mythic }; --Infinite Scale Talisman
+		[16] = { itemID = 18764, [AtlasLoot_Difficulty.MIN_DIF] = AtlasLoot_Difficulty.Mythic }; --Echo of Eons
+		[17] = { itemID = 15041, [AtlasLoot_Difficulty.MIN_DIF] = AtlasLoot_Difficulty.Mythic }; --Key of Time
+		[19] = { itemID = 29434, droprate = "100%", [AtlasLoot_Difficulty.MIN_DIF] = AtlasLoot_Difficulty.Mythic }; --Badge of Justice
+		[20] = { itemID = 98570, droprate = "100%", [AtlasLoot_Difficulty.MIN_DIF] = AtlasLoot_Difficulty.Mythic };
 	};
 	{
 		Name = AL["Trash Mobs"].." - Items";
@@ -1315,7 +1334,7 @@ AtlasLoot_Data["CFRSerpentshrine"] = {
 		[20] = { itemID = 30049, droprate = "9%" }; --Fathomstone
 		[21] = { itemID = 30051, droprate = "1%" }; --Idol of the Crescent Goddess
 		[23] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
-		[24] = { itemID = 816254, droprate = "N:2%/H:5%/A:10" }; --Formula: Enchant Cloak - Crushing Wave
+		[24] = { itemID = 816254, droprate = { nil, "2%", "5%", "7%", "10%" } }; --Formula: Enchant Cloak - Crushing Wave
 	};
 	{
 		Name = BabbleBoss["The Lurker Below"];
@@ -1440,7 +1459,7 @@ AtlasLoot_Data["GruulsLair"] = {
 		[6] = { itemID = 28800, droprate = "5.87%" }; --Hammer of the Naaru
 		[16] = { itemID = 29764, droprate = "100%", lootTable = {"T4SHOULDER","Token"} }; --Pauldrons of the Fallen Defender
 		[18] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
-		[19] = { itemID = 816252, droprate = "N:2%/H:5%/A:10" }; --Formula: Enchant Weapon - Undaunted Might
+		[19] = { itemID = 816252, droprate = { nil, "2%", "5%", "7%", "10%" } }; --Formula: Enchant Weapon - Undaunted Might
 	};
 	{
 		Name = BabbleBoss["Gruul the Dragonkiller"];
@@ -1493,7 +1512,6 @@ AtlasLoot_Data["HCRamparts"] = {
 		[24] = { itemID = 27450, droprate = "4.19%" }; --Wild Stalker Boots
 		[25] = { itemID = 27447, droprate = "3.84%" }; --Bracers of Just Rewards
 		[26] = { itemID = 27449, droprate = "3.15%" }; --Blood Knight Defender
-		[28] = { itemID = 23881, droprate = "100%" }; --Gargolmar's Hand
 	};
 	{
 		Name = BabbleBoss["Omor the Unscarred"];
@@ -1838,7 +1856,7 @@ AtlasLoot_Data["Karazhan"] = {
 		[20] = { itemID = 28524, droprate = "2.90%" }; --Emerald Ripper
 		[22] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 		[23] = { itemID = 400751, droprate = "100%" }; --Raider's Commendations
-		[25] = { itemID = 22559, droprate = "N:2%/H:5%/A:10" }; --Formula: Enchant Weapon - Mongoose
+		[25] = { itemID = 22559, droprate = { nil, "2%", "5%", "7%", "10%" } }; --Formula: Enchant Weapon - Mongoose
 		[27] = { itemID = 60166, droprate = "1%" }; --Pet Sigil
 	};
 	{
@@ -1862,7 +1880,7 @@ AtlasLoot_Data["Karazhan"] = {
 		[20] = { itemID = 229739, droprate = "100%" }; --Tome of Untold Secrets
 		[22] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 		[23] = { itemID = 400751, droprate = "100%" }; --Raider's Commendations
-		[25] = { itemID = 816253, droprate = "N:2%/H:5%/A:10" }; --Formula: Enchant Weapon - Faith
+		[25] = { itemID = 816253, droprate = { nil, "2%", "5%", "7%", "10%" } }; --Formula: Enchant Weapon - Faith
 	};
 	{
 		Name = "Opera Event";
@@ -1942,7 +1960,7 @@ AtlasLoot_Data["Karazhan"] = {
 		[22] = { itemID = 229739, droprate = "100%" }; --Tome of Untold Secrets
 		[24] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 		[25] = { itemID = 400751, droprate = "100%" }; --Raider's Commendations
-		[27] = { itemID = 22561, droprate = "N:2%/H:5%/A:10" }; --Formula: Enchant Weapon - Soulfrost
+		[27] = { itemID = 22561, droprate = { nil, "2%", "5%", "7%", "10%" } }; --Formula: Enchant Weapon - Soulfrost
 		[29] = { itemID = 60167, droprate = "1%" }; --Sigil of Terestain Illhoof
 	};
 	{
@@ -1963,7 +1981,7 @@ AtlasLoot_Data["Karazhan"] = {
 		[22] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 		[23] = { itemID = 400751, droprate = "100%" }; --Raider's Commendations
 		[24] = { itemID = 98570, droprate = "100%" }; --Mystic Orbs
-		[26] = { itemID = 22560, droprate = "N:2%/H:5%/A:10" }; --Formula: Enchant Weapon - Sunfire
+		[26] = { itemID = 22560, droprate = { nil, "2%", "5%", "7%", "10%" } }; --Formula: Enchant Weapon - Sunfire
 		[28] = { itemID = 60372, droprate = "1%" }; --Pet Sigil
 	};
 	{
@@ -2094,7 +2112,7 @@ AtlasLoot_Data["MagistersTerrace"] = {
 		[5] = { itemID = 434789, droprate = "7%" }; --Bracers of Slaughter
 		[6] = { itemID = 434790, droprate = "6%" }; --Battle-mace of the High Priestess
 		[7] = { itemID = 434783, droprate = "7%" }; --Nightstrike
-		[9] = { itemID = 35756, droprate = "N:2%/H:5%/A:10" }; --Formula: Enchant Cloak - Steelweave
+		[9] = { itemID = 35756, droprate = { nil, "2%", "5%", "7%", "10%" } }; --Formula: Enchant Cloak - Steelweave
 		[16] = { icon = "INV_Box_01", name = "#j27#" };
 		[17] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 		[18] = { itemID = 434473, droprate = "9%" }; --Commendation of Kael'thas
@@ -2161,9 +2179,9 @@ AtlasLoot_Data["SunwellPlateau"] = {
 		[8] = { itemID = 34166, droprate = ".#INF%" }; --Band of Lucent Beams
 		[9] = { itemID = 34165 }; --Fang of Kalecgos
 		[10] = { itemID = 34164 }; --Dragonscale-Encrusted Longblade
-		[16] = { itemID = 34848, droprate = "0%" }; --Bracers of the Forgotten Conqueror --#m1# =ds=#c4#, #c5#, #c8#
-		[17] = { itemID = 34851, droprate = "1%" }; --Bracers of the Forgotten Protector --#m1# =ds=#c9#, #c2#, #c7#
-		[18] = { itemID = 34852, droprate = "2%" }; --Bracers of the Forgotten Vanquisher --#m1# =ds=#c6#, #c3#, #c1#
+		[16] = { itemID = 34848, droprate = "0%" }; --Bracers of the Forgotten Conqueror
+		[17] = { itemID = 34851, droprate = "1%" }; --Bracers of the Forgotten Protector
+		[18] = { itemID = 34852, droprate = "2%" }; --Bracers of the Forgotten Vanquisher
 		[20] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 	};
 	{
@@ -2175,9 +2193,9 @@ AtlasLoot_Data["SunwellPlateau"] = {
 		[5] = { itemID = 34177, droprate = "5%" }; --Clutch of Demise
 		[6] = { itemID = 34179, droprate = "3%" }; --Heart of the Pit
 		[7] = { itemID = 34176, droprate = "7%" }; --Reign of Misery
-		[16] = { itemID = 34853, droprate = "4%" }; --Belt of the Forgotten Conqueror --#m1# =ds=#c4#, #c5#, #c8#
-		[17] = { itemID = 34854, droprate = "0%" }; --Belt of the Forgotten Protector --#m1# =ds=#c9#, #c2#, #c7#
-		[18] = { itemID = 34855, droprate = "5%" }; --Belt of the Forgotten Vanquisher --#m1# =ds=#c6#, #c3#, #c1#
+		[16] = { itemID = 34853, droprate = "4%" }; --Belt of the Forgotten Conqueror
+		[17] = { itemID = 34854, droprate = "0%" }; --Belt of the Forgotten Protector
+		[18] = { itemID = 34855, droprate = "5%" }; --Belt of the Forgotten Vanquisher
 		[20] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 	};
 	{
@@ -2190,9 +2208,9 @@ AtlasLoot_Data["SunwellPlateau"] = {
 		[6] = { itemID = 34184, droprate = "6%" }; --Brooch of the Highborne
 		[7] = { itemID = 34185, droprate = "6%" }; --Sword Breaker's Bulwark
 		[8] = { itemID = 34182, droprate = "7%" }; --Grand Magister's Staff of Torrents
-		[16] = { itemID = 34856, droprate = "9%" }; --Boots of the Forgotten Conqueror --#m1# =ds=#c4#, #c5#, #c8#
-		[17] = { itemID = 34857, droprate = "6%" }; --Boots of the Forgotten Protector --#m1# =ds=#c9#, #c2#, #c7#
-		[18] = { itemID = 34858, droprate = "7%" }; --Boots of the Forgotten Vanquisher --#m1# =ds=#c6#, #c3#, #c1#
+		[16] = { itemID = 34856, droprate = "9%" }; --Boots of the Forgotten Conqueror
+		[17] = { itemID = 34857, droprate = "6%" }; --Boots of the Forgotten Protector
+		[18] = { itemID = 34858, droprate = "7%" }; --Boots of the Forgotten Vanquisher
 		[20] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 	};
 	{
@@ -2767,80 +2785,97 @@ AtlasLoot_Data["ZulAman"] = {
 	Map = "ZulAman";
 	{
 		Name = BabbleBoss["Nalorakk"];
-		[1] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
-		[2] = { itemID = 33203, droprate = "3%" }; --Robes of Heavenly Purpose
-		[3] = { itemID = 33285, droprate = "3%" }; --Fury of the Ursine
-		[4] = { itemID = 33211, droprate = "4%" }; --Bladeangel's Money Belt
-		[5] = { itemID = 33206, droprate = "3%" }; --Pauldrons of Primal Fury
-		[6] = { itemID = 33327, droprate = "3%" }; --Mask of Introspection
-		[7] = { itemID = 33191, droprate = "3%" }; --Jungle Stompers
-		[8] = { itemID = 33640, droprate = "4%" }; --Fury
+		[1] = { itemID = 33203, droprate = "3%" }; --Robes of Heavenly Purpose
+		[2] = { itemID = 33285, droprate = "3%" }; --Fury of the Ursine
+		[3] = { itemID = 33211, droprate = "4%" }; --Bladeangel's Money Belt
+		[4] = { itemID = 33206, droprate = "3%" }; --Pauldrons of Primal Fury
+		[5] = { itemID = 33327, droprate = "3%" }; --Mask of Introspection
+		[6] = { itemID = 33191, droprate = "3%" }; --Jungle Stompers
+		[7] = { itemID = 33640, droprate = "4%" }; --Fury
 		[16] = { itemID = 33496, droprate = "3%" }; --Signet of Primal Wrath
 		[17] = { itemID = 33498, droprate = "1%" }; --Signet of the Quiet Forest
 		[18] = { itemID = 33971, droprate = "0%" }; --Elunite Imbued Leggings
 		[19] = { itemID = 33495, droprate = "2%" }; --Rage
 		[20] = { itemID = 33480, droprate = "0%" }; --Cord of BBCRaided Troll Hair
-
+		[22] = { itemID = 222637, droprate = { "25%", "50%", "75%", "100%" } }; --Primal Amani Idol
+		[24] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
+		[25] = { itemID = 400751, droprate = "100%" }; --Raider's Commendations
+		[26] = { itemID = 98570, droprate = "100%" }; --Mystic Orbs
+		[28] = { itemID = 63944, droprate = "1%" }; --Pet Sigil
 	};
 	{
 		Name = BabbleBoss["Akil'zon"];
-		[1] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
-		[2] = { itemID = 33286, droprate = "3%" }; --Mojo-mender's Mask
-		[3] = { itemID = 33215, droprate = "3%" }; --Bloodstained Elven Battlevest
-		[4] = { itemID = 33216, droprate = "3%" }; --Chestguard of Hidden Purpose
-		[5] = { itemID = 33281, droprate = "3%" }; --Brooch of Nature's Mercy
-		[6] = { itemID = 33293, droprate = "3%" }; --Signet of Ancient Magics
-		[7] = { itemID = 33214, droprate = "3%" }; --Akil'zon's Talonblade
-		[8] = { itemID = 33283, droprate = "4%" }; --Amani Punisher
+		[1] = { itemID = 33286, droprate = "3%" }; --Mojo-mender's Mask
+		[2] = { itemID = 33215, droprate = "3%" }; --Bloodstained Elven Battlevest
+		[3] = { itemID = 33216, droprate = "3%" }; --Chestguard of Hidden Purpose
+		[4] = { itemID = 33281, droprate = "3%" }; --Brooch of Nature's Mercy
+		[5] = { itemID = 33293, droprate = "3%" }; --Signet of Ancient Magics
+		[6] = { itemID = 33214, droprate = "3%" }; --Akil'zon's Talonblade
+		[7] = { itemID = 33283, droprate = "4%" }; --Amani Punisher
 		[16] = { itemID = 33591, droprate = "1%" }; --Shadowcaster's Drape
 		[17] = { itemID = 33590, droprate = "0%" }; --Cloak of Fiends
 		[18] = { itemID = 33481, droprate = "1%" }; --Pauldrons of Stone Resolve
 		[19] = { itemID = 33492, droprate = "1%" }; --Trollbane
 		[20] = { itemID = 33500, droprate = "0%" }; --Signet of Eternal Life
+		[22] = { itemID = 222637, droprate = { "25%", "50%", "75%", "100%" } }; --Primal Amani Idol
+		[24] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
+		[25] = { itemID = 400751, droprate = "100%" }; --Raider's Commendations
+		[26] = { itemID = 98570, droprate = "100%" }; --Mystic Orbs
+		[28] = { itemID = 63943, droprate = "1%" }; --Pet Sigil
+
 	};
 	{
 		Name = BabbleBoss["Jan'alai"];
-		[1] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
-		[2] = { itemID = 33357, droprate = "3%" }; --Footpads of Madness
-		[3] = { itemID = 33356, droprate = "3%" }; --Helm of Natural Regeneration
-		[4] = { itemID = 33329, droprate = "3%" }; --Shadowtooth Trollskin Cuirass
-		[5] = { itemID = 33328, droprate = "3%" }; --Arrow-fall Chestguard
-		[6] = { itemID = 33354, droprate = "4%" }; --Wub's Cursed Hexblade
-		[7] = { itemID = 33326, droprate = "3%" }; --Bulwark of the Amani Empire
-		[8] = { itemID = 33332, droprate = "2%" }; --Enamelled Disc of Mojo
+		[1] = { itemID = 33357, droprate = "3%" }; --Footpads of Madness
+		[2] = { itemID = 33356, droprate = "3%" }; --Helm of Natural Regeneration
+		[3] = { itemID = 33329, droprate = "3%" }; --Shadowtooth Trollskin Cuirass
+		[4] = { itemID = 33328, droprate = "3%" }; --Arrow-fall Chestguard
+		[5] = { itemID = 33354, droprate = "4%" }; --Wub's Cursed Hexblade
+		[6] = { itemID = 33326, droprate = "3%" }; --Bulwark of the Amani Empire
+		[7] = { itemID = 33332, droprate = "2%" }; --Enamelled Disc of Mojo
 		[16] = { itemID = 33499, droprate = "8%" }; --Signet of the Last Defender
 		[17] = { itemID = 33805, droprate = "0%" }; --Shadowhunter's Treads
 		[18] = { itemID = 33491, droprate = "2%" }; --Tuskbreaker
 		[19] = { itemID = 33490, droprate = "3%" }; --Staff of Dark Mending
 		[20] = { itemID = 33489, droprate = "1%" }; --Mantle of Ill Intent
+		[22] = { itemID = 222637, droprate = { "25%", "50%", "75%", "100%" } }; --Primal Amani Idol
+		[24] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
+		[25] = { itemID = 400751, droprate = "100%" }; --Raider's Commendations
+		[26] = { itemID = 98570, droprate = "100%" }; --Mystic Orbs
+		[28] = { itemID = 63946, droprate = "1%" }; --Pet Sigil
+
 	};
 	{
 		Name = BabbleBoss["Halazzi"];
-		[1] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
-		[2] = { itemID = 33317, droprate = "3%" }; --Robe of Departed Spirits
-		[3] = { itemID = 33300, droprate = "4%" }; --Shoulderpads of Dancing Blades
-		[4] = { itemID = 33322, droprate = "3%" }; --Shimmer-pelt Vest
-		[5] = { itemID = 33533, droprate = "3%" }; --Avalanche Leggings
-		[6] = { itemID = 33299, droprate = "3%" }; --Spaulders of the Advocate
-		[7] = { itemID = 33303, droprate = "4%" }; --Skullshatter Warboots
-		[8] = { itemID = 33297, droprate = "3%" }; --The Savage's Choker
+		[1] = { itemID = 33317, droprate = "3%" }; --Robe of Departed Spirits
+		[2] = { itemID = 33300, droprate = "4%" }; --Shoulderpads of Dancing Blades
+		[3] = { itemID = 33322, droprate = "3%" }; --Shimmer-pelt Vest
+		[4] = { itemID = 33533, droprate = "3%" }; --Avalanche Leggings
+		[5] = { itemID = 33299, droprate = "3%" }; --Spaulders of the Advocate
+		[6] = { itemID = 33303, droprate = "4%" }; --Skullshatter Warboots
+		[7] = { itemID = 33297, droprate = "3%" }; --The Savage's Choker
 		[16] = { itemID = 33483, droprate = "2%" }; --Life-step Belt
 		[17] = { itemID = 33493, droprate = "2%" }; --Umbral Shiv
 		[18] = { itemID = 33497, droprate = "8%" }; --Mana Attuned Band
 		[19] = { itemID = 33979 }; --Sightless Head
 		[20] = { itemID = 33465, droprate = "3%" }; --Staff of Primal Fury
+		[22] = { itemID = 222637, droprate = { "25%", "50%", "75%", "100%" } }; --Primal Amani Idol
+		[24] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
+		[25] = { itemID = 400751, droprate = "100%" }; --Raider's Commendations
+		[26] = { itemID = 98570, droprate = "100%" }; --Mystic Orbs
+		[28] = { itemID = 63945, droprate = "1%" }; --Pet Sigil
 	};
 	{
 		Name = BabbleBoss["Hex Lord Malacrass"];
-		[1] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
-		[2] = { itemID = 33592, droprate = "3%" }; --Cloak of Ancient Rituals
-		[3] = { itemID = 33453, droprate = "3%" }; --Hood of Hexing
-		[4] = { itemID = 33463, droprate = "3%" }; --Hood of the Third Eye
-		[5] = { itemID = 33432, droprate = "5%" }; --Coif of the Jungle Stalker
-		[6] = { itemID = 33464, droprate = "3%" }; --Hex Lord's Voodoo Pauldrons
-		[7] = { itemID = 33421, droprate = "5%" }; --Battleworn Tuskguard
-		[8] = { itemID = 33446, droprate = "5%" }; --Girdle of Stromgarde's Hope
-		[10] = { itemID = 2033307, droprate = "N:2%/H:5%/A:10" }; --Formula: Enchant Weapon - Witchdoctor
+		[1] = { itemID = 33592, droprate = "3%" }; --Cloak of Ancient Rituals
+		[2] = { itemID = 33453, droprate = "3%" }; --Hood of Hexing
+		[3] = { itemID = 33463, droprate = "3%" }; --Hood of the Third Eye
+		[4] = { itemID = 33432, droprate = "5%" }; --Coif of the Jungle Stalker
+		[5] = { itemID = 33464, droprate = "3%" }; --Hex Lord's Voodoo Pauldrons
+		[6] = { itemID = 33421, droprate = "5%" }; --Battleworn Tuskguard
+		[7] = { itemID = 33446, droprate = "5%" }; --Girdle of Stromgarde's Hope
+		[9] = { itemID = 2033307, droprate = { "2%", "5%", "7%", "10%" } }; --Formula: Enchant Weapon - Witchdoctor
+		[11] = { itemID = 63962, droprate = "1%" }; --Pet Sigil
 		[16] = { itemID = 34029, droprate = "5%" }; --Tiny Voodoo Mask
 		[17] = { itemID = 33828, droprate = "3%" }; --Tome of Diabolic Remedy
 		[18] = { itemID = 38634, droprate = "1%" }; --Troll Dice
@@ -2848,28 +2883,35 @@ AtlasLoot_Data["ZulAman"] = {
 		[20] = { itemID = 33298, droprate = "4%" }; --Prowler's Strikeblade
 		[21] = { itemID = 33388, droprate = "5%" }; --Heartless
 		[22] = { itemID = 33494, droprate = "1%" }; --Amani Divining Staff
-		[24] = { itemID = 1333809, droprate = "100%" }; --Amani Bear
+		[24] = { itemID = 222637, droprate = { "25%", "50%", "75%", "100%" } };  --Primal Amani Idol
+		[26] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
+		[27] = { itemID = 400751, droprate = "100%" }; --Raider's Commendations
+		[28] = { itemID = 98570, droprate = "100%" }; --Mystic Orbs
+		[30] = { itemID = 1333809, droprate = "100%" }; --Amani Bear
 	};
 	{
 		Name = BabbleBoss["Zul'jin"];
-		[1] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
-		[2] = { itemID = 33471, droprate = "5%" }; --Two-toed Sandals
-		[3] = { itemID = 33479, droprate = "5%" }; --Grimgin Faceguard
-		[4] = { itemID = 33469, droprate = "6%" }; --Hauberk of the Empire's Champion
-		[5] = { itemID = 33473, droprate = "5%" }; --Chestguard of the Warlord
-		[6] = { itemID = 33466, droprate = "4%" }; --Loop of Cursed Bones
-		[7] = { itemID = 33830, droprate = "4%" }; --Ancient Aqir Artifact
-		[8] = { itemID = 33831, droprate = "4%" }; --Berserker's Call
-		[9] = { itemID = 33829, droprate = "4%" }; --Hex Shrunken Head
-		[10] = { itemID = 24537, droprate = "4%" }; --Waistband of Crushed Skulls
-		[12] = { itemID = 33307, droprate = "N:2%/H:5%/A:10" }; --Formula: Enchant Weapon - Executioner
+		[1] = { itemID = 33471, droprate = "5%" }; --Two-toed Sandals
+		[2] = { itemID = 33479, droprate = "5%" }; --Grimgin Faceguard
+		[3] = { itemID = 33469, droprate = "6%" }; --Hauberk of the Empire's Champion
+		[4] = { itemID = 33473, droprate = "5%" }; --Chestguard of the Warlord
+		[5] = { itemID = 33466, droprate = "4%" }; --Loop of Cursed Bones
+		[6] = { itemID = 33830, droprate = "4%" }; --Ancient Aqir Artifact
+		[7] = { itemID = 33831, droprate = "4%" }; --Berserker's Call
+		[8] = { itemID = 33829, droprate = "4%" }; --Hex Shrunken Head
+		[9] = { itemID = 24537, droprate = "4%" }; --Waistband of Crushed Skulls
+		[11] = { itemID = 33307, droprate = { "2%", "5%", "7%", "10%" } }; --Formula: Enchant Weapon - Executioner
 		[16] = { itemID = 33467, droprate = "4%" }; --Blade of Twisted Visions
 		[17] = { itemID = 33478, droprate = "4%" }; --Jin'rohk, The Great Apocalypse
 		[18] = { itemID = 33476, droprate = "5%" }; --Cleaver of the Unforgiving
 		[19] = { itemID = 33468, droprate = "5%" }; --Dark Blessing
 		[20] = { itemID = 33474, droprate = "4%" }; --Ancient Amani Longbow
 		[21] = { itemID = 34071 }; --Seething Hate
-		[23] = { itemID = 33102, droprate = "7%" }; --Blood of Zul'Jin
+		[23] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
+		[24] = { itemID = 400751, droprate = "100%" }; --Raider's Commendations
+		[25] = { itemID = 98570, droprate = "100%" }; --Mystic Orbs
+		[27] = { itemID = 33102, droprate = "7%" }; --Blood of Zul'Jin
+		[29] = { itemID = 63949, droprate = "1%" }; --Pet Sigil
 	};
 	{
 		Name = AL["Trash Mobs"];
@@ -2885,6 +2927,14 @@ AtlasLoot_Data["ZulAman"] = {
 		[19] = { itemID = 33931, droprate = "5%" }; --Amani Charm of Mighty Mojo
 		[20] = { itemID = 33933, droprate = "5%" }; --Amani Charm of the Raging Defender
 		[22] = { itemID = 33993 }; --Mojo
+	};
+	{
+		Name = AL["Enchants"];
+		[1] = { itemID = 229194 }; --The Krakmon Wand
+		[2] = { itemID = 229193 }; --Massacre Cloak
+		[3] = { itemID = 229196 }; --Throat Crushers
+		[4] = { itemID = 229192 }; --Seal of the Amani'shi Berserker
+		[5] = { itemID = 229195 }; --Staff of Blazing Glory
 	};
 };
 
@@ -5645,9 +5695,9 @@ AtlasLoot_Data["T5"] = {
 			[2] = { itemID = 31048, desc = "=ds=" ..BabbleBoss["Mother Shahraz"].." ("..BabbleZone["Black Temple"]..")" }; --Thunderheart Pauldrons
 			[3] = { itemID = 31042, desc = "=ds=" ..BabbleBoss["Illidan Stormrage"].." ("..BabbleZone["Black Temple"]..")" }; --Thunderheart Chestguard
 			[4] = { itemID = 34444, desc = "=ds=" ..BabbleBoss["Kalecgos"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Thunderheart Wristguards
-			[5] = { itemID = 31034, desc = "=ds=" ..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Thunderheart Gauntlets
+			[5] = { itemID = 31034, desc = "=ds=" ..BabbleBoss["Kaz'rogal"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Thunderheart Gauntlets
 			[6] = { itemID = 34556, desc = "=ds=" ..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Thunderheart Waistguard
-			[7] = { itemID = 31044, desc = "=ds=" ..BabbleBoss["The Illidari Council"].." ("..BabbleZone["Black Temple"]..")" }; --Thunderheart Leggings
+			[7] = { itemID = 31044, desc = "=ds=" ..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Thunderheart Leggings
 			[8] = { itemID = 34573, desc = "=ds=" ..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Thunderheart Treads
 		};
 		{
@@ -5656,9 +5706,9 @@ AtlasLoot_Data["T5"] = {
 			[2] = { itemID = 31047, desc = "=ds=" ..BabbleBoss["Mother Shahraz"].." ("..BabbleZone["Black Temple"]..")" }; --Thunderheart Spaulders
 			[3] = { itemID = 31041, desc = "=ds=" ..BabbleBoss["Illidan Stormrage"].." ("..BabbleZone["Black Temple"]..")" }; --Thunderheart Tunic
 			[4] = { itemID = 34445, desc = "=ds=" ..BabbleBoss["Kalecgos"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Thunderheart Bracers
-			[5] = { itemID = 31032, desc = "=ds=" ..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Thunderheart Gloves
+			[5] = { itemID = 31032, desc = "=ds=" ..BabbleBoss["Kalecgos"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Thunderheart Gloves
 			[6] = { itemID = 34554, desc = "=ds=" ..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Thunderheart Belt
-			[7] = { itemID = 31045, desc = "=ds=" ..BabbleBoss["The Illidari Council"].." ("..BabbleZone["Black Temple"]..")" }; --Thunderheart Legguards
+			[7] = { itemID = 31045, desc = "=ds=" ..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Thunderheart Legguards
 			[8] = { itemID = 34571, desc = "=ds=" ..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Thunderheart Boots
 		};
 		{
@@ -5667,9 +5717,9 @@ AtlasLoot_Data["T5"] = {
 			[2] = { itemID = 31049, desc = "=ds=" ..BabbleBoss["Mother Shahraz"].." ("..BabbleZone["Black Temple"]..")" }; --Thunderheart Shoulderpads
 			[3] = { itemID = 31043, desc = "=ds=" ..BabbleBoss["Illidan Stormrage"].." ("..BabbleZone["Black Temple"]..")" }; --Thunderheart Vest
 			[4] = { itemID = 34446, desc = "=ds=" ..BabbleBoss["Kalecgos"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Thunderheart Bands
-			[5] = { itemID = 31035, desc = "=ds=" ..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Thunderheart Handguards
+			[5] = { itemID = 31035, desc = "=ds=" ..BabbleBoss["Kalecgos"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Thunderheart Handguards
 			[6] = { itemID = 34555, desc = "=ds=" ..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Thunderheart Cord
-			[7] = { itemID = 31046, desc = "=ds=" ..BabbleBoss["The Illidari Council"].." ("..BabbleZone["Black Temple"]..")" }; --Thunderheart Pants
+			[7] = { itemID = 31046, desc = "=ds=" ..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Thunderheart Pants
 			[8] = { itemID = 34572, desc = "=ds=" ..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Thunderheart Footwraps
 		};
 		{
@@ -5678,9 +5728,9 @@ AtlasLoot_Data["T5"] = {
 			[2] = { itemID = 31006, desc = "=ds=" ..BabbleBoss["Mother Shahraz"].." ("..BabbleZone["Black Temple"]..")" }; --Gronnstalker's Spaulders
 			[3] = { itemID = 31004, desc = "=ds=" ..BabbleBoss["Illidan Stormrage"].." ("..BabbleZone["Black Temple"]..")" }; --Gronnstalker's Chestguard
 			[4] = { itemID = 34443, desc = "=ds=" ..BabbleBoss["Kalecgos"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Gronnstalker's Bracers
-			[5] = { itemID = 31001, desc = "=ds=" ..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Gronnstalker's Gloves
+			[5] = { itemID = 31001, desc = "=ds=" ..BabbleBoss["Kalecgos"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Gronnstalker's Gloves
 			[6] = { itemID = 34549, desc = "=ds=" ..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Gronnstalker's Belt
-			[7] = { itemID = 31005, desc = "=ds=" ..BabbleBoss["The Illidari Council"].." ("..BabbleZone["Black Temple"]..")" }; --Gronnstalker's Leggings
+			[7] = { itemID = 31005, desc = "=ds=" ..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Gronnstalker's Leggings
 			[8] = { itemID = 34570, desc = "=ds=" ..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Gronnstalker's Boots
 		};
 		{
@@ -5689,9 +5739,9 @@ AtlasLoot_Data["T5"] = {
 			[2] = { itemID = 31059, desc = "=ds=" ..BabbleBoss["Mother Shahraz"].." ("..BabbleZone["Black Temple"]..")" }; --Mantle of the Tempest
 			[3] = { itemID = 31057, desc = "=ds=" ..BabbleBoss["Illidan Stormrage"].." ("..BabbleZone["Black Temple"]..")" }; --Robes of the Tempest
 			[4] = { itemID = 34447, desc = "=ds=" ..BabbleBoss["Kalecgos"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Bracers of the Tempest
-			[5] = { itemID = 31055, desc = "=ds=" ..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Gloves of the Tempest
+			[5] = { itemID = 31055, desc = "=ds=" ..BabbleBoss["Kalecgos"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Gloves of the Tempest
 			[6] = { itemID = 34557, desc = "=ds=" ..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Belt of the Tempest
-			[7] = { itemID = 31058, desc = "=ds=" ..BabbleBoss["The Illidari Council"].." ("..BabbleZone["Black Temple"]..")" }; --Leggings of the Tempest
+			[7] = { itemID = 31058, desc = "=ds=" ..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Leggings of the Tempest
 			[8] = { itemID = 34574, desc = "=ds=" ..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Boots of the Tempest
 		};
 		{
@@ -5700,9 +5750,9 @@ AtlasLoot_Data["T5"] = {
 			[2] = { itemID = 30998, desc = "=ds=" ..BabbleBoss["Mother Shahraz"].." ("..BabbleZone["Black Temple"]..")" }; --Lightbringer Shoulderguards
 			[3] = { itemID = 30991, desc = "=ds=" ..BabbleBoss["Illidan Stormrage"].." ("..BabbleZone["Black Temple"]..")" }; --Lightbringer Chestguard
 			[4] = { itemID = 34433, desc = "=ds=" ..BabbleBoss["Kalecgos"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Lightbringer Wristguards
-			[5] = { itemID = 30985, desc = "=ds=" ..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Lightbringer Handguards
+			[5] = { itemID = 30985, desc = "=ds=" ..BabbleBoss["Kalecgos"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Lightbringer Handguards
 			[6] = { itemID = 34488, desc = "=ds=" ..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Lightbringer Waistguard
-			[7] = { itemID = 30995, desc = "=ds=" ..BabbleBoss["The Illidari Council"].." ("..BabbleZone["Black Temple"]..")" }; --Lightbringer Legguards
+			[7] = { itemID = 30995, desc = "=ds=" ..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Lightbringer Legguards
 			[8] = { itemID = 34560, desc = "=ds=" ..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Lightbringer Greaves
 		};
 		{
@@ -5711,9 +5761,9 @@ AtlasLoot_Data["T5"] = {
 			[2] = { itemID = 30997, desc = "=ds=" ..BabbleBoss["Mother Shahraz"].." ("..BabbleZone["Black Temple"]..")" }; --Lightbringer Shoulderbraces
 			[3] = { itemID = 30990, desc = "=ds=" ..BabbleBoss["Illidan Stormrage"].." ("..BabbleZone["Black Temple"]..")" }; --Lightbringer Breastplate
 			[4] = { itemID = 34431, desc = "=ds=" ..BabbleBoss["Kalecgos"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Lightbringer Bands
-			[5] = { itemID = 30982, desc = "=ds=" ..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Lightbringer Gauntlets
+			[5] = { itemID = 30982, desc = "=ds=" ..BabbleBoss["Kalecgos"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Lightbringer Gauntlets
 			[6] = { itemID = 34485, desc = "=ds=" ..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Lightbringer Girdle
-			[7] = { itemID = 30993, desc = "=ds=" ..BabbleBoss["The Illidari Council"].." ("..BabbleZone["Black Temple"]..")" }; --Lightbringer Greaves
+			[7] = { itemID = 30993, desc = "=ds=" ..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Lightbringer Greaves
 			[8] = { itemID = 34561, desc = "=ds=" ..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Lightbringer Boots
 		};
 		{
@@ -5722,9 +5772,9 @@ AtlasLoot_Data["T5"] = {
 			[2] = { itemID = 30996, desc = "=ds=" ..BabbleBoss["Mother Shahraz"].." ("..BabbleZone["Black Temple"]..")" }; --Lightbringer Pauldrons
 			[3] = { itemID = 30992, desc = "=ds=" ..BabbleBoss["Illidan Stormrage"].." ("..BabbleZone["Black Temple"]..")" }; --Lightbringer Chestpiece
 			[4] = { itemID = 34432, desc = "=ds=" ..BabbleBoss["Kalecgos"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Lightbringer Bracers
-			[5] = { itemID = 30983, desc = "=ds=" ..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Lightbringer Gloves
+			[5] = { itemID = 30983, desc = "=ds=" ..BabbleBoss["Kalecgos"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Lightbringer Gloves
 			[6] = { itemID = 34487, desc = "=ds=" ..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Lightbringer Belt
-			[7] = { itemID = 30994, desc = "=ds=" ..BabbleBoss["The Illidari Council"].." ("..BabbleZone["Black Temple"]..")" }; --Lightbringer Leggings
+			[7] = { itemID = 30994, desc = "=ds=" ..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Lightbringer Leggings
 			[8] = { itemID = 34559, desc = "=ds=" ..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Lightbringer Treads
 		};
 		{
@@ -5733,9 +5783,9 @@ AtlasLoot_Data["T5"] = {
 			[2] = { itemID = 31069, desc = "=ds=" ..BabbleBoss["Mother Shahraz"].." ("..BabbleZone["Black Temple"]..")" }; --Mantle of Absolution
 			[3] = { itemID = 31066, desc = "=ds=" ..BabbleBoss["Illidan Stormrage"].." ("..BabbleZone["Black Temple"]..")" }; --Vestments of Absolution
 			[4] = { itemID = 34435, desc = "=ds=" ..BabbleBoss["Kalecgos"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Cuffs of Absolution
-			[5] = { itemID = 31060, desc = "=ds=" ..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Gloves of Absolution
+			[5] = { itemID = 31060, desc = "=ds=" ..BabbleBoss["Kalecgos"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Gloves of Absolution
 			[6] = { itemID = 34527, desc = "=ds=" ..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Belt of Absolution
-			[7] = { itemID = 31068, desc = "=ds=" ..BabbleBoss["The Illidari Council"].." ("..BabbleZone["Black Temple"]..")" }; --Breeches of Absolution
+			[7] = { itemID = 31068, desc = "=ds=" ..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Breeches of Absolution
 			[8] = { itemID = 34562, desc = "=ds=" ..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Boots of Absolution
 		};
 		{
@@ -5744,9 +5794,9 @@ AtlasLoot_Data["T5"] = {
 			[2] = { itemID = 31070, desc = "=ds=" ..BabbleBoss["Mother Shahraz"].." ("..BabbleZone["Black Temple"]..")" }; --Shoulderpads of Absolution
 			[3] = { itemID = 31065, desc = "=ds=" ..BabbleBoss["Illidan Stormrage"].." ("..BabbleZone["Black Temple"]..")" }; --Shroud of Absolution
 			[4] = { itemID = 34434, desc = "=ds=" ..BabbleBoss["Kalecgos"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Bracers of Absolution
-			[5] = { itemID = 31061, desc = "=ds=" ..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Handguards of Absolution
+			[5] = { itemID = 31061, desc = "=ds=" ..BabbleBoss["Kalecgos"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Handguards of Absolution
 			[6] = { itemID = 34528, desc = "=ds=" ..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Cord of Absolution
-			[7] = { itemID = 31067, desc = "=ds=" ..BabbleBoss["The Illidari Council"].." ("..BabbleZone["Black Temple"]..")" }; --Leggings of Absolution
+			[7] = { itemID = 31067, desc = "=ds=" ..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Leggings of Absolution
 			[8] = { itemID = 34563, desc = "=ds=" ..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Treads of Absolution
 		};
 		{
@@ -5755,9 +5805,9 @@ AtlasLoot_Data["T5"] = {
 			[2] = { itemID = 31030, desc = "=ds=" ..BabbleBoss["Mother Shahraz"].." ("..BabbleZone["Black Temple"]..")" }; --Slayer's Shoulderpads
 			[3] = { itemID = 31028, desc = "=ds=" ..BabbleBoss["Illidan Stormrage"].." ("..BabbleZone["Black Temple"]..")" }; --Slayer's Chestguard
 			[4] = { itemID = 34448, desc = "=ds=" ..BabbleBoss["Kalecgos"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Slayer's Bracers
-			[5] = { itemID = 31026, desc = "=ds=" ..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Slayer's Handguards
+			[5] = { itemID = 31026, desc = "=ds=" ..BabbleBoss["Kalecgos"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Slayer's Handguards
 			[6] = { itemID = 34558, desc = "=ds=" ..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Slayer's Belt
-			[7] = { itemID = 31029, desc = "=ds=" ..BabbleBoss["The Illidari Council"].." ("..BabbleZone["Black Temple"]..")" }; --Slayer's Legguards
+			[7] = { itemID = 31029, desc = "=ds=" ..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Slayer's Legguards
 			[8] = { itemID = 34575, desc = "=ds=" ..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Slayer's Boots
 		};
 		{
@@ -5766,9 +5816,9 @@ AtlasLoot_Data["T5"] = {
 			[2] = { itemID = 31024, desc = "=ds=" ..BabbleBoss["Mother Shahraz"].." ("..BabbleZone["Black Temple"]..")" }; --Skyshatter Pauldrons
 			[3] = { itemID = 31018, desc = "=ds=" ..BabbleBoss["Illidan Stormrage"].." ("..BabbleZone["Black Temple"]..")" }; --Skyshatter Tunic
 			[4] = { itemID = 34439, desc = "=ds=" ..BabbleBoss["Kalecgos"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Skyshatter Wristguards
-			[5] = { itemID = 31011, desc = "=ds=" ..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Skyshatter Grips
+			[5] = { itemID = 31011, desc = "=ds=" ..BabbleBoss["Kalecgos"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Skyshatter Grips
 			[6] = { itemID = 34545, desc = "=ds=" ..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Skyshatter Girdle
-			[7] = { itemID = 31021, desc = "=ds=" ..BabbleBoss["The Illidari Council"].." ("..BabbleZone["Black Temple"]..")" }; --Skyshatter Pants
+			[7] = { itemID = 31021, desc = "=ds=" ..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Skyshatter Pants
 			[8] = { itemID = 34567, desc = "=ds=" ..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Skyshatter Greaves
 		};
 		{
@@ -5777,9 +5827,9 @@ AtlasLoot_Data["T5"] = {
 			[2] = { itemID = 31022, desc = "=ds=" ..BabbleBoss["Mother Shahraz"].." ("..BabbleZone["Black Temple"]..")" }; --Skyshatter Shoulderpads
 			[3] = { itemID = 31016, desc = "=ds=" ..BabbleBoss["Illidan Stormrage"].." ("..BabbleZone["Black Temple"]..")" }; --Skyshatter Chestguard
 			[4] = { itemID = 34438, desc = "=ds=" ..BabbleBoss["Kalecgos"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Skyshatter Bracers
-			[5] = { itemID = 31007, desc = "=ds=" ..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Skyshatter Gloves
+			[5] = { itemID = 31007, desc = "=ds=" ..BabbleBoss["Kalecgos"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Skyshatter Gloves
 			[6] = { itemID = 34543, desc = "=ds=" ..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Skyshatter Belt
-			[7] = { itemID = 31019, desc = "=ds=" ..BabbleBoss["The Illidari Council"].." ("..BabbleZone["Black Temple"]..")" }; --Skyshatter Leggings
+			[7] = { itemID = 31019, desc = "=ds=" ..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Skyshatter Leggings
 			[8] = { itemID = 34565, desc = "=ds=" ..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Skyshatter Boots
 		};
 		{
@@ -5788,9 +5838,9 @@ AtlasLoot_Data["T5"] = {
 			[2] = { itemID = 31023, desc = "=ds=" ..BabbleBoss["Mother Shahraz"].." ("..BabbleZone["Black Temple"]..")" }; --Skyshatter Mantle
 			[3] = { itemID = 31017, desc = "=ds=" ..BabbleBoss["Illidan Stormrage"].." ("..BabbleZone["Black Temple"]..")" }; --Skyshatter Breastplate
 			[4] = { itemID = 34437, desc = "=ds=" ..BabbleBoss["Kalecgos"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Skyshatter Bands
-			[5] = { itemID = 31008, desc = "=ds=" ..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Skyshatter Gauntlets
+			[5] = { itemID = 31008, desc = "=ds=" ..BabbleBoss["Kalecgos"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Skyshatter Gauntlets
 			[6] = { itemID = 34542, desc = "=ds=" ..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Skyshatter Cord
-			[7] = { itemID = 31020, desc = "=ds=" ..BabbleBoss["The Illidari Council"].." ("..BabbleZone["Black Temple"]..")" }; --Skyshatter Legguards
+			[7] = { itemID = 31020, desc = "=ds=" ..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Skyshatter Legguards
 			[8] = { itemID = 34566, desc = "=ds=" ..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Skyshatter Treads
 		};
 		{
@@ -5799,9 +5849,9 @@ AtlasLoot_Data["T5"] = {
 			[2] = { itemID = 31054, desc = "=ds=" ..BabbleBoss["Mother Shahraz"].." ("..BabbleZone["Black Temple"]..")" }; --Mantle of the Malefic
 			[3] = { itemID = 31052, desc = "=ds=" ..BabbleBoss["Illidan Stormrage"].." ("..BabbleZone["Black Temple"]..")" }; --Robe of the Malefic
 			[4] = { itemID = 34436, desc = "=ds=" ..BabbleBoss["Kalecgos"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Bracers of the Malefic
-			[5] = { itemID = 31050, desc = "=ds=" ..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Gloves of the Malefic
+			[5] = { itemID = 31050, desc = "=ds=" ..BabbleBoss["Kalecgos"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Gloves of the Malefic
 			[6] = { itemID = 34541, desc = "=ds=" ..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Belt of the Malefic
-			[7] = { itemID = 31053, desc = "=ds=" ..BabbleBoss["The Illidari Council"].." ("..BabbleZone["Black Temple"]..")" }; --Leggings of the Malefic
+			[7] = { itemID = 31053, desc = "=ds=" ..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Leggings of the Malefic
 			[8] = { itemID = 34564, desc = "=ds=" ..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Boots of the Malefic
 		};
 		{
@@ -5810,9 +5860,9 @@ AtlasLoot_Data["T5"] = {
 			[2] = { itemID = 30980, desc = "=ds=" ..BabbleBoss["Mother Shahraz"].." ("..BabbleZone["Black Temple"]..")" }; --Onslaught Shoulderguards
 			[3] = { itemID = 30976, desc = "=ds=" ..BabbleBoss["Illidan Stormrage"].." ("..BabbleZone["Black Temple"]..")" }; --Onslaught Chestguard
 			[4] = { itemID = 34442, desc = "=ds=" ..BabbleBoss["Kalecgos"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Onslaught Wristguards
-			[5] = { itemID = 30970, desc = "=ds=" ..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Onslaught Handguards
+			[5] = { itemID = 30970, desc = "=ds=" ..BabbleBoss["Kalecgos"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Onslaught Handguards
 			[6] = { itemID = 34547, desc = "=ds=" ..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Onslaught Waistguard
-			[7] = { itemID = 30978, desc = "=ds=" ..BabbleBoss["The Illidari Council"].." ("..BabbleZone["Black Temple"]..")" }; --Onslaught Legguards
+			[7] = { itemID = 30978, desc = "=ds=" ..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Onslaught Legguards
 			[8] = { itemID = 34568, desc = "=ds=" ..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Onslaught Boots
 		};
 		{
@@ -5821,9 +5871,9 @@ AtlasLoot_Data["T5"] = {
 			[2] = { itemID = 30979, desc = "=ds=" ..BabbleBoss["Mother Shahraz"].." ("..BabbleZone["Black Temple"]..")" }; --Onslaught Shoulderblades
 			[3] = { itemID = 30975, desc = "=ds=" ..BabbleBoss["Illidan Stormrage"].." ("..BabbleZone["Black Temple"]..")" }; --Onslaught Breastplate
 			[4] = { itemID = 34441, desc = "=ds=" ..BabbleBoss["Kalecgos"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Onslaught Bracers
-			[5] = { itemID = 30969, desc = "=ds=" ..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Onslaught Gauntlets
+			[5] = { itemID = 30969, desc = "=ds=" ..BabbleBoss["Kalecgos"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Onslaught Gauntlets
 			[6] = { itemID = 34546, desc = "=ds=" ..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Onslaught Belt
-			[7] = { itemID = 30977, desc = "=ds=" ..BabbleBoss["The Illidari Council"].." ("..BabbleZone["Black Temple"]..")" }; --Onslaught Greaves
+			[7] = { itemID = 30977, desc = "=ds=" ..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Onslaught Greaves
 			[8] = { itemID = 34569, desc = "=ds=" ..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Onslaught Treads
 		};
 	};
@@ -6265,6 +6315,14 @@ AtlasLoot_ExtraData[34846] = {
 	[10] = {itemID = 32229 };
 	[11] = {itemID = 32228 };
 	[12] = {itemID = 32227 };
+};
+
+AtlasLoot_ExtraData[222637] = {
+	[1] = { itemID = 229194 }; --The Krakmon Wand
+	[2] = { itemID = 229193 }; --Massacre Cloak
+	[3] = { itemID = 229196 }; --Throat Crushers
+	[4] = { itemID = 229192 }; --Seal of the Amani'shi Berserker
+	[5] = { itemID = 229195 }; --Staff of Blazing Glory
 };
 
 AtlasLoot_ExtraData[229739] = {

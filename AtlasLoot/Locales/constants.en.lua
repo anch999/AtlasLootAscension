@@ -4240,6 +4240,9 @@ if AL then
 	AL["Zurai"] = true
 	AL["Zurii"] = true
 	AL["Hide minimap icon"] = true
+	AL["Enchants"] = true
+	AL["Head Enchants"] = true
+	AL["Chromius"] = true
 
 	-- Subzones
 	AL["The Headmaster's Study"] = true
