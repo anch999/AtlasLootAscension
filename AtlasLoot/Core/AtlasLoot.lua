@@ -797,9 +797,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 		itemButton.quest = dataSource[dataID][tablenum][i].quest or nil
 		itemButton.item = dataSource[dataID][tablenum][i]
 
-		if (dataID == "SearchResult" or dataSource_backup == "AtlasLoot_CurrentWishList") and dataSource[dataID][tablenum][i].lootTable then
-			itemButton.sourcePage = dataSource[dataID][tablenum][i].lootTable
-		elseif dataSource[dataID][tablenum][i].lootTable then
+		if dataSource[dataID][tablenum][i].lootTable then
 			itemButton.sourcePage = dataSource[dataID][tablenum][i].lootTable
 		else
 			itemButton.sourcePage = nil
@@ -866,14 +864,10 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 			AtlasLootItemsFrame.refreshOri = {dataID, dataSource_backup, tablenum}
 		end
 
-        AtlasLootItemsFrame.refresh = {dataID, dataSource_backup, tablenum}
-
-		if dataID ~= "FilterList" then
-			AtlasLootItemsFrame.refreshFilter = {dataID, dataSource_backup, tablenum}
-		end
-
-		if dataID ~= "FilterList"  and dataSource[dataID].Back ~= true and dataID ~= "EmptyTable" then
-			AtlasLootItemsFrame.refreshOri = {dataID, dataSource_backup, tablenum}
+		if dataID == "SearchResult" then
+			AtlasLootItemsFrame.refreshSearch = {dataID, dataSource_backup, tablenum}
+		elseif not _G["AtlasLootItemsFrame_BACK"]:IsVisible() then
+			AtlasLootItemsFrame.refreshSearch = nil
 		end
 
 		if dataSource_backup ~= "AtlasLoot_CurrentWishList" and dataID ~= "FilterList"  and dataSource[dataID].Back ~= true and dataID ~= "EmptyTable" then
@@ -958,8 +952,10 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 	if AtlasLoot.filterEnable and dataID ~= "FilterList" then
 		AtlasLoot:HideFilteredItems()
 	end
-	--preload items from the rest of the instance table
-	AtlasLoot:PreLoadLootTable(dataSource, dataID, ItemindexID)
+	if dataID ~= "SearchResult" then
+		--preload items from the rest of the instance table
+		AtlasLoot:PreLoadLootTable(dataSource, dataID, ItemindexID)
+	end
 end
 
 -- List of Moduel Names

@@ -608,17 +608,6 @@ local function ParseQuery(searchText)
     return terms
 end
 
-local function GetSpellName(itemId, atlasName)
-    local spellName = GetSpellInfo(string.sub(itemId, 2))
-    if spellName then
-        return spellName
-    elseif (string.sub(atlasName, 1, 2) == "=d") then
-        return gsub(atlasName, "=ds=", "")
-    else
-        return gsub(atlasName, "=q%d=", "")
-    end
-end
-
 local function DoSearch(searchText)
     AtlasLootCharDB["SearchResult"] = {Name = "Search Result" , Type = "Search", Back = true}
     AtlasLootCharDB.LastSearchedText = searchText
@@ -628,57 +617,66 @@ local function DoSearch(searchText)
     local searchTerms = ParseQuery(searchText)
     local equipableFilterOn = AtlasLoot.db.profile.EquipableFilter
 
-    local function GetItemDetails(itemId, atlasName)
+    local function GetItemDetails(itemId)
         -- Name, Link, Quality(num), iLvl(num), minLvl(num), itemType(localized string), itemSubType(localized string), stackCount(num), itemEquipLoc(enum), texture(link to a local file), displayId(num)
         local itemName, _, itemQuality, itemLvl, minLvl, _, itemSubType, _, itemEquipLoc = GetItemInfo(itemId)
-        if not itemName then
-            itemName = gsub(atlasName, "=q%d=", "")
-        end
         return itemName, itemQuality, itemLvl, minLvl, itemEquipLoc, itemSubType, GetItemStats("item:" .. itemId)
     end
 
-    local function AddItemToSearchResult(itemId, itemType, itemName, dataID, itemIdBackup, difCap, dataPage)
-        local lootPage = AtlasLoot_Data[dataID].Name or "Argh!"
+    local function AddItemToSearchResult(item, dataSource, dataID, tableNum)
         if AtlasLootCharDB["SearchResult"][tablenum] == nil then
             AtlasLootCharDB["SearchResult"][tablenum] = {Name = "Page "..tablenum}
         end
-        table.insert(AtlasLootCharDB["SearchResult"][tablenum], {(count % 30) + 1, itemId, itemType, itemName, lootPage, "", "", dataID .. "|" .. "AtlasLoot_Data" .. "|" .. tostring(dataPage), itemIdBackup, [AtlasLoot_Difficulty.MAX_DIF] = difCap})
+        local tableCopy = AtlasLoot:CloneTable(item)
+        tinsert(AtlasLootCharDB["SearchResult"][tablenum], tableCopy)
+        local tNum = #AtlasLootCharDB["SearchResult"][tablenum]
+        AtlasLootCharDB["SearchResult"][tablenum][tNum].lootTable = {{dataID, dataSource, tableNum}, "Source"}
+        AtlasLootCharDB["SearchResult"][tablenum][tNum][1] = (count % 30) + 1
         count = count + 1
         if (count) % 30 == 0 then
-            tablenum = tablenum + 1  
+            tablenum = tablenum + 1
         end
     end
 
     for dataID, data in pairs(AtlasLoot_Data) do
-        for dataPage, t in ipairs(data) do
+        for tableNum, t in ipairs(data) do
             for _, v in ipairs(t) do
                 if type(v) == "table" then
-                    local _, itemId, itemType, atlasName = unpack(v)
-                    if type(itemId) == "number" and itemId > 0 then
-                        local itemIdBackup = itemId
-                        if #searchTerms == 1 and searchTerms[1].name then
-                            if nameMatches(atlasName, searchTerms[1].name) then
-                                AddItemToSearchResult(itemId, itemType, atlasName, dataID, itemIdBackup, AtlasLoot_Difficulty:getMaxDifficulty(data.Type), dataPage)
-                            end
-                        else
-                            local difficultyCap = min(AtlasLoot_Difficulty:getMaxDifficulty(data.Type), ItemindexID)
-                            itemId = AtlasLoot:FindId(itemId, difficultyCap, data.Type) or 2
+                    local itemID = v.itemID
+                    local spellID = v.spellID
+                    if spellID then
+                    local spellName = GetSpellInfo(spellID)
+                        if nameMatches(spellName, searchText) then
+                            AddItemToSearchResult(v, "AtlasLoot_Data", dataID, tableNum)
+                        end
+                    elseif itemID then
+                        local difficultyCap = min(AtlasLoot_Difficulty:getMaxDifficulty(data.Type), ItemindexID)
+                        itemID = AtlasLoot:FindId(itemID, difficultyCap, data.Type) or 2
 
-                            local item = Item:CreateFromID(itemId)
-
-                            item:ContinueOnLoad(function()
-                                local itemDetails = {GetItemDetails(item.itemID, atlasName)}
+                        local item = Item:CreateFromID(itemID)
+                        if itemID and not item:GetInfo() then
+                            AtlasLoot:ItemsLoading(1)
+                            item:ContinueOnLoad(function(itemID)
+                                AtlasLoot:ItemsLoading(-1)
+                                local itemDetails = {GetItemDetails(item.itemID)}
                                 if ItemMatchesAllTerms(searchTerms, itemDetails) then
-                                    AddItemToSearchResult(itemId, itemType, atlasName, dataID, itemIdBackup, AtlasLoot_Difficulty:getMaxDifficulty(data.Type), dataPage)
+                                    AddItemToSearchResult(v, "AtlasLoot_Data", dataID, tableNum)
+                                    AtlasLoot:ShowItemsFrame(AtlasLootItemsFrame.refresh[1], AtlasLootItemsFrame.refresh[2], AtlasLootItemsFrame.refresh[3])
                                 end
                             end)
-                        end
-                    elseif not equipableFilterOn and itemId and itemId ~= "" and string.sub(itemId, 1, 1) == "s" then
-                        local spellName = GetSpellName(itemId, atlasName)
-                        if nameMatches(spellName, searchText) then
-                            spellName = string.sub(atlasName, 1, 4) .. spellName
-                            AddItemToSearchResult(itemId, itemType, spellName, dataID, itemIdBackup, AtlasLoot_Difficulty:getMaxDifficulty(data.Type), dataPage)
-                        end
+                        else
+                            local itemDetails = {GetItemDetails(item.itemID)}
+                            if ItemMatchesAllTerms(searchTerms, itemDetails) then
+                                AddItemToSearchResult(v, "AtlasLoot_Data", dataID, tableNum)
+                            end
+                        end 
+
+--[[                         local itemName = GetItemDetails(itemID)
+                        if #searchTerms == 1 and searchTerms[1].name then
+                            if nameMatches(itemName, searchTerms[1].name) then
+                                AddItemToSearchResult(v)
+                            end
+                        end ]]
                     end
                 end
             end
@@ -723,8 +721,9 @@ function AtlasLoot:Search(Text)
         end
     end
 
-    local success, message = pcall(DoSearch, Text)
-
+    DoSearch(Text)
+    --local success, message = pcall(DoSearch, Text)
+    local success = true
     if not success then
         message = message:match("[^:]+: (.*)") or message -- strip stack location
         DEFAULT_CHAT_FRAME:AddMessage(RED .. AL["AtlasLoot"] .. ": " .. WHITE .. message)

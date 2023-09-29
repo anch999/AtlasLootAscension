@@ -3163,25 +3163,35 @@ AtlasLoot_Data["TheStockade"] = {
 	{
 		Name = BabbleBoss["Targorr the Dread"];
 		[1] = { itemID = 3630, droprate = "100%" }; --Head of Targorr
+		[3] = { itemID = 56971, droprate = "1%" }; --Pet Sigil
 	};
 	{
 		Name = BabbleBoss["Kam Deepfury"];
 		[1] = { itemID = 2280, droprate = "0.62%" }; --Kam's Walking Stick
 		[2] = { itemID = 3640, droprate = "100%" }; --Head of Deepfury
+		[4] = { itemID = 56970, droprate = "1%" }; --Pet Sigil
 	};
 	{
 		Name = BabbleBoss["Bazil Thredd"];
 		[1] = { itemID = 2926, droprate = "100%" }; --Head of Bazil Thredd
+		[3] = { itemID = 56972, droprate = "1%" }; --Pet Sigil
+	};
+	{
+		Name = BabbleBoss["Hamhock"];
+		[1] = { itemID = 2926, droprate = "100%" }; --Head of Bazil Thredd
+		[3] = { itemID = 56973, droprate = "1%" }; --Pet Sigil
 	};
 	{
 		Name = BabbleBoss["Dextren Ward"];
 		[1] = { itemID = 3628, droprate = "100%" }; --Hand of Dextren Ward
+		[3] = { itemID = 56969, droprate = "1%" }; --Pet Sigil
 	};
 	{
 		Name = BabbleBoss["Bruegal Ironknuckle"];
 		[1] = { itemID = 3228, droprate = "54.73%" }; --Jimmied Handcuffs
 		[2] = { itemID = 2942, droprate = "18.18%" }; --Iron Knuckles
 		[3] = { itemID = 2941, droprate = "16.05%" }; --Prison Shank
+		[5] = { itemID = 56974, droprate = "1%" }; --Pet Sigil
 	};
 	{
 		Name = "Quest Item's";
@@ -4485,7 +4495,7 @@ AtlasLoot_Data["T2"] = {
 		[2] = { itemID = 16902, desc = "=ds=" .. BabbleBoss["Chromaggus"] };--Stormrage Pauldrons
 		[3] = { itemID = 16897, desc = "=ds=" .. BabbleBoss["Nefarian"] };--Stormrage Chestguard
 		[4] = { itemID = 16904, desc = "=ds=" .. BabbleBoss["Razorgore the Untamed"] };--Stormrage Bracers
-		[5] = { itemID = 16899 .. BabbleBoss["Firemaw"] .. ", " .. BabbleBoss["Ebonroc"] .. ", " .. BabbleBoss["Flamegor"] };--Stormrage Handguards
+		[5] = { itemID = 16899, desc = BabbleBoss["Firemaw"] .. ", " .. BabbleBoss["Ebonroc"] .. ", " .. BabbleBoss["Flamegor"] };--Stormrage Handguards
 		[6] = { itemID = 16903, desc = "=ds=" .. BabbleBoss["Vaelastrasz the Corrupt"] };--Stormrage Belt
 		[7] = { itemID = 16901, desc = "=ds=" .. BabbleBoss["Ragnaros"] };--Stormrage Legguards
 		[8] = { itemID = 16898, desc = "=ds=" .. BabbleBoss["Broodlord Lashlayer"] };--Stormrage Boots
@@ -4496,7 +4506,7 @@ AtlasLoot_Data["T2"] = {
 		[2] = { itemID = 1516902, desc = "=ds=" .. BabbleBoss["Chromaggus"] };--Stormrage Pauldrons
 		[3] = { itemID = 1516897, desc = "=ds=" .. BabbleBoss["Nefarian"] };--Stormrage Chestguard
 		[4] = { itemID = 1516904, desc = "=ds=" .. BabbleBoss["Razorgore the Untamed"] };--Stormrage Bracers
-		[5] = { itemID = 1516904 .. BabbleBoss["Firemaw"] .. ", " .. BabbleBoss["Ebonroc"] .. ", " .. BabbleBoss["Flamegor"] };--Stormrage Handguards
+		[5] = { itemID = 1516904, desc = BabbleBoss["Firemaw"] .. ", " .. BabbleBoss["Ebonroc"] .. ", " .. BabbleBoss["Flamegor"] };--Stormrage Handguards
 		[6] = { itemID = 1516899, desc = "=ds=" .. BabbleBoss["Vaelastrasz the Corrupt"] };--Stormrage Belt
 		[7] = { itemID = 1516903, desc = "=ds=" .. BabbleBoss["Ragnaros"] };--Stormrage Legguards
 		[8] = { itemID = 1516898, desc = "=ds=" .. BabbleBoss["Broodlord Lashlayer"] };--Stormrage Boots
@@ -4507,7 +4517,7 @@ AtlasLoot_Data["T2"] = {
 		[2] = { itemID = 1516894, desc = "=ds=" .. BabbleBoss["Chromaggus"] };--Stormrage Pauldrons
 		[3] = { itemID = 1516889, desc = "=ds=" .. BabbleBoss["Nefarian"] };--Stormrage Chestguard
 		[4] = { itemID = 1516896, desc = "=ds=" .. BabbleBoss["Razorgore the Untamed"] };--Stormrage Bracers
-		[5] = { itemID = 1516891 .. BabbleBoss["Firemaw"] .. ", " .. BabbleBoss["Ebonroc"] .. ", " .. BabbleBoss["Flamegor"] };--Stormrage Handguards
+		[5] = { itemID = 1516891, desc = BabbleBoss["Firemaw"] .. ", " .. BabbleBoss["Ebonroc"] .. ", " .. BabbleBoss["Flamegor"] };--Stormrage Handguards
 		[6] = { itemID = 1516895, desc = "=ds=" .. BabbleBoss["Vaelastrasz the Corrupt"] };--Stormrage Belt
 		[7] = { itemID = 1516893, desc = "=ds=" .. BabbleBoss["Ragnaros"] };--Stormrage Legguards
 		[8] = { itemID = 1516890, desc = "=ds=" .. BabbleBoss["Broodlord Lashlayer"] };--Stormrage Boots
@@ -4518,7 +4528,7 @@ AtlasLoot_Data["T2"] = {
 		[2] = { itemID = 16937, desc = "=ds=" .. BabbleBoss["Chromaggus"] };--Dragonstalker's Spaulders
 		[3] = { itemID = 16942, desc = "=ds=" .. BabbleBoss["Nefarian"] };--Dragonstalker's Breastplate
 		[4] = { itemID = 16935, desc = "=ds=" .. BabbleBoss["Razorgore the Untamed"] };--Dragonstalker's Bracers
-		[5] = { itemID = 16940 .. BabbleBoss["Firemaw"] .. ", " .. BabbleBoss["Ebonroc"] .. ", " .. BabbleBoss["Flamegor"] };--Dragonstalker's Gauntlets
+		[5] = { itemID = 16940, desc = BabbleBoss["Firemaw"] .. ", " .. BabbleBoss["Ebonroc"] .. ", " .. BabbleBoss["Flamegor"] };--Dragonstalker's Gauntlets
 		[6] = { itemID = 16936, desc = "=ds=" .. BabbleBoss["Vaelastrasz the Corrupt"] };--Dragonstalker's Belt
 		[7] = { itemID = 16938, desc = "=ds=" .. BabbleBoss["Ragnaros"] };--Dragonstalker's Legguards
 		[8] = { itemID = 16941, desc = "=ds=" .. BabbleBoss["Broodlord Lashlayer"] };--Dragonstalker's Greaves
@@ -4529,7 +4539,7 @@ AtlasLoot_Data["T2"] = {
 		[2] = { itemID = 16917, desc = "=ds=" .. BabbleBoss["Chromaggus"] };--Netherwind Mantle
 		[3] = { itemID = 16916, desc = "=ds=" .. BabbleBoss["Nefarian"] };--Netherwind Robes
 		[4] = { itemID = 16918, desc = "=ds=" .. BabbleBoss["Razorgore the Untamed"] };--Netherwind Bindings
-		[5] = { itemID = 16913 .. BabbleBoss["Firemaw"] .. ", " .. BabbleBoss["Ebonroc"] .. ", " .. BabbleBoss["Flamegor"] };--Netherwind Gloves
+		[5] = { itemID = 16913, desc = BabbleBoss["Firemaw"] .. ", " .. BabbleBoss["Ebonroc"] .. ", " .. BabbleBoss["Flamegor"] };--Netherwind Gloves
 		[6] = { itemID = 16818, desc = "=ds=" .. BabbleBoss["Vaelastrasz the Corrupt"] };--Netherwind Belt
 		[7] = { itemID = 16915, desc = "=ds=" .. BabbleBoss["Ragnaros"] };--Netherwind Pants
 		[8] = { itemID = 16912, desc = "=ds=" .. BabbleBoss["Broodlord Lashlayer"] };--Netherwind Boots
@@ -4540,7 +4550,7 @@ AtlasLoot_Data["T2"] = {
 		[2] = { itemID = 16953, desc = "=ds=" .. BabbleBoss["Chromaggus"] };--Judgement Spaulders
 		[3] = { itemID = 16958, desc = "=ds=" .. BabbleBoss["Nefarian"] };--Judgement Breastplate
 		[4] = { itemID = 16951, desc = "=ds=" .. BabbleBoss["Razorgore the Untamed"] };--Judgement Bindings
-		[5] = { itemID = 16956 .. BabbleBoss["Firemaw"] .. ", " .. BabbleBoss["Ebonroc"] .. ", " .. BabbleBoss["Flamegor"] };--Judgement Gauntlets
+		[5] = { itemID = 16956, desc = BabbleBoss["Firemaw"] .. ", " .. BabbleBoss["Ebonroc"] .. ", " .. BabbleBoss["Flamegor"] };--Judgement Gauntlets
 		[6] = { itemID = 16952, desc = "=ds=" .. BabbleBoss["Vaelastrasz the Corrupt"] };--Judgement Belt
 		[7] = { itemID = 16954, desc = "=ds=" .. BabbleBoss["Ragnaros"] };--Judgement Legplates
 		[8] = { itemID = 16957, desc = "=ds=" .. BabbleBoss["Broodlord Lashlayer"] };--Judgement Sabatons
@@ -4551,7 +4561,7 @@ AtlasLoot_Data["T2"] = {
 		[2] = { itemID = 1516953, desc = "=ds=" .. BabbleBoss["Chromaggus"] };--Judgement Spaulders
 		[3] = { itemID = 1516958, desc = "=ds=" .. BabbleBoss["Nefarian"] };--Judgement Breastplate
 		[4] = { itemID = 1516951, desc = "=ds=" .. BabbleBoss["Razorgore the Untamed"] };--Judgement Bindings
-		[5] = { itemID = 1516956 .. BabbleBoss["Firemaw"] .. ", " .. BabbleBoss["Ebonroc"] .. ", " .. BabbleBoss["Flamegor"] };--Judgement Gauntlets
+		[5] = { itemID = 1516956, desc = BabbleBoss["Firemaw"] .. ", " .. BabbleBoss["Ebonroc"] .. ", " .. BabbleBoss["Flamegor"] };--Judgement Gauntlets
 		[6] = { itemID = 1516952, desc = "=ds=" .. BabbleBoss["Vaelastrasz the Corrupt"] };--Judgement Belt
 		[7] = { itemID = 1516954, desc = "=ds=" .. BabbleBoss["Ragnaros"] };--Judgement Legplates
 		[8] = { itemID = 1516957, desc = "=ds=" .. BabbleBoss["Broodlord Lashlayer"] };--Judgement Sabatons
@@ -4562,7 +4572,7 @@ AtlasLoot_Data["T2"] = {
 		[2] = { itemID = 16924, desc = "=ds=" .. BabbleBoss["Chromaggus"] };--Pauldrons of Transcendence
 		[3] = { itemID = 16923, desc = "=ds=" .. BabbleBoss["Nefarian"] };--Robes of Transcendence
 		[4] = { itemID = 16926, desc = "=ds=" .. BabbleBoss["Razorgore the Untamed"] };--Bindings of Transcendence
-		[5] = { itemID = 16920 .. BabbleBoss["Firemaw"] .. ", " .. BabbleBoss["Ebonroc"] .. ", " .. BabbleBoss["Flamegor"] };--Handguards of Transcendence
+		[5] = { itemID = 16920, desc = BabbleBoss["Firemaw"] .. ", " .. BabbleBoss["Ebonroc"] .. ", " .. BabbleBoss["Flamegor"] };--Handguards of Transcendence
 		[6] = { itemID = 16925, desc = "=ds=" .. BabbleBoss["Vaelastrasz the Corrupt"] };--Belt of Transcendence
 		[7] = { itemID = 16922, desc = "=ds=" .. BabbleBoss["Ragnaros"] };--Leggings of Transcendence
 		[8] = { itemID = 16919, desc = "=ds=" .. BabbleBoss["Broodlord Lashlayer"] };--Boots of Transcendence
@@ -4573,7 +4583,7 @@ AtlasLoot_Data["T2"] = {
 		[2] = { itemID = 1516924, desc = "=ds=" .. BabbleBoss["Chromaggus"] };--Pauldrons of Transcendence
 		[3] = { itemID = 1516923, desc = "=ds=" .. BabbleBoss["Nefarian"] };--Robes of Transcendence
 		[4] = { itemID = 1516926, desc = "=ds=" .. BabbleBoss["Razorgore the Untamed"] };--Bindings of Transcendence
-		[5] = { itemID = 1516920 .. BabbleBoss["Firemaw"] .. ", " .. BabbleBoss["Ebonroc"] .. ", " .. BabbleBoss["Flamegor"] };--Handguards of Transcendence
+		[5] = { itemID = 1516920, desc = BabbleBoss["Firemaw"] .. ", " .. BabbleBoss["Ebonroc"] .. ", " .. BabbleBoss["Flamegor"] };--Handguards of Transcendence
 		[6] = { itemID = 1516925, desc = "=ds=" .. BabbleBoss["Vaelastrasz the Corrupt"] };--Belt of Transcendence
 		[7] = { itemID = 1516922, desc = "=ds=" .. BabbleBoss["Ragnaros"] };--Leggings of Transcendence
 		[8] = { itemID = 1516919, desc = "=ds=" .. BabbleBoss["Broodlord Lashlayer"] };--Boots of Transcendence
@@ -4584,7 +4594,7 @@ AtlasLoot_Data["T2"] = {
 		[2] = { itemID = 16832, desc = "=ds=" .. BabbleBoss["Chromaggus"] };--Bloodfang Spaulders
 		[3] = { itemID = 16905, desc = "=ds=" .. BabbleBoss["Nefarian"] };--Bloodfang Chestpiece
 		[4] = { itemID = 16911, desc = "=ds=" .. BabbleBoss["Razorgore the Untamed"] };--Bloodfang Bracers
-		[5] = { itemID = 16907 .. BabbleBoss["Firemaw"] .. ", " .. BabbleBoss["Ebonroc"] .. ", " .. BabbleBoss["Flamegor"] };--Bloodfang Gloves
+		[5] = { itemID = 16907, desc = BabbleBoss["Firemaw"] .. ", " .. BabbleBoss["Ebonroc"] .. ", " .. BabbleBoss["Flamegor"] };--Bloodfang Gloves
 		[6] = { itemID = 16910, desc = "=ds=" .. BabbleBoss["Vaelastrasz the Corrupt"] };--Bloodfang Belt
 		[7] = { itemID = 16909, desc = "=ds=" .. BabbleBoss["Ragnaros"] };--Bloodfang Pants
 		[8] = { itemID = 16906, desc = "=ds=" .. BabbleBoss["Broodlord Lashlayer"] };--Bloodfang Boots
@@ -4595,7 +4605,7 @@ AtlasLoot_Data["T2"] = {
 		[2] = { itemID = 16945, desc = "=ds=" .. BabbleBoss["Chromaggus"] };--Epaulets of Ten Storms
 		[3] = { itemID = 16950, desc = "=ds=" .. BabbleBoss["Nefarian"] };--Breastplate of Ten Storms
 		[4] = { itemID = 16943, desc = "=ds=" .. BabbleBoss["Razorgore the Untamed"] };--Bracers of Ten Storms
-		[5] = { itemID = 16948 .. BabbleBoss["Firemaw"] .. ", " .. BabbleBoss["Ebonroc"] .. ", " .. BabbleBoss["Flamegor"] };--Gauntlets of Ten Storms
+		[5] = { itemID = 16948, desc = BabbleBoss["Firemaw"] .. ", " .. BabbleBoss["Ebonroc"] .. ", " .. BabbleBoss["Flamegor"] };--Gauntlets of Ten Storms
 		[6] = { itemID = 16944, desc = "=ds=" .. BabbleBoss["Vaelastrasz the Corrupt"] };--Belt of Ten Storms
 		[7] = { itemID = 16946, desc = "=ds=" .. BabbleBoss["Ragnaros"] };--Legplates of Ten Storms
 		[8] = { itemID = 16949, desc = "=ds=" .. BabbleBoss["Broodlord Lashlayer"] };--Greaves of Ten Storms
@@ -4606,7 +4616,7 @@ AtlasLoot_Data["T2"] = {
 		[2] = { itemID = 1516945, desc = "=ds=" .. BabbleBoss["Chromaggus"] };--Epaulets of Ten Storms
 		[3] = { itemID = 1516950, desc = "=ds=" .. BabbleBoss["Nefarian"] };--Breastplate of Ten Storms
 		[4] = { itemID = 1516943, desc = "=ds=" .. BabbleBoss["Razorgore the Untamed"] };--Bracers of Ten Storms
-		[5] = { itemID = 1516948 .. BabbleBoss["Firemaw"] .. ", " .. BabbleBoss["Ebonroc"] .. ", " .. BabbleBoss["Flamegor"] };--Gauntlets of Ten Storms
+		[5] = { itemID = 1516948, desc = BabbleBoss["Firemaw"] .. ", " .. BabbleBoss["Ebonroc"] .. ", " .. BabbleBoss["Flamegor"] };--Gauntlets of Ten Storms
 		[6] = { itemID = 1516944, desc = "=ds=" .. BabbleBoss["Vaelastrasz the Corrupt"] };--Belt of Ten Storms
 		[7] = { itemID = 1516946, desc = "=ds=" .. BabbleBoss["Ragnaros"] };--Legplates of Ten Storms
 		[8] = { itemID = 1516949, desc = "=ds=" .. BabbleBoss["Broodlord Lashlayer"] };--Greaves of Ten Storms
@@ -4617,7 +4627,7 @@ AtlasLoot_Data["T2"] = {
 		[2] = { itemID = 16932, desc = "=ds=" .. BabbleBoss["Chromaggus"] };--Nemesis Spaulders
 		[3] = { itemID = 16931, desc = "=ds=" .. BabbleBoss["Nefarian"] };--Nemesis Robes
 		[4] = { itemID = 16934, desc = "=ds=" .. BabbleBoss["Razorgore the Untamed"] };--Nemesis Bracers
-		[5] = { itemID = 16928 .. BabbleBoss["Firemaw"] .. ", " .. BabbleBoss["Ebonroc"] .. ", " .. BabbleBoss["Flamegor"] };--Nemesis Gloves
+		[5] = { itemID = 16928, desc = BabbleBoss["Firemaw"] .. ", " .. BabbleBoss["Ebonroc"] .. ", " .. BabbleBoss["Flamegor"] };--Nemesis Gloves
 		[6] = { itemID = 16933, desc = "=ds=" .. BabbleBoss["Vaelastrasz the Corrupt"] };--Nemesis Belt
 		[7] = { itemID = 16930, desc = "=ds=" .. BabbleBoss["Ragnaros"] };--Nemesis Leggings
 		[8] = { itemID = 16927, desc = "=ds=" .. BabbleBoss["Broodlord Lashlayer"] };--Nemesis Boots
@@ -4628,7 +4638,7 @@ AtlasLoot_Data["T2"] = {
 		[2] = { itemID = 10902, desc = "=ds=" .. BabbleBoss["Chromaggus"] };--Shoulderpads of Wrath
 		[3] = { itemID = 10907, desc = "=ds=" .. BabbleBoss["Nefarian"] };--Chestplate of Wrath
 		[4] = { itemID = 10900, desc = "=ds=" .. BabbleBoss["Razorgore the Untamed"] };--Wristguards of Wrath
-		[5] = { itemID = 10905 .. BabbleBoss["Firemaw"] .. ", " .. BabbleBoss["Ebonroc"] .. ", " .. BabbleBoss["Flamegor"] };--Grippers of Wrath
+		[5] = { itemID = 10905, desc = BabbleBoss["Firemaw"] .. ", " .. BabbleBoss["Ebonroc"] .. ", " .. BabbleBoss["Flamegor"] };--Grippers of Wrath
 		[6] = { itemID = 10901, desc = "=ds=" .. BabbleBoss["Vaelastrasz the Corrupt"] };--Belt of Wrath
 		[7] = { itemID = 10903, desc = "=ds=" .. BabbleBoss["Ragnaros"] };--Legguards of Wrath
 		[8] = { itemID = 10906, desc = "=ds=" .. BabbleBoss["Broodlord Lashlayer"] };--Stompers of Wrath
@@ -4639,7 +4649,7 @@ AtlasLoot_Data["T2"] = {
 		[2] = { itemID = 16961, desc = "=ds=" .. BabbleBoss["Chromaggus"] };--Pauldrons of Wrath
 		[3] = { itemID = 16966, desc = "=ds=" .. BabbleBoss["Nefarian"] };--Breastplate of Wrath
 		[4] = { itemID = 16959, desc = "=ds=" .. BabbleBoss["Razorgore the Untamed"] };--Bracelets of Wrath
-		[5] = { itemID = 16964 .. BabbleBoss["Firemaw"] .. ", " .. BabbleBoss["Ebonroc"] .. ", " .. BabbleBoss["Flamegor"] };--Gauntlets of Wrath
+		[5] = { itemID = 16964, desc = BabbleBoss["Firemaw"] .. ", " .. BabbleBoss["Ebonroc"] .. ", " .. BabbleBoss["Flamegor"] };--Gauntlets of Wrath
 		[6] = { itemID = 16960, desc = "=ds=" .. BabbleBoss["Vaelastrasz the Corrupt"] };--Waistband of Wrath
 		[7] = { itemID = 16962, desc = "=ds=" .. BabbleBoss["Ragnaros"] };--Legplates of Wrath
 		[8] = { itemID = 16965, desc = "=ds=" .. BabbleBoss["Broodlord Lashlayer"] };--Sabatons of Wrath
@@ -4650,7 +4660,7 @@ AtlasLoot_Data["T2"] = {
 		[2] = { itemID = 1516961, desc = "=ds=" .. BabbleBoss["Chromaggus"] };--Shoulderpads of Wrath
 		[3] = { itemID = 1516966, desc = "=ds=" .. BabbleBoss["Nefarian"] };--Chestplate of Wrath
 		[4] = { itemID = 1516959, desc = "=ds=" .. BabbleBoss["Razorgore the Untamed"] };--Wristguards of Wrath
-		[5] = { itemID = 1516964 .. BabbleBoss["Firemaw"] .. ", " .. BabbleBoss["Ebonroc"] .. ", " .. BabbleBoss["Flamegor"] };--Grippers of Wrath
+		[5] = { itemID = 1516964, desc = BabbleBoss["Firemaw"] .. ", " .. BabbleBoss["Ebonroc"] .. ", " .. BabbleBoss["Flamegor"] };--Grippers of Wrath
 		[6] = { itemID = 1516960, desc = "=ds=" .. BabbleBoss["Vaelastrasz the Corrupt"] };--Belt of Wrath
 		[7] = { itemID = 1516962, desc = "=ds=" .. BabbleBoss["Ragnaros"] };--Legguards of Wrath
 		[8] = { itemID = 1516965, desc = "=ds=" .. BabbleBoss["Broodlord Lashlayer"] };--Stompers of Wrath
