@@ -214,7 +214,6 @@ function AtlasLoot_AdvancedSearchShow()
 
     for i = 1, 30, 1 do
         _G["AtlasLootItem_" .. i]:Hide()
-        _G["AtlasLootItem_" .. i].itemID = 0
     end
 
     AtlasLoot_BossName:SetText("Advanced Search")

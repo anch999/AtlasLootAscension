@@ -5,7 +5,7 @@ local MAX_ARGUMENTS = 6
 local framename = "AtlasLootDefaultFrame_AdvancedSearchPanel"
 
 --Create Main Search Panel
-local searchpanel = CreateFrame("FRAME", framename, AtlasLootDefaultFrame, nil)
+local searchpanel = CreateFrame("FRAME", framename, AtlaslLoot_LootBackground, nil)
 searchpanel:SetPoint("TOPLEFT", AtlaslLoot_LootBackground, "TOPLEFT", 2, -2)
 searchpanel:SetSize(510, 510)
 searchpanel.closebtn = CreateFrame("Button", framename.."_CloseButton", searchpanel, "UIPanelCloseButton")
