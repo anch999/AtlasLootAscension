@@ -87,7 +87,8 @@ AtlasLoot_CraftingData["Seasonal"] = {
 --- Heirloom Items ---
 ----------------------
 AtlasLoot_Data["Heirloom"] = {
-	Name = AL["Heirloom"],
+	Name = AL["Heirloom"];
+	Type = "HEIRLOOM";
 	{
 		Name = "Chests";
 		[1] = { itemID = 48691, price = "1200 #tokenofprestige# | 192000 #marks# | 800 #bazaar#"  }; --Tattered Dreadmist Robe

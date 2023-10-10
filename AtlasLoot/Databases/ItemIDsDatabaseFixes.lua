@@ -458,6 +458,51 @@ ItemIDsDatabase[15836] = { 6015836, 15836, 315836, 215836 }
 ItemIDsDatabase[15835] = { 6015835, 15835, 315835, 215835 }
 ItemIDsDatabase[15840] = { 6015840, 15840, 315840, 215840 }
 
+
+ItemIDsDatabase[48691] = { 48691, 48691, 1648691 }; --Tattered Dreadmist Robe
+ItemIDsDatabase[48687] = { 48687, 48687, 1648687 }; --Preened Ironfeather Breastplate
+ItemIDsDatabase[48689] = { 48689, 48689, 1648689 }; --Stained Shadowcraft Tunic
+ItemIDsDatabase[48677] = { 48677, 48677, 1648677 }; --Champion's Deathdealer Breastplate
+ItemIDsDatabase[48683] = { 48683, 48683, 1648683 }; --Mystical Vest of Elements
+ItemIDsDatabase[48685] = { 48685, 48685, 1648685 }; --Polished Breastplate of Valor
+ItemIDsDatabase[1548685] = { 1548685, 1548685, 3148685 }; --Polished Breastplate of Might
+ItemIDsDatabase[42985] = { 42985, 42985, 1642985 }; --Tattered Dreadmist Mantle
+ItemIDsDatabase[42984] = { 42984, 42984, 1642984 }; --Preened Ironfeather Shoulders
+ItemIDsDatabase[42952] = { 42952, 42952, 1642952 }; --Stained Shadowcraft Spaulders
+ItemIDsDatabase[42950] = { 42950, 42950, 1642950 }; --Champion Herod's Shoulder
+ItemIDsDatabase[42951] = { 42951, 42951, 1642951 }; --Mystical Pauldrons of Elements
+ItemIDsDatabase[42949] = { 42949, 42949, 1642949 }; --Polished Spaulders of Valor
+ItemIDsDatabase[1542949] = { 1542949, 1542949, 3142949 }; --Polished Spaulders of Might
+ItemIDsDatabase[44107] = { 44107, 44107, 1644107 }; --Exquisite Sunderseer Mantle
+ItemIDsDatabase[44103] = { 44103, 44103, 1644103 }; --Exceptional Stormshroud Shoulders
+ItemIDsDatabase[44105] = { 44105, 44105, 1644105 }; --Lasting Feralheart Spaulders
+ItemIDsDatabase[44102] = { 44102, 44102, 1644102 }; --Aged Pauldrons of The Five Thunders
+ItemIDsDatabase[44101] = { 44101, 44101, 1644101 }; --Prized Beastmaster's Mantle
+ItemIDsDatabase[44100] = { 44100, 44100, 1644100 }; --Pristine Lightforge Spaulders
+ItemIDsDatabase[44099] = { 44099, 44099, 1644099 }; --Strengthened Stockade Pauldrons
+ItemIDsDatabase[42992] = { 42992, 42992, 1642992 }; --Discerning Eye of the Beast
+ItemIDsDatabase[42991] = { 42991, 42991, 1642991 }; --Swift Hand of Justice
+ItemIDsDatabase[44098] = { 44098, 44098, 1644098 }; --Inherited Insignia of the Alliance
+ItemIDsDatabase[44097] = { 44097, 44097, 1644097 }; --Inherited Insignia of the Horde
+ItemIDsDatabase[50255] = { 50255, 50255, 1650255 }; --Dread Pirate Ring
+ItemIDsDatabase[42944] = { 42944, 42944, 1642944 }; --Balanced Heartseeker
+ItemIDsDatabase[42945] = { 42945, 42945, 1642945 }; --Venerable Dal'Rend's Sacred Charge
+ItemIDsDatabase[42948] = { 42948, 42948, 1642948 }; --Devout Aurastone Hammer
+ItemIDsDatabase[48716] = { 48716, 48716, 1648716 }; --Venerable Mass of McGowan
+ItemIDsDatabase[44091] = { 44091, 44091, 1644091 }; --Sharpened Scarlet Kris
+ItemIDsDatabase[44096] = { 44096, 44096, 1644096 }; --Battleworn Thrash Blade
+ItemIDsDatabase[44094] = { 44094, 44094, 1644094 }; --The Blessed Hammer of Grace
+ItemIDsDatabase[1540350] = { 1540350, 1540350, 3140350 }; --Urn of Aspiring Light
+ItemIDsDatabase[1548335] = { 1548335, 1548335, 3148335 }; --Polished Observer's Shield
+ItemIDsDatabase[42943] = { 42943, 42943, 1642943 }; --Bloodied Arcanite Reaper
+ItemIDsDatabase[1542943] = { 1542943, 1542943, 3142943 }; --Sturdied Arcanite Spear
+ItemIDsDatabase[48718] = { 48718, 48718, 1648718 }; --Repurposed Lava Dredger
+ItemIDsDatabase[42947] = { 42947, 42947, 1642947 }; --Dignified Headmaster's Charge
+ItemIDsDatabase[44092] = { 44092, 44092, 1644092 }; --Reforged Truesilver Champion
+ItemIDsDatabase[44095] = { 44095, 44095, 1644095 }; --Grand Staff of Jordan
+ItemIDsDatabase[42946] = { 42946, 42946, 1642946 }; --Charmed Ancient Bone Bow
+ItemIDsDatabase[44093] = { 44093, 44093, 1644093 }; --Upgraded Dwarven Hand Cannon
+
 for _, v in pairs(ItemIDsDatabase) do
     if not v["MythicRaid"] then
         v["MythicRaid"] = tonumber("13"..v[2])

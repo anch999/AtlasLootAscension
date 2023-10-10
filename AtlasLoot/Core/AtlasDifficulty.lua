@@ -25,6 +25,11 @@ AtlasLoot_Difficulty = {
         {"Bloodforged", 1},
     };
 
+    ["HEIRLOOM"] = {
+        {"Normal", 2},
+        {"Prestigious", 3},
+    };
+
     ["ClassicDungeonExt"] = {
         {"Bloodforged", 1},
         {"Normal", 2},

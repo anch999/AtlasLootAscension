@@ -14,6 +14,7 @@ AtlasLoot_Modules = {
 	{AL["Sets/Collections"], "Collections"},
 	{AL["PvP Rewards"], "PVP"},
 	{AL["Vanity"], "Vanity"},
+	{AL["Ascension Vanity Collection"], "CollectionsAscension"},
 	{AL["Reputation Factions"], "Reputations"},
 	{AL["World Events"], "WorldEvents"},
 }

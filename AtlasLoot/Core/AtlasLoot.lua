@@ -21,6 +21,7 @@ AtlasLoot = LibStub("AceAddon-3.0"):NewAddon("AtlasLoot", "AceEvent-3.0", "AceTi
 
 --Instance required libraries
 local BabbleBoss = AtlasLoot_GetLocaleLibBabble("LibBabble-Boss-3.0")
+local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0")
 local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
 
 AtlasLoot.Version = "AtlasLoot Ascension Edition"
@@ -210,6 +211,7 @@ function AtlasLoot:OnEnable()
 	AtlasLoot:LoadItemIDsDatabase()
 	AtlasLoot:LoadTradeskillRecipes()
 	AtlasLoot:PopulateProfessions()
+	AtlasLoot:CreateVanityCollection()
 end
 
 function AtlasLoot:Reset(data)
@@ -653,7 +655,9 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 		local iconFrame  = _G["AtlasLootItem_"..i.."_Icon"]
 		local nameFrame  = _G["AtlasLootItem_"..i.."_Name"]
 		local extraFrame = _G["AtlasLootItem_"..i.."_Extra"]
+		local hightlightFrame = _G["AtlasLootItem_"..i.."_Highlight"]
 		local spellID = dataSource[dataID][tablenum][i].spellID
+		itemButton.hasCollectionItem = false
 		if spellID then
 			spellName, _, spellIcon, _, _, _, _, _, _ = GetSpellInfo(spellID)
 			if spellName then
@@ -664,16 +668,16 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 			end
 			--Adds button highlights if you know a recipe or have a char that knows one
 			if CA_IsSpellKnown(spellID) then
-				_G["AtlasLootItem_"..i].hasTrade = true
-				_G["AtlasLootItem_"..i.."_Highlight"]:SetTexture(itemHighlightGreen)
-				_G["AtlasLootItem_"..i.."_Highlight"]:Show()
+				itemButton.hasTrade = true
+				hightlightFrame:SetTexture(itemHighlightGreen)
+				hightlightFrame:Show()
 			else
-				_G["AtlasLootItem_"..i].hasTrade = false
-				_G["AtlasLootItem_"..i.."_Highlight"]:Hide()
+				itemButton.hasTrade = false
+				hightlightFrame:Hide()
 				for key,v in pairs(AtlasLoot.db.profiles) do
 					if gsub(key,"-",""):match(gsub(realmName,"-","")) and v.knownRecipes and v.knownRecipes[spellID] then
-						_G["AtlasLootItem_"..i.."_Highlight"]:SetTexture(itemHighlightBlue)
-						_G["AtlasLootItem_"..i.."_Highlight"]:Show()
+						hightlightFrame:SetTexture(itemHighlightBlue)
+						hightlightFrame:Show()
 					end
 				end
 			end
@@ -690,6 +694,15 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 			else
 				text = ""
 			end
+			if C_VanityCollection.IsCollectionItemOwned(itemID) and CA_IsSpellKnown(dataSource[dataID][tablenum][i].learnedSpellID) then
+				hightlightFrame:SetTexture(itemHighlightGreen)
+				hightlightFrame:Show()
+				itemButton.hasCollectionItem = true
+			elseif C_VanityCollection.IsCollectionItemOwned(itemID) and not CA_IsSpellKnown(dataSource[dataID][tablenum][i].learnedSpellID) then
+				hightlightFrame:SetTexture(itemHighlightBlue)
+				hightlightFrame:Show()
+				itemButton.hasCollectionItem = true
+			end
 		else
 			if dataSource[dataID][tablenum][i].name then
 				--If it has a manuel entry use that
@@ -699,6 +712,9 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 				text = ""
 			end
 		end
+
+
+
 		itemButton.name = text
 
 		--Insert the item description
@@ -718,6 +734,9 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 		end
 
 		if AtlasLoot_ExtraData[dataSource[dataID][tablenum][i].itemID] then
+			extra = LIMEGREEN .. "L-Click:|r " .. extra
+		end
+		if dataSource[dataID][tablenum][i].contentsPreview then
 			extra = LIMEGREEN .. "L-Click:|r " .. extra
 		end
 
@@ -791,6 +810,8 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 		itemButton.tablenum = tablenum
 		itemButton.dataID = dataID
 		itemButton.dataSource = dataSource_backup
+		itemButton.learnedSpellID = dataSource[dataID][tablenum][i].learnedSpellID
+		itemButton.contentsPreview = dataSource[dataID][tablenum][i].contentsPreview
 		itemButton.price = dataSource[dataID][tablenum][i].price or nil
 		itemButton.droprate = dataSource[dataID][tablenum][i].droprate or nil
 		itemButton.extraInfo = dataSource[dataID][tablenum][i].extraInfo or nil
@@ -815,13 +836,20 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 
 	-- Create the loottable
 	if (dataID == "SearchResult") or (dataSource_backup == "AtlasLoot_CurrentWishList") or dataSource[dataID][tablenum] then
+
 		--Iterate through each item object and set its properties
 		for i = 1, 30, 1 do
+			--Use shortcuts for easier reference to parts of the item button
+			local itemButton = _G["AtlasLootItem_"..i]
+			local iconFrame  = _G["AtlasLootItem_"..i.."_Icon"]
+			local nameFrame  = _G["AtlasLootItem_"..i.."_Name"]
+			local extraFrame = _G["AtlasLootItem_"..i.."_Extra"]
+			local hightlightFrame = _G["AtlasLootItem_"..i.."_Highlight"]
 			--Check for a valid object (that it exists, and that it has a name
 			isValid, toShow, itemID = getProperItemConditionals(dataSource[dataID][tablenum][i])
 			local item = Item:CreateFromID(itemID)
 			if isValid and toShow then
-				_G["AtlasLootItem_"..i.."_Highlight"]:Hide()
+				hightlightFrame:Hide()
 				if itemID and not item:GetInfo() then
 					AtlasLoot:ItemsLoading(1)
 					item:ContinueOnLoad(function(itemID)
@@ -832,11 +860,12 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 					setupButton(itemID, i, dataSource, dataID, tablenum, dataSource_backup)
 				end
 			else
-				_G["AtlasLootItem_"..i]:Hide()
-				_G["AtlasLootItem_"..i].itemID = nil
-				_G["AtlasLootItem_"..i].spellID = nil
-				_G["AtlasLootItem_"..i.."_Highlight"]:Hide()
-				_G["AtlasLootItem_"..i].hasTrade = false
+				itemButton:Hide()
+				itemButton.itemID = nil
+				itemButton.spellID = nil
+				hightlightFrame:Hide()
+				itemButton.hasTrade = false
+				itemButton.hasCollectionItem = false
 			end
 			if dataSource[itemID] then
 				for _,ID in pairs(dataSource[itemID]) do
@@ -1210,4 +1239,97 @@ function AtlasLoot:LoadTradeskillRecipes()
 		end)
 
 		content:Parse()
+end
+
+local CollectionNames = {
+	 ["Convenience"] = "Convenience",
+	 ["Mounts"] = "Mounts",
+	 ["Pets"] = "Pets",
+	 ["Toys"] = "Toys",
+	 ["Seasonal"] = "Seasonal",
+	 ["Consumable"] = "Consumable",
+	 ["Axe1H"] = "One-Handed Axes",
+	 ["Axe2H"] = "Two-Handed Axes",
+	 ["Sword1H"] = AL["One-Handed Sword"],
+	 ["Sword2H"] = AL["Two-Handed Sword"],
+	 ["Mace1H"] = AL["One-Handed Mace"],
+	 ["Mace2H"] = AL["Two-Handed Mace"],
+	 ["Dagger"] = "Dagger",
+	 ["Fist"] = "Fist",
+	 ["Shield"] = "Shield",
+	 ["Polearm"] = "Polearm",
+	 ["Bow"] = "Bow",
+	 ["Gun"] = "Gun",
+	 ["Crossbow"] = "Crossbow",
+	 ["Thrown"] = "Thrown",
+	 ["Wand"] = "Wand",
+	 ["Staff"] = "Staff",
+	 ["FishingPole"] = "FishingPole",
+	 ["OffHand"] = "OffHand",
+	 ["Head"] = "Head",
+	 ["Shoulder"] = "Shoulder",
+	 ["Chest"] = "Chest",
+	 ["Waist"] = "Waist",
+	 ["Legs"] = "Legs",
+	 ["Feet"] = "Feet",
+	 ["Wrist"] = "Wrist",
+	 ["Hands"] = "Hands",
+	 ["Back"] = "Back",
+	 ["Cloth"] = "Cloth",
+	 ["Leather"] = "Leather",
+	 ["Mail"] = "Mail",
+	 ["Plate"] = "Plate",
+	 ["Sets"] = "Sets",
+	 ["Visual"] = "Visual",
+	 ["Effect"] = "Effect",
+	 ["Incarnation"] = "Incarnation",
+	 ["Shirt"] = "Shirt",
+	 ["Tabard"] = "Tabard",
+	 ["Backpack"] = "Backpack",
+	 ["Illusion"] = "Illusion",
+	 ["Whistle"] = "Whistle",
+	 ["SummonStone"] = "SummonStone",
+	 ["Vellum"] = "Vellum",
+	 ["Warhorn"] = "Warhorn",
+	 ["Lodestone"] = "Lodestone",
+}
+
+function AtlasLoot:CreateVanityCollection()
+
+	local function findGroup(group)
+		for cat,v in pairs(Enum.VanityCategory) do
+			if type(v) == "table" then
+				for catT, t in pairs(v) do
+					if not AtlasLoot_Data[catT] then AtlasLoot_Data[catT] = { Name = CollectionNames[catT] } end
+					if bit.contains(group, t) then
+						return catT
+					end
+				end
+			else
+				if not AtlasLoot_Data[cat] then AtlasLoot_Data[cat] = { Name = CollectionNames[cat] } end
+				if bit.contains(group, v) then
+					return cat
+				end
+			end
+		end
+	end
+
+	for _,item in pairs(VANITY_ITEMS) do
+		local group = findGroup(item.group)
+		if #AtlasLoot_Data[group] == 0 or #AtlasLoot_Data[group][#AtlasLoot_Data[group]] == 30 then
+			tinsert(AtlasLoot_Data[group], {Name = "Page "..(#AtlasLoot_Data[group] +1)})
+		end
+		local contentsPreview
+		if item.contentsPreview and #item.contentsPreview > 1 then
+			contentsPreview = {}
+			for _,itemID in pairs(item.contentsPreview) do
+				tinsert(contentsPreview, { itemID = itemID })
+			end
+		end
+		local description
+		if item.description ~= "" then
+			description = item.description
+		end
+		tinsert(AtlasLoot_Data[group][#AtlasLoot_Data[group]], { itemID = item.itemid, extraInfo = description, contentsPreview = contentsPreview, vanityItem = true, learnedSpellID = item.learnedSpell })
+	end
 end

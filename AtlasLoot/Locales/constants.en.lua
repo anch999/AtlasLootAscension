@@ -4243,6 +4243,9 @@ if AL then
 	AL["Enchants"] = true
 	AL["Head Enchants"] = true
 	AL["Chromius"] = true
+	AL["Ascension Vanity Collection"] = true
+	AL["Learn/Recive Vanity Item"] = true
+	AL["Vanity Collection"] = true
 
 	-- Subzones
 	AL["The Headmaster's Study"] = true

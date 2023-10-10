@@ -74,6 +74,22 @@ local boss = "dungeonskull"
         };
     };
 
+    AtlasLoot_MapData["Onyxia60"] = {
+        ZoneName = { BabbleZone["Onyxia's Lair"] };
+        Acronym = AL["Ony"];
+        MapName = "OnyxiasLair";
+        Location = { BabbleZone["Dustwallow Marsh"] };
+        LevelRange = "60-70";
+        MinLevel = "60";
+        PlayerLimit = "10/25";
+        [1] = {
+        { BabbleZone["Onyxia's Lair"], SubZone = true };
+        { AL["Whelp Eggs"] , cords = {78,43} };
+        { AL["Whelp Eggs"] , cords = {56,44} };
+        { AL["Onyxia"], cords = {67,30}, pinType = boss };
+        };
+    };
+
     AtlasLoot_MapData["BlackwingLair"] = {
         ZoneName = { BabbleZone["Blackwing Lair"], 2677 };
         Location = { BabbleZone["Searing Gorge"].." / "..BabbleZone["Burning Steppes"], 51, 46 };

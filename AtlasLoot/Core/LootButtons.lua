@@ -293,6 +293,9 @@ function AtlasLoot:ItemOnClick(self ,arg1)
         elseif arg1 == "LeftButton" and itemID and AtlasLoot_ExtraData[itemID] then
             AtlasLoot:PopoupItemFrame(self, _G["AtlasLoot_ExtraData"][itemID] )
             AtlasLoot_PopupFrame:Show()
+        elseif arg1 == "LeftButton" and self.contentsPreview then
+            AtlasLoot:PopoupItemFrame(self, self.contentsPreview )
+            AtlasLoot_PopupFrame:Show()
         end
     else
         local recipeData = AtlasLoot:GetRecipeData(spellID, "spell")
@@ -534,6 +537,24 @@ function AtlasLoot:ItemContextMenu(self, Type, number, craftingData)
                             AtlasLoot.Dewdrop:AddLine(
                                 "text", AL["Add Wishlist"],
                                 "func", function() AtlasLoot:AddWishList() end,
+                                'closeWhenClicked', true,
+                                'textHeight', 12,
+                                'textWidth', 12,
+                                "notCheckable", true
+                            )
+                        end
+                        if self.hasCollectionItem then
+                            AtlasLoot:AddDividerLine(35)
+                            AtlasLoot.Dewdrop:AddLine(
+                            'text', AL["Vanity Collection"],
+                            'notCheckable', true,
+                            'isTitle', true,
+                            'textHeight', 13,
+                            'textWidth', 13
+                            )
+                            AtlasLoot.Dewdrop:AddLine(
+                                "text", AL["Learn/Recive Vanity Item"],
+                                "func", function() RequestDeliverVanityCollectionItem(itemID) end,
                                 'closeWhenClicked', true,
                                 'textHeight', 12,
                                 'textWidth', 12,
