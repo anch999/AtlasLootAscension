@@ -1330,6 +1330,10 @@ function AtlasLoot:CreateVanityCollection()
 		if item.description ~= "" then
 			description = item.description
 		end
-		tinsert(AtlasLoot_Data[group][#AtlasLoot_Data[group]], { itemID = item.itemid, extraInfo = description, contentsPreview = contentsPreview, vanityItem = true, learnedSpellID = item.learnedSpell })
+		local learnedSpell
+		if item.learnedSpell ~= 0 then
+			learnedSpell = item.learnedSpell
+		end
+		tinsert(AtlasLoot_Data[group][#AtlasLoot_Data[group]], { itemID = item.itemid, extraInfo = description, contentsPreview = contentsPreview, vanityItem = true, learnedSpellID = learnedSpell })
 	end
 end
