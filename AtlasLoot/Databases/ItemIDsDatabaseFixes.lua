@@ -502,6 +502,7 @@ ItemIDsDatabase[44092] = { 44092, 44092, 1644092 }; --Reforged Truesilver Champi
 ItemIDsDatabase[44095] = { 44095, 44095, 1644095 }; --Grand Staff of Jordan
 ItemIDsDatabase[42946] = { 42946, 42946, 1642946 }; --Charmed Ancient Bone Bow
 ItemIDsDatabase[44093] = { 44093, 44093, 1644093 }; --Upgraded Dwarven Hand Cannon
+ItemIDsDatabase[450009] = {450009, 450009, 450011, 450015, MythicRaid = 450013}; --The String of Time
 
 for _, v in pairs(ItemIDsDatabase) do
     if not v["MythicRaid"] then

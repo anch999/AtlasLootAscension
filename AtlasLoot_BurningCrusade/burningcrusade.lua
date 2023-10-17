@@ -942,10 +942,11 @@ AtlasLoot_Data["CoTHyjal"] = {
 		[12] = { itemID = 30909, droprate = "5%" }; --Antonidas's Aegis of Rapt Concentration
 		[13] = { itemID = 30906, droprate = "6%" }; --Bristleblitz Striker
 		[16] = { itemID = 31097, droprate = "100%", lootTable = {"T6HEAD","Token"} }; --Helm of the Forgotten Conqueror
-		[18] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
-		[19] = { itemID = 98570, droprate = "100%" };
-		[21] = { itemID = 61557, droprate = "1%" }; --Pet Sigil
-		[23] = { itemID = 1001620, droprate = "?%" };
+		[18] = { itemID = 450009}, -- The String of Time
+		[20] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
+		[21] = { itemID = 98570, droprate = "100%" };
+		[23] = { itemID = 61557, droprate = "1%" }; --Pet Sigil
+		[25] = { itemID = 1001620, droprate = "?%" };
 	};
 	{
 		Name = AL["Chromius"].." Mythic/Ascended";
