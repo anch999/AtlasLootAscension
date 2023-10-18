@@ -248,7 +248,7 @@ function AtlasLoot:MapMenuOpen(self)
             else
                 text = v[1][1]
             end
-            tinsert(menuList[1], {text = WHITE..text, func = function() AtlasLoot:MapOnShow(mapID, i, true) end, notCheckable = true, closeWhenClicked = true, textHeight = 12, textWidth = 12})
+            tinsert(menuList[1], {text = WHITE..text, func = function() AtlasLoot:MapSelect(mapID, i) end, notCheckable = true, closeWhenClicked = true, textHeight = 12, textWidth = 12})
         end
 
         tinsert(menuList[1], {divider = 35})
