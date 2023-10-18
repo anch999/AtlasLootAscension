@@ -158,16 +158,16 @@ function AtlasLoot:MapOnShow(mapID, mapNum, refresh)
                 Atlasloot_HeaderLabel:Show()
                 AtlasLoot:ScrollFrameUpdate(true)
                 AtlasLootDefaultFrameScroll:Hide()
-                mapNum = mapNum or 1
+                
                 SetMapToCurrentZone()
-                if AtlasLoot_MapData[AtlasLoot.CurrentMap].ZoneName[1] == GetRealZoneText() then
+                if mapNum and mapID then
+                    AtlasLoot.CurrentMap = mapID
+                elseif AtlasLoot_MapData[AtlasLoot.CurrentMap].ZoneName[1] == GetRealZoneText() then
                     if GetCurrentMapDungeonLevel() == 0 then
                         mapNum = 1
                     else
                         mapNum = GetCurrentMapDungeonLevel()
                     end
-                elseif mapID then
-                    AtlasLoot.CurrentMap = mapID
                 elseif lastMap == AtlasLoot.CurrentMap then
                     mapNum = AtlasLoot.MapNum
                 end
@@ -248,7 +248,7 @@ function AtlasLoot:MapMenuOpen(self)
             else
                 text = v[1][1]
             end
-            tinsert(menuList[1], {text = WHITE..text, func = function() AtlasLoot:MapSelect(mapID, i) end, notCheckable = true, closeWhenClicked = true, textHeight = 12, textWidth = 12})
+            tinsert(menuList[1], {text = WHITE..text, func = function() AtlasLoot:MapOnShow(mapID, i, true) end, notCheckable = true, closeWhenClicked = true, textHeight = 12, textWidth = 12})
         end
 
         tinsert(menuList[1], {divider = 35})
