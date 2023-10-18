@@ -694,11 +694,11 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 			else
 				text = ""
 			end
-			if C_VanityCollection.IsCollectionItemOwned(itemID) and CA_IsSpellKnown(dataSource[dataID][tablenum][i].learnedSpellID) then
+			if C_VanityCollection.IsCollectionItemOwned(itemID) and VANITY_ITEMS[itemID] and CA_IsSpellKnown(VANITY_ITEMS[itemID].learnedSpell) and VANITY_ITEMS[itemID].learnedSpell ~= 0 then
 				hightlightFrame:SetTexture(itemHighlightGreen)
 				hightlightFrame:Show()
 				itemButton.hasCollectionItem = true
-			elseif C_VanityCollection.IsCollectionItemOwned(itemID) and not CA_IsSpellKnown(dataSource[dataID][tablenum][i].learnedSpellID) then
+			elseif C_VanityCollection.IsCollectionItemOwned(itemID) and (not VANITY_ITEMS[itemID] and not CA_IsSpellKnown(VANITY_ITEMS[itemID].learnedSpell) or VANITY_ITEMS[itemID].learnedSpell == 0) then
 				hightlightFrame:SetTexture(itemHighlightBlue)
 				hightlightFrame:Show()
 				itemButton.hasCollectionItem = true
@@ -792,6 +792,11 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 		itemButton.itemID = itemID
 		itemButton.spellID = spellID
 
+		--learned spell id is used for items that are part of the ascension vanity collection
+		itemButton.learnedSpellID = nil
+		if VANITY_ITEMS[itemID] and VANITY_ITEMS[itemID].learnedSpell and VANITY_ITEMS[itemID].learnedSpell ~= 0 then
+			itemButton.learnedSpellID = VANITY_ITEMS[itemID].learnedSpell
+		end
 
 		itemButton.iteminfo = {}
 		if spellID then
@@ -810,7 +815,6 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 		itemButton.tablenum = tablenum
 		itemButton.dataID = dataID
 		itemButton.dataSource = dataSource_backup
-		itemButton.learnedSpellID = dataSource[dataID][tablenum][i].learnedSpellID
 		itemButton.contentsPreview = dataSource[dataID][tablenum][i].contentsPreview
 		itemButton.price = dataSource[dataID][tablenum][i].price or nil
 		itemButton.droprate = dataSource[dataID][tablenum][i].droprate or nil
@@ -1330,10 +1334,7 @@ function AtlasLoot:CreateVanityCollection()
 		if item.description ~= "" then
 			description = item.description
 		end
-		local learnedSpell
-		if item.learnedSpell ~= 0 then
-			learnedSpell = item.learnedSpell
-		end
-		tinsert(AtlasLoot_Data[group][#AtlasLoot_Data[group]], { itemID = item.itemid, extraInfo = description, contentsPreview = contentsPreview, vanityItem = true, learnedSpellID = learnedSpell })
+
+		tinsert(AtlasLoot_Data[group][#AtlasLoot_Data[group]], { itemID = item.itemid, extraInfo = description, contentsPreview = contentsPreview, vanityItem = true })
 	end
 end
