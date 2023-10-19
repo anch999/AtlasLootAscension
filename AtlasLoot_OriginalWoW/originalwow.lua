@@ -2168,7 +2168,7 @@ AtlasLoot_Data["RazorfenDowns"] = {
 	{
 		Name = AL["Henry Stern"];
 		[1] = { itemID = 3831 }; --Recipe: Mighty Troll's Blood Potion
-		[2] = { itemID = "s13028", "10841" }; --Goldthorn Tea
+		[2] = { itemID = 10841, spellID = 13028 }; --Goldthorn Tea
 	};
 	{
 		Name = BabbleBoss["Mordresh Fire Eye"];

@@ -388,4 +388,16 @@ function AtlasLoot:NavButton_OnClick(self)
 	end
 end
 
+--------- rate limited item frame refresh ---------
+local refreshTimer
+function AtlasLoot:ItemRefreshTimer()
+    AtlasLoot:ShowItemsFrame(AtlasLootItemsFrame.refresh[1], AtlasLootItemsFrame.refresh[2], AtlasLootItemsFrame.refresh[3])
+    refreshTimer = false
+end
 
+function AtlasLoot:ItemFrameRefresh()
+    if refreshTimer then return end
+    AtlasLoot:ScheduleTimer("ItemRefreshTimer", 5)
+    refreshTimer = true
+end
+-----------------------------------------------------

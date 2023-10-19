@@ -244,15 +244,16 @@ function AtlasLoot:OptionsOnShow()
 end
 
 function AtlasLoot:SelectLootBrowserStyle_OnClick()
+    local styles = {
+        "modern",
+        "new",
+        "old",
+    }
     local thisID = this:GetID()
 	UIDropDownMenu_SetSelectedID(AtlasLoot_SelectLootBrowserStyle, thisID)
     AtlasLoot.db.profile.LootBrowserStyle = thisID
-    if AtlasLoot.db.profile.LootBrowserStyle == 1 then
-        AtlasLoot:SetNewStyle("modern")
-	elseif AtlasLoot.db.profile.LootBrowserStyle == 2 then
-		AtlasLoot:SetNewStyle("new")
-	elseif AtlasLoot.db.profile.LootBrowserStyle == 3 then
-        AtlasLoot:SetNewStyle("old")
+    if AtlasLoot.db.profile.LootBrowserStyle then
+        AtlasLoot:SetNewStyle(styles[AtlasLoot.db.profile.LootBrowserStyle])
     end
     AtlasLoot:OptionsOnShow()
 end

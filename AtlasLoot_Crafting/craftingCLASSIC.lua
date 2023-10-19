@@ -572,7 +572,7 @@ AtlasLoot_Data["CookingCLASSIC"] = {
 		[9] = {itemID = 13932, spellID = 18244 }; --Poached Sunscale Salmon
 		[10] = {itemID = 13928, spellID = 18240 }; --Grilled Squid
 		[11] = {itemID = 13929, spellID = 18242 }; --Hot Smoked Bass
-		[12] = {itemID = INV_Misc_Shell_03, spellID = 64054 }; --Clamlette Magnifique
+		[12] = {itemID = 33004, spellID = 64054 }; --Clamlette Magnifique
 		[13] = {itemID = 13927, spellID = 18239 }; --Cooked Glossy Mightfish
 		[14] = {itemID = 13930, spellID = 18241 }; --Filet of Redgill
 		[15] = {itemID = 12218, spellID = 15933 }; --Monster Omelet
@@ -598,7 +598,7 @@ AtlasLoot_Data["CookingCLASSIC"] = {
 		[5] = {itemID = 4594, spellID = 7828 }; --Rockscale Cod
 		[6] = {itemID = 21217, spellID = 25954 }; --Sagefish Delight
 		[7] = {itemID = 3729, spellID = 3400 }; --Soothing Turtle Bisque
-		{ 8, "s24418", "20074", "=q1=Heavy Crocolisk Stew"};
+		[8] = { itemID = 20074, spellID = 24418 }; --Heavy Crocolisk Stew
 		[9] = {itemID = 3728, spellID = 3399 }; --Tasty Lion Steak
 		[10] = {itemID = 3665, spellID = 3376 }; --Curiously Tasty Omelet
 		[11] = {itemID = 5527, spellID = 6500 }; --Goblin Deviled Clams
@@ -863,7 +863,7 @@ AtlasLoot_Data["EngineeringCLASSIC"] = {
 	Type = "Crafting";
 	{
 		Name = AL["Ammunition"];
-		{ 1, 18042, "=q2=Thorium Headed Arrow", "Quest See Tooltip", quest = {14183,14182, text = "Trade Thorium Shells for Arrows"}};
+		[1] = {itemID = 18042, desc = "Quest See Tooltip", quest = {14183,14182, text = "Trade Thorium Shells for Arrows"}}; --Thorium Headed Arrow
 		[2] = {itemID = 15997, spellID = 19800 }; --Thorium Shells
 		[3] = {itemID = 10513, spellID = 12621 }; --Mithril Gyro-Shot
 		[4] = {itemID = 10512, spellID = 12596 }; --Hi-Impact Mithril Slugs
@@ -2046,27 +2046,27 @@ AtlasLoot_Data["TailoringCLASSIC"] = {
 		[3] = {itemID = 10001, spellID = 12050 }; --Black Mageweave Robe
 		[4] = {itemID = 9998, spellID = 12048 }; --Black Mageweave Vest
 		[5] = {itemID = 7063, spellID = 8802 }; --Crimson Silk Robe
-		[12] = {itemID = 7054, spellID = 8770 }; --Robe of Power
-		[6] = {itemID = 7058, spellID = 8791 }; --Crimson Silk Vest
-		[7] = {itemID = 7051, spellID = 8764 }; --Earthen Vest
-		[8] = {itemID = 7065, spellID = 8784 }; --Green Silk Armor
-		[9] = {itemID = 4324, spellID = 3859 }; --Azure Silk Vest
-		[10] = {itemID = 5770, spellID = 6692 }; --Robes of Arcana
-		[11] = {itemID = 5766, spellID = 6690 }; --Lesser Wizard's Robe
-		[12] = {itemID = 6264, spellID = 7643 }; --Greater Adept's Robe
-		[13] = {itemID = 6787, spellID = 8467 }; --White Woolen Dress
-		[14] = {itemID = 2585, spellID = 2403 }; --Gray Woolen Robe
-		[15] = {itemID = 6263, spellID = 7639 }; --Blue Overalls
-		[16] = {itemID = 2582, spellID = 2399 }; --Green Woolen Vest
-		[17] = {itemID = 2578, spellID = 2395 }; --Barbaric Linen Vest
-		[18] = {itemID = 6242, spellID = 7633 }; --Blue Linen Robe
-		[19] = {itemID = 6240, spellID = 7630 }; --Blue Linen Vest
-		[20] = {itemID = 6239, spellID = 7629 }; --Red Linen Vest
-		[21] = {itemID = 6786, spellID = 8465 }; --Simple Dress
-		[22] = {itemID = 2572, spellID = 2389 }; --Red Linen Robe
-		[23] = {itemID = 6238, spellID = 7623 }; --Brown Linen Robe
-		[24] = {itemID = 6241, spellID = 7624 }; --White Linen Robe
-		[25] = {itemID = 2568, spellID = 2385 }; --Brown Linen Vest
+		[6] = {itemID = 7054, spellID = 8770 }; --Robe of Power
+		[7] = {itemID = 7058, spellID = 8791 }; --Crimson Silk Vest
+		[8] = {itemID = 7051, spellID = 8764 }; --Earthen Vest
+		[9] = {itemID = 7065, spellID = 8784 }; --Green Silk Armor
+		[10] = {itemID = 4324, spellID = 3859 }; --Azure Silk Vest
+		[11] = {itemID = 5770, spellID = 6692 }; --Robes of Arcana
+		[12] = {itemID = 5766, spellID = 6690 }; --Lesser Wizard's Robe
+		[13] = {itemID = 6264, spellID = 7643 }; --Greater Adept's Robe
+		[14] = {itemID = 6787, spellID = 8467 }; --White Woolen Dress
+		[15] = {itemID = 2585, spellID = 2403 }; --Gray Woolen Robe
+		[16] = {itemID = 6263, spellID = 7639 }; --Blue Overalls
+		[17] = {itemID = 2582, spellID = 2399 }; --Green Woolen Vest
+		[18] = {itemID = 2578, spellID = 2395 }; --Barbaric Linen Vest
+		[19] = {itemID = 6242, spellID = 7633 }; --Blue Linen Robe
+		[20] = {itemID = 6240, spellID = 7630 }; --Blue Linen Vest
+		[21] = {itemID = 6239, spellID = 7629 }; --Red Linen Vest
+		[22] = {itemID = 6786, spellID = 8465 }; --Simple Dress
+		[23] = {itemID = 2572, spellID = 2389 }; --Red Linen Robe
+		[24] = {itemID = 6238, spellID = 7623 }; --Brown Linen Robe
+		[25] = {itemID = 6241, spellID = 7624 }; --White Linen Robe
+		[26] = {itemID = 2568, spellID = 2385 }; --Brown Linen Vest
 	};
 	{
 		Name = AL["Cloth Armor"] .. WHITE .. " - Feet";

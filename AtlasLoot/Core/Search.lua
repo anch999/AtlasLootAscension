@@ -556,7 +556,7 @@ local RelationalFunctions = {
 
 }
 
-local function ItemMatchesTerm(term, itemDetails)
+function AtlasLoot:ItemMatchesTerm(term, itemDetails)
     if term.relational then
         local func, arg = unpack(RelationalFunctions[term.left])
         if func then
@@ -568,18 +568,14 @@ local function ItemMatchesTerm(term, itemDetails)
     end
 end
 
-local function ItemMatchesAllTerms(searchTerms, itemDetails)
-    local function IsItemEquipableMatch(itemEquipLoc)
-        return not AtlasLoot.db.profile.EquipableFilter or ((itemEquipLoc and itemEquipLoc ~= '' and not NON_EQUIPABLE_SLOTS[itemEquipLoc]))
-    end
-
+function AtlasLoot:ItemMatchesAllTerms(searchTerms, itemDetails)
     for _, term in ipairs(searchTerms) do
-        if not ItemMatchesTerm(term, itemDetails) then
+        if not AtlasLoot:ItemMatchesTerm(term, itemDetails) then
             return false
         end
     end
 
-    return true and IsItemEquipableMatch(itemDetails[5])
+    return true
 end
 
 local function ParseTerm(termText)
@@ -608,6 +604,12 @@ local function ParseQuery(searchText)
     return terms
 end
 
+function AtlasLoot:GetItemDetails(itemId)
+    -- Name, Link, Quality(num), iLvl(num), minLvl(num), itemType(localized string), itemSubType(localized string), stackCount(num), itemEquipLoc(enum), texture(link to a local file), displayId(num)
+    local itemName, _, itemQuality, itemLvl, minLvl, _, itemSubType, _, itemEquipLoc = GetItemInfo(itemId)
+    return itemName, itemQuality, itemLvl, minLvl, itemEquipLoc, itemSubType, GetItemStats("item:" .. itemId)
+end
+
 local function DoSearch(searchText)
     AtlasLootCharDB["SearchResult"] = {Name = "Search Result" , Type = "Search", Back = true}
     AtlasLootCharDB.LastSearchedText = searchText
@@ -615,15 +617,8 @@ local function DoSearch(searchText)
     local tablenum = 1
 
     local searchTerms = ParseQuery(searchText)
-    local equipableFilterOn = AtlasLoot.db.profile.EquipableFilter
 
-    local function GetItemDetails(itemId)
-        -- Name, Link, Quality(num), iLvl(num), minLvl(num), itemType(localized string), itemSubType(localized string), stackCount(num), itemEquipLoc(enum), texture(link to a local file), displayId(num)
-        local itemName, _, itemQuality, itemLvl, minLvl, _, itemSubType, _, itemEquipLoc = GetItemInfo(itemId)
-        return itemName, itemQuality, itemLvl, minLvl, itemEquipLoc, itemSubType, GetItemStats("item:" .. itemId)
-    end
-
-    local function AddItemToSearchResult(item, dataSource, dataID, tableNum)
+    function AtlasLoot:AddItemToSearchResult(item, dataSource, dataID, tableNum)
         if AtlasLootCharDB["SearchResult"][tablenum] == nil then
             AtlasLootCharDB["SearchResult"][tablenum] = {Name = "Page "..tablenum}
         end
@@ -644,44 +639,32 @@ local function DoSearch(searchText)
                 if type(v) == "table" then
                     local itemID = v.itemID
                     local spellID = v.spellID
+
                     if spellID then
                     local spellName = GetSpellInfo(spellID)
                         if nameMatches(spellName, searchText) then
-                            AddItemToSearchResult(v, "AtlasLoot_Data", dataID, tableNum)
+                            AtlasLoot:AddItemToSearchResult(v, "AtlasLoot_Data", dataID, tableNum)
+                            AtlasLoot:ItemFrameRefresh()
                         end
                     elseif itemID then
-                        local difficultyCap = min(AtlasLoot_Difficulty:getMaxDifficulty(data.Type), ItemindexID)
-                        itemID = AtlasLoot:FindId(itemID, difficultyCap, data.Type) or 2
-
                         local item = Item:CreateFromID(itemID)
-                        if itemID and not item:GetInfo() then
+                        if item then
                             AtlasLoot:ItemsLoading(1)
                             item:ContinueOnLoad(function(itemID)
                                 AtlasLoot:ItemsLoading(-1)
-                                local itemDetails = {GetItemDetails(item.itemID)}
-                                if ItemMatchesAllTerms(searchTerms, itemDetails) then
-                                    AddItemToSearchResult(v, "AtlasLoot_Data", dataID, tableNum)
-                                    AtlasLoot:ShowItemsFrame(AtlasLootItemsFrame.refresh[1], AtlasLootItemsFrame.refresh[2], AtlasLootItemsFrame.refresh[3])
+                                local itemDetails = {AtlasLoot:GetItemDetails(itemID)}
+                                if AtlasLoot:ItemMatchesAllTerms(searchTerms, itemDetails) then
+                                    AtlasLoot:AddItemToSearchResult(v, "AtlasLoot_Data", dataID, tableNum)
+                                    AtlasLoot:ItemFrameRefresh()
                                 end
                             end)
-                        else
-                            local itemDetails = {GetItemDetails(item.itemID)}
-                            if ItemMatchesAllTerms(searchTerms, itemDetails) then
-                                AddItemToSearchResult(v, "AtlasLoot_Data", dataID, tableNum)
-                            end
-                        end 
-
---[[                         local itemName = GetItemDetails(itemID)
-                        if #searchTerms == 1 and searchTerms[1].name then
-                            if nameMatches(itemName, searchTerms[1].name) then
-                                AddItemToSearchResult(v)
-                            end
-                        end ]]
+                        end
                     end
                 end
             end
         end
     end
+    AtlasLoot:ShowSearchResult()
 end
 
 function AtlasLoot:ShowSearchResult()
@@ -770,12 +753,6 @@ function AtlasLoot:ShowSearchOptions(button)
             dewdrop:AddLine("text", AL["Partial matching"], "checked", self.db.profile.PartialMatching, "tooltipTitle", AL["Partial matching"], "tooltipText",
                             AL["If checked, AtlasLoot search item names for a partial match."], "func", function()
                 self.db.profile.PartialMatching = not self.db.profile.PartialMatching
-            end)
-            dewdrop:AddLine("text", "Only search equipable", -- TODO: put in AL
-            "checked", self.db.profile.EquipableFilter, "tooltipTitle", "Equipable filter", -- TODO: put in AL
-            "tooltipText", "If checked, AtlasLoot only includes items that are euipable.", -- TODO: put in AL
-            "func", function()
-                self.db.profile.EquipableFilter = not self.db.profile.EquipableFilter
             end)
         end
         dewdrop:Open(button, 'point', function(parent)
