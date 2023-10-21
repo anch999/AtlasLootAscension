@@ -698,7 +698,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 				hightlightFrame:SetTexture(itemHighlightGreen)
 				hightlightFrame:Show()
 				itemButton.hasCollectionItem = true
-			elseif C_VanityCollection.IsCollectionItemOwned(itemID) and (not VANITY_ITEMS[itemID] and not CA_IsSpellKnown(VANITY_ITEMS[itemID].learnedSpell) or VANITY_ITEMS[itemID].learnedSpell == 0) then
+			elseif C_VanityCollection.IsCollectionItemOwned(itemID) and (not VANITY_ITEMS[itemID] and not CA_IsSpellKnown(VANITY_ITEMS[itemID].learnedSpell) or VANITY_ITEMS[itemID].learnedSpell ~= 0) then
 				hightlightFrame:SetTexture(itemHighlightBlue)
 				hightlightFrame:Show()
 				itemButton.hasCollectionItem = true
