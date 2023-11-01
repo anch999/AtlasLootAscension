@@ -256,10 +256,10 @@ function AtlasLoot:ItemOnClick(self ,arg1)
                 AtlasLoot:ItemContextMenu(itemID, self.itemTexture, _G["AtlasLootItem_"..self:GetID().."_Name"]:GetText(), AtlasLoot_Data[datID][tonumber(datPage)].Name, 
                                                 datID .. "|" .. "AtlasLoot_Data" .. "|" .. tostring(datPage), self, "item", self.number, self.craftingData)
             elseif AtlasLoot_PopupFrame and AtlasLoot_PopupFrame:IsVisible() then
-                AtlasLoot:ItemContextMenu(self, "item")
+                AtlasLoot:ItemContextMenu(self, "item", self.number, self.craftingData)
 
             else
-                AtlasLoot:ItemContextMenu(self, "item")
+                AtlasLoot:ItemContextMenu(self, "item", self.number, self.craftingData)
             end
         elseif(IsShiftKeyDown() and itemName and (AtlasLoot.db.profile.SafeLinks or AtlasLoot.db.profile.AllLinks)) then
             --insert to chat link
@@ -302,7 +302,7 @@ function AtlasLoot:ItemOnClick(self ,arg1)
         if IsShiftKeyDown() then
             ChatEdit_InsertLink(AtlasLoot:GetEnchantLink(spellID))
         elseif arg1=="RightButton" then
-            AtlasLoot:ItemContextMenu(self, "spell")
+            AtlasLoot:ItemContextMenu(self, "spell", self.number, self.craftingData)
         elseif IsAltKeyDown() then
             if AtlasLootItemsFrame.refresh[2] == "AtlasLoot_CurrentWishList" then
                 AtlasLoot_DeleteFromWishList(self.number)
@@ -543,7 +543,7 @@ function AtlasLoot:ItemContextMenu(self, Type, number, craftingData)
                                 "notCheckable", true
                             )
                         end
-                        if self.hasCollectionItem then
+                        if C_VanityCollection.IsCollectionItemOwned(itemID) then
                             AtlasLoot:AddDividerLine(35)
                             AtlasLoot.Dewdrop:AddLine(
                             'text', AL["Vanity Collection"],

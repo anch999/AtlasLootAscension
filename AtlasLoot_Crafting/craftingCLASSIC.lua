@@ -205,18 +205,19 @@ AtlasLoot_Data["AlchemyCLASSIC"] = {
 	{
 		Name = AL["Miscellaneous"];
 		[1] = {itemID = 19931, spellID = 24266 }; --Gurubashi Mojo Madness
-		[2] = {itemID = 9154, spellID = 11460 }; --Elixir of Detect Undead
-		[3] = {itemID = 18294, spellID = 22808 }; --Elixir of Greater Water Breathing
-		[4] = {itemID = 9061, spellID = 11456 }; --Goblin Rocket Fuel
-		[5] = {itemID = 8956, spellID = 11451 }; --Oil of Immolation
-		[6] = {itemID = 10592, spellID = 12609 }; --Catseye Elixir
-		[7] = {itemID = 3829, spellID = 3454 }; --Frost Oil
-		[8] = {itemID = 9149, spellID = 11459 }; --Philosopher's Stone
-		[9] = {itemID = 3828, spellID = 3453 }; --Elixir of Detect Lesser Invisibility
-		[10] = {itemID = 3824, spellID = 3449 }; --Shadow Oil
-		[11] = {itemID = 6371, spellID = 7837 }; --Fire Oil
-		[12] = {itemID = 5996, spellID = 7179 }; --Elixir of Water Breathing
-		[13] = {itemID = 6370, spellID = 7836 }; --Blackmouth Oil
+		[2] = {itemID = 9210, spellID = 11473 }; --Ghost Dye
+		[3] = {itemID = 9154, spellID = 11460 }; --Elixir of Detect Undead
+		[4] = {itemID = 18294, spellID = 22808 }; --Elixir of Greater Water Breathing
+		[5] = {itemID = 9061, spellID = 11456 }; --Goblin Rocket Fuel
+		[6] = {itemID = 8956, spellID = 11451 }; --Oil of Immolation
+		[7] = {itemID = 10592, spellID = 12609 }; --Catseye Elixir
+		[8] = {itemID = 3829, spellID = 3454 }; --Frost Oil
+		[9] = {itemID = 9149, spellID = 11459 }; --Philosopher's Stone
+		[10] = {itemID = 3828, spellID = 3453 }; --Elixir of Detect Lesser Invisibility
+		[11] = {itemID = 3824, spellID = 3449 }; --Shadow Oil
+		[12] = {itemID = 6371, spellID = 7837 }; --Fire Oil
+		[13] = {itemID = 5996, spellID = 7179 }; --Elixir of Water Breathing
+		[14] = {itemID = 6370, spellID = 7836 }; --Blackmouth Oil
 	};
 };
 ---------------------
@@ -389,7 +390,7 @@ AtlasLoot_Data["SmithingCLASSIC"] = {
 		[10] = {itemID = 2853, spellID = 2663 }; --Copper Bracers
 	};
 	{
-		Name = "Weapon - One Handed";
+		Name = "Weapon " .. WHITE .. "- One Handed";
 		[1] = {itemID = 19166, spellID = 23638 }; --Black Amnesty
 		[2] = {itemID = 19168, spellID = 23652 }; --Blackguard
 		[3] = {itemID = 19170, spellID = 23650 }; --Ebon Hand
@@ -422,7 +423,7 @@ AtlasLoot_Data["SmithingCLASSIC"] = {
 		[30] = {itemID = 17704, spellID = 21913 }; --Edge of Winter
 	};
 	{
-		Name = "Weapon - One Handed";
+		Name = "Weapon " .. WHITE .. "- One Handed";
 		[1] = {itemID = 12259, spellID = 15972 }; --Glinting Steel Dagger
 		[2] = {itemID = 3850, spellID = 3493 }; --Jade Serpentblade
 		[3] = {itemID = 3849, spellID = 3492 }; --Hardened Iron Shortsword
@@ -441,7 +442,7 @@ AtlasLoot_Data["SmithingCLASSIC"] = {
 		[16] = {itemID = 2844, spellID = 2737 }; --Copper Mace
 	};
 	{
-		Name = "Weapon - Two Handed";
+		Name = "Weapon " .. WHITE .. "- Two Handed";
 		[1] = {itemID = 19167, spellID = 23639 }; --Blackfury
 		[2] = {itemID = 19169, spellID = 23653 }; --Nightfall
 		[3] = {itemID = 17193, spellID = 21161 }; --Sulfuron Hammer

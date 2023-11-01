@@ -92,18 +92,6 @@ local AtlasLootDBDefaults = {
     }
 }
 
---makes a list of trade skills
-local profCheck = false
-local currentTradeSkills = {}
-local function tradeSkill()
-	if C_Professions:GetFirstProfession() then currentTradeSkills[C_Professions:GetFirstProfession().Name] = true end
-	if C_Professions:GetSecondProfession() then currentTradeSkills[C_Professions:GetSecondProfession().Name] = true end
-	if C_Professions:GetCooking() then currentTradeSkills[C_Professions:GetCooking().Name] = true end
-	if C_Professions:GetFishing() then currentTradeSkills[C_Professions:GetFishing().Name] = true end
-	if C_Professions:GetFirstAid() then currentTradeSkills[C_Professions:GetFirstAid().Name] = true end
-	profCheck = true
-end
-
 -- Popup Box for first time users
 StaticPopupDialogs["ATLASLOOT_SETUP"] = {
   text = AL["Welcome to Atlasloot Enhanced.  Please take a moment to set your preferences."],
@@ -499,9 +487,6 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 	local isValid, toShow, itemID, orgItemID
 	SearchPrevData = {dataID, dataSource_backup, tablenum}
 
-	--builds a list of tradeskills
-	if not profCheck then tradeSkill() end
-
     --If the loot table name has not been passed, throw up a debugging statement
 	if dataID == nil then
 		DEFAULT_CHAT_FRAME:AddMessage("No dataID!")
@@ -657,7 +642,6 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 		local extraFrame = _G["AtlasLootItem_"..i.."_Extra"]
 		local hightlightFrame = _G["AtlasLootItem_"..i.."_Highlight"]
 		local spellID = dataSource[dataID][tablenum][i].spellID
-		itemButton.hasCollectionItem = false
 		if spellID then
 			spellName, _, spellIcon, _, _, _, _, _, _ = GetSpellInfo(spellID)
 			if spellName then
@@ -697,11 +681,9 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 			if C_VanityCollection.IsCollectionItemOwned(itemID) and VANITY_ITEMS[itemID] and CA_IsSpellKnown(VANITY_ITEMS[itemID].learnedSpell) and VANITY_ITEMS[itemID].learnedSpell ~= 0 then
 				hightlightFrame:SetTexture(itemHighlightGreen)
 				hightlightFrame:Show()
-				itemButton.hasCollectionItem = true
 			elseif C_VanityCollection.IsCollectionItemOwned(itemID) and (not VANITY_ITEMS[itemID] and not CA_IsSpellKnown(VANITY_ITEMS[itemID].learnedSpell) or VANITY_ITEMS[itemID].learnedSpell ~= 0) then
 				hightlightFrame:SetTexture(itemHighlightBlue)
 				hightlightFrame:Show()
-				itemButton.hasCollectionItem = true
 			end
 		else
 			if dataSource[dataID][tablenum][i].name then
@@ -869,7 +851,6 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 				itemButton.spellID = nil
 				hightlightFrame:Hide()
 				itemButton.hasTrade = false
-				itemButton.hasCollectionItem = false
 			end
 			if dataSource[itemID] then
 				for _,ID in pairs(dataSource[itemID]) do
@@ -1170,7 +1151,7 @@ function AtlasLoot:LoadItemIDsDatabase()
 
 	-- This will run over time (usually about 30s for a file this size), but will maintain playable fps while running.
 	content:ParseAsync()
-	end
+end
 
 function AtlasLoot:PopulateProfessions()
 	if not AtlasLoot.db.profile.knownRecipes then AtlasLoot.db.profile.knownRecipes = {} end

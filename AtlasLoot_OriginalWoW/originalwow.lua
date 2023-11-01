@@ -1657,7 +1657,7 @@ AtlasLoot_Data["BlackwingLair"] = {
 AtlasLoot_Data["DireMaulEast"] = {
 	Name = BabbleZone["Dire Maul"] .. " East";
 	Type = "ClassicDungeonExt";
-	Map = "DireMaulEast";
+	Map = "DireMaul";
 	{
 		Name = BabbleBoss["Pusillin"];
 		[1] = { itemID = 18267, droprate = "71.55%" }; --Recipe: Runn Tum Tuber Surprise
@@ -1760,7 +1760,7 @@ AtlasLoot_Data["DireMaulEast"] = {
 AtlasLoot_Data["DireMaulNorth"] = {
 	Name = BabbleZone["Dire Maul"] .. " North";
 	Type = "ClassicDungeonExt";
-	Map = "DireMaulNorth";
+	Map = "DireMaul";
 	{
 		Name = BabbleBoss["Guard Mol'dar"];
 		[1] = { itemID = 18496, droprate = "4.68%" }; --Heliotrope Cloak
@@ -1901,7 +1901,7 @@ AtlasLoot_Data["DireMaulNorth"] = {
 AtlasLoot_Data["DireMaulWest"] = {
 	Name = BabbleZone["Dire Maul"] .. " West";
 	Type = "ClassicDungeonExt";
-	Map = "DireMaulWest";
+	Map = "DireMaul";
 	{
 		Name = BabbleBoss["Tendris Warpwood"];
 		[1] = { itemID = 18390, droprate = "22.55%" }; --Tanglemoss Leggings
