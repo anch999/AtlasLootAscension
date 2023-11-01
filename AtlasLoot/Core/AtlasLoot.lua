@@ -24,6 +24,11 @@ local BabbleBoss = AtlasLoot_GetLocaleLibBabble("LibBabble-Boss-3.0")
 local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0")
 local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
 
+--Establish version number and compatible version of Atlas
+local VERSION_MAJOR = "5";
+local VERSION_MINOR = "11";
+local VERSION_BOSSES = "04";
+
 AtlasLoot.Version = "AtlasLoot Ascension Edition"
 AtlasLoot.DebugMessages = false
 AtlasLoot.WishListVersion = 1
