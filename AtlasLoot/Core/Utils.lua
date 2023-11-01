@@ -155,7 +155,7 @@ function AtlasLoot:Chatlink(ID,chatType,Type)
 end
 
 function AtlasLoot:GetRecipeData(recipeID, idType)
-	if type(TRADESKILL_RECIPES) ~= "table" then return end
+	if not TRADESKILL_RECIPES and type(TRADESKILL_RECIPES) ~= "table" then return end
 	for _,prof in pairs(TRADESKILL_RECIPES) do
 		for _,cat in pairs(prof) do
 		   for _,recipe in pairs(cat) do
