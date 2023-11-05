@@ -327,7 +327,8 @@ function AtlasLoot:SetNewStyle(style)
         --AtlasLootDefaultFrame.header:SetWidth(299)
         --AtlasLootDefaultFrame.header:SetHeight(60)
         --AtlasLootDefaultFrame.header:SetPoint("TOP", AtlasLootDefaultFrame, "TOP", -3, 22) ]]
-
+        
+        AtlasLootDefaultFramePortrait:Show()
 
         local function SetButtons(path)
             if _G[path].template and _G[path].template == "FilterDropDownMenuTemplate" then
@@ -385,6 +386,7 @@ function AtlasLoot:SetNewStyle(style)
         --AtlasLootDefaultFrame.header:SetHeight(60)
         --AtlasLootDefaultFrame.header:SetPoint("TOP", AtlasLootDefaultFrame, "TOP", -3, 22) ]]
 
+        AtlasLootDefaultFramePortrait:Hide()
 
         local function SetButtons(path)
             if _G[path].template and _G[path].template == "FilterDropDownMenuTemplate" then

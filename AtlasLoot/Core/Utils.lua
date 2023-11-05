@@ -402,3 +402,15 @@ function AtlasLoot:ItemFrameRefresh()
     refreshTimer = true
 end
 -----------------------------------------------------
+
+function AtlasLoot:getMaxDifficulty(difficultyKey)
+    if(difficultyKey == "ClassicDungeon" or difficultyKey == "PVP") then
+        return 2
+    elseif (difficultyKey == "ClassicDungeonExt" or difficultyKey == "BCDungeon" or difficultyKey == "WrathDungeon") then
+        return 44
+    elseif (difficultyKey == "ClassicRaid" or difficultyKey == "BCRaid" or difficultyKey == "WrathRaid") then
+        return 5
+    else
+        return 0
+    end
+end

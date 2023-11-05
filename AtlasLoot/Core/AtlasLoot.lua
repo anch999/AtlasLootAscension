@@ -609,7 +609,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 				if item[AtlasLoot_Difficulty.MIN_DIF] > itemDif then
 					toShow = false
 				end
-				itemID = AtlasLoot:FindId(item.itemID, min(AtlasLoot_Difficulty:getMaxDifficulty(dataSource[dataID].Type), itemDif),dataSource[dataID].Type) or item.itemID
+				itemID = AtlasLoot:FindId(item.itemID, min(AtlasLoot:getMaxDifficulty(dataSource[dataID].Type), itemDif),dataSource[dataID].Type) or item.itemID
 			end
 
 			if toShow then
@@ -1020,12 +1020,11 @@ button: Identity of the button pressed to trigger the function
 Shows the GUI for setting Quicklooks
 ]]
 function AtlasLoot:ShowFavorites(button)
-	local dewdrop = AtlasLoot.Dewdrop
-	if dewdrop:IsOpen(button) then
-		dewdrop:Close(1)
+	if AtlasLoot.Dewdrop:IsOpen(button) then
+		AtlasLoot.Dewdrop:Close(1)
 	else
 		local setOptions = function()
-			dewdrop:AddLine(
+			AtlasLoot.Dewdrop:AddLine(
 				"text", AL["Favorite"].." 1",
 				"tooltipTitle", AL["Favorite"].." 1",
 				"tooltipText", AL["Assign this loot table\n to Favorite"].." 1",
@@ -1036,10 +1035,10 @@ function AtlasLoot:ShowFavorites(button)
 						AtlasLootCharDB["QuickLooks"][1]={AtlasLootItemsFrame.refreshOri[1], AtlasLootItemsFrame.refreshOri[2], AtlasLootItemsFrame.refreshOri[3], AtlasLoot.lastModule, AtlasLoot.currentTable, _G[AtlasLootItemsFrame.refreshOri[2]][AtlasLootItemsFrame.refreshOri[1]][AtlasLootItemsFrame.refreshOri[3]].Name}
 					end
 
-                    dewdrop:Close(1)
+                    AtlasLoot.Dewdrop:Close(1)
 				end
 			)
-			dewdrop:AddLine(
+			AtlasLoot.Dewdrop:AddLine(
 				"text", AL["Favorite"].." 2",
 				"tooltipTitle", AL["Favorite"].." 2",
 				"tooltipText", AL["Assign this loot table\n to Favorite"].." 2",
@@ -1054,10 +1053,10 @@ function AtlasLoot:ShowFavorites(button)
 						AtlasLootCharDB["QuickLooks"][2]={AtlasLootItemsFrame.refreshOri[1], AtlasLootItemsFrame.refreshOri[2], AtlasLootItemsFrame.refreshOri[3], AtlasLoot.lastModule, AtlasLoot.currentTable, _G[AtlasLootItemsFrame.refreshOri[2]][AtlasLootItemsFrame.refreshOri[1]][AtlasLootItemsFrame.refreshOri[3]].Name}
                     end
 
-                    dewdrop:Close(1)
+                    AtlasLoot.Dewdrop:Close(1)
 				end
 			)
-            dewdrop:AddLine(
+            AtlasLoot.Dewdrop:AddLine(
 				"text", AL["Favorite"].." 3",
 				"tooltipTitle", AL["Favorite"].." 3",
 				"tooltipText", AL["Assign this loot table\n to Favorite"].." 3",
@@ -1068,10 +1067,10 @@ function AtlasLoot:ShowFavorites(button)
 						AtlasLootCharDB["QuickLooks"][3]={AtlasLootItemsFrame.refreshOri[1], AtlasLootItemsFrame.refreshOri[2], AtlasLootItemsFrame.refreshOri[3], AtlasLoot.lastModule, AtlasLoot.currentTable, _G[AtlasLootItemsFrame.refreshOri[2]][AtlasLootItemsFrame.refreshOri[1]][AtlasLootItemsFrame.refreshOri[3]].Name}
                     end
 
-                    dewdrop:Close(1)
+                    AtlasLoot.Dewdrop:Close(1)
 				end
 			)
-            dewdrop:AddLine(
+            AtlasLoot.Dewdrop:AddLine(
 				"text", AL["Favorite"].." 4",
 				"tooltipTitle", AL["Favorite"].." 4",
 				"tooltipText", AL["Assign this loot table\n to Favorite"].." 4",
@@ -1082,11 +1081,11 @@ function AtlasLoot:ShowFavorites(button)
 						AtlasLootCharDB["QuickLooks"][4]={AtlasLootItemsFrame.refreshOri[1], AtlasLootItemsFrame.refreshOri[2], AtlasLootItemsFrame.refreshOri[3], AtlasLoot.lastModule, AtlasLoot.currentTable, _G[AtlasLootItemsFrame.refreshOri[2]][AtlasLootItemsFrame.refreshOri[1]][AtlasLootItemsFrame.refreshOri[3]].Name}
                     end
 
-                    dewdrop:Close(1)
+                    AtlasLoot.Dewdrop:Close(1)
 				end
 			)
 		end
-		dewdrop:Open(button,
+		AtlasLoot.Dewdrop:Open(button,
 			'point', function(parent)
 				return "BOTTOMLEFT", "BOTTOMRIGHT"
 			end,

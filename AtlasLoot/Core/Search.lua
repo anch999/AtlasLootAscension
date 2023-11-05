@@ -763,13 +763,12 @@ function AtlasLoot:Search(Text)
 end
 
 function AtlasLoot:ShowSearchOptions(button)
-    local dewdrop = AtlasLoot.Dewdrop
-    if dewdrop:IsOpen(button) then
-        dewdrop:Close(1)
+    if AtlasLoot.Dewdrop:IsOpen(button) then
+        AtlasLoot.Dewdrop:Close(1)
     else
         local setOptions = function()
-            dewdrop:AddLine("text", AL["Search on"], "isTitle", true, "notCheckable", true)
-            dewdrop:AddLine("text", AL["All modules"], "checked", self.db.profile.SearchOn.All, "tooltipTitle", AL["All modules"], "tooltipText",
+            AtlasLoot.Dewdrop:AddLine("text", AL["Search on"], "isTitle", true, "notCheckable", true)
+            AtlasLoot.Dewdrop:AddLine("text", AL["All modules"], "checked", self.db.profile.SearchOn.All, "tooltipTitle", AL["All modules"], "tooltipText",
                             AL["If checked, AtlasLoot will load and search across all the modules."], "func", function()
                 self.db.profile.SearchOn.All = not self.db.profile.SearchOn.All
             end)
@@ -777,7 +776,7 @@ function AtlasLoot:ShowSearchOptions(button)
                 if IsAddOnLoadOnDemand(module) then
                     local title = GetAddOnMetadata(module, "title")
                     local notes = GetAddOnMetadata(module, "notes")
-                    dewdrop:AddLine("text", title, "checked", self.db.profile.SearchOn.All or self.db.profile.SearchOn[module], "disabled", self.db.profile.SearchOn.All, "tooltipTitle", title,
+                    AtlasLoot.Dewdrop:AddLine("text", title, "checked", self.db.profile.SearchOn.All or self.db.profile.SearchOn[module], "disabled", self.db.profile.SearchOn.All, "tooltipTitle", title,
                                     "tooltipText", notes, "func", function()
                         if self.db.profile.SearchOn[module] == nil then
                             self.db.profile.SearchOn[module] = true
@@ -787,13 +786,13 @@ function AtlasLoot:ShowSearchOptions(button)
                     end)
                 end
             end
-            dewdrop:AddLine("text", AL["Search options"], "isTitle", true, "notCheckable", true)
-            dewdrop:AddLine("text", AL["Partial matching"], "checked", self.db.profile.PartialMatching, "tooltipTitle", AL["Partial matching"], "tooltipText",
+            AtlasLoot.Dewdrop:AddLine("text", AL["Search options"], "isTitle", true, "notCheckable", true)
+            AtlasLoot.Dewdrop:AddLine("text", AL["Partial matching"], "checked", self.db.profile.PartialMatching, "tooltipTitle", AL["Partial matching"], "tooltipText",
                             AL["If checked, AtlasLoot search item names for a partial match."], "func", function()
                 self.db.profile.PartialMatching = not self.db.profile.PartialMatching
             end)
         end
-        dewdrop:Open(button, 'point', function(parent)
+        AtlasLoot.Dewdrop:Open(button, 'point', function(parent)
             return "BOTTOMLEFT", "BOTTOMRIGHT"
         end, "children", setOptions)
     end
