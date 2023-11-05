@@ -7,9 +7,6 @@ AtlasLoot:FilterEnableButton()
 ]]
 local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
 
-AtlasLoot_FilterMenu = AceLibrary("Dewdrop-2.0")
-AtlasLoot_SetFiltersMenu = AceLibrary("Dewdrop-2.0")
-
 local FilterTable = {
 	{
 		Name = AL["Primary Stats"],
@@ -125,12 +122,12 @@ end
 
 function AtlasLoot:FilterEnableButton(self, btnclick)
 	if btnclick == "RightButton" then
-		if AtlasLoot_FilterMenu:IsOpen() then
-			AtlasLoot_FilterMenu:Close()
+		if AtlasLoot.Dewdrop:IsOpen() then
+			AtlasLoot.Dewdrop:Close()
 		else
-			AtlasLoot_FilterMenu:Unregister(AtlasLootFilterCheck)
+			AtlasLoot.Dewdrop:Unregister(AtlasLootFilterCheck)
 			AtlasLoot:FilterMenuRegister()
-			AtlasLoot_FilterMenu:Open(self)
+			AtlasLoot.Dewdrop:Open(self)
 		end
 		if AtlasLootFilterCheck:GetChecked() then
 			AtlasLootFilterCheck:SetChecked(false)
@@ -153,7 +150,7 @@ AtlasLoot:FilterMenuRegister:
 Constructs the Filter menu.
 ]]
 function AtlasLoot:FilterMenuRegister()
-	AtlasLoot_FilterMenu:Register(AtlasLootFilterCheck,
+	AtlasLoot.Dewdrop:Register(AtlasLootFilterCheck,
 		'point', function(parent)
 			return "TOP", "BOTTOM"
 		end,
@@ -161,27 +158,27 @@ function AtlasLoot:FilterMenuRegister()
 				for i,v in ipairs(AtlasLootFilterDB["FilterLists"]) do
 					local setFilter = false
 					if AtlasLootCharDB.SelectedFilter == i then setFilter = true end
-					AtlasLoot_FilterMenu:AddLine(
+					AtlasLoot.Dewdrop:AddLine(
 						"text", v.Name,
 						"func", function()
 							AtlasLootCharDB.SelectedFilter = i
-							AtlasLoot_FilterMenu:Close()
+							AtlasLoot.Dewdrop:Close()
 						end,
 						"checked", setFilter
 					)
 				end
-				AtlasLoot_FilterMenu:AddLine(
+				AtlasLoot.Dewdrop:AddLine(
 					"text", AL["Add Filter Set"],
 					"func", function() AtlasLoot:OpenFilterCreate() end,
 					"notCheckable", true
 				)
 				--Close button
-				AtlasLoot_FilterMenu:AddLine(
+				AtlasLoot.Dewdrop:AddLine(
 					'text', AL["Close Menu"],
 					'textR', 0,
 					'textG', 1,
 					'textB', 1,
-					'func', function() AtlasLoot_FilterMenu:Close() end,
+					'func', function() AtlasLoot.Dewdrop:Close() end,
 					'notCheckable', true
 				)
 			end,
@@ -303,7 +300,7 @@ function AtlasLoot:OpenFilterCreate()
 	end
 	--Set Page Title
 	AtlasLoot_BossName:SetText("Create Filter Set")
-	AtlasLoot_FilterMenu:Close()
+	AtlasLoot.Dewdrop:Close()
 end
 
 local function FilterSelectOnClick()

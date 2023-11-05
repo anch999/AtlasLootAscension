@@ -763,7 +763,7 @@ function AtlasLoot:Search(Text)
 end
 
 function AtlasLoot:ShowSearchOptions(button)
-    local dewdrop = AceLibrary("Dewdrop-2.0")
+    local dewdrop = AtlasLoot.Dewdrop
     if dewdrop:IsOpen(button) then
         dewdrop:Close(1)
     else

@@ -3,14 +3,14 @@ File containing functions related to the wish list.
 
 Functions:
 AtlasLoot_AddToWishlist(itemID, itemTexture, itemName, lootPage, sourcePage)
-AtlasLoot_DeleteFromWishList(btnNumber)
+AtlasLoot:DeleteFromWishList(btnNumber)
 AtlasLoot:WishListCheck(itemID, all)
 
 <local> ClearLines()
 <local> AddWishListOptions(parrent,name,icon,xxx,tabname,tab2)
 <local> AddTexture(par, num)
 AtlasLoot_RefreshWishlists()
-AtlasLoot_CreateWishlistOptions()
+AtlasLoot:CreateWishlistOptions()
 ]]
 local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
 local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
@@ -351,10 +351,10 @@ function AtlasLoot:ShowWishListDropDown(self, show, panelButton)
 end
 
 --[[
-AtlasLoot_DeleteFromWishList(btnNumber)
+AtlasLoot:DeleteFromWishList(btnNumber)
 Deletes the specified items from the wishlist
 ]]
-function AtlasLoot_DeleteFromWishList(btnNumber)
+function AtlasLoot:DeleteFromWishList(btnNumber)
 	btnNumber  = btnNumber + ((AtlasLootItemsFrame.refresh[3] - 1) * 30)
 	if AtlasLootItemsFrame.refresh[2] == "AtlasLoot_CurrentWishList" then
 	   for i, v in ipairs(AtlasLootWishList[AtlasLoot_CurrentWishList["Show"].ListType][AtlasLoot_CurrentWishList["Show"].ListNum]) do
@@ -549,7 +549,7 @@ end
 --	<local> AddTexture(par, num)
 -- 	<local> GenerateTabNum(strg,sender)
 --	AtlasLoot_RefreshWishlists()
---	AtlasLoot_CreateWishlistOptions()
+--	AtlasLoot:CreateWishlistOptions()
 
 -- **********************************************************************
 local AddWishlist = "new"
@@ -660,10 +660,10 @@ function AtlasLoot:WishlistSetup()
 	if not AtlasLootWishList["Options"][playerName]["DefaultWishList"] then AtlasLootWishList["Options"][playerName]["DefaultWishList"] = {"Own", "AtlasLootWishList", 1} end
 end
 --[[
-AtlasLoot_CreateWishlistOptions()
+AtlasLoot:CreateWishlistOptions()
 Create the Options for the Wishlists(called on variables loadet)
 ]]
-function AtlasLoot_CreateWishlistOptions()
+function AtlasLoot:CreateWishlistOptions()
 	if OptionsLoadet then return end
 	AtlasLoot:WishlistConvert()
 	AtlasLoot:WishlistSetup()

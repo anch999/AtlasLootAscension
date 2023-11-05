@@ -270,7 +270,7 @@ function AtlasLoot:ItemOnClick(self ,arg1)
             DressUpItemLink(itemLink)
         elseif IsAltKeyDown() then
             if AtlasLootItemsFrame.refresh[2] == "AtlasLoot_CurrentWishList" then
-                AtlasLoot_DeleteFromWishList(self.number)
+                AtlasLoot:DeleteFromWishList(self.number)
             end
         elseif self.sourcePage and self.sourcePage[2] == "Source" then
             dataID, dataSource, dataPage = unpack(self.sourcePage[1])
@@ -301,7 +301,7 @@ function AtlasLoot:ItemOnClick(self ,arg1)
             AtlasLoot:ItemContextMenu(self, "spell", self.number, self.craftingData)
         elseif IsAltKeyDown() then
             if AtlasLootItemsFrame.refresh[2] == "AtlasLoot_CurrentWishList" then
-                AtlasLoot_DeleteFromWishList(self.number)
+                AtlasLoot:DeleteFromWishList(self.number)
             end
         elseif(IsControlKeyDown()) then
             DressUpItemLink("item:"..self.dressingroomID..":0:0:0:0:0:0:0")
@@ -486,7 +486,7 @@ function AtlasLoot:ItemContextMenu(self, Type, number, craftingData)
                         if AtlasLootItemsFrame.refresh[2] == "AtlasLoot_CurrentWishList" then
                             AtlasLoot.Dewdrop:AddLine(
                                 "text", AL["Delete"],
-                                "func", function() AtlasLoot_DeleteFromWishList(self.number) end,
+                                "func", function() AtlasLoot:DeleteFromWishList(self.number) end,
                                 'closeWhenClicked', true,
                                 'textHeight', 12,
                                 'textWidth', 12,

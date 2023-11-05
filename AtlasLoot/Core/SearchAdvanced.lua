@@ -1,10 +1,5 @@
 local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
 
-AtlasLoot_QualityMenu = AceLibrary("Dewdrop-2.0")
-AtlasLoot_DifficultyMenu = AceLibrary("Dewdrop-2.0")
-AtlasLoot_EquipMenu = AceLibrary("Dewdrop-2.0")
-AtlasLoot_EquipSubMenu = AceLibrary("Dewdrop-2.0")
-
 local MAX_ARGUMENTS = 6
 local ACTIVE_ARGUMENT = 0
 
@@ -21,7 +16,7 @@ local ORANGE = "|cffFF8400"
 local DEFAULT = "|cffFFd200"
 
 AtlasLoot_FrameMenuList = {
-    ["EquipSubMenu"] = {AtlasLoot_EquipSubMenu, "AtlasLootDefaultFrame_AdvancedSearchPanel_EquipSubButton", "Select Option", "type", ""}
+    ["EquipSubMenu"] = {AtlasLoot.Dewdrop, "AtlasLootDefaultFrame_AdvancedSearchPanel_EquipSubButton", "Select Option", "type", ""}
 }
 
 AtlasLoot_AdvancedSearchMenus = {
@@ -181,13 +176,12 @@ AtlasLoot_AdvSearchOptions = {
 }
 
 function AtlasLoot_AdvancedSearchSetup()
-    AtlasLoot_AdvancedSearchRegister(AtlasLoot_QualityMenu, AtlasLootDefaultFrame_AdvancedSearchPanel_QualityButton, AtlasLoot_AdvancedSearchMenus["Quality"])
-    AtlasLoot_AdvancedSearchRegister(AtlasLoot_EquipMenu, AtlasLootDefaultFrame_AdvancedSearchPanel_EquipButton, AtlasLoot_AdvancedSearchMenus["Equip"])
-    --AtlasLoot_AdvancedSearchRegister(AtlasLoot_DifficultyMenu, AtlasLootDefaultFrame_AdvancedSearchPanel_Difficulty, AtlasLoot_AdvancedSearchMenus["Difficulty"])
+    AtlasLoot_AdvancedSearchRegister(AtlasLoot.Dewdrop, AtlasLootDefaultFrame_AdvancedSearchPanel_QualityButton, AtlasLoot_AdvancedSearchMenus["Quality"])
+    AtlasLoot_AdvancedSearchRegister(AtlasLoot.Dewdrop, AtlasLootDefaultFrame_AdvancedSearchPanel_EquipButton, AtlasLoot_AdvancedSearchMenus["Equip"])
 
     for n = 1, MAX_ARGUMENTS do
-        AtlasLoot_ArgumentMenus[n] = AceLibrary("Dewdrop-2.0")
-        AtlasLoot_ArgumentSubMenus[n] = AceLibrary("Dewdrop-2.0")
+        AtlasLoot_ArgumentMenus[n] = AtlasLoot.Dewdrop
+        AtlasLoot_ArgumentSubMenus[n] = AtlasLoot.Dewdrop
 
         AtlasLoot_AdvancedSearchArgumentRegister(AtlasLoot_ArgumentMenus[n], _G["AtlasLootDefaultFrame_AdvancedSearchPanel_ArgumentContainer" .. tostring(n)], tostring(n), AtlasLoot_AdvancedSearchArguments["Arguments"])
         AtlasLoot_AdvancedSearchArgumentRegister(AtlasLoot_ArgumentSubMenus[n], _G["AtlasLootDefaultFrame_AdvancedSearchPanel_ArgumentContainer" .. tostring(n) .. "Sub"], tostring(n),

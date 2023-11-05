@@ -39,10 +39,10 @@ qualitybtn.title = qualitybtn:CreateFontString(nil, "ARTWORK", "GameFontNormal")
 qualitybtn.title:SetText("Quality: ")
 qualitybtn.title:SetPoint("TOPLEFT", qualitybtn, "TOPLEFT", 3, 15)
 qualitybtn:SetScript("OnClick", function(self) 
-    if AtlasLoot_QualityMenu:IsOpen() then
-        AtlasLoot_QualityMenu:Close()
+    if AtlasLoot.Dewdrop:IsOpen() then
+        AtlasLoot.Dewdrop:Close()
     else
-        AtlasLoot_QualityMenu:Open(self)
+        AtlasLoot.Dewdrop:Open(self)
     end
 end)
 qualitybtn:SetScript("OnShow", function(self) self:SetFrameLevel( (self:GetParent()):GetFrameLevel() + 1 ) end)
@@ -64,18 +64,18 @@ equipbtn.subbtn.title:SetText("Item Subtype: ")
 equipbtn.subbtn.title:SetPoint("TOPLEFT", equipbtn.subbtn, "TOPLEFT", 3, 15)
 
 equipbtn:SetScript("OnClick", function(self) 
-    if AtlasLoot_EquipMenu:IsOpen() then
-        AtlasLoot_EquipMenu:Close()
+    if AtlasLoot.Dewdrop:IsOpen() then
+        AtlasLoot.Dewdrop:Close()
     else
-        AtlasLoot_EquipMenu:Open(self)
+        AtlasLoot.Dewdrop:Open(self)
     end
 end)
 equipbtn:SetScript("OnShow", function(self) self:SetFrameLevel( (self:GetParent()):GetFrameLevel() + 1 ) end)
 equipbtn.subbtn:SetScript("OnClick", function(self) 
-    if AtlasLoot_EquipSubMenu:IsOpen() then
-        AtlasLoot_EquipSubMenu:Close()
+    if AtlasLoot.Dewdrop:IsOpen() then
+        AtlasLoot.Dewdrop:Close()
     else
-        AtlasLoot_EquipSubMenu:Open(self)
+        AtlasLoot.Dewdrop:Open(self)
     end
 end)
 equipbtn.subbtn:SetScript("OnShow", function(self) self:SetFrameLevel( (self:GetParent()):GetFrameLevel() + 1 ) end)

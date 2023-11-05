@@ -185,7 +185,7 @@ function AtlasLoot:OnEnable()
     panel.name=AL["AtlasLoot"]
     InterfaceOptions_AddCategory(panel)
     --Filter and wishlist options menus creates as part of the next 2 commands
-	AtlasLoot_CreateWishlistOptions()
+	AtlasLoot:CreateWishlistOptions()
     panel = _G["AtlasLootHelpFrame"]
     panel.name=AL["Help"]
     panel.parent=AL["AtlasLoot"]
@@ -1020,7 +1020,7 @@ button: Identity of the button pressed to trigger the function
 Shows the GUI for setting Quicklooks
 ]]
 function AtlasLoot:ShowFavorites(button)
-	local dewdrop = AceLibrary("Dewdrop-2.0")
+	local dewdrop = AtlasLoot.Dewdrop
 	if dewdrop:IsOpen(button) then
 		dewdrop:Close(1)
 	else
