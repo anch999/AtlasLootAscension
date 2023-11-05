@@ -251,11 +251,7 @@ function AtlasLoot:ItemOnClick(self ,arg1)
             AtlasLoot:WishListAddDropClick(wList[1], wList[3], self)
         elseif(arg1=="RightButton" and itemID) then
             --item context menu
-            if(AtlasLootItemsFrame.refresh[1] == "SearchResult") then
-                local datID, _, datPage = strsplit("|", self.sourcePage)
-                AtlasLoot:ItemContextMenu(itemID, self.itemTexture, _G["AtlasLootItem_"..self:GetID().."_Name"]:GetText(), AtlasLoot_Data[datID][tonumber(datPage)].Name, 
-                                                datID .. "|" .. "AtlasLoot_Data" .. "|" .. tostring(datPage), self, "item", self.number, self.craftingData)
-            elseif AtlasLoot_PopupFrame and AtlasLoot_PopupFrame:IsVisible() then
+            if AtlasLoot_PopupFrame and AtlasLoot_PopupFrame:IsVisible() then
                 AtlasLoot:ItemContextMenu(self, "item", self.number, self.craftingData)
 
             else
@@ -308,14 +304,8 @@ function AtlasLoot:ItemOnClick(self ,arg1)
                 AtlasLoot_DeleteFromWishList(self.number)
             else
                 local spellName, _, _, _, _, _, _, _, _ = GetSpellInfo(spellID)
-
-                if(AtlasLootItemsFrame.refresh[1] == "SearchResult") then
-                    local datID, _, datPage = unpack(self.sourcePage[1])
-                    AtlasLoot_ShowWishListDropDown(itemID, self.dressingroomID, "=ds="..spellName, 
-                                                        AtlasLoot_Data[datID][tonumber(datPage)].Name, self.sourcePage, self)
-                else
-                    AtlasLoot_ShowWishListDropDown(itemID, self.dressingroomID, "=ds="..spellName, AtlasLoot_BossName:GetText(), self.dataID .. "|" .. "AtlasLoot_Data" .. "|" .. tostring(self.tablenum), self)
-                end
+                AtlasLoot_ShowWishListDropDown(itemID, self.dressingroomID, "=ds="..spellName,
+                AtlasLoot_BossName:GetText(), self.dataID .. "|" .. "AtlasLoot_Data" .. "|" .. tostring(self.tablenum), self)
             end
         elseif(IsControlKeyDown()) then
             DressUpItemLink("item:"..self.dressingroomID..":0:0:0:0:0:0:0")

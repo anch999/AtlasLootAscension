@@ -610,61 +610,99 @@ function AtlasLoot:GetItemDetails(itemId)
     return itemName, itemQuality, itemLvl, minLvl, itemEquipLoc, itemSubType, GetItemStats("item:" .. itemId)
 end
 
-local function DoSearch(searchText)
-    AtlasLootCharDB["SearchResult"] = {Name = "Search Result" , Type = "Search", Back = true}
-    AtlasLootCharDB.LastSearchedText = searchText
-    local count = 0
-    local tablenum = 1
+local count = 0
+local tablenum = 1
 
-    local searchTerms = ParseQuery(searchText)
-
-    function AtlasLoot:AddItemToSearchResult(item, dataSource, dataID, tableNum)
-        if AtlasLootCharDB["SearchResult"][tablenum] == nil then
-            AtlasLootCharDB["SearchResult"][tablenum] = {Name = "Page "..tablenum}
-        end
-        local tableCopy = AtlasLoot:CloneTable(item)
-        tinsert(AtlasLootCharDB["SearchResult"][tablenum], tableCopy)
-        local tNum = #AtlasLootCharDB["SearchResult"][tablenum]
-        AtlasLootCharDB["SearchResult"][tablenum][tNum].lootTable = {{dataID, dataSource, tableNum}, "Source"}
-        AtlasLootCharDB["SearchResult"][tablenum][tNum][1] = (count % 30) + 1
-        count = count + 1
-        if (count) % 30 == 0 then
-            tablenum = tablenum + 1
-        end
+function AtlasLoot:AddItemToSearchResult(item, dataSource, dataID, tableNum)
+    if AtlasLootCharDB["SearchResult"][tablenum] == nil then
+        AtlasLootCharDB["SearchResult"][tablenum] = {Name = "Page "..tablenum}
     end
+    local tableCopy = AtlasLoot:CloneTable(item)
+    tinsert(AtlasLootCharDB["SearchResult"][tablenum], tableCopy)
+    local tNum = #AtlasLootCharDB["SearchResult"][tablenum]
+    AtlasLootCharDB["SearchResult"][tablenum][tNum].lootTable = {{dataID, dataSource, tableNum}, "Source"}
+    AtlasLootCharDB["SearchResult"][tablenum][tNum][1] = (count % 30) + 1
+    count = count + 1
+    if (count) % 30 == 0 then
+        tablenum = tablenum + 1
+    end
+end
 
-    for dataID, data in pairs(AtlasLoot_Data) do
-        for tableNum, t in ipairs(data) do
-            for _, v in ipairs(t) do
-                if type(v) == "table" then
-                    local itemID = v.itemID
-                    local spellID = v.spellID
+local showSearch
+function AtlasLoot:ProcessItem(data)
+    if not data then return end
+    local itemData, dataID, tableNum, searchTerms, searchText = unpack(data)
+    if type(itemData) == "table" then
+        local itemID = itemData.itemID
+        local spellID = itemData.spellID
 
-                    if spellID then
-                    local spellName = GetSpellInfo(spellID)
-                        if nameMatches(spellName, searchText) then
-                            AtlasLoot:AddItemToSearchResult(v, "AtlasLoot_Data", dataID, tableNum)
-                            AtlasLoot:ItemFrameRefresh()
-                        end
-                    elseif itemID then
-                        local item = Item:CreateFromID(itemID)
-                        if item then
-                            AtlasLoot:ItemsLoading(1)
-                            item:ContinueOnLoad(function(itemID)
-                                AtlasLoot:ItemsLoading(-1)
-                                local itemDetails = {AtlasLoot:GetItemDetails(itemID)}
-                                if AtlasLoot:ItemMatchesAllTerms(searchTerms, itemDetails) then
-                                    AtlasLoot:AddItemToSearchResult(v, "AtlasLoot_Data", dataID, tableNum)
-                                    AtlasLoot:ItemFrameRefresh()
-                                end
-                            end)
-                        end
-                    end
+        if spellID then
+        local spellName = GetSpellInfo(spellID)
+            if nameMatches(spellName, searchText) then
+                AtlasLoot:AddItemToSearchResult(itemData, "AtlasLoot_Data", dataID, tableNum)
+                if not showSearch then
+                    AtlasLoot:ShowSearchResult()
+                    showSearch = true
                 end
+                AtlasLoot:ItemFrameRefresh()
+            end
+        elseif itemID then
+            local item = Item:CreateFromID(itemID)
+            if item then
+                AtlasLoot:ItemsLoading(1)
+                item:ContinueOnLoad(function(itemID)
+                    AtlasLoot:ItemsLoading(-1)
+                    local itemDetails = {AtlasLoot:GetItemDetails(itemID)}
+                    if AtlasLoot:ItemMatchesAllTerms(searchTerms, itemDetails) then
+                        AtlasLoot:AddItemToSearchResult(itemData, "AtlasLoot_Data", dataID, tableNum)
+                        if not showSearch then
+                            AtlasLoot:ShowSearchResult()
+                            showSearch = true
+                        end
+                        AtlasLoot:ItemFrameRefresh()
+                    end
+                end)
             end
         end
     end
-    AtlasLoot:ShowSearchResult()
+end
+
+local itemList = {}
+
+local function DoSearch(searchText)
+    AtlasLootCharDB["SearchResult"] = {Name = "Search Result" , Type = "Search", Back = true}
+    AtlasLootCharDB.LastSearchedText = searchText
+    count = 0
+    tablenum = 1
+
+    wipe(itemList)
+
+    local searchTerms = ParseQuery(searchText)
+    for dataID, data in pairs(AtlasLoot_Data) do
+        for tableNum, t in ipairs(data) do
+            for _, itemData in ipairs(t) do
+                tinsert(itemList, {{itemData, dataID, tableNum, searchTerms, searchText}})
+            end
+        end
+    end
+
+    -- rate limit tied to half the current frame rate
+    local maxDuration = 500/GetFramerate()
+    local startTime = debugprofilestop()
+    local function continue()
+        startTime = debugprofilestop()
+        local task = tremove(itemList)
+        while (task) do
+            AtlasLoot:ProcessItem(task[1])
+            if (debugprofilestop() - startTime > maxDuration) then
+                Timer.After(0, continue)
+                return
+            end
+            task = tremove(itemList)
+        end
+    end
+
+    return continue()
 end
 
 function AtlasLoot:ShowSearchResult()

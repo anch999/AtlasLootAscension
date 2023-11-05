@@ -889,7 +889,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 			AtlasLootItemsFrame.refreshSearch = nil
 		end
 
-		if dataSource_backup ~= "AtlasLoot_CurrentWishList" and dataID ~= "FilterList"  and dataSource[dataID].Back ~= true and dataID ~= "EmptyTable" then
+		if dataID ~= "SearchResult" and dataSource_backup ~= "AtlasLoot_CurrentWishList" and dataID ~= "FilterList"  and dataSource[dataID].Back ~= true and dataID ~= "EmptyTable" then
 			if not AtlasLoot.db.profile.LastBoss or type(AtlasLoot.db.profile.LastBoss) ~= "table" then AtlasLoot.db.profile.LastBoss = {} end
 			AtlasLoot.db.profile.LastBoss[AtlasLoot_Expac] = {dataID, dataSource_backup, tablenum, AtlasLoot.lastModule, AtlasLoot.currentTable, AtlasLoot.moduleName}
 			AtlasLoot.db.profile[AtlasLoot.currentTable] = {dataID, dataSource_backup, tablenum, AtlasLoot.lastModule, AtlasLoot.currentTable, AtlasLoot.moduleName}
