@@ -302,10 +302,6 @@ function AtlasLoot:ItemOnClick(self ,arg1)
         elseif IsAltKeyDown() then
             if AtlasLootItemsFrame.refresh[2] == "AtlasLoot_CurrentWishList" then
                 AtlasLoot_DeleteFromWishList(self.number)
-            else
-                local spellName, _, _, _, _, _, _, _, _ = GetSpellInfo(spellID)
-                AtlasLoot_ShowWishListDropDown(itemID, self.dressingroomID, "=ds="..spellName,
-                AtlasLoot_BossName:GetText(), self.dataID .. "|" .. "AtlasLoot_Data" .. "|" .. tostring(self.tablenum), self)
             end
         elseif(IsControlKeyDown()) then
             DressUpItemLink("item:"..self.dressingroomID..":0:0:0:0:0:0:0")

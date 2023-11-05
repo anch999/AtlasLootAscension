@@ -240,7 +240,7 @@ Main panel wishlist button
  ]]
 function AtlasLoot:WishListButton(self, show, buttonclick)
 	if buttonclick == "RightButton" then
-		AtlasLoot_ShowWishListDropDown(self, show, "Enable")
+		AtlasLoot:ShowWishListDropDown(self, show, "Enable")
 	elseif buttonclick == "LeftButton" then
 		if AtlasLootWishList["Own"][1] then
 			local listNum = AtlasLootWishList["Options"][playerName]["DefaultWishList"]
@@ -253,10 +253,10 @@ function AtlasLoot:WishListButton(self, show, buttonclick)
 end
 
 --[[
-AtlasLoot_ShowWishListDropDown(xitemID, xitemTexture, xitemName, xlootPage, xsourcePage, button, show)
+AtlasLoot:ShowWishListDropDown(xitemID, xitemTexture, xitemName, xlootPage, xsourcePage, button, show)
 Show the dropdownlist with the wishlists
 ]]
-function AtlasLoot_ShowWishListDropDown(self, show, panelButton)
+function AtlasLoot:ShowWishListDropDown(self, show, panelButton)
 	if AtlasLootWishList["Options"][playerName]["UseDefaultWishlist"] == true and panelButton ~= "Enable" then
 		AtlasLoot:WishListAddDropClick("Own", AtlasLootWishList["Options"][playerName]["DefaultWishList"][3])
 		return
