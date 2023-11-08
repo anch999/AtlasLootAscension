@@ -123,9 +123,9 @@ if AL then
 	AL["As Crafting Spells"] = true
 	AL["As Items"] = true
 	AL["Loot Browser Style:"] = true
-	AL["New Style"] = true
-	AL["Classic Style"] = true
-	AL["Modern Style"] = true
+	AL["ElvUI Dark"] = true
+	AL["Old AtlasLoot"] = true
+	AL["Modern"] = true
 	AL["Select Mythic Pluss Tier:"] = true
 	AL["Mythic Tier 0"] = true
 	AL["Mythic Tier 1"] = true
@@ -932,6 +932,7 @@ if AL then
 	AL["Random Level 70 instance drop"] = true
 	AL["Random Level 70 instance drop/Raid Trash Drop"] = true
 	AL["Shady Dealer"] = true
+	AL["High Risk"] = true
 	
 	--quest giver names
 	AL["Bounty Hunter Kolark"] = true
@@ -1763,6 +1764,7 @@ if AL then
 	AL["Random"] = true
 	AL["Raptor"] = true
 	AL["Rare"] = true
+	AL["Epic"] = true
 	AL["Reputation"] = true
 	AL["Repair"] = true
 	AL["Retribution Paladin"] = true

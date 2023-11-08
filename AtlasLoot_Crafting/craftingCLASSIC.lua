@@ -219,6 +219,33 @@ AtlasLoot_Data["AlchemyCLASSIC"] = {
 		[13] = {itemID = 5996, spellID = 7179 }; --Elixir of Water Breathing
 		[14] = {itemID = 6370, spellID = 7836 }; --Blackmouth Oil
 	};
+	{
+		Name = AL["High Risk"];
+		[1] = { name = AL["Rare"], icon = "INV_Box_01"},
+		[2] = {itemID = 967444, spellID = 968403 }; --Potent Flask of Manifesting Power
+		[3] = {itemID = 967447, spellID = 968406 }; --Potent Flask of the Warsong
+		[4] = {itemID = 967450, spellID = 968409 }; --Potent Flask of the Kirin Tor
+		[5] = {itemID = 967453, spellID = 968412 }; --Potent Flask of Butchery
+		[6] = {itemID = 967456, spellID = 968415 }; --Potent Flask of the Unyielding
+		[7] = {itemID = 967459, spellID = 968418 }; --Potent Flask of Unrelenting Power
+		[8] = {itemID = 967462, spellID = 968421 }; --Potent Flask of Savage Assault
+		[9] = {itemID = 967465, spellID = 968424 }; --Potent Flask of Shattering Thunder
+		[10] = {itemID = 967468, spellID = 968427 }; --Potent Flask of the Executioner
+		[11] = {itemID = 967471, spellID = 968430 }; --Potent Flask of Deep Meditation
+		[12] = {itemID = 967474, spellID = 968433 }; --Potent Flask of Adept Striking
+		[16] = { name = AL["Epic"], icon = "INV_Box_01"},
+		[17] = {itemID = 967445, spellID = 968404 }; --Distilled Flask of Manifesting Power
+		[18] = {itemID = 967448, spellID = 968407 }; --Distilled Flask of the Warsong
+		[19] = {itemID = 967451, spellID = 968410 }; --Distilled Flask of the Kirin Tor
+		[20] = {itemID = 967454, spellID = 968413 }; --Distilled Flask of Butchery
+		[21] = {itemID = 967457, spellID = 968416 }; --Distilled Flask of the Unyielding
+		[22] = {itemID = 967460, spellID = 968419 }; --Distilled Flask of Unrelenting Power
+		[23] = {itemID = 967463, spellID = 968422 }; --Distilled Flask of Savage Assault
+		[24] = {itemID = 967466, spellID = 968425 }; --Distilled Flask of Shattering Thunder
+		[25] = {itemID = 967469, spellID = 968428 }; --Distilled Flask of the Executioner
+		[26] = {itemID = 967472, spellID = 968431 }; --Distilled Flask of Deep Meditation
+		[27] = {itemID = 967475, spellID = 968434 }; --Distilled Flask of Adept Striking
+	};
 };
 ---------------------
 --- Blacksmithing ---
@@ -534,6 +561,29 @@ AtlasLoot_Data["SmithingCLASSIC"] = {
 		[2] = {itemID = 30073, spellID = 36128 }; --Light Emberforged Hammer
 		[3] = {itemID = 30072, spellID = 36126 }; --Light Skyforged Axe
 	};
+	{
+		Name = AL["High Risk"];
+		[1] = { name = AL["Rare"], icon = "INV_Box_01"},
+		[2] = {itemID = 967173, spellID = 968019 }; --Sturdy Living Belt Buckle
+		[3] = {itemID = 967176, spellID = 968022 }; --Sturdy Deflecting Belt Buckle
+		[4] = {itemID = 967179, spellID = 968025 }; --Sturdy Roguish Belt Buckle
+		[5] = {itemID = 967182, spellID = 968028 }; --Sturdy Dancing Belt Buckle
+		[6] = {itemID = 967185, spellID = 968031 }; --Sturdy Magus Belt Buckle
+		[7] = {itemID = 967188, spellID = 968034 }; --Sturdy Cleric's Belt Buckle
+		[8] = {itemID = 967191, spellID = 968037 }; --Sturdy Warlord's Belt Buckle
+		[9] = {itemID = 967194, spellID = 968040 }; --Sturdy Gaurdian's Belt Buckle
+		[10] = {itemID = 967681, spellID = 968481 }; --Homicite Key
+		[16] = { name = AL["Epic"], icon = "INV_Box_01"},
+		[17] = {itemID = 967174, spellID = 968020 }; --Mastercraft Living Belt Buckle
+		[18] = {itemID = 967177, spellID = 968023 }; --Mastercraft Deflecting Belt Buckle
+		[19] = {itemID = 967180, spellID = 968026 }; --Mastercraft Roguish Belt Buckle
+		[20] = {itemID = 967183, spellID = 968029 }; --Mastercraft Dancing Belt Buckle
+		[21] = {itemID = 967186, spellID = 968032 }; --Mastercraft Magus Belt Buckle
+		[22] = {itemID = 967189, spellID = 968035 }; --Mastercraft Cleric's Belt Buckle
+		[23] = {itemID = 967192, spellID = 968038 }; --Mastercraft Warlord's Belt Buckle
+		[24] = {itemID = 967195, spellID = 968041 }; --Mastercraft Gaurdian's Belt Buckle
+		[25] = {itemID = 967682, spellID = 968482 }; --Homicite Key
+	};
 };
 ---------------
 --- Cooking ---
@@ -667,6 +717,108 @@ AtlasLoot_Data["CookingCLASSIC"] = {
 		[7] = {itemID = 787, spellID = 7752 }; --Slitherskin Mackerel
 		[8] = {itemID = 30816, spellID = 37836 }; --Spice Bread
 		[9] = {itemID = 46691, spellID = 65454 }; --Bread of the Dead
+	};
+	{
+		Name = AL["High Risk"].." - Page 1",
+		[1] = { name = AL["Rare"], icon = "INV_Box_01"},
+		[2] = {itemID = 967510, spellID = 968280 }; --Animated Soup for the Soul
+		[3] = {itemID = 967513, spellID = 968283 }; --Volcanic Sandwich
+		[4] = {itemID = 967516, spellID = 968286 }; --Winter Wontons
+		[5] = {itemID = 967519, spellID = 968289 }; --Storm Steak
+		[6] = {itemID = 967522, spellID = 968292 }; --Void Touched Stew
+		[7] = {itemID = 967525, spellID = 968295 }; --Spicy Vulture Steak
+		[8] = {itemID = 967528, spellID = 968298 }; --Wizard Wontons
+		[9] = {itemID = 967531, spellID = 968301 }; --Jurassic Burger
+		[10] = {itemID = 967534, spellID = 968304 }; --Rough-alo wings
+		[11] = {itemID = 967537, spellID = 968307 }; --The Whooper Sandwich
+		[12] = {itemID = 967540, spellID = 968310 }; --Vulture a la King
+		[13] = {itemID = 967543, spellID = 968313 }; --Scorching Hot Steak
+		[14] = {itemID = 967546, spellID = 968316 }; --Lively Stew
+		[15] = {itemID = 967549, spellID = 968319 }; --Crawling Steak
+		[16] = { name = AL["Epic"], icon = "INV_Box_01"},
+		[17] = {itemID = 967511, spellID = 968281 }; --Animated Soup for the Soul
+		[18] = {itemID = 967514, spellID = 968284 }; --Volcanic Sandwich
+		[19] = {itemID = 967517, spellID = 968287 }; --Winter Wontons
+		[20] = {itemID = 967520, spellID = 968290 }; --Storm Steak
+		[21] = {itemID = 967523, spellID = 968293 }; --Void Touched Stew
+		[22] = {itemID = 967526, spellID = 968296 }; --Spicy Vulture Steak
+		[23] = {itemID = 967529, spellID = 968299 }; --Wizard Wontons
+		[24] = {itemID = 967532, spellID = 968302 }; --Jurassic Burger
+		[25] = {itemID = 967535, spellID = 968305 }; --Rough-alo wings
+		[26] = {itemID = 967538, spellID = 968308 }; --The Whooper Sandwich
+		[27] = {itemID = 967541, spellID = 968311 }; --Vulture a la King
+		[28] = {itemID = 967544, spellID = 968314 }; --Scorching Hot Steak
+		[29] = {itemID = 967547, spellID = 968317 }; --Lively Stew
+		[30] = {itemID = 967550, spellID = 968320 }; --Crawling Steak
+	};
+	{
+		Name = AL["High Risk"].." - Page 2",
+		[1] = { name = AL["Rare"], icon = "INV_Box_01"},
+		[2] = {itemID = 967600, spellID = 968370 }; --Subtle Sandwich
+		[3] = {itemID = 967603, spellID = 968373 }; --Subtle Wontons
+		[4] = {itemID = 967606, spellID = 968376 }; --Subtle Sulferous Soup
+		[5] = {itemID = 967609, spellID = 968379 }; --Strongman Stew
+		[6] = {itemID = 967612, spellID = 968382 }; --Mysterious Void Roast
+		[7] = {itemID = 967615, spellID = 968385 }; --Fire Charred Roast
+		[8] = {itemID = 967618, spellID = 968388 }; --Storm Fried Roast
+		[9] = {itemID = 967621, spellID = 968391 }; --Winter Roast
+		[10] = {itemID = 967624, spellID = 968394 }; --Blackened Roast
+		[11] = {itemID = 967627, spellID = 968397 }; --Dino Delight
+		[12] = {itemID = 967630, spellID = 968400 }; --Slick-fil-A Sandwich
+		[13] = {itemID = 967552, spellID = 968322 }; --Breakonator Sandwich
+		[14] = {itemID = 967600, spellID = 968370 }; --Subtle Steak
+		[16] = { name = AL["Epic"], icon = "INV_Box_01"},
+		[17] = {itemID = 967601, spellID = 968371 }; --Subtle Sandwich
+		[18] = {itemID = 967604, spellID = 968374 }; --Subtle Wontons
+		[19] = {itemID = 967607, spellID = 968377 }; --Subtle Sulferous Soup
+		[20] = {itemID = 967610, spellID = 968380 }; --Strongman Stew
+		[21] = {itemID = 967613, spellID = 968383 }; --Mysterious Void Roast
+		[22] = {itemID = 967616, spellID = 968386 }; --Fire Charred Roast
+		[23] = {itemID = 967619, spellID = 968389 }; --Storm Fried Roast
+		[24] = {itemID = 967622, spellID = 968392 }; --Winter Roast
+		[25] = {itemID = 967625, spellID = 968395 }; --Blackened Roast
+		[26] = {itemID = 967628, spellID = 968398 }; --Dino Delight
+		[27] = {itemID = 967631, spellID = 968401 }; --Slick-fil-A Sandwich
+		[28] = {itemID = 967553, spellID = 968323 }; --Breakonator Sandwich
+		[29] = {itemID = 967598, spellID = 968368 }; --Subtle Steak
+	};
+	{
+		Name = AL["High Risk"].." - Page 3",
+		[1] = { name = AL["Rare"], icon = "INV_Box_01"},
+		[2] = {itemID = 967555, spellID = 968325 }; --Master Wontons
+		[3] = {itemID = 967558, spellID = 968328 }; --Big Whack Sandwich
+		[4] = {itemID = 967561, spellID = 968331 }; --Warping Wontons
+		[5] = {itemID = 967564, spellID = 968334 }; --Duck Stew
+		[6] = {itemID = 967567, spellID = 968337 }; --Mountainman Stew
+		[7] = {itemID = 967570, spellID = 968340 }; --Scorched Stew
+		[8] = {itemID = 967573, spellID = 968343 }; --Vulcan Wontons
+		[9] = {itemID = 967576, spellID = 968346 }; --Jurassic Soup
+		[10] = {itemID = 967579, spellID = 968349 }; --Heightened Wontons
+		[11] = {itemID = 967582, spellID = 968352 }; --Hearty Spirit Soup
+		[12] = {itemID = 967585, spellID = 968355 }; --Jurassic Steak
+		[13] = {itemID = 967588, spellID = 968358 }; --Stormwich Sandwich
+		[14] = {itemID = 967591, spellID = 968361 }; --Warding Wontons
+		[15] = {itemID = 967594, spellID = 968364 }; --Rolling Meatballs
+		[16] = { name = AL["Epic"], icon = "INV_Box_01"},
+		[17] = {itemID = 967556, spellID = 968326 }; --Master Wontons
+		[18] = {itemID = 967559, spellID = 968329 }; --Big Whack Sandwich
+		[19] = {itemID = 967562, spellID = 968332 }; --Warping Wontons
+		[20] = {itemID = 967565, spellID = 968335 }; --Duck Stew
+		[21] = {itemID = 967568, spellID = 968338 }; --Mountainman Stew
+		[22] = {itemID = 967571, spellID = 968341 }; --Scorched Stew
+		[23] = {itemID = 967574, spellID = 968344 }; --Vulcan Wontons
+		[24] = {itemID = 967577, spellID = 968347 }; --Jurassic Soup
+		[25] = {itemID = 967580, spellID = 968350 }; --Heightened Wontons
+		[26] = {itemID = 967583, spellID = 968353 }; --Hearty Spirit Soup
+		[27] = {itemID = 967586, spellID = 968356 }; --Jurassic Steak
+		[28] = {itemID = 967589, spellID = 968359 }; --Stormwich Sandwich
+		[29] = {itemID = 967592, spellID = 968362 }; --Warding Wontons
+		[30] = {itemID = 967595, spellID = 968365 }; --Rolling Meatballs
+	};
+	{
+		Name = AL["High Risk"].." - "..AL["Miscellaneous"],
+		[1] = {itemID = 967704, spellID = 968647 }; --Alluring Bait
+		[16] = {itemID = 967705, spellID = 968648 }; --Irresistible Bait
 	};
 };
 
@@ -852,6 +1004,31 @@ AtlasLoot_Data["EnchantingCLASSIC"] = {
 		[17] = {itemID = 11289, spellID = 14809 }; --Lesser Mystic Wand
 		[18] = {itemID = 11288, spellID = 14807 }; --Greater Magic Wand
 		[19] = {itemID = 11287, spellID = 14293 }; --Lesser Magic Wand
+	};
+	{
+		Name = AL["High Risk"];
+		[1] = { name = AL["Rare"], icon = "INV_Box_01"},
+		[2] = {icon = "Spell_Holy_GreaterHeal", spellID = 968677 }; --Enchant Weapon - Unstoppable Assault
+		[3] = {icon = "Spell_Holy_GreaterHeal", spellID = 968680 }; --Enchant Weapon - Lucid Assault
+		[4] = {icon = "Spell_Holy_GreaterHeal", spellID = 968683 }; --Enchant Weapon - Spellbinder's Rage
+		[5] = {icon = "Spell_Holy_GreaterHeal", spellID = 968686 }; --Enchant Weapon - Ninja's Focus
+		[6] = {icon = "Spell_Holy_GreaterHeal", spellID = 968689 }; --Enchant Weapon - Grovewarden's Blessing
+		[7] = {icon = "Spell_Holy_GreaterHeal", spellID = 968692 }; --Enchant Weapon - Viscious Assault
+		[8] = {icon = "Spell_Holy_GreaterHeal", spellID = 968695 }; --Enchant Weapon - Arcane Dexterity
+		[9] = {icon = "Spell_Holy_GreaterHeal", spellID = 968698 }; --Enchant Weapon - Arcane Artillery
+		[10] = {icon = "Spell_Holy_GreaterHeal", spellID = 968701 }; --Enchant Weapon - Arcane Precision
+		[11] = {icon = "Spell_Holy_GreaterHeal", spellID = 968770 }; --Enchant Weapon - Crusader II
+		[16] = { name = AL["Epic"], icon = "INV_Box_01"},
+		[17] = {icon = "Spell_Holy_GreaterHeal", spellID = 968678 }; --Enchant Weapon - Greater Unstoppable Assault
+		[18] = {icon = "Spell_Holy_GreaterHeal", spellID = 968681 }; --Enchant Weapon - Greater Lucid Assualt
+		[19] = {icon = "Spell_Holy_GreaterHeal", spellID = 968684 }; --Enchant Weapon - Greater Spellbinder's Rage
+		[20] = {icon = "Spell_Holy_GreaterHeal", spellID = 968687 }; --Enchant Weapon - Greater Ninja's Focus
+		[21] = {icon = "Spell_Holy_GreaterHeal", spellID = 968690 }; --Enchant Weapon - Greater Grovewarden's Blessing
+		[22] = {icon = "Spell_Holy_GreaterHeal", spellID = 968693 }; --Enchant Weapon - Greater Viscious Assault
+		[23] = {icon = "Spell_Holy_GreaterHeal", spellID = 968696 }; --Enchant Weapon - Greater Arcane Dexterity
+		[24] = {icon = "Spell_Holy_GreaterHeal", spellID = 968699 }; --Enchant Weapon - Greater Arcane Artillery
+		[25] = {icon = "Spell_Holy_GreaterHeal", spellID = 968702 }; --Enchant Weapon - Greater Arcane Precision
+		[26] = {icon = "Spell_Holy_GreaterHeal", spellID = 968771 }; --Enchant Weapon - Crusader III
 	};
 };
 
@@ -1069,6 +1246,23 @@ AtlasLoot_Data["EngineeringCLASSIC"] = {
 		[13] = {itemID = 10644, spellID = 12715 }; --Goblin Rocket Fuel Recipe
 		[14] = {itemID = 10646, spellID = 12760 }; --Goblin Sapper Charge
 		[15] = {itemID = 10577, spellID = 13240 }; --The Mortar: Reloaded
+	};
+	{
+		Name = AL["High Risk"];
+		[1] = { name = AL["Rare"], icon = "INV_Box_01"},
+		[2] = {itemID = 967197, spellID = 968043 }; --Focused Gnomish Magnifying Lense
+		[3] = {itemID = 967200, spellID = 968046 }; --Focused Gnomish Focusing Lense
+		[4] = {itemID = 967203, spellID = 968049 }; --Focused Gnomish Prismatic Lense
+		[5] = {itemID = 967206, spellID = 968052 }; --Focused Hipfire Scope
+		[6] = {itemID = 967209, spellID = 968055 }; --Focused Precision Scope
+		[7] = {itemID = 967212, spellID = 968058 }; --Focused Reflex Scope
+		[16] = { name = AL["Epic"], icon = "INV_Box_01"},
+		[17] = {itemID = 967198, spellID = 968044 }; --Polished Gnomish Magnifying Lense
+		[18] = {itemID = 967201, spellID = 968047 }; --Polished Gnomish Focusing Lense
+		[19] = {itemID = 967204, spellID = 968050 }; --Polished Gnomish Prismatic Lense
+		[20] = {itemID = 967207, spellID = 968053 }; --Polished Hipfire Scope
+		[21] = {itemID = 967210, spellID = 968056 }; --Polished Precision Scope
+		[22] = {itemID = 967213, spellID = 968059 }; --Polished Reflex Scope
 	};
 };
 
@@ -1951,6 +2145,23 @@ AtlasLoot_Data["LeatherworkingCLASSIC"] = {
 		[2] = {itemID = 8349, spellID = 10647 }; --Feathered Breastplate
 		[1] = {itemID = 29970, spellID = 36075 }; --Wildfeather Leggings
 	};
+	{
+		Name = AL["High Risk"];
+		[1] = { name = AL["Rare"], icon = "INV_Box_01"},
+		[2] = {itemID = 967155, spellID = 968001 }; --Sturdy Yeti Gambeson
+		[3] = {itemID = 967158, spellID = 968004 }; --Sturdy Devilsaur Gambeson
+		[4] = {itemID = 967161, spellID = 968007 }; --Sturdy Plaguebat Gambeson
+		[5] = {itemID = 967164, spellID = 968010 }; --Sturdy Sandworm Gambeson
+		[6] = {itemID = 967167, spellID = 968013 }; --Sturdy Black Scale Gambeson
+		[7] = {itemID = 967170, spellID = 968016 }; --Sturdy Blue Scale Gambeson
+		[16] = { name = AL["Epic"], icon = "INV_Box_01"},
+		[17] = {itemID = 967156, spellID = 968002 }; --Mastercraft Yeti Gambeson
+		[18] = {itemID = 967159, spellID = 968005 }; --Mastercraft Devilsaur Gambeson
+		[19] = {itemID = 967162, spellID = 968008 }; --Mastercraft Plaguebat Gambeson
+		[20] = {itemID = 967165, spellID = 968011 }; --Mastercraft Sandworm Gambeson
+		[21] = {itemID = 967168, spellID = 968014 }; --Mastercraft Black Scale Gambeson
+		[22] = {itemID = 967171, spellID = 968017 }; --Mastercraft Blue Scale Gambeson
+	};
 };
 
 --------------
@@ -2256,271 +2467,21 @@ AtlasLoot_Data["TailoringCLASSIC"] = {
 		[21] = {itemID = 2576, spellID = 2393 }; --White Linen Shirt
 		[22] = {itemID = 4344, spellID = 3915 }; --Brown Linen Shirt
 	};
-};
-
----------------------
----   High Risk   ---
----------------------
-
-AtlasLoot_Data["AlchemyHighRiskCLASSIC"] = {
-	Name = ALCHEMY .. " High Risk";
-	Type = "Crafting";
 	{
-		Name = "Rare";
-		[1] = {itemID = 967444, spellID = 968403 }; --Potent Flask of Manifesting Power
-		[2] = {itemID = 967447, spellID = 968406 }; --Potent Flask of the Warsong
-		[3] = {itemID = 967450, spellID = 968409 }; --Potent Flask of the Kirin Tor
-		[4] = {itemID = 967453, spellID = 968412 }; --Potent Flask of Butchery
-		[5] = {itemID = 967456, spellID = 968415 }; --Potent Flask of the Unyielding
-		[6] = {itemID = 967459, spellID = 968418 }; --Potent Flask of Unrelenting Power
-		[7] = {itemID = 967462, spellID = 968421 }; --Potent Flask of Savage Assault
-		[8] = {itemID = 967465, spellID = 968424 }; --Potent Flask of Shattering Thunder
-		[9] = {itemID = 967468, spellID = 968427 }; --Potent Flask of the Executioner
-		[10] = {itemID = 967471, spellID = 968430 }; --Potent Flask of Deep Meditation
-		[11] = {itemID = 967474, spellID = 968433 }; --Potent Flask of Adept Striking
-	};
-	{
-		Name = "Epic";
-		[1] = {itemID = 967445, spellID = 968404 }; --Distilled Flask of Manifesting Power
-		[2] = {itemID = 967448, spellID = 968407 }; --Distilled Flask of the Warsong
-		[3] = {itemID = 967451, spellID = 968410 }; --Distilled Flask of the Kirin Tor
-		[4] = {itemID = 967454, spellID = 968413 }; --Distilled Flask of Butchery
-		[5] = {itemID = 967457, spellID = 968416 }; --Distilled Flask of the Unyielding
-		[6] = {itemID = 967460, spellID = 968419 }; --Distilled Flask of Unrelenting Power
-		[7] = {itemID = 967463, spellID = 968422 }; --Distilled Flask of Savage Assault
-		[8] = {itemID = 967466, spellID = 968425 }; --Distilled Flask of Shattering Thunder
-		[9] = {itemID = 967469, spellID = 968428 }; --Distilled Flask of the Executioner
-		[10] = {itemID = 967472, spellID = 968431 }; --Distilled Flask of Deep Meditation
-		[11] = {itemID = 967475, spellID = 968434 }; --Distilled Flask of Adept Striking
-	};
-};
-
-AtlasLoot_Data["SmithingHighRiskCLASSIC"] = {
-	Name = BLACKSMITHING .. " High Risk";
-	Type = "Crafting";
-	{
-		Name = "Rare";
-		[1] = {itemID = 967173, spellID = 968019 }; --Sturdy Living Belt Buckle
-		[2] = {itemID = 967176, spellID = 968022 }; --Sturdy Deflecting Belt Buckle
-		[3] = {itemID = 967179, spellID = 968025 }; --Sturdy Roguish Belt Buckle
-		[4] = {itemID = 967182, spellID = 968028 }; --Sturdy Dancing Belt Buckle
-		[5] = {itemID = 967185, spellID = 968031 }; --Sturdy Magus Belt Buckle
-		[6] = {itemID = 967188, spellID = 968034 }; --Sturdy Cleric's Belt Buckle
-		[7] = {itemID = 967191, spellID = 968037 }; --Sturdy Warlord's Belt Buckle
-		[8] = {itemID = 967194, spellID = 968040 }; --Sturdy Gaurdian's Belt Buckle
-		[10] = {itemID = 967681, spellID = 968481 }; --Homicite Key
-	};
-	{
-		Name = "Epic";
-		[1] = {itemID = 967174, spellID = 968020 }; --Mastercraft Living Belt Buckle
-		[2] = {itemID = 967177, spellID = 968023 }; --Mastercraft Deflecting Belt Buckle
-		[3] = {itemID = 967180, spellID = 968026 }; --Mastercraft Roguish Belt Buckle
-		[4] = {itemID = 967183, spellID = 968029 }; --Mastercraft Dancing Belt Buckle
-		[5] = {itemID = 967186, spellID = 968032 }; --Mastercraft Magus Belt Buckle
-		[6] = {itemID = 967189, spellID = 968035 }; --Mastercraft Cleric's Belt Buckle
-		[7] = {itemID = 967192, spellID = 968038 }; --Mastercraft Warlord's Belt Buckle
-		[8] = {itemID = 967195, spellID = 968041 }; --Mastercraft Gaurdian's Belt Buckle
-		[10] = {itemID = 967682, spellID = 968482 }; --Homicite Key
-	};
-};
-
-AtlasLoot_Data["LeatherworkingHighRiskCLASSIC"] = {
-	Name = LEATHERWORKING .. " High Risk";
-	Type = "Crafting";
-	{
-		Name = "Rare";
-		[1] = {itemID = 967155, spellID = 968001 }; --Sturdy Yeti Gambeson
-		[2] = {itemID = 967158, spellID = 968004 }; --Sturdy Devilsaur Gambeson
-		[3] = {itemID = 967161, spellID = 968007 }; --Sturdy Plaguebat Gambeson
-		[4] = {itemID = 967164, spellID = 968010 }; --Sturdy Sandworm Gambeson
-		[5] = {itemID = 967167, spellID = 968013 }; --Sturdy Black Scale Gambeson
-		[6] = {itemID = 967170, spellID = 968016 }; --Sturdy Blue Scale Gambeson
-	};
-	{
-		Name = "Epic";
-		[1] = {itemID = 967156, spellID = 968002 }; --Mastercraft Yeti Gambeson
-		[2] = {itemID = 967159, spellID = 968005 }; --Mastercraft Devilsaur Gambeson
-		[3] = {itemID = 967162, spellID = 968008 }; --Mastercraft Plaguebat Gambeson
-		[4] = {itemID = 967165, spellID = 968011 }; --Mastercraft Sandworm Gambeson
-		[5] = {itemID = 967168, spellID = 968014 }; --Mastercraft Black Scale Gambeson
-		[6] = {itemID = 967171, spellID = 968017 }; --Mastercraft Blue Scale Gambeson
-	};
-};
-
-AtlasLoot_Data["EngineeringHighRiskCLASSIC"] = {
-	Name = ENGINEERING .. " High Risk";
-	Type = "Crafting";
-	{
-		Name = "Rare";
-		[1] = {itemID = 967197, spellID = 968043 }; --Focused Gnomish Magnifying Lense
-		[2] = {itemID = 967200, spellID = 968046 }; --Focused Gnomish Focusing Lense
-		[3] = {itemID = 967203, spellID = 968049 }; --Focused Gnomish Prismatic Lense
-		[4] = {itemID = 967206, spellID = 968052 }; --Focused Hipfire Scope
-		[5] = {itemID = 967209, spellID = 968055 }; --Focused Precision Scope
-		[6] = {itemID = 967212, spellID = 968058 }; --Focused Reflex Scope
-	};
-	{
-		Name = "Epic";
-		[1] = {itemID = 967198, spellID = 968044 }; --Polished Gnomish Magnifying Lense
-		[2] = {itemID = 967201, spellID = 968047 }; --Polished Gnomish Focusing Lense
-		[3] = {itemID = 967204, spellID = 968050 }; --Polished Gnomish Prismatic Lense
-		[4] = {itemID = 967207, spellID = 968053 }; --Polished Hipfire Scope
-		[5] = {itemID = 967210, spellID = 968056 }; --Polished Precision Scope
-		[6] = {itemID = 967213, spellID = 968059 }; --Polished Reflex Scope
-	};
-};
-
-AtlasLoot_Data["EnchantingHighRiskCLASSIC"] = {
-	Name = ENCHANTING .. " High Risk";
-	Type = "Crafting";
-	{
-		Name = "Rare";
-		[1] = {icon = "Spell_Holy_GreaterHeal", spellID = 968677 }; --Enchant Weapon - Unstoppable Assault
-		[2] = {icon = "Spell_Holy_GreaterHeal", spellID = 968680 }; --Enchant Weapon - Lucid Assault
-		[3] = {icon = "Spell_Holy_GreaterHeal", spellID = 968683 }; --Enchant Weapon - Spellbinder's Rage
-		[4] = {icon = "Spell_Holy_GreaterHeal", spellID = 968686 }; --Enchant Weapon - Ninja's Focus
-		[5] = {icon = "Spell_Holy_GreaterHeal", spellID = 968689 }; --Enchant Weapon - Grovewarden's Blessing
-		[6] = {icon = "Spell_Holy_GreaterHeal", spellID = 968692 }; --Enchant Weapon - Viscious Assault
-		[7] = {icon = "Spell_Holy_GreaterHeal", spellID = 968695 }; --Enchant Weapon - Arcane Dexterity
-		[8] = {icon = "Spell_Holy_GreaterHeal", spellID = 968698 }; --Enchant Weapon - Arcane Artillery
-		[9] = {icon = "Spell_Holy_GreaterHeal", spellID = 968701 }; --Enchant Weapon - Arcane Precision
-		[10] = {icon = "Spell_Holy_GreaterHeal", spellID = 968770 }; --Enchant Weapon - Crusader II
-	};
-	{
-		Name = "Epic";
-		[1] = {icon = "Spell_Holy_GreaterHeal", spellID = 968678 }; --Enchant Weapon - Greater Unstoppable Assault
-		[2] = {icon = "Spell_Holy_GreaterHeal", spellID = 968681 }; --Enchant Weapon - Greater Lucid Assualt
-		[3] = {icon = "Spell_Holy_GreaterHeal", spellID = 968684 }; --Enchant Weapon - Greater Spellbinder's Rage
-		[4] = {icon = "Spell_Holy_GreaterHeal", spellID = 968687 }; --Enchant Weapon - Greater Ninja's Focus
-		[5] = {icon = "Spell_Holy_GreaterHeal", spellID = 968690 }; --Enchant Weapon - Greater Grovewarden's Blessing
-		[6] = {icon = "Spell_Holy_GreaterHeal", spellID = 968693 }; --Enchant Weapon - Greater Viscious Assault
-		[7] = {icon = "Spell_Holy_GreaterHeal", spellID = 968696 }; --Enchant Weapon - Greater Arcane Dexterity
-		[8] = {icon = "Spell_Holy_GreaterHeal", spellID = 968699 }; --Enchant Weapon - Greater Arcane Artillery
-		[9] = {icon = "Spell_Holy_GreaterHeal", spellID = 968702 }; --Enchant Weapon - Greater Arcane Precision
-		[10] = {icon = "Spell_Holy_GreaterHeal", spellID = 968771 }; --Enchant Weapon - Crusader III
-	};
-};
-
-AtlasLoot_Data["TailoringHighRiskCLASSIC"] = {
-	Name = TAILORING .. " High Risk";
-	Type = "Crafting";
-	{
-		Name = "Rare";
-		[1] = {itemID = 967215, spellID = 968061 }; --Heavy Dragonweave Cloak Lining
-		[2] = {itemID = 967218, spellID = 968064 }; --Heavy Twilight Cloak Lining
-		[3] = {itemID = 967221, spellID = 968067 }; --Heavy Scarlet Cloak Lining
-		[4] = {itemID = 967224, spellID = 968070 }; --Heavy Rampager's Cloak Lining
-		[5] = {itemID = 967227, spellID = 968073 }; --Heavy Deadwind Cloak Lining
-		[6] = {itemID = 967230, spellID = 968076 }; --Heavy Slippery Cloak Lining
-	};
-	{
-		Name = "Epic";
-		[1] = {itemID = 967216, spellID = 968062 }; --Illustrious Dragonweave Cloak Lining
-		[2] = {itemID = 967219, spellID = 968065 }; --Illustrious Twilight Cloak Lining
-		[3] = {itemID = 967222, spellID = 968068 }; --Illustrious Scarlet Cloak Lining
-		[4] = {itemID = 967225, spellID = 968071 }; --Illustrious Rampager's Cloak Lining
-		[5] = {itemID = 967228, spellID = 968074 }; --Illustrious Deadwind Cloak Lining
-		[6] = {itemID = 967231, spellID = 968077 }; --Illustrious Slippery Cloak Lining
-	};
-};
-
-AtlasLoot_Data["CookingHighRiskCLASSIC"] = {
-	Name = COOKING .. " High Risk";
-	Type = "Crafting";
-	{
-		Name = "Rare";
-		[1] = {itemID = 967510, spellID = 968280 }; --Animated Soup for the Soul
-		[2] = {itemID = 967513, spellID = 968283 }; --Volcanic Sandwich
-		[3] = {itemID = 967516, spellID = 968286 }; --Winter Wontons
-		[4] = {itemID = 967519, spellID = 968289 }; --Storm Steak
-		[5] = {itemID = 967522, spellID = 968292 }; --Void Touched Stew
-		[6] = {itemID = 967525, spellID = 968295 }; --Spicy Vulture Steak
-		[7] = {itemID = 967528, spellID = 968298 }; --Wizard Wontons
-		[8] = {itemID = 967531, spellID = 968301 }; --Jurassic Burger
-		[9] = {itemID = 967534, spellID = 968304 }; --Rough-alo wings
-		[10] = {itemID = 967537, spellID = 968307 }; --The Whooper Sandwich
-		[11] = {itemID = 967540, spellID = 968310 }; --Vulture a la King
-		[12] = {itemID = 967543, spellID = 968313 }; --Scorching Hot Steak
-		[13] = {itemID = 967546, spellID = 968316 }; --Lively Stew
-		[14] = {itemID = 967549, spellID = 968319 }; --Crawling Steak
-		[15] = {itemID = 967552, spellID = 968322 }; --Breakonator Sandwich
-		[16] = {itemID = 967555, spellID = 968325 }; --Master Wontons
-		[17] = {itemID = 967558, spellID = 968328 }; --Big Whack Sandwich
-		[18] = {itemID = 967561, spellID = 968331 }; --Warping Wontons
-		[19] = {itemID = 967564, spellID = 968334 }; --Duck Stew
-		[20] = {itemID = 967567, spellID = 968337 }; --Mountainman Stew
-		[21] = {itemID = 967570, spellID = 968340 }; --Scorched Stew
-		[22] = {itemID = 967573, spellID = 968343 }; --Vulcan Wontons
-		[23] = {itemID = 967576, spellID = 968346 }; --Jurassic Soup
-		[24] = {itemID = 967579, spellID = 968349 }; --Heightened Wontons
-		[25] = {itemID = 967582, spellID = 968352 }; --Hearty Spirit Soup
-		[26] = {itemID = 967585, spellID = 968355 }; --Jurassic Steak
-		[27] = {itemID = 967588, spellID = 968358 }; --Stormwich Sandwich
-		[28] = {itemID = 967591, spellID = 968361 }; --Warding Wontons
-		[29] = {itemID = 967594, spellID = 968364 }; --Rolling Meatballs
-		[30] = {itemID = 967597, spellID = 968367 }; --Subtle Steak
-	};
-	{
-		Name = "Rare";
-		[1] = {itemID = 967600, spellID = 968370 }; --Subtle Sandwich
-		[2] = {itemID = 967603, spellID = 968373 }; --Subtle Wontons
-		[3] = {itemID = 967606, spellID = 968376 }; --Subtle Sulferous Soup
-		[4] = {itemID = 967609, spellID = 968379 }; --Strongman Stew
-		[5] = {itemID = 967612, spellID = 968382 }; --Mysterious Void Roast
-		[6] = {itemID = 967615, spellID = 968385 }; --Fire Charred Roast
-		[7] = {itemID = 967618, spellID = 968388 }; --Storm Fried Roast
-		[8] = {itemID = 967621, spellID = 968391 }; --Winter Roast
-		[9] = {itemID = 967624, spellID = 968394 }; --Blackened Roast
-		[10] = {itemID = 967627, spellID = 968397 }; --Dino Delight
-		[11] = {itemID = 967630, spellID = 968400 }; --Slick-fil-A Sandwich
-		[13] = {itemID = 967704, spellID = 968647 }; --Alluring Bait
-	};
-	{
-		Name = "Epic";
-		[1] = {itemID = 967511, spellID = 968281 }; --Animated Soup for the Soul
-		[2] = {itemID = 967514, spellID = 968284 }; --Volcanic Sandwich
-		[3] = {itemID = 967517, spellID = 968287 }; --Winter Wontons
-		[4] = {itemID = 967520, spellID = 968290 }; --Storm Steak
-		[5] = {itemID = 967523, spellID = 968293 }; --Void Touched Stew
-		[6] = {itemID = 967526, spellID = 968296 }; --Spicy Vulture Steak
-		[7] = {itemID = 967529, spellID = 968299 }; --Wizard Wontons
-		[8] = {itemID = 967532, spellID = 968302 }; --Jurassic Burger
-		[9] = {itemID = 967535, spellID = 968305 }; --Rough-alo wings
-		[10] = {itemID = 967538, spellID = 968308 }; --The Whooper Sandwich
-		[11] = {itemID = 967541, spellID = 968311 }; --Vulture a la King
-		[12] = {itemID = 967542, spellID = 968314 }; --Scorching Hot Steak
-		[13] = {itemID = 967547, spellID = 968317 }; --Lively Stew
-		[14] = {itemID = 967550, spellID = 968320 }; --Crawling Steak
-		[15] = {itemID = 967553, spellID = 968323 }; --Breakonator Sandwich
-		[16] = {itemID = 967556, spellID = 968326 }; --Master Wontons
-		[17] = {itemID = 967559, spellID = 968329 }; --Big Whack Sandwich
-		[18] = {itemID = 967562, spellID = 968332 }; --Warping Wontons
-		[19] = {itemID = 967565, spellID = 968335 }; --Duck Stew
-		[20] = {itemID = 967568, spellID = 968338 }; --Mountainman Stew
-		[21] = {itemID = 967571, spellID = 968341 }; --Scorched Stew
-		[22] = {itemID = 967574, spellID = 968344 }; --Vulcan Wontons
-		[23] = {itemID = 967577, spellID = 968347 }; --Jurassic Soup
-		[24] = {itemID = 967580, spellID = 968350 }; --Heightened Wontons
-		[25] = {itemID = 967583, spellID = 968353 }; --Hearty Spirit Soup
-		[26] = {itemID = 967586, spellID = 968356 }; --Jurassic Steak
-		[27] = {itemID = 967589, spellID = 968359 }; --Stormwich Sandwich
-		[28] = {itemID = 967592, spellID = 968362 }; --Warding Wontons
-		[29] = {itemID = 967595, spellID = 968365 }; --Rolling Meatballs
-		[30] = {itemID = 967598, spellID = 968368 }; --Subtle Steak
-	};
-	{
-		Name = "Epic";
-		[1] = {itemID = 967601, spellID = 968371 }; --Subtle Sandwich
-		[2] = {itemID = 967604, spellID = 968374 }; --Subtle Wontons
-		[3] = {itemID = 967607, spellID = 968377 }; --Subtle Sulferous Soup
-		[4] = {itemID = 967610, spellID = 968380 }; --Strongman Stew
-		[5] = {itemID = 967613, spellID = 968383 }; --Mysterious Void Roast
-		[6] = {itemID = 967616, spellID = 968386 }; --Fire Charred Roast
-		[7] = {itemID = 967619, spellID = 968389 }; --Storm Fried Roast
-		[8] = {itemID = 967622, spellID = 968392 }; --Winter Roast
-		[9] = {itemID = 967625, spellID = 968395 }; --Blackened Roast
-		[10] = {itemID = 967628, spellID = 968398 }; --Dino Delight
-		[11] = {itemID = 967631, spellID = 968401 }; --Slick-fil-A Sandwich
-		[13] = {itemID = 967705, spellID = 968648 }; --Irresistible Bait
+		Name = AL["High Risk"];
+		[1] = { name = AL["Rare"], icon = "INV_Box_01"},
+		[2] = {itemID = 967215, spellID = 968061 }; --Heavy Dragonweave Cloak Lining
+		[3] = {itemID = 967218, spellID = 968064 }; --Heavy Twilight Cloak Lining
+		[4] = {itemID = 967221, spellID = 968067 }; --Heavy Scarlet Cloak Lining
+		[5] = {itemID = 967224, spellID = 968070 }; --Heavy Rampager's Cloak Lining
+		[6] = {itemID = 967227, spellID = 968073 }; --Heavy Deadwind Cloak Lining
+		[7] = {itemID = 967230, spellID = 968076 }; --Heavy Slippery Cloak Lining
+		[16] = { name = AL["Epic"], icon = "INV_Box_01"},
+		[17] = {itemID = 967216, spellID = 968062 }; --Illustrious Dragonweave Cloak Lining
+		[18] = {itemID = 967219, spellID = 968065 }; --Illustrious Twilight Cloak Lining
+		[19] = {itemID = 967222, spellID = 968068 }; --Illustrious Scarlet Cloak Lining
+		[20] = {itemID = 967225, spellID = 968071 }; --Illustrious Rampager's Cloak Lining
+		[21] = {itemID = 967228, spellID = 968074 }; --Illustrious Deadwind Cloak Lining
+		[22] = {itemID = 967231, spellID = 968077 }; --Illustrious Slippery Cloak Lining
 	};
 };

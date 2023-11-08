@@ -12,14 +12,6 @@ local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
 		{ "", "MiningCLASSIC"},
 		{ "", "CookingCLASSIC"},
 		{ "", "FirstAidCLASSIC"},
-		{"High Risk:", "", "Header"},
-		{ "", "AlchemyHighRiskCLASSIC"},
-		{ "", "SmithingHighRiskCLASSIC"},
-		{ "", "EnchantingHighRiskCLASSIC"},
-		{ "", "EngineeringHighRiskCLASSIC"},
-		{ "", "LeatherworkingHighRiskCLASSIC"},
-		{ "", "TailoringHighRiskCLASSIC"},
-		{ "", "CookingHighRiskCLASSIC"},
 	};
 
 	AtlasLoot_SubMenus["CraftingTBC"] = {
@@ -35,15 +27,6 @@ local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
 		{ "", "MiningTBC"},
 		{ "", "CookingTBC"},
 		{ "", "FirstAidTBC"},
-		{"High Risk:", "", "Header"},
-		{ "", "AlchemyHighRiskTBC"},
-		{ "", "SmithingHighRiskTBC"},
-		{ "", "EnchantingHighRiskTBC"},
-		{ "", "EngineeringHighRiskTBC"},
-		{ "", "JewelcraftingHighRiskTBC"},
-		{ "", "LeatherworkingHighRiskTBC"},
-		{ "", "TailoringHighRiskTBC"},
-		{ "", "CookingHighRiskTBC"},
 	};
 
 	AtlasLoot_SubMenus["CraftingWRATH"] = {
@@ -60,12 +43,4 @@ local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
 		{ "", "MiningWRATH"},
 		{ "", "CookingWRATH"},
 		{ "", "FirstAidWRATH"},
-		{"High Risk:", "", "Header"},
---[[ 		{ "", "AlchemyHighRiskWRATH"},
-		{ "", "SmithingHighRiskWRATH"},
-		{ "", "EnchantingHighRiskWRATH"},
-		{ "", "EngineeringHighRiskWRATH"},
-		{ "", "JewelcraftingHighRiskWRATH"},
-		{ "", "LeatherworkingHighRiskWRATH"},
-		{ "", "TailoringHighRiskWRATH"}, ]]
 	};

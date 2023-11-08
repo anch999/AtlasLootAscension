@@ -182,6 +182,19 @@ function AtlasLoot:GetRecipeData(recipeID, idType)
 	 end
 end
 
+function AtlasLoot:GetRecipeID(spellID)
+	if not TRADESKILL_RECIPES then return end
+	for _,prof in pairs(TRADESKILL_RECIPES) do
+		for _,cat in pairs(prof) do
+			for _,recipe in pairs(cat) do
+				if spellID == recipe.SpellEntry and recipe.RecipeItemEntry ~= 0 then
+					return recipe.RecipeItemEntry
+				end
+			end
+		end
+	 end
+end
+
 -- Get rep faction for when you have 2 loot tables and want to show a different one depending on rep
 function AtlasLoot:GetReputationFaction(factions)
 	local factionIndex = 1
