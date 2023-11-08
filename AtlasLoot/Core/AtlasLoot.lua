@@ -19,9 +19,6 @@ AtlasLoot:FindId(name, difficulty)
 
 AtlasLoot = LibStub("AceAddon-3.0"):NewAddon("AtlasLoot", "AceEvent-3.0", "AceTimer-3.0")
 
---Instance required libraries
-local BabbleBoss = AtlasLoot_GetLocaleLibBabble("LibBabble-Boss-3.0")
-local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0")
 local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
 
 --Establish version number and compatible version of Atlas
@@ -141,13 +138,10 @@ function AtlasLoot:OnEnable()
 	AtlasLoot:OptionsOnLoad()
     AtlasLoot:CreateOptionsInfoTooltips()
     --Set visual style for the loot browser
-    if AtlasLoot.db.profile.LootBrowserStyle == 1 then
-        AtlasLoot:SetNewStyle("modern")
-	elseif AtlasLoot.db.profile.LootBrowserStyle == 2 then
-		AtlasLoot:SetNewStyle("new")
-	elseif AtlasLoot.db.profile.LootBrowserStyle == 3 then
-        AtlasLoot:SetNewStyle("old")
-    end
+	if AtlasLoot.db.profile.LootBrowserStyle then
+		AtlasLoot:SetSkin(AtlasLoot.skinKeys[AtlasLoot.db.profile.LootBrowserStyle][1])
+	end
+
 	--Disable options that don't have the supporting mods
 	if( not LootLink_SetTooltip and (AtlasLoot.db.profile.LootlinkTT == true)) then
 		AtlasLoot.db.profile.LootlinkTT = false
@@ -159,12 +153,14 @@ function AtlasLoot:OnEnable()
 	end
 	--If using an opaque items frame, change the alpha value of the backing texture
 	if (AtlasLoot.db.profile.Opaque) then
-		--AtlasLootItemsFrame_Back:SetTexture(0, 0, 0, 1)
-	else
-		--AtlasLootItemsFrame_Back:SetTexture(0, 0, 0, 0.65)
+        AtlasLootItemsFrame_Back:SetTexture(0, 0, 0, 1)
+        Atlasloot_Difficulty_ScrollFrame_Back:SetTexture(0, 0, 0, 1)
+        Atlasloot_SubTableFrame_Back:SetTexture(0, 0, 0, 1)
+    else
+        AtlasLootItemsFrame_Back:SetTexture(0, 0, 0, 0.05)
+        Atlasloot_Difficulty_ScrollFrame_Back:SetTexture(0, 0, 0, 0.05)
+        Atlasloot_SubTableFrame_Back:SetTexture(0, 0, 0, 0.05)
 	end
-
-	AtlasLootItemsFrame:Hide()
 
 	if((AtlasLootCharDB.AtlasLootVersion == nil) or (tonumber(AtlasLootCharDB.AtlasLootVersion) < 40301)) then
 		AtlasLootCharDB.AtlasLootVersion = VERSION_MAJOR..VERSION_MINOR..VERSION_BOSSES
@@ -381,7 +377,7 @@ function AtlasLoot:RecipeSource(spellID)
 		tinsert(data, {AL["Source"]..": "..WHITE..AL["Quest"]})
 		for _,v in pairs(questDrop) do
 			local quest = AtlasLoot_CraftingData["QuestList"][v]
-			tinsert(data, {quest[1], cords = {quest[2], quest[3]}, fac = quest[4]})
+			tinsert(data, {quest[1],  quest[2], cords = {quest[3], quest[4]}, fac = quest[5]})
 		end
 	end
 	--rep vendor
@@ -489,7 +485,7 @@ It is the workhorse of the mod and allows the loot tables to be displayed any wa
 ]]
 function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 
-	local isValid, toShow, itemID, orgItemID
+	local isValid, toShow, itemID, recipeID
 	SearchPrevData = {dataID, dataSource_backup, tablenum}
 
     --If the loot table name has not been passed, throw up a debugging statement
@@ -631,8 +627,11 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 			isValid = true
 			toShow = true
 		end
-
-		return isValid, toShow, itemID
+		local recipeID
+		if item and item.spellID then
+			recipeID = AtlasLoot:GetRecipeID(item.spellID)
+		end
+		return isValid, toShow, itemID, recipeID
 	end
 
 	-- Setup the button for the to be displayed item/spell
@@ -647,6 +646,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 		local extraFrame = _G["AtlasLootItem_"..i.."_Extra"]
 		local hightlightFrame = _G["AtlasLootItem_"..i.."_Highlight"]
 		local spellID = dataSource[dataID][tablenum][i].spellID
+
 		if spellID then
 			spellName, _, spellIcon, _, _, _, _, _, _ = GetSpellInfo(spellID)
 			if spellName then
@@ -654,6 +654,9 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 			elseif dataSource[dataID][tablenum][i].name then
 				text = dataSource[dataID][tablenum][i].name
 				text = AtlasLoot:FixText(text)
+			end
+			if itemID then
+				text = select(4,GetItemQualityColor(select(3,GetItemInfo(itemID))))..text
 			end
 			--Adds button highlights if you know a recipe or have a char that knows one
 			if CA_IsSpellKnown(spellID) then
@@ -686,7 +689,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 			if C_VanityCollection.IsCollectionItemOwned(itemID) and VANITY_ITEMS[itemID] and CA_IsSpellKnown(VANITY_ITEMS[itemID].learnedSpell) and VANITY_ITEMS[itemID].learnedSpell ~= 0 then
 				hightlightFrame:SetTexture(itemHighlightGreen)
 				hightlightFrame:Show()
-			elseif C_VanityCollection.IsCollectionItemOwned(itemID) and (not VANITY_ITEMS[itemID] and not CA_IsSpellKnown(VANITY_ITEMS[itemID].learnedSpell) or VANITY_ITEMS[itemID].learnedSpell ~= 0) then
+			elseif C_VanityCollection.IsCollectionItemOwned(itemID) then
 				hightlightFrame:SetTexture(itemHighlightBlue)
 				hightlightFrame:Show()
 			end
@@ -825,6 +828,15 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 		itemButton:Show()
 	end
 
+	local function getItemData(itemID, i)
+		local item = Item:CreateFromID(itemID)
+		AtlasLoot:ItemsLoading(1)
+		item:ContinueOnLoad(function(itemID)
+			AtlasLoot:ItemsLoading(-1)
+			setupButton(itemID, i, dataSource, dataID, tablenum, dataSource_backup)
+		end)
+	end
+
 	-- Create the loottable
 	if (dataID == "SearchResult") or (dataSource_backup == "AtlasLoot_CurrentWishList") or dataSource[dataID][tablenum] then
 
@@ -832,23 +844,17 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 		for i = 1, 30, 1 do
 			--Use shortcuts for easier reference to parts of the item button
 			local itemButton = _G["AtlasLootItem_"..i]
-			local iconFrame  = _G["AtlasLootItem_"..i.."_Icon"]
-			local nameFrame  = _G["AtlasLootItem_"..i.."_Name"]
-			local extraFrame = _G["AtlasLootItem_"..i.."_Extra"]
 			local hightlightFrame = _G["AtlasLootItem_"..i.."_Highlight"]
 			--Check for a valid object (that it exists, and that it has a name
-			isValid, toShow, itemID = getProperItemConditionals(dataSource[dataID][tablenum][i])
-			local item = Item:CreateFromID(itemID)
+			isValid, toShow, itemID, recipeID = getProperItemConditionals(dataSource[dataID][tablenum][i])
 			if isValid and toShow then
 				hightlightFrame:Hide()
-				if itemID and not item:GetInfo() then
-					AtlasLoot:ItemsLoading(1)
-					item:ContinueOnLoad(function(itemID)
-						AtlasLoot:ItemsLoading(-1)
-						setupButton(itemID, i, dataSource, dataID, tablenum, dataSource_backup)
-					end)
+				if itemID then
+					getItemData(itemID, i)
+				elseif recipeID then
+					getItemData(recipeID, i)
 				else
-					setupButton(itemID, i, dataSource, dataID, tablenum, dataSource_backup)
+					setupButton(itemID, i, dataSource, dataID, tablenum, dataSource_backup, recipeID)
 				end
 			else
 				itemButton:Hide()
@@ -897,13 +903,19 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 
 		-- Checks dataID with submenus to stop filter button loading on certain tables
 		local function filterCheck(find)
-			local mtype = {"Crafting", "Reputations", "WorldEvents", "PVP", "Collections"}
-			for m, t in pairs (mtype) do
+			local mtype = {"Crafting", "Reputations", "WorldEvents", "PVP", "Collections", "CollectionsAscension", "Vanity"}
+			for _, t in pairs (mtype) do
 				if AtlasLoot_SubMenus[t..AtlasLoot_Expac] then
-					for i, v in ipairs (AtlasLoot_SubMenus[t..AtlasLoot_Expac]) do
-						if find == v[2] then
+					for _, v in ipairs (AtlasLoot_SubMenus[t..AtlasLoot_Expac]) do
+						if v[3] and type(v[3]) == "table" then
+							for _, sub in ipairs(v[3]) do
+								if find == sub[2] then
+									return true
+								end
+							end
+						elseif find == v[2] then
 							return true
-						end
+						end	
 					end
 				end
 			end
@@ -1091,21 +1103,6 @@ function AtlasLoot:ShowFavorites(button)
 			end,
 			"children", setOptions
 		)
-	end
-end
-
-local loadingCount = 0
-function AtlasLoot:ItemsLoading(count)
-	loadingCount = loadingCount + count
-	if(loadingCount > 0) then
-        AtlasLoot_ItemsLoadingSpinner:SetVertexColor(0,1,0)
-        AtlasLoot_ItemsLoadingFrameBackground:SetVertexColor(0,1,0)
-        AtlasLoot_ItemsLoading.tooltip = "Items still loading"
-		AtlasLoot_ItemsLoading.Loop:Play()
-		AtlasLoot_ItemsLoading:Show()
-	else
-        AtlasLoot_ItemsLoading.Loop:Stop()
-        AtlasLoot_ItemsLoading:Hide()
 	end
 end
 

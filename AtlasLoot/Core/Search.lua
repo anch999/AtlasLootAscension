@@ -82,9 +82,6 @@ local STAT_FILTERS = {
     ["armourpen"] = "ITEM_MOD_ARMOR_PENETRATION_RATING_SHORT",
     ["arp"] = "ITEM_MOD_ARMOR_PENETRATION_RATING_SHORT",
 
-    ["expertise"] = "ITEM_MOD_EXPERTISE_RATING_SHORT",
-    ["exp"] = "ITEM_MOD_EXPERTISE_RATING_SHORT",
-
     ["dps"] = "ITEM_MOD_DAMAGE_PER_SECOND_SHORT",
 
     ["resilience"] = "ITEM_MOD_RESILIENCE_RATING",
@@ -502,9 +499,6 @@ local RelationalFunctions = {
     ["armourpen"] = {IsItemStatMatch, 7},
     ["arp"] = {IsItemStatMatch, 7},
 
-    ["expertise"] = {IsItemStatMatch, 7},
-    ["exp"] = {IsItemStatMatch, 7},
-
     ["dps"] = {IsItemStatMatch, 7},
 
     ["resilience"] = {IsItemStatMatch, 7},
@@ -635,7 +629,6 @@ function AtlasLoot:ProcessItem(data)
     if type(itemData) == "table" then
         local itemID = itemData.itemID
         local spellID = itemData.spellID
-
         if spellID then
         local spellName = GetSpellInfo(spellID)
             if nameMatches(spellName, searchText) then
@@ -646,10 +639,10 @@ function AtlasLoot:ProcessItem(data)
                 end
                 AtlasLoot:ItemFrameRefresh()
             end
+            AtlasLoot:ItemsLoading(-1)
         elseif itemID then
             local item = Item:CreateFromID(itemID)
             if item then
-                AtlasLoot:ItemsLoading(1)
                 item:ContinueOnLoad(function(itemID)
                     AtlasLoot:ItemsLoading(-1)
                     local itemDetails = {AtlasLoot:GetItemDetails(itemID)}
@@ -659,12 +652,17 @@ function AtlasLoot:ProcessItem(data)
                             AtlasLoot:ShowSearchResult()
                             showSearch = true
                         end
-                        AtlasLoot:ItemFrameRefresh()
                     end
+                    AtlasLoot:ItemFrameRefresh()
                 end)
+            else
+                AtlasLoot:ItemsLoading(-1)
             end
+        else
+            AtlasLoot:ItemsLoading(-1)
         end
     end
+    
 end
 
 local itemList = {}
@@ -674,6 +672,7 @@ local function DoSearch(searchText)
     AtlasLootCharDB.LastSearchedText = searchText
     count = 0
     tablenum = 1
+    showSearch = false
 
     wipe(itemList)
 
@@ -685,8 +684,8 @@ local function DoSearch(searchText)
             end
         end
     end
-
     -- rate limit tied to half the current frame rate
+    AtlasLoot:ItemsLoading(#itemList)
     local maxDuration = 500/GetFramerate()
     local startTime = debugprofilestop()
     local function continue()
@@ -744,22 +743,22 @@ function AtlasLoot:Search(Text)
 
     DoSearch(Text)
     --local success, message = pcall(DoSearch, Text)
-    local success = true
-    if not success then
-        message = message:match("[^:]+: (.*)") or message -- strip stack location
-        DEFAULT_CHAT_FRAME:AddMessage(RED .. AL["AtlasLoot"] .. ": " .. WHITE .. message)
-    elseif #AtlasLootCharDB["SearchResult"] == 0 then
-        local itemFilterErrorMessage = ""
-        if operator then
-            itemFilterErrorMessage = [[
-                Please check if you have a typo in the filter.
-                For help, type "/atlasloothelp".
-                You might also have to query the server for item informations to load them into your client's Cache.]]
-        end
-        DEFAULT_CHAT_FRAME:AddMessage(RED .. AL["AtlasLoot"] .. ": " .. WHITE .. AL["No match found for"] .. " \"" .. Text .. "\"." .. itemFilterErrorMessage)
-    else
-        AtlasLoot:ShowItemsFrame("SearchResult", "AtlasLootCharDB", 1)
-    end
+
+    -- if not success then
+    --     message = message:match("[^:]+: (.*)") or message -- strip stack location
+    --     DEFAULT_CHAT_FRAME:AddMessage(RED .. AL["AtlasLoot"] .. ": " .. WHITE .. message)
+    -- elseif #AtlasLootCharDB["SearchResult"] == 0 then
+    --     local itemFilterErrorMessage = ""
+    --     if operator then
+    --         itemFilterErrorMessage = [[
+    --             Please check if you have a typo in the filter.
+    --             For help, type "/atlasloothelp".
+    --             You might also have to query the server for item informations to load them into your client's Cache.]]
+    --     end
+    --     DEFAULT_CHAT_FRAME:AddMessage(RED .. AL["AtlasLoot"] .. ": " .. WHITE .. AL["No match found for"] .. " \"" .. Text .. "\"." .. itemFilterErrorMessage)
+    -- else
+    --     AtlasLoot:ShowItemsFrame("SearchResult", "AtlasLootCharDB", 1)
+    -- end
 end
 
 function AtlasLoot:ShowSearchOptions(button)

@@ -218,29 +218,8 @@ end
 AtlasLoot:PopoupItemFrame(self, data)
 Used to create a popup item frame for items like gem sacks to show what they contain
 ]] 
-local popupFrameLoaded
-local popupframe
 function AtlasLoot:PopoupItemFrame(self, data)
 	if not data then AtlasLoot_PopupFrame:Hide() return end
-	--only create frame first time its used
-	if not popupFrameLoaded then
-		popupframe = CreateFrame("Frame", "AtlasLoot_PopupFrame")
-		popupframe:SetBackdrop({
-			bgFile = "Interface\\DialogFrame\\UI-DialogBox-Background", tile = true, tileSize = 16,
-			edgeFile = "Interface\\Tooltips\\UI-Tooltip-Border", edgeSize = 16,
-			insets = { left = 4, right = 4, top = 4, bottom = 4 },
-		})
-		popupframe:EnableMouse()
-		popupframe:SetScript("OnLeave", function()
-			AtlasLoot:ItemOnLeave(self)
-		end)
-		popupframe:SetScript("OnEnter", function()
-			AtlasLoot_PopupFrame:Show()
-		end)
-		popupframe:SetWidth(211)
-    	popupframe:Hide()
-		popupFrameLoaded = true
-	end
 	--hide the unused buttons
 	for i = 1, 15 do
 		local button = _G["AtlasLoot_PopupButton_"..i]
@@ -325,21 +304,21 @@ function AtlasLoot:PopoupItemFrame(self, data)
 		numberBtns = i
 	end
 	if numberBtns < 6 then
-		popupframe:SetWidth((numberBtns*33)+16)
+		AtlasLoot_PopupFrame:SetWidth((numberBtns*33)+16)
 	else
-		popupframe:SetWidth(214)
+		AtlasLoot_PopupFrame:SetWidth(214)
 	end
 	if numberBtns > 6 then
-		popupframe:SetHeight(79)
+		AtlasLoot_PopupFrame:SetHeight(79)
 	elseif numberBtns > 12 then
-		popupframe:SetHeight(107)
+		AtlasLoot_PopupFrame:SetHeight(107)
 	else
-		popupframe:SetHeight(46)
+		AtlasLoot_PopupFrame:SetHeight(46)
 	end
-	popupframe:SetParent(self)
-	popupframe:ClearAllPoints()
-	popupframe:SetPoint("TOPLEFT",self,0,-25)
-	popupframe:Show()
+	AtlasLoot_PopupFrame:SetParent(self)
+	AtlasLoot_PopupFrame:ClearAllPoints()
+	AtlasLoot_PopupFrame:SetPoint("TOPLEFT",self,0,-25)
+	AtlasLoot_PopupFrame:Show()
 end
 
 --[[
@@ -426,4 +405,25 @@ function AtlasLoot:getMaxDifficulty(difficultyKey)
     else
         return 0
     end
+end
+
+-- Loading items spinner
+local loadingCount = 0
+function AtlasLoot:ItemsLoading(count)
+	if count == "reset" then
+		loadingCount = 0
+		count = 0
+	end
+	loadingCount = loadingCount + count
+	--print(loadingCount)
+	if(loadingCount > 0) then
+        AtlasLoot_ItemsLoadingSpinner:SetVertexColor(0,1,0)
+        AtlasLoot_ItemsLoadingFrameBackground:SetVertexColor(0,1,0)
+        AtlasLoot_ItemsLoading.tooltip = "Items still loading"
+		AtlasLoot_ItemsLoading.Loop:Play()
+		AtlasLoot_ItemsLoading:Show()
+	else
+        AtlasLoot_ItemsLoading.Loop:Stop()
+        AtlasLoot_ItemsLoading:Hide()
+	end
 end

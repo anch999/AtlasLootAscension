@@ -96,7 +96,7 @@ if AL then
 	AL["Treat Crafted Items:"] = "交易技能呈現方式:";
 	AL["As Crafting Spells"] = "技能";
 	AL["As Items"] = "製成品";
-	AL["Loot Browser Style:"] = "物品掉落表呈現方式:";
+	AL["Change AtlasLoot Skin:"] = "物品掉落表呈現方式:";
 	AL["New Style"] = "新樣式";
 	AL["Classic Style"] = "傳統樣式";
 

@@ -122,7 +122,7 @@ if AL then
 	AL["Treat Crafted Items:"] = true
 	AL["As Crafting Spells"] = true
 	AL["As Items"] = true
-	AL["Loot Browser Style:"] = true
+	AL["Change AtlasLoot Skin:"] = true
 	AL["ElvUI Dark"] = true
 	AL["Old AtlasLoot"] = true
 	AL["Modern"] = true

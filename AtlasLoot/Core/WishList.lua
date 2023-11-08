@@ -2,18 +2,17 @@
 File containing functions related to the wish list.
 
 Functions:
-AtlasLoot_AddToWishlist(itemID, itemTexture, itemName, lootPage, sourcePage)
+AtlasLoot:AddToWishlist(itemID, itemTexture, itemName, lootPage, sourcePage)
 AtlasLoot:DeleteFromWishList(btnNumber)
 AtlasLoot:WishListCheck(itemID, all)
 
 <local> ClearLines()
 <local> AddWishListOptions(parrent,name,icon,xxx,tabname,tab2)
 <local> AddTexture(par, num)
-AtlasLoot_RefreshWishlists()
+AtlasLoot:RefreshWishlists()
 AtlasLoot:CreateWishlistOptions()
 ]]
 local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
-local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 
 local ALModule = AtlasLoot:NewModule("WishList", "AceSerializer-3.0", "AceComm-3.0")
 
@@ -995,10 +994,10 @@ function ALModule:OnEnable()
 end
 
 --[[
-AtlasLoot_GetWishList(wlstrg,sendername)
+AtlasLoot:GetWishList(wlstrg,sendername)
 Get the Wishlist, Deserialize it and save it in the savedvariables table
 ]]
-function AtlasLoot_GetWishList(wlstrg,sendername)
+function AtlasLoot:GetWishList(wlstrg,sendername)
 	if AtlasLootWishList["Shared"].Name == nil then
 		AtlasLootWishList["Shared"].Name = "Shared Wish Lists"
 	end
@@ -1079,7 +1078,7 @@ function ALModule:OnCommReceived(prefix, message, distribution, sender)
 		DEFAULT_CHAT_FRAME:AddMessage(BLUE..AL["AtlasLoot"]..": "..WHITE..sender..RED..AL[" rejects your Wishlist."])
 	else
 		SpamFilter[string.lower(sender)] = GetTime()
-		AtlasLoot_GetWishList(message,sender)
+		AtlasLoot:GetWishList(message,sender)
 		ALModule:SendCommMessage("AtlasLootWishlist", "FinishSend", "WHISPER", sender)
 	end
 end

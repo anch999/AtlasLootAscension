@@ -96,7 +96,7 @@ if AL then
     AL["Treat Crafted Items:"] = "Обзор изготов. предметов:";
     AL["As Crafting Spells"] = "Как используемое заклинание";
     AL["As Items"] = "Как предмет";
-    AL["Loot Browser Style:"] = "Стиль просмотра добычи:";
+    AL["Change AtlasLoot Skin:"] = "Стиль просмотра добычи:";
     AL["New Style"] = "Новый стиль";
     AL["Classic Style"] = "Класический стиль";
 

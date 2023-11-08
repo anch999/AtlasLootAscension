@@ -1106,8 +1106,7 @@ AtlasLoot_Data["JewelcraftingTBC"] = {
 		Name = AL["Prismatic Gems"];
 		[1] = { itemID = 22459, spellID = 28028 }, --Void Sphere
 		[2] = { itemID = 22460, spellID = 28027 }, --Prismatic Sphere
-		[3] = { itemID = 42701, spellID = 56530 }, --Enchanted Pearl
-		[4] = { itemID = 42701, spellID = 62941 }, --Prismatic Black Diamond
+		[3] = { itemID = 42701, spellID = 62941 }, --Prismatic Black Diamond
 	};
 	{
 		Name = AL["Trinkets"];
@@ -1141,20 +1140,18 @@ AtlasLoot_Data["JewelcraftingTBC"] = {
 		[6] = { itemID = 24080, spellID = 31054 }, --Khorium Band of Frost
 		[7] = { itemID = 24082, spellID = 31055 }, --Khorium Inferno Band
 		[8] = { itemID = 24079, spellID = 31053 }, --Khorium Band of Shadows
-		[9] = { itemID = 42337, spellID = 56194 }, --Sun Rock Ring
-		[10] = { itemID = 42336, spellID = 56193 }, --Bloodstone Band	
-		[11] = { itemID = 24087, spellID = 31058 }, --Heavy Felsteel Ring
-		[16] = { itemID = 24078, spellID = 31052 }, --Heavy Adamantite Ring
-		[17] = { itemID = 32774, spellID = 41415 }, --The Black Pearl
-		[18] = { itemID = 32772, spellID = 41414 }, --Brilliant Pearl Band
-		[19] = { itemID = 24076, spellID = 31050 }, --Azure Moonstone Ring
-		[20] = { itemID = 21779, spellID = 26916 }, --Band of Natural Fire
-		[21] = { itemID = 24074, spellID = 31048 }, --Fel Iron Blood Ring
-		[22] = { itemID = 24075, spellID = 31049 }, --Golden Draenite Ring
-		[23] = { itemID = 29160, spellID = 34961 }, --Emerald Lion Ring
-		[24] = { itemID = 21778, spellID = 26910 }, --Ring of Bitter Shadows
-		[25] = { itemID = 29159, spellID = 34960 }, --Glowing Thorium Band
-		[26] = { itemID = 21775, spellID = 26907 }, --Onslaught Ring
+		[9] = { itemID = 24087, spellID = 31058 }, --Heavy Felsteel Ring
+		[10] = { itemID = 24078, spellID = 31052 }, --Heavy Adamantite Ring
+		[11] = { itemID = 32774, spellID = 41415 }, --The Black Pearl
+		[16] = { itemID = 32772, spellID = 41414 }, --Brilliant Pearl Band
+		[17] = { itemID = 24076, spellID = 31050 }, --Azure Moonstone Ring
+		[18] = { itemID = 21779, spellID = 26916 }, --Band of Natural Fire
+		[19] = { itemID = 24074, spellID = 31048 }, --Fel Iron Blood Ring
+		[20] = { itemID = 24075, spellID = 31049 }, --Golden Draenite Ring
+		[21] = { itemID = 29160, spellID = 34961 }, --Emerald Lion Ring
+		[22] = { itemID = 21778, spellID = 26910 }, --Ring of Bitter Shadows
+		[23] = { itemID = 29159, spellID = 34960 }, --Glowing Thorium Band
+		[24] = { itemID = 21775, spellID = 26907 }, --Onslaught Ring
 	};
 	{
 		Name = AL["Rings"]..WHITE.." - Page 2";
@@ -1201,11 +1198,9 @@ AtlasLoot_Data["JewelcraftingTBC"] = {
 		[8] = { itemID = 24095, spellID = 31064 }, --Pendant of Withering
 		[16] = { itemID = 24110, spellID = 31068 }, --Living Ruby Pendant
 		[17] = { itemID = 24106, spellID = 31067 }, --Thick Felsteel Necklace
-		[18] = { itemID = 43245, spellID = 58142 }, --Crystal Chalcedony Amulet
-		[19] = { itemID = 43244, spellID = 58141 }, --Crystal Citrine Necklace
-		[20] = { itemID = 32508, spellID = 40514 }, --Necklace of the Deep
-		[21] = { itemID = 24077, spellID = 31051 }, --Thick Adamantite Necklace
-		[22] = { itemID = 21792, spellID = 26915 }, --Necklace of the Diamond Tower
+		[18] = { itemID = 32508, spellID = 40514 }, --Necklace of the Deep
+		[19] = { itemID = 24077, spellID = 31051 }, --Thick Adamantite Necklace
+		[20] = { itemID = 21792, spellID = 26915 }, --Necklace of the Diamond Tower
 	};
 	{
 		Name = AL["Necks"]..WHITE.." - Page 2";
@@ -1231,25 +1226,22 @@ AtlasLoot_Data["JewelcraftingTBC"] = {
 		Name = AL["Miscellaneous"];
 		[1] = { itemID = 24123, spellID = 31078 }, --Circlet of Arcane Might
 		[2] = { itemID = 24122, spellID = 31077 }, --Coronet of the Verdant Flame
-		[3] = { itemID = 42421, spellID = 56208 }, --Shadow Jade Focusing Lens
-		[4] = { itemID = 42420, spellID = 56206 }, --Shadow Crystal Focusing Lens
-		[5] = { itemID = 32776, spellID = 41418 }, --Crown of the Sea Witch
-		[6] = { itemID = 41367, spellID = 56205 }, --Dark Jade Focusing Lens
-		[7] = { itemID = 35945, spellID = 47280 }, --Brilliant Glass
-		[8] = { itemID = 31079, spellID = 38068 }, --Mercurial Adamantite
-		[9] = { itemID = 21774, spellID = 26906 }, --Emerald Crown of Destruction
-		[10] = { itemID = 20969, spellID = 26878 }, --Ruby Crown of Restoration
-		[11] = { itemID = 21752, spellID = 26880 }, --Thorium Setting
-		[16] = { itemID = 25883, spellID = 32809 }, --Dense Stone Statue
-		[17] = { itemID = 25882, spellID = 32808 }, --Solid Stone Statue
-		[18] = { itemID = 20963, spellID = 25615 }, --Mithril Filigree
-		[19] = { itemID = 20954, spellID = 25612 }, --Heavy Iron Knuckles
-		[20] = { itemID = 20832, spellID = 25321 }, --Moonsoul Crown
-		[21] = { itemID = 25881, spellID = 32807 }, --Heavy Stone Statue
-		[22] = { itemID = 20817, spellID = 25278 }, --Bronze Setting
-		[23] = { itemID = 25880, spellID = 32801 }, --Coarse Stone Statue
-		[24] = { itemID = 20816, spellID = 25255 }, --Delicate Copper Wire
-		[25] = { itemID = 25498, spellID = 32259 }, --Rough Stone Statue
+		[3] = { itemID = 32776, spellID = 41418 }, --Crown of the Sea Witch
+		[4] = { itemID = 35945, spellID = 47280 }, --Brilliant Glass
+		[5] = { itemID = 31079, spellID = 38068 }, --Mercurial Adamantite
+		[6] = { itemID = 21774, spellID = 26906 }, --Emerald Crown of Destruction
+		[7] = { itemID = 20969, spellID = 26878 }, --Ruby Crown of Restoration
+		[8] = { itemID = 21752, spellID = 26880 }, --Thorium Setting
+		[9] = { itemID = 25883, spellID = 32809 }, --Dense Stone Statue
+		[10] = { itemID = 25882, spellID = 32808 }, --Solid Stone Statue
+		[11] = { itemID = 20963, spellID = 25615 }, --Mithril Filigree
+		[12] = { itemID = 20954, spellID = 25612 }, --Heavy Iron Knuckles
+		[13] = { itemID = 20832, spellID = 25321 }, --Moonsoul Crown
+		[14] = { itemID = 25881, spellID = 32807 }, --Heavy Stone Statue
+		[15] = { itemID = 20817, spellID = 25278 }, --Bronze Setting
+		[16] = { itemID = 25880, spellID = 32801 }, --Coarse Stone Statue
+		[17] = { itemID = 20816, spellID = 25255 }, --Delicate Copper Wire
+		[18] = { itemID = 25498, spellID = 32259 }, --Rough Stone Statue
 	};
 	{
 		Name = AL["High Risk"];

@@ -3,8 +3,16 @@ local BLUE = "|cff6666ff"
 local WHITE = "|cFFFFFFFF"
 local INDENT = "    "
 
+    local function removeScripts(button)
+        button:SetScript("OnMouseDown", nil)
+        button:SetScript("OnMouseUp", nil)
+        button:SetScript("OnShow", nil)
+        button:SetScript("OnEnter", nil)
+        button:SetScript("OnLeave", nil)
+    end
+
     --Main AtlasLoot Frame
-    local mainframe = CreateFrame("FRAME", "AtlasLootDefaultFrame", UIParent,"PortraitFrameTemplate")
+    local mainframe = CreateFrame("FRAME", "AtlasLootDefaultFrame", UIParent, "PortraitFrameTemplate")
     mainframe:SetPoint("CENTER",0,0)
     mainframe:SetSize(1105,640)
     mainframe:EnableMouse(true)
@@ -23,7 +31,10 @@ local INDENT = "    "
         AtlasLoot.Dewdrop:Close()
         AtlasLootDefaultFrameSearchBox:ClearFocus()
     end)
-    mainframe:SetScript("OnHide", function() AtlasLoot.Dewdrop:Close() end)
+    mainframe:SetScript("OnHide", function()
+        AtlasLoot.Dewdrop:Close()
+        AtlasLoot:ItemsLoading("reset")
+    end)
     mainframe:SetScript("OnDragStart", function(self)
         self:StartMoving()
         self.isMoving = true
@@ -56,30 +67,24 @@ local lootBackground = CreateFrame("Frame", "AtlaslLoot_LootBackground", mainfra
                 AtlasLootItemsFrame_PREV:Click()
             end
     end)
-
+    lootBackground:SetBackdrop({
+        bgFile = "Interface\\DialogFrame\\UI-DialogBox-Background", tile = true, tileSize = 16,
+        edgeFile = "Interface\\Tooltips\\UI-Tooltip-Border", edgeSize = 16,
+        insets = { left = 4, right = 4, top = 4, bottom = 4 },
+    })
+    lootBackground.Back = lootBackground:CreateTexture("AtlasLootItemsFrame_Back", "BACKGROUND")
+    lootBackground.Back:SetAllPoints()
+    lootBackground.Back:SetSize(730,475)
+    lootBackground.Back:SetPoint("CENTER",lootBackground)
 ----------------------------------- Item Loot Panel -------------------------------------------
 local itemframe = CreateFrame("Frame", "AtlasLootItemsFrame", lootBackground)
         itemframe:SetSize(765,510)
         itemframe:Hide()
-        itemframe:EnableMouse(true)
-        itemframe:SetScript("OnMouseDown", function(self, button)
-            AtlasLoot.Dewdrop:Close()
-            AtlasLootDefaultFrameSearchBox:ClearFocus()
-            if _G["AtlasLootItemsFrame_BACK"]:IsVisible() and button == "RightButton" then
-                AtlasLoot:BackButton_OnClick()
-            elseif AtlasLootDefaultFrame_AdvancedSearchPanel:IsVisible() and button == "RightButton" then
-                AtlasLoot_AdvancedSearchClose()
-            end
-        end)
         itemframe:SetPoint("TOPLEFT", lootBackground, "TOPLEFT", 2, -2)
         itemframe.Label = itemframe:CreateFontString("AtlasLoot_BossName","OVERLAY","GameFontHighlightLarge")
         itemframe.Label:SetPoint("TOP", "AtlasLootItemsFrame", "TOP")
         itemframe.Label:SetSize(512,30)
         itemframe.Label:SetJustifyH("CENTER")
-        itemframe.Back = itemframe:CreateTexture("AtlasLootItemsFrame_Back", "BACKGROUND")
-        itemframe.Back:SetAllPoints()
-        itemframe.Back:SetPoint("TOPLEFT",lootBackground,"TOPLEFT")
-        itemframe.Back:SetPoint("BOTTOMRIGHT",lootBackground,"BOTTOMRIGHT")
 
 for num = 1, 30 do
     local button = CreateFrame("Button","AtlasLootItem_"..num, AtlasLootItemsFrame)
@@ -216,6 +221,7 @@ local filterbtn = CreateFrame("CheckButton","AtlasLootFilterCheck",AtlasLootItem
 
     --SubMenu Button
 local submenubtn = CreateFrame("Button", "AtlasLootDefaultFrame_SubMenu", AtlasLootDefaultFrame, "FilterDropDownMenuTemplate")
+    removeScripts(submenubtn)
     submenubtn:SetSize(275,25)
     submenubtn:SetPoint("TOP", AtlaslLoot_LootBackground,"TOP",56,30)
     submenubtn.template = "FilterDropDownMenuTemplate"
@@ -229,6 +235,7 @@ local submenubtn = CreateFrame("Button", "AtlasLootDefaultFrame_SubMenu", AtlasL
 
     --Moduel Menu Button
 local menubtn = CreateFrame("Button", "AtlasLootDefaultFrame_Menu", AtlasLootDefaultFrame, "FilterDropDownMenuTemplate")
+    removeScripts(menubtn)
     menubtn:SetSize(275,25)
     menubtn:SetPoint("RIGHT", "AtlasLootDefaultFrame_SubMenu", "LEFT",-5,0)
     menubtn.template = "FilterDropDownMenuTemplate"
@@ -243,6 +250,7 @@ local menubtn = CreateFrame("Button", "AtlasLootDefaultFrame_Menu", AtlasLootDef
 
     --Options Button
 local optionsbtn = CreateFrame("Button", nil, AtlasLootDefaultFrame, "SettingsGearButtonTemplate")
+    removeScripts(optionsbtn)
     optionsbtn:SetPoint("LEFT", "AtlasLootDefaultFrame_Menu",-27,0)
     optionsbtn:SetScript("OnClick", function(self,button) AtlasLoot:OptionsToggle() end)
     optionsbtn:SetScript("OnEnter", function(self)
@@ -255,6 +263,7 @@ local optionsbtn = CreateFrame("Button", nil, AtlasLootDefaultFrame, "SettingsGe
 
     --Expansion Menu Button
 local expansionmenubtn = CreateFrame("Button", "AtlasLootDefaultFrame_ExpansionMenu", AtlasLootDefaultFrame, "FilterDropDownMenuTemplate");
+    removeScripts(expansionmenubtn)
     expansionmenubtn:SetSize(185,25);
     expansionmenubtn:SetPoint("LEFT", "AtlasLootDefaultFrame_SubMenu", "RIGHT",5,0);
     expansionmenubtn:SetText(AtlasLoot_ExpansionMenu[GetAccountExpansionLevel()+1][1]);
@@ -269,7 +278,7 @@ local expansionmenubtn = CreateFrame("Button", "AtlasLootDefaultFrame_ExpansionM
     --Search Edit Box
 local searchbox = CreateFrame("EditBox", "AtlasLootDefaultFrameSearchBox", AtlasLootDefaultFrame, "SearchBoxTemplate")
     searchbox:SetSize(190,25)
-    searchbox:SetPoint("BOTTOMLEFT", "AtlasLootDefaultFrame", "BOTTOMLEFT", 35, 10)
+    searchbox:SetPoint("BOTTOMLEFT", "AtlasLootDefaultFrame", "BOTTOMLEFT", 35, 10.5)
     searchbox:SetScript("OnEnterPressed", function(self)
         AtlasLoot:Search(self:GetText())
         self:ClearFocus()
@@ -282,22 +291,24 @@ local searchbox = CreateFrame("EditBox", "AtlasLootDefaultFrameSearchBox", Atlas
 
    --Search Button
 local searchbtn = CreateFrame("Button","AtlasLootDefaultFrameSearchButton",AtlasLootDefaultFrame,"FilterDropDownMenuTemplate")
-   searchbtn:SetSize(69,30)
-   searchbtn:SetPoint("LEFT","AtlasLootDefaultFrameSearchBox","RIGHT",2,0)
-   searchbtn:SetText(AL["Search"])
-   searchbtn:RegisterForClicks("AnyDown")
-   searchbtn.template = "FilterDropDownMenuTemplate"
-   searchbtn:SetScript("OnClick", function(self, button)
-       if button == "LeftButton" then
+    removeScripts(searchbtn)
+    searchbtn:SetSize(69,25)
+    searchbtn:SetPoint("LEFT","AtlasLootDefaultFrameSearchBox","RIGHT",2,-1)
+    searchbtn:SetText(AL["Search"])
+    searchbtn:RegisterForClicks("AnyDown")
+    searchbtn.template = "FilterDropDownMenuTemplate"
+    searchbtn:SetScript("OnClick", function(self, button)
+        if button == "LeftButton" then
            AtlasLoot:Search(AtlasLootDefaultFrameSearchBox:GetText())
            AtlasLootDefaultFrameSearchBox:ClearFocus()
-       else
+        else
            AtlasLoot:ShowSearchOptions(self)
-       end
-   end)
+        end
+    end)
 
    --Last Result Button
 local lastresult = CreateFrame("Button","AtlasLootDefaultFrameLastResultButton",AtlasLootDefaultFrameSearchBox,"FilterDropDownMenuTemplate")
+    removeScripts(lastresult)
    lastresult:SetSize(80,25)
    lastresult.template = "FilterDropDownMenuTemplate"
    lastresult.Icon:Hide()
@@ -310,6 +321,7 @@ local lastresult = CreateFrame("Button","AtlasLootDefaultFrameLastResultButton",
 
     -- Advanced Search Button
 local advSearch = CreateFrame("Button","AtlasLootDefaultFrameAdvancedSearchButton", AtlasLootDefaultFrame,"FilterDropDownMenuTemplate")
+    removeScripts(advSearch)
     advSearch:SetSize(80,25)
     advSearch.Icon:Hide()
     advSearch.Text:SetJustifyH("CENTER")
@@ -319,27 +331,29 @@ local advSearch = CreateFrame("Button","AtlasLootDefaultFrameAdvancedSearchButto
     advSearch:SetPoint("LEFT","AtlasLootDefaultFrameLastResultButton","RIGHT",2)
     advSearch:SetText("Advanced")
     advSearch:SetScript("OnClick", function()
-        AtlasLoot_AdvancedSearchShow()
+        AtlasLoot:AdvancedSearchShow()
         AtlasLootDefaultFrameSearchBox:ClearFocus()
     end)
 
     --Wish List Button
 local wishbtn = CreateFrame("Button", "AtlasLootDefaultFrameWishListButton", AtlasLootDefaultFrame, "FilterDropDownMenuTemplate")
-        wishbtn:SetPoint("LEFT", "AtlasLootDefaultFrameAdvancedSearchButton", "RIGHT", 2, 0)
-        wishbtn:SetSize(80,25)
-        wishbtn.template = "FilterDropDownMenuTemplate"
-        wishbtn:RegisterForClicks("LeftButtonDown","RightButtonDown")
-        wishbtn:SetScript("OnClick", function(self, btnclick)AtlasLoot:WishListButton(self,true,btnclick) end)
-        wishbtn:SetText(AL["Wishlist"])
-        wishbtn:SetScript("OnEnter", function(self)
-                GameTooltip:ClearLines()
-                GameTooltip:SetOwner(self, "ANCHOR_RIGHT", -(self:GetWidth() / 2), 5)
-                GameTooltip:AddLine("Right Click For Menu")
-                GameTooltip:Show()
-        end)
-        wishbtn:SetScript("OnLeave", function() GameTooltip:Hide() end)
+    removeScripts(wishbtn)
+    wishbtn:SetPoint("LEFT", "AtlasLootDefaultFrameAdvancedSearchButton", "RIGHT", 2, 0)
+    wishbtn:SetSize(80,25)
+    wishbtn.template = "FilterDropDownMenuTemplate"
+    wishbtn:RegisterForClicks("LeftButtonDown","RightButtonDown")
+    wishbtn:SetScript("OnClick", function(self, btnclick)AtlasLoot:WishListButton(self,true,btnclick) end)
+    wishbtn:SetText(AL["Wishlist"])
+    wishbtn:SetScript("OnEnter", function(self)
+        GameTooltip:ClearLines()
+        GameTooltip:SetOwner(self, "ANCHOR_RIGHT", -(self:GetWidth() / 2), 5)
+        GameTooltip:AddLine("Right Click For Menu")
+        GameTooltip:Show()
+    end)
+    wishbtn:SetScript("OnLeave", function() GameTooltip:Hide() end)
 
 local favorites = CreateFrame("Button", "AtlasLoot_Favorites", AtlasLootDefaultFrame, "FilterDropDownMenuTemplate")
+    removeScripts(favorites)
     favorites:SetPoint("LEFT", "AtlasLootDefaultFrameWishListButton", "RIGHT", 2, 0)
     favorites:SetText("Favorites")
     favorites:SetSize(150,25)
@@ -361,22 +375,23 @@ local favorites = CreateFrame("Button", "AtlasLoot_Favorites", AtlasLootDefaultF
 
         -- Load Current Instance Button
 local currentInstance = CreateFrame("Button","AtlasLootDefaultFrame_LoadInstanceButton", AtlasLootDefaultFrame,"FilterDropDownMenuTemplate")
-        currentInstance:SetSize(107,25)
-        currentInstance.Icon:Hide()
-        currentInstance.Text:SetJustifyH("CENTER")
-        currentInstance.Text:ClearAllPoints()
-        currentInstance.Text:SetPoint("CENTER")
-        currentInstance.template = "FilterDropDownMenuTemplate"
-        currentInstance:SetPoint("LEFT", "AtlasLoot_Favorites", "RIGHT", 2, 0)
-        currentInstance:SetScript("OnClick", function() AtlasLoot:ShowInstance() end)
-        currentInstance:SetScript("OnLeave", function() GameTooltip:Hide() end)
-        currentInstance:SetScript("OnEnter", function(self)
+    removeScripts(currentInstance)
+    currentInstance:SetSize(107,25)
+    currentInstance.Icon:Hide()
+    currentInstance.Text:SetJustifyH("CENTER")
+    currentInstance.Text:ClearAllPoints()
+    currentInstance.Text:SetPoint("CENTER")
+    currentInstance.template = "FilterDropDownMenuTemplate"
+    currentInstance:SetPoint("LEFT", "AtlasLoot_Favorites", "RIGHT", 2, 0)
+    currentInstance:SetScript("OnClick", function() AtlasLoot:ShowInstance() end)
+    currentInstance:SetScript("OnLeave", function() GameTooltip:Hide() end)
+    currentInstance:SetScript("OnEnter", function(self)
             GameTooltip:ClearLines()
             GameTooltip:SetOwner(self, "ANCHOR_RIGHT", -(self:GetWidth() / 2), 5)
             GameTooltip:AddLine("Load the instance you are in")
             GameTooltip:Show()
     end)
-        currentInstance:SetText("Current Instance")
+    currentInstance:SetText("Current Instance")
 
 local popupframe = CreateFrame("Frame", "AtlasLoot_FavoritesPopupFrame", AtlasLoot_Favorites)
     popupframe:SetBackdrop({
@@ -438,18 +453,22 @@ end
     --QuickLook Button 1
 local presetsize = 3
 local preset1 = CreateFrame("Button", "AtlasLootDefaultFrame_Preset1", AtlasLoot_FavoritesPopupFrame, "FilterDropDownMenuTemplate")
+    removeScripts(preset1)
     presetcreate(preset1,1)
     preset1:SetPoint("LEFT", popupframe, 8, 0)
     --QuickLook Button 2
 local preset2 = CreateFrame("Button", "AtlasLootDefaultFrame_Preset2", AtlasLoot_FavoritesPopupFrame, "FilterDropDownMenuTemplate")
+    removeScripts(preset2)
     presetcreate(preset2,2)
     preset2:SetPoint("LEFT", "AtlasLootDefaultFrame_Preset1", "RIGHT", presetsize, 0)
     --QuickLook Button 3
 local preset3 = CreateFrame("Button", "AtlasLootDefaultFrame_Preset3", AtlasLoot_FavoritesPopupFrame, "FilterDropDownMenuTemplate")
+    removeScripts(preset3)
     presetcreate(preset3,3)
     preset3:SetPoint("LEFT", "AtlasLootDefaultFrame_Preset2", "RIGHT", presetsize, 0)
     --QuickLook Button 4
 local preset4 = CreateFrame("Button", "AtlasLootDefaultFrame_Preset4", AtlasLoot_FavoritesPopupFrame, "FilterDropDownMenuTemplate")
+    removeScripts(preset4)
     presetcreate(preset4,4)
     preset4:SetPoint("LEFT", "AtlasLootDefaultFrame_Preset3", "RIGHT", presetsize, 0)
 
@@ -470,6 +489,10 @@ local scrollFrame = CreateFrame("Frame", "Atlasloot_Difficulty_ScrollFrame", Atl
     scrollFrame.Lable:SetPoint("TOPLEFT",Atlasloot_Difficulty_ScrollFrame,10,-10)
     scrollFrame.Lable:SetJustifyH("LEFT")
     scrollFrame.Lable:SetFont("GameFontNormal", 24)
+    scrollFrame.Back = scrollFrame:CreateTexture("Atlasloot_Difficulty_ScrollFrame_Back", "BACKGROUND")
+    scrollFrame.Back:SetAllPoints()
+    scrollFrame.Back:SetSize(255, ROW_HEIGHT * MAX_ROWS + 6)
+    scrollFrame.Back:SetPoint("CENTER",scrollFrame)
 
 function AtlasLoot:ScrollFrameUpdate(hide,wishlist)
     local maxValue,offset,row,value
@@ -577,12 +600,16 @@ local MAX_ROWS2 = 26      -- How many rows can be shown at once?
 local subtableFrame = CreateFrame("Frame", "Atlasloot_SubTableFrame", AtlasLootDefaultFrame)
     subtableFrame:EnableMouse(true)
     subtableFrame:SetSize(265, ROW_HEIGHT * MAX_ROWS2 + 23)
-    subtableFrame:SetPoint("BOTTOMLEFT","Atlasloot_Difficulty_ScrollFrame",0,-447.9)
+    subtableFrame:SetPoint("BOTTOMLEFT","Atlasloot_Difficulty_ScrollFrame",0,-449.5)
     subtableFrame:SetBackdrop({
         bgFile = "Interface\\DialogFrame\\UI-DialogBox-Background", tile = true, tileSize = 16,
         edgeFile = "Interface\\Tooltips\\UI-Tooltip-Border", edgeSize = 16,
         insets = { left = 4, right = 4, top = 4, bottom = 4 },
     })
+    subtableFrame.Back = subtableFrame:CreateTexture("Atlasloot_SubTableFrame_Back", "BACKGROUND")
+    subtableFrame.Back:SetAllPoints()
+    subtableFrame.Back:SetSize(255, ROW_HEIGHT * MAX_ROWS2 + 13)
+    subtableFrame.Back:SetPoint("CENTER",subtableFrame)
 
 function AtlasLoot:SubTableScrollFrameUpdate(tablename, dataSource, tablenum)
     if tablename == "FilterList" then return end
@@ -747,14 +774,15 @@ subtableFrame.rows = rows2
 
     -- Map Button
     mainframe.mapButton = CreateFrame("Button","AtlasLootDefaultFrame_MapButton", AtlasLootDefaultFrame, "FilterDropDownMenuTemplate")
+    removeScripts(mainframe.mapButton)
     mainframe.mapButton:SetSize(265,25)
-    mainframe.mapButton:SetPoint("LEFT",AtlasLootDefaultFrame_LoadInstanceButton,"RIGHT",11,0)
+    mainframe.mapButton:SetPoint("LEFT",AtlasLootDefaultFrame_LoadInstanceButton,"RIGHT",10.5,0)
     mainframe.mapButton.template = "FilterDropDownMenuTemplate"
     mainframe.mapButton:SetText("No Map")
     mainframe.mapButton:RegisterForClicks("AnyDown")
     mainframe.mapButton:SetScript("OnClick", function(self, button)
         if button == "LeftButton" then
-            AtlasLoot:MapOnShow()
+            AtlasLoot:MapOnShow(AtlasLoot.CurrentMap, AtlasLoot.MapNum or 1)
         else
             AtlasLoot:MapMenuOpen(self)
         end
@@ -803,3 +831,14 @@ local rotAnim = streamIcon.Loop:CreateAnimation("ROTATION")
 
     streamIcon:SetPoint("TOPRIGHT", AtlaslLoot_LootBackground, "TOPRIGHT")
     streamIcon:Hide()
+
+local itemPopupframe = CreateFrame("Frame", "AtlasLoot_PopupFrame")
+    itemPopupframe:EnableMouse()
+    itemPopupframe:SetScript("OnLeave", function(self)
+        AtlasLoot:ItemOnLeave(self)
+    end)
+    itemPopupframe:SetScript("OnEnter", function()
+        AtlasLoot_PopupFrame:Show()
+    end)
+    itemPopupframe:SetWidth(211)
+    itemPopupframe:Hide()

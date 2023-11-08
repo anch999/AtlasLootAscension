@@ -98,11 +98,15 @@ function AtlasLoot:OptionsItemSyncTTToggle()
 end
 
 function AtlasLoot:OptionsOpaqueToggle()
-    AtlasLoot.db.profile.Opaque=AtlasLootOptionsFrameOpaque:GetChecked()
+    AtlasLoot.db.profile.Opaque = AtlasLootOptionsFrameOpaque:GetChecked()
     if (AtlasLoot.db.profile.Opaque) then
-       -- AtlasLootItemsFrame_Back:SetTexture(0, 0, 0, 1)
+        AtlasLootItemsFrame_Back:SetTexture(0, 0, 0, 1)
+        Atlasloot_Difficulty_ScrollFrame_Back:SetTexture(0, 0, 0, 1)
+        Atlasloot_SubTableFrame_Back:SetTexture(0, 0, 0, 1)
     else
-        --AtlasLootItemsFrame_Back:SetTexture(0, 0, 0, 0.65)
+        AtlasLootItemsFrame_Back:SetTexture(0, 0, 0, 0.05)
+        Atlasloot_Difficulty_ScrollFrame_Back:SetTexture(0, 0, 0, 0.05)
+        Atlasloot_SubTableFrame_Back:SetTexture(0, 0, 0, 0.05)
     end
     AtlasLoot:OptionsInit()
 end
@@ -217,43 +221,29 @@ function AtlasLoot:CreateOptionsInfoTooltips()
       AtlasLoot:AddTooltip("AtlasLoot_SelectLootBrowserStyle", nil) 
 end
 
-local function AtlasLoot_SelectLootBrowserStyle_Initialize()
-	local info
-	info = {
-        text = AL["Modern Style"],
-        func = AtlasLoot.SelectLootBrowserStyle_OnClick,
-    }
-	UIDropDownMenu_AddButton(info)
-    info = {
-        text = AL["New Style"],
-        func = AtlasLoot.SelectLootBrowserStyle_OnClick,
-    }
-	UIDropDownMenu_AddButton(info)
-    info = {
-        text = AL["Classic Style"],
-        func = AtlasLoot.SelectLootBrowserStyle_OnClick,
-    }
-	UIDropDownMenu_AddButton(info)
+local function selectLootBrowserStyle_Initialize()
+    for _, skin in pairs(AtlasLoot.skinKeys) do
+        local info = {
+            text = skin[2],
+            func = AtlasLoot.SelectLootBrowserStyle_OnClick,
+        }
+        UIDropDownMenu_AddButton(info)
+    end
 end
 
 function AtlasLoot:OptionsOnShow()
-    AtlasLoot_SelectLootBrowserStyle_Label:SetText(AL["Loot Browser Style:"])
-    UIDropDownMenu_Initialize(AtlasLoot_SelectLootBrowserStyle, AtlasLoot_SelectLootBrowserStyle_Initialize)
+    AtlasLoot_SelectLootBrowserStyle_Label:SetText(AL["Change AtlasLoot Skin:"])
+    UIDropDownMenu_Initialize(AtlasLoot_SelectLootBrowserStyle, selectLootBrowserStyle_Initialize)
 	UIDropDownMenu_SetSelectedID(AtlasLoot_SelectLootBrowserStyle, AtlasLoot.db.profile.LootBrowserStyle)
 	UIDropDownMenu_SetWidth(AtlasLoot_SelectLootBrowserStyle, 150)
 end
 
 function AtlasLoot:SelectLootBrowserStyle_OnClick()
-    local styles = {
-        "modern",
-        "new",
-        "old",
-    }
     local thisID = this:GetID()
 	UIDropDownMenu_SetSelectedID(AtlasLoot_SelectLootBrowserStyle, thisID)
     AtlasLoot.db.profile.LootBrowserStyle = thisID
     if AtlasLoot.db.profile.LootBrowserStyle then
-        AtlasLoot:SetNewStyle(styles[AtlasLoot.db.profile.LootBrowserStyle])
+        AtlasLoot:SetSkin(AtlasLoot.skinKeys[AtlasLoot.db.profile.LootBrowserStyle][1])
     end
     AtlasLoot:OptionsOnShow()
 end

@@ -86,7 +86,7 @@ if AL then
 	AL["Treat Crafted Items:"] = "Herstellbare Gegenstände behandeln";
 	AL["As Crafting Spells"] = "als Zauber";
 	AL["As Items"] = "als Gegenstände";
-	AL["Loot Browser Style:"] = "AtlasLoot Design:";
+	AL["Change AtlasLoot Skin:"] = "AtlasLoot Design:";
 	AL["New Style"] = "Modernes Design";
 	AL["Classic Style"] = "Klassisches Design";
 

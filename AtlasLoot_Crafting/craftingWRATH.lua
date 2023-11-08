@@ -1048,6 +1048,8 @@ AtlasLoot_Data["JewelcraftingWRATH"] = {
 		[18] = {itemID = 42340, spellID = 56197 }; --Dream Signet
 		[19] = {itemID = 43246, spellID = 58143 }; --Earthshadow Ring
 		[20] = {itemID = 43247, spellID = 58144 }; --Jade Ring of Slaying
+		[21] = { itemID = 42337, spellID = 56194 }, --Sun Rock Ring
+		[22] = { itemID = 42336, spellID = 56193 }, --Bloodstone Band
 	};
 	{
 		Name = AL["Necks"];
@@ -1061,12 +1063,18 @@ AtlasLoot_Data["JewelcraftingWRATH"] = {
 		[8] = {itemID = 45813, spellID = 64726 }; --Sky Sapphire Amulet
 		[9] = {itemID = 42339, spellID = 56196 }; --Blood Sun Necklace
 		[10] = {itemID = 42338, spellID = 56195 }; --Jade Dagger Pendant
+		[11] = { itemID = 43245, spellID = 58142 }, --Crystal Chalcedony Amulet
+		[12] = { itemID = 43244, spellID = 58141 }, --Crystal Citrine Necklace
 	};
 	{
 		Name = AL["Miscellaneous"];
 		[1] = {itemID = 24123, spellID = 31078 }; --Circlet of Arcane Might", "=ds=#sr# 370
 		[2] = {itemID = 24122, spellID = 31077 }; --Coronet of the Verdant Flame", "=ds=#sr# 370
 		[3] = {itemID = 44943, spellID = 62242 }; --Icy Prism
+		[4] = { itemID = 42421, spellID = 56208 }, --Shadow Jade Focusing Lens
+		[5] = { itemID = 42420, spellID = 56206 }, --Shadow Crystal Focusing Lens
+		[6] = { itemID = 41367, spellID = 56205 }, --Dark Jade Focusing Lens
+
 	};
 };
 

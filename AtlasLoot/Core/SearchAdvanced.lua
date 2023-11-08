@@ -138,7 +138,7 @@ AtlasLoot_AdvancedSearchArguments = {
             ["Primary Stats"] = {{"Stamina", "sta"}, {"Strength", "str"}, {"Agility", "agi"}, {"Intellect", "int"}, {"Spirit", "spi"}}
         },
         [2] = {
-            ["Secondary Stats"] = {{"Attack Power", "ap"}, {"Spell Power", "sp"}, {"Crit", "crit"}, {"Hit", "hit"}, {"Haste", "haste"}, {"Expertise", "exp"}, {"Armor Pen", "arp"}, {"Spell Pen", "spp"}, {"Mana Per 5", "mp5"}}
+            ["Secondary Stats"] = {{"Attack Power", "ap"}, {"Spell Power", "sp"}, {"Crit", "crit"}, {"Hit", "hit"}, {"Haste", "haste"}, {"Armor Pen", "arp"}, {"Spell Pen", "spp"}, {"Mana Per 5", "mp5"}}
         },
         [3] = {
             ["Defensive Stats"] = {{"Defense", "def"}, {"Dodge", "dodge"}, {"Parry", "parry"}, {"Block", "block"}, {"Block Value", "bv"}, {"Resilience", "res"}}
@@ -175,26 +175,26 @@ AtlasLoot_AdvSearchOptions = {
     ["difficulty"] = ""
 }
 
-function AtlasLoot_AdvancedSearchSetup()
-    AtlasLoot_AdvancedSearchRegister(AtlasLoot.Dewdrop, AtlasLootDefaultFrame_AdvancedSearchPanel_QualityButton, AtlasLoot_AdvancedSearchMenus["Quality"])
-    AtlasLoot_AdvancedSearchRegister(AtlasLoot.Dewdrop, AtlasLootDefaultFrame_AdvancedSearchPanel_EquipButton, AtlasLoot_AdvancedSearchMenus["Equip"])
+function AtlasLoot:AdvancedSearchSetup()
+    AtlasLoot:AdvancedSearchRegister(AtlasLoot.Dewdrop, AtlasLootDefaultFrame_AdvancedSearchPanel_QualityButton, AtlasLoot_AdvancedSearchMenus["Quality"])
+    AtlasLoot:AdvancedSearchRegister(AtlasLoot.Dewdrop, AtlasLootDefaultFrame_AdvancedSearchPanel_EquipButton, AtlasLoot_AdvancedSearchMenus["Equip"])
 
     for n = 1, MAX_ARGUMENTS do
         AtlasLoot_ArgumentMenus[n] = AtlasLoot.Dewdrop
         AtlasLoot_ArgumentSubMenus[n] = AtlasLoot.Dewdrop
 
-        AtlasLoot_AdvancedSearchArgumentRegister(AtlasLoot_ArgumentMenus[n], _G["AtlasLootDefaultFrame_AdvancedSearchPanel_ArgumentContainer" .. tostring(n)], tostring(n), AtlasLoot_AdvancedSearchArguments["Arguments"])
-        AtlasLoot_AdvancedSearchArgumentRegister(AtlasLoot_ArgumentSubMenus[n], _G["AtlasLootDefaultFrame_AdvancedSearchPanel_ArgumentContainer" .. tostring(n) .. "Sub"], tostring(n),
+        AtlasLoot:AdvancedSearchArgumentRegister(AtlasLoot_ArgumentMenus[n], _G["AtlasLootDefaultFrame_AdvancedSearchPanel_ArgumentContainer" .. tostring(n)], tostring(n), AtlasLoot_AdvancedSearchArguments["Arguments"])
+        AtlasLoot:AdvancedSearchArgumentRegister(AtlasLoot_ArgumentSubMenus[n], _G["AtlasLootDefaultFrame_AdvancedSearchPanel_ArgumentContainer" .. tostring(n) .. "Sub"], tostring(n),
                                                  AtlasLoot_AdvancedSearchArguments["Operators"])
     end
 
     -- Reset Search options to defualt
-    AtlasLoot_AdvancedSearchReset()
+    AtlasLoot:AdvancedSearchReset()
 end
 
-function AtlasLoot_AdvancedSearchShow()
+function AtlasLoot:AdvancedSearchShow()
     if (AtlasLootDefaultFrame_AdvancedSearchPanel:IsVisible()) then
-        AtlasLoot_AdvancedSearchClose()
+        AtlasLoot:AdvancedSearchClose()
         return
     end
 
@@ -219,7 +219,7 @@ function AtlasLoot_AdvancedSearchShow()
     AtlasLoot:SubTableScrollFrameUpdate("EmptyTable","AtlasLoot_Data")
 end
 
-function AtlasLoot_AdvancedSearchClose()
+function AtlasLoot:AdvancedSearchClose()
     AtlasLootDefaultFrame_AdvancedSearchPanel:Hide()
 
     if (SearchPrevData[1] ~= "") then
@@ -227,7 +227,7 @@ function AtlasLoot_AdvancedSearchClose()
     end
 end
 
-function AtlasLoot_AdvancedSearchReset()
+function AtlasLoot:AdvancedSearchReset()
     AtlasLoot_AdvSearchOptions = {
         ["quality"] = "",
         ["equip"] = "",
@@ -239,7 +239,7 @@ function AtlasLoot_AdvancedSearchReset()
         AtlasLoot_AdvSearchOptions["arg" .. tostring(i)] = ""
         AtlasLoot_AdvSearchOptions["arg" .. tostring(i) .. "op"] = ""
 
-        AtlasLoot_RemoveArgumentContainer()
+        AtlasLoot:RemoveArgumentContainer()
     end
 
     local expansionLevels = {60, 70, 80}
@@ -256,9 +256,9 @@ function AtlasLoot_AdvancedSearchReset()
     AtlasLootDefaultFrame_AdvancedSearchPanel_EquipSubButton:SetText("Select Option")
 end
 
-function AtlasLoot_AddArgumentContainer()
+function AtlasLoot:AddArgumentContainer()
     if ACTIVE_ARGUMENT == MAX_ARGUMENTS then
-        AtlasLoot_AdvSearchArgButtonToggle()
+        AtlasLoot:AdvSearchArgButtonToggle()
         return
     end
 
@@ -268,12 +268,12 @@ function AtlasLoot_AddArgumentContainer()
     _G["AtlasLootDefaultFrame_AdvancedSearchPanel_ArgumentContainer" .. tostring(ACTIVE_ARGUMENT)]:SetText("Select Option")
     _G["AtlasLootDefaultFrame_AdvancedSearchPanel_ArgumentContainer" .. tostring(ACTIVE_ARGUMENT) .. "Sub"]:Show()
 
-    AtlasLoot_AdvSearchArgButtonToggle()
+    AtlasLoot:AdvSearchArgButtonToggle()
 end
 
-function AtlasLoot_RemoveArgumentContainer()
+function AtlasLoot:RemoveArgumentContainer()
     if ACTIVE_ARGUMENT == 0 then
-        AtlasLoot_AdvSearchArgButtonToggle()
+        AtlasLoot:AdvSearchArgButtonToggle()
         return
     end
 
@@ -286,10 +286,10 @@ function AtlasLoot_RemoveArgumentContainer()
     _G["AtlasLootDefaultFrame_AdvancedSearchPanel_ArgumentContainer" .. tostring(ACTIVE_ARGUMENT) .. "Value"]:Hide()
 
     ACTIVE_ARGUMENT = ACTIVE_ARGUMENT - 1
-    AtlasLoot_AdvSearchArgButtonToggle()
+    AtlasLoot:AdvSearchArgButtonToggle()
 end
 
-function AtlasLoot_AdvSearchArgButtonToggle()
+function AtlasLoot:AdvSearchArgButtonToggle()
     if ACTIVE_ARGUMENT == MAX_ARGUMENTS then
         AtlasLootDefaultFrame_AdvancedSearchPanel_ArgumentContainerAddArgBtn:Disable()
     else
@@ -310,7 +310,7 @@ AtlasLoot_AdvSearchDefaultText = {
     ["difficulty"] = "Select Difficulty"
 }
 
-function AtlasLoot_AdvancedSearchMenuClick(Object, VariableToSet, VariableValue, ChildMenu, ChildMenuRegister)
+function AtlasLoot:AdvancedSearchMenuClick(Object, VariableToSet, VariableValue, ChildMenu, ChildMenuRegister)
     -- Setups child menus and sets search options to default
     if (ChildMenu ~= nil) then
         if (ChildMenuRegister == "Disable") then
@@ -329,7 +329,7 @@ function AtlasLoot_AdvancedSearchMenuClick(Object, VariableToSet, VariableValue,
                 return
             end
         else
-            AtlasLoot_AdvancedSearchRegister(AtlasLoot_FrameMenuList[ChildMenu][1], _G[AtlasLoot_FrameMenuList[ChildMenu][2]], AtlasLoot_AdvancedSearchMenus[ChildMenuRegister])
+            AtlasLoot:AdvancedSearchRegister(AtlasLoot_FrameMenuList[ChildMenu][1], _G[AtlasLoot_FrameMenuList[ChildMenu][2]], AtlasLoot_AdvancedSearchMenus[ChildMenuRegister])
             AtlasLoot_AdvSearchOptions[AtlasLoot_FrameMenuList[ChildMenu][4]] = AtlasLoot_FrameMenuList[ChildMenu][5]
             _G[AtlasLoot_FrameMenuList[ChildMenu][2]]:Enable()
             _G[AtlasLoot_FrameMenuList[ChildMenu][2]]:SetText(AtlasLoot_FrameMenuList[ChildMenu][3])
@@ -350,7 +350,7 @@ function AtlasLoot_AdvancedSearchMenuClick(Object, VariableToSet, VariableValue,
     Object[2]:Close()
 end
 
-function AtlasLoot_AdvancedSearchRegister(DropDown, DropDownObject, MenuOption)
+function AtlasLoot:AdvancedSearchRegister(DropDown, DropDownObject, MenuOption)
     DropDown:Register(DropDownObject, 'point', function(parent)
         return "TOP", "BOTTOM"
     end, 'children', function(level, value)
@@ -360,8 +360,11 @@ function AtlasLoot_AdvancedSearchRegister(DropDown, DropDownObject, MenuOption)
                     -- If a link to show a submenu
                     if (type(v[1]) == "table") and (type(v[1][1]) == "string") then
                         if v[1][1] ~= "" then
-                            DropDown:AddLine('text', v[1][1], 'textR', 1, 'textG', 0.82, 'textB', 0, 'func', AtlasLoot_AdvancedSearchMenuClick, 'arg1', {DropDownObject, DropDown, v[1][1]}, 'arg2',
-                                             v[1][2], 'arg3', v[1][3], 'arg4', v[1][4], 'arg5', v[1][5], 'notCheckable', true)
+                            DropDown:AddLine('text', v[1][1], 'textR', 1, 'textG', 0.82, 'textB', 0,
+                            'func', function()
+                                AtlasLoot:AdvancedSearchMenuClick({DropDownObject, DropDown, v[1][1]}, v[1][2], v[1][3], v[1][4], v[1][5])
+                            end,
+                            'notCheckable', true)
                         end
                     else
                         local lock = 0
@@ -382,15 +385,18 @@ function AtlasLoot_AdvancedSearchRegister(DropDown, DropDownObject, MenuOption)
         elseif level == 2 then
             if value then
                 for k, v in ipairs(value) do
-                    DropDown:AddLine('text', v[1], 'textR', 1, 'textG', 0.82, 'textB', 0, 'func', AtlasLoot_AdvancedSearchMenuClick, 'arg1', {DropDownObject, DropDown, v[1]}, 'arg2', v[2], 'arg3',
-                                     v[3], 'arg4', v[4], 'arg5', v[5], 'notCheckable', true)
+                    DropDown:AddLine('text', v[1], 'textR', 1, 'textG', 0.82, 'textB', 0,
+                    'func', function()
+                        AtlasLoot:AdvancedSearchMenuClick({DropDownObject, DropDown, v[1]}, v[2], v[3], v[4], v[5])
+                    end,
+                    'notCheckable', true)
                 end
             end
         end
     end, 'dontHook', true)
 end
 
-function AtlasLoot_AdvancedSearchArgumentClick(Object, VariableToSet, VariableValue, IsOperator)
+function AtlasLoot:AdvancedSearchArgumentClick(Object, VariableToSet, VariableValue, IsOperator)
     if IsOperator and VariableValue == "reset" then
         AtlasLoot_AdvSearchOptions["arg" .. VariableToSet .. "op"] = ""
 
@@ -432,7 +438,7 @@ function AtlasLoot_AdvancedSearchArgumentClick(Object, VariableToSet, VariableVa
     end
 end
 
-function AtlasLoot_AdvancedSearchArgumentRegister(DropDown, DropDownObject, ArgumentCount, ArgumentMenu)
+function AtlasLoot:AdvancedSearchArgumentRegister(DropDown, DropDownObject, ArgumentCount, ArgumentMenu)
     DropDown:Register(DropDownObject, 'point', function(parent)
         return "TOP", "BOTTOM"
     end, 'children', function(level, value)
@@ -443,11 +449,16 @@ function AtlasLoot_AdvancedSearchArgumentRegister(DropDown, DropDownObject, Argu
                     if (type(v[1]) == "table") and (type(v[1][1]) == "string") then
                         local checked = false
                         if v[1][3] == "Submenu" then
-                            DropDown:AddLine('text', v[1][1], 'textR', 1, 'textG', 0.82, 'textB', 0, 'func', AtlasLoot_AdvancedSearchArgumentClick, 'arg1', {DropDownObject, DropDown, v[1][1]}, 'arg2',
-                                             ArgumentCount, 'arg3', v[1][2], 'arg4', v[1][3], 'notCheckable', true)
+                            DropDown:AddLine('text', v[1][1], 'textR', 1, 'textG', 0.82, 'textB', 0,
+                            'func', function() 
+                                AtlasLoot:AdvancedSearchArgumentClick({DropDownObject, DropDown, v[1][1]}, ArgumentCount, v[1][2], v[1][3])
+                                end,
+                                'notCheckable', true)
                         elseif v[1][1] ~= "" then
-                            DropDown:AddLine('text', v[1][1], 'textR', 1, 'textG', 0.82, 'textB', 0, 'func', AtlasLoot_AdvancedSearchArgumentClick, 'arg1', {DropDownObject, DropDown, v[1][1]}, 'arg2',
-                                             ArgumentCount, 'arg3', v[1][2], 'arg4', v[1][3], 'notCheckable', true)
+                            DropDown:AddLine('text', v[1][1], 'textR', 1, 'textG', 0.82, 'textB', 0,
+                            'func', function() AtlasLoot:AdvancedSearchArgumentClick({DropDownObject, DropDown, v[1][1]}, ArgumentCount, v[1][2], v[1][3])
+                            end,
+                            'notCheckable', true)
                         end
                     else
                         local lock = 0
@@ -467,20 +478,26 @@ function AtlasLoot_AdvancedSearchArgumentRegister(DropDown, DropDownObject, Argu
             end, 'notCheckable', true)
         elseif level == 2 then
             if value then
-                for k, v in ipairs(value) do
+                for _, v in ipairs(value) do
                     if type(v) == "table" then
                         if (type(v[1]) == "string") then
                             local checked = false
                             -- If an entry to show a submenu
                             if v[4] == "Header" then
-                                DropDown:AddLine('text', v[1], 'textR', 0.2, 'textG', 0.82, 'textB', 0.5, 'func', AtlasLoot_AdvancedSearchArgumentClick, 'arg1', {DropDownObject, DropDown, v[1]},
-                                                 'arg2', ArgumentCount, 'arg3', v[2], 'arg4', v[3], 'notCheckable', true)
+                                DropDown:AddLine('text', v[1], 'textR', 0.2, 'textG', 0.82, 'textB', 0.5, 'func', function()
+                                    AtlasLoot:AdvancedSearchArgumentClick({DropDownObject, DropDown, v[1]}, ArgumentCount, v[2], v[3])
+                                    end,
+                                    'notCheckable', true)
                             elseif v[3] == "Submenu" then
-                                DropDown:AddLine('text', v[1], 'textR', 1, 'textG', 0.82, 'textB', 0, 'func', AtlasLoot_AdvancedSearchArgumentClick, 'arg1', {DropDownObject, DropDown, v[1]}, 'arg2',
-                                                 ArgumentCount, 'arg3', v[2], 'arg4', v[3], 'notCheckable', true)
+                                DropDown:AddLine('text', v[1], 'textR', 1, 'textG', 0.82, 'textB', 0, 'func', function()
+                                    AtlasLoot:AdvancedSearchArgumentClick({DropDownObject, DropDown, v[1]}, ArgumentCount, v[2], v[3])
+                                    end,
+                                    'notCheckable', true)
                             else
-                                DropDown:AddLine('text', v[1], 'textR', 1, 'textG', 0.82, 'textB', 0, 'func', AtlasLoot_AdvancedSearchArgumentClick, 'arg1', {DropDownObject, DropDown, v[1]}, 'arg2',
-                                                 ArgumentCount, 'arg3', v[2], 'arg4', v[3], 'notCheckable', true)
+                                DropDown:AddLine('text', v[1], 'textR', 1, 'textG', 0.82, 'textB', 0, 'func', function()
+                                    AtlasLoot:AdvancedSearchArgumentClick({DropDownObject, DropDown, v[1]}, ArgumentCount, v[2], v[3])
+                                    end,
+                                    'notCheckable', true)
                             end
                         end
                     end
