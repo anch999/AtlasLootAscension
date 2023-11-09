@@ -64,28 +64,14 @@ local realmName = GetRealmName()
 
 local AtlasLootDBDefaults = {
     profile = {
-        SavedTooltips = {},
-        SafeLinks = true,
-        DefaultTT = true,
-        LootlinkTT = false,
-        ItemSyncTT = false,
         EquipCompare = false,
         Opaque = false,
         ItemIDs = false,
-        ItemSpam = false,
-        MinimapButton = false,
-        FuBarAttached = true,
-        FuBarText = true,
-        FuBarIcon = true,
         LastBoss = "EmptyTable",
         AtlasLootVersion = "1",
         AtlasNaggedVersion = "",
-        FuBarPosition = 1,
-        LoadAllLoDStartup = false,
         PartialMatching = true,
         LootBrowserStyle = 1,
-        MinimapButtonAngle = 240,
-        MinimapButtonRadius = 75,
         LootBrowserScale = 1.0,
         SearchOn = {
             All = true,
@@ -142,15 +128,6 @@ function AtlasLoot:OnEnable()
 		AtlasLoot:SetSkin(AtlasLoot.skinKeys[AtlasLoot.db.profile.LootBrowserStyle][1])
 	end
 
-	--Disable options that don't have the supporting mods
-	if( not LootLink_SetTooltip and (AtlasLoot.db.profile.LootlinkTT == true)) then
-		AtlasLoot.db.profile.LootlinkTT = false
-		AtlasLoot.db.profile.DefaultTT = true
-	end
-	if( not ItemSync and (AtlasLoot.db.profile.ItemSyncTT == true)) then
-		AtlasLoot.db.profile.ItemSyncTT = false
-		AtlasLoot.db.profile.DefaultTT = true
-	end
 	--If using an opaque items frame, change the alpha value of the backing texture
 	if (AtlasLoot.db.profile.Opaque) then
         AtlasLootItemsFrame_Back:SetTexture(0, 0, 0, 1)
@@ -167,24 +144,16 @@ function AtlasLoot:OnEnable()
 		AtlasLoot:OptionsInit()
 	end
 
-	--If EquipCompare is available, use it
-	if((EquipCompare_RegisterTooltip) and (AtlasLoot.db.profile.EquipCompare == true)) then
-		EquipCompare_RegisterTooltip(AtlasLootTooltip)
-	end
+	collectgarbage("collect")
 
-	if (AtlasLoot.db.profile.LoadAllLoDStartup == true) then
-		AtlasLoot:LoadAllModules()
-	else
-		collectgarbage("collect")
-	end
     local panel = _G["AtlasLootOptionsFrame"]
-    panel.name=AL["AtlasLoot"]
+    panel.name = AL["AtlasLoot"]
     InterfaceOptions_AddCategory(panel)
     --Filter and wishlist options menus creates as part of the next 2 commands
 	AtlasLoot:CreateWishlistOptions()
     panel = _G["AtlasLootHelpFrame"]
-    panel.name=AL["Help"]
-    panel.parent=AL["AtlasLoot"]
+    panel.name = AL["Help"]
+    panel.parent = AL["AtlasLoot"]
     InterfaceOptions_AddCategory(panel)
     if LibStub:GetLibrary("LibAboutPanel", true) then
         LibStub("LibAboutPanel").new(AL["AtlasLoot"], "AtlasLoot")
@@ -208,11 +177,6 @@ function AtlasLoot:Reset(data)
     if data == "frames" then
 		AtlasLootDefaultFrame:ClearAllPoints()
 		AtlasLootDefaultFrame:SetPoint("CENTER", "UIParent", "CENTER", 0, 0)
-        if AtlasLootFu then
-            AtlasLootFu.db.profile.minimapPosition = 200
-            AtlasLootFu:Hide()
-            AtlasLootFu:Show()
-        end
         AtlasLoot.db.profile.LootBrowserScale = 1.0
         AtlasLoot:UpdateLootBrowserScale()
     elseif data == "quicklooks" then
@@ -225,11 +189,7 @@ function AtlasLoot:Reset(data)
     elseif data == "all" then
 		AtlasLootDefaultFrame:ClearAllPoints()
 		AtlasLootDefaultFrame:SetPoint("CENTER", "UIParent", "CENTER", 0, 0)
-        if AtlasLootFu then
-            AtlasLootFu.db.profile.minimapPosition = 200
-            AtlasLootFu:Hide()
-            AtlasLootFu:Show()
-        end
+
         AtlasLoot.db.profile.LootBrowserScale = 1.0
         AtlasLoot:UpdateLootBrowserScale()
         AtlasLootCharDB["QuickLooks"] = {}
@@ -268,13 +228,6 @@ function AtlasLoot:OptionsToggle()
 		InterfaceOptionsFrame:Hide()
     end
     InterfaceOptionsFrame:SetFrameStrata("DIALOG")
-    if(AtlasLoot.db.profile.DefaultTT == true) then
-		AtlasLoot:OptionsDefaultTTToggle()
-	elseif(AtlasLoot.db.profile.LootlinkTT == true) then
-		AtlasLoot:OptionsLootlinkTTToggle()
-	elseif(AtlasLoot.db.profile.ItemSyncTT == true) then
-		AtlasLoot:OptionsItemSyncTTToggle()
-    end
 end
 
 --[[

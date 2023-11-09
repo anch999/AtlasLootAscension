@@ -20,7 +20,7 @@ function AtlasLoot:SetCraftingTooltip(self)
     if not craftingData then return end
     --extra information on where to find the recipe
     if (AtlasLoot.db.profile.recipeExtraInfoSwitch and IsControlKeyDown()) or (not AtlasLoot.db.profile.recipeExtraInfoSwitch) then
-        AtlasLootTooltip:AddLine(" ")
+        GameTooltip:AddLine(" ")
         for _,v in pairs(craftingData) do
             local line1 = v[1]
             local line2 = v[2]
@@ -32,11 +32,11 @@ function AtlasLoot:SetCraftingTooltip(self)
                     line2 = WHITE.." ("..GOLD..v.cords[1]..WHITE..", "..GOLD..v.cords[2]..WHITE..")"
                 end
             end
-            AtlasLootTooltip:AddDoubleLine(line1, line2)
+            GameTooltip:AddDoubleLine(line1, line2)
         end
     else
-        AtlasLootTooltip:AddLine(" ")
-        AtlasLootTooltip:AddLine(WHITE..AL["Hold CTRL for source"])
+        GameTooltip:AddLine(" ")
+        GameTooltip:AddLine(WHITE..AL["Hold CTRL for source"])
     end
 end
 
@@ -49,8 +49,8 @@ function AtlasLoot:SetQuestTooltip(self)
         if quest.text then
             text = self.quest.text
         end
-        AtlasLootTooltip:AddDoubleLine(AL["Quest"], WHITE..text)
-        AtlasLootTooltip:AddDoubleLine(quest[4]..quest[1], WHITE.." ("..GOLD..quest[2]..WHITE..", "..GOLD..quest[3]..WHITE..")")
+        GameTooltip:AddDoubleLine(AL["Quest"], WHITE..text)
+        GameTooltip:AddDoubleLine(quest[4]..quest[1], WHITE.." ("..GOLD..quest[2]..WHITE..", "..GOLD..quest[3]..WHITE..")")
     end
 end
 
@@ -64,96 +64,49 @@ function AtlasLoot:SetDroprateTooltip(self)
         elseif ItemindexID == 4 then
             ItemindexID = 5
         end
-        AtlasLootTooltip:AddLine(AL["Drop Rate: "]..self.droprate[ItemindexID-1], 1, 1, 0)
+        GameTooltip:AddLine(AL["Drop Rate: "]..self.droprate[ItemindexID-1], 1, 1, 0)
     else
-        AtlasLootTooltip:AddLine(AL["Drop Rate: "]..self.droprate, 1, 1, 0)
+        GameTooltip:AddLine(AL["Drop Rate: "]..self.droprate, 1, 1, 0)
     end
 end
 
 --Set extra info tooltip
 function AtlasLoot:SetExtraTooltip(self)
     if not self.extraInfo then return end
-    AtlasLootTooltip:AddLine(AL["Extra Info: "]..self.extraInfo, 1, 1, 0)
+    GameTooltip:AddLine(AL["Extra Info: "]..self.extraInfo, 1, 1, 0)
 end
 --------------------------------------------------------------------------------
 -- Item OnEnter
 -- Called when a loot item is moused over
 --------------------------------------------------------------------------------
 function AtlasLoot:ItemOnEnter(self)
-    AtlasLootTooltip:ClearLines()
-    for i=1, 30, 1 do
-        if _G["AtlasLootTooltipTextRight"..i] then
-            _G["AtlasLootTooltipTextRight"..i]:SetText("")
-        end
-    end
+    GameTooltip:ClearLines()
     local spellID = self.spellID
     local itemID = self.itemID
     if itemID or spellID then
         if not spellID then
-            local color = WHITE
-            local name = GetItemInfo(itemID)
-            --Lootlink tooltips
-            if( AtlasLoot.db.profile.LootlinkTT ) then
-                --If we have seen the item, use the game tooltip to minimise same name item problems
-                    AtlasLootTooltip:SetOwner(self, "ANCHOR_RIGHT", -(self:GetWidth() / 2), 24)
-                    AtlasLootTooltip:SetHyperlink("item:"..itemID..":0:0:0")
+            --Default game tooltips
+            if itemID then
+                if GetItemInfo(itemID) then
+                    GameTooltip:SetOwner(self, "ANCHOR_RIGHT", -(self:GetWidth() / 2), 24)
+                    GameTooltip:SetHyperlink("item:"..itemID..":0:0:0")
                     if ( AtlasLoot.db.profile.ItemIDs ) then
-                        AtlasLootTooltip:AddLine(BLUE..AL["ItemID:"].." "..itemID, nil, nil, nil, 1)
+                        GameTooltip:AddLine(BLUE..AL["ItemID:"].." "..itemID, nil, nil, nil, 1)
                     end
                     AtlasLoot:SetQuestTooltip(self)
                     AtlasLoot:SetExtraTooltip(self)
                     AtlasLoot:SetDroprateTooltip(self)
                     AtlasLoot:SetCraftingTooltip(self)
-
-                    AtlasLootTooltip:Show()
-                    if((AtlasLoot.db.profile.EquipCompare and ((not EquipCompare_RegisterTooltip) or (not EquipCompare_Enabled)))) or IsShiftKeyDown() then
+                    GameTooltip:Show()
+                    if AtlasLoot.db.profile.EquipCompare or IsShiftKeyDown() then
                         AtlasLoot:ShowCompareItem(self) --- CALL MISSING METHOD TO SHOW 2 TOOLTIPS (Item Compare)
-                    end
-                    if (LootLink_AddItem) then
-                        LootLink_AddItem(name, itemID..":0:0:0", color)
-                    end
-            --Item Sync tooltips
-            elseif( AtlasLoot.db.profile.ItemSyncTT ) then
-                ItemSync:ButtonEnter()
-                if ( AtlasLoot.db.profile.ItemIDs ) then
-                    GameTooltip:AddLine(BLUE..AL["ItemID:"].." "..itemID, nil, nil, nil, 1)
-                end
-
-                AtlasLoot:SetQuestTooltip(self)
-                AtlasLoot:SetExtraTooltip(self)
-                AtlasLoot:SetDroprateTooltip(self)
-                AtlasLoot:SetCraftingTooltip(self)
-
-                GameTooltip:Show()
-                if((AtlasLoot.db.profile.EquipCompare and ((not EquipCompare_RegisterTooltip) or (not EquipCompare_Enabled)))) or IsShiftKeyDown() then
-                    GameTooltip_ShowCompareItem() --- CALL MISSING METHOD TO SHOW 2 TOOLTIPS (Item Compare)
-                end
-            --Default game tooltips
-            else
-                if itemID then
-                    if GetItemInfo(itemID) then
-                        AtlasLootTooltip:SetOwner(self, "ANCHOR_RIGHT", -(self:GetWidth() / 2), 24)
-                        AtlasLootTooltip:SetHyperlink("item:"..itemID..":0:0:0")
-                        if ( AtlasLoot.db.profile.ItemIDs ) then
-                            AtlasLootTooltip:AddLine(BLUE..AL["ItemID:"].." "..itemID, nil, nil, nil, 1)
-                        end
-
-                        AtlasLoot:SetQuestTooltip(self)
-                        AtlasLoot:SetExtraTooltip(self)
-                        AtlasLoot:SetDroprateTooltip(self)
-                        AtlasLoot:SetCraftingTooltip(self)
-
-                        AtlasLootTooltip:Show()
-                        if((AtlasLoot.db.profile.EquipCompare and ((not EquipCompare_RegisterTooltip) or (not EquipCompare_Enabled)))) or IsShiftKeyDown() then
-                            AtlasLoot:ShowCompareItem(self) --- CALL MISSING METHOD TO SHOW 2 TOOLTIPS (Item Compare)
-                        end
                     end
                 end
             end
         else
-            AtlasLootTooltip:SetOwner(self, "ANCHOR_RIGHT", -(self:GetWidth() / 2), 24)
-            AtlasLootTooltip:ClearLines()
-            AtlasLootTooltip:SetHyperlink(AtlasLoot:GetEnchantLink(spellID))
+            GameTooltip:SetOwner(self, "ANCHOR_RIGHT", -(self:GetWidth() / 2), 24)
+            GameTooltip:ClearLines()
+            GameTooltip:SetHyperlink(AtlasLoot:GetEnchantLink(spellID))
 
             AtlasLoot:SetCraftingTooltip(self)
 
@@ -183,11 +136,11 @@ function AtlasLoot:ItemOnEnter(self)
                 end
             end
             text = BLUE.."Recipe known by: "..WHITE..text
-            if hasSpace then AtlasLootTooltip:AddLine(" ") end
-            if showOwn then AtlasLootTooltip:AddLine(showOwn) end
-            if showOther then AtlasLootTooltip:AddLine(text) end
-            AtlasLootTooltip:Show()
-            if(itemID and ((AtlasLoot.db.profile.EquipCompare and ((not EquipCompare_RegisterTooltip) or (not EquipCompare_Enabled))) or IsShiftKeyDown())) then
+            if hasSpace then GameTooltip:AddLine(" ") end
+            if showOwn then GameTooltip:AddLine(showOwn) end
+            if showOther then GameTooltip:AddLine(text) end
+            GameTooltip:Show()
+            if AtlasLoot.db.profile.EquipCompare or IsShiftKeyDown() then
                 AtlasLoot:ShowCompareItem(self) --- CALL MISSING METHOD TO SHOW 2 TOOLTIPS (Item Compare)
             end
         end
@@ -201,14 +154,13 @@ end
 function AtlasLoot:ItemOnLeave(self)
     --Hide the necessary tooltips
     if( AtlasLoot.db.profile.LootlinkTT ) then
-        AtlasLootTooltip:Hide()
+        GameTooltip:Hide()
     elseif( AtlasLoot.db.profile.ItemSyncTT ) then
         if(GameTooltip:IsVisible()) then
             GameTooltip:Hide()
         end
     else
-		AtlasLootTooltip:Hide()
-        GameTooltip:Hide()
+		GameTooltip:Hide()
     end
     if ( ShoppingTooltip2:IsVisible() or ShoppingTooltip1.IsVisible) then
        ShoppingTooltip2:Hide()
@@ -257,11 +209,9 @@ function AtlasLoot:ItemOnClick(self ,arg1)
             else
                 AtlasLoot:ItemContextMenu(self, "item", self.number, self.craftingData)
             end
-        elseif(IsShiftKeyDown() and itemName and (AtlasLoot.db.profile.SafeLinks or AtlasLoot.db.profile.AllLinks)) then
+        elseif IsShiftKeyDown() and itemName then
             --insert to chat link
             ChatEdit_InsertLink(itemLink)
-        elseif(IsShiftKeyDown() and AtlasLoot.db.profile.AllLinks) then
-            ChatEdit_InsertLink(color.."|Hitem:"..itemID..":0:0:0:0:0:0:0|h["..name.."]|h|r")
         elseif(ChatFrame1EditBox and ChatFrame1EditBox:IsVisible() and IsShiftKeyDown()) then
             ChatFrame1EditBox:Insert(name)  -- <-- this line just inserts plain text, does not need any adjustment
             --If control-clicked, use the dressing room
@@ -328,37 +278,37 @@ end
 
 -------
 -- Missing GameToolTip method
--- Enables item comparing. I've ripped self method directly from GameTooltip.lua and modified to work with AtlasLootTooltip /siena
+-- Enables item comparing. I've ripped self method directly from GameTooltip.lua and modified to work with GameTooltip /siena
 -------
 function AtlasLoot:ShowCompareItem(self)
    local shift = 1
    local item,link = nil,nil
    if self.spellID then
-      item = AtlasLootTooltip:GetSpell()
+      item = GameTooltip:GetSpell()
       _,link = GetItemInfo(self.itemID)
    else
-      item,link = AtlasLootTooltip:GetItem()
+      item,link = GameTooltip:GetItem()
    end
 
    if ( not link ) then
       return
    end
 
-   ShoppingTooltip1:SetOwner(AtlasLootTooltip, "ANCHOR_NONE")
-   ShoppingTooltip2:SetOwner(AtlasLootTooltip, "ANCHOR_NONE")
-   ShoppingTooltip3:SetOwner(AtlasLootTooltip, "ANCHOR_NONE")
+   ShoppingTooltip1:SetOwner(GameTooltip, "ANCHOR_NONE")
+   ShoppingTooltip2:SetOwner(GameTooltip, "ANCHOR_NONE")
+   ShoppingTooltip3:SetOwner(GameTooltip, "ANCHOR_NONE")
 
    local item1 = nil
    local item2 = nil
    local item3 = nil
    local side = "left"
-   if ( ShoppingTooltip1:SetHyperlinkCompareItem(link, 1, 1, AtlasLootTooltip) ) then
+   if ( ShoppingTooltip1:SetHyperlinkCompareItem(link, 1, 1, GameTooltip) ) then
       item1 = true
    end
-   if ( ShoppingTooltip2:SetHyperlinkCompareItem(link, 2, 1, AtlasLootTooltip) ) then
+   if ( ShoppingTooltip2:SetHyperlinkCompareItem(link, 2, 1, GameTooltip) ) then
       item2 = true
    end
-   if ( ShoppingTooltip3:SetHyperlinkCompareItem(link, 3, 1, AtlasLootTooltip) ) then
+   if ( ShoppingTooltip3:SetHyperlinkCompareItem(link, 3, 1, GameTooltip) ) then
       item3 = true
    end
    if not item1 and not item2 and not item3 then 
@@ -368,24 +318,24 @@ function AtlasLoot:ShowCompareItem(self)
    if item3 then
         if not item1 then
             item1, item3 = true, nil
-            ShoppingTooltip1:SetHyperlinkCompareItem(link, 3, 1, AtlasLootTooltip)
+            ShoppingTooltip1:SetHyperlinkCompareItem(link, 3, 1, GameTooltip)
         elseif not item2 then
             item2, item3 = true, nil
-            ShoppingTooltip2:SetHyperlinkCompareItem(link, 3, 1, AtlasLootTooltip)
+            ShoppingTooltip2:SetHyperlinkCompareItem(link, 3, 1, GameTooltip)
         end
     end
     if item2 and not item1 then
         item1, item2 = true, nil
-        ShoppingTooltip1:SetHyperlinkCompareItem(link, 2, 1, AtlasLootTooltip)
+        ShoppingTooltip1:SetHyperlinkCompareItem(link, 2, 1, GameTooltip)
     end
 
-   local left, right, anchor1, anchor2 = AtlasLootTooltip:GetLeft(), AtlasLootTooltip:GetRight(), "TOPLEFT", "TOPRIGHT"
+   local left, right, anchor1, anchor2 = GameTooltip:GetLeft(), GameTooltip:GetRight(), "TOPLEFT", "TOPRIGHT"
    if not left or not right then return end
 	if (GetScreenWidth() - right) < left then anchor1, anchor2 = anchor2, anchor1 end
 
     if item1 then
 		ShoppingTooltip1:ClearAllPoints()
-		ShoppingTooltip1:SetPoint(anchor1, AtlasLootTooltip, anchor2, 0, -10)
+		ShoppingTooltip1:SetPoint(anchor1, GameTooltip, anchor2, 0, -10)
 		ShoppingTooltip1:Show()
 
 		if item2 then
@@ -551,7 +501,7 @@ function AtlasLoot:ItemContextMenu(self, Type, number, craftingData)
                             if not AtlasLoot.db.profile.waypointList then AtlasLoot.db.profile.waypointList = {} end
                             local wayPoint
                             if (craftingData and AtlasLoot.db.profile.recipeExtraInfoSwitch and IsControlKeyDown()) or (craftingData and not AtlasLoot.db.profile.recipeExtraInfoSwitch) then
-                                AtlasLootTooltip:AddLine(" ")
+                                GameTooltip:AddLine(" ")
                                 for _,v in pairs(craftingData) do
                                     if v.cords and tonumber(v.cords[1]) ~= 0 and tonumber(v.cords[2]) ~= 0 then
                                         local line1 = v[1]

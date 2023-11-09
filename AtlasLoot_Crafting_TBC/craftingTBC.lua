@@ -1650,12 +1650,10 @@ AtlasLoot_Data["TailoringTBC"] = {
 		[2] = { itemID = 38225, spellID = 50194 }, --Mycah's Botanical Bag
 		[3] = { itemID = 21876, spellID = 26763 }, --Primal Mooncloth Bag
 		[4] = { itemID = 21858, spellID = 26755 }, --Spellfire Bag
-		[5] = { itemID = 14156, spellID = 18455 }, --Bottomless Bag
-		[6] = { itemID = 21341, spellID = 26086 }, --Felcloth Bag
-		[7] = { itemID = 41599, spellID = 56007 }, --Frostweave Bag
-		[8] = { itemID = 24270, spellID = 31459 }, --Bag of Jewels
-		[9] = { itemID = 21843, spellID = 26749 }, --Imbued Netherweave Bag
-		[10] = { itemID = 21841, spellID = 26746 }, --Netherweave Bag
+		[5] = { itemID = 21341, spellID = 26086 }, --Felcloth Bag
+		[6] = { itemID = 24270, spellID = 31459 }, --Bag of Jewels
+		[7] = { itemID = 21843, spellID = 26749 }, --Imbued Netherweave Bag
+		[8] = { itemID = 21841, spellID = 26746 }, --Netherweave Bag
 	};
 	{
 		Name = AL["Item Enhancements"];
@@ -1665,14 +1663,19 @@ AtlasLoot_Data["TailoringTBC"] = {
 		[4] = { itemID = 24275, spellID = 31431 }, --Silver Spellthread
 	};
 	{
-		Name = "Cloth/" .. AL["Miscellaneous"];
+		Name = BabbleInventory["Cloth"];
 		[1] = { itemID = 21845, spellID = 26751 }, --Primal Mooncloth
 		[2] = { itemID = 24272, spellID = 36686 }, --Shadowcloth
 		[3] = { itemID = 24271, spellID = 31373 }, --Spellcloth
 		[4] = { itemID = 21842, spellID = 26747 }, --Bolt of Imbued Netherweave
 		[5] = { itemID = 21844, spellID = 26750 }, --Bolt of Soulcloth
 		[6] = { itemID = 21840, spellID = 26745 }, --Bolt of Netherweave
-		[8] = { itemID = 24268, spellID = 31460 }, --Netherweave Net
+	};
+	{
+		Name = AL["Miscellaneous"];
+		[1] = {itemID = 44558, spellID = 60971 }; --Magnificent Flying Carpet
+		[2] = {itemID = 44558, spellID = 44554 }; --Flying Carpet
+		[4] = { itemID = 24268, spellID = 31460 }, --Netherweave Net
 	};
 	{
 		Name = MOONCLOTH;

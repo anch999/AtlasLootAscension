@@ -1447,6 +1447,7 @@ AtlasLoot_Data["TailoringWRATH"] = {
 		[2] = {itemID = 41598, spellID = 56006 }; --Mysterious Bag
 		[3] = {itemID = 41597, spellID = 56004 }; --Abyssal Bag
 		[4] = {itemID = 45773, spellID = 63924 }; --Emerald Bag
+		[5] = { itemID = 41599, spellID = 56007 }, --Frostweave Bag
 	};
 	{
 		Name = AL["Item Enhancements"];
@@ -1468,8 +1469,7 @@ AtlasLoot_Data["TailoringWRATH"] = {
 		[4] = {itemID = 41511, spellID = 55900 }; --Bolt of Imbued Frostweave
 		[5] = {itemID = 41510, spellID = 55899 }; --Bolt of Frostweave
 		[7] = {itemID = 54797, spellID = 75597 }; --Frosty Flying Carpet
-		[8] = {itemID = 44558, spellID = 60971 }; --Magnificent Flying Carpet
-		[10] = {itemID = 41509, spellID = 55898 }; --Frostweave Net
+		[9] = {itemID = 41509, spellID = 55898 }; --Frostweave Net
 	};
 	{
 		Name = AL["Shirts"];
