@@ -854,7 +854,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 				elseif recipeID then
 					getItemData(recipeID, i)
 				else
-					setupButton(itemID, i, dataSource, dataID, tablenum, dataSource_backup, recipeID)
+					setupButton(itemID, i, dataSource, dataID, tablenum, dataSource_backup)
 				end
 			else
 				itemButton:Hide()

@@ -415,7 +415,7 @@ function AtlasLoot:ItemsLoading(count)
 		count = 0
 	end
 	loadingCount = loadingCount + count
-	--print(loadingCount)
+--print(loadingCount)
 	if(loadingCount > 0) then
         AtlasLoot_ItemsLoadingSpinner:SetVertexColor(0,1,0)
         AtlasLoot_ItemsLoadingFrameBackground:SetVertexColor(0,1,0)

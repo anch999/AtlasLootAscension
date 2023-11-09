@@ -630,7 +630,8 @@ function AtlasLoot:ProcessItem(data)
         local itemID = itemData.itemID
         local spellID = itemData.spellID
         if spellID then
-        local spellName = GetSpellInfo(spellID)
+            AtlasLoot:ItemsLoading(-1)
+            local spellName = GetSpellInfo(spellID)
             if nameMatches(spellName, searchText) then
                 AtlasLoot:AddItemToSearchResult(itemData, "AtlasLoot_Data", dataID, tableNum)
                 if not showSearch then
@@ -639,7 +640,6 @@ function AtlasLoot:ProcessItem(data)
                 end
                 AtlasLoot:ItemFrameRefresh()
             end
-            AtlasLoot:ItemsLoading(-1)
         elseif itemID then
             local item = Item:CreateFromID(itemID)
             if item then
@@ -655,11 +655,7 @@ function AtlasLoot:ProcessItem(data)
                     end
                     AtlasLoot:ItemFrameRefresh()
                 end)
-            else
-                AtlasLoot:ItemsLoading(-1)
             end
-        else
-            AtlasLoot:ItemsLoading(-1)
         end
     end
     
@@ -679,8 +675,10 @@ local function DoSearch(searchText)
     local searchTerms = ParseQuery(searchText)
     for dataID, data in pairs(AtlasLoot_Data) do
         for tableNum, t in ipairs(data) do
-            for _, itemData in ipairs(t) do
-                tinsert(itemList, {{itemData, dataID, tableNum, searchTerms, searchText}})
+            for _, itemData in pairs(t) do
+                if itemData.itemID or itemData.spellID then
+                    tinsert(itemList, {{itemData, dataID, tableNum, searchTerms, searchText}})
+                end
             end
         end
     end
