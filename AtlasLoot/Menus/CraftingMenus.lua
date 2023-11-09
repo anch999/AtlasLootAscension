@@ -1,7 +1,7 @@
 local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
 
 	AtlasLoot_SubMenus["CraftingCLASSIC"] = {
-		Module = "AtlasLootCrafting",
+		Module = "AtlasLootCraftingOriginalWoW",
 		{"Normal:", "", "Header"},
 		{ "", "AlchemyCLASSIC"},
 		{ "", "SmithingCLASSIC"},
@@ -15,7 +15,7 @@ local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
 	};
 
 	AtlasLoot_SubMenus["CraftingTBC"] = {
-		Module = "AtlasLootCrafting",
+		Module = "AtlasLootCraftingBurningCrusade",
 		{"Normal:", "", "Header"},
 		{ "", "AlchemyTBC"},
 		{ "", "SmithingTBC"},
@@ -30,7 +30,7 @@ local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
 	};
 
 	AtlasLoot_SubMenus["CraftingWRATH"] = {
-		Module = "AtlasLootCrafting",
+		Module = "AtlasLootCraftingWotLK",
 		{"Normal:", "", "Header"},
 		{ "", "AlchemyWRATH"},
 		{ "", "SmithingWRATH"},
