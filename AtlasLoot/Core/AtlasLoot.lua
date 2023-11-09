@@ -712,7 +712,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 			extra = AtlasLoot.FixedItemText[dataSource[dataID][tablenum][i].itemID]
 		elseif dataSource[dataID][tablenum][i].desc then
 			extra = dataSource[dataID][tablenum][i].desc
-		elseif AtlasLoot_CraftingData["CraftingLevels"] and spellID and AtlasLoot_CraftingData["CraftingLevels"][spellID] then
+		elseif AtlasLoot_CraftingData["CraftingLevels"] and spellID and AtlasLoot_CraftingData["CraftingLevels"][spellID] and dataID ~= "SearchResult" then
 			local lvls = AtlasLoot_CraftingData["CraftingLevels"][spellID]
 			extra = LIMEGREEN .. "L-Click:|r "..WHITE..dataSource[dataID].Name.." ( "..ORANGE..lvls[1].."|r "..YELLOW..lvls[2].."|r "..GREEN..lvls[3].."|r "..GREY..lvls[4]..WHITE.." )"
 		elseif dataSource[dataID][tablenum][i].lootTable and dataSource[dataID][tablenum][i].lootTable[2] == "Token" then
@@ -723,10 +723,10 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 			extra = ""
 		end
 
-		if AtlasLoot_ExtraData[dataSource[dataID][tablenum][i].itemID] then
+		if AtlasLoot_ExtraData[dataSource[dataID][tablenum][i].itemID]and dataID ~= "SearchResult" then
 			extra = LIMEGREEN .. "L-Click:|r " .. extra
 		end
-		if dataSource[dataID][tablenum][i].contentsPreview then
+		if dataSource[dataID][tablenum][i].contentsPreview and dataID ~= "SearchResult" then
 			extra = LIMEGREEN .. "L-Click:|r " .. extra
 		end
 
