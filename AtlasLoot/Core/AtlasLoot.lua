@@ -962,13 +962,13 @@ Used to load all available LoD modules
 function AtlasLoot:LoadAllModules()
 	local loadedModules = {}
 	local flag = 0
-	for _, Module in pairs(AtlasLoot.modules) do
-		loadedModules[Module] = LoadAddOn(Module)
+	for _, mod in pairs(AtlasLoot.modules) do
+		loadedModules[mod] = LoadAddOn(mod)
 	end
 
-	for Module, state in pairs(loadedModules) do
+	for mod, state in pairs(loadedModules) do
 		if not state then
-			LoadAddOn(Module)
+			LoadAddOn(mod)
 			flag = 1
 		end
 	end
