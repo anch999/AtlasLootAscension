@@ -964,7 +964,6 @@ function AtlasLoot:LoadAllModules()
 	local loadedModules = {}
 	local flag = 0
 	for _, module in pairs(modules) do
-		print(module)
 		loadedModules[module] = LoadAddOn(module)
 	end
 
