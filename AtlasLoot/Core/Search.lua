@@ -705,6 +705,8 @@ function AtlasLoot:ShowSearchResult()
     AtlasLoot:ShowItemsFrame("SearchResult", "AtlasLootCharDB", 1)
 end
 
+local modules = {"AtlasLoot_OriginalWoW", "AtlasLoot_BurningCrusade", "AtlasLoot_Crafting_OriginalWoW", "AtlasLoot_Crafting_TBC", "AtlasLoot_Crafting_Wrath", "AtlasLoot_WorldEvents", "AtlasLoot_WrathoftheLichKing", "AtlasLoot_Vanity"}
+
 function AtlasLoot:Search(Text)
     if not Text then
         return
@@ -717,7 +719,7 @@ function AtlasLoot:Search(Text)
     -- Decide if we need load all modules or just specified ones
     local allDisabled = not self.db.profile.SearchOn.All
     if allDisabled then
-        for _, module in ipairs(AtlasLoot.modules) do
+        for _, module in ipairs(modules) do
             if self.db.profile.SearchOn[module] == true then
                 allDisabled = false
                 break
