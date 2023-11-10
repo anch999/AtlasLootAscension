@@ -953,22 +953,22 @@ AtlasLoot.ModuleName = {
 	["AtlasLootWotLK"] = "AtlasLoot_WrathoftheLichKing";
 	["AtlasLootVanity"] = "AtlasLoot_Vanity";
 }
+AtlasLoot.modules = {"AtlasLoot_OriginalWoW", "AtlasLoot_BurningCrusade", "AtlasLoot_Crafting_OriginalWoW", "AtlasLoot_Crafting_TBC", "AtlasLoot_Crafting_Wrath", "AtlasLoot_WorldEvents", "AtlasLoot_WrathoftheLichKing", "AtlasLoot_Vanity"}
 
 --[[
 AtlasLoot:LoadAllModules()
 Used to load all available LoD modules
 ]]
 function AtlasLoot:LoadAllModules()
-	local modules = {"AtlasLoot_OriginalWoW", "AtlasLoot_BurningCrusade", "AtlasLoot_Crafting_OriginalWoW", "AtlasLoot_Crafting_TBC", "AtlasLoot_Crafting_Wrath", "AtlasLoot_WorldEvents", "AtlasLoot_WrathoftheLichKing", "AtlasLoot_Vanity"}
 	local loadedModules = {}
 	local flag = 0
-	for _, module in pairs(modules) do
-		loadedModules[module] = LoadAddOn(module)
+	for _, Module in pairs(AtlasLoot.modules) do
+		loadedModules[Module] = LoadAddOn(Module)
 	end
 
-	for module, state in pairs(loadedModules) do
+	for Module, state in pairs(loadedModules) do
 		if not state then
-			LoadAddOn(module)
+			LoadAddOn(Module)
 			flag = 1
 		end
 	end

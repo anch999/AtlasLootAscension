@@ -7,7 +7,6 @@ local BLUE = "|cff0070dd"
 local ORANGE = "|cffFF8400"
 
 local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
-local modules = {"AtlasLoot_BurningCrusade", "AtlasLoot_Vanity", "AtlasLoot_Crafting", "AtlasLoot_OriginalWoW", "AtlasLoot_WorldEvents", "AtlasLoot_WrathoftheLichKing"}
 
 -- Supported Operators
 local OP_AND = "&"
@@ -718,7 +717,7 @@ function AtlasLoot:Search(Text)
     -- Decide if we need load all modules or just specified ones
     local allDisabled = not self.db.profile.SearchOn.All
     if allDisabled then
-        for _, module in ipairs(modules) do
+        for _, module in ipairs(AtlasLoot.modules) do
             if self.db.profile.SearchOn[module] == true then
                 allDisabled = false
                 break
@@ -769,7 +768,7 @@ function AtlasLoot:ShowSearchOptions(button)
                             AL["If checked, AtlasLoot will load and search across all the modules."], "func", function()
                 self.db.profile.SearchOn.All = not self.db.profile.SearchOn.All
             end)
-            for _, module in ipairs(modules) do
+            for _, module in ipairs(AtlasLoot.modules) do
                 if IsAddOnLoadOnDemand(module) then
                     local title = GetAddOnMetadata(module, "title")
                     local notes = GetAddOnMetadata(module, "notes")

@@ -4675,124 +4675,220 @@ AtlasLoot_Data["T3"] = {
 	Name = "Tier 3";
 	Type = "ClassicRaid";
 	{
-		Name = AL["Druid"];
-		[1] = { itemID = 22490, "=q4=Dreamwalker Headpiece" };
-		[2] = { itemID = 22491, "=q4=Dreamwalker Spaulders" };
-		[3] = { itemID = 22488, "=q4=Dreamwalker Tunic" };
-		[4] = { itemID = 22495, "=q4=Dreamwalker Wristguards" };
-		[5] = { itemID = 22493, "=q4=Dreamwalker Handguards" };
-		[6] = { itemID = 22494, "=q4=Dreamwalker Girdle" };
-		[7] = { itemID = 22489, "=q4=Dreamwalker Legguards" };
-		[8] = { itemID = 22492, "=q4=Dreamwalker Boots" };
-		[9] = { itemID = 23064, "=q4=Ring of the Dreamwalker" };
+		Name = AL["Druid"] .. " - Healing";
+		[1] = { itemID = 22490 }; --Dreamwalker Headpiece
+		[2] = { itemID = 22491 }; --Dreamwalker Spaulders
+		[3] = { itemID = 22488 }; --Dreamwalker Tunic
+		[4] = { itemID = 22495 }; --Dreamwalker Wristguards
+		[5] = { itemID = 22493 }; --Dreamwalker Handguards
+		[6] = { itemID = 22494 }; --Dreamwalker Girdle
+		[7] = { itemID = 22489 }; --Dreamwalker Legguards
+		[8] = { itemID = 22492 }; --Dreamwalker Boots
+		[9] = { itemID = 23064 }; --Ring of the Dreamwalker
+	};
+	{
+		Name = AL["Druid"] .. " - Haste";
+		[1] = { itemID = 1522490 }; --Dreamwalker Headpiece
+		[2] = { itemID = 1522491 }; --Dreamwalker Spaulders
+		[3] = { itemID = 1522488 }; --Dreamwalker Tunic
+		[4] = { itemID = 1522495 }; --Dreamwalker Wristguards
+		[5] = { itemID = 1522493 }; --Dreamwalker Handguards
+		[6] = { itemID = 1522494 }; --Dreamwalker Girdle
+		[7] = { itemID = 1522489 }; --Dreamwalker Legguards
+		[8] = { itemID = 1522492 }; --Dreamwalker Boots
+		[9] = { itemID = 1523064 }; --Ring of the Dreamwalker
+	};
+	{
+		Name = AL["Druid"] .. " - Feral Dps";
+		[1] = { itemID = 1532490 }; --Dreamwalker Headpiece
+		[2] = { itemID = 1532491 }; --Dreamwalker Spaulders
+		[3] = { itemID = 1532488 }; --Dreamwalker Tunic
+		[4] = { itemID = 1532495 }; --Dreamwalker Wristguards
+		[5] = { itemID = 1532493 }; --Dreamwalker Handguards
+		[6] = { itemID = 1532494 }; --Dreamwalker Girdle
+		[7] = { itemID = 1532489 }; --Dreamwalker Legguards
+		[8] = { itemID = 1532492 }; --Dreamwalker Boots
+		[9] = { itemID = 1533064 }; --Ring of the Dreamwalker
+	};
+	{
+		Name = AL["Druid"] .. " - Tank";
+		[1] = { itemID = 1507037 }; --Dreamwalker Headpiece
+		[2] = { itemID = 1507038 }; --Dreamwalker Spaulders
+		[3] = { itemID = 1507035 }; --Dreamwalker Tunic
+		[4] = { itemID = 1507042 }; --Dreamwalker Wristguards
+		[5] = { itemID = 1507040 }; --Dreamwalker Handguards
+		[6] = { itemID = 1507041 }; --Dreamwalker Girdle
+		[7] = { itemID = 1507036 }; --Dreamwalker Legguards
+		[8] = { itemID = 1507039 }; --Dreamwalker Boots
+		[9] = { itemID = 1507043 }; --Ring of the Dreamwalker
 	};
 	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["HUNTER"];
-		[1] = { itemID = 22438, "=q4=Cryptstalker Headpiece" };
-		[2] = { itemID = 22439, "=q4=Cryptstalker Spaulders" };
-		[3] = { itemID = 22436, "=q4=Cryptstalker Tunic" };
-		[4] = { itemID = 22443, "=q4=Cryptstalker Wristguards" };
-		[5] = { itemID = 22441, "=q4=Cryptstalker Handguards" };
-		[6] = { itemID = 22442, "=q4=Cryptstalker Girdle" };
-		[7] = { itemID = 22437, "=q4=Cryptstalker Legguards" };
-		[8] = { itemID = 22440, "=q4=Cryptstalker Boots" };
-		[9] = { itemID = 23067, "=q4=Ring of the Cryptstalker" };
+		[1] = { itemID = 22438 }; --Cryptstalker Headpiece
+		[2] = { itemID = 22439 }; --Cryptstalker Spaulders
+		[3] = { itemID = 22436 }; --Cryptstalker Tunic
+		[4] = { itemID = 22443 }; --Cryptstalker Wristguards
+		[5] = { itemID = 22441 }; --Cryptstalker Handguards
+		[6] = { itemID = 22442 }; --Cryptstalker Girdle
+		[7] = { itemID = 22437 }; --Cryptstalker Legguards
+		[8] = { itemID = 22440 }; --Cryptstalker Boots
+		[9] = { itemID = 23067 }; --Ring of the Cryptstalker
 	};
 	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["MAGE"];
-		[1] = { itemID = 22498, "=q4=Frostfire Circlet" };
-		[2] = { itemID = 22499, "=q4=Frostfire Shoulderpads" };
-		[3] = { itemID = 22496, "=q4=Frostfire Robe" };
-		[4] = { itemID = 22503, "=q4=Frostfire Bindings" };
-		[5] = { itemID = 22501, "=q4=Frostfire Gloves" };
-		[6] = { itemID = 22502, "=q4=Frostfire Belt" };
-		[7] = { itemID = 22497, "=q4=Frostfire Leggings" };
-		[8] = { itemID = 22500, "=q4=Frostfire Sandals" };
-		[9] = { itemID = 23062, "=q4=Frostfire Ring" };
+		[1] = { itemID = 22498 }; --Frostfire Circlet
+		[2] = { itemID = 22499 }; --Frostfire Shoulderpads
+		[3] = { itemID = 22496 }; --Frostfire Robe
+		[4] = { itemID = 22503 }; --Frostfire Bindings
+		[5] = { itemID = 22501 }; --Frostfire Gloves
+		[6] = { itemID = 22502 }; --Frostfire Belt
+		[7] = { itemID = 22497 }; --Frostfire Leggings
+		[8] = { itemID = 22500 }; --Frostfire Sandals
+		[9] = { itemID = 23062 }; --Frostfire Ring
 	};
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"];
-		[1] = { itemID = 22428, "=q4=Redemption Headpiece" };
-		[2] = { itemID = 22429, "=q4=Redemption Spaulders" };
-		[3] = { itemID = 22425, "=q4=Redemption Tunic" };
-		[4] = { itemID = 22424, "=q4=Redemption Wristguards" };
-		[5] = { itemID = 22426, "=q4=Redemption Handguards" };
-		[6] = { itemID = 22431, "=q4=Redemption Girdle" };
-		[7] = { itemID = 22427, "=q4=Redemption Legguards" };
-		[8] = { itemID = 22430, "=q4=Redemption Boots" };
-		[9] = { itemID = 23066, "=q4=Ring of Redemption" };
+		Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"] .. " - Healing";
+		[1] = { itemID = 22428 }; --Redemption Headpiece
+		[2] = { itemID = 22429 }; --Redemption Spaulders
+		[3] = { itemID = 22425 }; --Redemption Tunic
+		[4] = { itemID = 22424 }; --Redemption Wristguards
+		[5] = { itemID = 22426 }; --Redemption Handguards
+		[6] = { itemID = 22431 }; --Redemption Girdle
+		[7] = { itemID = 22427 }; --Redemption Legguards
+		[8] = { itemID = 22430 }; --Redemption Boots
+		[9] = { itemID = 23066 }; --Ring of Redemption
 	};
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["PRIEST"];
-		[1] = { itemID = 22514, "=q4=Circlet of Faith" };
-		[2] = { itemID = 22515, "=q4=Shoulderpads of Faith" };
-		[3] = { itemID = 22512, "=q4=Robe of Faith" };
-		[4] = { itemID = 22519, "=q4=Bindings of Faith" };
-		[5] = { itemID = 22517, "=q4=Gloves of Faith" };
-		[6] = { itemID = 22518, "=q4=Belt of Faith" };
-		[7] = { itemID = 22513, "=q4=Leggings of Faith" };
-		[8] = { itemID = 22516, "=q4=Sandals of Faith" };
-		[9] = { itemID = 23061, "=q4=Ring of Faith" };
+		Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"] .. " - Dps";
+		[1] = { itemID = 1532428 }; --Redemption Headpiece
+		[2] = { itemID = 1532429 }; --Redemption Spaulders
+		[3] = { itemID = 1532425 }; --Redemption Tunic
+		[4] = { itemID = 1532424 }; --Redemption Wristguards
+		[5] = { itemID = 1532426 }; --Redemption Handguards
+		[6] = { itemID = 1532431 }; --Redemption Girdle
+		[7] = { itemID = 1532427 }; --Redemption Legguards
+		[8] = { itemID = 1532430 }; --Redemption Boots
+		[9] = { itemID = 1533066 }; --Ring of Redemption
+	};
+	{
+		Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"] .. " - Tank";
+		[1] = { itemID = 1522428 }; --Redemption Headpiece
+		[2] = { itemID = 1522429 }; --Redemption Spaulders
+		[3] = { itemID = 1522425 }; --Redemption Tunic
+		[4] = { itemID = 1522424 }; --Redemption Wristguards
+		[5] = { itemID = 1522426 }; --Redemption Handguards
+		[6] = { itemID = 1522431 }; --Redemption Girdle
+		[7] = { itemID = 1522427 }; --Redemption Legguards
+		[8] = { itemID = 1522430 }; --Redemption Boots
+		[9] = { itemID = 1523066 }; --Ring of Redemption
+	};
+	{
+		Name = LOCALIZED_CLASS_NAMES_MALE["PRIEST"] .. " - Healing";
+		[1] = { itemID = 22514 }; --Circlet of Faith
+		[2] = { itemID = 22515 }; --Shoulderpads of Faith
+		[3] = { itemID = 22512 }; --Robe of Faith
+		[4] = { itemID = 22519 }; --Bindings of Faith
+		[5] = { itemID = 22517 }; --Gloves of Faith
+		[6] = { itemID = 22518 }; --Belt of Faith
+		[7] = { itemID = 22513 }; --Leggings of Faith
+		[8] = { itemID = 22516 }; --Sandals of Faith
+		[9] = { itemID = 23061 }; --Ring of Faith
+	};
+	{
+		Name = LOCALIZED_CLASS_NAMES_MALE["PRIEST"] .. " - Dps";
+		[1] = { itemID = 1522514 }; --Circlet of Faith
+		[2] = { itemID = 1522515 }; --Shoulderpads of Faith
+		[3] = { itemID = 1522512 }; --Robe of Faith
+		[4] = { itemID = 1522519 }; --Bindings of Faith
+		[5] = { itemID = 1522517 }; --Gloves of Faith
+		[6] = { itemID = 1522518 }; --Belt of Faith
+		[7] = { itemID = 1522513 }; --Leggings of Faith
+		[8] = { itemID = 1522516 }; --Sandals of Faith
+		[9] = { itemID = 1523061 }; --Ring of Faith
 	};
 	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["ROGUE"];
-		[1] = { itemID = 22478, "=q4=Bonescythe Helmet" };
-		[2] = { itemID = 22479, "=q4=Bonescythe Pauldrons" };
-		[3] = { itemID = 22476, "=q4=Bonescythe Breastplate" };
-		[4] = { itemID = 22483, "=q4=Bonescythe Bracers" };
-		[5] = { itemID = 22481, "=q4=Bonescythe Gauntlets" };
-		[6] = { itemID = 22482, "=q4=Bonescythe Waistguard" };
-		[7] = { itemID = 22477, "=q4=Bonescythe Legplates" };
-		[8] = { itemID = 22480, "=q4=Bonescythe Sabatons" };
-		[9] = { itemID = 23060, "=q4=Bonescythe Ring" };
+		[1] = { itemID = 22478 }; --Bonescythe Helmet
+		[2] = { itemID = 22479 }; --Bonescythe Pauldrons
+		[3] = { itemID = 22476 }; --Bonescythe Breastplate
+		[4] = { itemID = 22483 }; --Bonescythe Bracers
+		[5] = { itemID = 22481 }; --Bonescythe Gauntlets
+		[6] = { itemID = 22482 }; --Bonescythe Waistguard
+		[7] = { itemID = 22477 }; --Bonescythe Legplates
+		[8] = { itemID = 22480 }; --Bonescythe Sabatons
+		[9] = { itemID = 23060 }; --Bonescythe Ring
 	};
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"];
-		[1] = { itemID = 22466, "=q4=Earthshatter Headpiece" };
-		[2] = { itemID = 22467, "=q4=Earthshatter Spaulders" };
-		[3] = { itemID = 22464, "=q4=Earthshatter Tunic" };
-		[4] = { itemID = 22471, "=q4=Earthshatter Wristguards" };
-		[5] = { itemID = 22469, "=q4=Earthshatter Handguards" };
-		[6] = { itemID = 22470, "=q4=Earthshatter Girdle" };
-		[7] = { itemID = 22465, "=q4=Earthshatter Legguards" };
-		[8] = { itemID = 22468, "=q4=Earthshatter Boots" };
-		[9] = { itemID = 23065, "=q4=Ring of the Earthshatterer" };
+		Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"] .. " - Hybrid";
+		[1] = { itemID = 22466 }; --Earthshatter Headpiece
+		[2] = { itemID = 22467 }; --Earthshatter Spaulders
+		[3] = { itemID = 22464 }; --Earthshatter Tunic
+		[4] = { itemID = 22471 }; --Earthshatter Wristguards
+		[5] = { itemID = 22469 }; --Earthshatter Handguards
+		[6] = { itemID = 22470 }; --Earthshatter Girdle
+		[7] = { itemID = 22465 }; --Earthshatter Legguards
+		[8] = { itemID = 22468 }; --Earthshatter Boots
+		[9] = { itemID = 23065 }; --Ring of the Earthshatterer
+	};
+	{
+		Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"] .. " - Spell";
+		[1] = { itemID = 1522466 }; --Earthshatter Headpiece
+		[2] = { itemID = 1522467 }; --Earthshatter Spaulders
+		[3] = { itemID = 1522464 }; --Earthshatter Tunic
+		[4] = { itemID = 1522471 }; --Earthshatter Wristguards
+		[5] = { itemID = 1522469 }; --Earthshatter Handguards
+		[6] = { itemID = 1522470 }; --Earthshatter Girdle
+		[7] = { itemID = 1522465 }; --Earthshatter Legguards
+		[8] = { itemID = 1522468 }; --Earthshatter Boots
+		[9] = { itemID = 1523065 }; --Ring of the Earthshatterer
 	};
 	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["WARLOCK"];
-		[1] = { itemID = 22506, "=q4=Plagueheart Circlet" };
-		[2] = { itemID = 22507, "=q4=Plagueheart Shoulderpads" };
-		[3] = { itemID = 22504, "=q4=Plagueheart Robe" };
-		[4] = { itemID = 22511, "=q4=Plagueheart Bindings" };
-		[5] = { itemID = 22509, "=q4=Plagueheart Gloves" };
-		[6] = { itemID = 22510, "=q4=Plagueheart Belt" };
-		[7] = { itemID = 22505, "=q4=Plagueheart Leggings" };
-		[8] = { itemID = 22508, "=q4=Plagueheart Sandals" };
-		[9] = { itemID = 23063, "=q4=Plagueheart Ring" };
+		[1] = { itemID = 22506 }; --Plagueheart Circlet
+		[2] = { itemID = 22507 }; --Plagueheart Shoulderpads
+		[3] = { itemID = 22504 }; --Plagueheart Robe
+		[4] = { itemID = 22511 }; --Plagueheart Bindings
+		[5] = { itemID = 22509 }; --Plagueheart Gloves
+		[6] = { itemID = 22510 }; --Plagueheart Belt
+		[7] = { itemID = 22505 }; --Plagueheart Leggings
+		[8] = { itemID = 22508 }; --Plagueheart Sandals
+		[9] = { itemID = 23063 }; --Plagueheart Ring
 	};
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"] .. " - Tank";
-		[1] = { itemID = 22418, "=q4=Dreadnaught Helmet" };
-		[2] = { itemID = 22419, "=q4=Dreadnaught Pauldrons" };
-		[3] = { itemID = 22416, "=q4=Dreadnaught Breastplate" };
-		[4] = { itemID = 22423, "=q4=Dreadnaught Bracers" };
-		[5] = { itemID = 22421, "=q4=Dreadnaught Gauntlets" };
-		[6] = { itemID = 22422, "=q4=Dreadnaught Waistguard" };
-		[7] = { itemID = 22417, "=q4=Dreadnaught Legplates" };
-		[8] = { itemID = 22420, "=q4=Dreadnaught Sabatons" };
-		[9] = { itemID = 23059, "=q4=Ring of the Dreadnaught" };
+		Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"] .. " - Block Tank";
+		[1] = { itemID = 22418 }; --Dreadnaught Helmet
+		[2] = { itemID = 22419 }; --Dreadnaught Pauldrons
+		[3] = { itemID = 22416 }; --Dreadnaught Breastplate
+		[4] = { itemID = 22423 }; --Dreadnaught Bracers
+		[5] = { itemID = 22421 }; --Dreadnaught Gauntlets
+		[6] = { itemID = 22422 }; --Dreadnaught Waistguard
+		[7] = { itemID = 22417 }; --Dreadnaught Legplates
+		[8] = { itemID = 22420 }; --Dreadnaught Sabatons
+		[9] = { itemID = 23059 }; --Ring of the Dreadnaught
+	};
+	{
+		Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"] .. " - Parry Tank";
+		[1] = { itemID = 1522418 }; --Dreadnaught Helmet
+		[2] = { itemID = 1522419 }; --Dreadnaught Pauldrons
+		[3] = { itemID = 1522416 }; --Dreadnaught Breastplate
+		[4] = { itemID = 1522423 }; --Dreadnaught Bracers
+		[5] = { itemID = 1522421 }; --Dreadnaught Gauntlets
+		[6] = { itemID = 1522422 }; --Dreadnaught Waistguard
+		[7] = { itemID = 1522417 }; --Dreadnaught Legplates
+		[8] = { itemID = 1522420 }; --Dreadnaught Sabatons
+		[9] = { itemID = 1523059 }; --Ring of the Dreadnaught
 	};
 	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"] .. " - DPS";
-		[1] = { itemID = 10490, "=q4=Dreadborne Helmet" };
-		[2] = { itemID = 10491, "=q4=Dreadborne Pauldrons" };
-		[3] = { itemID = 10488, "=q4=Dreadborne Breastplate" };
-		[4] = { itemID = 10495, "=q4=Dreadborne Bracers" };
-		[5] = { itemID = 10493, "=q4=Dreadborne Gauntlets" };
-		[6] = { itemID = 10494, "=q4=Dreadborne Waistguard" };
-		[7] = { itemID = 10489, "=q4=Dreadborne Legplates" };
-		[8] = { itemID = 10492, "=q4=Dreadborne Sabatons" };
-		[9] = { itemID = 10496, "=q4=Dreadborne Ring" };
+		[1] = { itemID = 10490 }; --Dreadborne Helmet
+		[2] = { itemID = 10491 }; --Dreadborne Pauldrons
+		[3] = { itemID = 10488 }; --Dreadborne Breastplate
+		[4] = { itemID = 10495 }; --Dreadborne Bracers
+		[5] = { itemID = 10493 }; --Dreadborne Gauntlets
+		[6] = { itemID = 10494 }; --Dreadborne Waistguard
+		[7] = { itemID = 10489 }; --Dreadborne Legplates
+		[8] = { itemID = 10492 }; --Dreadborne Sabatons
+		[9] = { itemID = 10496 }; --Dreadborne Ring
 	};
 };
 
