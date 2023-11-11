@@ -4819,7 +4819,7 @@ AtlasLoot_Data["T3"] = {
 		[9] = { itemID = 23060 }; --Bonescythe Ring
 	};
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"] .. " - Hybrid";
+		Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"] .. " - Enhancement";
 		[1] = { itemID = 22466 }; --Earthshatter Headpiece
 		[2] = { itemID = 22467 }; --Earthshatter Spaulders
 		[3] = { itemID = 22464 }; --Earthshatter Tunic

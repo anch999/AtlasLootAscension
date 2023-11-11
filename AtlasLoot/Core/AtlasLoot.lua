@@ -440,6 +440,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 
 	local isValid, toShow, itemID, recipeID
 	SearchPrevData = {dataID, dataSource_backup, tablenum}
+	AtlasLoot.vanityItems = {}
 
     --If the loot table name has not been passed, throw up a debugging statement
 	if dataID == nil then
@@ -645,6 +646,9 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 			elseif C_VanityCollection.IsCollectionItemOwned(itemID) then
 				hightlightFrame:SetTexture(itemHighlightBlue)
 				hightlightFrame:Show()
+				if dataSource_backup == "AtlasLoot_CurrentWishList" or (VANITY_ITEMS[itemID] and VANITY_ITEMS[itemID].learnedSpell ~= 0 and not CA_IsSpellKnown(VANITY_ITEMS[itemID].learnedSpell)) then
+					tinsert(AtlasLoot.vanityItems, itemID)
+				end
 			end
 		else
 			if dataSource[dataID][tablenum][i].name then
@@ -655,8 +659,6 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 				text = ""
 			end
 		end
-
-
 
 		itemButton.name = text
 
@@ -893,6 +895,8 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 		_G["AtlasLootItemsFrame_Wishlist_Share"]:Hide()
 		_G["AtlasLootItemsFrame_Wishlist_Swap"]:Hide()
 		_G["AtlasLootItemsFrame_Wishlist_UnLock"]:Hide()
+		_G["AtlasLootItemsFrame_Wishlist_Vanity_Learn"]:Hide()
+		_G["AtlasLootItemsFrame_Spell_Vanity_Learn"]:Hide()
 
 		-- Show Wishlist buttons when a wishlist in showing
 		if dataSource_backup == "AtlasLoot_CurrentWishList" then
@@ -900,11 +904,16 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 			_G["AtlasLootItemsFrame_Wishlist_Share"]:Show()
 			_G["AtlasLootItemsFrame_Wishlist_Swap"]:Show()
 			_G["AtlasLootItemsFrame_Wishlist_UnLock"]:Show()
+			_G["AtlasLootItemsFrame_Wishlist_Vanity_Learn"]:Show()
 			if dataSource[dataID].ListType == "Shared" then
 				AtlasLootItemsFrame_Wishlist_Swap:SetText("Own")
 			elseif dataSource[dataID].ListType == "Own" then
 				AtlasLootItemsFrame_Wishlist_Swap:SetText("Shared")
 			end
+		end
+
+		if dataSource[dataID].vanity then
+			_G["AtlasLootItemsFrame_Spell_Vanity_Learn"]:Show()
 		end
 
 		local tablebase = {dataID, dataSource_backup}
@@ -1242,13 +1251,13 @@ function AtlasLoot:CreateVanityCollection()
 		for cat,v in pairs(Enum.VanityCategory) do
 			if type(v) == "table" then
 				for catT, t in pairs(v) do
-					if not AtlasLoot_Data[catT] then AtlasLoot_Data[catT] = { Name = CollectionNames[catT] } end
+					if not AtlasLoot_Data[catT] then AtlasLoot_Data[catT] = { Name = CollectionNames[catT], vanity = true } end
 					if bit.contains(group, t) then
 						return catT
 					end
 				end
 			else
-				if not AtlasLoot_Data[cat] then AtlasLoot_Data[cat] = { Name = CollectionNames[cat] } end
+				if not AtlasLoot_Data[cat] then AtlasLoot_Data[cat] = { Name = CollectionNames[cat], vanity = true } end
 				if bit.contains(group, v) then
 					return cat
 				end

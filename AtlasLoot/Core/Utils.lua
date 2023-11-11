@@ -427,3 +427,15 @@ function AtlasLoot:ItemsLoading(count)
         AtlasLoot_ItemsLoading:Hide()
 	end
 end
+
+function AtlasLoot:BatchRequestVanity(itemList)
+	itemList = AtlasLoot:CloneTable(itemList)
+	  local function nextItem()
+        local task = tremove(itemList)
+		while task do
+            RequestDeliverVanityCollectionItem(task)
+            return Timer.After(1, nextItem)
+        end
+    end
+    return nextItem()
+end

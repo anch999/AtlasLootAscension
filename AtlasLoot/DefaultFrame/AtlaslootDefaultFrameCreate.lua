@@ -154,14 +154,29 @@ local prevbtn = CreateFrame("Button", "AtlasLootItemsFrame_PREV", AtlasLootItems
 
         -- Back button
 local backbtn = CreateFrame("Button", "AtlasLootItemsFrame_BACK", AtlasLootItemsFrame, "OptionsButtonTemplate")
-        backbtn:SetPoint("BOTTOM", "AtlasLootItemsFrame", "BOTTOM",0,4)
+        backbtn:SetPoint("BOTTOM", "AtlasLootItemsFrame", "BOTTOM",0,5)
         backbtn:SetText(AL["Back"])
         backbtn:SetScript("OnClick", function(self) AtlasLoot:BackButton_OnClick() end)
         backbtn:Hide()
 
+    -- Learn Unknown vanity spells button
+local learnSpellbtn = CreateFrame("Button", "AtlasLootItemsFrame_Spell_Vanity_Learn", AtlasLootItemsFrame, "OptionsButtonTemplate")
+    learnSpellbtn:SetPoint("BOTTOM", "AtlasLootItemsFrame", "BOTTOM",0,5)
+    learnSpellbtn:SetText("Learn Unknown")
+    learnSpellbtn:SetWidth(150)
+    learnSpellbtn:SetScript("OnClick", function() AtlasLoot:BatchRequestVanity(AtlasLoot.vanityItems) end)
+    learnSpellbtn:SetScript("OnEnter", function(self)
+        GameTooltip:ClearLines()
+        GameTooltip:SetOwner(self, "ANCHOR_RIGHT", -(self:GetWidth() / 2), 5)
+        GameTooltip:AddLine("Learn all the vanity items on this page")
+        GameTooltip:Show()
+    end)
+    learnSpellbtn:SetScript("OnLeave", function() GameTooltip:Hide() end)
+    learnSpellbtn:Hide()
+
         -- Wishlist Own/Swap button
 local swapbtn = CreateFrame("Button", "AtlasLootItemsFrame_Wishlist_Swap", AtlasLootItemsFrame, "OptionsButtonTemplate")
-        swapbtn:SetPoint("BOTTOM", "AtlasLootItemsFrame", "BOTTOM",50,4)
+        swapbtn:SetPoint("BOTTOM", "AtlasLootItemsFrame", "BOTTOM",0,5)
         swapbtn:SetScript("OnClick", function(self) AtlasLoot:WishListSwapButton(true) end)
         swapbtn:Hide()
 
@@ -193,11 +208,7 @@ local lockbtn = CreateFrame("Button", "AtlasLootItemsFrame_Wishlist_UnLock", Atl
             GameTooltip:AddLine("Alt + Left Click to add a Custom Header")
             GameTooltip:Show()
         end)
-        lockbtn:SetScript("OnLeave", function()
-        if(GameTooltip:IsVisible()) then
-            GameTooltip:Hide()
-        end
-        end)
+        lockbtn:SetScript("OnLeave", function() GameTooltip:Hide() end)
         lockbtn:SetText("Locked")
         lockbtn:Hide()
 
@@ -207,6 +218,20 @@ local sharebtn = CreateFrame("Button", "AtlasLootItemsFrame_Wishlist_Share", Atl
         sharebtn:SetText(AL["Share"])
         sharebtn:SetScript("OnClick", function() AtlasLoot:ShareWishList() end)
         sharebtn:Hide()
+
+    -- Wishlist Share button
+local learnbtn = CreateFrame("Button", "AtlasLootItemsFrame_Wishlist_Vanity_Learn", AtlasLootItemsFrame, "OptionsButtonTemplate")
+    learnbtn:SetPoint("BOTTOM", "AtlasLootItemsFrame_Wishlist_Share", "BOTTOM",100,0)
+    learnbtn:SetText("Get Items")
+    learnbtn:SetScript("OnClick", function() AtlasLoot:BatchRequestVanity(AtlasLoot.vanityItems) end)
+    learnbtn:SetScript("OnEnter", function(self)
+        GameTooltip:ClearLines()
+        GameTooltip:SetOwner(self, "ANCHOR_RIGHT", -(self:GetWidth() / 2), 5)
+        GameTooltip:AddLine("Learn/Recive all the vanity items on this page")
+        GameTooltip:Show()
+    end)
+    learnbtn:SetScript("OnLeave", function() GameTooltip:Hide() end)
+    learnbtn:Hide()
         
         -- Filter Button
 local filterbtn = CreateFrame("CheckButton","AtlasLootFilterCheck",AtlasLootItemsFrame,"OptionsCheckButtonTemplate")
