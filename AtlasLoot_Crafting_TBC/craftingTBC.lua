@@ -1,15 +1,6 @@
 local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot");
-local BabbleBoss = AtlasLoot_GetLocaleLibBabble("LibBabble-Boss-3.0")
 local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0")
-local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
-local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 local WHITE = "|cffFFFFFF";
-
-local APPRENTICE = select(2, GetSpellInfo(2259));
-local JOURNEYMAN = select(2, GetSpellInfo(3101));
-local EXPERT = select(2, GetSpellInfo(3464));
-local ARTISAN = select(2, GetSpellInfo(11611));
-local MASTER = select(2, GetSpellInfo(28596));
 
 local ALCHEMY = GetSpellInfo(2259);
 local BLACKSMITHING = GetSpellInfo(2018);
@@ -24,8 +15,6 @@ local ENGINEERING = GetSpellInfo(4036);
 local GNOMISH = GetSpellInfo(20220);
 local GOBLIN = GetSpellInfo(20221);
 local FIRSTAID = GetSpellInfo(3273);
-local FISHING = GetSpellInfo(63275);
-local INSCRIPTION = GetSpellInfo(45357);
 local JEWELCRAFTING = GetSpellInfo(25229);
 local LEATHERWORKING = GetSpellInfo(2108);
 local DRAGONSCALE = GetSpellInfo(10656);

@@ -1,8 +1,5 @@
 local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot");
-local BabbleBoss = AtlasLoot_GetLocaleLibBabble("LibBabble-Boss-3.0")
 local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0")
-local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
-local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 local WHITE = "|cffFFFFFF";
 
 local ALCHEMY = GetSpellInfo(2259);
@@ -18,25 +15,11 @@ local ENGINEERING = GetSpellInfo(4036);
 local GNOMISH = GetSpellInfo(20220);
 local GOBLIN = GetSpellInfo(20221);
 local FIRSTAID = GetSpellInfo(3273);
-local FISHING = GetSpellInfo(63275);
 local INSCRIPTION = GetSpellInfo(45357);
 local JEWELCRAFTING = GetSpellInfo(25229);
 local LEATHERWORKING = GetSpellInfo(2108);
-local DRAGONSCALE = GetSpellInfo(10656);
-local ELEMENTAL = GetSpellInfo(10658);
-local TRIBAL = GetSpellInfo(10660);
 local MINING = GetSpellInfo(2575);
 local TAILORING = GetSpellInfo(3908);
-local MOONCLOTH = GetSpellInfo(26798);
-local SHADOWEAVE = GetSpellInfo(26801);
-local SPELLFIRE = GetSpellInfo(26797);
-
-
-local APPRENTICE = select(2, GetSpellInfo(2259));
-local JOURNEYMAN = select(2, GetSpellInfo(3101));
-local EXPERT = select(2, GetSpellInfo(3464));
-local ARTISAN = select(2, GetSpellInfo(11611));
-local MASTER = select(2, GetSpellInfo(28596));
 
 -- Index
 --- Tradeskill List
@@ -707,6 +690,529 @@ AtlasLoot_Data["EngineeringWRATH"] = {
 		[19] = {itemID = 10644, spellID = 12715 }; --Goblin Rocket Fuel Recipe
 		[20] = {itemID = 10646, spellID = 12760 }; --Goblin Sapper Charge
 		[21] = {itemID = 10577, spellID = 13240 }; --The Mortar: Reloaded
+	};
+};
+
+-------------------
+--- Inscription ---
+-------------------
+
+AtlasLoot_Data["Inscription"] = {
+	Name = INSCRIPTION;
+	Type = "Crafting";
+	{
+		Name = AL["Off-Hand Items"];
+		[1] = {itemID = 44210, spellID = 59498 }; --Faces of Doom
+		[2] = {itemID = 38322, spellID = 59497 }; --Iron-bound Tome
+		[3] = {itemID = 45854, spellID = 64051 }; --Rituals of the New Moon
+		[4] = {itemID = 45849, spellID = 64053 }; --Twilight Tome
+		[5] = {itemID = 43667, spellID = 59496 }; --Book of Clever Tricks
+		[6] = {itemID = 43666, spellID = 59495 }; --Hellfire Tome
+		[7] = {itemID = 43664, spellID = 59494 }; --Manual of Clouds
+		[8] = {itemID = 43663, spellID = 59493 }; --Stormbound Tome
+		[9] = {itemID = 43661, spellID = 59490 }; --Book of Stars
+		[10] = {itemID = 43660, spellID = 59489 }; --Fire Eater's Guide
+		[11] = {itemID = 43657, spellID = 59486 }; --Royal Guide of Escape Routes
+		[12] = {itemID = 43656, spellID = 59484 }; --Tome of Kings
+		[13] = {itemID = 43655, spellID = 59478 }; --Book of Survival
+		[14] = {itemID = 43654, spellID = 59475 }; --Tome of the Dawn
+		[15] = {itemID = 43515, spellID = 58565 }; --Mystic Tome
+	};
+	{
+		Name = AL["Reagents"];
+		[1] = {itemID = 43127, spellID = 57716 }; --Snowfall Ink
+		[2] = {itemID = 43125, spellID = 57714 }; --Darkflame Ink
+		[3] = {itemID = 43123, spellID = 57712 }; --Ink of the Sky
+		[4] = {itemID = 43121, spellID = 57710 }; --Fiery Ink
+		[5] = {itemID = 43119, spellID = 57708 }; --Royal Ink
+		[6] = {itemID = 43117, spellID = 57706 }; --Dawnstar Ink
+		[7] = {itemID = 43115, spellID = 57703 }; --Hunter's Ink
+		[8] = {itemID = 43126, spellID = 57715 }; --Ink of the Sea
+		[9] = {itemID = 43124, spellID = 57713 }; --Ethereal Ink
+		[10] = {itemID = 43122, spellID = 57711 }; --Shimmering Ink
+		[11] = {itemID = 43120, spellID = 57709 }; --Celestial Ink
+		[12] = {itemID = 43118, spellID = 57707 }; --Jadefire Ink
+		[13] = {itemID = 43116, spellID = 57704 }; --Lion's Ink
+		[14] = {itemID = 39774, spellID = 53462 }; --Midnight Ink
+		[15] = {itemID = 39469, spellID = 52843 }; --Moonglow Ink
+		[16] = {itemID = 37101, spellID = 52738 }; --Ivory Ink
+	};
+	{
+		Name = AL["Scrolls"];
+		[1] = {itemID = 49632, spellID = 69385 }; --Runescroll of Fortitude
+		[3] = {itemID = 44315, spellID = 60337 }; --Scroll of Recall III
+		[4] = {itemID = 44314, spellID = 60336 }; --Scroll of Recall II
+		[5] = {itemID = 37118, spellID = 48248 }; --Scroll of Recall
+		[6] = {itemID = 3012, spellID = 58483 }; --Scroll of Agility VIII
+		[7] = {itemID = 3012, spellID = 58482 }; --Scroll of Agility VII
+		[8] = {itemID = 3012, spellID = 58481 }; --Scroll of Agility VI
+		[9] = {itemID = 3012, spellID = 58480 }; --Scroll of Agility V
+		[10] = {itemID = 3012, spellID = 58478 }; --Scroll of Agility IV
+		[11] = {itemID = 3012, spellID = 58476 }; --Scroll of Agility III
+		[12] = {itemID = 3012, spellID = 58473 }; --Scroll of Agility II
+		[13] = {itemID = 3012, spellID = 58472 }; --Scroll of Agility
+		[14] = {itemID = 955, spellID = 50604 }; --Scroll of Intellect VIII
+		[15] = {itemID = 955, spellID = 50603 }; --Scroll of Intellect VII
+		[16] = {itemID = 955, spellID = 50602 }; --Scroll of Intellect VI
+		[17] = {itemID = 955, spellID = 50601 }; --Scroll of Intellect V
+		[18] = {itemID = 955, spellID = 50600 }; --Scroll of Intellect IV
+		[19] = {itemID = 955, spellID = 50599 }; --Scroll of Intellect III
+		[20] = {itemID = 955, spellID = 50598 }; --Scroll of Intellect II
+		[21] = {itemID = 955, spellID = 48114 }; --Scroll of Intellect
+		[23] = {itemID = 955, spellID = 50611 }; --Scroll of Spirit VIII
+		[24] = {itemID = 955, spellID = 50610 }; --Scroll of Spirit VII
+		[25] = {itemID = 955, spellID = 50609 }; --Scroll of Spirit VI
+		[26] = {itemID = 955, spellID = 50608 }; --Scroll of Spirit V
+		[27] = {itemID = 955, spellID = 50607 }; --Scroll of Spirit IV
+		[28] = {itemID = 955, spellID = 50606 }; --Scroll of Spirit III
+		[29] = {itemID = 955, spellID = 50605 }; --Scroll of Spirit II
+		[30] = {itemID = 955, spellID = 48116 }; --Scroll of Spirit
+	};
+	{
+		Name = AL["Scrolls"];
+		[1] = {itemID = 1180, spellID = 50620 }; --Scroll of Stamina VIII
+		[2] = {itemID = 1180, spellID = 50619 }; --Scroll of Stamina VII
+		[3] = {itemID = 1180, spellID = 50618 }; --Scroll of Stamina VI
+		[4] = {itemID = 1180, spellID = 50617 }; --Scroll of Stamina V
+		[5] = {itemID = 1180, spellID = 50616 }; --Scroll of Stamina IV
+		[6] = {itemID = 1180, spellID = 50614 }; --Scroll of Stamina III
+		[7] = {itemID = 1180, spellID = 50612 }; --Scroll of Stamina II
+		[8] = {itemID = 1180, spellID = 45382 }; --Scroll of Stamina
+		[16] = {itemID = 3012, spellID = 58491 }; --Scroll of Strength VIII
+		[17] = {itemID = 3012, spellID = 58490 }; --Scroll of Strength VII
+		[18] = {itemID = 3012, spellID = 58489 }; --Scroll of Strength VI
+		[19] = {itemID = 3012, spellID = 58488 }; --Scroll of Strength V
+		[20] = {itemID = 3012, spellID = 58487 }; --Scroll of Strength IV
+		[21] = {itemID = 3012, spellID = 58486 }; --Scroll of Strength III
+		[22] = {itemID = 3012, spellID = 58485 }; --Scroll of Strength II
+		[23] = {itemID = 3012, spellID = 58484 }; --Scroll of Strength
+	};
+	{
+		Name = AL["Miscellaneous"];
+		[1] = {spellID = 59504, icon = "INV_Feather_05" }; --Darkmoon Card of the North
+		[2] = {spellID = 59503, icon = "INV_Feather_05" }; --Greater Darkmoon Card
+		[3] = {spellID = 59502, icon = "INV_Feather_05" }; --Darkmoon Card
+		[4] = {spellID = 59491, icon = "INV_Feather_05" }; --Shadowy Tarot
+		[5] = {spellID = 59487, icon = "INV_Feather_05" }; --Arcane Tarot
+		[6] = {spellID = 48247, icon = "INV_Feather_05" }; --Mysterious Tarot" .. "
+		[7] = {spellID = 59480, icon = "INV_Feather_05" }; --Strange Tarot
+		[9] = {spellID = 61117, icon = "INV_Inscription_Tradeskill01" }; --Master's Inscription of the Axe
+		[10] = {spellID = 61118, icon = "INV_Inscription_Tradeskill01" }; --Master's Inscription of the Crag
+		[11] = {spellID = 61119, icon = "INV_Inscription_Tradeskill01" }; --Master's Inscription of the Pinnacle
+		[12] = {spellID = 61120, icon = "INV_Inscription_Tradeskill01" }; --Master's Inscription of the Storm
+		[14] = {spellID = 52175, icon = "INV_Misc_Book_11" }; --Decipher
+		[16] = {itemID = 43145, spellID = 59500 }; --Armor Vellum III
+		[17] = {itemID = 37602, spellID = 59499 }; --Armor Vellum II
+		[18] = {itemID = 38682, spellID = 52739 }; --Armor Vellum
+		[20] = {itemID = 43146, spellID = 59501 }; --Weapon Vellum III
+		[21] = {itemID = 39350, spellID = 59488 }; --Weapon Vellum II
+		[22] = {itemID = 39349, spellID = 52840 }; --Weapon Vellum
+		[24] = {itemID = 43850, spellID = 59387 }; --Certificate of Ownership
+	};
+	{
+		Name = AL["Major Glyph"] .. " - " .. LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"];
+		[1] = {itemID = 43533, spellID = 57207 }; --Glyph of Anti-Magic Shell
+		[2] = {itemID = 43826, spellID = 59339 }; --Glyph of Blood Strike
+		[3] = {itemID = 43536, spellID = 57210 }; --Glyph of Bone Shield
+		[4] = {itemID = 43537, spellID = 57211 }; --Glyph of Chains of Ice
+		[5] = {itemID = 45799, spellID = 64297 }; --Glyph of Dancing Rune Weapon
+		[6] = {itemID = 43538, spellID = 57212 }; --Glyph of Dark Command
+		[7] = {itemID = 45804, spellID = 64266 }; --Glyph of Dark Death
+		[8] = {itemID = 43542, spellID = 57214 }; --Glyph of Death and Decay
+		[9] = {itemID = 43541, spellID = 57213 }; --Glyph of Death Grip
+		[10] = {itemID = 43827, spellID = 59340 }; --Glyph of Death Strike
+		[11] = {itemID = 45805, spellID = 64267 }; --Glyph of Disease
+		[12] = {itemID = 43543, spellID = 57216 }; --Glyph of Frost Strike
+		[13] = {itemID = 43534, spellID = 57208 }; --Glyph of Heart Strike
+		[14] = {itemID = 45806, spellID = 64300 }; --Glyph of Howling Blast
+		[15] = {itemID = 45800, spellID = 64298 }; --Glyph of Hungering Cold
+		[16] = {itemID = 43545, spellID = 57218 }; --Glyph of Icebound Fortitude
+		[17] = {itemID = 43546, spellID = 57219 }; --Glyph of Icy Touch
+		[18] = {itemID = 43547, spellID = 57220 }; --Glyph of Obliterate
+		[19] = {itemID = 43548, spellID = 57221 }; --Glyph of Plague Strike
+		[20] = {itemID = 43550, spellID = 57223 }; --Glyph of Rune Strike
+		[21] = {itemID = 43825, spellID = 59338 }; --Glyph of Rune Tap
+		[22] = {itemID = 43551, spellID = 57224 }; --Glyph of Scourge Strike
+		[23] = {itemID = 43552, spellID = 57225 }; --Glyph of Strangulate
+		[24] = {itemID = 43549, spellID = 57222 }; --Glyph of the Ghoul
+		[25] = {itemID = 43553, spellID = 57226 }; --Glyph of Unbreakable Armor
+		[26] = {itemID = 45803, spellID = 64299 }; --Glyph of Unholy Blight
+		[27] = {itemID = 43554, spellID = 57227 }; --Glyph of Vampiric Blood
+	};
+	{
+		Name = AL["Minor Glyph"] .. " - " .. LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"];
+		[1] = {itemID = 43535, spellID = 57209 }; --Glyph of Blood Tap
+		[2] = {itemID = 43671, spellID = 57229 }; --Glyph of Corpse Explosion
+		[3] = {itemID = 43539, spellID = 57215 }; --Glyph of Death's Embrace
+		[4] = {itemID = 43544, spellID = 57217 }; --Glyph of Horn of Winter
+		[5] = {itemID = 43672, spellID = 57230 }; --Glyph of Pestilence
+		[6] = {itemID = 43673, spellID = 57228 }; --Glyph of Raise Dead
+	};
+	{
+		Name = AL["Major Glyph"] .. " - " .. AL["Druid"];
+		[1] = {itemID = 45623, spellID = 64256 }; --Glyph of Barkskin
+		[2] = {itemID = 45601, spellID = 64268 }; --Glyph of Berserk
+		[3] = {itemID = 48720, spellID = 67600 }; --Glyph of Claw
+		[4] = {itemID = 40924, spellID = 48121 }; --Glyph of Entangling Roots
+		[5] = {itemID = 44928, spellID = 62162 }; --Glyph of Focus
+		[6] = {itemID = 40896, spellID = 56943 }; --Glyph of Frenzied Regeneration
+		[7] = {itemID = 40899, spellID = 56944 }; --Glyph of Growl
+		[8] = {itemID = 40914, spellID = 56945 }; --Glyph of Healing Touch
+		[9] = {itemID = 40920, spellID = 56946 }; --Glyph of Hurricane
+		[10] = {itemID = 40908, spellID = 56947 }; --Glyph of Innervate
+		[11] = {itemID = 40919, spellID = 56948 }; --Glyph of Insect Swarm
+		[12] = {itemID = 40915, spellID = 56949 }; --Glyph of Lifebloom
+		[13] = {itemID = 40900, spellID = 56950 }; --Glyph of Mangle
+		[14] = {itemID = 40897, spellID = 56961 }; --Glyph of Maul
+		[15] = {itemID = 45622, spellID = 64258 }; --Glyph of Monsoon
+		[16] = {itemID = 40923, spellID = 56951 }; --Glyph of Moonfire
+		[17] = {itemID = 45603, spellID = 64313 }; --Glyph of Nourish
+		[18] = {itemID = 40903, spellID = 56952 }; --Glyph of Rake
+		[19] = {itemID = 50125, spellID = 71015 }; --Glyph of Rapid Rejuvenation
+		[20] = {itemID = 40909, spellID = 56953 }; --Glyph of Rebirth
+		[21] = {itemID = 40912, spellID = 56954 }; --Glyph of Regrowth
+		[22] = {itemID = 40913, spellID = 56955 }; --Glyph of Rejuvenation
+		[23] = {itemID = 40902, spellID = 56956 }; --Glyph of Rip
+		[24] = {itemID = 45604, spellID = 64307 }; --Glyph of Savage Roar
+		[25] = {itemID = 40901, spellID = 56957 }; --Glyph of Shred
+		[26] = {itemID = 40921, spellID = 56958 }; --Glyph of Starfall
+		[27] = {itemID = 40916, spellID = 56959 }; --Glyph of Starfire
+		[28] = {itemID = 46372, spellID = 65245 }; --Glyph of Survival Instincts
+		[29] = {itemID = 40906, spellID = 56960 }; --Glyph of Swiftmend
+		[30] = {itemID = 40922, spellID = 56963 }; --Glyph of WRATH
+	};
+	{
+		Name = AL["Minor Glyph"] .. " - " .. AL["Druid"];
+		[1] = {itemID = 45602, spellID = 64270 }; --Glyph of Wild Growth
+		[2] = {itemID = 43316, spellID = 58286 }; --Glyph of Aquatic Form
+		[3] = {itemID = 43334, spellID = 58287 }; --Glyph of Challenging Roar
+		[4] = {itemID = 43674, spellID = 59315 }; --Glyph of Dash
+		[5] = {itemID = 43335, spellID = 58296 }; --Glyph of the Wild
+		[6] = {itemID = 43332, spellID = 58289 }; --Glyph of Thorns
+		[7] = {itemID = 44922, spellID = 56965 }; --Glyph of Typhoon
+		[8] = {itemID = 43331, spellID = 58288 }; --Glyph of Unburdened Rebirth
+	};
+	{
+		Name = AL["Major Glyph"] .. " - " .. LOCALIZED_CLASS_NAMES_MALE["HUNTER"];
+		[1] = {itemID = 42897, spellID = 56994 }; --Glyph of Aimed Shot
+		[2] = {itemID = 42898, spellID = 56995 }; --Glyph of Arcane Shot
+		[3] = {itemID = 42899, spellID = 56996 }; --Glyph of Aspect of the Beast
+		[4] = {itemID = 42900, spellID = 56997 }; --Glyph of Aspect of the Monkey
+		[5] = {itemID = 42901, spellID = 56998 }; --Glyph of Aspect of the Viper
+		[6] = {itemID = 42902, spellID = 56999 }; --Glyph of Beastial WRATH
+		[7] = {itemID = 45625, spellID = 64271 }; --Glyph of Chimera Shot
+		[8] = {itemID = 42903, spellID = 57000 }; --Glyph of Deterrence
+		[9] = {itemID = 42904, spellID = 57001 }; --Glyph of Disengage
+		[10] = {itemID = 45731, spellID = 64273 }; --Glyph of Explosive Shot
+		[11] = {itemID = 45733, spellID = 64253 }; --Glyph of Explosive Trap
+		[12] = {itemID = 42905, spellID = 57002 }; --Glyph of Freezing Trap
+		[13] = {itemID = 42906, spellID = 57003 }; --Glyph of Frost Trap
+		[14] = {itemID = 42907, spellID = 57004 }; --Glyph of Hunter's Mark
+		[15] = {itemID = 42908, spellID = 57005 }; --Glyph of Immolation Trap
+		[16] = {itemID = 42909, spellID = 57006 }; --Glyph of Improved Aspect of the Hawk
+		[17] = {itemID = 45732, spellID = 64304 }; --Glyph of Kill Shot
+		[18] = {itemID = 42910, spellID = 57007 }; --Glyph of Multi-Shot
+		[19] = {itemID = 42911, spellID = 57008 }; --Glyph of Rapid Fire
+		[20] = {itemID = 45735, spellID = 64246 }; --Glyph of Raptor Strike
+		[21] = {itemID = 45734, spellID = 64249 }; --Glyph of Scatter Shot
+		[22] = {itemID = 42912, spellID = 57009 }; --Glyph of Serpent Sting
+		[23] = {itemID = 42913, spellID = 57010 }; --Glyph of Snake Trap
+		[24] = {itemID = 42914, spellID = 57011 }; --Glyph of Steady Shot
+		[25] = {itemID = 42915, spellID = 57012 }; --Glyph of Trueshot Aura
+		[26] = {itemID = 42916, spellID = 57013 }; --Glyph of Volley
+		[27] = {itemID = 42917, spellID = 57014 }; --Glyph of Wyvern Sting
+	};
+	{
+		Name = AL["Minor Glyph"] .. " - " .. LOCALIZED_CLASS_NAMES_MALE["HUNTER"];
+		[1] = {itemID = 43351, spellID = 58302 }; --Glyph of Feign Death
+		[2] = {itemID = 43350, spellID = 58301 }; --Glyph of Mend Pet
+		[3] = {itemID = 43354, spellID = 58300 }; --Glyph of Possessed Strength
+		[4] = {itemID = 43338, spellID = 58299 }; --Glyph of Revive Pet
+		[5] = {itemID = 43356, spellID = 58298 }; --Glyph of Scare Beast
+		[6] = {itemID = 43355, spellID = 58297 }; --Glyph of the Pack
+	};
+	{
+		Name = AL["Major Glyph"] .. " - " .. LOCALIZED_CLASS_NAMES_MALE["MAGE"];
+		[1] = {itemID = 45738, spellID = 64276 }; --Glyph of Arcane Barrage
+		[2] = {itemID = 44955, spellID = 56991 }; --Glyph of Arcane Blast
+		[3] = {itemID = 42734, spellID = 56968 }; --Glyph of Arcane Explosion
+		[4] = {itemID = 42735, spellID = 56971 }; --Glyph of Arcane Missiles
+		[5] = {itemID = 42736, spellID = 56972 }; --Glyph of Arcane Power
+		[6] = {itemID = 42737, spellID = 56973 }; --Glyph of Blink
+		[7] = {itemID = 45736, spellID = 64274 }; --Glyph of Deep Freeze
+		[8] = {itemID = 50045, spellID = 71101 }; --Glyph of Eternal Water
+		[9] = {itemID = 42738, spellID = 56974 }; --Glyph of Evocation
+		[10] = {itemID = 42740, spellID = 57719 }; --Glyph of Fire Blast
+		[11] = {itemID = 42739, spellID = 56975 }; --Glyph of Fireball
+		[12] = {itemID = 42741, spellID = 56976 }; --Glyph of Frost Nova
+		[13] = {itemID = 42742, spellID = 56977 }; --Glyph of Frostbolt
+		[14] = {itemID = 44684, spellID = 61677 }; --Glyph of Frostfire
+		[15] = {itemID = 42743, spellID = 56978 }; --Glyph of Ice Armor
+		[16] = {itemID = 45740, spellID = 64257 }; --Glyph of Ice Barrier
+		[17] = {itemID = 42744, spellID = 56979 }; --Glyph of Ice Block
+		[18] = {itemID = 42745, spellID = 56980 }; --Glyph of Ice Lance
+		[19] = {itemID = 42746, spellID = 56981 }; --Glyph of Icy Veins
+		[20] = {itemID = 42747, spellID = 56982 }; --Glyph of Improved Scorch
+		[21] = {itemID = 42748, spellID = 56983 }; --Glyph of Invisibility
+		[22] = {itemID = 45737, spellID = 64275 }; --Glyph of Living Bomb
+		[23] = {itemID = 42749, spellID = 56984 }; --Glyph of Mage Armor
+		[24] = {itemID = 42750, spellID = 56985 }; --Glyph of Mana Gem
+		[25] = {itemID = 45739, spellID = 64314 }; --Glyph of Mirror Image
+		[26] = {itemID = 42751, spellID = 56986 }; --Glyph of Molten Armor
+		[27] = {itemID = 42752, spellID = 56987 }; --Glyph of Polymorph
+		[28] = {itemID = 42753, spellID = 56988 }; --Glyph of Remove Curse
+		[29] = {itemID = 42754, spellID = 56989 }; --Glyph of Water Elemental
+	};
+	{
+		Name = AL["Minor Glyph"] .. " - " .. LOCALIZED_CLASS_NAMES_MALE["MAGE"];
+		[1] = {itemID = 43339, spellID = 58303 }; --Glyph of Arcane Intellect
+		[2] = {itemID = 44920, spellID = 56990 }; --Glyph of Blast Wave
+		[3] = {itemID = 43357, spellID = 58305 }; --Glyph of Fire Ward
+		[4] = {itemID = 43359, spellID = 58306 }; --Glyph of Frost Armor
+		[5] = {itemID = 43360, spellID = 58307 }; --Glyph of Frost Ward
+		[6] = {itemID = 43364, spellID = 58308 }; --Glyph of Slow Fall
+		[7] = {itemID = 43361, spellID = 58310 }; --Glyph of the Penguin
+	};
+	{
+		Name = AL["Major Glyph"] .. " - " .. LOCALIZED_CLASS_NAMES_MALE["PALADIN"];
+		[1] = {itemID = 41101, spellID = 57019 }; --Glyph of Avenger's Shield
+		[2] = {itemID = 41107, spellID = 57021 }; --Glyph of Avenging WRATH
+		[3] = {itemID = 45741, spellID = 64277 }; --Glyph of Beacon of Light
+		[4] = {itemID = 41104, spellID = 57020 }; --Glyph of Cleansing
+		[5] = {itemID = 41099, spellID = 57023 }; --Glyph of Consecration
+		[6] = {itemID = 41098, spellID = 57024 }; --Glyph of Crusader Strike
+		[7] = {itemID = 45745, spellID = 64305 }; --Glyph of Divine Plea
+		[8] = {itemID = 45743, spellID = 64279 }; --Glyph of Divine Storm
+		[9] = {itemID = 41108, spellID = 57031 }; --Glyph of Divinity
+		[10] = {itemID = 41103, spellID = 57025 }; --Glyph of Exorcism
+		[11] = {itemID = 41105, spellID = 57026 }; --Glyph of Flash of Light
+		[12] = {itemID = 41095, spellID = 57027 }; --Glyph of Hammer of Justice
+		[13] = {itemID = 45742, spellID = 64278 }; --Glyph of Hammer of the Righteous
+		[14] = {itemID = 41097, spellID = 57028 }; --Glyph of Hammer of WRATH
+		[15] = {itemID = 41106, spellID = 57029 }; --Glyph of Holy Light
+		[16] = {itemID = 45746, spellID = 64254 }; --Glyph of Holy Shock
+		[17] = {itemID = 41092, spellID = 57030 }; --Glyph of Judgement
+		[18] = {itemID = 41100, spellID = 57032 }; --Glyph of Righteous Defense
+		[19] = {itemID = 45747, spellID = 64251 }; --Glyph of Salvation
+		[20] = {itemID = 43867, spellID = 59559 }; --Glyph of Seal of Blood
+		[21] = {itemID = 41094, spellID = 57033 }; --Glyph of Seal of Command
+		[22] = {itemID = 41110, spellID = 57034 }; --Glyph of Seal of Light
+		[23] = {itemID = 43868, spellID = 59560 }; --Glyph of Seal of Righteousness
+		[24] = {itemID = 43869, spellID = 59561 }; --Glyph of Seal of Vengeance
+		[25] = {itemID = 41109, spellID = 57035 }; --Glyph of Seal of Wisdom
+		[26] = {itemID = 45744, spellID = 64308 }; --Glyph of Shield of Righteousness
+		[27] = {itemID = 41096, spellID = 57022 }; --Glyph of Spiritual Attunement
+		[28] = {itemID = 41102, spellID = 57036 }; --Glyph of Turn Evil
+	};
+	{
+		Name = AL["Minor Glyph"] .. " - " .. LOCALIZED_CLASS_NAMES_MALE["PALADIN"];
+		[1] = {itemID = 43365, spellID = 58311 }; --Glyph of Blessing of Kings
+		[2] = {itemID = 43340, spellID = 58314 }; --Glyph of Blessing of Might
+		[3] = {itemID = 43366, spellID = 58312 }; --Glyph of Blessing of Wisdom
+		[4] = {itemID = 43367, spellID = 58313 }; --Glyph of Lay on Hands
+		[5] = {itemID = 43368, spellID = 58315 }; --Glyph of Sense Undead
+		[6] = {itemID = 43369, spellID = 58316 }; --Glyph of the Wise
+	};
+	{
+		Name = AL["Major Glyph"] .. " - " .. LOCALIZED_CLASS_NAMES_MALE["PRIEST"];
+		[1] = {itemID = 42396, spellID = 57181 }; --Glyph of Circle of Healing
+		[2] = {itemID = 42397, spellID = 57183 }; --Glyph of Dispel Magic
+		[3] = {itemID = 45753, spellID = 64280 }; --Glyph of Dispersion
+		[4] = {itemID = 42398, spellID = 57184 }; --Glyph of Fade
+		[5] = {itemID = 42399, spellID = 57185 }; --Glyph of Fear Ward
+		[6] = {itemID = 42400, spellID = 57186 }; --Glyph of Flash Heal
+		[7] = {itemID = 45755, spellID = 64281 }; --Glyph of Guardian Spirit
+		[8] = {itemID = 42401, spellID = 57187 }; --Glyph of Holy Nova
+		[9] = {itemID = 45758, spellID = 64283 }; --Glyph of Hymn of Hope
+		[10] = {itemID = 42402, spellID = 57188 }; --Glyph of Inner Fire
+		[11] = {itemID = 42403, spellID = 57189 }; --Glyph of Lightwell
+		[12] = {itemID = 42404, spellID = 57190 }; --Glyph of Mass Dispel
+		[13] = {itemID = 42405, spellID = 57191 }; --Glyph of Mind Control
+		[14] = {itemID = 42406, spellID = 57192 }; --Glyph of Mind Flay
+		[15] = {itemID = 45757, spellID = 64309 }; --Glyph of Mind Sear
+		[16] = {itemID = 45760, spellID = 64259 }; --Glyph of Pain Suppression
+		[17] = {itemID = 45756, spellID = 64282 }; --Glyph of Penance
+		[18] = {itemID = 42408, spellID = 57194 }; --Glyph of Power Word: Shield
+		[19] = {itemID = 42409, spellID = 57195 }; --Glyph of Prayer of Healing
+		[20] = {itemID = 42410, spellID = 57196 }; --Glyph of Psychic Scream
+		[21] = {itemID = 42411, spellID = 57197 }; --Glyph of Renew
+		[22] = {itemID = 42412, spellID = 57198 }; --Glyph of Scourge Imprisonment
+		[23] = {itemID = 42407, spellID = 57193 }; --Glyph of Shadow
+		[24] = {itemID = 42414, spellID = 57199 }; --Glyph of Shadow Word: Death
+		[25] = {itemID = 42415, spellID = 57200 }; --Glyph of Shadow Word: Pain
+		[26] = {itemID = 42416, spellID = 57201 }; --Glyph of Smite
+		[27] = {itemID = 42417, spellID = 57202 }; --Glyph of Spirit of Redemption
+	};
+	{
+		Name = AL["Minor Glyph"] .. " - " .. LOCALIZED_CLASS_NAMES_MALE["PRIEST"];
+		[1] = {itemID = 43342, spellID = 58317 }; --Glyph of Fading
+		[2] = {itemID = 43371, spellID = 58318 }; --Glyph of Fortitude
+		[3] = {itemID = 43370, spellID = 58319 }; --Glyph of Levitate
+		[4] = {itemID = 43373, spellID = 58320 }; --Glyph of Shackle Undead
+		[5] = {itemID = 43372, spellID = 58321 }; --Glyph of Shadow Protection
+		[6] = {itemID = 43374, spellID = 58322 }; --Glyph of Shadowfiend
+	};
+	{
+		Name = AL["Major Glyph"] .. " - " .. LOCALIZED_CLASS_NAMES_MALE["ROGUE"];
+		[1] = {itemID = 42954, spellID = 57112 }; --Glyph of Adrenaline Rush
+		[2] = {itemID = 42955, spellID = 57113 }; --Glyph of Ambush
+		[3] = {itemID = 42956, spellID = 57114 }; --Glyph of Backstab
+		[4] = {itemID = 42957, spellID = 57115 }; --Glyph of Blade Flurry
+		[5] = {itemID = 45769, spellID = 64303 }; --Glyph of Cloak of Shadows
+		[6] = {itemID = 42958, spellID = 57116 }; --Glyph of Crippling Poison
+		[7] = {itemID = 42959, spellID = 57117 }; --Glyph of Deadly Throw
+		[8] = {itemID = 42960, spellID = 57119 }; --Glyph of Evasion
+		[9] = {itemID = 42961, spellID = 57120 }; --Glyph of Eviscerate
+		[10] = {itemID = 42962, spellID = 57121 }; --Glyph of Expose Armor
+		[11] = {itemID = 45766, spellID = 64315 }; --Glyph of Fan of Knives
+		[12] = {itemID = 42963, spellID = 57122 }; --Glyph of Feint
+		[13] = {itemID = 42964, spellID = 57123 }; --Glyph of Garrote
+		[14] = {itemID = 42965, spellID = 57124 }; --Glyph of Ghostly Strike
+		[15] = {itemID = 42966, spellID = 57125 }; --Glyph of Gouge
+		[16] = {itemID = 42967, spellID = 57126 }; --Glyph of Hemorrhage
+		[17] = {itemID = 45761, spellID = 64284 }; --Glyph of Hunger for Blood
+		[18] = {itemID = 45762, spellID = 64285 }; --Glyph of Killing Spree
+		[19] = {itemID = 45768, spellID = 64260 }; --Glyph of Mutilate
+		[20] = {itemID = 42968, spellID = 57127 }; --Glyph of Preparation
+		[21] = {itemID = 42969, spellID = 57128 }; --Glyph of Rupture
+		[22] = {itemID = 42970, spellID = 57129 }; --Glyph of Sap
+		[23] = {itemID = 45764, spellID = 64286 }; --Glyph of Shadow Dance
+		[24] = {itemID = 42972, spellID = 57131 }; --Glyph of Sinister Strike
+		[25] = {itemID = 42973, spellID = 57132 }; --Glyph of Slice and Dice
+		[26] = {itemID = 42974, spellID = 57133 }; --Glyph of Sprint
+		[27] = {itemID = 45767, spellID = 64310 }; --Glyph of Tricks of the Trade
+		[28] = {itemID = 42971, spellID = 57130 }; --Glyph of Vigor
+	};
+	{
+		Name = AL["Minor Glyph"] .. " - " .. LOCALIZED_CLASS_NAMES_MALE["ROGUE"];
+		[1] = {itemID = 43379, spellID = 58323 }; --Glyph of Blurred Speed
+		[2] = {itemID = 43376, spellID = 58324 }; --Glyph of Distract
+		[3] = {itemID = 43377, spellID = 58325 }; --Glyph of Pick Lock
+		[4] = {itemID = 43343, spellID = 58326 }; --Glyph of Pick Pocket
+		[5] = {itemID = 43378, spellID = 58327 }; --Glyph of Safe Fall
+		[6] = {itemID = 43380, spellID = 58328 }; --Glyph of Vanish
+	};
+	{
+		Name = AL["Major Glyph"] .. " - " .. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"];
+		[1] = {itemID = 41517, spellID = 57232 }; --Glyph of Chain Heal
+		[2] = {itemID = 41518, spellID = 57233 }; --Glyph of Chain Lightning
+		[3] = {itemID = 45775, spellID = 64261 }; --Glyph of Earth Shield
+		[4] = {itemID = 41526, spellID = 57235 }; --Glyph of Earth Shock
+		[5] = {itemID = 41527, spellID = 57236 }; --Glyph of Earthliving Weapon
+		[6] = {itemID = 41552, spellID = 57250 }; --Glyph of Elemental Mastery
+		[7] = {itemID = 45771, spellID = 64288 }; --Glyph of Feral Spirit
+		[8] = {itemID = 41529, spellID = 57237 }; --Glyph of Fire Elemental Totem
+		[9] = {itemID = 41530, spellID = 57238 }; --Glyph of Fire Nova Totem
+		[10] = {itemID = 41531, spellID = 57239 }; --Glyph of Flame Shock
+		[11] = {itemID = 41532, spellID = 57240 }; --Glyph of Flametongue Weapon
+		[12] = {itemID = 41547, spellID = 57241 }; --Glyph of Frost Shock
+		[13] = {itemID = 41533, spellID = 57242 }; --Glyph of Healing Stream Totem
+		[14] = {itemID = 41534, spellID = 57243 }; --Glyph of Healing Wave
+		[15] = {itemID = 45777, spellID = 64316 }; --Glyph of Hex
+		[16] = {itemID = 41524, spellID = 57234 }; --Glyph of Lava
+		[17] = {itemID = 41540, spellID = 57249 }; --Glyph of Lava Lash
+		[18] = {itemID = 41535, spellID = 57244 }; --Glyph of Lesser Healing Wave
+		[19] = {itemID = 41536, spellID = 57245 }; --Glyph of Lightning Bolt
+		[20] = {itemID = 41537, spellID = 57246 }; --Glyph of Lightning Shield
+		[21] = {itemID = 41538, spellID = 57247 }; --Glyph of Mana Tide Totem
+		[22] = {itemID = 45772, spellID = 64289 }; --Glyph of Riptide
+		[23] = {itemID = 45778, spellID = 64247 }; --Glyph of Stoneclaw Totem
+		[24] = {itemID = 41539, spellID = 57248 }; --Glyph of Stormstrike
+		[25] = {itemID = 45770, spellID = 64287 }; --Glyph of Thunder
+		[26] = {itemID = 45776, spellID = 64262 }; --Glyph of Totem of WRATH
+		[27] = {itemID = 41541, spellID = 57251 }; --Glyph of Water Mastery
+		[28] = {itemID = 41542, spellID = 57252 }; --Glyph of Windfury Weapon
+	};
+	{
+		Name = AL["Minor Glyph"] .. " - " .. LOCALIZED_CLASS_NAMES_MALE["SHAMAN"];
+		[1] = {itemID = 43381, spellID = 58329 }; --Glyph of Astral Recall
+		[2] = {itemID = 43725, spellID = 59326 }; --Glyph of Ghost Wolf
+		[3] = {itemID = 43385, spellID = 58330 }; --Glyph of Renewed Life
+		[4] = {itemID = 44923, spellID = 57253 }; --Glyph of Thunderstorm
+		[5] = {itemID = 43344, spellID = 58331 }; --Glyph of Water Breathing
+		[6] = {itemID = 43386, spellID = 58332 }; --Glyph of Water Shield
+		[7] = {itemID = 43388, spellID = 58333 }; --Glyph of Water Walking
+	};
+	{
+		Name = AL["Major Glyph"] .. " - " .. LOCALIZED_CLASS_NAMES_MALE["WARLOCK"];
+		[1] = {itemID = 45781, spellID = 64294 }; --Glyph of Chaos Bolt
+		[2] = {itemID = 42454, spellID = 57258 }; --Glyph of Conflagrate
+		[3] = {itemID = 42455, spellID = 57259 }; --Glyph of Corruption
+		[4] = {itemID = 42456, spellID = 57260 }; --Glyph of Curse of Agony
+		[5] = {itemID = 42457, spellID = 57261 }; --Glyph of Death Coil
+		[6] = {itemID = 45782, spellID = 64317 }; --Glyph of Demonic Circle
+		[7] = {itemID = 42458, spellID = 57262 }; --Glyph of Fear
+		[8] = {itemID = 42459, spellID = 57263 }; --Glyph of Felguard
+		[9] = {itemID = 42460, spellID = 57264 }; --Glyph of Felhunter
+		[10] = {itemID = 45779, spellID = 64291 }; --Glyph of Haunt
+		[11] = {itemID = 42461, spellID = 57265 }; --Glyph of Health Funnel
+		[12] = {itemID = 42462, spellID = 57266 }; --Glyph of Healthstone
+		[13] = {itemID = 42463, spellID = 57267 }; --Glyph of Howl of Terror
+		[14] = {itemID = 42464, spellID = 57268 }; --Glyph of Immolate
+		[15] = {itemID = 42465, spellID = 57269 }; --Glyph of Imp
+		[16] = {itemID = 42453, spellID = 57257 }; --Glyph of Incinerate
+		[17] = {itemID = 45785, spellID = 64248 }; --Glyph of Life Tap
+		[18] = {itemID = 45780, spellID = 64318 }; --Glyph of Metamorphosis
+		[19] = {itemID = 50077, spellID = 71102 }; --Glyph of Quick Decay
+		[20] = {itemID = 42466, spellID = 57270 }; --Glyph of Searing Pain
+		[21] = {itemID = 42467, spellID = 57271 }; --Glyph of Shadow Bolt
+		[22] = {itemID = 42468, spellID = 57272 }; --Glyph of Shadowburn
+		[23] = {itemID = 45783, spellID = 64311 }; --Glyph of Shadowflame
+		[24] = {itemID = 42469, spellID = 57273 }; --Glyph of Siphon Life
+		[25] = {itemID = 45789, spellID = 64250 }; --Glyph of Soul Link
+		[26] = {itemID = 42470, spellID = 57274 }; --Glyph of Soulstone
+		[27] = {itemID = 42471, spellID = 57275 }; --Glyph of Succubus
+		[28] = {itemID = 42472, spellID = 57276 }; --Glyph of Unstable Affliction
+		[29] = {itemID = 42473, spellID = 57277 }; --Glyph of Voidwalker
+	};
+	{
+		Name = AL["Minor Glyph"] .. " - " .. LOCALIZED_CLASS_NAMES_MALE["WARLOCK"];
+		[1] = {itemID = 43392, spellID = 58338 }; --Glyph of Curse of Exhaustion
+		[2] = {itemID = 43390, spellID = 58337 }; --Glyph of Drain Soul
+		[3] = {itemID = 43393, spellID = 58339 }; --Glyph of Enslave Demon
+		[4] = {itemID = 43391, spellID = 58340 }; --Glyph of Kilrogg
+		[5] = {itemID = 43394, spellID = 58341 }; --Glyph of Souls
+		[6] = {itemID = 43389, spellID = 58336 }; --Glyph of Unending Breath
+	};
+	{
+		Name = AL["Major Glyph"] .. " - " .. LOCALIZED_CLASS_NAMES_MALE["WARRIOR"];
+		[1] = {itemID = 43420, spellID = 57151 }; --Glyph of Barbaric Insults
+		[2] = {itemID = 45790, spellID = 64295 }; --Glyph of Bladestorm
+		[3] = {itemID = 43425, spellID = 57152 }; --Glyph of Blocking
+		[4] = {itemID = 43412, spellID = 57153 }; --Glyph of Bloodthirst
+		[5] = {itemID = 43414, spellID = 57154 }; --Glyph of Cleaving
+		[6] = {itemID = 43415, spellID = 57155 }; --Glyph of Devastate
+		[7] = {itemID = 45794, spellID = 64312 }; --Glyph of Enraged Regeneration
+		[8] = {itemID = 43416, spellID = 57156 }; --Glyph of Execution
+		[9] = {itemID = 43417, spellID = 57157 }; --Glyph of Hamstring
+		[10] = {itemID = 43418, spellID = 57158 }; --Glyph of Heroic Strike
+		[11] = {itemID = 43419, spellID = 57159 }; --Glyph of Intervene
+		[12] = {itemID = 43426, spellID = 57166 }; --Glyph of Last Stand
+		[13] = {itemID = 43421, spellID = 57160 }; --Glyph of Mortal Strike
+		[14] = {itemID = 43422, spellID = 57161 }; --Glyph of Overpower
+		[15] = {itemID = 43413, spellID = 57162 }; --Glyph of Rapid Charge
+		[16] = {itemID = 43423, spellID = 57163 }; --Glyph of Rending
+		[17] = {itemID = 43430, spellID = 57164 }; --Glyph of Resonating Power
+		[18] = {itemID = 43424, spellID = 57165 }; --Glyph of Revenge
+		[19] = {itemID = 45797, spellID = 64252 }; --Glyph of Shield Wall
+		[20] = {itemID = 45792, spellID = 64296 }; --Glyph of Shockwave
+		[21] = {itemID = 45795, spellID = 64302 }; --Glyph of Spell Reflection
+		[22] = {itemID = 43427, spellID = 57167 }; --Glyph of Sunder Armor
+		[23] = {itemID = 43428, spellID = 57168 }; --Glyph of Sweeping Strikes
+		[24] = {itemID = 43429, spellID = 57169 }; --Glyph of Taunt
+		[25] = {itemID = 43431, spellID = 57170 }; --Glyph of Victory Rush
+		[26] = {itemID = 45793, spellID = 64255 }; --Glyph of Vigilance
+		[27] = {itemID = 43432, spellID = 57172 }; --Glyph of Whirlwind
+	};
+	{
+		Name = AL["Minor Glyph"] .. " - " .. LOCALIZED_CLASS_NAMES_MALE["WARRIOR"];
+		[1] = {itemID = 43395, spellID = 58342 }; --Glyph of Battle
+		[2] = {itemID = 43396, spellID = 58343 }; --Glyph of Bloodrage
+		[3] = {itemID = 43397, spellID = 58344 }; --Glyph of Charge
+		[4] = {itemID = 49084, spellID = 68166 }; --Glyph of Command
+		[5] = {itemID = 43400, spellID = 58347 }; --Glyph of Enduring Victory
+		[6] = {itemID = 43398, spellID = 58345 }; --Glyph of Mocking Blow
+		[7] = {itemID = 43399, spellID = 58346 }; --Glyph of Thunder Clap
 	};
 };
 
