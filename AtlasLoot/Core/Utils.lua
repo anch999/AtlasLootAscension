@@ -182,6 +182,7 @@ function AtlasLoot:GetRecipeData(recipeID, idType)
 	 end
 end
 
+-- Returns the recipe itemID from a crafting spellID
 function AtlasLoot:GetRecipeID(spellID)
 	if not TRADESKILL_RECIPES then return end
 	for _,prof in pairs(TRADESKILL_RECIPES) do
@@ -321,10 +322,8 @@ function AtlasLoot:PopoupItemFrame(self, data)
 	AtlasLoot_PopupFrame:Show()
 end
 
---[[
-AtlasLoot:AddTooltip(frameb, tooltiptext)
-Adds explanatory tooltips to UI objects.
-]]
+
+--Adds explanatory tooltips to UI objects.
 function AtlasLoot:AddTooltip(frameb, tooltiptext)
 	if not tooltiptext or not frameb then return end
 	local frame = _G[frameb]
@@ -336,10 +335,7 @@ function AtlasLoot:AddTooltip(frameb, tooltiptext)
 	frame:SetScript("OnLeave", function() GameTooltip:Hide() end)
  end
 
- --[[
-AtlasLoot:NavButton_OnClick:
-Called when 'Back'Button is pressed and calls up the appropriate loot page
-]]
+--Called when 'Back'Button is pressed and calls up the appropriate loot page
 function AtlasLoot:BackButton_OnClick()
 	AtlasLoot.backEnabled = false
 	if AtlasLootItemsFrame.refreshSearch then
@@ -407,7 +403,7 @@ function AtlasLoot:getMaxDifficulty(difficultyKey)
     end
 end
 
--- Loading items spinner
+-- Loading items spinner 
 local loadingCount = 0
 function AtlasLoot:ItemsLoading(count)
 	if count == "reset" then

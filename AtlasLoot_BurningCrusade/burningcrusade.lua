@@ -5856,7 +5856,7 @@ AtlasLoot_Data["T5"] = {
 			[8] = { itemID = 34564, desc = "=ds=" ..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Boots of the Malefic
 		};
 		{
-			Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"].." - "..AL["Protection"];
+			Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"].." - "..AL["Protection"].. " - Block";
 			[1] = { itemID = 30974, desc = "=ds=" ..BabbleBoss["Archimonde"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Onslaught Greathelm
 			[2] = { itemID = 30980, desc = "=ds=" ..BabbleBoss["Mother Shahraz"].." ("..BabbleZone["Black Temple"]..")" }; --Onslaught Shoulderguards
 			[3] = { itemID = 30976, desc = "=ds=" ..BabbleBoss["Illidan Stormrage"].." ("..BabbleZone["Black Temple"]..")" }; --Onslaught Chestguard
@@ -5865,6 +5865,17 @@ AtlasLoot_Data["T5"] = {
 			[6] = { itemID = 34547, desc = "=ds=" ..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Onslaught Waistguard
 			[7] = { itemID = 30978, desc = "=ds=" ..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Onslaught Legguards
 			[8] = { itemID = 34568, desc = "=ds=" ..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Onslaught Boots
+		};
+		{
+			Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"].." - "..AL["Protection"].. " - Parry";
+			[1] = { itemID = 33642, desc = "=ds=" ..BabbleBoss["Archimonde"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Onslaught Greathelm
+			[2] = { itemID = 33645, desc = "=ds=" ..BabbleBoss["Mother Shahraz"].." ("..BabbleZone["Black Temple"]..")" }; --Onslaught Shoulderguards
+			[3] = { itemID = 33643, desc = "=ds=" ..BabbleBoss["Illidan Stormrage"].." ("..BabbleZone["Black Temple"]..")" }; --Onslaught Chestguard
+			[4] = { itemID = 33646, desc = "=ds=" ..BabbleBoss["Kalecgos"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Onslaught Wristguards
+			[5] = { itemID = 33641, desc = "=ds=" ..BabbleBoss["Kalecgos"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Onslaught Handguards
+			[6] = { itemID = 33647, desc = "=ds=" ..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Onslaught Waistguard
+			[7] = { itemID = 33644, desc = "=ds=" ..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Onslaught Legguards
+			[8] = { itemID = 33648, desc = "=ds=" ..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Onslaught Boots
 		};
 		{
 			Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"].." - "..AL["Fury"];

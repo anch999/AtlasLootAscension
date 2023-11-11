@@ -608,6 +608,15 @@ ItemIDsDatabase[42946] = { 42946, 42946, 1642946 }; --Charmed Ancient Bone Bow
 ItemIDsDatabase[44093] = { 44093, 44093, 1644093 }; --Upgraded Dwarven Hand Cannon
 ItemIDsDatabase[450009] = {450009, 450009, 450011, 450015, MythicRaid = 450013}; --The String of Time
 
+ItemIDsDatabase[33642] = {6033642, 33642, 333642, 233642, MythicRaid = 1333642};
+ItemIDsDatabase[33645] = {6033645, 33645, 333645, 233645, MythicRaid = 1333645};
+ItemIDsDatabase[33643] = {6033643, 33643, 333643, 233643, MythicRaid = 1333643};
+ItemIDsDatabase[33646] = {6033646, 33646, 333646, 233646, MythicRaid = 1333646};
+ItemIDsDatabase[33641] = {6033641, 33641, 333641, 233641, MythicRaid = 1333641};
+ItemIDsDatabase[33647] = {6033647, 33647, 333647, 233647, MythicRaid = 1333647};
+ItemIDsDatabase[33644] = {6033644, 33644, 333644, 233644, MythicRaid = 1333644};
+ItemIDsDatabase[33648] = {6033648, 33648, 333648, 233648, MythicRaid = 1333648};
+
 for _, v in pairs(ItemIDsDatabase) do
     if not v["MythicRaid"] then
         v["MythicRaid"] = tonumber("13"..v[2])
