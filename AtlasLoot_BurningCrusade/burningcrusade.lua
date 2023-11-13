@@ -6275,6 +6275,69 @@ AtlasLoot_Data["WorldEpicsTBC"] = {
 	};
 };
 
+AtlasLoot_Data["WorldRaresTBC"] = {
+	Name = AL["BoE World Rares"];
+	Type = "BCDungeon";
+	{
+		Name = "Page 1";
+		[1] = { itemID = 31187 },
+		[2] = { itemID = 31173 },
+		[3] = { itemID = 31193 },
+		[4] = { itemID = 31175 },
+		[5] = { itemID = 31258 },
+		[6] = { itemID = 31290 },
+		[7] = { itemID = 31153 },
+		[8] = { itemID = 31178 },
+		[9] = { itemID = 31230 },
+		[10] = { itemID = 31186 },
+		[11] = { itemID = 31305 },
+		[12] = { itemID = 31152 },
+		[13] = { itemID = 31295 },
+		[14] = { itemID = 31285 },
+		[15] = { itemID = 31255 },
+		[16] = { itemID = 31303 },
+		[17] = { itemID = 31280 },
+		[18] = { itemID = 31288 },
+		[19] = { itemID = 31299 },
+		[20] = { itemID = 31204 },
+		[21] = { itemID = 31304 },
+		[22] = { itemID = 31190 },
+		[23] = { itemID = 31308 },
+		[24] = { itemID = 31289 },
+		[25] = { itemID = 31237 },
+		[26] = { itemID = 31287 },
+		[27] = { itemID = 31291 },
+		[28] = { itemID = 31234 },
+		[29] = { itemID = 31292 },
+		[30] = { itemID = 31272 },
+	},
+	{
+		Name = "Page 2";
+		[1] = { itemID = 31282 },
+		[2] = { itemID = 31143 },
+		[3] = { itemID = 31200 },
+		[4] = { itemID = 31240 },
+		[5] = { itemID = 31283 },
+		[6] = { itemID = 31297 },
+		[7] = { itemID = 31147 },
+		[8] = { itemID = 31294 },
+		[9] = { itemID = 31277 },
+		[10] = { itemID = 31275 },
+		[11] = { itemID = 31281 },
+		[12] = { itemID = 31298 },
+		[13] = { itemID = 31226 },
+		[14] = { itemID = 31306 },
+		[15] = { itemID = 31145 },
+		[16] = { itemID = 31222 },
+		[17] = { itemID = 31222 },
+		[18] = { itemID = 31150 },
+		[19] = { itemID = 31149 },
+		[20] = { itemID = 31151 },
+		[21] = { itemID = 31293 },
+		[22] = { itemID = 31180 },
+	},
+};
+
 ------------------------
 --- World Bosses TBC ---
 ------------------------

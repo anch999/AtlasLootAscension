@@ -18,6 +18,7 @@ local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
 			Module = "AtlasLootBurningCrusade",
 			{ "", "Heirloom"},
 			{ "", "DS3"},
+			{ "", "WorldRaresTBC"},
 			{ "", "WorldEpicsTBC"},
 			{ "", "TBCSets"},
 			{ AL["Badge of Justice Rewards"], "BadgeShatt", "Header"},
