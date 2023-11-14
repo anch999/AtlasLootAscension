@@ -196,7 +196,7 @@ function AtlasLoot:FilterMenuRegister()
 	local db = AtlasLootFilterDB
 	AtlasLoot.Dewdrop:Register(AtlasLootFilterCheck,
 		'point', function(parent)
-			return "RIGHT", "BOTTOM"
+			return "TOPLEFT", "BOTTOM"
 		end,
 		'children', function(level, value)
 			if _G[AtlasLootItemsFrame.refreshFilter[2]][AtlasLootItemsFrame.refreshFilter[1]].vanity then
