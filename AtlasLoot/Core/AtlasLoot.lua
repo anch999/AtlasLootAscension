@@ -80,6 +80,49 @@ local AtlasLootDBDefaults = {
     }
 }
 
+--Set Savedvariables defaults
+local DefaultSettings  = {
+	{
+		Database = "AtlasLootCharDB",
+		{ TableName = "QuickLooks", {} },
+		{ TableName = "SearchResult", {Name = "Search Result" , Type = "Search", Back = true} },
+	},
+	{	Database = "AtlasLootFilterDB" }
+}
+
+--[[ TableName = Name of the saved setting
+CheckBox = Global name of the checkbox if it has one and first numbered table entry is the boolean
+Text = Global name of where the text and first numbered table entry is the default text 
+Frame = Frame or button etc you want hidden/shown at start based on condition ]]
+local function setupSettingsDB()
+    for _, d in ipairs(DefaultSettings) do
+		for _, def in ipairs(d) do
+			if not _G[d.Database] then _G[d.Database] = {} end
+			local db = _G[d.Database]
+			if db[def.TableName] == nil then
+				if #def > 1 then
+					db[def.TableName] = {}
+					for _, n in ipairs(def) do
+						tinsert(db[def.TableName], n)
+					end
+				else
+					db[def.TableName] = def[1]
+				end
+			end
+
+			if def.CheckBox then
+				_G[def.CheckBox]:SetChecked(db[def.TableName])
+			end
+			if def.Text then
+				_G[def.Text]:SetText(db[def.TableName])
+			end
+			if def.Frame then
+				if db[def.TableName] then _G[def.Frame]:Hide() else _G[def.Frame]:Show() end
+			end
+		end
+    end
+end
+
 -- Popup Box for first time users
 StaticPopupDialogs["ATLASLOOT_SETUP"] = {
   text = AL["Welcome to Atlasloot Enhanced.  Please take a moment to set your preferences."],
@@ -100,12 +143,7 @@ the addon needs are in place, we can properly set up the mod
 function AtlasLoot:OnEnable()
     AtlasLoot.db = LibStub("AceDB-3.0"):New("AtlasLootDB")
     AtlasLoot.db:RegisterDefaults(AtlasLootDBDefaults)
-	if not AtlasLootCharDB then AtlasLootCharDB = {} end
-    if not AtlasLootCharDB["QuickLooks"] then AtlasLootCharDB["QuickLooks"] = {} end
-	if not AtlasLootCharDB.SelectedFilter then AtlasLootCharDB.SelectedFilter = 1 end
-	if not AtlasLootCharDB["SearchResult"] then AtlasLootCharDB["SearchResult"] = {Name = "Search Result" , Type = "Search", Back = true} end
-	if not AtlasLootFilterDB then AtlasLootFilterDB = {["FilterLists"] = {{Name = "Default" }}} end
-	if AtlasLootFilterDB and not AtlasLootFilterDB["FilterLists"] then AtlasLootFilterDB = {["FilterLists"] = {{Name = "Default" }}} end
+	setupSettingsDB()
     if AtlasLoot_Data then
         AtlasLoot_Data["EmptyTable"] = {
 			Name = AL["Select a Loot Table..."],
@@ -451,8 +489,6 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 	--Hide Advanced search if it is up and reshow Querybutton
 	AtlasLootDefaultFrame_AdvancedSearchPanel:Hide()
 
-	AtlasLoot:HideFilterCreateButtons()
-
 	--Hide Map and reshow lootbackground
 	AtlasLootDefaultFrame_Map:Hide()
     AtlaslLoot_LootBackground:Show()
@@ -464,7 +500,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 	-- Hide the map header lable
 	Atlasloot_HeaderLabel:Hide()
 	local dataSource = _G[dataSource_backup] or AtlasLoot_Data
-	-- Check to see if Atlas is loaded and the table has a map
+	-- Enable map button if there is a map for this table.
 	if dataSource_backup ~= "AtlasLoot_TokenData" and dataSource[dataID].Map then
 		AtlasLootDefaultFrame_MapButton:Enable()
 		-- Stops map reseting to default while still in the same raid/instance table
@@ -859,7 +895,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 
 		-- Checks dataID with submenus to stop filter button loading on certain tables
 		local function filterCheck(find)
-			local mtype = {"Crafting", "Reputations", "WorldEvents", "PVP", "Collections", "CollectionsAscension", "Vanity"}
+			local mtype = {"Crafting", "Reputations", "WorldEvents", "PVP", "Collections", "Vanity"}
 			for _, t in pairs (mtype) do
 				if AtlasLoot_SubMenus[t..AtlasLoot_Expac] then
 					for _, v in ipairs (AtlasLoot_SubMenus[t..AtlasLoot_Expac]) do
