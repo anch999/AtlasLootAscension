@@ -950,22 +950,22 @@ AtlasLoot_Data["CoTHyjal"] = {
 	};
 	{
 		Name = AL["Chromius"].." Mythic/Ascended";
-		[1] = { itemID = 15828, [AtlasLoot_Difficulty.MIN_DIF] = AtlasLoot_Difficulty.Mythic }; --Final Countdown Bands
-		[2] = { itemID = 15831, [AtlasLoot_Difficulty.MIN_DIF] = AtlasLoot_Difficulty.Mythic }; --Girdle of Falling Sand
-		[3] = { itemID = 15898, [AtlasLoot_Difficulty.MIN_DIF] = AtlasLoot_Difficulty.Mythic }; --Hourglass Casing
-		[4] = { itemID = 15835, [AtlasLoot_Difficulty.MIN_DIF] = AtlasLoot_Difficulty.Mythic }; --Time Reaver's Gown
-		[5] = { itemID = 15840, [AtlasLoot_Difficulty.MIN_DIF] = AtlasLoot_Difficulty.Mythic }; --Timewaker's Treads
-		[6] = { itemID = 15896, [AtlasLoot_Difficulty.MIN_DIF] = AtlasLoot_Difficulty.Mythic }; --Cloak of the Final Hour
-		[7] = { itemID = 15834, [AtlasLoot_Difficulty.MIN_DIF] = AtlasLoot_Difficulty.Mythic }; --Aetherflux Shroud
-		[9] = { itemID = 15839, [AtlasLoot_Difficulty.MIN_DIF] = AtlasLoot_Difficulty.Mythic }; --Charm of the Chronomender
-		[10] = { itemID = 15899, [AtlasLoot_Difficulty.MIN_DIF] = AtlasLoot_Difficulty.Mythic }; --Amulet of Futures Past
-		[11] = { itemID = 15838, [AtlasLoot_Difficulty.MIN_DIF] = AtlasLoot_Difficulty.Mythic }; --Flickering Amulet
-		[12] = { itemID = 15836, [AtlasLoot_Difficulty.MIN_DIF] = AtlasLoot_Difficulty.Mythic }; --Pendant of the Evil Twin
-		[13] = { itemID = 15830, [AtlasLoot_Difficulty.MIN_DIF] = AtlasLoot_Difficulty.Mythic }; --Infinite Scale Talisman
-		[16] = { itemID = 18764, [AtlasLoot_Difficulty.MIN_DIF] = AtlasLoot_Difficulty.Mythic }; --Echo of Eons
-		[17] = { itemID = 15041, [AtlasLoot_Difficulty.MIN_DIF] = AtlasLoot_Difficulty.Mythic }; --Key of Time
-		[19] = { itemID = 29434, droprate = "100%", [AtlasLoot_Difficulty.MIN_DIF] = AtlasLoot_Difficulty.Mythic }; --Badge of Justice
-		[20] = { itemID = 98570, droprate = "100%", [AtlasLoot_Difficulty.MIN_DIF] = AtlasLoot_Difficulty.Mythic };
+		[1] = { itemID = 15828 }; --Final Countdown Bands
+		[2] = { itemID = 15831 }; --Girdle of Falling Sand
+		[3] = { itemID = 15898 }; --Hourglass Casing
+		[4] = { itemID = 15835 }; --Time Reaver's Gown
+		[5] = { itemID = 15840 }; --Timewaker's Treads
+		[6] = { itemID = 15896 }; --Cloak of the Final Hour
+		[7] = { itemID = 15834 }; --Aetherflux Shroud
+		[9] = { itemID = 15839 }; --Charm of the Chronomender
+		[10] = { itemID = 15899 }; --Amulet of Futures Past
+		[11] = { itemID = 15838 }; --Flickering Amulet
+		[12] = { itemID = 15836 }; --Pendant of the Evil Twin
+		[13] = { itemID = 15830 }; --Infinite Scale Talisman
+		[16] = { itemID = 18764 }; --Echo of Eons
+		[17] = { itemID = 15041 }; --Key of Time
+		[19] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
+		[20] = { itemID = 98570, droprate = "100%" };
 	};
 	{
 		Name = AL["Trash Mobs"].." - Items";
