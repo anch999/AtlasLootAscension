@@ -949,7 +949,7 @@ AtlasLoot_Data["CoTHyjal"] = {
 		[25] = { itemID = 1001620, droprate = "?%" };
 	};
 	{
-		Name = AL["Chromius"].." Mythic/Ascended";
+		Name = AL["Chromius"];
 		[1] = { itemID = 15828 }; --Final Countdown Bands
 		[2] = { itemID = 15831 }; --Girdle of Falling Sand
 		[3] = { itemID = 15898 }; --Hourglass Casing
