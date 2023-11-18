@@ -505,6 +505,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 		AtlasLootDefaultFrame_MapButton:Enable()
 		-- Stops map reseting to default while still in the same raid/instance table
 		if AtlasLootItemsFrame.refresh == nil or dataID ~= AtlasLootItemsFrame.refresh[1] then
+			AtlasLoot.MapNum = 1
 			AtlasLoot.CurrentMap = dataSource[dataID].Map
 			AtlasLoot:SetMapButtonText(AtlasLoot.CurrentMap)
 		end
