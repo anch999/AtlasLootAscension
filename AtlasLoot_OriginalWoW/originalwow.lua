@@ -2292,7 +2292,7 @@ AtlasLoot_Data["RazorfenKraul"] = {
 
 AtlasLoot_Data["Scarlet Monastery"] = {
 	Name = BabbleZone["Scarlet Monastery"];
-	Map = "SMArmory";
+	Map = "ScarletMonastery";
 	{
 		Name = "Armory";
 		[1] = { itemID = 7719, droprate = "30.62%" }; --Raging Berserker's Helm
