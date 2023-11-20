@@ -915,7 +915,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 		end
 
 		-- Show the Filter Check-Box
-		if filterCheck(dataID) ~= true then
+		if filterCheck(dataID) ~= true or dataSource[dataID].vanity then
 			AtlasLootFilterCheck:Show()
 		end
 
