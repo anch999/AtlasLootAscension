@@ -737,13 +737,16 @@ subtableFrame.rows = rows2
         mapFrame:SetScript("OnMouseDown", function(self, button)
             if button == "RightButton" then
                 AtlasLoot:MapOnShow()
+            elseif button == "LeftButton" then
+                --print(AtlasLoot:GetCursorCords())
             end
         end)
         mapFrame:EnableMouseWheel(true)
         mapFrame.cursorCords = mapFrame:CreateFontString(nil,"ARTWORK","GameFontNormal")
         mapFrame.cursorCords:SetPoint("TOPRIGHT", mapFrame, -10, 0)
         mapFrame.cursorCords:Show()
-        mapFrame.cursorCords:SetSize(100, 25)
+        mapFrame.cursorCords:SetSize(150, 25)
+        mapFrame.cursorCords:SetJustifyH("RIGHT")
         mapFrame:SetScript("OnMouseWheel", function(self,delta)
             if AtlasLootItemsFrame_NEXT:IsVisible() and delta == -1 then
                 AtlasLootItemsFrame_NEXT:Click()
@@ -754,8 +757,8 @@ subtableFrame.rows = rows2
         end)
 
         mapFrame:SetScript("OnShow", function() mapFrame.cursorCords:SetText(WHITE.."Cursor: ---") end)
-        mapFrame:SetScript("OnEnter", function() AtlasLoot.showCords = true AtlasLoot:CursorCords() end)
-        mapFrame:SetScript("OnUpdate", function() AtlasLoot:CursorCords() end)
+        mapFrame:SetScript("OnEnter", function() AtlasLoot.showCords = true AtlasLoot:MapOnEnter() end)
+        mapFrame:SetScript("OnUpdate", function() AtlasLoot:MapOnEnter() end)
         mapFrame:SetScript("OnLeave", function()
             AtlasLoot.showCords = false
             mapFrame.cursorCords:SetText(WHITE.."Cursor: ---")

@@ -375,6 +375,10 @@ end
 
 function AtlasLoot:ItemContextMenu(self, Type, number, craftingData)
     local itemID = self.itemID
+    local linkID = itemID
+    if Type == "spell" then
+        linkID = self.spellID
+    end
     if AtlasLoot.Dewdrop:IsOpen(self) then AtlasLoot.Dewdrop:Close() return end
     AtlasLoot.Dewdrop:Register(self,
         'point', function(parent)
@@ -392,7 +396,7 @@ function AtlasLoot:ItemContextMenu(self, Type, number, craftingData)
                 AtlasLoot.Dewdrop:AddLine(
                     'text', ORANGE..AL["Open AscensionDB To Entry"],
                     'func', function(arg1,arg2) AtlasLoot:OpenDBURL(arg1,arg2) end,
-                    'arg1',itemID,
+                    'arg1',linkID,
                     'arg2',Type,
                     'textHeight', 12,
                     'textWidth', 12,
@@ -401,7 +405,7 @@ function AtlasLoot:ItemContextMenu(self, Type, number, craftingData)
                 )
                 AtlasLoot.Dewdrop:AddLine(
                         "text", GREEN..AL["Guild"],
-                        "func", function() AtlasLoot:Chatlink(itemID,"GUILD",Type) end,
+                        "func", function() AtlasLoot:Chatlink(linkID,"GUILD",Type) end,
                         'closeWhenClicked', true,
                         'textHeight', 12,
                         'textWidth', 12,
@@ -409,7 +413,7 @@ function AtlasLoot:ItemContextMenu(self, Type, number, craftingData)
                     )
                     AtlasLoot.Dewdrop:AddLine(
                         "text", LIGHTBLUE..AL["Party"],
-                        "func", function() AtlasLoot:Chatlink(itemID,"PARTY",Type) end,
+                        "func", function() AtlasLoot:Chatlink(linkID,"PARTY",Type) end,
                         'closeWhenClicked', true,
                         'textHeight', 12,
                         'textWidth', 12,
@@ -417,7 +421,7 @@ function AtlasLoot:ItemContextMenu(self, Type, number, craftingData)
                     )
                     AtlasLoot.Dewdrop:AddLine(
                         "text", ORANGE2..AL["Raid"],
-                        "func", function() AtlasLoot:Chatlink(itemID,"RAID",Type) end,
+                        "func", function() AtlasLoot:Chatlink(linkID,"RAID",Type) end,
                         'closeWhenClicked', true,
                         'textHeight', 12,
                         'textWidth', 12,

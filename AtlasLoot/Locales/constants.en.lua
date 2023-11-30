@@ -199,6 +199,8 @@ if AL then
 	AL["Item Epic"] = true
 	AL["Mod Drop"] = true
 	AL["Limited Stock"] = true
+	AL["Smelting"] = true
+	AL["Materials"] = true
 
 	-- Sets/Collections Menu
 	AL["Badge of Justice Rewards"] = true

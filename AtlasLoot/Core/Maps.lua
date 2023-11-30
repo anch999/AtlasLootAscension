@@ -82,14 +82,19 @@ function AtlasLoot:CreateMapPins(list)
     end
 end
 
--- Track the coordinates off the mouse while it is on the map frame
-function AtlasLoot:CursorCords()
+function AtlasLoot:MapOnEnter()
+    local x, y = AtlasLoot:GetCursorCords()
     if AtlasLoot.showCords then
-        local scale,x, y = AtlasLootDefaultFrame_Map:GetEffectiveScale(), GetCursorPosition()
-        local width, height = AtlasLootDefaultFrame_Map:GetWidth()/100, AtlasLootDefaultFrame_Map:GetHeight()/100
-        x, y = math.ceil(((x/scale) - AtlasLootDefaultFrame_Map:GetLeft())/width), math.ceil((((y/scale) - AtlasLootDefaultFrame_Map:GetTop())/height) * -1)
         AtlasLootDefaultFrame_Map.cursorCords:SetText(WHITE.."Cursor: "..x.." , "..y)
     end
+end
+
+-- Track the coordinates off the mouse while it is on the map frame
+function AtlasLoot:GetCursorCords()
+    local scale,x, y = AtlasLootDefaultFrame_Map:GetEffectiveScale(), GetCursorPosition()
+    local width, height = AtlasLootDefaultFrame_Map:GetWidth()/100, AtlasLootDefaultFrame_Map:GetHeight()/100
+    x, y = math.ceil(((x/scale) - AtlasLootDefaultFrame_Map:GetLeft())/width), math.ceil((((y/scale) - AtlasLootDefaultFrame_Map:GetTop())/height) * -1)
+    return x, y
 end
 
 function AtlasLoot:PlayerPin(firstSet)

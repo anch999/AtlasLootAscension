@@ -562,6 +562,16 @@ ItemIDsDatabase[15836] = { 6015836, 15836, 315836, 215836 }
 ItemIDsDatabase[15835] = { 6015835, 15835, 315835, 215835 }
 ItemIDsDatabase[15840] = { 6015840, 15840, 315840, 215840 }
 
+ItemIDsDatabase[30312] = { 30312, 30312, 282620, 30312, MythicRaid = 30312 } --Infinity Blade
+ItemIDsDatabase[30311] = { 30311, 30311, 330311, 30311, MythicRaid = 30311 } --Warp Slicer
+ItemIDsDatabase[30317] = { 30317, 30317, 282672, 30317, MythicRaid = 30317 } --Cosmic Infuser
+ItemIDsDatabase[30316] = { 30316, 30316, 282659, 30316, MythicRaid = 30316 } --Devastation
+ItemIDsDatabase[30313] = { 30313, 30313, 282633, 30313, MythicRaid = 30313 } --Staff of Disintegration
+ItemIDsDatabase[30314] = { 30314, 30314, 282646, 30314, MythicRaid = 30314 } --Phaseshift Bulwark
+ItemIDsDatabase[30318] = { 30318, 30318, 282685, 30318, MythicRaid = 30318 } --Netherstrand Longbow
+ItemIDsDatabase[30319] = { 30319, 30319, 30319,  30319, MythicRaid = 30319 } --Nether Spike
+
+
 
 ItemIDsDatabase[48691] = { 48691, 48691, 1648691 }; --Tattered Dreadmist Robe
 ItemIDsDatabase[48687] = { 48687, 48687, 1648687 }; --Preened Ironfeather Breastplate
