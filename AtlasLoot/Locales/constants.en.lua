@@ -117,7 +117,9 @@ if AL then
 	AL["If checked, AtlasLoot will load and search across all the modules."] = true
 	AL["Search options"] = true
 	AL["Partial matching"] = true
+	AL["Search AscensionDB"] = true
 	AL["If checked, AtlasLoot search item names for a partial match."] = true
+	AL["If checked, AtlasLoot will open a browser window and search AscensionDB"] = true
 	AL["You don't have any module selected to search on!"] = true
 	AL["Treat Crafted Items:"] = true
 	AL["As Crafting Spells"] = true

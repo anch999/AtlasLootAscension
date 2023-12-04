@@ -96,13 +96,13 @@ AtlasLoot_Difficulty = {
     ["Crafting"] = {
         {"Normal", 2 },
     };
-    
+
     ["Search"] = {
         {"Bloodforged", 1},
         {"Normal", 2},
         {"Heroic", 3},
-        {"Mythic/Ascended", 4},
-        {"Mythic 1", 5 },  {"Mythic 2", 6 },  {"Mythic 3", 7 },  {"Mythic 4", 8 },  {"Mythic 5", 9 },
+        {"Mythic", 4},
+        {"Mythic 1/Ascended", 5 },  {"Mythic 2", 6 },  {"Mythic 3", 7 },  {"Mythic 4", 8 },  {"Mythic 5", 9 },
         {"Mythic 6", 10 }, {"Mythic 7", 11 }, {"Mythic 8", 12 }, {"Mythic 9", 13 }, {"Mythic 10", 14 },
         {"Mythic 11", 15 }, {"Mythic 12", 16 }, {"Mythic 13", 17 }, {"Mythic 14", 18 }, {"Mythic 15", 19 },
         {"Mythic 16", 20 }, {"Mythic 17", 21 }, {"Mythic 18", 22 }, {"Mythic 19", 23 }, {"Mythic 20", 24 },

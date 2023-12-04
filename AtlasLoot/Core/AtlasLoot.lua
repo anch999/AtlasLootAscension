@@ -14,7 +14,6 @@ AtlasLoot:IsLootTableAvailable(dataID)
 AtlasLoot:LoadAllModules()
 AtlasLoot:ShowFavorites(button)
 AtlasLoot:AddTooltip(frameb, tooltiptext)
-AtlasLoot:FindId(name, difficulty)
 ]]
 
 AtlasLoot = LibStub("AceAddon-3.0"):NewAddon("AtlasLoot", "AceEvent-3.0", "AceTimer-3.0")
@@ -476,7 +475,7 @@ It is the workhorse of the mod and allows the loot tables to be displayed any wa
 ]]
 function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 
-	local isValid, toShow, itemID, recipeID
+	local isValid, toShow, itemID, recipeID, orgItemID
 	SearchPrevData = {dataID, dataSource_backup, tablenum}
 	AtlasLoot.vanityItems = {}
 
@@ -588,6 +587,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 		toShow = true
 		local itemDif = ItemindexID
 		local itemID = item and item.itemID
+		local orgItemID = itemID
 		if item and item.itemID then
 			itemID = item.itemID
 			isValid = true
@@ -596,7 +596,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 				if item[AtlasLoot_Difficulty.MIN_DIF] > itemDif then
 					toShow = false
 				end
-				itemID = AtlasLoot:FindId(item.itemID, min(AtlasLoot:getMaxDifficulty(dataSource[dataID].Type), itemDif),dataSource[dataID].Type) or item.itemID
+				itemID = AtlasLoot:FindId(item.itemID, min(AtlasLoot:getMaxDifficulty(item.Type or dataSource[dataID].Type), itemDif), item.Type or dataSource[dataID].Type, dataSource[dataID].Type ) or item.itemID
 			end
 
 			if toShow then
@@ -608,11 +608,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 					if tonumber(item[AtlasLoot_Difficulty.MAX_DIF]) < itemDif then itemDif = item[AtlasLoot_Difficulty.MAX_DIF] end
 				end
 				--If something was found in itemID database show that if not show default table item
-				itemID = itemDif ~= 2 and AtlasLoot:FindId(item.itemID, itemDif, dataSource[dataID].Type) or item.itemID
-
-				if ItemindexID ~= "" and dataID == "SearchResult" then
-					itemID = AtlasLoot:FindId(item[9], itemDif, dataSource[dataID].Type) or item.itemID
-				end
+				itemID = AtlasLoot:FindId(item.itemID, itemDif, item.Type or dataSource[dataID].Type, dataSource[dataID].Type) or item.itemID
 			end
 		elseif item and (item.spellID or item.icon) or item and itemID then
 			isValid = true
@@ -622,7 +618,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 		if item and item.spellID then
 			recipeID = AtlasLoot:GetRecipeID(item.spellID)
 		end
-		return isValid, toShow, itemID, recipeID
+		return isValid, toShow, itemID, recipeID, orgItemID
 	end
 
 	-- Setup the button for the to be displayed item/spell
@@ -666,6 +662,10 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 			end
 		elseif itemID then
 			itemName, _, itemQuality, _, _, _, itemSubType, _, itemEquipLoc, _ = GetItemInfo(itemID)
+				if not itemName then
+					itemID = orgItemID
+					itemName, _, itemQuality, _, _, _, itemSubType, _, itemEquipLoc, _ = GetItemInfo(itemID)
+				end
 			--If the client has the name of the item in cache, use that instead.					
 			if dataSource[dataID][tablenum][i].name then
 				--If it has a manuel entry use that
@@ -820,12 +820,12 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 		itemButton:Show()
 	end
 
-	local function getItemData(itemID, i)
+	local function getItemData(itemID, i, orgItemID)
 		local item = Item:CreateFromID(itemID)
 		AtlasLoot:ItemsLoading(1)
 		item:ContinueOnLoad(function(itemID)
 			AtlasLoot:ItemsLoading(-1)
-			setupButton(itemID, i, dataSource, dataID, tablenum, dataSource_backup)
+			setupButton(itemID, i, dataSource, dataID, tablenum, dataSource_backup, orgItemID)
 		end)
 	end
 
@@ -838,15 +838,15 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 			local itemButton = _G["AtlasLootItem_"..i]
 			local hightlightFrame = _G["AtlasLootItem_"..i.."_Highlight"]
 			--Check for a valid object (that it exists, and that it has a name
-			isValid, toShow, itemID, recipeID = getProperItemConditionals(dataSource[dataID][tablenum][i])
+			isValid, toShow, itemID, recipeID, orgItemID = getProperItemConditionals(dataSource[dataID][tablenum][i])
 			if isValid and toShow then
 				hightlightFrame:Hide()
 				if itemID then
-					getItemData(itemID, i)
+					getItemData(itemID, i, orgItemID)
 				elseif recipeID then
 					getItemData(recipeID, i)
 				else
-					setupButton(itemID, i, dataSource, dataID, tablenum, dataSource_backup)
+					setupButton(itemID, i, dataSource, dataID, tablenum, dataSource_backup, orgItemID)
 				end
 			else
 				itemButton:Hide()

@@ -741,6 +741,7 @@ subtableFrame.rows = rows2
                 --print(AtlasLoot:GetCursorCords())
             end
         end)
+        
         mapFrame:EnableMouseWheel(true)
         mapFrame.cursorCords = mapFrame:CreateFontString(nil,"ARTWORK","GameFontNormal")
         mapFrame.cursorCords:SetPoint("TOPRIGHT", mapFrame, -10, 0)
