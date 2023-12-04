@@ -58,13 +58,14 @@ end
 function AtlasLoot:SetDroprateTooltip(self)
     if not self.droprate then return end
     if type(self.droprate) == "table" then
-        if not self.droprate[ItemindexID-1] then return end
+        if not self.droprate[ItemindexID] then return end
+        local dropIndex = ItemindexID
         if ItemindexID == 5 then
-            ItemindexID = 4
+            dropIndex = 4
         elseif ItemindexID == 4 then
-            ItemindexID = 5
+            dropIndex = 5
         end
-        GameTooltip:AddLine(AL["Drop Rate: "]..self.droprate[ItemindexID-1], 1, 1, 0)
+        GameTooltip:AddLine(AL["Drop Rate: "]..self.droprate[dropIndex], 1, 1, 0)
     else
         GameTooltip:AddLine(AL["Drop Rate: "]..self.droprate, 1, 1, 0)
     end

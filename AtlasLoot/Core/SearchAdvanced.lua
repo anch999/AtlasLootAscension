@@ -221,10 +221,7 @@ end
 
 function AtlasLoot:AdvancedSearchClose()
     AtlasLootDefaultFrame_AdvancedSearchPanel:Hide()
-
-    if (SearchPrevData[1] ~= "") then
-        AtlasLoot:ShowItemsFrame(SearchPrevData[1], SearchPrevData[2], SearchPrevData[3])
-    end
+    AtlasLoot:ItemFrameRefresh()
 end
 
 function AtlasLoot:AdvancedSearchReset()

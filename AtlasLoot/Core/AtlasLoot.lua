@@ -54,7 +54,6 @@ local itemHighlightGreen = "Interface\\AddOns\\AtlasLoot\\Images\\knownGreen"
 
 --Search panel open and close save variables
 --dataID, dataSource, pFrame, tablenumber
-SearchPrevData = {"", "", ""}
 
 AtlasLootCharDB = {}
 AtlasLoot_TokenData = {}
@@ -476,7 +475,6 @@ It is the workhorse of the mod and allows the loot tables to be displayed any wa
 function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 
 	local isValid, toShow, itemID, recipeID, orgItemID
-	SearchPrevData = {dataID, dataSource_backup, tablenum}
 	AtlasLoot.vanityItems = {}
 
     --If the loot table name has not been passed, throw up a debugging statement
