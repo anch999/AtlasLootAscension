@@ -7,6 +7,7 @@ local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
 			{ "", "Toys" },
 			{ "", "Seasonal" },
 			{ "", "Consumable" },
+			{ "", "Uncategorized" },
 			{ "Weapons", "", {
 				{ "", "Axe1H" },
 				{ "", "Axe2H" },

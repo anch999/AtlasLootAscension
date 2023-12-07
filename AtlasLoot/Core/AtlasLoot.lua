@@ -1228,81 +1228,42 @@ function AtlasLoot:LoadTradeskillRecipes()
 		content:Parse()
 end
 
-local CollectionNames = {
-	 ["Convenience"] = "Convenience",
-	 ["Mounts"] = "Mounts",
-	 ["Pets"] = "Pets",
-	 ["Toys"] = "Toys",
-	 ["Seasonal"] = "Seasonal",
-	 ["Consumable"] = "Consumable",
-	 ["Axe1H"] = "One-Handed Axes",
-	 ["Axe2H"] = "Two-Handed Axes",
-	 ["Sword1H"] = AL["One-Handed Sword"],
-	 ["Sword2H"] = AL["Two-Handed Sword"],
-	 ["Mace1H"] = AL["One-Handed Mace"],
-	 ["Mace2H"] = AL["Two-Handed Mace"],
-	 ["Dagger"] = "Dagger",
-	 ["Fist"] = "Fist",
-	 ["Shield"] = "Shield",
-	 ["Polearm"] = "Polearm",
-	 ["Bow"] = "Bow",
-	 ["Gun"] = "Gun",
-	 ["Crossbow"] = "Crossbow",
-	 ["Thrown"] = "Thrown",
-	 ["Wand"] = "Wand",
-	 ["Staff"] = "Staff",
-	 ["FishingPole"] = "FishingPole",
-	 ["OffHand"] = "OffHand",
-	 ["Head"] = "Head",
-	 ["Shoulder"] = "Shoulder",
-	 ["Chest"] = "Chest",
-	 ["Waist"] = "Waist",
-	 ["Legs"] = "Legs",
-	 ["Feet"] = "Feet",
-	 ["Wrist"] = "Wrist",
-	 ["Hands"] = "Hands",
-	 ["Back"] = "Back",
-	 ["Cloth"] = "Cloth",
-	 ["Leather"] = "Leather",
-	 ["Mail"] = "Mail",
-	 ["Plate"] = "Plate",
-	 ["Sets"] = "Sets",
-	 ["Visual"] = "Visual",
-	 ["Effect"] = "Effect",
-	 ["Incarnation"] = "Incarnation",
-	 ["Shirt"] = "Shirt",
-	 ["Tabard"] = "Tabard",
-	 ["Backpack"] = "Backpack",
-	 ["Illusion"] = "Illusion",
-	 ["Whistle"] = "Whistle",
-	 ["SummonStone"] = "SummonStone",
-	 ["Vellum"] = "Vellum",
-	 ["Warhorn"] = "Warhorn",
-	 ["Lodestone"] = "Lodestone",
-}
+local function CollectionNames(cat)
+	local C_names = {
+		["Axe1H"] = "One-Handed Axes",
+		["Axe2H"] = "Two-Handed Axes",
+		["Sword1H"] = AL["One-Handed Sword"],
+		["Sword2H"] = AL["Two-Handed Sword"],
+		["Mace1H"] = AL["One-Handed Mace"],
+		["Mace2H"] = AL["Two-Handed Mace"],
+	}
+	return C_names[cat] or cat
+end
 
 function AtlasLoot:CreateVanityCollection()
-
 	local function findGroup(group)
 		for cat,v in pairs(Enum.VanityCategory) do
 			if type(v) == "table" then
 				for catT, t in pairs(v) do
-					if not AtlasLoot_Data[catT] then AtlasLoot_Data[catT] = { Name = CollectionNames[catT], vanity = true } end
+					if not AtlasLoot_Data[catT] then AtlasLoot_Data[catT] = { Name = CollectionNames(catT), vanity = true } end
 					if bit.contains(group, t) then
 						return catT
 					end
 				end
 			else
-				if not AtlasLoot_Data[cat] then AtlasLoot_Data[cat] = { Name = CollectionNames[cat], vanity = true } end
+				if not AtlasLoot_Data[cat] then AtlasLoot_Data[cat] = { Name = CollectionNames(cat), vanity = true } end
 				if bit.contains(group, v) then
 					return cat
 				end
 			end
 		end
+		if not AtlasLoot_Data["Uncategorized"] then AtlasLoot_Data["Uncategorized"] = { Name = CollectionNames("Uncategorized"), vanity = true } end
+		return "Uncategorized"
 	end
 
 	for _,item in pairs(VANITY_ITEMS) do
 		local group = findGroup(item.group)
+		if not group then break end
 		if #AtlasLoot_Data[group] == 0 or #AtlasLoot_Data[group][#AtlasLoot_Data[group]] == 30 then
 			tinsert(AtlasLoot_Data[group], {Name = "Page "..(#AtlasLoot_Data[group] +1)})
 		end

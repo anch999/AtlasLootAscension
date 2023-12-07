@@ -116,12 +116,14 @@ AtlasLoot_Data["Heirloom"] = {
 		[22] = { itemID = 1644099, price = "800 #tokenofprestige# | 128000 #marks# | 600 #bazaar#"  }; --Strengthened Stockade Pauldrons
 	},
 	{
-		Name = "Trinkets/Rings";
+		Name = AL["Accessories"];
 		[1] = { itemID = 1642992, price = "500 #tokenofprestige# | 80000 #marks# | 500 #bazaar#"  }; --Discerning Eye of the Beast
 		[2] = { itemID = 1642991, price = "500 #tokenofprestige# | 80000 #marks# | 500 #bazaar#"  }; --Swift Hand of Justice
 		[3] = { itemID = 1644098, price = "500 #tokenofprestige# | 80000 #marks# | 500 #bazaar#"  }; --Inherited Insignia of the Alliance
 		[4] = { itemID = 1644097, price = "500 #tokenofprestige# | 80000 #marks# | 500 #bazaar#"  }; --Inherited Insignia of the Horde
-		[5] = { itemID = 50255 }; --Dread Pirate Ring
+		[5] = { itemID = 339076, price = ""  }; --Pendant of Adventure
+		[6] = { itemID = 339100, price = ""  }; --Pendant of Discovery
+		[7] = { itemID = 50255 }; --Dread Pirate Ring
 	},
 	{
 		Name = "Weapons";
