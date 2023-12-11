@@ -19,6 +19,7 @@ AtlasLoot:AddTooltip(frameb, tooltiptext)
 AtlasLoot = LibStub("AceAddon-3.0"):NewAddon("AtlasLoot", "AceEvent-3.0", "AceTimer-3.0")
 
 local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
+local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0")
 
 --Establish version number and compatible version of Atlas
 local VERSION_MAJOR = "5";
@@ -467,12 +468,28 @@ end
 
 --Creates tables for raid tokens from the collections tables
 function AtlasLoot:CreateOnDemandLootTable(type)
+	-- Return and show loot table if its already been created
 	if AtlasLoot_OnDemand and AtlasLoot_OnDemand[type] then return AtlasLoot:ShowItemsFrame(type, "AtlasLoot_OnDemand", 1) end
+	-- Create ondemand loot table if it dosnt exist
 	if not AtlasLoot_OnDemand then AtlasLoot_OnDemand = {} end
 
-	local equipSlot = { INVTYPE_HEAD = "Head", INVTYPE_SHOULDER = "Shoulders", INVTYPE_CHEST = "Chest", INVTYPE_WRIST = "Wrists", INVTYPE_HAND = "Hands",
-						INVTYPE_WAIST = "Waist", INVTYPE_LEGS = "Legs", INVTYPE_FEET = "Feet", INVTYPE_FINGER = "Rings", INVTYPE_CLOAK = "Back", INVTYPE_NECK = "Necklace",
-						INVTYPE_WEAPONOFFHAND = "Offhand", INVTYPE_WEAPONMAINHAND = "Mainhand", INVTYPE_TRINKET = "Trinket", INVTYPE_HOLDABLE = "Caster Offhand"}
+	-- Text Conversion
+	local equipSlot = {
+		INVTYPE_HEAD = BabbleInventory["Head"], INVTYPE_SHOULDER = BabbleInventory["Shoulder"], INVTYPE_CHEST = BabbleInventory["Chest"],
+		INVTYPE_WRIST = BabbleInventory["Wrist"], INVTYPE_HAND = BabbleInventory["Hands"], INVTYPE_WAIST = BabbleInventory["Waist"],
+		INVTYPE_LEGS = BabbleInventory["Legs"], INVTYPE_FEET = BabbleInventory["Feet"], INVTYPE_FINGER = BabbleInventory["Ring"],
+		INVTYPE_CLOAK = BabbleInventory["Back"], INVTYPE_NECK = BabbleInventory["Neck"], INVTYPE_WEAPONOFFHAND = BabbleInventory["Off Hand"],
+		INVTYPE_WEAPONMAINHAND = "Mainhand", INVTYPE_TRINKET = "Trinket", INVTYPE_HOLDABLE = "Caster Offhand"}
+	
+	local function correctText(text)
+		text = gsub(text, "Cloth Armor %- Back", "Back")
+		text = gsub(text, "Miscellaneous Armor %- " , "")
+		text = gsub(text, "Armor %- " , "Armor "..WHITE.."%- ")
+		text = gsub(text, "Weapon %- " , WHITE.."%- ")
+		return text
+	end
+	
+	-- Combind robes with chest
 	local function getEquip(equipLoc)
 		if equipLoc == "INVTYPE_ROBE" then
 			return "INVTYPE_CHEST"
@@ -480,6 +497,7 @@ function AtlasLoot:CreateOnDemandLootTable(type)
 		return equipLoc
 	end
 
+	-- Show the loot table or refresh it
 	local firstLoad
 	local function showTable()
 		if firstLoad then
@@ -490,16 +508,8 @@ function AtlasLoot:CreateOnDemandLootTable(type)
 		end
 	end
 
-	local function correctText(text)
-		text = gsub(text, "Cloth Armor %- Back", "Back")
-		text = gsub(text, "Miscellaneous Armor %- " , "")
-		text = gsub(text, "Armor %- " , "Armor "..WHITE.."%- ")
-		text = gsub(text, "Weapon %- " , WHITE.."%- ")
-		return text
-	end
-
 	local unsorted = {}
-
+	-- Creates type catagorys and then adds items to them
 	local function sortItem(item, armorSubType, equipLoc, armorType)
 		if not unsorted[armorSubType] then unsorted[armorSubType] = {} end
 		if equipLoc and not unsorted[armorSubType][getEquip(equipLoc)] then unsorted[armorSubType][getEquip(equipLoc)] = {} end
@@ -526,6 +536,7 @@ function AtlasLoot:CreateOnDemandLootTable(type)
 		showTable()
 	end
 
+	-- Load items to cache and check they are either an armor or weapon
 	local function processItem(itemData)
 		if not itemData then return end
 		local item = Item:CreateFromID(itemData.itemID)
@@ -563,7 +574,7 @@ function AtlasLoot:CreateOnDemandLootTable(type)
 			end
 		end
 	end
-
+	wipe(checkList)
 	-- rate limit tied to half the current frame rate
 	AtlasLoot:ItemsLoading(#itemList)
 	local maxDuration = 500/GetFramerate()
