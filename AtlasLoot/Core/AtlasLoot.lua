@@ -550,11 +550,13 @@ function AtlasLoot:CreateOnDemandLootTable(type)
 
 	--Fills table with items
 	local itemList = {}
+	local checkList = {}
 	for _, data in pairs(AtlasLoot_Data) do
 		if data.Type == type then
 			for _, t in ipairs(data) do
 				for _, itemData in pairs(t) do
-					if itemData.itemID then
+					if itemData.itemID and not checkList[itemData.itemID] then
+						checkList[itemData.itemID] = true
 						tinsert(itemList, {itemData})
 					end
 				end
