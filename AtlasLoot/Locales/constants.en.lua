@@ -532,7 +532,7 @@ if AL then
 
 	-- Labels for loot table sections
 	AL["Additional Heroic Loot"] = true
-	AL["Ascended Mode"] = true
+	AL["Heroic Mode"] = true
 	AL["Normal Mode"] = true
 	AL["Raid"] = true
 	AL["Hard Mode"] = true

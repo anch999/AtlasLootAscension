@@ -209,7 +209,7 @@ function AtlasLoot:FixText(text)
     -- Misc
     text = gsub(text, "#j1#", AL["Normal Mode"])
     text = gsub(text, "#j2#", AL["Raid"])
-    text = gsub(text, "#j3#", AL["Ascended Mode"])
+    text = gsub(text, "#j3#", AL["Heroic Mode"])
     text = gsub(text, "#j5#", AL["Dungeon Set 2 Summonable"])
     text = gsub(text, "#j6#", AL["Dungeon Set 1"])
     text = gsub(text, "#j7#", AL["Dungeon Set 2"])

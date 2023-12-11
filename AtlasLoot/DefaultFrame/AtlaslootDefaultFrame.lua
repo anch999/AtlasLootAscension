@@ -99,12 +99,18 @@ AtlasLoot:DewDropSubMenuClick(tablename):
 tablename - Name of the loot table in the database
 Called when a button in AtlasLoot.DewdropSubMenu is clicked
 ]]
-function AtlasLoot:DewDropSubMenuClick(tablename)
+function AtlasLoot:DewDropSubMenuClick(tablename, onDamand)
+    local dataSource = "AtlasLoot_Data"
     AtlasLoot.backEnabled = false
-    --Show the select loot table
-    local tablenum = AtlasLoot_Data[tablename].Loadfirst or 1
-    --Show the table that has been selected
-    AtlasLoot:ShowItemsFrame(tablename, "AtlasLoot_Data", tablenum)
+    if  onDamand then
+		dataSource = "AtlasLoot_OnDemand"
+		AtlasLoot:CreateOnDemandLootTable(onDamand)
+	else
+        --Show the select loot table
+        local tablenum = _G[dataSource][tablename].Loadfirst or 1
+        --Show the table that has been selected
+        AtlasLoot:ShowItemsFrame(tablename, dataSource, tablenum)
+    end
 end
 
 
@@ -193,9 +199,8 @@ function AtlasLoot:DewdropSubMenuOpen(loottable)
                                 )
                             else
                                 AtlasLoot.Dewdrop:AddLine(
-                                    'text', AtlasLoot_Data[v[2]].Name,
-                                    'func', function(arg1) AtlasLoot:DewDropSubMenuClick(arg1) end,
-                                    'arg1', v[2],
+                                    'text', AtlasLoot_Data[v[2]] and AtlasLoot_Data[v[2]].Name or v[1],
+                                    'func', function() AtlasLoot:DewDropSubMenuClick(v[2], v.OnDamand) end,
                                     'textHeight', 12,
                                     'textWidth', 12,
                                     'closeWhenClicked', true,
@@ -208,7 +213,7 @@ function AtlasLoot:DewdropSubMenuOpen(loottable)
                 end
             elseif level == 2 then
                 if value then
-                    for _,v in pairs(value) do
+                    for k,v in pairs(value) do
                         if v[3] == "Header" then
                             if k ~= 1 then AtlasLoot:AddDividerLine(40) end
                             AtlasLoot.Dewdrop:AddLine(
@@ -218,19 +223,19 @@ function AtlasLoot:DewdropSubMenuOpen(loottable)
                                 'textB', 0.5,
                                 'textHeight', 13,
                                 'textWidth', 13,
-                                'func', function() AtlasLoot:DewDropSubMenuClick(v[2]) end,
+                                'func', function() AtlasLoot:DewDropSubMenuClick(v[2], v.OnDamand) end,
                                 'notCheckable', true
                             )
                         elseif type(v) == "table" then
                             AtlasLoot.Dewdrop:AddLine(
-                                "text", AtlasLoot_Data[v[2]].Name,
-                                "func", function() AtlasLoot:DewDropSubMenuClick(v[2]) end,
+                                "text", function() return AtlasLoot_Data[v[2]] and AtlasLoot_Data[v[2]].Name or v[1] end,
+                                "func", function() AtlasLoot:DewDropSubMenuClick(v[2], v.OnDamand) end,
                                 'textHeight', 12,
                                 'textWidth', 12,
                                 'closeWhenClicked', true,
                                 "notCheckable", true
                             )
-                        end    
+                        end
                     end
                 end
             end

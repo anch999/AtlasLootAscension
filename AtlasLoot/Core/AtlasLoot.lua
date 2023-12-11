@@ -465,6 +465,123 @@ function AtlasLoot:CreateToken(dataID)
 	end
 end
 
+--Creates tables for raid tokens from the collections tables
+function AtlasLoot:CreateOnDemandLootTable(type)
+	if AtlasLoot_OnDemand and AtlasLoot_OnDemand[type] then return AtlasLoot:ShowItemsFrame(type, "AtlasLoot_OnDemand", 1) end
+	if not AtlasLoot_OnDemand then AtlasLoot_OnDemand = {} end
+
+	local equipSlot = { INVTYPE_HEAD = "Head", INVTYPE_SHOULDER = "Shoulders", INVTYPE_CHEST = "Chest", INVTYPE_WRIST = "Wrists", INVTYPE_HAND = "Hands",
+						INVTYPE_WAIST = "Waist", INVTYPE_LEGS = "Legs", INVTYPE_FEET = "Feet", INVTYPE_FINGER = "Rings", INVTYPE_CLOAK = "Back", INVTYPE_NECK = "Necklace",
+						INVTYPE_WEAPONOFFHAND = "Offhand", INVTYPE_WEAPONMAINHAND = "Mainhand", INVTYPE_TRINKET = "Trinket", INVTYPE_HOLDABLE = "Caster Offhand"}
+	local function getEquip(equipLoc)
+		if equipLoc == "INVTYPE_ROBE" then
+			return "INVTYPE_CHEST"
+		end
+		return equipLoc
+	end
+
+	local firstLoad
+	local function showTable()
+		if firstLoad then
+			AtlasLoot:ShowItemsFrame(AtlasLootItemsFrame.refresh[1], AtlasLootItemsFrame.refresh[2], AtlasLootItemsFrame.refresh[3])
+		else
+			AtlasLoot:ShowItemsFrame(type, "AtlasLoot_OnDemand", 1)
+			firstLoad = true
+		end
+	end
+
+	local function correctText(text)
+		text = gsub(text, "Cloth Armor %- Back", "Back")
+		text = gsub(text, "Miscellaneous Armor %- " , "")
+		text = gsub(text, "Armor %- " , "Armor "..WHITE.."%- ")
+		text = gsub(text, "Weapon %- " , WHITE.."%- ")
+		return text
+	end
+
+	local unsorted = {}
+
+	local function sortItem(item, armorSubType, equipLoc, armorType)
+		if not unsorted[armorSubType] then unsorted[armorSubType] = {} end
+		if equipLoc and not unsorted[armorSubType][getEquip(equipLoc)] then unsorted[armorSubType][getEquip(equipLoc)] = {} end
+		if equipLoc then
+			tinsert(unsorted[armorSubType][getEquip(equipLoc)], {item, armorType})
+		else
+			tinsert(unsorted[armorSubType]["Misc"], {item, armorType})
+		end
+		AtlasLoot_OnDemand[type] = {Name = "All Dungeon Items", Type = type, filter = true }
+
+		for aType, v in pairs(unsorted) do
+			for eLoc, t in pairs(v) do
+				for i, items in ipairs(t) do
+					local name = equipSlot[getEquip(eLoc)] and aType.." "..items[2].." - "..equipSlot[getEquip(eLoc)] or aType
+					if #t > 30 and (i == 1 or i == 31 or i == 61 or i == 91)  then
+						tinsert(AtlasLoot_OnDemand[type],{Name = correctText(name)..WHITE.." - Page".. math.ceil(i/30) })
+					elseif i == 1 then
+						tinsert(AtlasLoot_OnDemand[type],{Name = correctText(name)})
+					end
+					tinsert(AtlasLoot_OnDemand[type][#AtlasLoot_OnDemand[type]], items[1])
+				end
+			end
+		end
+		showTable()
+	end
+
+	local function processItem(itemData)
+		if not itemData then return end
+		local item = Item:CreateFromID(itemData.itemID)
+		if itemData.itemID then
+			if not item:GetInfo() then
+				item:ContinueOnLoad(function()
+					AtlasLoot:ItemsLoading(-1)
+					local armorType, armorSubType, _, equipLoc = select(6,GetItemInfo(itemData.itemID))
+					if (armorType == "Armor" or armorType == "Weapon") then
+						sortItem(itemData, armorSubType, equipLoc, armorType)
+					end
+				end)
+			else
+				AtlasLoot:ItemsLoading(-1)
+				local armorType, armorSubType, _, equipLoc = select(6,GetItemInfo(itemData.itemID))
+				if (armorType == "Armor" or armorType == "Weapon") then
+					sortItem(itemData, armorSubType, equipLoc, armorType)
+				end
+			end
+		end
+	end
+
+	--Fills table with items
+	local itemList = {}
+	for _, data in pairs(AtlasLoot_Data) do
+		if data.Type == type then
+			for _, t in ipairs(data) do
+				for _, itemData in pairs(t) do
+					if itemData.itemID then
+						tinsert(itemList, {itemData})
+					end
+				end
+			end
+		end
+	end
+
+	-- rate limit tied to half the current frame rate
+	AtlasLoot:ItemsLoading(#itemList)
+	local maxDuration = 500/GetFramerate()
+	local startTime = debugprofilestop()
+	local function continue()
+		startTime = debugprofilestop()
+		local task = tremove(itemList)
+		while (task) do
+			processItem(task[1])
+			if (debugprofilestop() - startTime > maxDuration) then
+				Timer.After(0, continue)
+				return
+			end
+			task = tremove(itemList)
+		end
+	end
+
+	return continue()
+end
+
 --[[
 AtlasLoot:ShowItemsFrame(dataID, dataSource, tablenum):
 dataID - Name of the loot table
@@ -498,7 +615,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 	Atlasloot_HeaderLabel:Hide()
 	local dataSource = _G[dataSource_backup] or AtlasLoot_Data
 	-- Enable map button if there is a map for this table.
-	if dataSource_backup ~= "AtlasLoot_TokenData" and dataSource[dataID].Map then
+	if dataSource_backup ~= "AtlasLoot_OnDemand" and dataSource_backup ~= "AtlasLoot_TokenData" and dataSource[dataID].Map then
 		AtlasLootDefaultFrame_MapButton:Enable()
 		-- Stops map reseting to default while still in the same raid/instance table
 		if AtlasLootItemsFrame.refresh == nil or dataID ~= AtlasLootItemsFrame.refresh[1] then
@@ -823,7 +940,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 		AtlasLoot:ItemsLoading(1)
 		item:ContinueOnLoad(function(itemID)
 			AtlasLoot:ItemsLoading(-1)
-			setupButton(itemID, i, dataSource, dataID, tablenum, dataSource_backup, orgItemID)
+			setupButton(itemID, i, dataSource, dataID, tablenum, dataSource_backup)
 		end)
 	end
 
@@ -844,7 +961,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 				elseif recipeID then
 					getItemData(recipeID, i)
 				else
-					setupButton(itemID, i, dataSource, dataID, tablenum, dataSource_backup, orgItemID)
+					setupButton(itemID, i, dataSource, dataID, tablenum, dataSource_backup)
 				end
 			else
 				itemButton:Hide()
@@ -885,7 +1002,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 			AtlasLootItemsFrame.refreshSearch = nil
 		end
 
-		if dataID ~= "SearchResult" and dataSource_backup ~= "AtlasLoot_CurrentWishList" and dataID ~= "FilterList"  and
+		if dataSource_backup ~= "AtlasLoot_OnDemand" and dataID ~= "SearchResult" and dataSource_backup ~= "AtlasLoot_CurrentWishList" and dataID ~= "FilterList"  and
 		dataSource[dataID].Back ~= true and dataID ~= "EmptyTable" and not dataSource[dataID].vanity then
 			if not AtlasLoot.db.profile.LastBoss or type(AtlasLoot.db.profile.LastBoss) ~= "table" then AtlasLoot.db.profile.LastBoss = {} end
 			AtlasLoot.db.profile.LastBoss[AtlasLoot_Expac] = {dataID, dataSource_backup, tablenum, AtlasLoot.lastModule, AtlasLoot.currentTable, AtlasLoot.moduleName}
@@ -913,7 +1030,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 		end
 
 		-- Show the Filter Check-Box
-		if filterCheck(dataID) ~= true or dataSource[dataID].vanity then
+		if filterCheck(dataID) ~= true or dataSource[dataID].vanity or dataSource[dataID].filter then
 			AtlasLootFilterCheck:Show()
 		end
 
