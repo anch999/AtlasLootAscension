@@ -76,6 +76,7 @@ local SPELLFIRE = GetSpellInfo(26797);
 --- Alchemy ---
 ---------------
 AtlasLoot_Data["AlchemyTBC"] = {
+	Module = "AtlasLoot_Crafting_TBC";
 	Name = ALCHEMY;
 	Type = "Crafting";
 	{
@@ -203,6 +204,7 @@ AtlasLoot_Data["AlchemyTBC"] = {
 ---------------------
 
 AtlasLoot_Data["SmithingTBC"] = {
+	Module = "AtlasLoot_Crafting_TBC";
 	Name = BLACKSMITHING;
 	Type = "Crafting";
 	{
@@ -466,6 +468,7 @@ AtlasLoot_Data["SmithingTBC"] = {
 ---------------
 
 AtlasLoot_Data["CookingTBC"] = {
+	Module = "AtlasLoot_Crafting_TBC";
 	Name = COOKING;
 	Type = "Crafting";
 	{
@@ -635,6 +638,7 @@ AtlasLoot_Data["CookingTBC"] = {
 ------------------
 
 AtlasLoot_Data["EnchantingTBC"] = {
+	Module = "AtlasLoot_Crafting_TBC";
 	Name = ENCHANTING;
 	Type = "Crafting";
 	{
@@ -779,6 +783,7 @@ AtlasLoot_Data["EnchantingTBC"] = {
 -------------------
 
 AtlasLoot_Data["EngineeringTBC"] = {
+	Module = "AtlasLoot_Crafting_TBC";
 	Name = ENGINEERING;
 	Type = "Crafting";
 	{
@@ -909,6 +914,7 @@ AtlasLoot_Data["EngineeringTBC"] = {
 -----------------
 
 AtlasLoot_Data["FirstAid"] = {
+	Module = "AtlasLoot_Crafting_TBC";
 	Name = FIRSTAID;
 	{
 		Name = FIRSTAID;
@@ -937,6 +943,7 @@ AtlasLoot_Data["FirstAid"] = {
 ---------------------
 
 AtlasLoot_Data["JewelcraftingTBC"] = {
+	Module = "AtlasLoot_Crafting_TBC";
 	Name = JEWELCRAFTING;
 	Type = "Crafting";
 	{
@@ -1261,6 +1268,7 @@ AtlasLoot_Data["JewelcraftingTBC"] = {
 --- Leatherworking ---
 ----------------------
 AtlasLoot_Data["LeatherworkingTBC"] = {
+	Module = "AtlasLoot_Crafting_TBC";
 	Name = LEATHERWORKING;
 	Type = "Crafting";
 	{
@@ -1509,6 +1517,7 @@ AtlasLoot_Data["LeatherworkingTBC"] = {
 };
 
 AtlasLoot_Data["MiningTBC"] = {
+	Module = "AtlasLoot_Crafting_TBC";
 	Name = MINING;
 	{
 		Name = MINING;
@@ -1525,6 +1534,7 @@ AtlasLoot_Data["MiningTBC"] = {
 };
 
 AtlasLoot_Data["FirstAidTBC"] = {
+	Module = "AtlasLoot_Crafting_TBC";
 	Name = FIRSTAID;
 	{
 		Name = FIRSTAID;
@@ -1539,6 +1549,7 @@ AtlasLoot_Data["FirstAidTBC"] = {
 
 
 AtlasLoot_Data["TailoringTBC"] = {
+	Module = "AtlasLoot_Crafting_TBC";
 	Name = TAILORING;
 	Type = "Crafting";
 	{

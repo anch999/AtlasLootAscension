@@ -109,6 +109,7 @@ local scaleOfSandsRings = {
 ------------
 
 AtlasLoot_Data["BCKeys"] = {
+	Module = "AtlasLoot_BurningCrusade";
 	Name = "BCKeys";
 	{
 		Name = "BCKeys";
@@ -136,6 +137,7 @@ AtlasLoot_Data["BCKeys"] = {
 -----------------------------------
 
 AtlasLoot_Data["AuchCrypts"] = {
+	Module = "AtlasLoot_BurningCrusade";
 	Name = BabbleZone["Auchindoun"] .. ": " .. BabbleZone["Auchenai Crypts"];
 	DisplayName = BabbleZone["Auchenai Crypts"];
 	Type = "BCDungeon";
@@ -201,6 +203,7 @@ AtlasLoot_Data["AuchCrypts"] = {
 ------------------------------
 
 AtlasLoot_Data["AuchManaTombs"] = {
+	Module = "AtlasLoot_BurningCrusade";
 	Name = BabbleZone["Auchindoun"] .. ": " .. BabbleZone["Mana-Tombs"];
 	DisplayName = BabbleZone["Mana-Tombs"];
 	Type = "BCDungeon";
@@ -308,6 +311,7 @@ AtlasLoot_Data["AuchManaTombs"] = {
 ---------------------------------
 
 AtlasLoot_Data["AuchSethekk"] = {
+	Module = "AtlasLoot_BurningCrusade";
 	Name = BabbleZone["Auchindoun"] .. ": " .. BabbleZone["Sethekk Halls"];
 	DisplayName = BabbleZone["Sethekk Halls"];
 	Type = "BCDungeon";
@@ -375,6 +379,7 @@ AtlasLoot_Data["AuchSethekk"] = {
 ------------------------------------
 
 AtlasLoot_Data["AuchShadowLab"] = {
+	Module = "AtlasLoot_BurningCrusade";
 	Name = BabbleZone["Auchindoun"] .. ": " .. BabbleZone["Shadow Labyrinth"];
 	DisplayName = BabbleZone["Shadow Labyrinth"];
 	Type = "BCDungeon";
@@ -480,6 +485,7 @@ AtlasLoot_Data["AuchShadowLab"] = {
 --------------------
 
 AtlasLoot_Data["BlackTemple"] = {
+	Module = "AtlasLoot_BurningCrusade";
 	Name = BabbleZone["Black Temple"];
 	Type = "BCRaid";
 	Map = "BlackTemple";
@@ -686,6 +692,7 @@ AtlasLoot_Data["BlackTemple"] = {
 ------------------------------------------------
 
 AtlasLoot_Data["CoTOldHillsbrad"] = {
+	Module = "AtlasLoot_BurningCrusade";
 	Name = BabbleZone["Caverns of Time"] .. ": " .. BabbleZone["Old Hillsbrad Foothills"];
 	DisplayName = BabbleZone["Old Hillsbrad Foothills"];
 	Type = "BCDungeon";
@@ -787,6 +794,7 @@ AtlasLoot_Data["CoTOldHillsbrad"] = {
 -----------------------------------------
 
 AtlasLoot_Data["CoTBlackMorass"] = {
+	Module = "AtlasLoot_BurningCrusade";
 	Name = BabbleZone["Caverns of Time"] .. ": " .. BabbleZone["The Black Morass"];
 	DisplayName = BabbleZone["The Black Morass"];
 	Type = "BCDungeon";
@@ -855,6 +863,7 @@ AtlasLoot_Data["CoTBlackMorass"] = {
 -------------------------------------
 
 AtlasLoot_Data["CoTHyjal"] = {
+	Module = "AtlasLoot_BurningCrusade";
 	Name = BabbleZone["Caverns of Time"] .. ": " .. BabbleZone["Hyjal Summit"];
 	DisplayName = BabbleZone["Hyjal Summit"];
 	Type = "BCRaid";
@@ -1050,6 +1059,7 @@ AtlasLoot_Data["CoTHyjal"] = {
 ------------------------------------------
 
 AtlasLoot_Data["CFRSlavePens"] = {
+	Module = "AtlasLoot_BurningCrusade";
 	Name = BabbleZone["Coilfang Reservoir"] .. ": " .. BabbleZone["The Slave Pens"];
 	DisplayName = BabbleZone["The Slave Pens"];
 	Type = "BCDungeon";
@@ -1134,6 +1144,7 @@ AtlasLoot_Data["CFRSlavePens"] = {
 ------------------------------------------
 
 AtlasLoot_Data["CFRSteamvault"] = {
+	Module = "AtlasLoot_BurningCrusade";
 	Name = BabbleZone["Coilfang Reservoir"] .. ": " .. BabbleZone["The Steamvault"];
 	DisplayName = BabbleZone["The Steamvault"];
 	Type = "BCDungeon";
@@ -1210,6 +1221,7 @@ AtlasLoot_Data["CFRSteamvault"] = {
 ----------------------------------------
 
 AtlasLoot_Data["CFRUnderbog"] = {
+	Module = "AtlasLoot_BurningCrusade";
 	Name = BabbleZone["Coilfang Reservoir"] .. ": " .. BabbleZone["The Underbog"];
 	DisplayName = BabbleZone["The Underbog"];
 	Type = "BCDungeon";
@@ -1314,6 +1326,7 @@ AtlasLoot_Data["CFRUnderbog"] = {
 ------------------------------------------------
 
 AtlasLoot_Data["CFRSerpentshrine"] = {
+	Module = "AtlasLoot_BurningCrusade";
 	Name = BabbleZone["Coilfang Reservoir"] .. ": " .. BabbleZone["Serpentshrine Cavern"];
 	DisplayName = BabbleZone["Serpentshrine Cavern"];
 	Type = "BCRaid";
@@ -1447,6 +1460,7 @@ AtlasLoot_Data["CFRSerpentshrine"] = {
 --------------------
 
 AtlasLoot_Data["GruulsLair"] = {
+	Module = "AtlasLoot_BurningCrusade";
 	Name = BabbleZone["Gruul's Lair"];
 	Type = "BCRaid";
 	Map = "GruulsLair";
@@ -1490,6 +1504,7 @@ AtlasLoot_Data["GruulsLair"] = {
 -------------------------------------------
 
 AtlasLoot_Data["HCRamparts"] = {
+	Module = "AtlasLoot_BurningCrusade";
 	Name = BabbleZone["Hellfire Citadel"] .. ": " .. BabbleZone["Hellfire Ramparts"];
 	DisplayName = BabbleZone["Hellfire Ramparts"];
 	Type = "BCDungeon";
@@ -1595,6 +1610,7 @@ AtlasLoot_Data["HCRamparts"] = {
 -------------------------------------------
 
 AtlasLoot_Data["HCFurnace"] = {
+	Module = "AtlasLoot_BurningCrusade";
 	Name = BabbleZone["Hellfire Citadel"] .. ": " .. BabbleZone["The Blood Furnace"];
 	DisplayName = BabbleZone["The Blood Furnace"];
 	Type = "BCDungeon";
@@ -1674,6 +1690,7 @@ AtlasLoot_Data["HCFurnace"] = {
 ---------------------------------------------
 
 AtlasLoot_Data["HCShatteredHalls"] = {
+	Module = "AtlasLoot_BurningCrusade";
 	Name = BabbleZone["Hellfire Citadel"] .. ": " .. BabbleZone["The Shattered Halls"];
 	DisplayName = BabbleZone["The Shattered Halls"];
 	Type = "BCDungeon";
@@ -1759,6 +1776,7 @@ AtlasLoot_Data["HCShatteredHalls"] = {
 --------------------------------------------
 
 AtlasLoot_Data["HCMagtheridon"] = {
+	Module = "AtlasLoot_BurningCrusade";
 	Name = BabbleZone["Hellfire Citadel"] .. ": " .. BabbleZone["Magtheridon's Lair"];
 	DisplayName = BabbleZone["Magtheridon's Lair"];
 	Type = "BCRaid";
@@ -1795,6 +1813,7 @@ AtlasLoot_Data["HCMagtheridon"] = {
 ----------------
 
 AtlasLoot_Data["Karazhan"] = {
+	Module = "AtlasLoot_BurningCrusade";
 	Name = "Karazhan";
 	Type = "BCRaid";
 	Map = "Karazhan";
@@ -2066,6 +2085,7 @@ AtlasLoot_Data["Karazhan"] = {
 ----------------------------------------
 
 AtlasLoot_Data["MagistersTerrace"] = {
+	Module = "AtlasLoot_BurningCrusade";
 	Name = AL["Sunwell Isle"] .. ": " .. BabbleZone["Magisters' Terrace"];
 	DisplayName = BabbleZone["Magisters' Terrace"];
 	Type = "BCDungeon";
@@ -2164,6 +2184,7 @@ AtlasLoot_Data["MagistersTerrace"] = {
 -------------------------------------
 
 AtlasLoot_Data["SunwellPlateau"] = {
+	Module = "AtlasLoot_BurningCrusade";
 	Name = AL["Sunwell Isle"] .. ": " .. BabbleZone["Sunwell Plateau"];
 	DisplayName = BabbleZone["Sunwell Plateau"];
 	Type = "BCRaid";
@@ -2372,6 +2393,7 @@ AtlasLoot_Data["SunwellPlateau"] = {
 ----------------------------------
 
 AtlasLoot_Data["TKArc"] = {
+	Module = "AtlasLoot_BurningCrusade";
 	Name = BabbleZone["Tempest Keep"] .. ": " .. BabbleZone["The Arcatraz"];
 	DisplayName = BabbleZone["The Arcatraz"];
 	Type = "BCDungeon";
@@ -2465,6 +2487,7 @@ AtlasLoot_Data["TKArc"] = {
 ----------------------------------
 
 AtlasLoot_Data["TKBot"] = {
+	Module = "AtlasLoot_BurningCrusade";
 	Name = BabbleZone["Tempest Keep"] .. ": " .. BabbleZone["The Botanica"];
 	DisplayName = BabbleZone["The Botanica"];
 	Type = "BCDungeon";
@@ -2579,6 +2602,7 @@ AtlasLoot_Data["TKBot"] = {
 ----------------------------------
 
 AtlasLoot_Data["TKMech"] = {
+	Module = "AtlasLoot_BurningCrusade";
 	Name = BabbleZone["Tempest Keep"] .. ": " .. BabbleZone["The Mechanar"];
 	DisplayName = BabbleZone["The Mechanar"];
 	Type = "BCDungeon";
@@ -2658,6 +2682,7 @@ AtlasLoot_Data["TKMech"] = {
 -----------------------------
 
 AtlasLoot_Data["TKEye"] = {
+	Module = "AtlasLoot_BurningCrusade";
 	Name = BabbleZone["Tempest Keep"] .. ": " .. BabbleZone["The Eye"];
 	DisplayName = BabbleZone["The Eye"];
 	Type = "BCRaid";
@@ -2781,6 +2806,7 @@ AtlasLoot_Data["TKEye"] = {
 ----------------
 
 AtlasLoot_Data["ZulAman"] = {
+	Module = "AtlasLoot_BurningCrusade";
 	Name = BabbleZone["Zul'Aman"];
 	Type = "BCRaid";
 	Map = "ZulAman";
@@ -2952,6 +2978,7 @@ AtlasLoot_Data["ZulAman"] = {
 ----------------------------
 
 AtlasLoot_Data["Ashtongue"] = {
+	Module = "AtlasLoot_BurningCrusade";
 	Name = BabbleFaction["Ashtongue Deathsworn"];
 	{
 		Name = BabbleFaction["Friendly"];
@@ -2995,6 +3022,7 @@ AtlasLoot_Data["Ashtongue"] = {
 ----------------------------
 
 AtlasLoot_Data["CExpedition"] = {
+	Module = "AtlasLoot_BurningCrusade";
 	Name = BabbleFaction["Cenarion Expedition"];
 	{
 		Name = BabbleFaction["Friendly"];
@@ -3052,6 +3080,7 @@ AtlasLoot_Data["CExpedition"] = {
 ------------------
 
 AtlasLoot_Data["HonorHold"] = {
+	Module = "AtlasLoot_BurningCrusade";
 	Name = BabbleFaction["Honor Hold"] .. " - " .. BabbleFaction["Alliance"];
 	{
 		Name = BabbleFaction["Friendly"];
@@ -3100,6 +3129,7 @@ AtlasLoot_Data["HonorHold"] = {
 -----------------------
 
 AtlasLoot_Data["KeepersofTime"] = {
+	Module = "AtlasLoot_BurningCrusade";
 	Name = BabbleFaction["Keepers of Time"];
 	{
 		Name = BabbleFaction["Honored"];
@@ -3136,6 +3166,7 @@ AtlasLoot_Data["KeepersofTime"] = {
 ---------------
 
 AtlasLoot_Data["Kurenai"] = {
+	Module = "AtlasLoot_BurningCrusade";
 	Name = BabbleFaction["Kurenai"] .. " - " .. BabbleFaction["Alliance"];
 	{
 		Name = BabbleFaction["Friendly"];
@@ -3179,6 +3210,7 @@ AtlasLoot_Data["Kurenai"] = {
 ------------------
 
 AtlasLoot_Data["LowerCity"] = {
+	Module = "AtlasLoot_BurningCrusade";
 	Name = BabbleFaction["Lower City"];
 	{
 		Name = BabbleFaction["Friendly"];
@@ -3219,6 +3251,7 @@ AtlasLoot_Data["LowerCity"] = {
 ------------------
 
 AtlasLoot_Data["Netherwing"] = {
+	Module = "AtlasLoot_BurningCrusade";
 	Name = BabbleFaction["Netherwing"];
 	{
 		Name = BabbleFaction["Friendly"];
@@ -3249,6 +3282,7 @@ AtlasLoot_Data["Netherwing"] = {
 ---------------
 
 AtlasLoot_Data["Ogrila"] = {
+	Module = "AtlasLoot_BurningCrusade";
 	Name = BabbleFaction["Ogri'la"];
 	{
 		Name = BabbleFaction["Friendly"];
@@ -3284,6 +3318,7 @@ AtlasLoot_Data["Ogrila"] = {
 -------------------------
 
 AtlasLoot_Data["Skyguard"] = {
+	Module = "AtlasLoot_BurningCrusade";
 	Name = BabbleFaction["Sha'tari Skyguard"];
 	{
 		Name = BabbleFaction["Friendly"];
@@ -3317,6 +3352,7 @@ AtlasLoot_Data["Skyguard"] = {
 -------------------------------
 
 AtlasLoot_Data["SunOffensive"] = {
+	Module = "AtlasLoot_BurningCrusade";
 	Name = BabbleFaction["Shattered Sun Offensive"];
 	{
 		Name = BabbleFaction["Friendly"];
@@ -3410,6 +3446,7 @@ AtlasLoot_Data["SunOffensive"] = {
 -----------------
 
 AtlasLoot_Data["Sporeggar"] = {
+	Module = "AtlasLoot_BurningCrusade";
 	Name = BabbleFaction["Sporeggar"];
 	{
 		Name = BabbleFaction["Friendly"];
@@ -3445,6 +3482,7 @@ AtlasLoot_Data["Sporeggar"] = {
 -----------------
 
 AtlasLoot_Data["Aldor"] = {
+	Module = "AtlasLoot_BurningCrusade";
 	Name = BabbleFaction["The Aldor"];
 	{
 		Name = BabbleFaction["Friendly"];
@@ -3519,6 +3557,7 @@ AtlasLoot_Data["Aldor"] = {
 ----------------------
 
 AtlasLoot_Data["Consortium"] = {
+	Module = "AtlasLoot_BurningCrusade";
 	Name = BabbleFaction["The Consortium"];
 	{
 		Name = BabbleFaction["Friendly"];
@@ -3569,6 +3608,7 @@ AtlasLoot_Data["Consortium"] = {
 -------------------
 
 AtlasLoot_Data["Maghar"] = {
+	Module = "AtlasLoot_BurningCrusade";
 	Name = BabbleFaction["The Mag'har"] .. " - " .. BabbleFaction["Horde"];
 	{
 		Name = BabbleFaction["Friendly"];
@@ -3612,6 +3652,7 @@ AtlasLoot_Data["Maghar"] = {
 ------------------------------
 
 AtlasLoot_Data["ScaleSands"] = {
+	Module = "AtlasLoot_BurningCrusade";
 	Name = BabbleFaction["The Scale of the Sands"];
 	scaleOfSandsRings;
 	{
@@ -3665,6 +3706,7 @@ AtlasLoot_Data["ScaleSands"] = {
 -------------------
 
 AtlasLoot_Data["Scryer"] = {
+	Module = "AtlasLoot_BurningCrusade";
 	Name = BabbleFaction["The Scryers"];
 	{
 		Name = BabbleFaction["Friendly"];
@@ -3737,6 +3779,7 @@ AtlasLoot_Data["Scryer"] = {
 -------------------
 
 AtlasLoot_Data["Shatar"] = {
+	Module = "AtlasLoot_BurningCrusade";
 	Name = BabbleFaction["The Sha'tar"];
 	{
 		Name = BabbleFaction["Friendly"];
@@ -3779,6 +3822,7 @@ AtlasLoot_Data["Shatar"] = {
 ----------------------
 
 AtlasLoot_Data["VioletEye"] = {
+	Module = "AtlasLoot_BurningCrusade";
 	Name = BabbleFaction["The Violet Eye"];
 	{
 		Name = "Rings";
@@ -3831,6 +3875,7 @@ AtlasLoot_Data["VioletEye"] = {
 -----------------
 
 AtlasLoot_Data["Thrallmar"] = {
+	Module = "AtlasLoot_BurningCrusade";
 	Name = BabbleFaction["Thrallmar"] .. " - " .. BabbleFaction["Horde"];
 	{
 		Name = BabbleFaction["Friendly"];
@@ -3879,6 +3924,7 @@ AtlasLoot_Data["Thrallmar"] = {
 --------------------
 
 AtlasLoot_Data["Tranquillien"] = {
+	Module = "AtlasLoot_BurningCrusade";
 	Name = BabbleFaction["Tranquillien"] .. " - " .. BabbleFaction["Horde"];
 	{
 		Name = BabbleFaction["Friendly"];
@@ -3910,6 +3956,7 @@ AtlasLoot_Data["Tranquillien"] = {
 ------------
 
 AtlasLoot_Data["ShattrathFlasks"] = {
+	Module = "AtlasLoot_BurningCrusade";
 	Name = "Shattrath Flasks";
 	{
 		Name = "Shattrath Flasks";
@@ -3929,6 +3976,7 @@ AtlasLoot_Data["ShattrathFlasks"] = {
 ---------------------------------------------------------------
 
 AtlasLoot_Data["PVPHellfire"] = {
+	Module = "AtlasLoot_BurningCrusade";
 	Name = AL["Hellfire Fortifications"];
 	{
 		Name = AL["Hellfire Fortifications"];
@@ -3948,6 +3996,7 @@ AtlasLoot_Data["PVPHellfire"] = {
 };
 
 AtlasLoot_Data["PVPHalaa"] = {
+	Module = "AtlasLoot_BurningCrusade";
 	Name = BabbleZone["Nagrand"] .. ": " .. AL["Halaa"];
 	{
 		Name = "Page 1";
@@ -3992,6 +4041,7 @@ AtlasLoot_Data["PVPHalaa"] = {
 };
 
 AtlasLoot_Data["PVPSpiritTowers"] = {
+	Module = "AtlasLoot_BurningCrusade";
 	Name = AL["Spirit Towers"];
 	{
 		Name = BabbleZone["Terokkar Forest"] .. ": " .. AL["Spirit Towers"];
@@ -4017,6 +4067,7 @@ AtlasLoot_Data["PVPSpiritTowers"] = {
 };
 
 AtlasLoot_Data["PVPTwinSpireRuins"] = {
+	Module = "AtlasLoot_BurningCrusade";
 	Name = AL["Twin Spire Ruins"];
 	{
 		Name = BabbleZone["Zangarmarsh"] .. ": " .. AL["Twin Spire Ruins"];
@@ -4039,6 +4090,7 @@ AtlasLoot_Data["PVPTwinSpireRuins"] = {
 -------------------------------------
 
 AtlasLoot_Data["PVP70RepGear"] = {
+	Module = "AtlasLoot_BurningCrusade";
 	Name = "Rep PVP Gear";
 	{
 		Name = BabbleInventory["Cloth"];
@@ -4369,6 +4421,7 @@ AtlasLoot_Data["PVP70RepGear"] = {
 ----------------------------------
 
 AtlasLoot_Data["PvP70Accessories"] = {
+	Module = "AtlasLoot_BurningCrusade";
 	Name = "Off Set";
 	{
 		Name = "PvP Accessories - " .. BabbleFaction["Alliance"];
@@ -4464,6 +4517,7 @@ AtlasLoot_Data["PvP70Accessories"] = {
 ------------------------------------
 
 AtlasLoot_Data["PvP70NonSet"] = {
+	Module = "AtlasLoot_BurningCrusade";
 	Name = AL["PvP Non-Set Epics"];
 	{
 		Name = "Page 1";
@@ -4523,6 +4577,7 @@ AtlasLoot_Data["PvP70NonSet"] = {
 --------------------------
 
 AtlasLoot_Data["ArenaDruidTBC"] = {
+	Module = "AtlasLoot_BurningCrusade";
 	Name = AL["Druid"];
 	{
 		Name = AL["Feral"];
@@ -4608,6 +4663,7 @@ AtlasLoot_Data["ArenaDruidTBC"] = {
 };
 
 AtlasLoot_Data["ArenaHunterTBC"] = {
+	Module = "AtlasLoot_BurningCrusade";
 	Name = LOCALIZED_CLASS_NAMES_MALE["HUNTER"];
 	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["HUNTER"];
@@ -4640,6 +4696,7 @@ AtlasLoot_Data["ArenaHunterTBC"] = {
 
 
 AtlasLoot_Data["ArenaMageTBC"] = {
+	Module = "AtlasLoot_BurningCrusade";
 	Name = LOCALIZED_CLASS_NAMES_MALE["MAGE"];
 	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["MAGE"];
@@ -4672,6 +4729,7 @@ AtlasLoot_Data["ArenaMageTBC"] = {
 
 
 AtlasLoot_Data["ArenaPaladinTBC"] = {
+	Module = "AtlasLoot_BurningCrusade";
 	Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"];
 	{
 		Name = AL["Protection"];
@@ -4757,6 +4815,7 @@ AtlasLoot_Data["ArenaPaladinTBC"] = {
 };
 
 AtlasLoot_Data["ArenaPriestTBC"] = {
+	Module = "AtlasLoot_BurningCrusade";
 	Name = LOCALIZED_CLASS_NAMES_MALE["PRIEST"];
 	{
 		Name = AL["Shadow"];
@@ -4815,6 +4874,7 @@ AtlasLoot_Data["ArenaPriestTBC"] = {
 };
 
 AtlasLoot_Data["ArenaRogueTBC"] = {
+	Module = "AtlasLoot_BurningCrusade";
 	Name = LOCALIZED_CLASS_NAMES_MALE["ROGUE"];
 	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["ROGUE"];
@@ -4846,6 +4906,7 @@ AtlasLoot_Data["ArenaRogueTBC"] = {
 };
 
 AtlasLoot_Data["ArenaWarlockTBC"] = {
+	Module = "AtlasLoot_BurningCrusade";
 	Name = LOCALIZED_CLASS_NAMES_MALE["WARLOCK"];
 	{
 		Name = AL["Demonology"];
@@ -4905,6 +4966,7 @@ AtlasLoot_Data["ArenaWarlockTBC"] = {
 
 
 AtlasLoot_Data["ArenaShamanTBC"] = {
+	Module = "AtlasLoot_BurningCrusade";
 	Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"];
 	{
 		Name = AL["Enhancement"];
@@ -4990,6 +5052,7 @@ AtlasLoot_Data["ArenaShamanTBC"] = {
 };
 
 AtlasLoot_Data["ArenaWarriorTBC"] = {
+	Module = "AtlasLoot_BurningCrusade";
 	Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"];
 	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"];
@@ -5024,6 +5087,7 @@ AtlasLoot_Data["ArenaWarriorTBC"] = {
 --- Arena Seasons - Weapons ---
 --------------------------------
 AtlasLoot_Data["WeaponsTBC"] = {
+	Module = "AtlasLoot_BurningCrusade";
 	Name = "Arena " .. AL["Weapons"];
 	{
 		Name = "Alliance";
@@ -5269,6 +5333,7 @@ AtlasLoot_Data["WeaponsTBC"] = {
 ---------------------------
 
 	AtlasLoot_Data["DS3"] = {
+	Module = "AtlasLoot_BurningCrusade";
 			Name = AL["Dungeon 3 Sets"];
 			Type = "BCDungeon";
 		{
@@ -5382,6 +5447,7 @@ AtlasLoot_Data["WeaponsTBC"] = {
 --------------
 
 	AtlasLoot_Data["T4"] = {
+	Module = "AtlasLoot_BurningCrusade";
 		Name = "Tier 4";
 		Type = "BCRaid";
 		{
@@ -5535,6 +5601,7 @@ AtlasLoot_Data["WeaponsTBC"] = {
 --------------
 
 AtlasLoot_Data["T5"] = {
+	Module = "AtlasLoot_BurningCrusade";
 		Name = "Tier 5";
 		Type = "BCRaid";
 		{
@@ -5688,6 +5755,7 @@ AtlasLoot_Data["T5"] = {
 --------------
 
 	AtlasLoot_Data["T6"] = {
+	Module = "AtlasLoot_BurningCrusade";
 			Name = "Tier 6";
 			Type = "BCRaid";
 		{
@@ -5896,6 +5964,7 @@ AtlasLoot_Data["T5"] = {
 --------------------------------
 
 AtlasLoot_Data["TBCSets"] = {
+	Module = "AtlasLoot_BurningCrusade";
 	Name = AL["Burning Crusade Sets"];
 	{
 		Name = AL["Latro's Flurry"];
@@ -5924,6 +5993,7 @@ AtlasLoot_Data["TBCSets"] = {
 --------------------------------
 
 AtlasLoot_Data["BadgeShatt"] = {
+	Module = "AtlasLoot_BurningCrusade";
 	Name = BabbleZone["Shattrath City"];
 	{
 		Name = BabbleInventory["Cloth"];
@@ -6103,6 +6173,7 @@ AtlasLoot_Data["BadgeShatt"] = {
 };
 
 AtlasLoot_Data["BadgeSunwell"] = {
+	Module = "AtlasLoot_BurningCrusade";
 	Name = AL["Sunwell Isle"];
 	{
 		Name = BabbleInventory["Cloth"];
@@ -6183,6 +6254,7 @@ AtlasLoot_Data["BadgeSunwell"] = {
 
 
 AtlasLoot_Data["HardModeArena"] = {
+	Module = "AtlasLoot_BurningCrusade";
 			Name = "Hardmode arena";
 		{
 			Name = "Hardmode arena";
@@ -6211,6 +6283,7 @@ AtlasLoot_Data["HardModeArena"] = {
 	};
 
 AtlasLoot_Data["HardModeArena2"] = {
+	Module = "AtlasLoot_BurningCrusade";
 	Name = "Hardmode arena2";
 	{
 		Name = "Hardmode arena2";
@@ -6246,6 +6319,7 @@ AtlasLoot_Data["HardModeArena2"] = {
 -----------------------
 
 AtlasLoot_Data["WorldEpicsTBC"] = {
+	Module = "AtlasLoot_BurningCrusade";
 	Name = AL["BoE World Epics"];
 	Type = "BCDungeon";
 	{
@@ -6276,6 +6350,7 @@ AtlasLoot_Data["WorldEpicsTBC"] = {
 };
 
 AtlasLoot_Data["WorldRaresTBC"] = {
+	Module = "AtlasLoot_BurningCrusade";
 	Name = AL["BoE World Rares"];
 	Type = "BCDungeon";
 	{
@@ -6343,6 +6418,7 @@ AtlasLoot_Data["WorldRaresTBC"] = {
 ------------------------
 
 AtlasLoot_Data["WorldBossesTBC"] = {
+	Module = "AtlasLoot_BurningCrusade";
 	Name = AL["World Bosses"];
 	Type = "BCRaid";
 	{

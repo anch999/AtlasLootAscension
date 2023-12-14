@@ -9,6 +9,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 ---------------
 
 AtlasLoot_Data["Tabards"] = {
+	Module = "AtlasLoot_Vanity";
 	Name = "Tabards";
 	{
 		Name = "Page 1";
@@ -100,6 +101,7 @@ AtlasLoot_Data["Tabards"] = {
 -------------------
 
 AtlasLoot_Data["VanityPets"] = {
+	Module = "AtlasLoot_Vanity";
 	Name = "Vanity Pets";
 	{
 		Name = AL["Merchant Sold"];
@@ -297,6 +299,7 @@ AtlasLoot_Data["VanityPets"] = {
 --- Mounts ---
 --------------
 AtlasLoot_Data["Mounts"] = {
+	Module = "AtlasLoot_Vanity";
 	Name = "Mounts";
 	{
 		Name = AL["Alliance Mounts"].." Page 1";

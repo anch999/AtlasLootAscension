@@ -73,7 +73,7 @@ local AtlasLootDBDefaults = {
         LootBrowserStyle = 1,
         LootBrowserScale = 1.0,
         SearchOn = {
-            All = true,
+            All = false,
         },
         AtlasType = "Release",
     }
@@ -222,7 +222,6 @@ function AtlasLoot:Reset(data)
 		AtlasLootWishList = {}
 		AtlasLoot:WishlistSetup()
         AtlasLootCharDB["SearchResult"] = {}
-        AtlasLootCharDB.LastSearchedText = ""
     elseif data == "all" then
 		AtlasLootDefaultFrame:ClearAllPoints()
 		AtlasLootDefaultFrame:SetPoint("CENTER", "UIParent", "CENTER", 0, 0)
@@ -231,7 +230,6 @@ function AtlasLoot:Reset(data)
         AtlasLoot:UpdateLootBrowserScale()
         AtlasLootCharDB["QuickLooks"] = {}
         AtlasLootCharDB["SearchResult"] = {}
-        AtlasLootCharDB.LastSearchedText = ""
 		AtlasLootWishList = {}
 		AtlasLoot:WishlistSetup()
     end
@@ -1375,19 +1373,19 @@ function AtlasLoot:CreateVanityCollection()
 		for cat,v in pairs(Enum.VanityCategory) do
 			if type(v) == "table" then
 				for catT, t in pairs(v) do
-					if not AtlasLoot_Data[catT] then AtlasLoot_Data[catT] = { Name = CollectionNames(catT), vanity = true } end
+					if not AtlasLoot_Data[catT] then AtlasLoot_Data[catT] = { Name = CollectionNames(catT), vanity = true, Module = "AtlasLoot_Ascension_Vanity" } end
 					if bit.contains(group, t) then
 						return catT
 					end
 				end
 			else
-				if not AtlasLoot_Data[cat] then AtlasLoot_Data[cat] = { Name = CollectionNames(cat), vanity = true } end
+				if not AtlasLoot_Data[cat] then AtlasLoot_Data[cat] = { Name = CollectionNames(cat), vanity = true, Module = "AtlasLoot_Ascension_Vanity" } end
 				if bit.contains(group, v) then
 					return cat
 				end
 			end
 		end
-		if not AtlasLoot_Data["Uncategorized"] then AtlasLoot_Data["Uncategorized"] = { Name = CollectionNames("Uncategorized"), vanity = true } end
+		if not AtlasLoot_Data["Uncategorized"] then AtlasLoot_Data["Uncategorized"] = { Name = CollectionNames("Uncategorized"), vanity = true, Module = "AtlasLoot_Ascension_Vanity" } end
 		return "Uncategorized"
 	end
 

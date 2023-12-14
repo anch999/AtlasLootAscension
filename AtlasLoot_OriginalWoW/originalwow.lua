@@ -80,6 +80,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 ------------
 
 AtlasLoot_Data["OldKeys"] = {
+	Module = "AtlasLoot_OriginalWoW";
 	Name = "Old Keys";
 	{
 		Name = "Old Keys";
@@ -110,6 +111,7 @@ AtlasLoot_Data["OldKeys"] = {
 -----------------------------------------
 
 AtlasLoot_Data["RuinsofAQ"] = {
+	Module = "AtlasLoot_OriginalWoW";
 	Name = BabbleZone["Ruins of Ahn'Qiraj"];
 	Type = "ClassicRaid";
 	Map = "TheRuinsofAhnQiraj";
@@ -257,6 +259,7 @@ AtlasLoot_Data["RuinsofAQ"] = {
 ------------------------------------------
 
 AtlasLoot_Data["TempleofAQ"] = {
+	Module = "AtlasLoot_OriginalWoW";
 	Name = BabbleZone["Temple of Ahn'Qiraj"];
 	Type = "ClassicRaid";
 	Map = "TheTempleofAhnQiraj";
@@ -564,6 +567,7 @@ AtlasLoot_Data["TempleofAQ"] = {
 };
 
 AtlasLoot_Data["AQOpening"] = {
+	Module = "AtlasLoot_OriginalWoW";
 	Name = "AQOpening";
 	{
 		Name = "AQOpening";
@@ -592,6 +596,7 @@ AtlasLoot_Data["AQOpening"] = {
 -------------------------
 
 AtlasLoot_Data["BlackfathomDeeps"] = {
+	Module = "AtlasLoot_OriginalWoW";
 	Name = BabbleZone["Blackfathom Deeps"];
 	Map = "BlackfathomDeeps";
 	{
@@ -659,6 +664,7 @@ AtlasLoot_Data["BlackfathomDeeps"] = {
 --------------------------------------------
 
 AtlasLoot_Data["BlackrockDepths"] = {
+	Module = "AtlasLoot_OriginalWoW";
 	Name = BabbleZone["Blackrock Depths"];
 	Type = "ClassicDungeonExt";
 	Map = "BlackrockDepths";
@@ -947,6 +953,7 @@ AtlasLoot_Data["BlackrockDepths"] = {
 -------------------------------------------------
 
 AtlasLoot_Data["LowerBlackrock"] = {
+	Module = "AtlasLoot_OriginalWoW";
 	Name = BabbleZone["Lower Blackrock Spire"];
 	Type = "ClassicDungeonExt";
 	Loadfirst = 3;
@@ -1123,6 +1130,7 @@ AtlasLoot_Data["LowerBlackrock"] = {
 -------------------------------------------------
 
 AtlasLoot_Data["UpperBlackrock"] = {
+	Module = "AtlasLoot_OriginalWoW";
 	Name = BabbleZone["Upper Blackrock Spire"];
 	Type = "ClassicDungeonExt";
 	Map = "BlackrockSpire";
@@ -1277,6 +1285,7 @@ AtlasLoot_Data["UpperBlackrock"] = {
 ---------------------------------------
 
 AtlasLoot_Data["MoltenCore"] = {
+	Module = "AtlasLoot_OriginalWoW";
 	Name = BabbleZone["Molten Core"];
 	Type = "ClassicRaid";
 	Map = "MoltenCore";
@@ -1498,6 +1507,7 @@ AtlasLoot_Data["MoltenCore"] = {
 ------------------------------------------
 
 AtlasLoot_Data["BlackwingLair"] = {
+	Module = "AtlasLoot_OriginalWoW";
 	Name = BabbleZone["Blackwing Lair"];
 	Type = "ClassicRaid";
 	Map = "BlackwingLair";
@@ -1655,6 +1665,7 @@ AtlasLoot_Data["BlackwingLair"] = {
 ----------------------
 
 AtlasLoot_Data["DireMaulEast"] = {
+	Module = "AtlasLoot_OriginalWoW";
 	Name = BabbleZone["Dire Maul"] .. " East";
 	Type = "ClassicDungeonExt";
 	Map = "DireMaul";
@@ -1758,6 +1769,7 @@ AtlasLoot_Data["DireMaulEast"] = {
 -----------------------
 
 AtlasLoot_Data["DireMaulNorth"] = {
+	Module = "AtlasLoot_OriginalWoW";
 	Name = BabbleZone["Dire Maul"] .. " North";
 	Type = "ClassicDungeonExt";
 	Map = "DireMaul";
@@ -1899,6 +1911,7 @@ AtlasLoot_Data["DireMaulNorth"] = {
 ----------------------
 
 AtlasLoot_Data["DireMaulWest"] = {
+	Module = "AtlasLoot_OriginalWoW";
 	Name = BabbleZone["Dire Maul"] .. " West";
 	Type = "ClassicDungeonExt";
 	Map = "DireMaul";
@@ -1982,6 +1995,7 @@ AtlasLoot_Data["DireMaulWest"] = {
 ------------------
 
 AtlasLoot_Data["Gnomeregan"] = {
+	Module = "AtlasLoot_OriginalWoW";
 	Name = BabbleZone["Gnomeregan"];
 	Map = "Gnomeregan";
 	{
@@ -2055,6 +2069,7 @@ AtlasLoot_Data["Gnomeregan"] = {
 ----------------
 
 AtlasLoot_Data["Maraudon"] = {
+	Module = "AtlasLoot_OriginalWoW";
 	Name = BabbleZone["Maraudon"];
 	Map = "Maraudon";
 	{
@@ -2130,6 +2145,7 @@ AtlasLoot_Data["Maraudon"] = {
 --- Ragefire Chasm ---
 ----------------------
 AtlasLoot_Data["RagefireChasm"] = {
+	Module = "AtlasLoot_OriginalWoW";
 	Name = BabbleZone["Ragefire Chasm"];
 	Map = "RagefireChasm";
 	{
@@ -2156,6 +2172,7 @@ AtlasLoot_Data["RagefireChasm"] = {
 ----------------------
 
 AtlasLoot_Data["RazorfenDowns"] = {
+	Module = "AtlasLoot_OriginalWoW";
 	Name = BabbleZone["Razorfen Downs"];
 	Map = "RazorfenDowns";
 	{
@@ -2222,6 +2239,7 @@ AtlasLoot_Data["RazorfenDowns"] = {
 ----------------------
 
 AtlasLoot_Data["RazorfenKraul"] = {
+	Module = "AtlasLoot_OriginalWoW";
 	Name = BabbleZone["Razorfen Kraul"];
 	Map = "RazorfenKraul";
 	{
@@ -2291,6 +2309,7 @@ AtlasLoot_Data["RazorfenKraul"] = {
 -------------------------
 
 AtlasLoot_Data["Scarlet Monastery"] = {
+	Module = "AtlasLoot_OriginalWoW";
 	Name = BabbleZone["Scarlet Monastery"];
 	Map = "ScarletMonastery";
 	{
@@ -2391,6 +2410,7 @@ AtlasLoot_Data["Scarlet Monastery"] = {
 -------------------
 
 AtlasLoot_Data["Scholomance"] = {
+	Module = "AtlasLoot_OriginalWoW";
 	Name = BabbleZone["Scholomance"];
 	Type = "ClassicDungeonExt";
 	Loadfirst = 3;
@@ -2737,6 +2757,7 @@ AtlasLoot_Data["Scholomance"] = {
 -----------------------
 
 AtlasLoot_Data["ShadowfangKeep"] = {
+	Module = "AtlasLoot_OriginalWoW";
 	Name = BabbleZone["Shadowfang Keep"];
 	Map = "ShadowfangKeep";
 	{
@@ -2818,6 +2839,7 @@ AtlasLoot_Data["ShadowfangKeep"] = {
 ------------------
 
 AtlasLoot_Data["Stratholme"] = {
+	Module = "AtlasLoot_OriginalWoW";
 	Name = BabbleZone["Stratholme"];
 	Type = "ClassicDungeonExt";
 	Map = "Stratholme";
@@ -3083,6 +3105,7 @@ AtlasLoot_Data["Stratholme"] = {
 ---------------------
 
 AtlasLoot_Data["TheDeadmines"] = {
+	Module = "AtlasLoot_OriginalWoW";
 	Name = BabbleZone["The Deadmines"];
 	Map = "TheDeadmines";
 	{
@@ -3158,6 +3181,7 @@ AtlasLoot_Data["TheDeadmines"] = {
 --------------------
 
 AtlasLoot_Data["TheStockade"] = {
+	Module = "AtlasLoot_OriginalWoW";
 	Name = BabbleZone["The Stockade"];
 	Map = "TheStockade";
 	{
@@ -3204,6 +3228,7 @@ AtlasLoot_Data["TheStockade"] = {
 -------------------------
 
 AtlasLoot_Data["SunkenTemple"] = {
+	Module = "AtlasLoot_OriginalWoW";
 	Name = "Sunken Temple";
 	Map = "TheSunkenTemple";
 	{
@@ -3339,6 +3364,7 @@ AtlasLoot_Data["SunkenTemple"] = {
 ---------------
 
 AtlasLoot_Data["Uldaman"] = {
+	Module = "AtlasLoot_OriginalWoW";
 	Name = BabbleZone["Uldaman"];
 	Map = "Uldaman";
 	{
@@ -3469,6 +3495,7 @@ AtlasLoot_Data["Uldaman"] = {
 -----------------------
 
 AtlasLoot_Data["WailingCaverns"] = {
+	Module = "AtlasLoot_OriginalWoW";
 	Name = BabbleZone["Wailing Caverns"];
 	Map = "WailingCaverns";
 	{
@@ -3549,6 +3576,7 @@ AtlasLoot_Data["WailingCaverns"] = {
 ------------------
 
 AtlasLoot_Data["ZulFarrak"] = {
+	Module = "AtlasLoot_OriginalWoW";
 	Name = BabbleZone["Zul'Farrak"];
 	Map = "ZulFarrak";
 	{
@@ -3640,6 +3668,7 @@ AtlasLoot_Data["ZulFarrak"] = {
 -----------------
 
 AtlasLoot_Data["ZulGurub"] = {
+	Module = "AtlasLoot_OriginalWoW";
 	Name = BabbleZone["Zul'Gurub"];
 	Type = "ClassicRaid";
 	Map = "ZulGurub";
@@ -3653,6 +3682,7 @@ AtlasLoot_Data["ZulGurub"] = {
 		[6] = { itemID = 19920, droprate = "11.89%" }; --Primalist's Band
 		[7] = { itemID = 19915, droprate = " 11.36%" }; --Zulian Defender
 		[16] = { icon = "INV_Banner_01", name = "=q4=ZG Sets", lootTable = {{"ZGSets", "AtlasLoot_Data", 1},"Source"} };
+	Module = "AtlasLoot_OriginalWoW";
 		[18] = { itemID = 19943, droprate = "8.8%" }; --Massive Mojo
 		[19] = { itemID = 19881, droprate = "100%" }; --Channeler's Head
 	};
@@ -3665,6 +3695,7 @@ AtlasLoot_Data["ZulGurub"] = {
 		[6] = { itemID = 19905, droprate = "6.99%" }; --Zanzil's Band
 		[7] = { itemID = 19900, droprate = "11.89%" }; --Zulian Stone Axe
 		[16] = { icon = "INV_Banner_01", name = "=q4=ZG Sets", ootTable = {{"ZGSets", "AtlasLoot_Data", 1},"Source"} };
+	Module = "AtlasLoot_OriginalWoW";
 		[18] = { itemID = 19943, droprate = "6.0%" }; --Massive Mojo
 		[19] = { itemID = 19881, droprate = "100%" }; --Channeler's Head
 		[21] = { itemID = 22216, droprate = "100%" }; --Venoxis's Venom Sac
@@ -3678,6 +3709,7 @@ AtlasLoot_Data["ZulGurub"] = {
 		[5] = { itemID = 19925, droprate = " 6.99%" }; --Band of Jin
 		[6] = { itemID = 19930, droprate = "12.09%" }; --Mar'li's Eye
 		[16] = { icon = "INV_Banner_01", name = "=q4=ZG Sets", ootTable = {{"ZGSets", "AtlasLoot_Data", 1},"Source"} };
+	Module = "AtlasLoot_OriginalWoW";
 		[18] = { itemID = 19943, droprate = "7.4%" }; --Massive Mojo
 		[19] = { itemID = 19881, droprate = "100%" }; --Channeler's Head
 	};
@@ -3697,6 +3729,7 @@ AtlasLoot_Data["ZulGurub"] = {
 		[13] = { itemID = 19893, droprate = "13.11%" }; --Zanzil's Seal
 		[14] = { itemID = 19863, droprate = "12.32%" }; --Primalist's Seal
 		[16] = { icon = "INV_Banner_01", name = "=q4=ZG Sets", ootTable = {{"ZGSets", "AtlasLoot_Data", 1},"Source"} };
+	Module = "AtlasLoot_OriginalWoW";
 		[18] = { itemID = 22637 }; --Primal Hakkari Idol
 		[19] = { itemID = 19943, droprate = "9.4%" }; --Massive Mojo
 	};
@@ -3738,12 +3771,14 @@ AtlasLoot_Data["ZulGurub"] = {
 		[8] = { itemID = 20266, droprate = "8.69%" }; --Peacekeeper Leggings
 		[9] = { itemID = 19901, droprate = "13.36%" }; --Zulian Slicer
 		[16] = { icon = "INV_Banner_01", name = "=q4=ZG Sets", ootTable = {{"ZGSets", "AtlasLoot_Data", 1},"Source"} };
+	Module = "AtlasLoot_OriginalWoW";
 		[18] = { itemID = 19943, droprate = "8.3%" }; --Massive Mojo
 		[19] = { itemID = 19881, droprate = "100%" }; --Channeler's Head
 	};
 	{
 		Name = BabbleBoss["High Priestess Arlokk"];
 		[16] = { icon = "INV_Banner_01", name = "=q4=ZG Sets", ootTable = {{"ZGSets", "AtlasLoot_Data", 1},"Source"} };
+	Module = "AtlasLoot_OriginalWoW";
 		[18] = { itemID = 19943, droprate = "5.6%" }; --Massive Mojo
 		[19] = { itemID = 19881, droprate = "100%" }; --Channeler's Head
 		[1] = { itemID = 19910, droprate = "3.62%" }; --Arlokk's Grasp
@@ -3756,6 +3791,7 @@ AtlasLoot_Data["ZulGurub"] = {
 	{
 		Name = BabbleBoss["Jin'do the Hexxer"];
 		[16] = { icon = "INV_Banner_01", name = "=q4=ZG Sets", ootTable = {{"ZGSets", "AtlasLoot_Data", 1},"Source"} };
+	Module = "AtlasLoot_OriginalWoW";
 		[18] = { itemID = 22637 }; --Primal Hakkari Idol
 		[19] = { itemID = 19943, droprate = "8.4%" }; --Massive Mojo
 		[1] = { itemID = 19885, droprate = "6.82%" }; --Jin'do's Evil Eye
@@ -3878,6 +3914,7 @@ AtlasLoot_Data["ZulGurub"] = {
 -----------------
 
 AtlasLoot_Data["Naxxramas60"] = {
+	Module = "AtlasLoot_OriginalWoW";
 	Name = BabbleZone["Naxxramas"];
 	Type = "ClassicRaid";
 	Map = "Naxxramas60";
@@ -4103,6 +4140,7 @@ AtlasLoot_Data["Naxxramas60"] = {
 ---------------------
 
 AtlasLoot_Data["Onyxia60"] = {
+	Module = "AtlasLoot_OriginalWoW";
 	Name = BabbleZone["Onyxia's Lair"];
 	Type = "ClassicRaid";
 	Map = "Onyxia60";
@@ -4140,6 +4178,7 @@ AtlasLoot_Data["Onyxia60"] = {
 ------------------------------------
 
 AtlasLoot_Data["T0"] = {
+	Module = "AtlasLoot_OriginalWoW";
 	Name = "Dungeon Sets";
 	Type = "ClassicDungeonExt";
 	{
@@ -4338,6 +4377,7 @@ AtlasLoot_Data["T0"] = {
 -----------------------------
 
 AtlasLoot_Data["T1"] = {
+	Module = "AtlasLoot_OriginalWoW";
 	Name = "Tier 1";
 	Type = "ClassicRaid";
 	{
@@ -4487,6 +4527,7 @@ AtlasLoot_Data["T1"] = {
 
 -- T2 Sets
 AtlasLoot_Data["T2"] = {
+	Module = "AtlasLoot_OriginalWoW";
 	Name = "Tier 2";
 	Type = "ClassicRaid";
 	{
@@ -4672,6 +4713,7 @@ AtlasLoot_Data["T2"] = {
 ------------------------
 
 AtlasLoot_Data["T3"] = {
+	Module = "AtlasLoot_OriginalWoW";
 	Name = "Tier 3";
 	Type = "ClassicRaid";
 	{
@@ -4897,6 +4939,7 @@ AtlasLoot_Data["T3"] = {
 ------------------------
 
 AtlasLoot_Data["ClassicSets"] = {
+	Module = "AtlasLoot_OriginalWoW";
 	Name = AL["Classic Sets"];
 	{
 		Name = AL["Defias Leather"];
@@ -5040,6 +5083,7 @@ AtlasLoot_Data["ClassicSets"] = {
 ---------------
 
 AtlasLoot_Data["ZGSets"] = {
+	Module = "AtlasLoot_OriginalWoW";
 	Name = AL["Zul'Gurub Sets"];
 	Type = "ClassicRaid";
 	{
@@ -5121,6 +5165,7 @@ AtlasLoot_Data["ZGSets"] = {
 -----------------
 
 AtlasLoot_Data["AQ20Sets"] = {
+	Module = "AtlasLoot_OriginalWoW";
 	Name = AL["AQ20 Class Sets"];
 	Type = "ClassicRaid";
 	{
@@ -5232,6 +5277,7 @@ AtlasLoot_Data["AQ20Sets"] = {
 -----------------
 
 AtlasLoot_Data["T2.5"] = {
+	Module = "AtlasLoot_OriginalWoW";
 	Name = AL["AQ40 Class Sets"] .. " (Tier 2.5)";
 	Type = "ClassicRaid";
 	{
@@ -5361,6 +5407,7 @@ AtlasLoot_Data["T2.5"] = {
 -----------------------
 
 AtlasLoot_Data["WorldEpicsCLASSIC"] = {
+	Module = "AtlasLoot_OriginalWoW";
 	Name = AL["BoE World Epics"];
 	Type = "ClassicDungeonExt";
 	{
@@ -5435,6 +5482,7 @@ AtlasLoot_Data["WorldEpicsCLASSIC"] = {
 ----------------------
 
 AtlasLoot_Data["AVMisc"] = {
+	Module = "AtlasLoot_OriginalWoW";
 	Name = BabbleZone["Alterac Valley"];
 	{
 		Name = AL["Misc. Rewards"];
@@ -5517,6 +5565,7 @@ AtlasLoot_Data["AVMisc"] = {
 --------------------
 
 AtlasLoot_Data["AB_A"] = {
+	Module = "AtlasLoot_OriginalWoW";
 	Name = BabbleZone["Arathi Basin"] .. " (Alliance)";
 	{
 		Name = AL["Misc. Rewards"];
@@ -5635,6 +5684,7 @@ AtlasLoot_Data["AB_A"] = {
 };
 
 AtlasLoot_Data["AB_H"] = {
+	Module = "AtlasLoot_OriginalWoW";
 	Name = BabbleZone["Arathi Basin"] .. " (Horde)";
 	{
 		Name = AL["Misc. Rewards"];
@@ -5757,6 +5807,7 @@ AtlasLoot_Data["AB_H"] = {
 ---------------------
 
 AtlasLoot_Data["WSG_A"] = {
+	Module = "AtlasLoot_OriginalWoW";
 	Name = BabbleZone["Warsong Gulch"] .. " (Alliance)";
 	{
 		Name = AL["Misc. Rewards"];
@@ -5842,6 +5893,7 @@ AtlasLoot_Data["WSG_A"] = {
 };
 
 AtlasLoot_Data["WSG_H"] = {
+	Module = "AtlasLoot_OriginalWoW";
 	Name = BabbleZone["Warsong Gulch"] .. " (Horde)";
 	{
 		Name = AL["Misc. Rewards"];
@@ -5930,6 +5982,7 @@ AtlasLoot_Data["WSG_H"] = {
 --- PvP Level 60 Rare and Epic Sets ---
 ---------------------------------------
 AtlasLoot_Data["PVPDruid"] = {
+	Module = "AtlasLoot_OriginalWoW";
 	Name = AL["Druid"];
 	{
 		Name = AL["Rare Set"] .. " (Alliance)";
@@ -6008,6 +6061,7 @@ AtlasLoot_Data["PVPDruid"] = {
 
 
 AtlasLoot_Data["PVPHunter"] = {
+	Module = "AtlasLoot_OriginalWoW";
 	Name = LOCALIZED_CLASS_NAMES_MALE["HUNTER"];
 	{
 		Name = AL["Rare Set"] .. " (Alliance)";
@@ -6084,6 +6138,7 @@ AtlasLoot_Data["PVPHunter"] = {
 };
 
 AtlasLoot_Data["PVPMage"] = {
+	Module = "AtlasLoot_OriginalWoW";
 	Name = LOCALIZED_CLASS_NAMES_MALE["MAGE"];
 	{
 		Name = AL["Rare Set"] .. " (Alliance)";
@@ -6160,6 +6215,7 @@ AtlasLoot_Data["PVPMage"] = {
 };
 
 AtlasLoot_Data["PVPPaladin"] = {
+	Module = "AtlasLoot_OriginalWoW";
 	Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"];
 	{
 		Name = AL["Rare Set"] .. " (Alliance)";
@@ -6227,6 +6283,7 @@ AtlasLoot_Data["PVPPaladin"] = {
 };
 
 AtlasLoot_Data["PVPPriest"] = {
+	Module = "AtlasLoot_OriginalWoW";
 	Name = LOCALIZED_CLASS_NAMES_MALE["PRIEST"];
 	{
 		Name = AL["Rare Set"] .. " (Alliance)";
@@ -6304,6 +6361,7 @@ AtlasLoot_Data["PVPPriest"] = {
 
 
 AtlasLoot_Data["PVPRogue"] = {
+	Module = "AtlasLoot_OriginalWoW";
 	Name = LOCALIZED_CLASS_NAMES_MALE["ROGUE"];
 	{
 		Name = AL["Rare Set"] .. " (Alliance)";
@@ -6380,6 +6438,7 @@ AtlasLoot_Data["PVPRogue"] = {
 };
 
 AtlasLoot_Data["PVPShaman"] = {
+	Module = "AtlasLoot_OriginalWoW";
 	Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"];
 	{
 		Name = AL["Superior Rare Set"] .. " (Alliance)";
@@ -6447,6 +6506,7 @@ AtlasLoot_Data["PVPShaman"] = {
 };
 
 AtlasLoot_Data["PVPWarlock"] = {
+	Module = "AtlasLoot_OriginalWoW";
 	Name = LOCALIZED_CLASS_NAMES_MALE["WARLOCK"];
 	{
 		Name = AL["Rare Set"] .. " (Alliance)";
@@ -6523,6 +6583,7 @@ AtlasLoot_Data["PVPWarlock"] = {
 };
 
 AtlasLoot_Data["PVPWarrior"] = {
+	Module = "AtlasLoot_OriginalWoW";
 	Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"];
 	{
 		Name = AL["Rare Set"] .. " (Alliance)";
@@ -6603,6 +6664,7 @@ AtlasLoot_Data["PVPWarrior"] = {
 ----------------------------
 
 AtlasLoot_Data["PVPWeapons60"] = {
+	Module = "AtlasLoot_OriginalWoW";
 	Name = AL["PvP Weapons (Level 60)"];
 	{
 		Name = "Grand Marshal's (Alliance)";
@@ -6707,6 +6769,7 @@ AtlasLoot_Data["PVPWeapons60"] = {
 --- PvP Level 60 Accessories ---
 --------------------------------
 AtlasLoot_Data["PvP60Accessories"] = {
+	Module = "AtlasLoot_OriginalWoW";
 	Name = AL["PvP Accessories (Level 60)"];
 	{
 		Name = "Alliance 1";
@@ -6839,6 +6902,7 @@ AtlasLoot_Data["PvP60Accessories"] = {
 };
 
 AtlasLoot_Data["PvP60Ench"] = {
+	Module = "AtlasLoot_OriginalWoW";
 	Name = AL["PvP Enchants"];
 	{
 		Name = AL["PvP Enchants"];
@@ -6874,6 +6938,7 @@ AtlasLoot_Data["PvP60Ench"] = {
 ------------
 
 AtlasLoot_Data["DesolaceCentaurClans"] = {
+	Module = "AtlasLoot_OriginalWoW";
 	Name = "Desolace Centaur Clans";
 	{
 		Name = BabbleFaction["Magram Clan Centaur"];
@@ -6888,6 +6953,7 @@ AtlasLoot_Data["DesolaceCentaurClans"] = {
 };
 
 AtlasLoot_Data["Wintersaber"] = {
+	Module = "AtlasLoot_OriginalWoW";
 	Name = BabbleFaction["Wintersaber Trainers"];
 	{
 		Name = BabbleFaction["Wintersaber Trainers"];
@@ -6896,6 +6962,7 @@ AtlasLoot_Data["Wintersaber"] = {
 };
 
 AtlasLoot_Data["ArathiBasinFactions"] = {
+	Module = "AtlasLoot_OriginalWoW";
 	Name = BabbleZone["Arathi Basin"];
 	{
 		Name = BabbleFaction["The League of Arathor"] .. " (" .. BabbleFaction["Alliance"] .. ")";
@@ -6912,6 +6979,7 @@ AtlasLoot_Data["ArathiBasinFactions"] = {
 -------------------
 
 AtlasLoot_Data["Argent"] = {
+	Module = "AtlasLoot_OriginalWoW";
 	Name = BabbleFaction["Argent Dawn"];
 	{
 		Name = BabbleFaction["Argent Dawn"];
@@ -6970,6 +7038,7 @@ AtlasLoot_Data["Argent"] = {
 ---------------------------------------------------
 
 AtlasLoot_Data["Bloodsail"] = {
+	Module = "AtlasLoot_OriginalWoW";
 	Name = BabbleFaction["Bloodsail Buccaneers"];
 	{
 		Name = BabbleFaction["Bloodsail Buccaneers"];
@@ -6984,6 +7053,7 @@ AtlasLoot_Data["Bloodsail"] = {
 };
 
 AtlasLoot_Data["Hydraxian"] = {
+	Module = "AtlasLoot_OriginalWoW";
 	Name = BabbleFaction["Hydraxian Waterlords"];
 	{
 		Name = BabbleFaction["Hydraxian Waterlords"];
@@ -7000,6 +7070,7 @@ AtlasLoot_Data["Hydraxian"] = {
 -------------------------
 
 AtlasLoot_Data["AQBroodRings"] = {
+	Module = "AtlasLoot_OriginalWoW";
 	Name = BabbleFaction["Brood of Nozdormu"];
 	{
 		Name = BabbleFaction["Brood of Nozdormu"];
@@ -7029,6 +7100,7 @@ AtlasLoot_Data["AQBroodRings"] = {
 -----------------------
 
 AtlasLoot_Data["Cenarion"] = {
+	Module = "AtlasLoot_OriginalWoW";
 	Name = BabbleFaction["Cenarion Circle"];
 	{
 		Name = BabbleFaction["Cenarion Circle"];
@@ -7096,6 +7168,7 @@ AtlasLoot_Data["Cenarion"] = {
 ----------------------------------------
 
 AtlasLoot_Data["AlteracFactions"] = {
+	Module = "AtlasLoot_OriginalWoW";
 	Name = BabbleZone["Alterac Valley"];
 	{
 		Name = BabbleFaction["Stormpike Guard"] .. " (" .. BabbleFaction["Alliance"] .. ")";
@@ -7126,6 +7199,7 @@ AtlasLoot_Data["AlteracFactions"] = {
 ---------------------------
 
 AtlasLoot_Data["Thorium"] = {
+	Module = "AtlasLoot_OriginalWoW";
 	Name = BabbleFaction["Thorium Brotherhood"];
 	{
 		Name = BabbleFaction["Friendly"];
@@ -7175,6 +7249,7 @@ AtlasLoot_Data["Thorium"] = {
 ----------------------
 
 AtlasLoot_Data["Timbermaw"] = {
+	Module = "AtlasLoot_OriginalWoW";
 	Name = BabbleFaction["Timbermaw Hold"];
 	{
 		Name = BabbleFaction["Timbermaw Hold"];
@@ -7204,6 +7279,7 @@ AtlasLoot_Data["Timbermaw"] = {
 ----------------------
 
 AtlasLoot_Data["Zandalar"] = {
+	Module = "AtlasLoot_OriginalWoW";
 	Name = BabbleFaction["Zandalar Tribe"];
 	{
 		Name = AL["Miscellaneous"];
@@ -7262,6 +7338,7 @@ AtlasLoot_Data["Zandalar"] = {
 ----------------------------
 
 AtlasLoot_Data["WorldBossesCLASSIC"] = {
+	Module = "AtlasLoot_OriginalWoW";
 	Name = AL["World Bosses"];
 	Type = "ClassicRaid";
 	{

@@ -417,7 +417,7 @@ function AtlasLoot:ItemsLoading(count)
 	if(loadingCount > 0) then
         AtlasLoot_ItemsLoadingSpinner:SetVertexColor(0,1,0)
         AtlasLoot_ItemsLoadingFrameBackground:SetVertexColor(0,1,0)
-        AtlasLoot_ItemsLoading.tooltip = "Items still loading"
+        AtlasLoot_ItemsLoading.tooltip = loadingCount.." Items still loading"
 		AtlasLoot_ItemsLoading.Loop:Play()
 		AtlasLoot_ItemsLoading:Show()
 	else

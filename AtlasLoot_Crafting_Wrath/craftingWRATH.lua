@@ -78,6 +78,7 @@ local TAILORING = GetSpellInfo(3908);
 ---------------
 
 AtlasLoot_Data["AlchemyWRATH"] = {
+	Module = "AtlasLoot_Crafting_Wrath";
 	Name = ALCHEMY;
 	Type = "Crafting";
 	{
@@ -179,6 +180,7 @@ AtlasLoot_Data["AlchemyWRATH"] = {
 ---------------------
 
 AtlasLoot_Data["SmithingWRATH"] = {
+	Module = "AtlasLoot_Crafting_Wrath";
 	Name = BLACKSMITHING;
 	Type = "Crafting";
 	{
@@ -417,6 +419,7 @@ AtlasLoot_Data["SmithingWRATH"] = {
 ---------------
 
 AtlasLoot_Data["CookingWRATH"] = {
+	Module = "AtlasLoot_Crafting_Wrath";
 	Name = COOKING;
 	Type = "Crafting";
 	{
@@ -459,6 +462,7 @@ AtlasLoot_Data["CookingWRATH"] = {
 ------------------
 
 AtlasLoot_Data["EnchantingWRATH"] = {
+	Module = "AtlasLoot_Crafting_Wrath";
 	Name = ENCHANTING;
 	{
 		Name = AL["Enchant Boots"];
@@ -574,6 +578,7 @@ AtlasLoot_Data["EnchantingWRATH"] = {
 -------------------
 
 AtlasLoot_Data["EngineeringWRATH"] = {
+	Module = "AtlasLoot_Crafting_Wrath";
 	Name = ENGINEERING;
 	Type = "Crafting";
 	{
@@ -698,6 +703,7 @@ AtlasLoot_Data["EngineeringWRATH"] = {
 -------------------
 
 AtlasLoot_Data["Inscription"] = {
+	Module = "AtlasLoot_Crafting_Wrath";
 	Name = INSCRIPTION;
 	Type = "Crafting";
 	{
@@ -1222,6 +1228,7 @@ AtlasLoot_Data["Inscription"] = {
 
 
 AtlasLoot_Data["JewelcraftingWRATH"] = {
+	Module = "AtlasLoot_Crafting_Wrath";
 	Name = JEWELCRAFTING;
 	Type = "Crafting";
 	{
@@ -1590,6 +1597,7 @@ AtlasLoot_Data["JewelcraftingWRATH"] = {
 ----------------------
 
 AtlasLoot_Data["LeatherworkingWRATH"] = {
+	Module = "AtlasLoot_Crafting_Wrath";
 	Name = LEATHERWORKING;
 	Type = "Crafting";
 	{
@@ -1827,6 +1835,7 @@ AtlasLoot_Data["LeatherworkingWRATH"] = {
 
 
 AtlasLoot_Data["MiningWRATH"] = {
+	Module = "AtlasLoot_Crafting_Wrath";
 	Name = MINING;
 	{
 		Name = MINING;
@@ -1838,6 +1847,7 @@ AtlasLoot_Data["MiningWRATH"] = {
 };
 
 AtlasLoot_Data["FirstAidWRATH"] = {
+	Module = "AtlasLoot_Crafting_Wrath";
 	Name = FIRSTAID;
 	{
 		Name = FIRSTAID;
@@ -1850,6 +1860,7 @@ AtlasLoot_Data["FirstAidWRATH"] = {
 -----------------
 
 AtlasLoot_Data["TailoringWRATH"] = {
+	Module = "AtlasLoot_Crafting_Wrath";
 	Name = TAILORING;
 	Type = "Crafting";
 	{

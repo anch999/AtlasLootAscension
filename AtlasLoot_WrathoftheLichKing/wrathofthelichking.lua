@@ -94,6 +94,7 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 ------------
 
 AtlasLoot_Data["WrathKeys"] = {
+	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = "Keys";
 	{
 		Name = "Keys";
@@ -109,6 +110,7 @@ AtlasLoot_Data["WrathKeys"] = {
 --------------------
 
 AtlasLoot_Data["UtgardeKeep"] = {
+	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = BabbleZone["Utgarde Keep"];
 	Type = "WrathDungeon";
 	{
@@ -173,6 +175,7 @@ AtlasLoot_Data["UtgardeKeep"] = {
 -----------------
 
 AtlasLoot_Data["TheNexus"] = {
+	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = BabbleZone["The Nexus"];
 	Type = "WrathDungeon";
 	{
@@ -250,6 +253,7 @@ AtlasLoot_Data["TheNexus"] = {
 -------------------
 
 AtlasLoot_Data["AzjolNerub"] = {
+	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = BabbleZone["Azjol-Nerub"];
 	Type = "WrathDungeon";
 	{
@@ -312,6 +316,7 @@ AtlasLoot_Data["AzjolNerub"] = {
 ----------------------------------
 
 AtlasLoot_Data["Ahnkahet"] = {
+	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = BabbleZone["Ahn'kahet: The Old Kingdom"];
 	Type = "WrathDungeon";
 	{
@@ -398,6 +403,7 @@ AtlasLoot_Data["Ahnkahet"] = {
 ------------------------
 
 AtlasLoot_Data["DrakTharonKeep"] = {
+	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = BabbleZone["Drak'Tharon Keep"];
 	Type = "WrathDungeon";
 	{
@@ -475,6 +481,7 @@ AtlasLoot_Data["DrakTharonKeep"] = {
 -----------------------
 
 AtlasLoot_Data["TheVioletHold"] = {
+	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = BabbleZone["The Violet Hold"];
 	Type = "WrathDungeon";
 	{
@@ -583,6 +590,7 @@ AtlasLoot_Data["TheVioletHold"] = {
 ---------------
 
 AtlasLoot_Data["Gundrak"] = {
+	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = BabbleZone["Gundrak"];
 	Type = "WrathDungeon";
 	{
@@ -667,6 +675,7 @@ AtlasLoot_Data["Gundrak"] = {
 ----------------------
 
 AtlasLoot_Data["HallsofStone"] = {
+	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = BabbleZone["Halls of Stone"];
 	Type = "WrathDungeon";
 	{
@@ -744,6 +753,7 @@ AtlasLoot_Data["HallsofStone"] = {
 --------------------------
 
 AtlasLoot_Data["HallsofLightning"] = {
+	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = BabbleZone["Halls of Lightning"];
 	Type = "WrathDungeon";
 	{
@@ -832,6 +842,7 @@ AtlasLoot_Data["HallsofLightning"] = {
 ---------------------------------------
 
 AtlasLoot_Data["CoTStratholme"] = {
+	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = BabbleZone["Caverns of Time"] .. ": " .. BabbleZone["The Culling of Stratholme"];
 	DisplayName = BabbleZone["The Culling of Stratholme"];
 	Type = "WrathDungeon";
@@ -919,6 +930,7 @@ AtlasLoot_Data["CoTStratholme"] = {
 ------------------------
 
 AtlasLoot_Data["UtgardePinnacle"] = {
+	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = BabbleZone["Utgarde Pinnacle"];
 	Type = "WrathDungeon";
 	{
@@ -1007,6 +1019,7 @@ AtlasLoot_Data["UtgardePinnacle"] = {
 ------------------
 
 AtlasLoot_Data["TheOculus"] = {
+	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = BabbleZone["The Oculus"];
 	Type = "WrathDungeon";
 	{
@@ -1097,6 +1110,7 @@ AtlasLoot_Data["TheOculus"] = {
 --------------------------
 
 AtlasLoot_Data["ForgeofSouls"] = {
+	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = BabbleZone["The Forge of Souls"];
 	Type = "WrathDungeon";
 	{
@@ -1157,6 +1171,7 @@ AtlasLoot_Data["ForgeofSouls"] = {
 --------------------
 
 AtlasLoot_Data["PitofSaron"] = {
+	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = BabbleZone["Pit of Saron"];
 	Type = "WrathDungeon";
 	{
@@ -1230,6 +1245,7 @@ AtlasLoot_Data["PitofSaron"] = {
 ---------------------------
 
 AtlasLoot_Data["HallsofReflection"] = {
+	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = BabbleZone["Halls of Reflection"];
 	Type = "WrathDungeon";
 	{
@@ -1325,6 +1341,7 @@ AtlasLoot_Data["HallsofReflection"] = {
 -----------------------------
 
 AtlasLoot_Data["TrialoftheChampion"] = {
+	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = BabbleZone["Trial of the Champion"];
 	Type = "WrathDungeon";
 	{
@@ -1449,6 +1466,7 @@ AtlasLoot_Data["TrialoftheChampion"] = {
 -------------------------
 
 AtlasLoot_Data["VaultofArchavon"] = {
+	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = BabbleZone["Vault of Archavon"];
 	Type = "WrathRaid";
 	{
@@ -3289,6 +3307,7 @@ AtlasLoot_Data["VaultofArchavon"] = {
 -------------------------
 
 AtlasLoot_Data["Naxxramas80"] = {
+	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = BabbleZone["Naxxramas"];
 	Type = "WrathRaid";
 	{
@@ -3921,6 +3940,7 @@ AtlasLoot_Data["Naxxramas80"] = {
 ------------------------
 
 AtlasLoot_Data["Sartharion"] = {
+	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = BabbleZone["The Obsidian Sanctum"];
 	Type = "WrathRaid";
 	{
@@ -3988,6 +4008,7 @@ AtlasLoot_Data["Sartharion"] = {
 ---------------------------
 
 AtlasLoot_Data["Malygos"] = {
+	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = BabbleZone["The Eye of Eternity"];
 	Type = "WrathRaid";
 	{
@@ -4046,6 +4067,7 @@ AtlasLoot_Data["Malygos"] = {
 --------------
 
 AtlasLoot_Data["Ulduar"] = {
+	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = BabbleZone["Ulduar"];
 	Type = "WrathRaid";
 	{
@@ -4677,6 +4699,7 @@ AtlasLoot_Data["Ulduar"] = {
 -----------------------------
 
 AtlasLoot_Data["TrialoftheCrusader"] = {
+	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = BabbleZone["Trial of the Crusader"];
 	Type = "WrathRaid";
 	{
@@ -5092,6 +5115,7 @@ AtlasLoot_Data["TrialoftheCrusader"] = {
 -----------------------------------
 
 AtlasLoot_Data["TrialoftheCrusader2"] = {
+	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = BabbleZone["Trial of the Crusader"];
 	Type = "WrathRaid";
 	{
@@ -5557,6 +5581,7 @@ AtlasLoot_Data["TrialoftheCrusader2"] = {
 -------------------------
 
 AtlasLoot_Data["Onyxia80"] = {
+	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = BabbleZone["Onyxia's Lair"];
 	Type = "WrathRaid";
 	{
@@ -5666,6 +5691,7 @@ AtlasLoot_Data["Onyxia80"] = {
 -------------------
 
 AtlasLoot_Data["IcecrownCitadel"] = {
+	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = BabbleZone["Icecrown Citadel"];
 	Type = "WrathRaid";
 	{
@@ -6499,6 +6525,7 @@ AtlasLoot_Data["IcecrownCitadel"] = {
 --------------------
 
 AtlasLoot_Data["Halion"] = {
+	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = BabbleZone["The Ruby Sanctum"];
 	Type = "WrathRaid";
 	{
@@ -6579,6 +6606,7 @@ AtlasLoot_Data["Halion"] = {
 -------------------------
 
 AtlasLoot_Data["AllianceVanguard"] = {
+	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = BabbleFaction["Alliance Vanguard"];
 	{
 		Name = BabbleFaction["Revered"];
@@ -6602,6 +6630,7 @@ AtlasLoot_Data["AllianceVanguard"] = {
 ----------------------
 
 AtlasLoot_Data["ArgentCrusade"] = {
+	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = BabbleFaction["Argent Crusade"];
 	{
 		Name = BabbleFaction["Friendly"];
@@ -6639,6 +6668,7 @@ AtlasLoot_Data["ArgentCrusade"] = {
 -------------------------
 
 AtlasLoot_Data["FrenzyheartTribe"] = {
+	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = BabbleFaction["Frenzyheart Tribe"];
 	{
 		Name = BabbleFaction["Friendly"];
@@ -6677,6 +6707,7 @@ AtlasLoot_Data["FrenzyheartTribe"] = {
 ----------------------------
 
 AtlasLoot_Data["HordeExpedition"] = {
+	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = BabbleFaction["Horde Expedition"];
 	{
 		Name = BabbleFaction["Revered"];
@@ -6701,6 +6732,7 @@ AtlasLoot_Data["HordeExpedition"] = {
 -----------------
 
 AtlasLoot_Data["KirinTor"] = {
+	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = BabbleFaction["Kirin Tor"];
 	{
 		Name = BabbleFaction["Friendly"];
@@ -6738,6 +6770,7 @@ AtlasLoot_Data["KirinTor"] = {
 ---------------------------------
 
 AtlasLoot_Data["KnightsoftheEbonBlade"] = {
+	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = BabbleFaction["Knights of the Ebon Blade"];
 	{
 		Name = BabbleFaction["Friendly"];
@@ -6778,6 +6811,7 @@ AtlasLoot_Data["KnightsoftheEbonBlade"] = {
 -------------------
 
 AtlasLoot_Data["TheKaluak"] = {
+	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = BabbleFaction["The Kalu'ak"];
 	{
 		Name = BabbleFaction["Friendly"];
@@ -6817,6 +6851,7 @@ AtlasLoot_Data["TheKaluak"] = {
 -------------------
 
 AtlasLoot_Data["TheOracles"] = {
+	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = BabbleFaction["The Oracles"];
 	{
 		Name = BabbleFaction["Friendly"];
@@ -6858,6 +6893,7 @@ AtlasLoot_Data["TheOracles"] = {
 -------------------------
 
 AtlasLoot_Data["TheSonsofHodir"] = {
+	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = BabbleFaction["The Sons of Hodir"];
 	{
 		Name = BabbleFaction["Honored"];
@@ -6897,6 +6933,7 @@ AtlasLoot_Data["TheSonsofHodir"] = {
 -------------------------
 
 AtlasLoot_Data["WinterfinRetreat"] = {
+	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = BabbleFaction["Winterfin Retreat"];
 	{
 		Name = BabbleFaction["Winterfin Retreat"];
@@ -6918,6 +6955,7 @@ AtlasLoot_Data["WinterfinRetreat"] = {
 ---------------------------
 
 AtlasLoot_Data["TheWyrmrestAccord"] = {
+	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = BabbleFaction["The Wyrmrest Accord"];
 	{
 		Name = BabbleFaction["Friendly"];
@@ -6956,6 +6994,7 @@ AtlasLoot_Data["TheWyrmrestAccord"] = {
 -------------------------
 
 AtlasLoot_Data["AshenVerdict"] = {
+	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = BabbleFaction["The Ashen Verdict"];
 	{
 		Name = "Rings";
@@ -7017,6 +7056,7 @@ AtlasLoot_Data["AshenVerdict"] = {
 ------------------
 
 AtlasLoot_Data["ArenaDeathKnightWRATH"] = {
+	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"];
 	{
 		Name = "Page 1";
@@ -7062,6 +7102,7 @@ AtlasLoot_Data["ArenaDeathKnightWRATH"] = {
 	};
 };
 AtlasLoot_Data["ArenaDruidWRATH"] = {
+	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = AL["Druid"];
 	{
 		Name = AL["Balance"] .. " Page 1";
@@ -7192,6 +7233,7 @@ AtlasLoot_Data["ArenaDruidWRATH"] = {
 };
 
 AtlasLoot_Data["ArenaHunterWRATH"] = {
+	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = LOCALIZED_CLASS_NAMES_MALE["HUNTER"];
 	{
 		Name = "Page 1";
@@ -7238,6 +7280,7 @@ AtlasLoot_Data["ArenaHunterWRATH"] = {
 };
 
 AtlasLoot_Data["ArenaMageWRATH"] = {
+	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = LOCALIZED_CLASS_NAMES_MALE["MAGE"];
 	{
 		Name = "Page 1";
@@ -7284,6 +7327,7 @@ AtlasLoot_Data["ArenaMageWRATH"] = {
 };
 
 AtlasLoot_Data["ArenaPaladinWRATH"] = {
+	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"];
 	{
 		Name = AL["Retribution"] .. "Page 1";
@@ -7376,6 +7420,7 @@ AtlasLoot_Data["ArenaPaladinWRATH"] = {
 };
 
 AtlasLoot_Data["ArenaPriestWRATH"] = {
+	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = LOCALIZED_CLASS_NAMES_MALE["PRIEST"];
 	{
 		Name = AL["Shadow"] .. "Page 1";
@@ -7465,6 +7510,7 @@ AtlasLoot_Data["ArenaPriestWRATH"] = {
 
 
 AtlasLoot_Data["ArenaRogueWRATH"] = {
+	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = LOCALIZED_CLASS_NAMES_MALE["ROGUE"];
 	{
 		Name = "Page 1";
@@ -7511,6 +7557,7 @@ AtlasLoot_Data["ArenaRogueWRATH"] = {
 };
 
 AtlasLoot_Data["ArenaShamanWRATH"] = {
+	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"];
 	{
 		Name = AL["Elemental"] .. "Page 1";
@@ -7642,6 +7689,7 @@ AtlasLoot_Data["ArenaShamanWRATH"] = {
 
 
 AtlasLoot_Data["ArenaWarlockWRATH"] = {
+	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = LOCALIZED_CLASS_NAMES_MALE["WARLOCK"];
 	{
 		Name = "Page 1";
@@ -7689,6 +7737,7 @@ AtlasLoot_Data["ArenaWarlockWRATH"] = {
 };
 
 AtlasLoot_Data["ArenaWarriorWRATH"] = {
+	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"];
 	{
 		Name = "Page 1";
@@ -7738,6 +7787,7 @@ AtlasLoot_Data["ArenaWarriorWRATH"] = {
 ------------------------------
 
 AtlasLoot_Data["PvP80NonSet"] = {
+	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = AL["PvP Non-Set Epics"];
 	{
 		Name = "Page 1";
@@ -7870,6 +7920,7 @@ AtlasLoot_Data["PvP80NonSet"] = {
 --- Wrathful Gladiator Weapons ---
 ------------------------------------
 AtlasLoot_Data["WeaponsWRATH"] = {
+	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = "Arena " .. AL["Weapons"];
 	{
 		Name = "Page 1";
@@ -7959,6 +8010,7 @@ AtlasLoot_Data["WeaponsWRATH"] = {
 -----------------------
 
 AtlasLoot_Data["PVPidolWRATH"] = {
+	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = "Idols/Librams/Sigils/Totems";
 	{
 		Name = "Page 1";
@@ -8002,6 +8054,7 @@ AtlasLoot_Data["PVPidolWRATH"] = {
 -------------------------
 
 AtlasLoot_Data["PvP80Misc"] = {
+	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = AL["PvP Misc"];
 	{
 		Name = AL["PvP Misc"];
@@ -8034,6 +8087,7 @@ AtlasLoot_Data["PvP80Misc"] = {
 --------------------------------
 
 AtlasLoot_Data["LakeWintergrasp"] = {
+	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = "Wintergrasp";
 	{
 		Name = "Page 1";
@@ -8194,6 +8248,7 @@ AtlasLoot_Data["LakeWintergrasp"] = {
 -----------------------------------------------
 
 AtlasLoot_Data["VentureBay"] = {
+	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = "Venture Bay";
 	{
 		Name = "Venture Bay";
@@ -8229,6 +8284,7 @@ AtlasLoot_Data["VentureBay"] = {
 ---------------------------------------
 
 AtlasLoot_Data["T7"] = {
+	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = "Tier 7";
 	Type = "WrathRaid";
 	{
@@ -8524,6 +8580,7 @@ AtlasLoot_Data["T7"] = {
 ---------------------------------------
 
 AtlasLoot_Data["T8"] = {
+	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = "Tier 8";
 	Type = "WrathRaid";
 	{
@@ -8816,6 +8873,7 @@ AtlasLoot_Data["T8"] = {
 --- Tier 9 Sets (T9) ---
 ------------------------
 AtlasLoot_Data["T9"] = {
+	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = "Tier 9";
 	Type = "WrathRaid";
 	{
@@ -9623,6 +9681,7 @@ AtlasLoot_Data["T9"] = {
 --- Tier 10 Sets (T10) ---
 --------------------------
 AtlasLoot_Data["T10"] = {
+	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = "Tier 10";
 	Type = "WrathRaid";
 	{
@@ -10031,6 +10090,7 @@ AtlasLoot_Data["T10"] = {
 -------------------
 
 AtlasLoot_Data["Legendaries"] = {
+	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = AL["Legendary Items"];
 	Type = "WrathRaid";
 	{
@@ -10064,6 +10124,7 @@ AtlasLoot_Data["Legendaries"] = {
 -----------------------
 
 AtlasLoot_Data["WorldEpicsWrath"] = {
+	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = "World Epics";
 	Type = "WrathDungeon";
 	{
@@ -10088,6 +10149,7 @@ AtlasLoot_Data["WorldEpicsWrath"] = {
 -------------------------------
 
 AtlasLoot_Data["EmblemofHeroism"] = {
+	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = AL["Emblem of Heroism Rewards"];
 	{
 		Name = "Page 1";
@@ -10156,6 +10218,7 @@ AtlasLoot_Data["EmblemofHeroism"] = {
 -----------------------------
 
 AtlasLoot_Data["EmblemofValor"] = {
+	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = AL["Emblem of Valor Rewards"];
 	{
 		Name = "Page 1";
@@ -10213,6 +10276,7 @@ AtlasLoot_Data["EmblemofValor"] = {
 --------------------------------
 
 AtlasLoot_Data["EmblemofConquest"] = {
+	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = AL["Emblem of Conquest Rewards"];
 	{
 		Name = "Page 1";
@@ -10275,6 +10339,7 @@ AtlasLoot_Data["EmblemofConquest"] = {
 -------------------------------
 
 AtlasLoot_Data["EmblemofTriumph"] = {
+	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = AL["Emblem of Triumph Rewards"];
 	{
 		Name = "Page 1";
@@ -10352,6 +10417,7 @@ AtlasLoot_Data["EmblemofTriumph"] = {
 -----------------------------
 
 AtlasLoot_Data["EmblemofFrost"] = {
+	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = AL["Emblem of Frost Rewards"];
 	{
 		Name = "Page 1";

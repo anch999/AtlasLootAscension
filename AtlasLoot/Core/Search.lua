@@ -670,9 +670,8 @@ end
 
 local itemList = {}
 
-local function DoSearch(searchText)
+function AtlasLoot:DoSearch(searchText)
     AtlasLootCharDB["SearchResult"] = {Name = "Search Result" , Type = "Search", Back = true}
-    AtlasLootCharDB.LastSearchedText = searchText
     count = 0
     tablenum = 1
     showSearch = false
@@ -681,16 +680,18 @@ local function DoSearch(searchText)
 
     local searchTerms = ParseQuery(searchText)
     for dataID, data in pairs(AtlasLoot_Data) do
-        for tableNum, t in ipairs(data) do
-            for _, itemData in pairs(t) do
-                if itemData.itemID or itemData.spellID then
-                    if data.Type then
-                        itemData.Type = data.Type
-                        if not itemData[AtlasLoot_Difficulty.MAX_DIF] then
-                            itemData[AtlasLoot_Difficulty.MAX_DIF] = #AtlasLoot_Difficulty[data.Type]
+        if self.db.profile.SearchOn.All or self.db.profile.SearchOn[data.Module] or (self.db.profile.SearchAscensionVanity and data.Module == "AtlasLoot_Ascension_Vanity") then
+            for tableNum, t in ipairs(data) do
+                for _, itemData in pairs(t) do
+                    if itemData.itemID or itemData.spellID then
+                        if data.Type then
+                            itemData.Type = data.Type
+                            if not itemData[AtlasLoot_Difficulty.MAX_DIF] then
+                                itemData[AtlasLoot_Difficulty.MAX_DIF] = #AtlasLoot_Difficulty[data.Type]
+                            end
                         end
+                        tinsert(itemList, {{itemData, dataID, tableNum, searchTerms, searchText}})
                     end
-                    tinsert(itemList, {{itemData, dataID, tableNum, searchTerms, searchText}})
                 end
             end
         end
@@ -743,7 +744,7 @@ function AtlasLoot:Search(text)
         end
     end
     if allDisabled then
-        DEFAULT_CHAT_FRAME:AddMessage(RED .. AL["AtlasLoot"] .. ": " .. WHITE .. AL["You don't have any module selected to search on."])
+        DEFAULT_CHAT_FRAME:AddMessage(RED .. AL["AtlasLoot"] .. ": " .. WHITE .. AL["You don't have any module selected to search on. Right click search to select modules the more selected the longer it will take to search"])
         return
     end
     if self.db.profile.SearchOn.All then
@@ -756,8 +757,8 @@ function AtlasLoot:Search(text)
         end
     end
 
-    DoSearch(text)
-    --local success, message = pcall(DoSearch, text)
+    AtlasLoot:DoSearch(text)
+    --local success, message = pcall(AtlasLoot:DoSearch, text)
 
     -- if not success then
     --     message = message:match("[^:]+: (.*)") or message -- strip stack location
@@ -800,6 +801,10 @@ function AtlasLoot:ShowSearchOptions(button)
                     end)
                 end
             end
+            AtlasLoot.Dewdrop:AddLine("text", AL["Ascension Vanity Collection"], "checked", self.db.profile.SearchAscensionVanity, "tooltipTitle", AL["Ascension Vanity Collection"], "tooltipText",
+            AL["If checked, AtlasLoot will search Ascension Vanity Collection"], "func", function()
+            self.db.profile.SearchAscensionVanity = not self.db.profile.SearchAscensionVanity
+            end)
             AtlasLoot.Dewdrop:AddLine("text", AL["Search options"], "isTitle", true, "notCheckable", true)
             AtlasLoot.Dewdrop:AddLine("text", AL["Partial matching"], "checked", self.db.profile.PartialMatching, "tooltipTitle", AL["Partial matching"], "tooltipText",
                 AL["If checked, AtlasLoot search item names for a partial match."], "func", function()

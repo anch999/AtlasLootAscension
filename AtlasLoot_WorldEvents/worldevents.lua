@@ -43,6 +43,7 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0")
 -------------------------
 
 AtlasLoot_Data["ArgentTournament"] = {
+	Module = "AtlasLoot_WorldEvents";
 	Name = AL["Argent Tournament"];
 	{
 		Name = BabbleInventory["Miscellaneous"];
@@ -353,6 +354,7 @@ brewfest.corenWRATH = {
 };
 
 AtlasLoot_Data["BrewfestCLASSIC"] = {
+	Module = "AtlasLoot_WorldEvents";
 	Name = AL["Brewfest"];
 	brewfest.a;
 	brewfest.b;
@@ -362,6 +364,7 @@ AtlasLoot_Data["BrewfestCLASSIC"] = {
 };
 
 AtlasLoot_Data["BrewfestTBC"] = {
+	Module = "AtlasLoot_WorldEvents";
 	Name = AL["Brewfest"];
 	brewfest.a;
 	brewfest.b;
@@ -371,6 +374,7 @@ AtlasLoot_Data["BrewfestTBC"] = {
 };
 
 AtlasLoot_Data["BrewfestWRATH"] = {
+	Module = "AtlasLoot_WorldEvents";
 	Name = AL["Brewfest"];
 	brewfest.a;
 	brewfest.b;
@@ -384,6 +388,7 @@ AtlasLoot_Data["BrewfestWRATH"] = {
 -----------------------
 
 AtlasLoot_Data["ChildrensWeek"] = {
+	Module = "AtlasLoot_WorldEvents";
 	Name = AL["Children's Week"];
 	{
 		Name = AL["Children's Week"];
@@ -407,6 +412,7 @@ AtlasLoot_Data["ChildrensWeek"] = {
 -----------------------
 
 AtlasLoot_Data["DayoftheDead"] = {
+	Module = "AtlasLoot_WorldEvents";
 	Name = AL["Day of the Dead"];
 	{
 		Name = AL["Day of the Dead"];
@@ -426,6 +432,7 @@ AtlasLoot_Data["DayoftheDead"] = {
 ----------------------------
 
 AtlasLoot_Data["Winterviel"] = {
+	Module = "AtlasLoot_WorldEvents";
 	Name = AL["Feast of Winter Veil"];
 	{
 		Name = AL["Miscellaneous"];
@@ -593,6 +600,7 @@ local HallowsEndMasks = {
 };
 
 AtlasLoot_Data["HalloweenCLASSIC"] = {
+	Module = "AtlasLoot_WorldEvents";
 	Name = AL["Hallow's End"];
 	HallowsEnd;
 	HallowsEndMasks;
@@ -600,6 +608,7 @@ AtlasLoot_Data["HalloweenCLASSIC"] = {
 };
 
 AtlasLoot_Data["HalloweenTBC"] = {
+	Module = "AtlasLoot_WorldEvents";
 	Name = AL["Hallow's End"];
 	HallowsEnd;
 	HallowsEndMasks;
@@ -607,6 +616,7 @@ AtlasLoot_Data["HalloweenTBC"] = {
 };
 
 AtlasLoot_Data["HalloweenWRATH"] = {
+	Module = "AtlasLoot_WorldEvents";
 	Name = AL["Hallow's End"];
 	HallowsEnd;
 	HallowsEndMasks;
@@ -618,6 +628,7 @@ AtlasLoot_Data["HalloweenWRATH"] = {
 ------------------------
 
 AtlasLoot_Data["HarvestFestival"] = {
+	Module = "AtlasLoot_WorldEvents";
 	Name = AL["Harvest Festival"];
 	{
 		Name = AL["Harvest Festival"];
@@ -636,6 +647,7 @@ AtlasLoot_Data["HarvestFestival"] = {
 --------------------------
 
 AtlasLoot_Data["Valentineday"] = {
+	Module = "AtlasLoot_WorldEvents";
 	Name = AL["Love is in the Air"];
 	{
 		Name = "Page 1";
@@ -706,6 +718,7 @@ AtlasLoot_Data["Valentineday"] = {
 ----------------------
 
 AtlasLoot_Data["LunarFestival"] = {
+	Module = "AtlasLoot_WorldEvents";
 	Name = AL["Lunar Festival"];
 	{
 		Name = AL["Miscellaneous"];
@@ -818,17 +831,20 @@ local midSummerMain = {
 }
 
 AtlasLoot_Data["MidsummerFestivalCLASSIC"] = {
+	Module = "AtlasLoot_WorldEvents";
 	Name = AL["Midsummer Fire Festival"];
 	midSummerMain;
 };
 
 AtlasLoot_Data["MidsummerFestivalTBC"] = {
+	Module = "AtlasLoot_WorldEvents";
 	Name = AL["Midsummer Fire Festival"];
 	midSummerMain;
 	lordAhuneTBC;
 };
 
 AtlasLoot_Data["MidsummerFestivalWRATH"] = {
+	Module = "AtlasLoot_WorldEvents";
 	Name = AL["Midsummer Fire Festival"];
 	midSummerMain;
 	lordAhuneWRATH;
@@ -839,6 +855,7 @@ AtlasLoot_Data["MidsummerFestivalWRATH"] = {
 -------------------
 
 AtlasLoot_Data["Noblegarden"] = {
+	Module = "AtlasLoot_WorldEvents";
 	Name = AL["Noblegarden"];
 	{
 		Name = AL["Noblegarden"];
@@ -861,6 +878,7 @@ AtlasLoot_Data["Noblegarden"] = {
 ------------------------
 
 AtlasLoot_Data["PilgrimsBounty"] = {
+	Module = "AtlasLoot_WorldEvents";
 	Name = AL["Pilgrim's Bounty"];
 	{
 		Name = AL["Pilgrim's Bounty"];
@@ -895,6 +913,7 @@ AtlasLoot_Data["PilgrimsBounty"] = {
 -------------------------------------
 
 AtlasLoot_Data["BashirLanding"] = {
+	Module = "AtlasLoot_WorldEvents";
 	Name = "Bash'ir Landing Skyguard";
 	{
 		Name = AL["Bash'ir Landing Skyguard Raid"];
@@ -929,6 +948,7 @@ AtlasLoot_Data["BashirLanding"] = {
 ----------------------
 
 AtlasLoot_Data["Darkmoon"] = {
+	Module = "AtlasLoot_WorldEvents";
 	Name = BabbleFaction["Darkmoon Faire"];
 	{
 		Name = AL["Darkmoon Faire Rewards"];
@@ -1007,6 +1027,7 @@ AtlasLoot_Data["Darkmoon"] = {
 --------------------------
 
 AtlasLoot_Data["ElementalInvasion"] = {
+	Module = "AtlasLoot_WorldEvents";
 	Name = AL["Elemental Invasion"];
 	{
 		Name = AL["Elemental Invasion"];
@@ -1036,6 +1057,7 @@ AtlasLoot_Data["ElementalInvasion"] = {
 ---------------------------------
 
 AtlasLoot_Data["GurubashiArena"] = {
+	Module = "AtlasLoot_WorldEvents";
 	Name = AL["Gurubashi Arena Booty Run"];
 	{
 		Name = AL["Gurubashi Arena Booty Run"];
@@ -1053,6 +1075,7 @@ AtlasLoot_Data["GurubashiArena"] = {
 ------------------------------------------
 
 AtlasLoot_Data["FishingExtravaganza"] = {
+	Module = "AtlasLoot_WorldEvents";
 	Name = "Stranglethorn Fishing";
 	{
 		Name = AL["Stranglethorn Fishing Extravaganza"];
@@ -1080,6 +1103,7 @@ AtlasLoot_Data["FishingExtravaganza"] = {
 -----------------------
 
 AtlasLoot_Data["AbyssalCouncil"] = {
+	Module = "AtlasLoot_WorldEvents";
 	Name = AL["Abyssal Council"];
 	{
 		Name = AL["Templars"];
@@ -1158,6 +1182,7 @@ AtlasLoot_Data["AbyssalCouncil"] = {
 -----------------------
 
 AtlasLoot_Data["EthereumPrison"] = {
+	Module = "AtlasLoot_WorldEvents";
 	Name = AL["Ethereum Prison"];
 	{
 		Name = AL["Armbreaker Huffaz"];
@@ -1289,6 +1314,7 @@ AtlasLoot_Data["EthereumPrison"] = {
 ----------------
 
 AtlasLoot_Data["Shartuul"] = {
+	Module = "AtlasLoot_WorldEvents";
 	Name = AL["Shartuul"];
 	{
 		Name = AL["Shartuul"];
@@ -1322,6 +1348,7 @@ AtlasLoot_Data["Shartuul"] = {
 ---------------
 
 AtlasLoot_Data["Skettis"] = {
+	Module = "AtlasLoot_WorldEvents";
 	Name = AL["Skettis"];
 	{
 		Name = AL["Darkscreecher Akkarai"];
@@ -1412,6 +1439,7 @@ AtlasLoot_Data["Skettis"] = {
 ------------------------
 
 AtlasLoot_Data["ScourgeInvasionEvent"] = {
+	Module = "AtlasLoot_WorldEvents";
 	Name = AL["Scourge Invasion"];
 	{
 		Name = "Page 1";

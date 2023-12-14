@@ -75,6 +75,7 @@ local TAILORING = GetSpellInfo(3908);
 --- Alchemy ---
 ---------------
 AtlasLoot_Data["AlchemyCLASSIC"] = {
+	Module = "AtlasLoot_Crafting_OriginalWoW",
 	Name = ALCHEMY;
 	Type = "Crafting";
 	{
@@ -239,6 +240,7 @@ AtlasLoot_Data["AlchemyCLASSIC"] = {
 --- Blacksmithing ---
 ---------------------
 AtlasLoot_Data["SmithingCLASSIC"] = {
+	Module = "AtlasLoot_Crafting_OriginalWoW",
 	Name = BLACKSMITHING;
 	Type = "Crafting";
 	{
@@ -578,6 +580,7 @@ AtlasLoot_Data["SmithingCLASSIC"] = {
 ---------------
 
 AtlasLoot_Data["CookingCLASSIC"] = {
+	Module = "AtlasLoot_Crafting_OriginalWoW",
 	Name = COOKING;
 	Type = "Crafting";
 	{
@@ -815,6 +818,7 @@ AtlasLoot_Data["CookingCLASSIC"] = {
 ------------------
 
 AtlasLoot_Data["EnchantingCLASSIC"] = {
+	Module = "AtlasLoot_Crafting_OriginalWoW",
 	Name = ENCHANTING;
 	Type = "Crafting";
 	{
@@ -1025,6 +1029,7 @@ AtlasLoot_Data["EnchantingCLASSIC"] = {
 -------------------
 
 AtlasLoot_Data["EngineeringCLASSIC"] = {
+	Module = "AtlasLoot_Crafting_OriginalWoW",
 	Name = ENGINEERING;
 	Type = "Crafting";
 	{
@@ -1259,6 +1264,7 @@ AtlasLoot_Data["EngineeringCLASSIC"] = {
 -----------------
 
 AtlasLoot_Data["FirstAidCLASSIC"] = {
+	Module = "AtlasLoot_Crafting_OriginalWoW",
 	Name = FIRSTAID;
 	Type = "Crafting";
 	{
@@ -1284,6 +1290,7 @@ AtlasLoot_Data["FirstAidCLASSIC"] = {
 ----------------------
 
 AtlasLoot_Data["LeatherworkingCLASSIC"] = {
+	Module = "AtlasLoot_Crafting_OriginalWoW",
 	Name = LEATHERWORKING;
 	Type = "Crafting";
 	{
@@ -1635,10 +1642,11 @@ AtlasLoot_Data["LeatherworkingCLASSIC"] = {
 --------------
 
 AtlasLoot_Data["MiningCLASSIC"] = {
+	Module = "AtlasLoot_Crafting_OriginalWoW",
 	Name = MINING;
 	Type = "Crafting";
 	{
-		Name = MINING;
+		Name = AL["Smelting"];
 		[1] = {itemID = 17771, spellID = 22967 }; --Smelt Elementium
 		[2] = {itemID = 12655, spellID = 70524 }; --Enchanted Thorium
 		[3] = {itemID = 12359, spellID = 16153 }; --Smelt Thorium
@@ -1653,6 +1661,18 @@ AtlasLoot_Data["MiningCLASSIC"] = {
 		[12] = {itemID = 3576, spellID = 3304 }; --Smelt Tin
 		[13] = {itemID = 2840, spellID = 2657 }; --Smelt Copper
 	};
+	{
+		Name = AL["Materials"];
+		[1] = {itemID = 10620 }; --Thorium
+		[2] = {itemID = 11370 }; --Dark Iron
+		[3] = {itemID = 7911 }; --Truesilver
+		[4] = {itemID = 3858 }; --Mithril
+		[5] = {itemID = 2776 }; --Gold
+		[6] = {itemID = 2772 }; --Iron
+		[7] = {itemID = 2775 }; --Silver
+		[8] = {itemID = 2771 }; --Tin
+		[9] = {itemID = 2770 }; --Copper
+	};
 };
 
 -----------------
@@ -1660,6 +1680,7 @@ AtlasLoot_Data["MiningCLASSIC"] = {
 -----------------
 
 AtlasLoot_Data["TailoringCLASSIC"] = {
+	Module = "AtlasLoot_Crafting_OriginalWoW",
 	Name = TAILORING;
 	Type = "Crafting";
 	{
