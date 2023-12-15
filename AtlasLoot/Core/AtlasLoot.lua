@@ -1127,7 +1127,16 @@ AtlasLoot.ModuleName = {
 	["AtlasLootVanity"] = "AtlasLoot_Vanity";
 }
 
-AtlasLoot.dataModules = {"AtlasLoot_OriginalWoW", "AtlasLoot_BurningCrusade", "AtlasLoot_Crafting_OriginalWoW", "AtlasLoot_Crafting_TBC", "AtlasLoot_Crafting_Wrath", "AtlasLoot_WorldEvents", "AtlasLoot_WrathoftheLichKing", "AtlasLoot_Vanity"}
+AtlasLoot.dataModules = {
+	"AtlasLoot_OriginalWoW",
+	"AtlasLoot_BurningCrusade",
+	"AtlasLoot_WrathoftheLichKing",
+	"AtlasLoot_Crafting_OriginalWoW",
+	"AtlasLoot_Crafting_TBC",
+	"AtlasLoot_Crafting_Wrath",
+	"AtlasLoot_WorldEvents",
+	"AtlasLoot_Vanity"
+}
 
 --[[
 AtlasLoot:LoadAllModules()
