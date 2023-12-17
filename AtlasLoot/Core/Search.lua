@@ -1,9 +1,6 @@
-local GREY = "|cff999999"
 local RED = "|cffff0000"
 local WHITE = "|cffFFFFFF"
 local GREEN = "|cff1eff00"
-local PURPLE = "|cff9F3FFF"
-local BLUE = "|cff0070dd"
 local ORANGE = "|cffFF8400"
 
 local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
@@ -412,8 +409,8 @@ local function IsItemTypeMatch(term, itemEquipType)
     return type == itemEquipType
 end
 
-local function nameMatches(name, searchText)
-    if AtlasLoot.db.profile.PartialMatching then
+function AtlasLoot:NameMatches(name, searchText)
+    if self.db.profile.PartialMatching then
         return string.find(string.lower(name), string.lower(searchText))
     else
         return string.lower(name) == string.lower(searchText)
@@ -557,13 +554,13 @@ function AtlasLoot:ItemMatchesTerm(term, itemDetails)
         end
         return false
     else
-        return nameMatches(itemDetails[1], term.name)
+        return self:NameMatches(itemDetails[1], term.name)
     end
 end
 
 function AtlasLoot:ItemMatchesAllTerms(searchTerms, itemDetails)
     for _, term in ipairs(searchTerms) do
-        if not AtlasLoot:ItemMatchesTerm(term, itemDetails) then
+        if not self:ItemMatchesTerm(term, itemDetails) then
             return false
         end
     end
@@ -610,7 +607,7 @@ function AtlasLoot:AddItemToSearchResult(item, dataSource, dataID, tableNum)
     if AtlasLootCharDB["SearchResult"][tablenum] == nil then
         AtlasLootCharDB["SearchResult"][tablenum] = {Name = "Page "..tablenum}
     end
-    local tableCopy = AtlasLoot:CloneTable(item)
+    local tableCopy = self:CloneTable(item)
     tinsert(AtlasLootCharDB["SearchResult"][tablenum], tableCopy)
     local tNum = #AtlasLootCharDB["SearchResult"][tablenum]
     AtlasLootCharDB["SearchResult"][tablenum][tNum].lootTable = {{dataID, dataSource, tableNum}, "Source"}
@@ -629,29 +626,29 @@ function AtlasLoot:ProcessItem(data)
         local itemID = itemData.itemID
         local spellID = itemData.spellID
         if spellID then
-            AtlasLoot:ItemsLoading(-1)
+            self:ItemsLoading(-1)
             local spellName = GetSpellInfo(spellID)
-            if nameMatches(spellName, searchText) then
-                AtlasLoot:AddItemToSearchResult(itemData, "AtlasLoot_Data", dataID, tableNum)
+            if self:NameMatches(spellName, searchText) then
+                self:AddItemToSearchResult(itemData, "AtlasLoot_Data", dataID, tableNum)
                 if not showSearch then
-                    AtlasLoot:ShowSearchResult()
+                    self:ShowSearchResult()
                     showSearch = true
                 end
-                AtlasLoot:ItemFrameRefresh()
+                self:ItemFrameRefresh()
             end
         elseif itemID then
             local item = Item:CreateFromID(itemID)
             if item then
                 local function nextItem()
-                    AtlasLoot:ItemsLoading(-1)
-                    local itemDetails = {AtlasLoot:GetItemDetails(itemID)}
-                    if AtlasLoot:ItemMatchesAllTerms(searchTerms, itemDetails) then
-                        AtlasLoot:AddItemToSearchResult(itemData, "AtlasLoot_Data", dataID, tableNum)
+                    self:ItemsLoading(-1)
+                    local itemDetails = {self:GetItemDetails(itemID)}
+                    if self:ItemMatchesAllTerms(searchTerms, itemDetails) then
+                        self:AddItemToSearchResult(itemData, "AtlasLoot_Data", dataID, tableNum)
                         if not showSearch then
-                            AtlasLoot:ShowSearchResult()
+                            self:ShowSearchResult()
                             showSearch = true
                         else
-                            AtlasLoot:ItemFrameRefresh()
+                            self:ItemFrameRefresh()
                         end
                     end
                 end
@@ -686,8 +683,8 @@ function AtlasLoot:DoSearch(searchText)
                     if itemData.itemID or itemData.spellID then
                         if data.Type then
                             itemData.Type = data.Type
-                            if not itemData[AtlasLoot_Difficulty.MAX_DIF] then
-                                itemData[AtlasLoot_Difficulty.MAX_DIF] = #AtlasLoot_Difficulty[data.Type]
+                            if not itemData[self.Difficultys.MAX_DIF] then
+                                itemData[self.Difficultys.MAX_DIF] = #self.Difficultys[data.Type]
                             end
                         end
                         tinsert(itemList, {{itemData, dataID, tableNum, searchTerms, searchText}})
@@ -697,14 +694,14 @@ function AtlasLoot:DoSearch(searchText)
         end
     end
     -- rate limit tied to half the current frame rate
-    AtlasLoot:ItemsLoading(#itemList)
+    self:ItemsLoading(#itemList)
     local maxDuration = 500/GetFramerate()
     local startTime = debugprofilestop()
     local function continue()
         startTime = debugprofilestop()
         local task = tremove(itemList)
         while (task) do
-            AtlasLoot:ProcessItem(task[1])
+            self:ProcessItem(task[1])
             if (debugprofilestop() - startTime > maxDuration) then
                 Timer.After(0, continue)
                 return
@@ -717,7 +714,7 @@ function AtlasLoot:DoSearch(searchText)
 end
 
 function AtlasLoot:ShowSearchResult()
-    AtlasLoot:ShowItemsFrame("SearchResult", "AtlasLootCharDB", 1)
+    self:ShowItemsFrame("SearchResult", "AtlasLootCharDB", 1)
 end
 
 function AtlasLoot:Search(text)
@@ -736,8 +733,8 @@ function AtlasLoot:Search(text)
     -- Decide if we need load all modules or just specified ones
     local allDisabled = not self.db.profile.SearchOn.All
     if allDisabled then
-        for _, module in ipairs(AtlasLoot.dataModules) do
-            if self.db.profile.SearchOn[module] == true then
+        for _, module in ipairs(self.dataModules) do
+            if self.db.profile.SearchOn[module] == true or self.db.profile.SearchAscensionVanity then
                 allDisabled = false
                 break
             end
@@ -748,7 +745,7 @@ function AtlasLoot:Search(text)
         return
     end
     if self.db.profile.SearchOn.All then
-        AtlasLoot:LoadAllModules()
+        self:LoadAllModules()
     else
         for k, v in pairs(self.db.profile.SearchOn) do
             if k ~= "All" and v == true and not IsAddOnLoaded(k) and LoadAddOn(k) and self.db.profile.LoDNotify then
@@ -757,8 +754,8 @@ function AtlasLoot:Search(text)
         end
     end
 
-    AtlasLoot:DoSearch(text)
-    --local success, message = pcall(AtlasLoot:DoSearch, text)
+    self:DoSearch(text)
+    --local success, message = pcall(self:DoSearch, text)
 
     -- if not success then
     --     message = message:match("[^:]+: (.*)") or message -- strip stack location
@@ -773,25 +770,25 @@ function AtlasLoot:Search(text)
     --     end
     --     DEFAULT_CHAT_FRAME:AddMessage(RED .. AL["AtlasLoot"] .. ": " .. WHITE .. AL["No match found for"] .. " \"" .. text .. "\"." .. itemFilterErrorMessage)
     -- else
-    --     AtlasLoot:ShowItemsFrame("SearchResult", "AtlasLootCharDB", 1)
+    --     self:ShowItemsFrame("SearchResult", "AtlasLootCharDB", 1)
     -- end
 end
 
 function AtlasLoot:ShowSearchOptions(button)
-    if AtlasLoot.Dewdrop:IsOpen(button) then
-        AtlasLoot.Dewdrop:Close(1)
+    if self.Dewdrop:IsOpen(button) then
+        self.Dewdrop:Close(1)
     else
         local setOptions = function()
-            AtlasLoot.Dewdrop:AddLine("text", AL["Search on"], "isTitle", true, "notCheckable", true)
-            AtlasLoot.Dewdrop:AddLine("text", AL["All modules"], "checked", not self.db.profile.SearchAscensionDB and self.db.profile.SearchOn.All, "tooltipTitle", AL["All modules"], "tooltipText",
+            self.Dewdrop:AddLine("text", AL["Search on"], "isTitle", true, "notCheckable", true)
+            self.Dewdrop:AddLine("text", AL["All modules"], "checked", not self.db.profile.SearchAscensionDB and self.db.profile.SearchOn.All, "tooltipTitle", AL["All modules"], "tooltipText",
                             AL["If checked, AtlasLoot will load and search across all the modules."], "func", function()
                 self.db.profile.SearchOn.All = not self.db.profile.SearchOn.All
             end)
-            for _, module in ipairs(AtlasLoot.dataModules) do
+            for _, module in ipairs(self.dataModules) do
                 if IsAddOnLoadOnDemand(module) then
                     local title = GetAddOnMetadata(module, "title")
                     local notes = GetAddOnMetadata(module, "notes")
-                    AtlasLoot.Dewdrop:AddLine("text", title, "checked", not self.db.profile.SearchAscensionDB and self.db.profile.SearchOn.All or self.db.profile.SearchOn[module], "disabled", self.db.profile.SearchAscensionDB or self.db.profile.SearchOn.All, "tooltipTitle", title,
+                    self.Dewdrop:AddLine("text", title, "checked", not self.db.profile.SearchAscensionDB and self.db.profile.SearchOn.All or self.db.profile.SearchOn[module], "disabled", self.db.profile.SearchAscensionDB or self.db.profile.SearchOn.All, "tooltipTitle", title,
                                     "tooltipText", notes, "func", function()
                         if self.db.profile.SearchOn[module] == nil then
                             self.db.profile.SearchOn[module] = true
@@ -801,21 +798,21 @@ function AtlasLoot:ShowSearchOptions(button)
                     end)
                 end
             end
-            AtlasLoot.Dewdrop:AddLine("text", AL["Ascension Vanity Collection"], "checked", self.db.profile.SearchAscensionVanity, "tooltipTitle", AL["Ascension Vanity Collection"], "tooltipText",
+            self.Dewdrop:AddLine("text", AL["Ascension Vanity Collection"], "checked", self.db.profile.SearchAscensionVanity, "tooltipTitle", AL["Ascension Vanity Collection"], "tooltipText",
             AL["If checked, AtlasLoot will search Ascension Vanity Collection"], "func", function()
             self.db.profile.SearchAscensionVanity = not self.db.profile.SearchAscensionVanity
             end)
-            AtlasLoot.Dewdrop:AddLine("text", AL["Search options"], "isTitle", true, "notCheckable", true)
-            AtlasLoot.Dewdrop:AddLine("text", AL["Partial matching"], "checked", self.db.profile.PartialMatching, "tooltipTitle", AL["Partial matching"], "tooltipText",
+            self.Dewdrop:AddLine("text", AL["Search options"], "isTitle", true, "notCheckable", true)
+            self.Dewdrop:AddLine("text", AL["Partial matching"], "checked", self.db.profile.PartialMatching, "tooltipTitle", AL["Partial matching"], "tooltipText",
                 AL["If checked, AtlasLoot search item names for a partial match."], "func", function()
                 self.db.profile.PartialMatching = not self.db.profile.PartialMatching
             end)
-            AtlasLoot.Dewdrop:AddLine("text", AL["Search AscensionDB"], "checked", self.db.profile.SearchAscensionDB, "tooltipTitle", AL["Partial matching"], "tooltipText",
+            self.Dewdrop:AddLine("text", AL["Search AscensionDB"], "checked", self.db.profile.SearchAscensionDB, "tooltipTitle", AL["Partial matching"], "tooltipText",
                 AL["If checked, AtlasLoot will open a browser window and search AscensionDB"], "func", function()
                 self.db.profile.SearchAscensionDB = not self.db.profile.SearchAscensionDB
             end)
         end
-        AtlasLoot.Dewdrop:Open(button, 'point', function(parent)
+        self.Dewdrop:Open(button, 'point', function(parent)
             return "BOTTOMLEFT", "BOTTOMRIGHT"
         end, "children", setOptions)
     end

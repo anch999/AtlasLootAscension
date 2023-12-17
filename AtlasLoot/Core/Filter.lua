@@ -150,17 +150,17 @@ function AtlasLoot:HideFilteredItems()
 		end
 	end
 	-- show filtered table
-	AtlasLoot:ShowItemsFrame("FilterList", "AtlasLootFilter", 1)
+	self:ShowItemsFrame("FilterList", "AtlasLootFilter", 1)
 end
 
-function AtlasLoot:FilterEnableButton(self, btnclick)
+function AtlasLoot:FilterEnableButton(frame, btnclick)
 	if btnclick == "RightButton" then
-		if AtlasLoot.Dewdrop:IsOpen() then
-			AtlasLoot.Dewdrop:Close()
+		if self.Dewdrop:IsOpen() then
+			self.Dewdrop:Close()
 		else
-			AtlasLoot.Dewdrop:Unregister(AtlasLootFilterCheck)
-			AtlasLoot:FilterMenuRegister()
-			AtlasLoot.Dewdrop:Open(self)
+			self.Dewdrop:Unregister(AtlasLootFilterCheck)
+			self:FilterMenuRegister()
+			self.Dewdrop:Open(frame)
 		end
 		if AtlasLootFilterCheck:GetChecked() then
 			AtlasLootFilterCheck:SetChecked(false)
@@ -168,12 +168,12 @@ function AtlasLoot:FilterEnableButton(self, btnclick)
 			AtlasLootFilterCheck:SetChecked(true)
 		end
 	else
-		if AtlasLoot.filterEnable then
-			AtlasLoot.filterEnable = false
-			AtlasLoot:ShowItemsFrame(AtlasLootItemsFrame.refreshFilter[1], AtlasLootItemsFrame.refreshFilter[2], AtlasLootItemsFrame.refreshFilter[3])
+		if self.filterEnable then
+			self.filterEnable = false
+			self:ShowItemsFrame(AtlasLootItemsFrame.refreshFilter[1], AtlasLootItemsFrame.refreshFilter[2], AtlasLootItemsFrame.refreshFilter[3])
 		else
-			AtlasLoot.filterEnable = true
-			AtlasLoot:HideFilteredItems()
+			self.filterEnable = true
+			self:HideFilteredItems()
 		end
 	end
 end
@@ -194,7 +194,7 @@ Constructs the Filter menu.
 function AtlasLoot:FilterMenuRegister()
 
 	local db = AtlasLootFilterDB
-	AtlasLoot.Dewdrop:Register(AtlasLootFilterCheck,
+	self.Dewdrop:Register(AtlasLootFilterCheck,
 		'point', function(parent)
 			return "TOPLEFT", "BOTTOM"
 		end,
@@ -204,13 +204,13 @@ function AtlasLoot:FilterMenuRegister()
 					if not db.VanityFilters then db.VanityFilters = {} end
 					local vDb = db.VanityFilters
 					if not vDb[filter[1]] then vDb[filter[1]] = false end
-					AtlasLoot.Dewdrop:AddLine(
+					self.Dewdrop:AddLine(
 						"text", filter[2],
 						"func", function()
 							vDb[filter[1]] = not vDb[filter[1]]
 							disableFilters(filter[1])
-							if AtlasLoot.filterEnable then
-								AtlasLoot:HideFilteredItems()
+							if self.filterEnable then
+								self:HideFilteredItems()
 							end
 						end,
 						"checked", vDb[filter[1]],
@@ -219,15 +219,15 @@ function AtlasLoot:FilterMenuRegister()
 				end
 			else
 				for _, group in ipairs(FilterTable) do
-					AtlasLoot.Dewdrop:AddLine('text' , group.Name, 'textHeight', 12, 'textWidth', 12, 'isTitle', true, "notCheckable", true)
+					self.Dewdrop:AddLine('text' , group.Name, 'textHeight', 12, 'textWidth', 12, 'isTitle', true, "notCheckable", true)
 					for _, filters in ipairs(group) do
 						if not db[filters[2]] then db[filters[2]] = {false, group.Type} end
-						AtlasLoot.Dewdrop:AddLine(
+						self.Dewdrop:AddLine(
 							"text", filters[1],
 							"func", function()
 								db[filters[2]][1] = not db[filters[2]][1]
-								if AtlasLoot.filterEnable then
-									AtlasLoot:HideFilteredItems()
+								if self.filterEnable then
+									self:HideFilteredItems()
 								end
 							end,
 							"checked", db[filters[2]][1]
@@ -236,7 +236,7 @@ function AtlasLoot:FilterMenuRegister()
 				end
 			end
 				--Close button
-				AtlasLoot.Dewdrop:AddLine('text', AL["Close Menu"], 'textR', 0, 'textG', 1, 'textB', 1, "closeWhenClicked", true, 'notCheckable', true)
+				self.Dewdrop:AddLine('text', AL["Close Menu"], 'textR', 0, 'textG', 1, 'textB', 1, "closeWhenClicked", true, 'notCheckable', true)
 			end,
 			'dontHook', true
 		)

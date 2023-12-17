@@ -11,10 +11,10 @@ local CYAN =  "|cff00ffff"
 local SPRINGGREEN = "|cFF00FF7F"
 
 -- Used to create a dewdrop menu from a table
-function AtlasLoot:OpenDewdropMenu(self, menuList, skipRegister)
-	if AtlasLoot.Dewdrop:IsOpen(self) then AtlasLoot.Dewdrop:Close() return end
+function AtlasLoot:OpenDewdropMenu(frame, menuList, skipRegister)
+	if self.Dewdrop:IsOpen(frame) then self.Dewdrop:Close() return end
 	if not skipRegister then
-		AtlasLoot.Dewdrop:Register(self,
+		self.Dewdrop:Register(frame,
 			'point', function(parent)
 				return "TOP", "BOTTOM"
 			end,
@@ -23,7 +23,7 @@ function AtlasLoot:OpenDewdropMenu(self, menuList, skipRegister)
 			for _, menu in pairs(menuList[level]) do
 				if menu.divider then
 					local text = WHITE.."----------------------------------------------------------------------------------------------------"
-					AtlasLoot.Dewdrop:AddLine(
+					self.Dewdrop:AddLine(
 						'text' , text:sub(1, menu.divider),
 						'textHeight', 13,
 						'textWidth', 13,
@@ -31,7 +31,7 @@ function AtlasLoot:OpenDewdropMenu(self, menuList, skipRegister)
 						'notCheckable', true
 					)
 				else
-					AtlasLoot.Dewdrop:AddLine(
+					self.Dewdrop:AddLine(
 					'text', menu.text,
 					'func', menu.func,
 					'closeWhenClicked', menu.closeWhenClicked,
@@ -45,7 +45,7 @@ function AtlasLoot:OpenDewdropMenu(self, menuList, skipRegister)
 				end
 				-- create close button
 				if menu.close then
-					AtlasLoot.Dewdrop:AddLine(
+					self.Dewdrop:AddLine(
 						'text', AL["Close Menu"],
 						'textR', 0,
 						'textG', 1,
@@ -61,14 +61,14 @@ function AtlasLoot:OpenDewdropMenu(self, menuList, skipRegister)
 		'dontHook', true
 		)
 	end
-	AtlasLoot.Dewdrop:Open(self)
+	self.Dewdrop:Open(frame)
 	return true
 end
 
 --for a adding a divider to dew drop menus 
 function AtlasLoot:AddDividerLine(maxLenght)
     local text = WHITE.."----------------------------------------------------------------------------------------------------"
-    AtlasLoot.Dewdrop:AddLine(
+    self.Dewdrop:AddLine(
         'text' , text:sub(1, maxLenght),
         'textHeight', 12,
         'textWidth', 12,
@@ -79,9 +79,9 @@ end
 
 function AtlasLoot:CloseDewDrop(divider, maxLenght)
     if divider then
-        AtlasLoot:AddDividerLine(maxLenght)
+        self:AddDividerLine(maxLenght)
     end
-    AtlasLoot.Dewdrop:AddLine(
+    self.Dewdrop:AddLine(
         'text', AL["Close Menu"],
         'textR', 0,
         'textG', 1,
@@ -99,7 +99,7 @@ function AtlasLoot:CloneTable(table)
 	local new = {}	-- create a new table
 	for i, v in pairs(table) do
 		if type(v) == "table" then
-			v = AtlasLoot:CloneTable(v)
+			v = self:CloneTable(v)
 		end
 		new[i] = v
 	end
@@ -150,7 +150,7 @@ end
 -- create a enchant or item chat link!
 function AtlasLoot:Chatlink(ID,chatType,Type)
     if Type == "spell" then
-        SendChatMessage(AtlasLoot:GetEnchantLink(ID) ,chatType)
+        SendChatMessage(self:GetEnchantLink(ID) ,chatType)
     else
         SendChatMessage(select(2,GetItemInfo(ID)) ,chatType)
     end
@@ -218,10 +218,10 @@ function AtlasLoot:GetReputationFaction(factions)
 end
 
 --[[
-AtlasLoot:PopoupItemFrame(self, data)
+AtlasLoot:PopoupItemFrame(item, data)
 Used to create a popup item frame for items like gem sacks to show what they contain
 ]] 
-function AtlasLoot:PopoupItemFrame(self, data)
+function AtlasLoot:PopoupItemFrame(frame, data)
 	if not data then AtlasLoot_PopupFrame:Hide() return end
 	--hide the unused buttons
 	for i = 1, 15 do
@@ -249,14 +249,14 @@ function AtlasLoot:PopoupItemFrame(self, data)
         button.name:SetJustifyH("CENTER")
 		button.name:Hide()
 		button.number = num
-		button:SetScript("OnClick", function(self, arg1) AtlasLoot:ItemOnClick(self, arg1) end)
-		button:SetScript("OnEnter", function(self)
-			AtlasLoot:ItemOnEnter(self)
+		button:SetScript("OnClick", function(btn, arg1) self:ItemOnClick(btn, arg1) end)
+		button:SetScript("OnEnter", function(btn)
+			self:ItemOnEnter(btn)
 			AtlasLoot_PopupFrame:Show()
 		end)
-		button:SetScript("OnLeave", function(self)
-			if not AtlasLoot.Dewdrop:IsOpen(_G["AtlasLoot_PopupButton_"..num]) then
-				AtlasLoot:ItemOnLeave(self)
+		button:SetScript("OnLeave", function(btn)
+			if not self.Dewdrop:IsOpen(_G["AtlasLoot_PopupButton_"..num]) then
+				self:ItemOnLeave(btn)
 			end
 		end)
 		
@@ -271,7 +271,7 @@ function AtlasLoot:PopoupItemFrame(self, data)
 		end
 	end
 	if data.Faction then
-		data = data[AtlasLoot:GetReputationFaction(data.Faction)]
+		data = data[self:GetReputationFaction(data.Faction)]
 	end
 
 	local numberBtns
@@ -284,17 +284,17 @@ function AtlasLoot:PopoupItemFrame(self, data)
 			local itemID = item.itemID or item[1]
 			local itemData = Item:CreateFromID(itemID)
 				if itemID and not itemData:GetInfo() then
-					AtlasLoot:ItemsLoading(1)
+					self:ItemsLoading(1)
 					itemData:ContinueOnLoad(function(itemID)
-						AtlasLoot:ItemsLoading(-1)
+						self:ItemsLoading(-1)
 					end)
 				end
 			button.icon:SetTexture(GetItemIcon(itemID))
 			button.itemID = itemID
-			button.itemTexture = self.itemTexture
-			local recipe = AtlasLoot:GetRecipeData(itemID, "item")
+			button.itemTexture = frame.itemTexture
+			local recipe = self:GetRecipeData(itemID, "item")
 			if recipe then
-			button.craftingData = AtlasLoot:RecipeSource(recipe.spellID)
+			button.craftingData = self:RecipeSource(recipe.spellID)
 			end
 		if item[2] then
 			button.name:SetText(WHITE..item[2])
@@ -318,9 +318,9 @@ function AtlasLoot:PopoupItemFrame(self, data)
 	else
 		AtlasLoot_PopupFrame:SetHeight(46)
 	end
-	AtlasLoot_PopupFrame:SetParent(self)
+	AtlasLoot_PopupFrame:SetParent(frame)
 	AtlasLoot_PopupFrame:ClearAllPoints()
-	AtlasLoot_PopupFrame:SetPoint("TOPLEFT",self,0,-25)
+	AtlasLoot_PopupFrame:SetPoint("TOPLEFT",frame,0,-25)
 	AtlasLoot_PopupFrame:Show()
 end
 
@@ -339,11 +339,11 @@ function AtlasLoot:AddTooltip(frameb, tooltiptext)
 
 --Called when 'Back'Button is pressed and calls up the appropriate loot page
 function AtlasLoot:BackButton_OnClick()
-	AtlasLoot.backEnabled = false
+	self.backEnabled = false
 	if AtlasLootItemsFrame.refreshSearch then
-		AtlasLoot:ShowItemsFrame(AtlasLootItemsFrame.refreshSearch[1], AtlasLootItemsFrame.refreshSearch[2], AtlasLootItemsFrame.refreshSearch[3])
+		self:ShowItemsFrame(AtlasLootItemsFrame.refreshSearch[1], AtlasLootItemsFrame.refreshSearch[2], AtlasLootItemsFrame.refreshSearch[3])
 	else
-		AtlasLoot:ShowItemsFrame(AtlasLootItemsFrame.refreshBack[1], AtlasLootItemsFrame.refreshBack[2], AtlasLootItemsFrame.refreshBack[3])
+		self:ShowItemsFrame(AtlasLootItemsFrame.refreshBack[1], AtlasLootItemsFrame.refreshBack[2], AtlasLootItemsFrame.refreshBack[3])
 	end
 end
 
@@ -354,7 +354,7 @@ dataID: Loot table dataID
 ]]
 function AtlasLoot:IsLootTableAvailable(dataSource)
 	local moduleName
-	moduleName = AtlasLoot.ModuleName[dataSource]
+	moduleName = self.ModuleName[dataSource]
 	if moduleName and IsAddOnLoaded(moduleName) then
 		return true
 	elseif moduleName then
@@ -366,29 +366,29 @@ end
 AtlasLoot:NavButton_OnClick:
 Called when <-, -> are pressed and calls up the appropriate loot page
 ]]
-function AtlasLoot:NavButton_OnClick(self)
+function AtlasLoot:NavButton_OnClick(btn)
 	if AtlasLootDefaultFrame_Map:IsVisible() then
-		AtlasLoot:MapSelect(self.mapID, self.mapNum)
+		self:MapSelect(btn.mapID, btn.mapNum)
 	else
-		local tablenum, dataID, dataSource = self.tablenum, self.tablebase[1], self.tablebase[2]
+		local tablenum, dataID, dataSource = btn.tablenum, btn.tablebase[1], btn.tablebase[2]
 		if #_G[dataSource][dataID] > 26 then
 			local min, max = AtlasLootDefaultFrameSubTableScrollScrollBar:GetMinMaxValues()
 			AtlasLootDefaultFrameSubTableScrollScrollBar:SetValue(tablenum * (max / #_G[dataSource][dataID]))
 		end
-		AtlasLoot:ShowItemsFrame(dataID, dataSource, tablenum)
+		self:ShowItemsFrame(dataID, dataSource, tablenum)
 	end
 end
 
 --------- rate limited item frame refresh ---------
 local refreshTimer
 function AtlasLoot:ItemRefreshTimer()
-    AtlasLoot:ShowItemsFrame(AtlasLootItemsFrame.refresh[1], AtlasLootItemsFrame.refresh[2], AtlasLootItemsFrame.refresh[3])
+    self:ShowItemsFrame(AtlasLootItemsFrame.refresh[1], AtlasLootItemsFrame.refresh[2], AtlasLootItemsFrame.refresh[3])
     refreshTimer = false
 end
 
 function AtlasLoot:ItemFrameRefresh()
     if refreshTimer then return end
-    AtlasLoot:ScheduleTimer("ItemRefreshTimer", 5)
+    self:ScheduleTimer("ItemRefreshTimer", 5)
     refreshTimer = true
 end
 -----------------------------------------------------
@@ -413,13 +413,16 @@ function AtlasLoot:ItemsLoading(count)
 		count = 0
 	end
 	loadingCount = loadingCount + count
---print(loadingCount)
 	if(loadingCount > 0) then
         AtlasLoot_ItemsLoadingSpinner:SetVertexColor(0,1,0)
         AtlasLoot_ItemsLoadingFrameBackground:SetVertexColor(0,1,0)
         AtlasLoot_ItemsLoading.tooltip = loadingCount.." Items still loading"
 		AtlasLoot_ItemsLoading.Loop:Play()
 		AtlasLoot_ItemsLoading:Show()
+		if GameTooltip:GetOwner() == AtlasLoot_ItemsLoading then
+			GameTooltip:SetOwner(AtlasLoot_ItemsLoading, "ANCHOR_LEFT")
+			GameTooltip:SetText(AtlasLoot_ItemsLoading.tooltip, nil, nil, nil, nil, true)
+		end
 	else
         AtlasLoot_ItemsLoading.Loop:Stop()
         AtlasLoot_ItemsLoading:Hide()
@@ -427,7 +430,7 @@ function AtlasLoot:ItemsLoading(count)
 end
 
 function AtlasLoot:BatchRequestVanity(itemList)
-	itemList = AtlasLoot:CloneTable(itemList)
+	itemList = self:CloneTable(itemList)
 	  local function nextItem()
         local task = tremove(itemList)
 		while task do

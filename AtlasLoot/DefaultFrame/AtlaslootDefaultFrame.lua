@@ -30,18 +30,18 @@ function AtlasLoot:OnShow()
     AtlasLootItemsFrame.activeBoss = nil
     --Set the item table to the loot table
     --Show the last displayed loot table
-    local lastboss = AtlasLoot.db.profile.LastBoss[AtlasLoot_Expac]
-    if AtlasLoot.db.profile.AutoCurrentInstance and AtlasLoot:ShowInstance() then
+    local lastboss = self.db.profile.LastBoss[self.Expac]
+    if self.db.profile.AutoCurrentInstance and self:ShowInstance() then
         return
     elseif lastboss and lastboss[4] then
-        AtlasLoot.currentTable = lastboss[5]
-        AtlasLoot.lastModule = lastboss[4]
-        AtlasLoot.moduleName = lastboss[6]
-        AtlasLoot:IsLootTableAvailable(lastboss[4])
-        AtlasLootDefaultFrame_Menu:SetText(AtlasLoot.moduleName)
-        AtlasLoot:ShowItemsFrame(lastboss[1], "AtlasLoot_Data", lastboss[3])
+        self.currentTable = lastboss[5]
+        self.lastModule = lastboss[4]
+        self.moduleName = lastboss[6]
+        self:IsLootTableAvailable(lastboss[4])
+        AtlasLootDefaultFrame_Menu:SetText(self.moduleName)
+        self:ShowItemsFrame(lastboss[1], "AtlasLoot_Data", lastboss[3])
     else
-        AtlasLoot:ShowItemsFrame("EmptyTable", "AtlasLoot_Data", 1)
+        self:ShowItemsFrame("EmptyTable", "AtlasLoot_Data", 1)
     end
 end
 
@@ -50,10 +50,10 @@ function AtlasLoot:ShowInstance()
     for _, v in pairs(AtlasLoot_SubMenus) do
         for _, t in ipairs(v) do
             if t[4] == BabbleZone[GetRealZoneText()] or (t[5] and t[5] == BabbleZone[GetRealZoneText()]) then
-                AtlasLoot.currentTable = v.SubMenu
-                AtlasLoot.lastModule = v.Module
-                AtlasLoot:IsLootTableAvailable(AtlasLoot.lastModule)
-                AtlasLoot:ShowItemsFrame(t[2], "AtlasLoot_Data", 1)
+                self.currentTable = v.SubMenu
+                self.lastModule = v.Module
+                self:IsLootTableAvailable(self.lastModule)
+                self:ShowItemsFrame(t[2], "AtlasLoot_Data", 1)
                 return true
             end
         end
@@ -76,21 +76,21 @@ text - Heading for the loot table
 Called when a button in AtlasLoot.Dewdrop is clicked
 ]]
 function AtlasLoot:DewDropClick(tablename, text, tablenum)
-    AtlasLoot.filterEnable = false
-    AtlasLoot.backEnabled = false
-    AtlasLoot.moduleName = text
+    self.filterEnable = false
+    self.backEnabled = false
+    self.moduleName = text
     AtlasLootFilterCheck:SetChecked(false)
-    tablename = tablename .. AtlasLoot_Expac
-    AtlasLoot.currentTable = tablename
+    tablename = tablename .. self.Expac
+    self.currentTable = tablename
     tablenum = tablenum or 1
-    AtlasLoot.lastModule = AtlasLoot_SubMenus[tablename].Module
+    self.lastModule = AtlasLoot_SubMenus[tablename].Module
     AtlasLootDefaultFrame_Menu:SetText(text)
-    AtlasLoot:IsLootTableAvailable(AtlasLoot_SubMenus[tablename].Module)
-    local lasttable = AtlasLoot.db.profile[AtlasLoot.currentTable]
+    self:IsLootTableAvailable(AtlasLoot_SubMenus[tablename].Module)
+    local lasttable = self.db.profile[self.currentTable]
         if lasttable then
-            AtlasLoot:ShowItemsFrame(lasttable[1], lasttable[2], lasttable[3])
+            self:ShowItemsFrame(lasttable[1], lasttable[2], lasttable[3])
         else
-            AtlasLoot:ShowItemsFrame(AtlasLoot_SubMenus[tablename][tablenum][2], "AtlasLoot_Data", tablenum)
+            self:ShowItemsFrame(AtlasLoot_SubMenus[tablename][tablenum][2], "AtlasLoot_Data", tablenum)
         end
 end
 
@@ -101,15 +101,15 @@ Called when a button in AtlasLoot.DewdropSubMenu is clicked
 ]]
 function AtlasLoot:DewDropSubMenuClick(tablename, onDamand)
     local dataSource = "AtlasLoot_Data"
-    AtlasLoot.backEnabled = false
+    self.backEnabled = false
     if  onDamand then
 		dataSource = "AtlasLoot_OnDemand"
-		AtlasLoot:CreateOnDemandLootTable(onDamand)
+		self:CreateOnDemandLootTable(onDamand)
 	else
         --Show the select loot table
         local tablenum = _G[dataSource][tablename].Loadfirst or 1
         --Show the table that has been selected
-        AtlasLoot:ShowItemsFrame(tablename, dataSource, tablenum)
+        self:ShowItemsFrame(tablename, dataSource, tablenum)
     end
 end
 
@@ -123,19 +123,19 @@ name - label for the expansion
 Called when a button in DewdropExpansionMenuClick is clicked
 ]]
 function AtlasLoot:DewdropExpansionMenuClick(expansion, name)
-    AtlasLoot.backEnabled = false
+    self.backEnabled = false
     AtlasLootDefaultFrame_ExpansionMenu:SetText(name)
-    AtlasLoot_Expac = expansion
-    if AtlasLoot.currentTable then
-        AtlasLoot.currentTable = AtlasLoot:CleandataID(AtlasLoot.currentTable, 1) .. AtlasLoot_Expac
-        AtlasLoot:IsLootTableAvailable(AtlasLoot_SubMenus[AtlasLoot.currentTable].Module)
-        local tablename = AtlasLoot_SubMenus[AtlasLoot.currentTable][1][2]
-        local lasttable = AtlasLoot.db.profile[AtlasLoot.currentTable]
+    self.Expac = expansion
+    if self.currentTable then
+        self.currentTable = self:CleandataID(self.currentTable, 1) .. self.Expac
+        self:IsLootTableAvailable(AtlasLoot_SubMenus[self.currentTable].Module)
+        local tablename = AtlasLoot_SubMenus[self.currentTable][1][2]
+        local lasttable = self.db.profile[self.currentTable]
         if lasttable then
-            AtlasLoot:ShowItemsFrame(lasttable[1], lasttable[2], lasttable[3])
+            self:ShowItemsFrame(lasttable[1], lasttable[2], lasttable[3])
         else
             local tablenum = AtlasLoot_Data[tablename].Loadfirst or 1
-            AtlasLoot:ShowItemsFrame(tablename, "AtlasLoot_Data", tablenum)
+            self:ShowItemsFrame(tablename, "AtlasLoot_Data", tablenum)
         end
     end
 end
@@ -145,19 +145,19 @@ AtlasLoot:DewdropExpansionMenuOpen():
 Adds expansion menu from expansion table in mainmenus.lua
 ]]
 local expansionMenuLoaded
-function AtlasLoot:DewdropExpansionMenuOpen(self)
+function AtlasLoot:DewdropExpansionMenuOpen(btn)
     local menuList = { [1] = {} }
     if not expansionMenuLoaded then
         if AtlasLoot_ExpansionMenu then
             for i,v in ipairs(AtlasLoot_ExpansionMenu) do
                 if type(v) == "table" then
-                    tinsert(menuList[1], {text = v[1], func = function() AtlasLoot:DewdropExpansionMenuClick(v[2], v[1]) end, notCheckable = true, closeWhenClicked = true, textHeight = 12, textWidth = 12})
+                    tinsert(menuList[1], {text = v[1], func = function() self:DewdropExpansionMenuClick(v[2], v[1]) end, notCheckable = true, closeWhenClicked = true, textHeight = 12, textWidth = 12})
                 end
             end
             tinsert(menuList[1], {close = true, divider = 35})
         end
     end
-    expansionMenuLoaded = AtlasLoot:OpenDewdropMenu(self, menuList, expansionMenuLoaded)
+    expansionMenuLoaded = self:OpenDewdropMenu(btn, menuList, expansionMenuLoaded)
 end
 --[[
 AtlasLoot:DewdropSubMenuOpen(loottable):
@@ -166,8 +166,8 @@ Generates the sub menu needed by passing a table of loot tables and titles
 ]]
 function AtlasLoot:DewdropSubMenuOpen(loottable)
     local frame = AtlasLootDefaultFrame_SubMenu
-    if AtlasLoot.Dewdrop:IsOpen(frame) then AtlasLoot.Dewdrop:Close() return end
-    AtlasLoot.Dewdrop:Register(frame,
+    if self.Dewdrop:IsOpen(frame) then self.Dewdrop:Close() return end
+    self.Dewdrop:Register(frame,
         'point', function(parent)
             return "TOP", "BOTTOM"
         end,
@@ -176,7 +176,7 @@ function AtlasLoot:DewdropSubMenuOpen(loottable)
                 for k, v in pairs(loottable) do
                     if type(v) == "table" then
                             if type(v[3]) == "table" then
-                                AtlasLoot.Dewdrop:AddLine(
+                                self.Dewdrop:AddLine(
                                     "text", v[1],
                                     "value", v[3],
                                     "hasArrow", true,
@@ -185,22 +185,21 @@ function AtlasLoot:DewdropSubMenuOpen(loottable)
                                     "notCheckable", true
                                 )
                             elseif v[3] == "Header" then
-                                if k ~= 1 then AtlasLoot:AddDividerLine(40) end
-                                AtlasLoot.Dewdrop:AddLine(
+                                if k ~= 1 then self:AddDividerLine(40) end
+                                self.Dewdrop:AddLine(
                                     'text', v[1],
                                     'textR', 0.2,
                                     'textG', 0.82,
                                     'textB', 0.5,
                                     'textHeight', 13,
                                     'textWidth', 13,
-                                    'func', function(arg1) AtlasLoot:DewDropSubMenuClick(arg1) end,
-                                    'arg1', v[2],
+                                    'func', function() self:DewDropSubMenuClick(v[2]) end,
                                     'notCheckable', true
                                 )
                             else
-                                AtlasLoot.Dewdrop:AddLine(
+                                self.Dewdrop:AddLine(
                                     'text', AtlasLoot_Data[v[2]] and AtlasLoot_Data[v[2]].Name or v[1],
-                                    'func', function() AtlasLoot:DewDropSubMenuClick(v[2], v.OnDamand) end,
+                                    'func', function() self:DewDropSubMenuClick(v[2], v.OnDamand) end,
                                     'textHeight', 12,
                                     'textWidth', 12,
                                     'closeWhenClicked', true,
@@ -215,21 +214,21 @@ function AtlasLoot:DewdropSubMenuOpen(loottable)
                 if value then
                     for k,v in pairs(value) do
                         if v[3] == "Header" then
-                            if k ~= 1 then AtlasLoot:AddDividerLine(40) end
-                            AtlasLoot.Dewdrop:AddLine(
+                            if k ~= 1 then self:AddDividerLine(40) end
+                            self.Dewdrop:AddLine(
                                 'text', v[1],
                                 'textR', 0.2,
                                 'textG', 0.82,
                                 'textB', 0.5,
                                 'textHeight', 13,
                                 'textWidth', 13,
-                                'func', function() AtlasLoot:DewDropSubMenuClick(v[2], v.OnDamand) end,
+                                'func', function() self:DewDropSubMenuClick(v[2], v.OnDamand) end,
                                 'notCheckable', true
                             )
                         elseif type(v) == "table" then
-                            AtlasLoot.Dewdrop:AddLine(
-                                "text", function() return AtlasLoot_Data[v[2]] and AtlasLoot_Data[v[2]].Name or v[1] end,
-                                "func", function() AtlasLoot:DewDropSubMenuClick(v[2], v.OnDamand) end,
+                            self.Dewdrop:AddLine(
+                                "text", AtlasLoot_Data[v[2]] and AtlasLoot_Data[v[2]].Name or v[1],
+                                "func", function() self:DewDropSubMenuClick(v[2], v.OnDamand) end,
                                 'textHeight', 12,
                                 'textWidth', 12,
                                 'closeWhenClicked', true,
@@ -240,11 +239,11 @@ function AtlasLoot:DewdropSubMenuOpen(loottable)
                 end
             end
             --Close button
-            AtlasLoot:CloseDewDrop(true,40)
+            self:CloseDewDrop(true,40)
         end,
         'dontHook', true
     )
-    AtlasLoot.Dewdrop:Open(frame)
+    self.Dewdrop:Open(frame)
 end
 
 --[[
@@ -254,9 +253,9 @@ Constructs the main category menu from a tiered table
 local moduleMenuLoaded
 function AtlasLoot:DewdropModuleMenuOpen()
     local frame = AtlasLootDefaultFrame_Menu
-    if AtlasLoot.Dewdrop:IsOpen(frame) then AtlasLoot.Dewdrop:Close() return end
+    if self.Dewdrop:IsOpen(frame) then self.Dewdrop:Close() return end
     if not moduleMenuLoaded then
-        AtlasLoot.Dewdrop:Register(frame,
+        self.Dewdrop:Register(frame,
             'point', function(parent)
                 return "TOP", "BOTTOM"
             end,
@@ -264,12 +263,12 @@ function AtlasLoot:DewdropModuleMenuOpen()
                 if AtlasLoot_Modules then
                     for k, v in ipairs(AtlasLoot_Modules) do
                         --If a link to show a submenu
-                        AtlasLoot.Dewdrop:AddLine(
+                        self.Dewdrop:AddLine(
                             'text', v[1],
                             'textR', 1,
                             'textG', 0.82,
                             'textB', 0,
-                            'func', function() AtlasLoot:DewDropClick(v[2], v[1], v[3]) end,
+                            'func', function() self:DewDropClick(v[2], v[1], v[3]) end,
                             'textHeight', 12,
                             'textWidth', 12,
                             'closeWhenClicked', true,
@@ -278,13 +277,13 @@ function AtlasLoot:DewdropModuleMenuOpen()
                     end
                 end
                 --Close button
-                AtlasLoot:CloseDewDrop(true,35)
+                self:CloseDewDrop(true,35)
             end,
             'dontHook', true
         )
         moduleMenuLoaded = true
     end
-    AtlasLoot.Dewdrop:Open(frame)
+    self.Dewdrop:Open(frame)
 end
 
 AtlasLoot.CloseDefaults = {}
@@ -424,14 +423,12 @@ function AtlasLoot:SetSkin(skin)
             _G[frame]:SetBackdropBorderColor(skin.Backdrop.edgeColor[1], skin.Backdrop.edgeColor[2], skin.Backdrop.edgeColor[3], skin.Backdrop.edgeColor[4])
         end
 
-        local DF = AtlasLoot.CloseDefaults
+        local DF = self.CloseDefaults
         _G["AtlasLootDefaultFrameCloseButton"]:SetPoint(DF[1], DF[2], DF[3], DF[4]+skin.closebtn[1], DF[5]+skin.closebtn[2])
 
-        local TDF = AtlasLoot.TitleDefaults
+        local TDF = self.TitleDefaults
         _G["AtlasLootDefaultFrame"].TitleText:SetPoint(TDF[1], TDF[2], TDF[3], TDF[4]+skin.title[1], TDF[5]+skin.title[2])
 
-
-        _G["AtlasLootDefaultFrame"].CloseButton:Hide()
         if type(skin.btTex) == "table" then
             local color = skin.btTex
             _G["AtlasLootDefaultFrameSearchBox"].Left:SetTexture(color[1],color[2],color[3],color[4])

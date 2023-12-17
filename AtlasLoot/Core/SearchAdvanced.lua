@@ -3,49 +3,41 @@ local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
 local MAX_ARGUMENTS = 6
 local ACTIVE_ARGUMENT = 0
 
-AtlasLoot_ArgumentMenus = {}
-AtlasLoot_ArgumentSubMenus = {}
+AtlasLoot.SearchMenus = { ArgumentMenus = {}, ArgumentSubMenus = {}}
 
-local GREY = "|cff999999"
 local RED = "|cffff0000"
-local WHITE = "|cffFFFFFF"
-local GREEN = "|cff1eff00"
-local PURPLE = "|cff9F3FFF"
-local BLUE = "|cff0070dd"
-local ORANGE = "|cffFF8400"
-local DEFAULT = "|cffFFd200"
 
-AtlasLoot_FrameMenuList = {
+local FrameMenuList = {
     ["EquipSubMenu"] = {AtlasLoot.Dewdrop, "AtlasLootDefaultFrame_AdvancedSearchPanel_EquipSubButton", "Select Option", "type", ""}
 }
 
-AtlasLoot_AdvancedSearchMenus = {
+local AdvancedSearchMenus = {
     ["Difficulty"] = {
-        [1] = {{"Normal", "difficulty", AtlasLoot_Difficulty.Normal}},
-        [2] = {{"Heroic", "difficulty", AtlasLoot_Difficulty.Heroic}},
-        [3] = {{"Mythic/Ascended", "difficulty", AtlasLoot_Difficulty.Mythic}},
+        [1] = {{"Normal", "difficulty", AtlasLoot.Difficultys.Normal}},
+        [2] = {{"Heroic", "difficulty", AtlasLoot.Difficultys.Heroic}},
+        [3] = {{"Mythic/Ascended", "difficulty", AtlasLoot.Difficultys.Mythic}},
         [4] = {
-            ["Mythic+ 1-10"] = {{"Mythic 1", "difficulty", AtlasLoot_Difficulty.MythicPlus[1]}, {"Mythic 2", "difficulty", AtlasLoot_Difficulty.MythicPlus[2]},
-                                {"Mythic 3", "difficulty", AtlasLoot_Difficulty.MythicPlus[3]}, {"Mythic 4", "difficulty", AtlasLoot_Difficulty.MythicPlus[4]},
-                                {"Mythic 5", "difficulty", AtlasLoot_Difficulty.MythicPlus[5]}, {"Mythic 6", "difficulty", AtlasLoot_Difficulty.MythicPlus[6]},
-                                {"Mythic 7", "difficulty", AtlasLoot_Difficulty.MythicPlus[7]}, {"Mythic 8", "difficulty", AtlasLoot_Difficulty.MythicPlus[8]},
-                                {"Mythic 9", "difficulty", AtlasLoot_Difficulty.MythicPlus[9]}, {"Mythic 10", "difficulty", AtlasLoot_Difficulty.MythicPlus[10]}}
+            ["Mythic+ 1-10"] = {{"Mythic 1", "difficulty", AtlasLoot.Difficultys.MythicPlus[1]}, {"Mythic 2", "difficulty", AtlasLoot.Difficultys.MythicPlus[2]},
+                                {"Mythic 3", "difficulty", AtlasLoot.Difficultys.MythicPlus[3]}, {"Mythic 4", "difficulty", AtlasLoot.Difficultys.MythicPlus[4]},
+                                {"Mythic 5", "difficulty", AtlasLoot.Difficultys.MythicPlus[5]}, {"Mythic 6", "difficulty", AtlasLoot.Difficultys.MythicPlus[6]},
+                                {"Mythic 7", "difficulty", AtlasLoot.Difficultys.MythicPlus[7]}, {"Mythic 8", "difficulty", AtlasLoot.Difficultys.MythicPlus[8]},
+                                {"Mythic 9", "difficulty", AtlasLoot.Difficultys.MythicPlus[9]}, {"Mythic 10", "difficulty", AtlasLoot.Difficultys.MythicPlus[10]}}
         },
         [5] = {
-            ["Mythic+ 11-20"] = {{"Mythic 11", "difficulty", AtlasLoot_Difficulty.MythicPlus[11]}, {"Mythic 12", "difficulty", AtlasLoot_Difficulty.MythicPlus[12]},
-                                 {"Mythic 13", "difficulty", AtlasLoot_Difficulty.MythicPlus[13]}, {"Mythic 14", "difficulty", AtlasLoot_Difficulty.MythicPlus[14]},
-                                 {"Mythic 15", "difficulty", AtlasLoot_Difficulty.MythicPlus[15]}, {"Mythic 16", "difficulty", AtlasLoot_Difficulty.MythicPlus[16]},
-                                 {"Mythic 17", "difficulty", AtlasLoot_Difficulty.MythicPlus[17]}, {"Mythic 18", "difficulty", AtlasLoot_Difficulty.MythicPlus[18]},
-                                 {"Mythic 19", "difficulty", AtlasLoot_Difficulty.MythicPlus[19]}, {"Mythic 20", "difficulty", AtlasLoot_Difficulty.MythicPlus[20]}}
+            ["Mythic+ 11-20"] = {{"Mythic 11", "difficulty", AtlasLoot.Difficultys.MythicPlus[11]}, {"Mythic 12", "difficulty", AtlasLoot.Difficultys.MythicPlus[12]},
+                                 {"Mythic 13", "difficulty", AtlasLoot.Difficultys.MythicPlus[13]}, {"Mythic 14", "difficulty", AtlasLoot.Difficultys.MythicPlus[14]},
+                                 {"Mythic 15", "difficulty", AtlasLoot.Difficultys.MythicPlus[15]}, {"Mythic 16", "difficulty", AtlasLoot.Difficultys.MythicPlus[16]},
+                                 {"Mythic 17", "difficulty", AtlasLoot.Difficultys.MythicPlus[17]}, {"Mythic 18", "difficulty", AtlasLoot.Difficultys.MythicPlus[18]},
+                                 {"Mythic 19", "difficulty", AtlasLoot.Difficultys.MythicPlus[19]}, {"Mythic 20", "difficulty", AtlasLoot.Difficultys.MythicPlus[20]}}
         },
         [6] = {
-            ["Mythic+ 21-30"] = {{"Mythic 21", "difficulty", AtlasLoot_Difficulty.MythicPlus[21]}, {"Mythic 22", "difficulty", AtlasLoot_Difficulty.MythicPlus[22]},
-                                 {"Mythic 23", "difficulty", AtlasLoot_Difficulty.MythicPlus[23]}, {"Mythic 24", "difficulty", AtlasLoot_Difficulty.MythicPlus[24]},
-                                 {"Mythic 25", "difficulty", AtlasLoot_Difficulty.MythicPlus[25]}, {"Mythic 26", "difficulty", AtlasLoot_Difficulty.MythicPlus[26]},
-                                 {"Mythic 27", "difficulty", AtlasLoot_Difficulty.MythicPlus[27]}, {"Mythic 28", "difficulty", AtlasLoot_Difficulty.MythicPlus[28]},
-                                 {"Mythic 29", "difficulty", AtlasLoot_Difficulty.MythicPlus[29]}, {"Mythic 30", "difficulty", AtlasLoot_Difficulty.MythicPlus[30]}}
+            ["Mythic+ 21-30"] = {{"Mythic 21", "difficulty", AtlasLoot.Difficultys.MythicPlus[21]}, {"Mythic 22", "difficulty", AtlasLoot.Difficultys.MythicPlus[22]},
+                                 {"Mythic 23", "difficulty", AtlasLoot.Difficultys.MythicPlus[23]}, {"Mythic 24", "difficulty", AtlasLoot.Difficultys.MythicPlus[24]},
+                                 {"Mythic 25", "difficulty", AtlasLoot.Difficultys.MythicPlus[25]}, {"Mythic 26", "difficulty", AtlasLoot.Difficultys.MythicPlus[26]},
+                                 {"Mythic 27", "difficulty", AtlasLoot.Difficultys.MythicPlus[27]}, {"Mythic 28", "difficulty", AtlasLoot.Difficultys.MythicPlus[28]},
+                                 {"Mythic 29", "difficulty", AtlasLoot.Difficultys.MythicPlus[29]}, {"Mythic 30", "difficulty", AtlasLoot.Difficultys.MythicPlus[30]}}
         },
-        [7] = {{"Bloodforged", "difficulty", AtlasLoot_Difficulty.Bloodforged}},
+        [7] = {{"Bloodforged", "difficulty", AtlasLoot.Difficultys.Bloodforged}},
         [8] = {{RED .. "Reset", "difficulty", "reset"}}
     },
 
@@ -132,7 +124,7 @@ AtlasLoot_AdvancedSearchMenus = {
     }
 }
 
-AtlasLoot_AdvancedSearchArguments = {
+local AdvancedSearchArguments = {
     ["Arguments"] = {
         [1] = {
             ["Primary Stats"] = {{"Stamina", "sta"}, {"Strength", "str"}, {"Agility", "agi"}, {"Intellect", "int"}, {"Spirit", "spi"}}
@@ -168,7 +160,7 @@ AtlasLoot_AdvancedSearchArguments = {
     }
 }
 
-AtlasLoot_AdvSearchOptions = {
+local AdvSearchOptions = {
     ["quality"] = "",
     ["equip"] = "",
     ["type"] = "",
@@ -176,25 +168,25 @@ AtlasLoot_AdvSearchOptions = {
 }
 
 function AtlasLoot:AdvancedSearchSetup()
-    AtlasLoot:AdvancedSearchRegister(AtlasLoot.Dewdrop, AtlasLootDefaultFrame_AdvancedSearchPanel_QualityButton, AtlasLoot_AdvancedSearchMenus["Quality"])
-    AtlasLoot:AdvancedSearchRegister(AtlasLoot.Dewdrop, AtlasLootDefaultFrame_AdvancedSearchPanel_EquipButton, AtlasLoot_AdvancedSearchMenus["Equip"])
+    self:AdvancedSearchRegister(self.Dewdrop, AtlasLootDefaultFrame_AdvancedSearchPanel_QualityButton, AdvancedSearchMenus["Quality"])
+    self:AdvancedSearchRegister(self.Dewdrop, AtlasLootDefaultFrame_AdvancedSearchPanel_EquipButton, AdvancedSearchMenus["Equip"])
 
     for n = 1, MAX_ARGUMENTS do
-        AtlasLoot_ArgumentMenus[n] = AtlasLoot.Dewdrop
-        AtlasLoot_ArgumentSubMenus[n] = AtlasLoot.Dewdrop
+        self.SearchMenus.ArgumentMenus[n] = self.Dewdrop
+        self.SearchMenus.ArgumentSubMenus[n] = self.Dewdrop
 
-        AtlasLoot:AdvancedSearchArgumentRegister(AtlasLoot_ArgumentMenus[n], _G["AtlasLootDefaultFrame_AdvancedSearchPanel_ArgumentContainer" .. tostring(n)], tostring(n), AtlasLoot_AdvancedSearchArguments["Arguments"])
-        AtlasLoot:AdvancedSearchArgumentRegister(AtlasLoot_ArgumentSubMenus[n], _G["AtlasLootDefaultFrame_AdvancedSearchPanel_ArgumentContainer" .. tostring(n) .. "Sub"], tostring(n),
-                                                 AtlasLoot_AdvancedSearchArguments["Operators"])
+        self:AdvancedSearchArgumentRegister(self.SearchMenus.ArgumentMenus[n], _G["AtlasLootDefaultFrame_AdvancedSearchPanel_ArgumentContainer" .. tostring(n)], tostring(n), AdvancedSearchArguments["Arguments"])
+        self:AdvancedSearchArgumentRegister(self.SearchMenus.ArgumentSubMenus[n], _G["AtlasLootDefaultFrame_AdvancedSearchPanel_ArgumentContainer" .. tostring(n) .. "Sub"], tostring(n),
+                                                 AdvancedSearchArguments["Operators"])
     end
 
     -- Reset Search options to defualt
-    AtlasLoot:AdvancedSearchReset()
+    self:AdvancedSearchReset()
 end
 
 function AtlasLoot:AdvancedSearchShow()
     if (AtlasLootDefaultFrame_AdvancedSearchPanel:IsVisible()) then
-        AtlasLoot:AdvancedSearchClose()
+        self:AdvancedSearchClose()
         return
     end
 
@@ -214,18 +206,18 @@ function AtlasLoot:AdvancedSearchShow()
 
     AtlasLootDefaultFrame_AdvancedSearchPanel:Show()
 
-    AtlasLoot.CurrentType = "Search"
-	AtlasLoot:ScrollFrameUpdate()
-    AtlasLoot:SubTableScrollFrameUpdate("EmptyTable","AtlasLoot_Data")
+    self.CurrentType = "Search"
+	self:ScrollFrameUpdate()
+    self:SubTableScrollFrameUpdate("EmptyTable","AtlasLoot_Data")
 end
 
 function AtlasLoot:AdvancedSearchClose()
     AtlasLootDefaultFrame_AdvancedSearchPanel:Hide()
-    AtlasLoot:ItemFrameRefresh()
+    self:ItemFrameRefresh()
 end
 
 function AtlasLoot:AdvancedSearchReset()
-    AtlasLoot_AdvSearchOptions = {
+    AdvSearchOptions = {
         ["quality"] = "",
         ["equip"] = "",
         ["type"] = "",
@@ -233,10 +225,10 @@ function AtlasLoot:AdvancedSearchReset()
     }
 
     for i = 1, MAX_ARGUMENTS do
-        AtlasLoot_AdvSearchOptions["arg" .. tostring(i)] = ""
-        AtlasLoot_AdvSearchOptions["arg" .. tostring(i) .. "op"] = ""
+        AdvSearchOptions["arg" .. tostring(i)] = ""
+        AdvSearchOptions["arg" .. tostring(i) .. "op"] = ""
 
-        AtlasLoot:RemoveArgumentContainer()
+        self:RemoveArgumentContainer()
     end
 
     local expansionLevels = {60, 70, 80}
@@ -255,7 +247,7 @@ end
 
 function AtlasLoot:AddArgumentContainer()
     if ACTIVE_ARGUMENT == MAX_ARGUMENTS then
-        AtlasLoot:AdvSearchArgButtonToggle()
+        self:AdvSearchArgButtonToggle()
         return
     end
 
@@ -265,17 +257,17 @@ function AtlasLoot:AddArgumentContainer()
     _G["AtlasLootDefaultFrame_AdvancedSearchPanel_ArgumentContainer" .. tostring(ACTIVE_ARGUMENT)]:SetText("Select Option")
     _G["AtlasLootDefaultFrame_AdvancedSearchPanel_ArgumentContainer" .. tostring(ACTIVE_ARGUMENT) .. "Sub"]:Show()
 
-    AtlasLoot:AdvSearchArgButtonToggle()
+    self:AdvSearchArgButtonToggle()
 end
 
 function AtlasLoot:RemoveArgumentContainer()
     if ACTIVE_ARGUMENT == 0 then
-        AtlasLoot:AdvSearchArgButtonToggle()
+        self:AdvSearchArgButtonToggle()
         return
     end
 
-    AtlasLoot_AdvSearchOptions["arg" .. tostring(ACTIVE_ARGUMENT)] = ""
-    AtlasLoot_AdvSearchOptions["arg" .. tostring(ACTIVE_ARGUMENT) .. "op"] = ""
+    AdvSearchOptions["arg" .. tostring(ACTIVE_ARGUMENT)] = ""
+    AdvSearchOptions["arg" .. tostring(ACTIVE_ARGUMENT) .. "op"] = ""
 
     _G["AtlasLootDefaultFrame_AdvancedSearchPanel_ArgumentContainer" .. tostring(ACTIVE_ARGUMENT)]:Hide()
     _G["AtlasLootDefaultFrame_AdvancedSearchPanel_ArgumentContainer" .. tostring(ACTIVE_ARGUMENT) .. "Sub"]:Disable()
@@ -283,7 +275,7 @@ function AtlasLoot:RemoveArgumentContainer()
     _G["AtlasLootDefaultFrame_AdvancedSearchPanel_ArgumentContainer" .. tostring(ACTIVE_ARGUMENT) .. "Value"]:Hide()
 
     ACTIVE_ARGUMENT = ACTIVE_ARGUMENT - 1
-    AtlasLoot:AdvSearchArgButtonToggle()
+    self:AdvSearchArgButtonToggle()
 end
 
 function AtlasLoot:AdvSearchArgButtonToggle()
@@ -300,7 +292,7 @@ function AtlasLoot:AdvSearchArgButtonToggle()
     end
 end
 
-AtlasLoot_AdvSearchDefaultText = {
+local AdvSearchDefaultText = {
     ["quality"] = "Select Quality",
     ["equip"] = "Select Item Type",
     ["type"] = "Select Option",
@@ -311,38 +303,38 @@ function AtlasLoot:AdvancedSearchMenuClick(Object, VariableToSet, VariableValue,
     -- Setups child menus and sets search options to default
     if (ChildMenu ~= nil) then
         if (ChildMenuRegister == "Disable") then
-            AtlasLoot_AdvSearchOptions[AtlasLoot_FrameMenuList[ChildMenu][4]] = AtlasLoot_FrameMenuList[ChildMenu][5]
-            _G[AtlasLoot_FrameMenuList[ChildMenu][2]]:Disable()
+            AdvSearchOptions[FrameMenuList[ChildMenu][4]] = FrameMenuList[ChildMenu][5]
+            _G[FrameMenuList[ChildMenu][2]]:Disable()
             -- Disable assigned children menus as well
-            if (AtlasLoot_FrameMenuList[ChildMenu][6]) then
-                _G[AtlasLoot_FrameMenuList[ChildMenu][6]]:Disable()
+            if (FrameMenuList[ChildMenu][6]) then
+                _G[FrameMenuList[ChildMenu][6]]:Disable()
             end
             if VariableValue == "reset" then
-                AtlasLoot_AdvSearchOptions[VariableToSet] = ""
-                Object[1]:SetText(AtlasLoot_AdvSearchDefaultText[VariableToSet])
+                AdvSearchOptions[VariableToSet] = ""
+                Object[1]:SetText(AdvSearchDefaultText[VariableToSet])
                 Object[2]:Close()
 
-                _G[AtlasLoot_FrameMenuList[ChildMenu][2]]:SetText(AtlasLoot_FrameMenuList[ChildMenu][3])
+                _G[FrameMenuList[ChildMenu][2]]:SetText(FrameMenuList[ChildMenu][3])
                 return
             end
         else
-            AtlasLoot:AdvancedSearchRegister(AtlasLoot_FrameMenuList[ChildMenu][1], _G[AtlasLoot_FrameMenuList[ChildMenu][2]], AtlasLoot_AdvancedSearchMenus[ChildMenuRegister])
-            AtlasLoot_AdvSearchOptions[AtlasLoot_FrameMenuList[ChildMenu][4]] = AtlasLoot_FrameMenuList[ChildMenu][5]
-            _G[AtlasLoot_FrameMenuList[ChildMenu][2]]:Enable()
-            _G[AtlasLoot_FrameMenuList[ChildMenu][2]]:SetText(AtlasLoot_FrameMenuList[ChildMenu][3])
+            self:AdvancedSearchRegister(FrameMenuList[ChildMenu][1], _G[FrameMenuList[ChildMenu][2]], AdvancedSearchMenus[ChildMenuRegister])
+            AdvSearchOptions[FrameMenuList[ChildMenu][4]] = FrameMenuList[ChildMenu][5]
+            _G[FrameMenuList[ChildMenu][2]]:Enable()
+            _G[FrameMenuList[ChildMenu][2]]:SetText(FrameMenuList[ChildMenu][3])
             -- Disable assigned children menus as well
-            if (AtlasLoot_FrameMenuList[ChildMenu][6]) then
-                _G[AtlasLoot_FrameMenuList[ChildMenu][6]]:Disable()
+            if (FrameMenuList[ChildMenu][6]) then
+                _G[FrameMenuList[ChildMenu][6]]:Disable()
             end
         end
     end
     if VariableValue == "reset" then
-        AtlasLoot_AdvSearchOptions[VariableToSet] = ""
-        Object[1]:SetText(AtlasLoot_AdvSearchDefaultText[VariableToSet])
+        AdvSearchOptions[VariableToSet] = ""
+        Object[1]:SetText(AdvSearchDefaultText[VariableToSet])
         Object[2]:Close()
         return
     end
-    AtlasLoot_AdvSearchOptions[VariableToSet] = VariableValue
+    AdvSearchOptions[VariableToSet] = VariableValue
     Object[1]:SetText(Object[3])
     Object[2]:Close()
 end
@@ -352,14 +344,14 @@ function AtlasLoot:AdvancedSearchRegister(DropDown, DropDownObject, MenuOption)
         return "TOP", "BOTTOM"
     end, 'children', function(level, value)
         if level == 1 then
-            if AtlasLoot_AdvancedSearchMenus then
+            if AdvancedSearchMenus then
                 for k, v in ipairs(MenuOption) do
                     -- If a link to show a submenu
                     if (type(v[1]) == "table") and (type(v[1][1]) == "string") then
                         if v[1][1] ~= "" then
                             DropDown:AddLine('text', v[1][1], 'textR', 1, 'textG', 0.82, 'textB', 0,
                             'func', function()
-                                AtlasLoot:AdvancedSearchMenuClick({DropDownObject, DropDown, v[1][1]}, v[1][2], v[1][3], v[1][4], v[1][5])
+                                self:AdvancedSearchMenuClick({DropDownObject, DropDown, v[1][1]}, v[1][2], v[1][3], v[1][4], v[1][5])
                             end,
                             'notCheckable', true)
                         end
@@ -384,7 +376,7 @@ function AtlasLoot:AdvancedSearchRegister(DropDown, DropDownObject, MenuOption)
                 for k, v in ipairs(value) do
                     DropDown:AddLine('text', v[1], 'textR', 1, 'textG', 0.82, 'textB', 0,
                     'func', function()
-                        AtlasLoot:AdvancedSearchMenuClick({DropDownObject, DropDown, v[1]}, v[2], v[3], v[4], v[5])
+                        self:AdvancedSearchMenuClick({DropDownObject, DropDown, v[1]}, v[2], v[3], v[4], v[5])
                     end,
                     'notCheckable', true)
                 end
@@ -395,7 +387,7 @@ end
 
 function AtlasLoot:AdvancedSearchArgumentClick(Object, VariableToSet, VariableValue, IsOperator)
     if IsOperator and VariableValue == "reset" then
-        AtlasLoot_AdvSearchOptions["arg" .. VariableToSet .. "op"] = ""
+        AdvSearchOptions["arg" .. VariableToSet .. "op"] = ""
 
         _G["AtlasLootDefaultFrame_AdvancedSearchPanel_ArgumentContainer" .. VariableToSet .. "Value"]:SetText("")
         _G["AtlasLootDefaultFrame_AdvancedSearchPanel_ArgumentContainer" .. VariableToSet .. "Value"]:Hide()
@@ -403,7 +395,7 @@ function AtlasLoot:AdvancedSearchArgumentClick(Object, VariableToSet, VariableVa
         Object[1]:SetText("Select Option")
         Object[2]:Close()
     elseif IsOperator then
-        AtlasLoot_AdvSearchOptions["arg" .. VariableToSet .. "op"] = VariableValue
+        AdvSearchOptions["arg" .. VariableToSet .. "op"] = VariableValue
 
         _G["AtlasLootDefaultFrame_AdvancedSearchPanel_ArgumentContainer" .. VariableToSet .. "Value"]:Show()
 
@@ -416,20 +408,20 @@ function AtlasLoot:AdvancedSearchArgumentClick(Object, VariableToSet, VariableVa
         _G["AtlasLootDefaultFrame_AdvancedSearchPanel_ArgumentContainer" .. VariableToSet .. "Value"]:SetText("")
         _G["AtlasLootDefaultFrame_AdvancedSearchPanel_ArgumentContainer" .. VariableToSet .. "Value"]:Hide()
 
-        AtlasLoot_AdvSearchOptions["arg" .. VariableToSet] = ""
-        AtlasLoot_AdvSearchOptions["arg" .. VariableToSet .. "op"] = ""
+        AdvSearchOptions["arg" .. VariableToSet] = ""
+        AdvSearchOptions["arg" .. VariableToSet .. "op"] = ""
 
         Object[1]:SetText("Select Option")
         Object[2]:Close()
     else
         _G["AtlasLootDefaultFrame_AdvancedSearchPanel_ArgumentContainer" .. VariableToSet .. "Sub"]:SetText("Select Option")
         _G["AtlasLootDefaultFrame_AdvancedSearchPanel_ArgumentContainer" .. VariableToSet .. "Sub"]:Enable()
-        AtlasLoot_AdvSearchOptions["arg" .. VariableToSet .. "op"] = ""
+        AdvSearchOptions["arg" .. VariableToSet .. "op"] = ""
 
         _G["AtlasLootDefaultFrame_AdvancedSearchPanel_ArgumentContainer" .. VariableToSet .. "Value"]:SetText("")
         _G["AtlasLootDefaultFrame_AdvancedSearchPanel_ArgumentContainer" .. VariableToSet .. "Value"]:Hide()
 
-        AtlasLoot_AdvSearchOptions["arg" .. VariableToSet] = VariableValue
+        AdvSearchOptions["arg" .. VariableToSet] = VariableValue
         Object[1]:SetText(Object[3])
         Object[2]:Close()
     end
@@ -440,7 +432,7 @@ function AtlasLoot:AdvancedSearchArgumentRegister(DropDown, DropDownObject, Argu
         return "TOP", "BOTTOM"
     end, 'children', function(level, value)
         if level == 1 then
-            if AtlasLoot_AdvancedSearchArguments then
+            if AdvancedSearchArguments then
                 for k, v in ipairs(ArgumentMenu) do
                     -- If a link to show a submenu
                     if (type(v[1]) == "table") and (type(v[1][1]) == "string") then
@@ -448,12 +440,12 @@ function AtlasLoot:AdvancedSearchArgumentRegister(DropDown, DropDownObject, Argu
                         if v[1][3] == "Submenu" then
                             DropDown:AddLine('text', v[1][1], 'textR', 1, 'textG', 0.82, 'textB', 0,
                             'func', function() 
-                                AtlasLoot:AdvancedSearchArgumentClick({DropDownObject, DropDown, v[1][1]}, ArgumentCount, v[1][2], v[1][3])
+                                self:AdvancedSearchArgumentClick({DropDownObject, DropDown, v[1][1]}, ArgumentCount, v[1][2], v[1][3])
                                 end,
                                 'notCheckable', true)
                         elseif v[1][1] ~= "" then
                             DropDown:AddLine('text', v[1][1], 'textR', 1, 'textG', 0.82, 'textB', 0,
-                            'func', function() AtlasLoot:AdvancedSearchArgumentClick({DropDownObject, DropDown, v[1][1]}, ArgumentCount, v[1][2], v[1][3])
+                            'func', function() self:AdvancedSearchArgumentClick({DropDownObject, DropDown, v[1][1]}, ArgumentCount, v[1][2], v[1][3])
                             end,
                             'notCheckable', true)
                         end
@@ -482,17 +474,17 @@ function AtlasLoot:AdvancedSearchArgumentRegister(DropDown, DropDownObject, Argu
                             -- If an entry to show a submenu
                             if v[4] == "Header" then
                                 DropDown:AddLine('text', v[1], 'textR', 0.2, 'textG', 0.82, 'textB', 0.5, 'func', function()
-                                    AtlasLoot:AdvancedSearchArgumentClick({DropDownObject, DropDown, v[1]}, ArgumentCount, v[2], v[3])
+                                    self:AdvancedSearchArgumentClick({DropDownObject, DropDown, v[1]}, ArgumentCount, v[2], v[3])
                                     end,
                                     'notCheckable', true)
                             elseif v[3] == "Submenu" then
                                 DropDown:AddLine('text', v[1], 'textR', 1, 'textG', 0.82, 'textB', 0, 'func', function()
-                                    AtlasLoot:AdvancedSearchArgumentClick({DropDownObject, DropDown, v[1]}, ArgumentCount, v[2], v[3])
+                                    self:AdvancedSearchArgumentClick({DropDownObject, DropDown, v[1]}, ArgumentCount, v[2], v[3])
                                     end,
                                     'notCheckable', true)
                             else
                                 DropDown:AddLine('text', v[1], 'textR', 1, 'textG', 0.82, 'textB', 0, 'func', function()
-                                    AtlasLoot:AdvancedSearchArgumentClick({DropDownObject, DropDown, v[1]}, ArgumentCount, v[2], v[3])
+                                    self:AdvancedSearchArgumentClick({DropDownObject, DropDown, v[1]}, ArgumentCount, v[2], v[3])
                                     end,
                                     'notCheckable', true)
                             end
@@ -540,23 +532,23 @@ function AtlasLoot:AdvancedSearch(Text)
         return "ranged"
     end
 
-    if AtlasLoot_AdvSearchOptions["quality"] ~= "" then
-        advSearchString = AppendSearchString(advSearchString, "quality=" .. AtlasLoot_AdvSearchOptions["quality"])
+    if AdvSearchOptions["quality"] ~= "" then
+        advSearchString = AppendSearchString(advSearchString, "quality=" .. AdvSearchOptions["quality"])
     end
 
-    if AtlasLoot_AdvSearchOptions["equip"] ~= "" then
-        if AtlasLoot_AdvSearchOptions["equip"] == "ranged" and AtlasLoot_AdvSearchOptions["type"] ~= "" then
-            AtlasLoot_AdvSearchOptions["equip"] = FixRangedSlot(AtlasLoot_AdvSearchOptions["type"])
+    if AdvSearchOptions["equip"] ~= "" then
+        if AdvSearchOptions["equip"] == "ranged" and AdvSearchOptions["type"] ~= "" then
+            AdvSearchOptions["equip"] = FixRangedSlot(AdvSearchOptions["type"])
         end
-        advSearchString = AppendSearchString(advSearchString, "slot=" .. AtlasLoot_AdvSearchOptions["equip"])
+        advSearchString = AppendSearchString(advSearchString, "slot=" .. AdvSearchOptions["equip"])
     end
 
-    if AtlasLoot_AdvSearchOptions["type"] ~= "" and AtlasLoot_AdvSearchOptions["type"] then
-        advSearchString = AppendSearchString(advSearchString, "type=" .. AtlasLoot_AdvSearchOptions["type"])
+    if AdvSearchOptions["type"] ~= "" and AdvSearchOptions["type"] then
+        advSearchString = AppendSearchString(advSearchString, "type=" .. AdvSearchOptions["type"])
     end
 
-    if AtlasLoot_AdvSearchOptions["difficulty"] ~= "" and AtlasLoot_AdvSearchOptions["difficulty"] ~= 2 then
-        advSearchString = AppendSearchString(advSearchString, "dif=" .. AtlasLoot_AdvSearchOptions["difficulty"])
+    if AdvSearchOptions["difficulty"] ~= "" and AdvSearchOptions["difficulty"] ~= 2 then
+        advSearchString = AppendSearchString(advSearchString, "dif=" .. AdvSearchOptions["difficulty"])
     end
 
     if(not AtlasLootDefaultFrame_AdvancedSearchPanel_LevelToggle:GetChecked()) then
@@ -581,16 +573,16 @@ function AtlasLoot:AdvancedSearch(Text)
     end
 
     for i = 1, ACTIVE_ARGUMENT, 1 do
-        if AtlasLoot_AdvSearchOptions["arg" .. i] ~= "" then
+        if AdvSearchOptions["arg" .. i] ~= "" then
             local arg = _G["AtlasLootDefaultFrame_AdvancedSearchPanel_ArgumentContainer" .. tostring(i) .. "Value"]:GetText()
-            if AtlasLoot_AdvSearchOptions["arg" .. i .. "op"] == "" then
-                AtlasLoot_AdvSearchOptions["arg" .. i .. "op"] = ">"
+            if AdvSearchOptions["arg" .. i .. "op"] == "" then
+                AdvSearchOptions["arg" .. i .. "op"] = ">"
                 arg = "0"
             end
-            advSearchString = AppendSearchString(advSearchString, AtlasLoot_AdvSearchOptions["arg" .. i] .. AtlasLoot_AdvSearchOptions["arg" .. i .. "op"] .. arg)
+            advSearchString = AppendSearchString(advSearchString, AdvSearchOptions["arg" .. i] .. AdvSearchOptions["arg" .. i .. "op"] .. arg)
         end
     end
 
     AtlasLootDefaultFrame_AdvancedSearchPanel:Hide()
-    AtlasLoot:Search(string.lower(advSearchString))
+    self:Search(string.lower(advSearchString))
 end

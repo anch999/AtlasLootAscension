@@ -78,26 +78,26 @@ local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
 -- The scale of the sand rep rings
 local scaleOfSandsRings = {
 	Name = "Rings";
-	[1] = { itemID = 29298, rep = "#r2#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal }; --Band of the Eternal Champion
-	[2] = { itemID = 29299, rep = "#r3#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal }; --Superior Band of the Eternal Champion
-	[3] = { itemID = 29300, rep = "#r4#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal }; --Exquisite Band of the Eternal Champion
-	[4] = { itemID = 29301, rep = "#r5#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal }; --Flawless Band of the Eternal Champion
-	[6] = { itemID = 29294, rep = "#r2#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal }; --Band of the Eternal Defender
-	[7] = { itemID = 29295, rep = "#r3#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal }; --Superior Band of the Eternal Defender
-	[8] = { itemID = 29296, rep = "#r4#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal }; --Exquisite Band of the Eternal Defender
-	[9] = { itemID = 29297, rep = "#r5#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal }; --Flawless Band of the Eternal Defender
-	[11] = { itemID = 15037, rep = "#r2#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal }; --Band of the Eternal Assassin
-	[12] = { itemID = 15038, rep = "#r3#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal }; --Superior Band of the Eternal Assassin
-	[13] = { itemID = 15039, rep = "#r4#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal }; --Exquisite Band of the Eternal Assassin
-	[14] = { itemID = 15040, rep = "#r5#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal }; --Flawless Band of the Eternal Assassin
-	[16] = { itemID = 29302, rep = "#r2#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal }; --Band of the Eternal Sage
-	[17] = { itemID = 29303, rep = "#r3#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal }; --Superior Band of the Eternal Sage
-	[18] = { itemID = 29304, rep = "#r4#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal }; --Exquisite Band of the Eternal Sage
-	[19] = { itemID = 29305, rep = "#r5#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal }; --Flawless Band of the Eternal Sage
-	[21] = { itemID = 29307, rep = "#r2#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal }; --Band of the Eternal Restorer
-	[22] = { itemID = 29306, rep = "#r3#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal }; --Superior Band of the Eternal Restorer
-	[23] = { itemID = 29308, rep = "#r4#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal }; --Exquisite Band of the Eternal Restorer
-	[24] = { itemID = 29309, rep = "#r5#", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal }; --Flawless Band of the Eternal Restorer
+	[1] = { itemID = 29298, rep = "#r2#", [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Band of the Eternal Champion
+	[2] = { itemID = 29299, rep = "#r3#", [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Superior Band of the Eternal Champion
+	[3] = { itemID = 29300, rep = "#r4#", [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Exquisite Band of the Eternal Champion
+	[4] = { itemID = 29301, rep = "#r5#", [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Flawless Band of the Eternal Champion
+	[6] = { itemID = 29294, rep = "#r2#", [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Band of the Eternal Defender
+	[7] = { itemID = 29295, rep = "#r3#", [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Superior Band of the Eternal Defender
+	[8] = { itemID = 29296, rep = "#r4#", [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Exquisite Band of the Eternal Defender
+	[9] = { itemID = 29297, rep = "#r5#", [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Flawless Band of the Eternal Defender
+	[11] = { itemID = 15037, rep = "#r2#", [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Band of the Eternal Assassin
+	[12] = { itemID = 15038, rep = "#r3#", [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Superior Band of the Eternal Assassin
+	[13] = { itemID = 15039, rep = "#r4#", [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Exquisite Band of the Eternal Assassin
+	[14] = { itemID = 15040, rep = "#r5#", [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Flawless Band of the Eternal Assassin
+	[16] = { itemID = 29302, rep = "#r2#", [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Band of the Eternal Sage
+	[17] = { itemID = 29303, rep = "#r3#", [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Superior Band of the Eternal Sage
+	[18] = { itemID = 29304, rep = "#r4#", [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Exquisite Band of the Eternal Sage
+	[19] = { itemID = 29305, rep = "#r5#", [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Flawless Band of the Eternal Sage
+	[21] = { itemID = 29307, rep = "#r2#", [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Band of the Eternal Restorer
+	[22] = { itemID = 29306, rep = "#r3#", [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Superior Band of the Eternal Restorer
+	[23] = { itemID = 29308, rep = "#r4#", [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Exquisite Band of the Eternal Restorer
+	[24] = { itemID = 29309, rep = "#r5#", [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Flawless Band of the Eternal Restorer
 };
 
 ------------------------
@@ -1804,8 +1804,8 @@ AtlasLoot_Data["HCMagtheridon"] = {
 		[21] = { itemID = 28790 }; --Naaru Lightwarden's Band
 		[22] = { itemID = 28793 }; --Band of Crimson Fury
 		[23] = { itemID = 28792 }; --A'dal's Signet of Defense
-		[25] = { itemID = 428775, [AtlasLoot_Difficulty.MIN_DIF] = AtlasLoot_Difficulty.Mythic }; --Bor -o G'urth, the Hand of Death
-		[26] = { itemID = 428776, [AtlasLoot_Difficulty.MIN_DIF] = AtlasLoot_Difficulty.Mythic }; --Lebed -o G'urth, the Finger of Death
+		[25] = { itemID = 428775, [AtlasLoot.Difficultys.MIN_DIF] = AtlasLoot.Difficultys.Mythic }; --Bor -o G'urth, the Hand of Death
+		[26] = { itemID = 428776, [AtlasLoot.Difficultys.MIN_DIF] = AtlasLoot.Difficultys.Mythic }; --Lebed -o G'urth, the Finger of Death
 	};
 };
 ----------------
@@ -2057,7 +2057,7 @@ AtlasLoot_Data["Karazhan"] = {
 		[20] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 		[21] = { itemID = 400751, droprate = "100%" }; --Raider's Commendations
 		[23] = { itemID = 60169, droprate = "1%" }; --Pet Sigil
-		[25] = { itemID = 499438, [AtlasLoot_Difficulty.MIN_DIF] = AtlasLoot_Difficulty.Heroic }; --Smoldering Emberwyrm
+		[25] = { itemID = 499438, [AtlasLoot.Difficultys.MIN_DIF] = AtlasLoot.Difficultys.Heroic }; --Smoldering Emberwyrm
 	};
 	{ --Trash Mobs
 		Name = AL["Trash Mobs"];

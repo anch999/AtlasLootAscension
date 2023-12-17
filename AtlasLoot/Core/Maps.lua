@@ -1,13 +1,6 @@
 local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
 
-local BLUE = "|cff6666ff"
-local GREY = "|cff999999"
-local GREN = "|cff66cc33"
-local _RED = "|cffcc6666"
 local ORANGE = "|cffFF8400"
-local PURP = "|cff9900ff"
-local INDENT = "      "
-local YELLOW = "|cffFFd200"
 local GOLD  = "|cffffcc00"
 local WHITE = "|cFFFFFFFF"
 local CYAN =  "|cff00ffff"
@@ -47,9 +40,9 @@ function AtlasLoot:CreateMapPins(list)
         -- converts a standard coordinate x,y to stardard anchor points
         local x = ((AtlasLootDefaultFrame_Map:GetWidth()/100) * map[2][1]) - (_G["AtlasLoot_MapPin"..i]:GetWidth()/2)
         local y = (-(AtlasLootDefaultFrame_Map:GetHeight()/100) * map[2][2]) + (_G["AtlasLoot_MapPin"..i]:GetHeight()/2)
-        _G["AtlasLoot_MapPin"..i]:SetScript("OnEnter", function(self)
-            AtlasLoot.showCords = true
-            GameTooltip:SetOwner(self, "ANCHOR_TOPLEFT")
+        _G["AtlasLoot_MapPin"..i]:SetScript("OnEnter", function(btn)
+            self.showCords = true
+            GameTooltip:SetOwner(btn, "ANCHOR_TOPLEFT")
             GameTooltip:AddLine(WHITE..map[1])
             if map[4] and list.groups[map[4]] then
                 for _,v in ipairs(list.groups[map[4]]) do
@@ -83,8 +76,8 @@ function AtlasLoot:CreateMapPins(list)
 end
 
 function AtlasLoot:MapOnEnter()
-    local x, y = AtlasLoot:GetCursorCords()
-    if AtlasLoot.showCords then
+    local x, y = self:GetCursorCords()
+    if self.showCords then
         AtlasLootDefaultFrame_Map.cursorCords:SetText(WHITE.."Cursor: "..x.." , "..y)
     end
 end
@@ -98,7 +91,7 @@ function AtlasLoot:GetCursorCords()
 end
 
 function AtlasLoot:PlayerPin(firstSet)
-    if AtlasLootDefaultFrame_Map:IsVisible() and AtlasLoot_MapData[AtlasLoot.CurrentMap].ZoneName[1] == GetRealZoneText() and AtlasLoot.MapNum == GetCurrentMapDungeonLevel() then
+    if AtlasLootDefaultFrame_Map:IsVisible() and AtlasLoot_MapData[self.CurrentMap].ZoneName[1] == GetRealZoneText() and self.MapNum == GetCurrentMapDungeonLevel() then
         _G["AtlasLoot_PlayerMapPin"]:Show()
     else
         return
@@ -111,7 +104,7 @@ function AtlasLoot:PlayerPin(firstSet)
         _G["AtlasLoot_PlayerMapPin"]:SetPoint("TOPLEFT",AtlasLootDefaultFrame_Map, x, y )
         _G["AtlasLoot_PlayerMapPin"].texture:SetRotation(GetPlayerFacing())
     end
-    AtlasLoot.playerPinTimer = AtlasLoot:ScheduleTimer("PlayerPin", .1)
+    self.playerPinTimer = self:ScheduleTimer("PlayerPin", .1)
 end
 
 function AtlasLoot:SetNavButtons(mapID, mapNum)
@@ -144,12 +137,12 @@ function AtlasLoot:MapOnShow(mapID, mapNum, refresh)
     if not refresh and AtlasLootDefaultFrame_Map:IsVisible() then
         AtlasLootDefaultFrame_Map:Hide()
         AtlaslLoot_LootBackground:Show()
-        AtlasLoot:BackButton_OnClick()
+        self:BackButton_OnClick()
         AtlasLoot_BossName:Show()
         Atlasloot_HeaderLabel:Hide()
-        AtlasLoot:ScrollFrameUpdate()
+        self:ScrollFrameUpdate()
     else
-        if AtlasLoot.CurrentMap then
+        if self.CurrentMap then
             AtlasLoot_BossName:Hide()
             -- Hide the Filter Check-Box
 	        AtlasLootFilterCheck:Hide()
@@ -161,23 +154,23 @@ function AtlasLoot:MapOnShow(mapID, mapNum, refresh)
             end
                 AtlasLootDefaultFrame_Map:Show()
                 Atlasloot_HeaderLabel:Show()
-                AtlasLoot:ScrollFrameUpdate(true)
+                self:ScrollFrameUpdate(true)
                 AtlasLootDefaultFrameScroll:Hide()
                 
                 SetMapToCurrentZone()
                 if mapNum and mapID then
-                    AtlasLoot.CurrentMap = mapID
-                elseif AtlasLoot_MapData[AtlasLoot.CurrentMap].ZoneName[1] == GetRealZoneText() then
+                    self.CurrentMap = mapID
+                elseif AtlasLoot_MapData[self.CurrentMap].ZoneName[1] == GetRealZoneText() then
                     if GetCurrentMapDungeonLevel() == 0 then
                         mapNum = 1
                     else
                         mapNum = GetCurrentMapDungeonLevel()
                     end
-                elseif lastMap == AtlasLoot.CurrentMap then
-                    mapNum = AtlasLoot.MapNum
+                elseif lastMap == self.CurrentMap then
+                    mapNum = self.MapNum
                 end
-                lastMap = AtlasLoot.CurrentMap
-                AtlasLoot:MapSelect(AtlasLoot.CurrentMap, mapNum)
+                lastMap = self.CurrentMap
+                self:MapSelect(self.CurrentMap, mapNum)
         end
     end
 end
@@ -205,13 +198,13 @@ function AtlasLoot:MapSelect(mapID, mapNum)
             tinsert(pinsList.groups[group], v[1])
         end
     end
-    AtlasLoot.MapNum = mapNum
-    AtlasLoot.CurrentMap = mapID
-    AtlasLoot:SubTableScrollFrameUpdate(mapID, "AtlasLoot_MapData", mapNum)
-    AtlasLoot:SetNavButtons(mapID, mapNum)
-    AtlasLoot:CreateMapPins(pinsList)
-    AtlasLoot:CancelTimer(AtlasLoot.playerPinTimer)
-    AtlasLoot:PlayerPin(true)
+    self.MapNum = mapNum
+    self.CurrentMap = mapID
+    self:SubTableScrollFrameUpdate(mapID, "AtlasLoot_MapData", mapNum)
+    self:SetNavButtons(mapID, mapNum)
+    self:CreateMapPins(pinsList)
+    self:CancelTimer(self.playerPinTimer)
+    self:PlayerPin(true)
 
     local text = map.ZoneName[1]..WHITE.." ["..map.Acronym.."]\n"..
     GOLD .. "Location: ".. WHITE..map.Location[1].."\n"..
@@ -225,7 +218,7 @@ function AtlasLoot:MapSelect(mapID, mapNum)
         text = text .. "\n" .. GOLD .. AL["Reputation"] .. ": ".. WHITE .. map.Reputation
     end
     Atlasloot_HeaderLabel:SetText(text)
-    AtlasLoot:SetMapButtonText(mapID, mapNum)
+    self:SetMapButtonText(mapID, mapNum)
 end
 
 function AtlasLoot:SetMapButtonText(mapID, mapNum)
@@ -241,8 +234,8 @@ function AtlasLoot:SetMapButtonText(mapID, mapNum)
 end
 
 --drop down map menu
-function AtlasLoot:MapMenuOpen(self)
-    local mapID = AtlasLoot.CurrentMap
+function AtlasLoot:MapMenuOpen(frame)
+    local mapID = self.CurrentMap
     local map = AtlasLoot_MapData[mapID]
 
     local menuList = { [1] = {} }
@@ -253,12 +246,12 @@ function AtlasLoot:MapMenuOpen(self)
             else
                 text = v[1][1]
             end
-            tinsert(menuList[1], {text = WHITE..text, func = function() AtlasLoot:MapOnShow(mapID, i, true) end, notCheckable = true, closeWhenClicked = true, textHeight = 12, textWidth = 12})
+            tinsert(menuList[1], {text = WHITE..text, func = function() self:MapOnShow(mapID, i, true) end, notCheckable = true, closeWhenClicked = true, textHeight = 12, textWidth = 12})
         end
 
         tinsert(menuList[1], {divider = 35})
-        tinsert(menuList[1], {text = ORANGE..AL["Open AscensionDB To Zone Map"], func = function() AtlasLoot:OpenDBURL(AtlasLoot_MapData[AtlasLoot.CurrentMap].ZoneName[2] , "zone") end, notCheckable = true, closeWhenClicked = true, textHeight = 12, textWidth = 12})
+        tinsert(menuList[1], {text = ORANGE..AL["Open AscensionDB To Zone Map"], func = function() self:OpenDBURL(AtlasLoot_MapData[self.CurrentMap].ZoneName[2] , "zone") end, notCheckable = true, closeWhenClicked = true, textHeight = 12, textWidth = 12})
 		tinsert(menuList[1], {close = true, divider = 35})
 
-    AtlasLoot:OpenDewdropMenu(self, menuList)
+    self:OpenDewdropMenu(frame, menuList)
 end

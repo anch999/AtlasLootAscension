@@ -37,21 +37,19 @@ AtlasLoot.filterEnable = false
 AtlasLoot.CurrentType = "Default"
 AtlasLoot.type = {}
 AtlasLoot.backEnabled = false
+AtlasLoot.Difficultys = {}
 
 -- Colours stored for code readability
 local GREY = "|cff999999"
 local RED = "|cffff0000"
 local WHITE = "|cffFFFFFF"
 local GREEN = "|cff1eff00"
-local PURPLE = "|cff9F3FFF"
 local LIMEGREEN = "|cFF32CD32"
 local BLUE = "|cff0070dd"
 local ORANGE = "|cffFF8400"
 local YELLOW = "|cffFFd200"
 local itemHighlightBlue = "Interface\\AddOns\\AtlasLoot\\Images\\knownBlue"
 local itemHighlightGreen = "Interface\\AddOns\\AtlasLoot\\Images\\knownGreen"
---local itemHighlightBlue = "Interface\\AddOns\\AwAddons\\Textures\\LootTex\\Loot_Icon_Blue"
---local itemHighlightGreen = "Interface\\AddOns\\AwAddons\\Textures\\LootTex\\Loot_Icon_green"
 
 --Search panel open and close save variables
 --dataID, dataSource, pFrame, tablenumber
@@ -140,8 +138,8 @@ Invoked by the VARIABLES_LOADED event.  Now that we are sure all the assets
 the addon needs are in place, we can properly set up the mod
 ]]
 function AtlasLoot:OnEnable()
-    AtlasLoot.db = LibStub("AceDB-3.0"):New("AtlasLootDB")
-    AtlasLoot.db:RegisterDefaults(AtlasLootDBDefaults)
+    self.db = LibStub("AceDB-3.0"):New("AtlasLootDB")
+    self.db:RegisterDefaults(AtlasLootDBDefaults)
 	setupSettingsDB()
     if AtlasLoot_Data then
         AtlasLoot_Data["EmptyTable"] = {
@@ -151,22 +149,22 @@ function AtlasLoot:OnEnable()
     end
 
 	if IsAddOnLoaded("TomTom") then
-		AtlasLoot.TomTomLoaded = true
+		self.TomTomLoaded = true
 	end
 	--Setup for minimap icon
-	AtlasLoot:MinimapIconSetup()
+	self:MinimapIconSetup()
     --Add the loot browser to the special frames tables to enable closing wih the ESC key
 	tinsert(UISpecialFrames, "AtlasLootDefaultFrame")
 	--Set up options frame
-	AtlasLoot:OptionsOnLoad()
-    AtlasLoot:CreateOptionsInfoTooltips()
+	self:OptionsInit()
+    self:CreateOptionsInfoTooltips()
     --Set visual style for the loot browser
-	if AtlasLoot.db.profile.LootBrowserStyle then
-		AtlasLoot:SetSkin(AtlasLoot.skinKeys[AtlasLoot.db.profile.LootBrowserStyle][1])
+	if self.db.profile.LootBrowserStyle then
+		self:SetSkin(self.skinKeys[self.db.profile.LootBrowserStyle][1])
 	end
 
 	--If using an opaque items frame, change the alpha value of the backing texture
-	if (AtlasLoot.db.profile.Opaque) then
+	if (self.db.profile.Opaque) then
         AtlasLootItemsFrame_Back:SetTexture(0, 0, 0, 1)
         Atlasloot_Difficulty_ScrollFrame_Back:SetTexture(0, 0, 0, 1)
         Atlasloot_SubTableFrame_Back:SetTexture(0, 0, 0, 1)
@@ -178,7 +176,7 @@ function AtlasLoot:OnEnable()
 
 	if((AtlasLootCharDB.AtlasLootVersion == nil) or (tonumber(AtlasLootCharDB.AtlasLootVersion) < 40301)) then
 		AtlasLootCharDB.AtlasLootVersion = VERSION_MAJOR..VERSION_MINOR..VERSION_BOSSES
-		AtlasLoot:OptionsInit()
+		self:OptionsInit()
 	end
 
 	collectgarbage("collect")
@@ -187,7 +185,7 @@ function AtlasLoot:OnEnable()
     panel.name = AL["AtlasLoot"]
     InterfaceOptions_AddCategory(panel)
     --Filter and wishlist options menus creates as part of the next 2 commands
-	AtlasLoot:CreateWishlistOptions()
+	self:CreateWishlistOptions()
     panel = _G["AtlasLootHelpFrame"]
     panel.name = AL["Help"]
     panel.parent = AL["AtlasLoot"]
@@ -195,18 +193,17 @@ function AtlasLoot:OnEnable()
     if LibStub:GetLibrary("LibAboutPanel", true) then
         LibStub("LibAboutPanel").new(AL["AtlasLoot"], "AtlasLoot")
     end
-    AtlasLoot:UpdateLootBrowserScale()
-	local playerName = UnitName("player")
+    self:UpdateLootBrowserScale()
 	-- Is wishlist item disabled on load or not
-	if AtlasLootWishList["Options"][playerName]["AutoSortWishlist"] then
+	if AtlasLootWishList["Options"][UnitName("player")]["AutoSortWishlist"] then
 		AtlasLootItemsFrame_Wishlist_UnLock:Disable()
 	else
 		AtlasLootItemsFrame_Wishlist_UnLock:Enable()
 	end
-	AtlasLoot:LoadItemIDsDatabase()
-	AtlasLoot:LoadTradeskillRecipes()
-	AtlasLoot:PopulateProfessions()
-	AtlasLoot:CreateVanityCollection()
+	self:LoadItemIDsDatabase()
+	self:LoadTradeskillRecipes()
+	self:PopulateProfessions()
+	self:CreateVanityCollection()
 end
 
 function AtlasLoot:Reset(data)
@@ -214,24 +211,24 @@ function AtlasLoot:Reset(data)
     if data == "frames" then
 		AtlasLootDefaultFrame:ClearAllPoints()
 		AtlasLootDefaultFrame:SetPoint("CENTER", "UIParent", "CENTER", 0, 0)
-        AtlasLoot.db.profile.LootBrowserScale = 1.0
-        AtlasLoot:UpdateLootBrowserScale()
+        self.db.profile.LootBrowserScale = 1.0
+        self:UpdateLootBrowserScale()
     elseif data == "quicklooks" then
         AtlasLootCharDB["QuickLooks"] = {}
     elseif data == "wishlist" then
 		AtlasLootWishList = {}
-		AtlasLoot:WishlistSetup()
+		self:WishlistSetup()
         AtlasLootCharDB["SearchResult"] = {}
     elseif data == "all" then
 		AtlasLootDefaultFrame:ClearAllPoints()
 		AtlasLootDefaultFrame:SetPoint("CENTER", "UIParent", "CENTER", 0, 0)
 
-        AtlasLoot.db.profile.LootBrowserScale = 1.0
-        AtlasLoot:UpdateLootBrowserScale()
+        self.db.profile.LootBrowserScale = 1.0
+        self:UpdateLootBrowserScale()
         AtlasLootCharDB["QuickLooks"] = {}
         AtlasLootCharDB["SearchResult"] = {}
 		AtlasLootWishList = {}
-		AtlasLoot:WishlistSetup()
+		self:WishlistSetup()
     end
     DEFAULT_CHAT_FRAME:AddMessage(BLUE..AL["AtlasLoot"]..": "..RED..AL["Reset complete!"])
 end
@@ -244,25 +241,12 @@ If someone types /atlasloot, bring up the options box
 ]]
 function AtlasLoot:SlashCommand(msg)
 	if msg == AL["reset"] then
-		AtlasLoot:Reset("frames")
+		self:Reset("frames")
 	elseif msg == AL["options"] then
-		AtlasLoot:OptionsToggle()
+		self:OptionsToggle()
 	else
 		AtlasLootDefaultFrame:Show()
 	end
-end
-
---[[
-AtlasLoot:OptionsToggle:
-Toggle on/off the options window
-]]
-function AtlasLoot:OptionsToggle()
-    if InterfaceOptionsFrame_OpenToCategory and not InterfaceOptionsFrame:IsVisible() then
-	    InterfaceOptionsFrame_OpenToCategory(AL["AtlasLoot"])
-	else
-		InterfaceOptionsFrame:Hide()
-    end
-    InterfaceOptionsFrame:SetFrameStrata("DIALOG")
 end
 
 --[[
@@ -275,12 +259,12 @@ function AtlasLoot:OnInitialize()
 	SLASH_ATLASLOOT1 = "/atlasloot"
 	SLASH_ATLASLOOT2 = "/al"
 	SlashCmdList["ATLASLOOT"] = function(msg)
-		AtlasLoot:SlashCommand(msg)
+		self:SlashCommand(msg)
 	end
 
 	--Sets the default loot tables for the current expansion enabled on the server.
 	local xpaclist = {"CLASSIC", "TBC", "WRATH"}
-	AtlasLoot_Expac = xpaclist[GetAccountExpansionLevel()+1]
+	self.Expac = xpaclist[GetAccountExpansionLevel()+1]
 end
 
 function AtlasLoot:RecipeSource(spellID)
@@ -441,7 +425,7 @@ function AtlasLoot:CreateToken(dataID)
 			table.insert(AtlasLoot_TokenData[orgID][1], {itemID = itemID, desc = desc})
 		end
 		if count == 1 then
-			AtlasLoot:ShowItemsFrame(AtlasLootItemsFrame.refresh[1], AtlasLootItemsFrame.refresh[2], AtlasLootItemsFrame.refresh[3])
+			self:ShowItemsFrame(AtlasLootItemsFrame.refresh[1], AtlasLootItemsFrame.refresh[2], AtlasLootItemsFrame.refresh[3])
 		end
 		count = count - 1
 	end
@@ -451,9 +435,9 @@ function AtlasLoot:CreateToken(dataID)
 			if type(v) == "table" then
 				local item = Item:CreateFromID(v.itemID)
 				if v.itemID and not item:GetInfo() then
-					AtlasLoot:ItemsLoading(1)
+					self:ItemsLoading(1)
 					item:ContinueOnLoad(function()
-						AtlasLoot:ItemsLoading(-1)
+						self:ItemsLoading(-1)
 						addItem(v.itemID, t.Name)
 					end)
 				else
@@ -464,10 +448,10 @@ function AtlasLoot:CreateToken(dataID)
 	end
 end
 
---Creates tables for raid tokens from the collections tables
+--Creates a sorted and consolidated loottable of all of an xpacs dungeon loot
 function AtlasLoot:CreateOnDemandLootTable(type)
 	-- Return and show loot table if its already been created
-	if AtlasLoot_OnDemand and AtlasLoot_OnDemand[type] then return AtlasLoot:ShowItemsFrame(type, "AtlasLoot_OnDemand", 1) end
+	if AtlasLoot_OnDemand and AtlasLoot_OnDemand[type] then return self:ShowItemsFrame(type, "AtlasLoot_OnDemand", 1) end
 	-- Create ondemand loot table if it dosnt exist
 	if not AtlasLoot_OnDemand then AtlasLoot_OnDemand = {} end
 
@@ -499,9 +483,9 @@ function AtlasLoot:CreateOnDemandLootTable(type)
 	local firstLoad
 	local function showTable()
 		if firstLoad then
-			AtlasLoot:ShowItemsFrame(AtlasLootItemsFrame.refresh[1], AtlasLootItemsFrame.refresh[2], AtlasLootItemsFrame.refresh[3])
+			self:ShowItemsFrame(AtlasLootItemsFrame.refresh[1], AtlasLootItemsFrame.refresh[2], AtlasLootItemsFrame.refresh[3])
 		else
-			AtlasLoot:ShowItemsFrame(type, "AtlasLoot_OnDemand", 1)
+			self:ShowItemsFrame(type, "AtlasLoot_OnDemand", 1)
 			firstLoad = true
 		end
 	end
@@ -541,14 +525,14 @@ function AtlasLoot:CreateOnDemandLootTable(type)
 		if itemData.itemID then
 			if not item:GetInfo() then
 				item:ContinueOnLoad(function()
-					AtlasLoot:ItemsLoading(-1)
+					self:ItemsLoading(-1)
 					local armorType, armorSubType, _, equipLoc = select(6,GetItemInfo(itemData.itemID))
 					if (armorType == "Armor" or armorType == "Weapon") then
 						sortItem(itemData, armorSubType, equipLoc, armorType)
 					end
 				end)
 			else
-				AtlasLoot:ItemsLoading(-1)
+				self:ItemsLoading(-1)
 				local armorType, armorSubType, _, equipLoc = select(6,GetItemInfo(itemData.itemID))
 				if (armorType == "Armor" or armorType == "Weapon") then
 					sortItem(itemData, armorSubType, equipLoc, armorType)
@@ -574,7 +558,7 @@ function AtlasLoot:CreateOnDemandLootTable(type)
 	end
 	wipe(checkList)
 	-- rate limit tied to half the current frame rate
-	AtlasLoot:ItemsLoading(#itemList)
+	self:ItemsLoading(#itemList)
 	local maxDuration = 500/GetFramerate()
 	local startTime = debugprofilestop()
 	local function continue()
@@ -603,7 +587,7 @@ It is the workhorse of the mod and allows the loot tables to be displayed any wa
 function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 
 	local isValid, toShow, itemID, recipeID, orgItemID
-	AtlasLoot.vanityItems = {}
+	self.vanityItems = {}
 
     --If the loot table name has not been passed, throw up a debugging statement
 	if dataID == nil then
@@ -630,9 +614,9 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 		AtlasLootDefaultFrame_MapButton:Enable()
 		-- Stops map reseting to default while still in the same raid/instance table
 		if AtlasLootItemsFrame.refresh == nil or dataID ~= AtlasLootItemsFrame.refresh[1] then
-			AtlasLoot.MapNum = 1
-			AtlasLoot.CurrentMap = dataSource[dataID].Map
-			AtlasLoot:SetMapButtonText(AtlasLoot.CurrentMap)
+			self.MapNum = 1
+			self.CurrentMap = dataSource[dataID].Map
+			self:SetMapButtonText(self.CurrentMap)
 		end
 	else
 		AtlasLootDefaultFrame_MapButton:Disable()
@@ -642,34 +626,34 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 	if dataSource_backup == "AtlasLoot_CurrentWishList" then
 		ATLASLOOT_CURRENT_WISHLIST_NUM = AtlasLoot_CurrentWishList["Show"].ListNum
 	else
-		AtlasLoot.itemUnlock = false
+		self.itemUnlock = false
 	end
 
 	local difType = false
 	-- Checks to see if type is the same
-	if AtlasLoot.CurrentType ~= dataSource[dataID].Type then
-		ItemindexID = AtlasLoot.type[dataSource[dataID].Type] or 2
+	if self.CurrentType ~= dataSource[dataID].Type then
+		ItemindexID = self.type[dataSource[dataID].Type] or 2
 		difType = true
 	end
 
 	-- Saves current types ItemindexID
 	if dataSource[dataID].Type then
-		AtlasLoot.type[dataSource[dataID].Type] = ItemindexID
+		self.type[dataSource[dataID].Type] = ItemindexID
 	end
 	-- Set current type
-	AtlasLoot.CurrentType = dataSource[dataID].Type or "Default"
+	self.CurrentType = dataSource[dataID].Type or "Default"
 
 	-- Loads the difficultys into the scrollFrame
 	if dataSource[dataID].ListType then
-		AtlasLoot:ScrollFrameUpdate(nil,dataSource[dataID].ListType)
+		self:ScrollFrameUpdate(nil,dataSource[dataID].ListType)
 	else
-		AtlasLoot:ScrollFrameUpdate()
+		self:ScrollFrameUpdate()
 	end
 
 	-- Finds the tablenumber to set where the difficulty slider should be.
 	local typeNumber = 1
 	local function findTypeNumber()
-		for i,v in ipairs(AtlasLoot_Difficulty[dataSource[dataID].Type]) do
+		for i,v in ipairs(self.Difficultys[dataSource[dataID].Type]) do
 			if v[2] == ItemindexID then
 				typeNumber = i
 				return i
@@ -678,9 +662,9 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 	end
 
 	-- Moves the difficulty scrollslider if the difficulty has changed
-	if dataSource[dataID].Type and difType and #AtlasLoot_Difficulty[dataSource[dataID].Type] > 5 and findTypeNumber() > 5 then
+	if dataSource[dataID].Type and difType and #self.Difficultys[dataSource[dataID].Type] > 5 and findTypeNumber() > 5 then
 		local min, max = AtlasLootDefaultFrameScrollScrollBar:GetMinMaxValues()
-		AtlasLootDefaultFrameScrollScrollBar:SetValue(typeNumber * (max / #AtlasLoot_Difficulty[dataSource[dataID].Type]))
+		AtlasLootDefaultFrameScrollScrollBar:SetValue(typeNumber * (max / #self.Difficultys[dataSource[dataID].Type]))
 	end
 
 	-- Moves the difficulty scrollslider if wishlist
@@ -696,7 +680,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 		else
 			AtlasLootDefaultFrame_SubMenu:SetText(dataSource[dataID].Name)
 		end
-		AtlasLoot:SubTableScrollFrameUpdate(dataID, dataSource_backup, tablenum)
+		self:SubTableScrollFrameUpdate(dataID, dataSource_backup, tablenum)
 	end
 
 	-- Sets the main page lable
@@ -704,6 +688,16 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 		AtlasLoot_BossName:SetText(dataSource[dataID][tablenum].Name)
 	else
 		AtlasLoot_BossName:SetText("This Is Empty")
+		for i = 1, 30, 1 do
+			--Use shortcuts for easier reference to parts of the item button
+			local itemButton = _G["AtlasLootItem_"..i]
+			local hightlightFrame = _G["AtlasLootItem_"..i.."_Highlight"]
+				itemButton:Hide()
+				itemButton.itemID = nil
+				itemButton.spellID = nil
+				hightlightFrame:Hide()
+				itemButton.hasTrade = false
+		end
 		return
 	end
 
@@ -718,23 +712,23 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 			itemID = item.itemID
 			isValid = true
 
-			if(item[AtlasLoot_Difficulty.MIN_DIF]) then
-				if item[AtlasLoot_Difficulty.MIN_DIF] > itemDif then
+			if(item[self.Difficultys.MIN_DIF]) then
+				if item[self.Difficultys.MIN_DIF] > itemDif then
 					toShow = false
 				end
-				itemID = AtlasLoot:FindId(item.itemID, min(AtlasLoot:getMaxDifficulty(item.Type or dataSource[dataID].Type), itemDif), item.Type or dataSource[dataID].Type, dataSource[dataID].Type ) or item.itemID
+				itemID = self:FindId(item.itemID, min(self:getMaxDifficulty(item.Type or dataSource[dataID].Type), itemDif), item.Type or dataSource[dataID].Type, dataSource[dataID].Type ) or item.itemID
 			end
 
 			if toShow then
 				--Sets ItemindexID to normal(2) if it is nil for min/max difficulties.
-				if not tonumber(itemDif) then itemDif = AtlasLoot_Difficulty.Normal end
+				if not tonumber(itemDif) then itemDif = self.Difficultys.Normal end
 
 				--Checks if an item has a Maximum difficulty, this is to correct some items that have an entry for higher difficulties then they really do
-				if item[AtlasLoot_Difficulty.MAX_DIF] then
-					if tonumber(item[AtlasLoot_Difficulty.MAX_DIF]) < itemDif then itemDif = item[AtlasLoot_Difficulty.MAX_DIF] end
+				if item[self.Difficultys.MAX_DIF] then
+					if tonumber(item[self.Difficultys.MAX_DIF]) < itemDif then itemDif = item[self.Difficultys.MAX_DIF] end
 				end
 				--If something was found in itemID database show that if not show default table item
-				itemID = AtlasLoot:FindId(item.itemID, itemDif, item.Type or dataSource[dataID].Type, dataSource[dataID].Type) or item.itemID
+				itemID = self:FindId(item.itemID, itemDif, item.Type or dataSource[dataID].Type, dataSource[dataID].Type) or item.itemID
 			end
 		elseif item and (item.spellID or item.icon) or item and itemID then
 			isValid = true
@@ -742,7 +736,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 		end
 		local recipeID
 		if item and item.spellID then
-			recipeID = AtlasLoot:GetRecipeID(item.spellID)
+			recipeID = self:GetRecipeID(item.spellID)
 		end
 		return isValid, toShow, itemID, recipeID, orgItemID
 	end
@@ -766,7 +760,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 				text = spellName
 			elseif dataSource[dataID][tablenum][i].name then
 				text = dataSource[dataID][tablenum][i].name
-				text = AtlasLoot:FixText(text)
+				text = self:FixText(text)
 			end
 			if itemID then
 				text = select(4,GetItemQualityColor(select(3,GetItemInfo(itemID))))..text
@@ -779,7 +773,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 			else
 				itemButton.hasTrade = false
 				hightlightFrame:Hide()
-				for key,v in pairs(AtlasLoot.db.profiles) do
+				for key,v in pairs(self.db.profiles) do
 					if gsub(key,"-",""):match(gsub(realmName,"-","")) and v.knownRecipes and v.knownRecipes[spellID] then
 						hightlightFrame:SetTexture(itemHighlightBlue)
 						hightlightFrame:Show()
@@ -796,7 +790,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 			if dataSource[dataID][tablenum][i].name then
 				--If it has a manuel entry use that
 				text = dataSource[dataID][tablenum][i].name
-				text = AtlasLoot:FixText(text)
+				text = self:FixText(text)
 			elseif itemName then
 				_, _, _, itemColor = GetItemQualityColor(itemQuality)
 				text = itemColor..itemName
@@ -810,14 +804,14 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 				hightlightFrame:SetTexture(itemHighlightBlue)
 				hightlightFrame:Show()
 				if dataSource_backup == "AtlasLoot_CurrentWishList" or (VANITY_ITEMS[itemID] and VANITY_ITEMS[itemID].learnedSpell ~= 0 and not CA_IsSpellKnown(VANITY_ITEMS[itemID].learnedSpell)) then
-					tinsert(AtlasLoot.vanityItems, itemID)
+					tinsert(self.vanityItems, itemID)
 				end
 			end
 		else
 			if dataSource[dataID][tablenum][i].name then
 				--If it has a manuel entry use that
 				text = dataSource[dataID][tablenum][i].name
-				text = AtlasLoot:FixText(text)
+				text = self:FixText(text)
 			else
 				text = ""
 			end
@@ -826,8 +820,8 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 		itemButton.name = text
 
 		--Insert the item description
-		if AtlasLoot.FixedItemText[dataSource[dataID][tablenum][i].itemID] then
-			extra = AtlasLoot.FixedItemText[dataSource[dataID][tablenum][i].itemID]
+		if self.FixedItemText[dataSource[dataID][tablenum][i].itemID] then
+			extra = self.FixedItemText[dataSource[dataID][tablenum][i].itemID]
 		elseif dataSource[dataID][tablenum][i].desc then
 			extra = dataSource[dataID][tablenum][i].desc
 		elseif AtlasLoot_CraftingData["CraftingLevels"] and spellID and AtlasLoot_CraftingData["CraftingLevels"][spellID] and dataID ~= "SearchResult" then
@@ -856,13 +850,13 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 			extra = extra ..WHITE.." ("..dataSource[dataID][tablenum][i].price..")"
 		end
 
-		local recipe = AtlasLoot:GetRecipeData(itemID, "item")
+		local recipe = self:GetRecipeData(itemID, "item")
 		if recipe and AtlasLoot_CraftingData["CraftingLevels"] and AtlasLoot_CraftingData["CraftingLevels"][recipe.spellID] then
 			local lvls = AtlasLoot_CraftingData["CraftingLevels"][recipe.spellID]
 			extra = extra ..WHITE.." ( "..lvls[1].." )"
 		end
 
-		extra = AtlasLoot:FixText(extra)
+		extra = self:FixText(extra)
 
 		--If there is no data on the texture an item should have, show a big red question mark
 		if dataSource[dataID][tablenum][i].icon == "Blank" then
@@ -887,7 +881,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 
 		--Highlight items in the wishlist
 		if itemID and dataSource_backup ~= "AtlasLoot_CurrentWishList" and AtlasLootWishList["Options"][UnitName("player")]["Mark"] == true then
-			local xitemexistwish, itemwishicons = AtlasLoot:WishListCheck(itemID, true)
+			local xitemexistwish, itemwishicons = self:WishListCheck(itemID, true)
 			if xitemexistwish then
 				text = itemwishicons.." "..text
 			end
@@ -919,7 +913,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 			itemButton.dressingroomID = itemID
 		end
 
-		itemButton.craftingData = AtlasLoot:RecipeSource(spellID)
+		itemButton.craftingData = self:RecipeSource(spellID)
 		itemButton.tablenum = tablenum
 		itemButton.dataID = dataID
 		itemButton.dataSource = dataSource_backup
@@ -936,8 +930,8 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 			itemButton.sourcePage = nil
 		end
 
-		if dataSource[dataID][tablenum][i][AtlasLoot_Difficulty.DIF_SEARCH] then
-			itemButton.difficulty = dataSource[dataID][tablenum][i][AtlasLoot_Difficulty.DIF_SEARCH]
+		if dataSource[dataID][tablenum][i][self.Difficultys.DIF_SEARCH] then
+			itemButton.difficulty = dataSource[dataID][tablenum][i][self.Difficultys.DIF_SEARCH]
 		else
 			itemButton.difficulty = ItemindexID
 		end
@@ -948,9 +942,9 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 
 	local function getItemData(itemID, i, orgItemID)
 		local item = Item:CreateFromID(itemID)
-		AtlasLoot:ItemsLoading(1)
+		self:ItemsLoading(1)
 		item:ContinueOnLoad(function(itemID)
-			AtlasLoot:ItemsLoading(-1)
+			self:ItemsLoading(-1)
 			setupButton(itemID, i, dataSource, dataID, tablenum, dataSource_backup)
 		end)
 	end
@@ -985,9 +979,9 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 				for _,ID in pairs(dataSource[itemID]) do
 					local item = Item:CreateFromID(ID.itemID)
 					if ID.itemID and not item:GetInfo() then
-						AtlasLoot:ItemsLoading(1)
+						self:ItemsLoading(1)
 						item:ContinueOnLoad(function(itemID)
-							AtlasLoot:ItemsLoading(-1)
+							self:ItemsLoading(-1)
 						end)
 					end
 				end
@@ -1015,17 +1009,17 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 
 		if dataSource_backup ~= "AtlasLoot_OnDemand" and dataID ~= "SearchResult" and dataSource_backup ~= "AtlasLoot_CurrentWishList" and dataID ~= "FilterList"  and
 		dataSource[dataID].Back ~= true and dataID ~= "EmptyTable" and not dataSource[dataID].vanity then
-			if not AtlasLoot.db.profile.LastBoss or type(AtlasLoot.db.profile.LastBoss) ~= "table" then AtlasLoot.db.profile.LastBoss = {} end
-			AtlasLoot.db.profile.LastBoss[AtlasLoot_Expac] = {dataID, dataSource_backup, tablenum, AtlasLoot.lastModule, AtlasLoot.currentTable, AtlasLoot.moduleName}
-			AtlasLoot.db.profile[AtlasLoot.currentTable] = {dataID, dataSource_backup, tablenum, AtlasLoot.lastModule, AtlasLoot.currentTable, AtlasLoot.moduleName}
+			if not self.db.profile.LastBoss or type(self.db.profile.LastBoss) ~= "table" then self.db.profile.LastBoss = {} end
+			self.db.profile.LastBoss[self.Expac] = {dataID, dataSource_backup, tablenum, self.lastModule, self.currentTable, self.moduleName}
+			self.db.profile[self.currentTable] = {dataID, dataSource_backup, tablenum, self.lastModule, self.currentTable, self.moduleName}
 		end
 
 		-- Checks dataID with submenus to stop filter button loading on certain tables
 		local function filterCheck(find)
 			local mtype = {"Crafting", "Reputations", "WorldEvents", "PVP", "Collections", "Vanity"}
 			for _, t in pairs (mtype) do
-				if AtlasLoot_SubMenus[t..AtlasLoot_Expac] then
-					for _, v in ipairs (AtlasLoot_SubMenus[t..AtlasLoot_Expac]) do
+				if AtlasLoot_SubMenus[t..self.Expac] then
+					for _, v in ipairs (AtlasLoot_SubMenus[t..self.Expac]) do
 						if v[3] and type(v[3]) == "table" then
 							for _, sub in ipairs(v[3]) do
 								if find == sub[2] then
@@ -1098,7 +1092,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 			_G["AtlasLootItemsFrame_PREV"].tablebase = tablebase
 		end
 
-		if dataSource[dataID].Back or AtlasLoot.backEnabled then
+		if dataSource[dataID].Back or self.backEnabled then
 			_G["AtlasLootItemsFrame_BACK"]:Show()
 		elseif dataID ~= "FilterList" then
 			AtlasLootItemsFrame.refreshBack = {dataID, dataSource_backup, tablenum}
@@ -1106,12 +1100,12 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 	end
 
 	--Anchor the item frame where it is supposed to be
-	if AtlasLoot.filterEnable and dataID ~= "FilterList" then
-		AtlasLoot:HideFilteredItems()
+	if self.filterEnable and dataID ~= "FilterList" then
+		self:HideFilteredItems()
 	end
 	if dataID ~= "SearchResult" then
 		--preload items from the rest of the instance table
-		AtlasLoot:PreLoadLootTable(dataSource, dataID, ItemindexID)
+		self:PreLoadLootTable(dataSource, dataID, ItemindexID)
 	end
 end
 
@@ -1145,7 +1139,7 @@ Used to load all available LoD modules
 function AtlasLoot:LoadAllModules()
 	local loadedModules = {}
 	local flag = 0
-	for _, module in pairs(AtlasLoot.dataModules) do
+	for _, module in pairs(self.dataModules) do
 		loadedModules[module] = LoadAddOn(module)
 	end
 
@@ -1157,7 +1151,7 @@ function AtlasLoot:LoadAllModules()
 	end
 
 	if flag == 1 then
-		if AtlasLoot.DebugMessages then
+		if self.DebugMessages then
 			DEFAULT_CHAT_FRAME:AddMessage(GREEN..AL["AtlasLoot"]..": "..WHITE..AL["All Available Modules Loaded"])
 		end
 		collectgarbage("collect")
@@ -1170,25 +1164,25 @@ button: Identity of the button pressed to trigger the function
 Shows the GUI for setting Quicklooks
 ]]
 function AtlasLoot:ShowFavorites(button)
-	if AtlasLoot.Dewdrop:IsOpen(button) then
-		AtlasLoot.Dewdrop:Close(1)
+	if self.Dewdrop:IsOpen(button) then
+		self.Dewdrop:Close(1)
 	else
 		local setOptions = function()
-			AtlasLoot.Dewdrop:AddLine(
+			self.Dewdrop:AddLine(
 				"text", AL["Favorite"].." 1",
 				"tooltipTitle", AL["Favorite"].." 1",
 				"tooltipText", AL["Assign this loot table\n to Favorite"].." 1",
 				"func", function()
                     if AtlasLootItemsFrame.refresh[2] == "AtlasLoot_CurrentWishList" then
-						AtlasLootCharDB["QuickLooks"][1]={AtlasLoot_CurrentWishList["Show"].ListType, "AtlasLootWishList", AtlasLoot_CurrentWishList["Show"].ListNum, AtlasLoot.lastModule, AtlasLoot.currentTable, _G["AtlasLootWishList"][AtlasLoot_CurrentWishList["Show"].ListType][AtlasLoot_CurrentWishList["Show"].ListNum].Name}
+						AtlasLootCharDB["QuickLooks"][1]={AtlasLoot_CurrentWishList["Show"].ListType, "AtlasLootWishList", AtlasLoot_CurrentWishList["Show"].ListNum, self.lastModule, self.currentTable, _G["AtlasLootWishList"][AtlasLoot_CurrentWishList["Show"].ListType][AtlasLoot_CurrentWishList["Show"].ListNum].Name}
 					else
-						AtlasLootCharDB["QuickLooks"][1]={AtlasLootItemsFrame.refreshOri[1], AtlasLootItemsFrame.refreshOri[2], AtlasLootItemsFrame.refreshOri[3], AtlasLoot.lastModule, AtlasLoot.currentTable, _G[AtlasLootItemsFrame.refreshOri[2]][AtlasLootItemsFrame.refreshOri[1]][AtlasLootItemsFrame.refreshOri[3]].Name}
+						AtlasLootCharDB["QuickLooks"][1]={AtlasLootItemsFrame.refreshOri[1], AtlasLootItemsFrame.refreshOri[2], AtlasLootItemsFrame.refreshOri[3], self.lastModule, self.currentTable, _G[AtlasLootItemsFrame.refreshOri[2]][AtlasLootItemsFrame.refreshOri[1]][AtlasLootItemsFrame.refreshOri[3]].Name}
 					end
 
-                    AtlasLoot.Dewdrop:Close(1)
+                    self.Dewdrop:Close(1)
 				end
 			)
-			AtlasLoot.Dewdrop:AddLine(
+			self.Dewdrop:AddLine(
 				"text", AL["Favorite"].." 2",
 				"tooltipTitle", AL["Favorite"].." 2",
 				"tooltipText", AL["Assign this loot table\n to Favorite"].." 2",
@@ -1196,46 +1190,46 @@ function AtlasLoot:ShowFavorites(button)
 					if AtlasLootItemsFrame.refresh[2] == "AtlasLoot_CurrentWishList" then
 						AtlasLootCharDB["QuickLooks"][2]={AtlasLoot_CurrentWishList["Show"].ListType, 
 						"AtlasLootWishList",
-						AtlasLoot_CurrentWishList["Show"].ListNum, AtlasLoot.lastModule,
-						AtlasLoot.currentTable,
+						AtlasLoot_CurrentWishList["Show"].ListNum, self.lastModule,
+						self.currentTable,
 						_G["AtlasLootWishList"][AtlasLoot_CurrentWishList["Show"].ListType][AtlasLoot_CurrentWishList["Show"].ListNum].Name}
 					else
-						AtlasLootCharDB["QuickLooks"][2]={AtlasLootItemsFrame.refreshOri[1], AtlasLootItemsFrame.refreshOri[2], AtlasLootItemsFrame.refreshOri[3], AtlasLoot.lastModule, AtlasLoot.currentTable, _G[AtlasLootItemsFrame.refreshOri[2]][AtlasLootItemsFrame.refreshOri[1]][AtlasLootItemsFrame.refreshOri[3]].Name}
+						AtlasLootCharDB["QuickLooks"][2]={AtlasLootItemsFrame.refreshOri[1], AtlasLootItemsFrame.refreshOri[2], AtlasLootItemsFrame.refreshOri[3], self.lastModule, self.currentTable, _G[AtlasLootItemsFrame.refreshOri[2]][AtlasLootItemsFrame.refreshOri[1]][AtlasLootItemsFrame.refreshOri[3]].Name}
                     end
 
-                    AtlasLoot.Dewdrop:Close(1)
+                    self.Dewdrop:Close(1)
 				end
 			)
-            AtlasLoot.Dewdrop:AddLine(
+            self.Dewdrop:AddLine(
 				"text", AL["Favorite"].." 3",
 				"tooltipTitle", AL["Favorite"].." 3",
 				"tooltipText", AL["Assign this loot table\n to Favorite"].." 3",
 				"func", function()
 					if AtlasLootItemsFrame.refresh[2] == "AtlasLoot_CurrentWishList" then
-						AtlasLootCharDB["QuickLooks"][3]={AtlasLoot_CurrentWishList["Show"].ListType, "AtlasLootWishList", AtlasLoot_CurrentWishList["Show"].ListNum, AtlasLoot.lastModule, AtlasLoot.currentTable, _G["AtlasLootWishList"][AtlasLoot_CurrentWishList["Show"].ListType][AtlasLoot_CurrentWishList["Show"].ListNum].Name}
+						AtlasLootCharDB["QuickLooks"][3]={AtlasLoot_CurrentWishList["Show"].ListType, "AtlasLootWishList", AtlasLoot_CurrentWishList["Show"].ListNum, self.lastModule, self.currentTable, _G["AtlasLootWishList"][AtlasLoot_CurrentWishList["Show"].ListType][AtlasLoot_CurrentWishList["Show"].ListNum].Name}
 					else
-						AtlasLootCharDB["QuickLooks"][3]={AtlasLootItemsFrame.refreshOri[1], AtlasLootItemsFrame.refreshOri[2], AtlasLootItemsFrame.refreshOri[3], AtlasLoot.lastModule, AtlasLoot.currentTable, _G[AtlasLootItemsFrame.refreshOri[2]][AtlasLootItemsFrame.refreshOri[1]][AtlasLootItemsFrame.refreshOri[3]].Name}
+						AtlasLootCharDB["QuickLooks"][3]={AtlasLootItemsFrame.refreshOri[1], AtlasLootItemsFrame.refreshOri[2], AtlasLootItemsFrame.refreshOri[3], self.lastModule, self.currentTable, _G[AtlasLootItemsFrame.refreshOri[2]][AtlasLootItemsFrame.refreshOri[1]][AtlasLootItemsFrame.refreshOri[3]].Name}
                     end
 
-                    AtlasLoot.Dewdrop:Close(1)
+                    self.Dewdrop:Close(1)
 				end
 			)
-            AtlasLoot.Dewdrop:AddLine(
+            self.Dewdrop:AddLine(
 				"text", AL["Favorite"].." 4",
 				"tooltipTitle", AL["Favorite"].." 4",
 				"tooltipText", AL["Assign this loot table\n to Favorite"].." 4",
 				"func", function()
 					if AtlasLootItemsFrame.refresh[2] == "AtlasLoot_CurrentWishList" then
-						AtlasLootCharDB["QuickLooks"][4]={AtlasLoot_CurrentWishList["Show"].ListType, "AtlasLootWishList", AtlasLoot_CurrentWishList["Show"].ListNum, AtlasLoot.lastModule, AtlasLoot.currentTable, _G["AtlasLootWishList"][AtlasLoot_CurrentWishList["Show"].ListType][AtlasLoot_CurrentWishList["Show"].ListNum].Name}
+						AtlasLootCharDB["QuickLooks"][4]={AtlasLoot_CurrentWishList["Show"].ListType, "AtlasLootWishList", AtlasLoot_CurrentWishList["Show"].ListNum, self.lastModule, self.currentTable, _G["AtlasLootWishList"][AtlasLoot_CurrentWishList["Show"].ListType][AtlasLoot_CurrentWishList["Show"].ListNum].Name}
 					else
-						AtlasLootCharDB["QuickLooks"][4]={AtlasLootItemsFrame.refreshOri[1], AtlasLootItemsFrame.refreshOri[2], AtlasLootItemsFrame.refreshOri[3], AtlasLoot.lastModule, AtlasLoot.currentTable, _G[AtlasLootItemsFrame.refreshOri[2]][AtlasLootItemsFrame.refreshOri[1]][AtlasLootItemsFrame.refreshOri[3]].Name}
+						AtlasLootCharDB["QuickLooks"][4]={AtlasLootItemsFrame.refreshOri[1], AtlasLootItemsFrame.refreshOri[2], AtlasLootItemsFrame.refreshOri[3], self.lastModule, self.currentTable, _G[AtlasLootItemsFrame.refreshOri[2]][AtlasLootItemsFrame.refreshOri[1]][AtlasLootItemsFrame.refreshOri[3]].Name}
                     end
 
-                    AtlasLoot.Dewdrop:Close(1)
+                    self.Dewdrop:Close(1)
 				end
 			)
 		end
-		AtlasLoot.Dewdrop:Open(button,
+		self.Dewdrop:Open(button,
 			'point', function(parent)
 				return "BOTTOMLEFT", "BOTTOMRIGHT"
 			end,
@@ -1254,9 +1248,9 @@ function AtlasLoot:PreLoadLootTable(dataSource, dataID, ItemindexID)
 			if itemID then
 				local item = Item:CreateFromID(itemID)
 				if item and not item:GetInfo() then
-					AtlasLoot:ItemsLoading(1)
+					self:ItemsLoading(1)
 					item:ContinueOnLoad(function(itemID)
-						AtlasLoot:ItemsLoading(-1)
+						self:ItemsLoading(-1)
 					end)
 				end
 			end
@@ -1293,12 +1287,12 @@ function AtlasLoot:LoadItemIDsDatabase()
 end
 
 function AtlasLoot:PopulateProfessions()
-	if not AtlasLoot.db.profile.knownRecipes then AtlasLoot.db.profile.knownRecipes = {} end
+	if not self.db.profile.knownRecipes then self.db.profile.knownRecipes = {} end
 	for _,prof in pairs(TRADESKILL_RECIPES) do
 	   for _,cat in pairs(prof) do
 		  for _,recipe in pairs(cat) do
 			 if CA_IsSpellKnown(recipe.SpellEntry) then
-				AtlasLoot.db.profile.knownRecipes[recipe.SpellEntry] = true
+				self.db.profile.knownRecipes[recipe.SpellEntry] = true
 			 end
 		  end
 	   end

@@ -3,7 +3,6 @@ Options.lua
 Functions:
 AtlasLoot_OptionsPanelOnLoad(panel)
 AtlasLoot:OptionsInit()
-AtlasLoot:OptionsOnLoad()
 AtlasLoot:OptionsAllLinksToggle()
 AtlasLoot:OptionsEquipCompareToggle()
 AtlasLoot:OptionsOpaqueToggle()
@@ -16,11 +15,8 @@ AtlasLoot:CreateOptionsInfoTooltips()
 ]]
 
 local GREY = "|cff999999"
-local RED = "|cffff0000"
 local WHITE = "|cffFFFFFF"
 local GREEN = "|cff1eff00"
-local PURPLE = "|cff9F3FFF"
-local BLUE = "|cff0070dd"
 local ORANGE = "|cffFF8400"
 
 --Invoke libraries
@@ -33,23 +29,31 @@ end
 
 function AtlasLoot:OptionsInit()
     --Initialise all the check boxes on the options frame
-    AtlasLootOptionsFrameEquipCompare:SetChecked(AtlasLoot.db.profile.EquipCompare)
-    AtlasLootOptionsFrameOpaque:SetChecked(AtlasLoot.db.profile.Opaque)
-    AtlasLootOptionsFrameAutoInstance:SetChecked(AtlasLoot.db.profile.AutoCurrentInstance)
-    AtlasLootOptionsFrameItemID:SetChecked(AtlasLoot.db.profile.ItemIDs)
-    AtlasLootOptionsFrameLootBrowserScale:SetValue(AtlasLoot.db.profile.LootBrowserScale)
-    AtlasLootOptionsMinimapIcon:SetChecked(AtlasLoot.db.profile.minimap.hide)
-    AtlasLootOptionsFrameCraftingInfo:SetChecked(AtlasLoot.db.profile.recipeExtraInfoSwitch)
+    AtlasLootOptionsFrameEquipCompare:SetChecked(self.db.profile.EquipCompare)
+    AtlasLootOptionsFrameOpaque:SetChecked(self.db.profile.Opaque)
+    AtlasLootOptionsFrameAutoInstance:SetChecked(self.db.profile.AutoCurrentInstance)
+    AtlasLootOptionsFrameItemID:SetChecked(self.db.profile.ItemIDs)
+    AtlasLootOptionsFrameLootBrowserScale:SetValue(self.db.profile.LootBrowserScale)
+    AtlasLootOptionsMinimapIcon:SetChecked(self.db.profile.minimap.hide)
+    AtlasLootOptionsFrameCraftingInfo:SetChecked(self.db.profile.recipeExtraInfoSwitch)
 end
 
-function AtlasLoot:OptionsOnLoad()
-    --Disable checkboxes of missing addons
-    AtlasLoot:OptionsInit()
+--[[
+AtlasLoot:OptionsToggle:
+Toggle on/off the options window
+]]
+function AtlasLoot:OptionsToggle()
+    if InterfaceOptionsFrame_OpenToCategory and not InterfaceOptionsFrame:IsVisible() then
+	    InterfaceOptionsFrame_OpenToCategory(AL["AtlasLoot"])
+	else
+		InterfaceOptionsFrame:Hide()
+    end
+    InterfaceOptionsFrame:SetFrameStrata("DIALOG")
 end
 
 function AtlasLoot:OptionsOpaqueToggle()
-    AtlasLoot.db.profile.Opaque = AtlasLootOptionsFrameOpaque:GetChecked()
-    if (AtlasLoot.db.profile.Opaque) then
+    self.db.profile.Opaque = AtlasLootOptionsFrameOpaque:GetChecked()
+    if (self.db.profile.Opaque) then
         AtlasLootItemsFrame_Back:SetTexture(0, 0, 0, 1)
         Atlasloot_Difficulty_ScrollFrame_Back:SetTexture(0, 0, 0, 1)
         Atlasloot_SubTableFrame_Back:SetTexture(0, 0, 0, 1)
@@ -58,16 +62,16 @@ function AtlasLoot:OptionsOpaqueToggle()
         Atlasloot_Difficulty_ScrollFrame_Back:SetTexture(0, 0, 0, 0.05)
         Atlasloot_SubTableFrame_Back:SetTexture(0, 0, 0, 0.05)
     end
-    AtlasLoot:OptionsInit()
+    self:OptionsInit()
 end
 
 function AtlasLoot:Options_AutoInstanceToggle()
-    AtlasLoot.db.profile.AutoCurrentInstance = AtlasLootOptionsFrameAutoInstance:GetChecked()
+    self.db.profile.AutoCurrentInstance = AtlasLootOptionsFrameAutoInstance:GetChecked()
 end
 
 function AtlasLoot:OptionsItemIDToggle()
-    AtlasLoot.db.profile.ItemIDs=AtlasLootOptionsFrameItemID:GetChecked()
-    AtlasLoot:OptionsInit()
+    self.db.profile.ItemIDs=AtlasLootOptionsFrameItemID:GetChecked()
+    self:OptionsInit()
 end
 
 function AtlasLoot:SetupLootBrowserSlider(frame, mymin, mymax, step)
@@ -76,6 +80,7 @@ function AtlasLoot:SetupLootBrowserSlider(frame, mymin, mymax, step)
 	_G[frame:GetName().."Low"]:SetText(mymin)
 	_G[frame:GetName().."High"]:SetText(mymax)
 	frame:SetValueStep(step)
+    self:OptionsInit()
 end
 
 --Borrowed from Atlas, thanks Dan!
@@ -89,7 +94,7 @@ function AtlasLoot:UpdateLootBrowserSlider(frame)
 end
 
 function AtlasLoot:UpdateLootBrowserScale()
-	AtlasLootDefaultFrame:SetScale(AtlasLoot.db.profile.LootBrowserScale)
+	AtlasLootDefaultFrame:SetScale(self.db.profile.LootBrowserScale)
 end
 
 function AtlasLoot:DisplayHelp()
@@ -142,18 +147,15 @@ AtlasLoot:CreateOptionsInfoTooltips()
 Adds explanatory tooltips to Atlasloot options
 ]]
 function AtlasLoot:CreateOptionsInfoTooltips()
-   
-      AtlasLoot:AddTooltip("AtlasLootOptionsFrameOpaque", nil) -- AL["Make Loot Table Opaque"]
-      AtlasLoot:AddTooltip("AtlasLootOptionsFrameItemID", nil) -- AL["Show itemIDs at all times"]
-      AtlasLoot:AddTooltip("AtlasLootOptionsFrameEquipCompare", nil) -- AL["Show Comparison Tooltips"]
-      AtlasLoot:AddTooltip("AtlasLootOptionsFrameLoDSpam", nil) -- AL["Notify on LoD Module Load"]
-      AtlasLoot:AddTooltip("AtlasLootOptionsFrameLootBrowserScale", nil) -- Scale SLIDER
-      AtlasLoot:AddTooltip("AtlasLootOptionsFrame_ResetAtlasLoot", nil) -- AL["Reset Frames"]
-      AtlasLoot:AddTooltip("AtlasLootOptionsFrame_ResetWishlist", nil) -- AL["Reset Wishlist"]
-      AtlasLoot:AddTooltip("AtlasLootOptionsFrame_ResetQuicklooks", nil) -- AL["Reset Favorites"]
-      AtlasLoot:AddTooltip("AtlasLootOptionsFrame_FuBarShow", nil) -- AL["Show FuBar Plugin"]
-      AtlasLoot:AddTooltip("AtlasLootOptionsFrame_FuBarHide", nil) -- AL["Hide FuBar Plugin"]
-      AtlasLoot:AddTooltip("AtlasLoot_SelectLootBrowserStyle", nil) 
+      self:AddTooltip("AtlasLootOptionsFrameOpaque", nil) -- AL["Make Loot Table Opaque"]
+      self:AddTooltip("AtlasLootOptionsFrameItemID", nil) -- AL["Show itemIDs at all times"]
+      self:AddTooltip("AtlasLootOptionsFrameEquipCompare", nil) -- AL["Show Comparison Tooltips"]
+      self:AddTooltip("AtlasLootOptionsFrameLoDSpam", nil) -- AL["Notify on LoD Module Load"]
+      self:AddTooltip("AtlasLootOptionsFrameLootBrowserScale", nil) -- Scale SLIDER
+      self:AddTooltip("AtlasLootOptionsFrame_ResetAtlasLoot", nil) -- AL["Reset Frames"]
+      self:AddTooltip("AtlasLootOptionsFrame_ResetWishlist", nil) -- AL["Reset Wishlist"]
+      self:AddTooltip("AtlasLootOptionsFrame_ResetQuicklooks", nil) -- AL["Reset Favorites"]
+      self:AddTooltip("AtlasLoot_SelectLootBrowserStyle", nil) 
 end
 
 local function selectLootBrowserStyle_Initialize()
@@ -169,7 +171,7 @@ end
 function AtlasLoot:OptionsOnShow()
     AtlasLoot_SelectLootBrowserStyle_Label:SetText(AL["Change AtlasLoot Skin:"])
     UIDropDownMenu_Initialize(AtlasLoot_SelectLootBrowserStyle, selectLootBrowserStyle_Initialize)
-	UIDropDownMenu_SetSelectedID(AtlasLoot_SelectLootBrowserStyle, AtlasLoot.db.profile.LootBrowserStyle)
+	UIDropDownMenu_SetSelectedID(AtlasLoot_SelectLootBrowserStyle, self.db.profile.LootBrowserStyle)
 	UIDropDownMenu_SetWidth(AtlasLoot_SelectLootBrowserStyle, 150)
 end
 
@@ -183,6 +185,10 @@ function AtlasLoot:SelectLootBrowserStyle_OnClick()
     AtlasLoot:OptionsOnShow()
 end
 
+
+
+function AtlasLoot:CreateOptionsFrame()
+
 local helpframe = CreateFrame("Frame", "AtlasLootHelpFrame")
         helpframe:SetSize(425,450)
         helpframe:Hide()
@@ -192,7 +198,7 @@ local helpframe = CreateFrame("Frame", "AtlasLootHelpFrame")
         helpframe.title:SetSize(400,30)
         helpframe.title:SetPoint("TOP", "AtlasLootHelpFrame","TOP")
         helpframe.title:SetText(AL["AtlasLoot Help"])
-        helpframe:SetScript("OnShow", function() AtlasLoot:DisplayHelp() end)
+        helpframe:SetScript("OnShow", function() self:DisplayHelp() end)
 
 local optframe = CreateFrame("Frame", "AtlasLootOptionsFrame")
         optframe:Hide()
@@ -202,38 +208,38 @@ local optframe = CreateFrame("Frame", "AtlasLootOptionsFrame")
         optframe.title:SetJustifyH("CENTER")
         optframe.title:SetSize(400,30)
         optframe.title:SetPoint("TOP", "AtlasLootOptionsFrame","TOP")
-        optframe.title:SetText(AtlasLoot.Version)
-        optframe:SetScript("OnShow", function() AtlasLoot:OptionsOnShow() end)
+        optframe.title:SetText(self.Version)
+        optframe:SetScript("OnShow", function() self:OptionsOnShow() end)
 
 local opaque = CreateFrame("CheckButton", "AtlasLootOptionsFrameOpaque", AtlasLootOptionsFrame, "OptionsCheckButtonTemplate")
         opaque:SetPoint("TOPLEFT",5,-40)
         AtlasLootOptionsFrameOpaqueText:SetText(AL["Make Loot Table Opaque"])
-        opaque:SetScript("OnClick", function() AtlasLoot:OptionsOpaqueToggle() end)
+        opaque:SetScript("OnClick", function() self:OptionsOpaqueToggle() end)
 
 local autoInstance = CreateFrame("CheckButton", "AtlasLootOptionsFrameAutoInstance", AtlasLootOptionsFrame, "OptionsCheckButtonTemplate")
         autoInstance:SetPoint("TOPLEFT",5,-70)
         AtlasLootOptionsFrameAutoInstanceText:SetText(AL["Auto Load Instance Loot Pages"])
-        autoInstance:SetScript("OnClick", function() AtlasLoot:Options_AutoInstanceToggle() end)
+        autoInstance:SetScript("OnClick", function() self:Options_AutoInstanceToggle() end)
 
 local craftingInfo = CreateFrame("CheckButton", "AtlasLootOptionsFrameCraftingInfo", AtlasLootOptionsFrame, "OptionsCheckButtonTemplate")
         craftingInfo:SetPoint("TOPLEFT",5,-100)
         AtlasLootOptionsFrameCraftingInfoText:SetText(AL["Only show crafting source while colding CTRL"])
-        craftingInfo:SetScript("OnClick", function() AtlasLoot.db.profile.recipeExtraInfoSwitch = not AtlasLoot.db.profile.recipeExtraInfoSwitch end)
+        craftingInfo:SetScript("OnClick", function() self.db.profile.recipeExtraInfoSwitch = not self.db.profile.recipeExtraInfoSwitch end)
 
 local itemid = CreateFrame("CheckButton", "AtlasLootOptionsFrameItemID", AtlasLootOptionsFrame, "OptionsCheckButtonTemplate")
         itemid:SetPoint("TOP",5,-70)
         AtlasLootOptionsFrameItemIDText:SetText(AL["Show itemIDs at all times"])
-        itemid:SetScript("OnClick", function() AtlasLoot:OptionsItemIDToggle() end)
+        itemid:SetScript("OnClick", function() self:OptionsItemIDToggle() end)
 
 local miniMap = CreateFrame("CheckButton", "AtlasLootOptionsMinimapIcon", AtlasLootOptionsFrame, "OptionsCheckButtonTemplate")
         miniMap:SetPoint("TOP",5,-100)
         AtlasLootOptionsMinimapIconText:SetText(AL["Hide minimap icon"])
-        miniMap:SetScript("OnClick", function() AtlasLoot:ToggleMinimap() end)
+        miniMap:SetScript("OnClick", function() self:ToggleMinimap() end)
 
 local equip = CreateFrame("CheckButton", "AtlasLootOptionsFrameEquipCompare", AtlasLootOptionsFrame, "OptionsCheckButtonTemplate")
         equip:SetPoint("TOP",5,-40)
         AtlasLootOptionsFrameEquipCompareText:SetText(AL["Show Comparison Tooltips"])
-        equip:SetScript("OnClick", function() AtlasLoot.db.profile.EquipCompare = not AtlasLoot.db.profile.EquipCompare end)
+        equip:SetScript("OnClick", function() self.db.profile.EquipCompare = not self.db.profile.EquipCompare end)
 
 local sStyle = CreateFrame("Button", "AtlasLoot_SelectLootBrowserStyle", AtlasLootOptionsFrame, "UIDropDownMenuTemplate")
         sStyle.lable = sStyle:CreateFontString("AtlasLoot_SelectLootBrowserStyle_Label", "BACKGROUND", "GameFontNormalSmall")
@@ -243,30 +249,34 @@ local sStyle = CreateFrame("Button", "AtlasLoot_SelectLootBrowserStyle", AtlasLo
 local bscale = CreateFrame("Slider", "AtlasLootOptionsFrameLootBrowserScale", AtlasLootOptionsFrame,"OptionsSliderTemplate")
         bscale:SetSize(240,16)
         bscale:SetPoint("TOP", 0,-300)
-        bscale:SetScript("OnShow", function(self) AtlasLoot:SetupLootBrowserSlider(self, 0.25, 1.5, 0.01) end)
-        bscale:SetScript("OnValueChanged", function(self)
-            AtlasLoot:UpdateLootBrowserSlider(self)
-            AtlasLoot.db.profile.LootBrowserScale = self:GetValue()
-            AtlasLoot:UpdateLootBrowserScale()
+        bscale:SetScript("OnShow", function() self:SetupLootBrowserSlider(bscale, 0.25, 1.5, 0.01) end)
+        bscale:SetScript("OnValueChanged", function()
+            self:UpdateLootBrowserSlider(bscale)
+            self.db.profile.LootBrowserScale = bscale:GetValue()
+            self:UpdateLootBrowserScale()
         end)
 
 local resetwish = CreateFrame("Button", "AtlasLootOptionsFrame_ResetWishlist", AtlasLootOptionsFrame, "OptionsButtonTemplate")
         resetwish:SetSize(130,25)
         resetwish:SetPoint("TOP", 0, -325)
         resetwish:SetText(AL["Reset Wishlist"])
-        resetwish:SetScript("OnClick", function() AtlasLoot:Reset("wishlist") end)
+        resetwish:SetScript("OnClick", function() self:Reset("wishlist") end)
         resetwish:SetScript("OnShow", function() resetwish:SetWidth(AtlasLootOptionsFrame_ResetWishlist:GetTextWidth()+20) end)
 
 local resetAtlas = CreateFrame("Button", "AtlasLootOptionsFrame_ResetAtlasLoot", AtlasLootOptionsFrame, "OptionsButtonTemplate")
         resetAtlas:SetSize(130,25)
         resetAtlas:SetText(AL["Reset Frames"])
         resetAtlas:SetPoint("RIGHT", "AtlasLootOptionsFrame_ResetWishlist", "LEFT", -10, 0)
-        resetAtlas:SetScript("OnClick", function() AtlasLoot:Reset("frames") end)
+        resetAtlas:SetScript("OnClick", function() self:Reset("frames") end)
         resetAtlas:SetScript("OnShow", function() resetAtlas:SetWidth(AtlasLootOptionsFrame_ResetAtlasLoot:GetTextWidth()+20) end)
 
 local resetquick = CreateFrame("Button", "AtlasLootOptionsFrame_ResetQuicklooks", AtlasLootOptionsFrame, "OptionsButtonTemplate")
         resetquick:SetSize(130,25)
         resetquick:SetText(AL["Reset Favorites"])
         resetquick:SetPoint("LEFT", "AtlasLootOptionsFrame_ResetWishlist", "RIGHT", 10, 0)
-        resetquick:SetScript("OnClick", function() AtlasLoot:Reset("quicklooks") end)
+        resetquick:SetScript("OnClick", function() self:Reset("quicklooks") end)
         resetquick:SetScript("OnShow", function() resetquick:SetWidth(AtlasLootOptionsFrame_ResetQuicklooks:GetTextWidth()+20) end)
+
+end
+
+AtlasLoot:CreateOptionsFrame()

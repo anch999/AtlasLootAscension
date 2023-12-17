@@ -1,11 +1,8 @@
-local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot");
-
-AtlasLoot_Difficulty = {
     -- table of difficulties and there itemID references
 
-    ["Default"] = {};
+    AtlasLoot.Difficultys["Default"] = {};
 
-    ["ClassicDungeon"] = {
+    AtlasLoot.Difficultys["ClassicDungeon"] = {
         {"Bloodforged", 1},
         {"Normal", 2},
         {"Heroic", 3},
@@ -20,12 +17,12 @@ AtlasLoot_Difficulty = {
         {"Mythic 36", 40 }, {"Mythic 37", 41 }, {"Mythic 38", 42 }, {"Mythic 39", 43 }, {"Mythic 40", 44 },
     };
 
-    ["PVP"] = {
+    AtlasLoot.Difficultys["PVP"] = {
         {"Normal", 2},
         {"Bloodforged", 1},
     };
 
-    ["ClassicDungeonExt"] = {
+    AtlasLoot.Difficultys["ClassicDungeonExt"] = {
         {"Bloodforged", 1},
         {"Normal", 2},
         {"Heroic", 3},
@@ -40,7 +37,7 @@ AtlasLoot_Difficulty = {
         {"Mythic 36", 40 }, {"Mythic 37", 41 }, {"Mythic 38", 42 }, {"Mythic 39", 43 }, {"Mythic 40", 44 },
     };
 
-    ["ClassicRaid"] = {
+    AtlasLoot.Difficultys["ClassicRaid"] = {
             {"Normal", 2},
             {"Heroic", 3},
             {"Mythic", 5},
@@ -48,7 +45,7 @@ AtlasLoot_Difficulty = {
             {"Bloodforged", 1},
     };
 
-    ["BCDungeon"] = {
+    AtlasLoot.Difficultys["BCDungeon"] = {
         {"Bloodforged", 1},
         {"Normal/Heroic", 2},
         {"Mythic", 4},
@@ -62,7 +59,7 @@ AtlasLoot_Difficulty = {
         {"Mythic 36", 40 }, {"Mythic 37", 41 }, {"Mythic 38", 42 }, {"Mythic 39", 43 }, {"Mythic 40", 44 },
     };
 
-    ["BCRaid"] = {
+    AtlasLoot.Difficultys["BCRaid"] = {
         {"Normal", 2},
         {"Heroic", 3},
         {"Mythic", 5},
@@ -70,7 +67,7 @@ AtlasLoot_Difficulty = {
         {"Bloodforged", 1},
      };
 
-    ["WrathDungeon"] = {
+     AtlasLoot.Difficultys["WrathDungeon"] = {
         {"Normal/Heroic", 2},
         {"Mythic", 4},
         {"Bloodforged", 1},
@@ -80,7 +77,7 @@ AtlasLoot_Difficulty = {
         {"Mythic 16", 20 }, {"Mythic 17", 21 }, {"Mythic 18", 22 }, {"Mythic 19", 23 }, {"Mythic 20", 24 },
      };
 
-    ["WrathRaid"] = {
+     AtlasLoot.Difficultys["WrathRaid"] = {
         {"Normal", 2},
         {"Heroic", 3},
         {"Mythic", 4},
@@ -88,11 +85,11 @@ AtlasLoot_Difficulty = {
         {"Bloodforged", 1},
      };
 
-    ["Crafting"] = {
+     AtlasLoot.Difficultys["Crafting"] = {
         {"Normal", 2 },
     };
 
-    ["Search"] = {
+    AtlasLoot.Difficultys["Search"] = {
         {"Bloodforged", 1},
         {"Normal", 2},
         {"Heroic", 3},
@@ -108,21 +105,20 @@ AtlasLoot_Difficulty = {
     };
 
     --Enums for comparisons in code
-    Bloodforged = 1;
-    Normal = 2;
-    Heroic = 3;
-    Mythic = 4;
-    Ascended = 4;
+    AtlasLoot.Difficultys.Bloodforged = 1;
+    AtlasLoot.Difficultys.Normal = 2;
+    AtlasLoot.Difficultys.Heroic = 3;
+    AtlasLoot.Difficultys.Mythic = 4;
+    AtlasLoot.Difficultys.Ascended = 4;
 
-    MythicPlus = {
+    AtlasLoot.Difficultys.MythicPlus = {
         5, 6, 7, 8, 9, 10, 11, 12, 13, 14,
         15, 16, 17, 18, 19, 20, 21, 22, 23, 24,
         25, 26, 27, 28, 29, 30, 31, 32, 33, 34,
         35, 36, 37, 38, 39, 40, 41, 42, 43, 44
     }; --Usage AtlasLoot_Difficulty.MythicPlus[1-40];
 
-    DIF_SEARCH = 16;
-    DUPLICATE = 17;
-    MIN_DIF = 18;
-    MAX_DIF = 19;
-}
+    AtlasLoot.Difficultys.DIF_SEARCH = 16;
+    AtlasLoot.Difficultys.DUPLICATE = 17;
+    AtlasLoot.Difficultys.MIN_DIF = 18;
+    AtlasLoot.Difficultys.MAX_DIF = 19;

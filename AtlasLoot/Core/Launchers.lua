@@ -6,7 +6,7 @@ local minimap = LibStub:GetLibrary('LibDataBroker-1.1'):NewDataObject("AtlasLoot
     icon = "Interface\\Icons\\INV_Box_01",
   })
 
-function minimap.OnClick(self, button)
+function minimap.OnClick(frame, button)
     GameTooltip:Hide()
 	if IsShiftKeyDown() then
         AtlasLoot:OptionsToggle();
@@ -32,9 +32,9 @@ local function GetTipAnchor(frame)
     return vhalf .. hhalf, frame, (vhalf == 'TOP' and 'BOTTOM' or 'TOP') .. hhalf
 end
 
-function minimap.OnEnter(self)
-    GameTooltip:SetOwner(self, 'ANCHOR_NONE')
-    GameTooltip:SetPoint(GetTipAnchor(self))
+function minimap.OnEnter(frame)
+    GameTooltip:SetOwner(frame, 'ANCHOR_NONE')
+    GameTooltip:SetPoint(GetTipAnchor(frame))
     GameTooltip:ClearLines()
     GameTooltip:AddLine("AtlasLoot")
     GameTooltip:AddLine("|cff1eff00Left-Click|r Browse Loot Tables")
@@ -44,19 +44,19 @@ function minimap.OnEnter(self)
 end
 
 function AtlasLoot:MinimapIconSetup()
-	if not AtlasLoot.db.profile.minimap then
-		AtlasLoot.db.profile.minimap = {hide = false}
+	if not self.db.profile.minimap then
+		self.db.profile.minimap = {hide = false}
 	end
 
 	if icon then
-		icon:Register('AtlasLoot', minimap, AtlasLoot.db.profile.minimap)
+		icon:Register('AtlasLoot', minimap, self.db.profile.minimap)
 	end
 end
 
 -- show/hide minimap icon
 function AtlasLoot:ToggleMinimap()
-    local hide = not AtlasLoot.db.profile.minimap.hide
-    AtlasLoot.db.profile.minimap.hide = hide
+    local hide = not self.db.profile.minimap.hide
+    self.db.profile.minimap.hide = hide
     if hide then
       icon:Hide("AtlasLoot")
     else

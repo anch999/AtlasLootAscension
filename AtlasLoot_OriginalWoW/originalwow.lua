@@ -680,7 +680,7 @@ AtlasLoot_Data["BlackrockDepths"] = {
 		[4] = { itemID = 11631, droprate = "22.06%" }; --Stoneshell Guard
 		[5] = { itemID = 11630, droprate = "16.82%" }; --Rockshard Pellets
 		[16] = { itemID = 11813, droprate = "14.79%" }; --Formula: Smoking Heart of the Mountain
-		[17] = { itemID = 11811, "=q3=Smoking Heart of the Mountain", [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal };
+		[17] = { itemID = 11811, "=q3=Smoking Heart of the Mountain", [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };
 	};
 	{
 		Name = BabbleBoss["High Interrogator Gerstahn"];
@@ -1470,7 +1470,7 @@ AtlasLoot_Data["MoltenCore"] = {
 		[21] = { itemID = 17182 }; --Sulfuras, Hand of Ragnaros
 		[23] = { itemID = 19017, droprate = "0.46%" }; --Essence of the Firelord
 		[24] = { itemID = 19019 }; --Thunderfury, Blessed Blade of the Windseeker
-		[25] = { itemID = 102107, [AtlasLoot_Difficulty.MIN_DIF] = AtlasLoot_Difficulty.Heroic }; -- Reins of the Magmatic Steed
+		[25] = { itemID = 102107, [AtlasLoot.Difficultys.MIN_DIF] = AtlasLoot.Difficultys.Heroic }; -- Reins of the Magmatic Steed
 	};
 	{
 		Name = "Random Boss Drops";
@@ -4165,7 +4165,7 @@ AtlasLoot_Data["Onyxia60"] = {
 		[21] = { itemID = 18406 }; -- Onyxia Blood Talisman
 		[23] = { itemID = 15410 }; -- Scale of Onyxia
 		[24] = { itemID = 17966, droprate = "100%" }; --Onyxia Hide Backpack
-		[26] = { itemID = 49636, [AtlasLoot_Difficulty.MIN_DIF] = AtlasLoot_Difficulty.Heroic }; -- Reins of the Onyxian Drake
+		[26] = { itemID = 49636, [AtlasLoot.Difficultys.MIN_DIF] = AtlasLoot.Difficultys.Heroic }; -- Reins of the Onyxian Drake
 	};
 };
 
@@ -4193,14 +4193,14 @@ AtlasLoot_Data["T0"] = {
 		[8] = { itemID = 16719, desc = "=ds=" .. BabbleBoss["Baron Rivendare"] .. " (" .. AL["Strat"] .. ")", droprate = "6.58%" }; --Wildheart Kilt
 		[9] = { itemID = 16715, desc = "=ds=" .. BabbleBoss["Mother Smolderweb"] .. " (" .. AL["LBRS"] .. ")", droprate = "13.03%" }; --Wildheart Boots
 		[16] = { icon = "Spell_Nature_Regeneration", name = "=q6=#t05s1#", desc = "=ec1=#j7#" };
-		[17] = { itemID = 22109, [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal };--Feralheart Cowl
-		[18] = { itemID = 22112, [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal };--Feralheart Spaulders
-		[19] = { itemID = 22113, [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal };--Feralheart Vest
-		[20] = { itemID = 22108, [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal };--Feralheart Bracers
-		[21] = { itemID = 22110, [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal };--Feralheart Gloves
-		[22] = { itemID = 22106, [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal };--Feralheart Belt
-		[23] = { itemID = 22111, [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal };--Feralheart Kilt
-		[24] = { itemID = 22107, [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal };--Feralheart Boots
+		[17] = { itemID = 22109, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Feralheart Cowl
+		[18] = { itemID = 22112, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Feralheart Spaulders
+		[19] = { itemID = 22113, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Feralheart Vest
+		[20] = { itemID = 22108, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Feralheart Bracers
+		[21] = { itemID = 22110, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Feralheart Gloves
+		[22] = { itemID = 22106, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Feralheart Belt
+		[23] = { itemID = 22111, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Feralheart Kilt
+		[24] = { itemID = 22107, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Feralheart Boots
 	};
 	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["HUNTER"];
@@ -4214,14 +4214,14 @@ AtlasLoot_Data["T0"] = {
 		[8] = { itemID = 16678, desc = "=ds=" .. BabbleBoss["Baron Rivendare"] .. " (" .. AL["Strat"] .. ")", droprate = "6.16%" }; --Beaststalker's Pants
 		[9] = { itemID = 16675, desc = "=ds=" .. BabbleBoss["Nerub'enkan"] .. " (" .. AL["Strat"] .. ")", droprate = "13.62%" }; --Beaststalker's Boots
 		[16] = { icon = "Ability_Hunter_RunningShot", name = "=q6=#t05s2#", desc = "=ec1=#j7#" };
-		[17] = { itemID = 22013, [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal };--Beastmaster's Cap
-		[18] = { itemID = 22016, [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal };--Beastmaster's Mantle
-		[19] = { itemID = 22060, [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal };--Beastmaster's Tunic
-		[20] = { itemID = 22011, [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal };--Beastmaster's Bindings
-		[21] = { itemID = 22015, [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal };--Beastmaster's Gloves
-		[22] = { itemID = 22010, [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal };--Beastmaster's Belt
-		[23] = { itemID = 22017, [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal };--Beastmaster's Pants
-		[24] = { itemID = 22061, [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal };--Beastmaster's Boots
+		[17] = { itemID = 22013, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Beastmaster's Cap
+		[18] = { itemID = 22016, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Beastmaster's Mantle
+		[19] = { itemID = 22060, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Beastmaster's Tunic
+		[20] = { itemID = 22011, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Beastmaster's Bindings
+		[21] = { itemID = 22015, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Beastmaster's Gloves
+		[22] = { itemID = 22010, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Beastmaster's Belt
+		[23] = { itemID = 22017, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Beastmaster's Pants
+		[24] = { itemID = 22061, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Beastmaster's Boots
 	};
 	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["MAGE"];
@@ -4235,14 +4235,14 @@ AtlasLoot_Data["T0"] = {
 		[8] = { itemID = 16687, desc = "=ds=" .. BabbleBoss["Baron Rivendare"] .. " (" .. AL["Strat"] .. ")", droprate = "6.79%" }; --Magister's Leggings
 		[9] = { itemID = 16682, desc = "=ds=" .. BabbleBoss["Hearthsinger Forresten"] .. " (" .. AL["Strat"] .. ")", droprate = "10.86%" }; --Magister's Boots
 		[16] = { icon = "Spell_Frost_IceStorm", name = "=q6=#t05s3#", desc = "=ec1=#j7#" };
-		[17] = { itemID = 22065, [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal };--Sorcerer's Crown
-		[18] = { itemID = 22068, [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal };--Sorcerer's Mantle
-		[19] = { itemID = 22069, [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal };--Sorcerer's Robes
-		[20] = { itemID = 22063, [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal };--Sorcerer's Bindings
-		[21] = { itemID = 22066, [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal };--Sorcerer's Gloves
-		[22] = { itemID = 22062, [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal };--Sorcerer's Belt
-		[23] = { itemID = 22067, [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal };--Sorcerer's Leggings
-		[24] = { itemID = 22064, [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal };--Sorcerer's Boots
+		[17] = { itemID = 22065, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Sorcerer's Crown
+		[18] = { itemID = 22068, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Sorcerer's Mantle
+		[19] = { itemID = 22069, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Sorcerer's Robes
+		[20] = { itemID = 22063, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Sorcerer's Bindings
+		[21] = { itemID = 22066, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Sorcerer's Gloves
+		[22] = { itemID = 22062, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Sorcerer's Belt
+		[23] = { itemID = 22067, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Sorcerer's Leggings
+		[24] = { itemID = 22064, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Sorcerer's Boots
 	};
 	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"];
@@ -4256,14 +4256,14 @@ AtlasLoot_Data["T0"] = {
 		[8] = { itemID = 16728, desc = "=ds=" .. BabbleBoss["Baron Rivendare"] .. " (" .. AL["Strat"] .. ")", droprate = "4.20%" }; --Lightforge Legplates
 		[9] = { itemID = 16725, desc = "=ds=" .. BabbleBoss["Balnazzar"] .. " (" .. AL["Strat"] .. ")", droprate = "11.11%" }; --Lightforge Boots
 		[16] = { icon = "Spell_Holy_SealOfMight", name = "=q6=#t05s4#", desc = "=ec1=#j7#" };
-		[17] = { itemID = 22091, [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal };--Soulforge Helm
-		[18] = { itemID = 22093, [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal };--Soulforge Spaulders
-		[19] = { itemID = 22089, [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal };--Soulforge Breastplate
-		[20] = { itemID = 22088, [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal };--Soulforge Bracers
-		[21] = { itemID = 22090, [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal };--Soulforge Gauntlets
-		[22] = { itemID = 22086, [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal };--Soulforge Belt
-		[23] = { itemID = 22092, [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal };--Soulforge Legplates
-		[24] = { itemID = 22087, [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal };--Soulforge Boots
+		[17] = { itemID = 22091, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Soulforge Helm
+		[18] = { itemID = 22093, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Soulforge Spaulders
+		[19] = { itemID = 22089, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Soulforge Breastplate
+		[20] = { itemID = 22088, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Soulforge Bracers
+		[21] = { itemID = 22090, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Soulforge Gauntlets
+		[22] = { itemID = 22086, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Soulforge Belt
+		[23] = { itemID = 22092, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Soulforge Legplates
+		[24] = { itemID = 22087, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Soulforge Boots
 	};
 	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["PRIEST"];
@@ -4277,14 +4277,14 @@ AtlasLoot_Data["T0"] = {
 		[8] = { itemID = 16694, desc = "=ds=" .. BabbleBoss["Baron Rivendare"] .. " (" .. AL["Strat"] .. ")", droprate = "7.42%" }; --Devout Skirt
 		[9] = { itemID = 16691, desc = "=ds=" .. BabbleBoss["Maleki the Pallid"] .. " (" .. AL["Strat"] .. ")", droprate = "13.64%" }; --Devout Sandals
 		[16] = { icon = "Spell_Holy_PowerWordShield", name = "=q6=#t05s5#", desc = "=ec1=#j7#" };
-		[17] = { itemID = 22080, [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal };--Virtuous Crown
-		[18] = { itemID = 22082, [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal };--Virtuous Mantle
-		[19] = { itemID = 22083, [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal };--Virtuous Robe
-		[20] = { itemID = 22079, [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal };--Virtuous Bracers
-		[21] = { itemID = 22081, [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal };--Virtuous Gloves
-		[22] = { itemID = 22078, [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal };--Virtuous Belt
-		[23] = { itemID = 22085, [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal };--Virtuous Skirt
-		[24] = { itemID = 22084, [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal };--Virtuous Sandals
+		[17] = { itemID = 22080, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Virtuous Crown
+		[18] = { itemID = 22082, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Virtuous Mantle
+		[19] = { itemID = 22083, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Virtuous Robe
+		[20] = { itemID = 22079, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Virtuous Bracers
+		[21] = { itemID = 22081, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Virtuous Gloves
+		[22] = { itemID = 22078, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Virtuous Belt
+		[23] = { itemID = 22085, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Virtuous Skirt
+		[24] = { itemID = 22084, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Virtuous Sandals
 	};
 	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["ROGUE"];
@@ -4298,14 +4298,14 @@ AtlasLoot_Data["T0"] = {
 		[8] = { itemID = 16709, desc = "=ds=" .. BabbleBoss["Baron Rivendare"] .. " (" .. AL["Strat"] .. ")", droprate = "7.76%" }; --Shadowcraft Pants
 		[9] = { itemID = 16711, desc = "=ds=" .. BabbleBoss["Rattlegore"] .. " (" .. AL["Scholo"] .. ")", droprate = "14.32%" }; --Shadowcraft Boots
 		[16] = { icon = "Ability_BackStab", name = "=q6=#t05s6#", desc = "=ec1=#j7#" };
-		[17] = { itemID = 22005, [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal };--Darkmantle Cap
-		[18] = { itemID = 22008, [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal };--Darkmantle Spaulders
-		[19] = { itemID = 22009, [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal };--Darkmantle Tunic
-		[20] = { itemID = 22004, [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal };--Darkmantle Bracers
-		[21] = { itemID = 22006, [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal };--Darkmantle Gloves
-		[22] = { itemID = 22002, [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal };--Darkmantle Belt
-		[23] = { itemID = 22007, [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal };--Darkmantle Pants
-		[24] = { itemID = 22003, [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal };--Darkmantle Boots
+		[17] = { itemID = 22005, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Darkmantle Cap
+		[18] = { itemID = 22008, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Darkmantle Spaulders
+		[19] = { itemID = 22009, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Darkmantle Tunic
+		[20] = { itemID = 22004, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Darkmantle Bracers
+		[21] = { itemID = 22006, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Darkmantle Gloves
+		[22] = { itemID = 22002, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Darkmantle Belt
+		[23] = { itemID = 22007, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Darkmantle Pants
+		[24] = { itemID = 22003, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Darkmantle Boots
 	};
 	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"];
@@ -4319,14 +4319,14 @@ AtlasLoot_Data["T0"] = {
 		[8] = { itemID = 16668, desc = "=ds=" .. BabbleBoss["Baron Rivendare"] .. " (" .. AL["Strat"] .. ")", droprate = "3.02%" }; --Kilt of Elements
 		[9] = { itemID = 16670, desc = "=ds=" .. BabbleBoss["Highlord Omokk"] .. " (" .. AL["LBRS"] .. ")", droprate = "9.35%" }; --Boots of Elements
 		[16] = { icon = "Spell_FireResistanceTotem_01", name = "=q6=#t05s7#", desc = "=ec1=#j7#" };
-		[17] = { itemID = 22097, [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal };--Coif of The Five Thunders
-		[18] = { itemID = 22101, [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal };--Pauldrons of The Five Thunders
-		[19] = { itemID = 22102, [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal };--Vest of The Five Thunders
-		[20] = { itemID = 22095, [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal };--Bindings of The Five Thunders
-		[21] = { itemID = 22099, [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal };--Gauntlets of The Five Thunders
-		[22] = { itemID = 22098, [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal };--Cord of The Five Thunders
-		[23] = { itemID = 22100, [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal };--Kilt of The Five Thunders
-		[24] = { itemID = 22096, [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal };--Boots of The Five Thunders
+		[17] = { itemID = 22097, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Coif of The Five Thunders
+		[18] = { itemID = 22101, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Pauldrons of The Five Thunders
+		[19] = { itemID = 22102, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Vest of The Five Thunders
+		[20] = { itemID = 22095, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Bindings of The Five Thunders
+		[21] = { itemID = 22099, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Gauntlets of The Five Thunders
+		[22] = { itemID = 22098, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Cord of The Five Thunders
+		[23] = { itemID = 22100, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Kilt of The Five Thunders
+		[24] = { itemID = 22096, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Boots of The Five Thunders
 	};
 	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["WARLOCK"];
@@ -4340,14 +4340,14 @@ AtlasLoot_Data["T0"] = {
 		[8] = { itemID = 16699, desc = "=ds=" .. BabbleBoss["Baron Rivendare"] .. " (" .. AL["Strat"] .. ")", droprate = "7.31%" }; --Dreadmist Leggings
 		[9] = { itemID = 16704, desc = "=ds=" .. BabbleBoss["Baroness Anastari"] .. " (" .. AL["Strat"] .. ")", droprate = "13.16%" }; --Dreadmist Sandals
 		[16] = { icon = "Spell_Shadow_CurseOfTounges", name = "=q6=#t05s8#", desc = "=ec1=#j7#" };
-		[17] = { itemID = 22074, [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal };--Deathmist Mask
-		[18] = { itemID = 22073, [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal };--Deathmist Mantle
-		[19] = { itemID = 22075, [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal };--Deathmist Robe
-		[20] = { itemID = 22071, [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal };--Deathmist Bracers
-		[21] = { itemID = 22077, [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal };--Deathmist Wraps
-		[22] = { itemID = 22070, [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal };--Deathmist Belt
-		[23] = { itemID = 22072, [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal };--Deathmist Leggings
-		[24] = { itemID = 22076, [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal };--Deathmist Sandals
+		[17] = { itemID = 22074, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Deathmist Mask
+		[18] = { itemID = 22073, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Deathmist Mantle
+		[19] = { itemID = 22075, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Deathmist Robe
+		[20] = { itemID = 22071, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Deathmist Bracers
+		[21] = { itemID = 22077, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Deathmist Wraps
+		[22] = { itemID = 22070, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Deathmist Belt
+		[23] = { itemID = 22072, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Deathmist Leggings
+		[24] = { itemID = 22076, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Deathmist Sandals
 	};
 	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"];
@@ -4361,14 +4361,14 @@ AtlasLoot_Data["T0"] = {
 		[8] = { itemID = 16732, desc = "=ds=" .. BabbleBoss["Baron Rivendare"] .. " (" .. AL["Strat"] .. ")", droprate = "5.74%" }; --Legplates of Valor
 		[9] = { itemID = 16734, desc = "=ds=" .. BabbleBoss["Kirtonos the Herald"] .. " (" .. AL["Scholo"] .. ")", droprate = "11.12%" }; --Boots of Valor
 		[16] = { icon = "INV_Shield_05", name = "=q6=#t05s9#", desc = "=ec1=#j7#" };
-		[17] = { itemID = 21999, [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal };--Helm of Heroism
-		[18] = { itemID = 22001, [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal };--Spaulders of Heroism
-		[19] = { itemID = 21997, [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal };--Breastplate of Heroism
-		[20] = { itemID = 21996, [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal };--Bracers of Heroism
-		[21] = { itemID = 21998, [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal };--Gauntlets of Heroism
-		[22] = { itemID = 21994, [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal };--Belt of Heroism
-		[23] = { itemID = 22000, [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal };--Legplates of Heroism
-		[24] = { itemID = 21995, [AtlasLoot_Difficulty.MAX_DIF] = AtlasLoot_Difficulty.Normal };--Boots of Heroism
+		[17] = { itemID = 21999, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Helm of Heroism
+		[18] = { itemID = 22001, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Spaulders of Heroism
+		[19] = { itemID = 21997, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Breastplate of Heroism
+		[20] = { itemID = 21996, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Bracers of Heroism
+		[21] = { itemID = 21998, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Gauntlets of Heroism
+		[22] = { itemID = 21994, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Belt of Heroism
+		[23] = { itemID = 22000, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Legplates of Heroism
+		[24] = { itemID = 21995, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Boots of Heroism
 	};
 };
 
