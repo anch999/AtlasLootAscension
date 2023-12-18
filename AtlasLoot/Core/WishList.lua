@@ -986,7 +986,7 @@ ALModule:OnEnable()
 Register the AceComm channel
 ]]
 function ALModule:OnEnable()
-    self:RegisterComm("AtlasLootWishlist")
+    AtlasLoot:RegisterComm("AtlasLootWishlist")
 end
 
 --[[
@@ -1035,7 +1035,7 @@ function ALModule:OnCommReceived(prefix, message, distribution, sender)
 	elseif message == "FinishSend" then
 		SpamFilter[string.lower(sender)] = GetTime()
 	elseif message == "AcceptWishlist" then
-		local wsltable = self:CloneTable(_G[curtable[2]][curtable[1]][curtable[3]])
+		local wsltable = AtlasLoot:CloneTable(_G[curtable[2]][curtable[1]][curtable[3]])
 			for i,v in ipairs(wsltable) do
 				v[4] = gsub(StripEscapes(v[4]),"FF","")
 				if v[8] then
@@ -1074,7 +1074,7 @@ function ALModule:OnCommReceived(prefix, message, distribution, sender)
 		DEFAULT_CHAT_FRAME:AddMessage(BLUE..AL["AtlasLoot"]..": "..WHITE..sender..RED..AL[" rejects your Wishlist."])
 	else
 		SpamFilter[string.lower(sender)] = GetTime()
-		self:GetWishList(message,sender)
+		AtlasLoot:GetWishList(message,sender)
 		ALModule:SendCommMessage("AtlasLootWishlist", "FinishSend", "WHISPER", sender)
 	end
 end
