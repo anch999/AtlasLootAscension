@@ -986,7 +986,7 @@ ALModule:OnEnable()
 Register the AceComm channel
 ]]
 function ALModule:OnEnable()
-    AtlasLoot:RegisterComm("AtlasLootWishlist")
+    self:RegisterComm("AtlasLootWishlist")
 end
 
 --[[
