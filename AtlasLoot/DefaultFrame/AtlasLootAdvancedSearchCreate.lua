@@ -160,10 +160,10 @@ for n = 1, MAX_ARGUMENTS do
     btn:SetPoint("TOPLEFT", AtlasLootDefaultFrame_AdvancedSearchPanel_ArgumentContainer, "TOPLEFT", 0, -((n - 1) * 35)-20)
     btn:SetSize(130, 20)
     btn:SetScript("OnClick", function(self, button)
-        if self.SearchMenus.ArgumentMenus[n]:IsOpen() then
-            self.SearchMenus.ArgumentMenus[n]:Close()
+        if AtlasLoot.SearchMenus.ArgumentMenus[n]:IsOpen() then
+            AtlasLoot.SearchMenus.ArgumentMenus[n]:Close()
         else
-            self.SearchMenus.ArgumentMenus[n]:Open(self)
+            AtlasLoot.SearchMenus.ArgumentMenus[n]:Open(self)
         end
     end)
     btn:Hide()
@@ -173,10 +173,10 @@ for n = 1, MAX_ARGUMENTS do
     sub:SetPoint("LEFT", btn, "RIGHT", 15, 0)
     sub:SetSize(130, 20)
     sub:SetScript("OnClick", function(self, button)
-        if self.SearchMenus.ArgumentSubMenus[n]:IsOpen() then
-            self.SearchMenus.ArgumentSubMenus[n]:Close()
+        if AtlasLoot.SearchMenus.ArgumentSubMenus[n]:IsOpen() then
+            AtlasLoot.SearchMenus.ArgumentSubMenus[n]:Close()
         else
-            self.SearchMenus.ArgumentSubMenus[n]:Open(self)
+            AtlasLoot.SearchMenus.ArgumentSubMenus[n]:Open(self)
         end
     end)
     sub:Hide()
