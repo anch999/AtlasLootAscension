@@ -48,10 +48,7 @@ if AL then
     AL["Reset Favorites"] = "Сборс БО";
     AL["Select a Loot Table..."] = "Выберите таблицу добычи";
     AL["OR"] = "или";
-    AL["FuBar Options"] = "Опции FuBarа";
     AL["Attach to Minimap"] = "Закрепить у мини-карты";
-    AL["Hide FuBar Plugin"] = "Скрыть плагин FuBarа";
-    AL["Show FuBar Plugin"] = "Показ плагин FuBarа";
     AL["Position:"] = "Позицыя";
     AL["Left"] = "Слево";
     AL["Center"] = "По центру";

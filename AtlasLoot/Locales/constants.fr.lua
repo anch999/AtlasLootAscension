@@ -50,10 +50,7 @@ if AL then
 	AL["Reset Favorites"] = "Réinitialiser Quicklooks";
 	AL["Select a Loot Table..."] = "Sélectionner une table de loot...";
 	AL["OR"] = "OU";
-	AL["FuBar Options"] = "Options de FuBar";
 	AL["Attach to Minimap"] = "Joindre à la mini-carte";
-	AL["Hide FuBar Plugin"] = "Cacher le plugin FuBar";
-	AL["Show FuBar Plugin"] = "Afficher le plugin FuBar";
 	AL["Position:"] = "Position :";
 	AL["Left"] = "Gauche";
 	AL["Center"] = "Centre";

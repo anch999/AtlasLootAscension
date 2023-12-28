@@ -86,7 +86,7 @@ function AtlasLoot:DewDropClick(tablename, text, tablenum)
     self.lastModule = AtlasLoot_SubMenus[tablename].Module
     AtlasLootDefaultFrame_Menu:SetText(text)
     self:IsLootTableAvailable(AtlasLoot_SubMenus[tablename].Module)
-    local lasttable = self.db.profile[self.currentTable]
+    local lasttable = self.db.profile.savedState[self.currentTable]
         if lasttable then
             self:ShowItemsFrame(lasttable[1], lasttable[2], lasttable[3])
         else
@@ -130,7 +130,7 @@ function AtlasLoot:DewdropExpansionMenuClick(expansion, name)
         self.currentTable = self:CleandataID(self.currentTable, 1) .. self.Expac
         self:IsLootTableAvailable(AtlasLoot_SubMenus[self.currentTable].Module)
         local tablename = AtlasLoot_SubMenus[self.currentTable][1][2]
-        local lasttable = self.db.profile[self.currentTable]
+        local lasttable = self.db.profile.savedState[self.currentTable]
         if lasttable then
             self:ShowItemsFrame(lasttable[1], lasttable[2], lasttable[3])
         else

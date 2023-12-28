@@ -74,6 +74,7 @@ local AtlasLootDBDefaults = {
             All = false,
         },
         AtlasType = "Release",
+		savedState = {},
     }
 }
 
@@ -609,8 +610,9 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 	-- Hide the map header lable
 	Atlasloot_HeaderLabel:Hide()
 	local dataSource = _G[dataSource_backup] or AtlasLoot_Data
+	print(dataID, dataSource, dataSource_backup)
 	-- Enable map button if there is a map for this table.
-	if dataSource_backup ~= "AtlasLoot_OnDemand" and dataSource_backup ~= "AtlasLoot_TokenData" and dataSource[dataID].Map then
+	if dataSource_backup ~= "AtlasLoot_OnDemand" and dataSource_backup ~= "AtlasLoot_TokenData" and dataSource[dataID] and dataSource[dataID].Map then
 		AtlasLootDefaultFrame_MapButton:Enable()
 		-- Stops map reseting to default while still in the same raid/instance table
 		if AtlasLootItemsFrame.refresh == nil or dataID ~= AtlasLootItemsFrame.refresh[1] then
@@ -1011,7 +1013,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 		dataSource[dataID].Back ~= true and dataID ~= "EmptyTable" and not dataSource[dataID].vanity then
 			if not self.db.profile.LastBoss or type(self.db.profile.LastBoss) ~= "table" then self.db.profile.LastBoss = {} end
 			self.db.profile.LastBoss[self.Expac] = {dataID, dataSource_backup, tablenum, self.lastModule, self.currentTable, self.moduleName}
-			self.db.profile[self.currentTable] = {dataID, dataSource_backup, tablenum, self.lastModule, self.currentTable, self.moduleName}
+			self.db.profile.savedState[self.currentTable] = {dataID, dataSource_backup, tablenum, self.lastModule, self.currentTable, self.moduleName}
 		end
 
 		-- Checks dataID with submenus to stop filter button loading on certain tables

@@ -38,10 +38,7 @@ if AL then
 	AL["Reset Favorites"] = "Lesezeichen zurücksetzen";
 	AL["Select a Loot Table..."] = "Wähle ein Beuteverzeichnis ...";
 	AL["OR"] = "ODER";
-	AL["FuBar Options"] = "FuBar-Optionen";
 	AL["Attach to Minimap"] = "An der Minimap anbringen";
-	AL["Hide FuBar Plugin"] = "FuBar Plugin verstecken";
-	AL["Show FuBar Plugin"] = "FuBar Plugin anzeigen";
 	-- AL["Position:"] = "Position:";
 	AL["Left"] = "Links";
 	AL["Center"] = "Mitte";

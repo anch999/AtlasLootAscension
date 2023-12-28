@@ -73,10 +73,7 @@ if AL then
 	AL["Select a Loot Table..."] = "Elige una tabla de Botín...";
 	AL["OR"] = "O";
 	--AL["Wrath of the Lich King"] = true,
-	AL["FuBar Options"] = "Opciones FuBar";
 	AL["Attach to Minimap"] = "Sujetar al minimapa";
-	AL["Hide FuBar Plugin"] = "Esconder FuBar Plugin";
-	AL["Show FuBar Plugin"] = "Mostrar FuBar Plugin"; 
 	AL["Position:"] = "Posición:";
 	AL["Left"] = "Izquierda";
 	AL["Center"] = "Centro";

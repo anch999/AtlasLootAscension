@@ -48,10 +48,7 @@ if AL then
 	AL["Reset Favorites"] = "Res. BotínRápido";
 	AL["Select a Loot Table..."] = "Elige una tabla de Botín...";
 	AL["OR"] = "O";
-	AL["FuBar Options"] = "Opciones FuBar";
 	AL["Attach to Minimap"] = "Sujetar al minimapa";
-	AL["Hide FuBar Plugin"] = "Esconder FuBar Plugin";
-	AL["Show FuBar Plugin"] = "Mostrar FuBar Plugin"; 
 	AL["Position:"] = "Posición:";
 	AL["Left"] = "Izquierda";
 	AL["Center"] = "Centro";

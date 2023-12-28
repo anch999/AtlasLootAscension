@@ -48,10 +48,7 @@ if AL then
 	AL["Reset Favorites"] = "重設快速瀏覽";
 	AL["Select a Loot Table..."] = "選擇一個物品表";
 	AL["OR"] = "或";
-	AL["FuBar Options"] = "FuBar 選項";
 	AL["Attach to Minimap"] = "依附於小地圖上";
-	AL["Hide FuBar Plugin"] = "隱藏 FuBar 插件";
-	AL["Show FuBar Plugin"] = "顯示 FuBar 插件";
 	AL["Position:"] = "位置";
 	AL["Left"] = "左";
 	AL["Center"] = "中";
