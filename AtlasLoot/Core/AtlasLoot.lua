@@ -610,7 +610,6 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 	-- Hide the map header lable
 	Atlasloot_HeaderLabel:Hide()
 	local dataSource = _G[dataSource_backup] or AtlasLoot_Data
-	print(dataID, dataSource, dataSource_backup)
 	-- Enable map button if there is a map for this table.
 	if dataSource_backup ~= "AtlasLoot_OnDemand" and dataSource_backup ~= "AtlasLoot_TokenData" and dataSource[dataID] and dataSource[dataID].Map then
 		AtlasLootDefaultFrame_MapButton:Enable()
