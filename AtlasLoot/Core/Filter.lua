@@ -45,6 +45,11 @@ local VanityFilterTable = {
 	{"OwnedExcludeKnown", "Owned Exclude Known"}
 }
 
+local CraftingFilterTable = {
+	{"Known", "Known"},
+	{"Unknown", "Unknown"},
+}
+
 -- **********************************************************************
 -- ItemFilter:
 --	AtlasLoot:HideFilteredItems()
@@ -120,12 +125,31 @@ function AtlasLoot:HideFilteredItems()
 		end
 	end
 
+	local function getCraftingFilters(spellID)
+		local db = AtlasLootFilterDB.CraftingFilters
+		if not db["Unknown"] and not db["Known"] then return true end
+		if (not CA_IsSpellKnown(spellID) and db["Unknown"]) or (CA_IsSpellKnown(spellID) and db["Known"]) then
+			return true
+		end
+	end
+
 	-- build filtered list removing any blank spaces that are not meant to be there
 	local count = 0
 	for i = 1, 30 do
 		if tablebase[i] then
 			if source.vanity then
 				if getVanityFilters(tablebase[i].itemID, tablebase[i].learnedSpellID) then
+					if i == 16 then
+						count = 0
+					end
+					AtlasLootFilter.FilterList[1][i-count] = tablebase[i]
+				elseif i == 16 then
+					count = 1
+				else
+					count = count + 1
+				end
+			elseif source.Type == "Crafting" then
+				if getCraftingFilters(tablebase[i].spellID) then
 					if i == 16 then
 						count = 0
 					end
@@ -203,6 +227,24 @@ function AtlasLoot:FilterMenuRegister()
 				for _, filter in ipairs(VanityFilterTable) do
 					if not db.VanityFilters then db.VanityFilters = {} end
 					local vDb = db.VanityFilters
+					if not vDb[filter[1]] then vDb[filter[1]] = false end
+					self.Dewdrop:AddLine(
+						"text", filter[2],
+						"func", function()
+							vDb[filter[1]] = not vDb[filter[1]]
+							disableFilters(filter[1])
+							if self.filterEnable then
+								self:HideFilteredItems()
+							end
+						end,
+						"checked", vDb[filter[1]],
+						"closeWhenClicked", true
+					)
+				end
+			elseif _G[AtlasLootItemsFrame.refreshFilter[2]][AtlasLootItemsFrame.refreshFilter[1]].Type == "Crafting" then
+				for _, filter in ipairs(CraftingFilterTable) do
+					if not db.CraftingFilters then db.CraftingFilters = {} end
+					local vDb = db.CraftingFilters
 					if not vDb[filter[1]] then vDb[filter[1]] = false end
 					self.Dewdrop:AddLine(
 						"text", filter[2],
