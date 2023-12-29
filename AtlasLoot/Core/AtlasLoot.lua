@@ -85,7 +85,10 @@ local DefaultSettings  = {
 		{ TableName = "QuickLooks", {} },
 		{ TableName = "SearchResult", {Name = "Search Result" , Type = "Search", Back = true} },
 	},
-	{	Database = "AtlasLootFilterDB" }
+	{	Database = "AtlasLootFilterDB",
+		{ TableName = "VanityFilters", {} },
+		{ TableName = "CraftingFilters", {} },
+	}
 }
 
 --[[ TableName = Name of the saved setting

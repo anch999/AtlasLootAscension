@@ -225,37 +225,35 @@ function AtlasLoot:FilterMenuRegister()
 		'children', function(level, value)
 			if _G[AtlasLootItemsFrame.refreshFilter[2]][AtlasLootItemsFrame.refreshFilter[1]].vanity then
 				for _, filter in ipairs(VanityFilterTable) do
-					if not db.VanityFilters then db.VanityFilters = {} end
-					local vDb = db.VanityFilters
-					if not vDb[filter[1]] then vDb[filter[1]] = false end
+					local fDB = db.VanityFilters
+					if not fDB[filter[1]] then fDB[filter[1]] = false end
 					self.Dewdrop:AddLine(
 						"text", filter[2],
 						"func", function()
-							vDb[filter[1]] = not vDb[filter[1]]
+							fDB[filter[1]] = not fDB[filter[1]]
 							disableFilters(filter[1])
 							if self.filterEnable then
 								self:HideFilteredItems()
 							end
 						end,
-						"checked", vDb[filter[1]],
+						"checked", fDB[filter[1]],
 						"closeWhenClicked", true
 					)
 				end
 			elseif _G[AtlasLootItemsFrame.refreshFilter[2]][AtlasLootItemsFrame.refreshFilter[1]].Type == "Crafting" then
 				for _, filter in ipairs(CraftingFilterTable) do
-					if not db.CraftingFilters then db.CraftingFilters = {} end
-					local vDb = db.CraftingFilters
-					if not vDb[filter[1]] then vDb[filter[1]] = false end
+					local fDB = db.CraftingFilters
+					if not fDB[filter[1]] then fDB[filter[1]] = false end
 					self.Dewdrop:AddLine(
 						"text", filter[2],
 						"func", function()
-							vDb[filter[1]] = not vDb[filter[1]]
+							fDB[filter[1]] = not fDB[filter[1]]
 							disableFilters(filter[1])
 							if self.filterEnable then
 								self:HideFilteredItems()
 							end
 						end,
-						"checked", vDb[filter[1]],
+						"checked", fDB[filter[1]],
 						"closeWhenClicked", true
 					)
 				end
