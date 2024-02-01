@@ -884,7 +884,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 		itemButton.itemTexture = iconFrame:GetTexture()
 
 		--Highlight items in the wishlist
-		if itemID and dataSource_backup ~= "AtlasLoot_CurrentWishList" and AtlasLootWishList["Options"][UnitName("player")]["Mark"] == true then
+		if itemID and dataSource_backup ~= "AtlasLoot_CurrentWishList" and (AtlasLootWishList["Options"][UnitName("player")] and AtlasLootWishList["Options"][UnitName("player")]["Mark"]) then
 			local xitemexistwish, itemwishicons = self:WishListCheck(itemID, true)
 			if xitemexistwish then
 				text = itemwishicons.." "..text
