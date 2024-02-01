@@ -1957,6 +1957,23 @@ AtlasLoot_Data["TailoringCLASSIC"] = {
 	{
 		Name = AL["High Risk"];
 		[1] = { name = AL["Rare"], icon = "INV_Box_01"},
+		[2] = {itemID = 967817, spellID = 968500 }; --Wrist Wraps of Precision
+		[3] = {itemID = 967813, spellID = 968496 }; --Wrist Wraps of Might
+		[4] = {itemID = 967823, spellID = 968506 }; --Wrist Wraps of Glory
+		[5] = {itemID = 967815, spellID = 968498 }; --Wrist Wraps of Fury
+		[6] = {itemID = 967819, spellID = 968502 }; --Wrist Wraps of Efficiency
+		[7] = {itemID = 967821, spellID = 968504 }; --Wrist Wraps of Crushing
+		[16] = { name = AL["Epic"], icon = "INV_Box_01"},
+		[17] = {itemID = 967818, spellID = 968501 }; --Fitted Wrist Wraps of Precision
+		[18] = {itemID = 967814, spellID = 968497 }; --Fitted Wrist Wraps of Might
+		[19] = {itemID = 967824, spellID = 968507 }; --Fitted Wrist Wraps of Glory
+		[20] = {itemID = 967816, spellID = 968499 }; --Fitted Wrist Wraps of Fury
+		[21] = {itemID = 967820, spellID = 968503 }; --Fitted Wrist Wraps of Efficiency
+		[22] = {itemID = 967822, spellID = 968505 }; --Fitted Wrist Wraps of Crushing
+	};
+	{
+		Name = AL["High Risk"].." Old";
+		[1] = { name = AL["Rare"], icon = "INV_Box_01"},
 		[2] = {itemID = 967215, spellID = 968061 }; --Heavy Dragonweave Cloak Lining
 		[3] = {itemID = 967218, spellID = 968064 }; --Heavy Twilight Cloak Lining
 		[4] = {itemID = 967221, spellID = 968067 }; --Heavy Scarlet Cloak Lining
