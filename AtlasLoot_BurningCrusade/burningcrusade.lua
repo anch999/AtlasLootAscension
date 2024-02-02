@@ -501,11 +501,13 @@ AtlasLoot_Data["BlackTemple"] = {
 		[8] = { itemID = 32243, droprate = "0%" }; --Pearl Inlaid Boots
 		[9] = { itemID = 32245 }; --Tide-stomper's Greaves
 		[16] = { itemID = 32238, droprate = "6%" }; --Ring of Calming Waves
-		[17] = { itemID = 32247, droprate = "6%" }; --Ring of Captured Storms
-		[18] = { itemID = 32237, droprate = "5%" }; --The Maelstrom's Fury
-		[19] = { itemID = 32236, droprate = "6%" }; --Rising Tide
-		[20] = { itemID = 32248, droprate = "6%" }; --Halberd of Desolation
-		[22] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
+		[17] = { itemID = 32237, droprate = "5%" }; --The Maelstrom's Fury
+		[18] = { itemID = 32236, droprate = "6%" }; --Rising Tide
+		[19] = { itemID = 32248, droprate = "6%" }; --Halberd of Desolation
+		[21] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
+		[22] = { itemID = 98570, droprate = "100%" }; --Mystic Orb
+		[24] = { itemID = 63451, droprate = "1%" }; --Pet Sigil
+
 	};
 	{
 		Name = BabbleBoss["Supremus"];
@@ -515,14 +517,17 @@ AtlasLoot_Data["BlackTemple"] = {
 		[4] = { itemID = 32251, droprate = "5%" }; --Wraps of Precise Flight
 		[5] = { itemID = 32258 }; --Naturalist's Preserving Cinch
 		[6] = { itemID = 32250, droprate = "6%" }; --Pauldrons of Abyssal Fury
-		[8] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
-		[16] = { itemID = 32260, droprate = "7%" }; --Choker of Endless Nightmares
-		[17] = { itemID = 32261, droprate = "4%" }; --Band of the Abyssal Lord
-		[18] = { itemID = 32257, droprate = "5%" }; --Idol of the White Stag
-		[19] = { itemID = 32254, droprate = "5%" }; --The Brutalizer
-		[20] = { itemID = 32262, droprate = "6%" }; --Syphon of the Nathrezim
-		[21] = { itemID = 32255, droprate = "5%" }; --Felstone Bulwark
-		[22] = { itemID = 32253, droprate = "6%" }; --Legionkiller
+		[8] = { itemID = 32260, droprate = "7%" }; --Choker of Endless Nightmares
+		[9] = { itemID = 32261, droprate = "4%" }; --Band of the Abyssal Lord
+		[10] = { itemID = 32247, droprate = "6%" }; --Ring of Captured Storms
+		[16] = { itemID = 32257, droprate = "5%" }; --Idol of the White Stag
+		[17] = { itemID = 32254, droprate = "5%" }; --The Brutalizer
+		[18] = { itemID = 32262, droprate = "6%" }; --Syphon of the Nathrezim
+		[19] = { itemID = 32255, droprate = "5%" }; --Felstone Bulwark
+		[20] = { itemID = 32253, droprate = "6%" }; --Legionkiller
+		[22] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
+		[23] = { itemID = 98570, droprate = "100%" }; --Mystic Orb
+		[25] = { itemID = 63510, droprate = "1%" }; --Pet Sigil
 	};
 	{
 		Name = BabbleBoss["Shade of Akama"];
@@ -541,6 +546,9 @@ AtlasLoot_Data["BlackTemple"] = {
 		[16] = { itemID = 32266, droprate = "6%" }; --Ring of Deceitful Intent
 		[17] = { itemID = 32361, droprate = "5%" }; --Blind-Seers Icon
 		[19] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
+		[20] = { itemID = 98570, droprate = "100%" }; --Mystic Orb
+		[22] = { itemID = 63425, droprate = "1%" }; --Pet Sigil
+
 	};
 	{
 		Name = BabbleBoss["Teron Gorefiend"];
@@ -555,8 +563,11 @@ AtlasLoot_Data["BlackTemple"] = {
 		[16] = { itemID = 32330, droprate = "3%" }; --Totem of Ancestral Guidance
 		[17] = { itemID = 32348, droprate = "9%" }; --Soul Cleaver
 		[18] = { itemID = 32326, droprate = "1%" }; --Twisted Blades of Zarak
-		[19] = { itemID = 32325, droprate = "4%" }; --Rifle of the Stoic Guardian
-		[21] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
+		[19] = { itemID = 32507, droprate = "1%" }; --Gorefiend
+		[20] = { itemID = 32325, droprate = "4%" }; --Rifle of the Stoic Guardian
+		[22] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
+		[23] = { itemID = 98570, droprate = "100%" }; --Mystic Orb
+		[25] = { itemID = 63443, droprate = "1%" }; --Pet Sigil
 	};
 	{
 		Name = BabbleBoss["Gurtogg Bloodboil"];
@@ -574,9 +585,11 @@ AtlasLoot_Data["BlackTemple"] = {
 		[19] = { itemID = 32344, droprate = "5%" }; --Staff of Immaculate Recovery
 		[20] = { itemID = 32343, droprate = "4%" }; --Wand of Prismatic Focus
 		[22] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
+		[23] = { itemID = 98570, droprate = "100%" }; --Mystic Orb
+		[25] = { itemID = 63521, droprate = "1%" }; --Pet Sigil
 	};
 	{
-		Name = "Essence of Souls";
+		Name = "Reliquary of the Lost";
 		[1] = { itemID = 32353, droprate = "7%" }; --Gloves of Unfailing Faith
 		[2] = { itemID = 32351 }; --Elunite Empowered Bracers
 		[3] = { itemID = 32347, droprate = "6%" }; --Grips of Damnation
@@ -591,6 +604,8 @@ AtlasLoot_Data["BlackTemple"] = {
 		[19] = { itemID = 32332, droprate = "7%" }; --Torch of the Damned
 		[20] = { itemID = 32363, droprate = "4%" }; --Naaru-Blessed Life Rod
 		[22] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
+		[23] = { itemID = 98570, droprate = "100%" }; --Mystic Orb
+		[25] = { itemID = 63940, droprate = "1%" }; --Pet Sigil
 	};
 	{
 		Name = BabbleBoss["Mother Shahraz"];
@@ -600,10 +615,10 @@ AtlasLoot_Data["BlackTemple"] = {
 		[4] = { itemID = 32370, droprate = "5%" }; --Nadina's Pendant of Purity
 		[5] = { itemID = 32368, droprate = "5%" }; --Tome of the Lightbringer
 		[6] = { itemID = 32369, droprate = "5%" }; --Blade of Savagery
-		[16] = { itemID = 31101, droprate = "6%" }; --Pauldrons of the Forgotten Conqueror
-		[17] = { itemID = 31103, droprate = "0%" }; --Pauldrons of the Forgotten Protector
-		[18] = { itemID = 31102, droprate = "7%" }; --Pauldrons of the Forgotten Vanquisher
-		[20] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
+		[16] = { itemID = 31101, droprate = "100%", lootTable = {"T6SHOULDER","Token"} }; --Pauldrons of the Forgotten Conqueror
+		[18] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
+		[19] = { itemID = 98570, droprate = "100%" }; --Mystic Orb
+		[21] = { itemID = 63520, droprate = "1%" }; --Pet Sigil
 	};
 	{
 		Name = BabbleBoss["The Illidari Council"];
@@ -613,10 +628,13 @@ AtlasLoot_Data["BlackTemple"] = {
 		[4] = { itemID = 32376, droprate = "7%" }; --Forest Prowler's Helm
 		[5] = { itemID = 32373, droprate = "7%" }; --Helm of the Illidari Shatterer
 		[6] = { itemID = 32505, droprate = "6%" }; --Madness of the Betrayer
-		[16] = { itemID = 31098, droprate = "4%" }; --Leggings of the Forgotten Conqueror
-		[17] = { itemID = 31100, droprate = "3%" }; --Leggings of the Forgotten Protector
-		[18] = { itemID = 31099, droprate = "4%" }; --Leggings of the Forgotten Vanquisher
-		[20] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
+		[16] = { itemID = 31089, droprate = "100%", lootTable = {"T6CHEST","Token"} }; --Chestguard of the Forgotten Conqueror
+		[18] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
+		[19] = { itemID = 98570, droprate = "100%" }; --Mystic Orb
+		[21] = { itemID = 63929, droprate = "1%" }; --Pet Sigil
+		[22] = { itemID = 63928, droprate = "1%" }; --Pet Sigil
+		[23] = { itemID = 63690, droprate = "1%" }; --Pet Sigil
+		[24] = { itemID = 63529, droprate = "1%" }; --Pet Sigil
 	};
 	{
 		Name = BabbleBoss["Illidan Stormrage"];
@@ -627,17 +645,18 @@ AtlasLoot_Data["BlackTemple"] = {
 		[5] = { itemID = 32497, droprate = "5%" }; --Stormrage Signet Ring
 		[6] = { itemID = 32483, droprate = "6%" }; --The Skull of Gul'dan
 		[7] = { itemID = 32496, droprate = "5%" }; --Memento of Tyrande
-		[9] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
-		[11] = { itemID = 32837 }; --Warglaive of Azzinoth
-		[12] = { itemID = 32838 }; --Warglaive of Azzinoth
-		[16] = { itemID = 31089, droprate = "8%" }; --Chestguard of the Forgotten Conqueror
-		[17] = { itemID = 31091, droprate = "9%" }; --Chestguard of the Forgotten Protector
-		[18] = { itemID = 31090, droprate = "8%" }; --Chestguard of the Forgotten Vanquisher
-		[20] = { itemID = 32471, droprate = "6%" }; --Shard of Azzinoth
-		[21] = { itemID = 32500, droprate = "5%" }; --Crystal Spire of Karabor
-		[22] = { itemID = 32374, droprate = "4%" }; --Zhar'doom, Greatstaff of the Devourer
-		[23] = { itemID = 32375, droprate = "4%" }; --Bulwark of Azzinoth
-		[24] = { itemID = 32336, droprate = "6%" }; --Black Bow of the Betrayer
+		[9] = { itemID = 32471, droprate = "6%" }; --Shard of Azzinoth
+		[10] = { itemID = 32500, droprate = "5%" }; --Crystal Spire of Karabor
+		[11] = { itemID = 32374, droprate = "4%" }; --Zhar'doom, Greatstaff of the Devourer
+		[12] = { itemID = 32375, droprate = "4%" }; --Bulwark of Azzinoth
+		[13] = { itemID = 32336, droprate = "6%" }; --Black Bow of the Betrayer
+		[16] = { itemID = 31089, droprate = "100%", lootTable = {"T6CHEST","Token"} }; --Chestguard of the Forgotten Conqueror
+		[18] = { itemID = 32837 }; --Warglaive of Azzinoth
+		[19] = { itemID = 32838 }; --Warglaive of Azzinoth
+		[21] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
+		[22] = { itemID = 98570, droprate = "100%" }; --Mystic Orb
+		[24] = { itemID = 63511, droprate = "1%" }; --Pet Sigil
+		[26] = { itemID = 343208 }; --Mount
 	};
 	{
 		Name = AL["Trash Mobs"];
@@ -646,13 +665,14 @@ AtlasLoot_Data["BlackTemple"] = {
 		[3] = { itemID = 32609 }; --Boots of the Divine Light
 		[4] = { itemID = 32593 }; --Treads of the Den Mother
 		[5] = { itemID = 32592 }; --Chestguard of Relentless Storms
-		[6] = { itemID = 32608 }; --Pillager's Gauntlets
-		[7] = { itemID = 32606 }; --Girdle of the Lightbearer
-		[8] = { itemID = 32591 }; --Choker of Serrated Blades
-		[9] = { itemID = 32589 }; --Hellfire-Encased Pendant
-		[10] = { itemID = 32526 }; --Band of Devastation
-		[11] = { itemID = 32528 }; --Blessed Band of Karabor
-		[12] = { itemID = 32527 }; --Ring of Ancient Knowledge
+		[6] = { itemID = 47166 }; --Concubines Attire
+		[7] = { itemID = 32608 }; --Pillager's Gauntlets
+		[8] = { itemID = 32606 }; --Girdle of the Lightbearer
+		[9] = { itemID = 32591 }; --Choker of Serrated Blades
+		[10] = { itemID = 32589 }; --Hellfire-Encased Pendant
+		[11] = { itemID = 32526 }; --Band of Devastation
+		[12] = { itemID = 32528 }; --Blessed Band of Karabor
+		[13] = { itemID = 32527 }; --Ring of Ancient Knowledge
 		[16] = { itemID = 34009 }; --Hammer of Judgement
 		[17] = { itemID = 32943 }; --Swiftsteel Bludgeon
 		[18] = { itemID = 34011 }; --Illidari Runeshield
@@ -885,7 +905,7 @@ AtlasLoot_Data["CoTHyjal"] = {
 		[18] = { itemID = 30891 }; --Black Featherlight Boots
 		[19] = { itemID = 30914 }; --Belt of the Crescent Moon
 		[21] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
-		[22] = { itemID = 98570, droprate = "100%" };
+		[22] = { itemID = 98570, droprate = "100%" }; --Mystic Orb
 		[24] = { itemID = 32459 }; --Time-Phased Phylactery
 		[26] = { itemID = 61196, droprate = "1%" }; --Pet Sigil
 	};
@@ -906,7 +926,7 @@ AtlasLoot_Data["CoTHyjal"] = {
 		[20] = { itemID = 30916 }; --Leggings of Channeled Elements
 		[21] = { itemID = 30919 }; --Valestalker Girdle
 		[23] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
-		[24] = { itemID = 98570, droprate = "100%" };
+		[24] = { itemID = 98570, droprate = "100%" }; --Mystic Orb
 		[26] = { itemID = 61287, droprate = "1%" }; --Pet Sigil
 	};
 	{
@@ -921,7 +941,7 @@ AtlasLoot_Data["CoTHyjal"] = {
 		[8] = { itemID = 30918 }; --Hammer of Atonement"
 		[16] = { itemID = 31092, droprate = "100%", lootTable = {"T6HAND","Token"} };
 		[18] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
-		[19] = { itemID = 98570, droprate = "100%" };
+		[19] = { itemID = 98570, droprate = "100%" }; --Mystic Orb
 	};
 	{
 		Name = BabbleBoss["Azgalor"];
@@ -933,7 +953,7 @@ AtlasLoot_Data["CoTHyjal"] = {
 		[6] = { itemID = 30917 }; --Razorfury Mantle"
 		[16] = { itemID = 31098, droprate = "100%", lootTable = {"T6LEGS","Token"} }; --Leggings of the Forgotten Conqueror
 		[18] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
-		[19] = { itemID = 98570, droprate = "100%" };
+		[19] = { itemID = 98570, droprate = "100%" }; --Mystic Orb
 		[21] = { itemID = 61289, droprate = "1%" }; --Pet Sigil
 	};
 	{
@@ -953,7 +973,7 @@ AtlasLoot_Data["CoTHyjal"] = {
 		[16] = { itemID = 31097, droprate = "100%", lootTable = {"T6HEAD","Token"} }; --Helm of the Forgotten Conqueror
 		[18] = { itemID = 450009}, -- The String of Time
 		[20] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
-		[21] = { itemID = 98570, droprate = "100%" };
+		[21] = { itemID = 98570, droprate = "100%" }; --Mystic Orb
 		[23] = { itemID = 61557, droprate = "1%" }; --Pet Sigil
 		[25] = { itemID = 1001620, droprate = "?%" };
 	};
@@ -974,7 +994,7 @@ AtlasLoot_Data["CoTHyjal"] = {
 		[16] = { itemID = 18764 }; --Echo of Eons
 		[17] = { itemID = 15041 }; --Key of Time
 		[19] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
-		[20] = { itemID = 98570, droprate = "100%" };
+		[20] = { itemID = 98570, droprate = "100%" }; --Mystic Orb
 	};
 	{
 		Name = AL["Trash Mobs"].." - Items";
@@ -1960,7 +1980,7 @@ AtlasLoot_Data["Karazhan"] = {
 		[16] = { itemID = 29758, droprate = "100%", lootTable = {"T4HAND","Token"} }; --Gloves of the Fallen Defender
 		[18] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 		[19] = { itemID = 400751, droprate = "100%" }; --Raider's Commendations
-		[20] = { itemID = 98570, droprate = "100%" }; --Mystic Orbs
+		[20] = { itemID = 98570, droprate = "100%" }; --Mystic Orb --Mystic Orbs
 		[22] = { itemID = 60170, droprate = "1%" }; --Sigil of The Curator
 	};
 	{
@@ -2000,7 +2020,7 @@ AtlasLoot_Data["Karazhan"] = {
 		[20] = { itemID = 28673, droprate = ".25%" }; --Tirisfal Wand of Ascendancy
 		[22] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 		[23] = { itemID = 400751, droprate = "100%" }; --Raider's Commendations
-		[24] = { itemID = 98570, droprate = "100%" }; --Mystic Orbs
+		[24] = { itemID = 98570, droprate = "100%" }; --Mystic Orb --Mystic Orbs
 		[26] = { itemID = 22560, droprate = { nil, "2%", "5%", "7%", "10%" } }; --Formula: Enchant Weapon - Sunfire
 		[28] = { itemID = 60372, droprate = "1%" }; --Pet Sigil
 	};
@@ -2827,7 +2847,7 @@ AtlasLoot_Data["ZulAman"] = {
 		[22] = { itemID = 222637, droprate = { "25%", "50%", "75%", "100%" } }; --Primal Amani Idol
 		[24] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 		[25] = { itemID = 400751, droprate = "100%" }; --Raider's Commendations
-		[26] = { itemID = 98570, droprate = "100%" }; --Mystic Orbs
+		[26] = { itemID = 98570, droprate = "100%" }; --Mystic Orb --Mystic Orbs
 		[28] = { itemID = 63944, droprate = "1%" }; --Pet Sigil
 	};
 	{
@@ -2847,7 +2867,7 @@ AtlasLoot_Data["ZulAman"] = {
 		[22] = { itemID = 222637, droprate = { "25%", "50%", "75%", "100%" } }; --Primal Amani Idol
 		[24] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 		[25] = { itemID = 400751, droprate = "100%" }; --Raider's Commendations
-		[26] = { itemID = 98570, droprate = "100%" }; --Mystic Orbs
+		[26] = { itemID = 98570, droprate = "100%" }; --Mystic Orb --Mystic Orbs
 		[28] = { itemID = 63943, droprate = "1%" }; --Pet Sigil
 
 	};
@@ -2868,7 +2888,7 @@ AtlasLoot_Data["ZulAman"] = {
 		[22] = { itemID = 222637, droprate = { "25%", "50%", "75%", "100%" } }; --Primal Amani Idol
 		[24] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 		[25] = { itemID = 400751, droprate = "100%" }; --Raider's Commendations
-		[26] = { itemID = 98570, droprate = "100%" }; --Mystic Orbs
+		[26] = { itemID = 98570, droprate = "100%" }; --Mystic Orb --Mystic Orbs
 		[28] = { itemID = 63946, droprate = "1%" }; --Pet Sigil
 
 	};
@@ -2889,7 +2909,7 @@ AtlasLoot_Data["ZulAman"] = {
 		[22] = { itemID = 222637, droprate = { "25%", "50%", "75%", "100%" } }; --Primal Amani Idol
 		[24] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 		[25] = { itemID = 400751, droprate = "100%" }; --Raider's Commendations
-		[26] = { itemID = 98570, droprate = "100%" }; --Mystic Orbs
+		[26] = { itemID = 98570, droprate = "100%" }; --Mystic Orb --Mystic Orbs
 		[28] = { itemID = 63945, droprate = "1%" }; --Pet Sigil
 	};
 	{
@@ -2913,7 +2933,7 @@ AtlasLoot_Data["ZulAman"] = {
 		[24] = { itemID = 222637, droprate = { "25%", "50%", "75%", "100%" } };  --Primal Amani Idol
 		[26] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 		[27] = { itemID = 400751, droprate = "100%" }; --Raider's Commendations
-		[28] = { itemID = 98570, droprate = "100%" }; --Mystic Orbs
+		[28] = { itemID = 98570, droprate = "100%" }; --Mystic Orb --Mystic Orbs
 		[30] = { itemID = 1333809, droprate = "100%" }; --Amani Bear
 	};
 	{
@@ -2936,7 +2956,7 @@ AtlasLoot_Data["ZulAman"] = {
 		[21] = { itemID = 34071 }; --Seething Hate
 		[23] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 		[24] = { itemID = 400751, droprate = "100%" }; --Raider's Commendations
-		[25] = { itemID = 98570, droprate = "100%" }; --Mystic Orbs
+		[25] = { itemID = 98570, droprate = "100%" }; --Mystic Orb --Mystic Orbs
 		[27] = { itemID = 33102, droprate = "7%" }; --Blood of Zul'Jin
 		[29] = { itemID = 63949, droprate = "1%" }; --Pet Sigil
 	};
