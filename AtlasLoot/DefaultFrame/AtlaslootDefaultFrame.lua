@@ -1,142 +1,120 @@
 --[[
 Functions:
+AtlasLoot:OnShow()
 AtlasLoot:DewDropClick(tablename, text, tabletype, tabletype2)
 AtlasLoot:DewDropSubMenuClick(tablename)
 AtlasLoot:DewdropExpansionMenuClick(tablename, text)
-AtlasLoot_DefaultFrame_OnShow()
-AtlasLootDefaultFrame_OnHide()
-AtlasLoot:DewdropExpansionMenuOpen(loottable)
+AtlasLoot:DewdropExpansionMenuOpen()
 AtlasLoot:DewdropSubMenuOpen(loottable)
-AtlasLoot:DewdropOpen()
-AtlasLoot:SetNewStyle(style)
+AtlasLoot:DewdropModuleMenuOpen()
+AtlasLoot:SetSkin(skin)
 ]]
 
 --Include all needed libraries
-local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot");
+local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
 local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
-
---Load the 2 dewdrop menus
-AtlasLoot_Dewdrop = AceLibrary("Dewdrop-2.0");
-
-ItemindexID = 2;
+local WHITE = "|cffFFFFFF"
+ItemindexID = 2
 
 AtlasLoot_Data["AtlasLootFallback"] = {
-    EmptyInstance = {};
-};
+    EmptyInstance = {}
+}
 
 --[[
-AtlasLootDefaultFrame_OnShow:
+AtlasLoot:OnShow():
 Called whenever the loot browser is shown and sets up buttons and loot tables
 ]]
-function AtlasLootDefaultFrame_OnShow()
+function AtlasLoot:OnShow()
     --Definition of where I want the loot table to be shown
     --Remove the selection of a loot table in Atlas
-    AtlasLootItemsFrame.activeBoss = nil;
+    AtlasLootItemsFrame.activeBoss = nil
     --Set the item table to the loot table
     --Show the last displayed loot table
-    local lastboss = AtlasLoot.db.profile.LastBoss[AtlasLoot_Expac];
-    if AtlasLoot.db.profile.AutoCurrentInstance and AtlasLoot:ShowInstance() then
-        return;
+    local lastboss = self.db.profile.LastBoss[self.Expac]
+    if self.db.profile.AutoCurrentInstance and self:ShowInstance() then
+        return
     elseif lastboss and lastboss[4] then
-        ATLASLOOT_CURRENTTABLE = lastboss[5];
-        ATLASLOOT_LASTMODULE = lastboss[4];
-        ATLASLOOT_MODUELNAME = lastboss[6];
-        AtlasLoot:IsLootTableAvailable(lastboss[4]);
-        AtlasLootDefaultFrame_Menu:SetText(ATLASLOOT_MODUELNAME);
-        AtlasLoot:ShowItemsFrame(lastboss[1], "AtlasLoot_Data", lastboss[3]);
+        self.currentTable = lastboss[5]
+        self.lastModule = lastboss[4]
+        self.moduleName = lastboss[6]
+        self:IsLootTableAvailable(lastboss[4])
+        AtlasLootDefaultFrame_Menu:SetText(self.moduleName)
+        self:ShowItemsFrame(lastboss[1], "AtlasLoot_Data", lastboss[3])
     else
-        AtlasLoot:ShowItemsFrame("EmptyTable", "AtlasLoot_Data", 1);
+        self:ShowItemsFrame("EmptyTable", "AtlasLoot_Data", 1)
     end
 end
 
 -- Show the Instance you are in
 function AtlasLoot:ShowInstance()
-    for i, v in pairs(AtlasLoot_SubMenus) do
-        for n, t in ipairs(v) do
-            if t[4] == BabbleZone[GetRealZoneText()] then
-                ATLASLOOT_CURRENTTABLE = v.SubMenu;
-                ATLASLOOT_LASTMODULE = v.Module;
-                AtlasLoot:IsLootTableAvailable(ATLASLOOT_LASTMODULE);
-                AtlasLoot:ShowItemsFrame(t[2], "AtlasLoot_Data", 1);
-                return true;
+    for _, v in pairs(AtlasLoot_SubMenus) do
+        for _, t in ipairs(v) do
+            if t[4] == BabbleZone[GetRealZoneText()] or (t[5] and t[5] == BabbleZone[GetRealZoneText()]) then
+                self.currentTable = v.SubMenu
+                self.lastModule = v.Module
+                self:IsLootTableAvailable(self.lastModule)
+                self:ShowItemsFrame(t[2], "AtlasLoot_Data", 1)
+                return true
             end
         end
     end
 end
 
---[[
-AtlasLootDefaultFrame_OnHide:
-When we close the loot browser, re-bind the item table to Atlas
-and close all Dewdrop menus
-]]
-function AtlasLootDefaultFrame_OnHide()
-    AtlasLoot_Dewdrop:Close(1);
+-- Used to strip the expansion out of the dataID
+function AtlasLoot:CleandataID(newID, listnum)
+	local cleanlist = {	[1] = {"CLASSIC", "TBC", "WRATH"} }
+	for i = 1, #cleanlist[listnum] do
+		newID = gsub(newID, cleanlist[listnum][i], "")
+	end
+	return newID
 end
 
 --[[
 AtlasLoot:DewDropClick(tablename, text, tabletype):
 tablename - Name of the loot table in the database
 text - Heading for the loot table
-Called when a button in AtlasLoot_Dewdrop is clicked
+Called when a button in AtlasLoot.Dewdrop is clicked
 ]]
 function AtlasLoot:DewDropClick(tablename, text, tablenum)
-    ATLASLOOT_FILTER_ENABLE = false;
-    ATLASLOOT_BACKENABLED = false;
-    ATLASLOOT_MODUELNAME = text;
-    AtlasLootFilterCheck:SetChecked(false);
-    tablename = tablename .. AtlasLoot_Expac;
-    ATLASLOOT_CURRENTTABLE = tablename;
-    tablenum = tablenum or 1;
-    ATLASLOOT_LASTMODULE = AtlasLoot_SubMenus[tablename].Module;
-    AtlasLootDefaultFrame_Menu:SetText(text);
-    AtlasLoot:IsLootTableAvailable(AtlasLoot_SubMenus[tablename].Module);
-    local lasttable = AtlasLoot.db.profile[ATLASLOOT_CURRENTTABLE];
+    self.filterEnable = false
+    self.backEnabled = false
+    self.moduleName = text
+    AtlasLootFilterCheck:SetChecked(false)
+    tablename = tablename .. self.Expac
+    self.currentTable = tablename
+    tablenum = tablenum or 1
+    self.lastModule = AtlasLoot_SubMenus[tablename].Module
+    AtlasLootDefaultFrame_Menu:SetText(text)
+    self:IsLootTableAvailable(AtlasLoot_SubMenus[tablename].Module)
+    local lasttable = self.db.profile.savedState[self.currentTable]
         if lasttable then
-            AtlasLoot:ShowItemsFrame(lasttable[1], lasttable[2], lasttable[3]);
+            self:ShowItemsFrame(lasttable[1], lasttable[2], lasttable[3])
         else
-            AtlasLoot:ShowItemsFrame(AtlasLoot_SubMenus[tablename][tablenum][2], "AtlasLoot_Data", tablenum);
+            self:ShowItemsFrame(AtlasLoot_SubMenus[tablename][tablenum][2], "AtlasLoot_Data", tablenum)
         end
 end
 
 --[[
 AtlasLoot:DewDropSubMenuClick(tablename):
 tablename - Name of the loot table in the database
-Called when a button in AtlasLoot_DewdropSubMenu is clicked
+Called when a button in AtlasLoot.DewdropSubMenu is clicked
 ]]
-function AtlasLoot:DewDropSubMenuClick(tablename)
-    ATLASLOOT_BACKENABLED = false;
-    --Show the select loot table
-    local tablenum = AtlasLoot_Data[tablename].Loadfirst or 1;
-    --Show the table that has been selected
-    AtlasLoot:ShowItemsFrame(tablename, "AtlasLoot_Data", tablenum);
-end
-local WHITE = "|cffFFFFFF";
-function AtlasLoot:AddDividerLine(maxLenght)
-    local text = WHITE.."----------------------------------------------------------------------------------------------------"
-    AtlasLoot_Dewdrop:AddLine(
-        'text' , text:sub(1, maxLenght),
-        'textHeight', 12,
-        'textWidth', 12,
-        'isTitle', true,
-        "notCheckable", true
-    );
+function AtlasLoot:DewDropSubMenuClick(tablename, onDamand)
+    local dataSource = "AtlasLoot_Data"
+    self.backEnabled = false
+    if  onDamand then
+		dataSource = "AtlasLoot_OnDemand"
+		self:CreateOnDemandLootTable(onDamand)
+	else
+        --Show the select loot table
+        local tablenum = _G[dataSource][tablename].Loadfirst or 1
+        --Show the table that has been selected
+        self:ShowItemsFrame(tablename, dataSource, tablenum)
+    end
 end
 
-function AtlasLoot:CloseDewDrop(divider, maxLenght)
-    if divider then
-        AtlasLoot:AddDividerLine(maxLenght)
-    end
-    AtlasLoot_Dewdrop:AddLine(
-        'text', AL["Close Menu"],
-        'textR', 0,
-        'textG', 1,
-        'textB', 1,
-        'textHeight', 12,
-        'textWidth', 12,
-        'closeWhenClicked', true,
-        'notCheckable', true
-    )
-end
+
+
 
 --[[
 AtlasLoot:DewdropExpansionMenuClick(expansion, name):
@@ -145,19 +123,19 @@ name - label for the expansion
 Called when a button in DewdropExpansionMenuClick is clicked
 ]]
 function AtlasLoot:DewdropExpansionMenuClick(expansion, name)
-    ATLASLOOT_BACKENABLED = false;
-    AtlasLootDefaultFrame_ExpansionMenu:SetText(name);
-    AtlasLoot_Expac = expansion;
-    if ATLASLOOT_CURRENTTABLE then
-        ATLASLOOT_CURRENTTABLE = AtlasLoot:CleandataID(ATLASLOOT_CURRENTTABLE, 1) .. AtlasLoot_Expac;
-        AtlasLoot:IsLootTableAvailable(AtlasLoot_SubMenus[ATLASLOOT_CURRENTTABLE].Module);
-        local tablename = AtlasLoot_SubMenus[ATLASLOOT_CURRENTTABLE][1][2];
-        local lasttable = AtlasLoot.db.profile[ATLASLOOT_CURRENTTABLE];
+    self.backEnabled = false
+    AtlasLootDefaultFrame_ExpansionMenu:SetText(name)
+    self.Expac = expansion
+    if self.currentTable then
+        self.currentTable = self:CleandataID(self.currentTable, 1) .. self.Expac
+        self:IsLootTableAvailable(AtlasLoot_SubMenus[self.currentTable].Module)
+        local tablename = AtlasLoot_SubMenus[self.currentTable][1][2]
+        local lasttable = self.db.profile.savedState[self.currentTable]
         if lasttable then
-            AtlasLoot:ShowItemsFrame(lasttable[1], lasttable[2], lasttable[3]);
+            self:ShowItemsFrame(lasttable[1], lasttable[2], lasttable[3])
         else
-            local tablenum = AtlasLoot_Data[tablename].Loadfirst or 1;
-            AtlasLoot:ShowItemsFrame(tablename, "AtlasLoot_Data", tablenum);
+            local tablenum = AtlasLoot_Data[tablename].Loadfirst or 1
+            self:ShowItemsFrame(tablename, "AtlasLoot_Data", tablenum)
         end
     end
 end
@@ -166,40 +144,21 @@ end
 AtlasLoot:DewdropExpansionMenuOpen():
 Adds expansion menu from expansion table in mainmenus.lua
 ]]
-function AtlasLoot:DewdropExpansionMenuOpen()
-    local frame = AtlasLootDefaultFrame_ExpansionMenu;
-    if AtlasLoot_Dewdrop:IsOpen(frame) then AtlasLoot_Dewdrop:Close() return end
-    AtlasLoot_Dewdrop:Register(frame,
-        'point', function(parent)
-            return "TOP", "BOTTOM"
-        end,
-        'children', function(level, value)
-            if AtlasLoot_ExpansionMenu then
-                for k, v in ipairs(AtlasLoot_ExpansionMenu) do
-                    if type(v) == "table" then
-                        --If a link to show a expansion menu
-                        AtlasLoot_Dewdrop:AddLine(
-                            'text', v[1],
-                            'textR', 1,
-                            'textG', 0.82,
-                            'textB', 0,
-                            'func', function() AtlasLoot:DewdropExpansionMenuClick(v[2], v[1]) end,
-                            'textHeight', 12,
-                            'textWidth', 12,
-                            'closeWhenClicked', true,
-                            'notCheckable', true
-                        )
-                    end
+local expansionMenuLoaded
+function AtlasLoot:DewdropExpansionMenuOpen(btn)
+    local menuList = { [1] = {} }
+    if not expansionMenuLoaded then
+        if AtlasLoot_ExpansionMenu then
+            for i,v in ipairs(AtlasLoot_ExpansionMenu) do
+                if type(v) == "table" then
+                    tinsert(menuList[1], {text = v[1], func = function() self:DewdropExpansionMenuClick(v[2], v[1]) end, notCheckable = true, closeWhenClicked = true, textHeight = 12, textWidth = 12})
                 end
             end
-            --Close button
-            AtlasLoot:CloseDewDrop(true,35)
-        end,
-        'dontHook', true
-    )
-    AtlasLoot_Dewdrop:Open(frame)
+            tinsert(menuList[1], {close = true, divider = 35})
+        end
+    end
+    expansionMenuLoaded = self:OpenDewdropMenu(btn, menuList, expansionMenuLoaded)
 end
-
 --[[
 AtlasLoot:DewdropSubMenuOpen(loottable):
 loottable - Table defining the sub menu
@@ -207,58 +166,96 @@ Generates the sub menu needed by passing a table of loot tables and titles
 ]]
 function AtlasLoot:DewdropSubMenuOpen(loottable)
     local frame = AtlasLootDefaultFrame_SubMenu
-    if AtlasLoot_Dewdrop:IsOpen(frame) then AtlasLoot_Dewdrop:Close() return end
-    AtlasLoot_Dewdrop:Register(frame,
+    if self.Dewdrop:IsOpen(frame) then self.Dewdrop:Close() return end
+    self.Dewdrop:Register(frame,
         'point', function(parent)
             return "TOP", "BOTTOM"
         end,
         'children', function(level, value)
-            for k, v in pairs(loottable) do
-                if type(v) == "table" then
-                    if v[3] == "Header" then
-                        if k ~= 1 then AtlasLoot:AddDividerLine(40) end
-                        AtlasLoot_Dewdrop:AddLine(
-                            'text', v[1],
-                            'textR', 0.2,
-                            'textG', 0.82,
-                            'textB', 0.5,
-                            'textHeight', 13,
-                            'textWidth', 13,
-                            'func', function(arg1) AtlasLoot:DewDropSubMenuClick(arg1) end,
-                            'arg1', v[2],
-                            'notCheckable', true
-                        )
-                    else
-                        AtlasLoot_Dewdrop:AddLine(
-                            'text', AtlasLoot_Data[v[2]].Name,
-                            'func', function(arg1) AtlasLoot:DewDropSubMenuClick(arg1) end,
-                            'arg1', v[2],
-                            'textHeight', 12,
-                            'textWidth', 12,
-                            'closeWhenClicked', true,
-                            'notCheckable', true
-                        )
+            if level == 1 then
+                for k, v in pairs(loottable) do
+                    if type(v) == "table" then
+                            if type(v[3]) == "table" then
+                                self.Dewdrop:AddLine(
+                                    "text", v[1],
+                                    "value", v[3],
+                                    "hasArrow", true,
+                                    'textHeight', 12,
+                                    'textWidth', 12,
+                                    "notCheckable", true
+                                )
+                            elseif v[3] == "Header" then
+                                if k ~= 1 then self:AddDividerLine(40) end
+                                self.Dewdrop:AddLine(
+                                    'text', v[1],
+                                    'textR', 0.2,
+                                    'textG', 0.82,
+                                    'textB', 0.5,
+                                    'textHeight', 13,
+                                    'textWidth', 13,
+                                    'func', function() self:DewDropSubMenuClick(v[2]) end,
+                                    'notCheckable', true
+                                )
+                            else
+                                self.Dewdrop:AddLine(
+                                    'text', AtlasLoot_Data[v[2]] and AtlasLoot_Data[v[2]].Name or v[1],
+                                    'func', function() self:DewDropSubMenuClick(v[2], v.OnDamand) end,
+                                    'textHeight', 12,
+                                    'textWidth', 12,
+                                    'closeWhenClicked', true,
+                                    'notCheckable', true
+                                )
+                            end
+
+                    end
+
+                end
+            elseif level == 2 then
+                if value then
+                    for k,v in pairs(value) do
+                        if v[3] == "Header" then
+                            if k ~= 1 then self:AddDividerLine(40) end
+                            self.Dewdrop:AddLine(
+                                'text', v[1],
+                                'textR', 0.2,
+                                'textG', 0.82,
+                                'textB', 0.5,
+                                'textHeight', 13,
+                                'textWidth', 13,
+                                'func', function() self:DewDropSubMenuClick(v[2], v.OnDamand) end,
+                                'notCheckable', true
+                            )
+                        elseif type(v) == "table" then
+                            self.Dewdrop:AddLine(
+                                "text", AtlasLoot_Data[v[2]] and AtlasLoot_Data[v[2]].Name or v[1],
+                                "func", function() self:DewDropSubMenuClick(v[2], v.OnDamand) end,
+                                'textHeight', 12,
+                                'textWidth', 12,
+                                'closeWhenClicked', true,
+                                "notCheckable", true
+                            )
+                        end
                     end
                 end
             end
             --Close button
-            AtlasLoot:CloseDewDrop(true,40)
+            self:CloseDewDrop(true,40)
         end,
         'dontHook', true
     )
-    AtlasLoot_Dewdrop:Open(frame)
+    self.Dewdrop:Open(frame)
 end
 
 --[[
-AtlasLoot:DewdropOpen:
+AtlasLoot:DewdropModuleMenuOpen:
 Constructs the main category menu from a tiered table
 ]]
-function AtlasLoot:DewdropOpen()
+local moduleMenuLoaded
+function AtlasLoot:DewdropModuleMenuOpen()
     local frame = AtlasLootDefaultFrame_Menu
-    if AtlasLoot_Dewdrop:IsOpen(frame) then AtlasLoot_Dewdrop:Close() return end
-    local loaded
-    if not loaded then
-        AtlasLoot_Dewdrop:Register(frame,
+    if self.Dewdrop:IsOpen(frame) then self.Dewdrop:Close() return end
+    if not moduleMenuLoaded then
+        self.Dewdrop:Register(frame,
             'point', function(parent)
                 return "TOP", "BOTTOM"
             end,
@@ -266,12 +263,12 @@ function AtlasLoot:DewdropOpen()
                 if AtlasLoot_Modules then
                     for k, v in ipairs(AtlasLoot_Modules) do
                         --If a link to show a submenu
-                        AtlasLoot_Dewdrop:AddLine(
+                        self.Dewdrop:AddLine(
                             'text', v[1],
                             'textR', 1,
                             'textG', 0.82,
                             'textB', 0,
-                            'func', function() AtlasLoot:DewDropClick(v[2], v[1], v[3]) end,
+                            'func', function() self:DewDropClick(v[2], v[1], v[3]) end,
                             'textHeight', 12,
                             'textWidth', 12,
                             'closeWhenClicked', true,
@@ -280,127 +277,226 @@ function AtlasLoot:DewdropOpen()
                     end
                 end
                 --Close button
-                AtlasLoot:CloseDewDrop(true,35)
+                self:CloseDewDrop(true,35)
             end,
             'dontHook', true
         )
+        moduleMenuLoaded = true
     end
-    AtlasLoot_Dewdrop:Open(frame)
+    self.Dewdrop:Open(frame)
 end
 
+AtlasLoot.CloseDefaults = {}
+local DF = AtlasLoot.CloseDefaults
+DF[1], DF[2], DF[3], DF[4], DF[5] = _G["AtlasLootDefaultFrameCloseButton"]:GetPoint()
+
+AtlasLoot.TitleDefaults = {}
+local TDF = AtlasLoot.TitleDefaults
+TDF[1], TDF[2], TDF[3], TDF[4], TDF[5] = _G["AtlasLootDefaultFrame"].TitleText:GetPoint()
+
+local buttons = {
+    "AtlasLootDefaultFrame_Menu",
+    "AtlasLootDefaultFrame_SubMenu",
+    "AtlasLootDefaultFrame_ExpansionMenu",
+    "AtlasLootDefaultFrame_Preset1",
+    "AtlasLootDefaultFrame_Preset2",
+    "AtlasLootDefaultFrame_Preset3",
+    "AtlasLootDefaultFrame_Preset4",
+    "AtlasLootDefaultFrameSearchButton",
+    "AtlasLootDefaultFrameLastResultButton",
+    "AtlasLootDefaultFrameWishListButton",
+    "AtlasLootDefaultFrameAdvancedSearchButton",
+    "AtlasLootDefaultFrame_AdvancedSearchPanel_EquipButton",
+    "AtlasLootDefaultFrame_AdvancedSearchPanel_EquipSubButton",
+    "AtlasLootDefaultFrame_AdvancedSearchPanel_QualityButton",
+    "AtlasLootDefaultFrame_AdvancedSearchPanel_SearchButton",
+    "AtlasLootDefaultFrame_AdvancedSearchPanel_ClearButton",
+    "AtlasLootDefaultFrame_MapButton",
+    "AtlasLootDefaultFrame_LoadInstanceButton",
+    "AtlasLoot_Favorites",
+}
+
+AtlasLoot.skinKeys = {
+    {"Modern", AL["Modern"]},
+    {"OldAtlasLoot", AL["Old AtlasLoot"]},
+    {"ElvUIDark", AL["ElvUI Dark"]},
+}
+
+local skins = {
+    Modern = {
+        DefaultFrame = {
+            bg = "Interface\\DialogFrame\\UI-DialogBox-Background",
+            bgColor = {2,2,2,2},
+            edge = "Interface\\Tooltips\\UI-Tooltip-Border",
+            edgeColor = {1,1,1,1},
+            tile = true,
+        },
+        Backdrop = {
+            bg = "Interface\\DialogFrame\\UI-DialogBox-Background",
+            bgColor = {2,2,2,2},
+            edge = "Interface\\Tooltips\\UI-Tooltip-Border",
+            edgeColor = {1,1,1,1},
+            tile = true,
+        },
+        btTex = "Interface\\Buttons\\UI-Silver-Button-Up",
+        insets = {1,1,1,1},
+        showFrame = true,
+        searchP = {0,-0.5},
+        searchH = 24,
+        edgeSize = 16,
+        closebtn = {0,0},
+        title = {0,0},
+    },
+
+    OldAtlasLoot = {
+        DefaultFrame = {
+            bg = "Interface/AchievementFrame/UI-Achievement-AchievementBackground",
+            bgColor = {1, 1, 1, 0.5},
+            edge = "Interface/Tooltips/UI-Tooltip-Border",
+            edgeColor = {1, 0.675, 0.125, 1},
+            tile = false,
+        },
+        Backdrop = {
+            bg = "Interface/AchievementFrame/UI-Achievement-StatsBackground",
+            bgColor = {0, 0, 0, .7},
+            edge = nil,
+            edgeColor = {nil,nil,nil,nil},
+            tile = false,
+        },
+        btTex = "Interface/AchievementFrame/UI-Achievement-Category-Background",
+        insets = {4,4,4,4},
+        showFrame = false,
+        searchP = {2,0},
+        searchH = 23,
+        edgeSize = 8,
+        closebtn = {-5,-5},
+        title = {0,-5},
+    },
+
+    ElvUIDark = {
+        DefaultFrame = {
+            bg = "Interface\\DialogFrame\\UI-DialogBox-Background",
+            bgColor = {2,2,2,2},
+            edge = "Interface\\Tooltips\\UI-Tooltip-Border",
+            edgeColor = {0,0,0,5},
+            tile = true,
+        },
+        Backdrop = {
+            bg = "Interface\\DialogFrame\\UI-DialogBox-Background",
+            bgColor = {2,2,2,2},
+            edge = "Interface\\Tooltips\\UI-Tooltip-Border",
+            edgeColor = {0,0,0,5},
+            tile = true,
+        },
+        btTex = {0,0,0,.6},
+        insets = {1,1,1,1},
+        showFrame = false,
+        searchP = {2,0},
+        searchH = 25,
+        edgeSize = 8,
+        closebtn = {-5,-5},
+        title = {0,0},
+    },
+}
+
+local backDropFrames = {
+    "AtlasLoot_FavoritesPopupFrame",
+    "AtlaslLoot_LootBackground",
+    "Atlasloot_Difficulty_ScrollFrame",
+    "Atlasloot_SubTableFrame",
+    "AtlasLoot_PopupFrame",
+}
+
 --[[
-AtlasLoot:SetNewStyle:
-Create the new Default Frame style
-	style = "new"
-	style = "old"
+AtlasLoot:SetSkin()
+Changes the skin
 ]]
-function AtlasLoot:SetNewStyle(style)
+function AtlasLoot:SetSkin(skin)
+    skin = skins[skin]
+        for _, frame in pairs(backDropFrames) do
+            _G[frame]:SetBackdrop({
+                bgFile = skin.Backdrop.bg, tile = skin.Backdrop.tile, tileSize = 16,
+                edgeFile = skin.Backdrop.edge, edgeSize = skin.edgeSize,
+                insets = { left = skin.insets[1], right = skin.insets[2], top = skin.insets[3], bottom = skin.insets[4] },
+            })
+            _G[frame]:SetBackdropColor(skin.Backdrop.bgColor[1], skin.Backdrop.bgColor[2], skin.Backdrop.bgColor[3], skin.Backdrop.bgColor[4])
+            _G[frame]:SetBackdropBorderColor(skin.Backdrop.edgeColor[1], skin.Backdrop.edgeColor[2], skin.Backdrop.edgeColor[3], skin.Backdrop.edgeColor[4])
+        end
 
-    local buttons = {
-        "AtlasLootDefaultFrame_Options",
-        "AtlasLootDefaultFrame_LoadModules",
-        "AtlasLootDefaultFrame_Menu",
-        "AtlasLootDefaultFrame_SubMenu",
-        "AtlasLootDefaultFrame_ExpansionMenu",
-        "AtlasLootDefaultFrame_Preset1",
-        "AtlasLootDefaultFrame_Preset2",
-        "AtlasLootDefaultFrame_Preset3",
-        "AtlasLootDefaultFrame_Preset4",
-        "AtlasLootDefaultFrameSearchButton",
-        "AtlasLootDefaultFrameSearchClearButton",
-        "AtlasLootDefaultFrameLastResultButton",
-        "AtlasLootDefaultFrameWishListButton",
-        "AtlasLootDefaultFrameAdvancedSearchButton",
-        "AtlasLootDefaultFrame_AdvancedSearchPanel_EquipButton",
-        "AtlasLootDefaultFrame_AdvancedSearchPanel_EquipSubButton",
-        "AtlasLootDefaultFrame_AdvancedSearchPanel_QualityButton",
-        "AtlasLootDefaultFrame_AdvancedSearchPanel_SearchButton",
-        "AtlasLootDefaultFrame_AdvancedSearchPanel_ClearButton",
-        "AtlasLootDefaultFrame_MapButton",
-        "AtlasLootDefaultFrame_MapSelectButton",
-        "AtlasLootDefaultFrame_LoadInstanceButton",
-        "AtlasLootDefaultFrame_LoadInstanceDBButton",
-    }
+        local DF = self.CloseDefaults
+        _G["AtlasLootDefaultFrameCloseButton"]:SetPoint(DF[1], DF[2], DF[3], DF[4]+skin.closebtn[1], DF[5]+skin.closebtn[2])
 
-    if style == "new" then
-        AtlasLootDefaultFrame_LootBackground:SetBackdrop({ bgFile = "Interface/AchievementFrame/UI-Achievement-StatsBackground" });
-        AtlasLootDefaultFrame_LootBackground:SetBackdropColor(1, 1, 1, 0.5);
+        local TDF = self.TitleDefaults
+        _G["AtlasLootDefaultFrame"].TitleText:SetPoint(TDF[1], TDF[2], TDF[3], TDF[4]+skin.title[1], TDF[5]+skin.title[2])
 
-        AtlasLootDefaultFrame:SetBackdrop({ bgFile = "Interface/AchievementFrame/UI-Achievement-AchievementBackground",
-            edgeFile = "Interface/Tooltips/UI-Tooltip-Border",
-            edgeSize = 16,
-            insets = { left = 4, right = 4, top = 4, bottom = 4 } });
-        AtlasLootDefaultFrame:SetBackdropColor(1, 1, 1, 0.5)
-        AtlasLootDefaultFrame:SetBackdropBorderColor(1, 0.675, 0.125, 1)
-        AtlasLootDefaultFrameHeader:SetTexture("Interface\\AchievementFrame\\UI-Achievement-Alert-Background.blp")
-        AtlasLootDefaultFrameHeader:SetTexCoord(0, 0.605, 0, 0.703)
-        AtlasLootDefaultFrameHeader:SetWidth(299)
-        AtlasLootDefaultFrameHeader:SetHeight(60)
-        AtlasLootDefaultFrameHeader:SetPoint("TOP", AtlasLootDefaultFrame, "TOP", -3, 22)
+        if type(skin.btTex) == "table" then
+            local color = skin.btTex
+            _G["AtlasLootDefaultFrameSearchBox"].Left:SetTexture(color[1],color[2],color[3],color[4])
+            _G["AtlasLootDefaultFrameSearchBox"].Right:SetTexture(color[1],color[2],color[3],color[4])
+            _G["AtlasLootDefaultFrameSearchBox"].Middle:SetTexture(color[1],color[2],color[3],color[4])
+        else
+            _G["AtlasLootDefaultFrameSearchBox"].Left:SetTexture("")
+            _G["AtlasLootDefaultFrameSearchBox"].Right:SetTexture("")
+            _G["AtlasLootDefaultFrameSearchBox"].Middle:SetTexture("")
+            _G["AtlasLootDefaultFrameSearchBox"].Left:SetAtlas("common-search-border-left")
+            _G["AtlasLootDefaultFrameSearchBox"].Right:SetAtlas("common-search-border-right")
+            _G["AtlasLootDefaultFrameSearchBox"].Middle:SetAtlas("common-search-border-middle")
+        end
 
-        AtlasLootDefaultFrame_Options:SetNormalTexture("Interface/AchievementFrame/UI-Achievement-Category-Background")
-        AtlasLootDefaultFrame_Options:SetHeight(24)
-        AtlasLootDefaultFrame_Options:SetPushedTexture("Interface/AchievementFrame/UI-Achievement-Category-Background")
-        AtlasLootDefaultFrame_Options:SetHeight(24)
+        _G["AtlasLootDefaultFrameSearchBox"].Left:SetHeight(skin.searchH)
+        _G["AtlasLootDefaultFrameSearchBox"].Right:SetHeight(skin.searchH)
+        _G["AtlasLootDefaultFrameSearchBox"].Middle:SetHeight(skin.searchH)
+        _G["AtlasLootDefaultFrameSearchButton"]:ClearAllPoints()
+        _G["AtlasLootDefaultFrameSearchButton"]:SetPoint("LEFT","AtlasLootDefaultFrameSearchBox","RIGHT",skin.searchP[1],skin.searchP[2])
+
+        local frame = {"RightEdge","LeftEdge","BottomEdge","TopEdge","BottomRightCorner","BottomLeftCorner","TopRightCorner","TopLeftCorner"}
+        if skin.showFrame then
+            for _, frame in ipairs(frame) do
+                _G["AtlasLootDefaultFrameNineSlice"][frame]:Show()
+            end
+            _G["AtlasLootDefaultFramePortrait"]:Show()
+            _G["AtlasLootDefaultFrameBg"]:Show()
+            _G["AtlasLootDefaultFrame"].TitleBg:Show()
+            _G["AtlasLootDefaultFrameTopTileStreaks"]:Show()
+            _G["AtlasLootDefaultFrame"]:SetBackdrop(nil)
+        else
+            for _, frame in ipairs(frame) do
+                _G["AtlasLootDefaultFrameNineSlice"][frame]:Hide()
+            end
+            _G["AtlasLootDefaultFramePortrait"]:Hide()
+            _G["AtlasLootDefaultFrameBg"]:Hide()
+            _G["AtlasLootDefaultFrame"].TitleBg:Hide()
+            _G["AtlasLootDefaultFrameTopTileStreaks"]:Hide()
+            _G["AtlasLootDefaultFrame"]:SetBackdrop({
+                bgFile = skin.DefaultFrame.bg, tile = skin.DefaultFrame.tile, tileSize = 16,
+                edgeFile = skin.DefaultFrame.edge, edgeSize = skin.edgeSize,
+                insets = { left = skin.insets[1], right = skin.insets[2], top = skin.insets[3], bottom = skin.insets[4] },
+            })
+            _G["AtlasLootDefaultFrame"]:SetBackdropColor(skin.DefaultFrame.bgColor[1], skin.DefaultFrame.bgColor[2], skin.DefaultFrame.bgColor[3], skin.DefaultFrame.bgColor[4])
+            _G["AtlasLootDefaultFrame"]:SetBackdropBorderColor(skin.DefaultFrame.edgeColor[1], skin.DefaultFrame.edgeColor[2], skin.DefaultFrame.edgeColor[3], skin.DefaultFrame.edgeColor[4])
+        end
 
         local function SetButtons(path)
-            _G[path]:SetNormalTexture("Interface/AchievementFrame/UI-Achievement-Category-Background")
-            _G[path]:SetHeight(24)
-            _G[path]:SetPushedTexture("Interface/AchievementFrame/UI-Achievement-Category-Background")
-            _G[path]:SetHeight(24)
-            local tex = _G[path]:GetNormalTexture();
-            tex:SetTexCoord(0, 0.6640625, 0, 0.8);
-            tex:SetHeight(32)
-
-            local tex2 = _G[path]:GetPushedTexture();
-            tex2:SetTexCoord(0, 0.6640625, 0, 0.8);
-            tex2:SetHeight(32)
+            if _G[path].template and _G[path].template == "FilterDropDownMenuTemplate" then
+                local tex, tex2, tex3, tex4
+                if type(skin.btTex) == "table" then
+                    tex, tex2, tex3, tex4 = unpack(skin.btTex)
+                else
+                    tex = skin.btTex
+                end
+                _G[path.."TopLeft"]:SetTexture(tex, tex2, tex3, tex4)
+                _G[path.."TopRight"]:SetTexture(tex, tex2, tex3, tex4)
+                _G[path.."BottomLeft"]:SetTexture(tex, tex2, tex3, tex4)
+                _G[path.."BottomRight"]:SetTexture(tex, tex2, tex3, tex4)
+                _G[path.."TopMiddle"]:SetTexture(tex, tex2, tex3, tex4)
+                _G[path.."MiddleLeft"]:SetTexture(tex, tex2, tex3, tex4)
+                _G[path.."MiddleRight"]:SetTexture(tex, tex2, tex3, tex4)
+                _G[path.."BottomMiddle"]:SetTexture(tex, tex2, tex3, tex4)
+                _G[path.."MiddleMiddle"]:SetTexture(tex, tex2, tex3, tex4)
+            end
         end
 
         for _, v in pairs(buttons) do
             SetButtons(v)
         end
-    elseif style == "old" then
-
-        AtlasLootDefaultFrame_LootBackground:SetBackdrop({ bgFile = "" });
-        AtlasLootDefaultFrame_LootBackground:SetBackdropColor(0, 0, 0.5, 0.5);
-
-        AtlasLootDefaultFrame:SetBackdrop({ bgFile = "Interface/DialogFrame/UI-DialogBox-Background",
-            edgeFile = "Interface/DialogFrame/UI-DialogBox-Border",
-            edgeSize = 32,
-            insets = { left = 11, right = 12, top = 12, bottom = 11 } });
-        AtlasLootDefaultFrame:SetBackdropColor(1, 1, 1, 1)
-        AtlasLootDefaultFrame:SetBackdropBorderColor(1, 1, 1, 1)
-
-
-        AtlasLootDefaultFrameHeader:SetTexture("Interface/DialogFrame/UI-DialogBox-Header")
-        AtlasLootDefaultFrameHeader:SetTexCoord(0, 1, 0, 1)
-        AtlasLootDefaultFrameHeader:SetWidth(425)
-        AtlasLootDefaultFrameHeader:SetHeight(64)
-        AtlasLootDefaultFrameHeader:SetPoint("TOP", AtlasLootDefaultFrame, "TOP", 0, 12)
-
-        AtlasLootDefaultFrame_Options:SetNormalTexture("Interface/Buttons/UI-Panel-Button-Up")
-        AtlasLootDefaultFrame_Options:SetHeight(20)
-        AtlasLootDefaultFrame_Options:SetPushedTexture("Interface/Buttons/UI-Panel-Button-Down")
-        AtlasLootDefaultFrame_Options:SetHeight(20)
-
-        local function SetButtons(path)
-            _G[path]:SetNormalTexture("Interface/Buttons/UI-Panel-Button-Up")
-            _G[path]:SetHeight(20)
-            _G[path]:SetPushedTexture("Interface/Buttons/UI-Panel-Button-Down")
-            _G[path]:SetHeight(20)
-            local tex = _G[path]:GetNormalTexture();
-            tex:SetTexCoord(0, 0.625, 0, 0.6875);
-            tex:SetHeight(20)
-
-            local tex2 = _G[path]:GetPushedTexture();
-            tex2:SetTexCoord(0, 0.625, 0, 0.6875);
-            tex2:SetHeight(20)
-        end
-
-        for _, v in pairs(buttons) do
-            SetButtons(v)
-        end
-
-    end
 end

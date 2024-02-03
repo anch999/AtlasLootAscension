@@ -14,10 +14,6 @@
 ## X-Website: https://discord.gg/uYCE2X2FgA
 ## Dependencies: AtlasLoot
 ## LoadOnDemand: 1
-## X-Curse-Packaged-Version: v6.0.0
-## X-Curse-Project-Name: Atlasloot Enhanced
-## X-Curse-Project-ID: atlasloot-enhanced
-## X-Curse-Repository-ID: wow/atlasloot-enhanced/mainline
 
 vanity.lua
 localization.lua

@@ -9,89 +9,90 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 ---------------
 
 AtlasLoot_Data["Tabards"] = {
+	Module = "AtlasLoot_Vanity";
 	Name = "Tabards";
 	{
-		Name = "Tabards";
-		{ 1, 51534, "", "=q4=Wrathful Gladiator's Tabard", "=ds=#s7#" };
-		{ 2, 49086, "", "=q4=Relentless Gladiator's Tabard", "=ds=#s7#" };
-		{ 3, 45983, "", "=q4=Furious Gladiator's Tabard", "=ds=#s7#" };
-		{ 4, 43349, "", "=q4=Tabard of Brute Force", "=ds=#m32#" };
-		{ 5, 40643, "", "=q4=Tabard of the Achiever", "=ds=#m32#" };
-		{ 6, 43348, "", "=q4=Tabard of the Explorer", "=ds=#m32#" };
-		{ 7, 43300, "", "=q4=Loremaster's Colors", "=ds=#m32#" };
-		{ 8, 49052, "", "=q3=Tabard of Conquest", "=ds=#m32# =ec1=#m7#" };
-		{ 9, 49054, "", "=q3=Tabard of Conquest", "=ds=#m32# =ec1=#m6#" };
-		{ 11, 46874, "", "=q3=Argent Crusader's Tabard", "=ds=#s7#" };
-		{ 12, 46817, "", "=q1=Silver Covenant Tabard", "=ds=#s7# =ec1=#m7#" };
-		{ 13, 46818, "", "=q1=Sunreaver Tabard", "=ds=#s7# =ec1=#m6#" };
-		{ 16, 43154, "", "=q1=Tabard of the Argent Crusade", "=ds=#s7#" };
-		{ 17, 43157, "", "=q1=Tabard of the Kirin Tor", "=ds=#s7#" };
-		{ 18, 43155, "", "=q1=Tabard of the Ebon Blade", "=ds=#s7#" };
-		{ 19, 43156, "", "=q1=Tabard of the Wyrmrest Accord", "=ds=#s7#" };
-		{ 21, 45579, "", "=q1=Darnassus Tabard", "=ds=#s7# =ec1=#m7#" };
-		{ 22, 45580, "", "=q1=Exodar Tabard", "=ds=#s7# =ec1=#m7#" };
-		{ 23, 45578, "", "=q1=Gnomeregan Tabard", "=ds=#s7# =ec1=#m7#" };
-		{ 24, 45577, "", "=q1=Ironforge Tabard", "=ds=#s7# =ec1=#m7#" };
-		{ 25, 45574, "", "=q1=Stormwind Tabard", "=ds=#s7# =ec1=#m7#" };
-		{ 26, 45581, "", "=q1=Orgrimmar Tabard", "=ds=#s7# =ec1=#m6#" };
-		{ 27, 45582, "", "=q1=Sen'jin Tabard", "=ds=#s7# =ec1=#m6#" };
-		{ 28, 45585, "", "=q1=Silvermoon City Tabard", "=ds=#s7# =ec1=#m6#" };
-		{ 29, 45584, "", "=q1=Thunder Bluff Tabard", "=ds=#s7# =ec1=#m6#" };
-		{ 30, 45583, "", "=q1=Undercity Tabard", "=ds=#s7# =ec1=#m6#" };
+		Name = "Page 1";
+		[1] = { itemID = 51534 }; --Wrathful Gladiator's Tabard
+		[2] = { itemID = 49086 }; --Relentless Gladiator's Tabard
+		[3] = { itemID = 45983 }; --Furious Gladiator's Tabard
+		[4] = { itemID = 43349, desc = "=ds=#m32#" }; --Tabard of Brute Force
+		[5] = { itemID = 40643, desc = "=ds=#m32#" }; --Tabard of the Achiever
+		[6] = { itemID = 43348, desc = "=ds=#m32#" }; --Tabard of the Explorer
+		[7] = { itemID = 43300, desc = "=ds=#m32#" }; --Loremaster's Colors
+		[8] = { itemID = 49052, desc = "=ds=#m32# =ec1=#m7#" }; --Tabard of Conquest
+		[9] = { itemID = 49054, desc = "=ds=#m32# =ec1=#m6#" }; --Tabard of Conquest
+		[11] = { itemID = 46874 }; --Argent Crusader's Tabard
+		[12] = { itemID = 46817 }; --Silver Covenant Tabard
+		[13] = { itemID = 46818 }; --Sunreaver Tabard
+		[16] = { itemID = 43154 }; --Tabard of the Argent Crusade
+		[17] = { itemID = 43157 }; --Tabard of the Kirin Tor
+		[18] = { itemID = 43155 }; --Tabard of the Ebon Blade
+		[19] = { itemID = 43156 }; --Tabard of the Wyrmrest Accord
+		[21] = { itemID = 45579 }; --Darnassus Tabard
+		[22] = { itemID = 45580 }; --Exodar Tabard
+		[23] = { itemID = 45578 }; --Gnomeregan Tabard
+		[24] = { itemID = 45577 }; --Ironforge Tabard
+		[25] = { itemID = 45574 }; --Stormwind Tabard
+		[26] = { itemID = 45581 }; --Orgrimmar Tabard
+		[27] = { itemID = 45582 }; --Sen'jin Tabard
+		[28] = { itemID = 45585 }; --Silvermoon City Tabard
+		[29] = { itemID = 45584 }; --Thunder Bluff Tabard
+		[30] = { itemID = 45583 }; --Undercity Tabard
 	};
 	{
-		Name = "Tabards";
-		{ 1, 38312, "", "=q4=Tabard of Brilliance", "=ds=#s7#, =q1=#m24#" };
-		{ 2, 23705, "", "=q4=Tabard of Flame", "=ds=#s7#, =q1=#m24#" };
-		{ 3, 23709, "", "=q4=Tabard of Frost", "=ds=#s7#, =q1=#m24#" };
-		{ 4, 38313, "", "=q4=Tabard of Fury", "=ds=#s7#, =q1=#m24#" };
-		{ 5, 38309, "", "=q4=Tabard of Nature", "=ds=#s7#, =q1=#m24#" };
-		{ 6, 38310, "", "=q4=Tabard of the Arcane", "=ds=#s7#, =q1=#m24#" };
-		{ 7, 38314, "", "=q4=Tabard of the Defender", "=ds=#s7#, =q1=#m24#" };
-		{ 8, 38311, "", "=q4=Tabard of the Void", "=ds=#s7#, =q1=#m24#" };
-		{ 9, 35279, "", "=q3=Tabard of Summer Skies", "=ds=#s7#, =q1=#m4#" };
-		{ 11, 35280, "", "=q3=Tabard of Summer Flames", "=ds=#s7#, =q1=#m4#" };
-		{ 12, 31404, "", "=q2=Green Trophy Tabard of the Illidari", "=ds=#s7#, =q1=#m4#" };
-		{ 13, 31405, "", "=q2=Purple Trophy Tabard of the Illidari", "=ds=#s7#, =q1=#m4#" };
-		{ 14, 24344, "", "=q1=Tabard of the Hand", "=ds=#s7#, =q1=#m4#, =ec1=#m7#" };
-		{ 15, 25549, "", "=q1=Blood Knight Tabard", "=ds=#s7#, =ec1=#m6#" };
-		{ 16, 31779, "", "=q1=Aldor Tabard", "=ds=#s7#" };
-		{ 17, 31804, "", "=q1=Cenarion Expedition Tabard", "=ds=#s7#" };
-		{ 18, 31776, "", "=q1=Consortium Tabard", "=ds=#s7#" };
-		{ 19, 23999, "", "=q1=Honor Hold Tabard", "=ds=#s7#, =ec1=#m7#" };
-		{ 20, 31777, "", "=q1=Keepers of Time Tabard", "=ds=#s7#" };
-		{ 21, 31774, "", "=q1=Kurenai Tabard", "=ds=#s7#, =ec1=#m7#" };
-		{ 22, 31778, "", "=q1=Lower City Tabard", "=ds=#s7#" };
-		{ 23, 31773, "", "=q1=Mag'har Tabard", "=ds=#s7#, =ec1=#m6#" };
-		{ 24, 32828, "", "=q1=Ogri'la Tabard", "=ds=#s7#" };
-		{ 25, 31781, "", "=q1=Sha'tar Tabard", "=ds=#s7#" };
-		{ 26, 31775, "", "=q1=Sporeggar Tabard", "=ds=#s7#" };
-		{ 27, 31780, "", "=q1=Scryers Tabard", "=ds=#s7#" };
-		{ 28, 32445, "", "=q1=Skyguard Tabard", "=ds=#s7#" };
-		{ 29, 35221, "", "=q1=Tabard of the Shattered Sun", "=ds=#s7#" };
-		{ 30, 24004, "", "=q1=Thrallmar Tabard", "=ds=#s7#, =ec1=#m6#" };
+		Name = "Page 2";
+		[1] = { itemID = 38312 }; --Tabard of Brilliance
+		[2] = { itemID = 23705 }; --Tabard of Flame
+		[3] = { itemID = 23709 }; --Tabard of Frost
+		[4] = { itemID = 38313 }; --Tabard of Fury
+		[5] = { itemID = 38309 }; --Tabard of Nature
+		[6] = { itemID = 38310 }; --Tabard of the Arcane
+		[7] = { itemID = 38314 }; --Tabard of the Defender
+		[8] = { itemID = 38311 }; --Tabard of the Void
+		[9] = { itemID = 35279 }; --Tabard of Summer Skies
+		[11] = { itemID = 35280 }; --Tabard of Summer Flames
+		[12] = { itemID = 31404 }; --Green Trophy Tabard of the Illidari
+		[13] = { itemID = 31405 }; --Purple Trophy Tabard of the Illidari
+		[14] = { itemID = 24344 }; --Tabard of the Hand
+		[15] = { itemID = 25549 }; --Blood Knight Tabard
+		[16] = { itemID = 31779 }; --Aldor Tabard
+		[17] = { itemID = 31804 }; --Cenarion Expedition Tabard
+		[18] = { itemID = 31776 }; --Consortium Tabard
+		[19] = { itemID = 23999 }; --Honor Hold Tabard
+		[20] = { itemID = 31777 }; --Keepers of Time Tabard
+		[21] = { itemID = 31774 }; --Kurenai Tabard
+		[22] = { itemID = 31778 }; --Lower City Tabard
+		[23] = { itemID = 31773 }; --Mag'har Tabard
+		[24] = { itemID = 32828 }; --Ogri'la Tabard
+		[25] = { itemID = 31781 }; --Sha'tar Tabard
+		[26] = { itemID = 31775 }; --Sporeggar Tabard
+		[27] = { itemID = 31780 }; --Scryers Tabard
+		[28] = { itemID = 32445 }; --Skyguard Tabard
+		[29] = { itemID = 35221 }; --Tabard of the Shattered Sun
+		[30] = { itemID = 24004 }; --Thrallmar Tabard
 	};
 	{
-		Name = "Tabards";
-		{ 1, 0, "INV_BannerPVP_02", "=q6=#m7#", "" };
-		{ 2, 15196, "", "=q1=Private's Tabard", "=ds=#s7#" };
-		{ 3, 15198, "", "=q1=Knight's Colors", "=ds=#s7#" };
-		{ 4, 20132, "", "=q1=Arathor Battle Tabard", "=ds=#s7#, =q1=#m4#" };
-		{ 5, 19032, "", "=q1=Stormpike Battle Tabard", "=ds=#s7#" };
-		{ 6, 19506, "", "=q1=Silverwing Battle Tabard", "=ds=#s7#" };
-		{ 8, 0, "INV_BannerPVP_01", "=q6=#m6#", "" };
-		{ 9, 15197, "", "=q1=Scout's Tabard", "=ds=#s7#" };
-		{ 10, 15199, "", "=q1=Stone Guard's Herald", "=ds=#s7#" };
-		{ 11, 20131, "", "=q1=Battle Tabard of the Defilers", "=ds=#s7#, =q1=#m4#" };
-		{ 12, 19031, "", "=q1=Frostwolf Battle Tabard", "=ds=#s7#" };
-		{ 13, 19505, "", "=q1=Warsong Battle Tabard", "=ds=#s7#" };
-		{ 16, 23192, "", "=q2=Tabard of the Scarlet Crusade", "=ds=#s7#", "", "0.48%" };
-		{ 17, 5976, "", "=q1=Guild Tabard", "=ds=#s7#" };
-		{ 19, 0, "INV_Box_01", "=q6=#j29#", "" };
-		{ 20, 36941, "", "=q3=Competitor's Tabard", "=ds=#s7#" };
-		{ 21, 22999, "", "=q1=Tabard of the Agent Dawn", "=ds=#s7#, =q1=#m4#" };
-		{ 22, 28788, "", "=q1=Tabard of the Protector", "=ds=#s7#, =q1=#m4#" };
-		{ 23, 19160, "", "=q1=Contest Winner's Tabard", "=ds=#s7#" };
+		Name = "Page 3";
+		[1] = { icon = "INV_BannerPVP_02", name = "=q6=#m7#" };
+		[2] = { itemID = 15196 }; --Private's Tabard
+		[3] = { itemID = 15198 }; --Knight's Colors
+		[4] = { itemID = 20132 }; --Arathor Battle Tabard
+		[5] = { itemID = 19032 }; --Stormpike Battle Tabard
+		[6] = { itemID = 19506 }; --Silverwing Battle Tabard
+		[8] = { icon = "INV_BannerPVP_01", name = "=q6=#m6#" };
+		[9] = { itemID = 15197 }; --Scout's Tabard
+		[10] = { itemID = 15199 }; --Stone Guard's Herald
+		[11] = { itemID = 20131 }; --Battle Tabard of the Defilers
+		[12] = { itemID = 19031 }; --Frostwolf Battle Tabard
+		[13] = { itemID = 19505 }; --Warsong Battle Tabard
+		[16] = { itemID = 23192 }; --Tabard of the Scarlet Crusade",  "0%
+		[17] = { itemID = 5976 }; --Guild Tabard
+		[19] = { icon = "INV_Box_01", name = "=q6=#j29#" };
+		[20] = { itemID = 36941 }; --Competitor's Tabard
+		[21] = { itemID = 22999 }; --Tabard of the Agent Dawn
+		[22] = { itemID = 28788 }; --Tabard of the Protector
+		[23] = { itemID = 19160 }; --Contest Winner's Tabard
 	};
 };
 
@@ -100,199 +101,197 @@ AtlasLoot_Data["Tabards"] = {
 -------------------
 
 AtlasLoot_Data["VanityPets"] = {
+	Module = "AtlasLoot_Vanity";
 	Name = "Vanity Pets";
 	{
 		Name = AL["Merchant Sold"];
-		{ 1, 44984, "", "=q3=Ammen Vale Lashling", "=ds=#e13#" };
-		{ 2, 54436, "", "=q3=Blue Clockwork Rocket Bot", "=ds=#e13#" };
-		{ 3, 44970, "", "=q3=Dun Morogh Cub", "=ds=#e13#" };
-		{ 4, 44973, "", "=q3=Durotar Scorpion", "=ds=#e13#" };
-		{ 5, 44974, "", "=q3=Elwynn Lamb", "=ds=#e13#" };
-		{ 6, 44982, "", "=q3=Enchanted Broom", "=ds=#e13#" };
-		{ 7, 39973, "", "=q3=Ghostly Skull", "=ds=#e13#" };
-		{ 8, 45002, "", "=q3=Mechanopeep", "=ds=#e13#" };
-		{ 9, 44980, "", "=q3=Mulgore Hatchling", "=ds=#e13#" };
-		{ 10, 45606, "", "=q3=Sen'jin Fetish", "=ds=#e13#" };
-		{ 11, 44965, "", "=q3=Teldrassil Sproutling", "=ds=#e13#" };
-		{ 12, 44971, "", "=q3=Tirisfal Batling", "=ds=#e13#" };
-		{ 13, 44822, "", "=q1=Albino Snake", "=ds=#e13#" };
-		{ 14, 11023, "", "=q1=Ancona Chicken", "=ds=#e13#" };
-		{ 15, 10360, "", "=q1=Black Kingsnake", "=ds=#e13#" };
-		{ 16, 10361, "", "=q1=Brown Snake", "=ds=#e13#" };
-		{ 17, 29958, "", "=q1=Blue Dragonhawk Hatchling", "=ds=#e13#" };
-		{ 18, 29901, "", "=q1=Blue Moth Egg", "=ds=#e13#" };
-		{ 19, 29364, "", "=q1=Brown Rabbit Crate", "=ds=#e13#" };
-		{ 20, 46398, "", "=q1=Calico Cat", "=ds=#e13#" };
-		{ 21, 8485, "", "=q1=Cat Carrier (Bombay)", "=ds=#e13#" };
-		{ 22, 8486, "", "=q1=Cat Carrier (Cornish Rex)", "=ds=#e13#" };
-		{ 23, 8487, "", "=q1=Cat Carrier (Orange Tabby)", "=ds=#e13#" };
-		{ 24, 8490, "", "=q1=Cat Carrier (Siamese)", "=ds=#e13#" };
-		{ 25, 8488, "", "=q1=Cat Carrier (Silver Tabby)", "=ds=#e13#" };
-		{ 26, 8489, "", "=q1=Cat Carrier (White Kitten)", "=ds=#e13#" };
-		{ 27, 10393, "", "=q1=Cockroach", "=ds=#e13#" };
-		{ 28, 10392, "", "=q1=Crimson Snake", "=ds=#e13#" };
-		{ 29, 29953, "", "=q1=Golden Dragonhawk Hatchling", "=ds=#e13#" };
-		{ 30, 8500, "", "=q1=Great Horned Owl", "=ds=#e13#" };
+		[1] = { itemID = 44984 }; --Ammen Vale Lashling
+		[2] = { itemID = 54436 }; --Blue Clockwork Rocket Bot
+		[3] = { itemID = 44970 }; --Dun Morogh Cub
+		[4] = { itemID = 44973 }; --Durotar Scorpion
+		[5] = { itemID = 44974 }; --Elwynn Lamb
+		[6] = { itemID = 44982 }; --Enchanted Broom
+		[7] = { itemID = 39973 }; --Ghostly Skull
+		[8] = { itemID = 45002 }; --Mechanopeep
+		[9] = { itemID = 44980 }; --Mulgore Hatchling
+		[10] = { itemID = 45606 }; --Sen'jin Fetish
+		[11] = { itemID = 44965 }; --Teldrassil Sproutling
+		[12] = { itemID = 44971 }; --Tirisfal Batling
+		[13] = { itemID = 44822 }; --Albino Snake
+		[14] = { itemID = 11023 }; --Ancona Chicken
+		[15] = { itemID = 10360 }; --Black Kingsnake
+		[16] = { itemID = 10361 }; --Brown Snake
+		[17] = { itemID = 29958 }; --Blue Dragonhawk Hatchling
+		[18] = { itemID = 29901 }; --Blue Moth Egg
+		[19] = { itemID = 29364 }; --Brown Rabbit Crate
+		[20] = { itemID = 46398 }; --Calico Cat
+		[21] = { itemID = 8485 }; --Cat Carrier (Bombay)
+		[22] = { itemID = 8486 }; --Cat Carrier (Cornish Rex)
+		[23] = { itemID = 8487 }; --Cat Carrier (Orange Tabby)
+		[24] = { itemID = 8490 }; --Cat Carrier (Siamese)
+		[25] = { itemID = 8488 }; --Cat Carrier (Silver Tabby)
+		[26] = { itemID = 8489 }; --Cat Carrier (White Kitten)
+		[27] = { itemID = 10393 }; --Cockroach
+		[28] = { itemID = 10392 }; --Crimson Snake
+		[29] = { itemID = 29953 }; --Golden Dragonhawk Hatchling
+		[30] = { itemID = 8500 }; --Great Horned Owl
 	};
 	{
 		Name = AL["Merchant Sold"];
-		{ 1, 8501, "", "=q1=Hawk Owl", "=ds=#e13#" };
-		{ 2, 29363, "", "=q1=Mana Wyrmling", "=ds=#e13#" };
-		{ 3, 48120, "", "=q1=Obsidian Hatchling", "=ds=#e13#" };
-		{ 4, 8496, "", "=q1=Parrot Cage (Cockatiel)", "=ds=#e13#" };
-		{ 5, 8492, "", "=q1=Parrot Cage (Green Wing Macaw)", "=ds=#e13#" };
-		{ 6, 8495, "", "=q1=Parrot Cage (Senegal)", "=ds=#e13#" };
-		{ 7, 10394, "", "=q1=Prairie Dog Whistle", "=ds=#e13#" };
-		{ 8, 8497, "", "=q1=Rabbit Crate (Snowshoe)", "=ds=#e13#" };
-		{ 9, 29956, "", "=q1=Red Dragonhawk Hatchling", "=ds=#e13#" };
-		{ 10, 29902, "", "=q1=Red Moth Egg", "=ds=#e13#" };
-		{ 11, 29957, "", "=q1=Silver Dragonhawk Hatchling", "=ds=#e13#" };
-		{ 12, 11026, "", "=q1=Tree Frog Box", "=ds=#e13#" };
-		{ 13, 29904, "", "=q1=White Moth Egg", "=ds=#e13#" };
-		{ 14, 11027, "", "=q1=Wood Frog Box", "=ds=#e13#" };
-		{ 15, 29903, "", "=q1=Yellow Moth Egg", "=ds=#e13#" };
+		[1] = { itemID = 8501 }; --Hawk Owl
+		[2] = { itemID = 29363 }; --Mana Wyrmling
+		[3] = { itemID = 48120 }; --Obsidian Hatchling
+		[4] = { itemID = 8496 }; --Parrot Cage (Cockatiel)
+		[5] = { itemID = 8492 }; --Parrot Cage (Green Wing Macaw)
+		[6] = { itemID = 8495 }; --Parrot Cage (Senegal)
+		[7] = { itemID = 10394 }; --Prairie Dog Whistle
+		[8] = { itemID = 8497 }; --Rabbit Crate (Snowshoe)
+		[9] = { itemID = 29956 }; --Red Dragonhawk Hatchling
+		[10] = { itemID = 29902 }; --Red Moth Egg
+		[11] = { itemID = 29957 }; --Silver Dragonhawk Hatchling
+		[12] = { itemID = 11026 }; --Tree Frog Box
+		[13] = { itemID = 29904 }; --White Moth Egg
+		[14] = { itemID = 11027 }; --Wood Frog Box
+		[15] = { itemID = 29903 }; --Yellow Moth Egg
 	};
 	{
 		Name = AL["Quest"].." / "..AL["Crafted"];
-		{ 1, 0, "INV_Box_01", "=q6=" .. AL["Quest"], "" };
-		{ 2, 45022, "", "=q3=Argent Gruntling", "=ds=#e13# =ec1=#m6#" };
-		{ 3, 44998, "", "=q3=Argent Squire", "=ds=#e13# =ec1=#m7#" };
-		{ 4, 35350, "", "=q3=Chuck's Bucket", "=ds=#e13#" };
-		{ 5, 33818, "", "=q3=Muckbreath's Bucket", "=ds=#e13#" };
-		{ 6, 35349, "", "=q3=Snarly's Bucket", "=ds=#e13#" };
-		{ 7, 44983, "", "=q3=Strand Crawler", "=ds=#e13#" };
-		{ 8, 33816, "", "=q3=Toothy's Bucket", "=ds=#e13#" };
-		{ 9, 19450, "", "=q1=A Jubling's Tiny Home", "=ds=#e13#" };
-		{ 10, 11110, "", "=q1=Chicken Egg", "=ds=#e13#" };
-		{ 11, 10398, "", "=q1=Mechanical Chicken", "=ds=#e13#" };
-		{ 12, 31760, "", "=q1=Miniwing", "=ds=#e13#" };
-		{ 13, 12529, "", "=q1=Smolderweb Carrier", "=ds=#e13#" };
-		{ 14, 11474, "", "=q1=Sprite Darter Egg", "=ds=#e13#" };
-		{ 15, 12264, "", "=q1=Worg Carrier", "=ds=#e13#" };
-		{ 16, 0, "INV_Box_01", "=q6=" .. AL["Crafted"], "" };
-		{ 17, 15996, "", "=q1=Lifelike Mechanical Toad", "=ds=#e13#" };
-		{ 18, 11826, "", "=q1=Lil' Smoky", "=ds=#e13#" };
-		{ 19, 4401, "", "=q1=Mechanical Squirrel Box", "=ds=#e13#" };
-		{ 20, 11825, "", "=q1=Pet Bombling", "=ds=#e13#" };
-		{ 21, 21277, "", "=q1=Tranquil Mechanical Yeti", "=ds=#e13#" };
+		[1] = { icon = "INV_Box_01", name = "=q6=" .. AL["Quest"] };
+		[2] = { itemID = 45022 }; --Argent Gruntling
+		[3] = { itemID = 44998 }; --Argent Squire
+		[4] = { itemID = 35350 }; --Chuck's Bucket
+		[5] = { itemID = 33818 }; --Muckbreath's Bucket
+		[6] = { itemID = 35349 }; --Snarly's Bucket
+		[7] = { itemID = 44983 }; --Strand Crawler
+		[8] = { itemID = 33816 }; --Toothy's Bucket
+		[9] = { itemID = 19450 }; --A Jubling's Tiny Home
+		[10] = { itemID = 11110 }; --Chicken Egg
+		[11] = { itemID = 10398 }; --Mechanical Chicken
+		[12] = { itemID = 31760 }; --Miniwing
+		[13] = { itemID = 12529 }; --Smolderweb Carrier
+		[14] = { itemID = 11474 }; --Sprite Darter Egg
+		[15] = { itemID = 12264 }; --Worg Carrier
+		[16] = { icon = "INV_Box_01", name = "=q6=" .. AL["Crafted"] };
+		[17] = { itemID = 15996 }; --Lifelike Mechanical Toad
+		[18] = { itemID = 11826 }; --Lil' Smoky
+		[19] = { itemID = 4401 }; --Mechanical Squirrel Box
+		[20] = { itemID = 11825 }; --Pet Bombling
+		[21] = { itemID = 21277 }; --Tranquil Mechanical Yeti
 	};
 	{
 		Name = AL["Rare"];
-		{ 1, 0, "INV_Box_01", "=q6=" .. AL["Achievement"], "" };
-		{ 2, 44738, "", "=q3=Kirin Tor Familiar", "=ds=#e13#" };
-		{ 3, 44841, "", "=q3=Little Fawn's Salt Lick", "=ds=#e13#" };
-		{ 4, 49912, "", "=q3=Perky Pug", "=ds=#e13#" };
-		{ 5, 49646, "", "=q3=Core Hound Pup", "=ds=#e13#" };
-		{ 6, 40653, "", "=q3=Reeking Pet Carrier", "=ds=#e13#" };
-		{ 7, 44810, "", "=q3=Turkey Cage", "=ds=#e13#" };
-		{ 8, 44819, "", "=q1=Baby Blizzard Bear", "=ds=#e13#" };
-		{ 9, 49362, "", "=q1=Onyxian Whelpling", "=ds=#e13#" };
-		{ 16, 0, "INV_Box_01", "=q6=" .. AL["Faction"], "" };
-		{ 17, 38628, "", "=q3=Nether Ray Fry", "=ds=#e13#" };
-		{ 18, 44723, "", "=q3=Nurtured Penguin Egg", "=ds=#e13#" };
-		{ 19, 46820, "", "=q3=Shimmering Wyrmling", "=ds=#e13# =ec1=#m7#" };
-		{ 20, 46821, "", "=q3=Shimmering Wyrmling", "=ds=#e13# =ec1=#m6#" };
-		{ 21, 34478, "", "=q3=Tiny Sporebat", "=ds=#e13#" };
-		{ 22, 39898, "", "=q1=Cobra Hatchling", "=ds=#e13#" };
-		{ 23, 44721, "", "=q1=Proto-Drake Whelp", "=ds=#e13#" };
-		{ 24, 39896, "", "=q1=Tickbird Hatchling", "=ds=#e13#" };
-		{ 25, 39899, "", "=q1=White Tickbird Hatchling", "=ds=#e13#" };
+		[1] = { icon = "INV_Box_01", name = "=q6=" .. AL["Achievement"] };
+		[2] = { itemID = 44738 }; --Kirin Tor Familiar
+		[3] = { itemID = 44841 }; --Little Fawn's Salt Lick
+		[4] = { itemID = 49912 }; --Perky Pug
+		[5] = { itemID = 49646 }; --Core Hound Pup
+		[6] = { itemID = 40653 }; --Reeking Pet Carrier
+		[7] = { itemID = 44810 }; --Turkey Cage
+		[8] = { itemID = 44819 }; --Baby Blizzard Bear
+		[9] = { itemID = 49362 }; --Onyxian Whelpling
+		[16] = { icon = "INV_Box_01", name = "=q6=" .. AL["Faction"] };
+		[17] = { itemID = 38628 }; --Nether Ray Fry
+		[18] = { itemID = 44723 }; --Nurtured Penguin Egg
+		[19] = { itemID = 46820 }; --Shimmering Wyrmling
+		[20] = { itemID = 46821 }; --Shimmering Wyrmling
+		[21] = { itemID = 34478 }; --Tiny Sporebat
+		[22] = { itemID = 39898 }; --Cobra Hatchling
+		[23] = { itemID = 44721 }; --Proto-Drake Whelp
+		[24] = { itemID = 39896 }; --Tickbird Hatchling
+		[25] = { itemID = 39899 }; --White Tickbird Hatchling
 	};
 	{
 		Name = AL["Rare"];
-		{ 1, 0, "INV_Box_01", "=q6=#z17#", "" };
-		{ 2, 8494, "", "=q4=Parrot Cage (Hyacinth Macaw)", "=ds=#e13#" };
-		{ 3, 43698, "", "=q3=Giant Sewer Rat", "=ds=#e13#" };
-		{ 4, 34535, "", "=q1=Azure Whelpling", "=ds=#e13#" };
-		{ 5, 29960, "", "=q1=Captured Firefly", "=ds=#e13#" };
-		{ 6, 8491, "", "=q1=Cat Carrier (Black Tabby)", "=ds=#e13#" };
-		{ 7, 10822, "", "=q1=Dark Whelpling", "=ds=#e13#" };
-		{ 8, 48112, "", "=q1=Darting Hatchling", "=ds=#e13#" };
-		{ 9, 20769, "", "=q1=Disgusting Oozeling", "=ds=#e13#" };
-		{ 10, 48116, "", "=q1=Gundrak Hatchling", "=ds=#e13#" };
-		{ 11, 48118, "", "=q1=Leaping Hatchling", "=ds=#e13#" };
-		{ 12, 27445, "", "=q1=Magical Crawdad Box", "=ds=#e13#" };
-		{ 13, 48122, "", "=q1=Ravasaur Hatchling", "=ds=#e13#" };
-		{ 14, 48124, "", "=q1=Razormaw Hatchling", "=ds=#e13#" };
-		{ 15, 8499, "", "=q1=Tiny Crimson Whelpling", "=ds=#e13#" };
-		{ 16, 8498, "", "=q1=Tiny Emerald Whelpling", "=ds=#e13#" };
-		{ 18, 0, "INV_Box_01", "=q6=" .. AL["Dungeon/Raid"], "" };
-		{ 19, 33993, "", "=q3=Mojo", "=q1=" .. BabbleZone["Zul'Aman"] };
-		{ 20, 35504, "", "=q3=Phoenix Hatchling",
-			"=q2=" .. BabbleBoss["Kael'thas Sunstrider"] .. ", =q1=" .. BabbleZone["Magisters' Terrace"] };
-		{ 21, 38658, "", "=q3=Vampiric Batling", "=q2=" ..
-			BabbleBoss["Prince Tenris Mirkblood"] .. ", =q1=" .. BabbleZone["Karazhan"] };
-		{ 22, 48114, "", "=q1=Deviate Hatchling",
-			"=q2=" .. AL["Deviate Ravager/Deviate Guardian"] .. ", =q1=" .. BabbleZone["Wailing Caverns"] };
-		{ 23, 48126, "", "=q1=Razzashi Hatchling", "=q2=" .. AL["Razzashi Raptor"] .. ", =q1=" .. BabbleZone["Zul'Gurub"] };
+		[1] = { icon = "INV_Box_01", name = "=q6=#z17#" };
+		[2] = { itemID = 8494 }; --Parrot Cage (Hyacinth Macaw)
+		[3] = { itemID = 43698 }; --Giant Sewer Rat
+		[4] = { itemID = 34535 }; --Azure Whelpling
+		[5] = { itemID = 29960 }; --Captured Firefly
+		[6] = { itemID = 8491 }; --Cat Carrier (Black Tabby)
+		[7] = { itemID = 10822 }; --Dark Whelpling
+		[8] = { itemID = 48112 }; --Darting Hatchling
+		[9] = { itemID = 20769 }; --Disgusting Oozeling
+		[10] = { itemID = 48116 }; --Gundrak Hatchling
+		[11] = { itemID = 48118 }; --Leaping Hatchling
+		[12] = { itemID = 27445 }; --Magical Crawdad Box
+		[13] = { itemID = 48122 }; --Ravasaur Hatchling
+		[14] = { itemID = 48124 }; --Razormaw Hatchling
+		[15] = { itemID = 8499 }; --Tiny Crimson Whelpling
+		[16] = { itemID = 8498 }; --Tiny Emerald Whelpling
+		[18] = { icon = "INV_Box_01", name = "=q6=" .. AL["Dungeon/Raid"] };
+		[19] = { itemID = 33993, desc = "=q1=" .. BabbleZone["Zul'Aman"] }; --Mojo
+		[20] = { itemID = 35504, desc = "=q2=" .. BabbleBoss["Kael'thas Sunstrider"] .. ", =q1=" .. BabbleZone["Magisters' Terrace"] }; --Phoenix Hatchling
+		[21] = { itemID = 38658, desc = "=q2=" .. BabbleBoss["Prince Tenris Mirkblood"] .. ", =q1=" .. BabbleZone["Karazhan"] }; --Vampiric Batling
+		[22] = { itemID = 48114, desc = "=q2=" .. AL["Deviate Ravager/Deviate Guardian"] .. ", =q1=" .. BabbleZone["Wailing Caverns"] }; --Deviate Hatchling
+		[23] = { itemID = 48126, desc = "=q2=" .. AL["Razzashi Raptor"] .. ", =q1=" .. BabbleZone["Zul'Gurub"] }; --Razzashi Hatchling
 	};
 	{
 		Name = AL["World Events"];
-		{ 1, 23083, "", "=q3=Captured Flame", "=ds=#e13#" };
-		{ 2, 34425, "", "=q3=Clockwork Rocket Bot", "=ds=#e13#" };
-		{ 3, 46545, "", "=q3=Curious Oracle Hatchling", "=ds=#e13#" };
-		{ 4, 46544, "", "=q3=Curious Wolvar Pup", "=ds=#e13#" };
-		{ 5, 32616, "", "=q3=Egbert's Egg", "=ds=#e13#" };
-		{ 6, 32622, "", "=q3=Elekk Training Collar", "=ds=#e13#" };
-		{ 7, 53641, "", "=q3=Ice Chip", "=ds=#e13#" };
-		{ 8, 46707, "", "=q3=Pint-Sized Pink Pachyderm", "=ds=#e13#" };
-		{ 9, 34955, "", "=q3=Scorched Stone", "=ds=#e13#" };
-		{ 10, 33154, "", "=q3=Sinister Squashling", "=ds=#e13#" };
-		{ 11, 32617, "", "=q3=Sleepy Willy", "=ds=#e13#" };
-		{ 12, 44794, "", "=q3=Spring Rabbit's Foot", "=ds=#e13#" };
-		{ 13, 32233, "", "=q3=Wolpertinger's Tankard", "=ds=#e13#" };
-		{ 14, 50446, "", "=q3=Toxic Wasteling", "=ds=#e13#" };
-		{ 16, 21301, "", "=q1=Green Helper Box", "=ds=#e13#" };
-		{ 17, 21308, "", "=q1=Jingling Bell", "=ds=#e13#" };
-		{ 18, 23007, "", "=q1=Piglet's Collar", "=ds=#e13#" };
-		{ 19, 23015, "", "=q1=Rat Cage", "=ds=#e13#" };
-		{ 20, 21305, "", "=q1=Red Helper Box", "=ds=#e13#" };
-		{ 21, 21309, "", "=q1=Snowman Kit", "=ds=#e13#" };
-		{ 22, 22235, "", "=q1=Truesilver Shafted Arrow", "=ds=#e13#" };
-		{ 23, 23002, "", "=q1=Turtle Box", "=ds=#e13#" };
+		[1] = { itemID = 23083 }; --Captured Flame
+		[2] = { itemID = 34425 }; --Clockwork Rocket Bot
+		[3] = { itemID = 46545 }; --Curious Oracle Hatchling
+		[4] = { itemID = 46544 }; --Curious Wolvar Pup
+		[5] = { itemID = 32616 }; --Egbert's Egg
+		[6] = { itemID = 32622 }; --Elekk Training Collar
+		[7] = { itemID = 53641 }; --Ice Chip
+		[8] = { itemID = 46707 }; --Pint-Sized Pink Pachyderm
+		[9] = { itemID = 34955 }; --Scorched Stone
+		[10] = { itemID = 33154 }; --Sinister Squashling
+		[11] = { itemID = 32617 }; --Sleepy Willy
+		[12] = { itemID = 44794 }; --Spring Rabbit's Foot
+		[13] = { itemID = 32233 }; --Wolpertinger's Tankard
+		[14] = { itemID = 50446 }; --Toxic Wasteling
+		[16] = { itemID = 21301 }; --Green Helper Box
+		[17] = { itemID = 21308 }; --Jingling Bell
+		[18] = { itemID = 23007 }; --Piglet's Collar
+		[19] = { itemID = 23015 }; --Rat Cage
+		[20] = { itemID = 21305 }; --Red Helper Box
+		[21] = { itemID = 21309 }; --Snowman Kit
+		[22] = { itemID = 22235 }; --Truesilver Shafted Arrow
+		[23] = { itemID = 23002 }; --Turtle Box
 	};
 	{
 		Name = AL["Promotional"];
-		{ 1, 34493, "", "=q4=Dragon Kite", "=ds=#e13#" };
-		{ 2, 23713, "", "=q4=Hippogryph Hatchling", "=ds=#e13#" };
-		{ 3, 49287, "", "=q4=Tuskarr Kite", "=ds=#e13#" };
-		{ 4, 32588, "", "=q3=Banana Charm", "=ds=#e13#" };
-		{ 5, 20371, "", "=q3=Blue Murloc Egg", "=ds=#e13#" };
-		{ 6, 13584, "", "=q3=Diablo Stone", "=ds=#e13#" };
-		{ 7, 39286, "", "=q3=Frosty's Collar", "=ds=#e13#" };
-		{ 8, 37297, "", "=q3=Gold Medallion", "=ds=#e13#" };
-		{ 9, 46802, "", "=q3=Heavy Murloc Egg", "=ds=#e13#" };
-		{ 10, 30360, "", "=q3=Lurky's Egg", "=ds=#e13#" };
-		{ 11, 45180, "", "=q3=Murkimus' Little Spear", "=ds=#e13#" };
-		{ 12, 25535, "", "=q3=Netherwhelp's Collar", "=ds=#e13#" };
-		{ 13, 13583, "", "=q3=Panda Collar", "=ds=#e13#" };
-		{ 14, 22114, "", "=q3=Pink Murloc Egg", "=ds=#e13#" };
-		{ 15, 34492, "", "=q3=Rocket Chicken", "=ds=#e13#" };
-		{ 16, 38050, "", "=q3=Soul-Trader Beacon", "=ds=#e13#" };
-		{ 17, 49343, "", "=q3=Spectral Tiger Cub", "=ds=#e13#" };
-		{ 18, 39656, "", "=q3=Tyrael's Hilt", "=ds=#e13#" };
-		{ 19, 41133, "", "=q3=Unhatched Mr. Chilly", "=ds=#e13#" };
-		{ 20, 46767, "", "=q3=Warbot Ignition Key", "=ds=#e13#" };
-		{ 21, 13582, "", "=q3=Zergling Leash", "=ds=#e13#" };
-		{ 22, 56806, "", "=q3=Mini Thor", "=ds=#e13#" };
+		[1] = { itemID = 34493 }; --Dragon Kite
+		[2] = { itemID = 23713 }; --Hippogryph Hatchling
+		[3] = { itemID = 49287 }; --Tuskarr Kite
+		[4] = { itemID = 32588 }; --Banana Charm
+		[5] = { itemID = 20371 }; --Blue Murloc Egg
+		[6] = { itemID = 13584 }; --Diablo Stone
+		[7] = { itemID = 39286 }; --Frosty's Collar
+		[8] = { itemID = 37297 }; --Gold Medallion
+		[9] = { itemID = 46802 }; --Heavy Murloc Egg
+		[10] = { itemID = 30360 }; --Lurky's Egg
+		[11] = { itemID = 45180 }; --Murkimus' Little Spear
+		[12] = { itemID = 25535 }; --Netherwhelp's Collar
+		[13] = { itemID = 13583 }; --Panda Collar
+		[14] = { itemID = 22114 }; --Pink Murloc Egg
+		[15] = { itemID = 34492 }; --Rocket Chicken
+		[16] = { itemID = 38050 }; --Soul-Trader Beacon
+		[17] = { itemID = 49343 }; --Spectral Tiger Cub
+		[18] = { itemID = 39656 }; --Tyrael's Hilt
+		[19] = { itemID = 41133 }; --Unhatched Mr. Chilly
+		[20] = { itemID = 46767 }; --Warbot Ignition Key
+		[21] = { itemID = 13582 }; --Zergling Leash
+		[22] = { itemID = 56806 }; --Mini Thor
 	};
 	{
 		Name = AL["Pet Store"];
-		{ 1, 49693, "", "=q3=Lil' Phylactery", "=ds=#e13#" };
-		{ 2, 54847, "", "=q3=Lil' XT", "=ds=#e13#" };
-		{ 3, 49665, "", "=q3=Pandaren Monk", "=ds=#e13#" };
-		{ 4, 49663, "", "=q3=Wind Rider Cub", "=ds=#e13#" };
-		{ 5, 49662, "", "=q3=Gryphon Hatchling", "=ds=#e13#" };
+		[1] = { itemID = 49693 }; --Lil' Phylactery
+		[2] = { itemID = 54847 }; --Lil' XT
+		[3] = { itemID = 49665 }; --Pandaren Monk
+		[4] = { itemID = 49663 }; --Wind Rider Cub
+		[5] = { itemID = 49662 }; --Gryphon Hatchling
 	};
 	{
 		Name = AL["Accessories"];
-		{ 1, 47541, "", "=q3=Argent Pony Bridle", "=ds=" };
-		{ 2, 35223, "", "=q3=Papa Hummel's Old-Fashioned Pet Biscuit", "=ds=" };
-		{ 3, 37431, "", "=q2=Fetch Ball", "=ds=" };
-		{ 4, 43626, "", "=q2=Happy Pet Snack", "=ds=" };
-		{ 5, 43352, "", "=q2=Pet Grooming Kit", "=ds=" };
-		{ 6, 44820, "", "=q1=Red Ribbon Pet Leash", "=ds=" };
-		{ 7, 37460, "", "=q1=Rope Pet Leash", "=ds=" };
+		[1] = { itemID = 47541 }; --Argent Pony Bridle
+		[2] = { itemID = 35223 }; --Papa Hummel's Old-Fashioned Pet Biscuit
+		[3] = { itemID = 37431 }; --Fetch Ball
+		[4] = { itemID = 43626 }; --Happy Pet Snack
+		[5] = { itemID = 43352 }; --Pet Grooming Kit
+		[6] = { itemID = 44820 }; --Red Ribbon Pet Leash
+		[7] = { itemID = 37460 }; --Rope Pet Leash
 	};
 };
 
@@ -300,334 +299,329 @@ AtlasLoot_Data["VanityPets"] = {
 --- Mounts ---
 --------------
 AtlasLoot_Data["Mounts"] = {
+	Module = "AtlasLoot_Vanity";
 	Name = "Mounts";
 	{
 		Name = AL["Alliance Mounts"].." Page 1";
-		{ 1, 0, "inv_misc_tournaments_symbol_nightelf", "=q6=" .. BabbleFaction["Darnassus"] .. " #j30#", "=ec1=#m7#" };
-		{ 2, 18766, "", "=q4=Reins of the Swift Frostsaber", "=ds=#e12#" };
-		{ 3, 18767, "", "=q4=Reins of the Swift Mistsaber", "=ds=#e12#" };
-		{ 4, 18902, "", "=q4=Reins of the Swift Stormsaber", "=ds=#e12#" };
-		{ 5, 8632, "", "=q3=Reins of the Spotted Frostsaber", "=ds=#e12#" };
-		{ 6, 47100, "", "=q3=Reins of the Striped Dawnsaber", "=ds=#e12#" };
-		{ 7, 8631, "", "=q3=Reins of the Striped Frostsaber", "=ds=#e12#" };
-		{ 8, 8629, "", "=q3=Reins of the Striped Nightsaber", "=ds=#e12#" };
-		{ 16, 0, "inv_misc_tournaments_symbol_gnome", "=q6=" .. BabbleFaction["Gnomeregan Exiles"] .. " #j30#", "=ec1=#m7#" };
-		{ 17, 18772, "", "=q4=Swift Green Mechanostrider", "=ds=#e12#" };
-		{ 18, 18773, "", "=q4=Swift White Mechanostrider", "=ds=#e12#" };
-		{ 19, 18774, "", "=q4=Swift Yellow Mechanostrider", "=ds=#e12#" };
-		{ 20, 8595, "", "=q3=Blue Mechanostrider", "=ds=#e12#" };
-		{ 21, 13321, "", "=q3=Green Mechanostrider", "=ds=#e12#" };
-		{ 22, 8563, "", "=q3=Red Mechanostrider", "=ds=#e12#" };
-		{ 23, 13322, "", "=q3=Unpainted Mechanostrider", "=ds=#e12#" };
+		[1] = { icon = "inv_misc_tournaments_symbol_nightelf", name = "=q6=" .. BabbleFaction["Darnassus"] .. " #j30#", "=ec1=#m7#" };
+		[2] = { itemID = 18766 }; --Reins of the Swift Frostsaber
+		[3] = { itemID = 18767 }; --Reins of the Swift Mistsaber
+		[4] = { itemID = 18902 }; --Reins of the Swift Stormsaber
+		[5] = { itemID = 8632 }; --Reins of the Spotted Frostsaber
+		[6] = { itemID = 47100 }; --Reins of the Striped Dawnsaber
+		[7] = { itemID = 8631 }; --Reins of the Striped Frostsaber
+		[8] = { itemID = 8629 }; --Reins of the Striped Nightsaber
+		[16] = { icon = "inv_misc_tournaments_symbol_gnome", name = "=q6=" .. BabbleFaction["Gnomeregan Exiles"] .. " #j30#", "=ec1=#m7#" };
+		[17] = { itemID = 18772 }; --Swift Green Mechanostrider
+		[18] = { itemID = 18773 }; --Swift White Mechanostrider
+		[19] = { itemID = 18774 }; --Swift Yellow Mechanostrider
+		[20] = { itemID = 8595 }; --Blue Mechanostrider
+		[21] = { itemID = 13321 }; --Green Mechanostrider
+		[22] = { itemID = 8563 }; --Red Mechanostrider
+		[23] = { itemID = 13322 }; --Unpainted Mechanostrider
 	};
 	{
 		Name = AL["Alliance Mounts"].." Page 2";
-		{ 1, 0, "inv_misc_tournaments_symbol_dwarf", "=q6=" .. BabbleFaction["Ironforge"] .. " #j30#", "=ec1=#m7#" };
-		{ 2, 18786, "", "=q4=Swift Brown Ram", "=ds=#e12#" };
-		{ 3, 18787, "", "=q4=Swift Gray Ram", "=ds=#e12#" };
-		{ 4, 18785, "", "=q4=Swift White Ram", "=ds=#e12#" };
-		{ 5, 5872, "", "=q3=Brown Ram", "=ds=#e12#" };
-		{ 6, 5864, "", "=q3=Gray Ram", "=ds=#e12#" };
-		{ 7, 5873, "", "=q3=White Ram", "=ds=#e12#" };
-		{ 9, 0, "inv_misc_tournaments_symbol_draenei", "=q6=" .. BabbleFaction["Exodar"] .. " #j30#", "=ec1=#m7#" };
-		{ 10, 29745, "", "=q4=Great Blue Elekk", "=ds=#e12#" };
-		{ 11, 29746, "", "=q4=Great Green Elekk", "=ds=#e12#" };
-		{ 12, 29747, "", "=q4=Great Purple Elekk", "=ds=#e12#" };
-		{ 13, 28481, "", "=q3=Brown Elekk", "=ds=#e12#" };
-		{ 14, 29744, "", "=q3=Gray Elekk", "=ds=#e12#" };
-		{ 15, 29743, "", "=q3=Purple Elekk", "=ds=#e12#" };
-		{ 16, 0, "inv_misc_tournaments_symbol_human", "=q6=" .. BabbleFaction["Stormwind"] .. " #j30#", "=ec1=#m7#" };
-		{ 17, 18777, "", "=q4=Swift Brown Steed", "=ds=#e12#" };
-		{ 18, 18776, "", "=q4=Swift Palomino", "=ds=#e12#" };
-		{ 19, 18778, "", "=q4=Swift White Steed", "=ds=#e12#" };
-		{ 20, 2411, "", "=q3=Black Stallion Bridle", "=ds=#e12#" };
-		{ 21, 5656, "", "=q3=Brown Horse Bridle", "=ds=#e12#" };
-		{ 22, 5655, "", "=q3=Chestnut Mare Bridle", "=ds=#e12#" };
-		{ 23, 2414, "", "=q3=Pinto Bridle", "=ds=#e12#" };
+		[1] = { icon = "inv_misc_tournaments_symbol_dwarf", name = "=q6=" .. BabbleFaction["Ironforge"] .. " #j30#", "=ec1=#m7#" };
+		[2] = { itemID = 18786 }; --Swift Brown Ram
+		[3] = { itemID = 18787 }; --Swift Gray Ram
+		[4] = { itemID = 18785 }; --Swift White Ram
+		[5] = { itemID = 5872 }; --Brown Ram
+		[6] = { itemID = 5864 }; --Gray Ram
+		[7] = { itemID = 5873 }; --White Ram
+		[9] = { icon = "inv_misc_tournaments_symbol_draenei", name = "=q6=" .. BabbleFaction["Exodar"] .. " #j30#", "=ec1=#m7#" };
+		[10] = { itemID = 29745 }; --Great Blue Elekk
+		[11] = { itemID = 29746 }; --Great Green Elekk
+		[12] = { itemID = 29747 }; --Great Purple Elekk
+		[13] = { itemID = 28481 }; --Brown Elekk
+		[14] = { itemID = 29744 }; --Gray Elekk
+		[15] = { itemID = 29743 }; --Purple Elekk
+		[16] = { icon = "inv_misc_tournaments_symbol_human", name = "=q6=" .. BabbleFaction["Stormwind"] .. " #j30#", "=ec1=#m7#" };
+		[17] = { itemID = 18777 }; --Swift Brown Steed
+		[18] = { itemID = 18776 }; --Swift Palomino
+		[19] = { itemID = 18778 }; --Swift White Steed
+		[20] = { itemID = 2411 }; --Black Stallion Bridle
+		[21] = { itemID = 5656 }; --Brown Horse Bridle
+		[22] = { itemID = 5655 }; --Chestnut Mare Bridle
+		[23] = { itemID = 2414 }; --Pinto Bridle
 	};
 	{
 		Name = AL["Alliance Mounts"].." Page 3";
-		{ 1, 0, "INV_BannerPVP_02", "=q6=" .. AL["Alliance Flying Mounts"], "=ec1=#m7#" };
-		{ 2, 25473, "", "=q4=Swift Blue Gryphon", "=ds=#e12#" };
-		{ 3, 25528, "", "=q4=Swift Green Gryphon", "=ds=#e12#" };
-		{ 4, 25529, "", "=q4=Swift Purple Gryphon", "=ds=#e12#" };
-		{ 5, 25527, "", "=q4=Swift Red Gryphon", "=ds=#e12#" };
-		{ 6, 25471, "", "=q3=Ebon Gryphon", "=ds=#e12#" };
-		{ 7, 25470, "", "=q3=Golden Gryphon", "=ds=#e12#" };
-		{ 8, 25472, "", "=q3=Snowy Gryphon", "=ds=#e12#" };
-		{ 10, 44225, "", "=q4=Reins of the Armored Brown Bear", "=ds=#e12#" };
-		{ 11, 44230, "", "=q4=Reins of the Wooly Mammoth", "=ds=#e12#" };
-		{ 12, 44235, "", "=q4=Reins of the Traveler's Tundra Mammoth", "=ds=#e12#" };
-		{ 13, 44689, "", "=q4=Armored Snowy Gryphon", "=ds=#e12#" };
-		{ 16, 0, "INV_BannerPVP_02", "=q6=" .. BabbleFaction["Kurenai"] .. " #j30#", "=ec1=#m7#" };
-		{ 17, 29227, "", "=q4=Reins of the Cobalt War Talbuk", "=ds=#e12#" };
-		{ 18, 29229, "", "=q4=Reins of the Silver War Talbuk", "=ds=#e12#" };
-		{ 19, 29230, "", "=q4=Reins of the Tan War Talbuk", "=ds=#e12#" };
-		{ 20, 29231, "", "=q4=Reins of the White War Talbuk", "=ds=#e12#" };
-		{ 21, 31830, "", "=q4=Reins of the Cobalt Riding Talbuk", "=ds=#e12#" };
-		{ 22, 31832, "", "=q4=Reins of the Silver Riding Talbuk", "=ds=#e12#" };
-		{ 23, 31834, "", "=q4=Reins of the Tan Riding Talbuk", "=ds=#e12#" };
-		{ 24, 31836, "", "=q4=Reins of the White Riding Talbuk", "=ds=#e12#" };
-		{ 26, 0, "INV_BannerPVP_02", "=q6=" .. BabbleFaction["Wintersaber Trainers"] .. " #j30#", "=ec1=#m7#" };
-		{ 27, 13086, "", "=q4=Reins of the Winterspring Frostsaber", "=ds=#e12#" };
-		{ 28, 0, "INV_BannerPVP_02", "=q6=" .. BabbleFaction["The Silver Covenant"] .. " #j30#", "=ec1=#m7#" };
-		{ 29, 46815, "", "=q4=Quel'dorei Steed", "=ds=#e12#" };
-		{ 30, 46813, "", "=q4=Silver Covenant Hippogryph", "=ds=#e12#" };
+		[1] = { icon = "INV_BannerPVP_02", name = "=q6=" .. AL["Alliance Flying Mounts"], "=ec1=#m7#" };
+		[2] = { itemID = 25473 }; --Swift Blue Gryphon
+		[3] = { itemID = 25528 }; --Swift Green Gryphon
+		[4] = { itemID = 25529 }; --Swift Purple Gryphon
+		[5] = { itemID = 25527 }; --Swift Red Gryphon
+		[6] = { itemID = 25471 }; --Ebon Gryphon
+		[7] = { itemID = 25470 }; --Golden Gryphon
+		[8] = { itemID = 25472 }; --Snowy Gryphon
+		[10] = { itemID = 44225 }; --Reins of the Armored Brown Bear
+		[11] = { itemID = 44230 }; --Reins of the Wooly Mammoth
+		[12] = { itemID = 44235 }; --Reins of the Traveler's Tundra Mammoth
+		[13] = { itemID = 44689 }; --Armored Snowy Gryphon
+		[16] = { icon = "INV_BannerPVP_02", name = "=q6=" .. BabbleFaction["Kurenai"] .. " #j30#", "=ec1=#m7#" };
+		[17] = { itemID = 29227 }; --Reins of the Cobalt War Talbuk
+		[18] = { itemID = 29229 }; --Reins of the Silver War Talbuk
+		[19] = { itemID = 29230 }; --Reins of the Tan War Talbuk
+		[20] = { itemID = 29231 }; --Reins of the White War Talbuk
+		[21] = { itemID = 31830 }; --Reins of the Cobalt Riding Talbuk
+		[22] = { itemID = 31832 }; --Reins of the Silver Riding Talbuk
+		[23] = { itemID = 31834 }; --Reins of the Tan Riding Talbuk
+		[24] = { itemID = 31836 }; --Reins of the White Riding Talbuk
+		[26] = { icon = "INV_BannerPVP_02", name = "=q6=" .. BabbleFaction["Wintersaber Trainers"] .. " #j30#", "=ec1=#m7#" };
+		[27] = { itemID = 13086 }; --Reins of the Winterspring Frostsaber
+		[28] = { icon = "INV_BannerPVP_02", name = "=q6=" .. BabbleFaction["The Silver Covenant"] .. " #j30#", "=ec1=#m7#" };
+		[29] = { itemID = 46815 }; --Quel'dorei Steed
+		[30] = { itemID = 46813 }; --Silver Covenant Hippogryph
 	};
 	{
 		Name = AL["Horde Mounts"].." Page 1";
-		{ 1, 0, "inv_misc_tournaments_symbol_orc", "=q6=" .. BabbleFaction["Orgrimmar"] .. " #j30#", "=ec1=#m6#" };
-		{ 2, 18796, "", "=q4=Horn of the Swift Brown Wolf", "=ds=#e12#" };
-		{ 3, 18798, "", "=q4=Horn of the Swift Gray Wolf", "=ds=#e12#" };
-		{ 4, 18797, "", "=q4=Horn of the Swift Timber Wolf", "=ds=#e12#" };
-		{ 5, 46099, "", "=q3=Horn of the Black Wolf", "=ds=#e12#" };
-		{ 6, 5668, "", "=q3=Horn of the Brown Wolf", "=ds=#e12#" };
-		{ 7, 5665, "", "=q3=Horn of the Dire Wolf", "=ds=#e12#" };
-		{ 8, 1132, "", "=q3=Horn of the Timber Wolf", "=ds=#e12#" };
-		{ 16, 0, "inv_misc_tournaments_symbol_bloodelf", "=q6=" .. BabbleFaction["Silvermoon City"] .. " #j30#", "=ec1=#m6#" };
-		{ 17, 29223, "", "=q4=Swift Green Hawkstrider", "=ds=#e12#" };
-		{ 18, 28936, "", "=q4=Swift Pink Hawkstrider", "=ds=#e12#" };
-		{ 19, 29224, "", "=q4=Swift Purple Hawkstrider", "=ds=#e12#" };
-		{ 20, 29221, "", "=q3=Black Hawkstrider", "=ds=#e12#" };
-		{ 21, 29220, "", "=q3=Blue Hawkstrider", "=ds=#e12#" };
-		{ 22, 29222, "", "=q3=Purple Hawkstrider", "=ds=#e12#" };
-		{ 23, 28927, "", "=q3=Red Hawkstrider", "=ds=#e12#" };
+		[1] = { icon = "inv_misc_tournaments_symbol_orc", name = "=q6=" .. BabbleFaction["Orgrimmar"] .. " #j30#", "=ec1=#m6#" };
+		[2] = { itemID = 18796 }; --Horn of the Swift Brown Wolf
+		[3] = { itemID = 18798 }; --Horn of the Swift Gray Wolf
+		[4] = { itemID = 18797 }; --Horn of the Swift Timber Wolf
+		[5] = { itemID = 46099 }; --Horn of the Black Wolf
+		[6] = { itemID = 5668 }; --Horn of the Brown Wolf
+		[7] = { itemID = 5665 }; --Horn of the Dire Wolf
+		[8] = { itemID = 1132 }; --Horn of the Timber Wolf
+		[16] = { icon = "inv_misc_tournaments_symbol_bloodelf", name = "=q6=" .. BabbleFaction["Silvermoon City"] .. " #j30#", "=ec1=#m6#" };
+		[17] = { itemID = 29223 }; --Swift Green Hawkstrider
+		[18] = { itemID = 28936 }; --Swift Pink Hawkstrider
+		[19] = { itemID = 29224 }; --Swift Purple Hawkstrider
+		[20] = { itemID = 29221 }; --Black Hawkstrider
+		[21] = { itemID = 29220 }; --Blue Hawkstrider
+		[22] = { itemID = 29222 }; --Purple Hawkstrider
+		[23] = { itemID = 28927 }; --Red Hawkstrider
 	};
 	{
 		Name = AL["Horde Mounts"].." Page 2";
-		{ 1, 0, "inv_misc_tournaments_symbol_troll", "=q6=" .. BabbleFaction["Darkspear Trolls"] .. " #j30#", "=ec1=#m6#" };
-		{ 2, 18788, "", "=q4=Swift Blue Raptor", "=ds=#e12#" };
-		{ 3, 18789, "", "=q4=Swift Olive Raptor", "=ds=#e12#" };
-		{ 4, 18790, "", "=q4=Swift Orange Raptor", "=ds=#e12#" };
-		{ 5, 8588, "", "=q3=Whistle of the Emerald Raptor", "=ds=#e12#" };
-		{ 6, 8591, "", "=q3=Whistle of the Turquoise Raptor", "=ds=#e12#" };
-		{ 7, 8592, "", "=q3=Whistle of the Violet Raptor", "=ds=#e12#" };
-		{ 9, 0, "inv_misc_tournaments_symbol_tauren", "=q6=" .. BabbleFaction["Thunder Bluff"] .. " #j30#", "=ec1=#m6#" };
-		{ 10, 18794, "", "=q4=Great Brown Kodo", "=ds=#e12#" };
-		{ 11, 18795, "", "=q4=Great Gray Kodo", "=ds=#e12#" };
-		{ 12, 18793, "", "=q4=Great White Kodo", "=ds=#e12#" };
-		{ 13, 15290, "", "=q3=Brown Kodo", "=ds=#e12#" };
-		{ 14, 15277, "", "=q3=Gray Kodo", "=ds=#e12#" };
-		{ 15, 46100, "", "=q3=White Kodo", "=ds=#e12#" };
-		{ 16, 0, "inv_misc_tournaments_symbol_scourge", "=q6=" .. BabbleFaction["Undercity"] .. " #j30#", "=ec1=#m6#" };
-		{ 17, 13334, "", "=q4=Green Skeletal Warhorse", "=ds=#e12#" };
-		{ 18, 47101, "", "=q4=Ochre Skeletal Warhorse", "=ds=#e12#" };
-		{ 19, 18791, "", "=q4=Purple Skeletal Warhorse", "=ds=#e12#" };
-		{ 20, 46308, "", "=q3=Black Skeletal Horse", "=ds=#e12#" };
-		{ 21, 13332, "", "=q3=Blue Skeletal Horse", "=ds=#e12#" };
-		{ 22, 13333, "", "=q3=Brown Skeletal Horse", "=ds=#e12#" };
-		{ 23, 13331, "", "=q3=Red Skeletal Horse", "=ds=#e12#" };
+		[1] = { icon = "inv_misc_tournaments_symbol_troll", name = "=q6=" .. BabbleFaction["Darkspear Trolls"] .. " #j30#", "=ec1=#m6#" };
+		[2] = { itemID = 18788 }; --Swift Blue Raptor
+		[3] = { itemID = 18789 }; --Swift Olive Raptor
+		[4] = { itemID = 18790 }; --Swift Orange Raptor
+		[5] = { itemID = 8588 }; --Whistle of the Emerald Raptor
+		[6] = { itemID = 8591 }; --Whistle of the Turquoise Raptor
+		[7] = { itemID = 8592 }; --Whistle of the Violet Raptor
+		[9] = { icon = "inv_misc_tournaments_symbol_tauren", name = "=q6=" .. BabbleFaction["Thunder Bluff"] .. " #j30#", "=ec1=#m6#" };
+		[10] = { itemID = 18794 }; --Great Brown Kodo
+		[11] = { itemID = 18795 }; --Great Gray Kodo
+		[12] = { itemID = 18793 }; --Great White Kodo
+		[13] = { itemID = 15290 }; --Brown Kodo
+		[14] = { itemID = 15277 }; --Gray Kodo
+		[15] = { itemID = 46100 }; --White Kodo
+		[16] = { icon = "inv_misc_tournaments_symbol_scourge", name = "=q6=" .. BabbleFaction["Undercity"] .. " #j30#", "=ec1=#m6#" };
+		[17] = { itemID = 13334 }; --Green Skeletal Warhorse
+		[18] = { itemID = 47101 }; --Ochre Skeletal Warhorse
+		[19] = { itemID = 18791 }; --Purple Skeletal Warhorse
+		[20] = { itemID = 46308 }; --Black Skeletal Horse
+		[21] = { itemID = 13332 }; --Blue Skeletal Horse
+		[22] = { itemID = 13333 }; --Brown Skeletal Horse
+		[23] = { itemID = 13331 }; --Red Skeletal Horse
 	};
 	{
 		Name = AL["Horde Mounts"].." Page 3";
-		{ 1, 0, "INV_BannerPVP_01", "=q6=" .. AL["Horde Flying Mounts"], "=ec1=#m6#" };
-		{ 2, 25531, "", "=q4=Swift Green Wind Rider", "=ds=#e12#" };
-		{ 3, 25533, "", "=q4=Swift Purple Wind Rider", "=ds=#e12#" };
-		{ 4, 25477, "", "=q4=Swift Red Wind Rider", "=ds=#e12#" };
-		{ 5, 25532, "", "=q4=Swift Yellow Wind Rider", "=ds=#e12#" };
-		{ 6, 25475, "", "=q3=Blue Wind Rider", "=ds=#e12#" };
-		{ 7, 25476, "", "=q3=Green Wind Rider", "=ds=#e12#" };
-		{ 8, 25474, "", "=q3=Tawny Wind Rider", "=ds=#e12#" };
-		{ 10, 44226, "", "=q4=Reins of the Armored Brown Bear", "=ds=#e12#" };
-		{ 11, 44231, "", "=q4=Reins of the Wooly Mammoth", "=ds=#e12#" };
-		{ 12, 44234, "", "=q4=Reins of the Traveler's Tundra Mammoth", "=ds=#e12#" };
-		{ 13, 44690, "", "=q4=Armored Blue Wind Rider", "=ds=#e12#" };
-		{ 16, 0, "INV_BannerPVP_01", "=q6=" .. BabbleFaction["The Mag'har"] .. " #j30#", "=ec1=#m6#" };
-		{ 17, 29102, "", "=q4=Reins of the Cobalt War Talbuk", "=ds=#e12#" };
-		{ 18, 29104, "", "=q4=Reins of the Silver War Talbuk", "=ds=#e12#" };
-		{ 19, 29105, "", "=q4=Reins of the Tan War Talbuk", "=ds=#e12#" };
-		{ 20, 29103, "", "=q4=Reins of the White War Talbuk", "=ds=#e12#" };
-		{ 21, 31829, "", "=q4=Reins of the Cobalt Riding Talbuk", "=ds=#e12#" };
-		{ 22, 31831, "", "=q4=Reins of the Silver Riding Talbuk", "=ds=#e12#" };
-		{ 23, 31833, "", "=q4=Reins of the Tan Riding Talbuk", "=ds=#e12#" };
-		{ 24, 31835, "", "=q4=Reins of the White Riding Talbuk", "=ds=#e12#" };
-		{ 26, 0, "INV_BannerPVP_02", "=q6=Ravasaur Trainers #j30#", "=ec1=#m7#" };
-		{ 27, 46102, "", "=q4=Whistle of the Venomhide Ravasaur", "=ds=#e12#" };
-		{ 28, 0, "INV_BannerPVP_02", "=q6=" .. BabbleFaction["The Sunreavers"] .. " #j30#", "=ec1=#m7#" };
-		{ 29, 46816, "", "=q4=Sunreaver Hawkstrider", "=ds=#e12#" };
-		{ 30, 46814, "", "=q4=Sunreaver Dragonhawk", "=ds=#e12#" };
+		[1] = { icon = "INV_BannerPVP_01", name = "=q6=" .. AL["Horde Flying Mounts"], "=ec1=#m6#" };
+		[2] = { itemID = 25531 }; --Swift Green Wind Rider
+		[3] = { itemID = 25533 }; --Swift Purple Wind Rider
+		[4] = { itemID = 25477 }; --Swift Red Wind Rider
+		[5] = { itemID = 25532 }; --Swift Yellow Wind Rider
+		[6] = { itemID = 25475 }; --Blue Wind Rider
+		[7] = { itemID = 25476 }; --Green Wind Rider
+		[8] = { itemID = 25474 }; --Tawny Wind Rider
+		[10] = { itemID = 44226 }; --Reins of the Armored Brown Bear
+		[11] = { itemID = 44231 }; --Reins of the Wooly Mammoth
+		[12] = { itemID = 44234 }; --Reins of the Traveler's Tundra Mammoth
+		[13] = { itemID = 44690 }; --Armored Blue Wind Rider
+		[16] = { icon = "INV_BannerPVP_01", name = "=q6=" .. BabbleFaction["The Mag'har"] .. " #j30#", "=ec1=#m6#" };
+		[17] = { itemID = 29102 }; --Reins of the Cobalt War Talbuk
+		[18] = { itemID = 29104 }; --Reins of the Silver War Talbuk
+		[19] = { itemID = 29105 }; --Reins of the Tan War Talbuk
+		[20] = { itemID = 29103 }; --Reins of the White War Talbuk
+		[21] = { itemID = 31829 }; --Reins of the Cobalt Riding Talbuk
+		[22] = { itemID = 31831 }; --Reins of the Silver Riding Talbuk
+		[23] = { itemID = 31833 }; --Reins of the Tan Riding Talbuk
+		[24] = { itemID = 31835 }; --Reins of the White Riding Talbuk
+		[26] = { icon = "INV_BannerPVP_02", name = "=q6=Ravasaur Trainers #j30#", "=ec1=#m7#" };
+		[27] = { itemID = 46102 }; --Whistle of the Venomhide Ravasaur
+		[28] = { icon = "INV_BannerPVP_02", name = "=q6=" .. BabbleFaction["The Sunreavers"] .. " #j30#", "=ec1=#m7#" };
+		[29] = { itemID = 46816 }; --Sunreaver Hawkstrider
+		[30] = { itemID = 46814 }; --Sunreaver Dragonhawk
 	};
 	{
 		Name = AL["Neutral Faction Mounts"];
-		{ 1, 0, "INV_Box_01", "=q6=" .. BabbleFaction["Netherwing"] .. " #j30#", "" };
-		{ 2, 32858, "", "=q4=Reins of the Azure Netherwing Drake", "=ds=#e12#" };
-		{ 3, 32859, "", "=q4=Reins of the Cobalt Netherwing Drake", "=ds=#e12#" };
-		{ 4, 32857, "", "=q4=Reins of the Onyx Netherwing Drake", "=ds=#e12#" };
-		{ 5, 32860, "", "=q4=Reins of the Purple Netherwing Drake", "=ds=#e12#" };
-		{ 6, 32861, "", "=q4=Reins of the Veridian Netherwing Drake", "=ds=#e12#" };
-		{ 7, 32862, "", "=q4=Reins of the Violet Netherwing Drake", "=ds=#e12#" };
-		{ 9, 0, "INV_Box_01", "=q6=" .. BabbleFaction["Sha'tari Skyguard"] .. " #j30#", "" };
-		{ 10, 32319, "", "=q4=Blue Riding Nether Ray", "=ds=#e12#" };
-		{ 11, 32314, "", "=q4=Green Riding Nether Ray", "=ds=#e12#" };
-		{ 12, 32317, "", "=q4=Red Riding Nether Ray", "=ds=#e12#" };
-		{ 13, 32316, "", "=q4=Purple Riding Nether Ray", "=ds=#e12#" };
-		{ 14, 32318, "", "=q4=Silver Riding Nether Ray", "=ds=#e12#" };
-		{ 16, 0, "INV_Box_01", "=q6=" .. BabbleFaction["Cenarion Expedition"] .. " #j30#", "" };
-		{ 17, 33999, "", "=q4=Cenarion War Hippogryph", "=ds=#e12#" };
-		{ 19, 0, "INV_Box_01", "=q6=" .. BabbleFaction["The Sons of Hodir"] .. " #j30#", "" };
-		{ 20, 43958, "", "=q4=Reins of the Ice Mammoth", "=ds=#e12# =ec1=#m7#" };
-		{ 21, 44080, "", "=q4=Reins of the Ice Mammoth", "=ds=#e12# =ec1=#m6#" };
-		{ 22, 43961, "", "=q4=Reins of the Grand Ice Mammoth", "=ds=#e12# =ec1=#m7#" };
-		{ 23, 44086, "", "=q4=Reins of the Grand Ice Mammoth", "=ds=#e12# =ec1=#m6#" };
-		{ 25, 0, "INV_Box_01", "=q6=" .. BabbleFaction["The Wyrmrest Accord"] .. " #j30#", "" };
-		{ 26, 43955, "", "=q4=Reins of the Red Drake", "=ds=#e12#" };
-		{ 28, 0, "INV_Box_01", "=q6=" .. BabbleFaction["The Oracles"] .. " #j30#", "" };
-		{ 29, 44707, "", "=q4=Reins of the Green Proto-Drake", "=q2=#x38#", "" };
+		[1] = { icon = "INV_Box_01", name = "=q6=" .. BabbleFaction["Netherwing"] .. " #j30#" };
+		[2] = { itemID = 32858 }; --Reins of the Azure Netherwing Drake
+		[3] = { itemID = 32859 }; --Reins of the Cobalt Netherwing Drake
+		[4] = { itemID = 32857 }; --Reins of the Onyx Netherwing Drake
+		[5] = { itemID = 32860 }; --Reins of the Purple Netherwing Drake
+		[6] = { itemID = 32861 }; --Reins of the Veridian Netherwing Drake
+		[7] = { itemID = 32862 }; --Reins of the Violet Netherwing Drake
+		[9] = { icon = "INV_Box_01", name = "=q6=" .. BabbleFaction["Sha'tari Skyguard"] .. " #j30#" };
+		[10] = { itemID = 32319 }; --Blue Riding Nether Ray
+		[11] = { itemID = 32314 }; --Green Riding Nether Ray
+		[12] = { itemID = 32317 }; --Red Riding Nether Ray
+		[13] = { itemID = 32316 }; --Purple Riding Nether Ray
+		[14] = { itemID = 32318 }; --Silver Riding Nether Ray
+		[16] = { icon = "INV_Box_01", name = "=q6=" .. BabbleFaction["Cenarion Expedition"] .. " #j30#" };
+		[17] = { itemID = 33999 }; --Cenarion War Hippogryph
+		[19] = { icon = "INV_Box_01", name = "=q6=" .. BabbleFaction["The Sons of Hodir"] .. " #j30#" };
+		[20] = { itemID = 43958 }; --Reins of the Ice Mammoth
+		[21] = { itemID = 44080 }; --Reins of the Ice Mammoth
+		[22] = { itemID = 43961 }; --Reins of the Grand Ice Mammoth
+		[23] = { itemID = 44086 }; --Reins of the Grand Ice Mammoth
+		[25] = { icon = "INV_Box_01", name = "=q6=" .. BabbleFaction["The Wyrmrest Accord"] .. " #j30#" };
+		[26] = { itemID = 43955 }; --Reins of the Red Drake
+		[28] = { icon = "INV_Box_01", name = "=q6=" .. BabbleFaction["The Oracles"] .. " #j30#" };
+		[29] = { itemID = 44707, desc = AL["Mysterious Egg"] }; --Reins of the Green Proto-Drake
 	};
 	{
 		Name = AL["PvP Mounts"];
-		{ 1, 0, "INV_Box_01", "=q6=" .. AL["Arena Reward"], "" };
-		{ 2, 30609, "", "=q4=Swift Nether Drake", "=ds=#e12#" };
-		{ 3, 34092, "", "=q4=Merciless Nether Drake", "=ds=#e12#" };
-		{ 4, 37676, "", "=q4=Vengeful Nether Drake", "=ds=#e12#" };
-		{ 5, 43516, "", "=q4=Brutal Nether Drake", "=ds=#e12#" };
-		{ 6, 46171, "", "=q4=Deadly Gladiator's Frostwyrm", "=ds=#e12#" };
-		{ 8, 0, "INV_Box_01", "=q6=" .. AL["Alliance PvP Mounts"], "" };
-		{ 9, 29465, "", "=q4=Black Battlestrider", "=ds=#e12# =ec1=#m7#" };
-		{ 10, 29467, "", "=q4=Black War Ram", "=ds=#e12# =ec1=#m7#" };
-		{ 11, 29468, "", "=q4=Black War Steed Bridle", "=ds=#e12# =ec1=#m7#" };
-		{ 12, 35906, "", "=q4=Reins of the Black War Elekk", "=ds=#e12# =ec1=#m7#" };
-		{ 13, 29471, "", "=q4=Reins of the Black War Tiger", "=ds=#e12# =ec1=#m7#" };
-		{ 14, 19030, "", "=q4=Stormpike Battle Charger", "=ds=#e12# =ec1=#m7#" };
-		{ 15, 43956, "", "=q4=Reins of the Black War Mammoth", "=ds=#e12# =ec1=#m7#" };
-		{ 16, 0, "INV_Box_01", "=q6=" .. AL["Halaa PvP Mounts"], "" };
-		{ 17, 28915, "", "=q4=Reins of the Dark Riding Talbuk", "=ds=#e12#" };
-		{ 18, 29228, "", "=q4=Reins of the Dark War Talbuk", "=ds=#e12#" };
-		{ 23, 0, "INV_Box_01", "=q6=" .. AL["Horde PvP Mounts"], "" };
-		{ 24, 29466, "", "=q4=Black War Kodo", "=ds=#e12# =ec1=#m6#" };
-		{ 25, 29469, "", "=q4=Horn of the Black War Wolf", "=ds=#e12# =ec1=#m6#" };
-		{ 26, 29470, "", "=q4=Red Skeletal Warhorse", "=ds=#e12# =ec1=#m6#" };
-		{ 27, 34129, "", "=q4=Swift Warstrider", "=ds=#e12# =ec1=#m6#" };
-		{ 28, 29472, "", "=q4=Whistle of the Black War Raptor", "=ds=#e12# =ec1=#m6#" };
-		{ 29, 19029, "", "=q4=Horn of the Frostwolf Howler", "=ds=#e12# =ec1=#m6#" };
-		{ 30, 44077, "", "=q4=Reins of the Black War Mammoth", "=ds=#e12# =ec1=#m6#" };
+		[1] = { icon = "INV_Box_01", name = "=q6=" .. AL["Arena Reward"] };
+		[2] = { itemID = 30609 }; --Swift Nether Drake
+		[3] = { itemID = 34092 }; --Merciless Nether Drake
+		[4] = { itemID = 37676 }; --Vengeful Nether Drake
+		[5] = { itemID = 43516 }; --Brutal Nether Drake
+		[6] = { itemID = 46171 }; --Deadly Gladiator's Frostwyrm
+		[8] = { icon = "INV_Box_01", name = "=q6=" .. AL["Alliance PvP Mounts"] };
+		[9] = { itemID = 29465 }; --Black Battlestrider
+		[10] = { itemID = 29467 }; --Black War Ram
+		[11] = { itemID = 29468 }; --Black War Steed Bridle
+		[12] = { itemID = 35906 }; --Reins of the Black War Elekk
+		[13] = { itemID = 29471 }; --Reins of the Black War Tiger
+		[14] = { itemID = 19030 }; --Stormpike Battle Charger
+		[15] = { itemID = 43956 }; --Reins of the Black War Mammoth
+		[16] = { icon = "INV_Box_01", name = "=q6=" .. AL["Halaa PvP Mounts"] };
+		[17] = { itemID = 28915 }; --Reins of the Dark Riding Talbuk
+		[18] = { itemID = 29228 }; --Reins of the Dark War Talbuk
+		[23] = { icon = "INV_Box_01", name = "=q6=" .. AL["Horde PvP Mounts"] };
+		[24] = { itemID = 29466 }; --Black War Kodo
+		[25] = { itemID = 29469 }; --Horn of the Black War Wolf
+		[26] = { itemID = 29470 }; --Red Skeletal Warhorse
+		[27] = { itemID = 34129 }; --Swift Warstrider
+		[28] = { itemID = 29472 }; --Whistle of the Black War Raptor
+		[29] = { itemID = 19029 }; --Horn of the Frostwolf Howler
+		[30] = { itemID = 44077 }; --Reins of the Black War Mammoth
 	};
 	{
 		Name = AL["Rare Mounts"].." Page 1";
-		{ 1, 0, "INV_Box_01", "=q6=" .. AL["Dungeon/Raid"], "" };
-		{ 2, 33809, "", "=q4=Amani War Bear", "=q2=#x33#, =q1=#z29#" };
-		{ 3, 32458, "", "=q4=Ashes of Al'ar", "=q2=#n59#, =q1=#z19#" };
-		{ 4, 49098, "", "=q4=Crusader's Black Warhorse",
-			"=q2=" .. AL["A Tribute to Immortality"] .. ", =q1=" .. BabbleZone["Trial of the Crusader"], "", "" };
-		{ 5, 49096, "", "=q4=Crusader's White Warhorse",
-			"=q2=" .. AL["A Tribute to Immortality"] .. ", =q1=" .. BabbleZone["Trial of the Crusader"], "", "" };
-		{ 6, 13335, "", "=q4=Deathcharger's Reins", "=q2=#n52#, =q1=#z6#", "", "0.10%" };
-		{ 7, 30480, "", "=q4=Fiery Warhorse's Reins", "=q2=#n53#, =q1=#z12#", "", "0.25%" };
-		{ 8, 50818, "", "=q4=Invincible's Reins", "=q2=" ..
-			BabbleBoss["The Lich King"] .. ", =q1=" .. BabbleZone["Icecrown Citadel"], "", "" };
-		{ 9, 45693, "", "=q4=Mimiron's Head", "=q2=" .. AL["Alone in the Darkness"] .. ", =q1=" .. BabbleZone["Ulduar"], "", "" };
-		{ 10, 43986, "", "=q4=Reins of the Black Drake", "=q2=#n153#, =q1=#j37# #z38# #j46#", "" };
-		{ 11, 43954, "", "=q4=Reins of the Twilight Drake", "=q2=#n153#, =q1=#j38# #z38# #j46#", "" };
-		{ 12, 43953, "", "=q4=Reins of the Blue Drake", "=q2=" .. BabbleZone["The Oculus"], "" };
-		{ 13, 43952, "", "=q4=Reins of the Azure Drake", "=q2=#n154#, =q1=#j38# #z39#", "" };
-		{ 14, 44151, "", "=q4=Reins of the Blue Proto-Drake", "=q2=#n151#, =q1=#j47# #z35#", "" };
-		{ 15, 43951, "", "=q4=Reins of the Bronze Drake", "=q2=#n152#, =q1=#j47# #z36#", "" };
-		{ 17, 52200, "", "=q4=Reins of the Crimson Deathcharger",
-			"=q2=" .. BabbleBoss["The Lich King"] .. ", =q1=" .. BabbleZone["Icecrown Citadel"], "", "" };
-		{ 18, 44083, "", "=q4=Reins of the Grand Black War Mammoth", "=ds=#e12# =ec1=#m7#", "", "" };
-		{ 19, 43959, "", "=q4=Reins of the Grand Black War Mammoth", "=ds=#e12# =ec1=#m6#", "", "" };
-		{ 20, 32768, "", "=q4=Reins of the Raven Lord", "=q2=#n58#, =q1=#z16#" };
-		{ 21, 49046, "", "=q4=Swift Horde Wolf",
-			"=q2=" .. AL["A Tribute to Insanity (50)"] .. ", =q1=" .. BabbleZone["Trial of the Crusader"], "", "" }; --Horde
-		{ 22, 49044, "", "=q4=Swift Alliance Steed",
-			"=q2=" .. AL["A Tribute to Insanity (50)"] .. ", =q1=" .. BabbleZone["Trial of the Crusader"], "", "" }; --Alliance
-		{ 23, 35513, "", "=q4=Swift White Hawkstrider", "=q2=#n59#, =q1=#z30#" };
-		{ 24, 19872, "", "=q4=Swift Razzashi Raptor", "=q2=#n33#, =q1=#z8#", "", "0.43%" };
-		{ 25, 19902, "", "=q4=Swift Zulian Tiger", "=q2=#n28#, =q1=#z8#", "", " 0.70%" };
+		[1] = { icon = "INV_Box_01", name = "=q6=" .. AL["Dungeon/Raid"] };
+		[2] = { itemID = 33809 }; --Amani War Bear
+		[3] = { itemID = 32458 }; --Ashes of Al'ar
+		[4] = { itemID = "49098", desc = "=q1=" .. BabbleZone["Trial of the Crusader"] }; --Crusader's Black Warhorse","=q2=" .. AL["A Tribute to Immortality"] .. 
+		[5] = { itemID = "49096", desc = "=q1=" .. BabbleZone["Trial of the Crusader"] }; --Crusader's White Warhorse","=q2=" .. AL["A Tribute to Immortality"] .. 
+		[6] = { itemID = 13335, desc = "=q2=#n52#, =q1=#z6#", droprate = "0.10%" }; --Deathcharger's Reins
+		[7] = { itemID = 30480, desc = "=q2=#n53#, =q1=#z12#", "0.25%" }; --Fiery Warhorse's Reins
+		[8] = { itemID = 50818, desc = "=q2=" ..BabbleBoss["The Lich King"] .. ", =q1=" .. BabbleZone["Icecrown Citadel"] }; --Invincible's Reins
+		[9] = { itemID = 45693, desc = "=q2=" .. AL["Alone in the Darkness"] .. ", =q1=" .. BabbleZone["Ulduar"] }; --Mimiron's Head
+		[10] = { itemID = 43986, desc = "=q2=#n153#, =q1=#j37# #z38# #j46#" }; --Reins of the Black Drake
+		[11] = { itemID = 43954, desc = "=q2=#n153#, =q1=#j38# #z38# #j46#" }; --Reins of the Twilight Drake
+		[12] = { itemID = 43953, desc = "=q2=" .. BabbleZone["The Oculus"] }; --Reins of the Blue Drake
+		[13] = { itemID = 43952, desc = "=q2=#n154#, =q1=#j38# #z39#" }; --Reins of the Azure Drake
+		[14] = { itemID = 44151, desc = "=q2=#n151#, =q1=#j47# #z35#" }; --Reins of the Blue Proto-Drake
+		[15] = { itemID = 43951, desc = "=q2=#n152#, =q1=#j47# #z36#" }; --Reins of the Bronze Drake
+		[17] = { itemID = "52200", desc = "=q1=" .. BabbleZone["Icecrown Citadel"] }; --Reins of the Crimson Deathcharger","=q2=" .. BabbleBoss["The Lich King"] .. 
+		[18] = { itemID = 44083 }; --Reins of the Grand Black War Mammoth
+		[19] = { itemID = 43959 }; --Reins of the Grand Black War Mammoth
+		[20] = { itemID = 32768, desc = "=q2=#n58#, =q1=#z16#" }; --Reins of the Raven Lord
+		[21] = { itemID = 49046, desc = "=q2=" .. AL["A Tribute to Insanity (50)"] .. ", =q1=" .. BabbleZone["Trial of the Crusader"] }; --Swift Horde Wolf --Horde
+		[22] = { itemID = 49044, desc = "=q2=" .. AL["A Tribute to Insanity (50)"] .. ", =q1=" .. BabbleZone["Trial of the Crusader"] }; --Swift Alliance Steed --Alliance
+		[23] = { itemID = 35513, desc = "=q2=#n59#, =q1=#z30#" }; --Swift White Hawkstrider
+		[24] = { itemID = 19872, desc = "=q2=#n33#, =q1=#z8#", "0.43%" }; --Swift Razzashi Raptor
+		[25] = { itemID = 19902, desc = "=q2=#n28#, =q1=#z8#", " 0.70%" }; --Swift Zulian Tiger
 	};
 	{
 		Name = AL["Rare Mounts"].." Page 2";
-		{ 1, 0, "INV_Box_01", "=q6=" .. AL["Achievement Reward"], "" };
-		{ 2, 44223, "", "=q4=Reins of the Black War Bear", "=ds=#e12# =ec1=#m7#" };
-		{ 3, 44224, "", "=q4=Reins of the Black War Bear", "=ds=#e12# =ec1=#m6#" };
-		{ 4, 44843, "", "=q4=Blue Dragonhawk Mount", "=ds=#e12# =ec1=#m7#" };
-		{ 5, 44842, "", "=q4=Red Dragonhawk Mount", "=ds=#e12# =ec1=#m6#" };
-		{ 6, 44178, "", "=q4=Reins of the Albino Drake", "=ds=#e12#" };
-		{ 7, 44164, "", "=q4=Reins of the Black Proto-Drake", "=ds=#e12#" };
-		{ 8, 45801, "", "=q4=Reins of the Ironbound Proto-Drake", "=ds=#e12#" };
-		{ 9, 44175, "", "=q4=Reins of the Plagued Proto-Drake", "=ds=#e12#" };
-		{ 10, 44160, "", "=q4=Reins of the Red Proto-Drake", "=ds=#e12#" };
-		{ 11, 45802, "", "=q4=Reins of the Rusted Proto-Drake", "=ds=#e12#" };
-		{ 12, 44177, "", "=q4=Reins of the Violet Proto-Drake", "=ds=#e12#" };
-		{ 16, 0, "INV_Box_01", "=q6=" .. AL["Rare Mounts"], "" };
-		{ 17, 44168, "", "=q4=Reins of the Time-Lost Proto-Drake", "=q2=#n155#, =q1=#z37#", "" };
-		{ 18, 46109, "", "=q3=Sea Turtle", "=q2=#p24#", "" };
-		{ 20, 21218, "", "=q3=Blue Qiraji Resonating Crystal", "=q2=#n11#, =q1=#z11#", "", "10.91%" };
-		{ 21, 21323, "", "=q3=Green Qiraji Resonating Crystal", "=q2=#n11#, =q1=#z11#", "", "11.77%" };
-		{ 22, 21321, "", "=q3=Red Qiraji Resonating Crystal", "=q2=#n11#, =q1=#z11#", "", "1.32%" };
-		{ 23, 21324, "", "=q3=Yellow Qiraji Resonating Crystal", "=q2=#n11#, =q1=#z11#", "", "12.64%" };
+		[1] = { icon = "INV_Box_01", name = "=q6=" .. AL["Achievement Reward"] };
+		[2] = { itemID = 44223 }; --Reins of the Black War Bear
+		[3] = { itemID = 44224 }; --Reins of the Black War Bear
+		[4] = { itemID = 44843 }; --Blue Dragonhawk Mount
+		[5] = { itemID = 44842 }; --Red Dragonhawk Mount
+		[6] = { itemID = 44178 }; --Reins of the Albino Drake
+		[7] = { itemID = 44164 }; --Reins of the Black Proto-Drake
+		[8] = { itemID = 45801 }; --Reins of the Ironbound Proto-Drake
+		[9] = { itemID = 44175 }; --Reins of the Plagued Proto-Drake
+		[10] = { itemID = 44160 }; --Reins of the Red Proto-Drake
+		[11] = { itemID = 45802 }; --Reins of the Rusted Proto-Drake
+		[12] = { itemID = 44177 }; --Reins of the Violet Proto-Drake
+		[16] = { icon = "INV_Box_01", name = "=q6=" .. AL["Rare Mounts"] };
+		[17] = { itemID = 44168 }; --Reins of the Time-Lost Proto-Drake
+		[18] = { itemID = 46109 }; --Sea Turtle
+		[20] = { itemID = 21218, desc = "=q2=#n11#, =q1=#z11#", droprate = "10%" }; --Blue Qiraji Resonating Crystal
+		[21] = { itemID = 21323, desc = "=q2=#n11#, =q1=#z11#", droprate = "11%" }; --Green Qiraji Resonating Crystal
+		[22] = { itemID = 21321, desc = "=q2=#n11#, =q1=#z11#", droprate = "1%" }; --Red Qiraji Resonating Crystal
+		[23] = { itemID = 21324, desc = "=q2=#n11#, =q1=#z11#", droprate = "12%" }; --Yellow Qiraji Resonating Crystal
 	};
 	{
 		Name = AL["Rare Mounts"].." Page 3";
-		{ 1, 0, "INV_Box_01", "=q6=" .. AL["Quest Reward"], "" };
-		{ 2, 21176, "", "=q5=Black Qiraji Resonating Crystal", "=q2=#m4#" };
-		{ 3, 43962, "", "=q4=Reins of the White Polar Bear", "=q2=#m4#: #x39#", "" };
+		[1] = { icon = "INV_Box_01", name = "=q6=" .. AL["Quest Reward"] };
+		[2] = { itemID = 21176, desc = AL["Quest Reward"] }; --Black Qiraji Resonating Crystal
+		[3] = { itemID = 43962, desc = AL["Quest Reward"]..": "..AL["Hyldnir Spoils"] }; --Reins of the White Polar Bear
 	};
 	{
 		Name = AL["Crafted Mounts"];
-		{ 1, 54797, "", "=q4=Frosty Flying Carpet", "=q2=#p8#" };
-		{ 2, 44558, "", "=q4=Magnificent Flying Carpet", "=q2=#p8#" };
-		{ 3, 44413, "", "=q4=Mekgineer's Chopper", "=q2=#p5# =ec1=#m7#" };
-		{ 4, 41508, "", "=q4=Mechano-hog", "=q2=#p5# =ec1=#m6#" };
-		{ 5, 34061, "", "=q4=Turbo-Charged Flying Machine Control", "=q2=#p5#" };
-		{ 6, 44554, "", "=q3=Flying Carpet", "=q2=#p8#" };
-		{ 7, 34060, "", "=q3=Flying Machine Control", "=q2=#p5#" };
+		[1] = { itemID = 54797 }; --Frosty Flying Carpet
+		[2] = { itemID = 44558 }; --Magnificent Flying Carpet
+		[3] = { itemID = 44413 }; --Mekgineer's Chopper
+		[4] = { itemID = 41508 }; --Mechano-hog
+		[5] = { itemID = 34061 }; --Turbo-Charged Flying Machine Control
+		[6] = { itemID = 44554 }; --Flying Carpet
+		[7] = { itemID = 34060 }; --Flying Machine Control
 	};
 	{
 		Name = AL["Promotional Mounts"];
-		{ 1, 0, "INV_Box_01", "=q6=" .. AL["Promotional Mounts"], "" };
-		{ 2, 43599, "", "=q3=Big Blizzard Bear", "=ds=#e12#" };
-		{ 3, 37719, "", "=q4=Swift Zhevra", "=ds=#e12#" };
-		{ 4, 54860, "", "=q4=X-53 Touring Rocket", "=ds=#e12#" };
-		{ 5, 0, "INV_Box_01", "=q6=" .. AL["Card Game Mounts"], "" };
-		{ 6, 54068, "", "=q4=Wooly White Rhino ", "=q2=#m24#" };
-		{ 7, 49282, "", "=q4=Big Battle Bear", "=q2=#m24#" };
-		{ 8, 49290, "", "=q4=Magic Rooster Egg", "=q2=#m24#" };
-		{ 9, 49284, "", "=q4=Reins of the Swift Spectral Tiger", "=q2=#m24#" };
-		{ 10, 23720, "", "=q4=Riding Turtle", "=q2=#m24#" };
-		{ 12, 49286, "", "=q4=X-51 Nether-Rocket X-TREME", "=q2=#m24#" };
-		{ 13, 49283, "", "=q3=Reins of the Spectral Tiger", "=q2=#m24#" };
-		{ 14, 49285, "", "=q3=X-51 Nether-Rocket", "=q2=#m24#" };
+		[1] = { icon = "INV_Box_01", name = "=q6=" .. AL["Promotional Mounts"] };
+		[2] = { itemID = 43599 }; --Big Blizzard Bear
+		[3] = { itemID = 37719 }; --Swift Zhevra
+		[4] = { itemID = 54860 }; --X-53 Touring Rocket
+		[5] = { icon = "INV_Box_01", name = "=q6=" .. AL["Card Game Mounts"] };
+		[6] = { itemID = 54068 }; --Wooly White Rhino 
+		[7] = { itemID = 49282 }; --Big Battle Bear
+		[8] = { itemID = 49290 }; --Magic Rooster Egg
+		[9] = { itemID = 49284 }; --Reins of the Swift Spectral Tiger
+		[10] = { itemID = 23720 }; --Riding Turtle
+		[12] = { itemID = 49286 }; --X-51 Nether-Rocket X-TREME
+		[13] = { itemID = 49283 }; --Reins of the Spectral Tiger
+		[14] = { itemID = 49285 }; --X-51 Nether-Rocket
 	};
 	{
 		Name = AL["World Events"].." Page 1";
-		{ 1, 0, "INV_BannerPVP_02", "=q6=#m7#", "" };
-		{ 2, 45591, "", "=q4=Darnassian Nightsaber", "=ds=#e12#", "100 #champseal#" };
-		{ 3, 45590, "", "=q4=Exodar Elekk", "=ds=#e12#", "100 #champseal#" };
-		{ 4, 45589, "", "=q4=Gnomeregan Mechanostrider", "=ds=#e12#", "100 #champseal#" };
-		{ 5, 45586, "", "=q4=Ironforge Ram", "=ds=#e12#", "100 #champseal#" };
-		{ 6, 45125, "", "=q4=Stormwind Steed", "=ds=#e12#", "100 #champseal#" };
-		{ 8, 46745, "", "=q4=Great Red Elekk", "=ds=#e12#", "500 #gold# 5 #champseal#" };
-		{ 9, 46752, "", "=q4=Swift Gray Steed", "=ds=#e12#", "500 #gold# 5 #champseal#" };
-		{ 10, 46744, "", "=q4=Swift Moonsaber", "=ds=#e12#", "500 #gold# 5 #champseal#" };
-		{ 11, 46748, "", "=q4=Swift Violet Ram", "=ds=#e12#", "500 #gold# 5 #champseal#" };
-		{ 12, 46747, "", "=q4=Turbostrider", "=ds=#e12#", "500 #gold# 5 #champseal#" };
-		{ 14, 47179, "", "=q4=Argent Charger", "=ds=#e12#", "100 #champseal#" };
-		{ 15, 47180, "", "=q4=Argent Warhorse", "=ds=#e12#", "100 #champseal#" };
-		{ 16, 0, "INV_BannerPVP_01", "=q6=#m6#", "" };
-		{ 17, 45593, "", "=q4=Darkspear Raptor", "=ds=#e12#", "100 #champseal#" };
-		{ 18, 45597, "", "=q4=Forsaken Warhorse", "=ds=#e12#", "100 #champseal#" };
-		{ 19, 45595, "", "=q4=Orgrimmar Wolf", "=ds=#e12#", "100 #champseal#" };
-		{ 20, 45596, "", "=q4=Silvermoon Hawkstrider", "=ds=#e12#", "100 #champseal#" };
-		{ 21, 45592, "", "=q4=Thunder Bluff Kodo", "=ds=#e12#", "100 #champseal#" };
-		{ 23, 46750, "", "=q4=Great Golden Kodo", "=ds=#e12#", "500 #gold# 5 #champseal#" };
-		{ 24, 46749, "", "=q4=Swift Burgundy Wolf", "=ds=#e12#", "500 #gold# 5 #champseal#" };
-		{ 25, 46743, "", "=q4=Swift Purple Raptor", "=ds=#e12#", "500 #gold# 5 #champseal#" };
-		{ 26, 46751, "", "=q4=Swift Red Hawkstrider", "=ds=#e12#", "500 #gold# 5 #champseal#" };
-		{ 27, 46746, "", "=q4=White Skeletal Warhorse", "=ds=#e12#", "500 #gold# 5 #champseal#" };
-		{ 29, 45725, "", "=q4=Argent Hippogryph", "=ds=#e12#", "150 #champseal#" };
+		[1] = { icon = "INV_BannerPVP_02", name = "=q6=#m7#" };
+		[2] = { itemID = 45591, price = "100 #champseal#" }; --Darnassian Nightsaber
+		[3] = { itemID = 45590, price = "100 #champseal#" }; --Exodar Elekk
+		[4] = { itemID = 45589, price = "100 #champseal#" }; --Gnomeregan Mechanostrider
+		[5] = { itemID = 45586, price = "100 #champseal#" }; --Ironforge Ram
+		[6] = { itemID = 45125, price = "100 #champseal#" }; --Stormwind Steed
+		[8] = { itemID = 46745, price = "500 #gold# 5 #champseal#" }; --Great Red Elekk
+		[9] = { itemID = 46752, price = "500 #gold# 5 #champseal#" }; --Swift Gray Steed
+		[10] = { itemID = 46744, price = "500 #gold# 5 #champseal#" }; --Swift Moonsaber
+		[11] = { itemID = 46748, price = "500 #gold# 5 #champseal#" }; --Swift Violet Ram
+		[12] = { itemID = 46747, price = "500 #gold# 5 #champseal#" }; --Turbostrider
+		[14] = { itemID = 47179, price = "100 #champseal#" }; --Argent Charger
+		[15] = { itemID = 47180, price = "100 #champseal#" }; --Argent Warhorse
+		[16] = { icon = "INV_BannerPVP_01", name = "=q6=#m6#" };
+		[17] = { itemID = 45593, price = "100 #champseal#" }; --Darkspear Raptor
+		[18] = { itemID = 45597, price = "100 #champseal#" }; --Forsaken Warhorse
+		[19] = { itemID = 45595, price = "100 #champseal#" }; --Orgrimmar Wolf
+		[20] = { itemID = 45596, price = "100 #champseal#" }; --Silvermoon Hawkstrider
+		[21] = { itemID = 45592, price = "100 #champseal#" }; --Thunder Bluff Kodo
+		[23] = { itemID = 46750, price = "500 #gold# 5 #champseal#" }; --Great Golden Kodo
+		[24] = { itemID = 46749, price = "500 #gold# 5 #champseal#" }; --Swift Burgundy Wolf
+		[25] = { itemID = 46743, price = "500 #gold# 5 #champseal#" }; --Swift Purple Raptor
+		[26] = { itemID = 46751, price = "500 #gold# 5 #champseal#" }; --Swift Red Hawkstrider
+		[27] = { itemID = 46746, price = "500 #gold# 5 #champseal#" }; --White Skeletal Warhorse
+		[29] = { itemID = 45725, price = "150 #champseal#" }; --Argent Hippogryph
 	};
 	{
 		Name = AL["World Events"].." Page 2";
-		{ 1, 0, "INV_Box_01", "=q6=" .. AL["Brewfest"], "" };
-		{ 2, 37828, "", "=q4=Great Brewfest Kodo", "=q2=#n150#" };
-		{ 3, 33977, "", "=q4=Swift Brewfest Ram", "=q2=#n150#" };
-		{ 4, 33976, "", "=q3=Brewfest Ram", "=ds=#e12#" };
-		{ 6, 0, "INV_Box_01", "=q6=" .. AL["Hallow's End"], "" };
-		{ 7, 37012, "", "=q4=The Horseman's Reins", "=q2=#n136#" };
-		{ 8, 37011, "", "=q3=Magic Broom", "=q2=#n136#" };
-		{ 16, 0, "INV_Box_01", "=q6=" .. AL["Love is in the Air"], "" };
-		{ 17, 50250, "", "=q4=Big Love Rocket", "=ds=#e12#" };
+		[1] = { icon = "INV_Box_01", name = "=q6=" .. AL["Brewfest"] };
+		[2] = { itemID = 37828, desc = "=q2=#n150#" }; --Great Brewfest Kodo
+		[3] = { itemID = 33977, desc = "=q2=#n150#" }; --Swift Brewfest Ram
+		[4] = { itemID = 33976 }; --Brewfest Ram
+		[6] = { icon = "INV_Box_01", name = "=q6=" .. AL["Hallow's End"] };
+		[7] = { itemID = 37012, desc = "=q2=#n136#" }; --The Horseman's Reins
+		[8] = { itemID = 37011, desc = "=q2=#n136#" }; --Magic Broom
+		[16] = { icon = "INV_Box_01", name = "=q6=" .. AL["Love is in the Air"] };
+		[17] = { itemID = 50250 }; --Big Love Rocket
 	};
 };
 
