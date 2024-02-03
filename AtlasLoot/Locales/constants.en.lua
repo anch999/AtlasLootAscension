@@ -1545,6 +1545,8 @@ if AL then
 	AL["Sunwell Isle"] = true
 	AL["Gordok Commons"] = true
 	AL["Hide crafting source unless holding CTRL"] = true
+	AL["Show drop location on search results"] = true
+
 
 	-- Shortcuts for Bossname files
 	AL["LBRS"] = true

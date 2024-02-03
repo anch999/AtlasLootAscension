@@ -687,6 +687,9 @@ function AtlasLoot:DoSearch(searchText)
                                 itemData[self.Difficultys.MAX_DIF] = #self.Difficultys[data.Type]
                             end
                         end
+                        if self.db.profile.showdropLocationOnSearch then
+                            itemData.dropLoc = {data.Name, t.Name}
+                        end
                         tinsert(itemList, {{itemData, dataID, tableNum, searchTerms, searchText}})
                     end
                 end

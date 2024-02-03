@@ -36,6 +36,7 @@ function AtlasLoot:OptionsInit()
     AtlasLootOptionsFrameLootBrowserScale:SetValue(self.db.profile.LootBrowserScale)
     AtlasLootOptionsMinimapIcon:SetChecked(self.db.profile.minimap.hide)
     AtlasLootOptionsFrameCraftingInfo:SetChecked(self.db.profile.recipeExtraInfoSwitch)
+    AtlasLootOptionsFrameDropLocation:SetChecked(self.db.profile.showdropLocationOnSearch)
 end
 
 --[[
@@ -226,6 +227,11 @@ local craftingInfo = CreateFrame("CheckButton", "AtlasLootOptionsFrameCraftingIn
         craftingInfo:SetPoint("TOPLEFT",5,-100)
         AtlasLootOptionsFrameCraftingInfoText:SetText(AL["Hide crafting source unless holding CTRL"])
         craftingInfo:SetScript("OnClick", function() self.db.profile.recipeExtraInfoSwitch = not self.db.profile.recipeExtraInfoSwitch end)
+
+local craftingInfo = CreateFrame("CheckButton", "AtlasLootOptionsFrameDropLocation", AtlasLootOptionsFrame, "OptionsCheckButtonTemplate")
+        craftingInfo:SetPoint("TOPLEFT",5,-130)
+        AtlasLootOptionsFrameDropLocationText:SetText(AL["Show drop location on search results"])
+        craftingInfo:SetScript("OnClick", function() self.db.profile.showdropLocationOnSearch = not self.db.profile.showdropLocationOnSearch end)
 
 local itemid = CreateFrame("CheckButton", "AtlasLootOptionsFrameItemID", AtlasLootOptionsFrame, "OptionsCheckButtonTemplate")
         itemid:SetPoint("TOP",5,-70)

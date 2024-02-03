@@ -553,6 +553,7 @@ function AtlasLoot:CreateOnDemandLootTable(type)
 			for _, t in ipairs(data) do
 				for _, itemData in pairs(t) do
 					if itemData.itemID and not checkList[itemData.itemID] then
+						itemData.dropLoc = {data.Name, t.Name}
 						checkList[itemData.itemID] = true
 						tinsert(itemList, {itemData})
 					end
@@ -828,6 +829,9 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 			extra = self.FixedItemText[dataSource[dataID][tablenum][i].itemID]
 		elseif dataSource[dataID][tablenum][i].desc then
 			extra = dataSource[dataID][tablenum][i].desc
+		elseif dataSource[dataID][tablenum][i].dropLoc and (dataSource_backup == "AtlasLoot_OnDemand" or (self.db.profile.showdropLocationOnSearch and dataID == "SearchResult")) then
+			local location, boss = dataSource[dataID][tablenum][i].dropLoc[1], dataSource[dataID][tablenum][i].dropLoc[2]
+			extra = YELLOW..location..WHITE.." - "..boss
 		elseif AtlasLoot_CraftingData["CraftingLevels"] and spellID and AtlasLoot_CraftingData["CraftingLevels"][spellID] and dataID ~= "SearchResult" then
 			local lvls = AtlasLoot_CraftingData["CraftingLevels"][spellID]
 			extra = LIMEGREEN .. "L-Click:|r "..WHITE..dataSource[dataID].Name.." ( "..ORANGE..lvls[1].."|r "..YELLOW..lvls[2].."|r "..GREEN..lvls[3].."|r "..GREY..lvls[4]..WHITE.." )"
