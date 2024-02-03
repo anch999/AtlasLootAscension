@@ -598,6 +598,7 @@ AtlasLoot_Data["AQOpening"] = {
 AtlasLoot_Data["BlackfathomDeeps"] = {
 	Module = "AtlasLoot_OriginalWoW";
 	Name = BabbleZone["Blackfathom Deeps"];
+	Type = "ClassicDungeon";
 	Map = "BlackfathomDeeps";
 	{
 		Name = BabbleBoss["Ghamoo-ra"];
@@ -1997,6 +1998,7 @@ AtlasLoot_Data["DireMaulWest"] = {
 AtlasLoot_Data["Gnomeregan"] = {
 	Module = "AtlasLoot_OriginalWoW";
 	Name = BabbleZone["Gnomeregan"];
+	Type = "ClassicDungeon";
 	Map = "Gnomeregan";
 	{
 		Name = AL["Namdo Bizzfizzle"];
@@ -2071,6 +2073,7 @@ AtlasLoot_Data["Gnomeregan"] = {
 AtlasLoot_Data["Maraudon"] = {
 	Module = "AtlasLoot_OriginalWoW";
 	Name = BabbleZone["Maraudon"];
+	Type = "ClassicDungeon";
 	Map = "Maraudon";
 	{
 		Name = BabbleBoss["Noxxion"];
@@ -2147,6 +2150,7 @@ AtlasLoot_Data["Maraudon"] = {
 AtlasLoot_Data["RagefireChasm"] = {
 	Module = "AtlasLoot_OriginalWoW";
 	Name = BabbleZone["Ragefire Chasm"];
+	Type = "ClassicDungeon";
 	Map = "RagefireChasm";
 	{
 		Name = BabbleBoss["Taragaman the Hungerer"];
@@ -2174,6 +2178,7 @@ AtlasLoot_Data["RagefireChasm"] = {
 AtlasLoot_Data["RazorfenDowns"] = {
 	Module = "AtlasLoot_OriginalWoW";
 	Name = BabbleZone["Razorfen Downs"];
+	Type = "ClassicDungeon";
 	Map = "RazorfenDowns";
 	{
 		Name = BabbleBoss["Tuten'kash"];
@@ -2241,6 +2246,7 @@ AtlasLoot_Data["RazorfenDowns"] = {
 AtlasLoot_Data["RazorfenKraul"] = {
 	Module = "AtlasLoot_OriginalWoW";
 	Name = BabbleZone["Razorfen Kraul"];
+	Type = "ClassicDungeon";
 	Map = "RazorfenKraul";
 	{
 		Name = AL["Roogug"];
@@ -2311,6 +2317,7 @@ AtlasLoot_Data["RazorfenKraul"] = {
 AtlasLoot_Data["Scarlet Monastery"] = {
 	Module = "AtlasLoot_OriginalWoW";
 	Name = BabbleZone["Scarlet Monastery"];
+	Type = "ClassicDungeon";
 	Map = "ScarletMonastery";
 	{
 		Name = "Armory";
@@ -2759,6 +2766,7 @@ AtlasLoot_Data["Scholomance"] = {
 AtlasLoot_Data["ShadowfangKeep"] = {
 	Module = "AtlasLoot_OriginalWoW";
 	Name = BabbleZone["Shadowfang Keep"];
+	Type = "ClassicDungeon";
 	Map = "ShadowfangKeep";
 	{
 		Name = BabbleBoss["Deathsworn Captain"];
@@ -3107,6 +3115,7 @@ AtlasLoot_Data["Stratholme"] = {
 AtlasLoot_Data["TheDeadmines"] = {
 	Module = "AtlasLoot_OriginalWoW";
 	Name = BabbleZone["The Deadmines"];
+	Type = "ClassicDungeon";
 	Map = "TheDeadmines";
 	{
 		Name = BabbleBoss["Marisa du'Paige"];
@@ -3183,6 +3192,7 @@ AtlasLoot_Data["TheDeadmines"] = {
 AtlasLoot_Data["TheStockade"] = {
 	Module = "AtlasLoot_OriginalWoW";
 	Name = BabbleZone["The Stockade"];
+	Type = "ClassicDungeon";
 	Map = "TheStockade";
 	{
 		Name = BabbleBoss["Targorr the Dread"];
@@ -3230,6 +3240,7 @@ AtlasLoot_Data["TheStockade"] = {
 AtlasLoot_Data["SunkenTemple"] = {
 	Module = "AtlasLoot_OriginalWoW";
 	Name = "Sunken Temple";
+	Type = "ClassicDungeon";
 	Map = "TheSunkenTemple";
 	{
 		Name = "Spawn of Hakkar";
@@ -3366,6 +3377,7 @@ AtlasLoot_Data["SunkenTemple"] = {
 AtlasLoot_Data["Uldaman"] = {
 	Module = "AtlasLoot_OriginalWoW";
 	Name = BabbleZone["Uldaman"];
+	Type = "ClassicDungeon";
 	Map = "Uldaman";
 	{
 		Name = AL["Magregan Deepshadow"];
@@ -3497,6 +3509,7 @@ AtlasLoot_Data["Uldaman"] = {
 AtlasLoot_Data["WailingCaverns"] = {
 	Module = "AtlasLoot_OriginalWoW";
 	Name = BabbleZone["Wailing Caverns"];
+	Type = "ClassicDungeon";
 	Map = "WailingCaverns";
 	{
 		Name = AL["Kalldan Felmoon"];
@@ -3578,6 +3591,7 @@ AtlasLoot_Data["WailingCaverns"] = {
 AtlasLoot_Data["ZulFarrak"] = {
 	Module = "AtlasLoot_OriginalWoW";
 	Name = BabbleZone["Zul'Farrak"];
+	Type = "ClassicDungeon";
 	Map = "ZulFarrak";
 	{
 		Name = BabbleBoss["Antu'sul"];
@@ -3729,7 +3743,6 @@ AtlasLoot_Data["ZulGurub"] = {
 		[13] = { itemID = 19893, droprate = "13.11%" }; --Zanzil's Seal
 		[14] = { itemID = 19863, droprate = "12.32%" }; --Primalist's Seal
 		[16] = { icon = "INV_Banner_01", name = "=q4=ZG Sets", ootTable = {{"ZGSets", "AtlasLoot_Data", 1},"Source"} };
-	Module = "AtlasLoot_OriginalWoW";
 		[18] = { itemID = 22637 }; --Primal Hakkari Idol
 		[19] = { itemID = 19943, droprate = "9.4%" }; --Massive Mojo
 	};
@@ -3771,14 +3784,12 @@ AtlasLoot_Data["ZulGurub"] = {
 		[8] = { itemID = 20266, droprate = "8.69%" }; --Peacekeeper Leggings
 		[9] = { itemID = 19901, droprate = "13.36%" }; --Zulian Slicer
 		[16] = { icon = "INV_Banner_01", name = "=q4=ZG Sets", ootTable = {{"ZGSets", "AtlasLoot_Data", 1},"Source"} };
-	Module = "AtlasLoot_OriginalWoW";
 		[18] = { itemID = 19943, droprate = "8.3%" }; --Massive Mojo
 		[19] = { itemID = 19881, droprate = "100%" }; --Channeler's Head
 	};
 	{
 		Name = BabbleBoss["High Priestess Arlokk"];
 		[16] = { icon = "INV_Banner_01", name = "=q4=ZG Sets", ootTable = {{"ZGSets", "AtlasLoot_Data", 1},"Source"} };
-	Module = "AtlasLoot_OriginalWoW";
 		[18] = { itemID = 19943, droprate = "5.6%" }; --Massive Mojo
 		[19] = { itemID = 19881, droprate = "100%" }; --Channeler's Head
 		[1] = { itemID = 19910, droprate = "3.62%" }; --Arlokk's Grasp
@@ -3791,7 +3802,6 @@ AtlasLoot_Data["ZulGurub"] = {
 	{
 		Name = BabbleBoss["Jin'do the Hexxer"];
 		[16] = { icon = "INV_Banner_01", name = "=q4=ZG Sets", ootTable = {{"ZGSets", "AtlasLoot_Data", 1},"Source"} };
-	Module = "AtlasLoot_OriginalWoW";
 		[18] = { itemID = 22637 }; --Primal Hakkari Idol
 		[19] = { itemID = 19943, droprate = "8.4%" }; --Massive Mojo
 		[1] = { itemID = 19885, droprate = "6.82%" }; --Jin'do's Evil Eye

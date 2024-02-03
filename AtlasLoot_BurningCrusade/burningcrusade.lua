@@ -491,130 +491,123 @@ AtlasLoot_Data["BlackTemple"] = {
 	Map = "BlackTemple";
 	{
 		Name = BabbleBoss["High Warlord Naj'entus"];
-		[1] = { itemID = 32239, droprate = "5%" }; --Slippers of the Seacaller
-		[2] = { itemID = 32240, droprate = "6%" }; --Guise of the Tidal Lurker
-		[3] = { itemID = 32377, droprate = "5%" }; --Mantle of Darkness
-		[4] = { itemID = 32241, droprate = "0%" }; --Helm of Soothing Currents
-		[5] = { itemID = 32234, droprate = "6%" }; --Fists of Mukoa
+		[1] = { itemID = 32239 }; --Slippers of the Seacaller
+		[2] = { itemID = 32240 }; --Guise of the Tidal Lurker
+		[3] = { itemID = 32377 }; --Mantle of Darkness
+		[4] = { itemID = 32241 }; --Helm of Soothing Currents
+		[5] = { itemID = 32234 }; --Fists of Mukoa
 		[6] = { itemID = 32242 }; --Boots of Oceanic Fury
-		[7] = { itemID = 32232, droprate = "6%" }; --Eternium Shell Bracers
-		[8] = { itemID = 32243, droprate = "0%" }; --Pearl Inlaid Boots
+		[7] = { itemID = 32232 }; --Eternium Shell Bracers
+		[8] = { itemID = 32243 }; --Pearl Inlaid Boots
 		[9] = { itemID = 32245 }; --Tide-stomper's Greaves
-		[16] = { itemID = 32238, droprate = "6%" }; --Ring of Calming Waves
-		[17] = { itemID = 32237, droprate = "5%" }; --The Maelstrom's Fury
-		[18] = { itemID = 32236, droprate = "6%" }; --Rising Tide
-		[19] = { itemID = 32248, droprate = "6%" }; --Halberd of Desolation
-		[21] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
-		[22] = { itemID = 98570, droprate = "100%" }; --Mystic Orb
-		[24] = { itemID = 63451, droprate = "1%" }; --Pet Sigil
-
+		[16] = { itemID = 32238 }; --Ring of Calming Waves
+		[17] = { itemID = 32236 }; --Rising Tide
+		[18] = { itemID = 32248 }; --Halberd of Desolation
+		[20] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
+		[21] = { itemID = 98570, droprate = "100%" }; --Mystic Orb
+		[23] = { itemID = 63451, droprate = "1%" }; --Pet Sigil
 	};
 	{
 		Name = BabbleBoss["Supremus"];
-		[1] = { itemID = 32256, droprate = "6%" }; --Waistwrap of Infinity
-		[2] = { itemID = 32252, droprate = "4%" }; --Nether Shadow Tunic
+		[1] = { itemID = 32256 }; --Waistwrap of Infinity
+		[2] = { itemID = 32252 }; --Nether Shadow Tunic
 		[3] = { itemID = 32259 }; --Bands of the Coming Storm
-		[4] = { itemID = 32251, droprate = "5%" }; --Wraps of Precise Flight
+		[4] = { itemID = 32251 }; --Wraps of Precise Flight
 		[5] = { itemID = 32258 }; --Naturalist's Preserving Cinch
-		[6] = { itemID = 32250, droprate = "6%" }; --Pauldrons of Abyssal Fury
-		[8] = { itemID = 32260, droprate = "7%" }; --Choker of Endless Nightmares
-		[9] = { itemID = 32261, droprate = "4%" }; --Band of the Abyssal Lord
-		[10] = { itemID = 32247, droprate = "6%" }; --Ring of Captured Storms
-		[16] = { itemID = 32257, droprate = "5%" }; --Idol of the White Stag
-		[17] = { itemID = 32254, droprate = "5%" }; --The Brutalizer
-		[18] = { itemID = 32262, droprate = "6%" }; --Syphon of the Nathrezim
-		[19] = { itemID = 32255, droprate = "5%" }; --Felstone Bulwark
-		[20] = { itemID = 32253, droprate = "6%" }; --Legionkiller
+		[6] = { itemID = 32250 }; --Pauldrons of Abyssal Fury
+		[8] = { itemID = 32260 }; --Choker of Endless Nightmares
+		[9] = { itemID = 32261 }; --Band of the Abyssal Lord
+		[10] = { itemID = 32247 }; --Ring of Captured Storms
+		[16] = { itemID = 32254 }; --The Brutalizer
+		[17] = { itemID = 32237 }; --The Maelstrom's Fury
+		[18] = { itemID = 32262 }; --Syphon of the Nathrezim
+		[19] = { itemID = 32255 }; --Felstone Bulwark
+		[20] = { itemID = 32253 }; --Legionkiller
 		[22] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 		[23] = { itemID = 98570, droprate = "100%" }; --Mystic Orb
 		[25] = { itemID = 63510, droprate = "1%" }; --Pet Sigil
 	};
 	{
 		Name = BabbleBoss["Shade of Akama"];
-		[1] = { itemID = 32273, droprate = "6%" }; --Amice of Brilliant Light
-		[2] = { itemID = 32270, droprate = "5%" }; --Focused Mana Bindings
-		[3] = { itemID = 32513, droprate = "6%" }; --Wristbands of Divine Influence
-		[4] = { itemID = 32265, droprate = "6%" }; --Shadow-walker's Cord
-		[5] = { itemID = 32271, droprate = "4%" }; --Kilt of Immortal Nature
-		[6] = { itemID = 32264, droprate = "6%" }; --Shoulders of the Hidden Predator
-		[7] = { itemID = 32275 }; --Spiritwalker Gauntlets
-		[8] = { itemID = 32276 }; --Flashfire Girdle
-		[9] = { itemID = 32279 }; --The Seeker's Wristguards
-		[10] = { itemID = 32278, droprate = "5%" }; --Grips of Silent Justice
-		[11] = { itemID = 32263, droprate = "4%" }; --Praetorian's Legguards
-		[12] = { itemID = 32268, droprate = "6%" }; --Myrmidon's Treads
-		[16] = { itemID = 32266, droprate = "6%" }; --Ring of Deceitful Intent
-		[17] = { itemID = 32361, droprate = "5%" }; --Blind-Seers Icon
-		[19] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
-		[20] = { itemID = 98570, droprate = "100%" }; --Mystic Orb
-		[22] = { itemID = 63425, droprate = "1%" }; --Pet Sigil
-
+		[1] = { itemID = 32273 }; --Amice of Brilliant Light
+		[2] = { itemID = 32270 }; --Focused Mana Bindings
+		[3] = { itemID = 32513 }; --Wristbands of Divine Influence
+		[4] = { itemID = 32265 }; --Shadow-walker's Cord
+		[5] = { itemID = 32264 }; --Shoulders of the Hidden Predator
+		[6] = { itemID = 32275 }; --Spiritwalker Gauntlets
+		[7] = { itemID = 32276 }; --Flashfire Girdle
+		[8] = { itemID = 32279 }; --The Seeker's Wristguards
+		[9] = { itemID = 32278 }; --Grips of Silent Justice
+		[10] = { itemID = 32268 }; --Myrmidon's Treads
+		[16] = { itemID = 32266 }; --Ring of Deceitful Intent
+		[17] = { itemID = 32361 }; --Blind-Seers Icon
+		[19] = { itemID = 11432 }; --Ashtongue Jewel
+		[21] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
+		[22] = { itemID = 98570, droprate = "100%" }; --Mystic Orb
+		[24] = { itemID = 63425, droprate = "1%" }; --Pet Sigil
 	};
 	{
 		Name = BabbleBoss["Teron Gorefiend"];
-		[1] = { itemID = 32323, droprate = "7%" }; --Shadowmoon Destroyer's Drape
-		[2] = { itemID = 32329, droprate = "7%" }; --Cowl of Benevolence
-		[3] = { itemID = 32327, droprate = "5%" }; --Robe of the Shadow Council
-		[4] = { itemID = 32324, droprate = "7%" }; --Insidious Bands
-		[5] = { itemID = 32328, droprate = "7%" }; --Botanist's Gloves of Growth
-		[6] = { itemID = 32510, droprate = "5%" }; --Softstep Boots of Tracking
-		[7] = { itemID = 32280, droprate = "5%" }; --Gauntlets of Enforcement
-		[8] = { itemID = 32512, droprate = "9%" }; --Girdle of Lordaeron's Fallen
-		[16] = { itemID = 32330, droprate = "3%" }; --Totem of Ancestral Guidance
-		[17] = { itemID = 32348, droprate = "9%" }; --Soul Cleaver
-		[18] = { itemID = 32326, droprate = "1%" }; --Twisted Blades of Zarak
-		[19] = { itemID = 32507, droprate = "1%" }; --Gorefiend
-		[20] = { itemID = 32325, droprate = "4%" }; --Rifle of the Stoic Guardian
-		[22] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
-		[23] = { itemID = 98570, droprate = "100%" }; --Mystic Orb
-		[25] = { itemID = 63443, droprate = "1%" }; --Pet Sigil
+		[5] = { itemID = 32271 }; --Kilt of Immortal Nature
+		[1] = { itemID = 32323 }; --Shadowmoon Destroyer's Drape
+		[2] = { itemID = 32329 }; --Cowl of Benevolence
+		[3] = { itemID = 32327 }; --Robe of the Shadow Council
+		[4] = { itemID = 32324 }; --Insidious Bands
+		[6] = { itemID = 32328 }; --Botanist's Gloves of Growth
+		[7] = { itemID = 32510 }; --Softstep Boots of Tracking
+		[8] = { itemID = 32280 }; --Gauntlets of Enforcement
+		[9] = { itemID = 32512 }; --Girdle of Lordaeron's Fallen
+		[11] = { itemID = 32349 }; --Translucent Spellthread Necklace
+		[16] = { itemID = 32507 }; --Gorefiend
+		[17] = { itemID = 32325 }; --Rifle of the Stoic Guardian
+		[19] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
+		[20] = { itemID = 98570, droprate = "100%" }; --Mystic Orb
+		[22] = { itemID = 63443, droprate = "1%" }; --Pet Sigil
 	};
 	{
 		Name = BabbleBoss["Gurtogg Bloodboil"];
-		[1] = { itemID = 32337, droprate = "6%" }; --Shroud of Forgiveness
-		[2] = { itemID = 32338, droprate = "5%" }; --Blood-cursed Shoulderpads
-		[3] = { itemID = 32340, droprate = "5%" }; --Garments of Temperance
-		[4] = { itemID = 32339, droprate = "4%" }; --Belt of Primal Majesty
-		[5] = { itemID = 32334, droprate = "5%" }; --Vest of Mounting Assault
+		[1] = { itemID = 32337 }; --Shroud of Forgiveness
+		[2] = { itemID = 32338 }; --Blood-cursed Shoulderpads
+		[3] = { itemID = 32340 }; --Garments of Temperance
+		[4] = { itemID = 32339 }; --Belt of Primal Majesty
+		[5] = { itemID = 32334 }; --Vest of Mounting Assault
 		[6] = { itemID = 32342 }; --Girdle of Mighty Resolve
-		[7] = { itemID = 32333, droprate = "6%" }; --Girdle of Stability
-		[8] = { itemID = 32341, droprate = "4%" }; --Leggings of Divine Retribution
-		[16] = { itemID = 32335, droprate = "6%" }; --Unstoppable Aggressor's Ring
-		[17] = { itemID = 32501, droprate = "5%" }; --Shadowmoon Insignia
-		[18] = { itemID = 32269, droprate = "6%" }; --Messenger of Fate
-		[19] = { itemID = 32344, droprate = "5%" }; --Staff of Immaculate Recovery
-		[20] = { itemID = 32343, droprate = "4%" }; --Wand of Prismatic Focus
+		[7] = { itemID = 32341 }; --Leggings of Divine Retribution
+		[16] = { itemID = 32335 }; --Unstoppable Aggressor's Ring
+		[17] = { itemID = 32348 }; --Soul Cleaver	
+		[18] = { itemID = 32269 }; --Messenger of Fate
+		[19] = { itemID = 32344 }; --Staff of Immaculate Recovery
+		[20] = { itemID = 32343 }; --Wand of Prismatic Focus
 		[22] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 		[23] = { itemID = 98570, droprate = "100%" }; --Mystic Orb
 		[25] = { itemID = 63521, droprate = "1%" }; --Pet Sigil
 	};
 	{
 		Name = "Reliquary of the Lost";
-		[1] = { itemID = 32353, droprate = "7%" }; --Gloves of Unfailing Faith
+		[1] = { itemID = 32353 }; --Gloves of Unfailing Faith
 		[2] = { itemID = 32351 }; --Elunite Empowered Bracers
-		[3] = { itemID = 32347, droprate = "6%" }; --Grips of Damnation
+		[3] = { itemID = 32347 }; --Grips of Damnation
 		[4] = { itemID = 32352 }; --Naturewarden's Treads
-		[5] = { itemID = 32517, droprate = "7%" }; --The Wavemender's Mantle
-		[6] = { itemID = 32346, droprate = "6%" }; --Boneweave Girdle
-		[7] = { itemID = 32354, droprate = "6%" }; --Crown of Empowered Fate
-		[8] = { itemID = 32345, droprate = "5%" }; --Dreadboots of the Legion
-		[16] = { itemID = 32349, droprate = "6%" }; --Translucent Spellthread Necklace
-		[17] = { itemID = 32362, droprate = "5%" }; --Pendant of Titans
-		[18] = { itemID = 32350, droprate = "6%" }; --Touch of Inspiration
-		[19] = { itemID = 32332, droprate = "7%" }; --Torch of the Damned
-		[20] = { itemID = 32363, droprate = "4%" }; --Naaru-Blessed Life Rod
-		[22] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
-		[23] = { itemID = 98570, droprate = "100%" }; --Mystic Orb
-		[25] = { itemID = 63940, droprate = "1%" }; --Pet Sigil
+		[5] = { itemID = 32517 }; --The Wavemender's Mantle
+		[6] = { itemID = 32346 }; --Boneweave Girdle
+		[7] = { itemID = 32333 }; --Girdle of Stability
+		[8] = { itemID = 32354 }; --Crown of Empowered Fate
+		[9] = { itemID = 32345 }; --Dreadboots of the Legion	
+		[16] = { itemID = 32362 }; --Pendant of Titans
+		[17] = { itemID = 32350 }; --Touch of Inspiration
+		[18] = { itemID = 32332 }; --Torch of the Damned
+		[20] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
+		[21] = { itemID = 98570, droprate = "100%" }; --Mystic Orb
+		[23] = { itemID = 63940, droprate = "1%" }; --Pet Sigil
 	};
 	{
 		Name = BabbleBoss["Mother Shahraz"];
-		[1] = { itemID = 32367, droprate = "6%" }; --Leggings of Devastation
-		[2] = { itemID = 32366, droprate = "5%" }; --Shadowmaster's Boots
-		[3] = { itemID = 32365, droprate = "5%" }; --Heartshatter Breastplate
-		[4] = { itemID = 32370, droprate = "5%" }; --Nadina's Pendant of Purity
-		[5] = { itemID = 32368, droprate = "5%" }; --Tome of the Lightbringer
-		[6] = { itemID = 32369, droprate = "5%" }; --Blade of Savagery
+		[1] = { itemID = 32367 }; --Leggings of Devastation
+		[2] = { itemID = 32263 }; --Praetorian's Legguards
+		[3] = { itemID = 32366 }; --Shadowmaster's Boots
+		[4] = { itemID = 32365 }; --Heartshatter Breastplate
+		[5] = { itemID = 32370 }; --Nadina's Pendant of Purity
+		[6] = { itemID = 32369 }; --Blade of Savagery
 		[16] = { itemID = 31101, droprate = "100%", lootTable = {"T6SHOULDER","Token"} }; --Pauldrons of the Forgotten Conqueror
 		[18] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 		[19] = { itemID = 98570, droprate = "100%" }; --Mystic Orb
@@ -622,34 +615,41 @@ AtlasLoot_Data["BlackTemple"] = {
 	};
 	{
 		Name = BabbleBoss["The Illidari Council"];
-		[1] = { itemID = 32331, droprate = "6%" }; --Cloak of the Illidari Council
-		[2] = { itemID = 32519, droprate = "6%" }; --Belt of Divine Guidance
-		[3] = { itemID = 32518, droprate = "2%" }; --Veil of Turning Leaves
-		[4] = { itemID = 32376, droprate = "7%" }; --Forest Prowler's Helm
-		[5] = { itemID = 32373, droprate = "7%" }; --Helm of the Illidari Shatterer
-		[6] = { itemID = 32505, droprate = "6%" }; --Madness of the Betrayer
+		[1] = { itemID = 32331 }; --Cloak of the Illidari Council
+		[2] = { itemID = 32519 }; --Belt of Divine Guidance
+		[3] = { itemID = 32518 }; --Veil of Turning Leaves
+		[4] = { itemID = 32376 }; --Forest Prowler's Helm
+		[5] = { itemID = 32373 }; --Helm of the Illidari Shatterer
+		[7] = { itemID = 32326 }; --Twisted Blades of Zarak
 		[16] = { itemID = 31089, droprate = "100%", lootTable = {"T6CHEST","Token"} }; --Chestguard of the Forgotten Conqueror
-		[18] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
-		[19] = { itemID = 98570, droprate = "100%" }; --Mystic Orb
-		[21] = { itemID = 63929, droprate = "1%" }; --Pet Sigil
-		[22] = { itemID = 63928, droprate = "1%" }; --Pet Sigil
-		[23] = { itemID = 63690, droprate = "1%" }; --Pet Sigil
-		[24] = { itemID = 63529, droprate = "1%" }; --Pet Sigil
+		[17] = { itemID = 31101, droprate = "100%", lootTable = {"T6SHOULDER","Token"} }; --Pauldrons of the Forgotten Conqueror
+		[18] = { itemID = 31098, droprate = "100%", lootTable = {"T6LEGS","Token"} }; --Leggings of the Forgotten Conqueror
+		[19] = { itemID = 31097, droprate = "100%", lootTable = {"T6HEAD","Token"} }; --Helm of the Forgotten Conqueror
+		[20] = { itemID = 31092, droprate = "100%", lootTable = {"T6HAND","Token"} }; --Gloves of the Forgotten Conqueror
+		[22] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
+		[23] = { itemID = 98570, droprate = "100%" }; --Mystic Orb
+		[25] = { itemID = 63929, droprate = "1%" }; --Pet Sigil
+		[26] = { itemID = 63928, droprate = "1%" }; --Pet Sigil
+		[27] = { itemID = 63690, droprate = "1%" }; --Pet Sigil
+		[28] = { itemID = 63529, droprate = "1%" }; --Pet Sigil
 	};
 	{
 		Name = BabbleBoss["Illidan Stormrage"];
-		[1] = { itemID = 32524, droprate = "6%" }; --Shroud of the Highborne
-		[2] = { itemID = 32525, droprate = "5%" }; --Cowl of the Illidari High Lord
-		[3] = { itemID = 32235, droprate = "6%" }; --Cursed Vision of Sargeras
-		[4] = { itemID = 32521, droprate = "4%" }; --Faceplate of the Impenetrable
-		[5] = { itemID = 32497, droprate = "5%" }; --Stormrage Signet Ring
-		[6] = { itemID = 32483, droprate = "6%" }; --The Skull of Gul'dan
-		[7] = { itemID = 32496, droprate = "5%" }; --Memento of Tyrande
-		[9] = { itemID = 32471, droprate = "6%" }; --Shard of Azzinoth
-		[10] = { itemID = 32500, droprate = "5%" }; --Crystal Spire of Karabor
-		[11] = { itemID = 32374, droprate = "4%" }; --Zhar'doom, Greatstaff of the Devourer
-		[12] = { itemID = 32375, droprate = "4%" }; --Bulwark of Azzinoth
-		[13] = { itemID = 32336, droprate = "6%" }; --Black Bow of the Betrayer
+		[1] = { itemID = 32524 }; --Shroud of the Highborne
+		[2] = { itemID = 32525 }; --Cowl of the Illidari High Lord
+		[3] = { itemID = 32235 }; --Cursed Vision of Sargeras
+		[4] = { itemID = 32521 }; --Faceplate of the Impenetrable
+		[5] = { itemID = 32497 }; --Stormrage Signet Ring
+		[6] = { itemID = 32483 }; --The Skull of Gul'dan
+		[7] = { itemID = 32496 }; --Memento of Tyrande
+		[8] = { itemID = 32363 }; --Naaru-Blessed Life Rod
+		[9] = { itemID = 32471 }; --Shard of Azzinoth
+		[10] = { itemID = 32500 }; --Crystal Spire of Karabor
+		[11] = { itemID = 32374 }; --Zhar'doom, Greatstaff of the Devourer
+		[12] = { itemID = 32375 }; --Bulwark of Azzinoth
+		[13] = { itemID = 32336 }; --Black Bow of the Betrayer
+		[14] = { itemID = 32501 }; --Shadowmoon Insignia
+		[15] = { itemID = 32505 }; --Madness of the Betrayer
 		[16] = { itemID = 31089, droprate = "100%", lootTable = {"T6CHEST","Token"} }; --Chestguard of the Forgotten Conqueror
 		[18] = { itemID = 32837 }; --Warglaive of Azzinoth
 		[19] = { itemID = 32838 }; --Warglaive of Azzinoth
@@ -660,30 +660,33 @@ AtlasLoot_Data["BlackTemple"] = {
 	};
 	{
 		Name = AL["Trash Mobs"];
-		[1] = { itemID = 32590 }; --Nethervoid Cloak
-		[2] = { itemID = 34012 }; --Shroud of the Final Stand
-		[3] = { itemID = 32609 }; --Boots of the Divine Light
-		[4] = { itemID = 32593 }; --Treads of the Den Mother
-		[5] = { itemID = 32592 }; --Chestguard of Relentless Storms
-		[6] = { itemID = 47166 }; --Concubines Attire
-		[7] = { itemID = 32608 }; --Pillager's Gauntlets
-		[8] = { itemID = 32606 }; --Girdle of the Lightbearer
-		[9] = { itemID = 32591 }; --Choker of Serrated Blades
-		[10] = { itemID = 32589 }; --Hellfire-Encased Pendant
-		[11] = { itemID = 32526 }; --Band of Devastation
-		[12] = { itemID = 32528 }; --Blessed Band of Karabor
-		[13] = { itemID = 32527 }; --Ring of Ancient Knowledge
-		[16] = { itemID = 34009 }; --Hammer of Judgement
-		[17] = { itemID = 32943 }; --Swiftsteel Bludgeon
-		[18] = { itemID = 34011 }; --Illidari Runeshield
-		[20] = { itemID = 32228, droprate = "2%" }; --Empyrean Sapphire
-		[21] = { itemID = 32231 }; --Pyrestone
-		[22] = { itemID = 32229 }; --Lionseye
-		[23] = { itemID = 32249 }; --Seaspray Emerald
-		[24] = { itemID = 32230 }; --Shadowsong Amethyst
-		[25] = { itemID = 32227 }; --Crimson Spinel
-		[27] = { itemID = 32428, droprate = "6%" }; --Heart of Darkness
-		[28] = { itemID = 32897, droprate = "7%" }; --Mark of the Illidari
+		--[1] = { itemID = 32590 }; --Nethervoid Cloak
+		[1] = { itemID = 34012 }; --Shroud of the Final Stand
+		--[3] = { itemID = 32609 }; --Boots of the Divine Light
+		[2] = { itemID = 32593 }; --Treads of the Den Mother
+		--[5] = { itemID = 32592 }; --Chestguard of Relentless Storms
+		[3] = { itemID = 47166 }; --Concubines Attire
+		[4] = { itemID = 32608 }; --Pillager's Gauntlets
+		[5] = { itemID = 32606 }; --Girdle of the Lightbearer
+		--[9] = { itemID = 32591 }; --Choker of Serrated Blades
+		--[10] = { itemID = 32589 }; --Hellfire-Encased Pendant
+		[7] = { itemID = 32526 }; --Band of Devastation
+		[8] = { itemID = 32528 }; --Blessed Band of Karabor
+		[9] = { itemID = 32527 }; --Ring of Ancient Knowledge
+		[11] = { itemID = 32330 }; --Totem of Ancestral Guidance
+		[12] = { itemID = 32368 }; --Tome of the Lightbringer
+		[13] = { itemID = 32257 }; --Idol of the White Stag
+		--[17] = { itemID = 34009 }; --Hammer of Judgement
+		[16] = { itemID = 32943 }; --Swiftsteel Bludgeon
+		[17] = { itemID = 34011 }; --Illidari Runeshield
+		[19] = { itemID = 32228 }; --Empyrean Sapphire
+		[20] = { itemID = 32231 }; --Pyrestone
+		[21] = { itemID = 32229 }; --Lionseye
+		[22] = { itemID = 32249 }; --Seaspray Emerald
+		[23] = { itemID = 32230 }; --Shadowsong Amethyst
+		[24] = { itemID = 32227 }; --Crimson Spinel
+		[26] = { itemID = 32428, droprate = "6%" }; --Heart of Darkness
+		[27] = { itemID = 32897, droprate = "7%" }; --Mark of the Illidari
 	};
 	{
 		Name = "BT Patterns/Plans";
