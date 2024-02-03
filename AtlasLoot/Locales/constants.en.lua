@@ -1544,7 +1544,7 @@ if AL then
 	AL["World Drop"] = true
 	AL["Sunwell Isle"] = true
 	AL["Gordok Commons"] = true
-	AL["Only show crafting source while colding CTRL"] = true
+	AL["Hide crafting source unless holding CTRL"] = true
 
 	-- Shortcuts for Bossname files
 	AL["LBRS"] = true
