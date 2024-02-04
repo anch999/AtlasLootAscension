@@ -18,6 +18,7 @@ if AL then
 	AL["Mystic Enchanting"] = true
 	AL["Druid"] = true
 	AL["Open AscensionDB To Zone Map"] = true
+	AL["Open AscensionDB To NPC"] = true
 	AL["Open AscensionDB To Entry"] = true
 	AL["Links"] = true
 	AL["Add To Default"] = true

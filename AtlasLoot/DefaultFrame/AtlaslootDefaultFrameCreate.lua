@@ -89,7 +89,6 @@ for num = 1, 30 do
     local button = CreateFrame("Button","AtlasLootItem_"..num, AtlasLootItemsFrame)
         button:SetID(num)
         button:SetSize(236,29)
-        
         button:SetHighlightTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD")
         button.icon = button:CreateTexture("AtlasLootItem_"..num.."_Icon","ARTWORK")
         button.icon:SetSize(25,25)
@@ -100,11 +99,11 @@ for num = 1, 30 do
         button.Highlight:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\knownGreen")
         button.Highlight:Hide()
         button.name = button:CreateFontString("AtlasLootItem_"..num.."_Name","ARTWORK","GameFontNormal")
-        button.name:SetSize(400,12)
+        button.name:SetSize(320,12)
         button.name:SetPoint("TOPLEFT","AtlasLootItem_"..num.."_Icon","TOPRIGHT",3,0)
         button.name:SetJustifyH("LEFT")
         button.extra = button:CreateFontString("AtlasLootItem_"..num.."_Extra","ARTWORK","GameFontNormal")
-        button.extra:SetSize(400,10)
+        button.extra:SetSize(320,10)
         button.extra:SetPoint("TOPLEFT","AtlasLootItem_"..num.."_Name","BOTTOMLEFT",0,-1)
         button.extra:SetJustifyH("LEFT")
         button:RegisterForClicks("AnyDown")
@@ -701,12 +700,17 @@ local rows2 = setmetatable({}, { __index = function(t, i)
     row:SetFrameStrata("HIGH")
     row:SetNormalFontObject(GameFontHighlightLeft)
     row:SetCheckedTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD")
+    row:RegisterForClicks("AnyDown")
     row.Text = row:CreateFontString("$parentRow"..i.."Text","OVERLAY","GameFontNormal")
     row.Text:SetSize(230, ROW_HEIGHT)
     row.Text:SetPoint("LEFT",row)
     row.Text:SetJustifyH("LEFT")
-    row:SetScript("OnClick", function()
-        if row.dataSource ~= "AtlasLoot_MapData" then
+    row:SetScript("OnClick", function(self, button)
+        local npcID = _G[row.dataSource][row.tablename][row.tablenum].NpcID
+        if button == "RightButton" and npcID then
+            row:SetChecked(not row:GetChecked())
+            AtlasLoot:OpenDB(self, "npc", npcID)
+        elseif row.dataSource ~= "AtlasLoot_MapData" then
             AtlasLoot:ShowItemsFrame(row.tablename, row.dataSource, row.tablenum)
         else
             row:SetChecked(false)

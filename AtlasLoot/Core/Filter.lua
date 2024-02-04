@@ -186,11 +186,7 @@ function AtlasLoot:FilterEnableButton(frame, btnclick)
 			self:FilterMenuRegister()
 			self.Dewdrop:Open(frame)
 		end
-		if AtlasLootFilterCheck:GetChecked() then
-			AtlasLootFilterCheck:SetChecked(false)
-		else
-			AtlasLootFilterCheck:SetChecked(true)
-		end
+		AtlasLootFilterCheck:SetChecked(not AtlasLootFilterCheck:GetChecked())
 	else
 		if self.filterEnable then
 			self.filterEnable = false

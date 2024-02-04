@@ -553,7 +553,7 @@ function AtlasLoot:CreateOnDemandLootTable(type)
 			for _, t in ipairs(data) do
 				for _, itemData in pairs(t) do
 					if itemData.itemID and not checkList[itemData.itemID] then
-						itemData.dropLoc = {data.Name, t.Name}
+						itemData.dropLoc = {data.DisplayName or data.Name, t.Name}
 						checkList[itemData.itemID] = true
 						tinsert(itemList, {itemData})
 					end
@@ -664,6 +664,10 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 				return i
 			end
 		end
+	end
+
+	if dataSource_backup ~= "AtlasLootFilter" then
+		self.dataSourceBackup = dataSource_backup
 	end
 
 	-- Moves the difficulty scrollslider if the difficulty has changed
@@ -823,13 +827,12 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 		end
 
 		itemButton.name = text
-
 		--Insert the item description
 		if self.FixedItemText[dataSource[dataID][tablenum][i].itemID] then
 			extra = self.FixedItemText[dataSource[dataID][tablenum][i].itemID]
 		elseif dataSource[dataID][tablenum][i].desc then
 			extra = dataSource[dataID][tablenum][i].desc
-		elseif dataSource[dataID][tablenum][i].dropLoc and (dataSource_backup == "AtlasLoot_OnDemand" or (self.db.profile.showdropLocationOnSearch and dataID == "SearchResult")) then
+		elseif dataSource[dataID][tablenum][i].dropLoc and (self.dataSourceBackup == "AtlasLoot_OnDemand" or (self.db.profile.showdropLocationOnSearch and dataID == "SearchResult")) then
 			local location, boss = dataSource[dataID][tablenum][i].dropLoc[1], dataSource[dataID][tablenum][i].dropLoc[2]
 			extra = YELLOW..location..WHITE.." - "..boss
 		elseif AtlasLoot_CraftingData["CraftingLevels"] and spellID and AtlasLoot_CraftingData["CraftingLevels"][spellID] and dataID ~= "SearchResult" then
@@ -1111,7 +1114,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 	if self.filterEnable and dataID ~= "FilterList" then
 		self:HideFilteredItems()
 	end
-	if dataID ~= "SearchResult" then
+	if dataID ~= "SearchResult" and dataSource_backup ~= "AtlasLoot_OnDemand" then
 		--preload items from the rest of the instance table
 		self:PreLoadLootTable(dataSource, dataID, ItemindexID)
 	end
@@ -1252,14 +1255,16 @@ function AtlasLoot:PreLoadLootTable(dataSource, dataID, ItemindexID)
 	if isLoaded[dataID] and isLoaded[dataID][ItemindexID] then return end
 	for _, instance in ipairs(dataSource[dataID]) do
 		for _, boss in pairs(instance) do
-			local itemID = ItemIDsDatabase[boss.itemID] and ItemIDsDatabase[boss.itemID][ItemindexID] or boss.itemID
-			if itemID then
-				local item = Item:CreateFromID(itemID)
-				if item and not item:GetInfo() then
-					self:ItemsLoading(1)
-					item:ContinueOnLoad(function(itemID)
-						self:ItemsLoading(-1)
-					end)
+			if type(boss) == "table" then
+				local itemID = ItemIDsDatabase[boss.itemID] and ItemIDsDatabase[boss.itemID][ItemindexID] or boss.itemID
+				if itemID then
+					local item = Item:CreateFromID(itemID)
+					if item and not item:GetInfo() then
+						self:ItemsLoading(1)
+						item:ContinueOnLoad(function(itemID)
+							self:ItemsLoading(-1)
+						end)
+					end
 				end
 			end
 		end

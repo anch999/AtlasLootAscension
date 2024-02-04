@@ -107,6 +107,16 @@ function AtlasLoot:CloneTable(table)
 	return new
 end
 
+--drop down map menu
+function AtlasLoot:OpenDB(frame, type, text)
+    local menuList = { [1] = {
+        {text = ORANGE..AL["Open AscensionDB To NPC"], func = function() self:OpenDBURL(text , type) end, notCheckable = true, closeWhenClicked = true, textHeight = 12, textWidth = 12},
+		{close = true, divider = 35},
+		}
+	}
+    self:OpenDewdropMenu(frame, menuList)
+end
+
 --[[
 AtlasLoot:FindId(id, difficulty)
 Finds the Ids of other difficulties based on the normal id of the item and the difficulty parameter given.

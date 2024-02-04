@@ -680,17 +680,19 @@ function AtlasLoot:DoSearch(searchText)
         if self.db.profile.SearchOn.All or self.db.profile.SearchOn[data.Module] or (self.db.profile.SearchAscensionVanity and data.Module == "AtlasLoot_Ascension_Vanity") then
             for tableNum, t in ipairs(data) do
                 for _, itemData in pairs(t) do
-                    if itemData.itemID or itemData.spellID then
-                        if data.Type then
-                            itemData.Type = data.Type
-                            if not itemData[self.Difficultys.MAX_DIF] then
-                                itemData[self.Difficultys.MAX_DIF] = #self.Difficultys[data.Type]
+                    if type(itemData) == "table" then
+                        if itemData.itemID or itemData.spellID then
+                            if data.Type then
+                                itemData.Type = data.Type
+                                if not itemData[self.Difficultys.MAX_DIF] then
+                                    itemData[self.Difficultys.MAX_DIF] = #self.Difficultys[data.Type]
+                                end
                             end
+                            if self.db.profile.showdropLocationOnSearch then
+                                itemData.dropLoc = {data.DisplayName or data.Name, t.Name}
+                            end
+                            tinsert(itemList, {{itemData, dataID, tableNum, searchTerms, searchText}})
                         end
-                        if self.db.profile.showdropLocationOnSearch then
-                            itemData.dropLoc = {data.Name, t.Name}
-                        end
-                        tinsert(itemList, {{itemData, dataID, tableNum, searchTerms, searchText}})
                     end
                 end
             end
