@@ -3,7 +3,7 @@ local BabbleBoss = AtlasLoot_GetLocaleLibBabble("LibBabble-Boss-3.0");
 local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0");
 local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0");
 local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0");
-
+local WHITE = "|cffFFFFFF"
 -- Index
 --- Dungeons & BCRaids
 ---- Keys
@@ -2170,84 +2170,84 @@ AtlasLoot_Data["MagistersTerrace"] = {
 	{
 		Name = BabbleBoss["Selin Fireheart"];
 		[1] = { icon = "INV_Box_01", name = "=q6=#j1#" };
-		[2] = { itemID = 434702 }; --Cloak of Swift Mending
-		[3] = { itemID = 434697 }; --Bindings of Raging Fire
-		[4] = { itemID = 434701 }; --Leggings of the Betrayed
-		[5] = { itemID = 434698 }; --Bracers of the Forest Stalker
-		[6] = { itemID = 434700 }; --Gauntlets of Divine Blessings
-		[7] = { itemID = 434699 }; --Sun-forged Cleaver
+		[2] = { itemID = 34702 }; --Cloak of Swift Mending
+		[3] = { itemID = 34697 }; --Bindings of Raging Fire
+		[4] = { itemID = 34701 }; --Leggings of the Betrayed
+		[5] = { itemID = 34698 }; --Bracers of the Forest Stalker
+		[6] = { itemID = 34700 }; --Gauntlets of Divine Blessings
+		[7] = { itemID = 34699 }; --Sun-forged Cleaver
 		[16] = { icon = "INV_Box_01", name = "#j27#" };
 		[17] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
-		[18] = { itemID = 434602, droprate = "0%" }; --Eversong Cuffs
-		[19] = { itemID = 434601, droprate = "1%" }; --Shoulderplates of Everlasting Pain
-		[20] = { itemID = 434604, droprate = "1%" }; --Jaded Crystal Dagger
-		[21] = { itemID = 434603, droprate = "1%" }; --Distracting Blades
-		[23] = { itemID = 435275 }; --Orb of the Sin'dorei
+		[18] = { itemID = 34602, droprate = "0%" }; --Eversong Cuffs
+		[19] = { itemID = 34601, droprate = "1%" }; --Shoulderplates of Everlasting Pain
+		[20] = { itemID = 34604, droprate = "1%" }; --Jaded Crystal Dagger
+		[21] = { itemID = 34603, droprate = "1%" }; --Distracting Blades
+		[23] = { itemID = 35275 }; --Orb of the Sin'dorei
 	};
 	{
 		Name = BabbleBoss["Vexallus"];
 		[1] = { icon = "INV_Box_01", name = "=q6=#j1#" };
-		[2] = { itemID = 434708, droprate = "7%" }; --Cloak of the Coming Night
-		[3] = { itemID = 434705 }; --Bracers of Divine Infusion
-		[4] = { itemID = 434707, droprate = "6%" }; --Boots of Resuscitation
-		[5] = { itemID = 434704, droprate = "8%" }; --Band of Arcane Alacrity
-		[6] = { itemID = 434706 }; --Band of Determination
-		[7] = { itemID = 434703, droprate = "6%" }; --Latro's Dancing Blade
+		[2] = { itemID = 34708, droprate = "7%" }; --Cloak of the Coming Night
+		[3] = { itemID = 34705 }; --Bracers of Divine Infusion
+		[4] = { itemID = 34707, droprate = "6%" }; --Boots of Resuscitation
+		[5] = { itemID = 34704, droprate = "8%" }; --Band of Arcane Alacrity
+		[6] = { itemID = 34706 }; --Band of Determination
+		[7] = { itemID = 34703, droprate = "6%" }; --Latro's Dancing Blade
 		[16] = { icon = "INV_Box_01", name = "#j27#" };
 		[17] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
-		[18] = { itemID = 434607, droprate = "0%" }; --Fel-tinged Mantle
-		[19] = { itemID = 434605, droprate = "9%" }; --Breastplate of Fierce Survival
-		[20] = { itemID = 434606, droprate = "0%" }; --Edge of Oppression
-		[21] = { itemID = 434608, droprate = "9%" }; --Rod of the Blazing Light
+		[18] = { itemID = 34607, droprate = "0%" }; --Fel-tinged Mantle
+		[19] = { itemID = 34605, droprate = "9%" }; --Breastplate of Fierce Survival
+		[20] = { itemID = 34606, droprate = "0%" }; --Edge of Oppression
+		[21] = { itemID = 34608, droprate = "9%" }; --Rod of the Blazing Light
 		[23] = { itemID = 435275 }; --Orb of the Sin'dorei
 	};
 	{
 		Name = BabbleBoss["Priestess Delrissa"];
 		[1] = { icon = "INV_Box_01", name = "=q6=#j1#" };
-		[2] = { itemID = 434792, droprate = "7%" }; --Cloak of the Betrayed
-		[3] = { itemID = 434788 }; --Duskhallow Mantle
-		[4] = { itemID = 434791, droprate = "6%" }; --Gauntlets of the Tranquil Waves
-		[5] = { itemID = 434789, droprate = "7%" }; --Bracers of Slaughter
-		[6] = { itemID = 434790, droprate = "6%" }; --Battle-mace of the High Priestess
-		[7] = { itemID = 434783, droprate = "7%" }; --Nightstrike
+		[2] = { itemID = 34792, droprate = "7%" }; --Cloak of the Betrayed
+		[3] = { itemID = 34788 }; --Duskhallow Mantle
+		[4] = { itemID = 34791, droprate = "6%" }; --Gauntlets of the Tranquil Waves
+		[5] = { itemID = 34789, droprate = "7%" }; --Bracers of Slaughter
+		[6] = { itemID = 34790, droprate = "6%" }; --Battle-mace of the High Priestess
+		[7] = { itemID = 34783, droprate = "7%" }; --Nightstrike
 		[9] = { itemID = 35756, droprate = { nil, "2%", "5%", "7%", "10%" } }; --Formula: Enchant Cloak - Steelweave
 		[16] = { icon = "INV_Box_01", name = "#j27#" };
 		[17] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
-		[18] = { itemID = 434473, droprate = "9%" }; --Commendation of Kael'thas
-		[19] = { itemID = 434472, droprate = "9%" }; --Shard of Contempt
-		[20] = { itemID = 434470, droprate = "9%" }; --Timbal's Focusing Crystal
-		[21] = { itemID = 434471, droprate = "9%" }; --Vial of the Sunwell
-		[23] = { itemID = 435275 }; --Orb of the Sin'dorei
+		[18] = { itemID = 34473, droprate = "9%" }; --Commendation of Kael'thas
+		[19] = { itemID = 34472, droprate = "9%" }; --Shard of Contempt
+		[20] = { itemID = 34470, droprate = "9%" }; --Timbal's Focusing Crystal
+		[21] = { itemID = 34471, droprate = "9%" }; --Vial of the Sunwell
+		[23] = { itemID = 35275 }; --Orb of the Sin'dorei
 	};
 	{
 		Name = BabbleBoss["Kael'thas Sunstrider"];
-		[1] = { itemID = 434810 }; --Cloak of Blade Turning
-		[2] = { itemID = 434808 }; --Gloves of Arcane Acuity
-		[3] = { itemID = 434809, droprate = "5%" }; --Sunrage Treads
-		[4] = { itemID = 434799, droprate = "3%" }; --Hauberk of the War Bringer
-		[5] = { itemID = 434807 }; --Sunstrider Warboots
-		[6] = { itemID = 434625 }; --Kharmaa's Ring of Fate
+		[1] = { itemID = 34810 }; --Cloak of Blade Turning
+		[2] = { itemID = 34808 }; --Gloves of Arcane Acuity
+		[3] = { itemID = 34809, droprate = "5%" }; --Sunrage Treads
+		[4] = { itemID = 34799, droprate = "3%" }; --Hauberk of the War Bringer
+		[5] = { itemID = 34807 }; --Sunstrider Warboots
+		[6] = { itemID = 34625 }; --Kharmaa's Ring of Fate
 		[8] = { itemID = 34157, droprate = "6%" }; --Head of Kael'thas
-		[16] = { itemID = 434793 }; --Cord of Reconstruction
-		[17] = { itemID = 434796 }; --Robes of Summer Flame
-		[18] = { itemID = 434795 }; --Helm of Sanctification
-		[19] = { itemID = 434798 }; --Band of Celerity
-		[20] = { itemID = 434794 }; --Axe of Shattered Dreams
-		[21] = { itemID = 434797, droprate = "4%" }; --Sun-infused Focus Staff
+		[16] = { itemID = 34793 }; --Cord of Reconstruction
+		[17] = { itemID = 34796 }; --Robes of Summer Flame
+		[18] = { itemID = 34795 }; --Helm of Sanctification
+		[19] = { itemID = 34798 }; --Band of Celerity
+		[20] = { itemID = 34794 }; --Axe of Shattered Dreams
+		[21] = { itemID = 34797, droprate = "4%" }; --Sun-infused Focus Staff
 		[22] = { itemID = 35504 }; --Phoenix Hatchling
 	};
 	{
 		Name = BabbleBoss["Kael'thas Sunstrider"] .. " (" .. AL["Heroic"] .. ")";
 		[1] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
-		[2] = { itemID = 434610, droprate = "9%" }; --Scarlet Sin'dorei Robes
-		[3] = { itemID = 434613, droprate = "9%" }; --Shoulderpads of the Silvermoon Retainer
-		[4] = { itemID = 434614, droprate = "8%" }; --Tunic of the Ranger Lord
-		[5] = { itemID = 434615, droprate = "9%" }; --Netherforce Chestplate
-		[6] = { itemID = 434612, droprate = "9%" }; --Greaves of the Penitent Knight
+		[2] = { itemID = 34610, droprate = "9%" }; --Scarlet Sin'dorei Robes
+		[3] = { itemID = 34613, droprate = "9%" }; --Shoulderpads of the Silvermoon Retainer
+		[4] = { itemID = 34614, droprate = "8%" }; --Tunic of the Ranger Lord
+		[5] = { itemID = 34615, droprate = "9%" }; --Netherforce Chestplate
+		[6] = { itemID = 34612, droprate = "9%" }; --Greaves of the Penitent Knight
 		[8] = { itemID = 34160, droprate = "2%" }; --The Signet Ring of Prince Kael'thas
-		[16] = { itemID = 434609, droprate = "0%" }; --Quickening Blade of the Prince
-		[17] = { itemID = 434616, droprate = "9%" }; --Breeching Comet
-		[18] = { itemID = 434611, droprate = "9%" }; --Cudgel of Consecration
+		[16] = { itemID = 34609, droprate = "0%" }; --Quickening Blade of the Prince
+		[17] = { itemID = 34616, droprate = "9%" }; --Breeching Comet
+		[18] = { itemID = 34611, droprate = "9%" }; --Cudgel of Consecration
 		[19] = { itemID = 35513 }; --Swift White Hawkstrider
 		[21] = { itemID = 35504 }; --Phoenix Hatchling
 	};
@@ -4291,219 +4291,219 @@ AtlasLoot_Data["PVP70RepGear"] = {
 	{
 		Name = BabbleInventory["Cloth"] .. " - " .. BabbleFaction["Alliance"];
 		[1] = { icon = "INV_BannerPVP_02", name = "=q6=#pvprep705_1#", desc = "=ec1=#c5#" };
-		[2] = { itemID = 28705, desc = "=q3=Grand Marshal's Satin Hood" };
-		[3] = { itemID = 28707, desc = "=q3=Grand Marshal's Satin Mantle" };
-		[4] = { itemID = 28708, desc = "=q3=Grand Marshal's Satin Robe" };
-		[5] = { itemID = 28704, desc = "=q3=Grand Marshal's Satin Gloves" };
-		[6] = { itemID = 28706, desc = "=q3=Grand Marshal's Satin Leggings" };
+		[2] = { itemID = 28705 }; --Grand Marshal's Satin Hood
+		[3] = { itemID = 28707 }; --Grand Marshal's Satin Mantle
+		[4] = { itemID = 28708 }; --Grand Marshal's Satin Robe
+		[5] = { itemID = 28704 }; --Grand Marshal's Satin Gloves
+		[6] = { itemID = 28706 }; --Grand Marshal's Satin Leggings
 		[8] = { icon = "INV_BannerPVP_02", name = "=q6=#pvprep705_2#", desc = "=ec1=#c5#" };
-		[9] = { itemID = 31622, desc = "=q3=Grand Marshal's Mooncloth Cowl" };
-		[10] = { itemID = 31624, desc = "=q3=Grand Marshal's Mooncloth Shoulderpads" };
-		[11] = { itemID = 31625, desc = "=q3=Grand Marshal's Mooncloth Vestments" };
-		[12] = { itemID = 31620, desc = "=q3=Grand Marshal's Mooncloth Mitts" };
-		[13] = { itemID = 31623, desc = "=q3=Grand Marshal's Mooncloth Legguards" };
+		[9] = { itemID = 31622 }; --Grand Marshal's Mooncloth Cowl
+		[10] = { itemID = 31624 }; --Grand Marshal's Mooncloth Shoulderpads
+		[11] = { itemID = 31625 }; --Grand Marshal's Mooncloth Vestments
+		[12] = { itemID = 31620 }; --Grand Marshal's Mooncloth Mitts
+		[13] = { itemID = 31623 }; --Grand Marshal's Mooncloth Legguards
 		[16] = { icon = "INV_BannerPVP_02", name = "=q6=#pvprep703#", desc = "=ec1=#c3#" };
-		[17] = { itemID = 28715, desc = "=q3=Grand Marshal's Silk Cowl" };
-		[18] = { itemID = 28714, desc = "=q3=Grand Marshal's Silk Amice" };
-		[19] = { itemID = 28717, desc = "=q3=Grand Marshal's Silk Raiment" };
-		[20] = { itemID = 28716, desc = "=q3=Grand Marshal's Silk Handguards" };
-		[21] = { itemID = 28718, desc = "=q3=Grand Marshal's Silk Trousers" };
+		[17] = { itemID = 28715 }; --Grand Marshal's Silk Cowl
+		[18] = { itemID = 28714 }; --Grand Marshal's Silk Amice
+		[19] = { itemID = 28717 }; --Grand Marshal's Silk Raiment
+		[20] = { itemID = 28716 }; --Grand Marshal's Silk Handguards
+		[21] = { itemID = 28718 }; --Grand Marshal's Silk Trousers
 		[23] = { icon = "INV_BannerPVP_02", name = "=q6=#pvprep708#", desc = "=ec1=#c8#" };
-		[24] = { itemID = 28625, desc = "=q3=Grand Marshal's Dreadweave Hood" };
-		[25] = { itemID = 28627, desc = "=q3=Grand Marshal's Dreadweave Mantle" };
-		[26] = { itemID = 28628, desc = "=q3=Grand Marshal's Dreadweave Robe" };
-		[27] = { itemID = 28624, desc = "=q3=Grand Marshal's Dreadweave Gloves" };
-		[28] = { itemID = 28626, desc = "=q3=Grand Marshal's Dreadweave Leggings" };
+		[24] = { itemID = 28625 }; --Grand Marshal's Dreadweave Hood
+		[25] = { itemID = 28627 }; --Grand Marshal's Dreadweave Mantle
+		[26] = { itemID = 28628 }; --Grand Marshal's Dreadweave Robe
+		[27] = { itemID = 28624 }; --Grand Marshal's Dreadweave Gloves
+		[28] = { itemID = 28626 }; --Grand Marshal's Dreadweave Leggings
 
 	};
 	{
 		Name = BabbleInventory["Leather"] .. " - " .. BabbleFaction["Alliance"];
 		[1] = { icon = "INV_BannerPVP_02", name = "=q6=#pvprep701_1#", desc = "=ec1=#c1#" };
-		[2] = { itemID = 28619, desc = "=q3=Grand Marshal's Dragonhide Helm" };
-		[3] = { itemID = 28622, desc = "=q3=Grand Marshal's Dragonhide Spaulders" };
-		[4] = { itemID = 28623, desc = "=q3=Grand Marshal's Dragonhide Robe" };
-		[5] = { itemID = 28618, desc = "=q3=Grand Marshal's Dragonhide Gloves" };
-		[6] = { itemID = 28620, desc = "=q3=Grand Marshal's Dragonhide Legguards" };
+		[2] = { itemID = 28619 }; --Grand Marshal's Dragonhide Helm
+		[3] = { itemID = 28622 }; --Grand Marshal's Dragonhide Spaulders
+		[4] = { itemID = 28623 }; --Grand Marshal's Dragonhide Robe
+		[5] = { itemID = 28618 }; --Grand Marshal's Dragonhide Gloves
+		[6] = { itemID = 28620 }; --Grand Marshal's Dragonhide Legguards
 		[8] = { icon = "INV_BannerPVP_02", name = "=q6=#pvprep701_2#", desc = "=ec1=#c1#" };
-		[9] = { itemID = 31590, desc = "=q3=Grand Marshal's Wyrmhide Helm" };
-		[10] = { itemID = 31592, desc = "=q3=Grand Marshal's Wyrmhide Spaulders" };
-		[11] = { itemID = 31593, desc = "=q3=Grand Marshal's Wyrmhide Robe" };
-		[12] = { itemID = 31589, desc = "=q3=Grand Marshal's Wyrmhide Gloves" };
-		[13] = { itemID = 31591, desc = "=q3=Grand Marshal's Wyrmhide Legguards" };
+		[9] = { itemID = 31590 }; --Grand Marshal's Wyrmhide Helm
+		[10] = { itemID = 31592 }; --Grand Marshal's Wyrmhide Spaulders
+		[11] = { itemID = 31593 }; --Grand Marshal's Wyrmhide Robe
+		[12] = { itemID = 31589 }; --Grand Marshal's Wyrmhide Gloves
+		[13] = { itemID = 31591 }; --Grand Marshal's Wyrmhide Legguards
 		[16] = { icon = "INV_BannerPVP_02", name = "=q6=#pvprep701_3#", desc = "=ec1=#c1#" };
-		[17] = { itemID = 28720, desc = "=q3=Grand Marshal's Kodohide Helm" };
-		[18] = { itemID = 28722, desc = "=q3=Grand Marshal's Kodohide Spaulders" };
-		[19] = { itemID = 28723, desc = "=q3=Grand Marshal's Kodohide Robe" };
-		[20] = { itemID = 28719, desc = "=q3=Grand Marshal's Kodohide Gloves" };
-		[21] = { itemID = 28721, desc = "=q3=Grand Marshal's Kodohide Legguards" };
+		[17] = { itemID = 28720 }; --Grand Marshal's Kodohide Helm
+		[18] = { itemID = 28722 }; --Grand Marshal's Kodohide Spaulders
+		[19] = { itemID = 28723 }; --Grand Marshal's Kodohide Robe
+		[20] = { itemID = 28719 }; --Grand Marshal's Kodohide Gloves
+		[21] = { itemID = 28721 }; --Grand Marshal's Kodohide Legguards
 		[23] = { icon = "INV_BannerPVP_02", name = "=q6=#pvprep706#", desc = "=ec1=#c6#" };
-		[24] = { itemID = 28685, desc = "=q3=Grand Marshal's Leather Helm" };
-		[25] = { itemID = 28687, desc = "=q3=Grand Marshal's Leather Spaulders" };
-		[26] = { itemID = 28688, desc = "=q3=Grand Marshal's Leather Tunic" };
-		[27] = { itemID = 28684, desc = "=q3=Grand Marshal's Leather Gloves" };
-		[28] = { itemID = 28686, desc = "=q3=Grand Marshal's Leather Legguards" };
+		[24] = { itemID = 28685 }; --Grand Marshal's Leather Helm
+		[25] = { itemID = 28687 }; --Grand Marshal's Leather Spaulders
+		[26] = { itemID = 28688 }; --Grand Marshal's Leather Tunic
+		[27] = { itemID = 28684 }; --Grand Marshal's Leather Gloves
+		[28] = { itemID = 28686 }; --Grand Marshal's Leather Legguards
 	};
 	{
 		Name = BabbleInventory["Mail"] .. " - " .. BabbleFaction["Alliance"];
 		[1] = { icon = "INV_BannerPVP_02", name = "=q6=#pvprep707_1#", desc = "=ec1=#c7#" };
-		[2] = { itemID = 28691, desc = "=q3=Grand Marshal's Linked Helm" };
-		[3] = { itemID = 28693, desc = "=q3=Grand Marshal's Linked Spaulders" };
-		[4] = { itemID = 28689, desc = "=q3=Grand Marshal's Linked Armor" };
-		[5] = { itemID = 28690, desc = "=q3=Grand Marshal's Linked Gauntlets" };
-		[6] = { itemID = 28692, desc = "=q3=Grand Marshal's Linked Leggings" };
+		[2] = { itemID = 28691 }; --Grand Marshal's Linked Helm
+		[3] = { itemID = 28693 }; --Grand Marshal's Linked Spaulders
+		[4] = { itemID = 28689 }; --Grand Marshal's Linked Armor
+		[5] = { itemID = 28690 }; --Grand Marshal's Linked Gauntlets
+		[6] = { itemID = 28692 }; --Grand Marshal's Linked Leggings
 		[8] = { icon = "INV_BannerPVP_02", name = "=q6=#pvprep707_2#", desc = "=ec1=#c7#" };
-		[9] = { itemID = 28696, desc = "=q3=Grand Marshal's Mail Helm" };
-		[10] = { itemID = 28698, desc = "=q3=Grand Marshal's Mail Spaulders" };
-		[11] = { itemID = 28694, desc = "=q3=Grand Marshal's Mail Armor" };
-		[12] = { itemID = 28695, desc = "=q3=Grand Marshal's Mail Gauntlets" };
-		[13] = { itemID = 28697, desc = "=q3=Grand Marshal's Mail Leggings" };
+		[9] = { itemID = 28696 }; --Grand Marshal's Mail Helm
+		[10] = { itemID = 28698 }; --Grand Marshal's Mail Spaulders
+		[11] = { itemID = 28694 }; --Grand Marshal's Mail Armor
+		[12] = { itemID = 28695 }; --Grand Marshal's Mail Gauntlets
+		[13] = { itemID = 28697 }; --Grand Marshal's Mail Leggings
 		[16] = { icon = "INV_BannerPVP_02", name = "=q6=#pvprep707_3#", desc = "=ec1=#c7#" };
-		[17] = { itemID = 31642, desc = "=q3=Grand Marshal's Ringmail Headpiece" };
-		[18] = { itemID = 31644, desc = "=q3=Grand Marshal's Ringmail Shoulderpads" };
-		[19] = { itemID = 31640, desc = "=q3=Grand Marshal's Ringmail Chestguard" };
-		[20] = { itemID = 31641, desc = "=q3=Grand Marshal's Ringmail Gloves" };
-		[21] = { itemID = 31643, desc = "=q3=Grand Marshal's Ringmail Legguards" };
+		[17] = { itemID = 31642 }; --Grand Marshal's Ringmail Headpiece
+		[18] = { itemID = 31644 }; --Grand Marshal's Ringmail Shoulderpads
+		[19] = { itemID = 31640 }; --Grand Marshal's Ringmail Chestguard
+		[20] = { itemID = 31641 }; --Grand Marshal's Ringmail Gloves
+		[21] = { itemID = 31643 }; --Grand Marshal's Ringmail Legguards
 		[23] = { icon = "INV_BannerPVP_02", name = "=q6=#pvprep702#", desc = "=ec1=#c2#" };
-		[24] = { itemID = 28615, desc = "=q3=Grand Marshal's Chain Helm" };
-		[25] = { itemID = 28617, desc = "=q3=Grand Marshal's Chain Spaulders" };
-		[26] = { itemID = 28613, desc = "=q3=Grand Marshal's Chain Armor" };
-		[27] = { itemID = 28614, desc = "=q3=Grand Marshal's Chain Gauntlets" };
-		[28] = { itemID = 28616, desc = "=q3=Grand Marshal's Chain Leggings" };
+		[24] = { itemID = 28615 }; --Grand Marshal's Chain Helm
+		[25] = { itemID = 28617 }; --Grand Marshal's Chain Spaulders
+		[26] = { itemID = 28613 }; --Grand Marshal's Chain Armor
+		[27] = { itemID = 28614 }; --Grand Marshal's Chain Gauntlets
+		[28] = { itemID = 28616 }; --Grand Marshal's Chain Leggings
 	};
 	{
 		Name = BabbleInventory["Plate"] .. " - " .. BabbleFaction["Alliance"];
 		[1] = { icon = "INV_BannerPVP_02", name = "=q6=#pvprep704_1#", desc = "=ec1=#c4#" };
-		[2] = { itemID = 28711, desc = "=q3=Grand Marshal's Scaled Helm" };
-		[3] = { itemID = 28713, desc = "=q3=Grand Marshal's Scaled Shoulders" };
-		[4] = { itemID = 28709, desc = "=q3=Grand Marshal's Scaled Chestpiece" };
-		[5] = { itemID = 28710, desc = "=q3=Grand Marshal's Scaled Gauntlets" };
-		[6] = { itemID = 28712, desc = "=q3=Grand Marshal's Scaled Legguards" };
+		[2] = { itemID = 28711 }; --Grand Marshal's Scaled Helm
+		[3] = { itemID = 28713 }; --Grand Marshal's Scaled Shoulders
+		[4] = { itemID = 28709 }; --Grand Marshal's Scaled Chestpiece
+		[5] = { itemID = 28710 }; --Grand Marshal's Scaled Gauntlets
+		[6] = { itemID = 28712 }; --Grand Marshal's Scaled Legguards
 		[8] = { icon = "INV_BannerPVP_02", name = "=q6=#pvprep704_2#", desc = "=ec1=#c4#" };
-		[9] = { itemID = 31632, desc = "=q3=Grand Marshal's Ornamented Headguard" };
-		[10] = { itemID = 31634, desc = "=q3=Grand Marshal's Ornamented Spaulders" };
-		[11] = { itemID = 31630, desc = "=q3=Grand Marshal's Ornamented Chestplate" };
-		[12] = { itemID = 31631, desc = "=q3=Grand Marshal's Ornamented Gloves" };
-		[13] = { itemID = 31633, desc = "=q3=Grand Marshal's Ornamented Leggings" };
+		[9] = { itemID = 31632 }; --Grand Marshal's Ornamented Headguard
+		[10] = { itemID = 31634 }; --Grand Marshal's Ornamented Spaulders
+		[11] = { itemID = 31630 }; --Grand Marshal's Ornamented Chestplate
+		[12] = { itemID = 31631 }; --Grand Marshal's Ornamented Gloves
+		[13] = { itemID = 31633 }; --Grand Marshal's Ornamented Leggings
 		[16] = { icon = "INV_BannerPVP_02", name = "=q6=#pvprep709#", desc = "=ec1=#c9#" };
-		[17] = { itemID = 28701, desc = "=q3=Grand Marshal's Plate Helm" };
-		[18] = { itemID = 28703, desc = "=q3=Grand Marshal's Plate Shoulders" };
-		[19] = { itemID = 28699, desc = "=q3=Grand Marshal's Plate Chestpiece" };
-		[20] = { itemID = 28700, desc = "=q3=Grand Marshal's Plate Gauntlets" };
-		[21] = { itemID = 28702, desc = "=q3=Grand Marshal's Plate Legguards" };
+		[17] = { itemID = 28701 }; --Grand Marshal's Plate Helm
+		[18] = { itemID = 28703 }; --Grand Marshal's Plate Shoulders
+		[19] = { itemID = 28699 }; --Grand Marshal's Plate Chestpiece
+		[20] = { itemID = 28700 }; --Grand Marshal's Plate Gauntlets
+		[21] = { itemID = 28702 }; --Grand Marshal's Plate Legguards
 		[23] = { icon = "INV_BannerPVP_02", name = "=q6=#arenas4_1#", desc = "=ec1=#c4#" };
-		[24] = { itemID = 28681, desc = "=q3=Grand Marshal's Lamellar Helm" };
-		[25] = { itemID = 28683, desc = "=q3=Grand Marshal's Lamellar Shoulders" };
-		[26] = { itemID = 28679, desc = "=q3=Grand Marshal's Lamellar Chestpiece" };
-		[27] = { itemID = 28680, desc = "=q3=Grand Marshal's Lamellar Gauntlets" };
-		[28] = { itemID = 28724, desc = "=q3=Grand Marshal's Lamellar Legguards" };
+		[24] = { itemID = 28681 }; --Grand Marshal's Lamellar Helm
+		[25] = { itemID = 28683 }; --Grand Marshal's Lamellar Shoulders
+		[26] = { itemID = 28679 }; --Grand Marshal's Lamellar Chestpiece
+		[27] = { itemID = 28680 }; --Grand Marshal's Lamellar Gauntlets
+		[28] = { itemID = 28724 }; --Grand Marshal's Lamellar Legguards
 	};
 	{
 		Name = BabbleInventory["Cloth"] .. " - Horde";
 		[1] = { icon = "INV_BannerPVP_01", name = "=q6=#pvprep705_1#", desc = "=ec1=#c5#" };
-		[2] = { itemID = 28857, desc = "=q3=High Warlord's Satin Hood" };
-		[3] = { itemID = 28859, desc = "=q3=High Warlord's Satin Mantle" };
-		[4] = { itemID = 28860, desc = "=q3=High Warlord's Satin Robe" };
-		[5] = { itemID = 28856, desc = "=q3=High Warlord's Satin Gloves" };
-		[6] = { itemID = 28858, desc = "=q3=High Warlord's Satin Leggings" };
+		[2] = { itemID = 28857 }; --High Warlord's Satin Hood
+		[3] = { itemID = 28859 }; --High Warlord's Satin Mantle
+		[4] = { itemID = 28860 }; --High Warlord's Satin Robe
+		[5] = { itemID = 28856 }; --High Warlord's Satin Gloves
+		[6] = { itemID = 28858 }; --High Warlord's Satin Leggings
 		[8] = { icon = "INV_BannerPVP_01", name = "=q6=#pvprep705_2#", desc = "=ec1=#c5#" };
-		[9] = { itemID = 31626, desc = "=q3=High Warlord's Mooncloth Cowl" };
-		[10] = { itemID = 31628, desc = "=q3=High Warlord's Mooncloth Shoulderpads" };
-		[11] = { itemID = 31629, desc = "=q3=High Warlord's Mooncloth Vestments" };
-		[12] = { itemID = 31621, desc = "=q3=High Warlord's Mooncloth Mitts" };
-		[13] = { itemID = 31627, desc = "=q3=High Warlord's Mooncloth Legguards" };
+		[9] = { itemID = 31626 }; --High Warlord's Mooncloth Cowl
+		[10] = { itemID = 31628 }; --High Warlord's Mooncloth Shoulderpads
+		[11] = { itemID = 31629 }; --High Warlord's Mooncloth Vestments
+		[12] = { itemID = 31621 }; --High Warlord's Mooncloth Mitts
+		[13] = { itemID = 31627 }; --High Warlord's Mooncloth Legguards
 		[16] = { icon = "INV_BannerPVP_01", name = "=q6=#pvprep703#", desc = "=ec1=#c3#" };
-		[17] = { itemID = 28867, desc = "=q3=High Warlord's Silk Cowl" };
-		[18] = { itemID = 28866, desc = "=q3=High Warlord's Silk Amice" };
-		[19] = { itemID = 28869, desc = "=q3=High Warlord's Silk Raiment" };
-		[20] = { itemID = 28868, desc = "=q3=High Warlord's Silk Handguards" };
-		[21] = { itemID = 28870, desc = "=q3=High Warlord's Silk Trousers" };
+		[17] = { itemID = 28867 }; --High Warlord's Silk Cowl
+		[18] = { itemID = 28866 }; --High Warlord's Silk Amice
+		[19] = { itemID = 28869 }; --High Warlord's Silk Raiment
+		[20] = { itemID = 28868 }; --High Warlord's Silk Handguards
+		[21] = { itemID = 28870 }; --High Warlord's Silk Trousers
 		[23] = { icon = "INV_BannerPVP_01", name = "=q6=#pvprep708#", desc = "=ec1=#c8#" };
-		[24] = { itemID = 28818, desc = "=q3=High Warlord's Dreadweave Hood" };
-		[25] = { itemID = 28820, desc = "=q3=High Warlord's Dreadweave Mantle" };
-		[26] = { itemID = 28821, desc = "=q3=High Warlord's Dreadweave Robe" };
-		[27] = { itemID = 28817, desc = "=q3=High Warlord's Dreadweave Gloves" };
-		[28] = { itemID = 28819, desc = "=q3=High Warlord's Dreadweave Leggings" };
+		[24] = { itemID = 28818 }; --High Warlord's Dreadweave Hood
+		[25] = { itemID = 28820 }; --High Warlord's Dreadweave Mantle
+		[26] = { itemID = 28821 }; --High Warlord's Dreadweave Robe
+		[27] = { itemID = 28817 }; --High Warlord's Dreadweave Gloves
+		[28] = { itemID = 28819 }; --High Warlord's Dreadweave Leggings
 	};
 	{
 		Name = BabbleInventory["Leather"] .. " - Horde";
 		[1] = { icon = "INV_BannerPVP_01", name = "=q6=#pvprep701_1#", desc = "=ec1=#c1#" };
-		[2] = { itemID = 28812, desc = "=q3=High Warlord's Dragonhide Helm" };
-		[3] = { itemID = 28814, desc = "=q3=High Warlord's Dragonhide Spaulders" };
-		[4] = { itemID = 28815, desc = "=q3=High Warlord's Dragonhide Robe" };
-		[5] = { itemID = 28811, desc = "=q3=High Warlord's Dragonhide Gloves" };
-		[6] = { itemID = 28813, desc = "=q3=High Warlord's Dragonhide Legguards" };
+		[2] = { itemID = 28812 }; --High Warlord's Dragonhide Helm
+		[3] = { itemID = 28814 }; --High Warlord's Dragonhide Spaulders
+		[4] = { itemID = 28815 }; --High Warlord's Dragonhide Robe
+		[5] = { itemID = 28811 }; --High Warlord's Dragonhide Gloves
+		[6] = { itemID = 28813 }; --High Warlord's Dragonhide Legguards
 		[8] = { icon = "INV_BannerPVP_01", name = "=q6=#pvprep701_2#", desc = "=ec1=#c1#" };
-		[9] = { itemID = 28872, desc = "=q3=High Warlord's Wyrmhide Helm" };
-		[10] = { itemID = 28874, desc = "=q3=High Warlord's Wyrmhide Spaulders" };
-		[11] = { itemID = 28875, desc = "=q3=High Warlord's Wyrmhide Robe" };
-		[12] = { itemID = 28871, desc = "=q3=High Warlord's Wyrmhide Gloves" };
-		[13] = { itemID = 28873, desc = "=q3=High Warlord's Wyrmhide Legguards" };
+		[9] = { itemID = 28872 }; --High Warlord's Wyrmhide Helm
+		[10] = { itemID = 28874 }; --High Warlord's Wyrmhide Spaulders
+		[11] = { itemID = 28875 }; --High Warlord's Wyrmhide Robe
+		[12] = { itemID = 28871 }; --High Warlord's Wyrmhide Gloves
+		[13] = { itemID = 28873 }; --High Warlord's Wyrmhide Legguards
 		[16] = { icon = "INV_BannerPVP_01", name = "=q6=#pvprep701_3#", desc = "=ec1=#c1#" };
-		[17] = { itemID = 31585, desc = "=q3=High Warlord's Kodohide Helm" };
-		[18] = { itemID = 31587, desc = "=q3=High Warlord's Kodohide Spaulders" };
-		[19] = { itemID = 31588, desc = "=q3=High Warlord's Kodohide Robe" };
-		[20] = { itemID = 31584, desc = "=q3=High Warlord's Kodohide Gloves" };
-		[21] = { itemID = 31586, desc = "=q3=High Warlord's Kodohide Legguards" };
+		[17] = { itemID = 31585 }; --High Warlord's Kodohide Helm
+		[18] = { itemID = 31587 }; --High Warlord's Kodohide Spaulders
+		[19] = { itemID = 31588 }; --High Warlord's Kodohide Robe
+		[20] = { itemID = 31584 }; --High Warlord's Kodohide Gloves
+		[21] = { itemID = 31586 }; --High Warlord's Kodohide Legguards
 		[23] = { icon = "INV_BannerPVP_01", name = "=q6=#pvprep706#", desc = "=ec1=#c6#" };
-		[24] = { itemID = 28837, desc = "=q3=High Warlord's Leather Helm" };
-		[25] = { itemID = 28839, desc = "=q3=High Warlord's Leather Spaulders" };
-		[26] = { itemID = 28840, desc = "=q3=High Warlord's Leather Tunic" };
-		[27] = { itemID = 28836, desc = "=q3=High Warlord's Leather Gloves" };
-		[28] = { itemID = 28838, desc = "=q3=High Warlord's Leather Legguards" };
+		[24] = { itemID = 28837 }; --High Warlord's Leather Helm
+		[25] = { itemID = 28839 }; --High Warlord's Leather Spaulders
+		[26] = { itemID = 28840 }; --High Warlord's Leather Tunic
+		[27] = { itemID = 28836 }; --High Warlord's Leather Gloves
+		[28] = { itemID = 28838 }; --High Warlord's Leather Legguards
 	};
 	{
 		Name = BabbleInventory["Mail"] .. " - Horde";
 		[1] = { icon = "INV_BannerPVP_01", name = "=q6=#pvprep707_1#", desc = "=ec1=#c7#" };
-		[2] = { itemID = 28843, desc = "=q3=High Warlord's Linked Helm" };
-		[3] = { itemID = 28845, desc = "=q3=High Warlord's Linked Spaulders" };
-		[4] = { itemID = 28841, desc = "=q3=High Warlord's Linked Armor" };
-		[5] = { itemID = 28842, desc = "=q3=High Warlord's Linked Gauntlets" };
-		[6] = { itemID = 28844, desc = "=q3=High Warlord's Linked Leggings" };
+		[2] = { itemID = 28843 }; --High Warlord's Linked Helm
+		[3] = { itemID = 28845 }; --High Warlord's Linked Spaulders
+		[4] = { itemID = 28841 }; --High Warlord's Linked Armor
+		[5] = { itemID = 28842 }; --High Warlord's Linked Gauntlets
+		[6] = { itemID = 28844 }; --High Warlord's Linked Leggings
 		[8] = { icon = "INV_BannerPVP_01", name = "=q6=#pvprep707_2#", desc = "=ec1=#c7#" };
-		[9] = { itemID = 28848, desc = "=q3=High Warlord's Mail Helm" };
-		[10] = { itemID = 28850, desc = "=q3=High Warlord's Mail Spaulders" };
-		[11] = { itemID = 28846, desc = "=q3=High Warlord's Mail Armor" };
-		[12] = { itemID = 28847, desc = "=q3=High Warlord's Mail Gauntlets" };
-		[13] = { itemID = 28849, desc = "=q3=High Warlord's Mail Leggings" };
+		[9] = { itemID = 28848 }; --High Warlord's Mail Helm
+		[10] = { itemID = 28850 }; --High Warlord's Mail Spaulders
+		[11] = { itemID = 28846 }; --High Warlord's Mail Armor
+		[12] = { itemID = 28847 }; --High Warlord's Mail Gauntlets
+		[13] = { itemID = 28849 }; --High Warlord's Mail Leggings
 		[16] = { icon = "INV_BannerPVP_01", name = "=q6=#pvprep707_3#", desc = "=ec1=#c7#" };
-		[17] = { itemID = 31648, desc = "=q3=High Warlord's Ringmail Headpiece" };
-		[18] = { itemID = 31650, desc = "=q3=High Warlord's Ringmail Shoulderpads" };
-		[19] = { itemID = 31646, desc = "=q3=High Warlord's Ringmail Chestguard" };
-		[20] = { itemID = 31647, desc = "=q3=High Warlord's Ringmail Gloves" };
-		[21] = { itemID = 31649, desc = "=q3=High Warlord's Ringmail Legguards" };
+		[17] = { itemID = 31648 }; --High Warlord's Ringmail Headpiece
+		[18] = { itemID = 31650 }; --High Warlord's Ringmail Shoulderpads
+		[19] = { itemID = 31646 }; --High Warlord's Ringmail Chestguard
+		[20] = { itemID = 31647 }; --High Warlord's Ringmail Gloves
+		[21] = { itemID = 31649 }; --High Warlord's Ringmail Legguards
 		[23] = { icon = "INV_BannerPVP_01", name = "=q6=#pvprep702#", desc = "=ec1=#c2#" };
-		[24] = { itemID = 28807, desc = "=q3=High Warlord's Chain Helm" };
-		[25] = { itemID = 28809, desc = "=q3=High Warlord's Chain Spaulders" };
-		[26] = { itemID = 28805, desc = "=q3=High Warlord's Chain Armor" };
-		[27] = { itemID = 28806, desc = "=q3=High Warlord's Chain Gauntlets" };
-		[28] = { itemID = 28808, desc = "=q3=High Warlord's Chain Leggings" };
+		[24] = { itemID = 28807 }; --High Warlord's Chain Helm
+		[25] = { itemID = 28809 }; --High Warlord's Chain Spaulders
+		[26] = { itemID = 28805 }; --High Warlord's Chain Armor
+		[27] = { itemID = 28806 }; --High Warlord's Chain Gauntlets
+		[28] = { itemID = 28808 }; --High Warlord's Chain Leggings
 	};
 	{
 		Name = BabbleInventory["Plate"] .. " - Horde";
 		[1] = { icon = "INV_BannerPVP_01", name = "=q6=#pvprep704_1#", desc = "=ec1=#c4#" };
-		[2] = { itemID = 28863, desc = "=q3=High Warlord's Scaled Helm" };
-		[3] = { itemID = 28865, desc = "=q3=High Warlord's Scaled Shoulders" };
-		[4] = { itemID = 28861, desc = "=q3=High Warlord's Scaled Chestpiece" };
-		[5] = { itemID = 28862, desc = "=q3=High Warlord's Scaled Gauntlets" };
-		[6] = { itemID = 28864, desc = "=q3=High Warlord's Scaled Legguards" };
+		[2] = { itemID = 28863 }; --High Warlord's Scaled Helm
+		[3] = { itemID = 28865 }; --High Warlord's Scaled Shoulders
+		[4] = { itemID = 28861 }; --High Warlord's Scaled Chestpiece
+		[5] = { itemID = 28862 }; --High Warlord's Scaled Gauntlets
+		[6] = { itemID = 28864 }; --High Warlord's Scaled Legguards
 		[8] = { icon = "INV_BannerPVP_01", name = "=q6=#pvprep704_2#", desc = "=ec1=#c4#" };
-		[9] = { itemID = 31637, desc = "=q3=High Warlord's Ornamented Headguard" };
-		[10] = { itemID = 31639, desc = "=q3=High Warlord's Ornamented Spaulders" };
-		[11] = { itemID = 31635, desc = "=q3=High Warlord's Ornamented Chestplate" };
-		[12] = { itemID = 31636, desc = "=q3=High Warlord's Ornamented Gloves" };
-		[13] = { itemID = 31638, desc = "=q3=High Warlord's Ornamented Leggings" };
+		[9] = { itemID = 31637 }; --High Warlord's Ornamented Headguard
+		[10] = { itemID = 31639 }; --High Warlord's Ornamented Spaulders
+		[11] = { itemID = 31635 }; --High Warlord's Ornamented Chestplate
+		[12] = { itemID = 31636 }; --High Warlord's Ornamented Gloves
+		[13] = { itemID = 31638 }; --High Warlord's Ornamented Leggings
 		[16] = { icon = "INV_BannerPVP_01", name = "=q6=#pvprep709#", desc = "=ec1=#c9#" };
-		[17] = { itemID = 28853, desc = "=q3=High Warlord's Plate Helm" };
-		[18] = { itemID = 28855, desc = "=q3=High Warlord's Plate Shoulders" };
-		[19] = { itemID = 28851, desc = "=q3=High Warlord's Plate Chestpiece" };
-		[20] = { itemID = 28852, desc = "=q3=High Warlord's Plate Gauntlets" };
-		[21] = { itemID = 28854, desc = "=q3=High Warlord's Plate Legguards" };
+		[17] = { itemID = 28853 }; --High Warlord's Plate Helm
+		[18] = { itemID = 28855 }; --High Warlord's Plate Shoulders
+		[19] = { itemID = 28851 }; --High Warlord's Plate Chestpiece
+		[20] = { itemID = 28852 }; --High Warlord's Plate Gauntlets
+		[21] = { itemID = 28854 }; --High Warlord's Plate Legguards
 		[23] = { icon = "INV_BannerPVP_01", name = "=q6=#arenas4_1#", desc = "=ec1=#c4#" };
-		[24] = { itemID = 28833, desc = "=q3=High Warlord's Lamellar Helm" };
-		[25] = { itemID = 28835, desc = "=q3=High Warlord's Lamellar Shoulders" };
-		[26] = { itemID = 28831, desc = "=q3=High Warlord's Lamellar Chestpiece" };
-		[27] = { itemID = 28832, desc = "=q3=High Warlord's Lamellar Gauntlets" };
-		[28] = { itemID = 28834, desc = "=q3=High Warlord's Lamellar Legguards" };
+		[24] = { itemID = 28833 }; --High Warlord's Lamellar Helm
+		[25] = { itemID = 28835 }; --High Warlord's Lamellar Shoulders
+		[26] = { itemID = 28831 }; --High Warlord's Lamellar Chestpiece
+		[27] = { itemID = 28832 }; --High Warlord's Lamellar Gauntlets
+		[28] = { itemID = 28834 }; --High Warlord's Lamellar Legguards
 	};
 };
 
@@ -5432,107 +5432,107 @@ AtlasLoot_Data["WeaponsTBC"] = {
 			Type = "BCDungeon";
 		{
 			Name = AL["Hallowed Raiment"];
-			[1] = { itemID = 28413, desc = "=ds=" ..BabbleBoss["Harbinger Skyriss"].." ("..BabbleZone["The Arcatraz"]..")" }; --Hallowed Crown
-			[2] = { itemID = 27775, desc = "=ds=" ..BabbleBoss["Grandmaster Vorpil"].." ("..BabbleZone["Shadow Labyrinth"]..")" }; --Hallowed Pauldrons
-			[3] = { itemID = 28230, desc = "=ds=" ..BabbleBoss["Murmur"].." ("..BabbleZone["Shadow Labyrinth"]..")" }; --Hallowed Garments
-			[4] = { itemID = 27536, desc = "=ds=" ..BabbleBoss["Warchief Kargath Bladefist"].." ("..BabbleZone["The Shattered Halls"]..")" }; --Hallowed Handwraps
-			[5] = { itemID = 27875, desc = "=ds=" ..BabbleBoss["Talon King Ikiss"].." ("..BabbleZone["Sethekk Halls"]..")" }; --Hallowed Trousers
+			[1] = { itemID = 28413, desc = {BabbleZone["The Arcatraz"], BabbleBoss["Harbinger Skyriss"]} }; --Hallowed Crown
+			[2] = { itemID = 27775, desc = {BabbleZone["Shadow Labyrinth"], BabbleBoss["Grandmaster Vorpil"]} }; --Hallowed Pauldrons
+			[3] = { itemID = 28230, desc = {BabbleZone["Shadow Labyrinth"], BabbleBoss["Murmur"]} }; --Hallowed Garments
+			[4] = { itemID = 27536, desc = {BabbleZone["The Shattered Halls"], BabbleBoss["Warchief Kargath Bladefist"]} }; --Hallowed Handwraps
+			[5] = { itemID = 27875, desc = {BabbleZone["Sethekk Halls"], BabbleBoss["Talon King Ikiss"]} }; --Hallowed Trousers
 		};
 		{
 			Name = AL["Mana-Etched Regalia"];
-			[1] = { itemID = 28193, desc = "=ds=" ..BabbleBoss["Aeonus"].." ("..BabbleZone["The Black Morass"]..")" }; --Mana-Etched Crown
-			[2] = { itemID = 27796, desc = "=ds=" ..BabbleBoss["Quagmirran"].." (#j3#)" }; --Mana-Etched Spaulders
-			[3] = { itemID = 28191, desc = "=ds=" ..BabbleBoss["Epoch Hunter"].." ("..BabbleZone["Old Hillsbrad Foothills"]..") (#j3#)" }; --Mana-Etched Vestments
-			[4] = { itemID = 27465, desc = "=ds=" ..BabbleBoss["Omor the Unscarred"].." ("..BabbleZone["Hellfire Ramparts"]..") (#j3#)" }; --Mana-Etched Gloves
-			[5] = { itemID = 27907, desc = "=ds=" ..BabbleBoss["The Black Stalker"].." (#j3#)" }; --Mana-Etched Pantaloons
+			[1] = { itemID = 28193, desc = {BabbleZone["The Black Morass"], BabbleBoss["Aeonus"]} }; --Mana-Etched Crown
+			[2] = { itemID = 27796, desc = {BabbleZone["The Slave Pens"], BabbleBoss["Quagmirran"].." (#j3#)" } }; --Mana-Etched Spaulders
+			[3] = { itemID = 28191, desc = {BabbleZone["Old Hillsbrad Foothills"].."(#j3#)", BabbleBoss["Epoch Hunter"]} }; --Mana-Etched Vestments
+			[4] = { itemID = 27465, desc = {BabbleZone["Hellfire Ramparts"].."(#j3#)", BabbleBoss["Omor the Unscarred"]} }; --Mana-Etched Gloves
+			[5] = { itemID = 27907, desc = {BabbleZone["The Slave Pens"], BabbleBoss["The Black Stalker"].." (#j3#)" } }; --Mana-Etched Pantaloons
 		};
 		{
 			Name = AL["Incanter's Regalia"];
-			[1] = { itemID = 28278, desc = "=ds=" ..BabbleBoss["Pathaleon the Calculator"].." ("..BabbleZone["The Mechanar"]..")" }; --Incanter's Cowl
-			[2] = { itemID = 27738, desc = "=ds=" ..BabbleBoss["Warlord Kalithresh"].." ("..BabbleZone["The Steamvault"]..")" }; --Incanter's Pauldrons
-			[3] = { itemID = 28229, desc = "=ds=" ..BabbleBoss["Warp Splinter"].." ("..BabbleZone["The Botanica"]..")" }; --Incanter's Robe
-			[4] = { itemID = 27508, desc = "=ds=" ..BabbleBoss["Hydromancer Thespia"].." ("..BabbleZone["The Steamvault"]..")" }; --Incanter's Gloves
-			[5] = { itemID = 27838, desc = "=ds=" ..BabbleBoss["Talon King Ikiss"].." ("..BabbleZone["Sethekk Halls"]..")" }; --Incanter's Trousers
+			[1] = { itemID = 28278, desc = {BabbleZone["The Mechanar"], BabbleBoss["Pathaleon the Calculator"]} }; --Incanter's Cowl
+			[2] = { itemID = 27738, desc = {BabbleZone["The Steamvault"], BabbleBoss["Warlord Kalithresh"]} }; --Incanter's Pauldrons
+			[3] = { itemID = 28229, desc = {BabbleZone["The Botanica"], BabbleBoss["Warp Splinter"]} }; --Incanter's Robe
+			[4] = { itemID = 27508, desc = {BabbleZone["The Steamvault"], BabbleBoss["Hydromancer Thespia"]} }; --Incanter's Gloves
+			[5] = { itemID = 27838, desc = {BabbleZone["Sethekk Halls"], BabbleBoss["Talon King Ikiss"]} }; --Incanter's Trousers
 		};
 		{
 			Name = AL["Oblivion Raiment"];
-			[1] = { itemID = 28415, desc = "=ds=" ..BabbleBoss["Harbinger Skyriss"].." ("..BabbleZone["The Arcatraz"]..")" }; --Hood of Oblivion
-			[2] = { itemID = 27778, desc = "=ds=" ..BabbleBoss["Murmur"].." ("..BabbleZone["Shadow Labyrinth"]..")" }; --Spaulders of Oblivion
-			[3] = { itemID = 28232, desc = "=ds=" ..BabbleBoss["Murmur"].." ("..BabbleZone["Shadow Labyrinth"]..")" }; --Robe of Oblivion
-			[4] = { itemID = 27537, desc = "=ds=" ..BabbleBoss["Warchief Kargath Bladefist"].." ("..BabbleZone["The Shattered Halls"]..")" }; --Gloves of Oblivion
-			[5] = { itemID = 27948, desc = "=ds=" ..BabbleBoss["Talon King Ikiss"].." ("..BabbleZone["Sethekk Halls"]..")" }; --Trousers of Oblivion
+			[1] = { itemID = 28415, desc = {BabbleZone["The Arcatraz"], BabbleBoss["Harbinger Skyriss"]} }; --Hood of Oblivion
+			[2] = { itemID = 27778, desc = {BabbleZone["Shadow Labyrinth"], BabbleBoss["Murmur"]} }; --Spaulders of Oblivion
+			[3] = { itemID = 28232, desc = {BabbleZone["Shadow Labyrinth"], BabbleBoss["Murmur"]} }; --Robe of Oblivion
+			[4] = { itemID = 27537, desc = {BabbleZone["The Shattered Halls"], BabbleBoss["Warchief Kargath Bladefist"]} }; --Gloves of Oblivion
+			[5] = { itemID = 27948, desc = {BabbleZone["Sethekk Halls"], BabbleBoss["Talon King Ikiss"]} }; --Trousers of Oblivion
 		};
 		{
 			Name = AL["Assassination Armor"];
-			[1] = { itemID = 28414, desc = "=ds=" ..BabbleBoss["Harbinger Skyriss"].." ("..BabbleZone["The Arcatraz"]..")" }; --Helm of Assassination
-			[2] = { itemID = 27776, desc = "=ds=" ..BabbleBoss["Talon King Ikiss"].." ("..BabbleZone["Sethekk Halls"]..")" }; --Shoulderpads of Assassination
-			[3] = { itemID = 28204, desc = "=ds=" ..BabbleBoss["Pathaleon the Calculator"].." ("..BabbleZone["The Mechanar"]..")" }; --Tunic of Assassination
-			[4] = { itemID = 27509, desc = "=ds=" ..BabbleBoss["Aeonus"].." ("..BabbleZone["The Black Morass"]..")" }; --Handgrips of Assassination
-			[5] = { itemID = 27908, desc = "=ds=" ..BabbleBoss["Murmur"].." ("..BabbleZone["Shadow Labyrinth"]..")" }; --Leggings of Assassination
+			[1] = { itemID = 28414, desc = {BabbleZone["The Arcatraz"], BabbleBoss["Harbinger Skyriss"]} }; --Helm of Assassination
+			[2] = { itemID = 27776, desc = {BabbleZone["Sethekk Halls"], BabbleBoss["Talon King Ikiss"]} }; --Shoulderpads of Assassination
+			[3] = { itemID = 28204, desc = {BabbleZone["The Mechanar"], BabbleBoss["Pathaleon the Calculator"]} }; --Tunic of Assassination
+			[4] = { itemID = 27509, desc = {BabbleZone["The Black Morass"], BabbleBoss["Aeonus"]} }; --Handgrips of Assassination
+			[5] = { itemID = 27908, desc = {BabbleZone["Shadow Labyrinth"], BabbleBoss["Murmur"]} }; --Leggings of Assassination
 		};
 		{
 			Name = AL["Wastewalker Armor"];
-			[1] = { itemID = 28224, desc = "=ds=" ..BabbleBoss["Epoch Hunter"].." ("..BabbleZone["Old Hillsbrad Foothills"]..") (#j3#)" }; --Wastewalker Helm
-			[2] = { itemID = 27797, desc = "=ds=" ..AL["Avatar"].." ("..BabbleZone["Auchenai Crypts"]..") (#j3#)" }; --Wastewalker Shoulderpads
-			[3] = { itemID = 28264, desc = "=ds=" ..BabbleBoss["Keli'dan the Breaker"].." ("..BabbleZone["The Blood Furnace"]..") (#j3#)" }; --Wastewalker Tunic
-			[4] = { itemID = 27531, desc = "=ds=" ..BabbleBoss["Warchief Kargath Bladefist"].." ("..BabbleZone["The Shattered Halls"]..")" }; --Wastewalker Gloves
-			[5] = { itemID = 27837, desc = "=ds=" ..BabbleBoss["Nexus-Prince Shaffar"].." ("..BabbleZone["Mana-Tombs"]..") (#j3#)" }; --Wastewalker Leggings
+			[1] = { itemID = 28224, desc = {BabbleZone["Old Hillsbrad Foothills"].."(#j3#)", BabbleBoss["Epoch Hunter"]} }; --Wastewalker Helm
+			[2] = { itemID = 27797, desc = {BabbleZone["Auchenai Crypts"].."(#j3#)", AL["Avatar"]} }; --Wastewalker Shoulderpads
+			[3] = { itemID = 28264, desc = {BabbleZone["The Blood Furnace"].."(#j3#)", BabbleBoss["Keli'dan the Breaker"]} }; --Wastewalker Tunic
+			[4] = { itemID = 27531, desc = {BabbleZone["The Shattered Halls"], BabbleBoss["Warchief Kargath Bladefist"]} }; --Wastewalker Gloves
+			[5] = { itemID = 27837, desc = {BabbleZone["Mana-Tombs"].."(#j3#)", BabbleBoss["Nexus-Prince Shaffar"]} }; --Wastewalker Leggings
 		};
 		{
 			Name = AL["Moonglade Raiment"];
-			[1] = { itemID = 28348, desc = "=ds=" ..BabbleBoss["Warp Splinter"].." ("..BabbleZone["The Botanica"]..")" }; --Moonglade Cowl
-			[2] = { itemID = 27737, desc = "=ds=" ..BabbleBoss["Warlord Kalithresh"].." ("..BabbleZone["The Steamvault"]..")" }; --Moonglade Shoulders
-			[3] = { itemID = 28202, desc = "=ds=" ..BabbleBoss["Pathaleon the Calculator"].." ("..BabbleZone["The Mechanar"]..")" }; --Moonglade Robe
-			[4] = { itemID = 27468, desc = "=ds=" ..BabbleBoss["Blackheart the Inciter"].." ("..BabbleZone["Shadow Labyrinth"]..")" }; --Moonglade Handwraps
-			[5] = { itemID = 27873, desc = "=ds=" ..BabbleBoss["Aeonus"].." ("..BabbleZone["The Black Morass"]..")" }; --Moonglade Pants
+			[1] = { itemID = 28348, desc = {BabbleZone["The Botanica"], BabbleBoss["Warp Splinter"]} }; --Moonglade Cowl
+			[2] = { itemID = 27737, desc = {BabbleZone["The Steamvault"], BabbleBoss["Warlord Kalithresh"]} }; --Moonglade Shoulders
+			[3] = { itemID = 28202, desc = {BabbleZone["The Mechanar"], BabbleBoss["Pathaleon the Calculator"]} }; --Moonglade Robe
+			[4] = { itemID = 27468, desc = {BabbleZone["Shadow Labyrinth"], BabbleBoss["Blackheart the Inciter"]} }; --Moonglade Handwraps
+			[5] = { itemID = 27873, desc = {BabbleZone["The Black Morass"], BabbleBoss["Aeonus"]} }; --Moonglade Pants
 		};
 		{
 			Name = AL["Beast Lord Armor"];
-			[1] = { itemID = 28275, desc = "=ds=" ..BabbleBoss["Pathaleon the Calculator"].." ("..BabbleZone["The Mechanar"]..")" }; --Beast Lord Helm
-			[2] = { itemID = 27801, desc = "=ds=" ..BabbleBoss["Warlord Kalithresh"].." ("..BabbleZone["The Steamvault"]..")" }; --Beast Lord Mantle
-			[3] = { itemID = 28228, desc = "=ds=" ..BabbleBoss["Warp Splinter"].." ("..BabbleZone["The Botanica"]..")" }; --Beast Lord Curiass
-			[4] = { itemID = 27474, desc = "=ds=" ..BabbleBoss["Warchief Kargath Bladefist"].." ("..BabbleZone["The Shattered Halls"]..")" }; --Beast Lord Handguards
-			[5] = { itemID = 27874, desc = "=ds=" ..BabbleBoss["Warlord Kalithresh"].." ("..BabbleZone["The Steamvault"]..")" }; --Beast Lord Leggings
+			[1] = { itemID = 28275, desc = {BabbleZone["The Mechanar"], BabbleBoss["Pathaleon the Calculator"]} }; --Beast Lord Helm
+			[2] = { itemID = 27801, desc = {BabbleZone["The Steamvault"], BabbleBoss["Warlord Kalithresh"]} }; --Beast Lord Mantle
+			[3] = { itemID = 28228, desc = {BabbleZone["The Botanica"], BabbleBoss["Warp Splinter"]} }; --Beast Lord Curiass
+			[4] = { itemID = 27474, desc = {BabbleZone["The Shattered Halls"], BabbleBoss["Warchief Kargath Bladefist"]} }; --Beast Lord Handguards
+			[5] = { itemID = 27874, desc = {BabbleZone["The Steamvault"], BabbleBoss["Warlord Kalithresh"]} }; --Beast Lord Leggings
 		};
 		{
 			Name = AL["Tidefury Raiment"];
-			[1] = { itemID = 28349, desc = "=ds=" ..BabbleBoss["Warp Splinter"].." ("..BabbleZone["The Botanica"]..")" }; --Tidefury Helm
-			[2] = { itemID = 27802, desc = "=ds=" ..BabbleBoss["Warbringer O'mrogg"].." ("..BabbleZone["The Shattered Halls"]..")" }; --Tidefury Shoulderguards
-			[3] = { itemID = 28231, desc = "=ds=" ..BabbleBoss["Harbinger Skyriss"].." ("..BabbleZone["The Arcatraz"]..")" }; --Tidefury Chestpiece
-			[4] = { itemID = 27510, desc = "=ds=" ..BabbleBoss["Warlord Kalithresh"].." ("..BabbleZone["The Steamvault"]..")" }; --Tidefury Gauntlets
-			[5] = { itemID = 27909, desc = "=ds=" ..BabbleBoss["Murmur"].." ("..BabbleZone["Shadow Labyrinth"]..")" }; --Tidefury Kilt
+			[1] = { itemID = 28349, desc = {BabbleZone["The Botanica"], BabbleBoss["Warp Splinter"]} }; --Tidefury Helm
+			[2] = { itemID = 27802, desc = {BabbleZone["The Shattered Halls"], BabbleBoss["Warbringer O'mrogg"]} }; --Tidefury Shoulderguards
+			[3] = { itemID = 28231, desc = {BabbleZone["The Arcatraz"], BabbleBoss["Harbinger Skyriss"]} }; --Tidefury Chestpiece
+			[4] = { itemID = 27510, desc = {BabbleZone["The Steamvault"], BabbleBoss["Warlord Kalithresh"]} }; --Tidefury Gauntlets
+			[5] = { itemID = 27909, desc = {BabbleZone["Shadow Labyrinth"], BabbleBoss["Murmur"]} }; --Tidefury Kilt
 		};
 		{
 			Name = AL["Desolation Battlegear"];
-			[1] = { itemID = 28192, desc = "=ds=" ..BabbleBoss["Aeonus"].." ("..BabbleZone["The Black Morass"]..")" }; --Helm of Desolation
-			[2] = { itemID = 27713, desc = "=ds=" ..BabbleBoss["Quagmirran"].." (#j3#)" }; --Pauldrons of Desolation
-			[3] = { itemID = 28401, desc = "=ds=" ..BabbleBoss["Epoch Hunter"].." ("..BabbleZone["Old Hillsbrad Foothills"]..") (#j3#)" }; --Hauberk of Desolation
-			[4] = { itemID = 27528, desc = "=ds=" ..BabbleBoss["Warchief Kargath Bladefist"].." ("..BabbleZone["The Shattered Halls"]..")" }; --Gauntlets of Desolation
-			[5] = { itemID = 27936, desc = "=ds=" ..BabbleBoss["Talon King Ikiss"].." ("..BabbleZone["Sethekk Halls"]..")" }; --Greaves of Desolation
+			[1] = { itemID = 28192, desc = {BabbleZone["The Black Morass"], BabbleBoss["Aeonus"]} }; --Helm of Desolation
+			[2] = { itemID = 27713, desc = {BabbleZone["The Slave Pens"], BabbleBoss["Quagmirran"].." (#j3#)" } }; --Pauldrons of Desolation
+			[3] = { itemID = 28401, desc = {BabbleZone["Old Hillsbrad Foothills"].."(#j3#)", BabbleBoss["Epoch Hunter"]} }; --Hauberk of Desolation
+			[4] = { itemID = 27528, desc = {BabbleZone["The Shattered Halls"], BabbleBoss["Warchief Kargath Bladefist"]} }; --Gauntlets of Desolation
+			[5] = { itemID = 27936, desc = {BabbleZone["Sethekk Halls"], BabbleBoss["Talon King Ikiss"]} }; --Greaves of Desolation
 		};
 		{
 			Name = AL["Bold Armor"];
-			[1] = { itemID = 28350, desc = "=ds=" ..BabbleBoss["Warp Splinter"].." ("..BabbleZone["The Botanica"]..")" }; --Warhelm of the Bold
-			[2] = { itemID = 27803, desc = "=ds=" ..BabbleBoss["Murmur"].." ("..BabbleZone["Shadow Labyrinth"]..")" }; --Shoulderguards of the Bold
-			[3] = { itemID = 28205, desc = "=ds=" ..BabbleBoss["Harbinger Skyriss"].." ("..BabbleZone["The Arcatraz"]..")" }; --Breastplate of the Bold
-			[4] = { itemID = 27475, desc = "=ds=" ..BabbleBoss["Warlord Kalithresh"].." ("..BabbleZone["The Steamvault"]..")" }; --Gauntlets of the Bold
-			[5] = { itemID = 27977, desc = "=ds=" ..BabbleBoss["Aeonus"].." ("..BabbleZone["The Black Morass"]..")" }; --Legplates of the Bold
+			[1] = { itemID = 28350, desc = {BabbleZone["The Botanica"], BabbleBoss["Warp Splinter"]} }; --Warhelm of the Bold
+			[2] = { itemID = 27803, desc = {BabbleZone["Shadow Labyrinth"], BabbleBoss["Murmur"]} }; --Shoulderguards of the Bold
+			[3] = { itemID = 28205, desc = {BabbleZone["The Arcatraz"], BabbleBoss["Harbinger Skyriss"]} }; --Breastplate of the Bold
+			[4] = { itemID = 27475, desc = {BabbleZone["The Steamvault"], BabbleBoss["Warlord Kalithresh"]} }; --Gauntlets of the Bold
+			[5] = { itemID = 27977, desc = {BabbleZone["The Black Morass"], BabbleBoss["Aeonus"]} }; --Legplates of the Bold
 		};
 		{
 			Name = AL["Righteous Armor"];
-			[1] = { itemID = 28285, desc = "=ds=" ..BabbleBoss["Pathaleon the Calculator"].." ("..BabbleZone["The Mechanar"]..")" }; --Helm of the Righteous
-			[2] = { itemID = 27739, desc = "=ds=" ..BabbleBoss["Laj"].." ("..BabbleZone["The Botanica"]..")" }; --Spaulders of the Righteous
-			[3] = { itemID = 28203, desc = "=ds=" ..BabbleBoss["Warlord Kalithresh"].." ("..BabbleZone["The Steamvault"]..")" }; --Breastplate of the Righteous
-			[4] = { itemID = 27535, desc = "=ds=" ..BabbleBoss["Warbringer O'mrogg"].." ("..BabbleZone["The Shattered Halls"]..")" }; --Gauntlets of the Righteous
-			[5] = { itemID = 27839, desc = "=ds=" ..BabbleBoss["Aeonus"].." ("..BabbleZone["The Black Morass"]..")" }; --Legplates of the Righteous
+			[1] = { itemID = 28285, desc = {BabbleZone["The Mechanar"], BabbleBoss["Pathaleon the Calculator"]} }; --Helm of the Righteous
+			[2] = { itemID = 27739, desc = {BabbleZone["The Botanica"], BabbleBoss["Laj"]} }; --Spaulders of the Righteous
+			[3] = { itemID = 28203, desc = {BabbleZone["The Steamvault"], BabbleBoss["Warlord Kalithresh"]} }; --Breastplate of the Righteous
+			[4] = { itemID = 27535, desc = {BabbleZone["The Shattered Halls"], BabbleBoss["Warbringer O'mrogg"]} }; --Gauntlets of the Righteous
+			[5] = { itemID = 27839, desc = {BabbleZone["The Black Morass"], BabbleBoss["Aeonus"]} }; --Legplates of the Righteous
 		};
 		{
 			Name = AL["Doomplate Battlegear"];
-			[1] = { itemID = 28225, desc = "=ds=" ..BabbleBoss["Epoch Hunter"].." ("..BabbleZone["Old Hillsbrad Foothills"]..") (#j3#)" }; --Doomplate Warhelm
-			[2] = { itemID = 27771, desc = "=ds=" ..BabbleBoss["The Black Stalker"].." (#j3#)" }; --Doomplate Shouldergards
-			[3] = { itemID = 28403, desc = "=ds=" ..BabbleBoss["Harbinger Skyriss"].." ("..BabbleZone["The Arcatraz"]..")" }; --Doomplate Chestguard
-			[4] = { itemID = 27497, desc = "=ds=" ..BabbleBoss["Keli'dan the Breaker"].." ("..BabbleZone["The Blood Furnace"]..") (#j3#)" }; --Doomplate Gauntlets
-			[5] = { itemID = 27870, desc = "=ds=" ..BabbleBoss["Exarch Maladaar"].." ("..BabbleZone["Auchenai Crypts"]..") (#j3#)" }; --Doomplate Legguards
+			[1] = { itemID = 28225, desc = {BabbleZone["Old Hillsbrad Foothills"].."(#j3#)", BabbleBoss["Epoch Hunter"]} }; --Doomplate Warhelm
+			[2] = { itemID = 27771, desc = {BabbleZone["The Slave Pens"], BabbleBoss["The Black Stalker"].." (#j3#)" } }; --Doomplate Shouldergards
+			[3] = { itemID = 28403, desc = {BabbleZone["The Arcatraz"], BabbleBoss["Harbinger Skyriss"]} }; --Doomplate Chestguard
+			[4] = { itemID = 27497, desc = {BabbleZone["The Blood Furnace"].."(#j3#)", BabbleBoss["Keli'dan the Breaker"]} }; --Doomplate Gauntlets
+			[5] = { itemID = 27870, desc = {BabbleZone["Auchenai Crypts"].."(#j3#)", BabbleBoss["Exarch Maladaar"]} }; --Doomplate Legguards
 		};
 	};
 
@@ -5545,148 +5545,148 @@ AtlasLoot_Data["WeaponsTBC"] = {
 		Name = "Tier 4";
 		Type = "BCRaid";
 		{
-			Name = "Druid".." - "..AL["Feral"];
-			[1] = { itemID = 29098, desc = "=ds=" ..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")" }; --Stag-Helm of Malorne
-			[2] = { itemID = 29100, desc = "=ds=" ..BabbleBoss["High King Maulgar"] }; --Mantle of Malorne
-			[3] = { itemID = 29096, desc = "=ds=" ..BabbleBoss["Magtheridon"] }; --Breastplate of Malorne
-			[4] = { itemID = 29097, desc = "=ds=" ..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")" }; --Gauntlets of Malorne
-			[5] = { itemID = 29099, desc = "=ds=" ..BabbleBoss["Gruul the Dragonkiller"] }; --Greaves of Malorne
+			Name = "Druid"..WHITE.." - "..AL["Feral"];
+			[1] = { itemID = 29098, desc = {BabbleZone["Karazhan"], BabbleBoss["Prince Malchezaar"]} }; --Stag-Helm of Malorne
+			[2] = { itemID = 29100, desc = {BabbleZone["Gruul's Lair"], BabbleBoss["High King Maulgar"]} }; --Mantle of Malorne
+			[3] = { itemID = 29096, desc = {BabbleZone["Magtheridon's Lair"], BabbleBoss["Magtheridon"]} }; --Breastplate of Malorne
+			[4] = { itemID = 29097, desc = {BabbleZone["Karazhan"], BabbleBoss["The Curator"]} }; --Gauntlets of Malorne
+			[5] = { itemID = 29099, desc = {BabbleZone["Gruul's Lair"], BabbleBoss["Gruul the Dragonkiller"]} }; --Greaves of Malorne
 		};
 		{
-			Name = "Druid".." - "..AL["Restoration"];
-			[1] = { itemID = 29086, desc = "=ds=" ..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")" }; --Crown of Malorne
-			[2] = { itemID = 29089, desc = "=ds=" ..BabbleBoss["High King Maulgar"] }; --Shoulderguards of Malorne
-			[3] = { itemID = 29087, desc = "=ds=" ..BabbleBoss["Magtheridon"] }; --Chestguard of Malorne
-			[4] = { itemID = 29090, desc = "=ds=" ..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")" }; --Handguards of Malorne
-			[5] = { itemID = 29088, desc = "=ds=" ..BabbleBoss["Gruul the Dragonkiller"] }; --Legguards of Malorne
+			Name = "Druid"..WHITE.." - "..AL["Restoration"];
+			[1] = { itemID = 29086, desc = {BabbleZone["Karazhan"], BabbleBoss["Prince Malchezaar"]} }; --Crown of Malorne
+			[2] = { itemID = 29089, desc = {BabbleZone["Gruul's Lair"], BabbleBoss["High King Maulgar"]} }; --Shoulderguards of Malorne
+			[3] = { itemID = 29087, desc = {BabbleZone["Magtheridon's Lair"], BabbleBoss["Magtheridon"]} }; --Chestguard of Malorne
+			[4] = { itemID = 29090, desc = {BabbleZone["Karazhan"], BabbleBoss["The Curator"]} }; --Handguards of Malorne
+			[5] = { itemID = 29088, desc = {BabbleZone["Gruul's Lair"], BabbleBoss["Gruul the Dragonkiller"]} }; --Legguards of Malorne
 		};
 		{
-			Name = "Druid".." - "..AL["Balance"];
-			[1] = { itemID = 29093, desc = "=ds=" ..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")" }; --Antlers of Malorne
-			[2] = { itemID = 29095, desc = "=ds=" ..BabbleBoss["High King Maulgar"] }; --Pauldrons of Malorne
-			[3] = { itemID = 29091, desc = "=ds=" ..BabbleBoss["Magtheridon"] }; --Chestpiece of Malorne
-			[4] = { itemID = 29092, desc = "=ds=" ..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")" }; --Gloves of Malorne
-			[5] = { itemID = 29094, desc = "=ds=" ..BabbleBoss["Gruul the Dragonkiller"] }; --Britches of Malorne
+			Name = "Druid"..WHITE.." - "..AL["Balance"];
+			[1] = { itemID = 29093, desc = {BabbleZone["Karazhan"], BabbleBoss["Prince Malchezaar"]} }; --Antlers of Malorne
+			[2] = { itemID = 29095, desc = {BabbleZone["Gruul's Lair"], BabbleBoss["High King Maulgar"]} }; --Pauldrons of Malorne
+			[3] = { itemID = 29091, desc = {BabbleZone["Magtheridon's Lair"], BabbleBoss["Magtheridon"]} }; --Chestpiece of Malorne
+			[4] = { itemID = 29092, desc = {BabbleZone["Karazhan"], BabbleBoss["The Curator"]} }; --Gloves of Malorne
+			[5] = { itemID = 29094, desc = {BabbleZone["Gruul's Lair"], BabbleBoss["Gruul the Dragonkiller"]} }; --Britches of Malorne
 		};
 		{
 			Name = LOCALIZED_CLASS_NAMES_MALE["HUNTER"];
-			[1] = { itemID = 29081, desc = "=ds=" ..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")" }; --Demon Stalker Greathelm
-			[2] = { itemID = 29084, desc = "=ds=" ..BabbleBoss["High King Maulgar"] }; --Demon Stalker Shoulderguards
-			[3] = { itemID = 29082, desc = "=ds=" ..BabbleBoss["Magtheridon"] }; --Demon Stalker Harness
-			[4] = { itemID = 29085, desc = "=ds=" ..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")" }; --Demon Stalker Gauntlets
-			[5] = { itemID = 29083, desc = "=ds=" ..BabbleBoss["Gruul the Dragonkiller"] }; --Demon Stalker Greaves
+			[1] = { itemID = 29081, desc = {BabbleZone["Karazhan"], BabbleBoss["Prince Malchezaar"]} }; --Demon Stalker Greathelm
+			[2] = { itemID = 29084, desc = {BabbleZone["Gruul's Lair"], BabbleBoss["High King Maulgar"]} }; --Demon Stalker Shoulderguards
+			[3] = { itemID = 29082, desc = {BabbleZone["Magtheridon's Lair"], BabbleBoss["Magtheridon"]} }; --Demon Stalker Harness
+			[4] = { itemID = 29085, desc = {BabbleZone["Karazhan"], BabbleBoss["The Curator"]} }; --Demon Stalker Gauntlets
+			[5] = { itemID = 29083, desc = {BabbleZone["Gruul's Lair"], BabbleBoss["Gruul the Dragonkiller"]} }; --Demon Stalker Greaves
 		};
 		{
 			Name = LOCALIZED_CLASS_NAMES_MALE["MAGE"];
-			[1] = { itemID = 29076, desc = "=ds=" ..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")" }; --Collar of the Aldor
-			[2] = { itemID = 29079, desc = "=ds=" ..BabbleBoss["High King Maulgar"] }; --Pauldrons of the Aldor
-			[3] = { itemID = 29077, desc = "=ds=" ..BabbleBoss["Magtheridon"] }; --Vestments of the Aldor
-			[4] = { itemID = 29080, desc = "=ds=" ..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")" }; --Gloves of the Aldor
-			[5] = { itemID = 29078, desc = "=ds=" ..BabbleBoss["Gruul the Dragonkiller"] }; --Legwraps of the Aldor
+			[1] = { itemID = 29076, desc = {BabbleZone["Karazhan"], BabbleBoss["Prince Malchezaar"]} }; --Collar of the Aldor
+			[2] = { itemID = 29079, desc = {BabbleZone["Gruul's Lair"], BabbleBoss["High King Maulgar"]} }; --Pauldrons of the Aldor
+			[3] = { itemID = 29077, desc = {BabbleZone["Magtheridon's Lair"], BabbleBoss["Magtheridon"]} }; --Vestments of the Aldor
+			[4] = { itemID = 29080, desc = {BabbleZone["Karazhan"], BabbleBoss["The Curator"]} }; --Gloves of the Aldor
+			[5] = { itemID = 29078, desc = {BabbleZone["Gruul's Lair"], BabbleBoss["Gruul the Dragonkiller"]} }; --Legwraps of the Aldor
 		};
 		{
-			Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"].." - "..AL["Protection"];
-			[1] = { itemID = 29068, desc = "=ds=" ..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")" }; --Justicar Faceguard
-			[2] = { itemID = 29070, desc = "=ds=" ..BabbleBoss["High King Maulgar"] }; --Justicar Shoulderguards
-			[3] = { itemID = 29066, desc = "=ds=" ..BabbleBoss["Magtheridon"] }; --Justicar Chestguard
-			[4] = { itemID = 29067, desc = "=ds=" ..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")" }; --Justicar Handguards
-			[5] = { itemID = 29069, desc = "=ds=" ..BabbleBoss["Gruul the Dragonkiller"] }; --Justicar Legguards
+			Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"]..WHITE.." - "..AL["Protection"];
+			[1] = { itemID = 29068, desc = {BabbleZone["Karazhan"], BabbleBoss["Prince Malchezaar"]} }; --Justicar Faceguard
+			[2] = { itemID = 29070, desc = {BabbleZone["Gruul's Lair"], BabbleBoss["High King Maulgar"]} }; --Justicar Shoulderguards
+			[3] = { itemID = 29066, desc = {BabbleZone["Magtheridon's Lair"], BabbleBoss["Magtheridon"]} }; --Justicar Chestguard
+			[4] = { itemID = 29067, desc = {BabbleZone["Karazhan"], BabbleBoss["The Curator"]} }; --Justicar Handguards
+			[5] = { itemID = 29069, desc = {BabbleZone["Gruul's Lair"], BabbleBoss["Gruul the Dragonkiller"]} }; --Justicar Legguards
 		};
 		{
-			Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"].." - "..AL["Retribution"];
-			[1] = { itemID = 29073, desc = "=ds=" ..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")" }; --Justicar Crown
-			[2] = { itemID = 29075, desc = "=ds=" ..BabbleBoss["High King Maulgar"] }; --Justicar Shoulderplates
-			[3] = { itemID = 29071, desc = "=ds=" ..BabbleBoss["Magtheridon"] }; --Justicar Breastplate
-			[4] = { itemID = 29072, desc = "=ds=" ..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")" }; --Justicar Gauntlets
-			[5] = { itemID = 29074, desc = "=ds=" ..BabbleBoss["Gruul the Dragonkiller"] }; --Justicar Greaves
+			Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"]..WHITE.." - "..AL["Retribution"];
+			[1] = { itemID = 29073, desc = {BabbleZone["Karazhan"], BabbleBoss["Prince Malchezaar"]} }; --Justicar Crown
+			[2] = { itemID = 29075, desc = {BabbleZone["Gruul's Lair"], BabbleBoss["High King Maulgar"]} }; --Justicar Shoulderplates
+			[3] = { itemID = 29071, desc = {BabbleZone["Magtheridon's Lair"], BabbleBoss["Magtheridon"]} }; --Justicar Breastplate
+			[4] = { itemID = 29072, desc = {BabbleZone["Karazhan"], BabbleBoss["The Curator"]} }; --Justicar Gauntlets
+			[5] = { itemID = 29074, desc = {BabbleZone["Gruul's Lair"], BabbleBoss["Gruul the Dragonkiller"]} }; --Justicar Greaves
 		};
 		{
-			Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"].." - "..AL["Holy"];
-			[1] = { itemID = 29061, desc = "=ds=" ..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")" }; --Justicar Diadem
-			[2] = { itemID = 29064, desc = "=ds=" ..BabbleBoss["High King Maulgar"] }; --Justicar Pauldrons
-			[3] = { itemID = 29062, desc = "=ds=" ..BabbleBoss["Magtheridon"] }; --Justicar Chestpiece
-			[4] = { itemID = 29065, desc = "=ds=" ..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")" }; --Justicar Gloves
-			[5] = { itemID = 29063, desc = "=ds=" ..BabbleBoss["Gruul the Dragonkiller"] }; --Justicar Leggings
+			Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"]..WHITE.." - "..AL["Holy"];
+			[1] = { itemID = 29061, desc = {BabbleZone["Karazhan"], BabbleBoss["Prince Malchezaar"]} }; --Justicar Diadem
+			[2] = { itemID = 29064, desc = {BabbleZone["Gruul's Lair"], BabbleBoss["High King Maulgar"]} }; --Justicar Pauldrons
+			[3] = { itemID = 29062, desc = {BabbleZone["Magtheridon's Lair"], BabbleBoss["Magtheridon"]} }; --Justicar Chestpiece
+			[4] = { itemID = 29065, desc = {BabbleZone["Karazhan"], BabbleBoss["The Curator"]} }; --Justicar Gloves
+			[5] = { itemID = 29063, desc = {BabbleZone["Gruul's Lair"], BabbleBoss["Gruul the Dragonkiller"]} }; --Justicar Leggings
 		};
 		{
-			Name = LOCALIZED_CLASS_NAMES_MALE["PRIEST"].." - "..AL["Holy"];
-			[1] = { itemID = 29049, desc = "=ds=" ..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")" }; --Light-Collar of the Incarnate
-			[2] = { itemID = 29054, desc = "=ds=" ..BabbleBoss["High King Maulgar"] }; --Light-Mantle of the Incarnate
-			[3] = { itemID = 29050, desc = "=ds=" ..BabbleBoss["Magtheridon"] }; --Robes of the Incarnate
-			[4] = { itemID = 29055, desc = "The Curator (" ..BabbleZone["Karazhan"]..")" }; --Handwraps of the Incarnate
-			[5] = { itemID = 29053, desc = "=ds=" ..BabbleBoss["Gruul the Dragonkiller"] }; --Trousers of the Incarnate
+			Name = LOCALIZED_CLASS_NAMES_MALE["PRIEST"]..WHITE.." - "..AL["Holy"];
+			[1] = { itemID = 29049, desc = {BabbleZone["Karazhan"], BabbleBoss["Prince Malchezaar"]} }; --Light-Collar of the Incarnate
+			[2] = { itemID = 29054, desc = {BabbleZone["Gruul's Lair"], BabbleBoss["High King Maulgar"]} }; --Light-Mantle of the Incarnate
+			[3] = { itemID = 29050, desc = {BabbleZone["Magtheridon's Lair"], BabbleBoss["Magtheridon"]} }; --Robes of the Incarnate
+			[4] = { itemID = 29055, desc = {BabbleZone["Karazhan"], BabbleBoss["The Curator"]} }; --Handwraps of the Incarnate
+			[5] = { itemID = 29053, desc = {BabbleZone["Gruul's Lair"], BabbleBoss["Gruul the Dragonkiller"]} }; --Trousers of the Incarnate
 		};
 		{
-			Name = LOCALIZED_CLASS_NAMES_MALE["PRIEST"].." - "..AL["Shadow"];
-			[1] = { itemID = 29058, desc = "=ds=" ..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")" }; --Soul-Collar of the Incarnate
-			[2] = { itemID = 29060, desc = "=ds=" ..BabbleBoss["High King Maulgar"] }; --Soul-Mantle of the Incarnate
-			[3] = { itemID = 29056, desc = "=ds=" ..BabbleBoss["Magtheridon"] }; --Shroud of the Incarnate
-			[4] = { itemID = 29057, desc = "=ds=" ..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")" }; --Gloves of the Incarnate
-			[5] = { itemID = 29059, desc = "=ds=" ..BabbleBoss["Gruul the Dragonkiller"] }; --Leggings of the Incarnate
+			Name = LOCALIZED_CLASS_NAMES_MALE["PRIEST"]..WHITE.." - "..AL["Shadow"];
+			[1] = { itemID = 29058, desc = {BabbleZone["Karazhan"], BabbleBoss["Prince Malchezaar"]} }; --Soul-Collar of the Incarnate
+			[2] = { itemID = 29060, desc = {BabbleZone["Gruul's Lair"], BabbleBoss["High King Maulgar"]} }; --Soul-Mantle of the Incarnate
+			[3] = { itemID = 29056, desc = {BabbleZone["Magtheridon's Lair"], BabbleBoss["Magtheridon"]} }; --Shroud of the Incarnate
+			[4] = { itemID = 29057, desc = {BabbleZone["Karazhan"], BabbleBoss["The Curator"]} }; --Gloves of the Incarnate
+			[5] = { itemID = 29059, desc = {BabbleZone["Gruul's Lair"], BabbleBoss["Gruul the Dragonkiller"]} }; --Leggings of the Incarnate
 		};
 		{
 			Name = LOCALIZED_CLASS_NAMES_MALE["ROGUE"];
-			[1] = { itemID = 29044, desc = "=ds=" ..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")" }; --Netherblade Facemask
-			[2] = { itemID = 29047, desc = "=ds=" ..BabbleBoss["High King Maulgar"] }; --Netherblade Shoulderpads
-			[3] = { itemID = 29045, desc = "=ds=" ..BabbleBoss["Magtheridon"] }; --Netherblade Chestpiece
-			[4] = { itemID = 29048, desc = "=ds=" ..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")" }; --Netherblade Gloves
-			[5] = { itemID = 29046, desc = "=ds=" ..BabbleBoss["Gruul the Dragonkiller"] }; --Netherblade Breeches
+			[1] = { itemID = 29044, desc = {BabbleZone["Karazhan"], BabbleBoss["Prince Malchezaar"]} }; --Netherblade Facemask
+			[2] = { itemID = 29047, desc = {BabbleZone["Gruul's Lair"], BabbleBoss["High King Maulgar"]} }; --Netherblade Shoulderpads
+			[3] = { itemID = 29045, desc = {BabbleZone["Magtheridon's Lair"], BabbleBoss["Magtheridon"]} }; --Netherblade Chestpiece
+			[4] = { itemID = 29048, desc = {BabbleZone["Karazhan"], BabbleBoss["The Curator"]} }; --Netherblade Gloves
+			[5] = { itemID = 29046, desc = {BabbleZone["Gruul's Lair"], BabbleBoss["Gruul the Dragonkiller"]} }; --Netherblade Breeches
 		};
 		{
-			Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"].." - "..AL["Enhancement"];
-			[1] = { itemID = 29040, desc = "=ds=" ..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")" }; --Cyclone Helm
-			[2] = { itemID = 29043, desc = "=ds=" ..BabbleBoss["High King Maulgar"] }; --Cyclone Shoulderplates
-			[3] = { itemID = 29038, desc = "=ds=" ..BabbleBoss["Magtheridon"] }; --Cyclone Breastplate
-			[4] = { itemID = 29039, desc = "=ds=" ..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")" }; --Cyclone Gauntlets
-			[5] = { itemID = 29042, desc = "=ds=" ..BabbleBoss["Gruul the Dragonkiller"] }; --Cyclone War-Kilt
+			Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"]..WHITE.." - "..AL["Enhancement"];
+			[1] = { itemID = 29040, desc = {BabbleZone["Karazhan"], BabbleBoss["Prince Malchezaar"]} }; --Cyclone Helm
+			[2] = { itemID = 29043, desc = {BabbleZone["Gruul's Lair"], BabbleBoss["High King Maulgar"]} }; --Cyclone Shoulderplates
+			[3] = { itemID = 29038, desc = {BabbleZone["Magtheridon's Lair"], BabbleBoss["Magtheridon"]} }; --Cyclone Breastplate
+			[4] = { itemID = 29039, desc = {BabbleZone["Karazhan"], BabbleBoss["The Curator"]} }; --Cyclone Gauntlets
+			[5] = { itemID = 29042, desc = {BabbleZone["Gruul's Lair"], BabbleBoss["Gruul the Dragonkiller"]} }; --Cyclone War-Kilt
 		};
 		{
-			Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"].." - "..AL["Restoration"];	
-			[1] = { itemID = 29028, desc = "=ds=" ..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")" }; --Cyclone Headdress
-			[2] = { itemID = 29031, desc = "=ds=" ..BabbleBoss["High King Maulgar"] }; --Cyclone Shoulderpads
-			[3] = { itemID = 29029, desc = "=ds=" ..BabbleBoss["Magtheridon"] }; --Cyclone Hauberk
-			[4] = { itemID = 29032, desc = "=ds=" ..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")" }; --Cyclone Gloves
-			[5] = { itemID = 29030, desc = "=ds=" ..BabbleBoss["Gruul the Dragonkiller"] }; --Cyclone Kilt
+			Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"]..WHITE.." - "..AL["Restoration"];	
+			[1] = { itemID = 29028, desc = {BabbleZone["Karazhan"], BabbleBoss["Prince Malchezaar"]} }; --Cyclone Headdress
+			[2] = { itemID = 29031, desc = {BabbleZone["Gruul's Lair"], BabbleBoss["High King Maulgar"]} }; --Cyclone Shoulderpads
+			[3] = { itemID = 29029, desc = {BabbleZone["Magtheridon's Lair"], BabbleBoss["Magtheridon"]} }; --Cyclone Hauberk
+			[4] = { itemID = 29032, desc = {BabbleZone["Karazhan"], BabbleBoss["The Curator"]} }; --Cyclone Gloves
+			[5] = { itemID = 29030, desc = {BabbleZone["Gruul's Lair"], BabbleBoss["Gruul the Dragonkiller"]} }; --Cyclone Kilt
 		};
 		{
-			Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"].." - "..AL["Elemental"];
-			[1] = { itemID = 29035, desc = "=ds=" ..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")" }; --Cyclone Faceguard
-			[2] = { itemID = 29037, desc = "=ds=" ..BabbleBoss["High King Maulgar"] }; --Cyclone Shoulderguards
-			[3] = { itemID = 29033, desc = "=ds=" ..BabbleBoss["Magtheridon"] }; --Cyclone Chestguard
-			[4] = { itemID = 29034, desc = "=ds=" ..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")" }; --Cyclone Handguards
-			[5] = { itemID = 29036, desc = "=ds=" ..BabbleBoss["Gruul the Dragonkiller"] }; --Cyclone Legguards
+			Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"]..WHITE.." - "..AL["Elemental"];
+			[1] = { itemID = 29035, desc = {BabbleZone["Karazhan"], BabbleBoss["Prince Malchezaar"]} }; --Cyclone Faceguard
+			[2] = { itemID = 29037, desc = {BabbleZone["Gruul's Lair"], BabbleBoss["High King Maulgar"]} }; --Cyclone Shoulderguards
+			[3] = { itemID = 29033, desc = {BabbleZone["Magtheridon's Lair"], BabbleBoss["Magtheridon"]} }; --Cyclone Chestguard
+			[4] = { itemID = 29034, desc = {BabbleZone["Karazhan"], BabbleBoss["The Curator"]} }; --Cyclone Handguards
+			[5] = { itemID = 29036, desc = {BabbleZone["Gruul's Lair"], BabbleBoss["Gruul the Dragonkiller"]} }; --Cyclone Legguards
 		};
 		{
 			Name = LOCALIZED_CLASS_NAMES_MALE["WARLOCK"];
-			[1] = { itemID = 28963, desc = "=ds=" ..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")" }; --Voidheart Crown
-			[2] = { itemID = 28967, desc = "=ds=" ..BabbleBoss["High King Maulgar"] }; --Voidheart Mantle
-			[3] = { itemID = 28964, desc = "=ds=" ..BabbleBoss["Magtheridon"] }; --Voidheart Robe
-			[4] = { itemID = 28968, desc = "=ds=" ..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")" }; --Voidheart Gloves
-			[5] = { itemID = 28966, desc = "=ds=" ..BabbleBoss["Gruul the Dragonkiller"] }; --Voidheart Leggings
+			[1] = { itemID = 28963, desc = {BabbleZone["Karazhan"], BabbleBoss["Prince Malchezaar"]} }; --Voidheart Crown
+			[2] = { itemID = 28967, desc = {BabbleZone["Gruul's Lair"], BabbleBoss["High King Maulgar"]} }; --Voidheart Mantle
+			[3] = { itemID = 28964, desc = {BabbleZone["Magtheridon's Lair"], BabbleBoss["Magtheridon"]} }; --Voidheart Robe
+			[4] = { itemID = 28968, desc = {BabbleZone["Karazhan"], BabbleBoss["The Curator"]} }; --Voidheart Gloves
+			[5] = { itemID = 28966, desc = {BabbleZone["Gruul's Lair"], BabbleBoss["Gruul the Dragonkiller"]} }; --Voidheart Leggings
 		};
 		{
-			Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"].." - "..AL["Protection"];
-			[1] = { itemID = 29011, desc = "=ds=" ..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")" }; --Warbringer Greathelm
-			[2] = { itemID = 29016, desc = "=ds=" ..BabbleBoss["High King Maulgar"] }; --Warbringer Shoulderguards
-			[3] = { itemID = 29012, desc = "=ds=" ..BabbleBoss["Magtheridon"] }; --Warbringer Chestguard
-			[4] = { itemID = 29017, desc = "=ds=" ..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")" }; --Warbringer Handguards
-			[5] = { itemID = 29015, desc = "=ds=" ..BabbleBoss["Gruul the Dragonkiller"] }; --Warbringer Legguards
+			Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"]..WHITE.." - "..AL["Protection"];
+			[1] = { itemID = 29011, desc = {BabbleZone["Karazhan"], BabbleBoss["Prince Malchezaar"]} }; --Warbringer Greathelm
+			[2] = { itemID = 29016, desc = {BabbleZone["Gruul's Lair"], BabbleBoss["High King Maulgar"]} }; --Warbringer Shoulderguards
+			[3] = { itemID = 29012, desc = {BabbleZone["Magtheridon's Lair"], BabbleBoss["Magtheridon"]} }; --Warbringer Chestguard
+			[4] = { itemID = 29017, desc = {BabbleZone["Karazhan"], BabbleBoss["The Curator"]} }; --Warbringer Handguards
+			[5] = { itemID = 29015, desc = {BabbleZone["Gruul's Lair"], BabbleBoss["Gruul the Dragonkiller"]} }; --Warbringer Legguards
 		};
 		{
-			Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"].." - "..AL["Protection"];
-			[1] = { itemID = 14984, desc = "=ds=" ..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")" }; --Warbringer Helmet
-			[2] = { itemID = 14988, desc = "=ds=" ..BabbleBoss["High King Maulgar"] }; --Warbringer Pauldrons
-			[3] = { itemID = 14985, desc = "=ds=" ..BabbleBoss["Magtheridon"] }; --Warbringer Hauberk
-			[4] = { itemID = 14989, desc = "=ds=" ..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")" }; --Warbringer Gloves
-			[5] = { itemID = 14987, desc = "=ds=" ..BabbleBoss["Gruul the Dragonkiller"] }; --Warbringer Leggings
+			Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"]..WHITE.." - "..AL["Protection"];
+			[1] = { itemID = 14984, desc = {BabbleZone["Karazhan"], BabbleBoss["Prince Malchezaar"]} }; --Warbringer Helmet
+			[2] = { itemID = 14988, desc = {BabbleZone["Gruul's Lair"], BabbleBoss["High King Maulgar"]} }; --Warbringer Pauldrons
+			[3] = { itemID = 14985, desc = {BabbleZone["Magtheridon's Lair"], BabbleBoss["Magtheridon"]} }; --Warbringer Hauberk
+			[4] = { itemID = 14989, desc = {BabbleZone["Karazhan"], BabbleBoss["The Curator"]} }; --Warbringer Gloves
+			[5] = { itemID = 14987, desc = {BabbleZone["Gruul's Lair"], BabbleBoss["Gruul the Dragonkiller"]} }; --Warbringer Leggings
 		};
 		{
-			Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"].." - "..AL["Fury"];
-			[1] = { itemID = 29021, desc = "=ds=" ..BabbleBoss["Prince Malchezaar"].." ("..BabbleZone["Karazhan"]..")" }; --Warbringer Battle-Helm
-			[2] = { itemID = 29023, desc = "=ds=" ..BabbleBoss["High King Maulgar"] }; --Warbringer Shoulderplates
-			[3] = { itemID = 29019, desc = "=ds=" ..BabbleBoss["Magtheridon"] }; --Warbringer Breastplate
-			[4] = { itemID = 29020, desc = "=ds=" ..BabbleBoss["The Curator"].." ("..BabbleZone["Karazhan"]..")" }; --Warbringer Gauntlets
-			[5] = { itemID = 29022, desc = "=ds=" ..BabbleBoss["Gruul the Dragonkiller"] }; --Warbringer Greaves
+			Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"]..WHITE.." - "..AL["Fury"];
+			[1] = { itemID = 29021, desc = {BabbleZone["Karazhan"], BabbleBoss["Prince Malchezaar"]} }; --Warbringer Battle-Helm
+			[2] = { itemID = 29023, desc = {BabbleZone["Gruul's Lair"], BabbleBoss["High King Maulgar"]} }; --Warbringer Shoulderplates
+			[3] = { itemID = 29019, desc = {BabbleZone["Magtheridon's Lair"], BabbleBoss["Magtheridon"]} }; --Warbringer Breastplate
+			[4] = { itemID = 29020, desc = {BabbleZone["Karazhan"], BabbleBoss["The Curator"]} }; --Warbringer Gauntlets
+			[5] = { itemID = 29022, desc = {BabbleZone["Gruul's Lair"], BabbleBoss["Gruul the Dragonkiller"]} }; --Warbringer Greaves
 		}
 	};
 
@@ -5699,148 +5699,148 @@ AtlasLoot_Data["T5"] = {
 		Name = "Tier 5";
 		Type = "BCRaid";
 		{
-			Name = "Druid".." - "..AL["Feral"];
-			[1] = { itemID = 30228, desc = "=ds=" ..BabbleBoss["Lady Vashj"].." ("..BabbleZone["Serpentshrine Cavern"]..")" }; --Nordrassil Headdress
-			[2] = { itemID = 30230, desc = "=ds=" ..BabbleBoss["Void Reaver"].." ("..BabbleZone["The Eye"]..")" }; --Nordrassil Feral-Mantle
-			[3] = { itemID = 30222, desc = "=ds=" ..BabbleBoss["Kael'thas Sunstrider"].." ("..BabbleZone["The Eye"]..")" }; --Nordrassil Chestplate
-			[4] = { itemID = 30223, desc = "=ds=" ..BabbleBoss["Leotheras the Blind"].." ("..BabbleZone["Serpentshrine Cavern"]..")" }; --Nordrassil Handgrips
-			[5] = { itemID = 30229, desc = "=ds=" ..BabbleBoss["Fathom-Lord Karathress"].." ("..BabbleZone["Serpentshrine Cavern"]..")" }; --Nordrassil Feral-Kilt
+			Name = "Druid"..WHITE.." - "..AL["Feral"];
+			[1] = { itemID = 30228, desc = {BabbleZone["Serpentshrine Cavern"], BabbleBoss["Lady Vashj"]} }; --Nordrassil Headdress
+			[2] = { itemID = 30230, desc = {BabbleZone["The Eye"], BabbleBoss["Void Reaver"]} }; --Nordrassil Feral-Mantle
+			[3] = { itemID = 30222, desc = {BabbleZone["The Eye"], BabbleBoss["Kael'thas Sunstrider"]} }; --Nordrassil Chestplate
+			[4] = { itemID = 30223, desc = {BabbleZone["Serpentshrine Cavern"], BabbleBoss["Leotheras the Blind"]} }; --Nordrassil Handgrips
+			[5] = { itemID = 30229, desc = {BabbleZone["Serpentshrine Cavern"], BabbleBoss["Fathom-Lord Karathress"]} }; --Nordrassil Feral-Kilt
 		};
 		{
-			Name = "Druid".." - "..AL["Restoration"];
-			[1] = { itemID = 30219, desc = "=ds=" ..BabbleBoss["Lady Vashj"].." ("..BabbleZone["Serpentshrine Cavern"]..")" }; --Nordrassil Headguard
-			[2] = { itemID = 30221, desc = "=ds=" ..BabbleBoss["Void Reaver"].." ("..BabbleZone["The Eye"]..")" }; --Nordrassil Life-Mantle
-			[3] = { itemID = 30216, desc = "=ds=" ..BabbleBoss["Kael'thas Sunstrider"].." ("..BabbleZone["The Eye"]..")" }; --Nordrassil Chestguard
-			[4] = { itemID = 30217, desc = "=ds=" ..BabbleBoss["Leotheras the Blind"].." ("..BabbleZone["Serpentshrine Cavern"]..")" }; --Nordrassil Gloves
-			[5] = { itemID = 30220, desc = "=ds=" ..BabbleBoss["Fathom-Lord Karathress"].." ("..BabbleZone["Serpentshrine Cavern"]..")" }; --Nordrassil Life-Kilt
+			Name = "Druid"..WHITE.." - "..AL["Restoration"];
+			[1] = { itemID = 30219, desc = {BabbleZone["Serpentshrine Cavern"], BabbleBoss["Lady Vashj"]} }; --Nordrassil Headguard
+			[2] = { itemID = 30221, desc = {BabbleZone["The Eye"], BabbleBoss["Void Reaver"]} }; --Nordrassil Life-Mantle
+			[3] = { itemID = 30216, desc = {BabbleZone["The Eye"], BabbleBoss["Kael'thas Sunstrider"]} }; --Nordrassil Chestguard
+			[4] = { itemID = 30217, desc = {BabbleZone["Serpentshrine Cavern"], BabbleBoss["Leotheras the Blind"]} }; --Nordrassil Gloves
+			[5] = { itemID = 30220, desc = {BabbleZone["Serpentshrine Cavern"], BabbleBoss["Fathom-Lord Karathress"]} }; --Nordrassil Life-Kilt
 		};
 		{
-			Name = "Druid".." - "..AL["Balance"];
-			[1] = { itemID = 30233, desc = "=ds=" ..BabbleBoss["Lady Vashj"].." ("..BabbleZone["Serpentshrine Cavern"]..")" }; --Nordrassil Headpiece
-			[2] = { itemID = 30235, desc = "=ds=" ..BabbleBoss["Void Reaver"].." ("..BabbleZone["The Eye"]..")" }; --Nordrassil Wrath-Mantle
-			[3] = { itemID = 30231, desc = "=ds=" ..BabbleBoss["Kael'thas Sunstrider"].." ("..BabbleZone["The Eye"]..")" }; --Nordrassil Chestpiece
-			[4] = { itemID = 30232, desc = "=ds=" ..BabbleBoss["Leotheras the Blind"].." ("..BabbleZone["Serpentshrine Cavern"]..")" }; --Nordrassil Gauntlets
-			[5] = { itemID = 30234, desc = "=ds=" ..BabbleBoss["Fathom-Lord Karathress"].." ("..BabbleZone["Serpentshrine Cavern"]..")" }; --Nordrassil Wrath-Kilt
+			Name = "Druid"..WHITE.." - "..AL["Balance"];
+			[1] = { itemID = 30233, desc = {BabbleZone["Serpentshrine Cavern"], BabbleBoss["Lady Vashj"]} }; --Nordrassil Headpiece
+			[2] = { itemID = 30235, desc = {BabbleZone["The Eye"], BabbleBoss["Void Reaver"]} }; --Nordrassil Wrath-Mantle
+			[3] = { itemID = 30231, desc = {BabbleZone["The Eye"], BabbleBoss["Kael'thas Sunstrider"]} }; --Nordrassil Chestpiece
+			[4] = { itemID = 30232, desc = {BabbleZone["Serpentshrine Cavern"], BabbleBoss["Leotheras the Blind"]} }; --Nordrassil Gauntlets
+			[5] = { itemID = 30234, desc = {BabbleZone["Serpentshrine Cavern"], BabbleBoss["Fathom-Lord Karathress"]} }; --Nordrassil Wrath-Kilt
 		};
 		{
 			Name = LOCALIZED_CLASS_NAMES_MALE["HUNTER"];
-			[1] = { itemID = 30141, desc = "=ds=" ..BabbleBoss["Lady Vashj"].." ("..BabbleZone["Serpentshrine Cavern"]..")" }; --Rift Stalker Helm
-			[2] = { itemID = 30143, desc = "=ds=" ..BabbleBoss["Void Reaver"].." ("..BabbleZone["The Eye"]..")" }; --Rift Stalker Mantle
-			[3] = { itemID = 30139, desc = "=ds=" ..BabbleBoss["Kael'thas Sunstrider"].." ("..BabbleZone["The Eye"]..")" }; --Rift Stalker Hauberk
-			[4] = { itemID = 30140, desc = "=ds=" ..BabbleBoss["Leotheras the Blind"].." ("..BabbleZone["Serpentshrine Cavern"]..")" }; --Rift Stalker Gauntlets
-			[5] = { itemID = 30142, desc = "=ds=" ..BabbleBoss["Fathom-Lord Karathress"].." ("..BabbleZone["Serpentshrine Cavern"]..")" }; --Rift Stalker Leggings
+			[1] = { itemID = 30141, desc = {BabbleZone["Serpentshrine Cavern"], BabbleBoss["Lady Vashj"]} }; --Rift Stalker Helm
+			[2] = { itemID = 30143, desc = {BabbleZone["The Eye"], BabbleBoss["Void Reaver"]} }; --Rift Stalker Mantle
+			[3] = { itemID = 30139, desc = {BabbleZone["The Eye"], BabbleBoss["Kael'thas Sunstrider"]} }; --Rift Stalker Hauberk
+			[4] = { itemID = 30140, desc = {BabbleZone["Serpentshrine Cavern"], BabbleBoss["Leotheras the Blind"]} }; --Rift Stalker Gauntlets
+			[5] = { itemID = 30142, desc = {BabbleZone["Serpentshrine Cavern"], BabbleBoss["Fathom-Lord Karathress"]} }; --Rift Stalker Leggings
 		};
 		{
 			Name = LOCALIZED_CLASS_NAMES_MALE["MAGE"];
-			[1] = { itemID = 30206, desc = "=ds=" ..BabbleBoss["Lady Vashj"].." ("..BabbleZone["Serpentshrine Cavern"]..")" }; --Cowl of Tirisfal
-			[2] = { itemID = 30210, desc = "=ds=" ..BabbleBoss["Void Reaver"].." ("..BabbleZone["The Eye"]..")" }; --Mantle of Tirisfal
-			[3] = { itemID = 30196, desc = "=ds=" ..BabbleBoss["Kael'thas Sunstrider"].." ("..BabbleZone["The Eye"]..")" }; --Robes of Tirisfal
-			[4] = { itemID = 30205, desc = "=ds=" ..BabbleBoss["Leotheras the Blind"].." ("..BabbleZone["Serpentshrine Cavern"]..")" }; --Gloves of Tirisfal
-			[5] = { itemID = 30207, desc = "=ds=" ..BabbleBoss["Fathom-Lord Karathress"].." ("..BabbleZone["Serpentshrine Cavern"]..")" }; --Leggings of Tirisfal
+			[1] = { itemID = 30206, desc = {BabbleZone["Serpentshrine Cavern"], BabbleBoss["Lady Vashj"]} }; --Cowl of Tirisfal
+			[2] = { itemID = 30210, desc = {BabbleZone["The Eye"], BabbleBoss["Void Reaver"]} }; --Mantle of Tirisfal
+			[3] = { itemID = 30196, desc = {BabbleZone["The Eye"], BabbleBoss["Kael'thas Sunstrider"]} }; --Robes of Tirisfal
+			[4] = { itemID = 30205, desc = {BabbleZone["Serpentshrine Cavern"], BabbleBoss["Leotheras the Blind"]} }; --Gloves of Tirisfal
+			[5] = { itemID = 30207, desc = {BabbleZone["Serpentshrine Cavern"], BabbleBoss["Fathom-Lord Karathress"]} }; --Leggings of Tirisfal
 		};
 		{
-			Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"].." - "..AL["Protection"];
-			[1] = { itemID = 30125, desc = "=ds=" ..BabbleBoss["Lady Vashj"].." ("..BabbleZone["Serpentshrine Cavern"]..")" }; --Crystalforge Faceguard
-			[2] = { itemID = 30127, desc = "=ds=" ..BabbleBoss["Void Reaver"].." ("..BabbleZone["The Eye"]..")" }; --Crystalforge Shoulderguards
-			[3] = { itemID = 30123, desc = "=ds=" ..BabbleBoss["Kael'thas Sunstrider"].." ("..BabbleZone["The Eye"]..")" }; --Crystalforge Chestguard
-			[4] = { itemID = 30124, desc = "=ds=" ..BabbleBoss["Leotheras the Blind"].." ("..BabbleZone["Serpentshrine Cavern"]..")" }; --Crystalforge Handguards
-			[5] = { itemID = 30126, desc = "=ds=" ..BabbleBoss["Fathom-Lord Karathress"].." ("..BabbleZone["Serpentshrine Cavern"]..")" }; --Crystalforge Legguards
+			Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"]..WHITE.." - "..AL["Protection"];
+			[1] = { itemID = 30125, desc = {BabbleZone["Serpentshrine Cavern"], BabbleBoss["Lady Vashj"]} }; --Crystalforge Faceguard
+			[2] = { itemID = 30127, desc = {BabbleZone["The Eye"], BabbleBoss["Void Reaver"]} }; --Crystalforge Shoulderguards
+			[3] = { itemID = 30123, desc = {BabbleZone["The Eye"], BabbleBoss["Kael'thas Sunstrider"]} }; --Crystalforge Chestguard
+			[4] = { itemID = 30124, desc = {BabbleZone["Serpentshrine Cavern"], BabbleBoss["Leotheras the Blind"]} }; --Crystalforge Handguards
+			[5] = { itemID = 30126, desc = {BabbleZone["Serpentshrine Cavern"], BabbleBoss["Fathom-Lord Karathress"]} }; --Crystalforge Legguards
 		};
 		{
-			Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"].." - "..AL["Retribution"];
-			[1] = { itemID = 30131, desc = "=ds=" ..BabbleBoss["Lady Vashj"].." ("..BabbleZone["Serpentshrine Cavern"]..")" }; --Crystalforge War-Helm
-			[2] = { itemID = 30133, desc = "=ds=" ..BabbleBoss["Void Reaver"].." ("..BabbleZone["The Eye"]..")" }; --Crystalforge Shoulderbraces
-			[3] = { itemID = 30129, desc = "=ds=" ..BabbleBoss["Kael'thas Sunstrider"].." ("..BabbleZone["The Eye"]..")" }; --Crystalforge Breastplate
-			[4] = { itemID = 30130, desc = "=ds=" ..BabbleBoss["Leotheras the Blind"].." ("..BabbleZone["Serpentshrine Cavern"]..")" }; --Crystalforge Gauntlets
-			[5] = { itemID = 30132, desc = "=ds=" ..BabbleBoss["Fathom-Lord Karathress"].." ("..BabbleZone["Serpentshrine Cavern"]..")" }; --Crystalforge Greaves
+			Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"]..WHITE.." - "..AL["Retribution"];
+			[1] = { itemID = 30131, desc = {BabbleZone["Serpentshrine Cavern"], BabbleBoss["Lady Vashj"]} }; --Crystalforge War-Helm
+			[2] = { itemID = 30133, desc = {BabbleZone["The Eye"], BabbleBoss["Void Reaver"]} }; --Crystalforge Shoulderbraces
+			[3] = { itemID = 30129, desc = {BabbleZone["The Eye"], BabbleBoss["Kael'thas Sunstrider"]} }; --Crystalforge Breastplate
+			[4] = { itemID = 30130, desc = {BabbleZone["Serpentshrine Cavern"], BabbleBoss["Leotheras the Blind"]} }; --Crystalforge Gauntlets
+			[5] = { itemID = 30132, desc = {BabbleZone["Serpentshrine Cavern"], BabbleBoss["Fathom-Lord Karathress"]} }; --Crystalforge Greaves
 		};
 		{
-			Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"].." - "..AL["Holy"];
-			[1] = { itemID = 30136, desc = "=ds=" ..BabbleBoss["Lady Vashj"].." ("..BabbleZone["Serpentshrine Cavern"]..")" }; --Crystalforge Greathelm
-			[2] = { itemID = 30138, desc = "=ds=" ..BabbleBoss["Void Reaver"].." ("..BabbleZone["The Eye"]..")" }; --Crystalforge Pauldrons
-			[3] = { itemID = 30134, desc = "=ds=" ..BabbleBoss["Kael'thas Sunstrider"].." ("..BabbleZone["The Eye"]..")" }; --Crystalforge Chestpiece
-			[4] = { itemID = 30135, desc = "=ds=" ..BabbleBoss["Leotheras the Blind"].." ("..BabbleZone["Serpentshrine Cavern"]..")" }; --Crystalforge Gloves
-			[5] = { itemID = 30137, desc = "=ds=" ..BabbleBoss["Fathom-Lord Karathress"].." ("..BabbleZone["Serpentshrine Cavern"]..")" }; --Crystalforge Leggings
+			Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"]..WHITE.." - "..AL["Holy"];
+			[1] = { itemID = 30136, desc = {BabbleZone["Serpentshrine Cavern"], BabbleBoss["Lady Vashj"]} }; --Crystalforge Greathelm
+			[2] = { itemID = 30138, desc = {BabbleZone["The Eye"], BabbleBoss["Void Reaver"]} }; --Crystalforge Pauldrons
+			[3] = { itemID = 30134, desc = {BabbleZone["The Eye"], BabbleBoss["Kael'thas Sunstrider"]} }; --Crystalforge Chestpiece
+			[4] = { itemID = 30135, desc = {BabbleZone["Serpentshrine Cavern"], BabbleBoss["Leotheras the Blind"]} }; --Crystalforge Gloves
+			[5] = { itemID = 30137, desc = {BabbleZone["Serpentshrine Cavern"], BabbleBoss["Fathom-Lord Karathress"]} }; --Crystalforge Leggings
 		};
 		{
-			Name = LOCALIZED_CLASS_NAMES_MALE["PRIEST"].." - "..AL["Holy"];
-			[1] = { itemID = 30152, desc = "=ds=" ..BabbleBoss["Lady Vashj"].." ("..BabbleZone["Serpentshrine Cavern"]..")" }; --Cowl of the Avatar
-			[2] = { itemID = 30154, desc = "=ds=" ..BabbleBoss["Void Reaver"].." ("..BabbleZone["The Eye"]..")" }; --Mantle of the Avatar
-			[3] = { itemID = 30150, desc = "=ds=" ..BabbleBoss["Kael'thas Sunstrider"].." ("..BabbleZone["The Eye"]..")" }; --Vestments of the Avatar
-			[4] = { itemID = 30151, desc = "=ds=" ..BabbleBoss["Leotheras the Blind"].." ("..BabbleZone["Serpentshrine Cavern"]..")" }; --Gloves of the Avatar
-			[5] = { itemID = 30153, desc = "=ds=" ..BabbleBoss["Fathom-Lord Karathress"].." ("..BabbleZone["Serpentshrine Cavern"]..")" }; --Breeches of the Avatar
+			Name = LOCALIZED_CLASS_NAMES_MALE["PRIEST"]..WHITE.." - "..AL["Holy"];
+			[1] = { itemID = 30152, desc = {BabbleZone["Serpentshrine Cavern"], BabbleBoss["Lady Vashj"]} }; --Cowl of the Avatar
+			[2] = { itemID = 30154, desc = {BabbleZone["The Eye"], BabbleBoss["Void Reaver"]} }; --Mantle of the Avatar
+			[3] = { itemID = 30150, desc = {BabbleZone["The Eye"], BabbleBoss["Kael'thas Sunstrider"]} }; --Vestments of the Avatar
+			[4] = { itemID = 30151, desc = {BabbleZone["Serpentshrine Cavern"], BabbleBoss["Leotheras the Blind"]} }; --Gloves of the Avatar
+			[5] = { itemID = 30153, desc = {BabbleZone["Serpentshrine Cavern"], BabbleBoss["Fathom-Lord Karathress"]} }; --Breeches of the Avatar
 		};
 		{
-			Name = LOCALIZED_CLASS_NAMES_MALE["PRIEST"].." - "..AL["Shadow"];
-			[1] = { itemID = 30161, desc = "=ds=" ..BabbleBoss["Lady Vashj"].." ("..BabbleZone["Serpentshrine Cavern"]..")" }; --Hood of the Avatar
-			[2] = { itemID = 30163, desc = "=ds=" ..BabbleBoss["Void Reaver"].." ("..BabbleZone["The Eye"]..")" }; --Wings of the Avatar
-			[3] = { itemID = 30159, desc = "=ds=" ..BabbleBoss["Kael'thas Sunstrider"].." ("..BabbleZone["The Eye"]..")" }; --Shroud of the Avatar
-			[4] = { itemID = 30160, desc = "=ds=" ..BabbleBoss["Leotheras the Blind"].." ("..BabbleZone["Serpentshrine Cavern"]..")" }; --Handguards of the Avatar
-			[5] = { itemID = 30162, desc = "=ds=" ..BabbleBoss["Fathom-Lord Karathress"].." ("..BabbleZone["Serpentshrine Cavern"]..")" }; --Leggings of the Avatar
+			Name = LOCALIZED_CLASS_NAMES_MALE["PRIEST"]..WHITE.." - "..AL["Shadow"];
+			[1] = { itemID = 30161, desc = {BabbleZone["Serpentshrine Cavern"], BabbleBoss["Lady Vashj"]} }; --Hood of the Avatar
+			[2] = { itemID = 30163, desc = {BabbleZone["The Eye"], BabbleBoss["Void Reaver"]} }; --Wings of the Avatar
+			[3] = { itemID = 30159, desc = {BabbleZone["The Eye"], BabbleBoss["Kael'thas Sunstrider"]} }; --Shroud of the Avatar
+			[4] = { itemID = 30160, desc = {BabbleZone["Serpentshrine Cavern"], BabbleBoss["Leotheras the Blind"]} }; --Handguards of the Avatar
+			[5] = { itemID = 30162, desc = {BabbleZone["Serpentshrine Cavern"], BabbleBoss["Fathom-Lord Karathress"]} }; --Leggings of the Avatar
 		};
 		{
 			Name = LOCALIZED_CLASS_NAMES_MALE["ROGUE"];
-			[1] = { itemID = 30146, desc = "=ds=" ..BabbleBoss["Lady Vashj"].." ("..BabbleZone["Serpentshrine Cavern"]..")" }; --Deathmantle Helm
-			[2] = { itemID = 30149, desc = "=ds=" ..BabbleBoss["Void Reaver"].." ("..BabbleZone["The Eye"]..")" }; --Deathmantle Shoulderpads
-			[3] = { itemID = 30144, desc = "=ds=" ..BabbleBoss["Kael'thas Sunstrider"].." ("..BabbleZone["The Eye"]..")" }; --Deathmantle Chestguard
-			[4] = { itemID = 30145, desc = "=ds=" ..BabbleBoss["Leotheras the Blind"].." ("..BabbleZone["Serpentshrine Cavern"]..")" }; --Deathmantle Handguards
-			[5] = { itemID = 30148, desc = "=ds=" ..BabbleBoss["Fathom-Lord Karathress"].." ("..BabbleZone["Serpentshrine Cavern"]..")" }; --Deathmantle Legguards
+			[1] = { itemID = 30146, desc = {BabbleZone["Serpentshrine Cavern"], BabbleBoss["Lady Vashj"]} }; --Deathmantle Helm
+			[2] = { itemID = 30149, desc = {BabbleZone["The Eye"], BabbleBoss["Void Reaver"]} }; --Deathmantle Shoulderpads
+			[3] = { itemID = 30144, desc = {BabbleZone["The Eye"], BabbleBoss["Kael'thas Sunstrider"]} }; --Deathmantle Chestguard
+			[4] = { itemID = 30145, desc = {BabbleZone["Serpentshrine Cavern"], BabbleBoss["Leotheras the Blind"]} }; --Deathmantle Handguards
+			[5] = { itemID = 30148, desc = {BabbleZone["Serpentshrine Cavern"], BabbleBoss["Fathom-Lord Karathress"]} }; --Deathmantle Legguards
 		};
 		{
-			Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"].." - "..AL["Enhancement"];
-			[1] = { itemID = 30190, desc = "=ds=" ..BabbleBoss["Lady Vashj"].." ("..BabbleZone["Serpentshrine Cavern"]..")" }; --Cataclysm Helm
-			[2] = { itemID = 30194, desc = "=ds=" ..BabbleBoss["Void Reaver"].." ("..BabbleZone["The Eye"]..")" }; --Cataclysm Shoulderplates
-			[3] = { itemID = 30185, desc = "=ds=" ..BabbleBoss["Kael'thas Sunstrider"].." ("..BabbleZone["The Eye"]..")" }; --Cataclysm Chestplate
-			[4] = { itemID = 30189, desc = "=ds=" ..BabbleBoss["Leotheras the Blind"].." ("..BabbleZone["Serpentshrine Cavern"]..")" }; --Cataclysm Gauntlets
-			[5] = { itemID = 30192, desc = "=ds=" ..BabbleBoss["Fathom-Lord Karathress"].." ("..BabbleZone["Serpentshrine Cavern"]..")" }; --Cataclysm Legplates
+			Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"]..WHITE.." - "..AL["Enhancement"];
+			[1] = { itemID = 30190, desc = {BabbleZone["Serpentshrine Cavern"], BabbleBoss["Lady Vashj"]} }; --Cataclysm Helm
+			[2] = { itemID = 30194, desc = {BabbleZone["The Eye"], BabbleBoss["Void Reaver"]} }; --Cataclysm Shoulderplates
+			[3] = { itemID = 30185, desc = {BabbleZone["The Eye"], BabbleBoss["Kael'thas Sunstrider"]} }; --Cataclysm Chestplate
+			[4] = { itemID = 30189, desc = {BabbleZone["Serpentshrine Cavern"], BabbleBoss["Leotheras the Blind"]} }; --Cataclysm Gauntlets
+			[5] = { itemID = 30192, desc = {BabbleZone["Serpentshrine Cavern"], BabbleBoss["Fathom-Lord Karathress"]} }; --Cataclysm Legplates
 		};
 		{
-			Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"].." - "..AL["Restoration"];
-			[1] = { itemID = 30166, desc = "=ds=" ..BabbleBoss["Lady Vashj"].." ("..BabbleZone["Serpentshrine Cavern"]..")" }; --Cataclysm Headguard
-			[2] = { itemID = 30168, desc = "=ds=" ..BabbleBoss["Void Reaver"].." ("..BabbleZone["The Eye"]..")" }; --Cataclysm Shoulderguards
-			[3] = { itemID = 30164, desc = "=ds=" ..BabbleBoss["Kael'thas Sunstrider"].." ("..BabbleZone["The Eye"]..")" }; --Cataclysm Chestguard
-			[4] = { itemID = 30165, desc = "=ds=" ..BabbleBoss["Leotheras the Blind"].." ("..BabbleZone["Serpentshrine Cavern"]..")" }; --Cataclysm Gloves
-			[5] = { itemID = 30167, desc = "=ds=" ..BabbleBoss["Fathom-Lord Karathress"].." ("..BabbleZone["Serpentshrine Cavern"]..")" }; --Cataclysm Legguards
+			Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"]..WHITE.." - "..AL["Restoration"];
+			[1] = { itemID = 30166, desc = {BabbleZone["Serpentshrine Cavern"], BabbleBoss["Lady Vashj"]} }; --Cataclysm Headguard
+			[2] = { itemID = 30168, desc = {BabbleZone["The Eye"], BabbleBoss["Void Reaver"]} }; --Cataclysm Shoulderguards
+			[3] = { itemID = 30164, desc = {BabbleZone["The Eye"], BabbleBoss["Kael'thas Sunstrider"]} }; --Cataclysm Chestguard
+			[4] = { itemID = 30165, desc = {BabbleZone["Serpentshrine Cavern"], BabbleBoss["Leotheras the Blind"]} }; --Cataclysm Gloves
+			[5] = { itemID = 30167, desc = {BabbleZone["Serpentshrine Cavern"], BabbleBoss["Fathom-Lord Karathress"]} }; --Cataclysm Legguards
 		};
 		{
-			Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"].." - "..AL["Elemental"];
-			[1] = { itemID = 30171, desc = "=ds=" ..BabbleBoss["Lady Vashj"].." ("..BabbleZone["Serpentshrine Cavern"]..")" }; --Cataclysm Headpiece
-			[2] = { itemID = 30173, desc = "=ds=" ..BabbleBoss["Void Reaver"].." ("..BabbleZone["The Eye"]..")" }; --Cataclysm Shoulderpads
-			[3] = { itemID = 30169, desc = "=ds=" ..BabbleBoss["Kael'thas Sunstrider"].." ("..BabbleZone["The Eye"]..")" }; --Cataclysm Chestpiece
-			[4] = { itemID = 30170, desc = "=ds=" ..BabbleBoss["Leotheras the Blind"].." ("..BabbleZone["Serpentshrine Cavern"]..")" }; --Cataclysm Handgrips
-			[5] = { itemID = 30172, desc = "=ds=" ..BabbleBoss["Fathom-Lord Karathress"].." ("..BabbleZone["Serpentshrine Cavern"]..")" }; --Cataclysm Leggings
+			Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"]..WHITE.." - "..AL["Elemental"];
+			[1] = { itemID = 30171, desc = {BabbleZone["Serpentshrine Cavern"], BabbleBoss["Lady Vashj"]} }; --Cataclysm Headpiece
+			[2] = { itemID = 30173, desc = {BabbleZone["The Eye"], BabbleBoss["Void Reaver"]} }; --Cataclysm Shoulderpads
+			[3] = { itemID = 30169, desc = {BabbleZone["The Eye"], BabbleBoss["Kael'thas Sunstrider"]} }; --Cataclysm Chestpiece
+			[4] = { itemID = 30170, desc = {BabbleZone["Serpentshrine Cavern"], BabbleBoss["Leotheras the Blind"]} }; --Cataclysm Handgrips
+			[5] = { itemID = 30172, desc = {BabbleZone["Serpentshrine Cavern"], BabbleBoss["Fathom-Lord Karathress"]} }; --Cataclysm Leggings
 		};
 		{
 			Name = LOCALIZED_CLASS_NAMES_MALE["WARLOCK"];
-			[1] = { itemID = 30212, desc = "=ds=" ..BabbleBoss["Lady Vashj"].." ("..BabbleZone["Serpentshrine Cavern"]..")" }; --Hood of the Corruptor
-			[2] = { itemID = 30215, desc = "=ds=" ..BabbleBoss["Void Reaver"].." ("..BabbleZone["The Eye"]..")" }; --Mantle of the Corruptor
-			[3] = { itemID = 30214, desc = "=ds=" ..BabbleBoss["Kael'thas Sunstrider"].." ("..BabbleZone["The Eye"]..")" }; --Robe of the Corruptor
-			[4] = { itemID = 30211, desc = "=ds=" ..BabbleBoss["Leotheras the Blind"].." ("..BabbleZone["Serpentshrine Cavern"]..")" }; --Gloves of the Corruptor
-			[5] = { itemID = 30213, desc = "=ds=" ..BabbleBoss["Fathom-Lord Karathress"].." ("..BabbleZone["Serpentshrine Cavern"]..")" }; --Leggings of the Corruptor
+			[1] = { itemID = 30212, desc = {BabbleZone["Serpentshrine Cavern"], BabbleBoss["Lady Vashj"]} }; --Hood of the Corruptor
+			[2] = { itemID = 30215, desc = {BabbleZone["The Eye"], BabbleBoss["Void Reaver"]} }; --Mantle of the Corruptor
+			[3] = { itemID = 30214, desc = {BabbleZone["The Eye"], BabbleBoss["Kael'thas Sunstrider"]} }; --Robe of the Corruptor
+			[4] = { itemID = 30211, desc = {BabbleZone["Serpentshrine Cavern"], BabbleBoss["Leotheras the Blind"]} }; --Gloves of the Corruptor
+			[5] = { itemID = 30213, desc = {BabbleZone["Serpentshrine Cavern"], BabbleBoss["Fathom-Lord Karathress"]} }; --Leggings of the Corruptor
 		};
 		{
-			Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"].." - "..AL["Protection"];
-			[1] = { itemID = 30115, desc = "=ds=" ..BabbleBoss["Lady Vashj"].." ("..BabbleZone["Serpentshrine Cavern"]..")" }; --Destroyer Greathelm
-			[2] = { itemID = 30117, desc = "=ds=" ..BabbleBoss["Void Reaver"].." ("..BabbleZone["The Eye"]..")" }; --Destroyer Shoulderguards
-			[3] = { itemID = 30113, desc = "=ds=" ..BabbleBoss["Kael'thas Sunstrider"].." ("..BabbleZone["The Eye"]..")" }; --Destroyer Chestguard
-			[4] = { itemID = 30114, desc = "=ds=" ..BabbleBoss["Leotheras the Blind"].." ("..BabbleZone["Serpentshrine Cavern"]..")" }; --Destroyer Handguards
-			[5] = { itemID = 30116, desc = "=ds=" ..BabbleBoss["Fathom-Lord Karathress"].." ("..BabbleZone["Serpentshrine Cavern"]..")" }; --Destroyer Legguards
+			Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"]..WHITE.." - "..AL["Protection"];
+			[1] = { itemID = 30115, desc = {BabbleZone["Serpentshrine Cavern"], BabbleBoss["Lady Vashj"]} }; --Destroyer Greathelm
+			[2] = { itemID = 30117, desc = {BabbleZone["The Eye"], BabbleBoss["Void Reaver"]} }; --Destroyer Shoulderguards
+			[3] = { itemID = 30113, desc = {BabbleZone["The Eye"], BabbleBoss["Kael'thas Sunstrider"]} }; --Destroyer Chestguard
+			[4] = { itemID = 30114, desc = {BabbleZone["Serpentshrine Cavern"], BabbleBoss["Leotheras the Blind"]} }; --Destroyer Handguards
+			[5] = { itemID = 30116, desc = {BabbleZone["Serpentshrine Cavern"], BabbleBoss["Fathom-Lord Karathress"]} }; --Destroyer Legguards
 		};
 		{
-			Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"].." - "..AL["Protection"];
-			[1] = { itemID = 14992, desc = "=ds=" ..BabbleBoss["Lady Vashj"].." ("..BabbleZone["Serpentshrine Cavern"]..")" }; --Destroyer Helmet
-			[2] = { itemID = 14994, desc = "=ds=" ..BabbleBoss["Void Reaver"].." ("..BabbleZone["The Eye"]..")" }; --Destroyer Pauldrons
-			[3] = { itemID = 14990, desc = "=ds=" ..BabbleBoss["Kael'thas Sunstrider"].." ("..BabbleZone["The Eye"]..")" }; --Destroyer Hauberk
-			[4] = { itemID = 14991, desc = "=ds=" ..BabbleBoss["Leotheras the Blind"].." ("..BabbleZone["Serpentshrine Cavern"]..")" }; --Destroyer Gloves
-			[5] = { itemID = 14993, desc = "=ds=" ..BabbleBoss["Fathom-Lord Karathress"].." ("..BabbleZone["Serpentshrine Cavern"]..")" }; --Destroyer Leggings
+			Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"]..WHITE.." - "..AL["Protection"];
+			[1] = { itemID = 14992, desc = {BabbleZone["Serpentshrine Cavern"], BabbleBoss["Lady Vashj"]} }; --Destroyer Helmet
+			[2] = { itemID = 14994, desc = {BabbleZone["The Eye"], BabbleBoss["Void Reaver"]} }; --Destroyer Pauldrons
+			[3] = { itemID = 14990, desc = {BabbleZone["The Eye"], BabbleBoss["Kael'thas Sunstrider"]} }; --Destroyer Hauberk
+			[4] = { itemID = 14991, desc = {BabbleZone["Serpentshrine Cavern"], BabbleBoss["Leotheras the Blind"]} }; --Destroyer Gloves
+			[5] = { itemID = 14993, desc = {BabbleZone["Serpentshrine Cavern"], BabbleBoss["Fathom-Lord Karathress"]} }; --Destroyer Leggings
 		};
 		{
-			Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"].." - "..AL["Fury"];
-			[1] = { itemID = 30120, desc = "=ds=" ..BabbleBoss["Lady Vashj"].." ("..BabbleZone["Serpentshrine Cavern"]..")" }; --Destroyer Battle-Helm
-			[2] = { itemID = 30122, desc = "=ds=" ..BabbleBoss["Void Reaver"].." ("..BabbleZone["The Eye"]..")" }; --Destroyer Shoulderblades
-			[3] = { itemID = 30118, desc = "=ds=" ..BabbleBoss["Kael'thas Sunstrider"].." ("..BabbleZone["The Eye"]..")" }; --Destroyer Breastplate
-			[4] = { itemID = 30119, desc = "=ds=" ..BabbleBoss["Leotheras the Blind"].." ("..BabbleZone["Serpentshrine Cavern"]..")" }; --Destroyer Gauntlets
-			[5] = { itemID = 30121, desc = "=ds=" ..BabbleBoss["Fathom-Lord Karathress"].." ("..BabbleZone["Serpentshrine Cavern"]..")" }; --Destroyer Greaves
+			Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"]..WHITE.." - "..AL["Fury"];
+			[1] = { itemID = 30120, desc = {BabbleZone["Serpentshrine Cavern"], BabbleBoss["Lady Vashj"]} }; --Destroyer Battle-Helm
+			[2] = { itemID = 30122, desc = {BabbleZone["The Eye"], BabbleBoss["Void Reaver"]} }; --Destroyer Shoulderblades
+			[3] = { itemID = 30118, desc = {BabbleZone["The Eye"], BabbleBoss["Kael'thas Sunstrider"]} }; --Destroyer Breastplate
+			[4] = { itemID = 30119, desc = {BabbleZone["Serpentshrine Cavern"], BabbleBoss["Leotheras the Blind"]} }; --Destroyer Gauntlets
+			[5] = { itemID = 30121, desc = {BabbleZone["Serpentshrine Cavern"], BabbleBoss["Fathom-Lord Karathress"]} }; --Destroyer Greaves
 		};
 	};
 
@@ -5853,202 +5853,202 @@ AtlasLoot_Data["T5"] = {
 			Name = "Tier 6";
 			Type = "BCRaid";
 		{
-			Name = "Druid".." - "..AL["Feral"];
-			[1] = { itemID = 31039, desc = "=ds=" ..BabbleBoss["Archimonde"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Thunderheart Cover
-			[2] = { itemID = 31048, desc = "=ds=" ..BabbleBoss["Mother Shahraz"].." ("..BabbleZone["Black Temple"]..")" }; --Thunderheart Pauldrons
-			[3] = { itemID = 31042, desc = "=ds=" ..BabbleBoss["Illidan Stormrage"].." ("..BabbleZone["Black Temple"]..")" }; --Thunderheart Chestguard
-			[4] = { itemID = 34444, desc = "=ds=" ..BabbleBoss["Kalecgos"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Thunderheart Wristguards
-			[5] = { itemID = 31034, desc = "=ds=" ..BabbleBoss["Kaz'rogal"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Thunderheart Gauntlets
-			[6] = { itemID = 34556, desc = "=ds=" ..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Thunderheart Waistguard
-			[7] = { itemID = 31044, desc = "=ds=" ..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Thunderheart Leggings
-			[8] = { itemID = 34573, desc = "=ds=" ..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Thunderheart Treads
+			Name = "Druid"..WHITE.." - "..AL["Feral"];
+			[1] = { itemID = 31039, desc = {BabbleZone["Hyjal Summit"], BabbleBoss["Archimonde"]} }; --Thunderheart Cover
+			[2] = { itemID = 31048, desc = {BabbleZone["Black Temple"], BabbleBoss["Mother Shahraz"]} }; --Thunderheart Pauldrons
+			[3] = { itemID = 31042, desc = {BabbleZone["Black Temple"], BabbleBoss["Illidan Stormrage"]} }; --Thunderheart Chestguard
+			[4] = { itemID = 34444, desc = {BabbleZone["Sunwell Plateau"], BabbleBoss["Kalecgos"]} }; --Thunderheart Wristguards
+			[5] = { itemID = 31034, desc = {BabbleZone["Hyjal Summit"], BabbleBoss["Kaz'rogal"]} }; --Thunderheart Gauntlets
+			[6] = { itemID = 34556, desc = {BabbleZone["Sunwell Plateau"], BabbleBoss["Brutallus"]} }; --Thunderheart Waistguard
+			[7] = { itemID = 31044, desc = {BabbleZone["Hyjal Summit"], BabbleBoss["Azgalor"]} }; --Thunderheart Leggings
+			[8] = { itemID = 34573, desc = {BabbleZone["Sunwell Plateau"], BabbleBoss["Felmyst"]} }; --Thunderheart Treads
 		};
 		{
-			Name = "Druid".." - "..AL["Restoration"];
-			[1] = { itemID = 31037, desc = "=ds=" ..BabbleBoss["Archimonde"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Thunderheart Helmet
-			[2] = { itemID = 31047, desc = "=ds=" ..BabbleBoss["Mother Shahraz"].." ("..BabbleZone["Black Temple"]..")" }; --Thunderheart Spaulders
-			[3] = { itemID = 31041, desc = "=ds=" ..BabbleBoss["Illidan Stormrage"].." ("..BabbleZone["Black Temple"]..")" }; --Thunderheart Tunic
-			[4] = { itemID = 34445, desc = "=ds=" ..BabbleBoss["Kalecgos"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Thunderheart Bracers
-			[5] = { itemID = 31032, desc = "=ds=" ..BabbleBoss["Kalecgos"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Thunderheart Gloves
-			[6] = { itemID = 34554, desc = "=ds=" ..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Thunderheart Belt
-			[7] = { itemID = 31045, desc = "=ds=" ..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Thunderheart Legguards
-			[8] = { itemID = 34571, desc = "=ds=" ..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Thunderheart Boots
+			Name = "Druid"..WHITE.." - "..AL["Restoration"];
+			[1] = { itemID = 31037, desc = {BabbleZone["Hyjal Summit"], BabbleBoss["Archimonde"]} }; --Thunderheart Helmet
+			[2] = { itemID = 31047, desc = {BabbleZone["Black Temple"], BabbleBoss["Mother Shahraz"]} }; --Thunderheart Spaulders
+			[3] = { itemID = 31041, desc = {BabbleZone["Black Temple"], BabbleBoss["Illidan Stormrage"]} }; --Thunderheart Tunic
+			[4] = { itemID = 34445, desc = {BabbleZone["Sunwell Plateau"], BabbleBoss["Kalecgos"]} }; --Thunderheart Bracers
+			[5] = { itemID = 31032, desc = {BabbleZone["Hyjal Summit"], BabbleBoss["Kalecgos"]} }; --Thunderheart Gloves
+			[6] = { itemID = 34554, desc = {BabbleZone["Sunwell Plateau"], BabbleBoss["Brutallus"]} }; --Thunderheart Belt
+			[7] = { itemID = 31045, desc = {BabbleZone["Hyjal Summit"], BabbleBoss["Azgalor"]} }; --Thunderheart Legguards
+			[8] = { itemID = 34571, desc = {BabbleZone["Sunwell Plateau"], BabbleBoss["Felmyst"]} }; --Thunderheart Boots
 		};
 		{
-			Name = "Druid".." - "..AL["Balance"];
-			[1] = { itemID = 31040, desc = "=ds=" ..BabbleBoss["Archimonde"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Thunderheart Headguard
-			[2] = { itemID = 31049, desc = "=ds=" ..BabbleBoss["Mother Shahraz"].." ("..BabbleZone["Black Temple"]..")" }; --Thunderheart Shoulderpads
-			[3] = { itemID = 31043, desc = "=ds=" ..BabbleBoss["Illidan Stormrage"].." ("..BabbleZone["Black Temple"]..")" }; --Thunderheart Vest
-			[4] = { itemID = 34446, desc = "=ds=" ..BabbleBoss["Kalecgos"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Thunderheart Bands
-			[5] = { itemID = 31035, desc = "=ds=" ..BabbleBoss["Kalecgos"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Thunderheart Handguards
-			[6] = { itemID = 34555, desc = "=ds=" ..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Thunderheart Cord
-			[7] = { itemID = 31046, desc = "=ds=" ..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Thunderheart Pants
-			[8] = { itemID = 34572, desc = "=ds=" ..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Thunderheart Footwraps
+			Name = "Druid"..WHITE.." - "..AL["Balance"];
+			[1] = { itemID = 31040, desc = {BabbleZone["Hyjal Summit"], BabbleBoss["Archimonde"]} }; --Thunderheart Headguard
+			[2] = { itemID = 31049, desc = {BabbleZone["Black Temple"], BabbleBoss["Mother Shahraz"]} }; --Thunderheart Shoulderpads
+			[3] = { itemID = 31043, desc = {BabbleZone["Black Temple"], BabbleBoss["Illidan Stormrage"]} }; --Thunderheart Vest
+			[4] = { itemID = 34446, desc = {BabbleZone["Sunwell Plateau"], BabbleBoss["Kalecgos"]} }; --Thunderheart Bands
+			[5] = { itemID = 31035, desc = {BabbleZone["Hyjal Summit"], BabbleBoss["Kalecgos"]} }; --Thunderheart Handguards
+			[6] = { itemID = 34555, desc = {BabbleZone["Sunwell Plateau"], BabbleBoss["Brutallus"]} }; --Thunderheart Cord
+			[7] = { itemID = 31046, desc = {BabbleZone["Hyjal Summit"], BabbleBoss["Azgalor"]} }; --Thunderheart Pants
+			[8] = { itemID = 34572, desc = {BabbleZone["Sunwell Plateau"], BabbleBoss["Felmyst"]} }; --Thunderheart Footwraps
 		};
 		{
 			Name = LOCALIZED_CLASS_NAMES_MALE["HUNTER"];
-			[1] = { itemID = 31003, desc = "=ds=" ..BabbleBoss["Archimonde"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Gronnstalker's Helmet
-			[2] = { itemID = 31006, desc = "=ds=" ..BabbleBoss["Mother Shahraz"].." ("..BabbleZone["Black Temple"]..")" }; --Gronnstalker's Spaulders
-			[3] = { itemID = 31004, desc = "=ds=" ..BabbleBoss["Illidan Stormrage"].." ("..BabbleZone["Black Temple"]..")" }; --Gronnstalker's Chestguard
-			[4] = { itemID = 34443, desc = "=ds=" ..BabbleBoss["Kalecgos"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Gronnstalker's Bracers
-			[5] = { itemID = 31001, desc = "=ds=" ..BabbleBoss["Kalecgos"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Gronnstalker's Gloves
-			[6] = { itemID = 34549, desc = "=ds=" ..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Gronnstalker's Belt
-			[7] = { itemID = 31005, desc = "=ds=" ..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Gronnstalker's Leggings
-			[8] = { itemID = 34570, desc = "=ds=" ..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Gronnstalker's Boots
+			[1] = { itemID = 31003, desc = {BabbleZone["Hyjal Summit"], BabbleBoss["Archimonde"]} }; --Gronnstalker's Helmet
+			[2] = { itemID = 31006, desc = {BabbleZone["Black Temple"], BabbleBoss["Mother Shahraz"]} }; --Gronnstalker's Spaulders
+			[3] = { itemID = 31004, desc = {BabbleZone["Black Temple"], BabbleBoss["Illidan Stormrage"]} }; --Gronnstalker's Chestguard
+			[4] = { itemID = 34443, desc = {BabbleZone["Sunwell Plateau"], BabbleBoss["Kalecgos"]} }; --Gronnstalker's Bracers
+			[5] = { itemID = 31001, desc = {BabbleZone["Hyjal Summit"], BabbleBoss["Kalecgos"]} }; --Gronnstalker's Gloves
+			[6] = { itemID = 34549, desc = {BabbleZone["Sunwell Plateau"], BabbleBoss["Brutallus"]} }; --Gronnstalker's Belt
+			[7] = { itemID = 31005, desc = {BabbleZone["Hyjal Summit"], BabbleBoss["Azgalor"]} }; --Gronnstalker's Leggings
+			[8] = { itemID = 34570, desc = {BabbleZone["Sunwell Plateau"], BabbleBoss["Felmyst"]} }; --Gronnstalker's Boots
 		};
 		{
 			Name = LOCALIZED_CLASS_NAMES_MALE["MAGE"];
-			[1] = { itemID = 31056, desc = "=ds=" ..BabbleBoss["Archimonde"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Cowl of the Tempest
-			[2] = { itemID = 31059, desc = "=ds=" ..BabbleBoss["Mother Shahraz"].." ("..BabbleZone["Black Temple"]..")" }; --Mantle of the Tempest
-			[3] = { itemID = 31057, desc = "=ds=" ..BabbleBoss["Illidan Stormrage"].." ("..BabbleZone["Black Temple"]..")" }; --Robes of the Tempest
-			[4] = { itemID = 34447, desc = "=ds=" ..BabbleBoss["Kalecgos"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Bracers of the Tempest
-			[5] = { itemID = 31055, desc = "=ds=" ..BabbleBoss["Kalecgos"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Gloves of the Tempest
-			[6] = { itemID = 34557, desc = "=ds=" ..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Belt of the Tempest
-			[7] = { itemID = 31058, desc = "=ds=" ..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Leggings of the Tempest
-			[8] = { itemID = 34574, desc = "=ds=" ..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Boots of the Tempest
+			[1] = { itemID = 31056, desc = {BabbleZone["Hyjal Summit"], BabbleBoss["Archimonde"]} }; --Cowl of the Tempest
+			[2] = { itemID = 31059, desc = {BabbleZone["Black Temple"], BabbleBoss["Mother Shahraz"]} }; --Mantle of the Tempest
+			[3] = { itemID = 31057, desc = {BabbleZone["Black Temple"], BabbleBoss["Illidan Stormrage"]} }; --Robes of the Tempest
+			[4] = { itemID = 34447, desc = {BabbleZone["Sunwell Plateau"], BabbleBoss["Kalecgos"]} }; --Bracers of the Tempest
+			[5] = { itemID = 31055, desc = {BabbleZone["Hyjal Summit"], BabbleBoss["Kalecgos"]} }; --Gloves of the Tempest
+			[6] = { itemID = 34557, desc = {BabbleZone["Sunwell Plateau"], BabbleBoss["Brutallus"]} }; --Belt of the Tempest
+			[7] = { itemID = 31058, desc = {BabbleZone["Hyjal Summit"], BabbleBoss["Azgalor"]} }; --Leggings of the Tempest
+			[8] = { itemID = 34574, desc = {BabbleZone["Sunwell Plateau"], BabbleBoss["Felmyst"]} }; --Boots of the Tempest
 		};
 		{
-			Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"].." - "..AL["Protection"];
-			[1] = { itemID = 30987, desc = "=ds=" ..BabbleBoss["Archimonde"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Lightbringer Faceguard
-			[2] = { itemID = 30998, desc = "=ds=" ..BabbleBoss["Mother Shahraz"].." ("..BabbleZone["Black Temple"]..")" }; --Lightbringer Shoulderguards
-			[3] = { itemID = 30991, desc = "=ds=" ..BabbleBoss["Illidan Stormrage"].." ("..BabbleZone["Black Temple"]..")" }; --Lightbringer Chestguard
-			[4] = { itemID = 34433, desc = "=ds=" ..BabbleBoss["Kalecgos"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Lightbringer Wristguards
-			[5] = { itemID = 30985, desc = "=ds=" ..BabbleBoss["Kalecgos"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Lightbringer Handguards
-			[6] = { itemID = 34488, desc = "=ds=" ..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Lightbringer Waistguard
-			[7] = { itemID = 30995, desc = "=ds=" ..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Lightbringer Legguards
-			[8] = { itemID = 34560, desc = "=ds=" ..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Lightbringer Greaves
+			Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"]..WHITE.." - "..AL["Protection"];
+			[1] = { itemID = 30987, desc = {BabbleZone["Hyjal Summit"], BabbleBoss["Archimonde"]} }; --Lightbringer Faceguard
+			[2] = { itemID = 30998, desc = {BabbleZone["Black Temple"], BabbleBoss["Mother Shahraz"]} }; --Lightbringer Shoulderguards
+			[3] = { itemID = 30991, desc = {BabbleZone["Black Temple"], BabbleBoss["Illidan Stormrage"]} }; --Lightbringer Chestguard
+			[4] = { itemID = 34433, desc = {BabbleZone["Sunwell Plateau"], BabbleBoss["Kalecgos"]} }; --Lightbringer Wristguards
+			[5] = { itemID = 30985, desc = {BabbleZone["Hyjal Summit"], BabbleBoss["Kalecgos"]} }; --Lightbringer Handguards
+			[6] = { itemID = 34488, desc = {BabbleZone["Sunwell Plateau"], BabbleBoss["Brutallus"]} }; --Lightbringer Waistguard
+			[7] = { itemID = 30995, desc = {BabbleZone["Hyjal Summit"], BabbleBoss["Azgalor"]} }; --Lightbringer Legguards
+			[8] = { itemID = 34560, desc = {BabbleZone["Sunwell Plateau"], BabbleBoss["Felmyst"]} }; --Lightbringer Greaves
 		};
 		{
-			Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"].." - "..AL["Retribution"];
-			[1] = { itemID = 30989, desc = "=ds=" ..BabbleBoss["Archimonde"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Lightbringer War-Helm
-			[2] = { itemID = 30997, desc = "=ds=" ..BabbleBoss["Mother Shahraz"].." ("..BabbleZone["Black Temple"]..")" }; --Lightbringer Shoulderbraces
-			[3] = { itemID = 30990, desc = "=ds=" ..BabbleBoss["Illidan Stormrage"].." ("..BabbleZone["Black Temple"]..")" }; --Lightbringer Breastplate
-			[4] = { itemID = 34431, desc = "=ds=" ..BabbleBoss["Kalecgos"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Lightbringer Bands
-			[5] = { itemID = 30982, desc = "=ds=" ..BabbleBoss["Kalecgos"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Lightbringer Gauntlets
-			[6] = { itemID = 34485, desc = "=ds=" ..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Lightbringer Girdle
-			[7] = { itemID = 30993, desc = "=ds=" ..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Lightbringer Greaves
-			[8] = { itemID = 34561, desc = "=ds=" ..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Lightbringer Boots
+			Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"]..WHITE.." - "..AL["Retribution"];
+			[1] = { itemID = 30989, desc = {BabbleZone["Hyjal Summit"], BabbleBoss["Archimonde"]} }; --Lightbringer War-Helm
+			[2] = { itemID = 30997, desc = {BabbleZone["Black Temple"], BabbleBoss["Mother Shahraz"]} }; --Lightbringer Shoulderbraces
+			[3] = { itemID = 30990, desc = {BabbleZone["Black Temple"], BabbleBoss["Illidan Stormrage"]} }; --Lightbringer Breastplate
+			[4] = { itemID = 34431, desc = {BabbleZone["Sunwell Plateau"], BabbleBoss["Kalecgos"]} }; --Lightbringer Bands
+			[5] = { itemID = 30982, desc = {BabbleZone["Hyjal Summit"], BabbleBoss["Kalecgos"]} }; --Lightbringer Gauntlets
+			[6] = { itemID = 34485, desc = {BabbleZone["Sunwell Plateau"], BabbleBoss["Brutallus"]} }; --Lightbringer Girdle
+			[7] = { itemID = 30993, desc = {BabbleZone["Hyjal Summit"], BabbleBoss["Azgalor"]} }; --Lightbringer Greaves
+			[8] = { itemID = 34561, desc = {BabbleZone["Sunwell Plateau"], BabbleBoss["Felmyst"]} }; --Lightbringer Boots
 		};
 		{
-			Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"].." - "..AL["Holy"];
-			[1] = { itemID = 30988, desc = "=ds=" ..BabbleBoss["Archimonde"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Lightbringer Greathelm
-			[2] = { itemID = 30996, desc = "=ds=" ..BabbleBoss["Mother Shahraz"].." ("..BabbleZone["Black Temple"]..")" }; --Lightbringer Pauldrons
-			[3] = { itemID = 30992, desc = "=ds=" ..BabbleBoss["Illidan Stormrage"].." ("..BabbleZone["Black Temple"]..")" }; --Lightbringer Chestpiece
-			[4] = { itemID = 34432, desc = "=ds=" ..BabbleBoss["Kalecgos"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Lightbringer Bracers
-			[5] = { itemID = 30983, desc = "=ds=" ..BabbleBoss["Kalecgos"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Lightbringer Gloves
-			[6] = { itemID = 34487, desc = "=ds=" ..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Lightbringer Belt
-			[7] = { itemID = 30994, desc = "=ds=" ..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Lightbringer Leggings
-			[8] = { itemID = 34559, desc = "=ds=" ..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Lightbringer Treads
+			Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"]..WHITE.." - "..AL["Holy"];
+			[1] = { itemID = 30988, desc = {BabbleZone["Hyjal Summit"], BabbleBoss["Archimonde"]} }; --Lightbringer Greathelm
+			[2] = { itemID = 30996, desc = {BabbleZone["Black Temple"], BabbleBoss["Mother Shahraz"]} }; --Lightbringer Pauldrons
+			[3] = { itemID = 30992, desc = {BabbleZone["Black Temple"], BabbleBoss["Illidan Stormrage"]} }; --Lightbringer Chestpiece
+			[4] = { itemID = 34432, desc = {BabbleZone["Sunwell Plateau"], BabbleBoss["Kalecgos"]} }; --Lightbringer Bracers
+			[5] = { itemID = 30983, desc = {BabbleZone["Hyjal Summit"], BabbleBoss["Kalecgos"]} }; --Lightbringer Gloves
+			[6] = { itemID = 34487, desc = {BabbleZone["Sunwell Plateau"], BabbleBoss["Brutallus"]} }; --Lightbringer Belt
+			[7] = { itemID = 30994, desc = {BabbleZone["Hyjal Summit"], BabbleBoss["Azgalor"]} }; --Lightbringer Leggings
+			[8] = { itemID = 34559, desc = {BabbleZone["Sunwell Plateau"], BabbleBoss["Felmyst"]} }; --Lightbringer Treads
 		};
 		{
-			Name = LOCALIZED_CLASS_NAMES_MALE["PRIEST"].." - "..AL["Holy"];
-			[1] = { itemID = 31063, desc = "=ds=" ..BabbleBoss["Archimonde"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Cowl of Absolution
-			[2] = { itemID = 31069, desc = "=ds=" ..BabbleBoss["Mother Shahraz"].." ("..BabbleZone["Black Temple"]..")" }; --Mantle of Absolution
-			[3] = { itemID = 31066, desc = "=ds=" ..BabbleBoss["Illidan Stormrage"].." ("..BabbleZone["Black Temple"]..")" }; --Vestments of Absolution
-			[4] = { itemID = 34435, desc = "=ds=" ..BabbleBoss["Kalecgos"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Cuffs of Absolution
-			[5] = { itemID = 31060, desc = "=ds=" ..BabbleBoss["Kalecgos"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Gloves of Absolution
-			[6] = { itemID = 34527, desc = "=ds=" ..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Belt of Absolution
-			[7] = { itemID = 31068, desc = "=ds=" ..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Breeches of Absolution
-			[8] = { itemID = 34562, desc = "=ds=" ..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Boots of Absolution
+			Name = LOCALIZED_CLASS_NAMES_MALE["PRIEST"]..WHITE.." - "..AL["Holy"];
+			[1] = { itemID = 31063, desc = {BabbleZone["Hyjal Summit"], BabbleBoss["Archimonde"]} }; --Cowl of Absolution
+			[2] = { itemID = 31069, desc = {BabbleZone["Black Temple"], BabbleBoss["Mother Shahraz"]} }; --Mantle of Absolution
+			[3] = { itemID = 31066, desc = {BabbleZone["Black Temple"], BabbleBoss["Illidan Stormrage"]} }; --Vestments of Absolution
+			[4] = { itemID = 34435, desc = {BabbleZone["Sunwell Plateau"], BabbleBoss["Kalecgos"]} }; --Cuffs of Absolution
+			[5] = { itemID = 31060, desc = {BabbleZone["Hyjal Summit"], BabbleBoss["Kalecgos"]} }; --Gloves of Absolution
+			[6] = { itemID = 34527, desc = {BabbleZone["Sunwell Plateau"], BabbleBoss["Brutallus"]} }; --Belt of Absolution
+			[7] = { itemID = 31068, desc = {BabbleZone["Hyjal Summit"], BabbleBoss["Azgalor"]} }; --Breeches of Absolution
+			[8] = { itemID = 34562, desc = {BabbleZone["Sunwell Plateau"], BabbleBoss["Felmyst"]} }; --Boots of Absolution
 		};
 		{
-			Name = LOCALIZED_CLASS_NAMES_MALE["PRIEST"].." - "..AL["Shadow"];
-			[1] = { itemID = 31064, desc = "=ds=" ..BabbleBoss["Archimonde"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Hood of Absolution
-			[2] = { itemID = 31070, desc = "=ds=" ..BabbleBoss["Mother Shahraz"].." ("..BabbleZone["Black Temple"]..")" }; --Shoulderpads of Absolution
-			[3] = { itemID = 31065, desc = "=ds=" ..BabbleBoss["Illidan Stormrage"].." ("..BabbleZone["Black Temple"]..")" }; --Shroud of Absolution
-			[4] = { itemID = 34434, desc = "=ds=" ..BabbleBoss["Kalecgos"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Bracers of Absolution
-			[5] = { itemID = 31061, desc = "=ds=" ..BabbleBoss["Kalecgos"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Handguards of Absolution
-			[6] = { itemID = 34528, desc = "=ds=" ..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Cord of Absolution
-			[7] = { itemID = 31067, desc = "=ds=" ..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Leggings of Absolution
-			[8] = { itemID = 34563, desc = "=ds=" ..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Treads of Absolution
+			Name = LOCALIZED_CLASS_NAMES_MALE["PRIEST"]..WHITE.." - "..AL["Shadow"];
+			[1] = { itemID = 31064, desc = {BabbleZone["Hyjal Summit"], BabbleBoss["Archimonde"]} }; --Hood of Absolution
+			[2] = { itemID = 31070, desc = {BabbleZone["Black Temple"], BabbleBoss["Mother Shahraz"]} }; --Shoulderpads of Absolution
+			[3] = { itemID = 31065, desc = {BabbleZone["Black Temple"], BabbleBoss["Illidan Stormrage"]} }; --Shroud of Absolution
+			[4] = { itemID = 34434, desc = {BabbleZone["Sunwell Plateau"], BabbleBoss["Kalecgos"]} }; --Bracers of Absolution
+			[5] = { itemID = 31061, desc = {BabbleZone["Hyjal Summit"], BabbleBoss["Kalecgos"]} }; --Handguards of Absolution
+			[6] = { itemID = 34528, desc = {BabbleZone["Sunwell Plateau"], BabbleBoss["Brutallus"]} }; --Cord of Absolution
+			[7] = { itemID = 31067, desc = {BabbleZone["Hyjal Summit"], BabbleBoss["Azgalor"]} }; --Leggings of Absolution
+			[8] = { itemID = 34563, desc = {BabbleZone["Sunwell Plateau"], BabbleBoss["Felmyst"]} }; --Treads of Absolution
 		};
 		{
 			Name = LOCALIZED_CLASS_NAMES_MALE["ROGUE"];
-			[1] = { itemID = 31027, desc = "=ds=" ..BabbleBoss["Archimonde"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Slayer's Helm
-			[2] = { itemID = 31030, desc = "=ds=" ..BabbleBoss["Mother Shahraz"].." ("..BabbleZone["Black Temple"]..")" }; --Slayer's Shoulderpads
-			[3] = { itemID = 31028, desc = "=ds=" ..BabbleBoss["Illidan Stormrage"].." ("..BabbleZone["Black Temple"]..")" }; --Slayer's Chestguard
-			[4] = { itemID = 34448, desc = "=ds=" ..BabbleBoss["Kalecgos"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Slayer's Bracers
-			[5] = { itemID = 31026, desc = "=ds=" ..BabbleBoss["Kalecgos"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Slayer's Handguards
-			[6] = { itemID = 34558, desc = "=ds=" ..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Slayer's Belt
-			[7] = { itemID = 31029, desc = "=ds=" ..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Slayer's Legguards
-			[8] = { itemID = 34575, desc = "=ds=" ..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Slayer's Boots
+			[1] = { itemID = 31027, desc = {BabbleZone["Hyjal Summit"], BabbleBoss["Archimonde"]} }; --Slayer's Helm
+			[2] = { itemID = 31030, desc = {BabbleZone["Black Temple"], BabbleBoss["Mother Shahraz"]} }; --Slayer's Shoulderpads
+			[3] = { itemID = 31028, desc = {BabbleZone["Black Temple"], BabbleBoss["Illidan Stormrage"]} }; --Slayer's Chestguard
+			[4] = { itemID = 34448, desc = {BabbleZone["Sunwell Plateau"], BabbleBoss["Kalecgos"]} }; --Slayer's Bracers
+			[5] = { itemID = 31026, desc = {BabbleZone["Hyjal Summit"], BabbleBoss["Kalecgos"]} }; --Slayer's Handguards
+			[6] = { itemID = 34558, desc = {BabbleZone["Sunwell Plateau"], BabbleBoss["Brutallus"]} }; --Slayer's Belt
+			[7] = { itemID = 31029, desc = {BabbleZone["Hyjal Summit"], BabbleBoss["Azgalor"]} }; --Slayer's Legguards
+			[8] = { itemID = 34575, desc = {BabbleZone["Sunwell Plateau"], BabbleBoss["Felmyst"]} }; --Slayer's Boots
 		};
 		{
-			Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"].." - "..AL["Enhancement"];
-			[1] = { itemID = 31015, desc = "=ds=" ..BabbleBoss["Archimonde"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Skyshatter Cover
-			[2] = { itemID = 31024, desc = "=ds=" ..BabbleBoss["Mother Shahraz"].." ("..BabbleZone["Black Temple"]..")" }; --Skyshatter Pauldrons
-			[3] = { itemID = 31018, desc = "=ds=" ..BabbleBoss["Illidan Stormrage"].." ("..BabbleZone["Black Temple"]..")" }; --Skyshatter Tunic
-			[4] = { itemID = 34439, desc = "=ds=" ..BabbleBoss["Kalecgos"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Skyshatter Wristguards
-			[5] = { itemID = 31011, desc = "=ds=" ..BabbleBoss["Kalecgos"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Skyshatter Grips
-			[6] = { itemID = 34545, desc = "=ds=" ..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Skyshatter Girdle
-			[7] = { itemID = 31021, desc = "=ds=" ..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Skyshatter Pants
-			[8] = { itemID = 34567, desc = "=ds=" ..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Skyshatter Greaves
+			Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"]..WHITE.." - "..AL["Enhancement"];
+			[1] = { itemID = 31015, desc = {BabbleZone["Hyjal Summit"], BabbleBoss["Archimonde"]} }; --Skyshatter Cover
+			[2] = { itemID = 31024, desc = {BabbleZone["Black Temple"], BabbleBoss["Mother Shahraz"]} }; --Skyshatter Pauldrons
+			[3] = { itemID = 31018, desc = {BabbleZone["Black Temple"], BabbleBoss["Illidan Stormrage"]} }; --Skyshatter Tunic
+			[4] = { itemID = 34439, desc = {BabbleZone["Sunwell Plateau"], BabbleBoss["Kalecgos"]} }; --Skyshatter Wristguards
+			[5] = { itemID = 31011, desc = {BabbleZone["Hyjal Summit"], BabbleBoss["Kalecgos"]} }; --Skyshatter Grips
+			[6] = { itemID = 34545, desc = {BabbleZone["Sunwell Plateau"], BabbleBoss["Brutallus"]} }; --Skyshatter Girdle
+			[7] = { itemID = 31021, desc = {BabbleZone["Hyjal Summit"], BabbleBoss["Azgalor"]} }; --Skyshatter Pants
+			[8] = { itemID = 34567, desc = {BabbleZone["Sunwell Plateau"], BabbleBoss["Felmyst"]} }; --Skyshatter Greaves
 		};
 		{
-			Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"].." - "..AL["Restoration"];
-			[1] = { itemID = 31012, desc = "=ds=" ..BabbleBoss["Archimonde"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Skyshatter Helmet
-			[2] = { itemID = 31022, desc = "=ds=" ..BabbleBoss["Mother Shahraz"].." ("..BabbleZone["Black Temple"]..")" }; --Skyshatter Shoulderpads
-			[3] = { itemID = 31016, desc = "=ds=" ..BabbleBoss["Illidan Stormrage"].." ("..BabbleZone["Black Temple"]..")" }; --Skyshatter Chestguard
-			[4] = { itemID = 34438, desc = "=ds=" ..BabbleBoss["Kalecgos"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Skyshatter Bracers
-			[5] = { itemID = 31007, desc = "=ds=" ..BabbleBoss["Kalecgos"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Skyshatter Gloves
-			[6] = { itemID = 34543, desc = "=ds=" ..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Skyshatter Belt
-			[7] = { itemID = 31019, desc = "=ds=" ..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Skyshatter Leggings
-			[8] = { itemID = 34565, desc = "=ds=" ..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Skyshatter Boots
+			Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"]..WHITE.." - "..AL["Restoration"];
+			[1] = { itemID = 31012, desc = {BabbleZone["Hyjal Summit"], BabbleBoss["Archimonde"]} }; --Skyshatter Helmet
+			[2] = { itemID = 31022, desc = {BabbleZone["Black Temple"], BabbleBoss["Mother Shahraz"]} }; --Skyshatter Shoulderpads
+			[3] = { itemID = 31016, desc = {BabbleZone["Black Temple"], BabbleBoss["Illidan Stormrage"]} }; --Skyshatter Chestguard
+			[4] = { itemID = 34438, desc = {BabbleZone["Sunwell Plateau"], BabbleBoss["Kalecgos"]} }; --Skyshatter Bracers
+			[5] = { itemID = 31007, desc = {BabbleZone["Hyjal Summit"], BabbleBoss["Kalecgos"]} }; --Skyshatter Gloves
+			[6] = { itemID = 34543, desc = {BabbleZone["Sunwell Plateau"], BabbleBoss["Brutallus"]} }; --Skyshatter Belt
+			[7] = { itemID = 31019, desc = {BabbleZone["Hyjal Summit"], BabbleBoss["Azgalor"]} }; --Skyshatter Leggings
+			[8] = { itemID = 34565, desc = {BabbleZone["Sunwell Plateau"], BabbleBoss["Felmyst"]} }; --Skyshatter Boots
 		};
 		{
-			Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"].." - "..AL["Elemental"];
-			[1] = { itemID = 31014, desc = "=ds=" ..BabbleBoss["Archimonde"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Skyshatter Headguard
-			[2] = { itemID = 31023, desc = "=ds=" ..BabbleBoss["Mother Shahraz"].." ("..BabbleZone["Black Temple"]..")" }; --Skyshatter Mantle
-			[3] = { itemID = 31017, desc = "=ds=" ..BabbleBoss["Illidan Stormrage"].." ("..BabbleZone["Black Temple"]..")" }; --Skyshatter Breastplate
-			[4] = { itemID = 34437, desc = "=ds=" ..BabbleBoss["Kalecgos"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Skyshatter Bands
-			[5] = { itemID = 31008, desc = "=ds=" ..BabbleBoss["Kalecgos"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Skyshatter Gauntlets
-			[6] = { itemID = 34542, desc = "=ds=" ..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Skyshatter Cord
-			[7] = { itemID = 31020, desc = "=ds=" ..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Skyshatter Legguards
-			[8] = { itemID = 34566, desc = "=ds=" ..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Skyshatter Treads
+			Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"]..WHITE.." - "..AL["Elemental"];
+			[1] = { itemID = 31014, desc = {BabbleZone["Hyjal Summit"], BabbleBoss["Archimonde"]} }; --Skyshatter Headguard
+			[2] = { itemID = 31023, desc = {BabbleZone["Black Temple"], BabbleBoss["Mother Shahraz"]} }; --Skyshatter Mantle
+			[3] = { itemID = 31017, desc = {BabbleZone["Black Temple"], BabbleBoss["Illidan Stormrage"]} }; --Skyshatter Breastplate
+			[4] = { itemID = 34437, desc = {BabbleZone["Sunwell Plateau"], BabbleBoss["Kalecgos"]} }; --Skyshatter Bands
+			[5] = { itemID = 31008, desc = {BabbleZone["Hyjal Summit"], BabbleBoss["Kalecgos"]} }; --Skyshatter Gauntlets
+			[6] = { itemID = 34542, desc = {BabbleZone["Sunwell Plateau"], BabbleBoss["Brutallus"]} }; --Skyshatter Cord
+			[7] = { itemID = 31020, desc = {BabbleZone["Hyjal Summit"], BabbleBoss["Azgalor"]} }; --Skyshatter Legguards
+			[8] = { itemID = 34566, desc = {BabbleZone["Sunwell Plateau"], BabbleBoss["Felmyst"]} }; --Skyshatter Treads
 		};
 		{
 			Name = LOCALIZED_CLASS_NAMES_MALE["WARLOCK"];
-			[1] = { itemID = 31051, desc = "=ds=" ..BabbleBoss["Archimonde"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Hood of the Malefic
-			[2] = { itemID = 31054, desc = "=ds=" ..BabbleBoss["Mother Shahraz"].." ("..BabbleZone["Black Temple"]..")" }; --Mantle of the Malefic
-			[3] = { itemID = 31052, desc = "=ds=" ..BabbleBoss["Illidan Stormrage"].." ("..BabbleZone["Black Temple"]..")" }; --Robe of the Malefic
-			[4] = { itemID = 34436, desc = "=ds=" ..BabbleBoss["Kalecgos"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Bracers of the Malefic
-			[5] = { itemID = 31050, desc = "=ds=" ..BabbleBoss["Kalecgos"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Gloves of the Malefic
-			[6] = { itemID = 34541, desc = "=ds=" ..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Belt of the Malefic
-			[7] = { itemID = 31053, desc = "=ds=" ..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Leggings of the Malefic
-			[8] = { itemID = 34564, desc = "=ds=" ..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Boots of the Malefic
+			[1] = { itemID = 31051, desc = {BabbleZone["Hyjal Summit"], BabbleBoss["Archimonde"]} }; --Hood of the Malefic
+			[2] = { itemID = 31054, desc = {BabbleZone["Black Temple"], BabbleBoss["Mother Shahraz"]} }; --Mantle of the Malefic
+			[3] = { itemID = 31052, desc = {BabbleZone["Black Temple"], BabbleBoss["Illidan Stormrage"]} }; --Robe of the Malefic
+			[4] = { itemID = 34436, desc = {BabbleZone["Sunwell Plateau"], BabbleBoss["Kalecgos"]} }; --Bracers of the Malefic
+			[5] = { itemID = 31050, desc = {BabbleZone["Hyjal Summit"], BabbleBoss["Kalecgos"]} }; --Gloves of the Malefic
+			[6] = { itemID = 34541, desc = {BabbleZone["Sunwell Plateau"], BabbleBoss["Brutallus"]} }; --Belt of the Malefic
+			[7] = { itemID = 31053, desc = {BabbleZone["Hyjal Summit"], BabbleBoss["Azgalor"]} }; --Leggings of the Malefic
+			[8] = { itemID = 34564, desc = {BabbleZone["Sunwell Plateau"], BabbleBoss["Felmyst"]} }; --Boots of the Malefic
 		};
 		{
-			Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"].." - "..AL["Protection"].. " - Block";
-			[1] = { itemID = 30974, desc = "=ds=" ..BabbleBoss["Archimonde"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Onslaught Greathelm
-			[2] = { itemID = 30980, desc = "=ds=" ..BabbleBoss["Mother Shahraz"].." ("..BabbleZone["Black Temple"]..")" }; --Onslaught Shoulderguards
-			[3] = { itemID = 30976, desc = "=ds=" ..BabbleBoss["Illidan Stormrage"].." ("..BabbleZone["Black Temple"]..")" }; --Onslaught Chestguard
-			[4] = { itemID = 34442, desc = "=ds=" ..BabbleBoss["Kalecgos"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Onslaught Wristguards
-			[5] = { itemID = 30970, desc = "=ds=" ..BabbleBoss["Kalecgos"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Onslaught Handguards
-			[6] = { itemID = 34547, desc = "=ds=" ..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Onslaught Waistguard
-			[7] = { itemID = 30978, desc = "=ds=" ..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Onslaught Legguards
-			[8] = { itemID = 34568, desc = "=ds=" ..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Onslaught Boots
+			Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"]..WHITE.." - "..AL["Protection"].. " - Block";
+			[1] = { itemID = 30974, desc = {BabbleZone["Hyjal Summit"], BabbleBoss["Archimonde"]} }; --Onslaught Greathelm
+			[2] = { itemID = 30980, desc = {BabbleZone["Black Temple"], BabbleBoss["Mother Shahraz"]} }; --Onslaught Shoulderguards
+			[3] = { itemID = 30976, desc = {BabbleZone["Black Temple"], BabbleBoss["Illidan Stormrage"]} }; --Onslaught Chestguard
+			[4] = { itemID = 34442, desc = {BabbleZone["Sunwell Plateau"], BabbleBoss["Kalecgos"]} }; --Onslaught Wristguards
+			[5] = { itemID = 30970, desc = {BabbleZone["Hyjal Summit"], BabbleBoss["Kalecgos"]} }; --Onslaught Handguards
+			[6] = { itemID = 34547, desc = {BabbleZone["Sunwell Plateau"], BabbleBoss["Brutallus"]} }; --Onslaught Waistguard
+			[7] = { itemID = 30978, desc = {BabbleZone["Hyjal Summit"], BabbleBoss["Azgalor"]} }; --Onslaught Legguards
+			[8] = { itemID = 34568, desc = {BabbleZone["Sunwell Plateau"], BabbleBoss["Felmyst"]} }; --Onslaught Boots
 		};
 		{
-			Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"].." - "..AL["Protection"].. " - Parry";
-			[1] = { itemID = 33642, desc = "=ds=" ..BabbleBoss["Archimonde"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Onslaught Greathelm
-			[2] = { itemID = 33645, desc = "=ds=" ..BabbleBoss["Mother Shahraz"].." ("..BabbleZone["Black Temple"]..")" }; --Onslaught Shoulderguards
-			[3] = { itemID = 33643, desc = "=ds=" ..BabbleBoss["Illidan Stormrage"].." ("..BabbleZone["Black Temple"]..")" }; --Onslaught Chestguard
-			[4] = { itemID = 33646, desc = "=ds=" ..BabbleBoss["Kalecgos"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Onslaught Wristguards
-			[5] = { itemID = 33641, desc = "=ds=" ..BabbleBoss["Kalecgos"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Onslaught Handguards
-			[6] = { itemID = 33647, desc = "=ds=" ..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Onslaught Waistguard
-			[7] = { itemID = 33644, desc = "=ds=" ..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Onslaught Legguards
-			[8] = { itemID = 33648, desc = "=ds=" ..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Onslaught Boots
+			Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"]..WHITE.." - "..AL["Protection"].. " - Parry";
+			[1] = { itemID = 33642, desc = {BabbleZone["Hyjal Summit"], BabbleBoss["Archimonde"]} }; --Onslaught Greathelm
+			[2] = { itemID = 33645, desc = {BabbleZone["Black Temple"], BabbleBoss["Mother Shahraz"]} }; --Onslaught Shoulderguards
+			[3] = { itemID = 33643, desc = {BabbleZone["Black Temple"], BabbleBoss["Illidan Stormrage"]} }; --Onslaught Chestguard
+			[4] = { itemID = 33646, desc = {BabbleZone["Sunwell Plateau"], BabbleBoss["Kalecgos"]} }; --Onslaught Wristguards
+			[5] = { itemID = 33641, desc = {BabbleZone["Hyjal Summit"], BabbleBoss["Kalecgos"]} }; --Onslaught Handguards
+			[6] = { itemID = 33647, desc = {BabbleZone["Sunwell Plateau"], BabbleBoss["Brutallus"]} }; --Onslaught Waistguard
+			[7] = { itemID = 33644, desc = {BabbleZone["Hyjal Summit"], BabbleBoss["Azgalor"]} }; --Onslaught Legguards
+			[8] = { itemID = 33648, desc = {BabbleZone["Sunwell Plateau"], BabbleBoss["Felmyst"]} }; --Onslaught Boots
 		};
 		{
-			Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"].." - "..AL["Fury"];
-			[1] = { itemID = 30972, desc = "=ds=" ..BabbleBoss["Archimonde"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Onslaught Battle-Helm
-			[2] = { itemID = 30979, desc = "=ds=" ..BabbleBoss["Mother Shahraz"].." ("..BabbleZone["Black Temple"]..")" }; --Onslaught Shoulderblades
-			[3] = { itemID = 30975, desc = "=ds=" ..BabbleBoss["Illidan Stormrage"].." ("..BabbleZone["Black Temple"]..")" }; --Onslaught Breastplate
-			[4] = { itemID = 34441, desc = "=ds=" ..BabbleBoss["Kalecgos"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Onslaught Bracers
-			[5] = { itemID = 30969, desc = "=ds=" ..BabbleBoss["Kalecgos"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Onslaught Gauntlets
-			[6] = { itemID = 34546, desc = "=ds=" ..BabbleBoss["Brutallus"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Onslaught Belt
-			[7] = { itemID = 30977, desc = "=ds=" ..BabbleBoss["Azgalor"].." ("..BabbleZone["Hyjal Summit"]..")" }; --Onslaught Greaves
-			[8] = { itemID = 34569, desc = "=ds=" ..BabbleBoss["Felmyst"].." ("..BabbleZone["Sunwell Plateau"]..")" }; --Onslaught Treads
+			Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"]..WHITE.." - "..AL["Fury"];
+			[1] = { itemID = 30972, desc = {BabbleZone["Hyjal Summit"], BabbleBoss["Archimonde"]} }; --Onslaught Battle-Helm
+			[2] = { itemID = 30979, desc = {BabbleZone["Black Temple"], BabbleBoss["Mother Shahraz"]} }; --Onslaught Shoulderblades
+			[3] = { itemID = 30975, desc = {BabbleZone["Black Temple"], BabbleBoss["Illidan Stormrage"]} }; --Onslaught Breastplate
+			[4] = { itemID = 34441, desc = {BabbleZone["Sunwell Plateau"], BabbleBoss["Kalecgos"]} }; --Onslaught Bracers
+			[5] = { itemID = 30969, desc = {BabbleZone["Hyjal Summit"], BabbleBoss["Kalecgos"]} }; --Onslaught Gauntlets
+			[6] = { itemID = 34546, desc = {BabbleZone["Sunwell Plateau"], BabbleBoss["Brutallus"]} }; --Onslaught Belt
+			[7] = { itemID = 30977, desc = {BabbleZone["Hyjal Summit"], BabbleBoss["Azgalor"]} }; --Onslaught Greaves
+			[8] = { itemID = 34569, desc = {BabbleZone["Sunwell Plateau"], BabbleBoss["Felmyst"]} }; --Onslaught Treads
 		};
 	};
 

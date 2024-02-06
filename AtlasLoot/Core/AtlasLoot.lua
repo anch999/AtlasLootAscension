@@ -831,7 +831,12 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 		if self.FixedItemText[dataSource[dataID][tablenum][i].itemID] then
 			extra = self.FixedItemText[dataSource[dataID][tablenum][i].itemID]
 		elseif dataSource[dataID][tablenum][i].desc then
-			extra = dataSource[dataID][tablenum][i].desc
+			if type(dataSource[dataID][tablenum][i].desc) == "table" then
+				local location, boss = dataSource[dataID][tablenum][i].desc[1], dataSource[dataID][tablenum][i].desc[2]
+				extra = YELLOW..location..WHITE.." - "..boss	
+			else
+				extra = dataSource[dataID][tablenum][i].desc
+			end
 		elseif dataSource[dataID][tablenum][i].dropLoc and (self.dataSourceBackup == "AtlasLoot_OnDemand" or (self.db.profile.showdropLocationOnSearch and dataID == "SearchResult")) then
 			local location, boss = dataSource[dataID][tablenum][i].dropLoc[1], dataSource[dataID][tablenum][i].dropLoc[2]
 			extra = YELLOW..location..WHITE.." - "..boss
