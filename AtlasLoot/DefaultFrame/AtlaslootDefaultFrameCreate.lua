@@ -22,6 +22,7 @@ local INDENT = "    "
     mainframe.TitleText:SetText(AtlasLoot.Version)
     mainframe:RegisterForDrag("LeftButton")
     mainframe:EnableKeyboard(true)
+    mainframe:SetToplevel(true)
     mainframe:Hide()
     mainframe:SetScript("OnShow", function()
         AtlasLoot:OnShow()
