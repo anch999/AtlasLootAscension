@@ -1577,6 +1577,7 @@ AtlasLoot_Data["HCRamparts"] = {
 	Map = "HCHellfireRamparts";
 	{
 		Name = BabbleBoss["Watchkeeper Gargolmar"];
+		NpcID = 17306;
 		[1] = { icon = "INV_Box_01", name = "=q6=#j1#" };
 		[2] = { itemID = 24024, droprate = "4.69%" }; --Pauldrons of Arcane Rage
 		[3] = { itemID = 24023, droprate = "3.29%" }; --Bracers of Finesse
@@ -1594,9 +1595,11 @@ AtlasLoot_Data["HCRamparts"] = {
 		[24] = { itemID = 27450, droprate = "4.19%" }; --Wild Stalker Boots
 		[25] = { itemID = 27447, droprate = "3.84%" }; --Bracers of Just Rewards
 		[26] = { itemID = 27449, droprate = "3.15%" }; --Blood Knight Defender
+		[28] = { itemID = 60946, droprate = "1%" }; --Pet Sigil
 	};
 	{
 		Name = BabbleBoss["Omor the Unscarred"];
+		NpcID = 17308;
 		[1] = { icon = "INV_Box_01", name = "#j27#" };
 		[2] = { itemID = 27465, droprate = "1.74%" }; --Mana-Etched Gloves
 		[3] = { itemID = 27466, droprate = "2.10%" }; --Headdress of Alacrity
@@ -1610,6 +1613,7 @@ AtlasLoot_Data["HCRamparts"] = {
 		[11] = { itemID = 27477, droprate = "0.32%" }; --Faol's Signet of Cleansing
 		[12] = { itemID = 27463, droprate = ".90%" }; --Terror Flame Dagger
 		[13] = { itemID = 27476, droprate = ".25%" }; --Truncheon of Five Hells
+		[15] = { itemID = 60947, droprate = "1%" }; --Pet Sigil
 		[16] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 		[17] = { itemID = 30593, droprate = "1.11%" }; --Iridescent Fire Opal
 		[18] = { itemID = 30594, droprate = "2.35%" }; --Effulgent Chrysoprase
@@ -1625,6 +1629,7 @@ AtlasLoot_Data["HCRamparts"] = {
 	};
 	{
 		Name = BabbleBoss["Vazruden"];
+		NpcID = 17537;
 		[1] = { icon = "INV_Box_01", name = "=q6=" .. AL["Reinforced Fel Iron Chest"] };
 		[2] = { itemID = 24150, droprate = "5.65%" }; --Mok'Nathal Wildercloak
 		[3] = { itemID = 24083, droprate = "7.100" }; --Lifegiver Britches
@@ -1640,9 +1645,11 @@ AtlasLoot_Data["HCRamparts"] = {
 		[17] = { itemID = 23892, droprate = "100%" }; --Ominous Letter
 		[19] = { icon = "INV_Box_01", name = "=q6=" .. BabbleBoss["Nazan"] };
 		[20] = { itemID = 23901, droprate = "100%" }; --Nazan's Head
+		[22] = { itemID = 61025, droprate = "1%" }; --Pet Sigil
 	};
 	{
 		Name = BabbleBoss["Vazruden"] .. " (" .. AL["Heroic"] .. ")";
+		NpcID = 17537;
 		[1] = { itemID = 29264, droprate = "6.05%" }; --Tree-Mender's Belt
 		[2] = { itemID = 32077 }; --Wrath Infused Gauntlets
 		[3] = { itemID = 29238, droprate = "4.81%" }; --Lion's Heart Girdle
@@ -1665,6 +1672,7 @@ AtlasLoot_Data["HCRamparts"] = {
 		[25] = { itemID = 23892, droprate = "100%" }; --Ominous Letter
 		[27] = { icon = "INV_Box_01", name = "=q6=" .. BabbleBoss["Nazan"] };
 		[28] = { itemID = 23901, droprate = "100%" }; --Nazan's Head
+		[30] = { itemID = 61025, droprate = "1%" }; --Pet Sigil
 	};
 };
 
