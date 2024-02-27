@@ -329,6 +329,14 @@ local searchbtn = CreateFrame("Button","AtlasLootDefaultFrameSearchButton",Atlas
            AtlasLoot:ShowSearchOptions(self)
         end
     end)
+    searchbtn:SetScript("OnEnter", function(self)
+        GameTooltip:SetOwner(self, "ANCHOR_TOPLEFT")
+        GameTooltip:AddLine("Left click to search\nRight click to select what modules to search in")
+        GameTooltip:Show()
+    end)
+    searchbtn:SetScript("OnLeave", function()
+        GameTooltip:Hide()
+    end)
 
    --Last Result Button
 local lastresult = CreateFrame("Button","AtlasLootDefaultFrameLastResultButton",AtlasLootDefaultFrameSearchBox,"FilterDropDownMenuTemplate")
@@ -342,6 +350,14 @@ local lastresult = CreateFrame("Button","AtlasLootDefaultFrameLastResultButton",
    lastresult:SetPoint("LEFT", "AtlasLootDefaultFrameSearchButton", "RIGHT", 2, 0)
    lastresult:SetText(AL["Last Result"])
    lastresult:SetScript("OnClick", function() AtlasLoot:ShowSearchResult() end)
+   lastresult:SetScript("OnEnter", function(self)
+        GameTooltip:SetOwner(self, "ANCHOR_TOPLEFT")
+        GameTooltip:AddLine("Open Last Search Result")
+        GameTooltip:Show()
+    end)
+    lastresult:SetScript("OnLeave", function()
+        GameTooltip:Hide()
+    end)
 
     -- Advanced Search Button
 local advSearch = CreateFrame("Button","AtlasLootDefaultFrameAdvancedSearchButton", AtlasLootDefaultFrame,"FilterDropDownMenuTemplate")
@@ -357,6 +373,14 @@ local advSearch = CreateFrame("Button","AtlasLootDefaultFrameAdvancedSearchButto
     advSearch:SetScript("OnClick", function()
         AtlasLoot:AdvancedSearchShow()
         AtlasLootDefaultFrameSearchBox:ClearFocus()
+    end)
+    advSearch:SetScript("OnEnter", function(self)
+        GameTooltip:SetOwner(self, "ANCHOR_TOPLEFT")
+        GameTooltip:AddLine("Advanced Search")
+        GameTooltip:Show()
+    end)
+    advSearch:SetScript("OnLeave", function()
+        GameTooltip:Hide()
     end)
 
     --Wish List Button
@@ -381,12 +405,11 @@ local favorites = CreateFrame("Button", "AtlasLoot_Favorites", AtlasLootDefaultF
     favorites:SetPoint("LEFT", "AtlasLootDefaultFrameWishListButton", "RIGHT", 2, 0)
     favorites:SetText("Favorites")
     favorites:SetSize(150,25)
-    favorites:SetScript("OnClick", function(self) AtlasLoot:ShowFavorites(self) end)
     favorites.template = "FilterDropDownMenuTemplate"
     favorites:SetScript("OnEnter", function(self) 
         GameTooltip:ClearLines()
         GameTooltip:SetOwner(self, "ANCHOR_RIGHT", -(self:GetWidth() / 2), 5)
-        GameTooltip:AddLine("Left click to add to favorites")
+        GameTooltip:AddLine("Left click open a favorite\nAlt + Right click to set favorite")
         GameTooltip:Show()
         AtlasLoot_FavoritesPopupFrame:Show() 
     end)
@@ -412,7 +435,7 @@ local currentInstance = CreateFrame("Button","AtlasLootDefaultFrame_LoadInstance
     currentInstance:SetScript("OnEnter", function(self)
             GameTooltip:ClearLines()
             GameTooltip:SetOwner(self, "ANCHOR_RIGHT", -(self:GetWidth() / 2), 5)
-            GameTooltip:AddLine("Load the instance you are in")
+            GameTooltip:AddLine("Goto current instances lootpage")
             GameTooltip:Show()
     end)
     currentInstance:SetText("Current Instance")
@@ -434,7 +457,7 @@ local popupframe = CreateFrame("Frame", "AtlasLoot_FavoritesPopupFrame", AtlasLo
     popupframe:SetSize(150, 40)
     popupframe:Hide()
 
-    --Quick Look Buttons
+    --Favorites Buttons
 local function presetcreate(preset,num)
     preset:SetSize(30,30)
     preset.tex = preset:CreateTexture(nil, "ARTWORK")
@@ -454,6 +477,7 @@ local function presetcreate(preset,num)
             GameTooltip:Show()
         end
     end)
+    preset:RegisterForClicks("LeftButtonDown","RightButtonDown")
     preset:SetScript("OnLeave", function() 
         GameTooltip:Hide()
         if not GetMouseFocus() then return end
@@ -462,14 +486,18 @@ local function presetcreate(preset,num)
             popupframe:Hide()
         end
     end)
-    preset:SetScript("OnClick", function()
-        if AtlasLootCharDB["QuickLooks"][num] and AtlasLoot:IsLootTableAvailable(AtlasLootCharDB["QuickLooks"][num][4]) then
-            AtlasLoot.lastModule = AtlasLootCharDB["QuickLooks"][num][4]
-            AtlasLoot.currentTable = AtlasLootCharDB["QuickLooks"][num][5]
-            if AtlasLootCharDB["QuickLooks"][num][2] == "AtlasLootWishList" then
-                AtlasLoot:ShowWishList(AtlasLootCharDB["QuickLooks"][num][1], AtlasLootCharDB["QuickLooks"][num][3])
-            else
-                AtlasLoot:ShowItemsFrame(AtlasLootCharDB["QuickLooks"][num][1], AtlasLootCharDB["QuickLooks"][num][2], AtlasLootCharDB["QuickLooks"][num][3])
+    preset:SetScript("OnClick", function(self, button)
+        if button == "RightButton" and IsAltKeyDown() then
+            AtlasLoot:SetFavorites(num)
+        else
+            if AtlasLootCharDB["QuickLooks"][num] and AtlasLoot:IsLootTableAvailable(AtlasLootCharDB["QuickLooks"][num][4]) then
+                AtlasLoot.lastModule = AtlasLootCharDB["QuickLooks"][num][4]
+                AtlasLoot.currentTable = AtlasLootCharDB["QuickLooks"][num][5]
+                if AtlasLootCharDB["QuickLooks"][num][2] == "AtlasLootWishList" then
+                    AtlasLoot:ShowWishList(AtlasLootCharDB["QuickLooks"][num][1], AtlasLootCharDB["QuickLooks"][num][3])
+                else
+                    AtlasLoot:ShowItemsFrame(AtlasLootCharDB["QuickLooks"][num][1], AtlasLootCharDB["QuickLooks"][num][2], AtlasLootCharDB["QuickLooks"][num][3])
+                end
             end
         end
     end)
@@ -820,7 +848,18 @@ subtableFrame.rows = rows2
             AtlasLoot:MapMenuOpen(self)
         end
     end)
-
+    mainframe.mapButton:SetScript("OnEnter", function(self)
+        GameTooltip:SetOwner(self, "ANCHOR_TOPLEFT")
+        GameTooltip:AddLine("Open Map")
+        GameTooltip:Show()
+    end)
+    mainframe.mapButton:SetScript("OnLeave", function()
+        GameTooltip:Hide()
+    end)
+    mainframe.mapButton.mapButtonIcon = mainframe.mapButton:CreateTexture("ARTWORK")
+    mainframe.mapButton.mapButtonIcon:SetSize(19,19)
+    mainframe.mapButton.mapButtonIcon:SetAtlas("many-quests-area")
+    mainframe.mapButton.mapButtonIcon:SetPoint("RIGHT",mainframe.mapButton, -20, -1)
 -- item data loading icon animation
 local streamIcon = CreateFrame("Frame", "AtlasLoot_ItemsLoading", AtlaslLoot_LootBackground)
     streamIcon:SetPoint("TOPRIGHT", AtlaslLoot_LootBackground, "TOPRIGHT")

@@ -703,28 +703,6 @@ function AtlasLoot:FixText(text)
     -- Tier Tokens
     text = gsub(text, "#setToken#", AL["Set Token (Click)"]) --Accessory tokens
 
-    -- Dungeon 1 Sets
-    text = gsub(text, "#t0s1#", AL["Wildheart Raiment"])
-    text = gsub(text, "#t0s2#", AL["Beaststalker Armor"])
-    text = gsub(text, "#t0s3#", AL["Magister's Regalia"])
-    text = gsub(text, "#t0s4#", AL["Lightforge Armor"])
-    text = gsub(text, "#t0s5#", AL["Vestments of the Devout"])
-    text = gsub(text, "#t0s6#", AL["Shadowcraft Armor"])
-    text = gsub(text, "#t0s7#", AL["The Elements"])
-    text = gsub(text, "#t0s8#", AL["Dreadmist Raiment"])
-    text = gsub(text, "#t0s9#", AL["Battlegear of Valor"])
-
-    -- Dungeon 2 Sets
-    text = gsub(text, "#t05s1#", AL["Feralheart Raiment"])
-    text = gsub(text, "#t05s2#", AL["Beastmaster Armor"])
-    text = gsub(text, "#t05s3#", AL["Sorcerer's Regalia"])
-    text = gsub(text, "#t05s4#", AL["Soulforge Armor"])
-    text = gsub(text, "#t05s5#", AL["Vestments of the Virtuous"])
-    text = gsub(text, "#t05s6#", AL["Darkmantle Armor"])
-    text = gsub(text, "#t05s7#", AL["The Five Thunders"])
-    text = gsub(text, "#t05s8#", AL["Deathmist Raiment"])
-    text = gsub(text, "#t05s9#", AL["Battlegear of Heroism"])
-
     -- Dungeon 3 Sets
     text = gsub(text, "#ds3s1#", AL["Hallowed Raiment"])
     text = gsub(text, "#ds3s2#", AL["Incanter's Regalia"])

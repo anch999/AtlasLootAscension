@@ -12,7 +12,7 @@ AtlasLoot:ShowItemsFrame()
 AtlasLoot:NavButton_OnClick()
 AtlasLoot:IsLootTableAvailable(dataID)
 AtlasLoot:LoadAllModules()
-AtlasLoot:ShowFavorites(button)
+AtlasLoot:SetFavorites(number)
 AtlasLoot:AddTooltip(frameb, tooltiptext)
 ]]
 
@@ -1175,83 +1175,15 @@ function AtlasLoot:LoadAllModules()
 end
 
 --[[
-AtlasLoot:ShowFavorites(button)
-button: Identity of the button pressed to trigger the function
-Shows the GUI for setting Quicklooks
+AtlasLoot:SetFavorites(number)
+sets the favorite when alt right clicked
 ]]
-function AtlasLoot:ShowFavorites(button)
-	if self.Dewdrop:IsOpen(button) then
-		self.Dewdrop:Close(1)
-	else
-		local setOptions = function()
-			self.Dewdrop:AddLine(
-				"text", AL["Favorite"].." 1",
-				"tooltipTitle", AL["Favorite"].." 1",
-				"tooltipText", AL["Assign this loot table\n to Favorite"].." 1",
-				"func", function()
-                    if AtlasLootItemsFrame.refresh[2] == "AtlasLoot_CurrentWishList" then
-						AtlasLootCharDB["QuickLooks"][1]={AtlasLoot_CurrentWishList["Show"].ListType, "AtlasLootWishList", AtlasLoot_CurrentWishList["Show"].ListNum, self.lastModule, self.currentTable, _G["AtlasLootWishList"][AtlasLoot_CurrentWishList["Show"].ListType][AtlasLoot_CurrentWishList["Show"].ListNum].Name}
-					else
-						AtlasLootCharDB["QuickLooks"][1]={AtlasLootItemsFrame.refreshOri[1], AtlasLootItemsFrame.refreshOri[2], AtlasLootItemsFrame.refreshOri[3], self.lastModule, self.currentTable, _G[AtlasLootItemsFrame.refreshOri[2]][AtlasLootItemsFrame.refreshOri[1]][AtlasLootItemsFrame.refreshOri[3]].Name}
-					end
-
-                    self.Dewdrop:Close(1)
-				end
-			)
-			self.Dewdrop:AddLine(
-				"text", AL["Favorite"].." 2",
-				"tooltipTitle", AL["Favorite"].." 2",
-				"tooltipText", AL["Assign this loot table\n to Favorite"].." 2",
-				"func", function()
-					if AtlasLootItemsFrame.refresh[2] == "AtlasLoot_CurrentWishList" then
-						AtlasLootCharDB["QuickLooks"][2]={AtlasLoot_CurrentWishList["Show"].ListType, 
-						"AtlasLootWishList",
-						AtlasLoot_CurrentWishList["Show"].ListNum, self.lastModule,
-						self.currentTable,
-						_G["AtlasLootWishList"][AtlasLoot_CurrentWishList["Show"].ListType][AtlasLoot_CurrentWishList["Show"].ListNum].Name}
-					else
-						AtlasLootCharDB["QuickLooks"][2]={AtlasLootItemsFrame.refreshOri[1], AtlasLootItemsFrame.refreshOri[2], AtlasLootItemsFrame.refreshOri[3], self.lastModule, self.currentTable, _G[AtlasLootItemsFrame.refreshOri[2]][AtlasLootItemsFrame.refreshOri[1]][AtlasLootItemsFrame.refreshOri[3]].Name}
-                    end
-
-                    self.Dewdrop:Close(1)
-				end
-			)
-            self.Dewdrop:AddLine(
-				"text", AL["Favorite"].." 3",
-				"tooltipTitle", AL["Favorite"].." 3",
-				"tooltipText", AL["Assign this loot table\n to Favorite"].." 3",
-				"func", function()
-					if AtlasLootItemsFrame.refresh[2] == "AtlasLoot_CurrentWishList" then
-						AtlasLootCharDB["QuickLooks"][3]={AtlasLoot_CurrentWishList["Show"].ListType, "AtlasLootWishList", AtlasLoot_CurrentWishList["Show"].ListNum, self.lastModule, self.currentTable, _G["AtlasLootWishList"][AtlasLoot_CurrentWishList["Show"].ListType][AtlasLoot_CurrentWishList["Show"].ListNum].Name}
-					else
-						AtlasLootCharDB["QuickLooks"][3]={AtlasLootItemsFrame.refreshOri[1], AtlasLootItemsFrame.refreshOri[2], AtlasLootItemsFrame.refreshOri[3], self.lastModule, self.currentTable, _G[AtlasLootItemsFrame.refreshOri[2]][AtlasLootItemsFrame.refreshOri[1]][AtlasLootItemsFrame.refreshOri[3]].Name}
-                    end
-
-                    self.Dewdrop:Close(1)
-				end
-			)
-            self.Dewdrop:AddLine(
-				"text", AL["Favorite"].." 4",
-				"tooltipTitle", AL["Favorite"].." 4",
-				"tooltipText", AL["Assign this loot table\n to Favorite"].." 4",
-				"func", function()
-					if AtlasLootItemsFrame.refresh[2] == "AtlasLoot_CurrentWishList" then
-						AtlasLootCharDB["QuickLooks"][4]={AtlasLoot_CurrentWishList["Show"].ListType, "AtlasLootWishList", AtlasLoot_CurrentWishList["Show"].ListNum, self.lastModule, self.currentTable, _G["AtlasLootWishList"][AtlasLoot_CurrentWishList["Show"].ListType][AtlasLoot_CurrentWishList["Show"].ListNum].Name}
-					else
-						AtlasLootCharDB["QuickLooks"][4]={AtlasLootItemsFrame.refreshOri[1], AtlasLootItemsFrame.refreshOri[2], AtlasLootItemsFrame.refreshOri[3], self.lastModule, self.currentTable, _G[AtlasLootItemsFrame.refreshOri[2]][AtlasLootItemsFrame.refreshOri[1]][AtlasLootItemsFrame.refreshOri[3]].Name}
-                    end
-
-                    self.Dewdrop:Close(1)
-				end
-			)
-		end
-		self.Dewdrop:Open(button,
-			'point', function(parent)
-				return "BOTTOMLEFT", "BOTTOMRIGHT"
-			end,
-			"children", setOptions
-		)
-	end
+function AtlasLoot:SetFavorites(num)
+    if AtlasLootItemsFrame.refresh[2] == "AtlasLoot_CurrentWishList" then
+        AtlasLootCharDB["QuickLooks"][num]={AtlasLoot_CurrentWishList["Show"].ListType, "AtlasLootWishList", AtlasLoot_CurrentWishList["Show"].ListNum, self.lastModule, self.currentTable, _G["AtlasLootWishList"][AtlasLoot_CurrentWishList["Show"].ListType][AtlasLoot_CurrentWishList["Show"].ListNum].Name}
+    else
+        AtlasLootCharDB["QuickLooks"][num]={AtlasLootItemsFrame.refreshOri[1], AtlasLootItemsFrame.refreshOri[2], AtlasLootItemsFrame.refreshOri[3], self.lastModule, self.currentTable, _G[AtlasLootItemsFrame.refreshOri[2]][AtlasLootItemsFrame.refreshOri[1]][AtlasLootItemsFrame.refreshOri[3]].Name}
+    end
 end
 
 -- Used to precache all the items in a raid/instance

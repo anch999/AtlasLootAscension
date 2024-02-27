@@ -9,6 +9,7 @@ local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
 			{ "", "ZGSets"},
 			{ "", "AQ20Sets"},
 			{ "", "T0"},
+			{ "", "T0.5"},
 			{ "", "T1"},
 			{ "", "T2"},
 			{ "", "T2.5"},

@@ -3,7 +3,7 @@ local BabbleBoss = AtlasLoot_GetLocaleLibBabble("LibBabble-Boss-3.0")
 local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0")
 local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
-
+local WHITE = "|cffFFFFFF"
 -- Index
 --- Dungeons & Raids
 ---- Keys
@@ -4192,193 +4192,272 @@ AtlasLoot_Data["T0"] = {
 	Name = "Dungeon Sets";
 	Type = "ClassicDungeonExt";
 	{
-		Name = AL["Druid"];
-		[1] = { icon = "Spell_Nature_Regeneration", name = "=q6=#t0s1#", desc = "=ec1=#j6#" };
-		[2] = { itemID = 16720, desc = "=ds=" .. BabbleBoss["Darkmaster Gandling"] .. " (" .. AL["Scholo"] .. ")", droprate = "7.09%" }; --Wildheart Cowl
-		[3] = { itemID = 16718, desc = "=ds=" .. BabbleBoss["Gizrul the Slavener"] .. " (" .. AL["LBRS"] .. ")", droprate = "11.04%" }; --Wildheart Spaulders
-		[4] = { itemID = 16706, desc = "=ds=" .. BabbleBoss["General Drakkisath"] .. " (" .. AL["UBRS"] .. ")", droprate = "7.36%" }; --Wildheart Vest
-		[5] = { itemID = 16714, desc = "=ds=" .. AL["Trash Mobs"] .. " (" .. AL["Strat"] .. ")", droprate = "1.85%" }; --Wildheart Bracers
-		[6] = { itemID = 16717, desc = "=ds=" .. BabbleBoss["The Unforgiven"] .. " (" .. AL["Strat"] .. ")", droprate = "12.61%" }; --Wildheart Gloves
-		[7] = { itemID = 16716, desc = "=ds=" .. AL["Trash Mobs"] .. " (" .. AL["Scholo"] .. ")", droprate = "2.60%" }; --Wildheart Belt
-		[8] = { itemID = 16719, desc = "=ds=" .. BabbleBoss["Baron Rivendare"] .. " (" .. AL["Strat"] .. ")", droprate = "6.58%" }; --Wildheart Kilt
-		[9] = { itemID = 16715, desc = "=ds=" .. BabbleBoss["Mother Smolderweb"] .. " (" .. AL["LBRS"] .. ")", droprate = "13.03%" }; --Wildheart Boots
-		[16] = { icon = "Spell_Nature_Regeneration", name = "=q6=#t05s1#", desc = "=ec1=#j7#" };
-		[17] = { itemID = 22109, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Feralheart Cowl
-		[18] = { itemID = 22112, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Feralheart Spaulders
-		[19] = { itemID = 22113, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Feralheart Vest
-		[20] = { itemID = 22108, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Feralheart Bracers
-		[21] = { itemID = 22110, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Feralheart Gloves
-		[22] = { itemID = 22106, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Feralheart Belt
-		[23] = { itemID = 22111, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Feralheart Kilt
-		[24] = { itemID = 22107, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Feralheart Boots
+		Name = AL["Wildheart Raiment"];
+		[1] = { itemID = 16720, desc = "=ds=" .. BabbleBoss["Darkmaster Gandling"] .. " (" .. AL["Scholo"] .. ")", droprate = "7.09%" }; --Wildheart Cowl
+		[2] = { itemID = 16718, desc = "=ds=" .. BabbleBoss["Gizrul the Slavener"] .. " (" .. AL["LBRS"] .. ")", droprate = "11.04%" }; --Wildheart Spaulders
+		[3] = { itemID = 16706, desc = "=ds=" .. BabbleBoss["General Drakkisath"] .. " (" .. AL["UBRS"] .. ")", droprate = "7.36%" }; --Wildheart Vest
+		[4] = { itemID = 16714, desc = "=ds=" .. AL["Trash Mobs"] .. " (" .. AL["Strat"] .. ")", droprate = "1.85%" }; --Wildheart Bracers
+		[5] = { itemID = 16717, desc = "=ds=" .. BabbleBoss["The Unforgiven"] .. " (" .. AL["Strat"] .. ")", droprate = "12.61%" }; --Wildheart Gloves
+		[6] = { itemID = 16716, desc = "=ds=" .. AL["Trash Mobs"] .. " (" .. AL["Scholo"] .. ")", droprate = "2.60%" }; --Wildheart Belt
+		[7] = { itemID = 16719, desc = "=ds=" .. BabbleBoss["Baron Rivendare"] .. " (" .. AL["Strat"] .. ")", droprate = "6.58%" }; --Wildheart Kilt
+		[8] = { itemID = 16715, desc = "=ds=" .. BabbleBoss["Mother Smolderweb"] .. " (" .. AL["LBRS"] .. ")", droprate = "13.03%" }; --Wildheart Boots
+
 	};
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["HUNTER"];
-		[1] = { icon = "Ability_Hunter_RunningShot", name = "=q6=#t0s2#", desc = "=ec1=#j6#" };
-		[2] = { itemID = 16677, desc = "=ds=" .. BabbleBoss["Darkmaster Gandling"] .. " (" .. AL["Scholo"] .. ")", droprate = "7.00%" }; --Beaststalker's Cap
-		[3] = { itemID = 16679, desc = "=ds=" .. BabbleBoss["Overlord Wyrmthalak"] .. " (" .. AL["LBRS"] .. ")", droprate = "9.89%" }; --Beaststalker's Mantle
-		[4] = { itemID = 16674, desc = "=ds=" .. BabbleBoss["General Drakkisath"] .. " (" .. AL["UBRS"] .. ")", droprate = "6.81%" }; --Beaststalker's Tunic
-		[5] = { itemID = 16681, desc = "=ds=" .. AL["Trash Mobs"] .. " (" .. AL["Strat"] .. ")", droprate = "1.64%" }; --Beaststalker's Bindings
-		[6] = { itemID = 16676, desc = "=ds=" .. BabbleBoss["War Master Voone"] .. " (" .. AL["LBRS"] .. ")", droprate = "9.15%" }; --Beaststalker's Gloves
-		[7] = { itemID = 16680, desc = "=ds=" .. AL["Trash Mobs"] .. " (" .. AL["LBRS"] .. ")", droprate = "1.36%" }; --Beaststalker's Belt
-		[8] = { itemID = 16678, desc = "=ds=" .. BabbleBoss["Baron Rivendare"] .. " (" .. AL["Strat"] .. ")", droprate = "6.16%" }; --Beaststalker's Pants
-		[9] = { itemID = 16675, desc = "=ds=" .. BabbleBoss["Nerub'enkan"] .. " (" .. AL["Strat"] .. ")", droprate = "13.62%" }; --Beaststalker's Boots
-		[16] = { icon = "Ability_Hunter_RunningShot", name = "=q6=#t05s2#", desc = "=ec1=#j7#" };
-		[17] = { itemID = 22013, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Beastmaster's Cap
-		[18] = { itemID = 22016, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Beastmaster's Mantle
-		[19] = { itemID = 22060, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Beastmaster's Tunic
-		[20] = { itemID = 22011, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Beastmaster's Bindings
-		[21] = { itemID = 22015, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Beastmaster's Gloves
-		[22] = { itemID = 22010, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Beastmaster's Belt
-		[23] = { itemID = 22017, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Beastmaster's Pants
-		[24] = { itemID = 22061, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Beastmaster's Boots
+		Name = AL["Beaststalker Armor"];
+		[1] = { itemID = 16677, desc = "=ds=" .. BabbleBoss["Darkmaster Gandling"] .. " (" .. AL["Scholo"] .. ")", droprate = "7.00%" }; --Beaststalker's Cap
+		[2] = { itemID = 16679, desc = "=ds=" .. BabbleBoss["Overlord Wyrmthalak"] .. " (" .. AL["LBRS"] .. ")", droprate = "9.89%" }; --Beaststalker's Mantle
+		[3] = { itemID = 16674, desc = "=ds=" .. BabbleBoss["General Drakkisath"] .. " (" .. AL["UBRS"] .. ")", droprate = "6.81%" }; --Beaststalker's Tunic
+		[4] = { itemID = 16681, desc = "=ds=" .. AL["Trash Mobs"] .. " (" .. AL["Strat"] .. ")", droprate = "1.64%" }; --Beaststalker's Bindings
+		[5] = { itemID = 16676, desc = "=ds=" .. BabbleBoss["War Master Voone"] .. " (" .. AL["LBRS"] .. ")", droprate = "9.15%" }; --Beaststalker's Gloves
+		[6] = { itemID = 16680, desc = "=ds=" .. AL["Trash Mobs"] .. " (" .. AL["LBRS"] .. ")", droprate = "1.36%" }; --Beaststalker's Belt
+		[7] = { itemID = 16678, desc = "=ds=" .. BabbleBoss["Baron Rivendare"] .. " (" .. AL["Strat"] .. ")", droprate = "6.16%" }; --Beaststalker's Pants
+		[8] = { itemID = 16675, desc = "=ds=" .. BabbleBoss["Nerub'enkan"] .. " (" .. AL["Strat"] .. ")", droprate = "13.62%" }; --Beaststalker's Boots
+
 	};
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["MAGE"];
-		[1] = { icon = "Spell_Frost_IceStorm", name = "=q6=#t0s3#", desc = "=ec1=#j6#" };
-		[2] = { itemID = 16686, desc = "=ds=" .. BabbleBoss["Darkmaster Gandling"] .. " (" .. AL["Scholo"] .. ")", droprate = "8.60%" }; --Magister's Crown
-		[3] = { itemID = 16689, desc = "=ds=" .. BabbleBoss["Ras Frostwhisper"] .. " (" .. AL["Scholo"] .. ")", droprate = "11.93%" }; --Magister's Mantle
-		[4] = { itemID = 16688, desc = "=ds=" .. BabbleBoss["General Drakkisath"] .. " (" .. AL["UBRS"] .. ")", droprate = "7.24%" }; --Magister's Robes
-		[5] = { itemID = 16683, desc = "=ds=" .. AL["Trash Mobs"] .. " (" .. AL["LBRS"] .. ")", droprate = "1.19%" }; --Magister's Bindings
-		[6] = { itemID = 16684, desc = "=ds=" .. BabbleBoss["Doctor Theolen Krastinov"] .. " (" .. AL["Scholo"] ..")", droprate = "9.75%" }; --Magister's Gloves
-		[7] = { itemID = 16685, desc = "=ds=" .. AL["Trash Mobs"] .. " (" .. AL["Strat"] .. ")", droprate = "1.32%" }; --Magister's Belt
-		[8] = { itemID = 16687, desc = "=ds=" .. BabbleBoss["Baron Rivendare"] .. " (" .. AL["Strat"] .. ")", droprate = "6.79%" }; --Magister's Leggings
-		[9] = { itemID = 16682, desc = "=ds=" .. BabbleBoss["Hearthsinger Forresten"] .. " (" .. AL["Strat"] .. ")", droprate = "10.86%" }; --Magister's Boots
-		[16] = { icon = "Spell_Frost_IceStorm", name = "=q6=#t05s3#", desc = "=ec1=#j7#" };
-		[17] = { itemID = 22065, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Sorcerer's Crown
-		[18] = { itemID = 22068, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Sorcerer's Mantle
-		[19] = { itemID = 22069, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Sorcerer's Robes
-		[20] = { itemID = 22063, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Sorcerer's Bindings
-		[21] = { itemID = 22066, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Sorcerer's Gloves
-		[22] = { itemID = 22062, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Sorcerer's Belt
-		[23] = { itemID = 22067, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Sorcerer's Leggings
-		[24] = { itemID = 22064, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Sorcerer's Boots
+		Name = AL["Magister's Regalia"];
+		[1] = { itemID = 16686, desc = "=ds=" .. BabbleBoss["Darkmaster Gandling"] .. " (" .. AL["Scholo"] .. ")", droprate = "8.60%" }; --Magister's Crown
+		[2] = { itemID = 16689, desc = "=ds=" .. BabbleBoss["Ras Frostwhisper"] .. " (" .. AL["Scholo"] .. ")", droprate = "11.93%" }; --Magister's Mantle
+		[3] = { itemID = 16688, desc = "=ds=" .. BabbleBoss["General Drakkisath"] .. " (" .. AL["UBRS"] .. ")", droprate = "7.24%" }; --Magister's Robes
+		[4] = { itemID = 16683, desc = "=ds=" .. AL["Trash Mobs"] .. " (" .. AL["LBRS"] .. ")", droprate = "1.19%" }; --Magister's Bindings
+		[5] = { itemID = 16684, desc = "=ds=" .. BabbleBoss["Doctor Theolen Krastinov"] .. " (" .. AL["Scholo"] ..")", droprate = "9.75%" }; --Magister's Gloves
+		[6] = { itemID = 16685, desc = "=ds=" .. AL["Trash Mobs"] .. " (" .. AL["Strat"] .. ")", droprate = "1.32%" }; --Magister's Belt
+		[7] = { itemID = 16687, desc = "=ds=" .. BabbleBoss["Baron Rivendare"] .. " (" .. AL["Strat"] .. ")", droprate = "6.79%" }; --Magister's Leggings
+		[8] = { itemID = 16682, desc = "=ds=" .. BabbleBoss["Hearthsinger Forresten"] .. " (" .. AL["Strat"] .. ")", droprate = "10.86%" }; --Magister's Boots
+
 	};
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"];
-		[1] = { icon = "Spell_Holy_SealOfMight", name = "=q6=#t0s4#", desc = "=ec1=#j6#" };
-		[2] = { itemID = 16727, desc = "=ds=" .. BabbleBoss["Darkmaster Gandling"] .. " (" .. AL["Scholo"] .. ")", droprate = "5.32%" }; --Lightforge Helm
-		[3] = { itemID = 16729, desc = "=ds=" .. BabbleBoss["The Beast"] .. " (" .. AL["UBRS"] .. ")", droprate = "13.62%" }; --Lightforge Spaulders
-		[4] = { itemID = 16726, desc = "=ds=" .. BabbleBoss["General Drakkisath"] .. " (" .. AL["UBRS"] .. ")", droprate = "3.76%" }; --Lightforge Breastplate
-		[5] = { itemID = 16722, desc = "=ds=" .. AL["Trash Mobs"] .. " (" .. AL["Scholo"] .. ")", droprate = "3.37%" }; --Lightforge Bracers
-		[6] = { itemID = 16724, desc = "=ds=" .. BabbleBoss["Timmy the Cruel"] .. " (" .. AL["Strat"] .. ")", droprate = "10.42%" }; --Lightforge Gauntlets
-		[7] = { itemID = 16723, desc = "=ds=" .. AL["Trash Mobs"] .. " (" .. AL["Strat"] .. ")", droprate = "1.93%" }; --Lightforge Belt
-		[8] = { itemID = 16728, desc = "=ds=" .. BabbleBoss["Baron Rivendare"] .. " (" .. AL["Strat"] .. ")", droprate = "4.20%" }; --Lightforge Legplates
-		[9] = { itemID = 16725, desc = "=ds=" .. BabbleBoss["Balnazzar"] .. " (" .. AL["Strat"] .. ")", droprate = "11.11%" }; --Lightforge Boots
-		[16] = { icon = "Spell_Holy_SealOfMight", name = "=q6=#t05s4#", desc = "=ec1=#j7#" };
-		[17] = { itemID = 22091, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Soulforge Helm
-		[18] = { itemID = 22093, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Soulforge Spaulders
-		[19] = { itemID = 22089, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Soulforge Breastplate
-		[20] = { itemID = 22088, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Soulforge Bracers
-		[21] = { itemID = 22090, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Soulforge Gauntlets
-		[22] = { itemID = 22086, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Soulforge Belt
-		[23] = { itemID = 22092, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Soulforge Legplates
-		[24] = { itemID = 22087, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Soulforge Boots
+		Name = AL["Lightforge Armor"];
+		[1] = { itemID = 16727, desc = "=ds=" .. BabbleBoss["Darkmaster Gandling"] .. " (" .. AL["Scholo"] .. ")", droprate = "5.32%" }; --Lightforge Helm
+		[2] = { itemID = 16729, desc = "=ds=" .. BabbleBoss["The Beast"] .. " (" .. AL["UBRS"] .. ")", droprate = "13.62%" }; --Lightforge Spaulders
+		[3] = { itemID = 16726, desc = "=ds=" .. BabbleBoss["General Drakkisath"] .. " (" .. AL["UBRS"] .. ")", droprate = "3.76%" }; --Lightforge Breastplate
+		[4] = { itemID = 16722, desc = "=ds=" .. AL["Trash Mobs"] .. " (" .. AL["Scholo"] .. ")", droprate = "3.37%" }; --Lightforge Bracers
+		[5] = { itemID = 16724, desc = "=ds=" .. BabbleBoss["Timmy the Cruel"] .. " (" .. AL["Strat"] .. ")", droprate = "10.42%" }; --Lightforge Gauntlets
+		[6] = { itemID = 16723, desc = "=ds=" .. AL["Trash Mobs"] .. " (" .. AL["Strat"] .. ")", droprate = "1.93%" }; --Lightforge Belt
+		[7] = { itemID = 16728, desc = "=ds=" .. BabbleBoss["Baron Rivendare"] .. " (" .. AL["Strat"] .. ")", droprate = "4.20%" }; --Lightforge Legplates
+		[8] = { itemID = 16725, desc = "=ds=" .. BabbleBoss["Balnazzar"] .. " (" .. AL["Strat"] .. ")", droprate = "11.11%" }; --Lightforge Boots
+
 	};
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["PRIEST"];
-		[1] = { icon = "Spell_Holy_PowerWordShield", name = "=q6=#t0s5#", desc = "=ec1=#j6#" };
-		[2] = { itemID = 16693, desc = "=ds=" .. BabbleBoss["Darkmaster Gandling"] .. " (" .. AL["Scholo"] .. ")", droprate = "7.89%" }; --Devout Crown
-		[3] = { itemID = 16695, desc = "=ds=" .. BabbleBoss["Solakar Flamewreath"] .. " (" .. AL["UBRS"] .. ")", droprate = "12.84%" }; --Devout Mantle
-		[4] = { itemID = 16690, desc = "=ds=" .. BabbleBoss["General Drakkisath"] .. " (" .. AL["UBRS"] .. ")", droprate = "6.20%" }; --Devout Robe
-		[5] = { itemID = 16697, desc = "=ds=" .. AL["Trash Mobs"] .. " (" .. AL["Strat"] .. ")", droprate = "1.13%" }; --Devout Bracers
-		[6] = { itemID = 16692, "=q3=Devout Gloves", "=ds=" .. BabbleBoss["Archivist Galford"] .. " (" .. AL["Strat"] .. ")" };
-		[7] = { itemID = 16696, desc = "=ds=" .. AL["Trash Mobs"] .. " (" .. AL["LBRS"] .. ")", droprate = "2.07%" }; --Devout Belt
-		[8] = { itemID = 16694, desc = "=ds=" .. BabbleBoss["Baron Rivendare"] .. " (" .. AL["Strat"] .. ")", droprate = "7.42%" }; --Devout Skirt
-		[9] = { itemID = 16691, desc = "=ds=" .. BabbleBoss["Maleki the Pallid"] .. " (" .. AL["Strat"] .. ")", droprate = "13.64%" }; --Devout Sandals
-		[16] = { icon = "Spell_Holy_PowerWordShield", name = "=q6=#t05s5#", desc = "=ec1=#j7#" };
-		[17] = { itemID = 22080, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Virtuous Crown
-		[18] = { itemID = 22082, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Virtuous Mantle
-		[19] = { itemID = 22083, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Virtuous Robe
-		[20] = { itemID = 22079, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Virtuous Bracers
-		[21] = { itemID = 22081, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Virtuous Gloves
-		[22] = { itemID = 22078, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Virtuous Belt
-		[23] = { itemID = 22085, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Virtuous Skirt
-		[24] = { itemID = 22084, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Virtuous Sandals
+		Name = AL["Vestments of the Devout"];
+		[1] = { itemID = 16693, desc = "=ds=" .. BabbleBoss["Darkmaster Gandling"] .. " (" .. AL["Scholo"] .. ")", droprate = "7.89%" }; --Devout Crown
+		[2] = { itemID = 16695, desc = "=ds=" .. BabbleBoss["Solakar Flamewreath"] .. " (" .. AL["UBRS"] .. ")", droprate = "12.84%" }; --Devout Mantle
+		[3] = { itemID = 16690, desc = "=ds=" .. BabbleBoss["General Drakkisath"] .. " (" .. AL["UBRS"] .. ")", droprate = "6.20%" }; --Devout Robe
+		[4] = { itemID = 16697, desc = "=ds=" .. AL["Trash Mobs"] .. " (" .. AL["Strat"] .. ")", droprate = "1.13%" }; --Devout Bracers
+		[5] = { itemID = 16692, "=q3=Devout Gloves", "=ds=" .. BabbleBoss["Archivist Galford"] .. " (" .. AL["Strat"] .. ")" };
+		[6] = { itemID = 16696, desc = "=ds=" .. AL["Trash Mobs"] .. " (" .. AL["LBRS"] .. ")", droprate = "2.07%" }; --Devout Belt
+		[7] = { itemID = 16694, desc = "=ds=" .. BabbleBoss["Baron Rivendare"] .. " (" .. AL["Strat"] .. ")", droprate = "7.42%" }; --Devout Skirt
+		[8] = { itemID = 16691, desc = "=ds=" .. BabbleBoss["Maleki the Pallid"] .. " (" .. AL["Strat"] .. ")", droprate = "13.64%" }; --Devout Sandals
+
 	};
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["ROGUE"];
-		[1] = { icon = "Ability_BackStab", name = "=q6=#t0s6#", desc = "=ec1=#j6#" };
-		[2] = { itemID = 16707, desc = "=ds=" .. BabbleBoss["Darkmaster Gandling"] .. " (" .. AL["Scholo"] .. ")", droprate = "6.65%" }; --Shadowcraft Cap
-		[3] = { itemID = 16708, desc = "=ds=" .. BabbleBoss["Cannon Master Willey"] .. " (" .. AL["Strat"] .. ")", droprate = "10.68%" }; --Shadowcraft Spaulders
-		[4] = { itemID = 16721, desc = "=ds=" .. BabbleBoss["General Drakkisath"] .. " (" .. AL["UBRS"] .. ")", droprate = "6.09%" }; --Shadowcraft Tunic
-		[5] = { itemID = 16710, desc = "=ds=" .. AL["Trash Mobs"] .. " (" .. AL["Scholo"] .. ")", droprate = "3.51%" }; --Shadowcraft Bracers
-		[6] = { itemID = 16712, desc = "=ds=" .. BabbleBoss["Shadow Hunter Vosh'gajin"] .. " (" .. AL["LBRS"] .. ")", droprate = "11.89%" }; --Shadowcraft Gloves
-		[7] = { itemID = 16713, desc = "=ds=" .. AL["Trash Mobs"] .. " (" .. AL["LBRS"] .. ")", droprate = "1.05%" }; --Shadowcraft Belt
-		[8] = { itemID = 16709, desc = "=ds=" .. BabbleBoss["Baron Rivendare"] .. " (" .. AL["Strat"] .. ")", droprate = "7.76%" }; --Shadowcraft Pants
-		[9] = { itemID = 16711, desc = "=ds=" .. BabbleBoss["Rattlegore"] .. " (" .. AL["Scholo"] .. ")", droprate = "14.32%" }; --Shadowcraft Boots
-		[16] = { icon = "Ability_BackStab", name = "=q6=#t05s6#", desc = "=ec1=#j7#" };
-		[17] = { itemID = 22005, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Darkmantle Cap
-		[18] = { itemID = 22008, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Darkmantle Spaulders
-		[19] = { itemID = 22009, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Darkmantle Tunic
-		[20] = { itemID = 22004, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Darkmantle Bracers
-		[21] = { itemID = 22006, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Darkmantle Gloves
-		[22] = { itemID = 22002, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Darkmantle Belt
-		[23] = { itemID = 22007, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Darkmantle Pants
-		[24] = { itemID = 22003, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Darkmantle Boots
+		Name = AL["Shadowcraft Armor"];
+		[1] = { itemID = 16707, desc = "=ds=" .. BabbleBoss["Darkmaster Gandling"] .. " (" .. AL["Scholo"] .. ")", droprate = "6.65%" }; --Shadowcraft Cap
+		[2] = { itemID = 16708, desc = "=ds=" .. BabbleBoss["Cannon Master Willey"] .. " (" .. AL["Strat"] .. ")", droprate = "10.68%" }; --Shadowcraft Spaulders
+		[3] = { itemID = 16721, desc = "=ds=" .. BabbleBoss["General Drakkisath"] .. " (" .. AL["UBRS"] .. ")", droprate = "6.09%" }; --Shadowcraft Tunic
+		[4] = { itemID = 16710, desc = "=ds=" .. AL["Trash Mobs"] .. " (" .. AL["Scholo"] .. ")", droprate = "3.51%" }; --Shadowcraft Bracers
+		[5] = { itemID = 16712, desc = "=ds=" .. BabbleBoss["Shadow Hunter Vosh'gajin"] .. " (" .. AL["LBRS"] .. ")", droprate = "11.89%" }; --Shadowcraft Gloves
+		[6] = { itemID = 16713, desc = "=ds=" .. AL["Trash Mobs"] .. " (" .. AL["LBRS"] .. ")", droprate = "1.05%" }; --Shadowcraft Belt
+		[7] = { itemID = 16709, desc = "=ds=" .. BabbleBoss["Baron Rivendare"] .. " (" .. AL["Strat"] .. ")", droprate = "7.76%" }; --Shadowcraft Pants
+		[8] = { itemID = 16711, desc = "=ds=" .. BabbleBoss["Rattlegore"] .. " (" .. AL["Scholo"] .. ")", droprate = "14.32%" }; --Shadowcraft Boots
+
 	};
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"];
-		[1] = { icon = "Spell_FireResistanceTotem_01", name = "=q6=#t0s7#", desc = "=ec1=#j6#" };
-		[2] = { itemID = 16667, desc = "=ds=" .. BabbleBoss["Darkmaster Gandling"] .. " (" .. AL["Scholo"] .. ")", droprate = "2.86%" }; --Coif of Elements
-		[3] = { itemID = 16669, desc = "=ds=" .. BabbleBoss["Gyth"] .. " (" .. AL["UBRS"] .. ")", droprate = "14.77%" }; --Pauldrons of Elements
-		[4] = { itemID = 16666, desc = "=ds=" .. BabbleBoss["General Drakkisath"] .. " (" .. AL["UBRS"] .. ")", droprate = "3.03%" }; --Vest of Elements
-		[5] = { itemID = 16671, desc = "=ds=" .. AL["Trash Mobs"] .. " (" .. AL["Strat"] .. ")", droprate = "1.59%" }; --Bindings of Elements
-		[6] = { itemID = 16672, desc = "=ds=" .. BabbleBoss["Pyroguard Emberseer"] .. " (" .. AL["UBRS"] .. ")", droprate = "14.23%" }; --Gauntlets of Elements
-		[7] = { itemID = 16673, desc = "=ds=" .. AL["Trash Mobs"] .. " (" .. AL["LBRS"] .. ")", droprate = "1.06%" }; --Cord of Elements
-		[8] = { itemID = 16668, desc = "=ds=" .. BabbleBoss["Baron Rivendare"] .. " (" .. AL["Strat"] .. ")", droprate = "3.02%" }; --Kilt of Elements
-		[9] = { itemID = 16670, desc = "=ds=" .. BabbleBoss["Highlord Omokk"] .. " (" .. AL["LBRS"] .. ")", droprate = "9.35%" }; --Boots of Elements
-		[16] = { icon = "Spell_FireResistanceTotem_01", name = "=q6=#t05s7#", desc = "=ec1=#j7#" };
-		[17] = { itemID = 22097, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Coif of The Five Thunders
-		[18] = { itemID = 22101, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Pauldrons of The Five Thunders
-		[19] = { itemID = 22102, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Vest of The Five Thunders
-		[20] = { itemID = 22095, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Bindings of The Five Thunders
-		[21] = { itemID = 22099, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Gauntlets of The Five Thunders
-		[22] = { itemID = 22098, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Cord of The Five Thunders
-		[23] = { itemID = 22100, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Kilt of The Five Thunders
-		[24] = { itemID = 22096, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Boots of The Five Thunders
+		Name = AL["The Elements"];
+		[1] = { itemID = 16667, desc = "=ds=" .. BabbleBoss["Darkmaster Gandling"] .. " (" .. AL["Scholo"] .. ")", droprate = "2.86%" }; --Coif of Elements
+		[2] = { itemID = 16669, desc = "=ds=" .. BabbleBoss["Gyth"] .. " (" .. AL["UBRS"] .. ")", droprate = "14.77%" }; --Pauldrons of Elements
+		[3] = { itemID = 16666, desc = "=ds=" .. BabbleBoss["General Drakkisath"] .. " (" .. AL["UBRS"] .. ")", droprate = "3.03%" }; --Vest of Elements
+		[4] = { itemID = 16671, desc = "=ds=" .. AL["Trash Mobs"] .. " (" .. AL["Strat"] .. ")", droprate = "1.59%" }; --Bindings of Elements
+		[5] = { itemID = 16672, desc = "=ds=" .. BabbleBoss["Pyroguard Emberseer"] .. " (" .. AL["UBRS"] .. ")", droprate = "14.23%" }; --Gauntlets of Elements
+		[6] = { itemID = 16673, desc = "=ds=" .. AL["Trash Mobs"] .. " (" .. AL["LBRS"] .. ")", droprate = "1.06%" }; --Cord of Elements
+		[7] = { itemID = 16668, desc = "=ds=" .. BabbleBoss["Baron Rivendare"] .. " (" .. AL["Strat"] .. ")", droprate = "3.02%" }; --Kilt of Elements
+		[8] = { itemID = 16670, desc = "=ds=" .. BabbleBoss["Highlord Omokk"] .. " (" .. AL["LBRS"] .. ")", droprate = "9.35%" }; --Boots of Elements
+
 	};
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["WARLOCK"];
-		[1] = { icon = "Spell_Shadow_CurseOfTounges", name = "=q6=#t0s8#", desc = "=ec1=#j6#" };
-		[2] = { itemID = 16698, desc = "=ds=" .. BabbleBoss["Darkmaster Gandling"] .. " (" .. AL["Scholo"] .. ")", droprate = "8.78%" }; --Dreadmist Mask
-		[3] = { itemID = 16701, desc = "=ds=" .. BabbleBoss["Jandice Barov"] .. " (" .. AL["Scholo"] .. ")", droprate = "12.20%" }; --Dreadmist Mantle
-		[4] = { itemID = 16700, desc = "=ds=" .. BabbleBoss["General Drakkisath"] .. " (" .. AL["UBRS"] .. ")", droprate = "8.04%" }; --Dreadmist Robe
-		[5] = { itemID = 16703, desc = "=ds=" .. AL["Trash Mobs"] .. " (" .. AL["LBRS"] .. ")", droprate = "1.68%" }; --Dreadmist Bracers
-		[6] = { itemID = 16705, desc = "=ds=" .. BabbleBoss["Lorekeeper Polkelt"] .. " (" .. AL["Scholo"] .. ")", droprate = "14.54%" }; --Dreadmist Wraps
-		[7] = { itemID = 16702, desc = "=ds=" .. AL["Trash Mobs"] .. " (" .. AL["Strat"] .. ")", droprate = "1.03%" }; --Dreadmist Belt
-		[8] = { itemID = 16699, desc = "=ds=" .. BabbleBoss["Baron Rivendare"] .. " (" .. AL["Strat"] .. ")", droprate = "7.31%" }; --Dreadmist Leggings
-		[9] = { itemID = 16704, desc = "=ds=" .. BabbleBoss["Baroness Anastari"] .. " (" .. AL["Strat"] .. ")", droprate = "13.16%" }; --Dreadmist Sandals
-		[16] = { icon = "Spell_Shadow_CurseOfTounges", name = "=q6=#t05s8#", desc = "=ec1=#j7#" };
-		[17] = { itemID = 22074, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Deathmist Mask
-		[18] = { itemID = 22073, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Deathmist Mantle
-		[19] = { itemID = 22075, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Deathmist Robe
-		[20] = { itemID = 22071, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Deathmist Bracers
-		[21] = { itemID = 22077, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Deathmist Wraps
-		[22] = { itemID = 22070, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Deathmist Belt
-		[23] = { itemID = 22072, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Deathmist Leggings
-		[24] = { itemID = 22076, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Deathmist Sandals
+		Name = AL["Dreadmist Raiment"];
+		[1] = { itemID = 16698, desc = "=ds=" .. BabbleBoss["Darkmaster Gandling"] .. " (" .. AL["Scholo"] .. ")", droprate = "8.78%" }; --Dreadmist Mask
+		[2] = { itemID = 16701, desc = "=ds=" .. BabbleBoss["Jandice Barov"] .. " (" .. AL["Scholo"] .. ")", droprate = "12.20%" }; --Dreadmist Mantle
+		[3] = { itemID = 16700, desc = "=ds=" .. BabbleBoss["General Drakkisath"] .. " (" .. AL["UBRS"] .. ")", droprate = "8.04%" }; --Dreadmist Robe
+		[4] = { itemID = 16703, desc = "=ds=" .. AL["Trash Mobs"] .. " (" .. AL["LBRS"] .. ")", droprate = "1.68%" }; --Dreadmist Bracers
+		[5] = { itemID = 16705, desc = "=ds=" .. BabbleBoss["Lorekeeper Polkelt"] .. " (" .. AL["Scholo"] .. ")", droprate = "14.54%" }; --Dreadmist Wraps
+		[6] = { itemID = 16702, desc = "=ds=" .. AL["Trash Mobs"] .. " (" .. AL["Strat"] .. ")", droprate = "1.03%" }; --Dreadmist Belt
+		[7] = { itemID = 16699, desc = "=ds=" .. BabbleBoss["Baron Rivendare"] .. " (" .. AL["Strat"] .. ")", droprate = "7.31%" }; --Dreadmist Leggings
+		[8] = { itemID = 16704, desc = "=ds=" .. BabbleBoss["Baroness Anastari"] .. " (" .. AL["Strat"] .. ")", droprate = "13.16%" }; --Dreadmist Sandals
+
 	};
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"];
-		[1] = { icon = "INV_Shield_05", name = "=q6=#t0s9#", desc = "=ec1=#j6#" };
-		[2] = { itemID = 16731, desc = "=ds=" .. BabbleBoss["Darkmaster Gandling"] .. " (" .. AL["Scholo"] .. ")", droprate = "6.54%" }; --Helm of Valor
-		[3] = { itemID = 16733, desc = "=ds=" .. BabbleBoss["Warchief Rend Blackhand"] .. " (" .. AL["UBRS"] .. ")", droprate = "13.39%" }; --Spaulders of Valor
-		[4] = { itemID = 16730, desc = "=ds=" .. BabbleBoss["General Drakkisath"] .. " (" .. AL["UBRS"] .. ")", droprate = "5.83%" }; --Breastplate of Valor
-		[5] = { itemID = 16735, desc = "=ds=" .. AL["Trash Mobs"] .. " (" .. AL["LBRS"] .. ")", droprate = "1.49%" }; --Bracers of Valor
-		[6] = { itemID = 16737, desc = "=ds=" .. BabbleBoss["Ramstein the Gorger"] .. " (" .. AL["Strat"] .. ")", droprate = "9.58%" }; --Gauntlets of Valor
-		[7] = { itemID = 16736, desc = "=ds=" .. AL["Trash Mobs"] .. " (" .. AL["LBRS"] .. ")", droprate = "1.96%" }; --Belt of Valor
-		[8] = { itemID = 16732, desc = "=ds=" .. BabbleBoss["Baron Rivendare"] .. " (" .. AL["Strat"] .. ")", droprate = "5.74%" }; --Legplates of Valor
-		[9] = { itemID = 16734, desc = "=ds=" .. BabbleBoss["Kirtonos the Herald"] .. " (" .. AL["Scholo"] .. ")", droprate = "11.12%" }; --Boots of Valor
-		[16] = { icon = "INV_Shield_05", name = "=q6=#t05s9#", desc = "=ec1=#j7#" };
-		[17] = { itemID = 21999, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Helm of Heroism
-		[18] = { itemID = 22001, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Spaulders of Heroism
-		[19] = { itemID = 21997, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Breastplate of Heroism
-		[20] = { itemID = 21996, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Bracers of Heroism
-		[21] = { itemID = 21998, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Gauntlets of Heroism
-		[22] = { itemID = 21994, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Belt of Heroism
-		[23] = { itemID = 22000, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Legplates of Heroism
-		[24] = { itemID = 21995, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };--Boots of Heroism
+		Name = AL["Battlegear of Valor"];
+		[1] = { itemID = 16731, desc = "=ds=" .. BabbleBoss["Darkmaster Gandling"] .. " (" .. AL["Scholo"] .. ")", droprate = "6.54%" }; --Helm of Valor
+		[2] = { itemID = 16733, desc = "=ds=" .. BabbleBoss["Warchief Rend Blackhand"] .. " (" .. AL["UBRS"] .. ")", droprate = "13.39%" }; --Spaulders of Valor
+		[3] = { itemID = 16730, desc = "=ds=" .. BabbleBoss["General Drakkisath"] .. " (" .. AL["UBRS"] .. ")", droprate = "5.83%" }; --Breastplate of Valor
+		[4] = { itemID = 16735, desc = "=ds=" .. AL["Trash Mobs"] .. " (" .. AL["LBRS"] .. ")", droprate = "1.49%" }; --Bracers of Valor
+		[5] = { itemID = 16737, desc = "=ds=" .. BabbleBoss["Ramstein the Gorger"] .. " (" .. AL["Strat"] .. ")", droprate = "9.58%" }; --Gauntlets of Valor
+		[6] = { itemID = 16736, desc = "=ds=" .. AL["Trash Mobs"] .. " (" .. AL["LBRS"] .. ")", droprate = "1.96%" }; --Belt of Valor
+		[7] = { itemID = 16732, desc = "=ds=" .. BabbleBoss["Baron Rivendare"] .. " (" .. AL["Strat"] .. ")", droprate = "5.74%" }; --Legplates of Valor
+		[8] = { itemID = 16734, desc = "=ds=" .. BabbleBoss["Kirtonos the Herald"] .. " (" .. AL["Scholo"] .. ")", droprate = "11.12%" }; --Boots of Valor
+
+	};
+	{
+		Name = "Lightborne";
+		[1] = { itemID = 46567 }; --Lightborne Faceguard
+		[2] = { itemID = 46610 }; --Lightborne Shoulderguards
+		[3] = { itemID = 53162 }; --Lightborne Chestguard
+		[4] = { itemID = 201774 }; --Lightborne Wrists
+		[5] = { itemID = 54110 }; --Lightborne Handguards
+		[6] = { itemID = 202325 }; --Lightborne Cord
+		[7] = { itemID = 53309 }; --Lightborne Legguards
+		[8] = { itemID = 202459 }; --Lightborne Boots
+	};
+	{
+		Name = "Thornheart";
+		[1] = { itemID = 56579 }; --Thornheart Cover
+		[2] = { itemID = 97953 }; --Thornheart Mantle
+		[3] = { itemID = 56730 }; --Thornheart Tunic
+		[4] = { itemID = 54346 }; --Thornheart Bands
+		[5] = { itemID = 98099 }; --Thornheart Gauntlets
+		[6] = { itemID = 54153 }; --Thornheart Sash
+		[7] = { itemID = 98013 }; --Thornheart Leggings
+		[8] = { itemID = 54219 }; --Thornheart Treads
+	};
+	{
+		Name = "Currents";
+		[1] = { itemID = 98718 }; --Headdress of Currents
+		[2] = { itemID = 98761 }; --Shoulderpads of Currents
+		[3] = { itemID = 98805 }; --Tunic of Currents
+		[4] = { itemID = 99537 }; --Bracers of Currents
+		[5] = { itemID = 98938 }; --Gloves of Currents
+		[6] = { itemID = 99494 }; --Belt of Currents
+		[7] = { itemID = 98895 }; --Kilt of Currents
+		[8] = { itemID = 99580 }; --Boots of Currents
+	};
+	{
+		Name = "Bravery";
+		[1] = { itemID = 98389 }; --Faceguard Bravery
+		[2] = { itemID = 98491 }; --Shoulderpads of Bravery
+		[3] = { itemID = 98589 }; --Chestguard of Bravery
+		[4] = { itemID = 136455 }; --Bracers of Bravery
+		[5] = { itemID = 192589 }; --Gauntlets of Bravery
+		[6] = { itemID = 191643 }; --Belt of Bravery
+		[7] = { itemID = 98632 }; --Leggings of Bravery
+		[8] = { itemID = 98675 }; --Stompers of Bravery
+	};
+	{
+		Name = "Courage";
+		[1] = { itemID = 98142 }; --Greathelm of Courage
+		[2] = { itemID = 98185 }; --Pauldrons of Courage
+		[3] = { itemID = 98228 }; --Chestplate of Courage
+		[4] = { itemID = 194184 }; --Bracers of Courage
+		[5] = { itemID = 99167 }; --Gauntlets of Courage
+		[6] = { itemID = 194292 }; --Belt of Courage
+		[7] = { itemID = 98271  }; --Legguards of Courage
+		[8] = { itemID = 98346  }; --Treads of Courage
+	};
+};
+
+AtlasLoot_Data["T0.5"] = {
+	Module = "AtlasLoot_OriginalWoW";
+	Name = "Dungeon Sets Quest Upgrades";
+	Type = "ClassicDungeonExt";
+	{
+		Name = AL["Feralheart Raiment"];
+		[1] = { itemID = 22109, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };  --Feralheart Cowl
+		[2] = { itemID = 22112, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };  --Feralheart Spaulders
+		[3] = { itemID = 22113, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };  --Feralheart Vest
+		[4] = { itemID = 22108, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };  --Feralheart Bracers
+		[5] = { itemID = 22110, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };  --Feralheart Gloves
+		[6] = { itemID = 22106, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };  --Feralheart Belt
+		[7] = { itemID = 22111, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };  --Feralheart Kilt
+		[8] = { itemID = 22107, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };  --Feralheart Boots
+	};
+	{
+		Name = AL["Beastmaster Armor"];  
+		[1] = { itemID = 22013, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };  --Beastmaster's Cap
+		[2] = { itemID = 22016, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };  --Beastmaster's Mantle
+		[3] = { itemID = 22060, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };  --Beastmaster's Tunic
+		[4] = { itemID = 22011, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };  --Beastmaster's Bindings
+		[5] = { itemID = 22015, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };  --Beastmaster's Gloves
+		[6] = { itemID = 22010, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };  --Beastmaster's Belt
+		[7] = { itemID = 22017, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };  --Beastmaster's Pants
+		[8] = { itemID = 22061, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };  --Beastmaster's Boots
+	};
+	{
+		Name = AL["Sorcerer's Regalia"];
+		[1] = { itemID = 22065, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };  --Sorcerer's Crown
+		[2] = { itemID = 22068, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };  --Sorcerer's Mantle
+		[3] = { itemID = 22069, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };  --Sorcerer's Robes
+		[4] = { itemID = 22063, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };  --Sorcerer's Bindings
+		[5] = { itemID = 22066, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };  --Sorcerer's Gloves
+		[6] = { itemID = 22062, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };  --Sorcerer's Belt
+		[7] = { itemID = 22067, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };  --Sorcerer's Leggings
+		[8] = { itemID = 22064, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };  --Sorcerer's Boots
+	};
+	{
+		Name = AL["Soulforge Armor"];  
+		[1] = { itemID = 22091, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };  --Soulforge Helm
+		[2] = { itemID = 22093, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };  --Soulforge Spaulders
+		[3] = { itemID = 22089, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };  --Soulforge Breastplate
+		[4] = { itemID = 22088, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };  --Soulforge Bracers
+		[5] = { itemID = 22090, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };  --Soulforge Gauntlets
+		[6] = { itemID = 22086, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };  --Soulforge Belt
+		[7] = { itemID = 22092, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };  --Soulforge Legplates
+		[8] = { itemID = 22087, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };  --Soulforge Boots
+	};
+	{
+		Name = AL["Vestments of the Virtuous"];  
+		[1] = { itemID = 22080, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };  --Virtuous Crown
+		[2] = { itemID = 22082, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };  --Virtuous Mantle
+		[3] = { itemID = 22083, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };  --Virtuous Robe
+		[4] = { itemID = 22079, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };  --Virtuous Bracers
+		[5] = { itemID = 22081, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };  --Virtuous Gloves
+		[6] = { itemID = 22078, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };  --Virtuous Belt
+		[7] = { itemID = 22085, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };  --Virtuous Skirt
+		[8] = { itemID = 22084, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };  --Virtuous Sandals
+	};
+	{
+		Name = AL["Darkmantle Armor"];
+		[1] = { itemID = 22005, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };  --Darkmantle Cap
+		[2] = { itemID = 22008, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };  --Darkmantle Spaulders
+		[3] = { itemID = 22009, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };  --Darkmantle Tunic
+		[4] = { itemID = 22004, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };  --Darkmantle Bracers
+		[5] = { itemID = 22006, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };  --Darkmantle Gloves
+		[6] = { itemID = 22002, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };  --Darkmantle Belt
+		[7] = { itemID = 22007, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };  --Darkmantle Pants
+		[8] = { itemID = 22003, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };  --Darkmantle Boots
+	};
+	{
+		Name = AL["The Five Thunders"];
+		[1] = { itemID = 22097, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };  --Coif of The Five Thunders
+		[2] = { itemID = 22101, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };  --Pauldrons of The Five Thunders
+		[3] = { itemID = 22102, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };  --Vest of The Five Thunders
+		[4] = { itemID = 22095, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };  --Bindings of The Five Thunders
+		[5] = { itemID = 22099, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };  --Gauntlets of The Five Thunders
+		[6] = { itemID = 22098, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };  --Cord of The Five Thunders
+		[7] = { itemID = 22100, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };  --Kilt of The Five Thunders
+		[8] = { itemID = 22096, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };  --Boots of The Five Thunders
+	};
+	{
+		Name = AL["Deathmist Raiment"];
+		[1] = { itemID = 22074, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };  --Deathmist Mask
+		[2] = { itemID = 22073, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };  --Deathmist Mantle
+		[3] = { itemID = 22075, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };  --Deathmist Robe
+		[4] = { itemID = 22071, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };  --Deathmist Bracers
+		[5] = { itemID = 22077, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };  --Deathmist Wraps
+		[6] = { itemID = 22070, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };  --Deathmist Belt
+		[7] = { itemID = 22072, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };  --Deathmist Leggings
+		[8] = { itemID = 22076, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };  --Deathmist Sandals
+	};
+	{
+		Name = AL["Battlegear of Heroism"];
+		[1] = { itemID = 21999, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };  --Helm of Heroism
+		[2] = { itemID = 22001, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };  --Spaulders of Heroism
+		[3] = { itemID = 21997, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };  --Breastplate of Heroism
+		[4] = { itemID = 21996, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };  --Bracers of Heroism
+		[5] = { itemID = 21998, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };  --Gauntlets of Heroism
+		[6] = { itemID = 21994, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };  --Belt of Heroism
+		[7] = { itemID = 22000, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };  --Legplates of Heroism
+		[8] = { itemID = 21995, [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal };  --Boots of Heroism
 	};
 };
 
@@ -4391,7 +4470,7 @@ AtlasLoot_Data["T1"] = {
 	Name = "Tier 1";
 	Type = "ClassicRaid";
 	{
-		Name = "Druid".." - "..AL["Restoration"];
+		Name = "Druid"..WHITE.." - "..AL["Restoration"];
 		[1] = { itemID = 16834, desc = "=ds=" .. BabbleBoss["Garr"], droprate = "11.51%" }; --Cenarion Helm
 		[2] = { itemID = 16836, desc = "=ds=" .. BabbleBoss["Baron Geddon"], droprate = "19.52%" }; --Cenarion Spaulders
 		[3] = { itemID = 16833, desc = "=ds=" .. BabbleBoss["Golemagg the Incinerator"], droprate = "15.21%" }; --Cenarion Vestments
@@ -4402,7 +4481,7 @@ AtlasLoot_Data["T1"] = {
 		[8] = { itemID = 16829, desc = "=ds=" .. BabbleBoss["Lucifron"], droprate = "10.72%" }; --Cenarion Boots
 	};
 	{
-		Name = "Druid" .. " - Tank";
+		Name = "Druid" ..WHITE.. " - Tank";
 		[1] = { itemID = 13437, desc = "=ds=" .. BabbleBoss["Garr"], droprate = "11.51%" }; --Cenarion Cover
 		[2] = { itemID = 13439, desc = "=ds=" .. BabbleBoss["Baron Geddon"], droprate = "19.52%" }; --Cenarion Pauldrons
 		[3] = { itemID = 13436, desc = "=ds=" .. BabbleBoss["Golemagg the Incinerator"], droprate = "15.21%" }; --Cenarion Tunic
@@ -4435,7 +4514,7 @@ AtlasLoot_Data["T1"] = {
 		[8] = { itemID = 16800, desc = "=ds=" .. BabbleBoss["Lucifron"], droprate = "12.06%" }; --Arcanist Boots
 	};
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"].." - "..AL["Holy"];
+		Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"]..WHITE.." - "..AL["Holy"];
 		[1] = { itemID = 16854, desc = "=ds=" .. BabbleBoss["Garr"], droprate = "7.23%" }; --Lawbringer Helm
 		[2] = { itemID = 16856, desc = "=ds=" .. BabbleBoss["Baron Geddon"], droprate = "12.62%" }; --Lawbringer Spaulders
 		[3] = { itemID = 16853, desc = "=ds=" .. BabbleBoss["Golemagg the Incinerator"], droprate = "9.53%" }; --Lawbringer Chestguard
@@ -4446,7 +4525,7 @@ AtlasLoot_Data["T1"] = {
 		[8] = { itemID = 16859, desc = "=ds=" .. BabbleBoss["Lucifron"], droprate = "7.20%" }; --Lawbringer Boots
 	};
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"].." - "..AL["Protection"];
+		Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"]..WHITE.." - "..AL["Protection"];
 		[1] = { itemID = 11536, desc = "=ds=" .. BabbleBoss["Garr"], droprate = "7.23%" }; --Lawbringer Greathelm
 		[2] = { itemID = 11538, desc = "=ds=" .. BabbleBoss["Baron Geddon"], droprate = "12.62%" }; --Lawbringer Pauldrons
 		[3] = { itemID = 11535, desc = "=ds=" .. BabbleBoss["Golemagg the Incinerator"], droprate = "9.53%" }; --Lawbringer Breastplate
@@ -4479,7 +4558,7 @@ AtlasLoot_Data["T1"] = {
 		[8] = { itemID = 16824, desc = "=ds=" .. BabbleBoss["Shazzrah"], droprate = "15.58%" }; --Nightslayer Boots
 	};
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"].." - "..AL["Restoration"];
+		Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"]..WHITE.." - "..AL["Restoration"];
 		[1] = { itemID = 16842, desc = "=ds=" .. BabbleBoss["Garr"], droprate = "3.91%" }; --Earthfury Helmet
 		[2] = { itemID = 16844, desc = "=ds=" .. BabbleBoss["Baron Geddon"], droprate = "7.29%" }; --Earthfury Epaulets
 		[3] = { itemID = 16841, desc = "=ds=" .. BabbleBoss["Golemagg the Incinerator"], droprate = "6.08%" }; --Earthfury Vestments
@@ -4490,7 +4569,7 @@ AtlasLoot_Data["T1"] = {
 		[8] = { itemID = 16837, desc = "=ds=" .. BabbleBoss["Lucifron"], droprate = "4.16%" }; --Earthfury Boots
 	};
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"].." - "..AL["Enhancement"];
+		Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"]..WHITE.." - "..AL["Enhancement"];
 		[1] = { itemID = 11794, desc = "=ds=" .. BabbleBoss["Garr"], droprate = "3.91%" }; --Earthfury Cover
 		[2] = { itemID = 11796, desc = "=ds=" .. BabbleBoss["Baron Geddon"], droprate = "7.29%" }; --Earthfury Pauldrons
 		[3] = { itemID = 11792, desc = "=ds=" .. BabbleBoss["Golemagg the Incinerator"], droprate = "6.08%" }; --Earthfury Tunic
@@ -4552,7 +4631,7 @@ AtlasLoot_Data["T2"] = {
 		[8] = { itemID = 16898, desc = "=ds=" .. BabbleBoss["Broodlord Lashlayer"] };--Stormrage Boots
 	};
 	{
-		Name = AL["Druid"] .. " - Tank";
+		Name = AL["Druid"] .. WHITE.." - Tank";
 		[1] = { itemID = 1516900, desc = "=ds=" .. BabbleBoss["Onyxia"] };--Stormrage Cover
 		[2] = { itemID = 1516902, desc = "=ds=" .. BabbleBoss["Chromaggus"] };--Stormrage Pauldrons
 		[3] = { itemID = 1516897, desc = "=ds=" .. BabbleBoss["Nefarian"] };--Stormrage Chestguard
@@ -4563,7 +4642,7 @@ AtlasLoot_Data["T2"] = {
 		[8] = { itemID = 1516898, desc = "=ds=" .. BabbleBoss["Broodlord Lashlayer"] };--Stormrage Boots
 	};
 	{
-		Name = AL["Druid"] .. " - DPS";
+		Name = AL["Druid"] .. WHITE.." - DPS";
 		[1] = { itemID = 1516892, desc = "=ds=" .. BabbleBoss["Onyxia"] };--Stormrage Cover
 		[2] = { itemID = 1516894, desc = "=ds=" .. BabbleBoss["Chromaggus"] };--Stormrage Pauldrons
 		[3] = { itemID = 1516889, desc = "=ds=" .. BabbleBoss["Nefarian"] };--Stormrage Chestguard
@@ -4727,7 +4806,7 @@ AtlasLoot_Data["T3"] = {
 	Name = "Tier 3";
 	Type = "ClassicRaid";
 	{
-		Name = AL["Druid"] .. " - Healing";
+		Name = AL["Druid"] .. WHITE.." - Healing";
 		[1] = { itemID = 22490 }; --Dreamwalker Headpiece
 		[2] = { itemID = 22491 }; --Dreamwalker Spaulders
 		[3] = { itemID = 22488 }; --Dreamwalker Tunic
@@ -4739,7 +4818,7 @@ AtlasLoot_Data["T3"] = {
 		[9] = { itemID = 23064 }; --Ring of the Dreamwalker
 	};
 	{
-		Name = AL["Druid"] .. " - Haste";
+		Name = AL["Druid"] .. WHITE.." - Haste";
 		[1] = { itemID = 1522490 }; --Dreamwalker Headpiece
 		[2] = { itemID = 1522491 }; --Dreamwalker Spaulders
 		[3] = { itemID = 1522488 }; --Dreamwalker Tunic
@@ -4751,7 +4830,7 @@ AtlasLoot_Data["T3"] = {
 		[9] = { itemID = 1523064 }; --Ring of the Dreamwalker
 	};
 	{
-		Name = AL["Druid"] .. " - Feral Dps";
+		Name = AL["Druid"] .. WHITE.." - Feral Dps";
 		[1] = { itemID = 1532490 }; --Dreamwalker Headpiece
 		[2] = { itemID = 1532491 }; --Dreamwalker Spaulders
 		[3] = { itemID = 1532488 }; --Dreamwalker Tunic
@@ -4763,7 +4842,7 @@ AtlasLoot_Data["T3"] = {
 		[9] = { itemID = 1533064 }; --Ring of the Dreamwalker
 	};
 	{
-		Name = AL["Druid"] .. " - Tank";
+		Name = AL["Druid"] .. WHITE.." - Tank";
 		[1] = { itemID = 1507037 }; --Dreamwalker Headpiece
 		[2] = { itemID = 1507038 }; --Dreamwalker Spaulders
 		[3] = { itemID = 1507035 }; --Dreamwalker Tunic
@@ -5299,7 +5378,7 @@ AtlasLoot_Data["T2.5"] = {
 		[5] = { itemID = 21355 }; -- =q4=Genesis Boots" 
 	};
 	{
-		Name = AL["Druid"] .. " - Tank";
+		Name = AL["Druid"] .. WHITE.." - Tank";
 		[1] = { itemID = 1507029 }; -- =q4=Genesis Carapace" 
 		[2] = { itemID = 1507025 }; -- =q4=Genesis Mask" 
 		[3] = { itemID = 1507028 }; -- =q4=Genesis Pants" 
@@ -5307,7 +5386,7 @@ AtlasLoot_Data["T2.5"] = {
 		[5] = { itemID = 1507027 }; -- =q4=Genesis Treads" 
 	};
 	{
-		Name = AL["Druid"] .. " - Feral";
+		Name = AL["Druid"] .. WHITE.." - Feral";
 		[1] = { itemID = 1507024 }; -- =q4=Genesis Garb" 
 		[2] = { itemID = 1507020 }; -- =q4=Genesis Visor" 
 		[3] = { itemID = 1507023 }; -- =q4=Genesis Legguards" 
@@ -5576,7 +5655,7 @@ AtlasLoot_Data["AVMisc"] = {
 
 AtlasLoot_Data["AB_A"] = {
 	Module = "AtlasLoot_OriginalWoW";
-	Name = BabbleZone["Arathi Basin"] .. " (Alliance)";
+	Name = BabbleZone["Arathi Basin"] .. WHITE.." (Alliance)";
 	{
 		Name = AL["Misc. Rewards"];
 		[1] = { itemID = 17349, price = "5 #silver# 1 #alliance#" }; --Superior Healing Draught
@@ -5695,7 +5774,7 @@ AtlasLoot_Data["AB_A"] = {
 
 AtlasLoot_Data["AB_H"] = {
 	Module = "AtlasLoot_OriginalWoW";
-	Name = BabbleZone["Arathi Basin"] .. " (Horde)";
+	Name = BabbleZone["Arathi Basin"] .. WHITE.." (Horde)";
 	{
 		Name = AL["Misc. Rewards"];
 		[1] = { itemID = 17349, price = "5 #silver# 5 #horde#" }; --Superior Healing Draught
@@ -5818,7 +5897,7 @@ AtlasLoot_Data["AB_H"] = {
 
 AtlasLoot_Data["WSG_A"] = {
 	Module = "AtlasLoot_OriginalWoW";
-	Name = BabbleZone["Warsong Gulch"] .. " (Alliance)";
+	Name = BabbleZone["Warsong Gulch"] .. WHITE.." (Alliance)";
 	{
 		Name = AL["Misc. Rewards"];
 		[1] = { itemID = 19506, price = "12000 #faction#" }; --Silverwing Battle Tabard
@@ -5904,7 +5983,7 @@ AtlasLoot_Data["WSG_A"] = {
 
 AtlasLoot_Data["WSG_H"] = {
 	Module = "AtlasLoot_OriginalWoW";
-	Name = BabbleZone["Warsong Gulch"] .. " (Horde)";
+	Name = BabbleZone["Warsong Gulch"] .. WHITE.." (Horde)";
 	{
 		Name = AL["Misc. Rewards"];
 		[1] = { itemID = 19505, price = "12000 #faction#" }; --Warsong Battle Tabard
@@ -5995,7 +6074,7 @@ AtlasLoot_Data["PVPDruid"] = {
 	Module = "AtlasLoot_OriginalWoW";
 	Name = AL["Druid"];
 	{
-		Name = AL["Rare Set"] .. " (Alliance)";
+		Name = AL["Rare Set"] .. WHITE..WHITE.." (Alliance)";
 		[1] = { itemID = 16424, price = "9435 #alliance#" }; --Lieutenant Commander's Dragonhide Headguard
 		[2] = { itemID = 16423, price = "6885 #alliance#" }; --Lieutenant Commander's Dragonhide Shoulders
 		[3] = { itemID = 16421, price = "9435 #alliance#" }; --Knight-Captain's Dragonhide Chestpiece
@@ -6004,7 +6083,7 @@ AtlasLoot_Data["PVPDruid"] = {
 		[6] = { itemID = 16393, price = "5000 #alliance#" }; --Knight-Lieutenant's Dragonhide Treads
 	};
 	{
-		Name = AL["Superior Rare Set"] .. " (Alliance)";
+		Name = AL["Superior Rare Set"] .. WHITE..WHITE.." (Alliance)";
 		[1] = { itemID = 23308, price = "24000 #alliance#" }; --Lieutenant Commander's Dragonhide Headguard
 		[2] = { itemID = 23309, price = "14000 #alliance#" }; --Lieutenant Commander's Dragonhide Shoulders
 		[3] = { itemID = 23294, price = "24000 #alliance#" }; --Knight-Captain's Dragonhide Chestpiece
@@ -6013,7 +6092,7 @@ AtlasLoot_Data["PVPDruid"] = {
 		[6] = { itemID = 23281, price = "14000 #alliance#" }; --Knight-Lieutenant's Dragonhide Treads
 	};
 	{
-		Name = AL["Epic Set"] .. " (Alliance)";
+		Name = AL["Epic Set"] .. WHITE..WHITE.." (Alliance)";
 		[1] = { itemID = 16451, price = "68200 #alliance#" }; --Field Marshal's Dragonhide Helmet
 		[2] = { itemID = 16449, price = "52200 #alliance#" }; --Field Marshal's Dragonhide Spaulders
 		[3] = { itemID = 16452, price = "68200 #alliance#" }; --Field Marshal's Dragonhide Breastplate
@@ -6022,7 +6101,7 @@ AtlasLoot_Data["PVPDruid"] = {
 		[6] = { itemID = 16459, price = "52200 #alliance#" }; --Marshal's Dragonhide Boots
 	};
 	{
-		Name = AL["Superior Epic Set"] .. " (Alliance)";
+		Name = AL["Superior Epic Set"] .. WHITE..WHITE.." (Alliance)";
 		[1] = { itemID = 6116550, price = "2370 #arena# #horde#" }; --Grand Marshal's Chain Helm
 		[2] = { itemID = 6116551, price = "1930 #arena# #horde#" }; --Grand Marshal's Chain Spaulders
 		[3] = { itemID = 6116549, price = "2370 #arena# #horde#" }; --Grand Marshal's Chain Breastplate
@@ -6031,7 +6110,7 @@ AtlasLoot_Data["PVPDruid"] = {
 		[6] = { itemID = 6116554, price = "1430 #arena# #horde#" }; --Grand Marshal's Chain Boots
 	};
 	{
-		Name = AL["Rare Set"] .. " (Horde)";
+		Name = AL["Rare Set"] .. WHITE.." (Horde)";
 		[1] = { itemID = 16503, price = "9435 #horde#" }; --Champion's Dragonhide Headguard
 		[2] = { itemID = 16501, price = "6885 #horde#" }; --Champion's Dragonhide Shoulders
 		[3] = { itemID = 16504, price = "9435 #horde#" }; --Legionnaire's Dragonhide Chestpiece
@@ -6040,7 +6119,7 @@ AtlasLoot_Data["PVPDruid"] = {
 		[6] = { itemID = 16494, price = "5000 #horde#" }; --Blood Guard's Dragonhide Treads
 	};
 	{
-		Name = AL["Superior Rare Set"] .. " (Horde)";
+		Name = AL["Superior Rare Set"] .. WHITE.." (Horde)";
 		[1] = { itemID = 23253, price = "24000 #horde#" }; --Champion's Dragonhide Headguard
 		[2] = { itemID = 23254, price = "14000 #horde#" }; --Champion's Dragonhide Shoulders
 		[3] = { itemID = 22877, price = "24000 #horde#" }; --Legionnaire's Dragonhide Chestpiece
@@ -6049,7 +6128,7 @@ AtlasLoot_Data["PVPDruid"] = {
 		[6] = { itemID = 22852, price = "14000 #horde#" }; --Blood Guard's Dragonhide Treads
 	};
 	{
-		Name = AL["Epic Set"] .. " (Horde)";
+		Name = AL["Epic Set"] .. WHITE.." (Horde)";
 		[1] = { itemID = 16550, price = "68200 #horde#" }; --Warlord's Dragonhide Helmet
 		[2] = { itemID = 16551, price = "52200 #horde#" }; --Warlord's Dragonhide Epaulets
 		[3] = { itemID = 16549, price = "68200 #horde#" }; --Warlord's Dragonhide Hauberk
@@ -6058,7 +6137,7 @@ AtlasLoot_Data["PVPDruid"] = {
 		[6] = { itemID = 16554, price = "52200 #horde#" }; --General's Dragonhide Boots
 	};
 	{
-		Name = AL["Superior Epic Set"] .. " (Horde)";
+		Name = AL["Superior Epic Set"] .. WHITE.." (Horde)";
 		[1] = { itemID = 6116451, price = "2370 #arena# #alliance#" }; --High Warlord's Dragonhide Helmet
 		[2] = { itemID = 6116449, price = "1930 #arena# #alliance#" }; --High Warlord's Dragonhide Epaulets
 		[3] = { itemID = 6116452, price = "2370 #arena# #alliance#" }; --High Warlord's Dragonhide Hauberk
@@ -6074,7 +6153,7 @@ AtlasLoot_Data["PVPHunter"] = {
 	Module = "AtlasLoot_OriginalWoW";
 	Name = LOCALIZED_CLASS_NAMES_MALE["HUNTER"];
 	{
-		Name = AL["Rare Set"] .. " (Alliance)";
+		Name = AL["Rare Set"] .. WHITE..WHITE.." (Alliance)";
 		[1] = { itemID = 16428, price = "9435 #alliance#" }; --Lieutenant Commander's Chain Helm
 		[2] = { itemID = 16427, price = "6885 #alliance#" }; --Lieutenant Commander's Chain Shoulders
 		[3] = { itemID = 16425, price = "9435 #alliance#" }; --Knight-Captain's Chain Hauberk
@@ -6083,7 +6162,7 @@ AtlasLoot_Data["PVPHunter"] = {
 		[6] = { itemID = 16401, price = "5000 #alliance#" }; --Knight-Lieutenant's Chain Greaves
 	};
 	{
-		Name = AL["Superior Rare Set"] .. " (Alliance)";
+		Name = AL["Superior Rare Set"] .. WHITE..WHITE.." (Alliance)";
 		[1] = { itemID = 23306, price = "24000 #alliance#" }; --Lieutenant Commander's Chain Helm
 		[2] = { itemID = 23307, price = "14000 #alliance#" }; --Lieutenant Commander's Chain Shoulders
 		[3] = { itemID = 23292, price = "24000 #alliance#" }; --Knight-Captain's Chain Hauberk
@@ -6092,7 +6171,7 @@ AtlasLoot_Data["PVPHunter"] = {
 		[6] = { itemID = 23278, price = "14000 #alliance#" }; --Knight-Lieutenant's Chain Greaves
 	};
 	{
-		Name = AL["Epic Set"] .. " (Alliance)";
+		Name = AL["Epic Set"] .. WHITE..WHITE.." (Alliance)";
 		[1] = { itemID = 16465, price = "68200 #alliance#" }; --Field Marshal's Chain Helm
 		[2] = { itemID = 16468, price = "52200 #alliance#" }; --Field Marshal's Chain Spaulders
 		[3] = { itemID = 16466, price = "68200 #alliance#" }; --Field Marshal's Chain Breastplate
@@ -6101,7 +6180,7 @@ AtlasLoot_Data["PVPHunter"] = {
 		[6] = { itemID = 16462, price = "52200 #alliance#" }; --Marshal's Chain Boots
 	};
 	{
-		Name = AL["Superior Epic Set"] .. " (Alliance)";
+		Name = AL["Superior Epic Set"] .. WHITE..WHITE.." (Alliance)";
 		[1] = { itemID = 6116465, price = "2370 #arena# #alliance#" }; --Grand Marshal's Chain Helm
 		[2] = { itemID = 6116468, price = "1930 #arena# #alliance#" }; --Grand Marshal's Chain Spaulders
 		[3] = { itemID = 6116466, price = "2370 #arena# #alliance#" }; --Grand Marshal's Chain Breastplate
@@ -6110,7 +6189,7 @@ AtlasLoot_Data["PVPHunter"] = {
 		[6] = { itemID = 6116462, price = "1430 #arena# #alliance#" }; --Grand Marshal's Chain Boots
 	};
 	{
-		Name = AL["Rare Set"] .. " (Horde)";
+		Name = AL["Rare Set"] .. WHITE.." (Horde)";
 		[1] = { itemID = 16526, price = "9435 #horde#" }; --Champion's Chain Helm
 		[2] = { itemID = 16528, price = "6885 #horde#" }; --Champion's Chain Shoulders
 		[3] = { itemID = 16525, price = "9435 #horde#" }; --Legionnaire's Chain Hauberk
@@ -6119,7 +6198,7 @@ AtlasLoot_Data["PVPHunter"] = {
 		[6] = { itemID = 16531, price = "5000 #horde#" }; --Blood Guard's Chain Greaves
 	};
 	{
-		Name = AL["Superior Rare Set"] .. " (Horde)";
+		Name = AL["Superior Rare Set"] .. WHITE.." (Horde)";
 		[1] = { itemID = 23251, price = "24000 #horde#" }; --Champion's Chain Helm
 		[2] = { itemID = 23252, price = "14000 #horde#" }; --Champion's Chain Shoulders
 		[3] = { itemID = 22874, price = "24000 #horde#" }; --Legionnaire's Chain Hauberk
@@ -6128,7 +6207,7 @@ AtlasLoot_Data["PVPHunter"] = {
 		[6] = { itemID = 22843, price = "14000 #horde#" }; --Blood Guard's Chain Greaves
 	};
 	{
-		Name = AL["Epic Set"] .. " (Horde)";
+		Name = AL["Epic Set"] .. WHITE.." (Horde)";
 		[1] = { itemID = 16566, price = "68200 #horde#" }; --Warlord's Chain Helmet
 		[2] = { itemID = 16568, price = "52200 #horde#" }; --Warlord's Chain Shoulders
 		[3] = { itemID = 16565, price = "68200 #horde#" }; --Warlord's Chain Chestpiece
@@ -6137,7 +6216,7 @@ AtlasLoot_Data["PVPHunter"] = {
 		[6] = { itemID = 16569, price = "52200 #horde#" }; --General's Chain Boots
 	};
 	{
-		Name = AL["Superior Epic Set"] .. " (Horde)";
+		Name = AL["Superior Epic Set"] .. WHITE.." (Horde)";
 		[1] = { itemID = 6116566, price = "2370 #arena# #horde#" }; --High Warlord's Chain Helmet
 		[2] = { itemID = 6116568, price = "1930 #arena# #horde#" }; --High Warlord's Chain Shoulders
 		[3] = { itemID = 6116565, price = "2370 #arena# #horde#" }; --High Warlord's Chain Chestpiece
@@ -6151,7 +6230,7 @@ AtlasLoot_Data["PVPMage"] = {
 	Module = "AtlasLoot_OriginalWoW";
 	Name = LOCALIZED_CLASS_NAMES_MALE["MAGE"];
 	{
-		Name = AL["Rare Set"] .. " (Alliance)";
+		Name = AL["Rare Set"] .. WHITE..WHITE.." (Alliance)";
 		[1] = { itemID = 16416, price = "9435 #alliance#" }; --Lieutenant Commander's Silk Cowl
 		[2] = { itemID = 16415, price = "6885 #alliance#" }; --Lieutenant Commander's Silk Mantle
 		[3] = { itemID = 16413, price = "9435 #alliance#" }; --Knight-Captain's Silk Tunic
@@ -6160,7 +6239,7 @@ AtlasLoot_Data["PVPMage"] = {
 		[6] = { itemID = 16369, price = "5000 #alliance#" }; --Knight-Lieutenant's Silk Walkers
 	};
 	{
-		Name = AL["Superior Rare Set"] .. " (Alliance)";
+		Name = AL["Superior Rare Set"] .. WHITE..WHITE.." (Alliance)";
 		[1] = { itemID = 23318, price = "24000 #alliance#" }; --Lieutenant Commander's Silk Cowl
 		[2] = { itemID = 23319, price = "14000 #alliance#" }; --Lieutenant Commander's Silk Mantle
 		[3] = { itemID = 23305, price = "24000 #alliance#" }; --Knight-Captain's Silk Tunic
@@ -6169,7 +6248,7 @@ AtlasLoot_Data["PVPMage"] = {
 		[6] = { itemID = 23291, price = "14000 #alliance#" }; --Knight-Lieutenant's Silk Walkers
 	};
 	{
-		Name = AL["Epic Set"] .. " (Alliance)";
+		Name = AL["Epic Set"] .. WHITE..WHITE.." (Alliance)";
 		[1] = { itemID = 16441, price = "68200 #alliance#" }; --Field Marshal's Coronet
 		[2] = { itemID = 16444, price = "52200 #alliance#" }; --Field Marshal's Silk Spaulders
 		[3] = { itemID = 16443, price = "68200 #alliance#" }; --Field Marshal's Silk Vestments
@@ -6178,7 +6257,7 @@ AtlasLoot_Data["PVPMage"] = {
 		[6] = { itemID = 16437, price = "52200 #alliance#" }; --Marshal's Silk Footwraps
 	};
 	{
-		Name = AL["Superior Epic Set"] .. " (Alliance)";
+		Name = AL["Superior Epic Set"] .. WHITE..WHITE.." (Alliance)";
 		[1] = { itemID = 6116441, price = "2370 #arena# #alliance#" }; --Grand Marshal's Coronet
 		[2] = { itemID = 6116444, price = "1930 #arena# #alliance#" }; --Grand Marshal's Silk Spaulders
 		[3] = { itemID = 6116443, price = "2370 #arena# #alliance#" }; --Grand Marshal's Silk Vestments
@@ -6187,7 +6266,7 @@ AtlasLoot_Data["PVPMage"] = {
 		[6] = { itemID = 6116437, price = "1430 #arena# #alliance#" }; --Grand Marshal's Silk Footwraps
 	};
 	{
-		Name = AL["Rare Set"] .. " (Horde)";
+		Name = AL["Rare Set"] .. WHITE.." (Horde)";
 		[1] = { itemID = 16489, price = "9435 #horde#" }; --Champion's Silk Cowl
 		[2] = { itemID = 16492, price = "6885 #horde#" }; --Champion's Silk Mantle
 		[3] = { itemID = 16491, price = "9435 #horde#" }; --Legionnaire's Silk Tunic
@@ -6196,7 +6275,7 @@ AtlasLoot_Data["PVPMage"] = {
 		[6] = { itemID = 16485, price = "5000 #horde#" }; --Blood Guard's Silk Walkers
 	};
 	{
-		Name = AL["Superior Rare Set"] .. " (Horde)";
+		Name = AL["Superior Rare Set"] .. WHITE.." (Horde)";
 		[1] = { itemID = 23263, price = "24000 #horde#" }; --Champion's Silk Cowl
 		[2] = { itemID = 23264, price = "14000 #horde#" }; --Champion's Silk Mantle
 		[3] = { itemID = 22886, price = "24000 #horde#" }; --Legionnaire's Silk Tunic
@@ -6205,7 +6284,7 @@ AtlasLoot_Data["PVPMage"] = {
 		[6] = { itemID = 22860, price = "14000 #horde#" }; --Blood Guard's Silk Walkers
 	};
 	{
-		Name = AL["Epic Set"] .. " (Horde)";
+		Name = AL["Epic Set"] .. WHITE.." (Horde)";
 		[1] = { itemID = 16533, price = "68200 #horde#" }; --Warlord's Silk Cowl
 		[2] = { itemID = 16536, price = "52200 #horde#" }; --Warlord's Silk Amice
 		[3] = { itemID = 16535, price = "68200 #horde#" }; --Warlord's Silk Raiment
@@ -6214,7 +6293,7 @@ AtlasLoot_Data["PVPMage"] = {
 		[6] = { itemID = 16539, price = "52200 #horde#" }; --General's Silk Boots
 	};
 	{
-		Name = AL["Superior Epic Set"] .. " (Horde)";
+		Name = AL["Superior Epic Set"] .. WHITE.." (Horde)";
 		[1] = { itemID = 6116533, price = "2370 #arena# #horde#" }; --High Warlord's Silk Cowl
 		[2] = { itemID = 6116536, price = "1930 #arena# #horde#" }; --High Warlord's Silk Amice
 		[3] = { itemID = 6116535, price = "2370 #arena# #horde#" }; --High Warlord's Silk Raiment
@@ -6228,7 +6307,7 @@ AtlasLoot_Data["PVPPaladin"] = {
 	Module = "AtlasLoot_OriginalWoW";
 	Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"];
 	{
-		Name = AL["Rare Set"] .. " (Alliance)";
+		Name = AL["Rare Set"] .. WHITE..WHITE.." (Alliance)";
 		[1] = { itemID = 16434, price = "9435 #alliance#" }; --Lieutenant Commander's Lamellar Headguard
 		[2] = { itemID = 16436, price = "6885 #alliance#" }; --Lieutenant Commander's Lamellar Shoulders
 		[3] = { itemID = 16433, price = "9435 #alliance#" }; --Knight-Captain's Lamellar Breastplate
@@ -6237,7 +6316,7 @@ AtlasLoot_Data["PVPPaladin"] = {
 		[6] = { itemID = 16409, price = "5000 #alliance#" }; --Knight-Lieutenant's Lamellar Sabatons
 	};
 	{
-		Name = AL["Superior Rare Set"] .. " (Alliance)";
+		Name = AL["Superior Rare Set"] .. WHITE..WHITE.." (Alliance)";
 		[1] = { itemID = 23276, price = "24000 #alliance#" }; --Lieutenant Commander's Lamellar Headguard
 		[2] = { itemID = 23277, price = "14000 #alliance#" }; --Lieutenant Commander's Lamellar Shoulders
 		[3] = { itemID = 23272, price = "24000 #alliance#" }; --Knight-Captain's Lamellar Breastplate
@@ -6246,7 +6325,7 @@ AtlasLoot_Data["PVPPaladin"] = {
 		[6] = { itemID = 23275, price = "14000 #alliance#" }; --Knight-Lieutenant's Lamellar Sabatons
 	};
 	{
-		Name = AL["Epic Set"] .. " (Alliance)";
+		Name = AL["Epic Set"] .. WHITE..WHITE.." (Alliance)";
 		[1] = { itemID = 16474, price = "68200 #alliance#" }; --Field Marshal's Lamellar Faceguard
 		[2] = { itemID = 16476, price = "52200 #alliance#" }; --Field Marshal's Lamellar Pauldrons
 		[3] = { itemID = 16473, price = "68200 #alliance#" }; --Field Marshal's Lamellar Chestplate
@@ -6255,7 +6334,7 @@ AtlasLoot_Data["PVPPaladin"] = {
 		[6] = { itemID = 16472, price = "52200 #alliance#" }; --Marshal's Lamellar Boots
 	};
 	{
-		Name = AL["Superior Epic Set"] .. " (Alliance)";
+		Name = AL["Superior Epic Set"] .. WHITE..WHITE.." (Alliance)";
 		[1] = { itemID = 6116474, price = "2370 #arena# #alliance#" }; --Grand Marshal's Lamellar Faceguard
 		[2] = { itemID = 6116476, price = "1930 #arena# #alliance#" }; --Grand Marshal's Lamellar Pauldrons
 		[3] = { itemID = 6116473, price = "2370 #arena# #alliance#" }; --Grand Marshal's Lamellar Chestplate
@@ -6264,7 +6343,7 @@ AtlasLoot_Data["PVPPaladin"] = {
 		[6] = { itemID = 6116472, price = "1430 #arena# #alliance#" }; --Grand Marshal's Lamellar Boots
 	};
 	{
-		Name = AL["Superior Rare Set"] .. " (Horde)";
+		Name = AL["Superior Rare Set"] .. WHITE.." (Horde)";
 		[1] = { itemID = 29604, price = "24000 #horde#" }; --Champion's Lamellar Headguard
 		[2] = { itemID = 29605, price = "14000 #horde#" }; --Champion's Lamellar Shoulders
 		[3] = { itemID = 29602, price = "24000 #horde#" }; --Legionnaire's Lamellar Breastplate
@@ -6273,7 +6352,7 @@ AtlasLoot_Data["PVPPaladin"] = {
 		[6] = { itemID = 29601, price = "14000 #horde#" }; --Blood Guard's Lamellar Sabatons
 	};
 	{
-		Name = AL["Epic Set"] .. " (Horde)";
+		Name = AL["Epic Set"] .. WHITE.." (Horde)";
 		[1] = { itemID = 29616, price = "68200 #horde#" }; --Warlord's Lamellar Faceguard
 		[2] = { itemID = 29617, price = "52200 #horde#" }; --Warlord's Lamellar Pauldrons
 		[3] = { itemID = 29615, price = "68200 #horde#" }; --Warlord's Lamellar Chestplate
@@ -6282,7 +6361,7 @@ AtlasLoot_Data["PVPPaladin"] = {
 		[6] = { itemID = 29612, price = "52200 #horde#" }; --General's Lamellar Boots
 	};
 	{
-		Name = AL["Superior Epic Set"] .. " (Horde)";
+		Name = AL["Superior Epic Set"] .. WHITE.." (Horde)";
 		[1] = { itemID = 6129616, price = "2370 #arena# #horde#" }; --High Warlord's Lamellar Faceguard
 		[2] = { itemID = 6129617, price = "1930 #arena# #horde#" }; --High Warlord's Lamellar Pauldrons
 		[3] = { itemID = 6129615, price = "2370 #arena# #horde#" }; --High Warlord's Lamellar Chestplate
@@ -6296,7 +6375,7 @@ AtlasLoot_Data["PVPPriest"] = {
 	Module = "AtlasLoot_OriginalWoW";
 	Name = LOCALIZED_CLASS_NAMES_MALE["PRIEST"];
 	{
-		Name = AL["Rare Set"] .. " (Alliance)";
+		Name = AL["Rare Set"] .. WHITE..WHITE.." (Alliance)";
 		[1] = { itemID = 17598, price = "9435 #alliance#" }; --Lieutenant Commander's Satin Hood
 		[2] = { itemID = 17601, price = "6885 #alliance#" }; --Lieutenant Commander's Satin Mantle
 		[3] = { itemID = 17600, price = "9435 #alliance#" }; --Knight-Captain's Satin Tunic
@@ -6305,7 +6384,7 @@ AtlasLoot_Data["PVPPriest"] = {
 		[6] = { itemID = 17594, price = "5000 #alliance#" }; --Knight-Lieutenant's Satin Walkers
 	};
 	{
-		Name = AL["Superior Rare Set"] .. " (Alliance)";
+		Name = AL["Superior Rare Set"] .. WHITE..WHITE.." (Alliance)";
 		[1] = { itemID = 23316, price = "24000 #alliance#" }; --Lieutenant Commander's Satin Hood
 		[2] = { itemID = 23317, price = "14000 #alliance#" }; --Lieutenant Commander's Satin Mantle
 		[3] = { itemID = 23303, price = "24000 #alliance#" }; --Knight-Captain's Satin Tunic
@@ -6314,7 +6393,7 @@ AtlasLoot_Data["PVPPriest"] = {
 		[6] = { itemID = 23289, price = "14000 #alliance#" }; --Knight-Lieutenant's Satin Walkers
 	};
 	{
-		Name = AL["Epic Set"] .. " (Alliance)";
+		Name = AL["Epic Set"] .. WHITE..WHITE.." (Alliance)";
 		[1] = { itemID = 17602, price = "68200 #alliance#" }; --Field Marshal's Headdress
 		[2] = { itemID = 17604, price = "52200 #alliance#" }; --Field Marshal's Satin Mantle
 		[3] = { itemID = 17605, price = "68200 #alliance#" }; --Field Marshal's Satin Vestments
@@ -6323,7 +6402,7 @@ AtlasLoot_Data["PVPPriest"] = {
 		[6] = { itemID = 17607, price = "52200 #alliance#" }; --Marshal's Satin Sandals
 	};
 	{
-		Name = AL["Superior Epic Set"] .. " (Alliance)";
+		Name = AL["Superior Epic Set"] .. WHITE..WHITE.." (Alliance)";
 		[1] = { itemID = 6117602, price = "2370 #arena# #alliance#" }; --Grand Marshal's Headdress
 		[2] = { itemID = 6117604, price = "1930 #arena# #alliance#" }; --Grand Marshal's Satin Mantle
 		[3] = { itemID = 6117605, price = "2370 #arena# #alliance#" }; --Grand Marshal's Satin Vestments
@@ -6332,7 +6411,7 @@ AtlasLoot_Data["PVPPriest"] = {
 		[6] = { itemID = 6117607, price = "1430 #arena# #alliance#" }; --Grand Marshal's Satin Sandals
 	};
 	{
-		Name = AL["Rare Set"] .. " (Horde)";
+		Name = AL["Rare Set"] .. WHITE.." (Horde)";
 		[1] = { itemID = 16489, price = "9435 #horde#" }; --Champion's Satin Hood
 		[2] = { itemID = 16492, price = "6885 #horde#" }; --Champion's Satin Mantle
 		[3] = { itemID = 16491, price = "9435 #horde#" }; --Legionnaire's Satin Tunic
@@ -6341,7 +6420,7 @@ AtlasLoot_Data["PVPPriest"] = {
 		[6] = { itemID = 16485, price = "5000 #horde#" }; --Blood Guard's Satin Walkers
 	};
 	{
-		Name = AL["Superior Rare Set"] .. " (Horde)";
+		Name = AL["Superior Rare Set"] .. WHITE.." (Horde)";
 		[1] = { itemID = 23261, price = "24000 #horde#" }; --Champion's Satin Hood
 		[2] = { itemID = 23262, price = "14000 #horde#" }; --Champion's Satin Mantle
 		[3] = { itemID = 22885, price = "24000 #horde#" }; --Legionnaire's Satin Tunic
@@ -6350,7 +6429,7 @@ AtlasLoot_Data["PVPPriest"] = {
 		[6] = { itemID = 22859, price = "14000 #horde#" }; --Blood Guard's Satin Walkers
 	};
 	{
-		Name = AL["Epic Set"] .. " (Horde)";
+		Name = AL["Epic Set"] .. WHITE.." (Horde)";
 		[1] = { itemID = 17623, price = "68200 #horde#" }; --Warlord's Satin Cowl
 		[2] = { itemID = 17622, price = "52200 #horde#" }; --Warlord's Satin Mantle
 		[3] = { itemID = 17624, price = "68200 #horde#" }; --Warlord's Satin Robes
@@ -6359,7 +6438,7 @@ AtlasLoot_Data["PVPPriest"] = {
 		[6] = { itemID = 17618, price = "52200 #horde#" }; --General's Satin Boots
 	};
 	{
-		Name = AL["Superior Epic Set"] .. " (Horde)";
+		Name = AL["Superior Epic Set"] .. WHITE.." (Horde)";
 		[1] = { itemID = 6117623, price = "2370 #arena# #horde#" }; --High Warlord's Satin Cowl
 		[2] = { itemID = 6117622, price = "1930 #arena# #horde#" }; --High Warlord's Satin Mantle
 		[3] = { itemID = 6117624, price = "2370 #arena# #horde#" }; --High Warlord's Satin Robes
@@ -6374,7 +6453,7 @@ AtlasLoot_Data["PVPRogue"] = {
 	Module = "AtlasLoot_OriginalWoW";
 	Name = LOCALIZED_CLASS_NAMES_MALE["ROGUE"];
 	{
-		Name = AL["Rare Set"] .. " (Alliance)";
+		Name = AL["Rare Set"] .. WHITE..WHITE.." (Alliance)";
 		[1] = { itemID = 16418, price = "9435 #alliance#" }; --Lieutenant Commander's Leather Helm
 		[2] = { itemID = 16420, price = "6885 #alliance#" }; --Lieutenant Commander's Leather Shoulders
 		[3] = { itemID = 16417, price = "9435 #alliance#" }; --Knight-Captain's Leather Chestpiece
@@ -6383,7 +6462,7 @@ AtlasLoot_Data["PVPRogue"] = {
 		[6] = { itemID = 16392, price = "5000 #alliance#" }; --Knight-Lieutenant's Leather Walkers
 	};
 	{
-		Name = AL["Superior Rare Set"] .. " (Alliance)";
+		Name = AL["Superior Rare Set"] .. WHITE..WHITE.." (Alliance)";
 		[1] = { itemID = 23312, price = "24000 #alliance#" }; --Lieutenant Commander's Leather Helm
 		[2] = { itemID = 23313, price = "14000 #alliance#" }; --Lieutenant Commander's Leather Shoulders
 		[3] = { itemID = 23298, price = "24000 #alliance#" }; --Knight-Captain's Leather Chestpiece
@@ -6392,7 +6471,7 @@ AtlasLoot_Data["PVPRogue"] = {
 		[6] = { itemID = 23285, price = "14000 #alliance#" }; --Knight-Lieutenant's Leather Walkers
 	};
 	{
-		Name = AL["Epic Set"] .. " (Alliance)";
+		Name = AL["Epic Set"] .. WHITE..WHITE.." (Alliance)";
 		[1] = { itemID = 16455, price = "68200 #alliance#" }; --Field Marshal's Leather Mask
 		[2] = { itemID = 16457, price = "52200 #alliance#" }; --Field Marshal's Leather Epaulets
 		[3] = { itemID = 16453, price = "68200 #alliance#" }; --Field Marshal's Leather Chestpiece
@@ -6401,7 +6480,7 @@ AtlasLoot_Data["PVPRogue"] = {
 		[6] = { itemID = 16446, price = "52200 #alliance#" }; --Marshal's Leather Footguards
 	};
 	{
-		Name = AL["Superior Epic Set"] .. " (Alliance)";
+		Name = AL["Superior Epic Set"] .. WHITE..WHITE.." (Alliance)";
 		[1] = { itemID = 6116455, price = "2370 #arena# #alliance#" }; --Grand Marshal's Leather Mask
 		[2] = { itemID = 6116457, price = "1930 #arena# #alliance#" }; --Grand Marshal's Leather Epaulets
 		[3] = { itemID = 6116453, price = "2370 #arena# #alliance#" }; --Grand Marshal's Leather Chestpiece
@@ -6410,7 +6489,7 @@ AtlasLoot_Data["PVPRogue"] = {
 		[6] = { itemID = 6116446, price = "1430 #arena# #alliance#" }; --Grand Marshal's Leather Footguards
 	};
 	{
-		Name = AL["Rare Set"] .. " (Horde)";
+		Name = AL["Rare Set"] .. WHITE.." (Horde)";
 		[1] = { itemID = 16506, price = "9435 #horde#" }; --Champion's Leather Helm
 		[2] = { itemID = 16507, price = "6885 #horde#" }; --Champion's Leather Shoulders
 		[3] = { itemID = 16505, price = "9435 #horde#" }; --Legionnaire's Leather Chestpiece
@@ -6419,7 +6498,7 @@ AtlasLoot_Data["PVPRogue"] = {
 		[6] = { itemID = 16498, price = "5000 #horde#" }; --Blood Guard's Leather Walkers
 	};
 	{
-		Name = AL["Superior Rare Set"] .. " (Horde)";
+		Name = AL["Superior Rare Set"] .. WHITE.." (Horde)";
 		[1] = { itemID = 23257, price = "24000 #horde#" }; --Champion's Leather Helm
 		[2] = { itemID = 23258, price = "14000 #horde#" }; --Champion's Leather Shoulders
 		[3] = { itemID = 22879, price = "24000 #horde#" }; --Legionnaire's Leather Chestpiece
@@ -6428,7 +6507,7 @@ AtlasLoot_Data["PVPRogue"] = {
 		[6] = { itemID = 22856, price = "14000 #horde#" }; --Blood Guard's Leather Walkers
 	};
 	{
-		Name = AL["Epic Set"] .. " (Horde)";
+		Name = AL["Epic Set"] .. WHITE.." (Horde)";
 		[1] = { itemID = 16561, price = "68200 #horde#" }; --Warlord's Leather Helm
 		[2] = { itemID = 16562, price = "52200 #horde#" }; --Warlord's Leather Spaulders
 		[3] = { itemID = 16563, price = "68200 #horde#" }; --Warlord's Leather Breastplate
@@ -6437,7 +6516,7 @@ AtlasLoot_Data["PVPRogue"] = {
 		[6] = { itemID = 16558, price = "52200 #horde#" }; --General's Leather Treads
 	};
 	{
-		Name = AL["Superior Epic Set"] .. " (Horde)";
+		Name = AL["Superior Epic Set"] .. WHITE.." (Horde)";
 		[1] = { itemID = 6116561, price = "2370 #arena# #horde#" }; --High Warlord's Leather Helm
 		[2] = { itemID = 6116562, price = "1930 #arena# #horde#" }; --High Warlord's Leather Spaulders
 		[3] = { itemID = 6116563, price = "2370 #arena# #horde#" }; --High Warlord's Leather Breastplate
@@ -6451,7 +6530,7 @@ AtlasLoot_Data["PVPShaman"] = {
 	Module = "AtlasLoot_OriginalWoW";
 	Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"];
 	{
-		Name = AL["Superior Rare Set"] .. " (Alliance)";
+		Name = AL["Superior Rare Set"] .. WHITE..WHITE.." (Alliance)";
 		[1] = { itemID = 29598, price = "24000 #alliance#" }; --Lieutenant Commander's Mail Headguard
 		[2] = { itemID = 29599, price = "14000 #alliance#" }; --Lieutenant Commander's Mail Pauldrons
 		[3] = { itemID = 29596, price = "24000 #alliance#" }; --Knight-Captain's Mail Hauberk
@@ -6460,7 +6539,7 @@ AtlasLoot_Data["PVPShaman"] = {
 		[6] = { itemID = 29594, price = "14000 #alliance#" }; --Knight-Lieutenant's Mail Greaves
 	};
 	{
-		Name = AL["Epic Set"] .. " (Alliance)";
+		Name = AL["Epic Set"] .. WHITE..WHITE.." (Alliance)";
 		[1] = { itemID = 29610, price = "68200 #alliance#" }; --Field Marshal's Mail Helm
 		[2] = { itemID = 29611, price = "52200 #alliance#" }; --Field Marshal's Mail Spaulders
 		[3] = { itemID = 29609, price = "68200 #alliance#" }; --Field Marshal's Mail Armor
@@ -6469,7 +6548,7 @@ AtlasLoot_Data["PVPShaman"] = {
 		[6] = { itemID = 29606, price = "52200 #alliance#" }; --Marshal's Mail Boots
 	};
 	{
-		Name = AL["Superior Epic Set"] .. " (Alliance)";
+		Name = AL["Superior Epic Set"] .. WHITE..WHITE.." (Alliance)";
 		[1] = { itemID = 6129610, price = "2370 #arena# #alliance#" }; --Grand Marshal's Mail Helm
 		[2] = { itemID = 6129611, price = "1930 #arena# #alliance#" }; --Grand Marshal's Mail Spaulders
 		[3] = { itemID = 6129609, price = "2370 #arena# #alliance#" }; --Grand Marshal's Mail Armor
@@ -6478,7 +6557,7 @@ AtlasLoot_Data["PVPShaman"] = {
 		[6] = { itemID = 6129606, price = "1430 #arena# #alliance#" }; --Grand Marshal's Mail Boots
 	};
 	{
-		Name = AL["Rare Set"] .. " (Horde)";
+		Name = AL["Rare Set"] .. WHITE.." (Horde)";
 		[1] = { itemID = 16521, price = "9435 #horde#" }; --Champion's Mail Headguard
 		[2] = { itemID = 16524, price = "6885 #horde#" }; --Champion's Mail Pauldrons
 		[3] = { itemID = 16522, price = "9435 #horde#" }; --Legionnaire's Mail Hauberk
@@ -6487,7 +6566,7 @@ AtlasLoot_Data["PVPShaman"] = {
 		[6] = { itemID = 16518, price = "5000 #horde#" }; --Blood Guard's Mail Greaves
 	};
 	{
-		Name = AL["Superior Rare Set"] .. " (Horde)";
+		Name = AL["Superior Rare Set"] .. WHITE.." (Horde)";
 		[1] = { itemID = 23259, price = "24000 #horde#" }; --Champion's Mail Headguard
 		[2] = { itemID = 23260, price = "14000 #horde#" }; --Champion's Mail Pauldrons
 		[3] = { itemID = 22876, price = "24000 #horde#" }; --Legionnaire's Mail Hauberk
@@ -6496,7 +6575,7 @@ AtlasLoot_Data["PVPShaman"] = {
 		[6] = { itemID = 22857, price = "14000 #horde#" }; --Blood Guard's Mail Greaves
 	};
 	{
-		Name = AL["Epic Set"] .. " (Horde)";
+		Name = AL["Epic Set"] .. WHITE.." (Horde)";
 		[1] = { itemID = 16578, price = "68200 #horde#" }; --Warlord's Mail Helm
 		[2] = { itemID = 16580, price = "52200 #horde#" }; --Warlord's Mail Spaulders
 		[3] = { itemID = 16577, price = "68200 #horde#" }; --Warlord's Mail Armor
@@ -6505,7 +6584,7 @@ AtlasLoot_Data["PVPShaman"] = {
 		[6] = { itemID = 16573, price = "52200 #horde#" }; --General's Mail Boots
 	};
 	{
-		Name = AL["Superior Epic Set"] .. " (Horde)";
+		Name = AL["Superior Epic Set"] .. WHITE.." (Horde)";
 		[1] = { itemID = 6116578, price = "2370 #arena# #horde#" }; --High Warlord's Mail Helm
 		[2] = { itemID = 6116580, price = "1930 #arena# #horde#" }; --High Warlord's Mail Spaulders
 		[3] = { itemID = 6116577, price = "2370 #arena# #horde#" }; --High Warlord's Mail Armor
@@ -6519,7 +6598,7 @@ AtlasLoot_Data["PVPWarlock"] = {
 	Module = "AtlasLoot_OriginalWoW";
 	Name = LOCALIZED_CLASS_NAMES_MALE["WARLOCK"];
 	{
-		Name = AL["Rare Set"] .. " (Alliance)";
+		Name = AL["Rare Set"] .. WHITE..WHITE.." (Alliance)";
 		[1] = { itemID = 17566, price = "9435 #alliance#" }; --Lieutenant Commander's Dreadweave Cowl
 		[2] = { itemID = 17569, price = "6885 #alliance#" }; --Lieutenant Commander's Dreadweave Spaulders
 		[3] = { itemID = 17568, price = "9435 #alliance#" }; --Knight-Captain's Dreadweave Tunic
@@ -6528,7 +6607,7 @@ AtlasLoot_Data["PVPWarlock"] = {
 		[6] = { itemID = 17562, price = "5000 #alliance#" }; --Knight-Lieutenant's Dreadweave Walkers
 	};
 	{
-		Name = AL["Superior Rare Set"] .. " (Alliance)";
+		Name = AL["Superior Rare Set"] .. WHITE..WHITE.." (Alliance)";
 		[1] = { itemID = 23310, price = "24000 #alliance#" }; --Lieutenant Commander's Dreadweave Cowl
 		[2] = { itemID = 23311, price = "14000 #alliance#" }; --Lieutenant Commander's Dreadweave Spaulders
 		[3] = { itemID = 23297, price = "24000 #alliance#" }; --Knight-Captain's Dreadweave Tunic
@@ -6537,7 +6616,7 @@ AtlasLoot_Data["PVPWarlock"] = {
 		[6] = { itemID = 23283, price = "14000 #alliance#" }; --Knight-Lieutenant's Dreadweave Walkers
 	};
 	{
-		Name = AL["Epic Set"] .. " (Alliance)";
+		Name = AL["Epic Set"] .. WHITE.." (Alliance)";
 		[1] = { itemID = 6117578, price = "2370 #arena# #alliance#" }; --Grand Marshal's Coronal
 		[2] = { itemID = 6117580, price = "1930 #arena# #alliance#" }; --Grand Marshal's Dreadweave Shoulders
 		[3] = { itemID = 6117581, price = "2370 #arena# #alliance#" }; --Grand Marshal's Dreadweave Robe
@@ -6546,7 +6625,7 @@ AtlasLoot_Data["PVPWarlock"] = {
 		[6] = { itemID = 6117583, price = "1430 #arena# #alliance#" }; --Grand Marshal's Dreadweave Boots
 	};
 	{
-		Name = AL["Superior Epic Set"] .. " (Alliance)";
+		Name = AL["Superior Epic Set"] .. WHITE.." (Alliance)";
 		[1] = { itemID = 17578, price = "68200 #alliance#" }; --Field Marshal's Coronal
 		[2] = { itemID = 17580, price = "52200 #alliance#" }; --Field Marshal's Dreadweave Shoulders
 		[3] = { itemID = 17581, price = "68200 #alliance#" }; --Field Marshal's Dreadweave Robe
@@ -6555,7 +6634,7 @@ AtlasLoot_Data["PVPWarlock"] = {
 		[6] = { itemID = 17583, price = "52200 #alliance#" }; --Marshal's Dreadweave Boots
 	};
 	{
-		Name = AL["Rare Set"] .. " (Horde)";
+		Name = AL["Rare Set"] .. WHITE.." (Horde)";
 		[1] = { itemID = 17570, price = "9435 #horde#" }; --Champion's Dreadweave Cowl
 		[2] = { itemID = 17573, price = "6885 #horde#" }; --Champion's Dreadweave Spaulders
 		[3] = { itemID = 17572, price = "9435 #horde#" }; --Legionnaire's Dreadweave Tunic
@@ -6564,7 +6643,7 @@ AtlasLoot_Data["PVPWarlock"] = {
 		[6] = { itemID = 17576, price = "5000 #horde#" }; --Blood Guard's Dreadweave Walkers
 	};
 	{
-		Name = AL["Superior Rare Set"] .. " (Horde)";
+		Name = AL["Superior Rare Set"] .. WHITE.." (Horde)";
 		[1] = { itemID = 23255, price = "24000 #horde#" }; --Champion's Dreadweave Cowl
 		[2] = { itemID = 23256, price = "14000 #horde#" }; --Champion's Dreadweave Spaulders
 		[3] = { itemID = 22884, price = "24000 #horde#" }; --Legionnaire's Dreadweave Tunic
@@ -6573,7 +6652,7 @@ AtlasLoot_Data["PVPWarlock"] = {
 		[6] = { itemID = 22855, price = "14000 #horde#" }; --Blood Guard's Dreadweave Walkers
 	};
 	{
-		Name = AL["Epic Set"] .. " (Horde)";
+		Name = AL["Epic Set"] .. WHITE.." (Horde)";
 		[1] = { itemID = 17591, price = "68200 #horde#" }; --Warlord's Dreadweave Hood
 		[2] = { itemID = 17590, price = "52200 #horde#" }; --Warlord's Dreadweave Mantle
 		[3] = { itemID = 17592, price = "68200 #horde#" }; --Warlord's Dreadweave Robe
@@ -6582,7 +6661,7 @@ AtlasLoot_Data["PVPWarlock"] = {
 		[6] = { itemID = 17586, price = "52200 #horde#" }; --General's Dreadweave Boots
 	};
 	{
-		Name = AL["Superior Epic Set"] .. " (Horde)";
+		Name = AL["Superior Epic Set"] .. WHITE.." (Horde)";
 		[1] = { itemID = 6117591, price = "2370 #arena# #horde#" }; --High Warlord's Dreadweave Hood
 		[2] = { itemID = 6117590, price = "1930 #arena# #horde#" }; --High Warlord's Dreadweave Mantle
 		[3] = { itemID = 6117592, price = "2370 #arena# #horde#" }; --High Warlord's Dreadweave Robe
@@ -6596,7 +6675,7 @@ AtlasLoot_Data["PVPWarrior"] = {
 	Module = "AtlasLoot_OriginalWoW";
 	Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"];
 	{
-		Name = AL["Rare Set"] .. " (Alliance)";
+		Name = AL["Rare Set"] .. WHITE.." (Alliance)";
 		[1] = { itemID = 16429, price = "9435 #alliance#" }; --Lieutenant Commander's Plate Helm
 		[2] = { itemID = 16432, price = "6885 #alliance#" }; --Lieutenant Commander's Plate Shoulders
 		[3] = { itemID = 16430, price = "9435 #alliance#" }; --Knight-Captain's Plate Hauberk
@@ -6605,7 +6684,7 @@ AtlasLoot_Data["PVPWarrior"] = {
 		[6] = { itemID = 16405, price = "5000 #alliance#" }; --Knight-Lieutenant's Plate Greaves
 	};
 	{
-		Name = AL["Superior Rare Set"] .. " (Alliance)";
+		Name = AL["Superior Rare Set"] .. WHITE.." (Alliance)";
 		[1] = { itemID = 23314, price = "24000 #alliance#" }; --Lieutenant Commander's Plate Helm
 		[2] = { itemID = 23315, price = "14000 #alliance#" }; --Lieutenant Commander's Plate Shoulders
 		[3] = { itemID = 23300, price = "24000 #alliance#" }; --Knight-Captain's Plate Hauberk
@@ -6614,7 +6693,7 @@ AtlasLoot_Data["PVPWarrior"] = {
 		[6] = { itemID = 23287, price = "14000 #alliance#" }; --Knight-Lieutenant's Plate Greaves
 	};
 	{
-		Name = AL["Epic Set"] .. " (Alliance)";
+		Name = AL["Epic Set"] .. WHITE.." (Alliance)";
 		[1] = { itemID = 16478, price = "68200 #alliance#" }; --Field Marshal's Plate Helm
 		[2] = { itemID = 16480, price = "52200 #alliance#" }; --Field Marshal's Plate Shoulderguards
 		[3] = { itemID = 16477, price = "68200 #alliance#" }; --Field Marshal's Plate Armor
@@ -6623,7 +6702,7 @@ AtlasLoot_Data["PVPWarrior"] = {
 		[6] = { itemID = 16483, price = "52200 #alliance#" }; --Marshal's Plate Boots
 	};
 	{
-		Name = AL["Superior Epic Set"] .. " (Alliance)";
+		Name = AL["Superior Epic Set"] .. WHITE.." (Alliance)";
 		[1] = { itemID = 6116478, price = "2370 #arena# #alliance#" }; --Grand Marshal's Plate Helm
 		[2] = { itemID = 6116480, price = "1930 #arena# #alliance#" }; --Grand Marshal's Plate Shoulderguards
 		[3] = { itemID = 6116477, price = "2370 #arena# #alliance#" }; --Grand Marshal's Plate Armor
@@ -6632,7 +6711,7 @@ AtlasLoot_Data["PVPWarrior"] = {
 		[6] = { itemID = 6116483, price = "1430 #arena# #alliance#" }; --Grand Marshal's Plate Boots
 	};
 	{
-		Name = AL["Rare Set"] .. " (Horde)";
+		Name = AL["Rare Set"] .. WHITE.." (Horde)";
 		[1] = { itemID = 16514, price = "9435 #horde#" }; --Champion's Plate Helm
 		[2] = { itemID = 16516, price = "6885 #horde#" }; --Champion's Plate Shoulders
 		[3] = { itemID = 16513, price = "9435 #horde#" }; --Legionnaire's Plate Hauberk
@@ -6641,7 +6720,7 @@ AtlasLoot_Data["PVPWarrior"] = {
 		[6] = { itemID = 16509, price = "5000 #horde#" }; --Blood Guard's Plate Greaves
 	};
 	{
-		Name = AL["Superior Rare Set"] .. " (Horde)";
+		Name = AL["Superior Rare Set"] .. WHITE.." (Horde)";
 		[1] = { itemID = 23244, price = "24000 #horde#" }; --Champion's Plate Helm
 		[2] = { itemID = 23243, price = "14000 #horde#" }; --Champion's Plate Shoulders
 		[3] = { itemID = 22872, price = "24000 #horde#" }; --Legionnaire's Plate Hauberk
@@ -6650,7 +6729,7 @@ AtlasLoot_Data["PVPWarrior"] = {
 		[6] = { itemID = 22858, price = "14000 #horde#" }; --Blood Guard's Plate Greaves
 	};
 	{
-		Name = AL["Epic Set"] .. " (Horde)";
+		Name = AL["Epic Set"] .. WHITE.." (Horde)";
 		[1] = { itemID = 16542, price = "68200 #horde#" }; --Warlord's Plate Headpiece
 		[2] = { itemID = 16544, price = "52200 #horde#" }; --Warlord's Plate Shoulders
 		[3] = { itemID = 16541, price = "68200 #horde#" }; --Warlord's Plate Armor
@@ -6659,7 +6738,7 @@ AtlasLoot_Data["PVPWarrior"] = {
 		[6] = { itemID = 16545, price = "52200 #horde#" }; --General's Plate Boots
 	};
 	{
-		Name = AL["Superior Epic Set"] .. " (Horde)";
+		Name = AL["Superior Epic Set"] .. WHITE.." (Horde)";
 		[1] = { itemID = 6116542, price = "2370 #arena# #horde#" }; --High Warlord's Plate Headpiece
 		[2] = { itemID = 6116544, price = "1930 #arena# #horde#" }; --High Warlord's Plate Shoulders
 		[3] = { itemID = 6116541, price = "2370 #arena# #horde#" }; --High Warlord's Plate Armor

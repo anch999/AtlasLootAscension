@@ -682,14 +682,17 @@ AtlasLoot_Data["BlackTemple"] = {
 		[13] = { itemID = 32257 }; --Idol of the White Stag
 		[16] = { itemID = 32943 }; --Swiftsteel Bludgeon
 		[17] = { itemID = 34011 }; --Illidari Runeshield
-		[19] = { itemID = 32228 }; --Empyrean Sapphire
-		[20] = { itemID = 32231 }; --Pyrestone
-		[21] = { itemID = 32229 }; --Lionseye
-		[22] = { itemID = 32249 }; --Seaspray Emerald
-		[23] = { itemID = 32230 }; --Shadowsong Amethyst
-		[24] = { itemID = 32227 }; --Crimson Spinel
-		[26] = { itemID = 32428, droprate = "6%" }; --Heart of Darkness
-		[27] = { itemID = 32897, droprate = "7%" }; --Mark of the Illidari
+		[18] = { itemID = 15900 }; --Finkle's Vibroblade
+		[19] = { itemID = 15951 }; --Reaver Cleaver
+		[20] = { itemID = 15952 }; --The Taskmaster
+		[22] = { itemID = 32228 }; --Empyrean Sapphire
+		[23] = { itemID = 32231 }; --Pyrestone
+		[24] = { itemID = 32229 }; --Lionseye
+		[25] = { itemID = 32249 }; --Seaspray Emerald
+		[26] = { itemID = 32230 }; --Shadowsong Amethyst
+		[27] = { itemID = 32227 }; --Crimson Spinel
+		[29] = { itemID = 32428, droprate = "6%" }; --Heart of Darkness
+		[30] = { itemID = 32897, droprate = "7%" }; --Mark of the Illidari
 	};
 	{
 		Name = "BT Patterns/Plans";
