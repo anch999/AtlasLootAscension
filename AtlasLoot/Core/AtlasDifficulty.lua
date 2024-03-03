@@ -34,6 +34,7 @@
             {"Mythic", 5},
             {"Ascended", 4},
             {"Bloodforged", 1},
+            {"Heroic Bloodforged", 100},
     };
 
     AtlasLoot.Difficultys["BCDungeon"] = {
@@ -56,6 +57,7 @@
         {"Mythic", 5},
         {"Ascended", 4},
         {"Bloodforged", 1},
+        {"Heroic Bloodforged", 100},
      };
 
      AtlasLoot.Difficultys["WrathDungeon"] = {
@@ -74,6 +76,7 @@
         {"Mythic", 4},
         {"Ascended", 5},
         {"Bloodforged", 1},
+        {"Heroic Bloodforged", 100},
      };
 
      AtlasLoot.Difficultys["Crafting"] = {
@@ -101,6 +104,7 @@
     AtlasLoot.Difficultys.Heroic = 3;
     AtlasLoot.Difficultys.Mythic = 4;
     AtlasLoot.Difficultys.Ascended = 4;
+    AtlasLoot.Difficultys["Heroic Bloodforged"] = 100;
 
     AtlasLoot.Difficultys.MythicPlus = {
         5, 6, 7, 8, 9, 10, 11, 12, 13, 14,

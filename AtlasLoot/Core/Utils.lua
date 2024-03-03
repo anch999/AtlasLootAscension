@@ -124,6 +124,9 @@ On the form of {ID, {normal, heroic, mythic, mythic1, mythic2, ... ,mythicN}}
 ]]
 function AtlasLoot:FindId(id, difficulty, type, sourceType)
 	if not ItemIDsDatabase[id] then return nil, false end
+	if difficulty == 100 then
+		return ItemIDsDatabase[id]["HeroicBloodforged"], true
+	end
 	if (difficulty == 4 and (type == "BCRaid" or type == "ClassicRaid") and sourceType == "Search") or
 	(difficulty == 5 and (type == "BCRaid" or type == "ClassicRaid") and sourceType ~= "Search") then
 		return ItemIDsDatabase[id]["MythicRaid"], true

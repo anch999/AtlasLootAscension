@@ -1222,6 +1222,7 @@ function AtlasLoot:LoadItemIDsDatabase()
 			ItemIDsDatabase[data.Normal] = {}
 			ItemIDsDatabase[data.Normal]["MythicRaid"] = tonumber("13"..data.Normal)
 			table.insert(ItemIDsDatabase[data.Normal],data.Bloodforged)
+			table.insert(ItemIDsDatabase[data.Normal],data.HeroicBloodforged)
 			table.insert(ItemIDsDatabase[data.Normal],data.Normal)
 			if data.Heroic ~= 0 then table.insert(ItemIDsDatabase[data.Normal],data.Heroic) end
 				for _,v in ipairs(data["Mythic"]) do

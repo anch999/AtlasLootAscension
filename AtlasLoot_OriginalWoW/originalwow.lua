@@ -4878,7 +4878,7 @@ AtlasLoot_Data["T3"] = {
 		[9] = { itemID = 23062 }; --Frostfire Ring
 	};
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"] .. " - Healing";
+		Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"] .. WHITE.. " - Healing";
 		[1] = { itemID = 22428 }; --Redemption Headpiece
 		[2] = { itemID = 22429 }; --Redemption Spaulders
 		[3] = { itemID = 22425 }; --Redemption Tunic
@@ -4890,7 +4890,7 @@ AtlasLoot_Data["T3"] = {
 		[9] = { itemID = 23066 }; --Ring of Redemption
 	};
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"] .. " - Dps";
+		Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"] .. WHITE.. " - Dps";
 		[1] = { itemID = 1532428 }; --Redemption Headpiece
 		[2] = { itemID = 1532429 }; --Redemption Spaulders
 		[3] = { itemID = 1532425 }; --Redemption Tunic
@@ -4902,7 +4902,7 @@ AtlasLoot_Data["T3"] = {
 		[9] = { itemID = 1533066 }; --Ring of Redemption
 	};
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"] .. " - Tank";
+		Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"] .. WHITE.. " - Tank";
 		[1] = { itemID = 1522428 }; --Redemption Headpiece
 		[2] = { itemID = 1522429 }; --Redemption Spaulders
 		[3] = { itemID = 1522425 }; --Redemption Tunic
@@ -4914,7 +4914,7 @@ AtlasLoot_Data["T3"] = {
 		[9] = { itemID = 1523066 }; --Ring of Redemption
 	};
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["PRIEST"] .. " - Healing";
+		Name = LOCALIZED_CLASS_NAMES_MALE["PRIEST"] .. WHITE.. " - Healing";
 		[1] = { itemID = 22514 }; --Circlet of Faith
 		[2] = { itemID = 22515 }; --Shoulderpads of Faith
 		[3] = { itemID = 22512 }; --Robe of Faith
@@ -4926,7 +4926,7 @@ AtlasLoot_Data["T3"] = {
 		[9] = { itemID = 23061 }; --Ring of Faith
 	};
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["PRIEST"] .. " - Dps";
+		Name = LOCALIZED_CLASS_NAMES_MALE["PRIEST"] .. WHITE.. " - Dps";
 		[1] = { itemID = 1522514 }; --Circlet of Faith
 		[2] = { itemID = 1522515 }; --Shoulderpads of Faith
 		[3] = { itemID = 1522512 }; --Robe of Faith
@@ -4950,7 +4950,7 @@ AtlasLoot_Data["T3"] = {
 		[9] = { itemID = 23060 }; --Bonescythe Ring
 	};
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"] .. " - Enhancement";
+		Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"] .. WHITE.. " - Enhancement";
 		[1] = { itemID = 22466 }; --Earthshatter Headpiece
 		[2] = { itemID = 22467 }; --Earthshatter Spaulders
 		[3] = { itemID = 22464 }; --Earthshatter Tunic
@@ -4962,7 +4962,7 @@ AtlasLoot_Data["T3"] = {
 		[9] = { itemID = 23065 }; --Ring of the Earthshatterer
 	};
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"] .. " - Spell";
+		Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"] .. WHITE.. " - Spell";
 		[1] = { itemID = 1522466 }; --Earthshatter Headpiece
 		[2] = { itemID = 1522467 }; --Earthshatter Spaulders
 		[3] = { itemID = 1522464 }; --Earthshatter Tunic
@@ -4986,7 +4986,7 @@ AtlasLoot_Data["T3"] = {
 		[9] = { itemID = 23063 }; --Plagueheart Ring
 	};
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"] .. " - Block Tank";
+		Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"] .. WHITE.. " - Block Tank";
 		[1] = { itemID = 22418 }; --Dreadnaught Helmet
 		[2] = { itemID = 22419 }; --Dreadnaught Pauldrons
 		[3] = { itemID = 22416 }; --Dreadnaught Breastplate
@@ -4998,7 +4998,7 @@ AtlasLoot_Data["T3"] = {
 		[9] = { itemID = 23059 }; --Ring of the Dreadnaught
 	};
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"] .. " - Parry Tank";
+		Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"] .. WHITE.. " - Parry Tank";
 		[1] = { itemID = 1522418 }; --Dreadnaught Helmet
 		[2] = { itemID = 1522419 }; --Dreadnaught Pauldrons
 		[3] = { itemID = 1522416 }; --Dreadnaught Breastplate
@@ -5010,7 +5010,7 @@ AtlasLoot_Data["T3"] = {
 		[9] = { itemID = 1523059 }; --Ring of the Dreadnaught
 	};
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"] .. " - DPS";
+		Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"] .. WHITE.. " - DPS";
 		[1] = { itemID = 10490 }; --Dreadborne Helmet
 		[2] = { itemID = 10491 }; --Dreadborne Pauldrons
 		[3] = { itemID = 10488 }; --Dreadborne Breastplate

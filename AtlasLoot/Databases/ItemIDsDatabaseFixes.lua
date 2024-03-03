@@ -96,20 +96,20 @@ ItemIDsDatabase[1516965] = { 7516965, 1516965, 1816965, MythicRaid = 2816965, 17
 
 --Tier 3 Missing Sets
 
-ItemIDsDatabase[1522418] = { 7522515, 1522515, 1822515, MythicRaid = 2822515, 1722515 }
+ItemIDsDatabase[1522418] = { 7522515, 1522418, 1822418, MythicRaid = 2822418, 1722418 }
 ItemIDsDatabase[1522419] = { 7522419, 1522419, 1822419, MythicRaid = 2822419, 1722419 }
-ItemIDsDatabase[1522416] = { 7522491, 1522491, 1822491, MythicRaid = 2822491, 1722491 }
-ItemIDsDatabase[1522423] = { 7532491, 1532491, 1832491, MythicRaid = 2832491, 1732491 }
-ItemIDsDatabase[1522421] = { 7507038, 1507038, 1807038, MythicRaid = 2807038, 1707038 }
-ItemIDsDatabase[1522422] = { 7522467, 1522467, 1822467, MythicRaid = 2822467, 1722467 }
-ItemIDsDatabase[1522417] = { 7532429, 1532429, 1832429, MythicRaid = 2832429, 1732429 }
-ItemIDsDatabase[1522420] = { 7532428, 1532428, 1832428, MythicRaid = 2832428, 1732428 }
-ItemIDsDatabase[1522466] = { 7522429, 1522429, 1822429, MythicRaid = 2822429, 1722429 }
+ItemIDsDatabase[1522416] = { 7522491, 1522416, 1822416, MythicRaid = 2822416, 1722416 }
+ItemIDsDatabase[1522423] = { 7532491, 1522423, 1822423, MythicRaid = 2822423, 1722423 }
+ItemIDsDatabase[1522421] = { 7507038, 1522421, 1822421, MythicRaid = 2822421, 1722421 }
+ItemIDsDatabase[1522422] = { 7522467, 1522422, 1822422, MythicRaid = 2822422, 1722422 }
+ItemIDsDatabase[1522417] = { 7532429, 1522417, 1822417, MythicRaid = 2822417, 1722417 }
+ItemIDsDatabase[1522420] = { 7532428, 1522420, 1822420, MythicRaid = 2822420, 1722420 }
+ItemIDsDatabase[1522466] = { 7522429, 1522466, 1822466, MythicRaid = 2822466, 1722466 }
 
-ItemIDsDatabase[1522467] = { 7522418, 1522418, 1822418, MythicRaid = 2822418, 1722418 }
-ItemIDsDatabase[1522464] = { 7507037, 1507037, 1807037, MythicRaid = 2807037, 1707037 }
-ItemIDsDatabase[1522471] = { 7532490, 1532490, 1832490, MythicRaid = 2832490, 1732490 }
-ItemIDsDatabase[1522469] = { 7522490, 1522490, 1822490, MythicRaid = 2822490, 1722490 }
+ItemIDsDatabase[1522467] = { 7522418, 1522467, 1822467, MythicRaid = 2822467, 1722467 }
+ItemIDsDatabase[1522464] = { 7507037, 1522464, 1822464, MythicRaid = 2822464, 1722464 }
+ItemIDsDatabase[1522471] = { 7532490, 1522471, 1822471, MythicRaid = 2822471, 1722471 }
+ItemIDsDatabase[1522469] = { 7522490, 1522469, 1822469, MythicRaid = 2822469, 1722469 }
 ItemIDsDatabase[1522470] = { 7522470, 1522470, 1822470, MythicRaid = 2822470, 1722470 }
 ItemIDsDatabase[1522465] = { 7522465, 1522465, 1822465, MythicRaid = 2822465, 1722465 }
 ItemIDsDatabase[1522468] = { 7522468, 1522468, 1822468, MythicRaid = 2822468, 1722468 }
@@ -585,5 +585,8 @@ ItemIDsDatabase[33648] = {6033648, 33648, 333648, 233648, MythicRaid = 1333648};
 for _, v in pairs(ItemIDsDatabase) do
     if not v["MythicRaid"] then
         v["MythicRaid"] = tonumber("13"..v[2])
+    end
+    if not v["HeroicBloodforged"] then
+        v["HeroicBloodforged"] = tonumber("63"..v[2])
     end
 end
