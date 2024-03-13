@@ -695,6 +695,18 @@ AtlasLoot_Data["BlackTemple"] = {
 		[30] = { itemID = 32897, droprate = "7%" }; --Mark of the Illidari
 	};
 	{
+		Name = "Reputation Trinkets";
+		[1] = { itemID = 32486 }; --Ashtongue Talisman of Equilibrium
+		[2] = { itemID = 32487 }; --Ashtongue Talisman of Swiftness
+		[3] = { itemID = 32488 }; --Ashtongue Talisman of Insight
+		[4] = { itemID = 32489 }; --Ashtongue Talisman of Zeal
+		[5] = { itemID = 32490 }; --Ashtongue Talisman of Acumen
+		[6] = { itemID = 32492 }; --Ashtongue Talisman of Lethality
+		[7] = { itemID = 32491 }; --Ashtongue Talisman of Vision
+		[8] = { itemID = 32493 }; --Ashtongue Talisman of Shadows
+		[9] = { itemID = 32485 }; --Ashtongue Talisman of Valor
+	};
+	{
 		Name = "BT Patterns/Plans";
 		[1] = { itemID = 32738 };
 		[2] = { itemID = 32739 };
@@ -3085,6 +3097,7 @@ AtlasLoot_Data["ZulAman"] = {
 AtlasLoot_Data["Ashtongue"] = {
 	Module = "AtlasLoot_BurningCrusade";
 	Name = BabbleFaction["Ashtongue Deathsworn"];
+	Type = "BCRaid";
 	{
 		Name = BabbleFaction["Friendly"];
 		[1] = { itemID = 32444 }; --=q1=Plans: Shadesteel Girdle" 
