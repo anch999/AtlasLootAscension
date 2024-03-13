@@ -453,9 +453,9 @@ function AtlasLoot:CreateToken(dataID)
 end
 
 --Creates a sorted and consolidated loottable of all of an xpacs dungeon loot
-function AtlasLoot:CreateOnDemandLootTable(type)
+function AtlasLoot:CreateOnDemandLootTable(typeL)
 	-- Return and show loot table if its already been created
-	if AtlasLoot_OnDemand and AtlasLoot_OnDemand[type] then return self:ShowItemsFrame(type, "AtlasLoot_OnDemand", 1) end
+	if AtlasLoot_OnDemand and AtlasLoot_OnDemand[typeL] then return self:ShowItemsFrame(typeL, "AtlasLoot_OnDemand", 1) end
 	-- Create ondemand loot table if it dosnt exist
 	if not AtlasLoot_OnDemand then AtlasLoot_OnDemand = {} end
 
@@ -489,7 +489,7 @@ function AtlasLoot:CreateOnDemandLootTable(type)
 		if firstLoad then
 			self:ShowItemsFrame(AtlasLootItemsFrame.refresh[1], AtlasLootItemsFrame.refresh[2], AtlasLootItemsFrame.refresh[3])
 		else
-			self:ShowItemsFrame(type, "AtlasLoot_OnDemand", 1)
+			self:ShowItemsFrame(typeL, "AtlasLoot_OnDemand", 1)
 			firstLoad = true
 		end
 	end
@@ -504,18 +504,18 @@ function AtlasLoot:CreateOnDemandLootTable(type)
 		else
 			tinsert(unsorted[armorSubType]["Misc"], {item, armorType})
 		end
-		AtlasLoot_OnDemand[type] = {Name = "All Dungeon Items", Type = type, filter = true }
+		AtlasLoot_OnDemand[typeL] = {Name = "All Dungeon Items", Type = typeL, filter = true }
 
 		for aType, v in pairs(unsorted) do
 			for eLoc, t in pairs(v) do
 				for i, items in ipairs(t) do
 					local name = equipSlot[getEquip(eLoc)] and aType.." "..items[2].." - "..equipSlot[getEquip(eLoc)] or aType
 					if #t > 30 and (i == 1 or i == 31 or i == 61 or i == 91)  then
-						tinsert(AtlasLoot_OnDemand[type],{Name = correctText(name)..WHITE.." - Page".. math.ceil(i/30) })
+						tinsert(AtlasLoot_OnDemand[typeL],{Name = correctText(name)..WHITE.." - Page".. math.ceil(i/30) })
 					elseif i == 1 then
-						tinsert(AtlasLoot_OnDemand[type],{Name = correctText(name)})
+						tinsert(AtlasLoot_OnDemand[typeL],{Name = correctText(name)})
 					end
-					tinsert(AtlasLoot_OnDemand[type][#AtlasLoot_OnDemand[type]], items[1])
+					tinsert(AtlasLoot_OnDemand[typeL][#AtlasLoot_OnDemand[typeL]], items[1])
 				end
 			end
 		end
@@ -549,10 +549,10 @@ function AtlasLoot:CreateOnDemandLootTable(type)
 	local itemList = {}
 	local checkList = {}
 	for _, data in pairs(AtlasLoot_Data) do
-		if data.Type == type then
+		if data.Type == typeL then
 			for _, t in ipairs(data) do
 				for _, itemData in pairs(t) do
-					if itemData.itemID and not checkList[itemData.itemID] then
+					if type(itemData) == "table" and itemData.itemID and not checkList[itemData.itemID] then
 						itemData.dropLoc = {data.DisplayName or data.Name, t.Name}
 						checkList[itemData.itemID] = true
 						tinsert(itemList, {itemData})
@@ -582,6 +582,8 @@ function AtlasLoot:CreateOnDemandLootTable(type)
 	return continue()
 end
 
+
+local lastTablenum = 1
 --[[
 AtlasLoot:ShowItemsFrame(dataID, dataSource, tablenum):
 dataID - Name of the loot table
@@ -708,6 +710,13 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 				itemButton.hasTrade = false
 		end
 		return
+	end
+
+	if dataSource ~= self.dataSourceBackup and tablenum ~= lastTablenum then
+		for i = 1, 30, 1 do
+			_G["AtlasLootItem_"..i]:Hide()
+			_G["AtlasLootItem_"..i.."_Highlight"]:Hide()
+		end
 	end
 
 	-- find the right itemID for the difficulty selected
@@ -1115,6 +1124,8 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 		end
 	end
 
+	lastTablenum = tablenum
+
 	--Anchor the item frame where it is supposed to be
 	if self.filterEnable and dataID ~= "FilterList" then
 		self:HideFilteredItems()
@@ -1123,6 +1134,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 		--preload items from the rest of the instance table
 		self:PreLoadLootTable(dataSource, dataID, ItemindexID)
 	end
+
 end
 
 -- List of Moduel Names

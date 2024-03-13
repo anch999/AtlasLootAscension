@@ -233,7 +233,7 @@ function AtlasLoot:AdvancedSearchReset()
 
     local expansionLevels = {60, 70, 80}
 
-    AtlasLootDefaultFrame_AdvancedSearchPanel_LevelMin:SetText(expansionLevels[GetAccountExpansionLevel() + 1])
+    AtlasLootDefaultFrame_AdvancedSearchPanel_LevelMin:SetText(expansionLevels[GetAccountExpansionLevel() + 1] - 5)
     AtlasLootDefaultFrame_AdvancedSearchPanel_LevelMax:SetText(expansionLevels[GetAccountExpansionLevel() + 1])
     AtlasLootDefaultFrame_AdvancedSearchPanel_iLevelMin:SetText("")
     AtlasLootDefaultFrame_AdvancedSearchPanel_iLevelMax:SetText("")
