@@ -628,18 +628,17 @@ AtlasLoot_Data["BlackTemple"] = {
 		[4] = { itemID = 32376 }; --Forest Prowler's Helm
 		[5] = { itemID = 32373 }; --Helm of the Illidari Shatterer
 		[7] = { itemID = 32326 }; --Twisted Blades of Zarak
-		[16] = { itemID = 31089, droprate = "100%", lootTable = {"T6CHEST","Token"} }; --Chestguard of the Forgotten Conqueror
-		[17] = { itemID = 31101, droprate = "100%", lootTable = {"T6SHOULDER","Token"} }; --Pauldrons of the Forgotten Conqueror
-		[18] = { itemID = 31098, droprate = "100%", lootTable = {"T6LEGS","Token"} }; --Leggings of the Forgotten Conqueror
-		[19] = { itemID = 31097, droprate = "100%", lootTable = {"T6HEAD","Token"} }; --Helm of the Forgotten Conqueror
-		[20] = { itemID = 31092, droprate = "100%", lootTable = {"T6HAND","Token"} }; --Gloves of the Forgotten Conqueror
-		[22] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
-		[23] = { itemID = 400751, droprate = "100%" }; --Raider's Commendations
-		[24] = { itemID = 98570, droprate = "100%" }; --Mystic Orb
-		[26] = { itemID = 63929, droprate = "1%" }; --Pet Sigil
-		[27] = { itemID = 63928, droprate = "1%" }; --Pet Sigil
-		[28] = { itemID = 63690, droprate = "1%" }; --Pet Sigil
-		[29] = { itemID = 63529, droprate = "1%" }; --Pet Sigil
+		[16] = { itemID = 31101, droprate = "100%", lootTable = {"T6SHOULDER","Token"} }; --Pauldrons of the Forgotten Conqueror
+		[17] = { itemID = 31098, droprate = "100%", lootTable = {"T6LEGS","Token"} }; --Leggings of the Forgotten Conqueror
+		[18] = { itemID = 31097, droprate = "100%", lootTable = {"T6HEAD","Token"} }; --Helm of the Forgotten Conqueror
+		[19] = { itemID = 31092, droprate = "100%", lootTable = {"T6HAND","Token"} }; --Gloves of the Forgotten Conqueror
+		[21] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
+		[22] = { itemID = 400751, droprate = "100%" }; --Raider's Commendations
+		[23] = { itemID = 98570, droprate = "100%" }; --Mystic Orb
+		[25] = { itemID = 63929, droprate = "1%" }; --Pet Sigil
+		[26] = { itemID = 63928, droprate = "1%" }; --Pet Sigil
+		[27] = { itemID = 63690, droprate = "1%" }; --Pet Sigil
+		[28] = { itemID = 63529, droprate = "1%" }; --Pet Sigil
 	};
 	{
 		Name = BabbleBoss["Illidan Stormrage"];
@@ -895,9 +894,6 @@ AtlasLoot_Data["CoTBlackMorass"] = {
 		[27] = { itemID = 33858, droprate = "100%" }; --Aeonus's Hourglass
 	};
 };
-
-
-
 
 -------------------------------------
 --- Caverns of Time: Hyjal Summit ---
