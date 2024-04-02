@@ -45,12 +45,9 @@ function AtlasLoot:SetQuestTooltip(data)
     if not data.quest then return end
     for _,v in ipairs(data.quest) do
         local quest = AtlasLoot_CraftingData["QuestList"][v]
-        local text = ""
-        if quest.text then
-            text = data.quest.text
-        end
-        GameTooltip:AddDoubleLine(AL["Quest"], WHITE..text)
-        GameTooltip:AddDoubleLine(quest[4]..quest[1], WHITE.." ("..GOLD..quest[2]..WHITE..", "..GOLD..quest[3]..WHITE..")")
+        local text = data.quest.text or ""
+        GameTooltip:AddDoubleLine(quest[1], WHITE..text)
+        GameTooltip:AddDoubleLine(quest[5][1]..quest[2], WHITE.." ("..GOLD..quest[3]..WHITE..", "..GOLD..quest[4]..WHITE..")")
     end
 end
 

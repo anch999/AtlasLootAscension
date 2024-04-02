@@ -1971,21 +1971,4 @@ AtlasLoot_Data["TailoringCLASSIC"] = {
 		[21] = {itemID = 967820, spellID = 968503 }; --Fitted Wrist Wraps of Efficiency
 		[22] = {itemID = 967822, spellID = 968505 }; --Fitted Wrist Wraps of Crushing
 	};
-	{
-		Name = AL["High Risk"].." Old";
-		[1] = { name = AL["Rare"], icon = "INV_Box_01"},
-		[2] = {itemID = 967215, spellID = 968061 }; --Heavy Dragonweave Cloak Lining
-		[3] = {itemID = 967218, spellID = 968064 }; --Heavy Twilight Cloak Lining
-		[4] = {itemID = 967221, spellID = 968067 }; --Heavy Scarlet Cloak Lining
-		[5] = {itemID = 967224, spellID = 968070 }; --Heavy Rampager's Cloak Lining
-		[6] = {itemID = 967227, spellID = 968073 }; --Heavy Deadwind Cloak Lining
-		[7] = {itemID = 967230, spellID = 968076 }; --Heavy Slippery Cloak Lining
-		[16] = { name = AL["Epic"], icon = "INV_Box_01"},
-		[17] = {itemID = 967216, spellID = 968062 }; --Illustrious Dragonweave Cloak Lining
-		[18] = {itemID = 967219, spellID = 968065 }; --Illustrious Twilight Cloak Lining
-		[19] = {itemID = 967222, spellID = 968068 }; --Illustrious Scarlet Cloak Lining
-		[20] = {itemID = 967225, spellID = 968071 }; --Illustrious Rampager's Cloak Lining
-		[21] = {itemID = 967228, spellID = 968074 }; --Illustrious Deadwind Cloak Lining
-		[22] = {itemID = 967231, spellID = 968077 }; --Illustrious Slippery Cloak Lining
-	};
 };
