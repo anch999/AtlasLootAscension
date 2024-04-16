@@ -247,21 +247,11 @@ function AtlasLoot:PopoupItemFrame(frame, data)
 	--creates a button only if one dosnt already exist re use old one if it does
 	local function createButton(num)
 		if _G["AtlasLoot_PopupButton_"..num] then return end
-		local button = CreateFrame("Button", "AtlasLoot_PopupButton_"..num, AtlasLoot_PopupFrame)
+		local button = CreateFrame("Button", "AtlasLoot_PopupButton_"..num, AtlasLoot_PopupFrame, "ItemButtonTemplate")
 		button:SetID(num)
 		button:SetSize(30,30)
 		button:EnableMouse()
 		button:RegisterForClicks("AnyDown")
-		button:SetHighlightTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD")
-		button.icon = button:CreateTexture(nil,"ARTWORK")
-		button.icon:SetSize(30,30)
-		button.icon:SetPoint("CENTER")
-		button.name = button:CreateFontString(nil,"ARTWORK","GameFontHighlightLarge")
-		button.name:SetFont("GameFontHighlightLarge", 30)
-        button.name:SetSize(30,30)
-        button.name:SetPoint("CENTER", button.icon,0,0)
-        button.name:SetJustifyH("CENTER")
-		button.name:Hide()
 		button.number = num
 		button:SetScript("OnClick", function(btn, arg1) self:ItemOnClick(btn, arg1) end)
 		button:SetScript("OnEnter", function(btn)
@@ -273,6 +263,7 @@ function AtlasLoot:PopoupItemFrame(frame, data)
 				self:ItemOnLeave(btn)
 			end
 		end)
+
 		
 		if num == 1 then
 			button:SetPoint("TOPLEFT", "AtlasLoot_PopupFrame", 9, -8)
@@ -303,7 +294,10 @@ function AtlasLoot:PopoupItemFrame(frame, data)
 						self:ItemsLoading(-1)
 					end)
 				end
-			button.icon:SetTexture(GetItemIcon(itemID))
+			local itemData = {GetItemInfo(itemID)}
+			SetItemButtonTexture(button, itemData[10])
+			SetItemButtonQuality(button, itemData[3])
+			
 			button.itemID = itemID
 			button.itemTexture = frame.itemTexture
 			local recipe = self:GetRecipeData(itemID, "item")
@@ -311,10 +305,9 @@ function AtlasLoot:PopoupItemFrame(frame, data)
 			button.craftingData = self:RecipeSource(recipe.spellID)
 			end
 		if item[2] then
-			button.name:SetText(WHITE..item[2])
-			button.name:Show()
+			SetItemButtonCount(button, item[2])
 		else
-			button.name:Hide()
+			SetItemButtonCount(button)
 		end
 		button:Show()
 		end
