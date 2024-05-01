@@ -89,44 +89,31 @@ AtlasLoot_CraftingData["Seasonal"] = {
 AtlasLoot_Data["Heirloom"] = {
 	Name = AL["Heirloom"];
 	{
-		Name = "Chests";
-		[1] = { itemID = 1648691, price = "1200 #tokenofprestige# | 192000 #marks# | 800 #bazaar#"  }; --Tattered Dreadmist Robe
-		[2] = { itemID = 1648687, price = "1200 #tokenofprestige# | 192000 #marks# | 800 #bazaar#"  }; --Preened Ironfeather Breastplate
-		[3] = { itemID = 1648689, price = "1200 #tokenofprestige# | 192000 #marks# | 800 #bazaar#"  }; --Stained Shadowcraft Tunic
-		[4] = { itemID = 1648677, price = "1200 #tokenofprestige# | 192000 #marks# | 800 #bazaar#"  }; --Champion's Deathdealer Breastplate
-		[5] = { itemID = 1648683, price = "1200 #tokenofprestige# | 192000 #marks# | 800 #bazaar#"  }; --Mystical Vest of Elements
-		[6] = { itemID = 1648685, price = "1200 #tokenofprestige# | 192000 #marks# | 800 #bazaar#"  }; --Polished Breastplate of Valor
-		[7] = { itemID = 3148685, price = "1200 #tokenofprestige# | 192000 #marks# | 800 #bazaar#"  }; --Polished Breastplate of Might
-	},
-	{
-		Name = "Shoulders";
-		[1] = { itemID = 1642985, price = "800 #tokenofprestige# | 128000 #marks# | 600 #bazaar#"  }; --Tattered Dreadmist Mantle
-		[2] = { itemID = 1642984, price = "800 #tokenofprestige# | 128000 #marks# | 600 #bazaar#"  }; --Preened Ironfeather Shoulders
-		[3] = { itemID = 1642952, price = "800 #tokenofprestige# | 128000 #marks# | 600 #bazaar#"  }; --Stained Shadowcraft Spaulders
-		[4] = { itemID = 1642950, price = "800 #tokenofprestige# | 128000 #marks# | 600 #bazaar#"  }; --Champion Herod's Shoulder
-		[5] = { itemID = 1642951, price = "800 #tokenofprestige# | 128000 #marks# | 600 #bazaar#"  }; --Mystical Pauldrons of Elements
-		[6] = { itemID = 1642949, price = "800 #tokenofprestige# | 128000 #marks# | 600 #bazaar#"  }; --Polished Spaulders of Valor
-		[7] = { itemID = 3142949, price = "800 #tokenofprestige# | 128000 #marks# | 600 #bazaar#"  }; --Polished Spaulders of Might
-		[16] = { itemID = 1644107, price = "800 #tokenofprestige# | 128000 #marks# | 600 #bazaar#"  }; --Exquisite Sunderseer Mantle
-		[17] = { itemID = 1644103, price = "800 #tokenofprestige# | 128000 #marks# | 600 #bazaar#"  }; --Exceptional Stormshroud Shoulders
-		[18] = { itemID = 1644105, price = "800 #tokenofprestige# | 128000 #marks# | 600 #bazaar#"  }; --Lasting Feralheart Spaulders
-		[19] = { itemID = 1644102, price = "800 #tokenofprestige# | 128000 #marks# | 600 #bazaar#"  }; --Aged Pauldrons of The Five Thunders
-		[20] = { itemID = 1644101, price = "800 #tokenofprestige# | 128000 #marks# | 600 #bazaar#"  }; --Prized Beastmaster's Mantle
-		[21] = { itemID = 1644100, price = "800 #tokenofprestige# | 128000 #marks# | 600 #bazaar#"  }; --Pristine Lightforge Spaulders
-		[22] = { itemID = 1644099, price = "800 #tokenofprestige# | 128000 #marks# | 600 #bazaar#"  }; --Strengthened Stockade Pauldrons
-	},
-	{
-		Name = AL["Accessories"];
+		Name = AL["Trinkets"];
 		[1] = { itemID = 1642992, price = "500 #tokenofprestige# | 80000 #marks# | 500 #bazaar#"  }; --Discerning Eye of the Beast
 		[2] = { itemID = 1642991, price = "500 #tokenofprestige# | 80000 #marks# | 500 #bazaar#"  }; --Swift Hand of Justice
 		[3] = { itemID = 1644098, price = "500 #tokenofprestige# | 80000 #marks# | 500 #bazaar#"  }; --Inherited Insignia of the Alliance
 		[4] = { itemID = 1644097, price = "500 #tokenofprestige# | 80000 #marks# | 500 #bazaar#"  }; --Inherited Insignia of the Horde
-		[5] = { itemID = 339076, price = ""  }; --Pendant of Adventure
-		[6] = { itemID = 339100, price = ""  }; --Pendant of Discovery
-		[7] = { itemID = 50255 }; --Dread Pirate Ring
 	},
 	{
-		Name = "Weapons";
+		Name = AL["Necks"];
+		[1] = { itemID = 1339077, price = "225 #tokenofprestige# | 60000 #marks# | TBD #bazaar#" };
+		[2] = { itemID = 1339076, price = "225 #tokenofprestige# | 60000 #marks# | TBD #bazaar#" };
+		[3] = { itemID = 1339078, price = "225 #tokenofprestige# | 60000 #marks# | TBD #bazaar#" };
+		[4] = { itemID = 339076, price = ""  }; --Pendant of Adventure
+		[5] = { itemID = 339100, price = ""  }; --Pendant of Discovery
+	},
+	{
+		Name = AL["Rings"];
+		[1] = { itemID = 1339079, price = "225 #tokenofprestige# | 60000 #marks# | TBD #bazaar#" };
+		[2] = { itemID = 1339080, price = "225 #tokenofprestige# | 60000 #marks# | TBD #bazaar#" };
+		[3] = { itemID = 1339081, price = "225 #tokenofprestige# | 60000 #marks# | TBD #bazaar#" };
+		[4] = { itemID = 1339082, price = "225 #tokenofprestige# | 60000 #marks# | TBD #bazaar#" };
+		[5] = { itemID = 1339083, price = "225 #tokenofprestige# | 60000 #marks# | TBD #bazaar#" };
+		[6] = { itemID = 50255 }; --Dread Pirate Ring
+	},
+	{
+		Name = AL["Weapons"];
 		[1] = { itemID = 1642944, price = "600 #tokenofprestige# | 96000 #marks# | 600 #bazaar#"  }; --Balanced Heartseeker
 		[2] = { itemID = 1642945, price = "600 #tokenofprestige# | 96000 #marks# | 600 #bazaar#"  }; --Venerable Dal'Rend's Sacred Charge
 		[3] = { itemID = 1642948, price = "600 #tokenofprestige# | 96000 #marks# | 600 #bazaar#"  }; --Devout Aurastone Hammer
@@ -146,4 +133,98 @@ AtlasLoot_Data["Heirloom"] = {
 		[24] = { itemID = 1644093, price = "1000 #tokenofprestige# | 160000 #marks# | 800 #bazaar#"  }; --Upgraded Dwarven Hand Cannon
 		[25] = { itemID = 1642846, price = "1000 #tokenofprestige# | 160000 #marks# | 800 #bazaar#"  }; --Wand of the Forgotten Lich
 	},
+		{
+		Name = "Might",
+		[1] = { itemID = 1339126, price = "375 #tokenofprestige# | 75000 #marks# | TBD #bazaar#" }, --Head
+		[2] = { itemID = 3142949, price = "800 #tokenofprestige# | 128000 #marks# | 600 #bazaar#"  },	--Shoulders
+		[3] = { itemID = 1339087, price = "375 #tokenofprestige# | 75000 #marks# | TBD #bazaar#" },	--Back
+		[4] = { itemID = 3148685, price = "1200 #tokenofprestige# | 192000 #marks# | 800 #bazaar#" },	--Chest
+		[5] = { itemID = 1339112, price = "375 #tokenofprestige# | 75000 #marks# | TBD #bazaar#" },	--Wrists
+		[6] = { itemID = 1339133, price = "225 #tokenofprestige# | 60000 #marks# | TBD #bazaar#" },	--Gloves
+		[7] = { itemID = 1339098, price = "375 #tokenofprestige# | 75000 #marks# | TBD #bazaar#" },	--Waist
+		[8] = { itemID = 1339119, price = "600 #tokenofprestige# | 90000 #marks# | TBD #bazaar#" },	--Legs
+		[9] = { itemID = 1339105, price = "375 #tokenofprestige# | 75000 #marks# | TBD #bazaar#" },	--Boots
+		},
+		{
+		Name = "Shadowcraft",
+		[1] = { itemID = 1339121, price = "375 #tokenofprestige# | 75000 #marks# | TBD #bazaar#" }, --Head
+		[2] = { itemID = 1642952, price = "800 #tokenofprestige# | 128000 #marks# | 600 #bazaar#" }, --Shoulders
+		[3] = { itemID = 1339088, price = "375 #tokenofprestige# | 75000 #marks# | TBD #bazaar#" },	--Back
+		[4] = { itemID = 1648689, price = "1200 #tokenofprestige# | 192000 #marks# | 800 #bazaar#" }, --Chest
+		[5] = { itemID = 1339107, price = "375 #tokenofprestige# | 75000 #marks# | TBD #bazaar#" },	--Wrists
+		[6] = { itemID = 1339128, price = "225 #tokenofprestige# | 60000 #marks# | TBD #bazaar#" },	--Gloves
+		[7] = { itemID = 1339093, price = "375 #tokenofprestige# | 75000 #marks# | TBD #bazaar#" }, --Waist
+		[8] = { itemID = 1339114, price = "600 #tokenofprestige# | 90000 #marks# | TBD #bazaar#" }, --Legs
+		[9] = { itemID = 1339100, price = "375 #tokenofprestige# | 75000 #marks# | TBD #bazaar#" }, --Boots
+		},
+		{
+		Name = "Dreadmist",
+		[1] = { itemID = 1339120, price = "375 #tokenofprestige# | 75000 #marks# | TBD #bazaar#" },	--Head
+		[2] = { itemID = 1642985, price = "800 #tokenofprestige# | 128000 #marks# | 600 #bazaar#" },	--Shoulders
+		[3] = { itemID = 1339086, price = "375 #tokenofprestige# | 75000 #marks# | TBD #bazaar#" },	--Back
+		[4] = { itemID = 1648691, price = "1200 #tokenofprestige# | 192000 #marks# | 800 #bazaar#" },	--Chest
+		[5] = { itemID = 1339106, price = "375 #tokenofprestige# | 75000 #marks# | TBD #bazaar#" },	--Wrists
+		[6] = { itemID = 1339127, price = "225 #tokenofprestige# | 60000 #marks# | TBD #bazaar#" },	--Gloves
+		[7] = { itemID = 1339092, price = "375 #tokenofprestige# | 75000 #marks# | TBD #bazaar#" },	--Waist
+		[8] = { itemID = 1339113, price = "600 #tokenofprestige# | 90000 #marks# | TBD #bazaar#" },	--Legs
+		[9] = { itemID = 1339099, price = "375 #tokenofprestige# | 75000 #marks# | TBD #bazaar#" },	--Boots
+		},
+		{
+		Name = "Herods",
+		[1] = { itemID = 1339124, price = "375 #tokenofprestige# | 75000 #marks# | TBD #bazaar#" },	--Head
+		[2] = { itemID = 1642950, price = "800 #tokenofprestige# | 128000 #marks# | 600 #bazaar#" },	--Shoulders
+		[3] = { itemID = 1339084, price = "375 #tokenofprestige# | 75000 #marks# | TBD #bazaar#" },	--Back
+		[4] = { itemID = 1648677, price = "1200 #tokenofprestige# | 192000 #marks# | 800 #bazaar#" },	--Chest
+		[5] = { itemID = 1339110, price = "375 #tokenofprestige# | 75000 #marks# | TBD #bazaar#" },	--Wrists
+		[6] = { itemID = 1339131, price = "225 #tokenofprestige# | 60000 #marks# | TBD #bazaar#" },	--Gloves
+		[7] = { itemID = 1339096, price = "375 #tokenofprestige# | 75000 #marks# | TBD #bazaar#" },	--Waist
+		[8] = { itemID = 1339117, price = "600 #tokenofprestige# | 90000 #marks# | TBD #bazaar#" },	--Legs
+		[9] = { itemID = 1339103, price = "375 #tokenofprestige# | 75000 #marks# | TBD #bazaar#" },	--Boots
+		},
+		{
+		Name = "Elements",
+		[1] = { itemID = 1339123, price = "375 #tokenofprestige# | 75000 #marks# | TBD #bazaar#" },	--Head
+		[2] = { itemID = 1642951, price = "800 #tokenofprestige# | 128000 #marks# | 600 #bazaar#" },	--Shoulders
+		[3] = { itemID = 1339090, price = "375 #tokenofprestige# | 75000 #marks# | TBD #bazaar#" },	--Back
+		[4] = { itemID = 1648683, price = "1200 #tokenofprestige# | 192000 #marks# | 800 #bazaar#" },	--Chest
+		[5] = { itemID = 1339109, price = "375 #tokenofprestige# | 75000 #marks# | TBD #bazaar#" },	--Wrists
+		[6] = { itemID = 1339130, price = "225 #tokenofprestige# | 60000 #marks# | TBD #bazaar#" },	--Gloves
+		[7] = { itemID = 1339095, price = "375 #tokenofprestige# | 75000 #marks# | TBD #bazaar#" },	--Waist
+		[8] = { itemID = 1339116, price = "600 #tokenofprestige# | 90000 #marks# | TBD #bazaar#" },	--Legs
+		[9] = { itemID = 1339102, price = "375 #tokenofprestige# | 75000 #marks# | TBD #bazaar#" },	--Boots
+		},
+		{
+		Name = "Valor",
+		[1] = { itemID = 1339125, price = "375 #tokenofprestige# | 75000 #marks# | TBD #bazaar#" },	--Head
+		[2] = { itemID = 1642949, price = "800 #tokenofprestige# | 128000 #marks# | 600 #bazaar#" },	--Shoulders
+		[3] = { itemID = 1339085, price = "375 #tokenofprestige# | 75000 #marks# | TBD #bazaar#" },	--Back
+		[4] = { itemID = 1648685, price = "1200 #tokenofprestige# | 192000 #marks# | 800 #bazaar#" },	--Chest
+		[5] = { itemID = 1339111, price = "375 #tokenofprestige# | 75000 #marks# | TBD #bazaar#" },	--Wrists
+		[6] = { itemID = 1339132, price = "225 #tokenofprestige# | 60000 #marks# | TBD #bazaar#" },	--Gloves
+		[7] = { itemID = 1339097, price = "375 #tokenofprestige# | 75000 #marks# | TBD #bazaar#" },	--Waist
+		[8] = { itemID = 1339118, price = "600 #tokenofprestige# | 90000 #marks# | TBD #bazaar#" },	--Legs
+		[9] = { itemID = 1339104, price = "375 #tokenofprestige# | 75000 #marks# | TBD #bazaar#" },	--Boots		
+		},
+		{
+		Name = "IronFeather",
+		[1] = { itemID = 1339122, price = "375 #tokenofprestige# | 75000 #marks# | TBD #bazaar#" },	--Head
+		[2] = { itemID = 1642984, price = "800 #tokenofprestige# | 128000 #marks# | 600 #bazaar#" },	--Shoulders
+		[3] = { itemID = 1339089, price = "375 #tokenofprestige# | 75000 #marks# | TBD #bazaar#" },	--Back
+		[4] = { itemID = 1648687, price = "1200 #tokenofprestige# | 192000 #marks# | 800 #bazaar#" },	--Chest
+		[5] = { itemID = 1339108, price = "375 #tokenofprestige# | 75000 #marks# | TBD #bazaar#" },	--Wrists
+		[6] = { itemID = 1339129, price = "225 #tokenofprestige# | 60000 #marks# | TBD #bazaar#" },	--Gloves
+		[7] = { itemID = 1339094, price = "375 #tokenofprestige# | 75000 #marks# | TBD #bazaar#" },	--Waist
+		[8] = { itemID = 1339115, price = "600 #tokenofprestige# | 90000 #marks# | TBD #bazaar#" },	--Legs
+		[9] = { itemID = 1339101, price = "375 #tokenofprestige# | 75000 #marks# | TBD #bazaar#" },	--Boots
+		},
+		{
+		Name = "Pvp Shoulders",
+		[1] = { itemID = 1644107, price = "800 #tokenofprestige# | 128000 #marks# | 600 #bazaar#"  }; --Exquisite Sunderseer Mantle
+		[2] = { itemID = 1644103, price = "800 #tokenofprestige# | 128000 #marks# | 600 #bazaar#"  }; --Exceptional Stormshroud Shoulders
+		[3] = { itemID = 1644105, price = "800 #tokenofprestige# | 128000 #marks# | 600 #bazaar#"  }; --Lasting Feralheart Spaulders
+		[4] = { itemID = 1644102, price = "800 #tokenofprestige# | 128000 #marks# | 600 #bazaar#"  }; --Aged Pauldrons of The Five Thunders
+		[5] = { itemID = 1644101, price = "800 #tokenofprestige# | 128000 #marks# | 600 #bazaar#"  }; --Prized Beastmaster's Mantle
+		[6] = { itemID = 1644100, price = "800 #tokenofprestige# | 128000 #marks# | 600 #bazaar#"  }; --Pristine Lightforge Spaulders
+		[7] = { itemID = 1644099, price = "800 #tokenofprestige# | 128000 #marks# | 600 #bazaar#"  }; --Strengthened Stockade Pauldrons
+		},
 }

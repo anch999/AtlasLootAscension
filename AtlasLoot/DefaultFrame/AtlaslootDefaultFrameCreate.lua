@@ -858,7 +858,7 @@ subtableFrame.rows = rows2
     end)
     mainframe.mapButton.mapButtonIcon = mainframe.mapButton:CreateTexture("ARTWORK")
     mainframe.mapButton.mapButtonIcon:SetSize(19,19)
-    mainframe.mapButton.mapButtonIcon:SetAtlas("many-quests-area")
+    mainframe.mapButton.mapButtonIcon:SetAtlas("poi-islands-table")
     mainframe.mapButton.mapButtonIcon:SetPoint("RIGHT",mainframe.mapButton, -20, -1)
 -- item data loading icon animation
 local streamIcon = CreateFrame("Frame", "AtlasLoot_ItemsLoading", AtlaslLoot_LootBackground)
