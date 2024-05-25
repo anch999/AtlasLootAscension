@@ -604,17 +604,26 @@ local count = 0
 local tablenum = 1
 
 function AtlasLoot:AddItemToSearchResult(item, dataSource, dataID, tableNum)
-    if AtlasLootCharDB["SearchResult"][tablenum] == nil then
-        AtlasLootCharDB["SearchResult"][tablenum] = {Name = "Page "..tablenum}
-    end
+    AtlasLootCharDB["SearchResult"].SearchIDs = AtlasLootCharDB["SearchResult"].SearchIDs or {}
     local tableCopy = self:CloneTable(item)
-    tinsert(AtlasLootCharDB["SearchResult"][tablenum], tableCopy)
-    local tNum = #AtlasLootCharDB["SearchResult"][tablenum]
-    AtlasLootCharDB["SearchResult"][tablenum][tNum].lootTable = {{dataID, dataSource, tableNum}, "Source"}
-    AtlasLootCharDB["SearchResult"][tablenum][tNum][1] = (count % 30) + 1
-    count = count + 1
-    if (count) % 30 == 0 then
-        tablenum = tablenum + 1
+    local inResults = AtlasLootCharDB["SearchResult"].SearchIDs[item.itemID]
+    if inResults then
+        AtlasLootCharDB["SearchResult"][inResults[1]][inResults[2]] = tableCopy
+        AtlasLootCharDB["SearchResult"][inResults[1]][inResults[2]].lootTable = {{dataID, dataSource, tableNum}, "Source"}
+        AtlasLootCharDB["SearchResult"][inResults[1]][inResults[2]][1] = inResults[3]
+    else
+        if AtlasLootCharDB["SearchResult"][tablenum] == nil then
+            AtlasLootCharDB["SearchResult"][tablenum] = {Name = "Page "..tablenum}
+        end
+        tinsert(AtlasLootCharDB["SearchResult"][tablenum], tableCopy)
+        local tNum = #AtlasLootCharDB["SearchResult"][tablenum]
+        AtlasLootCharDB["SearchResult"][tablenum][tNum].lootTable = {{dataID, dataSource, tableNum}, "Source"}
+        AtlasLootCharDB["SearchResult"][tablenum][tNum][1] = (count % 30) + 1
+        if item.itemID then AtlasLootCharDB["SearchResult"].SearchIDs[item.itemID] = {tablenum, tNum, AtlasLootCharDB["SearchResult"][tablenum][tNum][1]} end
+        count = count + 1
+        if (count) % 30 == 0 then
+            tablenum = tablenum + 1
+        end
     end
 end
 
@@ -637,32 +646,34 @@ function AtlasLoot:ProcessItem(data)
                 self:ItemFrameRefresh()
             end
         elseif itemID then
-            local item = Item:CreateFromID(itemID)
-            if item then
-                local function nextItem()
-                    self:ItemsLoading(-1)
-                    local itemDetails = {self:GetItemDetails(itemID)}
-                    if self:ItemMatchesAllTerms(searchTerms, itemDetails) then
-                        self:AddItemToSearchResult(itemData, "AtlasLoot_Data", dataID, tableNum)
-                        if not showSearch then
-                            self:ShowSearchResult()
-                            showSearch = true
-                        else
-                            self:ItemFrameRefresh()
-                        end
+            local function nextItem(item)
+                self:ItemsLoading(-1)
+                local itemDetails = {self:GetItemDetails(itemID)}
+                itemDetails[1] = item:GetName()
+                if not itemDetails[1] then return end
+                if self:ItemMatchesAllTerms(searchTerms, itemDetails) then
+                    self:AddItemToSearchResult(itemData, "AtlasLoot_Data", dataID, tableNum)
+                    if not showSearch then
+                        self:ShowSearchResult()
+                        showSearch = true
+                    else
+                        self:ItemFrameRefresh()
                     end
                 end
-                if not item:GetInfo() then
-                    item:ContinueOnLoad(function(itemID)
-                        nextItem()
+            end
+            local item = Item:CreateFromID(itemID)
+            if item then
+                if searchTerms.relational and not item:GetInfo() then
+                    item:ContinueOnLoad(function(item)
+                        nextItem(item)
                     end)
+                    nextItem(item)
                 else
-                    nextItem()
+                    nextItem(item)
                 end
             end
         end
     end
-    
 end
 
 local itemList = {}
@@ -794,12 +805,8 @@ function AtlasLoot:ShowSearchOptions(button)
                     local title = GetAddOnMetadata(module, "title")
                     local notes = GetAddOnMetadata(module, "notes")
                     self.Dewdrop:AddLine("text", title, "checked", not self.db.profile.SearchAscensionDB and self.db.profile.SearchOn.All or self.db.profile.SearchOn[module], "disabled", self.db.profile.SearchAscensionDB or self.db.profile.SearchOn.All, "tooltipTitle", title,
-                                    "tooltipText", notes, "func", function()
-                        if self.db.profile.SearchOn[module] == nil then
-                            self.db.profile.SearchOn[module] = true
-                        else
-                            self.db.profile.SearchOn[module] = nil
-                        end
+                    "tooltipText", notes, "func", function()
+                    self.db.profile.SearchOn[module] = not self.db.profile.SearchOn[module]
                     end)
                 end
             end

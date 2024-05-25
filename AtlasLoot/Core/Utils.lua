@@ -395,7 +395,7 @@ end
 
 function AtlasLoot:ItemFrameRefresh()
     if refreshTimer then return end
-    self:ScheduleTimer("ItemRefreshTimer", 5)
+    self:ScheduleTimer("ItemRefreshTimer", .5)
     refreshTimer = true
 end
 -----------------------------------------------------
