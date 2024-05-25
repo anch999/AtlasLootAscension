@@ -82,6 +82,12 @@ AtlasLoot_CraftingData["Seasonal"] = {
 }
 
 
+AtlasLoot_ExtraData["ArmorConversion"] = {
+	"Cloth",
+	"Leather",
+	"Mail",
+	"Plate"
+}
 
 ----------------------
 --- Heirloom Items ---

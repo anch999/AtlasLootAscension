@@ -760,7 +760,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 	end
 
 	-- Setup the button for the to be displayed item/spell
-	local function setupButton(itemID, i, dataSource, dataID, tablenum, dataSource_backup)
+	local function setupButton(itemID, i, dataSource, dataID, tablenum, dataSource_backup, item)
 		local text, extra
 		local itemName, itemQuality, itemSubType, itemEquipLoc, itemColor
 		local spellName, spellIcon
@@ -781,7 +781,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 				text = self:FixText(text)
 			end
 			if itemID then
-				text = select(4,GetItemQualityColor(select(3,GetItemInfo(itemID))))..text
+				text = select(4,GetItemQualityColor(item:GetQuality()))..text
 			end
 			--Adds button highlights if you know a recipe or have a char that knows one
 			if CA_IsSpellKnown(spellID) then
@@ -800,6 +800,8 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 			end
 		elseif itemID then
 			itemName, _, itemQuality, _, _, _, itemSubType, _, itemEquipLoc, _ = GetItemInfo(itemID)
+			itemName = itemName or item:GetName()
+			itemSubType = itemSubType or AtlasLoot_ExtraData["ArmorConversion"][item:GetSubClassID()]
 				if not itemName then
 					itemID = orgItemID
 					itemName, _, itemQuality, _, _, _, itemSubType, _, itemEquipLoc, _ = GetItemInfo(itemID)
@@ -810,7 +812,8 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 				text = dataSource[dataID][tablenum][i].name
 				text = self:FixText(text)
 			elseif itemName then
-				_, _, _, itemColor = GetItemQualityColor(itemQuality)
+				itemQuality = item:GetQuality()
+				itemColor = select(4,GetItemQualityColor(itemQuality))
 				text = itemColor..itemName
 			else
 				text = ""
@@ -895,7 +898,8 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 		elseif spellIcon then
 			iconFrame:SetTexture(spellIcon)
 		elseif dataSource[dataID][tablenum][i].itemID then
-			iconFrame:SetTexture(GetItemIcon(itemID))
+			local icon = item:GetIcon()
+			iconFrame:SetTexture(icon)
 		end
 
 		if iconFrame:GetTexture() == nil and dataSource[dataID][tablenum][i].icon ~= "Blank" then
@@ -965,12 +969,11 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 		itemButton:Show()
 	end
 
-	local function getItemData(itemID, i, orgItemID)
-		local item = Item:CreateFromID(itemID)
+	local function getItemData(itemID, i, orgItemID, item)
 		self:ItemsLoading(1)
 		item:ContinueOnLoad(function(itemID)
 			self:ItemsLoading(-1)
-			setupButton(itemID, i, dataSource, dataID, tablenum, dataSource_backup)
+			setupButton(itemID, i, dataSource, dataID, tablenum, dataSource_backup, item)
 		end)
 	end
 
@@ -987,11 +990,15 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 			if isValid and toShow then
 				hightlightFrame:Hide()
 				if itemID then
-					getItemData(itemID, i, orgItemID)
+					local item = Item:CreateFromID(itemID)
+					if not item:GetInfo() then
+						getItemData(itemID, i, orgItemID, item)
+					end
+					setupButton(itemID, i, dataSource, dataID, tablenum, dataSource_backup, item)
 				elseif recipeID then
-					getItemData(recipeID, i)
+					getItemData(recipeID, i, nil, Item:CreateFromID(recipeID))
 				else
-					setupButton(itemID, i, dataSource, dataID, tablenum, dataSource_backup)
+					setupButton(itemID, i, dataSource, dataID, tablenum, dataSource_backup, Item:CreateFromID(itemID))
 				end
 			else
 				itemButton:Hide()
