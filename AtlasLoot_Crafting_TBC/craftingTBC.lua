@@ -694,7 +694,7 @@ AtlasLoot_Data["EnchantingTBC"] = {
 		[4] = { icon = "Spell_Holy_GreaterHeal", spellID = 33995 }, --Enchant Gloves - Major Strength
 		[5] = { icon = "Spell_Holy_GreaterHeal", spellID = 33996 }, --Enchant Gloves - Assault
 		[6] = { icon = "Spell_Holy_GreaterHeal", spellID = 33993 }, --Enchant Gloves - Blasting
-		[7] = { icon = "Spell_Holy_GreaterHeal", spellID = 25080 }, --Enchant Gloves - Superior Agility
+		[7] = { icon = "Spell_Holy_GreaterHeal", spellID = 225080 }, --Enchant Gloves - Superior Agility
 		[8] = { icon = "Spell_Holy_GreaterHeal", spellID = 25072 }, --Enchant Gloves - Threat
 	};
 	{

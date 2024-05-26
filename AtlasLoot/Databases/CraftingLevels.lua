@@ -1489,6 +1489,7 @@ AtlasLoot_CraftingData["CraftingLevels"] = {
     [25078] = { 300, 310, 325, 340 }; --  Enchant Gloves - Fire Power -- 25078
     [25079] = { 300, 310, 325, 340 }; --  Enchant Gloves - Healing Power -- 25079
     [25080] = { 300, 310, 325, 340 }; --  Enchant Gloves - Superior Agility -- 25080
+    [225080] = { 300, 310, 325, 340 }; --  Enchant Gloves - Superior Agility -- 25080
     [25081] = { 300, 310, 325, 340 }; --  Enchant Cloak - Greater Fire Resistance -- 25081
     [25082] = { 300, 310, 325, 340 }; --  Enchant Cloak - Greater Nature Resistance -- 25082
     [25083] = { 300, 310, 325, 340 }; --  Enchant Cloak - Stealth -- 25083
