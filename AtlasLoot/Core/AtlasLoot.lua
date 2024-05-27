@@ -1259,7 +1259,6 @@ end
 function AtlasLoot:UNIT_SPELLCAST_SUCCEEDED(event, arg1, arg2 , arg3)
 	if arg1 == "player" and arg2 == "Learning" then
 		self:PopulateProfessions()
-		print("test")
 	end
 end
 

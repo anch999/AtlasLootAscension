@@ -489,14 +489,26 @@ function AtlasLoot:BatchRequestVanity(itemList)
     return nextItem()
 end
 
+local function CheckTooltipForDuplicate(tooltip, text)
+    -- Check if we already added to this tooltip.
+    for i = 1,15 do
+        local frame = _G[tooltip:GetName() .. "TextLeft" .. i]
+        local textOld
+        if frame then textOld = frame:GetText() end
+        if textOld and textOld == text then return true end
+    end
+end
 
 -- finds and sets the tooltip for the itemID that it is sent
-local function SetTooltip(itemID)
+local function SetTooltip(itemID, tooltip)
     local self = AtlasLoot
 	if not self.db.profile.showUnknownRecipeTooltip or UnitAffectingCombat("player") then return end
 	local text = self:IsRecipeUnknown(itemID)
 	if not text then return end
-    GameTooltip:AddLine("Recipe could be learned by: "..GREEN..text)
+	text = "Recipe could be learned by: "..GREEN..text
+	if not CheckTooltipForDuplicate(tooltip, text) then
+		tooltip:AddLine(text)
+	end
 end
 
 -- item tooltip handler
@@ -508,7 +520,7 @@ local function TooltipHandlerItem(tooltip)
 	if not link then return end
 	local itemID = GetItemInfoFromHyperlink(link)
 	if not itemID then return end
-    SetTooltip(itemID)
+    SetTooltip(itemID, tooltip)
 end
 
 GameTooltip:HookScript("OnTooltipSetItem", TooltipHandlerItem)
