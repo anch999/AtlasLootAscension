@@ -37,6 +37,7 @@ function AtlasLoot:OptionsInit()
     AtlasLootOptionsMinimapIcon:SetChecked(self.db.profile.minimap.hide)
     AtlasLootOptionsFrameCraftingInfo:SetChecked(self.db.profile.recipeExtraInfoSwitch)
     AtlasLootOptionsFrameDropLocation:SetChecked(self.db.profile.showdropLocationOnSearch)
+    AtlasLootOptionsFrameUnknownRecipe:SetChecked(self.db.profile.showUnknownRecipeTooltip)
 end
 
 --[[
@@ -228,10 +229,16 @@ local craftingInfo = CreateFrame("CheckButton", "AtlasLootOptionsFrameCraftingIn
         AtlasLootOptionsFrameCraftingInfoText:SetText(AL["Hide crafting source unless holding CTRL"])
         craftingInfo:SetScript("OnClick", function() self.db.profile.recipeExtraInfoSwitch = not self.db.profile.recipeExtraInfoSwitch end)
 
-local craftingInfo = CreateFrame("CheckButton", "AtlasLootOptionsFrameDropLocation", AtlasLootOptionsFrame, "OptionsCheckButtonTemplate")
-        craftingInfo:SetPoint("TOPLEFT",5,-130)
+local craftingDropInfo = CreateFrame("CheckButton", "AtlasLootOptionsFrameDropLocation", AtlasLootOptionsFrame, "OptionsCheckButtonTemplate")
+        craftingDropInfo:SetPoint("TOPLEFT",5,-130)
         AtlasLootOptionsFrameDropLocationText:SetText(AL["Show drop location on search results"])
-        craftingInfo:SetScript("OnClick", function() self.db.profile.showdropLocationOnSearch = not self.db.profile.showdropLocationOnSearch end)
+        craftingDropInfo:SetScript("OnClick", function() self.db.profile.showdropLocationOnSearch = not self.db.profile.showdropLocationOnSearch end)
+
+local unknownRecipeTooltip = CreateFrame("CheckButton", "AtlasLootOptionsFrameUnknownRecipe", AtlasLootOptionsFrame, "OptionsCheckButtonTemplate")
+        unknownRecipeTooltip:SetPoint("TOPLEFT",5,-160)
+        AtlasLootOptionsFrameUnknownRecipeText:SetText(AL["Show if recipe is unknown in tooltips"])
+        unknownRecipeTooltip:SetScript("OnClick", function() self.db.profile.showUnknownRecipeTooltip = not self.db.profile.showUnknownRecipeTooltip end)
+
 
 local itemid = CreateFrame("CheckButton", "AtlasLootOptionsFrameItemID", AtlasLootOptionsFrame, "OptionsCheckButtonTemplate")
         itemid:SetPoint("TOP",5,-70)

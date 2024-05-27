@@ -1547,6 +1547,7 @@ if AL then
 	AL["Gordok Commons"] = true
 	AL["Hide crafting source unless holding CTRL"] = true
 	AL["Show drop location on search results"] = true
+	AL["Show if recipe is unknown in tooltips"] = true
 
 
 	-- Shortcuts for Bossname files

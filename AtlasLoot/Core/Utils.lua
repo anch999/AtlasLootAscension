@@ -11,6 +11,9 @@ local CYAN =  "|cff00ffff"
 local SPRINGGREEN = "|cFF00FF7F"
 local YELLOW = "|cffFFd200"
 
+local playerName = UnitName("player")
+local realmName = GetRealmName()
+
 -- Used to create a dewdrop menu from a table
 function AtlasLoot:OpenDewdropMenu(frame, menuList, skipRegister)
 	if self.Dewdrop:IsOpen(frame) then self.Dewdrop:Close() return end
@@ -176,7 +179,7 @@ function AtlasLoot:GetRecipeData(recipeID, idType)
 		for _,cat in pairs(prof) do
 		   for _,recipe in pairs(cat) do
 			  if (idType == "spell" and recipeID == recipe.SpellEntry) or (idType == "item" and recipeID == recipe.RecipeItemEntry) then
-				local info = {{recipe.CreatedItemEntry}, "blank", "blank", "blank", "blank", "blank",spellID = recipe.SpellEntry}
+				local info = {{recipe.CreatedItemEntry}, "blank", "blank", "blank", "blank", "blank",spellID = recipe.SpellEntry, skillIndex = recipe.SkillIndex}
 				if ItemIDsDatabase[recipe.CreatedItemEntry] and ItemIDsDatabase[recipe.CreatedItemEntry][1] then
 					info[2] = {ItemIDsDatabase[recipe.CreatedItemEntry][1]}
 				end
@@ -210,6 +213,44 @@ function AtlasLoot:GetRecipeID(spellID)
 			end
 		end
 	 end
+end
+
+function AtlasLoot:IsRecipeKnown(ID, profile)
+	if not profile or not profile.professions then return end
+	for _, prof in pairs(profile.professions) do
+		if prof.knownRecipes[ID] then return true end
+	end
+end
+
+function AtlasLoot:GetKnownRecipes(spellID)
+    --returns a list of characters with the recipe
+	local text
+    for key, profile in pairs(self.db.profiles) do
+        if gsub(key,"-",""):match(gsub(realmName,"-","")) and not gsub(key,"-",""):match(gsub(playerName,"-","")) and self:IsRecipeKnown(spellID, profile) then
+            local charName = strsplit("-", key, 5)
+            text = text and text..", "..gsub(charName, " ", "") or gsub(charName, " ", "")
+        end
+    end
+	return text
+end
+
+function AtlasLoot:IsProfessionKnown(skillID, profile)
+	if profile and profile.professions and profile.professions[skillID] then return true end
+end
+
+function AtlasLoot:IsRecipeUnknown(ID)
+	local recipeData = self:GetRecipeData(ID, "item")
+	if not recipeData or not recipeData.skillIndex then return end
+
+	local text
+	for key, profile in pairs(self.db.profiles) do
+		if gsub(key,"-",""):match(gsub(realmName,"-","")) and
+		self:IsProfessionKnown(recipeData.skillIndex, profile) and not self:IsRecipeKnown(recipeData.spellID, profile) then
+			local charName = strsplit("-", key, 5)
+			text = text and text..", "..gsub(charName, " ", "") or gsub(charName, " ", "")
+		end
+	end
+	return text
 end
 
 -- Get rep faction for when you have 2 loot tables and want to show a different one depending on rep
@@ -447,3 +488,27 @@ function AtlasLoot:BatchRequestVanity(itemList)
     end
     return nextItem()
 end
+
+
+-- finds and sets the tooltip for the itemID that it is sent
+local function SetTooltip(itemID)
+    local self = AtlasLoot
+	if not self.db.profile.showUnknownRecipeTooltip or UnitAffectingCombat("player") then return end
+	local text = self:IsRecipeUnknown(itemID)
+	if not text then return end
+    GameTooltip:AddLine("Recipe could be learned by: "..GREEN..text)
+end
+
+-- item tooltip handler
+local function TooltipHandlerItem(tooltip)
+    --checks for combat less likley to cause a lag spike
+    if UnitAffectingCombat("player") then return end
+    --get item link and itemID
+	local link = select(2, tooltip:GetItem())
+	if not link then return end
+	local itemID = GetItemInfoFromHyperlink(link)
+	if not itemID then return end
+    SetTooltip(itemID)
+end
+
+GameTooltip:HookScript("OnTooltipSetItem", TooltipHandlerItem)

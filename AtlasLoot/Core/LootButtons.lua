@@ -108,35 +108,27 @@ function AtlasLoot:ItemOnEnter(data)
 
             self:SetCraftingTooltip(data)
 
-            local hasSpace = false
-            local showOwn = nil
+            local showOwn
             --adds tooltip showing if you know a recipe and it is one of your chars trade skills
             if data.hasTrade then
-                hasSpace = true
                 if CA_IsSpellKnown(spellID) then
                     showOwn = "|cff1EFF00You know this Recipe"
                 else
                     showOwn = " |cffFF3F40You don't know this Recipe"
                 end
             end
-            local text = ""
-            local showOther = false
-            local firstChar = false
-            --adds a tooltip if any of your other charaters knows a recipe 
-            for key,v in pairs(self.db.profiles) do
-                if gsub(key,"-",""):match(gsub(realmName,"-","")) and not gsub(key,"-",""):match(gsub(playerName,"-","")) and v.knownRecipes and v.knownRecipes[spellID] then
-                    local charName = strsplit("-", key, 5)
-                    if firstChar then text = text..", " end
-                    text = text..gsub(charName, " ", "")
-                    showOther = true
-                    hasSpace = true
-                    firstChar = true
-                end
+            --gets a list of characters with this recipe known
+            local text = self:GetKnownRecipes(spellID)
+            local hasSpace
+            if (text or showOwn) and not hasSpace then
+                GameTooltip:AddLine(" ")
+                hasSpace = true
             end
-            text = BLUE.."Recipe known by: "..WHITE..text
-            if hasSpace then GameTooltip:AddLine(" ") end
             if showOwn then GameTooltip:AddLine(showOwn) end
-            if showOther then GameTooltip:AddLine(text) end
+            if text then
+                text = BLUE.."Recipe known by: "..WHITE..text
+                GameTooltip:AddLine(text)
+            end
             GameTooltip:Show()
             if self.db.profile.EquipCompare or IsShiftKeyDown() then
                 self:ShowCompareItem(data) --- CALL MISSING METHOD TO SHOW 2 TOOLTIPS (Item Compare)
@@ -275,13 +267,11 @@ end
 -- Enables item comparing. I've ripped self method directly from GameTooltip.lua and modified to work with GameTooltip /siena
 -------
 function AtlasLoot:ShowCompareItem(data)
-   local shift = 1
-   local item,link = nil,nil
+   local link
    if data.spellID then
-      item = GameTooltip:GetSpell()
-      _,link = GetItemInfo(data.itemID)
+      link = Item:CreateFromID(data.itemID):GetLink()
    else
-      item,link = GameTooltip:GetItem()
+      _,link = GameTooltip:GetItem()
    end
 
    if ( not link ) then
@@ -295,7 +285,6 @@ function AtlasLoot:ShowCompareItem(data)
    local item1 = nil
    local item2 = nil
    local item3 = nil
-   local side = "left"
    if ( ShoppingTooltip1:SetHyperlinkCompareItem(link, 1, 1, GameTooltip) ) then
       item1 = true
    end
