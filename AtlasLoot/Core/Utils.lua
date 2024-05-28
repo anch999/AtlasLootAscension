@@ -128,8 +128,38 @@ On the form of {ID, {normal, heroic, mythic, mythic1, mythic2, ... ,mythicN}}
 function AtlasLoot:FindId(id, difficulty, type, sourceType)
 	if not ItemIDsDatabase[id] then return nil, false end
 	if difficulty == 100 then
+		local newIDs = {
+			(id < 1000000 and (id) + 6300000),
+			(id < 1000000 and (id) + 7800000),
+			(id > 1000000 and (id - 1500000) + 6300000),
+			(id > 1000000 and (id - 1500000) + 7800000),
+	}
+		for _, newID in ipairs(newIDs) do
+		local ogName = GetItemInfoInstant(id)
+			local newName = GetItemInfoInstant(newID)
+			if newName and ogName and string.find(newName.name, ogName.name) then
+				return  newID, true
+			end
+		end
 		return ItemIDsDatabase[id]["HeroicBloodforged"], true
 	end
+
+	if difficulty == 1 then
+		local newIDs = {
+			(id < 1000000 and (id) + 6000000),
+			(id < 1000000 and (id) + 7500000),
+			(id > 1000000 and (id - 1500000) + 6000000),
+			(id > 1000000 and (id - 1500000) + 7500000),
+	}
+		for _, newID in ipairs(newIDs) do
+		local ogName = GetItemInfoInstant(id)
+			local newName = GetItemInfoInstant(newID)
+			if newName and ogName and string.find(newName.name, ogName.name) then
+				return  newID, true
+			end
+		end
+	end
+
 	if (difficulty == 4 and (type == "BCRaid" or type == "ClassicRaid") and sourceType == "Search") or
 	(difficulty == 5 and (type == "BCRaid" or type == "ClassicRaid") and sourceType ~= "Search") then
 		return ItemIDsDatabase[id]["MythicRaid"], true
@@ -138,7 +168,7 @@ function AtlasLoot:FindId(id, difficulty, type, sourceType)
 		difficulty = 4
 	end
 	return ItemIDsDatabase[id][difficulty], true
-	end
+end
 
 -- Create enchant tooltip
 function AtlasLoot:GetEnchantLink(enchantID)

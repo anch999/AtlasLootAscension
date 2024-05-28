@@ -331,15 +331,15 @@ ItemIDsDatabase[1507032] = { 7507032, 1507032, 1807032, 1707032, MythicRaid = 28
 ItemIDsDatabase[1507033] = { 7507033, 1507033, 1807033, 1707033, MythicRaid = 2807033 }-- Avenger's Legplates
 ItemIDsDatabase[1507034] = { 7507034, 1507034, 1807034, 1707034, MythicRaid = 2807034 }-- Avenger's Shoulderguards
 
-ItemIDsDatabase[1522466] = { 7522466, 1522466, 1822466, 1722466, MythicRaid = 2822466, HeroicBloodforged = 6322466 }
-ItemIDsDatabase[1522467] = { 7522467, 1522467, 1822467, 1722467, MythicRaid = 2822467, HeroicBloodforged = 6322467 }
-ItemIDsDatabase[1522464] = { 7522464, 1522464, 1822464, 1722464, MythicRaid = 2822464, HeroicBloodforged = 6322464 }
-ItemIDsDatabase[1522471] = { 7522471, 1522471, 1822471, 1722471, MythicRaid = 2822471, HeroicBloodforged = 6322471 }
-ItemIDsDatabase[1522469] = { 7522469, 1522469, 1822469, 1722469, MythicRaid = 2822469, HeroicBloodforged = 6322469 }
-ItemIDsDatabase[1522470] = { 7522470, 1522470, 1822470, 1722470, MythicRaid = 2822470, HeroicBloodforged = 6322470 }
-ItemIDsDatabase[1522465] = { 7522465, 1522465, 1822465, 1722465, MythicRaid = 2822465, HeroicBloodforged = 6322465 }
-ItemIDsDatabase[1522468] = { 7522468, 1522468, 1822468, 1722468, MythicRaid = 2822468, HeroicBloodforged = 6322468 }
-ItemIDsDatabase[1523065] = { 7523065, 1523065, 1823065, 1723065, MythicRaid = 2823065, HeroicBloodforged = 6323065 }
+ItemIDsDatabase[1522466] = { 7522466, 1522466, 1822466, 1722466, MythicRaid = 2822466 }
+ItemIDsDatabase[1522467] = { 7522467, 1522467, 1822467, 1722467, MythicRaid = 2822467 }
+ItemIDsDatabase[1522464] = { 7522464, 1522464, 1822464, 1722464, MythicRaid = 2822464 }
+ItemIDsDatabase[1522471] = { 7522471, 1522471, 1822471, 1722471, MythicRaid = 2822471 }
+ItemIDsDatabase[1522469] = { 7522469, 1522469, 1822469, 1722469, MythicRaid = 2822469 }
+ItemIDsDatabase[1522470] = { 7522470, 1522470, 1822470, 1722470, MythicRaid = 2822470 }
+ItemIDsDatabase[1522465] = { 7522465, 1522465, 1822465, 1722465, MythicRaid = 2822465 }
+ItemIDsDatabase[1522468] = { 7522468, 1522468, 1822468, 1722468, MythicRaid = 2822468 }
+ItemIDsDatabase[1523065] = { 7523065, 1523065, 1823065, 1723065, MythicRaid = 2823065 }
 
 --Tier 3 Tokens
 
@@ -593,8 +593,5 @@ ItemIDsDatabase[33648] = {6033648, 33648, 333648, 233648, MythicRaid = 1333648};
 for _, v in pairs(ItemIDsDatabase) do
     if not v["MythicRaid"] then
         v["MythicRaid"] = tonumber("13"..v[2])
-    end
-    if not v["HeroicBloodforged"] then
-        v["HeroicBloodforged"] = tonumber("63"..v[2])
     end
 end
