@@ -4620,7 +4620,7 @@ AtlasLoot_Data["T2"] = {
 	Name = "Tier 2";
 	Type = "ClassicRaid";
 	{
-		Name = AL["Druid"];
+		Name = AL["Druid"]..WHITE.." - Healer";
 		[1] = { itemID = 16900, desc = "=ds=" .. BabbleBoss["Onyxia"] };--Stormrage Cover
 		[2] = { itemID = 16902, desc = "=ds=" .. BabbleBoss["Chromaggus"] };--Stormrage Pauldrons
 		[3] = { itemID = 16897, desc = "=ds=" .. BabbleBoss["Nefarian"] };--Stormrage Chestguard
@@ -4642,7 +4642,7 @@ AtlasLoot_Data["T2"] = {
 		[8] = { itemID = 1516898, desc = "=ds=" .. BabbleBoss["Broodlord Lashlayer"] };--Stormrage Boots
 	};
 	{
-		Name = AL["Druid"] .. WHITE.." - DPS";
+		Name = AL["Druid"] .. WHITE.." - Caster";
 		[1] = { itemID = 1516892, desc = "=ds=" .. BabbleBoss["Onyxia"] };--Stormrage Cover
 		[2] = { itemID = 1516894, desc = "=ds=" .. BabbleBoss["Chromaggus"] };--Stormrage Pauldrons
 		[3] = { itemID = 1516889, desc = "=ds=" .. BabbleBoss["Nefarian"] };--Stormrage Chestguard
@@ -4686,7 +4686,7 @@ AtlasLoot_Data["T2"] = {
 		[8] = { itemID = 16957, desc = "=ds=" .. BabbleBoss["Broodlord Lashlayer"] };--Judgement Sabatons
 	};
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"].." - Tank";
+		Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"]..WHITE.." - Tank";
 		[1] = { itemID = 1516955, desc = "=ds=" .. BabbleBoss["Onyxia"] };--Judgement Crown
 		[2] = { itemID = 1516953, desc = "=ds=" .. BabbleBoss["Chromaggus"] };--Judgement Spaulders
 		[3] = { itemID = 1516958, desc = "=ds=" .. BabbleBoss["Nefarian"] };--Judgement Breastplate
@@ -4697,7 +4697,7 @@ AtlasLoot_Data["T2"] = {
 		[8] = { itemID = 1516957, desc = "=ds=" .. BabbleBoss["Broodlord Lashlayer"] };--Judgement Sabatons
 	};
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["PRIEST"];
+		Name = LOCALIZED_CLASS_NAMES_MALE["PRIEST"]..WHITE.." - Healer";
 		[1] = { itemID = 16921, desc = "=ds=" .. BabbleBoss["Onyxia"] };--Halo of Transcendence
 		[2] = { itemID = 16924, desc = "=ds=" .. BabbleBoss["Chromaggus"] };--Pauldrons of Transcendence
 		[3] = { itemID = 16923, desc = "=ds=" .. BabbleBoss["Nefarian"] };--Robes of Transcendence
@@ -4708,7 +4708,7 @@ AtlasLoot_Data["T2"] = {
 		[8] = { itemID = 16919, desc = "=ds=" .. BabbleBoss["Broodlord Lashlayer"] };--Boots of Transcendence
 	};
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["PRIEST"] .. " - DPS";
+		Name = LOCALIZED_CLASS_NAMES_MALE["PRIEST"]..WHITE.." - Caster";
 		[1] = { itemID = 1516921, desc = "=ds=" .. BabbleBoss["Onyxia"] };--Halo of Transcendence
 		[2] = { itemID = 1516924, desc = "=ds=" .. BabbleBoss["Chromaggus"] };--Pauldrons of Transcendence
 		[3] = { itemID = 1516923, desc = "=ds=" .. BabbleBoss["Nefarian"] };--Robes of Transcendence
@@ -4730,7 +4730,7 @@ AtlasLoot_Data["T2"] = {
 		[8] = { itemID = 16906, desc = "=ds=" .. BabbleBoss["Broodlord Lashlayer"] };--Bloodfang Boots
 	};
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"];
+		Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"]..WHITE.." - Healer";
 		[1] = { itemID = 16947, desc = "=ds=" .. BabbleBoss["Onyxia"] };--Helmet of Ten Storms
 		[2] = { itemID = 16945, desc = "=ds=" .. BabbleBoss["Chromaggus"] };--Epaulets of Ten Storms
 		[3] = { itemID = 16950, desc = "=ds=" .. BabbleBoss["Nefarian"] };--Breastplate of Ten Storms
@@ -4741,7 +4741,18 @@ AtlasLoot_Data["T2"] = {
 		[8] = { itemID = 16949, desc = "=ds=" .. BabbleBoss["Broodlord Lashlayer"] };--Greaves of Ten Storms
 	};
 	{		
-		Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"] .. " - Hybrid";
+		Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"]..WHITE.." - Caster";
+		[1] = { itemID = 10962, desc = "=ds=" .. BabbleBoss["Onyxia"] };--Helmet of Ten Storms
+		[2] = { itemID = 10963, desc = "=ds=" .. BabbleBoss["Chromaggus"] };--Epaulets of Ten Storms
+		[3] = { itemID = 10964, desc = "=ds=" .. BabbleBoss["Nefarian"] };--Breastplate of Ten Storms
+		[4] = { itemID = 10965, desc = "=ds=" .. BabbleBoss["Razorgore the Untamed"] };--Bracers of Ten Storms
+		[5] = { itemID = 11001, desc = BabbleBoss["Firemaw"] .. ", " .. BabbleBoss["Ebonroc"] .. ", " .. BabbleBoss["Flamegor"] };--Gauntlets of Ten Storms
+		[6] = { itemID = 11002, desc = "=ds=" .. BabbleBoss["Vaelastrasz the Corrupt"] };--Belt of Ten Storms
+		[7] = { itemID = 11003, desc = "=ds=" .. BabbleBoss["Ragnaros"] };--Legplates of Ten Storms
+		[8] = { itemID = 11004, desc = "=ds=" .. BabbleBoss["Broodlord Lashlayer"] };--Greaves of Ten Storms
+	};
+	{		
+		Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"]..WHITE.." - Hybrid";
 		[1] = { itemID = 1516947, desc = "=ds=" .. BabbleBoss["Onyxia"] };--Helmet of Ten Storms
 		[2] = { itemID = 1516945, desc = "=ds=" .. BabbleBoss["Chromaggus"] };--Epaulets of Ten Storms
 		[3] = { itemID = 1516950, desc = "=ds=" .. BabbleBoss["Nefarian"] };--Breastplate of Ten Storms
@@ -4763,7 +4774,7 @@ AtlasLoot_Data["T2"] = {
 		[8] = { itemID = 16927, desc = "=ds=" .. BabbleBoss["Broodlord Lashlayer"] };--Nemesis Boots
 	};
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"] .. " - DPS";
+		Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"]..WHITE.." - DPS";
 		[1] = { itemID = 10904, desc = "=ds=" .. BabbleBoss["Onyxia"] };--Faceguard of Wrath
 		[2] = { itemID = 10902, desc = "=ds=" .. BabbleBoss["Chromaggus"] };--Shoulderpads of Wrath
 		[3] = { itemID = 10907, desc = "=ds=" .. BabbleBoss["Nefarian"] };--Chestplate of Wrath
@@ -4774,7 +4785,7 @@ AtlasLoot_Data["T2"] = {
 		[8] = { itemID = 10906, desc = "=ds=" .. BabbleBoss["Broodlord Lashlayer"] };--Stompers of Wrath
 	};
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"] .. " - Tank";
+		Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"]..WHITE.." - Block Tank";
 		[1] = { itemID = 16963, desc = "=ds=" .. BabbleBoss["Onyxia"] };--Helm of Wrath
 		[2] = { itemID = 16961, desc = "=ds=" .. BabbleBoss["Chromaggus"] };--Pauldrons of Wrath
 		[3] = { itemID = 16966, desc = "=ds=" .. BabbleBoss["Nefarian"] };--Breastplate of Wrath
@@ -4785,7 +4796,7 @@ AtlasLoot_Data["T2"] = {
 		[8] = { itemID = 16965, desc = "=ds=" .. BabbleBoss["Broodlord Lashlayer"] };--Sabatons of Wrath
 	};
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"] .. " - Tank";
+		Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"]..WHITE.." - Avoidance Tank";
 		[1] = { itemID = 1516963, desc = "=ds=" .. BabbleBoss["Onyxia"] };--Faceguard of Wrath
 		[2] = { itemID = 1516961, desc = "=ds=" .. BabbleBoss["Chromaggus"] };--Shoulderpads of Wrath
 		[3] = { itemID = 1516966, desc = "=ds=" .. BabbleBoss["Nefarian"] };--Chestplate of Wrath
