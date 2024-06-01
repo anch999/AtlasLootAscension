@@ -120,13 +120,22 @@ function AtlasLoot:OpenDB(frame, type, text)
     self:OpenDewdropMenu(frame, menuList)
 end
 
+local function CheckIDs(newIDs, id)
+	for _, newID in ipairs(newIDs) do
+		local ogName = GetItemInfoInstant(id)
+			local newName = GetItemInfoInstant(newID)
+			if newName and ogName and string.find(newName.name, ogName.name) then
+				return  newID
+			end
+	end
+end
+
 --[[
 AtlasLoot:FindId(id, difficulty)
 Finds the Ids of other difficulties based on the normal id of the item and the difficulty parameter given.
 On the form of {ID, {normal, heroic, mythic, mythic1, mythic2, ... ,mythicN}}
 ]]
 function AtlasLoot:FindId(id, difficulty, type, sourceType)
-	if not ItemIDsDatabase[id] then return nil, false end
 	if difficulty == 100 then
 		local newIDs = {
 			(id < 1000000 and (id) + 6300000),
@@ -134,13 +143,9 @@ function AtlasLoot:FindId(id, difficulty, type, sourceType)
 			(id > 1000000 and (id - 1500000) + 6300000),
 			(id > 1000000 and (id - 1500000) + 7800000),
 	}
-		for _, newID in ipairs(newIDs) do
-		local ogName = GetItemInfoInstant(id)
-			local newName = GetItemInfoInstant(newID)
-			if newName and ogName and string.find(newName.name, ogName.name) then
-				return  newID, true
-			end
-		end
+		local hasID = CheckIDs(newIDs)
+		if hasID then return  hasID, true end
+		if not ItemIDsDatabase[id] then return nil, false end
 		return ItemIDsDatabase[id]["HeroicBloodforged"], true
 	end
 
@@ -151,22 +156,37 @@ function AtlasLoot:FindId(id, difficulty, type, sourceType)
 			(id > 1000000 and (id - 1500000) + 6000000),
 			(id > 1000000 and (id - 1500000) + 7500000),
 	}
-		for _, newID in ipairs(newIDs) do
-		local ogName = GetItemInfoInstant(id)
-			local newName = GetItemInfoInstant(newID)
-			if newName and ogName and string.find(newName.name, ogName.name) then
-				return  newID, true
-			end
-		end
+		local hasID = CheckIDs(newIDs, id)
+		if hasID then return  hasID, true end
+	end
+
+	if difficulty == 3 then
+		local newIDs = {
+			(id < 1000000 and (id) + 1550000),
+			(id > 1000000 and (id - 1500000) + 1550000),
+	}
+		local hasID = CheckIDs(newIDs, id)
+		if hasID then return  hasID, true end
+	end
+
+	if difficulty == 4 then
+		local newIDs = {
+			(id < 1000000 and (id) + 1650000),
+			(id > 1000000 and (id - 1500000) + 1650000),
+	}
+		local hasID = CheckIDs(newIDs, id)
+		if hasID then return  hasID, true end
 	end
 
 	if (difficulty == 4 and (type == "BCRaid" or type == "ClassicRaid") and sourceType == "Search") or
 	(difficulty == 5 and (type == "BCRaid" or type == "ClassicRaid") and sourceType ~= "Search") then
+		if not ItemIDsDatabase[id] then return nil, false end
 		return ItemIDsDatabase[id]["MythicRaid"], true
 	end
 	if (difficulty == 5 and (type == "BCRaid" or type == "ClassicRaid") and sourceType == "Search") then
 		difficulty = 4
 	end
+	if not ItemIDsDatabase[id] then return nil, false end
 	return ItemIDsDatabase[id][difficulty], true
 end
 
