@@ -1,4 +1,3 @@
-ItemIDsDatabase = {}
 ItemIDManuelCorrections = {}
 
 ItemIDManuelCorrections[30312] = { nil, nil, 282620, 30312, 30312 } --Infinity Blade

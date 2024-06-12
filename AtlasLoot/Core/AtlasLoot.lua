@@ -204,7 +204,7 @@ function AtlasLoot:OnEnable()
 	else
 		AtlasLootItemsFrame_Wishlist_UnLock:Enable()
 	end
-	self:LoadItemIDsDatabase()
+	self:LoadMissingIDs()
 	self:LoadTradeskillRecipes()
 	self:PopulateProfessions()
 	self:CreateVanityCollection()
@@ -259,7 +259,7 @@ function AtlasLoot:SlashCommand(msg)
 	elseif cmd == "clearcache" then
 		wipe(AtlasLootItemCache)
 	elseif cmd == "clonecache" then
-		self.db.profile.overWrightCache = true
+		AtlasLootItemCache = ItemIDsDatabase
 	else
 		AtlasLootDefaultFrame:Show()
 	end

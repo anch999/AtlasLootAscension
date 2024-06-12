@@ -31,10 +31,10 @@
     };
 
     AtlasLoot.Difficultys["ClassicRaid"] = {
-            {"Normal", 2},
-            {"Heroic", 3},
-            {"Mythic", 5},
-            {"Ascended", 4},
+            {"Normal Raid", 2},
+            {"Heroic Raid", 3},
+            {"Mythic Raid", 5},
+            {"Ascended Raid", 4},
             {"Bloodforged", 1},
             {"Heroic Bloodforged", 100},
     };
@@ -55,10 +55,10 @@
     };
 
     AtlasLoot.Difficultys["BCRaid"] = {
-        {"Normal", 2},
-        {"Heroic", 3},
-        {"Mythic", 5},
-        {"Ascended", 4},
+        {"Normal Raid", 2},
+        {"Heroic Raid", 3},
+        {"Mythic Raid", 5},
+        {"Ascended Raid", 4},
         {"Bloodforged", 1},
         {"Heroic Bloodforged", 100},
      };
@@ -75,10 +75,10 @@
      };
 
      AtlasLoot.Difficultys["WrathRaid"] = {
-        {"Normal", 2},
-        {"Heroic", 3},
-        {"Mythic", 4},
-        {"Ascended", 5},
+        {"Normal Raid", 2},
+        {"Heroic Raid", 3},
+        {"Mythic Raid", 4},
+        {"Ascended Raid", 5},
         {"Bloodforged", 1},
         {"Heroic Bloodforged", 100},
      };

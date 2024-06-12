@@ -40,13 +40,12 @@ local difficultyList = {
 
 function AtlasLoot:GetDifficulty(item)
 	if not item then return end
-	for difficuilty, id in pairs(difficultyList) do
-		local _, description, _ = string.split("@", item.description, 3)
-		if description then
-			description = self:StripTextColor(description)
-			if difficuilty == description then
-				return id, difficuilty
-			end
+	local _, description, _ = string.split("@", item.description, 3)
+	if description then
+		description = self:StripTextColor(description)
+		local difficuilty = difficultyList[description]
+		if difficuilty then
+			return difficuilty, description
 		end
 	end
 end
@@ -60,12 +59,12 @@ function AtlasLoot:CheckItemID(newIDs, ID, dif)
 		if newName and ogName and newName.name and ogName.name then
 			ogName.name = ogName.name:gsub( "%W", "" )
 			newName.name = newName.name:gsub( "%W", "" )
-			if dif == 1 or dif == 100 then
+			if dif == "Bloodforged" or dif == "Heroic Bloodforged" then
 				ogName.name = "Bloodforged"..ogName.name
 			end
 		local _, description = self:GetDifficulty(newName)
 			if description then
-				if (not dif or (dif and (difficultys[dif] == description or raidDifficultys[dif] == description))) then
+				if (not dif or (dif and (dif == description))) then
 					if ogName.name == newName.name then
 						return  newID
 					end
@@ -100,9 +99,9 @@ local itemTypeIgnore = {[18] = true, [19] = true, [24] = true}
 
 AtlasLoot.unknownIDs = {}
 function AtlasLoot:UpdateItemIDsDatabase(firstID, lastID)
-	self.db.profile.overWrightCache = false
 	self:IsLootTableAvailable("AtlasLootOriginalWoW")
 	self:IsLootTableAvailable("AtlasLootBurningCrusade")
+	self:IsLootTableAvailable("AtlasLootWotLK")
     for dataID, data in pairs(AtlasLoot_Data) do
 		if data.Type then
 			for tableNum, t in ipairs(data) do
@@ -110,14 +109,14 @@ function AtlasLoot:UpdateItemIDsDatabase(firstID, lastID)
 					if type(itemData) == "table" then
 						if itemData.itemID then
 							for _, dif in pairs(self.Difficultys[data.Type]) do
-								local idCheck = ItemIDsDatabase[itemData.itemID] and self:CheckItemID(ItemIDsDatabase[itemData.itemID][dif[2]], itemData.itemID, dif[2]) or nil
+								local idCheck = ItemIDsDatabase[itemData.itemID] and self:CheckItemID(ItemIDsDatabase[itemData.itemID][dif[2]], itemData.itemID, dif[1]) or nil
 								local itemType = GetItemInfoInstant(itemData.itemID) or nil
 								if dif[2] ~= 100 and dif[2] ~= 1 and dif[2] ~= 2 and itemType and itemType.inventoryType ~= 0 and not itemTypeIgnore[itemType.inventoryType] and
 								((not ItemIDsDatabase[itemData.itemID]) or
 								(ItemIDsDatabase[itemData.itemID] and (not ItemIDsDatabase[itemData.itemID][dif[2]] or
 								(ItemIDsDatabase[itemData.itemID][dif[2]] and not idCheck)))) then
-									self.unknownIDs[itemData.itemID] = self.unknownIDs[itemData.itemID] or {}
-									self.unknownIDs[itemData.itemID][dif[2]] = dif[2]
+									self.unknownIDs[dif[1]] = self.unknownIDs[dif[1]] or {}
+									self.unknownIDs[dif[1]][itemType.name:gsub( "%W", "" )] = itemData.itemID
 								end
 							end
 						end
@@ -134,28 +133,26 @@ function AtlasLoot:GetItemVariationIDs(firstID, lastID)
     self:CreateUpdateText()
     AtlasLootDbUpdate:Show()
 
-	local maxDuration = GetFramerate() - 5
+	local maxDuration = 500/GetFramerate()
     local startTime = debugprofilestop()
 	firstID = firstID or 1
-	lastID = lastID or 5500000
+	lastID = lastID or 10000000
 	AtlasLootDbUpdateText:SetText("Updating AtlasLoot Item Cache\n"..firstID.." / ".. lastID)
 
 		local function checkID(item, difficulty)
-			for ID, diffList in pairs (self.unknownIDs) do
-				local ogName = GetItemInfoInstant(ID)
-					if difficulty and item and ogName and item.name and ogName.name then
-						local orignalName = ogName.name:gsub( "%W", "" )
-						local foundName = item.name:gsub( "%W", "" )
-						if orignalName == foundName then
-							AtlasLootItemCache[ID] = AtlasLootItemCache[ID] or {}
-							AtlasLootItemCache[ID][difficulty] = item.itemID
-							ItemIDsDatabase[ID] = ItemIDsDatabase[ID] or {}
-							ItemIDsDatabase[ID][difficulty] = item.itemID
-							self.unknownIDs[ID][difficulty] = nil
-							if self:CheckIfEmptyTable(self.unknownIDs[ID]) then self.unknownIDs[ID] = nil end
+				if difficulty and item and item.name then
+					local foundName = item.name:gsub( "%W", "" )
+					if foundName then
+						local orignalID = self.unknownIDs[difficulty] and self.unknownIDs[difficulty][foundName]
+						if orignalID then
+							AtlasLootItemCache[orignalID] = AtlasLootItemCache[orignalID] or {}
+							AtlasLootItemCache[orignalID][difficultyList[difficulty]] = item.itemID
+							ItemIDsDatabase[orignalID] = ItemIDsDatabase[orignalID] or {}
+							ItemIDsDatabase[orignalID][difficultyList[difficulty]] = item.itemID
+							self.unknownIDs[difficulty][foundName] = nil
 						end
 					end
-			end
+				end
 			AtlasLootDbUpdateText:SetText("Updating AtlasLoot Item Cache\n"..firstID.." / ".. lastID)
 		end
 
@@ -166,13 +163,14 @@ function AtlasLoot:GetItemVariationIDs(firstID, lastID)
         startTime = debugprofilestop()
         while (firstID ~= lastID) do
 			local item = GetItemInfoInstant(firstID)
-			local difficulty = self:GetDifficulty(item)
-			if item and item.quality > 2 and item.inventoryType ~= 0 and not itemTypeIgnore[item.inventoryType] and difficulty then
+			local _, difficulty = self:GetDifficulty(item)
+			if item and item.inventoryType ~= 0 and not itemTypeIgnore[item.inventoryType] and difficulty then
 				checkID(item, difficulty)
 			end
 			firstID = firstID + 1
             AtlasLootDbUpdateText:SetText("Updating AtlasLoot Item Cache\n"..firstID.." / ".. lastID)
             if (debugprofilestop() - startTime > maxDuration) then
+				collectgarbage("collect")
                 Timer.After(0, continue)
                 return
             end
@@ -190,6 +188,13 @@ On the form of {ID, {normal, heroic, mythic, mythic1, mythic2, ... ,mythicN}}
 ]]
 function AtlasLoot:FindId(id, difficulty, type, sourceType)
 	local hasID
+	local difficultyString
+		for _, dif in pairs (self.Difficultys[type]) do
+			if dif[2] == difficulty then
+				difficultyString = dif[1]
+			end
+		end
+
 	if difficulty == 2 then return end
 	if difficulty == 100 then
 		local newIDs = {
@@ -198,7 +203,7 @@ function AtlasLoot:FindId(id, difficulty, type, sourceType)
 			(id > 1000000 and (id - 1500000) + 6300000),
 			(id > 1000000 and (id - 1500000) + 7800000),
 	}
-		hasID = self:CheckItemID(newIDs, id, difficulty)
+		hasID = self:CheckItemID(newIDs, id, difficultyString)
 		if hasID then return  hasID, true end
 		if not ItemIDsDatabase[id] then return nil, false end
 	end
@@ -210,7 +215,7 @@ function AtlasLoot:FindId(id, difficulty, type, sourceType)
 			(id > 1000000 and (id - 1500000) + 6000000),
 			(id > 1000000 and (id - 1500000) + 7500000),
 	}
-		hasID = self:CheckItemID(newIDs, id, difficulty)
+		hasID = self:CheckItemID(newIDs, id, difficultyString)
 		if hasID then return  hasID, true end
 	end
 
@@ -219,7 +224,7 @@ function AtlasLoot:FindId(id, difficulty, type, sourceType)
 			(id < 1000000 and (id) + 1550000),
 			(id > 1000000 and (id - 1500000) + 1550000),
 	}
-		hasID = self:CheckItemID(newIDs, id, difficulty)
+		hasID = self:CheckItemID(newIDs, id, difficultyString)
 		if hasID then return  hasID, true end
 	end
 
@@ -228,7 +233,7 @@ function AtlasLoot:FindId(id, difficulty, type, sourceType)
 			(id < 1000000 and (id) + 1650000),
 			(id > 1000000 and (id - 1500000) + 1650000),
 	}
-		hasID = self:CheckItemID(newIDs, idid, difficulty)
+		hasID = self:CheckItemID(newIDs, id, difficultyString)
 		if hasID then return  hasID, true end
 	end
 
@@ -239,53 +244,15 @@ function AtlasLoot:FindId(id, difficulty, type, sourceType)
 	end
 
 	if ItemIDsDatabase[id] then
-		hasID = self:CheckItemID(ItemIDsDatabase[id][difficulty] or nil, id, difficulty)
+		hasID = self:CheckItemID(ItemIDsDatabase[id][difficulty] or nil, id, difficultyString)
 		if hasID then
 			return hasID, true
 		end
 	end
 end
 
--- Loads the Item Variations into a table from the data content folder
-function AtlasLoot:LoadItemIDsDatabase()
-	local content = C_ContentLoader:Load("ItemVariationData")
-	content:SetParser(function(index, data)
-		-- run for each item in the data
-		self:CancelTimer(self.missingItemsTimer)
-        content:SetParser(function(index, data)
-            -- run for each item in the data
-        if index ~= 0 and data.Normal ~= 0 and not ItemIDsDatabase[data.Normal] then
-                ItemIDsDatabase[data.Normal] = {}
-                ItemIDsDatabase[data.Normal]["MythicRaid"] = tonumber("13"..data.Normal)
-                table.insert(ItemIDsDatabase[data.Normal],data.Bloodforged)
-                table.insert(ItemIDsDatabase[data.Normal],data.HeroicBloodforged)
-                table.insert(ItemIDsDatabase[data.Normal],data.Normal)
-                if data.Heroic ~= 0 then table.insert(ItemIDsDatabase[data.Normal],data.Heroic) end
-                    for _,v in ipairs(data["Mythic"]) do
-                        if v ~= 0 then
-                            table.insert(ItemIDsDatabase[data.Normal],v)
-                        end
-                    end
-            end
-        end)
-		self.missingItemsTimer = self:ScheduleTimer("LoadMissingIDs", 5)
-	end)
-
-	-- This will run over time (usually about 30s for a file this size), but will maintain playable fps while running.
-	content:ParseAsync()
-end
-
 --Updates the ItemIDsDatabase with any missing or incorrect items
 function AtlasLoot:LoadMissingIDs()
-	--loads the items in AtlasLoot_Cache
-	if AtlasLootUpdateCache then
-		for normalID, item in pairs(AtlasLootUpdateCache) do
-			for itemDif, itemID in pairs(item) do
-				ItemIDsDatabase[normalID] = ItemIDsDatabase[normalID] or {}
-				ItemIDsDatabase[normalID][itemDif] = itemID
-			end
-		end	
-	end
 	--loads any items in the saved varriables cache
     if AtlasLootItemCache and not self:CheckIfEmptyTable(AtlasLootItemCache) then
 		for normalID, item in pairs(AtlasLootItemCache) do
@@ -304,11 +271,6 @@ function AtlasLoot:LoadMissingIDs()
 			end
 		end
 	end
-	--if this is true will overwright the varriables cache with the itemcache to make it easyer to update
-	if self.db.profile.overWrightCache then
-		AtlasLootItemCache = AtlasLootUpdateCache
-	end
 	ItemIDManuelCorrections = nil
-	AtlasLootUpdateCache = nil
     collectgarbage("collect")
 end

@@ -3708,7 +3708,7 @@ AtlasLoot_Data["ZulGurub"] = {
 		[5] = { itemID = 19906, droprate = "11.36%" }; --Blooddrenched Footpads
 		[6] = { itemID = 19905, droprate = "6.99%" }; --Zanzil's Band
 		[7] = { itemID = 19900, droprate = "11.89%" }; --Zulian Stone Axe
-		[16] = { icon = "INV_Banner_01", name = "=q4=ZG Sets", ootTable = {{"ZGSets", "AtlasLoot_Data", 1},"Source"} };
+		[16] = { icon = "INV_Banner_01", name = "=q4=ZG Sets", lootTable = {{"ZGSets", "AtlasLoot_Data", 1},"Source"} };
 	Module = "AtlasLoot_OriginalWoW";
 		[18] = { itemID = 19943, droprate = "6.0%" }; --Massive Mojo
 		[19] = { itemID = 19881, droprate = "100%" }; --Channeler's Head
@@ -3722,7 +3722,7 @@ AtlasLoot_Data["ZulGurub"] = {
 		[4] = { itemID = 19871, droprate = "11.36%" }; --Talisman of Protection
 		[5] = { itemID = 19925, droprate = " 6.99%" }; --Band of Jin
 		[6] = { itemID = 19930, droprate = "12.09%" }; --Mar'li's Eye
-		[16] = { icon = "INV_Banner_01", name = "=q4=ZG Sets", ootTable = {{"ZGSets", "AtlasLoot_Data", 1},"Source"} };
+		[16] = { icon = "INV_Banner_01", name = "=q4=ZG Sets", lootTable = {{"ZGSets", "AtlasLoot_Data", 1},"Source"} };
 	Module = "AtlasLoot_OriginalWoW";
 		[18] = { itemID = 19943, droprate = "7.4%" }; --Massive Mojo
 		[19] = { itemID = 19881, droprate = "100%" }; --Channeler's Head
@@ -3742,7 +3742,7 @@ AtlasLoot_Data["ZulGurub"] = {
 		[12] = { itemID = 19873, droprate = "12.28%" }; --Overlord's Crimson Band
 		[13] = { itemID = 19893, droprate = "13.11%" }; --Zanzil's Seal
 		[14] = { itemID = 19863, droprate = "12.32%" }; --Primalist's Seal
-		[16] = { icon = "INV_Banner_01", name = "=q4=ZG Sets", ootTable = {{"ZGSets", "AtlasLoot_Data", 1},"Source"} };
+		[16] = { icon = "INV_Banner_01", name = "=q4=ZG Sets", lootTable = {{"ZGSets", "AtlasLoot_Data", 1},"Source"} };
 		[18] = { itemID = 22637 }; --Primal Hakkari Idol
 		[19] = { itemID = 19943, droprate = "9.4%" }; --Massive Mojo
 	};
@@ -3783,13 +3783,13 @@ AtlasLoot_Data["ZulGurub"] = {
 		[7] = { itemID = 20260, droprate = "4.30%" }; --Seafury Leggings
 		[8] = { itemID = 20266, droprate = "8.69%" }; --Peacekeeper Leggings
 		[9] = { itemID = 19901, droprate = "13.36%" }; --Zulian Slicer
-		[16] = { icon = "INV_Banner_01", name = "=q4=ZG Sets", ootTable = {{"ZGSets", "AtlasLoot_Data", 1},"Source"} };
+		[16] = { icon = "INV_Banner_01", name = "=q4=ZG Sets", lootTable = {{"ZGSets", "AtlasLoot_Data", 1},"Source"} };
 		[18] = { itemID = 19943, droprate = "8.3%" }; --Massive Mojo
 		[19] = { itemID = 19881, droprate = "100%" }; --Channeler's Head
 	};
 	{
 		Name = BabbleBoss["High Priestess Arlokk"];
-		[16] = { icon = "INV_Banner_01", name = "=q4=ZG Sets", ootTable = {{"ZGSets", "AtlasLoot_Data", 1},"Source"} };
+		[16] = { icon = "INV_Banner_01", name = "=q4=ZG Sets", lootTable = {{"ZGSets", "AtlasLoot_Data", 1},"Source"} };
 		[18] = { itemID = 19943, droprate = "5.6%" }; --Massive Mojo
 		[19] = { itemID = 19881, droprate = "100%" }; --Channeler's Head
 		[1] = { itemID = 19910, droprate = "3.62%" }; --Arlokk's Grasp
@@ -3801,7 +3801,7 @@ AtlasLoot_Data["ZulGurub"] = {
 	};
 	{
 		Name = BabbleBoss["Jin'do the Hexxer"];
-		[16] = { icon = "INV_Banner_01", name = "=q4=ZG Sets", ootTable = {{"ZGSets", "AtlasLoot_Data", 1},"Source"} };
+		[16] = { icon = "INV_Banner_01", name = "=q4=ZG Sets", lootTable = {{"ZGSets", "AtlasLoot_Data", 1},"Source"} };
 		[18] = { itemID = 22637 }; --Primal Hakkari Idol
 		[19] = { itemID = 19943, droprate = "8.4%" }; --Massive Mojo
 		[1] = { itemID = 19885, droprate = "6.82%" }; --Jin'do's Evil Eye
