@@ -11,6 +11,7 @@
     AtlasLoot.Difficultys["PVP"] = {
         {"Normal", 2},
         {"Bloodforged", 1},
+        {"Heroic Bloodforged", 100},
     };
 
     AtlasLoot.Difficultys["ClassicDungeonExt"] = {
@@ -63,10 +64,10 @@
      };
 
      AtlasLoot.Difficultys["WrathDungeon"] = {
-        {"Normal/Heroic", 2},
-        {"Mythic", 4},
         {"Bloodforged", 1},
         {"Heroic Bloodforged", 100},
+        {"Normal/Heroic", 2},
+        {"Mythic", 4},
         {"Mythic 1", 5 },  {"Mythic 2", 6 },  {"Mythic 3", 7 },  {"Mythic 4", 8 },  {"Mythic 5", 9 },
         {"Mythic 6", 10 }, {"Mythic 7", 11 }, {"Mythic 8", 12 }, {"Mythic 9", 13 }, {"Mythic 10", 14 },
         {"Mythic 11", 15 }, {"Mythic 12", 16 }, {"Mythic 13", 17 }, {"Mythic 14", 18 }, {"Mythic 15", 19 },

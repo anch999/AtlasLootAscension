@@ -16,8 +16,6 @@ AtlasLoot:SetFavorites(number)
 AtlasLoot:AddTooltip(frameb, tooltiptext)
 ]]
 
-AtlasLoot = LibStub("AceAddon-3.0"):NewAddon("AtlasLoot", "AceEvent-3.0", "AceTimer-3.0")
-
 local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
 local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0")
 
@@ -145,6 +143,7 @@ function AtlasLoot:OnEnable()
     self.db = LibStub("AceDB-3.0"):New("AtlasLootDB")
     self.db:RegisterDefaults(AtlasLootDBDefaults)
 	setupSettingsDB()
+	AtlasLootItemCache = AtlasLootItemCache or {}
     if AtlasLoot_Data then
         AtlasLoot_Data["EmptyTable"] = {
 			Name = AL["Select a Loot Table..."],
@@ -246,10 +245,21 @@ msg - takes the argument for the /atlasloot command so that the appropriate acti
 If someone types /atlasloot, bring up the options box
 ]]
 function AtlasLoot:SlashCommand(msg)
-	if msg == AL["reset"] then
+	msg = msg or ""
+
+	local cmd, arg1, arg2 = string.split(" ", msg, 3)
+	cmd = string.lower(cmd or "")
+
+	if cmd == AL["reset"] then
 		self:Reset("frames")
-	elseif msg == AL["options"] then
+	elseif cmd == AL["options"] then
 		self:OptionsToggle()
+	elseif cmd == "updatecache" then
+		self:UpdateItemIDsDatabase(tonumber(arg1), tonumber(arg2))
+	elseif cmd == "clearcache" then
+		wipe(AtlasLootItemCache)
+	elseif cmd == "clonecache" then
+		self.db.profile.overWrightCache = true
 	else
 		AtlasLootDefaultFrame:Show()
 	end
@@ -427,7 +437,7 @@ function AtlasLoot:CreateToken(dataID)
 	end
 	local count = #AtlasLoot_Data[dataID][1] * #AtlasLoot_Data[dataID]
 	local function addItem(itemID, desc)
-		if itemType == select(9, GetItemInfo(itemID)) or itemType2 == select(9, GetItemInfo(itemID)) then
+		if itemType == select(9, AtlasLoot:GetItemInfo(itemID)) or itemType2 == select(9, AtlasLoot:GetItemInfo(itemID)) then
 			table.insert(AtlasLoot_TokenData[orgID][1], {itemID = itemID, desc = desc})
 		end
 		if count == 1 then
@@ -439,14 +449,7 @@ function AtlasLoot:CreateToken(dataID)
 	for _, t in ipairs(AtlasLoot_Data[dataID]) do
 		for _, v in ipairs(t) do
 			if type(v) == "table" then
-				local item = Item:CreateFromID(v.itemID)
-				if v.itemID and not item:GetInfo() then
-					self:ItemsLoading(1)
-					item:ContinueOnLoad(function()
-						self:ItemsLoading(-1)
-						addItem(v.itemID, t.Name)
-					end)
-				else
+				if v.itemID then
 					addItem(v.itemID, t.Name)
 				end
 			end
@@ -527,22 +530,11 @@ function AtlasLoot:CreateOnDemandLootTable(typeL)
 	-- Load items to cache and check they are either an armor or weapon
 	local function processItem(itemData)
 		if not itemData then return end
-		local item = Item:CreateFromID(itemData.itemID)
 		if itemData.itemID then
-			if not item:GetInfo() then
-				item:ContinueOnLoad(function()
-					self:ItemsLoading(-1)
-					local armorType, armorSubType, _, equipLoc = select(6,GetItemInfo(itemData.itemID))
-					if (armorType == "Armor" or armorType == "Weapon") then
-						sortItem(itemData, armorSubType, equipLoc, armorType)
-					end
-				end)
-			else
-				self:ItemsLoading(-1)
-				local armorType, armorSubType, _, equipLoc = select(6,GetItemInfo(itemData.itemID))
-				if (armorType == "Armor" or armorType == "Weapon") then
-					sortItem(itemData, armorSubType, equipLoc, armorType)
-				end
+			self:ItemsLoading(-1)
+			local armorType, armorSubType, _, equipLoc = select(6,AtlasLoot:GetItemInfo(itemData.itemID))
+			if (armorType == "Armor" or armorType == "Weapon") then
+				sortItem(itemData, armorSubType, equipLoc, armorType)
 			end
 		end
 	end
@@ -762,9 +754,13 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 	end
 
 	-- Setup the button for the to be displayed item/spell
-	local function setupButton(itemID, i, dataSource, dataID, tablenum, dataSource_backup, item)
+	local function setupButton(itemID, i, dataSource, dataID, tablenum, dataSource_backup)
 		local text, extra
-		local itemName, itemQuality, itemSubType, itemEquipLoc, itemColor
+		local itemName, itemQuality, itemSubType, itemEquipLoc, itemIcon
+		if itemID then
+			itemName, _, itemQuality, _, _, _, itemSubType, _, itemEquipLoc, itemIcon = AtlasLoot:GetItemInfo(itemID)
+		end
+
 		local spellName, spellIcon
 		--Use shortcuts for easier reference to parts of the item button
 		local itemButton = _G["AtlasLootItem_"..i]
@@ -783,7 +779,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 				text = self:FixText(text)
 			end
 			if itemID then
-				text = select(4,GetItemQualityColor(item:GetQuality()))..text
+				text = select(4,GetItemQualityColor(itemQuality))..text
 			end
 			--Adds button highlights if you know a recipe or have a char that knows one
 			if CA_IsSpellKnown(spellID) then
@@ -800,21 +796,13 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 
 			end
 		elseif itemID then
-			itemName, _, itemQuality, _, _, _, itemSubType, _, itemEquipLoc, _ = GetItemInfo(itemID)
-			itemName = itemName or item:GetName()
-			itemSubType = itemSubType or AtlasLoot_ExtraData["ArmorConversion"][item:GetSubClassID()]
-				if not itemName then
-					itemID = orgItemID
-					itemName, _, itemQuality, _, _, _, itemSubType, _, itemEquipLoc, _ = GetItemInfo(itemID)
-				end
 			--If the client has the name of the item in cache, use that instead.					
 			if dataSource[dataID][tablenum][i].name then
 				--If it has a manuel entry use that
 				text = dataSource[dataID][tablenum][i].name
 				text = self:FixText(text)
 			elseif itemName then
-				itemQuality = itemQuality or item:GetQuality()
-				text = itemQuality and select(4,GetItemQualityColor(itemQuality))..itemName or itemName
+				text = select(4,GetItemQualityColor(itemQuality))..itemName
 			else
 				text = ""
 			end
@@ -857,8 +845,10 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 			extra = LIMEGREEN .. "L-Click:|r "..WHITE..dataSource[dataID].Name.." ( "..ORANGE..lvls[1].."|r "..YELLOW..lvls[2].."|r "..GREEN..lvls[3].."|r "..GREY..lvls[4]..WHITE.." )"
 		elseif dataSource[dataID][tablenum][i].lootTable and dataSource[dataID][tablenum][i].lootTable[2] == "Token" then
 			extra = "#setToken#"
-		elseif itemEquipLoc and itemSubType then
+		elseif itemEquipLoc and itemEquipLoc ~= "" and itemSubType then
 			extra = "=ds="..itemEquipLoc..", "..itemSubType
+		elseif itemSubType then
+			extra = "=ds="..itemSubType
 		else
 			extra = ""
 		end
@@ -894,12 +884,9 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 		elseif dataSource[dataID][tablenum][i].icon then
 			iconFrame:SetTexture("Interface\\Icons\\"..dataSource[dataID][tablenum][i].icon)
 		elseif dataSource[dataID][tablenum][i].itemID then
-			iconFrame:SetTexture(GetItemIcon(dataSource[dataID][tablenum][i].itemID))
+			iconFrame:SetTexture(itemIcon)
 		elseif spellIcon then
 			iconFrame:SetTexture(spellIcon)
-		elseif dataSource[dataID][tablenum][i].itemID then
-			local icon = item:GetIcon()
-			iconFrame:SetTexture(icon)
 		end
 
 		if iconFrame:GetTexture() == nil and dataSource[dataID][tablenum][i].icon ~= "Blank" then
@@ -973,10 +960,10 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 		self:ItemsLoading(1)
 		item:ContinueOnLoad(function(itemID)
 			self:ItemsLoading(-1)
-			setupButton(itemID, i, dataSource, dataID, tablenum, dataSource_backup, item)
+			setupButton(itemID, i, dataSource, dataID, tablenum, dataSource_backup)
 		end)
 	end
-
+	
 	-- Create the loottable
 	if (dataID == "SearchResult") or (dataSource_backup == "AtlasLoot_CurrentWishList") or dataSource[dataID][tablenum] then
 
@@ -994,11 +981,11 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 					if not item:GetInfo() then
 						getItemData(itemID, i, orgItemID, item)
 					end
-					setupButton(itemID, i, dataSource, dataID, tablenum, dataSource_backup, item)
+					setupButton(itemID, i, dataSource, dataID, tablenum, dataSource_backup)
 				elseif recipeID then
 					getItemData(recipeID, i, nil, Item:CreateFromID(recipeID))
 				else
-					setupButton(itemID, i, dataSource, dataID, tablenum, dataSource_backup, Item:CreateFromID(itemID))
+					setupButton(itemID, i, dataSource, dataID, tablenum, dataSource_backup)
 				end
 			else
 				itemButton:Hide()
@@ -1137,11 +1124,6 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 	if self.filterEnable and dataID ~= "FilterList" then
 		self:HideFilteredItems()
 	end
-	if dataID ~= "SearchResult" and dataSource_backup ~= "AtlasLoot_OnDemand" then
-		--preload items from the rest of the instance table
-		self:PreLoadLootTable(dataSource, dataID, ItemindexID)
-	end
-
 end
 
 -- List of Moduel Names
@@ -1203,57 +1185,6 @@ function AtlasLoot:SetFavorites(num)
     else
         AtlasLootCharDB["QuickLooks"][num]={AtlasLootItemsFrame.refreshOri[1], AtlasLootItemsFrame.refreshOri[2], AtlasLootItemsFrame.refreshOri[3], self.lastModule, self.currentTable, _G[AtlasLootItemsFrame.refreshOri[2]][AtlasLootItemsFrame.refreshOri[1]][AtlasLootItemsFrame.refreshOri[3]].Name}
     end
-end
-
--- Used to precache all the items in a raid/instance
-local isLoaded = {}
-function AtlasLoot:PreLoadLootTable(dataSource, dataID, ItemindexID)
-	if isLoaded[dataID] and isLoaded[dataID][ItemindexID] then return end
-	for _, instance in ipairs(dataSource[dataID]) do
-		for _, boss in pairs(instance) do
-			if type(boss) == "table" then
-				local itemID = ItemIDsDatabase[boss.itemID] and ItemIDsDatabase[boss.itemID][ItemindexID] or boss.itemID
-				if itemID then
-					local item = Item:CreateFromID(itemID)
-					if item and not item:GetInfo() then
-						self:ItemsLoading(1)
-						item:ContinueOnLoad(function(itemID)
-							self:ItemsLoading(-1)
-						end)
-					end
-				end
-			end
-		end
-	end
-	if not isLoaded[dataID] then isLoaded[dataID] = {} end
-	isLoaded[dataID][ItemindexID] = true
-end
-
-
-
-
--- Loads the Item Variations into a table from the data content folder
-function AtlasLoot:LoadItemIDsDatabase()
-	local content = C_ContentLoader:Load("ItemVariationData")
-	content:SetParser(function(index, data)
-		-- run for each item in the data
-	if index ~= 0 and data.Normal ~= 0 and not ItemIDsDatabase[data.Normal] then
-			ItemIDsDatabase[data.Normal] = {}
-			ItemIDsDatabase[data.Normal]["MythicRaid"] = tonumber("13"..data.Normal)
-			table.insert(ItemIDsDatabase[data.Normal],data.Bloodforged)
-			table.insert(ItemIDsDatabase[data.Normal],data.HeroicBloodforged)
-			table.insert(ItemIDsDatabase[data.Normal],data.Normal)
-			if data.Heroic ~= 0 then table.insert(ItemIDsDatabase[data.Normal],data.Heroic) end
-				for _,v in ipairs(data["Mythic"]) do
-					if v ~= 0 then
-						table.insert(ItemIDsDatabase[data.Normal],v)
-					end
-				end
-		end
-	end)
-
-	-- This will run over time (usually about 30s for a file this size), but will maintain playable fps while running.
-	content:ParseAsync()
 end
 
 function AtlasLoot:UNIT_SPELLCAST_SUCCEEDED(event, arg1, arg2 , arg3)

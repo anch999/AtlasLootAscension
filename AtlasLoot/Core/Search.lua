@@ -679,7 +679,7 @@ end
 local itemList = {}
 
 function AtlasLoot:DoSearch(searchText)
-    AtlasLootCharDB["SearchResult"] = {Name = "Search Result" , Type = "Search", Back = true}
+    AtlasLootCharDB["SearchResult"] = {Name = "Search Result" , Type = "Search"}
     count = 0
     tablenum = 1
     showSearch = false

@@ -1,3 +1,5 @@
+AtlasLoot = LibStub("AceAddon-3.0"):NewAddon("AtlasLoot", "AceEvent-3.0", "AceTimer-3.0")
+
 local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot");
 local BabbleBoss = AtlasLoot_GetLocaleLibBabble("LibBabble-Boss-3.0")
 local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0")
@@ -79,14 +81,6 @@ AtlasLoot_CraftingData["Seasonal"] = {
 [4] = { GetCategoryInfo(161) }; -- Midsummer
 [5] = { GetCategoryInfo(14981) }; -- Pilgrim's Bounty
 [6] = { AL["Day of the Dead"] }; -- Day of the Dead
-}
-
-
-AtlasLoot_ExtraData["ArmorConversion"] = {
-	"Cloth",
-	"Leather",
-	"Mail",
-	"Plate"
 }
 
 ----------------------

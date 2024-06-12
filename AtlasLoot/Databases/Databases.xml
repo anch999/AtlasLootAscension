@@ -2,6 +2,7 @@
 ..\FrameXML\UI.xsd">
     <Script file="Databases.lua"/>
     <Script file="ItemIDsDatabaseFixes.lua"/>
+    <Script file="DatabaseFunctions.lua"/>
     <Script file="extraCraftingData.lua"/>
     <Script file="CraftingSource.lua"/>
     <Script file="CraftingLevels.lua"/>

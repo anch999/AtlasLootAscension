@@ -60,7 +60,7 @@ AtlasLootFilter = { FilterList = {} }
 function AtlasLoot:HideFilteredItems()
 	local dataID, dataSource, tablenum = AtlasLootItemsFrame.refreshFilter[1], _G[AtlasLootItemsFrame.refreshFilter[2]], AtlasLootItemsFrame.refreshFilter[3]
  	local tablebase = dataSource[dataID][tablenum]
-	if not tablebase or dataID == "WishList" or dataID == "SearchResult" then return end
+	if not tablebase or dataID == "WishList" then return end
 	local source = dataSource[dataID]
 	AtlasLootFilter["FilterList"] = {
 		Type = source.Type,

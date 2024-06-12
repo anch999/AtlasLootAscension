@@ -120,74 +120,43 @@ function AtlasLoot:OpenDB(frame, type, text)
     self:OpenDewdropMenu(frame, menuList)
 end
 
-local function CheckIDs(newIDs, id)
-	for _, newID in ipairs(newIDs) do
-		local ogName = GetItemInfoInstant(id)
-			local newName = GetItemInfoInstant(newID)
-			if newName and ogName and string.find(newName.name, ogName.name) then
-				return  newID
-			end
+local itemEquipLocConversion = {
+	"INVTYPE_HEAD",
+	"INVTYPE_NECK",
+	"INVTYPE_SHOULDER",
+	"INVTYPE_BODY",
+	"INVTYPE_CHEST",
+	"INVTYPE_WAIST",
+	"INVTYPE_LEGS",
+	"INVTYPE_FEET",
+	"INVTYPE_WRIST",
+	"INVTYPE_HAND",
+	"INVTYPE_FINGER",
+	"INVTYPE_TRINKET",
+	"INVTYPE_WEAPON",
+	"INVTYPE_SHIELD",
+	"INVTYPE_RANGED",
+	"INVTYPE_CLOAK",
+	"INVTYPE_2HWEAPON",
+	"INVTYPE_BAG",
+	"INVTYPE_TABARD",
+	"INVTYPE_ROBE",
+	"INVTYPE_WEAPONMAINHAND",
+	"INVTYPE_WEAPONOFFHAND",
+	"INVTYPE_HOLDABLE",
+	"INVTYPE_AMMO",
+	"INVTYPE_THROWN",
+	"INVTYPE_RANGEDRIGHT",
+	"INVTYPE_QUIVER",
+	"INVTYPE_RELIC",
+}
+function AtlasLoot:GetItemInfo(itemID)
+	local itemName, itemLink, itemQuality, itemLevel, itemMinLevel, itemType, itemSubType, itemStackCount, itemEquipLoc, itemTexture, itemSellPrice = GetItemInfo(itemID)
+	if not itemName then
+		local item = GetItemInfoInstant(itemID)
+		itemName, itemSubType, itemEquipLoc, itemTexture, itemQuality = item.name, _G["ITEM_SUBCLASS_"..item.classID.."_"..item.subclassID], itemEquipLocConversion[item.inventoryType], item.icon, item.quality
 	end
-end
-
---[[
-AtlasLoot:FindId(id, difficulty)
-Finds the Ids of other difficulties based on the normal id of the item and the difficulty parameter given.
-On the form of {ID, {normal, heroic, mythic, mythic1, mythic2, ... ,mythicN}}
-]]
-function AtlasLoot:FindId(id, difficulty, type, sourceType)
-	if difficulty == 100 then
-		local newIDs = {
-			(id < 1000000 and (id) + 6300000),
-			(id < 1000000 and (id) + 7800000),
-			(id > 1000000 and (id - 1500000) + 6300000),
-			(id > 1000000 and (id - 1500000) + 7800000),
-	}
-		local hasID = CheckIDs(newIDs)
-		if hasID then return  hasID, true end
-		if not ItemIDsDatabase[id] then return nil, false end
-		return ItemIDsDatabase[id]["HeroicBloodforged"], true
-	end
-
-	if difficulty == 1 then
-		local newIDs = {
-			(id < 1000000 and (id) + 6000000),
-			(id < 1000000 and (id) + 7500000),
-			(id > 1000000 and (id - 1500000) + 6000000),
-			(id > 1000000 and (id - 1500000) + 7500000),
-	}
-		local hasID = CheckIDs(newIDs, id)
-		if hasID then return  hasID, true end
-	end
-
-	if difficulty == 3 then
-		local newIDs = {
-			(id < 1000000 and (id) + 1550000),
-			(id > 1000000 and (id - 1500000) + 1550000),
-	}
-		local hasID = CheckIDs(newIDs, id)
-		if hasID then return  hasID, true end
-	end
-
-	if difficulty == 4 then
-		local newIDs = {
-			(id < 1000000 and (id) + 1650000),
-			(id > 1000000 and (id - 1500000) + 1650000),
-	}
-		local hasID = CheckIDs(newIDs, id)
-		if hasID then return  hasID, true end
-	end
-
-	if (difficulty == 4 and (type == "BCRaid" or type == "ClassicRaid") and sourceType == "Search") or
-	(difficulty == 5 and (type == "BCRaid" or type == "ClassicRaid") and sourceType ~= "Search") then
-		if not ItemIDsDatabase[id] then return nil, false end
-		return ItemIDsDatabase[id]["MythicRaid"], true
-	end
-	if (difficulty == 5 and (type == "BCRaid" or type == "ClassicRaid") and sourceType == "Search") then
-		difficulty = 4
-	end
-	if not ItemIDsDatabase[id] then return nil, false end
-	return ItemIDsDatabase[id][difficulty], true
+	return itemName, itemLink, itemQuality, itemLevel, itemMinLevel, itemType, itemSubType, itemStackCount, itemEquipLoc, itemTexture, itemSellPrice
 end
 
 -- Create enchant tooltip
@@ -385,7 +354,7 @@ function AtlasLoot:PopoupItemFrame(frame, data)
 						self:ItemsLoading(-1)
 					end)
 				end
-			local itemData = {GetItemInfo(itemID)}
+			local itemData = {AtlasLoot:GetItemInfo(itemID)}
 			SetItemButtonTexture(button, itemData[10])
 			SetItemButtonQuality(button, itemData[3])
 			

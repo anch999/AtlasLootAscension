@@ -4082,7 +4082,7 @@ AtlasLoot_Data["Ulduar"] = {
 		[8] = { itemID = 45284, droprate = "9%" }; --Kinetic Ripper
 		[9] = { itemID = 45287, droprate = "7%" }; --Firesoul
 		[10] = { itemID = 45282, droprate = "9%" }; --Ironsoul
-		[16] = { icon = "INV_Box_01", name = "=q6=#j53#" };
+		[16] = { icon = "INV_Box_01", name = "=q6="..AL["Hard Mode"] };
 		[17] = { itemID = 45293, droprate = ".18%" }; --Handguards of Potent Cures
 		[18] = { itemID = 45300 }; --Mantle of Fiery Vengeance
 		[19] = { itemID = 45295, droprate = ".25%" }; --Gilded Steel Legplates
@@ -4108,7 +4108,7 @@ AtlasLoot_Data["Ulduar"] = {
 		[16] = { itemID = 45114, droprate = "8%" }; --Steamcaller's Totem
 		[17] = { itemID = 45110, droprate = "8%" }; --Titanguard
 		[18] = { itemID = 45086, droprate = "8%" }; --Rising Sun
-		[20] = { icon = "INV_Box_01", name = "=q6=#j53#" };
+		[20] = { icon = "INV_Box_01", name = "=q6="..AL["Hard Mode"] };
 		[21] = { itemID = 45135, droprate = ".27%" }; --Boots of Fiery Resolution
 		[22] = { itemID = 45136 }; --Shoulderpads of Dormant Energies
 		[23] = { itemID = 45134 }; --Plated Leggings of Ruination
@@ -4193,7 +4193,7 @@ AtlasLoot_Data["Ulduar"] = {
 		[8] = { itemID = 45675, droprate = "0%" }; --Power Enhancing Loop
 		[9] = { itemID = 45685, droprate = "2%" }; --Plasma Foil
 		[10] = { itemID = 45682, droprate = "4%" }; --Pulsing Spellshield
-		[16] = { icon = "INV_Box_01", name = "=q6=#j53#" };
+		[16] = { icon = "INV_Box_01", name = "=q6="..AL["Hard Mode"] };
 		[17] = { itemID = 45869 }; --Fluxing Energy Coils
 		[18] = { itemID = 45867 }; --Breastplate of the Stoneshaper
 		[19] = { itemID = 45871 }; --Seal of Ulduar
@@ -4219,7 +4219,7 @@ AtlasLoot_Data["Ulduar"] = {
 		[16] = { itemID = 45246, droprate = "9%" }; --Golem-Shard Sticker
 		[17] = { itemID = 45256, droprate = "9%" }; --Twisted Visage
 		[18] = { itemID = 45257, droprate = "0%" }; --Quartz Crystal Wand
-		[20] = { icon = "INV_Box_01", name = "=q6=#j53#" };
+		[20] = { icon = "INV_Box_01", name = "=q6="..AL["Hard Mode"] };
 		[21] = { itemID = 45446, droprate = ".16%" }; --Grasps of Reason
 		[22] = { itemID = 45444, droprate = ".29%" }; --Gloves of the Steady Hand
 		[23] = { itemID = 45445, droprate = ".16%" }; --Breastplate of the Devoted
@@ -4238,7 +4238,7 @@ AtlasLoot_Data["Ulduar"] = {
 		[8] = { itemID = 45418, droprate = "1%" }; --Lady Maye's Sapphire Ring
 		[9] = { itemID = 45332, droprate = "3%" }; --Stormtip
 		[10] = { itemID = 45331, droprate = "9%" }; --Rune-Etched Nightblade
-		[16] = { icon = "INV_Box_01", name = "=q6=#j53#" };
+		[16] = { icon = "INV_Box_01", name = "=q6="..AL["Hard Mode"] };
 		[17] = { itemID = 45455, droprate = "9%" }; --Belt of the Crystal Tree
 		[18] = { itemID = 45447, droprate = "8%" }; --Watchful Eye
 		[19] = { itemID = 45456, droprate = "6%" }; --Loop of the Agile
@@ -4265,7 +4265,7 @@ AtlasLoot_Data["Ulduar"] = {
 		[16] = { itemID = 45235, droprate = "0%" }; --Radiant Seal
 		[17] = { itemID = 45233, droprate = "0%" }; --Rune Edge
 		[18] = { itemID = 45234, droprate = "9%" }; --Rapture
-		[20] = { icon = "INV_Box_01", name = "=q6=#j53#" };
+		[20] = { icon = "INV_Box_01", name = "=q6="..AL["Hard Mode"] };
 		[21] = { itemID = 45242, droprate = "1%" }; --Drape of Mortal Downfall
 		[22] = { itemID = 45245, droprate = "4%" }; --Shoulderpads of the Intruder
 		[23] = { itemID = 45244 }; --Greaves of Swift Vengeance
@@ -4397,7 +4397,7 @@ AtlasLoot_Data["Ulduar"] = {
 		[7] = { itemID = 45650, droprate = "9%" }; --Leggings of the Wayward Conqueror
 		[8] = { itemID = 45651, droprate = "9%" }; --Leggings of the Wayward Protector
 		[9] = { itemID = 45652, droprate = "4%" }; --Leggings of the Wayward Vanquisher
-		[16] = { icon = "INV_Box_01", name = "=q6=#j53#" };
+		[16] = { icon = "INV_Box_01", name = "=q6="..AL["Hard Mode"] };
 		[17] = { itemID = 45888, droprate = "8%" }; --Bitter Cold Armguards
 		[18] = { itemID = 45876, droprate = "6%" }; --Shiver
 		[19] = { itemID = 45886, droprate = "0%" }; --Icecore Staff
@@ -4417,7 +4417,7 @@ AtlasLoot_Data["Ulduar"] = {
 		[10] = { itemID = 45632, droprate = "2%" }; --Breastplate of the Wayward Conqueror
 		[11] = { itemID = 45633, droprate = "0%" }; --Breastplate of the Wayward Protector
 		[12] = { itemID = 45634, droprate = "1%" }; --Breastplate of the Wayward Vanquisher
-		[16] = { icon = "INV_Box_01", name = "=q6=#j53#" };
+		[16] = { icon = "INV_Box_01", name = "=q6="..AL["Hard Mode"] };
 		[17] = { itemID = 45461, droprate = "9%" }; --Drape of Icy Intent
 		[18] = { itemID = 45462, droprate = "0%" }; --Gloves of the Frozen Glade
 		[19] = { itemID = 45460, droprate = "2%" }; --Bindings of Winter Gale
@@ -4436,7 +4436,7 @@ AtlasLoot_Data["Ulduar"] = {
 		[7] = { itemID = 45659, droprate = "5%" }; --Spaulders of the Wayward Conqueror
 		[8] = { itemID = 45660, droprate = "8%" }; --Spaulders of the Wayward Protector
 		[9] = { itemID = 45661, droprate = "4%" }; --Spaulders of the Wayward Vanquisher
-		[16] = { icon = "INV_Box_01", name = "=q6=#j53#" };
+		[16] = { icon = "INV_Box_01", name = "=q6="..AL["Hard Mode"] };
 		[17] = { itemID = 45928 }; --Gauntlets of the Thunder God
 		[18] = { itemID = 45933 }; --Pendant of the Shallow Grave
 		[19] = { itemID = 45931 }; --Mjolnir Runestone
@@ -4456,7 +4456,7 @@ AtlasLoot_Data["Ulduar"] = {
 		[10] = { itemID = 45638, droprate = "0%" }; --Crown of the Wayward Conqueror
 		[11] = { itemID = 45639, droprate = "7%" }; --Crown of the Wayward Protector
 		[12] = { itemID = 45640, droprate = "1%" }; --Crown of the Wayward Vanquisher
-		[16] = { icon = "INV_Box_01", name = "=q6=#j53#" };
+		[16] = { icon = "INV_Box_01", name = "=q6="..AL["Hard Mode"] };
 		[17] = { itemID = 45473 }; --Embrace of the Gladiator
 		[18] = { itemID = 45474 }; --Pauldrons of the Combatant
 		[19] = { itemID = 45472 }; --Warhelm of the Champion
@@ -4476,7 +4476,7 @@ AtlasLoot_Data["Ulduar"] = {
 		[8] = { itemID = 45645, droprate = "3%" }; --Gloves of the Wayward Protector
 		[9] = { itemID = 45646, droprate = "0%" }; --Gloves of the Wayward Vanquisher
 		[11] = { itemID = 46110, droprate = "6%" }; --Alchemist's Cache
-		[16] = { icon = "INV_Box_01", name = "=q6=#j53#" };
+		[16] = { icon = "INV_Box_01", name = "=q6="..AL["Hard Mode"] };
 		[17] = { itemID = 45943 }; --Gloves of Whispering Winds
 		[18] = { itemID = 45945 }; --Seed of Budding Carnage
 		[19] = { itemID = 45946 }; --Fire Orchid Signet
@@ -4497,7 +4497,7 @@ AtlasLoot_Data["Ulduar"] = {
 		[11] = { itemID = 45654, droprate = "2%" }; --Legplates of the Wayward Protector
 		[12] = { itemID = 45655, droprate = "9%" }; --Legplates of the Wayward Vanquisher
 		[14] = { itemID = 46110, droprate = "6%" }; --Alchemist's Cache
-		[16] = { icon = "INV_Box_01", name = "=q6=#j53#" };
+		[16] = { icon = "INV_Box_01", name = "=q6="..AL["Hard Mode"] };
 		[17] = { itemID = 45486 }; --Drape of the Sullen Goddess
 		[18] = { itemID = 45488, droprate = ".13%" }; --Leggings of the Enslaved Idol
 		[19] = { itemID = 45487, droprate = ".34%" }; --Handguards of Revitalization
@@ -4516,7 +4516,7 @@ AtlasLoot_Data["Ulduar"] = {
 		[7] = { itemID = 45647, droprate = "8%" }; --Helm of the Wayward Conqueror
 		[8] = { itemID = 45648, droprate = "5%" }; --Helm of the Wayward Protector
 		[9] = { itemID = 45649, droprate = "7%" }; --Helm of the Wayward Vanquisher
-		[16] = { icon = "INV_Box_01", name = "=q6=#j53#" };
+		[16] = { icon = "INV_Box_01", name = "=q6="..AL["Hard Mode"] };
 		[17] = { itemID = 45993 }; --Mimiron's Flight Goggles
 		[18] = { itemID = 45989, droprate = ".34%" }; --Tempered Mercury Greaves
 		[19] = { itemID = 45982, droprate = ".34%" }; --Fused Alloy Legplates
@@ -4536,7 +4536,7 @@ AtlasLoot_Data["Ulduar"] = {
 		[10] = { itemID = 45641, droprate = "5%" }; --Gauntlets of the Wayward Conqueror
 		[11] = { itemID = 45642, droprate = "0%" }; --Gauntlets of the Wayward Protector
 		[12] = { itemID = 45643, droprate = "8%" }; --Gauntlets of the Wayward Vanquisher
-		[16] = { icon = "INV_Box_01", name = "=q6=#j53#" };
+		[16] = { icon = "INV_Box_01", name = "=q6="..AL["Hard Mode"] };
 		[17] = { itemID = 45496, droprate = ".33%" }; --Titanskin Cloak
 		[18] = { itemID = 45497 }; --Crown of Luminescence
 		[19] = { itemID = 45663 }; --Armbands of Bedlam
@@ -4558,7 +4558,7 @@ AtlasLoot_Data["Ulduar"] = {
 		[9] = { itemID = 46010, droprate = "1%" }; --Darkstone Ring
 		[10] = { itemID = 46011, droprate = "9%" }; --Shadowbite
 		[11] = { itemID = 45996, droprate = "2%" }; --Hoperender
-		[16] = { icon = "INV_Box_01", name = "=q6=#j53#" };
+		[16] = { icon = "INV_Box_01", name = "=q6="..AL["Hard Mode"] };
 		[17] = { itemID = 46032 }; --Drape of the Faceless General
 		[18] = { itemID = 46034 }; --Leggings of Profound Darkness
 		[19] = { itemID = 46036 }; --Void Sabre
@@ -4584,7 +4584,7 @@ AtlasLoot_Data["Ulduar"] = {
 		[16] = { itemID = 45145, droprate = "9%" }; --Libram of the Sacred Shield
 		[17] = { itemID = 45498, droprate = "0%" }; --Lotrafen, Spear of the Damned
 		[18] = { itemID = 45511, droprate = "9%" }; --Scepter of Lost Souls
-		[20] = { icon = "INV_Box_01", name = "=q6=#j53#" };
+		[20] = { icon = "INV_Box_01", name = "=q6="..AL["Hard Mode"] };
 		[21] = { itemID = 45520, droprate = ".32%" }; --Handwraps of the Vigilant
 		[22] = { itemID = 45519, droprate = ".32%" }; --Vestments of the Blind Denizen
 		[23] = { itemID = 45517, droprate = ".36%" }; --Pendulum of Infinity
@@ -4606,7 +4606,7 @@ AtlasLoot_Data["Ulduar"] = {
 		[12] = { itemID = 45635, droprate = "2%" }; --Chestguard of the Wayward Conqueror
 		[13] = { itemID = 45636, droprate = "0%" }; --Chestguard of the Wayward Protector
 		[14] = { itemID = 45637, droprate = "7%" }; --Chestguard of the Wayward Vanquisher
-		[16] = { icon = "INV_Box_01", name = "=q6=#j53#" };
+		[16] = { icon = "INV_Box_01", name = "=q6="..AL["Hard Mode"] };
 		[17] = { itemID = 46068 }; --Amice of Inconceivable Horror
 		[18] = { itemID = 46095 }; --Soul-Devouring Cinch
 		[19] = { itemID = 46096 }; --Signet of Soft Lament
@@ -4632,7 +4632,7 @@ AtlasLoot_Data["Ulduar"] = {
 		[16] = { itemID = 45656, droprate = "9%" }; --Mantle of the Wayward Conqueror
 		[17] = { itemID = 45657, droprate = "4%" }; --Mantle of the Wayward Protector
 		[18] = { itemID = 45658, droprate = "6%" }; --Mantle of the Wayward Vanquisher
-		[20] = { icon = "INV_Box_01", name = "=q6=#j53#" };
+		[20] = { icon = "INV_Box_01", name = "=q6="..AL["Hard Mode"] };
 		[21] = { itemID = 45537 }; --Treads of the False Oracle
 		[22] = { itemID = 45536 }; --Legguards of Cunning Deception
 		[23] = { itemID = 45534 }; --Seal of the Betrayed King
@@ -5674,8 +5674,8 @@ AtlasLoot_Data["Onyxia80"] = {
 		[10] = { itemID = 49493 }; --Rifled Blastershot Launcher
 		[16] = { itemID = 49644 }; --Head of Onyxia
 		[17] = { itemID = 49485, }; -- --Sparkling Onyxia Tooth Pendant
-		[18] = { itemID = 49486, }; --#m4#:  --Polished Dragonslayer's Signet
-		[19] = { itemID = 49487, }; --#m4#:  --Purified Onyxia Blood Talisman
+		[18] = { itemID = 49486, }; --Polished Dragonslayer's Signet
+		[19] = { itemID = 49487, }; --Purified Onyxia Blood Talisman
 		[21] = { itemID = 49295 }; --Enlarged Onyxia Hide Backpack
 		[22] = { itemID = 49294 }; --Ashen Sack of Gems
 		[24] = { itemID = 49636 }; --Reins of the Onyxian Drake

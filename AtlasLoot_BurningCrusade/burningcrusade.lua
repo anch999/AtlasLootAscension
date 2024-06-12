@@ -78,26 +78,26 @@ local WHITE = "|cffFFFFFF"
 -- The scale of the sand rep rings
 local scaleOfSandsRings = {
 	Name = "Rings";
-	[1] = { itemID = 29298, rep = "#r2#", [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Band of the Eternal Champion
-	[2] = { itemID = 29299, rep = "#r3#", [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Superior Band of the Eternal Champion
-	[3] = { itemID = 29300, rep = "#r4#", [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Exquisite Band of the Eternal Champion
-	[4] = { itemID = 29301, rep = "#r5#", [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Flawless Band of the Eternal Champion
-	[6] = { itemID = 29294, rep = "#r2#", [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Band of the Eternal Defender
-	[7] = { itemID = 29295, rep = "#r3#", [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Superior Band of the Eternal Defender
-	[8] = { itemID = 29296, rep = "#r4#", [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Exquisite Band of the Eternal Defender
-	[9] = { itemID = 29297, rep = "#r5#", [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Flawless Band of the Eternal Defender
-	[11] = { itemID = 15037, rep = "#r2#", [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Band of the Eternal Assassin
-	[12] = { itemID = 15038, rep = "#r3#", [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Superior Band of the Eternal Assassin
-	[13] = { itemID = 15039, rep = "#r4#", [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Exquisite Band of the Eternal Assassin
-	[14] = { itemID = 15040, rep = "#r5#", [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Flawless Band of the Eternal Assassin
-	[16] = { itemID = 29302, rep = "#r2#", [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Band of the Eternal Sage
-	[17] = { itemID = 29303, rep = "#r3#", [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Superior Band of the Eternal Sage
-	[18] = { itemID = 29304, rep = "#r4#", [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Exquisite Band of the Eternal Sage
-	[19] = { itemID = 29305, rep = "#r5#", [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Flawless Band of the Eternal Sage
-	[21] = { itemID = 29307, rep = "#r2#", [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Band of the Eternal Restorer
-	[22] = { itemID = 29306, rep = "#r3#", [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Superior Band of the Eternal Restorer
-	[23] = { itemID = 29308, rep = "#r4#", [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Exquisite Band of the Eternal Restorer
-	[24] = { itemID = 29309, rep = "#r5#", [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Flawless Band of the Eternal Restorer
+	[1] = { itemID = 29298, rep = BabbleFaction["Friendly"], [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Band of the Eternal Champion
+	[2] = { itemID = 29299, rep = BabbleFaction["Honored"], [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Superior Band of the Eternal Champion
+	[3] = { itemID = 29300, rep = BabbleFaction["Revered"], [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Exquisite Band of the Eternal Champion
+	[4] = { itemID = 29301, rep = BabbleFaction["Exalted"], [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Flawless Band of the Eternal Champion
+	[6] = { itemID = 29294, rep = BabbleFaction["Friendly"], [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Band of the Eternal Defender
+	[7] = { itemID = 29295, rep = BabbleFaction["Honored"], [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Superior Band of the Eternal Defender
+	[8] = { itemID = 29296, rep = BabbleFaction["Revered"], [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Exquisite Band of the Eternal Defender
+	[9] = { itemID = 29297, rep = BabbleFaction["Exalted"], [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Flawless Band of the Eternal Defender
+	[11] = { itemID = 15037, rep = BabbleFaction["Friendly"], [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Band of the Eternal Assassin
+	[12] = { itemID = 15038, rep = BabbleFaction["Honored"], [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Superior Band of the Eternal Assassin
+	[13] = { itemID = 15039, rep = BabbleFaction["Revered"], [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Exquisite Band of the Eternal Assassin
+	[14] = { itemID = 15040, rep = BabbleFaction["Exalted"], [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Flawless Band of the Eternal Assassin
+	[16] = { itemID = 29302, rep = BabbleFaction["Friendly"], [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Band of the Eternal Sage
+	[17] = { itemID = 29303, rep = BabbleFaction["Honored"], [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Superior Band of the Eternal Sage
+	[18] = { itemID = 29304, rep = BabbleFaction["Revered"], [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Exquisite Band of the Eternal Sage
+	[19] = { itemID = 29305, rep = BabbleFaction["Exalted"], [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Flawless Band of the Eternal Sage
+	[21] = { itemID = 29307, rep = BabbleFaction["Friendly"], [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Band of the Eternal Restorer
+	[22] = { itemID = 29306, rep = BabbleFaction["Honored"], [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Superior Band of the Eternal Restorer
+	[23] = { itemID = 29308, rep = BabbleFaction["Revered"], [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Exquisite Band of the Eternal Restorer
+	[24] = { itemID = 29309, rep = BabbleFaction["Exalted"], [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Flawless Band of the Eternal Restorer
 };
 
 ------------------------
@@ -126,7 +126,7 @@ AtlasLoot_Data["BCKeys"] = {
 		[12] = { itemID = 30634 }; --Warpforged Key
 		[16] = { icon = "INV_Box_01", name = "=q6=#j2#" };
 		[17] = { itemID = 24490 }; --The Master's Key
-		[19] = { icon = "INV_Box_01", name = "=q6=#m20#" };
+		[19] = { icon = "INV_Box_01", name = "=q6="..AL["Misc"] };
 		[20] = { itemID = 32092 }; --The Eye of Haramad
 		[21] = { itemID = 32449 }; --Essence-Infused Moonstone
 	};
@@ -4097,15 +4097,15 @@ AtlasLoot_Data["PVPHellfire"] = {
 		[1] = { itemID = 27833, desc = "=ds=15 #markthrallmarhhold#" }; --Band of the Victor
 		[2] = { itemID = 27786, desc = "=ds=10 #markthrallmarhhold#" }; --Barbed Deep Peridot
 		[3] = { itemID = 28360, desc = "=ds=10 #markthrallmarhhold#" }; --Mighty Blood Garnet
-		[5] = { icon = "INV_BannerPVP_02", name = "=q6=#m7#" };
+		[5] = { icon = "INV_BannerPVP_02", name = "=q6="..BabbleFaction["Alliance"] };
 		[6] = { itemID = 24520, desc = "=ds=5 #markhhold#" }; --Honor Hold Favor
-		[7] = { itemID = 24579, desc = "=ds=#m18#" }; --Mark of Honor Hold
+		[7] = { itemID = 24579, desc = "=ds="..AL["Currency (Alliance)"] }; --Mark of Honor Hold
 		[16] = { itemID = 27830, desc = "=ds=15 #markthrallmarhhold#" }; --Circlet of the Victor
 		[17] = { itemID = 27785, desc = "=ds=10 #markthrallmarhhold#" }; --Notched Deep Peridot
 		[18] = { itemID = 27777, desc = "=ds=10 #markthrallmarhhold#" }; --Stark Blood Garnet
-		[20] = { icon = "INV_BannerPVP_01", name = "=q6=#m6#" };
+		[20] = { icon = "INV_BannerPVP_01", name = "=q6="..BabbleFaction["Horde"] };
 		[21] = { itemID = 24522, desc = "=ds=5 #markthrallmar#" }; --Thrallmar Favor
-		[22] = { itemID = 24581, desc = "=ds=#m19#" }; --Mark of Thrallmar
+		[22] = { itemID = 24581, desc = "=ds="..AL["Currency (Horde)"] }; --Mark of Thrallmar
 	};
 };
 
@@ -4142,12 +4142,12 @@ AtlasLoot_Data["PVPHalaa"] = {
 		Name = "Page 2";
 		[1] = { itemID = 30611 }; --Halaani Razorshaft
 		[2] = { itemID = 30615 }; --Halaani Whiskey
-		[4] = { icon = "INV_BannerPVP_02", name = "=q6=#m7#" };
+		[4] = { icon = "INV_BannerPVP_02", name = "=q6="..BabbleFaction["Alliance"] };
 		[5] = { itemID = 30598 }; --Don Amancio's Heart
 		[6] = { itemID = 30597 }; --Halaani Claymore
 		[7] = { itemID = 30599 }; --Avenging Blades
 		[16] = { itemID = 30612 }; --Halaani Grimshot
-		[19] = { icon = "INV_BannerPVP_01", name = "=q6=#m6#" };
+		[19] = { icon = "INV_BannerPVP_01", name = "=q6="..BabbleFaction["Horde"] };
 		[20] = { itemID = 30571 }; --Don Rodrigo's Heart
 		[21] = { itemID = 30570 }; --Arkadian Claymore
 		[22] = { itemID = 30568 }; --The Sharp Cookie
@@ -4190,12 +4190,12 @@ AtlasLoot_Data["PVPTwinSpireRuins"] = {
 		[3] = { itemID = 27922, price = "30 #markthrallmarhhold#" }; --Mark of Defiance
 		[4] = { itemID = 27929, price = "15 #markthrallmarhhold#" }; --Terminal Edge
 		[5] = { itemID = 27939, price = "15 #markthrallmarhhold#" }; --Incendic Rod
-		[7] = { itemID = 24579, desc = "=ds=#m18#" }; --Mark of Honor Hold
+		[7] = { itemID = 24579, desc = "=ds="..AL["Currency (Alliance)"] }; --Mark of Honor Hold
 		[16] = { itemID = 27983, price = "15 #markthrallmarhhold#" }; --Libram of Zeal
 		[17] = { itemID = 27920, price = "30 #markthrallmarhhold#" }; --Mark of Conquest
 		[18] = { itemID = 27927, price = "30 #markthrallmarhhold#" }; --Mark of Vindication
 		[19] = { itemID = 27930, price = "15 #markthrallmarhhold#" }; --Splintermark
-		[22] = { itemID = 24581, desc = "=ds=#m19#" }; --Mark of Thrallmar
+		[22] = { itemID = 24581, desc = "=ds="..AL["Currency (Horde)"] }; --Mark of Thrallmar
 	};
 };
 
@@ -4209,104 +4209,104 @@ AtlasLoot_Data["PVP70RepGear"] = {
 	{
 		Name = BabbleInventory["Cloth"];
 		[1] = { icon = "INV_BannerPVP_02", name = "=q6=#pvprep705_1#", desc = "=ec1=#c5#" };
-		[2] = { itemID = 35339, desc = "=ds=#f3#/#f4#, =ec1=#r3#" }; --Satin Hood
-		[3] = { itemID = 35341, desc = "=ds=#f2#, =ec1=#r3#" }; --Satin Mantle
-		[4] = { itemID = 35342, desc = "=ds=#f6#, =ec1=#r3#" }; --Satin Robe
-		[5] = { itemID = 35338, desc = "=ds=#f5#, =ec1=#r3#" }; --Satin Gloves
-		[6] = { itemID = 35340, desc = "=ds=#f1#, =ec1=#r3#" }; --Satin Leggings
+		[2] = { itemID = 35339, desc = "=ds=#f3#/#f4#, =ec1="..BabbleFaction["Honored"] }; --Satin Hood
+		[3] = { itemID = 35341, desc = "=ds=#f2#, =ec1="..BabbleFaction["Honored"] }; --Satin Mantle
+		[4] = { itemID = 35342, desc = "=ds=#f6#, =ec1="..BabbleFaction["Honored"] }; --Satin Robe
+		[5] = { itemID = 35338, desc = "=ds=#f5#, =ec1="..BabbleFaction["Honored"] }; --Satin Gloves
+		[6] = { itemID = 35340, desc = "=ds=#f1#, =ec1="..BabbleFaction["Honored"] }; --Satin Leggings
 		[8] = { icon = "INV_BannerPVP_02", name = "=q6=#pvprep705_2#", desc = "=ec1=#c5#" };
-		[9] = { itemID = 35333, desc = "=ds=#f2#, =ec1=#r3#" }; --Mooncloth Cowl
-		[10] = { itemID = 35336, desc = "=ds=#f6#, =ec1=#r3#" }; --Mooncloth Shoulderpads
-		[11] = { itemID = 35337, desc = "=ds=#f3#/#f4#, =ec1=#r3#" }; --Mooncloth Vestments
-		[12] = { itemID = 35335, desc = "=ds=#f1#, =ec1=#r3#" }; --Mooncloth Mitts
-		[13] = { itemID = 35334, desc = "=ds=#f5#, =ec1=#r3#" }; --Mooncloth Legguards
+		[9] = { itemID = 35333, desc = "=ds=#f2#, =ec1="..BabbleFaction["Honored"] }; --Mooncloth Cowl
+		[10] = { itemID = 35336, desc = "=ds=#f6#, =ec1="..BabbleFaction["Honored"] }; --Mooncloth Shoulderpads
+		[11] = { itemID = 35337, desc = "=ds=#f3#/#f4#, =ec1="..BabbleFaction["Honored"] }; --Mooncloth Vestments
+		[12] = { itemID = 35335, desc = "=ds=#f1#, =ec1="..BabbleFaction["Honored"] }; --Mooncloth Mitts
+		[13] = { itemID = 35334, desc = "=ds=#f5#, =ec1="..BabbleFaction["Honored"] }; --Mooncloth Legguards
 		[16] = { icon = "INV_BannerPVP_02", name = "=q6=#pvprep703#", desc = "=ec1=#c3#" };
-		[17] = { itemID = 35344, desc = "=ds=#f1#, =ec1=#r3#" }; --Evoker's Silk Cowl
-		[18] = { itemID = 35343, desc = "=ds=#f3#/#f4#, =ec1=#r3#" }; --Evoker's Silk Amice
-		[19] = { itemID = 35346, desc = "=ds=#f5#, =ec1=#r3#" }; --Evoker's Silk Raiment
-		[20] = { itemID = 35345, desc = "=ds=#f2#, =ec1=#r3#" }; --Evoker's Silk Handguards
-		[21] = { itemID = 35347, desc = "=ds=#f6#, =ec1=#r3#" }; --Evoker's Silk Trousers
+		[17] = { itemID = 35344, desc = "=ds=#f1#, =ec1="..BabbleFaction["Honored"] }; --Evoker's Silk Cowl
+		[18] = { itemID = 35343, desc = "=ds=#f3#/#f4#, =ec1="..BabbleFaction["Honored"] }; --Evoker's Silk Amice
+		[19] = { itemID = 35346, desc = "=ds=#f5#, =ec1="..BabbleFaction["Honored"] }; --Evoker's Silk Raiment
+		[20] = { itemID = 35345, desc = "=ds=#f2#, =ec1="..BabbleFaction["Honored"] }; --Evoker's Silk Handguards
+		[21] = { itemID = 35347, desc = "=ds=#f6#, =ec1="..BabbleFaction["Honored"] }; --Evoker's Silk Trousers
 		[23] = { icon = "INV_BannerPVP_02", name = "=q6=#pvprep708#", desc = "=ec1=#c8#" };
-		[24] = { itemID = 35329, desc = "=ds=#f6#, =ec1=#r3#" }; --Dreadweave Hood
-		[25] = { itemID = 35331, desc = "=ds=#f1#, =ec1=#r3#" }; --Dreadweave Mantle
-		[26] = { itemID = 35332, desc = "=ds=#f3#/#f4#, =ec1=#r3#" }; --Dreadweave Robe
-		[27] = { itemID = 35328, desc = "=ds=#f5#, =ec1=#r3#" }; --Dreadweave Gloves
-		[28] = { itemID = 35330, desc = "=ds=#f2#, =ec1=#r3#" }; --Dreadweave Leggings
+		[24] = { itemID = 35329, desc = "=ds=#f6#, =ec1="..BabbleFaction["Honored"] }; --Dreadweave Hood
+		[25] = { itemID = 35331, desc = "=ds=#f1#, =ec1="..BabbleFaction["Honored"] }; --Dreadweave Mantle
+		[26] = { itemID = 35332, desc = "=ds=#f3#/#f4#, =ec1="..BabbleFaction["Honored"] }; --Dreadweave Robe
+		[27] = { itemID = 35328, desc = "=ds=#f5#, =ec1="..BabbleFaction["Honored"] }; --Dreadweave Gloves
+		[28] = { itemID = 35330, desc = "=ds=#f2#, =ec1="..BabbleFaction["Honored"] }; --Dreadweave Leggings
 	};
 	{
 		Name = BabbleInventory["Leather"];
 		[1] = { icon = "INV_BannerPVP_02", name = "=q6=#pvprep701_1#", desc = "=ec1=#c1#" };
-		[2] = { itemID = 35357, desc = "=ds=#f1#, =ec1=#r3#" }; --Dragonhide Helm
-		[3] = { itemID = 35359, desc = "=ds=#f2#, =ec1=#r3#" }; --Dragonhide Spaulders
-		[4] = { itemID = 35360, desc = "=ds=#f3#/#f4#, =ec1=#r3#" }; --Dragonhide Robe
-		[5] = { itemID = 35356, desc = "=ds=#f5#, =ec1=#r3#" }; --Dragonhide Gloves
-		[6] = { itemID = 35358, desc = "=ds=#f6#, =ec1=#r3#" }; --Dragonhide Legguards
+		[2] = { itemID = 35357, desc = "=ds=#f1#, =ec1="..BabbleFaction["Honored"] }; --Dragonhide Helm
+		[3] = { itemID = 35359, desc = "=ds=#f2#, =ec1="..BabbleFaction["Honored"] }; --Dragonhide Spaulders
+		[4] = { itemID = 35360, desc = "=ds=#f3#/#f4#, =ec1="..BabbleFaction["Honored"] }; --Dragonhide Robe
+		[5] = { itemID = 35356, desc = "=ds=#f5#, =ec1="..BabbleFaction["Honored"] }; --Dragonhide Gloves
+		[6] = { itemID = 35358, desc = "=ds=#f6#, =ec1="..BabbleFaction["Honored"] }; --Dragonhide Legguards
 		[8] = { icon = "INV_BannerPVP_02", name = "=q6=#pvprep701_2#", desc = "=ec1=#c1#" };
-		[9] = { itemID = 35372, desc = "=ds=#f5#, =ec1=#r3#" }; --Wyrmhide Helm
-		[10] = { itemID = 35374, desc = "=ds=#f6#, =ec1=#r3#" }; --Wyrmhide Spaulders
-		[11] = { itemID = 35375, desc = "=ds=#f2#, =ec1=#r3#" }; --Wyrmhide Robe
-		[12] = { itemID = 35371, desc = "=ds=#f3#/#f4#, =ec1=#r3#" }; --Wyrmhide Gloves
-		[13] = { itemID = 35373, desc = "=ds=#f1#, =ec1=#r3#" }; --Wyrmhide Legguards
+		[9] = { itemID = 35372, desc = "=ds=#f5#, =ec1="..BabbleFaction["Honored"] }; --Wyrmhide Helm
+		[10] = { itemID = 35374, desc = "=ds=#f6#, =ec1="..BabbleFaction["Honored"] }; --Wyrmhide Spaulders
+		[11] = { itemID = 35375, desc = "=ds=#f2#, =ec1="..BabbleFaction["Honored"] }; --Wyrmhide Robe
+		[12] = { itemID = 35371, desc = "=ds=#f3#/#f4#, =ec1="..BabbleFaction["Honored"] }; --Wyrmhide Gloves
+		[13] = { itemID = 35373, desc = "=ds=#f1#, =ec1="..BabbleFaction["Honored"] }; --Wyrmhide Legguards
 		[16] = { icon = "INV_BannerPVP_02", name = "=q6=#pvprep701_3#", desc = "=ec1=#c1#" };
-		[17] = { itemID = 35362, desc = "=ds=#f2#, =ec1=#r3#" }; --Kodohide Helm
-		[18] = { itemID = 35364, desc = "=ds=#f3#/#f4#, =ec1=#r3#" }; --Kodohide Spaulders
-		[19] = { itemID = 35365, desc = "=ds=#f6#, =ec1=#r3#" }; --Kodohide Robe
-		[20] = { itemID = 35361, desc = "=ds=#f1#, =ec1=#r3#" }; --Kodohide Gloves
-		[21] = { itemID = 35363, desc = "=ds=#f5#, =ec1=#r3#" }; --Kodohide Legguards
+		[17] = { itemID = 35362, desc = "=ds=#f2#, =ec1="..BabbleFaction["Honored"] }; --Kodohide Helm
+		[18] = { itemID = 35364, desc = "=ds=#f3#/#f4#, =ec1="..BabbleFaction["Honored"] }; --Kodohide Spaulders
+		[19] = { itemID = 35365, desc = "=ds=#f6#, =ec1="..BabbleFaction["Honored"] }; --Kodohide Robe
+		[20] = { itemID = 35361, desc = "=ds=#f1#, =ec1="..BabbleFaction["Honored"] }; --Kodohide Gloves
+		[21] = { itemID = 35363, desc = "=ds=#f5#, =ec1="..BabbleFaction["Honored"] }; --Kodohide Legguards
 		[23] = { icon = "INV_BannerPVP_02", name = "=q6=#pvprep706#", desc = "=ec1=#c6#" };
-		[24] = { itemID = 35367, desc = "=ds=#f6#, =ec1=#r3#" }; --Opportunist's Leather Helm
-		[25] = { itemID = 35369, desc = "=ds=#f5#, =ec1=#r3#" }; --Opportunist's Leather Spaulders
-		[26] = { itemID = 35370, desc = "=ds=#f1#, =ec1=#r3#" }; --Opportunist's Leather Tunic
-		[27] = { itemID = 35366, desc = "=ds=#f3#/#f4#, =ec1=#r3#" }; --Opportunist's Leather Gloves
-		[28] = { itemID = 35368, desc = "=ds=#f2#, =ec1=#r3#" }; --Opportunist's Leather Legguards
+		[24] = { itemID = 35367, desc = "=ds=#f6#, =ec1="..BabbleFaction["Honored"] }; --Opportunist's Leather Helm
+		[25] = { itemID = 35369, desc = "=ds=#f5#, =ec1="..BabbleFaction["Honored"] }; --Opportunist's Leather Spaulders
+		[26] = { itemID = 35370, desc = "=ds=#f1#, =ec1="..BabbleFaction["Honored"] }; --Opportunist's Leather Tunic
+		[27] = { itemID = 35366, desc = "=ds=#f3#/#f4#, =ec1="..BabbleFaction["Honored"] }; --Opportunist's Leather Gloves
+		[28] = { itemID = 35368, desc = "=ds=#f2#, =ec1="..BabbleFaction["Honored"] }; --Opportunist's Leather Legguards
 	};
 	{
 		Name = BabbleInventory["Mail"];
 		[1] = { icon = "INV_BannerPVP_02", name = "=q6=#pvprep707_1#", desc = "=ec1=#c7#" };
-		[2] = { itemID = 35383, desc = "=ds=#f3#/#f4#, =ec1=#r3#" }; --Seer's Linked Helm
-		[3] = { itemID = 35385, desc = "=ds=#f6#, =ec1=#r3#" }; --Seer's Linked Spaulders
-		[4] = { itemID = 35381, desc = "=ds=#f2#, =ec1=#r3#" }; --Seer's Linked Armor
-		[5] = { itemID = 35382, desc = "=ds=#f1#, =ec1=#r3#" }; --Seer's Linked Gauntlets
-		[6] = { itemID = 35384, desc = "=ds=#f5#, =ec1=#r3#" }; --Seer's Linked Leggings
+		[2] = { itemID = 35383, desc = "=ds=#f3#/#f4#, =ec1="..BabbleFaction["Honored"] }; --Seer's Linked Helm
+		[3] = { itemID = 35385, desc = "=ds=#f6#, =ec1="..BabbleFaction["Honored"] }; --Seer's Linked Spaulders
+		[4] = { itemID = 35381, desc = "=ds=#f2#, =ec1="..BabbleFaction["Honored"] }; --Seer's Linked Armor
+		[5] = { itemID = 35382, desc = "=ds=#f1#, =ec1="..BabbleFaction["Honored"] }; --Seer's Linked Gauntlets
+		[6] = { itemID = 35384, desc = "=ds=#f5#, =ec1="..BabbleFaction["Honored"] }; --Seer's Linked Leggings
 		[8] = { icon = "INV_BannerPVP_02", name = "=q6=#pvprep707_2#", desc = "=ec1=#c7#" };
-		[9] = { itemID = 35388, desc = "=ds=#f2#, =ec1=#r3#" }; --Seer's Mail Helm
-		[10] = { itemID = 35390, desc = "=ds=#f5#, =ec1=#r3#" }; --Seer's Mail Spaulders
-		[11] = { itemID = 35386, desc = "=ds=#f3#/#f4#, =ec1=#r3#" }; --Seer's Mail Armor
-		[12] = { itemID = 35387, desc = "=ds=#f6#, =ec1=#r3#" }; --Seer's Mail Gauntlets
-		[13] = { itemID = 35389, desc = "=ds=#f1#, =ec1=#r3#" }; --Seer's Mail Leggings
+		[9] = { itemID = 35388, desc = "=ds=#f2#, =ec1="..BabbleFaction["Honored"] }; --Seer's Mail Helm
+		[10] = { itemID = 35390, desc = "=ds=#f5#, =ec1="..BabbleFaction["Honored"] }; --Seer's Mail Spaulders
+		[11] = { itemID = 35386, desc = "=ds=#f3#/#f4#, =ec1="..BabbleFaction["Honored"] }; --Seer's Mail Armor
+		[12] = { itemID = 35387, desc = "=ds=#f6#, =ec1="..BabbleFaction["Honored"] }; --Seer's Mail Gauntlets
+		[13] = { itemID = 35389, desc = "=ds=#f1#, =ec1="..BabbleFaction["Honored"] }; --Seer's Mail Leggings
 		[16] = { icon = "INV_BannerPVP_02", name = "=q6=#pvprep707_3#", desc = "=ec1=#c7#" };
-		[17] = { itemID = 35393, desc = "=ds=#f5#, =ec1=#r3#" }; --Seer's Ringmail Headpiece
-		[18] = { itemID = 35395, desc = "=ds=#f2#, =ec1=#r3#" }; --Seer's Ringmail Shoulderpads
-		[19] = { itemID = 35391, desc = "=ds=#f1#, =ec1=#r3#" }; --Seer's Ringmail Chestguard
-		[20] = { itemID = 35392, desc = "=ds=#f3#/#f4#, =ec1=#r3#" }; --Seer's Ringmail Gloves
-		[21] = { itemID = 35394, desc = "=ds=#f6#, =ec1=#r3#" }; --Seer's Ringmail Legguards
+		[17] = { itemID = 35393, desc = "=ds=#f5#, =ec1="..BabbleFaction["Honored"] }; --Seer's Ringmail Headpiece
+		[18] = { itemID = 35395, desc = "=ds=#f2#, =ec1="..BabbleFaction["Honored"] }; --Seer's Ringmail Shoulderpads
+		[19] = { itemID = 35391, desc = "=ds=#f1#, =ec1="..BabbleFaction["Honored"] }; --Seer's Ringmail Chestguard
+		[20] = { itemID = 35392, desc = "=ds=#f3#/#f4#, =ec1="..BabbleFaction["Honored"] }; --Seer's Ringmail Gloves
+		[21] = { itemID = 35394, desc = "=ds=#f6#, =ec1="..BabbleFaction["Honored"] }; --Seer's Ringmail Legguards
 		[23] = { icon = "INV_BannerPVP_02", name = "=q6=#pvprep702#", desc = "=ec1=#c2#" };
-		[24] = { itemID = 35378, desc = "=ds=#f1#, =ec1=#r3#" }; --Stalker's Chain Helm
-		[25] = { itemID = 35380, desc = "=ds=#f2#, =ec1=#r3#" }; --Stalker's Chain Spaulders
-		[26] = { itemID = 35376, desc = "=ds=#f5#, =ec1=#r3#" }; --Stalker's Chain Armor
-		[27] = { itemID = 35377, desc = "=ds=#f3#/#f4#, =ec1=#r3#" }; --Stalker's Chain Gauntlets
-		[28] = { itemID = 35379, desc = "=ds=#f6#, =ec1=#r3#" }; --Stalker's Chain Leggings
+		[24] = { itemID = 35378, desc = "=ds=#f1#, =ec1="..BabbleFaction["Honored"] }; --Stalker's Chain Helm
+		[25] = { itemID = 35380, desc = "=ds=#f2#, =ec1="..BabbleFaction["Honored"] }; --Stalker's Chain Spaulders
+		[26] = { itemID = 35376, desc = "=ds=#f5#, =ec1="..BabbleFaction["Honored"] }; --Stalker's Chain Armor
+		[27] = { itemID = 35377, desc = "=ds=#f3#/#f4#, =ec1="..BabbleFaction["Honored"] }; --Stalker's Chain Gauntlets
+		[28] = { itemID = 35379, desc = "=ds=#f6#, =ec1="..BabbleFaction["Honored"] }; --Stalker's Chain Leggings
 	};
 	{
 		Name = BabbleInventory["Plate"];
 		[1] = { icon = "INV_BannerPVP_02", name = "=q6=#pvprep704_1#", desc = "=ec1=#c4#" };
-		[2] = { itemID = 35414, desc = "=ds=#f5#, =ec1=#r3#" }; --Crusader's Scaled Helm
-		[3] = { itemID = 35416, desc = "=ds=#f2#, =ec1=#r3#" }; --Crusader's Scaled Shoulders
-		[4] = { itemID = 35412, desc = "=ds=#f1#, =ec1=#r3#" }; --Crusader's Scaled Chestpiece
-		[5] = { itemID = 35413, desc = "=ds=#f3#/#f4#, =ec1=#r3#" }; --Crusader's Scaled Gauntlets
-		[6] = { itemID = 35415, desc = "=ds=#f6#, =ec1=#r3#" }; --Crusader's Scaled Legguards
+		[2] = { itemID = 35414, desc = "=ds=#f5#, =ec1="..BabbleFaction["Honored"] }; --Crusader's Scaled Helm
+		[3] = { itemID = 35416, desc = "=ds=#f2#, =ec1="..BabbleFaction["Honored"] }; --Crusader's Scaled Shoulders
+		[4] = { itemID = 35412, desc = "=ds=#f1#, =ec1="..BabbleFaction["Honored"] }; --Crusader's Scaled Chestpiece
+		[5] = { itemID = 35413, desc = "=ds=#f3#/#f4#, =ec1="..BabbleFaction["Honored"] }; --Crusader's Scaled Gauntlets
+		[6] = { itemID = 35415, desc = "=ds=#f6#, =ec1="..BabbleFaction["Honored"] }; --Crusader's Scaled Legguards
 		[8] = { icon = "INV_BannerPVP_02", name = "=q6=#pvprep704_2#", desc = "=ec1=#c4#" };
-		[9] = { itemID = 35404, desc = "=ds=#f2#, =ec1=#r3#" }; --Crusader's Ornamented Headguard
-		[10] = { itemID = 35406, desc = "=ds=#f3#/#f4#, =ec1=#r3#" }; --Crusader's Ornamented Spaulders
-		[11] = { itemID = 35402, desc = "=ds=#f5#, =ec1=#r3#" }; --Crusader's Ornamented Chestplate
-		[12] = { itemID = 35403, desc = "=ds=#f6#, =ec1=#r3#" }; --Crusader's Ornamented Gloves
-		[13] = { itemID = 35405, desc = "=ds=#f1#, =ec1=#r3#" }; --Crusader's Ornamented Leggings
+		[9] = { itemID = 35404, desc = "=ds=#f2#, =ec1="..BabbleFaction["Honored"] }; --Crusader's Ornamented Headguard
+		[10] = { itemID = 35406, desc = "=ds=#f3#/#f4#, =ec1="..BabbleFaction["Honored"] }; --Crusader's Ornamented Spaulders
+		[11] = { itemID = 35402, desc = "=ds=#f5#, =ec1="..BabbleFaction["Honored"] }; --Crusader's Ornamented Chestplate
+		[12] = { itemID = 35403, desc = "=ds=#f6#, =ec1="..BabbleFaction["Honored"] }; --Crusader's Ornamented Gloves
+		[13] = { itemID = 35405, desc = "=ds=#f1#, =ec1="..BabbleFaction["Honored"] }; --Crusader's Ornamented Leggings
 		[16] = { icon = "INV_BannerPVP_02", name = "=q6=#pvprep709#", desc = "=ec1=#c9#" };
-		[17] = { itemID = 35409, desc = "=ds=#f3#/#f4#, =ec1=#r3#" }; --Savage Plate Helm
-		[18] = { itemID = 35411, desc = "=ds=#f1#, =ec1=#r3#" }; --Savage Plate Shoulders
-		[19] = { itemID = 35407, desc = "=ds=#f2#, =ec1=#r3#" }; --Savage Plate Chestpiece
-		[20] = { itemID = 35408, desc = "=ds=#f6#, =ec1=#r3#" }; --Savage Plate Gauntlets
-		[21] = { itemID = 35410, desc = "=ds=#f5#, =ec1=#r3#" }; --Savage Plate Legguards
+		[17] = { itemID = 35409, desc = "=ds=#f3#/#f4#, =ec1="..BabbleFaction["Honored"] }; --Savage Plate Helm
+		[18] = { itemID = 35411, desc = "=ds=#f1#, =ec1="..BabbleFaction["Honored"] }; --Savage Plate Shoulders
+		[19] = { itemID = 35407, desc = "=ds=#f2#, =ec1="..BabbleFaction["Honored"] }; --Savage Plate Chestpiece
+		[20] = { itemID = 35408, desc = "=ds=#f6#, =ec1="..BabbleFaction["Honored"] }; --Savage Plate Gauntlets
+		[21] = { itemID = 35410, desc = "=ds=#f5#, =ec1="..BabbleFaction["Honored"] }; --Savage Plate Legguards
 	};
 	{
 		Name = BabbleInventory["Cloth"] .. " - " .. BabbleFaction["Alliance"];

@@ -95,7 +95,7 @@ AtlasLoot_Data["OldKeys"] = {
 		[10] = { icon = "INV_Box_01", "=q6=#j7#" };
 		[11] = { itemID = 22057 }; --Brazier of Invocation
 		[12] = { itemID = 21986 }; --Banner of Provocation
-		[16] = { icon = "INV_Box_01", "=q6=#m20#" };
+		[16] = { icon = "INV_Box_01", "=q6="..AL["Misc"] };
 		[17] = { itemID = 19931 }; --Gurubashi Mojo Madness
 		[18] = { itemID = 13523 }; --Blood of Innocents
 		[19] = { itemID = 18746 }; --Divination Scryer
@@ -640,7 +640,7 @@ AtlasLoot_Data["BlackfathomDeeps"] = {
 		[1] = { itemID = 6910, droprate = "29.72%" }; --Leech Pants
 		[2] = { itemID = 6911, droprate = "29.01%" }; --Moss Cinch
 		[3] = { itemID = 6909, droprate = "14.46%" }; --Strike of the Hydra
-		[4] = { icon = "INV_Box_01", "=q6=" .. AL["Quest Item"] };
+		[4] = { icon = "INV_Box_01", name = "=q6=" .. AL["Quest Item"] };
 		[5] = { itemID = 5359, droprate = "100%" }; --Lorgalis Manuscript
 		[6] = { itemID = 16762, droprate = "100%" }; --Fathom Core
 	};
@@ -5189,74 +5189,74 @@ AtlasLoot_Data["ZGSets"] = {
 	{
 		Name = AL["Haruspex's Garb"];
 		[1] = { itemID = 19955 }; -- =q4=Wushoolay's Charm of Nature" 
-		[2] = { itemID = 19613, desc = "=ds=#r5#" }; --Pristine Enchanted South Seas Kelp
-		[3] = { itemID = 19838, desc = "=q4=#zgt9#, =ds=#r4#" }; --Zandalar Haruspex's Tunic
-		[4] = { itemID = 19839, desc = "=q4=#zgt4#, =ds=#r3#" }; --Zandalar Haruspex's Belt
-		[5] = { itemID = 19840, desc = "=q4=#zgt5#, =ds=#r2#" }; --Zandalar Haruspex's Bracers
+		[2] = { itemID = 19613, desc = "=ds="..BabbleFaction["Exalted"] }; --Pristine Enchanted South Seas Kelp
+		[3] = { itemID = 19838, desc = "=q4=#zgt9#, =ds="..BabbleFaction["Revered"] }; --Zandalar Haruspex's Tunic
+		[4] = { itemID = 19839, desc = "=q4=#zgt4#, =ds="..BabbleFaction["Honored"] }; --Zandalar Haruspex's Belt
+		[5] = { itemID = 19840, desc = "=q4=#zgt5#, =ds="..BabbleFaction["Friendly"] }; --Zandalar Haruspex's Bracers
 	};
 	{
 		Name = AL["Predator's Armor"];
 		[1] = { itemID = 19953 }; -- =q4=Renataki's Charm of Beasts" 
-		[2] = { itemID = 19621, desc = "=ds=#r5#" }; --Maelstrom's Wrath
-		[3] = { itemID = 19831, desc = "=q4=#zgt6#, =ds=#r4#" }; --Zandalar Predator's Mantle
-		[4] = { itemID = 19832, desc = "=q4=#zgt2#, =ds=#r3#" }; --Zandalar Predator's Belt
-		[5] = { itemID = 19833, desc = "=q4=#zgt3#, =ds=#r2#" }; --Zandalar Predator's Bracers
+		[2] = { itemID = 19621, desc = "=ds="..BabbleFaction["Exalted"] }; --Maelstrom's Wrath
+		[3] = { itemID = 19831, desc = "=q4=#zgt6#, =ds="..BabbleFaction["Revered"] }; --Zandalar Predator's Mantle
+		[4] = { itemID = 19832, desc = "=q4=#zgt2#, =ds="..BabbleFaction["Honored"] }; --Zandalar Predator's Belt
+		[5] = { itemID = 19833, desc = "=q4=#zgt3#, =ds="..BabbleFaction["Friendly"] }; --Zandalar Predator's Bracers
 	};
 	{
 		Name = AL["Illusionist's Attire"];
 		[1] = { itemID = 19959 }; -- =q4=Hazza'rah's Charm of Magic" 
-		[2] = { itemID = 19601, desc = "=ds=#r5#" }; --Jewel of Kajaro
-		[3] = { itemID = 20034, desc = "=q4=#zgt1#, =ds=#r4#" }; --Zandalar Illusionist's Robe
-		[4] = { itemID = 19845, desc = "=q4=#zgt2#, =ds=#r3#" }; --Zandalar Illusionist's Mantle
-		[5] = { itemID = 19846, desc = "=q4=#zgt3#, =ds=#r2#" }; --Zandalar Illusionist's Wraps
+		[2] = { itemID = 19601, desc = "=ds="..BabbleFaction["Exalted"] }; --Jewel of Kajaro
+		[3] = { itemID = 20034, desc = "=q4=#zgt1#, =ds="..BabbleFaction["Revered"] }; --Zandalar Illusionist's Robe
+		[4] = { itemID = 19845, desc = "=q4=#zgt2#, =ds="..BabbleFaction["Honored"] }; --Zandalar Illusionist's Mantle
+		[5] = { itemID = 19846, desc = "=q4=#zgt3#, =ds="..BabbleFaction["Friendly"] }; --Zandalar Illusionist's Wraps
 	};
 	{
 		Name = AL["Freethinker's Armor"];
 		[1] = { itemID = 19952 }; -- =q4=Gri'lek's Charm of Valor" 
-		[2] = { itemID = 19588, desc = "=ds=#r5#" }; --Hero's Brand
-		[3] = { itemID = 19825, desc = "=q4=#zgt9#, =ds=#r4#" }; --Zandalar Freethinker's Breastplate
-		[4] = { itemID = 19826, desc = "=q4=#zgt2#, =ds=#r3#" }; --Zandalar Freethinker's Belt
-		[5] = { itemID = 19827, desc = "=q4=#zgt3#, =ds=#r2#" }; --Zandalar Freethinker's Armguards
+		[2] = { itemID = 19588, desc = "=ds="..BabbleFaction["Exalted"] }; --Hero's Brand
+		[3] = { itemID = 19825, desc = "=q4=#zgt9#, =ds="..BabbleFaction["Revered"] }; --Zandalar Freethinker's Breastplate
+		[4] = { itemID = 19826, desc = "=q4=#zgt2#, =ds="..BabbleFaction["Honored"] }; --Zandalar Freethinker's Belt
+		[5] = { itemID = 19827, desc = "=q4=#zgt3#, =ds="..BabbleFaction["Friendly"] }; --Zandalar Freethinker's Armguards
 	};
 	{
 		Name = AL["Confessor's Raiment"];
 		[1] = { itemID = 19958 }; -- =q4=Hazza'rah's Charm of Healing" 
-		[2] = { itemID = 19594, desc = "=ds=#r5#" }; --The All-Seeing Eye of Zuldazar
-		[3] = { itemID = 19841, desc = "=q4=#zgt6#, =ds=#r4#" }; --Zandalar Confessor's Mantle
-		[4] = { itemID = 19842, desc = "=q4=#zgt4#, =ds=#r3#" }; --Zandalar Confessor's Bindings
-		[5] = { itemID = 19843, desc = "=q4=#zgt5#, =ds=#r2#" }; --Zandalar Confessor's Wraps
+		[2] = { itemID = 19594, desc = "=ds="..BabbleFaction["Exalted"] }; --The All-Seeing Eye of Zuldazar
+		[3] = { itemID = 19841, desc = "=q4=#zgt6#, =ds="..BabbleFaction["Revered"] }; --Zandalar Confessor's Mantle
+		[4] = { itemID = 19842, desc = "=q4=#zgt4#, =ds="..BabbleFaction["Honored"] }; --Zandalar Confessor's Bindings
+		[5] = { itemID = 19843, desc = "=q4=#zgt5#, =ds="..BabbleFaction["Friendly"] }; --Zandalar Confessor's Wraps
 	};
 	{
 		Name = AL["Madcap's Outfit"];
 		[1] = { itemID = 19954 }; -- =q4=Renataki's Charm of Trickery" 
-		[2] = { itemID = 19617, desc = "=ds=#r5#" }; --Zandalarian Shadow Mastery Talisman
-		[3] = { itemID = 19834, desc = "=q4=#zgt6#, =ds=#r4#" }; --Zandalar Madcap's Tunic
-		[4] = { itemID = 19835, desc = "=q4=#zgt7#, =ds=#r3#" }; --Zandalar Madcap's Mantle
-		[5] = { itemID = 19836, desc = "=q4=#zgt8#, =ds=#r2#" }; --Zandalar Madcap's Bracers
+		[2] = { itemID = 19617, desc = "=ds="..BabbleFaction["Exalted"] }; --Zandalarian Shadow Mastery Talisman
+		[3] = { itemID = 19834, desc = "=q4=#zgt6#, =ds="..BabbleFaction["Revered"] }; --Zandalar Madcap's Tunic
+		[4] = { itemID = 19835, desc = "=q4=#zgt7#, =ds="..BabbleFaction["Honored"] }; --Zandalar Madcap's Mantle
+		[5] = { itemID = 19836, desc = "=q4=#zgt8#, =ds="..BabbleFaction["Friendly"] }; --Zandalar Madcap's Bracers
 	};
 	{
 		Name = AL["Augur's Regalia"];
 		[1] = { itemID = 19956 }; -- =q4=Wushoolay's Charm of Spirits" 
-		[2] = { itemID = 19609, desc = "=ds=#r5#" }; --Unmarred Vision of Voodress
-		[3] = { itemID = 19828, desc = "=q4=#zgt9#, =ds=#r4#" }; --Zandalar Augur's Hauberk
-		[4] = { itemID = 19829, desc = "=q4=#zgt7#, =ds=#r3#" }; --Zandalar Augur's Belt
-		[5] = { itemID = 19830, desc = "=q4=#zgt8#, =ds=#r2#" }; --Zandalar Augur's Bracers
+		[2] = { itemID = 19609, desc = "=ds="..BabbleFaction["Exalted"] }; --Unmarred Vision of Voodress
+		[3] = { itemID = 19828, desc = "=q4=#zgt9#, =ds="..BabbleFaction["Revered"] }; --Zandalar Augur's Hauberk
+		[4] = { itemID = 19829, desc = "=q4=#zgt7#, =ds="..BabbleFaction["Honored"] }; --Zandalar Augur's Belt
+		[5] = { itemID = 19830, desc = "=q4=#zgt8#, =ds="..BabbleFaction["Friendly"] }; --Zandalar Augur's Bracers
 	};
 	{
 		Name = AL["Demoniac's Threads"];
 		[1] = { itemID = 19957 }; -- =q4=Hazza'rah's Charm of Destruction" 
-		[2] = { itemID = 19605, desc = "=ds=#r5#" }; --Kezan's Unstoppable Taint
-		[3] = { itemID = 20033, desc = "=q4=#zgt1#, =ds=#r4#" }; --Zandalar Demoniac's Robe
-		[4] = { itemID = 19849, desc = "=q4=#zgt4#, =ds=#r3#" }; --Zandalar Demoniac's Mantle
-		[5] = { itemID = 19848, desc = "=q4=#zgt5#, =ds=#r2#" }; --Zandalar Demoniac's Wraps
+		[2] = { itemID = 19605, desc = "=ds="..BabbleFaction["Exalted"] }; --Kezan's Unstoppable Taint
+		[3] = { itemID = 20033, desc = "=q4=#zgt1#, =ds="..BabbleFaction["Revered"] }; --Zandalar Demoniac's Robe
+		[4] = { itemID = 19849, desc = "=q4=#zgt4#, =ds="..BabbleFaction["Honored"] }; --Zandalar Demoniac's Mantle
+		[5] = { itemID = 19848, desc = "=q4=#zgt5#, =ds="..BabbleFaction["Friendly"] }; --Zandalar Demoniac's Wraps
 	};
 	{
 		Name = AL["Vindicator's Battlegear"];
 		[1] = { itemID = 19951 }; -- =q4=Gri'lek's Charm of Might" 
-		[2] = { itemID = 19577, desc = "=ds=#r5#" }; --Rage of Mugamba
-		[3] = { itemID = 19822, desc = "=q4=#zgt1#, =ds=#r4#" }; --Zandalar Vindicator's Breastplate
-		[4] = { itemID = 19823, desc = "=q4=#zgt7#, =ds=#r3#" }; --Zandalar Vindicator's Belt
-		[5] = { itemID = 19824, desc = "=q4=#zgt8#, =ds=#r2#" }; --Zandalar Vindicator's Armguards
+		[2] = { itemID = 19577, desc = "=ds="..BabbleFaction["Exalted"] }; --Rage of Mugamba
+		[3] = { itemID = 19822, desc = "=q4=#zgt1#, =ds="..BabbleFaction["Revered"] }; --Zandalar Vindicator's Breastplate
+		[4] = { itemID = 19823, desc = "=q4=#zgt7#, =ds="..BabbleFaction["Honored"] }; --Zandalar Vindicator's Belt
+		[5] = { itemID = 19824, desc = "=q4=#zgt8#, =ds="..BabbleFaction["Friendly"] }; --Zandalar Vindicator's Armguards
 	};
 };
 
@@ -5270,105 +5270,105 @@ AtlasLoot_Data["AQ20Sets"] = {
 	Type = "ClassicRaid";
 	{
 		Name = AL["Symbols of Unending Life"];
-		[1] = { itemID = 1506017, desc = "=q4=#aq20t1#, =ds=#r5#" }; --Locket of Unending Life
-		[2] = { itemID = 21409, desc = "=q3=#aq20t5#, =ds=#r4#" }; --Cloak of Unending Life
-		[3] = { itemID = 21408, desc = "=q3=#aq20t3#, =ds=#r3#" }; --Band of Unending Life
+		[1] = { itemID = 1506017, desc = "=q4=#aq20t1#, =ds="..BabbleFaction["Exalted"] }; --Locket of Unending Life
+		[2] = { itemID = 21409, desc = "=q3=#aq20t5#, =ds="..BabbleFaction["Revered"] }; --Cloak of Unending Life
+		[3] = { itemID = 21408, desc = "=q3=#aq20t3#, =ds="..BabbleFaction["Honored"] }; --Band of Unending Life
 	};
 	{
 		Name = AL["Trappings of the Unseen Path"];
-		[1] = { itemID = 1506018, desc = "=q4=#aq20t6#, =ds=#r5#" }; --Choker of the Unseen Path
-		[2] = { itemID = 21403, desc = "=q3=#aq20t5#, =ds=#r4#" }; --Cloak of the Unseen Path
-		[3] = { itemID = 21402, desc = "=q3=#aq20t4#, =ds=#r3#" }; --Signet of the Unseen Path
+		[1] = { itemID = 1506018, desc = "=q4=#aq20t6#, =ds="..BabbleFaction["Exalted"] }; --Choker of the Unseen Path
+		[2] = { itemID = 21403, desc = "=q3=#aq20t5#, =ds="..BabbleFaction["Revered"] }; --Cloak of the Unseen Path
+		[3] = { itemID = 21402, desc = "=q3=#aq20t4#, =ds="..BabbleFaction["Honored"] }; --Signet of the Unseen Path
 	};
 	{
 		Name = AL["Trappings of Vaulted Secrets"];
-		[1] = { itemID = 1506021, desc = "=q4=#aq20t1#, =ds=#r5#" }; --Charm of Vaulted Secrets
-		[2] = { itemID = 21415, desc = "=q3=#aq20t2#, =ds=#r4#" }; --Drape of Vaulted Secrets
-		[3] = { itemID = 21414, desc = "=q3=#aq20t3#, =ds=#r3#" }; --Band of Vaulted Secrets
+		[1] = { itemID = 1506021, desc = "=q4=#aq20t1#, =ds="..BabbleFaction["Exalted"] }; --Charm of Vaulted Secrets
+		[2] = { itemID = 21415, desc = "=q3=#aq20t2#, =ds="..BabbleFaction["Revered"] }; --Drape of Vaulted Secrets
+		[3] = { itemID = 21414, desc = "=q3=#aq20t3#, =ds="..BabbleFaction["Honored"] }; --Band of Vaulted Secrets
 	};
 	{
 		Name = AL["Battlegear of Eternal Justice"];
-		[1] = { itemID = 1506020, desc = "=q4=#aq20t6#, =ds=#r5#" }; --Medallion of Eternal Justice
-		[2] = { itemID = 21397, desc = "=q3=#aq20t5#, =ds=#r4#" }; --Cape of Eternal Justice
-		[3] = { itemID = 21396, desc = "=q3=#aq20t3#, =ds=#r3#" }; --Ring of Eternal Justice
+		[1] = { itemID = 1506020, desc = "=q4=#aq20t6#, =ds="..BabbleFaction["Exalted"] }; --Medallion of Eternal Justice
+		[2] = { itemID = 21397, desc = "=q3=#aq20t5#, =ds="..BabbleFaction["Revered"] }; --Cape of Eternal Justice
+		[3] = { itemID = 21396, desc = "=q3=#aq20t3#, =ds="..BabbleFaction["Honored"] }; --Ring of Eternal Justice
 	};
 	{
 		Name = AL["Finery of Infinite Wisdom"];
-		[1] = { itemID = 1506023, desc = "=q4=#aq20t1#, =ds=#r5#" }; --Bayadere of Infinite Wisdom
-		[2] = { itemID = 21412, desc = "=q3=#aq20t2#, =ds=#r4#" }; --Shroud of Infinite Wisdom
-		[3] = { itemID = 21411, desc = "=q3=#aq20t4#, =ds=#r3#" }; --Ring of Infinite Wisdom
+		[1] = { itemID = 1506023, desc = "=q4=#aq20t1#, =ds="..BabbleFaction["Exalted"] }; --Bayadere of Infinite Wisdom
+		[2] = { itemID = 21412, desc = "=q3=#aq20t2#, =ds="..BabbleFaction["Revered"] }; --Shroud of Infinite Wisdom
+		[3] = { itemID = 21411, desc = "=q3=#aq20t4#, =ds="..BabbleFaction["Honored"] }; --Ring of Infinite Wisdom
 	};
 	{
 		Name = AL["Emblems of Veiled Shadows"];
-		[1] = { itemID = 1506021, desc = "=q4=#aq20t6#, =ds=#r5#" }; --Charm of Vaulted Secrets
-		[2] = { itemID = 21406, desc = "=q3=#aq20t2#, =ds=#r4#" }; --Cloak of Veiled Shadows
-		[3] = { itemID = 21405, desc = "=q3=#aq20t4#, =ds=#r3#" }; --Band of Veiled Shadows
+		[1] = { itemID = 1506021, desc = "=q4=#aq20t6#, =ds="..BabbleFaction["Exalted"] }; --Charm of Vaulted Secrets
+		[2] = { itemID = 21406, desc = "=q3=#aq20t2#, =ds="..BabbleFaction["Revered"] }; --Cloak of Veiled Shadows
+		[3] = { itemID = 21405, desc = "=q3=#aq20t4#, =ds="..BabbleFaction["Honored"] }; --Band of Veiled Shadows
 	};
 	{
 		Name = AL["Gift of the Gathering Storm"];
-		[1] = { itemID = 1506024, desc = "=q4=#aq20t6#, =ds=#r5#" }; --Necklace of the Gathering Storm
-		[2] = { itemID = 21400, desc = "=q3=#aq20t5#, =ds=#r4#" }; --Cloak of the Gathering Storm
-		[3] = { itemID = 21399, desc = "=q3=#aq20t3#, =ds=#r3#" }; --Ring of the Gathering Storm
+		[1] = { itemID = 1506024, desc = "=q4=#aq20t6#, =ds="..BabbleFaction["Exalted"] }; --Necklace of the Gathering Storm
+		[2] = { itemID = 21400, desc = "=q3=#aq20t5#, =ds="..BabbleFaction["Revered"] }; --Cloak of the Gathering Storm
+		[3] = { itemID = 21399, desc = "=q3=#aq20t3#, =ds="..BabbleFaction["Honored"] }; --Ring of the Gathering Storm
 	};
 	{
 		Name = AL["Implements of Unspoken Names"];
-		[1] = { itemID = 1506026, desc = "=q4=#aq20t1#, =ds=#r5#" }; --Bayadere of Unspoken Names
-		[2] = { itemID = 21418, desc = "=q3=#aq20t5#, =ds=#r4#" }; --Shroud of Unspoken Names
-		[3] = { itemID = 21417, desc = "=q3=#aq20t4#, =ds=#r3#" }; --Ring of Unspoken Names
+		[1] = { itemID = 1506026, desc = "=q4=#aq20t1#, =ds="..BabbleFaction["Exalted"] }; --Bayadere of Unspoken Names
+		[2] = { itemID = 21418, desc = "=q3=#aq20t5#, =ds="..BabbleFaction["Revered"] }; --Shroud of Unspoken Names
+		[3] = { itemID = 21417, desc = "=q3=#aq20t4#, =ds="..BabbleFaction["Honored"] }; --Ring of Unspoken Names
 	};
 	{
 		Name = AL["Battlegear of Unyielding Strength"];
-		[1] = { itemID = 1506025, desc = "=q4=#aq20t6#, =ds=#r5#" }; --Collar of Unyielding Strength
-		[2] = { itemID = 21394, desc = "=q3=#aq20t2#, =ds=#r4#" }; --Drape of Unyielding Strength
-		[3] = { itemID = 21393, desc = "=q3=#aq20t3#=ds=, #r3#" }; --Signet of Unyielding Strength
+		[1] = { itemID = 1506025, desc = "=q4=#aq20t6#, =ds="..BabbleFaction["Exalted"] }; --Collar of Unyielding Strength
+		[2] = { itemID = 21394, desc = "=q3=#aq20t2#, =ds="..BabbleFaction["Revered"] }; --Drape of Unyielding Strength
+		[3] = { itemID = 21393, desc = "=q3=#aq20t3#=ds=, "..BabbleFaction["Honored"] }; --Signet of Unyielding Strength
 	};
 	{
 		Name = AL["Keepsakes of Endless Machinations"];
-		[1] = { itemID = 1506027, desc = "=q4=#aq20t6#, =ds=#r5#" }; --Choker of Endless Machinations
-		[2] = { itemID = 1506028, desc = "=q3=#aq20t2#, =ds=#r4#" }; --Shroud of Endless Machinations
-		[3] = { itemID = 1506029, desc = "=q3=#aq20t3#=ds=, #r3#" }; --Loop of Endless Machinations
+		[1] = { itemID = 1506027, desc = "=q4=#aq20t6#, =ds="..BabbleFaction["Exalted"] }; --Choker of Endless Machinations
+		[2] = { itemID = 1506028, desc = "=q3=#aq20t2#, =ds="..BabbleFaction["Revered"] }; --Shroud of Endless Machinations
+		[3] = { itemID = 1506029, desc = "=q3=#aq20t3#=ds=, "..BabbleFaction["Honored"] }; --Loop of Endless Machinations
 	};
 	{
 		Name = AL["Regalia of Roaring Earth"];
-		[1] = { itemID = 1506019, desc = "=q4=#aq20t6#, =ds=#r5#" }; --Pendant of Roaring Earth
-		[2] = { itemID = 1506031, desc = "=q3=#aq20t2#, =ds=#r4#" }; --Drape of Roaring Earth
-		[3] = { itemID = 1506030, desc = "=q3=#aq20t3#=ds=, #r3#" }; --Signet of Roaring Earth
+		[1] = { itemID = 1506019, desc = "=q4=#aq20t6#, =ds="..BabbleFaction["Exalted"] }; --Pendant of Roaring Earth
+		[2] = { itemID = 1506031, desc = "=q3=#aq20t2#, =ds="..BabbleFaction["Revered"] }; --Drape of Roaring Earth
+		[3] = { itemID = 1506030, desc = "=q3=#aq20t3#=ds=, "..BabbleFaction["Honored"] }; --Signet of Roaring Earth
 	};
 	{
 		Name = AL["Relics of Ferocious Vigor"];
-		[1] = { itemID = 1506034, desc = "=q4=#aq20t6#, =ds=#r5#" }; --Choker of Ferocious Vigor
-		[2] = { itemID = 1506033, desc = "=q3=#aq20t2#, =ds=#r4#" }; --Cape of Ferocious Vigor
-		[3] = { itemID = 1506032, desc = "=q3=#aq20t3#=ds=, #r3#" }; --Signet of Ferocious Vigor
+		[1] = { itemID = 1506034, desc = "=q4=#aq20t6#, =ds="..BabbleFaction["Exalted"] }; --Choker of Ferocious Vigor
+		[2] = { itemID = 1506033, desc = "=q3=#aq20t2#, =ds="..BabbleFaction["Revered"] }; --Cape of Ferocious Vigor
+		[3] = { itemID = 1506032, desc = "=q3=#aq20t3#=ds=, "..BabbleFaction["Honored"] }; --Signet of Ferocious Vigor
 	};
 	{
 		Name = AL["Laurels of the Faithful Zealot"];
-		[1] = { itemID = 1506037, desc = "=q4=#aq20t6#, =ds=#r5#" }; --Locket of the Faithful Zealot
-		[2] = { itemID = 1506036, desc = "=q3=#aq20t2#, =ds=#r4#" }; --Shroud of the Faithful Zealot
-		[3] = { itemID = 1506035, desc = "=q3=#aq20t3#=ds=, #r3#" }; --Band of the Faithful Zealot
+		[1] = { itemID = 1506037, desc = "=q4=#aq20t6#, =ds="..BabbleFaction["Exalted"] }; --Locket of the Faithful Zealot
+		[2] = { itemID = 1506036, desc = "=q3=#aq20t2#, =ds="..BabbleFaction["Revered"] }; --Shroud of the Faithful Zealot
+		[3] = { itemID = 1506035, desc = "=q3=#aq20t3#=ds=, "..BabbleFaction["Honored"] }; --Band of the Faithful Zealot
 	};
 	{
 		Name = AL["Instruments of Masterful Technique"];
-		[1] = { itemID = 1506040, desc = "=q4=#aq20t6#, =ds=#r5#" }; --Locket of Masterful Technique
-		[2] = { itemID = 1506039, desc = "=q3=#aq20t2#, =ds=#r4#" }; --Drape of Masterful Technique
-		[3] = { itemID = 1506038, desc = "=q3=#aq20t3#=ds=, #r3#" }; --Band of Masterful Technique
+		[1] = { itemID = 1506040, desc = "=q4=#aq20t6#, =ds="..BabbleFaction["Exalted"] }; --Locket of Masterful Technique
+		[2] = { itemID = 1506039, desc = "=q3=#aq20t2#, =ds="..BabbleFaction["Revered"] }; --Drape of Masterful Technique
+		[3] = { itemID = 1506038, desc = "=q3=#aq20t3#=ds=, "..BabbleFaction["Honored"] }; --Band of Masterful Technique
 	};
 	{
 		Name = AL["Decorations of Martial Prowess"];
-		[1] = { itemID = 1506043, desc = "=q4=#aq20t6#, =ds=#r5#" }; --Lariat of Martial Prowess
-		[2] = { itemID = 1506042, desc = "=q3=#aq20t2#, =ds=#r4#" }; --Cloak of Martial Prowess
-		[3] = { itemID = 1506041, desc = "=q3=#aq20t3#=ds=, #r3#" }; --Ring of Martial Prowess
+		[1] = { itemID = 1506043, desc = "=q4=#aq20t6#, =ds="..BabbleFaction["Exalted"] }; --Lariat of Martial Prowess
+		[2] = { itemID = 1506042, desc = "=q3=#aq20t2#, =ds="..BabbleFaction["Revered"] }; --Cloak of Martial Prowess
+		[3] = { itemID = 1506041, desc = "=q3=#aq20t3#=ds=, "..BabbleFaction["Honored"] }; --Ring of Martial Prowess
 	};
 	{
 		Name = AL["Trophies of Unrivaled Rage"];
-		[1] = { itemID = 1506046, desc = "=q4=#aq20t6#, =ds=#r5#" }; --Collar of Unrivaled Rage
-		[2] = { itemID = 1506045, desc = "=q3=#aq20t2#, =ds=#r4#" }; --Cloak of Unrivaled Rage
-		[3] = { itemID = 1506044, desc = "=q3=#aq20t3#=ds=, #r3#" }; --Signet of Unrivaled Rage
+		[1] = { itemID = 1506046, desc = "=q4=#aq20t6#, =ds="..BabbleFaction["Exalted"] }; --Collar of Unrivaled Rage
+		[2] = { itemID = 1506045, desc = "=q3=#aq20t2#, =ds="..BabbleFaction["Revered"] }; --Cloak of Unrivaled Rage
+		[3] = { itemID = 1506044, desc = "=q3=#aq20t3#=ds=, "..BabbleFaction["Honored"] }; --Signet of Unrivaled Rage
 	};
 	{
 		Name = AL["Remnants of Expansive Research"];
-		[1] = { itemID = 1506049, desc = "=q4=#aq20t6#, =ds=#r5#" }; --Bayadere of Expansive Research
-		[2] = { itemID = 1506048, desc = "=q3=#aq20t2#, =ds=#r4#" }; --Drape of Expansive Research
-		[3] = { itemID = 1506047, desc = "=q3=#aq20t3#=ds=, #r3#" }; --Loop of Expansive Research
+		[1] = { itemID = 1506049, desc = "=q4=#aq20t6#, =ds="..BabbleFaction["Exalted"] }; --Bayadere of Expansive Research
+		[2] = { itemID = 1506048, desc = "=q3=#aq20t2#, =ds="..BabbleFaction["Revered"] }; --Drape of Expansive Research
+		[3] = { itemID = 1506047, desc = "=q3=#aq20t3#=ds=, "..BabbleFaction["Honored"] }; --Loop of Expansive Research
 	};
 };
 
@@ -5586,7 +5586,7 @@ AtlasLoot_Data["AVMisc"] = {
 	Name = BabbleZone["Alterac Valley"];
 	{
 		Name = AL["Misc. Rewards"];
-		[1] = { icon = "INV_BannerPVP_02", name = "=q6=#m7#", desc = "=q5=#b1#" };
+		[1] = { icon = "INV_BannerPVP_02", name = "=q6="..BabbleFaction["Alliance"], desc = "=q5=#b1#" };
 		[2] = { itemID = 19030, price = "50000 #alliance#" }; --Stormpike Battle Charger
 		[3] = { itemID = 19045, price = "15000 #alliance#" }; --Stormpike Battle Standard
 		[4] = { itemID = 19032, price = "15000 #alliance#" }; --Stormpike Battle Tabard
@@ -5595,7 +5595,7 @@ AtlasLoot_Data["AVMisc"] = {
 		[8] = { itemID = 17349, price = "5 #silver# 1 #faction#" }; --Superior Healing Draught
 		[9] = { itemID = 19301, price = "70 #silver#" }; --Alterac Manna Biscuit
 		[10] = { itemID = 19307, price = "80 #silver#" }; --Alterac Heavy Runecloth Bandage
-		[16] = { icon = "INV_BannerPVP_01", name = "=q6=#m6#", desc = "=q5=#b2#" };
+		[16] = { icon = "INV_BannerPVP_01", name = "=q6="..BabbleFaction["Horde"], desc = "=q5=#b2#" };
 		[17] = { itemID = 19029, price = "50000 #horde#" }; --Horn of the Frostwolf Howler
 		[18] = { itemID = 19046, price = "15000 #horde#" }; --Frostwolf Battle Standard
 		[19] = { itemID = 19031, price = "15000 #horde#" }; --Frostwolf Battle Tabard
@@ -7142,12 +7142,12 @@ AtlasLoot_Data["Bloodsail"] = {
 	Name = BabbleFaction["Bloodsail Buccaneers"];
 	{
 		Name = BabbleFaction["Bloodsail Buccaneers"];
-		[1] = { icon = "INV_Helmet_66", "=q6=" .. BabbleFaction["Bloodsail Buccaneers"], "=q5=#r1#" };
+		[1] = { icon = "INV_Helmet_66", "=q6=" .. BabbleFaction["Bloodsail Buccaneers"], "=q5="..BabbleFaction["Neutral"] };
 		[2] = { itemID = 22742}; --Bloodsail Shirt
 		[3] = { itemID = 22743}; --Bloodsail Sash
 		[4] = { itemID = 22745}; --Bloodsail Pants
 		[5] = { itemID = 22744}; --Bloodsail Boots
-		[7] = { icon = "INV_Helmet_66", "=q6=" .. BabbleFaction["Bloodsail Buccaneers"], "=q5=#r2#" };
+		[7] = { icon = "INV_Helmet_66", "=q6=" .. BabbleFaction["Bloodsail Buccaneers"], "=q5="..BabbleFaction["Friendly"] };
 		[8] = { itemID = 12185}; --Bloodsail Admiral's Hat
 	};
 };
@@ -7157,11 +7157,11 @@ AtlasLoot_Data["Hydraxian"] = {
 	Name = BabbleFaction["Hydraxian Waterlords"];
 	{
 		Name = BabbleFaction["Hydraxian Waterlords"];
-		[1] = { icon = "Spell_Frost_SummonWaterElemental_2", "=q6=" .. BabbleFaction["Hydraxian Waterlords"], "=q5=#r3#" };
+		[1] = { icon = "Spell_Frost_SummonWaterElemental_2", "=q6=" .. BabbleFaction["Hydraxian Waterlords"], "=q5="..BabbleFaction["Honored"] };
 		[2] = { itemID = 18399}; --Ocean's Breeze 
 		[3] = { itemID = 18398}; --Tidal Loop 
 		[4] = { itemID = 17333}; --Aqual Quintessence
-		[16] = { icon = "Spell_Frost_SummonWaterElemental_2", "=q6=" .. BabbleFaction["Hydraxian Waterlords"], "=q5=#r4#" };
+		[16] = { icon = "Spell_Frost_SummonWaterElemental_2", "=q6=" .. BabbleFaction["Hydraxian Waterlords"], "=q5="..BabbleFaction["Revered"] };
 		[17] = { itemID = 22754}; --Eternal Quintessence
 	};
 };
@@ -7353,23 +7353,23 @@ AtlasLoot_Data["Timbermaw"] = {
 	Name = BabbleFaction["Timbermaw Hold"];
 	{
 		Name = BabbleFaction["Timbermaw Hold"];
-		[1] = { icon = "INV_Misc_Horn_01", "=q6=#r2#" };
+		[1] = { icon = "INV_Misc_Horn_01", "=q6="..BabbleFaction["Friendly"] };
 		[2] = { itemID = 13484}; --Recipe: Transmute Earth to Water
 		[3] = { itemID = 22392}; --Formula: Enchant 2H Weapon - Agility
 		[4] = { itemID = 20254}; --Pattern: Warbear Woolies
 		[5] = { itemID = 20253}; --Pattern: Warbear Harness
-		[7] = { icon = "INV_Misc_Horn_01", "=q6=#r3#" };
+		[7] = { icon = "INV_Misc_Horn_01", "=q6="..BabbleFaction["Honored"] };
 		[8] = { itemID = 16768}; --Furbolg Medicine Pouch
 		[9] = { itemID = 16769}; --Furbolg Medicine Totem
 		[10] = { itemID = 19202}; --Plans: Heavy Timbermaw Belt
 		[11] = { itemID = 19445}; --Formula: Enchant Weapon - Agility
 		[12] = { itemID = 19326}; --Pattern: Might of the Timbermaw
 		[13] = { itemID = 19215}; --Pattern: Wisdom of the Timbermaw
-		[16] = { icon = "INV_Misc_Horn_01", "=q6=#r4#" };
+		[16] = { icon = "INV_Misc_Horn_01", "=q6="..BabbleFaction["Revered"] };
 		[17] = { itemID = 19204}; --Plans: Heavy Timbermaw Boots
 		[18] = { itemID = 19327}; --Pattern: Timbermaw Brawlers
 		[19] = { itemID = 19218}; --Pattern: Mantle of the Timbermaw
-		[22] = { icon = "INV_Misc_Horn_01", "=q6=#r5#" };
+		[22] = { icon = "INV_Misc_Horn_01", "=q6="..BabbleFaction["Exalted"] };
 		[23] = { itemID = 21326}; --Defender of the Timbermaw 
 	};
 };
@@ -7387,7 +7387,7 @@ AtlasLoot_Data["Zandalar"] = {
 	};
 	{
 		Name = BabbleFaction["Friendly"];
-		[1] = { icon = "INV_Misc_Coin_08", "=q6=#r2#" };
+		[1] = { icon = "INV_Misc_Coin_08", "=q6="..BabbleFaction["Friendly"] };
 		[2] = { itemID = 20012}; --Recipe: Greater Dreamless Sleep
 		[3] = { itemID = 19778}; --Plans: Bloodsoul Gauntlets
 		[4] = { itemID = 19781}; --Plans: Darksoul Shoulders

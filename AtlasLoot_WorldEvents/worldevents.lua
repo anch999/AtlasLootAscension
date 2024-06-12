@@ -47,14 +47,14 @@ AtlasLoot_Data["ArgentTournament"] = {
 	Name = AL["Argent Tournament"];
 	{
 		Name = BabbleInventory["Miscellaneous"];
-		[1] = { icon = "INV_BannerPVP_02", name = "=q6=#m7#" };
+		[1] = { icon = "INV_BannerPVP_02", name = "=q6="..BabbleFaction["Alliance"] };
 		[2] = { itemID = 45714, price = "1 #champwrit#" }; --Darnassus Commendation Badge
 		[3] = { itemID = 45715, price = "1 #champwrit#" }; --Exodar Commendation Badge
 		[4] = { itemID = 45716, price = "1 #champwrit#" }; --Gnomeregan Commendation Badge
 		[5] = { itemID = 45717, price = "1 #champwrit#" }; --Ironforge Commendation Badge
 		[6] = { itemID = 45718, price = "1 #champwrit#" }; --Stormwind Commendation Badge
-		[15] = { itemID = 46114, desc = "=ds=#m17#" }; --Champion's Writ
-		[16] = { icon = "INV_BannerPVP_01", name = "=q6=#m6#" };
+		[15] = { itemID = 46114, desc = "=ds="..AL["Currency"] }; --Champion's Writ
+		[16] = { icon = "INV_BannerPVP_01", name = "=q6="..BabbleFaction["Horde"] };
 		[17] = { itemID = 45719, price = "1 #champwrit#" }; --Orgrimmar Commendation Badge
 		[18] = { itemID = 45723, price = "1 #champwrit#" }; --Undercity Commendation Badge
 		[19] = { itemID = 45722, price = "1 #champwrit#" }; --Thunder Bluff Commendation Badge
@@ -63,7 +63,7 @@ AtlasLoot_Data["ArgentTournament"] = {
 	};
 	{
 		Name = AL["Tabards"] .. " / " .. AL["Banner"];
-		[1] = { icon = "INV_BannerPVP_02", name = "=q6=#m7#" };
+		[1] = { icon = "INV_BannerPVP_02", name = "=q6="..BabbleFaction["Alliance"] };
 		[2] = { itemID = 45021, price = "15 #champseal#" }; --Darnassus Banner
 		[3] = { itemID = 45020, price = "15 #champseal#" }; --Exodar Banner
 		[4] = { itemID = 45019, price = "15 #champseal#" }; --Gnomeregan Banner
@@ -76,7 +76,7 @@ AtlasLoot_Data["ArgentTournament"] = {
 		[11] = { itemID = 45574, price = "50 #champseal#" }; --Stormwind Tabard
 		[12] = { itemID = 46817, price = "50 #champseal#" }; --Silver Covenant Tabard
 		[15] = { itemID = 44990 }; --Champion's Seal
-		[16] = { icon = "INV_BannerPVP_01", name = "=q6=#m6#" };
+		[16] = { icon = "INV_BannerPVP_01", name = "=q6="..BabbleFaction["Horde"] };
 		[17] = { itemID = 45014, price = "15 #champseal#" }; --Orgrimmar Banner
 		[18] = { itemID = 45016, price = "15 #champseal#" }; --Undercity Banner
 		[19] = { itemID = 45013, price = "15 #champseal#" }; --Thunder Bluff Banner
@@ -94,7 +94,7 @@ AtlasLoot_Data["ArgentTournament"] = {
 	};
 	{
 		Name = BabbleInventory["Armor"];
-		[1] = { icon = "INV_BannerPVP_02", name = "=q6=#m7#" };
+		[1] = { icon = "INV_BannerPVP_02", name = "=q6="..BabbleFaction["Alliance"] };
 		[2] = { itemID = 45156, price = "10 #champseal#" }; --Sash of Shattering Hearts
 		[3] = { itemID = 45181, price = "10 #champseal#" }; --Wrap of the Everliving Tree
 		[4] = { itemID = 45159, price = "10 #champseal#" }; --Treads of Nimble Evasion
@@ -109,7 +109,7 @@ AtlasLoot_Data["ArgentTournament"] = {
 		[13] = { itemID = 45152, price = "10 #champseal#" }; --Pendant of Azure Dreams
 		[14] = { itemID = 45131, price = "10 #champseal#" }; --Jouster's Fury
 		[15] = { itemID = 44990 }; --Champion's Seal
-		[16] = { icon = "INV_BannerPVP_01", name = "=q6=#m6#" };
+		[16] = { icon = "INV_BannerPVP_01", name = "=q6="..BabbleFaction["Horde"] };
 		[17] = { itemID = 45209, price = "10 #champseal#" }; --Sash of Trumpted Pride
 		[18] = { itemID = 45211, price = "10 #champseal#" }; --Waistguard of Equine Fury
 		[19] = { itemID = 45220, price = "10 #champseal#" }; --Treads of the Earnest Squire
@@ -126,7 +126,7 @@ AtlasLoot_Data["ArgentTournament"] = {
 	};
 	{
 		Name = AL["Weapons"];
-		[1] = { icon = "INV_BannerPVP_02", name = "=q6=#m7#" };
+		[1] = { icon = "INV_BannerPVP_02", name = "=q6="..BabbleFaction["Alliance"] };
 		[2] = { itemID = 45078, price = "25 #champseal#" }; --Dagger of Lunar Purity
 		[3] = { itemID = 45077, price = "25 #champseal#" }; --Dagger of the Rising Moon
 		[4] = { itemID = 45129, price = "25 #champseal#" }; --Gnomeregan Bonechopper
@@ -136,7 +136,7 @@ AtlasLoot_Data["ArgentTournament"] = {
 		[8] = { itemID = 45128, price = "25 #champseal#" }; --Silvery Sylvan Stave
 		[9] = { itemID = 45130, price = "25 #champseal#" }; --Blunderbuss of Khaz Modan
 		[15] = { itemID = 44990 }; --Champion's Seal
-		[16] = { icon = "INV_BannerPVP_01", name = "=q6=#m6#" };
+		[16] = { icon = "INV_BannerPVP_01", name = "=q6="..BabbleFaction["Horde"] };
 		[17] = { itemID = 45214, price = "25 #champseal#" }; --Scalpel of the Royal Apothecary
 		[18] = { itemID = 45222, price = "25 #champseal#" }; --Spinal Destroyer
 		[19] = { itemID = 45208, price = "25 #champseal#" }; --Blade of the Keening Banshee
@@ -148,7 +148,7 @@ AtlasLoot_Data["ArgentTournament"] = {
 	};
 	{
 		Name = AL["Vanity Pets"];
-		[1] = { icon = "INV_BannerPVP_02", name = "=q6=#m7#" };
+		[1] = { icon = "INV_BannerPVP_02", name = "=q6="..BabbleFaction["Alliance"] };
 		[2] = { itemID = 44998, desc = AL["Quest Reward"] }; --Argent Squire
 		[4] = { itemID = 44984, price = "40 #champseal#" }; --Ammen Vale Lashling
 		[5] = { itemID = 44965, price = "40 #champseal#" }; --Teldrassil Sproutling
@@ -159,7 +159,7 @@ AtlasLoot_Data["ArgentTournament"] = {
 		[11] = { icon = "INV_Jewelry_Talisman_08", name = "=q6=" .. BabbleFaction["Argent Crusade"] };
 		[12] = { itemID = 47541, price = "150 #champseal#" }; --Argent Pony Bridle
 		[15] = { itemID = 44990 }; --Champion's Seal
-		[16] = { icon = "INV_BannerPVP_01", name = "=q6=#m6#" };
+		[16] = { icon = "INV_BannerPVP_01", name = "=q6="..BabbleFaction["Horde"] };
 		[17] = { itemID = 45022, desc = AL["Quest Reward"] }; --Argent Gruntling
 		[19] = { itemID = 44980, price = "40 #champseal#" }; --Mulgore Hatchling
 		[20] = { itemID = 45606, price = "40 #champseal#" }; --Sen'jin Fetish
@@ -170,7 +170,7 @@ AtlasLoot_Data["ArgentTournament"] = {
 	};
 	{
 		Name = AL["Mounts"];
-		[1] = { icon = "INV_BannerPVP_02", name = "=q6=#m7#" };
+		[1] = { icon = "INV_BannerPVP_02", name = "=q6="..BabbleFaction["Alliance"] };
 		[2] = { itemID = 45591, price = "100 #champseal#" }; --Darnassian Nightsaber
 		[3] = { itemID = 45590, price = "100 #champseal#" }; --Exodar Elekk
 		[4] = { itemID = 45589, price = "100 #champseal#" }; --Gnomeregan Mechanostrider
@@ -182,7 +182,7 @@ AtlasLoot_Data["ArgentTournament"] = {
 		[11] = { itemID = 46748, price = "500 #gold# 5 #champseal#" }; --Swift Violet Ram
 		[12] = { itemID = 46747, price = "500 #gold# 5 #champseal#" }; --Turbostrider
 		[15] = { itemID = 44990 }; --Champion's Seal
-		[16] = { icon = "INV_BannerPVP_01", name = "=q6=#m6#" };
+		[16] = { icon = "INV_BannerPVP_01", name = "=q6="..BabbleFaction["Horde"] };
 		[17] = { itemID = 45593, price = "100 #champseal#" }; --Darkspear Raptor
 		[18] = { itemID = 45597, price = "100 #champseal#" }; --Forsaken Warhorse
 		[19] = { itemID = 45595, price = "100 #champseal#" }; --Orgrimmar Wolf
@@ -196,7 +196,7 @@ AtlasLoot_Data["ArgentTournament"] = {
 	};
 	{
 		Name = AL["Mounts"];
-		[1] = { icon = "inv_misc_tabardpvp_01", name = "=q6=" .. BabbleFaction["The Silver Covenant"], "=ec1=#m7#" };
+		[1] = { icon = "inv_misc_tabardpvp_01", name = "=q6=" .. BabbleFaction["The Silver Covenant"], "=ec1="..BabbleFaction["Alliance"] };
 		[2] = { itemID = 46815, price = "100 #champseal#" }; --Quel'dorei Steed
 		[3] = { itemID = 46813, price = "150 #champseal#" }; --Silver Covenant Hippogryph
 		[5] = { icon = "INV_Jewelry_Talisman_08", name = "=q6=" .. BabbleFaction["Argent Crusade"] };
@@ -204,7 +204,7 @@ AtlasLoot_Data["ArgentTournament"] = {
 		[7] = { itemID = 47180, price = "100 #champseal#" }; --Argent Warhorse
 		[8] = { itemID = 45725, price = "150 #champseal#" }; --Argent Hippogryph
 		[15] = { itemID = 44990 }; --Champion's Seal
-		[16] = { icon = "inv_misc_tabardpvp_02", name = "=q6=" .. BabbleFaction["The Sunreavers"], "=ec1=#m6#" };
+		[16] = { icon = "inv_misc_tabardpvp_02", name = "=q6=" .. BabbleFaction["The Sunreavers"], "=ec1="..BabbleFaction["Horde"] };
 		[17] = { itemID = 46816, price = "100 #champseal#" }; --Sunreaver Hawkstrider
 		[18] = { itemID = 46814, price = "150 #champseal#" }; --Sunreaver Dragonhawk
 	};
@@ -1065,7 +1065,7 @@ AtlasLoot_Data["GurubashiArena"] = {
 		[2] = { itemID = 18710, droprate = "6.4%" }; --Arena Bracers
 		[3] = { itemID = 18711, droprate = "6.0%" }; --Arena Bands
 		[4] = { itemID = 18712, droprate = "6.8%" }; --Arena Vambraces
-		[16] = { itemID = 18706, desc = ", =q1=#m2#", droprate = "100%" }; --Arena Master
+		[16] = { itemID = 18706, desc = ", =q1="..AL["This Item Begins a Quest"], droprate = "100%" }; --Arena Master
 		[17] = { itemID = 19024 }; --Arena Grand Master
 	};
 };
@@ -1417,8 +1417,8 @@ AtlasLoot_Data["Skettis"] = {
 		[7] = { itemID = 32535, droprate = "7.9%" }; --Gift of the Talonpriests
 		[8] = { itemID = 32534, price = "11.2%" }; --Brooch of the Immortal King
 		[9] = { itemID = 32782 }; --Time-Lost Figurine
-		[10] = { itemID = 32536, desc = "=ds= =q2=#m16#", droprate = "6.7%" }; --Terokk's Gavel
-		[11] = { itemID = 32537, desc = "=ds= =q2=#m16#", droprate = "7.9%" }; --Terokk's Gavel
+		[10] = { itemID = 32536, desc = "=ds= =q2="..AL["(has random enchantment)"], droprate = "6.7%" }; --Terokk's Gavel
+		[11] = { itemID = 32537, desc = "=ds= =q2="..AL["(has random enchantment)"], droprate = "7.9%" }; --Terokk's Gavel
 	};
 	{
 		Name = "Talonpriest Ishaal";
@@ -1451,7 +1451,7 @@ AtlasLoot_Data["ScourgeInvasionEvent"] = {
 		[8] = { itemID = 22999 }; --Tabard of the Argent Dawn
 		[9] = { itemID = 43531 }; --Argent Healing Potion
 		[10] = { itemID = 43530 }; --Argent Mana Potion
-		[12] = { itemID = 22484, desc = "=ds=#m17#" }; --Necrotic Rune
+		[12] = { itemID = 22484, desc = "=ds="..AL["Currency"] }; --Necrotic Rune
 		[16] = { itemID = 40110 }; --Haunted Memento
 		[18] = { icon = "INV_Box_01", name = "=q6=" .. AL["Prince Tenris Mirkblood"], "=q5=" .. BabbleZone["Karazhan"] };
 		[19] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
