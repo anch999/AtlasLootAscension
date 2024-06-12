@@ -543,3 +543,11 @@ local function TooltipHandlerItem(tooltip)
 end
 
 GameTooltip:HookScript("OnTooltipSetItem", TooltipHandlerItem)
+
+function AtlasLoot:StripTextColor(txt)
+	local txt = txt or ""
+	txt = string.gsub( txt, "|c%x%x%x%x%x%x%x%x", "" )
+	txt = string.gsub( txt, "|c%x%x %x%x%x%x%x", "" ) -- the trading parts colour has a space instead of a zero for some weird reason
+	txt = string.gsub( txt, "|r", "" )
+	return txt
+end

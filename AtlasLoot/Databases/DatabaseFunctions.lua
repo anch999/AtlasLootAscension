@@ -1,44 +1,52 @@
 
 local difficultys = {
+	[1] = "Bloodforged",
+	[100] = "Heroic Bloodforged",
 	[3] = "Heroic",
 	[4] = "Mythic",
-	[5] = "Mythic1",  [6] = "Mythic2",  [7] = "Mythic3",  [8] = "Mythic4",  [9] = "Mythic5",
-	[10] = "Mythic6", [11] = "Mythic7", [12] = "Mythic8", [13] = "Mythic9", [14] = "Mythic10",
-	[15] = "Mythic11", [16] = "Mythic12", [17] = "Mythic13", [18] = "Mythic14", [19] = "Mythic15",
-	[20] = "Mythic16", [21] = "Mythic17", [22] = "Mythic18", [23] = "Mythic19", [24] = "Mythic20",
-	[25] = "Mythic21", [26] = "Mythic22", [27] = "Mythic23", [28] = "Mythic24", [29] = "Mythic25",
-	[30] = "Mythic26", [31] = "Mythic27", [32] = "Mythic28", [33] = "Mythic29", [34] = "Mythic30",
-	[35] = "Mythic31", [36] = "Mythic32", [37] = "Mythic33", [38] = "Mythic34", [39] = "Mythic35",
-	[40] = "Mythic36", [41] = "Mythic37", [42] = "Mythic38", [43] = "Mythic39", [44] = "Mythic40",
+	[5] = "Mythic 1",  [6] = "Mythic 2",  [7] = "Mythic 3",  [8] = "Mythic 4",  [9] = "Mythic 5",
+	[10] = "Mythic 6", [11] = "Mythic 7", [12] = "Mythic 8", [13] = "Mythic 9", [14] = "Mythic 10",
+	[15] = "Mythic 11", [16] = "Mythic 12", [17] = "Mythic 13", [18] = "Mythic 14", [19] = "Mythic 15",
+	[20] = "Mythic 16", [21] = "Mythic 17", [22] = "Mythic 18", [23] = "Mythic 19", [24] = "Mythic 20",
+	[25] = "Mythic 21", [26] = "Mythic 22", [27] = "Mythic 23", [28] = "Mythic 24", [29] = "Mythic 25",
+	[30] = "Mythic 26", [31] = "Mythic 27", [32] = "Mythic 28", [33] = "Mythic 29", [34] = "Mythic 30",
+	[35] = "Mythic 31", [36] = "Mythic 32", [37] = "Mythic 33", [38] = "Mythic 34", [39] = "Mythic 35",
+	[40] = "Mythic 36", [41] = "Mythic 37", [42] = "Mythic 38", [43] = "Mythic 39", [44] = "Mythic 40",
 };
 
 local raidDifficultys = {
-	[3] = "HeroicRaid",
-	[4] = "AscendedRaid",
-	[5] = "MythicRaid",
+	[3] = "Heroic Raid",
+	[4] = "Ascended Raid",
+	[5] = "Mythic Raid",
 }
 
 local difficultyList = {
 	["Heroic"] = 3,
 	["Mythic"] = 4,
-	["HeroicRaid"] = 3,
-	["MythicRaid"] = 5,
+	["Heroic Raid"] = 3,
+	["Mythic Raid"] = 5,
 	["Ascended Raid"] = 4,
-	["Mythic1"] = 5,  ["Mythic2"] = 6,  ["Mythic3"] = 7,  ["Mythic4"] = 8,  ["Mythic5"] = 9,
-	["Mythic6"] = 10, ["Mythic7"] = 11, ["Mythic8"] = 12, ["Mythic9"] = 13, ["Mythic10"] = 14,
-	["Mythic11"] = 15, ["Mythic12"] = 16, ["Mythic13"] = 17, ["Mythic14"] = 18, ["Mythic15"] = 19,
-	["Mythic16"] = 20, ["Mythic17"] = 21, ["Mythic18"] = 22, ["Mythic19"] = 23, ["Mythic20"] = 24,
-	["Mythic21"] = 25, ["Mythic22"] = 26, ["Mythic23"] = 27, ["Mythic24"] = 28, ["Mythic25"] = 29,
-	["Mythic26"] = 30, ["Mythic27"] = 31, ["Mythic28"] = 32, ["Mythic29"] = 33, ["Mythic30"] = 34,
-	["Mythic31"] = 35, ["Mythic32"] = 36, ["Mythic33"] = 37, ["Mythic34"] = 38, ["Mythic35"] = 39,
-	["Mythic36"] = 40, ["Mythic37"] = 41, ["Mythic38"] = 42, ["Mythic39"] = 43, ["Mythic40"] = 44,
+	["Heroic Bloodforged"] = 100,
+	["Bloodforged"] = 1,
+	["Mythic 1"] = 5,  ["Mythic 2"] = 6,  ["Mythic 3"] = 7,  ["Mythic 4"] = 8,  ["Mythic 5"] = 9,
+	["Mythic 6"] = 10, ["Mythic 7"] = 11, ["Mythic 8"] = 12, ["Mythic 9"] = 13, ["Mythic 10"] = 14,
+	["Mythic 11"] = 15, ["Mythic 12"] = 16, ["Mythic 13"] = 17, ["Mythic 14"] = 18, ["Mythic 15"] = 19,
+	["Mythic 16"] = 20, ["Mythic 17"] = 21, ["Mythic 18"] = 22, ["Mythic 19"] = 23, ["Mythic 20"] = 24,
+	["Mythic 21"] = 25, ["Mythic 22"] = 26, ["Mythic 23"] = 27, ["Mythic 24"] = 28, ["Mythic 25"] = 29,
+	["Mythic 26"] = 30, ["Mythic 27"] = 31, ["Mythic 28"] = 32, ["Mythic 29"] = 33, ["Mythic 30"] = 34,
+	["Mythic 31"] = 35, ["Mythic 32"] = 36, ["Mythic 33"] = 37, ["Mythic 34"] = 38, ["Mythic 35"] = 39,
+	["Mythic 36"] = 40, ["Mythic 37"] = 41, ["Mythic 38"] = 42, ["Mythic 39"] = 43, ["Mythic 40"] = 44,
 };
 
 function AtlasLoot:GetDifficulty(item)
 	if not item then return end
-	for dif, id in pairs(difficultyList) do
-		if string.match(item.description:gsub( "%W", "" ), dif:gsub( "%W", "" ).."$") then
-			return id, dif
+	for difficuilty, id in pairs(difficultyList) do
+		local _, description, _ = string.split("@", item.description, 3)
+		if description then
+			description = self:StripTextColor(description)
+			if difficuilty == description then
+				return id, difficuilty
+			end
 		end
 	end
 end
@@ -52,9 +60,11 @@ function AtlasLoot:CheckItemID(newIDs, ID, dif)
 		if newName and ogName and newName.name and ogName.name then
 			ogName.name = ogName.name:gsub( "%W", "" )
 			newName.name = newName.name:gsub( "%W", "" )
+			if dif == 1 or dif == 100 then
+				ogName.name = "Bloodforged"..ogName.name
+			end
 		local _, description = self:GetDifficulty(newName)
 			if description then
-			description = description:gsub( "%W", "" )
 				if (not dif or (dif and (difficultys[dif] == description or raidDifficultys[dif] == description))) then
 					if ogName.name == newName.name then
 						return  newID
@@ -188,7 +198,7 @@ function AtlasLoot:FindId(id, difficulty, type, sourceType)
 			(id > 1000000 and (id - 1500000) + 6300000),
 			(id > 1000000 and (id - 1500000) + 7800000),
 	}
-		hasID = self:CheckItemID(newIDs, id)
+		hasID = self:CheckItemID(newIDs, id, difficulty)
 		if hasID then return  hasID, true end
 		if not ItemIDsDatabase[id] then return nil, false end
 	end
@@ -200,7 +210,7 @@ function AtlasLoot:FindId(id, difficulty, type, sourceType)
 			(id > 1000000 and (id - 1500000) + 6000000),
 			(id > 1000000 and (id - 1500000) + 7500000),
 	}
-		hasID = self:CheckItemID(newIDs, id)
+		hasID = self:CheckItemID(newIDs, id, difficulty)
 		if hasID then return  hasID, true end
 	end
 
@@ -209,7 +219,7 @@ function AtlasLoot:FindId(id, difficulty, type, sourceType)
 			(id < 1000000 and (id) + 1550000),
 			(id > 1000000 and (id - 1500000) + 1550000),
 	}
-		hasID = self:CheckItemID(newIDs, id)
+		hasID = self:CheckItemID(newIDs, id, difficulty)
 		if hasID then return  hasID, true end
 	end
 
@@ -218,7 +228,7 @@ function AtlasLoot:FindId(id, difficulty, type, sourceType)
 			(id < 1000000 and (id) + 1650000),
 			(id > 1000000 and (id - 1500000) + 1650000),
 	}
-		hasID = self:CheckItemID(newIDs, id)
+		hasID = self:CheckItemID(newIDs, idid, difficulty)
 		if hasID then return  hasID, true end
 	end
 
@@ -229,7 +239,7 @@ function AtlasLoot:FindId(id, difficulty, type, sourceType)
 	end
 
 	if ItemIDsDatabase[id] then
-		hasID = self:CheckItemID(ItemIDsDatabase[id][difficulty] or nil, id)
+		hasID = self:CheckItemID(ItemIDsDatabase[id][difficulty] or nil, id, difficulty)
 		if hasID then
 			return hasID, true
 		end

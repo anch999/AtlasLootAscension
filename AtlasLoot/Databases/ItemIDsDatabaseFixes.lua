@@ -87,5 +87,15 @@ ItemIDManuelCorrections[22631] = { nil, nil, 322631, 222631, 1322631 }
 ItemIDManuelCorrections[22630] = { nil, nil, 322630, 222630, 1322630 }
 
 
--- to update cache run /atlasloot updatecache startID stopID
--- startID is the first itemid it will check stopID is the last itemid it will check
+--[[ 
+    /atlasloot updatecache startID stopID
+    scans every id from 1 to 5 mil unless you set the startID and stopID 
+    startID is the first itemid it will check stopID is the last itemid it will check
+
+    /atlasloot clearcache
+    clears variables cache
+
+    /atlasloot clonecache
+    replaces the variables cache with the cache in atlasloot
+    this makes it easier to update as you just copy the whole thing other once its done
+    this need to be used to the client reloaded before running the scan ]]
