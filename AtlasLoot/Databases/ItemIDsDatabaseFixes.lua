@@ -85,16 +85,15 @@ ItemIDManuelCorrections[22632] = { nil, nil, 322632, 222632, 1322632 }
 ItemIDManuelCorrections[22631] = { nil, nil, 322631, 222631, 1322631 }
 ItemIDManuelCorrections[22630] = { nil, nil, 322630, 222630, 1322630 }
 
+--Mark of the Champion
+ItemIDManuelCorrections[23207] = { nil, nil, 323207, 223207, 1323207 }
+ItemIDManuelCorrections[23206] = { nil, nil, 323206, 223206, 1323206 }
 
 --[[ 
     /atlasloot updatecache startID stopID
-    scans every id from 1 to 5 mil unless you set the startID and stopID 
+    scans every id from 1 to 10 mil unless you set the startID and stopID 
     startID is the first itemid it will check stopID is the last itemid it will check
 
     /atlasloot clearcache
     clears variables cache
-
-    /atlasloot clonecache
-    replaces the variables cache with the cache in atlasloot
-    this makes it easier to update as you just copy the whole thing other once its done
-    this need to be used to the client reloaded before running the scan ]]
+ ]]

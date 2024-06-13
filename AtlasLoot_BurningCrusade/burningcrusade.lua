@@ -2291,16 +2291,14 @@ AtlasLoot_Data["SunwellPlateau"] = {
 		[2] = { itemID = 34386 }; --Pantaloons of Growing Strife
 		[3] = { itemID = 34169 }; --Breeches of Natural Aggression
 		[4] = { itemID = 34384 }; --Breeches of Natural Splendor
-		[5] = { itemID = 34168, droprate = ".#INF%" }; --Starstalker Legguards
+		[5] = { itemID = 34168 }; --Starstalker Legguards
 		[6] = { itemID = 34167 }; --Legplates of the Holy Juggernaut
 		[7] = { itemID = 34382 }; --Judicator's Legguards
-		[8] = { itemID = 34166, droprate = ".#INF%" }; --Band of Lucent Beams
+		[8] = { itemID = 34166 }; --Band of Lucent Beams
 		[9] = { itemID = 34165 }; --Fang of Kalecgos
 		[10] = { itemID = 34164 }; --Dragonscale-Encrusted Longblade
-		[16] = { itemID = 34848, droprate = "0%" }; --Bracers of the Forgotten Conqueror
-		[17] = { itemID = 34851, droprate = "1%" }; --Bracers of the Forgotten Protector
-		[18] = { itemID = 34852, droprate = "2%" }; --Bracers of the Forgotten Vanquisher
-		[20] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
+		[16] = { itemID = 34848, droprate = "10%", lootTable = {"T6WRIST","Token"}}; --Bracers of the Forgotten Conqueror
+		[18] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 	};
 	{
 		Name = BabbleBoss["Brutallus"];
@@ -2311,10 +2309,8 @@ AtlasLoot_Data["SunwellPlateau"] = {
 		[5] = { itemID = 34177, droprate = "5%" }; --Clutch of Demise
 		[6] = { itemID = 34179, droprate = "3%" }; --Heart of the Pit
 		[7] = { itemID = 34176, droprate = "7%" }; --Reign of Misery
-		[16] = { itemID = 34853, droprate = "4%" }; --Belt of the Forgotten Conqueror
-		[17] = { itemID = 34854, droprate = "0%" }; --Belt of the Forgotten Protector
-		[18] = { itemID = 34855, droprate = "5%" }; --Belt of the Forgotten Vanquisher
-		[20] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
+		[16] = { itemID = 34853, droprate = "100%", lootTable = {"T6WAIST","Token"} }; --Belt of the Forgotten Conqueror
+		[18] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 	};
 	{
 		Name = BabbleBoss["Felmyst"];
@@ -2326,10 +2322,8 @@ AtlasLoot_Data["SunwellPlateau"] = {
 		[6] = { itemID = 34184, droprate = "6%" }; --Brooch of the Highborne
 		[7] = { itemID = 34185, droprate = "6%" }; --Sword Breaker's Bulwark
 		[8] = { itemID = 34182, droprate = "7%" }; --Grand Magister's Staff of Torrents
-		[16] = { itemID = 34856, droprate = "9%" }; --Boots of the Forgotten Conqueror
-		[17] = { itemID = 34857, droprate = "6%" }; --Boots of the Forgotten Protector
-		[18] = { itemID = 34858, droprate = "7%" }; --Boots of the Forgotten Vanquisher
-		[20] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
+		[16] = { itemID = 34856, droprate = "100%", lootTable = {"T6FEET","Token"} }; --Boots of the Forgotten Conqueror
+		[18] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 	};
 	{
 		Name = BabbleBoss["The Eredar Twins"];

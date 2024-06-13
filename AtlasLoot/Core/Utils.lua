@@ -551,3 +551,11 @@ function AtlasLoot:StripTextColor(txt)
 	txt = string.gsub( txt, "|r", "" )
 	return txt
 end
+
+function AtlasLoot:CheckIfEmptyTable(table)
+	if next(table) then
+		return false
+	else
+		return true
+	end
+end

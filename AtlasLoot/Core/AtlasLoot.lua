@@ -258,8 +258,6 @@ function AtlasLoot:SlashCommand(msg)
 		self:UpdateItemIDsDatabase(tonumber(arg1), tonumber(arg2))
 	elseif cmd == "clearcache" then
 		wipe(AtlasLootItemCache)
-	elseif cmd == "clonecache" then
-		AtlasLootItemCache = ItemIDsDatabase
 	else
 		AtlasLootDefaultFrame:Show()
 	end
