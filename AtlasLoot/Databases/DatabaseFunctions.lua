@@ -20,11 +20,7 @@ function AtlasLoot:GetDifficulty(item)
 	if not item then return end
 	local _, description, _ = string.split("@", item.description, 3)
 	if description then
-		description = self:StripTextColor(description)
-		local difficuilty = difficultyList[description]
-		if difficuilty then
-			return difficuilty, description
-		end
+		return self:StripTextColor(description)
 	end
 end
 
@@ -40,7 +36,7 @@ function AtlasLoot:CheckItemID(newIDs, ID, dif)
 			if dif == "Bloodforged" or dif == "Heroic Bloodforged" then
 				ogName.name = "Bloodforged"..ogName.name
 			end
-		local _, description = self:GetDifficulty(newName)
+		local description = self:GetDifficulty(newName)
 			if description then
 				if (not dif or (dif and (dif == description))) then
 					if ogName.name == newName.name then
@@ -111,19 +107,18 @@ function AtlasLoot:GetItemVariationIDs(firstID, lastID)
 	AtlasLootDbUpdateText:SetText("Updating AtlasLoot Item Cache\n"..firstID.." / ".. lastID)
 
 		local function checkID(item, difficulty)
-				if difficulty and item and item.name then
-					local foundName = item.name:gsub( "%W", "" )
-					if foundName then
-						local orignalID = self.unknownIDs[difficulty] and self.unknownIDs[difficulty][foundName]
-						if orignalID then
-							AtlasLootItemCache[orignalID] = AtlasLootItemCache[orignalID] or {}
-							AtlasLootItemCache[orignalID][difficultyList[difficulty]] = item.itemID
-							ItemIDsDatabase[orignalID] = ItemIDsDatabase[orignalID] or {}
-							ItemIDsDatabase[orignalID][difficultyList[difficulty]] = item.itemID
-							self.unknownIDs[difficulty][foundName] = nil
-						end
+			if difficulty and item and item.name then
+				local foundName = item.name:gsub( "%W", "" )
+				if foundName then
+					local orignalID = self.unknownIDs[difficulty] and self.unknownIDs[difficulty][foundName]
+					if orignalID then
+						AtlasLootItemCache[orignalID] = AtlasLootItemCache[orignalID] or {}
+						AtlasLootItemCache[orignalID][difficultyList[difficulty]] = item.itemID
+						ItemIDsDatabase[orignalID] = ItemIDsDatabase[orignalID] or {}
+						ItemIDsDatabase[orignalID][difficultyList[difficulty]] = item.itemID
 					end
 				end
+			end
 			AtlasLootDbUpdateText:SetText("Updating AtlasLoot Item Cache\n"..firstID.." / ".. lastID)
 		end
 
@@ -134,7 +129,7 @@ function AtlasLoot:GetItemVariationIDs(firstID, lastID)
         startTime = debugprofilestop()
         while (firstID ~= lastID) do
 			local item = GetItemInfoInstant(firstID)
-			local _, difficulty = self:GetDifficulty(item)
+			local difficulty = self:GetDifficulty(item)
 			if item and item.inventoryType ~= 0 and not itemTypeIgnore[item.inventoryType] and difficulty then
 				checkID(item, difficulty)
 			end
