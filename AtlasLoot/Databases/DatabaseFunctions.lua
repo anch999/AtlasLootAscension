@@ -92,7 +92,7 @@ function AtlasLoot:UpdateItemIDsDatabase(firstID, lastID)
 			end
 		end
     end
-	
+
 	if self:CheckIfEmptyTable(unknownIDs) then return end
     self:CreateUpdateText()
     AtlasLootDbUpdate:Show()
@@ -152,12 +152,13 @@ On the form of {ID, {normal, heroic, mythic, mythic1, mythic2, ... ,mythicN}}
 function AtlasLoot:FindId(id, difficulty, type, sourceType)
 	local hasID
 	local difficultyString
+	if self.Difficultys[type] then
 		for _, dif in pairs (self.Difficultys[type]) do
 			if dif[2] == difficulty then
 				difficultyString = dif[1]
 			end
 		end
-
+	end
 	if difficulty == 2 then return end
 	if difficulty == 100 then
 		local newIDs = {
