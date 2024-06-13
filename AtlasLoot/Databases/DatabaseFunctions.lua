@@ -63,7 +63,7 @@ end
 
 local itemTypeIgnore = {[18] = true, [19] = true, [24] = true}
 
-AtlasLoot.unknownIDs = {}
+local unknownIDs = {}
 function AtlasLoot:UpdateItemIDsDatabase(firstID, lastID)
 	AtlasLootItemCache = ItemIDsDatabase
 	self:IsLootTableAvailable("AtlasLootOriginalWoW")
@@ -82,8 +82,8 @@ function AtlasLoot:UpdateItemIDsDatabase(firstID, lastID)
 								((not ItemIDsDatabase[itemData.itemID]) or
 								(ItemIDsDatabase[itemData.itemID] and (not ItemIDsDatabase[itemData.itemID][dif[2]] or
 								(ItemIDsDatabase[itemData.itemID][dif[2]] and not idCheck)))) then
-									self.unknownIDs[dif[1]] = self.unknownIDs[dif[1]] or {}
-									self.unknownIDs[dif[1]][itemType.name:gsub( "%W", "" )] = itemData.itemID
+									unknownIDs[dif[1]] = unknownIDs[dif[1]] or {}
+									unknownIDs[dif[1]][itemType.name:gsub( "%W", "" )] = itemData.itemID
 								end
 							end
 						end
@@ -92,11 +92,8 @@ function AtlasLoot:UpdateItemIDsDatabase(firstID, lastID)
 			end
 		end
     end
-	self:GetItemVariationIDs(firstID, lastID)
-end
-
-function AtlasLoot:GetItemVariationIDs(firstID, lastID)
-	if self:CheckIfEmptyTable(self.unknownIDs) then return end
+	
+	if self:CheckIfEmptyTable(unknownIDs) then return end
     self:CreateUpdateText()
     AtlasLootDbUpdate:Show()
 
@@ -110,7 +107,7 @@ function AtlasLoot:GetItemVariationIDs(firstID, lastID)
 			if difficulty and item and item.name then
 				local foundName = item.name:gsub( "%W", "" )
 				if foundName then
-					local orignalID = self.unknownIDs[difficulty] and self.unknownIDs[difficulty][foundName]
+					local orignalID = unknownIDs[difficulty] and unknownIDs[difficulty][foundName]
 					if orignalID then
 						AtlasLootItemCache[orignalID] = AtlasLootItemCache[orignalID] or {}
 						AtlasLootItemCache[orignalID][difficultyList[difficulty]] = item.itemID
@@ -123,7 +120,7 @@ function AtlasLoot:GetItemVariationIDs(firstID, lastID)
 		end
 
     local function continue()
-		if self:CheckIfEmptyTable(self.unknownIDs) then
+		if self:CheckIfEmptyTable(unknownIDs) then
 			return
 		end
         startTime = debugprofilestop()
