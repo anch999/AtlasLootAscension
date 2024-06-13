@@ -281,130 +281,6 @@ function AtlasLoot:OnInitialize()
 	self.Expac = xpaclist[GetAccountExpansionLevel()+1]
 end
 
-function AtlasLoot:RecipeSource(spellID)
-	if not spellID then return end
-	local cData = AtlasLoot_CraftingData
-	local data = {}
-	-- extra information on where to find the recipe
-	-- trainer learnt
-	local trainer = cData["Trainer"][spellID]
-	if trainer then tinsert(data, {AL["Source"]..": "..WHITE..trainer}) end
-	-- aquire type
-	local aquireType = cData["AquireType"][spellID]
-	if aquireType then
-		tinsert(data, {AL["Source"]..": "..WHITE..cData[aquireType[1]][aquireType[2]][1]})
-	end
-	-- vendor recipe
-	local vendor = cData["Vendor"][spellID]
-	if vendor then
-		tinsert(data, {AL["Source"]..": "..WHITE..AL["Vendor"]})
-		for _,v in pairs(vendor) do
-			local vendor = AtlasLoot_CraftingData["VendorList"][v]
-			tinsert(data, {vendor[1], vendor[2], cords = {vendor[3], vendor[4]}, fac = vendor[5]})
-		end
-	end
-	-- vendor recipe
-	local recipeRepVendor = cData["RecipeRepVendor"][spellID]
-	if recipeRepVendor then
-		tinsert(data, {AL["Source"]..": "..WHITE..AL["Vendor"]})
-		local vendor = AtlasLoot_CraftingData["VendorList"][spellID]
-		for	i = 3, 6 do
-			if vendor and vendor[i] then
-			tinsert(data, {vendor[1], vendor[2], fac = vendor[i]})
-			end
-		end
-	end
-	--limited vendor recipes
-	local limitedVendor = cData["LimitedVendor"][spellID]
-	if limitedVendor then
-		tinsert(data, {AL["Source"]..": "..WHITE..AL["Limited Stock"]})
-		local sort = {}
-		local limited = false
-		for i,v in pairs(limitedVendor) do
-			 if limited then
-				 tinsert(sort[i-1],v)
-				 limited = false
-			 else
-				 sort[i] = {v}
-				 limited = true
-			 end
-		end
-		for _,v in pairs(sort) do
-			 local vendor = AtlasLoot_CraftingData["VendorList"][v[1]]
-			 tinsert(data, {vendor[1], vendor[2], cords = {vendor[3], vendor[4]}, fac = vendor[5], limited = v[2]})
-		end
-	end
-	--mob drop
-	local mobDrop = cData["MobDrop"][spellID]
-	if mobDrop then
-		tinsert(data, {AL["Source"]..": "..WHITE..AL["Mob Drop"]})
-		for _,v in pairs(mobDrop) do
-			local mob = AtlasLoot_CraftingData["MobList"][v]
-			local cords = nil
-			if mob[3] ~= 0 and mob[4] ~= 0 then
-				cords = {mob[3], mob[4]}
-			end
-			tinsert(data, {mob[1], WHITE..mob[2], cords})
-		end
-	end
-	-- World Drop
-	local worldDrop = cData["WorldDrop"][spellID]
-	if worldDrop then
-		tinsert(data, {AL["Source"]..": "..WHITE..AL["World Drop"]})
-		local text = worldDrop[1]
-		if worldDrop[2] then
-			text = text.." / "..worldDrop[2]
-		end
-		tinsert(data, {text})
-	end
-	--quest
-	local questDrop = cData["QuestDrop"][spellID]
-	if questDrop then
-		tinsert(data, {AL["Source"]..": "..WHITE..AL["Quest"]})
-		for _,v in pairs(questDrop) do
-			local quest = AtlasLoot_CraftingData["QuestList"][v]
-			tinsert(data, {quest[1],  quest[2], cords = {quest[3], quest[4]}, fac = quest[5]})
-		end
-	end
-	--rep vendor
-	local repVendor = cData["RepVendor"][spellID]
-	if repVendor then
-		tinsert(data, {AL["Source"]..": "..WHITE..AL["Reputation Vendor"]})
-		local line1, line2
-		local list = {}
-		for i,v in pairs(repVendor) do
-			 if type(v) == "table" then
-				 for i,v in pairs(v) do
-					 if i == 1 then
-						 line1 = AL["Faction"]..": "..WHITE..v
-					 elseif i == 2 then
-						 line2 = AL["Required Reputation"]..": "..WHITE..v
-					 else
-						 tinsert(list,AtlasLoot_CraftingData["VendorList"][v])
-					 end
-				 end
-			 else
-				 if i == 1 then
-					 line1 = AL["Faction"]..": "..WHITE..v
-				 elseif i == 2 then
-					 line2 = AL["Required Reputation"]..": "..WHITE..v
-				 else
-					 tinsert(list,AtlasLoot_CraftingData["VendorList"][v])
-				 end
-			 end
-		end
-		tinsert(data, {line1, line2})
-		for _,v in pairs(list) do
-			local cords
-			if v[3] ~= 0 and v[4] ~= 0 then
-				cords = {v[3], v[4]}
-			end
-			tinsert(data, {v[1], WHITE..v[2], cords, fac = v[5]})
-		end
-	end
-	return data
-end
-
 --Creates tables for raid tokens from the collections tables
 function AtlasLoot:CreateToken(dataID)
 	local itemType, slotType, itemName, itemType2
@@ -469,7 +345,7 @@ function AtlasLoot:CreateOnDemandLootTable(typeL)
 		INVTYPE_LEGS = BabbleInventory["Legs"], INVTYPE_FEET = BabbleInventory["Feet"], INVTYPE_FINGER = BabbleInventory["Ring"],
 		INVTYPE_CLOAK = BabbleInventory["Back"], INVTYPE_NECK = BabbleInventory["Neck"], INVTYPE_WEAPONOFFHAND = BabbleInventory["Off Hand"],
 		INVTYPE_WEAPONMAINHAND = "Mainhand", INVTYPE_TRINKET = "Trinket", INVTYPE_HOLDABLE = "Caster Offhand"}
-	
+
 	local function correctText(text)
 		text = gsub(text, "Cloth Armor %- Back", "Back")
 		text = gsub(text, "Miscellaneous Armor %- " , "")
@@ -477,7 +353,7 @@ function AtlasLoot:CreateOnDemandLootTable(typeL)
 		text = gsub(text, "Weapon %- " , WHITE.."%- ")
 		return text
 	end
-	
+
 	-- Combind robes with chest
 	local function getEquip(equipLoc)
 		if equipLoc == "INVTYPE_ROBE" then
@@ -540,12 +416,13 @@ function AtlasLoot:CreateOnDemandLootTable(typeL)
 	--Fills table with items
 	local itemList = {}
 	local checkList = {}
-	for _, data in pairs(AtlasLoot_Data) do
+	for dataID, data in pairs(AtlasLoot_Data) do
 		if data.Type == typeL then
-			for _, t in ipairs(data) do
+			for tableNum, t in ipairs(data) do
 				for _, itemData in pairs(t) do
 					if type(itemData) == "table" and itemData.itemID and not checkList[itemData.itemID] then
 						itemData.dropLoc = {data.DisplayName or data.Name, t.Name}
+						itemData.lootTable = {{dataID, "AtlasLoot_Data", tableNum}, "Source"}
 						checkList[itemData.itemID] = true
 						tinsert(itemList, {itemData})
 					end
@@ -927,7 +804,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 			itemButton.dressingroomID = itemID
 		end
 
-		itemButton.craftingData = self:RecipeSource(spellID)
+		itemButton.craftingData = self:GetRecipeSource(spellID)
 		itemButton.tablenum = tablenum
 		itemButton.dataID = dataID
 		itemButton.dataSource = dataSource_backup
