@@ -96,7 +96,7 @@ local txtSubstitution = {
     { "Flask", BabbleInventory["Flask"] },
     { "Other", AL["Misc"] },
     { "Junk", AL["Misc"] },
-    { "%(OBSOLETE%),", ""},
+    { "%(OBSOLETE%)", ""},
     { "Food & Drink", BabbleInventory["Food & Drink"] },
 
     -- Crafting
