@@ -570,18 +570,18 @@ function AtlasLoot:ScrollFrameUpdate(hide,wishlist)
                 scrollFrame.rows[i]:Hide()
             end
         end
-    elseif self.Difficultys then
-        maxValue = #self.Difficultys[self.CurrentType]
+    elseif self.Difficulties then
+        maxValue = #self.Difficulties[self.CurrentType]
         FauxScrollFrame_Update(scrollFrame.scrollBar, maxValue, MAX_ROWS, ROW_HEIGHT)
         offset = FauxScrollFrame_GetOffset(scrollFrame.scrollBar)
         for i = 1, MAX_ROWS do
             value = i + offset
             scrollFrame.rows[i]:SetChecked(false)
             scrollFrame.rows[i]:SetHighlightTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD")
-            if value <= maxValue and self.Difficultys[self.CurrentType][value] and hide == nil then
+            if value <= maxValue and self.Difficulties[self.CurrentType][value] and hide == nil then
                 row = scrollFrame.rows[i]
-                row:SetText("|cffFFd200"..self.Difficultys[self.CurrentType][value][1])
-                row.itemIndex = self.Difficultys[self.CurrentType][value][2]
+                row:SetText("|cffFFd200"..self.Difficulties[self.CurrentType][value][1])
+                row.itemIndex = self.Difficulties[self.CurrentType][value][2]
                 if row.itemIndex == ItemindexID then
                     row:SetChecked(true)
                 end

@@ -33,636 +33,166 @@ AtlasLoot.FixedItemText = {
     [400751] = AL["Token"],
 }
 
-
-
-function AtlasLoot:FixText(text)
-
-    -- Classes
-    text = gsub(text, "#c1#", "Druid")
-    text = gsub(text, "#c2#", LOCALIZED_CLASS_NAMES_MALE["HUNTER"])
-    text = gsub(text, "#c3#", LOCALIZED_CLASS_NAMES_MALE["MAGE"])
-    text = gsub(text, "#c4#", LOCALIZED_CLASS_NAMES_MALE["PALADIN"])
-    text = gsub(text, "#c5#", LOCALIZED_CLASS_NAMES_MALE["PRIEST"])
-    text = gsub(text, "#c6#", LOCALIZED_CLASS_NAMES_MALE["ROGUE"])
-    text = gsub(text, "#c7#", LOCALIZED_CLASS_NAMES_MALE["SHAMAN"])
-    text = gsub(text, "#c8#", LOCALIZED_CLASS_NAMES_MALE["WARLOCK"])
-    text = gsub(text, "#c9#", LOCALIZED_CLASS_NAMES_MALE["WARRIOR"])
-    text = gsub(text, "#c10#", LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"])
-
+local txtSubstitution = {
     -- Body Slot
-    text = gsub(text, "INVTYPE_HEAD", BabbleInventory["Head"])
-    text = gsub(text, "INVTYPE_NECK, Miscellaneous", BabbleInventory["Neck"])
-    text = gsub(text, "INVTYPE_SHOULDER", BabbleInventory["Shoulder"])
-    text = gsub(text, "INVTYPE_CLOAK, Cloth", BabbleInventory["Back"])
-    text = gsub(text, "INVTYPE_CHEST", BabbleInventory["Chest"])
-    text = gsub(text, "INVTYPE_BODY", BabbleInventory["Shirt"])
-    text = gsub(text, "INVTYPE_ROBE", BabbleInventory["Chest"])
-    text = gsub(text, "INVTYPE_TABARD, Miscellaneous", BabbleInventory["Tabard"])
-    text = gsub(text, "INVTYPE_WRIST", BabbleInventory["Wrist"])
-    text = gsub(text, "INVTYPE_HAND", BabbleInventory["Hands"])
-    text = gsub(text, "INVTYPE_WAIST", BabbleInventory["Waist"])
-    text = gsub(text, "INVTYPE_LEGS", BabbleInventory["Legs"])
-    text = gsub(text, "INVTYPE_FEET", BabbleInventory["Feet"])
-    text = gsub(text, "INVTYPE_FINGER, Miscellaneous", BabbleInventory["Ring"])
-    text = gsub(text, "INVTYPE_TRINKET, Miscellaneous", BabbleInventory["Trinket"])
-    text = gsub(text, "INVTYPE_RELIC, Miscellaneous", BabbleInventory["Relic"])
+    { "INVTYPE_HEAD", BabbleInventory["Head"] },
+    { "INVTYPE_NECK, Miscellaneous", BabbleInventory["Neck"] },
+    { "INVTYPE_SHOULDER", BabbleInventory["Shoulder"] },
+    { "INVTYPE_CLOAK, Cloth", BabbleInventory["Back"] },
+    { "INVTYPE_CHEST", BabbleInventory["Chest"] },
+    { "INVTYPE_BODY", BabbleInventory["Shirt"] },
+    { "INVTYPE_ROBE", BabbleInventory["Chest"] },
+    { "INVTYPE_TABARD, Miscellaneous", BabbleInventory["Tabard"] },
+    { "INVTYPE_WRIST", BabbleInventory["Wrist"] },
+    { "INVTYPE_HAND", BabbleInventory["Hands"] },
+    { "INVTYPE_WAIST", BabbleInventory["Waist"] },
+    { "INVTYPE_LEGS", BabbleInventory["Legs"] },
+    { "INVTYPE_FEET", BabbleInventory["Feet"] },
+    { "INVTYPE_FINGER, Miscellaneous", BabbleInventory["Ring"] },
+    { "INVTYPE_TRINKET, Miscellaneous", BabbleInventory["Trinket"] },
+    { "INVTYPE_RELIC, Miscellaneous", BabbleInventory["Relic"] },
 
     -- Weapon Weilding
-    text = gsub(text, "INVTYPE_WEAPON, ", "")
-    text = gsub(text, "INVTYPE_2HWEAPON, ", "")
-    text = gsub(text, "INVTYPE_WEAPONMAINHAND, ", "")
-    text = gsub(text, "INVTYPE_WEAPONOFFHAND, ", "")
-    text = gsub(text, "INVTYPE_RANGED, ", "")
-    text = gsub(text, "INVTYPE_SHIELD, ", "")
-    text = gsub(text, "INVTYPE_HOLDABLE, Miscellaneous", BabbleInventory["Off Hand"])
-    text = gsub(text, "INVTYPE_THROWN, ", "")
-
-    text = gsub(text, "Jewelcrafting", BabbleInventory["Jewelcrafting"])
-    text = gsub(text, "Enchanting", BabbleInventory["Enchanting"])
-    text = gsub(text, "Tailoring", BabbleInventory["Tailoring"])
-    text = gsub(text, "Blacksmithing", BabbleInventory["Blacksmithing"])
-    text = gsub(text, "Leatherworking", BabbleInventory["Leatherworking"])
-    text = gsub(text, "Alchemy", BabbleInventory["Alchemy"])
-    text = gsub(text, "Engineering", BabbleInventory["Engineering"])
-    text = gsub(text, "Cooking", BabbleInventory["Cooking"])
-    text = gsub(text, "Mining", AL["Mining"])
-    text = gsub(text, "Herbalism", AL["Herbalism"])
-
+    { "INVTYPE_WEAPON, ", "" },
+    { "INVTYPE_2HWEAPON, ", "" },
+    { "INVTYPE_WEAPONMAINHAND, ", "" },
+    { "INVTYPE_WEAPONOFFHAND, ", "" },
+    { "INVTYPE_RANGED, ", "" },
+    { "INVTYPE_SHIELD, ", "" },
+    { "INVTYPE_HOLDABLE, Miscellaneous", BabbleInventory["Off Hand"] },
+    { "INVTYPE_THROWN, ", "" },
 
     -- Weapon Type
-    text = gsub(text, "Axes", BabbleInventory["Axe"])
-    text = gsub(text, "Bows", BabbleInventory["Bow"])
-    text = gsub(text, "INVTYPE_RANGEDRIGHT, Crossbows", BabbleInventory["Crossbow"])
-    text = gsub(text, "INVTYPE_RANGEDRIGHT, Gun", BabbleInventory["Gun"])
-    text = gsub(text, "Daggers", BabbleInventory["Dagger"])
-    text = gsub(text, "Guns", BabbleInventory["Gun"])
-    text = gsub(text, "INVTYPE_AMMO, Junk", "Ammo (Obsolete)")
-    text = gsub(text, "One%-Handed Maces", AL["One-Handed Mace"])
-    text = gsub(text, "Two%-Handed Maces", AL["Two-Handed Mace"])
-    text = gsub(text, "Polearms", BabbleInventory["Polearm"])
-    text = gsub(text, "Shields", BabbleInventory["Shield"])
-    text = gsub(text, "Staves", BabbleInventory["Staff"])
-    text = gsub(text, "One%-Handed Swords", AL["One-Handed Sword"])
-    text = gsub(text, "Two%-Handed Swords", AL["Two-Handed Sword"])
-    text = gsub(text, "INVTYPE_RANGEDRIGHT, Wands", BabbleInventory["Wand"])
-    text = gsub(text, "Fist Weapons", BabbleInventory["Fist Weapon"])
-    text = gsub(text, "INVTYPE_RELIC, Idols", BabbleInventory["Idol"])
-    text = gsub(text, "INVTYPE_RELIC, Totem", BabbleInventory["Totem"])
-    text = gsub(text, "INVTYPE_RELIC, Libram", BabbleInventory["Libram"])
-    text = gsub(text, "INVTYPE_BAG, Bag", BabbleInventory["Bag"])
-    text = gsub(text, "INVTYPE_BAG, Soul Bag", BabbleInventory["Soul Bag"])
-    text = gsub(text, "#w21#", AL["Sigil"])
+    { "INVTYPE_RANGEDRIGHT, Crossbows", BabbleInventory["Crossbow"] },
+    { "INVTYPE_RANGEDRIGHT, Gun", BabbleInventory["Gun"] },
+    { "INVTYPE_RANGEDRIGHT, Wands", BabbleInventory["Wand"] },
+    { "INVTYPE_RELIC, Idols", BabbleInventory["Idol"] },
+    { "INVTYPE_RELIC, Totem", BabbleInventory["Totem"] },
+    { "INVTYPE_RELIC, Libram", BabbleInventory["Libram"] },
+    { "INVTYPE_BAG, Bag", BabbleInventory["Bag"] },
+    { "INVTYPE_BAG, Soul Bag", BabbleInventory["Soul Bag"] },
+    { "INVTYPE_AMMO, Junk", "Ammo (Obsolete ),"},
+    { "Axes", BabbleInventory["Axe"] },
+    { "Bows", BabbleInventory["Bow"] },
+    { "Daggers", BabbleInventory["Dagger"] },
+    { "Guns", BabbleInventory["Gun"] },
+    { "One%-Handed Maces", AL["One-Handed Mace"] },
+    { "Two%-Handed Maces", AL["Two-Handed Mace"] },
+    { "Polearms", BabbleInventory["Polearm"] },
+    { "Shields", BabbleInventory["Shield"] },
+    { "Staves", BabbleInventory["Staff"] },
+    { "One%-Handed Swords", AL["One-Handed Sword"] },
+    { "Two%-Handed Swords", AL["Two-Handed Sword"] },
+    { "Fist Weapons", BabbleInventory["Fist Weapon"] },
 
-    text = gsub(text, "Pet", BabbleInventory["Pet"])
-    text = gsub(text, "Money", AL["Currency"])
-    text = gsub(text, "Consumable", BabbleInventory["Consumable"])
-    text = gsub(text, "Mount", BabbleInventory["Mount"])
-    text = gsub(text, "Quest", BabbleInventory["Quest"])
-    text = gsub(text, "Key", BabbleInventory["Key"])
-    text = gsub(text, "Book", BabbleInventory["Book"])
-    text = gsub(text, "Materials", BabbleInventory["Reagent"])
-    text = gsub(text, "Flask", BabbleInventory["Flask"])
-    text = gsub(text, "Other", AL["Misc"])
-    text = gsub(text, "Junk", AL["Misc"])
-    text = gsub(text, "%(OBSOLETE%)", "")
-    text = gsub(text, "Food & Drink", BabbleInventory["Food & Drink"])
-
-    text = gsub(text, "Red", AL["Red Gem"])
-    text = gsub(text, "Blue", AL["Blue Gem"])
-    text = gsub(text, "Yellow", AL["Yellow Gem"])
-    text = gsub(text, "Purple", AL["Purple Gem"])
-    text = gsub(text, "Orange", AL["Orange Gem"])
-    text = gsub(text, "Green", AL["Green Gem"])
-    
-    -- Misc
-    text = gsub(text, "#j1#", AL["Normal Mode"])
-    text = gsub(text, "#j2#", AL["Raid"])
-    text = gsub(text, "#j3#", AL["Heroic Mode"])
-    text = gsub(text, "#j5#", AL["Dungeon Set 2 Summonable"])
-    text = gsub(text, "#j6#", AL["Dungeon Set 1"])
-    text = gsub(text, "#j7#", AL["Dungeon Set 2"])
-    text = gsub(text, "#j8#", AL["Token Hand-Ins"])
-    text = gsub(text, "#j9#", AL["Level 60"])
-    text = gsub(text, "#j10#", AL["Level 70"])
-    text = gsub(text, "#j11#", AL["Fire Resistance Gear"])
-    text = gsub(text, "#j12#", AL["Arcane Resistance Gear"])
-    text = gsub(text, "#j13#", AL["Nature Resistance Gear"])
-    text = gsub(text, "#j14#", AL["Frost Resistance Gear"])
-    text = gsub(text, "#j15#", AL["Shadow Resistance Gear"])
-    text = gsub(text, "#j16#", AL["Phase 1"])
-    text = gsub(text, "#j17#", AL["Phase 2"])
-    text = gsub(text, "#j18#", AL["Phase 3"])
-    text = gsub(text, "#j19#", AL["Fire"])
-    text = gsub(text, "#j20#", AL["Water"])
-    text = gsub(text, "#j21#", AL["Wind"])
-    text = gsub(text, "#j22#", AL["Earth"])
-    text = gsub(text, "#j23#", AL["Master Angler"])
-    text = gsub(text, "#j24#", AL["First Prize"])
-    text = gsub(text, "#j25#", AL["Rare Fish Rewards"])
-    text = gsub(text, "#j26#", AL["Rare Fish"])
-    text = gsub(text, "#j27#", AL["Additional Heroic Loot"])
-    text = gsub(text, "#j28#", AL["Entrance"])
-    text = gsub(text, "#j31#", AL["Card Game Mounts"])
-    text = gsub(text, "#j32#", AL["Crafted Mounts"])
-    text = gsub(text, "#j33#", AL["Event Mounts"])
-    text = gsub(text, "#j34#", AL["PvP Mounts"])
-    text = gsub(text, "#j35#", AL["Rare Mounts"])
-    text = gsub(text, "#j37#", AL["10 Man"])
-    text = gsub(text, "#j38#", AL["25 Man"])
-    text = gsub(text, "#j47#", AL["Heroic"])
-    text = gsub(text, "#j50#", AL["Weapons"])
-    text = gsub(text, "#j51#", AL["Accessories"])
-    text = gsub(text, "#j54#", AL["Level 80"])
-
-    -- ZG Tokens
-    text = gsub(text, "#zgt1#", AL["Primal Hakkari Kossack"])
-    text = gsub(text, "#zgt2#", AL["Primal Hakkari Shawl"])
-    text = gsub(text, "#zgt3#", AL["Primal Hakkari Bindings"])
-    text = gsub(text, "#zgt4#", AL["Primal Hakkari Sash"])
-    text = gsub(text, "#zgt5#", AL["Primal Hakkari Stanchion"])
-    text = gsub(text, "#zgt6#", AL["Primal Hakkari Aegis"])
-    text = gsub(text, "#zgt7#", AL["Primal Hakkari Girdle"])
-    text = gsub(text, "#zgt8#", AL["Primal Hakkari Armsplint"])
-    text = gsub(text, "#zgt9#", AL["Primal Hakkari Tabard"])
-
-    -- AQ20 Tokens
-    text = gsub(text, "#aq20t1#", AL["Qiraji Ornate Hilt"])
-    text = gsub(text, "#aq20t2#", AL["Qiraji Martial Drape"])
-    text = gsub(text, "#aq20t3#", AL["Qiraji Magisterial Ring"])
-    text = gsub(text, "#aq20t4#", AL["Qiraji Ceremonial Ring"])
-    text = gsub(text, "#aq20t5#", AL["Qiraji Regal Drape"])
-    text = gsub(text, "#aq20t6#", AL["Qiraji Spiked Hilt"])
-
-    -- Battleground Factions
-    text = gsub(text, "#b1#", BabbleFaction["Stormpike Guard"])
-    text = gsub(text, "#b2#", BabbleFaction["Frostwolf Clan"])
-    text = gsub(text, "#b3#", BabbleFaction["Silverwing Sentinels"])
-    text = gsub(text, "#b4#", BabbleFaction["Warsong Outriders"])
-    text = gsub(text, "#b5#", BabbleFaction["The League of Arathor"])
-    text = gsub(text, "#b6#", BabbleFaction["The Defilers"])
-
-    -- BRD Arena Mini Bosses
-    text = gsub(text, "#brd1#", BabbleBoss["Anub'shiah"])
-    text = gsub(text, "#brd2#", BabbleBoss["Eviscerator"])
-    text = gsub(text, "#brd3#", BabbleBoss["Gorosh the Dervish"])
-    text = gsub(text, "#brd4#", BabbleBoss["Grizzle"])
-    text = gsub(text, "#brd5#", BabbleBoss["Hedrum the Creeper"])
-    text = gsub(text, "#brd6#", BabbleBoss["Ok'thor the Breaker"])
-
-    -- Sunken Temple Troll Mini Bosses
-    text = gsub(text, "#st1#", BabbleBoss["Gasher"])
-    text = gsub(text, "#st2#", BabbleBoss["Hukku"])
-    text = gsub(text, "#st3#", BabbleBoss["Loro"])
-    text = gsub(text, "#st4#", BabbleBoss["Mijan"])
-    text = gsub(text, "#st5#", BabbleBoss["Zolo"])
-    text = gsub(text, "#st6#", BabbleBoss["Zul'Lor"])
-
-    -- NPC Names
-    text = gsub(text, "#n1#", BabbleBoss["Lord Cobrahn"])
-    text = gsub(text, "#n2#", BabbleBoss["Lady Anacondra"])
-    text = gsub(text, "#n3#", BabbleBoss["Lord Serpentis"])
-    text = gsub(text, "#n4#", AL["Druid of the Fang"])
-    text = gsub(text, "#n5#", BabbleBoss["Lord Pythas"])
-    text = gsub(text, "#n6#", BabbleBoss["Edwin VanCleef"])
-    text = gsub(text, "#n7#", BabbleBoss["Captain Greenskin"])
-    text = gsub(text, "#n8#", AL["Defias Strip Miner"])
-    text = gsub(text, "#n9#", AL["Defias Overseer/Taskmaster"])
-    text = gsub(text, "#n10#", AL["Scarlet Defender/Myrmidon"])
-    text = gsub(text, "#n11#", AL["Trash Mobs"])
-    text = gsub(text, "#n12#", AL["Scarlet Champion"])
-    text = gsub(text, "#n13#", AL["Scarlet Centurion"])
-    text = gsub(text, "#n14#", AL["Herod/Mograine"])
-    text = gsub(text, "#n15#", AL["Scarlet Protector/Guardsman"])
-    text = gsub(text, "#n16#", BabbleBoss["Lord Valthalak"])
-    text = gsub(text, "#n17#", AL["Theldren"])
-    text = gsub(text, "#n18#", AL["Sothos and Jarien"])
-    text = gsub(text, "#n19#", BabbleBoss["Halycon"])
-    text = gsub(text, "#n20#", BabbleBoss["Isalien"])
-    text = gsub(text, "#n21#", BabbleBoss["Mor Grayhoof"])
-    text = gsub(text, "#n22#", BabbleBoss["Kormok"])
-    text = gsub(text, "#n23#", BabbleBoss["The Beast"])
-    text = gsub(text, "#n24#", BabbleBoss["Postmaster Malown"])
-    text = gsub(text, "#n25#", AL["Shadow of Doom"])
-    text = gsub(text, "#n26#", AL["Bone Witch"])
-    text = gsub(text, "#n27#", AL["Lumbering Horror"])
-    text = gsub(text, "#n28#", BabbleBoss["High Priest Thekal"])
-    text = gsub(text, "#n29#", BabbleBoss["High Priestess Mar'li"])
-    text = gsub(text, "#n30#", BabbleBoss["High Priestess Arlokk"])
-    text = gsub(text, "#n31#", BabbleBoss["High Priestess Jeklik"])
-    text = gsub(text, "#n32#", BabbleBoss["High Priest Venoxis"])
-    text = gsub(text, "#n33#", BabbleBoss["Bloodlord Mandokir"])
-    text = gsub(text, "#n34#", BabbleBoss["Hakkar"])
-    text = gsub(text, "#n35#", BabbleBoss["Ragnaros"])
-    text = gsub(text, "#n36#", BabbleBoss["Onyxia"])
-    text = gsub(text, "#n37#", AL["Highlord Kruul"])
-    text = gsub(text, "#n38#", BabbleBoss["Magmadar"])
-    text = gsub(text, "#n39#", BabbleBoss["Azuregos"])
-    text = gsub(text, "#n40#", BabbleBoss["Warchief Rend Blackhand"])
-    text = gsub(text, "#n41#", BabbleBoss["Crystal Fang"])
-    text = gsub(text, "#n42#", BabbleBoss["Mother Smolderweb"])
-    text = gsub(text, "#n43#", AL["Scarlet Trainee"])
-    text = gsub(text, "#n44#", AL["Shadowforge Flame Keeper"])
-    text = gsub(text, "#n45#", BabbleBoss["Baelog"])
-    text = gsub(text, "#n46#", AL["Eric 'The Swift'"])
-    text = gsub(text, "#n47#", AL["Olaf"])
-    text = gsub(text, "#n48#", BabbleBoss["Hurley Blackbreath"])
-    text = gsub(text, "#n49#", BabbleBoss["Phalanx"])
-    text = gsub(text, "#n50#", BabbleBoss["Ribbly Screwspigot"])
-    text = gsub(text, "#n51#", BabbleBoss["Plugger Spazzring"])
-    text = gsub(text, "#n52#", BabbleBoss["Baron Rivendare"])
-    text = gsub(text, "#n53#", BabbleBoss["Attumen the Huntsman"])
-    text = gsub(text, "#n54#", AL["Nexus Stalker"])
-    text = gsub(text, "#n55#", AL["Auchenai Monk"])
-    text = gsub(text, "#n56#", AL["Cabal Fanatic"])
-    text = gsub(text, "#n57#", AL["Unchained Doombringer"])
-    text = gsub(text, "#n58#", BabbleBoss["Anzu"])
-    text = gsub(text, "#n59#", BabbleBoss["Kael'thas Sunstrider"])
-    text = gsub(text, "#n60#", AL["Crimson Sorcerer"])
-    text = gsub(text, "#n61#", AL["Thuzadin Shadowcaster"])
-    text = gsub(text, "#n62#", AL["Crimson Inquisitor"])
-    text = gsub(text, "#n63#", AL["Crimson Battle Mage"])
-    text = gsub(text, "#n64#", AL["Ghoul Ravener"])
-    text = gsub(text, "#n65#", AL["Spectral Citizen"])
-    text = gsub(text, "#n66#", AL["Spectral Researcher"])
-    text = gsub(text, "#n67#", AL["Scholomance Adept"])
-    text = gsub(text, "#n68#", AL["Scholomance Dark Summoner"])
-    text = gsub(text, "#n69#", AL["Blackhand Elite"])
-    text = gsub(text, "#n70#", AL["Blackhand Assassin"])
-    text = gsub(text, "#n71#", AL["Firebrand Pyromancer"])
-    text = gsub(text, "#n72#", AL["Firebrand Invoker"])
-    text = gsub(text, "#n75#", AL["Firebrand Grunt"])
-    text = gsub(text, "#n76#", AL["Firebrand Legionnaire"])
-    text = gsub(text, "#n73#", AL["Spirestone Warlord"])
-    text = gsub(text, "#n74#", AL["Spirestone Mystic"])
-    text = gsub(text, "#n75#", AL["Anvilrage Captain"])
-    text = gsub(text, "#n76#", AL["Anvilrage Marshal"])
-    text = gsub(text, "#n77#", AL["Doomforge Arcanasmith"])
-    text = gsub(text, "#n78#", AL["Weapon Technician"])
-    text = gsub(text, "#n79#", AL["Doomforge Craftsman"])
-    text = gsub(text, "#n80#", AL["Murk Worm"])
-    text = gsub(text, "#n81#", AL["Atal'ai Witch Doctor"])
-    text = gsub(text, "#n82#", AL["Raging Skeleton"])
-    text = gsub(text, "#n83#", AL["Ethereal Priest"])
-    text = gsub(text, "#n84#", AL["Sethekk Ravenguard"])
-    text = gsub(text, "#n85#", AL["Time-Lost Shadowmage"])
-    text = gsub(text, "#n86#", AL["Coilfang Sorceress"])
-    text = gsub(text, "#n87#", AL["Coilfang Oracle"])
-    text = gsub(text, "#n88#", AL["Shattered Hand Centurion"])
-    text = gsub(text, "#n89#", AL["Eredar Deathbringer"])
-    text = gsub(text, "#n90#", AL["Arcatraz Sentinel"])
-    text = gsub(text, "#n91#", AL["Gargantuan Abyssal"])
-    text = gsub(text, "#n92#", AL["Sunseeker Botanist"])
-    text = gsub(text, "#n93#", AL["Sunseeker Astromage"])
-    text = gsub(text, "#n94#", AL["Durnholde Rifleman"])
-    text = gsub(text, "#n95#", AL["Rift Keeper/Rift Lord"])
-    text = gsub(text, "#n96#", AL["Crimson Templar"])
-    text = gsub(text, "#n97#", AL["Azure Templar"])
-    text = gsub(text, "#n98#", AL["Hoary Templar"])
-    text = gsub(text, "#n99#", AL["Earthen Templar"])
-    text = gsub(text, "#n100#", AL["The Duke of Cynders"])
-    text = gsub(text, "#n101#", AL["The Duke of Fathoms"])
-    text = gsub(text, "#n102#", AL["The Duke of Zephyrs"])
-    text = gsub(text, "#n103#", AL["The Duke of Shards"])
-    text = gsub(text, "#n104#", BabbleBoss["Prince Skaldrenox"])
-    text = gsub(text, "#n105#", BabbleBoss["Lord Skwol"])
-    text = gsub(text, "#n106#", BabbleBoss["High Marshal Whirlaxis"])
-    text = gsub(text, "#n107#", BabbleBoss["Baron Kazum"])
-    text = gsub(text, "#n108#", BabbleBoss["Baron Charr"])
-    text = gsub(text, "#n109#", BabbleBoss["Princess Tempestria"])
-    text = gsub(text, "#n110#", BabbleBoss["Avalanchion"])
-    text = gsub(text, "#n111#", BabbleBoss["The Windreaver"])
-    text = gsub(text, "#n112#", AL["Aether-tech Assistant"])
-    text = gsub(text, "#n113#", AL["Aether-tech Adept"])
-    text = gsub(text, "#n114#", AL["Aether-tech Master"])
-    text = gsub(text, "#n115#", BabbleBoss["Lord Kri"])
-    text = gsub(text, "#n116#", BabbleBoss["Vem"])
-    text = gsub(text, "#n117#", BabbleBoss["Princess Yauj"])
-    text = gsub(text, "#n118#", AL["Trelopades"])
-    text = gsub(text, "#n119#", AL["King Dorfbruiser"])
-    text = gsub(text, "#n120#", AL["Gorgolon the All-seeing"])
-    text = gsub(text, "#n121#", AL["Matron Li-sahar"])
-    text = gsub(text, "#n122#", AL["Solus the Eternal"])
-    text = gsub(text, "#n123#", AL["Balzaphon"])
-    text = gsub(text, "#n124#", AL["Lord Blackwood"])
-    text = gsub(text, "#n125#", AL["Revanchion"])
-    text = gsub(text, "#n126#", AL["Scorn"])
-    text = gsub(text, "#n127#", AL["Sever"])
-    text = gsub(text, "#n128#", AL["Lady Falther'ess"])
-    text = gsub(text, "#n129#", AL["Smokywood Pastures Vendor"])
-    text = gsub(text, "#n130#", BabbleBoss["Nalorakk"])
-    text = gsub(text, "#n131#", AL["Barleybrew Brewery"])
-    text = gsub(text, "#n132#", AL["Thunderbrew Brewery"])
-    text = gsub(text, "#n133#", AL["Gordok Brewery"])
-    text = gsub(text, "#n134#", AL["Drohn's Distillery"])
-    text = gsub(text, "#n135#", AL["T'chali's Voodoo Brewery"])
-    text = gsub(text, "#n136#", AL["Headless Horseman"])
-    text = gsub(text, "#n137#", BabbleBoss["Illidan Stormrage"])
-    text = gsub(text, "#n138#", BabbleBoss["Vexallus"])
-    text = gsub(text, "#n139#", BabbleBoss["Aeonus"])
-    text = gsub(text, "#n150#", AL["Coren Direbrew"])
-    text = gsub(text, "#n151#", BabbleBoss["Skadi the Ruthless"])
-    text = gsub(text, "#n152#", BabbleBoss["Infinite Corruptor"])
-    text = gsub(text, "#n153#", BabbleBoss["Sartharion"])
-    text = gsub(text, "#n154#", BabbleBoss["Malygos"])
-    text = gsub(text, "#n155#", AL["Time-Lost Proto Drake"])
-
-    -- Zone Names
-    text = gsub(text, "#z1#", BabbleZone["The Deadmines"])
-    text = gsub(text, "#z2#", BabbleZone["Wailing Caverns"])
-    text = gsub(text, "#z3#", BabbleZone["Scarlet Monastery"])
-    text = gsub(text, "#z4#", BabbleZone["Blackrock Depths"])
-    text = gsub(text, "#z5#", BabbleZone["Scholomance"])
-    text = gsub(text, "#z6#", BabbleZone["Stratholme"])
-    text = gsub(text, "#z7#", AL["Various Locations"])
-    text = gsub(text, "#z8#", BabbleZone["Zul'Gurub"])
-    text = gsub(text, "#z9#", BabbleZone["Upper Blackrock Spire"])
-    text = gsub(text, "#z10#", BabbleZone["Lower Blackrock Spire"])
-    text = gsub(text, "#z11#", BabbleZone["Ahn'Qiraj"])
-    text = gsub(text, "#z12#", BabbleZone["Karazhan"])
-    text = gsub(text, "#z13#", BabbleZone["Dire Maul (East)"])
-    text = gsub(text, "#z14#", BabbleZone["Molten Core"])
-    text = gsub(text, "#z15#", BabbleZone["Onyxia's Lair"])
-    text = gsub(text, "#z16#", BabbleZone["Sethekk Halls"])
-    text = gsub(text, "#z17#", AL["World Drop"])
-    text = gsub(text, "#z18#", BabbleZone["Black Temple"])
-    text = gsub(text, "#z19#", BabbleZone["The Eye"])
-    text = gsub(text, "#z20#", BabbleZone["Un'Goro Crater"])
-    text = gsub(text, "#z21#", BabbleZone["Winterspring"])
-    text = gsub(text, "#z22#", BabbleZone["Azshara"])
-    text = gsub(text, "#z23#", BabbleZone["Silithus"])
-    text = gsub(text, "#z24#", BabbleZone["Azeroth"])
-    text = gsub(text, "#z25#", BabbleZone["Outland"])
-    text = gsub(text, "#z26#", BabbleZone["Shadowfang Keep"])
-    text = gsub(text, "#z27#", BabbleZone["Razorfen Downs"])
-    text = gsub(text, "#z28#", BabbleZone["Graveyard"])
-    text = gsub(text, "#z29#", BabbleZone["Zul'Aman"])
-    text = gsub(text, "#z30#", BabbleZone["Magisters' Terrace"])
-    text = gsub(text, "#z31#", BabbleZone["Shattrath City"])
-    text = gsub(text, "#z32#", AL["Sunwell Isle"])
-    text = gsub(text, "#z33#", BabbleZone["The Black Morass"])
-    text = gsub(text, "#z34#", BabbleZone["Hyjal Summit"])
-    text = gsub(text, "#z35#", BabbleZone["Utgarde Pinnacle"])
-    text = gsub(text, "#z36#", BabbleZone["Old Stratholme"])
-    text = gsub(text, "#z37#", BabbleZone["The Storm Peaks"])
-    text = gsub(text, "#z38#", BabbleZone["The Obsidian Sanctum"])
-    text = gsub(text, "#z39#", BabbleZone["The Eye of Eternity"])
-    text = gsub(text, "#z40#", BabbleZone["Northrend"])
-
-    -- Factions
-    text = gsub(text, "#f1#", BabbleFaction["Lower City"])
-    text = gsub(text, "#f2#", BabbleFaction["The Sha'tar"])
-    text = gsub(text, "#f3#", BabbleFaction["Thrallmar"])
-    text = gsub(text, "#f4#", BabbleFaction["Honor Hold"])
-    text = gsub(text, "#f5#", BabbleFaction["Keepers of Time"])
-    text = gsub(text, "#f6#", BabbleFaction["Cenarion Expedition"])
-    text = gsub(text, "#f7#", BabbleFaction["The Sons of Hodir"])
-    text = gsub(text, "#f8#", BabbleFaction["The Wyrmrest Accord"])
-    text = gsub(text, "#f9#", AL["Argent Tournament"])
-
-    -- Tier Tokens
-    text = gsub(text, "#setToken#", AL["Set Token (Click)"]) --Accessory tokens
-
-    -- Tier 7 Sets
-    text = gsub(text, "#t7s1_1#", AL["Dreamwalker Garb"])
-    text = gsub(text, "#t7s1_2#", AL["Dreamwalker Battlegear"])
-    text = gsub(text, "#t7s1_3#", AL["Dreamwalker Regalia"])
-    text = gsub(text, "#t7s2#", AL["Cryptstalker Battlegear"])
-    text = gsub(text, "#t7s3#", AL["Frostfire Garb"])
-    text = gsub(text, "#t7s4_1#", AL["Redemption Regalia"])
-    text = gsub(text, "#t7s4_2#", AL["Redemption Battlegear"])
-    text = gsub(text, "#t7s4_3#", AL["Redemption Plate"])
-    text = gsub(text, "#t7s5_1#", AL["Regalia of Faith"])
-    text = gsub(text, "#t7s5_2#", AL["Garb of Faith"])
-    text = gsub(text, "#t7s6#", AL["Bonescythe Battlegear"])
-    text = gsub(text, "#t7s7_1#", AL["Earthshatter Garb"])
-    text = gsub(text, "#t7s7_2#", AL["Earthshatter Battlegear"])
-    text = gsub(text, "#t7s7_3#", AL["Earthshatter Regalia"])
-    text = gsub(text, "#t7s8#", AL["Plagueheart Garb"])
-    text = gsub(text, "#t7s9_1#", AL["Dreadnaught Battlegear"])
-    text = gsub(text, "#t7s9_2#", AL["Dreadnaught Plate"])
-    text = gsub(text, "#t7s10_1#", AL["Scourgeborne Battlegear"])
-    text = gsub(text, "#t7s10_2#", AL["Scourgeborne Plate"])
-
-    -- Tier 8 Sets
-    text = gsub(text, "#t8s1_1#", AL["Nightsong Garb"])
-    text = gsub(text, "#t8s1_2#", AL["Nightsong Battlegear"])
-    text = gsub(text, "#t8s1_3#", AL["Nightsong Regalia"])
-    text = gsub(text, "#t8s2#", AL["Scourgestalker Battlegear"])
-    text = gsub(text, "#t8s3#", AL["Kirin Tor Garb"])
-    text = gsub(text, "#t8s4_1#", AL["Aegis Regalia"])
-    text = gsub(text, "#t8s4_2#", AL["Aegis Battlegear"])
-    text = gsub(text, "#t8s4_3#", AL["Aegis Plate"])
-    text = gsub(text, "#t8s5_1#", AL["Sanctification Regalia"])
-    text = gsub(text, "#t8s5_2#", AL["Sanctification Garb"])
-    text = gsub(text, "#t8s6#", AL["Terrorblade Battlegear"])
-    text = gsub(text, "#t8s7_1#", AL["Worldbreaker Garb"])
-    text = gsub(text, "#t8s7_2#", AL["Worldbreaker Battlegear"])
-    text = gsub(text, "#t8s7_3#", AL["Worldbreaker Regalia"])
-    text = gsub(text, "#t8s8#", AL["Deathbringer Garb"])
-    text = gsub(text, "#t8s9_1#", AL["Siegebreaker Battlegear"])
-    text = gsub(text, "#t8s9_2#", AL["Siegebreaker Plate"])
-    text = gsub(text, "#t8s10_1#", AL["Darkruned Battlegear"])
-    text = gsub(text, "#t8s10_2#", AL["Darkruned Plate"])
-
-    -- Tier 9 Sets
-    text = gsub(text, "#t9s1_1a#", AL["Malfurion's Garb"])
-    text = gsub(text, "#t9s1_1h#", AL["Runetotem's Garb"])
-    text = gsub(text, "#t9s1_2a#", AL["Malfurion's Battlegear"])
-    text = gsub(text, "#t9s1_2h#", AL["Runetotem's Battlegear"])
-    text = gsub(text, "#t9s1_3a#", AL["Malfurion's Regalia"])
-    text = gsub(text, "#t9s1_3h#", AL["Runetotem's Regalia"])
-    text = gsub(text, "#t9s2_a#", AL["Windrunner's Battlegear"])
-    text = gsub(text, "#t9s2_h#", AL["Windrunner's Pursuit"])
-    text = gsub(text, "#t9s3_a#", AL["Khadgar's Regalia"])
-    text = gsub(text, "#t9s3_h#", AL["Sunstrider's Regalia"])
-    text = gsub(text, "#t9s4_1a#", AL["Turalyon's Garb"])
-    text = gsub(text, "#t9s4_1h#", AL["Liadrin's Garb"])
-    text = gsub(text, "#t9s4_2a#", AL["Turalyon's Battlegear"])
-    text = gsub(text, "#t9s4_2h#", AL["Liadrin's Battlegear"])
-    text = gsub(text, "#t9s4_3a#", AL["Turalyon's Plate"])
-    text = gsub(text, "#t9s4_3h#", AL["Liadrin's Plate"])
-    text = gsub(text, "#t9s5_1a#", AL["Velen's Regalia"])
-    text = gsub(text, "#t9s5_1h#", AL["Zabra's Regalia"])
-    text = gsub(text, "#t9s5_2a#", AL["Velen's Raiment"])
-    text = gsub(text, "#t9s5_2h#", AL["Zabra's Raiment"])
-    text = gsub(text, "#t9s6_a#", AL["VanCleef's Battlegear"])
-    text = gsub(text, "#t9s6_h#", AL["Garona's Battlegear"])
-    text = gsub(text, "#t9s7_1a#", AL["Nobundo's Garb"])
-    text = gsub(text, "#t9s7_1h#", AL["Thrall's Garb"])
-    text = gsub(text, "#t9s7_2a#", AL["Nobundo's Battlegear"])
-    text = gsub(text, "#t9s7_2h#", AL["Thrall's Battlegear"])
-    text = gsub(text, "#t9s7_3a#", AL["Nobundo's Regalia"])
-    text = gsub(text, "#t9s7_3h#", AL["Thrall's Regalia"])
-    text = gsub(text, "#t9s8_a#", AL["Kel'Thuzad's Regalia"])
-    text = gsub(text, "#t9s8_h#", AL["Gul'dan's Regalia"])
-    text = gsub(text, "#t9s9_1a#", AL["Wrynn's Battlegear"])
-    text = gsub(text, "#t9s9_1h#", AL["Hellscream's Battlegear"])
-    text = gsub(text, "#t9s9_2a#", AL["Wrynn's Plate"])
-    text = gsub(text, "#t9s9_2h#", AL["Hellscream's Plate"])
-    text = gsub(text, "#t9s10_1a#", AL["Thassarian's Plate"])
-    text = gsub(text, "#t9s10_1h#", AL["Koltira's Plate"])
-    text = gsub(text, "#t9s10_2a#", AL["Thassarian's Battlegear"])
-    text = gsub(text, "#t9s10_2h#", AL["Koltira's Battlegear"])
-
-    -- Tier 10 Sets
-    text = gsub(text, "#t10s1_1#", AL["Lasherweave's Garb"])
-    text = gsub(text, "#t10s1_2#", AL["Lasherweave's Battlegear"])
-    text = gsub(text, "#t10s1_3#", AL["Lasherweave's Regalia"])
-    text = gsub(text, "#t10s2#", AL["Ahn'Kahar Blood Hunter's Battlegear"])
-    text = gsub(text, "#t10s3#", AL["Bloodmage's Regalia"])
-    text = gsub(text, "#t10s4_1#", AL["Lightsworn Garb"])
-    text = gsub(text, "#t10s4_2#", AL["Lightsworn Battlegear"])
-    text = gsub(text, "#t10s4_3#", AL["Lightsworn Plate"])
-    text = gsub(text, "#t10s5_1#", AL["Crimson Acolyte's Regalia"])
-    text = gsub(text, "#t10s5_2#", AL["Crimson Acolyte's Raiment"])
-    text = gsub(text, "#t10s6#", AL["Shadowblade's Battlegear"])
-    text = gsub(text, "#t10s7_1#", AL["Frost Witch's Garb"])
-    text = gsub(text, "#t10s7_2#", AL["Frost Witch's Battlegear"])
-    text = gsub(text, "#t10s7_3#", AL["Frost Witch's Regalia"])
-    text = gsub(text, "#t10s8#", AL["Dark Coven's Garb"])
-    text = gsub(text, "#t10s9_1#", AL["Ymirjar Lord's Battlegear"])
-    text = gsub(text, "#t10s9_2#", AL["Ymirjar Lord's Plate"])
-    text = gsub(text, "#t10s10_1#", AL["Scourgelord's Battlegear"])
-    text = gsub(text, "#t10s10_2#", AL["Scourgelord's Plate"])
-
-    -- Outland Faction Reputation PvP Sets
-    text = gsub(text, "#pvprep701_1#", AL["Dragonhide Battlegear"])
-    text = gsub(text, "#pvprep701_2#", AL["Wyrmhide Battlegear"])
-    text = gsub(text, "#pvprep701_3#", AL["Kodohide Battlegear"])
-    text = gsub(text, "#pvprep702#", AL["Stalker's Chain Battlegear"])
-    text = gsub(text, "#pvprep703#", AL["Evoker's Silk Battlegear"])
-    text = gsub(text, "#pvprep704_1#", AL["Crusader's Scaled Battledgear"])
-    text = gsub(text, "#pvprep704_2#", AL["Crusader's Ornamented Battledgear"])
-    text = gsub(text, "#pvprep705_1#", AL["Satin Battlegear"])
-    text = gsub(text, "#pvprep705_2#", AL["Mooncloth Battlegear"])
-    text = gsub(text, "#pvprep706#", AL["Opportunist's Battlegear"])
-    text = gsub(text, "#pvprep707_1#", AL["Seer's Linked Battlegear"])
-    text = gsub(text, "#pvprep707_2#", AL["Seer's Mail Battlegear"])
-    text = gsub(text, "#pvprep707_3#", AL["Seer's Ringmail Battlegear"])
-    text = gsub(text, "#pvprep708#", AL["Dreadweave Battlegear"])
-    text = gsub(text, "#pvprep709#", AL["Savage's Plate Battlegear"])
-
-    -- Arena Epic Sets
-    text = gsub(text, "#reqrating#", AL["Rating:"])
-    text = gsub(text, "#arenas1_1#", AL["Gladiator's Sanctuary"])
-    text = gsub(text, "#arenas1_2#", AL["Gladiator's Wildhide"])
-    text = gsub(text, "#arenas1_3#", AL["Gladiator's Refuge"])
-    text = gsub(text, "#arenas2#", AL["Gladiator's Pursuit"])
-    text = gsub(text, "#arenas3#", AL["Gladiator's Regalia"])
-    text = gsub(text, "#arenas4_1#", AL["Gladiator's Aegis"])
-    text = gsub(text, "#arenas4_2#", AL["Gladiator's Vindication"])
-    text = gsub(text, "#arenas4_3#", AL["Gladiator's Redemption"])
-    text = gsub(text, "#arenas5_1#", AL["Gladiator's Raiment"])
-    text = gsub(text, "#arenas5_2#", AL["Gladiator's Investiture"])
-    text = gsub(text, "#arenas6#", AL["Gladiator's Vestments"])
-    text = gsub(text, "#arenas7_1#", AL["Gladiator's Earthshaker"])
-    text = gsub(text, "#arenas7_2#", AL["Gladiator's Thunderfist"])
-    text = gsub(text, "#arenas7_3#", AL["Gladiator's Wartide"])
-    text = gsub(text, "#arenas8_1#", AL["Gladiator's Dreadgear"])
-    text = gsub(text, "#arenas8_2#", AL["Gladiator's Felshroud"])
-    text = gsub(text, "#arenas9#", AL["Gladiator's Battlegear"])
-    text = gsub(text, "#arenas10#", AL["Gladiator's Desecration"])
-
-    -- PVP Seasons
-
-    text = gsub(text, "#arenas1L#", AL["Arena Season 1"])
-    text = gsub(text, "#arenas2L#", AL["Arena Season 2"])
-    text = gsub(text, "#arenas3L#", AL["Arena Season 3"])
-    text = gsub(text, "#arenas4L#", AL["Arena Season 4"])
+    { "Pet", BabbleInventory["Pet"] },
+    { "Money", AL["Currency"] },
+    { "Consumable", BabbleInventory["Consumable"] },
+    { "Mount", BabbleInventory["Mount"] },
+    { "Quest", BabbleInventory["Quest"] },
+    { "Key", BabbleInventory["Key"] },
+    { "Book", BabbleInventory["Book"] },
+    { "Materials", BabbleInventory["Reagent"] },
+    { "Flask", BabbleInventory["Flask"] },
+    { "Other", AL["Misc"] },
+    { "Junk", AL["Misc"] },
+    { "%(OBSOLETE%),", ""},
+    { "Food & Drink", BabbleInventory["Food & Drink"] },
 
     -- Crafting
-    text = gsub(text, "#sr#", AL["Skill Required:"])
-    text = gsub(text, "#source#", AL["Source"]..": "..WHITE)
-    text = gsub(text, "#zone#", AL["Zone"]..": "..WHITE)
+    { "Jewelcrafting", BabbleInventory["Jewelcrafting"] },
+    { "Enchanting", BabbleInventory["Enchanting"] },
+    { "Tailoring", BabbleInventory["Tailoring"] },
+    { "Blacksmithing", BabbleInventory["Blacksmithing"] },
+    { "Leatherworking", BabbleInventory["Leatherworking"] },
+    { "Alchemy", BabbleInventory["Alchemy"] },
+    { "Engineering", BabbleInventory["Engineering"] },
+    { "Cooking", BabbleInventory["Cooking"] },
+    { "Mining", AL["Mining"] },
+    { "Herbalism", AL["Herbalism"] },
 
-    -- Misc PvP Set Text
-    text = gsub(text, "#pvps1#", AL["Epic Set"])
-    text = gsub(text, "#pvps2#", AL["Superior Rare Set"])
-    text = gsub(text, "#pvps3#", AL["Rare Set"])
-    text = gsub(text, "#pvps4#", AL["Superior Epic Set"])
+    -- Gems
+    { "Red", AL["Red Gem"] },
+    { "Blue", AL["Blue Gem"] },
+    { "Yellow", AL["Yellow Gem"] },
+    { "Purple", AL["Purple Gem"] },
+    { "Orange", AL["Orange Gem"] },
+    { "Green", AL["Green Gem"] },
 
     -- Text Colouring
-    text = gsub(text, "=q0=", "|cff9d9d9d")
-    text = gsub(text, "=q1=", "|cffFFFFFF")
-    text = gsub(text, "=q2=", "|cff1eff00")
-    text = gsub(text, "=q3=", "|cff0070dd")
-    text = gsub(text, "=q4=", "|cffa335ee")
-    text = gsub(text, "=q5=", "|cffFF8000")
-    text = gsub(text, "=q6=", "|cffFF0000")
-    text = gsub(text, "=q7=", "|cffe6cc80")
-    text = gsub(text, "=ec1=", "|cffFF8400")
-    text = gsub(text, "=ds=", "|cffFFd200")
-
-    -- Months
-    text = gsub(text, "#month1#", AL["January"])
-    text = gsub(text, "#month2#", AL["February"])
-    text = gsub(text, "#month3#", AL["March"])
-    text = gsub(text, "#month4#", AL["April"])
-    text = gsub(text, "#month5#", AL["May"])
-    text = gsub(text, "#month6#", AL["June"])
-    text = gsub(text, "#month7#", AL["July"])
-    text = gsub(text, "#month8#", AL["August"])
-    text = gsub(text, "#month9#", AL["September"])
-    text = gsub(text, "#month10#", AL["October"])
-    text = gsub(text, "#month11#", AL["November"])
-    text = gsub(text, "#month12#", AL["December"])
+    { "=q0=", "|cff9d9d9d" },
+    { "=q1=", "|cffFFFFFF" },
+    { "=q2=", "|cff1eff00" },
+    { "=q3=", "|cff0070dd" },
+    { "=q4=", "|cffa335ee" },
+    { "=q5=", "|cffFF8000" },
+    { "=q6=", "|cffFF0000" },
+    { "=q7=", "|cffe6cc80" },
+    { "=ec1=", "|cffFF8400" },
+    { "=ds=", "|cffFFd200" },
 
     -- Currency Icons
-    text = gsub(text, "#gold#", "|TInterface\\AddOns\\AtlasLoot\\Images\\gold:0|t")
-    text = gsub(text, "#silver#", "|TInterface\\AddOns\\AtlasLoot\\Images\\silver:0|t")
-    text = gsub(text, "#copper#", "|TInterface\\AddOns\\AtlasLoot\\Images\\bronze:0|t")
-    text = gsub(text, "#wsg#", "|TInterface\\Icons\\INV_Misc_Rune_07:0|t")
-    text = gsub(text, "#ab#", "|TInterface\\Icons\\INV_Jewelry_Amulet_07:0|t")
-    text = gsub(text, "#av#", "|TInterface\\Icons\\INV_Jewelry_Necklace_21:0|t")
-    text = gsub(text, "#eos#", "|TInterface\\Icons\\Spell_Nature_EyeOfTheStorm:0|t")
-    text = gsub(text, "#arena#", "|TInterface\\PVPFrame\\PVP-ArenaPoints-Icon:14:14:2:-1|t")
-    text = gsub(text, "#markthrallmar#", "|TInterface\\Icons\\INV_Misc_Token_Thrallmar:0|t")
-    text = gsub(text, "#markhhold#", "|TInterface\\Icons\\INV_Misc_Token_HonorHold:0|t")
-    text = gsub(text, "#halaabattle#", "|TInterface\\Icons\\INV_Misc_Rune_08:0|t")
-    text = gsub(text, "#halaaresearch#", "|TInterface\\Icons\\INV_Misc_Rune_09:0|t")
-    text = gsub(text, "#spiritshard#", "|TInterface\\Icons\\INV_Jewelry_FrostwolfTrinket_04:0|t")
-    text = gsub(text, "#wintergrasp#", "|TInterface\\Icons\\INV_Misc_Platnumdisks:0|t")
-    text = gsub(text, "#tokenofprestige#", "|TInterface\\Icons\\Spell_Holy_MindSooth:0|t")
-    text = gsub(text, "#marks#", "|TInterface\\Icons\\Mail_GMIcon:0|t")
-    text = gsub(text, "#bazaar#", "|TInterface\\Icons\\Spell_Shadow_Teleport:0|t")
-    text = gsub(text, "#wintergraspmark#", "|TInterface\\Icons\\INV_Jewelry_Ring_66:0|t")
-    text = gsub(text, "#venturecoin#", "|TInterface\\Icons\\INV_Misc_Coin_16:0|t")
-    text = gsub(text, "#heroic#", "|TInterface\\Icons\\Spell_Holy_ChampionsBond:0|t")
-    text = gsub(text, "#eofvalor#", "|TInterface\\Icons\\Spell_Holy_ProclaimChampion_02:0|t")
-    text = gsub(text, "#eofheroism#", "|TInterface\\Icons\\Spell_Holy_ProclaimChampion:0|t")
-    text = gsub(text, "#eofconquest#", "|TInterface\\Icons\\Spell_Holy_ChampionsGrace:0|t")
-    text = gsub(text, "#eoftriumph#", "|TInterface\\Icons\\spell_holy_summonchampion:0|t")
-    text = gsub(text, "#eoffrost#", "|TInterface\\Icons\\inv_misc_frostemblem_01:0|t")
-    text = gsub(text, "#trophyofthecrusade#", "|TInterface\\Icons\\INV_Misc_Trophy_Argent:0|t")
-    text = gsub(text, "#darkmoon#", "|TInterface\\Icons\\INV_Misc_Ticket_Darkmoon_01:0|t")
-    text = gsub(text, "#noblegarden#", "|TInterface\\Icons\\Achievement_Noblegarden_Chocolate_Egg:0|t")
-    text = gsub(text, "#brewfest#", "|TInterface\\Icons\\INV_Misc_Coin_01:0|t")
-    text = gsub(text, "#ccombat#", "|TInterface\\Icons\\INV_Jewelry_Talisman_06:0|t")
-    text = gsub(text, "#champseal#", "|TInterface\\Icons\\Ability_Paladin_ArtofWar:0|t")
-    text = gsub(text, "#champwrit#", "|TInterface\\Icons\\INV_Scroll_11:0|t")
-    text = gsub(text, "#ctactical#", "|TInterface\\Icons\\INV_Jewelry_Amulet_02:0|t")
-    text = gsub(text, "#clogistics#", "|TInterface\\Icons\\INV_Jewelry_Necklace_16:0|t")
-    text = gsub(text, "#cremulos#", "|TInterface\\Icons\\INV_Jewelry_Necklace_14:0|t")
-    text = gsub(text, "#ccenarius#", "|TInterface\\Icons\\INV_Jewelry_Necklace_12:0|t")
-    text = gsub(text, "#zandalar#", "|TInterface\\Icons\\INV_Misc_Coin_08:0|t")
-    text = gsub(text, "#glowcap#", "|TInterface\\Icons\\INV_Mushroom_02:0|t")
-    text = gsub(text, "#ogrilashard#", "|TInterface\\Icons\\INV_Misc_Apexis_Shard:0|t")
-    text = gsub(text, "#ogrilacrystal#", "|TInterface\\Icons\\INV_Misc_Apexis_Crystal:0|t")
-    text = gsub(text, "#winterfinclam#", "|TInterface\\Icons\\INV_Misc_Shell_03:0|t")
-    text = gsub(text, "#horde#", "|TInterface\\AddOns\\AtlasLoot\\Images\\Horde:14:14:0:-1|t")
-    text = gsub(text, "#alliance#", "|TInterface\\AddOns\\AtlasLoot\\Images\\Alliance:16:16:0:-2|t")
-    text = gsub(text, "#fireflower#", "|TInterface\\Icons\\INV_SummerFest_FireFlower:0|t")
-    text = gsub(text, "#t10mark#", "|TInterface\\Icons\\ability_paladin_shieldofthetemplar:0|t")
-	text = gsub(text, "#valentineday#", "|TInterface\\Icons\\inv_valentinescard01:0|t")
-	text = gsub(text, "#valentineday2#", "|TInterface\\Icons\\inv_jewelry_necklace_43:0|t")
+    { "#gold#", "|TInterface\\AddOns\\AtlasLoot\\Images\\gold:0|t" },
+    { "#silver#", "|TInterface\\AddOns\\AtlasLoot\\Images\\silver:0|t" },
+    { "#copper#", "|TInterface\\AddOns\\AtlasLoot\\Images\\bronze:0|t" },
+    { "#wsg#", "|TInterface\\Icons\\INV_Misc_Rune_07:0|t" },
+    { "#ab#", "|TInterface\\Icons\\INV_Jewelry_Amulet_07:0|t" },
+    { "#av#", "|TInterface\\Icons\\INV_Jewelry_Necklace_21:0|t" },
+    { "#eos#", "|TInterface\\Icons\\Spell_Nature_EyeOfTheStorm:0|t" },
+    { "#arena#", "|TInterface\\PVPFrame\\PVP-ArenaPoints-Icon:14:14:2:-1|t" },
+    { "#markthrallmar#", "|TInterface\\Icons\\INV_Misc_Token_Thrallmar:0|t" },
+    { "#markhhold#", "|TInterface\\Icons\\INV_Misc_Token_HonorHold:0|t" },
+    { "#halaabattle#", "|TInterface\\Icons\\INV_Misc_Rune_08:0|t" },
+    { "#halaaresearch#", "|TInterface\\Icons\\INV_Misc_Rune_09:0|t" },
+    { "#spiritshard#", "|TInterface\\Icons\\INV_Jewelry_FrostwolfTrinket_04:0|t" },
+    { "#wintergrasp#", "|TInterface\\Icons\\INV_Misc_Platnumdisks:0|t" },
+    { "#tokenofprestige#", "|TInterface\\Icons\\Spell_Holy_MindSooth:0|t" },
+    { "#marks#", "|TInterface\\Icons\\Mail_GMIcon:0|t" },
+    { "#bazaar#", "|TInterface\\Icons\\Spell_Shadow_Teleport:0|t" },
+    { "#wintergraspmark#", "|TInterface\\Icons\\INV_Jewelry_Ring_66:0|t" },
+    { "#venturecoin#", "|TInterface\\Icons\\INV_Misc_Coin_16:0|t" },
+    { "#heroic#", "|TInterface\\Icons\\Spell_Holy_ChampionsBond:0|t" },
+    { "#eofvalor#", "|TInterface\\Icons\\Spell_Holy_ProclaimChampion_02:0|t" },
+    { "#eofheroism#", "|TInterface\\Icons\\Spell_Holy_ProclaimChampion:0|t" },
+    { "#eofconquest#", "|TInterface\\Icons\\Spell_Holy_ChampionsGrace:0|t" },
+    { "#eoftriumph#", "|TInterface\\Icons\\spell_holy_summonchampion:0|t" },
+    { "#eoffrost#", "|TInterface\\Icons\\inv_misc_frostemblem_01:0|t" },
+    { "#trophyofthecrusade#", "|TInterface\\Icons\\INV_Misc_Trophy_Argent:0|t" },
+    { "#darkmoon#", "|TInterface\\Icons\\INV_Misc_Ticket_Darkmoon_01:0|t" },
+    { "#noblegarden#", "|TInterface\\Icons\\Achievement_Noblegarden_Chocolate_Egg:0|t" },
+    { "#brewfest#", "|TInterface\\Icons\\INV_Misc_Coin_01:0|t" },
+    { "#ccombat#", "|TInterface\\Icons\\INV_Jewelry_Talisman_06:0|t" },
+    { "#champseal#", "|TInterface\\Icons\\Ability_Paladin_ArtofWar:0|t" },
+    { "#champwrit#", "|TInterface\\Icons\\INV_Scroll_11:0|t" },
+    { "#ctactical#", "|TInterface\\Icons\\INV_Jewelry_Amulet_02:0|t" },
+    { "#clogistics#", "|TInterface\\Icons\\INV_Jewelry_Necklace_16:0|t" },
+    { "#cremulos#", "|TInterface\\Icons\\INV_Jewelry_Necklace_14:0|t" },
+    { "#ccenarius#", "|TInterface\\Icons\\INV_Jewelry_Necklace_12:0|t" },
+    { "#zandalar#", "|TInterface\\Icons\\INV_Misc_Coin_08:0|t" },
+    { "#glowcap#", "|TInterface\\Icons\\INV_Mushroom_02:0|t" },
+    { "#ogrilashard#", "|TInterface\\Icons\\INV_Misc_Apexis_Shard:0|t" },
+    { "#ogrilacrystal#", "|TInterface\\Icons\\INV_Misc_Apexis_Crystal:0|t" },
+    { "#winterfinclam#", "|TInterface\\Icons\\INV_Misc_Shell_03:0|t" },
+    { "#horde#", "|TInterface\\AddOns\\AtlasLoot\\Images\\Horde:14:14:0:-1|t" },
+    { "#alliance#", "|TInterface\\AddOns\\AtlasLoot\\Images\\Alliance:16:16:0:-2|t" },
+    { "#fireflower#", "|TInterface\\Icons\\INV_SummerFest_FireFlower:0|t" },
+    { "#t10mark#", "|TInterface\\Icons\\ability_paladin_shieldofthetemplar:0|t" },
+	{ "#valentineday#", "|TInterface\\Icons\\inv_valentinescard01:0|t" },
+	{ "#valentineday2#", "|TInterface\\Icons\\inv_jewelry_necklace_43:0|t" },
 
-    text = gsub(text, "Herb", "Herbalism")
-    text = gsub(text, "Item Enhancement", "Enchant")
-    text = gsub(text, "Weapon Enchantment", "Enchanting")
-    text = gsub(text, "Armor Enchantment", "Enchanting")
-    text = gsub(text, "Engineering", "Parts")
-    text = gsub(text, "Simple", "Gems")
-    
+    { "Herb", "Herbalism" },
+    { "Item Enhancement", "Enchant" },
+    { "Weapon Enchantment", "Enchanting" },
+    { "Armor Enchantment", "Enchanting" },
+    { "Engineering", "Parts" },
+    { "Simple", "Gems" },
+}
+
+function AtlasLoot:FixText(text)
+    for _, subTable in pairs (txtSubstitution) do
+        text = gsub(text, subTable[1], subTable[2])
+    end
+
     local englishFaction, _ = UnitFactionGroup("player")
     if englishFaction == "Horde" then
         text = gsub(text, "#faction#", "|TInterface\\AddOns\\AtlasLoot\\Images\\Horde:14:14:0:-1|t")

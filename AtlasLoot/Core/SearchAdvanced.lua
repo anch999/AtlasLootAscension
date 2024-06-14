@@ -12,34 +12,6 @@ local FrameMenuList = {
 }
 
 local AdvancedSearchMenus = {
-    ["Difficulty"] = {
-        [1] = {{"Normal", "difficulty", AtlasLoot.Difficultys.Normal}},
-        [2] = {{"Heroic", "difficulty", AtlasLoot.Difficultys.Heroic}},
-        [3] = {{"Mythic/Ascended", "difficulty", AtlasLoot.Difficultys.Mythic}},
-        [4] = {
-            ["Mythic+ 1-10"] = {{"Mythic 1", "difficulty", AtlasLoot.Difficultys.MythicPlus[1]}, {"Mythic 2", "difficulty", AtlasLoot.Difficultys.MythicPlus[2]},
-                                {"Mythic 3", "difficulty", AtlasLoot.Difficultys.MythicPlus[3]}, {"Mythic 4", "difficulty", AtlasLoot.Difficultys.MythicPlus[4]},
-                                {"Mythic 5", "difficulty", AtlasLoot.Difficultys.MythicPlus[5]}, {"Mythic 6", "difficulty", AtlasLoot.Difficultys.MythicPlus[6]},
-                                {"Mythic 7", "difficulty", AtlasLoot.Difficultys.MythicPlus[7]}, {"Mythic 8", "difficulty", AtlasLoot.Difficultys.MythicPlus[8]},
-                                {"Mythic 9", "difficulty", AtlasLoot.Difficultys.MythicPlus[9]}, {"Mythic 10", "difficulty", AtlasLoot.Difficultys.MythicPlus[10]}}
-        },
-        [5] = {
-            ["Mythic+ 11-20"] = {{"Mythic 11", "difficulty", AtlasLoot.Difficultys.MythicPlus[11]}, {"Mythic 12", "difficulty", AtlasLoot.Difficultys.MythicPlus[12]},
-                                 {"Mythic 13", "difficulty", AtlasLoot.Difficultys.MythicPlus[13]}, {"Mythic 14", "difficulty", AtlasLoot.Difficultys.MythicPlus[14]},
-                                 {"Mythic 15", "difficulty", AtlasLoot.Difficultys.MythicPlus[15]}, {"Mythic 16", "difficulty", AtlasLoot.Difficultys.MythicPlus[16]},
-                                 {"Mythic 17", "difficulty", AtlasLoot.Difficultys.MythicPlus[17]}, {"Mythic 18", "difficulty", AtlasLoot.Difficultys.MythicPlus[18]},
-                                 {"Mythic 19", "difficulty", AtlasLoot.Difficultys.MythicPlus[19]}, {"Mythic 20", "difficulty", AtlasLoot.Difficultys.MythicPlus[20]}}
-        },
-        [6] = {
-            ["Mythic+ 21-30"] = {{"Mythic 21", "difficulty", AtlasLoot.Difficultys.MythicPlus[21]}, {"Mythic 22", "difficulty", AtlasLoot.Difficultys.MythicPlus[22]},
-                                 {"Mythic 23", "difficulty", AtlasLoot.Difficultys.MythicPlus[23]}, {"Mythic 24", "difficulty", AtlasLoot.Difficultys.MythicPlus[24]},
-                                 {"Mythic 25", "difficulty", AtlasLoot.Difficultys.MythicPlus[25]}, {"Mythic 26", "difficulty", AtlasLoot.Difficultys.MythicPlus[26]},
-                                 {"Mythic 27", "difficulty", AtlasLoot.Difficultys.MythicPlus[27]}, {"Mythic 28", "difficulty", AtlasLoot.Difficultys.MythicPlus[28]},
-                                 {"Mythic 29", "difficulty", AtlasLoot.Difficultys.MythicPlus[29]}, {"Mythic 30", "difficulty", AtlasLoot.Difficultys.MythicPlus[30]}}
-        },
-        [7] = {{"Bloodforged", "difficulty", AtlasLoot.Difficultys.Bloodforged}},
-        [8] = {{RED .. "Reset", "difficulty", "reset"}}
-    },
 
     ["Quality"] = {
         -- [1] = {

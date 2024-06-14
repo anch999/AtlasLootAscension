@@ -78,26 +78,26 @@ local WHITE = "|cffFFFFFF"
 -- The scale of the sand rep rings
 local scaleOfSandsRings = {
 	Name = "Rings";
-	[1] = { itemID = 29298, rep = BabbleFaction["Friendly"], [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Band of the Eternal Champion
-	[2] = { itemID = 29299, rep = BabbleFaction["Honored"], [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Superior Band of the Eternal Champion
-	[3] = { itemID = 29300, rep = BabbleFaction["Revered"], [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Exquisite Band of the Eternal Champion
-	[4] = { itemID = 29301, rep = BabbleFaction["Exalted"], [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Flawless Band of the Eternal Champion
-	[6] = { itemID = 29294, rep = BabbleFaction["Friendly"], [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Band of the Eternal Defender
-	[7] = { itemID = 29295, rep = BabbleFaction["Honored"], [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Superior Band of the Eternal Defender
-	[8] = { itemID = 29296, rep = BabbleFaction["Revered"], [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Exquisite Band of the Eternal Defender
-	[9] = { itemID = 29297, rep = BabbleFaction["Exalted"], [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Flawless Band of the Eternal Defender
-	[11] = { itemID = 15037, rep = BabbleFaction["Friendly"], [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Band of the Eternal Assassin
-	[12] = { itemID = 15038, rep = BabbleFaction["Honored"], [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Superior Band of the Eternal Assassin
-	[13] = { itemID = 15039, rep = BabbleFaction["Revered"], [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Exquisite Band of the Eternal Assassin
-	[14] = { itemID = 15040, rep = BabbleFaction["Exalted"], [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Flawless Band of the Eternal Assassin
-	[16] = { itemID = 29302, rep = BabbleFaction["Friendly"], [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Band of the Eternal Sage
-	[17] = { itemID = 29303, rep = BabbleFaction["Honored"], [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Superior Band of the Eternal Sage
-	[18] = { itemID = 29304, rep = BabbleFaction["Revered"], [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Exquisite Band of the Eternal Sage
-	[19] = { itemID = 29305, rep = BabbleFaction["Exalted"], [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Flawless Band of the Eternal Sage
-	[21] = { itemID = 29307, rep = BabbleFaction["Friendly"], [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Band of the Eternal Restorer
-	[22] = { itemID = 29306, rep = BabbleFaction["Honored"], [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Superior Band of the Eternal Restorer
-	[23] = { itemID = 29308, rep = BabbleFaction["Revered"], [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Exquisite Band of the Eternal Restorer
-	[24] = { itemID = 29309, rep = BabbleFaction["Exalted"], [AtlasLoot.Difficultys.MAX_DIF] = AtlasLoot.Difficultys.Normal }; --Flawless Band of the Eternal Restorer
+	[1] = { itemID = 29298, rep = BabbleFaction["Friendly"], [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal }; --Band of the Eternal Champion
+	[2] = { itemID = 29299, rep = BabbleFaction["Honored"], [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal }; --Superior Band of the Eternal Champion
+	[3] = { itemID = 29300, rep = BabbleFaction["Revered"], [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal }; --Exquisite Band of the Eternal Champion
+	[4] = { itemID = 29301, rep = BabbleFaction["Exalted"], [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal }; --Flawless Band of the Eternal Champion
+	[6] = { itemID = 29294, rep = BabbleFaction["Friendly"], [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal }; --Band of the Eternal Defender
+	[7] = { itemID = 29295, rep = BabbleFaction["Honored"], [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal }; --Superior Band of the Eternal Defender
+	[8] = { itemID = 29296, rep = BabbleFaction["Revered"], [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal }; --Exquisite Band of the Eternal Defender
+	[9] = { itemID = 29297, rep = BabbleFaction["Exalted"], [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal }; --Flawless Band of the Eternal Defender
+	[11] = { itemID = 15037, rep = BabbleFaction["Friendly"], [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal }; --Band of the Eternal Assassin
+	[12] = { itemID = 15038, rep = BabbleFaction["Honored"], [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal }; --Superior Band of the Eternal Assassin
+	[13] = { itemID = 15039, rep = BabbleFaction["Revered"], [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal }; --Exquisite Band of the Eternal Assassin
+	[14] = { itemID = 15040, rep = BabbleFaction["Exalted"], [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal }; --Flawless Band of the Eternal Assassin
+	[16] = { itemID = 29302, rep = BabbleFaction["Friendly"], [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal }; --Band of the Eternal Sage
+	[17] = { itemID = 29303, rep = BabbleFaction["Honored"], [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal }; --Superior Band of the Eternal Sage
+	[18] = { itemID = 29304, rep = BabbleFaction["Revered"], [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal }; --Exquisite Band of the Eternal Sage
+	[19] = { itemID = 29305, rep = BabbleFaction["Exalted"], [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal }; --Flawless Band of the Eternal Sage
+	[21] = { itemID = 29307, rep = BabbleFaction["Friendly"], [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal }; --Band of the Eternal Restorer
+	[22] = { itemID = 29306, rep = BabbleFaction["Honored"], [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal }; --Superior Band of the Eternal Restorer
+	[23] = { itemID = 29308, rep = BabbleFaction["Revered"], [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal }; --Exquisite Band of the Eternal Restorer
+	[24] = { itemID = 29309, rep = BabbleFaction["Exalted"], [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal }; --Flawless Band of the Eternal Restorer
 };
 
 ------------------------
@@ -113,20 +113,20 @@ AtlasLoot_Data["BCKeys"] = {
 	Name = "BCKeys";
 	{
 		Name = "BCKeys";
-		[1] = { icon = "INV_Box_01", name = "=q6=#j1#" };
+		[1] = { icon = "INV_Box_01", name = WHITE..AL["Normal Mode"] };
 		[2] = { itemID = 27991 }; --Shadow Labyrinth Key
 		[3] = { itemID = 28395 }; --Shattered Halls Key
 		[4] = { itemID = 31084 }; --Key to the Arcatraz
-		[6] = { icon = "INV_Box_01", name = "#j27#" };
+		[6] = { icon = "INV_Box_01", name = WHITE..AL["Additional Heroic Loot"] };
 		[7] = { itemID = 30622 }; --Flamewrought Key
 		[8] = { itemID = 30637 }; --Flamewrought Key
 		[9] = { itemID = 30623 }; --Reservoir Key
 		[10] = { itemID = 30633 }; --Auchenai Key
 		[11] = { itemID = 30635 }; --Key of Time
 		[12] = { itemID = 30634 }; --Warpforged Key
-		[16] = { icon = "INV_Box_01", name = "=q6=#j2#" };
+		[16] = { icon = "INV_Box_01", name = WHITE..AL["Raid"] };
 		[17] = { itemID = 24490 }; --The Master's Key
-		[19] = { icon = "INV_Box_01", name = "=q6="..AL["Misc"] };
+		[19] = { icon = "INV_Box_01", name = WHITE..AL["Misc"] };
 		[20] = { itemID = 32092 }; --The Eye of Haramad
 		[21] = { itemID = 32449 }; --Essence-Infused Moonstone
 	};
@@ -144,13 +144,13 @@ AtlasLoot_Data["AuchCrypts"] = {
 	Map = "AuchAuchenaiCrypts";
 	{
 		Name = BabbleBoss["Shirrak the Dead Watcher"];
-		[1] = { icon = "INV_Box_01", name = "=q6=#j1#" };
+		[1] = { icon = "INV_Box_01", name = WHITE..AL["Normal Mode"] };
 		[2] = { itemID = 27410, droprate = "3.100" }; --Collar of Command
 		[3] = { itemID = 27409, droprate = "1.18%" }; --Raven-Heart Headdress
 		[4] = { itemID = 27408, droprate = "5.16%" }; --Hope Bearer Helm
 		[5] = { itemID = 26055, droprate = "5.16%" }; --Oculus of the Hidden Eye
 		[6] = { itemID = 25964, droprate = "1.59%" }; --Shaarde the Lesser
-		[16] = { icon = "INV_Box_01", name = "#j27#" };
+		[16] = { icon = "INV_Box_01", name = WHITE..AL["Additional Heroic Loot"] };
 		[17] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 		[18] = { itemID = 30587, droprate = "1.67%" }; --Champion's Fire Opal
 		[19] = { itemID = 30588, droprate = ".67%" }; --Potent Fire Opal
@@ -164,7 +164,7 @@ AtlasLoot_Data["AuchCrypts"] = {
 	};
 	{
 		Name = BabbleBoss["Exarch Maladaar"];
-		[1] = { icon = "INV_Box_01", name = "#j27#" };
+		[1] = { icon = "INV_Box_01", name = WHITE..AL["Additional Heroic Loot"] };
 		[2] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 		[3] = { itemID = 29354, droprate = ".67%" }; --Light-Touched Stole of Altruism
 		[4] = { itemID = 29257, droprate = ".67%" }; --Sash of Arcane Visions
@@ -179,7 +179,7 @@ AtlasLoot_Data["AuchCrypts"] = {
 		[17] = { itemID = 30588, droprate = ".67%" }; --Potent Fire Opal
 		[18] = { itemID = 30586, droprate = "1.67%" }; --Seer's Chrysoprase
 		[20] = { itemID = 427870, droprate = ".33%" }; --Doomplate Legguards
-		[22] = { icon = "INV_Box_01", name = "=q6=#j1#" };
+		[22] = { icon = "INV_Box_01", name = WHITE..AL["Normal Mode"] };
 		[23] = { itemID = 27411, droprate = ".14%" }; --Slippers of Serenity
 		[24] = { itemID = 27415, droprate = "1.44%" }; --Darkguard Face Mask
 		[25] = { itemID = 27414, droprate = "1.27%" }; --Mok'Nathal Beast-Mask
@@ -210,14 +210,14 @@ AtlasLoot_Data["AuchManaTombs"] = {
 	Map = "AuchManaTombs";
 	{
 		Name = BabbleBoss["Pandemonius"];
-		[1] = { icon = "INV_Box_01", name = "=q6=#j1#" };
+		[1] = { icon = "INV_Box_01", name = WHITE..AL["Normal Mode"] };
 		[2] = { itemID = 25941, droprate = "0.55%" }; --Boots of the Outlander
 		[3] = { itemID = 25942, droprate = "1.41%" }; --Faith Bearer's Gauntlets
 		[4] = { itemID = 25940, droprate = "2.18%" }; --Idol of the Claw
 		[5] = { itemID = 25943, droprate = "4.22%" }; --Creepjacker
 		[6] = { itemID = 28166, droprate = "0.81%" }; --Shield of the Void
 		[7] = { itemID = 25939, droprate = "3.04%" }; --Voidfire Wand
-		[16] = { icon = "INV_Box_01", name = "#j27#" };
+		[16] = { icon = "INV_Box_01", name = WHITE..AL["Additional Heroic Loot"] };
 		[17] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 		[18] = { itemID = 30584, droprate = ".08%" }; --Enscribed Fire Opal
 		[19] = { itemID = 30585, droprate = ".06%" }; --Glistening Fire Opal
@@ -231,14 +231,14 @@ AtlasLoot_Data["AuchManaTombs"] = {
 	};
 	{
 		Name = BabbleBoss["Tavarok"];
-		[1] = { icon = "INV_Box_01", name = "=q6=#j1#" };
+		[1] = { icon = "INV_Box_01", name = WHITE..AL["Normal Mode"] };
 		[2] = { itemID = 25945, droprate = ".08%" }; --Cloak of Revival
 		[3] = { itemID = 25946, droprate = "1.62%" }; --Nethershade Boots
 		[4] = { itemID = 25947, droprate = "1.25%" }; --Lightning-Rod Pauldrons
 		[5] = { itemID = 25952, droprate = "2.12%" }; --Scimitar of the Nexus-Stalkers
 		[6] = { itemID = 25944, droprate = ".35%" }; --Shaarde the Greater
 		[7] = { itemID = 25950, droprate = ".91%" }; --Staff of Polarities
-		[16] = { icon = "INV_Box_01", name = "#j27#" };
+		[16] = { icon = "INV_Box_01", name = WHITE..AL["Additional Heroic Loot"] };
 		[17] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 		[18] = { itemID = 30584, droprate = ".08%" }; --Enscribed Fire Opal
 		[19] = { itemID = 30585, droprate = ".06%" }; --Glistening Fire Opal
@@ -326,7 +326,7 @@ AtlasLoot_Data["AuchSethekk"] = {
 		[6] = { itemID = 27916, droprate = "1.34%" }; --Sethekk Feather-Darts
 		[8] = { itemID = 24160, droprate = ".29%" }; --Design: Khorium Inferno Band
 		[10] = { itemID = 27633, droprate = "100%" }; --Terokk's Mask
-		[16] = { icon = "INV_Box_01", name = "#j27#" };
+		[16] = { icon = "INV_Box_01", name = WHITE..AL["Additional Heroic Loot"] };
 		[17] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 		[18] = { itemID = 30553, droprate = "5.73%" }; --Pristine Fire Opal
 		[19] = { itemID = 30554, droprate = "0.11%" }; --Stalwart Fire Opal
@@ -361,7 +361,7 @@ AtlasLoot_Data["AuchSethekk"] = {
 		[12] = { itemID = 27986, droprate = ".50%" }; --Crow Wing Reaper
 		[14] = { itemID = 27632, droprate = "100%" }; --Terokk's Quill
 		[15] = { itemID = 27991, droprate = "100%" }; --Shadow Labyrinth Key
-		[16] = { icon = "INV_Box_01", name = "#j27#" };
+		[16] = { icon = "INV_Box_01", name = WHITE..AL["Additional Heroic Loot"] };
 		[17] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 		[18] = { itemID = 30553, droprate = "5.73%" }; --Pristine Fire Opal
 		[19] = { itemID = 30554, droprate = "0.11%" }; --Stalwart Fire Opal
@@ -392,7 +392,7 @@ AtlasLoot_Data["AuchShadowLab"] = {
 		[4] = { itemID = 27886, droprate = "2.94%" }; --Idol of the Emerald Queen
 		[5] = { itemID = 27887, droprate = "0.88%" }; --Platinum Shield of the Valorous
 		[6] = { itemID = 27885, droprate = "3.34%" }; --Soul-Wand of the Aldor
-		[16] = { icon = "INV_Box_01", name = "#j27#" };
+		[16] = { icon = "INV_Box_01", name = WHITE..AL["Additional Heroic Loot"] };
 		[17] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 		[18] = { itemID = 30563, droprate = "6.67%" }; --Regal Tanzanite
 		[19] = { itemID = 30559, droprate = "7.85%" }; --Etched Fire Opal
@@ -408,7 +408,7 @@ AtlasLoot_Data["AuchShadowLab"] = {
 		[7] = { itemID = 27890, droprate = "0.77%" }; --Wand of the Netherwing
 		[9] = { itemID = 25728, droprate = ".94%" }; --Pattern: Stylin' Purple Hat
 		[11] = { itemID = 30808, droprate = "100%" }; --Book of Fel Names
-		[16] = { icon = "INV_Box_01", name = "#j27#" };
+		[16] = { icon = "INV_Box_01", name = WHITE..AL["Additional Heroic Loot"] };
 		[17] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 		[18] = { itemID = 30563, droprate = "6.67%" }; --Regal Tanzanite
 		[19] = { itemID = 30559, droprate = "7.85%" }; --Etched Fire Opal
@@ -422,7 +422,7 @@ AtlasLoot_Data["AuchShadowLab"] = {
 		[5] = { itemID = 27901, droprate = "4.35%" }; --Blackout Truncheon
 		[6] = { itemID = 27898, droprate = "4.71%" }; --Wrathfire Hand-Cannon
 		[8] = { itemID = 30827, droprate = "100%" }; --Lexicon Demonica
-		[16] = { icon = "INV_Box_01", name = "#j27#" };
+		[16] = { icon = "INV_Box_01", name = WHITE..AL["Additional Heroic Loot"] };
 		[17] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 		[18] = { itemID = 30563, droprate = "6.67%" }; --Regal Tanzanite
 		[19] = { itemID = 30559, droprate = "7.85%" }; --Etched Fire Opal
@@ -443,7 +443,7 @@ AtlasLoot_Data["AuchShadowLab"] = {
 		[13] = { itemID = 27908, droprate = ".76%" }; --Leggings of Assassination
 		[14] = { itemID = 27909, droprate = "3.87%" }; --Tidefury Kilt
 		[15] = { itemID = 27803, droprate = ".49%" }; --Shoulderguards of the Bold
-		[16] = { icon = "INV_Box_01", name = "#j27#" };
+		[16] = { icon = "INV_Box_01", name = WHITE..AL["Additional Heroic Loot"] };
 		[17] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 		[18] = { itemID = 30563, droprate = "6.67%" }; --Regal Tanzanite
 		[19] = { itemID = 30559, droprate = "7.85%" }; --Etched Fire Opal
@@ -459,20 +459,20 @@ AtlasLoot_Data["AuchShadowLab"] = {
 	};
 	{
 		Name = AL["Trash Mobs"];
-		[1] = { icon = "INV_Box_01", name = "=q6=" .. AL["Trash Mobs"], "=q5=" .. BabbleZone["Mana-Tombs"] };
+		[1] = { icon = "INV_Box_01", name = WHITE.. AL["Trash Mobs"], "=q5=" .. BabbleZone["Mana-Tombs"] };
 		[2] = { itemID = 23615, droprate = ".52%" }; --Plans: Swiftsteel Gloves
 		[3] = { itemID = 22543, droprate = ".52%" }; --Formula: Enchant Boots - Fortitude
-		[5] = { icon = "INV_Box_01", name = "=q6=" .. AL["Trash Mobs"], "=q5=" .. BabbleZone["Sethekk Halls"] };
+		[5] = { icon = "INV_Box_01", name = WHITE.. AL["Trash Mobs"], "=q5=" .. BabbleZone["Sethekk Halls"] };
 		[6] = { itemID = 25731, droprate = ".46%" }; --Pattern: Stylin' Crimson Hat
 		[7] = { itemID = 29669, droprate = ".39%" }; --Pattern: Shadow Armor Kit
-		[9] = { icon = "INV_Box_01", name = "=q6=" .. AL["The Saga of Terokk"], "=q5=" .. BabbleZone["Sethekk Halls"] };
+		[9] = { icon = "INV_Box_01", name = WHITE.. AL["The Saga of Terokk"], "=q5=" .. BabbleZone["Sethekk Halls"] };
 		[10] = { itemID = 27634 }; --The Saga of Terokk
-		[16] = { icon = "INV_Box_01", name = "=q6=" .. AL["Trash Mobs"], "=q5=" .. BabbleZone["Auchenai Crypts"] };
+		[16] = { icon = "INV_Box_01", name = WHITE.. AL["Trash Mobs"], "=q5=" .. BabbleZone["Auchenai Crypts"] };
 		[17] = { itemID = 23605, droprate = ".69%" }; --Plans: Felsteel Gloves
 		[18] = { itemID = 22544, droprate = ".60%" }; --Formula: Enchant Boots - Dexterity
-		[20] = { icon = "INV_Box_01", name = "=q6=" .. AL["Trash Mobs"], "=q5=" .. BabbleZone["Shadow Labyrinth"] };
+		[20] = { icon = "INV_Box_01", name = WHITE.. AL["Trash Mobs"], "=q5=" .. BabbleZone["Shadow Labyrinth"] };
 		[21] = { itemID = 23607, droprate = ".61%" }; --Plans: Felsteel Helm
-		[23] = { icon = "INV_Box_01", name = "=q6=" .. AL["First Fragment Guardian"], "=q5=" .. BabbleZone["Shadow Labyrinth"] };
+		[23] = { icon = "INV_Box_01", name = WHITE.. AL["First Fragment Guardian"], "=q5=" .. BabbleZone["Shadow Labyrinth"] };
 		[24] = { itemID = 24514, droprate = "100%" }; --First Key Fragment
 	};
 };
@@ -744,7 +744,7 @@ AtlasLoot_Data["CoTOldHillsbrad"] = {
 		[3] = { itemID = 27417, droprate = "8.33%" }; --Ravenwing Pauldrons
 		[4] = { itemID = 27420, droprate = "7.14%" }; --Uther's Ceremonial Warboots
 		[5] = { itemID = 27436, droprate = "5.09%" }; --Iron Band of the Unbreakable
-		[16] = { icon = "INV_Box_01", name = "#j27#" };
+		[16] = { icon = "INV_Box_01", name = WHITE..AL["Additional Heroic Loot"] };
 		[17] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 		[18] = { itemID = 30589, droprate = ".66%" }; --Dazzling Chrysoprase
 		[19] = { itemID = 30591, droprate = ".24%" }; --Empowered Fire Opal
@@ -764,7 +764,7 @@ AtlasLoot_Data["CoTOldHillsbrad"] = {
 		[4] = { itemID = 27424, droprate = "8.50%" }; --Amani Venom-Axe
 		[5] = { itemID = 27426, droprate = "5.37%" }; --Northshire Battlemace
 		[7] = { itemID = 22927, droprate = ".03%" }; --Recipe: Ironshield Potion
-		[16] = { icon = "INV_Box_01", name = "#j27#" };
+		[16] = { icon = "INV_Box_01", name = WHITE..AL["Additional Heroic Loot"] };
 		[17] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 		[18] = { itemID = 30589, droprate = ".66%" }; --Dazzling Chrysoprase
 		[19] = { itemID = 30591, droprate = ".24%" }; --Empowered Fire Opal
@@ -783,7 +783,7 @@ AtlasLoot_Data["CoTOldHillsbrad"] = {
 		[3] = { itemID = 27440, droprate = "6.12%" }; --Diamond Prism of Recurrence
 		[4] = { itemID = 27432, droprate = "6.35%" }; --Broxigar's Ring of Valor
 		[5] = { itemID = 27431, droprate = "4.09%" }; --Time-Shifted Dagger
-		[6] = { icon = "INV_Box_01", name = "#j27#" };
+		[6] = { icon = "INV_Box_01", name = WHITE..AL["Additional Heroic Loot"] };
 		[7] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 		[8] = { itemID = 29250 }; --Cord of Sanctification
 		[9] = { itemID = 29246 }; --Nightfall Wristguards
@@ -810,17 +810,17 @@ AtlasLoot_Data["CoTOldHillsbrad"] = {
 	};
 	{
 		Name = AL["Trash Mobs"];
-		[1] = { icon = "INV_Box_01", name = "=q6=" .. AL["Trash Mobs"], "=q5=" .. BabbleZone["Old Hillsbrad Foothills"] };
+		[1] = { icon = "INV_Box_01", name = WHITE.. AL["Trash Mobs"], "=q5=" .. BabbleZone["Old Hillsbrad Foothills"] };
 		[2] = { itemID = 25729, droprate = ".25%" }; --Pattern: Stylin' Adventure Hat
-		[4] = { icon = "INV_Box_01", name = "=q6=" .. AL["Don Carlos"], "=q5=" .. BabbleZone["Old Hillsbrad Foothills"] };
+		[4] = { icon = "INV_Box_01", name = WHITE.. AL["Don Carlos"], "=q5=" .. BabbleZone["Old Hillsbrad Foothills"] };
 		[5] = { itemID = 38506 }; --Don Carlos' Famous Hat
 		[6] = { itemID = 38329 }; --Don Carlos' Hat
 		[7] = { itemID = 38276 }; --Haliscan Brimmed Hat
-		[9] = { icon = "INV_Box_01", name = "=q6=" .. AL["Trash Mobs"], "=q5=" .. BabbleZone["The Black Morass"] };
+		[9] = { icon = "INV_Box_01", name = WHITE.. AL["Trash Mobs"], "=q5=" .. BabbleZone["The Black Morass"] };
 		[10] = { itemID = 25730, droprate = ".29%" }; --Pattern: Stylin' Jungle Hat
-		[16] = { icon = "INV_Box_01", name = "=q6=" .. AL["Thomas Yance"], "=q5=" .. BabbleZone["Old Hillsbrad Foothills"] };
+		[16] = { icon = "INV_Box_01", name = WHITE.. AL["Thomas Yance"], "=q5=" .. BabbleZone["Old Hillsbrad Foothills"] };
 		[17] = { itemID = 25725 };
-		[19] = { icon = "INV_Box_01", name = "=q6=" .. AL["Aged Dalaran Wizard"], "=q5=" .. BabbleZone["Old Hillsbrad Foothills"] };
+		[19] = { icon = "INV_Box_01", name = WHITE.. AL["Aged Dalaran Wizard"], "=q5=" .. BabbleZone["Old Hillsbrad Foothills"] };
 		[20] = { itemID = 22539 };
 	};
 };
@@ -848,7 +848,7 @@ AtlasLoot_Data["CoTBlackMorass"] = {
 		[5] = { itemID = 27996, droprate = "4.45%" }; --Ring of Spiritual Precision
 		[6] = { itemID = 27987, droprate = "1.51%" }; --Melmorta's Twilight Longbow
 		[8] = { itemID = 29675, droprate = ".35%" }; --Pattern: Arcane Armor Kit
-		[16] = { icon = "INV_Box_01", name = "#j27#" };
+		[16] = { icon = "INV_Box_01", name = WHITE..AL["Additional Heroic Loot"] };
 		[17] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 		[18] = { itemID = 30558 }; --Glimmering Fire Opal
 		[19] = { itemID = 30556 }; --Glinting Fire Opal
@@ -862,7 +862,7 @@ AtlasLoot_Data["CoTBlackMorass"] = {
 		[4] = { itemID = 28187, droprate = "1.83%" }; --Star-Heart Lamp
 		[5] = { itemID = 28184, droprate = "1.74%" }; --Millennium Blade
 		[6] = { itemID = 28033, droprate = "3.80%" }; --Epoch-Mender
-		[16] = { icon = "INV_Box_01", name = "#j27#" };
+		[16] = { icon = "INV_Box_01", name = WHITE..AL["Additional Heroic Loot"] };
 		[17] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 		[18] = { itemID = 30558 }; --Glimmering Fire Opal
 		[19] = { itemID = 30556 }; --Glinting Fire Opal
@@ -882,7 +882,7 @@ AtlasLoot_Data["CoTBlackMorass"] = {
 		[11] = { itemID = 28190, droprate = "1.32%" }; --Scarab of the Infinite Cycle
 		[12] = { itemID = 28189, droprate = ".70%" }; --Latro's Shifting Sword
 		[13] = { itemID = 28188, droprate = "0.48%" }; --Bloodfire Greatstaff
-		[16] = { icon = "INV_Box_01", name = "#j27#" };
+		[16] = { icon = "INV_Box_01", name = WHITE..AL["Additional Heroic Loot"] };
 		[17] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 		[18] = { itemID = 30558 }; --Glimmering Fire Opal
 		[19] = { itemID = 30556 }; --Glinting Fire Opal
@@ -1115,14 +1115,14 @@ AtlasLoot_Data["CFRSlavePens"] = {
 	Map = "CFRTheSlavePens";
 	{
 		Name = BabbleBoss["Mennu the Betrayer"];
-		[1] = { icon = "INV_Box_01", name = "=q6=#j1#" };
+		[1] = { icon = "INV_Box_01", name = WHITE..AL["Normal Mode"] };
 		[2] = { itemID = 24359, droprate = "0.20%" }; --Princely Reign Leggings
 		[3] = { itemID = 24357, droprate = "1.94%" }; --Vest of Living Lightning
 		[4] = { itemID = 24360, droprate = "1.07%" }; --Tracker's Belt
 		[5] = { itemID = 24356, droprate = "2.47%" }; --Wastewalker Shiv
 		[6] = { itemID = 24361, droprate = "1.07%" }; --Spellfire Longsword
 		[8] = { itemID = 29674, droprate = ".80%" }; --Pattern: Nature Armor Kit
-		[16] = { icon = "INV_Box_01", name = "#j27#" };
+		[16] = { icon = "INV_Box_01", name = WHITE..AL["Additional Heroic Loot"] };
 		[17] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 		[18] = { itemID = 30604, droprate = "2.49%" }; --Resplendent Fire Opal
 		[19] = { itemID = 30605, droprate = ".39%" }; --Vivid Chrysoprase
@@ -1138,13 +1138,13 @@ AtlasLoot_Data["CFRSlavePens"] = {
 	};
 	{
 		Name = BabbleBoss["Rokmar the Crackler"];
-		[1] = { icon = "INV_Box_01", name = "=q6=#j1#" };
+		[1] = { icon = "INV_Box_01", name = WHITE..AL["Normal Mode"] };
 		[2] = { itemID = 24379, droprate = "0.05%" }; --Bogstrok Scale Cloak
 		[3] = { itemID = 24376, droprate = "1.45%" }; --Runed Fungalcap
 		[4] = { itemID = 24378, droprate = ".66%" }; --Coilfang Hammer of Renewal
 		[5] = { itemID = 24380, droprate = "0.26%" }; --Calming Spore Reed
 		[6] = { itemID = 24381, droprate = "0.05%" }; --Coilfang Needler
-		[16] = { icon = "INV_Box_01", name = "#j27#" };
+		[16] = { icon = "INV_Box_01", name = WHITE..AL["Additional Heroic Loot"] };
 		[17] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 		[18] = { itemID = 30604, droprate = "2.49%" }; --Resplendent Fire Opal
 		[19] = { itemID = 30605, droprate = ".39%" }; --Vivid Chrysoprase
@@ -1179,7 +1179,7 @@ AtlasLoot_Data["CFRSlavePens"] = {
 		[21] = { itemID = 30538, droprate = ".95%" }; --Midnight Legguards
 		[22] = { itemID = 32078 }; --Pauldrons of Wild Magic
 		[23] = { itemID = 29349, droprate = ".53%" }; --Adamantine Chain of the Unbroken
-		[25] = { icon = "INV_Box_01", name = "=q6=#j1#" };
+		[25] = { icon = "INV_Box_01", name = WHITE..AL["Normal Mode"] };
 		[26] = { itemID = 24362, droprate = "0.63%" }; --Spore-Soaked Vaneer
 		[27] = { itemID = 24365, droprate = "0.89%" }; --Deft Handguards
 		[28] = { itemID = 24366, droprate = "1.72%" }; --Scorpid-Sting Mantle
@@ -1207,7 +1207,7 @@ AtlasLoot_Data["CFRSteamvault"] = {
 		[6] = { itemID = 27784, droprate = "6.72%" }; --Scintillating Coral Band
 		[8] = { itemID = 29673, droprate = ".60%" }; --Pattern: Frost Armor Kit
 		[10] = { itemID = 30828, droprate = "100%" }; --Vial of Underworld Loam
-		[16] = { icon = "INV_Box_01", name = "#j27#" };
+		[16] = { icon = "INV_Box_01", name = WHITE..AL["Additional Heroic Loot"] };
 		[17] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 		[18] = { itemID = 30550, droprate = ".59%" }; --Sundered Chrysoprase
 		[19] = { itemID = 30551, droprate = ".64%" }; --Infused Fire Opal
@@ -1221,7 +1221,7 @@ AtlasLoot_Data["CFRSteamvault"] = {
 		[4] = { itemID = 27791, droprate = "7.09%" }; --Serpentcrest Life-Staff
 		[5] = { itemID = 27794, droprate = "5.88%" }; --Recoilless Rocket Ripper X-54
 		[7] = { itemID = 23887, droprate = ".52%" }; --Schematic: Rocket Boots Xtreme
-		[16] = { icon = "INV_Box_01", name = "#j27#" };
+		[16] = { icon = "INV_Box_01", name = WHITE..AL["Additional Heroic Loot"] };
 		[17] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 		[18] = { itemID = 30550, droprate = ".59%" }; --Sundered Chrysoprase
 		[19] = { itemID = 30551, droprate = ".64%" }; --Infused Fire Opal
@@ -1242,7 +1242,7 @@ AtlasLoot_Data["CFRSteamvault"] = {
 		[13] = { itemID = 27795, droprate = "1.03%" }; --Sash of Serpentra
 		[14] = { itemID = 27806, droprate = "4.84%" }; --Fathomheart Gauntlets
 		[15] = { itemID = 27805, droprate = "3.95%" }; --Ring of the Silver Hand
-		[16] = { icon = "INV_Box_01", name = "#j27#" };
+		[16] = { icon = "INV_Box_01", name = WHITE..AL["Additional Heroic Loot"] };
 		[17] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 		[18] = { itemID = 30550, droprate = ".59%" }; --Sundered Chrysoprase
 		[19] = { itemID = 30551, droprate = ".64%" }; --Infused Fire Opal
@@ -1260,7 +1260,7 @@ AtlasLoot_Data["CFRSteamvault"] = {
 		[3] = { itemID = 22533, droprate = ".40%" }; --Formula: Enchant Bracer - Fortitude
 		[5] = { itemID = 24367 }; --Orders from Lady Vashj
 		[6] = { itemID = 24368, droprate = "2.68%" }; --Coilfang Armaments
-		[16] = { icon = "INV_Box_01", name = "=q6=" .. AL["Second Fragment Guardian"], "=q5=" .. BabbleZone["The Steamvault"] };
+		[16] = { icon = "INV_Box_01", name = WHITE.. AL["Second Fragment Guardian"], "=q5=" .. BabbleZone["The Steamvault"] };
 		[17] = { itemID = 24487, droprate = "100%" }; --Second Key Fragment
 	};
 };
@@ -1277,13 +1277,13 @@ AtlasLoot_Data["CFRUnderbog"] = {
 	Map = "CFRTheUnderbog";
 	{
 		Name = BabbleBoss["Hungarfen"];
-		[1] = { icon = "INV_Box_01", name = "=q6=#j1#" };
+		[1] = { icon = "INV_Box_01", name = WHITE..AL["Normal Mode"] };
 		[2] = { itemID = 24450, droprate = "1.72%" }; --Manaspark Gloves
 		[3] = { itemID = 24452, droprate = "2.35%" }; --Starlight Gauntlets
 		[4] = { itemID = 24451, droprate = "1.75%" }; --Lykul Bloodbands
 		[5] = { itemID = 24413, droprate = "2.86%" }; --Totem of the Thunderhead
 		[6] = { itemID = 27631, droprate = "1.60%" }; --Needle Shrike
-		[16] = { icon = "INV_Box_01", name = "#j27#" };
+		[16] = { icon = "INV_Box_01", name = WHITE..AL["Additional Heroic Loot"] };
 		[17] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 		[18] = { itemID = 30606, droprate = "7.89%" }; --Lambent Chrysoprase
 		[19] = { itemID = 30607, droprate = ".50%" }; --Splendid Fire Opal
@@ -1297,13 +1297,13 @@ AtlasLoot_Data["CFRUnderbog"] = {
 	};
 	{
 		Name = BabbleBoss["Ghaz'an"];
-		[1] = { icon = "INV_Box_01", name = "=q6=#j1#" };
+		[1] = { icon = "INV_Box_01", name = WHITE..AL["Normal Mode"] };
 		[2] = { itemID = 24459, droprate = "4.18%" }; --Cloak of Healing Rays
 		[3] = { itemID = 24458, droprate = "4.06%" }; --Studded Girdle of Virtue
 		[4] = { itemID = 24460, droprate = "2.99%" }; --Talisman of Tenacity
 		[5] = { itemID = 24462, droprate = "2.75%" }; --Luminous Pearls of Insight
 		[6] = { itemID = 24461, droprate = "4.12%" }; --Hatebringer
-		[16] = { icon = "INV_Box_01", name = "#j27#" };
+		[16] = { icon = "INV_Box_01", name = WHITE..AL["Additional Heroic Loot"] };
 		[17] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 		[18] = { itemID = 30606, droprate = "7.89%" }; --Lambent Chrysoprase
 		[19] = { itemID = 30607, droprate = ".50%" }; --Splendid Fire Opal
@@ -1317,13 +1317,13 @@ AtlasLoot_Data["CFRUnderbog"] = {
 	};
 	{
 		Name = BabbleBoss["Swamplord Musel'ek"];
-		[1] = { icon = "INV_Box_01", name = "=q6=#j1#" };
+		[1] = { icon = "INV_Box_01", name = WHITE..AL["Normal Mode"] };
 		[2] = { itemID = 24454, droprate = "7.23%" }; --Cloak of Enduring Swiftness
 		[3] = { itemID = 24455, droprate = "4.47%" }; --Tunic of the Nightwatcher
 		[4] = { itemID = 24457, droprate = "4.42%" }; --Truth Bearer Shoulderguards
 		[5] = { itemID = 24456, droprate = "2.41%" }; --Greaves of the Iron Guardian
 		[6] = { itemID = 24453, droprate = "5.17%" }; --Zangartooth Shortblade
-		[16] = { icon = "INV_Box_01", name = "#j27#" };
+		[16] = { icon = "INV_Box_01", name = WHITE..AL["Additional Heroic Loot"] };
 		[17] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 		[18] = { itemID = 30606, droprate = "7.89%" }; --Lambent Chrysoprase
 		[19] = { itemID = 30607, droprate = ".50%" }; --Splendid Fire Opal
@@ -1391,7 +1391,7 @@ AtlasLoot_Data["CFRSerpentshrine"] = {
 		[6] = { itemID = 30054, droprate = "8%" }; --Ranger-General's Chestguard
 		[7] = { itemID = 30048, droprate = "1%" }; --Brighthelm of Justice
 		[8] = { itemID = 30053, droprate = "6%" }; --Pauldrons of the Wardancer
-		[9] = { itemID = 600878, [AtlasLoot.Difficultys.MIN_DIF] = AtlasLoot.Difficultys.Heroic }; --Elemental Lodestone: Hydross the Unstable
+		[9] = { itemID = 600878, [AtlasLoot.Difficulties.MIN_DIF] = AtlasLoot.Difficulties.Heroic }; --Elemental Lodestone: Hydross the Unstable
 		[16] = { itemID = 30052, droprate = "0%" }; --Ring of Lethality
 		[17] = { itemID = 33055, droprate = "4%" }; --Band of Vile Aggression
 		[18] = { itemID = 30664, droprate = "8%" }; --Living Root of the Wildheart
@@ -1589,14 +1589,14 @@ AtlasLoot_Data["HCRamparts"] = {
 	{
 		Name = BabbleBoss["Watchkeeper Gargolmar"];
 		NpcID = 17306;
-		[1] = { icon = "INV_Box_01", name = "=q6=#j1#" };
+		[1] = { icon = "INV_Box_01", name = WHITE..AL["Normal Mode"] };
 		[2] = { itemID = 24024, droprate = "4.69%" }; --Pauldrons of Arcane Rage
 		[3] = { itemID = 24023, droprate = "3.29%" }; --Bracers of Finesse
 		[4] = { itemID = 24022, droprate = "4.38%" }; --Scale Leggings of the Skirmisher
 		[5] = { itemID = 24021, droprate = "3.03%" }; --Light-Touched Breastplate
 		[6] = { itemID = 24020, droprate = "3.09%" }; --Shadowrend Longblade
 		[8] = { itemID = 23881, droprate = "100%" }; --Gargolmar's Hand
-		[16] = { icon = "INV_Box_01", name = "#j27#" };
+		[16] = { icon = "INV_Box_01", name = WHITE..AL["Additional Heroic Loot"] };
 		[17] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 		[18] = { itemID = 30593, droprate = "1.11%" }; --Iridescent Fire Opal
 		[19] = { itemID = 30594, droprate = "2.35%" }; --Effulgent Chrysoprase
@@ -1611,7 +1611,7 @@ AtlasLoot_Data["HCRamparts"] = {
 	{
 		Name = BabbleBoss["Omor the Unscarred"];
 		NpcID = 17308;
-		[1] = { icon = "INV_Box_01", name = "#j27#" };
+		[1] = { icon = "INV_Box_01", name = WHITE..AL["Additional Heroic Loot"] };
 		[2] = { itemID = 27465, droprate = "1.74%" }; --Mana-Etched Gloves
 		[3] = { itemID = 27466, droprate = "2.10%" }; --Headdress of Alacrity
 		[4] = { itemID = 27462, droprate = ".12%" }; --Crimson Bracers of Gloom
@@ -1629,7 +1629,7 @@ AtlasLoot_Data["HCRamparts"] = {
 		[17] = { itemID = 30593, droprate = "1.11%" }; --Iridescent Fire Opal
 		[18] = { itemID = 30594, droprate = "2.35%" }; --Effulgent Chrysoprase
 		[19] = { itemID = 30592, droprate = ".64%" }; --Steady Chrysoprase
-		[21] = { icon = "INV_Box_01", name = "=q6=#j1#" };
+		[21] = { icon = "INV_Box_01", name = WHITE..AL["Normal Mode"] };
 		[22] = { itemID = 24090, droprate = "2.14%" }; --Bloodstained Ravager Gauntlets
 		[23] = { itemID = 24091, droprate = "2.67%" }; --Tenacious Defender
 		[24] = { itemID = 24073, droprate = "1.60%" }; --Garotte-String Necklace
@@ -1641,7 +1641,7 @@ AtlasLoot_Data["HCRamparts"] = {
 	{
 		Name = BabbleBoss["Vazruden"];
 		NpcID = 17537;
-		[1] = { icon = "INV_Box_01", name = "=q6=" .. AL["Reinforced Fel Iron Chest"] };
+		[1] = { icon = "INV_Box_01", name = WHITE.. AL["Reinforced Fel Iron Chest"] };
 		[2] = { itemID = 24150, droprate = "5.65%" }; --Mok'Nathal Wildercloak
 		[3] = { itemID = 24083, droprate = "7.100" }; --Lifegiver Britches
 		[4] = { itemID = 24063, droprate = "7.25%" }; --Shifting Sash of Midnight
@@ -1652,9 +1652,9 @@ AtlasLoot_Data["HCRamparts"] = {
 		[9] = { itemID = 24151, droprate = "5.45%" }; --Mok'Nathal Clan Ring
 		[10] = { itemID = 24044, droprate = "3.91%" }; --Hellreaver
 		[11] = { itemID = 24155, droprate = "6.21%" }; --Ursol's Claw
-		[16] = { icon = "INV_Box_01", name = "=q6=" .. BabbleBoss["Vazruden"] };
+		[16] = { icon = "INV_Box_01", name = WHITE.. BabbleBoss["Vazruden"] };
 		[17] = { itemID = 23892, droprate = "100%" }; --Ominous Letter
-		[19] = { icon = "INV_Box_01", name = "=q6=" .. BabbleBoss["Nazan"] };
+		[19] = { icon = "INV_Box_01", name = WHITE.. BabbleBoss["Nazan"] };
 		[20] = { itemID = 23901, droprate = "100%" }; --Nazan's Head
 		[22] = { itemID = 61025, droprate = "1%" }; --Pet Sigil
 	};
@@ -1679,9 +1679,9 @@ AtlasLoot_Data["HCRamparts"] = {
 		[19] = { itemID = 30592, droprate = ".64%" }; --Steady Chrysoprase
 		[21] = { itemID = 27453, droprate = "4.20%" }; --Averinn's Ring of Slaying
 		[22] = { itemID = 27460, droprate = "7.90%" }; --Reavers' Ring
-		[24] = { icon = "INV_Box_01", name = "=q6=" .. BabbleBoss["Vazruden"] };
+		[24] = { icon = "INV_Box_01", name = WHITE.. BabbleBoss["Vazruden"] };
 		[25] = { itemID = 23892, droprate = "100%" }; --Ominous Letter
-		[27] = { icon = "INV_Box_01", name = "=q6=" .. BabbleBoss["Nazan"] };
+		[27] = { icon = "INV_Box_01", name = WHITE.. BabbleBoss["Nazan"] };
 		[28] = { itemID = 23901, droprate = "100%" }; --Nazan's Head
 		[30] = { itemID = 61025, droprate = "1%" }; --Pet Sigil
 	};
@@ -1702,13 +1702,13 @@ AtlasLoot_Data["HCFurnace"] = {
 	Map = "HCBloodFurnace";
 	{
 		Name = BabbleBoss["The Maker"];
-		[1] = { icon = "INV_Box_01", name = "=q6=#j1#" };
+		[1] = { icon = "INV_Box_01", name = WHITE..AL["Normal Mode"] };
 		[2] = { itemID = 24388, droprate = "5.84%" }; --Girdle of the Gale Storm
 		[3] = { itemID = 24387, droprate = "3.27%" }; --Ironblade Gauntlets
 		[4] = { itemID = 24385, droprate = "5.43%" }; --Pendant of Battle-Lust
 		[5] = { itemID = 24386, droprate = "4.78%" }; --Libram of Saints Departed
 		[6] = { itemID = 24384, droprate = "2.90%" }; --Diamond-Core Sledgemace
-		[16] = { icon = "INV_Box_01", name = "#j27#" };
+		[16] = { icon = "INV_Box_01", name = WHITE..AL["Additional Heroic Loot"] };
 		[17] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 		[18] = { itemID = 30601, droprate = "8.18%" }; --Beaming Fire Opal
 		[19] = { itemID = 30600, droprate = ".85%" }; --Fluorescent Tanzanite
@@ -1721,13 +1721,13 @@ AtlasLoot_Data["HCFurnace"] = {
 	};
 	{
 		Name = BabbleBoss["Broggok"];
-		[1] = { icon = "INV_Box_01", name = "=q6=#j1#" };
+		[1] = { icon = "INV_Box_01", name = WHITE..AL["Normal Mode"] };
 		[2] = { itemID = 24392, droprate = "4.37%" }; --Arcing Bracers
 		[3] = { itemID = 24393, droprate = "7.62%" }; --Bloody Surgeon's Mitts
 		[4] = { itemID = 24391, droprate = "6.58%" }; --Kilt of the Night Strider
 		[5] = { itemID = 24390, droprate = "1.57%" }; --Auslese's Light Channeler
 		[6] = { itemID = 24389, droprate = "7.69%" }; --Legion Blunderbuss
-		[16] = { icon = "INV_Box_01", name = "#j27#" };
+		[16] = { icon = "INV_Box_01", name = WHITE..AL["Additional Heroic Loot"] };
 		[17] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 		[18] = { itemID = 30601, droprate = "8.18%" }; --Beaming Fire Opal
 		[19] = { itemID = 30600, droprate = ".85%" }; --Fluorescent Tanzanite
@@ -1761,7 +1761,7 @@ AtlasLoot_Data["HCFurnace"] = {
 		[21] = { itemID = 29245, droprate = ".79%" }; --Wave-Crest Striders
 		[22] = { itemID = 29239, droprate = ".82%" }; --Eaglecrest Warboots
 		[23] = { itemID = 29347, droprate = ".58%" }; --Talisman of the Breaker
-		[25] = { icon = "INV_Box_01", name = "=q6=#j1#" };
+		[25] = { icon = "INV_Box_01", name = WHITE..AL["Normal Mode"] };
 		[26] = { itemID = 24397, droprate = "6.92%" }; --Raiments of Divine Authority
 		[27] = { itemID = 24395, droprate = "6.64%" }; --Mindfire Waistband
 		[28] = { itemID = 24398, droprate = "4.29%" }; --Mantle of the Dusk-Dweller
@@ -1789,7 +1789,7 @@ AtlasLoot_Data["HCShatteredHalls"] = {
 		[6] = { itemID = 27520, droprate = "6.47%" }; --Greathelm of the Unbreakable
 		[7] = { itemID = 27518, droprate = "7.42%" }; --Ivory Idol of the Moongoddess
 		[9] = { itemID = 23735, droprate = "100%" }; --Grand Warlock's Amulet
-		[16] = { icon = "INV_Box_01", name = "#j27#" };
+		[16] = { icon = "INV_Box_01", name = WHITE..AL["Additional Heroic Loot"] };
 		[17] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 		[18] = { itemID = 24312 };
 		[19] = { itemID = 30548, droprate = ".16%" }; --Polished Chrysoprase
@@ -1817,7 +1817,7 @@ AtlasLoot_Data["HCShatteredHalls"] = {
 		[5] = { itemID = 27524, droprate = "7.95%" }; --Firemaul of Destruction
 		[6] = { itemID = 27526, droprate = "7.31%" }; --Skyfire Hawk-Bow
 		[8] = { itemID = 30829, droprate = "100%" }; --Tear of the Earthmother
-		[16] = { icon = "INV_Box_01", name = "#j27#" };
+		[16] = { icon = "INV_Box_01", name = WHITE..AL["Additional Heroic Loot"] };
 		[17] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 		[18] = { itemID = 30548, droprate = ".16%" }; --Polished Chrysoprase
 		[19] = { itemID = 30547, droprate = ".19%" }; --Luminous Fire Opal
@@ -1838,7 +1838,7 @@ AtlasLoot_Data["HCShatteredHalls"] = {
 		[12] = { itemID = 27538, droprate = "0.6%" }; --Lightsworn Hammer
 		[13] = { itemID = 27540, droprate = "3.02%" }; --Nexus Torch
 		[15] = { itemID = 23723, droprate = "100%" }; --Warchief Kargath's Fist
-		[16] = { icon = "INV_Box_01", name = "#j27#" };
+		[16] = { icon = "INV_Box_01", name = WHITE..AL["Additional Heroic Loot"] };
 		[17] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 		[18] = { itemID = 30548, droprate = ".16%" }; --Polished Chrysoprase
 		[19] = { itemID = 30547, droprate = ".19%" }; --Luminous Fire Opal
@@ -1852,7 +1852,7 @@ AtlasLoot_Data["HCShatteredHalls"] = {
 	{
 		Name = AL["Trash Mobs"];
 		[1] = { itemID = 22554, droprate = ".65%" }; --Formula: Enchant 2H Weapon - Savagery
-		[3] = { icon = "INV_Box_01", name = "=q6=" .. AL["Shattered Hand Executioner"] };
+		[3] = { icon = "INV_Box_01", name = WHITE.. AL["Shattered Hand Executioner"] };
 		[4] = { itemID = 31716, droprate = "100%" }; --Unused Axe of the Executioner
 	};
 };
@@ -1881,8 +1881,8 @@ AtlasLoot_Data["HCMagtheridon"] = {
 		[10] = { itemID = 28782 }; --Crystalheart Pulse-Staff
 		[11] = { itemID = 29458 }; --Aegis of the Vindicator
 		[12] = { itemID = 28783 }; --Eredar Wand of Obliteration
-		[14] = { itemID = 428775, [AtlasLoot.Difficultys.MIN_DIF] = AtlasLoot.Difficultys.Mythic }; --Bor -o G'urth, the Hand of Death
-		[15] = { itemID = 428776, [AtlasLoot.Difficultys.MIN_DIF] = AtlasLoot.Difficultys.Mythic }; --Lebed -o G'urth, the Finger of Death
+		[14] = { itemID = 428775, [AtlasLoot.Difficulties.MIN_DIF] = AtlasLoot.Difficulties.Ascended }; --Bor -o G'urth, the Hand of Death
+		[15] = { itemID = 428776, [AtlasLoot.Difficulties.MIN_DIF] = AtlasLoot.Difficulties.Ascended }; --Lebed -o G'urth, the Finger of Death
 		[16] = { itemID = 29753, droprate = "100%", lootTable = {"T4CHEST","Token"} }; --Chestguard of the Fallen Defender
 		[17] = { itemID = 34845 }; --Pit Lord's Satchel
 		[18] = { itemID = 34846 }; --Black Sack of Gems
@@ -1913,17 +1913,17 @@ AtlasLoot_Data["Karazhan"] = {
 	};
 	{
 		Name = "Servant's Quarter Animal Bosses";
-		[1] = { icon = "Ability_Hunter_Pet_Spider", name = "=q6=" .. BabbleBoss["Hyakiss the Lurker"], "=q5=" .. AL["Spider"] };
+		[1] = { icon = "Ability_Hunter_Pet_Spider", name = WHITE.. BabbleBoss["Hyakiss the Lurker"], "=q5=" .. AL["Spider"] };
 		[2] = { itemID = 30675, droprate = "2.81%" }; --Lurker's Cord
 		[3] = { itemID = 30676, droprate = ".38%" }; --Lurker's Grasp
 		[4] = { itemID = 30677, droprate = "3.44%" }; --Lurker's Belt
 		[5] = { itemID = 30678, droprate = "5.62%" }; --Lurker's Girdle
-		[7] = { icon = "Ability_Hunter_Pet_Hyena", name = "=q6=" .. BabbleBoss["Rokad the Ravager"], "=q5=" .. AL["Darkhound"] };
+		[7] = { icon = "Ability_Hunter_Pet_Hyena", name = WHITE.. BabbleBoss["Rokad the Ravager"], "=q5=" .. AL["Darkhound"] };
 		[8] = { itemID = 30684, droprate = "7.78%" }; --Ravager's Cuffs
 		[9] = { itemID = 30685, droprate = "1.11%" }; --Ravager's Wrist-Wraps
 		[10] = { itemID = 30686, droprate = "3.33%" }; --Ravager's Bands
 		[11] = { itemID = 30687, droprate = ".89%" }; --Ravager's Bracers
-		[16] = { icon = "Ability_Hunter_Pet_Bat", name = "=q6=" .. BabbleBoss["Shadikith the Glider"], "=q5=" .. AL["Bat"] };
+		[16] = { icon = "Ability_Hunter_Pet_Bat", name = WHITE.. BabbleBoss["Shadikith the Glider"], "=q5=" .. AL["Bat"] };
 		[17] = { itemID = 30680, droprate = ".68%" }; --Glider's Foot-Wraps
 		[18] = { itemID = 30681, droprate = "2.58%" }; --Glider's Boots
 		[19] = { itemID = 30682, droprate = ".68%" }; --Glider's Sabatons
@@ -1995,22 +1995,22 @@ AtlasLoot_Data["Karazhan"] = {
 	};
 	{
 		Name = "Opera Event";
-		[1] = { icon = "INV_Box_01", name = "=q6=" .. BabbleBoss["The Crone"], "=q5=" .. AL["Wizard of Oz"] };
+		[1] = { icon = "INV_Box_01", name = WHITE.. BabbleBoss["The Crone"], "=q5=" .. AL["Wizard of Oz"] };
 		[2] = { itemID = 28586, droprate = "0.12%" }; --Wicked Witch's Hat
 		[3] = { itemID = 28585, droprate = "5.39%" }; --Ruby Slippers
 		[4] = { itemID = 28587, droprate = "0.43%" }; --Legacy
 		[5] = { itemID = 28588, droprate = "7.96%" }; --Blue Diamond Witchwand
-		[7] = { icon = "INV_Box_01", name = "=q6=" .. BabbleBoss["Romulo & Julianne"], "=q5=" .. AL["Romulo & Julianne"] };
+		[7] = { icon = "INV_Box_01", name = WHITE.. BabbleBoss["Romulo & Julianne"], "=q5=" .. AL["Romulo & Julianne"] };
 		[8] = { itemID = 28578, droprate = "2.73%" }; --Masquerade Gown
 		[9] = { itemID = 28579, droprate = "9.54%" }; --Romulo's Poison Vial
 		[10] = { itemID = 28572, droprate = "3.52%" }; --Blade of the Unrequited
 		[11] = { itemID = 28573, droprate = "0.07%" }; --Despair
-		[16] = { icon = "INV_Box_01", name = "=q6=" .. BabbleBoss["The Big Bad Wolf"], "=q5=" .. AL["Red Riding Hood"] };
+		[16] = { icon = "INV_Box_01", name = WHITE.. BabbleBoss["The Big Bad Wolf"], "=q5=" .. AL["Red Riding Hood"] };
 		[17] = { itemID = 28582, droprate = "2.85%" }; --Red Riding Hood's Cloak
 		[18] = { itemID = 28583, droprate = "6.37%" }; --Big Bad Wolf's Head
 		[19] = { itemID = 28584, droprate = "6.12%" }; --Big Bad Wolf's Paw
 		[20] = { itemID = 28581, droprate = "2.42%" }; --Wolfslayer Sniper Rifle
-		[22] = { icon = "INV_Box_01", name = "=q6=" .. AL["Shared Drops"] };
+		[22] = { icon = "INV_Box_01", name = WHITE.. AL["Shared Drops"] };
 		[30] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 		[24] = { itemID = 28594, droprate = "5.96%" }; --Trial-FireTrousers
 		[25] = { itemID = 28591, droprate = "2.45%" }; --Earthsoul Leggings
@@ -2153,7 +2153,7 @@ AtlasLoot_Data["Karazhan"] = {
 		[20] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 		[21] = { itemID = 400751, droprate = "100%" }; --Raider's Commendations
 		[23] = { itemID = 60169, droprate = "1%" }; --Pet Sigil
-		[25] = { itemID = 499438, [AtlasLoot.Difficultys.MIN_DIF] = AtlasLoot.Difficultys.Heroic }; --Smoldering Emberwyrm
+		[25] = { itemID = 499438, [AtlasLoot.Difficulties.MIN_DIF] = AtlasLoot.Difficulties.Heroic }; --Smoldering Emberwyrm
 	};
 	{ --Trash Mobs
 		Name = AL["Trash Mobs"];
@@ -2188,14 +2188,14 @@ AtlasLoot_Data["MagistersTerrace"] = {
 	Map = "MagistersTerrace";
 	{
 		Name = BabbleBoss["Selin Fireheart"];
-		[1] = { icon = "INV_Box_01", name = "=q6=#j1#" };
+		[1] = { icon = "INV_Box_01", name = WHITE..AL["Normal Mode"] };
 		[2] = { itemID = 34702 }; --Cloak of Swift Mending
 		[3] = { itemID = 34697 }; --Bindings of Raging Fire
 		[4] = { itemID = 34701 }; --Leggings of the Betrayed
 		[5] = { itemID = 34698 }; --Bracers of the Forest Stalker
 		[6] = { itemID = 34700 }; --Gauntlets of Divine Blessings
 		[7] = { itemID = 34699 }; --Sun-forged Cleaver
-		[16] = { icon = "INV_Box_01", name = "#j27#" };
+		[16] = { icon = "INV_Box_01", name = WHITE..AL["Additional Heroic Loot"] };
 		[17] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 		[18] = { itemID = 34602, droprate = "0%" }; --Eversong Cuffs
 		[19] = { itemID = 34601, droprate = "1%" }; --Shoulderplates of Everlasting Pain
@@ -2205,14 +2205,14 @@ AtlasLoot_Data["MagistersTerrace"] = {
 	};
 	{
 		Name = BabbleBoss["Vexallus"];
-		[1] = { icon = "INV_Box_01", name = "=q6=#j1#" };
+		[1] = { icon = "INV_Box_01", name = WHITE..AL["Normal Mode"] };
 		[2] = { itemID = 34708, droprate = "7%" }; --Cloak of the Coming Night
 		[3] = { itemID = 34705 }; --Bracers of Divine Infusion
 		[4] = { itemID = 34707, droprate = "6%" }; --Boots of Resuscitation
 		[5] = { itemID = 34704, droprate = "8%" }; --Band of Arcane Alacrity
 		[6] = { itemID = 34706 }; --Band of Determination
 		[7] = { itemID = 34703, droprate = "6%" }; --Latro's Dancing Blade
-		[16] = { icon = "INV_Box_01", name = "#j27#" };
+		[16] = { icon = "INV_Box_01", name = WHITE..AL["Additional Heroic Loot"] };
 		[17] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 		[18] = { itemID = 34607, droprate = "0%" }; --Fel-tinged Mantle
 		[19] = { itemID = 34605, droprate = "9%" }; --Breastplate of Fierce Survival
@@ -2222,7 +2222,7 @@ AtlasLoot_Data["MagistersTerrace"] = {
 	};
 	{
 		Name = BabbleBoss["Priestess Delrissa"];
-		[1] = { icon = "INV_Box_01", name = "=q6=#j1#" };
+		[1] = { icon = "INV_Box_01", name = WHITE..AL["Normal Mode"] };
 		[2] = { itemID = 34792, droprate = "7%" }; --Cloak of the Betrayed
 		[3] = { itemID = 34788 }; --Duskhallow Mantle
 		[4] = { itemID = 34791, droprate = "6%" }; --Gauntlets of the Tranquil Waves
@@ -2230,7 +2230,7 @@ AtlasLoot_Data["MagistersTerrace"] = {
 		[6] = { itemID = 34790, droprate = "6%" }; --Battle-mace of the High Priestess
 		[7] = { itemID = 34783, droprate = "7%" }; --Nightstrike
 		[9] = { itemID = 35756, droprate = { nil, "2%", "5%", "7%", "10%" } }; --Formula: Enchant Cloak - Steelweave
-		[16] = { icon = "INV_Box_01", name = "#j27#" };
+		[16] = { icon = "INV_Box_01", name = WHITE..AL["Additional Heroic Loot"] };
 		[17] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 		[18] = { itemID = 34473, droprate = "9%" }; --Commendation of Kael'thas
 		[19] = { itemID = 34472, droprate = "9%" }; --Shard of Contempt
@@ -2495,7 +2495,7 @@ AtlasLoot_Data["TKArc"] = {
 		[3] = { itemID = 28384, droprate = "9.52%" }; --Outland Striders
 		[4] = { itemID = 28375, droprate = "4.38%" }; --Rubium War-Girdle
 		[5] = { itemID = 28372, droprate = "5.80%" }; --Idol of Feral Shadows
-		[16] = { icon = "INV_Box_01", name = "#j27#" };
+		[16] = { icon = "INV_Box_01", name = WHITE..AL["Additional Heroic Loot"] };
 		[17] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 		[18] = { itemID = 30582, droprate = ".18%" }; --Deadly Fire Opal
 		[19] = { itemID = 30575, droprate = ".18%" }; --Nimble Fire Opal
@@ -2508,7 +2508,7 @@ AtlasLoot_Data["TKArc"] = {
 		[3] = { itemID = 28394, droprate = "6.81%" }; --Ryngo's Band of Ingenuity
 		[4] = { itemID = 28393, droprate = "6.14%" }; --Warmaul of Infused Light
 		[5] = { itemID = 28397, droprate = "7.65%" }; --Emberhawk Crossbow
-		[16] = { icon = "INV_Box_01", name = "#j27#" };
+		[16] = { icon = "INV_Box_01", name = WHITE..AL["Additional Heroic Loot"] };
 		[17] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 		[18] = { itemID = 30582, droprate = ".18%" }; --Deadly Fire Opal
 		[19] = { itemID = 30575, droprate = ".18%" }; --Nimble Fire Opal
@@ -2522,7 +2522,7 @@ AtlasLoot_Data["TKArc"] = {
 		[5] = { itemID = 28387, droprate = "5.92%" }; --Lamp of Peaceful Repose
 		[6] = { itemID = 28392, droprate = "8.37%" }; --Reflex Blades
 		[7] = { itemID = 28386, droprate = "5.29%" }; --Nether Core's Control Rod
-		[16] = { icon = "INV_Box_01", name = "#j27#" };
+		[16] = { icon = "INV_Box_01", name = WHITE..AL["Additional Heroic Loot"] };
 		[17] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 		[18] = { itemID = 30582, droprate = ".18%" }; --Deadly Fire Opal
 		[19] = { itemID = 30575, droprate = ".18%" }; --Nimble Fire Opal
@@ -2542,7 +2542,7 @@ AtlasLoot_Data["TKArc"] = {
 		[11] = { itemID = 28418, droprate = "2.23%" }; --Shiffar's Nexus-Horn
 		[12] = { itemID = 28412, droprate = "3.15%" }; --Lamp of Peaceful Radiance
 		[13] = { itemID = 28416, droprate = "2.35%" }; --Hungering Spineripper
-		[16] = { icon = "INV_Box_01", name = "#j27#" };
+		[16] = { icon = "INV_Box_01", name = WHITE..AL["Additional Heroic Loot"] };
 		[17] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 		[18] = { itemID = 30582, droprate = ".18%" }; --Deadly Fire Opal
 		[19] = { itemID = 30575, droprate = ".18%" }; --Nimble Fire Opal
@@ -2555,19 +2555,19 @@ AtlasLoot_Data["TKArc"] = {
 	};
 	{
 		Name = AL["Trash Mobs"];
-		[1] = { icon = "INV_Box_01", name = "=q6=" .. AL["Trash Mobs"], "=q5=" .. BabbleZone["The Botanica"] };
+		[1] = { icon = "INV_Box_01", name = WHITE.. AL["Trash Mobs"], "=q5=" .. BabbleZone["The Botanica"] };
 		[2] = { itemID = 24172, droprate = ".27%" }; --Design: Coronet of Verdant Flame
-		[4] = { icon = "INV_Box_01", name = "=q6=" .. AL["Trash Mobs"], "=q5=" .. BabbleZone["The Mechanar"] };
+		[4] = { icon = "INV_Box_01", name = WHITE.. AL["Trash Mobs"], "=q5=" .. BabbleZone["The Mechanar"] };
 		[5] = { itemID = 22920, droprate = ".30%" }; --Recipe: Major Fire Protection Potion
 		[6] = { itemID = 21906, droprate = ".57%" }; --Pattern: Arcanoweave Boots
-		[8] = { icon = "INV_Box_01", name = "=q6=" .. AL["Overcharged Manacell"], "=q5=" .. BabbleZone["The Mechanar"] };
+		[8] = { icon = "INV_Box_01", name = WHITE.. AL["Overcharged Manacell"], "=q5=" .. BabbleZone["The Mechanar"] };
 		[9] = { itemID = 30824 }; --Overcharged Manacell
-		[16] = { icon = "INV_Box_01", name = "=q6=" .. AL["Trash Mobs"], "=q5=" .. BabbleZone["The Arcatraz"] };
+		[16] = { icon = "INV_Box_01", name = WHITE.. AL["Trash Mobs"], "=q5=" .. BabbleZone["The Arcatraz"] };
 		[17] = { itemID = 23606, droprate = ".93%" }; --Plans: Felsteel Leggings
 		[18] = { itemID = 22556, droprate = ".68%" }; --Formula: Enchant 2H Weapon - Major Agility
 		[19] = { itemID = 29672, droprate = ".84%" }; --Pattern: Flame Armor Kit
 		[20] = { itemID = 21905, droprate = ".21%" }; --Pattern: Arcanoweave Bracers
-		[22] = { icon = "INV_Box_01", name = "=q6=" .. AL["Third Fragment Guardian"], "=q5=" .. BabbleZone["The Arcatraz"] };
+		[22] = { icon = "INV_Box_01", name = WHITE.. AL["Third Fragment Guardian"], "=q5=" .. BabbleZone["The Arcatraz"] };
 		[23] = { itemID = 24488, droprate = "100%" }; --Third Key Fragment
 	};
 };
@@ -2590,7 +2590,7 @@ AtlasLoot_Data["TKBot"] = {
 		[4] = { itemID = 28296, droprate = "4.10%" }; --Libram of the Lightbringer
 		[5] = { itemID = 28311, droprate = "6.25%" }; --Revenger
 		[7] = { itemID = 28769, droprate = "100%" }; --The Keystone
-		[16] = { icon = "INV_Box_01", name = "#j27#" };
+		[16] = { icon = "INV_Box_01", name = WHITE..AL["Additional Heroic Loot"] };
 		[17] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 		[18] = { itemID = 30574, droprate = ".1" }; --Brutal Tanzanite
 		[19] = { itemID = 30572, droprate = ".1" }; --Imperial Tanzanite
@@ -2605,7 +2605,7 @@ AtlasLoot_Data["TKBot"] = {
 		[5] = { itemID = 28316, droprate = "4.60%" }; --Aegis of the Sunbird
 		[7] = { itemID = 23617, droprate = ".07%" }; --Plans: Earthpeace Breastplate
 		[9] = { itemID = 31744, droprate = "100%" }; --Botanist's Field Guide
-		[16] = { icon = "INV_Box_01", name = "#j27#" };
+		[16] = { icon = "INV_Box_01", name = WHITE..AL["Additional Heroic Loot"] };
 		[17] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 		[18] = { itemID = 30574, droprate = ".100" }; --Brutal Tanzanite
 		[19] = { itemID = 30572, droprate = ".100" }; --Imperial Tanzanite
@@ -2619,7 +2619,7 @@ AtlasLoot_Data["TKBot"] = {
 		[5] = { itemID = 28323, droprate = "6.25%" }; --Ring of Umbral Doom
 		[6] = { itemID = 28322, droprate = "8.16%" }; --Runed Dagger of Solace
 		[7] = { itemID = 28325, droprate = "5.46%" }; --Dreamer's Dragonstaff
-		[16] = { icon = "INV_Box_01", name = "#j27#" };
+		[16] = { icon = "INV_Box_01", name = WHITE..AL["Additional Heroic Loot"] };
 		[17] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 		[18] = { itemID = 30574, droprate = ".100" }; --Brutal Tanzanite
 		[19] = { itemID = 30572, droprate = ".100" }; --Imperial Tanzanite
@@ -2632,7 +2632,7 @@ AtlasLoot_Data["TKBot"] = {
 		[4] = { itemID = 28338, droprate = "8.71%" }; --Devil-Stitched Leggings
 		[5] = { itemID = 28340, droprate = "7.19%" }; --Mantle of Autumn
 		[6] = { itemID = 28339, droprate = "9.07%" }; --Boots of the Shifting Sands
-		[16] = { icon = "INV_Box_01", name = "#j27#" };
+		[16] = { icon = "INV_Box_01", name = WHITE..AL["Additional Heroic Loot"] };
 		[17] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 		[18] = { itemID = 30574, droprate = ".100" }; --Brutal Tanzanite
 		[19] = { itemID = 30572, droprate = ".100" }; --Imperial Tanzanite
@@ -2699,16 +2699,16 @@ AtlasLoot_Data["TKMech"] = {
 	Map = "TempestKeepMechanar";
 	{
 		Name = AL["Cache of the Legion"];
-		[1] = { icon = "INV_Box_01", name = "=q6=" .. AL["Cache of the Legion"] };
+		[1] = { icon = "INV_Box_01", name = WHITE.. AL["Cache of the Legion"] };
 		[2] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 		[3] = { itemID = 28249, droprate = "1.16%" }; --Capacitus' Cloak of Calibration
 		[4] = { itemID = 28250, droprate = "7.89%" }; --Vestia's Pauldrons of Inner Grace
 		[5] = { itemID = 28252, droprate = "2.53%" }; --Bloodfyre Robes of Annihilation
 		[6] = { itemID = 28251, droprate = "8.74%" }; --Boots of the Glade-Keeper
 		[7] = { itemID = 28248, droprate = "9.58%" }; --Totem of the Void
-		[16] = { icon = "INV_Box_01", name = "=q6=" .. BabbleBoss["Gatewatcher Gyro-Kill"] };
+		[16] = { icon = "INV_Box_01", name = WHITE.. BabbleBoss["Gatewatcher Gyro-Kill"] };
 		[17] = { itemID = 30436, droprate = "100%" }; --Jagged Blue Crystal
-		[19] = { icon = "INV_Box_01", name = "=q6=" .. BabbleBoss["Gatewatcher Iron-Hand"] };
+		[19] = { icon = "INV_Box_01", name = WHITE.. BabbleBoss["Gatewatcher Iron-Hand"] };
 		[20] = { itemID = 30437, droprate = "100%" }; --Jagged Red Crystal
 	};
 	{
@@ -2719,7 +2719,7 @@ AtlasLoot_Data["TKMech"] = {
 		[4] = { itemID = 28257, droprate = "4.36%" }; --Hammer of the Penitent
 		[5] = { itemID = 28253, droprate = "7.69%" }; --Plasma Rat's Hyper-Scythe
 		[7] = { itemID = 35582 }; --Schematic: Rocket Boots Xtreme Lite
-		[16] = { icon = "INV_Box_01", name = "#j27#" };
+		[16] = { icon = "INV_Box_01", name = WHITE..AL["Additional Heroic Loot"] };
 		[17] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 		[18] = { itemID = 30565, droprate = "8.72%" }; --Assassin's Fire Opal
 		[19] = { itemID = 30566, droprate = ".87%" }; --Defender's Tanzanite
@@ -2733,7 +2733,7 @@ AtlasLoot_Data["TKMech"] = {
 		[4] = { itemID = 28263, droprate = "5.58%" }; --Stellaris
 		[5] = { itemID = 28258, droprate = "5.88%" }; --Nethershrike
 		[7] = { itemID = 22920 }; --Recipe: Major Fire Protection Potion
-		[16] = { icon = "INV_Box_01", name = "#j27#" };
+		[16] = { icon = "INV_Box_01", name = WHITE..AL["Additional Heroic Loot"] };
 		[17] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 		[18] = { itemID = 30565, droprate = "8.72%" }; --Assassin's Fire Opal
 		[19] = { itemID = 30566, droprate = ".87%" }; --Defender's Tanzanite
@@ -2754,7 +2754,7 @@ AtlasLoot_Data["TKMech"] = {
 		[12] = { itemID = 28275, droprate = "4.78%" }; --Beast Lord Helm
 		[13] = { itemID = 28285, droprate = "0.34%" }; --Helm of the Righteous
 		[15] = { itemID = 21907, droprate = ".11%" }; --Pattern: Arcanoweave Robe
-		[16] = { icon = "INV_Box_01", name = "#j27#" };
+		[16] = { icon = "INV_Box_01", name = WHITE..AL["Additional Heroic Loot"] };
 		[17] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
 		[18] = { itemID = 29251, droprate = ".88%" }; --Boots of the Pious
 		[19] = { itemID = 32076 }; --Handguards of the Steady
@@ -2789,7 +2789,7 @@ AtlasLoot_Data["TKEye"] = {
 		[7] = { itemID = 30448, droprate = "2%" }; --Talon of Al'ar
 		[8] = { itemID = 30447, droprate = "1%" }; --Tome of Fiery Redemption
 		[9] = { itemID = 29923, droprate = "3%" }; --Talisman of the Sun King
-		[11] = { itemID = 600867, [AtlasLoot.Difficultys.MIN_DIF] = AtlasLoot.Difficultys.Heroic }; --Elemental Lodestone: Al'ar
+		[11] = { itemID = 600867, [AtlasLoot.Difficulties.MIN_DIF] = AtlasLoot.Difficulties.Heroic }; --Elemental Lodestone: Al'ar
 		[16] = { itemID = 32944, droprate = "2%" }; --Talon of the Phoenix
 		[17] = { itemID = 29948, droprate = "0%" }; --Claw of the Phoenix
 		[18] = { itemID = 29924, droprate = "1%" }; --Netherbane
@@ -3934,22 +3934,22 @@ AtlasLoot_Data["VioletEye"] = {
 	Name = BabbleFaction["The Violet Eye"];
 	{
 		Name = "Rings";
-		[1] = { icon = "INV_Jewelry_Ring_62", name = "=q6=" .. AL["Path of the Violet Assassin"] };
+		[1] = { icon = "INV_Jewelry_Ring_62", name = WHITE.. AL["Path of the Violet Assassin"] };
 		[2] = { itemID = 29280 }; --Violet Signet
 		[3] = { itemID = 29281 }; --Violet Signet
 		[4] = { itemID = 29282 }; --Violet Signet
 		[5] = { itemID = 29283 }; --Violet Signet of the Master Assassin
-		[7] = { icon = "INV_Jewelry_Ring_62", name = "=q6=" .. AL["Path of the Violet Mage"] };
+		[7] = { icon = "INV_Jewelry_Ring_62", name = WHITE.. AL["Path of the Violet Mage"] };
 		[8] = { itemID = 29284 }; --Violet Signet
 		[9] = { itemID = 29285 }; --Violet Signet
 		[10] = { itemID = 29286 }; --Violet Signet
 		[11] = { itemID = 29287 }; --Violet Signet of the Archmage
-		[16] = { icon = "INV_Jewelry_Ring_62", name = "=q6=" .. AL["Path of the Violet Restorer"] };
+		[16] = { icon = "INV_Jewelry_Ring_62", name = WHITE.. AL["Path of the Violet Restorer"] };
 		[17] = { itemID = 29288 }; --Violet Signet
 		[18] = { itemID = 29289 }; --Violet Signet
 		[19] = { itemID = 29291 }; --Violet Signet
 		[20] = { itemID = 29290 }; --Violet Signet of the Grand Restorer
-		[22] = { icon = "INV_Jewelry_Ring_62", name = "=q6=" .. AL["Path of the Violet Protector"] };
+		[22] = { icon = "INV_Jewelry_Ring_62", name = WHITE.. AL["Path of the Violet Protector"] };
 		[23] = { itemID = 29276 }; --Violet Signet
 		[24] = { itemID = 29277 }; --Violet Signet
 		[25] = { itemID = 29278 }; --Violet Signet
@@ -4091,13 +4091,13 @@ AtlasLoot_Data["PVPHellfire"] = {
 		[1] = { itemID = 27833, desc = "=ds=15 #markthrallmarhhold#" }; --Band of the Victor
 		[2] = { itemID = 27786, desc = "=ds=10 #markthrallmarhhold#" }; --Barbed Deep Peridot
 		[3] = { itemID = 28360, desc = "=ds=10 #markthrallmarhhold#" }; --Mighty Blood Garnet
-		[5] = { icon = "INV_BannerPVP_02", name = "=q6="..BabbleFaction["Alliance"] };
+		[5] = { icon = "INV_BannerPVP_02", name = WHITE..BabbleFaction["Alliance"] };
 		[6] = { itemID = 24520, desc = "=ds=5 #markhhold#" }; --Honor Hold Favor
 		[7] = { itemID = 24579, desc = "=ds="..AL["Currency (Alliance)"] }; --Mark of Honor Hold
 		[16] = { itemID = 27830, desc = "=ds=15 #markthrallmarhhold#" }; --Circlet of the Victor
 		[17] = { itemID = 27785, desc = "=ds=10 #markthrallmarhhold#" }; --Notched Deep Peridot
 		[18] = { itemID = 27777, desc = "=ds=10 #markthrallmarhhold#" }; --Stark Blood Garnet
-		[20] = { icon = "INV_BannerPVP_01", name = "=q6="..BabbleFaction["Horde"] };
+		[20] = { icon = "INV_BannerPVP_01", name = WHITE..BabbleFaction["Horde"] };
 		[21] = { itemID = 24522, desc = "=ds=5 #markthrallmar#" }; --Thrallmar Favor
 		[22] = { itemID = 24581, desc = "=ds="..AL["Currency (Horde)"] }; --Mark of Thrallmar
 	};
@@ -4136,12 +4136,12 @@ AtlasLoot_Data["PVPHalaa"] = {
 		Name = "Page 2";
 		[1] = { itemID = 30611 }; --Halaani Razorshaft
 		[2] = { itemID = 30615 }; --Halaani Whiskey
-		[4] = { icon = "INV_BannerPVP_02", name = "=q6="..BabbleFaction["Alliance"] };
+		[4] = { icon = "INV_BannerPVP_02", name = WHITE..BabbleFaction["Alliance"] };
 		[5] = { itemID = 30598 }; --Don Amancio's Heart
 		[6] = { itemID = 30597 }; --Halaani Claymore
 		[7] = { itemID = 30599 }; --Avenging Blades
 		[16] = { itemID = 30612 }; --Halaani Grimshot
-		[19] = { icon = "INV_BannerPVP_01", name = "=q6="..BabbleFaction["Horde"] };
+		[19] = { icon = "INV_BannerPVP_01", name = WHITE..BabbleFaction["Horde"] };
 		[20] = { itemID = 30571 }; --Don Rodrigo's Heart
 		[21] = { itemID = 30570 }; --Arkadian Claymore
 		[22] = { itemID = 30568 }; --The Sharp Cookie
@@ -4202,127 +4202,127 @@ AtlasLoot_Data["PVP70RepGear"] = {
 	Name = "Rep PVP Gear";
 	{
 		Name = BabbleInventory["Cloth"];
-		[1] = { icon = "INV_BannerPVP_02", name = "=q6=#pvprep705_1#", desc = "=ec1=#c5#" };
-		[2] = { itemID = 35339, desc = "=ds=#f3#/#f4#, =ec1="..BabbleFaction["Honored"] }; --Satin Hood
-		[3] = { itemID = 35341, desc = "=ds=#f2#, =ec1="..BabbleFaction["Honored"] }; --Satin Mantle
-		[4] = { itemID = 35342, desc = "=ds=#f6#, =ec1="..BabbleFaction["Honored"] }; --Satin Robe
-		[5] = { itemID = 35338, desc = "=ds=#f5#, =ec1="..BabbleFaction["Honored"] }; --Satin Gloves
-		[6] = { itemID = 35340, desc = "=ds=#f1#, =ec1="..BabbleFaction["Honored"] }; --Satin Leggings
-		[8] = { icon = "INV_BannerPVP_02", name = "=q6=#pvprep705_2#", desc = "=ec1=#c5#" };
-		[9] = { itemID = 35333, desc = "=ds=#f2#, =ec1="..BabbleFaction["Honored"] }; --Mooncloth Cowl
-		[10] = { itemID = 35336, desc = "=ds=#f6#, =ec1="..BabbleFaction["Honored"] }; --Mooncloth Shoulderpads
-		[11] = { itemID = 35337, desc = "=ds=#f3#/#f4#, =ec1="..BabbleFaction["Honored"] }; --Mooncloth Vestments
-		[12] = { itemID = 35335, desc = "=ds=#f1#, =ec1="..BabbleFaction["Honored"] }; --Mooncloth Mitts
-		[13] = { itemID = 35334, desc = "=ds=#f5#, =ec1="..BabbleFaction["Honored"] }; --Mooncloth Legguards
-		[16] = { icon = "INV_BannerPVP_02", name = "=q6=#pvprep703#", desc = "=ec1=#c3#" };
-		[17] = { itemID = 35344, desc = "=ds=#f1#, =ec1="..BabbleFaction["Honored"] }; --Evoker's Silk Cowl
-		[18] = { itemID = 35343, desc = "=ds=#f3#/#f4#, =ec1="..BabbleFaction["Honored"] }; --Evoker's Silk Amice
-		[19] = { itemID = 35346, desc = "=ds=#f5#, =ec1="..BabbleFaction["Honored"] }; --Evoker's Silk Raiment
-		[20] = { itemID = 35345, desc = "=ds=#f2#, =ec1="..BabbleFaction["Honored"] }; --Evoker's Silk Handguards
-		[21] = { itemID = 35347, desc = "=ds=#f6#, =ec1="..BabbleFaction["Honored"] }; --Evoker's Silk Trousers
-		[23] = { icon = "INV_BannerPVP_02", name = "=q6=#pvprep708#", desc = "=ec1=#c8#" };
-		[24] = { itemID = 35329, desc = "=ds=#f6#, =ec1="..BabbleFaction["Honored"] }; --Dreadweave Hood
-		[25] = { itemID = 35331, desc = "=ds=#f1#, =ec1="..BabbleFaction["Honored"] }; --Dreadweave Mantle
-		[26] = { itemID = 35332, desc = "=ds=#f3#/#f4#, =ec1="..BabbleFaction["Honored"] }; --Dreadweave Robe
-		[27] = { itemID = 35328, desc = "=ds=#f5#, =ec1="..BabbleFaction["Honored"] }; --Dreadweave Gloves
-		[28] = { itemID = 35330, desc = "=ds=#f2#, =ec1="..BabbleFaction["Honored"] }; --Dreadweave Leggings
+		[1] = { icon = "INV_BannerPVP_02", name = "=q6="..AL["Satin Battlegear"], desc = "=ec1="..LOCALIZED_CLASS_NAMES_MALE["PRIEST"] };
+		[2] = { itemID = 35339, desc = "=ds="..BabbleFaction["Thrallmar"].."/"..BabbleFaction["Honor Hold"]..", =ec1="..BabbleFaction["Honored"] }; --Satin Hood
+		[3] = { itemID = 35341, desc = "=ds="..BabbleFaction["The Sha'tar"]..", =ec1="..BabbleFaction["Honored"] }; --Satin Mantle
+		[4] = { itemID = 35342, desc = "=ds="..BabbleFaction["Cenarion Expedition"]..", =ec1="..BabbleFaction["Honored"] }; --Satin Robe
+		[5] = { itemID = 35338, desc = "=ds="..BabbleFaction["Keepers of Time"]..", =ec1="..BabbleFaction["Honored"] }; --Satin Gloves
+		[6] = { itemID = 35340, desc = "=ds="..BabbleFaction["Lower City"]..", =ec1="..BabbleFaction["Honored"] }; --Satin Leggings
+		[8] = { icon = "INV_BannerPVP_02", name = "=q6="..AL["Mooncloth Battlegear"], desc = "=ec1="..LOCALIZED_CLASS_NAMES_MALE["PRIEST"] };
+		[9] = { itemID = 35333, desc = "=ds="..BabbleFaction["The Sha'tar"]..", =ec1="..BabbleFaction["Honored"] }; --Mooncloth Cowl
+		[10] = { itemID = 35336, desc = "=ds="..BabbleFaction["Cenarion Expedition"]..", =ec1="..BabbleFaction["Honored"] }; --Mooncloth Shoulderpads
+		[11] = { itemID = 35337, desc = "=ds="..BabbleFaction["Thrallmar"].."/"..BabbleFaction["Honor Hold"]..", =ec1="..BabbleFaction["Honored"] }; --Mooncloth Vestments
+		[12] = { itemID = 35335, desc = "=ds="..BabbleFaction["Lower City"]..", =ec1="..BabbleFaction["Honored"] }; --Mooncloth Mitts
+		[13] = { itemID = 35334, desc = "=ds="..BabbleFaction["Keepers of Time"]..", =ec1="..BabbleFaction["Honored"] }; --Mooncloth Legguards
+		[16] = { icon = "INV_BannerPVP_02", name = "=q6="..AL["Evoker's Silk Battlegear"], desc = "=ec1="..LOCALIZED_CLASS_NAMES_MALE["MAGE"] };
+		[17] = { itemID = 35344, desc = "=ds="..BabbleFaction["Lower City"]..", =ec1="..BabbleFaction["Honored"] }; --Evoker's Silk Cowl
+		[18] = { itemID = 35343, desc = "=ds="..BabbleFaction["Thrallmar"].."/"..BabbleFaction["Honor Hold"]..", =ec1="..BabbleFaction["Honored"] }; --Evoker's Silk Amice
+		[19] = { itemID = 35346, desc = "=ds="..BabbleFaction["Keepers of Time"]..", =ec1="..BabbleFaction["Honored"] }; --Evoker's Silk Raiment
+		[20] = { itemID = 35345, desc = "=ds="..BabbleFaction["The Sha'tar"]..", =ec1="..BabbleFaction["Honored"] }; --Evoker's Silk Handguards
+		[21] = { itemID = 35347, desc = "=ds="..BabbleFaction["Cenarion Expedition"]..", =ec1="..BabbleFaction["Honored"] }; --Evoker's Silk Trousers
+		[23] = { icon = "INV_BannerPVP_02", name = "=q6="..AL["Dreadweave Battlegear"], desc = "=ec1="..LOCALIZED_CLASS_NAMES_MALE["SHAMAN"] };
+		[24] = { itemID = 35329, desc = "=ds="..BabbleFaction["Cenarion Expedition"]..", =ec1="..BabbleFaction["Honored"] }; --Dreadweave Hood
+		[25] = { itemID = 35331, desc = "=ds="..BabbleFaction["Lower City"]..", =ec1="..BabbleFaction["Honored"] }; --Dreadweave Mantle
+		[26] = { itemID = 35332, desc = "=ds="..BabbleFaction["Thrallmar"].."/"..BabbleFaction["Honor Hold"]..", =ec1="..BabbleFaction["Honored"] }; --Dreadweave Robe
+		[27] = { itemID = 35328, desc = "=ds="..BabbleFaction["Keepers of Time"]..", =ec1="..BabbleFaction["Honored"] }; --Dreadweave Gloves
+		[28] = { itemID = 35330, desc = "=ds="..BabbleFaction["The Sha'tar"]..", =ec1="..BabbleFaction["Honored"] }; --Dreadweave Leggings
 	};
 	{
 		Name = BabbleInventory["Leather"];
-		[1] = { icon = "INV_BannerPVP_02", name = "=q6=#pvprep701_1#", desc = "=ec1=#c1#" };
-		[2] = { itemID = 35357, desc = "=ds=#f1#, =ec1="..BabbleFaction["Honored"] }; --Dragonhide Helm
-		[3] = { itemID = 35359, desc = "=ds=#f2#, =ec1="..BabbleFaction["Honored"] }; --Dragonhide Spaulders
-		[4] = { itemID = 35360, desc = "=ds=#f3#/#f4#, =ec1="..BabbleFaction["Honored"] }; --Dragonhide Robe
-		[5] = { itemID = 35356, desc = "=ds=#f5#, =ec1="..BabbleFaction["Honored"] }; --Dragonhide Gloves
-		[6] = { itemID = 35358, desc = "=ds=#f6#, =ec1="..BabbleFaction["Honored"] }; --Dragonhide Legguards
-		[8] = { icon = "INV_BannerPVP_02", name = "=q6=#pvprep701_2#", desc = "=ec1=#c1#" };
-		[9] = { itemID = 35372, desc = "=ds=#f5#, =ec1="..BabbleFaction["Honored"] }; --Wyrmhide Helm
-		[10] = { itemID = 35374, desc = "=ds=#f6#, =ec1="..BabbleFaction["Honored"] }; --Wyrmhide Spaulders
-		[11] = { itemID = 35375, desc = "=ds=#f2#, =ec1="..BabbleFaction["Honored"] }; --Wyrmhide Robe
-		[12] = { itemID = 35371, desc = "=ds=#f3#/#f4#, =ec1="..BabbleFaction["Honored"] }; --Wyrmhide Gloves
-		[13] = { itemID = 35373, desc = "=ds=#f1#, =ec1="..BabbleFaction["Honored"] }; --Wyrmhide Legguards
-		[16] = { icon = "INV_BannerPVP_02", name = "=q6=#pvprep701_3#", desc = "=ec1=#c1#" };
-		[17] = { itemID = 35362, desc = "=ds=#f2#, =ec1="..BabbleFaction["Honored"] }; --Kodohide Helm
-		[18] = { itemID = 35364, desc = "=ds=#f3#/#f4#, =ec1="..BabbleFaction["Honored"] }; --Kodohide Spaulders
-		[19] = { itemID = 35365, desc = "=ds=#f6#, =ec1="..BabbleFaction["Honored"] }; --Kodohide Robe
-		[20] = { itemID = 35361, desc = "=ds=#f1#, =ec1="..BabbleFaction["Honored"] }; --Kodohide Gloves
-		[21] = { itemID = 35363, desc = "=ds=#f5#, =ec1="..BabbleFaction["Honored"] }; --Kodohide Legguards
-		[23] = { icon = "INV_BannerPVP_02", name = "=q6=#pvprep706#", desc = "=ec1=#c6#" };
-		[24] = { itemID = 35367, desc = "=ds=#f6#, =ec1="..BabbleFaction["Honored"] }; --Opportunist's Leather Helm
-		[25] = { itemID = 35369, desc = "=ds=#f5#, =ec1="..BabbleFaction["Honored"] }; --Opportunist's Leather Spaulders
-		[26] = { itemID = 35370, desc = "=ds=#f1#, =ec1="..BabbleFaction["Honored"] }; --Opportunist's Leather Tunic
-		[27] = { itemID = 35366, desc = "=ds=#f3#/#f4#, =ec1="..BabbleFaction["Honored"] }; --Opportunist's Leather Gloves
-		[28] = { itemID = 35368, desc = "=ds=#f2#, =ec1="..BabbleFaction["Honored"] }; --Opportunist's Leather Legguards
+		[1] = { icon = "INV_BannerPVP_02", name = "=q6="..AL["Dragonhide Battlegear"], desc = "=ec1="..LOCALIZED_CLASS_NAMES_MALE["DRUID"] };
+		[2] = { itemID = 35357, desc = "=ds="..BabbleFaction["Lower City"]..", =ec1="..BabbleFaction["Honored"] }; --Dragonhide Helm
+		[3] = { itemID = 35359, desc = "=ds="..BabbleFaction["The Sha'tar"]..", =ec1="..BabbleFaction["Honored"] }; --Dragonhide Spaulders
+		[4] = { itemID = 35360, desc = "=ds="..BabbleFaction["Thrallmar"].."/"..BabbleFaction["Honor Hold"]..", =ec1="..BabbleFaction["Honored"] }; --Dragonhide Robe
+		[5] = { itemID = 35356, desc = "=ds="..BabbleFaction["Keepers of Time"]..", =ec1="..BabbleFaction["Honored"] }; --Dragonhide Gloves
+		[6] = { itemID = 35358, desc = "=ds="..BabbleFaction["Cenarion Expedition"]..", =ec1="..BabbleFaction["Honored"] }; --Dragonhide Legguards
+		[8] = { icon = "INV_BannerPVP_02", name = "=q6="..AL["Wyrmhide Battlegear"], desc = "=ec1="..LOCALIZED_CLASS_NAMES_MALE["DRUID"] };
+		[9] = { itemID = 35372, desc = "=ds="..BabbleFaction["Keepers of Time"]..", =ec1="..BabbleFaction["Honored"] }; --Wyrmhide Helm
+		[10] = { itemID = 35374, desc = "=ds="..BabbleFaction["Cenarion Expedition"]..", =ec1="..BabbleFaction["Honored"] }; --Wyrmhide Spaulders
+		[11] = { itemID = 35375, desc = "=ds="..BabbleFaction["The Sha'tar"]..", =ec1="..BabbleFaction["Honored"] }; --Wyrmhide Robe
+		[12] = { itemID = 35371, desc = "=ds="..BabbleFaction["Thrallmar"].."/"..BabbleFaction["Honor Hold"]..", =ec1="..BabbleFaction["Honored"] }; --Wyrmhide Gloves
+		[13] = { itemID = 35373, desc = "=ds="..BabbleFaction["Lower City"]..", =ec1="..BabbleFaction["Honored"] }; --Wyrmhide Legguards
+		[16] = { icon = "INV_BannerPVP_02", name = "=q6="..AL["Kodohide Battlegear"], desc = "=ec1="..LOCALIZED_CLASS_NAMES_MALE["DRUID"] };
+		[17] = { itemID = 35362, desc = "=ds="..BabbleFaction["The Sha'tar"]..", =ec1="..BabbleFaction["Honored"] }; --Kodohide Helm
+		[18] = { itemID = 35364, desc = "=ds="..BabbleFaction["Thrallmar"].."/"..BabbleFaction["Honor Hold"]..", =ec1="..BabbleFaction["Honored"] }; --Kodohide Spaulders
+		[19] = { itemID = 35365, desc = "=ds="..BabbleFaction["Cenarion Expedition"]..", =ec1="..BabbleFaction["Honored"] }; --Kodohide Robe
+		[20] = { itemID = 35361, desc = "=ds="..BabbleFaction["Lower City"]..", =ec1="..BabbleFaction["Honored"] }; --Kodohide Gloves
+		[21] = { itemID = 35363, desc = "=ds="..BabbleFaction["Keepers of Time"]..", =ec1="..BabbleFaction["Honored"] }; --Kodohide Legguards
+		[23] = { icon = "INV_BannerPVP_02", name = "=q6="..AL["Opportunist's Battlegear"], desc = "=ec1="..LOCALIZED_CLASS_NAMES_MALE["ROGUE"] };
+		[24] = { itemID = 35367, desc = "=ds="..BabbleFaction["Cenarion Expedition"]..", =ec1="..BabbleFaction["Honored"] }; --Opportunist's Leather Helm
+		[25] = { itemID = 35369, desc = "=ds="..BabbleFaction["Keepers of Time"]..", =ec1="..BabbleFaction["Honored"] }; --Opportunist's Leather Spaulders
+		[26] = { itemID = 35370, desc = "=ds="..BabbleFaction["Lower City"]..", =ec1="..BabbleFaction["Honored"] }; --Opportunist's Leather Tunic
+		[27] = { itemID = 35366, desc = "=ds="..BabbleFaction["Thrallmar"].."/"..BabbleFaction["Honor Hold"]..", =ec1="..BabbleFaction["Honored"] }; --Opportunist's Leather Gloves
+		[28] = { itemID = 35368, desc = "=ds="..BabbleFaction["The Sha'tar"]..", =ec1="..BabbleFaction["Honored"] }; --Opportunist's Leather Legguards
 	};
 	{
 		Name = BabbleInventory["Mail"];
-		[1] = { icon = "INV_BannerPVP_02", name = "=q6=#pvprep707_1#", desc = "=ec1=#c7#" };
-		[2] = { itemID = 35383, desc = "=ds=#f3#/#f4#, =ec1="..BabbleFaction["Honored"] }; --Seer's Linked Helm
-		[3] = { itemID = 35385, desc = "=ds=#f6#, =ec1="..BabbleFaction["Honored"] }; --Seer's Linked Spaulders
-		[4] = { itemID = 35381, desc = "=ds=#f2#, =ec1="..BabbleFaction["Honored"] }; --Seer's Linked Armor
-		[5] = { itemID = 35382, desc = "=ds=#f1#, =ec1="..BabbleFaction["Honored"] }; --Seer's Linked Gauntlets
-		[6] = { itemID = 35384, desc = "=ds=#f5#, =ec1="..BabbleFaction["Honored"] }; --Seer's Linked Leggings
-		[8] = { icon = "INV_BannerPVP_02", name = "=q6=#pvprep707_2#", desc = "=ec1=#c7#" };
-		[9] = { itemID = 35388, desc = "=ds=#f2#, =ec1="..BabbleFaction["Honored"] }; --Seer's Mail Helm
-		[10] = { itemID = 35390, desc = "=ds=#f5#, =ec1="..BabbleFaction["Honored"] }; --Seer's Mail Spaulders
-		[11] = { itemID = 35386, desc = "=ds=#f3#/#f4#, =ec1="..BabbleFaction["Honored"] }; --Seer's Mail Armor
-		[12] = { itemID = 35387, desc = "=ds=#f6#, =ec1="..BabbleFaction["Honored"] }; --Seer's Mail Gauntlets
-		[13] = { itemID = 35389, desc = "=ds=#f1#, =ec1="..BabbleFaction["Honored"] }; --Seer's Mail Leggings
-		[16] = { icon = "INV_BannerPVP_02", name = "=q6=#pvprep707_3#", desc = "=ec1=#c7#" };
-		[17] = { itemID = 35393, desc = "=ds=#f5#, =ec1="..BabbleFaction["Honored"] }; --Seer's Ringmail Headpiece
-		[18] = { itemID = 35395, desc = "=ds=#f2#, =ec1="..BabbleFaction["Honored"] }; --Seer's Ringmail Shoulderpads
-		[19] = { itemID = 35391, desc = "=ds=#f1#, =ec1="..BabbleFaction["Honored"] }; --Seer's Ringmail Chestguard
-		[20] = { itemID = 35392, desc = "=ds=#f3#/#f4#, =ec1="..BabbleFaction["Honored"] }; --Seer's Ringmail Gloves
-		[21] = { itemID = 35394, desc = "=ds=#f6#, =ec1="..BabbleFaction["Honored"] }; --Seer's Ringmail Legguards
-		[23] = { icon = "INV_BannerPVP_02", name = "=q6=#pvprep702#", desc = "=ec1=#c2#" };
-		[24] = { itemID = 35378, desc = "=ds=#f1#, =ec1="..BabbleFaction["Honored"] }; --Stalker's Chain Helm
-		[25] = { itemID = 35380, desc = "=ds=#f2#, =ec1="..BabbleFaction["Honored"] }; --Stalker's Chain Spaulders
-		[26] = { itemID = 35376, desc = "=ds=#f5#, =ec1="..BabbleFaction["Honored"] }; --Stalker's Chain Armor
-		[27] = { itemID = 35377, desc = "=ds=#f3#/#f4#, =ec1="..BabbleFaction["Honored"] }; --Stalker's Chain Gauntlets
-		[28] = { itemID = 35379, desc = "=ds=#f6#, =ec1="..BabbleFaction["Honored"] }; --Stalker's Chain Leggings
+		[1] = { icon = "INV_BannerPVP_02", name = "=q6="..AL["Seer's Linked Battlegear"], desc = "=ec1="..LOCALIZED_CLASS_NAMES_MALE["SHAMAN"] };
+		[2] = { itemID = 35383, desc = "=ds="..BabbleFaction["Thrallmar"].."/"..BabbleFaction["Honor Hold"]..", =ec1="..BabbleFaction["Honored"] }; --Seer's Linked Helm
+		[3] = { itemID = 35385, desc = "=ds="..BabbleFaction["Cenarion Expedition"]..", =ec1="..BabbleFaction["Honored"] }; --Seer's Linked Spaulders
+		[4] = { itemID = 35381, desc = "=ds="..BabbleFaction["The Sha'tar"]..", =ec1="..BabbleFaction["Honored"] }; --Seer's Linked Armor
+		[5] = { itemID = 35382, desc = "=ds="..BabbleFaction["Lower City"]..", =ec1="..BabbleFaction["Honored"] }; --Seer's Linked Gauntlets
+		[6] = { itemID = 35384, desc = "=ds="..BabbleFaction["Keepers of Time"]..", =ec1="..BabbleFaction["Honored"] }; --Seer's Linked Leggings
+		[8] = { icon = "INV_BannerPVP_02", name = "=q6="..AL["Seer's Mail Battlegear"], desc = "=ec1="..LOCALIZED_CLASS_NAMES_MALE["SHAMAN"] };
+		[9] = { itemID = 35388, desc = "=ds="..BabbleFaction["The Sha'tar"]..", =ec1="..BabbleFaction["Honored"] }; --Seer's Mail Helm
+		[10] = { itemID = 35390, desc = "=ds="..BabbleFaction["Keepers of Time"]..", =ec1="..BabbleFaction["Honored"] }; --Seer's Mail Spaulders
+		[11] = { itemID = 35386, desc = "=ds="..BabbleFaction["Thrallmar"].."/"..BabbleFaction["Honor Hold"]..", =ec1="..BabbleFaction["Honored"] }; --Seer's Mail Armor
+		[12] = { itemID = 35387, desc = "=ds="..BabbleFaction["Cenarion Expedition"]..", =ec1="..BabbleFaction["Honored"] }; --Seer's Mail Gauntlets
+		[13] = { itemID = 35389, desc = "=ds="..BabbleFaction["Lower City"]..", =ec1="..BabbleFaction["Honored"] }; --Seer's Mail Leggings
+		[16] = { icon = "INV_BannerPVP_02", name = "=q6="..AL["Seer's Ringmail Battlegear"], desc = "=ec1="..LOCALIZED_CLASS_NAMES_MALE["SHAMAN"] };
+		[17] = { itemID = 35393, desc = "=ds="..BabbleFaction["Keepers of Time"]..", =ec1="..BabbleFaction["Honored"] }; --Seer's Ringmail Headpiece
+		[18] = { itemID = 35395, desc = "=ds="..BabbleFaction["The Sha'tar"]..", =ec1="..BabbleFaction["Honored"] }; --Seer's Ringmail Shoulderpads
+		[19] = { itemID = 35391, desc = "=ds="..BabbleFaction["Lower City"]..", =ec1="..BabbleFaction["Honored"] }; --Seer's Ringmail Chestguard
+		[20] = { itemID = 35392, desc = "=ds="..BabbleFaction["Thrallmar"].."/"..BabbleFaction["Honor Hold"]..", =ec1="..BabbleFaction["Honored"] }; --Seer's Ringmail Gloves
+		[21] = { itemID = 35394, desc = "=ds="..BabbleFaction["Cenarion Expedition"]..", =ec1="..BabbleFaction["Honored"] }; --Seer's Ringmail Legguards
+		[23] = { icon = "INV_BannerPVP_02", name = "=q6="..AL["Stalker's Chain Battlegear"], desc = "=ec1="..LOCALIZED_CLASS_NAMES_MALE["HUNTER"] };
+		[24] = { itemID = 35378, desc = "=ds="..BabbleFaction["Lower City"]..", =ec1="..BabbleFaction["Honored"] }; --Stalker's Chain Helm
+		[25] = { itemID = 35380, desc = "=ds="..BabbleFaction["The Sha'tar"]..", =ec1="..BabbleFaction["Honored"] }; --Stalker's Chain Spaulders
+		[26] = { itemID = 35376, desc = "=ds="..BabbleFaction["Keepers of Time"]..", =ec1="..BabbleFaction["Honored"] }; --Stalker's Chain Armor
+		[27] = { itemID = 35377, desc = "=ds="..BabbleFaction["Thrallmar"].."/"..BabbleFaction["Honor Hold"]..", =ec1="..BabbleFaction["Honored"] }; --Stalker's Chain Gauntlets
+		[28] = { itemID = 35379, desc = "=ds="..BabbleFaction["Cenarion Expedition"]..", =ec1="..BabbleFaction["Honored"] }; --Stalker's Chain Leggings
 	};
 	{
 		Name = BabbleInventory["Plate"];
-		[1] = { icon = "INV_BannerPVP_02", name = "=q6=#pvprep704_1#", desc = "=ec1=#c4#" };
-		[2] = { itemID = 35414, desc = "=ds=#f5#, =ec1="..BabbleFaction["Honored"] }; --Crusader's Scaled Helm
-		[3] = { itemID = 35416, desc = "=ds=#f2#, =ec1="..BabbleFaction["Honored"] }; --Crusader's Scaled Shoulders
-		[4] = { itemID = 35412, desc = "=ds=#f1#, =ec1="..BabbleFaction["Honored"] }; --Crusader's Scaled Chestpiece
-		[5] = { itemID = 35413, desc = "=ds=#f3#/#f4#, =ec1="..BabbleFaction["Honored"] }; --Crusader's Scaled Gauntlets
-		[6] = { itemID = 35415, desc = "=ds=#f6#, =ec1="..BabbleFaction["Honored"] }; --Crusader's Scaled Legguards
-		[8] = { icon = "INV_BannerPVP_02", name = "=q6=#pvprep704_2#", desc = "=ec1=#c4#" };
-		[9] = { itemID = 35404, desc = "=ds=#f2#, =ec1="..BabbleFaction["Honored"] }; --Crusader's Ornamented Headguard
-		[10] = { itemID = 35406, desc = "=ds=#f3#/#f4#, =ec1="..BabbleFaction["Honored"] }; --Crusader's Ornamented Spaulders
-		[11] = { itemID = 35402, desc = "=ds=#f5#, =ec1="..BabbleFaction["Honored"] }; --Crusader's Ornamented Chestplate
-		[12] = { itemID = 35403, desc = "=ds=#f6#, =ec1="..BabbleFaction["Honored"] }; --Crusader's Ornamented Gloves
-		[13] = { itemID = 35405, desc = "=ds=#f1#, =ec1="..BabbleFaction["Honored"] }; --Crusader's Ornamented Leggings
-		[16] = { icon = "INV_BannerPVP_02", name = "=q6=#pvprep709#", desc = "=ec1=#c9#" };
-		[17] = { itemID = 35409, desc = "=ds=#f3#/#f4#, =ec1="..BabbleFaction["Honored"] }; --Savage Plate Helm
-		[18] = { itemID = 35411, desc = "=ds=#f1#, =ec1="..BabbleFaction["Honored"] }; --Savage Plate Shoulders
-		[19] = { itemID = 35407, desc = "=ds=#f2#, =ec1="..BabbleFaction["Honored"] }; --Savage Plate Chestpiece
-		[20] = { itemID = 35408, desc = "=ds=#f6#, =ec1="..BabbleFaction["Honored"] }; --Savage Plate Gauntlets
-		[21] = { itemID = 35410, desc = "=ds=#f5#, =ec1="..BabbleFaction["Honored"] }; --Savage Plate Legguards
+		[1] = { icon = "INV_BannerPVP_02", name = "=q6="..AL["Crusader's Scaled Battledgear"], desc = "=ec1="..LOCALIZED_CLASS_NAMES_MALE["PALADIN"] };
+		[2] = { itemID = 35414, desc = "=ds="..BabbleFaction["Keepers of Time"]..", =ec1="..BabbleFaction["Honored"] }; --Crusader's Scaled Helm
+		[3] = { itemID = 35416, desc = "=ds="..BabbleFaction["The Sha'tar"]..", =ec1="..BabbleFaction["Honored"] }; --Crusader's Scaled Shoulders
+		[4] = { itemID = 35412, desc = "=ds="..BabbleFaction["Lower City"]..", =ec1="..BabbleFaction["Honored"] }; --Crusader's Scaled Chestpiece
+		[5] = { itemID = 35413, desc = "=ds="..BabbleFaction["Thrallmar"].."/"..BabbleFaction["Honor Hold"]..", =ec1="..BabbleFaction["Honored"] }; --Crusader's Scaled Gauntlets
+		[6] = { itemID = 35415, desc = "=ds="..BabbleFaction["Cenarion Expedition"]..", =ec1="..BabbleFaction["Honored"] }; --Crusader's Scaled Legguards
+		[8] = { icon = "INV_BannerPVP_02", name = "=q6="..AL["Crusader's Ornamented Battledgear"], desc = "=ec1="..LOCALIZED_CLASS_NAMES_MALE["PALADIN"] };
+		[9] = { itemID = 35404, desc = "=ds="..BabbleFaction["The Sha'tar"]..", =ec1="..BabbleFaction["Honored"] }; --Crusader's Ornamented Headguard
+		[10] = { itemID = 35406, desc = "=ds="..BabbleFaction["Thrallmar"].."/"..BabbleFaction["Honor Hold"]..", =ec1="..BabbleFaction["Honored"] }; --Crusader's Ornamented Spaulders
+		[11] = { itemID = 35402, desc = "=ds="..BabbleFaction["Keepers of Time"]..", =ec1="..BabbleFaction["Honored"] }; --Crusader's Ornamented Chestplate
+		[12] = { itemID = 35403, desc = "=ds="..BabbleFaction["Cenarion Expedition"]..", =ec1="..BabbleFaction["Honored"] }; --Crusader's Ornamented Gloves
+		[13] = { itemID = 35405, desc = "=ds="..BabbleFaction["Lower City"]..", =ec1="..BabbleFaction["Honored"] }; --Crusader's Ornamented Leggings
+		[16] = { icon = "INV_BannerPVP_02", name = "=q6="..AL["Savage's Plate Battlegear"], desc = "=ec1="..LOCALIZED_CLASS_NAMES_MALE["WARRIOR"] };
+		[17] = { itemID = 35409, desc = "=ds="..BabbleFaction["Thrallmar"].."/"..BabbleFaction["Honor Hold"]..", =ec1="..BabbleFaction["Honored"] }; --Savage Plate Helm
+		[18] = { itemID = 35411, desc = "=ds="..BabbleFaction["Lower City"]..", =ec1="..BabbleFaction["Honored"] }; --Savage Plate Shoulders
+		[19] = { itemID = 35407, desc = "=ds="..BabbleFaction["The Sha'tar"]..", =ec1="..BabbleFaction["Honored"] }; --Savage Plate Chestpiece
+		[20] = { itemID = 35408, desc = "=ds="..BabbleFaction["Cenarion Expedition"]..", =ec1="..BabbleFaction["Honored"] }; --Savage Plate Gauntlets
+		[21] = { itemID = 35410, desc = "=ds="..BabbleFaction["Keepers of Time"]..", =ec1="..BabbleFaction["Honored"] }; --Savage Plate Legguards
 	};
 	{
 		Name = BabbleInventory["Cloth"] .. " - " .. BabbleFaction["Alliance"];
-		[1] = { icon = "INV_BannerPVP_02", name = "=q6=#pvprep705_1#", desc = "=ec1=#c5#" };
+		[1] = { icon = "INV_BannerPVP_02", name = "=q6="..AL["Satin Battlegear"], desc = "=ec1="..LOCALIZED_CLASS_NAMES_MALE["PRIEST"] };
 		[2] = { itemID = 28705 }; --Grand Marshal's Satin Hood
 		[3] = { itemID = 28707 }; --Grand Marshal's Satin Mantle
 		[4] = { itemID = 28708 }; --Grand Marshal's Satin Robe
 		[5] = { itemID = 28704 }; --Grand Marshal's Satin Gloves
 		[6] = { itemID = 28706 }; --Grand Marshal's Satin Leggings
-		[8] = { icon = "INV_BannerPVP_02", name = "=q6=#pvprep705_2#", desc = "=ec1=#c5#" };
+		[8] = { icon = "INV_BannerPVP_02", name = "=q6="..AL["Mooncloth Battlegear"], desc = "=ec1="..LOCALIZED_CLASS_NAMES_MALE["PRIEST"] };
 		[9] = { itemID = 31622 }; --Grand Marshal's Mooncloth Cowl
 		[10] = { itemID = 31624 }; --Grand Marshal's Mooncloth Shoulderpads
 		[11] = { itemID = 31625 }; --Grand Marshal's Mooncloth Vestments
 		[12] = { itemID = 31620 }; --Grand Marshal's Mooncloth Mitts
 		[13] = { itemID = 31623 }; --Grand Marshal's Mooncloth Legguards
-		[16] = { icon = "INV_BannerPVP_02", name = "=q6=#pvprep703#", desc = "=ec1=#c3#" };
+		[16] = { icon = "INV_BannerPVP_02", name = "=q6="..AL["Evoker's Silk Battlegear"], desc = "=ec1="..LOCALIZED_CLASS_NAMES_MALE["MAGE"] };
 		[17] = { itemID = 28715 }; --Grand Marshal's Silk Cowl
 		[18] = { itemID = 28714 }; --Grand Marshal's Silk Amice
 		[19] = { itemID = 28717 }; --Grand Marshal's Silk Raiment
 		[20] = { itemID = 28716 }; --Grand Marshal's Silk Handguards
 		[21] = { itemID = 28718 }; --Grand Marshal's Silk Trousers
-		[23] = { icon = "INV_BannerPVP_02", name = "=q6=#pvprep708#", desc = "=ec1=#c8#" };
+		[23] = { icon = "INV_BannerPVP_02", name = "=q6="..AL["Dreadweave Battlegear"], desc = "=ec1="..LOCALIZED_CLASS_NAMES_MALE["SHAMAN"] };
 		[24] = { itemID = 28625 }; --Grand Marshal's Dreadweave Hood
 		[25] = { itemID = 28627 }; --Grand Marshal's Dreadweave Mantle
 		[26] = { itemID = 28628 }; --Grand Marshal's Dreadweave Robe
@@ -4332,25 +4332,25 @@ AtlasLoot_Data["PVP70RepGear"] = {
 	};
 	{
 		Name = BabbleInventory["Leather"] .. " - " .. BabbleFaction["Alliance"];
-		[1] = { icon = "INV_BannerPVP_02", name = "=q6=#pvprep701_1#", desc = "=ec1=#c1#" };
+		[1] = { icon = "INV_BannerPVP_02", name = "=q6="..AL["Dragonhide Battlegear"], desc = "=ec1="..LOCALIZED_CLASS_NAMES_MALE["DRUID"] };
 		[2] = { itemID = 28619 }; --Grand Marshal's Dragonhide Helm
 		[3] = { itemID = 28622 }; --Grand Marshal's Dragonhide Spaulders
 		[4] = { itemID = 28623 }; --Grand Marshal's Dragonhide Robe
 		[5] = { itemID = 28618 }; --Grand Marshal's Dragonhide Gloves
 		[6] = { itemID = 28620 }; --Grand Marshal's Dragonhide Legguards
-		[8] = { icon = "INV_BannerPVP_02", name = "=q6=#pvprep701_2#", desc = "=ec1=#c1#" };
+		[8] = { icon = "INV_BannerPVP_02", name = "=q6="..AL["Wyrmhide Battlegear"], desc = "=ec1="..LOCALIZED_CLASS_NAMES_MALE["DRUID"] };
 		[9] = { itemID = 31590 }; --Grand Marshal's Wyrmhide Helm
 		[10] = { itemID = 31592 }; --Grand Marshal's Wyrmhide Spaulders
 		[11] = { itemID = 31593 }; --Grand Marshal's Wyrmhide Robe
 		[12] = { itemID = 31589 }; --Grand Marshal's Wyrmhide Gloves
 		[13] = { itemID = 31591 }; --Grand Marshal's Wyrmhide Legguards
-		[16] = { icon = "INV_BannerPVP_02", name = "=q6=#pvprep701_3#", desc = "=ec1=#c1#" };
+		[16] = { icon = "INV_BannerPVP_02", name = "=q6="..AL["Kodohide Battlegear"], desc = "=ec1="..LOCALIZED_CLASS_NAMES_MALE["DRUID"] };
 		[17] = { itemID = 28720 }; --Grand Marshal's Kodohide Helm
 		[18] = { itemID = 28722 }; --Grand Marshal's Kodohide Spaulders
 		[19] = { itemID = 28723 }; --Grand Marshal's Kodohide Robe
 		[20] = { itemID = 28719 }; --Grand Marshal's Kodohide Gloves
 		[21] = { itemID = 28721 }; --Grand Marshal's Kodohide Legguards
-		[23] = { icon = "INV_BannerPVP_02", name = "=q6=#pvprep706#", desc = "=ec1=#c6#" };
+		[23] = { icon = "INV_BannerPVP_02", name = "=q6="..AL["Opportunist's Battlegear"], desc = "=ec1="..LOCALIZED_CLASS_NAMES_MALE["ROGUE"] };
 		[24] = { itemID = 28685 }; --Grand Marshal's Leather Helm
 		[25] = { itemID = 28687 }; --Grand Marshal's Leather Spaulders
 		[26] = { itemID = 28688 }; --Grand Marshal's Leather Tunic
@@ -4359,25 +4359,25 @@ AtlasLoot_Data["PVP70RepGear"] = {
 	};
 	{
 		Name = BabbleInventory["Mail"] .. " - " .. BabbleFaction["Alliance"];
-		[1] = { icon = "INV_BannerPVP_02", name = "=q6=#pvprep707_1#", desc = "=ec1=#c7#" };
+		[1] = { icon = "INV_BannerPVP_02", name = "=q6="..AL["Seer's Linked Battlegear"], desc = "=ec1="..LOCALIZED_CLASS_NAMES_MALE["SHAMAN"] };
 		[2] = { itemID = 28691 }; --Grand Marshal's Linked Helm
 		[3] = { itemID = 28693 }; --Grand Marshal's Linked Spaulders
 		[4] = { itemID = 28689 }; --Grand Marshal's Linked Armor
 		[5] = { itemID = 28690 }; --Grand Marshal's Linked Gauntlets
 		[6] = { itemID = 28692 }; --Grand Marshal's Linked Leggings
-		[8] = { icon = "INV_BannerPVP_02", name = "=q6=#pvprep707_2#", desc = "=ec1=#c7#" };
+		[8] = { icon = "INV_BannerPVP_02", name = "=q6="..AL["Seer's Mail Battlegear"], desc = "=ec1="..LOCALIZED_CLASS_NAMES_MALE["SHAMAN"] };
 		[9] = { itemID = 28696 }; --Grand Marshal's Mail Helm
 		[10] = { itemID = 28698 }; --Grand Marshal's Mail Spaulders
 		[11] = { itemID = 28694 }; --Grand Marshal's Mail Armor
 		[12] = { itemID = 28695 }; --Grand Marshal's Mail Gauntlets
 		[13] = { itemID = 28697 }; --Grand Marshal's Mail Leggings
-		[16] = { icon = "INV_BannerPVP_02", name = "=q6=#pvprep707_3#", desc = "=ec1=#c7#" };
+		[16] = { icon = "INV_BannerPVP_02", name = "=q6="..AL["Seer's Ringmail Battlegear"], desc = "=ec1="..LOCALIZED_CLASS_NAMES_MALE["SHAMAN"] };
 		[17] = { itemID = 31642 }; --Grand Marshal's Ringmail Headpiece
 		[18] = { itemID = 31644 }; --Grand Marshal's Ringmail Shoulderpads
 		[19] = { itemID = 31640 }; --Grand Marshal's Ringmail Chestguard
 		[20] = { itemID = 31641 }; --Grand Marshal's Ringmail Gloves
 		[21] = { itemID = 31643 }; --Grand Marshal's Ringmail Legguards
-		[23] = { icon = "INV_BannerPVP_02", name = "=q6=#pvprep702#", desc = "=ec1=#c2#" };
+		[23] = { icon = "INV_BannerPVP_02", name = "=q6="..AL["Stalker's Chain Battlegear"], desc = "=ec1="..LOCALIZED_CLASS_NAMES_MALE["HUNTER"] };
 		[24] = { itemID = 28615 }; --Grand Marshal's Chain Helm
 		[25] = { itemID = 28617 }; --Grand Marshal's Chain Spaulders
 		[26] = { itemID = 28613 }; --Grand Marshal's Chain Armor
@@ -4386,25 +4386,25 @@ AtlasLoot_Data["PVP70RepGear"] = {
 	};
 	{
 		Name = BabbleInventory["Plate"] .. " - " .. BabbleFaction["Alliance"];
-		[1] = { icon = "INV_BannerPVP_02", name = "=q6=#pvprep704_1#", desc = "=ec1=#c4#" };
+		[1] = { icon = "INV_BannerPVP_02", name = "=q6="..AL["Crusader's Scaled Battledgear"], desc = "=ec1="..LOCALIZED_CLASS_NAMES_MALE["PALADIN"] };
 		[2] = { itemID = 28711 }; --Grand Marshal's Scaled Helm
 		[3] = { itemID = 28713 }; --Grand Marshal's Scaled Shoulders
 		[4] = { itemID = 28709 }; --Grand Marshal's Scaled Chestpiece
 		[5] = { itemID = 28710 }; --Grand Marshal's Scaled Gauntlets
 		[6] = { itemID = 28712 }; --Grand Marshal's Scaled Legguards
-		[8] = { icon = "INV_BannerPVP_02", name = "=q6=#pvprep704_2#", desc = "=ec1=#c4#" };
+		[8] = { icon = "INV_BannerPVP_02", name = "=q6="..AL["Crusader's Ornamented Battledgear"], desc = "=ec1="..LOCALIZED_CLASS_NAMES_MALE["PALADIN"] };
 		[9] = { itemID = 31632 }; --Grand Marshal's Ornamented Headguard
 		[10] = { itemID = 31634 }; --Grand Marshal's Ornamented Spaulders
 		[11] = { itemID = 31630 }; --Grand Marshal's Ornamented Chestplate
 		[12] = { itemID = 31631 }; --Grand Marshal's Ornamented Gloves
 		[13] = { itemID = 31633 }; --Grand Marshal's Ornamented Leggings
-		[16] = { icon = "INV_BannerPVP_02", name = "=q6=#pvprep709#", desc = "=ec1=#c9#" };
+		[16] = { icon = "INV_BannerPVP_02", name = "=q6="..AL["Savage's Plate Battlegear"], desc = "=ec1="..LOCALIZED_CLASS_NAMES_MALE["WARRIOR"] };
 		[17] = { itemID = 28701 }; --Grand Marshal's Plate Helm
 		[18] = { itemID = 28703 }; --Grand Marshal's Plate Shoulders
 		[19] = { itemID = 28699 }; --Grand Marshal's Plate Chestpiece
 		[20] = { itemID = 28700 }; --Grand Marshal's Plate Gauntlets
 		[21] = { itemID = 28702 }; --Grand Marshal's Plate Legguards
-		[23] = { icon = "INV_BannerPVP_02", name = "=q6=#arenas4_1#", desc = "=ec1=#c4#" };
+		[23] = { icon = "INV_BannerPVP_02", name = "=q6="..AL["Gladiator's Aegis"], desc = "=ec1="..LOCALIZED_CLASS_NAMES_MALE["PALADIN"] };
 		[24] = { itemID = 28681 }; --Grand Marshal's Lamellar Helm
 		[25] = { itemID = 28683 }; --Grand Marshal's Lamellar Shoulders
 		[26] = { itemID = 28679 }; --Grand Marshal's Lamellar Chestpiece
@@ -4413,25 +4413,25 @@ AtlasLoot_Data["PVP70RepGear"] = {
 	};
 	{
 		Name = BabbleInventory["Cloth"] .. " - Horde";
-		[1] = { icon = "INV_BannerPVP_01", name = "=q6=#pvprep705_1#", desc = "=ec1=#c5#" };
+		[1] = { icon = "INV_BannerPVP_01", name = "=q6="..AL["Satin Battlegear"], desc = "=ec1="..LOCALIZED_CLASS_NAMES_MALE["PRIEST"] };
 		[2] = { itemID = 28857 }; --High Warlord's Satin Hood
 		[3] = { itemID = 28859 }; --High Warlord's Satin Mantle
 		[4] = { itemID = 28860 }; --High Warlord's Satin Robe
 		[5] = { itemID = 28856 }; --High Warlord's Satin Gloves
 		[6] = { itemID = 28858 }; --High Warlord's Satin Leggings
-		[8] = { icon = "INV_BannerPVP_01", name = "=q6=#pvprep705_2#", desc = "=ec1=#c5#" };
+		[8] = { icon = "INV_BannerPVP_01", name = "=q6="..AL["Mooncloth Battlegear"], desc = "=ec1="..LOCALIZED_CLASS_NAMES_MALE["PRIEST"] };
 		[9] = { itemID = 31626 }; --High Warlord's Mooncloth Cowl
 		[10] = { itemID = 31628 }; --High Warlord's Mooncloth Shoulderpads
 		[11] = { itemID = 31629 }; --High Warlord's Mooncloth Vestments
 		[12] = { itemID = 31621 }; --High Warlord's Mooncloth Mitts
 		[13] = { itemID = 31627 }; --High Warlord's Mooncloth Legguards
-		[16] = { icon = "INV_BannerPVP_01", name = "=q6=#pvprep703#", desc = "=ec1=#c3#" };
+		[16] = { icon = "INV_BannerPVP_01", name = "=q6="..AL["Evoker's Silk Battlegear"], desc = "=ec1="..LOCALIZED_CLASS_NAMES_MALE["MAGE"] };
 		[17] = { itemID = 28867 }; --High Warlord's Silk Cowl
 		[18] = { itemID = 28866 }; --High Warlord's Silk Amice
 		[19] = { itemID = 28869 }; --High Warlord's Silk Raiment
 		[20] = { itemID = 28868 }; --High Warlord's Silk Handguards
 		[21] = { itemID = 28870 }; --High Warlord's Silk Trousers
-		[23] = { icon = "INV_BannerPVP_01", name = "=q6=#pvprep708#", desc = "=ec1=#c8#" };
+		[23] = { icon = "INV_BannerPVP_01", name = "=q6="..AL["Dreadweave Battlegear"], desc = "=ec1="..LOCALIZED_CLASS_NAMES_MALE["SHAMAN"] };
 		[24] = { itemID = 28818 }; --High Warlord's Dreadweave Hood
 		[25] = { itemID = 28820 }; --High Warlord's Dreadweave Mantle
 		[26] = { itemID = 28821 }; --High Warlord's Dreadweave Robe
@@ -4440,25 +4440,25 @@ AtlasLoot_Data["PVP70RepGear"] = {
 	};
 	{
 		Name = BabbleInventory["Leather"] .. " - Horde";
-		[1] = { icon = "INV_BannerPVP_01", name = "=q6=#pvprep701_1#", desc = "=ec1=#c1#" };
+		[1] = { icon = "INV_BannerPVP_01", name = "=q6="..AL["Dragonhide Battlegear"], desc = "=ec1="..LOCALIZED_CLASS_NAMES_MALE["DRUID"] };
 		[2] = { itemID = 28812 }; --High Warlord's Dragonhide Helm
 		[3] = { itemID = 28814 }; --High Warlord's Dragonhide Spaulders
 		[4] = { itemID = 28815 }; --High Warlord's Dragonhide Robe
 		[5] = { itemID = 28811 }; --High Warlord's Dragonhide Gloves
 		[6] = { itemID = 28813 }; --High Warlord's Dragonhide Legguards
-		[8] = { icon = "INV_BannerPVP_01", name = "=q6=#pvprep701_2#", desc = "=ec1=#c1#" };
+		[8] = { icon = "INV_BannerPVP_01", name = "=q6="..AL["Wyrmhide Battlegear"], desc = "=ec1="..LOCALIZED_CLASS_NAMES_MALE["DRUID"] };
 		[9] = { itemID = 28872 }; --High Warlord's Wyrmhide Helm
 		[10] = { itemID = 28874 }; --High Warlord's Wyrmhide Spaulders
 		[11] = { itemID = 28875 }; --High Warlord's Wyrmhide Robe
 		[12] = { itemID = 28871 }; --High Warlord's Wyrmhide Gloves
 		[13] = { itemID = 28873 }; --High Warlord's Wyrmhide Legguards
-		[16] = { icon = "INV_BannerPVP_01", name = "=q6=#pvprep701_3#", desc = "=ec1=#c1#" };
+		[16] = { icon = "INV_BannerPVP_01", name = "=q6="..AL["Kodohide Battlegear"], desc = "=ec1="..LOCALIZED_CLASS_NAMES_MALE["DRUID"] };
 		[17] = { itemID = 31585 }; --High Warlord's Kodohide Helm
 		[18] = { itemID = 31587 }; --High Warlord's Kodohide Spaulders
 		[19] = { itemID = 31588 }; --High Warlord's Kodohide Robe
 		[20] = { itemID = 31584 }; --High Warlord's Kodohide Gloves
 		[21] = { itemID = 31586 }; --High Warlord's Kodohide Legguards
-		[23] = { icon = "INV_BannerPVP_01", name = "=q6=#pvprep706#", desc = "=ec1=#c6#" };
+		[23] = { icon = "INV_BannerPVP_01", name = "=q6="..AL["Opportunist's Battlegear"], desc = "=ec1="..LOCALIZED_CLASS_NAMES_MALE["ROGUE"] };
 		[24] = { itemID = 28837 }; --High Warlord's Leather Helm
 		[25] = { itemID = 28839 }; --High Warlord's Leather Spaulders
 		[26] = { itemID = 28840 }; --High Warlord's Leather Tunic
@@ -4467,25 +4467,25 @@ AtlasLoot_Data["PVP70RepGear"] = {
 	};
 	{
 		Name = BabbleInventory["Mail"] .. " - Horde";
-		[1] = { icon = "INV_BannerPVP_01", name = "=q6=#pvprep707_1#", desc = "=ec1=#c7#" };
+		[1] = { icon = "INV_BannerPVP_01", name = "=q6="..AL["Seer's Linked Battlegear"], desc = "=ec1="..LOCALIZED_CLASS_NAMES_MALE["SHAMAN"] };
 		[2] = { itemID = 28843 }; --High Warlord's Linked Helm
 		[3] = { itemID = 28845 }; --High Warlord's Linked Spaulders
 		[4] = { itemID = 28841 }; --High Warlord's Linked Armor
 		[5] = { itemID = 28842 }; --High Warlord's Linked Gauntlets
 		[6] = { itemID = 28844 }; --High Warlord's Linked Leggings
-		[8] = { icon = "INV_BannerPVP_01", name = "=q6=#pvprep707_2#", desc = "=ec1=#c7#" };
+		[8] = { icon = "INV_BannerPVP_01", name = "=q6="..AL["Seer's Mail Battlegear"], desc = "=ec1="..LOCALIZED_CLASS_NAMES_MALE["SHAMAN"] };
 		[9] = { itemID = 28848 }; --High Warlord's Mail Helm
 		[10] = { itemID = 28850 }; --High Warlord's Mail Spaulders
 		[11] = { itemID = 28846 }; --High Warlord's Mail Armor
 		[12] = { itemID = 28847 }; --High Warlord's Mail Gauntlets
 		[13] = { itemID = 28849 }; --High Warlord's Mail Leggings
-		[16] = { icon = "INV_BannerPVP_01", name = "=q6=#pvprep707_3#", desc = "=ec1=#c7#" };
+		[16] = { icon = "INV_BannerPVP_01", name = "=q6="..AL["Seer's Ringmail Battlegear"], desc = "=ec1="..LOCALIZED_CLASS_NAMES_MALE["SHAMAN"] };
 		[17] = { itemID = 31648 }; --High Warlord's Ringmail Headpiece
 		[18] = { itemID = 31650 }; --High Warlord's Ringmail Shoulderpads
 		[19] = { itemID = 31646 }; --High Warlord's Ringmail Chestguard
 		[20] = { itemID = 31647 }; --High Warlord's Ringmail Gloves
 		[21] = { itemID = 31649 }; --High Warlord's Ringmail Legguards
-		[23] = { icon = "INV_BannerPVP_01", name = "=q6=#pvprep702#", desc = "=ec1=#c2#" };
+		[23] = { icon = "INV_BannerPVP_01", name = "=q6="..AL["Stalker's Chain Battlegear"], desc = "=ec1="..LOCALIZED_CLASS_NAMES_MALE["HUNTER"] };
 		[24] = { itemID = 28807 }; --High Warlord's Chain Helm
 		[25] = { itemID = 28809 }; --High Warlord's Chain Spaulders
 		[26] = { itemID = 28805 }; --High Warlord's Chain Armor
@@ -4494,25 +4494,25 @@ AtlasLoot_Data["PVP70RepGear"] = {
 	};
 	{
 		Name = BabbleInventory["Plate"] .. " - Horde";
-		[1] = { icon = "INV_BannerPVP_01", name = "=q6=#pvprep704_1#", desc = "=ec1=#c4#" };
+		[1] = { icon = "INV_BannerPVP_01", name = "=q6="..AL["Crusader's Scaled Battledgear"], desc = "=ec1="..LOCALIZED_CLASS_NAMES_MALE["PALADIN"] };
 		[2] = { itemID = 28863 }; --High Warlord's Scaled Helm
 		[3] = { itemID = 28865 }; --High Warlord's Scaled Shoulders
 		[4] = { itemID = 28861 }; --High Warlord's Scaled Chestpiece
 		[5] = { itemID = 28862 }; --High Warlord's Scaled Gauntlets
 		[6] = { itemID = 28864 }; --High Warlord's Scaled Legguards
-		[8] = { icon = "INV_BannerPVP_01", name = "=q6=#pvprep704_2#", desc = "=ec1=#c4#" };
+		[8] = { icon = "INV_BannerPVP_01", name = "=q6="..AL["Crusader's Ornamented Battledgear"], desc = "=ec1="..LOCALIZED_CLASS_NAMES_MALE["PALADIN"] };
 		[9] = { itemID = 31637 }; --High Warlord's Ornamented Headguard
 		[10] = { itemID = 31639 }; --High Warlord's Ornamented Spaulders
 		[11] = { itemID = 31635 }; --High Warlord's Ornamented Chestplate
 		[12] = { itemID = 31636 }; --High Warlord's Ornamented Gloves
 		[13] = { itemID = 31638 }; --High Warlord's Ornamented Leggings
-		[16] = { icon = "INV_BannerPVP_01", name = "=q6=#pvprep709#", desc = "=ec1=#c9#" };
+		[16] = { icon = "INV_BannerPVP_01", name = "=q6="..AL["Savage's Plate Battlegear"], desc = "=ec1="..LOCALIZED_CLASS_NAMES_MALE["WARRIOR"] };
 		[17] = { itemID = 28853 }; --High Warlord's Plate Helm
 		[18] = { itemID = 28855 }; --High Warlord's Plate Shoulders
 		[19] = { itemID = 28851 }; --High Warlord's Plate Chestpiece
 		[20] = { itemID = 28852 }; --High Warlord's Plate Gauntlets
 		[21] = { itemID = 28854 }; --High Warlord's Plate Legguards
-		[23] = { icon = "INV_BannerPVP_01", name = "=q6=#arenas4_1#", desc = "=ec1=#c4#" };
+		[23] = { icon = "INV_BannerPVP_01", name = "=q6="..AL["Gladiator's Aegis"], desc = "=ec1="..LOCALIZED_CLASS_NAMES_MALE["PALADIN"] };
 		[24] = { itemID = 28833 }; --High Warlord's Lamellar Helm
 		[25] = { itemID = 28835 }; --High Warlord's Lamellar Shoulders
 		[26] = { itemID = 28831 }; --High Warlord's Lamellar Chestpiece
@@ -4689,25 +4689,25 @@ AtlasLoot_Data["ArenaDruidTBC"] = {
 	Name = AL["Druid"];
 	{
 		Name = AL["Feral"];
-		[1] = { icon = "Ability_Druid_Maul", name = "=q6=#arenas1_1#", desc = "=q1=#arenas1L#" };
+		[1] = { icon = "Ability_Druid_Maul", name = "=q6="..AL["Gladiator's Sanctuary"], desc = "=q1="..AL["Arena Season 1"] };
 		[2] = { itemID = 28127 }; --Gladiator's Dragonhide Helm
 		[3] = { itemID = 28129 }; --Gladiator's Dragonhide Spaulders
 		[4] = { itemID = 28130 }; --Gladiator's Dragonhide Tunic
 		[5] = { itemID = 28126 }; --Gladiator's Dragonhide Gloves
 		[6] = { itemID = 28128 }; --Gladiator's Dragonhide Legguards
-		[8] = { icon = "Ability_Druid_Maul", name = "=q6=#arenas1_1#", desc = "=q1=#arenas3L#" };
+		[8] = { icon = "Ability_Druid_Maul", name = "=q6="..AL["Gladiator's Sanctuary"], desc = "=q1="..AL["Arena Season 3"] };
 		[9] = { itemID = 31968, price = "15000 #faction#" }; --Merciless Gladiator's Dragonhide Helm
 		[10] = { itemID = 31971, price = "13000 #faction#" }; --Merciless Gladiator's Dragonhide Spaulders
 		[11] = { itemID = 31972, price = "15000 #faction#" }; --Merciless Gladiator's Dragonhide Tunic
 		[12] = { itemID = 31967, price = "12000 #faction#" }; --Merciless Gladiator's Dragonhide Gloves
 		[13] = { itemID = 31969, price = "15000 #faction#" }; --Merciless Gladiator's Dragonhide Legguards
-		[16] = { icon = "Ability_Druid_Maul", name = "=q6=#arenas1_1#", desc = "=q1=#arenas2L#" };
+		[16] = { icon = "Ability_Druid_Maul", name = "=q6="..AL["Gladiator's Sanctuary"], desc = "=q1="..AL["Arena Season 2"] };
 		[17] = { itemID = 33672 }; --Vengeful Gladiator's Dragonhide Helm
 		[18] = { itemID = 33674 }; --Vengeful Gladiator's Dragonhide Spaulders
 		[19] = { itemID = 33675 }; --Vengeful Gladiator's Dragonhide Tunic
 		[20] = { itemID = 33671 }; --Vengeful Gladiator's Dragonhide Gloves
 		[21] = { itemID = 33673 }; --Vengeful Gladiator's Dragonhide Legguards
-		[23] = { icon = "Ability_Druid_Maul", name = "=q6=#arenas1_1#", desc = "=q1=#arenas4L#" };
+		[23] = { icon = "Ability_Druid_Maul", name = "=q6="..AL["Gladiator's Sanctuary"], desc = "=q1="..AL["Arena Season 4"] };
 		[24] = { itemID = 34999, price = "1875 #arena#" }; --Brutal Gladiator's Dragonhide Helm
 		[25] = { itemID = 35001, price = "1500 #arena#" }; --Brutal Gladiator's Dragonhide Spaulders
 		[26] = { itemID = 35002, price = "1875 #arena#" }; --Brutal Gladiator's Dragonhide Tunic
@@ -4716,25 +4716,25 @@ AtlasLoot_Data["ArenaDruidTBC"] = {
 	};
 	{
 		Name = AL["Balance"];
-		[1] = { icon = "Spell_Nature_InsectSwarm", name = "=q6=#arenas1_2#", desc = "=q1=#arenas1L#" };
+		[1] = { icon = "Spell_Nature_InsectSwarm", name = "=q6="..AL["Gladiator's Wildhide"], desc = "=q1="..AL["Arena Season 1"] };
 		[2] = { itemID = 28137 }; --Gladiator's Wyrmhide Helm
 		[3] = { itemID = 28139 }; --Gladiator's Wyrmhide Spaulders
 		[4] = { itemID = 28140 }; --Gladiator's Wyrmhide Tunic
 		[5] = { itemID = 28136 }; --Gladiator's Wyrmhide Gloves
 		[6] = { itemID = 28138 }; --Gladiator's Wyrmhide Legguards
-		[8] = { icon = "Spell_Nature_InsectSwarm", name = "=q6=#arenas1_2#", desc = "=q1=#arenas3L#" };
+		[8] = { icon = "Spell_Nature_InsectSwarm", name = "=q6="..AL["Gladiator's Wildhide"], desc = "=q1="..AL["Arena Season 3"] };
 		[9] = { itemID = 32057, price = "15000 #faction#" }; --Merciless Gladiator's Wyrmhide Helm
 		[10] = { itemID = 32059, price = "13000 #faction#" }; --Merciless Gladiator's Wyrmhide Spaulders
 		[11] = { itemID = 32060, price = "15000 #faction#" }; --Merciless Gladiator's Wyrmhide Tunic
 		[12] = { itemID = 32056, price = "12000 #faction#" }; --Merciless Gladiator's Wyrmhide Gloves
 		[13] = { itemID = 32058, price = "15000 #faction#" }; --Merciless Gladiator's Wyrmhide Legguards
-		[16] = { icon = "Spell_Nature_InsectSwarm", name = "=q6=#arenas1_2#", desc = "=q1=#arenas2L#" };
+		[16] = { icon = "Spell_Nature_InsectSwarm", name = "=q6="..AL["Gladiator's Wildhide"], desc = "=q1="..AL["Arena Season 2"] };
 		[17] = { itemID = 33768 }; --Vengeful Gladiator's Wyrmhide Helm
 		[18] = { itemID = 33770 }; --Vengeful Gladiator's Wyrmhide Spaulders
 		[19] = { itemID = 33771 }; --Vengeful Gladiator's Wyrmhide Tunic
 		[20] = { itemID = 33767 }; --Vengeful Gladiator's Wyrmhide Gloves
 		[21] = { itemID = 33769 }; --Vengeful Gladiator's Wyrmhide Legguards
-		[23] = { icon = "Spell_Nature_InsectSwarm", name = "=q6=#arenas1_2#", desc = "=q1=#arenas4L#" };
+		[23] = { icon = "Spell_Nature_InsectSwarm", name = "=q6="..AL["Gladiator's Wildhide"], desc = "=q1="..AL["Arena Season 4"] };
 		[24] = { itemID = 35112, price = "1875 #arena#" }; --Brutal Gladiator's Wyrmhide Helm
 		[25] = { itemID = 35114, price = "1500 #arena#" }; --Brutal Gladiator's Wyrmhide Spaulders
 		[26] = { itemID = 35115, price = "1875 #arena#" }; --Brutal Gladiator's Wyrmhide Tunic
@@ -4743,25 +4743,25 @@ AtlasLoot_Data["ArenaDruidTBC"] = {
 	};
 	{
 		Name = AL["Restoration"];
-		[1] = { icon = "Spell_Nature_Regeneration", name = "=q6=#arenas1_3#", desc = "=q1=#arenas1L#" };
+		[1] = { icon = "Spell_Nature_Regeneration", name = "=q6="..AL["Gladiator's Refuge"], desc = "=q1="..AL["Arena Season 1"] };
 		[2] = { itemID = 31376 }; --Gladiator's Kodohide Helm
 		[3] = { itemID = 31378 }; --Gladiator's Kodohide Spaulders
 		[4] = { itemID = 31379 }; --Gladiator's Kodohide Tunic
 		[5] = { itemID = 31375 }; --Gladiator's Kodohide Gloves
 		[6] = { itemID = 31377 }; --Gladiator's Kodohide Legguards
-		[8] = { icon = "Spell_Nature_Regeneration", name = "=q6=#arenas1_3#", desc = "=q1=#arenas3L#" };
+		[8] = { icon = "Spell_Nature_Regeneration", name = "=q6="..AL["Gladiator's Refuge"], desc = "=q1="..AL["Arena Season 3"] };
 		[9] = { itemID = 31988, price = "15000 #faction#" }; --Merciless Gladiator's Kodohide Helm
 		[10] = { itemID = 31990, price = "13000 #faction#" }; --Merciless Gladiator's Kodohide Spaulders
 		[11] = { itemID = 31991, price = "15000 #faction#" }; --Merciless Gladiator's Kodohide Tunic
 		[12] = { itemID = 31987, price = "12000 #faction#" }; --Merciless Gladiator's Kodohide Gloves
 		[13] = { itemID = 31989, price = "15000 #faction#" }; --Merciless Gladiator's Kodohide Legguards
-		[16] = { icon = "Spell_Nature_Regeneration", name = "=q6=#arenas1_3#", desc = "=q1=#arenas2L#" };
+		[16] = { icon = "Spell_Nature_Regeneration", name = "=q6="..AL["Gladiator's Refuge"], desc = "=q1="..AL["Arena Season 2"] };
 		[17] = { itemID = 33691 }; --Vengeful Gladiator's Kodohide Helm
 		[18] = { itemID = 33693 }; --Vengeful Gladiator's Kodohide Spaulders
 		[19] = { itemID = 33694 }; --Vengeful Gladiator's Kodohide Tunic
 		[20] = { itemID = 33690 }; --Vengeful Gladiator's Kodohide Gloves
 		[21] = { itemID = 33692 }; --Vengeful Gladiator's Kodohide Legguards
-		[23] = { icon = "Spell_Nature_Regeneration", name = "=q6=#arenas1_3#", desc = "=q1=#arenas4L#" };
+		[23] = { icon = "Spell_Nature_Regeneration", name = "=q6="..AL["Gladiator's Refuge"], desc = "=q1="..AL["Arena Season 4"] };
 		[24] = { itemID = 35023, price = "1875 #arena#" }; --Brutal Gladiator's Kodohide Helm
 		[25] = { itemID = 35025, price = "1500 #arena#" }; --Brutal Gladiator's Kodohide Spaulders
 		[26] = { itemID = 35026, price = "1875 #arena#" }; --Brutal Gladiator's Kodohide Tunic
@@ -4775,25 +4775,25 @@ AtlasLoot_Data["ArenaHunterTBC"] = {
 	Name = LOCALIZED_CLASS_NAMES_MALE["HUNTER"];
 	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["HUNTER"];
-		[1] = { icon = "Ability_Hunter_RunningShot", name = "=q6=#arenas2#", desc = "=q1=#arenas1L#" };
+		[1] = { icon = "Ability_Hunter_RunningShot", name = "=q6="..AL["Gladiator's Pursuit"], desc = "=q1="..AL["Arena Season 1"] };
 		[2] = { itemID = 28331 }; --Gladiator's Chain Helm
 		[3] = { itemID = 28333 }; --Gladiator's Chain Spaulders
 		[4] = { itemID = 28334 }; --Gladiator's Chain Armor
 		[5] = { itemID = 28335 }; --Gladiator's Chain Gauntlets
 		[6] = { itemID = 28332 }; --Gladiator's Chain Leggings
-		[8] = { icon = "Ability_Hunter_RunningShot", name = "=q6=#arenas2#", desc = "=q1=#arenas3L#" };
+		[8] = { icon = "Ability_Hunter_RunningShot", name = "=q6="..AL["Gladiator's Pursuit"], desc = "=q1="..AL["Arena Season 3"] };
 		[9] = { itemID = 31962, price = "15000 #faction#" }; --Merciless Gladiator's Chain Helm
 		[10] = { itemID = 31964, price = "13000 #faction#" }; --Merciless Gladiator's Chain Spaulders
 		[11] = { itemID = 31960, price = "15000 #faction#" }; --Merciless Gladiator's Chain Armor
 		[12] = { itemID = 31961, price = "12000 #faction#" }; --Merciless Gladiator's Chain Gauntlets
 		[13] = { itemID = 31963, price = "15000 #faction#" }; --Merciless Gladiator's Chain Leggings
-		[16] = { icon = "Ability_Hunter_RunningShot", name = "=q6=#arenas2#", desc = "=q1=#arenas2L#" };
+		[16] = { icon = "Ability_Hunter_RunningShot", name = "=q6="..AL["Gladiator's Pursuit"], desc = "=q1="..AL["Arena Season 2"] };
 		[17] = { itemID = 33666 }; --Vengeful Gladiator's Chain Helm
 		[18] = { itemID = 33668 }; --Vengeful Gladiator's Chain Spaulders
 		[19] = { itemID = 33664 }; --Vengeful Gladiator's Chain Armor
 		[20] = { itemID = 33665 }; --Vengeful Gladiator's Chain Gauntlets
 		[21] = { itemID = 33667 }; --Vengeful Gladiator's Chain Leggings
-		[23] = { icon = "Ability_Hunter_RunningShot", name = "=q6=#arenas2#", desc = "=q1=#arenas4L#" };
+		[23] = { icon = "Ability_Hunter_RunningShot", name = "=q6="..AL["Gladiator's Pursuit"], desc = "=q1="..AL["Arena Season 4"] };
 		[24] = { itemID = 34992, price = "1875 #arena#" }; --Brutal Gladiator's Chain Helm
 		[25] = { itemID = 34994, price = "1500 #arena#" }; --Brutal Gladiator's Chain Spaulders
 		[26] = { itemID = 34990, price = "1875 #arena#" }; --Brutal Gladiator's Chain Armor
@@ -4808,25 +4808,25 @@ AtlasLoot_Data["ArenaMageTBC"] = {
 	Name = LOCALIZED_CLASS_NAMES_MALE["MAGE"];
 	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["MAGE"];
-		[1] = { icon = "Spell_Frost_IceStorm", name = "=q6=#arenas3#", desc = "=q1=#arenas1L#" };
+		[1] = { icon = "Spell_Frost_IceStorm", name = "=q6="..AL["Gladiator's Regalia"], desc = "=q1="..AL["Arena Season 1"] };
 		[2] = { itemID = 25855 }; --Gladiator's Silk Cowl
 		[3] = { itemID = 25854 }; --Gladiator's Silk Amice
 		[4] = { itemID = 25856 }; --Gladiator's Silk Raiment
 		[5] = { itemID = 25857 }; --Gladiator's Silk Handguards
 		[6] = { itemID = 25858 }; --Gladiator's Silk Trousers
-		[8] = { icon = "Spell_Frost_IceStorm", name = "=q6=#arenas3#", desc = "=q1=#arenas3L#" };
+		[8] = { icon = "Spell_Frost_IceStorm", name = "=q6="..AL["Gladiator's Regalia"], desc = "=q1="..AL["Arena Season 3"] };
 		[9] = { itemID = 32048, price = "15000 #faction#" }; --Merciless Gladiator's Silk Cowl
 		[10] = { itemID = 32047, price = "13000 #faction#" }; --Merciless Gladiator's Silk Amice
 		[11] = { itemID = 32050, price = "15000 #faction#" }; --Merciless Gladiator's Silk Raiment
 		[12] = { itemID = 32049, price = "12000 #faction#" }; --Merciless Gladiator's Silk Handguards
 		[13] = { itemID = 32051, price = "15000 #faction#" }; --Merciless Gladiator's Silk Trousers
-		[16] = { icon = "Spell_Frost_IceStorm", name = "=q6=#arenas3#", desc = "=q1=#arenas2L#" };
+		[16] = { icon = "Spell_Frost_IceStorm", name = "=q6="..AL["Gladiator's Regalia"], desc = "=q1="..AL["Arena Season 2"] };
 		[17] = { itemID = 33758 }; --Vengeful Gladiator's Silk Cowl
 		[18] = { itemID = 33757 }; --Vengeful Gladiator's Silk Amice
 		[19] = { itemID = 33760 }; --Vengeful Gladiator's Silk Raiment
 		[20] = { itemID = 33759 }; --Vengeful Gladiator's Silk Handguards
 		[21] = { itemID = 33761 }; --Vengeful Gladiator's Silk Trousers
-		[23] = { icon = "Spell_Frost_IceStorm", name = "=q6=#arenas3#", desc = "=q1=#arenas4L#" };
+		[23] = { icon = "Spell_Frost_IceStorm", name = "=q6="..AL["Gladiator's Regalia"], desc = "=q1="..AL["Arena Season 4"] };
 		[24] = { itemID = 35097, price = "1875 #arena#" }; --Brutal Gladiator's Silk Cowl
 		[25] = { itemID = 35096, price = "1500 #arena#" }; --Brutal Gladiator's Silk Amice
 		[26] = { itemID = 35099, price = "1875 #arena#" }; --Brutal Gladiator's Silk Raiment
@@ -4841,25 +4841,25 @@ AtlasLoot_Data["ArenaPaladinTBC"] = {
 	Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"];
 	{
 		Name = AL["Protection"];
-		[1] = { icon = "Spell_Holy_SealOfMight", name = "=q6=#arenas4_1#", desc = "=q1=#arenas1L#" };
+		[1] = { icon = "Spell_Holy_SealOfMight", name = "=q6="..AL["Gladiator's Aegis"], desc = "=q1="..AL["Arena Season 1"] };
 		[2] = { itemID = 27704 }; --Gladiator's Lamellar Helm
 		[3] = { itemID = 27706 }; --Gladiator's Lamellar Shoulders
 		[4] = { itemID = 27702 }; --Gladiator's Lamellar Chestpiece
 		[5] = { itemID = 27703 }; --Gladiator's Lamellar Gauntlets
 		[6] = { itemID = 27705 }; --Gladiator's Lamellar Legguards
-		[8] = { icon = "Spell_Holy_SealOfMight", name = "=q6=#arenas4_1#", desc = "=q1=#arenas3L#" };
+		[8] = { icon = "Spell_Holy_SealOfMight", name = "=q6="..AL["Gladiator's Aegis"], desc = "=q1="..AL["Arena Season 3"] };
 		[9] = { itemID = 31997, price = "15000 #faction#" }; --Merciless Gladiator's Lamellar Helm
 		[10] = { itemID = 31996, price = "13000 #faction#" }; --Merciless Gladiator's Lamellar Shoulders
 		[11] = { itemID = 31992, price = "15000 #faction#" }; --Merciless Gladiator's Lamellar Chestpiece
 		[12] = { itemID = 31993, price = "12000 #faction#" }; --Merciless Gladiator's Lamellar Gauntlets
 		[13] = { itemID = 31995, price = "15000 #faction#" }; --Merciless Gladiator's Lamellar Legguards
-		[16] = { icon = "Spell_Holy_SealOfMight", name = "=q6=#arenas4_1#", desc = "=q1=#arenas2L#" };
+		[16] = { icon = "Spell_Holy_SealOfMight", name = "=q6="..AL["Gladiator's Aegis"], desc = "=q1="..AL["Arena Season 2"] };
 		[17] = { itemID = 33697 }; --Vengeful Gladiator's Lamellar Helm
 		[18] = { itemID = 33699 }; --Vengeful Gladiator's Lamellar Shoulders
 		[19] = { itemID = 33695 }; --Vengeful Gladiator's Lamellar Chestpiece
 		[20] = { itemID = 33696 }; --Vengeful Gladiator's Lamellar Gauntlets
 		[21] = { itemID = 33698 }; --Vengeful Gladiator's Lamellar Legguards
-		[23] = { icon = "Spell_Holy_SealOfMight", name = "=q6=#arenas4_1#", desc = "=q1=#arenas4L#" };
+		[23] = { icon = "Spell_Holy_SealOfMight", name = "=q6="..AL["Gladiator's Aegis"], desc = "=q1="..AL["Arena Season 4"] };
 		[24] = { itemID = 35029, price = "1875 #arena#" }; --Brutal Gladiator's Lamellar Helm
 		[25] = { itemID = 35031, price = "1500 #arena#" }; --Brutal Gladiator's Lamellar Shoulders
 		[26] = { itemID = 35027, price = "1875 #arena#" }; --Brutal Gladiator's Lamellar Chestpiece
@@ -4868,25 +4868,25 @@ AtlasLoot_Data["ArenaPaladinTBC"] = {
 	};
 	{
 		Name = AL["Retribution"];
-		[1] = { icon = "Spell_Holy_AuraOfLight", name = "=q6=#arenas4_2#", desc = "=q1=#arenas1L#" };
+		[1] = { icon = "Spell_Holy_AuraOfLight", name = "=q6="..AL["Gladiator's Vindication"], desc = "=q1="..AL["Arena Season 1"] };
 		[2] = { itemID = 27881 }; --Gladiator's Scaled Helm
 		[3] = { itemID = 27883 }; --Gladiator's Scaled Shoulders
 		[4] = { itemID = 27879 }; --Gladiator's Scaled Chestpiece
 		[5] = { itemID = 27880 }; --Gladiator's Scaled Gauntlets
 		[6] = { itemID = 27882 }; --Gladiator's Scaled Legguards
-		[8] = { icon = "Spell_Holy_AuraOfLight", name = "=q6=#arenas4_2#", desc = "=q1=#arenas3L#" };
+		[8] = { icon = "Spell_Holy_AuraOfLight", name = "=q6="..AL["Gladiator's Vindication"], desc = "=q1="..AL["Arena Season 3"] };
 		[9] = { itemID = 32041, price = "15000 #faction#" }; --Merciless Gladiator's Scaled Helm
 		[10] = { itemID = 32043, price = "13000 #faction#" }; --Merciless Gladiator's Scaled Shoulders
 		[11] = { itemID = 32039, price = "15000 #faction#" }; --Merciless Gladiator's Scaled Chestpiece
 		[12] = { itemID = 32040, price = "12000 #faction#" }; --Merciless Gladiator's Scaled Gauntlets
 		[13] = { itemID = 32042, price = "15000 #faction#" }; --Merciless Gladiator's Scaled Legguards
-		[16] = { icon = "Spell_Holy_AuraOfLight", name = "=q6=#arenas4_2#", desc = "=q1=#arenas2L#" };
+		[16] = { icon = "Spell_Holy_AuraOfLight", name = "=q6="..AL["Gladiator's Vindication"], desc = "=q1="..AL["Arena Season 2"] };
 		[17] = { itemID = 33751 }; --Vengeful Gladiator's Scaled Helm
 		[18] = { itemID = 33753 }; --Vengeful Gladiator's Scaled Shoulders
 		[19] = { itemID = 33749 }; --Vengeful Gladiator's Scaled Chestpiece
 		[20] = { itemID = 33750 }; --Vengeful Gladiator's Scaled Gauntlets
 		[21] = { itemID = 33752 }; --Vengeful Gladiator's Scaled Legguards
-		[23] = { icon = "Spell_Holy_AuraOfLight", name = "=q6=#arenas4_2#", desc = "=q1=#arenas4L#" };
+		[23] = { icon = "Spell_Holy_AuraOfLight", name = "=q6="..AL["Gladiator's Vindication"], desc = "=q1="..AL["Arena Season 4"] };
 		[24] = { itemID = 35090, price = "1875 #arena#" }; --Brutal Gladiator's Scaled Helm
 		[25] = { itemID = 35092, price = "1500 #arena#" }; --Brutal Gladiator's Scaled Shoulders
 		[26] = { itemID = 35088, price = "1875 #arena#" }; --Brutal Gladiator's Scaled Chestpiece
@@ -4895,25 +4895,25 @@ AtlasLoot_Data["ArenaPaladinTBC"] = {
 	};
 	{
 		Name = AL["Holy"];
-		[1] = { icon = "Spell_Holy_HolyBolt", name = "=q6=#arenas4_3#", desc = "=q1=#arenas1L#" };
+		[1] = { icon = "Spell_Holy_HolyBolt", name = "=q6="..AL["Gladiator's Redemption"], desc = "=q1="..AL["Arena Season 1"] };
 		[2] = { itemID = 31616 }; --Gladiator's Ornamented Headcover
 		[3] = { itemID = 31619 }; --Gladiator's Ornamented Spaulders
 		[4] = { itemID = 31613 }; --Gladiator's Ornamented Chestguard
 		[5] = { itemID = 31614 }; --Gladiator's Ornamented Gloves
 		[6] = { itemID = 31618 }; --Gladiator's Ornamented Legplates
-		[8] = { icon = "Spell_Holy_HolyBolt", name = "=q6=#arenas4_3#", desc = "=q1=#arenas3L#" };
+		[8] = { icon = "Spell_Holy_HolyBolt", name = "=q6="..AL["Gladiator's Redemption"], desc = "=q1="..AL["Arena Season 3"] };
 		[9] = { itemID = 32022, price = "15000 #faction#" }; --Merciless Gladiator's Ornamented Headcover
 		[10] = { itemID = 32024, price = "13000 #faction#" }; --Merciless Gladiator's Ornamented Spaulders
 		[11] = { itemID = 32020, price = "15000 #faction#" }; --Merciless Gladiator's Ornamented Chestguard
 		[12] = { itemID = 32021, price = "12000 #faction#" }; --Merciless Gladiator's Ornamented Gloves
 		[13] = { itemID = 32023, price = "15000 #faction#" }; --Merciless Gladiator's Ornamented Legplates
-		[16] = { icon = "Spell_Holy_HolyBolt", name = "=q6=#arenas4_3#", desc = "=q1=#arenas2L#" };
+		[16] = { icon = "Spell_Holy_HolyBolt", name = "=q6="..AL["Gladiator's Redemption"], desc = "=q1="..AL["Arena Season 2"] };
 		[17] = { itemID = 33724 }; --Vengeful Gladiator's Ornamented Headcover
 		[18] = { itemID = 33726 }; --Vengeful Gladiator's Ornamented Spaulders
 		[19] = { itemID = 33722 }; --Vengeful Gladiator's Ornamented Chestguard
 		[20] = { itemID = 33723 }; --Vengeful Gladiator's Ornamented Gloves
 		[21] = { itemID = 33725 }; --Vengeful Gladiator's Ornamented Legplates
-		[23] = { icon = "Spell_Holy_HolyBolt", name = "=q6=#arenas4_3#", desc = "=q1=#arenas4L#" };
+		[23] = { icon = "Spell_Holy_HolyBolt", name = "=q6="..AL["Gladiator's Redemption"], desc = "=q1="..AL["Arena Season 4"] };
 		[24] = { itemID = 35061, price = "1875 #arena#" }; --Brutal Gladiator's Ornamented Headcover
 		[25] = { itemID = 35063, price = "1500 #arena#" }; --Brutal Gladiator's Ornamented Spaulders
 		[26] = { itemID = 35059, price = "1875 #arena#" }; --Brutal Gladiator's Ornamented Chestguard
@@ -4927,25 +4927,25 @@ AtlasLoot_Data["ArenaPriestTBC"] = {
 	Name = LOCALIZED_CLASS_NAMES_MALE["PRIEST"];
 	{
 		Name = AL["Shadow"];
-		[1] = { icon = "Spell_Shadow_AntiShadow", name = "=q6=#arenas5_1#", desc = "=q1=#arenas1L#" };
+		[1] = { icon = "Spell_Shadow_AntiShadow", name = "=q6="..AL["Gladiator's Raiment"], desc = "=q1="..AL["Arena Season 1"] };
 		[2] = { itemID = 27708 }; --Gladiator's Satin Hood
 		[3] = { itemID = 27710 }; --Gladiator's Satin Mantle
 		[4] = { itemID = 27711 }; --Gladiator's Satin Robe
 		[5] = { itemID = 27707 }; --Gladiator's Satin Gloves
 		[6] = { itemID = 27709 }; --Gladiator's Satin Leggings
-		[8] = { icon = "Spell_Shadow_AntiShadow", name = "=q6=#arenas5_1#", desc = "=q1=#arenas3L#" };
+		[8] = { icon = "Spell_Shadow_AntiShadow", name = "=q6="..AL["Gladiator's Raiment"], desc = "=q1="..AL["Arena Season 3"] };
 		[9] = { itemID = 32035, price = "15000 #faction#" }; --Merciless Gladiator's Satin Hood
 		[10] = { itemID = 32037, price = "13000 #faction#" }; --Merciless Gladiator's Satin Mantle
 		[11] = { itemID = 32038, price = "15000 #faction#" }; --Merciless Gladiator's Satin Robe
 		[12] = { itemID = 32034, price = "12000 #faction#" }; --Merciless Gladiator's Satin Gloves
 		[13] = { itemID = 32036, price = "15000 #faction#" }; --Merciless Gladiator's Satin Leggings
-		[16] = { icon = "Spell_Shadow_AntiShadow", name = "=q6=#arenas5_1#", desc = "=q1=#arenas2L#" };
+		[16] = { icon = "Spell_Shadow_AntiShadow", name = "=q6="..AL["Gladiator's Raiment"], desc = "=q1="..AL["Arena Season 2"] };
 		[17] = { itemID = 33745 }; --Vengeful Gladiator's Satin Hood
 		[18] = { itemID = 33747 }; --Vengeful Gladiator's Satin Mantle
 		[19] = { itemID = 33748 }; --Vengeful Gladiator's Satin Robe
 		[20] = { itemID = 33744 }; --Vengeful Gladiator's Satin Gloves
 		[21] = { itemID = 33746 }; --Vengeful Gladiator's Satin Leggings
-		[23] = { icon = "Spell_Shadow_AntiShadow", name = "=q6=#arenas5_1#", desc = "=q1=#arenas4L#" };
+		[23] = { icon = "Spell_Shadow_AntiShadow", name = "=q6="..AL["Gladiator's Raiment"], desc = "=q1="..AL["Arena Season 4"] };
 		[24] = { itemID = 35084, price = "1875 #arena#" }; --Brutal Gladiator's Satin Hood
 		[25] = { itemID = 35086, price = "1500 #arena#" }; --Brutal Gladiator's Satin Mantle
 		[26] = { itemID = 35087, price = "1875 #arena#" }; --Brutal Gladiator's Satin Robe
@@ -4954,25 +4954,25 @@ AtlasLoot_Data["ArenaPriestTBC"] = {
 	};
 	{
 		Name = AL["Holy"];
-		[1] = { icon = "Spell_Holy_PowerWordShield", name = "=q6=#arenas5_2#", desc = "=q1=#arenas1L#" };
+		[1] = { icon = "Spell_Holy_PowerWordShield", name = "=q6="..AL["Gladiator's Investiture"], desc = "=q1="..AL["Arena Season 1"] };
 		[2] = { itemID = 31410 }; --Gladiator's Mooncloth Hood
 		[3] = { itemID = 31412 }; --Gladiator's Mooncloth Mantle
 		[4] = { itemID = 31413 }; --Gladiator's Mooncloth Robe
 		[5] = { itemID = 31409 }; --Gladiator's Mooncloth Gloves
 		[6] = { itemID = 31411 }; --Gladiator's Mooncloth Leggings
-		[8] = { icon = "Spell_Holy_PowerWordShield", name = "=q6=#arenas5_2#", desc = "=q1=#arenas3L#" };
+		[8] = { icon = "Spell_Holy_PowerWordShield", name = "=q6="..AL["Gladiator's Investiture"], desc = "=q1="..AL["Arena Season 3"] };
 		[9] = { itemID = 32016, price = "15000 #faction#" }; --Merciless Gladiator's Mooncloth Hood
 		[10] = { itemID = 32018, price = "13000 #faction#" }; --Merciless Gladiator's Mooncloth Mantle
 		[11] = { itemID = 32019, price = "15000 #faction#" }; --Merciless Gladiator's Mooncloth Robe
 		[12] = { itemID = 32015, price = "12000 #faction#" }; --Merciless Gladiator's Mooncloth Gloves
 		[13] = { itemID = 32017, price = "15000 #faction#" }; --Merciless Gladiator's Mooncloth Leggings
-		[16] = { icon = "Spell_Holy_PowerWordShield", name = "=q6=#arenas5_2#", desc = "=q1=#arenas2L#" };
+		[16] = { icon = "Spell_Holy_PowerWordShield", name = "=q6="..AL["Gladiator's Investiture"], desc = "=q1="..AL["Arena Season 2"] };
 		[17] = { itemID = 33718 }; --Vengeful Gladiator's Mooncloth Hood
 		[18] = { itemID = 33720 }; --Vengeful Gladiator's Mooncloth Mantle
 		[19] = { itemID = 33721 }; --Vengeful Gladiator's Mooncloth Robe
 		[20] = { itemID = 33717 }; --Vengeful Gladiator's Mooncloth Gloves
 		[21] = { itemID = 33719 }; --Vengeful Gladiator's Mooncloth Leggings
-		[23] = { icon = "Spell_Holy_PowerWordShield", name = "=q6=#arenas5_2#", desc = "=q1=#arenas4L#" };
+		[23] = { icon = "Spell_Holy_PowerWordShield", name = "=q6="..AL["Gladiator's Investiture"], desc = "=q1="..AL["Arena Season 4"] };
 		[24] = { itemID = 35054, price = "1875 #arena#" }; --Brutal Gladiator's Mooncloth Hood
 		[25] = { itemID = 35056, price = "1500 #arena#" }; --Brutal Gladiator's Mooncloth Mantle
 		[26] = { itemID = 35057, price = "1875 #arena#" }; --Brutal Gladiator's Mooncloth Robe
@@ -4986,25 +4986,25 @@ AtlasLoot_Data["ArenaRogueTBC"] = {
 	Name = LOCALIZED_CLASS_NAMES_MALE["ROGUE"];
 	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["ROGUE"];
-		[1] = { icon = "Ability_BackStab", name = "=q6=#arenas6#", desc = "=q1=#arenas1L#" };
+		[1] = { icon = "Ability_BackStab", name = "=q6="..AL["Gladiator's Vestments"], desc = "=q1="..AL["Arena Season 1"] };
 		[2] = { itemID = 25830 }; --Gladiator's Leather Helm
 		[3] = { itemID = 25832 }; --Gladiator's Leather Spaulders
 		[4] = { itemID = 25831 }; --Gladiator's Leather Tunic
 		[5] = { itemID = 25834 }; --Gladiator's Leather Gloves
 		[6] = { itemID = 25833 }; --Gladiator's Leather Legguards
-		[8] = { icon = "Ability_BackStab", name = "=q6=#arenas6#", desc = "=q1=#arenas3L#" };
+		[8] = { icon = "Ability_BackStab", name = "=q6="..AL["Gladiator's Vestments"], desc = "=q1="..AL["Arena Season 3"] };
 		[9] = { itemID = 31999, price = "15000 #faction#" }; --Merciless Gladiator's Leather Helm
 		[10] = { itemID = 32001, price = "13000 #faction#" }; --Merciless Gladiator's Leather Spaulders
 		[11] = { itemID = 32002, price = "15000 #faction#" }; --Merciless Gladiator's Leather Tunic
 		[12] = { itemID = 31998, price = "12000 #faction#" }; --Merciless Gladiator's Leather Gloves
 		[13] = { itemID = 32000, price = "15000 #faction#" }; --Merciless Gladiator's Leather Legguards
-		[16] = { icon = "Ability_BackStab", name = "=q6=#arenas6#", desc = "=q1=#arenas2L#" };
+		[16] = { icon = "Ability_BackStab", name = "=q6="..AL["Gladiator's Vestments"], desc = "=q1="..AL["Arena Season 2"] };
 		[17] = { itemID = 33701 }; --Vengeful Gladiator's Leather Helm
 		[18] = { itemID = 33703 }; --Vengeful Gladiator's Leather Spaulders
 		[19] = { itemID = 33704 }; --Vengeful Gladiator's Leather Tunic
 		[20] = { itemID = 33700 }; --Vengeful Gladiator's Leather Gloves
 		[21] = { itemID = 33702 }; --Vengeful Gladiator's Leather Legguards
-		[23] = { icon = "Ability_BackStab", name = "=q6=#arenas6#", desc = "=q1=#arenas4L#" };
+		[23] = { icon = "Ability_BackStab", name = "=q6="..AL["Gladiator's Vestments"], desc = "=q1="..AL["Arena Season 4"] };
 		[24] = { itemID = 35033, price = "1875 #arena#" }; --Brutal Gladiator's Leather Helm
 		[25] = { itemID = 35035, price = "1500 #arena#" }; --Brutal Gladiator's Leather Spaulders
 		[26] = { itemID = 35036, price = "1875 #arena#" }; --Brutal Gladiator's Leather Tunic
@@ -5018,25 +5018,25 @@ AtlasLoot_Data["ArenaWarlockTBC"] = {
 	Name = LOCALIZED_CLASS_NAMES_MALE["WARLOCK"];
 	{
 		Name = AL["Demonology"];
-		[1] = { icon = "Spell_Shadow_CurseOfTounges", name = "=q6=#arenas8_1#", desc = "=q1=#arenas1L#" };
+		[1] = { icon = "Spell_Shadow_CurseOfTounges", name = "=q6="..AL["Gladiator's Dreadgear"], desc = "=q1="..AL["Arena Season 1"] };
 		[2] = { itemID = 24553 }; --Gladiator's Dreadweave Hood
 		[3] = { itemID = 24554 }; --Gladiator's Dreadweave Mantle
 		[4] = { itemID = 24552 }; --Gladiator's Dreadweave Robe
 		[5] = { itemID = 24556 }; --Gladiator's Dreadweave Gloves
 		[6] = { itemID = 24555 }; --Gladiator's Dreadweave Leggings
-		[8] = { icon = "Spell_Shadow_CurseOfTounges", name = "=q6=#arenas8_1#", desc = "=q1=#arenas3L#" };
+		[8] = { icon = "Spell_Shadow_CurseOfTounges", name = "=q6="..AL["Gladiator's Dreadgear"], desc = "=q1="..AL["Arena Season 3"] };
 		[9] = { itemID = 31974, price = "15000 #faction#" }; --Merciless Gladiator's Dreadweave Hood
 		[10] = { itemID = 31976, price = "13000 #faction#" }; --Merciless Gladiator's Dreadweave Mantle
 		[11] = { itemID = 31977, price = "15000 #faction#" }; --Merciless Gladiator's Dreadweave Robe
 		[12] = { itemID = 31973, price = "12000 #faction#" }; --Merciless Gladiator's Dreadweave Gloves
 		[13] = { itemID = 31975, price = "15000 #faction#" }; --Merciless Gladiator's Dreadweave Leggings
-		[16] = { icon = "Spell_Shadow_CurseOfTounges", name = "=q6=#arenas8_1#", desc = "=q1=#arenas2L#" };
+		[16] = { icon = "Spell_Shadow_CurseOfTounges", name = "=q6="..AL["Gladiator's Dreadgear"], desc = "=q1="..AL["Arena Season 2"] };
 		[17] = { itemID = 33677 }; --Vengeful Gladiator's Dreadweave Hood
 		[18] = { itemID = 33679 }; --Vengeful Gladiator's Dreadweave Mantle
 		[19] = { itemID = 33680 }; --Vengeful Gladiator's Dreadweave Robe
 		[20] = { itemID = 33676 }; --Vengeful Gladiator's Dreadweave Gloves
 		[21] = { itemID = 33678 }; --Vengeful Gladiator's Dreadweave Leggings
-		[23] = { icon = "Spell_Shadow_CurseOfTounges", name = "=q6=#arenas8_1#", desc = "=q1=#arenas4L#" };
+		[23] = { icon = "Spell_Shadow_CurseOfTounges", name = "=q6="..AL["Gladiator's Dreadgear"], desc = "=q1="..AL["Arena Season 4"] };
 		[24] = { itemID = 35004, price = "1875 #arena#" }; --Brutal Gladiator's Dreadweave Hood
 		[25] = { itemID = 35006, price = "1500 #arena#" }; --Brutal Gladiator's Dreadweave Mantle
 		[26] = { itemID = 35007, price = "1875 #arena#" }; --Brutal Gladiator's Dreadweave Robe
@@ -5045,25 +5045,25 @@ AtlasLoot_Data["ArenaWarlockTBC"] = {
 	};
 	{
 		Name = AL["Destruction"];
-		[1] = { icon = "Spell_Shadow_CurseOfTounges", name = "=q6=#arenas8_2#", desc = "=q1=#arenas1L#" };
+		[1] = { icon = "Spell_Shadow_CurseOfTounges", name = "=q6="..AL["Gladiator's Felshroud"], desc = "=q1="..AL["Arena Season 1"] };
 		[2] = { itemID = 30187 }; --Gladiator's Felweave Cowl
 		[3] = { itemID = 30186 }; --Gladiator's Felweave Amice
 		[4] = { itemID = 30200 }; --Gladiator's Felweave Raiment
 		[5] = { itemID = 30188 }; --Gladiator's Felweave Handguards
 		[6] = { itemID = 30201 }; --Gladiator's Felweave Trousers
-		[8] = { icon = "Spell_Shadow_CurseOfTounges", name = "=q6=#arenas8_2#", desc = "=q1=#arenas3L#" };
+		[8] = { icon = "Spell_Shadow_CurseOfTounges", name = "=q6="..AL["Gladiator's Felshroud"], desc = "=q1="..AL["Arena Season 3"] };
 		[9] = { itemID = 31980, price = "15000 #faction#" }; --Merciless Gladiator's Felweave Cowl
 		[10] = { itemID = 31979, price = "13000 #faction#" }; --Merciless Gladiator's Felweave Amice
 		[11] = { itemID = 31982, price = "15000 #faction#" }; --Merciless Gladiator's Felweave Raiment
 		[12] = { itemID = 31981, price = "12000 #faction#" }; --Merciless Gladiator's Felweave Handguards
 		[13] = { itemID = 31983, price = "15000 #faction#" }; --Merciless Gladiator's Felweave Trousers
-		[16] = { icon = "Spell_Shadow_CurseOfTounges", name = "=q6=#arenas8_2#", desc = "=q1=#arenas2L#" };
+		[16] = { icon = "Spell_Shadow_CurseOfTounges", name = "=q6="..AL["Gladiator's Felshroud"], desc = "=q1="..AL["Arena Season 2"] };
 		[17] = { itemID = 33683 }; --Vengeful Gladiator's Felweave Cowl
 		[18] = { itemID = 33682 }; --Vengeful Gladiator's Felweave Amice
 		[19] = { itemID = 33685 }; --Vengeful Gladiator's Felweave Raiment
 		[20] = { itemID = 33684 }; --Vengeful Gladiator's Felweave Handguards
 		[21] = { itemID = 33686 }; --Vengeful Gladiator's Felweave Trousers
-		[23] = { icon = "Spell_Shadow_CurseOfTounges", name = "=q6=#arenas8_2#", desc = "=q1=#arenas4L#" };
+		[23] = { icon = "Spell_Shadow_CurseOfTounges", name = "=q6="..AL["Gladiator's Felshroud"], desc = "=q1="..AL["Arena Season 4"] };
 		[24] = { itemID = 35010, price = "1875 #arena#" }; --Brutal Gladiator's Felweave Cowl
 		[25] = { itemID = 35009, price = "1500 #arena#" }; --Brutal Gladiator's Felweave Amice
 		[26] = { itemID = 35012, price = "1875 #arena#" }; --Brutal Gladiator's Felweave Raiment
@@ -5078,25 +5078,25 @@ AtlasLoot_Data["ArenaShamanTBC"] = {
 	Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"];
 	{
 		Name = AL["Enhancement"];
-		[1] = { icon = "Spell_FireResistanceTotem_01", name = "=q6=#arenas7_1#", desc = "=q1=#arenas1L#" };
+		[1] = { icon = "Spell_FireResistanceTotem_01", name = "=q6="..AL["Gladiator's Earthshaker"], desc = "=q1="..AL["Arena Season 1"] };
 		[2] = { itemID = 25998 }; --Gladiator's Linked Helm
 		[3] = { itemID = 25999 }; --Gladiator's Linked Spaulders
 		[4] = { itemID = 25997 }; --Gladiator's Linked Armor
 		[5] = { itemID = 26000 }; --Gladiator's Linked Gauntlets
 		[6] = { itemID = 26001 }; --Gladiator's Linked Leggings
-		[8] = { icon = "Spell_FireResistanceTotem_01", name = "=q6=#arenas7_1#", desc = "=q1=#arenas3L#" };
+		[8] = { icon = "Spell_FireResistanceTotem_01", name = "=q6="..AL["Gladiator's Earthshaker"], desc = "=q1="..AL["Arena Season 3"] };
 		[9] = { itemID = 32006, price = "15000 #faction#" }; --Merciless Gladiator's Linked Helm
 		[10] = { itemID = 32008, price = "13000 #faction#" }; --Merciless Gladiator's Linked Spaulders
 		[11] = { itemID = 32004, price = "15000 #faction#" }; --Merciless Gladiator's Linked Armor
 		[12] = { itemID = 32005, price = "12000 #faction#" }; --Merciless Gladiator's Linked Gauntlets
 		[13] = { itemID = 32007, price = "15000 #faction#" }; --Merciless Gladiator's Linked Leggings
-		[16] = { icon = "Spell_FireResistanceTotem_01", name = "=q6=#arenas7_1#", desc = "=q1=#arenas2L#" };
+		[16] = { icon = "Spell_FireResistanceTotem_01", name = "=q6="..AL["Gladiator's Earthshaker"], desc = "=q1="..AL["Arena Season 2"] };
 		[17] = { itemID = 33708 }; --Vengeful Gladiator's Linked Helm
 		[18] = { itemID = 33710 }; --Vengeful Gladiator's Linked Spaulders
 		[19] = { itemID = 33706 }; --Vengeful Gladiator's Linked Armor
 		[20] = { itemID = 33707 }; --Vengeful Gladiator's Linked Gauntlets
 		[21] = { itemID = 33709 }; --Vengeful Gladiator's Linked Leggings
-		[23] = { icon = "Spell_FireResistanceTotem_01", name = "=q6=#arenas7_1#", desc = "=q1=#arenas4L#" };
+		[23] = { icon = "Spell_FireResistanceTotem_01", name = "=q6="..AL["Gladiator's Earthshaker"], desc = "=q1="..AL["Arena Season 4"] };
 		[24] = { itemID = 35044, price = "1875 #arena#" }; --Brutal Gladiator's Linked Helm
 		[25] = { itemID = 35046, price = "1500 #arena#" }; --Brutal Gladiator's Linked Spaulders
 		[26] = { itemID = 35042, price = "1875 #arena#" }; --Brutal Gladiator's Linked Armor
@@ -5105,25 +5105,25 @@ AtlasLoot_Data["ArenaShamanTBC"] = {
 	};
 	{
 		Name = AL["Elemental"];
-		[1] = { icon = "Spell_Nature_Lightning", name = "=q6=#arenas7_2#", desc = "=q1=#arenas1L#" };
+		[1] = { icon = "Spell_Nature_Lightning", name = "=q6="..AL["Gladiator's Thunderfist"], desc = "=q1="..AL["Arena Season 1"] };
 		[2] = { itemID = 27471 }; --Gladiator's Mail Helm
 		[3] = { itemID = 27473 }; --Gladiator's Mail Spaulders
 		[4] = { itemID = 27469 }; --Gladiator's Mail Armor
 		[5] = { itemID = 27470 }; --Gladiator's Mail Gauntlets
 		[6] = { itemID = 27472 }; --Gladiator's Mail Leggings
-		[8] = { icon = "Spell_Nature_Lightning", name = "=q6=#arenas7_2#", desc = "=q1=#arenas3L#" };
+		[8] = { icon = "Spell_Nature_Lightning", name = "=q6="..AL["Gladiator's Thunderfist"], desc = "=q1="..AL["Arena Season 3"] };
 		[9] = { itemID = 32011 }; --Merciless Gladiator's Mail Helm
 		[10] = { itemID = 32013, price = "13000 #faction#" }; --Merciless Gladiator's Mail Spaulders
 		[11] = { itemID = 32009, price = "15000 #faction#" }; --Merciless Gladiator's Mail Armor
 		[12] = { itemID = 32010, price = "12000 #faction#" }; --Merciless Gladiator's Mail Gauntlets
 		[13] = { itemID = 32012, price = "15000 #faction#" }; --Merciless Gladiator's Mail Leggings
-		[16] = { icon = "Spell_Nature_Lightning", name = "=q6=#arenas7_2#", desc = "=q1=#arenas2L#" };
+		[16] = { icon = "Spell_Nature_Lightning", name = "=q6="..AL["Gladiator's Thunderfist"], desc = "=q1="..AL["Arena Season 2"] };
 		[17] = { itemID = 33713 }; --Vengeful Gladiator's Mail Helm
 		[18] = { itemID = 33715 }; --Vengeful Gladiator's Mail Spaulders
 		[19] = { itemID = 33711 }; --Vengeful Gladiator's Mail Armor
 		[20] = { itemID = 33712 }; --Vengeful Gladiator's Mail Gauntlets
 		[21] = { itemID = 33714 }; --Vengeful Gladiator's Mail Leggings
-		[23] = { icon = "Spell_Nature_Lightning", name = "=q6=#arenas7_2#", desc = "=q1=#arenas4L#" };
+		[23] = { icon = "Spell_Nature_Lightning", name = "=q6="..AL["Gladiator's Thunderfist"], desc = "=q1="..AL["Arena Season 4"] };
 		[24] = { itemID = 35050, price = "1875 #arena#" }; --Brutal Gladiator's Mail Helm
 		[25] = { itemID = 35052, price = "1500 #arena#" }; --Brutal Gladiator's Mail Spaulders
 		[26] = { itemID = 35048, price = "1875 #arena#" }; --Brutal Gladiator's Mail Armor
@@ -5132,25 +5132,25 @@ AtlasLoot_Data["ArenaShamanTBC"] = {
 	};
 	{
 		Name = AL["Restoration"];
-		[1] = { icon = "Spell_Nature_HealingWaveGreater", name = "=q6=#arenas7_3#", desc = "=q1=#arenas1L#" };
+		[1] = { icon = "Spell_Nature_HealingWaveGreater", name = "=q6="..AL["Gladiator's Wartide"], desc = "=q1="..AL["Arena Season 1"] };
 		[2] = { itemID = 31400 }; --Gladiator's Ringmail Helm
 		[3] = { itemID = 31407 }; --Gladiator's Ringmail Spaulders
 		[4] = { itemID = 31396 }; --Gladiator's Ringmail Armor
 		[5] = { itemID = 31397 }; --Gladiator's Ringmail Gauntlets
 		[6] = { itemID = 31406 }; --Gladiator's Ringmail Leggings
-		[8] = { icon = "Spell_Nature_HealingWaveGreater", name = "=q6=#arenas7_3#", desc = "=q1=#arenas3L#" };
+		[8] = { icon = "Spell_Nature_HealingWaveGreater", name = "=q6="..AL["Gladiator's Wartide"], desc = "=q1="..AL["Arena Season 3"] };
 		[9] = { itemID = 32031, price = "15000 #faction#" }; --Merciless Gladiator's Ringmail Helm
 		[10] = { itemID = 32033, price = "13000 #faction#" }; --Merciless Gladiator's Ringmail Spaulders
 		[11] = { itemID = 32029, price = "15000 #faction#" }; --Merciless Gladiator's Ringmail Armor
 		[12] = { itemID = 32030, price = "12000 #faction#" }; --Merciless Gladiator's Ringmail Gauntlets
 		[13] = { itemID = 32032, price = "15000 #faction#" }; --Merciless Gladiator's Ringmail Leggings
-		[16] = { icon = "Spell_Nature_HealingWaveGreater", name = "=q6=#arenas7_3#", desc = "=q1=#arenas2L#" };
+		[16] = { icon = "Spell_Nature_HealingWaveGreater", name = "=q6="..AL["Gladiator's Wartide"], desc = "=q1="..AL["Arena Season 2"] };
 		[17] = { itemID = 33740 }; --Vengeful Gladiator's Ringmail Helm
 		[18] = { itemID = 33742 }; --Vengeful Gladiator's Ringmail Spaulders
 		[19] = { itemID = 33738 }; --Vengeful Gladiator's Ringmail Armor
 		[20] = { itemID = 33739 }; --Vengeful Gladiator's Ringmail Gauntlets
 		[21] = { itemID = 33741 }; --Vengeful Gladiator's Ringmail Leggings
-		[23] = { icon = "Spell_Nature_HealingWaveGreater", name = "=q6=#arenas7_3#", desc = "=q1=#arenas4L#" };
+		[23] = { icon = "Spell_Nature_HealingWaveGreater", name = "=q6="..AL["Gladiator's Wartide"], desc = "=q1="..AL["Arena Season 4"] };
 		[24] = { itemID = 35079, price = "1875 #arena#" }; --Brutal Gladiator's Ringmail Helm
 		[25] = { itemID = 35081, price = "1500 #arena#" }; --Brutal Gladiator's Ringmail Spaulders
 		[26] = { itemID = 35077, price = "1875 #arena#" }; --Brutal Gladiator's Ringmail Armor
@@ -5164,25 +5164,25 @@ AtlasLoot_Data["ArenaWarriorTBC"] = {
 	Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"];
 	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"];
-		[1] = { icon = "Ability_Warrior_BattleShout", name = "=q6=#arenas9#", desc = "=q1=#arenas1L#" };
+		[1] = { icon = "Ability_Warrior_BattleShout", name = "=q6="..AL["Gladiator's Battlegear"], desc = "=q1="..AL["Arena Season 1"] };
 		[2] = { itemID = 24545 }; --Gladiator's Plate Helm
 		[3] = { itemID = 24546 }; --Gladiator's Plate Shoulders
 		[4] = { itemID = 24544 }; --Gladiator's Plate Chestpiece
 		[5] = { itemID = 24549 }; --Gladiator's Plate Gauntlets
 		[6] = { itemID = 24547 }; --Gladiator's Plate Legguards
-		[8] = { icon = "Ability_Warrior_BattleShout", name = "=q6=#arenas9#", desc = "=q1=#arenas3L#" };
+		[8] = { icon = "Ability_Warrior_BattleShout", name = "=q6="..AL["Gladiator's Battlegear"], desc = "=q1="..AL["Arena Season 3"] };
 		[9] = { itemID = 30488, price = "15000 #faction#" }; --Merciless Gladiator's Plate Helm
 		[10] = { itemID = 30490, price = "13000 #faction#" }; --Merciless Gladiator's Plate Shoulders
 		[11] = { itemID = 30486, price = "15000 #faction#" }; --Merciless Gladiator's Plate Chestpiece
 		[12] = { itemID = 30487, price = "12000 #faction#" }; --Merciless Gladiator's Plate Gauntlets
 		[13] = { itemID = 30489, price = "15000 #faction#" }; --Merciless Gladiator's Plate Legguards
-		[16] = { icon = "Ability_Warrior_BattleShout", name = "=q6=#arenas9#", desc = "=q1=#arenas2L#" };
+		[16] = { icon = "Ability_Warrior_BattleShout", name = "=q6="..AL["Gladiator's Battlegear"], desc = "=q1="..AL["Arena Season 2"] };
 		[17] = { itemID = 33730 }; --Vengeful Gladiator's Plate Helm
 		[18] = { itemID = 33732 }; --Vengeful Gladiator's Plate Shoulders
 		[19] = { itemID = 33728 }; --Vengeful Gladiator's Plate Chestpiece
 		[20] = { itemID = 33729 }; --Vengeful Gladiator's Plate Gauntlets
 		[21] = { itemID = 33731 }; --Vengeful Gladiator's Plate Legguards
-		[23] = { icon = "Ability_Warrior_BattleShout", name = "=q6=#arenas9#", desc = "=q1=#arenas4L#" };
+		[23] = { icon = "Ability_Warrior_BattleShout", name = "=q6="..AL["Gladiator's Battlegear"], desc = "=q1="..AL["Arena Season 4"] };
 		[24] = { itemID = 35068, price = "1875 #arena#" }; --Brutal Gladiator's Plate Helm
 		[25] = { itemID = 35070, price = "1500 #arena#" }; --Brutal Gladiator's Plate Shoulders
 		[26] = { itemID = 35066, price = "1875 #arena#" }; --Brutal Gladiator's Plate Chestpiece
@@ -5455,10 +5455,10 @@ AtlasLoot_Data["WeaponsTBC"] = {
 		{
 			Name = AL["Mana-Etched Regalia"];
 			[1] = { itemID = 28193, desc = {BabbleZone["The Black Morass"], BabbleBoss["Aeonus"]} }; --Mana-Etched Crown
-			[2] = { itemID = 27796, desc = {BabbleZone["The Slave Pens"], BabbleBoss["Quagmirran"].." (#j3#)" } }; --Mana-Etched Spaulders
-			[3] = { itemID = 28191, desc = {BabbleZone["Old Hillsbrad Foothills"].."(#j3#)", BabbleBoss["Epoch Hunter"]} }; --Mana-Etched Vestments
-			[4] = { itemID = 27465, desc = {BabbleZone["Hellfire Ramparts"].."(#j3#)", BabbleBoss["Omor the Unscarred"]} }; --Mana-Etched Gloves
-			[5] = { itemID = 27907, desc = {BabbleZone["The Slave Pens"], BabbleBoss["The Black Stalker"].." (#j3#)" } }; --Mana-Etched Pantaloons
+			[2] = { itemID = 27796, desc = {BabbleZone["The Slave Pens"], BabbleBoss["Quagmirran"]..AL["Heroic Mode"] } }; --Mana-Etched Spaulders
+			[3] = { itemID = 28191, desc = {BabbleZone["Old Hillsbrad Foothills"]..AL["Heroic Mode"], BabbleBoss["Epoch Hunter"]} }; --Mana-Etched Vestments
+			[4] = { itemID = 27465, desc = {BabbleZone["Hellfire Ramparts"]..AL["Heroic Mode"], BabbleBoss["Omor the Unscarred"]} }; --Mana-Etched Gloves
+			[5] = { itemID = 27907, desc = {BabbleZone["The Slave Pens"], BabbleBoss["The Black Stalker"]..AL["Heroic Mode"] } }; --Mana-Etched Pantaloons
 		};
 		{
 			Name = AL["Incanter's Regalia"];
@@ -5486,11 +5486,11 @@ AtlasLoot_Data["WeaponsTBC"] = {
 		};
 		{
 			Name = AL["Wastewalker Armor"];
-			[1] = { itemID = 28224, desc = {BabbleZone["Old Hillsbrad Foothills"].."(#j3#)", BabbleBoss["Epoch Hunter"]} }; --Wastewalker Helm
-			[2] = { itemID = 27797, desc = {BabbleZone["Auchenai Crypts"].."(#j3#)", AL["Avatar"]} }; --Wastewalker Shoulderpads
-			[3] = { itemID = 28264, desc = {BabbleZone["The Blood Furnace"].."(#j3#)", BabbleBoss["Keli'dan the Breaker"]} }; --Wastewalker Tunic
+			[1] = { itemID = 28224, desc = {BabbleZone["Old Hillsbrad Foothills"]..AL["Heroic Mode"], BabbleBoss["Epoch Hunter"]} }; --Wastewalker Helm
+			[2] = { itemID = 27797, desc = {BabbleZone["Auchenai Crypts"]..AL["Heroic Mode"], AL["Avatar"]} }; --Wastewalker Shoulderpads
+			[3] = { itemID = 28264, desc = {BabbleZone["The Blood Furnace"]..AL["Heroic Mode"], BabbleBoss["Keli'dan the Breaker"]} }; --Wastewalker Tunic
 			[4] = { itemID = 27531, desc = {BabbleZone["The Shattered Halls"], BabbleBoss["Warchief Kargath Bladefist"]} }; --Wastewalker Gloves
-			[5] = { itemID = 27837, desc = {BabbleZone["Mana-Tombs"].."(#j3#)", BabbleBoss["Nexus-Prince Shaffar"]} }; --Wastewalker Leggings
+			[5] = { itemID = 27837, desc = {BabbleZone["Mana-Tombs"]..AL["Heroic Mode"], BabbleBoss["Nexus-Prince Shaffar"]} }; --Wastewalker Leggings
 		};
 		{
 			Name = AL["Moonglade Raiment"];
@@ -5519,8 +5519,8 @@ AtlasLoot_Data["WeaponsTBC"] = {
 		{
 			Name = AL["Desolation Battlegear"];
 			[1] = { itemID = 28192, desc = {BabbleZone["The Black Morass"], BabbleBoss["Aeonus"]} }; --Helm of Desolation
-			[2] = { itemID = 27713, desc = {BabbleZone["The Slave Pens"], BabbleBoss["Quagmirran"].." (#j3#)" } }; --Pauldrons of Desolation
-			[3] = { itemID = 28401, desc = {BabbleZone["Old Hillsbrad Foothills"].."(#j3#)", BabbleBoss["Epoch Hunter"]} }; --Hauberk of Desolation
+			[2] = { itemID = 27713, desc = {BabbleZone["The Slave Pens"], BabbleBoss["Quagmirran"]..AL["Heroic Mode"] } }; --Pauldrons of Desolation
+			[3] = { itemID = 28401, desc = {BabbleZone["Old Hillsbrad Foothills"]..AL["Heroic Mode"], BabbleBoss["Epoch Hunter"]} }; --Hauberk of Desolation
 			[4] = { itemID = 27528, desc = {BabbleZone["The Shattered Halls"], BabbleBoss["Warchief Kargath Bladefist"]} }; --Gauntlets of Desolation
 			[5] = { itemID = 27936, desc = {BabbleZone["Sethekk Halls"], BabbleBoss["Talon King Ikiss"]} }; --Greaves of Desolation
 		};
@@ -5542,11 +5542,11 @@ AtlasLoot_Data["WeaponsTBC"] = {
 		};
 		{
 			Name = AL["Doomplate Battlegear"];
-			[1] = { itemID = 28225, desc = {BabbleZone["Old Hillsbrad Foothills"].."(#j3#)", BabbleBoss["Epoch Hunter"]} }; --Doomplate Warhelm
-			[2] = { itemID = 27771, desc = {BabbleZone["The Slave Pens"], BabbleBoss["The Black Stalker"].." (#j3#)" } }; --Doomplate Shouldergards
+			[1] = { itemID = 28225, desc = {BabbleZone["Old Hillsbrad Foothills"]..AL["Heroic Mode"], BabbleBoss["Epoch Hunter"]} }; --Doomplate Warhelm
+			[2] = { itemID = 27771, desc = {BabbleZone["The Slave Pens"], BabbleBoss["The Black Stalker"]..AL["Heroic Mode"] } }; --Doomplate Shouldergards
 			[3] = { itemID = 28403, desc = {BabbleZone["The Arcatraz"], BabbleBoss["Harbinger Skyriss"]} }; --Doomplate Chestguard
-			[4] = { itemID = 27497, desc = {BabbleZone["The Blood Furnace"].."(#j3#)", BabbleBoss["Keli'dan the Breaker"]} }; --Doomplate Gauntlets
-			[5] = { itemID = 27870, desc = {BabbleZone["Auchenai Crypts"].."(#j3#)", BabbleBoss["Exarch Maladaar"]} }; --Doomplate Legguards
+			[4] = { itemID = 27497, desc = {BabbleZone["The Blood Furnace"]..AL["Heroic Mode"], BabbleBoss["Keli'dan the Breaker"]} }; --Doomplate Gauntlets
+			[5] = { itemID = 27870, desc = {BabbleZone["Auchenai Crypts"]..AL["Heroic Mode"], BabbleBoss["Exarch Maladaar"]} }; --Doomplate Legguards
 		};
 	};
 

@@ -2,8 +2,8 @@ local difficultyList = {
 	["Heroic"] = 3,
 	["Mythic"] = 4,
 	["Heroic Raid"] = 3,
-	["Mythic Raid"] = 5,
-	["Ascended Raid"] = 4,
+	["Mythic Raid"] = 4,
+	["Ascended Raid"] = 5,
 	["Heroic Bloodforged"] = 100,
 	["Bloodforged"] = 1,
 	["Mythic 1"] = 5,  ["Mythic 2"] = 6,  ["Mythic 3"] = 7,  ["Mythic 4"] = 8,  ["Mythic 5"] = 9,
@@ -75,13 +75,9 @@ function AtlasLoot:UpdateItemIDsDatabase(firstID, lastID)
 				for _, itemData in pairs(t) do
 					if type(itemData) == "table" then
 						if itemData.itemID then
-							for _, dif in pairs(self.Difficultys[data.Type]) do
-								local idCheck = ItemIDsDatabase[itemData.itemID] and self:CheckItemID(ItemIDsDatabase[itemData.itemID][dif[2]], itemData.itemID, dif[1]) or nil
+							for _, dif in pairs(self.Difficulties[data.Type]) do
 								local itemType = GetItemInfoInstant(itemData.itemID) or nil
-								if dif[2] ~= 100 and dif[2] ~= 1 and dif[2] ~= 2 and itemType and itemType.inventoryType ~= 0 and not itemTypeIgnore[itemType.inventoryType] and
-								((not ItemIDsDatabase[itemData.itemID]) or
-								(ItemIDsDatabase[itemData.itemID] and (not ItemIDsDatabase[itemData.itemID][dif[2]] or
-								(ItemIDsDatabase[itemData.itemID][dif[2]] and not idCheck)))) then
+								if dif[2] ~= 100 and dif[2] ~= 1 and dif[2] ~= 2 and itemType then
 									unknownIDs[dif[1]] = unknownIDs[dif[1]] or {}
 									unknownIDs[dif[1]][itemType.name:gsub( "%W", "" )] = itemData.itemID
 								end
@@ -127,7 +123,7 @@ function AtlasLoot:UpdateItemIDsDatabase(firstID, lastID)
         while (firstID ~= lastID) do
 			local item = GetItemInfoInstant(firstID)
 			local difficulty = self:GetDifficulty(item)
-			if item and item.inventoryType ~= 0 and not itemTypeIgnore[item.inventoryType] and difficulty then
+			if item and difficulty then
 				checkID(item, difficulty)
 			end
 			firstID = firstID + 1
@@ -149,17 +145,18 @@ AtlasLoot:FindId(id, difficulty)
 Finds the Ids of other difficulties based on the normal id of the item and the difficulty parameter given.
 On the form of {ID, {normal, heroic, mythic, mythic1, mythic2, ... ,mythicN}}
 ]]
-function AtlasLoot:FindId(id, difficulty, type, sourceType)
+function AtlasLoot:FindId(id, difficulty, type)
 	local hasID
-	local difficultyString
-	if self.Difficultys[type] then
-		for _, dif in pairs (self.Difficultys[type]) do
+	local Difficultiestring
+	if self.Difficulties[type] then
+		for _, dif in ipairs (self.Difficulties[type]) do
 			if dif[2] == difficulty then
-				difficultyString = dif[1]
+				Difficultiestring = dif[1]
 			end
 		end
 	end
 	if difficulty == 2 then return end
+	-- Create Heroic Bloodforged Id
 	if difficulty == 100 then
 		local newIDs = {
 			(id < 1000000 and (id) + 6300000),
@@ -167,11 +164,10 @@ function AtlasLoot:FindId(id, difficulty, type, sourceType)
 			(id > 1000000 and (id - 1500000) + 6300000),
 			(id > 1000000 and (id - 1500000) + 7800000),
 	}
-		hasID = self:CheckItemID(newIDs, id, difficultyString)
+		hasID = self:CheckItemID(newIDs, id, Difficultiestring)
 		if hasID then return  hasID, true end
-		if not ItemIDsDatabase[id] then return nil, false end
 	end
-
+	-- Create Bloodforged Id
 	if difficulty == 1 then
 		local newIDs = {
 			(id < 1000000 and (id) + 6000000),
@@ -179,39 +175,11 @@ function AtlasLoot:FindId(id, difficulty, type, sourceType)
 			(id > 1000000 and (id - 1500000) + 6000000),
 			(id > 1000000 and (id - 1500000) + 7500000),
 	}
-		hasID = self:CheckItemID(newIDs, id, difficultyString)
+		hasID = self:CheckItemID(newIDs, id, Difficultiestring)
 		if hasID then return  hasID, true end
 	end
-
-	if difficulty == 3 then
-		local newIDs = {
-			(id < 1000000 and (id) + 1550000),
-			(id > 1000000 and (id - 1500000) + 1550000),
-	}
-		hasID = self:CheckItemID(newIDs, id, difficultyString)
-		if hasID then return  hasID, true end
-	end
-
-	if difficulty == 4 then
-		local newIDs = {
-			(id < 1000000 and (id) + 1650000),
-			(id > 1000000 and (id - 1500000) + 1650000),
-	}
-		hasID = self:CheckItemID(newIDs, id, difficultyString)
-		if hasID then return  hasID, true end
-	end
-
-	if (difficulty == 4 and (type == "BCRaid" or type == "ClassicRaid") and sourceType == "Search") then
-		difficulty = 5
-	elseif (difficulty == 5 and (type == "BCRaid" or type == "ClassicRaid") and sourceType == "Search") then
-		difficulty = 4
-	end
-
-	if ItemIDsDatabase[id] then
-		hasID = self:CheckItemID(ItemIDsDatabase[id][difficulty] or nil, id, difficultyString)
-		if hasID then
-			return hasID, true
-		end
+	if ItemIDsDatabase[id] and ItemIDsDatabase[id][difficulty] then
+		return ItemIDsDatabase[id][difficulty], true
 	end
 end
 

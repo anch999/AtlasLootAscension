@@ -695,9 +695,6 @@ function AtlasLoot:DoSearch(searchText)
                         if itemData.itemID or itemData.spellID then
                             if data.Type then
                                 itemData.Type = data.Type
-                                if not itemData[self.Difficultys.MAX_DIF] then
-                                    itemData[self.Difficultys.MAX_DIF] = #self.Difficultys[data.Type]
-                                end
                             end
                             if self.db.profile.showdropLocationOnSearch then
                                 itemData.dropLoc = {data.DisplayName or data.Name, t.Name}

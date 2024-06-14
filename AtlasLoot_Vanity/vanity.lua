@@ -3,6 +3,7 @@ local BabbleBoss = AtlasLoot_GetLocaleLibBabble("LibBabble-Boss-3.0")
 local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0")
 local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
+local WHITE = "|cffFFFFFF"
 
 ---------------
 --- Tabards ---
@@ -74,13 +75,13 @@ AtlasLoot_Data["Tabards"] = {
 	};
 	{
 		Name = "Page 3";
-		[1] = { icon = "INV_BannerPVP_02", name = "=q6="..BabbleFaction["Alliance"] };
+		[1] = { icon = "INV_BannerPVP_02", name = WHITE..BabbleFaction["Alliance"] };
 		[2] = { itemID = 15196 }; --Private's Tabard
 		[3] = { itemID = 15198 }; --Knight's Colors
 		[4] = { itemID = 20132 }; --Arathor Battle Tabard
 		[5] = { itemID = 19032 }; --Stormpike Battle Tabard
 		[6] = { itemID = 19506 }; --Silverwing Battle Tabard
-		[8] = { icon = "INV_BannerPVP_01", name = "=q6="..BabbleFaction["Horde"] };
+		[8] = { icon = "INV_BannerPVP_01", name = WHITE..BabbleFaction["Horde"] };
 		[9] = { itemID = 15197 }; --Scout's Tabard
 		[10] = { itemID = 15199 }; --Stone Guard's Herald
 		[11] = { itemID = 20131 }; --Battle Tabard of the Defilers
@@ -88,7 +89,7 @@ AtlasLoot_Data["Tabards"] = {
 		[13] = { itemID = 19505 }; --Warsong Battle Tabard
 		[16] = { itemID = 23192 }; --Tabard of the Scarlet Crusade",  "0%
 		[17] = { itemID = 5976 }; --Guild Tabard
-		[19] = { icon = "INV_Box_01", name = "=q6="..AL["Unattainable Tabards"] };
+		[19] = { icon = "INV_Box_01", name = WHITE..AL["Unattainable Tabards"] };
 		[20] = { itemID = 36941 }; --Competitor's Tabard
 		[21] = { itemID = 22999 }; --Tabard of the Agent Dawn
 		[22] = { itemID = 28788 }; --Tabard of the Protector
@@ -156,7 +157,7 @@ AtlasLoot_Data["VanityPets"] = {
 	};
 	{
 		Name = AL["Quest"].." / "..AL["Crafted"];
-		[1] = { icon = "INV_Box_01", name = "=q6=" .. AL["Quest"] };
+		[1] = { icon = "INV_Box_01", name = WHITE.. AL["Quest"] };
 		[2] = { itemID = 45022 }; --Argent Gruntling
 		[3] = { itemID = 44998 }; --Argent Squire
 		[4] = { itemID = 35350 }; --Chuck's Bucket
@@ -171,7 +172,7 @@ AtlasLoot_Data["VanityPets"] = {
 		[13] = { itemID = 12529 }; --Smolderweb Carrier
 		[14] = { itemID = 11474 }; --Sprite Darter Egg
 		[15] = { itemID = 12264 }; --Worg Carrier
-		[16] = { icon = "INV_Box_01", name = "=q6=" .. AL["Crafted"] };
+		[16] = { icon = "INV_Box_01", name = WHITE.. AL["Crafted"] };
 		[17] = { itemID = 15996 }; --Lifelike Mechanical Toad
 		[18] = { itemID = 11826 }; --Lil' Smoky
 		[19] = { itemID = 4401 }; --Mechanical Squirrel Box
@@ -180,7 +181,7 @@ AtlasLoot_Data["VanityPets"] = {
 	};
 	{
 		Name = AL["Rare"];
-		[1] = { icon = "INV_Box_01", name = "=q6=" .. AL["Achievement"] };
+		[1] = { icon = "INV_Box_01", name = WHITE.. AL["Achievement"] };
 		[2] = { itemID = 44738 }; --Kirin Tor Familiar
 		[3] = { itemID = 44841 }; --Little Fawn's Salt Lick
 		[4] = { itemID = 49912 }; --Perky Pug
@@ -189,7 +190,7 @@ AtlasLoot_Data["VanityPets"] = {
 		[7] = { itemID = 44810 }; --Turkey Cage
 		[8] = { itemID = 44819 }; --Baby Blizzard Bear
 		[9] = { itemID = 49362 }; --Onyxian Whelpling
-		[16] = { icon = "INV_Box_01", name = "=q6=" .. AL["Faction"] };
+		[16] = { icon = "INV_Box_01", name = WHITE.. AL["Faction"] };
 		[17] = { itemID = 38628 }; --Nether Ray Fry
 		[18] = { itemID = 44723 }; --Nurtured Penguin Egg
 		[19] = { itemID = 46820 }; --Shimmering Wyrmling
@@ -202,7 +203,7 @@ AtlasLoot_Data["VanityPets"] = {
 	};
 	{
 		Name = AL["Rare"];
-		[1] = { icon = "INV_Box_01", name = "=q6=#z17#" };
+		[1] = { icon = "INV_Box_01", name = WHITE..AL["World Drop"] };
 		[2] = { itemID = 8494 }; --Parrot Cage (Hyacinth Macaw)
 		[3] = { itemID = 43698 }; --Giant Sewer Rat
 		[4] = { itemID = 34535 }; --Azure Whelpling
@@ -218,7 +219,7 @@ AtlasLoot_Data["VanityPets"] = {
 		[14] = { itemID = 48124 }; --Razormaw Hatchling
 		[15] = { itemID = 8499 }; --Tiny Crimson Whelpling
 		[16] = { itemID = 8498 }; --Tiny Emerald Whelpling
-		[18] = { icon = "INV_Box_01", name = "=q6=" .. AL["Dungeon/Raid"] };
+		[18] = { icon = "INV_Box_01", name = WHITE.. AL["Dungeon/Raid"] };
 		[19] = { itemID = 33993, desc = "=q1=" .. BabbleZone["Zul'Aman"] }; --Mojo
 		[20] = { itemID = 35504, desc = "=q2=" .. BabbleBoss["Kael'thas Sunstrider"] .. ", =q1=" .. BabbleZone["Magisters' Terrace"] }; --Phoenix Hatchling
 		[21] = { itemID = 38658, desc = "=q2=" .. BabbleBoss["Prince Tenris Mirkblood"] .. ", =q1=" .. BabbleZone["Karazhan"] }; --Vampiric Batling
@@ -303,7 +304,7 @@ AtlasLoot_Data["Mounts"] = {
 	Name = "Mounts";
 	{
 		Name = AL["Alliance Mounts"].." Page 1";
-		[1] = { icon = "inv_misc_tournaments_symbol_nightelf", name = "=q6=" .. BabbleFaction["Darnassus"] .. AL["Mounts"], "=ec1="..BabbleFaction["Alliance"] };
+		[1] = { icon = "inv_misc_tournaments_symbol_nightelf", name = WHITE.. BabbleFaction["Darnassus"] .. AL["Mounts"], desc = "=ec1="..BabbleFaction["Alliance"] };
 		[2] = { itemID = 18766 }; --Reins of the Swift Frostsaber
 		[3] = { itemID = 18767 }; --Reins of the Swift Mistsaber
 		[4] = { itemID = 18902 }; --Reins of the Swift Stormsaber
@@ -311,7 +312,7 @@ AtlasLoot_Data["Mounts"] = {
 		[6] = { itemID = 47100 }; --Reins of the Striped Dawnsaber
 		[7] = { itemID = 8631 }; --Reins of the Striped Frostsaber
 		[8] = { itemID = 8629 }; --Reins of the Striped Nightsaber
-		[16] = { icon = "inv_misc_tournaments_symbol_gnome", name = "=q6=" .. BabbleFaction["Gnomeregan Exiles"] .. AL["Mounts"], "=ec1="..BabbleFaction["Alliance"] };
+		[16] = { icon = "inv_misc_tournaments_symbol_gnome", name = WHITE.. BabbleFaction["Gnomeregan Exiles"] .. AL["Mounts"], desc = "=ec1="..BabbleFaction["Alliance"] };
 		[17] = { itemID = 18772 }; --Swift Green Mechanostrider
 		[18] = { itemID = 18773 }; --Swift White Mechanostrider
 		[19] = { itemID = 18774 }; --Swift Yellow Mechanostrider
@@ -322,21 +323,21 @@ AtlasLoot_Data["Mounts"] = {
 	};
 	{
 		Name = AL["Alliance Mounts"].." Page 2";
-		[1] = { icon = "inv_misc_tournaments_symbol_dwarf", name = "=q6=" .. BabbleFaction["Ironforge"] .. AL["Mounts"], "=ec1="..BabbleFaction["Alliance"] };
+		[1] = { icon = "inv_misc_tournaments_symbol_dwarf", name = WHITE.. BabbleFaction["Ironforge"] .. AL["Mounts"], desc = "=ec1="..BabbleFaction["Alliance"] };
 		[2] = { itemID = 18786 }; --Swift Brown Ram
 		[3] = { itemID = 18787 }; --Swift Gray Ram
 		[4] = { itemID = 18785 }; --Swift White Ram
 		[5] = { itemID = 5872 }; --Brown Ram
 		[6] = { itemID = 5864 }; --Gray Ram
 		[7] = { itemID = 5873 }; --White Ram
-		[9] = { icon = "inv_misc_tournaments_symbol_draenei", name = "=q6=" .. BabbleFaction["Exodar"] .. AL["Mounts"], "=ec1="..BabbleFaction["Alliance"] };
+		[9] = { icon = "inv_misc_tournaments_symbol_draenei", name = WHITE.. BabbleFaction["Exodar"] .. AL["Mounts"], desc = "=ec1="..BabbleFaction["Alliance"] };
 		[10] = { itemID = 29745 }; --Great Blue Elekk
 		[11] = { itemID = 29746 }; --Great Green Elekk
 		[12] = { itemID = 29747 }; --Great Purple Elekk
 		[13] = { itemID = 28481 }; --Brown Elekk
 		[14] = { itemID = 29744 }; --Gray Elekk
 		[15] = { itemID = 29743 }; --Purple Elekk
-		[16] = { icon = "inv_misc_tournaments_symbol_human", name = "=q6=" .. BabbleFaction["Stormwind"] .. AL["Mounts"], "=ec1="..BabbleFaction["Alliance"] };
+		[16] = { icon = "inv_misc_tournaments_symbol_human", name = WHITE.. BabbleFaction["Stormwind"] .. AL["Mounts"], desc = "=ec1="..BabbleFaction["Alliance"] };
 		[17] = { itemID = 18777 }; --Swift Brown Steed
 		[18] = { itemID = 18776 }; --Swift Palomino
 		[19] = { itemID = 18778 }; --Swift White Steed
@@ -347,7 +348,7 @@ AtlasLoot_Data["Mounts"] = {
 	};
 	{
 		Name = AL["Alliance Mounts"].." Page 3";
-		[1] = { icon = "INV_BannerPVP_02", name = "=q6=" .. AL["Alliance Flying Mounts"], "=ec1="..BabbleFaction["Alliance"] };
+		[1] = { icon = "INV_BannerPVP_02", name = WHITE.. AL["Alliance Flying Mounts"], desc = "=ec1="..BabbleFaction["Alliance"] };
 		[2] = { itemID = 25473 }; --Swift Blue Gryphon
 		[3] = { itemID = 25528 }; --Swift Green Gryphon
 		[4] = { itemID = 25529 }; --Swift Purple Gryphon
@@ -359,7 +360,7 @@ AtlasLoot_Data["Mounts"] = {
 		[11] = { itemID = 44230 }; --Reins of the Wooly Mammoth
 		[12] = { itemID = 44235 }; --Reins of the Traveler's Tundra Mammoth
 		[13] = { itemID = 44689 }; --Armored Snowy Gryphon
-		[16] = { icon = "INV_BannerPVP_02", name = "=q6=" .. BabbleFaction["Kurenai"] .. AL["Mounts"], "=ec1="..BabbleFaction["Alliance"] };
+		[16] = { icon = "INV_BannerPVP_02", name = WHITE.. BabbleFaction["Kurenai"] .. AL["Mounts"], desc = "=ec1="..BabbleFaction["Alliance"] };
 		[17] = { itemID = 29227 }; --Reins of the Cobalt War Talbuk
 		[18] = { itemID = 29229 }; --Reins of the Silver War Talbuk
 		[19] = { itemID = 29230 }; --Reins of the Tan War Talbuk
@@ -368,15 +369,15 @@ AtlasLoot_Data["Mounts"] = {
 		[22] = { itemID = 31832 }; --Reins of the Silver Riding Talbuk
 		[23] = { itemID = 31834 }; --Reins of the Tan Riding Talbuk
 		[24] = { itemID = 31836 }; --Reins of the White Riding Talbuk
-		[26] = { icon = "INV_BannerPVP_02", name = "=q6=" .. BabbleFaction["Wintersaber Trainers"] .. AL["Mounts"], "=ec1="..BabbleFaction["Alliance"] };
+		[26] = { icon = "INV_BannerPVP_02", name = WHITE.. BabbleFaction["Wintersaber Trainers"] .. AL["Mounts"], desc = "=ec1="..BabbleFaction["Alliance"] };
 		[27] = { itemID = 13086 }; --Reins of the Winterspring Frostsaber
-		[28] = { icon = "INV_BannerPVP_02", name = "=q6=" .. BabbleFaction["The Silver Covenant"] .. AL["Mounts"], "=ec1="..BabbleFaction["Alliance"] };
+		[28] = { icon = "INV_BannerPVP_02", name = WHITE.. BabbleFaction["The Silver Covenant"] .. AL["Mounts"], desc = "=ec1="..BabbleFaction["Alliance"] };
 		[29] = { itemID = 46815 }; --Quel'dorei Steed
 		[30] = { itemID = 46813 }; --Silver Covenant Hippogryph
 	};
 	{
 		Name = AL["Horde Mounts"].." Page 1";
-		[1] = { icon = "inv_misc_tournaments_symbol_orc", name = "=q6=" .. BabbleFaction["Orgrimmar"] .. AL["Mounts"], "=ec1="..BabbleFaction["Horde"] };
+		[1] = { icon = "inv_misc_tournaments_symbol_orc", name = WHITE.. BabbleFaction["Orgrimmar"] .. AL["Mounts"], desc = "=ec1="..BabbleFaction["Horde"] };
 		[2] = { itemID = 18796 }; --Horn of the Swift Brown Wolf
 		[3] = { itemID = 18798 }; --Horn of the Swift Gray Wolf
 		[4] = { itemID = 18797 }; --Horn of the Swift Timber Wolf
@@ -384,7 +385,7 @@ AtlasLoot_Data["Mounts"] = {
 		[6] = { itemID = 5668 }; --Horn of the Brown Wolf
 		[7] = { itemID = 5665 }; --Horn of the Dire Wolf
 		[8] = { itemID = 1132 }; --Horn of the Timber Wolf
-		[16] = { icon = "inv_misc_tournaments_symbol_bloodelf", name = "=q6=" .. BabbleFaction["Silvermoon City"] .. AL["Mounts"], "=ec1="..BabbleFaction["Horde"] };
+		[16] = { icon = "inv_misc_tournaments_symbol_bloodelf", name = WHITE.. BabbleFaction["Silvermoon City"] .. AL["Mounts"], desc = "=ec1="..BabbleFaction["Horde"] };
 		[17] = { itemID = 29223 }; --Swift Green Hawkstrider
 		[18] = { itemID = 28936 }; --Swift Pink Hawkstrider
 		[19] = { itemID = 29224 }; --Swift Purple Hawkstrider
@@ -395,21 +396,21 @@ AtlasLoot_Data["Mounts"] = {
 	};
 	{
 		Name = AL["Horde Mounts"].." Page 2";
-		[1] = { icon = "inv_misc_tournaments_symbol_troll", name = "=q6=" .. BabbleFaction["Darkspear Trolls"] .. AL["Mounts"], "=ec1="..BabbleFaction["Horde"] };
+		[1] = { icon = "inv_misc_tournaments_symbol_troll", name = WHITE.. BabbleFaction["Darkspear Trolls"] .. AL["Mounts"], desc = "=ec1="..BabbleFaction["Horde"] };
 		[2] = { itemID = 18788 }; --Swift Blue Raptor
 		[3] = { itemID = 18789 }; --Swift Olive Raptor
 		[4] = { itemID = 18790 }; --Swift Orange Raptor
 		[5] = { itemID = 8588 }; --Whistle of the Emerald Raptor
 		[6] = { itemID = 8591 }; --Whistle of the Turquoise Raptor
 		[7] = { itemID = 8592 }; --Whistle of the Violet Raptor
-		[9] = { icon = "inv_misc_tournaments_symbol_tauren", name = "=q6=" .. BabbleFaction["Thunder Bluff"] .. AL["Mounts"], "=ec1="..BabbleFaction["Horde"] };
+		[9] = { icon = "inv_misc_tournaments_symbol_tauren", name = WHITE.. BabbleFaction["Thunder Bluff"] .. AL["Mounts"], desc = "=ec1="..BabbleFaction["Horde"] };
 		[10] = { itemID = 18794 }; --Great Brown Kodo
 		[11] = { itemID = 18795 }; --Great Gray Kodo
 		[12] = { itemID = 18793 }; --Great White Kodo
 		[13] = { itemID = 15290 }; --Brown Kodo
 		[14] = { itemID = 15277 }; --Gray Kodo
 		[15] = { itemID = 46100 }; --White Kodo
-		[16] = { icon = "inv_misc_tournaments_symbol_scourge", name = "=q6=" .. BabbleFaction["Undercity"] .. AL["Mounts"], "=ec1="..BabbleFaction["Horde"] };
+		[16] = { icon = "inv_misc_tournaments_symbol_scourge", name = WHITE.. BabbleFaction["Undercity"] .. AL["Mounts"], desc = "=ec1="..BabbleFaction["Horde"] };
 		[17] = { itemID = 13334 }; --Green Skeletal Warhorse
 		[18] = { itemID = 47101 }; --Ochre Skeletal Warhorse
 		[19] = { itemID = 18791 }; --Purple Skeletal Warhorse
@@ -420,7 +421,7 @@ AtlasLoot_Data["Mounts"] = {
 	};
 	{
 		Name = AL["Horde Mounts"].." Page 3";
-		[1] = { icon = "INV_BannerPVP_01", name = "=q6=" .. AL["Horde Flying Mounts"], "=ec1="..BabbleFaction["Horde"] };
+		[1] = { icon = "INV_BannerPVP_01", name = WHITE.. AL["Horde Flying Mounts"], desc = "=ec1="..BabbleFaction["Horde"] };
 		[2] = { itemID = 25531 }; --Swift Green Wind Rider
 		[3] = { itemID = 25533 }; --Swift Purple Wind Rider
 		[4] = { itemID = 25477 }; --Swift Red Wind Rider
@@ -432,7 +433,7 @@ AtlasLoot_Data["Mounts"] = {
 		[11] = { itemID = 44231 }; --Reins of the Wooly Mammoth
 		[12] = { itemID = 44234 }; --Reins of the Traveler's Tundra Mammoth
 		[13] = { itemID = 44690 }; --Armored Blue Wind Rider
-		[16] = { icon = "INV_BannerPVP_01", name = "=q6=" .. BabbleFaction["The Mag'har"] .. AL["Mounts"], "=ec1="..BabbleFaction["Horde"] };
+		[16] = { icon = "INV_BannerPVP_01", name = WHITE.. BabbleFaction["The Mag'har"] .. AL["Mounts"], desc = "=ec1="..BabbleFaction["Horde"] };
 		[17] = { itemID = 29102 }; --Reins of the Cobalt War Talbuk
 		[18] = { itemID = 29104 }; --Reins of the Silver War Talbuk
 		[19] = { itemID = 29105 }; --Reins of the Tan War Talbuk
@@ -441,48 +442,48 @@ AtlasLoot_Data["Mounts"] = {
 		[22] = { itemID = 31831 }; --Reins of the Silver Riding Talbuk
 		[23] = { itemID = 31833 }; --Reins of the Tan Riding Talbuk
 		[24] = { itemID = 31835 }; --Reins of the White Riding Talbuk
-		[26] = { icon = "INV_BannerPVP_02", name = "=q6=Ravasaur Trainers #j30#", "=ec1="..BabbleFaction["Alliance"] };
+		[26] = { icon = "INV_BannerPVP_02", name = "=q6=Ravasaur Trainers ", "=ec1="..BabbleFaction["Alliance"] };
 		[27] = { itemID = 46102 }; --Whistle of the Venomhide Ravasaur
-		[28] = { icon = "INV_BannerPVP_02", name = "=q6=" .. BabbleFaction["The Sunreavers"] .. AL["Mounts"], "=ec1="..BabbleFaction["Alliance"] };
+		[28] = { icon = "INV_BannerPVP_02", name = WHITE.. BabbleFaction["The Sunreavers"] .. AL["Mounts"], desc = "=ec1="..BabbleFaction["Alliance"] };
 		[29] = { itemID = 46816 }; --Sunreaver Hawkstrider
 		[30] = { itemID = 46814 }; --Sunreaver Dragonhawk
 	};
 	{
 		Name = AL["Neutral Faction Mounts"];
-		[1] = { icon = "INV_Box_01", name = "=q6=" .. BabbleFaction["Netherwing"] .. AL["Mounts"] };
+		[1] = { icon = "INV_Box_01", name = WHITE.. BabbleFaction["Netherwing"] .. AL["Mounts"] };
 		[2] = { itemID = 32858 }; --Reins of the Azure Netherwing Drake
 		[3] = { itemID = 32859 }; --Reins of the Cobalt Netherwing Drake
 		[4] = { itemID = 32857 }; --Reins of the Onyx Netherwing Drake
 		[5] = { itemID = 32860 }; --Reins of the Purple Netherwing Drake
 		[6] = { itemID = 32861 }; --Reins of the Veridian Netherwing Drake
 		[7] = { itemID = 32862 }; --Reins of the Violet Netherwing Drake
-		[9] = { icon = "INV_Box_01", name = "=q6=" .. BabbleFaction["Sha'tari Skyguard"] .. AL["Mounts"] };
+		[9] = { icon = "INV_Box_01", name = WHITE.. BabbleFaction["Sha'tari Skyguard"] .. AL["Mounts"] };
 		[10] = { itemID = 32319 }; --Blue Riding Nether Ray
 		[11] = { itemID = 32314 }; --Green Riding Nether Ray
 		[12] = { itemID = 32317 }; --Red Riding Nether Ray
 		[13] = { itemID = 32316 }; --Purple Riding Nether Ray
 		[14] = { itemID = 32318 }; --Silver Riding Nether Ray
-		[16] = { icon = "INV_Box_01", name = "=q6=" .. BabbleFaction["Cenarion Expedition"] .. AL["Mounts"] };
+		[16] = { icon = "INV_Box_01", name = WHITE.. BabbleFaction["Cenarion Expedition"] .. AL["Mounts"] };
 		[17] = { itemID = 33999 }; --Cenarion War Hippogryph
-		[19] = { icon = "INV_Box_01", name = "=q6=" .. BabbleFaction["The Sons of Hodir"] .. AL["Mounts"] };
+		[19] = { icon = "INV_Box_01", name = WHITE.. BabbleFaction["The Sons of Hodir"] .. AL["Mounts"] };
 		[20] = { itemID = 43958 }; --Reins of the Ice Mammoth
 		[21] = { itemID = 44080 }; --Reins of the Ice Mammoth
 		[22] = { itemID = 43961 }; --Reins of the Grand Ice Mammoth
 		[23] = { itemID = 44086 }; --Reins of the Grand Ice Mammoth
-		[25] = { icon = "INV_Box_01", name = "=q6=" .. BabbleFaction["The Wyrmrest Accord"] .. AL["Mounts"] };
+		[25] = { icon = "INV_Box_01", name = WHITE.. BabbleFaction["The Wyrmrest Accord"] .. AL["Mounts"] };
 		[26] = { itemID = 43955 }; --Reins of the Red Drake
-		[28] = { icon = "INV_Box_01", name = "=q6=" .. BabbleFaction["The Oracles"] .. AL["Mounts"] };
+		[28] = { icon = "INV_Box_01", name = WHITE.. BabbleFaction["The Oracles"] .. AL["Mounts"] };
 		[29] = { itemID = 44707, desc = AL["Mysterious Egg"] }; --Reins of the Green Proto-Drake
 	};
 	{
 		Name = AL["PvP Mounts"];
-		[1] = { icon = "INV_Box_01", name = "=q6=" .. AL["Arena Reward"] };
+		[1] = { icon = "INV_Box_01", name = WHITE.. AL["Arena Reward"] };
 		[2] = { itemID = 30609 }; --Swift Nether Drake
 		[3] = { itemID = 34092 }; --Merciless Nether Drake
 		[4] = { itemID = 37676 }; --Vengeful Nether Drake
 		[5] = { itemID = 43516 }; --Brutal Nether Drake
 		[6] = { itemID = 46171 }; --Deadly Gladiator's Frostwyrm
-		[8] = { icon = "INV_Box_01", name = "=q6=" .. AL["Alliance PvP Mounts"] };
+		[8] = { icon = "INV_Box_01", name = WHITE.. AL["Alliance PvP Mounts"] };
 		[9] = { itemID = 29465 }; --Black Battlestrider
 		[10] = { itemID = 29467 }; --Black War Ram
 		[11] = { itemID = 29468 }; --Black War Steed Bridle
@@ -490,10 +491,10 @@ AtlasLoot_Data["Mounts"] = {
 		[13] = { itemID = 29471 }; --Reins of the Black War Tiger
 		[14] = { itemID = 19030 }; --Stormpike Battle Charger
 		[15] = { itemID = 43956 }; --Reins of the Black War Mammoth
-		[16] = { icon = "INV_Box_01", name = "=q6=" .. AL["Halaa PvP Mounts"] };
+		[16] = { icon = "INV_Box_01", name = WHITE.. AL["Halaa PvP Mounts"] };
 		[17] = { itemID = 28915 }; --Reins of the Dark Riding Talbuk
 		[18] = { itemID = 29228 }; --Reins of the Dark War Talbuk
-		[23] = { icon = "INV_Box_01", name = "=q6=" .. AL["Horde PvP Mounts"] };
+		[23] = { icon = "INV_Box_01", name = WHITE.. AL["Horde PvP Mounts"] };
 		[24] = { itemID = 29466 }; --Black War Kodo
 		[25] = { itemID = 29469 }; --Horn of the Black War Wolf
 		[26] = { itemID = 29470 }; --Red Skeletal Warhorse
@@ -504,34 +505,34 @@ AtlasLoot_Data["Mounts"] = {
 	};
 	{
 		Name = AL["Rare Mounts"].." Page 1";
-		[1] = { icon = "INV_Box_01", name = "=q6=" .. AL["Dungeon/Raid"] };
+		[1] = { icon = "INV_Box_01", name = WHITE.. AL["Dungeon/Raid"] };
 		[2] = { itemID = 33809 }; --Amani War Bear
 		[3] = { itemID = 32458 }; --Ashes of Al'ar
 		[4] = { itemID = "49098", desc = "=q1=" .. BabbleZone["Trial of the Crusader"] }; --Crusader's Black Warhorse","=q2=" .. AL["A Tribute to Immortality"] .. 
 		[5] = { itemID = "49096", desc = "=q1=" .. BabbleZone["Trial of the Crusader"] }; --Crusader's White Warhorse","=q2=" .. AL["A Tribute to Immortality"] .. 
-		[6] = { itemID = 13335, desc = "=q2=#n52#, =q1=#z6#", droprate = "0.10%" }; --Deathcharger's Reins
-		[7] = { itemID = 30480, desc = "=q2=#n53#, =q1=#z12#", "0.25%" }; --Fiery Warhorse's Reins
+		[6] = { itemID = 13335, desc = "=q2="..BabbleBoss["Baron Rivendare"]..", =q1="..BabbleZone["Stratholme"], droprate = "0.10%" }; --Deathcharger's Reins
+		[7] = { itemID = 30480, desc = "=q2="..BabbleBoss["Attumen the Huntsman"]..", =q1="..BabbleZone["Karazhan"], "0.25%" }; --Fiery Warhorse's Reins
 		[8] = { itemID = 50818, desc = "=q2=" ..BabbleBoss["The Lich King"] .. ", =q1=" .. BabbleZone["Icecrown Citadel"] }; --Invincible's Reins
 		[9] = { itemID = 45693, desc = "=q2=" .. AL["Alone in the Darkness"] .. ", =q1=" .. BabbleZone["Ulduar"] }; --Mimiron's Head
-		[10] = { itemID = 43986, desc = "=q2=#n153#, =q1=#j37# #z38# "..AL["Hard Mode"] }; --Reins of the Black Drake
-		[11] = { itemID = 43954, desc = "=q2=#n153#, =q1=#j38# #z38# "..AL["Hard Mode"] }; --Reins of the Twilight Drake
+		[10] = { itemID = 43986, desc = "=q2="..BabbleBoss["Sartharion"]..", =q1="..AL["10 Man"].." "..BabbleZone["The Obsidian Sanctum"].." "..AL["Hard Mode"] }; --Reins of the Black Drake
+		[11] = { itemID = 43954, desc = "=q2="..BabbleBoss["Sartharion"]..", =q1="..AL["25 Man"].." "..BabbleZone["The Obsidian Sanctum"].." "..AL["Hard Mode"] }; --Reins of the Twilight Drake
 		[12] = { itemID = 43953, desc = "=q2=" .. BabbleZone["The Oculus"] }; --Reins of the Blue Drake
-		[13] = { itemID = 43952, desc = "=q2=#n154#, =q1=#j38# #z39#" }; --Reins of the Azure Drake
-		[14] = { itemID = 44151, desc = "=q2=#n151#, =q1=#j47# #z35#" }; --Reins of the Blue Proto-Drake
-		[15] = { itemID = 43951, desc = "=q2=#n152#, =q1=#j47# #z36#" }; --Reins of the Bronze Drake
+		[13] = { itemID = 43952, desc = "=q2="..BabbleBoss["Malygos"]..", =q1="..AL["25 Man"].." "..BabbleZone["The Eye of Eternity"] }; --Reins of the Azure Drake
+		[14] = { itemID = 44151, desc = "=q2="..BabbleBoss["Skadi the Ruthless"]..", =q1="..AL["Heroic"].." "..BabbleZone["Utgarde Pinnacle"] }; --Reins of the Blue Proto-Drake
+		[15] = { itemID = 43951, desc = "=q2="..BabbleBoss["Infinite Corruptor"]..", =q1="..AL["Heroic"].." "..BabbleZone["Old Stratholme"] }; --Reins of the Bronze Drake
 		[17] = { itemID = "52200", desc = "=q1=" .. BabbleZone["Icecrown Citadel"] }; --Reins of the Crimson Deathcharger","=q2=" .. BabbleBoss["The Lich King"] .. 
 		[18] = { itemID = 44083 }; --Reins of the Grand Black War Mammoth
 		[19] = { itemID = 43959 }; --Reins of the Grand Black War Mammoth
-		[20] = { itemID = 32768, desc = "=q2=#n58#, =q1=#z16#" }; --Reins of the Raven Lord
+		[20] = { itemID = 32768, desc = "=q2="..BabbleBoss["Anzu"]..", =q1="..BabbleZone["Sethekk Halls"] }; --Reins of the Raven Lord
 		[21] = { itemID = 49046, desc = "=q2=" .. AL["A Tribute to Insanity (50)"] .. ", =q1=" .. BabbleZone["Trial of the Crusader"] }; --Swift Horde Wolf --Horde
 		[22] = { itemID = 49044, desc = "=q2=" .. AL["A Tribute to Insanity (50)"] .. ", =q1=" .. BabbleZone["Trial of the Crusader"] }; --Swift Alliance Steed --Alliance
-		[23] = { itemID = 35513, desc = "=q2=#n59#, =q1=#z30#" }; --Swift White Hawkstrider
-		[24] = { itemID = 19872, desc = "=q2=#n33#, =q1=#z8#", "0.43%" }; --Swift Razzashi Raptor
-		[25] = { itemID = 19902, desc = "=q2=#n28#, =q1=#z8#", " 0.70%" }; --Swift Zulian Tiger
+		[23] = { itemID = 35513, desc = "=q2="..AL["Crimson Sorcerer"]..", =q1="..BabbleZone["Magisters' Terrace"] }; --Swift White Hawkstrider
+		[24] = { itemID = 19872, desc = "=q2="..BabbleBoss["Bloodlord Mandokir"]..", =q1="..BabbleZone["Zul'Gurub"], "0.43%" }; --Swift Razzashi Raptor
+		[25] = { itemID = 19902, desc = "=q2="..BabbleBoss["High Priest Thekal"]..", =q1="..BabbleZone["Zul'Gurub"], " 0.70%" }; --Swift Zulian Tiger
 	};
 	{
 		Name = AL["Rare Mounts"].." Page 2";
-		[1] = { icon = "INV_Box_01", name = "=q6=" .. AL["Achievement Reward"] };
+		[1] = { icon = "INV_Box_01", name = WHITE.. AL["Achievement Reward"] };
 		[2] = { itemID = 44223 }; --Reins of the Black War Bear
 		[3] = { itemID = 44224 }; --Reins of the Black War Bear
 		[4] = { itemID = 44843 }; --Blue Dragonhawk Mount
@@ -543,17 +544,17 @@ AtlasLoot_Data["Mounts"] = {
 		[10] = { itemID = 44160 }; --Reins of the Red Proto-Drake
 		[11] = { itemID = 45802 }; --Reins of the Rusted Proto-Drake
 		[12] = { itemID = 44177 }; --Reins of the Violet Proto-Drake
-		[16] = { icon = "INV_Box_01", name = "=q6=" .. AL["Rare Mounts"] };
+		[16] = { icon = "INV_Box_01", name = WHITE.. AL["Rare Mounts"] };
 		[17] = { itemID = 44168 }; --Reins of the Time-Lost Proto-Drake
 		[18] = { itemID = 46109 }; --Sea Turtle
-		[20] = { itemID = 21218, desc = "=q2=#n11#, =q1=#z11#", droprate = "10%" }; --Blue Qiraji Resonating Crystal
-		[21] = { itemID = 21323, desc = "=q2=#n11#, =q1=#z11#", droprate = "11%" }; --Green Qiraji Resonating Crystal
-		[22] = { itemID = 21321, desc = "=q2=#n11#, =q1=#z11#", droprate = "1%" }; --Red Qiraji Resonating Crystal
-		[23] = { itemID = 21324, desc = "=q2=#n11#, =q1=#z11#", droprate = "12%" }; --Yellow Qiraji Resonating Crystal
+		[20] = { itemID = 21218, desc = "=q2="..AL["Trash Mobs"]..", =q1="..BabbleZone["Ahn'Qiraj"], droprate = "10%" }; --Blue Qiraji Resonating Crystal
+		[21] = { itemID = 21323, desc = "=q2="..AL["Trash Mobs"]..", =q1="..BabbleZone["Ahn'Qiraj"], droprate = "11%" }; --Green Qiraji Resonating Crystal
+		[22] = { itemID = 21321, desc = "=q2="..AL["Trash Mobs"]..", =q1="..BabbleZone["Ahn'Qiraj"], droprate = "1%" }; --Red Qiraji Resonating Crystal
+		[23] = { itemID = 21324, desc = "=q2="..AL["Trash Mobs"]..", =q1="..BabbleZone["Ahn'Qiraj"], droprate = "12%" }; --Yellow Qiraji Resonating Crystal
 	};
 	{
 		Name = AL["Rare Mounts"].." Page 3";
-		[1] = { icon = "INV_Box_01", name = "=q6=" .. AL["Quest Reward"] };
+		[1] = { icon = "INV_Box_01", name = WHITE.. AL["Quest Reward"] };
 		[2] = { itemID = 21176, desc = AL["Quest Reward"] }; --Black Qiraji Resonating Crystal
 		[3] = { itemID = 43962, desc = AL["Quest Reward"]..": "..AL["Hyldnir Spoils"] }; --Reins of the White Polar Bear
 	};
@@ -569,11 +570,11 @@ AtlasLoot_Data["Mounts"] = {
 	};
 	{
 		Name = AL["Promotional Mounts"];
-		[1] = { icon = "INV_Box_01", name = "=q6=" .. AL["Promotional Mounts"] };
+		[1] = { icon = "INV_Box_01", name = WHITE.. AL["Promotional Mounts"] };
 		[2] = { itemID = 43599 }; --Big Blizzard Bear
 		[3] = { itemID = 37719 }; --Swift Zhevra
 		[4] = { itemID = 54860 }; --X-53 Touring Rocket
-		[5] = { icon = "INV_Box_01", name = "=q6=" .. AL["Card Game Mounts"] };
+		[5] = { icon = "INV_Box_01", name = WHITE.. AL["Card Game Mounts"] };
 		[6] = { itemID = 54068 }; --Wooly White Rhino 
 		[7] = { itemID = 49282 }; --Big Battle Bear
 		[8] = { itemID = 49290 }; --Magic Rooster Egg
@@ -585,7 +586,7 @@ AtlasLoot_Data["Mounts"] = {
 	};
 	{
 		Name = AL["World Events"].." Page 1";
-		[1] = { icon = "INV_BannerPVP_02", name = "=q6="..BabbleFaction["Alliance"] };
+		[1] = { icon = "INV_BannerPVP_02", name = WHITE..BabbleFaction["Alliance"] };
 		[2] = { itemID = 45591, price = "100 #champseal#" }; --Darnassian Nightsaber
 		[3] = { itemID = 45590, price = "100 #champseal#" }; --Exodar Elekk
 		[4] = { itemID = 45589, price = "100 #champseal#" }; --Gnomeregan Mechanostrider
@@ -598,7 +599,7 @@ AtlasLoot_Data["Mounts"] = {
 		[12] = { itemID = 46747, price = "500 #gold# 5 #champseal#" }; --Turbostrider
 		[14] = { itemID = 47179, price = "100 #champseal#" }; --Argent Charger
 		[15] = { itemID = 47180, price = "100 #champseal#" }; --Argent Warhorse
-		[16] = { icon = "INV_BannerPVP_01", name = "=q6="..BabbleFaction["Horde"] };
+		[16] = { icon = "INV_BannerPVP_01", name = WHITE..BabbleFaction["Horde"] };
 		[17] = { itemID = 45593, price = "100 #champseal#" }; --Darkspear Raptor
 		[18] = { itemID = 45597, price = "100 #champseal#" }; --Forsaken Warhorse
 		[19] = { itemID = 45595, price = "100 #champseal#" }; --Orgrimmar Wolf
@@ -613,14 +614,14 @@ AtlasLoot_Data["Mounts"] = {
 	};
 	{
 		Name = AL["World Events"].." Page 2";
-		[1] = { icon = "INV_Box_01", name = "=q6=" .. AL["Brewfest"] };
-		[2] = { itemID = 37828, desc = "=q2=#n150#" }; --Great Brewfest Kodo
-		[3] = { itemID = 33977, desc = "=q2=#n150#" }; --Swift Brewfest Ram
+		[1] = { icon = "INV_Box_01", name = WHITE.. AL["Brewfest"] };
+		[2] = { itemID = 37828, desc = "=q2="..AL["Headless Horseman"] }; --Great Brewfest Kodo
+		[3] = { itemID = 33977, desc = "=q2="..AL["Headless Horseman"] }; --Swift Brewfest Ram
 		[4] = { itemID = 33976 }; --Brewfest Ram
-		[6] = { icon = "INV_Box_01", name = "=q6=" .. AL["Hallow's End"] };
-		[7] = { itemID = 37012, desc = "=q2=#n136#" }; --The Horseman's Reins
-		[8] = { itemID = 37011, desc = "=q2=#n136#" }; --Magic Broom
-		[16] = { icon = "INV_Box_01", name = "=q6=" .. AL["Love is in the Air"] };
+		[6] = { icon = "INV_Box_01", name = WHITE.. AL["Hallow's End"] };
+		[7] = { itemID = 37012, desc = "=q2="..AL["Headless Horseman"] }; --The Horseman's Reins
+		[8] = { itemID = 37011, desc = "=q2="..AL["Headless Horseman"] }; --Magic Broom
+		[16] = { icon = "INV_Box_01", name = WHITE.. AL["Love is in the Air"] };
 		[17] = { itemID = 50250 }; --Big Love Rocket
 	};
 };

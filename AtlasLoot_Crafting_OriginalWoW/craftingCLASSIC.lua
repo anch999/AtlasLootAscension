@@ -525,8 +525,8 @@ AtlasLoot_Data["SmithingCLASSIC"] = {
 		[5] = {itemID = 15870, spellID = 19667 }; --Golden Skeleton Key
 		[6] = {itemID = 15869, spellID = 19666 }; --Silver Skeleton Key
 		[7] = {itemID = 41745, spellID = 55732 }; --Titanium Rod
-		[8] = {itemID = 25845, spellID = 32657 }; --Eternium Rod", "=ds=#sr# 360
-		[9] = {itemID = 25844, spellID = 32656 }; --Adamantite Rod", "=ds=#sr# 350
+		[8] = {itemID = 25845, spellID = 32657 }; --Eternium Rod", "=ds="..AL["Skill Required:"].." 360
+		[9] = {itemID = 25844, spellID = 32656 }; --Adamantite Rod", "=ds="..AL["Skill Required:"].." 350
 		[10] = {itemID = 25843, spellID = 32655 }; --Fel Iron Rod
 		[11] = {itemID = 16206, spellID = 20201 }; --Arcanite Rod
 		[12] = {itemID = 12644, spellID = 16639 }; --Dense Grinding Stone

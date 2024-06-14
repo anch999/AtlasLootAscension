@@ -35,7 +35,7 @@ AtlasLoot.filterEnable = false
 AtlasLoot.CurrentType = "Default"
 AtlasLoot.type = {}
 AtlasLoot.backEnabled = false
-AtlasLoot.Difficultys = {}
+AtlasLoot.Difficulties = {}
 
 -- Colours stored for code readability
 local GREY = "|cff999999"
@@ -519,7 +519,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 	-- Set current type
 	self.CurrentType = dataSource[dataID].Type or "Default"
 
-	-- Loads the difficultys into the scrollFrame
+	-- Loads the Difficulties into the scrollFrame
 	if dataSource[dataID].ListType then
 		self:ScrollFrameUpdate(nil,dataSource[dataID].ListType)
 	else
@@ -529,7 +529,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 	-- Finds the tablenumber to set where the difficulty slider should be.
 	local typeNumber = 1
 	local function findTypeNumber()
-		for i,v in ipairs(self.Difficultys[dataSource[dataID].Type]) do
+		for i,v in ipairs(self.Difficulties[dataSource[dataID].Type]) do
 			if v[2] == ItemindexID then
 				typeNumber = i
 				return i
@@ -542,9 +542,9 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 	end
 
 	-- Moves the difficulty scrollslider if the difficulty has changed
-	if dataSource[dataID].Type and difType and #self.Difficultys[dataSource[dataID].Type] > 5 and findTypeNumber() > 5 then
+	if dataSource[dataID].Type and difType and #self.Difficulties[dataSource[dataID].Type] > 5 and findTypeNumber() > 5 then
 		local min, max = AtlasLootDefaultFrameScrollScrollBar:GetMinMaxValues()
-		AtlasLootDefaultFrameScrollScrollBar:SetValue(typeNumber * (max / #self.Difficultys[dataSource[dataID].Type]))
+		AtlasLootDefaultFrameScrollScrollBar:SetValue(typeNumber * (max / #self.Difficulties[dataSource[dataID].Type]))
 	end
 
 	-- Moves the difficulty scrollslider if wishlist
@@ -598,24 +598,23 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 		if item and item.itemID then
 			itemID = item.itemID
 			isValid = true
-
-			if(item[self.Difficultys.MIN_DIF]) then
-				if item[self.Difficultys.MIN_DIF] > itemDif then
+			local itemType = item.Type or dataSource[dataID].Type
+			if(item[self.Difficulties.MIN_DIF]) then
+				if item[self.Difficulties.MIN_DIF] > itemDif then
 					toShow = false
 				end
-				itemID = self:FindId(item.itemID, min(self:getMaxDifficulty(item.Type or dataSource[dataID].Type), itemDif), item.Type or dataSource[dataID].Type, dataSource[dataID].Type ) or item.itemID
+				itemID = self:FindId(item.itemID, min(self:getMaxDifficulty(itemType), itemDif), itemType) or item.itemID
 			end
 
 			if toShow then
 				--Sets ItemindexID to normal(2) if it is nil for min/max difficulties.
-				if not tonumber(itemDif) then itemDif = self.Difficultys.Normal end
-
+				if not tonumber(itemDif) then itemDif = self.Difficulties.Normal end
 				--Checks if an item has a Maximum difficulty, this is to correct some items that have an entry for higher difficulties then they really do
-				if item[self.Difficultys.MAX_DIF] then
-					if tonumber(item[self.Difficultys.MAX_DIF]) < itemDif then itemDif = item[self.Difficultys.MAX_DIF] end
+				if itemDif ~= 100 and self.Difficulties[itemType].Max and self.Difficulties[itemType].Max < itemDif then
+					itemDif = self.Difficulties[itemType].Max
 				end
 				--If something was found in itemID database show that if not show default table item
-				itemID = self:FindId(item.itemID, itemDif, item.Type or dataSource[dataID].Type, dataSource[dataID].Type) or item.itemID
+				itemID = self:FindId(item.itemID, itemDif, itemType) or item.itemID
 			end
 		elseif item and (item.spellID or item.icon) or item and itemID then
 			isValid = true
@@ -719,7 +718,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 			local lvls = AtlasLoot_CraftingData["CraftingLevels"][spellID]
 			extra = LIMEGREEN .. "L-Click:|r "..WHITE..dataSource[dataID].Name.." ( "..ORANGE..lvls[1].."|r "..YELLOW..lvls[2].."|r "..GREEN..lvls[3].."|r "..GREY..lvls[4]..WHITE.." )"
 		elseif dataSource[dataID][tablenum][i].lootTable and dataSource[dataID][tablenum][i].lootTable[2] == "Token" then
-			extra = "#setToken#"
+			extra = AL["Set Token (Click)"]
 		elseif itemEquipLoc and itemEquipLoc ~= "" and itemSubType then
 			extra = "=ds="..itemEquipLoc..", "..itemSubType
 		elseif itemSubType then
@@ -821,8 +820,8 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 			itemButton.sourcePage = nil
 		end
 
-		if dataSource[dataID][tablenum][i][self.Difficultys.DIF_SEARCH] then
-			itemButton.difficulty = dataSource[dataID][tablenum][i][self.Difficultys.DIF_SEARCH]
+		if dataSource[dataID][tablenum][i][self.Difficulties.DIF_SEARCH] then
+			itemButton.difficulty = dataSource[dataID][tablenum][i][self.Difficulties.DIF_SEARCH]
 		else
 			itemButton.difficulty = ItemindexID
 		end
@@ -838,7 +837,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 			setupButton(itemID, i, dataSource, dataID, tablenum, dataSource_backup)
 		end)
 	end
-	
+
 	-- Create the loottable
 	if (dataID == "SearchResult") or (dataSource_backup == "AtlasLoot_CurrentWishList") or dataSource[dataID][tablenum] then
 
