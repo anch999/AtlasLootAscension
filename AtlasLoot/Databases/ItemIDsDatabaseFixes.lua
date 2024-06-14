@@ -1,6 +1,13 @@
 ItemIDManuelCorrections = {}
 --ItemIDManuelCorrections[30312] = { nil, nil, HeroicID, MythicID, AscendedID }
 
+ItemIDManuelCorrections[22491] = { nil, nil, 322491, 1322491, 222491 }
+ItemIDManuelCorrections[22493] = { nil, nil, 322493, 1322493, 222493 }
+ItemIDManuelCorrections[22489] = { nil, nil, 322489, 1322489, 222489 }
+ItemIDManuelCorrections[1507043] = { nil, nil, 1807043, 2807043, 1707043 }
+ItemIDManuelCorrections[1523064] = { nil, nil, 1823064, 2823064, 1723064 }
+
+
 --ZA Bears
 ItemIDManuelCorrections[1333809] = { nil, nil, 1433809, nil, 1233809 }
 

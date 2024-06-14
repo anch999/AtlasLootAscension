@@ -610,7 +610,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 				--Sets ItemindexID to normal(2) if it is nil for min/max difficulties.
 				if not tonumber(itemDif) then itemDif = self.Difficulties.Normal end
 				--Checks if an item has a Maximum difficulty, this is to correct some items that have an entry for higher difficulties then they really do
-				if itemDif ~= 100 and self.Difficulties[itemType].Max and self.Difficulties[itemType].Max < itemDif then
+				if itemDif ~= 100 and self.Difficulties[itemType] and self.Difficulties[itemType].Max and self.Difficulties[itemType].Max < itemDif then
 					itemDif = self.Difficulties[itemType].Max
 				end
 				--If something was found in itemID database show that if not show default table item

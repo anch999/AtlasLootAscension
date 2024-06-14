@@ -75,7 +75,7 @@ function AtlasLoot:UpdateItemIDsDatabase(firstID, lastID)
 				for _, itemData in pairs(t) do
 					if type(itemData) == "table" then
 						if itemData.itemID then
-							for _, dif in pairs(self.Difficulties[data.Type]) do
+							for _, dif in ipairs(self.Difficulties[data.Type]) do
 								local itemType = GetItemInfoInstant(itemData.itemID) or nil
 								if dif[2] ~= 100 and dif[2] ~= 1 and dif[2] ~= 2 and itemType then
 									unknownIDs[dif[1]] = unknownIDs[dif[1]] or {}
@@ -105,8 +105,6 @@ function AtlasLoot:UpdateItemIDsDatabase(firstID, lastID)
 				if foundName then
 					local orignalID = unknownIDs[difficulty] and unknownIDs[difficulty][foundName]
 					if orignalID then
-						AtlasLootItemCache[orignalID] = AtlasLootItemCache[orignalID] or {}
-						AtlasLootItemCache[orignalID][difficultyList[difficulty]] = item.itemID
 						ItemIDsDatabase[orignalID] = ItemIDsDatabase[orignalID] or {}
 						ItemIDsDatabase[orignalID][difficultyList[difficulty]] = item.itemID
 					end
