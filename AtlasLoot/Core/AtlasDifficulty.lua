@@ -91,7 +91,17 @@
         Max = 5
     }
 
-     AtlasLoot.Difficulties["Crafting"] = {
+     AtlasLoot.Difficulties["ClassicCrafting"] = {
+        {"Normal", 2 },
+        Max = 2
+    }
+
+    AtlasLoot.Difficulties["BCCrafting"] = {
+        {"Normal", 2 },
+        Max = 2
+    }
+
+    AtlasLoot.Difficulties["WrathCrafting"] = {
         {"Normal", 2 },
         Max = 2
     }

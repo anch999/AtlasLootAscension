@@ -58,6 +58,9 @@ function AtlasLoot:CreateUpdateText()
 	updateCounterFrame.cText = updateCounterFrame:CreateFontString("AtlasLootDbUpdateText","OVERLAY","GameFontNormal")
 	updateCounterFrame.cText:Show()
 	updateCounterFrame.cText:SetPoint("CENTER",0,0)
+	updateCounterFrame.lastIDText = updateCounterFrame:CreateFontString("AtlasLootIDUpdateText","OVERLAY","GameFontNormal")
+	updateCounterFrame.lastIDText:Show()
+	updateCounterFrame.lastIDText:SetPoint("TOP", updateCounterFrame.cText, "BOTTOM" ,10,0)
     updateFrameCreated = true
 end
 
@@ -107,6 +110,7 @@ function AtlasLoot:UpdateItemIDsDatabase(firstID, lastID)
 					if orignalID then
 						ItemIDsDatabase[orignalID] = ItemIDsDatabase[orignalID] or {}
 						ItemIDsDatabase[orignalID][difficultyList[difficulty]] = item.itemID
+						AtlasLootIDUpdateText:SetText("Last ItemID Added: "..firstID)
 					end
 				end
 			end

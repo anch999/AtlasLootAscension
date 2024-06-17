@@ -80,7 +80,7 @@ local TAILORING = GetSpellInfo(3908);
 AtlasLoot_Data["AlchemyWRATH"] = {
 	Module = "AtlasLoot_Crafting_Wrath";
 	Name = ALCHEMY;
-	Type = "Crafting";
+	Type = "WrathCrafting";
 	{
 		Name = AL["Battle Elixirs"];
 		[1] = {itemID = 44330, spellID = 60365 }; --Elixir of Armor Piercing
@@ -182,7 +182,7 @@ AtlasLoot_Data["AlchemyWRATH"] = {
 AtlasLoot_Data["SmithingWRATH"] = {
 	Module = "AtlasLoot_Crafting_Wrath";
 	Name = BLACKSMITHING;
-	Type = "Crafting";
+	Type = "WrathCrafting";
 	{
 		Name = BabbleInventory["Armor"] .. WHITE .. " - Chest";
 		[1] = { spellID = 67130, itemID = 47592 };
@@ -421,7 +421,7 @@ AtlasLoot_Data["SmithingWRATH"] = {
 AtlasLoot_Data["CookingWRATH"] = {
 	Module = "AtlasLoot_Crafting_Wrath";
 	Name = COOKING;
-	Type = "Crafting";
+	Type = "WrathCrafting";
 	{
 		Name = COOKING;
 		[1] = {itemID = 43015, spellID = 57423 }; --Fish Feast
@@ -580,7 +580,7 @@ AtlasLoot_Data["EnchantingWRATH"] = {
 AtlasLoot_Data["EngineeringWRATH"] = {
 	Module = "AtlasLoot_Crafting_Wrath";
 	Name = ENGINEERING;
-	Type = "Crafting";
+	Type = "WrathCrafting";
 	{
 		Name = "Ammo";
 		[1] = {itemID = 52021, spellID = 72953 }; --Iceblade Arrow
@@ -705,7 +705,7 @@ AtlasLoot_Data["EngineeringWRATH"] = {
 AtlasLoot_Data["Inscription"] = {
 	Module = "AtlasLoot_Crafting_Wrath";
 	Name = INSCRIPTION;
-	Type = "Crafting";
+	Type = "WrathCrafting";
 	{
 		Name = AL["Off-Hand Items"];
 		[1] = {itemID = 44210, spellID = 59498 }; --Faces of Doom
@@ -1230,7 +1230,7 @@ AtlasLoot_Data["Inscription"] = {
 AtlasLoot_Data["JewelcraftingWRATH"] = {
 	Module = "AtlasLoot_Crafting_Wrath";
 	Name = JEWELCRAFTING;
-	Type = "Crafting";
+	Type = "WrathCrafting";
 	{
 		Name = AL["Red Gems"];
 		[1] = {itemID = 40111, spellID = 66447 }; --Bold Cardinal Ruby
@@ -1599,7 +1599,7 @@ AtlasLoot_Data["JewelcraftingWRATH"] = {
 AtlasLoot_Data["LeatherworkingWRATH"] = {
 	Module = "AtlasLoot_Crafting_Wrath";
 	Name = LEATHERWORKING;
-	Type = "Crafting";
+	Type = "WrathCrafting";
 	{
 		Name = AL["Leather Armor"] .. WHITE .. " - Back";
 		[1] = {itemID = 43565, spellID = 60640 }; --Durable Nerubhide Cape
@@ -1862,7 +1862,7 @@ AtlasLoot_Data["FirstAidWRATH"] = {
 AtlasLoot_Data["TailoringWRATH"] = {
 	Module = "AtlasLoot_Crafting_Wrath";
 	Name = TAILORING;
-	Type = "Crafting";
+	Type = "WrathCrafting";
 	{
 		Name = AL["Cloth Armor"] .. WHITE .. " - Back";
 		[1] = {itemID = 41610, spellID = 56017 }; --Deathchill Cloak

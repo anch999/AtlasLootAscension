@@ -13,20 +13,6 @@ local FrameMenuList = {
 
 local AdvancedSearchMenus = {
 
-    ["Quality"] = {
-        -- [1] = {
-        --     {AtlasLoot:FixText("=q0=").."Poor", "quality", "poor"},
-        -- },
-        -- [2] = {
-        --     {AtlasLoot:FixText("=q1=").."Common", "quality", "common"},
-        -- },
-        [1] = {{AtlasLoot:FixText("=q2=") .. "Uncommon", "quality", "uncommon"}},
-        [2] = {{AtlasLoot:FixText("=q3=") .. "Rare", "quality", "rare"}},
-        [3] = {{AtlasLoot:FixText("=q4=") .. "Epic", "quality", "epic"}},
-        [4] = {{AtlasLoot:FixText("=q5=") .. "Legendary", "quality", "legendary"}},
-        [5] = {{RED .. "Reset", "quality", "reset"}}
-    },
-
     ["Equip"] = {
         [1] = {{"Head", "equip", "head", "EquipSubMenu", "ArmorType"}},
         [2] = {{"Shoulder", "equip", "shoulder", "EquipSubMenu", "ArmorType"}},
@@ -133,14 +119,12 @@ local AdvancedSearchArguments = {
 }
 
 local AdvSearchOptions = {
-    ["quality"] = "",
     ["equip"] = "",
     ["type"] = "",
     ["difficulty"] = ""
 }
 
 function AtlasLoot:AdvancedSearchSetup()
-    self:AdvancedSearchRegister(self.Dewdrop, AtlasLootDefaultFrame_AdvancedSearchPanel_QualityButton, AdvancedSearchMenus["Quality"])
     self:AdvancedSearchRegister(self.Dewdrop, AtlasLootDefaultFrame_AdvancedSearchPanel_EquipButton, AdvancedSearchMenus["Equip"])
 
     for n = 1, MAX_ARGUMENTS do
@@ -190,7 +174,6 @@ end
 
 function AtlasLoot:AdvancedSearchReset()
     AdvSearchOptions = {
-        ["quality"] = "",
         ["equip"] = "",
         ["type"] = "",
         ["difficulty"] = ""
@@ -209,8 +192,6 @@ function AtlasLoot:AdvancedSearchReset()
     AtlasLootDefaultFrame_AdvancedSearchPanel_LevelMax:SetText(expansionLevels[GetAccountExpansionLevel() + 1])
     AtlasLootDefaultFrame_AdvancedSearchPanel_iLevelMin:SetText("")
     AtlasLootDefaultFrame_AdvancedSearchPanel_iLevelMax:SetText("")
-
-    AtlasLootDefaultFrame_AdvancedSearchPanel_QualityButton:SetText("Select Quality")
 
     AtlasLootDefaultFrame_AdvancedSearchPanel_EquipButton:SetText("Select Item Type")
     AtlasLootDefaultFrame_AdvancedSearchPanel_EquipSubButton:Disable()
@@ -265,7 +246,6 @@ function AtlasLoot:AdvSearchArgButtonToggle()
 end
 
 local AdvSearchDefaultText = {
-    ["quality"] = "Select Quality",
     ["equip"] = "Select Item Type",
     ["type"] = "Select Option",
     ["difficulty"] = "Select Difficulty"
@@ -502,10 +482,6 @@ function AtlasLoot:AdvancedSearch(Text)
             return "thrown"
         end
         return "ranged"
-    end
-
-    if AdvSearchOptions["quality"] ~= "" then
-        advSearchString = AppendSearchString(advSearchString, "quality=" .. AdvSearchOptions["quality"])
     end
 
     if AdvSearchOptions["equip"] ~= "" then

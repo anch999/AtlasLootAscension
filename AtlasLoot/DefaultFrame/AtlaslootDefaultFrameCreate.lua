@@ -54,7 +54,7 @@ local lootBackground = CreateFrame("Frame", "AtlaslLoot_LootBackground", mainfra
         if _G["AtlasLootItemsFrame_BACK"]:IsVisible() and button == "RightButton" then
             AtlasLoot:BackButton_OnClick()
         elseif AtlasLootDefaultFrame_AdvancedSearchPanel:IsVisible() and button == "RightButton" then
-            AtlasLoot_AdvancedSearchClose()
+            AtlasLoot:AdvancedSearchClose()
         end
         AtlasLoot.Dewdrop:Close()
         AtlasLootDefaultFrameSearchBox:ClearFocus()

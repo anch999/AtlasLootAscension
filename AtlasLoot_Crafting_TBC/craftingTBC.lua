@@ -78,7 +78,7 @@ local SPELLFIRE = GetSpellInfo(26797);
 AtlasLoot_Data["AlchemyTBC"] = {
 	Module = "AtlasLoot_Crafting_TBC";
 	Name = ALCHEMY;
-	Type = "Crafting";
+	Type = "BCCrafting";
 	{
 		Name = AL["Battle Elixirs"];
 		[1] = { itemID = 22835, spellID = 28558 }, --Elixir of Major Shadow Power
@@ -206,7 +206,7 @@ AtlasLoot_Data["AlchemyTBC"] = {
 AtlasLoot_Data["SmithingTBC"] = {
 	Module = "AtlasLoot_Crafting_TBC";
 	Name = BLACKSMITHING;
-	Type = "Crafting";
+	Type = "BCCrafting";
 	{
 		Name = BabbleInventory["Armor"] .. WHITE .. " - Chest";
 		[1] = { itemID = 28484, spellID = 34534 }, --Bulwark of Kings
@@ -470,7 +470,7 @@ AtlasLoot_Data["SmithingTBC"] = {
 AtlasLoot_Data["CookingTBC"] = {
 	Module = "AtlasLoot_Crafting_TBC";
 	Name = COOKING;
-	Type = "Crafting";
+	Type = "BCCrafting";
 	{
 		Name = "Page 1";
 		[1] = { itemID = 33052, spellID = 42302 }, --Fisherman's Feast
@@ -640,7 +640,7 @@ AtlasLoot_Data["CookingTBC"] = {
 AtlasLoot_Data["EnchantingTBC"] = {
 	Module = "AtlasLoot_Crafting_TBC";
 	Name = ENCHANTING;
-	Type = "Crafting";
+	Type = "BCCrafting";
 	{
 		Name = AL["Enchant Boots"];
 		[1] = { icon = "Spell_Holy_GreaterHeal", spellID = 27954 }, --Enchant Boots - Surefooted
@@ -785,7 +785,7 @@ AtlasLoot_Data["EnchantingTBC"] = {
 AtlasLoot_Data["EngineeringTBC"] = {
 	Module = "AtlasLoot_Crafting_TBC";
 	Name = ENGINEERING;
-	Type = "Crafting";
+	Type = "BCCrafting";
 	{
 		Name = AL["Ammunition"];
 		[1] = { itemID = 20475, spellID = 43676 }, --Adamantite Arrow Maker
@@ -945,7 +945,7 @@ AtlasLoot_Data["FirstAid"] = {
 AtlasLoot_Data["JewelcraftingTBC"] = {
 	Module = "AtlasLoot_Crafting_TBC";
 	Name = JEWELCRAFTING;
-	Type = "Crafting";
+	Type = "BCCrafting";
 	{
 		Name = AL["Red Gems"];
 		[1] = { itemID = 32193, spellID = 39705 }, --Bold Crimson Spinel
@@ -1270,7 +1270,7 @@ AtlasLoot_Data["JewelcraftingTBC"] = {
 AtlasLoot_Data["LeatherworkingTBC"] = {
 	Module = "AtlasLoot_Crafting_TBC";
 	Name = LEATHERWORKING;
-	Type = "Crafting";
+	Type = "BCCrafting";
 	{
 		Name = AL["Leather Armor"] .. WHITE .. " - Back";
 		[1] = { itemID = 33122, spellID = 42546 }, --Cloak of Darkness
@@ -1551,7 +1551,7 @@ AtlasLoot_Data["FirstAidTBC"] = {
 AtlasLoot_Data["TailoringTBC"] = {
 	Module = "AtlasLoot_Crafting_TBC";
 	Name = TAILORING;
-	Type = "Crafting";
+	Type = "BCCrafting";
 	{
 		Name = AL["Cloth Armor"] .. WHITE .. " - Back";
 		[1] = { itemID = 32420, spellID = 40060 }, --Night's End

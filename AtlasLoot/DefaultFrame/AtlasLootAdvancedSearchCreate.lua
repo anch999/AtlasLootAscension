@@ -32,20 +32,15 @@ searchbox:SetScript("OnShow", function(self) self:SetFrameLevel( (self:GetParent
 local searchbox_string = searchbox:CreateFontString(framename.."_SearchBoxString", "ARTWORK", "GameFontNormal")
 
 --Create quality button
-local qualitybtn = CreateFrame("Button", framename.."_QualityButton", searchpanel, "OptionsButtonTemplate")
-qualitybtn:SetSize(130, 20)
-qualitybtn:SetPoint("LEFT", searchbox, "RIGHT", 15, 0)
-qualitybtn.title = qualitybtn:CreateFontString(nil, "ARTWORK", "GameFontNormal")
-qualitybtn.title:SetText("Quality: ")
-qualitybtn.title:SetPoint("TOPLEFT", qualitybtn, "TOPLEFT", 3, 15)
-qualitybtn:SetScript("OnClick", function(self) 
-    if AtlasLoot.Dewdrop:IsOpen() then
-        AtlasLoot.Dewdrop:Close()
-    else
-        AtlasLoot.Dewdrop:Open(self)
-    end
+local searchCategory = CreateFrame("Button", framename.."_CategoryButton", searchpanel, "OptionsButtonTemplate")
+searchCategory:SetSize(130, 20)
+searchCategory:SetPoint("LEFT", searchbox, "RIGHT", 15, 0)
+searchCategory:SetText("Category Select")
+searchCategory:SetScript("OnClick", function(self)
+    local point1, _, point2 = AtlasLoot:GetTipAnchor(searchCategory)
+    AtlasLoot:ShowSearchOptions(self, {point1, point2})
 end)
-qualitybtn:SetScript("OnShow", function(self) self:SetFrameLevel( (self:GetParent()):GetFrameLevel() + 1 ) end)
+searchCategory:SetScript("OnShow", function(self) self:SetFrameLevel( (self:GetParent()):GetFrameLevel() + 1 ) end)
 
 --Create equip type button
 local equipbtn = CreateFrame("Button", framename.."_EquipButton", searchpanel, "OptionsButtonTemplate")

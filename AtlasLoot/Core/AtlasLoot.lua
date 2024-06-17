@@ -135,6 +135,25 @@ StaticPopupDialogs["ATLASLOOT_SETUP"] = {
 }
 
 --[[
+AtlasLoot:OnInitialize()
+Performs inital setup of the mod and registers it for further setup when
+the required resources are in place
+]]
+function AtlasLoot:OnInitialize()
+	--Enable the use of /al or /atlasloot to open the loot browser
+	SLASH_ATLASLOOT1 = "/atlasloot"
+	SLASH_ATLASLOOT2 = "/al"
+	SlashCmdList["ATLASLOOT"] = function(msg)
+		self:SlashCommand(msg)
+	end
+
+	--Sets the default loot tables for the current expansion enabled on the server.
+	local xpaclist = {"CLASSIC", "TBC", "WRATH"}
+	self.Expac = xpaclist[GetAccountExpansionLevel()+1]
+end
+
+
+--[[
 AtlasLoot:OnEnable():
 Invoked by the VARIABLES_LOADED event.  Now that we are sure all the assets
 the addon needs are in place, we can properly set up the mod
@@ -261,24 +280,6 @@ function AtlasLoot:SlashCommand(msg)
 	else
 		AtlasLootDefaultFrame:Show()
 	end
-end
-
---[[
-AtlasLoot:OnInitialize()
-Performs inital setup of the mod and registers it for further setup when
-the required resources are in place
-]]
-function AtlasLoot:OnInitialize()
-	--Enable the use of /al or /atlasloot to open the loot browser
-	SLASH_ATLASLOOT1 = "/atlasloot"
-	SLASH_ATLASLOOT2 = "/al"
-	SlashCmdList["ATLASLOOT"] = function(msg)
-		self:SlashCommand(msg)
-	end
-
-	--Sets the default loot tables for the current expansion enabled on the server.
-	local xpaclist = {"CLASSIC", "TBC", "WRATH"}
-	self.Expac = xpaclist[GetAccountExpansionLevel()+1]
 end
 
 --Creates tables for raid tokens from the collections tables

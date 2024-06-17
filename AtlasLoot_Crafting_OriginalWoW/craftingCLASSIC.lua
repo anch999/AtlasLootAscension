@@ -77,7 +77,7 @@ local TAILORING = GetSpellInfo(3908);
 AtlasLoot_Data["AlchemyCLASSIC"] = {
 	Module = "AtlasLoot_Crafting_OriginalWoW",
 	Name = ALCHEMY;
-	Type = "Crafting";
+	Type = "ClassicCrafting";
 	{
 		Name = AL["Battle Elixirs"];
 		[1] = {itemID = 13454, spellID = 17573 }; --Greater Arcane Elixir
@@ -242,7 +242,7 @@ AtlasLoot_Data["AlchemyCLASSIC"] = {
 AtlasLoot_Data["SmithingCLASSIC"] = {
 	Module = "AtlasLoot_Crafting_OriginalWoW",
 	Name = BLACKSMITHING;
-	Type = "Crafting";
+	Type = "ClassicCrafting";
 	{
 		Name = BabbleInventory["Armor"] .. WHITE .. " - Chest";
 		[1] = {itemID = 22669, spellID = 28242 }; --Icebane Breastplate
@@ -582,7 +582,7 @@ AtlasLoot_Data["SmithingCLASSIC"] = {
 AtlasLoot_Data["CookingCLASSIC"] = {
 	Module = "AtlasLoot_Crafting_OriginalWoW",
 	Name = COOKING;
-	Type = "Crafting";
+	Type = "ClassicCrafting";
 	{
 		Name = "Page 1";
 		[1] = {itemID = 21023, spellID = 25659 }; --Dirge's Kickin' Chimaerok Chops
@@ -820,7 +820,7 @@ AtlasLoot_Data["CookingCLASSIC"] = {
 AtlasLoot_Data["EnchantingCLASSIC"] = {
 	Module = "AtlasLoot_Crafting_OriginalWoW",
 	Name = ENCHANTING;
-	Type = "Crafting";
+	Type = "ClassicCrafting";
 	{
 		Name = AL["Enchant Boots"];
 		[1] = {spellID = 20023, icon = "Spell_Holy_GreaterHeal" }; --Enchant Boots - Greater Agility
@@ -1031,7 +1031,7 @@ AtlasLoot_Data["EnchantingCLASSIC"] = {
 AtlasLoot_Data["EngineeringCLASSIC"] = {
 	Module = "AtlasLoot_Crafting_OriginalWoW",
 	Name = ENGINEERING;
-	Type = "Crafting";
+	Type = "ClassicCrafting";
 	{
 		Name = AL["Ammunition"];
 		[1] = {itemID = 18042, desc = "Quest See Tooltip", quest = {14183,14182, text = "Trade Thorium Shells for Arrows"}}; --Thorium Headed Arrow
@@ -1266,7 +1266,7 @@ AtlasLoot_Data["EngineeringCLASSIC"] = {
 AtlasLoot_Data["FirstAidCLASSIC"] = {
 	Module = "AtlasLoot_Crafting_OriginalWoW",
 	Name = FIRSTAID;
-	Type = "Crafting";
+	Type = "ClassicCrafting";
 	{
 		Name = FIRSTAID;
 		[1] = {itemID = 19440, spellID = 23787 }; --Powerful Anti-Venom
@@ -1292,7 +1292,7 @@ AtlasLoot_Data["FirstAidCLASSIC"] = {
 AtlasLoot_Data["LeatherworkingCLASSIC"] = {
 	Module = "AtlasLoot_Crafting_OriginalWoW",
 	Name = LEATHERWORKING;
-	Type = "Crafting";
+	Type = "ClassicCrafting";
 	{
 		Name = AL["Leather Armor"] .. WHITE .. " - Back";
 		[1] = {itemID = 18509, spellID = 22926 }; --Chromatic Cloak
@@ -1644,7 +1644,7 @@ AtlasLoot_Data["LeatherworkingCLASSIC"] = {
 AtlasLoot_Data["MiningCLASSIC"] = {
 	Module = "AtlasLoot_Crafting_OriginalWoW",
 	Name = MINING;
-	Type = "Crafting";
+	Type = "ClassicCrafting";
 	{
 		Name = AL["Smelting"];
 		[1] = {itemID = 17771, spellID = 22967 }; --Smelt Elementium
@@ -1682,7 +1682,7 @@ AtlasLoot_Data["MiningCLASSIC"] = {
 AtlasLoot_Data["TailoringCLASSIC"] = {
 	Module = "AtlasLoot_Crafting_OriginalWoW",
 	Name = TAILORING;
-	Type = "Crafting";
+	Type = "ClassicCrafting";
 	{
 		Name = AL["Cloth Armor"] .. WHITE .. " - Back";
 		[1] = {itemID = 22658, spellID = 28208 }; --Glacial Cloak

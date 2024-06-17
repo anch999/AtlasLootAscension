@@ -308,7 +308,7 @@ local buttons = {
     "AtlasLootDefaultFrameAdvancedSearchButton",
     "AtlasLootDefaultFrame_AdvancedSearchPanel_EquipButton",
     "AtlasLootDefaultFrame_AdvancedSearchPanel_EquipSubButton",
-    "AtlasLootDefaultFrame_AdvancedSearchPanel_QualityButton",
+    "AtlasLootDefaultFrame_AdvancedSearchPanel_CategoryButton",
     "AtlasLootDefaultFrame_AdvancedSearchPanel_SearchButton",
     "AtlasLootDefaultFrame_AdvancedSearchPanel_ClearButton",
     "AtlasLootDefaultFrame_MapButton",

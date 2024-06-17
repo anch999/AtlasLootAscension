@@ -15,12 +15,12 @@ local FilterTable = {
 		{"Agility", "ITEM_MOD_AGILITY_SHORT"},
 		{"Intellect", "ITEM_MOD_INTELLECT_SHORT"},
 		{"Spirit", "ITEM_MOD_SPIRIT_SHORT"},
-		{"Attack Power", "ITEM_MOD_ATTACK_POWER_SHORT"},
-		{"Spell Power", "ITEM_MOD_SPELL_POWER_SHORT"}
 	},
 	{
 		Name = AL["Secondary Stats"],
 		Type = "Stat",
+		{"Attack Power", "ITEM_MOD_ATTACK_POWER_SHORT"},
+		{"Spell Power", "ITEM_MOD_SPELL_POWER_SHORT"},
 		{"Crit", "ITEM_MOD_CRIT_RATING_SHORT"},
 		{"Hit", "ITEM_MOD_HIT_RATING_SHORT"},
 		{"Haste", "ITEM_MOD_HASTE_RATING_SHORT"},
