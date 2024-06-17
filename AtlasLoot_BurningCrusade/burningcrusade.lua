@@ -504,7 +504,7 @@ AtlasLoot_Data["BlackTemple"] = {
 		[17] = { itemID = 32236 }; --Rising Tide
 		[18] = { itemID = 32248 }; --Halberd of Desolation
 		[20] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
-		[21] = { itemID = 400751, droprate = "100%" }; --Raider's Commendations
+		[21] = { itemID = 400751, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal, droprate = "100%" }; --Raider's Commendations
 		[22] = { itemID = 98570, droprate = "100%" }; --Mystic Orb
 		[24] = { itemID = 63451, droprate = "1%" }; --Pet Sigil
 	};
@@ -525,7 +525,7 @@ AtlasLoot_Data["BlackTemple"] = {
 		[19] = { itemID = 32255 }; --Felstone Bulwark
 		[20] = { itemID = 32253 }; --Legionkiller
 		[22] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
-		[23] = { itemID = 400751, droprate = "100%" }; --Raider's Commendations
+		[23] = { itemID = 400751, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal, droprate = "100%" }; --Raider's Commendations
 		[24] = { itemID = 98570, droprate = "100%" }; --Mystic Orb
 		[26] = { itemID = 63510, droprate = "1%" }; --Pet Sigil
 	};
@@ -545,7 +545,7 @@ AtlasLoot_Data["BlackTemple"] = {
 		[17] = { itemID = 32361 }; --Blind-Seers Icon
 		[19] = { itemID = 11432 }; --Ashtongue Jewel
 		[21] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
-		[22] = { itemID = 400751, droprate = "100%" }; --Raider's Commendations
+		[22] = { itemID = 400751, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal, droprate = "100%" }; --Raider's Commendations
 		[23] = { itemID = 98570, droprate = "100%" }; --Mystic Orb
 		[25] = { itemID = 63425, droprate = "1%" }; --Pet Sigil
 	};
@@ -564,7 +564,7 @@ AtlasLoot_Data["BlackTemple"] = {
 		[16] = { itemID = 32507 }; --Gorefiend
 		[17] = { itemID = 32325 }; --Rifle of the Stoic Guardian
 		[19] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
-		[20] = { itemID = 400751, droprate = "100%" }; --Raider's Commendations
+		[20] = { itemID = 400751, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal, droprate = "100%" }; --Raider's Commendations
 		[21] = { itemID = 98570, droprate = "100%" }; --Mystic Orb
 		[23] = { itemID = 63443, droprate = "1%" }; --Pet Sigil
 	};
@@ -583,7 +583,7 @@ AtlasLoot_Data["BlackTemple"] = {
 		[19] = { itemID = 32344 }; --Staff of Immaculate Recovery
 		[20] = { itemID = 32343 }; --Wand of Prismatic Focus
 		[22] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
-		[23] = { itemID = 400751, droprate = "100%" }; --Raider's Commendations
+		[23] = { itemID = 400751, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal, droprate = "100%" }; --Raider's Commendations
 		[24] = { itemID = 98570, droprate = "100%" }; --Mystic Orb
 		[26] = { itemID = 63521, droprate = "1%" }; --Pet Sigil
 	};
@@ -602,7 +602,7 @@ AtlasLoot_Data["BlackTemple"] = {
 		[17] = { itemID = 32350 }; --Touch of Inspiration
 		[18] = { itemID = 32332 }; --Torch of the Damned
 		[20] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
-		[21] = { itemID = 400751, droprate = "100%" }; --Raider's Commendations
+		[21] = { itemID = 400751, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal, droprate = "100%" }; --Raider's Commendations
 		[22] = { itemID = 98570, droprate = "100%" }; --Mystic Orb
 		[24] = { itemID = 63940, droprate = "1%" }; --Pet Sigil
 	};
@@ -616,7 +616,7 @@ AtlasLoot_Data["BlackTemple"] = {
 		[6] = { itemID = 32369 }; --Blade of Savagery
 		[16] = { itemID = 31101, droprate = "100%", lootTable = {"T6SHOULDER","Token"} }; --Pauldrons of the Forgotten Conqueror
 		[18] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
-		[19] = { itemID = 400751, droprate = "100%" }; --Raider's Commendations
+		[19] = { itemID = 400751, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal, droprate = "100%" }; --Raider's Commendations
 		[20] = { itemID = 98570, droprate = "100%" }; --Mystic Orb
 		[22] = { itemID = 63520, droprate = "1%" }; --Pet Sigil
 	};
@@ -633,7 +633,7 @@ AtlasLoot_Data["BlackTemple"] = {
 		[18] = { itemID = 31097, droprate = "100%", lootTable = {"T6HEAD","Token"} }; --Helm of the Forgotten Conqueror
 		[19] = { itemID = 31092, droprate = "100%", lootTable = {"T6HAND","Token"} }; --Gloves of the Forgotten Conqueror
 		[21] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
-		[22] = { itemID = 400751, droprate = "100%" }; --Raider's Commendations
+		[22] = { itemID = 400751, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal, droprate = "100%" }; --Raider's Commendations
 		[23] = { itemID = 98570, droprate = "100%" }; --Mystic Orb
 		[25] = { itemID = 63929, droprate = "1%" }; --Pet Sigil
 		[26] = { itemID = 63928, droprate = "1%" }; --Pet Sigil
@@ -661,7 +661,7 @@ AtlasLoot_Data["BlackTemple"] = {
 		[18] = { itemID = 32837 }; --Warglaive of Azzinoth
 		[19] = { itemID = 32838 }; --Warglaive of Azzinoth
 		[21] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
-		[22] = { itemID = 400751, droprate = "100%" }; --Raider's Commendations
+		[22] = { itemID = 400751, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal, droprate = "100%" }; --Raider's Commendations
 		[23] = { itemID = 98570, droprate = "100%" }; --Mystic Orb
 		[25] = { itemID = 63511, droprate = "1%" }; --Pet Sigil
 		[27] = { itemID = 343208 }; --Mount
@@ -924,7 +924,7 @@ AtlasLoot_Data["CoTHyjal"] = {
 		[18] = { itemID = 30891 }; --Black Featherlight Boots
 		[19] = { itemID = 30914 }; --Belt of the Crescent Moon
 		[21] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
-		[22] = { itemID = 400751, droprate = "100%" }; --Raider's Commendations
+		[22] = { itemID = 400751, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal, droprate = "100%" }; --Raider's Commendations
 		[23] = { itemID = 98570, droprate = "100%" }; --Mystic Orb
 		[25] = { itemID = 61196, droprate = "1%" }; --Pet Sigil
 	};
@@ -946,7 +946,7 @@ AtlasLoot_Data["CoTHyjal"] = {
 		[20] = { itemID = 30916 }; --Leggings of Channeled Elements
 		[21] = { itemID = 30919 }; --Valestalker Girdle
 		[23] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
-		[24] = { itemID = 400751, droprate = "100%" }; --Raider's Commendations
+		[24] = { itemID = 400751, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal, droprate = "100%" }; --Raider's Commendations
 		[25] = { itemID = 98570, droprate = "100%" }; --Mystic Orb
 		[27] = { itemID = 61287, droprate = "1%" }; --Pet Sigil
 	};
@@ -963,7 +963,7 @@ AtlasLoot_Data["CoTHyjal"] = {
 		[8] = { itemID = 30918 }; --Hammer of Atonement"
 		[16] = { itemID = 31092, droprate = "100%", lootTable = {"T6HAND","Token"} };
 		[18] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
-		[19] = { itemID = 400751, droprate = "100%" }; --Raider's Commendations
+		[19] = { itemID = 400751, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal, droprate = "100%" }; --Raider's Commendations
 		[20] = { itemID = 98570, droprate = "100%" }; --Mystic Orb
 	};
 	{
@@ -977,7 +977,7 @@ AtlasLoot_Data["CoTHyjal"] = {
 		[6] = { itemID = 30917 }; --Razorfury Mantle"
 		[16] = { itemID = 31098, droprate = "100%", lootTable = {"T6LEGS","Token"} }; --Leggings of the Forgotten Conqueror
 		[18] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
-		[19] = { itemID = 400751, droprate = "100%" }; --Raider's Commendations
+		[19] = { itemID = 400751, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal, droprate = "100%" }; --Raider's Commendations
 		[20] = { itemID = 98570, droprate = "100%" }; --Mystic Orb
 		[22] = { itemID = 61289, droprate = "1%" }; --Pet Sigil
 	};
@@ -999,7 +999,7 @@ AtlasLoot_Data["CoTHyjal"] = {
 		[16] = { itemID = 31097, droprate = "100%", lootTable = {"T6HEAD","Token"} }; --Helm of the Forgotten Conqueror
 		[18] = { itemID = 450009}, -- The String of Time
 		[20] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
-		[21] = { itemID = 400751, droprate = "100%" }; --Raider's Commendations
+		[21] = { itemID = 400751, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal, droprate = "100%" }; --Raider's Commendations
 		[22] = { itemID = 98570, droprate = "100%" }; --Mystic Orb
 		[24] = { itemID = 61557, droprate = "1%" }; --Pet Sigil
 		[26] = { itemID = 1001620 };
@@ -1022,7 +1022,7 @@ AtlasLoot_Data["CoTHyjal"] = {
 		[16] = { itemID = 18764 }; --Echo of Eons
 		[17] = { itemID = 15041 }; --Key of Time
 		[19] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
-		[20] = { itemID = 400751, droprate = "100%" }; --Raider's Commendations
+		[20] = { itemID = 400751, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal, droprate = "100%" }; --Raider's Commendations
 		[21] = { itemID = 98570, droprate = "100%" }; --Mystic Orb
 	};
 	{
@@ -1399,7 +1399,7 @@ AtlasLoot_Data["CFRSerpentshrine"] = {
 		[20] = { itemID = 30049, droprate = "9%" }; --Fathomstone
 		[21] = { itemID = 30051, droprate = "1%" }; --Idol of the Crescent Goddess
 		[23] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
-		[24] = { itemID = 400751, droprate = "100%" }; --Raider's Commendations
+		[24] = { itemID = 400751, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal, droprate = "100%" }; --Raider's Commendations
 		[25] = { itemID = 98570, droprate = "100%" }; --Mystic Orb
 		[27] = { itemID = 816254, droprate = { nil, "2%", "5%", "7%", "10%" } }; --Formula: Enchant Cloak - Crushing Wave
 		[29] = { itemID = 63511, droprate = "1%" }; --Pet Sigil
@@ -1421,7 +1421,7 @@ AtlasLoot_Data["CFRSerpentshrine"] = {
 		[20] = { itemID = 30063, droprate = "7%" }; --Libram of Absolute Truth
 		[21] = { itemID = 30058, droprate = "0%" }; --Mallet of the Tides
 		[23] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
-		[24] = { itemID = 400751, droprate = "100%" }; --Raider's Commendations
+		[24] = { itemID = 400751, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal, droprate = "100%" }; --Raider's Commendations
 		[25] = { itemID = 98570, droprate = "100%" }; --Mystic Orb
 	};
 	{
@@ -1435,7 +1435,7 @@ AtlasLoot_Data["CFRSerpentshrine"] = {
 		[6] = { itemID = 30095, droprate = "4%" }; --Fang of the Leviathan
 		[16] = { itemID = 30240, droprate = "100%", lootTable = {"T5HAND","Token"} }; --Gloves of the Vanquished Defender
 		[18] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
-		[19] = { itemID = 400751, droprate = "100%" }; --Raider's Commendations
+		[19] = { itemID = 400751, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal, droprate = "100%" }; --Raider's Commendations
 		[20] = { itemID = 98570, droprate = "100%" }; --Mystic Orb
 		[22] = { itemID = 63326, droprate = "1%" }; --Pet Sigil
 	};
@@ -1450,7 +1450,7 @@ AtlasLoot_Data["CFRSerpentshrine"] = {
 		[6] = { itemID = 30090, droprate = "5%" }; --World Breaker
 		[16] = { itemID = 30246, droprate = "100%", lootTable = {"T5LEGS","Token"} }; --Leggings of the Vanquished Defender
 		[18] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
-		[19] = { itemID = 400751, droprate = "100%" }; --Raider's Commendations
+		[19] = { itemID = 400751, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal, droprate = "100%" }; --Raider's Commendations
 		[20] = { itemID = 98570, droprate = "100%" }; --Mystic Orb
 		[22] = { itemID = 63325, droprate = "1%" }; --Pet Sigil
 	};
@@ -1471,7 +1471,7 @@ AtlasLoot_Data["CFRSerpentshrine"] = {
 		[20] = { itemID = 30082, droprate = "0%" }; --Talon of Azshara
 		[21] = { itemID = 30080, droprate = "5%" }; --Luminescent Rod of the Naaru
 		[23] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
-		[24] = { itemID = 400751, droprate = "100%" }; --Raider's Commendations
+		[24] = { itemID = 400751, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal, droprate = "100%" }; --Raider's Commendations
 		[25] = { itemID = 98570, droprate = "100%" }; --Mystic Orb
 	};
 	{
@@ -1491,7 +1491,7 @@ AtlasLoot_Data["CFRSerpentshrine"] = {
 		[12] = { itemID = 30105, droprate = "3%" }; --Serpent Spine Longbow
 		[16] = { itemID = 30243, droprate = "100%", lootTable = {"T5HEAD","Token"} }; --Helm of the Vanquished Defender
 		[18] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
-		[19] = { itemID = 400751, droprate = "100%" }; --Raider's Commendations
+		[19] = { itemID = 400751, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal, droprate = "100%" }; --Raider's Commendations
 		[20] = { itemID = 98570, droprate = "100%" }; --Mystic Orb
 		[22] = { itemID = 29906, droprate = "5%" }; --Vashj's Vial Remnant
 		[23] = { itemID = 450000 }; --Intact Vial of Lady Vashj
@@ -1547,7 +1547,7 @@ AtlasLoot_Data["GruulsLair"] = {
 		[6] = { itemID = 28800, droprate = "5.87%" }; --Hammer of the Naaru
 		[16] = { itemID = 29764, droprate = "100%", lootTable = {"T4SHOULDER","Token"} }; --Pauldrons of the Fallen Defender
 		[18] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
-		[19] = { itemID = 400751, droprate = "100%" }; --Raider's Commendations
+		[19] = { itemID = 400751, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal, droprate = "100%" }; --Raider's Commendations
 		[20] = { itemID = 98570, droprate = "100%" }; --Mystic Orb
 		[22] = { itemID = 816252, droprate = { nil, "2%", "5%", "7%", "10%" } }; --Formula: Enchant Weapon - Undaunted Might
 		[24] = { itemID = 62311, droprate = "1%" }; --Pet Sigil
@@ -1887,7 +1887,7 @@ AtlasLoot_Data["HCMagtheridon"] = {
 		[17] = { itemID = 34845 }; --Pit Lord's Satchel
 		[18] = { itemID = 34846 }; --Black Sack of Gems
 		[20] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
-		[21] = { itemID = 400751, droprate = "100%" }; --Raider's Commendations
+		[21] = { itemID = 400751, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal, droprate = "100%" }; --Raider's Commendations
 		[22] = { itemID = 98570, droprate = "100%" }; --Mystic Orb
 		[24] = { itemID = 32385, droprate = "100%" }; --Magtheridon's Head
 		[25] = { itemID = 28791 }; --Ring of the Recalcitrant
@@ -1945,7 +1945,7 @@ AtlasLoot_Data["Karazhan"] = {
 		[18] = { itemID = 28504, droprate = "2.44%" }; --Steelhawk Crossbow
 		[19] = { itemID = 30480, droprate = ".25%" }; --Fiery Warhorse's Reins
 		[21] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
-		[22] = { itemID = 400751, droprate = "100%" }; --Raider's Commendations
+		[22] = { itemID = 400751, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal, droprate = "100%" }; --Raider's Commendations
 		[24] = { itemID = 23809, droprate = ".100" }; --Schematic: Stabilized Eternium Scope
 		[26] = { itemID = 60198, droprate = "1%" }; --Pet Sigil
 	};
@@ -1965,7 +1965,7 @@ AtlasLoot_Data["Karazhan"] = {
 		[19] = { itemID = 28568, droprate = "4.08%" }; --Idol of the Avian Heart
 		[20] = { itemID = 28524, droprate = "2.90%" }; --Emerald Ripper
 		[22] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
-		[23] = { itemID = 400751, droprate = "100%" }; --Raider's Commendations
+		[23] = { itemID = 400751, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal, droprate = "100%" }; --Raider's Commendations
 		[25] = { itemID = 22559, droprate = { nil, "2%", "5%", "7%", "10%" } }; --Formula: Enchant Weapon - Mongoose
 		[27] = { itemID = 60166, droprate = "1%" }; --Pet Sigil
 	};
@@ -1990,7 +1990,7 @@ AtlasLoot_Data["Karazhan"] = {
 		[18] = { itemID = 28522, droprate = "0.69%" }; --Shard of the Virtuous
 		[20] = { itemID = 229739, droprate = "100%" }; --Tome of Untold Secrets
 		[22] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
-		[23] = { itemID = 400751, droprate = "100%" }; --Raider's Commendations
+		[23] = { itemID = 400751, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal, droprate = "100%" }; --Raider's Commendations
 		[25] = { itemID = 816253, droprate = { nil, "2%", "5%", "7%", "10%" } }; --Formula: Enchant Weapon - Faith
 	};
 	{
@@ -2038,7 +2038,7 @@ AtlasLoot_Data["Karazhan"] = {
 		[20] = { itemID = 28606, droprate = "2.14%" }; --Shield of Impenetrable Darkness
 		[22] = { itemID = 229739, droprate = "100%" }; --Tome of Untold Secrets
 		[24] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
-		[25] = { itemID = 400751, droprate = "100%" }; --Raider's Commendations
+		[25] = { itemID = 400751, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal, droprate = "100%" }; --Raider's Commendations
 	};
 	{
 		Name = BabbleBoss["The Curator"];
@@ -2051,7 +2051,7 @@ AtlasLoot_Data["Karazhan"] = {
 		[6] = { itemID = 28633, droprate = "2.28%" }; --Staff of Infinite Mysteries
 		[16] = { itemID = 29758, droprate = "100%", lootTable = {"T4HAND","Token"} }; --Gloves of the Fallen Defender
 		[18] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
-		[19] = { itemID = 400751, droprate = "100%" }; --Raider's Commendations
+		[19] = { itemID = 400751, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal, droprate = "100%" }; --Raider's Commendations
 		[20] = { itemID = 98570, droprate = "100%" }; --Mystic Orb
 		[22] = { itemID = 60170, droprate = "1%" }; --Sigil of The Curator
 	};
@@ -2072,7 +2072,7 @@ AtlasLoot_Data["Karazhan"] = {
 		[20] = { itemID = 28659, droprate = "3.43%" }; --Xavian Stiletto
 		[22] = { itemID = 229739, droprate = "100%" }; --Tome of Untold Secrets
 		[24] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
-		[25] = { itemID = 400751, droprate = "100%" }; --Raider's Commendations
+		[25] = { itemID = 400751, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal, droprate = "100%" }; --Raider's Commendations
 		[27] = { itemID = 22561, droprate = { nil, "2%", "5%", "7%", "10%" } }; --Formula: Enchant Weapon - Soulfrost
 		[29] = { itemID = 60167, droprate = "1%" }; --Sigil of Terestain Illhoof
 	};
@@ -2093,7 +2093,7 @@ AtlasLoot_Data["Karazhan"] = {
 		[19] = { itemID = 28728, droprate = "2.72%" }; --Aran's Soothing Sapphire
 		[20] = { itemID = 28673, droprate = ".25%" }; --Tirisfal Wand of Ascendancy
 		[22] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
-		[23] = { itemID = 400751, droprate = "100%" }; --Raider's Commendations
+		[23] = { itemID = 400751, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal, droprate = "100%" }; --Raider's Commendations
 		[24] = { itemID = 98570, droprate = "100%" }; --Mystic Orb
 		[26] = { itemID = 22560, droprate = { nil, "2%", "5%", "7%", "10%" } }; --Formula: Enchant Weapon - Sunfire
 		[28] = { itemID = 60372, droprate = "1%" }; --Pet Sigil
@@ -2115,7 +2115,7 @@ AtlasLoot_Data["Karazhan"] = {
 		[19] = { itemID = 28729, droprate = ".32%" }; --Spiteblade
 		[21] = { itemID = 229739, droprate = "100%" }; --Tome of Untold Secrets
 		[23] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
-		[24] = { itemID = 400751, droprate = "100%" }; --Raider's Commendations
+		[24] = { itemID = 400751, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal, droprate = "100%" }; --Raider's Commendations
 	};
 	{
 		Name = BabbleBoss["Chess Event"];
@@ -2151,7 +2151,7 @@ AtlasLoot_Data["Karazhan"] = {
 		[16] = { itemID = 29761, droprate = "100%", lootTable = {"T4HEAD","Token"} }; --Helm of the Fallen Defender
 		[18] = { itemID = 229739, droprate = "100%" }; --Tome of Untold Secrets
 		[20] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
-		[21] = { itemID = 400751, droprate = "100%" }; --Raider's Commendations
+		[21] = { itemID = 400751, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal, droprate = "100%" }; --Raider's Commendations
 		[23] = { itemID = 60169, droprate = "1%" }; --Pet Sigil
 		[25] = { itemID = 499438, [AtlasLoot.Difficulties.MIN_DIF] = AtlasLoot.Difficulties.Heroic }; --Smoldering Emberwyrm
 	};
@@ -2795,7 +2795,7 @@ AtlasLoot_Data["TKEye"] = {
 		[18] = { itemID = 29924, droprate = "1%" }; --Netherbane
 		[19] = { itemID = 29949, droprate = "2%" }; --Arcanite Steam-Pistol
 		[21] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
-		[22] = { itemID = 400751, droprate = "100%" }; --Raider's Commendations
+		[22] = { itemID = 400751, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal, droprate = "100%" }; --Raider's Commendations
 		[23] = { itemID = 98570, droprate = "100%" }; --Mystic Orb
 		[25] = { itemID = 1816254, droprate = ".75%" }; --Forumla: Enchant Cloak - Phoenix Fire
 		[27] = { itemID = 62443, droprate = "1%" }; --Pet Sigil
@@ -2812,7 +2812,7 @@ AtlasLoot_Data["TKEye"] = {
 		[7] = { itemID = 30450, droprate = "2%" }; --Warp-Spring Coil
 		[16] = { itemID = 30249, droprate = "100%", lootTable = {"T5SHOULDER","Token"} }; --Pauldrons of the Vanquished Defender
 		[18] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
-		[19] = { itemID = 400751, droprate = "100%" }; --Raider's Commendations
+		[19] = { itemID = 400751, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal, droprate = "100%" }; --Raider's Commendations
 		[20] = { itemID = 98570, droprate = "100%" }; --Mystic Orb
 	};
 	{
@@ -2832,7 +2832,7 @@ AtlasLoot_Data["TKEye"] = {
 		[19] = { itemID = 29981, droprate = "1%" }; --Ethereum Life-Staff
 		[20] = { itemID = 29982, droprate = "8%" }; --Wand of the Forgotten Star
 		[22] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
-		[23] = { itemID = 400751, droprate = "100%" }; --Raider's Commendations
+		[23] = { itemID = 400751, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal, droprate = "100%" }; --Raider's Commendations
 		[24] = { itemID = 98570, droprate = "100%" }; --Mystic Orb
 		[26] = { itemID = 62309, droprate = "1%" }; --Pet Sigil
 	};
@@ -2860,7 +2860,7 @@ AtlasLoot_Data["TKEye"] = {
 		[21] = { itemID = 30007 }; --The Darkener's Grasp
 		[22] = { itemID = 30015 }; --The Sun King's Talisman
 		[24] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
-		[25] = { itemID = 400751, droprate = "100%" }; --Raider's Commendations
+		[25] = { itemID = 400751, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal, droprate = "100%" }; --Raider's Commendations
 		[26] = { itemID = 98570, droprate = "100%" }; --Mystic Orb
 		[28] = { itemID = 62498, droprate = "1%" }; --Pet Sigil
 		[30] = { itemID = 32458 }; --Ashes of Al'ar
@@ -2933,7 +2933,7 @@ AtlasLoot_Data["ZulAman"] = {
 		[20] = { itemID = 33480, droprate = "0%" }; --Cord of BBCRaided Troll Hair
 		[22] = { itemID = 222637, droprate = { "25%", "50%", "75%", "100%" } }; --Primal Amani Idol
 		[24] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
-		[25] = { itemID = 400751, droprate = "100%" }; --Raider's Commendations
+		[25] = { itemID = 400751, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal, droprate = "100%" }; --Raider's Commendations
 		[26] = { itemID = 98570, droprate = "100%" }; --Mystic Orb
 		[28] = { itemID = 63944, droprate = "1%" }; --Pet Sigil
 	};
@@ -2953,7 +2953,7 @@ AtlasLoot_Data["ZulAman"] = {
 		[20] = { itemID = 33500, droprate = "0%" }; --Signet of Eternal Life
 		[22] = { itemID = 222637, droprate = { "25%", "50%", "75%", "100%" } }; --Primal Amani Idol
 		[24] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
-		[25] = { itemID = 400751, droprate = "100%" }; --Raider's Commendations
+		[25] = { itemID = 400751, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal, droprate = "100%" }; --Raider's Commendations
 		[26] = { itemID = 98570, droprate = "100%" }; --Mystic Orb
 		[28] = { itemID = 63943, droprate = "1%" }; --Pet Sigil
 
@@ -2974,7 +2974,7 @@ AtlasLoot_Data["ZulAman"] = {
 		[20] = { itemID = 33489, droprate = "1%" }; --Mantle of Ill Intent
 		[22] = { itemID = 222637, droprate = { "25%", "50%", "75%", "100%" } }; --Primal Amani Idol
 		[24] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
-		[25] = { itemID = 400751, droprate = "100%" }; --Raider's Commendations
+		[25] = { itemID = 400751, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal, droprate = "100%" }; --Raider's Commendations
 		[26] = { itemID = 98570, droprate = "100%" }; --Mystic Orb
 		[28] = { itemID = 63946, droprate = "1%" }; --Pet Sigil
 
@@ -2995,7 +2995,7 @@ AtlasLoot_Data["ZulAman"] = {
 		[20] = { itemID = 33465, droprate = "3%" }; --Staff of Primal Fury
 		[22] = { itemID = 222637, droprate = { "25%", "50%", "75%", "100%" } }; --Primal Amani Idol
 		[24] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
-		[25] = { itemID = 400751, droprate = "100%" }; --Raider's Commendations
+		[25] = { itemID = 400751, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal, droprate = "100%" }; --Raider's Commendations
 		[26] = { itemID = 98570, droprate = "100%" }; --Mystic Orb
 		[28] = { itemID = 63945, droprate = "1%" }; --Pet Sigil
 	};
@@ -3019,7 +3019,7 @@ AtlasLoot_Data["ZulAman"] = {
 		[22] = { itemID = 33494, droprate = "1%" }; --Amani Divining Staff
 		[24] = { itemID = 222637, droprate = { "25%", "50%", "75%", "100%" } };  --Primal Amani Idol
 		[26] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
-		[27] = { itemID = 400751, droprate = "100%" }; --Raider's Commendations
+		[27] = { itemID = 400751, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal, droprate = "100%" }; --Raider's Commendations
 		[28] = { itemID = 98570, droprate = "100%" }; --Mystic Orb
 		[30] = { itemID = 1333809, droprate = "100%" }; --Amani Bear
 	};
@@ -3042,7 +3042,7 @@ AtlasLoot_Data["ZulAman"] = {
 		[20] = { itemID = 33474, droprate = "4%" }; --Ancient Amani Longbow
 		[21] = { itemID = 34071 }; --Seething Hate
 		[23] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
-		[24] = { itemID = 400751, droprate = "100%" }; --Raider's Commendations
+		[24] = { itemID = 400751, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal, droprate = "100%" }; --Raider's Commendations
 		[25] = { itemID = 98570, droprate = "100%" }; --Mystic Orb
 		[27] = { itemID = 33102, droprate = "7%" }; --Blood of Zul'Jin
 		[29] = { itemID = 63949, droprate = "1%" }; --Pet Sigil

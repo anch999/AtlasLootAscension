@@ -780,9 +780,9 @@ function AtlasLoot:Search(text)
         return
     end
 
-    for k, v in pairs(self.db.profile.SearchOn) do
-        if type(v) == "table" and v[1] and not IsAddOnLoaded(v[2]) and LoadAddOn(v[2]) then
-            DEFAULT_CHAT_FRAME:AddMessage(GREEN .. AL["AtlasLoot"] .. ": " .. ORANGE .. k .. WHITE .. " " .. AL["sucessfully loaded."])
+    for _, cat in pairs(self.db.profile.SearchOn) do
+        if type(cat) == "table" and cat[1] and not IsAddOnLoaded(cat[2]) then
+            LoadAddOn(cat[2])
         end
     end
 
