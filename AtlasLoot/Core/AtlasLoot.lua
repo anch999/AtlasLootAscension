@@ -508,7 +508,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 
 	local difType = false
 	-- Checks to see if type is the same
-	if self.CurrentType and self.CurrentType ~= dataSource[dataID].Type then
+	if self.CurrentType and dataSource[dataID].Type and self.CurrentType ~= dataSource[dataID].Type then
 		ItemindexID = self.type[dataSource[dataID].Type] or 2
 		difType = true
 	end

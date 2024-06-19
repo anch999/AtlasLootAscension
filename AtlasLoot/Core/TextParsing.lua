@@ -55,7 +55,11 @@ local txtSubstitution = {
     -- Weapon Weilding
     { "INVTYPE_WEAPON, ", "" },
     { "INVTYPE_2HWEAPON, ", "" },
-    { "INVTYPE_WEAPONMAINHAND, ", "" },
+    { "INVTYPE_WEAPONMAINHAND, One%-Handed Swords", AL["Main-Hand Sword"] },
+    { "INVTYPE_WEAPONMAINHAND, One%-Handed Maces", AL["Main-Hand Mace"] },
+    { "INVTYPE_WEAPONMAINHAND, Daggers", AL["Main-Hand Dagger"] },
+    { "INVTYPE_WEAPONMAINHAND, Fist Weapons", AL["Main-Hand Fist Weapon"] },
+    { "INVTYPE_WEAPONOFFHAND, One%-Handed Swords", AL["Off-Hand Sword"] },
     { "INVTYPE_WEAPONOFFHAND, ", "" },
     { "INVTYPE_RANGED, ", "" },
     { "INVTYPE_SHIELD, ", "" },
