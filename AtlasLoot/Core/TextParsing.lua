@@ -60,6 +60,7 @@ local txtSubstitution = {
     { "INVTYPE_WEAPONMAINHAND, Daggers", AL["Main-Hand Dagger"] },
     { "INVTYPE_WEAPONMAINHAND, Fist Weapons", AL["Main-Hand Fist Weapon"] },
     { "INVTYPE_WEAPONOFFHAND, One%-Handed Swords", AL["Off-Hand Sword"] },
+    { "INVTYPE_WEAPONOFFHAND, Fist Weapons", AL["Off-Hand Fist Weapon"] },
     { "INVTYPE_WEAPONOFFHAND, ", "" },
     { "INVTYPE_RANGED, ", "" },
     { "INVTYPE_SHIELD, ", "" },

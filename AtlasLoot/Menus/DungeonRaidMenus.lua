@@ -50,7 +50,7 @@ AtlasLoot_SubMenus["Dungeons and RaidsTBC"] = {
     { "", "CFRSerpentshrine", "", "Serpentshrine Cavern" },
     { "", "TKEye", "", "The Eye" },
     { "", "ZulAman", "", "Zul'Aman" },
-    { "", "CoTHyjal", "", "Mount Hyjal" },
+    { "", "CoTHyjal", "", "Hyjal Summit" },
     { "", "BlackTemple", "", "Black Temple" },
     { "", "SunwellPlateau", "", "Sunwell Plateau" },
     { "", "WorldBossesTBC","", "World Bosses" },

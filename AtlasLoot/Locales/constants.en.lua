@@ -430,6 +430,7 @@ if AL then
 	AL["Main-Hand Dagger"] = true
 	AL["Main-Hand Sword"] = true
 	AL["Off-Hand Sword"] = true
+	AL["Off-Hand Fist Weapon"] = true
 
 	AL["Herbalism"] = true
 

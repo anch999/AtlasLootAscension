@@ -2903,7 +2903,6 @@ AtlasLoot_Data["TKEye"] = {
 		[5] = { itemID = 30313 }; --Staff of Disintegration
 		[6] = { itemID = 30314 }; --Phaseshift Bulwark
 		[7] = { itemID = 30318 }; --Netherstrand Longbow
-		[8] = { itemID = 30319 }; --Nether Spike
 	};
 };
 
