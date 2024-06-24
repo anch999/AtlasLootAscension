@@ -510,7 +510,7 @@ AtlasLoot_Data["Mounts"] = {
 		[3] = { itemID = 32458 }; --Ashes of Al'ar
 		[4] = { itemID = "49098", desc = "=q1=" .. BabbleZone["Trial of the Crusader"] }; --Crusader's Black Warhorse","=q2=" .. AL["A Tribute to Immortality"] .. 
 		[5] = { itemID = "49096", desc = "=q1=" .. BabbleZone["Trial of the Crusader"] }; --Crusader's White Warhorse","=q2=" .. AL["A Tribute to Immortality"] .. 
-		[6] = { itemID = 13335, desc = "=q2="..BabbleBoss["Baron Rivendare"]..", =q1="..BabbleZone["Stratholme"], droprate = "0.10%" }; --Deathcharger's Reins
+		[6] = { itemID = 13335, desc = "=q2="..BabbleBoss["Baron Rivendare"]..", =q1="..BabbleZone["Stratholme"] }; --Deathcharger's Reins
 		[7] = { itemID = 30480, desc = "=q2="..BabbleBoss["Attumen the Huntsman"]..", =q1="..BabbleZone["Karazhan"], "0.25%" }; --Fiery Warhorse's Reins
 		[8] = { itemID = 50818, desc = "=q2=" ..BabbleBoss["The Lich King"] .. ", =q1=" .. BabbleZone["Icecrown Citadel"] }; --Invincible's Reins
 		[9] = { itemID = 45693, desc = "=q2=" .. AL["Alone in the Darkness"] .. ", =q1=" .. BabbleZone["Ulduar"] }; --Mimiron's Head
@@ -547,10 +547,10 @@ AtlasLoot_Data["Mounts"] = {
 		[16] = { icon = "INV_Box_01", name = WHITE.. AL["Rare Mounts"] };
 		[17] = { itemID = 44168 }; --Reins of the Time-Lost Proto-Drake
 		[18] = { itemID = 46109 }; --Sea Turtle
-		[20] = { itemID = 21218, desc = "=q2="..AL["Trash Mobs"]..", =q1="..BabbleZone["Ahn'Qiraj"], droprate = "10%" }; --Blue Qiraji Resonating Crystal
-		[21] = { itemID = 21323, desc = "=q2="..AL["Trash Mobs"]..", =q1="..BabbleZone["Ahn'Qiraj"], droprate = "11%" }; --Green Qiraji Resonating Crystal
-		[22] = { itemID = 21321, desc = "=q2="..AL["Trash Mobs"]..", =q1="..BabbleZone["Ahn'Qiraj"], droprate = "1%" }; --Red Qiraji Resonating Crystal
-		[23] = { itemID = 21324, desc = "=q2="..AL["Trash Mobs"]..", =q1="..BabbleZone["Ahn'Qiraj"], droprate = "12%" }; --Yellow Qiraji Resonating Crystal
+		[20] = { itemID = 21218, desc = "=q2="..AL["Trash Mobs"]..", =q1="..BabbleZone["Ahn'Qiraj"] }; --Blue Qiraji Resonating Crystal
+		[21] = { itemID = 21323, desc = "=q2="..AL["Trash Mobs"]..", =q1="..BabbleZone["Ahn'Qiraj"] }; --Green Qiraji Resonating Crystal
+		[22] = { itemID = 21321, desc = "=q2="..AL["Trash Mobs"]..", =q1="..BabbleZone["Ahn'Qiraj"] }; --Red Qiraji Resonating Crystal
+		[23] = { itemID = 21324, desc = "=q2="..AL["Trash Mobs"]..", =q1="..BabbleZone["Ahn'Qiraj"] }; --Yellow Qiraji Resonating Crystal
 	};
 	{
 		Name = AL["Rare Mounts"].." Page 3";

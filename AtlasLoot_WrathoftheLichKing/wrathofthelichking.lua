@@ -116,48 +116,48 @@ AtlasLoot_Data["UtgardeKeep"] = {
 	{
 		Name = BabbleBoss["Prince Keleseth"];
 		[1] = { icon = "INV_Box_01", name = WHITE..AL["Normal Mode"] };
-		[2] = { itemID = 35572, droprate = "8%" }; --Reinforced Velvet Helm
-		[3] = { itemID = 35571, droprate = "1%" }; --Dragon Stabler's Gauntlets
-		[4] = { itemID = 35570, droprate = "8%" }; --Keleseth's Blade of Evocation
+		[2] = { itemID = 35572 }; --Reinforced Velvet Helm
+		[3] = { itemID = 35571 }; --Dragon Stabler's Gauntlets
+		[4] = { itemID = 35570 }; --Keleseth's Blade of Evocation
 		[16] = { icon = "INV_Box_01", name = WHITE..AL["Heroic Mode"] };
-		[17] = { itemID = 47241, droprate = "00%" }; --Emblem of Triumph
-		[18] = { itemID = 37180, droprate = "1%" }; --Battlemap Hide Helm
-		[19] = { itemID = 37178, droprate = "2%" }; --Strategist's Belt
-		[20] = { itemID = 37179, droprate = "1%" }; --Infantry Assault Blade
-		[21] = { itemID = 37177, droprate = "1%" }; --Wand of the San'layn
+		[17] = { itemID = 47241 }; --Emblem of Triumph
+		[18] = { itemID = 37180 }; --Battlemap Hide Helm
+		[19] = { itemID = 37178 }; --Strategist's Belt
+		[20] = { itemID = 37179 }; --Infantry Assault Blade
+		[21] = { itemID = 37177 }; --Wand of the San'layn
 	};
 	{
 		Name = BabbleBoss["Skarvald the Constructor"];
 		[1] = { icon = "INV_Box_01", name = WHITE..AL["Normal Mode"] };
-		[2] = { itemID = 35575, droprate = "1%" }; --Skarvald's Dragonskin Habergeon
-		[3] = { itemID = 35574, droprate = "8%" }; --Chestplate of the Northern Lights
-		[4] = { itemID = 35573, droprate = "0%" }; --Arm Blade of Augelmir
+		[2] = { itemID = 35575 }; --Skarvald's Dragonskin Habergeon
+		[3] = { itemID = 35574 }; --Chestplate of the Northern Lights
+		[4] = { itemID = 35573 }; --Arm Blade of Augelmir
 		[16] = { icon = "INV_Box_01", name = WHITE..AL["Heroic Mode"] };
-		[17] = { itemID = 47241, droprate = "00%" }; --Emblem of Triumph
-		[18] = { itemID = 37183, droprate = "1%" }; --Bindings of the Tunneler
-		[19] = { itemID = 37184, droprate = "1%" }; --Dalronn's Jerkin
-		[20] = { itemID = 37182, droprate = "1%" }; --Helmet of the Constructor
-		[21] = { itemID = 37181, droprate = "1%" }; --Dagger of Betrayal
+		[17] = { itemID = 47241 }; --Emblem of Triumph
+		[18] = { itemID = 37183 }; --Bindings of the Tunneler
+		[19] = { itemID = 37184 }; --Dalronn's Jerkin
+		[20] = { itemID = 37182 }; --Helmet of the Constructor
+		[21] = { itemID = 37181 }; --Dagger of Betrayal
 	};
 	{
 		Name = BabbleBoss["Ingvar the Plunderer"];
 		[1] = { icon = "INV_Box_01", name = WHITE..AL["Normal Mode"] };
-		[2] = { itemID = 35577, droprate = "8%" }; --Holistic Patchwork Breeches
-		[3] = { itemID = 35578, droprate = "6%" }; --Overlaid Chain Spaulders
-		[4] = { itemID = 35576, droprate = "7%" }; --Ingvar's Monolithic Cleaver
+		[2] = { itemID = 35577 }; --Holistic Patchwork Breeches
+		[3] = { itemID = 35578 }; --Overlaid Chain Spaulders
+		[4] = { itemID = 35576 }; --Ingvar's Monolithic Cleaver
 		[5] = { itemID = 33330 }; --Ingvar's Head
 		[16] = { icon = "INV_Box_01", name = WHITE..AL["Heroic Mode"] };
-		[17] = { itemID = 47241, droprate = "00%" }; --Emblem of Triumph
-		[18] = { itemID = 37194, droprate = "0%" }; --Sharp-Barbed Leather Belt
-		[19] = { itemID = 37193, droprate = "8%" }; --Staggering Legplates
-		[20] = { itemID = 37192, droprate = "8%" }; --Annhylde's Ring
-		[21] = { itemID = 37191, droprate = "9%" }; --Drake-Mounted Crossbow
-		[22] = { itemID = 37189, droprate = "9%" }; --Breeches of the Caller
-		[23] = { itemID = 37188, droprate = "0%" }; --Plunderer's Helmet
-		[24] = { itemID = 37186, droprate = "0%" }; --Unsmashable Heavy Band
-		[25] = { itemID = 37190, droprate = "0%" }; --Enraged Feral Staff
+		[17] = { itemID = 47241 }; --Emblem of Triumph
+		[18] = { itemID = 37194 }; --Sharp-Barbed Leather Belt
+		[19] = { itemID = 37193 }; --Staggering Legplates
+		[20] = { itemID = 37192 }; --Annhylde's Ring
+		[21] = { itemID = 37191 }; --Drake-Mounted Crossbow
+		[22] = { itemID = 37189 }; --Breeches of the Caller
+		[23] = { itemID = 37188 }; --Plunderer's Helmet
+		[24] = { itemID = 37186 }; --Unsmashable Heavy Band
+		[25] = { itemID = 37190 }; --Enraged Feral Staff
 		[26] = { itemID = 41793 }; --Design: Fierce Monarch Topaz
-		[27] = { itemID = 43102, droprate = "00%" }; --Frozen Orb
+		[27] = { itemID = 43102 }; --Frozen Orb
 	};
 	{
 		Name = AL["Trash Mobs"];
@@ -181,70 +181,70 @@ AtlasLoot_Data["TheNexus"] = {
 	{
 		Name = BabbleBoss["Grand Magus Telestra"];
 		[1] = { icon = "INV_Box_01", name = WHITE..AL["Normal Mode"] };
-		[2] = { itemID = 35602, droprate = "0%" }; --Chiseled Stalagmite Pauldrons
-		[3] = { itemID = 35603, droprate = "2%" }; --Greaves of the Blue Flight
-		[4] = { itemID = 35601, droprate = "3%" }; --Drakonid Arm Blade
+		[2] = { itemID = 35602 }; --Chiseled Stalagmite Pauldrons
+		[3] = { itemID = 35603 }; --Greaves of the Blue Flight
+		[4] = { itemID = 35601 }; --Drakonid Arm Blade
 		[16] = { icon = "INV_Box_01", name = WHITE..AL["Heroic Mode"] };
-		[17] = { itemID = 47241, droprate = "00%" }; --Emblem of Triumph
-		[18] = { itemID = 37153, droprate = "1%" }; --Gloves of the Crystal Gardener
-		[19] = { itemID = 37155, droprate = "2%" }; --Frozen Forest Kilt
-		[20] = { itemID = 37152, droprate = "2%" }; --Girdle of Ice
-		[21] = { itemID = 37151, droprate = "2%" }; --Band of Frosted Thorns
+		[17] = { itemID = 47241 }; --Emblem of Triumph
+		[18] = { itemID = 37153 }; --Gloves of the Crystal Gardener
+		[19] = { itemID = 37155 }; --Frozen Forest Kilt
+		[20] = { itemID = 37152 }; --Girdle of Ice
+		[21] = { itemID = 37151 }; --Band of Frosted Thorns
 	};
 	{
 		Name = BabbleBoss["Anomalus"];
 		[1] = { icon = "INV_Box_01", name = WHITE..AL["Normal Mode"] };
-		[2] = { itemID = 35599, droprate = "1%" }; --Gauntlets of Serpent Scales
-		[3] = { itemID = 35600, droprate = "9%" }; --Cleated Ice Boots
-		[4] = { itemID = 35598, droprate = "9%" }; --Tome of the Lore Keepers
+		[2] = { itemID = 35599 }; --Gauntlets of Serpent Scales
+		[3] = { itemID = 35600 }; --Cleated Ice Boots
+		[4] = { itemID = 35598 }; --Tome of the Lore Keepers
 		[16] = { icon = "INV_Box_01", name = WHITE..AL["Heroic Mode"] };
-		[17] = { itemID = 47241, droprate = "00%" }; --Emblem of Triumph
-		[18] = { itemID = 37149, droprate = "1%" }; --Helm of Anomalus
-		[19] = { itemID = 37144, droprate = "2%" }; --Hauberk of the Arcane Wraith
-		[20] = { itemID = 37150, droprate = "2%" }; --Rift Striders
-		[21] = { itemID = 37141, droprate = "1%" }; --Amulet of Dazzling Light
+		[17] = { itemID = 47241 }; --Emblem of Triumph
+		[18] = { itemID = 37149 }; --Helm of Anomalus
+		[19] = { itemID = 37144 }; --Hauberk of the Arcane Wraith
+		[20] = { itemID = 37150 }; --Rift Striders
+		[21] = { itemID = 37141 }; --Amulet of Dazzling Light
 	};
 	{
 		Name = BabbleBoss["Ormorok the Tree-Shaper"];
 		[1] = { icon = "INV_Box_01", name = WHITE..AL["Normal Mode"] };
-		[2] = { itemID = 35605, droprate = "9%" }; --Belt of Draconic Runes
-		[3] = { itemID = 35604, droprate = "9%" }; --Insulating Bindings
-		[4] = { itemID = 35617, droprate = "8%" }; --Wand of Shimmering Scales
+		[2] = { itemID = 35605 }; --Belt of Draconic Runes
+		[3] = { itemID = 35604 }; --Insulating Bindings
+		[4] = { itemID = 35617 }; --Wand of Shimmering Scales
 		[6] = { itemID = 21524 }; --Red Winter Hat
 		[16] = { icon = "INV_Box_01", name = WHITE..AL["Heroic Mode"] };
-		[17] = { itemID = 47241, droprate = "00%" }; --Emblem of Triumph
-		[18] = { itemID = 37139, droprate = "1%" }; --Spaulders of the Careless Thief
-		[19] = { itemID = 37138, droprate = "1%" }; --Bands of Channeled Energy
-		[20] = { itemID = 37135, droprate = "1%" }; --Arcane-Shielded Helm
-		[21] = { itemID = 37134, droprate = "0%" }; --Telestra's Journal
+		[17] = { itemID = 47241 }; --Emblem of Triumph
+		[18] = { itemID = 37139 }; --Spaulders of the Careless Thief
+		[19] = { itemID = 37138 }; --Bands of Channeled Energy
+		[20] = { itemID = 37135 }; --Arcane-Shielded Helm
+		[21] = { itemID = 37134 }; --Telestra's Journal
 		[23] = { itemID = 21524 }; --Red Winter Hat
 	};
 	{
 		Name = BabbleBoss["Commander Kolurg"];
-		[1] = { itemID = 47241, droprate = "00%" }; --Emblem of Triumph
-		[2] = { itemID = 37728, droprate = "0%" }; --Cloak of the Enemy
-		[3] = { itemID = 37731, droprate = "0%" }; --Opposed Stasis Leggings
-		[4] = { itemID = 37730, droprate = "9%" }; --Cleric's Linen Shoes
-		[5] = { itemID = 37729, droprate = "0%" }; --Grips of Sculptured Icicles
+		[1] = { itemID = 47241 }; --Emblem of Triumph
+		[2] = { itemID = 37728 }; --Cloak of the Enemy
+		[3] = { itemID = 37731 }; --Opposed Stasis Leggings
+		[4] = { itemID = 37730 }; --Cleric's Linen Shoes
+		[5] = { itemID = 37729 }; --Grips of Sculptured Icicles
 	};
 	{
 		Name = BabbleBoss["Keristrasza"];
 		[1] = { icon = "INV_Box_01", name = WHITE..AL["Normal Mode"] };
-		[2] = { itemID = 35596, droprate = "9%" }; --Attuned Crystalline Boots
-		[3] = { itemID = 35595, droprate = "0%" }; --Glacier Sharpened Vileblade
-		[4] = { itemID = 35597, droprate = "0%" }; --Band of Glittering Permafrost
+		[2] = { itemID = 35596 }; --Attuned Crystalline Boots
+		[3] = { itemID = 35595 }; --Glacier Sharpened Vileblade
+		[4] = { itemID = 35597 }; --Band of Glittering Permafrost
 		[16] = { icon = "INV_Box_01", name = WHITE..AL["Heroic Mode"] };
-		[17] = { itemID = 47241, droprate = "00%" }; --Emblem of Triumph
-		[18] = { itemID = 37172, droprate = "9%" }; --Gloves of Glistening Runes
-		[19] = { itemID = 37170, droprate = "0%" }; --Interwoven Scale Bracers
-		[20] = { itemID = 37171, droprate = "9%" }; --Flame-Bathed Steel Girdle
-		[21] = { itemID = 37169, droprate = "8%" }; --War Mace of Unrequited Love
-		[22] = { itemID = 37165, droprate = "0%" }; --Crystal-Infused Tunic
-		[23] = { itemID = 37167, droprate = "0%" }; --Dragon Slayer's Sabatons
-		[24] = { itemID = 37166, droprate = "0%" }; --Sphere of Red Dragon's Blood
-		[25] = { itemID = 37162, droprate = "0%" }; --Bulwark of the Noble Protector
+		[17] = { itemID = 47241 }; --Emblem of Triumph
+		[18] = { itemID = 37172 }; --Gloves of Glistening Runes
+		[19] = { itemID = 37170 }; --Interwoven Scale Bracers
+		[20] = { itemID = 37171 }; --Flame-Bathed Steel Girdle
+		[21] = { itemID = 37169 }; --War Mace of Unrequited Love
+		[22] = { itemID = 37165 }; --Crystal-Infused Tunic
+		[23] = { itemID = 37167 }; --Dragon Slayer's Sabatons
+		[24] = { itemID = 37166 }; --Sphere of Red Dragon's Blood
+		[25] = { itemID = 37162 }; --Bulwark of the Noble Protector
 		[26] = { itemID = 41794 }; --Design: Deadly Monarch Topaz
-		[27] = { itemID = 43102, droprate = "00%" }; --Frozen Orb
+		[27] = { itemID = 43102 }; --Frozen Orb
 	};
 }
 
@@ -259,48 +259,48 @@ AtlasLoot_Data["AzjolNerub"] = {
 	{
 		Name = BabbleBoss["Krik'thir the Gatewatcher"];
 		[1] = { icon = "INV_Box_01", name = WHITE..AL["Normal Mode"] };
-		[2] = { itemID = 35657, droprate = "0%" }; --Exquisite Spider-Silk Footwraps
-		[3] = { itemID = 35656, droprate = "2%" }; --Aura Focused Gauntlets
-		[4] = { itemID = 35655, droprate = "0%" }; --Cobweb Machete
+		[2] = { itemID = 35657 }; --Exquisite Spider-Silk Footwraps
+		[3] = { itemID = 35656 }; --Aura Focused Gauntlets
+		[4] = { itemID = 35655 }; --Cobweb Machete
 		[16] = { icon = "INV_Box_01", name = WHITE..AL["Heroic Mode"] };
-		[17] = { itemID = 47241, droprate = "00%" }; --Emblem of Triumph
-		[18] = { itemID = 37218, droprate = "1%" }; --Stone-Worn Footwraps
-		[19] = { itemID = 37219, droprate = "1%" }; --Custodian's Chestpiece
-		[20] = { itemID = 37217, droprate = "2%" }; --Golden Limb Bands
-		[21] = { itemID = 37216, droprate = "2%" }; --Facade Shield of Glyphs
+		[17] = { itemID = 47241 }; --Emblem of Triumph
+		[18] = { itemID = 37218 }; --Stone-Worn Footwraps
+		[19] = { itemID = 37219 }; --Custodian's Chestpiece
+		[20] = { itemID = 37217 }; --Golden Limb Bands
+		[21] = { itemID = 37216 }; --Facade Shield of Glyphs
 	};
 	{
 		Name = BabbleBoss["Hadronox"];
 		[1] = { icon = "INV_Box_01", name = WHITE..AL["Normal Mode"] };
-		[2] = { itemID = 35660, droprate = "0%" }; --Spinneret Epaulets
-		[3] = { itemID = 35659, droprate = "0%" }; --Treads of Aspiring Heights
-		[4] = { itemID = 35658, droprate = "9%" }; --Life-Staff of the Web Lair
+		[2] = { itemID = 35660 }; --Spinneret Epaulets
+		[3] = { itemID = 35659 }; --Treads of Aspiring Heights
+		[4] = { itemID = 35658 }; --Life-Staff of the Web Lair
 		[16] = { icon = "INV_Box_01", name = WHITE..AL["Heroic Mode"] };
-		[17] = { itemID = 47241, droprate = "00%" }; --Emblem of Triumph
-		[18] = { itemID = 37222, droprate = "1%" }; --Egg Sac Robes
-		[19] = { itemID = 37230, droprate = "1%" }; --Grotto Mist Gloves
-		[20] = { itemID = 37221, droprate = "0%" }; --Hollowed Mandible Legplates
-		[21] = { itemID = 37220, droprate = "0%" }; --Essence of Gossamer
+		[17] = { itemID = 47241 }; --Emblem of Triumph
+		[18] = { itemID = 37222 }; --Egg Sac Robes
+		[19] = { itemID = 37230 }; --Grotto Mist Gloves
+		[20] = { itemID = 37221 }; --Hollowed Mandible Legplates
+		[21] = { itemID = 37220 }; --Essence of Gossamer
 	};
 	{
 		Name = BabbleBoss["Anub'arak"];
 		[1] = { icon = "INV_Box_01", name = WHITE..AL["Normal Mode"] };
-		[2] = { itemID = 35663, droprate = "9%" }; --Charmed Silken Cord
-		[3] = { itemID = 35662, droprate = "9%" }; --Wing Cover Girdle
-		[4] = { itemID = 35661, droprate = "8%" }; --Signet of Arachnathid Command
+		[2] = { itemID = 35663 }; --Charmed Silken Cord
+		[3] = { itemID = 35662 }; --Wing Cover Girdle
+		[4] = { itemID = 35661 }; --Signet of Arachnathid Command
 		[6] = { itemID = 43411 }; --Anub'arak's Broken Husk
 		[16] = { icon = "INV_Box_01", name = WHITE..AL["Heroic Mode"] };
-		[17] = { itemID = 47241, droprate = "00%" }; --Emblem of Triumph
-		[18] = { itemID = 37242, droprate = "9%" }; --Sash of the Servant
-		[19] = { itemID = 37240, droprate = "9%" }; --Flamebeard's Bracers
-		[20] = { itemID = 37241, droprate = "9%" }; --Ancient Aligned Girdle
-		[21] = { itemID = 37238, droprate = "9%" }; --Rod of the Fallen Monarch
-		[22] = { itemID = 37236, droprate = "0%" }; --Insect Vestments
-		[23] = { itemID = 37237, droprate = "0%" }; --Chitin Shell Greathelm
-		[24] = { itemID = 37232, droprate = "9%" }; --Ring of the Traitor King
-		[25] = { itemID = 37235, droprate = "1%" }; --Crypt Lord's Deft Blade
-		[26] = { itemID = 41796, droprate = "2%" }; --Design: Infused Twilight Opal
-		[27] = { itemID = 43102, droprate = "00%" }; --Frozen Orb
+		[17] = { itemID = 47241 }; --Emblem of Triumph
+		[18] = { itemID = 37242 }; --Sash of the Servant
+		[19] = { itemID = 37240 }; --Flamebeard's Bracers
+		[20] = { itemID = 37241 }; --Ancient Aligned Girdle
+		[21] = { itemID = 37238 }; --Rod of the Fallen Monarch
+		[22] = { itemID = 37236 }; --Insect Vestments
+		[23] = { itemID = 37237 }; --Chitin Shell Greathelm
+		[24] = { itemID = 37232 }; --Ring of the Traitor King
+		[25] = { itemID = 37235 }; --Crypt Lord's Deft Blade
+		[26] = { itemID = 41796 }; --Design: Infused Twilight Opal
+		[27] = { itemID = 43102 }; --Frozen Orb
 	};
 	{
 		Name = AL["Trash Mobs"];
@@ -322,70 +322,70 @@ AtlasLoot_Data["Ahnkahet"] = {
 	{
 		Name = BabbleBoss["Elder Nadox"];
 		[1] = { icon = "INV_Box_01", name = WHITE..AL["Normal Mode"] };
-		[2] = { itemID = 35607, droprate = "0%" }; --Ahn'kahar Handwraps
-		[3] = { itemID = 35608, droprate = "9%" }; --Crawler-Emblem Belt
-		[4] = { itemID = 35606, droprate = "1%" }; --Blade of Nadox
+		[2] = { itemID = 35607 }; --Ahn'kahar Handwraps
+		[3] = { itemID = 35608 }; --Crawler-Emblem Belt
+		[4] = { itemID = 35606 }; --Blade of Nadox
 		[16] = { icon = "INV_Box_01", name = WHITE..AL["Heroic Mode"] };
-		[17] = { itemID = 47241, droprate = "00%" }; --Emblem of Triumph
-		[18] = { itemID = 37594, droprate = "2%" }; --Elder Headpiece
-		[19] = { itemID = 37593, droprate = "3%" }; --Sprinting Shoulderpads
-		[20] = { itemID = 37592, droprate = "2%" }; --Brood Plague Helmet
-		[21] = { itemID = 37591, droprate = "2%" }; --Nerubian Shield Ring
+		[17] = { itemID = 47241 }; --Emblem of Triumph
+		[18] = { itemID = 37594 }; --Elder Headpiece
+		[19] = { itemID = 37593 }; --Sprinting Shoulderpads
+		[20] = { itemID = 37592 }; --Brood Plague Helmet
+		[21] = { itemID = 37591 }; --Nerubian Shield Ring
 	};
 	{
 		Name = BabbleBoss["Prince Taldaram"];
 		[1] = { icon = "INV_Box_01", name = WHITE..AL["Normal Mode"] };
-		[2] = { itemID = 35611, droprate = "0%" }; --Gloves of the Blood Prince
-		[3] = { itemID = 35610, droprate = "1%" }; --Slasher's Amulet
-		[4] = { itemID = 35609, droprate = "9%" }; --Talisman of Scourge Command
+		[2] = { itemID = 35611 }; --Gloves of the Blood Prince
+		[3] = { itemID = 35610 }; --Slasher's Amulet
+		[4] = { itemID = 35609 }; --Talisman of Scourge Command
 		[16] = { icon = "INV_Box_01", name = WHITE..AL["Heroic Mode"] };
-		[17] = { itemID = 47241, droprate = "00%" }; --Emblem of Triumph
-		[18] = { itemID = 37613, droprate = "1%" }; --Flame Sphere Bindings
-		[19] = { itemID = 37614, droprate = "1%" }; --Gauntlets of the Plundering Geist
-		[20] = { itemID = 37612, droprate = "0%" }; --Bonegrinder Breastplate
-		[21] = { itemID = 37595, droprate = "1%" }; --Necklace of Taldaram
+		[17] = { itemID = 47241 }; --Emblem of Triumph
+		[18] = { itemID = 37613 }; --Flame Sphere Bindings
+		[19] = { itemID = 37614 }; --Gauntlets of the Plundering Geist
+		[20] = { itemID = 37612 }; --Bonegrinder Breastplate
+		[21] = { itemID = 37595 }; --Necklace of Taldaram
 	};
 	{
 		Name = BabbleBoss["Amanitar"] .. " (" .. AL["Heroic"] .. ")";
-		[1] = { itemID = 47241, droprate = "00%" }; --Emblem of Triumph
-		[2] = { itemID = 43287, droprate = "1%" }; --Silken Bridge Handwraps
-		[3] = { itemID = 43286, droprate = "3%" }; --Legguards of Swarming Attacks
-		[4] = { itemID = 43285, droprate = "2%" }; --Amulet of the Spell Flinger
-		[5] = { itemID = 43284, droprate = "2%" }; --Amanitar Skullbow
+		[1] = { itemID = 47241 }; --Emblem of Triumph
+		[2] = { itemID = 43287 }; --Silken Bridge Handwraps
+		[3] = { itemID = 43286 }; --Legguards of Swarming Attacks
+		[4] = { itemID = 43285 }; --Amulet of the Spell Flinger
+		[5] = { itemID = 43284 }; --Amanitar Skullbow
 	};
 	{
 		Name = BabbleBoss["Jedoga Shadowseeker"];
 		[1] = { icon = "INV_Box_01", name = WHITE..AL["Normal Mode"] };
-		[2] = { itemID = 43278, droprate = "0%" }; --Cloak of the Darkcaster
-		[3] = { itemID = 43279, droprate = "9%" }; --Battlechest of the Twilight Cult
-		[4] = { itemID = 43277, droprate = "8%" }; --Jedoga's Greatring
+		[2] = { itemID = 43278 }; --Cloak of the Darkcaster
+		[3] = { itemID = 43279 }; --Battlechest of the Twilight Cult
+		[4] = { itemID = 43277 }; --Jedoga's Greatring
 		[6] = { itemID = 21524 }; --Red Winter Hat
 		[16] = { icon = "INV_Box_01", name = WHITE..AL["Heroic Mode"] };
-		[17] = { itemID = 47241, droprate = "00%" }; --Emblem of Triumph
-		[18] = { itemID = 43283, droprate = "1%" }; --Subterranean Waterfall Shroud
-		[19] = { itemID = 43280, droprate = "1%" }; --Faceguard of the Hammer Clan
-		[20] = { itemID = 43282, droprate = "2%" }; --Shadowseeker's Pendant
-		[21] = { itemID = 43281, droprate = "2%" }; --Edge of Oblivion
+		[17] = { itemID = 47241 }; --Emblem of Triumph
+		[18] = { itemID = 43283 }; --Subterranean Waterfall Shroud
+		[19] = { itemID = 43280 }; --Faceguard of the Hammer Clan
+		[20] = { itemID = 43282 }; --Shadowseeker's Pendant
+		[21] = { itemID = 43281 }; --Edge of Oblivion
 		[23] = { itemID = 21524 }; --Red Winter Hat
 	};
 	{
 		Name = BabbleBoss["Herald Volazj"];
 		[1] = { icon = "INV_Box_01", name = WHITE..AL["Normal Mode"] };
-		[2] = { itemID = 35612, droprate = "9%" }; --Mantle of Echoing Bats
-		[3] = { itemID = 35613, droprate = "1%" }; --Pyramid Embossed Belt
-		[4] = { itemID = 35614, droprate = "1%" }; --Volazj's Sabatons
+		[2] = { itemID = 35612 }; --Mantle of Echoing Bats
+		[3] = { itemID = 35613 }; --Pyramid Embossed Belt
+		[4] = { itemID = 35614 }; --Volazj's Sabatons
 		[16] = { icon = "INV_Box_01", name = WHITE..AL["Heroic Mode"] };
-		[17] = { itemID = 47241, droprate = "00%" }; --Emblem of Triumph
-		[18] = { itemID = 37622, droprate = "9%" }; --Skirt of the Old Kingdom
-		[19] = { itemID = 37623, droprate = "9%" }; --Fiery Obelisk Handguards
-		[20] = { itemID = 37620, droprate = "8%" }; --Bracers of the Herald
-		[21] = { itemID = 37619, droprate = "8%" }; --Wand of Ahnkahet
-		[22] = { itemID = 37616, droprate = "9%" }; --Kilt of the Forgotten One
-		[23] = { itemID = 37618, droprate = "0%" }; --Greaves of Ancient Evil
-		[24] = { itemID = 37617, droprate = "9%" }; --Staff of Sinister Claws
-		[25] = { itemID = 37615, droprate = "9%" }; --Titanium Compound Bow
-		[26] = { itemID = 41790, droprate = "7%" }; --Design: Precise Scarlet Ruby
-		[27] = { itemID = 43102, droprate = "00%" }; --Frozen Orb
+		[17] = { itemID = 47241 }; --Emblem of Triumph
+		[18] = { itemID = 37622 }; --Skirt of the Old Kingdom
+		[19] = { itemID = 37623 }; --Fiery Obelisk Handguards
+		[20] = { itemID = 37620 }; --Bracers of the Herald
+		[21] = { itemID = 37619 }; --Wand of Ahnkahet
+		[22] = { itemID = 37616 }; --Kilt of the Forgotten One
+		[23] = { itemID = 37618 }; --Greaves of Ancient Evil
+		[24] = { itemID = 37617 }; --Staff of Sinister Claws
+		[25] = { itemID = 37615 }; --Titanium Compound Bow
+		[26] = { itemID = 41790 }; --Design: Precise Scarlet Ruby
+		[27] = { itemID = 43102 }; --Frozen Orb
 	};
 	{
 		Name = AL["Trash Mobs"];
@@ -409,59 +409,59 @@ AtlasLoot_Data["DrakTharonKeep"] = {
 	{
 		Name = BabbleBoss["Trollgore"];
 		[1] = { icon = "INV_Box_01", name = WHITE..AL["Normal Mode"] };
-		[2] = { itemID = 35620, droprate = "3%" }; --Berserker's Horns
-		[3] = { itemID = 35619, droprate = "8%" }; --Infection Resistant Legguards
-		[4] = { itemID = 35618, droprate = "0%" }; --Troll Butcherer
+		[2] = { itemID = 35620 }; --Berserker's Horns
+		[3] = { itemID = 35619 }; --Infection Resistant Legguards
+		[4] = { itemID = 35618 }; --Troll Butcherer
 		[16] = { icon = "INV_Box_01", name = WHITE..AL["Heroic Mode"] };
-		[17] = { itemID = 47241, droprate = "00%" }; --Emblem of Triumph
-		[18] = { itemID = 37715, droprate = "1%" }; --Cowl of the Dire Troll
-		[19] = { itemID = 37714, droprate = "2%" }; --Batrider's Cord
-		[20] = { itemID = 37717, droprate = "2%" }; --Legs of Physical Regeneration
-		[21] = { itemID = 37712, droprate = "2%" }; --Terrace Defence Boots
+		[17] = { itemID = 47241 }; --Emblem of Triumph
+		[18] = { itemID = 37715 }; --Cowl of the Dire Troll
+		[19] = { itemID = 37714 }; --Batrider's Cord
+		[20] = { itemID = 37717 }; --Legs of Physical Regeneration
+		[21] = { itemID = 37712 }; --Terrace Defence Boots
 	};
 	{
 		Name = BabbleBoss["Novos the Summoner"];
 		[1] = { icon = "INV_Box_01", name = WHITE..AL["Normal Mode"] };
-		[2] = { itemID = 35632, droprate = "2%" }; --Robes of Novos
-		[3] = { itemID = 35631, droprate = "8%" }; --Crystal Pendant of Warding
-		[4] = { itemID = 35630, droprate = "0%" }; --Summoner's Stone Gavel
+		[2] = { itemID = 35632 }; --Robes of Novos
+		[3] = { itemID = 35631 }; --Crystal Pendant of Warding
+		[4] = { itemID = 35630 }; --Summoner's Stone Gavel
 		[16] = { icon = "INV_Box_01", name = WHITE..AL["Heroic Mode"] };
-		[17] = { itemID = 47241, droprate = "00%" }; --Emblem of Triumph
-		[18] = { itemID = 37722, droprate = "2%" }; --Breastplate of Undeath
-		[19] = { itemID = 37718, droprate = "1%" }; --Temple Crystal Fragment
-		[20] = { itemID = 37721, droprate = "2%" }; --Cursed Lich Blade
+		[17] = { itemID = 47241 }; --Emblem of Triumph
+		[18] = { itemID = 37722 }; --Breastplate of Undeath
+		[19] = { itemID = 37718 }; --Temple Crystal Fragment
+		[20] = { itemID = 37721 }; --Cursed Lich Blade
 	};
 	{
 		Name = BabbleBoss["King Dred"];
 		[1] = { icon = "INV_Box_01", name = WHITE..AL["Normal Mode"] };
-		[2] = { itemID = 35635, droprate = "8%" }; --Stable Master's Breeches
-		[3] = { itemID = 35634, droprate = "8%" }; --Scabrous-Hide Helm
-		[4] = { itemID = 35633, droprate = "1%" }; --Staff of the Great Reptile
+		[2] = { itemID = 35635 }; --Stable Master's Breeches
+		[3] = { itemID = 35634 }; --Scabrous-Hide Helm
+		[4] = { itemID = 35633 }; --Staff of the Great Reptile
 		[16] = { icon = "INV_Box_01", name = WHITE..AL["Heroic Mode"] };
-		[17] = { itemID = 47241, droprate = "00%" }; --Emblem of Triumph
-		[18] = { itemID = 37725, droprate = "1%" }; --Savage Wound Wrap
-		[19] = { itemID = 37724, droprate = "1%" }; --Handler's Arm Strap
-		[20] = { itemID = 37726, droprate = "1%" }; --King Dred's Helm
-		[21] = { itemID = 37723, droprate = "1%" }; --Incisor Fragment
+		[17] = { itemID = 47241 }; --Emblem of Triumph
+		[18] = { itemID = 37725 }; --Savage Wound Wrap
+		[19] = { itemID = 37724 }; --Handler's Arm Strap
+		[20] = { itemID = 37726 }; --King Dred's Helm
+		[21] = { itemID = 37723 }; --Incisor Fragment
 	};
 	{
 		Name = BabbleBoss["The Prophet Tharon'ja"];
 		[1] = { icon = "INV_Box_01", name = WHITE..AL["Normal Mode"] };
-		[2] = { itemID = 35638, droprate = "3%" }; --Helmet of Living Flesh
-		[3] = { itemID = 35637, droprate = "8%" }; --Muradin's Lost Greaves
-		[4] = { itemID = 35636, droprate = "0%" }; --Tharon'ja's Aegis
+		[2] = { itemID = 35638 }; --Helmet of Living Flesh
+		[3] = { itemID = 35637 }; --Muradin's Lost Greaves
+		[4] = { itemID = 35636 }; --Tharon'ja's Aegis
 		[16] = { icon = "INV_Box_01", name = WHITE..AL["Heroic Mode"] };
-		[17] = { itemID = 47241, droprate = "00%" }; --Emblem of Triumph
-		[18] = { itemID = 37798, droprate = "9%" }; --Overlook Handguards
-		[19] = { itemID = 37791, droprate = "0%" }; --Leggings of the Winged Serpent
-		[20] = { itemID = 37788, droprate = "1%" }; --Limb Regeneration Bracers
-		[21] = { itemID = 37784, droprate = "9%" }; --Keystone Great-Ring
-		[22] = { itemID = 37735, droprate = "1%" }; --Ziggurat Imprinted Chestguard
-		[23] = { itemID = 37732, droprate = "0%" }; --Spectral Seal of the Prophet
-		[24] = { itemID = 37734, droprate = "1%" }; --Talisman of Troll Divinity
-		[25] = { itemID = 37733, droprate = "1%" }; --Mojo Masked Crusher
-		[26] = { itemID = 41795, droprate = "4%" }; --Design: Timeless Forest Emerald
-		[27] = { itemID = 43102, droprate = "00%" }; --Frozen Orb
+		[17] = { itemID = 47241 }; --Emblem of Triumph
+		[18] = { itemID = 37798 }; --Overlook Handguards
+		[19] = { itemID = 37791 }; --Leggings of the Winged Serpent
+		[20] = { itemID = 37788 }; --Limb Regeneration Bracers
+		[21] = { itemID = 37784 }; --Keystone Great-Ring
+		[22] = { itemID = 37735 }; --Ziggurat Imprinted Chestguard
+		[23] = { itemID = 37732 }; --Spectral Seal of the Prophet
+		[24] = { itemID = 37734 }; --Talisman of Troll Divinity
+		[25] = { itemID = 37733 }; --Mojo Masked Crusher
+		[26] = { itemID = 41795 }; --Design: Timeless Forest Emerald
+		[27] = { itemID = 43102 }; --Frozen Orb
 	};
 	{
 		Name = AL["Trash Mobs"];
@@ -487,87 +487,87 @@ AtlasLoot_Data["TheVioletHold"] = {
 	{
 		Name = BabbleBoss["Erekem"];
 		[1] = { icon = "INV_Box_01", name = WHITE..AL["Normal Mode"] };
-		[2] = { itemID = 43363, droprate = "3%" }; --Screeching Cape
-		[3] = { itemID = 43375, droprate = "5%" }; --Trousers of the Arakkoa
+		[2] = { itemID = 43363 }; --Screeching Cape
+		[3] = { itemID = 43375 }; --Trousers of the Arakkoa
 		[16] = { icon = "INV_Box_01", name = WHITE..AL["Heroic Mode"] };
-		[17] = { itemID = 47241, droprate = "00%" }; --Emblem of Triumph
-		[18] = { itemID = 43406, droprate = "9%" }; --Cloak of the Gushing Wound
-		[19] = { itemID = 43405, droprate = "9%" }; --Sabatons of Erekem
-		[20] = { itemID = 43407, droprate = "0%" }; --Stormstrike Mace
+		[17] = { itemID = 47241 }; --Emblem of Triumph
+		[18] = { itemID = 43406 }; --Cloak of the Gushing Wound
+		[19] = { itemID = 43405 }; --Sabatons of Erekem
+		[20] = { itemID = 43407 }; --Stormstrike Mace
 	};
 	{
 		Name = BabbleBoss["Zuramat the Obliterator"];
 		[1] = { icon = "INV_Box_01", name = WHITE..AL["Normal Mode"] };
-		[2] = { itemID = 43353, droprate = "4%" }; --Void Sentry Legplates
-		[3] = { itemID = 43358, droprate = "1%" }; --Pendant of Shadow Beams
+		[2] = { itemID = 43353 }; --Void Sentry Legplates
+		[3] = { itemID = 43358 }; --Pendant of Shadow Beams
 		[16] = { icon = "INV_Box_01", name = WHITE..AL["Heroic Mode"] };
-		[17] = { itemID = 47241, droprate = "00%" }; --Emblem of Triumph
-		[18] = { itemID = 43403, droprate = "8%" }; --Shroud of Darkness
-		[19] = { itemID = 43402, droprate = "8%" }; --The Obliterator Greaves
-		[20] = { itemID = 43404, droprate = "8%" }; --Zuramat's Necklace
+		[17] = { itemID = 47241 }; --Emblem of Triumph
+		[18] = { itemID = 43403 }; --Shroud of Darkness
+		[19] = { itemID = 43402 }; --The Obliterator Greaves
+		[20] = { itemID = 43404 }; --Zuramat's Necklace
 	};
 	{
 		Name = BabbleBoss["Xevozz"];
 		[1] = { icon = "INV_Box_01", name = WHITE..AL["Normal Mode"] };
-		[2] = { itemID = 35644, droprate = "3%" }; --Xevozz's Belt
-		[3] = { itemID = 35642, droprate = "2%" }; --Riot Shield
+		[2] = { itemID = 35644 }; --Xevozz's Belt
+		[3] = { itemID = 35642 }; --Riot Shield
 		[16] = { icon = "INV_Box_01", name = WHITE..AL["Heroic Mode"] };
-		[17] = { itemID = 47241, droprate = "00%" }; --Emblem of Triumph
-		[18] = { itemID = 37867, droprate = "9%" }; --Footwraps of Teleportation
-		[19] = { itemID = 37868, droprate = "9%" }; --Girdle of the Ethereal
-		[20] = { itemID = 37861, droprate = "9%" }; --Necklace of Arcane Spheres
+		[17] = { itemID = 47241 }; --Emblem of Triumph
+		[18] = { itemID = 37867 }; --Footwraps of Teleportation
+		[19] = { itemID = 37868 }; --Girdle of the Ethereal
+		[20] = { itemID = 37861 }; --Necklace of Arcane Spheres
 	};
 	{
 		Name = BabbleBoss["Ichoron"];
 		[1] = { icon = "INV_Box_01", name = WHITE..AL["Normal Mode"] };
-		[2] = { itemID = 35647, droprate = "4%" }; --Handguards of Rapid Pursuit
-		[3] = { itemID = 35643, droprate = "0%" }; --Spaulders of Ichoron
+		[2] = { itemID = 35647 }; --Handguards of Rapid Pursuit
+		[3] = { itemID = 35643 }; --Spaulders of Ichoron
 		[16] = { icon = "INV_Box_01", name = WHITE..AL["Heroic Mode"] };
-		[17] = { itemID = 47241, droprate = "00%" }; --Emblem of Triumph
-		[18] = { itemID = 43401, droprate = "8%" }; --Water-Drenched Robe
-		[19] = { itemID = 37862, droprate = "8%" }; --Gauntlets of the Water Revenant
-		[20] = { itemID = 37869, droprate = "8%" }; --Globule Signet
+		[17] = { itemID = 47241 }; --Emblem of Triumph
+		[18] = { itemID = 43401 }; --Water-Drenched Robe
+		[19] = { itemID = 37862 }; --Gauntlets of the Water Revenant
+		[20] = { itemID = 37869 }; --Globule Signet
 	};
 	{
 		Name = BabbleBoss["Moragg"];
 		[1] = { icon = "INV_Box_01", name = WHITE..AL["Normal Mode"] };
-		[2] = { itemID = 43387, droprate = "3%" }; --Shoulderplates of the Beholder
-		[3] = { itemID = 43382, droprate = "3%" }; --Band of Eyes
+		[2] = { itemID = 43387 }; --Shoulderplates of the Beholder
+		[3] = { itemID = 43382 }; --Band of Eyes
 		[16] = { icon = "INV_Box_01", name = WHITE..AL["Heroic Mode"] };
-		[17] = { itemID = 47241, droprate = "00%" }; --Emblem of Triumph
-		[18] = { itemID = 43410, droprate = "9%" }; --Moragg's Chestguard
-		[19] = { itemID = 43408, droprate = "9%" }; --Solitare of Reflecting Beams
-		[20] = { itemID = 43409, droprate = "0%" }; --Saliva Corroded Pike
+		[17] = { itemID = 47241 }; --Emblem of Triumph
+		[18] = { itemID = 43410 }; --Moragg's Chestguard
+		[19] = { itemID = 43408 }; --Solitare of Reflecting Beams
+		[20] = { itemID = 43409 }; --Saliva Corroded Pike
 	};
 	{
 		Name = BabbleBoss["Lavanthor"];
 		[1] = { icon = "INV_Box_01", name = WHITE..AL["Normal Mode"] };
-		[2] = { itemID = 35646, droprate = "4%" }; --Lava Burn Gloves
-		[3] = { itemID = 35645, droprate = "5%" }; --Prison Warden's Shotgun
+		[2] = { itemID = 35646 }; --Lava Burn Gloves
+		[3] = { itemID = 35645 }; --Prison Warden's Shotgun
 		[16] = { icon = "INV_Box_01", name = WHITE..AL["Heroic Mode"] };
-		[17] = { itemID = 47241, droprate = "00%" }; --Emblem of Triumph
-		[18] = { itemID = 37870, droprate = "0%" }; --Twin-Headed Boots
-		[19] = { itemID = 37872, droprate = "0%" }; --Lavanthor's Talisman
-		[20] = { itemID = 37871, droprate = "9%" }; --The Key
+		[17] = { itemID = 47241 }; --Emblem of Triumph
+		[18] = { itemID = 37870 }; --Twin-Headed Boots
+		[19] = { itemID = 37872 }; --Lavanthor's Talisman
+		[20] = { itemID = 37871 }; --The Key
 	};
 	{
 		Name = BabbleBoss["Cyanigosa"];
 		[1] = { icon = "INV_Box_01", name = WHITE..AL["Normal Mode"] };
-		[2] = { itemID = 35650, droprate = "1%" }; --Boots of the Portal Guardian
-		[3] = { itemID = 35651, droprate = "1%" }; --Plate Claws of the Dragon
-		[4] = { itemID = 35649, droprate = "1%" }; --Jailer's Baton
+		[2] = { itemID = 35650 }; --Boots of the Portal Guardian
+		[3] = { itemID = 35651 }; --Plate Claws of the Dragon
+		[4] = { itemID = 35649 }; --Jailer's Baton
 		[16] = { icon = "INV_Box_01", name = WHITE..AL["Heroic Mode"] };
-		[17] = { itemID = 47241, droprate = "00%" }; --Emblem of Triumph
-		[18] = { itemID = 37884, droprate = "0%" }; --Azure Cloth Bindings
-		[19] = { itemID = 37886, droprate = "1%" }; --Handgrips of the Savage Emissary
-		[20] = { itemID = 43500, droprate = "0%" }; --Bolstered Legplates
-		[21] = { itemID = 37883, droprate = "1%" }; --Staff of Trickery
-		[22] = { itemID = 37876, droprate = "2%" }; --Cyanigosa's Leggings
-		[23] = { itemID = 37875, droprate = "1%" }; --Spaulders of the Violet Hold
-		[24] = { itemID = 37874, droprate = "1%" }; --Gauntlets of Capture
-		[25] = { itemID = 37873, droprate = "0%" }; --Mark of the War Prisoner
+		[17] = { itemID = 47241 }; --Emblem of Triumph
+		[18] = { itemID = 37884 }; --Azure Cloth Bindings
+		[19] = { itemID = 37886 }; --Handgrips of the Savage Emissary
+		[20] = { itemID = 43500 }; --Bolstered Legplates
+		[21] = { itemID = 37883 }; --Staff of Trickery
+		[22] = { itemID = 37876 }; --Cyanigosa's Leggings
+		[23] = { itemID = 37875 }; --Spaulders of the Violet Hold
+		[24] = { itemID = 37874 }; --Gauntlets of Capture
+		[25] = { itemID = 37873 }; --Mark of the War Prisoner
 		[26] = { itemID = 41791 }; --Design: Thick Autumn's Glow
-		[27] = { itemID = 43102, droprate = "00%" }; --Frozen Orb
+		[27] = { itemID = 43102 }; --Frozen Orb
 	};
 	{
 		Name = AL["Trash Mobs"];
@@ -596,67 +596,67 @@ AtlasLoot_Data["Gundrak"] = {
 	{
 		Name = BabbleBoss["Slad'ran"];
 		[1] = { icon = "INV_Box_01", name = WHITE..AL["Normal Mode"] };
-		[2] = { itemID = 35584, droprate = "8%" }; --Embroidered Gown of Zul'drak
-		[3] = { itemID = 35585, droprate = "9%" }; --Cannibal's Legguards
-		[4] = { itemID = 35583, droprate = "8%" }; --Witch Doctor's Wildstaff
+		[2] = { itemID = 35584 }; --Embroidered Gown of Zul'drak
+		[3] = { itemID = 35585 }; --Cannibal's Legguards
+		[4] = { itemID = 35583 }; --Witch Doctor's Wildstaff
 		[16] = { icon = "INV_Box_01", name = WHITE..AL["Heroic Mode"] };
-		[17] = { itemID = 47241, droprate = "00%" }; --Emblem of Triumph
-		[18] = { itemID = 37629, droprate = "1%" }; --Slithering Slippers
-		[19] = { itemID = 37628, droprate = "0%" }; --Slad'ran's Coiled Cord
-		[20] = { itemID = 37627, droprate = "0%" }; --Snake Den Spaulders
-		[21] = { itemID = 37626, droprate = "0%" }; --Wand of Sseratus
+		[17] = { itemID = 47241 }; --Emblem of Triumph
+		[18] = { itemID = 37629 }; --Slithering Slippers
+		[19] = { itemID = 37628 }; --Slad'ran's Coiled Cord
+		[20] = { itemID = 37627 }; --Snake Den Spaulders
+		[21] = { itemID = 37626 }; --Wand of Sseratus
 	};
 	{
 		Name = BabbleBoss["Drakkari Colossus"];
 		[1] = { icon = "INV_Box_01", name = WHITE..AL["Normal Mode"] };
-		[2] = { itemID = 35591, droprate = "5%" }; --Shoulderguards of the Ice Troll
-		[3] = { itemID = 35592, droprate = "6%" }; --Hauberk of Totemic Mastery
-		[4] = { itemID = 35590, droprate = "6%" }; --Drakkari Hunting Bow
+		[2] = { itemID = 35591 }; --Shoulderguards of the Ice Troll
+		[3] = { itemID = 35592 }; --Hauberk of Totemic Mastery
+		[4] = { itemID = 35590 }; --Drakkari Hunting Bow
 		[16] = { icon = "INV_Box_01", name = WHITE..AL["Heroic Mode"] };
-		[17] = { itemID = 47241, droprate = "00%" }; --Emblem of Triumph
-		[18] = { itemID = 37637, droprate = "0%" }; --Living Mojo Belt
-		[19] = { itemID = 37636, droprate = "1%" }; --Helm of Cheated Fate
-		[20] = { itemID = 37634, droprate = "0%" }; --Bracers of the Divine Elemental
-		[21] = { itemID = 37635, droprate = "0%" }; --Pauldrons of the Colossus
+		[17] = { itemID = 47241 }; --Emblem of Triumph
+		[18] = { itemID = 37637 }; --Living Mojo Belt
+		[19] = { itemID = 37636 }; --Helm of Cheated Fate
+		[20] = { itemID = 37634 }; --Bracers of the Divine Elemental
+		[21] = { itemID = 37635 }; --Pauldrons of the Colossus
 	};
 	{
 		Name = BabbleBoss["Moorabi"];
 		[1] = { icon = "INV_Box_01", name = WHITE..AL["Normal Mode"] };
-		[2] = { itemID = 35588, droprate = "9%" }; --Forlorn Breastplate of War
-		[3] = { itemID = 35589, droprate = "9%" }; --Arcane Focal Signet
-		[4] = { itemID = 35587, droprate = "0%" }; --Frozen Scepter of Necromancy
+		[2] = { itemID = 35588 }; --Forlorn Breastplate of War
+		[3] = { itemID = 35589 }; --Arcane Focal Signet
+		[4] = { itemID = 35587 }; --Frozen Scepter of Necromancy
 		[16] = { icon = "INV_Box_01", name = WHITE..AL["Heroic Mode"] };
-		[17] = { itemID = 47241, droprate = "00%" }; --Emblem of Triumph
-		[18] = { itemID = 37630, droprate = "1%" }; --Shroud of Moorabi
-		[19] = { itemID = 37633, droprate = "2%" }; --Ground Tremor Helm
-		[20] = { itemID = 37632, droprate = "2%" }; --Mojo Frenzy Greaves
-		[21] = { itemID = 37631, droprate = "2%" }; --Fist of the Deity
+		[17] = { itemID = 47241 }; --Emblem of Triumph
+		[18] = { itemID = 37630 }; --Shroud of Moorabi
+		[19] = { itemID = 37633 }; --Ground Tremor Helm
+		[20] = { itemID = 37632 }; --Mojo Frenzy Greaves
+		[21] = { itemID = 37631 }; --Fist of the Deity
 	};
 	{
 		Name = BabbleBoss["Eck the Ferocious"] .. " (" .. AL["Heroic"] .. ")";
-		[1] = { itemID = 47241, droprate = "00%" }; --Emblem of Triumph
-		[2] = { itemID = 43313, droprate = "3%" }; --Leggings of the Ruins Dweller
-		[3] = { itemID = 43312, droprate = "3%" }; --Gorloc Muddy Footwraps
-		[4] = { itemID = 43311, droprate = "2%" }; --Helmet of the Shrine
-		[5] = { itemID = 43310, droprate = "3%" }; --Engraved Chestplate of Eck
+		[1] = { itemID = 47241 }; --Emblem of Triumph
+		[2] = { itemID = 43313 }; --Leggings of the Ruins Dweller
+		[3] = { itemID = 43312 }; --Gorloc Muddy Footwraps
+		[4] = { itemID = 43311 }; --Helmet of the Shrine
+		[5] = { itemID = 43310 }; --Engraved Chestplate of Eck
 	};
 	{
 		Name = BabbleBoss["Gal'darah"];
 		[1] = { icon = "INV_Box_01", name = WHITE..AL["Normal Mode"] };
-		[2] = { itemID = 43305, droprate = "8%" }; --Shroud of Akali
-		[3] = { itemID = 43309, droprate = "1%" }; --Amulet of the Stampede
-		[4] = { itemID = 43306, droprate = "0%" }; --Gal'darah's Signet
+		[2] = { itemID = 43305 }; --Shroud of Akali
+		[3] = { itemID = 43309 }; --Amulet of the Stampede
+		[4] = { itemID = 43306 }; --Gal'darah's Signet
 		[16] = { icon = "INV_Box_01", name = WHITE..AL["Heroic Mode"] };
-		[17] = { itemID = 47241, droprate = "00%" }; --Emblem of Triumph
-		[18] = { itemID = 37643, droprate = "9%" }; --Sash of Blood Removal
-		[19] = { itemID = 37644, droprate = "9%" }; --Gored Hide Legguards
-		[20] = { itemID = 37645, droprate = "9%" }; --Horn-Tipped Gauntlets
-		[21] = { itemID = 37642, droprate = "8%" }; --Hemorrhaging Circle
-		[22] = { itemID = 37641, droprate = "9%" }; --Arcane Flame Altar-Garb
-		[23] = { itemID = 37640, droprate = "0%" }; --Boots of Transformation
-		[24] = { itemID = 37639, droprate = "0%" }; --Grips of the Beast God
-		[25] = { itemID = 37638, droprate = "0%" }; --Offering of Sacrifice
-		[26] = { itemID = 43102, droprate = "00%" }; --Frozen Orb
+		[17] = { itemID = 47241 }; --Emblem of Triumph
+		[18] = { itemID = 37643 }; --Sash of Blood Removal
+		[19] = { itemID = 37644 }; --Gored Hide Legguards
+		[20] = { itemID = 37645 }; --Horn-Tipped Gauntlets
+		[21] = { itemID = 37642 }; --Hemorrhaging Circle
+		[22] = { itemID = 37641 }; --Arcane Flame Altar-Garb
+		[23] = { itemID = 37640 }; --Boots of Transformation
+		[24] = { itemID = 37639 }; --Grips of the Beast God
+		[25] = { itemID = 37638 }; --Offering of Sacrifice
+		[26] = { itemID = 43102 }; --Frozen Orb
 	};
 	{
 		Name = AL["Trash Mobs"];
@@ -681,66 +681,66 @@ AtlasLoot_Data["HallsofStone"] = {
 	{
 		Name = BabbleBoss["Maiden of Grief"];
 		[1] = { icon = "INV_Box_01", name = WHITE..AL["Normal Mode"] };
-		[2] = { itemID = 38614, droprate = "8%" }; --Embrace of Sorrow
-		[3] = { itemID = 38613, droprate = "9%" }; --Chain of Fiery Orbs
-		[4] = { itemID = 38611, droprate = "9%" }; --Ringlet of Repose
+		[2] = { itemID = 38614 }; --Embrace of Sorrow
+		[3] = { itemID = 38613 }; --Chain of Fiery Orbs
+		[4] = { itemID = 38611 }; --Ringlet of Repose
 		[16] = { icon = "INV_Box_01", name = WHITE..AL["Heroic Mode"] };
-		[17] = { itemID = 47241, droprate = "00%" }; --Emblem of Triumph
-		[18] = { itemID = 38616, droprate = "1%" }; --Maiden's Girdle
-		[19] = { itemID = 38615, droprate = "1%" }; --Lightning-Charged Gloves
-		[20] = { itemID = 38617, droprate = "2%" }; --Woeful Band
-		[21] = { itemID = 38618, droprate = "2%" }; --Hammer of Grief
+		[17] = { itemID = 47241 }; --Emblem of Triumph
+		[18] = { itemID = 38616 }; --Maiden's Girdle
+		[19] = { itemID = 38615 }; --Lightning-Charged Gloves
+		[20] = { itemID = 38617 }; --Woeful Band
+		[21] = { itemID = 38618 }; --Hammer of Grief
 	};
 	{
 		Name = BabbleBoss["Krystallus"];
 		[1] = { icon = "INV_Box_01", name = WHITE..AL["Normal Mode"] };
-		[2] = { itemID = 35673, droprate = "9%" }; --Leggings of Burning Gleam
-		[3] = { itemID = 35672, droprate = "0%" }; --Hollow Geode Helm
-		[4] = { itemID = 35670, droprate = "6%" }; --Brann's Lost Mining Helmet
+		[2] = { itemID = 35673 }; --Leggings of Burning Gleam
+		[3] = { itemID = 35672 }; --Hollow Geode Helm
+		[4] = { itemID = 35670 }; --Brann's Lost Mining Helmet
 		[16] = { icon = "INV_Box_01", name = WHITE..AL["Heroic Mode"] };
-		[17] = { itemID = 47241, droprate = "00%" }; --Emblem of Triumph
-		[18] = { itemID = 37652, droprate = "8%" }; --Spaulders of Krystallus
-		[19] = { itemID = 37650, droprate = "7%" }; --Shardling Legguards
-		[20] = { itemID = 37651, droprate = "7%" }; --The Prospector's Prize
+		[17] = { itemID = 47241 }; --Emblem of Triumph
+		[18] = { itemID = 37652 }; --Spaulders of Krystallus
+		[19] = { itemID = 37650 }; --Shardling Legguards
+		[20] = { itemID = 37651 }; --The Prospector's Prize
 	};
 	{
 		Name = BabbleBoss["The Tribunal of Ages"];
 		[1] = { icon = "INV_Box_01", name = WHITE..AL["Normal Mode"] };
-		[2] = { itemID = 35677, droprate = "5%" }; --Cosmos Vestments
-		[3] = { itemID = 35676, droprate = "6%" }; --Constellation Leggings
-		[4] = { itemID = 35675, droprate = "4%" }; --Linked Armor of the Sphere
+		[2] = { itemID = 35677 }; --Cosmos Vestments
+		[3] = { itemID = 35676 }; --Constellation Leggings
+		[4] = { itemID = 35675 }; --Linked Armor of the Sphere
 		[16] = { icon = "INV_Box_01", name = WHITE..AL["Heroic Mode"] };
-		[17] = { itemID = 47241, droprate = "00%" }; --Emblem of Triumph
-		[18] = { itemID = 37655, droprate = "6%" }; --Mantle of the Tribunal
-		[19] = { itemID = 37656, droprate = "6%" }; --Raging Construct Bands
-		[20] = { itemID = 37654, droprate = "4%" }; --Sabatons of the Ages
-		[21] = { itemID = 37653, droprate = "6%" }; --Sword of Justice
+		[17] = { itemID = 47241 }; --Emblem of Triumph
+		[18] = { itemID = 37655 }; --Mantle of the Tribunal
+		[19] = { itemID = 37656 }; --Raging Construct Bands
+		[20] = { itemID = 37654 }; --Sabatons of the Ages
+		[21] = { itemID = 37653 }; --Sword of Justice
 	};
 	{
 		Name = BabbleBoss["Sjonnir The Ironshaper"];
 		[1] = { icon = "INV_Box_01", name = WHITE..AL["Normal Mode"] };
-		[2] = { itemID = 35679, droprate = "8%" }; --Static Cowl
-		[3] = { itemID = 35678, droprate = "8%" }; --Ironshaper's Legplates
-		[4] = { itemID = 35680, droprate = "9%" }; --Amulet of Wills
+		[2] = { itemID = 35679 }; --Static Cowl
+		[3] = { itemID = 35678 }; --Ironshaper's Legplates
+		[4] = { itemID = 35680 }; --Amulet of Wills
 		[16] = { icon = "INV_Box_01", name = WHITE..AL["Heroic Mode"] };
-		[17] = { itemID = 47241, droprate = "00%" }; --Emblem of Triumph
-		[18] = { itemID = 37669, droprate = "8%" }; --Leggings of the Stone Halls
-		[19] = { itemID = 37668, droprate = "8%" }; --Bands of the Stoneforge
-		[20] = { itemID = 37670, droprate = "8%" }; --Sjonnir's Girdle
-		[21] = { itemID = 37667, droprate = "8%" }; --The Fleshshaper
-		[22] = { itemID = 37666, droprate = "9%" }; --Boots of the Whirling Mist
-		[23] = { itemID = 37658, droprate = "9%" }; --Sun-Emblazoned Chestplate
-		[24] = { itemID = 37657, droprate = "9%" }; --Spark of Life
-		[25] = { itemID = 37660, droprate = "8%" }; --Forge Ember
-		[26] = { itemID = 41792, droprate = "5%" }; --Design: Deft Monarch Topaz
-		[27] = { itemID = 43102, droprate = "00%" }; --Frozen Orb
+		[17] = { itemID = 47241 }; --Emblem of Triumph
+		[18] = { itemID = 37669 }; --Leggings of the Stone Halls
+		[19] = { itemID = 37668 }; --Bands of the Stoneforge
+		[20] = { itemID = 37670 }; --Sjonnir's Girdle
+		[21] = { itemID = 37667 }; --The Fleshshaper
+		[22] = { itemID = 37666 }; --Boots of the Whirling Mist
+		[23] = { itemID = 37658 }; --Sun-Emblazoned Chestplate
+		[24] = { itemID = 37657 }; --Spark of Life
+		[25] = { itemID = 37660 }; --Forge Ember
+		[26] = { itemID = 41792 }; --Design: Deft Monarch Topaz
+		[27] = { itemID = 43102 }; --Frozen Orb
 	};
 	{
 		Name = AL["Trash Mobs"];
 		[1] = { icon = "INV_Box_01", name = WHITE..AL["Normal Mode"] };
-		[2] = { itemID = 35682, droprate = ".44%" }; --Rune Giant Bindings
-		[3] = { itemID = 35683, droprate = ".46%" }; --Palladium Ring
-		[4] = { itemID = 35681, droprate = ".41%" }; --Unrelenting Blade
+		[2] = { itemID = 35682 }; --Rune Giant Bindings
+		[3] = { itemID = 35683 }; --Palladium Ring
+		[4] = { itemID = 35681 }; --Unrelenting Blade
 		[16] = { icon = "INV_Box_01", name = WHITE..AL["Heroic Mode"] };
 		[17] = { itemID = 37673 }; --Dark Runic Mantle
 		[18] = { itemID = 37672 }; --Patina-Coated Breastplate
@@ -759,70 +759,70 @@ AtlasLoot_Data["HallsofLightning"] = {
 	{
 		Name = BabbleBoss["General Bjarngrim"];
 		[1] = { icon = "INV_Box_01", name = WHITE..AL["Normal Mode"] };
-		[2] = { itemID = 36982, droprate = "2%" }; --Mantle of Electrical Charges
-		[3] = { itemID = 36979, droprate = "2%" }; --Bjarngrim Family Signet
-		[4] = { itemID = 36980, droprate = "2%" }; --Hewn Sparring Quarterstaff
-		[5] = { itemID = 36981, droprate = "3%" }; --Hardened Vrykul Throwing Axe
+		[2] = { itemID = 36982 }; --Mantle of Electrical Charges
+		[3] = { itemID = 36979 }; --Bjarngrim Family Signet
+		[4] = { itemID = 36980 }; --Hewn Sparring Quarterstaff
+		[5] = { itemID = 36981 }; --Hardened Vrykul Throwing Axe
 		[16] = { icon = "INV_Box_01", name = WHITE..AL["Heroic Mode"] };
-		[17] = { itemID = 47241, droprate = "00%" }; --Emblem of Triumph
-		[18] = { itemID = 37825, droprate = "1%" }; --Traditionally Dyed Handguards
-		[19] = { itemID = 37818, droprate = "1%" }; --Patroller's War-Kilt
-		[20] = { itemID = 37814, droprate = "1%" }; --Iron Dwarf Smith Pauldrons
-		[21] = { itemID = 37826, droprate = "2%" }; --The General's Steel Girdle
+		[17] = { itemID = 47241 }; --Emblem of Triumph
+		[18] = { itemID = 37825 }; --Traditionally Dyed Handguards
+		[19] = { itemID = 37818 }; --Patroller's War-Kilt
+		[20] = { itemID = 37814 }; --Iron Dwarf Smith Pauldrons
+		[21] = { itemID = 37826 }; --The General's Steel Girdle
 	};
 	{
 		Name = BabbleBoss["Volkhan"];
 		[1] = { icon = "INV_Box_01", name = WHITE..AL["Normal Mode"] };
-		[2] = { itemID = 36983, droprate = "2%" }; --Cape of Seething Steam
-		[3] = { itemID = 36985, droprate = "3%" }; --Volkhan's Hood
-		[4] = { itemID = 36986, droprate = "2%" }; --Kilt of Molten Golems
-		[5] = { itemID = 36984, droprate = "2%" }; --Eternally Folded Blade
+		[2] = { itemID = 36983 }; --Cape of Seething Steam
+		[3] = { itemID = 36985 }; --Volkhan's Hood
+		[4] = { itemID = 36986 }; --Kilt of Molten Golems
+		[5] = { itemID = 36984 }; --Eternally Folded Blade
 		[16] = { icon = "INV_Box_01", name = WHITE..AL["Heroic Mode"] };
-		[17] = { itemID = 47241, droprate = "00%" }; --Emblem of Triumph
-		[18] = { itemID = 37840, droprate = "1%" }; --Shroud of Reverberation
-		[19] = { itemID = 37843, droprate = "1%" }; --Giant-Hair Woven Gloves
-		[20] = { itemID = 37842, droprate = "1%" }; --Belt of Vivacity
-		[21] = { itemID = 37841, droprate = "1%" }; --Slag Footguards
+		[17] = { itemID = 47241 }; --Emblem of Triumph
+		[18] = { itemID = 37840 }; --Shroud of Reverberation
+		[19] = { itemID = 37843 }; --Giant-Hair Woven Gloves
+		[20] = { itemID = 37842 }; --Belt of Vivacity
+		[21] = { itemID = 37841 }; --Slag Footguards
 	};
 	{
 		Name = BabbleBoss["Ionar"];
 		[1] = { icon = "INV_Box_01", name = WHITE..AL["Normal Mode"] };
-		[2] = { itemID = 39536, droprate = "2%" }; --Thundercloud Grasps
-		[3] = { itemID = 39657, droprate = "1%" }; --Tornado Cuffs
-		[4] = { itemID = 39534, droprate = "1%" }; --Pauldrons of the Lightning Revenant
-		[5] = { itemID = 39535, droprate = "1%" }; --Ionar's Girdle
+		[2] = { itemID = 39536 }; --Thundercloud Grasps
+		[3] = { itemID = 39657 }; --Tornado Cuffs
+		[4] = { itemID = 39534 }; --Pauldrons of the Lightning Revenant
+		[5] = { itemID = 39535 }; --Ionar's Girdle
 		[16] = { icon = "INV_Box_01", name = WHITE..AL["Heroic Mode"] };
-		[17] = { itemID = 47241, droprate = "00%" }; --Emblem of Triumph
-		[18] = { itemID = 37846, droprate = "0%" }; --Charged-Bolt Grips
-		[19] = { itemID = 37845, droprate = "1%" }; --Cord of Swirling Winds
-		[20] = { itemID = 37826, droprate = "2%" }; --The General's Steel Girdle
-		[21] = { itemID = 37844, droprate = "1%" }; --Winged Talisman
+		[17] = { itemID = 47241 }; --Emblem of Triumph
+		[18] = { itemID = 37846 }; --Charged-Bolt Grips
+		[19] = { itemID = 37845 }; --Cord of Swirling Winds
+		[20] = { itemID = 37826 }; --The General's Steel Girdle
+		[21] = { itemID = 37844 }; --Winged Talisman
 	};
 	{
 		Name = BabbleBoss["Loken"];
 		[1] = { icon = "INV_Box_01", name = WHITE..AL["Normal Mode"] };
-		[2] = { itemID = 36991, droprate = "2%" }; --Raiments of the Titans
-		[3] = { itemID = 36996, droprate = "2%" }; --Hood of the Furtive Assassin
-		[4] = { itemID = 36992, droprate = "2%" }; --Leather-Braced Chain Leggings
-		[5] = { itemID = 36995, droprate = "2%" }; --Fists of Loken
-		[6] = { itemID = 36988, droprate = "2%" }; --Chaotic Spiral Amulet
-		[7] = { itemID = 36993, droprate = "8%" }; --Seal of the Pantheon
-		[8] = { itemID = 36994, droprate = "1%" }; --Projectile Activator
-		[9] = { itemID = 36989, droprate = "1%" }; --Ancient Measuring Rod
-		[10] = { itemID = 41799, droprate = "1%" }; --Design: Eternal Earthsiege Diamond
+		[2] = { itemID = 36991 }; --Raiments of the Titans
+		[3] = { itemID = 36996 }; --Hood of the Furtive Assassin
+		[4] = { itemID = 36992 }; --Leather-Braced Chain Leggings
+		[5] = { itemID = 36995 }; --Fists of Loken
+		[6] = { itemID = 36988 }; --Chaotic Spiral Amulet
+		[7] = { itemID = 36993 }; --Seal of the Pantheon
+		[8] = { itemID = 36994 }; --Projectile Activator
+		[9] = { itemID = 36989 }; --Ancient Measuring Rod
+		[10] = { itemID = 41799 }; --Design: Eternal Earthsiege Diamond
 		[12] = { itemID = 43151 }; --Loken's Tongue
 		[16] = { icon = "INV_Box_01", name = WHITE..AL["Heroic Mode"] };
-		[17] = { itemID = 47241, droprate = "00%" }; --Emblem of Triumph
-		[18] = { itemID = 37854, droprate = "8%" }; --Woven Bracae Leggings
-		[19] = { itemID = 37853, droprate = "8%" }; --Advanced Tooled-Leather Bands
-		[20] = { itemID = 37855, droprate = "9%" }; --Mail Girdle of the Audient Earth
-		[21] = { itemID = 37852, droprate = "8%" }; --Colossal Skull-Clad Cleaver
-		[22] = { itemID = 37851, droprate = "9%" }; --Ornate Woolen Stola
-		[23] = { itemID = 37850, droprate = "9%" }; --Flowing Sash of Order
-		[24] = { itemID = 37849, droprate = "9%" }; --Planetary Helm
-		[25] = { itemID = 37848, droprate = "8%" }; --Lightning Giant Staff
-		[26] = { itemID = 41799, droprate = "1%" }; --Design: Eternal Earthsiege Diamond
-		[27] = { itemID = 43102, droprate = "00%" }; --Frozen Orb
+		[17] = { itemID = 47241 }; --Emblem of Triumph
+		[18] = { itemID = 37854 }; --Woven Bracae Leggings
+		[19] = { itemID = 37853 }; --Advanced Tooled-Leather Bands
+		[20] = { itemID = 37855 }; --Mail Girdle of the Audient Earth
+		[21] = { itemID = 37852 }; --Colossal Skull-Clad Cleaver
+		[22] = { itemID = 37851 }; --Ornate Woolen Stola
+		[23] = { itemID = 37850 }; --Flowing Sash of Order
+		[24] = { itemID = 37849 }; --Planetary Helm
+		[25] = { itemID = 37848 }; --Lightning Giant Staff
+		[26] = { itemID = 41799 }; --Design: Eternal Earthsiege Diamond
+		[27] = { itemID = 43102 }; --Frozen Orb
 	};
 	{
 		Name = AL["Trash Mobs"];
@@ -849,73 +849,73 @@ AtlasLoot_Data["CoTStratholme"] = {
 	{
 		Name = BabbleBoss["Meathook"];
 		[1] = { icon = "INV_Box_01", name = WHITE..AL["Normal Mode"] };
-		[2] = { itemID = 37083, droprate = "3%" }; --Kilt of Sewn Flesh
-		[3] = { itemID = 37082, droprate = "2%" }; --Slaughterhouse Sabatons
-		[4] = { itemID = 37079, droprate = "3%" }; --Enchanted Wire Stitching
-		[5] = { itemID = 37081, droprate = "2%" }; --Meathook's Slicer
+		[2] = { itemID = 37083 }; --Kilt of Sewn Flesh
+		[3] = { itemID = 37082 }; --Slaughterhouse Sabatons
+		[4] = { itemID = 37079 }; --Enchanted Wire Stitching
+		[5] = { itemID = 37081 }; --Meathook's Slicer
 		[16] = { icon = "INV_Box_01", name = WHITE..AL["Heroic Mode"] };
-		[17] = { itemID = 47241, droprate = "00%" }; --Emblem of Triumph
-		[18] = { itemID = 37680, droprate = "2%" }; --Belt of Unified Souls
-		[19] = { itemID = 37678, droprate = "2%" }; --Bile-Cured Gloves
-		[20] = { itemID = 37679, droprate = "1%" }; --Spaulders of the Abomination
-		[21] = { itemID = 37675, droprate = "3%" }; --Legplates of Steel Implants
+		[17] = { itemID = 47241 }; --Emblem of Triumph
+		[18] = { itemID = 37680 }; --Belt of Unified Souls
+		[19] = { itemID = 37678 }; --Bile-Cured Gloves
+		[20] = { itemID = 37679 }; --Spaulders of the Abomination
+		[21] = { itemID = 37675 }; --Legplates of Steel Implants
 	};
 	{
 		Name = BabbleBoss["Salramm the Fleshcrafter"];
 		[1] = { icon = "INV_Box_01", name = WHITE..AL["Normal Mode"] };
-		[2] = { itemID = 37084, droprate = "2%" }; --Flowing Cloak of Command
-		[3] = { itemID = 37095, droprate = "3%" }; --Waistband of the Thuzadin
-		[4] = { itemID = 37088, droprate = "2%" }; --Spiked Metal Cilice
-		[5] = { itemID = 37086, droprate = "3%" }; --Tome of Salramm
+		[2] = { itemID = 37084 }; --Flowing Cloak of Command
+		[3] = { itemID = 37095 }; --Waistband of the Thuzadin
+		[4] = { itemID = 37088 }; --Spiked Metal Cilice
+		[5] = { itemID = 37086 }; --Tome of Salramm
 		[16] = { icon = "INV_Box_01", name = WHITE..AL["Heroic Mode"] };
-		[17] = { itemID = 47241, droprate = "00%" }; --Emblem of Triumph
-		[18] = { itemID = 37684, droprate = "2%" }; --Forgotten Shadow Hood
-		[19] = { itemID = 37682, droprate = "2%" }; --Bindings of Dark Will
-		[20] = { itemID = 37683, droprate = "2%" }; --Necromancer's Amulet
-		[21] = { itemID = 37681, droprate = "2%" }; --Gavel of the Fleshcrafter
+		[17] = { itemID = 47241 }; --Emblem of Triumph
+		[18] = { itemID = 37684 }; --Forgotten Shadow Hood
+		[19] = { itemID = 37682 }; --Bindings of Dark Will
+		[20] = { itemID = 37683 }; --Necromancer's Amulet
+		[21] = { itemID = 37681 }; --Gavel of the Fleshcrafter
 	};
 	{
 		Name = BabbleBoss["Chrono-Lord Epoch"];
 		[1] = { icon = "INV_Box_01", name = WHITE..AL["Normal Mode"] };
-		[2] = { itemID = 37106, droprate = "3%" }; --Ouroboros Belt
-		[3] = { itemID = 37105, droprate = "4%" }; --Treads of Altered History
-		[4] = { itemID = 37096, droprate = "2%" }; --Necklace of the Chrono-Lord
-		[5] = { itemID = 37099, droprate = "2%" }; --Sempiternal Staff
+		[2] = { itemID = 37106 }; --Ouroboros Belt
+		[3] = { itemID = 37105 }; --Treads of Altered History
+		[4] = { itemID = 37096 }; --Necklace of the Chrono-Lord
+		[5] = { itemID = 37099 }; --Sempiternal Staff
 		[16] = { icon = "INV_Box_01", name = WHITE..AL["Heroic Mode"] };
-		[17] = { itemID = 47241, droprate = "00%" }; --Emblem of Triumph
-		[18] = { itemID = 37687, droprate = "3%" }; --Gloves of Distorted Time
-		[19] = { itemID = 37686, droprate = "3%" }; --Cracked Epoch Grasps
-		[20] = { itemID = 37688, droprate = "3%" }; --Legplates of the Infinite Drakonid
-		[21] = { itemID = 37685, droprate = "3%" }; --Mobius Band
+		[17] = { itemID = 47241 }; --Emblem of Triumph
+		[18] = { itemID = 37687 }; --Gloves of Distorted Time
+		[19] = { itemID = 37686 }; --Cracked Epoch Grasps
+		[20] = { itemID = 37688 }; --Legplates of the Infinite Drakonid
+		[21] = { itemID = 37685 }; --Mobius Band
 	};
 	{
 		Name = BabbleBoss["Infinite Corruptor"] .. " (" .. AL["Heroic"] .. ")";
-		[1] = { itemID = 47241, droprate = "00%" }; --Emblem of Triumph
-		[2] = { itemID = 43951, droprate = "00%" }; --Reins of the Bronze Drake
+		[1] = { itemID = 47241 }; --Emblem of Triumph
+		[2] = { itemID = 43951 }; --Reins of the Bronze Drake
 	};
 	{
 		Name = BabbleBoss["Mal'Ganis"];
 		[1] = { icon = "INV_Box_01", name = WHITE..AL["Normal Mode"] };
-		[2] = { itemID = 37113, droprate = "6%" }; --Demonic Fabric Bands
-		[3] = { itemID = 37114, droprate = "9%" }; --Gloves of Northern Lordaeron
-		[4] = { itemID = 37110, droprate = "8%" }; --Gauntlets of Dark Conversion
-		[5] = { itemID = 37109, droprate = "8%" }; --Discarded Silver Hand Spaulders
-		[6] = { itemID = 37111, droprate = "4%" }; --Soul Preserver
-		[7] = { itemID = 37108, droprate = "6%" }; --Dreadlord's Blade
-		[8] = { itemID = 37112, droprate = "9%" }; --Beguiling Scepter
-		[9] = { itemID = 37107, droprate = "8%" }; --Leeka's Shield
+		[2] = { itemID = 37113 }; --Demonic Fabric Bands
+		[3] = { itemID = 37114 }; --Gloves of Northern Lordaeron
+		[4] = { itemID = 37110 }; --Gauntlets of Dark Conversion
+		[5] = { itemID = 37109 }; --Discarded Silver Hand Spaulders
+		[6] = { itemID = 37111 }; --Soul Preserver
+		[7] = { itemID = 37108 }; --Dreadlord's Blade
+		[8] = { itemID = 37112 }; --Beguiling Scepter
+		[9] = { itemID = 37107 }; --Leeka's Shield
 		[16] = { icon = "INV_Box_01", name = WHITE..AL["Heroic Mode"] };
-		[17] = { itemID = 47241, droprate = "00%" }; --Emblem of Triumph
-		[18] = { itemID = 37696, droprate = "1%" }; --Plague-Infected Bracers
-		[19] = { itemID = 37695, droprate = "1%" }; --Legguards of Nature's Power
-		[20] = { itemID = 37694, droprate = "1%" }; --Band of Guile
-		[21] = { itemID = 37693, droprate = "1%" }; --Greed
-		[22] = { itemID = 43085, droprate = "0%" }; --Royal Crest of Lordaeron
-		[23] = { itemID = 37691, droprate = "4%" }; --Mantle of Deceit
-		[24] = { itemID = 37690, droprate = "4%" }; --Pauldrons of Destiny
-		[25] = { itemID = 37689, droprate = "4%" }; --Pendant of the Nathrezim
-		[26] = { itemID = 37692, droprate = "4%" }; --Pierce's Pistol
-		[27] = { itemID = 43102, droprate = "00%" }; --Frozen Orb
+		[17] = { itemID = 47241 }; --Emblem of Triumph
+		[18] = { itemID = 37696 }; --Plague-Infected Bracers
+		[19] = { itemID = 37695 }; --Legguards of Nature's Power
+		[20] = { itemID = 37694 }; --Band of Guile
+		[21] = { itemID = 37693 }; --Greed
+		[22] = { itemID = 43085 }; --Royal Crest of Lordaeron
+		[23] = { itemID = 37691 }; --Mantle of Deceit
+		[24] = { itemID = 37690 }; --Pauldrons of Destiny
+		[25] = { itemID = 37689 }; --Pendant of the Nathrezim
+		[26] = { itemID = 37692 }; --Pierce's Pistol
+		[27] = { itemID = 43102 }; --Frozen Orb
 	};
 	{
 		Name = AL["Trash Mobs"];
@@ -936,70 +936,70 @@ AtlasLoot_Data["UtgardePinnacle"] = {
 	{
 		Name = BabbleBoss["Skadi the Ruthless"];
 		[1] = { icon = "INV_Box_01", name = WHITE..AL["Normal Mode"] };
-		[2] = { itemID = 37043, droprate = "4%" }; --Tear-Linked Gauntlets
-		[3] = { itemID = 37040, droprate = "3%" }; --Svala's Bloodied Shackles
-		[4] = { itemID = 37037, droprate = "2%" }; --Ritualistic Athame
-		[5] = { itemID = 37038, droprate = "1%" }; --Brazier Igniter
+		[2] = { itemID = 37043 }; --Tear-Linked Gauntlets
+		[3] = { itemID = 37040 }; --Svala's Bloodied Shackles
+		[4] = { itemID = 37037 }; --Ritualistic Athame
+		[5] = { itemID = 37038 }; --Brazier Igniter
 		[16] = { icon = "INV_Box_01", name = WHITE..AL["Heroic Mode"] };
-		[17] = { itemID = 47241, droprate = "00%" }; --Emblem of Triumph
-		[18] = { itemID = 37370, droprate = "1%" }; --Cuffs of the Trussed Hall
-		[19] = { itemID = 37369, droprate = "2%" }; --Sorrowgrave's Breeches
-		[20] = { itemID = 37368, droprate = "2%" }; --Silent Spectator Shoulderpads
-		[21] = { itemID = 37367, droprate = "2%" }; --Echoing Stompers
+		[17] = { itemID = 47241 }; --Emblem of Triumph
+		[18] = { itemID = 37370 }; --Cuffs of the Trussed Hall
+		[19] = { itemID = 37369 }; --Sorrowgrave's Breeches
+		[20] = { itemID = 37368 }; --Silent Spectator Shoulderpads
+		[21] = { itemID = 37367 }; --Echoing Stompers
 	};
 	{
 		Name = BabbleBoss["King Ymiron"];
 		[1] = { icon = "INV_Box_01", name = WHITE..AL["Normal Mode"] };
-		[2] = { itemID = 37048, droprate = "4%" }; --Shroud of Resurrection
-		[3] = { itemID = 37052, droprate = "1%" }; --Reanimated Armor
-		[4] = { itemID = 37051, droprate = "1%" }; --Seal of Valgarde
-		[5] = { itemID = 37050, droprate = "4%" }; --Trophy Gatherer
+		[2] = { itemID = 37048 }; --Shroud of Resurrection
+		[3] = { itemID = 37052 }; --Reanimated Armor
+		[4] = { itemID = 37051 }; --Seal of Valgarde
+		[5] = { itemID = 37050 }; --Trophy Gatherer
 		[16] = { icon = "INV_Box_01", name = WHITE..AL["Heroic Mode"] };
-		[17] = { itemID = 47241, droprate = "00%" }; --Emblem of Triumph
-		[18] = { itemID = 37374, droprate = "2%" }; --Ravenous Leggings of the Furbolg
-		[19] = { itemID = 37373, droprate = "1%" }; --Massive Spaulders of the Jormungar
-		[20] = { itemID = 37376, droprate = "1%" }; --Ferocious Pauldrons of the Rhino
-		[21] = { itemID = 37371, droprate = "2%" }; --Ring of the Frenzied Wolvar
+		[17] = { itemID = 47241 }; --Emblem of Triumph
+		[18] = { itemID = 37374 }; --Ravenous Leggings of the Furbolg
+		[19] = { itemID = 37373 }; --Massive Spaulders of the Jormungar
+		[20] = { itemID = 37376 }; --Ferocious Pauldrons of the Rhino
+		[21] = { itemID = 37371 }; --Ring of the Frenzied Wolvar
 	};
 	{
 		Name = BabbleBoss["Svala Sorrowgrave"];
 		[1] = { icon = "INV_Box_01", name = WHITE..AL["Normal Mode"] };
-		[2] = { itemID = 37055, droprate = "3%" }; --Silken Amice of the Ymirjar
-		[3] = { itemID = 37057, droprate = "3%" }; --Drake Rider's Tunic
-		[4] = { itemID = 37056, droprate = "2%" }; --Harpooner's Striders
-		[5] = { itemID = 37053, droprate = "0%" }; --Amulet of Deflected Blows
+		[2] = { itemID = 37055 }; --Silken Amice of the Ymirjar
+		[3] = { itemID = 37057 }; --Drake Rider's Tunic
+		[4] = { itemID = 37056 }; --Harpooner's Striders
+		[5] = { itemID = 37053 }; --Amulet of Deflected Blows
 		[16] = { icon = "INV_Box_01", name = WHITE..AL["Heroic Mode"] };
-		[17] = { itemID = 47241, droprate = "00%" }; --Emblem of Triumph
+		[17] = { itemID = 47241 }; --Emblem of Triumph
 		[18] = { itemID = 44151 }; --Reins of the Blue Proto-Drake
-		[19] = { itemID = 37389, droprate = "1%" }; --Crenelation Leggings
-		[20] = { itemID = 37379, droprate = "2%" }; --Skadi's Iron Belt
-		[21] = { itemID = 37377, droprate = "1%" }; --Netherbreath Spellblade
-		[22] = { itemID = 37384, droprate = "1%" }; --Staff of Wayward Principles
+		[19] = { itemID = 37389 }; --Crenelation Leggings
+		[20] = { itemID = 37379 }; --Skadi's Iron Belt
+		[21] = { itemID = 37377 }; --Netherbreath Spellblade
+		[22] = { itemID = 37384 }; --Staff of Wayward Principles
 	};
 	{
 		Name = BabbleBoss["Gortok Palehoof"];
 		[1] = { icon = "INV_Box_01", name = WHITE..AL["Normal Mode"] };
-		[2] = { itemID = 37067, droprate = "9%" }; --Ceremonial Pyre Mantle
-		[3] = { itemID = 37062, droprate = "1%" }; --Crown of Forgotten Kings
-		[4] = { itemID = 37066, droprate = "3%" }; --Ancient Royal Legguards
-		[5] = { itemID = 37058, droprate = "2%" }; --Signet of Ranulf
-		[6] = { itemID = 37064, droprate = "4%" }; --Vestige of Haldor
-		[7] = { itemID = 37060, droprate = "0%" }; --Jeweled Coronation Sword
-		[8] = { itemID = 37065, droprate = "0%" }; --Ymiron's Blade
-		[9] = { itemID = 37061, droprate = "3%" }; --Tor's Crest
-		[10] = { itemID = 41797, droprate = "0%" }; --Design: Austere Earthsiege Diamond
+		[2] = { itemID = 37067 }; --Ceremonial Pyre Mantle
+		[3] = { itemID = 37062 }; --Crown of Forgotten Kings
+		[4] = { itemID = 37066 }; --Ancient Royal Legguards
+		[5] = { itemID = 37058 }; --Signet of Ranulf
+		[6] = { itemID = 37064 }; --Vestige of Haldor
+		[7] = { itemID = 37060 }; --Jeweled Coronation Sword
+		[8] = { itemID = 37065 }; --Ymiron's Blade
+		[9] = { itemID = 37061 }; --Tor's Crest
+		[10] = { itemID = 41797 }; --Design: Austere Earthsiege Diamond
 		[16] = { icon = "INV_Box_01", name = WHITE..AL["Heroic Mode"] };
-		[17] = { itemID = 47241, droprate = "00%" }; --Emblem of Triumph
-		[18] = { itemID = 37408, droprate = "9%" }; --Girdle of Bane
-		[19] = { itemID = 37409, droprate = "9%" }; --Gilt-Edged Leather Gauntlets
-		[20] = { itemID = 37407, droprate = "0%" }; --Sovereign's Belt
-		[21] = { itemID = 37401, droprate = "8%" }; --Red Sword of Courage
-		[22] = { itemID = 37398, droprate = "0%" }; --Mantle of Discarded Ways
-		[23] = { itemID = 37395, droprate = "0%" }; --Ornamented Plate Regalia
-		[24] = { itemID = 37397, droprate = "0%" }; --Gold Amulet of Kings
-		[25] = { itemID = 37390, droprate = "0%" }; --Meteorite Whetstone
-		[26] = { itemID = 41797, droprate = "0%" }; --Design: Austere Earthsiege Diamond
-		[27] = { itemID = 43102, droprate = "00%" }; --Frozen Orb
+		[17] = { itemID = 47241 }; --Emblem of Triumph
+		[18] = { itemID = 37408 }; --Girdle of Bane
+		[19] = { itemID = 37409 }; --Gilt-Edged Leather Gauntlets
+		[20] = { itemID = 37407 }; --Sovereign's Belt
+		[21] = { itemID = 37401 }; --Red Sword of Courage
+		[22] = { itemID = 37398 }; --Mantle of Discarded Ways
+		[23] = { itemID = 37395 }; --Ornamented Plate Regalia
+		[24] = { itemID = 37397 }; --Gold Amulet of Kings
+		[25] = { itemID = 37390 }; --Meteorite Whetstone
+		[26] = { itemID = 41797 }; --Design: Austere Earthsiege Diamond
+		[27] = { itemID = 43102 }; --Frozen Orb
 	};
 	{
 		Name = AL["Trash Mobs"];
@@ -1025,76 +1025,76 @@ AtlasLoot_Data["TheOculus"] = {
 	{
 		Name = BabbleBoss["Drakos the Interrogator"];
 		[1] = { icon = "INV_Box_01", name = WHITE..AL["Normal Mode"] };
-		[2] = { itemID = 36945, droprate = "1%" }; --Verdisa's Cuffs of Dreaming
-		[3] = { itemID = 36946, droprate = "3%" }; --Runic Cage Chestpiece
-		[4] = { itemID = 36943, droprate = "1%" }; --Timeless Beads of Eternos
-		[5] = { itemID = 36944, droprate = "5%" }; --Lifeblade of Belgaristrasz
+		[2] = { itemID = 36945 }; --Verdisa's Cuffs of Dreaming
+		[3] = { itemID = 36946 }; --Runic Cage Chestpiece
+		[4] = { itemID = 36943 }; --Timeless Beads of Eternos
+		[5] = { itemID = 36944 }; --Lifeblade of Belgaristrasz
 		[16] = { icon = "INV_Box_01", name = WHITE..AL["Heroic Mode"] };
-		[17] = { itemID = 47241, droprate = "00%" }; --Emblem of Triumph
-		[18] = { itemID = 37258, droprate = "2%" }; --Drakewing Raiments
-		[19] = { itemID = 37256, droprate = "3%" }; --Scaled Armor of Drakos
-		[20] = { itemID = 37257, droprate = "3%" }; --Band of Torture
-		[21] = { itemID = 37255, droprate = "3%" }; --The Interrogator
+		[17] = { itemID = 47241 }; --Emblem of Triumph
+		[18] = { itemID = 37258 }; --Drakewing Raiments
+		[19] = { itemID = 37256 }; --Scaled Armor of Drakos
+		[20] = { itemID = 37257 }; --Band of Torture
+		[21] = { itemID = 37255 }; --The Interrogator
 	};
 	{
 		Name = BabbleBoss["Mage-Lord Urom"];
 		[1] = { icon = "INV_Box_01", name = WHITE..AL["Normal Mode"] };
-		[2] = { itemID = 36947, droprate = "1%" }; --Centrifuge Core Cloak
-		[3] = { itemID = 36949, droprate = "1%" }; --Gloves of the Azure-Lord
-		[4] = { itemID = 36948, droprate = "2%" }; --Horned Helm of Varos
-		[5] = { itemID = 36950, droprate = "3%" }; --Wing Commander's Breastplate
+		[2] = { itemID = 36947 }; --Centrifuge Core Cloak
+		[3] = { itemID = 36949 }; --Gloves of the Azure-Lord
+		[4] = { itemID = 36948 }; --Horned Helm of Varos
+		[5] = { itemID = 36950 }; --Wing Commander's Breastplate
 		[16] = { icon = "INV_Box_01", name = WHITE..AL["Heroic Mode"] };
-		[17] = { itemID = 47241, droprate = "00%" }; --Emblem of Triumph
-		[18] = { itemID = 37261, droprate = "2%" }; --Gloves of Radiant Light
-		[19] = { itemID = 37262, droprate = "1%" }; --Azure Ringmail Leggings
-		[20] = { itemID = 37263, droprate = "1%" }; --Legplates of the Oculus Guardian
-		[21] = { itemID = 37260, droprate = "1%" }; --Cloudstrider's Waraxe
+		[17] = { itemID = 47241 }; --Emblem of Triumph
+		[18] = { itemID = 37261 }; --Gloves of Radiant Light
+		[19] = { itemID = 37262 }; --Azure Ringmail Leggings
+		[20] = { itemID = 37263 }; --Legplates of the Oculus Guardian
+		[21] = { itemID = 37260 }; --Cloudstrider's Waraxe
 	};
 	{
 		Name = BabbleBoss["Varos Cloudstrider"];
 		[1] = { icon = "INV_Box_01", name = WHITE..AL["Normal Mode"] };
-		[2] = { itemID = 36954, droprate = "1%" }; --The Conjurer's Slippers
-		[3] = { itemID = 36951, droprate = "0%" }; --Sidestepping Handguards
-		[4] = { itemID = 36953, droprate = "1%" }; --Spaulders of Skillful Maneuvers
-		[5] = { itemID = 36952, droprate = "8%" }; --Girdle of Obscuring
+		[2] = { itemID = 36954 }; --The Conjurer's Slippers
+		[3] = { itemID = 36951 }; --Sidestepping Handguards
+		[4] = { itemID = 36953 }; --Spaulders of Skillful Maneuvers
+		[5] = { itemID = 36952 }; --Girdle of Obscuring
 		[7] = { itemID = 21525 }; --Green Winter Hat
 		[16] = { icon = "INV_Box_01", name = WHITE..AL["Heroic Mode"] };
-		[17] = { itemID = 47241, droprate = "00%" }; --Emblem of Triumph
-		[18] = { itemID = 37289, droprate = "8%" }; --Sash of Phantasmal Images
-		[19] = { itemID = 37288, droprate = "8%" }; --Catalytic Bands
-		[20] = { itemID = 37195, droprate = "0%" }; --Band of Enchanted Growth
-		[21] = { itemID = 37264, droprate = "0%" }; --Pendulum of Telluric Currents
+		[17] = { itemID = 47241 }; --Emblem of Triumph
+		[18] = { itemID = 37289 }; --Sash of Phantasmal Images
+		[19] = { itemID = 37288 }; --Catalytic Bands
+		[20] = { itemID = 37195 }; --Band of Enchanted Growth
+		[21] = { itemID = 37264 }; --Pendulum of Telluric Currents
 		[23] = { itemID = 21525 }; --Green Winter Hat
 	};
 	{
 		Name = BabbleBoss["Ley-Guardian Eregos"];
 		[1] = { icon = "INV_Box_01", name = WHITE..AL["Normal Mode"] };
-		[2] = { itemID = 36973, droprate = "8%" }; --Vestments of the Scholar
-		[3] = { itemID = 36971, droprate = "7%" }; --Headguard of Westrift
-		[4] = { itemID = 36969, droprate = "4%" }; --Helm of the Ley-Guardian
-		[5] = { itemID = 36974, droprate = "8%" }; --Eredormu's Ornamented Chestguard
-		[6] = { itemID = 36961, droprate = "7%" }; --Dragonflight Great-Ring
-		[7] = { itemID = 36972, droprate = "5%" }; --Tome of Arcane Phenomena
-		[8] = { itemID = 36962, droprate = "7%" }; --Wyrmclaw Battleaxe
-		[9] = { itemID = 36975, droprate = "7%" }; --Malygos's Favor
+		[2] = { itemID = 36973 }; --Vestments of the Scholar
+		[3] = { itemID = 36971 }; --Headguard of Westrift
+		[4] = { itemID = 36969 }; --Helm of the Ley-Guardian
+		[5] = { itemID = 36974 }; --Eredormu's Ornamented Chestguard
+		[6] = { itemID = 36961 }; --Dragonflight Great-Ring
+		[7] = { itemID = 36972 }; --Tome of Arcane Phenomena
+		[8] = { itemID = 36962 }; --Wyrmclaw Battleaxe
+		[9] = { itemID = 36975 }; --Malygos's Favor
 		[10] = { itemID = 41798 }; --Design: Bracing Earthsiege Diamond
 		[16] = { icon = "INV_Box_01", name = WHITE..AL["Heroic Mode"] };
-		[17] = { itemID = 47241, droprate = "00%" }; --Emblem of Triumph
-		[18] = { itemID = 37361, droprate = "4%" }; --Cuffs of Winged Levitation
-		[19] = { itemID = 37363, droprate = "3%" }; --Gauntlets of Dragon Wrath
-		[20] = { itemID = 37362, droprate = "3%" }; --Leggings of Protective Auras
-		[21] = { itemID = 37360, droprate = "4%" }; --Staff of Draconic Combat
-		[22] = { itemID = 37291, droprate = "4%" }; --Ancient Dragon Spirit Cape
-		[23] = { itemID = 37294, droprate = "4%" }; --Crown of Unbridled Magic
-		[24] = { itemID = 37293, droprate = "5%" }; --Mask of the Watcher
-		[25] = { itemID = 37292, droprate = "5%" }; --Ley-Guardian's Legguards
-		[26] = { itemID = 43102, droprate = "00%" }; --Frozen Orb
+		[17] = { itemID = 47241 }; --Emblem of Triumph
+		[18] = { itemID = 37361 }; --Cuffs of Winged Levitation
+		[19] = { itemID = 37363 }; --Gauntlets of Dragon Wrath
+		[20] = { itemID = 37362 }; --Leggings of Protective Auras
+		[21] = { itemID = 37360 }; --Staff of Draconic Combat
+		[22] = { itemID = 37291 }; --Ancient Dragon Spirit Cape
+		[23] = { itemID = 37294 }; --Crown of Unbridled Magic
+		[24] = { itemID = 37293 }; --Mask of the Watcher
+		[25] = { itemID = 37292 }; --Ley-Guardian's Legguards
+		[26] = { itemID = 43102 }; --Frozen Orb
 		[28] = { itemID = 52676, "=ds=" .. AL["Random Heroic Reward"] }; --Cache of the Ley-Guardian
 	};
 	{
 		Name = AL["Trash Mobs"];
 		[1] = { icon = "INV_Box_01", name = WHITE..AL["Normal Mode"] };
-		[2] = { itemID = 36978, droprate = ".45%" }; --Ley-Whelphide Belt
+		[2] = { itemID = 36978 }; --Ley-Whelphide Belt
 		[3] = { itemID = 36977 }; --Bindings of the Construct
 		[4] = { itemID = 36976 }; --Ring-Lord's Leggings
 		[16] = { icon = "INV_Box_01", name = WHITE..AL["Heroic Mode"] };
@@ -1354,14 +1354,14 @@ AtlasLoot_Data["TrialoftheChampion"] = {
 		[6] = { itemID = 47172 }; --Helm of the Bested Gallant
 		[7] = { itemID = 47171 }; --Legguards of Abandoned Fealty
 		[16] = { icon = "INV_Box_01", name = WHITE..AL["Heroic Mode"] };
-		[17] = { itemID = 47241, droprate = "00%" }; --Emblem of Triumph
+		[17] = { itemID = 47241 }; --Emblem of Triumph
 		[18] = { itemID = 47249 }; --Leggings of the Snowy Bramble
 		[19] = { itemID = 47248 }; --Treads of Dismal Fortune
 		[20] = { itemID = 47250 }; --Pauldrons of the Deafening Gale
 		[21] = { itemID = 47244 }; --Chestguard of the Ravenous Fiend
 		[22] = { itemID = 47243 }; --Mark of the Relentless
 		[23] = { itemID = 47493 }; --Edge of Ruin
-		[24] = { itemID = 44990, droprate = "00%" }; --Champion's Seal
+		[24] = { itemID = 44990 }; --Champion's Seal
 	};
 	{
 		Name = BabbleBoss["Argent Confessor Paletress"];
@@ -1379,7 +1379,7 @@ AtlasLoot_Data["TrialoftheChampion"] = {
 		[12] = { itemID = 47213 }; --Abyssal Rune
 		[13] = { itemID = 47214 }; --Banner of Victory
 		[16] = { icon = "INV_Box_01", name = WHITE..AL["Heroic Mode"] };
-		[17] = { itemID = 47241, droprate = "00%" }; --Emblem of Triumph
+		[17] = { itemID = 47241 }; --Emblem of Triumph
 		[18] = { itemID = 47498 }; --Gloves of Dismal Fortune
 		[19] = { itemID = 47496 }; --Armbands of the Wary Lookout
 		[20] = { itemID = 47245 }; --Pauldrons of Concealed Loathing
@@ -1392,7 +1392,7 @@ AtlasLoot_Data["TrialoftheChampion"] = {
 		[27] = { itemID = 47512 }; --Sinner's Confession
 		[28] = { itemID = 47500 }; --Peacekeeper Blade
 		[29] = { itemID = 47522 }; --Marrowstrike
-		[30] = { itemID = 44990, droprate = "00%" }; --Champion's Seal
+		[30] = { itemID = 44990 }; --Champion's Seal
 	};
 	{
 		Name = BabbleBoss["Eadric the Pure"];
@@ -1410,7 +1410,7 @@ AtlasLoot_Data["TrialoftheChampion"] = {
 		[12] = { itemID = 47200 }; --Signet of Purity
 		[13] = { itemID = 47213 }; --Abyssal Rune
 		[16] = { icon = "INV_Box_01", name = WHITE..AL["Heroic Mode"] };
-		[17] = { itemID = 47241, droprate = "00%" }; --Emblem of Triumph
+		[17] = { itemID = 47241 }; --Emblem of Triumph
 		[18] = { itemID = 47501 }; --Kurisu's Indecision
 		[19] = { itemID = 47496 }; --Armbands of the Wary Lookout
 		[20] = { itemID = 47498 }; --Gloves of Dismal Fortune
@@ -1423,7 +1423,7 @@ AtlasLoot_Data["TrialoftheChampion"] = {
 		[27] = { itemID = 47500 }; --Peacekeeper Blade
 		[28] = { itemID = 47509 }; --Mariel's Sorrow
 		[29] = { itemID = 47508 }; --Aledar's Battlestar
-		[30] = { itemID = 44990, droprate = "00%" }; --Champion's Seal
+		[30] = { itemID = 44990 }; --Champion's Seal
 	};
 	{
 		Name = BabbleBoss["The Black Knight"];
@@ -1442,7 +1442,7 @@ AtlasLoot_Data["TrialoftheChampion"] = {
 	};
 	{
 		Name = BabbleBoss["The Black Knight"] .. " (" .. AL["Heroic"] .. ")";
-		[1] = { itemID = 47241, droprate = "00%" }; --Emblem of Triumph
+		[1] = { itemID = 47241 }; --Emblem of Triumph
 		[2] = { itemID = 47564 }; --Gaze of the Unknown
 		[3] = { itemID = 47527 }; --Embrace of Madness
 		[4] = { itemID = 47560 }; --Boots of the Crackling Flame
@@ -1456,8 +1456,8 @@ AtlasLoot_Data["TrialoftheChampion"] = {
 		[16] = { itemID = 47569 }; --Spectral Kris
 		[17] = { itemID = 49682 }; --Black Knight's Rondel
 		[18] = { itemID = 47568 }; --True-aim Long Rifle
-		[20] = { itemID = 43102, droprate = "00%" }; --Frozen Orb
-		[22] = { itemID = 44990, droprate = "00%" }; --Champion's Seal
+		[20] = { itemID = 43102 }; --Frozen Orb
+		[22] = { itemID = 44990 }; --Champion's Seal
 	};
 };
 
@@ -1629,7 +1629,7 @@ AtlasLoot_Data["VaultofArchavon"] = {
 		[2] = { itemID = 39611 }; --Heroes' Dreadnaught Breastplate
 		[3] = { itemID = 39622 }; --Heroes' Dreadnaught Handguards
 		[4] = { itemID = 39612 }; --Heroes' Dreadnaught Legguards
-		[6] = { itemID = 47241, droprate = "00%" }; --Emblem of Triumph
+		[6] = { itemID = 47241 }; --Emblem of Triumph
 		[7] = { itemID = 43959 }; --Reins of the Grand Black War Mammoth
 		[8] = { itemID = 44083 }; --Reins of the Grand Black War Mammoth
 	};
@@ -1793,7 +1793,7 @@ AtlasLoot_Data["VaultofArchavon"] = {
 		[2] = { itemID = 40544 }; --Valorous Dreadnaught Breastplate
 		[3] = { itemID = 40545 }; --Valorous Dreadnaught Handguards
 		[4] = { itemID = 40547 }; --Valorous Dreadnaught Legguards
-		[6] = { itemID = 47241, droprate = "00%" }; --Emblem of Triumph
+		[6] = { itemID = 47241 }; --Emblem of Triumph
 		[7] = { itemID = 43959 }; --Reins of the Grand Black War Mammoth
 		[8] = { itemID = 44083 }; --Reins of the Grand Black War Mammoth
 	};
@@ -1967,7 +1967,7 @@ AtlasLoot_Data["VaultofArchavon"] = {
 		[6] = { itemID = 42063 }; --Deadly Gladiator's Cloak of Subjugation
 		[7] = { itemID = 42067 }; --Deadly Gladiator's Cloak of Triumph
 		[8] = { itemID = 42068 }; --Deadly Gladiator's Cloak of Victory
-		[11] = { itemID = 47241, droprate = "00%" }; --Emblem of Triumph
+		[11] = { itemID = 47241 }; --Emblem of Triumph
 		[12] = { itemID = 43959 }; --Reins of the Grand Black War Mammoth
 		[13] = { itemID = 44083 }; --Reins of the Grand Black War Mammoth
 		[16] = { icon = "INV_Box_01", name = WHITE.. AL["PvP Non-Set Epics"], desc = "=q5=" .. BabbleInventory["Neck"] };
@@ -2152,7 +2152,7 @@ AtlasLoot_Data["VaultofArchavon"] = {
 		[6] = { itemID = 42070 }; --Furious Gladiator's Cloak of Subjugation
 		[7] = { itemID = 42074 }; --Furious Gladiator's Cloak of Triumph
 		[8] = { itemID = 42075 }; --Furious Gladiator's Cloak of Victory
-		[11] = { itemID = 47241, droprate = "00%" }; --Emblem of Triumph
+		[11] = { itemID = 47241 }; --Emblem of Triumph
 		[12] = { itemID = 43959 }; --Reins of the Grand Black War Mammoth
 		[13] = { itemID = 44083 }; --Reins of the Grand Black War Mammoth
 		[16] = { icon = "INV_Box_01", name = WHITE.. AL["PvP Non-Set Epics"], desc = "=q5=" .. BabbleInventory["Neck"] };
@@ -2338,7 +2338,7 @@ AtlasLoot_Data["VaultofArchavon"] = {
 		[6] = { itemID = 42070 }; --Furious Gladiator's Cloak of Subjugation
 		[7] = { itemID = 42074 }; --Furious Gladiator's Cloak of Triumph
 		[8] = { itemID = 42075 }; --Furious Gladiator's Cloak of Victory
-		[11] = { itemID = 47241, droprate = "00%" }; --Emblem of Triumph
+		[11] = { itemID = 47241 }; --Emblem of Triumph
 		[12] = { itemID = 43959 }; --Reins of the Grand Black War Mammoth
 		[13] = { itemID = 44083 }; --Reins of the Grand Black War Mammoth
 		[16] = { icon = "INV_Box_01", name = WHITE.. AL["PvP Non-Set Epics"], desc = "=q5=" .. BabbleInventory["Neck"] };
@@ -2527,7 +2527,7 @@ AtlasLoot_Data["VaultofArchavon"] = {
 		[6] = { itemID = 42077 }; --Relentless Gladiator's Cloak of Subjugation
 		[7] = { itemID = 42081 }; --Relentless Gladiator's Cloak of Triumph
 		[8] = { itemID = 42082 }; --Relentless Gladiator's Cloak of Victory
-		[11] = { itemID = 47241, droprate = "00%" }; --Emblem of Triumph
+		[11] = { itemID = 47241 }; --Emblem of Triumph
 		[12] = { itemID = 43959 }; --Reins of the Grand Black War Mammoth
 		[13] = { itemID = 44083 }; --Reins of the Grand Black War Mammoth
 		[16] = { icon = "INV_Box_01", name = WHITE.. AL["PvP Non-Set Epics"], desc = "=q5=" .. BabbleInventory["Neck"] };
@@ -2713,7 +2713,7 @@ AtlasLoot_Data["VaultofArchavon"] = {
 		[6] = { itemID = 42070 }; --Furious Gladiator's Cloak of Subjugation
 		[7] = { itemID = 42074 }; --Furious Gladiator's Cloak of Triumph
 		[8] = { itemID = 42075 }; --Furious Gladiator's Cloak of Victory
-		[11] = { itemID = 47241, droprate = "00%" }; --Emblem of Triumph
+		[11] = { itemID = 47241 }; --Emblem of Triumph
 		[12] = { itemID = 43959 }; --Reins of the Grand Black War Mammoth
 		[13] = { itemID = 44083 }; --Reins of the Grand Black War Mammoth
 		[16] = { icon = "INV_Box_01", name = WHITE.. AL["PvP Non-Set Epics"], desc = "=q5=" .. BabbleInventory["Neck"] };
@@ -2902,7 +2902,7 @@ AtlasLoot_Data["VaultofArchavon"] = {
 		[6] = { itemID = 42077 }; --Relentless Gladiator's Cloak of Subjugation
 		[7] = { itemID = 42081 }; --Relentless Gladiator's Cloak of Triumph
 		[8] = { itemID = 42082 }; --Relentless Gladiator's Cloak of Victory
-		[11] = { itemID = 47241, droprate = "00%" }; --Emblem of Triumph
+		[11] = { itemID = 47241 }; --Emblem of Triumph
 		[12] = { itemID = 43959 }; --Reins of the Grand Black War Mammoth
 		[13] = { itemID = 44083 }; --Reins of the Grand Black War Mammoth
 		[16] = { icon = "INV_Box_01", name = WHITE.. AL["PvP Non-Set Epics"], desc = "=q5=" .. BabbleInventory["Neck"] };
@@ -3091,7 +3091,7 @@ AtlasLoot_Data["VaultofArchavon"] = {
 		[6] = { itemID = 42077 }; --Relentless Gladiator's Cloak of Subjugation
 		[7] = { itemID = 42081 }; --Relentless Gladiator's Cloak of Triumph
 		[8] = { itemID = 42082 }; --Relentless Gladiator's Cloak of Victory
-		[11] = { itemID = 49426, droprate = "00%" }; --Emblem of Frost
+		[11] = { itemID = 49426 }; --Emblem of Frost
 		[12] = { itemID = 43959 }; --Reins of the Grand Black War Mammoth
 		[13] = { itemID = 44083 }; --Reins of the Grand Black War Mammoth
 		[16] = { icon = "INV_Box_01", name = WHITE.. AL["PvP Non-Set Epics"], desc = "=q5=" .. BabbleInventory["Neck"] };
@@ -3280,7 +3280,7 @@ AtlasLoot_Data["VaultofArchavon"] = {
 		[6] = { itemID = 51332 }; --Wrathful Gladiator's Cloak of Subjugation
 		[7] = { itemID = 51354 }; --Wrathful Gladiator's Cloak of Triumph
 		[8] = { itemID = 51356 }; --Wrathful Gladiator's Cloak of Victory
-		[11] = { itemID = 49426, droprate = "00%" }; --Emblem of Frost
+		[11] = { itemID = 49426 }; --Emblem of Frost
 		[12] = { itemID = 43959 }; --Reins of the Grand Black War Mammoth
 		[13] = { itemID = 44083 }; --Reins of the Grand Black War Mammoth
 		[16] = { icon = "INV_Box_01", name = WHITE.. AL["PvP Non-Set Epics"], desc = "=q5=" .. BabbleInventory["Neck"] };
@@ -3312,173 +3312,173 @@ AtlasLoot_Data["Naxxramas80"] = {
 	Type = "WrathRaid";
 	{
 		Name = BabbleBoss["Patchwerk"];
-		[1] = { itemID = 39272, droprate = "0%" }; --Drape of Surgery
-		[2] = { itemID = 39273, droprate = "0%" }; --Sullen Cloth Boots
-		[3] = { itemID = 39275, droprate = "0%" }; --Contagion Gloves
-		[4] = { itemID = 39274, droprate = "0%" }; --Retcher's Shoulderpads
-		[5] = { itemID = 39267, droprate = "3%" }; --Abomination Shoulderblades
-		[6] = { itemID = 39262, droprate = "4%" }; --Gauntlets of Combined Strength
-		[7] = { itemID = 39261, droprate = "3%" }; --Tainted Girdle of Mending
-		[8] = { itemID = 39271, droprate = "0%" }; --Blade of Dormant Memories
-		[9] = { itemID = 39270, droprate = "3%" }; --Hatestrike
+		[1] = { itemID = 39272 }; --Drape of Surgery
+		[2] = { itemID = 39273 }; --Sullen Cloth Boots
+		[3] = { itemID = 39275 }; --Contagion Gloves
+		[4] = { itemID = 39274 }; --Retcher's Shoulderpads
+		[5] = { itemID = 39267 }; --Abomination Shoulderblades
+		[6] = { itemID = 39262 }; --Gauntlets of Combined Strength
+		[7] = { itemID = 39261 }; --Tainted Girdle of Mending
+		[8] = { itemID = 39271 }; --Blade of Dormant Memories
+		[9] = { itemID = 39270 }; --Hatestrike
 	};
 	{
 		Name = BabbleBoss["Patchwerk"];
-		[1] = { itemID = 40271, droprate = "9%" }; --Sash of Solitude
+		[1] = { itemID = 40271 }; --Sash of Solitude
 		[2] = { itemID = 40269 }; --Boots of Persuasion
 		[3] = { itemID = 40260 }; --Belt of the Tortured
 		[4] = { itemID = 40270 }; --Boots of Septic Wounds
 		[5] = { itemID = 40262 }; --Gloves of Calculated Risk
 		[6] = { itemID = 40272 }; --Girdle of the Gambit
 		[7] = { itemID = 40261 }; --Crude Discolored Battlegrips
-		[8] = { itemID = 40263, droprate = "9%" }; --Fleshless Girdle
+		[8] = { itemID = 40263 }; --Fleshless Girdle
 		[9] = { itemID = 40259 }; --Waistguard of Divine Grace
-		[10] = { itemID = 40071, droprate = "1%" }; --Chains of Adoration
-		[11] = { itemID = 40065, droprate = "1%" }; --Fool's Trial
-		[12] = { itemID = 40069, droprate = "1%" }; --Heritage
-		[13] = { itemID = 40064, droprate = "1%" }; --Thunderstorm Amulet
-		[14] = { itemID = 40080, droprate = "1%" }; --Lost Jewel
-		[15] = { itemID = 40075, droprate = "1%" }; --Ruthlessness
-		[16] = { itemID = 40107, droprate = "1%" }; --Sand-Worn Band
-		[17] = { itemID = 40074, droprate = "2%" }; --Strong-Handed Ring
+		[10] = { itemID = 40071 }; --Chains of Adoration
+		[11] = { itemID = 40065 }; --Fool's Trial
+		[12] = { itemID = 40069 }; --Heritage
+		[13] = { itemID = 40064 }; --Thunderstorm Amulet
+		[14] = { itemID = 40080 }; --Lost Jewel
+		[15] = { itemID = 40075 }; --Ruthlessness
+		[16] = { itemID = 40107 }; --Sand-Worn Band
+		[17] = { itemID = 40074 }; --Strong-Handed Ring
 		[18] = { itemID = 40273 }; --Surplus Limb
 		[19] = { itemID = 40267 }; --Totem of Hex
-		[20] = { itemID = 40268, droprate = "9%" }; --Libram of Tolerance
+		[20] = { itemID = 40268 }; --Libram of Tolerance
 		[21] = { itemID = 40264 }; --Split Greathammer
 		[22] = { itemID = 40266 }; --Hero's Surrender
-		[23] = { itemID = 40265, droprate = "9%" }; --Arrowsong
+		[23] = { itemID = 40265 }; --Arrowsong
 	};
 	{
 		Name = BabbleBoss["Grobbulus"];
-		[1] = { itemID = 39284, droprate = "8%" }; --Miasma Mantle
-		[2] = { itemID = 39285, droprate = "0%" }; --Handgrips of Turmoil
-		[3] = { itemID = 39283, droprate = "0%" }; --Putrescent Bands
+		[1] = { itemID = 39284 }; --Miasma Mantle
+		[2] = { itemID = 39285 }; --Handgrips of Turmoil
+		[3] = { itemID = 39283 }; --Putrescent Bands
 		[4] = { itemID = 39279 }; --Blistered Belt of Decay
 		[5] = { itemID = 39278 }; --Bands of Anxiety
-		[6] = { itemID = 39280, droprate = "0%" }; --Leggings of Innumerable Barbs
-		[7] = { itemID = 39282, droprate = "0%" }; --Bone-Linked Amulet
+		[6] = { itemID = 39280 }; --Leggings of Innumerable Barbs
+		[7] = { itemID = 39282 }; --Bone-Linked Amulet
 		[8] = { itemID = 39277 }; --Sealing Ring of Grobbulus
-		[9] = { itemID = 39281, droprate = "9%" }; --Infection Repulser
+		[9] = { itemID = 39281 }; --Infection Repulser
 		[10] = { itemID = 39276 }; --The Skull of Ruin
 	};
 	{
 		Name = BabbleBoss["Grobbulus"];
-		[1] = { itemID = 40250, droprate = "1%" }; --Aged Winter Cloak
-		[2] = { itemID = 40254, droprate = "1%" }; --Cloak of Averted Crisis
-		[3] = { itemID = 40252, droprate = "1%" }; --Cloak of the Shadowed Sun
-		[4] = { itemID = 40253, droprate = "1%" }; --Shawl of the Old Maid
-		[5] = { itemID = 40251, droprate = "1%" }; --Shroud of Luminosity
-		[6] = { itemID = 40287, droprate = "9%" }; --Cowl of Vanity
+		[1] = { itemID = 40250 }; --Aged Winter Cloak
+		[2] = { itemID = 40254 }; --Cloak of Averted Crisis
+		[3] = { itemID = 40252 }; --Cloak of the Shadowed Sun
+		[4] = { itemID = 40253 }; --Shawl of the Old Maid
+		[5] = { itemID = 40251 }; --Shroud of Luminosity
+		[6] = { itemID = 40287 }; --Cowl of Vanity
 		[7] = { itemID = 40286 }; --Mantle of the Corrupted
-		[8] = { itemID = 40351, droprate = "9%" }; --Mantle of the Fatigued Sage
+		[8] = { itemID = 40351 }; --Mantle of the Fatigued Sage
 		[9] = { itemID = 40289 }; --Sympathetic Amice
-		[10] = { itemID = 40277, droprate = "8%" }; --Tunic of Indulgence
+		[10] = { itemID = 40277 }; --Tunic of Indulgence
 		[11] = { itemID = 40285 }; --Desecrated Past
-		[12] = { itemID = 40288, droprate = "9%" }; --Spaulders of Incoherence
+		[12] = { itemID = 40288 }; --Spaulders of Incoherence
 		[13] = { itemID = 40283 }; --Fallout Impervious Tunic
 		[14] = { itemID = 40282 }; --Slime Stream Bands
 		[15] = { itemID = 40275 }; --Depraved Linked Belt
 		[16] = { itemID = 40279 }; --Chestguard of the Exhausted
-		[17] = { itemID = 40274, droprate = "8%" }; --Bracers of Liberation
+		[17] = { itemID = 40274 }; --Bracers of Liberation
 		[18] = { itemID = 40278 }; --Girdle of Chivalry
-		[19] = { itemID = 40257, droprate = "1%" }; --Defender's Code
-		[20] = { itemID = 40255, droprate = "1%" }; --Dying Curse
-		[21] = { itemID = 40258, droprate = "1%" }; --Forethought Talisman
-		[22] = { itemID = 40256, droprate = "1%" }; --Grim Toll
-		[23] = { itemID = 40281, droprate = "9%" }; --Twilight Mist
+		[19] = { itemID = 40257 }; --Defender's Code
+		[20] = { itemID = 40255 }; --Dying Curse
+		[21] = { itemID = 40258 }; --Forethought Talisman
+		[22] = { itemID = 40256 }; --Grim Toll
+		[23] = { itemID = 40281 }; --Twilight Mist
 		[24] = { itemID = 40280 }; --Origin of Nightmares
 		[25] = { itemID = 40284 }; --Plague Igniter
 	};
 	{
 		Name = BabbleBoss["Gluth"];
-		[1] = { itemID = 39272, droprate = "0%" }; --Drape of Surgery
-		[2] = { itemID = 39284, droprate = "8%" }; --Miasma Mantle
-		[3] = { itemID = 39396, droprate = ".43%" }; --Gown of Blaumeux
-		[4] = { itemID = 39309, droprate = "0%" }; --Leggings of the Instructor
-		[5] = { itemID = 39237, droprate = "0%" }; --Spaulders of Resumed Battle
+		[1] = { itemID = 39272 }; --Drape of Surgery
+		[2] = { itemID = 39284 }; --Miasma Mantle
+		[3] = { itemID = 39396 }; --Gown of Blaumeux
+		[4] = { itemID = 39309 }; --Leggings of the Instructor
+		[5] = { itemID = 39237 }; --Spaulders of Resumed Battle
 		[6] = { itemID = 39279 }; --Blistered Belt of Decay
-		[7] = { itemID = 39191, droprate = "1%" }; --Splint-Bound Leggings
-		[8] = { itemID = 39215, droprate = "1%" }; --Boots of the Follower
+		[7] = { itemID = 39191 }; --Splint-Bound Leggings
+		[8] = { itemID = 39215 }; --Boots of the Follower
 		[9] = { itemID = 39294 }; --Arc-Scorched Helmet
-		[10] = { itemID = 39248, droprate = "0%" }; --Tunic of the Lost Pack
-		[11] = { itemID = 39194, droprate = "0%" }; --Rusted-Link Spiked Gauntlets
-		[12] = { itemID = 39251, droprate = "0%" }; --Necrogenic Belt
-		[13] = { itemID = 39379, droprate = "0%" }; --Spectral Rider's Girdle
-		[14] = { itemID = 39188, droprate = "0%" }; --Chivalric Chestguard
-		[15] = { itemID = 39345, droprate = "0%" }; --Girdle of the Ascended Phantom
-		[16] = { itemID = 39146, droprate = "0%" }; --Collar of Dissolution
-		[17] = { itemID = 39232, droprate = "0%" }; --Pendant of Lost Vocations
-		[18] = { itemID = 39193, droprate = "1%" }; --Band of Neglected Pleas
-		[19] = { itemID = 39388, droprate = "0%" }; --Spirit-World Glass
-		[20] = { itemID = 39200, droprate = "1%" }; --Grieving Spellblade
-		[21] = { itemID = 39344, droprate = "0%" }; --Slayer of the Lifeless
-		[22] = { itemID = 39281, droprate = "9%" }; --Infection Repulser
-		[23] = { itemID = 39394, droprate = ".44%" }; --Charmed Cierge
+		[10] = { itemID = 39248 }; --Tunic of the Lost Pack
+		[11] = { itemID = 39194 }; --Rusted-Link Spiked Gauntlets
+		[12] = { itemID = 39251 }; --Necrogenic Belt
+		[13] = { itemID = 39379 }; --Spectral Rider's Girdle
+		[14] = { itemID = 39188 }; --Chivalric Chestguard
+		[15] = { itemID = 39345 }; --Girdle of the Ascended Phantom
+		[16] = { itemID = 39146 }; --Collar of Dissolution
+		[17] = { itemID = 39232 }; --Pendant of Lost Vocations
+		[18] = { itemID = 39193 }; --Band of Neglected Pleas
+		[19] = { itemID = 39388 }; --Spirit-World Glass
+		[20] = { itemID = 39200 }; --Grieving Spellblade
+		[21] = { itemID = 39344 }; --Slayer of the Lifeless
+		[22] = { itemID = 39281 }; --Infection Repulser
+		[23] = { itemID = 39394 }; --Charmed Cierge
 	};
 	{
 		Name = BabbleBoss["Gluth"];
-		[1] = { itemID = 40622, droprate = "9%" }; --Spaulders of the Lost Conqueror
-		[2] = { itemID = 40623, droprate = "0%" }; --Spaulders of the Lost Protector
-		[3] = { itemID = 40624, droprate = "8%" }; --Spaulders of the Lost Vanquisher
+		[1] = { itemID = 40622 }; --Spaulders of the Lost Conqueror
+		[2] = { itemID = 40623 }; --Spaulders of the Lost Protector
+		[3] = { itemID = 40624 }; --Spaulders of the Lost Vanquisher
 		[4] = { itemID = 40610 }; --Chestguard of the Lost Conqueror
 		[5] = { itemID = 40611 }; --Chestguard of the Lost Protector
-		[6] = { itemID = 40612, droprate = "2%" }; --Chestguard of the Lost Vanquisher
-		[7] = { itemID = 40619, droprate = "7%" }; --Leggings of the Lost Conqueror
-		[8] = { itemID = 40620, droprate = "8%" }; --Leggings of the Lost Protector
-		[9] = { itemID = 40621, droprate = "6%" }; --Leggings of the Lost Vanquisher
+		[6] = { itemID = 40612 }; --Chestguard of the Lost Vanquisher
+		[7] = { itemID = 40619 }; --Leggings of the Lost Conqueror
+		[8] = { itemID = 40620 }; --Leggings of the Lost Protector
+		[9] = { itemID = 40621 }; --Leggings of the Lost Vanquisher
 	};
 	{
 		Name = BabbleBoss["Gluth"];
 		[1] = { itemID = 40247 }; --Cowl of Innocent Delight
 		[2] = { itemID = 40289 }; --Sympathetic Amice
-		[3] = { itemID = 40602, droprate = "9%" }; --Robes of Mutation
-		[4] = { itemID = 39733, droprate = "9%" }; --Gloves of Token Respect
+		[3] = { itemID = 40602 }; --Robes of Mutation
+		[4] = { itemID = 39733 }; --Gloves of Token Respect
 		[5] = { itemID = 40303 }; --Wraps of the Persecuted
-		[6] = { itemID = 40326, droprate = "0%" }; --Boots of Forlorn Wishes
+		[6] = { itemID = 40326 }; --Boots of Forlorn Wishes
 		[7] = { itemID = 40296 }; --Cover of Silence
 		[8] = { itemID = 39768 }; --Cowl of the Perished
 		[9] = { itemID = 40319 }; --Chestpiece of Suspicion
 		[10] = { itemID = 40260 }; --Belt of the Tortured
 		[11] = { itemID = 40205 }; --Stalk-Skin Belt
 		[12] = { itemID = 40270 }; --Boots of Septic Wounds
-		[13] = { itemID = 40193, droprate = "0%" }; --Tunic of Masked Suffering
+		[13] = { itemID = 40193 }; --Tunic of Masked Suffering
 		[14] = { itemID = 40209 }; --Bindings of the Decrepit
 		[15] = { itemID = 40302 }; --Benefactor's Gauntlets
 		[16] = { itemID = 39718 }; --Corpse Scarab Handguards
-		[17] = { itemID = 40242, droprate = "9%" }; --Grotesque Handgrips
-		[18] = { itemID = 39760, droprate = "8%" }; --Helm of Diminished Pride
+		[17] = { itemID = 40242 }; --Grotesque Handgrips
+		[18] = { itemID = 39760 }; --Helm of Diminished Pride
 		[19] = { itemID = 40185 }; --Shoulderguards of Opportunity
-		[20] = { itemID = 40203, droprate = "8%" }; --Breastplate of Tormented Rage
-		[21] = { itemID = 40332, droprate = "9%" }; --Abetment Bracers
+		[20] = { itemID = 40203 }; --Breastplate of Tormented Rage
+		[21] = { itemID = 40332 }; --Abetment Bracers
 		[22] = { itemID = 40188 }; --Gauntlets of the Disobediant
 		[23] = { itemID = 40259 }; --Waistguard of Divine Grace
 		[24] = { itemID = 40204 }; --Legguards of the Apostle
-		[25] = { itemID = 39717, droprate = "3%" }; --Inexorable Sabatons
+		[25] = { itemID = 39717 }; --Inexorable Sabatons
 		[26] = { itemID = 40206 }; --Iron-Spring Jumpers
-		[27] = { itemID = 40297, droprate = "7%" }; --Sabatons of Endurance
+		[27] = { itemID = 40297 }; --Sabatons of Endurance
 		[28] = { itemID = 40350 }; --Urn of Lost Memories
 		[29] = { itemID = 40191 }; --Libram of Radiance
 	};
 	{
 		Name = BabbleBoss["Gluth"];
-		[1] = { itemID = 40281, droprate = "9%" }; --Twilight Mist
-		[2] = { itemID = 39714, droprate = "4%" }; --Webbed Death
+		[1] = { itemID = 40281 }; --Twilight Mist
+		[2] = { itemID = 39714 }; --Webbed Death
 		[3] = { itemID = 39730 }; --Widow's Fury
 		[4] = { itemID = 40343 }; --Armageddon
-		[5] = { itemID = 40239, droprate = "9%" }; --The Hand of Nerub
+		[5] = { itemID = 40239 }; --The Hand of Nerub
 		[6] = { itemID = 40280 }; --Origin of Nightmares
-		[7] = { itemID = 39716, droprate = "4%" }; --Shield of Assimilation
-		[8] = { itemID = 40265, droprate = "9%" }; --Arrowsong
+		[7] = { itemID = 39716 }; --Shield of Assimilation
+		[8] = { itemID = 40265 }; --Arrowsong
 		[9] = { itemID = 40346 }; --Final Voyage
-		[16] = { itemID = 40637, droprate = "7%" }; --Mantle of the Lost Conqueror
-		[17] = { itemID = 40638, droprate = "8%" }; --Mantle of the Lost Protector
-		[18] = { itemID = 40639, droprate = "6%" }; --Mantle of the Lost Vanquisher
-		[19] = { itemID = 40625, droprate = "7%" }; --Breastplate of the Lost Conqueror
-		[20] = { itemID = 40626, droprate = "9%" }; --Breastplate of the Lost Protector
-		[21] = { itemID = 40627, droprate = "4%" }; --Breastplate of the Lost Vanquisher
-		[22] = { itemID = 40634, droprate = "6%" }; --Legplates of the Lost Conqueror
-		[23] = { itemID = 40635, droprate = "8%" }; --Legplates of the Lost Protector
-		[24] = { itemID = 40636, droprate = "6%" }; --Legplates of the Lost Vanquisher
+		[16] = { itemID = 40637 }; --Mantle of the Lost Conqueror
+		[17] = { itemID = 40638 }; --Mantle of the Lost Protector
+		[18] = { itemID = 40639 }; --Mantle of the Lost Vanquisher
+		[19] = { itemID = 40625 }; --Breastplate of the Lost Conqueror
+		[20] = { itemID = 40626 }; --Breastplate of the Lost Protector
+		[21] = { itemID = 40627 }; --Breastplate of the Lost Vanquisher
+		[22] = { itemID = 40634 }; --Legplates of the Lost Conqueror
+		[23] = { itemID = 40635 }; --Legplates of the Lost Protector
+		[24] = { itemID = 40636 }; --Legplates of the Lost Vanquisher
 	};
 	{
 		Name = BabbleBoss["Thaddius"];
@@ -3487,9 +3487,9 @@ AtlasLoot_Data["Naxxramas80"] = {
 		[3] = { itemID = 39293 }; --Blackened Legplates of Feugen
 		[4] = { itemID = 39292 }; --Repelling Charge
 		[5] = { itemID = 39291 }; --Torment of the Banished
-		[16] = { itemID = 40619, droprate = "7%" }; --Leggings of the Lost Conqueror
-		[17] = { itemID = 40620, droprate = "8%" }; --Leggings of the Lost Protector
-		[18] = { itemID = 40621, droprate = "6%" }; --Leggings of the Lost Vanquisher
+		[16] = { itemID = 40619 }; --Leggings of the Lost Conqueror
+		[17] = { itemID = 40620 }; --Leggings of the Lost Protector
+		[18] = { itemID = 40621 }; --Leggings of the Lost Vanquisher
 	};
 	{
 		Name = BabbleBoss["Thaddius"];
@@ -3501,148 +3501,148 @@ AtlasLoot_Data["Naxxramas80"] = {
 		[6] = { itemID = 40302 }; --Benefactor's Gauntlets
 		[7] = { itemID = 40298 }; --Faceguard of the Succumbed
 		[8] = { itemID = 40294 }; --Riveted Abomination Leggings
-		[9] = { itemID = 40297, droprate = "7%" }; --Sabatons of Endurance
+		[9] = { itemID = 40297 }; --Sabatons of Endurance
 		[10] = { itemID = 40300 }; --Spire of Sunset
-		[16] = { itemID = 40634, droprate = "6%" }; --Legplates of the Lost Conqueror
-		[17] = { itemID = 40635, droprate = "8%" }; --Legplates of the Lost Protector
-		[18] = { itemID = 40636, droprate = "6%" }; --Legplates of the Lost Vanquisher
+		[16] = { itemID = 40634 }; --Legplates of the Lost Conqueror
+		[17] = { itemID = 40635 }; --Legplates of the Lost Protector
+		[18] = { itemID = 40636 }; --Legplates of the Lost Vanquisher
 	};
 	{
 		Name = BabbleBoss["Anub'Rekhan"];
-		[1] = { itemID = 39192, droprate = "0%" }; --Gloves of Dark Gestures
-		[2] = { itemID = 39190, droprate = "0%" }; --Agonal Sash
-		[3] = { itemID = 39191, droprate = "1%" }; --Splint-Bound Leggings
-		[4] = { itemID = 39189, droprate = "0%" }; --Boots of Persistence
-		[5] = { itemID = 39188, droprate = "0%" }; --Chivalric Chestguard
-		[6] = { itemID = 39139, droprate = "1%" }; --Ravaging Sabatons
-		[7] = { itemID = 39146, droprate = "0%" }; --Collar of Dissolution
-		[8] = { itemID = 39193, droprate = "1%" }; --Band of Neglected Pleas
-		[9] = { itemID = 39141, droprate = "0%" }; --Deflection Band
-		[10] = { itemID = 39140, droprate = "1%" }; --Knife of Incision
+		[1] = { itemID = 39192 }; --Gloves of Dark Gestures
+		[2] = { itemID = 39190 }; --Agonal Sash
+		[3] = { itemID = 39191 }; --Splint-Bound Leggings
+		[4] = { itemID = 39189 }; --Boots of Persistence
+		[5] = { itemID = 39188 }; --Chivalric Chestguard
+		[6] = { itemID = 39139 }; --Ravaging Sabatons
+		[7] = { itemID = 39146 }; --Collar of Dissolution
+		[8] = { itemID = 39193 }; --Band of Neglected Pleas
+		[9] = { itemID = 39141 }; --Deflection Band
+		[10] = { itemID = 39140 }; --Knife of Incision
 	};
 	{
 		Name = BabbleBoss["Anub'Rekhan"];
 		[1] = { itemID = 39719 }; --Mantle of the Locusts
-		[2] = { itemID = 39721, droprate = "9%" }; --Sash of the Parlor
+		[2] = { itemID = 39721 }; --Sash of the Parlor
 		[3] = { itemID = 39720 }; --Leggings of Atrophy
 		[4] = { itemID = 39722 }; --Swarm Bindings
-		[5] = { itemID = 39701, droprate = "9%" }; --Dawnwalkers
+		[5] = { itemID = 39701 }; --Dawnwalkers
 		[6] = { itemID = 39702 }; --Arachnoid Gold Band
 		[7] = { itemID = 39718 }; --Corpse Scarab Handguards
-		[8] = { itemID = 39704, droprate = "9%" }; --Pauldrons of Unnatural Death
-		[9] = { itemID = 39703, droprate = "9%" }; --Rescinding Grips
-		[10] = { itemID = 39717, droprate = "3%" }; --Inexorable Sabatons
+		[8] = { itemID = 39704 }; --Pauldrons of Unnatural Death
+		[9] = { itemID = 39703 }; --Rescinding Grips
+		[10] = { itemID = 39717 }; --Inexorable Sabatons
 		[11] = { itemID = 39706 }; --Sabatons of Sudden Reprisal
-		[12] = { itemID = 40071, droprate = "1%" }; --Chains of Adoration
-		[13] = { itemID = 40065, droprate = "1%" }; --Fool's Trial
-		[14] = { itemID = 40069, droprate = "1%" }; --Heritage
-		[15] = { itemID = 40064, droprate = "1%" }; --Thunderstorm Amulet
-		[16] = { itemID = 40080, droprate = "1%" }; --Lost Jewel
-		[17] = { itemID = 40075, droprate = "1%" }; --Ruthlessness
-		[18] = { itemID = 40107, droprate = "1%" }; --Sand-Worn Band
-		[19] = { itemID = 40074, droprate = "2%" }; --Strong-Handed Ring
-		[20] = { itemID = 39714, droprate = "4%" }; --Webbed Death
-		[21] = { itemID = 40208, droprate = "0%" }; --Cryptfiend's Bite
-		[22] = { itemID = 39716, droprate = "4%" }; --Shield of Assimilation
-		[23] = { itemID = 39712, droprate = "4%" }; --Gemmed Wand of the Nerubians
+		[12] = { itemID = 40071 }; --Chains of Adoration
+		[13] = { itemID = 40065 }; --Fool's Trial
+		[14] = { itemID = 40069 }; --Heritage
+		[15] = { itemID = 40064 }; --Thunderstorm Amulet
+		[16] = { itemID = 40080 }; --Lost Jewel
+		[17] = { itemID = 40075 }; --Ruthlessness
+		[18] = { itemID = 40107 }; --Sand-Worn Band
+		[19] = { itemID = 40074 }; --Strong-Handed Ring
+		[20] = { itemID = 39714 }; --Webbed Death
+		[21] = { itemID = 40208 }; --Cryptfiend's Bite
+		[22] = { itemID = 39716 }; --Shield of Assimilation
+		[23] = { itemID = 39712 }; --Gemmed Wand of the Nerubians
 	};
 	{
 		Name = BabbleBoss["Grand Widow Faerlina"];
-		[1] = { itemID = 39216, droprate = "0%" }; --Sash of Mortal Desire
-		[2] = { itemID = 39215, droprate = "1%" }; --Boots of the Follower
-		[3] = { itemID = 39196, droprate = "1%" }; --Boots of the Worshiper
-		[4] = { itemID = 39217, droprate = "1%" }; --Avenging Combat Leggings
-		[5] = { itemID = 39194, droprate = "0%" }; --Rusted-Link Spiked Gauntlets
-		[6] = { itemID = 39198, droprate = "0%" }; --Frostblight Pauldrons
-		[7] = { itemID = 39195, droprate = "1%" }; --Bracers of Lost Sentiments
-		[8] = { itemID = 39197, droprate = "0%" }; --Gauntlets of the Master
-		[9] = { itemID = 39199, droprate = "1%" }; --Watchful Eye
-		[10] = { itemID = 39200, droprate = "1%" }; --Grieving Spellblade
+		[1] = { itemID = 39216 }; --Sash of Mortal Desire
+		[2] = { itemID = 39215 }; --Boots of the Follower
+		[3] = { itemID = 39196 }; --Boots of the Worshiper
+		[4] = { itemID = 39217 }; --Avenging Combat Leggings
+		[5] = { itemID = 39194 }; --Rusted-Link Spiked Gauntlets
+		[6] = { itemID = 39198 }; --Frostblight Pauldrons
+		[7] = { itemID = 39195 }; --Bracers of Lost Sentiments
+		[8] = { itemID = 39197 }; --Gauntlets of the Master
+		[9] = { itemID = 39199 }; --Watchful Eye
+		[10] = { itemID = 39200 }; --Grieving Spellblade
 	};
 	{
 		Name = BabbleBoss["Grand Widow Faerlina"];
 		[1] = { itemID = 39732 }; --Faerlina's Madness
 		[2] = { itemID = 39731 }; --Punctilious Bindings
-		[3] = { itemID = 39733, droprate = "9%" }; --Gloves of Token Respect
+		[3] = { itemID = 39733 }; --Gloves of Token Respect
 		[4] = { itemID = 39735 }; --Belt of False Dignity
-		[5] = { itemID = 39756, droprate = "9%" }; --Tunic of Prejudice
-		[6] = { itemID = 39727, droprate = "0%" }; --Dislocating Handguards
+		[5] = { itemID = 39756 }; --Tunic of Prejudice
+		[6] = { itemID = 39727 }; --Dislocating Handguards
 		[7] = { itemID = 39724 }; --Cult's Chestguard
 		[8] = { itemID = 39734 }; --Atonement Greaves
-		[9] = { itemID = 39723, droprate = "3%" }; --Fire-Scorched Greathelm
-		[10] = { itemID = 39725, droprate = "1%" }; --Epaulets of the Grieving Servant
+		[9] = { itemID = 39723 }; --Fire-Scorched Greathelm
+		[10] = { itemID = 39725 }; --Epaulets of the Grieving Servant
 		[11] = { itemID = 39729 }; --Bracers of the Tyrant
-		[12] = { itemID = 39726, droprate = "4%" }; --Callous-Hearted Gauntlets
-		[13] = { itemID = 40071, droprate = "1%" }; --Chains of Adoration
-		[14] = { itemID = 40065, droprate = "1%" }; --Fool's Trial
-		[15] = { itemID = 40069, droprate = "1%" }; --Heritage
-		[16] = { itemID = 40064, droprate = "1%" }; --Thunderstorm Amulet
-		[17] = { itemID = 40080, droprate = "1%" }; --Lost Jewel
-		[18] = { itemID = 40075, droprate = "1%" }; --Ruthlessness
-		[19] = { itemID = 40107, droprate = "1%" }; --Sand-Worn Band
-		[20] = { itemID = 40108, droprate = "1%" }; --Seized Beauty
-		[21] = { itemID = 40074, droprate = "2%" }; --Strong-Handed Ring
+		[12] = { itemID = 39726 }; --Callous-Hearted Gauntlets
+		[13] = { itemID = 40071 }; --Chains of Adoration
+		[14] = { itemID = 40065 }; --Fool's Trial
+		[15] = { itemID = 40069 }; --Heritage
+		[16] = { itemID = 40064 }; --Thunderstorm Amulet
+		[17] = { itemID = 40080 }; --Lost Jewel
+		[18] = { itemID = 40075 }; --Ruthlessness
+		[19] = { itemID = 40107 }; --Sand-Worn Band
+		[20] = { itemID = 40108 }; --Seized Beauty
+		[21] = { itemID = 40074 }; --Strong-Handed Ring
 		[22] = { itemID = 39757 }; --Idol of Worship
 		[23] = { itemID = 39728 }; --Totem of Misery
 		[24] = { itemID = 39730 }; --Widow's Fury
 	};
 	{
 		Name = BabbleBoss["Maexxna"];
-		[1] = { itemID = 39225, droprate = "0%" }; --Cloak of Armed Strife
-		[2] = { itemID = 39230, droprate = "1%" }; --Spaulders of the Monstrosity
-		[3] = { itemID = 39224, droprate = "0%" }; --Leggings of Discord
-		[4] = { itemID = 39228, droprate = "0%" }; --Web Cocoon Grips
-		[5] = { itemID = 39232, droprate = "0%" }; --Pendant of Lost Vocations
-		[6] = { itemID = 39231, droprate = "0%" }; --Timeworn Silken Band
-		[7] = { itemID = 39229, droprate = "1%" }; --Embrace of the Spider
-		[8] = { itemID = 39226, droprate = "0%" }; --Maexxna's Femur
-		[9] = { itemID = 39221, droprate = "0%" }; --Wraith Spear
-		[10] = { itemID = 39233, droprate = "0%" }; --Aegis of Damnation
+		[1] = { itemID = 39225 }; --Cloak of Armed Strife
+		[2] = { itemID = 39230 }; --Spaulders of the Monstrosity
+		[3] = { itemID = 39224 }; --Leggings of Discord
+		[4] = { itemID = 39228 }; --Web Cocoon Grips
+		[5] = { itemID = 39232 }; --Pendant of Lost Vocations
+		[6] = { itemID = 39231 }; --Timeworn Silken Band
+		[7] = { itemID = 39229 }; --Embrace of the Spider
+		[8] = { itemID = 39226 }; --Maexxna's Femur
+		[9] = { itemID = 39221 }; --Wraith Spear
+		[10] = { itemID = 39233 }; --Aegis of Damnation
 	};
 	{
 		Name = BabbleBoss["Maexxna"];
-		[1] = { itemID = 40250, desc = "-q4-Aged Winter Cloak", droprate = "1%" };
-		[2] = { itemID = 40254, droprate = "1%" }; --Cloak of Averted Crisis
-		[3] = { itemID = 40252, droprate = "1%" }; --Cloak of the Shadowed Sun
-		[4] = { itemID = 40253, droprate = "1%" }; --Shawl of the Old Maid
-		[5] = { itemID = 40251, droprate = "1%" }; --Shroud of Luminosity
+		[1] = { itemID = 40250, desc = "-q4-Aged Winter Cloak" };
+		[2] = { itemID = 40254 }; --Cloak of Averted Crisis
+		[3] = { itemID = 40252 }; --Cloak of the Shadowed Sun
+		[4] = { itemID = 40253 }; --Shawl of the Old Maid
+		[5] = { itemID = 40251 }; --Shroud of Luminosity
 		[6] = { itemID = 40062 }; --Digested Silken Robes
 		[7] = { itemID = 40060 }; --Distorted Limbs
 		[8] = { itemID = 39768 }; --Cowl of the Perished
 		[9] = { itemID = 40063 }; --Mantle of Shattered Kinship
-		[10] = { itemID = 39765, droprate = "9%" }; --Sinner's Bindings
+		[10] = { itemID = 39765 }; --Sinner's Bindings
 		[11] = { itemID = 39761 }; --Infectious Skitterer Leggings
-		[12] = { itemID = 40061, droprate = "9%" }; --Quivering Tunic
+		[12] = { itemID = 40061 }; --Quivering Tunic
 		[13] = { itemID = 39762 }; --Torn Web Wrapping
-		[14] = { itemID = 39760, droprate = "8%" }; --Helm of Diminished Pride
+		[14] = { itemID = 39760 }; --Helm of Diminished Pride
 		[15] = { itemID = 39767 }; --Undiminished Battleplate
 		[16] = { itemID = 39764 }; --Bindings of the Hapless Prey
 		[17] = { itemID = 39759 }; --Ablative Chitin Girdle
-		[18] = { itemID = 40257, droprate = "1%" }; --Defender's Code
-		[19] = { itemID = 40255, droprate = "1%" }; --Dying Curse
-		[20] = { itemID = 40258, droprate = "1%" }; --Forethought Talisman
-		[21] = { itemID = 40256, droprate = "1%" }; --Grim Toll
-		[22] = { itemID = 39766, droprate = "9%" }; --Matriarch's Spawn
+		[18] = { itemID = 40257 }; --Defender's Code
+		[19] = { itemID = 40255 }; --Dying Curse
+		[20] = { itemID = 40258 }; --Forethought Talisman
+		[21] = { itemID = 40256 }; --Grim Toll
+		[22] = { itemID = 39766 }; --Matriarch's Spawn
 		[23] = { itemID = 39763 }; --Wraith Strike
 		[24] = { itemID = 39758 }; --The Jawbone
 	};
 	{
 		Name = BabbleBoss["Instructor Razuvious"];
-		[1] = { itemID = 39297, droprate = "0%" }; --Cloak of Darkening
-		[2] = { itemID = 39310, droprate = "0%" }; --Mantle of the Extensive Mind
-		[3] = { itemID = 39309, droprate = "0%" }; --Leggings of the Instructor
-		[4] = { itemID = 39299, droprate = "0%" }; --Rapid Attack Gloves
-		[5] = { itemID = 39308, droprate = "0%" }; --Girdle of Lenience
-		[6] = { itemID = 39307, droprate = "0%" }; --Iron Rings of Endurance
-		[7] = { itemID = 39306, droprate = "0%" }; --Plated Gloves of Relief
-		[8] = { itemID = 39298, droprate = "0%" }; --Waistguard of the Tutor
-		[9] = { itemID = 39311, droprate = "0%" }; --Scepter of Murmuring Spirits
-		[10] = { itemID = 39296, droprate = "0%" }; --Accursed Bow of the Elite
+		[1] = { itemID = 39297 }; --Cloak of Darkening
+		[2] = { itemID = 39310 }; --Mantle of the Extensive Mind
+		[3] = { itemID = 39309 }; --Leggings of the Instructor
+		[4] = { itemID = 39299 }; --Rapid Attack Gloves
+		[5] = { itemID = 39308 }; --Girdle of Lenience
+		[6] = { itemID = 39307 }; --Iron Rings of Endurance
+		[7] = { itemID = 39306 }; --Plated Gloves of Relief
+		[8] = { itemID = 39298 }; --Waistguard of the Tutor
+		[9] = { itemID = 39311 }; --Scepter of Murmuring Spirits
+		[10] = { itemID = 39296 }; --Accursed Bow of the Elite
 	};
 	{
 		Name = BabbleBoss["Instructor Razuvious"];
 		[1] = { itemID = 40325 }; --Bindings of the Expansive Mind
-		[2] = { itemID = 40326, droprate = "0%" }; --Boots of Forlorn Wishes
+		[2] = { itemID = 40326 }; --Boots of Forlorn Wishes
 		[3] = { itemID = 40305 }; --Spaulders of Egotism
 		[4] = { itemID = 40319 }; --Chestpiece of Suspicion
 		[5] = { itemID = 40323 }; --Esteemed Bindings
@@ -3654,39 +3654,39 @@ AtlasLoot_Data["Naxxramas80"] = {
 		[11] = { itemID = 40317 }; --Girdle of Razuvious
 		[12] = { itemID = 40318 }; --Legplates of Double Strikes
 		[13] = { itemID = 40320 }; --Faithful Steel Sabatons
-		[14] = { itemID = 40071, droprate = "1%" }; --Chains of Adoration
-		[15] = { itemID = 40065, droprate = "1%" }; --Fool's Trial
-		[16] = { itemID = 40069, droprate = "1%" }; --Heritage
-		[17] = { itemID = 40064, droprate = "1%" }; --Thunderstorm Amulet
-		[18] = { itemID = 40080, droprate = "1%" }; --Lost Jewel
-		[19] = { itemID = 40075, droprate = "1%" }; --Ruthlessness
-		[20] = { itemID = 40107, droprate = "1%" }; --Sand-Worn Band
-		[21] = { itemID = 40074, droprate = "2%" }; --Strong-Handed Ring
+		[14] = { itemID = 40071 }; --Chains of Adoration
+		[15] = { itemID = 40065 }; --Fool's Trial
+		[16] = { itemID = 40069 }; --Heritage
+		[17] = { itemID = 40064 }; --Thunderstorm Amulet
+		[18] = { itemID = 40080 }; --Lost Jewel
+		[19] = { itemID = 40075 }; --Ruthlessness
+		[20] = { itemID = 40107 }; --Sand-Worn Band
+		[21] = { itemID = 40074 }; --Strong-Handed Ring
 		[22] = { itemID = 40321 }; --Idol of the Shooting Star
 		[23] = { itemID = 40322 }; --Totem of Dueling
 	};
 	{
 		Name = BabbleBoss["Gothik the Harvester"];
-		[1] = { itemID = 39390, droprate = "0%" }; --Resurgent Phantom Bindings
-		[2] = { itemID = 39386, droprate = "9%" }; --Tunic of Dislocation
-		[3] = { itemID = 39391, droprate = "1%" }; --Heinous Mail Chestguard
-		[4] = { itemID = 39379, droprate = "0%" }; --Spectral Rider's Girdle
-		[5] = { itemID = 39345, droprate = "0%" }; --Girdle of the Ascended Phantom
-		[6] = { itemID = 39369, droprate = "0%" }; --Sabatons of Deathlike Gloom
-		[7] = { itemID = 39392, droprate = "0%" }; --Veiled Amulet of Life
-		[8] = { itemID = 39389, droprate = "0%" }; --Signet of the Malevolent
-		[9] = { itemID = 39388, droprate = "0%" }; --Spirit-World Glass
-		[10] = { itemID = 39344, droprate = "0%" }; --Slayer of the Lifeless
+		[1] = { itemID = 39390 }; --Resurgent Phantom Bindings
+		[2] = { itemID = 39386 }; --Tunic of Dislocation
+		[3] = { itemID = 39391 }; --Heinous Mail Chestguard
+		[4] = { itemID = 39379 }; --Spectral Rider's Girdle
+		[5] = { itemID = 39345 }; --Girdle of the Ascended Phantom
+		[6] = { itemID = 39369 }; --Sabatons of Deathlike Gloom
+		[7] = { itemID = 39392 }; --Veiled Amulet of Life
+		[8] = { itemID = 39389 }; --Signet of the Malevolent
+		[9] = { itemID = 39388 }; --Spirit-World Glass
+		[10] = { itemID = 39344 }; --Slayer of the Lifeless
 	};
 	{
 		Name = BabbleBoss["Gothik the Harvester"];
-		[1] = { itemID = 40250, desc = "-q4-Aged Winter Cloak", droprate = "1%" };
-		[2] = { itemID = 40254, droprate = "1%" }; --Cloak of Averted Crisis
-		[3] = { itemID = 40252, droprate = "1%" }; --Cloak of the Shadowed Sun
-		[4] = { itemID = 40253, droprate = "1%" }; --Shawl of the Old Maid
-		[5] = { itemID = 40251, droprate = "1%" }; --Shroud of Luminosity
-		[6] = { itemID = 40339, droprate = "9%" }; --Gothik's Cowl
-		[7] = { itemID = 40338, droprate = "9%" }; --Bindings of Yearning
+		[1] = { itemID = 40250, desc = "-q4-Aged Winter Cloak" };
+		[2] = { itemID = 40254 }; --Cloak of Averted Crisis
+		[3] = { itemID = 40252 }; --Cloak of the Shadowed Sun
+		[4] = { itemID = 40253 }; --Shawl of the Old Maid
+		[5] = { itemID = 40251 }; --Shroud of Luminosity
+		[6] = { itemID = 40339 }; --Gothik's Cowl
+		[7] = { itemID = 40338 }; --Bindings of Yearning
 		[8] = { itemID = 40329 }; --Hood of the Exodus
 		[9] = { itemID = 40341 }; --Shackled Cinch
 		[10] = { itemID = 40333 }; --Leggings of Fleeting Moments
@@ -3694,225 +3694,225 @@ AtlasLoot_Data["Naxxramas80"] = {
 		[12] = { itemID = 40331 }; --Leggings of Failed Escape
 		[13] = { itemID = 40328 }; --Helm of Vital Protection
 		[14] = { itemID = 40334 }; --Burdened Shoulderplates
-		[15] = { itemID = 40332, droprate = "9%" }; --Abetment Bracers
+		[15] = { itemID = 40332 }; --Abetment Bracers
 		[16] = { itemID = 40330 }; --Bracers of Unrelenting Attack
-		[17] = { itemID = 40257, droprate = "1%" }; --Defender's Code
-		[18] = { itemID = 40255, droprate = "1%" }; --Dying Curse
-		[19] = { itemID = 40258, droprate = "1%" }; --Forethought Talisman
-		[20] = { itemID = 40256, droprate = "1%" }; --Grim Toll
+		[17] = { itemID = 40257 }; --Defender's Code
+		[18] = { itemID = 40255 }; --Dying Curse
+		[19] = { itemID = 40258 }; --Forethought Talisman
+		[20] = { itemID = 40256 }; --Grim Toll
 		[21] = { itemID = 40342 }; --Idol of Awakening
-		[22] = { itemID = 40337, droprate = "9%" }; --Libram of Resurgence
-		[23] = { itemID = 40336, droprate = "9%" }; --Life and Death
+		[22] = { itemID = 40337 }; --Libram of Resurgence
+		[23] = { itemID = 40336 }; --Life and Death
 		[24] = { itemID = 40335 }; --Touch of Horror
 	};
 	{
 		Name = BabbleBoss["The Four Horsemen"];
-		[1] = { itemID = 39396, droprate = "2%" }; --Gown of Blaumeux
-		[2] = { itemID = 39397, droprate = "2%" }; --Pauldrons of Havoc
-		[3] = { itemID = 39395, droprate = "2%" }; --Thane's Tainted Greathelm
-		[4] = { itemID = 39393, droprate = "2%" }; --Claymore of Ancient Power
-		[5] = { itemID = 39394, droprate = "2%" }; --Charmed Cierge
-		[16] = { itemID = 40610, droprate = "8%" }; --Chestguard of the Lost Conqueror
-		[17] = { itemID = 40611, droprate = "9%" }; --Chestguard of the Lost Protector
-		[18] = { itemID = 40612, droprate = "5%" }; --Chestguard of the Lost Vanquisher
+		[1] = { itemID = 39396 }; --Gown of Blaumeux
+		[2] = { itemID = 39397 }; --Pauldrons of Havoc
+		[3] = { itemID = 39395 }; --Thane's Tainted Greathelm
+		[4] = { itemID = 39393 }; --Claymore of Ancient Power
+		[5] = { itemID = 39394 }; --Charmed Cierge
+		[16] = { itemID = 40610 }; --Chestguard of the Lost Conqueror
+		[17] = { itemID = 40611 }; --Chestguard of the Lost Protector
+		[18] = { itemID = 40612 }; --Chestguard of the Lost Vanquisher
 	};
 	{
 		Name = BabbleBoss["The Four Horsemen"];
-		[1] = { itemID = 40349, droprate = "1%" }; --Gloves of Peaceful Death
-		[2] = { itemID = 40344, droprate = "0%" }; --Helm of the Grave
-		[3] = { itemID = 40352, droprate = "0%" }; --Leggings of Voracious Shadows
+		[1] = { itemID = 40349 }; --Gloves of Peaceful Death
+		[2] = { itemID = 40344 }; --Helm of the Grave
+		[3] = { itemID = 40352 }; --Leggings of Voracious Shadows
 		[4] = { itemID = 40347 }; --Zeliek's Gauntlets
-		[5] = { itemID = 40350, droprate = "0%" }; --Urn of Lost Memories
-		[6] = { itemID = 40345, droprate = "0%" }; --Broken Promise
+		[5] = { itemID = 40350 }; --Urn of Lost Memories
+		[6] = { itemID = 40345 }; --Broken Promise
 		[8] = { itemID = 40343 }; --Armageddon
-		[7] = { itemID = 40348, droprate = "0%" }; --Damnation
-		[9] = { itemID = 40346, droprate = "0%" }; --Final Voyage
-		[16] = { itemID = 40625, droprate = "0%" }; --Breastplate of the Lost Conqueror
-		[17] = { itemID = 40626, droprate = "0%" }; --Breastplate of the Lost Protector
-		[18] = { itemID = 40627, droprate = "0%" }; --Breastplate of the Lost Vanquisher
+		[7] = { itemID = 40348 }; --Damnation
+		[9] = { itemID = 40346 }; --Final Voyage
+		[16] = { itemID = 40625 }; --Breastplate of the Lost Conqueror
+		[17] = { itemID = 40626 }; --Breastplate of the Lost Protector
+		[18] = { itemID = 40627 }; --Breastplate of the Lost Vanquisher
 	};
 	{
 		Name = BabbleBoss["Noth the Plaguebringer"];
-		[1] = { itemID = 39241, droprate = "0%" }; --Dark Shroud of the Scourge
-		[2] = { itemID = 39242, droprate = "0%" }; --Robes of Hoarse Breaths
-		[3] = { itemID = 39240, droprate = "0%" }; --Noth's Curse
-		[4] = { itemID = 39237, droprate = "0%" }; --Spaulders of Resumed Battle
-		[5] = { itemID = 39243, droprate = "0%" }; --Handgrips of the Foredoomed
-		[6] = { itemID = 39236, droprate = "0%" }; --Trespasser's Boots
-		[7] = { itemID = 39239, droprate = "0%" }; --Chestplate of the Risen Soldier
-		[8] = { itemID = 39235, droprate = "0%" }; --Bone-Framed Bracers
-		[9] = { itemID = 39234, droprate = "0%" }; --Plague-Impervious Boots
-		[10] = { itemID = 39244, droprate = "0%" }; --Ring of the Fated
+		[1] = { itemID = 39241 }; --Dark Shroud of the Scourge
+		[2] = { itemID = 39242 }; --Robes of Hoarse Breaths
+		[3] = { itemID = 39240 }; --Noth's Curse
+		[4] = { itemID = 39237 }; --Spaulders of Resumed Battle
+		[5] = { itemID = 39243 }; --Handgrips of the Foredoomed
+		[6] = { itemID = 39236 }; --Trespasser's Boots
+		[7] = { itemID = 39239 }; --Chestplate of the Risen Soldier
+		[8] = { itemID = 39235 }; --Bone-Framed Bracers
+		[9] = { itemID = 39234 }; --Plague-Impervious Boots
+		[10] = { itemID = 39244 }; --Ring of the Fated
 	};
 	{
 		Name = BabbleBoss["Noth the Plaguebringer"];
-		[1] = { itemID = 40602, droprate = "9%" }; --Robes of Mutation
+		[1] = { itemID = 40602 }; --Robes of Mutation
 		[2] = { itemID = 40198 }; --Bands of Impurity
 		[3] = { itemID = 40197 }; --Gloves of the Fallen Wizard
 		[4] = { itemID = 40186 }; --Thrusting Bands
 		[5] = { itemID = 40200 }; --Belt of Potent Chanting
-		[6] = { itemID = 40193, droprate = "0%" }; --Tunic of Masked Suffering
+		[6] = { itemID = 40193 }; --Tunic of Masked Suffering
 		[7] = { itemID = 40196 }; --Legguards of the Undisturbed
 		[8] = { itemID = 40184 }; --Crippled Treads
 		[9] = { itemID = 40185 }; --Shoulderguards of Opportunity
 		[10] = { itemID = 40188 }; --Gauntlets of the Disobediant
 		[11] = { itemID = 40187 }; --Poignant Sabatons
-		[12] = { itemID = 40071, droprate = "1%" }; --Chains of Adoration
-		[13] = { itemID = 40065, droprate = "1%" }; --Fool's Trial
-		[14] = { itemID = 40069, droprate = "1%" }; --Heritage
-		[15] = { itemID = 40064, droprate = "1%" }; --Thunderstorm Amulet
-		[16] = { itemID = 40080, droprate = "1%" }; --Lost Jewel
-		[17] = { itemID = 40075, droprate = "1%" }; --Ruthlessness
-		[18] = { itemID = 40107, droprate = "1%" }; --Sand-Worn Band
-		[29] = { itemID = 40074, droprate = "2%" }; --Strong-Handed Ring
+		[12] = { itemID = 40071 }; --Chains of Adoration
+		[13] = { itemID = 40065 }; --Fool's Trial
+		[14] = { itemID = 40069 }; --Heritage
+		[15] = { itemID = 40064 }; --Thunderstorm Amulet
+		[16] = { itemID = 40080 }; --Lost Jewel
+		[17] = { itemID = 40075 }; --Ruthlessness
+		[18] = { itemID = 40107 }; --Sand-Worn Band
+		[29] = { itemID = 40074 }; --Strong-Handed Ring
 		[20] = { itemID = 40192 }; --Accursed Spine
 		[21] = { itemID = 40191 }; --Libram of Radiance
-		[22] = { itemID = 40189, droprate = "9%" }; --Angry Dread
+		[22] = { itemID = 40189 }; --Angry Dread
 		[23] = { itemID = 40190 }; --Spinning Fate
 	};
 	{
 		Name = BabbleBoss["Heigan the Unclean"];
 		[1] = { itemID = 39252 }; --Preceptor's Bindings
-		[2] = { itemID = 39254, droprate = "0%" }; --Saltarello Shoes
+		[2] = { itemID = 39254 }; --Saltarello Shoes
 		[3] = { itemID = 39247 }; --Cuffs of Dark Shadows
-		[4] = { itemID = 39248, droprate = "0%" }; --Tunic of the Lost Pack
-		[5] = { itemID = 39251, droprate = "0%" }; --Necrogenic Belt
+		[4] = { itemID = 39248 }; --Tunic of the Lost Pack
+		[5] = { itemID = 39251 }; --Necrogenic Belt
 		[6] = { itemID = 39249 }; --Shoulderplates of Bloodshed
 		[7] = { itemID = 39246 }; --Amulet of Autopsy
-		[8] = { itemID = 39250, droprate = "0%" }; --Ring of Holy Cleansing
+		[8] = { itemID = 39250 }; --Ring of Holy Cleansing
 		[9] = { itemID = 39245 }; --Demise
 		[10] = { itemID = 39255 }; --Staff of the Plague Beast
 	};
 	{
 		Name = BabbleBoss["Heigan the Unclean"];
-		[1] = { itemID = 40250, droprate = "1%" }; --Aged Winter Cloak
-		[2] = { itemID = 40254, droprate = "1%" }; --Cloak of Averted Crisis
-		[3] = { itemID = 40252, droprate = "1%" }; --Cloak of the Shadowed Sun
-		[4] = { itemID = 40253, droprate = "1%" }; --Shawl of the Old Maid
-		[5] = { itemID = 40251, droprate = "1%" }; --Shroud of Luminosity
+		[1] = { itemID = 40250 }; --Aged Winter Cloak
+		[2] = { itemID = 40254 }; --Cloak of Averted Crisis
+		[3] = { itemID = 40252 }; --Cloak of the Shadowed Sun
+		[4] = { itemID = 40253 }; --Shawl of the Old Maid
+		[5] = { itemID = 40251 }; --Shroud of Luminosity
 		[6] = { itemID = 40234 }; --Heigan's Putrid Vestments
-		[7] = { itemID = 40236, droprate = "9%" }; --Serene Echoes
+		[7] = { itemID = 40236 }; --Serene Echoes
 		[8] = { itemID = 40238 }; --Gloves of the Dancing Bear
 		[9] = { itemID = 40205 }; --Stalk-Skin Belt
-		[10] = { itemID = 40235, droprate = "0%" }; --Helm of Pilgrimage
+		[10] = { itemID = 40235 }; --Helm of Pilgrimage
 		[11] = { itemID = 40209 }; --Bindings of the Decrepit
 		[12] = { itemID = 40201 }; --Leggings of Colossal Strides
-		[13] = { itemID = 40237, droprate = "0%" }; --Eruption-Scared Boots
-		[14] = { itemID = 40203, droprate = "8%" }; --Breastplate of Tormented Rage
+		[13] = { itemID = 40237 }; --Eruption-Scared Boots
+		[14] = { itemID = 40203 }; --Breastplate of Tormented Rage
 		[15] = { itemID = 40210 }; --Chestguard of Bitter Charms
 		[16] = { itemID = 40204 }; --Legguards of the Apostle
 		[17] = { itemID = 40206 }; --Iron-Spring Jumpers
-		[18] = { itemID = 40257, droprate = "1%" }; --Defender's Code
-		[19] = { itemID = 40255, droprate = "1%" }; --Dying Curse
-		[20] = { itemID = 40258, droprate = "1%" }; --Forethought Talisman
-		[21] = { itemID = 40256, droprate = "1%" }; --Grim Toll
+		[18] = { itemID = 40257 }; --Defender's Code
+		[19] = { itemID = 40255 }; --Dying Curse
+		[20] = { itemID = 40258 }; --Forethought Talisman
+		[21] = { itemID = 40256 }; --Grim Toll
 		[22] = { itemID = 40207 }; --Sigil of Awareness
-		[23] = { itemID = 40208, droprate = "0%" }; --Cryptfiend's Bite
+		[23] = { itemID = 40208 }; --Cryptfiend's Bite
 		[24] = { itemID = 40233 }; --The Undeath Carrier
 	};
 	{
 		Name = BabbleBoss["Loatheb"];
-		[1] = { itemID = 39259, droprate = "0%" }; --Fungi-Stained Coverings
-		[2] = { itemID = 39260, droprate = "0%" }; --Helm of the Corrupted Mind
-		[3] = { itemID = 39258, droprate = "0%" }; --Legplates of Inescapable Death
-		[4] = { itemID = 39257, droprate = "0%" }; --Loatheb's Shadow
-		[5] = { itemID = 39256, droprate = "0%" }; --Sulfur Stave
-		[16] = { itemID = 40622, droprate = "9%" }; --Spaulders of the Lost Conqueror
-		[17] = { itemID = 40623, droprate = "0%" }; --Spaulders of the Lost Protector
-		[18] = { itemID = 40624, droprate = "8%" }; --Spaulders of the Lost Vanquisher
+		[1] = { itemID = 39259 }; --Fungi-Stained Coverings
+		[2] = { itemID = 39260 }; --Helm of the Corrupted Mind
+		[3] = { itemID = 39258 }; --Legplates of Inescapable Death
+		[4] = { itemID = 39257 }; --Loatheb's Shadow
+		[5] = { itemID = 39256 }; --Sulfur Stave
+		[16] = { itemID = 40622 }; --Spaulders of the Lost Conqueror
+		[17] = { itemID = 40623 }; --Spaulders of the Lost Protector
+		[18] = { itemID = 40624 }; --Spaulders of the Lost Vanquisher
 	};
 	{
 		Name = BabbleBoss["Loatheb"];
 		[1] = { itemID = 40247 }; --Cowl of Innocent Delight
 		[2] = { itemID = 40246 }; --Boots of Impetuous Ideals
-		[3] = { itemID = 40249, droprate = "0%" }; --Vest of Vitality
-		[4] = { itemID = 40243, droprate = "0%" }; --Footwraps of Vile Deceit
-		[5] = { itemID = 40242, droprate = "9%" }; --Grotesque Handgrips
-		[6] = { itemID = 40241, droprate = "0%" }; --Girdle of Unity
+		[3] = { itemID = 40249 }; --Vest of Vitality
+		[4] = { itemID = 40243 }; --Footwraps of Vile Deceit
+		[5] = { itemID = 40242 }; --Grotesque Handgrips
+		[6] = { itemID = 40241 }; --Girdle of Unity
 		[7] = { itemID = 40240 }; --Greaves of Turbulence
-		[8] = { itemID = 40244, droprate = "0%" }; --The Impossible Dream
-		[9] = { itemID = 40239, droprate = "9%" }; --The Hand of Nerub
-		[10] = { itemID = 40245, droprate = "0%" }; --Fading Glow
-		[16] = { itemID = 40637, droprate = "7%" }; --Mantle of the Lost Conqueror
-		[17] = { itemID = 40638, droprate = "8%" }; --Mantle of the Lost Protector
-		[18] = { itemID = 40639, droprate = "6%" }; --Mantle of the Lost Vanquisher
+		[8] = { itemID = 40244 }; --The Impossible Dream
+		[9] = { itemID = 40239 }; --The Hand of Nerub
+		[10] = { itemID = 40245 }; --Fading Glow
+		[16] = { itemID = 40637 }; --Mantle of the Lost Conqueror
+		[17] = { itemID = 40638 }; --Mantle of the Lost Protector
+		[18] = { itemID = 40639 }; --Mantle of the Lost Vanquisher
 	};
 	{
 		Name = BabbleBoss["Sapphiron"];
-		[1] = { itemID = 39415, droprate = "9%" }; --Shroud of the Citadel
-		[2] = { itemID = 39404, droprate = "8%" }; --Cloak of Mastery
-		[3] = { itemID = 39409, droprate = "8%" }; --Cowl of Winged Fear
-		[4] = { itemID = 39408, droprate = "9%" }; --Leggings of Sapphiron
-		[5] = { itemID = 39399, droprate = "7%" }; --Helm of the Vast Legions
-		[6] = { itemID = 39405, droprate = "8%" }; --Helmet of the Inner Sanctum
-		[7] = { itemID = 39403, droprate = "7%" }; --Helm of the Unsubmissive
-		[8] = { itemID = 39398, droprate = "9%" }; --Massive Skeletal Ribcage
-		[9] = { itemID = 39401, droprate = "9%" }; --Circle of Death
-		[10] = { itemID = 39407, droprate = "8%" }; --Circle of Life
-		[11] = { itemID = 44569, droprate = "1%" }; --Key to the Focusing Iris
+		[1] = { itemID = 39415 }; --Shroud of the Citadel
+		[2] = { itemID = 39404 }; --Cloak of Mastery
+		[3] = { itemID = 39409 }; --Cowl of Winged Fear
+		[4] = { itemID = 39408 }; --Leggings of Sapphiron
+		[5] = { itemID = 39399 }; --Helm of the Vast Legions
+		[6] = { itemID = 39405 }; --Helmet of the Inner Sanctum
+		[7] = { itemID = 39403 }; --Helm of the Unsubmissive
+		[8] = { itemID = 39398 }; --Massive Skeletal Ribcage
+		[9] = { itemID = 39401 }; --Circle of Death
+		[10] = { itemID = 39407 }; --Circle of Life
+		[11] = { itemID = 44569 }; --Key to the Focusing Iris
 		[12] = { itemID = 44582 }; --Key to the Focusing Iris
 	};
 	{
 		Name = BabbleBoss["Sapphiron"];
-		[1] = { itemID = 40381, droprate = "9%" }; --Sympathy
-		[2] = { itemID = 40380, droprate = "8%" }; --Gloves of Grandeur
-		[3] = { itemID = 40376, droprate = "9%" }; --Legwraps of the Defeated Dragon
-		[4] = { itemID = 40362, droprate = "7%" }; --Gloves of Fast Reactions
-		[5] = { itemID = 40379, droprate = "9%" }; --Legguards of the Boneyard
-		[6] = { itemID = 40367, droprate = "8%" }; --Boots of the Great Construct
-		[7] = { itemID = 40366, droprate = "8%" }; --Platehelm of the Great Wyrm
-		[8] = { itemID = 40377, droprate = "8%" }; --Noble Birthright Pauldrons
-		[9] = { itemID = 40365, droprate = "9%" }; --Breastplate of Frozen Pain
-		[10] = { itemID = 40363, droprate = "8%" }; -- Bone-Inlaid Legguards
-		[11] = { itemID = 40378, droprate = "9%" }; --Ceaseless Pity
-		[12] = { itemID = 40374, droprate = "9%" }; --Cosmic Lights
-		[13] = { itemID = 40369, droprate = "8%" }; --Icy Blast Amulet
-		[14] = { itemID = 40370, droprate = "8%" }; --Gatekeeper
-		[15] = { itemID = 40375, droprate = "0%" }; --Ring of Decaying Beauty
-		[16] = { itemID = 40371, droprate = "8%" }; --Bandit's Insignia
-		[17] = { itemID = 40373, droprate = "8%" }; --Extract of Necromatic Power
-		[18] = { itemID = 40372, droprate = "9%" }; --Rune of Repulsion
-		[19] = { itemID = 40382, droprate = "0%" }; --Soul of the Dead
-		[20] = { itemID = 40368, droprate = "9%" }; --Murder
-		[22] = { itemID = 44577, droprate = "2%" }; --Heroic Key to the Focusing Iris
+		[1] = { itemID = 40381 }; --Sympathy
+		[2] = { itemID = 40380 }; --Gloves of Grandeur
+		[3] = { itemID = 40376 }; --Legwraps of the Defeated Dragon
+		[4] = { itemID = 40362 }; --Gloves of Fast Reactions
+		[5] = { itemID = 40379 }; --Legguards of the Boneyard
+		[6] = { itemID = 40367 }; --Boots of the Great Construct
+		[7] = { itemID = 40366 }; --Platehelm of the Great Wyrm
+		[8] = { itemID = 40377 }; --Noble Birthright Pauldrons
+		[9] = { itemID = 40365 }; --Breastplate of Frozen Pain
+		[10] = { itemID = 40363 }; -- Bone-Inlaid Legguards
+		[11] = { itemID = 40378 }; --Ceaseless Pity
+		[12] = { itemID = 40374 }; --Cosmic Lights
+		[13] = { itemID = 40369 }; --Icy Blast Amulet
+		[14] = { itemID = 40370 }; --Gatekeeper
+		[15] = { itemID = 40375 }; --Ring of Decaying Beauty
+		[16] = { itemID = 40371 }; --Bandit's Insignia
+		[17] = { itemID = 40373 }; --Extract of Necromatic Power
+		[18] = { itemID = 40372 }; --Rune of Repulsion
+		[19] = { itemID = 40382 }; --Soul of the Dead
+		[20] = { itemID = 40368 }; --Murder
+		[22] = { itemID = 44577 }; --Heroic Key to the Focusing Iris
 		[23] = { itemID = 44581 }; --Heroic Key to the Focusing Iris
 	};
 	{
 		Name = BabbleBoss["Kel'Thuzad"];
-		[1] = { itemID = 39425, droprate = "9%" }; --Cloak of the Dying
-		[2] = { itemID = 39421, droprate = "9%" }; --Gem of Imprisoned Vassals
-		[3] = { itemID = 39416, droprate = "8%" }; --Kel'Thuzad's Reach
-		[4] = { itemID = 39424, droprate = "9%" }; --The Soulblade
-		[5] = { itemID = 39420, droprate = "8%" }; --Anarchy
-		[6] = { itemID = 39417, droprate = "8%" }; --Death's Bite
-		[7] = { itemID = 39423, droprate = "8%" }; --Hammer of the Astral Plane
-		[8] = { itemID = 39422, droprate = "9%" }; --Staff of the Plaguehound
-		[9] = { itemID = 39426, droprate = "9%" }; --Wand of the Archlich
-		[10] = { itemID = 39419, droprate = "9%" }; --Nerubian Conquerer
-		[16] = { itemID = 40616, droprate = "8%" }; --Helm of the Lost Conqueror
-		[17] = { itemID = 40617, droprate = "8%" }; --Helm of the Lost Protector
-		[18] = { itemID = 40618, droprate = "8%" }; --Helm of the Lost Vanquisher
+		[1] = { itemID = 39425 }; --Cloak of the Dying
+		[2] = { itemID = 39421 }; --Gem of Imprisoned Vassals
+		[3] = { itemID = 39416 }; --Kel'Thuzad's Reach
+		[4] = { itemID = 39424 }; --The Soulblade
+		[5] = { itemID = 39420 }; --Anarchy
+		[6] = { itemID = 39417 }; --Death's Bite
+		[7] = { itemID = 39423 }; --Hammer of the Astral Plane
+		[8] = { itemID = 39422 }; --Staff of the Plaguehound
+		[9] = { itemID = 39426 }; --Wand of the Archlich
+		[10] = { itemID = 39419 }; --Nerubian Conquerer
+		[16] = { itemID = 40616 }; --Helm of the Lost Conqueror
+		[17] = { itemID = 40617 }; --Helm of the Lost Protector
+		[18] = { itemID = 40618 }; --Helm of the Lost Vanquisher
 	};
 	{
 		Name = BabbleBoss["Kel'Thuzad"];
-		[1] = { itemID = 40405, droprate = "8%" }; --Cape of the Unworthy Wizard
-		[2] = { itemID = 40403, droprate = "8%" }; --Drape of the Deadly Foe
-		[3] = { itemID = 40398, droprate = "8%" }; --Leggings of Mortal Arrogance
-		[4] = { itemID = 40387, droprate = "8%" }; --Boundless Ambition
-		[5] = { itemID = 40399, droprate = "7%" }; --Signet of Manifested Pain
-		[6] = { itemID = 40383, droprate = "8%" }; --Calamity's Grasp
-		[7] = { itemID = 40386, droprate = "7%" }; --Sinister Revenge
-		[8] = { itemID = 40396, droprate = "8%" }; --The Turning Tide
-		[9] = { itemID = 40402, droprate = "8%" }; --Last Laugh
-		[10] = { itemID = 40384, droprate = "7%" }; --Betrayer of Humanity
-		[11] = { itemID = 40395, droprate = "8%" }; --Torch of Holy Fire
-		[12] = { itemID = 40388, droprate = "8%" }; --Journey's End
-		[13] = { itemID = 40401, droprate = "7%" }; --Voice of Reason
-		[14] = { itemID = 40400, droprate = "8%" }; --Wall of Terror
-		[15] = { itemID = 40385, droprate = "7%" }; --Envoy of Mortality
-		[16] = { itemID = 40631, droprate = "4%" }; --Crown of the Lost Conqueror
-		[17] = { itemID = 40632, droprate = "7%" }; --Crown of the Lost Protector
-		[18] = { itemID = 40633, droprate = "3%" }; --Crown of the Lost Vanquisher
+		[1] = { itemID = 40405 }; --Cape of the Unworthy Wizard
+		[2] = { itemID = 40403 }; --Drape of the Deadly Foe
+		[3] = { itemID = 40398 }; --Leggings of Mortal Arrogance
+		[4] = { itemID = 40387 }; --Boundless Ambition
+		[5] = { itemID = 40399 }; --Signet of Manifested Pain
+		[6] = { itemID = 40383 }; --Calamity's Grasp
+		[7] = { itemID = 40386 }; --Sinister Revenge
+		[8] = { itemID = 40396 }; --The Turning Tide
+		[9] = { itemID = 40402 }; --Last Laugh
+		[10] = { itemID = 40384 }; --Betrayer of Humanity
+		[11] = { itemID = 40395 }; --Torch of Holy Fire
+		[12] = { itemID = 40388 }; --Journey's End
+		[13] = { itemID = 40401 }; --Voice of Reason
+		[14] = { itemID = 40400 }; --Wall of Terror
+		[15] = { itemID = 40385 }; --Envoy of Mortality
+		[16] = { itemID = 40631 }; --Crown of the Lost Conqueror
+		[17] = { itemID = 40632 }; --Crown of the Lost Protector
+		[18] = { itemID = 40633 }; --Crown of the Lost Vanquisher
 	};
 	{
 		Name = AL["Trash Mobs"];
@@ -3945,49 +3945,49 @@ AtlasLoot_Data["Sartharion"] = {
 	Type = "WrathRaid";
 	{
 		Name = BabbleBoss["Sartharion"];
-		[1] = { itemID = 40428, droprate = "8%" }; --Titan's Outlook
-		[2] = { itemID = 40427, droprate = "8%" }; --Circle of Arcane Streams
-		[3] = { itemID = 40426, droprate = "9%" }; --Signet of the Accord
+		[1] = { itemID = 40428 }; --Titan's Outlook
+		[2] = { itemID = 40427 }; --Circle of Arcane Streams
+		[3] = { itemID = 40426 }; --Signet of the Accord
 		[4] = { itemID = 40433 }; --Wyrmrest Band
-		[5] = { itemID = 40430, droprate = "8%" }; --Majestic Dragon Figurine
-		[6] = { itemID = 40429, droprate = "8%" }; --Crimson Steel
-		[7] = { itemID = 43345, droprate = "00%" }; --Dragon Hide Bag
-		[8] = { itemID = 43347, droprate = "00%" }; --Satchel of Spoils
+		[5] = { itemID = 40430 }; --Majestic Dragon Figurine
+		[6] = { itemID = 40429 }; --Crimson Steel
+		[7] = { itemID = 43345 }; --Dragon Hide Bag
+		[8] = { itemID = 43347 }; --Satchel of Spoils
 		[10] = { icon = "INV_Box_01", name = WHITE.. AL["Bonus Loot"], desc = "=q5=" .. AL["One Drake Left"] };
 		[11] = { itemID = 43988 }; --Gale-Proof Cloak
 		[12] = { itemID = 43990 }; --Blade-Scarred Tunic
 		[13] = { itemID = 43991 }; --Legguards of Composure
 		[14] = { itemID = 43989 }; --Remembrance Girdle
 		[15] = { itemID = 43992 }; --Volitant Amulet
-		[16] = { itemID = 40613, droprate = "8%" }; --Gloves of the Lost Conqueror
-		[17] = { itemID = 40614, droprate = "9%" }; --Gloves of the Lost Protector
-		[18] = { itemID = 40615, droprate = "7%" }; --Gloves of the Lost Vanquisher
+		[16] = { itemID = 40613 }; --Gloves of the Lost Conqueror
+		[17] = { itemID = 40614 }; --Gloves of the Lost Protector
+		[18] = { itemID = 40615 }; --Gloves of the Lost Vanquisher
 		[20] = { icon = "INV_Box_01", name = WHITE.. AL["Bonus Loot"], desc = "=q5=" .. AL["Two Drakes Left"] };
-		[21] = { itemID = 43995, droprate = ".00%" }; --Enamored Cowl
+		[21] = { itemID = 43995 }; --Enamored Cowl
 		[22] = { itemID = 43998 }; --Chestguard of Flagrant Prowess
 		[23] = { itemID = 43996 }; --Sabatons of Firmament
 		[24] = { itemID = 43994 }; --Belabored Legplates
 		[25] = { itemID = 43993 }; --Greatring of Collision
 		[27] = { icon = "INV_Box_01", name = WHITE.. AL["Bonus Loot"], desc = "=q5=" .. AL["Three Drakes Left"] };
-		[28] = { itemID = 43986, droprate = "00%" }; --Reins of the Black Drake
+		[28] = { itemID = 43986 }; --Reins of the Black Drake
 	};
 	{
 		Name = BabbleBoss["Sartharion"];
-		[1] = { itemID = 40437, droprate = "6%" }; --Concealment Shoulderpads
-		[2] = { itemID = 40439, droprate = "9%" }; --Mantle of the Eternal Sentinel
-		[3] = { itemID = 40451, droprate = "6%" }; --Hyaline Helm of the Sniper
-		[4] = { itemID = 40438, droprate = "9%" }; --Council Chamber Epaulets
-		[5] = { itemID = 40453, droprate = "7%" }; --Chestplate of the Great Aspects
-		[6] = { itemID = 40446, droprate = "7%" }; --Dragon Brood Legguards
+		[1] = { itemID = 40437 }; --Concealment Shoulderpads
+		[2] = { itemID = 40439 }; --Mantle of the Eternal Sentinel
+		[3] = { itemID = 40451 }; --Hyaline Helm of the Sniper
+		[4] = { itemID = 40438 }; --Council Chamber Epaulets
+		[5] = { itemID = 40453 }; --Chestplate of the Great Aspects
+		[6] = { itemID = 40446 }; --Dragon Brood Legguards
 		[7] = { itemID = 40433 }; --Wyrmrest Band
-		[8] = { itemID = 40431, droprate = "7%" }; --Fury of the Five Flights
-		[9] = { itemID = 40432, droprate = "9%" }; --Illustration of the Dragon Soul
-		[10] = { itemID = 40455, droprate = "9%" }; --Staff of Restraint
-		[11] = { itemID = 43345, droprate = "00%" }; --Dragon Hide Bag
-		[12] = { itemID = 43346, droprate = "00%" }; --Large Satchel of Spoils
-		[13] = { itemID = 40628, droprate = "1%" }; --Gauntlets of the Lost Conqueror
-		[14] = { itemID = 40629, droprate = "3%" }; --Gauntlets of the Lost Protector
-		[15] = { itemID = 40630, droprate = "7%" }; --Gauntlets of the Lost Vanquisher
+		[8] = { itemID = 40431 }; --Fury of the Five Flights
+		[9] = { itemID = 40432 }; --Illustration of the Dragon Soul
+		[10] = { itemID = 40455 }; --Staff of Restraint
+		[11] = { itemID = 43345 }; --Dragon Hide Bag
+		[12] = { itemID = 43346 }; --Large Satchel of Spoils
+		[13] = { itemID = 40628 }; --Gauntlets of the Lost Conqueror
+		[14] = { itemID = 40629 }; --Gauntlets of the Lost Protector
+		[15] = { itemID = 40630 }; --Gauntlets of the Lost Vanquisher
 		[16] = { icon = "INV_Box_01", name = WHITE.. AL["Bonus Loot"], desc = "=q5=" .. AL["One Drake Left"] };
 		[17] = { itemID = 44002 }; --The Sanctum's Flowing Vestments
 		[18] = { itemID = 44003 }; --Upstanding Spaulders
@@ -4000,7 +4000,7 @@ AtlasLoot_Data["Sartharion"] = {
 		[26] = { itemID = 44011 }; --Leggings of the Honored
 		[27] = { itemID = 44006 }; --Obsidian Greathelm
 		[29] = { icon = "INV_Box_01", name = WHITE.. AL["Bonus Loot"], desc = "=q5=" .. AL["Three Drakes Left"] };
-		[30] = { itemID = 43954, droprate = "00%" }; --Reins of the Twilight Drake
+		[30] = { itemID = 43954 }; --Reins of the Twilight Drake
 	};
 };
 ---------------------------
@@ -4013,19 +4013,19 @@ AtlasLoot_Data["Malygos"] = {
 	Type = "WrathRaid";
 	{
 		Name = BabbleBoss["Malygos"];
-		[1] = { itemID = 40526, droprate = "2%" }; --Gown of the Spell-Weaver
-		[2] = { itemID = 40519, droprate = "2%" }; --Footsteps of Malygos
-		[3] = { itemID = 40511, droprate = "3%" }; --Focusing Energy Epaulets
-		[4] = { itemID = 40486, droprate = "2%" }; --Necklace of the Glittering Chamber
-		[5] = { itemID = 40474, droprate = "0%" }; --Surge Needle Ring
-		[6] = { itemID = 40491, droprate = "1%" }; --Hailstorm
-		[7] = { itemID = 40488, droprate = "2%" }; --Ice Spire Scepter
-		[8] = { itemID = 40489, droprate = "2%" }; --Greatstaff of the Nexus
-		[9] = { itemID = 40497, droprate = "0%" }; --Black Ice
-		[10] = { itemID = 40475, droprate = "1%" }; --Barricade of Eternity
+		[1] = { itemID = 40526 }; --Gown of the Spell-Weaver
+		[2] = { itemID = 40519 }; --Footsteps of Malygos
+		[3] = { itemID = 40511 }; --Focusing Energy Epaulets
+		[4] = { itemID = 40486 }; --Necklace of the Glittering Chamber
+		[5] = { itemID = 40474 }; --Surge Needle Ring
+		[6] = { itemID = 40491 }; --Hailstorm
+		[7] = { itemID = 40488 }; --Ice Spire Scepter
+		[8] = { itemID = 40489 }; --Greatstaff of the Nexus
+		[9] = { itemID = 40497 }; --Black Ice
+		[10] = { itemID = 40475 }; --Barricade of Eternity
 		[11] = { itemID = 43952 }; --Reins of the Azure Drake
-		[13] = { itemID = 44569, droprate = "1%" }; --Key to the Focusing Iris
-		[16] = { itemID = 44650, droprate = "00%" }; --Heart of Magic
+		[13] = { itemID = 44569 }; --Key to the Focusing Iris
+		[16] = { itemID = 44650 }; --Heart of Magic
 		[17] = { itemID = 44658 }; --Chain of the Ancient Wyrm
 		[18] = { itemID = 44660 }; --Drakescale Collar
 		[19] = { itemID = 44659 }; --Pendant of the Dragonsworn
@@ -4037,25 +4037,25 @@ AtlasLoot_Data["Malygos"] = {
 		[2] = { itemID = 40555 }; --Mantle of Dissemination
 		[3] = { itemID = 40194 }; --Blanketing Robes of Snow
 		[4] = { itemID = 40561 }; --Leash of Heedless Magic
-		[5] = { itemID = 40560, droprate = "0%" }; --Leggings of the Wanton Spellcaster
+		[5] = { itemID = 40560 }; --Leggings of the Wanton Spellcaster
 		[6] = { itemID = 40558 }; --Arcanic Tramplers
-		[7] = { itemID = 40594, droprate = "0%" }; --Spaulders of Catatonia
+		[7] = { itemID = 40594 }; --Spaulders of Catatonia
 		[8] = { itemID = 40539 }; --Chestguard of the Recluse
 		[9] = { itemID = 40541 }; --Frosted Adroit Handguards
-		[10] = { itemID = 40566, droprate = "1%" }; --Unravelling Strands of Sanity
+		[10] = { itemID = 40566 }; --Unravelling Strands of Sanity
 		[11] = { itemID = 40543 }; --Blue Aspect Helm
 		[12] = { itemID = 40588 }; --Tunic of the Artifact Guardian
 		[13] = { itemID = 40564 }; --Winter Spectacle Gloves
 		[14] = { itemID = 40549 }; --Boots of the Renewed Flight
 		[15] = { itemID = 40590 }; --Elevated Lair Pauldrons
 		[16] = { itemID = 40589 }; --Legplates of Sovereignty
-		[17] = { itemID = 40592, droprate = "0%" }; --Boots of Healing Energies
+		[17] = { itemID = 40592 }; --Boots of Healing Energies
 		[18] = { itemID = 40591 }; --Melancholy Sabatons
 		[19] = { itemID = 40532 }; --Living Ice Crystals
 		[20] = { itemID = 40531 }; --Mark of Norgannon
 		[21] = { itemID = 43952 }; --Reins of the Azure Drake
-		[23] = { itemID = 44577, droprate = "2%" }; --Heroic Key to the Focusing Iris
-		[25] = { itemID = 44650, droprate = "00%" }; --Heart of Magic
+		[23] = { itemID = 44577 }; --Heroic Key to the Focusing Iris
+		[25] = { itemID = 44650 }; --Heart of Magic
 		[26] = { itemID = 44664 }; --Favor of the Dragon Queen
 		[27] = { itemID = 44662 }; --Life-Binder's Locket
 		[28] = { itemID = 44665 }; --Nexus War Champion Beads
@@ -4072,127 +4072,127 @@ AtlasLoot_Data["Ulduar"] = {
 	Type = "WrathRaid";
 	{
 		Name = BabbleBoss["Flame Leviathan"];
-		[1] = { itemID = 45289, droprate = "2%" }; --Lifespark Visage
-		[2] = { itemID = 45291, droprate = "7%" }; --Combustion Bracers
-		[3] = { itemID = 45288, droprate = "2%" }; --Firestrider Chestguard
-		[4] = { itemID = 45283, droprate = "9%" }; --Flamewatch Armguards
-		[5] = { itemID = 45285, droprate = "8%" }; --Might of the Leviathan
-		[6] = { itemID = 45292, droprate = "8%" }; --Energy Siphon
-		[7] = { itemID = 45286, droprate = "7%" }; --Pyrite Infuser
-		[8] = { itemID = 45284, droprate = "9%" }; --Kinetic Ripper
-		[9] = { itemID = 45287, droprate = "7%" }; --Firesoul
-		[10] = { itemID = 45282, droprate = "9%" }; --Ironsoul
+		[1] = { itemID = 45289 }; --Lifespark Visage
+		[2] = { itemID = 45291 }; --Combustion Bracers
+		[3] = { itemID = 45288 }; --Firestrider Chestguard
+		[4] = { itemID = 45283 }; --Flamewatch Armguards
+		[5] = { itemID = 45285 }; --Might of the Leviathan
+		[6] = { itemID = 45292 }; --Energy Siphon
+		[7] = { itemID = 45286 }; --Pyrite Infuser
+		[8] = { itemID = 45284 }; --Kinetic Ripper
+		[9] = { itemID = 45287 }; --Firesoul
+		[10] = { itemID = 45282 }; --Ironsoul
 		[16] = { icon = "INV_Box_01", name = WHITE..AL["Hard Mode"] };
-		[17] = { itemID = 45293, droprate = ".18%" }; --Handguards of Potent Cures
+		[17] = { itemID = 45293 }; --Handguards of Potent Cures
 		[18] = { itemID = 45300 }; --Mantle of Fiery Vengeance
-		[19] = { itemID = 45295, droprate = ".25%" }; --Gilded Steel Legplates
-		[20] = { itemID = 45297, droprate = ".11%" }; --Shimmering Seal
-		[21] = { itemID = 45296, droprate = ".36%" }; --Twirling Blades
+		[19] = { itemID = 45295 }; --Gilded Steel Legplates
+		[20] = { itemID = 45297 }; --Shimmering Seal
+		[21] = { itemID = 45296 }; --Twirling Blades
 	};
 	{
 		Name = BabbleBoss["Flame Leviathan"];
-		[1] = { itemID = 45038, droprate = "0%" }; --Fragment of Val'anyr
+		[1] = { itemID = 45038 }; --Fragment of Val'anyr
 		[2] = { itemID = 46017 }; --Val'anyr, Hammer of Ancient Kings
-		[4] = { itemID = 45117, droprate = "9%" }; --Constructor's Handwraps
-		[5] = { itemID = 45119, droprate = "0%" }; --Embrace of the Leviathan
-		[6] = { itemID = 45108, droprate = "9%" }; --Mechanist's Bindings
-		[7] = { itemID = 45118, droprate = "0%" }; --Steamworker's Goggles
-		[8] = { itemID = 45109, droprate = "8%" }; --Gloves of the Fiery Behemoth
-		[9] = { itemID = 45107, droprate = "7%" }; --Iron Riveted War Helm
-		[10] = { itemID = 45111, droprate = "8%" }; --Mimiron's Inferno Couplings
-		[11] = { itemID = 45116, droprate = "9%" }; --Freya's Choker of Warding
-		[12] = { itemID = 45113, droprate = "9%" }; --Glowing Ring of Reclamation
-		[13] = { itemID = 45106, droprate = "6%" }; --Strength of the Automaton
-		[14] = { itemID = 45112, droprate = "9%" }; --The Leviathan's Coil
-		[15] = { itemID = 45115, droprate = "8%" }; --Overcharged Fuel Rod
-		[16] = { itemID = 45114, droprate = "8%" }; --Steamcaller's Totem
-		[17] = { itemID = 45110, droprate = "8%" }; --Titanguard
-		[18] = { itemID = 45086, droprate = "8%" }; --Rising Sun
+		[4] = { itemID = 45117 }; --Constructor's Handwraps
+		[5] = { itemID = 45119 }; --Embrace of the Leviathan
+		[6] = { itemID = 45108 }; --Mechanist's Bindings
+		[7] = { itemID = 45118 }; --Steamworker's Goggles
+		[8] = { itemID = 45109 }; --Gloves of the Fiery Behemoth
+		[9] = { itemID = 45107 }; --Iron Riveted War Helm
+		[10] = { itemID = 45111 }; --Mimiron's Inferno Couplings
+		[11] = { itemID = 45116 }; --Freya's Choker of Warding
+		[12] = { itemID = 45113 }; --Glowing Ring of Reclamation
+		[13] = { itemID = 45106 }; --Strength of the Automaton
+		[14] = { itemID = 45112 }; --The Leviathan's Coil
+		[15] = { itemID = 45115 }; --Overcharged Fuel Rod
+		[16] = { itemID = 45114 }; --Steamcaller's Totem
+		[17] = { itemID = 45110 }; --Titanguard
+		[18] = { itemID = 45086 }; --Rising Sun
 		[20] = { icon = "INV_Box_01", name = WHITE..AL["Hard Mode"] };
-		[21] = { itemID = 45135, droprate = ".27%" }; --Boots of Fiery Resolution
+		[21] = { itemID = 45135 }; --Boots of Fiery Resolution
 		[22] = { itemID = 45136 }; --Shoulderpads of Dormant Energies
 		[23] = { itemID = 45134 }; --Plated Leggings of Ruination
 		[24] = { itemID = 45133 }; --Pendant of Fiery Havoc
-		[25] = { itemID = 45132, droprate = ".11%" }; --Golden Saronite Dragon
+		[25] = { itemID = 45132 }; --Golden Saronite Dragon
 	};
 	{
 		Name = BabbleBoss["Razorscale"];
-		[1] = { itemID = 45306, droprate = "0%" }; --Binding of the Dragon Matriarch
-		[2] = { itemID = 45302, droprate = "9%" }; --Treads of the Invader
-		[3] = { itemID = 45301, droprate = "0%" }; --Bracers of the Smothering Inferno
-		[4] = { itemID = 45307, droprate = "0%" }; --Ironscale Leggings
-		[5] = { itemID = 45299, droprate = "9%" }; --Dragonsteel Faceplate
-		[6] = { itemID = 45305, droprate = "9%" }; --Breastplate of the Afterlife
-		[7] = { itemID = 45304, droprate = "9%" }; --Stormtempered Girdle
-		[8] = { itemID = 45303, droprate = "0%" }; --Band of Draconic Guile
-		[9] = { itemID = 45308, droprate = "1%" }; --Eye of the Broodmother
-		[10] = { itemID = 45298, droprate = "0%" }; --Razorscale Talon
+		[1] = { itemID = 45306 }; --Binding of the Dragon Matriarch
+		[2] = { itemID = 45302 }; --Treads of the Invader
+		[3] = { itemID = 45301 }; --Bracers of the Smothering Inferno
+		[4] = { itemID = 45307 }; --Ironscale Leggings
+		[5] = { itemID = 45299 }; --Dragonsteel Faceplate
+		[6] = { itemID = 45305 }; --Breastplate of the Afterlife
+		[7] = { itemID = 45304 }; --Stormtempered Girdle
+		[8] = { itemID = 45303 }; --Band of Draconic Guile
+		[9] = { itemID = 45308 }; --Eye of the Broodmother
+		[10] = { itemID = 45298 }; --Razorscale Talon
 	};
 	{
 		Name = BabbleBoss["Razorscale"];
-		[1] = { itemID = 45038, droprate = "0%" }; --Fragment of Val'anyr
+		[1] = { itemID = 45038 }; --Fragment of Val'anyr
 		[2] = { itemID = 46017 }; --Val'anyr, Hammer of Ancient Kings
-		[4] = { itemID = 45138, droprate = "0%" }; --Drape of the Drakerider
-		[5] = { itemID = 45150, droprate = "0%" }; --Collar of the Wyrmhunter
-		[6] = { itemID = 45146, droprate = "0%" }; --Shackles of the Odalisque
-		[7] = { itemID = 45149, droprate = "1%" }; --Bracers of the Broodmother
-		[8] = { itemID = 45141, droprate = "9%" }; --Proto-hide Leggings
-		[9] = { itemID = 45151, droprate = "9%" }; --Belt of the Fallen Wyrm
-		[10] = { itemID = 45143, droprate = "0%" }; --Saronite Mesh Legguards
-		[11] = { itemID = 45140, droprate = "9%" }; --Razorscale Shoulderguards
-		[12] = { itemID = 45139, droprate = "9%" }; --Dragonslayer's Brace
-		[13] = { itemID = 45148, droprate = "9%" }; --Living Flame
-		[14] = { itemID = 45510, droprate = "9%" }; --Libram of Discord
-		[15] = { itemID = 45144, droprate = "9%" }; --Sigil of Deflection
-		[16] = { itemID = 45142, droprate = "9%" }; --Remorse
-		[17] = { itemID = 45147, droprate = "9%" }; --Guiding Star
-		[18] = { itemID = 45137, droprate = "8%" }; --Veranus' Bane
+		[4] = { itemID = 45138 }; --Drape of the Drakerider
+		[5] = { itemID = 45150 }; --Collar of the Wyrmhunter
+		[6] = { itemID = 45146 }; --Shackles of the Odalisque
+		[7] = { itemID = 45149 }; --Bracers of the Broodmother
+		[8] = { itemID = 45141 }; --Proto-hide Leggings
+		[9] = { itemID = 45151 }; --Belt of the Fallen Wyrm
+		[10] = { itemID = 45143 }; --Saronite Mesh Legguards
+		[11] = { itemID = 45140 }; --Razorscale Shoulderguards
+		[12] = { itemID = 45139 }; --Dragonslayer's Brace
+		[13] = { itemID = 45148 }; --Living Flame
+		[14] = { itemID = 45510 }; --Libram of Discord
+		[15] = { itemID = 45144 }; --Sigil of Deflection
+		[16] = { itemID = 45142 }; --Remorse
+		[17] = { itemID = 45147 }; --Guiding Star
+		[18] = { itemID = 45137 }; --Veranus' Bane
 	};
 	{
 		Name = BabbleBoss["Ignis the Furnace Master"];
-		[1] = { itemID = 45317, droprate = "0%" }; --Shawl of the Caretaker
-		[2] = { itemID = 45318, droprate = "9%" }; --Drape of Fuming Anger
-		[3] = { itemID = 45312, droprate = "0%" }; --Gloves of Smoldering Touch
-		[4] = { itemID = 45316, droprate = "9%" }; --Armbraces of the Vibrant Flame
-		[5] = { itemID = 45321, droprate = "1%" }; --Pauldrons of Tempered Will
-		[6] = { itemID = 45310, droprate = "0%" }; --Gauntlets of the Iron Furnace
-		[7] = { itemID = 45313, droprate = "9%" }; --Furnace Stone
-		[8] = { itemID = 45314, droprate = "9%" }; --Igniter Rod
-		[9] = { itemID = 45311, droprate = "0%" }; --Relentless Edge
-		[10] = { itemID = 45309, droprate = "9%" }; --Rifle of the Platinum Guard
+		[1] = { itemID = 45317 }; --Shawl of the Caretaker
+		[2] = { itemID = 45318 }; --Drape of Fuming Anger
+		[3] = { itemID = 45312 }; --Gloves of Smoldering Touch
+		[4] = { itemID = 45316 }; --Armbraces of the Vibrant Flame
+		[5] = { itemID = 45321 }; --Pauldrons of Tempered Will
+		[6] = { itemID = 45310 }; --Gauntlets of the Iron Furnace
+		[7] = { itemID = 45313 }; --Furnace Stone
+		[8] = { itemID = 45314 }; --Igniter Rod
+		[9] = { itemID = 45311 }; --Relentless Edge
+		[10] = { itemID = 45309 }; --Rifle of the Platinum Guard
 	};
 	{
 		Name = BabbleBoss["Ignis the Furnace Master"];
-		[1] = { itemID = 45038, droprate = "0%" }; --Fragment of Val'anyr
+		[1] = { itemID = 45038 }; --Fragment of Val'anyr
 		[2] = { itemID = 46017 }; --Val'anyr, Hammer of Ancient Kings
-		[4] = { itemID = 45186, droprate = "8%" }; --Soot-Covered Mantle
-		[5] = { itemID = 45185, droprate = "0%" }; --Flamewrought Cinch
-		[6] = { itemID = 45162, droprate = "8%" }; --Flamestalker Boots
-		[7] = { itemID = 45164, droprate = "9%" }; --Helm of the Furnace Master
-		[8] = { itemID = 45187, droprate = "9%" }; --Wristguards of the Firetender
-		[9] = { itemID = 45167, droprate = "9%" }; --Lifeforge Breastplate
-		[10] = { itemID = 45161, droprate = "9%" }; --Girdle of Embers
-		[11] = { itemID = 45166, droprate = "0%" }; --Charred Saronite Greaves
-		[12] = { itemID = 45157, droprate = "0%" }; --Cindershard Ring
-		[13] = { itemID = 45168, droprate = "0%" }; --Pyrelight Circle
-		[14] = { itemID = 45158, droprate = "9%" }; --Heart of Iron
-		[15] = { itemID = 45169, droprate = "1%" }; --Totem of the Dancing Flame
-		[16] = { itemID = 45165, droprate = "9%" }; --Worldcarver
-		[17] = { itemID = 45171, droprate = "0%" }; --Intensity
-		[18] = { itemID = 45170, droprate = "1%" }; --Scepter of Creation
+		[4] = { itemID = 45186 }; --Soot-Covered Mantle
+		[5] = { itemID = 45185 }; --Flamewrought Cinch
+		[6] = { itemID = 45162 }; --Flamestalker Boots
+		[7] = { itemID = 45164 }; --Helm of the Furnace Master
+		[8] = { itemID = 45187 }; --Wristguards of the Firetender
+		[9] = { itemID = 45167 }; --Lifeforge Breastplate
+		[10] = { itemID = 45161 }; --Girdle of Embers
+		[11] = { itemID = 45166 }; --Charred Saronite Greaves
+		[12] = { itemID = 45157 }; --Cindershard Ring
+		[13] = { itemID = 45168 }; --Pyrelight Circle
+		[14] = { itemID = 45158 }; --Heart of Iron
+		[15] = { itemID = 45169 }; --Totem of the Dancing Flame
+		[16] = { itemID = 45165 }; --Worldcarver
+		[17] = { itemID = 45171 }; --Intensity
+		[18] = { itemID = 45170 }; --Scepter of Creation
 	};
 	{
 		Name = BabbleBoss["XT-002 Deconstructor"];
-		[1] = { itemID = 45694, droprate = "1%" }; --Conductive Cord
-		[2] = { itemID = 45677, droprate = "9%" }; --Treacherous Shoulderpads
-		[3] = { itemID = 45686, droprate = "1%" }; --Vest of the Glowing Crescent
-		[4] = { itemID = 45687, droprate = "1%" }; --Helm of Veiled Energies
-		[5] = { itemID = 45679, droprate = "9%" }; --Gloves of Taut Grip
-		[6] = { itemID = 45676, droprate = "9%" }; --Chestplate of Vicious Potency
-		[7] = { itemID = 45680, droprate = "8%" }; --Armbands of the Construct
-		[8] = { itemID = 45675, droprate = "0%" }; --Power Enhancing Loop
-		[9] = { itemID = 45685, droprate = "2%" }; --Plasma Foil
-		[10] = { itemID = 45682, droprate = "4%" }; --Pulsing Spellshield
+		[1] = { itemID = 45694 }; --Conductive Cord
+		[2] = { itemID = 45677 }; --Treacherous Shoulderpads
+		[3] = { itemID = 45686 }; --Vest of the Glowing Crescent
+		[4] = { itemID = 45687 }; --Helm of Veiled Energies
+		[5] = { itemID = 45679 }; --Gloves of Taut Grip
+		[6] = { itemID = 45676 }; --Chestplate of Vicious Potency
+		[7] = { itemID = 45680 }; --Armbands of the Construct
+		[8] = { itemID = 45675 }; --Power Enhancing Loop
+		[9] = { itemID = 45685 }; --Plasma Foil
+		[10] = { itemID = 45682 }; --Pulsing Spellshield
 		[16] = { icon = "INV_Box_01", name = WHITE..AL["Hard Mode"] };
 		[17] = { itemID = 45869 }; --Fluxing Energy Coils
 		[18] = { itemID = 45867 }; --Breastplate of the Stoneshaper
@@ -4202,115 +4202,115 @@ AtlasLoot_Data["Ulduar"] = {
 	};
 	{
 		Name = BabbleBoss["XT-002 Deconstructor"];
-		[1] = { itemID = 45038, droprate = "0%" }; --Fragment of Val'anyr
+		[1] = { itemID = 45038 }; --Fragment of Val'anyr
 		[2] = { itemID = 46017 }; --Val'anyr, Hammer of Ancient Kings
-		[4] = { itemID = 45253, droprate = "9%" }; --Mantle of Wavering Calm
-		[5] = { itemID = 45258, droprate = "9%" }; --Sandals of Rash Temperament
-		[6] = { itemID = 45260, droprate = "1%" }; --Boots of Hasty Revival
-		[7] = { itemID = 45259, droprate = "8%" }; --Quartz-studded Harness
-		[8] = { itemID = 45249, droprate = "8%" }; --Brass-lined Boots
-		[9] = { itemID = 45251, droprate = "8%" }; --Shoulderplates of the Deconstructor
-		[10] = { itemID = 45252, droprate = "9%" }; --Horologist's Wristguards
-		[11] = { itemID = 45248, droprate = "9%" }; --Clockwork Legplates
-		[12] = { itemID = 45250, droprate = "8%" }; --Crazed Construct Ring
-		[13] = { itemID = 45247, droprate = "0%" }; --Signet of the Earthshaker
-		[14] = { itemID = 45254, droprate = "0%" }; --Sigil of the Vengeful Heart
-		[15] = { itemID = 45255, droprate = "0%" }; --Thunderfall Totem
-		[16] = { itemID = 45246, droprate = "9%" }; --Golem-Shard Sticker
-		[17] = { itemID = 45256, droprate = "9%" }; --Twisted Visage
-		[18] = { itemID = 45257, droprate = "0%" }; --Quartz Crystal Wand
+		[4] = { itemID = 45253 }; --Mantle of Wavering Calm
+		[5] = { itemID = 45258 }; --Sandals of Rash Temperament
+		[6] = { itemID = 45260 }; --Boots of Hasty Revival
+		[7] = { itemID = 45259 }; --Quartz-studded Harness
+		[8] = { itemID = 45249 }; --Brass-lined Boots
+		[9] = { itemID = 45251 }; --Shoulderplates of the Deconstructor
+		[10] = { itemID = 45252 }; --Horologist's Wristguards
+		[11] = { itemID = 45248 }; --Clockwork Legplates
+		[12] = { itemID = 45250 }; --Crazed Construct Ring
+		[13] = { itemID = 45247 }; --Signet of the Earthshaker
+		[14] = { itemID = 45254 }; --Sigil of the Vengeful Heart
+		[15] = { itemID = 45255 }; --Thunderfall Totem
+		[16] = { itemID = 45246 }; --Golem-Shard Sticker
+		[17] = { itemID = 45256 }; --Twisted Visage
+		[18] = { itemID = 45257 }; --Quartz Crystal Wand
 		[20] = { icon = "INV_Box_01", name = WHITE..AL["Hard Mode"] };
-		[21] = { itemID = 45446, droprate = ".16%" }; --Grasps of Reason
-		[22] = { itemID = 45444, droprate = ".29%" }; --Gloves of the Steady Hand
-		[23] = { itemID = 45445, droprate = ".16%" }; --Breastplate of the Devoted
-		[24] = { itemID = 45443, droprate = ".15%" }; --Charm of Meticulous Timing
-		[25] = { itemID = 45442, droprate = ".28%" }; --Sorthalis, Hammer of the Watchers
+		[21] = { itemID = 45446 }; --Grasps of Reason
+		[22] = { itemID = 45444 }; --Gloves of the Steady Hand
+		[23] = { itemID = 45445 }; --Breastplate of the Devoted
+		[24] = { itemID = 45443 }; --Charm of Meticulous Timing
+		[25] = { itemID = 45442 }; --Sorthalis, Hammer of the Watchers
 	};
 	{
 		Name = BabbleBoss["The Iron Council"];
-		[1] = { itemID = 45322, droprate = "8%" }; --Cloak of the Iron Council
-		[2] = { itemID = 45423, droprate = "4%" }; --Runetouch Handwraps
-		[3] = { itemID = 45324, droprate = "9%" }; --Leggings of Swift Reflexes
-		[4] = { itemID = 45378, droprate = "7%" }; --Boots of the Petrified Forest
-		[5] = { itemID = 45329, droprate = "9%" }; --Circlet of True Sight
-		[6] = { itemID = 45333, droprate = "2%" }; --Belt of the Iron Servant
-		[7] = { itemID = 45330, droprate = "3%" }; --Greaves of Iron Intensity
-		[8] = { itemID = 45418, droprate = "1%" }; --Lady Maye's Sapphire Ring
-		[9] = { itemID = 45332, droprate = "3%" }; --Stormtip
-		[10] = { itemID = 45331, droprate = "9%" }; --Rune-Etched Nightblade
+		[1] = { itemID = 45322 }; --Cloak of the Iron Council
+		[2] = { itemID = 45423 }; --Runetouch Handwraps
+		[3] = { itemID = 45324 }; --Leggings of Swift Reflexes
+		[4] = { itemID = 45378 }; --Boots of the Petrified Forest
+		[5] = { itemID = 45329 }; --Circlet of True Sight
+		[6] = { itemID = 45333 }; --Belt of the Iron Servant
+		[7] = { itemID = 45330 }; --Greaves of Iron Intensity
+		[8] = { itemID = 45418 }; --Lady Maye's Sapphire Ring
+		[9] = { itemID = 45332 }; --Stormtip
+		[10] = { itemID = 45331 }; --Rune-Etched Nightblade
 		[16] = { icon = "INV_Box_01", name = WHITE..AL["Hard Mode"] };
-		[17] = { itemID = 45455, droprate = "9%" }; --Belt of the Crystal Tree
-		[18] = { itemID = 45447, droprate = "8%" }; --Watchful Eye
-		[19] = { itemID = 45456, droprate = "6%" }; --Loop of the Agile
-		[20] = { itemID = 45449, droprate = "8%" }; --The Masticator
-		[21] = { itemID = 45448, droprate = "7%" }; --Perilous Bite
-		[22] = { itemID = 45506, droprate = "1%" }; --Archivum Data Disc
+		[17] = { itemID = 45455 }; --Belt of the Crystal Tree
+		[18] = { itemID = 45447 }; --Watchful Eye
+		[19] = { itemID = 45456 }; --Loop of the Agile
+		[20] = { itemID = 45449 }; --The Masticator
+		[21] = { itemID = 45448 }; --Perilous Bite
+		[22] = { itemID = 45506 }; --Archivum Data Disc
 	};
 	{
 		Name = BabbleBoss["The Iron Council"];
-		[1] = { itemID = 45038, droprate = "0%" }; --Fragment of Val'anyr
+		[1] = { itemID = 45038 }; --Fragment of Val'anyr
 		[2] = { itemID = 46017 }; --Val'anyr, Hammer of Ancient Kings
-		[4] = { itemID = 45224, droprate = "9%" }; --Drape of the Lithe
-		[5] = { itemID = 45240, droprate = "4%" }; --Raiments of the Iron Council
-		[6] = { itemID = 45238, droprate = "0%" }; --Overload Legwraps
-		[7] = { itemID = 45237, droprate = "3%" }; --Phaelia's Vestments of the Sprouting Seed
-		[8] = { itemID = 45232, droprate = "2%" }; --Runed Ironhide Boots
-		[9] = { itemID = 45227, droprate = "2%" }; --Iron-studded Mantle
-		[10] = { itemID = 45239, droprate = "0%" }; --Runeshaper's Gloves
-		[11] = { itemID = 45226, droprate = "0%" }; --Ancient Iron Heaume
-		[12] = { itemID = 45225, droprate = "9%" }; --Steelbreaker's Embrace
-		[13] = { itemID = 45228, droprate = "1%" }; --Handguards of the Enclave
-		[14] = { itemID = 45193, droprate = "9%" }; --Insurmountable Fervor
-		[15] = { itemID = 45236, droprate = "9%" }; --Unblinking Eye
-		[16] = { itemID = 45235, droprate = "0%" }; --Radiant Seal
-		[17] = { itemID = 45233, droprate = "0%" }; --Rune Edge
-		[18] = { itemID = 45234, droprate = "9%" }; --Rapture
+		[4] = { itemID = 45224 }; --Drape of the Lithe
+		[5] = { itemID = 45240 }; --Raiments of the Iron Council
+		[6] = { itemID = 45238 }; --Overload Legwraps
+		[7] = { itemID = 45237 }; --Phaelia's Vestments of the Sprouting Seed
+		[8] = { itemID = 45232 }; --Runed Ironhide Boots
+		[9] = { itemID = 45227 }; --Iron-studded Mantle
+		[10] = { itemID = 45239 }; --Runeshaper's Gloves
+		[11] = { itemID = 45226 }; --Ancient Iron Heaume
+		[12] = { itemID = 45225 }; --Steelbreaker's Embrace
+		[13] = { itemID = 45228 }; --Handguards of the Enclave
+		[14] = { itemID = 45193 }; --Insurmountable Fervor
+		[15] = { itemID = 45236 }; --Unblinking Eye
+		[16] = { itemID = 45235 }; --Radiant Seal
+		[17] = { itemID = 45233 }; --Rune Edge
+		[18] = { itemID = 45234 }; --Rapture
 		[20] = { icon = "INV_Box_01", name = WHITE..AL["Hard Mode"] };
-		[21] = { itemID = 45242, droprate = "1%" }; --Drape of Mortal Downfall
-		[22] = { itemID = 45245, droprate = "4%" }; --Shoulderpads of the Intruder
+		[21] = { itemID = 45242 }; --Drape of Mortal Downfall
+		[22] = { itemID = 45245 }; --Shoulderpads of the Intruder
 		[23] = { itemID = 45244 }; --Greaves of Swift Vengeance
-		[24] = { itemID = 45241, droprate = "5%" }; --Belt of Colossal Rage
-		[25] = { itemID = 45243, droprate = "0%" }; --Sapphire Amulet of Renewal
-		[26] = { itemID = 45607, droprate = "8%" }; --Fang of Oblivion
-		[27] = { itemID = 45857, droprate = "4%" }; --Archivum Data Disc
+		[24] = { itemID = 45241 }; --Belt of Colossal Rage
+		[25] = { itemID = 45243 }; --Sapphire Amulet of Renewal
+		[26] = { itemID = 45607 }; --Fang of Oblivion
+		[27] = { itemID = 45857 }; --Archivum Data Disc
 	};
 	{
 		Name = BabbleBoss["Kologarn"];
-		[1] = { itemID = 45704, droprate = "9%" }; --Shawl of the Shattered Giant
-		[2] = { itemID = 45701, droprate = "1%" }; --Greaves of the Earthbinder
-		[3] = { itemID = 45697, droprate = "8%" }; --Shoulderguards of the Solemn Watch
-		[4] = { itemID = 45698, droprate = "8%" }; --Sabatons of the Iron Watcher
-		[5] = { itemID = 45696, droprate = "9%" }; --Mark of the Unyielding
-		[6] = { itemID = 45699, droprate = "7%" }; --Pendant of the Piercing Glare
-		[7] = { itemID = 45702, droprate = "8%" }; --Emerald Signet Ring
-		[8] = { itemID = 45703, droprate = "7%" }; --Spark of Hope
-		[9] = { itemID = 45700, droprate = "9%" }; --Stoneguard
-		[10] = { itemID = 45695, droprate = "1%" }; --Spire of Withering Dreams
+		[1] = { itemID = 45704 }; --Shawl of the Shattered Giant
+		[2] = { itemID = 45701 }; --Greaves of the Earthbinder
+		[3] = { itemID = 45697 }; --Shoulderguards of the Solemn Watch
+		[4] = { itemID = 45698 }; --Sabatons of the Iron Watcher
+		[5] = { itemID = 45696 }; --Mark of the Unyielding
+		[6] = { itemID = 45699 }; --Pendant of the Piercing Glare
+		[7] = { itemID = 45702 }; --Emerald Signet Ring
+		[8] = { itemID = 45703 }; --Spark of Hope
+		[9] = { itemID = 45700 }; --Stoneguard
+		[10] = { itemID = 45695 }; --Spire of Withering Dreams
 	};
 	{
 		Name = BabbleBoss["Kologarn"];
-		[1] = { itemID = 45038, droprate = "0%" }; --Fragment of Val'anyr
+		[1] = { itemID = 45038 }; --Fragment of Val'anyr
 		[2] = { itemID = 46017 }; --Val'anyr, Hammer of Ancient Kings
-		[4] = { itemID = 45272, droprate = "0%" }; --Robes of the Umbral Brute
-		[5] = { itemID = 45275, droprate = "8%" }; --Bracers of Unleashed Magic
-		[6] = { itemID = 45273, droprate = "8%" }; --Handwraps of Plentiful Recovery
-		[7] = { itemID = 45265, droprate = "6%" }; --Shoulderpads of the Monolith
-		[8] = { itemID = 45274, droprate = "4%" }; --Leggings of the Stoneweaver
-		[9] = { itemID = 45264, droprate = "6%" }; --Decimator's Armguards
-		[10] = { itemID = 45269, droprate = "6%" }; --Unfaltering Armguards
-		[11] = { itemID = 45268, droprate = "8%" }; --Gloves of the Pythonic Guardian
-		[12] = { itemID = 45267, droprate = "8%" }; --Saronite Plated Legguards
-		[13] = { itemID = 45262, droprate = "8%" }; --Necklace of Unerring Mettle
-		[14] = { itemID = 45263, droprate = "8%" }; --Wrathstone
-		[15] = { itemID = 45271, droprate = "7%" }; --Ironmender
-		[16] = { itemID = 45270, droprate = "7%" }; --Idol of the Crying Wind
-		[17] = { itemID = 45266, droprate = "8%" }; --Malice
-		[18] = { itemID = 45261, droprate = "6%" }; --Giant's Bane
+		[4] = { itemID = 45272 }; --Robes of the Umbral Brute
+		[5] = { itemID = 45275 }; --Bracers of Unleashed Magic
+		[6] = { itemID = 45273 }; --Handwraps of Plentiful Recovery
+		[7] = { itemID = 45265 }; --Shoulderpads of the Monolith
+		[8] = { itemID = 45274 }; --Leggings of the Stoneweaver
+		[9] = { itemID = 45264 }; --Decimator's Armguards
+		[10] = { itemID = 45269 }; --Unfaltering Armguards
+		[11] = { itemID = 45268 }; --Gloves of the Pythonic Guardian
+		[12] = { itemID = 45267 }; --Saronite Plated Legguards
+		[13] = { itemID = 45262 }; --Necklace of Unerring Mettle
+		[14] = { itemID = 45263 }; --Wrathstone
+		[15] = { itemID = 45271 }; --Ironmender
+		[16] = { itemID = 45270 }; --Idol of the Crying Wind
+		[17] = { itemID = 45266 }; --Malice
+		[18] = { itemID = 45261 }; --Giant's Bane
 	};
 	{
 		Name = BabbleBoss["Algalon the Observer"];
 		[1] = { itemID = 46042 }; --Drape of the Messenger
-		[2] = { itemID = 46045, droprate = "0%" }; --Pulsar Gloves
+		[2] = { itemID = 46045 }; --Pulsar Gloves
 		[3] = { itemID = 46050 }; --Starlight Treads
 		[4] = { itemID = 46043 }; --Gloves of the Endless Dark
 		[5] = { itemID = 46049 }; --Zodiac Leggings
@@ -4319,12 +4319,12 @@ AtlasLoot_Data["Ulduar"] = {
 		[8] = { itemID = 46039 }; --Breastplate of the Timeless
 		[9] = { itemID = 46041 }; --Starfall Girdle
 		[10] = { itemID = 46047 }; --Pendant of the Somber Witness
-		[11] = { itemID = 46040, droprate = "0%" }; --Strength of the Heavens
+		[11] = { itemID = 46040 }; --Strength of the Heavens
 		[12] = { itemID = 46048 }; --Band of Lights
 		[13] = { itemID = 46046 }; --Nebula Band
 		[14] = { itemID = 46038 }; --Dark Matter
-		[15] = { itemID = 46051, droprate = "0%" }; --Meteorite Crystal
-		[16] = { itemID = 46052, droprate = "00%" }; --Reply-Code Alpha
+		[15] = { itemID = 46051 }; --Meteorite Crystal
+		[16] = { itemID = 46052 }; --Reply-Code Alpha
 		[17] = { itemID = 46320 }; --Drape of the Skyherald
 		[18] = { itemID = 46321 }; --Sunglimmer Drape
 		[19] = { itemID = 46322 }; --Brann's Sealing Ring
@@ -4332,23 +4332,23 @@ AtlasLoot_Data["Ulduar"] = {
 	};
 	{
 		Name = BabbleBoss["Algalon the Observer"];
-		[1] = { itemID = 45665, droprate = "0%" }; --Pharos Gloves
+		[1] = { itemID = 45665 }; --Pharos Gloves
 		[2] = { itemID = 45619 }; --Starwatcher's Binding
-		[3] = { itemID = 45611, droprate = "0%" }; --Solar Bindings
+		[3] = { itemID = 45611 }; --Solar Bindings
 		[4] = { itemID = 45616 }; --Star-beaded Clutch
 		[5] = { itemID = 45610 }; --Boundless Gaze
 		[6] = { itemID = 45615 }; --Planewalker Treads
-		[7] = { itemID = 45594, droprate = "0%" }; --Legplates of the Endless Void
+		[7] = { itemID = 45594 }; --Legplates of the Endless Void
 		[8] = { itemID = 45599 }; --Sabatons of Lifeless Night
 		[9] = { itemID = 45617 }; --Cosmos
 		[10] = { itemID = 45620 }; --Starshard Edge
-		[11] = { itemID = 45607, droprate = "8%" }; --Fang of Oblivion
-		[12] = { itemID = 45612, droprate = "1%" }; --Constellus
+		[11] = { itemID = 45607 }; --Fang of Oblivion
+		[12] = { itemID = 45612 }; --Constellus
 		[13] = { itemID = 45613 }; --Dreambinder
 		[14] = { itemID = 45587 }; --Bulwark of Algalon
 		[15] = { itemID = 45570 }; --Skyforge Crossbow
 		[16] = { itemID = 45609 }; --Comet's Trail
-		[18] = { itemID = 46053, droprate = "00%" }; --Reply-Code Alpha
+		[18] = { itemID = 46053 }; --Reply-Code Alpha
 		[19] = { itemID = 45588 }; --Drape of the Skyborn
 		[20] = { itemID = 45618 }; --Sunglimmer Cloak
 		[21] = { itemID = 45608 }; --Brann's Signet Ring
@@ -4356,86 +4356,86 @@ AtlasLoot_Data["Ulduar"] = {
 	};
 	{
 		Name = BabbleBoss["Auriaya"];
-		[1] = { itemID = 45832, droprate = "9%" }; --Mantle of the Preserver
-		[2] = { itemID = 45865, droprate = "0%" }; --Raiments of the Corrupted
-		[3] = { itemID = 45864, droprate = "0%" }; --Cover of the Keepers
-		[4] = { itemID = 45709, droprate = "9%" }; --Nimble Climber's Belt
-		[5] = { itemID = 45711, droprate = "9%" }; --Ironaya's Discarded Mantle
-		[6] = { itemID = 45712, droprate = "0%" }; --Chestplate of Titanic Fury
-		[7] = { itemID = 45708, droprate = "0%" }; --Archaedas' Lost Legplates
-		[8] = { itemID = 45866, droprate = "9%" }; --Elemental Focus Stone
-		[9] = { itemID = 45707, droprate = "9%" }; --Shieldwall of the Breaker
-		[10] = { itemID = 45713, droprate = "1%" }; --Nurturing Touch
+		[1] = { itemID = 45832 }; --Mantle of the Preserver
+		[2] = { itemID = 45865 }; --Raiments of the Corrupted
+		[3] = { itemID = 45864 }; --Cover of the Keepers
+		[4] = { itemID = 45709 }; --Nimble Climber's Belt
+		[5] = { itemID = 45711 }; --Ironaya's Discarded Mantle
+		[6] = { itemID = 45712 }; --Chestplate of Titanic Fury
+		[7] = { itemID = 45708 }; --Archaedas' Lost Legplates
+		[8] = { itemID = 45866 }; --Elemental Focus Stone
+		[9] = { itemID = 45707 }; --Shieldwall of the Breaker
+		[10] = { itemID = 45713 }; --Nurturing Touch
 	};
 	{
 		Name = BabbleBoss["Auriaya"];
-		[1] = { itemID = 45038, droprate = "0%" }; --Fragment of Val'anyr
+		[1] = { itemID = 45038 }; --Fragment of Val'anyr
 		[2] = { itemID = 46017 }; --Val'anyr, Hammer of Ancient Kings
-		[4] = { itemID = 45319, droprate = "9%" }; --Cloak of the Makers
-		[5] = { itemID = 45435, droprate = "9%" }; --Cowl of the Absolute
-		[6] = { itemID = 45441, droprate = "0%" }; --Sandals of the Ancient Keeper
-		[7] = { itemID = 45439, droprate = "0%" }; --Unwavering Stare
-		[8] = { itemID = 45325, droprate = "0%" }; --Gloves of the Stonereaper
-		[9] = { itemID = 45440, droprate = "0%" }; --Amice of the Stoic Watch
-		[10] = { itemID = 45320, droprate = "0%" }; --Shoulderplates of the Eternal
-		[11] = { itemID = 45334, droprate = "8%" }; --Unbreakable Chestguard
-		[12] = { itemID = 45434, droprate = "0%" }; --Greaves of the Rockmender
-		[13] = { itemID = 45326, droprate = "9%" }; --Platinum Band of the Aesir
-		[14] = { itemID = 45438, droprate = "9%" }; --Ring of the Faithful Servant
-		[15] = { itemID = 45436, droprate = "0%" }; --Libram of the Resolute
-		[16] = { itemID = 45437, droprate = "0%" }; --Runescribed Blade
-		[17] = { itemID = 45315, droprate = "9%" }; --Stonerender
-		[18] = { itemID = 45327, droprate = "0%" }; --Siren's Cry
+		[4] = { itemID = 45319 }; --Cloak of the Makers
+		[5] = { itemID = 45435 }; --Cowl of the Absolute
+		[6] = { itemID = 45441 }; --Sandals of the Ancient Keeper
+		[7] = { itemID = 45439 }; --Unwavering Stare
+		[8] = { itemID = 45325 }; --Gloves of the Stonereaper
+		[9] = { itemID = 45440 }; --Amice of the Stoic Watch
+		[10] = { itemID = 45320 }; --Shoulderplates of the Eternal
+		[11] = { itemID = 45334 }; --Unbreakable Chestguard
+		[12] = { itemID = 45434 }; --Greaves of the Rockmender
+		[13] = { itemID = 45326 }; --Platinum Band of the Aesir
+		[14] = { itemID = 45438 }; --Ring of the Faithful Servant
+		[15] = { itemID = 45436 }; --Libram of the Resolute
+		[16] = { itemID = 45437 }; --Runescribed Blade
+		[17] = { itemID = 45315 }; --Stonerender
+		[18] = { itemID = 45327 }; --Siren's Cry
 	};
 	{
 		Name = BabbleBoss["Hodir"];
-		[1] = { itemID = 45873, droprate = "5%" }; --Winter's Frigid Embrace
-		[2] = { itemID = 45464, droprate = "0%" }; --Cowl of Icy Breaths
-		[3] = { itemID = 45874, droprate = "6%" }; --Signet of Winter
-		[4] = { itemID = 45458, droprate = "7%" }; --Stormedge
-		[5] = { itemID = 45872, droprate = "2%" }; --Avalanche
-		[7] = { itemID = 45650, droprate = "9%" }; --Leggings of the Wayward Conqueror
-		[8] = { itemID = 45651, droprate = "9%" }; --Leggings of the Wayward Protector
-		[9] = { itemID = 45652, droprate = "4%" }; --Leggings of the Wayward Vanquisher
+		[1] = { itemID = 45873 }; --Winter's Frigid Embrace
+		[2] = { itemID = 45464 }; --Cowl of Icy Breaths
+		[3] = { itemID = 45874 }; --Signet of Winter
+		[4] = { itemID = 45458 }; --Stormedge
+		[5] = { itemID = 45872 }; --Avalanche
+		[7] = { itemID = 45650 }; --Leggings of the Wayward Conqueror
+		[8] = { itemID = 45651 }; --Leggings of the Wayward Protector
+		[9] = { itemID = 45652 }; --Leggings of the Wayward Vanquisher
 		[16] = { icon = "INV_Box_01", name = WHITE..AL["Hard Mode"] };
-		[17] = { itemID = 45888, droprate = "8%" }; --Bitter Cold Armguards
-		[18] = { itemID = 45876, droprate = "6%" }; --Shiver
-		[19] = { itemID = 45886, droprate = "0%" }; --Icecore Staff
-		[20] = { itemID = 45887, droprate = "8%" }; --Ice Layered Barrier
-		[21] = { itemID = 45877, droprate = "7%" }; --The Boreal Guard
-		[23] = { itemID = 45786, droprate = "3%" }; --Hodir's Sigil
+		[17] = { itemID = 45888 }; --Bitter Cold Armguards
+		[18] = { itemID = 45876 }; --Shiver
+		[19] = { itemID = 45886 }; --Icecore Staff
+		[20] = { itemID = 45887 }; --Ice Layered Barrier
+		[21] = { itemID = 45877 }; --The Boreal Guard
+		[23] = { itemID = 45786 }; --Hodir's Sigil
 	};
 	{
 		Name = BabbleBoss["Hodir"];
-		[1] = { itemID = 45038, droprate = "0%" }; --Fragment of Val'anyr
+		[1] = { itemID = 45038 }; --Fragment of Val'anyr
 		[2] = { itemID = 46017 }; --Val'anyr, Hammer of Ancient Kings
-		[4] = { itemID = 45453, droprate = "6%" }; --Winter's Icy Embrace
-		[5] = { itemID = 45454, droprate = "8%" }; --Frost-bound Chain Bracers
-		[6] = { itemID = 45452, droprate = "6%" }; --Frostplate Greaves
-		[7] = { itemID = 45451, droprate = "5%" }; --Frozen Loop
-		[8] = { itemID = 45450, droprate = "9%" }; --Northern Barrier
-		[10] = { itemID = 45632, droprate = "2%" }; --Breastplate of the Wayward Conqueror
-		[11] = { itemID = 45633, droprate = "0%" }; --Breastplate of the Wayward Protector
-		[12] = { itemID = 45634, droprate = "1%" }; --Breastplate of the Wayward Vanquisher
+		[4] = { itemID = 45453 }; --Winter's Icy Embrace
+		[5] = { itemID = 45454 }; --Frost-bound Chain Bracers
+		[6] = { itemID = 45452 }; --Frostplate Greaves
+		[7] = { itemID = 45451 }; --Frozen Loop
+		[8] = { itemID = 45450 }; --Northern Barrier
+		[10] = { itemID = 45632 }; --Breastplate of the Wayward Conqueror
+		[11] = { itemID = 45633 }; --Breastplate of the Wayward Protector
+		[12] = { itemID = 45634 }; --Breastplate of the Wayward Vanquisher
 		[16] = { icon = "INV_Box_01", name = WHITE..AL["Hard Mode"] };
-		[17] = { itemID = 45461, droprate = "9%" }; --Drape of Icy Intent
-		[18] = { itemID = 45462, droprate = "0%" }; --Gloves of the Frozen Glade
-		[19] = { itemID = 45460, droprate = "2%" }; --Bindings of Winter Gale
-		[20] = { itemID = 45459, droprate = "3%" }; --Frigid Strength of Hodir
-		[21] = { itemID = 45612, droprate = "1%" }; --Constellus
-		[22] = { itemID = 45457, droprate = "9%" }; --Staff of Endless Winter
-		[24] = { itemID = 45815, droprate = "1%" }; --Hodir's Sigil
+		[17] = { itemID = 45461 }; --Drape of Icy Intent
+		[18] = { itemID = 45462 }; --Gloves of the Frozen Glade
+		[19] = { itemID = 45460 }; --Bindings of Winter Gale
+		[20] = { itemID = 45459 }; --Frigid Strength of Hodir
+		[21] = { itemID = 45612 }; --Constellus
+		[22] = { itemID = 45457 }; --Staff of Endless Winter
+		[24] = { itemID = 45815 }; --Hodir's Sigil
 	};
 	{
 		Name = BabbleBoss["Thorim"];
-		[1] = { itemID = 45893, droprate = "9%" }; --Guise of the Midgard Serpent
-		[2] = { itemID = 45927, droprate = "7%" }; --Handwraps of Resonance
-		[3] = { itemID = 45894, droprate = "7%" }; --Leggings of Unstable Discharge
-		[4] = { itemID = 45895, droprate = "8%" }; --Belt of the Blood Pit
-		[5] = { itemID = 45892, droprate = "8%" }; --Legacy of Thunder
-		[7] = { itemID = 45659, droprate = "5%" }; --Spaulders of the Wayward Conqueror
-		[8] = { itemID = 45660, droprate = "8%" }; --Spaulders of the Wayward Protector
-		[9] = { itemID = 45661, droprate = "4%" }; --Spaulders of the Wayward Vanquisher
+		[1] = { itemID = 45893 }; --Guise of the Midgard Serpent
+		[2] = { itemID = 45927 }; --Handwraps of Resonance
+		[3] = { itemID = 45894 }; --Leggings of Unstable Discharge
+		[4] = { itemID = 45895 }; --Belt of the Blood Pit
+		[5] = { itemID = 45892 }; --Legacy of Thunder
+		[7] = { itemID = 45659 }; --Spaulders of the Wayward Conqueror
+		[8] = { itemID = 45660 }; --Spaulders of the Wayward Protector
+		[9] = { itemID = 45661 }; --Spaulders of the Wayward Vanquisher
 		[16] = { icon = "INV_Box_01", name = WHITE..AL["Hard Mode"] };
 		[17] = { itemID = 45928 }; --Gauntlets of the Thunder God
 		[18] = { itemID = 45933 }; --Pendant of the Shallow Grave
@@ -4446,16 +4446,16 @@ AtlasLoot_Data["Ulduar"] = {
 	};
 	{
 		Name = BabbleBoss["Thorim"];
-		[1] = { itemID = 45038, droprate = "0%" }; --Fragment of Val'anyr
+		[1] = { itemID = 45038 }; --Fragment of Val'anyr
 		[2] = { itemID = 46017 }; --Val'anyr, Hammer of Ancient Kings
-		[4] = { itemID = 45468, droprate = "7%" }; --Leggings of Lost Love
-		[5] = { itemID = 45467, droprate = "7%" }; --Belt of the Betrayed
-		[6] = { itemID = 45469, droprate = "4%" }; --Sif's Promise
-		[7] = { itemID = 45466, droprate = "7%" }; --Scale of Fates
-		[8] = { itemID = 45463, droprate = "8%" }; --Vulmir, the Northern Tempest
-		[10] = { itemID = 45638, droprate = "0%" }; --Crown of the Wayward Conqueror
-		[11] = { itemID = 45639, droprate = "7%" }; --Crown of the Wayward Protector
-		[12] = { itemID = 45640, droprate = "1%" }; --Crown of the Wayward Vanquisher
+		[4] = { itemID = 45468 }; --Leggings of Lost Love
+		[5] = { itemID = 45467 }; --Belt of the Betrayed
+		[6] = { itemID = 45469 }; --Sif's Promise
+		[7] = { itemID = 45466 }; --Scale of Fates
+		[8] = { itemID = 45463 }; --Vulmir, the Northern Tempest
+		[10] = { itemID = 45638 }; --Crown of the Wayward Conqueror
+		[11] = { itemID = 45639 }; --Crown of the Wayward Protector
+		[12] = { itemID = 45640 }; --Crown of the Wayward Vanquisher
 		[16] = { icon = "INV_Box_01", name = WHITE..AL["Hard Mode"] };
 		[17] = { itemID = 45473 }; --Embrace of the Gladiator
 		[18] = { itemID = 45474 }; --Pauldrons of the Combatant
@@ -4467,15 +4467,15 @@ AtlasLoot_Data["Ulduar"] = {
 	};
 	{
 		Name = BabbleBoss["Freya"];
-		[1] = { itemID = 45940, droprate = "5%" }; --Tunic of the Limber Stalker
-		[2] = { itemID = 45941, droprate = "5%" }; --Chestguard of the Lasher
-		[3] = { itemID = 45935, droprate = "7%" }; --Ironbark Faceguard
-		[4] = { itemID = 45936, droprate = "5%" }; --Legplates of Flourishing Resolve
-		[5] = { itemID = 45934, droprate = "8%" }; --Unraveling Reach
-		[7] = { itemID = 45644, droprate = "5%" }; --Gloves of the Wayward Conqueror
-		[8] = { itemID = 45645, droprate = "3%" }; --Gloves of the Wayward Protector
-		[9] = { itemID = 45646, droprate = "0%" }; --Gloves of the Wayward Vanquisher
-		[11] = { itemID = 46110, droprate = "6%" }; --Alchemist's Cache
+		[1] = { itemID = 45940 }; --Tunic of the Limber Stalker
+		[2] = { itemID = 45941 }; --Chestguard of the Lasher
+		[3] = { itemID = 45935 }; --Ironbark Faceguard
+		[4] = { itemID = 45936 }; --Legplates of Flourishing Resolve
+		[5] = { itemID = 45934 }; --Unraveling Reach
+		[7] = { itemID = 45644 }; --Gloves of the Wayward Conqueror
+		[8] = { itemID = 45645 }; --Gloves of the Wayward Protector
+		[9] = { itemID = 45646 }; --Gloves of the Wayward Vanquisher
+		[11] = { itemID = 46110 }; --Alchemist's Cache
 		[16] = { icon = "INV_Box_01", name = WHITE..AL["Hard Mode"] };
 		[17] = { itemID = 45943 }; --Gloves of Whispering Winds
 		[18] = { itemID = 45945 }; --Seed of Budding Carnage
@@ -4486,78 +4486,78 @@ AtlasLoot_Data["Ulduar"] = {
 	};
 	{
 		Name = BabbleBoss["Freya"];
-		[1] = { itemID = 45038, droprate = "0%" }; --Fragment of Val'anyr
+		[1] = { itemID = 45038 }; --Fragment of Val'anyr
 		[2] = { itemID = 46017 }; --Val'anyr, Hammer of Ancient Kings
-		[4] = { itemID = 45483, droprate = "5%" }; --Boots of the Servant
-		[5] = { itemID = 45482, droprate = "7%" }; --Leggings of the Lifetender
-		[6] = { itemID = 45481, droprate = "6%" }; --Gauntlets of Ruthless Reprisal
-		[7] = { itemID = 45480, droprate = "3%" }; --Nymph Heart Charm
-		[8] = { itemID = 45479, droprate = "9%" }; --The Lifebinder
-		[10] = { itemID = 45653, droprate = "3%" }; --Legplates of the Wayward Conqueror
-		[11] = { itemID = 45654, droprate = "2%" }; --Legplates of the Wayward Protector
-		[12] = { itemID = 45655, droprate = "9%" }; --Legplates of the Wayward Vanquisher
-		[14] = { itemID = 46110, droprate = "6%" }; --Alchemist's Cache
+		[4] = { itemID = 45483 }; --Boots of the Servant
+		[5] = { itemID = 45482 }; --Leggings of the Lifetender
+		[6] = { itemID = 45481 }; --Gauntlets of Ruthless Reprisal
+		[7] = { itemID = 45480 }; --Nymph Heart Charm
+		[8] = { itemID = 45479 }; --The Lifebinder
+		[10] = { itemID = 45653 }; --Legplates of the Wayward Conqueror
+		[11] = { itemID = 45654 }; --Legplates of the Wayward Protector
+		[12] = { itemID = 45655 }; --Legplates of the Wayward Vanquisher
+		[14] = { itemID = 46110 }; --Alchemist's Cache
 		[16] = { icon = "INV_Box_01", name = WHITE..AL["Hard Mode"] };
 		[17] = { itemID = 45486 }; --Drape of the Sullen Goddess
-		[18] = { itemID = 45488, droprate = ".13%" }; --Leggings of the Enslaved Idol
-		[19] = { itemID = 45487, droprate = ".34%" }; --Handguards of Revitalization
+		[18] = { itemID = 45488 }; --Leggings of the Enslaved Idol
+		[19] = { itemID = 45487 }; --Handguards of Revitalization
 		[20] = { itemID = 45485 }; --Bronze Pendant of the Vanir
-		[21] = { itemID = 45484, droprate = ".27%" }; --Bladetwister
+		[21] = { itemID = 45484 }; --Bladetwister
 		[22] = { itemID = 45613 }; --Dreambinder
-		[24] = { itemID = 45814, droprate = ".27%" }; --Freya's Sigil
+		[24] = { itemID = 45814 }; --Freya's Sigil
 	};
 	{
 		Name = BabbleBoss["Mimiron"];
-		[1] = { itemID = 45973, droprate = "9%" }; --Stylish Power Cape
-		[2] = { itemID = 45976, droprate = "0%" }; --Static Charge Handwraps
-		[3] = { itemID = 45974, droprate = "5%" }; --Shoulderguards of Assimilation
-		[4] = { itemID = 45975, droprate = "1%" }; --Cable of the Metrognome
-		[5] = { itemID = 45972, droprate = ".13%" }; --Pulse Baton
-		[7] = { itemID = 45647, droprate = "8%" }; --Helm of the Wayward Conqueror
-		[8] = { itemID = 45648, droprate = "5%" }; --Helm of the Wayward Protector
-		[9] = { itemID = 45649, droprate = "7%" }; --Helm of the Wayward Vanquisher
+		[1] = { itemID = 45973 }; --Stylish Power Cape
+		[2] = { itemID = 45976 }; --Static Charge Handwraps
+		[3] = { itemID = 45974 }; --Shoulderguards of Assimilation
+		[4] = { itemID = 45975 }; --Cable of the Metrognome
+		[5] = { itemID = 45972 }; --Pulse Baton
+		[7] = { itemID = 45647 }; --Helm of the Wayward Conqueror
+		[8] = { itemID = 45648 }; --Helm of the Wayward Protector
+		[9] = { itemID = 45649 }; --Helm of the Wayward Vanquisher
 		[16] = { icon = "INV_Box_01", name = WHITE..AL["Hard Mode"] };
 		[17] = { itemID = 45993 }; --Mimiron's Flight Goggles
-		[18] = { itemID = 45989, droprate = ".34%" }; --Tempered Mercury Greaves
-		[19] = { itemID = 45982, droprate = ".34%" }; --Fused Alloy Legplates
+		[18] = { itemID = 45989 }; --Tempered Mercury Greaves
+		[19] = { itemID = 45982 }; --Fused Alloy Legplates
 		[20] = { itemID = 45988 }; --Greaves of the Iron Army
-		[21] = { itemID = 45990, droprate = ".13%" }; --Fusion Blade
+		[21] = { itemID = 45990 }; --Fusion Blade
 		[23] = { itemID = 45787 }; --Mimiron's Sigil
 	};
 	{
 		Name = BabbleBoss["Mimiron"];
-		[1] = { itemID = 45038, droprate = "0%" }; --Fragment of Val'anyr
+		[1] = { itemID = 45038 }; --Fragment of Val'anyr
 		[2] = { itemID = 46017 }; --Val'anyr, Hammer of Ancient Kings
-		[4] = { itemID = 45493, droprate = "1%" }; --Asimov's Drape
-		[5] = { itemID = 45492, droprate = "5%" }; --Malleable Steelweave Mantle
-		[6] = { itemID = 45491, droprate = "7%" }; --Waistguard of the Creator
-		[7] = { itemID = 45490, droprate = "7%" }; --Pandora's Plea
-		[8] = { itemID = 45489, droprate = "5%" }; --Insanity's Grip
-		[10] = { itemID = 45641, droprate = "5%" }; --Gauntlets of the Wayward Conqueror
-		[11] = { itemID = 45642, droprate = "0%" }; --Gauntlets of the Wayward Protector
-		[12] = { itemID = 45643, droprate = "8%" }; --Gauntlets of the Wayward Vanquisher
+		[4] = { itemID = 45493 }; --Asimov's Drape
+		[5] = { itemID = 45492 }; --Malleable Steelweave Mantle
+		[6] = { itemID = 45491 }; --Waistguard of the Creator
+		[7] = { itemID = 45490 }; --Pandora's Plea
+		[8] = { itemID = 45489 }; --Insanity's Grip
+		[10] = { itemID = 45641 }; --Gauntlets of the Wayward Conqueror
+		[11] = { itemID = 45642 }; --Gauntlets of the Wayward Protector
+		[12] = { itemID = 45643 }; --Gauntlets of the Wayward Vanquisher
 		[16] = { icon = "INV_Box_01", name = WHITE..AL["Hard Mode"] };
-		[17] = { itemID = 45496, droprate = ".33%" }; --Titanskin Cloak
+		[17] = { itemID = 45496 }; --Titanskin Cloak
 		[18] = { itemID = 45497 }; --Crown of Luminescence
 		[19] = { itemID = 45663 }; --Armbands of Bedlam
 		[20] = { itemID = 45495 }; --Conductive Seal
 		[21] = { itemID = 45494 }; --Delirium's Touch
 		[22] = { itemID = 45620 }; --Starshard Edge
-		[24] = { itemID = 45816, droprate = ".16%" }; --Mimiron's Sigil
+		[24] = { itemID = 45816 }; --Mimiron's Sigil
 	};
 	{
 		Name = BabbleBoss["General Vezax"];
-		[1] = { itemID = 46014, droprate = "2%" }; --Saronite Animus Cloak
-		[2] = { itemID = 46013, droprate = "0%" }; --Underworld Mantle
-		[3] = { itemID = 46012, droprate = "0%" }; --Vestments of the Piercing Light
-		[4] = { itemID = 46009, droprate = "7%" }; --Bindings of the Depths
+		[1] = { itemID = 46014 }; --Saronite Animus Cloak
+		[2] = { itemID = 46013 }; --Underworld Mantle
+		[3] = { itemID = 46012 }; --Vestments of the Piercing Light
+		[4] = { itemID = 46009 }; --Bindings of the Depths
 		[5] = { itemID = 46346 }; --Boots of Unsettled Prey
-		[6] = { itemID = 45997, droprate = "7%" }; --Gauntlets of the Wretched
-		[7] = { itemID = 46008, droprate = "8%" }; --Choker of the Abyss
-		[8] = { itemID = 46015, droprate = "8%" }; --Pendant of Endless Despair
-		[9] = { itemID = 46010, droprate = "1%" }; --Darkstone Ring
-		[10] = { itemID = 46011, droprate = "9%" }; --Shadowbite
-		[11] = { itemID = 45996, droprate = "2%" }; --Hoperender
+		[6] = { itemID = 45997 }; --Gauntlets of the Wretched
+		[7] = { itemID = 46008 }; --Choker of the Abyss
+		[8] = { itemID = 46015 }; --Pendant of Endless Despair
+		[9] = { itemID = 46010 }; --Darkstone Ring
+		[10] = { itemID = 46011 }; --Shadowbite
+		[11] = { itemID = 45996 }; --Hoperender
 		[16] = { icon = "INV_Box_01", name = WHITE..AL["Hard Mode"] };
 		[17] = { itemID = 46032 }; --Drape of the Faceless General
 		[18] = { itemID = 46034 }; --Leggings of Profound Darkness
@@ -4567,45 +4567,45 @@ AtlasLoot_Data["Ulduar"] = {
 	};
 	{
 		Name = BabbleBoss["General Vezax"];
-		[1] = { itemID = 45038, droprate = "0%" }; --Fragment of Val'anyr
+		[1] = { itemID = 45038 }; --Fragment of Val'anyr
 		[2] = { itemID = 46017 }; --Val'anyr, Hammer of Ancient Kings
-		[4] = { itemID = 45514, droprate = "0%" }; --Mantle of the Unknowing
-		[5] = { itemID = 45508, droprate = "1%" }; --Belt of the Darkspeaker
-		[6] = { itemID = 45512, droprate = "9%" }; --Grips of the Unbroken
-		[7] = { itemID = 45504, droprate = "8%" }; --Darkcore Leggings
-		[8] = { itemID = 45513, droprate = "8%" }; --Boots of the Forgotten Depths
-		[9] = { itemID = 45502, droprate = "9%" }; --Helm of the Faceless
-		[10] = { itemID = 45505, droprate = "9%" }; --Belt of Clinging Hope
-		[11] = { itemID = 45501, droprate = "7%" }; --Boots of the Underdweller
-		[12] = { itemID = 45503, droprate = "0%" }; --Metallic Loop of the Sufferer
-		[13] = { itemID = 45515, droprate = "1%" }; --Ring of the Vacant Eye
-		[14] = { itemID = 45507, droprate = "0%" }; --The General's Heart
-		[15] = { itemID = 45509, droprate = "7%" }; --Idol of the Corruptor
-		[16] = { itemID = 45145, droprate = "9%" }; --Libram of the Sacred Shield
-		[17] = { itemID = 45498, droprate = "0%" }; --Lotrafen, Spear of the Damned
-		[18] = { itemID = 45511, droprate = "9%" }; --Scepter of Lost Souls
+		[4] = { itemID = 45514 }; --Mantle of the Unknowing
+		[5] = { itemID = 45508 }; --Belt of the Darkspeaker
+		[6] = { itemID = 45512 }; --Grips of the Unbroken
+		[7] = { itemID = 45504 }; --Darkcore Leggings
+		[8] = { itemID = 45513 }; --Boots of the Forgotten Depths
+		[9] = { itemID = 45502 }; --Helm of the Faceless
+		[10] = { itemID = 45505 }; --Belt of Clinging Hope
+		[11] = { itemID = 45501 }; --Boots of the Underdweller
+		[12] = { itemID = 45503 }; --Metallic Loop of the Sufferer
+		[13] = { itemID = 45515 }; --Ring of the Vacant Eye
+		[14] = { itemID = 45507 }; --The General's Heart
+		[15] = { itemID = 45509 }; --Idol of the Corruptor
+		[16] = { itemID = 45145 }; --Libram of the Sacred Shield
+		[17] = { itemID = 45498 }; --Lotrafen, Spear of the Damned
+		[18] = { itemID = 45511 }; --Scepter of Lost Souls
 		[20] = { icon = "INV_Box_01", name = WHITE..AL["Hard Mode"] };
-		[21] = { itemID = 45520, droprate = ".32%" }; --Handwraps of the Vigilant
-		[22] = { itemID = 45519, droprate = ".32%" }; --Vestments of the Blind Denizen
-		[23] = { itemID = 45517, droprate = ".36%" }; --Pendulum of Infinity
+		[21] = { itemID = 45520 }; --Handwraps of the Vigilant
+		[22] = { itemID = 45519 }; --Vestments of the Blind Denizen
+		[23] = { itemID = 45517 }; --Pendulum of Infinity
 		[24] = { itemID = 45518 }; --Flare of the Heavens
 		[25] = { itemID = 45516 }; --Voldrethar, Dark Blade of Oblivion
 	};
 	{
 		Name = BabbleBoss["Yogg-Saron"];
-		[1] = { itemID = 46030, droprate = "7%" }; --Treads of the Dragon Council
-		[2] = { itemID = 46019, droprate = "2%" }; --Leggings of the Insatiable
-		[3] = { itemID = 46028, droprate = "7%" }; --Faceguard of the Eyeless Horror
+		[1] = { itemID = 46030 }; --Treads of the Dragon Council
+		[2] = { itemID = 46019 }; --Leggings of the Insatiable
+		[3] = { itemID = 46028 }; --Faceguard of the Eyeless Horror
 		[4] = { itemID = 46022 }; --Pendant of a Thousand Maws
-		[5] = { itemID = 46021, droprate = "2%" }; --Royal Seal of King Llane
-		[6] = { itemID = 46024, droprate = "0%" }; --Kingsbane
-		[7] = { itemID = 46016, droprate = "7%" }; --Abaddon
-		[8] = { itemID = 46031, droprate = "5%" }; --Touch of Madness
-		[9] = { itemID = 46025, droprate = "3%" }; --Devotion
-		[10] = { itemID = 46018, droprate = "5%" }; --Deliverance
-		[12] = { itemID = 45635, droprate = "2%" }; --Chestguard of the Wayward Conqueror
-		[13] = { itemID = 45636, droprate = "0%" }; --Chestguard of the Wayward Protector
-		[14] = { itemID = 45637, droprate = "7%" }; --Chestguard of the Wayward Vanquisher
+		[5] = { itemID = 46021 }; --Royal Seal of King Llane
+		[6] = { itemID = 46024 }; --Kingsbane
+		[7] = { itemID = 46016 }; --Abaddon
+		[8] = { itemID = 46031 }; --Touch of Madness
+		[9] = { itemID = 46025 }; --Devotion
+		[10] = { itemID = 46018 }; --Deliverance
+		[12] = { itemID = 45635 }; --Chestguard of the Wayward Conqueror
+		[13] = { itemID = 45636 }; --Chestguard of the Wayward Protector
+		[14] = { itemID = 45637 }; --Chestguard of the Wayward Vanquisher
 		[16] = { icon = "INV_Box_01", name = WHITE..AL["Hard Mode"] };
 		[17] = { itemID = 46068 }; --Amice of Inconceivable Horror
 		[18] = { itemID = 46095 }; --Soul-Devouring Cinch
@@ -4613,25 +4613,25 @@ AtlasLoot_Data["Ulduar"] = {
 		[20] = { itemID = 46097 }; --Caress of Insanity
 		[21] = { itemID = 46067 }; --Hammer of Crushing Whispers
 		[23] = { icon = "INV_Box_01", name = WHITE.. AL["Bonus Loot"], desc = "=q5=" .. AL["Alone in the Darkness"] };
-		[24] = { itemID = 46312, droprate = "00%" }; --Vanquished Clutches of Yogg-Saron
+		[24] = { itemID = 46312 }; --Vanquished Clutches of Yogg-Saron
 	};
 	{
 		Name = BabbleBoss["Yogg-Saron"];
-		[1] = { itemID = 45038, droprate = "0%" }; --Fragment of Val'anyr
+		[1] = { itemID = 45038 }; --Fragment of Val'anyr
 		[2] = { itemID = 46017 }; --Val'anyr, Hammer of Ancient Kings
-		[4] = { itemID = 45529, droprate = "5%" }; --Shawl of Haunted Memories
-		[5] = { itemID = 45532, droprate = "7%" }; --Cowl of Dark Whispers
-		[6] = { itemID = 45523, droprate = "8%" }; --Garona's Guise
-		[7] = { itemID = 45524, droprate = "3%" }; --Chestguard of Insidious Intent
-		[8] = { itemID = 45531, droprate = "6%" }; --Chestguard of the Fallen God
-		[9] = { itemID = 45525, droprate = "1%" }; --Godbane Signet
-		[10] = { itemID = 45530, droprate = "8%" }; --Sanity's Bond
-		[11] = { itemID = 45522, droprate = "0%" }; --Blood of the Old God
+		[4] = { itemID = 45529 }; --Shawl of Haunted Memories
+		[5] = { itemID = 45532 }; --Cowl of Dark Whispers
+		[6] = { itemID = 45523 }; --Garona's Guise
+		[7] = { itemID = 45524 }; --Chestguard of Insidious Intent
+		[8] = { itemID = 45531 }; --Chestguard of the Fallen God
+		[9] = { itemID = 45525 }; --Godbane Signet
+		[10] = { itemID = 45530 }; --Sanity's Bond
+		[11] = { itemID = 45522 }; --Blood of the Old God
 		[12] = { itemID = 45527 }; --Soulscribe
-		[13] = { itemID = 45521, droprate = "5%" }; --Earthshaper
-		[16] = { itemID = 45656, droprate = "9%" }; --Mantle of the Wayward Conqueror
-		[17] = { itemID = 45657, droprate = "4%" }; --Mantle of the Wayward Protector
-		[18] = { itemID = 45658, droprate = "6%" }; --Mantle of the Wayward Vanquisher
+		[13] = { itemID = 45521 }; --Earthshaper
+		[16] = { itemID = 45656 }; --Mantle of the Wayward Conqueror
+		[17] = { itemID = 45657 }; --Mantle of the Wayward Protector
+		[18] = { itemID = 45658 }; --Mantle of the Wayward Vanquisher
 		[20] = { icon = "INV_Box_01", name = WHITE..AL["Hard Mode"] };
 		[21] = { itemID = 45537 }; --Treads of the False Oracle
 		[22] = { itemID = 45536 }; --Legguards of Cunning Deception
@@ -4639,7 +4639,7 @@ AtlasLoot_Data["Ulduar"] = {
 		[24] = { itemID = 45535 }; --Show of Faith
 		[25] = { itemID = 45533 }; --Dark Edge of Depravity
 		[27] = { icon = "INV_Box_01", name = WHITE.. AL["Bonus Loot"], desc = "=q5=" .. AL["Alone in the Darkness"] };
-		[28] = { itemID = 45693, droprate = "00%" }; --Mimiron's Head
+		[28] = { itemID = 45693 }; --Mimiron's Head
 	};
 	{
 		Name = AL["Trash Mobs"];

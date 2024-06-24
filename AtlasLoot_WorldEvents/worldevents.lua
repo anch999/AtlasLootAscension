@@ -506,7 +506,7 @@ local HorsemanCLASSIC = {
 	[3] = { itemID = 2034073 }; --The Horseman's Signet Ring
 	[4] = { itemID = 2034074 }; --Witching Band
 	[5] = { itemID = 2038175 }; --The Horseman's Blade
-	[16] = { itemID = 34068, droprate = "100%" }; --Weighted Jack-o'-Lantern
+	[16] = { itemID = 34068 }; --Weighted Jack-o'-Lantern
 	[17] = { itemID = 33226 }; --Tricky Treat
 	[18] = { itemID = 37012 }; --The Horseman's Reins
 	[19] = { itemID = 37011 }; --Magic Broom
@@ -521,7 +521,7 @@ local HorsemanTBC = {
 	[3] = { itemID = 34073 }; --The Horseman's Signet Ring
 	[4] = { itemID = 34074 }; --Witching Band
 	[5] = { itemID = 38175 }; --The Horseman's Blade
-	[16] = { itemID = 34068, droprate = "100%" }; --Weighted Jack-o'-Lantern
+	[16] = { itemID = 34068 }; --Weighted Jack-o'-Lantern
 	[17] = { itemID = 33226 }; --Tricky Treat
 	[18] = { itemID = 37012 }; --The Horseman's Reins
 	[19] = { itemID = 37011 }; --Magic Broom
@@ -536,7 +536,7 @@ local HorsemanWRATH = {
 	[3] = { itemID = 49123 }; --The Horseman's Seal
 	[4] = { itemID = 49124 }; --Wicked Witch's Band
 	[5] = { itemID = 49128 }; --The Horseman's Baleful Blade
-	[16] = { itemID = 34068, droprate = "100%" }; --Weighted Jack-o'-Lantern
+	[16] = { itemID = 34068 }; --Weighted Jack-o'-Lantern
 	[17] = { itemID = 33226 }; --Tricky Treat
 	[18] = { itemID = 37012 }; --The Horseman's Reins
 	[19] = { itemID = 37011 }; --Magic Broom
@@ -1032,23 +1032,23 @@ AtlasLoot_Data["ElementalInvasion"] = {
 	{
 		Name = AL["Elemental Invasion"];
 		[1] = { icon = "INV_Box_01", name = WHITE..BabbleBoss["Baron Charr"].."", "=q1="..AL["Fire"]..", "..BabbleZone["Un'Goro Crater"] };
-		[2] = { itemID = 18671, droprate = "12.18%" }; --Baron Charr's Sceptre
-		[3] = { itemID = 19268, droprate = "10.14%" }; --Ace of Elementals
-		[4] = { itemID = 18672, droprate = "53.31%" }; --Elemental Ember
+		[2] = { itemID = 18671 }; --Baron Charr's Sceptre
+		[3] = { itemID = 19268 }; --Ace of Elementals
+		[4] = { itemID = 18672 }; --Elemental Ember
 		[6] = { icon = "INV_Box_01", name = WHITE..BabbleBoss["Princess Tempestria"].."", "=q1="..AL["Water"]..", "..BabbleZone["Winterspring"] };
-		[7] = { itemID = 18678, droprate = "12.33%" }; --Tempestria's Frozen Necklace
-		[8] = { itemID = 19268, droprate = "5.24%" }; --Ace of Elementals
-		[9] = { itemID = 21548, droprate = "25.00%" }; --Pattern: Stormshroud Gloves
-		[10] = { itemID = 18679, droprate = "51.01%" }; --Frigid Ring
+		[7] = { itemID = 18678 }; --Tempestria's Frozen Necklace
+		[8] = { itemID = 19268 }; --Ace of Elementals
+		[9] = { itemID = 21548 }; --Pattern: Stormshroud Gloves
+		[10] = { itemID = 18679 }; --Frigid Ring
 		[16] = { icon = "INV_Box_01", name = WHITE..BabbleBoss["Avalanchion"].."", "=q1="..AL["Earth"]..", "..BabbleZone["Azshara"] };
-		[17] = { itemID = 18673, droprate = "14.56%" }; --Avalanchion's Stony Hide
-		[18] = { itemID = 19268, droprate = "5.89%" }; --Ace of Elementals
-		[19] = { itemID = 18674, droprate = "41.50%" }; --Hardened Stone Band
+		[17] = { itemID = 18673 }; --Avalanchion's Stony Hide
+		[18] = { itemID = 19268 }; --Ace of Elementals
+		[19] = { itemID = 18674 }; --Hardened Stone Band
 		[21] = { icon = "INV_Box_01", name = WHITE..BabbleBoss["The Windreaver"].."", "=q1="..AL["Wind"]..", "..BabbleZone["Silithus"] };
-		[22] = { itemID = 18676, droprate = "16.76%" }; --Sash of the Windreaver
-		[23] = { itemID = 19268, droprate = "9.76%" }; --Ace of Elementals
-		[24] = { itemID = 21548, droprate = "36.28%" }; --Pattern: Stormshroud Gloves
-		[25] = { itemID = 18677, droprate = "52.47%" }; --Zephyr Cloak
+		[22] = { itemID = 18676 }; --Sash of the Windreaver
+		[23] = { itemID = 19268 }; --Ace of Elementals
+		[24] = { itemID = 21548 }; --Pattern: Stormshroud Gloves
+		[25] = { itemID = 18677 }; --Zephyr Cloak
 	};
 };
 
@@ -1061,11 +1061,11 @@ AtlasLoot_Data["GurubashiArena"] = {
 	Name = AL["Gurubashi Arena Booty Run"];
 	{
 		Name = AL["Gurubashi Arena Booty Run"];
-		[1] = { itemID = 18709, droprate = "5.0%" }; --Arena Wristguards
-		[2] = { itemID = 18710, droprate = "6.4%" }; --Arena Bracers
-		[3] = { itemID = 18711, droprate = "6.0%" }; --Arena Bands
-		[4] = { itemID = 18712, droprate = "6.8%" }; --Arena Vambraces
-		[16] = { itemID = 18706, desc = ", =q1="..AL["This Item Begins a Quest"], droprate = "100%" }; --Arena Master
+		[1] = { itemID = 18709 }; --Arena Wristguards
+		[2] = { itemID = 18710 }; --Arena Bracers
+		[3] = { itemID = 18711 }; --Arena Bands
+		[4] = { itemID = 18712 }; --Arena Vambraces
+		[16] = { itemID = 18706, desc = ", =q1="..AL["This Item Begins a Quest"] }; --Arena Master
 		[17] = { itemID = 19024 }; --Arena Grand Master
 	};
 };
@@ -1108,72 +1108,72 @@ AtlasLoot_Data["AbyssalCouncil"] = {
 	{
 		Name = AL["Templars"];
 		[1] = { icon = "INV_Box_01", name = WHITE..AL["Crimson Templar"].."", "=q1="..AL["Fire"] };
-		[2] = { itemID = 20657, droprate = "2.31%" }; --Crystal Tipped Stiletto
-		[3] = { itemID = 20655, droprate = "13.03%" }; --Abyssal Cloth Handwraps
-		[4] = { itemID = 20656, droprate = "12.89%" }; --Abyssal Mail Sabatons
-		[5] = { itemID = 20513, droprate = "100%" }; --Abyssal Crest
+		[2] = { itemID = 20657 }; --Crystal Tipped Stiletto
+		[3] = { itemID = 20655 }; --Abyssal Cloth Handwraps
+		[4] = { itemID = 20656 }; --Abyssal Mail Sabatons
+		[5] = { itemID = 20513 }; --Abyssal Crest
 		[7] = { icon = "INV_Box_01", name = WHITE..AL["Azure Templar"].."", "=q1="..AL["Water"] };
-		[8] = { itemID = 20654, droprate = "2.38%" }; --Amethyst War Staff
-		[9] = { itemID = 20652, droprate = "12.94%" }; --Abyssal Cloth Slippers
-		[10] = { itemID = 20653, droprate = "13.61%" }; --Abyssal Plate Gauntlets
-		[11] = { itemID = 20513, droprate = "100%" }; --Abyssal Crest
+		[8] = { itemID = 20654 }; --Amethyst War Staff
+		[9] = { itemID = 20652 }; --Abyssal Cloth Slippers
+		[10] = { itemID = 20653 }; --Abyssal Plate Gauntlets
+		[11] = { itemID = 20513 }; --Abyssal Crest
 		[16] = { icon = "INV_Box_01", name = WHITE..AL["Hoary Templar"].."", "=q1="..AL["Wind"] };
-		[17] = { itemID = 20660, droprate = "2.22%" }; --Stonecutting Glaive
-		[18] = { itemID = 20658, droprate = "13.16%" }; --Abyssal Leather Boots
-		[19] = { itemID = 20659, droprate = "12.64%" }; --Abyssal Mail Handguards
-		[20] = { itemID = 20513, droprate = "100%" }; --Abyssal Crest
+		[17] = { itemID = 20660 }; --Stonecutting Glaive
+		[18] = { itemID = 20658 }; --Abyssal Leather Boots
+		[19] = { itemID = 20659 }; --Abyssal Mail Handguards
+		[20] = { itemID = 20513 }; --Abyssal Crest
 		[22] = { icon = "INV_Box_01", name = WHITE..AL["Earthen Templar"].."", "=q1="..AL["Earth"] };
-		[23] = { itemID = 20663, droprate = "2.55%" }; --Deep Strike Bow
-		[24] = { itemID = 20661, droprate = "13.16%" }; --Abyssal Leather Gloves
-		[25] = { itemID = 20662, droprate = "12.93%" }; --Abyssal Plate Greaves
-		[26] = { itemID = 20513, droprate = "100%" }; --Abyssal Crest
+		[23] = { itemID = 20663 }; --Deep Strike Bow
+		[24] = { itemID = 20661 }; --Abyssal Leather Gloves
+		[25] = { itemID = 20662 }; --Abyssal Plate Greaves
+		[26] = { itemID = 20513 }; --Abyssal Crest
 	};
 	{
 		Name = AL["Dukes"];
 		[1] = { icon = "INV_Box_01", name = WHITE..AL["The Duke of Cynders"].."", "=q1="..AL["Fire"] };
-		[2] = { itemID = 20665, droprate = "22.50%" }; --Abyssal Leather Leggings
-		[3] = { itemID = 20666, droprate = "30.47%" }; --Hardened Steel Warhammer
-		[4] = { itemID = 20514, droprate = "100%" }; --Abyssal Signet
-		[5] = { itemID = 20664, droprate = "27.08%" }; --Abyssal Cloth Sash
-		[6] = { itemID = 21989, droprate = "100%" }; --Cinder of Cynders
+		[2] = { itemID = 20665 }; --Abyssal Leather Leggings
+		[3] = { itemID = 20666 }; --Hardened Steel Warhammer
+		[4] = { itemID = 20514 }; --Abyssal Signet
+		[5] = { itemID = 20664 }; --Abyssal Cloth Sash
+		[6] = { itemID = 21989 }; --Cinder of Cynders
 		[8] = { icon = "INV_Box_01", name = WHITE..AL["The Duke of Fathoms"].."", "=q1="..AL["Water"] };
-		[9] = { itemID = 20668, droprate = "22.40%" }; --Abyssal Mail Legguards
+		[9] = { itemID = 20668 }; --Abyssal Mail Legguards
 		[10] = { itemID = 20669, price = "29.62%" }; --Darkstone Claymore
-		[11] = { itemID = 20514, droprate = "100%" }; --Abyssal Signet
-		[12] = { itemID = 20667, droprate = "29.04%" }; --Abyssal Leather Belt
+		[11] = { itemID = 20514 }; --Abyssal Signet
+		[12] = { itemID = 20667 }; --Abyssal Leather Belt
 		[16] = { icon = "INV_Box_01", name = WHITE..AL["The Duke of Zephyrs"].."", "=q1="..AL["Wind"] };
-		[17] = { itemID = 20674, droprate = "21.83%" }; --Abyssal Cloth Pants
+		[17] = { itemID = 20674 }; --Abyssal Cloth Pants
 		[18] = { itemID = 20675, price = "29.73%" }; --Soulrender
-		[19] = { itemID = 20514, droprate = "100%" }; --Abyssal Signet
-		[20] = { itemID = 20673, droprate = "27.11%" }; --Abyssal Plate Girdle
+		[19] = { itemID = 20514 }; --Abyssal Signet
+		[20] = { itemID = 20673 }; --Abyssal Plate Girdle
 		[23] = { icon = "INV_Box_01", name = WHITE..AL["The Duke of Shards"].."", "=q1="..AL["Earth"] };
-		[24] = { itemID = 20671, droprate = "22.63%" }; --Abyssal Plate Legplates
-		[25] = { itemID = 20672, droprate = "28.90%" }; --Sparkling Crystal Wand
-		[26] = { itemID = 20514, droprate = "100%" }; --Abyssal Signet
-		[27] = { itemID = 20670, droprate = "28.16%" }; --Abyssal Mail Clutch
+		[24] = { itemID = 20671 }; --Abyssal Plate Legplates
+		[25] = { itemID = 20672 }; --Sparkling Crystal Wand
+		[26] = { itemID = 20514 }; --Abyssal Signet
+		[27] = { itemID = 20670 }; --Abyssal Mail Clutch
 	};
 	{
 		Name = AL["High Council"];
 		[1] = { icon = "INV_Box_01", name = WHITE..BabbleBoss["Prince Skaldrenox"].."", "=q1="..AL["Fire"] };
-		[2] = { itemID = 20682, droprate = "22.83%" }; --Elemental Focus Band
-		[3] = { itemID = 20515, droprate = "100%" }; --Abyssal Scepter
-		[4] = { itemID = 20681, droprate = "24.70%" }; --Abyssal Leather Bracers
-		[5] = { itemID = 20680, droprate = "24.21%" }; --Abyssal Mail Pauldrons
+		[2] = { itemID = 20682 }; --Elemental Focus Band
+		[3] = { itemID = 20515 }; --Abyssal Scepter
+		[4] = { itemID = 20681 }; --Abyssal Leather Bracers
+		[5] = { itemID = 20680 }; --Abyssal Mail Pauldrons
 		[7] = { icon = "INV_Box_01", name = WHITE..BabbleBoss["Lord Skwol"].."", "=q1="..AL["Water"] };
 		[8] = { itemID = 20685, price = "24.48%" }; --Wavefront Necklace
-		[9] = { itemID = 20515, droprate = "100%" }; --Abyssal Scepter
-		[10] = { itemID = 20684, droprate = "27.68%" }; --Abyssal Mail Armguards
-		[11] = { itemID = 20683, droprate = "21.52%" }; --Abyssal Plate Epaulets
+		[9] = { itemID = 20515 }; --Abyssal Scepter
+		[10] = { itemID = 20684 }; --Abyssal Mail Armguards
+		[11] = { itemID = 20683 }; --Abyssal Plate Epaulets
 		[16] = { icon = "INV_Box_01", name = WHITE..BabbleBoss["High Marshal Whirlaxis"].."", "=q1="..AL["Wind"] };
-		[17] = { itemID = 20691, droprate = "22.08%" }; --Windshear Cape
-		[18] = { itemID = 20515, droprate = "100%" }; --Abyssal Scepter
-		[19] = { itemID = 20690, droprate = "23.60%" }; --Abyssal Cloth Wristbands
-		[20] = { itemID = 20689, droprate = "23.40%" }; --Abyssal Leather Shoulders
+		[17] = { itemID = 20691 }; --Windshear Cape
+		[18] = { itemID = 20515 }; --Abyssal Scepter
+		[19] = { itemID = 20690 }; --Abyssal Cloth Wristbands
+		[20] = { itemID = 20689 }; --Abyssal Leather Shoulders
 		[22] = { icon = "INV_Box_01", name = WHITE..BabbleBoss["Baron Kazum"].."", "=q1="..AL["Earth"] };
-		[23] = { itemID = 20688, droprate = "20.64%" }; --Earthen Guard
-		[24] = { itemID = 20515, droprate = "100%" }; --Abyssal Scepter
-		[25] = { itemID = 20686, droprate = "23.96%" }; --Abyssal Cloth Amice
-		[26] = { itemID = 20687, droprate = "23.66%" }; --Abyssal Plate Vambraces
+		[23] = { itemID = 20688 }; --Earthen Guard
+		[24] = { itemID = 20515 }; --Abyssal Scepter
+		[25] = { itemID = 20686 }; --Abyssal Cloth Amice
+		[26] = { itemID = 20687 }; --Abyssal Plate Vambraces
 	};
 };
 
@@ -1186,108 +1186,108 @@ AtlasLoot_Data["EthereumPrison"] = {
 	Name = AL["Ethereum Prison"];
 	{
 		Name = AL["Armbreaker Huffaz"];
-		[1] = { itemID = 31943, droprate = "10.7%" }; --Ethereum Band
-		[3] = { itemID = 31939, droprate = "1.36%" }; --Dark Cloak
-		[4] = { itemID = 31938, droprate = "0.4%" }; --Enigmatic Cloak
-		[5] = { itemID = 31936, droprate = "0.36%" }; --Fiery Cloak
-		[6] = { itemID = 31935, droprate = "1.1%" }; --Frigid Cloak
-		[7] = { itemID = 31937, droprate = "0.6%" }; --Living Cloak
-		[9] = { itemID = 31957, droprate = "100%" }; --Ethereum Prisoner I.D. Tag
-		[18] = { itemID = 31928, droprate = "0.7%" }; --Dark Band
-		[19] = { itemID = 31929, droprate = "0.8%" }; --Enigmatic Band
-		[20] = { itemID = 31925, droprate = "0.5%" }; --Fiery Band
-		[21] = { itemID = 31926, droprate = "1.0%" }; --Frigid Band
-		[22] = { itemID = 31927, droprate = "1.3%" }; --Living Band
+		[1] = { itemID = 31943 }; --Ethereum Band
+		[3] = { itemID = 31939 }; --Dark Cloak
+		[4] = { itemID = 31938 }; --Enigmatic Cloak
+		[5] = { itemID = 31936 }; --Fiery Cloak
+		[6] = { itemID = 31935 }; --Frigid Cloak
+		[7] = { itemID = 31937 }; --Living Cloak
+		[9] = { itemID = 31957 }; --Ethereum Prisoner I.D. Tag
+		[18] = { itemID = 31928 }; --Dark Band
+		[19] = { itemID = 31929 }; --Enigmatic Band
+		[20] = { itemID = 31925 }; --Fiery Band
+		[21] = { itemID = 31926 }; --Frigid Band
+		[22] = { itemID = 31927 }; --Living Band
 	};
 	{
 		Name = AL["Fel Tinkerer Zortan"];
-		[1] = { itemID = 31573, droprate = "9.7%" }; --Mistshroud Boots
-		[3] = { itemID = 31939, droprate = "0.94%" }; --Dark Cloak
-		[4] = { itemID = 31938, droprate = "1.0%" }; --Enigmatic Cloak
-		[5] = { itemID = 31936, droprate = "0.94%" }; --Fiery Cloak
-		[6] = { itemID = 31935, droprate = "0.4%" }; --Frigid Cloak
-		[7] = { itemID = 31937, droprate = "0.7%" }; --Living Cloak
-		[9] = { itemID = 31957, droprate = "100%" }; --Ethereum Prisoner I.D. Tag
-		[18] = { itemID = 31928, droprate = "1.0%" }; --Dark Band
-		[19] = { itemID = 31929, droprate = "1.3%" }; --Enigmatic Band
-		[20] = { itemID = 31925, droprate = "1.2%" }; --Fiery Band
-		[21] = { itemID = 31926, droprate = "1.0%" }; --Frigid Band
-		[22] = { itemID = 31927, droprate = "1.2%" }; --Living Band
+		[1] = { itemID = 31573 }; --Mistshroud Boots
+		[3] = { itemID = 31939 }; --Dark Cloak
+		[4] = { itemID = 31938 }; --Enigmatic Cloak
+		[5] = { itemID = 31936 }; --Fiery Cloak
+		[6] = { itemID = 31935 }; --Frigid Cloak
+		[7] = { itemID = 31937 }; --Living Cloak
+		[9] = { itemID = 31957 }; --Ethereum Prisoner I.D. Tag
+		[18] = { itemID = 31928 }; --Dark Band
+		[19] = { itemID = 31929 }; --Enigmatic Band
+		[20] = { itemID = 31925 }; --Fiery Band
+		[21] = { itemID = 31926 }; --Frigid Band
+		[22] = { itemID = 31927 }; --Living Band
 	};
 	{
 		Name = AL["Forgosh"];
-		[1] = { itemID = 31565, droprate = "8.5%" }; --Skystalker's Boots
-		[3] = { itemID = 31939, droprate = "2.63%" }; --Dark Cloak
-		[4] = { itemID = 31938, droprate = "0.29%" }; --Enigmatic Cloak
-		[5] = { itemID = 31936, droprate = "0.9%" }; --Fiery Cloak
-		[6] = { itemID = 31935, droprate = "0.7%" }; --Frigid Cloak
-		[7] = { itemID = 31937, droprate = "1.0%" }; --Living Cloak
-		[9] = { itemID = 31957, droprate = "100%" }; --Ethereum Prisoner I.D. Tag
-		[18] = { itemID = 31928, droprate = "0.9%" }; --Dark Band
-		[19] = { itemID = 31929, droprate = "1.9%" }; --Enigmatic Band
-		[20] = { itemID = 31925, droprate = "0.5%" }; --Fiery Band
-		[21] = { itemID = 31926, droprate = "1.0%" }; --Frigid Band
-		[22] = { itemID = 31927, droprate = "0.7%" }; --Living Band
+		[1] = { itemID = 31565 }; --Skystalker's Boots
+		[3] = { itemID = 31939 }; --Dark Cloak
+		[4] = { itemID = 31938 }; --Enigmatic Cloak
+		[5] = { itemID = 31936 }; --Fiery Cloak
+		[6] = { itemID = 31935 }; --Frigid Cloak
+		[7] = { itemID = 31937 }; --Living Cloak
+		[9] = { itemID = 31957 }; --Ethereum Prisoner I.D. Tag
+		[18] = { itemID = 31928 }; --Dark Band
+		[19] = { itemID = 31929 }; --Enigmatic Band
+		[20] = { itemID = 31925 }; --Fiery Band
+		[21] = { itemID = 31926 }; --Frigid Band
+		[22] = { itemID = 31927 }; --Living Band
 	};
 	{
 		Name = AL["Gul'bor"];
-		[1] = { itemID = 31940, droprate = "9.5%" }; --Ethereum Torque
-		[3] = { itemID = 31939, droprate = "0.66%" }; --Dark Cloak
-		[4] = { itemID = 31938, droprate = "0.66%" }; --Enigmatic Cloak
-		[5] = { itemID = 31936, droprate = "1.1%" }; --Fiery Cloak
-		[6] = { itemID = 31935, droprate = "1.1%" }; --Frigid Cloak
-		[7] = { itemID = 31937, droprate = "0.8%" }; --Living Cloak
-		[9] = { itemID = 31957, droprate = "100%" }; --Ethereum Prisoner I.D. Tag
-		[18] = { itemID = 31928, droprate = "0.7%" }; --Dark Band
-		[19] = { itemID = 31929, droprate = "0.9%" }; --Enigmatic Band
-		[20] = { itemID = 31925, droprate = "0.8%" }; --Fiery Band
-		[21] = { itemID = 31926, droprate = "0.8%" }; --Frigid Band
-		[22] = { itemID = 31927, droprate = "2.0%" }; --Living Band
+		[1] = { itemID = 31940 }; --Ethereum Torque
+		[3] = { itemID = 31939 }; --Dark Cloak
+		[4] = { itemID = 31938 }; --Enigmatic Cloak
+		[5] = { itemID = 31936 }; --Fiery Cloak
+		[6] = { itemID = 31935 }; --Frigid Cloak
+		[7] = { itemID = 31937 }; --Living Cloak
+		[9] = { itemID = 31957 }; --Ethereum Prisoner I.D. Tag
+		[18] = { itemID = 31928 }; --Dark Band
+		[19] = { itemID = 31929 }; --Enigmatic Band
+		[20] = { itemID = 31925 }; --Fiery Band
+		[21] = { itemID = 31926 }; --Frigid Band
+		[22] = { itemID = 31927 }; --Living Band
 	};
 	{
 		Name = AL["Malevus the Mad"];
-		[1] = { itemID = 31581, droprate = "10.5%" }; --Slatesteel Boots
-		[3] = { itemID = 31939, droprate = "2.46%" }; --Dark Cloak
-		[4] = { itemID = 31938, droprate = "0.70%" }; --Enigmatic Cloak
-		[5] = { itemID = 31936, droprate = "1.5%" }; --Fiery Cloak
-		[6] = { itemID = 31935, droprate = "0.7%" }; --Frigid Cloak
-		[7] = { itemID = 31937, droprate = "1.3%" }; --Living Cloak
-		[9] = { itemID = 31957, droprate = "100%" }; --Ethereum Prisoner I.D. Tag
-		[18] = { itemID = 31928, droprate = "0.5%" }; --Dark Band
-		[19] = { itemID = 31929, droprate = "0.8%" }; --Enigmatic Band
-		[20] = { itemID = 31925, droprate = "1.75%" }; --Fiery Band
-		[21] = { itemID = 31926, droprate = "0.6%" }; --Frigid Band
-		[22] = { itemID = 31927, droprate = "1.8%" }; --Living Band
+		[1] = { itemID = 31581 }; --Slatesteel Boots
+		[3] = { itemID = 31939 }; --Dark Cloak
+		[4] = { itemID = 31938 }; --Enigmatic Cloak
+		[5] = { itemID = 31936 }; --Fiery Cloak
+		[6] = { itemID = 31935 }; --Frigid Cloak
+		[7] = { itemID = 31937 }; --Living Cloak
+		[9] = { itemID = 31957 }; --Ethereum Prisoner I.D. Tag
+		[18] = { itemID = 31928 }; --Dark Band
+		[19] = { itemID = 31929 }; --Enigmatic Band
+		[20] = { itemID = 31925 }; --Fiery Band
+		[21] = { itemID = 31926 }; --Frigid Band
+		[22] = { itemID = 31927 }; --Living Band
 	};
 	{
 		Name = AL["Porfus the Gem Gorger"];
-		[1] = { itemID = 31557, droprate = "7.9%" }; --Windchanneller's Boots
-		[3] = { itemID = 31939, droprate = "1.89%" }; --Dark Cloak
-		[4] = { itemID = 31938, droprate = "0.81%" }; --Enigmatic Cloak
-		[5] = { itemID = 31936, droprate = "1.0%" }; --Fiery Cloak
-		[6] = { itemID = 31935, droprate = "0.7%" }; --Frigid Cloak
-		[7] = { itemID = 31937, droprate = "1.1%" }; --Living Cloak
-		[9] = { itemID = 31957, droprate = "100%" }; --Ethereum Prisoner I.D. Tag
-		[18] = { itemID = 31928, droprate = "0.7%" }; --Dark Band
-		[19] = { itemID = 31929, droprate = "0.6%" }; --Enigmatic Band
-		[20] = { itemID = 31925, droprate = "1.8%" }; --Fiery Band
-		[21] = { itemID = 31926, droprate = "1.0%" }; --Frigid Band
-		[22] = { itemID = 31927, droprate = "1.1%" }; --Living Band
+		[1] = { itemID = 31557 }; --Windchanneller's Boots
+		[3] = { itemID = 31939 }; --Dark Cloak
+		[4] = { itemID = 31938 }; --Enigmatic Cloak
+		[5] = { itemID = 31936 }; --Fiery Cloak
+		[6] = { itemID = 31935 }; --Frigid Cloak
+		[7] = { itemID = 31937 }; --Living Cloak
+		[9] = { itemID = 31957 }; --Ethereum Prisoner I.D. Tag
+		[18] = { itemID = 31928 }; --Dark Band
+		[19] = { itemID = 31929 }; --Enigmatic Band
+		[20] = { itemID = 31925 }; --Fiery Band
+		[21] = { itemID = 31926 }; --Frigid Band
+		[22] = { itemID = 31927 }; --Living Band
 	};
 	{
 		Name = AL["Wrathbringer Laz-tarash"];
-		[1] = { itemID = 32520, droprate = "10.4%" }; --Manaforged Sphere
-		[3] = { itemID = 31939, droprate = "1.06%" }; --Dark Cloak
-		[4] = { itemID = 31938, droprate = "1.06%" }; --Enigmatic Cloak
-		[5] = { itemID = 31936, droprate = "0.8%" }; --Fiery Cloak
-		[6] = { itemID = 31935, droprate = "1.5%" }; --Frigid Cloak
-		[7] = { itemID = 31937, droprate = "0.3%" }; --Living Cloak
-		[9] = { itemID = 31957, droprate = "100%" }; --Ethereum Prisoner I.D. Tag
-		[18] = { itemID = 31928, droprate = "0.7%" }; --Dark Band
-		[19] = { itemID = 31929, droprate = "0.7%" }; --Enigmatic Band
-		[20] = { itemID = 31925, droprate = "1.2%" }; --Fiery Band
-		[21] = { itemID = 31926, droprate = "1.1%" }; --Frigid Band
-		[22] = { itemID = 31927, droprate = "1.1%" }; --Living Band
+		[1] = { itemID = 32520 }; --Manaforged Sphere
+		[3] = { itemID = 31939 }; --Dark Cloak
+		[4] = { itemID = 31938 }; --Enigmatic Cloak
+		[5] = { itemID = 31936 }; --Fiery Cloak
+		[6] = { itemID = 31935 }; --Frigid Cloak
+		[7] = { itemID = 31937 }; --Living Cloak
+		[9] = { itemID = 31957 }; --Ethereum Prisoner I.D. Tag
+		[18] = { itemID = 31928 }; --Dark Band
+		[19] = { itemID = 31929 }; --Enigmatic Band
+		[20] = { itemID = 31925 }; --Fiery Band
+		[21] = { itemID = 31926 }; --Frigid Band
+		[22] = { itemID = 31927 }; --Living Band
 	};
 	{
 		Name = AL["Bash'ir Landing Stasis Chambers"];
@@ -1318,18 +1318,18 @@ AtlasLoot_Data["Shartuul"] = {
 	Name = AL["Shartuul"];
 	{
 		Name = AL["Shartuul"];
-		[1] = { itemID = 32941, droprate = "6.0%" }; --Corruptor's Signet
-		[3] = { itemID = 32676, droprate = "5.0%" }; --Depleted Cloth Bracers
-		[4] = { itemID = 32675, droprate = "7.0%" }; --Depleted Mail Gauntlets
-		[5] = { itemID = 32677, droprate = "9.0%" }; --Depleted Cloak
-		[6] = { itemID = 32678, droprate = "9.0%" }; --Depleted Ring
-		[7] = { itemID = 32672, droprate = "13.0%" }; --Depleted Badge
-		[8] = { itemID = 32673, droprate = "6.0%" }; --Depleted Dagger
-		[9] = { itemID = 32674, droprate = "14.0%" }; --Depleted Sword
-		[10] = { itemID = 32670, droprate = "0.02%" }; --Depleted Two-Handed Axe
-		[11] = { itemID = 32671, droprate = "11.0%" }; --Depleted Mace
-		[12] = { itemID = 32679, droprate = "6.0%" }; --Depleted Staff
-		[16] = { itemID = 32942, droprate = "1.4%" }; --Ring of the Overseer
+		[1] = { itemID = 32941 }; --Corruptor's Signet
+		[3] = { itemID = 32676 }; --Depleted Cloth Bracers
+		[4] = { itemID = 32675 }; --Depleted Mail Gauntlets
+		[5] = { itemID = 32677 }; --Depleted Cloak
+		[6] = { itemID = 32678 }; --Depleted Ring
+		[7] = { itemID = 32672 }; --Depleted Badge
+		[8] = { itemID = 32673 }; --Depleted Dagger
+		[9] = { itemID = 32674 }; --Depleted Sword
+		[10] = { itemID = 32670 }; --Depleted Two-Handed Axe
+		[11] = { itemID = 32671 }; --Depleted Mace
+		[12] = { itemID = 32679 }; --Depleted Staff
+		[16] = { itemID = 32942 }; --Ring of the Overseer
 		[18] = { itemID = 32655 }; --Crystalweave Bracers
 		[19] = { itemID = 32656 }; --Crystalhide Handwraps
 		[20] = { itemID = 32665 }; --Crystalweave Cape
@@ -1353,72 +1353,72 @@ AtlasLoot_Data["Skettis"] = {
 	{
 		Name = AL["Darkscreecher Akkarai"];
 		[1] = { itemID = 32529, price = "17.3%" }; --Heretic's Gauntlets
-		[2] = { itemID = 32715, droprate = "100%" }; --Akkarai's Talons
-		[4] = { itemID = 31558, droprate = "5.3%" }; --Windchanneller's Bindings
-		[5] = { itemID = 31555, droprate = "4.3%" }; --Windchanneller's Ceinture
-		[6] = { itemID = 31566, droprate = "6.8%" }; --Skystalker's Bracers
-		[7] = { itemID = 31563, droprate = "6.2%" }; --Skystalker's Cord
-		[8] = { itemID = 31574, droprate = "4.1%" }; --Mistshroud Bracers
-		[9] = { itemID = 31571, droprate = "4.5%" }; --Mistshroud Belt
-		[10] = { itemID = 31582, droprate = "6.7%" }; --Slatesteel Bracers
-		[11] = { itemID = 31579, droprate = "5.5%" }; --Slatesteel Girdle
-		[12] = { itemID = 32514, droprate = "31.5%" }; --Skettis Band
+		[2] = { itemID = 32715 }; --Akkarai's Talons
+		[4] = { itemID = 31558 }; --Windchanneller's Bindings
+		[5] = { itemID = 31555 }; --Windchanneller's Ceinture
+		[6] = { itemID = 31566 }; --Skystalker's Bracers
+		[7] = { itemID = 31563 }; --Skystalker's Cord
+		[8] = { itemID = 31574 }; --Mistshroud Bracers
+		[9] = { itemID = 31571 }; --Mistshroud Belt
+		[10] = { itemID = 31582 }; --Slatesteel Bracers
+		[11] = { itemID = 31579 }; --Slatesteel Girdle
+		[12] = { itemID = 32514 }; --Skettis Band
 	};
 	{
 		Name = AL["Karrog"];
-		[1] = { itemID = 32533, droprate = "15.0%" }; --Karrog's Shard
-		[2] = { itemID = 32717, droprate = "100%" }; --Karrog's Spine
-		[4] = { itemID = 31558, droprate = "5.6%" }; --Windchanneller's Bindings
-		[5] = { itemID = 31555, droprate = "6.8%" }; --Windchanneller's Ceinture
-		[6] = { itemID = 31566, droprate = "6.0%" }; --Skystalker's Bracers
-		[7] = { itemID = 31563, droprate = "8.0%" }; --Skystalker's Cord
-		[8] = { itemID = 31574, droprate = "5.6%" }; --Mistshroud Bracers
-		[9] = { itemID = 31571, droprate = "3.6%" }; --Mistshroud Belt
-		[10] = { itemID = 31582, droprate = "4.3%" }; --Slatesteel Bracers
-		[11] = { itemID = 31579, droprate = "5.3%" }; --Slatesteel Girdle
-		[12] = { itemID = 32514, droprate = "24.9%" }; --Skettis Band
+		[1] = { itemID = 32533 }; --Karrog's Shard
+		[2] = { itemID = 32717 }; --Karrog's Spine
+		[4] = { itemID = 31558 }; --Windchanneller's Bindings
+		[5] = { itemID = 31555 }; --Windchanneller's Ceinture
+		[6] = { itemID = 31566 }; --Skystalker's Bracers
+		[7] = { itemID = 31563 }; --Skystalker's Cord
+		[8] = { itemID = 31574 }; --Mistshroud Bracers
+		[9] = { itemID = 31571 }; --Mistshroud Belt
+		[10] = { itemID = 31582 }; --Slatesteel Bracers
+		[11] = { itemID = 31579 }; --Slatesteel Girdle
+		[12] = { itemID = 32514 }; --Skettis Band
 	};
 	{
 		Name = AL["Gezzarak the Huntress"];
 		[1] = { itemID = 32531, price = "16.9%" }; --Gezzarak's Fang
-		[2] = { itemID = 32716, droprate = "100%" }; --Gezzarak's Claws
-		[4] = { itemID = 31558, droprate = "5.2%" }; --Windchanneller's Bindings
-		[5] = { itemID = 31555, droprate = "6.9%" }; --Windchanneller's Ceinture
-		[6] = { itemID = 31566, droprate = "5.2%" }; --Skystalker's Bracers
-		[7] = { itemID = 31563, droprate = "4.9%" }; --Skystalker's Cord
-		[8] = { itemID = 31574, droprate = "5.8%" }; --Mistshroud Bracers
-		[9] = { itemID = 31571, droprate = "5.4%" }; --Mistshroud Belt
-		[10] = { itemID = 31582, droprate = "6.2%" }; --Slatesteel Bracers
-		[11] = { itemID = 31579, droprate = "4.6%" }; --Slatesteel Girdle
-		[12] = { itemID = 32514, droprate = "25.7%" }; --Skettis Band
+		[2] = { itemID = 32716 }; --Gezzarak's Claws
+		[4] = { itemID = 31558 }; --Windchanneller's Bindings
+		[5] = { itemID = 31555 }; --Windchanneller's Ceinture
+		[6] = { itemID = 31566 }; --Skystalker's Bracers
+		[7] = { itemID = 31563 }; --Skystalker's Cord
+		[8] = { itemID = 31574 }; --Mistshroud Bracers
+		[9] = { itemID = 31571 }; --Mistshroud Belt
+		[10] = { itemID = 31582 }; --Slatesteel Bracers
+		[11] = { itemID = 31579 }; --Slatesteel Girdle
+		[12] = { itemID = 32514 }; --Skettis Band
 	};
 	{
 		Name = AL["Vakkiz the Windrager"];
-		[1] = { itemID = 32532, droprate = "18.1%" }; --Windrager's Coils
-		[2] = { itemID = 32718, droprate = "100%" }; --Vakkiz's Scale
-		[4] = { itemID = 31558, droprate = "5.0%" }; --Windchanneller's Bindings
-		[5] = { itemID = 31555, droprate = "4.4%" }; --Windchanneller's Ceinture
-		[6] = { itemID = 31566, droprate = "4.1%" }; --Skystalker's Bracers
-		[7] = { itemID = 31563, droprate = "3.9%" }; --Skystalker's Cord
-		[8] = { itemID = 31574, droprate = "5.7%" }; --Mistshroud Bracers
-		[9] = { itemID = 31571, droprate = "6.3%" }; --Mistshroud Belt
-		[10] = { itemID = 31582, droprate = "5.8%" }; --Slatesteel Bracers
-		[11] = { itemID = 31579, droprate = "2.7%" }; --Slatesteel Girdle
-		[12] = { itemID = 32514, droprate = "28.7%" }; --Skettis Band
+		[1] = { itemID = 32532 }; --Windrager's Coils
+		[2] = { itemID = 32718 }; --Vakkiz's Scale
+		[4] = { itemID = 31558 }; --Windchanneller's Bindings
+		[5] = { itemID = 31555 }; --Windchanneller's Ceinture
+		[6] = { itemID = 31566 }; --Skystalker's Bracers
+		[7] = { itemID = 31563 }; --Skystalker's Cord
+		[8] = { itemID = 31574 }; --Mistshroud Bracers
+		[9] = { itemID = 31571 }; --Mistshroud Belt
+		[10] = { itemID = 31582 }; --Slatesteel Bracers
+		[11] = { itemID = 31579 }; --Slatesteel Girdle
+		[12] = { itemID = 32514 }; --Skettis Band
 	};
 	{
 		Name = AL["Terokk"];
-		[1] = { itemID = 32540, droprate = "4.6%" }; --Terokk's Might
-		[2] = { itemID = 32541, droprate = "4.6%" }; --Terokk's Wisdom
-		[3] = { itemID = 31556, droprate = "14.3%" }; --Windchanneller's Leggings
-		[4] = { itemID = 31564, droprate = "13.9%" }; --Skystalker's Leggings
-		[5] = { itemID = 31572, droprate = "10.7%" }; --Mistshroud Pants
-		[6] = { itemID = 31580, droprate = "11.6%" }; --Slatesteel Leggings
-		[7] = { itemID = 32535, droprate = "7.9%" }; --Gift of the Talonpriests
+		[1] = { itemID = 32540 }; --Terokk's Might
+		[2] = { itemID = 32541 }; --Terokk's Wisdom
+		[3] = { itemID = 31556 }; --Windchanneller's Leggings
+		[4] = { itemID = 31564 }; --Skystalker's Leggings
+		[5] = { itemID = 31572 }; --Mistshroud Pants
+		[6] = { itemID = 31580 }; --Slatesteel Leggings
+		[7] = { itemID = 32535 }; --Gift of the Talonpriests
 		[8] = { itemID = 32534, price = "11.2%" }; --Brooch of the Immortal King
 		[9] = { itemID = 32782 }; --Time-Lost Figurine
-		[10] = { itemID = 32536, desc = "=ds= =q2="..AL["(has random enchantment)"], droprate = "6.7%" }; --Terokk's Gavel
-		[11] = { itemID = 32537, desc = "=ds= =q2="..AL["(has random enchantment)"], droprate = "7.9%" }; --Terokk's Gavel
+		[10] = { itemID = 32536, desc = "=ds= =q2="..AL["(has random enchantment)"] }; --Terokk's Gavel
+		[11] = { itemID = 32537, desc = "=ds= =q2="..AL["(has random enchantment)"] }; --Terokk's Gavel
 	};
 	{
 		Name = "Talonpriest Ishaal";
@@ -1454,7 +1454,7 @@ AtlasLoot_Data["ScourgeInvasionEvent"] = {
 		[12] = { itemID = 22484, desc = "=ds="..AL["Currency"] }; --Necrotic Rune
 		[16] = { itemID = 40110 }; --Haunted Memento
 		[18] = { icon = "INV_Box_01", name = WHITE.. AL["Prince Tenris Mirkblood"], "=q5=" .. BabbleZone["Karazhan"] };
-		[19] = { itemID = 29434, droprate = "100%" }; --Badge of Justice
+		[19] = { itemID = 29434 }; --Badge of Justice
 		[20] = { itemID = 39769 }; --Arcanite Ripper
 		[21] = { itemID = 38658 }; --Vampiric Batling
 	};
@@ -1484,26 +1484,26 @@ AtlasLoot_Data["ScourgeInvasionEvent"] = {
 	{
 		Name = "Page 3";
 		[1] = { icon = "INV_Box_01", name = WHITE..AL["Balzaphon"], "=q1="..BabbleZone["Stratholme"] };
-		[2] = { itemID = 23126, droprate = "27.38%" }; --Waistband of Balzaphon
-		[3] = { itemID = 23125, droprate = "19.89%" }; --Chains of the Lich
-		[4] = { itemID = 23124, droprate = "24.74%" }; --Staff of Balzaphon
+		[2] = { itemID = 23126 }; --Waistband of Balzaphon
+		[3] = { itemID = 23125 }; --Chains of the Lich
+		[4] = { itemID = 23124 }; --Staff of Balzaphon
 		[6] = { icon = "INV_Box_01", name = WHITE..AL["Lord Blackwood"], "=q1="..BabbleZone["Scholomance"].."" };
-		[7] = { itemID = 23156, droprate = "22.60%" }; --Blackwood's Thigh
-		[8] = { itemID = 23132, droprate = "23.80%" }; --Lord Blackwood's Blade
-		[9] = { itemID = 23139, droprate = "26.91%" }; --Lord Blackwood's Buckler
+		[7] = { itemID = 23156 }; --Blackwood's Thigh
+		[8] = { itemID = 23132 }; --Lord Blackwood's Blade
+		[9] = { itemID = 23139 }; --Lord Blackwood's Buckler
 		[11] = { icon = "INV_Box_01", name = WHITE..AL["Revanchion"], "=q1="..BabbleZone["Dire Maul (East)"] };
-		[12] = { itemID = 23127, droprate = "23.56%" }; --Cloak of Revanchion
-		[13] = { itemID = 23129, droprate = "22.67%" }; --Bracers of Mending
-		[14] = { itemID = 23128, droprate = "30.67%" }; --The Shadow's Grasp
+		[12] = { itemID = 23127 }; --Cloak of Revanchion
+		[13] = { itemID = 23129 }; --Bracers of Mending
+		[14] = { itemID = 23128 }; --The Shadow's Grasp
 		[16] = { icon = "INV_Box_01", name = WHITE..AL["Scorn"], "=q1="..BabbleZone["Scarlet Monastery"].." - "..BabbleZone["Graveyard"] };
-		[17] = { itemID = 23170, droprate = "28.94%" }; --The Frozen Clutch
-		[18] = { itemID = 23169, droprate = "30.39%" }; --Scorn's Icy Choker
-		[19] = { itemID = 23168, droprate = "32.56%" }; --Scorn's Focal Dagger
+		[17] = { itemID = 23170 }; --The Frozen Clutch
+		[18] = { itemID = 23169 }; --Scorn's Icy Choker
+		[19] = { itemID = 23168 }; --Scorn's Focal Dagger
 		[21] = { icon = "INV_Box_01", name = WHITE..AL["Sever"], "=q1="..BabbleZone["Shadowfang Keep"] };
-		[22] = { itemID = 23173, droprate = "43.81%" }; --Abomination Skin Leggings
-		[23] = { itemID = 23171, droprate = "49.31%" }; --The Axe of Severing
+		[22] = { itemID = 23173 }; --Abomination Skin Leggings
+		[23] = { itemID = 23171 }; --The Axe of Severing
 		[26] = { icon = "INV_Box_01", name = WHITE..AL["Lady Falther'ess"], "=q1="..BabbleZone["Razorfen Downs"] };
-		[27] = { itemID = 23178, droprate = "39.13%" }; --Mantle of Lady Falther'ess
-		[28] = { itemID = 23177, droprate = "46.86%" }; --Lady Falther'ess' Finger
+		[27] = { itemID = 23178 }; --Mantle of Lady Falther'ess
+		[28] = { itemID = 23177 }; --Lady Falther'ess' Finger
 	};
 };
