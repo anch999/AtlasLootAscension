@@ -15,6 +15,10 @@ local AL = AceLocale:NewLocale("AtlasLoot", "enUS", true)
 --Register translations
 if AL then
 
+	AL["Item"] = true
+	AL["Auction House Search"] = true
+	AL["Created Item"] = true
+	AL["Recipe"] = true
 	AL["Mystic Enchanting"] = true
 	AL["Druid"] = true
 	AL["Open AscensionDB To Zone Map"] = true

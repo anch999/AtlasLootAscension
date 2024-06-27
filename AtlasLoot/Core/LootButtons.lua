@@ -236,7 +236,7 @@ function AtlasLoot:ItemOnClick(item, button)
         if IsShiftKeyDown() then
             ChatEdit_InsertLink(self:GetEnchantLink(spellID))
         elseif button=="RightButton" then
-            self:ItemContextMenu(item, "spell")
+            self:ItemContextMenu(item, "spell", recipeData)
         elseif IsAltKeyDown() then
             if AtlasLootItemsFrame.refresh[2] == "AtlasLoot_CurrentWishList" then
                 self:DeleteFromWishList(item.number)
@@ -358,7 +358,7 @@ function AtlasLoot:AddWayPoint(waypoint)
     end
 end
 
-function AtlasLoot:ItemContextMenu(data, Type)
+function AtlasLoot:ItemContextMenu(data, Type, recipeData)
     local craftingData = data.craftingData
     local itemID = data.itemID
     local linkID = itemID
@@ -411,7 +411,45 @@ function AtlasLoot:ItemContextMenu(data, Type)
                         'textWidth', 12,
                         "notCheckable", true
                     )
-
+                    if AuctionFrame and AuctionFrame:IsVisible() then
+                        self:AddDividerLine(35)
+                        self.Dewdrop:AddLine(
+                        'text', AL["Auction House Search"],
+                        'notCheckable', true,
+                        'isTitle', true,
+                        'textHeight', 13,
+                        'textWidth', 13
+                        )
+                        if recipeData then
+                            self.Dewdrop:AddLine(
+                                "text", AL["Created Item"],
+                                "func", function() self:SearchAuctionHouse(self:GetItemInfo(recipeData[1][1])) end,
+                                'closeWhenClicked', true,
+                                'textHeight', 12,
+                                'textWidth', 12,
+                                "notCheckable", true
+                            )
+                            if recipeData.Recipe then
+                                self.Dewdrop:AddLine(
+                                    "text", AL["Recipe"],
+                                    "func", function() self:SearchAuctionHouse(self:GetItemInfo(recipeData.Recipe)) end,
+                                    'closeWhenClicked', true,
+                                    'textHeight', 12,
+                                    'textWidth', 12,
+                                    "notCheckable", true
+                                )
+                            end
+                        else
+                            self.Dewdrop:AddLine(
+                                "text", AL["Item"],
+                                "func", function() self:SearchAuctionHouse(self:GetItemInfo(itemID)) end,
+                                'closeWhenClicked', true,
+                                'textHeight', 12,
+                                'textWidth', 12,
+                                "notCheckable", true
+                            ) 
+                        end
+                    end
                     if not AtlasLoot_PopupFrame or AtlasLoot_PopupFrame and not AtlasLoot_PopupFrame:IsVisible()  then
                         self:AddDividerLine(35)
                         self.Dewdrop:AddLine(

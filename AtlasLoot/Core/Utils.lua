@@ -201,8 +201,9 @@ function AtlasLoot:GetRecipeData(recipeID, idType)
 		   for _,recipe in pairs(cat) do
 			  if (idType == "spell" and recipeID == recipe.SpellEntry) or (idType == "item" and recipeID == recipe.RecipeItemEntry) then
 				local info = {{recipe.CreatedItemEntry}, "blank", "blank", "blank", "blank", "blank",spellID = recipe.SpellEntry, skillIndex = recipe.SkillIndex}
-				if ItemIDsDatabase[recipe.CreatedItemEntry] and ItemIDsDatabase[recipe.CreatedItemEntry][1] then
-					info[2] = {ItemIDsDatabase[recipe.CreatedItemEntry][1]}
+				local bloodForgedID = self:FindId(recipe.CreatedItemEntry, 1, nil, "Bloodforged")
+				if bloodForgedID then
+					info[2] = {bloodForgedID}
 				end
 				if recipe.RecipeItemEntry and recipe.RecipeItemEntry ~= 0 then
 					local number = 3
@@ -210,7 +211,7 @@ function AtlasLoot:GetRecipeData(recipeID, idType)
 						number = 2
 					end
 					info[number] = {recipe.RecipeItemEntry}
-
+					info.Recipe = recipe.RecipeItemEntry
 				end
 				for _,v in pairs(recipe.Reagents) do
 					tinsert(info, v)
@@ -356,7 +357,7 @@ function AtlasLoot:PopoupItemFrame(frame, data)
 						self:ItemsLoading(-1)
 					end)
 				end
-			local itemData = {AtlasLoot:GetItemInfo(itemID)}
+			local itemData = {self:GetItemInfo(itemID)}
 			SetItemButtonTexture(button, itemData[10])
 			SetItemButtonQuality(button, itemData[3])
 			
@@ -366,12 +367,12 @@ function AtlasLoot:PopoupItemFrame(frame, data)
 			if recipe then
 			button.craftingData = self:GetRecipeSource(recipe.spellID)
 			end
-		if item[2] then
-			SetItemButtonCount(button, item[2])
-		else
-			SetItemButtonCount(button)
-		end
-		button:Show()
+			if item[2] then
+				SetItemButtonCount(button, item[2])
+			else
+				SetItemButtonCount(button)
+			end
+			button:Show()
 		end
 		numberBtns = i
 	end
@@ -693,4 +694,17 @@ function AtlasLoot:GetTipAnchor(frame)
     local hhalf = (x > UIParent:GetWidth() * 2 / 3) and 'RIGHT' or (x < UIParent:GetWidth() / 3) and 'LEFT' or ''
     local vhalf = (y > UIParent:GetHeight() / 2) and 'TOP' or 'BOTTOM'
     return vhalf .. hhalf, frame, (vhalf == 'TOP' and 'BOTTOM' or 'TOP') .. hhalf
+end
+
+-- Search Auction House for crafting patern/enchant
+function AtlasLoot:SearchAuctionHouse(text)
+	if not text then return end
+	if BrowseName:IsVisible() then
+		BrowseName:SetText(text)
+		BrowseSearchButton:Click()
+	elseif Atr_Search_Box:IsVisible() then
+		Atr_Search_Box:SetText(text)
+		Atr_Search_Button:Click()
+	end
+
 end
