@@ -1402,7 +1402,7 @@ AtlasLoot_Data["CFRSerpentshrine"] = {
 		[24] = { itemID = 400751, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal }; --Raider's Commendations
 		[25] = { itemID = 98570 }; --Mystic Orb
 		[27] = { itemID = 816254, droprate = { nil, "2%", "5%", "7%", "10%" } }; --Formula: Enchant Cloak - Crushing Wave
-		[29] = { itemID = 63511, droprate = "1%" }; --Pet Sigil
+		[29] = { itemID = 63338, droprate = "1%" }; --Pet Sigil
 	};
 	{
 		Name = BabbleBoss["The Lurker Below"];
