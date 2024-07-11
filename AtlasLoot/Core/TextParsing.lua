@@ -189,7 +189,6 @@ local txtSubstitution = {
     { "Item Enhancement", "Enchant" },
     { "Weapon Enchantment", "Enchanting" },
     { "Armor Enchantment", "Enchanting" },
-    { "Engineering", "Parts" },
     { "Simple", "Gems" },
 }
 
