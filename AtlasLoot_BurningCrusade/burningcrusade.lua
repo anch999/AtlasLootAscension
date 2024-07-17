@@ -2240,35 +2240,33 @@ AtlasLoot_Data["MagistersTerrace"] = {
 	};
 	{
 		Name = BabbleBoss["Kael'thas Sunstrider"];
-		[1] = { itemID = 34810 }; --Cloak of Blade Turning
-		[2] = { itemID = 34808 }; --Gloves of Arcane Acuity
-		[3] = { itemID = 34809 }; --Sunrage Treads
-		[4] = { itemID = 34799 }; --Hauberk of the War Bringer
-		[5] = { itemID = 34807 }; --Sunstrider Warboots
-		[6] = { itemID = 34625 }; --Kharmaa's Ring of Fate
-		[8] = { itemID = 34157 }; --Head of Kael'thas
-		[16] = { itemID = 34793 }; --Cord of Reconstruction
-		[17] = { itemID = 34796 }; --Robes of Summer Flame
-		[18] = { itemID = 34795 }; --Helm of Sanctification
-		[19] = { itemID = 34798 }; --Band of Celerity
-		[20] = { itemID = 34794 }; --Axe of Shattered Dreams
-		[21] = { itemID = 34797 }; --Sun-infused Focus Staff
-		[22] = { itemID = 35504 }; --Phoenix Hatchling
-	};
-	{
-		Name = BabbleBoss["Kael'thas Sunstrider"] .. " (" .. AL["Heroic"] .. ")";
-		[1] = { itemID = 29434 }; --Badge of Justice
-		[2] = { itemID = 34610 }; --Scarlet Sin'dorei Robes
-		[3] = { itemID = 34613 }; --Shoulderpads of the Silvermoon Retainer
-		[4] = { itemID = 34614 }; --Tunic of the Ranger Lord
-		[5] = { itemID = 34615 }; --Netherforce Chestplate
-		[6] = { itemID = 34612 }; --Greaves of the Penitent Knight
-		[8] = { itemID = 34160 }; --The Signet Ring of Prince Kael'thas
-		[16] = { itemID = 34609 }; --Quickening Blade of the Prince
-		[17] = { itemID = 34616 }; --Breeching Comet
-		[18] = { itemID = 34611 }; --Cudgel of Consecration
-		[19] = { itemID = 35513 }; --Swift White Hawkstrider
-		[21] = { itemID = 35504 }; --Phoenix Hatchling
+		[1] = { icon = "INV_Box_01", name = WHITE..AL["Normal"] };
+		[2] = { itemID = 34810 }; --Cloak of Blade Turning
+		[3] = { itemID = 34808 }; --Gloves of Arcane Acuity
+		[4] = { itemID = 34809 }; --Sunrage Treads
+		[5] = { itemID = 34799 }; --Hauberk of the War Bringer
+		[6] = { itemID = 34807 }; --Sunstrider Warboots
+		[7] = { itemID = 34625 }; --Kharmaa's Ring of Fate
+		[8] = { itemID = 34793 }; --Cord of Reconstruction
+		[9] = { itemID = 34796 }; --Robes of Summer Flame
+		[10] = { itemID = 34795 }; --Helm of Sanctification
+		[11] = { itemID = 34798 }; --Band of Celerity
+		[12] = { itemID = 34794 }; --Axe of Shattered Dreams
+		[13] = { itemID = 34797 }; --Sun-infused Focus Staff
+		[15] = { itemID = 34157 }; --Head of Kael'thas	
+		[16] = { icon = "INV_Box_01", name = WHITE..AL["Heroic"] };
+		[17] = { itemID = 29434 }; --Badge of Justice
+		[18] = { itemID = 34610 }; --Scarlet Sin'dorei Robes
+		[19] = { itemID = 34613 }; --Shoulderpads of the Silvermoon Retainer
+		[20] = { itemID = 34614 }; --Tunic of the Ranger Lord
+		[21] = { itemID = 34615 }; --Netherforce Chestplate
+		[22] = { itemID = 34612 }; --Greaves of the Penitent Knight
+		[23] = { itemID = 34609 }; --Quickening Blade of the Prince
+		[24] = { itemID = 34616 }; --Breeching Comet
+		[25] = { itemID = 34611 }; --Cudgel of Consecration
+		[26] = { itemID = 35513 }; --Swift White Hawkstrider
+		[28] = { itemID = 34160 }; --The Signet Ring of Prince Kael'thas
+		[29] = { itemID = 35504 }; --Phoenix Hatchling
 	};
 	{
 		Name = AL["Trash Mobs"];

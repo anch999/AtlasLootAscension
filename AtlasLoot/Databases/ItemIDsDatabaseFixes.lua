@@ -50,7 +50,7 @@ ItemIDManuelCorrections[23206] = { nil, nil, 323206, 1323206, 223206 }
 
 --[[ 
     /atlasloot updatecache startID stopID
-    scans every id from 1 to 10 mil unless you set the startID and stopID 
+    scans every id from 1 to 10 mil unless you set the startID and stopID
     startID is the first itemid it will check stopID is the last itemid it will check
 
     /atlasloot clearcache

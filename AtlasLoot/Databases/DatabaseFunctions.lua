@@ -148,7 +148,7 @@ Finds the Ids of other difficulties based on the normal id of the item and the d
 On the form of {ID, {normal, heroic, mythic, mythic1, mythic2, ... ,mythicN}}
 ]]
 function AtlasLoot:FindId(id, difficulty, type, Difficultiestring)
-	local hasID 
+	local hasID
 	if self.Difficulties[type] then
 		for _, dif in ipairs (self.Difficulties[type]) do
 			if dif[2] == difficulty then
