@@ -13,6 +13,7 @@ local YELLOW = "|cffFFd200"
 
 local playerName = UnitName("player")
 local realmName = GetRealmName()
+local playerFaction = UnitFactionGroup("player")
 
 -- Used to create a dewdrop menu from a table
 function AtlasLoot:OpenDewdropMenu(frame, menuList, skipRegister)
@@ -150,12 +151,15 @@ local itemEquipLocConversion = {
 	"INVTYPE_QUIVER",
 	"INVTYPE_RELIC",
 }
+
 function AtlasLoot:GetItemInfo(itemID)
 	local itemName, itemLink, itemQuality, itemLevel, itemMinLevel, itemType, itemSubType, itemStackCount, itemEquipLoc, itemTexture, itemSellPrice = GetItemInfo(itemID)
 	if not itemName then
 		local item = GetItemInfoInstant(itemID)
 		if item then
 			itemName, itemSubType, itemEquipLoc, itemTexture, itemQuality = item.name, _G["ITEM_SUBCLASS_"..item.classID.."_"..item.subclassID], itemEquipLocConversion[item.inventoryType], item.icon, item.quality
+			local color = ITEM_QUALITY_COLORS[itemQuality] or ITEM_QUALITY_COLORS[1]
+			itemLink = color:WrapText("|Hitem:"..itemID.."|h["..itemName.."]|h|r")
 		end
 	end
 	return itemName, itemLink, itemQuality, itemLevel, itemMinLevel, itemType, itemSubType, itemStackCount, itemEquipLoc, itemTexture, itemSellPrice
@@ -273,6 +277,95 @@ function AtlasLoot:IsRecipeUnknown(ID)
 		end
 	end
 	return text
+end
+
+local professionTable = {
+	[171] = {
+	"AlchemyCLASSIC",
+	"AlchemyTBC",
+	"AlchemyWRATH",
+},
+	[164] = {
+	"SmithingCLASSIC",
+	"SmithingTBC",
+	"SmithingWRATH",
+	},
+	[333] = {
+	"EnchantingCLASSIC",
+	"EnchantingTBC",
+	"EnchantingWRATH",
+},
+	[202] = {
+	"EngineeringCLASSIC",
+	"EngineeringTBC",
+	"EngineeringWRATH",
+},
+	[755] = {
+	"JewelcraftingTBC",
+	"JewelcraftingWRATH",
+},
+	[165] = {
+	"LeatherworkingCLASSIC",
+	"LeatherworkingTBC",
+	"LeatherworkingWRATH",
+},
+	[197] = {
+	"TailoringCLASSIC",
+	"TailoringTBC",
+	"TailoringWRATH",
+},
+	[186] = {
+	"MiningCLASSIC",
+	"MiningTBC",
+	"MiningWRATH",
+},
+	[185] = {
+	"CookingCLASSIC",
+	"CookingTBC",
+	"CookingWRATH",
+},
+	[129] = {
+	"FirstAidCLASSIC",
+	"FirstAidTBC",
+	"FirstAidWRATH",
+},
+	[773] = {
+	"Inscription",
+},
+}
+
+local craftingXpac = { ClassicCrafting = 1, BCCrafting = 2, WrathCrafting = 3 }
+
+function AtlasLoot:SetRecipeMapPins()
+	local xpac = GetAccountExpansionLevel()+1
+	self:LoadAllModules()
+	for profKey, _ in pairs(self.db.profile.professions) do
+		if professionTable[profKey] then
+			for _, profTable in pairs(professionTable[profKey]) do
+				if craftingXpac[AtlasLoot_Data[profTable].Type] <= xpac then
+					for _, profType in pairs(AtlasLoot_Data[profTable]) do
+						if type(profType) == "table" then
+							for _, recipeData in pairs(profType) do
+								if recipeData.spellID and not CA_IsSpellKnown(recipeData.spellID) then
+									local craftingData = self:GetRecipeSource(recipeData.spellID)
+									if craftingData then
+										for _,v in pairs(craftingData) do
+											if v.cords and tonumber(v.cords[1]) ~= 0 and tonumber(v.cords[2]) ~= 0 then
+												local line1 = v[1]
+												local line2 = v[2]
+												if v.fac and (v.fac[2] == playerFaction or v.fac[2] == "Netural") then line1 = v.fac[1]..line1 end
+												self:AddWayPoint({ line2, tonumber(v.cords[1]), tonumber(v.cords[2]), line1})
+											end
+										end
+									end
+								end
+							end
+						end
+					end
+				end
+			end
+		end
+	end
 end
 
 -- Get rep faction for when you have 2 loot tables and want to show a different one depending on rep

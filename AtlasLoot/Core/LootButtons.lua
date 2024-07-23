@@ -538,16 +538,15 @@ function AtlasLoot:ItemContextMenu(data, Type, recipeData)
                                     end
                                 end
                             end
+                            self:AddDividerLine(35)
+                            self.Dewdrop:AddLine(
+                            'text', AL["Recipe Waypoints"],
+                            'notCheckable', true,
+                            'isTitle', true,
+                            'textHeight', 13,
+                            'textWidth', 13
+                            )
                             if craftingData and wayPoint then
-
-                                self:AddDividerLine(35)
-                                self.Dewdrop:AddLine(
-                                'text', AL["Recipe Waypoints"],
-                                'notCheckable', true,
-                                'isTitle', true,
-                                'textHeight', 13,
-                                'textWidth', 13
-                                )
                                 self.Dewdrop:AddLine(
                                 "text", "Add pin to map",
                                 "func", function()
@@ -560,7 +559,18 @@ function AtlasLoot:ItemContextMenu(data, Type, recipeData)
                                 'textWidth', 12,
                                 "notCheckable", true
                                 )
+
                             end
+                            self.Dewdrop:AddLine(
+                                "text", "Add pin to map for every missing recipe",
+                                "func", function()
+                                    self:SetRecipeMapPins()
+                                end,
+                                'closeWhenClicked', true,
+                                'textHeight', 12,
+                                'textWidth', 12,
+                                "notCheckable", true
+                            )
                         end
                     end
             elseif level == 2 then

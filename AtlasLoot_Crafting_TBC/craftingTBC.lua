@@ -916,6 +916,7 @@ AtlasLoot_Data["EngineeringTBC"] = {
 AtlasLoot_Data["FirstAid"] = {
 	Module = "AtlasLoot_Crafting_TBC";
 	Name = FIRSTAID;
+	Type = "BCCrafting";
 	{
 		Name = FIRSTAID;
 		[1] = { itemID = 34722, spellID = 45546 }, --Heavy Frostweave Bandage
@@ -1519,6 +1520,7 @@ AtlasLoot_Data["LeatherworkingTBC"] = {
 AtlasLoot_Data["MiningTBC"] = {
 	Module = "AtlasLoot_Crafting_TBC";
 	Name = MINING;
+	Type = "BCCrafting";
 	{
 		Name = MINING;
 		[1] = { itemID = 35128, spellID = 46353 }, --Smelt Hardened Khorium
@@ -1536,6 +1538,7 @@ AtlasLoot_Data["MiningTBC"] = {
 AtlasLoot_Data["FirstAidTBC"] = {
 	Module = "AtlasLoot_Crafting_TBC";
 	Name = FIRSTAID;
+	Type = "BCCrafting";
 	{
 		Name = FIRSTAID;
 		[1] = { itemID = 21991, spellID = 27033 }, --Heavy Netherweave Bandage

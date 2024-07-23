@@ -464,6 +464,7 @@ AtlasLoot_Data["CookingWRATH"] = {
 AtlasLoot_Data["EnchantingWRATH"] = {
 	Module = "AtlasLoot_Crafting_Wrath";
 	Name = ENCHANTING;
+	Type = "WrathCrafting";
 	{
 		Name = AL["Enchant Boots"];
 		[1] = {spellID = 60763, icon = "Spell_Holy_GreaterHeal" }; --Enchant Boots - Greater Assault
@@ -1837,6 +1838,7 @@ AtlasLoot_Data["LeatherworkingWRATH"] = {
 AtlasLoot_Data["MiningWRATH"] = {
 	Module = "AtlasLoot_Crafting_Wrath";
 	Name = MINING;
+	Type = "WrathCrafting";
 	{
 		Name = MINING;
 		[1] = {itemID = 37663, spellID = 55208 }; --Smelt Titansteel
@@ -1849,6 +1851,7 @@ AtlasLoot_Data["MiningWRATH"] = {
 AtlasLoot_Data["FirstAidWRATH"] = {
 	Module = "AtlasLoot_Crafting_Wrath";
 	Name = FIRSTAID;
+	Type = "WrathCrafting";
 	{
 		Name = FIRSTAID;
 		[1] = {itemID = 34722, spellID = 45546 }; --Heavy Frostweave Bandage
