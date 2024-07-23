@@ -64,17 +64,15 @@ function AtlasLoot:CreateUpdateText()
     updateFrameCreated = true
 end
 
-local itemTypeIgnore = {[18] = true, [19] = true, [24] = true}
-
 local unknownIDs = {}
 function AtlasLoot:UpdateItemIDsDatabase(firstID, lastID)
 	AtlasLootItemCache = ItemIDsDatabase
 	self:IsLootTableAvailable("AtlasLootOriginalWoW")
 	self:IsLootTableAvailable("AtlasLootBurningCrusade")
 	self:IsLootTableAvailable("AtlasLootWotLK")
-    for dataID, data in pairs(AtlasLoot_Data) do
+    for _, data in pairs(AtlasLoot_Data) do
 		if data.Type then
-			for tableNum, t in ipairs(data) do
+			for _, t in ipairs(data) do
 				for _, itemData in pairs(t) do
 					if type(itemData) == "table" then
 						if itemData.itemID then
@@ -182,28 +180,4 @@ function AtlasLoot:FindId(id, difficulty, type, Difficultiestring)
 	if ItemIDsDatabase[id] and ItemIDsDatabase[id][difficulty] then
 		return ItemIDsDatabase[id][difficulty], true
 	end
-end
-
---Updates the ItemIDsDatabase with any missing or incorrect items
-function AtlasLoot:LoadMissingIDs()
-	--loads any items in the saved varriables cache
-    if AtlasLootItemCache and not self:CheckIfEmptyTable(AtlasLootItemCache) then
-		for normalID, item in pairs(AtlasLootItemCache) do
-			for itemDif, itemID in pairs(item) do
-				ItemIDsDatabase[normalID] = ItemIDsDatabase[normalID] or {}
-				ItemIDsDatabase[normalID][itemDif] = itemID
-			end
-		end
-	end
-	-- loads ids that have been manuely corrected
-	if ItemIDManuelCorrections then
-		for normalID, item in pairs(ItemIDManuelCorrections) do
-			for itemDif, itemID in pairs(item) do
-				ItemIDsDatabase[normalID] = ItemIDsDatabase[normalID] or {}
-				ItemIDsDatabase[normalID][itemDif] = itemID
-			end
-		end
-	end
-	ItemIDManuelCorrections = nil
-    collectgarbage("collect")
 end

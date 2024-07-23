@@ -223,7 +223,7 @@ function AtlasLoot:OnEnable()
 	else
 		AtlasLootItemsFrame_Wishlist_UnLock:Enable()
 	end
-	self:LoadMissingIDs()
+	LoadItemIDsDatabase()
 	self:LoadTradeskillRecipes()
 	self:PopulateProfessions()
 	self:CreateVanityCollection()
