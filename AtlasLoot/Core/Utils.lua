@@ -154,10 +154,15 @@ local itemEquipLocConversion = {
 
 function AtlasLoot:GetItemInfo(itemID)
 	local itemName, itemLink, itemQuality, itemLevel, itemMinLevel, itemType, itemSubType, itemStackCount, itemEquipLoc, itemTexture, itemSellPrice = GetItemInfo(itemID)
-	if not itemName then
-		local item = GetItemInfoInstant(itemID)
-		if item then
-			itemName, itemSubType, itemEquipLoc, itemTexture, itemQuality = item.name, _G["ITEM_SUBCLASS_"..item.classID.."_"..item.subclassID], itemEquipLocConversion[item.inventoryType], item.icon, item.quality
+	local item = Item:CreateFromID(itemID)
+	if not item:GetInfo() then
+		self:ItemsLoading(1)
+		item:ContinueOnLoad(function(itemID)
+			self:ItemsLoading(-1)
+		end)
+		local itemInstant = GetItemInfoInstant(itemID)
+		if itemInstant then
+			itemName, itemSubType, itemEquipLoc, itemTexture, itemQuality = itemInstant.name, _G["ITEM_SUBCLASS_"..itemInstant.classID.."_"..itemInstant.subclassID], itemEquipLocConversion[itemInstant.inventoryType], itemInstant.icon, itemInstant.quality
 			local color = ITEM_QUALITY_COLORS[itemQuality] or ITEM_QUALITY_COLORS[1]
 			itemLink = color:WrapText("|Hitem:"..itemID.."|h["..itemName.."]|h|r")
 		end
@@ -443,17 +448,10 @@ function AtlasLoot:PopoupItemFrame(frame, data)
 			button:Hide()
 		else
 			local itemID = item.itemID or item[1]
-			local itemData = Item:CreateFromID(itemID)
-				if itemID and not itemData:GetInfo() then
-					self:ItemsLoading(1)
-					itemData:ContinueOnLoad(function(itemID)
-						self:ItemsLoading(-1)
-					end)
-				end
 			local itemData = {self:GetItemInfo(itemID)}
 			SetItemButtonTexture(button, itemData[10])
 			SetItemButtonQuality(button, itemData[3])
-			
+
 			button.itemID = itemID
 			button.itemTexture = frame.itemTexture
 			local recipe = self:GetRecipeData(itemID, "item")

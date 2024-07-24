@@ -564,29 +564,23 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 		self:SubTableScrollFrameUpdate(dataID, dataSource_backup, tablenum)
 	end
 
+	for i = 1, 30, 1 do
+		--Use shortcuts for easier reference to parts of the item button
+		local itemButton = _G["AtlasLootItem_"..i]
+		local hightlightFrame = _G["AtlasLootItem_"..i.."_Highlight"]
+			itemButton:Hide()
+			itemButton.itemID = nil
+			itemButton.spellID = nil
+			hightlightFrame:Hide()
+			itemButton.hasTrade = false
+	end
+
 	-- Sets the main page lable
 	if dataSource[dataID][tablenum] and dataSource[dataID][tablenum].Name then
 		AtlasLoot_BossName:SetText(dataSource[dataID][tablenum].Name)
 	else
 		AtlasLoot_BossName:SetText("This Is Empty")
-		for i = 1, 30, 1 do
-			--Use shortcuts for easier reference to parts of the item button
-			local itemButton = _G["AtlasLootItem_"..i]
-			local hightlightFrame = _G["AtlasLootItem_"..i.."_Highlight"]
-				itemButton:Hide()
-				itemButton.itemID = nil
-				itemButton.spellID = nil
-				hightlightFrame:Hide()
-				itemButton.hasTrade = false
-		end
 		return
-	end
-
-	if dataSource ~= self.dataSourceBackup and tablenum ~= lastTablenum then
-		for i = 1, 30, 1 do
-			_G["AtlasLootItem_"..i]:Hide()
-			_G["AtlasLootItem_"..i.."_Highlight"]:Hide()
-		end
 	end
 
 	-- find the right itemID for the difficulty selected
@@ -595,7 +589,6 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 		toShow = true
 		local itemDif = ItemindexID
 		local itemID = item and item.itemID
-		local orgItemID = itemID
 		if item and item.itemID then
 			itemID = item.itemID
 			isValid = true
@@ -606,7 +599,6 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 				end
 				itemID = self:FindId(item.itemID, min(self:getMaxDifficulty(itemType), itemDif), itemType) or item.itemID
 			end
-
 			if toShow then
 				--Sets ItemindexID to normal(2) if it is nil for min/max difficulties.
 				if not tonumber(itemDif) then itemDif = self.Difficulties.Normal end
@@ -618,18 +610,23 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 				itemID = self:FindId(item.itemID, itemDif, itemType) or item.itemID
 			end
 		elseif item and (item.spellID or item.icon) or item and itemID then
-			isValid = true
 			toShow = true
+			if(item[self.Difficulties.MIN_DIF]) then
+				if item[self.Difficulties.MIN_DIF] > itemDif then
+					toShow = false
+				end
+			end
+			isValid = true			
 		end
 		local recipeID
 		if item and item.spellID then
 			recipeID = self:GetRecipeID(item.spellID)
 		end
-		return isValid, toShow, itemID, recipeID, orgItemID
+		return isValid, toShow, itemID, recipeID
 	end
 
 	-- Setup the button for the to be displayed item/spell
-	local function setupButton(itemID, i, dataSource, dataID, tablenum, dataSource_backup)
+	local function setupButton(itemID, i, newPosition, dataSource, dataID, tablenum, dataSource_backup)
 		local text, extra
 		local itemName, itemQuality, itemSubType, itemEquipLoc, itemIcon
 		if itemID then
@@ -638,11 +635,11 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 
 		local spellName, spellIcon
 		--Use shortcuts for easier reference to parts of the item button
-		local itemButton = _G["AtlasLootItem_"..i]
-		local iconFrame  = _G["AtlasLootItem_"..i.."_Icon"]
-		local nameFrame  = _G["AtlasLootItem_"..i.."_Name"]
-		local extraFrame = _G["AtlasLootItem_"..i.."_Extra"]
-		local hightlightFrame = _G["AtlasLootItem_"..i.."_Highlight"]
+		local itemButton = _G["AtlasLootItem_"..newPosition]
+		local iconFrame  = _G["AtlasLootItem_"..newPosition.."_Icon"]
+		local nameFrame  = _G["AtlasLootItem_"..newPosition.."_Name"]
+		local extraFrame = _G["AtlasLootItem_"..newPosition.."_Extra"]
+		local hightlightFrame = _G["AtlasLootItem_"..newPosition.."_Highlight"]
 		local spellID = dataSource[dataID][tablenum][i].spellID
 
 		if spellID then
@@ -831,54 +828,23 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 		itemButton:Show()
 	end
 
-	local function getItemData(itemID, i, orgItemID, item)
-		self:ItemsLoading(1)
-		item:ContinueOnLoad(function(itemID)
-			self:ItemsLoading(-1)
-			setupButton(itemID, i, dataSource, dataID, tablenum, dataSource_backup)
-		end)
-	end
-
 	-- Create the loottable
 	if (dataID == "SearchResult") or (dataSource_backup == "AtlasLoot_CurrentWishList") or dataSource[dataID][tablenum] then
-
+	local displayNumber = 0
 		--Iterate through each item object and set its properties
 		for i = 1, 30, 1 do
-			--Use shortcuts for easier reference to parts of the item button
-			local itemButton = _G["AtlasLootItem_"..i]
-			local hightlightFrame = _G["AtlasLootItem_"..i.."_Highlight"]
-			--Check for a valid object (that it exists, and that it has a name
-			isValid, toShow, itemID, recipeID, orgItemID = getProperItemConditionals(dataSource[dataID][tablenum][i])
-			if isValid and toShow then
-				hightlightFrame:Hide()
-				if itemID then
-					local item = Item:CreateFromID(itemID)
-					if not item:GetInfo() then
-						getItemData(itemID, i, orgItemID, item)
-					end
-					setupButton(itemID, i, dataSource, dataID, tablenum, dataSource_backup)
-				elseif recipeID then
-					getItemData(recipeID, i, nil, Item:CreateFromID(recipeID))
-				else
-					setupButton(itemID, i, dataSource, dataID, tablenum, dataSource_backup)
-				end
-			else
-				itemButton:Hide()
-				itemButton.itemID = nil
-				itemButton.spellID = nil
-				hightlightFrame:Hide()
-				itemButton.hasTrade = false
+			--Set new button number if a item has been hidden
+			local newPosition = i - displayNumber
+			if i == 16 then
+				displayNumber = 0
+				newPosition = i
 			end
-			if dataSource[itemID] then
-				for _,ID in pairs(dataSource[itemID]) do
-					local item = Item:CreateFromID(ID.itemID)
-					if ID.itemID and not item:GetInfo() then
-						self:ItemsLoading(1)
-						item:ContinueOnLoad(function(itemID)
-							self:ItemsLoading(-1)
-						end)
-					end
-				end
+			--Check for a valid object (that it exists, and that it has a name
+			isValid, toShow, itemID, recipeID = getProperItemConditionals(dataSource[dataID][tablenum][i])
+			if isValid and toShow then
+				setupButton(itemID or recipeID, i, newPosition, dataSource, dataID, tablenum, dataSource_backup)
+			elseif isValid then
+				displayNumber = displayNumber + 1
 			end
 		end
 

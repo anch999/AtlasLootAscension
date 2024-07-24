@@ -46,7 +46,8 @@
     AtlasLoot.Difficulties["BCDungeon"] = {
         {"Bloodforged", 1},
         {"Heroic Bloodforged", 100},
-        {"Normal/Heroic", 2},
+        {"Normal", 2},
+        {"Heroic", 3},
         {"Mythic", 4},
         {"Mythic 1", 5 },  {"Mythic 2", 6 },  {"Mythic 3", 7 },  {"Mythic 4", 8 },  {"Mythic 5", 9 },
         {"Mythic 6", 10 }, {"Mythic 7", 11 }, {"Mythic 8", 12 }, {"Mythic 9", 13 }, {"Mythic 10", 14 },
@@ -125,9 +126,9 @@
     --Enums for comparisons in code
     AtlasLoot.Difficulties.Bloodforged = 1
     AtlasLoot.Difficulties["Heroic Bloodforged"] = 2
-    AtlasLoot.Difficulties.Normal = 3
-    AtlasLoot.Difficulties.Heroic = 4
-    AtlasLoot.Difficulties.Mythic = 5
+    AtlasLoot.Difficulties.Normal = 2
+    AtlasLoot.Difficulties.Heroic = 3
+    AtlasLoot.Difficulties.Mythic = 4
     AtlasLoot.Difficulties.Ascended = 5
 
     AtlasLoot.Difficulties.MythicPlus = {
