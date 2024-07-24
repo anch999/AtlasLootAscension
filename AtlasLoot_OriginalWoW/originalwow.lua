@@ -3786,6 +3786,7 @@ AtlasLoot_Data["ZulGurub"] = {
 		[16] = { icon = "INV_Banner_01", name = "=q4=ZG Sets", lootTable = {{"ZGSets", "AtlasLoot_Data", 1},"Source"} };
 		[18] = { itemID = 19943 }; --Massive Mojo
 		[19] = { itemID = 19881 }; --Channeler's Head
+		[21] = { itemID = 60101, droprate = "1%" }; --Pet Sigil
 	};
 	{
 		Name = BabbleBoss["High Priestess Arlokk"];
