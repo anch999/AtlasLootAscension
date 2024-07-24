@@ -867,23 +867,22 @@ AtlasLoot_Data["EnchantingCLASSIC"] = {
 	{
 		Name = AL["Enchant Chest"];
 		[1] = {spellID = 20025, icon = "Spell_Holy_GreaterHeal" }; --Enchant Chest - Greater Stats
-		[2] = {spellID = 33991, icon = "Spell_Holy_GreaterHeal" }; --Enchant Chest - Restore Mana Prime
-		[3] = {spellID = 20028, icon = "Spell_Holy_GreaterHeal" }; --Enchant Chest - Major Mana
-		[4] = {spellID = 20026, icon = "Spell_Holy_GreaterHeal" }; --Enchant Chest - Major Health
-		[5] = {spellID = 13941, icon = "Spell_Holy_GreaterHeal" }; --Enchant Chest - Stats
-		[6] = {spellID = 13917, icon = "Spell_Holy_GreaterHeal" }; --Enchant Chest - Superior Mana
-		[7] = {spellID = 13858, icon = "Spell_Holy_GreaterHeal" }; --Enchant Chest - Superior Health
-		[8] = {spellID = 13700, icon = "Spell_Holy_GreaterHeal" }; --Enchant Chest - Lesser Stats
-		[9] = {spellID = 13663, icon = "Spell_Holy_GreaterHeal" }; --Enchant Chest - Greater Mana
-		[10] = {spellID = 13640, icon = "Spell_Holy_GreaterHeal" }; --Enchant Chest - Greater Health
-		[11] = {spellID = 13626, icon = "Spell_Holy_GreaterHeal" }; --Enchant Chest - Minor Stats
-		[12] = {spellID = 13607, icon = "Spell_Holy_GreaterHeal" }; --Enchant Chest - Mana
-		[13] = {spellID = 13538, icon = "Spell_Holy_GreaterHeal" }; --Enchant Chest - Lesser Absorption
-		[14] = {spellID = 7857, icon = "Spell_Holy_GreaterHeal" }; --Enchant Chest - Health
-		[15] = {spellID = 7776, icon = "Spell_Holy_GreaterHeal" }; --Enchant Chest - Lesser Mana
-		[16] = {spellID = 7748, icon = "Spell_Holy_GreaterHeal" }; --Enchant Chest - Lesser Health
-		[17] = {spellID = 7443, icon = "Spell_Holy_GreaterHeal" }; --Enchant Chest - Minor Mana
-		[18] = {spellID = 7420, icon = "Spell_Holy_GreaterHeal" }; --Enchant Chest - Minor Health
+		[2] = {spellID = 20028, icon = "Spell_Holy_GreaterHeal" }; --Enchant Chest - Major Mana
+		[3] = {spellID = 20026, icon = "Spell_Holy_GreaterHeal" }; --Enchant Chest - Major Health
+		[4] = {spellID = 13941, icon = "Spell_Holy_GreaterHeal" }; --Enchant Chest - Stats
+		[5] = {spellID = 13917, icon = "Spell_Holy_GreaterHeal" }; --Enchant Chest - Superior Mana
+		[6] = {spellID = 13858, icon = "Spell_Holy_GreaterHeal" }; --Enchant Chest - Superior Health
+		[7] = {spellID = 13700, icon = "Spell_Holy_GreaterHeal" }; --Enchant Chest - Lesser Stats
+		[8] = {spellID = 13663, icon = "Spell_Holy_GreaterHeal" }; --Enchant Chest - Greater Mana
+		[9] = {spellID = 13640, icon = "Spell_Holy_GreaterHeal" }; --Enchant Chest - Greater Health
+		[10] = {spellID = 13626, icon = "Spell_Holy_GreaterHeal" }; --Enchant Chest - Minor Stats
+		[11] = {spellID = 13607, icon = "Spell_Holy_GreaterHeal" }; --Enchant Chest - Mana
+		[12] = {spellID = 13538, icon = "Spell_Holy_GreaterHeal" }; --Enchant Chest - Lesser Absorption
+		[13] = {spellID = 7857, icon = "Spell_Holy_GreaterHeal" }; --Enchant Chest - Health
+		[14] = {spellID = 7776, icon = "Spell_Holy_GreaterHeal" }; --Enchant Chest - Lesser Mana
+		[15] = {spellID = 7748, icon = "Spell_Holy_GreaterHeal" }; --Enchant Chest - Lesser Health
+		[16] = {spellID = 7443, icon = "Spell_Holy_GreaterHeal" }; --Enchant Chest - Minor Mana
+		[17] = {spellID = 7420, icon = "Spell_Holy_GreaterHeal" }; --Enchant Chest - Minor Health
 	};
 	{
 		Name = AL["Enchant Cloak"];

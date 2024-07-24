@@ -669,6 +669,7 @@ AtlasLoot_Data["EnchantingTBC"] = {
 		[3] = { icon = "Spell_Holy_GreaterHeal", spellID = 33992 }, --Enchant Chest - Major Resilience
 		[4] = { icon = "Spell_Holy_GreaterHeal", spellID = 33990 }, --Enchant Chest - Major Spirit
 		[5] = { icon = "Spell_Holy_GreaterHeal", spellID = 27957 }, --Enchant Chest - Exceptional Health
+		[6] = { icon = "Spell_Holy_GreaterHeal", spellID = 33991 }; --Enchant Chest - Restore Mana Prime
 	};
 	{
 		Name = AL["Enchant Cloak"];
