@@ -48,6 +48,8 @@ ItemIDManuelCorrections[22630] = { nil, nil, 322630, 1322630, 222630 }
 ItemIDManuelCorrections[23207] = { nil, nil, 323207, 1323207, 223207 }
 ItemIDManuelCorrections[23206] = { nil, nil, 323206, 1323206, 223206 }
 
+ItemIDManuelCorrections[30889] = { nil, nil, 330889, 1330889, 230889 } --Kaz'rogal's Hardened Heart
+
 --[[ 
     /atlasloot updatecache startID stopID
     scans every id from 1 to 10 mil unless you set the startID and stopID
