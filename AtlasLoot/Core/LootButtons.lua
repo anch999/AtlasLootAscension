@@ -523,7 +523,7 @@ function AtlasLoot:ItemContextMenu(data, Type, recipeData)
                                 "notCheckable", true
                             )
                         end
-                        if self.TomTomLoaded then
+                        if self.TomTomLoaded and data.spellID then
                             if not self.db.profile.waypointList then self.db.profile.waypointList = {} end
                             local wayPoint
                             if (craftingData and self.db.profile.recipeExtraInfoSwitch and IsControlKeyDown()) or (craftingData and not self.db.profile.recipeExtraInfoSwitch) then
