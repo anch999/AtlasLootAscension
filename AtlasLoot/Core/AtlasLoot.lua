@@ -56,6 +56,7 @@ AtlasLootCharDB = {}
 AtlasLoot_TokenData = {}
 
 local realmName = GetRealmName()
+local _, class = UnitClass("player")
 
 local AtlasLootDBDefaults = {
     profile = {
@@ -593,7 +594,9 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 			itemID = item.itemID
 			isValid = true
 			local itemType = item.Type or dataSource[dataID].Type
-			if(item[self.Difficulties.MIN_DIF]) then
+			if class == "HERO" and item.COA then
+				toShow = false
+			elseif(item[self.Difficulties.MIN_DIF]) then
 				if item[self.Difficulties.MIN_DIF] > itemDif then
 					toShow = false
 				end
