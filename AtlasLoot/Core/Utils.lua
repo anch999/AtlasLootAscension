@@ -152,19 +152,19 @@ local itemEquipLocConversion = {
 	"INVTYPE_RELIC",
 }
 
-function AtlasLoot:GetItemInfo(itemID)
-	local itemName, itemLink, itemQuality, itemLevel, itemMinLevel, itemType, itemSubType, itemStackCount, itemEquipLoc, itemTexture, itemSellPrice = GetItemInfo(itemID)
-	local item = Item:CreateFromID(itemID)
+function AtlasLoot:GetItemInfo(item)
+	item = tonumber(item) and Item:CreateFromID(item) or Item:CreateFromLink(item)
+	local itemName, itemLink, itemQuality, itemLevel, itemMinLevel, itemType, itemSubType, itemStackCount, itemEquipLoc, itemTexture, itemSellPrice = GetItemInfo(item.itemID)
 	if not item:GetInfo() then
 		self:ItemsLoading(1)
-		item:ContinueOnLoad(function(itemID)
+		item:ContinueOnLoad(function()
 			self:ItemsLoading(-1)
 		end)
-		local itemInstant = GetItemInfoInstant(itemID)
+		local itemInstant = GetItemInfoInstant(item.itemID)
 		if itemInstant then
 			itemName, itemSubType, itemEquipLoc, itemTexture, itemQuality = itemInstant.name, _G["ITEM_SUBCLASS_"..itemInstant.classID.."_"..itemInstant.subclassID], itemEquipLocConversion[itemInstant.inventoryType], itemInstant.icon, itemInstant.quality
 			local color = ITEM_QUALITY_COLORS[itemQuality] or ITEM_QUALITY_COLORS[1]
-			itemLink = color:WrapText("|Hitem:"..itemID.."|h["..itemName.."]|h|r")
+			itemLink = color:WrapText("|Hitem:"..item.itemID.."|h["..itemName.."]|h|r")
 		end
 	end
 	return itemName, itemLink, itemQuality, itemLevel, itemMinLevel, itemType, itemSubType, itemStackCount, itemEquipLoc, itemTexture, itemSellPrice
