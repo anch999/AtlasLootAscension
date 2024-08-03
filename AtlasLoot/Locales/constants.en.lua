@@ -327,6 +327,7 @@ if AL then
 	AL["Sort Wishlist"] = true
 	AL["Add Filter Set"] = true
 	AL["Auto Sort WishLists"] = true
+	AL["Allow Duplicates"] = true
 	AL["Copy Wishlist To Own"] = true
 	AL["Make Wishlist Default"] = true
 	AL["Delete Wishlist"] = true

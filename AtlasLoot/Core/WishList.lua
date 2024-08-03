@@ -72,7 +72,7 @@ function AtlasLoot:WishListAddDropClick(typ, tableNum, data, show)
 		xtyp = typ
 		xarg2 = tableNum
 		if typ == "Own" then
-			if AtlasLoot:WishListCheck(itemID) then
+			if AtlasLoot:WishListCheck(itemID) and not AtlasLootWishList["Options"][playerName].AllowDuplicates then
 				DEFAULT_CHAT_FRAME:AddMessage(BLUE..AL["AtlasLoot"]..": "..AtlasLoot:FixText(itemName)..RED..AL[" already in the WishList!"]..WHITE.." ("..AtlasLootWishList["Own"][tableNum].Name..")")
 				return
 			end
@@ -87,7 +87,7 @@ function AtlasLoot:WishListAddDropClick(typ, tableNum, data, show)
 			end
 			DEFAULT_CHAT_FRAME:AddMessage(RED..AL["AtlasLoot"]..": "..AtlasLoot:FixText(itemName)..GREY..AL[" added to the WishList."]..WHITE.." ("..AtlasLootWishList["Own"][tableNum].Name..")")
 		elseif typ == "Shared" then
-			if AtlasLoot:WishListCheck(itemID) then
+			if AtlasLoot:WishListCheck(itemID) and not AtlasLootWishList["Options"][playerName].AllowDuplicates then
 				DEFAULT_CHAT_FRAME:AddMessage(BLUE..AL["AtlasLoot"]..": "..AtlasLoot:FixText(itemName)..RED..AL[" already in the WishList!"]..WHITE.." ("..AtlasLootWishList["Shared"][tableNum].Name)
 				return
 			end
@@ -946,6 +946,13 @@ function AtlasLoot:CreateWishlistOptions()
 				AtlasLootItemsFrame_Wishlist_UnLock:Disable()
 			end
 		end)
+
+		local WishListAllowDuplicates = CreateFrame("CheckButton", "AtlasLootOptionsWishListAllowDuplicates", WishlistOptionsFrame, "OptionsCheckButtonTemplate")
+		WishListAllowDuplicates:SetPoint("LEFT", WishlistOptionsFrame, "TOPLEFT", 5, -155)
+		WishListAllowDuplicates:SetSize(25,25)
+		AtlasLootOptionsWishListAllowDuplicatesText:SetText(AL["Allow Duplicates"])
+		WishListAllowDuplicates:SetScript("OnShow", function(button) button:SetChecked(AtlasLootWishList["Options"][playerName].AllowDuplicates) end)
+		WishListAllowDuplicates:SetScript("OnClick", function(button) AtlasLootWishList["Options"][playerName].AllowDuplicates = button:GetChecked() end)
 
 	InterfaceOptions_AddCategory(WishlistOptionsFrame)
 	OptionsLoadet = true
