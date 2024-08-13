@@ -5463,6 +5463,46 @@ AtlasLoot_Data["WeaponsTBC"] = {
 			[4] = { itemID = 27497, desc = {BabbleZone["The Blood Furnace"]..AL["Heroic Mode"], BabbleBoss["Keli'dan the Breaker"]} }; --Doomplate Gauntlets
 			[5] = { itemID = 27870, desc = {BabbleZone["Auchenai Crypts"]..AL["Heroic Mode"], BabbleBoss["Exarch Maladaar"]} }; --Doomplate Legguards
 		};
+		{
+			Name = AL["Divine"];
+			[1] = { itemID = 242595 };
+			[2] = { itemID = 241962 };
+			[3] = { itemID = 242552 };
+			[4] = { itemID = 242509 };
+			[5] = { itemID = 241919 };
+			},
+			{
+			Name = AL["Just"];
+			[1] = { itemID = 242810 };
+			[2] = { itemID = 242681 };
+			[3] = { itemID = 242767 };
+			[4] = { itemID = 242724 };
+			[5] = { itemID = 242638 };
+			},
+			{
+			Name = AL["Sentinel"];
+			[1] = { itemID = 244915 };
+			[2] = { itemID = 242896 };
+			[3] = { itemID = 244872 };
+			[4] = { itemID = 244286 };
+			[5] = { itemID = 242853 };
+			},
+			{
+			Name = AL["Tides"];
+			[1] = { itemID = 245746 };
+			[2] = { itemID = 245159 };
+			[3] = { itemID = 245601 };
+			[4] = { itemID = 245303 };
+			[5] = { itemID = 244958 };
+			},
+			{
+			Name = AL["Verdant"];
+			[1] = { itemID = 247693 };
+			[2] = { itemID = 245878 };
+			[3] = { itemID = 245962 };
+			[4] = { itemID = 245794 };
+			[5] = { itemID = 247548 };
+			},
 	};
 
 --------------

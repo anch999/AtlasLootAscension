@@ -12,7 +12,7 @@ Author: Tekkub, Ackis
 
 ]]--
 
-local lib, oldminor = LibStub:NewLibrary("LibAboutPanel", 2)
+local lib, oldminor = LibStub:NewLibrary("LibAboutPanel", 3)
 if not lib then return end
 
 function lib.new(parent, addonname)
@@ -31,95 +31,56 @@ local L = {}
 -- frFR
 if GAME_LOCALE == "frFR" then
 	L["About"] = "à propos de"
-	L["Click and press Ctrl-C to copy"] = "Click and press Ctrl-C to copy"
+	L["Click to copy to clipboard"] = "Click to copy to clipboard"
 -- deDE
 elseif GAME_LOCALE == "deDE" then
 	L["About"] = "Über"
-	L["Click and press Ctrl-C to copy"] = "Klicken und Strg-C drücken zum kopieren"
+	L["Click to copy to clipboard"] = "Klicken und Strg-C drücken zum kopieren"
 -- esES
 elseif GAME_LOCALE == "esES" then
 	L["About"] = "Acerca de"
-	L["Click and press Ctrl-C to copy"] = "Click and press Ctrl-C to copy"
+	L["Click to copy to clipboard"] = "Click to copy to clipboard"
 -- esMX
 elseif GAME_LOCALE == "esMX" then
 	L["About"] = "Sobre"
-	L["Click and press Ctrl-C to copy"] = "Click and press Ctrl-C to copy"
+	L["Click to copy to clipboard"] = "Click to copy to clipboard"
 -- koKR
 elseif GAME_LOCALE == "koKR" then
 	L["About"] = "대하여"
-	L["Click and press Ctrl-C to copy"] = "Click and press Ctrl-C to copy"
+	L["Click to copy to clipboard"] = "Click to copy to clipboard"
 -- ruRU
 elseif GAME_LOCALE == "ruRU" then
 	L["About"] = "Об аддоне"
-	L["Click and press Ctrl-C to copy"] = "Click and press Ctrl-C to copy"
+	L["Click to copy to clipboard"] = "Click to copy to clipboard"
 -- zhCN
 elseif GAME_LOCALE == "zhCN" then
 	L["About"] = "关于"
-	L["Click and press Ctrl-C to copy"] = "点击并 Ctrl-C 复制"
+	L["Click to copy to clipboard"] = "点击并 Ctrl-C 复制"
 -- zhTW
 elseif GAME_LOCALE == "zhTW" then
 	L["About"] = "關於"
-	L["Click and press Ctrl-C to copy"] = "點擊並 Ctrl-C 復制"
+	L["Click to copy to clipboard"] = "點擊並 Ctrl-C 復制"
 -- enUS and non-localized
 else
 	L["About"] ="About"
-	L["Click and press Ctrl-C to copy"] = "Click and press Ctrl-C to copy"
+	L["Click to copy to clipboard"] = "Click to copy to clipboard"
 end
 
-local editbox = CreateFrame('EditBox', nil, UIParent)
-editbox:Hide()
-editbox:SetAutoFocus(true)
-editbox:SetHeight(32)
-editbox:SetFontObject('GameFontHighlightSmall')
-lib.editbox = editbox
-
-local left = editbox:CreateTexture(nil, "BACKGROUND")
-left:SetWidth(8) left:SetHeight(20)
-left:SetPoint("LEFT", -5, 0)
-left:SetTexture("Interface\\Common\\Common-Input-Border")
-left:SetTexCoord(0, 0.0625, 0, 0.625)
-
-local right = editbox:CreateTexture(nil, "BACKGROUND")
-right:SetWidth(8) right:SetHeight(20)
-right:SetPoint("RIGHT", 0, 0)
-right:SetTexture("Interface\\Common\\Common-Input-Border")
-right:SetTexCoord(0.9375, 1, 0, 0.625)
-
-local center = editbox:CreateTexture(nil, "BACKGROUND")
-center:SetHeight(20)
-center:SetPoint("RIGHT", right, "LEFT", 0, 0)
-center:SetPoint("LEFT", left, "RIGHT", 0, 0)
-center:SetTexture("Interface\\Common\\Common-Input-Border")
-center:SetTexCoord(0.0625, 0.9375, 0, 0.625)
-
-editbox:SetScript("OnEscapePressed", editbox.ClearFocus)
-editbox:SetScript("OnEnterPressed", editbox.ClearFocus)
-editbox:SetScript("OnEditFocusLost", editbox.Hide)
-editbox:SetScript("OnEditFocusGained", editbox.HighlightText)
-editbox:SetScript("OnTextChanged", function(self)
-	self:SetText(self:GetParent().val)
-	self:HighlightText()
-end)
-
-
-function lib.OpenEditbox(self)
-	editbox:SetText(self.val)
-	editbox:SetParent(self)
-	editbox:SetPoint("LEFT", self)
-	editbox:SetPoint("RIGHT", self)
-	editbox:Show()
+function lib.CopyToClipboard(self)
+	Internal_CopyToClipboard(self.val)
+	SendSystemMessage(S_COPIED_TO_CLIPBOARD:format(self.field:gsub("X%-", "")))
 end
 
 
-local fields = {"Version", "Author", "X-Category", "X-License", "X-Email", "Email", "eMail", "X-Website", "X-Credits", "X-Localizations", "X-Donate"}
-local haseditbox = {["X-Website"] = true, ["X-Email"] = true, ["X-Donate"] = true, ["Email"] = true, ["eMail"] = true}
+local fields = {"Version", "Author", "X-Category", "X-License", "X-Email", "Email", "eMail", "X-Discord", "X-Github-Repository", "X-Website", "X-Credits", "X-Localizations", "X-Donate"}
+local haseditbox = {["X-Discord"] = true, ["X-Github-Repository"] = true, ["X-Website"] = true, ["X-Email"] = true, ["X-Donate"] = true, ["Email"] = true, ["eMail"] = true}
 
 local function HideTooltip() GameTooltip:Hide() end
 
 local function ShowTooltip(self)
 	GameTooltip:SetOwner(self, "ANCHOR_TOPRIGHT")
-	GameTooltip:SetText(L["Click and press Ctrl-C to copy"])
-	--GameTooltip:SetText("Click and press Ctrl-C to copy")
+	GameTooltip:SetText(L["Click to copy to clipboard"])
+	--GameTooltip:SetText("Click to copy to clipboard")
 end
 
 function lib.OnShow(frame)
@@ -189,7 +150,8 @@ function lib.OnShow(frame)
 				local button = CreateFrame("Button", nil, frame)
 				button:SetAllPoints(detail)
 				button.val = val
-				button:SetScript("OnClick", lib.OpenEditbox)
+				button.field = field
+				button:SetScript("OnClick", lib.CopyToClipboard)
 				button:SetScript("OnEnter", ShowTooltip)
 				button:SetScript("OnLeave", HideTooltip)
 			end
