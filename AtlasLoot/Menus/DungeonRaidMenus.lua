@@ -48,7 +48,7 @@ AtlasLoot_SubMenus["Dungeons and RaidsTBC"] = {
     { "", "GruulsLair", "", "Gruul's Lair" },
     { "", "HCMagtheridon", "", "Magtheridon's Lair" },
     { "", "CFRSerpentshrine", "", "Serpentshrine Cavern" },
-    { "", "TKEye", "", "The Eye" },
+    { "", "TKEye", "", "Tempest Keep" },
     { "", "ZulAman", "", "Zul'Aman" },
     { "", "CoTHyjal", "", "Hyjal Summit" },
     { "", "BlackTemple", "", "Black Temple" },

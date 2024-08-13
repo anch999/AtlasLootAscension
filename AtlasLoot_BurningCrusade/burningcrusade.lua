@@ -2492,7 +2492,7 @@ AtlasLoot_Data["TKArc"] = {
 		[22] = { itemID = 29248, [AtlasLoot.Difficulties.MIN_DIF] = AtlasLoot.Difficulties.Heroic }; --Shadowstep Striders
 		[23] = { itemID = 29252, [AtlasLoot.Difficulties.MIN_DIF] = AtlasLoot.Difficulties.Heroic }; --Bracers of Dignity
 		[24] = { itemID = 29360, [AtlasLoot.Difficulties.MIN_DIF] = AtlasLoot.Difficulties.Heroic }; --Vileblade of the Betrayer
-		[16] = { itemID = 33861, [AtlasLoot.Difficulties.MIN_DIF] = AtlasLoot.Difficulties.Heroic }; --The Scroll of Skyriss
+		[26] = { itemID = 33861, [AtlasLoot.Difficulties.MIN_DIF] = AtlasLoot.Difficulties.Heroic }; --The Scroll of Skyriss
 	};
 	{
 		Name = AL["Trash Mobs"];
