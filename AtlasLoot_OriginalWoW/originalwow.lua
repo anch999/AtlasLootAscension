@@ -243,7 +243,7 @@ AtlasLoot_Data["RuinsofAQ"] = {
 		[30] = { itemID = 21392 }; --Sickle of Unyielding Strength
 	};
 	{
-		Name = "AQ Enchants";
+		Name = AL["AQ Enchants"];
 		[1] = { itemID = 20728 }; --Formula: Enchant Gloves - Frost Power
 		[2] = { itemID = 20731 }; --Formula: Enchant Gloves - Superior Agility
 		[3] = { itemID = 20734 }; --Formula: Enchant Cloak - Stealth
@@ -483,18 +483,15 @@ AtlasLoot_Data["TempleofAQ"] = {
 		[8] = { itemID = 21645 }; --Hive Tunneler's Boots
 		[9] = { itemID = 21605 }; --Gloves of the Hidden Temple
 		[10] = { itemID = 15029 }; --Aera's Poison Gland
-
 		[16] = { itemID = 21237 }; --Imperial Qiraji Regalia
 		[17] = { itemID = 21273 }; --Blessed Qiraji Acolyte Staff
 		[18] = { itemID = 21275 }; --Blessed Qiraji Augur Staff
 		[19] = { itemID = 21268 }; --Blessed Qiraji War Hammer
-
 		[21] = { itemID = 21232 }; --Imperial Qiraji Armaments
 		[22] = { itemID = 21242 }; --Blessed Qiraji War Axe
 		[23] = { itemID = 21272 }; --Blessed Qiraji Musket
 		[24] = { itemID = 21244 }; --Blessed Qiraji Pugio
 		[25] = { itemID = 21269 }; --Blessed Qiraji Bulwark
-
 		[27] = { itemID = 20931, lootTable = {"T2.5LEGS","Token"} }; --Hardened Qiraj Chitin
 	};
 	{
@@ -506,25 +503,21 @@ AtlasLoot_Data["TempleofAQ"] = {
 		[5] = { itemID = 21582 }; --Grasp of the Old God
 		[6] = { itemID = 21586 }; --Belt of Never-ending Agony
 		[7] = { itemID = 21581 }; --Gauntlets of Annihilation
-
 		[9] = { itemID = 22732 }; --Mark of C'Thun
 		[10] = { itemID = 21596 }; --Ring of the Godslayer
 		[11] = { itemID = 21579 }; --Vanquished Tentacle of C'Thun
 		[12] = { itemID = 21126 }; --Death's Sting
 		[13] = { itemID = 21134 }; --Dark Edge of Insanity
 		[14] = { itemID = 21839 }; --Scepter of the False Prophet
-
 		[15] = { itemID = 21221 }; --Eye of C'Thun
 		[16] = { itemID = 21710 }; --Cloak of the Fallen God
 		[17] = { itemID = 21712 }; --Amulet of the Fallen God
 		[18] = { itemID = 21709 }; --Ring of the Fallen God
-
 		[20] = { itemID = 22734 }; --Base of Atiesh
 		[21] = { itemID = 22632 }; --Atiesh, Greatstaff of the Guardian
 		[22] = { itemID = 22589 }; --Atiesh, Greatstaff of the Guardian
 		[23] = { itemID = 22631 }; --Atiesh, Greatstaff of the Guardian
 		[24] = { itemID = 22630 }; --Atiesh, Greatstaff of the Guardian
-		
 		[26] = { itemID = 20933, lootTable = {"T2.5CHEST","Token"} }; --Husk of the Old God
 	};
 	{
@@ -542,6 +535,18 @@ AtlasLoot_Data["TempleofAQ"] = {
 		[17] = { itemID = 21324 }; --Yellow Qiraji Resonating Crystal
 		[18] = { itemID = 21323 }; --Green Qiraji Resonating Crystal
 		[19] = { itemID = 21321 }; --Red Qiraji Resonating Crystal
+	};
+	{
+		Name = AL["Shoulder Enchants"];
+		[1] = { itemID = 1319786, desc = AL["Quest Requirements"], contentsPreview = {{20878},{20868},{20872},{20859,3},{20864,3}} }; --Inscription of the Stormcaller
+		[2] = { itemID = 1319785, desc = AL["Quest Requirements"], contentsPreview = {{20881},{20869},{20871},{20861,3},{20862,3}} }; --Inscription of the Stalker
+		[3] = { itemID = 1319789, desc = AL["Quest Requirements"], contentsPreview = {{20874},{20872},{20866},{20864,3},{20858,3}} }; --Inscription of the Oracle
+		[4] = { itemID = 1319790, desc = AL["Quest Requirements"], contentsPreview = {{20879},{20873},{20868},{20865,3},{20859,3}} }; --Inscription of the Genesis
+		[5] = { itemID = 1319787, desc = AL["Quest Requirements"], contentsPreview = {{20877},{20871},{20867},{20862,3},{20860,3}} }; --Inscription of the Enigma
+		[6] = { itemID = 1319788, desc = AL["Quest Requirements"], contentsPreview = {{20875},{20870},{20869},{20863,3},{20861,3}} }; --Inscription of the Doomcaller
+		[7] = { itemID = 1319784, desc = AL["Quest Requirements"], contentsPreview = {{20876},{20867},{20870},{20860,3},{20863,3}} }; --Inscription of the Deathdealer
+		[8] = { itemID = 1319782, desc = AL["Quest Requirements"], contentsPreview = {{20882},{20866},{20873},{20858,3},{20865,3}} }; --Inscription of the Conqueror
+		[9] = { itemID = 1319783, desc = AL["Quest Requirements"], contentsPreview = {{20878},{20868},{20872},{20859,3},{20864,3}} }; --Inscription of the Avenger
 	};
 	{
 		Name = AL["Trash Mobs"];
