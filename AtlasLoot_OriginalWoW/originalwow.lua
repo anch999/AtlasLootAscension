@@ -3936,6 +3936,7 @@ AtlasLoot_Data["Naxxramas60"] = {
 	Map = "Naxxramas60";
 	{
 		Name = BabbleBoss["Patchwerk"];
+		NpcID = 16028;
 		[1] = { itemID = 22960 }; --Cloak of Suturing
 		[2] = { itemID = 22815 }; --Severance
 		[3] = { itemID = 22820 }; --Wand of Fates
@@ -3947,6 +3948,7 @@ AtlasLoot_Data["Naxxramas60"] = {
 	};
 	{
 		Name = BabbleBoss["Grobbulus"];
+		NpcID = 15931;
 		[1] = { itemID = 22968 }; --Glacial Mantle
 		[2] = { itemID = 22967 }; --Icy Scale Spaulders
 		[3] = { itemID = 22803 }; --Midnight Haze
@@ -3958,6 +3960,7 @@ AtlasLoot_Data["Naxxramas60"] = {
 	};
 	{
 		Name = BabbleBoss["Gluth"];
+		NpcID = 15932;
 		[1] = { itemID = 22983 }; --Rime Covered Mantle
 		[2] = { itemID = 22813 }; --Claymore of Unholy Might
 		[3] = { itemID = 23075 }; --Death's Bargain
@@ -3972,17 +3975,20 @@ AtlasLoot_Data["Naxxramas60"] = {
 	};
 	{
 		Name = BabbleBoss["Thaddius"];
+		NpcID = 15928;
 		[1] = { itemID = 23070 }; --Leggings of Polarity
 		[2] = { itemID = 23000 }; --Plated Abomination Ribcage
 		[3] = { itemID = 22808 }; --The Castigator
 		[4] = { itemID = 22801 }; --Spire of Twilight
 		[5] = { itemID = 23001 }; --Eye of Diminution
+		[6] = { itemID = 15032 }; --Dislocated Spine
 		[16] = { itemID = 22353, lootTable = {"T3HEAD","Token"} }; --Desecrated Helmet
 		[18] = { itemID = 22726 }; --Splinter of Atiesh
 		[19] = { itemID = 22727 }; --Frame of Atiesh
 	};
 	{
 		Name = BabbleBoss["Anub'Rekhan"];
+		NpcID = 15956;
 		[1] = { itemID = 22938 }; --Cryptfiend Silk Cloak
 		[2] = { itemID = 22936 }; --Wristguards of Vengeance
 		[3] = { itemID = 22937 }; --Gem of Nerubis
@@ -3994,6 +4000,7 @@ AtlasLoot_Data["Naxxramas60"] = {
 	};
 	{
 		Name = BabbleBoss["Grand Widow Faerlina"];
+		NpcID = 15953;
 		[1] = { itemID = 22941 }; --Polar Shoulder Pads
 		[2] = { itemID = 22940 }; --Icebane Pauldrons
 		[3] = { itemID = 22806 }; --Widow's Remorse
@@ -4005,6 +4012,7 @@ AtlasLoot_Data["Naxxramas60"] = {
 	};
 	{
 		Name = BabbleBoss["Maexxna"];
+		NpcID = 15952;
 		[1] = { itemID = 23220 }; --Crystal Webbed Robe
 		[2] = { itemID = 22804 }; --Maexxna's Fang
 		[3] = { itemID = 22807 }; --Wraith Blade
@@ -4016,6 +4024,7 @@ AtlasLoot_Data["Naxxramas60"] = {
 	};
 	{
 		Name = BabbleBoss["Instructor Razuvious"];
+		NpcID = 16061;
 		[1] = { itemID = 23017 }; --Veil of Eclipse
 		[2] = { itemID = 23219 }; --Girdle of the Mentor
 		[3] = { itemID = 23014 }; --Iblis, Blade of the Fallen Seraph
@@ -4030,6 +4039,7 @@ AtlasLoot_Data["Naxxramas60"] = {
 	};
 	{
 		Name = BabbleBoss["Gothik the Harvester"];
+		NpcID = 16060;
 		[1] = { itemID = 23032 }; --Glacial Headdress
 		[2] = { itemID = 23021 }; --The Soul Harvester's Bindings
 		[3] = { itemID = 23020 }; --Polar Helmet
@@ -4041,6 +4051,7 @@ AtlasLoot_Data["Naxxramas60"] = {
 	};
 	{
 		Name = BabbleBoss["The Four Horsemen"];
+		NpcID = 16065;
 		[1] = { itemID = 23071 }; --Leggings of Apocalypse
 		[2] = { itemID = 22809 }; --Maul of the Redeemed Crusader
 		[3] = { itemID = 22691 }; --Corrupted Ashbringer
@@ -4053,6 +4064,7 @@ AtlasLoot_Data["Naxxramas60"] = {
 	};
 	{
 		Name = BabbleBoss["Noth the Plaguebringer"];
+		NpcID = 15954;
 		[1] = { itemID = 23030 }; --Cloak of the Scourge
 		[2] = { itemID = 22816 }; --Hatchet of Sundered Bone
 		[3] = { itemID = 23005 }; --Totem of Flowing Water
@@ -4066,6 +4078,7 @@ AtlasLoot_Data["Naxxramas60"] = {
 	};
 	{
 		Name = BabbleBoss["Heigan the Unclean"];
+		NpcID = 15936;
 		[1] = { itemID = 23035 }; --Preceptor's Hat
 		[2] = { itemID = 23033 }; --Icy Scale Coif
 		[3] = { itemID = 23019 }; --Icebane Helmet
@@ -4077,6 +4090,7 @@ AtlasLoot_Data["Naxxramas60"] = {
 	};
 	{
 		Name = BabbleBoss["Loatheb"];
+		NpcID = 16011;
 		[1] = { itemID = 23039 }; --The Eye of Nerub
 		[2] = { itemID = 22800 }; --Brimstone Staff
 		[3] = { itemID = 23037 }; --Ring of Spiritual Fervor
@@ -4088,6 +4102,7 @@ AtlasLoot_Data["Naxxramas60"] = {
 	};
 	{
 		Name = BabbleBoss["Sapphiron"];
+		NpcID = 15989;
 		[1] = { itemID = 23050 }; --Cloak of the Necropolis
 		[2] = { itemID = 23045 }; --Shroud of Dominion
 		[3] = { itemID = 23072 }; --Fists of the Unrelenting
@@ -4109,6 +4124,7 @@ AtlasLoot_Data["Naxxramas60"] = {
 	};
 	{
 		Name = BabbleBoss["Kel'Thuzad"];
+		NpcID = 15990;
 		[1] = { itemID = 22802 }; --Kingsfall
 		[2] = { itemID = 23054 }; --Gressil, Dawn of Ruin
 		[3] = { itemID = 23577 }; --The Hungering Cold
@@ -4120,15 +4136,18 @@ AtlasLoot_Data["Naxxramas60"] = {
 		[9] = { itemID = 22819 }; --Shield of Condemnation
 		[10] = { itemID = 23057 }; --Gem of Trapped Innocents
 		[11] = { itemID = 23053 }; --Stormrage's Talisman of Seething
-		[13] = { itemID = 22520 }; --The Phylactery of Kel'Thuzad
-		[14] = { itemID = 23207 }; --Mark of the Champion
-		[15] = { itemID = 23206 }; --Mark of the Champion
-		[16] = { itemID = 1510496, lootTable = {"T3FINGER","Token"} }; --Desecrated Ring
-		[18] = { itemID = 22733 }; --Staff Head of Atiesh
-		[19] = { itemID = 22632 }; --Atiesh, Greatstaff of the Guardian
-		[20] = { itemID = 22589 }; --Atiesh, Greatstaff of the Guardian
-		[21] = { itemID = 22631 }; --Atiesh, Greatstaff of the Guardian
-		[22] = { itemID = 22630 }; --Atiesh, Greatstaff of the Guardian
+		[12] = { itemID = 15036 }; --Lordaeron's Lament
+		[13] = { itemID = 15033 }; --Staff of Twisted Dreams
+		[16] = { itemID = 22520 }; --The Phylactery of Kel'Thuzad
+		[17] = { itemID = 23207 }; --Mark of the Champion
+		[18] = { itemID = 23206 }; --Mark of the Champion
+		[20] = { itemID = 1510496, lootTable = {"T3FINGER","Token"} }; --Desecrated Ring
+		[22] = { itemID = 22733 }; --Staff Head of Atiesh
+		[23] = { itemID = 22632 }; --Atiesh, Greatstaff of the Guardian
+		[24] = { itemID = 22589 }; --Atiesh, Greatstaff of the Guardian
+		[25] = { itemID = 22631 }; --Atiesh, Greatstaff of the Guardian
+		[26] = { itemID = 22630 }; --Atiesh, Greatstaff of the Guardian
+		[28] = { itemID = 60185, droprate = "1%" }; --Sigil
 	};
 	{
 		Name = AL["Trash Mobs"];
