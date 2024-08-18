@@ -232,7 +232,7 @@ local boss = "dungeonskull"
 
         };
         [6] = {
-            { BabbleSubZone["Frostwyrm Lair"], SubZone = true };
+            { BabbleZone["Frostwyrm Lair"], SubZone = true };
             { AL["Sapphiron"], cords = {37,23}, pinType = boss };
             { AL["Kel'Thuzad"], cords = {57,68}, pinType = boss };
         };

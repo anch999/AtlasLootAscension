@@ -4022,6 +4022,8 @@ AtlasLoot_Data["Naxxramas60"] = {
 		[4] = { itemID = 23009 }; --Wand of the Whispering Dead
 		[5] = { itemID = 23004 }; --Idol of Longevity
 		[6] = { itemID = 23018 }; --Signet of the Fallen Defender
+		[7] = { itemID = 15030 }; --Jagged Cold Steel Knife
+		[8] = { itemID = 23328 }; --The Unholy Blade
 		[16] = { itemID = 22358, lootTable = {"T3FEET","Token"} }; --Desecrated Sabatons
 		[18] = { itemID = 22726 }; --Splinter of Atiesh
 		[19] = { itemID = 22727 }; --Frame of Atiesh

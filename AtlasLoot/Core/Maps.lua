@@ -244,7 +244,7 @@ function AtlasLoot:MapMenuOpen(frame)
             if v[1].Zone then
                 text = map[i][2][1]
             else
-                text = v[1][1]
+                text = v[1][1] or ""
             end
             tinsert(menuList[1], {text = WHITE..text, func = function() self:MapOnShow(mapID, i, true) end, notCheckable = true, closeWhenClicked = true, textHeight = 12, textWidth = 12})
         end
