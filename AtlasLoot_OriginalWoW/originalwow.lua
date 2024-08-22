@@ -200,6 +200,8 @@ AtlasLoot_Data["RuinsofAQ"] = {
 		[11] = { itemID = 21715 }; --Sand Polished Hammer
 		[12] = { itemID = 21459 }; --Crossbow of Imminent Doom
 		[13] = { itemID = 21452 }; --Staff of the Ruins
+		[14] = { itemID = 1506054 }; --Sword of the Ruins
+		[15] = { itemID = 15028 }; --Time-Lost Pocketwatch
 		[16] = { itemID = 21220 }; --Head of Ossirian the Unscarred
 		[17] = { itemID = 21504 }; --Charm of the Shifting Sands
 		[18] = { itemID = 21507 }; --Amulet of the Shifting Sands
