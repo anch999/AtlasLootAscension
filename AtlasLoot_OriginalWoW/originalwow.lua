@@ -4383,6 +4383,50 @@ AtlasLoot_Data["T0"] = {
 		[7] = { itemID = 98271  }; --Legguards of Courage
 		[8] = { itemID = 98346  }; --Treads of Courage
 	};
+	{
+		Name = AL["Necropile Raiment"];
+		[1] = { itemID = 14626 }; --Necropile Robe
+        [2] = { itemID = 14629 }; --Necropile Cuffs
+        [3] = { itemID = 14631 }; --Necropile Boots
+        [4] = { itemID = 14632 }; --Necropile Leggings
+        [5] = { itemID = 14633 }; --Necropile Mantle
+        [6] = { itemID = 99029 }; --Necropile Belt
+        [7] = { itemID = 99387 }; --Necropile Crown
+        [8] = { itemID = 99430 }; --Necropile Gloves
+	};
+	{
+		Name = AL["Cadaverous Garb"];
+		[1] = { itemID = 14011 }; --Cadaverous Crown
+		[2] = { itemID = 14012 }; --Cadaverous Shoulders
+		[3] = { itemID = 14013 }; --Cadaverous Armor
+		[4] = { itemID = 14014 }; --Cadaverous Cuffs
+		[5] = { itemID = 14015 }; --Cadaverous Gloves
+		[6] = { itemID = 14016 }; --Cadaverous Belt
+		[7] = { itemID = 14017 }; --Cadaverous Leggings
+		[8] = { itemID = 14018 }; --Cadaverous Walkers
+	};
+	{
+		Name = AL["Bloodmail Regalia"];
+		[1] = { itemID = 14611 }; --Bloodmail Hauberk
+        [2] = { itemID = 14612 }; --Bloodmail Legguards
+        [3] = { itemID = 14614 }; --Bloodmail Belt
+        [4] = { itemID = 14615 }; --Bloodmail Gauntlets
+        [5] = { itemID = 14616 }; --Bloodmail Boots
+        [6] = { itemID = 99705 }; --Bloodmail Coif
+        [7] = { itemID = 99790 }; --Bloodmail Pauldrons
+        [8] = { itemID = 99835 }; --Bloodmail Wristguards
+	};
+	{
+		Name = AL["Deathbone Guardian"];
+		[1] = { itemID = 14026 }; --Deathbone Sabatons
+        [2] = { itemID = 14027 }; --Deathbone Legguards
+        [3] = { itemID = 14028 }; --Deathbone Girdle
+        [4] = { itemID = 14029 }; --Deathbone Gauntlets
+        [5] = { itemID = 14030 }; --Deathbone Wristguards
+        [6] = { itemID = 14031 }; --Deathbone Chestplate
+        [7] = { itemID = 14032 }; --Deathbone Pauldrons
+        [8] = { itemID = 14033 }; --Deathbone Helmet
+	};
 };
 
 AtlasLoot_Data["T0.5"] = {
@@ -4661,14 +4705,14 @@ AtlasLoot_Data["T2"] = {
 	};
 	{
 		Name = AL["Druid"] ..WHITE.." - Tank";
-		[1] = { itemID = 1516900, desc = "=ds=" ..BabbleBoss["Onyxia"] };--Stormrage Cover
-		[2] = { itemID = 1516902, desc = "=ds=" ..BabbleBoss["Chromaggus"] };--Stormrage Pauldrons
-		[3] = { itemID = 1516897, desc = "=ds=" ..BabbleBoss["Nefarian"] };--Stormrage Chestguard
-		[4] = { itemID = 1516904, desc = "=ds=" ..BabbleBoss["Razorgore the Untamed"] };--Stormrage Bracers
-		[5] = { itemID = 1516904, desc = BabbleBoss["Firemaw"] ..", " ..BabbleBoss["Ebonroc"] ..", " ..BabbleBoss["Flamegor"] };--Stormrage Handguards
-		[6] = { itemID = 1516899, desc = "=ds=" ..BabbleBoss["Vaelastrasz the Corrupt"] };--Stormrage Belt
-		[7] = { itemID = 1516903, desc = "=ds=" ..BabbleBoss["Ragnaros"] };--Stormrage Legguards
-		[8] = { itemID = 1516898, desc = "=ds=" ..BabbleBoss["Broodlord Lashlayer"] };--Stormrage Boots
+		[1] = { itemID = 1517000, desc = "=ds=" ..BabbleBoss["Onyxia"] };--Stormrage Cover
+		[2] = { itemID = 1517002, desc = "=ds=" ..BabbleBoss["Chromaggus"] };--Stormrage Pauldrons
+		[3] = { itemID = 1516997, desc = "=ds=" ..BabbleBoss["Nefarian"] };--Stormrage Chestguard
+		[4] = { itemID = 1517004, desc = "=ds=" ..BabbleBoss["Razorgore the Untamed"] };--Stormrage Bracers
+		[5] = { itemID = 1516999, desc = BabbleBoss["Firemaw"] ..", " ..BabbleBoss["Ebonroc"] ..", " ..BabbleBoss["Flamegor"] };--Stormrage Handguards
+		[6] = { itemID = 1517003, desc = "=ds=" ..BabbleBoss["Vaelastrasz the Corrupt"] };--Stormrage Belt
+		[7] = { itemID = 1517001, desc = "=ds=" ..BabbleBoss["Ragnaros"] };--Stormrage Legguards
+		[8] = { itemID = 1516998, desc = "=ds=" ..BabbleBoss["Broodlord Lashlayer"] };--Stormrage Boots
 	};
 	{
 		Name = AL["Druid"] ..WHITE.." - Caster";
@@ -5142,38 +5186,6 @@ AtlasLoot_Data["ClassicSets"] = {
 		Name = AL["Dal'Rend's Arms"];
 		[1] = { itemID = 12940 }; --Dal'Rend's Sacred Charge
 		[2] = { itemID = 12939 }; --Dal'Rend's Tribal Guardian
-	};
-	{
-		Name = AL["Necropile Raiment"];
-		[1] = { itemID = 14633 }; --Necropile Mantle
-		[2] = { itemID = 14626 }; --Necropile Robe
-		[3] = { itemID = 14629 }; --Necropile Cuffs
-		[4] = { itemID = 14632 }; --Necropile Leggings
-		[5] = { itemID = 14631 }; --Necropile Boots
-	};
-	{
-		Name = AL["Cadaverous Garb"];
-		[1] = { itemID = 14637 }; --Cadaverous Armor
-		[2] = { itemID = 14640 }; --Cadaverous Gloves
-		[3] = { itemID = 14636 }; --Cadaverous Belt
-		[4] = { itemID = 14638 }; --Cadaverous Leggings
-		[5] = { itemID = 14641 }; --Cadaverous Walkers
-	};
-	{
-		Name = AL["Bloodmail Regalia"];
-		[1] = { itemID = 14611 }; --Bloodmail Hauberk
-		[2] = { itemID = 14615 }; --Bloodmail Gauntlets
-		[3] = { itemID = 14614 }; --Bloodmail Belt
-		[4] = { itemID = 14612 }; --Bloodmail Legguards
-		[5] = { itemID = 14616 }; --Bloodmail Boots
-	};
-	{
-		Name = AL["Deathbone Guardian"];
-		[1] = { itemID = 14624 }; --Deathbone Chestplate
-		[2] = { itemID = 14622 }; --Deathbone Gauntlets
-		[3] = { itemID = 14620 }; --Deathbone Girdle
-		[4] = { itemID = 14623 }; --Deathbone Legguards
-		[5] = { itemID = 14621 }; --Deathbone Sabatons
 	};
 	{
 		Name = AL["Major Mojo Infusion"];
