@@ -27,6 +27,7 @@ local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
 			{ AL["Badge of Justice Rewards"], "BadgeShatt", "Header"},
 			{ "", "BadgeShatt"},
 			{ "", "BadgeSunwell"},
+			{ "", "SunmoteSunwell"},
 			{ "Tier Sets", "T4", "Header"},
 			{ "", "T4"},
 			{ "", "T5"},
