@@ -5464,7 +5464,7 @@ AtlasLoot_Data["WeaponsTBC"] = {
 			[5] = { itemID = 27870, desc = {BabbleZone["Auchenai Crypts"]..AL["Heroic Mode"], BabbleBoss["Exarch Maladaar"]} }; --Doomplate Legguards
 		};
 		{
-			Name = AL["Divine"];
+			Name = AL["Divine Armor"];
 			[1] = { itemID = 242595 };
 			[2] = { itemID = 241962 };
 			[3] = { itemID = 242552 };
@@ -5472,7 +5472,7 @@ AtlasLoot_Data["WeaponsTBC"] = {
 			[5] = { itemID = 241919 };
 			},
 			{
-			Name = AL["Just"];
+			Name = AL["Armor of the Just"];
 			[1] = { itemID = 242810 };
 			[2] = { itemID = 242681 };
 			[3] = { itemID = 242767 };
@@ -5480,7 +5480,7 @@ AtlasLoot_Data["WeaponsTBC"] = {
 			[5] = { itemID = 242638 };
 			},
 			{
-			Name = AL["Sentinel"];
+			Name = AL["Sentinel's Armor"];
 			[1] = { itemID = 244915 };
 			[2] = { itemID = 242896 };
 			[3] = { itemID = 244872 };
@@ -5488,7 +5488,7 @@ AtlasLoot_Data["WeaponsTBC"] = {
 			[5] = { itemID = 242853 };
 			},
 			{
-			Name = AL["Tides"];
+			Name = AL["Raiment of the Tides"];
 			[1] = { itemID = 245746 };
 			[2] = { itemID = 245159 };
 			[3] = { itemID = 245601 };
@@ -5496,7 +5496,7 @@ AtlasLoot_Data["WeaponsTBC"] = {
 			[5] = { itemID = 244958 };
 			},
 			{
-			Name = AL["Verdant"];
+			Name = AL["Verdant's Regalia"];
 			[1] = { itemID = 247693 };
 			[2] = { itemID = 245878 };
 			[3] = { itemID = 245962 };
@@ -6318,8 +6318,9 @@ AtlasLoot_Data["BadgeSunwell"] = {
 AtlasLoot_Data["SunmoteSunwell"] = {
 	Module = "AtlasLoot_BurningCrusade";
 	Name = AL["Yrma - Sunmote Vendor"];
+	Type = "BCRaid";
 	{
-		Name = BabbleInventory["Cloth"];
+		Name = AL["Sunmote Vendor"];
 		[1] = { itemID = 10736 };
 		[2] = { itemID = 10735 };
 		[3] = { itemID = 11433 };
@@ -6330,71 +6331,6 @@ AtlasLoot_Data["SunmoteSunwell"] = {
 		[8] = { itemID = 11518 };
 		[9] = { itemID = 11519 };
 		[10] = { itemID = 11520 };
-		[11] = { itemID = 310736 };
-		[12] = { itemID = 310735 };
-		[13] = { itemID = 311433 };
-		[14] = { itemID = 311483 };
-		[15] = { itemID = 311484 };
-		[16] = { itemID = 311485 };
-		[17] = { itemID = 311517 };
-		[18] = { itemID = 311518 };
-		[19] = { itemID = 311519 };
-		[20] = { itemID = 311520 };
-		[21] = { itemID = 1310736 };
-		[22] = { itemID = 1310735 };
-		[23] = { itemID = 1311433 };
-		[24] = { itemID = 1311483 };
-		[25] = { itemID = 1311484 };
-		[26] = { itemID = 1311485 };
-		[27] = { itemID = 1311517 };
-		[28] = { itemID = 1311518 };
-		[29] = { itemID = 1311519 };
-		[30] = { itemID = 1311520 };
-	};
-	{
-		Name = BabbleInventory["Leather"];
-		[1] = { itemID = 210736 };
-		[2] = { itemID = 210735 };
-		[3] = { itemID = 211433 };
-		[4] = { itemID = 211483 };
-		[5] = { itemID = 211484 };
-		[6] = { itemID = 211485 };
-		[7] = { itemID = 211517 };
-		[8] = { itemID = 211518 };
-		[9] = { itemID = 211519 };
-		[10] = { itemID = 211520 };
-		[11] = { itemID = 6010736 };
-		[12] = { itemID = 6010735 };
-		[13] = { itemID = 6011433 };
-		[14] = { itemID = 6011483 };
-		[15] = { itemID = 6011484 };
-		[16] = { itemID = 6011485 };
-		[17] = { itemID = 6011517 };
-		[18] = { itemID = 6011518 };
-		[19] = { itemID = 6011519 };
-		[20] = { itemID = 6011520 };
-		[21] = { itemID = 6310736 };
-		[22] = { itemID = 6310735 };
-		[23] = { itemID = 6311433 };
-		[24] = { itemID = 6311483 };
-		[25] = { itemID = 6311484 };
-		[26] = { itemID = 6311485 };
-		[27] = { itemID = 6311517 };
-		[28] = { itemID = 6311518 };
-		[29] = { itemID = 6311519 };
-		[30] = { itemID = 6311520 };
-	};
-	{
-		Name = BabbleInventory["Mail"];
-	};
-	{
-		Name = BabbleInventory["Plate"];
-	};
-	{
-		Name = AL["Weapons"];
-	};
-	{
-		Name = AL["Accessories"];
 	};
 };
 
