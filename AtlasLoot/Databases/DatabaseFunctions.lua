@@ -30,7 +30,7 @@ function AtlasLoot:CheckItemID(newIDs, ID, dif)
 	for _, newID in ipairs(newIDs) do
 		local ogName = GetItemInfoInstant(ID)
 		local newName = GetItemInfoInstant(newID)
-		if newName and ogName and newName.name and ogName.name then
+		if newName and ogName and newName.name and ogName.name and newName.inventoryType == ogName.inventoryType then
 			ogName.name = ogName.name:gsub( "%W", "" )
 			newName.name = newName.name:gsub( "%W", "" )
 			if dif == "Bloodforged" or dif == "Heroic Bloodforged" then
@@ -80,7 +80,7 @@ function AtlasLoot:UpdateItemIDsDatabase(firstID, lastID)
 								local itemType = GetItemInfoInstant(itemData.itemID) or nil
 								if dif[2] ~= 100 and dif[2] ~= 1 and dif[2] ~= 2 and itemType then
 									unknownIDs[dif[1]] = unknownIDs[dif[1]] or {}
-									unknownIDs[dif[1]][itemType.name:gsub( "%W", "" )] = itemData.itemID
+									unknownIDs[dif[1]][itemType.name:gsub( "%W", "" )..itemType.inventoryType] = itemData.itemID
 								end
 							end
 						end
@@ -102,7 +102,7 @@ function AtlasLoot:UpdateItemIDsDatabase(firstID, lastID)
 
 		local function checkID(item, difficulty)
 			if difficulty and item and item.name then
-				local foundName = item.name:gsub( "%W", "" )
+				local foundName = item.name:gsub( "%W", "" )..item.inventoryType
 				if foundName then
 					local orignalID = unknownIDs[difficulty] and unknownIDs[difficulty][foundName]
 					if orignalID then
