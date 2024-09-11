@@ -447,7 +447,8 @@ function AtlasLoot:PopoupItemFrame(frame, data)
 		if item == "blank" then
 			button:Hide()
 		else
-			local itemID = item.itemID or item[1]
+			local correctID = item.itemID or item[1]
+			local itemID = self:FindId(correctID, ItemindexID) or correctID
 			local itemData = {self:GetItemInfo(itemID)}
 			SetItemButtonTexture(button, itemData[10])
 			SetItemButtonQuality(button, itemData[3])
