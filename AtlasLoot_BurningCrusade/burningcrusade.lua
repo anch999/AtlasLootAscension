@@ -976,7 +976,7 @@ AtlasLoot_Data["CoTHyjal"] = {
 		[12] = { itemID = 30909 }; --Antonidas's Aegis of Rapt Concentration
 		[13] = { itemID = 30906 }; --Bristleblitz Striker
 		[16] = { itemID = 31097, lootTable = {"T6HEAD","Token"} }; --Helm of the Forgotten Conqueror
-		[18] = { itemID = 450009}, -- The String of Time
+		[18] = { itemID = 450009, desc = AL["Quest Requirements"], contentsPreview = {{450009},{450010},{34334}}}, -- The String of Time
 		[20] = { itemID = 29434 }; --Badge of Justice
 		[21] = { itemID = 400751, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal }; --Raider's Commendations
 		[22] = { itemID = 98570 }; --Mystic Orb
@@ -2232,137 +2232,211 @@ AtlasLoot_Data["SunwellPlateau"] = {
 	Map = "SunwellPlateau";
 	{
 		Name = BabbleBoss["Kalecgos"];
-		[1] = { itemID = 34170 }; --Pantaloons of Calming Strife
-		[2] = { itemID = 34386 }; --Pantaloons of Growing Strife
-		[3] = { itemID = 34169 }; --Breeches of Natural Aggression
-		[4] = { itemID = 34384 }; --Breeches of Natural Splendor
-		[5] = { itemID = 34168 }; --Starstalker Legguards
-		[6] = { itemID = 34167 }; --Legplates of the Holy Juggernaut
-		[7] = { itemID = 34382 }; --Judicator's Legguards
-		[8] = { itemID = 34166 }; --Band of Lucent Beams
-		[9] = { itemID = 34165 }; --Fang of Kalecgos
-		[10] = { itemID = 34164 }; --Dragonscale-Encrusted Longblade
+		NpcID = 24892;
+		LootGroups = {
+			[1] =  100,
+			[2] =  100,
+			[10] =  100,
+			[15] =  1,
+		};
+		[1] = { itemID = 34170, lootGroup = 2 }; --Pantaloons of Calming Strife
+		[2] = { itemID = 34169, lootGroup = 2 }; --Breeches of Natural Aggression
+		[3] = { itemID = 34168, lootGroup = 2 }; --Starstalker Legguards
+		[4] = { itemID = 34167, lootGroup = 2 }; --Legplates of the Holy Juggernaut
+		[5] = { itemID = 34166, lootGroup = 2 }; --Band of Lucent Beams
+		[6] = { itemID = 34165, lootGroup = 2 }; --Fang of Kalecgos
+		[7] = { itemID = 34164, lootGroup = 2 }; --Dragonscale-Encrusted Longblade
 		[16] = { itemID = 34848, lootTable = {"T6WRIST","Token"}}; --Bracers of the Forgotten Conqueror
-		[18] = { itemID = 29434 }; --Badge of Justice
+		[18] = { itemID = 34664 }; --Sunmote
+		[19] = { itemID = 29434 }; --Badge of Justice
+		[20] = { itemID = 400751, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal }; --Raider's Commendations
+		[21] = { itemID = 98570 }; --Mystic Orb
+		[24] = { itemID = 63978, lootGroup = 15 }; --Sigil
 	};
 	{
 		Name = BabbleBoss["Brutallus"];
-		[1] = { itemID = 34181 }; --Leggings of Calamity
-		[2] = { itemID = 34180 }; --Felfury Legplates
-		[3] = { itemID = 34381 }; --Felstrength Legplates
-		[4] = { itemID = 34178 }; --Collar of the Pit Lord
-		[5] = { itemID = 34177 }; --Clutch of Demise
-		[6] = { itemID = 34179 }; --Heart of the Pit
-		[7] = { itemID = 34176 }; --Reign of Misery
-		[16] = { itemID = 34853, lootTable = {"T6WAIST","Token"} }; --Belt of the Forgotten Conqueror
-		[18] = { itemID = 29434 }; --Badge of Justice
+		NpcID = 24882;
+		LootGroups = {
+			[1] =  100,
+			[2] =  100,
+			[10] =  100,
+			[15] =  1,
+			[16] =  1
+		};
+
+		[1] = { itemID = 34181, lootGroup = 2 }; --Leggings of Calamity
+		[2] = { itemID = 34180, lootGroup = 2 }; --Felfury Legplates
+		[3] = { itemID = 34381, lootGroup = 2 }; --Felstrength Legplates
+		[4] = { itemID = 34178, lootGroup = 2 }; --Collar of the Pit Lord
+		[5] = { itemID = 34177, lootGroup = 2 }; --Clutch of Demise
+		[6] = { itemID = 34179, lootGroup = 2 }; --Heart of the Pit
+		[7] = { itemID = 34176, lootGroup = 2 }; --Reign of Misery
+		[8] = { itemID = 11523, lootGroup = 2 }; --Trophy Scar Band
+		[16] = { itemID = 34853, lootTable = {"T6WAIST","Token"}, lootGroup = 1 }; --Belt of the Forgotten Conqueror
+		[18] = { itemID = 34664 }; --Sunmote
+		[19] = { itemID = 29434 }; --Badge of Justice
+		[20] = { itemID = 400751, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal }; --Raider's Commendations
+		[21] = { itemID = 98570 }; --Mystic Orb
+		[23] = { itemID = 612859, lootGroup = 16 }; --Summoning Stone - Brutallus
+		[25] = { itemID = 63976, lootGroup = 15 }; --Sigil
 	};
 	{
 		Name = BabbleBoss["Felmyst"];
-		[1] = { itemID = 34352 }; --Borderland Fortress Grips
-		[2] = { itemID = 34188 }; --Leggings of the Immortal Night
-		[3] = { itemID = 34385 }; --Leggings of the Immortal Beast
-		[4] = { itemID = 34186 }; --Chain Links of the Tumultuous Storm
-		[5] = { itemID = 34383 }; --Kilt of Spiritual Reconstruction
-		[6] = { itemID = 34184 }; --Brooch of the Highborne
-		[7] = { itemID = 34185 }; --Sword Breaker's Bulwark
-		[8] = { itemID = 34182 }; --Grand Magister's Staff of Torrents
-		[16] = { itemID = 34856, lootTable = {"T6FEET","Token"} }; --Boots of the Forgotten Conqueror
-		[18] = { itemID = 29434 }; --Badge of Justice
+		NpcID = 25038;
+		LootGroups = {
+			[1] =  100,
+			[2] =  100,
+			[10] =  100,
+			[15] =  1,
+		};
+		[1] = { itemID = 34352, lootGroup = 2 }; --Borderland Fortress Grips
+		[2] = { itemID = 34188, lootGroup = 2 }; --Leggings of the Immortal Night
+		[3] = { itemID = 34385, lootGroup = 2 }; --Leggings of the Immortal Beast
+		[4] = { itemID = 34186, lootGroup = 2 }; --Chain Links of the Tumultuous Storm
+		[5] = { itemID = 34383, lootGroup = 2 }; --Kilt of Spiritual Reconstruction
+		[6] = { itemID = 34184, lootGroup = 2 }; --Brooch of the Highborne
+		[7] = { itemID = 34185, lootGroup = 2 }; --Sword Breaker's Bulwark
+		[8] = { itemID = 34182, lootGroup = 2 }; --Grand Magister's Staff of Torrents
+		[16] = { itemID = 34856, lootTable = {"T6FEET","Token"}, lootGroup = 1 }; --Boots of the Forgotten Conqueror
+		[18] = { itemID = 34664 }; --Sunmote
+		[19] = { itemID = 29434 }; --Badge of Justice
+		[20] = { itemID = 400751, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal }; --Raider's Commendations
+		[21] = { itemID = 98570 }; --Mystic Orb
+		[23] = { itemID = 63980, lootGroup = 15 }; --Sigil
 	};
 	{
 		Name = BabbleBoss["The Eredar Twins"];
-		[1] = { itemID = 34205 }; --Shroud of Redeemed Souls
-		[2] = { itemID = 34190 }; --Crimson Paragon's Cover
-		[3] = { itemID = 34210 }; --Amice of the Convoker
-		[4] = { itemID = 34202 }; --Shawl of Wonderment
-		[5] = { itemID = 34393 }; --Shoulderpads of Knowledge's Pursuit
-		[6] = { itemID = 34209 }; --Spaulders of Reclamation
-		[7] = { itemID = 34391 }; --Spaulders of Devastation
-		[8] = { itemID = 34195 }; --Shoulderpads of Vehemence
-		[9] = { itemID = 34392 }; --Demontooth Shoulderpads
-		[10] = { itemID = 34194 }; --Mantle of the Golden Forest
-		[11] = { itemID = 34208 }; --Equilibrium Epaulets
-		[12] = { itemID = 34390 }; --Erupting Epaulets
-		[13] = { itemID = 34192 }; --Pauldrons of Perseverance
-		[14] = { itemID = 34388 }; --Pauldrons of Berserking
-		[16] = { itemID = 34193 }; --Spaulders of the Thalassian Savior
-		[17] = { itemID = 34389 }; --Spaulders of the Thalassian Defender
-		[18] = { itemID = 35290 }; --Sin'dorei Pendant of Conquest
-		[19] = { itemID = 35291 }; --Sin'dorei Pendant of Salvation
-		[20] = { itemID = 35292 }; --Sin'dorei Pendant of Triumph
-		[21] = { itemID = 34204 }; --Amulet of Unfettered Magics
-		[22] = { itemID = 34189 }; --Band of Ruinous Delight
-		[23] = { itemID = 34206 }; --Book of Highborne Hymns
-		[24] = { itemID = 34197 }; --Shiv of Exsanguination
-		[25] = { itemID = 34199 }; --Archon's Gavel
-		[26] = { itemID = 34203 }; --Grip of Mannoroth
-		[27] = { itemID = 34198 }; --Stanchion of Primal Instinct
-		[28] = { itemID = 34196 }; --Golden Bow of Quel'Thalas
-		[30] = { itemID = 29434 }; --Badge of Justice
+		NpcID = 25166;
+		LootGroups = {
+			[1] =  100,
+			[2] =  100,
+			[10] =  100,
+			[15] =  1,
+			[16] =  1
+			};
+		[1] = { itemID = 34205, lootGroup = 1 }; --Shroud of Redeemed Souls
+		[2] = { itemID = 34190, lootGroup = 2 }; --Crimson Paragon's Cover
+		[3] = { itemID = 34210, lootGroup = 1 }; --Amice of the Convoker
+		[4] = { itemID = 34202, lootGroup = 1 }; --Shawl of Wonderment
+		[5] = { itemID = 34209, lootGroup = 1 }; --Spaulders of Reclamation
+		[6] = { itemID = 34195, lootGroup = 2 }; --Shoulderpads of Vehemence
+		[7] = { itemID = 34194, lootGroup = 2 }; --Mantle of the Golden Forest
+		[8] = { itemID = 34208, lootGroup = 1 }; --Equilibrium Epaulets
+		[9] = { itemID = 34192, lootGroup = 2 }; --Pauldrons of Perseverance
+		[10] = { itemID = 34193, lootGroup = 1 }; --Spaulders of the Thalassian Savior
+		[11] = { itemID = 34204, lootGroup = 1 }; --Amulet of Unfettered Magics
+		[12] = { itemID = 34189, lootGroup = 2 }; --Band of Ruinous Delight
+		[13] = { itemID = 34206, lootGroup = 1 }; --Book of Highborne Hymns
+		[14] = { itemID = 34197, lootGroup = 2 }; --Shiv of Exsanguination
+		[15] = { itemID = 34199, lootGroup = 1 }; --Archon's Gavel
+		[16] = { itemID = 34203, lootGroup = 2 }; --Grip of Mannoroth
+		[17] = { itemID = 34198, lootGroup = 2 }; --Stanchion of Primal Instinct
+		[18] = { itemID = 34196, lootGroup = 2 }; --Golden Bow of Quel'Thalas
+		[20] = { itemID = 34664 }; --Sunmote
+		[21] = { itemID = 29434 }; --Badge of Justice
+		[22] = { itemID = 400751, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal }; --Raider's Commendations
+		[23] = { itemID = 98570 }; --Mystic Orb
+		[25] = { itemID = 612860 ,lootGroup = 16 }; --Summoning Stone - Sacro\'lythess
+		[27] = { itemID = 63984, lootGroup = 15 }; --Sigil
+		[28] = { itemID = 63985, lootGroup = 15 }; --Sigil
+	};
+	{
+		Name = AL["High Commander Arynyes <Shadowsword Captain>"];
+		NpcID = 25837;
+		LootGroups = {
+			[1] =  100,
+			[2] =  100,
+			[10] =  100,
+			[15] =  100,
+			};
+		[1] = { itemID = 35282, lootGroup = 2 }; --Sin'dorei Band of Dominance
+		[2] = { itemID = 35283, lootGroup = 2 }; --Sin'dorei Band of Salvation
+		[3] = { itemID = 35284, lootGroup = 2 }; --Sin'dorei Band of Triumph
+		[4] = { itemID = 35290, lootGroup = 2 }; --Sin'dorei Pendant of Conquest
+		[5] = { itemID = 35291, lootGroup = 2 }; --Sin'dorei Pendant of Salvation
+		[6] = { itemID = 35292, lootGroup = 2 }; --Sin'dorei Pendant of Triumph
+		[8] = { itemID = 34848, lootTable = {"T6WRIST","Token"}, lootGroup = 1}; --Bracers of the Forgotten Conqueror
+		[9] = { itemID = 34853, lootTable = {"T6WAIST","Token"}, lootGroup = 1 }; --Belt of the Forgotten Conqueror
+		[10] = { itemID = 34856, lootTable = {"T6FEET","Token"}, lootGroup = 1 }; --Boots of the Forgotten Conqueror
+		[16] = { itemID = 34664 }; --Sunmote
+		[17] = { itemID = 29434 }; --Badge of Justice
+		[18] = { itemID = 400751, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal }; --Raider's Commendations
+		[19] = { itemID = 98570 }; --Mystic Orb
+
 	};
 	{
 		Name = BabbleBoss["M'uru"];
-		[1] = { itemID = 34232 }; --Fel Conquerer Raiments
-		[2] = { itemID = 34233 }; --Robes of Faltered Light
-		[3] = { itemID = 34399 }; --Robes of Ghostly Hatred
-		[4] = { itemID = 34212 }; --Sunglow Vest
-		[5] = { itemID = 34398 }; --Utopian Tunic of Elune
-		[6] = { itemID = 34211 }; --Harness of Carnal Instinct
-		[7] = { itemID = 34397 }; --Bladed Chaos Tunic
-		[8] = { itemID = 34234 }; --Shadowed Gauntlets of Paroxysm
-		[9] = { itemID = 34408 }; --Gloves of the Forest Drifter
-		[10] = { itemID = 34229 }; --Garments of Serene Shores
-		[11] = { itemID = 34396 }; --Garments of Crashing Shores
-		[12] = { itemID = 34228 }; --Vicious Hawkstrider Hauberk
-		[13] = { itemID = 34215 }; --Warharness of Reckless Fury
-		[14] = { itemID = 34394 }; --Breastplate of Agony's Aversion
-		[15] = { itemID = 34240 }; --Gauntlets of the Soothed Soul
-		[16] = { itemID = 34216 }; --Heroic Judicator's Chestguard
-		[17] = { itemID = 34395 }; --Noble Judicator's Chestguard
-		[18] = { itemID = 34213 }; --Ring of Hardened Resolve
-		[19] = { itemID = 34230 }; --Ring of Omnipotence
-		[20] = { itemID = 35282 }; --Sin'dorei Band of Dominance
-		[21] = { itemID = 35283 }; --Sin'dorei Band of Salvation
-		[22] = { itemID = 35284 }; --Sin'dorei Band of Triumph
-		[23] = { itemID = 34427 }; --Blackened Naaru Sliver
-		[24] = { itemID = 34430 }; --Glimmering Naaru Sliver
-		[25] = { itemID = 34429 }; --Shifting Naaru Sliver
-		[26] = { itemID = 34428 }; --Steely Naaru Sliver
-		[27] = { itemID = 34214 }; --Muramasa
-		[28] = { itemID = 34231 }; --Aegis of Angelic Fortune
-		[30] = { itemID = 29434 }; --Badge of Justice
+		NpcID = 25741; -- Entropius: 25840
+		LootGroups = {
+			[1] =  100,
+			[2] =  100,
+			[10] =  100,
+			[15] =  1,
+			};
+		[1] = { itemID = 34232, lootGroup = 1 }; --Fel Conquerer Raiments
+		[2] = { itemID = 34233, lootGroup = 1 }; --Robes of Faltered Light
+		[3] = { itemID = 34212, lootGroup = 1 }; --Sunglow Vest
+		[4] = { itemID = 34211, lootGroup = 2 }; --Harness of Carnal Instinct
+		[5] = { itemID = 34234, lootGroup = 2 }; --Shadowed Gauntlets of Paroxysm
+		[6] = { itemID = 34229, lootGroup = 1 }; --Garments of Serene Shores
+		[7] = { itemID = 34228, lootGroup = 2 }; --Vicious Hawkstrider Hauberk
+		[8] = { itemID = 34215, lootGroup = 2 }; --Warharness of Reckless Fury
+		[9] = { itemID = 34240, lootGroup = 1 }; --Gauntlets of the Soothed Soul
+		[10] = { itemID = 34216, lootGroup = 2 }; --Heroic Judicator's Chestguard
+		[11] = { itemID = 34213, lootGroup = 2 }; --Ring of Hardened Resolve
+		[12] = { itemID = 34230, lootGroup = 1 }; --Ring of Omnipotence
+		[13] = { itemID = 34427, lootGroup = 2 }; --Blackened Naaru Sliver
+		[14] = { itemID = 34430, lootGroup = 1 }; --Glimmering Naaru Sliver
+		[15] = { itemID = 34429, lootGroup = 1 }; --Shifting Naaru Sliver
+		[16] = { itemID = 34428, lootGroup = 2 }; --Steely Naaru Sliver
+		[17] = { itemID = 34214, lootGroup = 2 }; --Muramasa
+		[18] = { itemID = 34231, lootGroup = 1 }; --Aegis of Angelic Fortune
+		[20] = { itemID = 34664 }; --Sunmote
+		[21] = { itemID = 29434 }; --Badge of Justice
+		[22] = { itemID = 400751, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal }; --Raider's Commendations
+		[23] = { itemID = 98570 }; --Mystic Orb
+		[25] = { itemID = 64004, lootGroup = 15 }; --Sigil
 	};
 	{
 		Name = BabbleBoss["Kil'jaeden"];
-		[1] = { itemID = 34241 }; --Cloak of Unforgivable Sin
-		[2] = { itemID = 34242 }; --Tattered Cape of Antonidas
-		[3] = { itemID = 34339 }; --Cowl of Light's Purity
-		[4] = { itemID = 34405 }; --Helm of Arcane Purity
-		[5] = { itemID = 34340 }; --Dark Conjuror's Collar
-		[6] = { itemID = 34342 }; --Handguards of the Dawn
-		[7] = { itemID = 34406 }; --Gloves of Tyri's Power
-		[8] = { itemID = 34344 }; --Handguards of the Defiled Worlds
-		[9] = { itemID = 34244 }; --Duplicitous Guise
-		[10] = { itemID = 34404 }; --Mask of the Furry Hunter
-		[11] = { itemID = 34245 }; --Cover of Ursol the Wise
-		[12] = { itemID = 34403 }; --Cover of Ursoc the Mighty
-		[13] = { itemID = 34333 }; --Coif of Alleria
-		[14] = { itemID = 34332 }; --Cowl of Gul'dan
-		[15] = { itemID = 34402 }; --Shroud of Chieftain Ner'zhul
-		[16] = { itemID = 34343 }; --Thalassian Ranger Gauntlets
-		[17] = { itemID = 34243 }; --Helm of Burning Righteousness
-		[18] = { itemID = 34401 }; --Helm of Uther's Resolve
-		[19] = { itemID = 34345 }; --Crown of Anasterian
-		[20] = { itemID = 34400 }; --Crown of Dath'Remar
-		[21] = { itemID = 34341 }; --Borderland Paingrips
-		[23] = { itemID = 34334 }; --Thori'dal, the Stars' Fury
-		[25] = { itemID = 34329 }; --Crux of the Apocalypse
-		[26] = { itemID = 34247 }; --Apolyon, the Soul-Render
-		[27] = { itemID = 34335 }; --Hammer of Sanctification
-		[28] = { itemID = 34331 }; --Hand of the Deceiver
-		[29] = { itemID = 34336 }; --Sunflare
-		[30] = { itemID = 34337 }; --Golden Staff of the Sin'dorei
+		NpcID = 25315;
+		LootGroups = {
+			[1] =  3,
+			[2] =  100,
+			[3] =  100,
+			[4] =  100,
+			[10] =  100,
+			[15] =  1,
+			[16] =  1,
+			};
+		[1] = { itemID = 34241, lootGroup = 4 }; --Cloak of Unforgivable Sin
+		[2] = { itemID = 34242, lootGroup = 3 }; --Tattered Cape of Antonidas
+		[3] = { itemID = 34339, lootGroup = 3 }; --Cowl of Light's Purity
+		[4] = { itemID = 34340, lootGroup = 3 }; --Dark Conjuror's Collar
+		[5] = { itemID = 34342, lootGroup = 3 }; --Handguards of the Dawn
+		[6] = { itemID = 34344, lootGroup = 3 }; --Handguards of the Defiled Worlds
+		[7] = { itemID = 34244, lootGroup = 4 }; --Duplicitous Guise
+		[8] = { itemID = 34245, lootGroup = 3 }; --Cover of Ursol the Wise
+		[9] = { itemID = 34333, lootGroup = 4 }; --Coif of Alleria
+		[10] = { itemID = 34332, lootGroup = 3 }; --Cowl of Gul'dan
+		[11] = { itemID = 34402, lootGroup = 3 }; --Shroud of Chieftain Ner'zhul
+		[12] = { itemID = 34343, lootGroup = 4 }; --Thalassian Ranger Gauntlets
+		[13] = { itemID = 34243, lootGroup = 3 }; --Helm of Burning Righteousness
+		[14] = { itemID = 34345, lootGroup = 4 }; --Crown of Anasterian
+		[15] = { itemID = 34341, lootGroup = 4 }; --Borderland Paingrips
+		[16] = { itemID = 34329, lootGroup = 2 }; --Crux of the Apocalypse
+		[17] = { itemID = 34247, lootGroup = 2 }; --Apolyon, the Soul-Render
+		[18] = { itemID = 34335, lootGroup = 2 }; --Hammer of Sanctification
+		[19] = { itemID = 34331, lootGroup = 2 }; --Hand of the Deceiver
+		[20] = { itemID = 34336, lootGroup = 2 }; --Sunflare
+		[21] = { itemID = 34337, lootGroup = 2 }; --Golden Staff of the Sin'dorei
+		[23] = { itemID = 34664 }; --Sunmote
+		[24] = { itemID = 29434 }; --Badge of Justice
+		[25] = { itemID = 400751, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal }; --Raider's Commendations
+		[26] = { itemID = 98570 }; --Mystic Orb
+		[28] = { itemID = 450010, lootGroup = 1 ,desc = AL["Quest Requirements"], contentsPreview = {{450009},{450010},{34334}} }; --Thori'dal, the Stars' Fury
+		[29] = { itemID = 63988, lootGroup = 15 }; --Sigil
+		[30] = { itemID = 252676, lootGroup = 16 }; --Essence of the Blue Flight
 	};
 	{
 		Name = AL["Trash Mobs"];
@@ -2378,19 +2452,24 @@ AtlasLoot_Data["SunwellPlateau"] = {
 		[10] = { itemID = 34347 }; --Wand of the Demonsoul
 		[12] = { itemID = 35273 }; --Study of Advanced Smelting
 		[14] = { itemID = 34664 }; --Sunmote
-		[16] = { itemID = 32228 }; --Empyrean Sapphire
-		[17] = { itemID = 32231 }; --Pyrestone
-		[18] = { itemID = 32229 }; --Lionseye
-		[19] = { itemID = 32249 }; --Seaspray Emerald
-		[20] = { itemID = 32230 }; --Shadowsong Amethyst
-		[21] = { itemID = 32227 }; --Crimson Spinel
-		[23] = { itemID = 35208 }; --Plans: Sunblessed Gauntlets
-		[24] = { itemID = 35210 }; --Plans: Sunblessed Breastplate
-		[25] = { itemID = 35209 }; --Plans: Hard Khorium Battlefists
-		[26] = { itemID = 35211 }; --Plans: Hard Khorium Battleplate
 	};
 	{
-		Name = "SP Patterns/Plans";
+		Name = AL["Jewelcrafting"];
+		[1] = { itemID = 32228 }; --Empyrean Sapphire
+		[2] = { itemID = 32231 }; --Pyrestone
+		[3] = { itemID = 32229 }; --Lionseye
+		[4] = { itemID = 32249 }; --Seaspray Emerald
+		[5] = { itemID = 32230 }; --Shadowsong Amethyst
+		[6] = { itemID = 32227 }; --Crimson Spinel
+		[16] = { itemID = 35198 }; --Design: Loop of Forged Power
+		[17] = { itemID = 35201 }; --Design: Pendant of Sunfire
+		[18] = { itemID = 35199 }; --Design: Ring of Flowing Life
+		[19] = { itemID = 35202 }; --Design: Amulet of Flowing Life
+		[20] = { itemID = 35200 }; --Design: Hard Khorium Band
+		[21] = { itemID = 35203 }; --Design: Hard Khorium Choker
+	};
+	{
+		Name = "Patterns/Plans";
 		[1] = { itemID = 35212 }; --Pattern: Leather Gauntlets of the Sun
 		[2] = { itemID = 35216 }; --Pattern: Leather Chestguard of the Sun
 		[3] = { itemID = 35213 }; --Pattern: Fletcher's Gloves of the Phoenix
@@ -2403,23 +2482,21 @@ AtlasLoot_Data["SunwellPlateau"] = {
 		[10] = { itemID = 35206 }; --Pattern: Sunfire Robe
 		[11] = { itemID = 35205 }; --Pattern: Hands of Eternal Light
 		[12] = { itemID = 35207 }; --Pattern: Robe of Eternal Light
-		[13] = { itemID = 35198 }; --Design: Loop of Forged Power
-		[14] = { itemID = 35201 }; --Design: Pendant of Sunfire
-		[15] = { itemID = 35199 }; --Design: Ring of Flowing Life
-		[16] = { itemID = 35202 }; --Design: Amulet of Flowing Life
-		[17] = { itemID = 35200 }; --Design: Hard Khorium Band
-		[18] = { itemID = 35203 }; --Design: Hard Khorium Choker
-		[19] = { itemID = 35186 }; --Schematic: Annihilator Holo-Gogs
-		[20] = { itemID = 35187 }; --Schematic: Justicebringer 3000 Specs
-		[21] = { itemID = 35189 }; --Schematic: Powerheal 9000 Lens
-		[22] = { itemID = 35190 }; --Schematic: Hyper-Magnified Moon Specs
-		[23] = { itemID = 35191 }; --Schematic: Wonderheal XT68 Shades
-		[24] = { itemID = 35192 }; --Schematic: Primal-Attuned Goggles
-		[25] = { itemID = 35193 }; --Schematic: Lightning Etched Specs
-		[26] = { itemID = 35194 }; --Schematic: Surestrike Goggles v3.0
-		[27] = { itemID = 35195 }; --Schematic: Mayhem Projection Goggles
-		[28] = { itemID = 35196 }; --Schematic: Hard Khorium Goggles
-		[29] = { itemID = 35197 }; --Schematic: Quad Deathblow X44 Goggles
+		[13] = { itemID = 35208 }; --Plans: Sunblessed Gauntlets
+		[14] = { itemID = 35210 }; --Plans: Sunblessed Breastplate
+		[15] = { itemID = 35209 }; --Plans: Hard Khorium Battlefists
+		[16] = { itemID = 35211 }; --Plans: Hard Khorium Battleplate
+		[17] = { itemID = 35186 }; --Schematic: Annihilator Holo-Gogs
+		[18] = { itemID = 35187 }; --Schematic: Justicebringer 3000 Specs
+		[19] = { itemID = 35189 }; --Schematic: Powerheal 9000 Lens
+		[20] = { itemID = 35190 }; --Schematic: Hyper-Magnified Moon Specs
+		[21] = { itemID = 35191 }; --Schematic: Wonderheal XT68 Shades
+		[22] = { itemID = 35192 }; --Schematic: Primal-Attuned Goggles
+		[23] = { itemID = 35193 }; --Schematic: Lightning Etched Specs
+		[24] = { itemID = 35194 }; --Schematic: Surestrike Goggles v3.0
+		[25] = { itemID = 35195 }; --Schematic: Mayhem Projection Goggles
+		[26] = { itemID = 35196 }; --Schematic: Hard Khorium Goggles
+		[27] = { itemID = 35197 }; --Schematic: Quad Deathblow X44 Goggles
 	};
 };
 
@@ -6320,18 +6397,49 @@ AtlasLoot_Data["SunmoteSunwell"] = {
 	Name = AL["Yrma - Sunmote Vendor"];
 	Type = "BCRaid";
 	{
-		Name = AL["Sunmote Vendor"];
-		[1] = { itemID = 10736 };
-		[2] = { itemID = 10735 };
-		[3] = { itemID = 11433 };
-		[4] = { itemID = 11483 };
-		[5] = { itemID = 11484 };
-		[6] = { itemID = 11485 };
-		[7] = { itemID = 11517 };
-		[8] = { itemID = 11518 };
-		[9] = { itemID = 11519 };
-		[10] = { itemID = 11520 };
+		Name = AL["Page 1"];
+		[1] = { itemID = 10735, contentsPreview = {{34345},{34664}} }; -- Cover of Anasterian
+		[2] = { itemID = 10736, contentsPreview = {{34332},{34664}} }; -- War-Helm of Gul\'dan
+		[3] = { itemID = 11433, contentsPreview = {{34208},{34664}} }; -- Equilibrium Mantle
+		[4] = { itemID = 11483, contentsPreview = {{34193},{34664}} }; -- Shoulderguards of the Thalassian Savior
+		[5] = { itemID = 11484, contentsPreview = {{34215},{34664}} }; -- Casing of Reckless Fury
+		[6] = { itemID = 11485, contentsPreview = {{34229},{34664}} }; -- Breastplate of Serene Shores
+		[7] = { itemID = 11517, contentsPreview = {{34180},{34664}} }; -- Felfury Legguards
+		[8] = { itemID = 11518, contentsPreview = {{34186},{34664}} }; -- Pants of the Tumulutuos Storm
+		[9] = { itemID = 11519, contentsPreview = {{34350},{34664}} }; -- Gloves of the Ancient Shadowmoon
+		[10] = { itemID = 11520, contentsPreview = {{34341},{34664}} }; -- Borderland Gauntlets 5076
+		[11] = { itemID = 34381, contentsPreview = {{34180},{34664}} }; -- Felstrength Legplates
+		[12] = { itemID = 34382, contentsPreview = {{34167},{34664}} }; -- Judicator\'s Legguards
+		[13] = { itemID = 34383, contentsPreview = {{34186},{34664}} }; -- Kilt of Spiritual Reconstruction
+		[14] = { itemID = 34384, contentsPreview = {{34169},{34664}} }; -- Breeches of Natural Splendor
+		[15] = { itemID = 34385, contentsPreview = {{34188},{34664}} }; -- Leggings of the Immortal Beast
+		[16] = { itemID = 34386, contentsPreview = {{34170},{34664}} }; -- Pantaloons of Growing Strife
+		[17] = { itemID = 34388, contentsPreview = {{34192},{34664}} }; -- Pauldrons of Berserking
+		[18] = { itemID = 34389, contentsPreview = {{34193},{34664}} }; -- Spaulders of the Thalassian Defender
+		[19] = { itemID = 34390, contentsPreview = {{34208},{34664}} }; -- Erupting Epaulets
+		[20] = { itemID = 34391, contentsPreview = {{34209},{34664}} }; -- Spaulders of Devastation
+		[21] = { itemID = 34392, contentsPreview = {{34195},{34664}} }; -- Demontooth Shoulderpads
+		[22] = { itemID = 34393, contentsPreview = {{34202},{34664}} }; -- Shoulderpads of Knowledge\'s Pursuit
+		[23] = { itemID = 34394, contentsPreview = {{34215},{34664}} }; -- Breastplate of Agony\'s Aversion
+		[24] = { itemID = 34395, contentsPreview = {{34216},{34664}} }; -- Noble Judicator\'s Chestguard
+		[25] = { itemID = 34396, contentsPreview = {{34229},{34664}} }; -- Garments of Crashing Shores
+		[26] = { itemID = 34397, contentsPreview = {{34211},{34664}} }; -- Bladed Chaos Tunic
+		[27] = { itemID = 34398, contentsPreview = {{34212},{34664}} }; -- Utopian Tunic of Elune
+		[28] = { itemID = 34399, contentsPreview = {{34233},{34664}} }; -- Robes of Ghostly Hatred
+		[29] = { itemID = 34400, contentsPreview = {{34345},{34664}} }; -- Crown of Dath\'Remar
+		[30] = { itemID = 34401, contentsPreview = {{34243},{34664}} }; -- Helm of Uther\'s Resolve
 	};
+	{
+		Name = AL["Page 2"];
+		[1] = { itemID = 34402, contentsPreview = {{34332},{34664}} }; -- Shroud of Chieftain Ner\'zhul
+		[2] = { itemID = 34403, contentsPreview = {{34245},{34664}} }; -- Cover of Ursoc the Mighty
+		[3] = { itemID = 34404, contentsPreview = {{34244},{34664}} }; -- Mask of the Fury Hunter
+		[4] = { itemID = 34405, contentsPreview = {{34339},{34664}} }; -- Helm of Arcane Purity
+		[5] = { itemID = 34406, contentsPreview = {{34342},{34664}} }; -- Gloves of Tyri\'s Power
+		[6] = { itemID = 34407, contentsPreview = {{34351},{34664}} }; -- Tranquil Moonlight Wraps
+		[7] = { itemID = 34408, contentsPreview = {{34234},{34664}} }; -- Gloves of the Forest Drifter
+		[8] = { itemID = 34409, contentsPreview = {{34350},{34664}} }; -- Gauntlets of the Ancient Frostwolf
+	}
 };
 
 
