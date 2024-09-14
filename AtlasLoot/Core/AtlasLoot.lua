@@ -810,7 +810,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 		itemButton.dataSource = dataSource_backup
 		itemButton.contentsPreview = dataSource[dataID][tablenum][i].contentsPreview
 		itemButton.price = dataSource[dataID][tablenum][i].price or nil
-		itemButton.droprate = dataSource[dataID][tablenum][i].droprate or nil
+		itemButton.droprate = dataSource[dataID][tablenum][i].droprate or self:GetDropRate(dataSource[dataID][tablenum], dataSource[dataID][tablenum][i].lootGroup)
 		itemButton.extraInfo = dataSource[dataID][tablenum][i].extraInfo or nil
 		itemButton.quest = dataSource[dataID][tablenum][i].quest or nil
 		itemButton.item = dataSource[dataID][tablenum][i]

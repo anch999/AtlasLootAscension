@@ -800,3 +800,14 @@ function AtlasLoot:SearchAuctionHouse(text)
 	end
 
 end
+
+function AtlasLoot:GetDropRate(lootTable, lootGroup)
+	if not lootGroup then return end
+	local count = 0
+	for _, item in pairs(lootTable) do
+		if type(item) == "table" and item.lootGroup and item.lootGroup == lootGroup then
+			count = count + 1
+		end
+	end
+	return string.format("%.2f%%",lootTable.LootGroups[lootGroup]/count) or nil
+end
