@@ -2239,10 +2239,10 @@ AtlasLoot_Data["SunwellPlateau"] = {
 			[10] =  100,
 			[15] =  1,
 		};
-		[1] = { itemID = 34170, lootGroup = 2 }; --Pantaloons of Calming Strife
-		[2] = { itemID = 34169, lootGroup = 2 }; --Breeches of Natural Aggression
+		[1] = { itemID = 34170, lootGroup = 2, contentsPreview = {{34386}} }; --Pantaloons of Calming Strife
+		[2] = { itemID = 34169, lootGroup = 2, contentsPreview = {{34384}} }; --Breeches of Natural Aggression
 		[3] = { itemID = 34168, lootGroup = 2 }; --Starstalker Legguards
-		[4] = { itemID = 34167, lootGroup = 2 }; --Legplates of the Holy Juggernaut
+		[4] = { itemID = 34167, lootGroup = 2, contentsPreview = {{34382}} }; --Legplates of the Holy Juggernaut
 		[5] = { itemID = 34166, lootGroup = 2 }; --Band of Lucent Beams
 		[6] = { itemID = 34165, lootGroup = 2 }; --Fang of Kalecgos
 		[7] = { itemID = 34164, lootGroup = 2 }; --Dragonscale-Encrusted Longblade
@@ -2251,7 +2251,7 @@ AtlasLoot_Data["SunwellPlateau"] = {
 		[19] = { itemID = 29434 }; --Badge of Justice
 		[20] = { itemID = 400751, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal }; --Raider's Commendations
 		[21] = { itemID = 98570 }; --Mystic Orb
-		[24] = { itemID = 63978, lootGroup = 15 }; --Sigil
+		[23] = { itemID = 63978, lootGroup = 15 }; --Sigil
 	};
 	{
 		Name = BabbleBoss["Brutallus"];
@@ -2265,7 +2265,7 @@ AtlasLoot_Data["SunwellPlateau"] = {
 		};
 
 		[1] = { itemID = 34181, lootGroup = 2 }; --Leggings of Calamity
-		[2] = { itemID = 34180, lootGroup = 2 }; --Felfury Legplates
+		[2] = { itemID = 34180, lootGroup = 2, contentsPreview = {{34381},{11517}} }; --Felfury Legplates
 		[3] = { itemID = 34381, lootGroup = 2 }; --Felstrength Legplates
 		[4] = { itemID = 34178, lootGroup = 2 }; --Collar of the Pit Lord
 		[5] = { itemID = 34177, lootGroup = 2 }; --Clutch of Demise
@@ -2290,9 +2290,9 @@ AtlasLoot_Data["SunwellPlateau"] = {
 			[15] =  1,
 		};
 		[1] = { itemID = 34352, lootGroup = 2 }; --Borderland Fortress Grips
-		[2] = { itemID = 34188, lootGroup = 2 }; --Leggings of the Immortal Night
+		[2] = { itemID = 34188, lootGroup = 2, contentsPreview = {{34385}} }; --Leggings of the Immortal Night
 		[3] = { itemID = 34385, lootGroup = 2 }; --Leggings of the Immortal Beast
-		[4] = { itemID = 34186, lootGroup = 2 }; --Chain Links of the Tumultuous Storm
+		[4] = { itemID = 34186, lootGroup = 2, contentsPreview = {{34383},{11518}} }; --Chain Links of the Tumultuous Storm
 		[5] = { itemID = 34383, lootGroup = 2 }; --Kilt of Spiritual Reconstruction
 		[6] = { itemID = 34184, lootGroup = 2 }; --Brooch of the Highborne
 		[7] = { itemID = 34185, lootGroup = 2 }; --Sword Breaker's Bulwark
@@ -2317,13 +2317,13 @@ AtlasLoot_Data["SunwellPlateau"] = {
 		[1] = { itemID = 34205, lootGroup = 1 }; --Shroud of Redeemed Souls
 		[2] = { itemID = 34190, lootGroup = 2 }; --Crimson Paragon's Cover
 		[3] = { itemID = 34210, lootGroup = 1 }; --Amice of the Convoker
-		[4] = { itemID = 34202, lootGroup = 1 }; --Shawl of Wonderment
-		[5] = { itemID = 34209, lootGroup = 1 }; --Spaulders of Reclamation
-		[6] = { itemID = 34195, lootGroup = 2 }; --Shoulderpads of Vehemence
+		[4] = { itemID = 34202, lootGroup = 1, contentsPreview = {{34393}} }; --Shawl of Wonderment
+		[5] = { itemID = 34209, lootGroup = 1, contentsPreview = {{34391}} }; --Spaulders of Reclamation
+		[6] = { itemID = 34195, lootGroup = 2, contentsPreview = {{34392}} }; --Shoulderpads of Vehemence
 		[7] = { itemID = 34194, lootGroup = 2 }; --Mantle of the Golden Forest
-		[8] = { itemID = 34208, lootGroup = 1 }; --Equilibrium Epaulets
-		[9] = { itemID = 34192, lootGroup = 2 }; --Pauldrons of Perseverance
-		[10] = { itemID = 34193, lootGroup = 1 }; --Spaulders of the Thalassian Savior
+		[8] = { itemID = 34208, lootGroup = 1, contentsPreview = {{34390},{11433}} }; --Equilibrium Epaulets
+		[9] = { itemID = 34192, lootGroup = 2, contentsPreview = {{34388}} }; --Pauldrons of Perseverance
+		[10] = { itemID = 34193, lootGroup = 1, contentsPreview = {{34389},{11483}} }; --Spaulders of the Thalassian Savior
 		[11] = { itemID = 34204, lootGroup = 1 }; --Amulet of Unfettered Magics
 		[12] = { itemID = 34189, lootGroup = 2 }; --Band of Ruinous Delight
 		[13] = { itemID = 34206, lootGroup = 1 }; --Book of Highborne Hymns
@@ -2374,15 +2374,15 @@ AtlasLoot_Data["SunwellPlateau"] = {
 			[15] =  1,
 			};
 		[1] = { itemID = 34232, lootGroup = 1 }; --Fel Conquerer Raiments
-		[2] = { itemID = 34233, lootGroup = 1 }; --Robes of Faltered Light
-		[3] = { itemID = 34212, lootGroup = 1 }; --Sunglow Vest
-		[4] = { itemID = 34211, lootGroup = 2 }; --Harness of Carnal Instinct
-		[5] = { itemID = 34234, lootGroup = 2 }; --Shadowed Gauntlets of Paroxysm
-		[6] = { itemID = 34229, lootGroup = 1 }; --Garments of Serene Shores
+		[2] = { itemID = 34233, lootGroup = 1, contentsPreview = {{34399}} }; --Robes of Faltered Light
+		[3] = { itemID = 34212, lootGroup = 1, contentsPreview = {{34398}} }; --Sunglow Vest
+		[4] = { itemID = 34211, lootGroup = 2, contentsPreview = {{34397}} }; --Harness of Carnal Instinct
+		[5] = { itemID = 34234, lootGroup = 2, contentsPreview = {{34408}} }; --Shadowed Gauntlets of Paroxysm
+		[6] = { itemID = 34229, lootGroup = 1, contentsPreview = {{34396},{11485}} }; --Garments of Serene Shores
 		[7] = { itemID = 34228, lootGroup = 2 }; --Vicious Hawkstrider Hauberk
-		[8] = { itemID = 34215, lootGroup = 2 }; --Warharness of Reckless Fury
+		[8] = { itemID = 34215, lootGroup = 2, contentsPreview = {{34394},{11484}} }; --Warharness of Reckless Fury
 		[9] = { itemID = 34240, lootGroup = 1 }; --Gauntlets of the Soothed Soul
-		[10] = { itemID = 34216, lootGroup = 2 }; --Heroic Judicator's Chestguard
+		[10] = { itemID = 34216, lootGroup = 2, contentsPreview = {{34395}} }; --Heroic Judicator's Chestguard
 		[11] = { itemID = 34213, lootGroup = 2 }; --Ring of Hardened Resolve
 		[12] = { itemID = 34230, lootGroup = 1 }; --Ring of Omnipotence
 		[13] = { itemID = 34427, lootGroup = 2 }; --Blackened Naaru Sliver
@@ -2411,19 +2411,19 @@ AtlasLoot_Data["SunwellPlateau"] = {
 			};
 		[1] = { itemID = 34241, lootGroup = 4 }; --Cloak of Unforgivable Sin
 		[2] = { itemID = 34242, lootGroup = 3 }; --Tattered Cape of Antonidas
-		[3] = { itemID = 34339, lootGroup = 3 }; --Cowl of Light's Purity
+		[3] = { itemID = 34339, lootGroup = 3, contentsPreview = {{34405}} }; --Cowl of Light's Purity
 		[4] = { itemID = 34340, lootGroup = 3 }; --Dark Conjuror's Collar
-		[5] = { itemID = 34342, lootGroup = 3 }; --Handguards of the Dawn
+		[5] = { itemID = 34342, lootGroup = 3, contentsPreview = {{34406}} }; --Handguards of the Dawn
 		[6] = { itemID = 34344, lootGroup = 3 }; --Handguards of the Defiled Worlds
-		[7] = { itemID = 34244, lootGroup = 4 }; --Duplicitous Guise
-		[8] = { itemID = 34245, lootGroup = 3 }; --Cover of Ursol the Wise
+		[7] = { itemID = 34244, lootGroup = 4, contentsPreview = {{34404}} }; --Duplicitous Guise
+		[8] = { itemID = 34245, lootGroup = 3, contentsPreview = {{34403}} }; --Cover of Ursol the Wise
 		[9] = { itemID = 34333, lootGroup = 4 }; --Coif of Alleria
-		[10] = { itemID = 34332, lootGroup = 3 }; --Cowl of Gul'dan
+		[10] = { itemID = 34332, lootGroup = 3, contentsPreview = {{34402},{10736}} }; --Cowl of Gul'dan
 		[11] = { itemID = 34402, lootGroup = 3 }; --Shroud of Chieftain Ner'zhul
 		[12] = { itemID = 34343, lootGroup = 4 }; --Thalassian Ranger Gauntlets
-		[13] = { itemID = 34243, lootGroup = 3 }; --Helm of Burning Righteousness
-		[14] = { itemID = 34345, lootGroup = 4 }; --Crown of Anasterian
-		[15] = { itemID = 34341, lootGroup = 4 }; --Borderland Paingrips
+		[13] = { itemID = 34243, lootGroup = 3, contentsPreview = {{34401}} }; --Helm of Burning Righteousness
+		[14] = { itemID = 34345, lootGroup = 4, contentsPreview = {{10735},{34400}} }; --Crown of Anasterian
+		[15] = { itemID = 34341, lootGroup = 4, contentsPreview = {{11520}} }; --Borderland Paingrips
 		[16] = { itemID = 34329, lootGroup = 2 }; --Crux of the Apocalypse
 		[17] = { itemID = 34247, lootGroup = 2 }; --Apolyon, the Soul-Render
 		[18] = { itemID = 34335, lootGroup = 2 }; --Hammer of Sanctification
@@ -2440,9 +2440,9 @@ AtlasLoot_Data["SunwellPlateau"] = {
 	};
 	{
 		Name = AL["Trash Mobs"];
-		[1] = { itemID = 34351 }; --Tranquil Majesty Wraps
+		[1] = { itemID = 34351, contentsPreview = {{34407}} }; --Tranquil Majesty Wraps
 		[2] = { itemID = 34407 }; --Tranquil Moonlight Wraps
-		[3] = { itemID = 34350 }; --Gauntlets of the Ancient Shadowmoon
+		[3] = { itemID = 34350, contentsPreview = {{34409},{11519}} }; --Gauntlets of the Ancient Shadowmoon
 		[4] = { itemID = 34409 }; --Gauntlets of the Ancient Frostwolf
 		[5] = { itemID = 35733 }; --Ring of Harmonic Beauty
 		[6] = { itemID = 34183 }; --Shivering Felspine
