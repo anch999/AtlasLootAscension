@@ -2440,63 +2440,71 @@ AtlasLoot_Data["SunwellPlateau"] = {
 	};
 	{
 		Name = AL["Trash Mobs"];
-		[1] = { itemID = 34351, contentsPreview = {{34407}} }; --Tranquil Majesty Wraps
-		[2] = { itemID = 34407 }; --Tranquil Moonlight Wraps
-		[3] = { itemID = 34350, contentsPreview = {{34409},{11519}} }; --Gauntlets of the Ancient Shadowmoon
-		[4] = { itemID = 34409 }; --Gauntlets of the Ancient Frostwolf
-		[5] = { itemID = 35733 }; --Ring of Harmonic Beauty
-		[6] = { itemID = 34183 }; --Shivering Felspine
-		[7] = { itemID = 34346 }; --Mounting Vengeance
-		[8] = { itemID = 34349 }; --Blade of Life's Inevitability
-		[9] = { itemID = 34348 }; --Wand of Cleansing Light
-		[10] = { itemID = 34347 }; --Wand of the Demonsoul
-		[12] = { itemID = 35273 }; --Study of Advanced Smelting
-		[14] = { itemID = 34664 }; --Sunmote
+		LootGroups = {
+			[1] =  2,
+			[2] =  2,
+			[3] =  1
+			};
+		[1] = { itemID = 34351, lootGroup = 1, contentsPreview = {{34407}} }; --Tranquil Majesty Wraps
+		[2] = { itemID = 34350, lootGroup = 1, contentsPreview = {{34409},{11519}} }; --Gauntlets of the Ancient Shadowmoon
+		[3] = { itemID = 35733, lootGroup = 1 }; --Ring of Harmonic Beauty
+		[4] = { itemID = 34183, lootGroup = 1 }; --Shivering Felspine
+		[5] = { itemID = 34346, lootGroup = 1 }; --Mounting Vengeance
+		[6] = { itemID = 34349, lootGroup = 1 }; --Blade of Life's Inevitability
+		[7] = { itemID = 34348, lootGroup = 1 }; --Wand of Cleansing Light
+		[8] = { itemID = 34347, lootGroup = 1 }; --Wand of the Demonsoul
+		[16] = { itemID = 35273 }; --Study of Advanced Smelting
+		[17] = { itemID = 34664 }; --Sunmote
 	};
 	{
+		LootGroups = {
+			[1] =  2,
+			[2] =  2,
+			[3] =  1
+			};
 		Name = AL["Jewelcrafting"];
-		[1] = { itemID = 32228 }; --Empyrean Sapphire
-		[2] = { itemID = 32231 }; --Pyrestone
-		[3] = { itemID = 32229 }; --Lionseye
-		[4] = { itemID = 32249 }; --Seaspray Emerald
-		[5] = { itemID = 32230 }; --Shadowsong Amethyst
-		[6] = { itemID = 32227 }; --Crimson Spinel
-		[16] = { itemID = 35198 }; --Design: Loop of Forged Power
-		[17] = { itemID = 35201 }; --Design: Pendant of Sunfire
-		[18] = { itemID = 35199 }; --Design: Ring of Flowing Life
-		[19] = { itemID = 35202 }; --Design: Amulet of Flowing Life
-		[20] = { itemID = 35200 }; --Design: Hard Khorium Band
-		[21] = { itemID = 35203 }; --Design: Hard Khorium Choker
+		[1] = { itemID = 32228, lootGroup = 3 }; --Empyrean Sapphire
+		[2] = { itemID = 32231, lootGroup = 3 }; --Pyrestone
+		[3] = { itemID = 32229, lootGroup = 3 }; --Lionseye
+		[4] = { itemID = 32249, lootGroup = 3 }; --Seaspray Emerald
+		[5] = { itemID = 32230, lootGroup = 3 }; --Shadowsong Amethyst
+		[6] = { itemID = 32227, lootGroup = 3 }; --Crimson Spinel
+		[16] = { itemID = 35198, droprate = "0.06%" }; --Design: Loop of Forged Power
+		[17] = { itemID = 35201, droprate = "0.06%" }; --Design: Pendant of Sunfire
+		[18] = { itemID = 35199, droprate = "0.06%" }; --Design: Ring of Flowing Life
+		[19] = { itemID = 35202, droprate = "0.06%" }; --Design: Amulet of Flowing Life
+		[20] = { itemID = 35200, droprate = "0.06%" }; --Design: Hard Khorium Band
+		[21] = { itemID = 35203, droprate = "0.06%" }; --Design: Hard Khorium Choker
 	};
 	{
 		Name = "Patterns/Plans";
-		[1] = { itemID = 35212 }; --Pattern: Leather Gauntlets of the Sun
-		[2] = { itemID = 35216 }; --Pattern: Leather Chestguard of the Sun
-		[3] = { itemID = 35213 }; --Pattern: Fletcher's Gloves of the Phoenix
-		[4] = { itemID = 35217 }; --Pattern: Pattern: Embrace of the Phoenix
-		[5] = { itemID = 35214 }; --Pattern: Gloves of Immortal Dusk
-		[6] = { itemID = 35218 }; --Pattern: Carapace of Sun and Shadow
-		[7] = { itemID = 35215 }; --Pattern: Sun-Drenched Scale Gloves
-		[8] = { itemID = 35219 }; --Pattern: Sun-Drenched Scale Chestguard
-		[9] = { itemID = 35204 }; --Pattern: Sunfire Handwraps
-		[10] = { itemID = 35206 }; --Pattern: Sunfire Robe
-		[11] = { itemID = 35205 }; --Pattern: Hands of Eternal Light
-		[12] = { itemID = 35207 }; --Pattern: Robe of Eternal Light
-		[13] = { itemID = 35208 }; --Plans: Sunblessed Gauntlets
-		[14] = { itemID = 35210 }; --Plans: Sunblessed Breastplate
-		[15] = { itemID = 35209 }; --Plans: Hard Khorium Battlefists
-		[16] = { itemID = 35211 }; --Plans: Hard Khorium Battleplate
-		[17] = { itemID = 35186 }; --Schematic: Annihilator Holo-Gogs
-		[18] = { itemID = 35187 }; --Schematic: Justicebringer 3000 Specs
-		[19] = { itemID = 35189 }; --Schematic: Powerheal 9000 Lens
-		[20] = { itemID = 35190 }; --Schematic: Hyper-Magnified Moon Specs
-		[21] = { itemID = 35191 }; --Schematic: Wonderheal XT68 Shades
-		[22] = { itemID = 35192 }; --Schematic: Primal-Attuned Goggles
-		[23] = { itemID = 35193 }; --Schematic: Lightning Etched Specs
-		[24] = { itemID = 35194 }; --Schematic: Surestrike Goggles v3.0
-		[25] = { itemID = 35195 }; --Schematic: Mayhem Projection Goggles
-		[26] = { itemID = 35196 }; --Schematic: Hard Khorium Goggles
-		[27] = { itemID = 35197 }; --Schematic: Quad Deathblow X44 Goggles
+		[1] = { itemID = 35212, droprate = "0.06%" }; --Pattern: Leather Gauntlets of the Sun
+		[2] = { itemID = 35216, droprate = "0.06%" }; --Pattern: Leather Chestguard of the Sun
+		[3] = { itemID = 35213, droprate = "0.06%" }; --Pattern: Fletcher's Gloves of the Phoenix
+		[4] = { itemID = 35217, droprate = "0.06%" }; --Pattern: Pattern: Embrace of the Phoenix
+		[5] = { itemID = 35214, droprate = "0.06%" }; --Pattern: Gloves of Immortal Dusk
+		[6] = { itemID = 35218, droprate = "0.06%" }; --Pattern: Carapace of Sun and Shadow
+		[7] = { itemID = 35215, droprate = "0.06%" }; --Pattern: Sun-Drenched Scale Gloves
+		[8] = { itemID = 35219, droprate = "0.06%" }; --Pattern: Sun-Drenched Scale Chestguard
+		[9] = { itemID = 35204, droprate = "0.06%" }; --Pattern: Sunfire Handwraps
+		[10] = { itemID = 35206, droprate = "0.06%" }; --Pattern: Sunfire Robe
+		[11] = { itemID = 35205, droprate = "0.06%" }; --Pattern: Hands of Eternal Light
+		[12] = { itemID = 35207, droprate = "0.06%" }; --Pattern: Robe of Eternal Light
+		[13] = { itemID = 35208, droprate = "0.06%" }; --Plans: Sunblessed Gauntlets
+		[14] = { itemID = 35210, droprate = "0.06%" }; --Plans: Sunblessed Breastplate
+		[15] = { itemID = 35209, droprate = "0.06%" }; --Plans: Hard Khorium Battlefists
+		[16] = { itemID = 35211, droprate = "0.06%" }; --Plans: Hard Khorium Battleplate
+		[17] = { itemID = 35186, droprate = "0.06%" }; --Schematic: Annihilator Holo-Gogs
+		[18] = { itemID = 35187, droprate = "0.06%" }; --Schematic: Justicebringer 3000 Specs
+		[19] = { itemID = 35189, droprate = "0.06%" }; --Schematic: Powerheal 9000 Lens
+		[20] = { itemID = 35190, droprate = "0.06%" }; --Schematic: Hyper-Magnified Moon Specs
+		[21] = { itemID = 35191, droprate = "0.06%" }; --Schematic: Wonderheal XT68 Shades
+		[22] = { itemID = 35192, droprate = "0.06%" }; --Schematic: Primal-Attuned Goggles
+		[23] = { itemID = 35193, droprate = "0.06%" }; --Schematic: Lightning Etched Specs
+		[24] = { itemID = 35194, droprate = "0.06%" }; --Schematic: Surestrike Goggles v3.0
+		[25] = { itemID = 35195, droprate = "0.06%" }; --Schematic: Mayhem Projection Goggles
+		[26] = { itemID = 35196, droprate = "0.06%" }; --Schematic: Hard Khorium Goggles
+		[27] = { itemID = 35197, droprate = "0.06%" }; --Schematic: Quad Deathblow X44 Goggles
 	};
 };
 
