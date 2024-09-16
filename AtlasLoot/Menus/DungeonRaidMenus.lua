@@ -84,7 +84,6 @@ AtlasLoot_SubMenus["Dungeons and RaidsWRATH"] = {
     { "", "VaultofArchavon", "Vault of Archavon" },
     { "", "Ulduar", "Ulduar" },
     { "", "TrialoftheCrusader", "Trial of the Crusader" },
-    { "", "TrialoftheCrusader2", "Trial of the Crusader" },
     { "", "Onyxia80", "Onyxia" },
     { "", "IcecrownCitadel", "Icecrown Citadel" },
     { "", "Halion", "Halion" },
