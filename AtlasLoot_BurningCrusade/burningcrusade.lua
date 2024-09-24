@@ -2382,7 +2382,7 @@ AtlasLoot_Data["SunwellPlateau"] = {
 		[7] = { itemID = 34228, lootGroup = 2 }; --Vicious Hawkstrider Hauberk
 		[8] = { itemID = 34215, lootGroup = 2, contentsPreview = {{34394},{11484}} }; --Warharness of Reckless Fury
 		[9] = { itemID = 34240, lootGroup = 1 }; --Gauntlets of the Soothed Soul
-		[10] = { itemID = 34216, lootGroup = 2, contentsPreview = {{34395}} }; --Heroic Judicator's Chestguard
+		[10] = { itemID = 34216, lootGroup = 2, contentsPreview = {{34395}} }; --Valiant Judicator's Chestguard
 		[11] = { itemID = 34213, lootGroup = 2 }; --Ring of Hardened Resolve
 		[12] = { itemID = 34230, lootGroup = 1 }; --Ring of Omnipotence
 		[13] = { itemID = 34427, lootGroup = 2 }; --Blackened Naaru Sliver
