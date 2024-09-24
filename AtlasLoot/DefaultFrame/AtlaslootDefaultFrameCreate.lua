@@ -735,7 +735,7 @@ local rows2 = setmetatable({}, { __index = function(t, i)
     row.Text:SetPoint("LEFT",row)
     row.Text:SetJustifyH("LEFT")
     row:SetScript("OnClick", function(self, button)
-        local npcID = _G[row.dataSource][row.tablename][row.tablenum].NpcID
+        local npcID = _G[row.dataSource][row.tablename][row.tablenum] and _G[row.dataSource][row.tablename][row.tablenum].NpcID
         if button == "RightButton" and npcID then
             row:SetChecked(not row:GetChecked())
             AtlasLoot:OpenDB(self, "npc", npcID)
