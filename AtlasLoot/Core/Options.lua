@@ -250,6 +250,14 @@ local miniMap = CreateFrame("CheckButton", "AtlasLootOptionsMinimapIcon", AtlasL
         AtlasLootOptionsMinimapIconText:SetText(AL["Hide minimap icon"])
         miniMap:SetScript("OnClick", function() self:ToggleMinimap() end)
 
+local itemDropLocation = CreateFrame("CheckButton", "AtlasLootOptionsFrameItemDropLocation", AtlasLootOptionsFrame, "OptionsCheckButtonTemplate")
+        itemDropLocation:SetPoint("TOP",5,-130)
+        AtlasLootOptionsFrameItemDropLocationText:SetText(AL["Show drop locations in tooltips"])
+        itemDropLocation:SetScript("OnClick", function()
+            AtlasLoot.db.profile.showdropLocationTooltips = not self.db.profile.showdropLocationTooltips
+            AtlasLoot:CreateItemSourceList()
+            end)
+
 local equip = CreateFrame("CheckButton", "AtlasLootOptionsFrameEquipCompare", AtlasLootOptionsFrame, "OptionsCheckButtonTemplate")
         equip:SetPoint("TOP",5,-40)
         AtlasLootOptionsFrameEquipCompareText:SetText(AL["Show Comparison Tooltips"])

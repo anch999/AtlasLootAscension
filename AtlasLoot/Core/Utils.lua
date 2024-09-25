@@ -521,6 +521,7 @@ function AtlasLoot:IsLootTableAvailable(dataSource)
 		return true
 	elseif moduleName then
 		LoadAddOn(moduleName)
+		self:CreateItemSourceList()
 	end
 end
 
@@ -635,6 +636,7 @@ local function TooltipHandlerItem(tooltip)
 	local itemID = GetItemInfoFromHyperlink(link)
 	if not itemID then return end
     SetTooltip(itemID, tooltip)
+	AtlasLoot:ItemSourceTooltip(itemID, tooltip)
 end
 
 GameTooltip:HookScript("OnTooltipSetItem", TooltipHandlerItem)
@@ -810,4 +812,34 @@ function AtlasLoot:GetDropRate(lootTable, lootGroup)
 		end
 	end
 	return string.format("%.2f%%",lootTable.LootGroups[lootGroup]/count) or nil
+end
+
+
+AtlasLoot.ItemSourceList = {}
+function AtlasLoot:CreateItemSourceList()
+	if not self.db.profile.showdropLocationTooltips then return end
+	local list = self.ItemSourceList
+		for _, instance in pairs(AtlasLoot_Data) do
+			for _, boss in pairs(instance) do
+				if type(boss) == "table" then
+					for _, item in pairs(boss) do
+						if type(item) == "table" and item.itemID then
+							list[item.itemID] = instance.Name .. " - " .. boss.Name
+							if item.spellID then
+								local recipeID = self:GetRecipeID(item.spellID) or nil
+								if recipeID then list[recipeID] = instance.Name .. " - " .. boss.Name end
+							end
+						end
+					end
+				end
+			end
+		end
+end
+
+function AtlasLoot:ItemSourceTooltip(itemID, tooltip)
+	if not self.db.profile.showdropLocationTooltips then return end
+	local text = AtlasLoot.ItemSourceList[itemID] and "Item Source: " .. WHITE .. AtlasLoot.ItemSourceList[itemID] or nil
+	if text and not CheckTooltipForDuplicate(tooltip, text) then
+		tooltip:AddLine(text)
+	end
 end
