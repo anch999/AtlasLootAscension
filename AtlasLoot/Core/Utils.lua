@@ -825,6 +825,11 @@ function AtlasLoot:CreateItemSourceList()
 					for _, item in pairs(boss) do
 						if type(item) == "table" and item.itemID then
 							list[item.itemID] = instance.Name .. " - " .. boss.Name
+							if ItemIDsDatabase[item.itemID] then
+								for _, varID in pairs(ItemIDsDatabase[item.itemID]) do
+									list[varID] = instance.Name .. " - " .. boss.Name
+								end
+							end
 							if item.spellID then
 								local recipeID = self:GetRecipeID(item.spellID) or nil
 								if recipeID then list[recipeID] = instance.Name .. " - " .. boss.Name end
