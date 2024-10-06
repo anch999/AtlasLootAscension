@@ -521,7 +521,6 @@ function AtlasLoot:IsLootTableAvailable(dataSource)
 		return true
 	elseif moduleName then
 		LoadAddOn(moduleName)
-		self:CreateItemSourceList()
 	end
 end
 
@@ -640,6 +639,7 @@ local function TooltipHandlerItem(tooltip)
 end
 
 GameTooltip:HookScript("OnTooltipSetItem", TooltipHandlerItem)
+ItemRefTooltip:HookScript("OnTooltipSetItem", TooltipHandlerItem)
 
 function AtlasLoot:StripTextColor(txt)
 	local txt = txt or ""
@@ -815,35 +815,40 @@ function AtlasLoot:GetDropRate(lootTable, lootGroup)
 end
 
 
-AtlasLoot.ItemSourceList = {}
+
 function AtlasLoot:CreateItemSourceList()
 	if not self.db.profile.showdropLocationTooltips then return end
-	local list = self.ItemSourceList
-		for _, instance in pairs(AtlasLoot_Data) do
-			for _, boss in pairs(instance) do
-				if type(boss) == "table" then
-					for _, item in pairs(boss) do
-						if type(item) == "table" and item.itemID then
-							list[item.itemID] = instance.Name .. " - " .. boss.Name
-							if ItemIDsDatabase[item.itemID] then
-								for _, varID in pairs(ItemIDsDatabase[item.itemID]) do
-									list[varID] = instance.Name .. " - " .. boss.Name
+	if not AtlasLootDB.ItemSources or (AtlasLootDB.ItemSources.Version and AtlasLootDB.ItemSources.Version ~= self.Version) then
+		self:LoadAllModules()
+		AtlasLootDB.ItemSources = {Version = AtlasLoot.Version, List = {}}
+		local list = AtlasLootDB.ItemSources.List
+			for _, instance in pairs(AtlasLoot_Data) do
+				for _, boss in pairs(instance) do
+					if type(boss) == "table" then
+						for _, item in pairs(boss) do
+							if type(item) == "table" and item.itemID then
+								list[item.itemID] = instance.Name .. " - " .. boss.Name
+								if ItemIDsDatabase[item.itemID] then
+									for _, varID in pairs(ItemIDsDatabase[item.itemID]) do
+										list[varID] = instance.Name .. " - " .. boss.Name
+									end
 								end
-							end
-							if item.spellID then
-								local recipeID = self:GetRecipeID(item.spellID) or nil
-								if recipeID then list[recipeID] = instance.Name .. " - " .. boss.Name end
+								if item.spellID then
+									local recipeID = self:GetRecipeID(item.spellID) or nil
+									if recipeID then list[recipeID] = instance.Name .. " - " .. boss.Name end
+								end
 							end
 						end
 					end
 				end
 			end
-		end
+	end
+	self.ItemSourceList = AtlasLootDB.ItemSources.List
 end
 
 function AtlasLoot:ItemSourceTooltip(itemID, tooltip)
-	if not self.db.profile.showdropLocationTooltips then return end
-	local text = AtlasLoot.ItemSourceList[itemID] and "Item Source: " .. WHITE .. AtlasLoot.ItemSourceList[itemID] or nil
+	if not self.db.profile.showdropLocationTooltips or not self.ItemSourceList then return end
+	local text = self.ItemSourceList[itemID] and "Item Source: " .. WHITE .. self.ItemSourceList[itemID] or nil
 	if text and not CheckTooltipForDuplicate(tooltip, text) then
 		tooltip:AddLine(text)
 	end

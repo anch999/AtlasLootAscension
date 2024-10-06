@@ -24,7 +24,9 @@ local VERSION_MAJOR = "5";
 local VERSION_MINOR = "11";
 local VERSION_BOSSES = "04";
 
-AtlasLoot.Version = "AtlasLoot Ascension Edition"
+AtlasLoot.AddonName = "AtlasLoot Ascension Edition"
+AtlasLoot.Version = GetAddOnMetadata("AtlasLoot", "Version")
+
 AtlasLoot.DebugMessages = false
 AtlasLoot.WishListVersion = 1
 
@@ -203,8 +205,6 @@ function AtlasLoot:OnEnable()
 		self:OptionsInit()
 	end
 
-	collectgarbage("collect")
-
     local panel = _G["AtlasLootOptionsFrame"]
     panel.name = AL["AtlasLoot"]
     InterfaceOptions_AddCategory(panel)
@@ -230,6 +230,8 @@ function AtlasLoot:OnEnable()
 	self:CreateVanityCollection()
 	self:CreateItemSourceList()
 	self:RegisterEvent("UNIT_SPELLCAST_SUCCEEDED")
+
+	collectgarbage("collect")
 end
 
 function AtlasLoot:Reset(data)

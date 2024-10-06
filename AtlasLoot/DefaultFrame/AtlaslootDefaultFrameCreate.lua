@@ -19,7 +19,7 @@ local INDENT = "    "
     mainframe:SetMovable(true)
     mainframe.portrait:SetPortraitTexture("Interface\\Icons\\INV_Box_01")
     mainframe:SetFrameStrata("HIGH")
-    mainframe.TitleText:SetText(AtlasLoot.Version)
+    mainframe.TitleText:SetText(AtlasLoot.AddonName)
     mainframe:RegisterForDrag("LeftButton")
     mainframe:EnableKeyboard(true)
     mainframe:SetToplevel(true)
