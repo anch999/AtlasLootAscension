@@ -816,17 +816,27 @@ end
 
 
 
+local function CheckIfCraftingTable(dataSource)
+	local cTable = {"CraftingCLASSIC", "CraftingTBC", "CraftingWRATH"}
+	for _, t in pairs(cTable) do
+		for _, crafting in  ipairs(AtlasLoot_SubMenus[t]) do
+			if dataSource == crafting[2] then return true end
+		end
+	end
+end
+
 function AtlasLoot:CreateItemSourceList()
 	if not self.db.profile.showdropLocationTooltips then return end
 	if not AtlasLootDB.ItemSources or (AtlasLootDB.ItemSources.Version and AtlasLootDB.ItemSources.Version ~= self.Version) then
 		self:LoadAllModules()
 		AtlasLootDB.ItemSources = {Version = AtlasLoot.Version, List = {}}
 		local list = AtlasLootDB.ItemSources.List
-			for _, instance in pairs(AtlasLoot_Data) do
+			for dataSource, instance in pairs(AtlasLoot_Data) do
+				print(dataSource)
 				for _, boss in pairs(instance) do
 					if type(boss) == "table" then
 						for _, item in pairs(boss) do
-							if type(item) == "table" and item.itemID then
+							if type(item) == "table" and item.itemID and (list[item.itemID] and not CheckIfCraftingTable(dataSource) or not list[item.itemID]) then
 								list[item.itemID] = instance.Name .. " - " .. boss.Name
 								if ItemIDsDatabase[item.itemID] then
 									for _, varID in pairs(ItemIDsDatabase[item.itemID]) do
@@ -835,7 +845,9 @@ function AtlasLoot:CreateItemSourceList()
 								end
 								if item.spellID then
 									local recipeID = self:GetRecipeID(item.spellID) or nil
-									if recipeID then list[recipeID] = instance.Name .. " - " .. boss.Name end
+									if recipeID and (list[recipeID] and not CheckIfCraftingTable(dataSource) or not list[recipeID]) then
+										list[recipeID] = instance.Name .. " - " .. boss.Name
+									end
 								end
 							end
 						end
