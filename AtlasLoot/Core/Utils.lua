@@ -832,7 +832,6 @@ function AtlasLoot:CreateItemSourceList()
 		AtlasLootDB.ItemSources = {Version = AtlasLoot.Version, List = {}}
 		local list = AtlasLootDB.ItemSources.List
 			for dataSource, instance in pairs(AtlasLoot_Data) do
-				print(dataSource)
 				for _, boss in pairs(instance) do
 					if type(boss) == "table" then
 						for _, item in pairs(boss) do
