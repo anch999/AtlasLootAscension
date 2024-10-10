@@ -816,10 +816,15 @@ end
 
 
 
-local function CheckIfCraftingTable(dataSource)
-	local cTable = {"CraftingCLASSIC", "CraftingTBC", "CraftingWRATH"}
+local function IgnoreTables(dataSource)
+	local cTable = {"CraftingCLASSIC", "CraftingTBC", "CraftingWRATH", "CollectionsAscensionCLASSIC"}
 	for _, t in pairs(cTable) do
 		for _, crafting in  ipairs(AtlasLoot_SubMenus[t]) do
+			if crafting[3] then
+				for _, ignore in pairs(crafting[3]) do
+					if dataSource == ignore[2] then return true end
+				end
+			end
 			if dataSource == crafting[2] then return true end
 		end
 	end
@@ -835,7 +840,7 @@ function AtlasLoot:CreateItemSourceList()
 				for _, boss in pairs(instance) do
 					if type(boss) == "table" then
 						for _, item in pairs(boss) do
-							if type(item) == "table" and item.itemID and (list[item.itemID] and not CheckIfCraftingTable(dataSource) or not list[item.itemID]) then
+							if type(item) == "table" and item.itemID and not IgnoreTables(dataSource) then
 								list[item.itemID] = instance.Name .. " - " .. boss.Name
 								if ItemIDsDatabase[item.itemID] then
 									for _, varID in pairs(ItemIDsDatabase[item.itemID]) do
@@ -844,7 +849,7 @@ function AtlasLoot:CreateItemSourceList()
 								end
 								if item.spellID then
 									local recipeID = self:GetRecipeID(item.spellID) or nil
-									if recipeID and (list[recipeID] and not CheckIfCraftingTable(dataSource) or not list[recipeID]) then
+									if recipeID and (list[recipeID] and not IgnoreTables(dataSource) or not list[recipeID]) then
 										list[recipeID] = instance.Name .. " - " .. boss.Name
 									end
 								end
