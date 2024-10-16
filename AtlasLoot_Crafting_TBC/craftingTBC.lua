@@ -811,13 +811,14 @@ AtlasLoot_Data["EngineeringTBC"] = {
 		[14] = { itemID = 34356, spellID = 46113 }, --Surestrike Goggles v3.0
 		[15] = { itemID = 35183, spellID = 46106 }, --Wonderheal XT68 Shades
 		[16] = { itemID = 32478, spellID = 41317 }, --Deathblow X11 Goggles
-		[17] = { itemID = 32494, spellID = 41320 }, --Destruction Holo-gogs
-		[18] = { itemID = 32461, spellID = 40274 }, --Furious Gizmatic Goggles
-		[19] = { itemID = 32476, spellID = 41315 }, --Gadgetstorm Goggles
-		[20] = { itemID = 32472, spellID = 41311 }, --Justicebringer 2000 Specs
-		[21] = { itemID = 32475, spellID = 41316 }, --Living Replicator Specs
-		[22] = { itemID = 32480, spellID = 41319 }, --Magnified Moon Specs
-		[23] = { itemID = 32473, spellID = 41312 }, --Tankatronic Goggles
+		[17] = { itemID = 32474, spellID = 41314 }, --Surestrike Goggles v2.0
+		[18] = { itemID = 32494, spellID = 41320 }, --Destruction Holo-gogs
+		[19] = { itemID = 32461, spellID = 40274 }, --Furious Gizmatic Goggles
+		[20] = { itemID = 32476, spellID = 41315 }, --Gadgetstorm Goggles
+		[21] = { itemID = 32472, spellID = 41311 }, --Justicebringer 2000 Specs
+		[22] = { itemID = 32475, spellID = 41316 }, --Living Replicator Specs
+		[23] = { itemID = 32480, spellID = 41319 }, --Magnified Moon Specs
+		[24] = { itemID = 32473, spellID = 41312 }, --Tankatronic Goggles
 	};
 	{
 		Name = BabbleInventory["Armor"];
@@ -1702,18 +1703,18 @@ AtlasLoot_Data["TailoringTBC"] = {
 	{
 		Name = AL["High Risk"];
 		[1] = { name = AL["Rare"], icon = "INV_Box_01"},
-		[2] = { itemID = 1204061, spellID = 979562 }, --Armored Cloak Lining
-		[3] = { itemID = 1204063, spellID = 979564 }, --Chaneller\'s Cloak Lining
-		[4] = { itemID = 1204065, spellID = 979566 }, --Energizing Cloak Lining
-		[5] = { itemID = 1204067, spellID = 979568 }, --Rager\'s Cloak Lining
-		[6] = { itemID = 1204069, spellID = 979570 }, --Steadfast Cloak Lining
-		[7] = { itemID = 1204071, spellID = 979572 }, --Shifting Cloak Lining
+		[2] = { itemID = 1967813, spellID = 1968496 }, --Wrist Wraps of Twisted Might
+		[3] = { itemID = 1967815, spellID = 1968498 }, --Wrist Wraps of Twisted Fury
+		[4] = { itemID = 1967817, spellID = 1968500 }, --Wrist Wraps of Twisted Precision
+		[5] = { itemID = 1967819, spellID = 1968502 }, --Wrist Wraps of Twisted Efficiency
+		[6] = { itemID = 1967821, spellID = 1968504 }, --Wrist Wraps of Twisted Crushing
+		[7] = { itemID = 1967823, spellID = 1968506 }, --Wrist Wraps of Twisted Glory
 		[16] = { name = AL["Epic"], icon = "INV_Box_01"},
-		[17] = { itemID = 1204062, spellID = 979563 }, --Fitted Armored Cloak Lining
-		[18] = { itemID = 1204064, spellID = 979565 }, --Fitted Chaneller\'s Cloak Lining
-		[19] = { itemID = 1204066, spellID = 979567 }, --Fitted Energizing Cloak Lining
-		[20] = { itemID = 1204068, spellID = 979569 }, --Fitted Rager\'s Cloak Lining
-		[21] = { itemID = 1204070, spellID = 979571 }, --Fitted Steadfast Cloak Lining
-		[22] = { itemID = 1204072, spellID = 979573 }, --Fitted Shifting Cloak Lining
+		[17] = { itemID = 1967814, spellID = 1968497 }, --Fitted Wrist Wraps of Twisted Might
+		[18] = { itemID = 1967816, spellID = 1968499 }, --Fitted Wrist Wraps of Twisted Fury
+		[19] = { itemID = 1967818, spellID = 1968501 }, --Fitted Wrist Wraps of Twisted Precision
+		[20] = { itemID = 1967820, spellID = 1968503 }, --Fitted Wrist Wraps of Twisted Efficiency
+		[21] = { itemID = 1967822, spellID = 1968505 }, --Fitted Wrist Wraps of Twisted Crushing
+		[22] = { itemID = 1967824, spellID = 1968507 }, --Fitted Wrist Wraps of Twisted Glory
 	};
 };
