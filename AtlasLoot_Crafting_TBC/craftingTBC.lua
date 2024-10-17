@@ -1678,9 +1678,8 @@ AtlasLoot_Data["TailoringTBC"] = {
 	};
 	{
 		Name = AL["Miscellaneous"];
-		[1] = {itemID = 44558, spellID = 60971 }; --Magnificent Flying Carpet
-		[2] = {itemID = 44558, spellID = 44554 }; --Flying Carpet
-		[4] = { itemID = 24268, spellID = 31460 }, --Netherweave Net
+		[1] = {itemID = 44554, spellID = 60969 }; --Flying Carpet
+		[3] = { itemID = 24268, spellID = 31460 }, --Netherweave Net
 	};
 	{
 		Name = MOONCLOTH;

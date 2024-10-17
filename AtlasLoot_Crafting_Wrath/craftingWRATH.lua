@@ -1988,8 +1988,9 @@ AtlasLoot_Data["TailoringWRATH"] = {
 		[3] = {itemID = 41595, spellID = 56003 }; --Spellweave
 		[4] = {itemID = 41511, spellID = 55900 }; --Bolt of Imbued Frostweave
 		[5] = {itemID = 41510, spellID = 55899 }; --Bolt of Frostweave
-		[7] = {itemID = 54797, spellID = 75597 }; --Frosty Flying Carpet
-		[9] = {itemID = 41509, spellID = 55898 }; --Frostweave Net
+		[7] = {itemID = 44558, spellID = 60971 }; --Magnificent Flying Carpet
+		[8] = {itemID = 54797, spellID = 75597 }; --Frosty Flying Carpet
+		[10] = {itemID = 41509, spellID = 55898 }; --Frostweave Net
 	};
 	{
 		Name = AL["Shirts"];
