@@ -518,27 +518,21 @@ AtlasLoot_Data["SmithingCLASSIC"] = {
 	};
 	{
 		Name = AL["Miscellaneous"];
-		[1] = {itemID = 43853, spellID = 59406 }; --Titanium Skeleton Key
-		[2] = {itemID = 43854, spellID = 59405 }; --Cobalt Skeleton Key
-		[3] = {itemID = 15872, spellID = 19669 }; --Arcanite Skeleton Key
-		[4] = {itemID = 15871, spellID = 19668 }; --Truesilver Skeleton Key
-		[5] = {itemID = 15870, spellID = 19667 }; --Golden Skeleton Key
-		[6] = {itemID = 15869, spellID = 19666 }; --Silver Skeleton Key
-		[7] = {itemID = 41745, spellID = 55732 }; --Titanium Rod
-		[8] = {itemID = 25845, spellID = 32657 }; --Eternium Rod", "=ds="..AL["Skill Required:"].." 360
-		[9] = {itemID = 25844, spellID = 32656 }; --Adamantite Rod", "=ds="..AL["Skill Required:"].." 350
-		[10] = {itemID = 25843, spellID = 32655 }; --Fel Iron Rod
-		[11] = {itemID = 16206, spellID = 20201 }; --Arcanite Rod
-		[12] = {itemID = 12644, spellID = 16639 }; --Dense Grinding Stone
-		[13] = {itemID = 9060, spellID = 11454 }; --Inlaid Mithril Cylinder
-		[14] = {itemID = 11144, spellID = 14380 }; --Truesilver Rod
-		[15] = {itemID = 7966, spellID = 9920 }; --Solid Grinding Stone
-		[16] = {itemID = 11128, spellID = 14379 }; --Golden Rod
-		[17] = {itemID = 7071, spellID = 8768 }; --Iron Buckle
-		[18] = {itemID = 3486, spellID = 3337 }; --Heavy Grinding Stone
-		[19] = {itemID = 6338, spellID = 7818 }; --Silver Rod
-		[20] = {itemID = 3478, spellID = 3326 }; --Coarse Grinding Stone
-		[21] = {itemID = 3470, spellID = 3320 }; --Rough Grinding Stone
+		[1] = {itemID = 15872, spellID = 19669 }; --Arcanite Skeleton Key
+		[2] = {itemID = 15871, spellID = 19668 }; --Truesilver Skeleton Key
+		[3] = {itemID = 15870, spellID = 19667 }; --Golden Skeleton Key
+		[4] = {itemID = 15869, spellID = 19666 }; --Silver Skeleton Key
+		[5] = {itemID = 16206, spellID = 20201 }; --Arcanite Rod
+		[6] = {itemID = 12644, spellID = 16639 }; --Dense Grinding Stone
+		[7] = {itemID = 9060, spellID = 11454 }; --Inlaid Mithril Cylinder
+		[8] = {itemID = 11144, spellID = 14380 }; --Truesilver Rod
+		[9] = {itemID = 7966, spellID = 9920 }; --Solid Grinding Stone
+		[10] = {itemID = 11128, spellID = 14379 }; --Golden Rod
+		[11] = {itemID = 7071, spellID = 8768 }; --Iron Buckle
+		[12] = {itemID = 3486, spellID = 3337 }; --Heavy Grinding Stone
+		[13] = {itemID = 6338, spellID = 7818 }; --Silver Rod
+		[14] = {itemID = 3478, spellID = 3326 }; --Coarse Grinding Stone
+		[15] = {itemID = 3470, spellID = 3320 }; --Rough Grinding Stone
 	};
 	{
 		Name = ARMORSMITH;
