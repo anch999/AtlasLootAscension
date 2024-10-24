@@ -4107,7 +4107,7 @@ AtlasLoot_Data["PVPHalaa"] = {
 	Module = "AtlasLoot_BurningCrusade";
 	Name = BabbleZone["Nagrand"] .. ": " .. AL["Halaa"];
 	{
-		Name = "Page 1";
+		Name = AL["Page 1"];
 		[1] = { itemID = 28915 , price = "70 #halaabattle# 15 #halaaresearch#" }; --Reins of the Dark Riding Talbuk
 		[2] = { itemID = 27679, price = "100 #halaabattle#" }; --Sublime Mystic Dawnstone
 		[3] = { itemID = 27649, price = "40 #halaabattle# 2 #halaaresearch#" }; --Hierophant's Leggings
@@ -4133,7 +4133,7 @@ AtlasLoot_Data["PVPHalaa"] = {
 		[29] = { itemID = 26044 }; --Halaa Research Token
 	};
 	{
-		Name = "Page 2";
+		Name = AL["Page 2"];
 		[1] = { itemID = 30611 }; --Halaani Razorshaft
 		[2] = { itemID = 30615 }; --Halaani Whiskey
 		[4] = { icon = "INV_BannerPVP_02", name = WHITE..BabbleFaction["Alliance"] };
@@ -4628,7 +4628,7 @@ AtlasLoot_Data["PvP70NonSet"] = {
 	Module = "AtlasLoot_BurningCrusade";
 	Name = AL["PvP Non-Set Epics"];
 	{
-		Name = "Page 1";
+		Name = AL["Page 1"];
 		[1] = { itemID = 35168, price = "13000 #faction#" }; --Guardian's Dreadweave Cuffs
 		[2] = { itemID = 35153, price = "18000 #faction#" }; --Guardian's Dreadweave Belt
 		[3] = { itemID = 35138, price = "18000 #faction#" }; --Guardian's Dreadweave Stalkers
@@ -4652,7 +4652,7 @@ AtlasLoot_Data["PvP70NonSet"] = {
 		[30] = { itemID = 35150, price = "18000 #faction#" }; --Guardian's Wyrmhide Boots
 	};
 	{
-		Name = "Page 2";
+		Name = AL["Page 2"];
 		[1] = { itemID = 35166, price = "13000 #faction#" }; --Guardian's Chain Bracers
 		[2] = { itemID = 35151, price = "18000 #faction#" }; --Guardian's Chain Girdle
 		[3] = { itemID = 35136, price = "18000 #faction#" }; --Guardian's Chain Sabatons
@@ -6553,7 +6553,7 @@ AtlasLoot_Data["WorldRaresTBC"] = {
 	Name = AL["BoE World Rares"];
 	Type = "BCDungeon";
 	{
-		Name = "Page 1";
+		Name = AL["Page 1"];
 		[1] = { itemID = 31187 },
 		[2] = { itemID = 31173 },
 		[3] = { itemID = 31193 },
@@ -6586,7 +6586,7 @@ AtlasLoot_Data["WorldRaresTBC"] = {
 		[30] = { itemID = 31272 },
 	},
 	{
-		Name = "Page 2";
+		Name = AL["Page 2"];
 		[1] = { itemID = 31282 },
 		[2] = { itemID = 31143 },
 		[3] = { itemID = 31200 },

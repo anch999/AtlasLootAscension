@@ -13,7 +13,7 @@ AtlasLoot_Data["Tabards"] = {
 	Module = "AtlasLoot_Vanity";
 	Name = "Tabards";
 	{
-		Name = "Page 1";
+		Name = AL["Page 1"];
 		[1] = { itemID = 51534 }; --Wrathful Gladiator's Tabard
 		[2] = { itemID = 49086 }; --Relentless Gladiator's Tabard
 		[3] = { itemID = 45983 }; --Furious Gladiator's Tabard
@@ -42,7 +42,7 @@ AtlasLoot_Data["Tabards"] = {
 		[30] = { itemID = 45583 }; --Undercity Tabard
 	};
 	{
-		Name = "Page 2";
+		Name = AL["Page 2"];
 		[1] = { itemID = 38312 }; --Tabard of Brilliance
 		[2] = { itemID = 23705 }; --Tabard of Flame
 		[3] = { itemID = 23709 }; --Tabard of Frost
@@ -74,7 +74,7 @@ AtlasLoot_Data["Tabards"] = {
 		[30] = { itemID = 24004 }; --Thrallmar Tabard
 	};
 	{
-		Name = "Page 3";
+		Name = AL["Page 3"];
 		[1] = { icon = "INV_BannerPVP_02", name = WHITE..BabbleFaction["Alliance"] };
 		[2] = { itemID = 15196 }; --Private's Tabard
 		[3] = { itemID = 15198 }; --Knight's Colors

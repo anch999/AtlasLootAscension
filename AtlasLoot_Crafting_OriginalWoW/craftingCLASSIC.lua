@@ -578,7 +578,7 @@ AtlasLoot_Data["CookingCLASSIC"] = {
 	Name = COOKING;
 	Type = "ClassicCrafting";
 	{
-		Name = "Page 1";
+		Name = AL["Page 1"];
 		[1] = {itemID = 21023, spellID = 25659 }; --Dirge's Kickin' Chimaerok Chops
 		[2] = {itemID = 100626, spellID = 966455 }; --Azerothian Schmorgus Boards
 		[3] = {itemID = 100609, spellID = 966436 }; --Chilled Lava Eels
@@ -596,7 +596,7 @@ AtlasLoot_Data["CookingCLASSIC"] = {
 		[15] = {itemID = 100583, spellID = 966398 }; --Seared Cunning Carps
 	};
 	{
-		Name = "Page 2";
+		Name = AL["Page 2"];
 		[1] = {itemID = 20452, spellID = 24801 }; --Smoked Desert Dumplings
 		[2] = {itemID = 13935, spellID = 18247 }; --Baked Salmon
 		[3] = {itemID = 13933, spellID = 18245 }; --Lobster Stew
@@ -626,7 +626,7 @@ AtlasLoot_Data["CookingCLASSIC"] = {
 		[27] = {itemID = 13851, spellID = 15856 }; --Hot Wolf Ribs
 	};
 	{
-		Name = "Page 3";
+		Name = AL["Page 3"];
 		[1] = {itemID = 12212, spellID = 15861 }; --Jungle Stew
 		[2] = {itemID = 8364, spellID = 20916 }; --Mithril Head Trout
 		[3] = {itemID = 12214, spellID = 15865 }; --Mystery Stew
@@ -659,7 +659,7 @@ AtlasLoot_Data["CookingCLASSIC"] = {
 		[30] = {itemID = 6890, spellID = 8607 }; --Smoked Bear Meat
 	};
 	{
-		Name = "Page 4";
+		Name = AL["Page 4"];
 		[1] = {itemID = 2687, spellID = 2546 }; --Dry Pork Ribs
 		[2] = {itemID = 21072, spellID = 25704 }; --Smoked Sagefish
 		[3] = {itemID = 2683, spellID = 2544 }; --Crab Cake
@@ -692,7 +692,7 @@ AtlasLoot_Data["CookingCLASSIC"] = {
 		[30] = {itemID = 27635, spellID = 33276 }; --Lynx Steak
 	};
 	{
-		Name = "Page 5";
+		Name = AL["Page 5"];
 		[1] = {itemID = 12224, spellID = 15935 }; --Crispy Bat Wing
 		[2] = {itemID = 33924, spellID = 43779 }; --Delicious Chocolate Cake
 		[3] = {itemID = 17197, spellID = 21143 }; --Gingerbread Cookie

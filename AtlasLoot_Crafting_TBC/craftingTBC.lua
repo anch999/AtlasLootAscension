@@ -455,67 +455,51 @@ AtlasLoot_Data["CookingTBC"] = {
 	Name = COOKING;
 	Type = "BCCrafting";
 	{
-		Name = "Page 1";
+		Name = AL["Page 1"];
 		[1] = { itemID = 33052, spellID = 42302 }, --Fisherman's Feast
-		[2] = { itemID = 34760, spellID = 45561 }, --Grilled Bonescale
-		[3] = { itemID = 34762, spellID = 45563 }, --Grilled Sculpin
-		[4] = { itemID = 43492, spellID = 58525 }, --Haunted Herring
-		[5] = { itemID = 33053, spellID = 42305 }, --Hot Buttered Trout
-		[6] = { itemID = 43488, spellID = 58521 }, --Last Week's Mammoth
-		[7] = { itemID = 34748, spellID = 45549 }, --Mammoth Meal
-		[8] = { itemID = 34747, spellID = 57421 }, --Northern Stew
-		[9] = { itemID = 34765, spellID = 45566 }, --Pickled Fangtooth
-		[10] = { itemID = 34764, spellID = 45565 }, --Poached Nettlefish
-		[11] = { itemID = 34752, spellID = 45553 }, --Rhino Dogs
-		[12] = { itemID = 34751, spellID = 45552 }, --Roasted Worg
-		[13] = { itemID = 34761, spellID = 45562 }, --Sauteed Goby
-		[14] = { itemID = 34749, spellID = 45550 }, --Shoveltusk Steak
-		[15] = { itemID = 34759, spellID = 45560 }, --Smoked Rockfin
-		[16] = { itemID = 34763, spellID = 45564 }, --Smoked Salmon
-		[17] = { itemID = 27667, spellID = 33296 }, --Spicy Crawdad
-		[18] = { itemID = 43490, spellID = 58512 }, --Tasty Cupcake
-		[19] = { itemID = 34750, spellID = 45551 }, --Wyrm Delight
-		[20] = { itemID = 31673, spellID = 38868 }, --Crunchy Serpent
-		[21] = { itemID = 31672, spellID = 38867 }, --Mok'Nathal Shortribs
-		[22] = { itemID = 27666, spellID = 33295 }, --Golden Fish Sticks
-		[23] = { itemID = 34411, spellID = 45022 }, --Hot Apple Cider
-		[24] = { itemID = 27658, spellID = 33287 }, --Roasted Clefthoof
-		[25] = { itemID = 33825, spellID = 43707 }, --Skullfish Soup
-		[26] = { itemID = 33872, spellID = 43765 }, --Spicy Hot Talbuk
-		[27] = { itemID = 27660, spellID = 33289 }, --Talbuk Steak
-		[28] = { itemID = 27659, spellID = 33288 }, --Warp Burger
-		[29] = { itemID = 27664, spellID = 33293 }, --Grilled Mudfish
-		[30] = { itemID = 27665, spellID = 33294 }, --Poached Bluefish
+		[2] = { itemID = 33053, spellID = 42305 }, --Hot Buttered Trout
+		[3] = { itemID = 27667, spellID = 33296 }, --Spicy Crawdad
+		[4] = { itemID = 31673, spellID = 38868 }, --Crunchy Serpent
+		[5] = { itemID = 31672, spellID = 38867 }, --Mok'Nathal Shortribs
+		[6] = { itemID = 27666, spellID = 33295 }, --Golden Fish Sticks
+		[7] = { itemID = 34411, spellID = 45022 }, --Hot Apple Cider
+		[8] = { itemID = 27658, spellID = 33287 }, --Roasted Clefthoof
+		[9] = { itemID = 33825, spellID = 43707 }, --Skullfish Soup
+		[10] = { itemID = 33872, spellID = 43765 }, --Spicy Hot Talbuk
+		[11] = { itemID = 27660, spellID = 33289 }, --Talbuk Steak
+		[12] = { itemID = 27659, spellID = 33288 }, --Warp Burger
+		[13] = { itemID = 27664, spellID = 33293 }, --Grilled Mudfish
+		[14] = { itemID = 27665, spellID = 33294 }, --Poached Bluefish
+		[15] = { itemID = 33048, spellID = 42296 }, --Stewed Trout
+		[16] = { itemID = 27657, spellID = 33286 }, --Blackened Basilisk
+		[17] = { itemID = 27663, spellID = 33292 }, --Blackened Sporefish
+		[18] = { itemID = 27656, spellID = 33285 }, --Sporeling Snack
+		[19] = { itemID = 27661, spellID = 33290 }, --Blackened Trout
+		[20] = { itemID = 33867, spellID = 43761 }, --Broiled Bloodfin
+		[21] = { itemID = 27651, spellID = 33279 }, --Buzzard Bites
+		[22] = { itemID = 30155, spellID = 36210 }, --Clam Bar
+		[23] = { itemID = 21023, spellID = 25659 }, --Dirge's Kickin' Chimaerok Chops
+		[24] = { itemID = 100626, spellID = 966455 }, --Azerothian Schmorgus Boards
+		[25] = { itemID = 100609, spellID = 966436 }, --Chilled Lava Eels
+		[26] = { itemID = 100608, spellID = 966435 }, --Chillwind Flank Steaks
+		[27] = { itemID = 100607, spellID = 966434 }, --Hippogryph Steaks
+		[28] = { itemID = 100606, spellID = 966433 }, --Steamed Makrinni Claws
+		[29] = { itemID = 100605, spellID = 966432 }, --Rubbed Ravasaur Ribss
+		[30] = { itemID = 100604, spellID = 966431 }, --Hearty Stegodon Stews
 
 	};
 	{
-		Name = "Page 2";
-		[1] = { itemID = 33048, spellID = 42296 }, --Stewed Trout
-		[2] = { itemID = 27657, spellID = 33286 }, --Blackened Basilisk
-		[3] = { itemID = 27663, spellID = 33292 }, --Blackened Sporefish
-		[4] = { itemID = 27656, spellID = 33285 }, --Sporeling Snack
-		[5] = { itemID = 27661, spellID = 33290 }, --Blackened Trout
-		[6] = { itemID = 33867, spellID = 43761 }, --Broiled Bloodfin
-		[7] = { itemID = 27651, spellID = 33279 }, --Buzzard Bites
-		[8] = { itemID = 30155, spellID = 36210 }, --Clam Bar
-		[9] = { itemID = 21023, spellID = 25659 }, --Dirge's Kickin' Chimaerok Chops
-		[10] = { itemID = 100626, spellID = 966455 }, --Azerothian Schmorgus Boards
-		[11] = { itemID = 100609, spellID = 966436 }, --Chilled Lava Eels
-		[12] = { itemID = 100608, spellID = 966435 }, --Chillwind Flank Steaks
-		[13] = { itemID = 100607, spellID = 966434 }, --Hippogryph Steaks
-		[14] = { itemID = 100606, spellID = 966433 }, --Steamed Makrinni Claws
-		[15] = { itemID = 100605, spellID = 966432 }, --Rubbed Ravasaur Ribss
-		[16] = { itemID = 100604, spellID = 966431 }, --Hearty Stegodon Stews
-		[17] = { itemID = 100603, spellID = 966430 }, --Crispy Pterrordax Wings
-		[18] = { itemID = 100602, spellID = 966429 }, --Spicy Dino Jerkys
-		[19] = { itemID = 100601, spellID = 966428 }, --Dirge's Nevermelt Ice Creams
-		[20] = { itemID = 100599, spellID = 966427 }, --Silithid Snacks
-		[21] = { itemID = 100598, spellID = 966426 }, --Hydra Scale Soups
-		[22] = { itemID = 100597, spellID = 966425 }, --Ghostly Goulashs
-		[23] = { itemID = 100583, spellID = 966398 }, --Seared Cunning Carps
-		[24] = { itemID = 33874, spellID = 43772 }, --Kibler's Bits
-		[25] = { itemID = 27655, spellID = 33284 }, --Ravager Dog
-		[26] = { itemID = 33866, spellID = 43758 }, --Stormchops
+		Name = AL["Page 2"];
+		[1] = { itemID = 100603, spellID = 966430 }, --Crispy Pterrordax Wings
+		[2] = { itemID = 100602, spellID = 966429 }, --Spicy Dino Jerkys
+		[3] = { itemID = 100601, spellID = 966428 }, --Dirge's Nevermelt Ice Creams
+		[4] = { itemID = 100599, spellID = 966427 }, --Silithid Snacks
+		[5] = { itemID = 100598, spellID = 966426 }, --Hydra Scale Soups
+		[6] = { itemID = 100597, spellID = 966425 }, --Ghostly Goulashs
+		[7] = { itemID = 100583, spellID = 966398 }, --Seared Cunning Carps
+		[8] = { itemID = 33874, spellID = 43772 }, --Kibler's Bits
+		[9] = { itemID = 27655, spellID = 33284 }, --Ravager Dog
+		[10] = { itemID = 33866, spellID = 43758 }, --Stormchops
 	};
 	{
 		Name = AL["High Risk"].." - Page 1",

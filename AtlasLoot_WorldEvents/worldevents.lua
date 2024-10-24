@@ -650,7 +650,7 @@ AtlasLoot_Data["Valentineday"] = {
 	Module = "AtlasLoot_WorldEvents";
 	Name = AL["Love is in the Air"];
 	{
-		Name = "Page 1";
+		Name = AL["Page 1"];
 		[1] = { itemID = 34480, price = "10 #valentineday#" }; --Romantic Picnic Basket
 		[2] = { itemID = 21815, price = "1 #valentineday2#" }; --Love Token
 		[3] = { itemID = 50163, price = "5 #valentineday#" }; --Lovely Rose
@@ -673,7 +673,7 @@ AtlasLoot_Data["Valentineday"] = {
 		[24] = { itemID = 49916 }; --Lovely Charm Bracelet
 	};
 	{
-		Name = "Page 2";
+		Name = AL["Page 2"];
 		[1] = { icon = "INV_Box_02", name = WHITE.. AL["Lovely Dress Box"] };
 		[2] = { itemID = 22279 }; --Lovely Black Dress
 		[3] = { itemID = 22276 }; --Lovely Red Dress
@@ -699,7 +699,7 @@ AtlasLoot_Data["Valentineday"] = {
 		[30] = { itemID = 21823 }; --Heart Candy
 	};
 	{
-		Name = "Page 3";
+		Name = AL["Page 3"];
 		[1] = { itemID = 51804 }; --Winking Eye of Love
 		[2] = { itemID = 51805 }; --Heartbreak Charm
 		[3] = { itemID = 51806 }; --Shard of Pirouetting Happiness
@@ -1442,7 +1442,7 @@ AtlasLoot_Data["ScourgeInvasionEvent"] = {
 	Module = "AtlasLoot_WorldEvents";
 	Name = AL["Scourge Invasion"];
 	{
-		Name = "Page 1";
+		Name = AL["Page 1"];
 		[1] = { itemID = 40601 }; --Argent Dawn Banner
 		[2] = { itemID = 40593 }; --Argent Tome
 		[3] = { itemID = 40492 }; --Argent War Horn
@@ -1459,7 +1459,7 @@ AtlasLoot_Data["ScourgeInvasionEvent"] = {
 		[21] = { itemID = 38658 }; --Vampiric Batling
 	};
 	{
-		Name = "Page 2";
+		Name = AL["Page 2"];
 		[1] = { icon = "INV_Box_01", name = WHITE.. AL["Blessed Regalia of Undead Cleansing"] };
 		[2] = { itemID = 43074 }; --Blessed Mantle of Undead Cleansing
 		[3] = { itemID = 43072 }; --Blessed Robe of Undead Cleansing
@@ -1482,7 +1482,7 @@ AtlasLoot_Data["ScourgeInvasionEvent"] = {
 		[26] = { itemID = 43071 }; --Blessed Legplates of Undead Slaying
 	};
 	{
-		Name = "Page 3";
+		Name = AL["Page 3"];
 		[1] = { icon = "INV_Box_01", name = WHITE..AL["Balzaphon"], "=q1="..BabbleZone["Stratholme"] };
 		[2] = { itemID = 23126 }; --Waistband of Balzaphon
 		[3] = { itemID = 23125 }; --Chains of the Lich

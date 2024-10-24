@@ -122,34 +122,12 @@ function AtlasLoot:OpenDB(frame, type, text)
 end
 
 local itemEquipLocConversion = {
-	"INVTYPE_HEAD",
-	"INVTYPE_NECK",
-	"INVTYPE_SHOULDER",
-	"INVTYPE_BODY",
-	"INVTYPE_CHEST",
-	"INVTYPE_WAIST",
-	"INVTYPE_LEGS",
-	"INVTYPE_FEET",
-	"INVTYPE_WRIST",
-	"INVTYPE_HAND",
-	"INVTYPE_FINGER",
-	"INVTYPE_TRINKET",
-	"INVTYPE_WEAPON",
-	"INVTYPE_SHIELD",
-	"INVTYPE_RANGED",
-	"INVTYPE_CLOAK",
-	"INVTYPE_2HWEAPON",
-	"INVTYPE_BAG",
-	"INVTYPE_TABARD",
-	"INVTYPE_ROBE",
-	"INVTYPE_WEAPONMAINHAND",
-	"INVTYPE_WEAPONOFFHAND",
-	"INVTYPE_HOLDABLE",
-	"INVTYPE_AMMO",
-	"INVTYPE_THROWN",
-	"INVTYPE_RANGEDRIGHT",
-	"INVTYPE_QUIVER",
-	"INVTYPE_RELIC",
+	"INVTYPE_HEAD","INVTYPE_NECK","INVTYPE_SHOULDER","INVTYPE_BODY","INVTYPE_CHEST",
+	"INVTYPE_WAIST","INVTYPE_LEGS","INVTYPE_FEET","INVTYPE_WRIST",	"INVTYPE_HAND",
+	"INVTYPE_FINGER","INVTYPE_TRINKET","INVTYPE_WEAPON","INVTYPE_SHIELD","INVTYPE_RANGED",
+	"INVTYPE_CLOAK","INVTYPE_2HWEAPON","INVTYPE_BAG","INVTYPE_TABARD","INVTYPE_ROBE",
+    "INVTYPE_WEAPONMAINHAND","INVTYPE_WEAPONOFFHAND","INVTYPE_HOLDABLE","INVTYPE_AMMO",
+    "INVTYPE_THROWN","INVTYPE_RANGEDRIGHT","INVTYPE_QUIVER","INVTYPE_RELIC",
 }
 
 function AtlasLoot:GetItemInfo(item)
@@ -162,9 +140,12 @@ function AtlasLoot:GetItemInfo(item)
 		end)
 		local itemInstant = GetItemInfoInstant(item.itemID)
 		if itemInstant then
-			itemName, itemSubType, itemEquipLoc, itemTexture, itemQuality = itemInstant.name, _G["ITEM_SUBCLASS_"..itemInstant.classID.."_"..itemInstant.subclassID], itemEquipLocConversion[itemInstant.inventoryType], itemInstant.icon, itemInstant.quality
-			local color = ITEM_QUALITY_COLORS[itemQuality] or ITEM_QUALITY_COLORS[1]
-			itemLink = color:WrapText("|Hitem:"..item.itemID.."|h["..itemName.."]|h|r")
+			itemName = itemInstant.name
+			itemSubType = _G["ITEM_SUBCLASS_"..itemInstant.classID.."_"..itemInstant.subclassID]
+			itemEquipLoc = itemEquipLocConversion[itemInstant.inventoryType]
+			itemTexture = itemInstant.icon
+			itemQuality = itemInstant.quality
+			itemLink = item:GetLink()
 		end
 	end
 	return itemName, itemLink, itemQuality, itemLevel, itemMinLevel, itemType, itemSubType, itemStackCount, itemEquipLoc, itemTexture, itemSellPrice

@@ -6172,7 +6172,7 @@ AtlasLoot_Data["ArenaDeathKnightWRATH"] = {
 	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"];
 	{
-		Name = "Page 1";
+		Name = AL["Page 1"];
 		[1] = { icon = "Spell_Deathknight_DeathStrike", name = "=q6="..AL["Gladiator's Desecration"] };
 		[2] = { itemID = 51415, "2370 #arena# "..AL["Rating:"].." 1950" }; --Wrathful Gladiator's Dreadplate Helm
 		[3] = { itemID = 51418, "1930 #arena# "..AL["Rating:"].." 2000" }; --Wrathful Gladiator's Dreadplate Shoulders
@@ -6199,7 +6199,7 @@ AtlasLoot_Data["ArenaDeathKnightWRATH"] = {
 		[28] = { itemID = 40845, "58 #eofconquest#" }; --Deadly Gladiator's Dreadplate Legguards
 	};
 	{
-		Name = "Page 2";
+		Name = AL["Page 2"];
 		[1] = { icon = "Spell_Deathknight_DeathStrike", name = "=q6="..AL["Gladiator's Desecration"] };
 		[2] = { itemID = 40820, "45 #eofvalor#" }; --Hateful Gladiator's Dreadplate Helm
 		[3] = { itemID = 40860, "30 #eofvalor#" }; --Hateful Gladiator's Dreadplate Shoulders
@@ -6349,7 +6349,7 @@ AtlasLoot_Data["ArenaHunterWRATH"] = {
 	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = LOCALIZED_CLASS_NAMES_MALE["HUNTER"];
 	{
-		Name = "Page 1";
+		Name = AL["Page 1"];
 		[1] = { icon = "Ability_Hunter_RunningShot", name = "=q6="..AL["Gladiator's Pursuit"] };
 		[2] = { itemID = 51460, "2370 #arena# "..AL["Rating:"].." 1950" }; --Wrathful Gladiator's Chain Helm
 		[3] = { itemID = 51462, "1930 #arena# "..AL["Rating:"].." 2000" }; --Wrathful Gladiator's Chain Spaulders
@@ -6376,7 +6376,7 @@ AtlasLoot_Data["ArenaHunterWRATH"] = {
 		[28] = { itemID = 41204, "58 #eofconquest#" }; --Deadly Gladiator's Chain Leggings
 	};
 	{
-		Name = "Page 2";
+		Name = AL["Page 2"];
 		[1] = { icon = "Ability_Hunter_RunningShot", name = "=q6="..AL["Gladiator's Pursuit"] };
 		[2] = { itemID = 41155, "45 #eofvalor#" }; --Hateful Gladiator's Chain Helm
 		[3] = { itemID = 41215, "30 #eofvalor#" }; --Hateful Gladiator's Chain Spaulders
@@ -6396,7 +6396,7 @@ AtlasLoot_Data["ArenaMageWRATH"] = {
 	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = LOCALIZED_CLASS_NAMES_MALE["MAGE"];
 	{
-		Name = "Page 1";
+		Name = AL["Page 1"];
 		[1] = { icon = "Spell_Frost_IceStorm", name = "=q6="..AL["Gladiator's Regalia"] };
 		[2] = { itemID = 51465, "2370 #arena# "..AL["Rating:"].." 1950" }; --Wrathful Gladiator's Silk Cowl
 		[3] = { itemID = 51467, "1930 #arena# "..AL["Rating:"].." 2000" }; --Wrathful Gladiator's Silk Amice
@@ -6423,7 +6423,7 @@ AtlasLoot_Data["ArenaMageWRATH"] = {
 		[28] = { itemID = 41958, "58 #eofconquest#" }; --Deadly Gladiator's Silk Trousers
 	};
 	{
-		Name = "Page 2";
+		Name = AL["Page 2"];
 		[1] = { icon = "Spell_Frost_IceStorm", name = "=q6="..AL["Gladiator's Regalia"] };
 		[2] = { itemID = 41944, "45 #eofvalor#" }; --Hateful Gladiator's Silk Cowl
 		[3] = { itemID = 41963, "30 #eofvalor#" }; --Hateful Gladiator's Silk Amice
@@ -6443,7 +6443,7 @@ AtlasLoot_Data["ArenaPaladinWRATH"] = {
 	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"];
 	{
-		Name = AL["Retribution"] .. "Page 1";
+		Name = AL["Retribution"] .. AL["Page 1"];
 		[1] = { icon = "Spell_Holy_AuraOfLight", name = "=q6="..AL["Gladiator's Vindication"] };
 		[2] = { itemID = 51476, "2370 #arena# "..AL["Rating:"].." 1950" }; --Wrathful Gladiator's Scaled Helm
 		[3] = { itemID = 51479, "1930 #arena# "..AL["Rating:"].." 2000" }; --Wrathful Gladiator's Scaled Shoulders
@@ -6470,7 +6470,7 @@ AtlasLoot_Data["ArenaPaladinWRATH"] = {
 		[28] = { itemID = 40846, "58 #eofconquest#" }; --Deadly Gladiator's Scaled Legguards
 	};
 	{
-		Name = AL["Retribution"] .. "Page 2";
+		Name = AL["Retribution"] .. AL["Page 2"];
 		[1] = { icon = "Spell_Holy_AuraOfLight", name = "=q6="..AL["Gladiator's Vindication"] };
 		[2] = { itemID = 40821, "45 #eofvalor#" }; --Hateful Gladiator's Scaled Helm
 		[3] = { itemID = 40861, "30 #eofvalor#" }; --Hateful Gladiator's Scaled Shoulders
@@ -6485,7 +6485,7 @@ AtlasLoot_Data["ArenaPaladinWRATH"] = {
 		[13] = { itemID = 40838, "45 #eofheroism#" }; --Savage Gladiator's Scaled Legguards
 	};
 	{
-		Name = AL["Holy"] .. "Page 1";
+		Name = AL["Holy"] .. AL["Page 1"];
 		[1] = { icon = "Spell_Holy_HolyBolt", name = "=q6="..AL["Gladiator's Redemption"] };
 		[2] = { itemID = 51470, "2370 #arena# "..AL["Rating:"].." 1950" }; --Wrathful Gladiator's Ornamented Headcover
 		[3] = { itemID = 51473, "1930 #arena# "..AL["Rating:"].." 2000" }; --Wrathful Gladiator's Ornamented Spaulders
@@ -6516,7 +6516,7 @@ AtlasLoot_Data["ArenaPaladinWRATH"] = {
 		[28] = { itemID = 40938, "58 #eofconquest#" }; --Deadly Gladiator's Ornamented Legplates
 	};
 	{
-		Name = AL["Holy"] .. "Page 2";
+		Name = AL["Holy"] .. AL["Page 2"];
 		[1] = { icon = "Spell_Holy_HolyBolt", name = "=q6="..AL["Gladiator's Redemption"] };
 		[2] = { itemID = 40931, "45 #eofvalor#" }; --Hateful Gladiator's Ornamented Headcover
 		[3] = { itemID = 40961, "30 #eofvalor#" }; --Hateful Gladiator's Ornamented Spaulders
@@ -6536,7 +6536,7 @@ AtlasLoot_Data["ArenaPriestWRATH"] = {
 	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = LOCALIZED_CLASS_NAMES_MALE["PRIEST"];
 	{
-		Name = AL["Shadow"] .. "Page 1";
+		Name = AL["Shadow"] .. AL["Page 1"];
 		[1] = { icon = "Spell_Shadow_AntiShadow", name = "=q6="..AL["Gladiator's Raiment"] };
 		[2] = { itemID = 51489, "2370 #arena# "..AL["Rating:"].." 1950" }; --Wrathful Gladiator's Satin Hood
 		[3] = { itemID = 51491, "1930 #arena# "..AL["Rating:"].." 2000" }; --Wrathful Gladiator's Satin Mantle
@@ -6563,7 +6563,7 @@ AtlasLoot_Data["ArenaPriestWRATH"] = {
 		[28] = { itemID = 41926, "58 #eofconquest#" }; --Deadly Gladiator's Satin Leggings
 	};
 	{
-		Name = AL["Shadow"] .. "Page 2";
+		Name = AL["Shadow"] .. AL["Page 2"];
 		[1] = { icon = "Spell_Shadow_AntiShadow", name = "=q6="..AL["Gladiator's Raiment"] };
 		[2] = { itemID = 41913, "45 #eofvalor#" }; --Hateful Gladiator's Satin Hood
 		[3] = { itemID = 41931, "30 #eofvalor#" }; --Hateful Gladiator's Satin Mantle
@@ -6578,7 +6578,7 @@ AtlasLoot_Data["ArenaPriestWRATH"] = {
 		[13] = { itemID = 41924, "45 #eofheroism#" }; --Savage Gladiator's Satin Leggings
 	};
 	{
-		Name = AL["Holy"] .. "Page 1";
+		Name = AL["Holy"] .. AL["Page 1"];
 		[1] = { icon = "Spell_Holy_PowerWordShield", name = "=q6="..AL["Gladiator's Investiture"] };
 		[2] = { itemID = 51484, "2370 #arena# "..AL["Rating:"].." 1950" }; --Wrathful Gladiator's Mooncloth Hood
 		[3] = { itemID = 51486, "1930 #arena# "..AL["Rating:"].." 2000" }; --Wrathful Gladiator's Mooncloth Mantle
@@ -6605,7 +6605,7 @@ AtlasLoot_Data["ArenaPriestWRATH"] = {
 		[28] = { itemID = 41863, "58 #eofconquest#" }; --Deadly Gladiator's Mooncloth Leggings
 	};
 	{
-		Name = AL["Holy"] .. "Page 2";
+		Name = AL["Holy"] .. AL["Page 2"];
 		[1] = { icon = "Spell_Holy_PowerWordShield", name = "=q6="..AL["Gladiator's Investiture"] };
 		[2] = { itemID = 41852, "45 #eofvalor#" }; --Hateful Gladiator's Mooncloth Hood
 		[3] = { itemID = 41867, "30 #eofvalor#" }; --Hateful Gladiator's Mooncloth Mantle
@@ -6626,7 +6626,7 @@ AtlasLoot_Data["ArenaRogueWRATH"] = {
 	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = LOCALIZED_CLASS_NAMES_MALE["ROGUE"];
 	{
-		Name = "Page 1";
+		Name = AL["Page 1"];
 		[1] = { icon = "Ability_BackStab", name = "=q6="..AL["Gladiator's Vestments"] };
 		[2] = { itemID = 51494, "2370 #arena# "..AL["Rating:"].." 1950" }; --Wrathful Gladiator's Leather Helm
 		[3] = { itemID = 51496, "1930 #arena# "..AL["Rating:"].." 2000" }; --Wrathful Gladiator's Leather Spaulders
@@ -6653,7 +6653,7 @@ AtlasLoot_Data["ArenaRogueWRATH"] = {
 		[28] = { itemID = 41654, "58 #eofconquest#" }; --Deadly Gladiator's Leather Legguards
 	};
 	{
-		Name = "Page 2";
+		Name = AL["Page 2"];
 		[1] = { icon = "Ability_BackStab", name = "=q6="..AL["Gladiator's Vestments"] };
 		[2] = { itemID = 41670, "45 #eofvalor#" }; --Hateful Gladiator's Leather Helm
 		[3] = { itemID = 41681, "30 #eofvalor#" }; --Hateful Gladiator's Leather Spaulders
@@ -6673,7 +6673,7 @@ AtlasLoot_Data["ArenaShamanWRATH"] = {
 	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"];
 	{
-		Name = AL["Elemental"] .. "Page 1";
+		Name = AL["Elemental"] .. AL["Page 1"];
 		[1] = { icon = "Spell_Nature_Lightning", name = "=q6="..AL["Gladiator's Thunderfist"] };
 		[2] = { itemID = 51511, "2370 #arena# "..AL["Rating:"].." 1950" }; --Wrathful Gladiator's Mail Helm
 		[3] = { itemID = 51514, "1930 #arena# "..AL["Rating:"].." 2000" }; --Wrathful Gladiator's Mail Spaulders
@@ -6700,7 +6700,7 @@ AtlasLoot_Data["ArenaShamanWRATH"] = {
 		[28] = { itemID = 41032, "58 #eofconquest#" }; --Deadly Gladiator's Mail Leggings
 	};
 	{
-		Name = AL["Elemental"] .. "Page 2";
+		Name = AL["Elemental"] .. AL["Page 2"];
 		[1] = { icon = "Spell_Nature_Lightning", name = "=q6="..AL["Gladiator's Thunderfist"] };
 		[2] = { itemID = 41017, "45 #eofvalor#" }; --Hateful Gladiator's Mail Helm
 		[3] = { itemID = 41042, "30 #eofvalor#" }; --Hateful Gladiator's Mail Spaulders
@@ -6715,7 +6715,7 @@ AtlasLoot_Data["ArenaShamanWRATH"] = {
 		[13] = { itemID = 41030, "45 #eofheroism#" }; --Savage Gladiator's Mail Leggings
 	};
 	{
-		Name = AL["Enhancement"] .. "Page 1";
+		Name = AL["Enhancement"] .. AL["Page 1"];
 		[1] = { icon = "Spell_FireResistanceTotem_01", name = "=q6="..AL["Gladiator's Earthshaker"] };
 		[2] = { itemID = 51505, "2370 #arena# "..AL["Rating:"].." 1950" }; --Wrathful Gladiator's Linked Helm
 		[3] = { itemID = 51508, "1930 #arena# "..AL["Rating:"].." 2000" }; --Wrathful Gladiator's Linked Spaulders
@@ -6742,7 +6742,7 @@ AtlasLoot_Data["ArenaShamanWRATH"] = {
 		[28] = { itemID = 41198, "58 #eofconquest#" }; --Deadly Gladiator's Linked Leggings
 	};
 	{
-		Name = AL["Enhancement"] .. "Page 2";
+		Name = AL["Enhancement"] .. AL["Page 2"];
 		[1] = { icon = "Spell_FireResistanceTotem_01", name = "=q6="..AL["Gladiator's Earthshaker"] };
 		[2] = { itemID = 41149, "45 #eofvalor#" }; --Hateful Gladiator's Linked Helm
 		[3] = { itemID = 41209, "30 #eofvalor#" }; --Hateful Gladiator's Linked Spaulders
@@ -6757,7 +6757,7 @@ AtlasLoot_Data["ArenaShamanWRATH"] = {
 		[13] = { itemID = 41160, "45 #eofheroism#" }; --Savage Gladiator's Linked Leggings
 	};
 	{
-		Name = AL["Restoration"] .. "Page 1";
+		Name = AL["Restoration"] .. AL["Page 1"];
 		[1] = { icon = "Spell_Nature_HealingWaveGreater", name = "=q6="..AL["Gladiator's Wartide"] };
 		[2] = { itemID = 51499, "2370 #arena# "..AL["Rating:"].." 1950" }; --Wrathful Gladiator's Ringmail Helm
 		[3] = { itemID = 51502, "1930 #arena# "..AL["Rating:"].." 2000" }; --Wrathful Gladiator's Ringmail Spaulders
@@ -6784,7 +6784,7 @@ AtlasLoot_Data["ArenaShamanWRATH"] = {
 		[28] = { itemID = 41026, "58 #eofconquest#" }; --Deadly Gladiator's Ringmail Leggings
 	};
 	{
-		Name = AL["Restoration"] .. "Page 2";
+		Name = AL["Restoration"] .. AL["Page 2"];
 		[1] = { icon = "Spell_Nature_HealingWaveGreater", name = "=q6="..AL["Gladiator's Wartide"] };
 		[2] = { itemID = 41011, "45 #eofvalor#" }; --Hateful Gladiator's Ringmail Helm
 		[3] = { itemID = 41036, "30 #eofvalor#" }; --Hateful Gladiator's Ringmail Spaulders
@@ -6805,7 +6805,7 @@ AtlasLoot_Data["ArenaWarlockWRATH"] = {
 	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = LOCALIZED_CLASS_NAMES_MALE["WARLOCK"];
 	{
-		Name = "Page 1";
+		Name = AL["Page 1"];
 		[1] = { icon = "Spell_Shadow_CurseOfTounges", name = "=q6="..AL["Gladiator's Felshroud"] };
 		[2] = { itemID = 51538, "2370 #arena# "..AL["Rating:"].." 1950" }; --Wrathful Gladiator's Felweave Cowl
 		[3] = { itemID = 51540, "1930 #arena# "..AL["Rating:"].." 2000" }; --Wrathful Gladiator's Felweave Amice
@@ -6833,7 +6833,7 @@ AtlasLoot_Data["ArenaWarlockWRATH"] = {
 
 	};
 	{
-		Name = "Page 2";
+		Name = AL["Page 2"];
 		[1] = { icon = "Spell_Shadow_CurseOfTounges", name = "=q6="..AL["Gladiator's Felshroud"] };
 		[2] = { itemID = 41991, "45 #eofvalor#" }; --Hateful Gladiator's Felweave Cowl
 		[3] = { itemID = 42009, "30 #eofvalor#" }; --Hateful Gladiator's Felweave Amice
@@ -6853,7 +6853,7 @@ AtlasLoot_Data["ArenaWarriorWRATH"] = {
 	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"];
 	{
-		Name = "Page 1";
+		Name = AL["Page 1"];
 		[1] = { icon = "Ability_Warrior_BattleShout", name = "=q6="..AL["Gladiator's Battlegear"] };
 		[2] = { itemID = 51543, "2370 #arena# "..AL["Rating:"].." 1950" }; --Wrathful Gladiator's Plate Helm
 		[3] = { itemID = 51545, "1930 #arena# "..AL["Rating:"].." 2000" }; --Wrathful Gladiator's Plate Shoulders
@@ -6880,7 +6880,7 @@ AtlasLoot_Data["ArenaWarriorWRATH"] = {
 		[28] = { itemID = 40844, "58 #eofconquest#" }; --Deadly Gladiator's Plate Legguards
 	};
 	{
-		Name = "Page 2";
+		Name = AL["Page 2"];
 		[1] = { icon = "Ability_Warrior_BattleShout", name = "=q6="..AL["Gladiator's Battlegear"] };
 		[2] = { itemID = 40819, "45 #eofvalor#" }; --Hateful Gladiator's Plate Helm
 		[3] = { itemID = 40859, "30 #eofvalor#" }; --Hateful Gladiator's Plate Shoulders
@@ -6903,7 +6903,7 @@ AtlasLoot_Data["PvP80NonSet"] = {
 	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = AL["PvP Non-Set Epics"];
 	{
-		Name = "Page 1";
+		Name = AL["Page 1"];
 	[1] = { itemID = 51334, "52200 #faction#" }; --Wrathful Gladiator's Cloak of Ascendancy
 	[2] = { itemID = 51348, "52200 #faction#" }; --Wrathful Gladiator's Cloak of Deliverance
 	[3] = { itemID = 51330, "52200 #faction#" }; --Wrathful Gladiator's Cloak of Dominance
@@ -6930,7 +6930,7 @@ AtlasLoot_Data["PvP80NonSet"] = {
 	[29] = { itemID = 42135, "34100 #faction#" }; --Battlemaster's Vivacity
 };
 {
-	Name = "Page 2";
+	Name = AL["Page 2"];
 	[1] = { itemID = 42078, "26100 #faction#" }; --Relentless Gladiator's Cloak of Ascendancy
 	[2] = { itemID = 42080, "26100 #faction#" }; --Relentless Gladiator's Cloak of Deliverance
 	[3] = { itemID = 42076, "26100 #faction#" }; --Relentless Gladiator's Cloak of Dominance
@@ -7036,7 +7036,7 @@ AtlasLoot_Data["WeaponsWRATH"] = {
 	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = "Arena " .. AL["Weapons"];
 	{
-		Name = "Page 1";
+		Name = AL["Page 1"];
 		[1] = { icon = "INV_Box_01", name = WHITE.. AL["Low Level"] };
 		[2] = { itemID = 51523,"38500 #faction# 1090 #arena# "..AL["Rating:"].." 1800" }; --Wrathful Gladiator's Right Ripper
 		[3] = { itemID = 51530,"16500 #faction# 450 #arena# "..AL["Rating:"].." 1800" }; --Wrathful Gladiator's Left Render
@@ -7069,7 +7069,7 @@ AtlasLoot_Data["WeaponsWRATH"] = {
 		[30] = { itemID = 51526, "1370 #arena# "..AL["Rating:"].." 2200" }; --Wrathful Gladiator's Splitter
 	};
 	{
-		Name = "Page 2";
+		Name = AL["Page 2"];
 		[1] = { icon = "INV_Box_01", name = WHITE.. AL["Low Level"] };
 		[2] = { itemID = 51388, "55000 #faction# 1540 #arena# "..AL["Rating:"].." 1800" }; --Wrathful Gladiator's Decapitator
 		[3] = { itemID = 51453, "38500 #faction# 1300 #arena# "..AL["Rating:"].." 1800" }; --Wrathful Gladiator's Gavel
@@ -7102,7 +7102,7 @@ AtlasLoot_Data["WeaponsWRATH"] = {
 		[30] = { itemID = 51450, "4670 #arena# "..AL["Rating:"].." 2200" }; --Wrathful Gladiator's Shotgun
 	};
 	{
-		Name = "Page 3";
+		Name = AL["Page 3"];
 		[1] = { itemID = 51452, "350 #arena# "..AL["Rating:"].." 1800" }; --Wrathful Gladiator's Barrier
 		[2] = { itemID = 51455, "350 #arena# "..AL["Rating:"].." 1800" }; --Wrathful Gladiator's Redoubt
 		[3] = { itemID = 51533, "350 #arena# "..AL["Rating:"].." 1800" }; --Wrathful Gladiator's Shield Wall
@@ -7126,7 +7126,7 @@ AtlasLoot_Data["PVPidolWRATH"] = {
 	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = "Idols/Librams/Sigils/Totems";
 	{
-		Name = "Page 1";
+		Name = AL["Page 1"];
 		[1] = { icon = "INV_Box_01", name = WHITE.. BabbleInventory["Idols"] };
 		[2] = { itemID = 51429, "1260 #arena# "..AL["Rating:"].." 1700" }; --Wrathful Gladiator's Idol of Resolve
 		[3] = { itemID = 51437, "1260 #arena# "..AL["Rating:"].." 1700" }; --Wrathful Gladiator's Idol of Steadfastness
@@ -7146,7 +7146,7 @@ AtlasLoot_Data["PVPidolWRATH"] = {
 		[24] = { itemID = 42615, "12000 #faction#" }; --Furious Gladiator's Libram of Justice
 	};
 	{
-		Name = "Page 2";
+		Name = AL["Page 2"];
 		[1] = { icon = "INV_Box_01", name = WHITE.. BabbleInventory["Sigils"] };
 		[2] = { itemID = 51417, "1260 #arena# "..AL["Rating:"].." 1700" }; --Wrathful Gladiator's Sigil of Strife
 		[4] = { itemID = 42622, "6400 #faction# 350 #arena# "..AL["Rating:"].." 700" }; --Relentless Gladiator's Sigil of Strife
@@ -7203,7 +7203,7 @@ AtlasLoot_Data["LakeWintergrasp"] = {
 	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = "Wintergrasp";
 	{
-		Name = "Page 1";
+		Name = AL["Page 1"];
 		[1] = { itemID = 51570, "25 #wintergraspmark#" }; --Titan-Forged Cloak of Ascendancy
 		[2] = { itemID = 51571, "25 #wintergraspmark#" }; --Titan-Forged Cloak of Victory
 		[4] = { itemID = 46083, "25 #wintergraspmark#" }; --Titan-Forged Rune of Accuracy
@@ -7224,7 +7224,7 @@ AtlasLoot_Data["LakeWintergrasp"] = {
 		[26] = { itemID = 49000, "15 #wintergraspmark#" }; --Titan-Forged Band of Victory
 	};
 	{
-		Name = "Page 2";
+		Name = AL["Page 2"];
 		[2] = { itemID = 44910, "40 #wintergraspmark#" }; --Titan-Forged Hood of Dominance
 		[3] = { itemID = 51573, "40 #wintergraspmark#" }; --Titan-Forged Shoulderpads of Domination
 		[4] = { itemID = 46065, "40 #wintergraspmark#" }; --Titan-Forged Raiment of Dominance
@@ -7240,7 +7240,7 @@ AtlasLoot_Data["LakeWintergrasp"] = {
 		[23] = { itemID = 44900, "15 #wintergraspmark#" }; --Titan-Forged Slippers of Salvation
 	};
 	{
-		Name = "Page 3";
+		Name = AL["Page 3"];
 		[1] = { itemID = 44907, "40 #wintergraspmark#" }; --Titan-Forged Leather Helm of Dominance
 		[2] = { itemID = 51574, "40 #wintergraspmark#" }; --Titan-Forged Leather Spaulders of Dominance
 		[3] = { itemID = 46064, "40 #wintergraspmark#" }; --Titan-Forged Leather Chestguard of Dominance
@@ -7264,7 +7264,7 @@ AtlasLoot_Data["LakeWintergrasp"] = {
 		[22] = { itemID = 44893, "15 #wintergraspmark#" }; --Titan-Forged Boots of Triumph
 	};
 	{
-		Name = "Page 4";
+		Name = AL["Page 4"];
 		[1] = { itemID = 44904, "40 #wintergraspmark#" }; --Titan-Forged Mail Helm of Dominance
 		[2] = { itemID = 51578, "40 #wintergraspmark#" }; --Titan-Forged Shoulders of Dominance
 		[3] = { itemID = 46061, "40 #wintergraspmark#" }; --Titan-Forged Mail Armor of Domination
@@ -7288,7 +7288,7 @@ AtlasLoot_Data["LakeWintergrasp"] = {
 		[22] = { itemID = 44898, "15 #wintergraspmark#" }; --Titan-Forged Sabatons of Triumph
 	};
 	{
-		Name = "Page 5";
+		Name = AL["Page 5"];
 		[2] = { itemID = 44901, "40 #wintergraspmark#" }; --Titan-Forged Plate Headcover of Salvation
 		[3] = { itemID = 51581, "40 #wintergraspmark#" }; --Titan-Forged Shoulderplates of Salvation
 		[4] = { itemID = 46057, "40 #wintergraspmark#" }; --Titan-Forged Chestguard of Salvation
@@ -7305,7 +7305,7 @@ AtlasLoot_Data["LakeWintergrasp"] = {
 		[23] = { itemID = 44895, "15 #wintergraspmark#" }; --Titan-Forged Greaves of Triumph
 	};
 	{
-		Name = "Page 6";
+		Name = AL["Page 6"];
 		[1] = { itemID = 44066, "20 #wintergrasp#" }; --Kharmaa's Grace
 		[2] = { itemID = 44081, "15 #wintergrasp#" }; --Enigmatic Starflare Diamond
 		[3] = { itemID = 44084, "15 #wintergrasp#" }; --Forlorn Starflare Diamond
@@ -7336,7 +7336,7 @@ AtlasLoot_Data["LakeWintergrasp"] = {
 		[30] = { itemID = 41744, price = "24 #wintergrasp#" }; --Design: Impassive Skyflare Diamond
 	};
 	{
-		Name = "Page 7";
+		Name = AL["Page 7"];
 		[1] = { itemID = 44107, price = "200 #wintergrasp#" }; --Exquisite Sunderseer Mantle
 		[2] = { itemID = 44103, price = "200 #wintergrasp#" }; --Exceptional Stormshroud Shoulders
 		[3] = { itemID = 44105, price = "200 #wintergrasp#" }; --Lasting Feralheart Spaulders
@@ -9265,7 +9265,7 @@ AtlasLoot_Data["EmblemofHeroism"] = {
 	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = AL["Emblem of Heroism Rewards"];
 	{
-		Name = "Page 1";
+		Name = AL["Page 1"];
 		[1] = { itemID = 40697, price = "40 #eofheroism#" }; --Elegant Temple Gardens' Girdle
 		[2] = { itemID = 40696, price = "40 #eofheroism#" }; --Plush Sash of Guzbah
 		[3] = { itemID = 40694, price = "40 #eofheroism#" }; --Jorach's Crocolisk Skin Belt
@@ -9285,7 +9285,7 @@ AtlasLoot_Data["EmblemofHeroism"] = {
 		[23] = { itemID = 40698, price = "25 #eofheroism#" }; --Ward of the Violet Citadel
 	};
 	{
-		Name = "Page 2";
+		Name = AL["Page 2"];
 		[1] = { itemID = 40711, price = "15 #eofheroism#" }; --Idol of Lush Moss
 		[2] = { itemID = 40712, price = "15 #eofheroism#" }; --Idol of Steadfast Renewal
 		[3] = { itemID = 40713, price = "15 #eofheroism#" }; --Idol of the Ravenous Beast
@@ -9307,7 +9307,7 @@ AtlasLoot_Data["EmblemofHeroism"] = {
 		[23] = { itemID = 40683, price = "40 #eofheroism#" }; --Valor Medal of the First War
 	};
 	{
-		Name = "Page 3";
+		Name = AL["Page 3"];
 		[1] = { itemID = 40610, price = "80 #eofheroism#" }; --Chestguard of the Lost Conqueror
 		[2] = { itemID = 40611, price = "80 #eofheroism#" }; --Chestguard of the Lost Protector
 		[3] = { itemID = 40612, price = "80 #eofheroism#" }; --Chestguard of the Lost Vanquisher
@@ -9334,7 +9334,7 @@ AtlasLoot_Data["EmblemofValor"] = {
 	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = AL["Emblem of Valor Rewards"];
 	{
-		Name = "Page 1";
+		Name = AL["Page 1"];
 		[1] = { itemID = 40724, price = "25 #eofvalor#" }; --Cloak of Kea Feathers
 		[2] = { itemID = 40723, price = "25 #eofvalor#" }; --Disguise of the Kumiho
 		[3] = { itemID = 40722, price = "25 #eofvalor#" }; --Platinum Mesh Cloak
@@ -9359,7 +9359,7 @@ AtlasLoot_Data["EmblemofValor"] = {
 		[26] = { itemID = 40745, price = "40 #eofvalor#" }; --Sabatons of Rapid Recovery
 	};
 	{
-		Name = "Page 2";
+		Name = AL["Page 2"];
 		[1] = { itemID = 40719, price = "25 #eofvalor#" }; --Band of Channeled Magic
 		[2] = { itemID = 40720, price = "25 #eofvalor#" }; --Renewal of Life
 		[3] = { itemID = 40717, price = "25 #eofvalor#" }; --Ring of Invincibility
@@ -9392,7 +9392,7 @@ AtlasLoot_Data["EmblemofConquest"] = {
 	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = AL["Emblem of Conquest Rewards"];
 	{
-		Name = "Page 1";
+		Name = AL["Page 1"];
 		[1] = { itemID = 45840, price = "28 #eofconquest#" }; --Touch of the Occult
 		[2] = { itemID = 45831, price = "28 #eofconquest#" }; --Sash of Potent Incantations
 		[3] = { itemID = 45848, price = "39 #eofconquest#" }; --Legwraps of the Master Conjurer
@@ -9419,7 +9419,7 @@ AtlasLoot_Data["EmblemofConquest"] = {
 		[28] = { itemID = 45845, price = "39 #eofconquest#" }; --Leggings of the Weary Mystic
 	};
 	{
-		Name = "Page 2";
+		Name = AL["Page 2"];
 		[1] = { itemID = 45820, price = "19 #eofconquest#" }; --Broach of the Wailing Night
 		[2] = { itemID = 45822, price = "19 #eofconquest#" }; --Evoker's Charm
 		[3] = { itemID = 45823, price = "19 #eofconquest#" }; --Frozen Tear of Elune
@@ -9455,7 +9455,7 @@ AtlasLoot_Data["EmblemofTriumph"] = {
 	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = AL["Emblem of Triumph Rewards"];
 	{
-		Name = "Page 1";
+		Name = AL["Page 1"];
 		[2] = { itemID = 47694, price = "75 #eoftriumph#" }; --Helm of Clouded Sight
 		[3] = { itemID = 47693, price = "75 #eoftriumph#" }; --Hood of Fiery Aftermath
 		[4] = { itemID = 47713, price = "45 #eoftriumph#" }; --Mantle of Catastrophic Emanation
@@ -9476,7 +9476,7 @@ AtlasLoot_Data["EmblemofTriumph"] = {
 		[27] = { itemID = 47698, price = "45 #eoftriumph#" }; --Shoulderplates of Enduring Order
 	};
 	{
-		Name = "Page 2";
+		Name = AL["Page 2"];
 		[2] = { itemID = 47695, price = "75 #eoftriumph#" }; --Hood of Clouded Sight
 		[3] = { itemID = 47692, price = "75 #eoftriumph#" }; --Hood of Smoldering Aftermath
 		[4] = { itemID = 47714, price = "45 #eoftriumph#" }; --Pauldrons of Catastrophic Emanation
@@ -9497,7 +9497,7 @@ AtlasLoot_Data["EmblemofTriumph"] = {
 		[27] = { itemID = 47699, price = "45 #eoftriumph#" }; --Shoulderguards of Enduring Order
 	};
 	{
-		Name = "Page 3";
+		Name = AL["Page 3"];
 		[1] = { itemID = 47732, price = "35 #eoftriumph#" }; --Band of the Invoker
 		[2] = { itemID = 47729, price = "35 #eoftriumph#" }; --Bloodshed Band
 		[3] = { itemID = 47731, price = "35 #eoftriumph#" }; --Clutch of Fortification
@@ -9533,7 +9533,7 @@ AtlasLoot_Data["EmblemofFrost"] = {
 	Module = "AtlasLoot_WrathoftheLichKing";
 	Name = AL["Emblem of Frost Rewards"];
 	{
-		Name = "Page 1";
+		Name = AL["Page 1"];
 		[1] = { itemID = 50975, price = "95 #eoffrost#" }; --Ermine Coronation Robes
 		[2] = { itemID = 50974, price = "95 #eoffrost#" }; --Meteor Chaser's Raiment
 		[3] = { itemID = 50984, price = "60 #eoffrost#" }; --Gloves of Ambivalence
@@ -9563,7 +9563,7 @@ AtlasLoot_Data["EmblemofFrost"] = {
 		[30] = { itemID = 50991, price = "60 #eoffrost#" }; --Verdigris Chain Belt
 	};
 	{
-		Name = "Page 2";
+		Name = AL["Page 2"];
 		[1] = { itemID = 50468, price = "50 #eoffrost#" }; --Drape of the Violet Tower
 		[2] = { itemID = 50467, price = "50 #eoffrost#" }; --Might of the Ocean Serpent
 		[3] = { itemID = 50470, price = "50 #eoffrost#" }; --Recovered Scarlet Onslaught Cape

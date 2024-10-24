@@ -423,7 +423,7 @@ AtlasLoot_Data["CookingWRATH"] = {
 	Name = COOKING;
 	Type = "WrathCrafting";
 	{
-		Name = COOKING;
+		Name = AL["Page 1"];
 		[1] = {itemID = 43015, spellID = 57423 }; --Fish Feast
 		[2] = {itemID = 43478, spellID = 58527 }; --Gigantic Feast
 		[3] = {itemID = 43480, spellID = 58528 }; --Small Feast
@@ -451,10 +451,29 @@ AtlasLoot_Data["CookingWRATH"] = {
 		[25] = {itemID = 44953, spellID = 62350 }; --Worg Tartare
 		[26] = {itemID = 34753, spellID = 45554 }; --Great Feast
 		[27] = {itemID = 39520, spellID = 53056 }; --Kungaloosh
-		[28] = {itemID = 43491, spellID = 58523 }; --Bad Clams" .. "
+		[28] = {itemID = 43491, spellID = 58523 }; --Bad Clams
 		[29] = {itemID = 42942, spellID = 45569 }; --Baked Manta Ray
 		[30] = {itemID = 43268, spellID = 58065 }; --Dalaran Clam Chowder
 	};
+	{
+		Name = AL["Page 2"];
+		[1] = { itemID = 34760, spellID = 45561 }, --Grilled Bonescale
+		[2] = { itemID = 34762, spellID = 45563 }, --Grilled Sculpin
+		[3] = { itemID = 43492, spellID = 58525 }, --Haunted Herring
+		[4] = { itemID = 43488, spellID = 58521 }, --Last Week's Mammoth
+		[5] = { itemID = 34748, spellID = 45549 }, --Mammoth Meal
+		[6] = { itemID = 34747, spellID = 57421 }, --Northern Stew
+		[7] = { itemID = 34765, spellID = 45566 }, --Pickled Fangtooth
+		[8] = { itemID = 34764, spellID = 45565 }, --Poached Nettlefish
+		[9] = { itemID = 34752, spellID = 45553 }, --Rhino Dogs
+		[10] = { itemID = 34751, spellID = 45552 }, --Roasted Worg
+		[11] = { itemID = 34761, spellID = 45562 }, --Sauteed Goby
+		[12] = { itemID = 34749, spellID = 45550 }, --Shoveltusk Steak
+		[13] = { itemID = 34759, spellID = 45560 }, --Smoked Rockfin
+		[14] = { itemID = 34763, spellID = 45564 }, --Smoked Salmon
+		[15] = { itemID = 43490, spellID = 58512 }, --Tasty Cupcake
+		[16] = { itemID = 34750, spellID = 45551 }, --Worm Delight
+	}
 };
 
 ------------------
