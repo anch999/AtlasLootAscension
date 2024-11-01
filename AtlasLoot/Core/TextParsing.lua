@@ -39,6 +39,7 @@ local txtSubstitution = {
     { "INVTYPE_NECK, Miscellaneous", BabbleInventory["Neck"] },
     { "INVTYPE_SHOULDER", BabbleInventory["Shoulder"] },
     { "INVTYPE_CLOAK, Cloth", BabbleInventory["Back"] },
+    { "INVTYPE_CLOAK, Miscellaneous", BabbleInventory["Back"] },
     { "INVTYPE_CHEST", BabbleInventory["Chest"] },
     { "INVTYPE_BODY", BabbleInventory["Shirt"] },
     { "INVTYPE_ROBE", BabbleInventory["Chest"] },

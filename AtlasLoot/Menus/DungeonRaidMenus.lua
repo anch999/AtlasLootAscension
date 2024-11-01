@@ -18,6 +18,7 @@ AtlasLoot_SubMenus["Dungeons and RaidsCLASSIC"] = {
     { "Dungeons:", "OldKeys", "Header" },
     { "", "BlackfathomDeeps", "", "Blackfathom Deeps" },
     { "", "BlackrockDepths", "", "Blackrock Depths" },
+    { "", "BlackrockCaverns", "", "Blackrock Caverns" },
     { "", "LowerBlackrock", "", "Lower Blackrock Spire" },
     { "", "UpperBlackrock", "", "Upper Blackrock Spire" },
     { "", "TheDeadmines", "", "The Deadmines" },
@@ -25,6 +26,7 @@ AtlasLoot_SubMenus["Dungeons and RaidsCLASSIC"] = {
     { "", "DireMaulEast", "", "Dire Maul (East)", "Dire Maul" },
     { "", "DireMaulWest", "", "Dire Maul (West)", "Dire Maul" },
     { "", "Gnomeregan", "", "Gnomeregan" },
+    { "", "KarazhanCrypts", "", "The Karazhan Crypts" },
     { "", "Maraudon", "", "Maraudon" },
     { "", "RagefireChasm", "", "Ragefire Chasm" },
     { "", "RazorfenDowns", "", "Razorfen Downs" },
@@ -72,6 +74,8 @@ AtlasLoot_SubMenus["Dungeons and RaidsTBC"] = {
     { "", "CFRSteamvault", "", "The Steamvault" },
     { "", "CFRUnderbog", "", "The Underbog" },
     { "", "MagistersTerrace", "", "Magisters' Terrace" },
+    { "", "KarazhanCryptsTBC", "", "The Karazhan Crypts" },
+    { "", "BlackrockCavernsTBC", "", "Blackrock Caverns" },
 }
 
 AtlasLoot_SubMenus["Dungeons and RaidsWRATH"] = {

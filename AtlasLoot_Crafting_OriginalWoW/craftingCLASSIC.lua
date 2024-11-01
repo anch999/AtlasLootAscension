@@ -175,6 +175,7 @@ AtlasLoot_Data["AlchemyCLASSIC"] = {
 		[3] = {itemID = 13506, spellID = 17634 }; --Flask of Petrification
 		[4] = {itemID = 13512, spellID = 17637 }; --Flask of Supreme Power
 		[5] = {itemID = 13510, spellID = 17635 }; --Flask of the Titans
+		[6] = {itemID = 6011, spellID = 17640 }; --Flask of the Titans
 	};
 	{
 		Name = AL["Transmutes"];

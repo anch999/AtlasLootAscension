@@ -956,6 +956,68 @@ AtlasLoot_Data["BlackrockDepths"] = {
 	};
 };
 
+
+--------------------------------------------
+--- Blackrock Mountain: Blackrock Caverns ---
+--------------------------------------------
+
+AtlasLoot_Data["BlackrockCaverns"] = {
+	Module = "AtlasLoot_OriginalWoW";
+	Name = AL["Blackrock Caverns"];
+	Type = "ClassicDungeonExt";
+	--Map = "BlackrockDepths";
+	{
+		Name = AL["Ascendant Lord Obsidius"];
+		npcID = 39705;
+		[1] = { itemID = 241661 }; -- Amber Messenger
+		[2] = { itemID = 241833 }; -- Witching Hourglass
+		[3] = { itemID = 241876 }; -- Crepuscular Shield
+		[4] = { itemID = 240379 }; -- Raz's Pauldrons
+		[5] = { itemID = 241500 }; -- Twitching Shadows
+		[6] = { itemID = 241543 }; -- Carrier Wave Pendant
+		[7] = { itemID = 241704 }; -- Clutches of Dying Light
+		[8] = { itemID = 241747 }; -- Willowy Crown
+		[9] = { itemID = 241790 }; -- Kyrstel Mantle
+		[16] = { itemID = 6011 }; -- Recipe: Flask of Mighty Power
+	};
+	{
+		Name = AL["Beauty"];
+		npcID = 39700;
+		[1] = { itemID = 223128 }; -- Beauty's Favorite Bone
+		[2] = { itemID = 219576 }; -- Beauty's Chew Toy
+		[3] = { itemID = 222146 }; -- Beauty's Plate
+		[4] = { itemID = 222844 }; -- Beauty's Silken Ribbon
+		[5] = { itemID = 223076 }; -- Kibble
+	};
+	{
+		Name = AL["Corla, Herald of Twilight"];
+		npcID = 39679;
+		[1] = { itemID = 212713 }; -- Grace of the Herald
+		[2] = { itemID = 212826 }; -- Corla's Baton
+		[3] = { itemID = 203224 }; -- Renouncer's Cowl
+		[4] = { itemID = 211728 }; -- Armbands of Change
+		[5] = { itemID = 212654 }; -- Signet of Transformation
+	};
+	{
+		Name = AL["Karsh Steelbender <Twilight Armorer>"];
+		npcID = 39698;
+		[1] = { itemID = 218298 }; -- Steelbender's Masterpiece
+		[2] = { itemID = 213383 }; -- Bracers of Cooled Anger
+		[3] = { itemID = 215448 }; -- Heat Wave Leggings
+		[4] = { itemID = 217674 }; -- Burned Gatherings
+		[5] = { itemID = 218255 }; -- Quicksilver Amulet
+		[16] = { itemID = 1180884 }; -- Draconic Warhorn: Karsh Steelbender
+	};
+	{
+		Name = AL["Rom'ogg Bonecrusher"];
+		npcID = 39665;
+		[1] = { itemID = 232104 }; -- Torturer's Mercy
+		[2] = { itemID = 232147 }; -- Shield of the Iron Maiden
+		[3] = { itemID = 231828 }; -- Inquisition Robes
+		[4] = { itemID = 231871 }; -- Manacles of Pain
+		[5] = { itemID = 232061 }; -- Skullcracker Ring
+	};
+};
 -------------------------------------------------
 --- Blackrock Mountain: Lower Blackrock Spire ---
 -------------------------------------------------
@@ -2073,6 +2135,64 @@ AtlasLoot_Data["Gnomeregan"] = {
 		[13] = { itemID = 9538 }; --Talvash's Gold Ring
 	};
 };
+
+AtlasLoot_Data["KarazhanCrypts"] = {
+	Module = "AtlasLoot_OriginalWoW";
+	Name = AL["The Karazhan Crypts"];
+	Type = "ClassicDungeonExt";
+	--Map = "Gnomeregan";
+	{
+		Name = AL["Cynfael"];
+		npcID = 254401;
+		[1] = { itemID = 252821 }; -- Twinglaive of the Vampire Council
+		[2] = { itemID = 252906 }; -- Twinglaive of Eternal Slumber
+		[3] = { itemID = 254389 }; -- Purified Vitae Chalice
+		[4] = { itemID = 254432 }; -- Funeral Trousers
+		[5] = { itemID = 254758 }; -- Tombstone Cover
+		[6] = { itemID = 254888 }; -- Deathsworn Spaulders
+		[16] = { itemID = 254068 }; -- Sigil of Cynfael
+	};
+	{
+		Name = AL["Forgotten Avatar"];
+		npcID = 254413;
+		[1] = { itemID = 253151 }; -- Sorrow of the Eclipse
+		[2] = { itemID = 253442 }; -- Cryptsteel Maul
+		[3] = { itemID = 253634 }; -- Dakrya, Hand of the Second Eidolon
+		[4] = { itemID = 253720 }; -- Mourner's Cloak
+		[5] = { itemID = 254260 }; -- Remembrance of Aegwynn
+		[6] = { itemID = 254303 }; -- Missing Promise
+		[7] = { itemID = 254672 }; -- Niko's Amulet
+		[8] = { itemID = 254845 }; -- Funeral Mantle
+		[9] = { itemID = 254984 }; -- Soulsteel Shoulderguards
+		[10] = { itemID = 255061 }; -- Blossom of Sorrow
+		[16] = { itemID = 254077 }; -- Forgotten Core
+		[18] = { itemID = 254067 }; -- Sigil of Dryn Miel
+		[20] = { itemID = 1179133 }; -- Reins of the Mawsworn Charger
+
+	};
+	{
+		Name = AL["Kurgoth Doomreaver"];
+		npcID = 254406;
+		[1] = { itemID = 253677 }; -- Forgiveness
+		[2] = { itemID = 253763 }; -- Drape of the Horse
+		[3] = { itemID = 254629 }; -- Soulsteel Legplates
+		[4] = { itemID = 254715 }; -- Forgotten Aegis of Kings
+		[5] = { itemID = 255104 }; -- Concentrated DeathRecap_GetEvents
+		[16] = { itemID = 254069 }; -- Sigil of Kurgoth Doomreaver
+	};
+	{
+		Name = AL["The Judgement of Sinners"];
+		npcID = 254405;
+		[1] = { itemID = 253004 }; -- Ghoul Spine Cleaver
+		[2] = { itemID = 253053 }; -- Conduit of Sinners
+		[3] = { itemID = 253102 }; -- Spinesplinter Arbalest
+		[4] = { itemID = 254532 }; -- Deathsworn Pants
+		[5] = { itemID = 254941 }; -- Bonelink Mantle
+		[16] = { itemID = 254070 }; -- Sigil of Sinners
+	};
+};
+
+
 ----------------
 --- Maraudon ---
 ----------------
@@ -4398,12 +4518,12 @@ AtlasLoot_Data["T0"] = {
 		Name = AL["Cadaverous Garb"];
 		[1] = { itemID = 14011 }; --Cadaverous Crown
 		[2] = { itemID = 14012 }; --Cadaverous Shoulders
-		[3] = { itemID = 14013 }; --Cadaverous Armor
+		[3] = { itemID = 14637 }; --Cadaverous Armor
 		[4] = { itemID = 14014 }; --Cadaverous Cuffs
-		[5] = { itemID = 14015 }; --Cadaverous Gloves
-		[6] = { itemID = 14016 }; --Cadaverous Belt
-		[7] = { itemID = 14017 }; --Cadaverous Leggings
-		[8] = { itemID = 14018 }; --Cadaverous Walkers
+		[5] = { itemID = 14640 }; --Cadaverous Gloves
+		[6] = { itemID = 14636 }; --Cadaverous Belt
+		[7] = { itemID = 14638 }; --Cadaverous Leggings
+		[8] = { itemID = 14641 }; --Cadaverous Walkers
 	};
 	{
 		Name = AL["Bloodmail Regalia"];
@@ -4418,12 +4538,12 @@ AtlasLoot_Data["T0"] = {
 	};
 	{
 		Name = AL["Deathbone Guardian"];
-		[1] = { itemID = 14026 }; --Deathbone Sabatons
-        [2] = { itemID = 14027 }; --Deathbone Legguards
-        [3] = { itemID = 14028 }; --Deathbone Girdle
-        [4] = { itemID = 14029 }; --Deathbone Gauntlets
+		[1] = { itemID = 14621 }; --Deathbone Sabatons
+        [2] = { itemID = 14623 }; --Deathbone Legguards
+        [3] = { itemID = 14620 }; --Deathbone Girdle
+        [4] = { itemID = 14622 }; --Deathbone Gauntlets
         [5] = { itemID = 14030 }; --Deathbone Wristguards
-        [6] = { itemID = 14031 }; --Deathbone Chestplate
+        [6] = { itemID = 14624 }; --Deathbone Chestplate
         [7] = { itemID = 14032 }; --Deathbone Pauldrons
         [8] = { itemID = 14033 }; --Deathbone Helmet
 	};

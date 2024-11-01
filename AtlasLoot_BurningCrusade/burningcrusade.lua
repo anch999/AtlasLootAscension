@@ -2220,6 +2220,124 @@ AtlasLoot_Data["MagistersTerrace"] = {
 		[1] = { itemID = 35516 }; --Sun Touched Satchel
 	};
 };
+
+AtlasLoot_Data["KarazhanCryptsTBC"] = {
+	Module = "AtlasLoot_BurningCrusade";
+	Name = AL["The Karazhan Crypts"];
+	Type = "BCDungeon";
+	--Map = "Gnomeregan";
+	{
+		Name = AL["Cynfael"];
+		npcID = 254401;
+		[1] = { itemID = 255169 }; -- Twinglaive of the Vampire Council
+		[2] = { itemID = 255212 }; -- Twinglaive of Eternal Slumber
+		[3] = { itemID = 259322 }; -- Purified Vitae Chalice
+		[4] = { itemID = 259365 }; -- Funeral Trousers
+		[5] = { itemID = 259655 }; -- Tombstone Cover
+		[6] = { itemID = 259741 }; -- Deathsworn Spaulders
+		[16] = { itemID = 254068 }; -- Sigil of Cynfael
+	};
+	{
+		Name = AL["Forgotten Avatar"];
+		npcID = 254413;
+		[1] = { itemID = 255677 }; -- Sorrow of the Eclipse
+		[2] = { itemID = 255720 }; -- Cryptsteel Maul
+		[3] = { itemID = 255809 }; -- Dakrya, Hand of the Second Eidolon
+		[4] = { itemID = 257092 }; -- Mourner's Cloak
+		[5] = { itemID = 258412 }; -- Remembrance of Aegwynn
+		[6] = { itemID = 258836 }; -- Missing Promise
+		[7] = { itemID = 259537 }; -- Niko's Amulet
+		[8] = { itemID = 259698 }; -- Funeral Mantle
+		[9] = { itemID = 259827 }; -- Soulsteel Shoulderguards
+		[10] = { itemID = 259870 }; -- Blossom of Sorrow
+		[16] = { itemID = 254077 }; -- Forgotten Core
+		[18] = { itemID = 254067 }; -- Sigil of Dryn Miel
+		[20] = { itemID = 1179133 }; -- Reins of the Mawsworn Charger
+
+	};
+	{
+		Name = AL["Kurgoth Doomreaver"];
+		npcID = 254406;
+		[1] = { itemID = 255917 }; -- Forgiveness
+		[2] = { itemID = 257135 }; -- Drape of the Horse
+		[3] = { itemID = 259494 }; -- Soulsteel Legplates
+		[4] = { itemID = 259580 }; -- Forgotten Aegis of Kings
+		[5] = { itemID = 259913 }; -- Concentrated DeathRecap_GetEvents
+		[16] = { itemID = 254069 }; -- Sigil of Kurgoth Doomreaver
+	};
+	{
+		Name = AL["The Judgement of Sinners"];
+		npcID = 254405;
+		[1] = { itemID = 255301 }; -- Ghoul Spine Cleaver
+		[2] = { itemID = 255373 }; -- Conduit of Sinners
+		[3] = { itemID = 255509 }; -- Spinesplinter Arbalest
+		[4] = { itemID = 259408 }; -- Deathsworn Pants
+		[5] = { itemID = 259784 }; -- Bonelink Mantle
+		[16] = { itemID = 254070 }; -- Sigil of Sinners
+	};
+};
+
+--------------------------------------------
+--- Blackrock Mountain: Blackrock Caverns ---
+--------------------------------------------
+
+AtlasLoot_Data["BlackrockCavernsTBC"] = {
+	Module = "AtlasLoot_BurningCrusade";
+	Name = AL["Blackrock Caverns"];
+	Type = "BCDungeon";
+	--Map = "BlackrockDepths";
+	{
+		Name = AL["Ascendant Lord Obsidius"];
+		npcID = 39705;
+		[1] = { itemID = 252075 }; -- Amber Messenger
+		[2] = { itemID = 252711 }; -- Witching Hourglass
+		[3] = { itemID = 252771 }; -- Crepuscular Shield
+		[4] = { itemID = 251946 }; -- Raz's Pauldrons
+		[5] = { itemID = 251989 }; -- Twitching Shadows
+		[6] = { itemID = 252032 }; -- Carrier Wave Pendant
+		[7] = { itemID = 252118 }; -- Clutches of Dying Light
+		[8] = { itemID = 252161 }; -- Willowy Crown
+		[9] = { itemID = 252615 }; -- Kyrstel Mantle
+		[16] = { itemID = 6011 }; -- Recipe: Flask of Mighty Power
+	};
+	{
+		Name = AL["Beauty"];
+		npcID = 39700;
+		[1] = { itemID = 250876 }; -- Beauty's Favorite Bone
+		[2] = { itemID = 250663 }; -- Beauty's Chew Toy
+		[3] = { itemID = 250706 }; -- Beauty's Plate
+		[4] = { itemID = 250749 }; -- Beauty's Silken Ribbon
+		[5] = { itemID = 250833 }; -- Kibble
+	};
+	{
+		Name = AL["Corla, Herald of Twilight"];
+		npcID = 39679;
+		[1] = { itemID = 247779 }; -- Grace of the Herald
+		[2] = { itemID = 247827 }; -- Corla's Baton
+		[3] = { itemID = 46418 }; -- Renouncer's Cowl
+		[4] = { itemID = 46461 }; -- Armbands of Change
+		[5] = { itemID = 247736 }; -- Signet of Transformation
+	};
+	{
+		Name = AL["Karsh Steelbender <Twilight Armorer>"];
+		npcID = 39698;
+		[1] = { itemID = 250620 }; -- Steelbender's Masterpiece
+		[2] = { itemID = 247936 }; -- Bracers of Cooled Anger
+		[3] = { itemID = 249391 }; -- Heat Wave Leggings
+		[4] = { itemID = 250121 }; -- Burned Gatherings
+		[5] = { itemID = 250212 }; -- Quicksilver Amulet
+		[16] = { itemID = 1180884 }; -- Draconic Warhorn: Karsh Steelbender
+	};
+	{
+		Name = AL["Rom'ogg Bonecrusher"];
+		npcID = 39665;
+		[1] = { itemID = 251860 }; -- Torturer's Mercy
+		[2] = { itemID = 251903 }; -- Shield of the Iron Maiden
+		[3] = { itemID = 251086 }; -- Inquisition Robes
+		[4] = { itemID = 251774 }; -- Manacles of Pain
+		[5] = { itemID = 251817 }; -- Skullcracker Ring
+	};
+};
 -------------------------------------
 --- Sunwell Isle: Sunwell Plateau ---
 -------------------------------------
