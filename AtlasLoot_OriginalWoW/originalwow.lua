@@ -1,4 +1,5 @@
-local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot");
+local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
+local alDif = AtlasLoot.Difficulties
 local BabbleBoss = AtlasLoot_GetLocaleLibBabble("LibBabble-Boss-3.0")
 local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0")
 local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
@@ -688,7 +689,7 @@ AtlasLoot_Data["BlackrockDepths"] = {
 		[4] = { itemID = 11631 }; --Stoneshell Guard
 		[5] = { itemID = 11630 }; --Rockshard Pellets
 		[16] = { itemID = 11813 }; --Formula: Smoking Heart of the Mountain
-		[17] = { itemID = 11811, "=q3=Smoking Heart of the Mountain", [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal };
+		[17] = { itemID = 11811, "=q3=Smoking Heart of the Mountain", [alDif.MAX_DIF] = alDif.Normal };
 	};
 	{
 		Name = BabbleBoss["High Interrogator Gerstahn"];
@@ -1540,7 +1541,7 @@ AtlasLoot_Data["MoltenCore"] = {
 		[21] = { itemID = 17182 }; --Sulfuras, Hand of Ragnaros
 		[23] = { itemID = 19017 }; --Essence of the Firelord
 		[24] = { itemID = 19019 }; --Thunderfury, Blessed Blade of the Windseeker
-		[25] = { itemID = 102107, [AtlasLoot.Difficulties.MIN_DIF] = AtlasLoot.Difficulties.Heroic }; -- Reins of the Magmatic Steed
+		[25] = { itemID = 102107, [alDif.MIN_DIF] = alDif.Heroic }; -- Reins of the Magmatic Steed
 	};
 	{
 		Name = "Random Boss Drops";
@@ -4324,7 +4325,7 @@ AtlasLoot_Data["Onyxia60"] = {
 		[21] = { itemID = 18406 }; -- Onyxia Blood Talisman
 		[23] = { itemID = 15410 }; -- Scale of Onyxia
 		[24] = { itemID = 17966 }; --Onyxia Hide Backpack
-		[26] = { itemID = 49636, [AtlasLoot.Difficulties.MIN_DIF] = AtlasLoot.Difficulties.Heroic }; -- Reins of the Onyxian Drake
+		[26] = { itemID = 49636, [alDif.MIN_DIF] = alDif.Heroic }; -- Reins of the Onyxian Drake
 	};
 };
 
@@ -4555,102 +4556,102 @@ AtlasLoot_Data["T0.5"] = {
 	Type = "ClassicDungeonExt";
 	{
 		Name = AL["Feralheart Raiment"];
-		[1] = { itemID = 22109, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal };  --Feralheart Cowl
-		[2] = { itemID = 22112, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal };  --Feralheart Spaulders
-		[3] = { itemID = 22113, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal };  --Feralheart Vest
-		[4] = { itemID = 22108, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal };  --Feralheart Bracers
-		[5] = { itemID = 22110, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal };  --Feralheart Gloves
-		[6] = { itemID = 22106, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal };  --Feralheart Belt
-		[7] = { itemID = 22111, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal };  --Feralheart Kilt
-		[8] = { itemID = 22107, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal };  --Feralheart Boots
+		[1] = { itemID = 22109, [alDif.MAX_DIF] = alDif.Normal };  --Feralheart Cowl
+		[2] = { itemID = 22112, [alDif.MAX_DIF] = alDif.Normal };  --Feralheart Spaulders
+		[3] = { itemID = 22113, [alDif.MAX_DIF] = alDif.Normal };  --Feralheart Vest
+		[4] = { itemID = 22108, [alDif.MAX_DIF] = alDif.Normal };  --Feralheart Bracers
+		[5] = { itemID = 22110, [alDif.MAX_DIF] = alDif.Normal };  --Feralheart Gloves
+		[6] = { itemID = 22106, [alDif.MAX_DIF] = alDif.Normal };  --Feralheart Belt
+		[7] = { itemID = 22111, [alDif.MAX_DIF] = alDif.Normal };  --Feralheart Kilt
+		[8] = { itemID = 22107, [alDif.MAX_DIF] = alDif.Normal };  --Feralheart Boots
 	};
 	{
 		Name = AL["Beastmaster Armor"];  
-		[1] = { itemID = 22013, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal };  --Beastmaster's Cap
-		[2] = { itemID = 22016, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal };  --Beastmaster's Mantle
-		[3] = { itemID = 22060, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal };  --Beastmaster's Tunic
-		[4] = { itemID = 22011, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal };  --Beastmaster's Bindings
-		[5] = { itemID = 22015, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal };  --Beastmaster's Gloves
-		[6] = { itemID = 22010, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal };  --Beastmaster's Belt
-		[7] = { itemID = 22017, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal };  --Beastmaster's Pants
-		[8] = { itemID = 22061, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal };  --Beastmaster's Boots
+		[1] = { itemID = 22013, [alDif.MAX_DIF] = alDif.Normal };  --Beastmaster's Cap
+		[2] = { itemID = 22016, [alDif.MAX_DIF] = alDif.Normal };  --Beastmaster's Mantle
+		[3] = { itemID = 22060, [alDif.MAX_DIF] = alDif.Normal };  --Beastmaster's Tunic
+		[4] = { itemID = 22011, [alDif.MAX_DIF] = alDif.Normal };  --Beastmaster's Bindings
+		[5] = { itemID = 22015, [alDif.MAX_DIF] = alDif.Normal };  --Beastmaster's Gloves
+		[6] = { itemID = 22010, [alDif.MAX_DIF] = alDif.Normal };  --Beastmaster's Belt
+		[7] = { itemID = 22017, [alDif.MAX_DIF] = alDif.Normal };  --Beastmaster's Pants
+		[8] = { itemID = 22061, [alDif.MAX_DIF] = alDif.Normal };  --Beastmaster's Boots
 	};
 	{
 		Name = AL["Sorcerer's Regalia"];
-		[1] = { itemID = 22065, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal };  --Sorcerer's Crown
-		[2] = { itemID = 22068, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal };  --Sorcerer's Mantle
-		[3] = { itemID = 22069, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal };  --Sorcerer's Robes
-		[4] = { itemID = 22063, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal };  --Sorcerer's Bindings
-		[5] = { itemID = 22066, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal };  --Sorcerer's Gloves
-		[6] = { itemID = 22062, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal };  --Sorcerer's Belt
-		[7] = { itemID = 22067, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal };  --Sorcerer's Leggings
-		[8] = { itemID = 22064, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal };  --Sorcerer's Boots
+		[1] = { itemID = 22065, [alDif.MAX_DIF] = alDif.Normal };  --Sorcerer's Crown
+		[2] = { itemID = 22068, [alDif.MAX_DIF] = alDif.Normal };  --Sorcerer's Mantle
+		[3] = { itemID = 22069, [alDif.MAX_DIF] = alDif.Normal };  --Sorcerer's Robes
+		[4] = { itemID = 22063, [alDif.MAX_DIF] = alDif.Normal };  --Sorcerer's Bindings
+		[5] = { itemID = 22066, [alDif.MAX_DIF] = alDif.Normal };  --Sorcerer's Gloves
+		[6] = { itemID = 22062, [alDif.MAX_DIF] = alDif.Normal };  --Sorcerer's Belt
+		[7] = { itemID = 22067, [alDif.MAX_DIF] = alDif.Normal };  --Sorcerer's Leggings
+		[8] = { itemID = 22064, [alDif.MAX_DIF] = alDif.Normal };  --Sorcerer's Boots
 	};
 	{
 		Name = AL["Soulforge Armor"];  
-		[1] = { itemID = 22091, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal };  --Soulforge Helm
-		[2] = { itemID = 22093, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal };  --Soulforge Spaulders
-		[3] = { itemID = 22089, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal };  --Soulforge Breastplate
-		[4] = { itemID = 22088, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal };  --Soulforge Bracers
-		[5] = { itemID = 22090, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal };  --Soulforge Gauntlets
-		[6] = { itemID = 22086, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal };  --Soulforge Belt
-		[7] = { itemID = 22092, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal };  --Soulforge Legplates
-		[8] = { itemID = 22087, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal };  --Soulforge Boots
+		[1] = { itemID = 22091, [alDif.MAX_DIF] = alDif.Normal };  --Soulforge Helm
+		[2] = { itemID = 22093, [alDif.MAX_DIF] = alDif.Normal };  --Soulforge Spaulders
+		[3] = { itemID = 22089, [alDif.MAX_DIF] = alDif.Normal };  --Soulforge Breastplate
+		[4] = { itemID = 22088, [alDif.MAX_DIF] = alDif.Normal };  --Soulforge Bracers
+		[5] = { itemID = 22090, [alDif.MAX_DIF] = alDif.Normal };  --Soulforge Gauntlets
+		[6] = { itemID = 22086, [alDif.MAX_DIF] = alDif.Normal };  --Soulforge Belt
+		[7] = { itemID = 22092, [alDif.MAX_DIF] = alDif.Normal };  --Soulforge Legplates
+		[8] = { itemID = 22087, [alDif.MAX_DIF] = alDif.Normal };  --Soulforge Boots
 	};
 	{
 		Name = AL["Vestments of the Virtuous"];  
-		[1] = { itemID = 22080, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal };  --Virtuous Crown
-		[2] = { itemID = 22082, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal };  --Virtuous Mantle
-		[3] = { itemID = 22083, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal };  --Virtuous Robe
-		[4] = { itemID = 22079, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal };  --Virtuous Bracers
-		[5] = { itemID = 22081, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal };  --Virtuous Gloves
-		[6] = { itemID = 22078, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal };  --Virtuous Belt
-		[7] = { itemID = 22085, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal };  --Virtuous Skirt
-		[8] = { itemID = 22084, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal };  --Virtuous Sandals
+		[1] = { itemID = 22080, [alDif.MAX_DIF] = alDif.Normal };  --Virtuous Crown
+		[2] = { itemID = 22082, [alDif.MAX_DIF] = alDif.Normal };  --Virtuous Mantle
+		[3] = { itemID = 22083, [alDif.MAX_DIF] = alDif.Normal };  --Virtuous Robe
+		[4] = { itemID = 22079, [alDif.MAX_DIF] = alDif.Normal };  --Virtuous Bracers
+		[5] = { itemID = 22081, [alDif.MAX_DIF] = alDif.Normal };  --Virtuous Gloves
+		[6] = { itemID = 22078, [alDif.MAX_DIF] = alDif.Normal };  --Virtuous Belt
+		[7] = { itemID = 22085, [alDif.MAX_DIF] = alDif.Normal };  --Virtuous Skirt
+		[8] = { itemID = 22084, [alDif.MAX_DIF] = alDif.Normal };  --Virtuous Sandals
 	};
 	{
 		Name = AL["Darkmantle Armor"];
-		[1] = { itemID = 22005, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal };  --Darkmantle Cap
-		[2] = { itemID = 22008, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal };  --Darkmantle Spaulders
-		[3] = { itemID = 22009, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal };  --Darkmantle Tunic
-		[4] = { itemID = 22004, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal };  --Darkmantle Bracers
-		[5] = { itemID = 22006, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal };  --Darkmantle Gloves
-		[6] = { itemID = 22002, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal };  --Darkmantle Belt
-		[7] = { itemID = 22007, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal };  --Darkmantle Pants
-		[8] = { itemID = 22003, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal };  --Darkmantle Boots
+		[1] = { itemID = 22005, [alDif.MAX_DIF] = alDif.Normal };  --Darkmantle Cap
+		[2] = { itemID = 22008, [alDif.MAX_DIF] = alDif.Normal };  --Darkmantle Spaulders
+		[3] = { itemID = 22009, [alDif.MAX_DIF] = alDif.Normal };  --Darkmantle Tunic
+		[4] = { itemID = 22004, [alDif.MAX_DIF] = alDif.Normal };  --Darkmantle Bracers
+		[5] = { itemID = 22006, [alDif.MAX_DIF] = alDif.Normal };  --Darkmantle Gloves
+		[6] = { itemID = 22002, [alDif.MAX_DIF] = alDif.Normal };  --Darkmantle Belt
+		[7] = { itemID = 22007, [alDif.MAX_DIF] = alDif.Normal };  --Darkmantle Pants
+		[8] = { itemID = 22003, [alDif.MAX_DIF] = alDif.Normal };  --Darkmantle Boots
 	};
 	{
 		Name = AL["The Five Thunders"];
-		[1] = { itemID = 22097, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal };  --Coif of The Five Thunders
-		[2] = { itemID = 22101, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal };  --Pauldrons of The Five Thunders
-		[3] = { itemID = 22102, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal };  --Vest of The Five Thunders
-		[4] = { itemID = 22095, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal };  --Bindings of The Five Thunders
-		[5] = { itemID = 22099, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal };  --Gauntlets of The Five Thunders
-		[6] = { itemID = 22098, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal };  --Cord of The Five Thunders
-		[7] = { itemID = 22100, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal };  --Kilt of The Five Thunders
-		[8] = { itemID = 22096, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal };  --Boots of The Five Thunders
+		[1] = { itemID = 22097, [alDif.MAX_DIF] = alDif.Normal };  --Coif of The Five Thunders
+		[2] = { itemID = 22101, [alDif.MAX_DIF] = alDif.Normal };  --Pauldrons of The Five Thunders
+		[3] = { itemID = 22102, [alDif.MAX_DIF] = alDif.Normal };  --Vest of The Five Thunders
+		[4] = { itemID = 22095, [alDif.MAX_DIF] = alDif.Normal };  --Bindings of The Five Thunders
+		[5] = { itemID = 22099, [alDif.MAX_DIF] = alDif.Normal };  --Gauntlets of The Five Thunders
+		[6] = { itemID = 22098, [alDif.MAX_DIF] = alDif.Normal };  --Cord of The Five Thunders
+		[7] = { itemID = 22100, [alDif.MAX_DIF] = alDif.Normal };  --Kilt of The Five Thunders
+		[8] = { itemID = 22096, [alDif.MAX_DIF] = alDif.Normal };  --Boots of The Five Thunders
 	};
 	{
 		Name = AL["Deathmist Raiment"];
-		[1] = { itemID = 22074, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal };  --Deathmist Mask
-		[2] = { itemID = 22073, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal };  --Deathmist Mantle
-		[3] = { itemID = 22075, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal };  --Deathmist Robe
-		[4] = { itemID = 22071, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal };  --Deathmist Bracers
-		[5] = { itemID = 22077, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal };  --Deathmist Wraps
-		[6] = { itemID = 22070, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal };  --Deathmist Belt
-		[7] = { itemID = 22072, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal };  --Deathmist Leggings
-		[8] = { itemID = 22076, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal };  --Deathmist Sandals
+		[1] = { itemID = 22074, [alDif.MAX_DIF] = alDif.Normal };  --Deathmist Mask
+		[2] = { itemID = 22073, [alDif.MAX_DIF] = alDif.Normal };  --Deathmist Mantle
+		[3] = { itemID = 22075, [alDif.MAX_DIF] = alDif.Normal };  --Deathmist Robe
+		[4] = { itemID = 22071, [alDif.MAX_DIF] = alDif.Normal };  --Deathmist Bracers
+		[5] = { itemID = 22077, [alDif.MAX_DIF] = alDif.Normal };  --Deathmist Wraps
+		[6] = { itemID = 22070, [alDif.MAX_DIF] = alDif.Normal };  --Deathmist Belt
+		[7] = { itemID = 22072, [alDif.MAX_DIF] = alDif.Normal };  --Deathmist Leggings
+		[8] = { itemID = 22076, [alDif.MAX_DIF] = alDif.Normal };  --Deathmist Sandals
 	};
 	{
 		Name = AL["Battlegear of Heroism"];
-		[1] = { itemID = 21999, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal };  --Helm of Heroism
-		[2] = { itemID = 22001, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal };  --Spaulders of Heroism
-		[3] = { itemID = 21997, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal };  --Breastplate of Heroism
-		[4] = { itemID = 21996, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal };  --Bracers of Heroism
-		[5] = { itemID = 21998, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal };  --Gauntlets of Heroism
-		[6] = { itemID = 21994, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal };  --Belt of Heroism
-		[7] = { itemID = 22000, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal };  --Legplates of Heroism
-		[8] = { itemID = 21995, [AtlasLoot.Difficulties.MAX_DIF] = AtlasLoot.Difficulties.Normal };  --Boots of Heroism
+		[1] = { itemID = 21999, [alDif.MAX_DIF] = alDif.Normal };  --Helm of Heroism
+		[2] = { itemID = 22001, [alDif.MAX_DIF] = alDif.Normal };  --Spaulders of Heroism
+		[3] = { itemID = 21997, [alDif.MAX_DIF] = alDif.Normal };  --Breastplate of Heroism
+		[4] = { itemID = 21996, [alDif.MAX_DIF] = alDif.Normal };  --Bracers of Heroism
+		[5] = { itemID = 21998, [alDif.MAX_DIF] = alDif.Normal };  --Gauntlets of Heroism
+		[6] = { itemID = 21994, [alDif.MAX_DIF] = alDif.Normal };  --Belt of Heroism
+		[7] = { itemID = 22000, [alDif.MAX_DIF] = alDif.Normal };  --Legplates of Heroism
+		[8] = { itemID = 21995, [alDif.MAX_DIF] = alDif.Normal };  --Boots of Heroism
 	};
 };
 

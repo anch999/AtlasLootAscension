@@ -256,12 +256,12 @@ function AtlasLoot:ShowWishListDropDown(btn, show, panelButton)
 		AtlasLoot:WishListAddDropClick("Own", AtlasLootWishList["Options"][playerName]["DefaultWishList"][3])
 		return
 	else
-		if AtlasLoot.Dewdrop:IsOpen(btn) then
-			AtlasLoot.Dewdrop:Close(1)
+		if self.Dewdrop:IsOpen(btn) then
+			self.Dewdrop:Close(1)
 		else
 			local setOptions = function(level, value)
 				if level == 1 then
-					AtlasLoot.Dewdrop:AddLine(
+					self.Dewdrop:AddLine(
 						"text", AL["Own Wishlists"],
 						"tooltipTitle", AL["Own Wishlists"],
 						"value", "OwnWishlists",
@@ -272,7 +272,7 @@ function AtlasLoot:ShowWishListDropDown(btn, show, panelButton)
 						"func", function() AtlasLoot:WishListAddDropClick() end,
 						"notCheckable", true
 					)
-					AtlasLoot.Dewdrop:AddLine(
+					self.Dewdrop:AddLine(
 						"text", AL["Shared Wishlists"],
 						"tooltipTitle", AL["Shared Wishlists"],
 						"value", "SharedWishlists",
@@ -283,7 +283,7 @@ function AtlasLoot:ShowWishListDropDown(btn, show, panelButton)
 						"func", function() AtlasLoot:WishListAddDropClick() end,
 						"notCheckable", true
 					)
-					AtlasLoot.Dewdrop:AddLine(
+					self.Dewdrop:AddLine(
 						"text", AL["Add Wishlist"],
 						"func", function() AtlasLoot:AddWishList() end,
 						'closeWhenClicked', true,
@@ -295,7 +295,7 @@ function AtlasLoot:ShowWishListDropDown(btn, show, panelButton)
 					if value == "OwnWishlists" then
 						for k,v in pairs(AtlasLootWishList["Own"]) do
 							if type(v) == "table" then
-								AtlasLoot.Dewdrop:AddLine(
+								self.Dewdrop:AddLine(
 									"text", v.Name,
 									"tooltipTitle", v.Name,
 									"func", function() AtlasLoot:WishListAddDropClick("Own", k, "", show) end,
@@ -309,7 +309,7 @@ function AtlasLoot:ShowWishListDropDown(btn, show, panelButton)
 					elseif value == "SharedWishlists" then
 						for k,v in pairs(AtlasLootWishList["Shared"]) do
 							if type(v) == "table" then
-								AtlasLoot.Dewdrop:AddLine(
+								self.Dewdrop:AddLine(
 									"text", v.Name,
 									"tooltipTitle", v.Name,
 									"func", function() AtlasLoot:WishListAddDropClick("Own", k, "", show) end,
@@ -322,7 +322,7 @@ function AtlasLoot:ShowWishListDropDown(btn, show, panelButton)
 						end
 					end
 				end
-				AtlasLoot.Dewdrop:AddLine(
+				self.Dewdrop:AddLine(
                 'text', AL["Close Menu"],
                 'textR', 0,
                 'textG', 1,
@@ -333,7 +333,7 @@ function AtlasLoot:ShowWishListDropDown(btn, show, panelButton)
                 'notCheckable', true
             )
 			end
-			AtlasLoot.Dewdrop:Open(btn,
+			self.Dewdrop:Open(btn,
 				"point", function(parent)
 					return "TOP", "BOTTOM"
 				end,
