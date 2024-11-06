@@ -211,7 +211,7 @@ local optframe = CreateFrame("Frame", "AtlasLootOptionsFrame")
         optframe.title:SetJustifyH("CENTER")
         optframe.title:SetSize(400,30)
         optframe.title:SetPoint("TOP", "AtlasLootOptionsFrame","TOP")
-        optframe.title:SetText(self.Version)
+        optframe.title:SetText("AtlasLoot: "..self.Version)
         optframe:SetScript("OnShow", function() self:OptionsOnShow() end)
 
 local opaque = CreateFrame("CheckButton", "AtlasLootOptionsFrameOpaque", AtlasLootOptionsFrame, "OptionsCheckButtonTemplate")

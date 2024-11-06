@@ -19,11 +19,6 @@ AtlasLoot:AddTooltip(frameb, tooltiptext)
 local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
 local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0")
 
---Establish version number and compatible version of Atlas
-local VERSION_MAJOR = "5";
-local VERSION_MINOR = "11";
-local VERSION_BOSSES = "04";
-
 AtlasLoot.AddonName = "AtlasLoot Ascension Edition"
 AtlasLoot.Version = GetAddOnMetadata("AtlasLoot", "Version")
 
@@ -66,7 +61,6 @@ local AtlasLootDBDefaults = {
         Opaque = false,
         ItemIDs = false,
         LastBoss = "EmptyTable",
-        AtlasLootVersion = "1",
         AtlasNaggedVersion = "",
         PartialMatching = true,
         LootBrowserStyle = 1,
@@ -200,11 +194,6 @@ function AtlasLoot:OnEnable()
         Atlasloot_SubTableFrame_Back:SetTexture(0, 0, 0, 0.05)
 	end
 
-	if((AtlasLootCharDB.AtlasLootVersion == nil) or (tonumber(AtlasLootCharDB.AtlasLootVersion) < 40301)) then
-		AtlasLootCharDB.AtlasLootVersion = VERSION_MAJOR..VERSION_MINOR..VERSION_BOSSES
-		self:OptionsInit()
-	end
-
     local panel = _G["AtlasLootOptionsFrame"]
     panel.name = AL["AtlasLoot"]
     InterfaceOptions_AddCategory(panel)
@@ -224,7 +213,9 @@ function AtlasLoot:OnEnable()
 	else
 		AtlasLootItemsFrame_Wishlist_UnLock:Enable()
 	end
+
 	LoadItemIDsDatabase()
+	self:PatchNotes()
 	self:LoadTradeskillRecipes()
 	self:PopulateProfessions()
 	self:CreateVanityCollection()
@@ -281,6 +272,8 @@ function AtlasLoot:SlashCommand(msg)
 		self:UpdateItemIDsDatabase(tonumber(arg1), tonumber(arg2))
 	elseif cmd == "clearcache" then
 		wipe(AtlasLootItemCache)
+	elseif cmd == "news" then
+		self:OpenNewsFrame(self.db.profile)
 	else
 		AtlasLootDefaultFrame:Show()
 	end
