@@ -4329,6 +4329,31 @@ AtlasLoot_Data["Onyxia60"] = {
 	};
 };
 
+AtlasLoot_Data["FrozenReach"] = {
+	Module = "AtlasLoot_OriginalWoW";
+	Name = AL["Frozen Reach"];
+	{
+		Name = AL["Frozen Reach"];
+		[1] = { itemID = 1519391 }; -- Reclaimed Blade of the Frozen Sepulcher
+		[2] = { itemID = 1519392 }; -- Frigid Bow of the Bonded Souls
+		[3] = { itemID = 1519380 }; -- Necklace of Frozen Reach
+		[4] = { itemID = 1519381 }; -- Beartooth Pendant
+		[5] = { itemID = 1519382 }; -- Alva's Gift
+		[6] = { itemID = 1519383 }; -- Ring of the Frozen Sepulcher
+		[7] = { itemID = 1519384 }; -- Ring of Bonded Souls
+		[8] = { itemID = 1519385 }; -- Signet of Arktos
+		[9] = { itemID = 1519386 }; -- Alva's Kinship Ring
+		[10] = { itemID = 1519387 }; -- Frozen Forgiveness
+		[11] = { itemID = 1519388 }; -- Frozen Vengeance
+		[12] = { itemID = 1519389 }; -- Call of the Sepulcher
+		[13] = { itemID = 1519390 }; -- Arktos' Resillience
+		[14] = { itemID = 1519379 }; -- Amulet of the Bonded Souls
+		[16] = { itemID = 1519393 }; -- Beastmaster's Whistle: Arktos
+		[17] = { itemID = 49095 }; -- Incarnation: Arktos
+		[18] = { itemID = 49093 }; -- Arktos
+	}
+}
+
 --------------------------
 --- Sets & Collections ---
 --------------------------

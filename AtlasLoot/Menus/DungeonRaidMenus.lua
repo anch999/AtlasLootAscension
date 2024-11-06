@@ -40,6 +40,8 @@ AtlasLoot_SubMenus["Dungeons and RaidsCLASSIC"] = {
     { "", "Uldaman", "", "Uldaman" },
     { "", "WailingCaverns", "", "Wailing Caverns" },
     { "", "ZulFarrak", "", "Zul'Farrak" },
+    { "Manastorm:", "BCKeys", "Header" },
+    { "", "FrozenReach", "", "Frozen Reach" },
 }
 
 AtlasLoot_SubMenus["Dungeons and RaidsTBC"] = {
@@ -76,6 +78,8 @@ AtlasLoot_SubMenus["Dungeons and RaidsTBC"] = {
     { "", "MagistersTerrace", "", "Magisters' Terrace" },
     { "", "KarazhanCryptsTBC", "", "The Karazhan Crypts" },
     { "", "BlackrockCavernsTBC", "", "Blackrock Caverns" },
+    { "Manastorm:", "BCKeys", "Header" },
+    { "", "FrozenReachTBC", "", "Frozen Reach" },
 }
 
 AtlasLoot_SubMenus["Dungeons and RaidsWRATH"] = {

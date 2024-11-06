@@ -2339,6 +2339,31 @@ AtlasLoot_Data["BlackrockCavernsTBC"] = {
 		[5] = { itemID = 251817 }; -- Skullcracker Ring
 	};
 };
+
+AtlasLoot_Data["FrozenReachTBC"] = {
+	Module = "AtlasLoot_OriginalWoW";
+	Name = AL["Frozen Reach"];
+	{
+		Name = AL["Frozen Reach"];
+		[1] = { itemID = 1529392 }; -- Frigid Bow of the Bonded Souls
+		[2] = { itemID = 1529391 }; -- Reclaimed Blade of the Frozen Sepulcher
+		[3] = { itemID = 1529390 }; -- Arktos' Resillience
+		[4] = { itemID = 1529389 }; -- Call of the Sepulcher
+		[5] = { itemID = 1529388 }; -- Frozen Vengeance
+		[6] = { itemID = 1529387 }; -- Frozen Forgiveness
+		[7] = { itemID = 1529386 }; -- Alva's Kinship Ring
+		[8] = { itemID = 1529385 }; -- Signet of Arktos
+		[9] = { itemID = 1529384 }; -- Ring of Bonded Souls
+		[10] = { itemID = 1529383 }; -- Ring of the Frozen Sepulcher
+		[11] = { itemID = 1529382 }; -- Alva's Gift
+		[12] = { itemID = 1529381 }; -- Beartooth Pendant
+		[13] = { itemID = 1529380 }; -- Necklace of Frozen Reach
+		[14] = { itemID = 1529379 }; -- Amulet of the Bonded Souls
+		[16] = { itemID = 1519393 }; -- Beastmaster's Whistle: Arktos
+		[17] = { itemID = 49095 }; -- Incarnation: Arktos
+		[18] = { itemID = 49093 }; -- Arktos
+	}
+}
 -------------------------------------
 --- Sunwell Isle: Sunwell Plateau ---
 -------------------------------------
