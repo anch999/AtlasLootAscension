@@ -16,6 +16,18 @@ local difficultyList = {
 	["Mythic 36"] = 40, ["Mythic 37"] = 41, ["Mythic 38"] = 42, ["Mythic 39"] = 43, ["Mythic 40"] = 44,
 };
 
+local itemLevels = {
+	{1, 101}, -- Vanilla / Classic
+	{101, 178}, -- TBC
+	{167, 290}, -- WoTLK
+}
+
+function AtlasLoot:MatchItemLevelBracket(ogILevel, newILevel)
+	for _, bracket in pairs(itemLevels) do
+		if ogILevel >= bracket[1] and ogILevel <= bracket[2] and ogILevel < newILevel and newILevel <= bracket[2] then return true end
+	end
+end
+
 function AtlasLoot:GetDifficulty(item)
 	if not item then return end
 	local _, description, _ = string.split("@", item.description, 3)
@@ -80,7 +92,16 @@ function AtlasLoot:UpdateItemIDsDatabase(firstID, lastID)
 								local itemType = GetItemInfoInstant(itemData.itemID) or nil
 								if dif[2] ~= 100 and dif[2] ~= 1 and dif[2] ~= 2 and itemType then
 									unknownIDs[dif[1]] = unknownIDs[dif[1]] or {}
-									unknownIDs[dif[1]][itemType.name:gsub( "%W", "" )..itemType.inventoryType] = itemData.itemID
+									unknownIDs[dif[1]][itemType.name:gsub( "%W", "" )..itemType.inventoryType] = unknownIDs[dif[1]][itemType.name:gsub( "%W", "" )..itemType.inventoryType] or {}
+									local itemTable = unknownIDs[dif[1]][itemType.name:gsub( "%W", "" )..itemType.inventoryType]
+										local function checkForDuplicate(itemID)
+											for _ , item in pairs(itemTable) do
+												if item[1] == itemID then return end
+											end
+										end
+									if not checkForDuplicate(itemData.itemID) then
+										tinsert(itemTable, {itemData.itemID, itemType.itemLevel})
+									end
 								end
 							end
 						end
@@ -104,11 +125,21 @@ function AtlasLoot:UpdateItemIDsDatabase(firstID, lastID)
 			if difficulty and item and item.name then
 				local foundName = item.name:gsub( "%W", "" )..item.inventoryType
 				if foundName then
-					local orignalID = unknownIDs[difficulty] and unknownIDs[difficulty][foundName]
-					if orignalID then
-						ItemIDsDatabase[orignalID] = ItemIDsDatabase[orignalID] or {}
-						ItemIDsDatabase[orignalID][difficultyList[difficulty]] = item.itemID
-						AtlasLootIDUpdateText:SetText("Last ItemID Added: "..firstID)
+					local itemData = unknownIDs[difficulty] and unknownIDs[difficulty][foundName]
+					if itemData then
+						local function parseItems()
+							for _ , storedItem in pairs(itemData) do
+								if self:MatchItemLevelBracket(storedItem[2], item.itemLevel) then
+									return storedItem[1]
+								end
+							end
+						end
+						local orignalID = parseItems()
+						if orignalID then
+							ItemIDsDatabase[orignalID] = ItemIDsDatabase[orignalID] or {}
+							ItemIDsDatabase[orignalID][difficultyList[difficulty]] = item.itemID
+							AtlasLootIDUpdateText:SetText("Last ItemID Added: "..firstID)
+						end
 					end
 				end
 			end
