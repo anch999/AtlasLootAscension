@@ -1,5 +1,7 @@
 
 local patchNotes = {
+    {"Version 7.4.2", "7th November, 2024"},
+    "Updated Karazhan/Gruul's Lair and Magtheridon's Lairs loot tables"
     {"Version 7.4.1", "7th November, 2024"},
     "Added a News/Patch notes frame",
     {"Version 7.4", "6th November, 2024"},
