@@ -1510,13 +1510,15 @@ AtlasLoot_Data["GruulsLair"] = {
 		[3] = { itemID = 28796 }; --Malefic Mask of the Shadows
 		[4] = { itemID = 28801 }; --Maulgar's Warhelm
 		[5] = { itemID = 28795 }; --Bladespire Warbands
-		[6] = { itemID = 28800 }; --Hammer of the Naaru
+		[6] = { itemID = 11680 }; --Boots of Converging Paths
+		[8] = { itemID = 12116 }; --Blindeye's Insightful Ward
+		[9] = { itemID = 12086 }; --Choker of Primal Wrath
+		[10] = { itemID = 28800 }; --Hammer of the Naaru
+		[11] = { itemID = 12124 }; --Gar Maul
+		[12] = { itemID = 12090 }; --Spellbreaker’s Edge
 		[16] = { itemID = 29764, lootTable = {"T4SHOULDER","Token"} }; --Pauldrons of the Fallen Defender
-		[18] = { itemID = 29434 }; --Badge of Justice
-		[19] = { itemID = 400751, [alDif.MAX_DIF] = alDif.Normal }; --Raider's Commendations
-		[20] = { itemID = 98570 }; --Mystic Orb
-		[22] = { itemID = 816252, droprate = { nil, "2%", "5%", "7%", "10%" } }; --Formula: Enchant Weapon - Undaunted Might
-		[24] = { itemID = 62311, droprate = "1%" }; --Pet Sigil
+		[18] = { itemID = 816252, droprate = { nil, "2%", "5%", "7%", "10%" } }; --Formula: Enchant Weapon - Undaunted Might
+		[20] = { itemID = 62311, droprate = "1%" }; --Pet Sigil
 	};
 	{
 		Name = BabbleBoss["Gruul the Dragonkiller"];
@@ -1527,16 +1529,19 @@ AtlasLoot_Data["GruulsLair"] = {
 		[4] = { itemID = 28827 }; --Gauntlets of the Dragonslayer
 		[5] = { itemID = 28810 }; --Windshear Boots
 		[6] = { itemID = 28824 }; --Gauntlets of Martial Perfection
-		[7] = { itemID = 28822 }; --Teeth of Gruul
-		[8] = { itemID = 28823 }; --Eye of Gruul
-		[9] = { itemID = 28830 }; --Dragonspine Trophy
-		[11] = { itemID = 31750 }; --Earthen Signet
+		[7] = { itemID = 11639 }; --Cloak of Brutal Winds
+		[8] = { itemID = 11688 }; --Signet of Elemental Savagery
+		[9] = { itemID = 28822 }; --Teeth of Gruul
+		[10] = { itemID = 28823 }; --Eye of Gruul
+		[11] = { itemID = 28830 }; --Dragonspine Trophy
+		[13] = { itemID = 31750 }; --Earthen Signet
 		[16] = { itemID = 29767, lootTable = {"T4LEGS","Token"} }; --Leggings of the Fallen Defender
-		[18] = { itemID = 29434 }; --Badge of Justice
-		[20] = { itemID = 28802 }; --Bloodmaw Magus-Blade
-		[21] = { itemID = 28794 }; --Axe of the Gronn Lords
-		[22] = { itemID = 28825 }; --Aldori Legacy Defender
-		[23] = { itemID = 28826 }; --Shuriken of Negation
+		[18] = { itemID = 28802 }; --Bloodmaw Magus-Blade
+		[19] = { itemID = 28794 }; --Axe of the Gronn Lords
+		[20] = { itemID = 28825 }; --Aldori Legacy Defender
+		[21] = { itemID = 28826 }; --Shuriken of Negation
+		[22] = { itemID = 12088 }; --Spinepiercer
+
 	};
 };
 
@@ -1831,26 +1836,26 @@ AtlasLoot_Data["HCMagtheridon"] = {
 		[4] = { itemID = 28778 }; --Terror Pit Girdle
 		[5] = { itemID = 28775 }; --Thundering Greathelm
 		[6] = { itemID = 28779 }; --Girdle of the Endless Pit
-		[7] = { itemID = 28789 }; --Eye of Magtheridon
-		[8] = { itemID = 28781 }; --Karaborian Talisman
-		[9] = { itemID = 28774 }; --Glaive of the Pit
-		[10] = { itemID = 28782 }; --Crystalheart Pulse-Staff
-		[11] = { itemID = 29458 }; --Aegis of the Vindicator
-		[12] = { itemID = 28783 }; --Eredar Wand of Obliteration
-		[14] = { itemID = 428775, [alDif.MIN_DIF] = alDif.Ascended }; --Bor -o G'urth, the Hand of Death
-		[15] = { itemID = 428776, [alDif.MIN_DIF] = alDif.Ascended }; --Lebed -o G'urth, the Finger of Death
+		[7] = { itemID = 12085 }; --Bracers of Demonic Prowess
+		[8] = { itemID = 28789 }; --Eye of Magtheridon
+		[9] = { itemID = 11687 }; --Ring of Hellfire Might
+		[10] = { itemID = 28781 }; --Karaborian Talisman
+		[12] = { itemID = 28774 }; --Glaive of the Pit
+		[13] = { itemID = 28782 }; --Crystalheart Pulse-Staff
+		[14] = { itemID = 29458 }; --Aegis of the Vindicator
+		[15] = { itemID = 28783 }; --Eredar Wand of Obliteration
 		[16] = { itemID = 29753, lootTable = {"T4CHEST","Token"} }; --Chestguard of the Fallen Defender
 		[17] = { itemID = 34845 }; --Pit Lord's Satchel
 		[18] = { itemID = 34846 }; --Black Sack of Gems
-		[20] = { itemID = 29434 }; --Badge of Justice
-		[21] = { itemID = 400751, [alDif.MAX_DIF] = alDif.Normal }; --Raider's Commendations
-		[22] = { itemID = 98570 }; --Mystic Orb
-		[24] = { itemID = 32385 }; --Magtheridon's Head
-		[25] = { itemID = 28791 }; --Ring of the Recalcitrant
-		[26] = { itemID = 28790 }; --Naaru Lightwarden's Band
-		[27] = { itemID = 28793 }; --Band of Crimson Fury
-		[28] = { itemID = 28792 }; --A'dal's Signet of Defense
-		[30] = { itemID = 60945, droprate = "1%" }; --Pet Sigil
+		[20] = { itemID = 32385, contentsPreview = {
+			{28791}, --Ring of the Recalcitrant
+			{28790}, --Naaru Lightwarden's Band
+			{28793}, --Band of Crimson Fury
+			{28792}, --A'dal's Signet of Defense
+		} }; --Magtheridon's Head
+		[22] = { itemID = 60945, droprate = "1%" }; --Pet Sigil
+		[24] = { itemID = 428775, [alDif.MIN_DIF] = alDif.Ascended }; --Bor -o G'urth, the Hand of Death
+		[25] = { itemID = 428776, [alDif.MIN_DIF] = alDif.Ascended }; --Lebed -o G'urth, the Finger of Death
 	};
 };
 ----------------
@@ -1887,6 +1892,7 @@ AtlasLoot_Data["Karazhan"] = {
 	};
 	{
 		Name = BabbleBoss["Attumen the Huntsman"];
+		NpcID = 16152;
 		[1] = { itemID = 28477 }; --Harbinger Bands
 		[2] = { itemID = 28507 }; --Handwraps of Flowing Thought
 		[3] = { itemID = 28508 }; --Gloves of Saintly Blessings
@@ -1896,14 +1902,14 @@ AtlasLoot_Data["Karazhan"] = {
 		[7] = { itemID = 28454 }; --Stalker's War Bands
 		[8] = { itemID = 28502 }; --Vambraces of Courage
 		[9] = { itemID = 28505 }; --Gauntlets of Renewed Hope
-		[16] = { itemID = 28509 }; --Worgen Claw Necklace
-		[17] = { itemID = 28510 }; --Spectral Band of Innervation
-		[18] = { itemID = 28504 }; --Steelhawk Crossbow
+		[11] = { itemID = 28509 }; --Worgen Claw Necklace
+		[12] = { itemID = 11249 }; -- Ring of Eternal Flame
+		[13] = { itemID = 28510 }; --Spectral Band of Innervation
+		[14] = { itemID = 28504 }; --Steelhawk Crossbow
+		[16] = { itemID = 229739 }; --Tome of Untold Secrets
 		[19] = { itemID = 30480 }; --Fiery Warhorse's Reins
-		[21] = { itemID = 29434 }; --Badge of Justice
-		[22] = { itemID = 400751, [alDif.MAX_DIF] = alDif.Normal }; --Raider's Commendations
-		[24] = { itemID = 23809 }; --Schematic: Stabilized Eternium Scope
-		[26] = { itemID = 60198, droprate = "1%" }; --Pet Sigil
+		[21] = { itemID = 23809 }; --Schematic: Stabilized Eternium Scope
+		[23] = { itemID = 60198, droprate = "1%" }; --Pet Sigil
 	};
 	{
 		Name = BabbleBoss["Moroes"];
@@ -1920,10 +1926,9 @@ AtlasLoot_Data["Karazhan"] = {
 		[18] = { itemID = 28525 }; --Signet of Unshakable Faith
 		[19] = { itemID = 28568 }; --Idol of the Avian Heart
 		[20] = { itemID = 28524 }; --Emerald Ripper
-		[22] = { itemID = 29434 }; --Badge of Justice
-		[23] = { itemID = 400751, [alDif.MAX_DIF] = alDif.Normal }; --Raider's Commendations
-		[25] = { itemID = 22559, droprate = { nil, "2%", "5%", "7%", "10%" } }; --Formula: Enchant Weapon - Mongoose
-		[27] = { itemID = 60166, droprate = "1%" }; --Pet Sigil
+		[22] = { itemID = 229739 }; --Tome of Untold Secrets
+		[24] = { itemID = 22559, droprate = { nil, "2%", "5%", "7%", "10%" } }; --Formula: Enchant Weapon - Mongoose
+		[26] = { itemID = 60166, droprate = "1%" }; --Pet Sigil
 	};
 	{
 		Name = "Keanna's Log (" .. AL["Quest Item"] .. ")";
@@ -1941,12 +1946,11 @@ AtlasLoot_Data["Karazhan"] = {
 		[7] = { itemID = 28519 }; --Gloves of Quickening
 		[8] = { itemID = 28512 }; --Bracers of Justice
 		[9] = { itemID = 28518 }; --Iron Gauntlets of the Maiden
+		[10] = { itemID = 11652 }; -- Boots of Sinister Grace
 		[16] = { itemID = 28516 }; --Barbed Choker of Discipline
 		[17] = { itemID = 28523 }; --Totem of Healing Rains
 		[18] = { itemID = 28522 }; --Shard of the Virtuous
 		[20] = { itemID = 229739 }; --Tome of Untold Secrets
-		[22] = { itemID = 29434 }; --Badge of Justice
-		[23] = { itemID = 400751, [alDif.MAX_DIF] = alDif.Normal }; --Raider's Commendations
 		[25] = { itemID = 816253, droprate = { nil, "2%", "5%", "7%", "10%" } }; --Formula: Enchant Weapon - Faith
 	};
 	{
@@ -1956,24 +1960,27 @@ AtlasLoot_Data["Karazhan"] = {
 		[3] = { itemID = 28585 }; --Ruby Slippers
 		[4] = { itemID = 28587 }; --Legacy
 		[5] = { itemID = 28588 }; --Blue Diamond Witchwand
-		[7] = { icon = "INV_Box_01", name = WHITE.. BabbleBoss["Romulo & Julianne"], "=q5=" .. AL["Romulo & Julianne"] };
-		[8] = { itemID = 28578 }; --Masquerade Gown
-		[9] = { itemID = 28579 }; --Romulo's Poison Vial
-		[10] = { itemID = 28572 }; --Blade of the Unrequited
-		[11] = { itemID = 28573 }; --Despair
+		[6] = { itemID = 61590 }; --Sigil
+		[8] = { icon = "INV_Box_01", name = WHITE.. BabbleBoss["Romulo & Julianne"], "=q5=" .. AL["Romulo & Julianne"] };
+		[9] = { itemID = 28578 }; --Masquerade Gown
+		[10] = { itemID = 28579 }; --Romulo's Poison Vial
+		[11] = { itemID = 28572 }; --Blade of the Unrequited
+		[12] = { itemID = 28573 }; --Despair
+		[13] = { itemID = 61022 }; --Sigil
+		[14] = { itemID = 60992 }; --Sigil
 		[16] = { icon = "INV_Box_01", name = WHITE.. BabbleBoss["The Big Bad Wolf"], "=q5=" .. AL["Red Riding Hood"] };
 		[17] = { itemID = 28582 }; --Red Riding Hood's Cloak
 		[18] = { itemID = 28583 }; --Big Bad Wolf's Head
 		[19] = { itemID = 28584 }; --Big Bad Wolf's Paw
 		[20] = { itemID = 28581 }; --Wolfslayer Sniper Rifle
-		[22] = { icon = "INV_Box_01", name = WHITE.. AL["Shared Drops"] };
-		[30] = { itemID = 29434 }; --Badge of Justice
+		[21] = { itemID = 60991 }; --Sigil
+		[23] = { icon = "INV_Box_01", name = WHITE.. AL["Shared Drops"] };
 		[24] = { itemID = 28594 }; --Trial-FireTrousers
 		[25] = { itemID = 28591 }; --Earthsoul Leggings
 		[26] = { itemID = 28589 }; --Beastmaw Pauldrons
 		[27] = { itemID = 28593 }; --Eternium Greathelm
 		[28] = { itemID = 28590 }; --Ribbon of Sacrifice
-		[23] = { itemID = 28592 }; --Libram of Souls Redeemed
+		[29] = { itemID = 28592 }; --Libram of Souls Redeemed
 	};
 	{
 		Name = BabbleBoss["Nightbane"];
@@ -1992,9 +1999,9 @@ AtlasLoot_Data["Karazhan"] = {
 		[18] = { itemID = 28604 }; --Nightstaff of the Everliving
 		[19] = { itemID = 28611 }; --Dragonheart Flameshield
 		[20] = { itemID = 28606 }; --Shield of Impenetrable Darkness
-		[22] = { itemID = 229739 }; --Tome of Untold Secrets
-		[24] = { itemID = 29434 }; --Badge of Justice
-		[25] = { itemID = 400751, [alDif.MAX_DIF] = alDif.Normal }; --Raider's Commendations
+		[21] = { itemID = 11637 }; --Covenant of Steel and Flame
+		[22] = { itemID = 12087 }; --Nightpiercer
+		[24] = { itemID = 229739 }; --Tome of Untold Secrets
 	};
 	{
 		Name = BabbleBoss["The Curator"];
@@ -2005,11 +2012,10 @@ AtlasLoot_Data["Karazhan"] = {
 		[4] = { itemID = 28621 }; --Wrynn Dynasty Greaves
 		[5] = { itemID = 28649 }; --Garona's Signet Ring
 		[6] = { itemID = 28633 }; --Staff of Infinite Mysteries
+		[7] = { itemID = 11251 }; --Stormfury Pendant
 		[16] = { itemID = 29758, lootTable = {"T4HAND","Token"} }; --Gloves of the Fallen Defender
-		[18] = { itemID = 29434 }; --Badge of Justice
-		[19] = { itemID = 400751, [alDif.MAX_DIF] = alDif.Normal }; --Raider's Commendations
-		[20] = { itemID = 98570 }; --Mystic Orb
-		[22] = { itemID = 60170 }; --Sigil of The Curator
+		[18] = { itemID = 229739 }; --Tome of Untold Secrets
+		[20] = { itemID = 60170 }; --Sigil of The Curator
 	};
 	{
 		Name = BabbleBoss["Terestian Illhoof"];
@@ -2021,16 +2027,15 @@ AtlasLoot_Data["Karazhan"] = {
 		[5] = { itemID = 28655 }; --Cord of Nature's Sustenance
 		[6] = { itemID = 28656 }; --Girdle of the Prowler
 		[7] = { itemID = 28662 }; --Breastplate of the Lightbinder
-		[16] = { itemID = 28661 }; --Mender's Heart-Ring
-		[17] = { itemID = 28785 }; --The Lightning Capacitor
-		[18] = { itemID = 28657 }; --Fool's Bane
-		[19] = { itemID = 28658 }; --Terestian's Stranglestaff
-		[20] = { itemID = 28659 }; --Xavian Stiletto
-		[22] = { itemID = 229739 }; --Tome of Untold Secrets
-		[24] = { itemID = 29434 }; --Badge of Justice
-		[25] = { itemID = 400751, [alDif.MAX_DIF] = alDif.Normal }; --Raider's Commendations
-		[27] = { itemID = 22561, droprate = { nil, "2%", "5%", "7%", "10%" } }; --Formula: Enchant Weapon - Soulfrost
-		[29] = { itemID = 60167 }; --Sigil of Terestain Illhoof
+		[9] = { itemID = 28661 }; --Mender's Heart-Ring
+		[10] = { itemID = 28785 }; --The Lightning Capacitor
+		[11] = { itemID = 28657 }; --Fool's Bane
+		[12] = { itemID = 28658 }; --Terestian's Stranglestaff
+		[13] = { itemID = 28659 }; --Xavian Stiletto
+		[14] = { itemID = 12089 }; --Sanguine Spellfang
+		[16] = { itemID = 229739 }; --Tome of Untold Secrets
+		[18] = { itemID = 22561, droprate = { nil, "2%", "5%", "7%", "10%" } }; --Formula: Enchant Weapon - Soulfrost
+		[20] = { itemID = 60167 }; --Sigil of Terestain Illhoof
 	};
 	{
 		Name = BabbleBoss["Shade of Aran"];
@@ -2042,17 +2047,16 @@ AtlasLoot_Data["Karazhan"] = {
 		[5] = { itemID = 28669 }; --Rapscallion Boots
 		[6] = { itemID = 28671 }; --Steelspine Faceguard
 		[7] = { itemID = 28666 }; --Pauldrons of the Justice-Seeker
-		[9] = { itemID = 23933 }; --Medivh's Journal
-		[16] = { itemID = 28674 }; --Saberclaw Talisman
-		[17] = { itemID = 28675 }; --Shermanar Great-Ring
-		[18] = { itemID = 28727 }; --Pendant of the Violet Eye
-		[19] = { itemID = 28728 }; --Aran's Soothing Sapphire
-		[20] = { itemID = 28673 }; --Tirisfal Wand of Ascendancy
-		[22] = { itemID = 29434 }; --Badge of Justice
-		[23] = { itemID = 400751, [alDif.MAX_DIF] = alDif.Normal }; --Raider's Commendations
-		[24] = { itemID = 98570 }; --Mystic Orb
-		[26] = { itemID = 22560, droprate = { nil, "2%", "5%", "7%", "10%" } }; --Formula: Enchant Weapon - Sunfire
-		[28] = { itemID = 60372, droprate = "1%" }; --Pet Sigil
+		[9] = { itemID = 28674 }; --Saberclaw Talisman
+		[10] = { itemID = 28675 }; --Shermanar Great-Ring
+		[11] = { itemID = 28727 }; --Pendant of the Violet Eye
+		[12] = { itemID = 28728 }; --Aran's Soothing Sapphire
+		[13] = { itemID = 28673 }; --Tirisfal Wand of Ascendancy
+		[14] = { itemID = 12084 }; --Drape of the Stormbreaker
+		[16] = { itemID = 23933 }; --Medivh's Journal
+		[18] = { itemID = 229739 }; --Tome of Untold Secrets
+		[20] = { itemID = 22560, droprate = { nil, "2%", "5%", "7%", "10%" } }; --Formula: Enchant Weapon - Sunfire
+		[22] = { itemID = 60372, droprate = "1%" }; --Pet Sigil
 	};
 	{
 		Name = BabbleBoss["Netherspite"];
@@ -2065,6 +2069,8 @@ AtlasLoot_Data["Karazhan"] = {
 		[6] = { itemID = 28740 }; --Rip-Flayer Leggings
 		[7] = { itemID = 28743 }; --Mantle of Abrahmis
 		[8] = { itemID = 28733 }; --Girdle of Truth
+		[9] = { itemID = 11651 }; --Belt of Whirling Shadows
+		[10] = { itemID = 11650 }; --Girdle of Unbound Forces
 		[16] = { itemID = 28731 }; --Shining Chain of the Afterworld
 		[17] = { itemID = 28730 }; --Mithril Band of the Unscarred
 		[18] = { itemID = 28734 }; --Jewel of Infinite Possibilities
@@ -2075,6 +2081,7 @@ AtlasLoot_Data["Karazhan"] = {
 	};
 	{
 		Name = BabbleBoss["Chess Event"];
+		ObjectID = 185119;
 		[1] = { itemID = 28756 }; --Headdress of the High Potentate
 		[2] = { itemID = 28755 }; --Bladed Shoulderpads of the Merciless
 		[3] = { itemID = 28750 }; --Girdle of Treachery
@@ -2083,11 +2090,12 @@ AtlasLoot_Data["Karazhan"] = {
 		[6] = { itemID = 28746 }; --Fiend Slayer Boots
 		[7] = { itemID = 28748 }; --Legplates of the Innocent
 		[8] = { itemID = 28747 }; --Battlescar Boots
+		[9] = { itemID = 11640 }; --Bindings of Mystic Might
 		[16] = { itemID = 28745 }; --Mithril Chain of Heroism
 		[17] = { itemID = 28753 }; --Ring of Recurrence
-		[18] = { itemID = 28749 }; --King's Defender
-		[19] = { itemID = 28754 }; --Triptych Shield of the Ancients
-		[21] = { itemID = 29434 }; --Badge of Justice
+		[18] = { itemID = 11797 }; --Ring of Shadowed Precision
+		[19] = { itemID = 28749 }; --King's Defender
+		[20] = { itemID = 28754 }; --Triptych Shield of the Ancients
 	};
 	{
 		Name = BabbleBoss["Prince Malchezaar"];
@@ -2098,18 +2106,20 @@ AtlasLoot_Data["Karazhan"] = {
 		[4] = { itemID = 28762 }; --Adornment of Stolen Souls
 		[5] = { itemID = 28763 }; --Jade Ring of the Everliving
 		[6] = { itemID = 28757 }; --Ring of a Thousand Marks
-		[8] = { itemID = 28770 }; --Nathrezim Mindblade
-		[9] = { itemID = 28768 }; --Malchazeen
-		[10] = { itemID = 28767 }; --The Decapitator
-		[11] = { itemID = 28773 }; --Gorehowl
-		[12] = { itemID = 28771 }; --Light's Justice
-		[13] = { itemID = 28772 }; --Sunfury Bow of the Phoenix
-		[16] = { itemID = 29761, lootTable = {"T4HEAD","Token"} }; --Helm of the Fallen Defender
-		[18] = { itemID = 229739 }; --Tome of Untold Secrets
-		[20] = { itemID = 29434 }; --Badge of Justice
-		[21] = { itemID = 400751, [alDif.MAX_DIF] = alDif.Normal }; --Raider's Commendations
-		[23] = { itemID = 60169, droprate = "1%" }; --Pet Sigil
-		[25] = { itemID = 499438, [alDif.MIN_DIF] = alDif.Heroic }; --Smoldering Emberwyrm
+		[7] = { itemID = 11638 }; --Darkened Boots of the Nathrezim
+		[8] = { itemID = 11636 }; --Talisman of Disonnance
+		[16] = { itemID = 28770 }; --Nathrezim Mindblade
+		[17] = { itemID = 28768 }; --Malchazeen
+		[18] = { itemID = 28767 }; --The Decapitator
+		[19] = { itemID = 28773 }; --Gorehowl
+		[20] = { itemID = 28771 }; --Light's Justice
+		[21] = { itemID = 28772 }; --Sunfury Bow of the Phoenix
+		[22] = { itemID = 12123 }; --Razorwind
+		[24] = { itemID = 29761, lootTable = {"T4HEAD","Token"} }; --Helm of the Fallen Defender
+		[26] = { itemID = 229739 }; --Tome of Untold Secrets
+		[28] = { itemID = 138255 }; --Summoner's Stone: Prince Malchezaar
+		[29] = { itemID = 60169, droprate = "1%" }; --Pet Sigil
+		[30] = { itemID = 499438, [alDif.MIN_DIF] = alDif.Heroic }; --Smoldering Emberwyrm
 	};
 	{ --Trash Mobs
 		Name = AL["Trash Mobs"];
@@ -2229,7 +2239,7 @@ AtlasLoot_Data["KarazhanCryptsTBC"] = {
 	--Map = "Gnomeregan";
 	{
 		Name = AL["Cynfael"];
-		npcID = 254401;
+		NpcID = 254401;
 		[1] = { itemID = 255169 }; -- Twinglaive of the Vampire Council
 		[2] = { itemID = 255212 }; -- Twinglaive of Eternal Slumber
 		[3] = { itemID = 259322 }; -- Purified Vitae Chalice
@@ -2239,8 +2249,8 @@ AtlasLoot_Data["KarazhanCryptsTBC"] = {
 		[16] = { itemID = 254068 }; -- Sigil of Cynfael
 	};
 	{
-		Name = AL["Forgotten Avatar"];
-		npcID = 254413;
+		Name = AL["Dryn Miel <The Second Eidolon>"];
+		NpcID = 254413;
 		[1] = { itemID = 255677 }; -- Sorrow of the Eclipse
 		[2] = { itemID = 255720 }; -- Cryptsteel Maul
 		[3] = { itemID = 255809 }; -- Dakrya, Hand of the Second Eidolon
@@ -2251,14 +2261,14 @@ AtlasLoot_Data["KarazhanCryptsTBC"] = {
 		[8] = { itemID = 259698 }; -- Funeral Mantle
 		[9] = { itemID = 259827 }; -- Soulsteel Shoulderguards
 		[10] = { itemID = 259870 }; -- Blossom of Sorrow
-		[16] = { itemID = 254077 }; -- Forgotten Core
+		[16] = { itemID = 254077, contentsPreview = {{1414603}, {1414604}, {1414605}, {1414606}} }; -- Forgotten Core
 		[18] = { itemID = 254067 }; -- Sigil of Dryn Miel
 		[20] = { itemID = 1179133 }; -- Reins of the Mawsworn Charger
 
 	};
 	{
 		Name = AL["Kurgoth Doomreaver"];
-		npcID = 254406;
+		NpcID = 254406;
 		[1] = { itemID = 255917 }; -- Forgiveness
 		[2] = { itemID = 257135 }; -- Drape of the Horse
 		[3] = { itemID = 259494 }; -- Soulsteel Legplates
@@ -2268,13 +2278,40 @@ AtlasLoot_Data["KarazhanCryptsTBC"] = {
 	};
 	{
 		Name = AL["The Judgement of Sinners"];
-		npcID = 254405;
+		NpcID = 254405;
 		[1] = { itemID = 255301 }; -- Ghoul Spine Cleaver
 		[2] = { itemID = 255373 }; -- Conduit of Sinners
 		[3] = { itemID = 255509 }; -- Spinesplinter Arbalest
 		[4] = { itemID = 259408 }; -- Deathsworn Pants
 		[5] = { itemID = 259784 }; -- Bonelink Mantle
 		[16] = { itemID = 254070 }; -- Sigil of Sinners
+	};
+	{
+		Name = AL["Takan Velor <The Hero of Deadwind>"];
+		NpcID = 654564;
+		[1] = { itemID = 260936 }; -- Soulfire Torch
+		[2] = { itemID = 259966 }; -- Funeral Handwraps
+		[3] = { itemID = 260009 }; -- Deathsworn Handguards
+		[4] = { itemID = 260052 }; -- Bonelink Grasps
+		[5] = { itemID = 260095 }; -- Soulsteel Gauntlets
+	};
+	{
+		Name = AL["Captain Taveir (Rare Spawn)"];
+		NpcID = 254495;
+		[1] = { itemID = 254088 }; -- Funeral Treads
+		[2] = { itemID = 254131 }; -- Deathsworn Boots
+		[3] = { itemID = 254174 }; -- Bonelink Greaves
+		[4] = { itemID = 254217 }; -- Soulsteel Sabatons
+		[16] = { itemID = 254080 }; -- Sigil of Captain Taveir
+	};
+	{
+		Name = AL["Kelivex Autumnvale (Rare Spawn)"];
+		NpcID = 254493;
+		[1] = { itemID = 254088 }; -- Funeral Treads
+		[2] = { itemID = 254131 }; -- Deathsworn Boots
+		[3] = { itemID = 254174 }; -- Bonelink Greaves
+		[4] = { itemID = 254217 }; -- Soulsteel Sabatons
+		[16] = { itemID = 254078 }; -- Sigil of Kelivex Autumnvale
 	};
 };
 
@@ -2289,7 +2326,7 @@ AtlasLoot_Data["BlackrockCavernsTBC"] = {
 	--Map = "BlackrockDepths";
 	{
 		Name = AL["Ascendant Lord Obsidius"];
-		npcID = 39705;
+		NpcID = 39705;
 		[1] = { itemID = 252075 }; -- Amber Messenger
 		[2] = { itemID = 252711 }; -- Witching Hourglass
 		[3] = { itemID = 252771 }; -- Crepuscular Shield
@@ -2303,7 +2340,7 @@ AtlasLoot_Data["BlackrockCavernsTBC"] = {
 	};
 	{
 		Name = AL["Beauty"];
-		npcID = 39700;
+		NpcID = 39700;
 		[1] = { itemID = 250876 }; -- Beauty's Favorite Bone
 		[2] = { itemID = 250663 }; -- Beauty's Chew Toy
 		[3] = { itemID = 250706 }; -- Beauty's Plate
@@ -2312,7 +2349,7 @@ AtlasLoot_Data["BlackrockCavernsTBC"] = {
 	};
 	{
 		Name = AL["Corla, Herald of Twilight"];
-		npcID = 39679;
+		NpcID = 39679;
 		[1] = { itemID = 247779 }; -- Grace of the Herald
 		[2] = { itemID = 247827 }; -- Corla's Baton
 		[3] = { itemID = 46418 }; -- Renouncer's Cowl
@@ -2321,7 +2358,7 @@ AtlasLoot_Data["BlackrockCavernsTBC"] = {
 	};
 	{
 		Name = AL["Karsh Steelbender <Twilight Armorer>"];
-		npcID = 39698;
+		NpcID = 39698;
 		[1] = { itemID = 250620 }; -- Steelbender's Masterpiece
 		[2] = { itemID = 247936 }; -- Bracers of Cooled Anger
 		[3] = { itemID = 249391 }; -- Heat Wave Leggings
@@ -2331,7 +2368,7 @@ AtlasLoot_Data["BlackrockCavernsTBC"] = {
 	};
 	{
 		Name = AL["Rom'ogg Bonecrusher"];
-		npcID = 39665;
+		NpcID = 39665;
 		[1] = { itemID = 251860 }; -- Torturer's Mercy
 		[2] = { itemID = 251903 }; -- Shield of the Iron Maiden
 		[3] = { itemID = 251086 }; -- Inquisition Robes
@@ -2343,6 +2380,7 @@ AtlasLoot_Data["BlackrockCavernsTBC"] = {
 AtlasLoot_Data["FrozenReachTBC"] = {
 	Module = "AtlasLoot_OriginalWoW";
 	Name = AL["Frozen Reach"];
+	Type = "Manastorm";
 	{
 		Name = AL["Frozen Reach"];
 		[1] = { itemID = 1529392 }; -- Frigid Bow of the Bonded Souls
@@ -6776,6 +6814,7 @@ AtlasLoot_Data["WorldBossesTBC"] = {
 		[8] = { itemID = 30738  }; --Ring of Reciprocity
 		[9] = { itemID = 30733  }; --Hope Ender
 		[10] = { itemID = 30732  }; --Exodar Life-Staff
+		[16] = { itemID = 229739 }; --Tome of Untold Secrets
 	};
 	{
 		Name = BabbleBoss["Doomwalker"];
@@ -6789,6 +6828,7 @@ AtlasLoot_Data["WorldBossesTBC"] = {
 		[8] = { itemID = 30723 }; --Talon of the Tempest
 		[9] = { itemID = 30722 }; --Ethereum Nexus-Reaver
 		[10] = { itemID = 30724, desc = "=ds=#w5#" }; --Barrel-Blade Longrifle
+		[16] = { itemID = 229739 }; --Tome of Untold Secrets
 	}
 };
 

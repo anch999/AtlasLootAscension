@@ -969,7 +969,7 @@ AtlasLoot_Data["BlackrockCaverns"] = {
 	--Map = "BlackrockDepths";
 	{
 		Name = AL["Ascendant Lord Obsidius"];
-		npcID = 39705;
+		NpcID = 39705;
 		[1] = { itemID = 241661 }; -- Amber Messenger
 		[2] = { itemID = 241833 }; -- Witching Hourglass
 		[3] = { itemID = 241876 }; -- Crepuscular Shield
@@ -983,7 +983,7 @@ AtlasLoot_Data["BlackrockCaverns"] = {
 	};
 	{
 		Name = AL["Beauty"];
-		npcID = 39700;
+		NpcID = 39700;
 		[1] = { itemID = 223128 }; -- Beauty's Favorite Bone
 		[2] = { itemID = 219576 }; -- Beauty's Chew Toy
 		[3] = { itemID = 222146 }; -- Beauty's Plate
@@ -992,7 +992,7 @@ AtlasLoot_Data["BlackrockCaverns"] = {
 	};
 	{
 		Name = AL["Corla, Herald of Twilight"];
-		npcID = 39679;
+		NpcID = 39679;
 		[1] = { itemID = 212713 }; -- Grace of the Herald
 		[2] = { itemID = 212826 }; -- Corla's Baton
 		[3] = { itemID = 203224 }; -- Renouncer's Cowl
@@ -1001,7 +1001,7 @@ AtlasLoot_Data["BlackrockCaverns"] = {
 	};
 	{
 		Name = AL["Karsh Steelbender <Twilight Armorer>"];
-		npcID = 39698;
+		NpcID = 39698;
 		[1] = { itemID = 218298 }; -- Steelbender's Masterpiece
 		[2] = { itemID = 213383 }; -- Bracers of Cooled Anger
 		[3] = { itemID = 215448 }; -- Heat Wave Leggings
@@ -1011,7 +1011,7 @@ AtlasLoot_Data["BlackrockCaverns"] = {
 	};
 	{
 		Name = AL["Rom'ogg Bonecrusher"];
-		npcID = 39665;
+		NpcID = 39665;
 		[1] = { itemID = 232104 }; -- Torturer's Mercy
 		[2] = { itemID = 232147 }; -- Shield of the Iron Maiden
 		[3] = { itemID = 231828 }; -- Inquisition Robes
@@ -2144,7 +2144,7 @@ AtlasLoot_Data["KarazhanCrypts"] = {
 	--Map = "Gnomeregan";
 	{
 		Name = AL["Cynfael"];
-		npcID = 254401;
+		NpcID = 254401;
 		[1] = { itemID = 252821 }; -- Twinglaive of the Vampire Council
 		[2] = { itemID = 252906 }; -- Twinglaive of Eternal Slumber
 		[3] = { itemID = 254389 }; -- Purified Vitae Chalice
@@ -2154,8 +2154,8 @@ AtlasLoot_Data["KarazhanCrypts"] = {
 		[16] = { itemID = 254068 }; -- Sigil of Cynfael
 	};
 	{
-		Name = AL["Forgotten Avatar"];
-		npcID = 254413;
+		Name = AL["Dryn Miel <The Second Eidolon>"];
+		NpcID = 254413;
 		[1] = { itemID = 253151 }; -- Sorrow of the Eclipse
 		[2] = { itemID = 253442 }; -- Cryptsteel Maul
 		[3] = { itemID = 253634 }; -- Dakrya, Hand of the Second Eidolon
@@ -2166,14 +2166,14 @@ AtlasLoot_Data["KarazhanCrypts"] = {
 		[8] = { itemID = 254845 }; -- Funeral Mantle
 		[9] = { itemID = 254984 }; -- Soulsteel Shoulderguards
 		[10] = { itemID = 255061 }; -- Blossom of Sorrow
-		[16] = { itemID = 254077 }; -- Forgotten Core
+		[16] = { itemID = 254077, contentsPreview = {{1414603}, {1414604}, {1414605}, {1414606}} }; -- Forgotten Core
 		[18] = { itemID = 254067 }; -- Sigil of Dryn Miel
 		[20] = { itemID = 1179133 }; -- Reins of the Mawsworn Charger
 
 	};
 	{
 		Name = AL["Kurgoth Doomreaver"];
-		npcID = 254406;
+		NpcID = 254406;
 		[1] = { itemID = 253677 }; -- Forgiveness
 		[2] = { itemID = 253763 }; -- Drape of the Horse
 		[3] = { itemID = 254629 }; -- Soulsteel Legplates
@@ -2183,13 +2183,31 @@ AtlasLoot_Data["KarazhanCrypts"] = {
 	};
 	{
 		Name = AL["The Judgement of Sinners"];
-		npcID = 254405;
+		NpcID = 254405;
 		[1] = { itemID = 253004 }; -- Ghoul Spine Cleaver
 		[2] = { itemID = 253053 }; -- Conduit of Sinners
 		[3] = { itemID = 253102 }; -- Spinesplinter Arbalest
 		[4] = { itemID = 254532 }; -- Deathsworn Pants
 		[5] = { itemID = 254941 }; -- Bonelink Mantle
 		[16] = { itemID = 254070 }; -- Sigil of Sinners
+	};
+	{
+		Name = AL["Captain Taveir (Rare Spawn)"];
+		NpcID = 254495;
+		[1] = { itemID = 257178 }; -- Funeral Treads
+		[2] = { itemID = 257221 }; -- Deathsworn Boots
+		[3] = { itemID = 257673 }; -- Bonelink Greaves
+		[4] = { itemID = 257716 }; -- Soulsteel Sabatons
+		[16] = { itemID = 254080 }; -- Sigil of Captain Taveir
+	};
+	{
+		Name = AL["Kelivex Autumnvale (Rare Spawn)"];
+		NpcID = 254493;
+		[1] = { itemID = 257178 }; -- Funeral Treads
+		[2] = { itemID = 257221 }; -- Deathsworn Boots
+		[3] = { itemID = 257673 }; -- Bonelink Greaves
+		[4] = { itemID = 257716 }; -- Soulsteel Sabatons
+		[16] = { itemID = 254078 }; -- Sigil of Kelivex Autumnvale
 	};
 };
 
@@ -4332,6 +4350,7 @@ AtlasLoot_Data["Onyxia60"] = {
 AtlasLoot_Data["FrozenReach"] = {
 	Module = "AtlasLoot_OriginalWoW";
 	Name = AL["Frozen Reach"];
+	Type = "Manastorm";
 	{
 		Name = AL["Frozen Reach"];
 		[1] = { itemID = 1519391 }; -- Reclaimed Blade of the Frozen Sepulcher
