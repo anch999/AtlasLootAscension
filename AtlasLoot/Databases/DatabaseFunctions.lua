@@ -1,19 +1,19 @@
 local difficultyList = {
-	["Heroic"] = 3,
-	["Mythic"] = 4,
-	["Heroic Raid"] = 3,
-	["Mythic Raid"] = 4,
-	["Ascended Raid"] = 5,
-	["Heroic Bloodforged"] = 100,
 	["Bloodforged"] = 1,
-	["Mythic 1"] = 5,  ["Mythic 2"] = 6,  ["Mythic 3"] = 7,  ["Mythic 4"] = 8,  ["Mythic 5"] = 9,
-	["Mythic 6"] = 10, ["Mythic 7"] = 11, ["Mythic 8"] = 12, ["Mythic 9"] = 13, ["Mythic 10"] = 14,
-	["Mythic 11"] = 15, ["Mythic 12"] = 16, ["Mythic 13"] = 17, ["Mythic 14"] = 18, ["Mythic 15"] = 19,
-	["Mythic 16"] = 20, ["Mythic 17"] = 21, ["Mythic 18"] = 22, ["Mythic 19"] = 23, ["Mythic 20"] = 24,
-	["Mythic 21"] = 25, ["Mythic 22"] = 26, ["Mythic 23"] = 27, ["Mythic 24"] = 28, ["Mythic 25"] = 29,
-	["Mythic 26"] = 30, ["Mythic 27"] = 31, ["Mythic 28"] = 32, ["Mythic 29"] = 33, ["Mythic 30"] = 34,
-	["Mythic 31"] = 35, ["Mythic 32"] = 36, ["Mythic 33"] = 37, ["Mythic 34"] = 38, ["Mythic 35"] = 39,
-	["Mythic 36"] = 40, ["Mythic 37"] = 41, ["Mythic 38"] = 42, ["Mythic 39"] = 43, ["Mythic 40"] = 44,
+	["Heroic Bloodforged"] = 2,
+	["Heroic"] = 4,
+	["Mythic"] = 5,
+	["Heroic Raid"] = 4,
+	["Mythic Raid"] = 5,
+	["Ascended Raid"] = 6,
+	["Mythic 1"] = 6,  ["Mythic 2"] = 7,  ["Mythic 3"] = 8,  ["Mythic 4"] = 9,  ["Mythic 5"] = 10,
+	["Mythic 6"] = 11, ["Mythic 7"] = 12, ["Mythic 8"] = 13, ["Mythic 9"] = 14, ["Mythic 10"] = 15,
+	["Mythic 11"] = 16, ["Mythic 12"] = 17, ["Mythic 13"] = 18, ["Mythic 14"] = 19, ["Mythic 15"] = 20,
+	["Mythic 16"] = 21, ["Mythic 17"] = 22, ["Mythic 18"] = 23, ["Mythic 19"] = 24, ["Mythic 20"] = 25,
+	["Mythic 21"] = 26, ["Mythic 22"] = 27, ["Mythic 23"] = 28, ["Mythic 24"] = 29, ["Mythic 25"] = 30,
+	["Mythic 26"] = 31, ["Mythic 27"] = 32, ["Mythic 28"] = 33, ["Mythic 29"] = 34, ["Mythic 30"] = 35,
+	["Mythic 31"] = 36, ["Mythic 32"] = 37, ["Mythic 33"] = 38, ["Mythic 34"] = 39, ["Mythic 35"] = 40,
+	["Mythic 36"] = 41, ["Mythic 37"] = 42, ["Mythic 38"] = 43, ["Mythic 39"] = 44, ["Mythic 40"] = 45,
 };
 
 local itemLevels = {
@@ -24,7 +24,7 @@ local itemLevels = {
 
 function AtlasLoot:MatchItemLevelBracket(ogILevel, newILevel)
 	for _, bracket in pairs(itemLevels) do
-		if ogILevel >= bracket[1] and ogILevel <= bracket[2] and ogILevel < newILevel and newILevel <= bracket[2] then return true end
+		if ogILevel >= bracket[1] and ogILevel <= bracket[2] and ogILevel <= newILevel and newILevel <= bracket[2] then return true end
 	end
 end
 
@@ -32,31 +32,10 @@ function AtlasLoot:GetDifficulty(item)
 	if not item then return end
 	local _, description, _ = string.split("@", item.description, 3)
 	if description then
-		return self:StripTextColor(description)
-	end
-end
-
-function AtlasLoot:CheckItemID(newIDs, ID, dif)
-	if not newIDs then return end
-	if type(newIDs) ~= "table" then newIDs = {newIDs} end
-	for _, newID in ipairs(newIDs) do
-		local ogName = GetItemInfoInstant(ID)
-		local newName = GetItemInfoInstant(newID)
-		if newName and ogName and newName.name and ogName.name and newName.inventoryType == ogName.inventoryType then
-			ogName.name = ogName.name:gsub( "%W", "" )
-			newName.name = newName.name:gsub( "%W", "" )
-			if dif == "Bloodforged" or dif == "Heroic Bloodforged" then
-				ogName.name = "Bloodforged"..ogName.name
-			end
-		local description = self:GetDifficulty(newName)
-			if description then
-				if (not dif or (dif and (dif == description))) then
-					if ogName.name == newName.name then
-						return  newID
-					end
-				end
-			end
-		end
+		description = self:StripTextColor(description)
+		description = description:gsub("Karazhan Crypts ", "")
+		description = description:gsub(" Frozen Reach", "")
+		return description
 	end
 end
 
@@ -76,6 +55,12 @@ function AtlasLoot:CreateUpdateText()
     updateFrameCreated = true
 end
 
+local function removeExtraText(text)
+	text = text:gsub( "Bloodforged", "" )
+	text = text:gsub( "%W", "" )
+	return text
+end
+
 local unknownIDs = {}
 function AtlasLoot:UpdateItemIDsDatabase(firstID, lastID)
 	AtlasLootItemCache = ItemIDsDatabase
@@ -90,13 +75,14 @@ function AtlasLoot:UpdateItemIDsDatabase(firstID, lastID)
 						if itemData.itemID then
 							for _, dif in ipairs(self.Difficulties[data.Type]) do
 								local itemType = GetItemInfoInstant(itemData.itemID) or nil
-								if dif[2] ~= 100 and dif[2] ~= 1 and dif[2] ~= 2 and itemType then
+								if dif[2] ~= 3 and itemType then
 									unknownIDs[dif[1]] = unknownIDs[dif[1]] or {}
-									unknownIDs[dif[1]][itemType.name:gsub( "%W", "" )..itemType.inventoryType] = unknownIDs[dif[1]][itemType.name:gsub( "%W", "" )..itemType.inventoryType] or {}
-									local itemTable = unknownIDs[dif[1]][itemType.name:gsub( "%W", "" )..itemType.inventoryType]
+									local name = itemType.name:gsub( "%W", "" )..itemType.inventoryType
+									unknownIDs[dif[1]][name] = unknownIDs[dif[1]][name] or {}
+									local itemTable = unknownIDs[dif[1]][name]
 										local function checkForDuplicate(itemID)
 											for _ , item in pairs(itemTable) do
-												if item[1] == itemID then return end
+												if item[1] == itemID then return true end
 											end
 										end
 									if not checkForDuplicate(itemData.itemID) then
@@ -123,22 +109,17 @@ function AtlasLoot:UpdateItemIDsDatabase(firstID, lastID)
 
 		local function checkID(item, difficulty)
 			if difficulty and item and item.name then
-				local foundName = item.name:gsub( "%W", "" )..item.inventoryType
+				local foundName = removeExtraText(item.name)..item.inventoryType
 				if foundName then
 					local itemData = unknownIDs[difficulty] and unknownIDs[difficulty][foundName]
 					if itemData then
-						local function parseItems()
-							for _ , storedItem in pairs(itemData) do
-								if self:MatchItemLevelBracket(storedItem[2], item.itemLevel) then
-									return storedItem[1]
-								end
-							end
-						end
-						local orignalID = parseItems()
-						if orignalID then
+						for _ , storedItem in pairs(itemData) do
+							local orignalID = storedItem[1]
 							ItemIDsDatabase[orignalID] = ItemIDsDatabase[orignalID] or {}
-							ItemIDsDatabase[orignalID][difficultyList[difficulty]] = item.itemID
-							AtlasLootIDUpdateText:SetText("Last ItemID Added: "..firstID)
+							if not ItemIDsDatabase[orignalID][difficultyList[difficulty]] or self:MatchItemLevelBracket(storedItem[2], item.itemLevel) then
+								ItemIDsDatabase[orignalID][difficultyList[difficulty]] = item.itemID
+								AtlasLootIDUpdateText:SetText("Last ItemID Added: "..firstID)
+							end
 						end
 					end
 				end
@@ -174,41 +155,12 @@ end
 --[[
 AtlasLoot:FindId(id, difficulty)
 Finds the Ids of other difficulties based on the normal id of the item and the difficulty parameter given.
-On the form of {ID, {normal, heroic, mythic, mythic1, mythic2, ... ,mythicN}}
+On the form of {ID, {bloodforged, heroic bloodforged, normal, heroic, mythic, mythic1/ascended, mythic2, ... ,mythicN}}
 ]]
-function AtlasLoot:FindId(id, difficulty, type, Difficultiestring)
-	local hasID
-	if self.Difficulties[type] then
-		for _, dif in ipairs (self.Difficulties[type]) do
-			if dif[2] == difficulty then
-				Difficultiestring = dif[1]
-			end
-		end
-	end
-	if difficulty == 2 then return end
-	-- Create Heroic Bloodforged Id
-	if difficulty == 100 then
-		local newIDs = {
-			(id < 1000000 and (id) + 6300000),
-			(id < 1000000 and (id) + 7800000),
-			(id > 1000000 and (id - 1500000) + 6300000),
-			(id > 1000000 and (id - 1500000) + 7800000),
-	}
-		hasID = self:CheckItemID(newIDs, id, Difficultiestring)
-		if hasID then return  hasID, true end
-	end
-	-- Create Bloodforged Id
-	if difficulty == 1 then
-		local newIDs = {
-			(id < 1000000 and (id) + 6000000),
-			(id < 1000000 and (id) + 7500000),
-			(id > 1000000 and (id - 1500000) + 6000000),
-			(id > 1000000 and (id - 1500000) + 7500000),
-	}
-		hasID = self:CheckItemID(newIDs, id, Difficultiestring)
-		if hasID then return  hasID, true end
-	end
+function AtlasLoot:FindId(id, difficulty)
+	if difficulty == 3 then return id end
 	if ItemIDsDatabase[id] and ItemIDsDatabase[id][difficulty] then
-		return ItemIDsDatabase[id][difficulty], true
+		return ItemIDsDatabase[id][difficulty]
 	end
+	return id
 end

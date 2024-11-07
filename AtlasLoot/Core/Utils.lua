@@ -191,7 +191,7 @@ function AtlasLoot:GetRecipeData(recipeID, idType)
 		   for _,recipe in pairs(cat) do
 			  if (idType == "spell" and recipeID == recipe.SpellEntry) or (idType == "item" and recipeID == recipe.RecipeItemEntry) then
 				local info = {{recipe.CreatedItemEntry}, "blank", "blank", "blank", "blank", "blank",spellID = recipe.SpellEntry, skillIndex = recipe.SkillIndex}
-				local bloodForgedID = self:FindId(recipe.CreatedItemEntry, 1, nil, "Bloodforged")
+				local bloodForgedID = self:FindId(recipe.CreatedItemEntry, 1)
 				if bloodForgedID then
 					info[2] = {bloodForgedID}
 				end
@@ -429,7 +429,7 @@ function AtlasLoot:PopoupItemFrame(frame, data)
 			button:Hide()
 		else
 			local correctID = item.itemID or item[1]
-			local itemID = self:FindId(correctID, ItemindexID) or correctID
+			local itemID = self:FindId(correctID, ItemindexID)
 			local itemData = {self:GetItemInfo(itemID)}
 			SetItemButtonTexture(button, itemData[10])
 			SetItemButtonQuality(button, itemData[3])
@@ -535,18 +535,6 @@ function AtlasLoot:ItemFrameRefresh()
     refreshTimer = true
 end
 -----------------------------------------------------
-
-function AtlasLoot:getMaxDifficulty(difficultyKey)
-    if(difficultyKey == "ClassicDungeon" or difficultyKey == "PVP") then
-        return 2
-    elseif (difficultyKey == "ClassicDungeonExt" or difficultyKey == "BCDungeon" or difficultyKey == "WrathDungeon") then
-        return 44
-    elseif (difficultyKey == "ClassicRaid" or difficultyKey == "BCRaid" or difficultyKey == "WrathRaid") then
-        return 5
-    else
-        return 0
-    end
-end
 
 -- Loading items spinner 
 local loadingCount = 0

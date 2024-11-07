@@ -506,7 +506,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 	local difType = false
 	-- Checks to see if type is the same
 	if self.CurrentType and dataSource[dataID].Type and self.CurrentType ~= dataSource[dataID].Type then
-		ItemindexID = self.type[dataSource[dataID].Type] or 2
+		ItemindexID = self.type[dataSource[dataID].Type] or 3
 		difType = true
 	end
 
@@ -584,29 +584,24 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 	local function getProperItemConditionals(item)
 		isValid = false
 		toShow = true
-		local itemDif = ItemindexID
+		local itemDif = ItemindexID or self.Difficulties.Normal
 		local itemID = item and item.itemID
 		if item and item.itemID then
 			itemID = item.itemID
 			isValid = true
 			local itemType = item.Type or dataSource[dataID].Type
+			--stops items from showing that are taged for coa
 			if class == "HERO" and item.COA then
 				toShow = false
-			elseif(item[self.Difficulties.MIN_DIF]) then
+			elseif item[self.Difficulties.MIN_DIF] then
 				if item[self.Difficulties.MIN_DIF] > itemDif then
 					toShow = false
 				end
-				itemID = self:FindId(item.itemID, min(self:getMaxDifficulty(itemType), itemDif), itemType) or item.itemID
+				itemID = self:FindId(item.itemID, min(self.Difficulties[itemType].Max, itemDif))
 			end
 			if toShow then
-				--Sets ItemindexID to normal(2) if it is nil for min/max difficulties.
-				if not tonumber(itemDif) then itemDif = self.Difficulties.Normal end
-				--Checks if an item has a Maximum difficulty, this is to correct some items that have an entry for higher difficulties then they really do
-				if itemDif ~= 100 and self.Difficulties[itemType] and self.Difficulties[itemType].Max and self.Difficulties[itemType].Max < itemDif then
-					itemDif = self.Difficulties[itemType].Max
-				end
 				--If something was found in itemID database show that if not show default table item
-				itemID = self:FindId(item.itemID, itemDif, itemType) or item.itemID
+				itemID = self:FindId(item.itemID, itemDif)
 			end
 		elseif item and (item.spellID or item.icon) or item and itemID then
 			toShow = true
@@ -615,7 +610,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 					toShow = false
 				end
 			end
-			isValid = true			
+			isValid = true
 		end
 		local recipeID
 		if item and item.spellID then
