@@ -735,10 +735,12 @@ local rows2 = setmetatable({}, { __index = function(t, i)
     row.Text:SetPoint("LEFT",row)
     row.Text:SetJustifyH("LEFT")
     row:SetScript("OnClick", function(self, button)
-        local npcID = _G[row.dataSource][row.tablename][row.tablenum] and _G[row.dataSource][row.tablename][row.tablenum].NpcID
-        if button == "RightButton" and npcID then
+        local NpcID = _G[row.dataSource][row.tablename][row.tablenum] and _G[row.dataSource][row.tablename][row.tablenum].NpcID
+        local ObjectID = _G[row.dataSource][row.tablename][row.tablenum] and _G[row.dataSource][row.tablename][row.tablenum].ObjectID
+        local dbType = NpcID and "npc" or ObjectID and "object"
+        if button == "RightButton" and dbType then
             row:SetChecked(not row:GetChecked())
-            AtlasLoot:OpenDB(self, "npc", npcID)
+            AtlasLoot:OpenDB(self, dbType, NpcID or ObjectID)
         elseif row.dataSource ~= "AtlasLoot_MapData" then
             AtlasLoot:ShowItemsFrame(row.tablename, row.dataSource, row.tablenum)
         else
