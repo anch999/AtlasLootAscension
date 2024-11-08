@@ -682,6 +682,22 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 					tinsert(self.vanityItems, itemID)
 				end
 			end
+			local recipeData = self:GetRecipeData(itemID, "item")
+			if recipeData then
+				if CA_IsSpellKnown(recipeData.spellID) then
+					--Adds button highlights if you know a recipe or have a char that knows one
+					itemButton.hasTrade = true
+					hightlightFrame:SetTexture(itemHighlightGreen)
+					hightlightFrame:Show()
+				else
+					itemButton.hasTrade = false
+					hightlightFrame:Hide()
+					if self:GetKnownRecipes(recipeData.spellID) then
+						hightlightFrame:SetTexture(itemHighlightBlue)
+						hightlightFrame:Show()
+					end
+				end
+			end
 		else
 			if dataSource[dataID][tablenum][i].name then
 				--If it has a manuel entry use that
