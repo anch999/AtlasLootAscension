@@ -6,6 +6,7 @@ local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
 			{ "", "ClassicSets"},
 			{ "", "WorldEpicsCLASSIC"},
 			{ "All Dungeon Items", "ClassicDungeonExt", OnDamand = "ClassicDungeonExt"},
+			{ "", "MarkOfTriumph"},
 			{ "", "ZGSets"},
 			{ "", "AQ20Sets"},
 			{ "", "T0"},

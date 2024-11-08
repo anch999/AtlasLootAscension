@@ -4399,6 +4399,59 @@ AtlasLoot_Data["FrozenReach"] = {
 --------------------------
 
 ------------------------------------
+------ Mark of Triumph Vendor ------
+------------------------------------
+
+AtlasLoot_Data["MarkOfTriumph"] = {
+	Module = "AtlasLoot_OriginalWoW";
+	Name = AL["Mark of Triumph Vendor"];
+	Type = "ClassicDungeonExt";
+	{
+		Name = AL["Page 1"];
+		WebID = {1414503,"npc"};
+		[1] = { itemID = 212827 }; -- Corla's Baton
+		[2] = { itemID = 218299 }; -- Steelbender's Masterpiece
+		[3] = { itemID = 223129 }; -- Beauty's Favorite Bone
+		[4] = { itemID = 232148 }; -- Shield of the Iron Maiden
+		[5] = { itemID = 241662 }; -- Amber Messenger
+		[6] = { itemID = 241877 }; -- Crepuscular Shield
+		[7] = { itemID = 1414504 }; -- Aegis of Impunity
+		[8] = { itemID = 1414505 }; -- Aegis of Sanctity
+		[9] = { itemID = 1414506 }; -- Draenei Focusing Crystal
+		[10] = { itemID = 1414507 }; -- Holdable Ruby
+		[11] = { itemID = 1414510 }; -- Blessed Windstone
+		[12] = { itemID = 1414511 }; -- Hoodoo Detector
+		[13] = { itemID = 1414512 }; -- Bloodied Bone Dagger
+		[14] = { itemID = 1414513 }; -- Ring of the Damned
+		[15] = { itemID = 1414514 }; -- Wraith Choker
+		[16] = { itemID = 1414517 }; -- Band of the Titans
+		[17] = { itemID = 1414518 }; -- Lichbone Neck
+		[18] = { itemID = 1414519 }; -- Scarlet Friar's Cloak
+		[19] = { itemID = 1414520 }; -- Rose of Remembrance
+		[20] = { itemID = 1414521 }; -- Azerothian Diamond Ring
+		[21] = { itemID = 1414522 }; -- Memento of Quel'thalas
+		[22] = { itemID = 1414523 }; -- Cape of Eternal Shrouding
+		[23] = { itemID = 1414524 }; -- Drakefury Scale
+		[24] = { itemID = 1414525 }; -- Ironguard Signet
+		[25] = { itemID = 1414526 }; -- Ursinefur Cloak
+		[26] = { itemID = 1414527 }; -- Molten Forged Necklace
+		[27] = { itemID = 1414551 }; -- Birdbrain's Cage
+		[28] = { itemID = 1414552 }; -- Assassin's Cover
+		[29] = { itemID = 1414553 }; -- Spiritual Tauren Headdress
+		[30] = { itemID = 1414554 }; -- Rubicon Crown
+	};
+	{
+		Name = AL["Page 2"];
+		WebID = {1414503,"npc"};
+		[1] = { itemID = 1414555 }; -- Shroud of the Cathedral
+		[2] = { itemID = 1414556 }; -- Dragonfang Talisman
+		[3] = { itemID = 1414557 }; -- Dungeonlord's Drape
+		[4] = { itemID = 1414558 }; -- Golden Greathelm
+		[5] = { itemID = 1414559 }; -- Lunar Splinter
+		[6] = { itemID = 1414515 }; -- Soothing Aquamarine Cloak
+	};
+};
+------------------------------------
 --- Dungeon 1 and 2 Sets (D1/D2) ---
 ------------------------------------
 
