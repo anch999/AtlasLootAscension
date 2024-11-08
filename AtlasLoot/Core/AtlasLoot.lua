@@ -272,8 +272,12 @@ function AtlasLoot:SlashCommand(msg)
 		self:UpdateItemIDsDatabase(tonumber(arg1), tonumber(arg2))
 	elseif cmd == "clearcache" then
 		wipe(AtlasLootItemCache)
+	elseif cmd == "clearmerchantcache" then
+		wipe(AtlasLootOtherIds)
 	elseif cmd == "news" then
 		self:OpenNewsFrame(self.db.profile)
+	elseif cmd == "getmerchant" then
+		self:GetMerchantItems()
 	else
 		AtlasLootDefaultFrame:Show()
 	end

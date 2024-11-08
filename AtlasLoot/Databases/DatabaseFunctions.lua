@@ -164,3 +164,23 @@ function AtlasLoot:FindId(id, difficulty)
 	end
 	return id
 end
+
+function AtlasLoot:GetMerchantItems()
+	AtlasLootOtherIds = AtlasLootOtherIds or {}
+	tinsert(AtlasLootOtherIds, {})
+	local numItems = GetMerchantNumItems()
+	if numItems then
+		for index = 1, numItems do
+			local link = GetMerchantItemLink(index)
+			local itemID = GetItemInfoFromHyperlink(link)
+			local itemName = self:GetItemInfo(itemID)
+			local _, itemCost, currency = GetMerchantItemCostItem (index, 1)
+			local currencyID = GetItemInfoFromHyperlink(currency)
+			if itemCost then
+				tinsert(AtlasLootOtherIds[#AtlasLootOtherIds], { itemID, itemCost, currencyID, itemName})
+			else
+				tinsert(AtlasLootOtherIds[#AtlasLootOtherIds], { itemID, itemName })
+			end
+		end
+	end
+end
