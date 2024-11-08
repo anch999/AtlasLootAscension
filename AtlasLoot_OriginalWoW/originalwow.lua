@@ -7310,33 +7310,63 @@ AtlasLoot_Data["Argent"] = {
 	{
 		Name = BabbleFaction["Friendly"];
 		[1] = { itemID = 13724}; --Enriched Manna Biscuit
+		[2] = { itemID = 23122 }; --Consecrated Sharpening Stone
+		[3] = { itemID = 23123 }; --Blessed Wizard Oil
 	};
 	{
 		Name = BabbleFaction["Honored"];
-		[1] = { itemID = 13482}; --Recipe: Transmute Air to Fire
-		[2] = { itemID = 19203}; --Plans: Girdle of the Dawn
-		[3] = { itemID = 19446}; --Formula: Enchant Bracer - Mana Regeneration
-		[4] = { itemID = 19442}; --Formula: Powerful Anti-Venom
-		[5] = { itemID = 19328}; --Pattern: Dawn Treaders
-		[6] = { itemID = 19216}; --Pattern: Argent Boots
+		[1] = { itemID = 1519874 }; -- Crusader's Libram
+		[2] = { itemID = 1519875 }; -- Idol of the Fang
+		[3] = { itemID = 23084 }; -- Gloves of Undead Cleansing
+		[4] = { itemID = 23085 }; -- Robe of Undead Cleansing	
+		[5] = { itemID = 23091 }; -- Bracers of Undead Cleansing   
+		[16] = { itemID = 13482}; --Recipe: Transmute Air to Fire
+		[17] = { itemID = 19203}; --Plans: Girdle of the Dawn
+		[18] = { itemID = 19446}; --Formula: Enchant Bracer - Mana Regeneration
+		[19] = { itemID = 19442}; --Formula: Powerful Anti-Venom
+		[20] = { itemID = 19328}; --Pattern: Dawn Treaders
+		[21] = { itemID = 19216}; --Pattern: Argent Boots
 	};
 	{
 		Name = BabbleFaction["Revered"];
-		[1] = { itemID = 18171}; --Arcane Mantle of the Dawn
-		[2] = { itemID = 18169}; --Flame Mantle of the Dawn
-		[3] = { itemID = 18170}; --Frost Mantle of the Dawn
-		[4] = { itemID = 18172}; --Nature Mantle of the Dawn
-		[5] = { itemID = 18173}; --Shadow Mantle of the Dawn
-		[6] = { itemID = 19205}; --Plans: Gloves of the Dawn
-		[7] = { itemID = 19447}; --Formula: Enchant Bracer - Healing
-		[8] = { itemID = 19329}; --Pattern: Golden Mantle of the Dawn
-		[9] = { itemID = 19217}; --Pattern: Argent Shoulders
-		[10] = { itemID = 13810}; --Blessed Sunfruit
-		[11] = { itemID = 13813}; --Blessed Sunfruit Juice
+		[1] = { itemID = 1519867 }; -- Arcanist's Cloak
+		[2] = { itemID = 1519883 }; -- Batleather Armbands
+		[3] = { itemID = 1519884 }; -- Spaulders of Dusk
+		[5] = { itemID = 18171}; --Arcane Mantle of the Dawn
+		[6] = { itemID = 18169}; --Flame Mantle of the Dawn
+		[7] = { itemID = 18170}; --Frost Mantle of the Dawn
+		[8] = { itemID = 18172}; --Nature Mantle of the Dawn
+		[9] = { itemID = 18173}; --Shadow Mantle of the Dawn
+		[16] = { itemID = 19205}; --Plans: Gloves of the Dawn
+		[17] = { itemID = 19447}; --Formula: Enchant Bracer - Healing
+		[18] = { itemID = 19329}; --Pattern: Golden Mantle of the Dawn
+		[19] = { itemID = 19217}; --Pattern: Argent Shoulders
+		[20] = { itemID = 13810}; --Blessed Sunfruit
+		[21] = { itemID = 13813}; --Blessed Sunfruit Juice
 	};
 	{
 		Name = BabbleFaction["Exalted"];
-		[1] = { itemID = 18182}; --Chromatic Mantle of the Dawn
+		[1] = { itemID = 43072 }; -- Blessed Robe of Undead Cleansing
+		[2] = { itemID = 43073 }; -- Blessed Gloves of Undead Cleansing
+		[3] = { itemID = 43074 }; -- Blessed Mantle of Undead Cleansing
+		[4] = { itemID = 43075 }; -- Blessed Trousers of Undead Cleansing
+		[5] = { itemID = 43076 }; -- Blessed Tunic of Undead Slaying
+		[6] = { itemID = 43077 }; -- Blessed Shoulderpads of Undead Slaying
+		[7] = { itemID = 43079 }; -- Blessed Leggings of Undead Slaying
+		[8] = { itemID = 43080 }; -- Blessed Hauberk of Undead Slaying
+		[9] = { itemID = 43081 }; -- Blessed Pauldrons of Undead Slaying
+		[10] = { itemID = 43082 }; -- Blessed Handguards of Undead Slaying
+		[11] = { itemID = 43083 }; -- Blessed Greaves of Undead Slaying
+		[12] = { itemID = 43078 }; -- Blessed Grips of Undead Slaying
+		[13] = { itemID = 43070 }; -- Blessed Gauntlets of Undead Slaying
+		[14] = { itemID = 43069 }; -- Blessed Breastplate of Undead Slaying
+		[15] = { itemID = 43068 }; -- Blessed Spaulders of Undead Slaying
+		[16] = { itemID = 43071 }; -- Blessed Legplates of Undead Slaying
+		[17] = { itemID = 1519880 }; -- Crusader's Girdle
+		[18] = { itemID = 1519882 }; -- Darkened Leather Woolies
+		[19] = { itemID = 1519881 }; -- Stompers of the Argent Dawn
+		[20] = { itemID = 1519865 }; -- Purified Necklace of the Damned
+		[22] = { itemID = 18182}; --Chromatic Mantle of the Dawn
 	};
 };
 ---------------------------------------------------
@@ -7430,28 +7460,35 @@ AtlasLoot_Data["Cenarion"] = {
 	};
 	{
 		Name = BabbleFaction["Honored"];
-		[1] = { itemID = 22767}; --Plans: Ironvine Gloves
-		[2] = { itemID = 22214}; --Plans: Light Obsidian Belt
-		[3] = { itemID = 20733}; --Formula: Enchant Cloak - Greater Nature Resistance
-		[4] = { itemID = 22770}; --Pattern: Bramblewood Boots
-		[5] = { itemID = 20510}; --Pattern: Sandstalker Gauntlets
-		[6] = { itemID = 20507}; --Pattern: Spitfire Gauntlets
-		[7] = { itemID = 22773}; --Pattern: Sylvan Crown
+		[1] = { itemID = 1519873 }; -- Sandcovered Libram
+		[2] = { itemID = 1519872 }; -- Sandcovered Relic
+		[3] = { itemID = 1519871 }; -- Sandcovered Idol
+		[5] = { itemID = 22767}; --Plans: Ironvine Gloves
+		[6] = { itemID = 22214}; --Plans: Light Obsidian Belt
+		[7] = { itemID = 20733}; --Formula: Enchant Cloak - Greater Nature Resistance
+		[8] = { itemID = 22770}; --Pattern: Bramblewood Boots
+		[9] = { itemID = 20510}; --Pattern: Sandstalker Gauntlets
+		[10] = { itemID = 20507}; --Pattern: Spitfire Gauntlets
+		[11] = { itemID = 22773}; --Pattern: Sylvan Crown
 		[16] = { icon = "INV_QirajIdol_Amber", name = WHITE..AL["Token Hand-Ins"] };
 		[17] = { itemID = 21183}; --Earthpower Vest
 		[18] = { itemID = 21182}; --Band of Earthen Might
 		[19] = { itemID = 21181}; --Grace of Earth
+
 	};
 	{
 		Name = BabbleFaction["Revered"];
-		[1] = { itemID = 22766}; --Plans: Ironvine Breastplate
-		[2] = { itemID = 22219}; --Plans: Jagged Obsidian Shield
-		[3] = { itemID = 22771}; --Pattern: Bramblewood Helm
-		[4] = { itemID = 20511}; --Pattern: Sandstalker Breastplate
-		[5] = { itemID = 20508}; --Pattern: Spitfire Breastplate
-		[6] = { itemID = 22683}; --Pattern: Gaea's Embrace
-		[7] = { itemID = 22312}; --Pattern: Satchel of Cenarius
-		[8] = { itemID = 22774}; --Pattern: Sylvan Vest
+		[1] = { itemID = 1519870 }; -- Amulet of the Third War
+		[2] = { itemID = 1519869 }; -- Arcane Infused Staff
+		[3] = { itemID = 1519868 }; -- Qiraji Shell	
+		[5] = { itemID = 22766}; --Plans: Ironvine Breastplate
+		[6] = { itemID = 22219}; --Plans: Jagged Obsidian Shield
+		[7] = { itemID = 22771}; --Pattern: Bramblewood Helm
+		[8] = { itemID = 20511}; --Pattern: Sandstalker Breastplate
+		[9] = { itemID = 20508}; --Pattern: Spitfire Breastplate
+		[10] = { itemID = 22683}; --Pattern: Gaea's Embrace
+		[11] = { itemID = 22312}; --Pattern: Satchel of Cenarius
+		[12] = { itemID = 22774}; --Pattern: Sylvan Vest
 		[16] = { icon = "INV_QirajIdol_Amber", name = WHITE..AL["Token Hand-Ins"] };
 		[17] = { itemID = 21186}; --Rockfury Bracers
 		[18] = { itemID = 21184}; --Deeprock Bracers
@@ -7460,13 +7497,17 @@ AtlasLoot_Data["Cenarion"] = {
 	};
 	{
 		Name = BabbleFaction["Exalted"];
-		[1] = { itemID = 22221}; --Plans: Obsidian Mail Tunic
-		[2] = { itemID = 20382}; --Pattern: Dreamscale Breastplate
+		[1] = { itemID = 1519862 }; -- Ancient Buckler
+		[2] = { itemID = 1519863 }; -- Cenarion Clubber
+		[3] = { itemID = 1519864 }; -- Polished Qiraji Halberd
+		[4] = { itemID = 1519866 }; -- Cloak of the Shifting Sands
+		[6] = { itemID = 22221}; --Plans: Obsidian Mail Tunic
+		[7] = { itemID = 20382}; --Pattern: Dreamscale Breastplate
 		[16] = { icon = "INV_QirajIdol_Amber", name = WHITE..AL["Token Hand-Ins"] };
 		[17] = { itemID = 21190}; --Wrath of Cenarius
 		[18] = { itemID = 21180}; --Earthstrike
 		[19] = { itemID = 21188}; --Fist of Cenarius
-	};
+	};  
 };
 
 ----------------------------------------
@@ -7515,39 +7556,48 @@ AtlasLoot_Data["Thorium"] = {
 		[4] = { itemID = 17023}; --Pattern: Molten Helm
 		[5] = { itemID = 17022}; --Pattern: Corehound Boots
 		[6] = { itemID = 17018}; --Pattern: Flarecore Gloves
+
 	};
 	{
 		Name = BabbleFaction["Honored"];
-		[1] = { itemID = 17060}; --Plans: Dark Iron Destroyer
-		[2] = { itemID = 17059}; --Plans: Dark Iron Reaver
-		[3] = { itemID = 17049}; --Plans: Fiery Chain Girdle
-		[4] = { itemID = 19206}; --Plans: Dark Iron Helm
-		[5] = { itemID = 19448}; --Formula: Enchant Weapon - Mighty Spirit
-		[6] = { itemID = 17025}; --Pattern: Black Dragonscale Boots
-		[7] = { itemID = 19330}; --Pattern: Lava Belt
-		[8] = { itemID = 17017}; --Pattern: Flarecore Mantle
-		[9] = { itemID = 19219}; --Pattern: Flarecore Robe
+		[1] = { itemID = 1519907 }; -- Thorium Linked Wristsguards
+		[2] = { itemID = 1519908 }; -- Brawlers Totem
+		[16] = { itemID = 17060}; --Plans: Dark Iron Destroyer
+		[17] = { itemID = 17059}; --Plans: Dark Iron Reaver
+		[18] = { itemID = 17049}; --Plans: Fiery Chain Girdle
+		[19] = { itemID = 19206}; --Plans: Dark Iron Helm
+		[20] = { itemID = 19448}; --Formula: Enchant Weapon - Mighty Spirit
+		[21] = { itemID = 17025}; --Pattern: Black Dragonscale Boots
+		[22] = { itemID = 19330}; --Pattern: Lava Belt
+		[23] = { itemID = 17017}; --Pattern: Flarecore Mantle
+		[24] = { itemID = 19219}; --Pattern: Flarecore Robe
 	};
 	{
 		Name = BabbleFaction["Revered"];
-		[1] = { itemID = 18592}; --Plans: Sulfuron Hammer
-		[2] = { itemID = 17052}; --Plans: Dark Iron Leggings
-		[3] = { itemID = 17053}; --Plans: Fiery Chain Shoulders
-		[4] = { itemID = 19209}; --Plans: Blackfury
-		[5] = { itemID = 19208}; --Plans: Black Amnesty
-		[6] = { itemID = 19207}; --Plans: Dark Iron Gauntlets
-		[7] = { itemID = 19449}; --Formula: Enchant Weapon - Mighty Intellect
-		[8] = { itemID = 19331}; --Pattern: Chromatic Gauntlets
-		[9] = { itemID = 19332}; --Pattern: Corehound Belt
-		[9] = { itemID = 19333}; --Pattern: Molten Belt
-		[10] = { itemID = 19220}; --Pattern: Flarecore Leggings
+		[1] = { itemID = 1519905 }; -- Thorium Reinforced Buckler
+		[2] = { itemID = 1519906 }; -- Thorium Studded Pants
+		[3] = { itemID = 1519904 }; -- Rust Covered Belt
+		[16] = { itemID = 18592}; --Plans: Sulfuron Hammer
+		[17] = { itemID = 17052}; --Plans: Dark Iron Leggings
+		[18] = { itemID = 17053}; --Plans: Fiery Chain Shoulders
+		[19] = { itemID = 19209}; --Plans: Blackfury
+		[20] = { itemID = 19208}; --Plans: Black Amnesty
+		[21] = { itemID = 19207}; --Plans: Dark Iron Gauntlets
+		[22] = { itemID = 19449}; --Formula: Enchant Weapon - Mighty Intellect
+		[23] = { itemID = 19331}; --Pattern: Chromatic Gauntlets
+		[24] = { itemID = 19332}; --Pattern: Corehound Belt
+		[25] = { itemID = 19333}; --Pattern: Molten Belt
+		[26] = { itemID = 19220}; --Pattern: Flarecore Leggings
 	};
 	{
 		Name = BabbleFaction["Exalted"];
-		[1] = { itemID = 19211}; --Plans: Blackguard
-		[2] = { itemID = 20040}; --Plans: Dark Iron Boots
-		[3] = { itemID = 19210}; --Plans: Ebon Hand
-		[4] = { itemID = 19212}; --Plans: Nightfall
+		[1] = { itemID = 1519900 }; -- Thorium Staff
+		[2] = { itemID = 1519902 }; -- Thorium Throwing Knives
+		[3] = { itemID = 1519901 }; -- Thorium Rifle
+		[22] = { itemID = 19211}; --Plans: Blackguard
+		[23] = { itemID = 20040}; --Plans: Dark Iron Boots
+		[24] = { itemID = 19210}; --Plans: Ebon Hand
+		[25] = { itemID = 19212}; --Plans: Nightfall
 	};
 };
 ----------------------
@@ -7558,25 +7608,36 @@ AtlasLoot_Data["Timbermaw"] = {
 	Module = "AtlasLoot_OriginalWoW";
 	Name = BabbleFaction["Timbermaw Hold"];
 	{
-		Name = BabbleFaction["Timbermaw Hold"];
-		[1] = { icon = "INV_Misc_Horn_01", name = WHITE..BabbleFaction["Friendly"] };
-		[2] = { itemID = 13484}; --Recipe: Transmute Earth to Water
-		[3] = { itemID = 22392}; --Formula: Enchant 2H Weapon - Agility
-		[4] = { itemID = 20254}; --Pattern: Warbear Woolies
-		[5] = { itemID = 20253}; --Pattern: Warbear Harness
-		[7] = { icon = "INV_Misc_Horn_01", name = WHITE..BabbleFaction["Honored"] };
-		[8] = { itemID = 16768}; --Furbolg Medicine Pouch
-		[9] = { itemID = 16769}; --Furbolg Medicine Totem
-		[10] = { itemID = 19202}; --Plans: Heavy Timbermaw Belt
-		[11] = { itemID = 19445}; --Formula: Enchant Weapon - Agility
-		[12] = { itemID = 19326}; --Pattern: Might of the Timbermaw
-		[13] = { itemID = 19215}; --Pattern: Wisdom of the Timbermaw
-		[16] = { icon = "INV_Misc_Horn_01", name = WHITE..BabbleFaction["Revered"] };
-		[17] = { itemID = 19204}; --Plans: Heavy Timbermaw Boots
-		[18] = { itemID = 19327}; --Pattern: Timbermaw Brawlers
-		[19] = { itemID = 19218}; --Pattern: Mantle of the Timbermaw
-		[22] = { icon = "INV_Misc_Horn_01", name = WHITE..BabbleFaction["Exalted"] };
-		[23] = { itemID = 21326}; --Defender of the Timbermaw 
+		Name = BabbleFaction["Friendly"];
+		[1] = { itemID = 13484}; --Recipe: Transmute Earth to Water
+		[2] = { itemID = 22392}; --Formula: Enchant 2H Weapon - Agility
+		[3] = { itemID = 20254}; --Pattern: Warbear Woolies
+		[4] = { itemID = 20253}; --Pattern: Warbear Harness
+	};
+	{
+		Name = BabbleFaction["Honored"];
+		[1] = { itemID = 1519894 }; -- Timbermaw Root
+		[2] = { itemID = 16768}; --Furbolg Medicine Pouch
+		[3] = { itemID = 16769}; --Furbolg Medicine Totem
+		[16] = { itemID = 19202}; --Plans: Heavy Timbermaw Belt
+		[17] = { itemID = 19445}; --Formula: Enchant Weapon - Agility
+		[18] = { itemID = 19326}; --Pattern: Might of the Timbermaw
+		[19] = { itemID = 19215}; --Pattern: Wisdom of the Timbermaw
+	};
+	{
+		Name = BabbleFaction["Revered"];
+		[1] = { itemID = 1519895 }; -- Timbermaw Talisman
+		[2] = { itemID = 1519893 }; -- Ring of Mending
+		[16] = { itemID = 19204}; --Plans: Heavy Timbermaw Boots
+		[17] = { itemID = 19327}; --Pattern: Timbermaw Brawlers
+		[18] = { itemID = 19218}; --Pattern: Mantle of the Timbermaw
+	};
+	{
+		Name = BabbleFaction["Exalted"];
+		[1] = { itemID = 1519892 }; -- The \"Prized\" Possesion
+		[2] = { itemID = 1519891 }; -- Timbermaw Shanker
+		[3] = { itemID = 1519890 }; -- Timbermaw Spellblade
+		[4] = { itemID = 21326}; --Defender of the Timbermaw 
 	};
 };
 
@@ -7631,6 +7692,25 @@ AtlasLoot_Data["Zandalar"] = {
 		[2] = { itemID = 20076}; --Zandalar Signet of Mojo
 		[3] = { itemID = 20078}; --Zandalar Signet of Serenity
 		[4] = { itemID = 20013}; --Recipe: Living Action Potion
+		[6] = { itemID = 500890 }; -- Zandalarian Voodoo Mask
+		[7] = { itemID = 500960 }; -- Zandalarian Voodoo Mask
+		[8] = { itemID = 501080 }; -- Zandalarian Voodoo Mask
+		[9] = { itemID = 501150 }; -- Zandalarian Voodoo Mask
+		[10] = { itemID = 502410 }; -- Zandalarian Voodoo Mask
+		[11] = { itemID = 502760 }; -- Zandalarian Voodoo Mask
+		[12] = { itemID = 503260 }; -- Zandalarian Voodoo Mask
+		[13] = { itemID = 503920 }; -- Zandalarian Voodoo Mask
+		[14] = { itemID = 507650 }; -- Zandalarian Voodoo Mask
+		[15] = { itemID = 508260 }; -- Zandalarian Voodoo Mask
+		[16] = { itemID = 508320 }; -- Zandalarian Voodoo Mask
+		[17] = { itemID = 508370 }; -- Zandalarian Voodoo Mask
+		[18] = { itemID = 508430 }; -- Zandalarian Voodoo Mask
+		[19] = { itemID = 508480 }; -- Zandalarian Voodoo Mask
+		[20] = { itemID = 508550 }; -- Zandalarian Voodoo Mask
+		[21] = { itemID = 508620 }; -- Zandalarian Voodoo Mask
+		[22] = { itemID = 508670 }; -- Zandalarian Voodoo Mask
+		[23] = { itemID = 500800 }; -- Zandalarian Voodoo Mask
+		[24] = { itemID = 508210 }; -- Zandalarian Voodoo Mask
 	};
 };
 
