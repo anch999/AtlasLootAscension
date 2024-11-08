@@ -887,7 +887,7 @@ AtlasLoot_Data["CoTHyjal"] = {
 	Map = "CoTHyjal";
 	{
 		Name = BabbleBoss["Rage Winterchill"];
-		NpcID = 17767;
+		WebID = {17767,"npc"};
 		[1] = { itemID = 30871 }; --Bracers of Martyrdom
 		[2] = { itemID = 30870 }; --Cuffs of Devastation
 		[3] = { itemID = 30863 }; --Deadly Cuffs
@@ -910,7 +910,7 @@ AtlasLoot_Data["CoTHyjal"] = {
 	};
 	{
 		Name = BabbleBoss["Anetheron"];
-		NpcID = 17808;
+		WebID = {17808,"npc"};
 		[1] = { itemID = 30884 }; --Hatefury Mantle
 		[2] = { itemID = 30888 }; --Anetheron's Noose
 		[3] = { itemID = 30885 }; --Archbishop's Slippers
@@ -932,7 +932,7 @@ AtlasLoot_Data["CoTHyjal"] = {
 	};
 	{
 		Name = BabbleBoss["Kaz'rogal"];
-		NpcID = 17888;
+		WebID = {17888,"npc"};
 		[1] = { itemID = 30889 }; --Kaz\'rogal\'s Hardened Heart"
 		[2] = { itemID = 30893 }; --Sun-touched Chain Leggings"
 		[3] = { itemID = 30894 }; --Blue Suede Shoes"
@@ -948,7 +948,7 @@ AtlasLoot_Data["CoTHyjal"] = {
 	};
 	{
 		Name = BabbleBoss["Azgalor"];
-		NpcID = 17842;
+		WebID = {17842,"npc"};
 		[1] = { itemID = 30892 }; --Beast-tamer\'s Shoulders"
 		[2] = { itemID = 30896 }; --Glory of the Defender"
 		[3] = { itemID = 30897 }; --Girdle of Hope"
@@ -963,7 +963,7 @@ AtlasLoot_Data["CoTHyjal"] = {
 	};
 	{
 		Name = BabbleBoss["Archimonde"];
-		NpcID = 17968;
+		WebID = {17968,"npc"};
 		[1] = { itemID = 30913 }; --Robes of Rhonin
 		[2] = { itemID = 30912 }; --Leggings of Eternity
 		[3] = { itemID = 30905 }; --Midnight Chestguard
@@ -986,7 +986,7 @@ AtlasLoot_Data["CoTHyjal"] = {
 	};
 	{
 		Name = AL["Chromius"];
-		NpcID = 92179;
+		WebID = {92179,"npc"};
 		[1] = { itemID = 15828 }; --Final Countdown Bands
 		[2] = { itemID = 15831 }; --Girdle of Falling Sand
 		[3] = { itemID = 15898 }; --Hourglass Casing
@@ -1348,7 +1348,7 @@ AtlasLoot_Data["CFRSerpentshrine"] = {
 	Map = "CFRSerpentshrineCavern";
 	{
 		Name = BabbleBoss["Hydross the Unstable"];
-		NpcID = 21216;
+		WebID = {21216,"npc"};
 		[1] = { itemID = 30056 }; --Robe of Hateful Echoes
 		[2] = { itemID = 32516 }; --Wraps of Purification
 		[3] = { itemID = 30050 }; --Boots of the Shifting Nightmare
@@ -1392,7 +1392,7 @@ AtlasLoot_Data["CFRSerpentshrine"] = {
 	};
 	{
 		Name = BabbleBoss["Leotheras the Blind"];
-		NpcID = 21215;
+		WebID = {21215,"npc"};
 		[1] = { itemID = 30092 }; --Orca-Hide Boots
 		[2] = { itemID = 30097 }; --Coral-Barbed Shoulderpads
 		[3] = { itemID = 30091 }; --True-Aim Stalker Bands
@@ -1407,7 +1407,7 @@ AtlasLoot_Data["CFRSerpentshrine"] = {
 	};
 	{
 		Name = BabbleBoss["Fathom-Lord Karathress"];
-		NpcID = 21214;
+		WebID = {21214,"npc"};
 		[1] = { itemID = 30100 }; --Soul-Strider Boots
 		[2] = { itemID = 30101 }; --Bloodsea Brigand's Vest
 		[3] = { itemID = 30099 }; --Frayed Tether of the Drowned
@@ -1422,7 +1422,7 @@ AtlasLoot_Data["CFRSerpentshrine"] = {
 	};
 	{
 		Name = BabbleBoss["Morogrim Tidewalker"];
-		NpcID = 21213;
+		WebID = {21213,"npc"};
 		[1] = { itemID = 30098 }; --Razor-Scale Battlecloak
 		[2] = { itemID = 30079 }; --Illidari Shoulderpads
 		[3] = { itemID = 30075 }; --Gnarled Chestpiece of the Ancients
@@ -1442,7 +1442,7 @@ AtlasLoot_Data["CFRSerpentshrine"] = {
 	};
 	{
 		Name = BabbleBoss["Lady Vashj"];
-		NpcID = 21212;
+		WebID = {21212,"npc"};
 		[1] = { itemID = 30107 }; --Vestments of the Sea-Witch
 		[2] = { itemID = 30111 }; --Runetotem's Mantle
 		[3] = { itemID = 30106 }; --Belt of One-Hundred Deaths
@@ -1504,7 +1504,7 @@ AtlasLoot_Data["GruulsLair"] = {
 	Map = "GruulsLair";
 	{
 		Name = BabbleBoss["High King Maulgar"];
-		NpcID = 18831;
+		WebID = {18831,"npc"};
 		[1] = { itemID = 28797 }; --Brute Cloak of the Ogre-Magi
 		[2] = { itemID = 28799 }; --Belt of Divine Inspiration
 		[3] = { itemID = 28796 }; --Malefic Mask of the Shadows
@@ -1522,7 +1522,7 @@ AtlasLoot_Data["GruulsLair"] = {
 	};
 	{
 		Name = BabbleBoss["Gruul the Dragonkiller"];
-		NpcID = 19044;
+		WebID = {19044,"npc"};
 		[1] = { itemID = 28804 }; --Collar of Cho'gall
 		[2] = { itemID = 28803 }; --Cowl of Nature's Breath
 		[3] = { itemID = 28828 }; --Gronn-Stitched Girdle
@@ -1559,7 +1559,7 @@ AtlasLoot_Data["HCRamparts"] = {
 	Map = "HCHellfireRamparts";
 	{
 		Name = BabbleBoss["Watchkeeper Gargolmar"];
-		NpcID = 17306;
+		WebID = {17306,"npc"};
 		[1] = { itemID = 24024 }; --Pauldrons of Arcane Rage
 		[2] = { itemID = 24023 }; --Bracers of Finesse
 		[3] = { itemID = 24022 }; --Scale Leggings of the Skirmisher
@@ -1580,7 +1580,7 @@ AtlasLoot_Data["HCRamparts"] = {
 	};
 	{
 		Name = BabbleBoss["Omor the Unscarred"];
-		NpcID = 17308;
+		WebID = {17308,"npc"};
 		[1] = { itemID = 24090 }; --Bloodstained Ravager Gauntlets
 		[2] = { itemID = 24091 }; --Tenacious Defender
 		[3] = { itemID = 24073 }; --Garotte-String Necklace
@@ -1608,7 +1608,7 @@ AtlasLoot_Data["HCRamparts"] = {
 	};
 	{
 		Name = BabbleBoss["Vazruden"];
-		NpcID = 17537;
+		WebID = {17537,"npc"};
 		[1] = { icon = "INV_Box_01", name = WHITE.. AL["Reinforced Fel Iron Chest"] };
 		[2] = { itemID = 24150 }; --Mok'Nathal Wildercloak
 		[3] = { itemID = 24083 }; --Lifegiver Britches
@@ -1628,7 +1628,7 @@ AtlasLoot_Data["HCRamparts"] = {
 	};
 	{
 		Name = BabbleBoss["Vazruden"] .. " (" .. AL["Heroic"] .. ")";
-		NpcID = 17537;
+		WebID = {17537,"npc"};
 		[1] = { itemID = 29264 }; --Tree-Mender's Belt
 		[2] = { itemID = 32077 }; --Wrath Infused Gauntlets
 		[3] = { itemID = 29238 }; --Lion's Heart Girdle
@@ -1829,7 +1829,7 @@ AtlasLoot_Data["HCMagtheridon"] = {
 	Map = "HCMagtheridonsLair";
 	{
 		Name = BabbleBoss["Magtheridon"];
-		NpcID = 17257;
+		WebID = {17257,"npc"};
 		[1] = { itemID = 28777 }; --Cloak of the Pit Stalker
 		[2] = { itemID = 28780 }; --Soul-Eater's Handwraps
 		[3] = { itemID = 28776 }; --Liar's Tongue Gloves
@@ -1892,7 +1892,7 @@ AtlasLoot_Data["Karazhan"] = {
 	};
 	{
 		Name = BabbleBoss["Attumen the Huntsman"];
-		NpcID = 16152;
+		WebID = {16152,"npc"};
 		[1] = { itemID = 28477 }; --Harbinger Bands
 		[2] = { itemID = 28507 }; --Handwraps of Flowing Thought
 		[3] = { itemID = 28508 }; --Gloves of Saintly Blessings
@@ -1913,7 +1913,7 @@ AtlasLoot_Data["Karazhan"] = {
 	};
 	{
 		Name = BabbleBoss["Moroes"];
-		NpcID = 15687;
+		WebID = {15687,"npc"};
 		[1] = { itemID = 28529 }; --Royal Cloak of Arathi Kings
 		[2] = { itemID = 28570 }; --Shadow-Cloak of Dalaran
 		[3] = { itemID = 28565 }; --Nethershard Girdle
@@ -1936,7 +1936,7 @@ AtlasLoot_Data["Karazhan"] = {
 	};
 	{
 		Name = BabbleBoss["Maiden of Virtue"];
-		NpcID = 16457;
+		WebID = {16457,"npc"};
 		[1] = { itemID = 28511 }; --Bands of Indwelling
 		[2] = { itemID = 28515 }; --Bands of Nefarious Deeds
 		[3] = { itemID = 28517 }; --Boots of Foretelling
@@ -1984,7 +1984,7 @@ AtlasLoot_Data["Karazhan"] = {
 	};
 	{
 		Name = BabbleBoss["Nightbane"];
-		NpcID = 17225;
+		WebID = {17225,"npc"};
 		[1] = { itemID = 28602 }; --Robe of the Elder Scribes
 		[2] = { itemID = 28600 }; --Stonebough Jerkin
 		[3] = { itemID = 28601 }; --Chestguard of the Conniver
@@ -2005,7 +2005,7 @@ AtlasLoot_Data["Karazhan"] = {
 	};
 	{
 		Name = BabbleBoss["The Curator"];
-		NpcID = 15691;
+		WebID = {15691,"npc"};
 		[1] = { itemID = 28612 }; --Pauldrons of the Solace-Giver
 		[2] = { itemID = 28647 }; --Forest Wind Shoulderpads
 		[3] = { itemID = 28631 }; --Dragon-Quake Shoulderguards
@@ -2019,7 +2019,7 @@ AtlasLoot_Data["Karazhan"] = {
 	};
 	{
 		Name = BabbleBoss["Terestian Illhoof"];
-		NpcID = 15688;
+		WebID = {15688,"npc"};
 		[1] = { itemID = 28660 }; --Gilded Thorium Cloak
 		[2] = { itemID = 28653 }; --Shadowvine Cloak of Infusion
 		[3] = { itemID = 28652 }; --Cincture of Will
@@ -2039,7 +2039,7 @@ AtlasLoot_Data["Karazhan"] = {
 	};
 	{
 		Name = BabbleBoss["Shade of Aran"];
-		NpcID = 16524;
+		WebID = {16524,"npc"};
 		[1] = { itemID = 28672 }; --Drape of the Dark Reavers
 		[2] = { itemID = 28726 }; --Mantle of the Mind Flayer
 		[3] = { itemID = 28670 }; --Boots of the Infernal Coven
@@ -2060,7 +2060,7 @@ AtlasLoot_Data["Karazhan"] = {
 	};
 	{
 		Name = BabbleBoss["Netherspite"];
-		NpcID = 15689;
+		WebID = {15689,"npc"};
 		[1] = { itemID = 28744 }; --Uni-Mind Headdress
 		[2] = { itemID = 28742 }; --Pantaloons of Repentence
 		[3] = { itemID = 28732 }; --Cowl of Defiance
@@ -2081,7 +2081,7 @@ AtlasLoot_Data["Karazhan"] = {
 	};
 	{
 		Name = BabbleBoss["Chess Event"];
-		ObjectID = 185119;
+		WebID = {185119,"object"};
 		[1] = { itemID = 28756 }; --Headdress of the High Potentate
 		[2] = { itemID = 28755 }; --Bladed Shoulderpads of the Merciless
 		[3] = { itemID = 28750 }; --Girdle of Treachery
@@ -2099,7 +2099,7 @@ AtlasLoot_Data["Karazhan"] = {
 	};
 	{
 		Name = BabbleBoss["Prince Malchezaar"];
-		NpcID = 15690;
+		WebID = {15690,"npc"};
 		[1] = { itemID = 28765 }; --Stainless Cloak of the Pure Hearted
 		[2] = { itemID = 28766 }; --Ruby Drape of the Mysticant
 		[3] = { itemID = 28764 }; --Farstrider Wildercloak
@@ -2239,7 +2239,7 @@ AtlasLoot_Data["KarazhanCryptsTBC"] = {
 	--Map = "Gnomeregan";
 	{
 		Name = AL["Cynfael"];
-		NpcID = 254401;
+		WebID = {254401,"npc"};
 		[1] = { itemID = 255169 }; -- Twinglaive of the Vampire Council
 		[2] = { itemID = 255212 }; -- Twinglaive of Eternal Slumber
 		[3] = { itemID = 259322 }; -- Purified Vitae Chalice
@@ -2250,7 +2250,7 @@ AtlasLoot_Data["KarazhanCryptsTBC"] = {
 	};
 	{
 		Name = AL["Dryn Miel <The Second Eidolon>"];
-		NpcID = 254413;
+		WebID = {254413,"npc"};
 		[1] = { itemID = 255677 }; -- Sorrow of the Eclipse
 		[2] = { itemID = 255720 }; -- Cryptsteel Maul
 		[3] = { itemID = 255809 }; -- Dakrya, Hand of the Second Eidolon
@@ -2268,7 +2268,7 @@ AtlasLoot_Data["KarazhanCryptsTBC"] = {
 	};
 	{
 		Name = AL["Kurgoth Doomreaver"];
-		NpcID = 254406;
+		WebID = {254406,"npc"};
 		[1] = { itemID = 255917 }; -- Forgiveness
 		[2] = { itemID = 257135 }; -- Drape of the Horse
 		[3] = { itemID = 259494 }; -- Soulsteel Legplates
@@ -2278,7 +2278,7 @@ AtlasLoot_Data["KarazhanCryptsTBC"] = {
 	};
 	{
 		Name = AL["The Judgement of Sinners"];
-		NpcID = 254405;
+		WebID = {254405,"npc"};
 		[1] = { itemID = 255301 }; -- Ghoul Spine Cleaver
 		[2] = { itemID = 255373 }; -- Conduit of Sinners
 		[3] = { itemID = 255509 }; -- Spinesplinter Arbalest
@@ -2288,7 +2288,7 @@ AtlasLoot_Data["KarazhanCryptsTBC"] = {
 	};
 	{
 		Name = AL["Takan Velor <The Hero of Deadwind>"];
-		NpcID = 654564;
+		WebID = {654564,"npc"};
 		[1] = { itemID = 260936 }; -- Soulfire Torch
 		[2] = { itemID = 259966 }; -- Funeral Handwraps
 		[3] = { itemID = 260009 }; -- Deathsworn Handguards
@@ -2297,7 +2297,7 @@ AtlasLoot_Data["KarazhanCryptsTBC"] = {
 	};
 	{
 		Name = AL["Captain Taveir (Rare Spawn)"];
-		NpcID = 254495;
+		WebID = {254495,"npc"};
 		[1] = { itemID = 254088 }; -- Funeral Treads
 		[2] = { itemID = 254131 }; -- Deathsworn Boots
 		[3] = { itemID = 254174 }; -- Bonelink Greaves
@@ -2306,7 +2306,7 @@ AtlasLoot_Data["KarazhanCryptsTBC"] = {
 	};
 	{
 		Name = AL["Kelivex Autumnvale (Rare Spawn)"];
-		NpcID = 254493;
+		WebID = {254493,"npc"};
 		[1] = { itemID = 254088 }; -- Funeral Treads
 		[2] = { itemID = 254131 }; -- Deathsworn Boots
 		[3] = { itemID = 254174 }; -- Bonelink Greaves
@@ -2326,7 +2326,7 @@ AtlasLoot_Data["BlackrockCavernsTBC"] = {
 	--Map = "BlackrockDepths";
 	{
 		Name = AL["Ascendant Lord Obsidius"];
-		NpcID = 39705;
+		WebID = {39705,"npc"};
 		[1] = { itemID = 252075 }; -- Amber Messenger
 		[2] = { itemID = 252711 }; -- Witching Hourglass
 		[3] = { itemID = 252771 }; -- Crepuscular Shield
@@ -2340,7 +2340,7 @@ AtlasLoot_Data["BlackrockCavernsTBC"] = {
 	};
 	{
 		Name = AL["Beauty"];
-		NpcID = 39700;
+		WebID = {39700,"npc"};
 		[1] = { itemID = 250876 }; -- Beauty's Favorite Bone
 		[2] = { itemID = 250663 }; -- Beauty's Chew Toy
 		[3] = { itemID = 250706 }; -- Beauty's Plate
@@ -2349,7 +2349,7 @@ AtlasLoot_Data["BlackrockCavernsTBC"] = {
 	};
 	{
 		Name = AL["Corla, Herald of Twilight"];
-		NpcID = 39679;
+		WebID = {39679,"npc"};
 		[1] = { itemID = 247779 }; -- Grace of the Herald
 		[2] = { itemID = 247827 }; -- Corla's Baton
 		[3] = { itemID = 46418 }; -- Renouncer's Cowl
@@ -2358,7 +2358,7 @@ AtlasLoot_Data["BlackrockCavernsTBC"] = {
 	};
 	{
 		Name = AL["Karsh Steelbender <Twilight Armorer>"];
-		NpcID = 39698;
+		WebID = {39698,"npc"};
 		[1] = { itemID = 250620 }; -- Steelbender's Masterpiece
 		[2] = { itemID = 247936 }; -- Bracers of Cooled Anger
 		[3] = { itemID = 249391 }; -- Heat Wave Leggings
@@ -2368,7 +2368,7 @@ AtlasLoot_Data["BlackrockCavernsTBC"] = {
 	};
 	{
 		Name = AL["Rom'ogg Bonecrusher"];
-		NpcID = 39665;
+		WebID = {39665,"npc"};
 		[1] = { itemID = 251860 }; -- Torturer's Mercy
 		[2] = { itemID = 251903 }; -- Shield of the Iron Maiden
 		[3] = { itemID = 251086 }; -- Inquisition Robes
@@ -2383,6 +2383,7 @@ AtlasLoot_Data["FrozenReachTBC"] = {
 	Type = "Manastorm";
 	{
 		Name = AL["Frozen Reach"];
+		WebID ={1298888,"item"};
 		[1] = { itemID = 1529392 }; -- Frigid Bow of the Bonded Souls
 		[2] = { itemID = 1529391 }; -- Reclaimed Blade of the Frozen Sepulcher
 		[3] = { itemID = 1529390 }; -- Arktos' Resillience
@@ -2414,7 +2415,7 @@ AtlasLoot_Data["SunwellPlateau"] = {
 	Map = "SunwellPlateau";
 	{
 		Name = BabbleBoss["Kalecgos"];
-		NpcID = 24892;
+		WebID = {24892,"npc"};
 		LootGroups = {
 			[1] =  100,
 			[2] =  100,
@@ -2437,7 +2438,7 @@ AtlasLoot_Data["SunwellPlateau"] = {
 	};
 	{
 		Name = BabbleBoss["Brutallus"];
-		NpcID = 24882;
+		WebID = {24882,"npc"};
 		LootGroups = {
 			[1] =  100,
 			[2] =  100,
@@ -2464,7 +2465,7 @@ AtlasLoot_Data["SunwellPlateau"] = {
 	};
 	{
 		Name = BabbleBoss["Felmyst"];
-		NpcID = 25038;
+		WebID = {25038,"npc"};
 		LootGroups = {
 			[1] =  100,
 			[2] =  100,
@@ -2488,7 +2489,7 @@ AtlasLoot_Data["SunwellPlateau"] = {
 	};
 	{
 		Name = BabbleBoss["The Eredar Twins"];
-		NpcID = 25166;
+		WebID = {25166,"npc"};
 		LootGroups = {
 			[1] =  100,
 			[2] =  100,
@@ -2524,7 +2525,7 @@ AtlasLoot_Data["SunwellPlateau"] = {
 	};
 	{
 		Name = AL["High Commander Arynyes <Shadowsword Captain>"];
-		NpcID = 25837;
+		WebID = {25837,"npc"};
 		LootGroups = {
 			[1] =  100,
 			[2] =  100,
@@ -2548,7 +2549,7 @@ AtlasLoot_Data["SunwellPlateau"] = {
 	};
 	{
 		Name = BabbleBoss["M'uru"];
-		NpcID = 25741; -- Entropius: 25840
+		WebID = {25741,"npc"}; -- Entropius: 25840
 		LootGroups = {
 			[1] =  100,
 			[2] =  100,
@@ -2581,7 +2582,7 @@ AtlasLoot_Data["SunwellPlateau"] = {
 	};
 	{
 		Name = BabbleBoss["Kil'jaeden"];
-		NpcID = 25315;
+		WebID = {25315,"npc"};
 		LootGroups = {
 			[1] =  3,
 			[2] =  100,
@@ -2962,7 +2963,7 @@ AtlasLoot_Data["TKEye"] = {
 	Map = "TempestKeepTheEye";
 	{
 		Name = BabbleBoss["Al'ar"];
-		NpcID = 19514;
+		WebID = {19514,"npc"};
 		[1] = { itemID = 29925 }; --Phoenix-Wing Cloak
 		[2] = { itemID = 29918 }; --Mindstorm Wristbands
 		[3] = { itemID = 29947 }; --Gloves of the Searing Grip
@@ -2985,7 +2986,7 @@ AtlasLoot_Data["TKEye"] = {
 	};
 	{
 		Name = BabbleBoss["Void Reaver"];
-		NpcID = 19516;
+		WebID = {19516,"npc"};
 		[1] = { itemID = 29986 }; --Cowl of the Grand Engineer
 		[2] = { itemID = 29984 }; --Girdle of Zaetar
 		[3] = { itemID = 29985 }; --Void Reaver Greaves
@@ -3000,7 +3001,7 @@ AtlasLoot_Data["TKEye"] = {
 	};
 	{
 		Name = BabbleBoss["High Astromancer Solarian"];
-		NpcID = 18805;
+		WebID = {18805,"npc"};
 		[1] = { itemID = 29977 }; --Star-Soul Breeches
 		[2] = { itemID = 29972 }; --Trousers of the Astromancer
 		[3] = { itemID = 29966 }; --Vambraces of Ending
@@ -3021,7 +3022,7 @@ AtlasLoot_Data["TKEye"] = {
 	};
 	{
 		Name = BabbleBoss["Kael'thas Sunstrider"];
-		NpcID = 19622;
+		WebID = {19622,"npc"};
 		[1] = { itemID = 29992 }; --Royal Cloak of the Sunstriders
 		[2] = { itemID = 29989 }; --Sunshower Light Cloak
 		[3] = { itemID = 29994 }; --Thalassian Wildercloak

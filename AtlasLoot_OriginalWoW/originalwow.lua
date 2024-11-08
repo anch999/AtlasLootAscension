@@ -969,7 +969,7 @@ AtlasLoot_Data["BlackrockCaverns"] = {
 	--Map = "BlackrockDepths";
 	{
 		Name = AL["Ascendant Lord Obsidius"];
-		NpcID = 39705;
+		WebID = {39705,"npc"};
 		[1] = { itemID = 241661 }; -- Amber Messenger
 		[2] = { itemID = 241833 }; -- Witching Hourglass
 		[3] = { itemID = 241876 }; -- Crepuscular Shield
@@ -983,7 +983,7 @@ AtlasLoot_Data["BlackrockCaverns"] = {
 	};
 	{
 		Name = AL["Beauty"];
-		NpcID = 39700;
+		WebID = {39700,"npc"};
 		[1] = { itemID = 223128 }; -- Beauty's Favorite Bone
 		[2] = { itemID = 219576 }; -- Beauty's Chew Toy
 		[3] = { itemID = 222146 }; -- Beauty's Plate
@@ -992,7 +992,7 @@ AtlasLoot_Data["BlackrockCaverns"] = {
 	};
 	{
 		Name = AL["Corla, Herald of Twilight"];
-		NpcID = 39679;
+		WebID = {39679,"npc"};
 		[1] = { itemID = 212713 }; -- Grace of the Herald
 		[2] = { itemID = 212826 }; -- Corla's Baton
 		[3] = { itemID = 203224 }; -- Renouncer's Cowl
@@ -1001,7 +1001,7 @@ AtlasLoot_Data["BlackrockCaverns"] = {
 	};
 	{
 		Name = AL["Karsh Steelbender <Twilight Armorer>"];
-		NpcID = 39698;
+		WebID = {39698,"npc"};
 		[1] = { itemID = 218298 }; -- Steelbender's Masterpiece
 		[2] = { itemID = 213383 }; -- Bracers of Cooled Anger
 		[3] = { itemID = 215448 }; -- Heat Wave Leggings
@@ -1011,7 +1011,7 @@ AtlasLoot_Data["BlackrockCaverns"] = {
 	};
 	{
 		Name = AL["Rom'ogg Bonecrusher"];
-		NpcID = 39665;
+		WebID = {39665,"npc"};
 		[1] = { itemID = 232104 }; -- Torturer's Mercy
 		[2] = { itemID = 232147 }; -- Shield of the Iron Maiden
 		[3] = { itemID = 231828 }; -- Inquisition Robes
@@ -2144,7 +2144,7 @@ AtlasLoot_Data["KarazhanCrypts"] = {
 	--Map = "Gnomeregan";
 	{
 		Name = AL["Cynfael"];
-		NpcID = 254401;
+		WebID = {254401,"npc"};
 		[1] = { itemID = 252821 }; -- Twinglaive of the Vampire Council
 		[2] = { itemID = 252906 }; -- Twinglaive of Eternal Slumber
 		[3] = { itemID = 254389 }; -- Purified Vitae Chalice
@@ -2155,7 +2155,7 @@ AtlasLoot_Data["KarazhanCrypts"] = {
 	};
 	{
 		Name = AL["Dryn Miel <The Second Eidolon>"];
-		NpcID = 254413;
+		WebID = {254413,"npc"};
 		[1] = { itemID = 253151 }; -- Sorrow of the Eclipse
 		[2] = { itemID = 253442 }; -- Cryptsteel Maul
 		[3] = { itemID = 253634 }; -- Dakrya, Hand of the Second Eidolon
@@ -2173,7 +2173,7 @@ AtlasLoot_Data["KarazhanCrypts"] = {
 	};
 	{
 		Name = AL["Kurgoth Doomreaver"];
-		NpcID = 254406;
+		WebID = {254406,"npc"};
 		[1] = { itemID = 253677 }; -- Forgiveness
 		[2] = { itemID = 253763 }; -- Drape of the Horse
 		[3] = { itemID = 254629 }; -- Soulsteel Legplates
@@ -2183,7 +2183,7 @@ AtlasLoot_Data["KarazhanCrypts"] = {
 	};
 	{
 		Name = AL["The Judgement of Sinners"];
-		NpcID = 254405;
+		WebID = {254405,"npc"};
 		[1] = { itemID = 253004 }; -- Ghoul Spine Cleaver
 		[2] = { itemID = 253053 }; -- Conduit of Sinners
 		[3] = { itemID = 253102 }; -- Spinesplinter Arbalest
@@ -2193,7 +2193,7 @@ AtlasLoot_Data["KarazhanCrypts"] = {
 	};
 	{
 		Name = AL["Captain Taveir (Rare Spawn)"];
-		NpcID = 254495;
+		WebID = {254495,"npc"};
 		[1] = { itemID = 257178 }; -- Funeral Treads
 		[2] = { itemID = 257221 }; -- Deathsworn Boots
 		[3] = { itemID = 257673 }; -- Bonelink Greaves
@@ -2202,7 +2202,7 @@ AtlasLoot_Data["KarazhanCrypts"] = {
 	};
 	{
 		Name = AL["Kelivex Autumnvale (Rare Spawn)"];
-		NpcID = 254493;
+		WebID = {254493,"npc"};
 		[1] = { itemID = 257178 }; -- Funeral Treads
 		[2] = { itemID = 257221 }; -- Deathsworn Boots
 		[3] = { itemID = 257673 }; -- Bonelink Greaves
@@ -4077,7 +4077,7 @@ AtlasLoot_Data["Naxxramas60"] = {
 	Map = "Naxxramas60";
 	{
 		Name = BabbleBoss["Patchwerk"];
-		NpcID = 16028;
+		WebID = {16028,"npc"};
 		[1] = { itemID = 22960 }; --Cloak of Suturing
 		[2] = { itemID = 22815 }; --Severance
 		[3] = { itemID = 22820 }; --Wand of Fates
@@ -4086,22 +4086,22 @@ AtlasLoot_Data["Naxxramas60"] = {
 		[16] = { itemID = 22354, lootTable = {"T3SHOULDER","Token"} }; --Desecrated Pauldrons
 		[18] = { itemID = 22726 }; --Splinter of Atiesh
 		[19] = { itemID = 22727 }; --Frame of Atiesh
+		[21] = { itemID = 60187 }; --Sigil of Patchwerk
 	};
 	{
 		Name = BabbleBoss["Grobbulus"];
-		NpcID = 15931;
-		[1] = { itemID = 22968 }; --Glacial Mantle
-		[2] = { itemID = 22967 }; --Icy Scale Spaulders
-		[3] = { itemID = 22803 }; --Midnight Haze
-		[4] = { itemID = 22988 }; --The End of Dreams
-		[5] = { itemID = 22810 }; --Toxin Injector
+		WebID = {15931,"npc"};
+		[1] = { itemID = 22803 }; --Midnight Haze
+		[2] = { itemID = 22988 }; --The End of Dreams
+		[3] = { itemID = 22810 }; --Toxin Injector
 		[16] = { itemID = 22354, lootTable = {"T3SHOULDER","Token"} }; --Desecrated Pauldrons
 		[18] = { itemID = 22726 }; --Splinter of Atiesh
 		[19] = { itemID = 22727 }; --Frame of Atiesh
+		[21] = { itemID = 60176 }; --Sigil of Grobbulus
 	};
 	{
 		Name = BabbleBoss["Gluth"];
-		NpcID = 15932;
+		WebID = {15932,"npc"};
 		[1] = { itemID = 22983 }; --Rime Covered Mantle
 		[2] = { itemID = 22813 }; --Claymore of Unholy Might
 		[3] = { itemID = 23075 }; --Death's Bargain
@@ -4113,47 +4113,48 @@ AtlasLoot_Data["Naxxramas60"] = {
 		[19] = { itemID = 22358, lootTable = {"T3FEET","Token"} }; --Desecrated Sabatons
 		[21] = { itemID = 22726 }; --Splinter of Atiesh
 		[22] = { itemID = 22727 }; --Frame of Atiesh
+		[24] = { itemID = 60177 }; --Sigil of Gluth
 	};
 	{
 		Name = BabbleBoss["Thaddius"];
-		NpcID = 15928;
+		WebID = {15928,"npc"};
 		[1] = { itemID = 23070 }; --Leggings of Polarity
 		[2] = { itemID = 23000 }; --Plated Abomination Ribcage
 		[3] = { itemID = 22808 }; --The Castigator
 		[4] = { itemID = 22801 }; --Spire of Twilight
-		[5] = { itemID = 23001 }; --Eye of Diminution
+		[5] = { itemID = 23001 }; --Eye of Scourge
 		[6] = { itemID = 15032 }; --Dislocated Spine
 		[16] = { itemID = 22353, lootTable = {"T3HEAD","Token"} }; --Desecrated Helmet
 		[18] = { itemID = 22726 }; --Splinter of Atiesh
 		[19] = { itemID = 22727 }; --Frame of Atiesh
+		[21] = { itemID = 60173 }; -- Sigil of Thaddius
 	};
 	{
 		Name = BabbleBoss["Anub'Rekhan"];
-		NpcID = 15956;
+		WebID = {15956,"npc"};
 		[1] = { itemID = 22938 }; --Cryptfiend Silk Cloak
 		[2] = { itemID = 22936 }; --Wristguards of Vengeance
 		[3] = { itemID = 22937 }; --Gem of Nerubis
 		[4] = { itemID = 22939 }; --Band of Unanswered Prayers
-		[5] = { itemID = 22935 }; --Touch of Frost
 		[16] = { itemID = 22355, lootTable = {"T3WRIST","Token"} }; --Desecrated Bracers
 		[18] = { itemID = 22726 }; --Splinter of Atiesh
 		[19] = { itemID = 22727 }; --Frame of Atiesh
+		[21] = { itemID = 60182 }; --Sigil of Anub'Rekhan
 	};
 	{
 		Name = BabbleBoss["Grand Widow Faerlina"];
-		NpcID = 15953;
-		[1] = { itemID = 22941 }; --Polar Shoulder Pads
-		[2] = { itemID = 22940 }; --Icebane Pauldrons
-		[3] = { itemID = 22806 }; --Widow's Remorse
-		[4] = { itemID = 22942 }; --The Widow's Embrace
-		[5] = { itemID = 22943 }; --Malice Stone Pendant
+		WebID = {15953,"npc"};
+		[1] = { itemID = 22806 }; --Widow's Remorse
+		[2] = { itemID = 22942 }; --The Widow's Embrace
+		[3] = { itemID = 22943 }; --Malice Stone Pendant
 		[16] = { itemID = 22355, lootTable = {"T3WRIST","Token"} }; --Desecrated Bracers
 		[18] = { itemID = 22726 }; --Splinter of Atiesh
 		[19] = { itemID = 22727 }; --Frame of Atiesh
+		[21] = { itemID = 60180 }; --Sigil of Grand Widow Faerlina
 	};
 	{
 		Name = BabbleBoss["Maexxna"];
-		NpcID = 15952;
+		WebID = {15952,"npc"};
 		[1] = { itemID = 23220 }; --Crystal Webbed Robe
 		[2] = { itemID = 22804 }; --Maexxna's Fang
 		[3] = { itemID = 22807 }; --Wraith Blade
@@ -4162,10 +4163,11 @@ AtlasLoot_Data["Naxxramas60"] = {
 		[16] = { itemID = 22357, lootTable = {"T3HAND","Token"} }; --Desecrated Gauntlets
 		[18] = { itemID = 22726 }; --Splinter of Atiesh
 		[19] = { itemID = 22727 }; --Frame of Atiesh
+		[21] = { itemID = 60179 }; --Sigil of Maexxna
 	};
 	{
 		Name = BabbleBoss["Instructor Razuvious"];
-		NpcID = 16061;
+		WebID = {16061,"npc"};
 		[1] = { itemID = 23017 }; --Veil of Eclipse
 		[2] = { itemID = 23219 }; --Girdle of the Mentor
 		[3] = { itemID = 23014 }; --Iblis, Blade of the Fallen Seraph
@@ -4177,22 +4179,22 @@ AtlasLoot_Data["Naxxramas60"] = {
 		[16] = { itemID = 22358, lootTable = {"T3FEET","Token"} }; --Desecrated Sabatons
 		[18] = { itemID = 22726 }; --Splinter of Atiesh
 		[19] = { itemID = 22727 }; --Frame of Atiesh
+		[21] = { itemID = 60190 }; --Sigil of Instructor Razuvious
 	};
 	{
 		Name = BabbleBoss["Gothik the Harvester"];
-		NpcID = 16060;
-		[1] = { itemID = 23032 }; --Glacial Headdress
-		[2] = { itemID = 23021 }; --The Soul Harvester's Bindings
-		[3] = { itemID = 23020 }; --Polar Helmet
-		[4] = { itemID = 23073 }; --Boots of Displacement
-		[5] = { itemID = 23023 }; --Sadist's Collar
+		WebID = {16060,"npc"};
+		[1] = { itemID = 23021 }; --The Soul Harvester's Bindings
+		[2] = { itemID = 23073 }; --Boots of Displacement
+		[3] = { itemID = 23023 }; --Sadist's Collar
 		[16] = { itemID = 22358, lootTable = {"T3SHOULDER","Token"} }; --Desecrated Sabatons
 		[18] = { itemID = 22726 }; --Splinter of Atiesh
 		[19] = { itemID = 22727 }; --Frame of Atiesh
+		[21] = { itemID = 60189 }; --Sigil of Gothik the Harvester
 	};
 	{
 		Name = BabbleBoss["The Four Horsemen"];
-		NpcID = 16065;
+		WebID = {181366,"object"};
 		[1] = { itemID = 23071 }; --Leggings of Apocalypse
 		[2] = { itemID = 22809 }; --Maul of the Redeemed Crusader
 		[3] = { itemID = 22691 }; --Corrupted Ashbringer
@@ -4205,33 +4207,32 @@ AtlasLoot_Data["Naxxramas60"] = {
 	};
 	{
 		Name = BabbleBoss["Noth the Plaguebringer"];
-		NpcID = 15954;
+		WebID = {15954,"npc"};
 		[1] = { itemID = 23030 }; --Cloak of the Scourge
 		[2] = { itemID = 22816 }; --Hatchet of Sundered Bone
 		[3] = { itemID = 23005 }; --Totem of Flowing Water
 		[4] = { itemID = 23006 }; --Libram of Light
 		[5] = { itemID = 23029 }; --Noth's Frigid Heart
 		[6] = { itemID = 23031 }; --Band of the Inevitable
-		[7] = { itemID = 23028 }; --Hailstone Band
 		[16] = { itemID = 22356, lootTable = {"T3WAIST","Token"} }; --Desecrated Waistguard
 		[18] = { itemID = 22726 }; --Splinter of Atiesh
 		[19] = { itemID = 22727 }; --Frame of Atiesh
+		[21] = { itemID = 60181 }; --Sigil of Noth the Plaguebringer
 	};
 	{
 		Name = BabbleBoss["Heigan the Unclean"];
-		NpcID = 15936;
+		WebID = {15936,"npc"};
 		[1] = { itemID = 23035 }; --Preceptor's Hat
-		[2] = { itemID = 23033 }; --Icy Scale Coif
-		[3] = { itemID = 23019 }; --Icebane Helmet
-		[4] = { itemID = 23068 }; --Legplates of Carnage
-		[5] = { itemID = 23036 }; --Necklace of Necropsy
+		[2] = { itemID = 23068 }; --Legplates of Carnage
+		[3] = { itemID = 23036 }; --Necklace of Necropsy
 		[16] = { itemID = 22356, lootTable = {"T3WAIST","Token"} }; --Desecrated Waistguard
 		[18] = { itemID = 22726 }; --Splinter of Atiesh
 		[19] = { itemID = 22727 }; --Frame of Atiesh
+		[21] = { itemID = 60178 }; --Sigil of Heigan the Unclean
 	};
 	{
 		Name = BabbleBoss["Loatheb"];
-		NpcID = 16011;
+		WebID = {16011,"npc"};
 		[1] = { itemID = 23039 }; --The Eye of Nerub
 		[2] = { itemID = 22800 }; --Brimstone Staff
 		[3] = { itemID = 23037 }; --Ring of Spiritual Fervor
@@ -4240,10 +4241,11 @@ AtlasLoot_Data["Naxxramas60"] = {
 		[16] = { itemID = 22352, lootTable = {"T3LEGS","Token"} }; --Desecrated Legplates
 		[18] = { itemID = 22726 }; --Splinter of Atiesh
 		[19] = { itemID = 22727 }; --Frame of Atiesh
+		[21] = { itemID = 60186 }; --Sigil of Loatheb
 	};
 	{
 		Name = BabbleBoss["Sapphiron"];
-		NpcID = 15989;
+		WebID = {15989,"npc"};
 		[1] = { itemID = 23050 }; --Cloak of the Necropolis
 		[2] = { itemID = 23045 }; --Shroud of Dominion
 		[3] = { itemID = 23072 }; --Fists of the Unrelenting
@@ -4262,10 +4264,11 @@ AtlasLoot_Data["Naxxramas60"] = {
 		[19] = { itemID = 23548 }; --Might of the Scourge
 		[21] = { itemID = 22726 }; --Splinter of Atiesh
 		[22] = { itemID = 22727 }; --Frame of Atiesh
+		[24] = { itemID = 60184 }; --Sigil of Sapphiron
 	};
 	{
 		Name = BabbleBoss["Kel'Thuzad"];
-		NpcID = 15990;
+		WebID = {15990,"npc"};
 		[1] = { itemID = 22802 }; --Kingsfall
 		[2] = { itemID = 23054 }; --Gressil, Dawn of Ruin
 		[3] = { itemID = 23577 }; --The Hungering Cold
@@ -4289,6 +4292,19 @@ AtlasLoot_Data["Naxxramas60"] = {
 		[25] = { itemID = 22631 }; --Atiesh, Greatstaff of the Guardian
 		[26] = { itemID = 22630 }; --Atiesh, Greatstaff of the Guardian
 		[28] = { itemID = 60185, droprate = "1%" }; --Sigil
+	};
+	{
+		Name = AL["Shared Frost Resistance Gear"];
+		[1] = { itemID = 22968 }; -- Glacial Mantle
+		[2] = { itemID = 23019 }; -- Icebane Helmet
+		[3] = { itemID = 23020 }; -- Polar Helmet
+		[4] = { itemID = 23028 }; -- Hailstone Band
+		[5] = { itemID = 23033 }; -- Icy Scale Coif
+		[6] = { itemID = 22967 }; -- Icy Scale Spaulders
+		[7] = { itemID = 22941 }; -- Polar Shoulder Pads
+		[8] = { itemID = 22940 }; -- Icebane Pauldrons
+		[9] = { itemID = 22935 }; -- Touch of Frost
+		[10] = { itemID = 23032 }; -- Glacial Headdress
 	};
 	{
 		Name = AL["Trash Mobs"];
@@ -4324,6 +4340,7 @@ AtlasLoot_Data["Onyxia60"] = {
 	Map = "Onyxia60";
 	{
 		Name = BabbleZone["Onyxia's Lair"];
+		WebID = {10184,"npc"};
 		[1] = { itemID = 17078 }; --Sapphiron Drape
 		[2] = { itemID = 18205 }; --Eskhandar's Collar
 		[3] = { itemID = 18813 }; --Ring of Binding
@@ -4336,14 +4353,17 @@ AtlasLoot_Data["Onyxia60"] = {
 		[10] = { itemID = 18211 }; --Wand of the Noble
 		[11] = { itemID = 17084 }; --Mace of the Dragon Knight
 		[12] = { itemID = 18212 }; --Band of Nyxondra
+		[13] = { itemID = 11571 }; -- Flame-Infused Sceptre
+		[14] = { itemID = 18210 }; -- Draconic Effigy
 		[16] = { itemID = 2522460, lootTable = {"T2HEAD","Token"} }; --Chromatic Headpiece
-		[18] = { itemID = 18423 }; --Head of Onyxia
+		[18] = { itemID = 97269 }; --Head of Onyxia
 		[19] = { itemID = 18404 }; -- Onyxia Tooth Pendant
 		[20] = { itemID = 18403 }; -- Dragonslayer's Signet
 		[21] = { itemID = 18406 }; -- Onyxia Blood Talisman
 		[23] = { itemID = 15410 }; -- Scale of Onyxia
 		[24] = { itemID = 17966 }; --Onyxia Hide Backpack
-		[26] = { itemID = 49636, [alDif.MIN_DIF] = alDif.Heroic }; -- Reins of the Onyxian Drake
+		[26] = { itemID = 1180299 }; -- Draconic Warhorn: Onyxia
+		[28] = { itemID = 49636, [alDif.MIN_DIF] = alDif.Heroic }; -- Reins of the Onyxian Drake
 	};
 };
 
@@ -4353,6 +4373,7 @@ AtlasLoot_Data["FrozenReach"] = {
 	Type = "Manastorm";
 	{
 		Name = AL["Frozen Reach"];
+		WebID ={98888,"item"};
 		[1] = { itemID = 1519391 }; -- Reclaimed Blade of the Frozen Sepulcher
 		[2] = { itemID = 1519392 }; -- Frigid Bow of the Bonded Souls
 		[3] = { itemID = 1519380 }; -- Necklace of Frozen Reach
@@ -5875,6 +5896,7 @@ AtlasLoot_Data["AB_A"] = {
 	Name = BabbleZone["Arathi Basin"] ..WHITE.." (Alliance)";
 	{
 		Name = AL["Misc. Rewards"];
+		WebID = {509,"faction"};
 		[1] = { itemID = 17349, price = "5 #silver# 1 #alliance#" }; --Superior Healing Draught
 		[2] = { itemID = 17352, price = "5 #silver# 1 #alliance#" }; --Superior Mana Draught
 		[3] = { itemID = 20225, price = "18 #silver#" }; --Highlander's Enriched Ration
@@ -5890,12 +5912,14 @@ AtlasLoot_Data["AB_A"] = {
 	};
 	{
 		Name = AL["Level 60 Rewards"];
+		WebID = {509,"faction"};
 		[1] = { itemID = 20073, price = "5000 #alliance#" }; --Cloak of the Honor Guard
 		[2] = { itemID = 20070, price = "9000 #alliance#" }; --Sageclaw
 		[3] = { itemID = 20069, price = "16000 #alliance#" }; --Ironbark Staff
 	};
 	{
 		Name = AL["Level 40-49 Rewards"];
+		WebID = {509,"faction"};
 		[1] = { itemID = 20097, price = "400 #alliance#" }; --Highlander's Cloth Girdle
 		[2] = { itemID = 20094, price = "400 #alliance#" }; --Highlander's Cloth Boots
 		[3] = { itemID = 20115, price = "400 #alliance#" }; --Highlander's Leather Girdle
@@ -5921,6 +5945,7 @@ AtlasLoot_Data["AB_A"] = {
 	};
 	{
 		Name = AL["Level 30-39 Rewards"];
+		WebID = {509,"faction"};
 		[1] = { itemID = 20098, price = "300 #alliance#" }; --Highlander's Cloth Girdle
 		[2] = { itemID = 20095, price = "300 #alliance#" }; --Highlander's Cloth Boots
 		[3] = { itemID = 20116, price = "300 #alliance#" }; --Highlander's Leather Girdle
@@ -5930,6 +5955,7 @@ AtlasLoot_Data["AB_A"] = {
 	};
 	{
 		Name = AL["Level 20-29 Rewards"];
+		WebID = {509,"faction"};
 		[1] = { itemID = 20099, price = "300 #alliance#" }; --Highlander's Cloth Girdle
 		[2] = { itemID = 20096, price = "300 #alliance#" }; --Highlander's Cloth Boots
 		[3] = { itemID = 20117, price = "300 #alliance#" }; --Highlander's Leather Girdle
@@ -5947,42 +5973,49 @@ AtlasLoot_Data["AB_A"] = {
 	};
 	{
 		Name = AL["The Highlander's Intent"];
+		WebID = {509,"faction"};
 		[1] = { itemID = 20061, price = "9000 #alliance#" }; --Highlander's Epaulets
 		[2] = { itemID = 20047, price = "3000 #alliance#" }; --Highlander's Cloth Girdle
 		[3] = { itemID = 20054, price = "3000 #alliance#" }; --Highlander's Cloth Boots
 	};
 	{
 		Name = AL["The Highlander's Purpose"];
+		WebID = {509,"faction"};
 		[1] = { itemID = 20059, price = "9000 #alliance#" }; --Highlander's Leather Shoulders
 		[2] = { itemID = 20045, price = "3000 #alliance#" }; --Highlander's Leather Girdle
 		[3] = { itemID = 20052, price = "3000 #alliance#" }; --Highlander's Leather Boots
 	};
 	{
 		Name = AL["The Highlander's Will"];
+		WebID = {509,"faction"};
 		[1] = { itemID = 20060, price = "9000 #alliance#" }; --Highlander's Lizardhide Shoulders
 		[2] = { itemID = 20046, price = "3000 #alliance#" }; --Highlander's Lizardhide Girdle
 		[3] = { itemID = 20053, price = "3000 #alliance#" }; --Highlander's Lizardhide Boots
 	};
 	{
 		Name = AL["The Highlander's Determination"];
+		WebID = {509,"faction"};
 		[1] = { itemID = 20055, price = "9000 #alliance#" }; --Highlander's Chain Pauldrons
 		[2] = { itemID = 20043, price = "3000 #alliance#" }; --Highlander's Chain Girdle
 		[3] = { itemID = 20050, price = "3000 #alliance#" }; --Highlander's Chain Greaves
 	};
 	{
 		Name = AL["The Highlander's Fortitude"];
+		WebID = {509,"faction"};
 		[1] = { itemID = 20056, price = "9000 #alliance#" }; --Highlander's Mail Pauldrons
 		[2] = { itemID = 20044, price = "3000 #alliance#" }; --Highlander's Mail Girdle
 		[3] = { itemID = 20051, price = "3000 #alliance#" }; --Highlander's Mail Greaves
 	};
 	{
 		Name = AL["The Highlander's Resolution"];
+		WebID = {509,"faction"};
 		[1] = { itemID = 20057, price = "9000 #alliance#" }; --Highlander's Plate Spaulders
 		[2] = { itemID = 20041, price = "3000 #alliance#" }; --Highlander's Plate Girdle
 		[3] = { itemID = 20048, price = "3000 #alliance#" }; --Highlander's Plate Greaves
 	};
 	{
 		Name = AL["The Highlander's Resolve"];
+		WebID = {509,"faction"};
 		[1] = { itemID = 20058, price = "9000 #alliance#" }; --Highlander's Lamellar Spaulders
 		[2] = { itemID = 20042, price = "3000 #alliance#" }; --Highlander's Lamellar Girdle
 		[3] = { itemID = 20049, price = "3000 #alliance#" }; --Highlander's Lamellar Greaves
@@ -5994,6 +6027,7 @@ AtlasLoot_Data["AB_H"] = {
 	Name = BabbleZone["Arathi Basin"] ..WHITE.." (Horde)";
 	{
 		Name = AL["Misc. Rewards"];
+		WebID = {510,"faction"};
 		[1] = { itemID = 17349, price = "5 #silver# 5 #horde#" }; --Superior Healing Draught
 		[2] = { itemID = 17352, price = "5 #silver# 5 #horde#" }; --Superior Mana Draught
 		[3] = { itemID = 20222, price = "18 #silver#" }; --Defiler's Enriched Ration
@@ -6009,12 +6043,14 @@ AtlasLoot_Data["AB_H"] = {
 	};
 	{
 		Name = AL["Level 60 Rewards"];
+		WebID = {510,"faction"};
 		[1] = { itemID = 20068, price = "5000 #horde#" }; --Deathguard's Cloak
 		[2] = { itemID = 20214, price = "9000 #horde#" }; --Mindfang
 		[3] = { itemID = 20220, price = "16000 #horde#" }; --Ironbark Staff
 	};
 	{
 		Name = AL["Level 40-49 Rewards"];
+		WebID = {510,"faction"};
 		[1] = { itemID = 20165, price = "400 #horde#" }; --Defiler's Cloth Girdle
 		[2] = { itemID = 20160, price = "400 #horde#" }; --Defiler's Cloth Boots
 		[3] = { itemID = 20193, price = "400 #horde#" }; --Defiler's Leather Girdle
@@ -6040,6 +6076,7 @@ AtlasLoot_Data["AB_H"] = {
 	};
 	{
 		Name = AL["Level 30-39 Rewards"];
+		WebID = {510,"faction"};
 		[1] = { itemID = 20166, price = "300 #horde#" }; --Defiler's Cloth Girdle
 		[2] = { itemID = 20161, price = "300 #horde#" }; --Defiler's Cloth Boots
 		[3] = { itemID = 20192, price = "300 #horde#" }; --Defiler's Leather Girdle
@@ -6049,6 +6086,7 @@ AtlasLoot_Data["AB_H"] = {
 	};
 	{
 		Name = AL["Level 20-29 Rewards"];
+		WebID = {510,"faction"};
 		[1] = { itemID = 20164, price = "300 #horde#" }; --Defiler's Cloth Girdle
 		[2] = { itemID = 20162, price = "300 #horde#" }; --Defiler's Cloth Boots
 		[3] = { itemID = 20191, price = "300 #horde#" }; --Defiler's Leather Girdle
@@ -6066,42 +6104,49 @@ AtlasLoot_Data["AB_H"] = {
 	};
 	{
 		Name = AL["The Defiler's Intent"];
+		WebID = {510,"faction"};
 		[1] = { itemID = 20176, price = "9000 #horde#" }; --Defiler's Epaulets
 		[2] = { itemID = 20163, price = "3000 #horde#" }; --Defiler's Cloth Girdle
 		[3] = { itemID = 20159, price = "3000 #horde#" }; --Defiler's Cloth Boots
 	};
 	{
 		Name = AL["The Defiler's Purpose"];
+		WebID = {510,"faction"};
 		[1] = { itemID = 20194, price = "9000 #horde#" }; --Defiler's Leather Shoulders
 		[2] = { itemID = 20190, price = "3000 #horde#" }; --Defiler's Leather Girdle
 		[3] = { itemID = 20186, price = "3000 #horde#" }; --Defiler's Leather Boots
 	};
 	{
 		Name = AL["The Defiler's Will"];
+		WebID = {510,"faction"};
 		[1] = { itemID = 20175, price = "9000 #horde#" }; --Defiler's Lizardhide Shoulders
 		[2] = { itemID = 20171, price = "3000 #horde#" }; --Defiler's Lizardhide Girdle
 		[3] = { itemID = 20167, price = "3000 #horde#" }; --Defiler's Lizardhide Boots
 	};
 	{
 		Name = AL["The Defiler's Determination"];
+		WebID = {510,"faction"};
 		[1] = { itemID = 20158, price = "9000 #horde#" }; --Defiler's Chain Pauldrons
 		[2] = { itemID = 20150, price = "3000 #horde#" }; --Defiler's Chain Girdle
 		[3] = { itemID = 20154, price = "3000 #horde#" }; --Defiler's Chain Greaves
 	};
 	{
 		Name = AL["The Defiler's Fortitude"];
+		WebID = {510,"faction"};
 		[1] = { itemID = 20203, price = "9000 #horde#" }; --Defiler's Mail Pauldrons
 		[2] = { itemID = 20195, price = "3000 #horde#" }; --Defiler's Mail Girdle
 		[3] = { itemID = 20199, price = "3000 #horde#" }; --Defiler's Mail Greaves
 	};
 	{
 		Name = AL["The Defiler's Resolution"];
+		WebID = {510,"faction"};
 		[1] = { itemID = 20212, price = "9000 #horde#" }; --Defiler's Plate Spaulders
 		[2] = { itemID = 20204, price = "3000 #horde#" }; --Defiler's Plate Girdle
 		[3] = { itemID = 20208, price = "3000 #horde#" }; --Defiler's Plate Greaves
 	};
 	{
 		Name = AL["The Defiler's Resolve"];
+		WebID = {510,"faction"};
 		[1] = { itemID = 20184, price = "9000 #horde#" }; --Defiler's Lamellar Spaulders
 		[2] = { itemID = 20177, price = "3000 #horde#" }; --Defiler's Lamellar Girdle
 		[3] = { itemID = 20181, price = "3000 #horde#" }; --Defiler's Lamellar Greaves
@@ -6117,6 +6162,7 @@ AtlasLoot_Data["WSG_A"] = {
 	Name = BabbleZone["Warsong Gulch"] ..WHITE.." (Alliance)";
 	{
 		Name = AL["Misc. Rewards"];
+		WebID = {890,"faction"};
 		[1] = { itemID = 19506, price = "12000 #faction#" }; --Silverwing Battle Tabard
 		[2] = { itemID = 17348, price = "10 #silver# 2 #faction#" }; --Major Healing Draught
 		[3] = { itemID = 17349, price = "5 #silver# 5 #faction#" }; --Superior Healing Draught
@@ -6126,6 +6172,7 @@ AtlasLoot_Data["WSG_A"] = {
 	};
 	{
 		Name = AL["Accessories"];
+		WebID = {890,"faction"};
 		[1] = { itemID = 20428, price = "100 #alliance#" }; --Caretaker's Cape
 		[2] = { itemID = 19533, price = "100 #alliance#" }; --Caretaker's Cape
 		[3] = { itemID = 19532, price = "300 #alliance#" }; --Caretaker's Cape
@@ -6153,6 +6200,7 @@ AtlasLoot_Data["WSG_A"] = {
 	};
 	{
 		Name = AL["Weapons"];
+		WebID = {890,"faction"};
 		[1] = { itemID = 20443, price = "300 #alliance#" }; --Sentinel's Blade
 		[2] = { itemID = 19549, price = "400 #alliance#" }; --Sentinel's Blade
 		[3] = { itemID = 19548, price = "500 #alliance#" }; --Sentinel's Blade
@@ -6176,6 +6224,7 @@ AtlasLoot_Data["WSG_A"] = {
 	};
 	{
 		Name = BabbleInventory["Armor"];
+		WebID = {890,"faction"};
 		[1] = { itemID = 19597, price = "500 #alliance#" }; --Dryad's Wrist Bindings
 		[2] = { itemID = 19596, price = "700 #alliance#" }; --Dryad's Wrist Bindings
 		[3] = { itemID = 19595, price = "5000 #alliance#" }; --Dryad's Wrist Bindings
@@ -6203,6 +6252,7 @@ AtlasLoot_Data["WSG_H"] = {
 	Name = BabbleZone["Warsong Gulch"] ..WHITE.." (Horde)";
 	{
 		Name = AL["Misc. Rewards"];
+		WebID = {889,"faction"};
 		[1] = { itemID = 19505, price = "12000 #faction#" }; --Warsong Battle Tabard
 		[2] = { itemID = 17351, price = "10 #silver# 2 #faction#" }; --Major Mana Draught
 		[3] = { itemID = 17352, price = "5 #silver# 5 #faction#" }; --Superior Mana Draught
@@ -6212,6 +6262,7 @@ AtlasLoot_Data["WSG_H"] = {
 	};
 	{
 		Name = AL["Accessories"];
+		WebID = {889,"faction"};
 		[1] = { itemID = 20427, price = "100 #horde#" }; --Battle Healer's Cloak
 		[2] = { itemID = 19529, price = "100 #horde#" }; --Battle Healer's Cloak
 		[3] = { itemID = 19528, price = "300 #horde#" }; --Battle Healer's Cloak
@@ -6239,6 +6290,7 @@ AtlasLoot_Data["WSG_H"] = {
 	};
 	{
 		Name = AL["Weapons"];
+		WebID = {889,"faction"};
 		[1] = { itemID = 20441, price = "300 #horde#" }; --Scout's Blade
 		[2] = { itemID = 19545, price = "400 #horde#" }; --Scout's Blade
 		[3] = { itemID = 19544, price = "500 #horde#" }; --Scout's Blade
@@ -6262,6 +6314,7 @@ AtlasLoot_Data["WSG_H"] = {
 	};
 	{
 		Name = BabbleInventory["Armor"];
+		WebID = {889,"faction"};
 		[1] = { itemID = 19597, price = "500 #horde#" }; --Dryad's Wrist Bindings
 		[2] = { itemID = 19596, price = "700 #horde#" }; --Dryad's Wrist Bindings
 		[3] = { itemID = 19595, price = "5000 #horde#" }; --Dryad's Wrist Bindings
@@ -7248,11 +7301,13 @@ AtlasLoot_Data["DesolaceCentaurClans"] = {
 	Name = "Desolace Centaur Clans";
 	{
 		Name = BabbleFaction["Magram Clan Centaur"];
+		WebID = {93,"faction"};
 		[1] = { itemID = 6789}; --Ceremonial Centaur Blanket
 		[2] = { itemID = 6788}; --Magram Hunter's Belt
 	};
 	{
 		Name = BabbleFaction["Gelkis Clan Centaur"];
+		WebID = {92,"faction"};
 		[1] = { itemID = 6773}; --Gelkis Marauder Chain
 		[2] = { itemID = 6774}; --Uthek's Finger
 	};
@@ -7272,10 +7327,12 @@ AtlasLoot_Data["ArathiBasinFactions"] = {
 	Name = BabbleZone["Arathi Basin"];
 	{
 		Name = BabbleFaction["The League of Arathor"] .." (" ..BabbleFaction["Alliance"] ..")";
+		WebID = {509,"faction"};
 		[1] = { itemID = 20132}; --Arathor Battle Tabard
 	};
 	{
 		Name = BabbleFaction["The Defilers"] .." (" ..BabbleFaction["Horde"] ..")";
+		WebID = {510,"faction"};
 		[1] = { itemID = 20131}; --Battle Tabard of the Defilers
 	};
 };
@@ -7289,6 +7346,7 @@ AtlasLoot_Data["Argent"] = {
 	Name = BabbleFaction["Argent Dawn"];
 	{
 		Name = BabbleFaction["Argent Dawn"];
+		WebID = {529,"faction"};
 		[1] = { itemID = 22689}; --Sanctified Leather Helm
 		[2] = { itemID = 22690}; --Leggings of the Plague Hunter
 		[3] = { itemID = 22681}; --Band of Piety
@@ -7309,12 +7367,14 @@ AtlasLoot_Data["Argent"] = {
 	};
 	{
 		Name = BabbleFaction["Friendly"];
+		WebID = {529,"faction"};
 		[1] = { itemID = 13724}; --Enriched Manna Biscuit
 		[2] = { itemID = 23122 }; --Consecrated Sharpening Stone
 		[3] = { itemID = 23123 }; --Blessed Wizard Oil
 	};
 	{
 		Name = BabbleFaction["Honored"];
+		WebID = {529,"faction"};
 		[1] = { itemID = 1519874 }; -- Crusader's Libram
 		[2] = { itemID = 1519875 }; -- Idol of the Fang
 		[3] = { itemID = 23084 }; -- Gloves of Undead Cleansing
@@ -7329,6 +7389,7 @@ AtlasLoot_Data["Argent"] = {
 	};
 	{
 		Name = BabbleFaction["Revered"];
+		WebID = {529,"faction"};
 		[1] = { itemID = 1519867 }; -- Arcanist's Cloak
 		[2] = { itemID = 1519883 }; -- Batleather Armbands
 		[3] = { itemID = 1519884 }; -- Spaulders of Dusk
@@ -7346,6 +7407,7 @@ AtlasLoot_Data["Argent"] = {
 	};
 	{
 		Name = BabbleFaction["Exalted"];
+		WebID = {529,"faction"};
 		[1] = { itemID = 43072 }; -- Blessed Robe of Undead Cleansing
 		[2] = { itemID = 43073 }; -- Blessed Gloves of Undead Cleansing
 		[3] = { itemID = 43074 }; -- Blessed Mantle of Undead Cleansing
@@ -7378,6 +7440,7 @@ AtlasLoot_Data["Bloodsail"] = {
 	Name = BabbleFaction["Bloodsail Buccaneers"];
 	{
 		Name = BabbleFaction["Bloodsail Buccaneers"];
+		WebID = {87,"faction"};
 		[1] = { icon = "INV_Helmet_66", name = WHITE..BabbleFaction["Neutral"] };
 		[2] = { itemID = 22742}; --Bloodsail Shirt
 		[3] = { itemID = 22743}; --Bloodsail Sash
@@ -7393,6 +7456,7 @@ AtlasLoot_Data["Hydraxian"] = {
 	Name = BabbleFaction["Hydraxian Waterlords"];
 	{
 		Name = BabbleFaction["Hydraxian Waterlords"];
+		WebID = {749,"faction"};
 		[1] = { icon = "Spell_Frost_SummonWaterElemental_2", name = WHITE..BabbleFaction["Honored"] };
 		[2] = { itemID = 18399}; --Ocean's Breeze 
 		[3] = { itemID = 18398}; --Tidal Loop 
@@ -7410,6 +7474,7 @@ AtlasLoot_Data["AQBroodRings"] = {
 	Name = BabbleFaction["Brood of Nozdormu"];
 	{
 		Name = BabbleFaction["Brood of Nozdormu"];
+		WebID = {910,"faction"};
 		[1] = { icon = "INV_Jewelry_Ring_40", name = WHITE..AL["Path of the Conqueror"] };
 		[2] = { itemID = 21201}; --Signet Ring of the Bronze Dragonflight
 		[3] = { itemID = 21202}; --Signet Ring of the Bronze Dragonflight
@@ -7440,6 +7505,7 @@ AtlasLoot_Data["Cenarion"] = {
 	Name = BabbleFaction["Cenarion Circle"];
 	{
 		Name = BabbleFaction["Friendly"];
+		WebID = {609,"faction"};
 		[1] = { itemID = 22209}; --Plans: Heavy Obsidian Belt
 		[2] = { itemID = 22768}; --Plans: Ironvine Belt
 		[3] = { itemID = 20732}; --Formula: Enchant Cloak - Greater Fire Resistance
@@ -7460,6 +7526,7 @@ AtlasLoot_Data["Cenarion"] = {
 	};
 	{
 		Name = BabbleFaction["Honored"];
+		WebID = {609,"faction"};
 		[1] = { itemID = 1519873 }; -- Sandcovered Libram
 		[2] = { itemID = 1519872 }; -- Sandcovered Relic
 		[3] = { itemID = 1519871 }; -- Sandcovered Idol
@@ -7478,6 +7545,7 @@ AtlasLoot_Data["Cenarion"] = {
 	};
 	{
 		Name = BabbleFaction["Revered"];
+		WebID = {609,"faction"};
 		[1] = { itemID = 1519870 }; -- Amulet of the Third War
 		[2] = { itemID = 1519869 }; -- Arcane Infused Staff
 		[3] = { itemID = 1519868 }; -- Qiraji Shell	
@@ -7497,6 +7565,7 @@ AtlasLoot_Data["Cenarion"] = {
 	};
 	{
 		Name = BabbleFaction["Exalted"];
+		WebID = {609,"faction"};
 		[1] = { itemID = 1519862 }; -- Ancient Buckler
 		[2] = { itemID = 1519863 }; -- Cenarion Clubber
 		[3] = { itemID = 1519864 }; -- Polished Qiraji Halberd
@@ -7519,6 +7588,7 @@ AtlasLoot_Data["AlteracFactions"] = {
 	Name = BabbleZone["Alterac Valley"];
 	{
 		Name = BabbleFaction["Stormpike Guard"] .." (" ..BabbleFaction["Alliance"] ..")";
+		WebID = {730,"faction"};
 		[1] = { itemID = 17904}; --Stormpike Insignia Rank 6
 		[2] = { itemID = 17903}; --Stormpike Insignia Rank 5
 		[3] = { itemID = 17902}; --Stormpike Insignia Rank 4
@@ -7532,6 +7602,7 @@ AtlasLoot_Data["AlteracFactions"] = {
 	};
 	{
 		Name = BabbleFaction["Frostwolf Clan"] .." (" ..BabbleFaction["Horde"] ..")";
+		WebID = {729,"faction"};
 		[1] = { itemID = 17909}; --Frostwolf Insignia Rank 6
 		[2] = { itemID = 17908}; --Frostwolf Insignia Rank 5
 		[3] = { itemID = 17907}; --Frostwolf Insignia Rank 4
@@ -7550,6 +7621,7 @@ AtlasLoot_Data["Thorium"] = {
 	Name = BabbleFaction["Thorium Brotherhood"];
 	{
 		Name = BabbleFaction["Friendly"];
+		WebID = {59,"faction"};
 		[1] = { itemID = 17051}; --Plans: Dark Iron Bracers
 		[2] = { itemID = 20761}; --Recipe: Transmute Elemental Fire
 		[3] = { itemID = 19444}; --Formula: Enchant Weapon - Strength
@@ -7560,6 +7632,7 @@ AtlasLoot_Data["Thorium"] = {
 	};
 	{
 		Name = BabbleFaction["Honored"];
+		WebID = {59,"faction"};
 		[1] = { itemID = 1519907 }; -- Thorium Linked Wristsguards
 		[2] = { itemID = 1519908 }; -- Brawlers Totem
 		[16] = { itemID = 17060}; --Plans: Dark Iron Destroyer
@@ -7574,6 +7647,7 @@ AtlasLoot_Data["Thorium"] = {
 	};
 	{
 		Name = BabbleFaction["Revered"];
+		WebID = {59,"faction"};
 		[1] = { itemID = 1519905 }; -- Thorium Reinforced Buckler
 		[2] = { itemID = 1519906 }; -- Thorium Studded Pants
 		[3] = { itemID = 1519904 }; -- Rust Covered Belt
@@ -7591,13 +7665,14 @@ AtlasLoot_Data["Thorium"] = {
 	};
 	{
 		Name = BabbleFaction["Exalted"];
+		WebID = {59,"faction"};
 		[1] = { itemID = 1519900 }; -- Thorium Staff
 		[2] = { itemID = 1519902 }; -- Thorium Throwing Knives
 		[3] = { itemID = 1519901 }; -- Thorium Rifle
-		[22] = { itemID = 19211}; --Plans: Blackguard
-		[23] = { itemID = 20040}; --Plans: Dark Iron Boots
-		[24] = { itemID = 19210}; --Plans: Ebon Hand
-		[25] = { itemID = 19212}; --Plans: Nightfall
+		[16] = { itemID = 19211}; --Plans: Blackguard
+		[17] = { itemID = 20040}; --Plans: Dark Iron Boots
+		[18] = { itemID = 19210}; --Plans: Ebon Hand
+		[19] = { itemID = 19212}; --Plans: Nightfall
 	};
 };
 ----------------------
@@ -7609,6 +7684,7 @@ AtlasLoot_Data["Timbermaw"] = {
 	Name = BabbleFaction["Timbermaw Hold"];
 	{
 		Name = BabbleFaction["Friendly"];
+		WebID = {576,"faction"};
 		[1] = { itemID = 13484}; --Recipe: Transmute Earth to Water
 		[2] = { itemID = 22392}; --Formula: Enchant 2H Weapon - Agility
 		[3] = { itemID = 20254}; --Pattern: Warbear Woolies
@@ -7616,6 +7692,7 @@ AtlasLoot_Data["Timbermaw"] = {
 	};
 	{
 		Name = BabbleFaction["Honored"];
+		WebID = {576,"faction"};
 		[1] = { itemID = 1519894 }; -- Timbermaw Root
 		[2] = { itemID = 16768}; --Furbolg Medicine Pouch
 		[3] = { itemID = 16769}; --Furbolg Medicine Totem
@@ -7626,6 +7703,7 @@ AtlasLoot_Data["Timbermaw"] = {
 	};
 	{
 		Name = BabbleFaction["Revered"];
+		WebID = {576,"faction"};
 		[1] = { itemID = 1519895 }; -- Timbermaw Talisman
 		[2] = { itemID = 1519893 }; -- Ring of Mending
 		[16] = { itemID = 19204}; --Plans: Heavy Timbermaw Boots
@@ -7634,6 +7712,7 @@ AtlasLoot_Data["Timbermaw"] = {
 	};
 	{
 		Name = BabbleFaction["Exalted"];
+		WebID = {576,"faction"};
 		[1] = { itemID = 1519892 }; -- The \"Prized\" Possesion
 		[2] = { itemID = 1519891 }; -- Timbermaw Shanker
 		[3] = { itemID = 1519890 }; -- Timbermaw Spellblade
@@ -7650,10 +7729,12 @@ AtlasLoot_Data["Zandalar"] = {
 	Name = BabbleFaction["Zandalar Tribe"];
 	{
 		Name = AL["Miscellaneous"];
+		WebID = {270,"faction"};
 		[1] = { itemID = 19858}; --Zandalar Honor Token
 	};
 	{
 		Name = BabbleFaction["Friendly"];
+		WebID = {270,"faction"};
 		[1] = { itemID = 20012}; --Recipe: Greater Dreamless Sleep
 		[2] = { itemID = 19778}; --Plans: Bloodsoul Gauntlets
 		[3] = { itemID = 19781}; --Plans: Darksoul Shoulders
@@ -7664,6 +7745,7 @@ AtlasLoot_Data["Zandalar"] = {
 	};
 	{
 		Name = BabbleFaction["Honored"];
+		WebID = {270,"faction"};
 		[1] = { itemID = 20014}; --Recipe: Major Troll's Blood Potion
 		[2] = { itemID = 19777}; --Plans: Bloodsoul Shoulders
 		[3] = { itemID = 19780}; --Plans: Darksoul Leggings
@@ -7676,6 +7758,7 @@ AtlasLoot_Data["Zandalar"] = {
 	};
 	{
 		Name = BabbleFaction["Revered"];
+		WebID = {270,"faction"};
 		[1] = { itemID = 20080}; --Sheen of Zanza
 		[2] = { itemID = 20079}; --Spirit of Zanza
 		[3] = { itemID = 20081}; --Swiftness of Zanza
@@ -7688,6 +7771,7 @@ AtlasLoot_Data["Zandalar"] = {
 	};
 	{
 		Name = BabbleFaction["Exalted"];
+		WebID = {270,"faction"};
 		[1] = { itemID = 20077}; --Zandalar Signet of Might
 		[2] = { itemID = 20076}; --Zandalar Signet of Mojo
 		[3] = { itemID = 20078}; --Zandalar Signet of Serenity
