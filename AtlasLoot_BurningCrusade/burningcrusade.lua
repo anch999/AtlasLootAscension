@@ -1951,7 +1951,7 @@ AtlasLoot_Data["Karazhan"] = {
 		[17] = { itemID = 28523 }; --Totem of Healing Rains
 		[18] = { itemID = 28522 }; --Shard of the Virtuous
 		[20] = { itemID = 229739 }; --Tome of Untold Secrets
-		[25] = { itemID = 816253, droprate = { nil, "2%", "5%", "7%", "10%" } }; --Formula: Enchant Weapon - Faith
+		[22] = { itemID = 816253, droprate = { nil, "2%", "5%", "7%", "10%" } }; --Formula: Enchant Weapon - Faith
 	};
 	{
 		Name = "Opera Event";
@@ -2380,7 +2380,7 @@ AtlasLoot_Data["BlackrockCavernsTBC"] = {
 AtlasLoot_Data["FrozenReachTBC"] = {
 	Module = "AtlasLoot_OriginalWoW";
 	Name = AL["Frozen Reach"];
-	Type = "Manastorm";
+	Type = "ManastormTBC";
 	{
 		Name = AL["Frozen Reach"];
 		WebID ={1298888,"item"};

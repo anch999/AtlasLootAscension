@@ -21,6 +21,14 @@
         Max = 3
     }
 
+    AtlasLoot.Difficulties["ManastormTBC"] = {
+        {"Tier 4", 3},
+        {"Tier 5", 4},
+        {"Tier 6", 5},
+        {"Bloodforged", 1},
+        Max = 3
+    }
+
     AtlasLoot.Difficulties["ClassicDungeonExt"] = {
         {"Bloodforged", 1},
         {"Normal", 3},
