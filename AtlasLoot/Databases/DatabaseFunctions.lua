@@ -61,9 +61,9 @@ local function removeExtraText(text)
 	return text
 end
 
-local unknownIDs = {}
-function AtlasLoot:UpdateItemIDsDatabase(firstID, lastID)
-	AtlasLootItemCache = ItemIDsDatabase
+
+function AtlasLoot:GetSourceList()
+	local itemSource = {}
 	self:IsLootTableAvailable("AtlasLootOriginalWoW")
 	self:IsLootTableAvailable("AtlasLootBurningCrusade")
 	self:IsLootTableAvailable("AtlasLootWotLK")
@@ -76,10 +76,10 @@ function AtlasLoot:UpdateItemIDsDatabase(firstID, lastID)
 							for _, dif in ipairs(self.Difficulties[data.Type]) do
 								local itemType = GetItemInfoInstant(itemData.itemID) or nil
 								if dif[2] ~= 3 and itemType then
-									unknownIDs[dif[1]] = unknownIDs[dif[1]] or {}
+									itemSource[dif[1]] = itemSource[dif[1]] or {}
 									local name = itemType.name:gsub( "%W", "" )..itemType.inventoryType
-									unknownIDs[dif[1]][name] = unknownIDs[dif[1]][name] or {}
-									local itemTable = unknownIDs[dif[1]][name]
+									itemSource[dif[1]][name] = itemSource[dif[1]][name] or {}
+									local itemTable = itemSource[dif[1]][name]
 										local function checkForDuplicate(itemID)
 											for _ , item in pairs(itemTable) do
 												if item[1] == itemID then return true end
@@ -96,8 +96,14 @@ function AtlasLoot:UpdateItemIDsDatabase(firstID, lastID)
 			end
 		end
     end
+	if self:CheckIfEmptyTable(itemSource) then return end
+	return itemSource
+end
 
-	if self:CheckIfEmptyTable(unknownIDs) then return end
+function AtlasLoot:UpdateItemIDsDatabase(firstID, lastID)
+	AtlasLootItemCache = ItemIDsDatabase
+	local itemSource = self:GetSourceList()
+	if not itemSource then return end
     self:CreateUpdateText()
     AtlasLootDbUpdate:Show()
 
@@ -111,7 +117,7 @@ function AtlasLoot:UpdateItemIDsDatabase(firstID, lastID)
 			if difficulty and item and item.name then
 				local foundName = removeExtraText(item.name)..item.inventoryType
 				if foundName then
-					local itemData = unknownIDs[difficulty] and unknownIDs[difficulty][foundName]
+					local itemData = itemSource[difficulty] and itemSource[difficulty][foundName]
 					if itemData then
 						for _ , storedItem in pairs(itemData) do
 							local orignalID = storedItem[1]
@@ -128,7 +134,7 @@ function AtlasLoot:UpdateItemIDsDatabase(firstID, lastID)
 		end
 
     local function continue()
-		if self:CheckIfEmptyTable(unknownIDs) then
+		if self:CheckIfEmptyTable(itemSource) then
 			return
 		end
         startTime = debugprofilestop()
@@ -165,7 +171,8 @@ function AtlasLoot:FindId(id, difficulty)
 	return id
 end
 
-function AtlasLoot:GetMerchantItems()
+local runOnce
+function AtlasLoot:GetMerchantItems(missingOnly)
 	AtlasLootOtherIds = AtlasLootOtherIds or {}
 	tinsert(AtlasLootOtherIds, {})
 	local numItems = GetMerchantNumItems()
@@ -176,11 +183,34 @@ function AtlasLoot:GetMerchantItems()
 			local itemName = self:GetItemInfo(itemID)
 			local _, itemCost, currency = GetMerchantItemCostItem (index, 1)
 			local currencyID = GetItemInfoFromHyperlink(currency)
-			if itemCost then
-				tinsert(AtlasLootOtherIds[#AtlasLootOtherIds], { itemID, itemCost, currencyID, itemName})
-			else
-				tinsert(AtlasLootOtherIds[#AtlasLootOtherIds], { itemID, itemName })
+
+			if missingOnly then
+				if not runOnce then
+					self:CreateItemSourceList(true)
+					runOnce = true
+				end
+
+				if not self.ItemSourceList[itemID] then
+					tinsert(AtlasLootOtherIds[#AtlasLootOtherIds], { itemID, itemName })
+				end
+			elseif not missingOnly then
+				if itemCost then
+					tinsert(AtlasLootOtherIds[#AtlasLootOtherIds], { itemID, itemCost, currencyID, itemName})
+				else
+					tinsert(AtlasLootOtherIds[#AtlasLootOtherIds], { itemID, itemName })
+				end
 			end
 		end
 	end
 end
+--[[ Regex used on the merchant data to put it in a better formate for atlasloot
+search with this
+\{(.*)
+(.+?),(.*)
+(.+?)"(.+?)"(.*)
+(.*)
+
+replace with this
+[1] = { itemID = $2 }; --$5
+
+]]
