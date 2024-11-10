@@ -660,7 +660,6 @@ Create the Options for the Wishlists(called on variables loadet)
 ]]
 function AtlasLoot:CreateWishlistOptions()
 	if OptionsLoadet then return end
-	self:WishlistConvert()
 	self:WishlistSetup()
 	-- Add wishlistframe --
 	local WishListAddFrame = CreateFrame("FRAME","AtlasLootWishList_AddFrame",UIParent)
@@ -1139,38 +1138,3 @@ StaticPopupDialogs["ATLASLOOT_ADD_CUSTOMHEADER"] = {
 	whileDead = 1,
 	hideOnEscape = 1
 }
-
-function AtlasLoot:WishlistConvert()
-	if not AtlasLootWishList.Version then
-		if AtlasLootWishList.Own then
-			-- rebuild own wish lists
-			local rebuiltList = {Name = AtlasLootWishList.Own.Name}
-			for _, wList in ipairs(AtlasLootWishList.Own) do
-				local itemList = {Icon = wList.Icon, Name = wList.Name}
-				for _, item in ipairs (wList) do
-					local dataID, dataSource, tableNum  = strsplit("|", item[8])
-					tinsert(itemList, {item[1], itemID = item[2], desc = item[5], lootTable = {{dataID, "AtlasLoot_Data", tonumber(tableNum) or 1}, "Source"} } )
-				end
-				tinsert(rebuiltList, itemList)
-			end
-			AtlasLootWishList.Own = rebuiltList
-		end
-
-		if AtlasLootWishList.Shared then
-			-- rebuild shared wish list
-			local rebuiltList = {Name = AtlasLootWishList.Shared.Name}
-			for _, wList in ipairs(AtlasLootWishList.Shared) do
-				local itemList = {Icon = wList.Icon, Name = wList.Name}
-				for _, item in ipairs (wList) do
-					local dataID, dataSource, tableNum = strsplit("|", item[8])
-					tinsert(itemList, {item[1], itemID = item[2], desc = item[5], lootTable = {{dataID, "AtlasLoot_Data", tonumber(tableNum) or 1}, "Source"} } )
-				end
-				tinsert(rebuiltList, itemList)
-			end
-			AtlasLootWishList.Shared = rebuiltList
-		end
-		-- Save wish list version just incase i have to rebuild it for some reason
-		AtlasLootWishList.Version = self.WishListVersion
-	end
-
-end
