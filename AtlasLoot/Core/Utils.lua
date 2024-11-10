@@ -146,6 +146,7 @@ function AtlasLoot:GetItemInfo(item)
 			itemTexture = itemInstant.icon
 			itemQuality = itemInstant.quality
 			itemLink = item:GetLink()
+			itemLevel = item.itemLevel
 		end
 	end
 	return itemName, itemLink, itemQuality, itemLevel, itemMinLevel, itemType, itemSubType, itemStackCount, itemEquipLoc, itemTexture, itemSellPrice
@@ -780,7 +781,10 @@ function AtlasLoot:GetDropRate(lootTable, lootGroup)
 			count = count + 1
 		end
 	end
-	return string.format("%.2f%%",lootTable.LootGroups[lootGroup]/count) or nil
+	local actualLootGroup = lootTable.LootGroups or lootTable.lootTable and _G[lootTable.lootTable[2]][lootTable.lootTable[1]][lootTable.lootTable[3]] or nil
+	if actualLootGroup then
+		return string.format("%.2f%%",actualLootGroup[lootGroup]/count) or nil
+	end
 end
 
 
@@ -799,9 +803,9 @@ local function IgnoreTables(dataSource)
 	end
 end
 
-function AtlasLoot:CreateItemSourceList()
-	if not self.db.profile.showdropLocationTooltips then return end
-	if not AtlasLootDB.ItemSources or (AtlasLootDB.ItemSources.Version and AtlasLootDB.ItemSources.Version ~= self.Version) then
+function AtlasLoot:CreateItemSourceList(overRide)
+	if not overRide and not self.db.profile.showdropLocationTooltips then return end
+	if overRide or not AtlasLootDB.ItemSources or (AtlasLootDB.ItemSources.Version and AtlasLootDB.ItemSources.Version ~= self.Version) then
 		self:LoadAllModules()
 		AtlasLootDB.ItemSources = {Version = AtlasLoot.Version, List = {}}
 		local list = AtlasLootDB.ItemSources.List

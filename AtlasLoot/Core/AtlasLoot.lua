@@ -277,7 +277,7 @@ function AtlasLoot:SlashCommand(msg)
 	elseif cmd == "news" then
 		self:OpenNewsFrame(self.db.profile)
 	elseif cmd == "getmerchant" then
-		self:GetMerchantItems()
+		self:GetMerchantItems(arg1)
 	else
 		AtlasLootDefaultFrame:Show()
 	end
@@ -594,6 +594,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 			itemID = item.itemID
 			isValid = true
 			local itemType = item.Type or dataSource[dataID].Type
+			local maxDif = self:GetMaxDifficulty(itemType)
 			--stops items from showing that are taged for coa
 			if class == "HERO" and item.COA then
 				toShow = false
@@ -601,9 +602,10 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 				if item[self.Difficulties.MIN_DIF] > itemDif then
 					toShow = false
 				end
-				itemID = self:FindId(item.itemID, min(self.Difficulties[itemType].Max, itemDif))
+				itemID = self:FindId(item.itemID, min(maxDif, itemDif))
 			end
 			if toShow then
+				if maxDif < itemDif then itemDif = maxDif end 
 				--If something was found in itemID database show that if not show default table item
 				itemID = self:FindId(item.itemID, itemDif)
 			end

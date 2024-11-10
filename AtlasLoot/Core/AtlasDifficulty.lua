@@ -96,7 +96,7 @@
         {"Ascended Raid", 6},
         {"Bloodforged", 1},
         {"Heroic Bloodforged", 2},
-        Max = 45
+        Max = 6
     }
 
      AtlasLoot.Difficulties["ClassicCrafting"] = {
@@ -146,6 +146,11 @@
         37, 38, 39, 40, 41, 42, 43, 44, 45
     } --Usage AtlasLoot_Difficulty.MythicPlus[1-40]
 
-    AtlasLoot.Difficulties.DIF_SEARCH = 16
-    AtlasLoot.Difficulties.MIN_DIF = 18
-    AtlasLoot.Difficulties.MAX_DIF = 19
+    AtlasLoot.Difficulties.DIF_SEARCH = 17
+    AtlasLoot.Difficulties.MIN_DIF = 19
+    AtlasLoot.Difficulties.MAX_DIF = 20
+
+    function AtlasLoot:GetMaxDifficulty(instanceType)
+        if not self.Difficulties[instanceType] and not self.Difficulties[instanceType].Max then return 0 end
+        return self.Difficulties[instanceType].Max
+    end
