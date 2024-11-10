@@ -159,6 +159,6 @@
     AtlasLoot.Difficulties.MAX_DIF = 20
 
     function AtlasLoot:GetMaxDifficulty(instanceType)
-        if not self.Difficulties[instanceType] and not self.Difficulties[instanceType].Max then return 0 end
+        if not instanceType or not self.Difficulties[instanceType] and not self.Difficulties[instanceType].Max then return 0 end
         return self.Difficulties[instanceType].Max
     end
