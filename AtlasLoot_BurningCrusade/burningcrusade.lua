@@ -1907,9 +1907,9 @@ AtlasLoot_Data["Karazhan"] = {
 		[13] = { itemID = 28510 }; --Spectral Band of Innervation
 		[14] = { itemID = 28504 }; --Steelhawk Crossbow
 		[16] = { itemID = 229739 }; --Tome of Untold Secrets
-		[19] = { itemID = 30480 }; --Fiery Warhorse's Reins
-		[21] = { itemID = 23809 }; --Schematic: Stabilized Eternium Scope
-		[23] = { itemID = 60198, droprate = "1%" }; --Pet Sigil
+		[18] = { itemID = 30480 }; --Fiery Warhorse's Reins
+		[20] = { itemID = 23809 }; --Schematic: Stabilized Eternium Scope
+		[22] = { itemID = 60198, droprate = "1%" }; --Pet Sigil
 	};
 	{
 		Name = BabbleBoss["Moroes"];

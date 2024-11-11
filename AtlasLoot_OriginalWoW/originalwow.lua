@@ -4394,6 +4394,142 @@ AtlasLoot_Data["FrozenReach"] = {
 	}
 }
 
+AtlasLoot_Data["SharedDungeonLoot"] = {
+	Module = "AtlasLoot_OriginalWoW";
+	Name = AL["Shared Dungeon Loot"];
+	Type = "ClassicDungeonExt";
+	{
+		Name = AL["Heroic"].." - "..WHITE..AL["Page 1"];
+		[1] = { itemID = 1552721 }; --Holy Shroud
+		[2] = { itemID = 1553020 }; --Enduring Cap
+		[3] = { itemID = 1563102 }; --Cassandra's Grace
+		[4] = { itemID = 1563112 }; --Winged Helm
+		[5] = { itemID = 1563127 }; --Frostreaver Crown
+		[6] = { itemID = 1563128 }; --High Bergg Helm
+		[7] = { itemID = 1523169 }; --Scorn's Icy Choker
+		[8] = { itemID = 1563087 }; --River Pride Choker
+		[9] = { itemID = 1563089 }; --Skibi's Pendant
+		[10] = { itemID = 1552278 }; --Forest Tracker Epaulets
+		[11] = { itemID = 1563115 }; --Sheepshear Mantle
+		[12] = { itemID = 1563131 }; --Sparkleshell Mantle
+		[13] = { itemID = 1523178 }; --Mantle of Lady Falther'ess
+		[14] = { itemID = 1563005 }; --Amy's Blanket
+		[15] = { itemID = 1563109 }; --Blackflame Cape
+		[16] = { itemID = 1551715 }; --Polished Jazeraint Armor
+		[17] = { itemID = 1551717 }; --Double Link Tunic
+		[18] = { itemID = 1552800 }; --Black Velvet Robes
+		[19] = { itemID = 1559433 }; --Forgotten Wraps
+		[20] = { itemID = 1563012 }; --Yorgen Bracers
+		[21] = { itemID = 1563076 }; --Giantslayer Bracers
+		[22] = { itemID = 1563106 }; --Glowing Magical Bracelets
+		[23] = { itemID = 1550754 }; --Shortsword of Vengeance
+		[24] = { itemID = 1552011 }; --Twisted Sabre
+		[25] = { itemID = 1552912 }; --Claw of the Shadowmancer
+		[26] = { itemID = 1554090 }; --Mug O' Hurt
+		[27] = { itemID = 1554091 }; --Widowmaker
+	};
+	{
+		Name = AL["Heroic"].." - "..WHITE..AL["Page 2"];
+		[1] = { itemID = 1559359 }; --Wirt's Third Leg
+		[2] = { itemID = 1562974 }; --The Black Knight
+		[3] = { itemID = 1563024 }; --Beazel's Basher
+		[4] = { itemID = 1563032 }; --Sword of Corruption
+		[5] = { itemID = 1563035 }; --Serpent Slicer
+		[6] = { itemID = 1563048 }; --Looming Gavel
+		[7] = { itemID = 1552299 }; --Burning War Axe
+		[8] = { itemID = 1552877 }; --Combatant Claymore
+		[9] = { itemID = 1553203 }; --Dense Triangle Mace
+		[10] = { itemID = 1563016 }; --Killmaim
+		[11] = { itemID = 1563018 }; --Executioner's Cleaver
+		[12] = { itemID = 1563041 }; --Guardian Blade
+		[13] = { itemID = 1563043 }; --Blade of the Titans
+		[14] = { itemID = 1563049 }; --Deanship Claymore
+		[15] = { itemID = 1563051 }; --Witchfury
+		[16] = { itemID = 1551203 }; --Aegis of Stormwind
+		[17] = { itemID = 1563079 }; --Shield of Thorsen
+		[18] = { itemID = 1563082 }; --Mountainside Buckler
+		[19] = { itemID = 1563031 }; --Orb of Mistmantle
+		[20] = { itemID = 1563019 }; --Harpyclaw Short Bow
+		[21] = { itemID = 1563021 }; --Needle Threader
+		[22] = { itemID = 2248297 }; --Oversimplified Stick Chucker
+		[23] = { itemID = 1523177 }; --Lady Falther'ess' Finger
+		[24] = { itemID = 1552098 }; --Double-barreled Shotgun
+		[25] = { itemID = 1563037 }; --Crystalpine Stinger
+		[26] = { itemID = 1563039 }; --Skull Splitting Crossbow
+		[27] = { itemID = 1563062 }; --Thunderwood
+		[28] = { itemID = 1523170 }; --The Frozen Clutch
+		[29] = { itemID = 1550720 }; --Brawler Gloves
+		[30] = { itemID = 1563071 }; --Plated Fist of Hakoo
+	};
+	{
+		Name = AL["Heroic"].." - "..WHITE..AL["Page 3"];
+		[1] = { itemID = 1559405 }; --Girdle of Golem Strength
+		[2] = { itemID = 1563011 }; --Silver-lined Belt
+		[3] = { itemID = 1563134 }; --Belt of the Gladiator
+		[4] = { itemID = 1563145 }; --Enormous Ogre Belt
+		[5] = { itemID = 1523173 }; --Abomination Skin Leggings
+		[6] = { itemID = 1563010 }; --Dreamsinger Legguards
+		[7] = { itemID = 1563074 }; --Golem Shard Leggings
+		[8] = { itemID = 1563114 }; --Troll's Bane Leggings
+		[9] = { itemID = 1563099 }; --Moccasins of the White Hare
+		[10] = { itemID = 1563100 }; --Furen's Boots
+		[11] = { itemID = 2248085 }; --Gordok Knuckleband
+		[12] = { itemID = 2448085 }; --Flattened Elven Ring
+		[13] = { itemID = 1563094 }; --The Queen's Jewel
+		[14] = { itemID = 1563095 }; --Assault Band
+		[15] = { itemID = 1563097 }; --Thunderbrow Ring
+		[16] = { itemID = 1551713 }; --Ankh of Life
+	};
+	{
+		Name = AL["Mythic"].." - "..WHITE..AL["Page 1"];
+		[1] = { itemID = 2431147 }; --Pendant of Cunning
+		[2] = { itemID = 2431178 }; --Amulet of Unstable Power
+		[3] = { itemID = 2431196 }; --Amulet of Sanctification
+		[4] = { itemID = 2431148 }; --Demon Hide Spaulders
+		[5] = { itemID = 294191 }; --Cloak of Dark Bargain
+		[6] = { itemID = 2431140 }; --Cloak of Entropy
+		[7] = { itemID = 2431143 }; --Shroud of Frenzy
+		[8] = { itemID = 2431127 }; --Hauberk of Totemic Rage
+		[9] = { itemID = 2431136 }; --Breastplate of Blade Turning
+		[10] = { itemID = 2431152 }; --Chestguard of Illumination
+		[11] = { itemID = 2431286 }; --Breastplate of Rapid Striking
+		[12] = { itemID = 2431127 }; --Hauberk of Totemic Rage
+		[13] = { itemID = 2431136 }; --Breastplate of Blade Turning
+		[14] = { itemID = 2431152 }; --Chestguard of Illumination
+		[15] = { itemID = 2431286 }; --Breastplate of Rapid Striking
+		[16] = { itemID = 2431175 }; --Blade Dancer's Wristguards
+		[17] = { itemID = 2431284 }; --Bracers of Recklessness
+		[18] = { itemID = 2431175 }; --Blade Dancer's Wristguards
+		[19] = { itemID = 2431284 }; --Bracers of Recklessness
+		[20] = { itemID = 2431134 }; --Blade of Misfortune
+		[21] = { itemID = 2431139 }; --Fist of Reckoning
+		[22] = { itemID = 2431142 }; --Blade of Trapped Knowledge
+		[23] = { itemID = 2431153 }; --Axe of the Legion
+		[24] = { itemID = 2431193 }; --Blade of Unquenched Thirst
+		[25] = { itemID = 2431200 }; --Shield of the Wayward Footman
+		[26] = { itemID = 2431204 }; --The Gunblade
+		[27] = { itemID = 2431137 }; --Gauntlets of Purification
+		[28] = { itemID = 2431149 }; --Gloves of Pandemonium
+		[29] = { itemID = 2431150 }; --Gloves of Piety
+		[30] = { itemID = 2431180 }; --Gauntlets of the Skullsplitter
+	};
+	{
+		Name = AL["Mythic"].." - "..WHITE..AL["Page 2"];
+		[1] = { itemID = 2431131 }; --Sash of Silent Blades
+		[2] = { itemID = 2431138 }; --Storm Lord's Girdle
+		[3] = { itemID = 2431151 }; --Girdle of Siege
+		[4] = { itemID = 2431202 }; --Girdle of Divine Blessing
+		[5] = { itemID = 2431133 }; --Leggings of Concentrated Darkness
+		[6] = { itemID = 2431226 }; --Leggings of the Sly
+		[7] = { itemID = 431276 }; --Boots of Zealotry
+		[8] = { itemID = 2431125 }; --Boots of the Decimator
+		[9] = { itemID = 2431173 }; --Boots of Savagery
+		[10] = { itemID = 2431187 }; --Boots of the Pathfinder
+		[11] = { itemID = 2431230 }; --Abyss Walker's Boots
+	};
+
+}
+
 --------------------------
 --- Sets & Collections ---
 --------------------------

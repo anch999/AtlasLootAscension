@@ -18,9 +18,12 @@ patchnotes = {
 ]]
 function addon:NewsInitialize(db, newsTable)
     db.AutoShowNews = db.AutoShowNews or db.AutoShowNews and db.AutoShowNews ~= false and true
-    if db.AutoShowNews and (not db.NewsVersion or db.NewsVersion ~= version) then
-		Timer.After(5, function() self:OpenNewsFrame(db) end)
-	end
+    if not db.NewsVersion or db.NewsVersion ~= version then
+        DEFAULT_CHAT_FRAME:AddMessage("AtlasLoot has been updated")
+        if db.AutoShowNews then
+            Timer.After(5, function() self:OpenNewsFrame(db) end)
+        end
+    end
     db.NewsVersion = version
     news = newsTable
 end

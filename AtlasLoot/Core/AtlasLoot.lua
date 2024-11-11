@@ -453,8 +453,6 @@ function AtlasLoot:CreateOnDemandLootTable(typeL)
 	return continue()
 end
 
-
-local lastTablenum = 1
 --[[
 AtlasLoot:ShowItemsFrame(dataID, dataSource, tablenum):
 dataID - Name of the loot table
@@ -974,8 +972,6 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 			AtlasLootItemsFrame.refreshBack = {dataID, dataSource_backup, tablenum}
 		end
 	end
-
-	lastTablenum = tablenum
 
 	--Anchor the item frame where it is supposed to be
 	if self.filterEnable and dataID ~= "FilterList" then
