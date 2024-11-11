@@ -1,5 +1,12 @@
 
 local patchNotes = {
+    {"Version 7.4.3", "11th November, 2024"},
+    "Added mark of triumph vendor to classic collections",
+    "Added shared boss loot section to classic raid/dungeon category",
+    "Updated classic faction loot",
+    "Recipes in Dungeons and Raid loot tables will now show green/blue known icon heighlights",
+    "Moved the All Dungeon Loot page to the top of the dungeons section of the dungeon/raid categorys",
+    "Bug fixs",
     {"Version 7.4.2", "7th November, 2024"},
     "Updated Karazhan/Gruul's Lair and Magtheridon's Lairs loot tables",
     {"Version 7.4.1", "7th November, 2024"},
