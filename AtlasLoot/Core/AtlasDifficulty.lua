@@ -26,7 +26,7 @@
         {"Tier 5", 4},
         {"Tier 6", 5},
         {"Bloodforged", 1},
-        Max = 3
+        Max = 5
     }
 
     AtlasLoot.Difficulties["ClassicDungeonExt"] = {
