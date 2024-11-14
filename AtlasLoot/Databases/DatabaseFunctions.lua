@@ -182,7 +182,7 @@ function AtlasLoot:GetMerchantItems(missingOnly)
 			local itemID = GetItemInfoFromHyperlink(link)
 			local itemName = self:GetItemInfo(itemID)
 			local _, itemCost, currency = GetMerchantItemCostItem (index, 1)
-			local currencyID = GetItemInfoFromHyperlink(currency)
+			local currencyID = currency and GetItemInfoFromHyperlink(currency)
 
 			if missingOnly then
 				if not runOnce then

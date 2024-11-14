@@ -750,8 +750,10 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 			extra = extra ..WHITE.." ("..dataSource[dataID][tablenum][i].rep..")"
 		end
 
-		if dataSource[dataID][tablenum][i].price then
-			extra = extra ..WHITE.." ("..dataSource[dataID][tablenum][i].price..")"
+		local price = dataSource[dataID][tablenum][i].price
+		if price then
+			price = self:ArenaCost(price, itemEquipLoc, itemQuality)
+			extra = extra ..WHITE.." ("..price..")"
 		end
 
 		local recipe = self:GetRecipeData(itemID, "item")

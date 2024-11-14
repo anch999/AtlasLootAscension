@@ -698,7 +698,7 @@ function AtlasLoot:SubTableScrollFrameUpdate(tablename, dataSource, tablenum)
                 end)
                 row:SetScript("OnLeave", function() GameTooltip:Hide() end)
             else
-                row.Text:SetText("|cffFFd200".._G[dataSource][tablename][value].Name)
+                row.Text:SetText("|cffFFd200"..(_G[dataSource][tablename][value].Name or ""))
                 row:SetScript("OnEnter", function(self)
                     GameTooltip:Hide()
                 end)

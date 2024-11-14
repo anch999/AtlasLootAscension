@@ -842,3 +842,46 @@ function AtlasLoot:ItemSourceTooltip(itemID, tooltip)
 		tooltip:AddLine(text)
 	end
 end
+
+function AtlasLoot:UpdateTable(insertTable, table)
+	for i, v in pairs(insertTable) do
+		table[i] = v
+	end
+	return table
+end
+
+local ArmorTypes = {
+	INVTYPE_NECK = {"24000 #faction#"},
+	INVTYPE_HEAD = {"30000 #faction#", "1500 #arena#"},
+	INVTYPE_SHOULDER = {"24000 #faction#", "1125 #arena#"},
+	INVTYPE_BODY = {"30000 #faction#", "1500 #arena#"},
+	INVTYPE_CHEST = {"30000 #faction#", "1500 #arena#"},
+	INVTYPE_WAIST = {"17000 #faction#"},
+	INVTYPE_LEGS = {"30000 #faction#", "1500 #arena#"},
+	INVTYPE_FEET = {"24000 #faction#"},
+	INVTYPE_WRIST = {"17000 #faction#"},
+	INVTYPE_HAND = {"20000 #faction#", "1000 #arena#"},
+	INVTYPE_FINGER = {"24000 #faction#"},
+	INVTYPE_TRINKET = {"30400 #faction#"},
+	INVTYPE_WEAPON = {"24000 #faction#", "1875 #arena#"},
+	INVTYPE_SHIELD = {"15000 #faction#", "1500 #arena#"},
+	INVTYPE_RANGED = {"15000 #faction#", "1500 #arena#"},
+	INVTYPE_CLOAK = {"30400 #faction#"},
+	INVTYPE_2HWEAPON = {"40000 #faction#", "2700 #arena#"},
+	INVTYPE_ROBE = {"30000 #faction#", "1500 #arena#"},
+    INVTYPE_WEAPONMAINHAND = {"24000 #faction#", "1875 #arena#"},
+	INVTYPE_WEAPONOFFHAND = {"24000 #faction#", "750 #arena#"},
+	INVTYPE_HOLDABLE = {"15000 #faction#", "1500 #arena#"},
+    INVTYPE_THROWN = {"15000 #faction#", "750 #arena#"},
+	INVTYPE_RANGEDRIGHT = {"15000 #faction#", "1500 #arena#"},
+	INVTYPE_RELIC = {"15000 #faction#", "750 #arena#"},
+}
+
+function AtlasLoot:ArenaCost(price, itemEquipLoc, itemQuality)
+	if price ~= "Arena" then return price end
+	if itemQuality == 3 or not ArmorTypes[itemEquipLoc][2] then
+		return ArmorTypes[itemEquipLoc][1]
+	else
+		return ArmorTypes[itemEquipLoc][1]..ArmorTypes[itemEquipLoc][2]
+	end
+end

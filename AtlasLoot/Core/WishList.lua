@@ -150,9 +150,9 @@ function AtlasLoot:SortWishList(refresh,type,tNumb)
 	local sorted = {}
 	local name = AtlasLootWishList[type][tNumb].Name
 	local icon = AtlasLootWishList[type][tNumb].Icon
-		for i,v in ipairs(AtlasLootWishList[type][tNumb]) do
+		for _,v in ipairs(AtlasLootWishList[type][tNumb]) do
 			local function tableCheck()
-				for n,t in ipairs(sorted) do
+				for _,t in ipairs(sorted) do
 					if t[2][5] == v[5] then
 						return t
 					end
@@ -166,8 +166,8 @@ function AtlasLoot:SortWishList(refresh,type,tNumb)
 		end
 		AtlasLootWishList[type][tNumb] = {}
 		local num = 1
-		for i,v in ipairs(sorted) do
-			for n,t in ipairs(v) do
+		for _,v in ipairs(sorted) do
+			for _,t in ipairs(v) do
 				if num ~= 1 and t[3] == "INV_Box_01" then
 					table.insert(AtlasLootWishList[type][tNumb],{num, 0, "Blank", WHITE.." ", ""})
 					num = num + 1
