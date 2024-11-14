@@ -1,5 +1,7 @@
 
 local patchNotes = {
+    {"Version 7.4.4", "15th November, 2024"},
+    "Rebuilt the PVP rewards module",
     {"Version 7.4.3", "11th November, 2024"},
     "Added mark of triumph vendor to classic collections",
     "Added shared boss loot section to classic raid/dungeon category",
