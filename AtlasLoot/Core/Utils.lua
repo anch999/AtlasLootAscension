@@ -192,8 +192,8 @@ function AtlasLoot:GetRecipeData(recipeID, idType)
 		   for _,recipe in pairs(cat) do
 			  if (idType == "spell" and recipeID == recipe.SpellEntry) or (idType == "item" and recipeID == recipe.RecipeItemEntry) then
 				local info = {{recipe.CreatedItemEntry}, "blank", "blank", "blank", "blank", "blank",spellID = recipe.SpellEntry, skillIndex = recipe.SkillIndex}
-				local bloodForgedID = self:FindId(recipe.CreatedItemEntry, 1)
-				if bloodForgedID then
+				local bloodForgedID = self:GetItemDifficultyID(recipe.CreatedItemEntry, 1)
+				if bloodForgedID and bloodForgedID ~= recipe.CreatedItemEntry then
 					info[2] = {bloodForgedID}
 				end
 				if recipe.RecipeItemEntry and recipe.RecipeItemEntry ~= 0 then
@@ -430,7 +430,7 @@ function AtlasLoot:PopoupItemFrame(frame, data)
 			button:Hide()
 		else
 			local correctID = item.itemID or item[1]
-			local itemID = self:FindId(correctID, ItemindexID)
+			local itemID = self:GetItemDifficultyID(correctID, ItemindexID)
 			local itemData = {self:GetItemInfo(itemID)}
 			SetItemButtonTexture(button, itemData[10])
 			SetItemButtonQuality(button, itemData[3])

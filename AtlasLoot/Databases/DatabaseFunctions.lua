@@ -159,11 +159,11 @@ function AtlasLoot:UpdateItemIDsDatabase(firstID, lastID)
 end
 
 --[[
-AtlasLoot:FindId(id, difficulty)
+AtlasLoot:GetItemDifficultyID(id, difficulty)
 Finds the Ids of other difficulties based on the normal id of the item and the difficulty parameter given.
 On the form of {ID, {bloodforged, heroic bloodforged, normal, heroic, mythic, mythic1/ascended, mythic2, ... ,mythicN}}
 ]]
-function AtlasLoot:FindId(id, difficulty)
+function AtlasLoot:GetItemDifficultyID(id, difficulty)
 	if not difficulty or difficulty == 3 then return id end
 	if ItemIDsDatabase[id] and ItemIDsDatabase[id][difficulty] and self:GetItemInfo(ItemIDsDatabase[id][difficulty]) then
 		return ItemIDsDatabase[id][difficulty]

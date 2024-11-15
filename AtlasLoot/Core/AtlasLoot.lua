@@ -600,12 +600,12 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 				if item[self.Difficulties.MIN_DIF] > itemDif then
 					toShow = false
 				end
-				itemID = self:FindId(item.itemID, min(maxDif, itemDif))
+				itemID = self:GetItemDifficultyID(item.itemID, min(maxDif, itemDif))
 			end
 			if toShow then
 				if maxDif < itemDif then itemDif = maxDif end 
 				--If something was found in itemID database show that if not show default table item
-				itemID = self:FindId(item.itemID, itemDif)
+				itemID = self:GetItemDifficultyID(item.itemID, itemDif)
 			end
 		elseif item and (item.spellID or item.icon) or item and itemID then
 			toShow = true
