@@ -14,7 +14,7 @@ AtlasLoot:SetSkin(skin)
 local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
 local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 local WHITE = "|cffFFFFFF"
-ItemindexID = 2
+ItemindexID = 3
 
 AtlasLoot_Data["AtlasLootFallback"] = {
     EmptyInstance = {}

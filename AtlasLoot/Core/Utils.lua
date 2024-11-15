@@ -122,34 +122,12 @@ function AtlasLoot:OpenDB(frame, type, text)
 end
 
 local itemEquipLocConversion = {
-	"INVTYPE_HEAD",
-	"INVTYPE_NECK",
-	"INVTYPE_SHOULDER",
-	"INVTYPE_BODY",
-	"INVTYPE_CHEST",
-	"INVTYPE_WAIST",
-	"INVTYPE_LEGS",
-	"INVTYPE_FEET",
-	"INVTYPE_WRIST",
-	"INVTYPE_HAND",
-	"INVTYPE_FINGER",
-	"INVTYPE_TRINKET",
-	"INVTYPE_WEAPON",
-	"INVTYPE_SHIELD",
-	"INVTYPE_RANGED",
-	"INVTYPE_CLOAK",
-	"INVTYPE_2HWEAPON",
-	"INVTYPE_BAG",
-	"INVTYPE_TABARD",
-	"INVTYPE_ROBE",
-	"INVTYPE_WEAPONMAINHAND",
-	"INVTYPE_WEAPONOFFHAND",
-	"INVTYPE_HOLDABLE",
-	"INVTYPE_AMMO",
-	"INVTYPE_THROWN",
-	"INVTYPE_RANGEDRIGHT",
-	"INVTYPE_QUIVER",
-	"INVTYPE_RELIC",
+	"INVTYPE_HEAD","INVTYPE_NECK","INVTYPE_SHOULDER","INVTYPE_BODY","INVTYPE_CHEST",
+	"INVTYPE_WAIST","INVTYPE_LEGS","INVTYPE_FEET","INVTYPE_WRIST",	"INVTYPE_HAND",
+	"INVTYPE_FINGER","INVTYPE_TRINKET","INVTYPE_WEAPON","INVTYPE_SHIELD","INVTYPE_RANGED",
+	"INVTYPE_CLOAK","INVTYPE_2HWEAPON","INVTYPE_BAG","INVTYPE_TABARD","INVTYPE_ROBE",
+    "INVTYPE_WEAPONMAINHAND","INVTYPE_WEAPONOFFHAND","INVTYPE_HOLDABLE","INVTYPE_AMMO",
+    "INVTYPE_THROWN","INVTYPE_RANGEDRIGHT","INVTYPE_QUIVER","INVTYPE_RELIC",
 }
 
 function AtlasLoot:GetItemInfo(item)
@@ -162,9 +140,13 @@ function AtlasLoot:GetItemInfo(item)
 		end)
 		local itemInstant = GetItemInfoInstant(item.itemID)
 		if itemInstant then
-			itemName, itemSubType, itemEquipLoc, itemTexture, itemQuality = itemInstant.name, _G["ITEM_SUBCLASS_"..itemInstant.classID.."_"..itemInstant.subclassID], itemEquipLocConversion[itemInstant.inventoryType], itemInstant.icon, itemInstant.quality
-			local color = ITEM_QUALITY_COLORS[itemQuality] or ITEM_QUALITY_COLORS[1]
-			itemLink = color:WrapText("|Hitem:"..item.itemID.."|h["..itemName.."]|h|r")
+			itemName = itemInstant.name
+			itemSubType = _G["ITEM_SUBCLASS_"..itemInstant.classID.."_"..itemInstant.subclassID]
+			itemEquipLoc = itemEquipLocConversion[itemInstant.inventoryType]
+			itemTexture = itemInstant.icon
+			itemQuality = itemInstant.quality
+			itemLink = item:GetLink()
+			itemLevel = item.itemLevel
 		end
 	end
 	return itemName, itemLink, itemQuality, itemLevel, itemMinLevel, itemType, itemSubType, itemStackCount, itemEquipLoc, itemTexture, itemSellPrice
@@ -210,8 +192,8 @@ function AtlasLoot:GetRecipeData(recipeID, idType)
 		   for _,recipe in pairs(cat) do
 			  if (idType == "spell" and recipeID == recipe.SpellEntry) or (idType == "item" and recipeID == recipe.RecipeItemEntry) then
 				local info = {{recipe.CreatedItemEntry}, "blank", "blank", "blank", "blank", "blank",spellID = recipe.SpellEntry, skillIndex = recipe.SkillIndex}
-				local bloodForgedID = self:FindId(recipe.CreatedItemEntry, 1, nil, "Bloodforged")
-				if bloodForgedID then
+				local bloodForgedID = self:GetItemDifficultyID(recipe.CreatedItemEntry, 1)
+				if bloodForgedID and bloodForgedID ~= recipe.CreatedItemEntry then
 					info[2] = {bloodForgedID}
 				end
 				if recipe.RecipeItemEntry and recipe.RecipeItemEntry ~= 0 then
@@ -448,7 +430,7 @@ function AtlasLoot:PopoupItemFrame(frame, data)
 			button:Hide()
 		else
 			local correctID = item.itemID or item[1]
-			local itemID = self:FindId(correctID, ItemindexID) or correctID
+			local itemID = self:GetItemDifficultyID(correctID, ItemindexID)
 			local itemData = {self:GetItemInfo(itemID)}
 			SetItemButtonTexture(button, itemData[10])
 			SetItemButtonQuality(button, itemData[3])
@@ -521,7 +503,6 @@ function AtlasLoot:IsLootTableAvailable(dataSource)
 		return true
 	elseif moduleName then
 		LoadAddOn(moduleName)
-		self:CreateItemSourceList()
 	end
 end
 
@@ -555,18 +536,6 @@ function AtlasLoot:ItemFrameRefresh()
     refreshTimer = true
 end
 -----------------------------------------------------
-
-function AtlasLoot:getMaxDifficulty(difficultyKey)
-    if(difficultyKey == "ClassicDungeon" or difficultyKey == "PVP") then
-        return 2
-    elseif (difficultyKey == "ClassicDungeonExt" or difficultyKey == "BCDungeon" or difficultyKey == "WrathDungeon") then
-        return 44
-    elseif (difficultyKey == "ClassicRaid" or difficultyKey == "BCRaid" or difficultyKey == "WrathRaid") then
-        return 5
-    else
-        return 0
-    end
-end
 
 -- Loading items spinner 
 local loadingCount = 0
@@ -640,6 +609,7 @@ local function TooltipHandlerItem(tooltip)
 end
 
 GameTooltip:HookScript("OnTooltipSetItem", TooltipHandlerItem)
+ItemRefTooltip:HookScript("OnTooltipSetItem", TooltipHandlerItem)
 
 function AtlasLoot:StripTextColor(txt)
 	local txt = txt or ""
@@ -811,40 +781,107 @@ function AtlasLoot:GetDropRate(lootTable, lootGroup)
 			count = count + 1
 		end
 	end
-	return string.format("%.2f%%",lootTable.LootGroups[lootGroup]/count) or nil
+	local actualLootGroup = lootTable.LootGroups or lootTable.lootTable and _G[lootTable.lootTable[2]][lootTable.lootTable[1]][lootTable.lootTable[3]] or nil
+	if actualLootGroup then
+		return string.format("%.2f%%",actualLootGroup[lootGroup]/count) or nil
+	end
 end
 
 
-AtlasLoot.ItemSourceList = {}
-function AtlasLoot:CreateItemSourceList()
-	if not self.db.profile.showdropLocationTooltips then return end
-	local list = self.ItemSourceList
-		for _, instance in pairs(AtlasLoot_Data) do
-			for _, boss in pairs(instance) do
-				if type(boss) == "table" then
-					for _, item in pairs(boss) do
-						if type(item) == "table" and item.itemID then
-							list[item.itemID] = instance.Name .. " - " .. boss.Name
-							if ItemIDsDatabase[item.itemID] then
-								for _, varID in pairs(ItemIDsDatabase[item.itemID]) do
-									list[varID] = instance.Name .. " - " .. boss.Name
+
+local function IgnoreTables(dataSource)
+	local cTable = {"CraftingCLASSIC", "CraftingTBC", "CraftingWRATH", "CollectionsAscensionCLASSIC"}
+	for _, t in pairs(cTable) do
+		for _, crafting in  ipairs(AtlasLoot_SubMenus[t]) do
+			if crafting[3] then
+				for _, ignore in pairs(crafting[3]) do
+					if dataSource == ignore[2] then return true end
+				end
+			end
+			if dataSource == crafting[2] then return true end
+		end
+	end
+end
+
+function AtlasLoot:CreateItemSourceList(overRide)
+	if not overRide and not self.db.profile.showdropLocationTooltips then return end
+	if overRide or not AtlasLootDB.ItemSources or (AtlasLootDB.ItemSources.Version and AtlasLootDB.ItemSources.Version ~= self.Version) then
+		self:LoadAllModules()
+		AtlasLootDB.ItemSources = {Version = AtlasLoot.Version, List = {}}
+		local list = AtlasLootDB.ItemSources.List
+			for dataSource, instance in pairs(AtlasLoot_Data) do
+				for _, boss in pairs(instance) do
+					if type(boss) == "table" then
+						for _, item in pairs(boss) do
+							if type(item) == "table" and item.itemID and not IgnoreTables(dataSource) then
+								list[item.itemID] = instance.Name .. " - " .. boss.Name
+								if ItemIDsDatabase[item.itemID] then
+									for _, varID in pairs(ItemIDsDatabase[item.itemID]) do
+										list[varID] = instance.Name .. " - " .. boss.Name
+									end
 								end
-							end
-							if item.spellID then
-								local recipeID = self:GetRecipeID(item.spellID) or nil
-								if recipeID then list[recipeID] = instance.Name .. " - " .. boss.Name end
+								if item.spellID then
+									local recipeID = self:GetRecipeID(item.spellID) or nil
+									if recipeID and (list[recipeID] and not IgnoreTables(dataSource) or not list[recipeID]) then
+										list[recipeID] = instance.Name .. " - " .. boss.Name
+									end
+								end
 							end
 						end
 					end
 				end
 			end
-		end
+	end
+	self.ItemSourceList = AtlasLootDB.ItemSources.List
 end
 
 function AtlasLoot:ItemSourceTooltip(itemID, tooltip)
-	if not self.db.profile.showdropLocationTooltips then return end
-	local text = AtlasLoot.ItemSourceList[itemID] and "Item Source: " .. WHITE .. AtlasLoot.ItemSourceList[itemID] or nil
+	if not self.db.profile.showdropLocationTooltips or not self.ItemSourceList then return end
+	local text = self.ItemSourceList[itemID] and "Item Source: " .. WHITE .. self.ItemSourceList[itemID] or nil
 	if text and not CheckTooltipForDuplicate(tooltip, text) then
 		tooltip:AddLine(text)
+	end
+end
+
+function AtlasLoot:UpdateTable(insertTable, table)
+	for i, v in pairs(insertTable) do
+		table[i] = v
+	end
+	return table
+end
+
+local ArmorTypes = {
+	INVTYPE_NECK = {"24000 #faction#"},
+	INVTYPE_HEAD = {"30000 #faction#", "1500 #arena#"},
+	INVTYPE_SHOULDER = {"24000 #faction#", "1125 #arena#"},
+	INVTYPE_BODY = {"30000 #faction#", "1500 #arena#"},
+	INVTYPE_CHEST = {"30000 #faction#", "1500 #arena#"},
+	INVTYPE_WAIST = {"17000 #faction#"},
+	INVTYPE_LEGS = {"30000 #faction#", "1500 #arena#"},
+	INVTYPE_FEET = {"24000 #faction#"},
+	INVTYPE_WRIST = {"17000 #faction#"},
+	INVTYPE_HAND = {"20000 #faction#", "1000 #arena#"},
+	INVTYPE_FINGER = {"24000 #faction#"},
+	INVTYPE_TRINKET = {"30400 #faction#"},
+	INVTYPE_WEAPON = {"24000 #faction#", "1875 #arena#"},
+	INVTYPE_SHIELD = {"15000 #faction#", "1500 #arena#"},
+	INVTYPE_RANGED = {"15000 #faction#", "1500 #arena#"},
+	INVTYPE_CLOAK = {"30400 #faction#"},
+	INVTYPE_2HWEAPON = {"40000 #faction#", "2700 #arena#"},
+	INVTYPE_ROBE = {"30000 #faction#", "1500 #arena#"},
+    INVTYPE_WEAPONMAINHAND = {"24000 #faction#", "1875 #arena#"},
+	INVTYPE_WEAPONOFFHAND = {"24000 #faction#", "750 #arena#"},
+	INVTYPE_HOLDABLE = {"15000 #faction#", "1500 #arena#"},
+    INVTYPE_THROWN = {"15000 #faction#", "750 #arena#"},
+	INVTYPE_RANGEDRIGHT = {"15000 #faction#", "1500 #arena#"},
+	INVTYPE_RELIC = {"15000 #faction#", "750 #arena#"},
+}
+
+function AtlasLoot:ArenaCost(price, itemEquipLoc, itemQuality)
+	if price ~= "Arena" then return price end
+	if itemQuality == 3 or not ArmorTypes[itemEquipLoc][2] then
+		return ArmorTypes[itemEquipLoc][1]
+	else
+		return ArmorTypes[itemEquipLoc][1]..ArmorTypes[itemEquipLoc][2]
 	end
 end

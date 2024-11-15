@@ -1,4 +1,4 @@
-local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot");
+local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
 local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0")
 local WHITE = "|cffFFFFFF";
 
@@ -80,15 +80,15 @@ AtlasLoot_Data["AlchemyCLASSIC"] = {
 	Type = "ClassicCrafting";
 	{
 		Name = AL["Battle Elixirs"];
-		[1] = {itemID = 13454, spellID = 17573 }; --Greater Arcane Elixir
-		[2] = {itemID = 13452, spellID = 17571 }; --Elixir of the Mongoose
-		[3] = {itemID = 13453, spellID = 17557 }; --Elixir of Brute Force
-		[4] = {itemID = 9224, spellID = 11477 }; --Elixir of Demonslaying
-		[5] = {itemID = 21546, spellID = 26277 }; --Elixir of Greater Firepower
-		[6] = {itemID = 9264, spellID = 11476 }; --Elixir of Shadow Power
-		[7] = {itemID = 9206, spellID = 11472 }; --Elixir of Giants
-		[8] = {itemID = 9187, spellID = 11467 }; --Elixir of Greater Agility
-		[9] = {itemID = 9155, spellID = 11461 }; --Arcane Elixir
+		[01] = {itemID = 13454, spellID = 17573 }; --Greater Arcane Elixir
+		[02] = {itemID = 13452, spellID = 17571 }; --Elixir of the Mongoose
+		[03] = {itemID = 13453, spellID = 17557 }; --Elixir of Brute Force
+		[04] = {itemID = 9224, spellID = 11477 }; --Elixir of Demonslaying
+		[05] = {itemID = 21546, spellID = 26277 }; --Elixir of Greater Firepower
+		[06] = {itemID = 9264, spellID = 11476 }; --Elixir of Shadow Power
+		[07] = {itemID = 9206, spellID = 11472 }; --Elixir of Giants
+		[08] = {itemID = 9187, spellID = 11467 }; --Elixir of Greater Agility
+		[09] = {itemID = 9155, spellID = 11461 }; --Arcane Elixir
 		[10] = {itemID = 17708, spellID = 21923 }; --Elixir of Frost Power
 		[11] = {itemID = 8949, spellID = 11449 }; --Elixir of Agility
 		[12] = {itemID = 45621, spellID = 63732 }; --Elixir of Minor Accuracy
@@ -101,15 +101,15 @@ AtlasLoot_Data["AlchemyCLASSIC"] = {
 	};
 	{
 		Name = AL["Guardian Elixirs"];
-		[1] = {itemID = 20004, spellID = 24368 }; --Major Troll's Blood Elixir
-		[2] = {itemID = 20007, spellID = 24365 }; --Mageblood Elixir
-		[3] = {itemID = 13445, spellID = 17554 }; --Elixir of Superior Defense
-		[4] = {itemID = 13447, spellID = 17555 }; --Elixir of the Sages
-		[5] = {itemID = 9088, spellID = 11466 }; --Gift of Arthas
-		[6] = {itemID = 9179, spellID = 11465 }; --Elixir of Greater Intellect
-		[7] = {itemID = 8951, spellID = 11450 }; --Elixir of Greater Defense
-		[8] = {itemID = 3826, spellID = 3451 }; --Mighty Troll's Blood Elixir
-		[9] = {itemID = 3825, spellID = 3450 }; --Elixir of Fortitude
+		[01] = {itemID = 20004, spellID = 24368 }; --Major Troll's Blood Elixir
+		[02] = {itemID = 20007, spellID = 24365 }; --Mageblood Elixir
+		[03] = {itemID = 13445, spellID = 17554 }; --Elixir of Superior Defense
+		[04] = {itemID = 13447, spellID = 17555 }; --Elixir of the Sages
+		[05] = {itemID = 9088, spellID = 11466 }; --Gift of Arthas
+		[06] = {itemID = 9179, spellID = 11465 }; --Elixir of Greater Intellect
+		[07] = {itemID = 8951, spellID = 11450 }; --Elixir of Greater Defense
+		[08] = {itemID = 3826, spellID = 3451 }; --Mighty Troll's Blood Elixir
+		[09] = {itemID = 3825, spellID = 3450 }; --Elixir of Fortitude
 		[10] = {itemID = 3389, spellID = 3177 }; --Elixir of Defense
 		[11] = {itemID = 3388, spellID = 3176 }; --Strong Troll's Blood Potion
 		[12] = {itemID = 3383, spellID = 3171 }; --Elixir of Wisdom
@@ -119,15 +119,15 @@ AtlasLoot_Data["AlchemyCLASSIC"] = {
 	};
 	{
 		Name = AL["Potions"] .. " 1";
-		[1] = {itemID = 18253, spellID = 22732 }; --Major Rejuvenation Potion
-		[2] = {itemID = 13444, spellID = 17580 }; --Major Mana Potion
-		[3] = {itemID = 13461, spellID = 17577 }; --Greater Arcane Protection Potion
-		[4] = {itemID = 13457, spellID = 17574 }; --Greater Fire Protection Potion
-		[5] = {itemID = 13456, spellID = 17575 }; --Greater Frost Protection Potion
-		[6] = {itemID = 13458, spellID = 17576 }; --Greater Nature Protection Potion
-		[7] = {itemID = 13459, spellID = 17578 }; --Greater Shadow Protection Potion
-		[8] = {itemID = 20008, spellID = 24367 }; --Living Action Potion
-		[9] = {itemID = 13462, spellID = 17572 }; --Purification Potion
+		[01] = {itemID = 18253, spellID = 22732 }; --Major Rejuvenation Potion
+		[02] = {itemID = 13444, spellID = 17580 }; --Major Mana Potion
+		[03] = {itemID = 13461, spellID = 17577 }; --Greater Arcane Protection Potion
+		[04] = {itemID = 13457, spellID = 17574 }; --Greater Fire Protection Potion
+		[05] = {itemID = 13456, spellID = 17575 }; --Greater Frost Protection Potion
+		[06] = {itemID = 13458, spellID = 17576 }; --Greater Nature Protection Potion
+		[07] = {itemID = 13459, spellID = 17578 }; --Greater Shadow Protection Potion
+		[08] = {itemID = 20008, spellID = 24367 }; --Living Action Potion
+		[09] = {itemID = 13462, spellID = 17572 }; --Purification Potion
 		[10] = {itemID = 13455, spellID = 17570 }; --Greater Stoneshield Potion
 		[11] = {itemID = 20002, spellID = 24366 }; --Greater Dreamless Sleep Potion
 		[12] = {itemID = 13446, spellID = 17556 }; --Major Healing Potion
@@ -143,15 +143,15 @@ AtlasLoot_Data["AlchemyCLASSIC"] = {
 	};
 	{
 		Name = AL["Potions"] .. " 2";
-		[1] = {itemID = 9030, spellID = 11452 }; --Restorative Potion
-		[2] = {itemID = 6149, spellID = 11448 }; --Greater Mana Potion
-		[3] = {itemID = 6050, spellID = 7258 }; --Frost Protection Potion
-		[4] = {itemID = 6052, spellID = 7259 }; --Nature Protection Potion
-		[5] = {itemID = 5633, spellID = 6618 }; --Great Rage Potion
-		[6] = {itemID = 3823, spellID = 3448 }; --Lesser Invisibility Potion
-		[7] = {itemID = 6049, spellID = 7257 }; --Fire Protection Potion
-		[8] = {itemID = 3827, spellID = 3452 }; --Mana Potion
-		[9] = {itemID = 1710, spellID = 7181 }; --Greater Healing Potion
+		[01] = {itemID = 9030, spellID = 11452 }; --Restorative Potion
+		[02] = {itemID = 6149, spellID = 11448 }; --Greater Mana Potion
+		[03] = {itemID = 6050, spellID = 7258 }; --Frost Protection Potion
+		[04] = {itemID = 6052, spellID = 7259 }; --Nature Protection Potion
+		[05] = {itemID = 5633, spellID = 6618 }; --Great Rage Potion
+		[06] = {itemID = 3823, spellID = 3448 }; --Lesser Invisibility Potion
+		[07] = {itemID = 6049, spellID = 7257 }; --Fire Protection Potion
+		[08] = {itemID = 3827, spellID = 3452 }; --Mana Potion
+		[09] = {itemID = 1710, spellID = 7181 }; --Greater Healing Potion
 		[10] = {itemID = 5634, spellID = 6624 }; --Free Action Potion
 		[11] = {itemID = 6048, spellID = 7256 }; --Shadow Protection Potion
 		[12] = {itemID = 3385, spellID = 3173 }; --Lesser Mana Potion
@@ -170,38 +170,39 @@ AtlasLoot_Data["AlchemyCLASSIC"] = {
 	};
 	{
 		Name = AL["Flasks"];
-		[1] = {itemID = 13513, spellID = 17638 }; --Flask of Chromatic Resistance
-		[2] = {itemID = 13511, spellID = 17636 }; --Flask of Distilled Wisdom
-		[3] = {itemID = 13506, spellID = 17634 }; --Flask of Petrification
-		[4] = {itemID = 13512, spellID = 17637 }; --Flask of Supreme Power
-		[5] = {itemID = 13510, spellID = 17635 }; --Flask of the Titans
+		[01] = {itemID = 13513, spellID = 17638 }; --Flask of Chromatic Resistance
+		[02] = {itemID = 13511, spellID = 17636 }; --Flask of Distilled Wisdom
+		[03] = {itemID = 13506, spellID = 17634 }; --Flask of Petrification
+		[04] = {itemID = 13512, spellID = 17637 }; --Flask of Supreme Power
+		[05] = {itemID = 13510, spellID = 17635 }; --Flask of the Titans
+		[06] = {itemID = 6011, spellID = 17640 }; --Flask of the Titans
 	};
 	{
 		Name = AL["Transmutes"];
-		[1] = {itemID = 3577, spellID = 11479 }; --Transmute: Iron to Gold
-		[2] = {itemID = 6037, spellID = 11480 }; --Transmute: Mithril to Truesilver
-		[3] = {itemID = 12360, spellID = 17187 }; --Transmute: Arcanite Bar
-		[4] = {itemID = 7078, spellID = 17559 }; --Transmute: Air to Fire
-		[5] = {itemID = 12803, spellID = 17566 }; --Transmute: Earth to Life
-		[6] = {itemID = 7080, spellID = 17561 }; --Transmute: Earth to Water
-		[7] = {itemID = 7076, spellID = 17560 }; --Transmute: Fire to Earth
-		[8] = {itemID = 7076, spellID = 17565 }; --Transmute: Life to Earth
-		[9] = {itemID = 7080, spellID = 17563 }; --Transmute: Undeath to Water
+		[01] = {itemID = 3577, spellID = 11479 }; --Transmute: Iron to Gold
+		[02] = {itemID = 6037, spellID = 11480 }; --Transmute: Mithril to Truesilver
+		[03] = {itemID = 12360, spellID = 17187 }; --Transmute: Arcanite Bar
+		[04] = {itemID = 7078, spellID = 17559 }; --Transmute: Air to Fire
+		[05] = {itemID = 12803, spellID = 17566 }; --Transmute: Earth to Life
+		[06] = {itemID = 7080, spellID = 17561 }; --Transmute: Earth to Water
+		[07] = {itemID = 7076, spellID = 17560 }; --Transmute: Fire to Earth
+		[08] = {itemID = 7076, spellID = 17565 }; --Transmute: Life to Earth
+		[09] = {itemID = 7080, spellID = 17563 }; --Transmute: Undeath to Water
 		[10] = {itemID = 7082, spellID = 17562 }; --Transmute: Water to Air
 		[11] = {itemID = 12808, spellID = 17564 }; --Transmute: Water to Undeath
 		[12] = {itemID = 7068, spellID = 25146 }; --Transmute: Elemental Fire
 	};
 	{
 		Name = AL["Miscellaneous"];
-		[1] = {itemID = 19931, spellID = 24266 }; --Gurubashi Mojo Madness
-		[2] = {itemID = 9210, spellID = 11473 }; --Ghost Dye
-		[3] = {itemID = 9154, spellID = 11460 }; --Elixir of Detect Undead
-		[4] = {itemID = 18294, spellID = 22808 }; --Elixir of Greater Water Breathing
-		[5] = {itemID = 9061, spellID = 11456 }; --Goblin Rocket Fuel
-		[6] = {itemID = 8956, spellID = 11451 }; --Oil of Immolation
-		[7] = {itemID = 10592, spellID = 12609 }; --Catseye Elixir
-		[8] = {itemID = 3829, spellID = 3454 }; --Frost Oil
-		[9] = {itemID = 9149, spellID = 11459 }; --Philosopher's Stone
+		[01] = {itemID = 19931, spellID = 24266 }; --Gurubashi Mojo Madness
+		[02] = {itemID = 9210, spellID = 11473 }; --Ghost Dye
+		[03] = {itemID = 9154, spellID = 11460 }; --Elixir of Detect Undead
+		[04] = {itemID = 18294, spellID = 22808 }; --Elixir of Greater Water Breathing
+		[05] = {itemID = 9061, spellID = 11456 }; --Goblin Rocket Fuel
+		[06] = {itemID = 8956, spellID = 11451 }; --Oil of Immolation
+		[07] = {itemID = 10592, spellID = 12609 }; --Catseye Elixir
+		[08] = {itemID = 3829, spellID = 3454 }; --Frost Oil
+		[09] = {itemID = 9149, spellID = 11459 }; --Philosopher's Stone
 		[10] = {itemID = 3828, spellID = 3453 }; --Elixir of Detect Lesser Invisibility
 		[11] = {itemID = 3824, spellID = 3449 }; --Shadow Oil
 		[12] = {itemID = 6371, spellID = 7837 }; --Fire Oil
@@ -210,15 +211,15 @@ AtlasLoot_Data["AlchemyCLASSIC"] = {
 	};
 	{
 		Name = AL["High Risk"];
-		[1] = { name = AL["Rare"], icon = "INV_Box_01"},
-		[2] = {itemID = 967444, spellID = 968403 }; --Potent Flask of Manifesting Power
-		[3] = {itemID = 967447, spellID = 968406 }; --Potent Flask of the Warsong
-		[4] = {itemID = 967450, spellID = 968409 }; --Potent Flask of the Kirin Tor
-		[5] = {itemID = 967453, spellID = 968412 }; --Potent Flask of Butchery
-		[6] = {itemID = 967456, spellID = 968415 }; --Potent Flask of the Unyielding
-		[7] = {itemID = 967459, spellID = 968418 }; --Potent Flask of Unrelenting Power
-		[8] = {itemID = 967462, spellID = 968421 }; --Potent Flask of Savage Assault
-		[9] = {itemID = 967465, spellID = 968424 }; --Potent Flask of Shattering Thunder
+		[01] = { name = AL["Rare"], icon = "INV_Box_01"},
+		[02] = {itemID = 967444, spellID = 968403 }; --Potent Flask of Manifesting Power
+		[03] = {itemID = 967447, spellID = 968406 }; --Potent Flask of the Warsong
+		[04] = {itemID = 967450, spellID = 968409 }; --Potent Flask of the Kirin Tor
+		[05] = {itemID = 967453, spellID = 968412 }; --Potent Flask of Butchery
+		[06] = {itemID = 967456, spellID = 968415 }; --Potent Flask of the Unyielding
+		[07] = {itemID = 967459, spellID = 968418 }; --Potent Flask of Unrelenting Power
+		[08] = {itemID = 967462, spellID = 968421 }; --Potent Flask of Savage Assault
+		[09] = {itemID = 967465, spellID = 968424 }; --Potent Flask of Shattering Thunder
 		[10] = {itemID = 967468, spellID = 968427 }; --Potent Flask of the Executioner
 		[11] = {itemID = 967471, spellID = 968430 }; --Potent Flask of Deep Meditation
 		[12] = {itemID = 967474, spellID = 968433 }; --Potent Flask of Adept Striking
@@ -245,15 +246,15 @@ AtlasLoot_Data["SmithingCLASSIC"] = {
 	Type = "ClassicCrafting";
 	{
 		Name = BabbleInventory["Armor"] .. WHITE .. " - Chest";
-		[1] = {itemID = 22669, spellID = 28242 }; --Icebane Breastplate
-		[2] = {itemID = 12641, spellID = 16746 }; --Invulnerable Mail
-		[3] = {itemID = 22191, spellID = 27590 }; --Obsidian Mail Tunic
-		[4] = {itemID = 22196, spellID = 27587 }; --Thick Obsidian Breastplate
-		[5] = {itemID = 19690, spellID = 24136 }; --Bloodsoul Breastplate
-		[6] = {itemID = 20550, spellID = 24914 }; --Darkrune Breastplate
-		[7] = {itemID = 19693, spellID = 24139 }; --Darksoul Breastplate
-		[8] = {itemID = 22762, spellID = 28461 }; --Ironvine Breastplate
-		[9] = {itemID = 12618, spellID = 16745 }; --Enchanted Thorium Breastplate
+		[01] = {itemID = 22669, spellID = 28242 }; --Icebane Breastplate
+		[02] = {itemID = 12641, spellID = 16746 }; --Invulnerable Mail
+		[03] = {itemID = 22191, spellID = 27590 }; --Obsidian Mail Tunic
+		[04] = {itemID = 22196, spellID = 27587 }; --Thick Obsidian Breastplate
+		[05] = {itemID = 19690, spellID = 24136 }; --Bloodsoul Breastplate
+		[06] = {itemID = 20550, spellID = 24914 }; --Darkrune Breastplate
+		[07] = {itemID = 19693, spellID = 24139 }; --Darksoul Breastplate
+		[08] = {itemID = 22762, spellID = 28461 }; --Ironvine Breastplate
+		[09] = {itemID = 12618, spellID = 16745 }; --Enchanted Thorium Breastplate
 		[10] = {itemID = 12422, spellID = 16663 }; --Imperial Plate Chest
 		[11] = {itemID = 12613, spellID = 16731 }; --Runic Breastplate
 		[12] = {itemID = 12628, spellID = 16667 }; --Demon Forged Breastplate
@@ -277,15 +278,15 @@ AtlasLoot_Data["SmithingCLASSIC"] = {
 		[30] = {itemID = 10421, spellID = 12260 }; --Rough Copper Vest
 	};
 	{ Name = BabbleInventory["Armor"] .. WHITE .. " - Feet";
-		[1] = {itemID = 20039, spellID = 24399 }; --Dark Iron Boots
-		[2] = {itemID = 19048, spellID = 23629 }; --Heavy Timbermaw Boots
-		[3] = {itemID = 12611, spellID = 16665 }; --Runic Plate Boots
-		[4] = {itemID = 12426, spellID = 16657 }; --Imperial Plate Boots
-		[5] = {itemID = 12419, spellID = 16656 }; --Radiant Boots
-		[6] = {itemID = 12409, spellID = 16652 }; --Thorium Boots
-		[7] = {itemID = 7936, spellID = 9979 }; --Ornate Mithril Boots
-		[8] = {itemID = 7933, spellID = 9968 }; --Heavy Mithril Boots
-		[9] = {itemID = 3847, spellID = 3515 }; --Golden Scale Boots
+		[01] = {itemID = 20039, spellID = 24399 }; --Dark Iron Boots
+		[02] = {itemID = 19048, spellID = 23629 }; --Heavy Timbermaw Boots
+		[03] = {itemID = 12611, spellID = 16665 }; --Runic Plate Boots
+		[04] = {itemID = 12426, spellID = 16657 }; --Imperial Plate Boots
+		[05] = {itemID = 12419, spellID = 16656 }; --Radiant Boots
+		[06] = {itemID = 12409, spellID = 16652 }; --Thorium Boots
+		[07] = {itemID = 7936, spellID = 9979 }; --Ornate Mithril Boots
+		[08] = {itemID = 7933, spellID = 9968 }; --Heavy Mithril Boots
+		[09] = {itemID = 3847, spellID = 3515 }; --Golden Scale Boots
 		[10] = {itemID = 3846, spellID = 3513 }; --Polished Steel Boots
 		[11] = {itemID = 7916, spellID = 9818 }; --Barbaric Iron Boots
 		[12] = {itemID = 3484, spellID = 3334 }; --Green Iron Boots
@@ -295,15 +296,15 @@ AtlasLoot_Data["SmithingCLASSIC"] = {
 	};
 	{
 		Name = BabbleInventory["Armor"] .. WHITE .. " - Hands";
-		[1] = {itemID = 19164, spellID = 23637 }; --Dark Iron Gauntlets
-		[2] = {itemID = 22670, spellID = 28243 }; --Icebane Gauntlets
-		[3] = {itemID = 12639, spellID = 16741 }; --Stronghold Gauntlets
-		[4] = {itemID = 19692, spellID = 24138 }; --Bloodsoul Gauntlets
-		[5] = {itemID = 20549, spellID = 24912 }; --Darkrune Gauntlets
-		[6] = {itemID = 19057, spellID = 23633 }; --Gloves of the Dawn
-		[7] = {itemID = 22763, spellID = 28462 }; --Ironvine Gloves
-		[8] = {itemID = 22194, spellID = 27589 }; --Black Grasp of the Destroyer
-		[9] = {itemID = 12632, spellID = 16661 }; --Storm Gauntlets
+		[01] = {itemID = 19164, spellID = 23637 }; --Dark Iron Gauntlets
+		[02] = {itemID = 22670, spellID = 28243 }; --Icebane Gauntlets
+		[03] = {itemID = 12639, spellID = 16741 }; --Stronghold Gauntlets
+		[04] = {itemID = 19692, spellID = 24138 }; --Bloodsoul Gauntlets
+		[05] = {itemID = 20549, spellID = 24912 }; --Darkrune Gauntlets
+		[06] = {itemID = 19057, spellID = 23633 }; --Gloves of the Dawn
+		[07] = {itemID = 22763, spellID = 28462 }; --Ironvine Gloves
+		[08] = {itemID = 22194, spellID = 27589 }; --Black Grasp of the Destroyer
+		[09] = {itemID = 12632, spellID = 16661 }; --Storm Gauntlets
 		[10] = {itemID = 12631, spellID = 16655 }; --Fiery Plate Gauntlets
 		[11] = {itemID = 7938, spellID = 9954 }; --Truesilver Gauntlets
 		[12] = {itemID = 12418, spellID = 16654 }; --Radiant Gloves
@@ -318,15 +319,15 @@ AtlasLoot_Data["SmithingCLASSIC"] = {
 	};
 	{
 		Name = BabbleInventory["Armor"] .. WHITE .. " - Head";
-		[1] = {itemID = 19148, spellID = 23636 }; --Dark Iron Helm
-		[2] = {itemID = 12640, spellID = 16729 }; --Lionheart Helm
-		[3] = {itemID = 20551, spellID = 24913 }; --Darkrune Helm
-		[4] = {itemID = 12620, spellID = 16742 }; --Enchanted Thorium Helm
-		[5] = {itemID = 12636, spellID = 16728 }; --Helm of the Great Chief
-		[6] = {itemID = 12633, spellID = 16724 }; --Whitesoul Helm
-		[7] = {itemID = 12612, spellID = 16726 }; --Runic Plate Helm
-		[8] = {itemID = 12427, spellID = 16658 }; --Imperial Plate Helm
-		[9] = {itemID = 12417, spellID = 16659 }; --Radiant Circlet
+		[01] = {itemID = 19148, spellID = 23636 }; --Dark Iron Helm
+		[02] = {itemID = 12640, spellID = 16729 }; --Lionheart Helm
+		[03] = {itemID = 20551, spellID = 24913 }; --Darkrune Helm
+		[04] = {itemID = 12620, spellID = 16742 }; --Enchanted Thorium Helm
+		[05] = {itemID = 12636, spellID = 16728 }; --Helm of the Great Chief
+		[06] = {itemID = 12633, spellID = 16724 }; --Whitesoul Helm
+		[07] = {itemID = 12612, spellID = 16726 }; --Runic Plate Helm
+		[08] = {itemID = 12427, spellID = 16658 }; --Imperial Plate Helm
+		[09] = {itemID = 12417, spellID = 16659 }; --Radiant Circlet
 		[10] = {itemID = 12410, spellID = 16653 }; --Thorium Helm
 		[11] = {itemID = 11606, spellID = 15293 }; --Dark Iron Mail
 		[12] = {itemID = 7937, spellID = 9980 }; --Ornate Mithril Helm
@@ -340,15 +341,15 @@ AtlasLoot_Data["SmithingCLASSIC"] = {
 	};
 	{
 		Name = BabbleInventory["Armor"] .. WHITE .. " - Legs";
-		[1] = {itemID = 17013, spellID = 20876 }; --Dark Iron Leggings
-		[3] = {itemID = 12414, spellID = 16662 }; --Thorium Leggings
-		[2] = {itemID = 22385, spellID = 27829 }; --Titanic Leggings
-		[4] = {itemID = 19694, spellID = 24140 }; --Darksoul Leggings
-		[5] = {itemID = 12619, spellID = 16744 }; --Enchanted Thorium Leggings
-		[6] = {itemID = 12429, spellID = 16730 }; --Imperial Plate Leggings
-		[7] = {itemID = 12420, spellID = 16725 }; --Radiant Leggings
-		[8] = {itemID = 12614, spellID = 16732 }; --Runic Plate Leggings
-		[9] = {itemID = 30069, spellID = 36122 }; --Earthforged Leggings
+		[01] = {itemID = 17013, spellID = 20876 }; --Dark Iron Leggings
+		[03] = {itemID = 12414, spellID = 16662 }; --Thorium Leggings
+		[02] = {itemID = 22385, spellID = 27829 }; --Titanic Leggings
+		[04] = {itemID = 19694, spellID = 24140 }; --Darksoul Leggings
+		[05] = {itemID = 12619, spellID = 16744 }; --Enchanted Thorium Leggings
+		[06] = {itemID = 12429, spellID = 16730 }; --Imperial Plate Leggings
+		[07] = {itemID = 12420, spellID = 16725 }; --Radiant Leggings
+		[08] = {itemID = 12614, spellID = 16732 }; --Runic Plate Leggings
+		[09] = {itemID = 30069, spellID = 36122 }; --Earthforged Leggings
 		[10] = {itemID = 30070, spellID = 36124 }; --Windforged Leggings
 		[11] = {itemID = 7926, spellID = 9945 }; --Ornate Mithril Pants
 		[12] = {itemID = 7920, spellID = 9931 }; --Mithril Scale Pants
@@ -363,15 +364,15 @@ AtlasLoot_Data["SmithingCLASSIC"] = {
 	};
 	{
 		Name = BabbleInventory["Armor"] .. WHITE .. " - Shoulder";
-		[1] = {itemID = 16988, spellID = 20873 }; --Fiery Chain Shoulders
-		[2] = {itemID = 19691, spellID = 24137 }; --Bloodsoul Shoulders
-		[3] = {itemID = 19695, spellID = 24141 }; --Darksoul Shoulders
-		[4] = {itemID = 12610, spellID = 16664 }; --Runic Plate Shoulders
-		[5] = {itemID = 12625, spellID = 16660 }; --Dawnbringer Shoulders
-		[6] = {itemID = 11605, spellID = 15295 }; --Dark Iron Shoulders
-		[7] = {itemID = 12428, spellID = 16646 }; --Imperial Plate Shoulders
-		[8] = {itemID = 7932, spellID = 9966 }; --Mithril Scale Shoulders
-		[9] = {itemID = 7928, spellID = 9952 }; --Ornate Mithril Shoulder
+		[01] = {itemID = 16988, spellID = 20873 }; --Fiery Chain Shoulders
+		[02] = {itemID = 19691, spellID = 24137 }; --Bloodsoul Shoulders
+		[03] = {itemID = 19695, spellID = 24141 }; --Darksoul Shoulders
+		[04] = {itemID = 12610, spellID = 16664 }; --Runic Plate Shoulders
+		[05] = {itemID = 12625, spellID = 16660 }; --Dawnbringer Shoulders
+		[06] = {itemID = 11605, spellID = 15295 }; --Dark Iron Shoulders
+		[07] = {itemID = 12428, spellID = 16646 }; --Imperial Plate Shoulders
+		[08] = {itemID = 7932, spellID = 9966 }; --Mithril Scale Shoulders
+		[09] = {itemID = 7928, spellID = 9952 }; --Ornate Mithril Shoulder
 		[10] = {itemID = 7918, spellID = 9926 }; --Heavy Mithril Shoulder
 		[11] = {itemID = 3841, spellID = 3505 }; --Golden Scale Shoulders
 		[12] = {itemID = 7913, spellID = 9811 }; --Barbaric Iron Shoulders
@@ -381,42 +382,42 @@ AtlasLoot_Data["SmithingCLASSIC"] = {
 	};
 	{
 		Name = BabbleInventory["Armor"] .. WHITE .. " - Waist";
-		[1] = {itemID = 22197, spellID = 27585 }; --Heavy Obsidian Belt
-		[2] = {itemID = 22764, spellID = 28463 }; --Ironvine Belt
-		[3] = {itemID = 22195, spellID = 27588 }; --Light Obsidian Belt
-		[4] = {itemID = 16989, spellID = 20872 }; --Fiery Chain Girdle
-		[5] = {itemID = 19051, spellID = 23632 }; --Girdle of the Dawn
-		[6] = {itemID = 19043, spellID = 23628 }; --Heavy Timbermaw Belt
-		[7] = {itemID = 12424, spellID = 16647 }; --Imperial Plate Belt
-		[8] = {itemID = 12416, spellID = 16645 }; --Radiant Belt
-		[9] = {itemID = 12406, spellID = 16643 }; --Thorium Belt
+		[01] = {itemID = 22197, spellID = 27585 }; --Heavy Obsidian Belt
+		[02] = {itemID = 22764, spellID = 28463 }; --Ironvine Belt
+		[03] = {itemID = 22195, spellID = 27588 }; --Light Obsidian Belt
+		[04] = {itemID = 16989, spellID = 20872 }; --Fiery Chain Girdle
+		[05] = {itemID = 19051, spellID = 23632 }; --Girdle of the Dawn
+		[06] = {itemID = 19043, spellID = 23628 }; --Heavy Timbermaw Belt
+		[07] = {itemID = 12424, spellID = 16647 }; --Imperial Plate Belt
+		[08] = {itemID = 12416, spellID = 16645 }; --Radiant Belt
+		[09] = {itemID = 12406, spellID = 16643 }; --Thorium Belt
 		[10] = {itemID = 2857, spellID = 2666 }; --Runed Copper Belt
 		[11] = {itemID = 2851, spellID = 2661 }; --Copper Chain Belt
 	};
 	{
 		Name = BabbleInventory["Armor"] .. WHITE .. " - Wrist";
-		[1] = {itemID = 22671, spellID = 28244 }; --Icebane Bracers
-		[2] = {itemID = 17014, spellID = 20874 }; --Dark Iron Bracers
-		[3] = {itemID = 12425, spellID = 16649 }; --Imperial Plate Bracers
-		[4] = {itemID = 12408, spellID = 16644 }; --Thorium Bracers
-		[5] = {itemID = 7924, spellID = 9937 }; --Mithril Scale Bracers
-		[6] = {itemID = 6040, spellID = 7223 }; --Golden Scale Bracers
-		[7] = {itemID = 3835, spellID = 3501 }; --Green Iron Bracers
-		[8] = {itemID = 2868, spellID = 2672 }; --Patterned Bronze Bracers
-		[9] = {itemID = 2854, spellID = 2664 }; --Runed Copper Bracers
+		[01] = {itemID = 22671, spellID = 28244 }; --Icebane Bracers
+		[02] = {itemID = 17014, spellID = 20874 }; --Dark Iron Bracers
+		[03] = {itemID = 12425, spellID = 16649 }; --Imperial Plate Bracers
+		[04] = {itemID = 12408, spellID = 16644 }; --Thorium Bracers
+		[05] = {itemID = 7924, spellID = 9937 }; --Mithril Scale Bracers
+		[06] = {itemID = 6040, spellID = 7223 }; --Golden Scale Bracers
+		[07] = {itemID = 3835, spellID = 3501 }; --Green Iron Bracers
+		[08] = {itemID = 2868, spellID = 2672 }; --Patterned Bronze Bracers
+		[09] = {itemID = 2854, spellID = 2664 }; --Runed Copper Bracers
 		[10] = {itemID = 2853, spellID = 2663 }; --Copper Bracers
 	};
 	{
 		Name = "Weapon " .. WHITE .. "- One Handed";
-		[1] = {itemID = 19166, spellID = 23638 }; --Black Amnesty
-		[2] = {itemID = 19168, spellID = 23652 }; --Blackguard
-		[3] = {itemID = 19170, spellID = 23650 }; --Ebon Hand
-		[4] = {itemID = 22384, spellID = 27830 }; --Persuader
-		[5] = {itemID = 22383, spellID = 27832 }; --Sageblade
-		[6] = {itemID = 12798, spellID = 16991 }; --Annihilator
-		[7] = {itemID = 17016, spellID = 20897 }; --Dark Iron Destroyer
-		[8] = {itemID = 17015, spellID = 20890 }; --Dark Iron Reaver
-		[9] = {itemID = 12797, spellID = 16992 }; --Frostguard
+		[01] = {itemID = 19166, spellID = 23638 }; --Black Amnesty
+		[02] = {itemID = 19168, spellID = 23652 }; --Blackguard
+		[03] = {itemID = 19170, spellID = 23650 }; --Ebon Hand
+		[04] = {itemID = 22384, spellID = 27830 }; --Persuader
+		[05] = {itemID = 22383, spellID = 27832 }; --Sageblade
+		[06] = {itemID = 12798, spellID = 16991 }; --Annihilator
+		[07] = {itemID = 17016, spellID = 20897 }; --Dark Iron Destroyer
+		[08] = {itemID = 17015, spellID = 20890 }; --Dark Iron Reaver
+		[09] = {itemID = 12797, spellID = 16992 }; --Frostguard
 		[10] = {itemID = 12783, spellID = 16995 }; --Heartseeker
 		[11] = {itemID = 12794, spellID = 16993 }; --Masterwork Stormhammer
 		[12] = {itemID = 12781, spellID = 16983 }; --Serenity
@@ -441,15 +442,15 @@ AtlasLoot_Data["SmithingCLASSIC"] = {
 	};
 	{
 		Name = "Weapon " .. WHITE .. "- One Handed";
-		[1] = {itemID = 12259, spellID = 15972 }; --Glinting Steel Dagger
-		[2] = {itemID = 3850, spellID = 3493 }; --Jade Serpentblade
-		[3] = {itemID = 3849, spellID = 3492 }; --Hardened Iron Shortsword
-		[4] = {itemID = 3492, spellID = 3297 }; --Mighty Iron Hammer
-		[5] = {itemID = 5541, spellID = 6518 }; --Iridescent Hammer
-		[6] = {itemID = 3491, spellID = 3296 }; --Heavy Bronze Mace
-		[7] = {itemID = 3490, spellID = 3295 }; --Deadly Bronze Poniard
-		[8] = {itemID = 5540, spellID = 6517 }; --Pearl-handled Dagger
-		[9] = {itemID = 3848, spellID = 3491 }; --Big Bronze Knife
+		[01] = {itemID = 12259, spellID = 15972 }; --Glinting Steel Dagger
+		[02] = {itemID = 3850, spellID = 3493 }; --Jade Serpentblade
+		[03] = {itemID = 3849, spellID = 3492 }; --Hardened Iron Shortsword
+		[04] = {itemID = 3492, spellID = 3297 }; --Mighty Iron Hammer
+		[05] = {itemID = 5541, spellID = 6518 }; --Iridescent Hammer
+		[06] = {itemID = 3491, spellID = 3296 }; --Heavy Bronze Mace
+		[07] = {itemID = 3490, spellID = 3295 }; --Deadly Bronze Poniard
+		[08] = {itemID = 5540, spellID = 6517 }; --Pearl-handled Dagger
+		[09] = {itemID = 3848, spellID = 3491 }; --Big Bronze Knife
 		[10] = {itemID = 3489, spellID = 3294 }; --Thick War Axe
 		[11] = {itemID = 33791, spellID = 43549 }; --Heavy Copper Longsword
 		[12] = {itemID = 2850, spellID = 2742 }; --Bronze Shortsword
@@ -460,15 +461,15 @@ AtlasLoot_Data["SmithingCLASSIC"] = {
 	};
 	{
 		Name = "Weapon " .. WHITE .. "- Two Handed";
-		[1] = {itemID = 19167, spellID = 23639 }; --Blackfury
-		[2] = {itemID = 19169, spellID = 23653 }; --Nightfall
-		[3] = {itemID = 17193, spellID = 21161 }; --Sulfuron Hammer
-		[4] = {itemID = 12790, spellID = 16990 }; --Arcanite Champion
-		[5] = {itemID = 12784, spellID = 16994 }; --Arcanite Reaper
-		[6] = {itemID = 12796, spellID = 16988 }; --Hammer of the Titans
-		[7] = {itemID = 12782, spellID = 16985 }; --Corruption
-		[8] = {itemID = 12776, spellID = 16973 }; --Enchanted Battlehammer
-		[9] = {itemID = 11607, spellID = 15294 }; --Dark Iron Sunderer
+		[01] = {itemID = 19167, spellID = 23639 }; --Blackfury
+		[02] = {itemID = 19169, spellID = 23653 }; --Nightfall
+		[03] = {itemID = 17193, spellID = 21161 }; --Sulfuron Hammer
+		[04] = {itemID = 12790, spellID = 16990 }; --Arcanite Champion
+		[05] = {itemID = 12784, spellID = 16994 }; --Arcanite Reaper
+		[06] = {itemID = 12796, spellID = 16988 }; --Hammer of the Titans
+		[07] = {itemID = 12782, spellID = 16985 }; --Corruption
+		[08] = {itemID = 12776, spellID = 16973 }; --Enchanted Battlehammer
+		[09] = {itemID = 11607, spellID = 15294 }; --Dark Iron Sunderer
 		[10] = {itemID = 11608, spellID = 15292 }; --Dark Iron Pulverizer
 		[11] = {itemID = 7960, spellID = 10015 }; --Truesilver Champion
 		[12] = {itemID = 7959, spellID = 10011 }; --Blight
@@ -492,25 +493,25 @@ AtlasLoot_Data["SmithingCLASSIC"] = {
 	};
 	{
 		Name = "Weapon " .. WHITE .." - Thrown";
-		[1] = {itemID = 29201, spellID = 34979 }; --Thick Bronze Darts
-		[2] = {itemID = 29203, spellID = 34982 }; --Enchanted Thorium Blades
-		[3] = {itemID = 29202, spellID = 34981 }; --Whirling Steel Axes
+		[01] = {itemID = 29201, spellID = 34979 }; --Thick Bronze Darts
+		[02] = {itemID = 29203, spellID = 34982 }; --Enchanted Thorium Blades
+		[03] = {itemID = 29202, spellID = 34981 }; --Whirling Steel Axes
 	};
 	{
 		Name = "Shield";
-		[1] = {itemID = 22198, spellID = 27586 }; --Jagged Obsidian Shield
+		[01] = {itemID = 22198, spellID = 27586 }; --Jagged Obsidian Shield
 	};
 	{
 		Name = AL["Item Enhancements"];
-		[1] = {itemID = 12404, spellID = 16641 }; --Dense Sharpening Stone
-		[2] = {itemID = 12643, spellID = 16640 }; --Dense Weightstone
-		[3] = {itemID = 7964, spellID = 9918 }; --Solid Sharpening Stone
-		[4] = {itemID = 7965, spellID = 9921 }; --Solid Weightstone
-		[5] = {itemID = 6041, spellID = 7224 }; --Steel Weapon Chain
-		[6] = {itemID = 6043, spellID = 7222 }; --Iron Counterweight
-		[7] = {itemID = 6042, spellID = 7221 }; --Iron Shield Spike
-		[8] = {itemID = 2871, spellID = 2674 }; --Heavy Sharpening Stone
-		[9] = {itemID = 3241, spellID = 3117 }; --Heavy Weightstone
+		[01] = {itemID = 12404, spellID = 16641 }; --Dense Sharpening Stone
+		[02] = {itemID = 12643, spellID = 16640 }; --Dense Weightstone
+		[03] = {itemID = 7964, spellID = 9918 }; --Solid Sharpening Stone
+		[04] = {itemID = 7965, spellID = 9921 }; --Solid Weightstone
+		[05] = {itemID = 6041, spellID = 7224 }; --Steel Weapon Chain
+		[06] = {itemID = 6043, spellID = 7222 }; --Iron Counterweight
+		[07] = {itemID = 6042, spellID = 7221 }; --Iron Shield Spike
+		[08] = {itemID = 2871, spellID = 2674 }; --Heavy Sharpening Stone
+		[09] = {itemID = 3241, spellID = 3117 }; --Heavy Weightstone
 		[10] = {itemID = 2863, spellID = 2665 }; --Coarse Sharpening Stone
 		[11] = {itemID = 3240, spellID = 3116 }; --Coarse Weightstone
 		[12] = {itemID = 2862, spellID = 2660 }; --Rough Sharpening Stone
@@ -518,50 +519,44 @@ AtlasLoot_Data["SmithingCLASSIC"] = {
 	};
 	{
 		Name = AL["Miscellaneous"];
-		[1] = {itemID = 43853, spellID = 59406 }; --Titanium Skeleton Key
-		[2] = {itemID = 43854, spellID = 59405 }; --Cobalt Skeleton Key
-		[3] = {itemID = 15872, spellID = 19669 }; --Arcanite Skeleton Key
-		[4] = {itemID = 15871, spellID = 19668 }; --Truesilver Skeleton Key
-		[5] = {itemID = 15870, spellID = 19667 }; --Golden Skeleton Key
-		[6] = {itemID = 15869, spellID = 19666 }; --Silver Skeleton Key
-		[7] = {itemID = 41745, spellID = 55732 }; --Titanium Rod
-		[8] = {itemID = 25845, spellID = 32657 }; --Eternium Rod", "=ds="..AL["Skill Required:"].." 360
-		[9] = {itemID = 25844, spellID = 32656 }; --Adamantite Rod", "=ds="..AL["Skill Required:"].." 350
-		[10] = {itemID = 25843, spellID = 32655 }; --Fel Iron Rod
-		[11] = {itemID = 16206, spellID = 20201 }; --Arcanite Rod
-		[12] = {itemID = 12644, spellID = 16639 }; --Dense Grinding Stone
-		[13] = {itemID = 9060, spellID = 11454 }; --Inlaid Mithril Cylinder
-		[14] = {itemID = 11144, spellID = 14380 }; --Truesilver Rod
-		[15] = {itemID = 7966, spellID = 9920 }; --Solid Grinding Stone
-		[16] = {itemID = 11128, spellID = 14379 }; --Golden Rod
-		[17] = {itemID = 7071, spellID = 8768 }; --Iron Buckle
-		[18] = {itemID = 3486, spellID = 3337 }; --Heavy Grinding Stone
-		[19] = {itemID = 6338, spellID = 7818 }; --Silver Rod
-		[20] = {itemID = 3478, spellID = 3326 }; --Coarse Grinding Stone
-		[21] = {itemID = 3470, spellID = 3320 }; --Rough Grinding Stone
+		[01] = {itemID = 15872, spellID = 19669 }; --Arcanite Skeleton Key
+		[02] = {itemID = 15871, spellID = 19668 }; --Truesilver Skeleton Key
+		[03] = {itemID = 15870, spellID = 19667 }; --Golden Skeleton Key
+		[04] = {itemID = 15869, spellID = 19666 }; --Silver Skeleton Key
+		[05] = {itemID = 16206, spellID = 20201 }; --Arcanite Rod
+		[06] = {itemID = 12644, spellID = 16639 }; --Dense Grinding Stone
+		[07] = {itemID = 9060, spellID = 11454 }; --Inlaid Mithril Cylinder
+		[08] = {itemID = 11144, spellID = 14380 }; --Truesilver Rod
+		[09] = {itemID = 7966, spellID = 9920 }; --Solid Grinding Stone
+		[10] = {itemID = 11128, spellID = 14379 }; --Golden Rod
+		[11] = {itemID = 7071, spellID = 8768 }; --Iron Buckle
+		[12] = {itemID = 3486, spellID = 3337 }; --Heavy Grinding Stone
+		[13] = {itemID = 6338, spellID = 7818 }; --Silver Rod
+		[14] = {itemID = 3478, spellID = 3326 }; --Coarse Grinding Stone
+		[15] = {itemID = 3470, spellID = 3320 }; --Rough Grinding Stone
 	};
 	{
 		Name = ARMORSMITH;
-		[1] = {itemID = 30069, spellID = 36122 }; --Earthforged Leggings
-		[2] = {itemID = 30070, spellID = 36124 }; --Windforged Leggings
+		[01] = {itemID = 30069, spellID = 36122 }; --Earthforged Leggings
+		[02] = {itemID = 30070, spellID = 36124 }; --Windforged Leggings
 	};
 	{
 		Name = WEAPONSMITH;
-		[1] = {itemID = 30071, spellID = 36125 }; --Light Earthforged Blade
-		[2] = {itemID = 30073, spellID = 36128 }; --Light Emberforged Hammer
-		[3] = {itemID = 30072, spellID = 36126 }; --Light Skyforged Axe
+		[01] = {itemID = 30071, spellID = 36125 }; --Light Earthforged Blade
+		[02] = {itemID = 30073, spellID = 36128 }; --Light Emberforged Hammer
+		[03] = {itemID = 30072, spellID = 36126 }; --Light Skyforged Axe
 	};
 	{
 		Name = AL["High Risk"];
-		[1] = { name = AL["Rare"], icon = "INV_Box_01"},
-		[2] = {itemID = 967173, spellID = 968019 }; --Sturdy Living Belt Buckle
-		[3] = {itemID = 967176, spellID = 968022 }; --Sturdy Deflecting Belt Buckle
-		[4] = {itemID = 967179, spellID = 968025 }; --Sturdy Roguish Belt Buckle
-		[5] = {itemID = 967182, spellID = 968028 }; --Sturdy Dancing Belt Buckle
-		[6] = {itemID = 967185, spellID = 968031 }; --Sturdy Magus Belt Buckle
-		[7] = {itemID = 967188, spellID = 968034 }; --Sturdy Cleric's Belt Buckle
-		[8] = {itemID = 967191, spellID = 968037 }; --Sturdy Warlord's Belt Buckle
-		[9] = {itemID = 967194, spellID = 968040 }; --Sturdy Gaurdian's Belt Buckle
+		[01] = { name = AL["Rare"], icon = "INV_Box_01"},
+		[02] = {itemID = 967173, spellID = 968019 }; --Sturdy Living Belt Buckle
+		[03] = {itemID = 967176, spellID = 968022 }; --Sturdy Deflecting Belt Buckle
+		[04] = {itemID = 967179, spellID = 968025 }; --Sturdy Roguish Belt Buckle
+		[05] = {itemID = 967182, spellID = 968028 }; --Sturdy Dancing Belt Buckle
+		[06] = {itemID = 967185, spellID = 968031 }; --Sturdy Magus Belt Buckle
+		[07] = {itemID = 967188, spellID = 968034 }; --Sturdy Cleric's Belt Buckle
+		[08] = {itemID = 967191, spellID = 968037 }; --Sturdy Warlord's Belt Buckle
+		[09] = {itemID = 967194, spellID = 968040 }; --Sturdy Gaurdian's Belt Buckle
 		[10] = {itemID = 967681, spellID = 968481 }; --Homicite Key
 		[16] = { name = AL["Epic"], icon = "INV_Box_01"},
 		[17] = {itemID = 967174, spellID = 968020 }; --Mastercraft Living Belt Buckle
@@ -584,16 +579,16 @@ AtlasLoot_Data["CookingCLASSIC"] = {
 	Name = COOKING;
 	Type = "ClassicCrafting";
 	{
-		Name = "Page 1";
-		[1] = {itemID = 21023, spellID = 25659 }; --Dirge's Kickin' Chimaerok Chops
-		[2] = {itemID = 100626, spellID = 966455 }; --Azerothian Schmorgus Boards
-		[3] = {itemID = 100609, spellID = 966436 }; --Chilled Lava Eels
-		[4] = {itemID = 100608, spellID = 966435 }; --Chillwind Flank Steaks
-		[5] = {itemID = 100607, spellID = 966434 }; --Hippogryph Steaks
-		[6] = {itemID = 100606, spellID = 966433 }; --Steamed Makrinni Claws
-		[7] = {itemID = 100605, spellID = 966432 }; --Rubbed Ravasaur Ribss
-		[8] = {itemID = 100604, spellID = 966431 }; --Hearty Stegodon Stews
-		[9] = {itemID = 100603, spellID = 966430 }; --Crispy Pterrordax Wings
+		Name = AL["Page 1"];
+		[01] = {itemID = 21023, spellID = 25659 }; --Dirge's Kickin' Chimaerok Chops
+		[02] = {itemID = 100626, spellID = 966455 }; --Azerothian Schmorgus Boards
+		[03] = {itemID = 100609, spellID = 966436 }; --Chilled Lava Eels
+		[04] = {itemID = 100608, spellID = 966435 }; --Chillwind Flank Steaks
+		[05] = {itemID = 100607, spellID = 966434 }; --Hippogryph Steaks
+		[06] = {itemID = 100606, spellID = 966433 }; --Steamed Makrinni Claws
+		[07] = {itemID = 100605, spellID = 966432 }; --Rubbed Ravasaur Ribss
+		[08] = {itemID = 100604, spellID = 966431 }; --Hearty Stegodon Stews
+		[09] = {itemID = 100603, spellID = 966430 }; --Crispy Pterrordax Wings
 		[10] = {itemID = 100602, spellID = 966429 }; --Spicy Dino Jerkys
 		[11] = {itemID = 100601, spellID = 966428 }; --Dirge's Nevermelt Ice Creams
 		[12] = {itemID = 100599, spellID = 966427 }; --Silithid Snacks
@@ -602,16 +597,16 @@ AtlasLoot_Data["CookingCLASSIC"] = {
 		[15] = {itemID = 100583, spellID = 966398 }; --Seared Cunning Carps
 	};
 	{
-		Name = "Page 2";
-		[1] = {itemID = 20452, spellID = 24801 }; --Smoked Desert Dumplings
-		[2] = {itemID = 13935, spellID = 18247 }; --Baked Salmon
-		[3] = {itemID = 13933, spellID = 18245 }; --Lobster Stew
-		[4] = {itemID = 13934, spellID = 18246 }; --Mightfish Steak
-		[5] = {itemID = 18254, spellID = 22761 }; --Runn Tum Tuber Surprise
-		[6] = {itemID = 35563, spellID = 46684 }; --Charred Bear Kabobs
-		[7] = {itemID = 35565, spellID = 46688 }; --Juicy Bear Burger
-		[8] = {itemID = 13931, spellID = 18243 }; --Nightfin Soup
-		[9] = {itemID = 13932, spellID = 18244 }; --Poached Sunscale Salmon
+		Name = AL["Page 2"];
+		[01] = {itemID = 20452, spellID = 24801 }; --Smoked Desert Dumplings
+		[02] = {itemID = 13935, spellID = 18247 }; --Baked Salmon
+		[03] = {itemID = 13933, spellID = 18245 }; --Lobster Stew
+		[04] = {itemID = 13934, spellID = 18246 }; --Mightfish Steak
+		[05] = {itemID = 18254, spellID = 22761 }; --Runn Tum Tuber Surprise
+		[06] = {itemID = 35563, spellID = 46684 }; --Charred Bear Kabobs
+		[07] = {itemID = 35565, spellID = 46688 }; --Juicy Bear Burger
+		[08] = {itemID = 13931, spellID = 18243 }; --Nightfin Soup
+		[09] = {itemID = 13932, spellID = 18244 }; --Poached Sunscale Salmon
 		[10] = {itemID = 13928, spellID = 18240 }; --Grilled Squid
 		[11] = {itemID = 13929, spellID = 18242 }; --Hot Smoked Bass
 		[12] = {itemID = 33004, spellID = 64054 }; --Clamlette Magnifique
@@ -632,16 +627,16 @@ AtlasLoot_Data["CookingCLASSIC"] = {
 		[27] = {itemID = 13851, spellID = 15856 }; --Hot Wolf Ribs
 	};
 	{
-		Name = "Page 3";
-		[1] = {itemID = 12212, spellID = 15861 }; --Jungle Stew
-		[2] = {itemID = 8364, spellID = 20916 }; --Mithril Head Trout
-		[3] = {itemID = 12214, spellID = 15865 }; --Mystery Stew
-		[4] = {itemID = 12210, spellID = 15855 }; --Roast Raptor
-		[5] = {itemID = 4594, spellID = 7828 }; --Rockscale Cod
-		[6] = {itemID = 21217, spellID = 25954 }; --Sagefish Delight
-		[7] = {itemID = 3729, spellID = 3400 }; --Soothing Turtle Bisque
-		[8] = { itemID = 20074, spellID = 24418 }; --Heavy Crocolisk Stew
-		[9] = {itemID = 3728, spellID = 3399 }; --Tasty Lion Steak
+		Name = AL["Page 3"];
+		[01] = {itemID = 12212, spellID = 15861 }; --Jungle Stew
+		[02] = {itemID = 8364, spellID = 20916 }; --Mithril Head Trout
+		[03] = {itemID = 12214, spellID = 15865 }; --Mystery Stew
+		[04] = {itemID = 12210, spellID = 15855 }; --Roast Raptor
+		[05] = {itemID = 4594, spellID = 7828 }; --Rockscale Cod
+		[06] = {itemID = 21217, spellID = 25954 }; --Sagefish Delight
+		[07] = {itemID = 3729, spellID = 3400 }; --Soothing Turtle Bisque
+		[08] = { itemID = 20074, spellID = 24418 }; --Heavy Crocolisk Stew
+		[09] = {itemID = 3728, spellID = 3399 }; --Tasty Lion Steak
 		[10] = {itemID = 3665, spellID = 3376 }; --Curiously Tasty Omelet
 		[11] = {itemID = 5527, spellID = 6500 }; --Goblin Deviled Clams
 		[12] = {itemID = 3727, spellID = 3398 }; --Hot Lion Chops
@@ -665,16 +660,16 @@ AtlasLoot_Data["CookingCLASSIC"] = {
 		[30] = {itemID = 6890, spellID = 8607 }; --Smoked Bear Meat
 	};
 	{
-		Name = "Page 4";
-		[1] = {itemID = 2687, spellID = 2546 }; --Dry Pork Ribs
-		[2] = {itemID = 21072, spellID = 25704 }; --Smoked Sagefish
-		[3] = {itemID = 2683, spellID = 2544 }; --Crab Cake
-		[4] = {itemID = 44837, spellID = 62050 }; --Cornbread Stuffing
-		[5] = {itemID = 733, spellID = 2543 }; --Westfall Stew
-		[6] = {itemID = 3220, spellID = 3371 }; --Blood Sausage
-		[7] = {itemID = 22645, spellID = 28267 }; --Crunchy Spider Surprise
-		[8] = {itemID = 7676, spellID = 9513 }; --Thistle Tea
-		[9] = {itemID = 27636, spellID = 33278 }; --Bat Bites
+		Name = AL["Page 4"];
+		[01] = {itemID = 2687, spellID = 2546 }; --Dry Pork Ribs
+		[02] = {itemID = 21072, spellID = 25704 }; --Smoked Sagefish
+		[03] = {itemID = 2683, spellID = 2544 }; --Crab Cake
+		[04] = {itemID = 44837, spellID = 62050 }; --Cornbread Stuffing
+		[05] = {itemID = 733, spellID = 2543 }; --Westfall Stew
+		[06] = {itemID = 3220, spellID = 3371 }; --Blood Sausage
+		[07] = {itemID = 22645, spellID = 28267 }; --Crunchy Spider Surprise
+		[08] = {itemID = 7676, spellID = 9513 }; --Thistle Tea
+		[09] = {itemID = 27636, spellID = 33278 }; --Bat Bites
 		[10] = {itemID = 5525, spellID = 6499 }; --Boiled Clams
 		[11] = {itemID = 2684, spellID = 2541 }; --Coyote Steak
 		[12] = {itemID = 5476, spellID = 6415 }; --Fillet of Frenzy
@@ -698,28 +693,28 @@ AtlasLoot_Data["CookingCLASSIC"] = {
 		[30] = {itemID = 27635, spellID = 33276 }; --Lynx Steak
 	};
 	{
-		Name = "Page 5";
-		[1] = {itemID = 12224, spellID = 15935 }; --Crispy Bat Wing
-		[2] = {itemID = 33924, spellID = 43779 }; --Delicious Chocolate Cake
-		[3] = {itemID = 17197, spellID = 21143 }; --Gingerbread Cookie
-		[4] = {itemID = 6888, spellID = 8604 }; --Herb Baked Egg
-		[5] = {itemID = 2681, spellID = 2540 }; --Roasted Boar Meat
-		[6] = {itemID = 24105, spellID = 33277 }; --Roasted Moongraze Tenderloin
-		[7] = {itemID = 787, spellID = 7752 }; --Slitherskin Mackerel
-		[8] = {itemID = 30816, spellID = 37836 }; --Spice Bread
-		[9] = {itemID = 46691, spellID = 65454 }; --Bread of the Dead
+		Name = AL["Page 5"];
+		[01] = {itemID = 12224, spellID = 15935 }; --Crispy Bat Wing
+		[02] = {itemID = 33924, spellID = 43779 }; --Delicious Chocolate Cake
+		[03] = {itemID = 17197, spellID = 21143 }; --Gingerbread Cookie
+		[04] = {itemID = 6888, spellID = 8604 }; --Herb Baked Egg
+		[05] = {itemID = 2681, spellID = 2540 }; --Roasted Boar Meat
+		[06] = {itemID = 24105, spellID = 33277 }; --Roasted Moongraze Tenderloin
+		[07] = {itemID = 787, spellID = 7752 }; --Slitherskin Mackerel
+		[08] = {itemID = 30816, spellID = 37836 }; --Spice Bread
+		[09] = {itemID = 46691, spellID = 65454 }; --Bread of the Dead
 	};
 	{
 		Name = AL["High Risk"].." - Page 1",
-		[1] = { name = AL["Rare"], icon = "INV_Box_01"},
-		[2] = {itemID = 967510, spellID = 968280 }; --Animated Soup for the Soul
-		[3] = {itemID = 967513, spellID = 968283 }; --Volcanic Sandwich
-		[4] = {itemID = 967516, spellID = 968286 }; --Winter Wontons
-		[5] = {itemID = 967519, spellID = 968289 }; --Storm Steak
-		[6] = {itemID = 967522, spellID = 968292 }; --Void Touched Stew
-		[7] = {itemID = 967525, spellID = 968295 }; --Spicy Vulture Steak
-		[8] = {itemID = 967528, spellID = 968298 }; --Wizard Wontons
-		[9] = {itemID = 967531, spellID = 968301 }; --Jurassic Burger
+		[01] = { name = AL["Rare"], icon = "INV_Box_01"},
+		[02] = {itemID = 967510, spellID = 968280 }; --Animated Soup for the Soul
+		[03] = {itemID = 967513, spellID = 968283 }; --Volcanic Sandwich
+		[04] = {itemID = 967516, spellID = 968286 }; --Winter Wontons
+		[05] = {itemID = 967519, spellID = 968289 }; --Storm Steak
+		[06] = {itemID = 967522, spellID = 968292 }; --Void Touched Stew
+		[07] = {itemID = 967525, spellID = 968295 }; --Spicy Vulture Steak
+		[08] = {itemID = 967528, spellID = 968298 }; --Wizard Wontons
+		[09] = {itemID = 967531, spellID = 968301 }; --Jurassic Burger
 		[10] = {itemID = 967534, spellID = 968304 }; --Rough-alo wings
 		[11] = {itemID = 967537, spellID = 968307 }; --The Whooper Sandwich
 		[12] = {itemID = 967540, spellID = 968310 }; --Vulture a la King
@@ -744,15 +739,15 @@ AtlasLoot_Data["CookingCLASSIC"] = {
 	};
 	{
 		Name = AL["High Risk"].." - Page 2",
-		[1] = { name = AL["Rare"], icon = "INV_Box_01"},
-		[2] = {itemID = 967600, spellID = 968370 }; --Subtle Sandwich
-		[3] = {itemID = 967603, spellID = 968373 }; --Subtle Wontons
-		[4] = {itemID = 967606, spellID = 968376 }; --Subtle Sulferous Soup
-		[5] = {itemID = 967609, spellID = 968379 }; --Strongman Stew
-		[6] = {itemID = 967612, spellID = 968382 }; --Mysterious Void Roast
-		[7] = {itemID = 967615, spellID = 968385 }; --Fire Charred Roast
-		[8] = {itemID = 967618, spellID = 968388 }; --Storm Fried Roast
-		[9] = {itemID = 967621, spellID = 968391 }; --Winter Roast
+		[01] = { name = AL["Rare"], icon = "INV_Box_01"},
+		[02] = {itemID = 967600, spellID = 968370 }; --Subtle Sandwich
+		[03] = {itemID = 967603, spellID = 968373 }; --Subtle Wontons
+		[04] = {itemID = 967606, spellID = 968376 }; --Subtle Sulferous Soup
+		[05] = {itemID = 967609, spellID = 968379 }; --Strongman Stew
+		[06] = {itemID = 967612, spellID = 968382 }; --Mysterious Void Roast
+		[07] = {itemID = 967615, spellID = 968385 }; --Fire Charred Roast
+		[08] = {itemID = 967618, spellID = 968388 }; --Storm Fried Roast
+		[09] = {itemID = 967621, spellID = 968391 }; --Winter Roast
 		[10] = {itemID = 967624, spellID = 968394 }; --Blackened Roast
 		[11] = {itemID = 967627, spellID = 968397 }; --Dino Delight
 		[12] = {itemID = 967630, spellID = 968400 }; --Slick-fil-A Sandwich
@@ -775,15 +770,15 @@ AtlasLoot_Data["CookingCLASSIC"] = {
 	};
 	{
 		Name = AL["High Risk"].." - Page 3",
-		[1] = { name = AL["Rare"], icon = "INV_Box_01"},
-		[2] = {itemID = 967555, spellID = 968325 }; --Master Wontons
-		[3] = {itemID = 967558, spellID = 968328 }; --Big Whack Sandwich
-		[4] = {itemID = 967561, spellID = 968331 }; --Warping Wontons
-		[5] = {itemID = 967564, spellID = 968334 }; --Duck Stew
-		[6] = {itemID = 967567, spellID = 968337 }; --Mountainman Stew
-		[7] = {itemID = 967570, spellID = 968340 }; --Scorched Stew
-		[8] = {itemID = 967573, spellID = 968343 }; --Vulcan Wontons
-		[9] = {itemID = 967576, spellID = 968346 }; --Jurassic Soup
+		[01] = { name = AL["Rare"], icon = "INV_Box_01"},
+		[02] = {itemID = 967555, spellID = 968325 }; --Master Wontons
+		[03] = {itemID = 967558, spellID = 968328 }; --Big Whack Sandwich
+		[04] = {itemID = 967561, spellID = 968331 }; --Warping Wontons
+		[05] = {itemID = 967564, spellID = 968334 }; --Duck Stew
+		[06] = {itemID = 967567, spellID = 968337 }; --Mountainman Stew
+		[07] = {itemID = 967570, spellID = 968340 }; --Scorched Stew
+		[08] = {itemID = 967573, spellID = 968343 }; --Vulcan Wontons
+		[09] = {itemID = 967576, spellID = 968346 }; --Jurassic Soup
 		[10] = {itemID = 967579, spellID = 968349 }; --Heightened Wontons
 		[11] = {itemID = 967582, spellID = 968352 }; --Hearty Spirit Soup
 		[12] = {itemID = 967585, spellID = 968355 }; --Jurassic Steak
@@ -808,7 +803,7 @@ AtlasLoot_Data["CookingCLASSIC"] = {
 	};
 	{
 		Name = AL["High Risk"].." - "..AL["Miscellaneous"],
-		[1] = {itemID = 967704, spellID = 968647 }; --Alluring Bait
+		[01] = {itemID = 967704, spellID = 968647 }; --Alluring Bait
 		[16] = {itemID = 967705, spellID = 968648 }; --Irresistible Bait
 	};
 };
@@ -823,12 +818,12 @@ AtlasLoot_Data["EnchantingCLASSIC"] = {
 	Type = "ClassicCrafting";
 	{
 		Name = AL["Enchant Boots"];
-		[1] = {spellID = 20023, icon = "Spell_Holy_GreaterHeal" }; --Enchant Boots - Greater Agility
-		[2] = {spellID = 20024, icon = "Spell_Holy_GreaterHeal" }; --Enchant Boots - Spirit
-		[3] = {spellID = 20020, icon = "Spell_Holy_GreaterHeal" }; --Enchant Boots - Greater Stamina
-		[4] = {spellID = 63746, icon = "Spell_Holy_GreaterHeal" }; --Enchant Boots - Lesser Accuracy
-		[5] = {spellID = 13935, icon = "Spell_Holy_GreaterHeal" }; --Enchant Boots - Agility
-		[6] = {spellID = 13890, icon = "Spell_Holy_GreaterHeal" }; --Enchant Boots - Minor Speed
+		[01] = {spellID = 20023, icon = "Spell_Holy_GreaterHeal" }; --Enchant Boots - Greater Agility
+		[02] = {spellID = 20024, icon = "Spell_Holy_GreaterHeal" }; --Enchant Boots - Spirit
+		[03] = {spellID = 20020, icon = "Spell_Holy_GreaterHeal" }; --Enchant Boots - Greater Stamina
+		[04] = {spellID = 63746, icon = "Spell_Holy_GreaterHeal" }; --Enchant Boots - Lesser Accuracy
+		[05] = {spellID = 13935, icon = "Spell_Holy_GreaterHeal" }; --Enchant Boots - Agility
+		[06] = {spellID = 13890, icon = "Spell_Holy_GreaterHeal" }; --Enchant Boots - Minor Speed
 		[16] = {spellID = 13836, icon = "Spell_Holy_GreaterHeal" }; --Enchant Boots - Stamina
 		[17] = {spellID = 13687, icon = "Spell_Holy_GreaterHeal" }; --Enchant Boots - Lesser Spirit
 		[18] = {spellID = 13644, icon = "Spell_Holy_GreaterHeal" }; --Enchant Boots - Lesser Stamina
@@ -838,15 +833,15 @@ AtlasLoot_Data["EnchantingCLASSIC"] = {
 	};
 	{
 		Name = AL["Enchant Bracer"];
-		[1] = {spellID = 23802, icon = "Spell_Holy_GreaterHeal" }; --Enchant Bracers - Healing Power
-		[2] = {spellID = 20011, icon = "Spell_Holy_GreaterHeal" }; --Enchant Bracers - Superior Stamina
-		[3] = {spellID = 20010, icon = "Spell_Holy_GreaterHeal" }; --Enchant Bracers - Superior Strength
-		[4] = {spellID = 23801, icon = "Spell_Holy_GreaterHeal" }; --Enchant Bracers - Mana Regeneration
-		[5] = {spellID = 20009, icon = "Spell_Holy_GreaterHeal" }; --Enchant Bracers - Superior Spirit
-		[6] = {spellID = 20008, icon = "Spell_Holy_GreaterHeal" }; --Enchant Bracers - Greater Intellect
-		[7] = {spellID = 13939, icon = "Spell_Holy_GreaterHeal" }; --Enchant Bracers - Greater Strength
-		[8] = {spellID = 13945, icon = "Spell_Holy_GreaterHeal" }; --Enchant Bracers - Greater Stamina
-		[9] = {spellID = 13931, icon = "Spell_Holy_GreaterHeal" }; --Enchant Bracers - Deflection
+		[01] = {spellID = 23802, icon = "Spell_Holy_GreaterHeal" }; --Enchant Bracers - Healing Power
+		[02] = {spellID = 20011, icon = "Spell_Holy_GreaterHeal" }; --Enchant Bracers - Superior Stamina
+		[03] = {spellID = 20010, icon = "Spell_Holy_GreaterHeal" }; --Enchant Bracers - Superior Strength
+		[04] = {spellID = 23801, icon = "Spell_Holy_GreaterHeal" }; --Enchant Bracers - Mana Regeneration
+		[05] = {spellID = 20009, icon = "Spell_Holy_GreaterHeal" }; --Enchant Bracers - Superior Spirit
+		[06] = {spellID = 20008, icon = "Spell_Holy_GreaterHeal" }; --Enchant Bracers - Greater Intellect
+		[07] = {spellID = 13939, icon = "Spell_Holy_GreaterHeal" }; --Enchant Bracers - Greater Strength
+		[08] = {spellID = 13945, icon = "Spell_Holy_GreaterHeal" }; --Enchant Bracers - Greater Stamina
+		[09] = {spellID = 13931, icon = "Spell_Holy_GreaterHeal" }; --Enchant Bracers - Deflection
 		[10] = {spellID = 13846, icon = "Spell_Holy_GreaterHeal" }; --Enchant Bracers - Greater Spirit
 		[11] = {spellID = 13822, icon = "Spell_Holy_GreaterHeal" }; --Enchant Bracers - Intellect
 		[12] = {spellID = 13661, icon = "Spell_Holy_GreaterHeal" }; --Enchant Bracers - Strength
@@ -866,15 +861,15 @@ AtlasLoot_Data["EnchantingCLASSIC"] = {
 	};
 	{
 		Name = AL["Enchant Chest"];
-		[1] = {spellID = 20025, icon = "Spell_Holy_GreaterHeal" }; --Enchant Chest - Greater Stats
-		[2] = {spellID = 20028, icon = "Spell_Holy_GreaterHeal" }; --Enchant Chest - Major Mana
-		[3] = {spellID = 20026, icon = "Spell_Holy_GreaterHeal" }; --Enchant Chest - Major Health
-		[4] = {spellID = 13941, icon = "Spell_Holy_GreaterHeal" }; --Enchant Chest - Stats
-		[5] = {spellID = 13917, icon = "Spell_Holy_GreaterHeal" }; --Enchant Chest - Superior Mana
-		[6] = {spellID = 13858, icon = "Spell_Holy_GreaterHeal" }; --Enchant Chest - Superior Health
-		[7] = {spellID = 13700, icon = "Spell_Holy_GreaterHeal" }; --Enchant Chest - Lesser Stats
-		[8] = {spellID = 13663, icon = "Spell_Holy_GreaterHeal" }; --Enchant Chest - Greater Mana
-		[9] = {spellID = 13640, icon = "Spell_Holy_GreaterHeal" }; --Enchant Chest - Greater Health
+		[01] = {spellID = 20025, icon = "Spell_Holy_GreaterHeal" }; --Enchant Chest - Greater Stats
+		[02] = {spellID = 20028, icon = "Spell_Holy_GreaterHeal" }; --Enchant Chest - Major Mana
+		[03] = {spellID = 20026, icon = "Spell_Holy_GreaterHeal" }; --Enchant Chest - Major Health
+		[04] = {spellID = 13941, icon = "Spell_Holy_GreaterHeal" }; --Enchant Chest - Stats
+		[05] = {spellID = 13917, icon = "Spell_Holy_GreaterHeal" }; --Enchant Chest - Superior Mana
+		[06] = {spellID = 13858, icon = "Spell_Holy_GreaterHeal" }; --Enchant Chest - Superior Health
+		[07] = {spellID = 13700, icon = "Spell_Holy_GreaterHeal" }; --Enchant Chest - Lesser Stats
+		[08] = {spellID = 13663, icon = "Spell_Holy_GreaterHeal" }; --Enchant Chest - Greater Mana
+		[09] = {spellID = 13640, icon = "Spell_Holy_GreaterHeal" }; --Enchant Chest - Greater Health
 		[10] = {spellID = 13626, icon = "Spell_Holy_GreaterHeal" }; --Enchant Chest - Minor Stats
 		[11] = {spellID = 13607, icon = "Spell_Holy_GreaterHeal" }; --Enchant Chest - Mana
 		[12] = {spellID = 13538, icon = "Spell_Holy_GreaterHeal" }; --Enchant Chest - Lesser Absorption
@@ -886,15 +881,15 @@ AtlasLoot_Data["EnchantingCLASSIC"] = {
 	};
 	{
 		Name = AL["Enchant Cloak"];
-		[1] = {spellID = 25081, icon = "Spell_Holy_GreaterHeal" }; --Enchant Cloak - Greater Fire Resistance
-		[2] = {spellID = 20015, icon = "Spell_Holy_GreaterHeal" }; --Enchant Cloak - Superior Defense
-		[3] = {spellID = 20014, icon = "Spell_Holy_GreaterHeal" }; --Enchant Cloak - Greater Resistance
-		[4] = {spellID = 13882, icon = "Spell_Holy_GreaterHeal" }; --Enchant Cloak - Lesser Agility
-		[5] = {spellID = 13746, icon = "Spell_Holy_GreaterHeal" }; --Enchant Cloak - Greater Defense
-		[6] = {spellID = 13794, icon = "Spell_Holy_GreaterHeal" }; --Enchant Cloak - Resistance
-		[7] = {spellID = 13657, icon = "Spell_Holy_GreaterHeal" }; --Enchant Cloak - Fire Resistance
-		[8] = {spellID = 13635, icon = "Spell_Holy_GreaterHeal" }; --Enchant Cloak - Defense
-		[9] = {spellID = 13522, icon = "Spell_Holy_GreaterHeal" }; --Enchant Cloak - Lesser Shadow Resistance
+		[01] = {spellID = 25081, icon = "Spell_Holy_GreaterHeal" }; --Enchant Cloak - Greater Fire Resistance
+		[02] = {spellID = 20015, icon = "Spell_Holy_GreaterHeal" }; --Enchant Cloak - Superior Defense
+		[03] = {spellID = 20014, icon = "Spell_Holy_GreaterHeal" }; --Enchant Cloak - Greater Resistance
+		[04] = {spellID = 13882, icon = "Spell_Holy_GreaterHeal" }; --Enchant Cloak - Lesser Agility
+		[05] = {spellID = 13746, icon = "Spell_Holy_GreaterHeal" }; --Enchant Cloak - Greater Defense
+		[06] = {spellID = 13794, icon = "Spell_Holy_GreaterHeal" }; --Enchant Cloak - Resistance
+		[07] = {spellID = 13657, icon = "Spell_Holy_GreaterHeal" }; --Enchant Cloak - Fire Resistance
+		[08] = {spellID = 13635, icon = "Spell_Holy_GreaterHeal" }; --Enchant Cloak - Defense
+		[09] = {spellID = 13522, icon = "Spell_Holy_GreaterHeal" }; --Enchant Cloak - Lesser Shadow Resistance
 		[10] = {spellID = 7861, icon = "Spell_Holy_GreaterHeal" }; --Enchant Cloak - Lesser Fire Resistance
 		[11] = {spellID = 13419, icon = "Spell_Holy_GreaterHeal" }; --Enchant Cloak - Minor Agility
 		[12] = {spellID = 13421, icon = "Spell_Holy_GreaterHeal" }; --Enchant Cloak - Lesser Protection
@@ -904,15 +899,15 @@ AtlasLoot_Data["EnchantingCLASSIC"] = {
 	};
 	{
 		Name = AL["Enchant Gloves"];
-		[1] = {spellID = 25078, icon = "Spell_Holy_GreaterHeal" }; --Enchant Gloves - Fire Power
-		[2] = {spellID = 25074, icon = "Spell_Holy_GreaterHeal" }; --Enchant Gloves - Frost Power
-		[3] = {spellID = 25079, icon = "Spell_Holy_GreaterHeal" }; --Enchant Gloves - Healing Power
-		[4] = {spellID = 25073, icon = "Spell_Holy_GreaterHeal" }; --Enchant Gloves - Shadow Power
-		[5] = {spellID = 25080, icon = "Spell_Holy_GreaterHeal" }; --Enchant Gloves - Superior Agility
-		[6] = {spellID = 25072, icon = "Spell_Holy_GreaterHeal" }; --Enchant Gloves - Threat
-		[7] = {spellID = 20013, icon = "Spell_Holy_GreaterHeal" }; --Enchant Gloves - Greater Strength
-		[8] = {spellID = 20012, icon = "Spell_Holy_GreaterHeal" }; --Enchant Gloves - Greater Agility
-		[9] = {spellID = 13948, icon = "Spell_Holy_GreaterHeal" }; --Enchant Gloves - Minor Haste
+		[01] = {spellID = 25078, icon = "Spell_Holy_GreaterHeal" }; --Enchant Gloves - Fire Power
+		[02] = {spellID = 25074, icon = "Spell_Holy_GreaterHeal" }; --Enchant Gloves - Frost Power
+		[03] = {spellID = 25079, icon = "Spell_Holy_GreaterHeal" }; --Enchant Gloves - Healing Power
+		[04] = {spellID = 25073, icon = "Spell_Holy_GreaterHeal" }; --Enchant Gloves - Shadow Power
+		[05] = {spellID = 25080, icon = "Spell_Holy_GreaterHeal" }; --Enchant Gloves - Superior Agility
+		[06] = {spellID = 25072, icon = "Spell_Holy_GreaterHeal" }; --Enchant Gloves - Threat
+		[07] = {spellID = 20013, icon = "Spell_Holy_GreaterHeal" }; --Enchant Gloves - Greater Strength
+		[08] = {spellID = 20012, icon = "Spell_Holy_GreaterHeal" }; --Enchant Gloves - Greater Agility
+		[09] = {spellID = 13948, icon = "Spell_Holy_GreaterHeal" }; --Enchant Gloves - Minor Haste
 		[10] = {spellID = 13947, icon = "Spell_Holy_GreaterHeal" }; --Enchant Gloves - Riding Skill
 		[11] = {spellID = 13868, icon = "Spell_Holy_GreaterHeal" }; --Enchant Gloves - Advanced Herbalism
 		[12] = {spellID = 13887, icon = "Spell_Holy_GreaterHeal" }; --Enchant Gloves - Strength
@@ -925,42 +920,42 @@ AtlasLoot_Data["EnchantingCLASSIC"] = {
 	};
 	{
 		Name = AL["Enchant Shield"];
-		[1] = {spellID = 20016, icon = "Spell_Holy_GreaterHeal" }; --Enchant Shield - Superior Spirit
-		[2] = {spellID = 20017, icon = "Spell_Holy_GreaterHeal" }; --Enchant Shield - Greater Stamina
-		[3] = {spellID = 13933, icon = "Spell_Holy_GreaterHeal" }; --Enchant Shield - Frost Resistance
-		[4] = {spellID = 13905, icon = "Spell_Holy_GreaterHeal" }; --Enchant Shield - Greater Spirit
-		[5] = {spellID = 13817, icon = "Spell_Holy_GreaterHeal" }; --Enchant Shield - Stamina
-		[6] = {spellID = 13689, icon = "Spell_Holy_GreaterHeal" }; --Enchant Shield - Lesser Block
-		[7] = {spellID = 13659, icon = "Spell_Holy_GreaterHeal" }; --Enchant Shield - Spirit
-		[8] = {spellID = 13631, icon = "Spell_Holy_GreaterHeal" }; --Enchant Shield - Lesser Stamina
-		[9] = {spellID = 13485, icon = "Spell_Holy_GreaterHeal" }; --Enchant Shield - Lesser Spirit
+		[01] = {spellID = 20016, icon = "Spell_Holy_GreaterHeal" }; --Enchant Shield - Superior Spirit
+		[02] = {spellID = 20017, icon = "Spell_Holy_GreaterHeal" }; --Enchant Shield - Greater Stamina
+		[03] = {spellID = 13933, icon = "Spell_Holy_GreaterHeal" }; --Enchant Shield - Frost Resistance
+		[04] = {spellID = 13905, icon = "Spell_Holy_GreaterHeal" }; --Enchant Shield - Greater Spirit
+		[05] = {spellID = 13817, icon = "Spell_Holy_GreaterHeal" }; --Enchant Shield - Stamina
+		[06] = {spellID = 13689, icon = "Spell_Holy_GreaterHeal" }; --Enchant Shield - Lesser Block
+		[07] = {spellID = 13659, icon = "Spell_Holy_GreaterHeal" }; --Enchant Shield - Spirit
+		[08] = {spellID = 13631, icon = "Spell_Holy_GreaterHeal" }; --Enchant Shield - Lesser Stamina
+		[09] = {spellID = 13485, icon = "Spell_Holy_GreaterHeal" }; --Enchant Shield - Lesser Spirit
 		[10] = {spellID = 13464, icon = "Spell_Holy_GreaterHeal" }; --Enchant Shield - Lesser Protection
 		[11] = {spellID = 13378, icon = "Spell_Holy_GreaterHeal" }; --Enchant Shield - Minor Stamina
 	};
 	{
 		Name = AL["Enchant 2H Weapon"];
-		[1] = {spellID = 20036, icon = "Spell_Holy_GreaterHeal" }; --Enchant 2H Weapon - Major Intellect
-		[2] = {spellID = 20035, icon = "Spell_Holy_GreaterHeal" }; --Enchant 2H Weapon - Major Spirit
-		[3] = {spellID = 20030, icon = "Spell_Holy_GreaterHeal" }; --Enchant 2H Weapon - Superior Impact
-		[4] = {spellID = 27837, icon = "Spell_Holy_GreaterHeal" }; --Enchant 2H Weapon - Agility
-		[5] = {spellID = 13937, icon = "Spell_Holy_GreaterHeal" }; --Enchant 2H Weapon - Greater Impact
-		[6] = {spellID = 13695, icon = "Spell_Holy_GreaterHeal" }; --Enchant 2H Weapon - Impact
-		[7] = {spellID = 13529, icon = "Spell_Holy_GreaterHeal" }; --Enchant 2H Weapon - Lesser Impact
-		[8] = {spellID = 13380, icon = "Spell_Holy_GreaterHeal" }; --Enchant 2H Weapon - Lesser Spirit
-		[9] = {spellID = 7793, icon = "Spell_Holy_GreaterHeal" }; --Enchant 2H Weapon - Lesser Intellect
+		[01] = {spellID = 20036, icon = "Spell_Holy_GreaterHeal" }; --Enchant 2H Weapon - Major Intellect
+		[02] = {spellID = 20035, icon = "Spell_Holy_GreaterHeal" }; --Enchant 2H Weapon - Major Spirit
+		[03] = {spellID = 20030, icon = "Spell_Holy_GreaterHeal" }; --Enchant 2H Weapon - Superior Impact
+		[04] = {spellID = 27837, icon = "Spell_Holy_GreaterHeal" }; --Enchant 2H Weapon - Agility
+		[05] = {spellID = 13937, icon = "Spell_Holy_GreaterHeal" }; --Enchant 2H Weapon - Greater Impact
+		[06] = {spellID = 13695, icon = "Spell_Holy_GreaterHeal" }; --Enchant 2H Weapon - Impact
+		[07] = {spellID = 13529, icon = "Spell_Holy_GreaterHeal" }; --Enchant 2H Weapon - Lesser Impact
+		[08] = {spellID = 13380, icon = "Spell_Holy_GreaterHeal" }; --Enchant 2H Weapon - Lesser Spirit
+		[09] = {spellID = 7793, icon = "Spell_Holy_GreaterHeal" }; --Enchant 2H Weapon - Lesser Intellect
 		[10] = {spellID = 7745, icon = "Spell_Holy_GreaterHeal" }; --Enchant 2H Weapon - Minor Impact
 	};
 	{
 		Name = AL["Enchant Weapon"];
-		[1] = {spellID = 20034, icon = "Spell_Holy_GreaterHeal" }; --Enchant Weapon - Crusader
-		[2] = {spellID = 22750, icon = "Spell_Holy_GreaterHeal" }; --Enchant Weapon - Healing Power
-		[3] = {spellID = 20032, icon = "Spell_Holy_GreaterHeal" }; --Enchant Weapon - Lifestealing
-		[4] = {spellID = 23804, icon = "Spell_Holy_GreaterHeal" }; --Enchant Weapon - Mighty Intellect
-		[5] = {spellID = 23803, icon = "Spell_Holy_GreaterHeal" }; --Enchant Weapon - Mighty Spirit
-		[6] = {spellID = 22749, icon = "Spell_Holy_GreaterHeal" }; --Enchant Weapon - Spell Power
-		[7] = {spellID = 20031, icon = "Spell_Holy_GreaterHeal" }; --Enchant Weapon - Superior Striking
-		[8] = {spellID = 20033, icon = "Spell_Holy_GreaterHeal" }; --Enchant Weapon - Unholy Weapon
-		[9] = {spellID = 23800, icon = "Spell_Holy_GreaterHeal" }; --Enchant Weapon - Agility
+		[01] = {spellID = 20034, icon = "Spell_Holy_GreaterHeal" }; --Enchant Weapon - Crusader
+		[02] = {spellID = 22750, icon = "Spell_Holy_GreaterHeal" }; --Enchant Weapon - Healing Power
+		[03] = {spellID = 20032, icon = "Spell_Holy_GreaterHeal" }; --Enchant Weapon - Lifestealing
+		[04] = {spellID = 23804, icon = "Spell_Holy_GreaterHeal" }; --Enchant Weapon - Mighty Intellect
+		[05] = {spellID = 23803, icon = "Spell_Holy_GreaterHeal" }; --Enchant Weapon - Mighty Spirit
+		[06] = {spellID = 22749, icon = "Spell_Holy_GreaterHeal" }; --Enchant Weapon - Spell Power
+		[07] = {spellID = 20031, icon = "Spell_Holy_GreaterHeal" }; --Enchant Weapon - Superior Striking
+		[08] = {spellID = 20033, icon = "Spell_Holy_GreaterHeal" }; --Enchant Weapon - Unholy Weapon
+		[09] = {spellID = 23800, icon = "Spell_Holy_GreaterHeal" }; --Enchant Weapon - Agility
 		[10] = {spellID = 23799, icon = "Spell_Holy_GreaterHeal" }; --Enchant Weapon - Strength
 		[11] = {spellID = 20029, icon = "Spell_Holy_GreaterHeal" }; --Enchant Weapon - Icy Chill
 		[12] = {spellID = 13898, icon = "Spell_Holy_GreaterHeal" }; --Enchant Weapon - Fiery Weapon
@@ -976,15 +971,15 @@ AtlasLoot_Data["EnchantingCLASSIC"] = {
 	};
 	{
 		Name = AL["Miscellaneous"];
-		[1] = {itemID = 20748, spellID = 25130 }; --Brilliant Mana Oil
-		[2] = {itemID = 20749, spellID = 25129 }; --Brilliant Wizard Oil
-		[3] = {itemID = 22461, spellID = 32664 }; --Runed Fel Iron Rod
-		[4] = {itemID = 16207, spellID = 20051 }; --Runed Arcanite Rod
-		[5] = {itemID = 20750, spellID = 25128 }; --Wizard Oil
-		[6] = {itemID = 12655, spellID = 17180 }; --Enchanted Thorium
-		[7] = {itemID = 20747, spellID = 25127 }; --Lesser Mana Oil
-		[8] = {itemID = 12810, spellID = 17181 }; --Enchanted Leather
-		[9] = {itemID = 20746, spellID = 25126 }; --Lesser Wizard Oil
+		[01] = {itemID = 20748, spellID = 25130 }; --Brilliant Mana Oil
+		[02] = {itemID = 20749, spellID = 25129 }; --Brilliant Wizard Oil
+		[03] = {itemID = 22461, spellID = 32664 }; --Runed Fel Iron Rod
+		[04] = {itemID = 16207, spellID = 20051 }; --Runed Arcanite Rod
+		[05] = {itemID = 20750, spellID = 25128 }; --Wizard Oil
+		[06] = {itemID = 12655, spellID = 17180 }; --Enchanted Thorium
+		[07] = {itemID = 20747, spellID = 25127 }; --Lesser Mana Oil
+		[08] = {itemID = 12810, spellID = 17181 }; --Enchanted Leather
+		[09] = {itemID = 20746, spellID = 25126 }; --Lesser Wizard Oil
 		[10] = {itemID = 11145, spellID = 13702 }; --Runed Truesilver Rod
 		[11] = {itemID = 20745, spellID = 25125 }; --Minor Mana Oil
 		[12] = {itemID = 11130, spellID = 13628 }; --Runed Golden Rod
@@ -998,15 +993,15 @@ AtlasLoot_Data["EnchantingCLASSIC"] = {
 	};
 	{
 		Name = AL["High Risk"];
-		[1] = { name = AL["Rare"], icon = "INV_Box_01"},
-		[2] = {icon = "Spell_Holy_GreaterHeal", spellID = 968677 }; --Enchant Weapon - Unstoppable Assault
-		[3] = {icon = "Spell_Holy_GreaterHeal", spellID = 968680 }; --Enchant Weapon - Lucid Assault
-		[4] = {icon = "Spell_Holy_GreaterHeal", spellID = 968683 }; --Enchant Weapon - Spellbinder's Rage
-		[5] = {icon = "Spell_Holy_GreaterHeal", spellID = 968686 }; --Enchant Weapon - Ninja's Focus
-		[6] = {icon = "Spell_Holy_GreaterHeal", spellID = 968689 }; --Enchant Weapon - Grovewarden's Blessing
-		[7] = {icon = "Spell_Holy_GreaterHeal", spellID = 968692 }; --Enchant Weapon - Viscious Assault
-		[8] = {icon = "Spell_Holy_GreaterHeal", spellID = 968695 }; --Enchant Weapon - Arcane Dexterity
-		[9] = {icon = "Spell_Holy_GreaterHeal", spellID = 968698 }; --Enchant Weapon - Arcane Artillery
+		[01] = { name = AL["Rare"], icon = "INV_Box_01"},
+		[02] = {icon = "Spell_Holy_GreaterHeal", spellID = 968677 }; --Enchant Weapon - Unstoppable Assault
+		[03] = {icon = "Spell_Holy_GreaterHeal", spellID = 968680 }; --Enchant Weapon - Lucid Assault
+		[04] = {icon = "Spell_Holy_GreaterHeal", spellID = 968683 }; --Enchant Weapon - Spellbinder's Rage
+		[05] = {icon = "Spell_Holy_GreaterHeal", spellID = 968686 }; --Enchant Weapon - Ninja's Focus
+		[06] = {icon = "Spell_Holy_GreaterHeal", spellID = 968689 }; --Enchant Weapon - Grovewarden's Blessing
+		[07] = {icon = "Spell_Holy_GreaterHeal", spellID = 968692 }; --Enchant Weapon - Viscious Assault
+		[08] = {icon = "Spell_Holy_GreaterHeal", spellID = 968695 }; --Enchant Weapon - Arcane Dexterity
+		[09] = {icon = "Spell_Holy_GreaterHeal", spellID = 968698 }; --Enchant Weapon - Arcane Artillery
 		[10] = {icon = "Spell_Holy_GreaterHeal", spellID = 968701 }; --Enchant Weapon - Arcane Precision
 		[11] = {icon = "Spell_Holy_GreaterHeal", spellID = 968770 }; --Enchant Weapon - Crusader II
 		[16] = { name = AL["Epic"], icon = "INV_Box_01"},
@@ -1033,25 +1028,25 @@ AtlasLoot_Data["EngineeringCLASSIC"] = {
 	Type = "ClassicCrafting";
 	{
 		Name = AL["Ammunition"];
-		[1] = {itemID = 18042, desc = "Quest See Tooltip", quest = {14183,14182, text = "Trade Thorium Shells for Arrows"}}; --Thorium Headed Arrow
-		[2] = {itemID = 15997, spellID = 19800 }; --Thorium Shells
-		[3] = {itemID = 10513, spellID = 12621 }; --Mithril Gyro-Shot
-		[4] = {itemID = 10512, spellID = 12596 }; --Hi-Impact Mithril Slugs
-		[5] = {itemID = 8069, spellID = 3947 }; --Crafted Solid Shot
-		[6] = {itemID = 8068, spellID = 3930 }; --Crafted Heavy Shot
-		[7] = {itemID = 8067, spellID = 3920 }; --Crafted Light Shot
+		[01] = {itemID = 18042, desc = "Quest See Tooltip", quest = {14183,14182, text = "Trade Thorium Shells for Arrows"}}; --Thorium Headed Arrow
+		[02] = {itemID = 15997, spellID = 19800 }; --Thorium Shells
+		[03] = {itemID = 10513, spellID = 12621 }; --Mithril Gyro-Shot
+		[04] = {itemID = 10512, spellID = 12596 }; --Hi-Impact Mithril Slugs
+		[05] = {itemID = 8069, spellID = 3947 }; --Crafted Solid Shot
+		[06] = {itemID = 8068, spellID = 3930 }; --Crafted Heavy Shot
+		[07] = {itemID = 8067, spellID = 3920 }; --Crafted Light Shot
 	};
 	{
 		Name = BabbleInventory["Armor"];
-		[1] = {itemID = 16022, spellID = 19830 }; --Arcanite Dragonling
-		[2] = {itemID = 19999, spellID = 24356 }; --Bloodvine Goggles
-		[3] = {itemID = 19998, spellID = 24357 }; --Bloodvine Lens
-		[4] = {itemID = 18639, spellID = 23082 }; --Ultra-Flash Shadow Reflector
-		[5] = {itemID = 18638, spellID = 23081 }; --Hyper-Radiant Flame Reflector
-		[6] = {itemID = 18634, spellID = 23077 }; --Gyrofreeze Ice Reflector
-		[7] = {itemID = 10504, spellID = 12622 }; --Green Lens
-		[8] = {itemID = 16008, spellID = 19825 }; --Master Engineer's Goggles
-		[9] = {itemID = 16009, spellID = 19819 }; --Voice Amplification Modulator
+		[01] = {itemID = 16022, spellID = 19830 }; --Arcanite Dragonling
+		[02] = {itemID = 19999, spellID = 24356 }; --Bloodvine Goggles
+		[03] = {itemID = 19998, spellID = 24357 }; --Bloodvine Lens
+		[04] = {itemID = 18639, spellID = 23082 }; --Ultra-Flash Shadow Reflector
+		[05] = {itemID = 18638, spellID = 23081 }; --Hyper-Radiant Flame Reflector
+		[06] = {itemID = 18634, spellID = 23077 }; --Gyrofreeze Ice Reflector
+		[07] = {itemID = 10504, spellID = 12622 }; --Green Lens
+		[08] = {itemID = 16008, spellID = 19825 }; --Master Engineer's Goggles
+		[09] = {itemID = 16009, spellID = 19819 }; --Voice Amplification Modulator
 		[10] = {itemID = 18637, spellID = 23079 }; --Major Recombobulator
 		[11] = {itemID = 15999, spellID = 19794 }; --Spellpower Goggles Xtreme Plus
 		[12] = {itemID = 10576, spellID = 12624 }; --Mithril Mechanical Dragonling
@@ -1071,15 +1066,15 @@ AtlasLoot_Data["EngineeringCLASSIC"] = {
 	};
 	{
 		Name = AL["Explosives"];
-		[1] = {itemID = 16040, spellID = 19831 }; --Arcane Bomb
-		[2] = {itemID = 16005, spellID = 19799 }; --Dark Iron Bomb
-		[3] = {itemID = 18594, spellID = 23080 }; --Powerful Seaforium Charge
-		[4] = {itemID = 15993, spellID = 19790 }; --Thorium Grenade
-		[5] = {itemID = 18641, spellID = 23070 }; --Dense Dynamite
-		[6] = {itemID = 10562, spellID = 12619 }; --Hi-Explosive Bomb
-		[7] = {itemID = 10586, spellID = 12754 }; --The Big One
-		[8] = {itemID = 10514, spellID = 12603 }; --Mithril Frag Bomb
-		[9] = {itemID = 10577, spellID = 12716 }; --Goblin Mortar
+		[01] = {itemID = 16040, spellID = 19831 }; --Arcane Bomb
+		[02] = {itemID = 16005, spellID = 19799 }; --Dark Iron Bomb
+		[03] = {itemID = 18594, spellID = 23080 }; --Powerful Seaforium Charge
+		[04] = {itemID = 15993, spellID = 19790 }; --Thorium Grenade
+		[05] = {itemID = 18641, spellID = 23070 }; --Dense Dynamite
+		[06] = {itemID = 10562, spellID = 12619 }; --Hi-Explosive Bomb
+		[07] = {itemID = 10586, spellID = 12754 }; --The Big One
+		[08] = {itemID = 10514, spellID = 12603 }; --Mithril Frag Bomb
+		[09] = {itemID = 10577, spellID = 12716 }; --Goblin Mortar
 		[10] = {itemID = 10646, spellID = 12760 }; --Goblin Sapper Charge
 		[11] = {itemID = 10577, spellID = 13240 }; --The Mortar: Reloaded
 		[12] = {itemID = 18588, spellID = 23069 }; --EZ-Thro Dynamite II
@@ -1101,24 +1096,24 @@ AtlasLoot_Data["EngineeringCLASSIC"] = {
 	};
 	{
 		Name = AL["Item Enhancements"];
-		[1] = {itemID = 18283, spellID = 22793 }; --Biznicks 247x128 Accurascope
-		[2] = {itemID = 10548, spellID = 12620 }; --Sniper Scope
-		[3] = {itemID = 10546, spellID = 12597 }; --Deadly Scope
-		[4] = {itemID = 4407, spellID = 3979 }; --Accurate Scope
-		[5] = {itemID = 4406, spellID = 3978 }; --Standard Scope
-		[6] = {itemID = 4405, spellID = 3977 }; --Crude Scope
+		[01] = {itemID = 18283, spellID = 22793 }; --Biznicks 247x128 Accurascope
+		[02] = {itemID = 10548, spellID = 12620 }; --Sniper Scope
+		[03] = {itemID = 10546, spellID = 12597 }; --Deadly Scope
+		[04] = {itemID = 4407, spellID = 3979 }; --Accurate Scope
+		[05] = {itemID = 4406, spellID = 3978 }; --Standard Scope
+		[06] = {itemID = 4405, spellID = 3977 }; --Crude Scope
 	};
 	{
 		Name = AL["Miscellaneous"];
-		[1] = {itemID = 18232, spellID = 22704 }; --Field Repair Bot 74A
-		[2] = {itemID = 23832, spellID = 30573 }; --Gnomish Tonk Controller
-		[3] = {itemID = 23831, spellID = 30561 }; --Goblin Tonk Controller
-		[4] = {itemID = 21570, spellID = 26443 }; --Firework Cluster Launcher
-		[5] = {itemID = 16023, spellID = 19814 }; --Masterwork Target Dummy
-		[6] = {itemID = 21714, spellID = 26426 }; --Large Blue Rocket Cluster
-		[7] = {itemID = 21716, spellID = 26427 }; --Large Green Rocket Cluster
-		[8] = {itemID = 21718, spellID = 26428 }; --Large Red Rocket Cluster
-		[9] = {itemID = 18645, spellID = 23096 }; --Alarm-O-Bot
+		[01] = {itemID = 18232, spellID = 22704 }; --Field Repair Bot 74A
+		[02] = {itemID = 23832, spellID = 30573 }; --Gnomish Tonk Controller
+		[03] = {itemID = 23831, spellID = 30561 }; --Goblin Tonk Controller
+		[04] = {itemID = 21570, spellID = 26443 }; --Firework Cluster Launcher
+		[05] = {itemID = 16023, spellID = 19814 }; --Masterwork Target Dummy
+		[06] = {itemID = 21714, spellID = 26426 }; --Large Blue Rocket Cluster
+		[07] = {itemID = 21716, spellID = 26427 }; --Large Green Rocket Cluster
+		[08] = {itemID = 21718, spellID = 26428 }; --Large Red Rocket Cluster
+		[09] = {itemID = 18645, spellID = 23096 }; --Alarm-O-Bot
 		[10] = {itemID = 18587, spellID = 23078 }; --Goblin Jumper Cables XL
 		[11] = {itemID = 15996, spellID = 19793 }; --Lifelike Mechanical Toad
 		[12] = {itemID = 15846, spellID = 19567 }; --Salt Shaker
@@ -1143,15 +1138,15 @@ AtlasLoot_Data["EngineeringCLASSIC"] = {
 	};
 	{
 		Name = AL["Miscellaneous"];
-		[1] = {itemID = 4391, spellID = 3963 }; --Compact Harvest Reaper Kit
-		[2] = {itemID = 7148, spellID = 9273 }; --Goblin Jumper Cables
-		[3] = {itemID = 4388, spellID = 3959 }; --Discombobulator Ray
-		[4] = {itemID = 4386, spellID = 3957 }; --Ice Deflector
-		[5] = {itemID = 4384, spellID = 3955 }; --Explosive Sheep
-		[6] = {itemID = 6533, spellID = 9271 }; --Aquadynamic Fish Attractor
-		[7] = {itemID = 9312, spellID = 23067 }; --Blue Firework
-		[8] = {itemID = 9313, spellID = 23068 }; --Green Firework
-		[9] = {itemID = 9318, spellID = 23066 }; --Red Firework
+		[01] = {itemID = 4391, spellID = 3963 }; --Compact Harvest Reaper Kit
+		[02] = {itemID = 7148, spellID = 9273 }; --Goblin Jumper Cables
+		[03] = {itemID = 4388, spellID = 3959 }; --Discombobulator Ray
+		[04] = {itemID = 4386, spellID = 3957 }; --Ice Deflector
+		[05] = {itemID = 4384, spellID = 3955 }; --Explosive Sheep
+		[06] = {itemID = 6533, spellID = 9271 }; --Aquadynamic Fish Attractor
+		[07] = {itemID = 9312, spellID = 23067 }; --Blue Firework
+		[08] = {itemID = 9313, spellID = 23068 }; --Green Firework
+		[09] = {itemID = 9318, spellID = 23066 }; --Red Firework
 		[10] = {itemID = 5507, spellID = 6458 }; --Ornate Spyglass
 		[11] = {itemID = 21558, spellID = 26416 }; --Small Blue Rocket
 		[12] = {itemID = 21559, spellID = 26417 }; --Small Green Rocket
@@ -1163,15 +1158,15 @@ AtlasLoot_Data["EngineeringCLASSIC"] = {
 	};
 	{
 		Name = AL["Reagents"];
-		[1] = {itemID = 16006, spellID = 19815 }; --Delicate Arcanite Converter
-		[2] = {itemID = 16000, spellID = 19795 }; --Thorium Tube
-		[3] = {itemID = 7191, spellID = 39895 }; --Fused Wiring
-		[4] = {itemID = 15994, spellID = 19791 }; --Thorium Widget
-		[5] = {itemID = 18631, spellID = 23071 }; --Truesilver Transformer
-		[6] = {itemID = 15992, spellID = 19788 }; --Dense Blasting Powder
-		[7] = {itemID = 10561, spellID = 12599 }; --Mithril Casing
-		[8] = {itemID = 10560, spellID = 12591 }; --Unstable Trigger
-		[9] = {itemID = 10559, spellID = 12589 }; --Mithril Tube
+		[01] = {itemID = 16006, spellID = 19815 }; --Delicate Arcanite Converter
+		[02] = {itemID = 16000, spellID = 19795 }; --Thorium Tube
+		[03] = {itemID = 7191, spellID = 39895 }; --Fused Wiring
+		[04] = {itemID = 15994, spellID = 19791 }; --Thorium Widget
+		[05] = {itemID = 18631, spellID = 23071 }; --Truesilver Transformer
+		[06] = {itemID = 15992, spellID = 19788 }; --Dense Blasting Powder
+		[07] = {itemID = 10561, spellID = 12599 }; --Mithril Casing
+		[08] = {itemID = 10560, spellID = 12591 }; --Unstable Trigger
+		[09] = {itemID = 10559, spellID = 12589 }; --Mithril Tube
 		[10] = {itemID = 10498, spellID = 12590 }; --Gyromatic Micro-Adjustor
 		[11] = {itemID = 10505, spellID = 12585 }; --Solid Blasting Powder
 		[12] = {itemID = 4389, spellID = 3961 }; --Gyrochronatom
@@ -1190,30 +1185,30 @@ AtlasLoot_Data["EngineeringCLASSIC"] = {
 	};
 	{
 		Name = BabbleInventory["Weapon"];
-		[1] = {itemID = 18282, spellID = 22795 }; --Core Marksman Rifle
-		[2] = {itemID = 16007, spellID = 19833 }; --Flawless Arcanite Rifle
-		[3] = {itemID = 16004, spellID = 19796 }; --Dark Iron Rifle
-		[4] = {itemID = 15995, spellID = 19792 }; --Thorium Rifle
-		[5] = {itemID = 10510, spellID = 12614 }; --Mithril Heavy-bore Rifle
-		[6] = {itemID = 10508, spellID = 12595 }; --Mithril Blunderbuss
-		[7] = {itemID = 4383, spellID = 3954 }; --Moonsight Rifle
-		[8] = {itemID = 4379, spellID = 3949 }; --Silver-plated Shotgun
-		[9] = {itemID = 4372, spellID = 3939 }; --Lovingly Crafted Boomstick
+		[01] = {itemID = 18282, spellID = 22795 }; --Core Marksman Rifle
+		[02] = {itemID = 16007, spellID = 19833 }; --Flawless Arcanite Rifle
+		[03] = {itemID = 16004, spellID = 19796 }; --Dark Iron Rifle
+		[04] = {itemID = 15995, spellID = 19792 }; --Thorium Rifle
+		[05] = {itemID = 10510, spellID = 12614 }; --Mithril Heavy-bore Rifle
+		[06] = {itemID = 10508, spellID = 12595 }; --Mithril Blunderbuss
+		[07] = {itemID = 4383, spellID = 3954 }; --Moonsight Rifle
+		[08] = {itemID = 4379, spellID = 3949 }; --Silver-plated Shotgun
+		[09] = {itemID = 4372, spellID = 3939 }; --Lovingly Crafted Boomstick
 		[10] = {itemID = 4369, spellID = 3936 }; --Deadly Blunderbuss
 		[11] = {itemID = 4362, spellID = 3925 }; --Rough Boomstick
 		[12] = {itemID = 6219, spellID = 7430 }; --Arclight Spanner
 	};
 	{
 		Name = GNOMISH;
-		[1] = {itemID = 18986, spellID = 23489 }; --Ultrasafe Transporter - Gadgetzan
-		[2] = {itemID = 18660, spellID = 23129 }; --World Enlarger
-		[3] = {itemID = 10726, spellID = 12907 }; --Gnomish Mind Control Cap
-		[4] = {itemID = 10724, spellID = 12905 }; --Gnomish Rocket Boots
-		[5] = {itemID = 10721, spellID = 12903 }; --Gnomish Harm Prevention Belt
-		[6] = {itemID = 10545, spellID = 12897 }; --Gnomish Goggles
-		[7] = {itemID = 23841, spellID = 30568 }; --Gnomish Flame Turret
-		[8] = {itemID = 18645, spellID = 23096 }; --Alarm-O-Bot
-		[9] = {itemID = 10645, spellID = 12759 }; --Gnomish Death Ray
+		[01] = {itemID = 18986, spellID = 23489 }; --Ultrasafe Transporter - Gadgetzan
+		[02] = {itemID = 18660, spellID = 23129 }; --World Enlarger
+		[03] = {itemID = 10726, spellID = 12907 }; --Gnomish Mind Control Cap
+		[04] = {itemID = 10724, spellID = 12905 }; --Gnomish Rocket Boots
+		[05] = {itemID = 10721, spellID = 12903 }; --Gnomish Harm Prevention Belt
+		[06] = {itemID = 10545, spellID = 12897 }; --Gnomish Goggles
+		[07] = {itemID = 23841, spellID = 30568 }; --Gnomish Flame Turret
+		[08] = {itemID = 18645, spellID = 23096 }; --Alarm-O-Bot
+		[09] = {itemID = 10645, spellID = 12759 }; --Gnomish Death Ray
 		[10] = {itemID = 10725, spellID = 12906 }; --Gnomish Battle Chicken
 		[11] = {itemID = 10720, spellID = 12902 }; --Gnomish Net-o-Matic Projector
 		[12] = {itemID = 10716, spellID = 12899 }; --Gnomish Shrink Ray
@@ -1223,15 +1218,15 @@ AtlasLoot_Data["EngineeringCLASSIC"] = {
 	};
 	{
 		Name = GOBLIN;
-		[1] = {itemID = 18984, spellID = 23486 }; --Dimensional Ripper - Everlook
-		[2] = {itemID = 10588, spellID = 12758 }; --Goblin Rocket Helmet
-		[3] = {itemID = 7189, spellID = 8895 }; --Goblin Rocket Boots
-		[4] = {itemID = 10543, spellID = 12718 }; --Goblin Construction Helmet
-		[5] = {itemID = 10542, spellID = 12717 }; --Goblin Mining Helmet
-		[6] = {itemID = 23827, spellID = 30560 }; --Super Sapper Charge
-		[7] = {itemID = 23826, spellID = 30558 }; --The Bigger One
-		[8] = {itemID = 18587, spellID = 23078 }; --Goblin Jumper Cables XL
-		[9] = {itemID = 10727, spellID = 12908 }; --Goblin Dragon Gun
+		[01] = {itemID = 18984, spellID = 23486 }; --Dimensional Ripper - Everlook
+		[02] = {itemID = 10588, spellID = 12758 }; --Goblin Rocket Helmet
+		[03] = {itemID = 7189, spellID = 8895 }; --Goblin Rocket Boots
+		[04] = {itemID = 10543, spellID = 12718 }; --Goblin Construction Helmet
+		[05] = {itemID = 10542, spellID = 12717 }; --Goblin Mining Helmet
+		[06] = {itemID = 23827, spellID = 30560 }; --Super Sapper Charge
+		[07] = {itemID = 23826, spellID = 30558 }; --The Bigger One
+		[08] = {itemID = 18587, spellID = 23078 }; --Goblin Jumper Cables XL
+		[09] = {itemID = 10727, spellID = 12908 }; --Goblin Dragon Gun
 		[10] = {itemID = 10586, spellID = 12754 }; --The Big One
 		[11] = {itemID = 10587, spellID = 12755 }; --Goblin Bomb Dispenser
 		[12] = {itemID = 10577, spellID = 12716 }; --Goblin Mortar
@@ -1241,13 +1236,13 @@ AtlasLoot_Data["EngineeringCLASSIC"] = {
 	};
 	{
 		Name = AL["High Risk"];
-		[1] = { name = AL["Rare"], icon = "INV_Box_01"},
-		[2] = {itemID = 967197, spellID = 968043 }; --Focused Gnomish Magnifying Lense
-		[3] = {itemID = 967200, spellID = 968046 }; --Focused Gnomish Focusing Lense
-		[4] = {itemID = 967203, spellID = 968049 }; --Focused Gnomish Prismatic Lense
-		[5] = {itemID = 967206, spellID = 968052 }; --Focused Hipfire Scope
-		[6] = {itemID = 967209, spellID = 968055 }; --Focused Precision Scope
-		[7] = {itemID = 967212, spellID = 968058 }; --Focused Reflex Scope
+		[01] = { name = AL["Rare"], icon = "INV_Box_01"},
+		[02] = {itemID = 967197, spellID = 968043 }; --Focused Gnomish Magnifying Lense
+		[03] = {itemID = 967200, spellID = 968046 }; --Focused Gnomish Focusing Lense
+		[04] = {itemID = 967203, spellID = 968049 }; --Focused Gnomish Prismatic Lense
+		[05] = {itemID = 967206, spellID = 968052 }; --Focused Hipfire Scope
+		[06] = {itemID = 967209, spellID = 968055 }; --Focused Precision Scope
+		[07] = {itemID = 967212, spellID = 968058 }; --Focused Reflex Scope
 		[16] = { name = AL["Epic"], icon = "INV_Box_01"},
 		[17] = {itemID = 967198, spellID = 968044 }; --Polished Gnomish Magnifying Lense
 		[18] = {itemID = 967201, spellID = 968047 }; --Polished Gnomish Focusing Lense
@@ -1268,15 +1263,15 @@ AtlasLoot_Data["FirstAidCLASSIC"] = {
 	Type = "ClassicCrafting";
 	{
 		Name = FIRSTAID;
-		[1] = {itemID = 19440, spellID = 23787 }; --Powerful Anti-Venom
-		[2] = {itemID = 14530, spellID = 18630 }; --Heavy Runecloth Bandage
-		[3] = {itemID = 14529, spellID = 18629 }; --Runecloth Bandage
-		[4] = {itemID = 8545, spellID = 10841 }; --Heavy Mageweave Bandage
-		[5] = {itemID = 8544, spellID = 10840 }; --Mageweave Bandage
-		[6] = {itemID = 6451, spellID = 7929 }; --Heavy Silk Bandage
-		[7] = {itemID = 6450, spellID = 7928 }; --Silk Bandage
-		[8] = {itemID = 6453, spellID = 7935 }; --Strong Anti-Venom
-		[9] = {itemID = 3531, spellID = 3278 }; --Heavy Wool Bandage
+		[01] = {itemID = 19440, spellID = 23787 }; --Powerful Anti-Venom
+		[02] = {itemID = 14530, spellID = 18630 }; --Heavy Runecloth Bandage
+		[03] = {itemID = 14529, spellID = 18629 }; --Runecloth Bandage
+		[04] = {itemID = 8545, spellID = 10841 }; --Heavy Mageweave Bandage
+		[05] = {itemID = 8544, spellID = 10840 }; --Mageweave Bandage
+		[06] = {itemID = 6451, spellID = 7929 }; --Heavy Silk Bandage
+		[07] = {itemID = 6450, spellID = 7928 }; --Silk Bandage
+		[08] = {itemID = 6453, spellID = 7935 }; --Strong Anti-Venom
+		[09] = {itemID = 3531, spellID = 3278 }; --Heavy Wool Bandage
 		[10] = {itemID = 3530, spellID = 3277 }; --Wool Bandage
 		[11] = {itemID = 6452, spellID = 7934 }; --Anti-Venom
 		[12] = {itemID = 2581, spellID = 3276 }; --Heavy Linen Bandage
@@ -1294,15 +1289,15 @@ AtlasLoot_Data["LeatherworkingCLASSIC"] = {
 	Type = "ClassicCrafting";
 	{
 		Name = AL["Leather Armor"] .. WHITE .. " - Back";
-		[1] = {itemID = 18509, spellID = 22926 }; --Chromatic Cloak
-		[2] = {itemID = 18511, spellID = 22928 }; --Shifting Cloak
-		[3] = {itemID = 18510, spellID = 22927 }; --Hide of the Wild
-		[4] = {itemID = 15138, spellID = 19093 }; --Onyxia Scale Cloak
-		[5] = {itemID = 8215, spellID = 10574 }; --Wild Leather Cloak
-		[6] = {itemID = 8216, spellID = 10562 }; --Big Voodoo Cloak
-		[7] = {itemID = 5965, spellID = 7153 }; --Guardian Cloak
-		[8] = {itemID = 7377, spellID = 9198 }; --Frost Leather Cloak
-		[9] = {itemID = 7283, spellID = 9070 }; --Black Whelp Cloak
+		[01] = {itemID = 18509, spellID = 22926 }; --Chromatic Cloak
+		[02] = {itemID = 18511, spellID = 22928 }; --Shifting Cloak
+		[03] = {itemID = 18510, spellID = 22927 }; --Hide of the Wild
+		[04] = {itemID = 15138, spellID = 19093 }; --Onyxia Scale Cloak
+		[05] = {itemID = 8215, spellID = 10574 }; --Wild Leather Cloak
+		[06] = {itemID = 8216, spellID = 10562 }; --Big Voodoo Cloak
+		[07] = {itemID = 5965, spellID = 7153 }; --Guardian Cloak
+		[08] = {itemID = 7377, spellID = 9198 }; --Frost Leather Cloak
+		[09] = {itemID = 7283, spellID = 9070 }; --Black Whelp Cloak
 		[10] = {itemID = 6466, spellID = 7953 }; --Deviate Scale Cloak
 		[11] = {itemID = 2308, spellID = 2159 }; --Fine Leather Cloak
 		[12] = {itemID = 3719, spellID = 3760 }; --Hillman's Cloak
@@ -1312,15 +1307,15 @@ AtlasLoot_Data["LeatherworkingCLASSIC"] = {
 	};
 	{
 		Name = AL["Leather Armor"] .. WHITE .. " - Chest";
-		[1] = {itemID = 22661, spellID = 28219 }; --Polar Tunic
-		[2] = {itemID = 15059, spellID = 19095 }; --Living Breastplate
-		[3] = {itemID = 19685, spellID = 24121 }; --Primal Batskin Jerkin
-		[4] = {itemID = 19688, spellID = 24124 }; --Blood Tiger Breastplate
-		[5] = {itemID = 15068, spellID = 19104 }; --Frostsaber Tunic
-		[6] = {itemID = 15090, spellID = 19102 }; --Runic Leather Armor
-		[7] = {itemID = 15085, spellID = 19098 }; --Wicked Leather Armor
-		[8] = {itemID = 15075, spellID = 19081 }; --Chimeric Vest
-		[9] = {itemID = 15066, spellID = 19086 }; --Ironfeather Breastplate
+		[01] = {itemID = 22661, spellID = 28219 }; --Polar Tunic
+		[02] = {itemID = 15059, spellID = 19095 }; --Living Breastplate
+		[03] = {itemID = 19685, spellID = 24121 }; --Primal Batskin Jerkin
+		[04] = {itemID = 19688, spellID = 24124 }; --Blood Tiger Breastplate
+		[05] = {itemID = 15068, spellID = 19104 }; --Frostsaber Tunic
+		[06] = {itemID = 15090, spellID = 19102 }; --Runic Leather Armor
+		[07] = {itemID = 15085, spellID = 19098 }; --Wicked Leather Armor
+		[08] = {itemID = 15075, spellID = 19081 }; --Chimeric Vest
+		[09] = {itemID = 15066, spellID = 19086 }; --Ironfeather Breastplate
 		[10] = {itemID = 15056, spellID = 19079 }; --Stormshroud Armor
 		[11] = {itemID = 15053, spellID = 19076 }; --Volcanic Breastplate
 		[12] = {itemID = 15064, spellID = 19068 }; --Warbear Harness
@@ -1331,15 +1326,15 @@ AtlasLoot_Data["LeatherworkingCLASSIC"] = {
 	};
 	{
 		Name = AL["Leather Armor"] .. WHITE .. " - Chest";
-		[1] = {itemID = 8175, spellID = 10499 }; --Nightscape Tunic
-		[2] = {itemID = 5739, spellID = 6661 }; --Barbaric Harness
-		[3] = {itemID = 7374, spellID = 9196 }; --Dusky Leather Armor
-		[4] = {itemID = 7375, spellID = 9197 }; --Green Whelp Armor
-		[5] = {itemID = 4256, spellID = 3773 }; --Guardian Armor
-		[6] = {itemID = 5782, spellID = 6704 }; --Thick Murloc Armor
-		[7] = {itemID = 4455, spellID = 4096 }; --Raptor Hide Harness
-		[8] = {itemID = 2314, spellID = 2166 }; --Toughened Leather Armor
-		[9] = {itemID = 20575, spellID = 24940 }; --Black Whelp Tunic
+		[01] = {itemID = 8175, spellID = 10499 }; --Nightscape Tunic
+		[02] = {itemID = 5739, spellID = 6661 }; --Barbaric Harness
+		[03] = {itemID = 7374, spellID = 9196 }; --Dusky Leather Armor
+		[04] = {itemID = 7375, spellID = 9197 }; --Green Whelp Armor
+		[05] = {itemID = 4256, spellID = 3773 }; --Guardian Armor
+		[06] = {itemID = 5782, spellID = 6704 }; --Thick Murloc Armor
+		[07] = {itemID = 4455, spellID = 4096 }; --Raptor Hide Harness
+		[08] = {itemID = 2314, spellID = 2166 }; --Toughened Leather Armor
+		[09] = {itemID = 20575, spellID = 24940 }; --Black Whelp Tunic
 		[10] = {itemID = 2317, spellID = 2169 }; --Dark Leather Tunic
 		[11] = {itemID = 4244, spellID = 3762 }; --Hillman's Leather Vest
 		[12] = {itemID = 5781, spellID = 6703 }; --Murloc Scale Breastplate
@@ -1352,15 +1347,15 @@ AtlasLoot_Data["LeatherworkingCLASSIC"] = {
 
 	{
 		Name = AL["Leather Armor"] .. WHITE .. " - Feet";
-		[1] = {itemID = 22760, spellID = 28473 }; --Bramblewood Boots
-		[2] = {itemID = 18506, spellID = 22922 }; --Mongoose Boots
-		[3] = {itemID = 16982, spellID = 20853 }; --Corehound Boots
-		[4] = {itemID = 19052, spellID = 23705 }; --Dawn Treaders
-		[5] = {itemID = 34086, spellID = 44953 }; --Winter Boots
-		[6] = {itemID = 15073, spellID = 19063 }; --Chimeric Boots
-		[7] = {itemID = 15071, spellID = 19066 }; --Frostsaber Boots
-		[8] = {itemID = 8213, spellID = 10566 }; --Wild Leather Boots
-		[9] = {itemID = 8197, spellID = 10558 }; --Nightscape Boots
+		[01] = {itemID = 22760, spellID = 28473 }; --Bramblewood Boots
+		[02] = {itemID = 18506, spellID = 22922 }; --Mongoose Boots
+		[03] = {itemID = 16982, spellID = 20853 }; --Corehound Boots
+		[04] = {itemID = 19052, spellID = 23705 }; --Dawn Treaders
+		[05] = {itemID = 34086, spellID = 44953 }; --Winter Boots
+		[06] = {itemID = 15073, spellID = 19063 }; --Chimeric Boots
+		[07] = {itemID = 15071, spellID = 19066 }; --Frostsaber Boots
+		[08] = {itemID = 8213, spellID = 10566 }; --Wild Leather Boots
+		[09] = {itemID = 8197, spellID = 10558 }; --Nightscape Boots
 		[10] = {itemID = 7390, spellID = 9207 }; --Dusky Boots
 		[11] = {itemID = 7391, spellID = 9208 }; --Swift Boots
 		[12] = {itemID = 2315, spellID = 2167 }; --Dark Leather Boots
@@ -1370,15 +1365,15 @@ AtlasLoot_Data["LeatherworkingCLASSIC"] = {
 	};
 	{
 		Name = AL["Leather Armor"] .. WHITE .. " - Hands";
-		[1] = {itemID = 22662, spellID = 28220 }; --Polar Gloves
-		[2] = {itemID = 19686, spellID = 24122 }; --Primal Batskin Gloves
-		[3] = {itemID = 21278, spellID = 26279 }; --Stormshroud Gloves
-		[4] = {itemID = 15070, spellID = 19087 }; --Frostsaber Gloves
-		[5] = {itemID = 15063, spellID = 19084 }; --Devilsaur Gauntlets
-		[6] = {itemID = 15091, spellID = 19055 }; --Runic Leather Gauntlets
-		[7] = {itemID = 15074, spellID = 19053 }; --Chimeric Gloves
-		[8] = {itemID = 15083, spellID = 19049 }; --Wicked Leather Gauntlets
-		[9] = {itemID = 18238, spellID = 22711 }; --Shadowskin Gloves
+		[01] = {itemID = 22662, spellID = 28220 }; --Polar Gloves
+		[02] = {itemID = 19686, spellID = 24122 }; --Primal Batskin Gloves
+		[03] = {itemID = 21278, spellID = 26279 }; --Stormshroud Gloves
+		[04] = {itemID = 15070, spellID = 19087 }; --Frostsaber Gloves
+		[05] = {itemID = 15063, spellID = 19084 }; --Devilsaur Gauntlets
+		[06] = {itemID = 15091, spellID = 19055 }; --Runic Leather Gauntlets
+		[07] = {itemID = 15074, spellID = 19053 }; --Chimeric Gloves
+		[08] = {itemID = 15083, spellID = 19049 }; --Wicked Leather Gauntlets
+		[09] = {itemID = 18238, spellID = 22711 }; --Shadowskin Gloves
 		[10] = {itemID = 17721, spellID = 21943 }; --Gloves of the Greatfather
 		[11] = {itemID = 5966, spellID = 7156 }; --Guardian Gloves
 		[12] = {itemID = 4254, spellID = 3771 }; --Barbaric Gloves
@@ -1397,28 +1392,28 @@ AtlasLoot_Data["LeatherworkingCLASSIC"] = {
 	};
 	{
 		Name = AL["Leather Armor"] .. WHITE .. " - Head";
-		[1] = {itemID = 16983, spellID = 20854 }; --Molten Helm
-		[2] = {itemID = 22759, spellID = 28472 }; --Bramblewood Helm
-		[3] = {itemID = 15094, spellID = 19082 }; --Runic Leather Headband
-		[4] = {itemID = 15086, spellID = 19071 }; --Wicked Leather Headband
-		[5] = {itemID = 8348, spellID = 10632 }; --Helm of Fire
-		[6] = {itemID = 8214, spellID = 10546 }; --Wild Leather Helmet
-		[7] = {itemID = 8345, spellID = 10621 }; --Wolfshead Helm
-		[8] = {itemID = 8201, spellID = 10531 }; --Big Voodoo Mask
-		[9] = {itemID = 8176, spellID = 10507 }; --Nightscape Headband
+		[01] = {itemID = 16983, spellID = 20854 }; --Molten Helm
+		[02] = {itemID = 22759, spellID = 28472 }; --Bramblewood Helm
+		[03] = {itemID = 15094, spellID = 19082 }; --Runic Leather Headband
+		[04] = {itemID = 15086, spellID = 19071 }; --Wicked Leather Headband
+		[05] = {itemID = 8348, spellID = 10632 }; --Helm of Fire
+		[06] = {itemID = 8214, spellID = 10546 }; --Wild Leather Helmet
+		[07] = {itemID = 8345, spellID = 10621 }; --Wolfshead Helm
+		[08] = {itemID = 8201, spellID = 10531 }; --Big Voodoo Mask
+		[09] = {itemID = 8176, spellID = 10507 }; --Nightscape Headband
 		[10] = {itemID = 8174, spellID = 10490 }; --Comfortable Leather Hat
 	};
 	{
 		Name = AL["Leather Armor"] .. WHITE .. " - Legs";
-		[1] = {itemID = 15095, spellID = 19091 }; --Runic Leather Pants
-		[2] = {itemID = 15062, spellID = 19097 }; --Devilsaur Leggings
-		[3] = {itemID = 15087, spellID = 19083 }; --Wicked Leather Pants
-		[4] = {itemID = 15069, spellID = 19074 }; --Frostsaber Leggings
-		[5] = {itemID = 15065, spellID = 19080 }; --Warbear Woolies
-		[6] = {itemID = 15060, spellID = 19078 }; --Living Leggings
-		[7] = {itemID = 15072, spellID = 19073 }; --Chimeric Leggings
-		[8] = {itemID = 15057, spellID = 19067 }; --Stormshroud Pants
-		[9] = {itemID = 15054, spellID = 19059 }; --Volcanic Leggings
+		[01] = {itemID = 15095, spellID = 19091 }; --Runic Leather Pants
+		[02] = {itemID = 15062, spellID = 19097 }; --Devilsaur Leggings
+		[03] = {itemID = 15087, spellID = 19083 }; --Wicked Leather Pants
+		[04] = {itemID = 15069, spellID = 19074 }; --Frostsaber Leggings
+		[05] = {itemID = 15065, spellID = 19080 }; --Warbear Woolies
+		[06] = {itemID = 15060, spellID = 19078 }; --Living Leggings
+		[07] = {itemID = 15072, spellID = 19073 }; --Chimeric Leggings
+		[08] = {itemID = 15057, spellID = 19067 }; --Stormshroud Pants
+		[09] = {itemID = 15054, spellID = 19059 }; --Volcanic Leggings
 		[10] = {itemID = 29964, spellID = 36074 }; --Blackstorm Leggings
 		[11] = {itemID = 29970, spellID = 36075 }; --Wildfeather Leggings
 		[12] = {itemID = 8212, spellID = 10572 }; --Wild Leather Leggings
@@ -1438,15 +1433,15 @@ AtlasLoot_Data["LeatherworkingCLASSIC"] = {
 	};
 	{
 		Name = AL["Leather Armor"] .. WHITE .. " - Shoulder";
-		[1] = {itemID = 19049, spellID = 23704 }; --Timbermaw Brawlers
-		[2] = {itemID = 19689, spellID = 24125 }; --Blood Tiger Shoulders
-		[3] = {itemID = 19058, spellID = 23706 }; --Golden Mantle of the Dawn
-		[4] = {itemID = 15096, spellID = 19103 }; --Runic Leather Shoulders
-		[5] = {itemID = 15055, spellID = 19101 }; --Volcanic Shoulders
-		[6] = {itemID = 15058, spellID = 19090 }; --Stormshroud Shoulders
-		[7] = {itemID = 19044, spellID = 23703 }; --Might of the Timbermaw
-		[8] = {itemID = 15067, spellID = 19062 }; --Ironfeather Shoulders
-		[9] = {itemID = 15061, spellID = 19061 }; --Living Shoulders
+		[01] = {itemID = 19049, spellID = 23704 }; --Timbermaw Brawlers
+		[02] = {itemID = 19689, spellID = 24125 }; --Blood Tiger Shoulders
+		[03] = {itemID = 19058, spellID = 23706 }; --Golden Mantle of the Dawn
+		[04] = {itemID = 15096, spellID = 19103 }; --Runic Leather Shoulders
+		[05] = {itemID = 15055, spellID = 19101 }; --Volcanic Shoulders
+		[06] = {itemID = 15058, spellID = 19090 }; --Stormshroud Shoulders
+		[07] = {itemID = 19044, spellID = 23703 }; --Might of the Timbermaw
+		[08] = {itemID = 15067, spellID = 19062 }; --Ironfeather Shoulders
+		[09] = {itemID = 15061, spellID = 19061 }; --Living Shoulders
 		[10] = {itemID = 8210, spellID = 10529 }; --Wild Leather Shoulders
 		[11] = {itemID = 8192, spellID = 10516 }; --Nightscape Shoulders
 		[12] = {itemID = 5964, spellID = 7151 }; --Barbaric Shoulders
@@ -1456,15 +1451,15 @@ AtlasLoot_Data["LeatherworkingCLASSIC"] = {
 	};
 	{
 		Name = AL["Leather Armor"] .. WHITE .. " - Waist";
-		[1] = {itemID = 19162, spellID = 23709 }; --Corehound Belt
-		[2] = {itemID = 19149, spellID = 23707 }; --Lava Belt
-		[3] = {itemID = 19163, spellID = 23710 }; --Molten Belt
-		[4] = {itemID = 18504, spellID = 22921 }; --Girdle of Insight
-		[5] = {itemID = 22761, spellID = 28474 }; --Bramblewood Belt
-		[6] = {itemID = 15088, spellID = 19092 }; --Wicked Leather Belt
-		[7] = {itemID = 15093, spellID = 19072 }; --Runic Leather Belt
-		[8] = {itemID = 4264, spellID = 3779 }; --Barbaric Belt
-		[9] = {itemID = 7387, spellID = 9206 }; --Dusky Belt
+		[01] = {itemID = 19162, spellID = 23709 }; --Corehound Belt
+		[02] = {itemID = 19149, spellID = 23707 }; --Lava Belt
+		[03] = {itemID = 19163, spellID = 23710 }; --Molten Belt
+		[04] = {itemID = 18504, spellID = 22921 }; --Girdle of Insight
+		[05] = {itemID = 22761, spellID = 28474 }; --Bramblewood Belt
+		[06] = {itemID = 15088, spellID = 19092 }; --Wicked Leather Belt
+		[07] = {itemID = 15093, spellID = 19072 }; --Runic Leather Belt
+		[08] = {itemID = 4264, spellID = 3779 }; --Barbaric Belt
+		[09] = {itemID = 7387, spellID = 9206 }; --Dusky Belt
 		[10] = {itemID = 4262, spellID = 3778 }; --Gem-studded Leather Belt
 		[11] = {itemID = 4258, spellID = 3775 }; --Guardian Belt
 		[12] = {itemID = 4456, spellID = 4097 }; --Raptor Hide Belt
@@ -1478,154 +1473,154 @@ AtlasLoot_Data["LeatherworkingCLASSIC"] = {
 	};
 	{
 		Name = AL["Leather Armor"] .. WHITE .. " - Wrist";
-		[1] = {itemID = 22663, spellID = 28221 }; --Polar Bracers
-		[2] = {itemID = 19687, spellID = 24123 }; --Primal Batskin Bracers
-		[3] = {itemID = 15092, spellID = 19065 }; --Runic Leather Bracers
-		[4] = {itemID = 15084, spellID = 19052 }; --Wicked Leather Bracers
-		[5] = {itemID = 4260, spellID = 3777 }; --Guardian Leather Bracers
-		[6] = {itemID = 7386, spellID = 9202 }; --Green Whelp Bracers
-		[7] = {itemID = 5783, spellID = 6705 }; --Murloc Scale Bracers
-		[8] = {itemID = 7378, spellID = 9201 }; --Dusky Bracers
-		[9] = {itemID = 4259, spellID = 3776 }; --Green Leather Bracers
+		[01] = {itemID = 22663, spellID = 28221 }; --Polar Bracers
+		[02] = {itemID = 19687, spellID = 24123 }; --Primal Batskin Bracers
+		[03] = {itemID = 15092, spellID = 19065 }; --Runic Leather Bracers
+		[04] = {itemID = 15084, spellID = 19052 }; --Wicked Leather Bracers
+		[05] = {itemID = 4260, spellID = 3777 }; --Guardian Leather Bracers
+		[06] = {itemID = 7386, spellID = 9202 }; --Green Whelp Bracers
+		[07] = {itemID = 5783, spellID = 6705 }; --Murloc Scale Bracers
+		[08] = {itemID = 7378, spellID = 9201 }; --Dusky Bracers
+		[09] = {itemID = 4259, spellID = 3776 }; --Green Leather Bracers
 		[10] = {itemID = 18948, spellID = 23399 }; --Barbaric Bracers
 		[11] = {itemID = 7281, spellID = 9065 }; --Light Leather Bracers
 		[12] = {itemID = 7277, spellID = 9059 }; --Handstitched Leather Bracers
 	};
 	{
 		Name = AL["Mail Armor"] .. WHITE .. " - Chest";
-		[1] = {itemID = 22664, spellID = 28222 }; --Icy Scale Breastplate
-		[2] = {itemID = 20380, spellID = 24703 }; --Dreamscale Breastplate
-		[3] = {itemID = 20478, spellID = 24851 }; --Sandstalker Breastplate
-		[4] = {itemID = 20479, spellID = 24848 }; --Spitfire Breastplate
-		[5] = {itemID = 15047, spellID = 19054 }; --Red Dragonscale Breastplate
-		[6] = {itemID = 15050, spellID = 19085 }; --Black Dragonscale Breastplate
-		[7] = {itemID = 15048, spellID = 19077 }; --Blue Dragonscale Breastplate
-		[8] = {itemID = 15045, spellID = 19050 }; --Green Dragonscale Breastplate
-		[9] = {itemID = 15076, spellID = 19051 }; --Heavy Scorpid Vest
+		[01] = {itemID = 22664, spellID = 28222 }; --Icy Scale Breastplate
+		[02] = {itemID = 20380, spellID = 24703 }; --Dreamscale Breastplate
+		[03] = {itemID = 20478, spellID = 24851 }; --Sandstalker Breastplate
+		[04] = {itemID = 20479, spellID = 24848 }; --Spitfire Breastplate
+		[05] = {itemID = 15047, spellID = 19054 }; --Red Dragonscale Breastplate
+		[06] = {itemID = 15050, spellID = 19085 }; --Black Dragonscale Breastplate
+		[07] = {itemID = 15048, spellID = 19077 }; --Blue Dragonscale Breastplate
+		[08] = {itemID = 15045, spellID = 19050 }; --Green Dragonscale Breastplate
+		[09] = {itemID = 15076, spellID = 19051 }; --Heavy Scorpid Vest
 		[10] = {itemID = 8367, spellID = 10650 }; --Dragonscale Breastplate
 		[11] = {itemID = 8203, spellID = 10525 }; --Tough Scorpid Breastplate
 		[12] = {itemID = 8189, spellID = 10511 }; --Turtle Scale Breastplate
 	};
 	{
 		Name = AL["Mail Armor"] .. WHITE .. " - Feet";
-		[1] = {itemID = 16984, spellID = 20855 }; --Black Dragonscale Boots
-		[2] = {itemID = 8209, spellID = 10554 }; --Tough Scorpid Boots
+		[01] = {itemID = 16984, spellID = 20855 }; --Black Dragonscale Boots
+		[02] = {itemID = 8209, spellID = 10554 }; --Tough Scorpid Boots
 	};
 	{
 		Name = AL["Mail Armor"] .. WHITE .. " - Hands";
-		[1] = {itemID = 22666, spellID = 28223 }; --Icy Scale Gauntlets
-		[2] = {itemID = 19157, spellID = 23708 }; --Chromatic Gauntlets
-		[3] = {itemID = 20477, spellID = 24850 }; --Sandstalker Gauntlets
-		[4] = {itemID = 20480, spellID = 24847 }; --Spitfire Gauntlets
-		[5] = {itemID = 20296, spellID = 24655 }; --Green Dragonscale Gauntlets
-		[6] = {itemID = 15078, spellID = 19064 }; --Heavy Scorpid Gauntlets
-		[7] = {itemID = 8347, spellID = 10619 }; --Dragonscale Gauntlets
-		[8] = {itemID = 8204, spellID = 10542 }; --Tough Scorpid Gloves
-		[9] = {itemID = 8187, spellID = 10509 }; --Turtle Scale Gloves
+		[01] = {itemID = 22666, spellID = 28223 }; --Icy Scale Gauntlets
+		[02] = {itemID = 19157, spellID = 23708 }; --Chromatic Gauntlets
+		[03] = {itemID = 20477, spellID = 24850 }; --Sandstalker Gauntlets
+		[04] = {itemID = 20480, spellID = 24847 }; --Spitfire Gauntlets
+		[05] = {itemID = 20296, spellID = 24655 }; --Green Dragonscale Gauntlets
+		[06] = {itemID = 15078, spellID = 19064 }; --Heavy Scorpid Gauntlets
+		[07] = {itemID = 8347, spellID = 10619 }; --Dragonscale Gauntlets
+		[08] = {itemID = 8204, spellID = 10542 }; --Tough Scorpid Gloves
+		[09] = {itemID = 8187, spellID = 10509 }; --Turtle Scale Gloves
 	};
 	{
 		Name = AL["Mail Armor"] .. WHITE .. " - Head";
-		[1] = {itemID = 15080, spellID = 19088 }; --Heavy Scorpid Helm
-		[2] = {itemID = 8208, spellID = 10570 }; --Tough Scorpid Helm
-		[3] = {itemID = 8191, spellID = 10552 }; --Turtle Scale Helm
+		[01] = {itemID = 15080, spellID = 19088 }; --Heavy Scorpid Helm
+		[02] = {itemID = 8208, spellID = 10570 }; --Tough Scorpid Helm
+		[03] = {itemID = 8191, spellID = 10552 }; --Turtle Scale Helm
 	};
 	{
 		Name = AL["Mail Armor"] .. WHITE .. " - Legs";
-		[1] = {itemID = 20295, spellID = 24654 }; --Blue Dragonscale Leggings
-		[2] = {itemID = 15052, spellID = 19107 }; --Black Dragonscale Leggings
-		[3] = {itemID = 15079, spellID = 19075 }; --Heavy Scorpid Leggings
-		[4] = {itemID = 15046, spellID = 19060 }; --Green Dragonscale Leggings
-		[5] = {itemID = 29971, spellID = 36076 }; --Dragonstrike Leggings
-		[6] = {itemID = 8206, spellID = 10568 }; --Tough Scorpid Leggings
-		[7] = {itemID = 8185, spellID = 10556 }; --Turtle Scale Leggings
+		[01] = {itemID = 20295, spellID = 24654 }; --Blue Dragonscale Leggings
+		[02] = {itemID = 15052, spellID = 19107 }; --Black Dragonscale Leggings
+		[03] = {itemID = 15079, spellID = 19075 }; --Heavy Scorpid Leggings
+		[04] = {itemID = 15046, spellID = 19060 }; --Green Dragonscale Leggings
+		[05] = {itemID = 29971, spellID = 36076 }; --Dragonstrike Leggings
+		[06] = {itemID = 8206, spellID = 10568 }; --Tough Scorpid Leggings
+		[07] = {itemID = 8185, spellID = 10556 }; --Turtle Scale Leggings
 	};
 	{
 		Name = AL["Mail Armor"] .. WHITE .. " - Shoulder";
-		[1] = {itemID = 15051, spellID = 19094 }; --Black Dragonscale Shoulders
-		[2] = {itemID = 15081, spellID = 19100 }; --Heavy Scorpid Shoulders
-		[3] = {itemID = 15049, spellID = 19089 }; --Blue Dragonscale Shoulders
-		[4] = {itemID = 8207, spellID = 10564 }; --Tough Scorpid Shoulders
+		[01] = {itemID = 15051, spellID = 19094 }; --Black Dragonscale Shoulders
+		[02] = {itemID = 15081, spellID = 19100 }; --Heavy Scorpid Shoulders
+		[03] = {itemID = 15049, spellID = 19089 }; --Blue Dragonscale Shoulders
+		[04] = {itemID = 8207, spellID = 10564 }; --Tough Scorpid Shoulders
 
 	};
 	{
 		Name = AL["Mail Armor"] .. WHITE .. " - Waist";
-		[1] = {itemID = 15082, spellID = 19070 }; --Heavy Scorpid Belt
+		[01] = {itemID = 15082, spellID = 19070 }; --Heavy Scorpid Belt
 	};
 	{
 		Name = AL["Mail Armor"] .. WHITE .. " - Wrist";
-		[1] = {itemID = 22665, spellID = 28224 }; --Icy Scale Bracers
-		[2] = {itemID = 18508, spellID = 22923 }; --Swift Flight Bracers
-		[3] = {itemID = 20476, spellID = 24849 }; --Sandstalker Bracers
-		[4] = {itemID = 20481, spellID = 24846 }; --Spitfire Bracers
-		[5] = {itemID = 15077, spellID = 19048 }; --Heavy Scorpid Bracers
-		[6] = {itemID = 8205, spellID = 10533 }; --Tough Scorpid Bracers
-		[7] = {itemID = 8198, spellID = 10518 }; --Turtle Scale Bracers
+		[01] = {itemID = 22665, spellID = 28224 }; --Icy Scale Bracers
+		[02] = {itemID = 18508, spellID = 22923 }; --Swift Flight Bracers
+		[03] = {itemID = 20476, spellID = 24849 }; --Sandstalker Bracers
+		[04] = {itemID = 20481, spellID = 24846 }; --Spitfire Bracers
+		[05] = {itemID = 15077, spellID = 19048 }; --Heavy Scorpid Bracers
+		[06] = {itemID = 8205, spellID = 10533 }; --Tough Scorpid Bracers
+		[07] = {itemID = 8198, spellID = 10518 }; --Turtle Scale Bracers
 	};
 	{
 		Name = AL["Item Enhancements"];
-		[1] = {itemID = 15564, spellID = 19058 }; --Rugged Armor Kit
-		[2] = {itemID = 8173, spellID = 10487 }; --Thick Armor Kit
-		[3] = {itemID = 4265, spellID = 3780 }; --Heavy Armor Kit
-		[4] = {itemID = 2313, spellID = 2165 }; --Medium Armor Kit
-		[5] = {itemID = 2304, spellID = 2152 }; --Light Armor Kit
+		[01] = {itemID = 15564, spellID = 19058 }; --Rugged Armor Kit
+		[02] = {itemID = 8173, spellID = 10487 }; --Thick Armor Kit
+		[03] = {itemID = 4265, spellID = 3780 }; --Heavy Armor Kit
+		[04] = {itemID = 2313, spellID = 2165 }; --Medium Armor Kit
+		[05] = {itemID = 2304, spellID = 2152 }; --Light Armor Kit
 	};
 	{
 		Name = AL["Quivers and Ammo Pouches"];
-		[1] = {itemID = 8217, spellID = 14930 }; --Quickdraw Quiver
-		[2] = {itemID = 8218, spellID = 14932 }; --Thick Leather Ammo Pouch
-		[3] = {itemID = 7372, spellID = 9194 }; --Heavy Leather Ammo Pouch
-		[4] = {itemID = 7371, spellID = 9193 }; --Heavy Quiver
-		[5] = {itemID = 7278, spellID = 9060 }; --Light Leather Quiver
-		[6] = {itemID = 7279, spellID = 9062 }; --Small Leather Ammo Pouch
+		[01] = {itemID = 8217, spellID = 14930 }; --Quickdraw Quiver
+		[02] = {itemID = 8218, spellID = 14932 }; --Thick Leather Ammo Pouch
+		[03] = {itemID = 7372, spellID = 9194 }; --Heavy Leather Ammo Pouch
+		[04] = {itemID = 7371, spellID = 9193 }; --Heavy Quiver
+		[05] = {itemID = 7278, spellID = 9060 }; --Light Leather Quiver
+		[06] = {itemID = 7279, spellID = 9062 }; --Small Leather Ammo Pouch
 	};
 	{
 		Name = AL["Drums, Bags and Misc."];
-		[1] = {itemID = 18258, spellID = 22815 }; --Gordok Ogre Suit
-		[2] = {itemID = 18662, spellID = 23190 }; --Heavy Leather Ball
-		[3] = {itemID = 5081, spellID = 5244 }; --Kodo Hide Bag
+		[01] = {itemID = 18258, spellID = 22815 }; --Gordok Ogre Suit
+		[02] = {itemID = 18662, spellID = 23190 }; --Heavy Leather Ball
+		[03] = {itemID = 5081, spellID = 5244 }; --Kodo Hide Bag
 	};
 	{
 		Name = BabbleInventory["Leather"];
-		[1] = {itemID = 8170, spellID = 22331 }; --Rugged Leather
-		[2] = {itemID = 15407, spellID = 19047 }; --Cured Rugged Hide
-		[3] = {itemID = 4304, spellID = 20650 }; --Thick Leather
-		[4] = {itemID = 8172, spellID = 10482 }; --Cured Thick Hide
-		[5] = {itemID = 4234, spellID = 20649 }; --Heavy Leather
-		[6] = {itemID = 4236, spellID = 3818 }; --Cured Heavy Hide
-		[7] = {itemID = 2319, spellID = 20648 }; --Medium Leather
-		[8] = {itemID = 4233, spellID = 3817 }; --Cured Medium Hide
-		[9] = {itemID = 4231, spellID = 3816 }; --Cured Light Hide
+		[01] = {itemID = 8170, spellID = 22331 }; --Rugged Leather
+		[02] = {itemID = 15407, spellID = 19047 }; --Cured Rugged Hide
+		[03] = {itemID = 4304, spellID = 20650 }; --Thick Leather
+		[04] = {itemID = 8172, spellID = 10482 }; --Cured Thick Hide
+		[05] = {itemID = 4234, spellID = 20649 }; --Heavy Leather
+		[06] = {itemID = 4236, spellID = 3818 }; --Cured Heavy Hide
+		[07] = {itemID = 2319, spellID = 20648 }; --Medium Leather
+		[08] = {itemID = 4233, spellID = 3817 }; --Cured Medium Hide
+		[09] = {itemID = 4231, spellID = 3816 }; --Cured Light Hide
 		[10] = {itemID = 2318, spellID = 2881 }; --Light Leather
 	};
 	{
 		Name = DRAGONSCALE;
-		[1] = {itemID = 20295, spellID = 24654 }; --Blue Dragonscale Leggings
-		[2] = {itemID = 20296, spellID = 24655 }; --Green Dragonscale Gauntlets
-		[3] = {itemID = 29971, spellID = 36076 }; --Dragonstrike Leggings
-		[4] = {itemID = 8367, spellID = 10650 }; --Dragonscale Breastplate
-		[5] = {itemID = 8347, spellID = 10619 }; --Dragonscale Gauntlets
+		[01] = {itemID = 20295, spellID = 24654 }; --Blue Dragonscale Leggings
+		[02] = {itemID = 20296, spellID = 24655 }; --Green Dragonscale Gauntlets
+		[03] = {itemID = 29971, spellID = 36076 }; --Dragonstrike Leggings
+		[04] = {itemID = 8367, spellID = 10650 }; --Dragonscale Breastplate
+		[05] = {itemID = 8347, spellID = 10619 }; --Dragonscale Gauntlets
 	};
 	{
 		Name = ELEMENTAL;
-		[3] = {itemID = 8346, spellID = 10630 }; --Gauntlets of the Sea
-		[2] = {itemID = 8348, spellID = 10632 }; --Helm of Fire
-		[1] = {itemID = 29964, spellID = 36074 }; --Blackstorm Leggings
+		[03] = {itemID = 8346, spellID = 10630 }; --Gauntlets of the Sea
+		[02] = {itemID = 8348, spellID = 10632 }; --Helm of Fire
+		[01] = {itemID = 29964, spellID = 36074 }; --Blackstorm Leggings
 	};
 	{
 		Name = TRIBAL;
-		[3] = {itemID = 8345, spellID = 10621 }; --Wolfshead Helm
-		[2] = {itemID = 8349, spellID = 10647 }; --Feathered Breastplate
-		[1] = {itemID = 29970, spellID = 36075 }; --Wildfeather Leggings
+		[03] = {itemID = 8345, spellID = 10621 }; --Wolfshead Helm
+		[02] = {itemID = 8349, spellID = 10647 }; --Feathered Breastplate
+		[01] = {itemID = 29970, spellID = 36075 }; --Wildfeather Leggings
 	};
 	{
 		Name = AL["High Risk"];
-		[1] = { name = AL["Rare"], icon = "INV_Box_01"},
-		[2] = {itemID = 967155, spellID = 968001 }; --Sturdy Yeti Gambeson
-		[3] = {itemID = 967158, spellID = 968004 }; --Sturdy Devilsaur Gambeson
-		[4] = {itemID = 967161, spellID = 968007 }; --Sturdy Plaguebat Gambeson
-		[5] = {itemID = 967164, spellID = 968010 }; --Sturdy Sandworm Gambeson
-		[6] = {itemID = 967167, spellID = 968013 }; --Sturdy Black Scale Gambeson
-		[7] = {itemID = 967170, spellID = 968016 }; --Sturdy Blue Scale Gambeson
+		[01] = { name = AL["Rare"], icon = "INV_Box_01"},
+		[02] = {itemID = 967155, spellID = 968001 }; --Sturdy Yeti Gambeson
+		[03] = {itemID = 967158, spellID = 968004 }; --Sturdy Devilsaur Gambeson
+		[04] = {itemID = 967161, spellID = 968007 }; --Sturdy Plaguebat Gambeson
+		[05] = {itemID = 967164, spellID = 968010 }; --Sturdy Sandworm Gambeson
+		[06] = {itemID = 967167, spellID = 968013 }; --Sturdy Black Scale Gambeson
+		[07] = {itemID = 967170, spellID = 968016 }; --Sturdy Blue Scale Gambeson
 		[16] = { name = AL["Epic"], icon = "INV_Box_01"},
 		[17] = {itemID = 967156, spellID = 968002 }; --Mastercraft Yeti Gambeson
 		[18] = {itemID = 967159, spellID = 968005 }; --Mastercraft Devilsaur Gambeson
@@ -1646,15 +1641,15 @@ AtlasLoot_Data["MiningCLASSIC"] = {
 	Type = "ClassicCrafting";
 	{
 		Name = AL["Smelting"];
-		[1] = {itemID = 17771, spellID = 22967 }; --Smelt Elementium
-		[2] = {itemID = 12655, spellID = 70524 }; --Enchanted Thorium
-		[3] = {itemID = 12359, spellID = 16153 }; --Smelt Thorium
-		[4] = {itemID = 11371, spellID = 14891 }; --Smelt Dark Iron
-		[5] = {itemID = 6037, spellID = 10098 }; --Smelt Truesilver
-		[6] = {itemID = 3860, spellID = 10097 }; --Smelt Mithril
-		[7] = {itemID = 3859, spellID = 3569 }; --Smelt Steel
-		[8] = {itemID = 3577, spellID = 3308 }; --Smelt Gold
-		[9] = {itemID = 3575, spellID = 3307 }; --Smelt Iron
+		[01] = {itemID = 17771, spellID = 22967 }; --Smelt Elementium
+		[02] = {itemID = 12655, spellID = 70524 }; --Enchanted Thorium
+		[03] = {itemID = 12359, spellID = 16153 }; --Smelt Thorium
+		[04] = {itemID = 11371, spellID = 14891 }; --Smelt Dark Iron
+		[05] = {itemID = 6037, spellID = 10098 }; --Smelt Truesilver
+		[06] = {itemID = 3860, spellID = 10097 }; --Smelt Mithril
+		[07] = {itemID = 3859, spellID = 3569 }; --Smelt Steel
+		[08] = {itemID = 3577, spellID = 3308 }; --Smelt Gold
+		[09] = {itemID = 3575, spellID = 3307 }; --Smelt Iron
 		[10] = {itemID = 2842, spellID = 2658 }; --Smelt Silver
 		[11] = {itemID = 2841, spellID = 2659 }; --Smelt Bronze
 		[12] = {itemID = 3576, spellID = 3304 }; --Smelt Tin
@@ -1662,15 +1657,15 @@ AtlasLoot_Data["MiningCLASSIC"] = {
 	};
 	{
 		Name = AL["Materials"];
-		[1] = {itemID = 10620 }; --Thorium
-		[2] = {itemID = 11370 }; --Dark Iron
-		[3] = {itemID = 7911 }; --Truesilver
-		[4] = {itemID = 3858 }; --Mithril
-		[5] = {itemID = 2776 }; --Gold
-		[6] = {itemID = 2772 }; --Iron
-		[7] = {itemID = 2775 }; --Silver
-		[8] = {itemID = 2771 }; --Tin
-		[9] = {itemID = 2770 }; --Copper
+		[01] = {itemID = 10620 }; --Thorium
+		[02] = {itemID = 11370 }; --Dark Iron
+		[03] = {itemID = 7911 }; --Truesilver
+		[04] = {itemID = 3858 }; --Mithril
+		[05] = {itemID = 2776 }; --Gold
+		[06] = {itemID = 2772 }; --Iron
+		[07] = {itemID = 2775 }; --Silver
+		[08] = {itemID = 2771 }; --Tin
+		[09] = {itemID = 2770 }; --Copper
 	};
 };
 
@@ -1684,15 +1679,15 @@ AtlasLoot_Data["TailoringCLASSIC"] = {
 	Type = "ClassicCrafting";
 	{
 		Name = AL["Cloth Armor"] .. WHITE .. " - Back";
-		[1] = {itemID = 22658, spellID = 28208 }; --Glacial Cloak
-		[2] = {itemID = 22660, spellID = 28210 }; --Gaea's Embrace
-		[3] = {itemID = 18413, spellID = 22870 }; --Cloak of Warding
-		[4] = {itemID = 19047, spellID = 23662 }; --Wisdom of the Timbermaw
-		[5] = {itemID = 14134, spellID = 18422 }; --Cloak of Fire
-		[6] = {itemID = 13860, spellID = 18409 }; --Runecloth Cloak
-		[7] = {itemID = 4327, spellID = 3862 }; --Icy Cloak
-		[8] = {itemID = 45626, spellID = 63742 }; --Spidersilk Drape
-		[9] = {itemID = 14103, spellID = 18420 }; --Brightcloth Cloak
+		[01] = {itemID = 22658, spellID = 28208 }; --Glacial Cloak
+		[02] = {itemID = 22660, spellID = 28210 }; --Gaea's Embrace
+		[03] = {itemID = 18413, spellID = 22870 }; --Cloak of Warding
+		[04] = {itemID = 19047, spellID = 23662 }; --Wisdom of the Timbermaw
+		[05] = {itemID = 14134, spellID = 18422 }; --Cloak of Fire
+		[06] = {itemID = 13860, spellID = 18409 }; --Runecloth Cloak
+		[07] = {itemID = 4327, spellID = 3862 }; --Icy Cloak
+		[08] = {itemID = 45626, spellID = 63742 }; --Spidersilk Drape
+		[09] = {itemID = 14103, spellID = 18420 }; --Brightcloth Cloak
 		[10] = {itemID = 14044, spellID = 18418 }; --Cindercloth Cloak
 		[11] = {itemID = 4326, spellID = 3861 }; --Long Silken Cloak
 		[12] = {itemID = 7056, spellID = 8789 }; --Crimson Silk Cloak
@@ -1706,15 +1701,15 @@ AtlasLoot_Data["TailoringCLASSIC"] = {
 	};
 	{
 		Name = AL["Cloth Armor"] .. WHITE .. " - Chest 1";
-		[1] = {itemID = 19156, spellID = 23666 }; --Flarecore Robe
-		[2] = {itemID = 22652, spellID = 28207 }; --Glacial Vest
-		[3] = {itemID = 14152, spellID = 18457 }; --Robe of the Archmage
-		[4] = {itemID = 14153, spellID = 18458 }; --Robe of the Void
-		[5] = {itemID = 14154, spellID = 18456 }; --Truefaith Vestments
-		[6] = {itemID = 19682, spellID = 24091 }; --Bloodvine Vest
-		[7] = {itemID = 18486, spellID = 22902 }; --Mooncloth Robe
-		[8] = {itemID = 14138, spellID = 18447 }; --Mooncloth Vest
-		[9] = {itemID = 22756, spellID = 28480 }; --Sylvan Vest
+		[01] = {itemID = 19156, spellID = 23666 }; --Flarecore Robe
+		[02] = {itemID = 22652, spellID = 28207 }; --Glacial Vest
+		[03] = {itemID = 14152, spellID = 18457 }; --Robe of the Archmage
+		[04] = {itemID = 14153, spellID = 18458 }; --Robe of the Void
+		[05] = {itemID = 14154, spellID = 18456 }; --Truefaith Vestments
+		[06] = {itemID = 19682, spellID = 24091 }; --Bloodvine Vest
+		[07] = {itemID = 18486, spellID = 22902 }; --Mooncloth Robe
+		[08] = {itemID = 14138, spellID = 18447 }; --Mooncloth Vest
+		[09] = {itemID = 22756, spellID = 28480 }; --Sylvan Vest
 		[10] = {itemID = 14106, spellID = 18451 }; --Felcloth Robe
 		[11] = {itemID = 14128, spellID = 18446 }; --Wizardweave Robe
 		[12] = {itemID = 14136, spellID = 18436 }; --Robe of Winter Night
@@ -1739,15 +1734,15 @@ AtlasLoot_Data["TailoringCLASSIC"] = {
 	};
 	{
 		Name = AL["Cloth Armor"] .. WHITE .. " - Chest 2";
-		[1] = {itemID = 10007, spellID = 12056 }; --Red Mageweave Vest
-		[2] = {itemID = 10004, spellID = 12055 }; --Shadoweave Robe
-		[3] = {itemID = 10001, spellID = 12050 }; --Black Mageweave Robe
-		[4] = {itemID = 9998, spellID = 12048 }; --Black Mageweave Vest
-		[5] = {itemID = 7063, spellID = 8802 }; --Crimson Silk Robe
-		[6] = {itemID = 7054, spellID = 8770 }; --Robe of Power
-		[7] = {itemID = 7058, spellID = 8791 }; --Crimson Silk Vest
-		[8] = {itemID = 7051, spellID = 8764 }; --Earthen Vest
-		[9] = {itemID = 7065, spellID = 8784 }; --Green Silk Armor
+		[01] = {itemID = 10007, spellID = 12056 }; --Red Mageweave Vest
+		[02] = {itemID = 10004, spellID = 12055 }; --Shadoweave Robe
+		[03] = {itemID = 10001, spellID = 12050 }; --Black Mageweave Robe
+		[04] = {itemID = 9998, spellID = 12048 }; --Black Mageweave Vest
+		[05] = {itemID = 7063, spellID = 8802 }; --Crimson Silk Robe
+		[06] = {itemID = 7054, spellID = 8770 }; --Robe of Power
+		[07] = {itemID = 7058, spellID = 8791 }; --Crimson Silk Vest
+		[08] = {itemID = 7051, spellID = 8764 }; --Earthen Vest
+		[09] = {itemID = 7065, spellID = 8784 }; --Green Silk Armor
 		[10] = {itemID = 4324, spellID = 3859 }; --Azure Silk Vest
 		[11] = {itemID = 5770, spellID = 6692 }; --Robes of Arcana
 		[12] = {itemID = 5766, spellID = 6690 }; --Lesser Wizard's Robe
@@ -1768,15 +1763,15 @@ AtlasLoot_Data["TailoringCLASSIC"] = {
 	};
 	{
 		Name = AL["Cloth Armor"] .. WHITE .. " - Feet";
-		[1] = {itemID = 19684, spellID = 24093 }; --Bloodvine Boots
-		[2] = {itemID = 20537, spellID = 24903 }; --Runed Stygian Boots
-		[3] = {itemID = 15802, spellID = 19435 }; --Mooncloth Boots
-		[4] = {itemID = 19056, spellID = 23664 }; --Argent Boots
-		[5] = {itemID = 14108, spellID = 18437 }; --Felcloth Boots
-		[6] = {itemID = 13864, spellID = 18423 }; --Runecloth Boots
-		[7] = {itemID = 10044, spellID = 12088 }; --Cindercloth Boots
-		[8] = {itemID = 10031, spellID = 12082 }; --Shadoweave Boots
-		[9] = {itemID = 10026, spellID = 12073 }; --Black Mageweave Boots
+		[01] = {itemID = 19684, spellID = 24093 }; --Bloodvine Boots
+		[02] = {itemID = 20537, spellID = 24903 }; --Runed Stygian Boots
+		[03] = {itemID = 15802, spellID = 19435 }; --Mooncloth Boots
+		[04] = {itemID = 19056, spellID = 23664 }; --Argent Boots
+		[05] = {itemID = 14108, spellID = 18437 }; --Felcloth Boots
+		[06] = {itemID = 13864, spellID = 18423 }; --Runecloth Boots
+		[07] = {itemID = 10044, spellID = 12088 }; --Cindercloth Boots
+		[08] = {itemID = 10031, spellID = 12082 }; --Shadoweave Boots
+		[09] = {itemID = 10026, spellID = 12073 }; --Black Mageweave Boots
 		[10] = {itemID = 4325, spellID = 3860 }; --Boots of the Enchanter
 		[11] = {itemID = 4321, spellID = 3856 }; --Spider Silk Slippers
 		[12] = {itemID = 4320, spellID = 3855 }; --Spidersilk Boots
@@ -1789,15 +1784,15 @@ AtlasLoot_Data["TailoringCLASSIC"] = {
 	};
 	{
 		Name = AL["Cloth Armor"] .. WHITE .. " - Hands";
-		[1] = {itemID = 16979, spellID = 20849 }; --Flarecore Gloves
-		[2] = {itemID = 22654, spellID = 28205 }; --Glacial Gloves
-		[3] = {itemID = 14146, spellID = 18454 }; --Gloves of Spell Mastery
-		[4] = {itemID = 18407, spellID = 22867 }; --Felcloth Gloves
-		[5] = {itemID = 18408, spellID = 22868 }; --Inferno Gloves
-		[6] = {itemID = 18409, spellID = 22869 }; --Mooncloth Gloves
-		[7] = {itemID = 10019, spellID = 12067 }; --Dreamweave Gloves
-		[8] = {itemID = 13863, spellID = 18417 }; --Runecloth Gloves
-		[9] = {itemID = 14101, spellID = 18415 }; --Brightcloth Gloves
+		[01] = {itemID = 16979, spellID = 20849 }; --Flarecore Gloves
+		[02] = {itemID = 22654, spellID = 28205 }; --Glacial Gloves
+		[03] = {itemID = 14146, spellID = 18454 }; --Gloves of Spell Mastery
+		[04] = {itemID = 18407, spellID = 22867 }; --Felcloth Gloves
+		[05] = {itemID = 18408, spellID = 22868 }; --Inferno Gloves
+		[06] = {itemID = 18409, spellID = 22869 }; --Mooncloth Gloves
+		[07] = {itemID = 10019, spellID = 12067 }; --Dreamweave Gloves
+		[08] = {itemID = 13863, spellID = 18417 }; --Runecloth Gloves
+		[09] = {itemID = 14101, spellID = 18415 }; --Brightcloth Gloves
 		[10] = {itemID = 14043, spellID = 18412 }; --Cindercloth Gloves
 		[11] = {itemID = 14142, spellID = 18413 }; --Ghostweave Gloves
 		[12] = {itemID = 13870, spellID = 18411 }; --Frostweave Gloves
@@ -1814,15 +1809,15 @@ AtlasLoot_Data["TailoringCLASSIC"] = {
 	};
 	{
 		Name = AL["Cloth Armor"] .. WHITE .. " - Head";
-		[1] = {itemID = 14140, spellID = 18452 }; --Mooncloth Circlet
-		[2] = {itemID = 22757, spellID = 28481 }; --Sylvan Crown
-		[3] = {itemID = 14130, spellID = 18450 }; --Wizardweave Turban
-		[4] = {itemID = 13866, spellID = 18444 }; --Runecloth Headband
-		[5] = {itemID = 14111, spellID = 18442 }; --Felcloth Hood
-		[6] = {itemID = 10041, spellID = 12092 }; --Dreamweave Circlet
-		[7] = {itemID = 10025, spellID = 12086 }; --Shadoweave Mask
-		[8] = {itemID = 10030, spellID = 12081 }; --Admiral's Hat
-		[9] = {itemID = 10033, spellID = 12084 }; --Red Mageweave Headband
+		[01] = {itemID = 14140, spellID = 18452 }; --Mooncloth Circlet
+		[02] = {itemID = 22757, spellID = 28481 }; --Sylvan Crown
+		[03] = {itemID = 14130, spellID = 18450 }; --Wizardweave Turban
+		[04] = {itemID = 13866, spellID = 18444 }; --Runecloth Headband
+		[05] = {itemID = 14111, spellID = 18442 }; --Felcloth Hood
+		[06] = {itemID = 10041, spellID = 12092 }; --Dreamweave Circlet
+		[07] = {itemID = 10025, spellID = 12086 }; --Shadoweave Mask
+		[08] = {itemID = 10030, spellID = 12081 }; --Admiral's Hat
+		[09] = {itemID = 10033, spellID = 12084 }; --Red Mageweave Headband
 		[10] = {itemID = 10024, spellID = 12072 }; --Black Mageweave Headband
 		[11] = {itemID = 10008, spellID = 12059 }; --White Bandit Mask
 		[12] = {itemID = 4323, spellID = 3858 }; --Shadow Hood
@@ -1832,15 +1827,15 @@ AtlasLoot_Data["TailoringCLASSIC"] = {
 	};
 	{
 		Name = AL["Cloth Armor"] .. WHITE .. " - Legs";
-		[1] = {itemID = 19165, spellID = 23667 }; --Flarecore Leggings
-		[2] = {itemID = 19683, spellID = 24092 }; --Bloodvine Leggings
-		[3] = {itemID = 20538, spellID = 24901 }; --Runed Stygian Leggings
-		[4] = {itemID = 14137, spellID = 18440 }; --Mooncloth Leggings
-		[5] = {itemID = 14104, spellID = 18439 }; --Brightcloth Pants
-		[6] = {itemID = 14144, spellID = 18441 }; --Ghostweave Pants
-		[7] = {itemID = 13865, spellID = 18438 }; --Runecloth Pants
-		[8] = {itemID = 14045, spellID = 18434 }; --Cindercloth Pants
-		[9] = {itemID = 13871, spellID = 18424 }; --Frostweave Pants
+		[01] = {itemID = 19165, spellID = 23667 }; --Flarecore Leggings
+		[02] = {itemID = 19683, spellID = 24092 }; --Bloodvine Leggings
+		[03] = {itemID = 20538, spellID = 24901 }; --Runed Stygian Leggings
+		[04] = {itemID = 14137, spellID = 18440 }; --Mooncloth Leggings
+		[05] = {itemID = 14104, spellID = 18439 }; --Brightcloth Pants
+		[06] = {itemID = 14144, spellID = 18441 }; --Ghostweave Pants
+		[07] = {itemID = 13865, spellID = 18438 }; --Runecloth Pants
+		[08] = {itemID = 14045, spellID = 18434 }; --Cindercloth Pants
+		[09] = {itemID = 13871, spellID = 18424 }; --Frostweave Pants
 		[10] = {itemID = 14107, spellID = 18419 }; --Felcloth Pants
 		[11] = {itemID = 14132, spellID = 18421 }; --Wizardweave Leggings
 		[12] = {itemID = 10035, spellID = 12089 }; --Tuxedo Pants
@@ -1859,15 +1854,15 @@ AtlasLoot_Data["TailoringCLASSIC"] = {
 	};
 	{
 		Name = AL["Cloth Armor"] .. WHITE .. " - Shoulder";
-		[1] = {itemID = 16980, spellID = 20848 }; --Flarecore Mantle
-		[2] = {itemID = 19059, spellID = 23665 }; --Argent Shoulders
-		[3] = {itemID = 19050, spellID = 23663 }; --Mantle of the Timbermaw
-		[4] = {itemID = 14139, spellID = 18448 }; --Mooncloth Shoulders
-		[5] = {itemID = 22758, spellID = 28482 }; --Sylvan Shoulders
-		[6] = {itemID = 14112, spellID = 18453 }; --Felcloth Shoulders
-		[7] = {itemID = 13867, spellID = 18449 }; --Runecloth Shoulders
-		[8] = {itemID = 10029, spellID = 12078 }; --Red Mageweave Shoulders
-		[9] = {itemID = 10028, spellID = 12076 }; --Shadoweave Shoulders
+		[01] = {itemID = 16980, spellID = 20848 }; --Flarecore Mantle
+		[02] = {itemID = 19059, spellID = 23665 }; --Argent Shoulders
+		[03] = {itemID = 19050, spellID = 23663 }; --Mantle of the Timbermaw
+		[04] = {itemID = 14139, spellID = 18448 }; --Mooncloth Shoulders
+		[05] = {itemID = 22758, spellID = 28482 }; --Sylvan Shoulders
+		[06] = {itemID = 14112, spellID = 18453 }; --Felcloth Shoulders
+		[07] = {itemID = 13867, spellID = 18449 }; --Runecloth Shoulders
+		[08] = {itemID = 10029, spellID = 12078 }; --Red Mageweave Shoulders
+		[09] = {itemID = 10028, spellID = 12076 }; --Shadoweave Shoulders
 		[10] = {itemID = 10027, spellID = 12074 }; --Black Mageweave Shoulders
 		[11] = {itemID = 7062, spellID = 8799 }; --Crimson Silk Pantaloons
 		[12] = {itemID = 7060, spellID = 8795 }; --Azure Shoulders
@@ -1878,34 +1873,34 @@ AtlasLoot_Data["TailoringCLASSIC"] = {
 	};
 	{
 		Name = AL["Cloth Armor"] .. WHITE .. " - Waist";
-		[1] = {itemID = 18405, spellID = 22866 }; --Belt of the Archmage
-		[2] = {itemID = 20539, spellID = 24902 }; --Runed Stygian Belt
-		[3] = {itemID = 14143, spellID = 18410 }; --Ghostweave Belt
-		[4] = {itemID = 13856, spellID = 18402 }; --Runecloth Belt
-		[5] = {itemID = 4329, spellID = 3864 }; --Star Belt
-		[6] = {itemID = 7061, spellID = 8797 }; --Earthen Silk Belt
-		[7] = {itemID = 4328, spellID = 3863 }; --Spider Belt
-		[8] = {itemID = 7052, spellID = 8766 }; --Azure Silk Belt
-		[9] = {itemID = 7055, spellID = 8772 }; --Crimson Silk Belt
+		[01] = {itemID = 18405, spellID = 22866 }; --Belt of the Archmage
+		[02] = {itemID = 20539, spellID = 24902 }; --Runed Stygian Belt
+		[03] = {itemID = 14143, spellID = 18410 }; --Ghostweave Belt
+		[04] = {itemID = 13856, spellID = 18402 }; --Runecloth Belt
+		[05] = {itemID = 4329, spellID = 3864 }; --Star Belt
+		[06] = {itemID = 7061, spellID = 8797 }; --Earthen Silk Belt
+		[07] = {itemID = 4328, spellID = 3863 }; --Spider Belt
+		[08] = {itemID = 7052, spellID = 8766 }; --Azure Silk Belt
+		[09] = {itemID = 7055, spellID = 8772 }; --Crimson Silk Belt
 		[10] = {itemID = 7026, spellID = 8776 }; --Linen Belt
 	};
 	{
 		Name = AL["Cloth Armor"] .. WHITE .. " - Wrist";
-		[1] = {itemID = 18263, spellID = 22759 }; --Flarecore Wraps
-		[2] = {itemID = 22655, spellID = 28209 }; --Glacial Wrists
-		[3] = {itemID = 4308, spellID = 3841 }; --Green Linen Bracers
+		[01] = {itemID = 18263, spellID = 22759 }; --Flarecore Wraps
+		[02] = {itemID = 22655, spellID = 28209 }; --Glacial Wrists
+		[03] = {itemID = 4308, spellID = 3841 }; --Green Linen Bracers
 	};
 	{
 		Name = AL["Bags"];
-		[1] = {itemID = 21342, spellID = 26087 }; --Core Felcloth Bag
-		[2] = {itemID = 14156, spellID = 18455 }; --Bottomless Bag
-		[3] = {itemID = 21341, spellID = 26086 }; --Felcloth Bag
-		[4] = {itemID = 22249, spellID = 27660 }; --Big Bag of Enchantment
-		[5] = {itemID = 14155, spellID = 18445 }; --Mooncloth Bag
-		[6] = {itemID = 22252, spellID = 27725 }; --Satchel of Cenarius
-		[7] = {itemID = 22248, spellID = 27659 }; --Enchanted Runecloth Bag
-		[8] = {itemID = 22251, spellID = 27724 }; --Cenarion Herb Bag
-		[9] = {itemID = 21340, spellID = 26085 }; --Soul Pouch
+		[01] = {itemID = 21342, spellID = 26087 }; --Core Felcloth Bag
+		[02] = {itemID = 14156, spellID = 18455 }; --Bottomless Bag
+		[03] = {itemID = 21341, spellID = 26086 }; --Felcloth Bag
+		[04] = {itemID = 22249, spellID = 27660 }; --Big Bag of Enchantment
+		[05] = {itemID = 14155, spellID = 18445 }; --Mooncloth Bag
+		[06] = {itemID = 22252, spellID = 27725 }; --Satchel of Cenarius
+		[07] = {itemID = 22248, spellID = 27659 }; --Enchanted Runecloth Bag
+		[08] = {itemID = 22251, spellID = 27724 }; --Cenarion Herb Bag
+		[09] = {itemID = 21340, spellID = 26085 }; --Soul Pouch
 		[10] = {itemID = 22246, spellID = 27658 }; --Enchanted Mageweave Pouch
 		[11] = {itemID = 14046, spellID = 18405 }; --Runecloth Bag
 		[12] = {itemID = 10051, spellID = 12079 }; --Red Mageweave Bag
@@ -1921,24 +1916,24 @@ AtlasLoot_Data["TailoringCLASSIC"] = {
 	};
 	{
 		Name = AL["Miscellaneous"];
-		[1] = {itemID = 14342, spellID = 18560 }; --Mooncloth
-		[2] = {itemID = 14048, spellID = 18401 }; --Bolt of Runecloth
-		[3] = {itemID = 4339, spellID = 3865 }; --Bolt of Mageweave
-		[4] = {itemID = 4305, spellID = 3839 }; --Bolt of Silk Cloth
-		[5] = {itemID = 2997, spellID = 2964 }; --Bolt of Woolen Cloth
-		[6] = {itemID = 2996, spellID = 2963 }; --Bolt of Linen Cloth
+		[01] = {itemID = 14342, spellID = 18560 }; --Mooncloth
+		[02] = {itemID = 14048, spellID = 18401 }; --Bolt of Runecloth
+		[03] = {itemID = 4339, spellID = 3865 }; --Bolt of Mageweave
+		[04] = {itemID = 4305, spellID = 3839 }; --Bolt of Silk Cloth
+		[05] = {itemID = 2997, spellID = 2964 }; --Bolt of Woolen Cloth
+		[06] = {itemID = 2996, spellID = 2963 }; --Bolt of Linen Cloth
 	};
 	{
 		Name = AL["Shirts"];
-		[1] = {itemID = 10034, spellID = 12085 }; --Tuxedo Shirt
-		[2] = {itemID = 10055, spellID = 12080 }; --Pink Mageweave Shirt
-		[3] = {itemID = 10054, spellID = 12075 }; --Lavender Mageweave Shirt
-		[4] = {itemID = 10052, spellID = 12064 }; --Orange Martial Shirt
-		[5] = {itemID = 10056, spellID = 12061 }; --Orange Mageweave Shirt
-		[6] = {itemID = 4336, spellID = 3873 }; --Black Swashbuckler's Shirt
-		[7] = {itemID = 17723, spellID = 21945 }; --Green Holiday Shirt
-		[8] = {itemID = 4335, spellID = 3872 }; --Rich Purple Silk Shirt
-		[9] = {itemID = 6796, spellID = 8489 }; --Red Swashbuckler's Shirt
+		[01] = {itemID = 10034, spellID = 12085 }; --Tuxedo Shirt
+		[02] = {itemID = 10055, spellID = 12080 }; --Pink Mageweave Shirt
+		[03] = {itemID = 10054, spellID = 12075 }; --Lavender Mageweave Shirt
+		[04] = {itemID = 10052, spellID = 12064 }; --Orange Martial Shirt
+		[05] = {itemID = 10056, spellID = 12061 }; --Orange Mageweave Shirt
+		[06] = {itemID = 4336, spellID = 3873 }; --Black Swashbuckler's Shirt
+		[07] = {itemID = 17723, spellID = 21945 }; --Green Holiday Shirt
+		[08] = {itemID = 4335, spellID = 3872 }; --Rich Purple Silk Shirt
+		[09] = {itemID = 6796, spellID = 8489 }; --Red Swashbuckler's Shirt
 		[10] = {itemID = 4334, spellID = 3871 }; --Formal White Shirt
 		[11] = {itemID = 6795, spellID = 8483 }; --White Swashbuckler's Shirt
 		[12] = {itemID = 4333, spellID = 3870 }; --Dark Silk Shirt
@@ -1955,13 +1950,13 @@ AtlasLoot_Data["TailoringCLASSIC"] = {
 	};
 	{
 		Name = AL["High Risk"];
-		[1] = { name = AL["Rare"], icon = "INV_Box_01"},
-		[2] = {itemID = 967817, spellID = 968500 }; --Wrist Wraps of Precision
-		[3] = {itemID = 967813, spellID = 968496 }; --Wrist Wraps of Might
-		[4] = {itemID = 967823, spellID = 968506 }; --Wrist Wraps of Glory
-		[5] = {itemID = 967815, spellID = 968498 }; --Wrist Wraps of Fury
-		[6] = {itemID = 967819, spellID = 968502 }; --Wrist Wraps of Efficiency
-		[7] = {itemID = 967821, spellID = 968504 }; --Wrist Wraps of Crushing
+		[01] = { name = AL["Rare"], icon = "INV_Box_01"},
+		[02] = {itemID = 967817, spellID = 968500 }; --Wrist Wraps of Precision
+		[03] = {itemID = 967813, spellID = 968496 }; --Wrist Wraps of Might
+		[04] = {itemID = 967823, spellID = 968506 }; --Wrist Wraps of Glory
+		[05] = {itemID = 967815, spellID = 968498 }; --Wrist Wraps of Fury
+		[06] = {itemID = 967819, spellID = 968502 }; --Wrist Wraps of Efficiency
+		[07] = {itemID = 967821, spellID = 968504 }; --Wrist Wraps of Crushing
 		[16] = { name = AL["Epic"], icon = "INV_Box_01"},
 		[17] = {itemID = 967818, spellID = 968501 }; --Fitted Wrist Wraps of Precision
 		[18] = {itemID = 967814, spellID = 968497 }; --Fitted Wrist Wraps of Might

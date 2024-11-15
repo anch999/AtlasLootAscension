@@ -1,50 +1,41 @@
 local difficultyList = {
-	["Heroic"] = 3,
-	["Mythic"] = 4,
-	["Heroic Raid"] = 3,
-	["Mythic Raid"] = 4,
-	["Ascended Raid"] = 5,
-	["Heroic Bloodforged"] = 100,
 	["Bloodforged"] = 1,
-	["Mythic 1"] = 5,  ["Mythic 2"] = 6,  ["Mythic 3"] = 7,  ["Mythic 4"] = 8,  ["Mythic 5"] = 9,
-	["Mythic 6"] = 10, ["Mythic 7"] = 11, ["Mythic 8"] = 12, ["Mythic 9"] = 13, ["Mythic 10"] = 14,
-	["Mythic 11"] = 15, ["Mythic 12"] = 16, ["Mythic 13"] = 17, ["Mythic 14"] = 18, ["Mythic 15"] = 19,
-	["Mythic 16"] = 20, ["Mythic 17"] = 21, ["Mythic 18"] = 22, ["Mythic 19"] = 23, ["Mythic 20"] = 24,
-	["Mythic 21"] = 25, ["Mythic 22"] = 26, ["Mythic 23"] = 27, ["Mythic 24"] = 28, ["Mythic 25"] = 29,
-	["Mythic 26"] = 30, ["Mythic 27"] = 31, ["Mythic 28"] = 32, ["Mythic 29"] = 33, ["Mythic 30"] = 34,
-	["Mythic 31"] = 35, ["Mythic 32"] = 36, ["Mythic 33"] = 37, ["Mythic 34"] = 38, ["Mythic 35"] = 39,
-	["Mythic 36"] = 40, ["Mythic 37"] = 41, ["Mythic 38"] = 42, ["Mythic 39"] = 43, ["Mythic 40"] = 44,
+	["Heroic Bloodforged"] = 2,
+	["Heroic"] = 4,
+	["Mythic"] = 5,
+	["Heroic Raid"] = 4,
+	["Mythic Raid"] = 5,
+	["Ascended Raid"] = 6,
+	["Mythic 1"] = 6,  ["Mythic 2"] = 7,  ["Mythic 3"] = 8,  ["Mythic 4"] = 9,  ["Mythic 5"] = 10,
+	["Mythic 6"] = 11, ["Mythic 7"] = 12, ["Mythic 8"] = 13, ["Mythic 9"] = 14, ["Mythic 10"] = 15,
+	["Mythic 11"] = 16, ["Mythic 12"] = 17, ["Mythic 13"] = 18, ["Mythic 14"] = 19, ["Mythic 15"] = 20,
+	["Mythic 16"] = 21, ["Mythic 17"] = 22, ["Mythic 18"] = 23, ["Mythic 19"] = 24, ["Mythic 20"] = 25,
+	["Mythic 21"] = 26, ["Mythic 22"] = 27, ["Mythic 23"] = 28, ["Mythic 24"] = 29, ["Mythic 25"] = 30,
+	["Mythic 26"] = 31, ["Mythic 27"] = 32, ["Mythic 28"] = 33, ["Mythic 29"] = 34, ["Mythic 30"] = 35,
+	["Mythic 31"] = 36, ["Mythic 32"] = 37, ["Mythic 33"] = 38, ["Mythic 34"] = 39, ["Mythic 35"] = 40,
+	["Mythic 36"] = 41, ["Mythic 37"] = 42, ["Mythic 38"] = 43, ["Mythic 39"] = 44, ["Mythic 40"] = 45,
 };
+
+local itemLevels = {
+	{1, 101}, -- Vanilla / Classic
+	{101, 178}, -- TBC
+	{167, 290}, -- WoTLK
+}
+
+function AtlasLoot:MatchItemLevelBracket(ogILevel, newILevel)
+	for _, bracket in pairs(itemLevels) do
+		if ogILevel >= bracket[1] and ogILevel <= bracket[2] and ogILevel <= newILevel and newILevel <= bracket[2] then return true end
+	end
+end
 
 function AtlasLoot:GetDifficulty(item)
 	if not item then return end
 	local _, description, _ = string.split("@", item.description, 3)
 	if description then
-		return self:StripTextColor(description)
-	end
-end
-
-function AtlasLoot:CheckItemID(newIDs, ID, dif)
-	if not newIDs then return end
-	if type(newIDs) ~= "table" then newIDs = {newIDs} end
-	for _, newID in ipairs(newIDs) do
-		local ogName = GetItemInfoInstant(ID)
-		local newName = GetItemInfoInstant(newID)
-		if newName and ogName and newName.name and ogName.name and newName.inventoryType == ogName.inventoryType then
-			ogName.name = ogName.name:gsub( "%W", "" )
-			newName.name = newName.name:gsub( "%W", "" )
-			if dif == "Bloodforged" or dif == "Heroic Bloodforged" then
-				ogName.name = "Bloodforged"..ogName.name
-			end
-		local description = self:GetDifficulty(newName)
-			if description then
-				if (not dif or (dif and (dif == description))) then
-					if ogName.name == newName.name then
-						return  newID
-					end
-				end
-			end
-		end
+		description = self:StripTextColor(description)
+		description = description:gsub("Karazhan Crypts ", "")
+		description = description:gsub(" Frozen Reach", "")
+		return description
 	end
 end
 
@@ -64,9 +55,15 @@ function AtlasLoot:CreateUpdateText()
     updateFrameCreated = true
 end
 
-local unknownIDs = {}
-function AtlasLoot:UpdateItemIDsDatabase(firstID, lastID)
-	AtlasLootItemCache = ItemIDsDatabase
+local function removeExtraText(text)
+	text = text:gsub( "Bloodforged", "" )
+	text = text:gsub( "%W", "" )
+	return text
+end
+
+
+function AtlasLoot:GetSourceList()
+	local itemSource = {}
 	self:IsLootTableAvailable("AtlasLootOriginalWoW")
 	self:IsLootTableAvailable("AtlasLootBurningCrusade")
 	self:IsLootTableAvailable("AtlasLootWotLK")
@@ -78,9 +75,19 @@ function AtlasLoot:UpdateItemIDsDatabase(firstID, lastID)
 						if itemData.itemID then
 							for _, dif in ipairs(self.Difficulties[data.Type]) do
 								local itemType = GetItemInfoInstant(itemData.itemID) or nil
-								if dif[2] ~= 100 and dif[2] ~= 1 and dif[2] ~= 2 and itemType then
-									unknownIDs[dif[1]] = unknownIDs[dif[1]] or {}
-									unknownIDs[dif[1]][itemType.name:gsub( "%W", "" )..itemType.inventoryType] = itemData.itemID
+								if dif[2] ~= 3 and itemType then
+									itemSource[dif[1]] = itemSource[dif[1]] or {}
+									local name = itemType.name:gsub( "%W", "" )..itemType.inventoryType
+									itemSource[dif[1]][name] = itemSource[dif[1]][name] or {}
+									local itemTable = itemSource[dif[1]][name]
+										local function checkForDuplicate(itemID)
+											for _ , item in pairs(itemTable) do
+												if item[1] == itemID then return true end
+											end
+										end
+									if not checkForDuplicate(itemData.itemID) then
+										tinsert(itemTable, {itemData.itemID, itemType.itemLevel})
+									end
 								end
 							end
 						end
@@ -89,8 +96,14 @@ function AtlasLoot:UpdateItemIDsDatabase(firstID, lastID)
 			end
 		end
     end
+	if self:CheckIfEmptyTable(itemSource) then return end
+	return itemSource
+end
 
-	if self:CheckIfEmptyTable(unknownIDs) then return end
+function AtlasLoot:UpdateItemIDsDatabase(firstID, lastID)
+	AtlasLootItemCache = ItemIDsDatabase
+	local itemSource = self:GetSourceList()
+	if not itemSource then return end
     self:CreateUpdateText()
     AtlasLootDbUpdate:Show()
 
@@ -102,13 +115,18 @@ function AtlasLoot:UpdateItemIDsDatabase(firstID, lastID)
 
 		local function checkID(item, difficulty)
 			if difficulty and item and item.name then
-				local foundName = item.name:gsub( "%W", "" )..item.inventoryType
+				local foundName = removeExtraText(item.name)..item.inventoryType
 				if foundName then
-					local orignalID = unknownIDs[difficulty] and unknownIDs[difficulty][foundName]
-					if orignalID then
-						ItemIDsDatabase[orignalID] = ItemIDsDatabase[orignalID] or {}
-						ItemIDsDatabase[orignalID][difficultyList[difficulty]] = item.itemID
-						AtlasLootIDUpdateText:SetText("Last ItemID Added: "..firstID)
+					local itemData = itemSource[difficulty] and itemSource[difficulty][foundName]
+					if itemData then
+						for _ , storedItem in pairs(itemData) do
+							local orignalID = storedItem[1]
+							ItemIDsDatabase[orignalID] = ItemIDsDatabase[orignalID] or {}
+							if not ItemIDsDatabase[orignalID][difficultyList[difficulty]] or self:MatchItemLevelBracket(storedItem[2], item.itemLevel) then
+								ItemIDsDatabase[orignalID][difficultyList[difficulty]] = item.itemID
+								AtlasLootIDUpdateText:SetText("Last ItemID Added: "..firstID)
+							end
+						end
 					end
 				end
 			end
@@ -116,7 +134,7 @@ function AtlasLoot:UpdateItemIDsDatabase(firstID, lastID)
 		end
 
     local function continue()
-		if self:CheckIfEmptyTable(unknownIDs) then
+		if self:CheckIfEmptyTable(itemSource) then
 			return
 		end
         startTime = debugprofilestop()
@@ -141,43 +159,58 @@ function AtlasLoot:UpdateItemIDsDatabase(firstID, lastID)
 end
 
 --[[
-AtlasLoot:FindId(id, difficulty)
+AtlasLoot:GetItemDifficultyID(id, difficulty)
 Finds the Ids of other difficulties based on the normal id of the item and the difficulty parameter given.
-On the form of {ID, {normal, heroic, mythic, mythic1, mythic2, ... ,mythicN}}
+On the form of {ID, {bloodforged, heroic bloodforged, normal, heroic, mythic, mythic1/ascended, mythic2, ... ,mythicN}}
 ]]
-function AtlasLoot:FindId(id, difficulty, type, Difficultiestring)
-	local hasID
-	if self.Difficulties[type] then
-		for _, dif in ipairs (self.Difficulties[type]) do
-			if dif[2] == difficulty then
-				Difficultiestring = dif[1]
+function AtlasLoot:GetItemDifficultyID(id, difficulty)
+	if not difficulty or difficulty == 3 then return id end
+	if ItemIDsDatabase[id] and ItemIDsDatabase[id][difficulty] and self:GetItemInfo(ItemIDsDatabase[id][difficulty]) then
+		return ItemIDsDatabase[id][difficulty]
+	end
+	return id
+end
+
+local runOnce
+function AtlasLoot:GetMerchantItems(missingOnly)
+	AtlasLootOtherIds = AtlasLootOtherIds or {}
+	tinsert(AtlasLootOtherIds, {})
+	local numItems = GetMerchantNumItems()
+	if numItems then
+		for index = 1, numItems do
+			local link = GetMerchantItemLink(index)
+			local itemID = GetItemInfoFromHyperlink(link)
+			local itemName = self:GetItemInfo(itemID)
+			local _, itemCost, currency = GetMerchantItemCostItem (index, 1)
+			local currencyID = currency and GetItemInfoFromHyperlink(currency)
+
+			if missingOnly then
+				if not runOnce then
+					self:CreateItemSourceList(true)
+					runOnce = true
+				end
+
+				if not self.ItemSourceList[itemID] then
+					tinsert(AtlasLootOtherIds[#AtlasLootOtherIds], { itemID, itemName })
+				end
+			elseif not missingOnly then
+				if itemCost then
+					tinsert(AtlasLootOtherIds[#AtlasLootOtherIds], { itemID, itemCost, currencyID, itemName})
+				else
+					tinsert(AtlasLootOtherIds[#AtlasLootOtherIds], { itemID, itemName })
+				end
 			end
 		end
 	end
-	if difficulty == 2 then return end
-	-- Create Heroic Bloodforged Id
-	if difficulty == 100 then
-		local newIDs = {
-			(id < 1000000 and (id) + 6300000),
-			(id < 1000000 and (id) + 7800000),
-			(id > 1000000 and (id - 1500000) + 6300000),
-			(id > 1000000 and (id - 1500000) + 7800000),
-	}
-		hasID = self:CheckItemID(newIDs, id, Difficultiestring)
-		if hasID then return  hasID, true end
-	end
-	-- Create Bloodforged Id
-	if difficulty == 1 then
-		local newIDs = {
-			(id < 1000000 and (id) + 6000000),
-			(id < 1000000 and (id) + 7500000),
-			(id > 1000000 and (id - 1500000) + 6000000),
-			(id > 1000000 and (id - 1500000) + 7500000),
-	}
-		hasID = self:CheckItemID(newIDs, id, Difficultiestring)
-		if hasID then return  hasID, true end
-	end
-	if ItemIDsDatabase[id] and ItemIDsDatabase[id][difficulty] then
-		return ItemIDsDatabase[id][difficulty], true
-	end
 end
+--[[ Regex used on the merchant data to put it in a better formate for atlasloot
+search with this
+\{(.*)
+(.+?),(.*)
+(.+?)"(.+?)"(.*)
+(.*)
+
+replace with this
+[1] = { itemID = $2 }; --$5
+
+]]

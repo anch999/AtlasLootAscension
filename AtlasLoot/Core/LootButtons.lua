@@ -57,9 +57,9 @@ function AtlasLoot:SetDroprateTooltip(data)
     if type(data.droprate) == "table" then
         if not data.droprate[ItemindexID] then return end
         local dropIndex = ItemindexID
-        if ItemindexID == 5 then
+        if ItemindexID == 6 then
             dropIndex = 4
-        elseif ItemindexID == 4 then
+        elseif ItemindexID == 5 then
             dropIndex = 5
         end
         if data.droprate[dropIndex] then

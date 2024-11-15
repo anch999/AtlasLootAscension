@@ -150,9 +150,9 @@ function AtlasLoot:SortWishList(refresh,type,tNumb)
 	local sorted = {}
 	local name = AtlasLootWishList[type][tNumb].Name
 	local icon = AtlasLootWishList[type][tNumb].Icon
-		for i,v in ipairs(AtlasLootWishList[type][tNumb]) do
+		for _,v in ipairs(AtlasLootWishList[type][tNumb]) do
 			local function tableCheck()
-				for n,t in ipairs(sorted) do
+				for _,t in ipairs(sorted) do
 					if t[2][5] == v[5] then
 						return t
 					end
@@ -166,8 +166,8 @@ function AtlasLoot:SortWishList(refresh,type,tNumb)
 		end
 		AtlasLootWishList[type][tNumb] = {}
 		local num = 1
-		for i,v in ipairs(sorted) do
-			for n,t in ipairs(v) do
+		for _,v in ipairs(sorted) do
+			for _,t in ipairs(v) do
 				if num ~= 1 and t[3] == "INV_Box_01" then
 					table.insert(AtlasLootWishList[type][tNumb],{num, 0, "Blank", WHITE.." ", ""})
 					num = num + 1
@@ -256,12 +256,12 @@ function AtlasLoot:ShowWishListDropDown(btn, show, panelButton)
 		AtlasLoot:WishListAddDropClick("Own", AtlasLootWishList["Options"][playerName]["DefaultWishList"][3])
 		return
 	else
-		if AtlasLoot.Dewdrop:IsOpen(btn) then
-			AtlasLoot.Dewdrop:Close(1)
+		if self.Dewdrop:IsOpen(btn) then
+			self.Dewdrop:Close(1)
 		else
 			local setOptions = function(level, value)
 				if level == 1 then
-					AtlasLoot.Dewdrop:AddLine(
+					self.Dewdrop:AddLine(
 						"text", AL["Own Wishlists"],
 						"tooltipTitle", AL["Own Wishlists"],
 						"value", "OwnWishlists",
@@ -272,7 +272,7 @@ function AtlasLoot:ShowWishListDropDown(btn, show, panelButton)
 						"func", function() AtlasLoot:WishListAddDropClick() end,
 						"notCheckable", true
 					)
-					AtlasLoot.Dewdrop:AddLine(
+					self.Dewdrop:AddLine(
 						"text", AL["Shared Wishlists"],
 						"tooltipTitle", AL["Shared Wishlists"],
 						"value", "SharedWishlists",
@@ -283,7 +283,7 @@ function AtlasLoot:ShowWishListDropDown(btn, show, panelButton)
 						"func", function() AtlasLoot:WishListAddDropClick() end,
 						"notCheckable", true
 					)
-					AtlasLoot.Dewdrop:AddLine(
+					self.Dewdrop:AddLine(
 						"text", AL["Add Wishlist"],
 						"func", function() AtlasLoot:AddWishList() end,
 						'closeWhenClicked', true,
@@ -295,7 +295,7 @@ function AtlasLoot:ShowWishListDropDown(btn, show, panelButton)
 					if value == "OwnWishlists" then
 						for k,v in pairs(AtlasLootWishList["Own"]) do
 							if type(v) == "table" then
-								AtlasLoot.Dewdrop:AddLine(
+								self.Dewdrop:AddLine(
 									"text", v.Name,
 									"tooltipTitle", v.Name,
 									"func", function() AtlasLoot:WishListAddDropClick("Own", k, "", show) end,
@@ -309,7 +309,7 @@ function AtlasLoot:ShowWishListDropDown(btn, show, panelButton)
 					elseif value == "SharedWishlists" then
 						for k,v in pairs(AtlasLootWishList["Shared"]) do
 							if type(v) == "table" then
-								AtlasLoot.Dewdrop:AddLine(
+								self.Dewdrop:AddLine(
 									"text", v.Name,
 									"tooltipTitle", v.Name,
 									"func", function() AtlasLoot:WishListAddDropClick("Own", k, "", show) end,
@@ -322,7 +322,7 @@ function AtlasLoot:ShowWishListDropDown(btn, show, panelButton)
 						end
 					end
 				end
-				AtlasLoot.Dewdrop:AddLine(
+				self.Dewdrop:AddLine(
                 'text', AL["Close Menu"],
                 'textR', 0,
                 'textG', 1,
@@ -333,7 +333,7 @@ function AtlasLoot:ShowWishListDropDown(btn, show, panelButton)
                 'notCheckable', true
             )
 			end
-			AtlasLoot.Dewdrop:Open(btn,
+			self.Dewdrop:Open(btn,
 				"point", function(parent)
 					return "TOP", "BOTTOM"
 				end,
@@ -660,7 +660,6 @@ Create the Options for the Wishlists(called on variables loadet)
 ]]
 function AtlasLoot:CreateWishlistOptions()
 	if OptionsLoadet then return end
-	self:WishlistConvert()
 	self:WishlistSetup()
 	-- Add wishlistframe --
 	local WishListAddFrame = CreateFrame("FRAME","AtlasLootWishList_AddFrame",UIParent)
@@ -1139,38 +1138,3 @@ StaticPopupDialogs["ATLASLOOT_ADD_CUSTOMHEADER"] = {
 	whileDead = 1,
 	hideOnEscape = 1
 }
-
-function AtlasLoot:WishlistConvert()
-	if not AtlasLootWishList.Version then
-		if AtlasLootWishList.Own then
-			-- rebuild own wish lists
-			local rebuiltList = {Name = AtlasLootWishList.Own.Name}
-			for _, wList in ipairs(AtlasLootWishList.Own) do
-				local itemList = {Icon = wList.Icon, Name = wList.Name}
-				for _, item in ipairs (wList) do
-					local dataID, dataSource, tableNum  = strsplit("|", item[8])
-					tinsert(itemList, {item[1], itemID = item[2], desc = item[5], lootTable = {{dataID, "AtlasLoot_Data", tonumber(tableNum) or 1}, "Source"} } )
-				end
-				tinsert(rebuiltList, itemList)
-			end
-			AtlasLootWishList.Own = rebuiltList
-		end
-
-		if AtlasLootWishList.Shared then
-			-- rebuild shared wish list
-			local rebuiltList = {Name = AtlasLootWishList.Shared.Name}
-			for _, wList in ipairs(AtlasLootWishList.Shared) do
-				local itemList = {Icon = wList.Icon, Name = wList.Name}
-				for _, item in ipairs (wList) do
-					local dataID, dataSource, tableNum = strsplit("|", item[8])
-					tinsert(itemList, {item[1], itemID = item[2], desc = item[5], lootTable = {{dataID, "AtlasLoot_Data", tonumber(tableNum) or 1}, "Source"} } )
-				end
-				tinsert(rebuiltList, itemList)
-			end
-			AtlasLootWishList.Shared = rebuiltList
-		end
-		-- Save wish list version just incase i have to rebuild it for some reason
-		AtlasLootWishList.Version = self.WishListVersion
-	end
-
-end

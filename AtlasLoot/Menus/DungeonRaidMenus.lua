@@ -16,8 +16,10 @@ AtlasLoot_SubMenus["Dungeons and RaidsCLASSIC"] = {
     { "", "WorldBossesCLASSIC","", "World Bosses" },
     ---- Dungeons -----
     { "Dungeons:", "OldKeys", "Header" },
+    { "All Dungeon Items", "ClassicDungeonExt", OnDamand = "ClassicDungeonExt"},
     { "", "BlackfathomDeeps", "", "Blackfathom Deeps" },
     { "", "BlackrockDepths", "", "Blackrock Depths" },
+    { "", "BlackrockCaverns", "", "Blackrock Caverns" },
     { "", "LowerBlackrock", "", "Lower Blackrock Spire" },
     { "", "UpperBlackrock", "", "Upper Blackrock Spire" },
     { "", "TheDeadmines", "", "The Deadmines" },
@@ -25,6 +27,7 @@ AtlasLoot_SubMenus["Dungeons and RaidsCLASSIC"] = {
     { "", "DireMaulEast", "", "Dire Maul (East)", "Dire Maul" },
     { "", "DireMaulWest", "", "Dire Maul (West)", "Dire Maul" },
     { "", "Gnomeregan", "", "Gnomeregan" },
+    { "", "KarazhanCrypts", "", "The Karazhan Crypts" },
     { "", "Maraudon", "", "Maraudon" },
     { "", "RagefireChasm", "", "Ragefire Chasm" },
     { "", "RazorfenDowns", "", "Razorfen Downs" },
@@ -38,6 +41,9 @@ AtlasLoot_SubMenus["Dungeons and RaidsCLASSIC"] = {
     { "", "Uldaman", "", "Uldaman" },
     { "", "WailingCaverns", "", "Wailing Caverns" },
     { "", "ZulFarrak", "", "Zul'Farrak" },
+    { "", "SharedDungeonLoot", "", "Shared Dungeon Loot" },
+    { "Manastorm:", "BCKeys", "Header" },
+    { "", "FrozenReach", "", "Frozen Reach" },
 }
 
 AtlasLoot_SubMenus["Dungeons and RaidsTBC"] = {
@@ -56,6 +62,7 @@ AtlasLoot_SubMenus["Dungeons and RaidsTBC"] = {
     { "", "WorldBossesTBC","", "World Bosses" },
     ---- Dungeons -----
     { "Dungeons:", "BCKeys", "Header" },
+    { "All Dungeon Items", "BCDungeon", OnDamand = "BCDungeon"},
     { "", "HCRamparts", "", "Hellfire Ramparts" },
     { "", "HCShatteredHalls", "", "The Shattered Halls" },
     { "", "HCFurnace", "", "The Blood Furnace" },
@@ -72,6 +79,10 @@ AtlasLoot_SubMenus["Dungeons and RaidsTBC"] = {
     { "", "CFRSteamvault", "", "The Steamvault" },
     { "", "CFRUnderbog", "", "The Underbog" },
     { "", "MagistersTerrace", "", "Magisters' Terrace" },
+    { "", "KarazhanCryptsTBC", "", "The Karazhan Crypts" },
+    { "", "BlackrockCavernsTBC", "", "Blackrock Caverns" },
+    { "Manastorm:", "BCKeys", "Header" },
+    { "", "FrozenReachTBC", "", "Frozen Reach" },
 }
 
 AtlasLoot_SubMenus["Dungeons and RaidsWRATH"] = {
@@ -89,6 +100,7 @@ AtlasLoot_SubMenus["Dungeons and RaidsWRATH"] = {
     { "", "Halion", "Halion" },
     ---- Dungeons -----
     { "Dungeons:", "WrathKeys", "Header" },
+    { "All Dungeon Items", "WrathDungeon", OnDamand = "WrathDungeon"},
     { "", "Ahnkahet", "Ahnkahet" },
     { "", "AzjolNerub", "AzjolNerub" },
     { "", "CoTStratholme", "The Culling of Stratholme" },

@@ -19,12 +19,9 @@ AtlasLoot:AddTooltip(frameb, tooltiptext)
 local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
 local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0")
 
---Establish version number and compatible version of Atlas
-local VERSION_MAJOR = "5";
-local VERSION_MINOR = "11";
-local VERSION_BOSSES = "04";
+AtlasLoot.AddonName = "AtlasLoot Ascension Edition"
+AtlasLoot.Version = GetAddOnMetadata("AtlasLoot", "Version")
 
-AtlasLoot.Version = "AtlasLoot Ascension Edition"
 AtlasLoot.DebugMessages = false
 AtlasLoot.WishListVersion = 1
 
@@ -64,7 +61,6 @@ local AtlasLootDBDefaults = {
         Opaque = false,
         ItemIDs = false,
         LastBoss = "EmptyTable",
-        AtlasLootVersion = "1",
         AtlasNaggedVersion = "",
         PartialMatching = true,
         LootBrowserStyle = 1,
@@ -198,13 +194,6 @@ function AtlasLoot:OnEnable()
         Atlasloot_SubTableFrame_Back:SetTexture(0, 0, 0, 0.05)
 	end
 
-	if((AtlasLootCharDB.AtlasLootVersion == nil) or (tonumber(AtlasLootCharDB.AtlasLootVersion) < 40301)) then
-		AtlasLootCharDB.AtlasLootVersion = VERSION_MAJOR..VERSION_MINOR..VERSION_BOSSES
-		self:OptionsInit()
-	end
-
-	collectgarbage("collect")
-
     local panel = _G["AtlasLootOptionsFrame"]
     panel.name = AL["AtlasLoot"]
     InterfaceOptions_AddCategory(panel)
@@ -224,12 +213,16 @@ function AtlasLoot:OnEnable()
 	else
 		AtlasLootItemsFrame_Wishlist_UnLock:Enable()
 	end
+
 	LoadItemIDsDatabase()
+	self:PatchNotes()
 	self:LoadTradeskillRecipes()
 	self:PopulateProfessions()
 	self:CreateVanityCollection()
 	self:CreateItemSourceList()
 	self:RegisterEvent("UNIT_SPELLCAST_SUCCEEDED")
+
+	collectgarbage("collect")
 end
 
 function AtlasLoot:Reset(data)
@@ -279,6 +272,12 @@ function AtlasLoot:SlashCommand(msg)
 		self:UpdateItemIDsDatabase(tonumber(arg1), tonumber(arg2))
 	elseif cmd == "clearcache" then
 		wipe(AtlasLootItemCache)
+	elseif cmd == "clearmerchantcache" then
+		wipe(AtlasLootOtherIds)
+	elseif cmd == "news" then
+		self:OpenNewsFrame(self.db.profile)
+	elseif cmd == "getmerchant" then
+		self:GetMerchantItems(arg1)
 	else
 		AtlasLootDefaultFrame:Show()
 	end
@@ -454,8 +453,6 @@ function AtlasLoot:CreateOnDemandLootTable(typeL)
 	return continue()
 end
 
-
-local lastTablenum = 1
 --[[
 AtlasLoot:ShowItemsFrame(dataID, dataSource, tablenum):
 dataID - Name of the loot table
@@ -511,7 +508,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 	local difType = false
 	-- Checks to see if type is the same
 	if self.CurrentType and dataSource[dataID].Type and self.CurrentType ~= dataSource[dataID].Type then
-		ItemindexID = self.type[dataSource[dataID].Type] or 2
+		ItemindexID = self.type[dataSource[dataID].Type] or 3
 		difType = true
 	end
 
@@ -589,29 +586,26 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 	local function getProperItemConditionals(item)
 		isValid = false
 		toShow = true
-		local itemDif = ItemindexID
+		local itemDif = ItemindexID or self.Difficulties.Normal
 		local itemID = item and item.itemID
 		if item and item.itemID then
 			itemID = item.itemID
 			isValid = true
 			local itemType = item.Type or dataSource[dataID].Type
+			local maxDif = self:GetMaxDifficulty(itemType)
+			--stops items from showing that are taged for coa
 			if class == "HERO" and item.COA then
 				toShow = false
-			elseif(item[self.Difficulties.MIN_DIF]) then
+			elseif item[self.Difficulties.MIN_DIF] then
 				if item[self.Difficulties.MIN_DIF] > itemDif then
 					toShow = false
 				end
-				itemID = self:FindId(item.itemID, min(self:getMaxDifficulty(itemType), itemDif), itemType) or item.itemID
+				itemID = self:GetItemDifficultyID(item.itemID, min(maxDif, itemDif))
 			end
 			if toShow then
-				--Sets ItemindexID to normal(2) if it is nil for min/max difficulties.
-				if not tonumber(itemDif) then itemDif = self.Difficulties.Normal end
-				--Checks if an item has a Maximum difficulty, this is to correct some items that have an entry for higher difficulties then they really do
-				if itemDif ~= 100 and self.Difficulties[itemType] and self.Difficulties[itemType].Max and self.Difficulties[itemType].Max < itemDif then
-					itemDif = self.Difficulties[itemType].Max
-				end
+				if maxDif < itemDif then itemDif = maxDif end 
 				--If something was found in itemID database show that if not show default table item
-				itemID = self:FindId(item.itemID, itemDif, itemType) or item.itemID
+				itemID = self:GetItemDifficultyID(item.itemID, itemDif)
 			end
 		elseif item and (item.spellID or item.icon) or item and itemID then
 			toShow = true
@@ -620,7 +614,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 					toShow = false
 				end
 			end
-			isValid = true			
+			isValid = true
 		end
 		local recipeID
 		if item and item.spellID then
@@ -692,6 +686,22 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 					tinsert(self.vanityItems, itemID)
 				end
 			end
+			local recipeData = self:GetRecipeData(itemID, "item")
+			if recipeData then
+				if CA_IsSpellKnown(recipeData.spellID) then
+					--Adds button highlights if you know a recipe or have a char that knows one
+					itemButton.hasTrade = true
+					hightlightFrame:SetTexture(itemHighlightGreen)
+					hightlightFrame:Show()
+				else
+					itemButton.hasTrade = false
+					hightlightFrame:Hide()
+					if self:GetKnownRecipes(recipeData.spellID) then
+						hightlightFrame:SetTexture(itemHighlightBlue)
+						hightlightFrame:Show()
+					end
+				end
+			end
 		else
 			if dataSource[dataID][tablenum][i].name then
 				--If it has a manuel entry use that
@@ -740,8 +750,10 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 			extra = extra ..WHITE.." ("..dataSource[dataID][tablenum][i].rep..")"
 		end
 
-		if dataSource[dataID][tablenum][i].price then
-			extra = extra ..WHITE.." ("..dataSource[dataID][tablenum][i].price..")"
+		local price = dataSource[dataID][tablenum][i].price
+		if price then
+			price = self:ArenaCost(price, itemEquipLoc, itemQuality)
+			extra = extra ..WHITE.." ("..price..")"
 		end
 
 		local recipe = self:GetRecipeData(itemID, "item")
@@ -962,8 +974,6 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 			AtlasLootItemsFrame.refreshBack = {dataID, dataSource_backup, tablenum}
 		end
 	end
-
-	lastTablenum = tablenum
 
 	--Anchor the item frame where it is supposed to be
 	if self.filterEnable and dataID ~= "FilterList" then
