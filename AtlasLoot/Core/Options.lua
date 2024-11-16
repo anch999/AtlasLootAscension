@@ -6,7 +6,6 @@ AtlasLoot:OptionsInit()
 AtlasLoot:OptionsAllLinksToggle()
 AtlasLoot:OptionsEquipCompareToggle()
 AtlasLoot:OptionsOpaqueToggle()
-AtlasLoot:OptionsItemIDToggle()
 AtlasLoot:OptionsLoDStartup()
 AtlasLoot:SetupLootBrowserSlider(frame, mymin, mymax, step)
 AtlasLoot:UpdateLootBrowserSlider(frame)
@@ -32,7 +31,6 @@ function AtlasLoot:OptionsInit()
     AtlasLootOptionsFrameEquipCompare:SetChecked(self.db.profile.EquipCompare)
     AtlasLootOptionsFrameOpaque:SetChecked(self.db.profile.Opaque)
     AtlasLootOptionsFrameAutoInstance:SetChecked(self.db.profile.AutoCurrentInstance)
-    AtlasLootOptionsFrameItemID:SetChecked(self.db.profile.ItemIDs)
     AtlasLootOptionsFrameLootBrowserScale:SetValue(self.db.profile.LootBrowserScale)
     AtlasLootOptionsMinimapIcon:SetChecked(self.db.profile.minimap.hide)
     AtlasLootOptionsFrameCraftingInfo:SetChecked(self.db.profile.recipeExtraInfoSwitch)
@@ -69,11 +67,6 @@ end
 
 function AtlasLoot:Options_AutoInstanceToggle()
     self.db.profile.AutoCurrentInstance = AtlasLootOptionsFrameAutoInstance:GetChecked()
-end
-
-function AtlasLoot:OptionsItemIDToggle()
-    self.db.profile.ItemIDs=AtlasLootOptionsFrameItemID:GetChecked()
-    self:OptionsInit()
 end
 
 function AtlasLoot:SetupLootBrowserSlider(frame, mymin, mymax, step)
@@ -150,7 +143,6 @@ Adds explanatory tooltips to Atlasloot options
 ]]
 function AtlasLoot:CreateOptionsInfoTooltips()
       self:AddTooltip("AtlasLootOptionsFrameOpaque", nil) -- AL["Make Loot Table Opaque"]
-      self:AddTooltip("AtlasLootOptionsFrameItemID", nil) -- AL["Show itemIDs at all times"]
       self:AddTooltip("AtlasLootOptionsFrameEquipCompare", nil) -- AL["Show Comparison Tooltips"]
       self:AddTooltip("AtlasLootOptionsFrameLoDSpam", nil) -- AL["Notify on LoD Module Load"]
       self:AddTooltip("AtlasLootOptionsFrameLootBrowserScale", nil) -- Scale SLIDER
@@ -239,19 +231,13 @@ local unknownRecipeTooltip = CreateFrame("CheckButton", "AtlasLootOptionsFrameUn
         AtlasLootOptionsFrameUnknownRecipeText:SetText(AL["Show if recipe is unknown in tooltips"])
         unknownRecipeTooltip:SetScript("OnClick", function() self.db.profile.showUnknownRecipeTooltip = not self.db.profile.showUnknownRecipeTooltip end)
 
-
-local itemid = CreateFrame("CheckButton", "AtlasLootOptionsFrameItemID", AtlasLootOptionsFrame, "OptionsCheckButtonTemplate")
-        itemid:SetPoint("TOP",5,-70)
-        AtlasLootOptionsFrameItemIDText:SetText(AL["Show itemIDs at all times"])
-        itemid:SetScript("OnClick", function() self:OptionsItemIDToggle() end)
-
 local miniMap = CreateFrame("CheckButton", "AtlasLootOptionsMinimapIcon", AtlasLootOptionsFrame, "OptionsCheckButtonTemplate")
-        miniMap:SetPoint("TOP",5,-100)
+        miniMap:SetPoint("TOP",5,-70)
         AtlasLootOptionsMinimapIconText:SetText(AL["Hide minimap icon"])
         miniMap:SetScript("OnClick", function() self:ToggleMinimap() end)
 
 local itemDropLocation = CreateFrame("CheckButton", "AtlasLootOptionsFrameItemDropLocation", AtlasLootOptionsFrame, "OptionsCheckButtonTemplate")
-        itemDropLocation:SetPoint("TOP",5,-130)
+        itemDropLocation:SetPoint("TOP",5,-100)
         AtlasLootOptionsFrameItemDropLocationText:SetText(AL["Show drop locations in tooltips"])
         itemDropLocation:SetScript("OnClick", function()
             self.db.profile.showdropLocationTooltips = not self.db.profile.showdropLocationTooltips

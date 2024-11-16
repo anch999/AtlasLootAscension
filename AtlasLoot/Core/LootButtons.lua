@@ -90,9 +90,6 @@ function AtlasLoot:ItemOnEnter(data)
                 if GetItemInfo(itemID) then
                     GameTooltip:SetOwner(data, "ANCHOR_RIGHT", -(data:GetWidth() / 2), 24)
                     GameTooltip:SetHyperlink("item:"..itemID..":0:0:0")
-                    if ( self.db.profile.ItemIDs ) then
-                        GameTooltip:AddLine(BLUE..AL["ItemID:"].." "..itemID, nil, nil, nil, 1)
-                    end
                     self:SetQuestTooltip(data)
                     self:SetExtraTooltip(data)
                     self:SetDroprateTooltip(data)
