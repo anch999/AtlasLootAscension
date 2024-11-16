@@ -8084,7 +8084,7 @@ AtlasLoot_Data["Zandalar"] = {
 		[02] = { itemID = 20076}; --Zandalar Signet of Mojo
 		[03] = { itemID = 20078}; --Zandalar Signet of Serenity
 		[04] = { itemID = 20013}; --Recipe: Living Action Potion
-		[06] = { itemID = 500890 }; -- Zandalarian Voodoo Mask
+--[[ 		[06] = { itemID = 500890 }; -- Zandalarian Voodoo Mask
 		[07] = { itemID = 500960 }; -- Zandalarian Voodoo Mask
 		[08] = { itemID = 501080 }; -- Zandalarian Voodoo Mask
 		[09] = { itemID = 501150 }; -- Zandalarian Voodoo Mask
@@ -8103,7 +8103,7 @@ AtlasLoot_Data["Zandalar"] = {
 		[22] = { itemID = 508670 }; -- Zandalarian Voodoo Mask
 		[23] = { itemID = 500800 }; -- Zandalarian Voodoo Mask
 		[24] = { itemID = 508210 }; -- Zandalarian Voodoo Mask
-	};
+ ]]	};
 };
 
 --------------------
