@@ -65,6 +65,7 @@ local AtlasLootDBDefaults = {
         PartialMatching = true,
         LootBrowserStyle = 1,
         LootBrowserScale = 1.0,
+		MerchantGlow = false,
         SearchOn = {
             All = false,
         },
@@ -221,6 +222,7 @@ function AtlasLoot:OnEnable()
 	self:CreateVanityCollection()
 	self:CreateItemSourceList()
 	self:RegisterEvent("UNIT_SPELLCAST_SUCCEEDED")
+	self:InitializeWishlistMerchantGlow()
 
 	collectgarbage("collect")
 end

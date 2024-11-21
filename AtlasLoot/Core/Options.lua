@@ -244,6 +244,14 @@ local itemDropLocation = CreateFrame("CheckButton", "AtlasLootOptionsFrameItemDr
             self:CreateItemSourceList()
             end)
 
+local merchantGlow = CreateFrame("CheckButton", "AtlasLootOptionsFrameMerchantGlow", AtlasLootOptionsFrame, "OptionsCheckButtonTemplate")
+        merchantGlow:SetPoint("TOP",5,-130)
+        AtlasLootOptionsFrameMerchantGlowText:SetText(AL["Make items in a vendor window glow /nif they are on a wishlist"])
+        merchantGlow:SetScript("OnClick", function()
+            self.db.profile.MerchantGlow = not self.db.profile.MerchantGlow
+            self:InitializeWishlistMerchantGlow()
+            end)
+
 local equip = CreateFrame("CheckButton", "AtlasLootOptionsFrameEquipCompare", AtlasLootOptionsFrame, "OptionsCheckButtonTemplate")
         equip:SetPoint("TOP",5,-40)
         AtlasLootOptionsFrameEquipCompareText:SetText(AL["Show Comparison Tooltips"])

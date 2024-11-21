@@ -384,6 +384,7 @@ AtlasLoot:WishListCheck(itemID, all):
 Returns true if an item is already in the wishlist
 ]]
 function AtlasLoot:WishListCheck(itemID, all)
+	if not itemID then return false end
 	if all == true then
 		local rettex = ""
 		if not AtlasLootWishList["Options"][playerName]["markInTable"] then AtlasLootWishList["Options"][playerName]["markInTable"] = "own" end
@@ -786,8 +787,6 @@ function AtlasLoot:CreateWishlistOptions()
 
 	-- Add wishlistframe --
 	
-	local framewidht = InterfaceOptionsFramePanelContainer:GetWidth()
-
 	local WishlistOptionsFrame = CreateFrame("FRAME", nil)
 		WishlistOptionsFrame.name = AL["Wishlist"]
 		WishlistOptionsFrame.parent = AL["AtlasLoot"]

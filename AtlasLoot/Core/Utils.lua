@@ -885,3 +885,37 @@ function AtlasLoot:ArenaCost(price, itemEquipLoc, itemQuality)
 		return ArmorTypes[itemEquipLoc][1]..ArmorTypes[itemEquipLoc][2]
 	end
 end
+
+function AtlasLoot:SetMerchantFrameGlow()
+	if not self.db.profile.MerchantGlow then return end
+	local num = 1
+	while _G["MerchantItem"..num.."ItemButton"] do
+		local link = _G["MerchantItem"..num.."ItemButton"].link
+		if not link then return end
+		local itemID = GetItemInfoFromHyperlink(link)
+		if self:WishListCheck(itemID, true) then
+			ActionButton_ShowOverlayGlow(_G["MerchantItem"..num.."ItemButton"])
+		else
+			ActionButton_HideOverlayGlow(_G["MerchantItem"..num.."ItemButton"])
+		end
+		num = num + 1
+	end
+end
+
+function AtlasLoot:MERCHANT_SHOW()
+	self:SetMerchantFrameGlow()
+end
+
+function AtlasLoot:MERCHANT_UPDATE()
+	self:SetMerchantFrameGlow()
+end
+
+function AtlasLoot:InitializeWishlistMerchantGlow()
+	if self.db.profile.MerchantGlow then
+		self:RegisterEvent("MERCHANT_UPDATE")
+		self:RegisterEvent("MERCHANT_SHOW")
+		MerchantNextPageButton:HookScript("OnClick", function() AtlasLoot:SetMerchantFrameGlow() end)
+		MerchantPrevPageButton:HookScript("OnClick", function() AtlasLoot:SetMerchantFrameGlow() end)
+	end
+end
+
