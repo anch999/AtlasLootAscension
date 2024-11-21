@@ -36,6 +36,7 @@ function AtlasLoot:OptionsInit()
     AtlasLootOptionsFrameCraftingInfo:SetChecked(self.db.profile.recipeExtraInfoSwitch)
     AtlasLootOptionsFrameDropLocation:SetChecked(self.db.profile.showdropLocationOnSearch)
     AtlasLootOptionsFrameUnknownRecipe:SetChecked(self.db.profile.showUnknownRecipeTooltip)
+    AtlasLootOptionsFrameMerchantGlow:SetChecked(self.db.profile.MerchantGlow)
 end
 
 --[[
@@ -246,7 +247,7 @@ local itemDropLocation = CreateFrame("CheckButton", "AtlasLootOptionsFrameItemDr
 
 local merchantGlow = CreateFrame("CheckButton", "AtlasLootOptionsFrameMerchantGlow", AtlasLootOptionsFrame, "OptionsCheckButtonTemplate")
         merchantGlow:SetPoint("TOP",5,-130)
-        AtlasLootOptionsFrameMerchantGlowText:SetText(AL["Make items in a vendor window glow /nif they are on a wishlist"])
+        AtlasLootOptionsFrameMerchantGlowText:SetText(AL["Make items in a vendor window glow \nif they are on a wishlist"])
         merchantGlow:SetScript("OnClick", function()
             self.db.profile.MerchantGlow = not self.db.profile.MerchantGlow
             self:InitializeWishlistMerchantGlow()
