@@ -1,10 +1,8 @@
 local version, news, addonName, addonDB
 local MAJOR, MINOR = "NewsFrame-1.0", 1
+local NewsFrame, oldminor = LibStub:NewLibrary(MAJOR, MINOR)
 
-if not AceLibrary then error(MAJOR .. " requires AceLibrary") end
-if not AceLibrary:IsNewVersion(MAJOR, MINOR) then return end
-
-local NewsFrame = {}
+if not NewsFrame then return end -- No Upgrade needed.
 
 --[[
 NewsFrame:InitializeNewsFrame()
@@ -153,24 +151,25 @@ function NewsFrame:OpenNewsFrame()
     _G[addonName.."NewsFrame"]:Show()
 end
 
+-- ---------------------------------------------------------------------
+-- Embed handling
+
+NewsFrame.embeds = NewsFrame.embeds or {}
+
 local mixins = {
 	"InitializeNewsFrame",
     "OpenNewsFrame",
 }
 
-NewsFrame.embeds = NewsFrame.embeds or {}
-
 function NewsFrame:Embed(target)
-	for _, v in pairs(mixins) do
+	self.embeds[target] = true
+	for _,v in pairs(mixins) do
 		target[v] = self[v]
 	end
-	self.embeds[target] = true
 	return target
 end
 
 -- Update embeds
-for target, _ in pairs(NewsFrame.embeds) do
-	NewsFrame:Embed(target)
+for addon, _ in pairs(NewsFrame.embeds) do
+	NewsFrame:Embed(addon)
 end
-
-AceLibrary:Register(NewsFrame, MAJOR, MINOR)
