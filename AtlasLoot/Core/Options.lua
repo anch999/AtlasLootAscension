@@ -36,6 +36,7 @@ function AtlasLoot:OptionsInit()
     AtlasLootOptionsFrameCraftingInfo:SetChecked(self.db.profile.recipeExtraInfoSwitch)
     AtlasLootOptionsFrameDropLocation:SetChecked(self.db.profile.showdropLocationOnSearch)
     AtlasLootOptionsFrameUnknownRecipe:SetChecked(self.db.profile.showUnknownRecipeTooltip)
+    AtlasLootOptionsFrameItemDropLocation:SetChecked(self.db.profile.showdropLocationTooltips)
     AtlasLootOptionsFrameMerchantGlow:SetChecked(self.db.profile.MerchantGlow)
 end
 

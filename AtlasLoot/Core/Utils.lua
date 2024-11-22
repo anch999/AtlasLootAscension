@@ -612,7 +612,7 @@ GameTooltip:HookScript("OnTooltipSetItem", TooltipHandlerItem)
 ItemRefTooltip:HookScript("OnTooltipSetItem", TooltipHandlerItem)
 
 function AtlasLoot:StripTextColor(txt)
-	local txt = txt or ""
+	txt = txt or ""
 	txt = string.gsub( txt, "|c%x%x%x%x%x%x%x%x", "" )
 	txt = string.gsub( txt, "|c%x%x %x%x%x%x%x", "" ) -- the trading parts colour has a space instead of a zero for some weird reason
 	txt = string.gsub( txt, "|r", "" )
@@ -804,7 +804,7 @@ local function IgnoreTables(dataSource)
 end
 
 function AtlasLoot:CreateItemSourceList(overRide)
-	if not overRide and not self.db.profile.showdropLocationTooltips then return end
+	if overRide then elseif not self.db.profile.showdropLocationTooltips then return end
 	if overRide or not AtlasLootDB.ItemSources or (AtlasLootDB.ItemSources.Version and AtlasLootDB.ItemSources.Version ~= self.Version) then
 		self:LoadAllModules()
 		AtlasLootDB.ItemSources = {Version = AtlasLoot.Version, List = {}}
@@ -813,17 +813,17 @@ function AtlasLoot:CreateItemSourceList(overRide)
 				for _, boss in pairs(instance) do
 					if type(boss) == "table" then
 						for _, item in pairs(boss) do
-							if type(item) == "table" and item.itemID and not IgnoreTables(dataSource) then
-								list[item.itemID] = instance.Name .. " - " .. boss.Name
+							if type(item) == "table" and item.itemID and instance.Name and boss.Name and not IgnoreTables(dataSource) then
+								list[item.itemID] = CYAN..instance.Name .. WHITE .." - " .. boss.Name
 								if ItemIDsDatabase[item.itemID] then
 									for _, varID in pairs(ItemIDsDatabase[item.itemID]) do
-										list[varID] = instance.Name .. " - " .. boss.Name
+										list[varID] = CYAN..instance.Name .. WHITE .." - " .. boss.Name
 									end
 								end
 								if item.spellID then
 									local recipeID = self:GetRecipeID(item.spellID) or nil
 									if recipeID and (list[recipeID] and not IgnoreTables(dataSource) or not list[recipeID]) then
-										list[recipeID] = instance.Name .. " - " .. boss.Name
+										list[recipeID] = CYAN..instance.Name .. WHITE .." - " .. boss.Name
 									end
 								end
 							end
@@ -837,7 +837,7 @@ end
 
 function AtlasLoot:ItemSourceTooltip(itemID, tooltip)
 	if not self.db.profile.showdropLocationTooltips or not self.ItemSourceList then return end
-	local text = self.ItemSourceList[itemID] and "Item Source: " .. WHITE .. self.ItemSourceList[itemID] or nil
+	local text = self.ItemSourceList[itemID] and "Item Source: " .. self.ItemSourceList[itemID] or nil
 	if text and not CheckTooltipForDuplicate(tooltip, text) then
 		tooltip:AddLine(text)
 	end
