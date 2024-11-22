@@ -277,7 +277,7 @@ function AtlasLoot:SlashCommand(msg)
 	elseif cmd == "clearmerchantcache" then
 		wipe(AtlasLootOtherIds)
 	elseif cmd == "news" then
-		self:OpenNewsFrame(self.db.profile)
+		self:OpenNewsFrame()
 	elseif cmd == "getmerchant" then
 		self:GetMerchantItems(arg1)
 	else

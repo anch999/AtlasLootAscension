@@ -15,6 +15,5 @@
 	<Script file="SearchAdvanced.lua"/>
     <Script file="Search.lua"/>
 	<Script file="PatchNotes.lua"/>
-	<Script file="News.lua"/>
 </Ui>
 

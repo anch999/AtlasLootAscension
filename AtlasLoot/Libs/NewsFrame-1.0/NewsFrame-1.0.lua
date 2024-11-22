@@ -1,10 +1,13 @@
-local addonName = "AtlasLoot"
-local addon = _G[addonName]
-local version = GetAddOnMetadata(addonName, "Version")
+local version, news, addonName, addonDB
+local MAJOR, MINOR = "NewsFrame-1.0", 1
 
-local news
+if not AceLibrary then error(MAJOR .. " requires AceLibrary") end
+if not AceLibrary:IsNewVersion(MAJOR, MINOR) then return end
+
+local NewsFrame = {}
+
 --[[
-addon:NewsInitialize()
+NewsFrame:InitializeNewsFrame()
 Used for version checking to see if the frame needs to be shown
 Send this function the db where you want the settings and
 table with patch notes formate like
@@ -16,15 +19,18 @@ patchnotes = {
     note 2 etc
 }
 ]]
-function addon:NewsInitialize(db, newsTable)
-    db.AutoShowNews = db.AutoShowNews or db.AutoShowNews and db.AutoShowNews ~= false and true
-    if not db.NewsVersion or db.NewsVersion ~= version then
-        DEFAULT_CHAT_FRAME:AddMessage("AtlasLoot has been updated")
-        if db.AutoShowNews then
-            Timer.After(5, function() self:OpenNewsFrame(db) end)
+function NewsFrame:InitializeNewsFrame(db, newsTable, addon)
+    addonName = addon
+    addonDB = db
+    version = GetAddOnMetadata(addonName, "Version")
+    addonDB.AutoShowNews = addonDB.AutoShowNews or addonDB.AutoShowNews and addonDB.AutoShowNews ~= false and true
+    if not addonDB.NewsVersion or addonDB.NewsVersion ~= version then
+        DEFAULT_CHAT_FRAME:AddMessage(addonName.." has been updated")
+        if addonDB.AutoShowNews then
+            Timer.After(5, function() self:OpenNewsFrame() end)
         end
     end
-    db.NewsVersion = version
+    addonDB.NewsVersion = version
     news = newsTable
 end
 
@@ -33,15 +39,9 @@ local function copyToClipboard(text)
 	SendSystemMessage(S_COPIED_TO_CLIPBOARD:format(text:gsub("X%-", "")))
 end
 
-
-function addon:OpenNewsFrame(db)
-    addon:CreateNewsFrame(db)
-    _G[addonName.."NewsFrame"]:Show()
-end
-
 -- Creates News Frame
 local frameCreated
-function addon:CreateNewsFrame(db)
+local function createNewsFrame()
     if frameCreated then return end
     local mainframe = CreateFrame("FRAME", addonName.."NewsFrame", UIParent,"UIPanelDialogTemplate")
     mainframe:SetSize(500,600)
@@ -58,30 +58,33 @@ function addon:CreateNewsFrame(db)
     mainframe.TitleText:SetPoint("TOP", 0, -9)
     mainframe.TitleText:SetShadowOffset(1,-1)
     mainframe:SetScript("OnShow", function()
-        addon:NewsScrollFrameUpdate()
-        mainframe.AutoShowNews:SetChecked(db.AutoShowNews)
+        NewsFrame:NewsScrollFrameUpdate()
+        mainframe.AutoShowNews:SetChecked(addonDB.AutoShowNews)
         end)
     mainframe:Hide()
     mainframe.AutoShowNews = CreateFrame("CheckButton", addonName.."NewsFrameAutoShow", mainframe, "OptionsCheckButtonTemplate")
     mainframe.AutoShowNews:SetPoint("BOTTOMLEFT", 20, 15)
     mainframe.AutoShowNews.Text:SetText("Auto Open on New Changes" )
-    mainframe.AutoShowNews:SetScript("OnClick", function() db.AutoShowNews = not db.AutoShowNews end)
-    mainframe.DiscordLink = CreateFrame("Button", addonName.."NewsFrameDiscordCopyButton", mainframe)
-    mainframe.DiscordLink:RegisterForClicks("AnyDown")
-    mainframe.DiscordLink:SetScript("OnEnter", function(self)
-        GameTooltip:ClearLines()
-        GameTooltip:SetOwner(self, "ANCHOR_RIGHT", -(self:GetWidth() / 2), 5)
-        GameTooltip:AddLine("Click to copy link to clipboard")
-        GameTooltip:Show()
-    end)
-    mainframe.DiscordLink:SetScript("OnLeave", function() GameTooltip:Hide() end)
-    mainframe.DiscordLink:SetPoint("LEFT", mainframe.AutoShowNews, 200, 0)
-    mainframe.DiscordLink:SetSize(300, 30)
+    mainframe.AutoShowNews:SetScript("OnClick", function() addonDB.AutoShowNews = not addonDB.AutoShowNews end)
     local discord = GetAddOnMetadata(addonName, "X-Discord")
-    mainframe.DiscordLink:SetScript("OnClick", function() copyToClipboard(discord) end)
-    mainframe.DiscordLink.Text = mainframe.DiscordLink:CreateFontString(mainframe.DiscordLink,"OVERLAY","GameFontNormal")
-    mainframe.DiscordLink.Text:SetText("|cff1eff00"..discord)
-    mainframe.DiscordLink.Text:SetPoint("CENTER", 0, 0)
+    if discord then
+        mainframe.DiscordLink = CreateFrame("Button", addonName.."NewsFrameDiscordCopyButton", mainframe)
+        mainframe.DiscordLink:RegisterForClicks("AnyDown")
+        mainframe.DiscordLink:SetScript("OnEnter", function(self)
+            GameTooltip:ClearLines()
+            GameTooltip:SetOwner(self, "ANCHOR_RIGHT", -(self:GetWidth() / 2), 5)
+            GameTooltip:AddLine("Click to copy link to clipboard")
+            GameTooltip:Show()
+        end)
+        mainframe.DiscordLink:SetScript("OnLeave", function() GameTooltip:Hide() end)
+        mainframe.DiscordLink:SetPoint("LEFT", mainframe.AutoShowNews, 200, 0)
+        mainframe.DiscordLink:SetSize(300, 30)
+
+        mainframe.DiscordLink:SetScript("OnClick", function() copyToClipboard(discord) end)
+        mainframe.DiscordLink.Text = mainframe.DiscordLink:CreateFontString(mainframe.DiscordLink,"OVERLAY","GameFontNormal")
+        mainframe.DiscordLink.Text:SetText("|cff1eff00"..discord)
+        mainframe.DiscordLink.Text:SetPoint("CENTER", 0, 0)
+    end
 
     tinsert(UISpecialFrames, addonName.."NewsFrame")
     --ScrollFrame
@@ -98,7 +101,7 @@ function addon:CreateNewsFrame(db)
             insets = { left = 4, right = 4, top = 4, bottom = 4 },
         })
     -- scrollframe update function
-    function addon:NewsScrollFrameUpdate()
+    function NewsFrame:NewsScrollFrameUpdate()
         local maxValue = #news
         FauxScrollFrame_Update(scrollFrame.scrollBar, maxValue, MAX_ROWS, ROW_HEIGHT)
         local offset = FauxScrollFrame_GetOffset(scrollFrame.scrollBar)
@@ -123,14 +126,14 @@ function addon:CreateNewsFrame(db)
     scrollSlider:SetPoint("BOTTOMRIGHT", -30, 8)
     scrollSlider:SetScript("OnVerticalScroll", function(self, offset)
         self.offset = math.floor(offset / ROW_HEIGHT + 0.5)
-        addon:NewsScrollFrameUpdate()
+        NewsFrame:NewsScrollFrameUpdate()
     end)
 
     scrollFrame.scrollBar = scrollSlider
 
     local rows = setmetatable({}, { __index = function(t, i)
         local row = scrollFrame:CreateFontString("$parentRow"..i,"OVERLAY","GameFontNormal")
-        row:SetSize(440, 25)
+        row:SetSize(420, 25)
         row:SetJustifyH("LEFT")
         if i == 1 then
             row:SetPoint("TOPLEFT", scrollFrame, 10, -8)
@@ -144,3 +147,30 @@ function addon:CreateNewsFrame(db)
     scrollFrame.rows = rows
     frameCreated = true
 end
+
+function NewsFrame:OpenNewsFrame()
+    createNewsFrame()
+    _G[addonName.."NewsFrame"]:Show()
+end
+
+local mixins = {
+	"InitializeNewsFrame",
+    "OpenNewsFrame",
+}
+
+NewsFrame.embeds = NewsFrame.embeds or {}
+
+function NewsFrame:Embed(target)
+	for _, v in pairs(mixins) do
+		target[v] = self[v]
+	end
+	self.embeds[target] = true
+	return target
+end
+
+-- Update embeds
+for target, _ in pairs(NewsFrame.embeds) do
+	NewsFrame:Embed(target)
+end
+
+AceLibrary:Register(NewsFrame, MAJOR, MINOR)
