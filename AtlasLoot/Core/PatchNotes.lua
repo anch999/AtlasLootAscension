@@ -1,5 +1,7 @@
 
 local patchNotes = {
+    {"Version 7.4.5", "22nd November, 2024"},
+    "Fixed drop location tooltips not showing",
     {"Version 7.4.5", "21st November, 2024"},
     "Added option to show an item glow on items in a vendor that are in your wishlists",
     {"Version 7.4.4", "15th November, 2024"},
