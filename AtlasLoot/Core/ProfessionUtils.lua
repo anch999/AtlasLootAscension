@@ -1,0 +1,310 @@
+local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
+-- Colours stored for code readability
+local GREY = "|cff999999"
+local RED = "|cffff0000"
+local WHITE = "|cffFFFFFF"
+local GREEN = "|cff1eff00"
+local PURPLE = "|cff9F3FFF"
+local BLUE = "|cff0070dd"
+local ORANGE = "|cffFF8400"
+local CYAN =  "|cff00ffff"
+local SPRINGGREEN = "|cFF00FF7F"
+local YELLOW = "|cffFFd200"
+
+local playerName = UnitName("player")
+local realmName = GetRealmName()
+local playerFaction = UnitFactionGroup("player")
+
+function AtlasLoot:GetRecipeData(recipeID, idType)
+	if not TRADESKILL_RECIPES then return end
+	for _,prof in pairs(TRADESKILL_RECIPES) do
+		for _,cat in pairs(prof) do
+		   for _,recipe in pairs(cat) do
+			  if (idType == "spell" and recipeID == recipe.SpellEntry) or (idType == "item" and recipeID == recipe.RecipeItemEntry) then
+				local info = {{recipe.CreatedItemEntry}, "blank", "blank", "blank", "blank", "blank",spellID = recipe.SpellEntry, skillIndex = recipe.SkillIndex}
+				local bloodForgedID = self:GetItemDifficultyID(recipe.CreatedItemEntry, 1)
+				if bloodForgedID and bloodForgedID ~= recipe.CreatedItemEntry then
+					info[2] = {bloodForgedID}
+				end
+				if recipe.RecipeItemEntry and recipe.RecipeItemEntry ~= 0 then
+					local number = 3
+					if info[2] == "blank" then
+						number = 2
+					end
+					info[number] = {recipe.RecipeItemEntry}
+					info.Recipe = recipe.RecipeItemEntry
+				end
+				for _,v in pairs(recipe.Reagents) do
+					tinsert(info, v)
+				end
+				return info
+			  end
+		   end
+		end
+	 end
+end
+
+-- Returns the recipe itemID from a crafting spellID
+function AtlasLoot:GetRecipeID(spellID)
+	if not TRADESKILL_RECIPES then return end
+	for _,prof in pairs(TRADESKILL_RECIPES) do
+		for _,cat in pairs(prof) do
+			for _,recipe in pairs(cat) do
+				if spellID == recipe.SpellEntry and recipe.RecipeItemEntry ~= 0 then
+					return recipe.RecipeItemEntry
+				end
+			end
+		end
+	 end
+end
+
+function AtlasLoot:IsRecipeKnown(ID, profile)
+	if not profile or not profile.professions then return end
+	for _, prof in pairs(profile.professions) do
+		if prof.knownRecipes[ID] then return true end
+	end
+end
+
+function AtlasLoot:GetKnownRecipes(spellID)
+    --returns a list of characters with the recipe
+	local text
+    for key, profile in pairs(self.db.profiles) do
+        if gsub(key,"-",""):match(gsub(realmName,"-","")) and not gsub(key,"-",""):match(gsub(playerName,"-","")) and self:IsRecipeKnown(spellID, profile) then
+            local charName = strsplit("-", key, 5)
+            text = text and text..", "..gsub(charName, " ", "") or gsub(charName, " ", "")
+        end
+    end
+	return text
+end
+
+function AtlasLoot:IsProfessionKnown(skillID, profile)
+	if profile and profile.professions and profile.professions[skillID] then return true end
+end
+
+function AtlasLoot:IsRecipeUnknown(ID)
+	local recipeData = self:GetRecipeData(ID, "item")
+	if not recipeData or not recipeData.skillIndex then return end
+
+	local text
+	for key, profile in pairs(self.db.profiles) do
+		if gsub(key,"-",""):match(gsub(realmName,"-","")) and
+		self:IsProfessionKnown(recipeData.skillIndex, profile) and not self:IsRecipeKnown(recipeData.spellID, profile) then
+			local charName = strsplit("-", key, 5)
+			text = text and text..", "..gsub(charName, " ", "") or gsub(charName, " ", "")
+		end
+	end
+	return text
+end
+
+local professionTable = {
+	[171] = {
+	"AlchemyCLASSIC",
+	"AlchemyTBC",
+	"AlchemyWRATH",
+},
+	[164] = {
+	"SmithingCLASSIC",
+	"SmithingTBC",
+	"SmithingWRATH",
+	},
+	[333] = {
+	"EnchantingCLASSIC",
+	"EnchantingTBC",
+	"EnchantingWRATH",
+},
+	[202] = {
+	"EngineeringCLASSIC",
+	"EngineeringTBC",
+	"EngineeringWRATH",
+},
+	[755] = {
+	"JewelcraftingTBC",
+	"JewelcraftingWRATH",
+},
+	[165] = {
+	"LeatherworkingCLASSIC",
+	"LeatherworkingTBC",
+	"LeatherworkingWRATH",
+},
+	[197] = {
+	"TailoringCLASSIC",
+	"TailoringTBC",
+	"TailoringWRATH",
+},
+	[186] = {
+	"MiningCLASSIC",
+	"MiningTBC",
+	"MiningWRATH",
+},
+	[185] = {
+	"CookingCLASSIC",
+	"CookingTBC",
+	"CookingWRATH",
+},
+	[129] = {
+	"FirstAidCLASSIC",
+	"FirstAidTBC",
+	"FirstAidWRATH",
+},
+	[773] = {
+	"Inscription",
+},
+}
+
+local craftingXpac = { ClassicCrafting = 1, BCCrafting = 2, WrathCrafting = 3 }
+
+function AtlasLoot:SetRecipeMapPins()
+	local xpac = GetAccountExpansionLevel()+1
+	self:LoadAllModules()
+	for profKey, _ in pairs(self.db.profile.professions) do
+		if professionTable[profKey] then
+			for _, profTable in pairs(professionTable[profKey]) do
+				if craftingXpac[AtlasLoot_Data[profTable].Type] <= xpac then
+					for _, profType in pairs(AtlasLoot_Data[profTable]) do
+						if type(profType) == "table" then
+							for _, recipeData in pairs(profType) do
+								if recipeData.spellID and not CA_IsSpellKnown(recipeData.spellID) then
+									local craftingData = self:GetRecipeSource(recipeData.spellID)
+									if craftingData then
+										for _,v in pairs(craftingData) do
+											if v.cords and tonumber(v.cords[1]) ~= 0 and tonumber(v.cords[2]) ~= 0 then
+												local line1 = v[1]
+												local line2 = v[2]
+												if v.fac and (v.fac[2] == playerFaction or v.fac[2] == "Netural") then line1 = v.fac[1]..line1 end
+												self:AddWayPoint({ line2, tonumber(v.cords[1]), tonumber(v.cords[2]), line1})
+											end
+										end
+									end
+								end
+							end
+						end
+					end
+				end
+			end
+		end
+	end
+end
+
+function AtlasLoot:GetRecipeSource(spellID)
+	if not spellID then return end
+	local cData = AtlasLoot_CraftingData
+	local data = {}
+	-- extra information on where to find the recipe
+	-- trainer learnt
+	local trainer = cData["Trainer"][spellID]
+	if trainer then tinsert(data, {AL["Source"]..": "..WHITE..trainer}) end
+	-- aquire type
+	local aquireType = cData["AquireType"][spellID]
+	if aquireType then
+		tinsert(data, {AL["Source"]..": "..WHITE..cData[aquireType[1]][aquireType[2]][1]})
+	end
+	-- vendor recipe
+	local vendor = cData["Vendor"][spellID]
+	if vendor then
+		tinsert(data, {AL["Source"]..": "..WHITE..AL["Vendor"]})
+		for _,v in pairs(vendor) do
+			local vendor = AtlasLoot_CraftingData["VendorList"][v]
+			tinsert(data, {vendor[1], vendor[2], cords = {vendor[3], vendor[4]}, fac = vendor[5]})
+		end
+	end
+	-- vendor recipe
+	local recipeRepVendor = cData["RecipeRepVendor"][spellID]
+	if recipeRepVendor then
+		tinsert(data, {AL["Source"]..": "..WHITE..AL["Vendor"]})
+		local vendor = AtlasLoot_CraftingData["VendorList"][spellID]
+		for	i = 3, 6 do
+			if vendor and vendor[i] then
+			tinsert(data, {vendor[1], vendor[2], fac = vendor[i]})
+			end
+		end
+	end
+	--limited vendor recipes
+	local limitedVendor = cData["LimitedVendor"][spellID]
+	if limitedVendor then
+		tinsert(data, {AL["Source"]..": "..WHITE..AL["Limited Stock"]})
+		local sort = {}
+		local limited = false
+		for i,v in pairs(limitedVendor) do
+			 if limited then
+				 tinsert(sort[i-1],v)
+				 limited = false
+			 else
+				 sort[i] = {v}
+				 limited = true
+			 end
+		end
+		for _,v in pairs(sort) do
+			 local vendor = AtlasLoot_CraftingData["VendorList"][v[1]]
+			 tinsert(data, {vendor[1], vendor[2], cords = {vendor[3], vendor[4]}, fac = vendor[5], limited = v[2]})
+		end
+	end
+	--mob drop
+	local mobDrop = cData["MobDrop"][spellID]
+	if mobDrop then
+		tinsert(data, {AL["Source"]..": "..WHITE..AL["Mob Drop"]})
+		for _,v in pairs(mobDrop) do
+			local mob = AtlasLoot_CraftingData["MobList"][v]
+			local cords = nil
+			if mob[3] ~= 0 and mob[4] ~= 0 then
+				cords = {mob[3], mob[4]}
+			end
+			tinsert(data, {mob[1], WHITE..mob[2], cords})
+		end
+	end
+	-- World Drop
+	local worldDrop = cData["WorldDrop"][spellID]
+	if worldDrop then
+		tinsert(data, {AL["Source"]..": "..WHITE..AL["World Drop"]})
+		local text = worldDrop[1]
+		if worldDrop[2] then
+			text = text.." / "..worldDrop[2]
+		end
+		tinsert(data, {text})
+	end
+	--quest
+	local questDrop = cData["QuestDrop"][spellID]
+	if questDrop then
+		tinsert(data, {AL["Source"]..": "..WHITE..AL["Quest"]})
+		for _,v in pairs(questDrop) do
+			local quest = AtlasLoot_CraftingData["QuestList"][v]
+			tinsert(data, {quest[1],  quest[2], cords = {quest[3], quest[4]}, fac = quest[5]})
+		end
+	end
+	--rep vendor
+	local repVendor = cData["RepVendor"][spellID]
+	if repVendor then
+		tinsert(data, {AL["Source"]..": "..WHITE..AL["Reputation Vendor"]})
+		local line1, line2
+		local list = {}
+		for i,v in pairs(repVendor) do
+			 if type(v) == "table" then
+				 for i,v in pairs(v) do
+					 if i == 1 then
+						 line1 = AL["Faction"]..": "..WHITE..v
+					 elseif i == 2 then
+						 line2 = AL["Required Reputation"]..": "..WHITE..v
+					 else
+						 tinsert(list,AtlasLoot_CraftingData["VendorList"][v])
+					 end
+				 end
+			 else
+				 if i == 1 then
+					 line1 = AL["Faction"]..": "..WHITE..v
+				 elseif i == 2 then
+					 line2 = AL["Required Reputation"]..": "..WHITE..v
+				 else
+					 tinsert(list,AtlasLoot_CraftingData["VendorList"][v])
+				 end
+			 end
+		end
+		tinsert(data, {line1, line2})
+		for _,v in pairs(list) do
+			local cords
+			if v[3] ~= 0 and v[4] ~= 0 then
+				cords = {v[3], v[4]}
+			end
+			tinsert(data, {v[1], WHITE..v[2], cords, fac = v[5]})
+		end
+	end
+	return data
+end

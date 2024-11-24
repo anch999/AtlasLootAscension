@@ -243,7 +243,7 @@ local itemDropLocation = CreateFrame("CheckButton", "AtlasLootOptionsFrameItemDr
         AtlasLootOptionsFrameItemDropLocationText:SetText(AL["Show drop locations in tooltips"])
         itemDropLocation:SetScript("OnClick", function()
             self.db.profile.showdropLocationTooltips = not self.db.profile.showdropLocationTooltips
-            self:CreateItemSourceList()
+            self:CreateItemSourceList(true)
             end)
 
 local merchantGlow = CreateFrame("CheckButton", "AtlasLootOptionsFrameMerchantGlow", AtlasLootOptionsFrame, "OptionsCheckButtonTemplate")

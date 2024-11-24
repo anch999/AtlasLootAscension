@@ -1,5 +1,7 @@
 
 local patchNotes = {
+    {"Version 7.4.7", "22th November, 2024"},
+    "Fixed vanity items not showing and sorted them into more categorys",
     {"Version 7.4.5", "22nd November, 2024"},
     "Fixed drop location tooltips not showing",
     {"Version 7.4.5", "21st November, 2024"},

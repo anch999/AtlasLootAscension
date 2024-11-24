@@ -2,7 +2,7 @@
 ## Title: AtlasLoot Ascension Edition
 ## Notes: Shows the possible loot from the bosses
 ## Author: v7 Rebuid Done by: Anch, Rvng
-## Version: v7.4.6
+## Version: v7.4.7
 ## X-Credits: Skray, Szyler and others.
 ## Dependencies: AtlasLoot_Cache
 ## X-Category: Map
@@ -27,7 +27,6 @@
 ## Notes-ruRU: Отображает весю возможную добычу с боссов
 ## SavedVariables: AtlasLootOptions, AtlasLootDB, AtlasLootWishList, AtlasLootFilterDB
 ## SavedVariablesPerCharacter: AtlasLootCharDB
-## OptionalDeps: LootLink, ItemSync
 
 embeds.xml
 
