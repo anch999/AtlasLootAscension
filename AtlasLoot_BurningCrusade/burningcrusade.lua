@@ -2296,20 +2296,20 @@ AtlasLoot_Data["KarazhanCryptsTBC"] = {
 	{
 		Name = AL["Captain Taveir (Rare Spawn)"];
 		WebID = {254495,"npc"};
-		[01] = { itemID = 254088 }; --Funeral Treads
-		[02] = { itemID = 254131 }; --Deathsworn Boots
-		[03] = { itemID = 254174 }; --Bonelink Greaves
-		[04] = { itemID = 254217 }; --Soulsteel Sabatons
-		[16] = { itemID = 254080 }; --Sigil of Captain Taveir
+		[01] = { itemID = 257178 }; -- Funeral Treads
+		[02] = { itemID = 257221 }; -- Deathsworn Boots
+		[03] = { itemID = 257673 }; -- Bonelink Greaves
+		[04] = { itemID = 257716 }; -- Soulsteel Sabatons
+		[16] = { itemID = 254080 }; -- Sigil of Captain Taveir
 	};
 	{
 		Name = AL["Kelivex Autumnvale (Rare Spawn)"];
 		WebID = {254493,"npc"};
-		[01] = { itemID = 254088 }; --Funeral Treads
-		[02] = { itemID = 254131 }; --Deathsworn Boots
-		[03] = { itemID = 254174 }; --Bonelink Greaves
-		[04] = { itemID = 254217 }; --Soulsteel Sabatons
-		[16] = { itemID = 254078 }; --Sigil of Kelivex Autumnvale
+		[01] = { itemID = 257178 }; -- Funeral Treads
+		[02] = { itemID = 257221 }; -- Deathsworn Boots
+		[03] = { itemID = 257673 }; -- Bonelink Greaves
+		[04] = { itemID = 257716 }; -- Soulsteel Sabatons
+		[16] = { itemID = 254078 }; -- Sigil of Kelivex Autumnvale
 	};
 };
 
