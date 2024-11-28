@@ -137,13 +137,8 @@ Performs inital setup of the mod and registers it for further setup when
 the required resources are in place
 ]]
 function AtlasLoot:OnInitialize()
-	--Enable the use of /al or /atlasloot to open the loot browser
-	SLASH_ATLASLOOT1 = "/atlasloot"
-	SLASH_ATLASLOOT2 = "/al"
-	SlashCmdList["ATLASLOOT"] = function(msg)
-		self:SlashCommand(msg)
-	end
 
+	self:InitializeSlashCommands()
 	--Sets the default loot tables for the current expansion enabled on the server.
 	local xpaclist = {"CLASSIC", "TBC", "WRATH"}
 	self.Expac = xpaclist[GetAccountExpansionLevel()+1]
@@ -253,6 +248,12 @@ function AtlasLoot:Reset(data)
     DEFAULT_CHAT_FRAME:AddMessage(BLUE..AL["AtlasLoot"]..": "..RED..AL["Reset complete!"])
 end
 
+function AtlasLoot:InitializeSlashCommands()
+	--Enable the use of /al or /atlasloot to open the loot browser
+	SLASH_ATLASLOOT1 = "/atlasloot"
+	SLASH_ATLASLOOT2 = "/al"
+	SlashCmdList["ATLASLOOT"] = function(msg) self:SlashCommand(msg) end
+end
 
 --[[
 AtlasLoot:SlashCommand(msg):
