@@ -164,13 +164,12 @@ end
 --------------------------------------------------------------------------------
 function AtlasLoot:ItemOnClick(item, button)
     self.Dewdrop:Close()
-	local name = strsub(_G["AtlasLootItem_"..item:GetID().."_Name"]:GetText(), 11)
     local spellID = item.spellID
     local itemID = item.itemID
     local dataID, dataSource, dataPage
 
     if not spellID and itemID then
-        local itemName, itemLink, itemQuality, itemLevel, itemMinLevel, itemType, itemSubType, itemCount, itemEquipLoc, itemTexture = GetItemInfo(itemID)
+        local itemName, itemLink, itemQuality, itemLevel, itemMinLevel, itemType, itemSubType, itemCount, itemEquipLoc, itemTexture = self:GetItemInfo(itemID)
         --If shift-clicked, link in the chat window
         if button=="RightButton" and self.itemUnlock then
             --move wishlist item down
@@ -198,7 +197,7 @@ function AtlasLoot:ItemOnClick(item, button)
             --insert to chat link
             ChatEdit_InsertLink(itemLink)
         elseif(ChatFrame1EditBox and ChatFrame1EditBox:IsVisible() and IsShiftKeyDown()) then
-            ChatFrame1EditBox:Insert(name)  -- <-- this line just inserts plain text, does not need any adjustment
+            ChatFrame1EditBox:Insert(itemName)  -- <-- this line just inserts plain text, does not need any adjustment
             --If control-clicked, use the dressing room
         elseif(IsControlKeyDown() and itemName) then
             --view item in dressing room
