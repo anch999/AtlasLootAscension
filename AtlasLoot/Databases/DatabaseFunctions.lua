@@ -24,7 +24,7 @@ local itemLevels = {
 
 function AtlasLoot:MatchItemLevelBracket(ogILevel, newILevel)
 	for _, bracket in pairs(itemLevels) do
-		if ogILevel > bracket[1] and ogILevel < bracket[2] and newILevel > ogILevel and newILevel < bracket[2] then print(ogILevel, bracket[1], bracket[2]) return true end
+		if ogILevel > bracket[1] and ogILevel < bracket[2] and newILevel > ogILevel and newILevel < bracket[2] then return true end
 	end
 end
 

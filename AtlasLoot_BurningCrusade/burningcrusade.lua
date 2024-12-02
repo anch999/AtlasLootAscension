@@ -1358,15 +1358,13 @@ AtlasLoot_Data["CFRSerpentshrine"] = {
 		[09] = { itemID = 600878, [alDif.MIN_DIF] = alDif.Heroic }; --Elemental Lodestone: Hydross the Unstable
 		[16] = { itemID = 30052 }; --Ring of Lethality
 		[17] = { itemID = 33055 }; --Band of Vile Aggression
-		[18] = { itemID = 30664 }; --Living Root of the Wildheart
-		[19] = { itemID = 30629 }; --Scarab of Displacement
-		[20] = { itemID = 30049 }; --Fathomstone
-		[21] = { itemID = 30051 }; --Idol of the Crescent Goddess
-		[23] = { itemID = 29434 }; --Badge of Justice
-		[24] = { itemID = 400751, [alDif.MAX_DIF] = alDif.Normal }; --Raider's Commendations
-		[25] = { itemID = 98570 }; --Mystic Orb
-		[27] = { itemID = 816254, droprate = { nil, "2%", "5%", "7%", "10%" } }; --Formula: Enchant Cloak - Crushing Wave
-		[29] = { itemID = 63338, droprate = "1%" }; --Pet Sigil
+		[18] = { itemID = 12149 }; --Ring of Unstable Currents
+		[19] = { itemID = 30664 }; --Living Root of the Wildheart
+		[20] = { itemID = 30629 }; --Scarab of Displacement
+		[21] = { itemID = 30049 }; --Fathomstone
+		[22] = { itemID = 30051 }; --Idol of the Crescent Goddess
+		[24] = { itemID = 816254, droprate = { nil, "2%", "5%", "7%", "10%" } }; --Formula: Enchant Cloak - Crushing Wave
+		[25] = { itemID = 63338, droprate = "1%" }; --Pet Sigil
 	};
 	{
 		Name = BabbleBoss["The Lurker Below"];
@@ -1377,16 +1375,15 @@ AtlasLoot_Data["CFRSerpentshrine"] = {
 		[05] = { itemID = 30066 }; --Tempest-Strider Boots
 		[06] = { itemID = 30065 }; --Glowing Breastplate of Truth
 		[07] = { itemID = 30057 }; --Bracers of Eradication
-		[09] = { itemID = 29434 }; --Badge of Justice
-		[16] = { itemID = 30059 }; --Choker of Animalistic Fury
-		[17] = { itemID = 30061 }; --Ancestral Ring of Conquest
-		[18] = { itemID = 33054 }; --The Seal of Danzalar
-		[19] = { itemID = 30665 }; --Earring of Soulful Meditation
-		[20] = { itemID = 30063 }; --Libram of Absolute Truth
-		[21] = { itemID = 30058 }; --Mallet of the Tides
-		[23] = { itemID = 29434 }; --Badge of Justice
-		[24] = { itemID = 400751, [alDif.MAX_DIF] = alDif.Normal }; --Raider's Commendations
-		[25] = { itemID = 98570 }; --Mystic Orb
+		[08] = { itemID = 12126 }; --Bracers of Abyssal Might
+		[10] = { itemID = 29434 }; --Badge of Justice
+		[16] = { itemID = 12165 }; --Amulet of Tidal Fury
+		[17] = { itemID = 30059 }; --Choker of Animalistic Fury
+		[18] = { itemID = 30061 }; --Ancestral Ring of Conquest
+		[19] = { itemID = 33054 }; --The Seal of Danzalar
+		[20] = { itemID = 30665 }; --Earring of Soulful Meditation
+		[21] = { itemID = 30063 }; --Libram of Absolute Truth
+		[23] = { itemID = 30058 }; --Mallet of the Tides
 	};
 	{
 		Name = BabbleBoss["Leotheras the Blind"];
@@ -1397,11 +1394,10 @@ AtlasLoot_Data["CFRSerpentshrine"] = {
 		[04] = { itemID = 30096 }; --Girdle of the Invulnerable
 		[05] = { itemID = 30627 }; --Tsunami Talisman
 		[06] = { itemID = 30095 }; --Fang of the Leviathan
+		[07] = { itemID = 12128 }; --Boots of Inner Torment
+		[08] = { itemID = 12129 }; --Dreadstep Sabatons
 		[16] = { itemID = 30240, lootTable = {"T5HAND","Token"} }; --Gloves of the Vanquished Defender
-		[18] = { itemID = 29434 }; --Badge of Justice
-		[19] = { itemID = 400751, [alDif.MAX_DIF] = alDif.Normal }; --Raider's Commendations
-		[20] = { itemID = 98570 }; --Mystic Orb
-		[22] = { itemID = 63326, droprate = "1%" }; --Pet Sigil
+		[18] = { itemID = 63326, droprate = "1%" }; --Pet Sigil
 	};
 	{
 		Name = BabbleBoss["Fathom-Lord Karathress"];
@@ -1412,11 +1408,10 @@ AtlasLoot_Data["CFRSerpentshrine"] = {
 		[04] = { itemID = 30663 }; --Fathom-Brooch of the Tidewalker
 		[05] = { itemID = 30626 }; --Sextant of Unstable Currents
 		[06] = { itemID = 30090 }; --World Breaker
+		[07] = { itemID = 12125 }; --Maul of the Bloodied Depths
+		[08] = { itemID = 12154 }; --Belt of Submerged Might
 		[16] = { itemID = 30246, lootTable = {"T5LEGS","Token"} }; --Leggings of the Vanquished Defender
-		[18] = { itemID = 29434 }; --Badge of Justice
-		[19] = { itemID = 400751, [alDif.MAX_DIF] = alDif.Normal }; --Raider's Commendations
-		[20] = { itemID = 98570 }; --Mystic Orb
-		[22] = { itemID = 63325, droprate = "1%" }; --Pet Sigil
+		[18] = { itemID = 63325, droprate = "1%" }; --Pet Sigil
 	};
 	{
 		Name = BabbleBoss["Morogrim Tidewalker"];
@@ -1428,15 +1423,13 @@ AtlasLoot_Data["CFRSerpentshrine"] = {
 		[05] = { itemID = 30068 }; --Girdle of the Tidal Call
 		[06] = { itemID = 30084 }; --Pauldrons of the Argent Sentinel
 		[07] = { itemID = 30081 }; --Warboots of Obliteration
+		[08] = { itemID = 12193 }; --Maul of Glacial Waves
 		[16] = { itemID = 30008 }; --Pendant of the Lost Ages
 		[17] = { itemID = 30083 }; --Ring of Sundered Souls
 		[18] = { itemID = 33058 }; --Band of the Vigilant
 		[19] = { itemID = 30720 }; --Serpent-Coil Braid
 		[20] = { itemID = 30082 }; --Talon of Azshara
 		[21] = { itemID = 30080 }; --Luminescent Rod of the Naaru
-		[23] = { itemID = 29434 }; --Badge of Justice
-		[24] = { itemID = 400751, [alDif.MAX_DIF] = alDif.Normal }; --Raider's Commendations
-		[25] = { itemID = 98570 }; --Mystic Orb
 	};
 	{
 		Name = BabbleBoss["Lady Vashj"];
@@ -1453,13 +1446,13 @@ AtlasLoot_Data["CFRSerpentshrine"] = {
 		[10] = { itemID = 30103 }; --Fang of Vashj
 		[11] = { itemID = 30108 }; --Lightfathom Scepter
 		[12] = { itemID = 30105 }; --Serpent Spine Longbow
+		[13] = { itemID = 12148 }; --Ring of Tidal Precision
+		[14] = { itemID = 12151 }; --Tidebound Bow
+		[15] = { itemID = 12194 }; --Tideforged Maul
 		[16] = { itemID = 30243, lootTable = {"T5HEAD","Token"} }; --Helm of the Vanquished Defender
-		[18] = { itemID = 29434 }; --Badge of Justice
-		[19] = { itemID = 400751, [alDif.MAX_DIF] = alDif.Normal }; --Raider's Commendations
-		[20] = { itemID = 98570 }; --Mystic Orb
-		[22] = { itemID = 29906 }; --Vashj's Vial Remnant
-		[23] = { itemID = 450000 }; --Intact Vial of Lady Vashj
-		[25] = { itemID = 63320, droprate = "1%" }; --Pet Sigil
+		[18] = { itemID = 29906 }; --Vashj's Vial Remnant
+		[19] = { itemID = 450000 }; --Intact Vial of Lady Vashj
+		[21] = { itemID = 63320, droprate = "1%" }; --Pet Sigil
 	};
 	{
 		Name = AL["Trash Mobs"];
