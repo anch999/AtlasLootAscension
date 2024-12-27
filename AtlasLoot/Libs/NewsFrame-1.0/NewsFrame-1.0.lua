@@ -23,19 +23,30 @@ function NewsFrame:InitializeNewsFrame(db, newsTable, addon)
     version = GetAddOnMetadata(addonName, "Version")
     addonDB.AutoShowNews = addonDB.AutoShowNews or addonDB.AutoShowNews and addonDB.AutoShowNews ~= false and true
     if not addonDB.NewsVersion or addonDB.NewsVersion ~= version then
-        DEFAULT_CHAT_FRAME:AddMessage(addonName.." has been updated")
+        DEFAULT_CHAT_FRAME:AddMessage("|cFFFFFF00|Hspell:"..addonName..":NewsLink|h"..addonName.." has been updated|cff00ffff [Open News]|h|r")
         if addonDB.AutoShowNews then
             Timer.After(5, function() self:OpenNewsFrame() end)
         end
     end
     addonDB.NewsVersion = version
     news = newsTable
+
+    hooksecurefunc("SetItemRef", function(link)
+        local linkType, addon, param1 = strsplit(":", link)
+        if linkType == "spell" and addon == addonName then
+            if param1 == "NewsLink" then
+                self:OpenNewsFrame()
+            end
+        end
+    end)
 end
 
 local function copyToClipboard(text)
 	Internal_CopyToClipboard(text)
 	SendSystemMessage(S_COPIED_TO_CLIPBOARD:format(text:gsub("X%-", "")))
 end
+
+
 
 -- Creates News Frame
 local frameCreated
