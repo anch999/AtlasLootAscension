@@ -245,14 +245,6 @@ local TYPE_FILTERS = {
     ["fishingpole"] = "Fishing Poles"
 }
 
-local NON_EQUIPABLE_SLOTS = {
-    ["INVTYPE_NON_EQUIP"] = true,
-    ["INVTYPE_BODY"] = true,
-    ["INVTYPE_BAG"] = true,
-    ["INVTYPE_AMMO"] = true,
-    ["INVTYPE_QUIVER"] = true
-}
-
 SLASH_ATLASLOOTHELP1 = "/atlasloothelp"
 SlashCmdList["ATLASLOOTHELP"] = function(msg, editBox)
     local function show(caption, t)
