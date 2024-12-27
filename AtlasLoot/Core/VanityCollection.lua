@@ -76,7 +76,7 @@ function AtlasLoot:CreateVanityCollection()
 		if not AtlasLoot_Data["VanityUncategorized"] then AtlasLoot_Data["VanityUncategorized"] = { Name = CollectionNames("Uncategorized"), vanity = true, Module = "AtlasLoot_Ascension_Vanity" } end
 		return "VanityUncategorized"
 	end
-    
+
     local function setGroup(group, name)
        	if not AtlasLoot_Data["Vanity"..group] then AtlasLoot_Data["Vanity"..group] = { Name = AL[name or group], vanity = true, Module = "AtlasLoot_Ascension_Vanity" } end
 		return "Vanity"..group
@@ -151,4 +151,53 @@ function AtlasLoot:CreateVanityCollection()
 		local price = item.btCost > 0 and item.btCost .. " #bazaar#" or nil
 		tinsert(AtlasLoot_Data[group][#AtlasLoot_Data[group]], { itemID = item.itemid, extraInfo = description, contentsPreview = contentsPreview, vanityItem = true, price = price })
 	end
+end
+
+function AtlasLoot:LearnAllUnknownVanitySpells()
+	local unknownSpells = {}
+	local function parseCollection(group)
+		for _, catagory in ipairs(AtlasLoot_Data[group]) do
+			for _, item in pairs(catagory) do
+				if type(item) == "table" and item.itemID and C_VanityCollection.IsCollectionItemOwned(item.itemID) and VANITY_ITEMS[item.itemID] and
+				not CA_IsSpellKnown(VANITY_ITEMS[item.itemID].learnedSpell) and VANITY_ITEMS[item.itemID].learnedSpell ~= 0 then
+					local _, itemLink = self:GetItemInfo(item.itemID)
+					local spellName = GetSpellInfo(VANITY_ITEMS[item.itemID].learnedSpell)
+					local itemTooltipInfo = self:GetTooltipItemInfo(itemLink)
+					if (itemTooltipInfo and not itemTooltipInfo.isKnown) and not unknownSpells[spellName] or
+					(unknownSpells[spellName] and item.itemID > unknownSpells[spellName]) then
+						unknownSpells[spellName] = item.itemID
+					end
+				end
+			end
+		end
+	end
+	for _, group in pairs(AtlasLoot_SubMenus["CollectionsAscensionCLASSIC"]) do
+		if group[3] then
+			for _, subGroup in pairs(group[3]) do
+				parseCollection(subGroup[2])
+			end
+		else
+			parseCollection(group[2])
+		end
+	end
+	local newSpellList = {}
+	for _, itemID in pairs(unknownSpells) do
+		tinsert(newSpellList, itemID)
+	end
+	self:BatchRequestVanity(newSpellList)
+end
+
+function AtlasLoot:BatchRequestVanity(itemList)
+	itemList = self:CloneTable(itemList)
+	  local function nextItem()
+        local task = tremove(itemList)
+		while task do
+            RequestDeliverVanityCollectionItem(task)
+			if not CA_IsSpellKnown(VANITY_ITEMS[task].learnedSpell) and not self:HasItem(task) then
+				tinsert(itemList, task)
+			end
+            return Timer.After(.2, nextItem)
+        end
+    end
+    return nextItem()
 end

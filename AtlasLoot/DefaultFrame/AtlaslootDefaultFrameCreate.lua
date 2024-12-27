@@ -163,11 +163,11 @@ local learnSpellbtn = CreateFrame("Button", "AtlasLootItemsFrame_Spell_Vanity_Le
     learnSpellbtn:SetPoint("BOTTOM", "AtlasLootItemsFrame", "BOTTOM",0,5)
     learnSpellbtn:SetText("Learn Unknown")
     learnSpellbtn:SetWidth(150)
-    learnSpellbtn:SetScript("OnClick", function() AtlasLoot:BatchRequestVanity(AtlasLoot.vanityItems) end)
+    learnSpellbtn:SetScript("OnClick", function() AtlasLoot:LearnAllUnknownVanitySpells() end)
     learnSpellbtn:SetScript("OnEnter", function(self)
         GameTooltip:ClearLines()
         GameTooltip:SetOwner(self, "ANCHOR_RIGHT", -(self:GetWidth() / 2), 5)
-        GameTooltip:AddLine("Learn all the vanity items on this page")
+        GameTooltip:AddLine("Learn all the vanity items and spells that you currently don't know on this character")
         GameTooltip:Show()
     end)
     learnSpellbtn:SetScript("OnLeave", function() GameTooltip:Hide() end)
@@ -222,7 +222,7 @@ local sharebtn = CreateFrame("Button", "AtlasLootItemsFrame_Wishlist_Share", Atl
 local learnbtn = CreateFrame("Button", "AtlasLootItemsFrame_Wishlist_Vanity_Learn", AtlasLootItemsFrame, "OptionsButtonTemplate")
     learnbtn:SetPoint("BOTTOM", "AtlasLootItemsFrame_Wishlist_Share", "BOTTOM",100,0)
     learnbtn:SetText("Get Items")
-    learnbtn:SetScript("OnClick", function() AtlasLoot:BatchRequestVanity(AtlasLoot.vanityItems) end)
+    learnbtn:SetScript("OnClick", function() AtlasLoot:BatchRequestVanity(AtlasLoot.vanityItems, true) end)
     learnbtn:SetScript("OnEnter", function(self)
         GameTooltip:ClearLines()
         GameTooltip:SetOwner(self, "ANCHOR_RIGHT", -(self:GetWidth() / 2), 5)
@@ -273,10 +273,17 @@ local menubtn = CreateFrame("Button", "AtlasLootDefaultFrame_Menu", AtlasLootDef
     end)
 
     --Options Button
-local optionsbtn = CreateFrame("Button", nil, AtlasLootDefaultFrame, "SettingsGearButtonTemplate")
+local optionsbtn = CreateFrame("Button", "AtlasLootSettingsCog", AtlasLootDefaultFrame, "SettingsGearButtonTemplate")
     removeScripts(optionsbtn)
     optionsbtn:SetPoint("LEFT", "AtlasLootDefaultFrame_Menu",-27,0)
-    optionsbtn:SetScript("OnClick", function(self,button) AtlasLoot:OptionsToggle() end)
+    optionsbtn:RegisterForClicks("AnyDown")
+    optionsbtn:SetScript("OnClick", function(button,buttonClick)
+        if buttonClick == "LeftButton" then
+            AtlasLoot:OptionsToggle()
+        else
+            AtlasLoot:OpenSettingQuickMenu(button)
+        end
+    end)
     optionsbtn:SetScript("OnEnter", function(self)
         GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
         GameTooltip:AddLine("Options")

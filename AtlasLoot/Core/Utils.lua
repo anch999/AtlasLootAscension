@@ -240,7 +240,6 @@ function AtlasLoot:PopoupItemFrame(frame, data)
 			end
 		end)
 
-		
 		if num == 1 then
 			button:SetPoint("TOPLEFT", "AtlasLoot_PopupFrame", 9, -8)
 		elseif num == 7 then
@@ -394,21 +393,9 @@ function AtlasLoot:ItemsLoading(count)
 	end
 end
 
-function AtlasLoot:BatchRequestVanity(itemList)
-	itemList = self:CloneTable(itemList)
-	  local function nextItem()
-        local task = tremove(itemList)
-		while task do
-            RequestDeliverVanityCollectionItem(task)
-            return Timer.After(1, nextItem)
-        end
-    end
-    return nextItem()
-end
-
 local function CheckTooltipForDuplicate(tooltip, text)
     -- Check if we already added to this tooltip.
-    for i = 1, 30 do
+    for i = 1, tooltip:NumLines() do
         local frame = _G[tooltip:GetName() .. "TextLeft" .. i]
         local textOld
         if frame then textOld = frame:GetText() end
@@ -626,3 +613,53 @@ function AtlasLoot:InitializeWishlistMerchantGlow()
 	end
 end
 
+-- returns true, if player has item with given ID in inventory or bags and it's not on cooldown
+function AtlasLoot:HasItem(itemID)
+	local item, found, id
+	-- scan bags
+	for bag = 0, 4 do
+		for slot = 1, GetContainerNumSlots(bag) do
+			item = GetContainerItemLink(bag, slot)
+			if item then
+				found, _, id = item:find('^|c%x+|Hitem:(%d+):.+')
+				if found and tonumber(id) == itemID then
+					return true, bag, slot
+				end
+			end
+		end
+	end
+	return false
+end
+
+--========================================
+-- Retrieve additional item info via the
+-- item's tooltip
+--========================================
+local cTip = CreateFrame("GameTooltip","cTooltip",nil,"GameTooltipTemplate")
+function AtlasLoot:GetTooltipItemInfo(link, bag, slot)
+    cTip:SetOwner(UIParent, "ANCHOR_NONE")
+
+    -- set up return values
+    local binds = {}
+
+    -- generate item tooltip in hidden tooltip object
+    if link then
+        cTip:SetHyperlink(link)
+    elseif bag and slot then
+        cTip:SetBagItem(bag, slot)
+    else
+        return
+    end
+
+    for i = 1,cTip:NumLines() do
+        local text = _G["cTooltipTextLeft"..i]:GetText()
+        if text == "Realm Bound" then binds.isRealmbound = true end
+        if text == ITEM_SOULBOUND then  binds.isSoulbound = true end
+        if text == ITEM_BIND_ON_PICKUP then binds.isBoP = true end
+        if text == ITEM_SPELL_KNOWN then binds.isKnown = true end
+    end
+
+    cTip:Hide()
+
+    return binds
+end

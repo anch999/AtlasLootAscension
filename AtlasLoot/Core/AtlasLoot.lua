@@ -58,9 +58,7 @@ local AtlasLootDBDefaults = {
     profile = {
         EquipCompare = false,
         Opaque = false,
-        ItemIDs = false,
         LastBoss = "EmptyTable",
-        AtlasNaggedVersion = "",
         PartialMatching = true,
         LootBrowserStyle = 1,
         LootBrowserScale = 1.0,
@@ -153,6 +151,7 @@ the addon needs are in place, we can properly set up the mod
 function AtlasLoot:OnEnable()
     self.db = LibStub("AceDB-3.0"):New("AtlasLootDB")
     self.db:RegisterDefaults(AtlasLootDBDefaults)
+	self.globalDB = AtlasLootDB
 	setupSettingsDB()
 	AtlasLootItemCache = AtlasLootItemCache or {}
     if AtlasLoot_Data then
@@ -168,11 +167,9 @@ function AtlasLoot:OnEnable()
 	end
 	--Setup for minimap icon
 	self:MinimapIconSetup()
+	self:InitializeOptionsFrame()
     --Add the loot browser to the special frames tables to enable closing wih the ESC key
 	tinsert(UISpecialFrames, "AtlasLootDefaultFrame")
-	--Set up options frame
-	self:OptionsInit()
-    self:CreateOptionsInfoTooltips()
     --Set visual style for the loot browser
 	if self.db.profile.LootBrowserStyle then
 		self:SetSkin(self.skinKeys[self.db.profile.LootBrowserStyle][1])
