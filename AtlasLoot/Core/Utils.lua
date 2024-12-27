@@ -11,10 +11,8 @@ local CYAN =  "|cff00ffff"
 local SPRINGGREEN = "|cFF00FF7F"
 local YELLOW = "|cffFFd200"
 
-local playerName = UnitName("player")
-local realmName = GetRealmName()
-local playerFaction = UnitFactionGroup("player")
 
+--------------------------------- DewDrop Dropdownmenu ---------------------------------
 -- Used to create a dewdrop menu from a table
 function AtlasLoot:OpenDewdropMenu(frame, menuList, skipRegister)
 	if self.Dewdrop:IsOpen(frame) then self.Dewdrop:Close() return end
@@ -98,6 +96,8 @@ function AtlasLoot:CloseDewDrop(divider, maxLenght)
     )
 end
 
+-------------------------------------------------------------------------------
+
 -- return a copy of the table table
 function AtlasLoot:CloneTable(table)
 	if type(table) ~= "table" then return end
@@ -130,26 +130,29 @@ local itemEquipLocConversion = {
     "INVTYPE_THROWN","INVTYPE_RANGEDRIGHT","INVTYPE_QUIVER","INVTYPE_RELIC",
 }
 
+-- custom getiteminfo returns same formate as getiteminfo but will use info from either getiteminfo or getiteminfoinstant
 function AtlasLoot:GetItemInfo(item)
 	item = tonumber(item) and Item:CreateFromID(item) or Item:CreateFromLink(item)
+	local itemDescription
 	local itemName, itemLink, itemQuality, itemLevel, itemMinLevel, itemType, itemSubType, itemStackCount, itemEquipLoc, itemTexture, itemSellPrice = GetItemInfo(item.itemID)
 	if not item:GetInfo() then
 		self:ItemsLoading(1)
 		item:ContinueOnLoad(function()
 			self:ItemsLoading(-1)
 		end)
+	end
 		local itemInstant = GetItemInfoInstant(item.itemID)
 		if itemInstant then
-			itemName = itemInstant.name
-			itemSubType = _G["ITEM_SUBCLASS_"..itemInstant.classID.."_"..itemInstant.subclassID]
-			itemEquipLoc = itemEquipLocConversion[itemInstant.inventoryType]
-			itemTexture = itemInstant.icon
-			itemQuality = itemInstant.quality
-			itemLink = item:GetLink()
-			itemLevel = item.itemLevel
+			itemName = itemName or itemInstant.name
+			itemSubType = itemSubType or _G["ITEM_SUBCLASS_"..itemInstant.classID.."_"..itemInstant.subclassID]
+			itemEquipLoc = itemEquipLoc or itemEquipLocConversion[itemInstant.inventoryType]
+			itemTexture = itemTexture or itemInstant.icon
+			itemQuality = itemQuality or itemInstant.quality
+			itemLink = itemLink or item:GetLink()
+			itemLevel = itemLevel or item.itemLevel
+			itemDescription = itemDescription or itemInstant.description
 		end
-	end
-	return itemName, itemLink, itemQuality, itemLevel, itemMinLevel, itemType, itemSubType, itemStackCount, itemEquipLoc, itemTexture, itemSellPrice
+	return itemName, itemLink, itemQuality, itemLevel, itemMinLevel, itemType, itemSubType, itemStackCount, itemEquipLoc, itemTexture, itemSellPrice, itemDescription
 end
 
 -- Create enchant tooltip
@@ -183,176 +186,6 @@ function AtlasLoot:Chatlink(ID,chatType,Type)
     else
         SendChatMessage(select(2,GetItemInfo(ID)) ,chatType)
     end
-end
-
-function AtlasLoot:GetRecipeData(recipeID, idType)
-	if not TRADESKILL_RECIPES then return end
-	for _,prof in pairs(TRADESKILL_RECIPES) do
-		for _,cat in pairs(prof) do
-		   for _,recipe in pairs(cat) do
-			  if (idType == "spell" and recipeID == recipe.SpellEntry) or (idType == "item" and recipeID == recipe.RecipeItemEntry) then
-				local info = {{recipe.CreatedItemEntry}, "blank", "blank", "blank", "blank", "blank",spellID = recipe.SpellEntry, skillIndex = recipe.SkillIndex}
-				local bloodForgedID = self:GetItemDifficultyID(recipe.CreatedItemEntry, 1)
-				if bloodForgedID and bloodForgedID ~= recipe.CreatedItemEntry then
-					info[2] = {bloodForgedID}
-				end
-				if recipe.RecipeItemEntry and recipe.RecipeItemEntry ~= 0 then
-					local number = 3
-					if info[2] == "blank" then
-						number = 2
-					end
-					info[number] = {recipe.RecipeItemEntry}
-					info.Recipe = recipe.RecipeItemEntry
-				end
-				for _,v in pairs(recipe.Reagents) do
-					tinsert(info, v)
-				end
-				return info
-			  end
-		   end
-		end
-	 end
-end
-
--- Returns the recipe itemID from a crafting spellID
-function AtlasLoot:GetRecipeID(spellID)
-	if not TRADESKILL_RECIPES then return end
-	for _,prof in pairs(TRADESKILL_RECIPES) do
-		for _,cat in pairs(prof) do
-			for _,recipe in pairs(cat) do
-				if spellID == recipe.SpellEntry and recipe.RecipeItemEntry ~= 0 then
-					return recipe.RecipeItemEntry
-				end
-			end
-		end
-	 end
-end
-
-function AtlasLoot:IsRecipeKnown(ID, profile)
-	if not profile or not profile.professions then return end
-	for _, prof in pairs(profile.professions) do
-		if prof.knownRecipes[ID] then return true end
-	end
-end
-
-function AtlasLoot:GetKnownRecipes(spellID)
-    --returns a list of characters with the recipe
-	local text
-    for key, profile in pairs(self.db.profiles) do
-        if gsub(key,"-",""):match(gsub(realmName,"-","")) and not gsub(key,"-",""):match(gsub(playerName,"-","")) and self:IsRecipeKnown(spellID, profile) then
-            local charName = strsplit("-", key, 5)
-            text = text and text..", "..gsub(charName, " ", "") or gsub(charName, " ", "")
-        end
-    end
-	return text
-end
-
-function AtlasLoot:IsProfessionKnown(skillID, profile)
-	if profile and profile.professions and profile.professions[skillID] then return true end
-end
-
-function AtlasLoot:IsRecipeUnknown(ID)
-	local recipeData = self:GetRecipeData(ID, "item")
-	if not recipeData or not recipeData.skillIndex then return end
-
-	local text
-	for key, profile in pairs(self.db.profiles) do
-		if gsub(key,"-",""):match(gsub(realmName,"-","")) and
-		self:IsProfessionKnown(recipeData.skillIndex, profile) and not self:IsRecipeKnown(recipeData.spellID, profile) then
-			local charName = strsplit("-", key, 5)
-			text = text and text..", "..gsub(charName, " ", "") or gsub(charName, " ", "")
-		end
-	end
-	return text
-end
-
-local professionTable = {
-	[171] = {
-	"AlchemyCLASSIC",
-	"AlchemyTBC",
-	"AlchemyWRATH",
-},
-	[164] = {
-	"SmithingCLASSIC",
-	"SmithingTBC",
-	"SmithingWRATH",
-	},
-	[333] = {
-	"EnchantingCLASSIC",
-	"EnchantingTBC",
-	"EnchantingWRATH",
-},
-	[202] = {
-	"EngineeringCLASSIC",
-	"EngineeringTBC",
-	"EngineeringWRATH",
-},
-	[755] = {
-	"JewelcraftingTBC",
-	"JewelcraftingWRATH",
-},
-	[165] = {
-	"LeatherworkingCLASSIC",
-	"LeatherworkingTBC",
-	"LeatherworkingWRATH",
-},
-	[197] = {
-	"TailoringCLASSIC",
-	"TailoringTBC",
-	"TailoringWRATH",
-},
-	[186] = {
-	"MiningCLASSIC",
-	"MiningTBC",
-	"MiningWRATH",
-},
-	[185] = {
-	"CookingCLASSIC",
-	"CookingTBC",
-	"CookingWRATH",
-},
-	[129] = {
-	"FirstAidCLASSIC",
-	"FirstAidTBC",
-	"FirstAidWRATH",
-},
-	[773] = {
-	"Inscription",
-},
-}
-
-local craftingXpac = { ClassicCrafting = 1, BCCrafting = 2, WrathCrafting = 3 }
-
-function AtlasLoot:SetRecipeMapPins()
-	local xpac = GetAccountExpansionLevel()+1
-	self:LoadAllModules()
-	for profKey, _ in pairs(self.db.profile.professions) do
-		if professionTable[profKey] then
-			for _, profTable in pairs(professionTable[profKey]) do
-				if craftingXpac[AtlasLoot_Data[profTable].Type] <= xpac then
-					for _, profType in pairs(AtlasLoot_Data[profTable]) do
-						if type(profType) == "table" then
-							for _, recipeData in pairs(profType) do
-								if recipeData.spellID and not CA_IsSpellKnown(recipeData.spellID) then
-									local craftingData = self:GetRecipeSource(recipeData.spellID)
-									if craftingData then
-										for _,v in pairs(craftingData) do
-											if v.cords and tonumber(v.cords[1]) ~= 0 and tonumber(v.cords[2]) ~= 0 then
-												local line1 = v[1]
-												local line2 = v[2]
-												if v.fac and (v.fac[2] == playerFaction or v.fac[2] == "Netural") then line1 = v.fac[1]..line1 end
-												self:AddWayPoint({ line2, tonumber(v.cords[1]), tonumber(v.cords[2]), line1})
-											end
-										end
-									end
-								end
-							end
-						end
-					end
-				end
-			end
-		end
-	end
 end
 
 -- Get rep faction for when you have 2 loot tables and want to show a different one depending on rep
@@ -407,7 +240,6 @@ function AtlasLoot:PopoupItemFrame(frame, data)
 			end
 		end)
 
-		
 		if num == 1 then
 			button:SetPoint("TOPLEFT", "AtlasLoot_PopupFrame", 9, -8)
 		elseif num == 7 then
@@ -561,21 +393,9 @@ function AtlasLoot:ItemsLoading(count)
 	end
 end
 
-function AtlasLoot:BatchRequestVanity(itemList)
-	itemList = self:CloneTable(itemList)
-	  local function nextItem()
-        local task = tremove(itemList)
-		while task do
-            RequestDeliverVanityCollectionItem(task)
-            return Timer.After(1, nextItem)
-        end
-    end
-    return nextItem()
-end
-
 local function CheckTooltipForDuplicate(tooltip, text)
     -- Check if we already added to this tooltip.
-    for i = 1, 30 do
+    for i = 1, tooltip:NumLines() do
         local frame = _G[tooltip:GetName() .. "TextLeft" .. i]
         local textOld
         if frame then textOld = frame:GetText() end
@@ -612,7 +432,7 @@ GameTooltip:HookScript("OnTooltipSetItem", TooltipHandlerItem)
 ItemRefTooltip:HookScript("OnTooltipSetItem", TooltipHandlerItem)
 
 function AtlasLoot:StripTextColor(txt)
-	local txt = txt or ""
+	txt = txt or ""
 	txt = string.gsub( txt, "|c%x%x%x%x%x%x%x%x", "" )
 	txt = string.gsub( txt, "|c%x%x %x%x%x%x%x", "" ) -- the trading parts colour has a space instead of a zero for some weird reason
 	txt = string.gsub( txt, "|r", "" )
@@ -625,130 +445,6 @@ function AtlasLoot:CheckIfEmptyTable(table)
 	else
 		return true
 	end
-end
-
-function AtlasLoot:GetRecipeSource(spellID)
-	if not spellID then return end
-	local cData = AtlasLoot_CraftingData
-	local data = {}
-	-- extra information on where to find the recipe
-	-- trainer learnt
-	local trainer = cData["Trainer"][spellID]
-	if trainer then tinsert(data, {AL["Source"]..": "..WHITE..trainer}) end
-	-- aquire type
-	local aquireType = cData["AquireType"][spellID]
-	if aquireType then
-		tinsert(data, {AL["Source"]..": "..WHITE..cData[aquireType[1]][aquireType[2]][1]})
-	end
-	-- vendor recipe
-	local vendor = cData["Vendor"][spellID]
-	if vendor then
-		tinsert(data, {AL["Source"]..": "..WHITE..AL["Vendor"]})
-		for _,v in pairs(vendor) do
-			local vendor = AtlasLoot_CraftingData["VendorList"][v]
-			tinsert(data, {vendor[1], vendor[2], cords = {vendor[3], vendor[4]}, fac = vendor[5]})
-		end
-	end
-	-- vendor recipe
-	local recipeRepVendor = cData["RecipeRepVendor"][spellID]
-	if recipeRepVendor then
-		tinsert(data, {AL["Source"]..": "..WHITE..AL["Vendor"]})
-		local vendor = AtlasLoot_CraftingData["VendorList"][spellID]
-		for	i = 3, 6 do
-			if vendor and vendor[i] then
-			tinsert(data, {vendor[1], vendor[2], fac = vendor[i]})
-			end
-		end
-	end
-	--limited vendor recipes
-	local limitedVendor = cData["LimitedVendor"][spellID]
-	if limitedVendor then
-		tinsert(data, {AL["Source"]..": "..WHITE..AL["Limited Stock"]})
-		local sort = {}
-		local limited = false
-		for i,v in pairs(limitedVendor) do
-			 if limited then
-				 tinsert(sort[i-1],v)
-				 limited = false
-			 else
-				 sort[i] = {v}
-				 limited = true
-			 end
-		end
-		for _,v in pairs(sort) do
-			 local vendor = AtlasLoot_CraftingData["VendorList"][v[1]]
-			 tinsert(data, {vendor[1], vendor[2], cords = {vendor[3], vendor[4]}, fac = vendor[5], limited = v[2]})
-		end
-	end
-	--mob drop
-	local mobDrop = cData["MobDrop"][spellID]
-	if mobDrop then
-		tinsert(data, {AL["Source"]..": "..WHITE..AL["Mob Drop"]})
-		for _,v in pairs(mobDrop) do
-			local mob = AtlasLoot_CraftingData["MobList"][v]
-			local cords = nil
-			if mob[3] ~= 0 and mob[4] ~= 0 then
-				cords = {mob[3], mob[4]}
-			end
-			tinsert(data, {mob[1], WHITE..mob[2], cords})
-		end
-	end
-	-- World Drop
-	local worldDrop = cData["WorldDrop"][spellID]
-	if worldDrop then
-		tinsert(data, {AL["Source"]..": "..WHITE..AL["World Drop"]})
-		local text = worldDrop[1]
-		if worldDrop[2] then
-			text = text.." / "..worldDrop[2]
-		end
-		tinsert(data, {text})
-	end
-	--quest
-	local questDrop = cData["QuestDrop"][spellID]
-	if questDrop then
-		tinsert(data, {AL["Source"]..": "..WHITE..AL["Quest"]})
-		for _,v in pairs(questDrop) do
-			local quest = AtlasLoot_CraftingData["QuestList"][v]
-			tinsert(data, {quest[1],  quest[2], cords = {quest[3], quest[4]}, fac = quest[5]})
-		end
-	end
-	--rep vendor
-	local repVendor = cData["RepVendor"][spellID]
-	if repVendor then
-		tinsert(data, {AL["Source"]..": "..WHITE..AL["Reputation Vendor"]})
-		local line1, line2
-		local list = {}
-		for i,v in pairs(repVendor) do
-			 if type(v) == "table" then
-				 for i,v in pairs(v) do
-					 if i == 1 then
-						 line1 = AL["Faction"]..": "..WHITE..v
-					 elseif i == 2 then
-						 line2 = AL["Required Reputation"]..": "..WHITE..v
-					 else
-						 tinsert(list,AtlasLoot_CraftingData["VendorList"][v])
-					 end
-				 end
-			 else
-				 if i == 1 then
-					 line1 = AL["Faction"]..": "..WHITE..v
-				 elseif i == 2 then
-					 line2 = AL["Required Reputation"]..": "..WHITE..v
-				 else
-					 tinsert(list,AtlasLoot_CraftingData["VendorList"][v])
-				 end
-			 end
-		end
-		tinsert(data, {line1, line2})
-		for _,v in pairs(list) do
-			local cords
-			if v[3] ~= 0 and v[4] ~= 0 then
-				cords = {v[3], v[4]}
-			end
-			tinsert(data, {v[1], WHITE..v[2], cords, fac = v[5]})
-		end
-	end
-	return data
 end
 
 -- handle minimap tooltip
@@ -787,10 +483,8 @@ function AtlasLoot:GetDropRate(lootTable, lootGroup)
 	end
 end
 
-
-
 local function IgnoreTables(dataSource)
-	local cTable = {"CraftingCLASSIC", "CraftingTBC", "CraftingWRATH", "CollectionsAscensionCLASSIC"}
+	local cTable = {"CraftingCLASSIC", "CraftingTBC", "CraftingWRATH", "CollectionsAscensionCLASSIC", "CollectionsAscensionTBC", "CollectionsAscensionWRATH"}
 	for _, t in pairs(cTable) do
 		for _, crafting in  ipairs(AtlasLoot_SubMenus[t]) do
 			if crafting[3] then
@@ -804,7 +498,7 @@ local function IgnoreTables(dataSource)
 end
 
 function AtlasLoot:CreateItemSourceList(overRide)
-	if not overRide and not self.db.profile.showdropLocationTooltips then return end
+	if overRide then elseif not self.db.profile.showdropLocationTooltips then return end
 	if overRide or not AtlasLootDB.ItemSources or (AtlasLootDB.ItemSources.Version and AtlasLootDB.ItemSources.Version ~= self.Version) then
 		self:LoadAllModules()
 		AtlasLootDB.ItemSources = {Version = AtlasLoot.Version, List = {}}
@@ -813,17 +507,17 @@ function AtlasLoot:CreateItemSourceList(overRide)
 				for _, boss in pairs(instance) do
 					if type(boss) == "table" then
 						for _, item in pairs(boss) do
-							if type(item) == "table" and item.itemID and not IgnoreTables(dataSource) then
-								list[item.itemID] = instance.Name .. " - " .. boss.Name
+							if type(item) == "table" and item.itemID and instance.Name and boss.Name and not IgnoreTables(dataSource) then
+								list[item.itemID] = CYAN..instance.Name .. WHITE .." - " .. boss.Name
 								if ItemIDsDatabase[item.itemID] then
 									for _, varID in pairs(ItemIDsDatabase[item.itemID]) do
-										list[varID] = instance.Name .. " - " .. boss.Name
+										list[varID] = CYAN..instance.Name .. WHITE .." - " .. boss.Name
 									end
 								end
 								if item.spellID then
 									local recipeID = self:GetRecipeID(item.spellID) or nil
 									if recipeID and (list[recipeID] and not IgnoreTables(dataSource) or not list[recipeID]) then
-										list[recipeID] = instance.Name .. " - " .. boss.Name
+										list[recipeID] = CYAN..instance.Name .. WHITE .." - " .. boss.Name
 									end
 								end
 							end
@@ -837,7 +531,7 @@ end
 
 function AtlasLoot:ItemSourceTooltip(itemID, tooltip)
 	if not self.db.profile.showdropLocationTooltips or not self.ItemSourceList then return end
-	local text = self.ItemSourceList[itemID] and "Item Source: " .. WHITE .. self.ItemSourceList[itemID] or nil
+	local text = self.ItemSourceList[itemID] and "Item Source: " .. self.ItemSourceList[itemID] or nil
 	if text and not CheckTooltipForDuplicate(tooltip, text) then
 		tooltip:AddLine(text)
 	end
@@ -884,4 +578,88 @@ function AtlasLoot:ArenaCost(price, itemEquipLoc, itemQuality)
 	else
 		return ArmorTypes[itemEquipLoc][1]..ArmorTypes[itemEquipLoc][2]
 	end
+end
+
+function AtlasLoot:SetMerchantFrameGlow()
+	if not self.db.profile.MerchantGlow then return end
+	local num = 1
+	while _G["MerchantItem"..num.."ItemButton"] do
+		local link = _G["MerchantItem"..num.."ItemButton"].link
+		if not link then return end
+		local itemID = GetItemInfoFromHyperlink(link)
+		if self:WishListCheck(itemID, true) then
+			ActionButton_ShowOverlayGlow(_G["MerchantItem"..num.."ItemButton"])
+		else
+			ActionButton_HideOverlayGlow(_G["MerchantItem"..num.."ItemButton"])
+		end
+		num = num + 1
+	end
+end
+
+function AtlasLoot:MERCHANT_SHOW()
+	self:SetMerchantFrameGlow()
+end
+
+function AtlasLoot:MERCHANT_UPDATE()
+	self:SetMerchantFrameGlow()
+end
+
+function AtlasLoot:InitializeWishlistMerchantGlow()
+	if self.db.profile.MerchantGlow then
+		self:RegisterEvent("MERCHANT_UPDATE")
+		self:RegisterEvent("MERCHANT_SHOW")
+		MerchantNextPageButton:HookScript("OnClick", function() AtlasLoot:SetMerchantFrameGlow() end)
+		MerchantPrevPageButton:HookScript("OnClick", function() AtlasLoot:SetMerchantFrameGlow() end)
+	end
+end
+
+-- returns true, if player has item with given ID in inventory or bags and it's not on cooldown
+function AtlasLoot:HasItem(itemID)
+	local item, found, id
+	-- scan bags
+	for bag = 0, 4 do
+		for slot = 1, GetContainerNumSlots(bag) do
+			item = GetContainerItemLink(bag, slot)
+			if item then
+				found, _, id = item:find('^|c%x+|Hitem:(%d+):.+')
+				if found and tonumber(id) == itemID then
+					return true, bag, slot
+				end
+			end
+		end
+	end
+	return false
+end
+
+--========================================
+-- Retrieve additional item info via the
+-- item's tooltip
+--========================================
+local cTip = CreateFrame("GameTooltip","cTooltip",nil,"GameTooltipTemplate")
+function AtlasLoot:GetTooltipItemInfo(link, bag, slot)
+    cTip:SetOwner(UIParent, "ANCHOR_NONE")
+
+    -- set up return values
+    local binds = {}
+
+    -- generate item tooltip in hidden tooltip object
+    if link then
+        cTip:SetHyperlink(link)
+    elseif bag and slot then
+        cTip:SetBagItem(bag, slot)
+    else
+        return
+    end
+
+    for i = 1,cTip:NumLines() do
+        local text = _G["cTooltipTextLeft"..i]:GetText()
+        if text == "Realm Bound" then binds.isRealmbound = true end
+        if text == ITEM_SOULBOUND then  binds.isSoulbound = true end
+        if text == ITEM_BIND_ON_PICKUP then binds.isBoP = true end
+        if text == ITEM_SPELL_KNOWN then binds.isKnown = true end
+    end
+
+    cTip:Hide()
+
+    return binds
 end

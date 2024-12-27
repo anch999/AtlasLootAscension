@@ -61,10 +61,7 @@ local faction = UnitFactionGroup("player")
 ----World PvP - Nagrand: Halaa
 ----World PvP - Terokkar Forest: Bone Wastes
 ----World PvP - Zangarmarsh: Twin Spire Ruins
-----Rep-PvP Level 70 - Armor Sets
-----PvP Level 70 - Accessories
-----PvP Level 70 - Non Set Epics
-----Arena - Armor Sets
+----Pvp70Season1
 ----Arena Season 2 - Weapons
 ----Arena Season 3 - Weapons
 ----Arena Season 4 - Weapons
@@ -1361,15 +1358,13 @@ AtlasLoot_Data["CFRSerpentshrine"] = {
 		[09] = { itemID = 600878, [alDif.MIN_DIF] = alDif.Heroic }; --Elemental Lodestone: Hydross the Unstable
 		[16] = { itemID = 30052 }; --Ring of Lethality
 		[17] = { itemID = 33055 }; --Band of Vile Aggression
-		[18] = { itemID = 30664 }; --Living Root of the Wildheart
-		[19] = { itemID = 30629 }; --Scarab of Displacement
-		[20] = { itemID = 30049 }; --Fathomstone
-		[21] = { itemID = 30051 }; --Idol of the Crescent Goddess
-		[23] = { itemID = 29434 }; --Badge of Justice
-		[24] = { itemID = 400751, [alDif.MAX_DIF] = alDif.Normal }; --Raider's Commendations
-		[25] = { itemID = 98570 }; --Mystic Orb
-		[27] = { itemID = 816254, droprate = { nil, "2%", "5%", "7%", "10%" } }; --Formula: Enchant Cloak - Crushing Wave
-		[29] = { itemID = 63338, droprate = "1%" }; --Pet Sigil
+		[18] = { itemID = 12149 }; --Ring of Unstable Currents
+		[19] = { itemID = 30664 }; --Living Root of the Wildheart
+		[20] = { itemID = 30629 }; --Scarab of Displacement
+		[21] = { itemID = 30049 }; --Fathomstone
+		[22] = { itemID = 30051 }; --Idol of the Crescent Goddess
+		[24] = { itemID = 816254, droprate = { nil, "2%", "5%", "7%", "10%" } }; --Formula: Enchant Cloak - Crushing Wave
+		[25] = { itemID = 63338, droprate = "1%" }; --Pet Sigil
 	};
 	{
 		Name = BabbleBoss["The Lurker Below"];
@@ -1380,16 +1375,15 @@ AtlasLoot_Data["CFRSerpentshrine"] = {
 		[05] = { itemID = 30066 }; --Tempest-Strider Boots
 		[06] = { itemID = 30065 }; --Glowing Breastplate of Truth
 		[07] = { itemID = 30057 }; --Bracers of Eradication
-		[09] = { itemID = 29434 }; --Badge of Justice
-		[16] = { itemID = 30059 }; --Choker of Animalistic Fury
-		[17] = { itemID = 30061 }; --Ancestral Ring of Conquest
-		[18] = { itemID = 33054 }; --The Seal of Danzalar
-		[19] = { itemID = 30665 }; --Earring of Soulful Meditation
-		[20] = { itemID = 30063 }; --Libram of Absolute Truth
-		[21] = { itemID = 30058 }; --Mallet of the Tides
-		[23] = { itemID = 29434 }; --Badge of Justice
-		[24] = { itemID = 400751, [alDif.MAX_DIF] = alDif.Normal }; --Raider's Commendations
-		[25] = { itemID = 98570 }; --Mystic Orb
+		[08] = { itemID = 12126 }; --Bracers of Abyssal Might
+		[10] = { itemID = 29434 }; --Badge of Justice
+		[16] = { itemID = 12165 }; --Amulet of Tidal Fury
+		[17] = { itemID = 30059 }; --Choker of Animalistic Fury
+		[18] = { itemID = 30061 }; --Ancestral Ring of Conquest
+		[19] = { itemID = 33054 }; --The Seal of Danzalar
+		[20] = { itemID = 30665 }; --Earring of Soulful Meditation
+		[21] = { itemID = 30063 }; --Libram of Absolute Truth
+		[23] = { itemID = 30058 }; --Mallet of the Tides
 	};
 	{
 		Name = BabbleBoss["Leotheras the Blind"];
@@ -1400,11 +1394,10 @@ AtlasLoot_Data["CFRSerpentshrine"] = {
 		[04] = { itemID = 30096 }; --Girdle of the Invulnerable
 		[05] = { itemID = 30627 }; --Tsunami Talisman
 		[06] = { itemID = 30095 }; --Fang of the Leviathan
+		[07] = { itemID = 12128 }; --Boots of Inner Torment
+		[08] = { itemID = 12129 }; --Dreadstep Sabatons
 		[16] = { itemID = 30240, lootTable = {"T5HAND","Token"} }; --Gloves of the Vanquished Defender
-		[18] = { itemID = 29434 }; --Badge of Justice
-		[19] = { itemID = 400751, [alDif.MAX_DIF] = alDif.Normal }; --Raider's Commendations
-		[20] = { itemID = 98570 }; --Mystic Orb
-		[22] = { itemID = 63326, droprate = "1%" }; --Pet Sigil
+		[18] = { itemID = 63326, droprate = "1%" }; --Pet Sigil
 	};
 	{
 		Name = BabbleBoss["Fathom-Lord Karathress"];
@@ -1415,11 +1408,10 @@ AtlasLoot_Data["CFRSerpentshrine"] = {
 		[04] = { itemID = 30663 }; --Fathom-Brooch of the Tidewalker
 		[05] = { itemID = 30626 }; --Sextant of Unstable Currents
 		[06] = { itemID = 30090 }; --World Breaker
+		[07] = { itemID = 12125 }; --Maul of the Bloodied Depths
+		[08] = { itemID = 12154 }; --Belt of Submerged Might
 		[16] = { itemID = 30246, lootTable = {"T5LEGS","Token"} }; --Leggings of the Vanquished Defender
-		[18] = { itemID = 29434 }; --Badge of Justice
-		[19] = { itemID = 400751, [alDif.MAX_DIF] = alDif.Normal }; --Raider's Commendations
-		[20] = { itemID = 98570 }; --Mystic Orb
-		[22] = { itemID = 63325, droprate = "1%" }; --Pet Sigil
+		[18] = { itemID = 63325, droprate = "1%" }; --Pet Sigil
 	};
 	{
 		Name = BabbleBoss["Morogrim Tidewalker"];
@@ -1431,15 +1423,13 @@ AtlasLoot_Data["CFRSerpentshrine"] = {
 		[05] = { itemID = 30068 }; --Girdle of the Tidal Call
 		[06] = { itemID = 30084 }; --Pauldrons of the Argent Sentinel
 		[07] = { itemID = 30081 }; --Warboots of Obliteration
+		[08] = { itemID = 12193 }; --Maul of Glacial Waves
 		[16] = { itemID = 30008 }; --Pendant of the Lost Ages
 		[17] = { itemID = 30083 }; --Ring of Sundered Souls
 		[18] = { itemID = 33058 }; --Band of the Vigilant
 		[19] = { itemID = 30720 }; --Serpent-Coil Braid
 		[20] = { itemID = 30082 }; --Talon of Azshara
 		[21] = { itemID = 30080 }; --Luminescent Rod of the Naaru
-		[23] = { itemID = 29434 }; --Badge of Justice
-		[24] = { itemID = 400751, [alDif.MAX_DIF] = alDif.Normal }; --Raider's Commendations
-		[25] = { itemID = 98570 }; --Mystic Orb
 	};
 	{
 		Name = BabbleBoss["Lady Vashj"];
@@ -1456,13 +1446,13 @@ AtlasLoot_Data["CFRSerpentshrine"] = {
 		[10] = { itemID = 30103 }; --Fang of Vashj
 		[11] = { itemID = 30108 }; --Lightfathom Scepter
 		[12] = { itemID = 30105 }; --Serpent Spine Longbow
+		[13] = { itemID = 12148 }; --Ring of Tidal Precision
+		[14] = { itemID = 12151 }; --Tidebound Bow
+		[15] = { itemID = 12194 }; --Tideforged Maul
 		[16] = { itemID = 30243, lootTable = {"T5HEAD","Token"} }; --Helm of the Vanquished Defender
-		[18] = { itemID = 29434 }; --Badge of Justice
-		[19] = { itemID = 400751, [alDif.MAX_DIF] = alDif.Normal }; --Raider's Commendations
-		[20] = { itemID = 98570 }; --Mystic Orb
-		[22] = { itemID = 29906 }; --Vashj's Vial Remnant
-		[23] = { itemID = 450000 }; --Intact Vial of Lady Vashj
-		[25] = { itemID = 63320, droprate = "1%" }; --Pet Sigil
+		[18] = { itemID = 29906 }; --Vashj's Vial Remnant
+		[19] = { itemID = 450000 }; --Intact Vial of Lady Vashj
+		[21] = { itemID = 63320, droprate = "1%" }; --Pet Sigil
 	};
 	{
 		Name = AL["Trash Mobs"];
@@ -2299,20 +2289,20 @@ AtlasLoot_Data["KarazhanCryptsTBC"] = {
 	{
 		Name = AL["Captain Taveir (Rare Spawn)"];
 		WebID = {254495,"npc"};
-		[01] = { itemID = 254088 }; --Funeral Treads
-		[02] = { itemID = 254131 }; --Deathsworn Boots
-		[03] = { itemID = 254174 }; --Bonelink Greaves
-		[04] = { itemID = 254217 }; --Soulsteel Sabatons
-		[16] = { itemID = 254080 }; --Sigil of Captain Taveir
+		[01] = { itemID = 257178 }; -- Funeral Treads
+		[02] = { itemID = 257221 }; -- Deathsworn Boots
+		[03] = { itemID = 257673 }; -- Bonelink Greaves
+		[04] = { itemID = 257716 }; -- Soulsteel Sabatons
+		[16] = { itemID = 254080 }; -- Sigil of Captain Taveir
 	};
 	{
 		Name = AL["Kelivex Autumnvale (Rare Spawn)"];
 		WebID = {254493,"npc"};
-		[01] = { itemID = 254088 }; --Funeral Treads
-		[02] = { itemID = 254131 }; --Deathsworn Boots
-		[03] = { itemID = 254174 }; --Bonelink Greaves
-		[04] = { itemID = 254217 }; --Soulsteel Sabatons
-		[16] = { itemID = 254078 }; --Sigil of Kelivex Autumnvale
+		[01] = { itemID = 257178 }; -- Funeral Treads
+		[02] = { itemID = 257221 }; -- Deathsworn Boots
+		[03] = { itemID = 257673 }; -- Bonelink Greaves
+		[04] = { itemID = 257716 }; -- Soulsteel Sabatons
+		[16] = { itemID = 254078 }; -- Sigil of Kelivex Autumnvale
 	};
 };
 
@@ -4750,6 +4740,7 @@ AtlasLoot_Data["PvP70HonorVendor"] = {
 	};
 };
 
+--Arena Season 1
 AtlasLoot_Data["Pvp70Season1"] = {
 	Module = "AtlasLoot_BurningCrusade";
 	Name = AL["Arena Season 1"];
@@ -5402,7 +5393,7 @@ AtlasLoot_Data["Pvp70Season1"] = {
 		[05] = { itemID = 31621, price = "Arena" }; --High Warlord's Mooncloth Gloves
 		[06] = { itemID = 31629, price = "Arena" }; --High Warlord's Mooncloth Robe
     } or
-	{	
+	{
         [02] = { itemID = 31622, price = "Arena" }; --Grand Marshal's Mooncloth Hood
 		[03] = { itemID = 31624, price = "Arena" }; --Grand Marshal's Mooncloth Mantle
 		[04] = { itemID = 31623, price = "Arena" }; --Grand Marshal's Mooncloth Leggings
@@ -5421,19 +5412,67 @@ AtlasLoot_Data["Pvp70Season1"] = {
 	});
 }
 
-
+--Arena Season 2
 AtlasLoot_Data["Pvp70Season2"] = {
 	Module = "AtlasLoot_BurningCrusade";
 	Name = AL["Arena Season 2"];
 	{
-		Name = AL["Accessories"];
-		[01] = { itemID = 33067, price = "Arena" }; --Veteran's Pendant of Conquest
-		[02] = { itemID = 33066, price = "Arena" }; --Veteran's Pendant of Triumph
-		[03] = { itemID = 33065, price = "Arena" }; --Veteran's Pendant of Dominance
-		[04] = { itemID = 33068, price = "Arena" }; --Veteran's Pendant of Salvation
-		[06] = { itemID = 33064, price = "Arena" }; --Veteran's Band of Salvation
-		[07] = { itemID = 33057, price = "Arena" }; --Veteran's Band of Triumph
-		[08] = { itemID = 33056, price = "Arena" }; --Veteran's Band of Dominance	   
+		Name = AL["Back"];
+		WebID = {41025, "npc"};
+		[01] = { itemID = 278419, price = "Arena"  }; --Veteran's Cloak of Conquest
+		[02] = { itemID = 278422, price = "Arena"  }; --Veteran's Cloak of Cruelty
+		[03] = { itemID = 278418, price = "Arena"  }; --Veteran's Cloak of Power
+		[04] = { itemID = 278417, price = "Arena"  }; --Veteran's Cloak of Salvation
+		[05] = { itemID = 278420, price = "Arena"  }; --Veteran's Cloak of Triumph
+		[06] = { itemID = 278421, price = "Arena"  }; --Veteran's Cloak of Tyranny
+	};
+	{
+		Name = AL["Rings"];
+		WebID = {41025, "npc"};
+		[01] = { itemID = 278414, price = "Arena"  }; --Veteran's Band of Accuracy
+		[02] = { itemID = 278410, price = "Arena"  }; --Veteran's Band of Conquest
+		[03] = { itemID = 278413, price = "Arena"  }; --Veteran's Band of Cruelty
+		[04] = { itemID = 33056, price = "Arena"  }; --Veteran's Band of Dominance
+		[05] = { itemID = 278412, price = "Arena"  }; --Veteran's Band of Precision
+		[06] = { itemID = 278415, price = "Arena"  }; --Veteran's Band of Reprieve
+		[07] = { itemID = 33064, price = "Arena"  }; --Veteran's Band of Salvation
+		[08] = { itemID = 278416, price = "Arena"  }; --Veteran's Band of Subjugation
+		[09] = { itemID = 33057, price = "Arena"  }; --Veteran's Band of Triumph
+		[10] = { itemID = 278411, price = "Arena"  }; --Veteran's Band of Tyranny	   
+	};
+	{
+		Name = AL["Neck"];
+		WebID = {41025, "npc"};
+		[01] = { itemID = 33067, price = "Arena"  }; --Veteran's Pendant of Conquest
+		[02] = { itemID = 278409, price = "Arena"  }; --Veteran's Pendant of Cruelty
+		[03] = { itemID = 33065, price = "Arena"  }; --Veteran's Pendant of Dominance
+		[04] = { itemID = 278407, price = "Arena"  }; --Veteran's Pendant of Reprieve
+		[05] = { itemID = 33068, price = "Arena"  }; --Veteran's Pendant of Salvation
+		[06] = { itemID = 278408, price = "Arena"  }; --Veteran's Pendant of Subjugation
+		[07] = { itemID = 33066, price = "Arena"  }; --Veteran's Pendant of Triumph
+		[08] = { itemID = 278406, price = "Arena"  }; --Veteran's Pendant of Tyranny
+
+	};
+	{
+		Name = AL["Gems & Enchants"];
+		[01] = { itemID = 205062, price = "5000 #faction#" }; --Resplendent Fire Agate
+		[02] = { itemID = 205064, price = "5000 #faction#" }; --Lucent Fire Agate
+		[03] = { itemID = 205066, price = "5000 #faction#" }; --Empowered Fire Agate
+		[04] = { itemID = 205068, price = "5000 #faction#" }; --Durable Fire Agate
+		[05] = { itemID = 205070, price = "5000 #faction#" }; --Piercing Idocrase
+		[06] = { itemID = 205072, price = "5000 #faction#" }; --Tense Idocrase
+		[07] = { itemID = 205074, price = "5000 #faction#" }; --Mysterious Heliotrope
+		[08] = { itemID = 1505062, price = "100 #arena#" }; --Resplendent Fire Opal
+		[09] = { itemID = 1505064, price = "100 #arena#" }; --Lucent Fire Opal
+		[10] = { itemID = 1505066, price = "100 #arena#" }; --Empowered Fire Opal
+		[11] = { itemID = 1505068, price = "100 #arena#" }; --Durable Fire Opal
+		[12] = { itemID = 1505070, price = "100 #arena#" }; --Piercing Evergem
+		[13] = { itemID = 1505072, price = "100 #arena#" }; --Tense Evergem
+		[14] = { itemID = 1505074, price = "100 #arena#" }; --Mysterious Shadowgem
+		[16] = { itemID = 449572, price = "23000 #faction#" }; --Superior Inscription of the Archmage
+		[17] = { itemID = 449573, price = "23000 #faction#" }; --Superior Inscription of the Brawler
+		[19] = { itemID = 449576, price = "25000 #faction#" }; --Arcanum of the Archmage
+		[20] = { itemID = 449577, price = "25000 #faction#" }; --Arcanum of the Brawler
 	};
 	{
 		Name = AL["Physical Damage "]..AL["Weapons"].." - "..WHITE..AL["Page 1"];
@@ -5864,6 +5903,7 @@ AtlasLoot_Data["Pvp70Season2"] = {
 	};
 }
 
+--Arena Season 3
 AtlasLoot_Data["Pvp70Season3"] = {
 	Module = "AtlasLoot_BurningCrusade";
 	Name = AL["Arena Season 3"];
@@ -6315,34 +6355,54 @@ AtlasLoot_Data["Pvp70Season3"] = {
 	};
 }
 
+--Arena Season 4
 AtlasLoot_Data["Pvp70Season4"] = {
 	Module = "AtlasLoot_BurningCrusade";
 	Name = AL["Arena Season 4"];
 	{
-		Name = AL["Accessories"];
+		Name = AL["Back"];
+		WebID = {41045, "npc"};
 		[01] = { itemID = 41591, price = "Arena" }; --Guardian's Cloak of Battle
 		[02] = { itemID = 41592, price = "Arena" }; --Guardian's Cloak of Condemnation
 		[03] = { itemID = 44429, price = "Arena" }; --Guardian's Cloak of Power
 		[04] = { itemID = 44431, price = "Arena" }; --Guardian's Cloak of Salvation
-		[06] = { itemID = 35132, price = "Arena" }; --Guardian's Pendant of Conquest
-		[07] = { itemID = 35133, price = "Arena" }; --Guardian's Pendant of Dominance
-		[08] = { itemID = 37929, price = "Arena" }; --Guardian's Pendant of Reprieve
-		[09] = { itemID = 35134, price = "Arena" }; --Guardian's Pendant of Salvation
-		[10] = { itemID = 37928, price = "Arena" }; --Guardian's Pendant of Subjugation
-		[11] = { itemID = 35135, price = "Arena" }; --Guardian's Pendant of Triumph
-		[16] = { itemID = 414399, price = "Arena" }; --Guardian's Band of Accuracy
-		[17] = { itemID = 46728, price = "Arena" }; --Guardian's Band of Conquest
-		[18] = { itemID = 35129, price = "Arena" }; --Guardian's Band of Dominance
-		[19] = { itemID = 414400, price = "Arena" }; --Guardian's Band of Precision
-		[20] = { itemID = 46727, price = "Arena" }; --Guardian's Band of Reprieve
-		[21] = { itemID = 35130, price = "Arena" }; --Guardian's Band of Salvation
-		[22] = { itemID = 37927, price = "Arena" }; --Guardian's Band of Subjugation
-		[23] = { itemID = 35131, price = "Arena" }; --Guardian's Band of Triumph
-		[25] = { itemID = 41588, price = "Arena" }; --Battlemaster's Audacity
-		[26] = { itemID = 41587, price = "Arena" }; --Battlemaster's Celerity
-		[27] = { itemID = 41590, price = "Arena" }; --Battlemaster's Courage
-		[28] = { itemID = 46705, price = "Arena" }; --Battlemaster's Cruelty
-		[29] = { itemID = 41589, price = "Arena" }; --Battlemaster's Resolve
+		[05] = { itemID = 278405, price = "Arena" }; --Guardian's Cloak of Cruelty
+		[06] = { itemID = 278404, price = "Arena" }; --Guardian's Cloak of Tyranny
+	};
+	{
+		Name = AL["Rings"];
+		WebID = {41045, "npc"};
+		[01] = { itemID = 414399, price = "Arena" }; --Guardian's Band of Accuracy
+		[02] = { itemID = 46728, price = "Arena" }; --Guardian's Band of Conquest
+		[03] = { itemID = 35129, price = "Arena" }; --Guardian's Band of Dominance
+		[04] = { itemID = 414400, price = "Arena" }; --Guardian's Band of Precision
+		[05] = { itemID = 46727, price = "Arena" }; --Guardian's Band of Reprieve
+		[06] = { itemID = 35130, price = "Arena" }; --Guardian's Band of Salvation
+		[07] = { itemID = 37927, price = "Arena" }; --Guardian's Band of Subjugation
+		[08] = { itemID = 35131, price = "Arena" }; --Guardian's Band of Triumph
+		[09] = { itemID = 278403, price = "Arena" }; --Guardian's Band of Cruelty
+		[10] = { itemID = 278400, price = "Arena" }; --Guardian's Band of Tyranny
+	};
+	{
+		Name = AL["Neck"];
+		WebID = {41045, "npc"};
+		[01] = { itemID = 35132, price = "Arena" }; --Guardian's Pendant of Conquest
+		[02] = { itemID = 35133, price = "Arena" }; --Guardian's Pendant of Dominance
+		[03] = { itemID = 37929, price = "Arena" }; --Guardian's Pendant of Reprieve
+		[04] = { itemID = 35134, price = "Arena" }; --Guardian's Pendant of Salvation
+		[05] = { itemID = 37928, price = "Arena" }; --Guardian's Pendant of Subjugation
+		[06] = { itemID = 35135, price = "Arena" }; --Guardian's Pendant of Triumph
+		[07] = { itemID = 278401, price = "Arena" }; --Guardian's Pendant of Cruelty
+		[08] = { itemID = 278402, price = "Arena" }; --Guardian's Pendant of Tyranny
+	};
+	{
+		Name = AL["Trinket"];
+		WebID = {41045, "npc"};
+		[01] = { itemID = 41588, price = "Arena" }; --Battlemaster's Audacity
+		[02] = { itemID = 41587, price = "Arena" }; --Battlemaster's Celerity
+		[03] = { itemID = 41590, price = "Arena" }; --Battlemaster's Courage
+		[04] = { itemID = 46705, price = "Arena" }; --Battlemaster's Cruelty
+		[05] = { itemID = 41589, price = "Arena" }; --Battlemaster's Resolve
 	};
 	{
 		Name = AL["Gems & Enchants"];
@@ -6470,6 +6530,7 @@ AtlasLoot_Data["Pvp70Season4"] = {
 	};
 	{
 		Name = AL["Cloth "]..AL["Offset"];
+		WebID = {41045, "npc"};
 		[01] = { itemID = 35168, price = "Arena" }; --Guardian's Dreadweave Cuffs
 		[02] = { itemID = 35153, price = "Arena" }; --Guardian's Dreadweave Belt
 		[03] = { itemID = 35138, price = "Arena" }; --Guardian's Dreadweave Stalkers
@@ -6483,6 +6544,7 @@ AtlasLoot_Data["Pvp70Season4"] = {
 	};
 	{
 		Name = AL["Leather "]..AL["Offset"];
+		WebID = {41045, "npc"};
 		[01] = { itemID = 35167, price = "Arena" }; --Guardian's Dragonhide Bracers
 		[02] = { itemID = 35152, price = "Arena" }; --Guardian's Dragonhide Belt
 		[03] = { itemID = 35137, price = "Arena" }; --Guardian's Dragonhide Boots
@@ -6498,6 +6560,7 @@ AtlasLoot_Data["Pvp70Season4"] = {
 	};
 	{
 		Name = AL["Mail "]..AL["Offset"];
+		WebID = {41045, "npc"};
 		[01] = { itemID = 35166, price = "Arena" }; --Guardian's Chain Bracers
 		[02] = { itemID = 35151, price = "Arena" }; --Guardian's Chain Girdle
 		[03] = { itemID = 35136, price = "Arena" }; --Guardian's Chain Sabatons
@@ -6514,6 +6577,7 @@ AtlasLoot_Data["Pvp70Season4"] = {
 	};
 	{
 		Name = AL["Plate "]..AL["Offset"];
+		WebID = {41045, "npc"};
 		[01] = { itemID = 35170, price = "Arena" }; --Guardian's Lamellar Bracers
 		[02] = { itemID = 35155, price = "Arena" }; --Guardian's Lamellar Belt
 		[03] = { itemID = 35140, price = "Arena" }; --Guardian's Lamellar Greaves

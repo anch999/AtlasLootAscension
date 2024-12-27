@@ -24,16 +24,17 @@ local itemLevels = {
 
 function AtlasLoot:MatchItemLevelBracket(ogILevel, newILevel)
 	for _, bracket in pairs(itemLevels) do
-		if ogILevel >= bracket[1] and ogILevel <= bracket[2] and ogILevel <= newILevel and newILevel <= bracket[2] then return true end
+		if ogILevel > bracket[1] and ogILevel < bracket[2] and newILevel > ogILevel and newILevel < bracket[2] then return true end
 	end
 end
 
-function AtlasLoot:GetDifficulty(item)
+function AtlasLoot:GetDifficultyFromDescription(item, ID)
 	if not item then return end
 	local _, description, _ = string.split("@", item.description, 3)
 	if description then
 		description = self:StripTextColor(description)
-		description = description:gsub("Karazhan Crypts ", "")
+		description = description:gsub("Karazhan Crypts Mythic", "Mythic")
+		description = description:gsub("Karazhan Crypts %- Mythic", "Mythic 30")
 		description = description:gsub(" Frozen Reach", "")
 		return description
 	end
@@ -101,13 +102,13 @@ function AtlasLoot:GetSourceList()
 end
 
 function AtlasLoot:UpdateItemIDsDatabase(firstID, lastID)
-	AtlasLootItemCache = ItemIDsDatabase
+	wipe(AtlasLootItemCache)
 	local itemSource = self:GetSourceList()
 	if not itemSource then return end
     self:CreateUpdateText()
     AtlasLootDbUpdate:Show()
 
-	local maxDuration = 500/GetFramerate()
+	local maxDuration = 4000/GetFramerate()
     local startTime = debugprofilestop()
 	firstID = firstID or 1
 	lastID = lastID or 10000000
@@ -121,9 +122,9 @@ function AtlasLoot:UpdateItemIDsDatabase(firstID, lastID)
 					if itemData then
 						for _ , storedItem in pairs(itemData) do
 							local orignalID = storedItem[1]
-							ItemIDsDatabase[orignalID] = ItemIDsDatabase[orignalID] or {}
-							if not ItemIDsDatabase[orignalID][difficultyList[difficulty]] or self:MatchItemLevelBracket(storedItem[2], item.itemLevel) then
-								ItemIDsDatabase[orignalID][difficultyList[difficulty]] = item.itemID
+							AtlasLootItemCache[orignalID] = AtlasLootItemCache[orignalID] or {}
+							if not AtlasLootItemCache[orignalID][difficultyList[difficulty]] or self:MatchItemLevelBracket(storedItem[2], item.itemLevel) then
+								AtlasLootItemCache[orignalID][difficultyList[difficulty]] = item.itemID
 								AtlasLootIDUpdateText:SetText("Last ItemID Added: "..firstID)
 							end
 						end
@@ -140,7 +141,7 @@ function AtlasLoot:UpdateItemIDsDatabase(firstID, lastID)
         startTime = debugprofilestop()
         while (firstID ~= lastID) do
 			local item = GetItemInfoInstant(firstID)
-			local difficulty = self:GetDifficulty(item)
+			local difficulty = self:GetDifficultyFromDescription(item, firstID)
 			if item and difficulty then
 				checkID(item, difficulty)
 			end

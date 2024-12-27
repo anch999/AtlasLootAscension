@@ -17,7 +17,6 @@ AtlasLoot:AddTooltip(frameb, tooltiptext)
 ]]
 
 local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
-local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0")
 
 AtlasLoot.AddonName = "AtlasLoot Ascension Edition"
 AtlasLoot.Version = GetAddOnMetadata("AtlasLoot", "Version")
@@ -59,12 +58,11 @@ local AtlasLootDBDefaults = {
     profile = {
         EquipCompare = false,
         Opaque = false,
-        ItemIDs = false,
         LastBoss = "EmptyTable",
-        AtlasNaggedVersion = "",
         PartialMatching = true,
         LootBrowserStyle = 1,
         LootBrowserScale = 1.0,
+		MerchantGlow = false,
         SearchOn = {
             All = false,
         },
@@ -137,13 +135,8 @@ Performs inital setup of the mod and registers it for further setup when
 the required resources are in place
 ]]
 function AtlasLoot:OnInitialize()
-	--Enable the use of /al or /atlasloot to open the loot browser
-	SLASH_ATLASLOOT1 = "/atlasloot"
-	SLASH_ATLASLOOT2 = "/al"
-	SlashCmdList["ATLASLOOT"] = function(msg)
-		self:SlashCommand(msg)
-	end
 
+	self:InitializeSlashCommands()
 	--Sets the default loot tables for the current expansion enabled on the server.
 	local xpaclist = {"CLASSIC", "TBC", "WRATH"}
 	self.Expac = xpaclist[GetAccountExpansionLevel()+1]
@@ -158,6 +151,7 @@ the addon needs are in place, we can properly set up the mod
 function AtlasLoot:OnEnable()
     self.db = LibStub("AceDB-3.0"):New("AtlasLootDB")
     self.db:RegisterDefaults(AtlasLootDBDefaults)
+	self.globalDB = AtlasLootDB
 	setupSettingsDB()
 	AtlasLootItemCache = AtlasLootItemCache or {}
     if AtlasLoot_Data then
@@ -173,11 +167,9 @@ function AtlasLoot:OnEnable()
 	end
 	--Setup for minimap icon
 	self:MinimapIconSetup()
+	self:InitializeOptionsFrame()
     --Add the loot browser to the special frames tables to enable closing wih the ESC key
 	tinsert(UISpecialFrames, "AtlasLootDefaultFrame")
-	--Set up options frame
-	self:OptionsInit()
-    self:CreateOptionsInfoTooltips()
     --Set visual style for the loot browser
 	if self.db.profile.LootBrowserStyle then
 		self:SetSkin(self.skinKeys[self.db.profile.LootBrowserStyle][1])
@@ -221,6 +213,7 @@ function AtlasLoot:OnEnable()
 	self:CreateVanityCollection()
 	self:CreateItemSourceList()
 	self:RegisterEvent("UNIT_SPELLCAST_SUCCEEDED")
+	self:InitializeWishlistMerchantGlow()
 
 	collectgarbage("collect")
 end
@@ -252,6 +245,12 @@ function AtlasLoot:Reset(data)
     DEFAULT_CHAT_FRAME:AddMessage(BLUE..AL["AtlasLoot"]..": "..RED..AL["Reset complete!"])
 end
 
+function AtlasLoot:InitializeSlashCommands()
+	--Enable the use of /al or /atlasloot to open the loot browser
+	SLASH_ATLASLOOT1 = "/atlasloot"
+	SLASH_ATLASLOOT2 = "/al"
+	SlashCmdList["ATLASLOOT"] = function(msg) self:SlashCommand(msg) end
+end
 
 --[[
 AtlasLoot:SlashCommand(msg):
@@ -275,182 +274,12 @@ function AtlasLoot:SlashCommand(msg)
 	elseif cmd == "clearmerchantcache" then
 		wipe(AtlasLootOtherIds)
 	elseif cmd == "news" then
-		self:OpenNewsFrame(self.db.profile)
+		self:OpenNewsFrame()
 	elseif cmd == "getmerchant" then
 		self:GetMerchantItems(arg1)
 	else
 		AtlasLootDefaultFrame:Show()
 	end
-end
-
---Creates tables for raid tokens from the collections tables
-function AtlasLoot:CreateToken(dataID)
-	local itemType, slotType, itemName, itemType2
-	--orginal dataID
-	local orgID = dataID
-	--list of item types to find
-	local names = { {"HEAD", "INVTYPE_HEAD", "Head"}, {"SHOULDER", "INVTYPE_SHOULDER", "Shoulders"}, {"CHEST", "INVTYPE_CHEST", "Chest", "INVTYPE_ROBE"}, {"WRIST", "INVTYPE_WRIST", "Wrists"}, {"HAND", "INVTYPE_HAND", "Hands"}, {"WAIST", "INVTYPE_WAIST", "Waist"}, {"LEGS", "INVTYPE_LEGS", "Legs"}, {"FEET", "INVTYPE_FEET", "Feet"}, {"FINGER", "INVTYPE_FINGER", "Rings"}, {"BACK", "INVTYPE_CLOAK", "Back"}, {"NECK", "INVTYPE_NECK", "Necklace"}}
-	--finds the item type to create a list of
-	for _, b in pairs(names) do
-		dataID = gsub(dataID, b[1], "")
-		slotType = gsub(orgID, dataID, "")
-		if slotType == b[1] then
-			itemType = b[2]
-			itemType2 = b[4]
-			itemName = b[3]
-			break
-		end
-	end
-	--Creates data set of the item type
-	if (AtlasLoot_TokenData[orgID] == nil) then
-		AtlasLoot_TokenData[orgID] = {
-			Name = itemName,
-			Type = AtlasLoot_Data[dataID].Type,
-			Back = true,
-			NoSubt = true,
-			[1] = { Name = itemName },
-		}
-	end
-	local count = #AtlasLoot_Data[dataID][1] * #AtlasLoot_Data[dataID]
-	local function addItem(itemID, desc)
-		if itemType == select(9, AtlasLoot:GetItemInfo(itemID)) or itemType2 == select(9, AtlasLoot:GetItemInfo(itemID)) then
-			table.insert(AtlasLoot_TokenData[orgID][1], {itemID = itemID, desc = desc})
-		end
-		if count == 1 then
-			self:ShowItemsFrame(AtlasLootItemsFrame.refresh[1], AtlasLootItemsFrame.refresh[2], AtlasLootItemsFrame.refresh[3])
-		end
-		count = count - 1
-	end
-	--Fills table with items
-	for _, t in ipairs(AtlasLoot_Data[dataID]) do
-		for _, v in ipairs(t) do
-			if type(v) == "table" then
-				if v.itemID then
-					addItem(v.itemID, t.Name)
-				end
-			end
-		end
-	end
-end
-
---Creates a sorted and consolidated loottable of all of an xpacs dungeon loot
-function AtlasLoot:CreateOnDemandLootTable(typeL)
-	-- Return and show loot table if its already been created
-	if AtlasLoot_OnDemand and AtlasLoot_OnDemand[typeL] then return self:ShowItemsFrame(typeL, "AtlasLoot_OnDemand", 1) end
-	-- Create ondemand loot table if it dosnt exist
-	if not AtlasLoot_OnDemand then AtlasLoot_OnDemand = {} end
-
-	-- Text Conversion
-	local equipSlot = {
-		INVTYPE_HEAD = BabbleInventory["Head"], INVTYPE_SHOULDER = BabbleInventory["Shoulder"], INVTYPE_CHEST = BabbleInventory["Chest"],
-		INVTYPE_WRIST = BabbleInventory["Wrist"], INVTYPE_HAND = BabbleInventory["Hands"], INVTYPE_WAIST = BabbleInventory["Waist"],
-		INVTYPE_LEGS = BabbleInventory["Legs"], INVTYPE_FEET = BabbleInventory["Feet"], INVTYPE_FINGER = BabbleInventory["Ring"],
-		INVTYPE_CLOAK = BabbleInventory["Back"], INVTYPE_NECK = BabbleInventory["Neck"], INVTYPE_WEAPONOFFHAND = BabbleInventory["Off Hand"],
-		INVTYPE_WEAPONMAINHAND = "Mainhand", INVTYPE_TRINKET = "Trinket", INVTYPE_HOLDABLE = "Caster Offhand"}
-
-	local function correctText(text)
-		text = gsub(text, "Cloth Armor %- Back", "Back")
-		text = gsub(text, "Miscellaneous Armor %- " , "")
-		text = gsub(text, "Armor %- " , "Armor "..WHITE.."%- ")
-		text = gsub(text, "Weapon %- " , WHITE.."%- ")
-		return text
-	end
-
-	-- Combind robes with chest
-	local function getEquip(equipLoc)
-		if equipLoc == "INVTYPE_ROBE" then
-			return "INVTYPE_CHEST"
-		end
-		return equipLoc
-	end
-
-	-- Show the loot table or refresh it
-	local firstLoad
-	local function showTable()
-		if firstLoad then
-			self:ShowItemsFrame(AtlasLootItemsFrame.refresh[1], AtlasLootItemsFrame.refresh[2], AtlasLootItemsFrame.refresh[3])
-		else
-			self:ShowItemsFrame(typeL, "AtlasLoot_OnDemand", 1)
-			firstLoad = true
-		end
-	end
-
-	local unsorted = {}
-	-- Creates type catagorys and then adds items to them
-	local function sortItem(item, armorSubType, equipLoc, armorType)
-		if not unsorted[armorSubType] then unsorted[armorSubType] = {} end
-		if equipLoc and not unsorted[armorSubType][getEquip(equipLoc)] then unsorted[armorSubType][getEquip(equipLoc)] = {} end
-		if equipLoc then
-			tinsert(unsorted[armorSubType][getEquip(equipLoc)], {item, armorType})
-		else
-			tinsert(unsorted[armorSubType]["Misc"], {item, armorType})
-		end
-		AtlasLoot_OnDemand[typeL] = {Name = "All Dungeon Items", Type = typeL, filter = true }
-
-		for aType, v in pairs(unsorted) do
-			for eLoc, t in pairs(v) do
-				for i, items in ipairs(t) do
-					local name = equipSlot[getEquip(eLoc)] and aType.." "..items[2].." - "..equipSlot[getEquip(eLoc)] or aType
-					if #t > 30 and (i == 1 or i == 31 or i == 61 or i == 91)  then
-						tinsert(AtlasLoot_OnDemand[typeL],{Name = correctText(name)..WHITE.." - Page".. math.ceil(i/30) })
-					elseif i == 1 then
-						tinsert(AtlasLoot_OnDemand[typeL],{Name = correctText(name)})
-					end
-					tinsert(AtlasLoot_OnDemand[typeL][#AtlasLoot_OnDemand[typeL]], items[1])
-				end
-			end
-		end
-		showTable()
-	end
-
-	-- Load items to cache and check they are either an armor or weapon
-	local function processItem(itemData)
-		if not itemData then return end
-		if itemData.itemID then
-			self:ItemsLoading(-1)
-			local armorType, armorSubType, _, equipLoc = select(6,AtlasLoot:GetItemInfo(itemData.itemID))
-			if (armorType == "Armor" or armorType == "Weapon") then
-				sortItem(itemData, armorSubType, equipLoc, armorType)
-			end
-		end
-	end
-
-	--Fills table with items
-	local itemList = {}
-	local checkList = {}
-	for dataID, data in pairs(AtlasLoot_Data) do
-		if data.Type == typeL then
-			for tableNum, t in ipairs(data) do
-				for _, itemData in pairs(t) do
-					if type(itemData) == "table" and itemData.itemID and not checkList[itemData.itemID] then
-						itemData.dropLoc = {data.DisplayName or data.Name, t.Name}
-						itemData.lootTable = {{dataID, "AtlasLoot_Data", tableNum}, "Source"}
-						checkList[itemData.itemID] = true
-						tinsert(itemList, {itemData})
-					end
-				end
-			end
-		end
-	end
-	wipe(checkList)
-	-- rate limit tied to half the current frame rate
-	self:ItemsLoading(#itemList)
-	local maxDuration = 500/GetFramerate()
-	local startTime = debugprofilestop()
-	local function continue()
-		startTime = debugprofilestop()
-		local task = tremove(itemList)
-		while (task) do
-			processItem(task[1])
-			if (debugprofilestop() - startTime > maxDuration) then
-				Timer.After(0, continue)
-				return
-			end
-			task = tremove(itemList)
-		end
-	end
-
-	return continue()
 end
 
 --[[
@@ -485,6 +314,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 	-- Hide the map header lable
 	Atlasloot_HeaderLabel:Hide()
 	local dataSource = _G[dataSource_backup] or AtlasLoot_Data
+	if not dataSource[dataID] then return end
 	-- Enable map button if there is a map for this table.
 	if dataSource_backup ~= "AtlasLoot_OnDemand" and dataSource_backup ~= "AtlasLoot_TokenData" and dataSource[dataID] and dataSource[dataID].Map then
 		AtlasLootDefaultFrame_MapButton:Enable()
@@ -1045,147 +875,5 @@ end
 function AtlasLoot:UNIT_SPELLCAST_SUCCEEDED(event, arg1, arg2 , arg3)
 	if arg1 == "player" and arg2 == "Learning" then
 		self:PopulateProfessions()
-	end
-end
-
-function AtlasLoot:PopulateProfessions()
-	self.db.profile.professions = self.db.profile.professions or {}
-	for _, skillID in pairs(PRIMARY_PROFESSIONS) do
-		local _, _, _, skillMaxRank = GetSkillInfo(skillID)
-		if skillMaxRank and skillMaxRank > 0 then
-			self.db.profile.professions[skillID] = self.db.profile.professions[skillID] or { knownRecipes = {} }
-		end
-	end
-	for _, skillID in pairs(SECONDARY_PROFESSIONS) do
-		local _, _, _, skillMaxRank = GetSkillInfo(skillID)
-		if skillMaxRank and skillMaxRank > 0 then
-			self.db.profile.professions[skillID] = self.db.profile.professions[skillID] or { knownRecipes = {} }
-		end
-	end
-	for prof, _ in pairs(self.db.profile.professions) do
-		if TRADESKILL_RECIPES[prof] then
-			for _,cat in pairs(TRADESKILL_RECIPES[prof]) do
-				for _,recipe in pairs(cat) do
-					if CA_IsSpellKnown(recipe.SpellEntry) then
-						self.db.profile.professions[prof].knownRecipes[recipe.SpellEntry] = true
-					end
-				end
-			end
-		end
-	end
-end
-
-
-function AtlasLoot:LoadTradeskillRecipes()
-	if TRADESKILL_RECIPES then return end
-		TRADESKILL_RECIPES = {}
-		TRADESKILL_CRAFTS = {}
-
-		local fmtSubClass = "ITEM_SUBCLASS_%d_%d"
-		local fmtTotem = "SPELL_TOTEM_%d"
-		local fmtObject = "SPELL_FOCUS_OBJECT_%d"
-
-		local content = C_ContentLoader:Load("TradeSkillRecipeData")
-
-		local function GetToolName(toolID)
-			return _G[format(fmtTotem, toolID)]
-		end
-
-		content:SetParser(function(_, data)
-			if not TRADESKILL_RECIPES[data.SkillIndex] then
-				TRADESKILL_RECIPES[data.SkillIndex] = {}
-			end
-
-			data.Category = _G[format(fmtSubClass, data.CreatedItemClass, data.CreatedItemSubClass)]
-
-			if not TRADESKILL_RECIPES[data.SkillIndex][data.Category] then
-				TRADESKILL_RECIPES[data.SkillIndex][data.Category] = {}
-			end
-
-			data.IsHighRisk = toboolean(data.IsHighRisk)
-
-			-- reformat reagents
-			data.Reagents = {}
-			local reagents = data.ReagentData:SplitToTable(",")
-			for _, reagentString in ipairs(reagents) do
-				local item, count = reagentString:match("(%d*):(%d*)")
-				item = tonumber(item)
-				count = tonumber(count)
-				if item and item ~= 0 and count and count ~= 0 then
-					tinsert(data.Reagents, {item, count})
-				end
-			end
-
-			if #data.Reagents > 0 then
-				data.ReagentData = nil
-
-				-- reformat tools (totems)
-				data.Tools = data.TotemCategories:SplitToTable(",", GetToolName)
-				data.TotemCategories = nil
-
-				data.SpellFocusObject = _G[format(fmtObject, data.SpellFocusObject)]
-
-				tinsert(TRADESKILL_RECIPES[data.SkillIndex][data.Category], data)
-				if data.CreatedItemEntry > 0 then
-					TRADESKILL_CRAFTS[data.CreatedItemEntry] = data
-				end
-			end
-		end)
-
-		content:Parse()
-end
-
-local function CollectionNames(cat)
-	local C_names = {
-		["Axe1H"] = "One-Handed Axes",
-		["Axe2H"] = "Two-Handed Axes",
-		["Sword1H"] = AL["One-Handed Sword"],
-		["Sword2H"] = AL["Two-Handed Sword"],
-		["Mace1H"] = AL["One-Handed Mace"],
-		["Mace2H"] = AL["Two-Handed Mace"],
-	}
-	return C_names[cat] or cat
-end
-
-function AtlasLoot:CreateVanityCollection()
-	local function findGroup(group)
-		for cat,v in pairs(Enum.VanityCategory) do
-			if type(v) == "table" then
-				for catT, t in pairs(v) do
-					if not AtlasLoot_Data[catT] then AtlasLoot_Data[catT] = { Name = CollectionNames(catT), vanity = true, Module = "AtlasLoot_Ascension_Vanity" } end
-					if bit.contains(group, t) then
-						return catT
-					end
-				end
-			else
-				if not AtlasLoot_Data[cat] then AtlasLoot_Data[cat] = { Name = CollectionNames(cat), vanity = true, Module = "AtlasLoot_Ascension_Vanity" } end
-				if bit.contains(group, v) then
-					return cat
-				end
-			end
-		end
-		if not AtlasLoot_Data["Uncategorized"] then AtlasLoot_Data["Uncategorized"] = { Name = CollectionNames("Uncategorized"), vanity = true, Module = "AtlasLoot_Ascension_Vanity" } end
-		return "Uncategorized"
-	end
-
-	for _,item in pairs(VANITY_ITEMS) do
-		local group = findGroup(item.group)
-		if not group then break end
-		if #AtlasLoot_Data[group] == 0 or #AtlasLoot_Data[group][#AtlasLoot_Data[group]] == 30 then
-			tinsert(AtlasLoot_Data[group], {Name = "Page "..(#AtlasLoot_Data[group] +1)})
-		end
-		local contentsPreview
-		if item.contentsPreview and #item.contentsPreview > 1 then
-			contentsPreview = {}
-			for _,itemID in pairs(item.contentsPreview) do
-				tinsert(contentsPreview, { itemID = itemID })
-			end
-		end
-		local description
-		if item.description ~= "" then
-			description = item.description
-		end
-
-		tinsert(AtlasLoot_Data[group][#AtlasLoot_Data[group]], { itemID = item.itemid, extraInfo = description, contentsPreview = contentsPreview, vanityItem = true })
 	end
 end
