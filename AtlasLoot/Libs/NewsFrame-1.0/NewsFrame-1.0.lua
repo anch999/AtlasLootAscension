@@ -1,5 +1,5 @@
 local version, news, addonName, addonDB
-local MAJOR, MINOR = "NewsFrame-1.0", 1
+local MAJOR, MINOR = "NewsFrame-1.0", 2
 local NewsFrame, oldminor = LibStub:NewLibrary(MAJOR, MINOR)
 
 if not NewsFrame then return end -- No Upgrade needed.
