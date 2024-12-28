@@ -663,3 +663,16 @@ function AtlasLoot:GetTooltipItemInfo(link, bag, slot)
 
     return binds
 end
+
+function AtlasLoot:SetGameTooltip(button, text)
+	GameTooltip:ClearLines()
+	GameTooltip:SetOwner(button, "ANCHOR_TOPLEFT")
+	if type(text) == "table" then
+		for _, textLine in pairs(text) do
+			GameTooltip:AddLine(textLine)
+		end
+	else
+		GameTooltip:AddLine(text)
+	end
+	GameTooltip:Show()
+end

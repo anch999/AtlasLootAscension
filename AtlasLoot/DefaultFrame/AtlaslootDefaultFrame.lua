@@ -477,7 +477,7 @@ function AtlasLoot:InitializeSkins()
             end
 
             local function SetButtons(path)
-                if _G[path].template and _G[path].template == "FilterDropDownMenuTemplate" then
+                if _G[path].template and _G[path].template == "AtlasLootDropMenuTemplate" then
                     local tex, tex2, tex3, tex4
                     if type(skin.btTex) == "table" then
                         tex, tex2, tex3, tex4 = unpack(skin.btTex)
