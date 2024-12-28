@@ -153,6 +153,10 @@ function AtlasLoot:OnEnable()
     self.db:RegisterDefaults(AtlasLootDBDefaults)
 	self.globalDB = AtlasLootDB
 	setupSettingsDB()
+	self:InitializeUI()
+	self:InitializeSkins()
+	self:MinimapIconSetup()
+	self:InitializeOptionsFrame()
 	AtlasLootItemCache = AtlasLootItemCache or {}
     if AtlasLoot_Data then
         AtlasLoot_Data["EmptyTable"] = {
@@ -165,9 +169,6 @@ function AtlasLoot:OnEnable()
 	if IsAddOnLoaded("TomTom") then
 		self.TomTomLoaded = true
 	end
-	--Setup for minimap icon
-	self:MinimapIconSetup()
-	self:InitializeOptionsFrame()
     --Add the loot browser to the special frames tables to enable closing wih the ESC key
 	tinsert(UISpecialFrames, "AtlasLootDefaultFrame")
     --Set visual style for the loot browser
@@ -186,18 +187,6 @@ function AtlasLoot:OnEnable()
         Atlasloot_SubTableFrame_Back:SetTexture(0, 0, 0, 0.05)
 	end
 
-    local panel = _G["AtlasLootOptionsFrame"]
-    panel.name = AL["AtlasLoot"]
-    InterfaceOptions_AddCategory(panel)
-    --Filter and wishlist options menus creates as part of the next 2 commands
-	self:CreateWishlistOptions()
-    panel = _G["AtlasLootHelpFrame"]
-    panel.name = AL["Help"]
-    panel.parent = AL["AtlasLoot"]
-    InterfaceOptions_AddCategory(panel)
-    if LibStub:GetLibrary("LibAboutPanel", true) then
-        LibStub("LibAboutPanel").new(AL["AtlasLoot"], "AtlasLoot")
-    end
     self:UpdateLootBrowserScale()
 	-- Is wishlist item disabled on load or not
 	if AtlasLootWishList["Options"][UnitName("player")]["AutoSortWishlist"] then
@@ -338,13 +327,13 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 	local difType = false
 	-- Checks to see if type is the same
 	if self.CurrentType and dataSource[dataID].Type and self.CurrentType ~= dataSource[dataID].Type then
-		ItemindexID = self.type[dataSource[dataID].Type] or 3
+		self.ItemindexID = self.type[dataSource[dataID].Type] or dataSource[dataID].Index or 3
 		difType = true
 	end
 
-	-- Saves current types ItemindexID
+	-- Saves current types self.ItemindexID
 	if dataSource[dataID].Type then
-		self.type[dataSource[dataID].Type] = ItemindexID
+		self.type[dataSource[dataID].Type] = self.ItemindexID
 	end
 	-- Set current type
 	self.CurrentType = dataSource[dataID].Type or "Default"
@@ -360,7 +349,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 	local typeNumber = 1
 	local function findTypeNumber()
 		for i,v in ipairs(self.Difficulties[dataSource[dataID].Type]) do
-			if v[2] == ItemindexID then
+			if v[2] == self.ItemindexID then
 				typeNumber = i
 				return i
 			end
@@ -416,7 +405,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 	local function getProperItemConditionals(item)
 		isValid = false
 		toShow = true
-		local itemDif = ItemindexID or self.Difficulties.Normal
+		local itemDif = self.ItemindexID or self.Difficulties.Normal
 		local itemID = item and item.itemID
 		if item and item.itemID then
 			itemID = item.itemID
@@ -667,7 +656,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 		if dataSource[dataID][tablenum][i][self.Difficulties.DIF_SEARCH] then
 			itemButton.difficulty = dataSource[dataID][tablenum][i][self.Difficulties.DIF_SEARCH]
 		else
-			itemButton.difficulty = ItemindexID
+			itemButton.difficulty = self.ItemindexID
 		end
 
 		itemButton.i = 1

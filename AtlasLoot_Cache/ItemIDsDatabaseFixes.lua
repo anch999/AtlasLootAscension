@@ -52,21 +52,22 @@ ItemIDManuelCorrections[30889] = { nil, nil, nil, 330889, 1330889, 230889 } --Ka
 
 --Frozen Reach
 
-ItemIDManuelCorrections[1529392] = { 7529392, nil, nil, 1539392, 1549392 } -- Frigid Bow of the Bonded Souls
-ItemIDManuelCorrections[1529391] = { 7529391, nil, nil, 1539391, 1549391 } -- Reclaimed Blade of the Frozen Sepulcher
-ItemIDManuelCorrections[1529390] = { 7529390, nil, nil, 1539390, 1549390 } -- Arktos' Resillience
-ItemIDManuelCorrections[1529389] = { 7529389, nil, nil, 1539389, 1549389 } -- Call of the Sepulcher
-ItemIDManuelCorrections[1529388] = { 7529388, nil, nil, 1539388, 1549388 } -- Frozen Vengeance
-ItemIDManuelCorrections[1529387] = { 7529387, nil, nil, 1539387, 1549387 } -- Frozen Forgiveness
-ItemIDManuelCorrections[1529386] = { 7529386, nil, nil, 1539386, 1549386 } -- Alva's Kinship Ring
-ItemIDManuelCorrections[1529385] = { 7529385, nil, nil, 1539385, 1549385 } -- Signet of Arktos
-ItemIDManuelCorrections[1529384] = { 7529384, nil, nil, 1539384, 1549384 } -- Ring of Bonded Souls
-ItemIDManuelCorrections[1529383] = { 7529383, nil, nil, 1539383, 1549383 } -- Ring of the Frozen Sepulcher
-ItemIDManuelCorrections[1529382] = { 7529382, nil, nil, 1539382, 1549382 } -- Alva's Gift
-ItemIDManuelCorrections[1529381] = { 7529381, nil, nil, 1539381, 1549381 } -- Beartooth Pendant
-ItemIDManuelCorrections[1529380] = { 7529380, nil, nil, 1539380, 1549380 } -- Necklace of Frozen Reach
-ItemIDManuelCorrections[1529379] = { 7529379, nil, nil, 1539379, 1549379 } -- Amulet of the Bonded Souls
+ItemIDManuelCorrections[1529392] = { 7529392, nil, nil, 1539392, 1549392 } --Frigid Bow of the Bonded Souls
+ItemIDManuelCorrections[1529391] = { 7529391, nil, nil, 1539391, 1549391 } --Reclaimed Blade of the Frozen Sepulcher
+ItemIDManuelCorrections[1529390] = { 7529390, nil, nil, 1539390, 1549390 } --Arktos' Resillience
+ItemIDManuelCorrections[1529389] = { 7529389, nil, nil, 1539389, 1549389 } --Call of the Sepulcher
+ItemIDManuelCorrections[1529388] = { 7529388, nil, nil, 1539388, 1549388 } --Frozen Vengeance
+ItemIDManuelCorrections[1529387] = { 7529387, nil, nil, 1539387, 1549387 } --Frozen Forgiveness
+ItemIDManuelCorrections[1529386] = { 7529386, nil, nil, 1539386, 1549386 } --Alva's Kinship Ring
+ItemIDManuelCorrections[1529385] = { 7529385, nil, nil, 1539385, 1549385 } --Signet of Arktos
+ItemIDManuelCorrections[1529384] = { 7529384, nil, nil, 1539384, 1549384 } --Ring of Bonded Souls
+ItemIDManuelCorrections[1529383] = { 7529383, nil, nil, 1539383, 1549383 } --Ring of the Frozen Sepulcher
+ItemIDManuelCorrections[1529382] = { 7529382, nil, nil, 1539382, 1549382 } --Alva's Gift
+ItemIDManuelCorrections[1529381] = { 7529381, nil, nil, 1539381, 1549381 } --Beartooth Pendant
+ItemIDManuelCorrections[1529380] = { 7529380, nil, nil, 1539380, 1549380 } --Necklace of Frozen Reach
+ItemIDManuelCorrections[1529379] = { 7529379, nil, nil, 1539379, 1549379 } --Amulet of the Bonded Souls
 
+ItemIDManuelCorrections[228836] = { 75228836, nil, nil, [5] = 228836, [35] = 229836 } --Soul Cage Reliquary
 --[[ 
     /atlasloot updatecache startID stopID
     scans every id from 1 to 10 mil unless you set the startID and stopID

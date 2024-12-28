@@ -14,7 +14,6 @@ AtlasLoot:SetSkin(skin)
 local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
 local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 local WHITE = "|cffFFFFFF"
-ItemindexID = 3
 
 AtlasLoot_Data["AtlasLootFallback"] = {
     EmptyInstance = {}
@@ -286,217 +285,219 @@ function AtlasLoot:DewdropModuleMenuOpen()
     self.Dewdrop:Open(frame)
 end
 
-AtlasLoot.CloseDefaults = {}
-local DF = AtlasLoot.CloseDefaults
-DF[1], DF[2], DF[3], DF[4], DF[5] = _G["AtlasLootDefaultFrameCloseButton"]:GetPoint()
+function AtlasLoot:InitializeSkins()
+    self.CloseDefaults = {}
+    local DF = self.CloseDefaults
+    DF[1], DF[2], DF[3], DF[4], DF[5] = _G["AtlasLootDefaultFrameCloseButton"]:GetPoint()
 
-AtlasLoot.TitleDefaults = {}
-local TDF = AtlasLoot.TitleDefaults
-TDF[1], TDF[2], TDF[3], TDF[4], TDF[5] = _G["AtlasLootDefaultFrame"].TitleText:GetPoint()
+    self.TitleDefaults = {}
+    local TDF = self.TitleDefaults
+    TDF[1], TDF[2], TDF[3], TDF[4], TDF[5] = _G["AtlasLootDefaultFrame"].TitleText:GetPoint()
 
-local buttons = {
-    "AtlasLootDefaultFrame_Menu",
-    "AtlasLootDefaultFrame_SubMenu",
-    "AtlasLootDefaultFrame_ExpansionMenu",
-    "AtlasLootDefaultFrame_Preset1",
-    "AtlasLootDefaultFrame_Preset2",
-    "AtlasLootDefaultFrame_Preset3",
-    "AtlasLootDefaultFrame_Preset4",
-    "AtlasLootDefaultFrameSearchButton",
-    "AtlasLootDefaultFrameLastResultButton",
-    "AtlasLootDefaultFrameWishListButton",
-    "AtlasLootDefaultFrameAdvancedSearchButton",
-    "AtlasLootDefaultFrame_AdvancedSearchPanel_EquipButton",
-    "AtlasLootDefaultFrame_AdvancedSearchPanel_EquipSubButton",
-    "AtlasLootDefaultFrame_AdvancedSearchPanel_CategoryButton",
-    "AtlasLootDefaultFrame_AdvancedSearchPanel_SearchButton",
-    "AtlasLootDefaultFrame_AdvancedSearchPanel_ClearButton",
-    "AtlasLootDefaultFrame_MapButton",
-    "AtlasLootDefaultFrame_LoadInstanceButton",
-    "AtlasLoot_Favorites",
-}
+    local buttons = {
+        "AtlasLootDefaultFrame_Menu",
+        "AtlasLootDefaultFrame_SubMenu",
+        "AtlasLootDefaultFrame_ExpansionMenu",
+        "AtlasLootDefaultFrame_Preset1",
+        "AtlasLootDefaultFrame_Preset2",
+        "AtlasLootDefaultFrame_Preset3",
+        "AtlasLootDefaultFrame_Preset4",
+        "AtlasLootDefaultFrameSearchButton",
+        "AtlasLootDefaultFrameLastResultButton",
+        "AtlasLootDefaultFrameWishListButton",
+        "AtlasLootDefaultFrameAdvancedSearchButton",
+        "AtlasLootDefaultFrame_AdvancedSearchPanel_EquipButton",
+        "AtlasLootDefaultFrame_AdvancedSearchPanel_EquipSubButton",
+        "AtlasLootDefaultFrame_AdvancedSearchPanel_CategoryButton",
+        "AtlasLootDefaultFrame_AdvancedSearchPanel_SearchButton",
+        "AtlasLootDefaultFrame_AdvancedSearchPanel_ClearButton",
+        "AtlasLootDefaultFrame_MapButton",
+        "AtlasLootDefaultFrame_LoadInstanceButton",
+        "AtlasLoot_Favorites",
+    }
 
-AtlasLoot.skinKeys = {
-    {"Modern", AL["Modern"]},
-    {"OldAtlasLoot", AL["Old AtlasLoot"]},
-    {"ElvUIDark", AL["ElvUI Dark"]},
-}
+    self.skinKeys = {
+        {"Modern", AL["Modern"]},
+        {"OldAtlasLoot", AL["Old AtlasLoot"]},
+        {"ElvUIDark", AL["ElvUI Dark"]},
+    }
 
-local skins = {
-    Modern = {
-        DefaultFrame = {
-            bg = "Interface\\DialogFrame\\UI-DialogBox-Background",
-            bgColor = {2,2,2,2},
-            edge = "Interface\\Tooltips\\UI-Tooltip-Border",
-            edgeColor = {1,1,1,1},
-            tile = true,
+    local skins = {
+        Modern = {
+            DefaultFrame = {
+                bg = "Interface\\DialogFrame\\UI-DialogBox-Background",
+                bgColor = {2,2,2,2},
+                edge = "Interface\\Tooltips\\UI-Tooltip-Border",
+                edgeColor = {1,1,1,1},
+                tile = true,
+            },
+            Backdrop = {
+                bg = "Interface\\DialogFrame\\UI-DialogBox-Background",
+                bgColor = {2,2,2,2},
+                edge = "Interface\\Tooltips\\UI-Tooltip-Border",
+                edgeColor = {1,1,1,1},
+                tile = true,
+            },
+            btTex = "Interface\\Buttons\\UI-Silver-Button-Up",
+            insets = {1,1,1,1},
+            showFrame = true,
+            searchP = {0,-0.5},
+            searchH = 24,
+            edgeSize = 16,
+            closebtn = {0,0},
+            title = {0,0},
         },
-        Backdrop = {
-            bg = "Interface\\DialogFrame\\UI-DialogBox-Background",
-            bgColor = {2,2,2,2},
-            edge = "Interface\\Tooltips\\UI-Tooltip-Border",
-            edgeColor = {1,1,1,1},
-            tile = true,
+
+        OldAtlasLoot = {
+            DefaultFrame = {
+                bg = "Interface/AchievementFrame/UI-Achievement-AchievementBackground",
+                bgColor = {1, 1, 1, 0.5},
+                edge = "Interface/Tooltips/UI-Tooltip-Border",
+                edgeColor = {1, 0.675, 0.125, 1},
+                tile = false,
+            },
+            Backdrop = {
+                bg = "Interface/AchievementFrame/UI-Achievement-StatsBackground",
+                bgColor = {0, 0, 0, .7},
+                edge = nil,
+                edgeColor = {nil,nil,nil,nil},
+                tile = false,
+            },
+            btTex = "Interface/AchievementFrame/UI-Achievement-Category-Background",
+            insets = {4,4,4,4},
+            showFrame = false,
+            searchP = {2,0},
+            searchH = 23,
+            edgeSize = 8,
+            closebtn = {-5,-5},
+            title = {0,-5},
         },
-        btTex = "Interface\\Buttons\\UI-Silver-Button-Up",
-        insets = {1,1,1,1},
-        showFrame = true,
-        searchP = {0,-0.5},
-        searchH = 24,
-        edgeSize = 16,
-        closebtn = {0,0},
-        title = {0,0},
-    },
 
-    OldAtlasLoot = {
-        DefaultFrame = {
-            bg = "Interface/AchievementFrame/UI-Achievement-AchievementBackground",
-            bgColor = {1, 1, 1, 0.5},
-            edge = "Interface/Tooltips/UI-Tooltip-Border",
-            edgeColor = {1, 0.675, 0.125, 1},
-            tile = false,
+        ElvUIDark = {
+            DefaultFrame = {
+                bg = "Interface\\DialogFrame\\UI-DialogBox-Background",
+                bgColor = {2,2,2,2},
+                edge = "Interface\\Tooltips\\UI-Tooltip-Border",
+                edgeColor = {0,0,0,5},
+                tile = true,
+            },
+            Backdrop = {
+                bg = "Interface\\DialogFrame\\UI-DialogBox-Background",
+                bgColor = {2,2,2,2},
+                edge = "Interface\\Tooltips\\UI-Tooltip-Border",
+                edgeColor = {0,0,0,5},
+                tile = true,
+            },
+            btTex = {0,0,0,.6},
+            insets = {1,1,1,1},
+            showFrame = false,
+            searchP = {2,0},
+            searchH = 25,
+            edgeSize = 8,
+            closebtn = {-5,-5},
+            title = {0,0},
         },
-        Backdrop = {
-            bg = "Interface/AchievementFrame/UI-Achievement-StatsBackground",
-            bgColor = {0, 0, 0, .7},
-            edge = nil,
-            edgeColor = {nil,nil,nil,nil},
-            tile = false,
-        },
-        btTex = "Interface/AchievementFrame/UI-Achievement-Category-Background",
-        insets = {4,4,4,4},
-        showFrame = false,
-        searchP = {2,0},
-        searchH = 23,
-        edgeSize = 8,
-        closebtn = {-5,-5},
-        title = {0,-5},
-    },
+    }
 
-    ElvUIDark = {
-        DefaultFrame = {
-            bg = "Interface\\DialogFrame\\UI-DialogBox-Background",
-            bgColor = {2,2,2,2},
-            edge = "Interface\\Tooltips\\UI-Tooltip-Border",
-            edgeColor = {0,0,0,5},
-            tile = true,
-        },
-        Backdrop = {
-            bg = "Interface\\DialogFrame\\UI-DialogBox-Background",
-            bgColor = {2,2,2,2},
-            edge = "Interface\\Tooltips\\UI-Tooltip-Border",
-            edgeColor = {0,0,0,5},
-            tile = true,
-        },
-        btTex = {0,0,0,.6},
-        insets = {1,1,1,1},
-        showFrame = false,
-        searchP = {2,0},
-        searchH = 25,
-        edgeSize = 8,
-        closebtn = {-5,-5},
-        title = {0,0},
-    },
-}
+    local backDropFrames = {
+        "AtlasLoot_FavoritesPopupFrame",
+        "AtlaslLoot_LootBackground",
+        "Atlasloot_Difficulty_ScrollFrame",
+        "Atlasloot_SubTableFrame",
+        "AtlasLoot_PopupFrame",
+    }
 
-local backDropFrames = {
-    "AtlasLoot_FavoritesPopupFrame",
-    "AtlaslLoot_LootBackground",
-    "Atlasloot_Difficulty_ScrollFrame",
-    "Atlasloot_SubTableFrame",
-    "AtlasLoot_PopupFrame",
-}
-
---[[
-AtlasLoot:SetSkin()
-Changes the skin
-]]
-function AtlasLoot:SetSkin(skin)
-    skin = skins[skin]
-        for _, frame in pairs(backDropFrames) do
-            _G[frame]:SetBackdrop({
-                bgFile = skin.Backdrop.bg, tile = skin.Backdrop.tile, tileSize = 16,
-                edgeFile = skin.Backdrop.edge, edgeSize = skin.edgeSize,
-                insets = { left = skin.insets[1], right = skin.insets[2], top = skin.insets[3], bottom = skin.insets[4] },
-            })
-            _G[frame]:SetBackdropColor(skin.Backdrop.bgColor[1], skin.Backdrop.bgColor[2], skin.Backdrop.bgColor[3], skin.Backdrop.bgColor[4])
-            _G[frame]:SetBackdropBorderColor(skin.Backdrop.edgeColor[1], skin.Backdrop.edgeColor[2], skin.Backdrop.edgeColor[3], skin.Backdrop.edgeColor[4])
-        end
-
-        local DF = self.CloseDefaults
-        _G["AtlasLootDefaultFrameCloseButton"]:SetPoint(DF[1], DF[2], DF[3], DF[4]+skin.closebtn[1], DF[5]+skin.closebtn[2])
-
-        local TDF = self.TitleDefaults
-        _G["AtlasLootDefaultFrame"].TitleText:SetPoint(TDF[1], TDF[2], TDF[3], TDF[4]+skin.title[1], TDF[5]+skin.title[2])
-
-        if type(skin.btTex) == "table" then
-            local color = skin.btTex
-            _G["AtlasLootDefaultFrameSearchBox"].Left:SetTexture(color[1],color[2],color[3],color[4])
-            _G["AtlasLootDefaultFrameSearchBox"].Right:SetTexture(color[1],color[2],color[3],color[4])
-            _G["AtlasLootDefaultFrameSearchBox"].Middle:SetTexture(color[1],color[2],color[3],color[4])
-        else
-            _G["AtlasLootDefaultFrameSearchBox"].Left:SetTexture("")
-            _G["AtlasLootDefaultFrameSearchBox"].Right:SetTexture("")
-            _G["AtlasLootDefaultFrameSearchBox"].Middle:SetTexture("")
-            _G["AtlasLootDefaultFrameSearchBox"].Left:SetAtlas("common-search-border-left")
-            _G["AtlasLootDefaultFrameSearchBox"].Right:SetAtlas("common-search-border-right")
-            _G["AtlasLootDefaultFrameSearchBox"].Middle:SetAtlas("common-search-border-middle")
-        end
-
-        _G["AtlasLootDefaultFrameSearchBox"].Left:SetHeight(skin.searchH)
-        _G["AtlasLootDefaultFrameSearchBox"].Right:SetHeight(skin.searchH)
-        _G["AtlasLootDefaultFrameSearchBox"].Middle:SetHeight(skin.searchH)
-        _G["AtlasLootDefaultFrameSearchButton"]:ClearAllPoints()
-        _G["AtlasLootDefaultFrameSearchButton"]:SetPoint("LEFT","AtlasLootDefaultFrameSearchBox","RIGHT",skin.searchP[1],skin.searchP[2])
-
-        local frame = {"RightEdge","LeftEdge","BottomEdge","TopEdge","BottomRightCorner","BottomLeftCorner","TopRightCorner","TopLeftCorner"}
-        if skin.showFrame then
-            for _, frame in ipairs(frame) do
-                _G["AtlasLootDefaultFrameNineSlice"][frame]:Show()
+    --[[
+    AtlasLoot:SetSkin()
+    Changes the skin
+    ]]
+    function AtlasLoot:SetSkin(skin)
+        skin = skins[skin]
+            for _, frame in pairs(backDropFrames) do
+                _G[frame]:SetBackdrop({
+                    bgFile = skin.Backdrop.bg, tile = skin.Backdrop.tile, tileSize = 16,
+                    edgeFile = skin.Backdrop.edge, edgeSize = skin.edgeSize,
+                    insets = { left = skin.insets[1], right = skin.insets[2], top = skin.insets[3], bottom = skin.insets[4] },
+                })
+                _G[frame]:SetBackdropColor(skin.Backdrop.bgColor[1], skin.Backdrop.bgColor[2], skin.Backdrop.bgColor[3], skin.Backdrop.bgColor[4])
+                _G[frame]:SetBackdropBorderColor(skin.Backdrop.edgeColor[1], skin.Backdrop.edgeColor[2], skin.Backdrop.edgeColor[3], skin.Backdrop.edgeColor[4])
             end
-            _G["AtlasLootDefaultFramePortrait"]:Show()
-            _G["AtlasLootDefaultFrameBg"]:Show()
-            _G["AtlasLootDefaultFrame"].TitleBg:Show()
-            _G["AtlasLootDefaultFrameTopTileStreaks"]:Show()
-            _G["AtlasLootDefaultFrame"]:SetBackdrop(nil)
-        else
-            for _, frame in ipairs(frame) do
-                _G["AtlasLootDefaultFrameNineSlice"][frame]:Hide()
-            end
-            _G["AtlasLootDefaultFramePortrait"]:Hide()
-            _G["AtlasLootDefaultFrameBg"]:Hide()
-            _G["AtlasLootDefaultFrame"].TitleBg:Hide()
-            _G["AtlasLootDefaultFrameTopTileStreaks"]:Hide()
-            _G["AtlasLootDefaultFrame"]:SetBackdrop({
-                bgFile = skin.DefaultFrame.bg, tile = skin.DefaultFrame.tile, tileSize = 16,
-                edgeFile = skin.DefaultFrame.edge, edgeSize = skin.edgeSize,
-                insets = { left = skin.insets[1], right = skin.insets[2], top = skin.insets[3], bottom = skin.insets[4] },
-            })
-            _G["AtlasLootDefaultFrame"]:SetBackdropColor(skin.DefaultFrame.bgColor[1], skin.DefaultFrame.bgColor[2], skin.DefaultFrame.bgColor[3], skin.DefaultFrame.bgColor[4])
-            _G["AtlasLootDefaultFrame"]:SetBackdropBorderColor(skin.DefaultFrame.edgeColor[1], skin.DefaultFrame.edgeColor[2], skin.DefaultFrame.edgeColor[3], skin.DefaultFrame.edgeColor[4])
-        end
 
-        local function SetButtons(path)
-            if _G[path].template and _G[path].template == "FilterDropDownMenuTemplate" then
-                local tex, tex2, tex3, tex4
-                if type(skin.btTex) == "table" then
-                    tex, tex2, tex3, tex4 = unpack(skin.btTex)
-                else
-                    tex = skin.btTex
+            local DF = self.CloseDefaults
+            _G["AtlasLootDefaultFrameCloseButton"]:SetPoint(DF[1], DF[2], DF[3], DF[4]+skin.closebtn[1], DF[5]+skin.closebtn[2])
+
+            local TDF = self.TitleDefaults
+            _G["AtlasLootDefaultFrame"].TitleText:SetPoint(TDF[1], TDF[2], TDF[3], TDF[4]+skin.title[1], TDF[5]+skin.title[2])
+
+            if type(skin.btTex) == "table" then
+                local color = skin.btTex
+                _G["AtlasLootDefaultFrameSearchBox"].Left:SetTexture(color[1],color[2],color[3],color[4])
+                _G["AtlasLootDefaultFrameSearchBox"].Right:SetTexture(color[1],color[2],color[3],color[4])
+                _G["AtlasLootDefaultFrameSearchBox"].Middle:SetTexture(color[1],color[2],color[3],color[4])
+            else
+                _G["AtlasLootDefaultFrameSearchBox"].Left:SetTexture("")
+                _G["AtlasLootDefaultFrameSearchBox"].Right:SetTexture("")
+                _G["AtlasLootDefaultFrameSearchBox"].Middle:SetTexture("")
+                _G["AtlasLootDefaultFrameSearchBox"].Left:SetAtlas("common-search-border-left")
+                _G["AtlasLootDefaultFrameSearchBox"].Right:SetAtlas("common-search-border-right")
+                _G["AtlasLootDefaultFrameSearchBox"].Middle:SetAtlas("common-search-border-middle")
+            end
+
+            _G["AtlasLootDefaultFrameSearchBox"].Left:SetHeight(skin.searchH)
+            _G["AtlasLootDefaultFrameSearchBox"].Right:SetHeight(skin.searchH)
+            _G["AtlasLootDefaultFrameSearchBox"].Middle:SetHeight(skin.searchH)
+            _G["AtlasLootDefaultFrameSearchButton"]:ClearAllPoints()
+            _G["AtlasLootDefaultFrameSearchButton"]:SetPoint("LEFT","AtlasLootDefaultFrameSearchBox","RIGHT",skin.searchP[1],skin.searchP[2])
+
+            local frame = {"RightEdge","LeftEdge","BottomEdge","TopEdge","BottomRightCorner","BottomLeftCorner","TopRightCorner","TopLeftCorner"}
+            if skin.showFrame then
+                for _, frame in ipairs(frame) do
+                    _G["AtlasLootDefaultFrameNineSlice"][frame]:Show()
                 end
-                _G[path.."TopLeft"]:SetTexture(tex, tex2, tex3, tex4)
-                _G[path.."TopRight"]:SetTexture(tex, tex2, tex3, tex4)
-                _G[path.."BottomLeft"]:SetTexture(tex, tex2, tex3, tex4)
-                _G[path.."BottomRight"]:SetTexture(tex, tex2, tex3, tex4)
-                _G[path.."TopMiddle"]:SetTexture(tex, tex2, tex3, tex4)
-                _G[path.."MiddleLeft"]:SetTexture(tex, tex2, tex3, tex4)
-                _G[path.."MiddleRight"]:SetTexture(tex, tex2, tex3, tex4)
-                _G[path.."BottomMiddle"]:SetTexture(tex, tex2, tex3, tex4)
-                _G[path.."MiddleMiddle"]:SetTexture(tex, tex2, tex3, tex4)
+                _G["AtlasLootDefaultFramePortrait"]:Show()
+                _G["AtlasLootDefaultFrameBg"]:Show()
+                _G["AtlasLootDefaultFrame"].TitleBg:Show()
+                _G["AtlasLootDefaultFrameTopTileStreaks"]:Show()
+                _G["AtlasLootDefaultFrame"]:SetBackdrop(nil)
+            else
+                for _, frame in ipairs(frame) do
+                    _G["AtlasLootDefaultFrameNineSlice"][frame]:Hide()
+                end
+                _G["AtlasLootDefaultFramePortrait"]:Hide()
+                _G["AtlasLootDefaultFrameBg"]:Hide()
+                _G["AtlasLootDefaultFrame"].TitleBg:Hide()
+                _G["AtlasLootDefaultFrameTopTileStreaks"]:Hide()
+                _G["AtlasLootDefaultFrame"]:SetBackdrop({
+                    bgFile = skin.DefaultFrame.bg, tile = skin.DefaultFrame.tile, tileSize = 16,
+                    edgeFile = skin.DefaultFrame.edge, edgeSize = skin.edgeSize,
+                    insets = { left = skin.insets[1], right = skin.insets[2], top = skin.insets[3], bottom = skin.insets[4] },
+                })
+                _G["AtlasLootDefaultFrame"]:SetBackdropColor(skin.DefaultFrame.bgColor[1], skin.DefaultFrame.bgColor[2], skin.DefaultFrame.bgColor[3], skin.DefaultFrame.bgColor[4])
+                _G["AtlasLootDefaultFrame"]:SetBackdropBorderColor(skin.DefaultFrame.edgeColor[1], skin.DefaultFrame.edgeColor[2], skin.DefaultFrame.edgeColor[3], skin.DefaultFrame.edgeColor[4])
             end
-        end
 
-        for _, v in pairs(buttons) do
-            SetButtons(v)
-        end
+            local function SetButtons(path)
+                if _G[path].template and _G[path].template == "FilterDropDownMenuTemplate" then
+                    local tex, tex2, tex3, tex4
+                    if type(skin.btTex) == "table" then
+                        tex, tex2, tex3, tex4 = unpack(skin.btTex)
+                    else
+                        tex = skin.btTex
+                    end
+                    _G[path.."TopLeft"]:SetTexture(tex, tex2, tex3, tex4)
+                    _G[path.."TopRight"]:SetTexture(tex, tex2, tex3, tex4)
+                    _G[path.."BottomLeft"]:SetTexture(tex, tex2, tex3, tex4)
+                    _G[path.."BottomRight"]:SetTexture(tex, tex2, tex3, tex4)
+                    _G[path.."TopMiddle"]:SetTexture(tex, tex2, tex3, tex4)
+                    _G[path.."MiddleLeft"]:SetTexture(tex, tex2, tex3, tex4)
+                    _G[path.."MiddleRight"]:SetTexture(tex, tex2, tex3, tex4)
+                    _G[path.."BottomMiddle"]:SetTexture(tex, tex2, tex3, tex4)
+                    _G[path.."MiddleMiddle"]:SetTexture(tex, tex2, tex3, tex4)
+                end
+            end
+
+            for _, v in pairs(buttons) do
+                SetButtons(v)
+            end
+    end
 end

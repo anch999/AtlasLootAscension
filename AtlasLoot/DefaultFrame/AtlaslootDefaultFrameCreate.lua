@@ -1,7 +1,10 @@
+local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
 local BLUE = "|cff6666ff"
 local WHITE = "|cFFFFFFFF"
 local INDENT = "    "
+
+function AtlasLoot:InitializeUI()
 
     local function removeScripts(button)
         button:SetScript("OnMouseDown", nil)
@@ -589,7 +592,7 @@ function AtlasLoot:ScrollFrameUpdate(hide,wishlist)
                 row = scrollFrame.rows[i]
                 row:SetText("|cffFFd200"..self.Difficulties[self.CurrentType][value][1])
                 row.itemIndex = self.Difficulties[self.CurrentType][value][2]
-                if row.itemIndex == ItemindexID then
+                if row.itemIndex == self.ItemindexID then
                     row:SetChecked(true)
                 end
                 row:Show()
@@ -603,20 +606,20 @@ end
 local scrollSlider = CreateFrame("ScrollFrame","AtlasLootDefaultFrameScroll", Atlasloot_Difficulty_ScrollFrame, "FauxScrollFrameTemplate")
     scrollSlider:SetPoint("TOPLEFT", 0, -8)
     scrollSlider:SetPoint("BOTTOMRIGHT", -30, 8)
-    scrollSlider:SetScript("OnVerticalScroll", function(self, offset)
-    self.offset = math.floor(offset / ROW_HEIGHT + 0.5)
+    scrollSlider:SetScript("OnVerticalScroll", function(scroll, offset)
+        scroll.offset = math.floor(offset / ROW_HEIGHT + 0.5)
     if scrollFrame.wishList then
-        AtlasLoot:ScrollFrameUpdate(nil,scrollFrame.wishList)
+        self:ScrollFrameUpdate(nil,scrollFrame.wishList)
     else
-        AtlasLoot:ScrollFrameUpdate()
+        self:ScrollFrameUpdate()
     end
 end)
 
 scrollSlider:SetScript("OnShow", function()
     if scrollFrame.wishList then
-        AtlasLoot:ScrollFrameUpdate(nil,scrollFrame.wishList)
+        self:ScrollFrameUpdate(nil,scrollFrame.wishList)
     else
-        AtlasLoot:ScrollFrameUpdate()
+        self:ScrollFrameUpdate()
     end
 end)
 
@@ -634,7 +637,7 @@ local rows = setmetatable({}, { __index = function(t, i)
             AtlasLoot_CurrentWishList["Show"].ListNum = row.itemIndex
             AtlasLoot:ScrollFrameUpdate(nil,scrollFrame.wishList)
         else
-            ItemindexID = row.itemIndex
+            self.ItemindexID = row.itemIndex
             if not AtlasLootDefaultFrame_AdvancedSearchPanel:IsVisible() then
             AtlasLoot:ShowItemsFrame(AtlasLootItemsFrame.refresh[1], AtlasLootItemsFrame.refresh[2], AtlasLootItemsFrame.refresh[3])
             end
@@ -922,3 +925,5 @@ local itemPopupframe = CreateFrame("Frame", "AtlasLoot_PopupFrame")
     end)
     itemPopupframe:SetWidth(211)
     itemPopupframe:Hide()
+
+end

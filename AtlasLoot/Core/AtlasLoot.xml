@@ -2,7 +2,7 @@
 
 	<!--Default Files-->
 	<Script file="AtlasLoot.lua"/>
-	<Script file="AtlasDifficulty.lua"/>
+	<Script file="Difficultys.lua"/>
 	<Script file="Utils.lua"/>
 	<Script file="Filter.lua"/>
     <Script file="TextParsing.lua"/>

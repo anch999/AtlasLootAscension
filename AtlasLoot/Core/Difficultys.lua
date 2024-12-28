@@ -80,6 +80,12 @@
         {"Heroic Bloodforged", 2},
         Max = 6
     }
+    AtlasLoot.Difficulties["BCkarazhanCrypts"] = {
+        {"Mythic Phase 1", 5},
+        {"Mythic Phase 2", 35},
+        {"Bloodforged", 1},
+        Max = 35
+    }
 
     AtlasLoot.Difficulties["WrathDungeon"] = {
         {"Bloodforged", 1},

@@ -298,6 +298,18 @@ function AtlasLoot:InitializeOptionsFrame()
 	self:OptionsInit()
     self:CreateOptionsInfoTooltips()
     self.db.TxtSize = self.db.TxtSize or 14
+    local panel = _G["AtlasLootOptionsFrame"]
+    panel.name = AL["AtlasLoot"]
+    InterfaceOptions_AddCategory(panel)
+    --Filter and wishlist options menus creates as part of the next 2 commands
+	self:CreateWishlistOptions()
+    panel = _G["AtlasLootHelpFrame"]
+    panel.name = AL["Help"]
+    panel.parent = AL["AtlasLoot"]
+    InterfaceOptions_AddCategory(panel)
+    if LibStub:GetLibrary("LibAboutPanel", true) then
+        LibStub("LibAboutPanel").new(AL["AtlasLoot"], "AtlasLoot")
+    end
 end
 
 AtlasLoot.worldFrameHook = {}

@@ -2226,7 +2226,8 @@ AtlasLoot_Data["MagistersTerrace"] = {
 AtlasLoot_Data["KarazhanCryptsTBC"] = {
 	Module = "AtlasLoot_BurningCrusade";
 	Name = AL["The Karazhan Crypts"];
-	Type = "BCDungeon";
+	Type = "BCkarazhanCrypts";
+	Index = 5;
 	--Map = "Gnomeregan";
 	{
 		Name = AL["Cynfael"];
@@ -2252,6 +2253,7 @@ AtlasLoot_Data["KarazhanCryptsTBC"] = {
 		[08] = { itemID = 259698 }; --Funeral Mantle
 		[09] = { itemID = 259827 }; --Soulsteel Shoulderguards
 		[10] = { itemID = 259870 }; --Blossom of Sorrow
+		[11] = { itemID = 228836 }; --Soul Cage Reliquary
 		[16] = { itemID = 254077, contentsPreview = {{1414603}, {1414604}, {1414605}, {1414606}} }; --Forgotten Core
 		[18] = { itemID = 254067 }; --Sigil of Dryn Miel
 		[20] = { itemID = 1179133 }; --Reins of the Mawsworn Charger
