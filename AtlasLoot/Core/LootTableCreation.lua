@@ -1,14 +1,7 @@
-local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
+local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0")
 -- Colours stored for code readability
-local GREY = "|cff999999"
-local RED = "|cffff0000"
 local WHITE = "|cffFFFFFF"
-local GREEN = "|cff1eff00"
-local LIMEGREEN = "|cFF32CD32"
-local BLUE = "|cff0070dd"
-local ORANGE = "|cffFF8400"
-local YELLOW = "|cffFFd200"
 
 --Creates tables for raid tokens from the collections tables
 function AtlasLoot:CreateToken(dataID)

@@ -1,10 +1,8 @@
+local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
+local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
 local RED = "|cffff0000"
 local WHITE = "|cffFFFFFF"
-local GREEN = "|cff1eff00"
-local ORANGE = "|cffFF8400"
 local YELLOW = "|cffFFd200"
-
-local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
 
 -- Supported Operators
 local OP_AND = "&"
@@ -275,7 +273,7 @@ end
 SLASH_ATLASLOOTSEARCH1 = "/atlaslootsearch"
 SLASH_ATLASLOOTSEARCH2 = "/als"
 SlashCmdList["ATLASLOOTSEARCH"] = function(search, editBox)
-    AtlasLootDefaultFrame:Show()
+    self.mainUI:Show()
     if search and search ~= '' then
         AtlasLootDefaultFrameSearchBox:SetText(search)
         AtlasLootDefaultFrameSearchButton:Click()

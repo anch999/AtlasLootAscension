@@ -1,5 +1,25 @@
 <Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
 ..\FrameXML\UI.xsd">
+    <Button name="AtlasLootDropMenuTemplate" motionScriptsWhileDisabled="true" frameStrata="DIALOG" inherits="FilterDropDownMenuTemplate" virtual="true">
+        <Scripts>
+            <OnLoad> </OnLoad>
+            <OnMouseDown> </OnMouseDown>
+            <OnMouseUp> </OnMouseUp>
+            <OnShow> </OnShow>
+            <OnEnter> </OnEnter>
+            <OnLeave> </OnLeave>
+        </Scripts>
+
+        <Layers>           
+            <Layer level="OVERLAY">
+                <FontString name="$parentLable" parentKey="Lable" text="" inherits="GameFontNormal">
+                    <Anchors>
+                        <Anchor point="TOP" relativePoint="BOTTOM" x="0" y="42"/>
+                    </Anchors>
+                </FontString>
+            </Layer>
+        </Layers>
+    </Button>
     <Script file="AtlaslootDefaultFrameCreate.lua"/>
     <Script file="AtlaslootDefaultFrame.lua"/>
     <Script file="AtlasLootAdvancedSearchCreate.lua"/>

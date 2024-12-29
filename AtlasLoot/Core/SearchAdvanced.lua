@@ -1,3 +1,4 @@
+local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
 
 local MAX_ARGUMENTS = 6
@@ -147,9 +148,7 @@ function AtlasLoot:AdvancedSearchShow()
     end
 
     -- Hide all elements that could be in the AtlasTable
-    _G["AtlasLootItemsFrame_NEXT"]:Hide()
-    _G["AtlasLootItemsFrame_PREV"]:Hide()
-    _G["AtlasLootItemsFrame_BACK"]:Hide()
+    self:ToggleNavigationButtonsVisibility()
 
     -- Hide the Filter Check-Box
     AtlasLootFilterCheck:Hide()

@@ -1,3 +1,4 @@
+local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
 
 local MAX_ARGUMENTS = 6

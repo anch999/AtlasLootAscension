@@ -1,4 +1,5 @@
 
+local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 local patchNotes = {
     {"Version 7.4.7", "22th November, 2024"},
     "Fixed vanity items not showing and sorted them into more categorys",

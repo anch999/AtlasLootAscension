@@ -1,3 +1,4 @@
+local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
 local alDif = AtlasLoot.Difficulties
 local BabbleBoss = AtlasLoot_GetLocaleLibBabble("LibBabble-Boss-3.0")

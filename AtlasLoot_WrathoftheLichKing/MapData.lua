@@ -2,20 +2,9 @@ local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
 
 local BabbleSubZone = AtlasLoot_GetLocaleLibBabble("LibBabble-SubZone-3.0");
 local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
-
-
-local BLUE = "|cff6666ff"
-local GREY = "|cff999999"
-local GREN = "|cff66cc33"
 local _RED = "|cffcc6666"
-local ORNG = "|cffcc9933"
 local PURP = "|cff9900ff"
-local INDENT = "      "
-local YELLOW = "|cffFFd200"
-local WHITE = "|cFFFFFFFF"
-local CYAN =  "|cff00ffff"
-local quest = "questturnin"
-local boss = "dungeonskull"
+
 
     --************************************************
     -- Wrath of the Lich King Instances

@@ -1,17 +1,4 @@
---[[
-File containing functions related to the wish list.
-
-Functions:
-AtlasLoot:AddToWishlist(itemID, itemTexture, itemName, lootPage, sourcePage)
-AtlasLoot:DeleteFromWishList(btnNumber)
-AtlasLoot:WishListCheck(itemID, all)
-
-<local> ClearLines()
-<local> AddWishListOptions(parrent,name,icon,xxx,tabname,tab2)
-<local> AddTexture(par, num)
-AtlasLoot:RefreshWishlists()
-AtlasLoot:CreateWishlistOptions()
-]]
+local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
 
 local ALModule = AtlasLoot:NewModule("WishList", "AceSerializer-3.0", "AceComm-3.0")

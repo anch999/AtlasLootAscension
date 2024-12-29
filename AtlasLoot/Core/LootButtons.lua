@@ -1,3 +1,4 @@
+local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
 local WHITE = "|cffFFFFFF"
 local GREEN = "|cff1eff00"
@@ -7,11 +8,7 @@ local GOLD  = "|cffffcc00"
 local LIGHTBLUE = "|cFFADD8E6"
 local ORANGE2 = "|cFFFFA500"
 
-local AtlasLootScanTooltip = CreateFrame("GAMETOOLTIP","AtlasLootScanTooltip",nil,"GameTooltipTemplate")
-AtlasLootScanTooltip:SetOwner(UIParent, "ANCHOR_NONE")
-
 local playerName = UnitName("player")
-local realmName = GetRealmName()
 local playerFaction = UnitFactionGroup("player")
 
 --Set Tooltip for extra crafting data

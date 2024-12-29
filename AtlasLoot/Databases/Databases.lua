@@ -1,13 +1,13 @@
-AtlasLoot = LibStub("AceAddon-3.0"):NewAddon("AtlasLoot", "AceEvent-3.0", "AceTimer-3.0", "NewsFrame-1.0")
-
 local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
-local BabbleBoss = AtlasLoot_GetLocaleLibBabble("LibBabble-Boss-3.0")
-local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0")
-local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
 local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 
 --Table holding all loot tables is initialised here as it loads early
-AtlasLoot_Data = {}
+AtlasLoot_Data = {
+	["EmptyTable"] = {
+		Name = AL["Select a Loot Table..."],
+		{Name = AL["Select a Loot Table..."]},
+	}
+}
 AtlasLoot_MapData = {}
 AtlasLoot_ExtraData = {}
 AtlasLoot_CraftingData = {

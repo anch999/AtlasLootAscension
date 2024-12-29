@@ -1,16 +1,11 @@
+local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
 -- Colours stored for code readability
-local GREY = "|cff999999"
-local RED = "|cffff0000"
 local WHITE = "|cffFFFFFF"
 local GREEN = "|cff1eff00"
-local PURPLE = "|cff9F3FFF"
-local BLUE = "|cff0070dd"
 local ORANGE = "|cffFF8400"
 local CYAN =  "|cff00ffff"
-local SPRINGGREEN = "|cFF00FF7F"
 local YELLOW = "|cffFFd200"
-
 
 --------------------------------- DewDrop Dropdownmenu ---------------------------------
 -- Used to create a dewdrop menu from a table
@@ -158,20 +153,20 @@ end
 -- Create enchant tooltip
 function AtlasLoot:GetEnchantLink(enchantID)
 	if not enchantID then return end
-	local EnchantLink = nil
-	AtlasLootScanTooltip:SetOwner(UIParent, "ANCHOR_NONE")
-	AtlasLootScanTooltip:ClearLines()
-	AtlasLootScanTooltip:SetHyperlink("enchant:"..enchantID)
-	AtlasLootScanTooltip:Show()
-	local tooltipline = _G["AtlasLootScanTooltipTextLeft1"]
+	local enchantLink
+	GameTooltip:SetOwner(UIParent, "ANCHOR_NONE")
+	GameTooltip:ClearLines()
+	GameTooltip:SetHyperlink("enchant:"..enchantID)
+	GameTooltip:Show()
+	local tooltipline = _G["GameTooltipTextLeft1"]
 	local text = tooltipline:GetText()
 	if text and string.find(text, ":") then
-	   EnchantLink = "|cffffd000|Henchant:"..enchantID.."|h["..text.."]|h|r"
+		enchantLink = "|cffffd000|Henchant:"..enchantID.."|h["..text.."]|h|r"
 	else
-	   EnchantLink = GetSpellLink(enchantID)
+		enchantLink = GetSpellLink(enchantID)
 	end
-	AtlasLootScanTooltip:Hide()
-	return EnchantLink
+	GameTooltip:Hide()
+	return enchantLink
  end
 
 -- Open a ascension db link
@@ -313,16 +308,6 @@ function AtlasLoot:AddTooltip(frameb, tooltiptext)
 	frame:SetScript("OnLeave", function() GameTooltip:Hide() end)
  end
 
---Called when 'Back'Button is pressed and calls up the appropriate loot page
-function AtlasLoot:BackButton_OnClick()
-	self.backEnabled = false
-	if AtlasLootItemsFrame.refreshSearch then
-		self:ShowItemsFrame(AtlasLootItemsFrame.refreshSearch[1], AtlasLootItemsFrame.refreshSearch[2], AtlasLootItemsFrame.refreshSearch[3])
-	else
-		self:ShowItemsFrame(AtlasLootItemsFrame.refreshBack[1], AtlasLootItemsFrame.refreshBack[2], AtlasLootItemsFrame.refreshBack[3])
-	end
-end
-
 --[[
 AtlasLoot:IsLootTableAvailable(dataID):
 Checks if a loot table is in memory and attempts to load the correct LoD module if it isn't
@@ -335,23 +320,6 @@ function AtlasLoot:IsLootTableAvailable(dataSource)
 		return true
 	elseif moduleName then
 		LoadAddOn(moduleName)
-	end
-end
-
---[[
-AtlasLoot:NavButton_OnClick:
-Called when <-, -> are pressed and calls up the appropriate loot page
-]]
-function AtlasLoot:NavButton_OnClick(btn)
-	if AtlasLootDefaultFrame_Map:IsVisible() then
-		self:MapSelect(btn.mapID, btn.mapNum)
-	else
-		local tablenum, dataID, dataSource = btn.tablenum, btn.tablebase[1], btn.tablebase[2]
-		if #_G[dataSource][dataID] > 26 then
-			local min, max = AtlasLootDefaultFrameSubTableScrollScrollBar:GetMinMaxValues()
-			AtlasLootDefaultFrameSubTableScrollScrollBar:SetValue(tablenum * (max / #_G[dataSource][dataID]))
-		end
-		self:ShowItemsFrame(dataID, dataSource, tablenum)
 	end
 end
 
@@ -594,14 +562,6 @@ function AtlasLoot:SetMerchantFrameGlow()
 		end
 		num = num + 1
 	end
-end
-
-function AtlasLoot:MERCHANT_SHOW()
-	self:SetMerchantFrameGlow()
-end
-
-function AtlasLoot:MERCHANT_UPDATE()
-	self:SetMerchantFrameGlow()
 end
 
 function AtlasLoot:InitializeWishlistMerchantGlow()

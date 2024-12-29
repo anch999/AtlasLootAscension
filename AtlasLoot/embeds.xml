@@ -28,4 +28,11 @@
 
 <Script file="Libs\LibDataBroker-1.1\LibDataBroker-1.1.lua"/>
 
+<!--Default Files-->
+<Include file="Locales\Locales.xml"/>
+<Script file="Core\AtlasLoot.lua"/>
+<Include file="Databases\Databases.xml"/>
+<Include file="Core\AtlasLoot.xml"/>
+<Include file="Menus\Menus.xml"/>
+<Include file="DefaultFrame\Frames.xml"/>
 </Ui>

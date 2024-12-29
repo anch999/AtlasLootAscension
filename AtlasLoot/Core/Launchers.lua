@@ -1,4 +1,4 @@
-
+local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 local icon = LibStub('LibDBIcon-1.0')
 local minimap = LibStub:GetLibrary('LibDataBroker-1.1'):NewDataObject("AtlasLoot", {
     type = 'data source',
@@ -11,10 +11,10 @@ function minimap.OnClick(frame, button)
 	if IsShiftKeyDown() then
         AtlasLoot:OptionsToggle();
     else
-        if AtlasLootDefaultFrame:IsVisible() then
-            AtlasLootDefaultFrame:Hide();
+        if AtlasLoot.mainUI:IsVisible() then
+            AtlasLoot.mainUI:Hide();
         else
-            AtlasLootDefaultFrame:Show();
+            AtlasLoot.mainUI:Show();
         end
     end
 end

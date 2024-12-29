@@ -1,17 +1,4 @@
---[[
-Options.lua
-Functions:
-AtlasLoot_OptionsPanelOnLoad(panel)
-AtlasLoot:OptionsInit()
-AtlasLoot:OptionsAllLinksToggle()
-AtlasLoot:OptionsEquipCompareToggle()
-AtlasLoot:OptionsOpaqueToggle()
-AtlasLoot:OptionsLoDStartup()
-AtlasLoot:SetupLootBrowserSlider(frame, mymin, mymax, step)
-AtlasLoot:UpdateLootBrowserSlider(frame)
-AtlasLoot:DisplayHelp()
-AtlasLoot:CreateOptionsInfoTooltips()
-]]
+local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 
 local GREY = "|cff999999"
 local WHITE = "|cffFFFFFF"
@@ -35,6 +22,7 @@ function AtlasLoot:OptionsInit()
     AtlasLootOptionsMinimapIcon:SetChecked(self.db.profile.minimap.hide)
     AtlasLootOptionsFrameCraftingInfo:SetChecked(self.db.profile.recipeExtraInfoSwitch)
     AtlasLootOptionsFrameDropLocation:SetChecked(self.db.profile.showdropLocationOnSearch)
+    self.db.profile.showUnknownRecipeTooltip = self.db.profile.showUnknownRecipeTooltip or true
     AtlasLootOptionsFrameUnknownRecipe:SetChecked(self.db.profile.showUnknownRecipeTooltip)
     AtlasLootOptionsFrameItemDropLocation:SetChecked(self.db.profile.showdropLocationTooltips)
     AtlasLootOptionsFrameMerchantGlow:SetChecked(self.db.profile.MerchantGlow)
@@ -88,10 +76,6 @@ end
 
 function AtlasLoot:UpdateLootBrowserSlider(frame)
     _G[frame:GetName().."Text"]:SetText(AL["Loot Browser Scale: "].." ("..round(frame:GetValue(),2)..")")
-end
-
-function AtlasLoot:UpdateLootBrowserScale()
-	AtlasLootDefaultFrame:SetScale(self.db.profile.LootBrowserScale)
 end
 
 function AtlasLoot:DisplayHelp()

@@ -1,3 +1,4 @@
+local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 local difficultyList = {
 	["Bloodforged"] = 1,
 	["Heroic Bloodforged"] = 2,
