@@ -1,8 +1,5 @@
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
-local RED = "|cffff0000"
-local WHITE = "|cffFFFFFF"
-local YELLOW = "|cffFFd200"
 
 -- Supported Operators
 local OP_AND = "&"
@@ -766,7 +763,7 @@ function AtlasLoot:Search(text)
         end
     end
     if allDisabled then
-        DEFAULT_CHAT_FRAME:AddMessage(RED .. AL["AtlasLoot"] .. ": " .. WHITE .. AL["You don't have any module selected to search on. Right click search to select modules the more selected the longer it will take to search"])
+        DEFAULT_CHAT_FRAME:AddMessage(self.Colors.RED .. AL["AtlasLoot"] .. ": " .. self.Colors.WHITE .. AL["You don't have any module selected to search on. Right click search to select modules the more selected the longer it will take to search"])
         return
     end
 
@@ -784,9 +781,9 @@ function AtlasLoot:ShowSearchOptions(button, point)
         self.Dewdrop:Close(1)
     else
         local setOptions = function()
-            self.Dewdrop:AddLine("text", WHITE.."Search Categories", "isTitle", true, "notCheckable", true)
+            self.Dewdrop:AddLine("text", self.Colors.WHITE.."Search Categories", "isTitle", true, "notCheckable", true)
             for expac, cat in pairs(searchCategories) do
-                self.Dewdrop:AddLine( "text", YELLOW..cat.Name, "isTitle", true, "notCheckable", true)
+                self.Dewdrop:AddLine( "text", self.Colors.YELLOW..cat.Name, "isTitle", true, "notCheckable", true)
                     for _, data in ipairs(cat) do
                         self.db.profile.SearchOn[data[2]] = self.db.profile.SearchOn[data[2]] or {false, data[3]}
                         self.Dewdrop:AddLine(

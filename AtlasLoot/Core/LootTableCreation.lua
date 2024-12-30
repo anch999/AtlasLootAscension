@@ -1,7 +1,5 @@
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0")
--- Colours stored for code readability
-local WHITE = "|cffFFFFFF"
 
 --Creates tables for raid tokens from the collections tables
 function AtlasLoot:CreateToken(dataID)
@@ -71,8 +69,8 @@ function AtlasLoot:CreateOnDemandLootTable(typeL)
 	local function correctText(text)
 		text = gsub(text, "Cloth Armor %- Back", "Back")
 		text = gsub(text, "Miscellaneous Armor %- " , "")
-		text = gsub(text, "Armor %- " , "Armor "..WHITE.."%- ")
-		text = gsub(text, "Weapon %- " , WHITE.."%- ")
+		text = gsub(text, "Armor %- " , "Armor "..self.Colors.WHITE.."%- ")
+		text = gsub(text, "Weapon %- " , self.Colors.WHITE.."%- ")
 		return text
 	end
 
@@ -112,7 +110,7 @@ function AtlasLoot:CreateOnDemandLootTable(typeL)
 				for i, items in ipairs(t) do
 					local name = equipSlot[getEquip(eLoc)] and aType.." "..items[2].." - "..equipSlot[getEquip(eLoc)] or aType
 					if #t > 30 and (i == 1 or i == 31 or i == 61 or i == 91)  then
-						tinsert(AtlasLoot_OnDemand[typeL],{Name = correctText(name)..WHITE.." - Page".. math.ceil(i/30) })
+						tinsert(AtlasLoot_OnDemand[typeL],{Name = correctText(name)..self.Colors.WHITE.." - Page".. math.ceil(i/30) })
 					elseif i == 1 then
 						tinsert(AtlasLoot_OnDemand[typeL],{Name = correctText(name)})
 					end

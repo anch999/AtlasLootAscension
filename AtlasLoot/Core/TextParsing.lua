@@ -116,12 +116,12 @@ local txtSubstitution = {
     { "Herbalism", AL["Herbalism"] },
 
     -- Gems
-    { "Red", AL["Red Gem"] },
-    { "Blue", AL["Blue Gem"] },
+    { "self.Colors.RED", AL["self.Colors.RED Gem"] },
+    { "self.Colors.BLUE", AL["self.Colors.BLUE Gem"] },
     { "Yellow", AL["Yellow Gem"] },
     { "Purple", AL["Purple Gem"] },
-    { "Orange", AL["Orange Gem"] },
-    { "Green", AL["Green Gem"] },
+    { "self.Colors.ORANGE", AL["self.Colors.ORANGE Gem"] },
+    { "self.Colors.GREEN", AL["self.Colors.GREEN Gem"] },
 
     -- Text Colouring
     { "=q0=", "|cff9d9d9d" },

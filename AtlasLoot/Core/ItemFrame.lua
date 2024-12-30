@@ -1,5 +1,7 @@
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
-
+local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
+local itemHighlightBlue = "Interface\\AddOns\\AtlasLoot\\Images\\knownBlue"
+local itemHighlightGreen = "Interface\\AddOns\\AtlasLoot\\Images\\knownGreen"
 --[[
 AtlasLoot:ShowItemsFrame(dataID, dataSource, tablenum):
 dataID - Name of the loot table
@@ -9,7 +11,7 @@ It is the workhorse of the mod and allows the loot tables to be displayed any wa
 ]]
 function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 
-	local isValid, toShow, itemID, recipeID, orgItemID
+	local isValid, toShow, itemID, recipeID
 	self.vanityItems = {}
 
     --If the loot table name has not been passed, throw up a debugging statement
@@ -23,7 +25,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 
 	--Hide Map and reshow lootbackground
 	self.mainUI.mapFrame:Hide()
-    AtlaslLoot_LootBackground:Show()
+    self.mainUI.lootBackground:Show()
 	AtlasLootItemsFrame:Show()
 
 	-- Hide the Filter Check-Box
@@ -265,16 +267,16 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 		elseif dataSource[dataID][tablenum][i].desc then
 			if type(dataSource[dataID][tablenum][i].desc) == "table" then
 				local location, boss = dataSource[dataID][tablenum][i].desc[1], dataSource[dataID][tablenum][i].desc[2]
-				extra = YELLOW..location..WHITE.." - "..boss	
+				extra = self.Colors.YELLOW..location..self.Colors.WHITE.." - "..boss	
 			else
 				extra = dataSource[dataID][tablenum][i].desc
 			end
 		elseif dataSource[dataID][tablenum][i].dropLoc and (self.dataSourceBackup == "AtlasLoot_OnDemand" or (self.db.profile.showdropLocationOnSearch and dataID == "SearchResult")) then
 			local location, boss = dataSource[dataID][tablenum][i].dropLoc[1], dataSource[dataID][tablenum][i].dropLoc[2]
-			extra = YELLOW..location..WHITE.." - "..boss
+			extra = self.Colors.YELLOW..location..self.Colors.WHITE.." - "..boss
 		elseif AtlasLoot_CraftingData["CraftingLevels"] and spellID and AtlasLoot_CraftingData["CraftingLevels"][spellID] and dataID ~= "SearchResult" then
 			local lvls = AtlasLoot_CraftingData["CraftingLevels"][spellID]
-			extra = LIMEGREEN .. "L-Click:|r "..WHITE..dataSource[dataID].Name.." ( "..ORANGE..lvls[1].."|r "..YELLOW..lvls[2].."|r "..GREEN..lvls[3].."|r "..GREY..lvls[4]..WHITE.." )"
+			extra = self.Colors.LIMEGREEN .. "L-Click:|r "..self.Colors.WHITE..dataSource[dataID].Name.." ( "..self.Colors.ORANGE..lvls[1].."|r "..self.Colors.YELLOW..lvls[2].."|r "..self.Colors.GREEN..lvls[3].."|r "..self.Colors.GREY..lvls[4]..self.Colors.WHITE.." )"
 		elseif dataSource[dataID][tablenum][i].lootTable and dataSource[dataID][tablenum][i].lootTable[2] == "Token" then
 			extra = AL["Set Token (Click)"]
 		elseif itemEquipLoc and itemEquipLoc ~= "" and itemSubType then
@@ -286,31 +288,31 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 		end
 
 		if AtlasLoot_ExtraData[dataSource[dataID][tablenum][i].itemID]and dataID ~= "SearchResult" then
-			extra = LIMEGREEN .. "L-Click:|r " .. extra
+			extra = self.Colors.LIMEGREEN .. "L-Click:|r " .. extra
 		end
 		if dataSource[dataID][tablenum][i].contentsPreview and dataID ~= "SearchResult" then
-			extra = LIMEGREEN .. "L-Click:|r " .. extra
+			extra = self.Colors.LIMEGREEN .. "L-Click:|r " .. extra
 		end
 
 		if dataSource[dataID][tablenum][i].rep then
-			extra = extra ..WHITE.." ("..dataSource[dataID][tablenum][i].rep..")"
+			extra = extra ..self.Colors.WHITE.." ("..dataSource[dataID][tablenum][i].rep..")"
 		end
 
 		local price = dataSource[dataID][tablenum][i].price
 		if price then
 			price = self:ArenaCost(price, itemEquipLoc, itemQuality)
-			extra = extra ..WHITE.." ("..price..")"
+			extra = extra ..self.Colors.WHITE.." ("..price..")"
 		end
 
 		local recipe = self:GetRecipeData(itemID, "item")
 		if recipe and AtlasLoot_CraftingData["CraftingLevels"] and AtlasLoot_CraftingData["CraftingLevels"][recipe.spellID] then
 			local lvls = AtlasLoot_CraftingData["CraftingLevels"][recipe.spellID]
-			extra = extra ..WHITE.." ( "..lvls[1].." )"
+			extra = extra ..self.Colors.WHITE.." ( "..lvls[1].." )"
 		end
 
 		extra = self:FixText(extra)
 
-		--If there is no data on the texture an item should have, show a big red question mark
+		--If there is no data on the texture an item should have, show a big self.Colors.RED question mark
 		if dataSource[dataID][tablenum][i].icon == "Blank" then
 			iconFrame:SetTexture(nil)
 		elseif dataSource[dataID][tablenum][i].icon == "?" then

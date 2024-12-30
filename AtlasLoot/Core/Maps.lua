@@ -1,10 +1,5 @@
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
-
-local ORANGE = "|cffFF8400"
-local GOLD  = "|cffffcc00"
-local WHITE = "|cFFFFFFFF"
-local CYAN =  "|cff00ffff"
 local DefaultPin = "questlog-questtypeicon-daily"
 -- Map Functions
 local playerFaction = UnitFactionGroup("player")
@@ -44,11 +39,11 @@ function AtlasLoot:CreateMapPins(list)
         _G["AtlasLoot_MapPin"..i]:SetScript("OnEnter", function(btn)
             self.showCords = true
             GameTooltip:SetOwner(btn, "ANCHOR_TOPLEFT")
-            GameTooltip:AddLine(WHITE..map[1])
+            GameTooltip:AddLine(self.Colors.WHITE..map[1])
             if map[4] and list.groups[map[4]] then
                 for _,v in ipairs(list.groups[map[4]]) do
                     if v ~= map[1] then
-                        GameTooltip:AddLine(WHITE..v)
+                        GameTooltip:AddLine(self.Colors.WHITE..v)
                     end
                 end
             end
@@ -69,7 +64,7 @@ function AtlasLoot:CreateMapPins(list)
             _G["AtlasLoot_MapPin"..i].tex:SetTexCoord(tex.leftTexCoord, tex.rightTexCoord, tex.topTexCoord, tex.bottomTexCoord)
             _G["AtlasLoot_MapPin"..i].tex:SetSize(25,25)
         end
-        _G["AtlasLoot_MapPin"..i].text:SetText(CYAN..map[1])
+        _G["AtlasLoot_MapPin"..i].text:SetText(self.Colors.CYAN..map[1])
         _G["AtlasLoot_MapPin"..i]:ClearAllPoints()
         _G["AtlasLoot_MapPin"..i]:SetPoint("TOPLEFT",self.mainUI.mapFrame,x ,y)
         _G["AtlasLoot_MapPin"..i]:Show()
@@ -79,7 +74,7 @@ end
 function AtlasLoot:MapOnEnter()
     local x, y = self:GetCursorCords()
     if self.showCords then
-        self.mainUI.mapFrame.cursorCords:SetText(WHITE.."Cursor: "..x.." , "..y)
+        self.mainUI.mapFrame.cursorCords:SetText(self.Colors.WHITE.."Cursor: "..x.." , "..y)
     end
 end
 
@@ -135,7 +130,7 @@ end
 function AtlasLoot:MapOnShow(mapID, mapNum, refresh)
     if not refresh and self.mainUI.mapFrame:IsVisible() then
         self.mainUI.mapFrame:Hide()
-        AtlaslLoot_LootBackground:Show()
+        self.mainUI.lootBackground:Show()
         self:BackButton_OnClick()
         AtlasLoot_BossName:Show()
         Atlasloot_HeaderLabel:Hide()
@@ -145,7 +140,7 @@ function AtlasLoot:MapOnShow(mapID, mapNum, refresh)
             AtlasLoot_BossName:Hide()
             -- Hide the Filter Check-Box
 	        AtlasLootFilterCheck:Hide()
-            AtlaslLoot_LootBackground:Hide()
+            self.mainUI.lootBackground:Hide()
             --Hide UI objects so that only needed ones are shown
             for i = 1, 30, 1 do
                 _G["AtlasLootItem_"..i]:Hide()
@@ -205,16 +200,16 @@ function AtlasLoot:MapSelect(mapID, mapNum)
     self:CancelTimer(self.playerPinTimer)
     self:PlayerPin(true)
 
-    local text = map.ZoneName[1]..WHITE.." ["..map.Acronym.."]\n"..
-    GOLD .. "Location: ".. WHITE..map.Location[1].."\n"..
-    GOLD .. "Level Range: ".. WHITE..map.LevelRange.."\n"..
-    GOLD .. "Minimum Level: ".. WHITE..map.MinLevel.."\n"..
-    GOLD .. "Player Limit: ".. WHITE..map.PlayerLimit
+    local text = map.ZoneName[1]..self.Colors.WHITE.." ["..map.Acronym.."]\n"..
+    self.Colors.GOLD .. "Location: ".. self.Colors.WHITE..map.Location[1].."\n"..
+    self.Colors.GOLD .. "Level Range: ".. self.Colors.WHITE..map.LevelRange.."\n"..
+    self.Colors.GOLD .. "Minimum Level: ".. self.Colors.WHITE..map.MinLevel.."\n"..
+    self.Colors.GOLD .. "Player Limit: ".. self.Colors.WHITE..map.PlayerLimit
 
     if map.Reputation and type(map.Reputation) == "table" then
-        text = text .. "\n" .. GOLD .. AL["Reputation"] .. ": ".. WHITE .. map.Reputation[playerFaction]
+        text = text .. "\n" .. self.Colors.GOLD .. AL["Reputation"] .. ": ".. self.Colors.WHITE .. map.Reputation[playerFaction]
     elseif map.Reputation then
-        text = text .. "\n" .. GOLD .. AL["Reputation"] .. ": ".. WHITE .. map.Reputation
+        text = text .. "\n" .. self.Colors.GOLD .. AL["Reputation"] .. ": ".. self.Colors.WHITE .. map.Reputation
     end
     Atlasloot_HeaderLabel:SetText(text)
     self:SetMapButtonText(mapID, mapNum)
@@ -245,11 +240,11 @@ function AtlasLoot:MapMenuOpen(frame)
             else
                 text = v[1][1] or ""
             end
-            tinsert(menuList[1], {text = WHITE..text, func = function() self:MapOnShow(mapID, i, true) end, notCheckable = true, closeWhenClicked = true, textHeight = 12, textWidth = 12})
+            tinsert(menuList[1], {text = self.Colors.WHITE..text, func = function() self:MapOnShow(mapID, i, true) end, notCheckable = true, closeWhenClicked = true, textHeight = 12, textWidth = 12})
         end
 
         tinsert(menuList[1], {divider = 35})
-        tinsert(menuList[1], {text = ORANGE..AL["Open AscensionDB To Zone Map"], func = function() self:OpenDBURL(AtlasLoot_MapData[self.CurrentMap].ZoneName[2] , "zone") end, notCheckable = true, closeWhenClicked = true, textHeight = 12, textWidth = 12})
+        tinsert(menuList[1], {text = self.Colors.ORANGE..AL["Open AscensionDB To Zone Map"], func = function() self:OpenDBURL(AtlasLoot_MapData[self.CurrentMap].ZoneName[2] , "zone") end, notCheckable = true, closeWhenClicked = true, textHeight = 12, textWidth = 12})
 		tinsert(menuList[1], {close = true, divider = 35})
 
     self:OpenDewdropMenu(frame, menuList)

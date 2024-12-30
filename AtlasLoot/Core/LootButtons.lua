@@ -1,12 +1,5 @@
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
-local WHITE = "|cffFFFFFF"
-local GREEN = "|cff1eff00"
-local BLUE = "|cff0070dd"
-local ORANGE = "|cffFF8400"
-local GOLD  = "|cffffcc00"
-local LIGHTBLUE = "|cFFADD8E6"
-local ORANGE2 = "|cFFFFA500"
 
 local playerName = UnitName("player")
 local playerFaction = UnitFactionGroup("player")
@@ -24,16 +17,16 @@ function AtlasLoot:SetCraftingTooltip(data)
             if v.fac  then line1 = v.fac[1]..line1 end
             if v.cords and v.cords[1] ~= 0 and v.cords[2] ~= 0 then
                 if line2 then
-                    line2 = WHITE..line2..WHITE.." ("..GOLD..v.cords[1]..WHITE..", "..GOLD..v.cords[2]..WHITE..")"
+                    line2 = self.Colors.WHITE..line2..self.Colors.WHITE.." ("..self.Colors.GOLD..v.cords[1]..self.Colors.WHITE..", "..self.Colors.GOLD..v.cords[2]..self.Colors.WHITE..")"
                 else
-                    line2 = WHITE.." ("..GOLD..v.cords[1]..WHITE..", "..GOLD..v.cords[2]..WHITE..")"
+                    line2 = self.Colors.WHITE.." ("..self.Colors.GOLD..v.cords[1]..self.Colors.WHITE..", "..self.Colors.GOLD..v.cords[2]..self.Colors.WHITE..")"
                 end
             end
             GameTooltip:AddDoubleLine(line1, line2)
         end
     else
         GameTooltip:AddLine(" ")
-        GameTooltip:AddLine(WHITE..AL["Hold CTRL for source"])
+        GameTooltip:AddLine(self.Colors.WHITE..AL["Hold CTRL for source"])
     end
 end
 
@@ -43,8 +36,8 @@ function AtlasLoot:SetQuestTooltip(data)
     for _,v in ipairs(data.quest) do
         local quest = AtlasLoot_CraftingData["QuestList"][v]
         local text = data.quest.text or ""
-        GameTooltip:AddDoubleLine(quest[1], WHITE..text)
-        GameTooltip:AddDoubleLine(quest[5][1]..quest[2], WHITE.." ("..GOLD..quest[3]..WHITE..", "..GOLD..quest[4]..WHITE..")")
+        GameTooltip:AddDoubleLine(quest[1], self.Colors.WHITE..text)
+        GameTooltip:AddDoubleLine(quest[5][1]..quest[2], self.Colors.WHITE.." ("..self.Colors.GOLD..quest[3]..self.Colors.WHITE..", "..self.Colors.GOLD..quest[4]..self.Colors.WHITE..")")
     end
 end
 
@@ -122,7 +115,7 @@ function AtlasLoot:ItemOnEnter(data)
             end
             if showOwn then GameTooltip:AddLine(showOwn) end
             if text then
-                text = BLUE.."Recipe known by: "..WHITE..text
+                text = self.Colors.BLUE.."Recipe known by: "..self.Colors.WHITE..text
                 GameTooltip:AddLine(text)
             end
             GameTooltip:Show()
@@ -152,7 +145,7 @@ function AtlasLoot:ItemOnLeave(frame)
        ShoppingTooltip2:Hide()
        ShoppingTooltip1:Hide()
     end
-    if AtlasLoot_PopupFrame and AtlasLoot_PopupFrame:IsVisible() then AtlasLoot_PopupFrame:Hide() end
+    if self.mainUI.itemPopupframe and self.mainUI.itemPopupframe:IsVisible() then self.mainUI.itemPopupframe:Hide() end
 end
 
 --------------------------------------------------------------------------------
@@ -168,23 +161,23 @@ function AtlasLoot:ItemOnClick(item, button)
     if not spellID and itemID then
         local itemName, itemLink, itemQuality, itemLevel, itemMinLevel, itemType, itemSubType, itemCount, itemEquipLoc, itemTexture = self:GetItemInfo(itemID)
         --If shift-clicked, link in the chat window
-        if button=="RightButton" and self.itemUnlock then
+        if button == "RightButton" and self.itemUnlock then
             --move wishlist item down
             self:MoveWishlistItem("Down",item.number)
-        elseif IsAltKeyDown() and button=="LeftButton" and self.itemUnlock then
+        elseif IsAltKeyDown() and button == "LeftButton" and self.itemUnlock then
             --add custom wishlist header
             StaticPopup_Show("ATLASLOOT_ADD_CUSTOMHEADER")
             StaticPopupDialogs.ATLASLOOT_ADD_CUSTOMHEADER.num = item.number
-        elseif (button=="LeftButton") and self.itemUnlock then
+        elseif button == "LeftButton" and self.itemUnlock then
             --move wishlist item up
             self:MoveWishlistItem("Up",item.number)
-        elseif(button=="RightButton" and itemID and IsAltKeyDown() and AtlasLootItemsFrame.refresh[2] ~= "AtlasLoot_CurrentWishList") then
+        elseif button == "RightButton" and itemID and IsAltKeyDown() and AtlasLootItemsFrame.refresh[2] ~= "AtlasLoot_CurrentWishList" then
             local wList = AtlasLootWishList["Options"][playerName]["DefaultWishList"]
             --add to defauly wishlist
             self:WishListAddDropClick(wList[1], wList[3], item)
-        elseif(button=="RightButton" and itemID) then
+        elseif button == "RightButton" and itemID then
             --item context menu
-            if AtlasLoot_PopupFrame and AtlasLoot_PopupFrame:IsVisible() then
+            if self.mainUI.itemPopupframe and self.mainUI.itemPopupframe:IsVisible() then
                 self:ItemContextMenu(item, "item")
 
             else
@@ -193,10 +186,10 @@ function AtlasLoot:ItemOnClick(item, button)
         elseif IsShiftKeyDown() and itemName then
             --insert to chat link
             ChatEdit_InsertLink(itemLink)
-        elseif(ChatFrame1EditBox and ChatFrame1EditBox:IsVisible() and IsShiftKeyDown()) then
+        elseif ChatFrame1EditBox and ChatFrame1EditBox:IsVisible() and IsShiftKeyDown() then
             ChatFrame1EditBox:Insert(itemName)  -- <-- this line just inserts plain text, does not need any adjustment
             --If control-clicked, use the dressing room
-        elseif(IsControlKeyDown() and itemName) then
+        elseif IsControlKeyDown() and itemName then
             --view item in dressing room
             DressUpItemLink(itemLink)
         elseif IsAltKeyDown() then
@@ -219,16 +212,16 @@ function AtlasLoot:ItemOnClick(item, button)
             self:ShowItemsFrame(dataID, dataSource, dataPage or 1)
         elseif button == "LeftButton" and itemID and AtlasLoot_ExtraData[itemID] then
             self:PopoupItemFrame(item, _G["AtlasLoot_ExtraData"][itemID] )
-            AtlasLoot_PopupFrame:Show()
+            self.mainUI.itemPopupframe:Show()
         elseif button == "LeftButton" and item.contentsPreview then
             self:PopoupItemFrame(item, item.contentsPreview )
-            AtlasLoot_PopupFrame:Show()
+            self.mainUI.itemPopupframe:Show()
         end
     else
         local recipeData = self:GetRecipeData(spellID, "spell")
         if IsShiftKeyDown() then
             ChatEdit_InsertLink(self:GetEnchantLink(spellID))
-        elseif button=="RightButton" then
+        elseif button == "RightButton" then
             self:ItemContextMenu(item, "spell", recipeData)
         elseif IsAltKeyDown() then
             if AtlasLootItemsFrame.refresh[2] == "AtlasLoot_CurrentWishList" then
@@ -252,7 +245,7 @@ function AtlasLoot:ItemOnClick(item, button)
             self:ShowItemsFrame(dataID, dataSource, dataPage or 1)
         elseif button == "LeftButton" and recipeData then
             self:PopoupItemFrame(item, recipeData)
-            AtlasLoot_PopupFrame:Show()
+            self.mainUI.itemPopupframe:Show()
         end
     end
 end
@@ -373,7 +366,7 @@ function AtlasLoot:ItemContextMenu(data, Type, recipeData)
                     'textWidth', 13
                 )
                 self.Dewdrop:AddLine(
-                    'text', ORANGE..AL["Open AscensionDB To Entry"],
+                    'text', self.Colors.ORANGE..AL["Open AscensionDB To Entry"],
                     'func', function() self:OpenDBURL(linkID,Type) end,
                     'textHeight', 12,
                     'textWidth', 12,
@@ -381,7 +374,7 @@ function AtlasLoot:ItemContextMenu(data, Type, recipeData)
                     'closeWhenClicked', true
                 )
                 self.Dewdrop:AddLine(
-                        "text", GREEN..AL["Guild"],
+                        "text", self.Colors.GREEN..AL["Guild"],
                         "func", function() self:Chatlink(linkID,"GUILD",Type) end,
                         'closeWhenClicked', true,
                         'textHeight', 12,
@@ -389,7 +382,7 @@ function AtlasLoot:ItemContextMenu(data, Type, recipeData)
                         "notCheckable", true
                     )
                     self.Dewdrop:AddLine(
-                        "text", LIGHTBLUE..AL["Party"],
+                        "text", self.Colors.LIGHTBLUE..AL["Party"],
                         "func", function() self:Chatlink(linkID,"PARTY",Type) end,
                         'closeWhenClicked', true,
                         'textHeight', 12,
@@ -397,7 +390,7 @@ function AtlasLoot:ItemContextMenu(data, Type, recipeData)
                         "notCheckable", true
                     )
                     self.Dewdrop:AddLine(
-                        "text", ORANGE2..AL["Raid"],
+                        "text", self.Colors.ORANGE2..AL["Raid"],
                         "func", function() self:Chatlink(linkID,"RAID",Type) end,
                         'closeWhenClicked', true,
                         'textHeight', 12,
@@ -443,7 +436,7 @@ function AtlasLoot:ItemContextMenu(data, Type, recipeData)
                             ) 
                         end
                     end
-                    if not AtlasLoot_PopupFrame or AtlasLoot_PopupFrame and not AtlasLoot_PopupFrame:IsVisible()  then
+                    if not self.mainUI.itemPopupframe or self.mainUI.itemPopupframe and not self.mainUI.itemPopupframe:IsVisible()  then
                         self:AddDividerLine(35)
                         self.Dewdrop:AddLine(
                         'text', AL["Wishlists"],

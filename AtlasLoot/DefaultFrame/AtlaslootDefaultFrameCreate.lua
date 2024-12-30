@@ -1,7 +1,5 @@
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
-local BLUE = "|cff6666ff"
-local WHITE = "|cFFFFFFFF"
 local INDENT = "    "
 
 function AtlasLoot:InitializeUI()
@@ -38,7 +36,7 @@ function AtlasLoot:InitializeUI()
 
 
     --Loot Background
-    self.mainUI.lootBackground = CreateFrame("Frame", "AtlaslLoot_LootBackground", self.mainUI)
+    self.mainUI.lootBackground = CreateFrame("Frame", "AtlasLoot_LootBackground", self.mainUI)
     self.mainUI.lootBackground:SetSize(770,515)
     self.mainUI.lootBackground:SetPoint("TOPLEFT", self.mainUI, "TOPLEFT",30,-86)
     self.mainUI.lootBackground:EnableMouse()
@@ -193,7 +191,7 @@ end
         -- Wishlist Item Lock button
     self.mainUI.wishlistLockButton = CreateFrame("Button", "AtlasLootItemsFrame_Wishlist_UnLock", self.mainUI.itemframe, "OptionsButtonTemplate")
     self.mainUI.wishlistLockButton:SetPoint("BOTTOM", "AtlasLootItemsFrame_Wishlist_Options", "BOTTOM",-100,0)
-    self.mainUI.wishlistLockButton:SetScript("OnClick", function(self)
+    self.mainUI.wishlistLockButton:SetScript("OnClick", function(button)
         if self.itemUnlock then
             self.itemUnlock = false
             self.mainUI.wishlistLockButton:SetText("Locked")
@@ -234,7 +232,7 @@ end
     self.mainUI.wishlistLearnVanityButton:SetPoint("BOTTOM", "AtlasLootItemsFrame_Wishlist_Share", "BOTTOM",100,0)
     self.mainUI.wishlistLearnVanityButton:SetText("Get Items")
     self.mainUI.wishlistLearnVanityButton:SetScript("OnClick", function() self:BatchRequestVanity(self.vanityItems, true) end)
-    self.mainUI.wishlistLearnVanityButton:SetScript("OnEnter", function(self)
+    self.mainUI.wishlistLearnVanityButton:SetScript("OnEnter", function(button)
         self:SetGameTooltip(button,"Learn/Recive all the vanity items on this page")
     end)
     self.mainUI.wishlistLearnVanityButton:SetScript("OnLeave", function() GameTooltip:Hide() end)
@@ -655,21 +653,21 @@ local MAX_ROWS2 = 26      -- How many rows can be shown at once?
                     local text = _G[dataSource][tablename][tablenum][value][1]
                     if _G[dataSource][tablename][tablenum][value][2] then text = text.._G[dataSource][tablename][tablenum][value][2] end
                     if _G[dataSource][tablename][tablenum][value].SubZone then
-                        text = BLUE..text
+                        text = self.Colors.BLUE..text
                     elseif not _G[dataSource][tablename][tablenum][value].Zone then
-                        text = WHITE..text
+                        text = self.Colors.WHITE..text
                     end
                     if not _G[dataSource][tablename][tablenum][value].cords and not _G[dataSource][tablename][tablenum][value].Zone and not _G[dataSource][tablename][tablenum][value].SubZone then text = INDENT..text end
                     row.Text:SetText(text)
-                    row:SetScript("OnEnter", function(self)
-                        GameTooltip:SetOwner(self, "ANCHOR_TOP")
+                    row:SetScript("OnEnter", function(button)
+                        GameTooltip:SetOwner(button, "ANCHOR_TOP")
                         GameTooltip:SetText(_G[dataSource][tablename][tablenum][value][1])
                         GameTooltip:Show()
                     end)
                     row:SetScript("OnLeave", function() GameTooltip:Hide() end)
                 else
                     row.Text:SetText("|cffFFd200"..(_G[dataSource][tablename][value].Name or ""))
-                    row:SetScript("OnEnter", function(self)
+                    row:SetScript("OnEnter", function(button)
                         GameTooltip:Hide()
                     end)
                     if tablenum == value and dataSource ~= "AtlasLoot_MapData" then
@@ -741,14 +739,14 @@ self.mainUI.lootTableScrollFrame.rows = rows2
             --print(self:GetCursorCords())
         end
     end)
-        
+
     self.mainUI.mapFrame:EnableMouseWheel(true)
     self.mainUI.mapFrame.cursorCords = self.mainUI.mapFrame:CreateFontString(nil,"ARTWORK","GameFontNormal")
     self.mainUI.mapFrame.cursorCords:SetPoint("TOPRIGHT", self.mainUI.mapFrame, -10, 0)
     self.mainUI.mapFrame.cursorCords:Show()
     self.mainUI.mapFrame.cursorCords:SetSize(150, 25)
     self.mainUI.mapFrame.cursorCords:SetJustifyH("RIGHT")
-    self.mainUI.mapFrame:SetScript("OnMouseWheel", function(self,delta)
+    self.mainUI.mapFrame:SetScript("OnMouseWheel", function(button,delta)
         if self.mainUI.nextbutton:IsVisible() and delta == -1 then
             self.mainUI.nextbutton:Click()
         end
@@ -757,32 +755,32 @@ self.mainUI.lootTableScrollFrame.rows = rows2
         end
     end)
 
-    self.mainUI.mapFrame:SetScript("OnShow", function() self.mainUI.mapFrame.cursorCords:SetText(WHITE.."Cursor: ---") end)
+    self.mainUI.mapFrame:SetScript("OnShow", function() self.mainUI.mapFrame.cursorCords:SetText(self.Colors.WHITE.."Cursor: ---") end)
     self.mainUI.mapFrame:SetScript("OnEnter", function() self.showCords = true self:MapOnEnter() end)
     self.mainUI.mapFrame:SetScript("OnUpdate", function() self:MapOnEnter() end)
     self.mainUI.mapFrame:SetScript("OnLeave", function()
         self.showCords = false
-        self.mainUI.mapFrame.cursorCords:SetText(WHITE.."Cursor: ---")
+        self.mainUI.mapFrame.cursorCords:SetText(self.Colors.WHITE.."Cursor: ---")
     end)
 
     for i=1, 12 do
-        self.mainUI.mapFrame.tile = self.mainUI.mapFrame:CreateTexture("AtlasLoot_MapDetailTile"..i, "BACKGROUND")
-        self.mainUI.mapFrame.tile:SetSize(196,196)
-        self.mainUI.mapFrame.tile:Show()
+        self.mainUI.mapFrame["tile"..i] = self.mainUI.mapFrame:CreateTexture("AtlasLoot_MapDetailTile"..i, "BACKGROUND")
+        self.mainUI.mapFrame["tile"..i]:SetSize(196,196)
+        self.mainUI.mapFrame["tile"..i]:Show()
     end
 
-    AtlasLoot_MapDetailTile1:SetPoint("TOPLEFT", self.mainUI.mapFrame)
-    AtlasLoot_MapDetailTile2:SetPoint("TOPLEFT", AtlasLoot_MapDetailTile1,"TOPRIGHT")
-    AtlasLoot_MapDetailTile3:SetPoint("TOPLEFT", AtlasLoot_MapDetailTile2,"TOPRIGHT")
-    AtlasLoot_MapDetailTile4:SetPoint("TOPLEFT", AtlasLoot_MapDetailTile3,"TOPRIGHT")
-    AtlasLoot_MapDetailTile5:SetPoint("TOPLEFT", AtlasLoot_MapDetailTile1,"BOTTOMLEFT")
-    AtlasLoot_MapDetailTile6:SetPoint("TOPLEFT", AtlasLoot_MapDetailTile5,"TOPRIGHT")
-    AtlasLoot_MapDetailTile7:SetPoint("TOPLEFT", AtlasLoot_MapDetailTile6,"TOPRIGHT")
-    AtlasLoot_MapDetailTile8:SetPoint("TOPLEFT", AtlasLoot_MapDetailTile7,"TOPRIGHT")
-    AtlasLoot_MapDetailTile9:SetPoint("TOPLEFT", AtlasLoot_MapDetailTile5,"BOTTOMLEFT")
-    AtlasLoot_MapDetailTile10:SetPoint("TOPLEFT", AtlasLoot_MapDetailTile9,"TOPRIGHT")
-    AtlasLoot_MapDetailTile11:SetPoint("TOPLEFT", AtlasLoot_MapDetailTile10,"TOPRIGHT")
-    AtlasLoot_MapDetailTile12:SetPoint("TOPLEFT", AtlasLoot_MapDetailTile11,"TOPRIGHT")
+    self.mainUI.mapFrame.tile1:SetPoint("TOPLEFT", self.mainUI.mapFrame)
+    self.mainUI.mapFrame.tile2:SetPoint("TOPLEFT", self.mainUI.mapFrame.tile1,"TOPRIGHT")
+    self.mainUI.mapFrame.tile3:SetPoint("TOPLEFT", self.mainUI.mapFrame.tile2,"TOPRIGHT")
+    self.mainUI.mapFrame.tile4:SetPoint("TOPLEFT", self.mainUI.mapFrame.tile3,"TOPRIGHT")
+    self.mainUI.mapFrame.tile5:SetPoint("TOPLEFT", self.mainUI.mapFrame.tile1,"BOTTOMLEFT")
+    self.mainUI.mapFrame.tile6:SetPoint("TOPLEFT", self.mainUI.mapFrame.tile5,"TOPRIGHT")
+    self.mainUI.mapFrame.tile7:SetPoint("TOPLEFT", self.mainUI.mapFrame.tile6,"TOPRIGHT")
+    self.mainUI.mapFrame.tile8:SetPoint("TOPLEFT", self.mainUI.mapFrame.tile7,"TOPRIGHT")
+    self.mainUI.mapFrame.tile9:SetPoint("TOPLEFT", self.mainUI.mapFrame.tile5,"BOTTOMLEFT")
+    self.mainUI.mapFrame.tile10:SetPoint("TOPLEFT", self.mainUI.mapFrame.tile9,"TOPRIGHT")
+    self.mainUI.mapFrame.tile11:SetPoint("TOPLEFT", self.mainUI.mapFrame.tile10,"TOPRIGHT")
+    self.mainUI.mapFrame.tile12:SetPoint("TOPLEFT", self.mainUI.mapFrame.tile11,"TOPRIGHT")
 
     self.mainUI.mapFrame.playerPin = CreateFrame("Button", "AtlasLoot_PlayerMapPin", self.mainUI.mapFrame)
     self.mainUI.mapFrame.playerPin:SetSize(35,35)
@@ -791,7 +789,7 @@ self.mainUI.lootTableScrollFrame.rows = rows2
     self.mainUI.mapFrame.playerPin.texture:SetTexture("Interface\\Minimap\\MinimapArrow")
     self.mainUI.mapFrame.playerPin.texture:SetSize(35,35)
     self.mainUI.mapFrame.playerPin.texture:SetPoint("CENTER",0,0)
-    self.mainUI.mapFrame.playerPin:SetScript("OnEnter", function(self)
+    self.mainUI.mapFrame.playerPin:SetScript("OnEnter", function(button)
         self:SetGameTooltip(button,"You are here")
     end)
     self.mainUI.mapFrame.playerPin:SetScript("OnLeave", function()
@@ -858,14 +856,14 @@ self.mainUI.lootTableScrollFrame.rows = rows2
     self.mainUI.streamIcon.rotAnim:SetDegrees(-360)
 
     self.mainUI.streamIcon:SetScript("OnEnter",
-        function(self) 
-            if(self.tooltip ~= nil) then
-                GameTooltip:SetOwner(self, "ANCHOR_LEFT")
-                GameTooltip:SetText(self.tooltip, nil, nil, nil, nil, true)
+        function(button) 
+            if(button.tooltip ~= nil) then
+                GameTooltip:SetOwner(button, "ANCHOR_LEFT")
+                GameTooltip:SetText(button.tooltip, nil, nil, nil, nil, true)
             end
         end)
     self.mainUI.streamIcon:SetScript("OnLeave", GameTooltip_Hide)
-    self.mainUI.streamIcon:SetScript("OnShow", function(self) self:SetFrameLevel( (self:GetParent()):GetFrameLevel() + 1 ) end)
+    self.mainUI.streamIcon:SetScript("OnShow", function(button) self:SetFrameLevel( (button:GetParent()):GetFrameLevel() + 1 ) end)
 
     self.mainUI.streamIcon:SetPoint("TOPRIGHT", self.mainUI.lootBackground, "TOPRIGHT")
     self.mainUI.streamIcon:Hide()
@@ -876,7 +874,7 @@ self.mainUI.lootTableScrollFrame.rows = rows2
         self:ItemOnLeave(frame)
     end)
     self.mainUI.itemPopupframe:SetScript("OnEnter", function()
-        AtlasLoot_PopupFrame:Show()
+        self.mainUI.itemPopupframe:Show()
     end)
     self.mainUI.itemPopupframe:SetWidth(211)
     self.mainUI.itemPopupframe:Hide()

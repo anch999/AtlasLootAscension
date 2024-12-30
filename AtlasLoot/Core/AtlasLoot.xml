@@ -18,5 +18,6 @@
 	<Script file="LootTableCreation.lua"/>
 	<Script file="ProfessionUtils.lua"/>
     <Script file="ItemFrame.lua"/>
+	<Script file="Skin.lua"/>
 </Ui>
 

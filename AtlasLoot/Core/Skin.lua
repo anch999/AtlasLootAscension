@@ -27,7 +27,7 @@ function AtlasLoot:InitializeSkins()
         "AtlasLootDefaultFrame_AdvancedSearchPanel_CategoryButton",
         "AtlasLootDefaultFrame_AdvancedSearchPanel_SearchButton",
         "AtlasLootDefaultFrame_AdvancedSearchPanel_ClearButton",
-        "self.mainUI.mapButton",
+        "AtlasLootDefaultFrame_MapButton",
         "AtlasLootDefaultFrame_LoadInstanceButton",
         "AtlasLoot_Favorites",
     }
@@ -117,7 +117,7 @@ function AtlasLoot:InitializeSkins()
 
     local backDropFrames = {
         "AtlasLoot_FavoritesPopupFrame",
-        "AtlaslLoot_LootBackground",
+        "AtlasLoot_LootBackground",
         "Atlasloot_Difficulty_ScrollFrame",
         "Atlasloot_SubTableFrame",
         "AtlasLoot_PopupFrame",

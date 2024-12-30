@@ -12,12 +12,6 @@ local editName = false
 
 AtlasLootWishList = {}
 
--- Colours stored for code readability
-local GREY = "|cff999999"
-local RED = "|cffff0000"
-local WHITE = "|cffFFFFFF"
-local BLUE = "|cff0070dd"
-
 function AtlasLoot:ShowWishList(listType,arg2,arg3)
 	AtlasLoot_CurrentWishList = {["Show"] = {ListType = listType, ListNum = arg2 ,Name = "WishLists", Icon = AtlasLootWishList[listType][arg2].Icon}}
 	local numPages = math.ceil(#AtlasLootWishList[listType][arg2]/30)
@@ -60,7 +54,7 @@ function AtlasLoot:WishListAddDropClick(typ, tableNum, data, show)
 		xarg2 = tableNum
 		if typ == "Own" then
 			if AtlasLoot:WishListCheck(itemID) and not AtlasLootWishList["Options"][playerName].AllowDuplicates then
-				DEFAULT_CHAT_FRAME:AddMessage(BLUE..AL["AtlasLoot"]..": "..AtlasLoot:FixText(itemName)..RED..AL[" already in the WishList!"]..WHITE.." ("..AtlasLootWishList["Own"][tableNum].Name..")")
+				DEFAULT_CHAT_FRAME:AddMessage(self.Colors.BLUE..AL["AtlasLoot"]..": "..AtlasLoot:FixText(itemName)..self.Colors.RED..AL[" already in the WishList!"]..self.Colors.WHITE.." ("..AtlasLootWishList["Own"][tableNum].Name..")")
 				return
 			end
 			local tableCopy = AtlasLoot:CloneTable(data.item)
@@ -72,10 +66,10 @@ function AtlasLoot:WishListAddDropClick(typ, tableNum, data, show)
 			if AtlasLootWishList["Options"][playerName]["AutoSortWishlist"] then
 				AtlasLoot:SortWishList(nil,"Own", tableNum)
 			end
-			DEFAULT_CHAT_FRAME:AddMessage(RED..AL["AtlasLoot"]..": "..AtlasLoot:FixText(itemName)..GREY..AL[" added to the WishList."]..WHITE.." ("..AtlasLootWishList["Own"][tableNum].Name..")")
+			DEFAULT_CHAT_FRAME:AddMessage(self.Colors.RED..AL["AtlasLoot"]..": "..AtlasLoot:FixText(itemName)..self.Colors.GREY..AL[" added to the WishList."]..self.Colors.WHITE.." ("..AtlasLootWishList["Own"][tableNum].Name..")")
 		elseif typ == "Shared" then
 			if AtlasLoot:WishListCheck(itemID) and not AtlasLootWishList["Options"][playerName].AllowDuplicates then
-				DEFAULT_CHAT_FRAME:AddMessage(BLUE..AL["AtlasLoot"]..": "..AtlasLoot:FixText(itemName)..RED..AL[" already in the WishList!"]..WHITE.." ("..AtlasLootWishList["Shared"][tableNum].Name)
+				DEFAULT_CHAT_FRAME:AddMessage(self.Colors.BLUE..AL["AtlasLoot"]..": "..AtlasLoot:FixText(itemName)..self.Colors.RED..AL[" already in the WishList!"]..self.Colors.WHITE.." ("..AtlasLootWishList["Shared"][tableNum].Name)
 				return
 			end
 			local tableCopy = AtlasLoot:CloneTable(data.item)
@@ -87,7 +81,7 @@ function AtlasLoot:WishListAddDropClick(typ, tableNum, data, show)
 			if AtlasLootWishList["Options"][playerName]["AutoSortWishlist"] then
 				AtlasLoot:SortWishList(nil,"Shared", tableNum)
 			end
-			DEFAULT_CHAT_FRAME:AddMessage(RED..AL["AtlasLoot"]..": "..AtlasLoot:FixText(itemName)..GREY..AL[" added to the WishList."]..WHITE.." ("..AtlasLootWishList["Shared"][tableNum].Name..")")
+			DEFAULT_CHAT_FRAME:AddMessage(self.Colors.RED..AL["AtlasLoot"]..": "..AtlasLoot:FixText(itemName)..self.Colors.GREY..AL[" added to the WishList."]..self.Colors.WHITE.." ("..AtlasLootWishList["Shared"][tableNum].Name..")")
 		end
 	end
 end
@@ -100,9 +94,9 @@ function AtlasLoot:AddItemCustomHeader(num,text)
 		end
 	end
 	if text == "" or text == nil then
-		table.insert(AtlasLootWishList[AtlasLoot_CurrentWishList["Show"].ListType][AtlasLoot_CurrentWishList["Show"].ListNum],{num, icon = "Blank", name = WHITE..text, ""})
+		table.insert(AtlasLootWishList[AtlasLoot_CurrentWishList["Show"].ListType][AtlasLoot_CurrentWishList["Show"].ListNum],{num, icon = "Blank", name = self.Colors.WHITE..text, ""})
 	else
-		table.insert(AtlasLootWishList[AtlasLoot_CurrentWishList["Show"].ListType][AtlasLoot_CurrentWishList["Show"].ListNum],{num, icon = "INV_Box_01", name =  WHITE..text, ""})
+		table.insert(AtlasLootWishList[AtlasLoot_CurrentWishList["Show"].ListType][AtlasLoot_CurrentWishList["Show"].ListNum],{num, icon = "INV_Box_01", name =  self.Colors.WHITE..text, ""})
 	end
 	AtlasLoot:ShowWishList(AtlasLoot_CurrentWishList["Show"].ListType, AtlasLoot_CurrentWishList["Show"].ListNum,AtlasLootItemsFrame.refresh[3])
 end
@@ -148,7 +142,7 @@ function AtlasLoot:SortWishList(refresh,type,tNumb)
 				if v[2] ~= 0 and tableCheck() then
 					table.insert(tableCheck(),v)
 				elseif v[2] ~= 0 then
-					table.insert(sorted,{{0, 0, "INV_Box_01", WHITE..v[5], ""},v})
+					table.insert(sorted,{{0, 0, "INV_Box_01", self.Colors.WHITE..v[5], ""},v})
 				end
 		end
 		AtlasLootWishList[type][tNumb] = {}
@@ -156,7 +150,7 @@ function AtlasLoot:SortWishList(refresh,type,tNumb)
 		for _,v in ipairs(sorted) do
 			for _,t in ipairs(v) do
 				if num ~= 1 and t[3] == "INV_Box_01" then
-					table.insert(AtlasLootWishList[type][tNumb],{num, 0, "Blank", WHITE.." ", ""})
+					table.insert(AtlasLootWishList[type][tNumb],{num, 0, "Blank", self.Colors.WHITE.." ", ""})
 					num = num + 1
 				end
 					table.insert(AtlasLootWishList[type][tNumb],{num,t[2],t[3],t[4],t[5],t[6],t[7],t[8]})
@@ -229,7 +223,7 @@ function AtlasLoot:WishListButton(btn, show, buttonclick)
 			if not AtlasLootWishList[listNum[1]][listNum[3]] then listNum[3] = 1 end
 			AtlasLoot:WishListAddDropClick("Own", listNum[3], "", show)
 		else
-			DEFAULT_CHAT_FRAME:AddMessage(RED..AL["AtlasLoot"]..": "..AL["Please Create a Wishlist First."])
+			DEFAULT_CHAT_FRAME:AddMessage(self.Colors.RED..AL["AtlasLoot"]..": "..AL["Please Create a Wishlist First."])
 		end
 	end
 end
@@ -256,7 +250,6 @@ function AtlasLoot:ShowWishListDropDown(btn, show, panelButton)
 						"hasArrow", true,
 						'textHeight', 12,
 						'textWidth', 12,
-						"func", function() AtlasLoot:WishListAddDropClick() end,
 						"notCheckable", true
 					)
 					self.Dewdrop:AddLine(
@@ -267,7 +260,6 @@ function AtlasLoot:ShowWishListDropDown(btn, show, panelButton)
 						"hasArrow", true,
 						'textHeight', 12,
 						'textWidth', 12,
-						"func", function() AtlasLoot:WishListAddDropClick() end,
 						"notCheckable", true
 					)
 					self.Dewdrop:AddLine(
@@ -328,7 +320,7 @@ function AtlasLoot:ShowWishListDropDown(btn, show, panelButton)
 			)
 		end
 
-	--	DEFAULT_CHAT_FRAME:AddMessage(RED..AL["AtlasLoot"]..": "..AL["Please set a default Wishlist."])
+	--	DEFAULT_CHAT_FRAME:AddMessage(self.Colors.RED..AL["AtlasLoot"]..": "..AL["Please set a default Wishlist."])
 	end
 end
 
@@ -350,7 +342,7 @@ function AtlasLoot:DeleteFromWishList(btnNumber)
 				else
 					name = GetSpellInfo(v.spellID)
 				end
-				DEFAULT_CHAT_FRAME:AddMessage(RED..AL["AtlasLoot"]..": "..self:FixText(name)..GREY..AL[" deleted from the WishList."]..WHITE.." ("..AtlasLootWishList[AtlasLoot_CurrentWishList["Show"].ListType][AtlasLoot_CurrentWishList["Show"].ListNum].Name..")")
+				DEFAULT_CHAT_FRAME:AddMessage(self.Colors.RED..AL["AtlasLoot"]..": "..self:FixText(name)..self.Colors.GREY..AL[" deleted from the WishList."]..self.Colors.WHITE.." ("..AtlasLootWishList[AtlasLoot_CurrentWishList["Show"].ListType][AtlasLoot_CurrentWishList["Show"].ListNum].Name..")")
 				table.remove(AtlasLootWishList[AtlasLoot_CurrentWishList["Show"].ListType][AtlasLoot_CurrentWishList["Show"].ListNum], i)
 				--Sort wishlist after deleting an item
 				for n,table in ipairs(AtlasLootWishList[AtlasLoot_CurrentWishList["Show"].ListType][AtlasLoot_CurrentWishList["Show"].ListNum]) do
@@ -1023,7 +1015,7 @@ function ALModule:OnCommReceived(prefix, message, distribution, sender)
 	if prefix ~= "AtlasLootWishlist" then return end
 	if message == "SpamProtect" then
 		--local _,_,timeleft = string.find( 10-(GetTime() - SpamFilter[string.lower(sender)]), "(%d+)%.")
-		--DEFAULT_CHAT_FRAME:AddMessage(BLUE..AL["AtlasLoot"]..": "..RED..AL["You must wait "]..WHITE..timeleft..RED..AL[" seconds before you can send a new Wishlist too "]..WHITE..sender..RED..".")
+		--DEFAULT_CHAT_FRAME:AddMessage(self.Colors.BLUE..AL["AtlasLoot"]..": "..self.Colors.RED..AL["You must wait "]..self.Colors.WHITE..timeleft..self.Colors.RED..AL[" seconds before you can send a new Wishlist too "]..self.Colors.WHITE..sender..self.Colors.RED..".")
 	elseif message == "FinishSend" then
 		SpamFilter[string.lower(sender)] = GetTime()
 	elseif message == "AcceptWishlist" then
@@ -1045,7 +1037,7 @@ function ALModule:OnCommReceived(prefix, message, distribution, sender)
 			if AtlasLootWishList["Options"][playerName]["AllowShareWishlistInCombat"] == true then
 				if UnitAffectingCombat("player") then
 					ALModule:SendCommMessage("AtlasLootWishlist", "CancelWishlist", "WHISPER", sender)
-					DEFAULT_CHAT_FRAME:AddMessage(BLUE..AL["AtlasLoot"]..": "..WHITE..sender..RED..AL[" tried to send you a Wishlist. Rejected because you are in combat."])
+					DEFAULT_CHAT_FRAME:AddMessage(self.Colors.BLUE..AL["AtlasLoot"]..": "..self.Colors.WHITE..sender..self.Colors.RED..AL[" tried to send you a Wishlist. Rejected because you are in combat."])
 				else
 					local dialog = StaticPopup_Show("ATLASLOOT_GET_WISHLIST", sender)
 					if ( dialog ) then
@@ -1063,7 +1055,7 @@ function ALModule:OnCommReceived(prefix, message, distribution, sender)
 		end
 
 	elseif message == "CancelWishlist" then
-		DEFAULT_CHAT_FRAME:AddMessage(BLUE..AL["AtlasLoot"]..": "..WHITE..sender..RED..AL[" rejects your Wishlist."])
+		DEFAULT_CHAT_FRAME:AddMessage(self.Colors.BLUE..AL["AtlasLoot"]..": "..self.Colors.WHITE..sender..self.Colors.RED..AL[" rejects your Wishlist."])
 	else
 		SpamFilter[string.lower(sender)] = GetTime()
 		AtlasLoot:GetWishList(message,sender)
@@ -1085,7 +1077,7 @@ StaticPopupDialogs["ATLASLOOT_SEND_WISHLIST"] = {
 	OnAccept = function()
 		local name = _G[this:GetParent():GetName().."EditBox"]:GetText()
 		if string.lower(name) == string.lower(playerName) then
-			DEFAULT_CHAT_FRAME:AddMessage(BLUE..AL["AtlasLoot"]..": "..RED..AL["You can't send Wishlists to yourself."])
+			DEFAULT_CHAT_FRAME:AddMessage(self.Colors.BLUE..AL["AtlasLoot"]..": "..self.Colors.RED..AL["You can't send Wishlists to yourself."])
 		elseif name == "" then
 
 		else
@@ -1094,7 +1086,7 @@ StaticPopupDialogs["ATLASLOOT_SEND_WISHLIST"] = {
 				ALModule:SendCommMessage("AtlasLootWishlist", "WishlistRequest", "WHISPER", name)
 			else
 				local _,_,timeleft = string.find( 10-(GetTime() - SpamFilter[string.lower(name)]), "(%d+)%.")
-				DEFAULT_CHAT_FRAME:AddMessage(BLUE..AL["AtlasLoot"]..": "..RED..AL["You must wait "]..WHITE..timeleft..RED..AL[" seconds before you can send a new Wishlist to "]..WHITE..name..RED..".")
+				DEFAULT_CHAT_FRAME:AddMessage(self.Colors.BLUE..AL["AtlasLoot"]..": "..self.Colors.RED..AL["You must wait "]..self.Colors.WHITE..timeleft..self.Colors.RED..AL[" seconds before you can send a new Wishlist to "]..self.Colors.WHITE..name..self.Colors.RED..".")
 			end
 		end
 	end,

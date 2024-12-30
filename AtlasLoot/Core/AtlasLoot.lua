@@ -17,16 +17,22 @@ AtlasLoot.type = {}
 AtlasLoot.backEnabled = false
 
 -- Colours stored for code readability
-local GREY = "|cff999999"
-local RED = "|cffff0000"
-local WHITE = "|cffFFFFFF"
-local GREEN = "|cff1eff00"
-local LIMEGREEN = "|cFF32CD32"
-local BLUE = "|cff0070dd"
-local ORANGE = "|cffFF8400"
-local YELLOW = "|cffFFd200"
-local itemHighlightBlue = "Interface\\AddOns\\AtlasLoot\\Images\\knownBlue"
-local itemHighlightGreen = "Interface\\AddOns\\AtlasLoot\\Images\\knownGreen"
+AtlasLoot.Colors = {
+	GREY = "|cff999999",
+	RED = "|cffff0000",
+	WHITE = "|cffFFFFFF",
+	GREEN = "|cff1eff00",
+	LIMEGREEN = "|cFF32CD32",
+	BLUE = "|cff0070dd",
+	ORANGE = "|cffFF8400",
+	YELLOW = "|cffFFd200",
+	GOLD  = "|cffffcc00",
+	CYAN =  "|cff00ffff",
+	PURPLE = "|cff9F3FFF",
+	SPRINGGREEN = "|cFF00FF7F",
+	LIGHTBLUE = "|cFFADD8E6",
+	ORANGE2 = "|cFFFFA500",
+}
 
 --Search panel open and close save variables
 --dataID, dataSource, pFrame, tablenumber
@@ -133,6 +139,7 @@ function AtlasLoot:OnEnable()
 	LoadItemIDsDatabase()
 
 	self:InitializeUI()
+	self:CreateAdvancedSearchFrame()
 	self:InitializeSkins()
 	self:MinimapIconSetup()
 	self:InitializeOptionsFrame()
@@ -143,9 +150,10 @@ function AtlasLoot:OnEnable()
 	self:RegisterEvent("UNIT_SPELLCAST_SUCCEEDED")
 	self:InitializeWishlistMerchantGlow()
 	self:PatchNotes()
+	self:AdvancedSearchSetup()
 
 	if IsAddOnLoaded("TomTom") then self.TomTomLoaded = true end
-	
+
 	collectgarbage("collect")
 end
 
@@ -172,7 +180,7 @@ function AtlasLoot:Reset(data)
 		AtlasLootWishList = {}
 		self:WishlistSetup()
     end
-    DEFAULT_CHAT_FRAME:AddMessage(BLUE..AL["AtlasLoot"]..": "..RED..AL["Reset complete!"])
+    DEFAULT_CHAT_FRAME:AddMessage(BLUE..AL["AtlasLoot"]..": "..self.Colors.RED..AL["Reset complete!"])
 end
 
 function AtlasLoot:InitializeSlashCommands()
@@ -255,7 +263,7 @@ function AtlasLoot:LoadAllModules()
 
 	if flag == 1 then
 		if self.DebugMessages then
-			DEFAULT_CHAT_FRAME:AddMessage(GREEN..AL["AtlasLoot"]..": "..WHITE..AL["All Available Modules Loaded"])
+			DEFAULT_CHAT_FRAME:AddMessage(GREEN..AL["AtlasLoot"]..": "..self.Colors.WHITE..AL["All Available Modules Loaded"])
 		end
 		collectgarbage("collect")
 	end

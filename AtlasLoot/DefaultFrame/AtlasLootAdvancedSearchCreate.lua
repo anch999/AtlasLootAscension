@@ -4,10 +4,10 @@ local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
 local MAX_ARGUMENTS = 6
 
 local framename = "AtlasLootDefaultFrame_AdvancedSearchPanel"
-
+function AtlasLoot:CreateAdvancedSearchFrame()
 --Create Main Search Panel
-local searchpanel = CreateFrame("FRAME", framename, AtlaslLoot_LootBackground, nil)
-searchpanel:SetPoint("TOPLEFT", AtlaslLoot_LootBackground, "TOPLEFT", 2, -2)
+local searchpanel = CreateFrame("FRAME", framename, self.mainUI.lootBackground, nil)
+searchpanel:SetPoint("TOPLEFT", self.mainUI.lootBackground, "TOPLEFT", 2, -2)
 searchpanel:SetSize(510, 510)
 searchpanel.closebtn = CreateFrame("Button", framename.."_CloseButton", searchpanel, "UIPanelCloseButton")
 searchpanel.closebtn:SetPoint("TOPRIGHT", searchpanel, "TOPRIGHT", -10, -10)
@@ -59,19 +59,19 @@ equipbtn.subbtn.title = equipbtn.subbtn:CreateFontString(nil, "ARTWORK", "GameFo
 equipbtn.subbtn.title:SetText("Item Subtype: ")
 equipbtn.subbtn.title:SetPoint("TOPLEFT", equipbtn.subbtn, "TOPLEFT", 3, 15)
 
-equipbtn:SetScript("OnClick", function(self) 
-    if AtlasLoot.Dewdrop:IsOpen() then
-        AtlasLoot.Dewdrop:Close()
+equipbtn:SetScript("OnClick", function(button) 
+    if self.Dewdrop:IsOpen() then
+        self.Dewdrop:Close()
     else
-        AtlasLoot.Dewdrop:Open(self)
+        self.Dewdrop:Open(button)
     end
 end)
 equipbtn:SetScript("OnShow", function(self) self:SetFrameLevel( (self:GetParent()):GetFrameLevel() + 1 ) end)
-equipbtn.subbtn:SetScript("OnClick", function(self) 
-    if AtlasLoot.Dewdrop:IsOpen() then
-        AtlasLoot.Dewdrop:Close()
+equipbtn.subbtn:SetScript("OnClick", function(button) 
+    if self.Dewdrop:IsOpen() then
+        self.Dewdrop:Close()
     else
-        AtlasLoot.Dewdrop:Open(self)
+        self.Dewdrop:Open(button)
     end
 end)
 equipbtn.subbtn:SetScript("OnShow", function(self) self:SetFrameLevel( (self:GetParent()):GetFrameLevel() + 1 ) end)
@@ -155,11 +155,11 @@ for n = 1, MAX_ARGUMENTS do
     local btn = CreateFrame("Button", "AtlasLootDefaultFrame_AdvancedSearchPanel_ArgumentContainer" .. tostring(n), AtlasLootDefaultFrame_AdvancedSearchPanel_ArgumentContainer, "OptionsButtonTemplate")
     btn:SetPoint("TOPLEFT", AtlasLootDefaultFrame_AdvancedSearchPanel_ArgumentContainer, "TOPLEFT", 0, -((n - 1) * 35)-20)
     btn:SetSize(130, 20)
-    btn:SetScript("OnClick", function(self, button)
-        if AtlasLoot.SearchMenus.ArgumentMenus[n]:IsOpen() then
-            AtlasLoot.SearchMenus.ArgumentMenus[n]:Close()
+    btn:SetScript("OnClick", function(button)
+        if self.SearchMenus.ArgumentMenus[n]:IsOpen() then
+            self.SearchMenus.ArgumentMenus[n]:Close()
         else
-            AtlasLoot.SearchMenus.ArgumentMenus[n]:Open(self)
+            self.SearchMenus.ArgumentMenus[n]:Open(button)
         end
     end)
     btn:Hide()
@@ -168,11 +168,11 @@ for n = 1, MAX_ARGUMENTS do
     local sub = CreateFrame("Button", "AtlasLootDefaultFrame_AdvancedSearchPanel_ArgumentContainer" .. tostring(n) .. "Sub", AtlasLootDefaultFrame_AdvancedSearchPanel_ArgumentContainer, "OptionsButtonTemplate")
     sub:SetPoint("LEFT", btn, "RIGHT", 15, 0)
     sub:SetSize(130, 20)
-    sub:SetScript("OnClick", function(self, button)
-        if AtlasLoot.SearchMenus.ArgumentSubMenus[n]:IsOpen() then
-            AtlasLoot.SearchMenus.ArgumentSubMenus[n]:Close()
+    sub:SetScript("OnClick", function(button)
+        if self.SearchMenus.ArgumentSubMenus[n]:IsOpen() then
+            self.SearchMenus.ArgumentSubMenus[n]:Close()
         else
-            AtlasLoot.SearchMenus.ArgumentSubMenus[n]:Open(self)
+            self.SearchMenus.ArgumentSubMenus[n]:Open(button)
         end
     end)
     sub:Hide()
@@ -216,5 +216,4 @@ clearbtn:SetScript("OnClick", function()
 	AtlasLootDefaultFrame_AdvancedSearchPanel_SearchBox:SetText("")
 	AtlasLootDefaultFrame_AdvancedSearchPanel_SearchBox:ClearFocus()
 end)
-
-AtlasLoot:AdvancedSearchSetup()
+end

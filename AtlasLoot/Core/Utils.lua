@@ -1,11 +1,5 @@
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
--- Colours stored for code readability
-local WHITE = "|cffFFFFFF"
-local GREEN = "|cff1eff00"
-local ORANGE = "|cffFF8400"
-local CYAN =  "|cff00ffff"
-local YELLOW = "|cffFFd200"
 
 --------------------------------- DewDrop Dropdownmenu ---------------------------------
 -- Used to create a dewdrop menu from a table
@@ -20,7 +14,7 @@ function AtlasLoot:OpenDewdropMenu(frame, menuList, skipRegister)
 				local altar
 			for _, menu in pairs(menuList[level]) do
 				if menu.divider then
-					local text = WHITE.."----------------------------------------------------------------------------------------------------"
+					local text = self.Colors.WHITE.."----------------------------------------------------------------------------------------------------"
 					self.Dewdrop:AddLine(
 						'text' , text:sub(1, menu.divider),
 						'textHeight', 13,
@@ -65,7 +59,7 @@ end
 
 --for a adding a divider to dew drop menus 
 function AtlasLoot:AddDividerLine(maxLenght)
-    local text = WHITE.."----------------------------------------------------------------------------------------------------"
+    local text = self.Colors.WHITE.."----------------------------------------------------------------------------------------------------"
     self.Dewdrop:AddLine(
         'text' , text:sub(1, maxLenght),
         'textHeight', 12,
@@ -109,7 +103,7 @@ end
 --drop down map menu
 function AtlasLoot:OpenDB(frame, type, text)
     local menuList = { [1] = {
-        {text = ORANGE..AL["Open AscensionDB To NPC"], func = function() self:OpenDBURL(text , type) end, notCheckable = true, closeWhenClicked = true, textHeight = 12, textWidth = 12},
+        {text = self.Colors.ORANGE..AL["Open AscensionDB To NPC"], func = function() self:OpenDBURL(text , type) end, notCheckable = true, closeWhenClicked = true, textHeight = 12, textWidth = 12},
 		{close = true, divider = 35},
 		}
 	}
@@ -150,22 +144,24 @@ function AtlasLoot:GetItemInfo(item)
 	return itemName, itemLink, itemQuality, itemLevel, itemMinLevel, itemType, itemSubType, itemStackCount, itemEquipLoc, itemTexture, itemSellPrice, itemDescription
 end
 
+local AtlasLootScanTooltip = CreateFrame("GAMETOOLTIP","AtlasLootScanTooltip",nil,"GameTooltipTemplate")
+AtlasLootScanTooltip:SetOwner(UIParent, "ANCHOR_NONE")
 -- Create enchant tooltip
 function AtlasLoot:GetEnchantLink(enchantID)
 	if not enchantID then return end
 	local enchantLink
-	GameTooltip:SetOwner(UIParent, "ANCHOR_NONE")
-	GameTooltip:ClearLines()
-	GameTooltip:SetHyperlink("enchant:"..enchantID)
-	GameTooltip:Show()
-	local tooltipline = _G["GameTooltipTextLeft1"]
+	AtlasLootScanTooltip:SetOwner(UIParent, "ANCHOR_NONE")
+	AtlasLootScanTooltip:ClearLines()
+	AtlasLootScanTooltip:SetHyperlink("enchant:"..enchantID)
+	AtlasLootScanTooltip:Show()
+	local tooltipline = _G["AtlasLootScanTooltipTextLeft1"]
 	local text = tooltipline:GetText()
 	if text and string.find(text, ":") then
 		enchantLink = "|cffffd000|Henchant:"..enchantID.."|h["..text.."]|h|r"
 	else
 		enchantLink = GetSpellLink(enchantID)
 	end
-	GameTooltip:Hide()
+	AtlasLootScanTooltip:Hide()
 	return enchantLink
  end
 
@@ -207,7 +203,7 @@ AtlasLoot:PopoupItemFrame(item, data)
 Used to create a popup item frame for items like gem sacks to show what they contain
 ]] 
 function AtlasLoot:PopoupItemFrame(frame, data)
-	if not data then AtlasLoot_PopupFrame:Hide() return end
+	if not data then self.mainUI.itemPopupframe:Hide() return end
 	--hide the unused buttons
 	for i = 1, 15 do
 		local button = _G["AtlasLoot_PopupButton_"..i]
@@ -218,7 +214,7 @@ function AtlasLoot:PopoupItemFrame(frame, data)
 	--creates a button only if one dosnt already exist re use old one if it does
 	local function createButton(num)
 		if _G["AtlasLoot_PopupButton_"..num] then return end
-		local button = CreateFrame("Button", "AtlasLoot_PopupButton_"..num, AtlasLoot_PopupFrame, "ItemButtonTemplate")
+		local button = CreateFrame("Button", "AtlasLoot_PopupButton_"..num, self.mainUI.itemPopupframe, "ItemButtonTemplate")
 		button:SetID(num)
 		button:SetSize(30,30)
 		button:EnableMouse()
@@ -227,7 +223,7 @@ function AtlasLoot:PopoupItemFrame(frame, data)
 		button:SetScript("OnClick", function(btn, arg1) self:ItemOnClick(btn, arg1) end)
 		button:SetScript("OnEnter", function(btn)
 			self:ItemOnEnter(btn)
-			AtlasLoot_PopupFrame:Show()
+			self.mainUI.itemPopupframe:Show()
 		end)
 		button:SetScript("OnLeave", function(btn)
 			if not self.Dewdrop:IsOpen(_G["AtlasLoot_PopupButton_"..num]) then
@@ -236,7 +232,7 @@ function AtlasLoot:PopoupItemFrame(frame, data)
 		end)
 
 		if num == 1 then
-			button:SetPoint("TOPLEFT", "AtlasLoot_PopupFrame", 9, -8)
+			button:SetPoint("TOPLEFT", self.mainUI.itemPopupframe, 9, -8)
 		elseif num == 7 then
 			button:SetPoint("BOTTOM", "AtlasLoot_PopupButton_1", 0, -33)
 		elseif num == 13 then
@@ -278,21 +274,21 @@ function AtlasLoot:PopoupItemFrame(frame, data)
 		numberBtns = i
 	end
 	if numberBtns < 6 then
-		AtlasLoot_PopupFrame:SetWidth((numberBtns*33)+16)
+		self.mainUI.itemPopupframe:SetWidth((numberBtns*33)+16)
 	else
-		AtlasLoot_PopupFrame:SetWidth(214)
+		self.mainUI.itemPopupframe:SetWidth(214)
 	end
 	if numberBtns > 6 then
-		AtlasLoot_PopupFrame:SetHeight(79)
+		self.mainUI.itemPopupframe:SetHeight(79)
 	elseif numberBtns > 12 then
-		AtlasLoot_PopupFrame:SetHeight(107)
+		self.mainUI.itemPopupframe:SetHeight(107)
 	else
-		AtlasLoot_PopupFrame:SetHeight(46)
+		self.mainUI.itemPopupframe:SetHeight(46)
 	end
-	AtlasLoot_PopupFrame:SetParent(frame)
-	AtlasLoot_PopupFrame:ClearAllPoints()
-	AtlasLoot_PopupFrame:SetPoint("TOPLEFT",frame,0,-25)
-	AtlasLoot_PopupFrame:Show()
+	self.mainUI.itemPopupframe:SetParent(frame)
+	self.mainUI.itemPopupframe:ClearAllPoints()
+	self.mainUI.itemPopupframe:SetPoint("TOPLEFT",frame,0,-25)
+	self.mainUI.itemPopupframe:Show()
 end
 
 
@@ -348,7 +344,7 @@ function AtlasLoot:ItemsLoading(count)
 	if(loadingCount > 0) then
         AtlasLoot_ItemsLoadingSpinner:SetVertexColor(0,1,0)
         AtlasLoot_ItemsLoadingFrameBackground:SetVertexColor(0,1,0)
-        AtlasLoot_ItemsLoading.tooltip = WHITE..loadingCount..YELLOW.." Items still caching\n(This can take awhile after a launcher update)"
+        AtlasLoot_ItemsLoading.tooltip = self.Colors.WHITE..loadingCount..self.Colors.YELLOW.." Items still caching\n(This can take awhile after a launcher update)"
 		AtlasLoot_ItemsLoading.Loop:Play()
 		AtlasLoot_ItemsLoading:Show()
 		if GameTooltip:GetOwner() == AtlasLoot_ItemsLoading then
@@ -377,7 +373,7 @@ local function SetTooltip(itemID, tooltip)
 	if not self.db.profile.showUnknownRecipeTooltip or UnitAffectingCombat("player") then return end
 	local text = self:IsRecipeUnknown(itemID)
 	if not text then return end
-	text = "Recipe could be learned by: "..GREEN..text
+	text = "Recipe could be learned by: "..self.Colors.GREEN..text
 	if not CheckTooltipForDuplicate(tooltip, text) then
 		tooltip:AddLine(text)
 	end
@@ -476,16 +472,16 @@ function AtlasLoot:CreateItemSourceList(overRide)
 					if type(boss) == "table" then
 						for _, item in pairs(boss) do
 							if type(item) == "table" and item.itemID and instance.Name and boss.Name and not IgnoreTables(dataSource) then
-								list[item.itemID] = CYAN..instance.Name .. WHITE .." - " .. boss.Name
+								list[item.itemID] = self.Colors.CYAN..instance.Name .. self.Colors.WHITE .." - " .. boss.Name
 								if ItemIDsDatabase[item.itemID] then
 									for _, varID in pairs(ItemIDsDatabase[item.itemID]) do
-										list[varID] = CYAN..instance.Name .. WHITE .." - " .. boss.Name
+										list[varID] = self.Colors.CYAN..instance.Name .. self.Colors.WHITE .." - " .. boss.Name
 									end
 								end
 								if item.spellID then
 									local recipeID = self:GetRecipeID(item.spellID) or nil
 									if recipeID and (list[recipeID] and not IgnoreTables(dataSource) or not list[recipeID]) then
-										list[recipeID] = CYAN..instance.Name .. WHITE .." - " .. boss.Name
+										list[recipeID] = self.Colors.CYAN..instance.Name .. self.Colors.WHITE .." - " .. boss.Name
 									end
 								end
 							end

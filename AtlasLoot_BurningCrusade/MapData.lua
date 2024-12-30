@@ -55,7 +55,7 @@ local boss = "dungeonskull"
             { AL["Sebastian <The Organist>"], cords = {26,49} };
             { AL["Barnes <The Stage Manager>"], cords = {20,27} };
             { AL["The Opera Event"], cords = {18,32}, pinType = boss };
-            { AL["Red Riding Hood"].." ("..AL["Random"]..")" };
+            { AL["self.Colors.RED Riding Hood"].." ("..AL["Random"]..")" };
             { AL["The Big Bad Wolf"] };
             { AL["Wizard of Oz"].." ("..AL["Random"]..")" };
             { AL["Dorothee"] };

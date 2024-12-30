@@ -6,8 +6,6 @@ local ACTIVE_ARGUMENT = 0
 
 AtlasLoot.SearchMenus = { ArgumentMenus = {}, ArgumentSubMenus = {}}
 
-local RED = "|cffff0000"
-
 local FrameMenuList = {
     ["EquipSubMenu"] = {AtlasLoot.Dewdrop, "AtlasLootDefaultFrame_AdvancedSearchPanel_EquipSubButton", "Select Option", "type", ""}
 }
@@ -35,7 +33,7 @@ local AdvancedSearchMenus = {
         [11] = {
             ["Off-Hand"] = {{"Shield", "equip", "shield", "EquipSubMenu", "Disable"}, {"Held in Off-Hand", "equip", "holdable", "EquipSubMenu", "Disable"}}
         },
-        [12] = {{RED .. "Reset", "equip", "reset", "EquipSubMenu", "Disable"}}
+        [12] = {{AtlasLoot.Colors.RED .. "Reset", "equip", "reset", "EquipSubMenu", "Disable"}}
     },
 
     ["ArmorType"] = {
@@ -43,7 +41,7 @@ local AdvancedSearchMenus = {
         [2] = {{"Leather", "type", "Leather"}},
         [3] = {{"Mail", "type", "Mail"}},
         [4] = {{"Plate", "type", "Plate"}},
-        [5] = {{RED .. "Reset", "type", "reset"}}
+        [5] = {{AtlasLoot.Colors.RED .. "Reset", "type", "reset"}}
     },
 
     ["RelicType"] = {
@@ -51,7 +49,7 @@ local AdvancedSearchMenus = {
         [2] = {{"Libram", "type", "libram"}},
         [3] = {{"Totem", "type", "totem"}},
         [4] = {{"Sigil", "type", "sigil"}},
-        [5] = {{RED .. "Reset", "type", "reset"}}
+        [5] = {{AtlasLoot.Colors.RED .. "Reset", "type", "reset"}}
     },
 
     ["WeaponType1H"] = {
@@ -60,7 +58,7 @@ local AdvancedSearchMenus = {
         [3] = {{"Sword", "type", "sword1h"}},
         [4] = {{"Dagger", "type", "dagger"}},
         [5] = {{"Fist Weapon", "type", "fist"}},
-        [6] = {{RED .. "Reset", "type", "reset"}}
+        [6] = {{AtlasLoot.Colors.RED .. "Reset", "type", "reset"}}
     },
 
     ["WeaponType2H"] = {
@@ -69,7 +67,7 @@ local AdvancedSearchMenus = {
         [3] = {{"Sword", "type", "sword2h"}},
         [4] = {{"Polearm", "type", "polearm"}},
         [5] = {{"Staff", "type", "staff"}},
-        [6] = {{RED .. "Reset", "type", "reset"}}
+        [6] = {{AtlasLoot.Colors.RED .. "Reset", "type", "reset"}}
 
     },
 
@@ -79,7 +77,7 @@ local AdvancedSearchMenus = {
         [3] = {{"Crossbow", "type", "crossbows"}},
         [4] = {{"Wand", "type", "wand"}},
         [5] = {{"Thrown", "type", "thrown"}},
-        [6] = {{RED .. "Reset", "type", "reset"}}
+        [6] = {{AtlasLoot.Colors.RED .. "Reset", "type", "reset"}}
     }
 }
 
@@ -105,7 +103,7 @@ local AdvancedSearchArguments = {
             ["Other"] = {{"Required Level", "minlvl"}, {"Item Level", "ilvl"}}
         },
 
-        [7] = {{RED .. "Reset", "reset"}}
+        [7] = {{AtlasLoot.Colors.RED .. "Reset", "reset"}}
     },
 
     ["Operators"] = {
@@ -115,7 +113,7 @@ local AdvancedSearchArguments = {
         [4] = {{"Less Than", "<", true}},
         [5] = {{"Less Than Or Equal", "<=", true}},
         [6] = {{"Not Equal", "<>", true}},
-        [7] = {{RED .. "Reset", "reset", true}}
+        [7] = {{AtlasLoot.Colors.RED .. "Reset", "reset", true}}
     }
 }
 

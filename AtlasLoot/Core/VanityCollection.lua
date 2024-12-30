@@ -1,16 +1,6 @@
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
 
--- Colours stored for code readability
-local GREY = "|cff999999"
-local RED = "|cffff0000"
-local WHITE = "|cffFFFFFF"
-local GREEN = "|cff1eff00"
-local LIMEGREEN = "|cFF32CD32"
-local BLUE = "|cff0070dd"
-local ORANGE = "|cffFF8400"
-local YELLOW = "|cffFFd200"
-
 local function CollectionNames(cat)
 	local C_names = {
 		["Axe1H"] = "One-Handed Axes",

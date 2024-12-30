@@ -1,10 +1,5 @@
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 
-local GREY = "|cff999999"
-local WHITE = "|cffFFFFFF"
-local GREEN = "|cff1eff00"
-local ORANGE = "|cffFF8400"
-
 --Invoke libraries
 local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
 
@@ -100,22 +95,22 @@ function AtlasLoot:DisplayHelp()
 		local Text = scc:CreateFontString("AtlasLootHelpFrame_HelpText","OVERLAY","GameFontNormal")
 			Text:SetPoint("TOPLEFT", scc, "TOPLEFT", 0, 0)
 			Text:SetText(
-            ORANGE..AL["How to link an item to someone else:"].."\n"..
-            WHITE..AL["Shift+Left Click the item like you would for any other in-game item"].."\n\n"..
-            ORANGE..AL["How to view an item in the Dressing Room:"].."\n"..
-            WHITE..AL["Simply Ctrl+Left Click on the item.  Sometimes the dressing room window is hidden behind the Atlas or AtlasLoot windows, so if nothing seems to happen move your Atlas or AtlasLoot windows and see if anything is hidden."].."\n\n"..
-            ORANGE..AL["How to add an item to the wishlist:"].."\n"..
-            WHITE..AL["Right Click any item and open the context menu and click add to wishlist."].."\n\n"..
-            WHITE..AL["Or Alt+Left Click any item to add it to the default wishlist."].."\n\n"..
-            ORANGE..AL["How to delete an item from the wishlist:"].."\n"..
-            WHITE..AL["While on the wishlist screen, just Alt+Left Click on an item to delete it."].."\n\n"..
-            ORANGE..AL["What else does the wishlist do?"].."\n"..
-            WHITE..AL["If you Left Click any item on the wishlist, you can jump to the loot page the item comes from.  Also, on a loot page any item already in your wishlist is marked with a yellow star."].."\n\n"..
-            ORANGE..AL["How to set of change a page filter:"].."\n"..
-            WHITE..AL["If you Right Click on the filter check box you will get a drop downmenu with a list of filters. Click the filter you want to use or click add filter set to add new custom filters."].."\n\n"..
-            ORANGE..AL["HELP!! I have broken the mod somehow!"].."\n"..
-            WHITE..AL["Use the reset buttons available in the options menu, or type '/al reset' in your chat window."].."\n\n"..
-            GREY..AL["For further help, see our website and forums: "]..GREEN.."https://discord.gg/uYCE2X2FgA"
+            self.Colors.ORANGE..AL["How to link an item to someone else:"].."\n"..
+            self.Colors.WHITE..AL["Shift+Left Click the item like you would for any other in-game item"].."\n\n"..
+            self.Colors.ORANGE..AL["How to view an item in the Dressing Room:"].."\n"..
+            self.Colors.WHITE..AL["Simply Ctrl+Left Click on the item.  Sometimes the dressing room window is hidden behind the Atlas or AtlasLoot windows, so if nothing seems to happen move your Atlas or AtlasLoot windows and see if anything is hidden."].."\n\n"..
+            self.Colors.ORANGE..AL["How to add an item to the wishlist:"].."\n"..
+            self.Colors.WHITE..AL["Right Click any item and open the context menu and click add to wishlist."].."\n\n"..
+            self.Colors.WHITE..AL["Or Alt+Left Click any item to add it to the default wishlist."].."\n\n"..
+            self.Colors.ORANGE..AL["How to delete an item from the wishlist:"].."\n"..
+            self.Colors.WHITE..AL["While on the wishlist screen, just Alt+Left Click on an item to delete it."].."\n\n"..
+            self.Colors.ORANGE..AL["What else does the wishlist do?"].."\n"..
+            self.Colors.WHITE..AL["If you Left Click any item on the wishlist, you can jump to the loot page the item comes from.  Also, on a loot page any item already in your wishlist is marked with a yellow star."].."\n\n"..
+            self.Colors.ORANGE..AL["How to set of change a page filter:"].."\n"..
+            self.Colors.WHITE..AL["If you Right Click on the filter check box you will get a drop downmenu with a list of filters. Click the filter you want to use or click add filter set to add new custom filters."].."\n\n"..
+            self.Colors.ORANGE..AL["HELP!! I have broken the mod somehow!"].."\n"..
+            self.Colors.WHITE..AL["Use the reset buttons available in the options menu, or type '/al reset' in your chat window."].."\n\n"..
+            self.Colors.GREY..AL["For further help, see our website and forums: "]..self.Colors.GREEN.."https://discord.gg/uYCE2X2FgA"
             )
 			Text:SetWidth(framewidht-80)
 			Text:SetJustifyH("LEFT")

@@ -341,7 +341,7 @@ local PURP = "|cff9900ff"
         Acronym = AL["RS"];
         MapName = "DireMaul";
         [1] = {
-        { AL["AKA"]..": "..AL["Red Dragonflight Chamber"] };
+        { AL["AKA"]..": "..AL["self.Colors.RED Dragonflight Chamber"] };
         { AL["Entrance"] };
         { AL["Baltharus the Warborn"] };
         { AL["Saviana Ragefire"] };
@@ -397,7 +397,7 @@ local PURP = "|cff9900ff"
         { AL["Entrance"] };
         { AL["Portal"] };
         { AL["Drakos the Interrogator"] };
-        { AL["Varos Cloudstrider <Azure-Lord of the Blue Dragonflight>"] };
+        { AL["Varos Cloudstrider <Azure-Lord of the self.Colors.BLUE Dragonflight>"] };
         { AL["Mage-Lord Urom"] };
         { AL["Ley-Guardian Eregos"] };
         { AL["Cache of Eregos"] };

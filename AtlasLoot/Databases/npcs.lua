@@ -5,7 +5,6 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 local HORDE = {"|cffff0000","Horde"}
 local ALLIANCE = {"|cff1eff00", "Alliance"}
 local NEUTRAL = {"|cffFF8400", "Neutral"}
-local WHITE = "|cffFFFFFF"
 
 AtlasLoot_CraftingData["VendorList"] = {
 [66] = { AL["Tharynn Bouden"], BabbleZone["Elwynn Forest"], 41.9, 67.1, ALLIANCE},
@@ -836,6 +835,6 @@ AtlasLoot_CraftingData["QuestList"] = {
  [13115] = {AL["Quest"], BabbleZone["Dalaran"], 70.0, 38.6, HORDE},
  [13116] = {AL["Quest"], BabbleZone["Dalaran"], 70.0, 38.6, HORDE},
  [14151] = {AL["Quest"], BabbleZone["Dalaran"], 42.5, 32.1, NEUTRAL},
- [14182] = {AL["Quest"], AL["Bounty Hunter Kolark"]..WHITE.." - "..BabbleZone["Orgrimmar"], 75.1, 23.0, HORDE},
- [14183] = {AL["Quest"], AL["Artilleryman Sheldonore"]..WHITE.." - "..BabbleZone["Ironforge"], 19.7, 51.9, ALLIANCE},
+ [14182] = {AL["Quest"], AL["Bounty Hunter Kolark"]..AtlasLoot.Colors.WHITE.." - "..BabbleZone["Orgrimmar"], 75.1, 23.0, HORDE},
+ [14183] = {AL["Quest"], AL["Artilleryman Sheldonore"]..AtlasLoot.Colors.WHITE.." - "..BabbleZone["Ironforge"], 19.7, 51.9, ALLIANCE},
 };
