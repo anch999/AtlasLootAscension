@@ -169,8 +169,8 @@ function AtlasLoot:DewdropSubMenuOpen(loottable)
                                     "text", v[1],
                                     "value", v[3],
                                     "hasArrow", true,
-                                    'textHeight', 12,
-                                    'textWidth', 12,
+                                    'textHeight', self.db.profile.txtSize,
+                                    'textWidth', self.db.profile.txtSize,
                                     "notCheckable", true
                                 )
                             elseif v[3] == "Header" then
@@ -189,8 +189,8 @@ function AtlasLoot:DewdropSubMenuOpen(loottable)
                                 self.Dewdrop:AddLine(
                                     'text', AtlasLoot_Data[v[2]] and AtlasLoot_Data[v[2]].Name or v[1],
                                     'func', function() self:DewDropSubMenuClick(v[2], v.OnDamand) end,
-                                    'textHeight', 12,
-                                    'textWidth', 12,
+                                    'textHeight', self.db.profile.txtSize,
+                                    'textWidth', self.db.profile.txtSize,
                                     'closeWhenClicked', true,
                                     'notCheckable', true
                                 )
@@ -218,8 +218,8 @@ function AtlasLoot:DewdropSubMenuOpen(loottable)
                             self.Dewdrop:AddLine(
                                 "text", AtlasLoot_Data[v[2]] and AtlasLoot_Data[v[2]].Name or v[1],
                                 "func", function() self:DewDropSubMenuClick(v[2], v.OnDamand) end,
-                                'textHeight', 12,
-                                'textWidth', 12,
+                                'textHeight', self.db.profile.txtSize,
+                                'textWidth', self.db.profile.txtSize,
                                 'closeWhenClicked', true,
                                 "notCheckable", true
                             )
@@ -258,8 +258,8 @@ function AtlasLoot:DewdropModuleMenuOpen()
                             'textG', 0.82,
                             'textB', 0,
                             'func', function() self:DewDropClick(v[2], v[1], v[3]) end,
-                            'textHeight', 12,
-                            'textWidth', 12,
+                            'textHeight', self.db.profile.txtSize,
+                            'textWidth', self.db.profile.txtSize,
                             'closeWhenClicked', true,
                             'notCheckable', true
                         )

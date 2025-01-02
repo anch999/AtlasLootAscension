@@ -42,8 +42,8 @@ function AtlasLoot:OpenDewdropMenu(frame, menuList, skipRegister)
 						'textR', 0,
 						'textG', 1,
 						'textB', 1,
-						'textHeight', 12,
-						'textWidth', 12,
+						'textHeight', self.db.profile.txtSize,
+						'textWidth', self.db.profile.txtSize,
 						'closeWhenClicked', true,
 						'notCheckable', true
 					)
@@ -62,8 +62,8 @@ function AtlasLoot:AddDividerLine(maxLenght)
     local text = self.Colors.WHITE.."----------------------------------------------------------------------------------------------------"
     self.Dewdrop:AddLine(
         'text' , text:sub(1, maxLenght),
-        'textHeight', 12,
-        'textWidth', 12,
+        'textHeight', self.db.profile.txtSize,
+        'textWidth', self.db.profile.txtSize,
         'isTitle', true,
         "notCheckable", true
     )
@@ -78,8 +78,8 @@ function AtlasLoot:CloseDewDrop(divider, maxLenght)
         'textR', 0,
         'textG', 1,
         'textB', 1,
-        'textHeight', 12,
-        'textWidth', 12,
+        'textHeight', self.db.profile.txtSize,
+        'textWidth', self.db.profile.txtSize,
         'closeWhenClicked', true,
         'notCheckable', true
     )

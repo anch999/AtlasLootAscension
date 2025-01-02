@@ -227,6 +227,7 @@ function AtlasLoot:FilterMenuRegister()
 							end
 						end,
 						"checked", fDB[filter[1]],
+						"isRadio", true,
 						"closeWhenClicked", true
 					)
 				end
@@ -244,12 +245,13 @@ function AtlasLoot:FilterMenuRegister()
 							end
 						end,
 						"checked", fDB[filter[1]],
+						"isRadio", true,
 						"closeWhenClicked", true
 					)
 				end
 			else
 				for _, group in ipairs(FilterTable) do
-					self.Dewdrop:AddLine('text' , group.Name, 'textHeight', 12, 'textWidth', 12, 'isTitle', true, "notCheckable", true)
+					self.Dewdrop:AddLine('text' , group.Name, 'textHeight', self.db.profile.txtSize, 'textWidth', self.db.profile.txtSize, 'isTitle', true, "notCheckable", true)
 					for _, filters in ipairs(group) do
 						if not db[filters[2]] then db[filters[2]] = {false, group.Type} end
 						self.Dewdrop:AddLine(
@@ -260,7 +262,8 @@ function AtlasLoot:FilterMenuRegister()
 									self:HideFilteredItems()
 								end
 							end,
-							"checked", db[filters[2]][1]
+							"checked", db[filters[2]][1],
+							"isRadio", true
 						)
 					end
 				end

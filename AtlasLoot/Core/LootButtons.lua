@@ -368,8 +368,8 @@ function AtlasLoot:ItemContextMenu(data, Type, recipeData)
                 self.Dewdrop:AddLine(
                     'text', self.Colors.ORANGE..AL["Open AscensionDB To Entry"],
                     'func', function() self:OpenDBURL(linkID,Type) end,
-                    'textHeight', 12,
-                    'textWidth', 12,
+                    'textHeight', self.db.profile.txtSize,
+                    'textWidth', self.db.profile.txtSize,
                     'notCheckable', true,
                     'closeWhenClicked', true
                 )
@@ -377,24 +377,24 @@ function AtlasLoot:ItemContextMenu(data, Type, recipeData)
                         "text", self.Colors.GREEN..AL["Guild"],
                         "func", function() self:Chatlink(linkID,"GUILD",Type) end,
                         'closeWhenClicked', true,
-                        'textHeight', 12,
-                        'textWidth', 12,
+                        'textHeight', self.db.profile.txtSize,
+                        'textWidth', self.db.profile.txtSize,
                         "notCheckable", true
                     )
                     self.Dewdrop:AddLine(
                         "text", self.Colors.LIGHTBLUE..AL["Party"],
                         "func", function() self:Chatlink(linkID,"PARTY",Type) end,
                         'closeWhenClicked', true,
-                        'textHeight', 12,
-                        'textWidth', 12,
+                        'textHeight', self.db.profile.txtSize,
+                        'textWidth', self.db.profile.txtSize,
                         "notCheckable", true
                     )
                     self.Dewdrop:AddLine(
                         "text", self.Colors.ORANGE2..AL["Raid"],
                         "func", function() self:Chatlink(linkID,"RAID",Type) end,
                         'closeWhenClicked', true,
-                        'textHeight', 12,
-                        'textWidth', 12,
+                        'textHeight', self.db.profile.txtSize,
+                        'textWidth', self.db.profile.txtSize,
                         "notCheckable", true
                     )
                     if AuctionFrame and AuctionFrame:IsVisible() then
@@ -411,8 +411,8 @@ function AtlasLoot:ItemContextMenu(data, Type, recipeData)
                                 "text", AL["Created Item"],
                                 "func", function() self:SearchAuctionHouse(self:GetItemInfo(recipeData[1][1])) end,
                                 'closeWhenClicked', true,
-                                'textHeight', 12,
-                                'textWidth', 12,
+                                'textHeight', self.db.profile.txtSize,
+                                'textWidth', self.db.profile.txtSize,
                                 "notCheckable", true
                             )
                             if recipeData.Recipe then
@@ -420,8 +420,8 @@ function AtlasLoot:ItemContextMenu(data, Type, recipeData)
                                     "text", AL["Recipe"],
                                     "func", function() self:SearchAuctionHouse(self:GetItemInfo(recipeData.Recipe)) end,
                                     'closeWhenClicked', true,
-                                    'textHeight', 12,
-                                    'textWidth', 12,
+                                    'textHeight', self.db.profile.txtSize,
+                                    'textWidth', self.db.profile.txtSize,
                                     "notCheckable", true
                                 )
                             end
@@ -430,8 +430,8 @@ function AtlasLoot:ItemContextMenu(data, Type, recipeData)
                                 "text", AL["Item"],
                                 "func", function() self:SearchAuctionHouse(self:GetItemInfo(itemID)) end,
                                 'closeWhenClicked', true,
-                                'textHeight', 12,
-                                'textWidth', 12,
+                                'textHeight', self.db.profile.txtSize,
+                                'textWidth', self.db.profile.txtSize,
                                 "notCheckable", true
                             ) 
                         end
@@ -450,8 +450,8 @@ function AtlasLoot:ItemContextMenu(data, Type, recipeData)
                                 "text", AL["Delete"],
                                 "func", function() self:DeleteFromWishList(data.number) end,
                                 'closeWhenClicked', true,
-                                'textHeight', 12,
-                                'textWidth', 12,
+                                'textHeight', self.db.profile.txtSize,
+                                'textWidth', self.db.profile.txtSize,
                                 "notCheckable", true
                             )
                         else
@@ -460,8 +460,8 @@ function AtlasLoot:ItemContextMenu(data, Type, recipeData)
                                 "text", AL["Add To Default"],
                                 "func", function() self:WishListAddDropClick(wList[1], wList[3], data) end,
                                 'closeWhenClicked', true,
-                                'textHeight', 12,
-                                'textWidth', 12,
+                                'textHeight', self.db.profile.txtSize,
+                                'textWidth', self.db.profile.txtSize,
                                 "notCheckable", true
                             )
                             self.Dewdrop:AddLine(
@@ -469,8 +469,8 @@ function AtlasLoot:ItemContextMenu(data, Type, recipeData)
                                 "tooltipTitle", AL["Own Wishlists"],
                                 "value", "OwnWishlists",
                                 "hasArrow", true,
-                                'textHeight', 12,
-                                'textWidth', 12,
+                                'textHeight', self.db.profile.txtSize,
+                                'textWidth', self.db.profile.txtSize,
                                 "notCheckable", true
                             )
                             self.Dewdrop:AddLine(
@@ -478,16 +478,16 @@ function AtlasLoot:ItemContextMenu(data, Type, recipeData)
                                 "tooltipTitle", AL["Shared Wishlists"],
                                 "value", "SharedWishlists",
                                 "hasArrow", true,
-                                'textHeight', 12,
-                                'textWidth', 12,
+                                'textHeight', self.db.profile.txtSize,
+                                'textWidth', self.db.profile.txtSize,
                                 "notCheckable", true
                             )
                             self.Dewdrop:AddLine(
                                 "text", AL["Add Wishlist"],
                                 "func", function() self:AddWishList() end,
                                 'closeWhenClicked', true,
-                                'textHeight', 12,
-                                'textWidth', 12,
+                                'textHeight', self.db.profile.txtSize,
+                                'textWidth', self.db.profile.txtSize,
                                 "notCheckable", true
                             )
                         end
@@ -504,8 +504,8 @@ function AtlasLoot:ItemContextMenu(data, Type, recipeData)
                                 "text", AL["Learn/Recive Vanity Item"],
                                 "func", function() RequestDeliverVanityCollectionItem(itemID) end,
                                 'closeWhenClicked', true,
-                                'textHeight', 12,
-                                'textWidth', 12,
+                                'textHeight', self.db.profile.txtSize,
+                                'textWidth', self.db.profile.txtSize,
                                 "notCheckable", true
                             )
                         end
@@ -541,8 +541,8 @@ function AtlasLoot:ItemContextMenu(data, Type, recipeData)
                                     end
                                 end,
                                 'closeWhenClicked', true,
-                                'textHeight', 12,
-                                'textWidth', 12,
+                                'textHeight', self.db.profile.txtSize,
+                                'textWidth', self.db.profile.txtSize,
                                 "notCheckable", true
                                 )
 
@@ -553,8 +553,8 @@ function AtlasLoot:ItemContextMenu(data, Type, recipeData)
                                     self:SetRecipeMapPins()
                                 end,
                                 'closeWhenClicked', true,
-                                'textHeight', 12,
-                                'textWidth', 12,
+                                'textHeight', self.db.profile.txtSize,
+                                'textWidth', self.db.profile.txtSize,
                                 "notCheckable", true
                             )
                         end
@@ -567,8 +567,8 @@ function AtlasLoot:ItemContextMenu(data, Type, recipeData)
                                 "text", v.Name,
                                 "tooltipTitle", v.Name,
                                 'closeWhenClicked', true,
-                                'textHeight', 12,
-                                'textWidth', 12,
+                                'textHeight', self.db.profile.txtSize,
+                                'textWidth', self.db.profile.txtSize,
                                 "func", function() self:WishListAddDropClick("Own", i, data) end,
                                 "notCheckable", true
                             )
@@ -581,8 +581,8 @@ function AtlasLoot:ItemContextMenu(data, Type, recipeData)
                                 "text", v.Name,
                                 "tooltipTitle", v.Name,
                                 'closeWhenClicked', true,
-                                'textHeight', 12,
-                                'textWidth', 12,
+                                'textHeight', self.db.profile.txtSize,
+                                'textWidth', self.db.profile.txtSize,
                                 "func", function() self:WishListAddDropClick("Shared", i, data) end,
                                 "notCheckable", true
                             )
