@@ -787,6 +787,7 @@ function AtlasLoot:ShowSearchOptions(button, point)
                     for _, data in ipairs(cat) do
                         self.db.profile.SearchOn[data[2]] = self.db.profile.SearchOn[data[2]] or {false, data[3]}
                         self.Dewdrop:AddLine(
+                        'isRadio', true,
                         "text", data[1],
                         "checked", self.db.profile.SearchOn[data[2]] and self.db.profile.SearchOn[data[2]][1],
                         "func", function()
@@ -795,15 +796,15 @@ function AtlasLoot:ShowSearchOptions(button, point)
                     end
             end
             self.Dewdrop:AddLine("text", AL["Search options"], "isTitle", true, "notCheckable", true)
-            self.Dewdrop:AddLine("text", AL["Ascension Vanity Collection"], "checked", self.db.profile.SearchAscensionVanity, "tooltipTitle", AL["Ascension Vanity Collection"], "tooltipText",
+            self.Dewdrop:AddLine("text", AL["Ascension Vanity Collection"], 'isRadio', true, "checked", self.db.profile.SearchAscensionVanity, "tooltipTitle", AL["Ascension Vanity Collection"], "tooltipText",
             AL["If checked, AtlasLoot will search Ascension Vanity Collection"], "func", function()
             self.db.profile.SearchAscensionVanity = not self.db.profile.SearchAscensionVanity
             end)
-            self.Dewdrop:AddLine("text", AL["Partial matching"], "checked", self.db.profile.PartialMatching, "tooltipTitle", AL["Partial matching"], "tooltipText",
+            self.Dewdrop:AddLine("text", AL["Partial matching"], 'isRadio', true, "checked", self.db.profile.PartialMatching, "tooltipTitle", AL["Partial matching"], "tooltipText",
                 AL["If checked, AtlasLoot search item names for a partial match."], "func", function()
                 self.db.profile.PartialMatching = not self.db.profile.PartialMatching
             end)
-            self.Dewdrop:AddLine("text", AL["Search AscensionDB"], "checked", self.db.profile.SearchAscensionDB, "tooltipTitle", AL["Partial matching"], "tooltipText",
+            self.Dewdrop:AddLine("text", AL["Search AscensionDB"], 'isRadio', true, "checked", self.db.profile.SearchAscensionDB, "tooltipTitle", AL["Partial matching"], "tooltipText",
                 AL["If checked, AtlasLoot will open a browser window and search AscensionDB"], "func", function()
                 self.db.profile.SearchAscensionDB = not self.db.profile.SearchAscensionDB
             end)

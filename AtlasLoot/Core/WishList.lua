@@ -5,10 +5,10 @@ local ALModule = AtlasLoot:NewModule("WishList", "AceSerializer-3.0", "AceComm-3
 
 local playerName = UnitName("player")
 local xtyp, xarg2
-local OptionsLoadet = false
+local OptionsLoadet
 local curaddicon, curaddname = "",""
 local curtable = {"","",""}
-local editName = false
+local editName
 
 AtlasLootWishList = {}
 
@@ -103,6 +103,7 @@ end
 
 -- Opens edit wishlist name/icon window
 function AtlasLoot:EditWishList()
+	self:CreateWishlistOptions()
 	AtlasLootWishList_AddFrame:Show()
     AtlasLottAddEditWishList:SetText(AL["Edit Wishlist"])
     AtlasLootWishListNewName:SetText(AtlasLootWishList[AtlasLoot_CurrentWishList["Show"].ListType][AtlasLoot_CurrentWishList["Show"].ListNum].Name)
@@ -166,6 +167,7 @@ end
 
 -- Opens add wishlist name/icon window
 function AtlasLoot:AddWishList()
+	self:CreateWishlistOptions()
 	AtlasLootWishList_AddFrame:Show()
     AtlasLottAddEditWishList:SetText(AL["Add Wishlist"])
 end
@@ -690,11 +692,11 @@ function AtlasLoot:WishlistSetup()
 	if not AtlasLootWishList.Options then AtlasLootWishList.Options = {} end
 	if not AtlasLootWishList.Options[playerName] then AtlasLootWishList.Options[playerName] = {} end
 	if AtlasLootWishList.Options[playerName].Mark ~= true and AtlasLootWishList.Options[playerName].Mark ~= false then AtlasLootWishList.Options[playerName].Mark = true end
-	if not AtlasLootWishList.Options[playerName]["markInTable"] then AtlasLootWishList.Options[playerName]["markInTable"] = "own" end
-	if AtlasLootWishList.Options[playerName]["AllowShareWishlist"] ~= true and AtlasLootWishList.Options[playerName]["AllowShareWishlist"] ~= false then AtlasLootWishList.Options[playerName]["AllowShareWishlist"] = true end
-	if AtlasLootWishList.Options[playerName]["AllowShareWishlistInCombat"] ~= true and AtlasLootWishList.Options[playerName]["AllowShareWishlistInCombat"] ~= false then AtlasLootWishList.Options[playerName]["AllowShareWishlistInCombat"] = true end
-	if AtlasLootWishList.Options[playerName]["UseDefaultWishlist"] ~= true and AtlasLootWishList.Options[playerName]["UseDefaultWishlist"] ~= false then AtlasLootWishList.Options[playerName]["UseDefaultWishlist"] = false end
-	if not AtlasLootWishList.Options[playerName]["DefaultWishList"] then AtlasLootWishList.Options[playerName]["DefaultWishList"] = {"Own", "AtlasLootWishList", 1} end
+	if not AtlasLootWishList.Options[playerName].markInTable then AtlasLootWishList.Options[playerName].markInTable = "own" end
+	if AtlasLootWishList.Options[playerName].AllowShareWishlist ~= true and AtlasLootWishList.Options[playerName].AllowShareWishlist ~= false then AtlasLootWishList.Options[playerName].AllowShareWishlist = true end
+	if AtlasLootWishList.Options[playerName].AllowShareWishlistInCombat ~= true and AtlasLootWishList.Options[playerName].AllowShareWishlistInCombat ~= false then AtlasLootWishList.Options[playerName].AllowShareWishlistInCombat = true end
+	if AtlasLootWishList.Options[playerName].UseDefaultWishlist ~= true and AtlasLootWishList.Options[playerName].UseDefaultWishlist ~= false then AtlasLootWishList.Options[playerName].UseDefaultWishlist = false end
+	if not AtlasLootWishList.Options[playerName].DefaultWishList then AtlasLootWishList.Options[playerName].DefaultWishList = {"Own", "AtlasLootWishList", 1} end
 end
 --[[
 AtlasLoot:CreateWishlistOptions()
@@ -702,7 +704,6 @@ Create the Options for the Wishlists(called on variables loadet)
 ]]
 function AtlasLoot:CreateWishlistOptions()
 	if OptionsLoadet then return end
-	self:WishlistSetup()
 	-- Add wishlistframe --
 	local WishListAddFrame = CreateFrame("FRAME","AtlasLootWishList_AddFrame",UIParent)
 		WishListAddFrame:Hide()
@@ -719,8 +720,8 @@ function AtlasLoot:CreateWishlistOptions()
 		WishListAddFrame:EnableMouse(true)
 		WishListAddFrame:RegisterForDrag("LeftButton")
 		WishListAddFrame:RegisterForDrag("LeftButton", "RightButton")
-		WishListAddFrame:SetScript("OnMouseDown", function()
-			this:StartMoving()
+		WishListAddFrame:SetScript("OnMouseDown", function(button)
+			button:StartMoving()
 		end)
 		WishListAddFrame:SetScript("OnMouseUp", WishListAddFrame.StopMovingOrSizing)
 
@@ -741,13 +742,13 @@ function AtlasLoot:CreateWishlistOptions()
 		Edit1:SetHeight(32)
 		Edit1:SetAutoFocus(false)
 		Edit1:SetTextInsets(0, 8, 0, 0)
-		Edit1:SetScript("OnEnterPressed", function()
-			this:ClearFocus()
-			local text = this:GetText()
+		Edit1:SetScript("OnEnterPressed", function(frame)
+			frame:ClearFocus()
+			local text = frame:GetText()
 			curaddname = text
 		end)
-		Edit1:SetScript("OnShow", function()
-			this:SetText(curaddname)
+		Edit1:SetScript("OnShow", function(frame)
+			frame:SetText(curaddname)
 		end)
 
 	local CloseButton = CreateFrame("BUTTON",nil, WishListAddFrame, "UIPanelCloseButton")
