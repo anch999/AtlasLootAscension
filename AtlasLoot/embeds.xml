@@ -10,6 +10,7 @@
 <Include file="Libs\LibBabble-Inventory-3.0\lib.xml"/>
 <Include file="Libs\LibBabble-Zone-3.0\lib.xml"/>
 <Include file="Libs\LibBabble-SubZone-3.0\lib.xml"/>
+<Script file="Libs\SettingsCreator-1.0\SettingsCreator.lua"/>
 
 <Include file="Libs\LibAboutPanel\lib.xml"/>
 

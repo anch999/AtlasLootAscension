@@ -1,20 +1,16 @@
-local AtlasLoot = LibStub("AceAddon-3.0"):NewAddon("AtlasLoot", "AceEvent-3.0", "AceTimer-3.0", "NewsFrame-1.0")
+local AtlasLoot = LibStub("AceAddon-3.0"):NewAddon("AtlasLoot", "AceEvent-3.0", "AceTimer-3.0", "NewsFrame-1.0", "SettingsCreator-1.0")
 ATLASLOOT = AtlasLoot
 local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
 
-AtlasLoot.AddonName = "AtlasLoot Ascension Edition"
 AtlasLoot.Version = GetAddOnMetadata("AtlasLoot", "Version")
 
 AtlasLoot.DebugMessages = false
-AtlasLoot.WishListVersion = 1
 
 --Make the Dewdrop menu in the standalone loot browser accessible here
 AtlasLoot.Dewdrop = AceLibrary("Dewdrop-2.0")
 
-AtlasLoot.filterEnable = false
 AtlasLoot.CurrentType = "Default"
 AtlasLoot.type = {}
-AtlasLoot.backEnabled = false
 
 -- Colours stored for code readability
 AtlasLoot.Colors = {
@@ -263,7 +259,7 @@ function AtlasLoot:LoadAllModules()
 
 	if flag == 1 then
 		if self.DebugMessages then
-			DEFAULT_CHAT_FRAME:AddMessage(GREEN..AL["AtlasLoot"]..": "..self.Colors.WHITE..AL["All Available Modules Loaded"])
+			DEFAULT_CHAT_FRAME:AddMessage(self.Colors.GREEN..AL["AtlasLoot"]..": "..self.Colors.WHITE..AL["All Available Modules Loaded"])
 		end
 		collectgarbage("collect")
 	end

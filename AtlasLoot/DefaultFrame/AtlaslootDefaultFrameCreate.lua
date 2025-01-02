@@ -11,7 +11,7 @@ function AtlasLoot:InitializeUI()
     self.mainUI:SetMovable(true)
     self.mainUI.portrait:SetPortraitTexture("Interface\\Icons\\INV_Box_01")
     self.mainUI:SetFrameStrata("HIGH")
-    self.mainUI.TitleText:SetText(self.AddonName)
+    self.mainUI.TitleText:SetText(GetAddOnMetadata("AtlasLoot", "Title"))
     self.mainUI:RegisterForDrag("LeftButton")
     self.mainUI:EnableKeyboard(true)
     self.mainUI:SetToplevel(true)
@@ -67,8 +67,6 @@ function AtlasLoot:InitializeUI()
     self.mainUI.lootBackground.Back:SetAllPoints()
     self.mainUI.lootBackground.Back:SetSize(730,475)
     self.mainUI.lootBackground.Back:SetPoint("CENTER",self.mainUI.lootBackground)
-    local texture = self.db.profile.Opaque and 1 or 0.05
-    self.mainUI.lootBackground.Back:SetTexture(0, 0, 0, texture)
 
 ----------------------------------- Item Loot Panel -------------------------------------------
     self.mainUI.itemframe = CreateFrame("Frame", "AtlasLootItemsFrame", self.mainUI.lootBackground)
@@ -148,7 +146,7 @@ end
     self.mainUI.backbutton:SetPoint("BOTTOM", self.mainUI.itemframe, "BOTTOM",0,5)
     self.mainUI.backbutton:SetText(AL["Back"])
     self.mainUI.backbutton:SetScript("OnClick", function(button) self:BackButton_OnClick() end)
-    
+
     -- Toggle the visibility of the next/prev and back buttons true to show
     function self:ToggleNavigationButtonsVisibility(show)
         if show then
@@ -511,8 +509,6 @@ end
     self.mainUI.difficultyScrollFrame.Back:SetAllPoints()
     self.mainUI.difficultyScrollFrame.Back:SetSize(255, ROW_HEIGHT * MAX_ROWS + 6)
     self.mainUI.difficultyScrollFrame.Back:SetPoint("CENTER",self.mainUI.difficultyScrollFrame)
-    local texture = self.db.profile.Opaque and 1 or 0.05
-    self.mainUI.difficultyScrollFrame.Back:SetTexture(0, 0, 0, texture)
 
 function self:ScrollFrameUpdate(hide,wishlist)
     local maxValue,offset,row,value
@@ -628,8 +624,6 @@ local MAX_ROWS2 = 26      -- How many rows can be shown at once?
     self.mainUI.lootTableScrollFrame.Back:SetAllPoints()
     self.mainUI.lootTableScrollFrame.Back:SetSize(255, ROW_HEIGHT * MAX_ROWS2 + 13)
     self.mainUI.lootTableScrollFrame.Back:SetPoint("CENTER",self.mainUI.lootTableScrollFrame)
-    local texture = self.db.profile.Opaque and 1 or 0.05
-    self.mainUI.lootTableScrollFrame.Back:SetTexture(0, 0, 0, texture)
 
     function self:SubTableScrollFrameUpdate(tablename, dataSource, tablenum)
         if tablename == "FilterList" then return end
@@ -878,4 +872,13 @@ self.mainUI.lootTableScrollFrame.rows = rows2
     end)
     self.mainUI.itemPopupframe:SetWidth(211)
     self.mainUI.itemPopupframe:Hide()
+
+    self:FrameOpaqueToogle()
+end
+
+function AtlasLoot:FrameOpaqueToogle()
+    local texture = self.db.profile.Opaque and 1 or 0.05
+    self.mainUI.lootTableScrollFrame.Back:SetTexture(0, 0, 0, texture)
+    self.mainUI.difficultyScrollFrame.Back:SetTexture(0, 0, 0, texture)
+    self.mainUI.lootBackground.Back:SetTexture(0, 0, 0, texture)
 end

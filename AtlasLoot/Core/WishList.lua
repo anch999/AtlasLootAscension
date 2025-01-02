@@ -524,7 +524,6 @@ end
 --	<local> AddTexture(par, num)
 -- 	<local> GenerateTabNum(strg,sender)
 --	AtlasLoot_RefreshWishlists()
---	AtlasLoot:CreateWishlistOptions()
 
 -- **********************************************************************
 local AddWishlist = "new"
@@ -648,10 +647,11 @@ function AtlasLoot:CreateWishlistOptions()
 		WishListAddFrame:SetWidth(350)
 		WishListAddFrame:SetHeight(250)
 		WishListAddFrame:SetPoint("CENTER",UIParent)
-		WishListAddFrame:SetBackdrop({bgFile = "Interface/Tooltips/UI-Tooltip-Background", 
-												edgeFile = "Interface/Tooltips/UI-Tooltip-Border", 
-												tile = true, tileSize = 16, edgeSize = 16, 
-												insets = { left = 4, right = 4, top = 4, bottom = 4 }})
+		WishListAddFrame:SetBackdrop({
+			bgFile = "Interface/Tooltips/UI-Tooltip-Background", 
+			edgeFile = "Interface/Tooltips/UI-Tooltip-Border", 
+			tile = true, tileSize = 16, edgeSize = 16, 
+			insets = { left = 4, right = 4, top = 4, bottom = 4 }})
 		WishListAddFrame:SetMovable(true)
 		WishListAddFrame:EnableMouse(true)
 		WishListAddFrame:RegisterForDrag("LeftButton")
