@@ -35,19 +35,19 @@ function minimap.OnEnter(frame)
 end
 
 function AtlasLoot:MinimapIconSetup()
-	if not self.db.profile.minimap then
-		self.db.profile.minimap = {hide = false}
+	if not self.selectedProfile.minimap then
+		self.selectedProfile.minimap = {hide = false}
 	end
 
 	if icon then
-		icon:Register('AtlasLoot', minimap, self.db.profile.minimap)
+		icon:Register('AtlasLoot', minimap, self.selectedProfile.minimap)
 	end
 end
 
 -- show/hide minimap icon
 function AtlasLoot:ToggleMinimap()
-    local hide = not self.db.profile.minimap.hide
-    self.db.profile.minimap.hide = hide
+    local hide = not self.selectedProfile.minimap.hide
+    self.selectedProfile.minimap.hide = hide
     if hide then
       icon:Hide("AtlasLoot")
     else

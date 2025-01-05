@@ -103,7 +103,6 @@ function AtlasLoot:HideFilteredItems()
 
 	local function getVanityFilters(itemID, learnedSpellID)
 		local db = AtlasLootFilterDB.VanityFilters
-		local learnedSpellID
 		if VANITY_ITEMS[itemID] and VANITY_ITEMS[itemID].learnedSpell and VANITY_ITEMS[itemID].learnedSpell ~= 0 then
 			learnedSpellID = VANITY_ITEMS[itemID].learnedSpell
 		end
@@ -251,7 +250,7 @@ function AtlasLoot:FilterMenuRegister()
 				end
 			else
 				for _, group in ipairs(FilterTable) do
-					self.Dewdrop:AddLine('text' , group.Name, 'textHeight', self.db.profile.txtSize, 'textWidth', self.db.profile.txtSize, 'isTitle', true, "notCheckable", true)
+					self.Dewdrop:AddLine('text' , group.Name, 'textHeight', self.selectedProfile.txtSize, 'textWidth', self.selectedProfile.txtSize, 'isTitle', true, "notCheckable", true)
 					for _, filters in ipairs(group) do
 						if not db[filters[2]] then db[filters[2]] = {false, group.Type} end
 						self.Dewdrop:AddLine(

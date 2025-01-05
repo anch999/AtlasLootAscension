@@ -1,6 +1,6 @@
 local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
 
-AtlasLoot_SubMenus["WorldEventsCLASSIC"] = {
+AtlasLoot_SubMenus.WorldEventsCLASSIC = {
 	Module = "AtlasLootWorldEvents",
 	{ "Seasonal", "BrewfestCLASSIC", "Header"},
 	{ "", "BrewfestCLASSIC"},
@@ -23,7 +23,7 @@ AtlasLoot_SubMenus["WorldEventsCLASSIC"] = {
 	{ "", "FishingExtravaganza"},
 }
 
-	AtlasLoot_SubMenus["WorldEventsTBC"] = {
+	AtlasLoot_SubMenus.WorldEventsTBC = {
 		Module = "AtlasLootWorldEvents",
 		{ "Seasonal", "BrewfestTBC", "Header"},
 		{ "", "BrewfestTBC"},
@@ -48,7 +48,7 @@ AtlasLoot_SubMenus["WorldEventsCLASSIC"] = {
 		{ "", "EthereumPrison"},
 	}
 
-	AtlasLoot_SubMenus["WorldEventsWRATH"] = {
+	AtlasLoot_SubMenus.WorldEventsWRATH = {
 		Module = "AtlasLootWorldEvents",
 		{ "Seasonal", "BrewfestWRATH", "Header"},
 		{ "", "BrewfestWRATH"},

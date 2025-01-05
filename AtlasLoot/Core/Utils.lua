@@ -42,8 +42,8 @@ function AtlasLoot:OpenDewdropMenu(frame, menuList, skipRegister)
 						'textR', 0,
 						'textG', 1,
 						'textB', 1,
-						'textHeight', self.db.profile.txtSize,
-						'textWidth', self.db.profile.txtSize,
+						'textHeight', self.selectedProfile.txtSize,
+						'textWidth', self.selectedProfile.txtSize,
 						'closeWhenClicked', true,
 						'notCheckable', true
 					)
@@ -62,8 +62,8 @@ function AtlasLoot:AddDividerLine(maxLenght)
     local text = self.Colors.WHITE.."----------------------------------------------------------------------------------------------------"
     self.Dewdrop:AddLine(
         'text' , text:sub(1, maxLenght),
-        'textHeight', self.db.profile.txtSize,
-        'textWidth', self.db.profile.txtSize,
+        'textHeight', self.selectedProfile.txtSize,
+        'textWidth', self.selectedProfile.txtSize,
         'isTitle', true,
         "notCheckable", true
     )
@@ -78,8 +78,8 @@ function AtlasLoot:CloseDewDrop(divider, maxLenght)
         'textR', 0,
         'textG', 1,
         'textB', 1,
-        'textHeight', self.db.profile.txtSize,
-        'textWidth', self.db.profile.txtSize,
+        'textHeight', self.selectedProfile.txtSize,
+        'textWidth', self.selectedProfile.txtSize,
         'closeWhenClicked', true,
         'notCheckable', true
     )
@@ -545,7 +545,7 @@ function AtlasLoot:ArenaCost(price, itemEquipLoc, itemQuality)
 end
 
 function AtlasLoot:SetMerchantFrameGlow()
-	if not self.db.profile.MerchantGlow then return end
+	if not self.selectedProfile.MerchantGlow then return end
 	local num = 1
 	while _G["MerchantItem"..num.."ItemButton"] do
 		local link = _G["MerchantItem"..num.."ItemButton"].link
@@ -561,7 +561,7 @@ function AtlasLoot:SetMerchantFrameGlow()
 end
 
 function AtlasLoot:InitializeWishlistMerchantGlow()
-	if self.db.profile.MerchantGlow then
+	if self.selectedProfile.MerchantGlow then
 		self:RegisterEvent("MERCHANT_UPDATE")
 		self:RegisterEvent("MERCHANT_SHOW")
 		MerchantNextPageButton:HookScript("OnClick", function() AtlasLoot:SetMerchantFrameGlow() end)

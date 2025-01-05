@@ -15,7 +15,6 @@ function AtlasLoot:OptionsToggle()
 end
 
 function AtlasLoot:InitializeOptionsFrame()
-    self.db.profile.showUnknownRecipeTooltip = self.db.profile.showUnknownRecipeTooltip or true
         local Options = {
             AddonName = "AtlasLoot",
             TitleText = "Atlasloot",
@@ -26,50 +25,50 @@ function AtlasLoot:InitializeOptionsFrame()
                         Type = "CheckButton",
                         Name = "Opaque",
                         Lable = AL["Make Loot Table Opaque"],
-                        OnClick = function(button) self.db.profile.Opaque = button:GetChecked() self:FrameOpaqueToogle() end
+                        OnClick = function(button) self.selectedProfile.Opaque = button:GetChecked() self:FrameOpaqueToogle() end
                     },
                     {
                         Type = "CheckButton",
                         Name = "AutoCurrentInstance",
                         Lable = AL["Auto Load Instance Loot Pages"],
-                        OnClick = function(button) self.db.profile.AutoCurrentInstance = button:GetChecked() end
+                        OnClick = function(button) self.selectedProfile.AutoCurrentInstance = button:GetChecked() end
                     },
                     {
                         Type = "CheckButton",
                         Name = "recipeExtraInfoSwitch",
                         Lable = AL["Show drop location on search results"],
-                        OnClick = function(button) self.db.profile.recipeExtraInfoSwitch = button:GetChecked() end
+                        OnClick = function(button) self.selectedProfile.recipeExtraInfoSwitch = button:GetChecked() end
                     },
                     {
                         Type = "CheckButton",
                         Name = "showdropLocationOnSearch",
                         Lable = AL["Show if recipe is unknown in tooltips"],
-                        OnClick = function(button) self.db.profile.showdropLocationOnSearch = button:GetChecked() end
+                        OnClick = function(button) self.selectedProfile.showdropLocationOnSearch = button:GetChecked() end
                     },
                     {
                         Type = "CheckButton",
                         Name = "showUnknownRecipeTooltip",
                         Lable = AL["Hide crafting source unless holding CTRL"],
-                        OnClick = function(button) self.db.profile.showUnknownRecipeTooltip = button:GetChecked() end
+                        OnClick = function(button) self.selectedProfile.showUnknownRecipeTooltip = button:GetChecked() end
                     },
                     {
                         Type = "CheckButton",
                         Name = "showdropLocationTooltips",
                         Lable = AL["Show drop locations in tooltips"],
-                        OnClick = function(button) self.db.profile.showdropLocationTooltips = button:GetChecked() self:CreateItemSourceList(true) end
+                        OnClick = function(button) self.selectedProfile.showdropLocationTooltips = button:GetChecked() self:CreateItemSourceList(true) end
                     },
                     {
                         Type = "CheckButton",
                         Name = "MerchantGlow",
                         Lable = AL["Wishlist Vendor Glow"],
                         Tooltip = AL["Make items in a vendor window glow if they are on a wishlist"],
-                        OnClick = function(button) self.db.profile.MerchantGlow = button:GetChecked() self:InitializeWishlistMerchantGlow() end
+                        OnClick = function(button) self.selectedProfile.MerchantGlow = button:GetChecked() self:InitializeWishlistMerchantGlow() end
                     },
                     {
                         Type = "CheckButton",
                         Name = "EquipCompare",
                         Lable = AL["Show Comparison Tooltips"],
-                        OnClick = function(button) self.db.profile.EquipCompare = button:GetChecked() end
+                        OnClick = function(button) self.selectedProfile.EquipCompare = button:GetChecked() end
                     },
                     {
                         Type = "Menu",
@@ -77,37 +76,52 @@ function AtlasLoot:InitializeOptionsFrame()
                         Lable = AL["Skin"],
                         Tooltip = AL["Change Atlasloot skin"],
                         Func = 	function(name, selection)
-                            self.db.profile.LootBrowserStyle = selection
-                            self:SetSkin(self.skinKeys[self.db.profile.LootBrowserStyle][1])
+                            self.selectedProfile.LootBrowserStyle = selection
+                            self:SetSkin(self.skinKeys[self.selectedProfile.LootBrowserStyle][1])
                         end,
                         Menu = function()
                             local selections = {}
                             for _, skin in pairs(self.skinKeys) do
                                 tinsert(selections, skin[2])
                             end
-                            return selections, self.skinKeys[self.db.profile.LootBrowserStyle][2]
+                            return selections, self.skinKeys[self.selectedProfile.LootBrowserStyle][2]
+                        end
+                    },
+                    {
+                        Type = "Menu",
+                        Name = "selectedProfile",
+                        Lable = AL["Settings Profile"],
+                        Tooltip = AL["Change settings the profile of AtlasLoot"],
+                        Func = 	function(name, selection)
+                            self.db.profile.settingsProfile = name
+                            self.selectedProfile = self.db.settingsProfiles[name]
+                            self:RefreshOptions("AtlasLoot", self.selectedProfile)
+                        end,
+                        Menu = function()
+                            local selections = {}
+                            for profile, _ in pairs(self.db.settingsProfiles) do
+                                tinsert(selections, profile)
+                            end
+                            return selections, self.db.profile.settingsProfile
                         end
                     },
                     {
                         Type = "Button",
-                        Name = "ResetWishList",
-                        Lable = AL["Reset Wishlist"],
-                        Size = {130,25},
-                        OnClick = function() self:Reset("wishlist") end
+                        Name = "ProfileAdd",
+                        Lable = "Add Profile",
+                        Size = {100,25},
+                        OnClick = function() StaticPopup_Show("ATLASLOOT_ADD_PROFILE") end
                     },
                     {
                         Type = "Button",
-                        Name = "ResetFrames",
-                        Lable = AL["Reset Frames"],
-                        Size = {130,25},
-                        OnClick = function() self:Reset("frames") end
-                    },
-                    {
-                        Type = "Button",
-                        Name = "ResetFavorites",
-                        Lable = AL["Reset Favorites"],
-                        Size = {130,25},
-                        OnClick = function() self:Reset("quicklooks") end
+                        Position = "Right",
+                        Name = "ProfileDelete",
+                        Lable = "Delete Profile",
+                        Size = {100,25},
+                        OnClick = function()
+                            StaticPopupDialogs.ATLASLOOT_DELETE_PROFILE.profile = self.db.profile.settingsProfile
+                            StaticPopup_Show("ATLASLOOT_DELETE_PROFILE")
+                        end
                     },
                 },
                 Right = {
@@ -130,9 +144,9 @@ function AtlasLoot:InitializeOptionsFrame()
                         MinMax = {0.25, 1.5},
                         Step = 0.01,
                         Size = {240,16},
-                        OnShow = function() self.options.LootBrowserScale:SetValue(self.db.profile.LootBrowserScale or 1) end,
+                        OnShow = function() self.options.LootBrowserScale:SetValue(self.selectedProfile.LootBrowserScale or 1) end,
                         OnValueChanged = function()
-                            self.db.profile.LootBrowserScale = self.options.LootBrowserScale:GetValue()
+                            self.selectedProfile.LootBrowserScale = self.options.LootBrowserScale:GetValue()
                             self:UpdateLootBrowserScale()
                         end
                     }
@@ -141,11 +155,42 @@ function AtlasLoot:InitializeOptionsFrame()
             {
                 Name = "Help",
                 TitleText = AL["AtlasLoot Help"],
+            },
+            {
+                Name = "Reset",
+                TitleText = AL["Reset Settings"],
+                Left = {
+                    {
+                        Type = "Button",
+                        Name = "ResetWishList",
+                        Lable = AL["Reset Wishlist"],
+                        Size = {130,25},
+                        OnClick = function() self:Reset("wishlist") end
+                    },
+                    {
+                        Type = "Button",
+                        Name = "ResetFrames",
+                        Lable = AL["Reset Frames"],
+                        Size = {130,25},
+                        OnClick = function() self:Reset("frames") end
+                    },
+                    {
+                        Type = "Button",
+                        Name = "ResetFavorites",
+                        Lable = AL["Reset Favorites"],
+                        Size = {130,25},
+                        OnClick = function() self:Reset("quicklooks") end
+                    },
+                }  
             }
         }
 
-    self.options = self:CreateOptionsPages(Options, self.db.profile)
+    self.options = self:CreateOptionsPages(Options, self.selectedProfile)
     self:DisplayHelp()
+
+    function self:RefreshSettings()
+        self:CreateOptionsPages(Options, self.selectedProfile)
+    end
 
     if LibStub:GetLibrary("LibAboutPanel", true) then
         LibStub("LibAboutPanel").new(AL["AtlasLoot"], "AtlasLoot")
@@ -222,15 +267,15 @@ end
 function AtlasLoot:QuickSettingsMenu(level, value)
     if level == 1 then
         self.Dewdrop:AddLine(
-            'textHeight', self.db.profile.txtSize,
-            'textWidth', self.db.profile.txtSize,
+            'textHeight', self.selectedProfile.txtSize,
+            'textWidth', self.selectedProfile.txtSize,
             'text', "Quick Settings",
             'isTitle', true,
             'notCheckable', true
         )
         self.Dewdrop:AddLine(
-            'textHeight', self.db.profile.txtSize,
-            'textWidth', self.db.profile.txtSize,
+            'textHeight', self.selectedProfile.txtSize,
+            'textWidth', self.selectedProfile.txtSize,
             'text', "News/Patch Notes",
             'tooltipTitle', "Open the news/patch notes ui",
             'notCheckable', true,
@@ -238,26 +283,26 @@ function AtlasLoot:QuickSettingsMenu(level, value)
             'func', function() self:OpenNewsFrame() end
         )
         self.Dewdrop:AddLine(
-            'textHeight', self.db.profile.txtSize,
-            'textWidth', self.db.profile.txtSize,
+            'textHeight', self.selectedProfile.txtSize,
+            'textWidth', self.selectedProfile.txtSize,
             'text', "Learn vanity",
             'tooltipTitle', "Learn all unknown vanity spells",
             'notCheckable', true,
             'closeWhenClicked', true,
             'func', function() self:LearnAllUnknownVanitySpells() end
         )
-        if self.globalDB.isAdmin then
+        if self.selectedProfile.isAdmin then
             self:AddDividerLine(35)
             self.Dewdrop:AddLine(
-                'textHeight', self.db.profile.txtSize,
-                'textWidth', self.db.profile.txtSize,
+                'textHeight', self.selectedProfile.txtSize,
+                'textWidth', self.selectedProfile.txtSize,
                 'text', "Admin Menu",
                 'isTitle', true,
                 'notCheckable', true
             )
             self.Dewdrop:AddLine(
-                'textHeight', self.db.profile.txtSize,
-                'textWidth', self.db.profile.txtSize,
+                'textHeight', self.selectedProfile.txtSize,
+                'textWidth', self.selectedProfile.txtSize,
                 'text', "Update ItemId Database",
                 'tooltipTitle', "Updates the item id variations cache",
                 'notCheckable', true,
@@ -265,8 +310,8 @@ function AtlasLoot:QuickSettingsMenu(level, value)
                 'func', function() self:UpdateItemIDsDatabase() end
             )
             self.Dewdrop:AddLine(
-                'textHeight', self.db.profile.txtSize,
-                'textWidth', self.db.profile.txtSize,
+                'textHeight', self.selectedProfile.txtSize,
+                'textWidth', self.selectedProfile.txtSize,
                 'text', "Wipe ItemIds Database",
                 'tooltipTitle', "Wipe the item id variations cache",
                 'notCheckable', true,
@@ -274,8 +319,8 @@ function AtlasLoot:QuickSettingsMenu(level, value)
                 'func', function() wipe(AtlasLootItemCache) end
             )
             self.Dewdrop:AddLine(
-                'textHeight', self.db.profile.txtSize,
-                'textWidth', self.db.profile.txtSize,
+                'textHeight', self.selectedProfile.txtSize,
+                'textWidth', self.selectedProfile.txtSize,
                 'text', "Pull Merchant items",
                 'tooltipTitle', "Cache all off the items in the currently open merchant window",
                 'notCheckable', true,
@@ -283,8 +328,8 @@ function AtlasLoot:QuickSettingsMenu(level, value)
                 'func', function() self:GetMerchantItems() end
             )
             self.Dewdrop:AddLine(
-                'textHeight', self.db.profile.txtSize,
-                'textWidth', self.db.profile.txtSize,
+                'textHeight', self.selectedProfile.txtSize,
+                'textWidth', self.selectedProfile.txtSize,
                 'text', "Wipe Merchant Cache",
                 'tooltipTitle', "Wipe the item merchant cache",
                 'notCheckable', true,
@@ -297,3 +342,58 @@ function AtlasLoot:QuickSettingsMenu(level, value)
         self:CloseDewDrop(true, 40)
     end
 end
+
+StaticPopupDialogs["ATLASLOOT_ADD_PROFILE"] = {
+	text = "Add New Profile",
+	button1 = "Confirm",
+	button2 = "Cancel",
+	hasEditBox = true,
+	OnShow = function(self)
+	self:SetFrameStrata("TOOLTIP");
+  end,
+	OnAccept = function (button)
+        local self = AtlasLoot
+		local text = button.editBox:GetText()
+		if text ~= "" and not self.db.settingsProfiles[text] then
+        self.db.settingsProfiles[text] = self:CloneTable(self.DBDefaults.settingsProfiles.default)
+          self.db.profile.settingsProfile = text
+          self.selectedProfile = self.db.settingsProfiles[text]
+          self:RefreshOptions("AtlasLoot", self.selectedProfile)
+        elseif self.db.settingsProfiles[text] then
+            DEFAULT_CHAT_FRAME:AddMessage(self.Colors.BLUE..AL["AtlasLoot: "]..self.Colors.WHITE..AL["A profile with this name already exists"])
+		end
+	end,
+	timeout = 0,
+	whileDead = true,
+	hideOnEscape = true,
+	preferredIndex = 3,
+	enterClicksFirstButton = true,
+  }
+
+  StaticPopupDialogs["ATLASLOOT_DELETE_PROFILE"] = {
+	text = "Delete Profile?",
+	button1 = "Confirm",
+	button2 = "Cancel",
+	OnShow = function(button)
+        button:SetFrameStrata("TOOLTIP");
+	end,
+	OnAccept = function (button)
+        local self = AtlasLoot
+        local profile = StaticPopupDialogs.ATLASLOOT_DELETE_PROFILE.profile
+        if profile == "default" then
+                DEFAULT_CHAT_FRAME:AddMessage(self.Colors.BLUE..AL["AtlasLoot: "]..self.Colors.WHITE..AL["You can not delete the default profile"])
+        else
+            if self.db.profile.settingsProfile == profile then
+                self.db.profile.settingsProfile = "default"
+                self.selectedProfile = self.db.settingsProfiles[profile]
+                self:RefreshOptions("AtlasLoot", self.selectedProfile)
+            end
+            self.db.settingsProfiles[profile] = nil
+        end
+	end,
+	timeout = 0,
+	whileDead = true,
+	hideOnEscape = true,
+	preferredIndex = 3,
+	enterClicksFirstButton = true,
+  }

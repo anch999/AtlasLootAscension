@@ -34,5 +34,5 @@ local patchNotes = {
 }
 
 function AtlasLoot:PatchNotes()
-    self:InitializeNewsFrame(self.db.profile, patchNotes, "AtlasLoot")
+    self:InitializeNewsFrame(self.selectedProfile, patchNotes, "AtlasLoot")
 end

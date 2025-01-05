@@ -332,7 +332,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 		itemButton.itemTexture = iconFrame:GetTexture()
 
 		--Highlight items in the wishlist
-		if itemID and dataSource_backup ~= "AtlasLoot_CurrentWishList" and (AtlasLootWishList["Options"][UnitName("player")] and AtlasLootWishList["Options"][UnitName("player")]["Mark"]) then
+		if itemID and dataSource_backup ~= "AtlasLoot_CurrentWishList" and (AtlasLootWishList.Options[UnitName("player")] and AtlasLootWishList.Options[UnitName("player")]["Mark"]) then
 			local xitemexistwish, itemwishicons = self:WishListCheck(itemID, true)
 			if xitemexistwish then
 				text = itemwishicons.." "..text
@@ -433,7 +433,6 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 
 		if dataSource_backup ~= "AtlasLoot_OnDemand" and dataID ~= "SearchResult" and dataSource_backup ~= "AtlasLoot_CurrentWishList" and dataID ~= "FilterList"  and
 		dataSource[dataID].Back ~= true and dataID ~= "EmptyTable" and not dataSource[dataID].vanity then
-			if not self.db.profile.LastBoss or type(self.db.profile.LastBoss) ~= "table" then self.db.profile.LastBoss = {} end
 			self.db.profile.LastBoss[self.Expac] = {dataID, dataSource_backup, tablenum, self.lastModule, self.currentTable, self.moduleName}
 			self.db.profile.savedState[self.currentTable] = {dataID, dataSource_backup, tablenum, self.lastModule, self.currentTable, self.moduleName}
 		end
@@ -471,20 +470,12 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 		self.mainUI.nextbutton:SetPoint("BOTTOMRIGHT", self.mainUI.itemframe, "BOTTOMRIGHT",-5,5)
 		self.mainUI.prevbutton:ClearAllPoints()
 		self.mainUI.prevbutton:SetPoint("BOTTOMLEFT", self.mainUI.itemframe, "BOTTOMLEFT",5,5)
-		_G["AtlasLootItemsFrame_Wishlist_Options"]:Hide()
-		_G["AtlasLootItemsFrame_Wishlist_Share"]:Hide()
-		_G["AtlasLootItemsFrame_Wishlist_Swap"]:Hide()
-		_G["AtlasLootItemsFrame_Wishlist_UnLock"]:Hide()
-		_G["AtlasLootItemsFrame_Wishlist_Vanity_Learn"]:Hide()
+		self:ToogleWishListButtons()
 		self.mainUI.learnSpellbtn:Hide()
 
 		-- Show Wishlist buttons when a wishlist in showing
 		if dataSource_backup == "AtlasLoot_CurrentWishList" then
-			_G["AtlasLootItemsFrame_Wishlist_Options"]:Show()
-			_G["AtlasLootItemsFrame_Wishlist_Share"]:Show()
-			_G["AtlasLootItemsFrame_Wishlist_Swap"]:Show()
-			_G["AtlasLootItemsFrame_Wishlist_UnLock"]:Show()
-			_G["AtlasLootItemsFrame_Wishlist_Vanity_Learn"]:Show()
+			self:ToogleWishListButtons(true)
 			if dataSource[dataID].ListType == "Shared" then
 				AtlasLootItemsFrame_Wishlist_Swap:SetText("Own")
 			elseif dataSource[dataID].ListType == "Own" then
@@ -533,9 +524,9 @@ sets the favorite when alt right clicked
 ]]
 function AtlasLoot:SetFavorites(num)
     if AtlasLootItemsFrame.refresh[2] == "AtlasLoot_CurrentWishList" then
-        AtlasLootCharDB["QuickLooks"][num]={AtlasLoot_CurrentWishList["Show"].ListType, "AtlasLootWishList", AtlasLoot_CurrentWishList["Show"].ListNum, self.lastModule, self.currentTable, _G["AtlasLootWishList"][AtlasLoot_CurrentWishList["Show"].ListType][AtlasLoot_CurrentWishList["Show"].ListNum].Name}
+        AtlasLootCharDB.QuickLooks[num]={AtlasLoot_CurrentWishList.Show.ListType, "AtlasLootWishList", AtlasLoot_CurrentWishList.Show.ListNum, self.lastModule, self.currentTable, _G["AtlasLootWishList"][AtlasLoot_CurrentWishList.Show.ListType][AtlasLoot_CurrentWishList.Show.ListNum].Name}
     else
-        AtlasLootCharDB["QuickLooks"][num]={AtlasLootItemsFrame.refreshOri[1], AtlasLootItemsFrame.refreshOri[2], AtlasLootItemsFrame.refreshOri[3], self.lastModule, self.currentTable, _G[AtlasLootItemsFrame.refreshOri[2]][AtlasLootItemsFrame.refreshOri[1]][AtlasLootItemsFrame.refreshOri[3]].Name}
+        AtlasLootCharDB.QuickLooks[num]={AtlasLootItemsFrame.refreshOri[1], AtlasLootItemsFrame.refreshOri[2], AtlasLootItemsFrame.refreshOri[3], self.lastModule, self.currentTable, _G[AtlasLootItemsFrame.refreshOri[2]][AtlasLootItemsFrame.refreshOri[1]][AtlasLootItemsFrame.refreshOri[3]].Name}
     end
 end
 

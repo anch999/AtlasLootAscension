@@ -15,7 +15,6 @@
 <Include file="Libs\LibAboutPanel\lib.xml"/>
 
 <Include file="Libs\AceAddon-3.0\AceAddon-3.0.xml"/>
-<Include file="Libs\AceDB-3.0\AceDB-3.0.xml"/>
 <Include file="Libs\AceLocale-3.0\AceLocale-3.0.xml"/>
 <Include file="Libs\AceSerializer-3.0\AceSerializer-3.0.xml"/>
 <Include file="Libs\AceComm-3.0\AceComm-3.0.xml"/>
@@ -31,9 +30,9 @@
 
 <!--Default Files-->
 <Include file="Locales\Locales.xml"/>
-<Script file="Core\AtlasLoot.lua"/>
+<Script file="AtlasLoot.lua"/>
 <Include file="Databases\Databases.xml"/>
-<Include file="Core\AtlasLoot.xml"/>
+<Include file="Core\Core.xml"/>
 <Include file="Menus\Menus.xml"/>
 <Include file="DefaultFrame\Frames.xml"/>
 </Ui>

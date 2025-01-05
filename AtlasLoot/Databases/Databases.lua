@@ -1,3 +1,4 @@
+local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
 local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 
@@ -8,6 +9,7 @@ AtlasLoot_Data = {
 		{Name = AL["Select a Loot Table..."]},
 	}
 }
+AtlasLoot_TokenData = {}
 AtlasLoot_MapData = {}
 AtlasLoot_ExtraData = {}
 AtlasLoot_CraftingData = {

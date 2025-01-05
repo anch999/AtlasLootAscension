@@ -11,7 +11,7 @@ local boss = "dungeonskull"
     --************************************************
 
     -- Raids
-    AtlasLoot_MapData["Karazhan"] = {
+    AtlasLoot_MapData.Karazhan = {
         ZoneName = { BabbleZone["Karazhan"].." [A] ("..AL["Start"]..")", 3457 };
         Location = { BabbleZone["Deadwind Pass"], 41 };
         LevelRange = "70";

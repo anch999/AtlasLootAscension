@@ -218,7 +218,7 @@ function AtlasLoot:InitializeSkins()
     end
 
     --Set visual style for the loot browser
-	if self.db.profile.LootBrowserStyle then
-		self:SetSkin(self.skinKeys[self.db.profile.LootBrowserStyle][1])
+	if self.selectedProfile.LootBrowserStyle then
+		self:SetSkin(self.skinKeys[self.selectedProfile.LootBrowserStyle][1])
 	end
 end
