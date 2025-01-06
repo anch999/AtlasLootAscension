@@ -146,16 +146,19 @@ function AtlasLoot:SlashCommand(msg)
 		self:Reset("frames")
 	elseif cmd == AL["options"] then
 		self:OptionsToggle()
-	elseif cmd == "updatecache" then
+	elseif cmd == "updatecache" and self.selectedProfile.isAdmin then
 		self:UpdateItemIDsDatabase(tonumber(arg1), tonumber(arg2))
-	elseif cmd == "clearcache" then
+	elseif cmd == "clearcache" and self.selectedProfile.isAdmin then
 		wipe(AtlasLootItemCache)
-	elseif cmd == "clearmerchantcache" then
+	elseif cmd == "clearmerchantcache" and self.selectedProfile.isAdmin then
 		wipe(AtlasLootOtherIds)
 	elseif cmd == "news" then
 		self:OpenNewsFrame()
-	elseif cmd == "getmerchant" then
+	elseif cmd == "getmerchant" and self.selectedProfile.isAdmin then
 		self:GetMerchantItems(arg1)
+	elseif cmd == "admin" then
+		self.selectedProfile.isAdmin = not self.selectedProfile.isAdmin
+		DEFAULT_CHAT_FRAME:AddMessage(self.selectedProfile.isAdmin and AL["AtlasLoot Admin mode is now enabled"] or AL["AtlasLoot Admin is mode now disabled"])
 	else
 		self.mainUI:Show()
 	end

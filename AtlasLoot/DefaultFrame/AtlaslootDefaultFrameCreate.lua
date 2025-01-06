@@ -112,7 +112,7 @@ for num = 1, 30 do
         end
 end
 
-    -- Next Button
+    --------------------------------------- Navagation buttons ---------------------------------------
     self.mainUI.nextbutton = CreateFrame("Button", "AtlasLootItemsFrame_NEXT", self.mainUI.itemframe)
     self.mainUI.nextbutton:SetPoint("BOTTOMRIGHT", self.mainUI.itemframe, -5, 5)
     self.mainUI.nextbutton:SetSize(32,32)
@@ -160,6 +160,7 @@ end
     end
     self:ToggleNavigationButtonsVisibility()
 
+    --------------------------------------- Wish list buttons ---------------------------------------
     -- Learn Unknown vanity spells button
     self.mainUI.learnSpellbtn = CreateFrame("Button", "AtlasLootItemsFrame_Spell_Vanity_Learn", self.mainUI.itemframe, "OptionsButtonTemplate")
     self.mainUI.learnSpellbtn:SetPoint("BOTTOM", self.mainUI.itemframe, "BOTTOM",0,5)
@@ -170,20 +171,17 @@ end
         self:SetGameTooltip(button,"Learn all the vanity items and spells that you currently don't know on this character")
     end)
     self.mainUI.learnSpellbtn:SetScript("OnLeave", function() GameTooltip:Hide() end)
-    self.mainUI.learnSpellbtn:Hide()
 
     -- Wishlist Own/Swap button
     self.mainUI.wishlistSwapButton = CreateFrame("Button", "AtlasLootItemsFrame_Wishlist_Swap", self.mainUI.itemframe, "OptionsButtonTemplate")
     self.mainUI.wishlistSwapButton:SetPoint("BOTTOM", self.mainUI.itemframe, "BOTTOM",0,5)
     self.mainUI.wishlistSwapButton:SetScript("OnClick", function(button) self:WishListSwapButton(true) end)
-    self.mainUI.wishlistSwapButton:Hide()
 
     -- Wishlist Options button
     self.mainUI.wishlistOptionsButton = CreateFrame("Button", "AtlasLootItemsFrame_Wishlist_Options", self.mainUI.itemframe, "OptionsButtonTemplate")
     self.mainUI.wishlistOptionsButton:SetPoint("BOTTOM", self.mainUI.wishlistSwapButton, "BOTTOM",-100,0)
     self.mainUI.wishlistOptionsButton:SetText(AL["Options"])
     self.mainUI.wishlistOptionsButton:SetScript("OnClick", function(button) self:WishListOptionsOpen() end)
-    self.mainUI.wishlistOptionsButton:Hide()
 
         -- Wishlist Item Lock button
     self.mainUI.wishlistLockButton = CreateFrame("Button", "AtlasLootItemsFrame_Wishlist_UnLock", self.mainUI.itemframe, "OptionsButtonTemplate")
@@ -208,7 +206,6 @@ end
     end)
     self.mainUI.wishlistLockButton:SetScript("OnLeave", function() GameTooltip:Hide() end)
     self.mainUI.wishlistLockButton:SetText("Locked")
-    self.mainUI.wishlistLockButton:Hide()
     -- Is wishlist item disabled on load or not
 	if AtlasLootWishList.Options[UnitName("player")].AutoSortWishlist then
 		self.mainUI.wishlistLockButton:Disable()
@@ -221,8 +218,6 @@ end
     self.mainUI.wishlistShareButton:SetPoint("BOTTOM", self.mainUI.wishlistSwapButton, "BOTTOM",100,0)
     self.mainUI.wishlistShareButton:SetText(AL["Share"])
     self.mainUI.wishlistShareButton:SetScript("OnClick", function() self:ShareWishList() end)
-    self.mainUI.wishlistShareButton:Hide()
-
 
     -- Wishlist Share button
     self.mainUI.wishlistLearnVanityButton = CreateFrame("Button", "AtlasLootItemsFrame_Wishlist_Vanity_Learn", self.mainUI.itemframe, "OptionsButtonTemplate")
@@ -233,7 +228,6 @@ end
         self:SetGameTooltip(button,"Learn/Recive all the vanity items on this page")
     end)
     self.mainUI.wishlistLearnVanityButton:SetScript("OnLeave", function() GameTooltip:Hide() end)
-    self.mainUI.wishlistLearnVanityButton:Hide()
 
     -- Filter Button
     self.mainUI.filterButton = CreateFrame("CheckButton","AtlasLootFilterCheck",self.mainUI.itemframe,"OptionsCheckButtonTemplate")
@@ -259,8 +253,9 @@ end
             self.mainUI.wishlistSwapButton:Hide()
         end
     end
------------------------------------- Buttons at the top of the frame ---------------------------------------
+    self:ToogleWishListButtons()
 
+------------------------------------ Main menu buttons ---------------------------------------
     --SubMenu Button
     self.mainUI.submenuButton = CreateFrame("Button", "AtlasLootDefaultFrame_SubMenu", self.mainUI, "AtlasLootDropMenuTemplate")
     self.mainUI.submenuButton:SetSize(275,25)

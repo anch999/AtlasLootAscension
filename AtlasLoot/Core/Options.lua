@@ -96,6 +96,7 @@ function AtlasLoot:InitializeOptionsFrame()
                             self.db.profile.settingsProfile = name
                             self.selectedProfile = self.db.settingsProfiles[name]
                             self:RefreshOptions("AtlasLoot", self.selectedProfile)
+                            self:SetSkin(self.skinKeys[self.selectedProfile.LootBrowserStyle][1])
                         end,
                         Menu = function()
                             local selections = {}
@@ -181,7 +182,7 @@ function AtlasLoot:InitializeOptionsFrame()
                         Size = {130,25},
                         OnClick = function() self:Reset("quicklooks") end
                     },
-                }  
+                }
             }
         }
 
