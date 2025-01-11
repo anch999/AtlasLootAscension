@@ -139,7 +139,7 @@ function AtlasLoot:MapOnShow(mapID, mapNum, refresh)
         if self.CurrentMap then
             AtlasLoot_BossName:Hide()
             -- Hide the Filter Check-Box
-	        AtlasLootFilterCheck:Hide()
+	        self.mainUI.filterButton:Hide()
             self.mainUI.lootBackground:Hide()
             --Hide UI objects so that only needed ones are shown
             for i = 1, 30, 1 do

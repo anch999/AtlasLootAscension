@@ -2,7 +2,9 @@
 ..\FrameXML\UI.xsd">
     <Button name="AtlasLootDropMenuTemplate" motionScriptsWhileDisabled="true" frameStrata="DIALOG" inherits="FilterDropDownMenuTemplate" virtual="true">
         <Scripts>
-            <OnLoad> </OnLoad>
+            <OnLoad> 
+                tinsert(ATLASLOOT.skin.buttons, self)
+            </OnLoad>
             <OnMouseDown> </OnMouseDown>
             <OnMouseUp> </OnMouseUp>
             <OnShow> </OnShow>
@@ -20,6 +22,54 @@
             </Layer>
         </Layers>
     </Button>
+
+    <Button name="AtlasLootItemTemplate" motionScriptsWhileDisabled="true" frameStrata="DIALOG" virtual="true">
+        <Scripts>
+            <OnLoad> 
+                self:RegisterForClicks("AnyDown")
+                self.Highlight:Hide()
+            </OnLoad>
+            <OnMouseDown> </OnMouseDown>
+            <OnMouseUp> </OnMouseUp>
+            <OnShow> </OnShow>
+            <OnEnter> ATLASLOOT:ItemOnEnter(self) </OnEnter>
+            <OnLeave> ATLASLOOT:ItemOnLeave(self) </OnLeave>
+            <OnClick> ATLASLOOT:ItemOnClick(self, arg1) </OnClick>
+        </Scripts>
+        <Size x="236" y="29"/>
+        <Layers>
+        	<Layer level="ARTWORK">
+				<Texture name="$parent_Icon" parentKey="Icon">
+					<Size x="25" y="25"/>
+                    <Anchors>
+						<Anchor point="TOPLEFT" relativeTo="$parent" relativePoint="TOPLEFT" x="1" y="-1" />
+					</Anchors>
+				</Texture>
+                <FontString name="$parent_Name" parentKey="Name" text="" justifyH="LEFT" inherits="GameFontNormal">
+                    <Size x="320" y="12"/>
+                    <Anchors>
+                        <Anchor point="TOPLEFT" relativePoint="TOPRIGHT" relativeTo="$parent_Icon" x="3" y="0"/>
+                    </Anchors>
+                </FontString>
+                <FontString name="$parent_ExtraText" parentKey="ExtraText" text="" justifyH="LEFT" inherits="GameFontNormal">
+                    <Size x="320" y="10"/>
+                    <Anchors>
+                        <Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="$parent_Name" x="0" y="-1"/>
+                    </Anchors>
+                </FontString>
+            </Layer>
+            <Layer level="OVERLAY">
+				<Texture name="$parent_Highlight" parentKey="Highlight" file="Interface\AddOns\AtlasLoot\Images\knownGreen">
+					<Size x="26" y="26"/>
+					<Anchors>
+						<Anchor point="CENTER" relativeTo="$parent_Icon" x="0" y="0"/>
+					</Anchors>
+				</Texture>
+			</Layer>
+        </Layers>
+		<HighlightTexture file="Interface\QuestFrame\UI-QuestTitleHighlight" alphaMode="ADD"/>
+    </Button>
+
     <Script file="AtlaslootDefaultFrameCreate.lua"/>
     <Script file="AtlaslootDefaultFrame.lua"/>
     <Script file="AtlasLootAdvancedSearchCreate.lua"/>

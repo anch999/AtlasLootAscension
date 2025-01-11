@@ -10,28 +10,6 @@ function AtlasLoot:InitializeSkins()
     local TDF = self.TitleDefaults
     TDF[1], TDF[2], TDF[3], TDF[4], TDF[5] = self.mainUI.TitleText:GetPoint()
 
-    local buttons = {
-        "AtlasLootDefaultFrame_Menu",
-        "AtlasLootDefaultFrame_SubMenu",
-        "AtlasLootDefaultFrame_ExpansionMenu",
-        "AtlasLootDefaultFrame_Preset1",
-        "AtlasLootDefaultFrame_Preset2",
-        "AtlasLootDefaultFrame_Preset3",
-        "AtlasLootDefaultFrame_Preset4",
-        "AtlasLootDefaultFrameSearchButton",
-        "AtlasLootDefaultFrameLastResultButton",
-        "AtlasLootDefaultFrameWishListButton",
-        "AtlasLootDefaultFrameAdvancedSearchButton",
-        "AtlasLootDefaultFrame_AdvancedSearchPanel_EquipButton",
-        "AtlasLootDefaultFrame_AdvancedSearchPanel_EquipSubButton",
-        "AtlasLootDefaultFrame_AdvancedSearchPanel_CategoryButton",
-        "AtlasLootDefaultFrame_AdvancedSearchPanel_SearchButton",
-        "AtlasLootDefaultFrame_AdvancedSearchPanel_ClearButton",
-        "AtlasLootDefaultFrame_MapButton",
-        "AtlasLootDefaultFrame_LoadInstanceButton",
-        "AtlasLoot_Favorites",
-    }
-
     self.skinKeys = {
         {"Modern", AL["Modern"]},
         {"OldAtlasLoot", AL["Old AtlasLoot"]},
@@ -168,21 +146,21 @@ function AtlasLoot:InitializeSkins()
             local frame = {"RightEdge","LeftEdge","BottomEdge","TopEdge","BottomRightCorner","BottomLeftCorner","TopRightCorner","TopLeftCorner"}
             if skin.showFrame then
                 for _, frame in ipairs(frame) do
-                    _G["AtlasLootDefaultFrameNineSlice"][frame]:Show()
+                    self.mainUI.NineSlice[frame]:Show()
                 end
-                _G["AtlasLootDefaultFramePortrait"]:Show()
-                _G["AtlasLootDefaultFrameBg"]:Show()
+                self.mainUI.portrait:Show()
+                self.mainUI.Bg:Show()
                 self.mainUI.TitleBg:Show()
-                _G["AtlasLootDefaultFrameTopTileStreaks"]:Show()
+                self.mainUI.TopTileStreaks:Show()
                 self.mainUI:SetBackdrop(nil)
             else
                 for _, frame in ipairs(frame) do
-                    _G["AtlasLootDefaultFrameNineSlice"][frame]:Hide()
+                    self.mainUI.NineSlice[frame]:Hide()
                 end
-                _G["AtlasLootDefaultFramePortrait"]:Hide()
-                _G["AtlasLootDefaultFrameBg"]:Hide()
+                self.mainUI.portrait:Hide()
+                self.mainUI.Bg:Hide()
                 self.mainUI.TitleBg:Hide()
-                _G["AtlasLootDefaultFrameTopTileStreaks"]:Hide()
+                self.mainUI.TopTileStreaks:Hide()
                 self.mainUI:SetBackdrop({
                     bgFile = skin.DefaultFrame.bg, tile = skin.DefaultFrame.tile, tileSize = 16,
                     edgeFile = skin.DefaultFrame.edge, edgeSize = skin.edgeSize,
@@ -192,28 +170,26 @@ function AtlasLoot:InitializeSkins()
                 self.mainUI:SetBackdropBorderColor(skin.DefaultFrame.edgeColor[1], skin.DefaultFrame.edgeColor[2], skin.DefaultFrame.edgeColor[3], skin.DefaultFrame.edgeColor[4])
             end
 
-            local function SetButtons(path)
-                if _G[path].template and _G[path].template == "AtlasLootDropMenuTemplate" then
-                    local tex, tex2, tex3, tex4
-                    if type(skin.btTex) == "table" then
-                        tex, tex2, tex3, tex4 = unpack(skin.btTex)
-                    else
-                        tex = skin.btTex
-                    end
-                    _G[path.."TopLeft"]:SetTexture(tex, tex2, tex3, tex4)
-                    _G[path.."TopRight"]:SetTexture(tex, tex2, tex3, tex4)
-                    _G[path.."BottomLeft"]:SetTexture(tex, tex2, tex3, tex4)
-                    _G[path.."BottomRight"]:SetTexture(tex, tex2, tex3, tex4)
-                    _G[path.."TopMiddle"]:SetTexture(tex, tex2, tex3, tex4)
-                    _G[path.."MiddleLeft"]:SetTexture(tex, tex2, tex3, tex4)
-                    _G[path.."MiddleRight"]:SetTexture(tex, tex2, tex3, tex4)
-                    _G[path.."BottomMiddle"]:SetTexture(tex, tex2, tex3, tex4)
-                    _G[path.."MiddleMiddle"]:SetTexture(tex, tex2, tex3, tex4)
+            local function ReTextureButtons(button)
+                local tex, tex2, tex3, tex4
+                if type(skin.btTex) == "table" then
+                    tex, tex2, tex3, tex4 = unpack(skin.btTex)
+                else
+                    tex = skin.btTex
                 end
+                button.TopLeft:SetTexture(tex, tex2, tex3, tex4)
+                button.TopRight:SetTexture(tex, tex2, tex3, tex4)
+                button.BottomLeft:SetTexture(tex, tex2, tex3, tex4)
+                button.BottomRight:SetTexture(tex, tex2, tex3, tex4)
+                button.TopMiddle:SetTexture(tex, tex2, tex3, tex4)
+                button.MiddleLeft:SetTexture(tex, tex2, tex3, tex4)
+                button.MiddleRight:SetTexture(tex, tex2, tex3, tex4)
+                button.BottomMiddle:SetTexture(tex, tex2, tex3, tex4)
+                button.MiddleMiddle:SetTexture(tex, tex2, tex3, tex4)
             end
 
-            for _, v in pairs(buttons) do
-                SetButtons(v)
+            for _, button in pairs(self.skin.buttons) do
+                ReTextureButtons(button)
             end
     end
 

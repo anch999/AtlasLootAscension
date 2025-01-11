@@ -21,15 +21,15 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 	end
 
 	--Hide Advanced search if it is up and reshow Querybutton
-	AtlasLootDefaultFrame_AdvancedSearchPanel:Hide()
+	self.searchPanel:Hide()
 
 	--Hide Map and reshow lootbackground
 	self.mainUI.mapFrame:Hide()
     self.mainUI.lootBackground:Show()
-	AtlasLootItemsFrame:Show()
+	self.mainUI.itemframe:Show()
 
 	-- Hide the Filter Check-Box
-	AtlasLootFilterCheck:Hide()
+	self.mainUI.filterButton:Hide()
 
 	-- Hide the map header lable
 	Atlasloot_HeaderLabel:Hide()
@@ -113,12 +113,11 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 
 	for i = 1, 30, 1 do
 		--Use shortcuts for easier reference to parts of the item button
-		local itemButton = _G["AtlasLootItem_"..i]
-		local hightlightFrame = _G["AtlasLootItem_"..i.."_Highlight"]
+		local itemButton = self.mainUI.itemframe.buttons[i]
 			itemButton:Hide()
 			itemButton.itemID = nil
 			itemButton.spellID = nil
-			hightlightFrame:Hide()
+			itemButton.Highlight:Hide()
 			itemButton.hasTrade = false
 	end
 
@@ -181,20 +180,20 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 
 		local spellName, spellIcon
 		--Use shortcuts for easier reference to parts of the item button
-		local itemButton = _G["AtlasLootItem_"..newPosition]
-		local iconFrame  = _G["AtlasLootItem_"..newPosition.."_Icon"]
-		local nameFrame  = _G["AtlasLootItem_"..newPosition.."_Name"]
-		local extraFrame = _G["AtlasLootItem_"..newPosition.."_Extra"]
-		local hightlightFrame = _G["AtlasLootItem_"..newPosition.."_Highlight"]
-		local buttonNum = dataSource[dataID][tablenum][i]
-		local spellID = buttonNum.spellID
+		local itemButton = self.mainUI.itemframe.buttons[newPosition]
+		local iconFrame  = itemButton.Icon
+		local nameFrame  = itemButton.Name
+		local extraFrame = itemButton.ExtraText
+		local hightlightFrame = itemButton.Highlight
+		local itemNumber = dataSource[dataID][tablenum][i]
+		local spellID = itemNumber.spellID
 
 		if spellID then
 			spellName, _, spellIcon, _, _, _, _, _, _ = GetSpellInfo(spellID)
 			if spellName then
 				text = spellName
-			elseif buttonNum.name then
-				text = buttonNum.name
+			elseif itemNumber.name then
+				text = itemNumber.name
 				text = self:FixText(text)
 			end
 			if itemID then
@@ -216,9 +215,9 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 			end
 		elseif itemID then
 			--If the client has the name of the item in cache, use that instead.					
-			if buttonNum.name then
+			if itemNumber.name then
 				--If it has a manuel entry use that
-				text = buttonNum.name
+				text = itemNumber.name
 				text = self:FixText(text)
 			elseif itemName then
 				text = select(4,GetItemQualityColor(itemQuality))..itemName
@@ -252,9 +251,9 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 				end
 			end
 		else
-			if buttonNum.name then
+			if itemNumber.name then
 				--If it has a manuel entry use that
-				text = buttonNum.name
+				text = itemNumber.name
 				text = self:FixText(text)
 			else
 				text = ""
@@ -263,22 +262,22 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 
 		itemButton.name = text
 		--Insert the item description
-		if self.FixedItemText[buttonNum.itemID] then
-			extra = self.FixedItemText[buttonNum.itemID]
-		elseif buttonNum.desc then
-			if type(buttonNum.desc) == "table" then
-				local location, boss = buttonNum.desc[1], buttonNum.desc[2]
+		if self.FixedItemText[itemNumber.itemID] then
+			extra = self.FixedItemText[itemNumber.itemID]
+		elseif itemNumber.desc then
+			if type(itemNumber.desc) == "table" then
+				local location, boss = itemNumber.desc[1], itemNumber.desc[2]
 				extra = self.Colors.YELLOW..location..self.Colors.WHITE.." - "..boss	
 			else
-				extra = buttonNum.desc
+				extra = itemNumber.desc
 			end
-		elseif buttonNum.dropLoc and (self.dataSourceBackup == "AtlasLoot_OnDemand" or (self.db.profile.showdropLocationOnSearch and dataID == "SearchResult")) then
-			local location, boss = buttonNum.dropLoc[1], buttonNum.dropLoc[2]
+		elseif itemNumber.dropLoc and (self.dataSourceBackup == "AtlasLoot_OnDemand" or (self.db.profile.showdropLocationOnSearch and dataID == "SearchResult")) then
+			local location, boss = itemNumber.dropLoc[1], itemNumber.dropLoc[2]
 			extra = self.Colors.YELLOW..location..self.Colors.WHITE.." - "..boss
 		elseif AtlasLoot_CraftingData["CraftingLevels"] and spellID and AtlasLoot_CraftingData["CraftingLevels"][spellID] and dataID ~= "SearchResult" then
 			local lvls = AtlasLoot_CraftingData["CraftingLevels"][spellID]
 			extra = self.Colors.LIMEGREEN .. "L-Click:|r "..self.Colors.WHITE..dataSource[dataID].Name.." ( "..self.Colors.ORANGE..lvls[1].."|r "..self.Colors.YELLOW..lvls[2].."|r "..self.Colors.GREEN..lvls[3].."|r "..self.Colors.GREY..lvls[4]..self.Colors.WHITE.." )"
-		elseif buttonNum.lootTable and buttonNum.lootTable[2] == "Token" then
+		elseif itemNumber.lootTable and itemNumber.lootTable[2] == "Token" then
 			extra = AL["Set Token (Click)"]
 		elseif itemEquipLoc and itemEquipLoc ~= "" and itemSubType then
 			extra = "=ds="..itemEquipLoc..", "..itemSubType
@@ -288,18 +287,18 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 			extra = ""
 		end
 
-		if AtlasLoot_ExtraData[buttonNum.itemID]and dataID ~= "SearchResult" then
+		if AtlasLoot_ExtraData[itemNumber.itemID]and dataID ~= "SearchResult" then
 			extra = self.Colors.LIMEGREEN .. "L-Click:|r " .. extra
 		end
-		if buttonNum.contentsPreview and dataID ~= "SearchResult" then
+		if itemNumber.contentsPreview and dataID ~= "SearchResult" then
 			extra = self.Colors.LIMEGREEN .. "L-Click:|r " .. extra
 		end
 
-		if buttonNum.rep then
-			extra = extra ..self.Colors.WHITE.." ("..buttonNum.rep..")"
+		if itemNumber.rep then
+			extra = extra ..self.Colors.WHITE.." ("..itemNumber.rep..")"
 		end
 
-		local price = buttonNum.price
+		local price = itemNumber.price
 		if price then
 			price = self:ArenaCost(price, itemEquipLoc, itemQuality)
 			extra = extra ..self.Colors.WHITE.." ("..price..")"
@@ -314,19 +313,19 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 		extra = self:FixText(extra)
 
 		--If there is no data on the texture an item should have, show a big self.Colors.RED question mark
-		if buttonNum.icon == "Blank" then
+		if itemNumber.icon == "Blank" then
 			iconFrame:SetTexture(nil)
-		elseif buttonNum.icon == "?" then
+		elseif itemNumber.icon == "?" then
 			iconFrame:SetTexture("Interface\\Icons\\INV_Misc_QuestionMark")
-		elseif buttonNum.icon then
-			iconFrame:SetTexture("Interface\\Icons\\"..buttonNum.icon)
-		elseif buttonNum.itemID then
+		elseif itemNumber.icon then
+			iconFrame:SetTexture("Interface\\Icons\\"..itemNumber.icon)
+		elseif itemNumber.itemID then
 			iconFrame:SetTexture(itemIcon)
 		elseif spellIcon then
 			iconFrame:SetTexture(spellIcon)
 		end
 
-		if iconFrame:GetTexture() == nil and buttonNum.icon ~= "Blank" then
+		if iconFrame:GetTexture() == nil and itemNumber.icon ~= "Blank" then
 			iconFrame:SetTexture("Interface\\Icons\\INV_Misc_QuestionMark")
 		end
 
@@ -353,43 +352,29 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 			itemButton.learnedSpellID = VANITY_ITEMS[itemID].learnedSpell
 		end
 
-		itemButton.iteminfo = {}
-		if spellID then
-			itemButton.iteminfo.idcore = spellID
-			itemButton.iteminfo.icontexture = GetItemIcon(spellID)
-			itemButton.storeID = itemID
-			itemButton.dressingroomID = itemID
-		else
-			itemButton.iteminfo.idcore = itemID
-			itemButton.iteminfo.icontexture = itemID
-			itemButton.storeID = itemID
-			itemButton.dressingroomID = itemID
-		end
-
 		itemButton.craftingData = self:GetRecipeSource(spellID)
 		itemButton.tablenum = tablenum
 		itemButton.dataID = dataID
 		itemButton.dataSource = dataSource_backup
-		itemButton.contentsPreview = buttonNum.contentsPreview
-		itemButton.price = buttonNum.price or nil
-		itemButton.droprate = buttonNum.droprate or self:GetDropRate(dataSource[dataID][tablenum], buttonNum.lootGroup)
-		itemButton.extraInfo = buttonNum.extraInfo or nil
-		itemButton.quest = buttonNum.quest or nil
-		itemButton.item = buttonNum
+		itemButton.contentsPreview = itemNumber.contentsPreview
+		itemButton.price = itemNumber.price or nil
+		itemButton.droprate = itemNumber.droprate or self:GetDropRate(dataSource[dataID][tablenum], itemNumber.lootGroup)
+		itemButton.extraInfo = itemNumber.extraInfo or nil
+		itemButton.quest = itemNumber.quest or nil
+		itemButton.item = itemNumber
 
-		if buttonNum.lootTable then
-			itemButton.sourcePage = buttonNum.lootTable
+		if itemNumber.lootTable then
+			itemButton.sourcePage = itemNumber.lootTable
 		else
 			itemButton.sourcePage = nil
 		end
 
-		if buttonNum[self.Difficulties.DIF_SEARCH] then
-			itemButton.difficulty = buttonNum[self.Difficulties.DIF_SEARCH]
+		if itemNumber[self.Difficulties.DIF_SEARCH] then
+			itemButton.difficulty = itemNumber[self.Difficulties.DIF_SEARCH]
 		else
 			itemButton.difficulty = self.ItemindexID
 		end
 
-		itemButton.i = 1
 		itemButton:Show()
 	end
 
@@ -405,7 +390,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 				newPosition = i
 			end
 			--Check for a valid object (that it exists, and that it has a name
-			isValid, toShow, itemID, recipeID = getProperItemConditionals(buttonNum)
+			isValid, toShow, itemID, recipeID = getProperItemConditionals(dataSource[dataID][tablenum][i])
 			if isValid and toShow then
 				setupButton(itemID or recipeID, i, newPosition, dataSource, dataID, tablenum, dataSource_backup)
 			elseif isValid then
@@ -460,7 +445,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 
 		-- Show the Filter Check-Box
 		if filterCheck(dataID) ~= true or dataSource[dataID].vanity or dataSource[dataID].filter then
-			AtlasLootFilterCheck:Show()
+			self.mainUI.filterButton:Show()
 		end
 
 		--Hide navigation buttons by default, only show what we need

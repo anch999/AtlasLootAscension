@@ -228,7 +228,7 @@ function AtlasLoot:ItemOnClick(item, button)
                 self:DeleteFromWishList(item.number)
             end
         elseif(IsControlKeyDown()) then
-            DressUpItemLink("item:"..item.dressingroomID..":0:0:0:0:0:0:0")
+            DressUpItemLink("item:"..item.itemID..":0:0:0:0:0:0:0")
         elseif item.sourcePage and item.sourcePage[2] == "Source" then
             dataID, dataSource, dataPage = unpack(item.sourcePage[1])
             if dataID and dataID ~= "" and dataSource then

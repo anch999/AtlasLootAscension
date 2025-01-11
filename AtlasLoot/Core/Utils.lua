@@ -632,3 +632,11 @@ function AtlasLoot:SetGameTooltip(button, text)
 	end
 	GameTooltip:Show()
 end
+
+function AtlasLoot:DewdropToggle(button)
+	if self.Dewdrop:IsOpen() then
+		self.Dewdrop:Close()
+	else
+		self.Dewdrop:Open(button)
+	end
+end

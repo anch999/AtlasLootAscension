@@ -11,10 +11,6 @@ AtlasLoot:DewdropSubMenuOpen(loottable)
 AtlasLoot:DewdropModuleMenuOpen()
 ]]
 
-AtlasLoot_Data["AtlasLootFallback"] = {
-    EmptyInstance = {}
-}
-
 --Called whenever the loot browser is shown and sets up buttons and loot tables
 function AtlasLoot:OnShow()
     --Definition of where I want the loot table to be shown
@@ -30,7 +26,7 @@ function AtlasLoot:OnShow()
         self.lastModule = lastboss[4]
         self.moduleName = lastboss[6]
         self:IsLootTableAvailable(lastboss[4])
-        AtlasLootDefaultFrame_Menu:SetText(self.moduleName)
+        self.mainUI.moduelMenuButton:SetText(self.moduleName)
         self:ShowItemsFrame(lastboss[1], "AtlasLoot_Data", lastboss[3])
     else
         self:ShowItemsFrame("EmptyTable", "AtlasLoot_Data", 1)
@@ -71,14 +67,14 @@ function AtlasLoot:DewDropClick(tablename, text, tablenum)
     self.filterEnable = false
     self.backEnabled = false
     self.moduleName = text
-    AtlasLootFilterCheck:SetChecked(false)
+    self.mainUI.filterButton:SetChecked(false)
     tablename = tablename .. self.Expac
     self.currentTable = tablename
     tablenum = tablenum or 1
     self.lastModule = AtlasLoot_SubMenus[tablename].Module
-    AtlasLootDefaultFrame_Menu:SetText(text)
+    self.mainUI.moduelMenuButton:SetText(text)
     self:IsLootTableAvailable(AtlasLoot_SubMenus[tablename].Module)
-    local lasttable = self.db.profile.savedState[self.currentTable]
+        local lasttable = self.db.profile.savedState[self.currentTable]
         if lasttable then
             self:ShowItemsFrame(lasttable[1], lasttable[2], lasttable[3])
         else
@@ -241,7 +237,7 @@ Constructs the main category menu from a tiered table
 ]]
 local moduleMenuLoaded
 function AtlasLoot:DewdropModuleMenuOpen()
-    local frame = AtlasLootDefaultFrame_Menu
+    local frame = self.mainUI.moduelMenuButton
     if self.Dewdrop:IsOpen(frame) then self.Dewdrop:Close() return end
     if not moduleMenuLoaded then
         self.Dewdrop:Register(frame,

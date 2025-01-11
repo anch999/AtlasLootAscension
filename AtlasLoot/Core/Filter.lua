@@ -175,11 +175,11 @@ function AtlasLoot:FilterEnableButton(frame, btnclick)
 		if self.Dewdrop:IsOpen() then
 			self.Dewdrop:Close()
 		else
-			self.Dewdrop:Unregister(AtlasLootFilterCheck)
+			self.Dewdrop:Unregister(self.mainUI.filterButton)
 			self:FilterMenuRegister()
 			self.Dewdrop:Open(frame)
 		end
-		AtlasLootFilterCheck:SetChecked(not AtlasLootFilterCheck:GetChecked())
+		self.mainUI.filterButton:SetChecked(not self.mainUI.filterButton:GetChecked())
 	else
 		if self.filterEnable then
 			self.filterEnable = false
@@ -207,7 +207,7 @@ Constructs the Filter menu.
 function AtlasLoot:FilterMenuRegister()
 
 	local db = AtlasLootFilterDB
-	self.Dewdrop:Register(AtlasLootFilterCheck,
+	self.Dewdrop:Register(self.mainUI.filterButton,
 		'point', function(parent)
 			return "TOPLEFT", "BOTTOM"
 		end,

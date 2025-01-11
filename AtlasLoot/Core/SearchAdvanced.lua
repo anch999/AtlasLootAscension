@@ -140,7 +140,7 @@ function AtlasLoot:AdvancedSearchSetup()
 end
 
 function AtlasLoot:AdvancedSearchShow()
-    if (AtlasLootDefaultFrame_AdvancedSearchPanel:IsVisible()) then
+    if (self.searchPanel:IsVisible()) then
         self:AdvancedSearchClose()
         return
     end
@@ -149,15 +149,12 @@ function AtlasLoot:AdvancedSearchShow()
     self:ToggleNavigationButtonsVisibility()
 
     -- Hide the Filter Check-Box
-    AtlasLootFilterCheck:Hide()
-
-    for i = 1, 30, 1 do
-        _G["AtlasLootItem_" .. i]:Hide()
-    end
+    self.mainUI.filterButton:Hide()
+    self.mainUI.itemframe:Hide()
 
     AtlasLoot_BossName:SetText("Advanced Search")
 
-    AtlasLootDefaultFrame_AdvancedSearchPanel:Show()
+    self.searchPanel:Show()
 
     self.CurrentType = "Search"
 	self:ScrollFrameUpdate()
@@ -165,7 +162,8 @@ function AtlasLoot:AdvancedSearchShow()
 end
 
 function AtlasLoot:AdvancedSearchClose()
-    AtlasLootDefaultFrame_AdvancedSearchPanel:Hide()
+    self.searchPanel:Hide()
+    self.mainUI.itemframe:Show()
     self:ItemFrameRefresh()
 end
 
@@ -191,8 +189,8 @@ function AtlasLoot:AdvancedSearchReset()
     AtlasLootDefaultFrame_AdvancedSearchPanel_iLevelMax:SetText("")
 
     AtlasLootDefaultFrame_AdvancedSearchPanel_EquipButton:SetText("Select Item Type")
-    AtlasLootDefaultFrame_AdvancedSearchPanel_EquipSubButton:Disable()
-    AtlasLootDefaultFrame_AdvancedSearchPanel_EquipSubButton:SetText("Select Option")
+    self.searchPanel.equipbtn.subbtn:Disable()
+    self.searchPanel.equipbtn.subbtn:SetText("Select Option")
 end
 
 function AtlasLoot:AddArgumentContainer()
@@ -528,6 +526,6 @@ function AtlasLoot:AdvancedSearch(Text)
         end
     end
 
-    AtlasLootDefaultFrame_AdvancedSearchPanel:Hide()
+    self.searchPanel:Hide()
     self:Search(string.lower(advSearchString))
 end

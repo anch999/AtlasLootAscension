@@ -7,6 +7,7 @@ AtlasLoot.DebugMessages = false
 AtlasLoot.Dewdrop = AceLibrary("Dewdrop-2.0")
 AtlasLoot.CurrentType = "Default"
 AtlasLoot.type = {}
+AtlasLoot.skin = { buttons = {}, frames = {} }
 
 -- Colours stored for code readability
 AtlasLoot.Colors = {
@@ -142,9 +143,9 @@ function AtlasLoot:SlashCommand(msg)
 	local cmd, arg1, arg2 = string.split(" ", msg, 3)
 	cmd = string.lower(cmd or "")
 
-	if cmd == AL["reset"] then
+	if cmd == "reset" then
 		self:Reset("frames")
-	elseif cmd == AL["options"] then
+	elseif cmd == "options" then
 		self:OptionsToggle()
 	elseif cmd == "updatecache" and self.selectedProfile.isAdmin then
 		self:UpdateItemIDsDatabase(tonumber(arg1), tonumber(arg2))
