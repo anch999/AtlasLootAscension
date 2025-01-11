@@ -171,7 +171,7 @@ function AtlasLoot:ItemOnClick(item, button)
         elseif button == "LeftButton" and self.itemUnlock then
             --move wishlist item up
             self:MoveWishlistItem("Up",item.number)
-        elseif button == "RightButton" and itemID and IsAltKeyDown() and AtlasLootItemsFrame.refresh[2] ~= "AtlasLoot_CurrentWishList" then
+        elseif button == "RightButton" and itemID and IsAltKeyDown() and self.itemframe.refresh[2] ~= "AtlasLoot_CurrentWishList" then
             local wList = AtlasLootWishList.Options[playerName].DefaultWishList
             --add to defauly wishlist
             self:WishListAddDropClick(wList[1], wList[3], item)
@@ -193,7 +193,7 @@ function AtlasLoot:ItemOnClick(item, button)
             --view item in dressing room
             DressUpItemLink(itemLink)
         elseif IsAltKeyDown() then
-            if AtlasLootItemsFrame.refresh[2] == "AtlasLoot_CurrentWishList" then
+            if self.itemframe.refresh[2] == "AtlasLoot_CurrentWishList" then
                 self:DeleteFromWishList(item.number)
             end
         elseif item.sourcePage and item.sourcePage[2] == "Source" then
@@ -224,7 +224,7 @@ function AtlasLoot:ItemOnClick(item, button)
         elseif button == "RightButton" then
             self:ItemContextMenu(item, "spell", recipeData)
         elseif IsAltKeyDown() then
-            if AtlasLootItemsFrame.refresh[2] == "AtlasLoot_CurrentWishList" then
+            if self.itemframe.refresh[2] == "AtlasLoot_CurrentWishList" then
                 self:DeleteFromWishList(item.number)
             end
         elseif(IsControlKeyDown()) then
@@ -445,7 +445,7 @@ function AtlasLoot:ItemContextMenu(data, Type, recipeData)
                         'textHeight', 13,
                         'textWidth', 13
                         )
-                        if AtlasLootItemsFrame.refresh[2] == "AtlasLoot_CurrentWishList" then
+                        if self.itemframe.refresh[2] == "AtlasLoot_CurrentWishList" then
                             self.Dewdrop:AddLine(
                                 "text", AL["Delete"],
                                 "func", function() self:DeleteFromWishList(data.number) end,

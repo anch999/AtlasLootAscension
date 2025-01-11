@@ -70,6 +70,14 @@
 		<HighlightTexture file="Interface\QuestFrame\UI-QuestTitleHighlight" alphaMode="ADD"/>
     </Button>
 
+	<Frame name="AtlasLootFramesTemplate" virtual="true">
+        <Scripts>
+			<OnLoad> 
+                tinsert(ATLASLOOT.skin.frames, self)
+        	</OnLoad>
+		</Scripts>
+    </Frame>
+
     <Script file="AtlaslootDefaultFrameCreate.lua"/>
     <Script file="AtlaslootDefaultFrame.lua"/>
     <Script file="AtlasLootAdvancedSearchCreate.lua"/>

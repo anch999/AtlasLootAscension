@@ -93,32 +93,24 @@ function AtlasLoot:InitializeSkins()
         },
     }
 
-    local backDropFrames = {
-        "AtlasLoot_FavoritesPopupFrame",
-        "AtlasLoot_LootBackground",
-        "Atlasloot_Difficulty_ScrollFrame",
-        "Atlasloot_SubTableFrame",
-        "AtlasLoot_PopupFrame",
-    }
-
     --[[
     AtlasLoot:SetSkin()
     Changes the skin
     ]]
-    function AtlasLoot:SetSkin(skin)
+    function self:SetSkin(skin)
         skin = skins[skin]
-            for _, frame in pairs(backDropFrames) do
-                _G[frame]:SetBackdrop({
+            for _, frame in pairs(self.skin.frames) do
+                frame:SetBackdrop({
                     bgFile = skin.Backdrop.bg, tile = skin.Backdrop.tile, tileSize = 16,
                     edgeFile = skin.Backdrop.edge, edgeSize = skin.edgeSize,
                     insets = { left = skin.insets[1], right = skin.insets[2], top = skin.insets[3], bottom = skin.insets[4] },
                 })
-                _G[frame]:SetBackdropColor(skin.Backdrop.bgColor[1], skin.Backdrop.bgColor[2], skin.Backdrop.bgColor[3], skin.Backdrop.bgColor[4])
-                _G[frame]:SetBackdropBorderColor(skin.Backdrop.edgeColor[1], skin.Backdrop.edgeColor[2], skin.Backdrop.edgeColor[3], skin.Backdrop.edgeColor[4])
+                frame:SetBackdropColor(skin.Backdrop.bgColor[1], skin.Backdrop.bgColor[2], skin.Backdrop.bgColor[3], skin.Backdrop.bgColor[4])
+                frame:SetBackdropBorderColor(skin.Backdrop.edgeColor[1], skin.Backdrop.edgeColor[2], skin.Backdrop.edgeColor[3], skin.Backdrop.edgeColor[4])
             end
 
             local DF = self.CloseDefaults
-            _G["AtlasLootDefaultFrameCloseButton"]:SetPoint(DF[1], DF[2], DF[3], DF[4]+skin.closebtn[1], DF[5]+skin.closebtn[2])
+            self.mainUI.CloseButton:SetPoint(DF[1], DF[2], DF[3], DF[4]+skin.closebtn[1], DF[5]+skin.closebtn[2])
 
             local TDF = self.TitleDefaults
             self.mainUI.TitleText:SetPoint(TDF[1], TDF[2], TDF[3], TDF[4]+skin.title[1], TDF[5]+skin.title[2])

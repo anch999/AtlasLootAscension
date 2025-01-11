@@ -52,7 +52,7 @@ local CraftingFilterTable = {
 AtlasLootFilter = { FilterList = {} }
 
 function AtlasLoot:HideFilteredItems()
-	local dataID, dataSource, tablenum = AtlasLootItemsFrame.refreshFilter[1], _G[AtlasLootItemsFrame.refreshFilter[2]], AtlasLootItemsFrame.refreshFilter[3]
+	local dataID, dataSource, tablenum = self.itemframe.refreshFilter[1], _G[self.itemframe.refreshFilter[2]], self.itemframe.refreshFilter[3]
  	local tablebase = dataSource[dataID][tablenum]
 	if not tablebase or dataID == "WishList" then return end
 	local source = dataSource[dataID]
@@ -183,7 +183,7 @@ function AtlasLoot:FilterEnableButton(frame, btnclick)
 	else
 		if self.filterEnable then
 			self.filterEnable = false
-			self:ShowItemsFrame(AtlasLootItemsFrame.refreshFilter[1], AtlasLootItemsFrame.refreshFilter[2], AtlasLootItemsFrame.refreshFilter[3])
+			self:ShowItemsFrame(self.itemframe.refreshFilter[1], self.itemframe.refreshFilter[2], self.itemframe.refreshFilter[3])
 		else
 			self.filterEnable = true
 			self:HideFilteredItems()
@@ -212,7 +212,7 @@ function AtlasLoot:FilterMenuRegister()
 			return "TOPLEFT", "BOTTOM"
 		end,
 		'children', function(level, value)
-			if _G[AtlasLootItemsFrame.refreshFilter[2]][AtlasLootItemsFrame.refreshFilter[1]].vanity then
+			if _G[self.itemframe.refreshFilter[2]][self.itemframe.refreshFilter[1]].vanity then
 				for _, filter in ipairs(VanityFilterTable) do
 					local fDB = db.VanityFilters
 					if not fDB[filter[1]] then fDB[filter[1]] = false end
@@ -230,7 +230,7 @@ function AtlasLoot:FilterMenuRegister()
 						"closeWhenClicked", true
 					)
 				end
-			elseif _G[AtlasLootItemsFrame.refreshFilter[2]][AtlasLootItemsFrame.refreshFilter[1]].Type == "Crafting" then
+			elseif _G[self.itemframe.refreshFilter[2]][self.itemframe.refreshFilter[1]].Type == "Crafting" then
 				for _, filter in ipairs(CraftingFilterTable) do
 					local fDB = db.CraftingFilters
 					if not fDB[filter[1]] then fDB[filter[1]] = false end

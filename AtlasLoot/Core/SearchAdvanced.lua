@@ -150,9 +150,9 @@ function AtlasLoot:AdvancedSearchShow()
 
     -- Hide the Filter Check-Box
     self.mainUI.filterButton:Hide()
-    self.mainUI.itemframe:Hide()
+    self.itemframe:Hide()
 
-    AtlasLoot_BossName:SetText("Advanced Search")
+    self.itemframe.Label:SetText("Advanced Search")
 
     self.searchPanel:Show()
 
@@ -163,7 +163,7 @@ end
 
 function AtlasLoot:AdvancedSearchClose()
     self.searchPanel:Hide()
-    self.mainUI.itemframe:Show()
+    self.itemframe:Show()
     self:ItemFrameRefresh()
 end
 

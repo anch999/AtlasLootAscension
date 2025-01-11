@@ -26,7 +26,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 	--Hide Map and reshow lootbackground
 	self.mainUI.mapFrame:Hide()
     self.mainUI.lootBackground:Show()
-	self.mainUI.itemframe:Show()
+	self.itemframe:Show()
 
 	-- Hide the Filter Check-Box
 	self.mainUI.filterButton:Hide()
@@ -39,7 +39,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 	if dataSource_backup ~= "AtlasLoot_OnDemand" and dataSource_backup ~= "AtlasLoot_TokenData" and dataSource[dataID] and dataSource[dataID].Map then
 		self.mainUI.mapButton:Enable()
 		-- Stops map reseting to default while still in the same raid/instance table
-		if AtlasLootItemsFrame.refresh == nil or dataID ~= AtlasLootItemsFrame.refresh[1] then
+		if self.itemframe.refresh == nil or dataID ~= self.itemframe.refresh[1] then
 			self.MapNum = 1
 			self.CurrentMap = dataSource[dataID].Map
 			self:SetMapButtonText(self.CurrentMap)
@@ -113,7 +113,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 
 	for i = 1, 30, 1 do
 		--Use shortcuts for easier reference to parts of the item button
-		local itemButton = self.mainUI.itemframe.buttons[i]
+		local itemButton = self.itemframe.buttons[i]
 			itemButton:Hide()
 			itemButton.itemID = nil
 			itemButton.spellID = nil
@@ -123,9 +123,9 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 
 	-- Sets the main page lable
 	if dataSource[dataID][tablenum] and dataSource[dataID][tablenum].Name then
-		AtlasLoot_BossName:SetText(dataSource[dataID][tablenum].Name)
+		self.itemframe.Label:SetText(dataSource[dataID][tablenum].Name)
 	else
-		AtlasLoot_BossName:SetText("This Is Empty")
+		self.itemframe.Label:SetText("This Is Empty")
 		return
 	end
 
@@ -180,7 +180,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 
 		local spellName, spellIcon
 		--Use shortcuts for easier reference to parts of the item button
-		local itemButton = self.mainUI.itemframe.buttons[newPosition]
+		local itemButton = self.itemframe.buttons[newPosition]
 		local iconFrame  = itemButton.Icon
 		local nameFrame  = itemButton.Name
 		local extraFrame = itemButton.ExtraText
@@ -401,20 +401,20 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 -----------------------------------------------------------------------------------------------------------------------------
 
 		--Store data about the state of the items frame to allow minor tweaks or a recall of the current loot page
-		AtlasLootItemsFrame.refresh = {dataID, dataSource_backup, tablenum}
+		self.itemframe.refresh = {dataID, dataSource_backup, tablenum}
 
 		if dataID ~= "FilterList" then
-			AtlasLootItemsFrame.refreshFilter = {dataID, dataSource_backup, tablenum}
+			self.itemframe.refreshFilter = {dataID, dataSource_backup, tablenum}
 		end
 
 		if dataID ~= "FilterList"  and dataSource[dataID].Back ~= true then
-			AtlasLootItemsFrame.refreshOri = {dataID, dataSource_backup, tablenum}
+			self.itemframe.refreshOri = {dataID, dataSource_backup, tablenum}
 		end
 
 		if dataID == "SearchResult" then
-			AtlasLootItemsFrame.refreshSearch = {dataID, dataSource_backup, tablenum}
+			self.itemframe.refreshSearch = {dataID, dataSource_backup, tablenum}
 		elseif not self.mainUI.backbutton:IsVisible() then
-			AtlasLootItemsFrame.refreshSearch = nil
+			self.itemframe.refreshSearch = nil
 		end
 
 		if dataSource_backup ~= "AtlasLoot_OnDemand" and dataID ~= "SearchResult" and dataSource_backup ~= "AtlasLoot_CurrentWishList" and dataID ~= "FilterList"  and
@@ -450,12 +450,12 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 
 		--Hide navigation buttons by default, only show what we need
 		self:ToggleNavigationButtonsVisibility()
-		self.mainUI.nextbutton:SetParent(self.mainUI.itemframe)
-		self.mainUI.prevbutton:SetParent(self.mainUI.itemframe)
+		self.mainUI.nextbutton:SetParent(self.itemframe)
+		self.mainUI.prevbutton:SetParent(self.itemframe)
 		self.mainUI.nextbutton:ClearAllPoints()
-		self.mainUI.nextbutton:SetPoint("BOTTOMRIGHT", self.mainUI.itemframe, "BOTTOMRIGHT",-5,5)
+		self.mainUI.nextbutton:SetPoint("BOTTOMRIGHT", self.itemframe, "BOTTOMRIGHT",-5,5)
 		self.mainUI.prevbutton:ClearAllPoints()
-		self.mainUI.prevbutton:SetPoint("BOTTOMLEFT", self.mainUI.itemframe, "BOTTOMLEFT",5,5)
+		self.mainUI.prevbutton:SetPoint("BOTTOMLEFT", self.itemframe, "BOTTOMLEFT",5,5)
 		self:ToogleWishListButtons()
 		self.mainUI.learnSpellbtn:Hide()
 
@@ -475,11 +475,11 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 
 		local tablebase = {dataID, dataSource_backup}
 		if dataID == "FilterList" then
-			tablebase = {AtlasLootItemsFrame.refreshOri[1],AtlasLootItemsFrame.refreshOri[2]}
-			tablenum = AtlasLootItemsFrame.refreshOri[3]
+			tablebase = {self.itemframe.refreshOri[1],self.itemframe.refreshOri[2]}
+			tablenum = self.itemframe.refreshOri[3]
 		end
 
-		if AtlasLootItemsFrame.refresh and AtlasLootItemsFrame.refreshOri and tablenum ~= #_G[AtlasLootItemsFrame.refreshOri[2]][AtlasLootItemsFrame.refreshOri[1]] and dataSource_backup ~= "AtlasLoot_TokenData" and dataID ~= "SearchResult" or tablenum ~= #_G[AtlasLootItemsFrame.refresh[2]][AtlasLootItemsFrame.refresh[1]] and dataID == "SearchResult" then
+		if self.itemframe.refresh and self.itemframe.refreshOri and tablenum ~= #_G[self.itemframe.refreshOri[2]][self.itemframe.refreshOri[1]] and dataSource_backup ~= "AtlasLoot_TokenData" and dataID ~= "SearchResult" or tablenum ~= #_G[self.itemframe.refresh[2]][self.itemframe.refresh[1]] and dataID == "SearchResult" then
 			self.mainUI.nextbutton:Show()
 			self.mainUI.nextbutton.tablenum = tablenum + 1
 			self.mainUI.nextbutton.tablebase = tablebase
@@ -494,7 +494,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 		if dataSource[dataID].Back or self.backEnabled then
 			self.mainUI.backbutton:Show()
 		elseif dataID ~= "FilterList" then
-			AtlasLootItemsFrame.refreshBack = {dataID, dataSource_backup, tablenum}
+			self.itemframe.refreshBack = {dataID, dataSource_backup, tablenum}
 		end
 	end
 
@@ -509,20 +509,20 @@ AtlasLoot:SetFavorites(number)
 sets the favorite when alt right clicked
 ]]
 function AtlasLoot:SetFavorites(num)
-    if AtlasLootItemsFrame.refresh[2] == "AtlasLoot_CurrentWishList" then
+    if self.itemframe.refresh[2] == "AtlasLoot_CurrentWishList" then
         AtlasLootCharDB.QuickLooks[num]={AtlasLoot_CurrentWishList.Show.ListType, "AtlasLootWishList", AtlasLoot_CurrentWishList.Show.ListNum, self.lastModule, self.currentTable, _G["AtlasLootWishList"][AtlasLoot_CurrentWishList.Show.ListType][AtlasLoot_CurrentWishList.Show.ListNum].Name}
     else
-        AtlasLootCharDB.QuickLooks[num]={AtlasLootItemsFrame.refreshOri[1], AtlasLootItemsFrame.refreshOri[2], AtlasLootItemsFrame.refreshOri[3], self.lastModule, self.currentTable, _G[AtlasLootItemsFrame.refreshOri[2]][AtlasLootItemsFrame.refreshOri[1]][AtlasLootItemsFrame.refreshOri[3]].Name}
+        AtlasLootCharDB.QuickLooks[num]={self.itemframe.refreshOri[1], self.itemframe.refreshOri[2], self.itemframe.refreshOri[3], self.lastModule, self.currentTable, _G[self.itemframe.refreshOri[2]][self.itemframe.refreshOri[1]][self.itemframe.refreshOri[3]].Name}
     end
 end
 
 --Called when 'Back'Button is pressed and calls up the appropriate loot page
 function AtlasLoot:BackButton_OnClick()
 	self.backEnabled = false
-	if AtlasLootItemsFrame.refreshSearch then
-		self:ShowItemsFrame(AtlasLootItemsFrame.refreshSearch[1], AtlasLootItemsFrame.refreshSearch[2], AtlasLootItemsFrame.refreshSearch[3])
+	if self.itemframe.refreshSearch then
+		self:ShowItemsFrame(self.itemframe.refreshSearch[1], self.itemframe.refreshSearch[2], self.itemframe.refreshSearch[3])
 	else
-		self:ShowItemsFrame(AtlasLootItemsFrame.refreshBack[1], AtlasLootItemsFrame.refreshBack[2], AtlasLootItemsFrame.refreshBack[3])
+		self:ShowItemsFrame(self.itemframe.refreshBack[1], self.itemframe.refreshBack[2], self.itemframe.refreshBack[3])
 	end
 end
 

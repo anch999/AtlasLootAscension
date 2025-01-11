@@ -98,7 +98,7 @@ function AtlasLoot:AddItemCustomHeader(num,text)
 	else
 		table.insert(AtlasLootWishList[AtlasLoot_CurrentWishList.Show.ListType][AtlasLoot_CurrentWishList.Show.ListNum],{num, icon = "INV_Box_01", name =  self.Colors.WHITE..text, ""})
 	end
-	AtlasLoot:ShowWishList(AtlasLoot_CurrentWishList.Show.ListType, AtlasLoot_CurrentWishList.Show.ListNum,AtlasLootItemsFrame.refresh[3])
+	AtlasLoot:ShowWishList(AtlasLoot_CurrentWishList.Show.ListType, AtlasLoot_CurrentWishList.Show.ListNum,self.itemframe.refresh[3])
 end
 
 -- Opens edit wishlist name/icon window
@@ -113,7 +113,7 @@ end
 
 -- Moves wishlist item
 function AtlasLoot:MoveWishlistItem(pos,itemNum,replaceNum,replaceNum2)
-	itemNum = itemNum + ((AtlasLootItemsFrame.refresh[3]-1)*30)
+	itemNum = itemNum + ((self.itemframe.refresh[3]-1)*30)
 	if pos == "Up" then replaceNum = itemNum - 1 replaceNum2 = 1 elseif pos == "Down" then replaceNum = itemNum + 1 replaceNum2 = -1 end
 	if replaceNum ~= 0 then
 		for i,v in ipairs(AtlasLootWishList[AtlasLoot_CurrentWishList.Show.ListType][AtlasLoot_CurrentWishList.Show.ListNum]) do
@@ -123,7 +123,7 @@ function AtlasLoot:MoveWishlistItem(pos,itemNum,replaceNum,replaceNum2)
 				v[1] = v[1] + replaceNum2
 			end
 		end
-		AtlasLoot:ShowWishList(AtlasLoot_CurrentWishList.Show.ListType, AtlasLoot_CurrentWishList.Show.ListNum,AtlasLootItemsFrame.refresh[3])
+		AtlasLoot:ShowWishList(AtlasLoot_CurrentWishList.Show.ListType, AtlasLoot_CurrentWishList.Show.ListNum,self.itemframe.refresh[3])
 	end
 end
 
@@ -174,7 +174,7 @@ end
 
 -- Clones a shared wishlist to personal table
 function AtlasLoot:CloneSharedWishList()
-	table.insert(AtlasLootWishList.Own,AtlasLootWishList[AtlasLootItemsFrame.refresh[1]][AtlasLootItemsFrame.refresh[3]])
+	table.insert(AtlasLootWishList.Own,AtlasLootWishList[self.itemframe.refresh[1]][self.itemframe.refresh[3]])
 end
 
 -- Clones a shared wishlist to personal table
@@ -186,7 +186,7 @@ end
 
 -- Deletes current wishlist
 function AtlasLoot:DeleteWishList()
-	if AtlasLootItemsFrame.refresh[2] == "AtlasLoot_CurrentWishList" then
+	if self.itemframe.refresh[2] == "AtlasLoot_CurrentWishList" then
 		StaticPopup_Show("ATLASLOOT_DELETE_WISHLIST")
 	end
 end
@@ -331,8 +331,8 @@ AtlasLoot:DeleteFromWishList(btnNumber)
 Deletes the specified items from the wishlist
 ]]
 function AtlasLoot:DeleteFromWishList(btnNumber)
-	btnNumber  = btnNumber + ((AtlasLootItemsFrame.refresh[3] - 1) * 30)
-	if AtlasLootItemsFrame.refresh[2] == "AtlasLoot_CurrentWishList" then
+	btnNumber  = btnNumber + ((self.itemframe.refresh[3] - 1) * 30)
+	if self.itemframe.refresh[2] == "AtlasLoot_CurrentWishList" then
 	   for i, v in ipairs(AtlasLootWishList[AtlasLoot_CurrentWishList.Show.ListType][AtlasLoot_CurrentWishList.Show.ListNum]) do
 			if v[1] == btnNumber then
 				local numPos = v[1]
@@ -356,8 +356,8 @@ function AtlasLoot:DeleteFromWishList(btnNumber)
 			end
 	   end
 	end
-	AtlasLootItemsFrame:Hide()
-	self:ShowWishList(AtlasLoot_CurrentWishList.Show.ListType, AtlasLoot_CurrentWishList.Show.ListNum,AtlasLootItemsFrame.refresh[3])
+	self.itemframe:Hide()
+	self:ShowWishList(AtlasLoot_CurrentWishList.Show.ListType, AtlasLoot_CurrentWishList.Show.ListNum,self.itemframe.refresh[3])
  end
 
 --[[
@@ -474,7 +474,7 @@ function AtlasLoot:WishListOptionsOpen()
 					"func", function() self:SortWishList(true,AtlasLoot_CurrentWishList.Show.ListType,AtlasLoot_CurrentWishList.Show.ListNum) end,
 					"notCheckable", true
 				)
-				if  AtlasLootItemsFrame.refresh[2] == "AtlasLoot_CurrentWishList" and AtlasLoot_CurrentWishList.Show.ListType == "Shared" then
+				if  self.itemframe.refresh[2] == "AtlasLoot_CurrentWishList" and AtlasLoot_CurrentWishList.Show.ListType == "Shared" then
 					self.Dewdrop:AddLine(
 						"text", AL["Copy Wishlist To Own"],
 						'textHeight', self.selectedProfile.txtSize,
@@ -484,7 +484,7 @@ function AtlasLoot:WishListOptionsOpen()
 						"notCheckable", true
 					)
 				end
-				if AtlasLootItemsFrame.refresh[2] == "AtlasLoot_CurrentWishList" and AtlasLoot_CurrentWishList.Show.ListType == "Own" then
+				if self.itemframe.refresh[2] == "AtlasLoot_CurrentWishList" and AtlasLoot_CurrentWishList.Show.ListType == "Own" then
 					self.Dewdrop:AddLine(
 						"text", AL["Make Wishlist Default"],
 						'textHeight', self.selectedProfile.txtSize,
@@ -785,7 +785,7 @@ function AtlasLoot:CreateWishlistOptions()
 				elseif curaddicon ~= "" then
 					table.insert( AtlasLootWishList.Own,{Name = curaddname, Icon = curaddicon})
 					WishListAddFrame:Hide()
-					if AtlasLootItemsFrame.refresh[2] == "AtlasLoot_CurrentWishList" then
+					if self.itemframe.refresh[2] == "AtlasLoot_CurrentWishList" then
 						self:ShowWishList(AtlasLoot_CurrentWishList.Show.ListType, AtlasLoot_CurrentWishList.Show.ListNum)
 					end
 				end

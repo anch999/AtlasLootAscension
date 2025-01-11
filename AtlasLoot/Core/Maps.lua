@@ -132,12 +132,12 @@ function AtlasLoot:MapOnShow(mapID, mapNum, refresh)
         self.mainUI.mapFrame:Hide()
         self.mainUI.lootBackground:Show()
         self:BackButton_OnClick()
-        AtlasLoot_BossName:Show()
+        self.itemframe.Label:Show()
         Atlasloot_HeaderLabel:Hide()
         self:ScrollFrameUpdate()
     else
         if self.CurrentMap then
-            AtlasLoot_BossName:Hide()
+            self.itemframe.Label:Hide()
             -- Hide the Filter Check-Box
 	        self.mainUI.filterButton:Hide()
             self.mainUI.lootBackground:Hide()

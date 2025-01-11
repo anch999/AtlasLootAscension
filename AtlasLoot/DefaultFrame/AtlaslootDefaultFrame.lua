@@ -15,7 +15,7 @@ AtlasLoot:DewdropModuleMenuOpen()
 function AtlasLoot:OnShow()
     --Definition of where I want the loot table to be shown
     --Remove the selection of a loot table in Atlas
-    AtlasLootItemsFrame.activeBoss = nil
+    self.itemframe.activeBoss = nil
     --Set the item table to the loot table
     --Show the last displayed loot table
     local lastboss = self.db.profile.LastBoss[self.Expac]

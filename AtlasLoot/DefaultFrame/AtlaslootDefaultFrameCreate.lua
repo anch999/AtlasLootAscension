@@ -35,7 +35,7 @@ function AtlasLoot:InitializeUI()
 	tinsert(UISpecialFrames, "AtlasLootDefaultFrame")
 
     --Loot Background
-    self.mainUI.lootBackground = CreateFrame("Frame", "AtlasLoot_LootBackground", self.mainUI)
+    self.mainUI.lootBackground = CreateFrame("Frame", "AtlasLoot_LootBackground", self.mainUI, "AtlasLootFramesTemplate")
     self.mainUI.lootBackground:SetSize(770,515)
     self.mainUI.lootBackground:SetPoint("TOPLEFT", self.mainUI, "TOPLEFT",30,-86)
     self.mainUI.lootBackground:EnableMouse()
@@ -68,33 +68,33 @@ function AtlasLoot:InitializeUI()
     self.mainUI.lootBackground.Back:SetPoint("CENTER",self.mainUI.lootBackground)
 
 ----------------------------------- Item Loot Panel -------------------------------------------
-    self.mainUI.itemframe = CreateFrame("Frame", "AtlasLootItemsFrame", self.mainUI.lootBackground)
-    self.mainUI.itemframe:SetSize(765,510)
-    self.mainUI.itemframe:SetPoint("TOPLEFT", self.mainUI.lootBackground, "TOPLEFT", 2, -2)
-    self.mainUI.itemframe.Label = self.mainUI.itemframe:CreateFontString("AtlasLoot_BossName","OVERLAY","GameFontHighlightLarge")
-    self.mainUI.itemframe.Label:SetPoint("TOP", self.mainUI.itemframe, "TOP")
-    self.mainUI.itemframe.Label:SetSize(512,30)
-    self.mainUI.itemframe.Label:SetJustifyH("CENTER")
+    self.itemframe = CreateFrame("Frame", nil, self.mainUI.lootBackground)
+    self.itemframe:SetSize(765,510)
+    self.itemframe:SetPoint("TOPLEFT", self.mainUI.lootBackground, "TOPLEFT", 2, -2)
+    self.itemframe.Label = self.itemframe:CreateFontString(nil,"OVERLAY","GameFontHighlightLarge")
+    self.itemframe.Label:SetPoint("TOP", self.itemframe, "TOP")
+    self.itemframe.Label:SetSize(512,30)
+    self.itemframe.Label:SetJustifyH("CENTER")
 
-    self.mainUI.itemframe.buttons = {}
+    self.itemframe.buttons = {}
     for num = 1, 30 do
-            self.mainUI.itemframe.buttons[num] = CreateFrame("Button", "AtlasLootItem_"..num, self.mainUI.itemframe, "AtlasLootItemTemplate")
-            local button = self.mainUI.itemframe.buttons[num]
+            self.itemframe.buttons[num] = CreateFrame("Button", "AtlasLootItem_"..num, self.itemframe, "AtlasLootItemTemplate")
+            local button = self.itemframe.buttons[num]
             button:SetID(num)
             button.number = num
             button:ClearAllPoints()
             if num == 1 then
-                button:SetPoint("TOP", self.mainUI.itemframe, "TOP",-210,-35)
+                button:SetPoint("TOP", self.itemframe, "TOP",-210,-35)
             elseif num == 16 then
-                button:SetPoint("TOP", self.mainUI.itemframe, "TOP",150,-35)
+                button:SetPoint("TOP", self.itemframe, "TOP",150,-35)
             else
-                button:SetPoint("TOPLEFT", self.mainUI.itemframe.buttons[num - 1], "BOTTOMLEFT")
+                button:SetPoint("TOPLEFT", self.itemframe.buttons[num - 1], "BOTTOMLEFT")
             end
     end
 
     --------------------------------------- Navagation buttons ---------------------------------------
-    self.mainUI.nextbutton = CreateFrame("Button", "AtlasLootItemsFrame_NEXT", self.mainUI.itemframe)
-    self.mainUI.nextbutton:SetPoint("BOTTOMRIGHT", self.mainUI.itemframe, -5, 5)
+    self.mainUI.nextbutton = CreateFrame("Button", "nil", self.itemframe)
+    self.mainUI.nextbutton:SetPoint("BOTTOMRIGHT", self.itemframe, -5, 5)
     self.mainUI.nextbutton:SetSize(32,32)
     self.mainUI.nextbutton.texture = self.mainUI.nextbutton:CreateTexture(nil, "BACKGROUND")
     self.mainUI.nextbutton.texture:SetTexture("Interface\\Buttons\\UI-PageButton-Background")
@@ -107,8 +107,8 @@ function AtlasLoot:InitializeUI()
     self.mainUI.nextbutton:SetScript("OnClick", function(button) self:NavButton_OnClick(button) end)
 
     -- Previous button
-    self.mainUI.prevbutton = CreateFrame("Button", "AtlasLootItemsFrame_PREV", self.mainUI.itemframe)
-    self.mainUI.prevbutton:SetPoint("BOTTOMLEFT", self.mainUI.itemframe, 5, 5)
+    self.mainUI.prevbutton = CreateFrame("Button", nil, self.itemframe)
+    self.mainUI.prevbutton:SetPoint("BOTTOMLEFT", self.itemframe, 5, 5)
     self.mainUI.prevbutton:SetSize(32,32)
     self.mainUI.prevbutton.texture = self.mainUI.prevbutton:CreateTexture(nil, "BACKGROUND")
     self.mainUI.prevbutton.texture:SetTexture("Interface\\Buttons\\UI-PageButton-Background")
@@ -121,8 +121,8 @@ function AtlasLoot:InitializeUI()
     self.mainUI.prevbutton:SetScript("OnClick", function(button) self:NavButton_OnClick(button) end)
 
     -- Back button
-    self.mainUI.backbutton = CreateFrame("Button", "AtlasLootItemsFrame_BACK", self.mainUI.itemframe, "UIPanelButtonTemplate")
-    self.mainUI.backbutton:SetPoint("BOTTOM", self.mainUI.itemframe, "BOTTOM",0,5)
+    self.mainUI.backbutton = CreateFrame("Button", nil, self.itemframe, "UIPanelButtonTemplate")
+    self.mainUI.backbutton:SetPoint("BOTTOM", self.itemframe, "BOTTOM",0,5)
     self.mainUI.backbutton:SetText(AL["Back"])
     self.mainUI.backbutton:SetScript("OnClick", function(button) self:BackButton_OnClick() end)
 
@@ -142,8 +142,8 @@ function AtlasLoot:InitializeUI()
 
     --------------------------------------- Wish list buttons ---------------------------------------
     -- Learn Unknown vanity spells button
-    self.mainUI.learnSpellbtn = CreateFrame("Button", "AtlasLootItemsFrame_Spell_Vanity_Learn", self.mainUI.itemframe, "UIPanelButtonTemplate")
-    self.mainUI.learnSpellbtn:SetPoint("BOTTOM", self.mainUI.itemframe, "BOTTOM",0,5)
+    self.mainUI.learnSpellbtn = CreateFrame("Button", nil, self.itemframe, "UIPanelButtonTemplate")
+    self.mainUI.learnSpellbtn:SetPoint("BOTTOM", self.itemframe, "BOTTOM",0,5)
     self.mainUI.learnSpellbtn:SetText("Learn Unknown")
     self.mainUI.learnSpellbtn:SetWidth(150)
     self.mainUI.learnSpellbtn:SetScript("OnClick", function() self:LearnAllUnknownVanitySpells() end)
@@ -153,18 +153,18 @@ function AtlasLoot:InitializeUI()
     self.mainUI.learnSpellbtn:SetScript("OnLeave", function() GameTooltip:Hide() end)
 
     -- Wishlist Own/Swap button
-    self.mainUI.wishlistSwapButton = CreateFrame("Button", "AtlasLootItemsFrame_Wishlist_Swap", self.mainUI.itemframe, "UIPanelButtonTemplate")
-    self.mainUI.wishlistSwapButton:SetPoint("BOTTOM", self.mainUI.itemframe, "BOTTOM",0,5)
+    self.mainUI.wishlistSwapButton = CreateFrame("Button", "AtlasLootItemsFrame_Wishlist_Swap", self.itemframe, "UIPanelButtonTemplate")
+    self.mainUI.wishlistSwapButton:SetPoint("BOTTOM", self.itemframe, "BOTTOM",0,5)
     self.mainUI.wishlistSwapButton:SetScript("OnClick", function(button) self:WishListSwapButton(true) end)
 
     -- Wishlist Options button
-    self.mainUI.wishlistOptionsButton = CreateFrame("Button", "AtlasLootItemsFrame_Wishlist_Options", self.mainUI.itemframe, "UIPanelButtonTemplate")
+    self.mainUI.wishlistOptionsButton = CreateFrame("Button", "AtlasLootItemsFrame_Wishlist_Options", self.itemframe, "UIPanelButtonTemplate")
     self.mainUI.wishlistOptionsButton:SetPoint("BOTTOM", self.mainUI.wishlistSwapButton, "BOTTOM",-100,0)
     self.mainUI.wishlistOptionsButton:SetText(AL["Options"])
     self.mainUI.wishlistOptionsButton:SetScript("OnClick", function(button) self:WishListOptionsOpen() end)
 
         -- Wishlist Item Lock button
-    self.mainUI.wishlistLockButton = CreateFrame("Button", "AtlasLootItemsFrame_Wishlist_UnLock", self.mainUI.itemframe, "UIPanelButtonTemplate")
+    self.mainUI.wishlistLockButton = CreateFrame("Button", "AtlasLootItemsFrame_Wishlist_UnLock", self.itemframe, "UIPanelButtonTemplate")
     self.mainUI.wishlistLockButton:SetPoint("BOTTOM", self.mainUI.wishlistOptionsButton, "BOTTOM",-100,0)
     self.mainUI.wishlistLockButton:SetScript("OnClick", function(button)
         if self.itemUnlock then
@@ -194,13 +194,13 @@ function AtlasLoot:InitializeUI()
 	end
 
     -- Wishlist Share button
-    self.mainUI.wishlistShareButton = CreateFrame("Button", "AtlasLootItemsFrame_Wishlist_Share", self.mainUI.itemframe, "UIPanelButtonTemplate")
+    self.mainUI.wishlistShareButton = CreateFrame("Button", "AtlasLootItemsFrame_Wishlist_Share", self.itemframe, "UIPanelButtonTemplate")
     self.mainUI.wishlistShareButton:SetPoint("BOTTOM", self.mainUI.wishlistSwapButton, "BOTTOM",100,0)
     self.mainUI.wishlistShareButton:SetText(AL["Share"])
     self.mainUI.wishlistShareButton:SetScript("OnClick", function() self:ShareWishList() end)
 
     -- Wishlist Share button
-    self.mainUI.wishlistLearnVanityButton = CreateFrame("Button", "AtlasLootItemsFrame_Wishlist_Vanity_Learn", self.mainUI.itemframe, "UIPanelButtonTemplate")
+    self.mainUI.wishlistLearnVanityButton = CreateFrame("Button", "AtlasLootItemsFrame_Wishlist_Vanity_Learn", self.itemframe, "UIPanelButtonTemplate")
     self.mainUI.wishlistLearnVanityButton:SetPoint("BOTTOM", self.mainUI.wishlistShareButton, "BOTTOM",100,0)
     self.mainUI.wishlistLearnVanityButton:SetText("Get Items")
     self.mainUI.wishlistLearnVanityButton:SetScript("OnClick", function() self:BatchRequestVanity(self.vanityItems, true) end)
@@ -210,8 +210,8 @@ function AtlasLoot:InitializeUI()
     self.mainUI.wishlistLearnVanityButton:SetScript("OnLeave", function() GameTooltip:Hide() end)
 
     -- Filter Button
-    self.mainUI.filterButton = CreateFrame("CheckButton","AtlasLootFilterCheck",self.mainUI.itemframe,"OptionsCheckButtonTemplate")
-    self.mainUI.filterButton:SetPoint("TOPLEFT", self.mainUI.itemframe,5 ,-5)
+    self.mainUI.filterButton = CreateFrame("CheckButton","AtlasLootFilterCheck",self.itemframe,"OptionsCheckButtonTemplate")
+    self.mainUI.filterButton:SetPoint("TOPLEFT", self.itemframe,5 ,-5)
     self.mainUI.filterButton.Label = self.mainUI.filterButton:CreateFontString(nil,"OVERLAY","GameFontNormal")
     self.mainUI.filterButton.Label:SetText(AL["Filter"])
     self.mainUI.filterButton.Label:SetPoint("RIGHT", self.mainUI.filterButton, 30, 2)
@@ -387,7 +387,7 @@ function AtlasLoot:InitializeUI()
     end)
     self.mainUI.currentInstanceButton:SetText("Current Instance")
 
-    self.mainUI.favoritesPopupFrame = CreateFrame("Frame", "AtlasLoot_FavoritesPopupFrame", AtlasLoot_Favorites)
+    self.mainUI.favoritesPopupFrame = CreateFrame("Frame", "AtlasLoot_FavoritesPopupFrame", self.mainUI.favoritesButton, "AtlasLootFramesTemplate")
     self.mainUI.favoritesPopupFrame:SetBackdrop({
         bgFile = "Interface\\DialogFrame\\UI-DialogBox-Background", tile = true, tileSize = 16,
         edgeFile = "Interface\\Tooltips\\UI-Tooltip-Border", edgeSize = 16,
@@ -467,7 +467,7 @@ function AtlasLoot:InitializeUI()
     local ROW_HEIGHT = 16   -- How tall is each row?
     local MAX_ROWS = 5      -- How many rows can be shown at once?
 
-    self.mainUI.difficultyScrollFrame = CreateFrame("Frame", "Atlasloot_Difficulty_ScrollFrame", self.mainUI)
+    self.mainUI.difficultyScrollFrame = CreateFrame("Frame", "Atlasloot_Difficulty_ScrollFrame", self.mainUI, "AtlasLootFramesTemplate")
     self.mainUI.difficultyScrollFrame:EnableMouse(true)
     self.mainUI.difficultyScrollFrame:SetSize(265, ROW_HEIGHT * MAX_ROWS + 16)
     self.mainUI.difficultyScrollFrame:SetPoint("TOPRIGHT",self.mainUI,-30,-55.5)
@@ -566,7 +566,7 @@ local rows = setmetatable({}, { __index = function(t, i)
         else
             self.ItemindexID = row.itemIndex
             if not self.searchPanel:IsVisible() then
-            self:ShowItemsFrame(self.mainUI.itemframe.refresh[1], self.mainUI.itemframe.refresh[2], self.mainUI.itemframe.refresh[3])
+            self:ShowItemsFrame(self.itemframe.refresh[1], self.itemframe.refresh[2], self.itemframe.refresh[3])
             end
             self:ScrollFrameUpdate()
         end
@@ -586,7 +586,7 @@ self.mainUI.difficultyScrollFrame.rows = rows
 local MAX_ROWS2 = 26      -- How many rows can be shown at once?
 
 --------------------Subtable Frame--------------------
-    self.mainUI.lootTableScrollFrame = CreateFrame("Frame", "Atlasloot_SubTableFrame", self.mainUI)
+    self.mainUI.lootTableScrollFrame = CreateFrame("Frame", "Atlasloot_SubTableFrame", self.mainUI, "AtlasLootFramesTemplate")
     self.mainUI.lootTableScrollFrame:EnableMouse(true)
     self.mainUI.lootTableScrollFrame:SetSize(265, ROW_HEIGHT * MAX_ROWS2 + 23)
     self.mainUI.lootTableScrollFrame:SetPoint("BOTTOMLEFT","Atlasloot_Difficulty_ScrollFrame",0,-449.5)
@@ -836,7 +836,7 @@ self.mainUI.lootTableScrollFrame.rows = rows2
     self.mainUI.streamIcon:SetPoint("TOPRIGHT", self.mainUI.lootBackground, "TOPRIGHT")
     self.mainUI.streamIcon:Hide()
 
-    self.mainUI.itemPopupframe = CreateFrame("Frame", "AtlasLoot_PopupFrame")
+    self.mainUI.itemPopupframe = CreateFrame("Frame", "AtlasLoot_PopupFrame", nil, "AtlasLootFramesTemplate")
     self.mainUI.itemPopupframe:EnableMouse()
     self.mainUI.itemPopupframe:SetScript("OnLeave", function(frame)
         self:ItemOnLeave(frame)

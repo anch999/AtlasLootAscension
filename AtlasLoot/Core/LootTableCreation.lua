@@ -35,7 +35,7 @@ function AtlasLoot:CreateToken(dataID)
 			table.insert(AtlasLoot_TokenData[orgID][1], {itemID = itemID, desc = desc})
 		end
 		if count == 1 then
-			self:ShowItemsFrame(AtlasLootItemsFrame.refresh[1], AtlasLootItemsFrame.refresh[2], AtlasLootItemsFrame.refresh[3])
+			self:ShowItemsFrame(self.itemframe.refresh[1], self.itemframe.refresh[2], self.itemframe.refresh[3])
 		end
 		count = count - 1
 	end
@@ -86,7 +86,7 @@ function AtlasLoot:CreateOnDemandLootTable(typeL)
 	local firstLoad
 	local function showTable()
 		if firstLoad then
-			self:ShowItemsFrame(AtlasLootItemsFrame.refresh[1], AtlasLootItemsFrame.refresh[2], AtlasLootItemsFrame.refresh[3])
+			self:ShowItemsFrame(self.itemframe.refresh[1], self.itemframe.refresh[2], self.itemframe.refresh[3])
 		else
 			self:ShowItemsFrame(typeL, "AtlasLoot_OnDemand", 1)
 			firstLoad = true
