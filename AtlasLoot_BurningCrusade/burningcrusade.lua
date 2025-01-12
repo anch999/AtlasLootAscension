@@ -2213,7 +2213,7 @@ AtlasLoot_Data["MagistersTerrace"] = {
 		[22] = { itemID = 34609, [alDif.MIN_DIF] = alDif.Heroic }; --Quickening Blade of the Prince
 		[23] = { itemID = 34616, [alDif.MIN_DIF] = alDif.Heroic }; --Breeching Comet
 		[24] = { itemID = 34611, [alDif.MIN_DIF] = alDif.Heroic }; --Cudgel of Consecration
-		[26] = { itemID = 35513 }; --Swift AtlasLoot.Colors.WHITE Hawkstrider
+		[26] = { itemID = 35513, [alDif.MIN_DIF] = alDif.Heroic  }; --Swift White Hawkstrider
 		[27] = { itemID = 34160 }; --The Signet Ring of Prince Kael'thas
 		[28] = { itemID = 35504 }; --Phoenix Hatchling
 	};
