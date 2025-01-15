@@ -35,7 +35,7 @@ function AtlasLoot:InitializeUI()
 	tinsert(UISpecialFrames, "AtlasLootDefaultFrame")
 
     --Loot Background
-    self.mainUI.lootBackground = CreateFrame("Frame", "AtlasLoot_LootBackground", self.mainUI, "AtlasLootFramesTemplate")
+    self.mainUI.lootBackground = CreateFrame("Frame", "AtlasLoot_LootBackground", self.mainUI, "AtlasLootFrameTemplate")
     self.mainUI.lootBackground:SetSize(770,515)
     self.mainUI.lootBackground:SetPoint("TOPLEFT", self.mainUI, "TOPLEFT",30,-86)
     self.mainUI.lootBackground:EnableMouse()
@@ -387,7 +387,7 @@ function AtlasLoot:InitializeUI()
     end)
     self.mainUI.currentInstanceButton:SetText("Current Instance")
 
-    self.mainUI.favoritesPopupFrame = CreateFrame("Frame", "AtlasLoot_FavoritesPopupFrame", self.mainUI.favoritesButton, "AtlasLootFramesTemplate")
+    self.mainUI.favoritesPopupFrame = CreateFrame("Frame", "AtlasLoot_FavoritesPopupFrame", self.mainUI.favoritesButton, "AtlasLootFrameTemplate")
     self.mainUI.favoritesPopupFrame:SetBackdrop({
         bgFile = "Interface\\DialogFrame\\UI-DialogBox-Background", tile = true, tileSize = 16,
         edgeFile = "Interface\\Tooltips\\UI-Tooltip-Border", edgeSize = 16,
@@ -467,7 +467,7 @@ function AtlasLoot:InitializeUI()
     local ROW_HEIGHT = 16   -- How tall is each row?
     local MAX_ROWS = 5      -- How many rows can be shown at once?
 
-    self.mainUI.difficultyScrollFrame = CreateFrame("Frame", "Atlasloot_Difficulty_ScrollFrame", self.mainUI, "AtlasLootFramesTemplate")
+    self.mainUI.difficultyScrollFrame = CreateFrame("Frame", "Atlasloot_Difficulty_ScrollFrame", self.mainUI, "AtlasLootFrameTemplate")
     self.mainUI.difficultyScrollFrame:EnableMouse(true)
     self.mainUI.difficultyScrollFrame:SetSize(265, ROW_HEIGHT * MAX_ROWS + 16)
     self.mainUI.difficultyScrollFrame:SetPoint("TOPRIGHT",self.mainUI,-30,-55.5)
@@ -586,7 +586,7 @@ self.mainUI.difficultyScrollFrame.rows = rows
 local MAX_ROWS2 = 26      -- How many rows can be shown at once?
 
 --------------------Subtable Frame--------------------
-    self.mainUI.lootTableScrollFrame = CreateFrame("Frame", "Atlasloot_SubTableFrame", self.mainUI, "AtlasLootFramesTemplate")
+    self.mainUI.lootTableScrollFrame = CreateFrame("Frame", "Atlasloot_SubTableFrame", self.mainUI, "AtlasLootFrameTemplate")
     self.mainUI.lootTableScrollFrame:EnableMouse(true)
     self.mainUI.lootTableScrollFrame:SetSize(265, ROW_HEIGHT * MAX_ROWS2 + 23)
     self.mainUI.lootTableScrollFrame:SetPoint("BOTTOMLEFT","Atlasloot_Difficulty_ScrollFrame",0,-449.5)
@@ -836,7 +836,7 @@ self.mainUI.lootTableScrollFrame.rows = rows2
     self.mainUI.streamIcon:SetPoint("TOPRIGHT", self.mainUI.lootBackground, "TOPRIGHT")
     self.mainUI.streamIcon:Hide()
 
-    self.mainUI.itemPopupframe = CreateFrame("Frame", "AtlasLoot_PopupFrame", nil, "AtlasLootFramesTemplate")
+    self.mainUI.itemPopupframe = CreateFrame("Frame", "AtlasLoot_PopupFrame", nil, "AtlasLootFrameTemplate")
     self.mainUI.itemPopupframe:EnableMouse()
     self.mainUI.itemPopupframe:SetScript("OnLeave", function(frame)
         self:ItemOnLeave(frame)

@@ -70,7 +70,7 @@
 		<HighlightTexture file="Interface\QuestFrame\UI-QuestTitleHighlight" alphaMode="ADD"/>
     </Button>
 
-	<Frame name="AtlasLootFramesTemplate" virtual="true">
+	<Frame name="AtlasLootFrameTemplate" virtual="true">
         <Scripts>
 			<OnLoad> 
                 tinsert(ATLASLOOT.skin.frames, self)

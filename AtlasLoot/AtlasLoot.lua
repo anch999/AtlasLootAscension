@@ -91,7 +91,6 @@ function AtlasLoot:OnEnable()
 	self:RegisterEvent("UNIT_SPELLCAST_SUCCEEDED")
 	self:InitializeWishlistMerchantGlow()
 	self:PatchNotes()
-	self:AdvancedSearchSetup()
 	self:WishlistSetup()
 
 	if IsAddOnLoaded("TomTom") then self.TomTomLoaded = true end
