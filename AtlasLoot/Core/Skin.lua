@@ -4,7 +4,7 @@ local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
 function AtlasLoot:InitializeSkins()
     self.CloseDefaults = {}
     local DF = self.CloseDefaults
-    DF[1], DF[2], DF[3], DF[4], DF[5] = _G["AtlasLootDefaultFrameCloseButton"]:GetPoint()
+    DF[1], DF[2], DF[3], DF[4], DF[5] = self.mainUI.CloseButton:GetPoint()
 
     self.TitleDefaults = {}
     local TDF = self.TitleDefaults
