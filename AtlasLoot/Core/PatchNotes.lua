@@ -5,7 +5,7 @@ local patchNotes = {
     "The learn unknown vanity button now will learn All unknown vanity spells you own",
     "Updated Hyjal Summit Loot",
     "You can now change the size of the menu text",
-    "Settings are saved as a profile and are set to defualt unless changed",
+    "Settings are saved as a profile and are set to default unless changed",
     "Wishlist settings are now in the options menu on the wishlist page",
     {"Version 7.4.7", "22th November, 2024"},
     "Fixed vanity items not showing and sorted them into more categorys",
