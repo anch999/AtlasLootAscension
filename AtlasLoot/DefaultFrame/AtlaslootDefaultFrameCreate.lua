@@ -142,29 +142,29 @@ function AtlasLoot:InitializeUI()
 
     --------------------------------------- Wish list buttons ---------------------------------------
     -- Learn Unknown vanity spells button
-    self.mainUI.learnSpellbtn = CreateFrame("Button", nil, self.itemframe, "UIPanelButtonTemplate")
+    self.mainUI.learnSpellbtn = CreateFrame("Button", "AtlasLoot_LearnUnknownSpells", self.itemframe, "OptionsButtonTemplate")
     self.mainUI.learnSpellbtn:SetPoint("BOTTOM", self.itemframe, "BOTTOM",0,5)
-    self.mainUI.learnSpellbtn:SetText("Learn Unknown")
+    self.mainUI.learnSpellbtn:SetText(AL["Learn All Unknown"])
     self.mainUI.learnSpellbtn:SetWidth(150)
     self.mainUI.learnSpellbtn:SetScript("OnClick", function() self:LearnAllUnknownVanitySpells() end)
     self.mainUI.learnSpellbtn:SetScript("OnEnter", function(button)
-        self:SetGameTooltip(button,"Learn all the vanity items and spells that you currently don't know on this character")
+        self:SetGameTooltip(button,AL["Learn all the vanity items and spells that you currently don't know on this character"])
     end)
     self.mainUI.learnSpellbtn:SetScript("OnLeave", function() GameTooltip:Hide() end)
 
     -- Wishlist Own/Swap button
-    self.mainUI.wishlistSwapButton = CreateFrame("Button", "AtlasLootItemsFrame_Wishlist_Swap", self.itemframe, "UIPanelButtonTemplate")
+    self.mainUI.wishlistSwapButton = CreateFrame("Button", "AtlasLootItemsFrame_Wishlist_Swap", self.itemframe, "OptionsButtonTemplate")
     self.mainUI.wishlistSwapButton:SetPoint("BOTTOM", self.itemframe, "BOTTOM",0,5)
     self.mainUI.wishlistSwapButton:SetScript("OnClick", function(button) self:WishListSwapButton(true) end)
 
     -- Wishlist Options button
-    self.mainUI.wishlistOptionsButton = CreateFrame("Button", "AtlasLootItemsFrame_Wishlist_Options", self.itemframe, "UIPanelButtonTemplate")
+    self.mainUI.wishlistOptionsButton = CreateFrame("Button", "AtlasLootItemsFrame_Wishlist_Options", self.itemframe, "OptionsButtonTemplate")
     self.mainUI.wishlistOptionsButton:SetPoint("BOTTOM", self.mainUI.wishlistSwapButton, "BOTTOM",-100,0)
     self.mainUI.wishlistOptionsButton:SetText(AL["Options"])
     self.mainUI.wishlistOptionsButton:SetScript("OnClick", function(button) self:WishListOptionsOpen() end)
 
         -- Wishlist Item Lock button
-    self.mainUI.wishlistLockButton = CreateFrame("Button", "AtlasLootItemsFrame_Wishlist_UnLock", self.itemframe, "UIPanelButtonTemplate")
+    self.mainUI.wishlistLockButton = CreateFrame("Button", "AtlasLootItemsFrame_Wishlist_UnLock", self.itemframe, "OptionsButtonTemplate")
     self.mainUI.wishlistLockButton:SetPoint("BOTTOM", self.mainUI.wishlistOptionsButton, "BOTTOM",-100,0)
     self.mainUI.wishlistLockButton:SetScript("OnClick", function(button)
         if self.itemUnlock then
@@ -194,18 +194,18 @@ function AtlasLoot:InitializeUI()
 	end
 
     -- Wishlist Share button
-    self.mainUI.wishlistShareButton = CreateFrame("Button", "AtlasLootItemsFrame_Wishlist_Share", self.itemframe, "UIPanelButtonTemplate")
+    self.mainUI.wishlistShareButton = CreateFrame("Button", "AtlasLootItemsFrame_Wishlist_Share", self.itemframe, "OptionsButtonTemplate")
     self.mainUI.wishlistShareButton:SetPoint("BOTTOM", self.mainUI.wishlistSwapButton, "BOTTOM",100,0)
     self.mainUI.wishlistShareButton:SetText(AL["Share"])
     self.mainUI.wishlistShareButton:SetScript("OnClick", function() self:ShareWishList() end)
 
     -- Wishlist Share button
-    self.mainUI.wishlistLearnVanityButton = CreateFrame("Button", "AtlasLootItemsFrame_Wishlist_Vanity_Learn", self.itemframe, "UIPanelButtonTemplate")
+    self.mainUI.wishlistLearnVanityButton = CreateFrame("Button", "AtlasLootItemsFrame_Wishlist_Vanity_Learn", self.itemframe, "OptionsButtonTemplate")
     self.mainUI.wishlistLearnVanityButton:SetPoint("BOTTOM", self.mainUI.wishlistShareButton, "BOTTOM",100,0)
     self.mainUI.wishlistLearnVanityButton:SetText("Get Items")
     self.mainUI.wishlistLearnVanityButton:SetScript("OnClick", function() self:BatchRequestVanity(self.vanityItems, true) end)
     self.mainUI.wishlistLearnVanityButton:SetScript("OnEnter", function(button)
-        self:SetGameTooltip(button,"Learn/Recive all the vanity items on this page")
+        self:SetGameTooltip(button,AL["Learn/Recive all the vanity items on this page"])
     end)
     self.mainUI.wishlistLearnVanityButton:SetScript("OnLeave", function() GameTooltip:Hide() end)
 
