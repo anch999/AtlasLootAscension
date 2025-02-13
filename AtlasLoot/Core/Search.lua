@@ -1,9 +1,4 @@
-local RED = "|cffff0000"
-local WHITE = "|cffFFFFFF"
-local GREEN = "|cff1eff00"
-local ORANGE = "|cffFF8400"
-local YELLOW = "|cffFFd200"
-
+local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
 
 -- Supported Operators
@@ -275,7 +270,7 @@ end
 SLASH_ATLASLOOTSEARCH1 = "/atlaslootsearch"
 SLASH_ATLASLOOTSEARCH2 = "/als"
 SlashCmdList["ATLASLOOTSEARCH"] = function(search, editBox)
-    AtlasLootDefaultFrame:Show()
+    self.mainUI:Show()
     if search and search ~= '' then
         AtlasLootDefaultFrameSearchBox:SetText(search)
         AtlasLootDefaultFrameSearchButton:Click()
@@ -424,7 +419,7 @@ local function IsItemTypeMatch(term, itemEquipType)
 end
 
 function AtlasLoot:NameMatches(name, searchText)
-    if self.db.profile.PartialMatching then
+    if self.selectedProfile.PartialMatching then
         return string.find(string.lower(name), string.lower(searchText))
     else
         return string.lower(name) == string.lower(searchText)
@@ -702,7 +697,7 @@ function AtlasLoot:DoSearch(searchText)
 
     local searchTerms = ParseQuery(searchText)
     for dataID, data in pairs(AtlasLoot_Data) do
-        if self.db.profile.SearchOn[data.Type] and self.db.profile.SearchOn[data.Type][1] or (self.db.profile.SearchAscensionVanity and data.Module == "AtlasLoot_Ascension_Vanity") then
+        if self.selectedProfile.SearchOn[data.Type] and self.selectedProfile.SearchOn[data.Type][1] or (self.db.profile.SearchAscensionVanity and data.Module == "AtlasLoot_Ascension_Vanity") then
             for tableNum, t in ipairs(data) do
                 for _, itemData in pairs(t) do
                     if type(itemData) == "table" then
@@ -760,7 +755,7 @@ function AtlasLoot:Search(text)
     -- Decide if we need load all modules or just specified ones
     local allDisabled = true
     if allDisabled then
-        for _, module in pairs(self.db.profile.SearchOn) do
+        for _, module in pairs(self.selectedProfile.SearchOn) do
             if module and module[1] or self.db.profile.SearchAscensionVanity then
                 allDisabled = false
                 break
@@ -768,11 +763,11 @@ function AtlasLoot:Search(text)
         end
     end
     if allDisabled then
-        DEFAULT_CHAT_FRAME:AddMessage(RED .. AL["AtlasLoot"] .. ": " .. WHITE .. AL["You don't have any module selected to search on. Right click search to select modules the more selected the longer it will take to search"])
+        DEFAULT_CHAT_FRAME:AddMessage(self.Colors.RED .. AL["AtlasLoot"] .. ": " .. self.Colors.WHITE .. AL["You don't have any module selected to search on. Right click search to select modules the more selected the longer it will take to search"])
         return
     end
 
-    for _, cat in pairs(self.db.profile.SearchOn) do
+    for _, cat in pairs(self.selectedProfile.SearchOn) do
         if type(cat) == "table" and cat[1] and not IsAddOnLoaded(cat[2]) then
             LoadAddOn(cat[2])
         end
@@ -786,29 +781,30 @@ function AtlasLoot:ShowSearchOptions(button, point)
         self.Dewdrop:Close(1)
     else
         local setOptions = function()
-            self.Dewdrop:AddLine("text", WHITE.."Search Categories", "isTitle", true, "notCheckable", true)
+            self.Dewdrop:AddLine('textHeight', self.selectedProfile.txtSize,'textWidth', self.selectedProfile.txtSize, "text", self.Colors.WHITE.."Search Categories", "isTitle", true, "notCheckable", true)
             for expac, cat in pairs(searchCategories) do
-                self.Dewdrop:AddLine( "text", YELLOW..cat.Name, "isTitle", true, "notCheckable", true)
+                self.Dewdrop:AddLine( "text", self.Colors.YELLOW..cat.Name, "isTitle", true, "notCheckable", true, 'textHeight', self.selectedProfile.txtSize,'textWidth', self.selectedProfile.txtSize )
                     for _, data in ipairs(cat) do
-                        self.db.profile.SearchOn[data[2]] = self.db.profile.SearchOn[data[2]] or {false, data[3]}
-                        self.Dewdrop:AddLine(
+                        self.selectedProfile.SearchOn[data[2]] = self.selectedProfile.SearchOn[data[2]] or {false, data[3]}
+                        self.Dewdrop:AddLine('textHeight', self.selectedProfile.txtSize,'textWidth', self.selectedProfile.txtSize,
+                        'isRadio', true,
                         "text", data[1],
-                        "checked", self.db.profile.SearchOn[data[2]] and self.db.profile.SearchOn[data[2]][1],
+                        "checked", self.selectedProfile.SearchOn[data[2]] and self.selectedProfile.SearchOn[data[2]][1],
                         "func", function()
-                        self.db.profile.SearchOn[data[2]][1] = not self.db.profile.SearchOn[data[2]][1]
+                        self.selectedProfile.SearchOn[data[2]][1] = not self.selectedProfile.SearchOn[data[2]][1]
                         end)
                     end
             end
-            self.Dewdrop:AddLine("text", AL["Search options"], "isTitle", true, "notCheckable", true)
-            self.Dewdrop:AddLine("text", AL["Ascension Vanity Collection"], "checked", self.db.profile.SearchAscensionVanity, "tooltipTitle", AL["Ascension Vanity Collection"], "tooltipText",
+            self.Dewdrop:AddLine('textHeight', self.selectedProfile.txtSize,'textWidth', self.selectedProfile.txtSize, "text", AL["Search options"], "isTitle", true, "notCheckable", true)
+            self.Dewdrop:AddLine('textHeight', self.selectedProfile.txtSize,'textWidth', self.selectedProfile.txtSize, "text", AL["Ascension Vanity Collection"], 'isRadio', true, "checked", self.db.profile.SearchAscensionVanity, "tooltipTitle", AL["Ascension Vanity Collection"], "tooltipText",
             AL["If checked, AtlasLoot will search Ascension Vanity Collection"], "func", function()
             self.db.profile.SearchAscensionVanity = not self.db.profile.SearchAscensionVanity
             end)
-            self.Dewdrop:AddLine("text", AL["Partial matching"], "checked", self.db.profile.PartialMatching, "tooltipTitle", AL["Partial matching"], "tooltipText",
+            self.Dewdrop:AddLine('textHeight', self.selectedProfile.txtSize,'textWidth', self.selectedProfile.txtSize, "text", AL["Partial matching"], 'isRadio', true, "checked", self.selectedProfile.PartialMatching, "tooltipTitle", AL["Partial matching"], "tooltipText",
                 AL["If checked, AtlasLoot search item names for a partial match."], "func", function()
-                self.db.profile.PartialMatching = not self.db.profile.PartialMatching
+                self.selectedProfile.PartialMatching = not self.selectedProfile.PartialMatching
             end)
-            self.Dewdrop:AddLine("text", AL["Search AscensionDB"], "checked", self.db.profile.SearchAscensionDB, "tooltipTitle", AL["Partial matching"], "tooltipText",
+            self.Dewdrop:AddLine('textHeight', self.selectedProfile.txtSize,'textWidth', self.selectedProfile.txtSize, "text", AL["Search AscensionDB"], 'isRadio', true, "checked", self.db.profile.SearchAscensionDB, "tooltipTitle", AL["Partial matching"], "tooltipText",
                 AL["If checked, AtlasLoot will open a browser window and search AscensionDB"], "func", function()
                 self.db.profile.SearchAscensionDB = not self.db.profile.SearchAscensionDB
             end)

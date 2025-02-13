@@ -1,14 +1,5 @@
-local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
+local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0")
--- Colours stored for code readability
-local GREY = "|cff999999"
-local RED = "|cffff0000"
-local WHITE = "|cffFFFFFF"
-local GREEN = "|cff1eff00"
-local LIMEGREEN = "|cFF32CD32"
-local BLUE = "|cff0070dd"
-local ORANGE = "|cffFF8400"
-local YELLOW = "|cffFFd200"
 
 --Creates tables for raid tokens from the collections tables
 function AtlasLoot:CreateToken(dataID)
@@ -44,7 +35,7 @@ function AtlasLoot:CreateToken(dataID)
 			table.insert(AtlasLoot_TokenData[orgID][1], {itemID = itemID, desc = desc})
 		end
 		if count == 1 then
-			self:ShowItemsFrame(AtlasLootItemsFrame.refresh[1], AtlasLootItemsFrame.refresh[2], AtlasLootItemsFrame.refresh[3])
+			self:ShowItemsFrame(self.itemframe.refresh[1], self.itemframe.refresh[2], self.itemframe.refresh[3])
 		end
 		count = count - 1
 	end
@@ -78,8 +69,8 @@ function AtlasLoot:CreateOnDemandLootTable(typeL)
 	local function correctText(text)
 		text = gsub(text, "Cloth Armor %- Back", "Back")
 		text = gsub(text, "Miscellaneous Armor %- " , "")
-		text = gsub(text, "Armor %- " , "Armor "..WHITE.."%- ")
-		text = gsub(text, "Weapon %- " , WHITE.."%- ")
+		text = gsub(text, "Armor %- " , "Armor "..self.Colors.WHITE.."%- ")
+		text = gsub(text, "Weapon %- " , self.Colors.WHITE.."%- ")
 		return text
 	end
 
@@ -95,7 +86,7 @@ function AtlasLoot:CreateOnDemandLootTable(typeL)
 	local firstLoad
 	local function showTable()
 		if firstLoad then
-			self:ShowItemsFrame(AtlasLootItemsFrame.refresh[1], AtlasLootItemsFrame.refresh[2], AtlasLootItemsFrame.refresh[3])
+			self:ShowItemsFrame(self.itemframe.refresh[1], self.itemframe.refresh[2], self.itemframe.refresh[3])
 		else
 			self:ShowItemsFrame(typeL, "AtlasLoot_OnDemand", 1)
 			firstLoad = true
@@ -119,7 +110,7 @@ function AtlasLoot:CreateOnDemandLootTable(typeL)
 				for i, items in ipairs(t) do
 					local name = equipSlot[getEquip(eLoc)] and aType.." "..items[2].." - "..equipSlot[getEquip(eLoc)] or aType
 					if #t > 30 and (i == 1 or i == 31 or i == 61 or i == 91)  then
-						tinsert(AtlasLoot_OnDemand[typeL],{Name = correctText(name)..WHITE.." - Page".. math.ceil(i/30) })
+						tinsert(AtlasLoot_OnDemand[typeL],{Name = correctText(name)..self.Colors.WHITE.." - Page".. math.ceil(i/30) })
 					elseif i == 1 then
 						tinsert(AtlasLoot_OnDemand[typeL],{Name = correctText(name)})
 					end

@@ -9,6 +9,7 @@ end
 local databaseUpdated
 --Updates the ItemIDsDatabase with any missing or incorrect items
 function LoadItemIDsDatabase()
+	AtlasLootItemCache = AtlasLootItemCache or {}
     if databaseUpdated then return end
 	--loads any items in the saved varriables cache
     if AtlasLootItemCache and not CheckIfEmptyTable(AtlasLootItemCache) then

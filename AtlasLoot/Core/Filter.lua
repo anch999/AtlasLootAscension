@@ -1,10 +1,4 @@
---[[
-Functions:
-AtlasLoot:HideFilteredItems()
-AtlasLoot:FilterEnableButton()
-
-
-]]
+local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
 
 local FilterTable = {
@@ -58,7 +52,7 @@ local CraftingFilterTable = {
 AtlasLootFilter = { FilterList = {} }
 
 function AtlasLoot:HideFilteredItems()
-	local dataID, dataSource, tablenum = AtlasLootItemsFrame.refreshFilter[1], _G[AtlasLootItemsFrame.refreshFilter[2]], AtlasLootItemsFrame.refreshFilter[3]
+	local dataID, dataSource, tablenum = self.itemframe.refreshFilter[1], _G[self.itemframe.refreshFilter[2]], self.itemframe.refreshFilter[3]
  	local tablebase = dataSource[dataID][tablenum]
 	if not tablebase or dataID == "WishList" then return end
 	local source = dataSource[dataID]
@@ -109,7 +103,6 @@ function AtlasLoot:HideFilteredItems()
 
 	local function getVanityFilters(itemID, learnedSpellID)
 		local db = AtlasLootFilterDB.VanityFilters
-		local learnedSpellID
 		if VANITY_ITEMS[itemID] and VANITY_ITEMS[itemID].learnedSpell and VANITY_ITEMS[itemID].learnedSpell ~= 0 then
 			learnedSpellID = VANITY_ITEMS[itemID].learnedSpell
 		end
@@ -182,15 +175,15 @@ function AtlasLoot:FilterEnableButton(frame, btnclick)
 		if self.Dewdrop:IsOpen() then
 			self.Dewdrop:Close()
 		else
-			self.Dewdrop:Unregister(AtlasLootFilterCheck)
+			self.Dewdrop:Unregister(self.mainUI.filterButton)
 			self:FilterMenuRegister()
 			self.Dewdrop:Open(frame)
 		end
-		AtlasLootFilterCheck:SetChecked(not AtlasLootFilterCheck:GetChecked())
+		self.mainUI.filterButton:SetChecked(not self.mainUI.filterButton:GetChecked())
 	else
 		if self.filterEnable then
 			self.filterEnable = false
-			self:ShowItemsFrame(AtlasLootItemsFrame.refreshFilter[1], AtlasLootItemsFrame.refreshFilter[2], AtlasLootItemsFrame.refreshFilter[3])
+			self:ShowItemsFrame(self.itemframe.refreshFilter[1], self.itemframe.refreshFilter[2], self.itemframe.refreshFilter[3])
 		else
 			self.filterEnable = true
 			self:HideFilteredItems()
@@ -214,12 +207,12 @@ Constructs the Filter menu.
 function AtlasLoot:FilterMenuRegister()
 
 	local db = AtlasLootFilterDB
-	self.Dewdrop:Register(AtlasLootFilterCheck,
+	self.Dewdrop:Register(self.mainUI.filterButton,
 		'point', function(parent)
 			return "TOPLEFT", "BOTTOM"
 		end,
 		'children', function(level, value)
-			if _G[AtlasLootItemsFrame.refreshFilter[2]][AtlasLootItemsFrame.refreshFilter[1]].vanity then
+			if _G[self.itemframe.refreshFilter[2]][self.itemframe.refreshFilter[1]].vanity then
 				for _, filter in ipairs(VanityFilterTable) do
 					local fDB = db.VanityFilters
 					if not fDB[filter[1]] then fDB[filter[1]] = false end
@@ -233,10 +226,11 @@ function AtlasLoot:FilterMenuRegister()
 							end
 						end,
 						"checked", fDB[filter[1]],
+						"isRadio", true,
 						"closeWhenClicked", true
 					)
 				end
-			elseif _G[AtlasLootItemsFrame.refreshFilter[2]][AtlasLootItemsFrame.refreshFilter[1]].Type == "Crafting" then
+			elseif _G[self.itemframe.refreshFilter[2]][self.itemframe.refreshFilter[1]].Type == "Crafting" then
 				for _, filter in ipairs(CraftingFilterTable) do
 					local fDB = db.CraftingFilters
 					if not fDB[filter[1]] then fDB[filter[1]] = false end
@@ -250,12 +244,13 @@ function AtlasLoot:FilterMenuRegister()
 							end
 						end,
 						"checked", fDB[filter[1]],
+						"isRadio", true,
 						"closeWhenClicked", true
 					)
 				end
 			else
 				for _, group in ipairs(FilterTable) do
-					self.Dewdrop:AddLine('text' , group.Name, 'textHeight', 12, 'textWidth', 12, 'isTitle', true, "notCheckable", true)
+					self.Dewdrop:AddLine('text' , group.Name, 'textHeight', self.selectedProfile.txtSize, 'textWidth', self.selectedProfile.txtSize, 'isTitle', true, "notCheckable", true)
 					for _, filters in ipairs(group) do
 						if not db[filters[2]] then db[filters[2]] = {false, group.Type} end
 						self.Dewdrop:AddLine(
@@ -266,7 +261,8 @@ function AtlasLoot:FilterMenuRegister()
 									self:HideFilteredItems()
 								end
 							end,
-							"checked", db[filters[2]][1]
+							"checked", db[filters[2]][1],
+							"isRadio", true
 						)
 					end
 				end

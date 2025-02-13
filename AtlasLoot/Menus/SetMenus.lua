@@ -1,6 +1,6 @@
 local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
 
-		AtlasLoot_SubMenus["CollectionsCLASSIC"] = {
+		AtlasLoot_SubMenus.CollectionsCLASSIC = {
 			Module = "AtlasLootOriginalWoW",
 			{ "", "Heirloom"},
 			{ "", "ClassicSets"},
@@ -16,7 +16,7 @@ local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
 			{ "", "T3"},
 		}
 
-		AtlasLoot_SubMenus["CollectionsTBC"] = {
+		AtlasLoot_SubMenus.CollectionsTBC = {
 			Module = "AtlasLootBurningCrusade",
 			{ "", "Heirloom"},
 			{ "", "DS3"},
@@ -33,7 +33,7 @@ local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
 			{ "", "T6"},
 		}
 
-		AtlasLoot_SubMenus["CollectionsWRATH"] = {
+		AtlasLoot_SubMenus.CollectionsWRATH = {
 			Module = "AtlasLootWotLK",
 			{ "", "Heirloom"},
 			{ "", "WorldEpicsWrath"},
@@ -51,15 +51,15 @@ local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
 			{ "", "T10"},
 		}
 
-		AtlasLoot_SubMenus["VanityCLASSIC"] = {
+		AtlasLoot_SubMenus.VanityCLASSIC = {
 			Module = "AtlasLootVanity",
 			{ "", "Tabards"},
 			{ "", "VanityPets"},
 			{ "", "Mounts"},
 		}
 		
-		AtlasLoot_SubMenus["VanityTBC"] = AtlasLoot_SubMenus["VanityCLASSIC"]
-		AtlasLoot_SubMenus["VanityWRATH"] = AtlasLoot_SubMenus["VanityCLASSIC"]
+		AtlasLoot_SubMenus.VanityTBC = AtlasLoot_SubMenus.VanityCLASSIC
+		AtlasLoot_SubMenus.VanityWRATH = AtlasLoot_SubMenus.VanityCLASSIC
 
 
 

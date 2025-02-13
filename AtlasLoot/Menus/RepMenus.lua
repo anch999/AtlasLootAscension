@@ -1,6 +1,6 @@
 local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
 
-	AtlasLoot_SubMenus["ReputationsCLASSIC"] = {
+	AtlasLoot_SubMenus.ReputationsCLASSIC = {
 		Module = "AtlasLootOriginalWoW",
 		{ "", "Argent"},
 		{ "", "AQBroodRings"},
@@ -16,7 +16,7 @@ local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
 		{ "", "Wintersaber"},
 	}
 
-	AtlasLoot_SubMenus["ReputationsTBC"] = {
+	AtlasLoot_SubMenus.ReputationsTBC = {
 		Module = "AtlasLootBurningCrusade",
 		{ "", "ShattrathFlasks"},
 		{ "", "Aldor"},
@@ -41,7 +41,7 @@ local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
 		{ "", "VioletEye"},
 	}
 
-	AtlasLoot_SubMenus["ReputationsWRATH"] = {
+	AtlasLoot_SubMenus.ReputationsWRATH = {
 		Module = "AtlasLootWotLK",
 		{ "", "AllianceVanguard"},
 		{ "", "WinterfinRetreat"},

@@ -1,6 +1,6 @@
 local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
 
-		AtlasLoot_SubMenus["CollectionsAscensionCLASSIC"] = {
+		AtlasLoot_SubMenus.CollectionsAscensionCLASSIC = {
 			{ "", "VanityConvenience" },
 			{ "", "VanityStonesOfRetreat" },
 			{ "", "VanityHeirlooms" },
@@ -69,8 +69,8 @@ local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
 			} },
 		}
 
-		AtlasLoot_SubMenus["CollectionsAscensionTBC"] = AtlasLoot_SubMenus["CollectionsAscensionCLASSIC"]
-		AtlasLoot_SubMenus["CollectionsAscensionWRATH"] = AtlasLoot_SubMenus["CollectionsAscensionCLASSIC"]
+		AtlasLoot_SubMenus.CollectionsAscensionTBC = AtlasLoot_SubMenus.CollectionsAscensionCLASSIC
+		AtlasLoot_SubMenus.CollectionsAscensionWRATH = AtlasLoot_SubMenus.CollectionsAscensionCLASSIC
 
 
 

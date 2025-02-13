@@ -2,18 +2,6 @@ local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
 
 local BabbleSubZone = AtlasLoot_GetLocaleLibBabble("LibBabble-SubZone-3.0");
 local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
-
-
-local BLUE = "|cff6666ff"
-local GREY = "|cff999999"
-local GREN = "|cff66cc33"
-local _RED = "|cffcc6666"
-local ORNG = "|cffcc9933"
-local PURP = "|cff9900ff"
-local INDENT = "      "
-local YELLOW = "|cffFFd200"
-local WHITE = "|cFFFFFFFF"
-local CYAN =  "|cff00ffff"
 local quest = "questturnin"
 local boss = "dungeonskull"
 
@@ -23,7 +11,7 @@ local boss = "dungeonskull"
     --************************************************
 
     -- Raids
-    AtlasLoot_MapData["Karazhan"] = {
+    AtlasLoot_MapData.Karazhan = {
         ZoneName = { BabbleZone["Karazhan"].." [A] ("..AL["Start"]..")", 3457 };
         Location = { BabbleZone["Deadwind Pass"], 41 };
         LevelRange = "70";
@@ -67,7 +55,7 @@ local boss = "dungeonskull"
             { AL["Sebastian <The Organist>"], cords = {26,49} };
             { AL["Barnes <The Stage Manager>"], cords = {20,27} };
             { AL["The Opera Event"], cords = {18,32}, pinType = boss };
-            { AL["Red Riding Hood"].." ("..AL["Random"]..")" };
+            { AL["self.Colors.RED Riding Hood"].." ("..AL["Random"]..")" };
             { AL["The Big Bad Wolf"] };
             { AL["Wizard of Oz"].." ("..AL["Random"]..")" };
             { AL["Dorothee"] };

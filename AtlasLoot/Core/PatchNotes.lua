@@ -1,5 +1,12 @@
 
+local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 local patchNotes = {
+    {"Version 7.5.0", "5th Feburuary, 2025"},
+    "The learn unknown vanity button now will learn All unknown vanity spells you own",
+    "Updated Hyjal Summit Loot",
+    "You can now change the size of the menu text",
+    "Settings are saved as a profile and are set to default unless changed",
+    "Wishlist settings are now in the options menu on the wishlist page",
     {"Version 7.4.7", "22th November, 2024"},
     "Fixed vanity items not showing and sorted them into more categorys",
     {"Version 7.4.5", "22nd November, 2024"},
@@ -33,5 +40,5 @@ local patchNotes = {
 }
 
 function AtlasLoot:PatchNotes()
-    self:InitializeNewsFrame(self.db.profile, patchNotes, "AtlasLoot")
+    self:InitializeNewsFrame(self.selectedProfile, patchNotes, "AtlasLoot")
 end

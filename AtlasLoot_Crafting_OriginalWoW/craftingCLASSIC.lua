@@ -1,6 +1,6 @@
+local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
 local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0")
-local WHITE = "|cffFFFFFF";
 
 local ALCHEMY = GetSpellInfo(2259);
 local BLACKSMITHING = GetSpellInfo(2018);
@@ -245,7 +245,7 @@ AtlasLoot_Data["SmithingCLASSIC"] = {
 	Name = BLACKSMITHING;
 	Type = "ClassicCrafting";
 	{
-		Name = BabbleInventory["Armor"] .. WHITE .. " - Chest";
+		Name = BabbleInventory["Armor"] .. AtlasLoot.Colors.WHITE .. " - Chest";
 		[01] = {itemID = 22669, spellID = 28242 }; --Icebane Breastplate
 		[02] = {itemID = 12641, spellID = 16746 }; --Invulnerable Mail
 		[03] = {itemID = 22191, spellID = 27590 }; --Obsidian Mail Tunic
@@ -266,7 +266,7 @@ AtlasLoot_Data["SmithingCLASSIC"] = {
 		[18] = {itemID = 7939, spellID = 9974 }; --Truesilver Breastplate
 		[19] = {itemID = 7963, spellID = 9916 }; --Steel Breastplate
 		[20] = {itemID = 3845, spellID = 3511 }; --Golden Scale Cuirass
-		[21] = {itemID = 3844, spellID = 3508 }; --Green Iron Hauberk
+		[21] = {itemID = 3844, spellID = 3508 }; --AtlasLoot.Colors.GREEN Iron Hauberk
 		[22] = {itemID = 7914, spellID = 9813 }; --Barbaric Iron Breastplate
 		[23] = {itemID = 2870, spellID = 2675 }; --Shining Silver Breastplate
 		[24] = {itemID = 2869, spellID = 2673 }; --Silvered Bronze Breastplate
@@ -277,7 +277,7 @@ AtlasLoot_Data["SmithingCLASSIC"] = {
 		[29] = {itemID = 3471, spellID = 3321 }; --Copper Chain Vest
 		[30] = {itemID = 10421, spellID = 12260 }; --Rough Copper Vest
 	};
-	{ Name = BabbleInventory["Armor"] .. WHITE .. " - Feet";
+	{ Name = BabbleInventory["Armor"] .. AtlasLoot.Colors.WHITE .. " - Feet";
 		[01] = {itemID = 20039, spellID = 24399 }; --Dark Iron Boots
 		[02] = {itemID = 19048, spellID = 23629 }; --Heavy Timbermaw Boots
 		[03] = {itemID = 12611, spellID = 16665 }; --Runic Plate Boots
@@ -289,13 +289,13 @@ AtlasLoot_Data["SmithingCLASSIC"] = {
 		[09] = {itemID = 3847, spellID = 3515 }; --Golden Scale Boots
 		[10] = {itemID = 3846, spellID = 3513 }; --Polished Steel Boots
 		[11] = {itemID = 7916, spellID = 9818 }; --Barbaric Iron Boots
-		[12] = {itemID = 3484, spellID = 3334 }; --Green Iron Boots
+		[12] = {itemID = 3484, spellID = 3334 }; --AtlasLoot.Colors.GREEN Iron Boots
 		[13] = {itemID = 3482, spellID = 3331 }; --Silvered Bronze Boots
 		[14] = {itemID = 6350, spellID = 7817 }; --Rough Bronze Boots
 		[15] = {itemID = 3469, spellID = 3319 }; --Copper Chain Boots
 	};
 	{
-		Name = BabbleInventory["Armor"] .. WHITE .. " - Hands";
+		Name = BabbleInventory["Armor"] .. AtlasLoot.Colors.WHITE .. " - Hands";
 		[01] = {itemID = 19164, spellID = 23637 }; --Dark Iron Gauntlets
 		[02] = {itemID = 22670, spellID = 28243 }; --Icebane Gauntlets
 		[03] = {itemID = 12639, spellID = 16741 }; --Stronghold Gauntlets
@@ -312,13 +312,13 @@ AtlasLoot_Data["SmithingCLASSIC"] = {
 		[14] = {itemID = 9366, spellID = 11643 }; --Golden Scale Gauntlets
 		[15] = {itemID = 7919, spellID = 9928 }; --Heavy Mithril Gauntlet
 		[16] = {itemID = 7917, spellID = 9820 }; --Barbaric Iron Gloves
-		[17] = {itemID = 3485, spellID = 3336 }; --Green Iron Gauntlets
+		[17] = {itemID = 3485, spellID = 3336 }; --AtlasLoot.Colors.GREEN Iron Gauntlets
 		[18] = {itemID = 3483, spellID = 3333 }; --Silvered Bronze Gauntlets
 		[19] = {itemID = 3474, spellID = 3325 }; --Gemmed Copper Gauntlets
 		[20] = {itemID = 3472, spellID = 3323 }; --Runed Copper Gauntlets
 	};
 	{
-		Name = BabbleInventory["Armor"] .. WHITE .. " - Head";
+		Name = BabbleInventory["Armor"] .. AtlasLoot.Colors.WHITE .. " - Head";
 		[01] = {itemID = 19148, spellID = 23636 }; --Dark Iron Helm
 		[02] = {itemID = 12640, spellID = 16729 }; --Lionheart Helm
 		[03] = {itemID = 20551, spellID = 24913 }; --Darkrune Helm
@@ -337,10 +337,10 @@ AtlasLoot_Data["SmithingCLASSIC"] = {
 		[16] = {itemID = 3837, spellID = 3503 }; --Golden Scale Coif
 		[17] = {itemID = 12612, spellID = 16726 }; --Runic Plate Helm
 		[18] = {itemID = 7915, spellID = 9814 }; --Barbaric Iron Helm
-		[19] = {itemID = 3836, spellID = 3502 }; --Green Iron Helm
+		[19] = {itemID = 3836, spellID = 3502 }; --AtlasLoot.Colors.GREEN Iron Helm
 	};
 	{
-		Name = BabbleInventory["Armor"] .. WHITE .. " - Legs";
+		Name = BabbleInventory["Armor"] .. AtlasLoot.Colors.WHITE .. " - Legs";
 		[01] = {itemID = 17013, spellID = 20876 }; --Dark Iron Leggings
 		[03] = {itemID = 12414, spellID = 16662 }; --Thorium Leggings
 		[02] = {itemID = 22385, spellID = 27829 }; --Titanic Leggings
@@ -356,14 +356,14 @@ AtlasLoot_Data["SmithingCLASSIC"] = {
 		[13] = {itemID = 7921, spellID = 9933 }; --Heavy Mithril Pants
 		[14] = {itemID = 7929, spellID = 9957 }; --Orcish War Leggings
 		[15] = {itemID = 3843, spellID = 3507 }; --Golden Scale Leggings
-		[16] = {itemID = 3842, spellID = 3506 }; --Green Iron Leggings
+		[16] = {itemID = 3842, spellID = 3506 }; --AtlasLoot.Colors.GREEN Iron Leggings
 		[17] = {itemID = 10423, spellID = 12259 }; --Silvered Bronze Leggings
 		[18] = {itemID = 2865, spellID = 2668 }; --Rough Bronze Leggings
 		[19] = {itemID = 3473, spellID = 3324 }; --Runed Copper Pants
 		[20] = {itemID = 2852, spellID = 2662 }; --Copper Chain Pants
 	};
 	{
-		Name = BabbleInventory["Armor"] .. WHITE .. " - Shoulder";
+		Name = BabbleInventory["Armor"] .. AtlasLoot.Colors.WHITE .. " - Shoulder";
 		[01] = {itemID = 16988, spellID = 20873 }; --Fiery Chain Shoulders
 		[02] = {itemID = 19691, spellID = 24137 }; --Bloodsoul Shoulders
 		[03] = {itemID = 19695, spellID = 24141 }; --Darksoul Shoulders
@@ -376,12 +376,12 @@ AtlasLoot_Data["SmithingCLASSIC"] = {
 		[10] = {itemID = 7918, spellID = 9926 }; --Heavy Mithril Shoulder
 		[11] = {itemID = 3841, spellID = 3505 }; --Golden Scale Shoulders
 		[12] = {itemID = 7913, spellID = 9811 }; --Barbaric Iron Shoulders
-		[13] = {itemID = 3840, spellID = 3504 }; --Green Iron Shoulders
+		[13] = {itemID = 3840, spellID = 3504 }; --AtlasLoot.Colors.GREEN Iron Shoulders
 		[14] = {itemID = 3481, spellID = 3330 }; --Silvered Bronze Shoulders
 		[15] = {itemID = 3480, spellID = 3328 }; --Rough Bronze Shoulders
 	};
 	{
-		Name = BabbleInventory["Armor"] .. WHITE .. " - Waist";
+		Name = BabbleInventory["Armor"] .. AtlasLoot.Colors.WHITE .. " - Waist";
 		[01] = {itemID = 22197, spellID = 27585 }; --Heavy Obsidian Belt
 		[02] = {itemID = 22764, spellID = 28463 }; --Ironvine Belt
 		[03] = {itemID = 22195, spellID = 27588 }; --Light Obsidian Belt
@@ -395,20 +395,20 @@ AtlasLoot_Data["SmithingCLASSIC"] = {
 		[11] = {itemID = 2851, spellID = 2661 }; --Copper Chain Belt
 	};
 	{
-		Name = BabbleInventory["Armor"] .. WHITE .. " - Wrist";
+		Name = BabbleInventory["Armor"] .. AtlasLoot.Colors.WHITE .. " - Wrist";
 		[01] = {itemID = 22671, spellID = 28244 }; --Icebane Bracers
 		[02] = {itemID = 17014, spellID = 20874 }; --Dark Iron Bracers
 		[03] = {itemID = 12425, spellID = 16649 }; --Imperial Plate Bracers
 		[04] = {itemID = 12408, spellID = 16644 }; --Thorium Bracers
 		[05] = {itemID = 7924, spellID = 9937 }; --Mithril Scale Bracers
 		[06] = {itemID = 6040, spellID = 7223 }; --Golden Scale Bracers
-		[07] = {itemID = 3835, spellID = 3501 }; --Green Iron Bracers
+		[07] = {itemID = 3835, spellID = 3501 }; --AtlasLoot.Colors.GREEN Iron Bracers
 		[08] = {itemID = 2868, spellID = 2672 }; --Patterned Bronze Bracers
 		[09] = {itemID = 2854, spellID = 2664 }; --Runed Copper Bracers
 		[10] = {itemID = 2853, spellID = 2663 }; --Copper Bracers
 	};
 	{
-		Name = "Weapon " .. WHITE .. "- One Handed";
+		Name = "Weapon " .. AtlasLoot.Colors.WHITE .. "- One Handed";
 		[01] = {itemID = 19166, spellID = 23638 }; --Black Amnesty
 		[02] = {itemID = 19168, spellID = 23652 }; --Blackguard
 		[03] = {itemID = 19170, spellID = 23650 }; --Ebon Hand
@@ -435,13 +435,13 @@ AtlasLoot_Data["SmithingCLASSIC"] = {
 		[24] = {itemID = 7944, spellID = 10005 }; --Dazzling Mithril Rapier
 		[25] = {itemID = 7945, spellID = 10001 }; --Big Black Mace
 		[26] = {itemID = 7943, spellID = 9997 }; --Wicked Mithril Blade
-		[27] = {itemID = 7942, spellID = 9995 }; --Blue Glittering Axe
+		[27] = {itemID = 7942, spellID = 9995 }; --AtlasLoot.Colors.BLUE Glittering Axe
 		[28] = {itemID = 7941, spellID = 9993 }; --Heavy Mithril Axe
 		[29] = {itemID = 12260, spellID = 15973 }; --Searing Golden Blade
 		[30] = {itemID = 17704, spellID = 21913 }; --Edge of Winter
 	};
 	{
-		Name = "Weapon " .. WHITE .. "- One Handed";
+		Name = "Weapon " .. AtlasLoot.Colors.WHITE .. "- One Handed";
 		[01] = {itemID = 12259, spellID = 15972 }; --Glinting Steel Dagger
 		[02] = {itemID = 3850, spellID = 3493 }; --Jade Serpentblade
 		[03] = {itemID = 3849, spellID = 3492 }; --Hardened Iron Shortsword
@@ -460,7 +460,7 @@ AtlasLoot_Data["SmithingCLASSIC"] = {
 		[16] = {itemID = 2844, spellID = 2737 }; --Copper Mace
 	};
 	{
-		Name = "Weapon " .. WHITE .. "- Two Handed";
+		Name = "Weapon " .. AtlasLoot.Colors.WHITE .. "- Two Handed";
 		[01] = {itemID = 19167, spellID = 23639 }; --Blackfury
 		[02] = {itemID = 19169, spellID = 23653 }; --Nightfall
 		[03] = {itemID = 17193, spellID = 21161 }; --Sulfuron Hammer
@@ -492,7 +492,7 @@ AtlasLoot_Data["SmithingCLASSIC"] = {
 
 	};
 	{
-		Name = "Weapon " .. WHITE .." - Thrown";
+		Name = "Weapon " .. AtlasLoot.Colors.WHITE .." - Thrown";
 		[01] = {itemID = 29201, spellID = 34979 }; --Thick Bronze Darts
 		[02] = {itemID = 29203, spellID = 34982 }; --Enchanted Thorium Blades
 		[03] = {itemID = 29202, spellID = 34981 }; --Whirling Steel Axes
@@ -1044,7 +1044,7 @@ AtlasLoot_Data["EngineeringCLASSIC"] = {
 		[04] = {itemID = 18639, spellID = 23082 }; --Ultra-Flash Shadow Reflector
 		[05] = {itemID = 18638, spellID = 23081 }; --Hyper-Radiant Flame Reflector
 		[06] = {itemID = 18634, spellID = 23077 }; --Gyrofreeze Ice Reflector
-		[07] = {itemID = 10504, spellID = 12622 }; --Green Lens
+		[07] = {itemID = 10504, spellID = 12622 }; --AtlasLoot.Colors.GREEN Lens
 		[08] = {itemID = 16008, spellID = 19825 }; --Master Engineer's Goggles
 		[09] = {itemID = 16009, spellID = 19819 }; --Voice Amplification Modulator
 		[10] = {itemID = 18637, spellID = 23079 }; --Major Recombobulator
@@ -1059,7 +1059,7 @@ AtlasLoot_Data["EngineeringCLASSIC"] = {
 		[19] = {itemID = 4396, spellID = 3969 }; --Mechanical Dragonling
 		[20] = {itemID = 4393, spellID = 3966 }; --Craftsman's Monocle
 		[21] = {itemID = 10499, spellID = 12587 }; --Bright-Eye Goggles
-		[22] = {itemID = 4385, spellID = 3956 }; --Green Tinted Goggles
+		[22] = {itemID = 4385, spellID = 3956 }; --AtlasLoot.Colors.GREEN Tinted Goggles
 		[23] = {itemID = 4381, spellID = 3952 }; --Minor Recombobulator
 		[24] = {itemID = 4373, spellID = 3940 }; --Shadow Goggles
 		[25] = {itemID = 4368, spellID = 3934 }; --Flying Tiger Goggles
@@ -1110,9 +1110,9 @@ AtlasLoot_Data["EngineeringCLASSIC"] = {
 		[03] = {itemID = 23831, spellID = 30561 }; --Goblin Tonk Controller
 		[04] = {itemID = 21570, spellID = 26443 }; --Firework Cluster Launcher
 		[05] = {itemID = 16023, spellID = 19814 }; --Masterwork Target Dummy
-		[06] = {itemID = 21714, spellID = 26426 }; --Large Blue Rocket Cluster
-		[07] = {itemID = 21716, spellID = 26427 }; --Large Green Rocket Cluster
-		[08] = {itemID = 21718, spellID = 26428 }; --Large Red Rocket Cluster
+		[06] = {itemID = 21714, spellID = 26426 }; --Large AtlasLoot.Colors.BLUE Rocket Cluster
+		[07] = {itemID = 21716, spellID = 26427 }; --Large AtlasLoot.Colors.GREEN Rocket Cluster
+		[08] = {itemID = 21718, spellID = 26428 }; --Large AtlasLoot.Colors.RED Rocket Cluster
 		[09] = {itemID = 18645, spellID = 23096 }; --Alarm-O-Bot
 		[10] = {itemID = 18587, spellID = 23078 }; --Goblin Jumper Cables XL
 		[11] = {itemID = 15996, spellID = 19793 }; --Lifelike Mechanical Toad
@@ -1120,9 +1120,9 @@ AtlasLoot_Data["EngineeringCLASSIC"] = {
 		[13] = {itemID = 21277, spellID = 26011 }; --Tranquil Mechanical Yeti
 		[14] = {itemID = 19026, spellID = 23507 }; --Snake Burst Firework
 		[15] = {itemID = 21569, spellID = 26442 }; --Firework Launcher
-		[16] = {itemID = 21571, spellID = 26423 }; --Blue Rocket Cluster
-		[17] = {itemID = 21574, spellID = 26424 }; --Green Rocket Cluster
-		[18] = {itemID = 21576, spellID = 26425 }; --Red Rocket Cluster
+		[16] = {itemID = 21571, spellID = 26423 }; --AtlasLoot.Colors.BLUE Rocket Cluster
+		[17] = {itemID = 21574, spellID = 26424 }; --AtlasLoot.Colors.GREEN Rocket Cluster
+		[18] = {itemID = 21576, spellID = 26425 }; --AtlasLoot.Colors.RED Rocket Cluster
 		[19] = {itemID = 10720, spellID = 12902 }; --Gnomish Net-o-Matic Projector
 		[20] = {itemID = 10644, spellID = 12715 }; --Goblin Rocket Fuel Recipe
 		[21] = {itemID = 10713, spellID = 12895 }; --Inlaid Mithril Cylinder Plans
@@ -1132,9 +1132,9 @@ AtlasLoot_Data["EngineeringCLASSIC"] = {
 		[25] = {itemID = 17716, spellID = 21940 }; --Snowmaster 9000
 		[26] = {itemID = 4392, spellID = 3965 }; --Advanced Target Dummy
 		[27] = {itemID = 4852, spellID = 8243 }; --Flash Bomb
-		[28] = {itemID = 21589, spellID = 26420 }; --Large Blue Rocket
-		[29] = {itemID = 21590, spellID = 26421 }; --Large Green Rocket
-		[30] = {itemID = 21592, spellID = 26422 }; --Large Red Rocket
+		[28] = {itemID = 21589, spellID = 26420 }; --Large AtlasLoot.Colors.BLUE Rocket
+		[29] = {itemID = 21590, spellID = 26421 }; --Large AtlasLoot.Colors.GREEN Rocket
+		[30] = {itemID = 21592, spellID = 26422 }; --Large AtlasLoot.Colors.RED Rocket
 	};
 	{
 		Name = AL["Miscellaneous"];
@@ -1144,13 +1144,13 @@ AtlasLoot_Data["EngineeringCLASSIC"] = {
 		[04] = {itemID = 4386, spellID = 3957 }; --Ice Deflector
 		[05] = {itemID = 4384, spellID = 3955 }; --Explosive Sheep
 		[06] = {itemID = 6533, spellID = 9271 }; --Aquadynamic Fish Attractor
-		[07] = {itemID = 9312, spellID = 23067 }; --Blue Firework
-		[08] = {itemID = 9313, spellID = 23068 }; --Green Firework
-		[09] = {itemID = 9318, spellID = 23066 }; --Red Firework
+		[07] = {itemID = 9312, spellID = 23067 }; --AtlasLoot.Colors.BLUE Firework
+		[08] = {itemID = 9313, spellID = 23068 }; --AtlasLoot.Colors.GREEN Firework
+		[09] = {itemID = 9318, spellID = 23066 }; --AtlasLoot.Colors.RED Firework
 		[10] = {itemID = 5507, spellID = 6458 }; --Ornate Spyglass
-		[11] = {itemID = 21558, spellID = 26416 }; --Small Blue Rocket
-		[12] = {itemID = 21559, spellID = 26417 }; --Small Green Rocket
-		[13] = {itemID = 21557, spellID = 26418 }; --Small Red Rocket
+		[11] = {itemID = 21558, spellID = 26416 }; --Small AtlasLoot.Colors.BLUE Rocket
+		[12] = {itemID = 21559, spellID = 26417 }; --Small AtlasLoot.Colors.GREEN Rocket
+		[13] = {itemID = 21557, spellID = 26418 }; --Small AtlasLoot.Colors.RED Rocket
 		[14] = {itemID = 4376, spellID = 3944 }; --Flame Deflector
 		[15] = {itemID = 6712, spellID = 8334 }; --Practice Lock
 		[16] = {itemID = 4366, spellID = 3932 }; --Target Dummy
@@ -1288,7 +1288,7 @@ AtlasLoot_Data["LeatherworkingCLASSIC"] = {
 	Name = LEATHERWORKING;
 	Type = "ClassicCrafting";
 	{
-		Name = AL["Leather Armor"] .. WHITE .. " - Back";
+		Name = AL["Leather Armor"] .. AtlasLoot.Colors.WHITE .. " - Back";
 		[01] = {itemID = 18509, spellID = 22926 }; --Chromatic Cloak
 		[02] = {itemID = 18511, spellID = 22928 }; --Shifting Cloak
 		[03] = {itemID = 18510, spellID = 22927 }; --Hide of the Wild
@@ -1306,7 +1306,7 @@ AtlasLoot_Data["LeatherworkingCLASSIC"] = {
 		[15] = {itemID = 7276, spellID = 9058 }; --Handstitched Leather Cloak
 	};
 	{
-		Name = AL["Leather Armor"] .. WHITE .. " - Chest";
+		Name = AL["Leather Armor"] .. AtlasLoot.Colors.WHITE .. " - Chest";
 		[01] = {itemID = 22661, spellID = 28219 }; --Polar Tunic
 		[02] = {itemID = 15059, spellID = 19095 }; --Living Breastplate
 		[03] = {itemID = 19685, spellID = 24121 }; --Primal Batskin Jerkin
@@ -1325,11 +1325,11 @@ AtlasLoot_Data["LeatherworkingCLASSIC"] = {
 		[16] = {itemID = 8200, spellID = 10520 }; --Big Voodoo Robe
 	};
 	{
-		Name = AL["Leather Armor"] .. WHITE .. " - Chest";
+		Name = AL["Leather Armor"] .. AtlasLoot.Colors.WHITE .. " - Chest";
 		[01] = {itemID = 8175, spellID = 10499 }; --Nightscape Tunic
 		[02] = {itemID = 5739, spellID = 6661 }; --Barbaric Harness
 		[03] = {itemID = 7374, spellID = 9196 }; --Dusky Leather Armor
-		[04] = {itemID = 7375, spellID = 9197 }; --Green Whelp Armor
+		[04] = {itemID = 7375, spellID = 9197 }; --AtlasLoot.Colors.GREEN Whelp Armor
 		[05] = {itemID = 4256, spellID = 3773 }; --Guardian Armor
 		[06] = {itemID = 5782, spellID = 6704 }; --Thick Murloc Armor
 		[07] = {itemID = 4455, spellID = 4096 }; --Raptor Hide Harness
@@ -1341,12 +1341,12 @@ AtlasLoot_Data["LeatherworkingCLASSIC"] = {
 		[13] = {itemID = 6709, spellID = 8322 }; --Moonglow Vest
 		[14] = {itemID = 4243, spellID = 3761 }; --Fine Leather Tunic
 		[15] = {itemID = 2300, spellID = 2160 }; --Embossed Leather Vest
-		[16] = {itemID = 2311, spellID = 2163 }; --White Leather Jerkin
+		[16] = {itemID = 2311, spellID = 2163 }; --AtlasLoot.Colors.WHITE Leather Jerkin
 		[17] = {itemID = 5957, spellID = 7126 }; --Handstitched Leather Vest
 	};
 
 	{
-		Name = AL["Leather Armor"] .. WHITE .. " - Feet";
+		Name = AL["Leather Armor"] .. AtlasLoot.Colors.WHITE .. " - Feet";
 		[01] = {itemID = 22760, spellID = 28473 }; --Bramblewood Boots
 		[02] = {itemID = 18506, spellID = 22922 }; --Mongoose Boots
 		[03] = {itemID = 16982, spellID = 20853 }; --Corehound Boots
@@ -1364,7 +1364,7 @@ AtlasLoot_Data["LeatherworkingCLASSIC"] = {
 		[15] = {itemID = 2302, spellID = 2149 }; --Handstitched Leather Boots
 	};
 	{
-		Name = AL["Leather Armor"] .. WHITE .. " - Hands";
+		Name = AL["Leather Armor"] .. AtlasLoot.Colors.WHITE .. " - Hands";
 		[01] = {itemID = 22662, spellID = 28220 }; --Polar Gloves
 		[02] = {itemID = 19686, spellID = 24122 }; --Primal Batskin Gloves
 		[03] = {itemID = 21278, spellID = 26279 }; --Stormshroud Gloves
@@ -1385,13 +1385,13 @@ AtlasLoot_Data["LeatherworkingCLASSIC"] = {
 		[18] = {itemID = 7348, spellID = 9145 }; --Fletcher's Gloves
 		[19] = {itemID = 4248, spellID = 3765 }; --Dark Leather Gloves
 		[20] = {itemID = 7285, spellID = 9074 }; --Nimble Leather Gloves
-		[21] = {itemID = 7284, spellID = 9072 }; --Red Whelp Gloves
+		[21] = {itemID = 7284, spellID = 9072 }; --AtlasLoot.Colors.RED Whelp Gloves
 		[22] = {itemID = 6467, spellID = 7954 }; --Deviate Scale Gloves
 		[23] = {itemID = 2312, spellID = 2164 }; --Fine Leather Gloves
 		[24] = {itemID = 4239, spellID = 3756 }; --Embossed Leather Gloves
 	};
 	{
-		Name = AL["Leather Armor"] .. WHITE .. " - Head";
+		Name = AL["Leather Armor"] .. AtlasLoot.Colors.WHITE .. " - Head";
 		[01] = {itemID = 16983, spellID = 20854 }; --Molten Helm
 		[02] = {itemID = 22759, spellID = 28472 }; --Bramblewood Helm
 		[03] = {itemID = 15094, spellID = 19082 }; --Runic Leather Headband
@@ -1404,7 +1404,7 @@ AtlasLoot_Data["LeatherworkingCLASSIC"] = {
 		[10] = {itemID = 8174, spellID = 10490 }; --Comfortable Leather Hat
 	};
 	{
-		Name = AL["Leather Armor"] .. WHITE .. " - Legs";
+		Name = AL["Leather Armor"] .. AtlasLoot.Colors.WHITE .. " - Legs";
 		[01] = {itemID = 15095, spellID = 19091 }; --Runic Leather Pants
 		[02] = {itemID = 15062, spellID = 19097 }; --Devilsaur Leggings
 		[03] = {itemID = 15087, spellID = 19083 }; --Wicked Leather Pants
@@ -1422,7 +1422,7 @@ AtlasLoot_Data["LeatherworkingCLASSIC"] = {
 		[15] = {itemID = 5963, spellID = 7149 }; --Barbaric Leggings
 		[16] = {itemID = 7373, spellID = 9195 }; --Dusky Leather Leggings
 		[17] = {itemID = 5962, spellID = 7147 }; --Guardian Pants
-		[18] = {itemID = 4255, spellID = 3772 }; --Green Leather Armor
+		[18] = {itemID = 4255, spellID = 3772 }; --AtlasLoot.Colors.GREEN Leather Armor
 		[19] = {itemID = 5958, spellID = 7133 }; --Fine Leather Pants
 		[20] = {itemID = 5961, spellID = 7135 }; --Dark Leather Pants
 		[21] = {itemID = 7282, spellID = 9068 }; --Light Leather Pants
@@ -1432,7 +1432,7 @@ AtlasLoot_Data["LeatherworkingCLASSIC"] = {
 
 	};
 	{
-		Name = AL["Leather Armor"] .. WHITE .. " - Shoulder";
+		Name = AL["Leather Armor"] .. AtlasLoot.Colors.WHITE .. " - Shoulder";
 		[01] = {itemID = 19049, spellID = 23704 }; --Timbermaw Brawlers
 		[02] = {itemID = 19689, spellID = 24125 }; --Blood Tiger Shoulders
 		[03] = {itemID = 19058, spellID = 23706 }; --Golden Mantle of the Dawn
@@ -1450,7 +1450,7 @@ AtlasLoot_Data["LeatherworkingCLASSIC"] = {
 		[15] = {itemID = 4251, spellID = 3768 }; --Hillman's Shoulders
 	};
 	{
-		Name = AL["Leather Armor"] .. WHITE .. " - Waist";
+		Name = AL["Leather Armor"] .. AtlasLoot.Colors.WHITE .. " - Waist";
 		[01] = {itemID = 19162, spellID = 23709 }; --Corehound Belt
 		[02] = {itemID = 19149, spellID = 23707 }; --Lava Belt
 		[03] = {itemID = 19163, spellID = 23710 }; --Molten Belt
@@ -1463,7 +1463,7 @@ AtlasLoot_Data["LeatherworkingCLASSIC"] = {
 		[10] = {itemID = 4262, spellID = 3778 }; --Gem-studded Leather Belt
 		[11] = {itemID = 4258, spellID = 3775 }; --Guardian Belt
 		[12] = {itemID = 4456, spellID = 4097 }; --Raptor Hide Belt
-		[13] = {itemID = 4257, spellID = 3774 }; --Green Leather Belt
+		[13] = {itemID = 4257, spellID = 3774 }; --AtlasLoot.Colors.GREEN Leather Belt
 		[14] = {itemID = 4249, spellID = 3766 }; --Dark Leather Belt
 		[15] = {itemID = 4250, spellID = 3767 }; --Hillman's Belt
 		[16] = {itemID = 6468, spellID = 7955 }; --Deviate Scale Belt
@@ -1472,82 +1472,82 @@ AtlasLoot_Data["LeatherworkingCLASSIC"] = {
 		[19] = {itemID = 4237, spellID = 3753 }; --Handstitched Leather Belt
 	};
 	{
-		Name = AL["Leather Armor"] .. WHITE .. " - Wrist";
+		Name = AL["Leather Armor"] .. AtlasLoot.Colors.WHITE .. " - Wrist";
 		[01] = {itemID = 22663, spellID = 28221 }; --Polar Bracers
 		[02] = {itemID = 19687, spellID = 24123 }; --Primal Batskin Bracers
 		[03] = {itemID = 15092, spellID = 19065 }; --Runic Leather Bracers
 		[04] = {itemID = 15084, spellID = 19052 }; --Wicked Leather Bracers
 		[05] = {itemID = 4260, spellID = 3777 }; --Guardian Leather Bracers
-		[06] = {itemID = 7386, spellID = 9202 }; --Green Whelp Bracers
+		[06] = {itemID = 7386, spellID = 9202 }; --AtlasLoot.Colors.GREEN Whelp Bracers
 		[07] = {itemID = 5783, spellID = 6705 }; --Murloc Scale Bracers
 		[08] = {itemID = 7378, spellID = 9201 }; --Dusky Bracers
-		[09] = {itemID = 4259, spellID = 3776 }; --Green Leather Bracers
+		[09] = {itemID = 4259, spellID = 3776 }; --AtlasLoot.Colors.GREEN Leather Bracers
 		[10] = {itemID = 18948, spellID = 23399 }; --Barbaric Bracers
 		[11] = {itemID = 7281, spellID = 9065 }; --Light Leather Bracers
 		[12] = {itemID = 7277, spellID = 9059 }; --Handstitched Leather Bracers
 	};
 	{
-		Name = AL["Mail Armor"] .. WHITE .. " - Chest";
+		Name = AL["Mail Armor"] .. AtlasLoot.Colors.WHITE .. " - Chest";
 		[01] = {itemID = 22664, spellID = 28222 }; --Icy Scale Breastplate
 		[02] = {itemID = 20380, spellID = 24703 }; --Dreamscale Breastplate
 		[03] = {itemID = 20478, spellID = 24851 }; --Sandstalker Breastplate
 		[04] = {itemID = 20479, spellID = 24848 }; --Spitfire Breastplate
-		[05] = {itemID = 15047, spellID = 19054 }; --Red Dragonscale Breastplate
+		[05] = {itemID = 15047, spellID = 19054 }; --AtlasLoot.Colors.RED Dragonscale Breastplate
 		[06] = {itemID = 15050, spellID = 19085 }; --Black Dragonscale Breastplate
-		[07] = {itemID = 15048, spellID = 19077 }; --Blue Dragonscale Breastplate
-		[08] = {itemID = 15045, spellID = 19050 }; --Green Dragonscale Breastplate
+		[07] = {itemID = 15048, spellID = 19077 }; --AtlasLoot.Colors.BLUE Dragonscale Breastplate
+		[08] = {itemID = 15045, spellID = 19050 }; --AtlasLoot.Colors.GREEN Dragonscale Breastplate
 		[09] = {itemID = 15076, spellID = 19051 }; --Heavy Scorpid Vest
 		[10] = {itemID = 8367, spellID = 10650 }; --Dragonscale Breastplate
 		[11] = {itemID = 8203, spellID = 10525 }; --Tough Scorpid Breastplate
 		[12] = {itemID = 8189, spellID = 10511 }; --Turtle Scale Breastplate
 	};
 	{
-		Name = AL["Mail Armor"] .. WHITE .. " - Feet";
+		Name = AL["Mail Armor"] .. AtlasLoot.Colors.WHITE .. " - Feet";
 		[01] = {itemID = 16984, spellID = 20855 }; --Black Dragonscale Boots
 		[02] = {itemID = 8209, spellID = 10554 }; --Tough Scorpid Boots
 	};
 	{
-		Name = AL["Mail Armor"] .. WHITE .. " - Hands";
+		Name = AL["Mail Armor"] .. AtlasLoot.Colors.WHITE .. " - Hands";
 		[01] = {itemID = 22666, spellID = 28223 }; --Icy Scale Gauntlets
 		[02] = {itemID = 19157, spellID = 23708 }; --Chromatic Gauntlets
 		[03] = {itemID = 20477, spellID = 24850 }; --Sandstalker Gauntlets
 		[04] = {itemID = 20480, spellID = 24847 }; --Spitfire Gauntlets
-		[05] = {itemID = 20296, spellID = 24655 }; --Green Dragonscale Gauntlets
+		[05] = {itemID = 20296, spellID = 24655 }; --AtlasLoot.Colors.GREEN Dragonscale Gauntlets
 		[06] = {itemID = 15078, spellID = 19064 }; --Heavy Scorpid Gauntlets
 		[07] = {itemID = 8347, spellID = 10619 }; --Dragonscale Gauntlets
 		[08] = {itemID = 8204, spellID = 10542 }; --Tough Scorpid Gloves
 		[09] = {itemID = 8187, spellID = 10509 }; --Turtle Scale Gloves
 	};
 	{
-		Name = AL["Mail Armor"] .. WHITE .. " - Head";
+		Name = AL["Mail Armor"] .. AtlasLoot.Colors.WHITE .. " - Head";
 		[01] = {itemID = 15080, spellID = 19088 }; --Heavy Scorpid Helm
 		[02] = {itemID = 8208, spellID = 10570 }; --Tough Scorpid Helm
 		[03] = {itemID = 8191, spellID = 10552 }; --Turtle Scale Helm
 	};
 	{
-		Name = AL["Mail Armor"] .. WHITE .. " - Legs";
-		[01] = {itemID = 20295, spellID = 24654 }; --Blue Dragonscale Leggings
+		Name = AL["Mail Armor"] .. AtlasLoot.Colors.WHITE .. " - Legs";
+		[01] = {itemID = 20295, spellID = 24654 }; --AtlasLoot.Colors.BLUE Dragonscale Leggings
 		[02] = {itemID = 15052, spellID = 19107 }; --Black Dragonscale Leggings
 		[03] = {itemID = 15079, spellID = 19075 }; --Heavy Scorpid Leggings
-		[04] = {itemID = 15046, spellID = 19060 }; --Green Dragonscale Leggings
+		[04] = {itemID = 15046, spellID = 19060 }; --AtlasLoot.Colors.GREEN Dragonscale Leggings
 		[05] = {itemID = 29971, spellID = 36076 }; --Dragonstrike Leggings
 		[06] = {itemID = 8206, spellID = 10568 }; --Tough Scorpid Leggings
 		[07] = {itemID = 8185, spellID = 10556 }; --Turtle Scale Leggings
 	};
 	{
-		Name = AL["Mail Armor"] .. WHITE .. " - Shoulder";
+		Name = AL["Mail Armor"] .. AtlasLoot.Colors.WHITE .. " - Shoulder";
 		[01] = {itemID = 15051, spellID = 19094 }; --Black Dragonscale Shoulders
 		[02] = {itemID = 15081, spellID = 19100 }; --Heavy Scorpid Shoulders
-		[03] = {itemID = 15049, spellID = 19089 }; --Blue Dragonscale Shoulders
+		[03] = {itemID = 15049, spellID = 19089 }; --AtlasLoot.Colors.BLUE Dragonscale Shoulders
 		[04] = {itemID = 8207, spellID = 10564 }; --Tough Scorpid Shoulders
 
 	};
 	{
-		Name = AL["Mail Armor"] .. WHITE .. " - Waist";
+		Name = AL["Mail Armor"] .. AtlasLoot.Colors.WHITE .. " - Waist";
 		[01] = {itemID = 15082, spellID = 19070 }; --Heavy Scorpid Belt
 	};
 	{
-		Name = AL["Mail Armor"] .. WHITE .. " - Wrist";
+		Name = AL["Mail Armor"] .. AtlasLoot.Colors.WHITE .. " - Wrist";
 		[01] = {itemID = 22665, spellID = 28224 }; --Icy Scale Bracers
 		[02] = {itemID = 18508, spellID = 22923 }; --Swift Flight Bracers
 		[03] = {itemID = 20476, spellID = 24849 }; --Sandstalker Bracers
@@ -1594,8 +1594,8 @@ AtlasLoot_Data["LeatherworkingCLASSIC"] = {
 	};
 	{
 		Name = DRAGONSCALE;
-		[01] = {itemID = 20295, spellID = 24654 }; --Blue Dragonscale Leggings
-		[02] = {itemID = 20296, spellID = 24655 }; --Green Dragonscale Gauntlets
+		[01] = {itemID = 20295, spellID = 24654 }; --AtlasLoot.Colors.BLUE Dragonscale Leggings
+		[02] = {itemID = 20296, spellID = 24655 }; --AtlasLoot.Colors.GREEN Dragonscale Gauntlets
 		[03] = {itemID = 29971, spellID = 36076 }; --Dragonstrike Leggings
 		[04] = {itemID = 8367, spellID = 10650 }; --Dragonscale Breastplate
 		[05] = {itemID = 8347, spellID = 10619 }; --Dragonscale Gauntlets
@@ -1620,14 +1620,14 @@ AtlasLoot_Data["LeatherworkingCLASSIC"] = {
 		[04] = {itemID = 967161, spellID = 968007 }; --Sturdy Plaguebat Gambeson
 		[05] = {itemID = 967164, spellID = 968010 }; --Sturdy Sandworm Gambeson
 		[06] = {itemID = 967167, spellID = 968013 }; --Sturdy Black Scale Gambeson
-		[07] = {itemID = 967170, spellID = 968016 }; --Sturdy Blue Scale Gambeson
+		[07] = {itemID = 967170, spellID = 968016 }; --Sturdy AtlasLoot.Colors.BLUE Scale Gambeson
 		[16] = { name = AL["Epic"], icon = "INV_Box_01"},
 		[17] = {itemID = 967156, spellID = 968002 }; --Mastercraft Yeti Gambeson
 		[18] = {itemID = 967159, spellID = 968005 }; --Mastercraft Devilsaur Gambeson
 		[19] = {itemID = 967162, spellID = 968008 }; --Mastercraft Plaguebat Gambeson
 		[20] = {itemID = 967165, spellID = 968011 }; --Mastercraft Sandworm Gambeson
 		[21] = {itemID = 967168, spellID = 968014 }; --Mastercraft Black Scale Gambeson
-		[22] = {itemID = 967171, spellID = 968017 }; --Mastercraft Blue Scale Gambeson
+		[22] = {itemID = 967171, spellID = 968017 }; --Mastercraft AtlasLoot.Colors.BLUE Scale Gambeson
 	};
 };
 
@@ -1678,7 +1678,7 @@ AtlasLoot_Data["TailoringCLASSIC"] = {
 	Name = TAILORING;
 	Type = "ClassicCrafting";
 	{
-		Name = AL["Cloth Armor"] .. WHITE .. " - Back";
+		Name = AL["Cloth Armor"] .. AtlasLoot.Colors.WHITE .. " - Back";
 		[01] = {itemID = 22658, spellID = 28208 }; --Glacial Cloak
 		[02] = {itemID = 22660, spellID = 28210 }; --Gaea's Embrace
 		[03] = {itemID = 18413, spellID = 22870 }; --Cloak of Warding
@@ -1700,7 +1700,7 @@ AtlasLoot_Data["TailoringCLASSIC"] = {
 		[19] = {itemID = 2570, spellID = 2387 }; --Linen Cloak
 	};
 	{
-		Name = AL["Cloth Armor"] .. WHITE .. " - Chest 1";
+		Name = AL["Cloth Armor"] .. AtlasLoot.Colors.WHITE .. " - Chest 1";
 		[01] = {itemID = 19156, spellID = 23666 }; --Flarecore Robe
 		[02] = {itemID = 22652, spellID = 28207 }; --Glacial Vest
 		[03] = {itemID = 14152, spellID = 18457 }; --Robe of the Archmage
@@ -1722,19 +1722,19 @@ AtlasLoot_Data["TailoringCLASSIC"] = {
 		[19] = {itemID = 13857, spellID = 18407 }; --Runecloth Tunic
 		[20] = {itemID = 13868, spellID = 18404 }; --Frostweave Robe
 		[21] = {itemID = 13869, spellID = 18403 }; --Frostweave Tunic
-		[22] = {itemID = 21542, spellID = 26407 }; --Festive Red Pant Suit
+		[22] = {itemID = 21542, spellID = 26407 }; --Festive AtlasLoot.Colors.RED Pant Suit
 		[23] = {itemID = 21154, spellID = 26403 }; --Festival Dress
 		[24] = {itemID = 10036, spellID = 12093 }; --Tuxedo Jacket
-		[25] = {itemID = 34087, spellID = 44950 }; --Green Winter Clothes
-		[26] = {itemID = 34085, spellID = 44958 }; --Red Winter Clothes
-		[27] = {itemID = 10040, spellID = 12091 }; --White Wedding Dress
+		[25] = {itemID = 34087, spellID = 44950 }; --AtlasLoot.Colors.GREEN Winter Clothes
+		[26] = {itemID = 34085, spellID = 44958 }; --AtlasLoot.Colors.RED Winter Clothes
+		[27] = {itemID = 10040, spellID = 12091 }; --AtlasLoot.Colors.WHITE Wedding Dress
 		[28] = {itemID = 38277, spellID = 50644 }; --Haliscan Jacket
 		[29] = {itemID = 10053, spellID = 12077 }; --Simple Black Dress
 		[30] = {itemID = 10042, spellID = 12069 }; --Cindercloth Robe
 	};
 	{
-		Name = AL["Cloth Armor"] .. WHITE .. " - Chest 2";
-		[01] = {itemID = 10007, spellID = 12056 }; --Red Mageweave Vest
+		Name = AL["Cloth Armor"] .. AtlasLoot.Colors.WHITE .. " - Chest 2";
+		[01] = {itemID = 10007, spellID = 12056 }; --AtlasLoot.Colors.RED Mageweave Vest
 		[02] = {itemID = 10004, spellID = 12055 }; --Shadoweave Robe
 		[03] = {itemID = 10001, spellID = 12050 }; --Black Mageweave Robe
 		[04] = {itemID = 9998, spellID = 12048 }; --Black Mageweave Vest
@@ -1742,27 +1742,27 @@ AtlasLoot_Data["TailoringCLASSIC"] = {
 		[06] = {itemID = 7054, spellID = 8770 }; --Robe of Power
 		[07] = {itemID = 7058, spellID = 8791 }; --Crimson Silk Vest
 		[08] = {itemID = 7051, spellID = 8764 }; --Earthen Vest
-		[09] = {itemID = 7065, spellID = 8784 }; --Green Silk Armor
+		[09] = {itemID = 7065, spellID = 8784 }; --AtlasLoot.Colors.GREEN Silk Armor
 		[10] = {itemID = 4324, spellID = 3859 }; --Azure Silk Vest
 		[11] = {itemID = 5770, spellID = 6692 }; --Robes of Arcana
 		[12] = {itemID = 5766, spellID = 6690 }; --Lesser Wizard's Robe
 		[13] = {itemID = 6264, spellID = 7643 }; --Greater Adept's Robe
-		[14] = {itemID = 6787, spellID = 8467 }; --White Woolen Dress
+		[14] = {itemID = 6787, spellID = 8467 }; --AtlasLoot.Colors.WHITE Woolen Dress
 		[15] = {itemID = 2585, spellID = 2403 }; --Gray Woolen Robe
-		[16] = {itemID = 6263, spellID = 7639 }; --Blue Overalls
-		[17] = {itemID = 2582, spellID = 2399 }; --Green Woolen Vest
+		[16] = {itemID = 6263, spellID = 7639 }; --AtlasLoot.Colors.BLUE Overalls
+		[17] = {itemID = 2582, spellID = 2399 }; --AtlasLoot.Colors.GREEN Woolen Vest
 		[18] = {itemID = 2578, spellID = 2395 }; --Barbaric Linen Vest
-		[19] = {itemID = 6242, spellID = 7633 }; --Blue Linen Robe
-		[20] = {itemID = 6240, spellID = 7630 }; --Blue Linen Vest
-		[21] = {itemID = 6239, spellID = 7629 }; --Red Linen Vest
+		[19] = {itemID = 6242, spellID = 7633 }; --AtlasLoot.Colors.BLUE Linen Robe
+		[20] = {itemID = 6240, spellID = 7630 }; --AtlasLoot.Colors.BLUE Linen Vest
+		[21] = {itemID = 6239, spellID = 7629 }; --AtlasLoot.Colors.RED Linen Vest
 		[22] = {itemID = 6786, spellID = 8465 }; --Simple Dress
-		[23] = {itemID = 2572, spellID = 2389 }; --Red Linen Robe
+		[23] = {itemID = 2572, spellID = 2389 }; --AtlasLoot.Colors.RED Linen Robe
 		[24] = {itemID = 6238, spellID = 7623 }; --Brown Linen Robe
-		[25] = {itemID = 6241, spellID = 7624 }; --White Linen Robe
+		[25] = {itemID = 6241, spellID = 7624 }; --AtlasLoot.Colors.WHITE Linen Robe
 		[26] = {itemID = 2568, spellID = 2385 }; --Brown Linen Vest
 	};
 	{
-		Name = AL["Cloth Armor"] .. WHITE .. " - Feet";
+		Name = AL["Cloth Armor"] .. AtlasLoot.Colors.WHITE .. " - Feet";
 		[01] = {itemID = 19684, spellID = 24093 }; --Bloodvine Boots
 		[02] = {itemID = 20537, spellID = 24903 }; --Runed Stygian Boots
 		[03] = {itemID = 15802, spellID = 19435 }; --Mooncloth Boots
@@ -1775,7 +1775,7 @@ AtlasLoot_Data["TailoringCLASSIC"] = {
 		[10] = {itemID = 4325, spellID = 3860 }; --Boots of the Enchanter
 		[11] = {itemID = 4321, spellID = 3856 }; --Spider Silk Slippers
 		[12] = {itemID = 4320, spellID = 3855 }; --Spidersilk Boots
-		[13] = {itemID = 4313, spellID = 3847 }; --Red Woolen Boots
+		[13] = {itemID = 4313, spellID = 3847 }; --AtlasLoot.Colors.RED Woolen Boots
 		[14] = {itemID = 2583, spellID = 2401 }; --Woolen Boots
 		[15] = {itemID = 4312, spellID = 3845 }; --Soft-soled Linen Boots
 		[16] = {itemID = 2569, spellID = 2386 }; --Linen Boots
@@ -1783,7 +1783,7 @@ AtlasLoot_Data["TailoringCLASSIC"] = {
 		[18] = {itemID = 6836, spellID = 49677 }; --Dress Shoes
 	};
 	{
-		Name = AL["Cloth Armor"] .. WHITE .. " - Hands";
+		Name = AL["Cloth Armor"] .. AtlasLoot.Colors.WHITE .. " - Hands";
 		[01] = {itemID = 16979, spellID = 20849 }; --Flarecore Gloves
 		[02] = {itemID = 22654, spellID = 28205 }; --Glacial Gloves
 		[03] = {itemID = 14146, spellID = 18454 }; --Gloves of Spell Mastery
@@ -1796,7 +1796,7 @@ AtlasLoot_Data["TailoringCLASSIC"] = {
 		[10] = {itemID = 14043, spellID = 18412 }; --Cindercloth Gloves
 		[11] = {itemID = 14142, spellID = 18413 }; --Ghostweave Gloves
 		[12] = {itemID = 13870, spellID = 18411 }; --Frostweave Gloves
-		[13] = {itemID = 10018, spellID = 12066 }; --Red Mageweave Gloves
+		[13] = {itemID = 10018, spellID = 12066 }; --AtlasLoot.Colors.RED Mageweave Gloves
 		[14] = {itemID = 10023, spellID = 12071 }; --Shadoweave Gloves
 		[15] = {itemID = 10003, spellID = 12053 }; --Black Mageweave Gloves
 		[16] = {itemID = 7064, spellID = 8804 }; --Crimson Silk Gloves
@@ -1808,7 +1808,7 @@ AtlasLoot_Data["TailoringCLASSIC"] = {
 		[22] = {itemID = 4307, spellID = 3840 }; --Heavy Linen Gloves
 	};
 	{
-		Name = AL["Cloth Armor"] .. WHITE .. " - Head";
+		Name = AL["Cloth Armor"] .. AtlasLoot.Colors.WHITE .. " - Head";
 		[01] = {itemID = 14140, spellID = 18452 }; --Mooncloth Circlet
 		[02] = {itemID = 22757, spellID = 28481 }; --Sylvan Crown
 		[03] = {itemID = 14130, spellID = 18450 }; --Wizardweave Turban
@@ -1817,16 +1817,16 @@ AtlasLoot_Data["TailoringCLASSIC"] = {
 		[06] = {itemID = 10041, spellID = 12092 }; --Dreamweave Circlet
 		[07] = {itemID = 10025, spellID = 12086 }; --Shadoweave Mask
 		[08] = {itemID = 10030, spellID = 12081 }; --Admiral's Hat
-		[09] = {itemID = 10033, spellID = 12084 }; --Red Mageweave Headband
+		[09] = {itemID = 10033, spellID = 12084 }; --AtlasLoot.Colors.RED Mageweave Headband
 		[10] = {itemID = 10024, spellID = 12072 }; --Black Mageweave Headband
-		[11] = {itemID = 10008, spellID = 12059 }; --White Bandit Mask
+		[11] = {itemID = 10008, spellID = 12059 }; --AtlasLoot.Colors.WHITE Bandit Mask
 		[12] = {itemID = 4323, spellID = 3858 }; --Shadow Hood
 		[13] = {itemID = 4322, spellID = 3857 }; --Enchanter's Cowl
 		[14] = {itemID = 7050, spellID = 8762 }; --Silk Headband
 		[15] = {itemID = 7048, spellID = 8760 }; --Azure Silk Hood
 	};
 	{
-		Name = AL["Cloth Armor"] .. WHITE .. " - Legs";
+		Name = AL["Cloth Armor"] .. AtlasLoot.Colors.WHITE .. " - Legs";
 		[01] = {itemID = 19165, spellID = 23667 }; --Flarecore Leggings
 		[02] = {itemID = 19683, spellID = 24092 }; --Bloodvine Leggings
 		[03] = {itemID = 20538, spellID = 24901 }; --Runed Stygian Leggings
@@ -1840,7 +1840,7 @@ AtlasLoot_Data["TailoringCLASSIC"] = {
 		[11] = {itemID = 14132, spellID = 18421 }; --Wizardweave Leggings
 		[12] = {itemID = 10035, spellID = 12089 }; --Tuxedo Pants
 		[13] = {itemID = 38278, spellID = 50647 }; --Haliscan Pantaloons
-		[14] = {itemID = 10009, spellID = 12060 }; --Red Mageweave Pants
+		[14] = {itemID = 10009, spellID = 12060 }; --AtlasLoot.Colors.RED Mageweave Pants
 		[15] = {itemID = 10002, spellID = 12052 }; --Shadoweave Pants
 		[16] = {itemID = 9999, spellID = 12049 }; --Black Mageweave Leggings
 		[17] = {itemID = 7046, spellID = 8758 }; --Azure Silk Pants
@@ -1853,7 +1853,7 @@ AtlasLoot_Data["TailoringCLASSIC"] = {
 		[24] = {itemID = 10045, spellID = 12044 }; --Simple Linen Pants
 	};
 	{
-		Name = AL["Cloth Armor"] .. WHITE .. " - Shoulder";
+		Name = AL["Cloth Armor"] .. AtlasLoot.Colors.WHITE .. " - Shoulder";
 		[01] = {itemID = 16980, spellID = 20848 }; --Flarecore Mantle
 		[02] = {itemID = 19059, spellID = 23665 }; --Argent Shoulders
 		[03] = {itemID = 19050, spellID = 23663 }; --Mantle of the Timbermaw
@@ -1861,18 +1861,18 @@ AtlasLoot_Data["TailoringCLASSIC"] = {
 		[05] = {itemID = 22758, spellID = 28482 }; --Sylvan Shoulders
 		[06] = {itemID = 14112, spellID = 18453 }; --Felcloth Shoulders
 		[07] = {itemID = 13867, spellID = 18449 }; --Runecloth Shoulders
-		[08] = {itemID = 10029, spellID = 12078 }; --Red Mageweave Shoulders
+		[08] = {itemID = 10029, spellID = 12078 }; --AtlasLoot.Colors.RED Mageweave Shoulders
 		[09] = {itemID = 10028, spellID = 12076 }; --Shadoweave Shoulders
 		[10] = {itemID = 10027, spellID = 12074 }; --Black Mageweave Shoulders
 		[11] = {itemID = 7062, spellID = 8799 }; --Crimson Silk Pantaloons
 		[12] = {itemID = 7060, spellID = 8795 }; --Azure Shoulders
 		[13] = {itemID = 7059, spellID = 8793 }; --Crimson Silk Shoulders
-		[14] = {itemID = 7057, spellID = 8774 }; --Green Silken Shoulders
+		[14] = {itemID = 7057, spellID = 8774 }; --AtlasLoot.Colors.GREEN Silken Shoulders
 		[15] = {itemID = 4315, spellID = 3849 }; --Reinforced Woolen Shoulders
 		[16] = {itemID = 4314, spellID = 3848 }; --Double-stitched Woolen Shoulders
 	};
 	{
-		Name = AL["Cloth Armor"] .. WHITE .. " - Waist";
+		Name = AL["Cloth Armor"] .. AtlasLoot.Colors.WHITE .. " - Waist";
 		[01] = {itemID = 18405, spellID = 22866 }; --Belt of the Archmage
 		[02] = {itemID = 20539, spellID = 24902 }; --Runed Stygian Belt
 		[03] = {itemID = 14143, spellID = 18410 }; --Ghostweave Belt
@@ -1885,10 +1885,10 @@ AtlasLoot_Data["TailoringCLASSIC"] = {
 		[10] = {itemID = 7026, spellID = 8776 }; --Linen Belt
 	};
 	{
-		Name = AL["Cloth Armor"] .. WHITE .. " - Wrist";
+		Name = AL["Cloth Armor"] .. AtlasLoot.Colors.WHITE .. " - Wrist";
 		[01] = {itemID = 18263, spellID = 22759 }; --Flarecore Wraps
 		[02] = {itemID = 22655, spellID = 28209 }; --Glacial Wrists
-		[03] = {itemID = 4308, spellID = 3841 }; --Green Linen Bracers
+		[03] = {itemID = 4308, spellID = 3841 }; --AtlasLoot.Colors.GREEN Linen Bracers
 	};
 	{
 		Name = AL["Bags"];
@@ -1903,15 +1903,15 @@ AtlasLoot_Data["TailoringCLASSIC"] = {
 		[09] = {itemID = 21340, spellID = 26085 }; --Soul Pouch
 		[10] = {itemID = 22246, spellID = 27658 }; --Enchanted Mageweave Pouch
 		[11] = {itemID = 14046, spellID = 18405 }; --Runecloth Bag
-		[12] = {itemID = 10051, spellID = 12079 }; --Red Mageweave Bag
+		[12] = {itemID = 10051, spellID = 12079 }; --AtlasLoot.Colors.RED Mageweave Bag
 		[13] = {itemID = 10050, spellID = 12065 }; --Mageweave Bag
 		[14] = {itemID = 5765, spellID = 6695 }; --Black Silk Pack
-		[15] = {itemID = 5764, spellID = 6693 }; --Green Silk Pack
+		[15] = {itemID = 5764, spellID = 6693 }; --AtlasLoot.Colors.GREEN Silk Pack
 		[16] = {itemID = 4245, spellID = 3813 }; --Small Silk Pack
-		[17] = {itemID = 5763, spellID = 6688 }; --Red Woolen Bag
-		[18] = {itemID = 4241, spellID = 3758 }; --Green Woolen Bag
+		[17] = {itemID = 5763, spellID = 6688 }; --AtlasLoot.Colors.RED Woolen Bag
+		[18] = {itemID = 4241, spellID = 3758 }; --AtlasLoot.Colors.GREEN Woolen Bag
 		[19] = {itemID = 4240, spellID = 3757 }; --Woolen Bag
-		[20] = {itemID = 5762, spellID = 6686 }; --Red Linen Bag
+		[20] = {itemID = 5762, spellID = 6686 }; --AtlasLoot.Colors.RED Linen Bag
 		[21] = {itemID = 4238, spellID = 3755 }; --Linen Bag
 	};
 	{
@@ -1928,24 +1928,24 @@ AtlasLoot_Data["TailoringCLASSIC"] = {
 		[01] = {itemID = 10034, spellID = 12085 }; --Tuxedo Shirt
 		[02] = {itemID = 10055, spellID = 12080 }; --Pink Mageweave Shirt
 		[03] = {itemID = 10054, spellID = 12075 }; --Lavender Mageweave Shirt
-		[04] = {itemID = 10052, spellID = 12064 }; --Orange Martial Shirt
-		[05] = {itemID = 10056, spellID = 12061 }; --Orange Mageweave Shirt
+		[04] = {itemID = 10052, spellID = 12064 }; --AtlasLoot.Colors.ORANGE Martial Shirt
+		[05] = {itemID = 10056, spellID = 12061 }; --AtlasLoot.Colors.ORANGE Mageweave Shirt
 		[06] = {itemID = 4336, spellID = 3873 }; --Black Swashbuckler's Shirt
-		[07] = {itemID = 17723, spellID = 21945 }; --Green Holiday Shirt
+		[07] = {itemID = 17723, spellID = 21945 }; --AtlasLoot.Colors.GREEN Holiday Shirt
 		[08] = {itemID = 4335, spellID = 3872 }; --Rich Purple Silk Shirt
-		[09] = {itemID = 6796, spellID = 8489 }; --Red Swashbuckler's Shirt
-		[10] = {itemID = 4334, spellID = 3871 }; --Formal White Shirt
-		[11] = {itemID = 6795, spellID = 8483 }; --White Swashbuckler's Shirt
+		[09] = {itemID = 6796, spellID = 8489 }; --AtlasLoot.Colors.RED Swashbuckler's Shirt
+		[10] = {itemID = 4334, spellID = 3871 }; --Formal AtlasLoot.Colors.WHITE Shirt
+		[11] = {itemID = 6795, spellID = 8483 }; --AtlasLoot.Colors.WHITE Swashbuckler's Shirt
 		[12] = {itemID = 4333, spellID = 3870 }; --Dark Silk Shirt
 		[13] = {itemID = 4332, spellID = 3869 }; --Bright Yellow Shirt
-		[14] = {itemID = 6384, spellID = 7892 }; --Stylish Blue Shirt
-		[15] = {itemID = 6385, spellID = 7893 }; --Stylish Green Shirt
-		[16] = {itemID = 4330, spellID = 3866 }; --Stylish Red Shirt
+		[14] = {itemID = 6384, spellID = 7892 }; --Stylish AtlasLoot.Colors.BLUE Shirt
+		[15] = {itemID = 6385, spellID = 7893 }; --Stylish AtlasLoot.Colors.GREEN Shirt
+		[16] = {itemID = 4330, spellID = 3866 }; --Stylish AtlasLoot.Colors.RED Shirt
 		[17] = {itemID = 2587, spellID = 2406 }; --Gray Woolen Shirt
-		[18] = {itemID = 2579, spellID = 2396 }; --Green Linen Shirt
-		[19] = {itemID = 2577, spellID = 2394 }; --Blue Linen Shirt
-		[20] = {itemID = 2575, spellID = 2392 }; --Red Linen Shirt
-		[21] = {itemID = 2576, spellID = 2393 }; --White Linen Shirt
+		[18] = {itemID = 2579, spellID = 2396 }; --AtlasLoot.Colors.GREEN Linen Shirt
+		[19] = {itemID = 2577, spellID = 2394 }; --AtlasLoot.Colors.BLUE Linen Shirt
+		[20] = {itemID = 2575, spellID = 2392 }; --AtlasLoot.Colors.RED Linen Shirt
+		[21] = {itemID = 2576, spellID = 2393 }; --AtlasLoot.Colors.WHITE Linen Shirt
 		[22] = {itemID = 4344, spellID = 3915 }; --Brown Linen Shirt
 	};
 	{

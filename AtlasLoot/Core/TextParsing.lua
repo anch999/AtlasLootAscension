@@ -1,9 +1,7 @@
+local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
-local BabbleBoss = AtlasLoot_GetLocaleLibBabble("LibBabble-Boss-3.0")
 local BabbleInventory = AtlasLoot_GetLocaleLibBabble("LibBabble-Inventory-3.0")
-local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
-local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
-local WHITE = "|cffFFFFFF"
+
 --------------------------------------------------------------------------------
 -- Text replacement function
 --------------------------------------------------------------------------------
@@ -118,12 +116,12 @@ local txtSubstitution = {
     { "Herbalism", AL["Herbalism"] },
 
     -- Gems
-    { "Red", AL["Red Gem"] },
-    { "Blue", AL["Blue Gem"] },
+    { "self.Colors.RED", AL["self.Colors.RED Gem"] },
+    { "self.Colors.BLUE", AL["self.Colors.BLUE Gem"] },
     { "Yellow", AL["Yellow Gem"] },
     { "Purple", AL["Purple Gem"] },
-    { "Orange", AL["Orange Gem"] },
-    { "Green", AL["Green Gem"] },
+    { "self.Colors.ORANGE", AL["self.Colors.ORANGE Gem"] },
+    { "self.Colors.GREEN", AL["self.Colors.GREEN Gem"] },
 
     -- Text Colouring
     { "=q0=", "|cff9d9d9d" },

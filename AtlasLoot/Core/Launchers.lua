@@ -1,4 +1,4 @@
-
+local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 local icon = LibStub('LibDBIcon-1.0')
 local minimap = LibStub:GetLibrary('LibDataBroker-1.1'):NewDataObject("AtlasLoot", {
     type = 'data source',
@@ -11,10 +11,10 @@ function minimap.OnClick(frame, button)
 	if IsShiftKeyDown() then
         AtlasLoot:OptionsToggle();
     else
-        if AtlasLootDefaultFrame:IsVisible() then
-            AtlasLootDefaultFrame:Hide();
+        if AtlasLoot.mainUI:IsVisible() then
+            AtlasLoot.mainUI:Hide();
         else
-            AtlasLootDefaultFrame:Show();
+            AtlasLoot.mainUI:Show();
         end
     end
 end
@@ -35,19 +35,19 @@ function minimap.OnEnter(frame)
 end
 
 function AtlasLoot:MinimapIconSetup()
-	if not self.db.profile.minimap then
-		self.db.profile.minimap = {hide = false}
+	if not self.selectedProfile.minimap then
+		self.selectedProfile.minimap = {hide = false}
 	end
 
 	if icon then
-		icon:Register('AtlasLoot', minimap, self.db.profile.minimap)
+		icon:Register('AtlasLoot', minimap, self.selectedProfile.minimap)
 	end
 end
 
 -- show/hide minimap icon
 function AtlasLoot:ToggleMinimap()
-    local hide = not self.db.profile.minimap.hide
-    self.db.profile.minimap.hide = hide
+    local hide = not self.selectedProfile.minimap.hide
+    self.selectedProfile.minimap.hide = hide
     if hide then
       icon:Hide("AtlasLoot")
     else
