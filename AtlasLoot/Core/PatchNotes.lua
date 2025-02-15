@@ -1,6 +1,8 @@
 
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 local patchNotes = {
+    {"Version 7.5.1", "15th Feburuary, 2025"},
+    "Fixed error on fresh install",
     {"Version 7.5.0", "5th Feburuary, 2025"},
     "The learn unknown vanity button now will learn All unknown vanity spells you own",
     "Updated Hyjal Summit Loot",

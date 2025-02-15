@@ -78,7 +78,9 @@ end
 
 --Runs after all addons have fully loaded
 function AtlasLoot:OnEnable()
+
 	LoadItemIDsDatabase()
+	self:WishlistSetup()
 	self:InitializeUI()
 	self:CreateAdvancedSearchFrame()
 	self:InitializeSkins()
@@ -91,7 +93,6 @@ function AtlasLoot:OnEnable()
 	self:RegisterEvent("UNIT_SPELLCAST_SUCCEEDED")
 	self:InitializeWishlistMerchantGlow()
 	self:PatchNotes()
-	self:WishlistSetup()
 
 	if IsAddOnLoaded("TomTom") then self.TomTomLoaded = true end
 
