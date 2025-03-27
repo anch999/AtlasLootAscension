@@ -141,7 +141,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 			local itemType = item.Type or dataSource[dataID].Type
 			local maxDif = self:GetMaxDifficulty(itemType)
 			--stops items from showing that are taged for coa
-			if class == "HERO" and item.COA then
+			if (item.Server and item.Server ~= self.serverType) then
 				toShow = false
 			elseif item[self.Difficulties.MIN_DIF] then
 				if item[self.Difficulties.MIN_DIF] > itemDif then
