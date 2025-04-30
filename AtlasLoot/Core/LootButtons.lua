@@ -86,7 +86,7 @@ function AtlasLoot:ItemOnEnter(data)
                     self:SetCraftingTooltip(data)
                     GameTooltip:Show()
                     if self.selectedProfile.EquipCompare or IsShiftKeyDown() then
-                        self:ShowCompareItem(data) --- CALL MISSING METHOD TO SHOW 2 TOOLTIPS (Item Compare)
+                        GameTooltip_ShowCompareItem()
                     end
                 end
             end
@@ -120,7 +120,7 @@ function AtlasLoot:ItemOnEnter(data)
             end
             GameTooltip:Show()
             if self.selectedProfile.EquipCompare or IsShiftKeyDown() then
-                self:ShowCompareItem(data) --- CALL MISSING METHOD TO SHOW 2 TOOLTIPS (Item Compare)
+                GameTooltip_ShowCompareItem()
             end
         end
     end
@@ -249,82 +249,6 @@ function AtlasLoot:ItemOnClick(item, button)
         end
     end
 end
-
--------
--- Missing GameToolTip method
--- Enables item comparing. I've ripped self method directly from GameTooltip.lua and modified to work with GameTooltip /siena
--------
-function AtlasLoot:ShowCompareItem(data)
-   local link
-   if data.spellID then
-      link = Item:CreateFromID(data.itemID):GetLink()
-   else
-      _,link = GameTooltip:GetItem()
-   end
-
-   if ( not link ) then
-      return
-   end
-
-   ShoppingTooltip1:SetOwner(GameTooltip, "ANCHOR_NONE")
-   ShoppingTooltip2:SetOwner(GameTooltip, "ANCHOR_NONE")
-   ShoppingTooltip3:SetOwner(GameTooltip, "ANCHOR_NONE")
-
-   local item1 = nil
-   local item2 = nil
-   local item3 = nil
-   if ( ShoppingTooltip1:SetHyperlinkCompareItem(link, 1, 1, GameTooltip) ) then
-      item1 = true
-   end
-   if ( ShoppingTooltip2:SetHyperlinkCompareItem(link, 2, 1, GameTooltip) ) then
-      item2 = true
-   end
-   if ( ShoppingTooltip3:SetHyperlinkCompareItem(link, 3, 1, GameTooltip) ) then
-      item3 = true
-   end
-   if not item1 and not item2 and not item3 then 
-        return 
-    end
-
-   if item3 then
-        if not item1 then
-            item1, item3 = true, nil
-            ShoppingTooltip1:SetHyperlinkCompareItem(link, 3, 1, GameTooltip)
-        elseif not item2 then
-            item2, item3 = true, nil
-            ShoppingTooltip2:SetHyperlinkCompareItem(link, 3, 1, GameTooltip)
-        end
-    end
-    if item2 and not item1 then
-        item1, item2 = true, nil
-        ShoppingTooltip1:SetHyperlinkCompareItem(link, 2, 1, GameTooltip)
-    end
-
-   local left, right, anchor1, anchor2 = GameTooltip:GetLeft(), GameTooltip:GetRight(), "TOPLEFT", "TOPRIGHT"
-   if not left or not right then return end
-	if (GetScreenWidth() - right) < left then anchor1, anchor2 = anchor2, anchor1 end
-
-    if item1 then
-		ShoppingTooltip1:ClearAllPoints()
-		ShoppingTooltip1:SetPoint(anchor1, GameTooltip, anchor2, 0, -10)
-		ShoppingTooltip1:Show()
-
-		if item2 then
-			ShoppingTooltip2:ClearAllPoints()
-			ShoppingTooltip2:SetPoint(anchor1, ShoppingTooltip1, anchor2)
-			ShoppingTooltip2:Show()
-		end
-
-        if item3 then
-			ShoppingTooltip3:ClearAllPoints()
-			ShoppingTooltip3:SetPoint(anchor1, ShoppingTooltip2, anchor2)
-			ShoppingTooltip3:Show()
-		end
-	end
-
-end
-
-
 
 local zoneList
 --Creates a zone list for use in adding vendor and mob drop waypoints to tomtom
