@@ -2,6 +2,367 @@ local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
 local itemHighlightBlue = "Interface\\AddOns\\AtlasLoot\\Images\\knownBlue"
 local itemHighlightGreen = "Interface\\AddOns\\AtlasLoot\\Images\\knownGreen"
+
+function AtlasLoot:InitializeItemFrame()
+
+	----------------------------------- Item Loot Panel -------------------------------------------
+	self.itemframe = CreateFrame("Frame", nil, self.mainUI.lootBackground)
+	self.itemframe:SetSize(765,510)
+	self.itemframe:SetPoint("TOPLEFT", self.mainUI.lootBackground, "TOPLEFT", 2, -2)
+	self.itemframe.Label = self.itemframe:CreateFontString(nil,"OVERLAY","GameFontHighlightLarge")
+	self.itemframe.Label:SetPoint("TOP", self.itemframe, "TOP")
+	self.itemframe.Label:SetSize(512,30)
+	self.itemframe.Label:SetJustifyH("CENTER")
+
+    local ROW_HEIGHT = 29   -- How tall is each row?
+    local MAX_ROWS = 15      -- How many rows can be shown at once?
+	local MAX_COLUMNS = 2
+
+	local function hideButton(button)
+		if not button then return end
+		button:Hide()
+		button.itemID = nil
+		button.spellID = nil
+		button.Highlight:Hide()
+		button.hasTrade = false
+	end
+
+	function self:HideItemButtons()
+		for row = 1, MAX_ROWS do
+			for column = 1, MAX_COLUMNS do
+				hideButton(self.itemframe.buttons[column][row])
+			end
+		end
+	end
+
+	local function getMaxValue(itemList)
+		if itemList then
+			if itemList[2] and #itemList[2] > #itemList[1] then
+				return #itemList[2]
+			else
+				return #itemList[1]
+			end
+		end
+	end
+
+	local storedData = {}
+	function self:ItemFrameUpdate(dataSource, dataID, tablenum, dataSource_backup)
+		if not dataSource then return end
+		storedData = {dataSource, dataID, tablenum, dataSource_backup}
+		local itemList = dataSource[dataID][tablenum]
+		local maxValue = getMaxValue(itemList)
+		FauxScrollFrame_Update(self.itemframe.scrollBar, maxValue, MAX_ROWS, ROW_HEIGHT, nil, nil, nil, nil, nil, nil, true)
+		local offset = FauxScrollFrame_GetOffset(self.itemframe.scrollBar)
+		for column = 1, MAX_COLUMNS do
+			for row = 1, MAX_ROWS do
+				local value = row + offset
+				local button = self.itemframe.buttons[column][row]
+				local item = itemList[column] and itemList[column][value]
+				local itemNumber = itemList[column] and itemList[column][value]
+
+				if item and item[1] ~= "gap" then
+					local isValid, toShow, itemID, recipeID = self:GetProperItemConditionals(item, dataSource, dataID, tablenum, dataSource_backup)
+					if isValid and toShow and maxValue ~= 0 and value <= maxValue then
+						self:SetupButton(itemID or recipeID, itemNumber, button, dataSource, dataID, tablenum, dataSource_backup)
+						button:Show()
+					else
+						hideButton(button)
+					end
+				else
+					hideButton(button)
+				end
+			end
+        end
+	end
+
+		self.itemframe.scrollBar = CreateFrame("ScrollFrame","AtlasLootDefaultFrameScroll", self.itemframe, "FauxScrollFrameTemplate")
+		self.itemframe.scrollBar:SetPoint("TOPLEFT", 0, -8)
+		self.itemframe.scrollBar:SetPoint("BOTTOMRIGHT", -30, 8)
+		self.itemframe.scrollBar:SetScript("OnVerticalScroll", function(scroll, offset)
+			scroll.offset = math.floor(offset / ROW_HEIGHT + 0.5)
+				self:ItemFrameUpdate(unpack(storedData))
+		end)
+
+	self.itemframe.scrollBar:SetScript("OnShow", function() self:ItemFrameUpdate(unpack(storedData)) end)
+
+	self.itemframe.buttons = {{},{}}
+
+	local function createButton(column, row)
+		self.itemframe.buttons[column][row] = CreateFrame("Button", "$parentColumn"..column.."Button"..row, self.itemframe , "AtlasLootItemTemplate")
+		local button = self.itemframe.buttons[column][row]
+		button:SetID(row)
+		button.number = row
+		if column == 1 and row == 1 then
+			button:SetPoint("TOP", self.itemframe, "TOP",-210,-35)
+		elseif column == 2 and row == 1 then
+			button:SetPoint("TOP", self.itemframe, "TOP",150,-35)
+		else
+			button:SetPoint("TOPLEFT", self.itemframe.buttons[column][row-1], "BOTTOMLEFT")
+		end
+	end
+
+	for column = 1, MAX_COLUMNS do
+		for row = 1, MAX_ROWS do
+			createButton(column, row)
+		end
+	end
+
+end
+
+--find the right itemID for the difficulty selected
+function AtlasLoot:GetProperItemConditionals(item, dataSource, dataID, tablenum, dataSource_backup)
+	local isValid, toShow, itemID, recipeID
+
+	isValid = false
+	toShow = true
+	local itemDif = self.ItemindexID or self.Difficulties.Normal
+	itemID = item and item.itemID
+	if item and item.itemID then
+		itemID = item.itemID
+		isValid = true
+		local itemType = item.Type or dataSource[dataID].Type
+		local maxDif = self:GetMaxDifficulty(itemType)
+		--stops items from showing that are taged for coa
+		if (item.Server and item.Server ~= self.serverType) then
+			toShow = false
+		elseif item[self.Difficulties.MIN_DIF] then
+			if item[self.Difficulties.MIN_DIF] > itemDif then
+				toShow = false
+			end
+			itemID = self:GetItemDifficultyID(item.itemID, min(maxDif, itemDif))
+		end
+		if toShow then
+			if maxDif < itemDif then itemDif = maxDif end 
+			--If something was found in itemID database show that if not show default table item
+			itemID = self:GetItemDifficultyID(item.itemID, itemDif)
+		end
+	elseif item and (item.spellID or item.icon) or item and itemID then
+		toShow = true
+		if(item[self.Difficulties.MIN_DIF]) then
+			if item[self.Difficulties.MIN_DIF] > itemDif then
+				toShow = false
+			end
+		end
+		isValid = true
+	end
+
+	if item and item.spellID then
+		recipeID = self:GetRecipeID(item.spellID)
+	end
+	return isValid, toShow, itemID, recipeID
+end
+
+-- Setup the button for the to be displayed item/spell
+function AtlasLoot:SetupButton(itemID, itemNumber, itemButton, dataSource, dataID, tablenum, dataSource_backup)
+
+	local text, extra
+	local itemName, itemQuality, itemSubType, itemEquipLoc, itemIcon
+	if itemID then
+		itemName, _, itemQuality, _, _, _, itemSubType, _, itemEquipLoc, itemIcon = self:GetItemInfo(itemID)
+	end
+
+	local spellName, spellIcon
+	--Use shortcuts for easier reference to parts of the item button
+	local iconFrame  = itemButton.Icon
+	local nameFrame  = itemButton.Name
+	local extraFrame = itemButton.ExtraText
+	local hightlightFrame = itemButton.Highlight
+	local spellID = itemNumber.spellID
+
+	if spellID then
+		spellName, _, spellIcon, _, _, _, _, _, _ = GetSpellInfo(spellID)
+		if spellName then
+			text = spellName
+		elseif itemNumber.name then
+			text = itemNumber.name
+			text = self:FixText(text)
+		end
+		if itemID then
+			text = select(4,GetItemQualityColor(itemQuality))..text
+		end
+		--Adds button highlights if you know a recipe or have a char that knows one
+		if CA_IsSpellKnown(spellID) then
+			itemButton.hasTrade = true
+			hightlightFrame:SetTexture(itemHighlightGreen)
+			hightlightFrame:Show()
+		else
+			itemButton.hasTrade = false
+			hightlightFrame:Hide()
+			if self:GetKnownRecipes(spellID) then
+				hightlightFrame:SetTexture(itemHighlightBlue)
+				hightlightFrame:Show()
+			end
+		end
+
+	elseif itemID then
+		--If the client has the name of the item in cache, use that instead.					
+		if itemNumber.name then
+			--If it has a manuel entry use that
+			text = itemNumber.name
+			text = self:FixText(text)
+		elseif itemName then
+			text = select(4,GetItemQualityColor(itemQuality))..itemName
+		else
+			text = ""
+		end
+
+		if C_VanityCollection.IsCollectionItemOwned(itemID) and VANITY_ITEMS[itemID] and CA_IsSpellKnown(VANITY_ITEMS[itemID].learnedSpell) and VANITY_ITEMS[itemID].learnedSpell ~= 0 then
+			hightlightFrame:SetTexture(itemHighlightGreen)
+			hightlightFrame:Show()
+		elseif C_VanityCollection.IsCollectionItemOwned(itemID) then
+			hightlightFrame:SetTexture(itemHighlightBlue)
+			hightlightFrame:Show()
+			if dataSource_backup == "AtlasLoot_CurrentWishList" or (VANITY_ITEMS[itemID] and VANITY_ITEMS[itemID].learnedSpell ~= 0 and not CA_IsSpellKnown(VANITY_ITEMS[itemID].learnedSpell)) then
+				tinsert(self.vanityItems, itemID)
+			end
+		end
+
+		local recipeData = self:GetRecipeData(itemID, "item")
+		if recipeData then
+			if CA_IsSpellKnown(recipeData.spellID) then
+				--Adds button highlights if you know a recipe or have a char that knows one
+				itemButton.hasTrade = true
+				hightlightFrame:SetTexture(itemHighlightGreen)
+				hightlightFrame:Show()
+			else
+				itemButton.hasTrade = false
+				hightlightFrame:Hide()
+				if self:GetKnownRecipes(recipeData.spellID) then
+					hightlightFrame:SetTexture(itemHighlightBlue)
+					hightlightFrame:Show()
+				end
+			end
+		end
+	else
+		if itemNumber.name then
+			--If it has a manuel entry use that
+			text = itemNumber.name
+			text = self:FixText(text)
+		else
+			text = ""
+		end
+	end
+
+	itemButton.name = text
+
+	--Insert the item description
+	if self.FixedItemText[itemNumber.itemID] then
+		extra = self.FixedItemText[itemNumber.itemID]
+	elseif itemNumber.desc then
+		if type(itemNumber.desc) == "table" then
+			local location, boss = itemNumber.desc[1], itemNumber.desc[2]
+			extra = self.Colors.YELLOW..location..self.Colors.WHITE.." - "..boss	
+		else
+			extra = itemNumber.desc
+		end
+	elseif itemNumber.dropLoc and (self.dataSourceBackup == "AtlasLoot_OnDemand" or (self.db.profile.showdropLocationOnSearch and dataID == "SearchResult")) then
+		local location, boss = itemNumber.dropLoc[1], itemNumber.dropLoc[2]
+		extra = self.Colors.YELLOW..location..self.Colors.WHITE.." - "..boss
+	elseif AtlasLoot_CraftingData["CraftingLevels"] and spellID and AtlasLoot_CraftingData["CraftingLevels"][spellID] and dataID ~= "SearchResult" then
+		local lvls = AtlasLoot_CraftingData["CraftingLevels"][spellID]
+		extra = self.Colors.LIMEGREEN .. "L-Click:|r "..self.Colors.WHITE..dataSource[dataID].Name.." ( "..self.Colors.ORANGE..lvls[1].."|r "..self.Colors.YELLOW..lvls[2].."|r "..self.Colors.GREEN..lvls[3].."|r "..self.Colors.GREY..lvls[4]..self.Colors.WHITE.." )"
+	elseif itemNumber.lootTable and itemNumber.lootTable[2] == "Token" then
+		extra = AL["Set Token (Click)"]
+	elseif itemEquipLoc and itemEquipLoc ~= "" and itemSubType then
+		extra = "=ds="..itemEquipLoc..", "..itemSubType
+	elseif itemSubType then
+		extra = "=ds="..itemSubType
+	else
+		extra = ""
+	end
+
+	if AtlasLoot_ExtraData[itemNumber.itemID]and dataID ~= "SearchResult" then
+		extra = self.Colors.LIMEGREEN .. "L-Click:|r " .. extra
+	end
+
+	if itemNumber.contentsPreview and dataID ~= "SearchResult" then
+		extra = self.Colors.LIMEGREEN .. "L-Click:|r " .. extra
+	end
+
+	if itemNumber.rep then
+		extra = extra ..self.Colors.WHITE.." ("..itemNumber.rep..")"
+	end
+
+	local price = itemNumber.price
+	if price then
+		price = self:ArenaCost(price, itemEquipLoc, itemQuality)
+		extra = extra ..self.Colors.WHITE.." ("..price..")"
+	end
+
+	local recipe = self:GetRecipeData(itemID, "item")
+	if recipe and AtlasLoot_CraftingData["CraftingLevels"] and AtlasLoot_CraftingData["CraftingLevels"][recipe.spellID] then
+		local lvls = AtlasLoot_CraftingData["CraftingLevels"][recipe.spellID]
+		extra = extra ..self.Colors.WHITE.." ( "..lvls[1].." )"
+	end
+
+	extra = self:FixText(extra)
+	--If there is no data on the texture an item should have, show a big self.Colors.RED question mark
+	if itemNumber.icon == "Blank" then
+		iconFrame:SetTexture(nil)
+	elseif itemNumber.icon == "?" then
+		iconFrame:SetTexture("Interface\\Icons\\INV_Misc_QuestionMark")
+	elseif itemNumber.icon then
+		iconFrame:SetTexture("Interface\\Icons\\"..itemNumber.icon)
+	elseif itemNumber.itemID then
+		iconFrame:SetTexture(itemIcon)
+	elseif spellIcon then
+		iconFrame:SetTexture(spellIcon)
+	end
+
+	if iconFrame:GetTexture() == nil and itemNumber.icon ~= "Blank" then
+		iconFrame:SetTexture("Interface\\Icons\\INV_Misc_QuestionMark")
+	end
+
+	itemButton.itemTexture = iconFrame:GetTexture()
+
+	--Highlight items in the wishlist
+	if itemID and dataSource_backup ~= "AtlasLoot_CurrentWishList" and (AtlasLootWishList.Options[UnitName("player")] and AtlasLootWishList.Options[UnitName("player")]["Mark"]) then
+		local xitemexistwish, itemwishicons = self:WishListCheck(itemID, true)
+		if xitemexistwish then
+			text = itemwishicons.." "..text
+		end
+	end
+
+	--Set the name and description of the item
+	nameFrame:SetText(text)
+	extraFrame:SetText(extra)
+	extraFrame:Show()
+	--For convenience, we store information about the objects in the objects so that it can be easily accessed later
+	itemButton.itemID = itemID
+	itemButton.spellID = spellID
+	--learned spell id is used for items that are part of the ascension vanity collection
+	itemButton.learnedSpellID = nil
+
+	if VANITY_ITEMS[itemID] and VANITY_ITEMS[itemID].learnedSpell and VANITY_ITEMS[itemID].learnedSpell ~= 0 then
+		itemButton.learnedSpellID = VANITY_ITEMS[itemID].learnedSpell
+	end
+
+	itemButton.craftingData = self:GetRecipeSource(spellID)
+	itemButton.tablenum = tablenum
+	itemButton.dataID = dataID
+	itemButton.dataSource = dataSource_backup
+	itemButton.contentsPreview = itemNumber.contentsPreview
+	itemButton.price = itemNumber.price or nil
+	itemButton.droprate = itemNumber.droprate or self:GetDropRate(dataSource[dataID][tablenum], itemNumber.lootGroup)
+	itemButton.extraInfo = itemNumber.extraInfo or nil
+	itemButton.quest = itemNumber.quest or nil
+	itemButton.item = itemNumber
+
+	if itemNumber.lootTable then
+		itemButton.sourcePage = itemNumber.lootTable
+	else
+		itemButton.sourcePage = nil
+	end
+
+	if itemNumber[self.Difficulties.DIF_SEARCH] then
+		itemButton.difficulty = itemNumber[self.Difficulties.DIF_SEARCH]
+	else
+		itemButton.difficulty = self.ItemindexID
+	end
+
+	itemButton:Show()
+end
+
 --[[
 AtlasLoot:ShowItemsFrame(dataID, dataSource, tablenum):
 dataID - Name of the loot table
@@ -11,7 +372,6 @@ It is the workhorse of the mod and allows the loot tables to be displayed any wa
 ]]
 function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 
-	local isValid, toShow, itemID, recipeID
 	self.vanityItems = {}
 
     --If the loot table name has not been passed, throw up a debugging statement
@@ -111,15 +471,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 		self:SubTableScrollFrameUpdate(dataID, dataSource_backup, tablenum)
 	end
 
-	for i = 1, 30, 1 do
-		--Use shortcuts for easier reference to parts of the item button
-		local itemButton = self.itemframe.buttons[i]
-			itemButton:Hide()
-			itemButton.itemID = nil
-			itemButton.spellID = nil
-			itemButton.Highlight:Hide()
-			itemButton.hasTrade = false
-	end
+	
 
 	-- Sets the main page lable
 	if dataSource[dataID][tablenum] and dataSource[dataID][tablenum].Name then
@@ -129,373 +481,110 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 		return
 	end
 
-	-- find the right itemID for the difficulty selected
-	local function getProperItemConditionals(item)
-		isValid = false
-		toShow = true
-		local itemDif = self.ItemindexID or self.Difficulties.Normal
-		local itemID = item and item.itemID
-		if item and item.itemID then
-			itemID = item.itemID
-			isValid = true
-			local itemType = item.Type or dataSource[dataID].Type
-			local maxDif = self:GetMaxDifficulty(itemType)
-			--stops items from showing that are taged for coa
-			if (item.Server and item.Server ~= self.serverType) then
-				toShow = false
-			elseif item[self.Difficulties.MIN_DIF] then
-				if item[self.Difficulties.MIN_DIF] > itemDif then
-					toShow = false
-				end
-				itemID = self:GetItemDifficultyID(item.itemID, min(maxDif, itemDif))
-			end
-			if toShow then
-				if maxDif < itemDif then itemDif = maxDif end 
-				--If something was found in itemID database show that if not show default table item
-				itemID = self:GetItemDifficultyID(item.itemID, itemDif)
-			end
-		elseif item and (item.spellID or item.icon) or item and itemID then
-			toShow = true
-			if(item[self.Difficulties.MIN_DIF]) then
-				if item[self.Difficulties.MIN_DIF] > itemDif then
-					toShow = false
-				end
-			end
-			isValid = true
-		end
-		local recipeID
-		if item and item.spellID then
-			recipeID = self:GetRecipeID(item.spellID)
-		end
-		return isValid, toShow, itemID, recipeID
-	end
-
-	-- Setup the button for the to be displayed item/spell
-	local function setupButton(itemID, i, newPosition, dataSource, dataID, tablenum, dataSource_backup)
-		local text, extra
-		local itemName, itemQuality, itemSubType, itemEquipLoc, itemIcon
-		if itemID then
-			itemName, _, itemQuality, _, _, _, itemSubType, _, itemEquipLoc, itemIcon = AtlasLoot:GetItemInfo(itemID)
-		end
-
-		local spellName, spellIcon
-		--Use shortcuts for easier reference to parts of the item button
-		local itemButton = self.itemframe.buttons[newPosition]
-		local iconFrame  = itemButton.Icon
-		local nameFrame  = itemButton.Name
-		local extraFrame = itemButton.ExtraText
-		local hightlightFrame = itemButton.Highlight
-		local itemNumber = dataSource[dataID][tablenum][i]
-		local spellID = itemNumber.spellID
-
-		if spellID then
-			spellName, _, spellIcon, _, _, _, _, _, _ = GetSpellInfo(spellID)
-			if spellName then
-				text = spellName
-			elseif itemNumber.name then
-				text = itemNumber.name
-				text = self:FixText(text)
-			end
-			if itemID then
-				text = select(4,GetItemQualityColor(itemQuality))..text
-			end
-			--Adds button highlights if you know a recipe or have a char that knows one
-			if CA_IsSpellKnown(spellID) then
-				itemButton.hasTrade = true
-				hightlightFrame:SetTexture(itemHighlightGreen)
-				hightlightFrame:Show()
-			else
-				itemButton.hasTrade = false
-				hightlightFrame:Hide()
-				if self:GetKnownRecipes(spellID) then
-					hightlightFrame:SetTexture(itemHighlightBlue)
-					hightlightFrame:Show()
-				end
-
-			end
-		elseif itemID then
-			--If the client has the name of the item in cache, use that instead.					
-			if itemNumber.name then
-				--If it has a manuel entry use that
-				text = itemNumber.name
-				text = self:FixText(text)
-			elseif itemName then
-				text = select(4,GetItemQualityColor(itemQuality))..itemName
-			else
-				text = ""
-			end
-			if C_VanityCollection.IsCollectionItemOwned(itemID) and VANITY_ITEMS[itemID] and CA_IsSpellKnown(VANITY_ITEMS[itemID].learnedSpell) and VANITY_ITEMS[itemID].learnedSpell ~= 0 then
-				hightlightFrame:SetTexture(itemHighlightGreen)
-				hightlightFrame:Show()
-			elseif C_VanityCollection.IsCollectionItemOwned(itemID) then
-				hightlightFrame:SetTexture(itemHighlightBlue)
-				hightlightFrame:Show()
-				if dataSource_backup == "AtlasLoot_CurrentWishList" or (VANITY_ITEMS[itemID] and VANITY_ITEMS[itemID].learnedSpell ~= 0 and not CA_IsSpellKnown(VANITY_ITEMS[itemID].learnedSpell)) then
-					tinsert(self.vanityItems, itemID)
-				end
-			end
-			local recipeData = self:GetRecipeData(itemID, "item")
-			if recipeData then
-				if CA_IsSpellKnown(recipeData.spellID) then
-					--Adds button highlights if you know a recipe or have a char that knows one
-					itemButton.hasTrade = true
-					hightlightFrame:SetTexture(itemHighlightGreen)
-					hightlightFrame:Show()
-				else
-					itemButton.hasTrade = false
-					hightlightFrame:Hide()
-					if self:GetKnownRecipes(recipeData.spellID) then
-						hightlightFrame:SetTexture(itemHighlightBlue)
-						hightlightFrame:Show()
-					end
-				end
-			end
-		else
-			if itemNumber.name then
-				--If it has a manuel entry use that
-				text = itemNumber.name
-				text = self:FixText(text)
-			else
-				text = ""
-			end
-		end
-
-		itemButton.name = text
-		--Insert the item description
-		if self.FixedItemText[itemNumber.itemID] then
-			extra = self.FixedItemText[itemNumber.itemID]
-		elseif itemNumber.desc then
-			if type(itemNumber.desc) == "table" then
-				local location, boss = itemNumber.desc[1], itemNumber.desc[2]
-				extra = self.Colors.YELLOW..location..self.Colors.WHITE.." - "..boss	
-			else
-				extra = itemNumber.desc
-			end
-		elseif itemNumber.dropLoc and (self.dataSourceBackup == "AtlasLoot_OnDemand" or (self.db.profile.showdropLocationOnSearch and dataID == "SearchResult")) then
-			local location, boss = itemNumber.dropLoc[1], itemNumber.dropLoc[2]
-			extra = self.Colors.YELLOW..location..self.Colors.WHITE.." - "..boss
-		elseif AtlasLoot_CraftingData["CraftingLevels"] and spellID and AtlasLoot_CraftingData["CraftingLevels"][spellID] and dataID ~= "SearchResult" then
-			local lvls = AtlasLoot_CraftingData["CraftingLevels"][spellID]
-			extra = self.Colors.LIMEGREEN .. "L-Click:|r "..self.Colors.WHITE..dataSource[dataID].Name.." ( "..self.Colors.ORANGE..lvls[1].."|r "..self.Colors.YELLOW..lvls[2].."|r "..self.Colors.GREEN..lvls[3].."|r "..self.Colors.GREY..lvls[4]..self.Colors.WHITE.." )"
-		elseif itemNumber.lootTable and itemNumber.lootTable[2] == "Token" then
-			extra = AL["Set Token (Click)"]
-		elseif itemEquipLoc and itemEquipLoc ~= "" and itemSubType then
-			extra = "=ds="..itemEquipLoc..", "..itemSubType
-		elseif itemSubType then
-			extra = "=ds="..itemSubType
-		else
-			extra = ""
-		end
-
-		if AtlasLoot_ExtraData[itemNumber.itemID]and dataID ~= "SearchResult" then
-			extra = self.Colors.LIMEGREEN .. "L-Click:|r " .. extra
-		end
-		if itemNumber.contentsPreview and dataID ~= "SearchResult" then
-			extra = self.Colors.LIMEGREEN .. "L-Click:|r " .. extra
-		end
-
-		if itemNumber.rep then
-			extra = extra ..self.Colors.WHITE.." ("..itemNumber.rep..")"
-		end
-
-		local price = itemNumber.price
-		if price then
-			price = self:ArenaCost(price, itemEquipLoc, itemQuality)
-			extra = extra ..self.Colors.WHITE.." ("..price..")"
-		end
-
-		local recipe = self:GetRecipeData(itemID, "item")
-		if recipe and AtlasLoot_CraftingData["CraftingLevels"] and AtlasLoot_CraftingData["CraftingLevels"][recipe.spellID] then
-			local lvls = AtlasLoot_CraftingData["CraftingLevels"][recipe.spellID]
-			extra = extra ..self.Colors.WHITE.." ( "..lvls[1].." )"
-		end
-
-		extra = self:FixText(extra)
-
-		--If there is no data on the texture an item should have, show a big self.Colors.RED question mark
-		if itemNumber.icon == "Blank" then
-			iconFrame:SetTexture(nil)
-		elseif itemNumber.icon == "?" then
-			iconFrame:SetTexture("Interface\\Icons\\INV_Misc_QuestionMark")
-		elseif itemNumber.icon then
-			iconFrame:SetTexture("Interface\\Icons\\"..itemNumber.icon)
-		elseif itemNumber.itemID then
-			iconFrame:SetTexture(itemIcon)
-		elseif spellIcon then
-			iconFrame:SetTexture(spellIcon)
-		end
-
-		if iconFrame:GetTexture() == nil and itemNumber.icon ~= "Blank" then
-			iconFrame:SetTexture("Interface\\Icons\\INV_Misc_QuestionMark")
-		end
-
-		itemButton.itemTexture = iconFrame:GetTexture()
-
-		--Highlight items in the wishlist
-		if itemID and dataSource_backup ~= "AtlasLoot_CurrentWishList" and (AtlasLootWishList.Options[UnitName("player")] and AtlasLootWishList.Options[UnitName("player")]["Mark"]) then
-			local xitemexistwish, itemwishicons = self:WishListCheck(itemID, true)
-			if xitemexistwish then
-				text = itemwishicons.." "..text
-			end
-		end
-		--Set the name and description of the item
-		nameFrame:SetText(text)
-		extraFrame:SetText(extra)
-		extraFrame:Show()
-		--For convenience, we store information about the objects in the objects so that it can be easily accessed later
-		itemButton.itemID = itemID
-		itemButton.spellID = spellID
-
-		--learned spell id is used for items that are part of the ascension vanity collection
-		itemButton.learnedSpellID = nil
-		if VANITY_ITEMS[itemID] and VANITY_ITEMS[itemID].learnedSpell and VANITY_ITEMS[itemID].learnedSpell ~= 0 then
-			itemButton.learnedSpellID = VANITY_ITEMS[itemID].learnedSpell
-		end
-
-		itemButton.craftingData = self:GetRecipeSource(spellID)
-		itemButton.tablenum = tablenum
-		itemButton.dataID = dataID
-		itemButton.dataSource = dataSource_backup
-		itemButton.contentsPreview = itemNumber.contentsPreview
-		itemButton.price = itemNumber.price or nil
-		itemButton.droprate = itemNumber.droprate or self:GetDropRate(dataSource[dataID][tablenum], itemNumber.lootGroup)
-		itemButton.extraInfo = itemNumber.extraInfo or nil
-		itemButton.quest = itemNumber.quest or nil
-		itemButton.item = itemNumber
-
-		if itemNumber.lootTable then
-			itemButton.sourcePage = itemNumber.lootTable
-		else
-			itemButton.sourcePage = nil
-		end
-
-		if itemNumber[self.Difficulties.DIF_SEARCH] then
-			itemButton.difficulty = itemNumber[self.Difficulties.DIF_SEARCH]
-		else
-			itemButton.difficulty = self.ItemindexID
-		end
-
-		itemButton:Show()
-	end
+	self:HideItemButtons()
 
 	-- Create the loottable
 	if (dataID == "SearchResult") or (dataSource_backup == "AtlasLoot_CurrentWishList") or dataSource[dataID][tablenum] then
-	local displayNumber = 0
-		--Iterate through each item object and set its properties
-		for i = 1, 30, 1 do
-			--Set new button number if a item has been hidden
-			local newPosition = i - displayNumber
-			if i == 16 then
-				displayNumber = 0
-				newPosition = i
-			end
-			--Check for a valid object (that it exists, and that it has a name
-			isValid, toShow, itemID, recipeID = getProperItemConditionals(dataSource[dataID][tablenum][i])
-			if isValid and toShow then
-				setupButton(itemID or recipeID, i, newPosition, dataSource, dataID, tablenum, dataSource_backup)
-			elseif isValid then
-				displayNumber = displayNumber + 1
-			end
-		end
+		self:ItemFrameUpdate(dataSource, dataID, tablenum, dataSource_backup)
+	end
 
 -----------------------------------------------------------------------------------------------------------------------------
 
-		--Store data about the state of the items frame to allow minor tweaks or a recall of the current loot page
-		self.itemframe.refresh = {dataID, dataSource_backup, tablenum}
+	--Store data about the state of the items frame to allow minor tweaks or a recall of the current loot page
+	self.itemframe.refresh = {dataID, dataSource_backup, tablenum}
 
-		if dataID ~= "FilterList" then
-			self.itemframe.refreshFilter = {dataID, dataSource_backup, tablenum}
-		end
+	if dataID ~= "FilterList" then
+		self.itemframe.refreshFilter = {dataID, dataSource_backup, tablenum}
+	end
 
-		if dataID ~= "FilterList"  and dataSource[dataID].Back ~= true then
-			self.itemframe.refreshOri = {dataID, dataSource_backup, tablenum}
-		end
+	if dataID ~= "FilterList"  and dataSource[dataID].Back ~= true then
+		self.itemframe.refreshOri = {dataID, dataSource_backup, tablenum}
+	end
 
-		if dataID == "SearchResult" then
-			self.itemframe.refreshSearch = {dataID, dataSource_backup, tablenum}
-		elseif not self.mainUI.backbutton:IsVisible() then
-			self.itemframe.refreshSearch = nil
-		end
+	if dataID == "SearchResult" then
+		self.itemframe.refreshSearch = {dataID, dataSource_backup, tablenum}
+	elseif not self.mainUI.backbutton:IsVisible() then
+		self.itemframe.refreshSearch = nil
+	end
 
-		if dataSource_backup ~= "AtlasLoot_OnDemand" and dataID ~= "SearchResult" and dataSource_backup ~= "AtlasLoot_CurrentWishList" and dataID ~= "FilterList"  and
-		dataSource[dataID].Back ~= true and dataID ~= "EmptyTable" and not dataSource[dataID].vanity then
-			self.db.profile.LastBoss[self.Expac] = {dataID, dataSource_backup, tablenum, self.lastModule, self.currentTable, self.moduleName}
-			self.db.profile.savedState[self.currentTable] = {dataID, dataSource_backup, tablenum, self.lastModule, self.currentTable, self.moduleName}
-		end
+	if dataSource_backup ~= "AtlasLoot_OnDemand" and dataID ~= "SearchResult" and dataSource_backup ~= "AtlasLoot_CurrentWishList" and dataID ~= "FilterList"  and
+	dataSource[dataID].Back ~= true and dataID ~= "EmptyTable" and not dataSource[dataID].vanity then
+		self.db.profile.LastBoss[self.Expac] = {dataID, dataSource_backup, tablenum, self.lastModule, self.currentTable, self.moduleName}
+		self.db.profile.savedState[self.currentTable] = {dataID, dataSource_backup, tablenum, self.lastModule, self.currentTable, self.moduleName}
+	end
 
-		-- Checks dataID with submenus to stop filter button loading on certain tables
-		local function filterCheck(find)
-			local mtype = { "Reputations", "WorldEvents", "PVP", "Collections", "Vanity"}
-			for _, t in pairs (mtype) do
-				if AtlasLoot_SubMenus[t..self.Expac] then
-					for _, v in ipairs (AtlasLoot_SubMenus[t..self.Expac]) do
-						if v[3] and type(v[3]) == "table" then
-							for _, sub in ipairs(v[3]) do
-								if find == sub[2] then
-									return true
-								end
+	-- Checks dataID with submenus to stop filter button loading on certain tables
+	local function filterCheck(find)
+		local mtype = { "Reputations", "WorldEvents", "PVP", "Collections", "Vanity"}
+		for _, t in pairs (mtype) do
+			if AtlasLoot_SubMenus[t..self.Expac] then
+				for _, v in ipairs (AtlasLoot_SubMenus[t..self.Expac]) do
+					if v[3] and type(v[3]) == "table" then
+						for _, sub in ipairs(v[3]) do
+							if find == sub[2] then
+								return true
 							end
-						elseif find == v[2] then
-							return true
-						end	
-					end
+						end
+					elseif find == v[2] then
+						return true
+					end	
 				end
 			end
 		end
+	end
 
-		-- Show the Filter Check-Box
-		if filterCheck(dataID) ~= true or dataSource[dataID].vanity or dataSource[dataID].filter then
-			self.mainUI.filterButton:Show()
+	-- Show the Filter Check-Box
+	if filterCheck(dataID) ~= true or dataSource[dataID].vanity or dataSource[dataID].filter then
+		self.mainUI.filterButton:Show()
+	end
+
+	--Hide navigation buttons by default, only show what we need
+	self:ToggleNavigationButtonsVisibility()
+	self.mainUI.nextbutton:SetParent(self.itemframe)
+	self.mainUI.prevbutton:SetParent(self.itemframe)
+	self.mainUI.nextbutton:ClearAllPoints()
+	self.mainUI.nextbutton:SetPoint("BOTTOMRIGHT", self.itemframe, "BOTTOMRIGHT",-30,5)
+	self.mainUI.prevbutton:ClearAllPoints()
+	self.mainUI.prevbutton:SetPoint("BOTTOMLEFT", self.itemframe, "BOTTOMLEFT",5,5)
+	self:ToogleWishListButtons()
+	self.mainUI.learnSpellbtn:Hide()
+
+	-- Show Wishlist buttons when a wishlist in showing
+	if dataSource_backup == "AtlasLoot_CurrentWishList" then
+		self:ToogleWishListButtons(true)
+		if dataSource[dataID].ListType == "Shared" then
+			AtlasLootItemsFrame_Wishlist_Swap:SetText("Own")
+		elseif dataSource[dataID].ListType == "Own" then
+			AtlasLootItemsFrame_Wishlist_Swap:SetText("Shared")
 		end
+	end
 
-		--Hide navigation buttons by default, only show what we need
-		self:ToggleNavigationButtonsVisibility()
-		self.mainUI.nextbutton:SetParent(self.itemframe)
-		self.mainUI.prevbutton:SetParent(self.itemframe)
-		self.mainUI.nextbutton:ClearAllPoints()
-		self.mainUI.nextbutton:SetPoint("BOTTOMRIGHT", self.itemframe, "BOTTOMRIGHT",-5,5)
-		self.mainUI.prevbutton:ClearAllPoints()
-		self.mainUI.prevbutton:SetPoint("BOTTOMLEFT", self.itemframe, "BOTTOMLEFT",5,5)
-		self:ToogleWishListButtons()
-		self.mainUI.learnSpellbtn:Hide()
+	if dataSource[dataID].vanity then
+		self.mainUI.learnSpellbtn:Show()
+	end
 
-		-- Show Wishlist buttons when a wishlist in showing
-		if dataSource_backup == "AtlasLoot_CurrentWishList" then
-			self:ToogleWishListButtons(true)
-			if dataSource[dataID].ListType == "Shared" then
-				AtlasLootItemsFrame_Wishlist_Swap:SetText("Own")
-			elseif dataSource[dataID].ListType == "Own" then
-				AtlasLootItemsFrame_Wishlist_Swap:SetText("Shared")
-			end
-		end
+	local tablebase = {dataID, dataSource_backup}
+	if dataID == "FilterList" then
+		tablebase = {self.itemframe.refreshOri[1],self.itemframe.refreshOri[2]}
+		tablenum = self.itemframe.refreshOri[3]
+	end
 
-		if dataSource[dataID].vanity then
-			self.mainUI.learnSpellbtn:Show()
-		end
+	if self.itemframe.refresh and self.itemframe.refreshOri and tablenum ~= #_G[self.itemframe.refreshOri[2]][self.itemframe.refreshOri[1]] and dataSource_backup ~= "AtlasLoot_TokenData" and dataID ~= "SearchResult" or tablenum ~= #_G[self.itemframe.refresh[2]][self.itemframe.refresh[1]] and dataID == "SearchResult" then
+		self.mainUI.nextbutton:Show()
+		self.mainUI.nextbutton.tablenum = tablenum + 1
+		self.mainUI.nextbutton.tablebase = tablebase
+	end
 
-		local tablebase = {dataID, dataSource_backup}
-		if dataID == "FilterList" then
-			tablebase = {self.itemframe.refreshOri[1],self.itemframe.refreshOri[2]}
-			tablenum = self.itemframe.refreshOri[3]
-		end
+	if tablenum ~= 1 and dataSource_backup ~= "AtlasLoot_TokenData" then
+		self.mainUI.prevbutton:Show()
+		self.mainUI.prevbutton.tablenum = tablenum - 1
+		self.mainUI.prevbutton.tablebase = tablebase
+	end
 
-		if self.itemframe.refresh and self.itemframe.refreshOri and tablenum ~= #_G[self.itemframe.refreshOri[2]][self.itemframe.refreshOri[1]] and dataSource_backup ~= "AtlasLoot_TokenData" and dataID ~= "SearchResult" or tablenum ~= #_G[self.itemframe.refresh[2]][self.itemframe.refresh[1]] and dataID == "SearchResult" then
-			self.mainUI.nextbutton:Show()
-			self.mainUI.nextbutton.tablenum = tablenum + 1
-			self.mainUI.nextbutton.tablebase = tablebase
-		end
-
-		if tablenum ~= 1 and dataSource_backup ~= "AtlasLoot_TokenData" then
-			self.mainUI.prevbutton:Show()
-			self.mainUI.prevbutton.tablenum = tablenum - 1
-			self.mainUI.prevbutton.tablebase = tablebase
-		end
-
-		if dataSource[dataID].Back or self.backEnabled then
-			self.mainUI.backbutton:Show()
-		elseif dataID ~= "FilterList" then
-			self.itemframe.refreshBack = {dataID, dataSource_backup, tablenum}
-		end
+	if dataSource[dataID].Back or self.backEnabled then
+		self.mainUI.backbutton:Show()
+	elseif dataID ~= "FilterList" then
+		self.itemframe.refreshBack = {dataID, dataSource_backup, tablenum}
 	end
 
 	--Anchor the item frame where it is supposed to be

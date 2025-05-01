@@ -49,14 +49,6 @@ function AtlasLoot:InitializeUI()
         self.Dewdrop:Close()
         self.mainUI.searchbox:ClearFocus()
     end)
-    self.mainUI.lootBackground:SetScript("OnMouseWheel", function(frame,delta)
-            if self.mainUI.nextbutton:IsVisible() and delta == -1 then
-                self.mainUI.nextbutton:Click()
-            end
-            if self.mainUI.prevbutton:IsVisible() and delta == 1 then
-                self.mainUI.prevbutton:Click()
-            end
-    end)
     self.mainUI.lootBackground:SetBackdrop({
         bgFile = "Interface\\DialogFrame\\UI-DialogBox-Background", tile = true, tileSize = 16,
         edgeFile = "Interface\\Tooltips\\UI-Tooltip-Border", edgeSize = 16,
@@ -67,34 +59,13 @@ function AtlasLoot:InitializeUI()
     self.mainUI.lootBackground.Back:SetSize(730,475)
     self.mainUI.lootBackground.Back:SetPoint("CENTER",self.mainUI.lootBackground)
 
------------------------------------ Item Loot Panel -------------------------------------------
-    self.itemframe = CreateFrame("Frame", nil, self.mainUI.lootBackground)
-    self.itemframe:SetSize(765,510)
-    self.itemframe:SetPoint("TOPLEFT", self.mainUI.lootBackground, "TOPLEFT", 2, -2)
-    self.itemframe.Label = self.itemframe:CreateFontString(nil,"OVERLAY","GameFontHighlightLarge")
-    self.itemframe.Label:SetPoint("TOP", self.itemframe, "TOP")
-    self.itemframe.Label:SetSize(512,30)
-    self.itemframe.Label:SetJustifyH("CENTER")
-
-    self.itemframe.buttons = {}
-    for num = 1, 30 do
-            self.itemframe.buttons[num] = CreateFrame("Button", "AtlasLootItem_"..num, self.itemframe, "AtlasLootItemTemplate")
-            local button = self.itemframe.buttons[num]
-            button:SetID(num)
-            button.number = num
-            button:ClearAllPoints()
-            if num == 1 then
-                button:SetPoint("TOP", self.itemframe, "TOP",-210,-35)
-            elseif num == 16 then
-                button:SetPoint("TOP", self.itemframe, "TOP",150,-35)
-            else
-                button:SetPoint("TOPLEFT", self.itemframe.buttons[num - 1], "BOTTOMLEFT")
-            end
-    end
+    ----------------------------------- Item Loot Panel -------------------------------------------
+    ---
+    self:InitializeItemFrame()
 
     --------------------------------------- Navagation buttons ---------------------------------------
     self.mainUI.nextbutton = CreateFrame("Button", "nil", self.itemframe)
-    self.mainUI.nextbutton:SetPoint("BOTTOMRIGHT", self.itemframe, -5, 5)
+    self.mainUI.nextbutton:SetPoint("BOTTOMRIGHT", self.itemframe, -30, 5)
     self.mainUI.nextbutton:SetSize(32,32)
     self.mainUI.nextbutton.texture = self.mainUI.nextbutton:CreateTexture(nil, "BACKGROUND")
     self.mainUI.nextbutton.texture:SetTexture("Interface\\Buttons\\UI-PageButton-Background")
@@ -588,6 +559,7 @@ local MAX_ROWS2 = 26      -- How many rows can be shown at once?
 --------------------Subtable Frame--------------------
     self.mainUI.lootTableScrollFrame = CreateFrame("Frame", "Atlasloot_SubTableFrame", self.mainUI, "AtlasLootFrameTemplate")
     self.mainUI.lootTableScrollFrame:EnableMouse(true)
+    self.mainUI.lootTableScrollFrame:EnableMouseWheel(true)
     self.mainUI.lootTableScrollFrame:SetSize(265, ROW_HEIGHT * MAX_ROWS2 + 23)
     self.mainUI.lootTableScrollFrame:SetPoint("BOTTOMLEFT","Atlasloot_Difficulty_ScrollFrame",0,-449.5)
     self.mainUI.lootTableScrollFrame:SetBackdrop({
@@ -599,6 +571,14 @@ local MAX_ROWS2 = 26      -- How many rows can be shown at once?
     self.mainUI.lootTableScrollFrame.Back:SetAllPoints()
     self.mainUI.lootTableScrollFrame.Back:SetSize(255, ROW_HEIGHT * MAX_ROWS2 + 13)
     self.mainUI.lootTableScrollFrame.Back:SetPoint("CENTER",self.mainUI.lootTableScrollFrame)
+    self.mainUI.lootTableScrollFrame:SetScript("OnMouseWheel", function(frame,delta)
+        if self.mainUI.nextbutton:IsVisible() and delta == -1 then
+            self.mainUI.nextbutton:Click()
+        end
+        if self.mainUI.prevbutton:IsVisible() and delta == 1 then
+            self.mainUI.prevbutton:Click()
+        end
+end)
 
     function self:SubTableScrollFrameUpdate(tablename, dataSource, tablenum)
         if tablename == "FilterList" then return end
@@ -792,7 +772,8 @@ self.mainUI.lootTableScrollFrame.rows = rows2
 
     -- item data loading icon animation
     self.mainUI.streamIcon = CreateFrame("Frame", "AtlasLoot_ItemsLoading", self.mainUI.lootBackground)
-    self.mainUI.streamIcon:SetPoint("TOPRIGHT", self.mainUI.lootBackground, "TOPRIGHT")
+    self.mainUI.streamIcon:ClearAllPoints()
+    self.mainUI.streamIcon:SetPoint("TOPRIGHT", self.mainUI.lootBackground, "TOPRIGHT", -25, 0)
     self.mainUI.streamIcon:SetSize(48, 48)
     self.mainUI.streamIcon.tooltip = "Searching..."
     self.mainUI.streamIcon:EnableMouse(true)

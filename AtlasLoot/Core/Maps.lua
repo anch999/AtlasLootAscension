@@ -114,7 +114,7 @@ function AtlasLoot:SetNavButtons(mapID, mapNum)
             self.mainUI.nextbutton.mapNum = mapNum + 1
             self.mainUI.nextbutton.mapID = mapID
             self.mainUI.nextbutton:ClearAllPoints()
-            self.mainUI.nextbutton:SetPoint("BOTTOMRIGHT", self.mainUI.mapFrame, "BOTTOMRIGHT",-5,5)
+            self.mainUI.nextbutton:SetPoint("BOTTOMRIGHT", self.mainUI.mapFrame, "BOTTOMRIGHT",-30,5)
         end
         if mapNum ~= 1 then
             self.mainUI.prevbutton:SetParent(self.mainUI.mapFrame)
