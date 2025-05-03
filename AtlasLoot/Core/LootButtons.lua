@@ -510,7 +510,7 @@ function AtlasLoot:ItemContextMenu(data, Type, recipeData)
                             )
                         end
                         if self.TomTomLoaded and data.spellID then
-                            if not self.selectedProfile.waypointList then self.selectedProfile.waypointList = {} end
+                            if not self.db.profile.waypointList then self.db.profile.waypointList = {} end
                             local wayPoint
                             if (craftingData and self.selectedProfile.recipeExtraInfoSwitch and IsControlKeyDown()) or (craftingData and not self.selectedProfile.recipeExtraInfoSwitch) then
                                 GameTooltip:AddLine(" ")
