@@ -19,7 +19,7 @@ function AtlasLoot:OnShow()
     --Set the item table to the loot table
     --Show the last displayed loot table
     local lastboss = self.db.profile.LastBoss[self.Expac]
-    if self.db.profile.AutoCurrentInstance and self:ShowInstance() then
+    if self.selectedProfile.AutoCurrentInstance and self:ShowInstance() then
         return
     elseif lastboss and lastboss[4] then
         self.currentTable = lastboss[5]

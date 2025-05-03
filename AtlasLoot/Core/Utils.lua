@@ -370,7 +370,7 @@ end
 -- finds and sets the tooltip for the itemID that it is sent
 local function SetTooltip(itemID, tooltip)
     local self = AtlasLoot
-	if not self.db.profile.showUnknownRecipeTooltip or UnitAffectingCombat("player") then return end
+	if not self.selectedProfile.showUnknownRecipeTooltip or UnitAffectingCombat("player") then return end
 	local text = self:IsRecipeUnknown(itemID)
 	if not text then return end
 	text = "Recipe could be learned by: "..self.Colors.GREEN..text
@@ -462,7 +462,7 @@ local function IgnoreTables(dataSource)
 end
 
 function AtlasLoot:CreateItemSourceList(overRide)
-	if overRide then elseif not self.db.profile.showdropLocationTooltips then return end
+	if overRide then elseif not self.selectedProfile.showdropLocationTooltips then return end
 	if overRide or not AtlasLootDB.ItemSources or (AtlasLootDB.ItemSources.Version and AtlasLootDB.ItemSources.Version ~= self.Version) then
 		self:LoadAllModules()
 		AtlasLootDB.ItemSources = {Version = AtlasLoot.Version, List = {}}
@@ -494,7 +494,7 @@ function AtlasLoot:CreateItemSourceList(overRide)
 end
 
 function AtlasLoot:ItemSourceTooltip(itemID, tooltip)
-	if not self.db.profile.showdropLocationTooltips or not self.ItemSourceList then return end
+	if not self.selectedProfile.showdropLocationTooltips or not self.ItemSourceList then return end
 	local text = self.ItemSourceList[itemID] and "Item Source: " .. self.ItemSourceList[itemID] or nil
 	if text and not CheckTooltipForDuplicate(tooltip, text) then
 		tooltip:AddLine(text)
