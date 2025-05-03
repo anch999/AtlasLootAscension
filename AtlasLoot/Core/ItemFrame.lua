@@ -58,10 +58,10 @@ function AtlasLoot:InitializeItemFrame()
 				local value = row + offset
 				local button = self.itemframe.buttons[column][row]
 				local item = itemList[column] and itemList[column][value]
+				local function test() if item then return item.itemID end end
 				local itemNumber = itemList[column] and itemList[column][value]
-
 				if item and item[1] ~= "gap" then
-					local isValid, toShow, itemID, recipeID = self:GetProperItemConditionals(item, dataSource, dataID, tablenum, dataSource_backup)
+					local isValid, toShow, itemID, recipeID = self:GetProperItemConditionals(item, dataSource, dataID)
 					if isValid and toShow and maxValue ~= 0 and value <= maxValue then
 						self:SetupButton(itemID or recipeID, itemNumber, button, dataSource, dataID, tablenum, dataSource_backup)
 						button:Show()
@@ -75,13 +75,13 @@ function AtlasLoot:InitializeItemFrame()
         end
 	end
 
-		self.itemframe.scrollBar = CreateFrame("ScrollFrame","AtlasLootDefaultFrameScroll", self.itemframe, "FauxScrollFrameTemplate")
-		self.itemframe.scrollBar:SetPoint("TOPLEFT", 0, -8)
-		self.itemframe.scrollBar:SetPoint("BOTTOMRIGHT", -30, 8)
-		self.itemframe.scrollBar:SetScript("OnVerticalScroll", function(scroll, offset)
-			scroll.offset = math.floor(offset / ROW_HEIGHT + 0.5)
-				self:ItemFrameUpdate(unpack(storedData))
-		end)
+	self.itemframe.scrollBar = CreateFrame("ScrollFrame","AtlasLootDefaultFrameScroll", self.itemframe, "FauxScrollFrameTemplate")
+	self.itemframe.scrollBar:SetPoint("TOPLEFT", 0, -8)
+	self.itemframe.scrollBar:SetPoint("BOTTOMRIGHT", -30, 8)
+	self.itemframe.scrollBar:SetScript("OnVerticalScroll", function(scroll, offset)
+		scroll.offset = math.floor(offset / ROW_HEIGHT + 0.5)
+			self:ItemFrameUpdate(unpack(storedData))
+	end)
 
 	self.itemframe.scrollBar:SetScript("OnShow", function() self:ItemFrameUpdate(unpack(storedData)) end)
 
@@ -110,7 +110,7 @@ function AtlasLoot:InitializeItemFrame()
 end
 
 --find the right itemID for the difficulty selected
-function AtlasLoot:GetProperItemConditionals(item, dataSource, dataID, tablenum, dataSource_backup)
+function AtlasLoot:GetProperItemConditionals(item, dataSource, dataID)
 	local isValid, toShow, itemID, recipeID
 
 	isValid = false
@@ -359,8 +359,6 @@ function AtlasLoot:SetupButton(itemID, itemNumber, itemButton, dataSource, dataI
 	else
 		itemButton.difficulty = self.ItemindexID
 	end
-
-	itemButton:Show()
 end
 
 --[[
@@ -471,8 +469,6 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 		self:SubTableScrollFrameUpdate(dataID, dataSource_backup, tablenum)
 	end
 
-	
-
 	-- Sets the main page lable
 	if dataSource[dataID][tablenum] and dataSource[dataID][tablenum].Name then
 		self.itemframe.Label:SetText(dataSource[dataID][tablenum].Name)
@@ -481,12 +477,8 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 		return
 	end
 
-	self:HideItemButtons()
-
 	-- Create the loottable
-	if (dataID == "SearchResult") or (dataSource_backup == "AtlasLoot_CurrentWishList") or dataSource[dataID][tablenum] then
-		self:ItemFrameUpdate(dataSource, dataID, tablenum, dataSource_backup)
-	end
+	self:ItemFrameUpdate(dataSource, dataID, tablenum, dataSource_backup)
 
 -----------------------------------------------------------------------------------------------------------------------------
 
