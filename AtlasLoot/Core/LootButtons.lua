@@ -9,7 +9,7 @@ function AtlasLoot:SetCraftingTooltip(data)
     local craftingData = data.craftingData
     if not craftingData then return end
     --extra information on where to find the recipe
-    if (self.db.profile.recipeExtraInfoSwitch and IsControlKeyDown()) or (not self.db.profile.recipeExtraInfoSwitch) then
+    if (self.selectedProfile.recipeExtraInfoSwitch and IsControlKeyDown()) or (not self.selectedProfile.recipeExtraInfoSwitch) then
         GameTooltip:AddLine(" ")
         for _,v in pairs(craftingData) do
             local line1 = v[1]
@@ -132,9 +132,9 @@ end
 --------------------------------------------------------------------------------
 function AtlasLoot:ItemOnLeave(frame)
     --Hide the necessary tooltips
-    if( self.db.profile.LootlinkTT ) then
+    if( self.selectedProfile.LootlinkTT ) then
         GameTooltip:Hide()
-    elseif( self.db.profile.ItemSyncTT ) then
+    elseif( self.selectedProfile.ItemSyncTT ) then
         if(GameTooltip:IsVisible()) then
             GameTooltip:Hide()
         end
@@ -510,9 +510,9 @@ function AtlasLoot:ItemContextMenu(data, Type, recipeData)
                             )
                         end
                         if self.TomTomLoaded and data.spellID then
-                            if not self.db.profile.waypointList then self.db.profile.waypointList = {} end
+                            if not self.selectedProfile.waypointList then self.selectedProfile.waypointList = {} end
                             local wayPoint
-                            if (craftingData and self.db.profile.recipeExtraInfoSwitch and IsControlKeyDown()) or (craftingData and not self.db.profile.recipeExtraInfoSwitch) then
+                            if (craftingData and self.selectedProfile.recipeExtraInfoSwitch and IsControlKeyDown()) or (craftingData and not self.selectedProfile.recipeExtraInfoSwitch) then
                                 GameTooltip:AddLine(" ")
                                 for _,v in pairs(craftingData) do
                                     if v.cords and tonumber(v.cords[1]) ~= 0 and tonumber(v.cords[2]) ~= 0 then

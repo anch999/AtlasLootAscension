@@ -1,6 +1,8 @@
 
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 local patchNotes = {
+    {"Version 7.5.2", "3rd May, 2025"},
+    "Fixed bug that caused Item Source to not show in item tooltips in enabled",
     {"Version 7.5.1", "15th Feburuary, 2025"},
     "Fixed error on fresh install",
     {"Version 7.5.0", "5th Feburuary, 2025"},
