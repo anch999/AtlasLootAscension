@@ -343,7 +343,7 @@ function AtlasLoot:SetupButton(itemID, itemNumber, itemButton, dataSource, dataI
 	itemButton.dataSource = dataSource_backup
 	itemButton.contentsPreview = itemNumber.contentsPreview
 	itemButton.price = itemNumber.price or nil
-	itemButton.droprate = itemNumber.droprate or self:GetDropRate(dataSource[dataID][tablenum], itemNumber.lootGroup)
+	itemButton.droprate = itemNumber.droprate or self:GetDropRate(itemNumber.refLootEntry, itemNumber.groupID)
 	itemButton.extraInfo = itemNumber.extraInfo or nil
 	itemButton.quest = itemNumber.quest or nil
 	itemButton.item = itemNumber

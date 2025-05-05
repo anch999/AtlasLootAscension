@@ -6,4 +6,5 @@
     <Script file="CraftingSource.lua"/>
     <Script file="CraftingLevels.lua"/>
     <Script file="npcs.lua"/>
+    <Script file="ItemDropRates.lua"/>
 </Ui>

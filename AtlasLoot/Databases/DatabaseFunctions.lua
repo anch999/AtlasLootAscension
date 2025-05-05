@@ -213,6 +213,6 @@ search with this
 (.*)
 
 replace with this
-[1] = { itemID = $2 }; --$5
+{ itemID = $2 }; --$5
 
 ]]
