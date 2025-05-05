@@ -91,6 +91,7 @@ function AtlasLoot:InitializeItemFrame()
 		self.itemframe.buttons[column][row] = CreateFrame("Button", "$parentColumn"..column.."Button"..row, self.itemframe , "AtlasLootItemTemplate")
 		local button = self.itemframe.buttons[column][row]
 		button:SetID(row)
+		button.isAtlasLoot = true
 		button.number = row
 		if column == 1 and row == 1 then
 			button:SetPoint("TOP", self.itemframe, "TOP",-210,-35)

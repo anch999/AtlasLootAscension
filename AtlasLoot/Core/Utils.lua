@@ -488,7 +488,8 @@ function AtlasLoot:CreateItemSourceList(overRide)
 end
 
 function AtlasLoot:ItemSourceTooltip(itemID, tooltip)
-	if not self.selectedProfile.showdropLocationTooltips or not self.ItemSourceList then return end
+	local button = GetMouseFocus()
+	if not self.selectedProfile.showdropLocationTooltips or not self.ItemSourceList or button.isAtlasLoot then return end
 	local text = self.ItemSourceList[itemID] and "Item Source: " .. self.ItemSourceList[itemID] or nil
 	if text and not CheckTooltipForDuplicate(tooltip, text) then
 		tooltip:AddLine(text)
