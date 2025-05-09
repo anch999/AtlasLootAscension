@@ -49,7 +49,7 @@ function AtlasLoot:InitializeItemFrame()
 	function self:ItemFrameUpdate(dataSource, dataID, tablenum, dataSource_backup)
 		if not dataSource then return end
 		storedData = {dataSource, dataID, tablenum, dataSource_backup}
-		local itemList = dataSource[dataID][tablenum]
+		local itemList = self:FilterItems(dataSource, dataID, tablenum)	or dataSource[dataID][tablenum]
 		local maxValue = getMaxValue(itemList)
 		FauxScrollFrame_Update(self.itemframe.scrollBar, maxValue, MAX_ROWS, ROW_HEIGHT, nil, nil, nil, nil, nil, nil, true)
 		local offset = FauxScrollFrame_GetOffset(self.itemframe.scrollBar)
@@ -58,18 +58,14 @@ function AtlasLoot:InitializeItemFrame()
 				local value = row + offset
 				local button = self.itemframe.buttons[column][row]
 				local item = itemList[column] and itemList[column][value]
-				local function test() if item then return item.itemID end end
 				local itemNumber = itemList[column] and itemList[column][value]
+				hideButton(button)
 				if item and item[1] ~= "gap" then
 					local isValid, toShow, itemID, recipeID = self:GetProperItemConditionals(item, dataSource, dataID)
 					if isValid and toShow and maxValue ~= 0 and value <= maxValue then
 						self:SetupButton(itemID or recipeID, itemNumber, button, dataSource, dataID, tablenum, dataSource_backup)
 						button:Show()
-					else
-						hideButton(button)
 					end
-				else
-					hideButton(button)
 				end
 			end
         end
@@ -461,7 +457,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 	end
 
 	--For stopping the subtable from changing if its a token table
-	if dataSource[dataID].NoSubt == nil and dataID ~= "FilterList" then
+	if dataSource[dataID].NoSubt == nil then
 		if dataSource[dataID].DisplayName then
 			AtlasLootDefaultFrame_SubMenu:SetText(dataSource[dataID].DisplayName)
 		else
@@ -486,11 +482,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 	--Store data about the state of the items frame to allow minor tweaks or a recall of the current loot page
 	self.itemframe.refresh = {dataID, dataSource_backup, tablenum}
 
-	if dataID ~= "FilterList" then
-		self.itemframe.refreshFilter = {dataID, dataSource_backup, tablenum}
-	end
-
-	if dataID ~= "FilterList"  and dataSource[dataID].Back ~= true then
+	if dataSource[dataID].Back ~= true then
 		self.itemframe.refreshOri = {dataID, dataSource_backup, tablenum}
 	end
 
@@ -500,7 +492,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 		self.itemframe.refreshSearch = nil
 	end
 
-	if dataSource_backup ~= "AtlasLoot_OnDemand" and dataID ~= "SearchResult" and dataSource_backup ~= "AtlasLoot_CurrentWishList" and dataID ~= "FilterList"  and
+	if dataSource_backup ~= "AtlasLoot_OnDemand" and dataID ~= "SearchResult" and dataSource_backup ~= "AtlasLoot_CurrentWishList" and
 	dataSource[dataID].Back ~= true and dataID ~= "EmptyTable" and not dataSource[dataID].vanity then
 		self.db.profile.LastBoss[self.Expac] = {dataID, dataSource_backup, tablenum, self.lastModule, self.currentTable, self.moduleName}
 		self.db.profile.savedState[self.currentTable] = {dataID, dataSource_backup, tablenum, self.lastModule, self.currentTable, self.moduleName}
@@ -557,10 +549,6 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 	end
 
 	local tablebase = {dataID, dataSource_backup}
-	if dataID == "FilterList" then
-		tablebase = {self.itemframe.refreshOri[1],self.itemframe.refreshOri[2]}
-		tablenum = self.itemframe.refreshOri[3]
-	end
 
 	if self.itemframe.refresh and self.itemframe.refreshOri and tablenum ~= #_G[self.itemframe.refreshOri[2]][self.itemframe.refreshOri[1]] and dataSource_backup ~= "AtlasLoot_TokenData" and dataID ~= "SearchResult" or tablenum ~= #_G[self.itemframe.refresh[2]][self.itemframe.refresh[1]] and dataID == "SearchResult" then
 		self.mainUI.nextbutton:Show()
@@ -576,13 +564,8 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 
 	if dataSource[dataID].Back or self.backEnabled then
 		self.mainUI.backbutton:Show()
-	elseif dataID ~= "FilterList" then
+	else
 		self.itemframe.refreshBack = {dataID, dataSource_backup, tablenum}
-	end
-
-	--Anchor the item frame where it is supposed to be
-	if self.filterEnable and dataID ~= "FilterList" then
-		self:HideFilteredItems()
 	end
 end
 

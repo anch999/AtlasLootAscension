@@ -581,7 +581,6 @@ local MAX_ROWS2 = 26      -- How many rows can be shown at once?
 end)
 
     function self:SubTableScrollFrameUpdate(tablename, dataSource, tablenum)
-        if tablename == "FilterList" then return end
         local maxValue = #_G[dataSource][tablename]
         if dataSource == "AtlasLoot_MapData" then maxValue = #_G[dataSource][tablename][tablenum] end
         self.mainUI.lootTableScrollFrame.tablename = tablename

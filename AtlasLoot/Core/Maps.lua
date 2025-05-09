@@ -137,15 +137,11 @@ function AtlasLoot:MapOnShow(mapID, mapNum, refresh)
         self:ScrollFrameUpdate()
     else
         if self.CurrentMap then
-            self.itemframe.Label:Hide()
+            self.itemframe:Hide()
             -- Hide the Filter Check-Box
 	        self.mainUI.filterButton:Hide()
             self.mainUI.lootBackground:Hide()
-            --Hide UI objects so that only needed ones are shown
-            for i = 1, 30, 1 do
-                _G["AtlasLootItem_"..i]:Hide()
-                _G["AtlasLootItem_"..i].itemID = 0
-            end
+
                 self.mainUI.mapFrame:Show()
                 Atlasloot_HeaderLabel:Show()
                 self:ScrollFrameUpdate(true)

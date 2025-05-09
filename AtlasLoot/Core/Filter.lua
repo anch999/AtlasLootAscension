@@ -46,24 +46,13 @@ local CraftingFilterTable = {
 
 -- **********************************************************************
 -- ItemFilter:
---	AtlasLoot:HideFilteredItems()
---	AtlasLoot:FilterEnableButton()
+--	AtlasLoot:FilterItem()
 -- **********************************************************************
-AtlasLootFilter = { FilterList = {} }
 
-function AtlasLoot:HideFilteredItems()
-	local dataID, dataSource, tablenum = self.itemframe.refreshFilter[1], _G[self.itemframe.refreshFilter[2]], self.itemframe.refreshFilter[3]
- 	local tablebase = dataSource[dataID][tablenum]
-	if not tablebase or dataID == "WishList" then return end
+function AtlasLoot:FilterItems(dataSource, dataID, tablenum)
+	if not self.filterEnable then return end
 	local source = dataSource[dataID]
-	AtlasLootFilter["FilterList"] = {
-		Type = source.Type,
-		Name = source.Name,
-		Back = source.Back,
-		Map = source.Map,
-		vanity = source.vanity,
-		[1] = {Name = source[tablenum].Name}
-	}
+	local itemList = dataSource[dataID][tablenum]
 
 	-- returns true if item has the desired stats
 	local function checkStats(itemStats, sCheck)
@@ -91,7 +80,8 @@ function AtlasLoot:HideFilteredItems()
 	-- checks filters and whether the id is armor or a weapon
 	local function getFilterType(itemID)
 		if not itemID then return end
-		local itemLink, _, _, _, armorCheck = select(2,GetItemInfo(itemID))
+		local itemLink, _, _, _, armorCheck = select(2,self:GetItemInfo(itemID))
+		if not itemLink then return end
 		local itemStats = GetItemStats(itemLink)
 
 		if (armorCheck == "Armor" or armorCheck == "Weapon") and checkfilters(itemStats, "PrimaryStat") and checkfilters(itemStats, "Stat") then
@@ -126,48 +116,30 @@ function AtlasLoot:HideFilteredItems()
 		end
 	end
 
-	-- build filtered list removing any blank spaces that are not meant to be there
-	local count = 0
-	for i = 1, 30 do
-		if tablebase[i] then
-			if source.vanity then
-				if getVanityFilters(tablebase[i].itemID, tablebase[i].learnedSpellID) then
-					if i == 16 then
-						count = 0
-					end
-					AtlasLootFilter.FilterList[1][i-count] = tablebase[i]
-				elseif i == 16 then
-					count = 1
-				else
-					count = count + 1
-				end
-			elseif source.Type == "Crafting" then
-				if getCraftingFilters(tablebase[i].spellID) then
-					if i == 16 then
-						count = 0
-					end
-					AtlasLootFilter.FilterList[1][i-count] = tablebase[i]
-				elseif i == 16 then
-					count = 1
-				else
-					count = count + 1
-				end
-			else
-				if getFilterType(tablebase[i].itemID) or tablebase[i].icon then
-					if i == 16 then
-						count = 0
-					end
-					AtlasLootFilter.FilterList[1][i-count] = tablebase[i]
-				elseif i == 16 then
-					count = 1
-				else
-					count = count + 1
-				end
+	local function filterItem(item)
+		-- return true if item needs filtering
+		if source.vanity and getVanityFilters(item.itemID, item.learnedSpellID) then
+			return true
+		elseif source.Type == "Crafting" and getCraftingFilters(item.spellID) then
+			return true
+		elseif getFilterType(item.itemID) or item.icon then
+			return true
+		end
+		return false
+	end
+
+	local filteredList = {}
+	for i, coloum in ipairs(itemList) do
+		filteredList[i] = filteredList[i] or {}
+		for _, item in ipairs(coloum) do
+			if (item and item[1] == "gap") or filterItem(item) then
+				tinsert(filteredList[i], item)
 			end
 		end
 	end
-	-- show filtered table
-	self:ShowItemsFrame("FilterList", "AtlasLootFilter", 1)
+
+	return filteredList
+
 end
 
 function AtlasLoot:FilterEnableButton(frame, btnclick)
@@ -183,10 +155,10 @@ function AtlasLoot:FilterEnableButton(frame, btnclick)
 	else
 		if self.filterEnable then
 			self.filterEnable = false
-			self:ShowItemsFrame(self.itemframe.refreshFilter[1], self.itemframe.refreshFilter[2], self.itemframe.refreshFilter[3])
+			self:ShowItemsFrame(self.itemframe.refresh[1], self.itemframe.refresh[2], self.itemframe.refresh[3])
 		else
 			self.filterEnable = true
-			self:HideFilteredItems()
+			self:ShowItemsFrame(self.itemframe.refresh[1], self.itemframe.refresh[2], self.itemframe.refresh[3])
 		end
 	end
 end
@@ -212,7 +184,7 @@ function AtlasLoot:FilterMenuRegister()
 			return "TOPLEFT", "BOTTOM"
 		end,
 		'children', function(level, value)
-			if _G[self.itemframe.refreshFilter[2]][self.itemframe.refreshFilter[1]].vanity then
+			if _G[self.itemframe.refresh[2]][self.itemframe.refresh[1]].vanity then
 				for _, filter in ipairs(VanityFilterTable) do
 					local fDB = db.VanityFilters
 					if not fDB[filter[1]] then fDB[filter[1]] = false end
@@ -222,7 +194,7 @@ function AtlasLoot:FilterMenuRegister()
 							fDB[filter[1]] = not fDB[filter[1]]
 							disableFilters(filter[1])
 							if self.filterEnable then
-								self:HideFilteredItems()
+								self:ShowItemsFrame(self.itemframe.refresh[1], self.itemframe.refresh[2], self.itemframe.refresh[3])
 							end
 						end,
 						"checked", fDB[filter[1]],
@@ -230,7 +202,7 @@ function AtlasLoot:FilterMenuRegister()
 						"closeWhenClicked", true
 					)
 				end
-			elseif _G[self.itemframe.refreshFilter[2]][self.itemframe.refreshFilter[1]].Type == "Crafting" then
+			elseif _G[self.itemframe.refresh[2]][self.itemframe.refresh[1]].Type == "Crafting" then
 				for _, filter in ipairs(CraftingFilterTable) do
 					local fDB = db.CraftingFilters
 					if not fDB[filter[1]] then fDB[filter[1]] = false end
@@ -240,7 +212,7 @@ function AtlasLoot:FilterMenuRegister()
 							fDB[filter[1]] = not fDB[filter[1]]
 							disableFilters(filter[1])
 							if self.filterEnable then
-								self:HideFilteredItems()
+								self:ShowItemsFrame(self.itemframe.refresh[1], self.itemframe.refresh[2], self.itemframe.refresh[3])
 							end
 						end,
 						"checked", fDB[filter[1]],
@@ -258,7 +230,7 @@ function AtlasLoot:FilterMenuRegister()
 							"func", function()
 								db[filters[2]][1] = not db[filters[2]][1]
 								if self.filterEnable then
-									self:HideFilteredItems()
+									self:ShowItemsFrame(self.itemframe.refresh[1], self.itemframe.refresh[2], self.itemframe.refresh[3])
 								end
 							end,
 							"checked", db[filters[2]][1],
