@@ -49,7 +49,23 @@ function AtlasLoot:InitializeItemFrame()
 	function self:ItemFrameUpdate(dataSource, dataID, tablenum, dataSource_backup)
 		if not dataSource then return end
 		storedData = {dataSource, dataID, tablenum, dataSource_backup}
-		local itemList = self:FilterItems(dataSource, dataID, tablenum)	or dataSource[dataID][tablenum]
+
+		local itemList = {}
+		for i, coloum in ipairs(dataSource[dataID][tablenum]) do
+			itemList[i] = itemList[i] or {}
+			for _, item in ipairs(coloum) do
+				local isValid, toShow, itemID, recipeID = self:GetProperItemConditionals(item, dataSource, dataID)
+				if (isValid and toShow and self:FilterItem(item, dataSource, dataID)) or (item and item[1] == "gap" and #itemList[i] > 0) then
+					tinsert(itemList[i], item)
+					if item[1] ~= "gap" then
+						itemList[i][#itemList[i]].itemID = itemID
+						itemList[i][#itemList[i]].recipeID = recipeID
+					end
+
+				end
+			end
+		end
+
 		local maxValue = getMaxValue(itemList)
 		FauxScrollFrame_Update(self.itemframe.scrollBar, maxValue, MAX_ROWS, ROW_HEIGHT, nil, nil, nil, nil, nil, nil, true)
 		local offset = FauxScrollFrame_GetOffset(self.itemframe.scrollBar)
@@ -61,9 +77,8 @@ function AtlasLoot:InitializeItemFrame()
 				local itemNumber = itemList[column] and itemList[column][value]
 				hideButton(button)
 				if item and item[1] ~= "gap" then
-					local isValid, toShow, itemID, recipeID = self:GetProperItemConditionals(item, dataSource, dataID)
-					if isValid and toShow and maxValue ~= 0 and value <= maxValue then
-						self:SetupButton(itemID or recipeID, itemNumber, button, dataSource, dataID, tablenum, dataSource_backup)
+					if maxValue ~= 0 and value <= maxValue then
+						self:SetupButton(item.itemID or item.recipeID, itemNumber, button, dataSource, dataID, tablenum, dataSource_backup)
 						button:Show()
 					end
 				end

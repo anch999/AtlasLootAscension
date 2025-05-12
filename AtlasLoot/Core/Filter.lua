@@ -49,10 +49,9 @@ local CraftingFilterTable = {
 --	AtlasLoot:FilterItem()
 -- **********************************************************************
 
-function AtlasLoot:FilterItems(dataSource, dataID, tablenum)
-	if not self.filterEnable then return end
+function AtlasLoot:FilterItem(item, dataSource, dataID)
+	if not self.filterEnable then return true end
 	local source = dataSource[dataID]
-	local itemList = dataSource[dataID][tablenum]
 
 	-- returns true if item has the desired stats
 	local function checkStats(itemStats, sCheck)
@@ -116,29 +115,14 @@ function AtlasLoot:FilterItems(dataSource, dataID, tablenum)
 		end
 	end
 
-	local function filterItem(item)
-		-- return true if item needs filtering
-		if source.vanity and getVanityFilters(item.itemID, item.learnedSpellID) then
-			return true
-		elseif source.Type == "Crafting" and getCraftingFilters(item.spellID) then
-			return true
-		elseif getFilterType(item.itemID) or item.icon then
-			return true
-		end
-		return false
+	-- return true if item needs filtering
+	if source.vanity and getVanityFilters(item.itemID, item.learnedSpellID) then
+		return true
+	elseif source.Type == "Crafting" and getCraftingFilters(item.spellID) then
+		return true
+	elseif getFilterType(item.itemID) or item.icon then
+		return true
 	end
-
-	local filteredList = {}
-	for i, coloum in ipairs(itemList) do
-		filteredList[i] = filteredList[i] or {}
-		for _, item in ipairs(coloum) do
-			if (item and item[1] == "gap") or filterItem(item) then
-				tinsert(filteredList[i], item)
-			end
-		end
-	end
-
-	return filteredList
 
 end
 
