@@ -497,13 +497,6 @@ function AtlasLoot:ItemSourceTooltip(itemID, tooltip)
 	end
 end
 
-function AtlasLoot:UpdateTable(insertTable, table)
-	for i, v in pairs(insertTable) do
-		table[i] = v
-	end
-	return table
-end
-
 local ArmorTypes = {
 	INVTYPE_NECK = {"24000 #faction#"},
 	INVTYPE_HEAD = {"30000 #faction#", "1500 #arena#"},
