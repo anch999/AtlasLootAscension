@@ -53,15 +53,18 @@ function AtlasLoot:InitializeItemFrame()
 		local itemList = {}
 		for i, coloum in ipairs(dataSource[dataID][tablenum]) do
 			itemList[i] = itemList[i] or {}
+			local lastWasGap = false
 			for _, item in ipairs(coloum) do
 				local isValid, toShow, itemID, recipeID = self:GetProperItemConditionals(item, dataSource, dataID)
-				if (isValid and toShow and self:FilterItem(item, dataSource, dataID)) or (item and item[1] == "gap" and #itemList[i] > 0) then
+				if (isValid and toShow and self:FilterItem(item, dataSource, dataID)) or (item and item[1] == "gap" and #itemList[i] > 0 and not lastWasGap) then
 					tinsert(itemList[i], item)
 					if item[1] ~= "gap" then
 						itemList[i][#itemList[i]].itemID = itemID
 						itemList[i][#itemList[i]].recipeID = recipeID
+						lastWasGap = false
+					elseif item[1] == "gap" then
+						lastWasGap = true
 					end
-
 				end
 			end
 		end
