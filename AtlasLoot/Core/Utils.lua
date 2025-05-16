@@ -260,6 +260,7 @@ function AtlasLoot:PopoupItemFrame(frame, data)
 
 			button.itemID = itemID
 			button.itemTexture = frame.itemTexture
+			button.isAtlasLoot = true
 			local recipe = self:GetRecipeData(itemID, "item")
 			if recipe then
 			button.craftingData = self:GetRecipeSource(recipe.spellID)
@@ -489,7 +490,7 @@ end
 
 function AtlasLoot:ItemSourceTooltip(itemID, tooltip)
 	local button = GetMouseFocus()
-	if not self.selectedProfile.showdropLocationTooltips or not self.ItemSourceList or button.isAtlasLoot then return end
+	if not self.selectedProfile.showdropLocationTooltips or not self.ItemSourceList or (button and button.isAtlasLoot) then return end
 	local text = self.ItemSourceList[itemID] and "Item Source: " .. self.ItemSourceList[itemID] or nil
 	if text and not CheckTooltipForDuplicate(tooltip, text) then
 		tooltip:AddLine(text)
