@@ -124,8 +124,11 @@ function AtlasLoot:InitializeItemFrame()
 
 end
 
+local faction = UnitFactionGroup("player")
+
 --find the right itemID for the difficulty selected
 function AtlasLoot:GetProperItemConditionals(item, dataSource, dataID)
+	if item and item.faction and item.faction ~= faction then return end
 	local isValid, toShow, itemID, recipeID
 
 	isValid = false
