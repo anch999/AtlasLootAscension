@@ -26,29 +26,37 @@ function AtlasLoot:CreateToken(dataID)
 			Type = AtlasLoot_Data[dataID].Type,
 			Back = true,
 			NoSubt = true,
-			[1] = { Name = itemName },
+			{
+				Name = itemName,
+				{},
+				{},
+			},
 		}
 	end
-	local count = #AtlasLoot_Data[dataID][1] * #AtlasLoot_Data[dataID]
+	local count = 1
 	local function addItem(itemID, desc)
+		local pageSide = AtlasLoot_TokenData[orgID][1][1]
+		if count >= 16 then
+			pageSide = AtlasLoot_TokenData[orgID][1][2]
+		end
 		if itemType == select(9, AtlasLoot:GetItemInfo(itemID)) or itemType2 == select(9, AtlasLoot:GetItemInfo(itemID)) then
-			table.insert(AtlasLoot_TokenData[orgID][1], {itemID = itemID, desc = desc})
+			table.insert(pageSide, {itemID = itemID, desc = desc})
+			count = count + 1
 		end
-		if count == 1 then
-			self:ShowItemsFrame(self.itemframe.refresh[1], self.itemframe.refresh[2], self.itemframe.refresh[3])
-		end
-		count = count - 1
 	end
 	--Fills table with items
 	for _, t in ipairs(AtlasLoot_Data[dataID]) do
-		for _, v in ipairs(t) do
-			if type(v) == "table" then
-				if v.itemID then
-					addItem(v.itemID, t.Name)
+		for _, side in ipairs(t) do
+			for _, v in ipairs(side) do
+				if type(v) == "table" then
+					if v.itemID then
+						addItem(v.itemID, t.Name)
+					end
 				end
 			end
 		end
 	end
+	self:ShowItemsFrame(self.itemframe.refresh[1], self.itemframe.refresh[2], self.itemframe.refresh[3])
 end
 
 --Creates a sorted and consolidated loottable of all of an xpacs dungeon loot
