@@ -117,12 +117,14 @@ function AtlasLoot:CreateOnDemandLootTable(typeL)
 			for eLoc, t in pairs(v) do
 				for i, items in ipairs(t) do
 					local name = equipSlot[getEquip(eLoc)] and aType.." "..items[2].." - "..equipSlot[getEquip(eLoc)] or aType
-					if #t > 30 and (i == 1 or i == 31 or i == 61 or i == 91)  then
-						tinsert(AtlasLoot_OnDemand[typeL],{Name = correctText(name)..self.Colors.WHITE.." - Page".. math.ceil(i/30) })
-					elseif i == 1 then
-						tinsert(AtlasLoot_OnDemand[typeL],{Name = correctText(name)})
+					if i == 1 then
+						tinsert(AtlasLoot_OnDemand[typeL],{Name = correctText(name), {}, {}})
 					end
-					tinsert(AtlasLoot_OnDemand[typeL][#AtlasLoot_OnDemand[typeL]], items[1])
+					local side = AtlasLoot_OnDemand[typeL][#AtlasLoot_OnDemand[typeL]][1]
+					if i > 15 and i > (#t/2) then
+						side = AtlasLoot_OnDemand[typeL][#AtlasLoot_OnDemand[typeL]][2]
+					end
+					tinsert(side, items[1])
 				end
 			end
 		end
@@ -147,12 +149,14 @@ function AtlasLoot:CreateOnDemandLootTable(typeL)
 	for dataID, data in pairs(AtlasLoot_Data) do
 		if data.Type == typeL then
 			for tableNum, t in ipairs(data) do
-				for _, itemData in pairs(t) do
-					if type(itemData) == "table" and itemData.itemID and not checkList[itemData.itemID] then
-						itemData.dropLoc = {data.DisplayName or data.Name, t.Name}
-						itemData.lootTable = {{dataID, "AtlasLoot_Data", tableNum}, "Source"}
-						checkList[itemData.itemID] = true
-						tinsert(itemList, {itemData})
+				for _, side in ipairs(t) do
+					for _, itemData in ipairs(side) do
+						if type(itemData) == "table" and itemData.itemID and not checkList[itemData.itemID] then
+							itemData.dropLoc = {data.DisplayName or data.Name, t.Name}
+							itemData.lootTable = {{dataID, "AtlasLoot_Data", tableNum}, "Source"}
+							checkList[itemData.itemID] = true
+							tinsert(itemList, {itemData})
+						end
 					end
 				end
 			end
