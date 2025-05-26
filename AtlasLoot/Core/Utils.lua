@@ -243,9 +243,11 @@ function AtlasLoot:PopoupItemFrame(frame, data)
 	end
 	if data.Faction then
 		data = data[self:GetReputationFaction(data.Faction)]
+		if not data then return end
 	end
 
 	local numberBtns
+
 	for i, item in ipairs(data) do
 		createButton(i)
 		local button = _G["AtlasLoot_PopupButton_"..i]
