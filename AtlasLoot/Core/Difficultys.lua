@@ -149,7 +149,16 @@ AtlasLoot.Difficulties = {
     MIN_DIF = 19,
     MAX_DIF = 20,
 }
-function AtlasLoot:GetMaxDifficulty(instanceType)
-    if not instanceType or not self.Difficulties[instanceType] and not self.Difficulties[instanceType].Max then return 0 end
-    return self.Difficulties[instanceType].Max
+
+function AtlasLoot:GetMinMaxDifficultys(instanceType, minDif)
+    if not instanceType or not self.Difficulties[instanceType] then return end
+    local min
+    if minDif then
+        for _, instance in ipairs(self.Difficulties[instanceType]) do
+            if instance[1] == minDif then
+                min = instance[2]
+            end
+        end
+    end
+    return min, self.Difficulties[instanceType].Max
 end
