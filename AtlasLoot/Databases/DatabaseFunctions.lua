@@ -72,23 +72,25 @@ function AtlasLoot:GetSourceList()
     for _, data in pairs(AtlasLoot_Data) do
 		if data.Type then
 			for _, t in ipairs(data) do
-				for _, itemData in pairs(t) do
-					if type(itemData) == "table" then
-						if itemData.itemID then
-							for _, dif in ipairs(self.Difficulties[data.Type]) do
-								local itemType = GetItemInfoInstant(itemData.itemID) or nil
-								if dif[2] ~= 3 and itemType then
-									itemSource[dif[1]] = itemSource[dif[1]] or {}
-									local name = itemType.name:gsub( "%W", "" )..itemType.inventoryType
-									itemSource[dif[1]][name] = itemSource[dif[1]][name] or {}
-									local itemTable = itemSource[dif[1]][name]
-										local function checkForDuplicate(itemID)
-											for _ , item in pairs(itemTable) do
-												if item[1] == itemID then return true end
+				for _, side in ipairs(t) do
+					for _, itemData in pairs(side) do
+						if type(itemData) == "table" then
+							if itemData.itemID then
+								for _, dif in ipairs(self.Difficulties[data.Type]) do
+									local itemType = GetItemInfoInstant(itemData.itemID) or nil
+									if dif[2] ~= 3 and itemType then
+										itemSource[dif[1]] = itemSource[dif[1]] or {}
+										local name = itemType.name:gsub( "%W", "" )..itemType.inventoryType
+										itemSource[dif[1]][name] = itemSource[dif[1]][name] or {}
+										local itemTable = itemSource[dif[1]][name]
+											local function checkForDuplicate(itemID)
+												for _ , item in pairs(itemTable) do
+													if item[1] == itemID then return true end
+												end
 											end
+										if not checkForDuplicate(itemData.itemID) then
+											tinsert(itemTable, {itemData.itemID, itemType.itemLevel})
 										end
-									if not checkForDuplicate(itemData.itemID) then
-										tinsert(itemTable, {itemData.itemID, itemType.itemLevel})
 									end
 								end
 							end
