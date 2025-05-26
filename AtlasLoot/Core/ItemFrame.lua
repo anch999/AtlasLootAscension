@@ -39,7 +39,7 @@ function AtlasLoot:InitializeItemFrame()
 		if itemList then
 			if itemList[2] and #itemList[2] > #itemList[1] then
 				return #itemList[2]
-			else
+			elseif itemList[1] then
 				return #itemList[1]
 			end
 		end
@@ -51,13 +51,14 @@ function AtlasLoot:InitializeItemFrame()
 		storedData = {dataSource, dataID, tablenum, dataSource_backup}
 
 		local itemList = {}
+		ItemList = itemList
 		for i, coloum in ipairs(dataSource[dataID][tablenum]) do
 			itemList[i] = itemList[i] or {}
 			local lastWasGap = false
 			for _, item in ipairs(coloum) do
-				local isValid, toShow, itemID, recipeID = self:GetProperItemConditionals(item, dataSource, dataID)
-				if (isValid and toShow and self:FilterItem(item, dataSource, dataID)) or (item and item[1] == "gap" and #itemList[i] > 0 and not lastWasGap) then
-					tinsert(itemList[i], item)
+				local show, itemID, recipeID = self:GetItemConditionals(item, dataSource, dataID)
+				if (show and self:FilterItem(item, dataSource, dataID)) or (item and item[1] == "gap" and #itemList[i] > 0 and not lastWasGap) then
+					tinsert(itemList[i], self:CloneTable(item))
 					if item[1] ~= "gap" then
 						itemList[i][#itemList[i]].itemID = itemID
 						itemList[i][#itemList[i]].recipeID = recipeID
@@ -70,6 +71,7 @@ function AtlasLoot:InitializeItemFrame()
 		end
 
 		local maxValue = getMaxValue(itemList)
+		if not maxValue then return end
 		FauxScrollFrame_Update(self.itemframe.scrollBar, maxValue, MAX_ROWS, ROW_HEIGHT, nil, nil, nil, nil, nil, nil, true)
 		local offset = FauxScrollFrame_GetOffset(self.itemframe.scrollBar)
 		for column = 1, MAX_COLUMNS do
@@ -127,47 +129,34 @@ end
 local faction = UnitFactionGroup("player")
 
 --find the right itemID for the difficulty selected
-function AtlasLoot:GetProperItemConditionals(item, dataSource, dataID)
-	if item and item.faction and item.faction ~= faction then return end
-	local isValid, toShow, itemID, recipeID
+function AtlasLoot:GetItemConditionals(item, dataSource, dataID)
+	if (item and item.faction and item.faction ~= faction) or (item.Server and item.Server ~= self.serverType)	then return end
 
-	isValid = false
-	toShow = true
-	local itemDif = self.ItemindexID or self.Difficulties.Normal
+	local itemID, recipeID
+	local show = true
+	local itemDif = self.ItemindexID
+
+	local itemType = item.Type or dataSource[dataID].Type
+	local minDif, maxDif = self:GetMinMaxDifficultys(itemType, item.minDifficulty)
+
+	if maxDif < itemDif then
+		itemDif = maxDif
+	end
+
+	if minDif and minDif <= itemDif then
+		show = false
+	end
+
 	itemID = item and item.itemID
 	if item and item.itemID then
-		itemID = item.itemID
-		isValid = true
-		local itemType = item.Type or dataSource[dataID].Type
-		local maxDif = self:GetMaxDifficulty(itemType)
-		--stops items from showing that are taged for coa
-		if (item.Server and item.Server ~= self.serverType) then
-			toShow = false
-		elseif item[self.Difficulties.MIN_DIF] then
-			if item[self.Difficulties.MIN_DIF] > itemDif then
-				toShow = false
-			end
-			itemID = self:GetItemDifficultyID(item.itemID, min(maxDif, itemDif))
-		end
-		if toShow then
-			if maxDif < itemDif then itemDif = maxDif end 
-			--If something was found in itemID database show that if not show default table item
-			itemID = self:GetItemDifficultyID(item.itemID, itemDif)
-		end
-	elseif item and (item.spellID or item.icon) or item and itemID then
-		toShow = true
-		if(item[self.Difficulties.MIN_DIF]) then
-			if item[self.Difficulties.MIN_DIF] > itemDif then
-				toShow = false
-			end
-		end
-		isValid = true
+		itemID = self:GetItemDifficultyID(item.itemID, itemDif)
 	end
 
 	if item and item.spellID then
 		recipeID = self:GetRecipeID(item.spellID)
 	end
-	return isValid, toShow, itemID, recipeID
+
+	return show, itemID, recipeID
 end
 
 -- Setup the button for the to be displayed item/spell
