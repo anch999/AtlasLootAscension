@@ -1,6 +1,5 @@
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
-local alDif = AtlasLoot.Difficulties
 local color = AtlasLoot.Colors
 local BabbleBoss = AtlasLoot_GetLocaleLibBabble("LibBabble-Boss-3.0")
 local BabbleFaction = AtlasLoot_GetLocaleLibBabble("LibBabble-Faction-3.0")
@@ -79,31 +78,31 @@ local gap = {"gap"}
 local scaleOfSandsRings = {
 	Name = "Rings",
 	{
-		{ itemID = 29298, rep = BabbleFaction["Friendly"], [alDif.MAX_DIF] = alDif.Normal }, --Band of the Eternal Champion
-		{ itemID = 29299, rep = BabbleFaction["Honored"], [alDif.MAX_DIF] = alDif.Normal }, --Superior Band of the Eternal Champion
-		{ itemID = 29300, rep = BabbleFaction["Revered"], [alDif.MAX_DIF] = alDif.Normal }, --Exquisite Band of the Eternal Champion
-		{ itemID = 29301, rep = BabbleFaction["Exalted"], [alDif.MAX_DIF] = alDif.Normal }, --Flawless Band of the Eternal Champion
+		{ itemID = 29298, rep = BabbleFaction["Friendly"], maxDifficulty = "Normal" }, --Band of the Eternal Champion
+		{ itemID = 29299, rep = BabbleFaction["Honored"], maxDifficulty = "Normal" }, --Superior Band of the Eternal Champion
+		{ itemID = 29300, rep = BabbleFaction["Revered"], maxDifficulty = "Normal" }, --Exquisite Band of the Eternal Champion
+		{ itemID = 29301, rep = BabbleFaction["Exalted"], maxDifficulty = "Normal" }, --Flawless Band of the Eternal Champion
 		gap,
-		{ itemID = 29294, rep = BabbleFaction["Friendly"], [alDif.MAX_DIF] = alDif.Normal }, --Band of the Eternal Defender
-		{ itemID = 29295, rep = BabbleFaction["Honored"], [alDif.MAX_DIF] = alDif.Normal }, --Superior Band of the Eternal Defender
-		{ itemID = 29296, rep = BabbleFaction["Revered"], [alDif.MAX_DIF] = alDif.Normal }, --Exquisite Band of the Eternal Defender
-		{ itemID = 29297, rep = BabbleFaction["Exalted"], [alDif.MAX_DIF] = alDif.Normal }, --Flawless Band of the Eternal Defender
+		{ itemID = 29294, rep = BabbleFaction["Friendly"], maxDifficulty = "Normal" }, --Band of the Eternal Defender
+		{ itemID = 29295, rep = BabbleFaction["Honored"], maxDifficulty = "Normal" }, --Superior Band of the Eternal Defender
+		{ itemID = 29296, rep = BabbleFaction["Revered"], maxDifficulty = "Normal" }, --Exquisite Band of the Eternal Defender
+		{ itemID = 29297, rep = BabbleFaction["Exalted"], maxDifficulty = "Normal" }, --Flawless Band of the Eternal Defender
 		gap,
-		{ itemID = 15037, rep = BabbleFaction["Friendly"], [alDif.MAX_DIF] = alDif.Normal }, --Band of the Eternal Assassin
-		{ itemID = 15038, rep = BabbleFaction["Honored"], [alDif.MAX_DIF] = alDif.Normal }, --Superior Band of the Eternal Assassin
-		{ itemID = 15039, rep = BabbleFaction["Revered"], [alDif.MAX_DIF] = alDif.Normal }, --Exquisite Band of the Eternal Assassin
-		{ itemID = 15040, rep = BabbleFaction["Exalted"], [alDif.MAX_DIF] = alDif.Normal }, --Flawless Band of the Eternal Assassin
+		{ itemID = 15037, rep = BabbleFaction["Friendly"], maxDifficulty = "Normal" }, --Band of the Eternal Assassin
+		{ itemID = 15038, rep = BabbleFaction["Honored"], maxDifficulty = "Normal" }, --Superior Band of the Eternal Assassin
+		{ itemID = 15039, rep = BabbleFaction["Revered"], maxDifficulty = "Normal" }, --Exquisite Band of the Eternal Assassin
+		{ itemID = 15040, rep = BabbleFaction["Exalted"], maxDifficulty = "Normal" }, --Flawless Band of the Eternal Assassin
 	},
 	{
-		{ itemID = 29302, rep = BabbleFaction["Friendly"], [alDif.MAX_DIF] = alDif.Normal }, --Band of the Eternal Sage
-		{ itemID = 29303, rep = BabbleFaction["Honored"], [alDif.MAX_DIF] = alDif.Normal }, --Superior Band of the Eternal Sage
-		{ itemID = 29304, rep = BabbleFaction["Revered"], [alDif.MAX_DIF] = alDif.Normal }, --Exquisite Band of the Eternal Sage
-		{ itemID = 29305, rep = BabbleFaction["Exalted"], [alDif.MAX_DIF] = alDif.Normal }, --Flawless Band of the Eternal Sage
+		{ itemID = 29302, rep = BabbleFaction["Friendly"], maxDifficulty = "Normal" }, --Band of the Eternal Sage
+		{ itemID = 29303, rep = BabbleFaction["Honored"], maxDifficulty = "Normal" }, --Superior Band of the Eternal Sage
+		{ itemID = 29304, rep = BabbleFaction["Revered"], maxDifficulty = "Normal" }, --Exquisite Band of the Eternal Sage
+		{ itemID = 29305, rep = BabbleFaction["Exalted"], maxDifficulty = "Normal" }, --Flawless Band of the Eternal Sage
 		gap,
-		{ itemID = 29307, rep = BabbleFaction["Friendly"], [alDif.MAX_DIF] = alDif.Normal }, --Band of the Eternal Restorer
-		{ itemID = 29306, rep = BabbleFaction["Honored"], [alDif.MAX_DIF] = alDif.Normal }, --Superior Band of the Eternal Restorer
-		{ itemID = 29308, rep = BabbleFaction["Revered"], [alDif.MAX_DIF] = alDif.Normal }, --Exquisite Band of the Eternal Restorer
-		{ itemID = 29309, rep = BabbleFaction["Exalted"], [alDif.MAX_DIF] = alDif.Normal }, --Flawless Band of the Eternal Restorer
+		{ itemID = 29307, rep = BabbleFaction["Friendly"], maxDifficulty = "Normal" }, --Band of the Eternal Restorer
+		{ itemID = 29306, rep = BabbleFaction["Honored"], maxDifficulty = "Normal" }, --Superior Band of the Eternal Restorer
+		{ itemID = 29308, rep = BabbleFaction["Revered"], maxDifficulty = "Normal" }, --Exquisite Band of the Eternal Restorer
+		{ itemID = 29309, rep = BabbleFaction["Exalted"], maxDifficulty = "Normal" }, --Flawless Band of the Eternal Restorer
 	}
 }
 
@@ -124,17 +123,17 @@ AtlasLoot_Data["BCKeys"] = {
 			{ itemID = 27991 }, --Shadow Labyrinth Key
 			{ itemID = 28395 }, --Shattered Halls Key
 			{ itemID = 31084 }, --Key to the Arcatraz
-			{ itemID = 30622, [alDif.MIN_DIF] = alDif.Heroic }, --Flamewrought Key
-			{ itemID = 30637, [alDif.MIN_DIF] = alDif.Heroic }, --Flamewrought Key
-			{ itemID = 30623, [alDif.MIN_DIF] = alDif.Heroic }, --Reservoir Key
-			{ itemID = 30633, [alDif.MIN_DIF] = alDif.Heroic }, --Auchenai Key
-			{ itemID = 30635, [alDif.MIN_DIF] = alDif.Heroic }, --Key of Time
-			{ itemID = 30634, [alDif.MIN_DIF] = alDif.Heroic }, --Warpforged Key
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Raid"], [alDif.MIN_DIF] = alDif.Heroic },
-			{ itemID = 24490, [alDif.MIN_DIF] = alDif.Heroic }, --The Master's Key
-			{ icon = "INV_Box_01", name = color.WHITE..AL["Misc"], [alDif.MIN_DIF] = alDif.Heroic },
-			{ itemID = 32092, [alDif.MIN_DIF] = alDif.Heroic }, --The Eye of Haramad
-			{ itemID = 32449, [alDif.MIN_DIF] = alDif.Heroic }, --Essence-Infused Moonstone
+			{ itemID = 30622, minDifficulty = "Heroic" }, --Flamewrought Key
+			{ itemID = 30637, minDifficulty = "Heroic" }, --Flamewrought Key
+			{ itemID = 30623, minDifficulty = "Heroic" }, --Reservoir Key
+			{ itemID = 30633, minDifficulty = "Heroic" }, --Auchenai Key
+			{ itemID = 30635, minDifficulty = "Heroic" }, --Key of Time
+			{ itemID = 30634, minDifficulty = "Heroic" }, --Warpforged Key
+			{ icon = "INV_Box_01", name = color.WHITE..AL["Raid"], minDifficulty = "Heroic" },
+			{ itemID = 24490, minDifficulty = "Heroic" }, --The Master's Key
+			{ icon = "INV_Box_01", name = color.WHITE..AL["Misc"], minDifficulty = "Heroic" },
+			{ itemID = 32092, minDifficulty = "Heroic" }, --The Eye of Haramad
+			{ itemID = 32449, minDifficulty = "Heroic" }, --Essence-Infused Moonstone
 		},
 	},
 }
@@ -161,17 +160,17 @@ AtlasLoot_Data["AuchCrypts"] = {
 
 		},
 		{
-			{ itemID = 29434, [alDif.MIN_DIF] = alDif.Heroic }, --Badge of Justice
-			{ itemID = 30587, [alDif.MIN_DIF] = alDif.Heroic }, --Champion's Fire Opal
-			{ itemID = 30588, [alDif.MIN_DIF] = alDif.Heroic }, --Potent Fire Opal
-			{ itemID = 30586, [alDif.MIN_DIF] = alDif.Heroic }, --Seer's Chrysoprase
+			{ itemID = 29434, minDifficulty = "Heroic" }, --Badge of Justice
+			{ itemID = 30587, minDifficulty = "Heroic" }, --Champion's Fire Opal
+			{ itemID = 30588, minDifficulty = "Heroic" }, --Potent Fire Opal
+			{ itemID = 30586, minDifficulty = "Heroic" }, --Seer's Chrysoprase
 			gap,
-			{ itemID = 27866, [alDif.MIN_DIF] = alDif.Heroic }, --Scintillating Headdress of Second Sight
-			{ itemID = 27493, [alDif.MIN_DIF] = alDif.Heroic }, --Gloves of the Deadwatcher
-			{ itemID = 27865, [alDif.MIN_DIF] = alDif.Heroic }, --Bracers of Shirrak
-			{ itemID = 27845, [alDif.MIN_DIF] = alDif.Heroic }, --Magma Plume Boots
-			{ itemID = 27847, [alDif.MIN_DIF] = alDif.Heroic }, --Fanblade Pauldrons
-			{ itemID = 27846, [alDif.MIN_DIF] = alDif.Heroic }, --Claw of the Watcher
+			{ itemID = 27866, minDifficulty = "Heroic" }, --Scintillating Headdress of Second Sight
+			{ itemID = 27493, minDifficulty = "Heroic" }, --Gloves of the Deadwatcher
+			{ itemID = 27865, minDifficulty = "Heroic" }, --Bracers of Shirrak
+			{ itemID = 27845, minDifficulty = "Heroic" }, --Magma Plume Boots
+			{ itemID = 27847, minDifficulty = "Heroic" }, --Fanblade Pauldrons
+			{ itemID = 27846, minDifficulty = "Heroic" }, --Claw of the Watcher
 		},
 	},
 	{
@@ -184,14 +183,14 @@ AtlasLoot_Data["AuchCrypts"] = {
 			{ itemID = 27413, groupID = 1, refLootEntry = 18373 }; --Ring of the Exarchs
 			{ itemID = 27411, groupID = 1, refLootEntry = 18373 }; --Slippers of Serenity
 			gap,
-			{ itemID = 29354, [alDif.MIN_DIF] = alDif.Heroic }, --Light-Touched Stole of Altruism
-			{ itemID = 29257, [alDif.MIN_DIF] = alDif.Heroic }, --Sash of Arcane Visions
-			{ itemID = 29244, [alDif.MIN_DIF] = alDif.Heroic }, --Wave-Song Girdle
-			{ itemID = 27867, [alDif.MIN_DIF] = alDif.Heroic }, --Boots of the Unjust
-			{ itemID = 27871, [alDif.MIN_DIF] = alDif.Heroic }, --Maladaar's Blessed Chaplet
-			{ itemID = 27869, [alDif.MIN_DIF] = alDif.Heroic }, --Soulpriest's Ring of Resolve
-			{ itemID = 27523, [alDif.MIN_DIF] = alDif.Heroic }, --Exarch's Diamond Band
-			{ itemID = 27872, [alDif.MIN_DIF] = alDif.Heroic }, --The Harvester of Souls
+			{ itemID = 29354, minDifficulty = "Heroic" }, --Light-Touched Stole of Altruism
+			{ itemID = 29257, minDifficulty = "Heroic" }, --Sash of Arcane Visions
+			{ itemID = 29244, minDifficulty = "Heroic" }, --Wave-Song Girdle
+			{ itemID = 27867, minDifficulty = "Heroic" }, --Boots of the Unjust
+			{ itemID = 27871, minDifficulty = "Heroic" }, --Maladaar's Blessed Chaplet
+			{ itemID = 27869, minDifficulty = "Heroic" }, --Soulpriest's Ring of Resolve
+			{ itemID = 27523, minDifficulty = "Heroic" }, --Exarch's Diamond Band
+			{ itemID = 27872, minDifficulty = "Heroic" }, --The Harvester of Souls
 			gap,
 			{ itemID = 2076367, groupID = 1, refLootEntry = 2061754 }; --Blade of the Vigilant Shepherd
 			{ itemID = 2070750, groupID = 1, refLootEntry = 2061754 }; --Boots of Illumination
@@ -204,15 +203,15 @@ AtlasLoot_Data["AuchCrypts"] = {
 			{ itemID = 2061754, groupID = 1, refLootEntry = 2061754 }; --Shoulderguards of the Auchenai Guardian
 		},
 		{
-			{ itemID = 427870, [alDif.MIN_DIF] = alDif.Heroic }, --Doomplate Legguards
+			{ itemID = 427870, minDifficulty = "Heroic" }, --Doomplate Legguards
 			gap,
-			{ itemID = 29434, [alDif.MIN_DIF] = alDif.Heroic }, --Badge of Justice
+			{ itemID = 29434, minDifficulty = "Heroic" }, --Badge of Justice
 			gap,
-			{ itemID = 30587, [alDif.MIN_DIF] = alDif.Heroic }, --Champion's Fire Opal
-			{ itemID = 30588, [alDif.MIN_DIF] = alDif.Heroic }, --Potent Fire Opal
-			{ itemID = 33836, [alDif.MIN_DIF] = alDif.Heroic }, --The Exarch's Soul Gem
+			{ itemID = 30587, minDifficulty = "Heroic" }, --Champion's Fire Opal
+			{ itemID = 30588, minDifficulty = "Heroic" }, --Potent Fire Opal
+			{ itemID = 33836, minDifficulty = "Heroic" }, --The Exarch's Soul Gem
 			gap,
-			{ itemID = 30586, [alDif.MIN_DIF] = alDif.Heroic }, --Seer's Chrysoprase
+			{ itemID = 30586, minDifficulty = "Heroic" }, --Seer's Chrysoprase
 		},
 	},
 	{
@@ -249,17 +248,17 @@ AtlasLoot_Data["AuchManaTombs"] = {
 			{ itemID = 25939, groupID = 1, refLootEntry = 40110 }; --Voidfire Wand			
 		},
 		{
-			{ itemID = 29434, [alDif.MIN_DIF] = alDif.Heroic }, --Badge of Justice
-			{ itemID = 30584, [alDif.MIN_DIF] = alDif.Heroic }, --Enscribed Fire Opal
-			{ itemID = 30585, [alDif.MIN_DIF] = alDif.Heroic }, --Glistening Fire Opal
-			{ itemID = 30583, [alDif.MIN_DIF] = alDif.Heroic }, --Timeless Chrysoprase
+			{ itemID = 29434, minDifficulty = "Heroic" }, --Badge of Justice
+			{ itemID = 30584, minDifficulty = "Heroic" }, --Enscribed Fire Opal
+			{ itemID = 30585, minDifficulty = "Heroic" }, --Glistening Fire Opal
+			{ itemID = 30583, minDifficulty = "Heroic" }, --Timeless Chrysoprase
 			gap,
-			{ itemID = 27816, [alDif.MIN_DIF] = alDif.Heroic }, --Mindrage Pauldrons
-			{ itemID = 27818, [alDif.MIN_DIF] = alDif.Heroic }, --Starry Robes of the Crescent
-			{ itemID = 27813, [alDif.MIN_DIF] = alDif.Heroic }, --Boots of the Colossus
-			{ itemID = 27815, [alDif.MIN_DIF] = alDif.Heroic }, --Totem of the Astral Winds
-			{ itemID = 27814, [alDif.MIN_DIF] = alDif.Heroic }, --Twinblade of Mastery
-			{ itemID = 27817, [alDif.MIN_DIF] = alDif.Heroic }, --Starbolt Longbow
+			{ itemID = 27816, minDifficulty = "Heroic" }, --Mindrage Pauldrons
+			{ itemID = 27818, minDifficulty = "Heroic" }, --Starry Robes of the Crescent
+			{ itemID = 27813, minDifficulty = "Heroic" }, --Boots of the Colossus
+			{ itemID = 27815, minDifficulty = "Heroic" }, --Totem of the Astral Winds
+			{ itemID = 27814, minDifficulty = "Heroic" }, --Twinblade of Mastery
+			{ itemID = 27817, minDifficulty = "Heroic" }, --Starbolt Longbow
 		},
 	},
 	{
@@ -273,17 +272,17 @@ AtlasLoot_Data["AuchManaTombs"] = {
 			{ itemID = 25950, groupID = 1, refLootEntry = 40112 }; --Staff of Polarities			
 		},
 		{
-			{ itemID = 29434, [alDif.MIN_DIF] = alDif.Heroic }, --Badge of Justice
-			{ itemID = 30584, [alDif.MIN_DIF] = alDif.Heroic }, --Enscribed Fire Opal
-			{ itemID = 30585, [alDif.MIN_DIF] = alDif.Heroic }, --Glistening Fire Opal
-			{ itemID = 30583, [alDif.MIN_DIF] = alDif.Heroic }, --Timeless Chrysoprase
+			{ itemID = 29434, minDifficulty = "Heroic" }, --Badge of Justice
+			{ itemID = 30584, minDifficulty = "Heroic" }, --Enscribed Fire Opal
+			{ itemID = 30585, minDifficulty = "Heroic" }, --Glistening Fire Opal
+			{ itemID = 30583, minDifficulty = "Heroic" }, --Timeless Chrysoprase
 			gap,
-			{ itemID = 27824, [alDif.MIN_DIF] = alDif.Heroic }, --Robe of the Great Dark Beyond
-			{ itemID = 27821, [alDif.MIN_DIF] = alDif.Heroic }, --Extravagant Boots of Malice
-			{ itemID = 27825, [alDif.MIN_DIF] = alDif.Heroic }, --Predatory Gloves
-			{ itemID = 27826, [alDif.MIN_DIF] = alDif.Heroic }, --Mantle of the Sea Wolf
-			{ itemID = 27823, [alDif.MIN_DIF] = alDif.Heroic }, --Shard Encrusted Breastplate
-			{ itemID = 27822, [alDif.MIN_DIF] = alDif.Heroic }, --Crystal Band of Valor
+			{ itemID = 27824, minDifficulty = "Heroic" }, --Robe of the Great Dark Beyond
+			{ itemID = 27821, minDifficulty = "Heroic" }, --Extravagant Boots of Malice
+			{ itemID = 27825, minDifficulty = "Heroic" }, --Predatory Gloves
+			{ itemID = 27826, minDifficulty = "Heroic" }, --Mantle of the Sea Wolf
+			{ itemID = 27823, minDifficulty = "Heroic" }, --Shard Encrusted Breastplate
+			{ itemID = 27822, minDifficulty = "Heroic" }, --Crystal Band of Valor
 		},
 	},
 	{
@@ -298,32 +297,32 @@ AtlasLoot_Data["AuchManaTombs"] = {
 			gap,
 			{ itemID = 22921 }, --Recipe: Major Frost Protection Potion
 			{ itemID = 28490 }, --Shaffar's Wrappings
-			{ itemID = 33835, [alDif.MIN_DIF] = alDif.Heroic }, --Shaffar's Wondrous Amulet
+			{ itemID = 33835, minDifficulty = "Heroic" }, --Shaffar's Wondrous Amulet
 			gap,
-			{ itemID = 30584, [alDif.MIN_DIF] = alDif.Heroic }, --Enscribed Fire Opal
-			{ itemID = 30585, [alDif.MIN_DIF] = alDif.Heroic }, --Glistening Fire Opal
-			{ itemID = 30583, [alDif.MIN_DIF] = alDif.Heroic }, --Timeless Chrysoprase
+			{ itemID = 30584, minDifficulty = "Heroic" }, --Enscribed Fire Opal
+			{ itemID = 30585, minDifficulty = "Heroic" }, --Glistening Fire Opal
+			{ itemID = 30583, minDifficulty = "Heroic" }, --Timeless Chrysoprase
 		},
 		{
-			{ itemID = 29434, [alDif.MIN_DIF] = alDif.Heroic }, --Badge of Justice
-			{ itemID = 29240, [alDif.MIN_DIF] = alDif.Heroic }, --Bands of Negation
-			{ itemID = 30535, [alDif.MIN_DIF] = alDif.Heroic }, --Forestwalker Kilt
-			{ itemID = 29352, [alDif.MIN_DIF] = alDif.Heroic }, --Cobalt Band of Tyrigosa
-			{ itemID = 32082, [alDif.MIN_DIF] = alDif.Heroic }, --The Fel Barrier
+			{ itemID = 29434, minDifficulty = "Heroic" }, --Badge of Justice
+			{ itemID = 29240, minDifficulty = "Heroic" }, --Bands of Negation
+			{ itemID = 30535, minDifficulty = "Heroic" }, --Forestwalker Kilt
+			{ itemID = 29352, minDifficulty = "Heroic" }, --Cobalt Band of Tyrigosa
+			{ itemID = 32082, minDifficulty = "Heroic" }, --The Fel Barrier
 			gap,
-			{ itemID = 27831, [alDif.MIN_DIF] = alDif.Heroic }, --Mantle of the Unforgiven
-			{ itemID = 27843, [alDif.MIN_DIF] = alDif.Heroic }, --Glyph-Lined Sash
-			{ itemID = 27827, [alDif.MIN_DIF] = alDif.Heroic }, --Lucid Dream Bracers
-			{ itemID = 27835, [alDif.MIN_DIF] = alDif.Heroic }, --Stillwater Girdle
-			{ itemID = 27844, [alDif.MIN_DIF] = alDif.Heroic }, --Pauldrons of Swift Retribution
-			{ itemID = 27798, [alDif.MIN_DIF] = alDif.Heroic }, --Gauntlets of Vindication
+			{ itemID = 27831, minDifficulty = "Heroic" }, --Mantle of the Unforgiven
+			{ itemID = 27843, minDifficulty = "Heroic" }, --Glyph-Lined Sash
+			{ itemID = 27827, minDifficulty = "Heroic" }, --Lucid Dream Bracers
+			{ itemID = 27835, minDifficulty = "Heroic" }, --Stillwater Girdle
+			{ itemID = 27844, minDifficulty = "Heroic" }, --Pauldrons of Swift Retribution
+			{ itemID = 27798, minDifficulty = "Heroic" }, --Gauntlets of Vindication
 			gap,
-			{ itemID = 27837, [alDif.MIN_DIF] = alDif.Heroic }, --Wastewalker Leggings
-			{ itemID = 27828, [alDif.MIN_DIF] = alDif.Heroic }, --Warp-Scarab Brooch
-			{ itemID = 28400, [alDif.MIN_DIF] = alDif.Heroic }, --Warp-Storm Warblade
-			{ itemID = 27829, [alDif.MIN_DIF] = alDif.Heroic }, --Axe of the Nexus-Kings
-			{ itemID = 27840, [alDif.MIN_DIF] = alDif.Heroic }, --Scepter of Sha'tar
-			{ itemID = 27842, [alDif.MIN_DIF] = alDif.Heroic }, --Grand Scepter of the Nexus-Kings
+			{ itemID = 27837, minDifficulty = "Heroic" }, --Wastewalker Leggings
+			{ itemID = 27828, minDifficulty = "Heroic" }, --Warp-Scarab Brooch
+			{ itemID = 28400, minDifficulty = "Heroic" }, --Warp-Storm Warblade
+			{ itemID = 27829, minDifficulty = "Heroic" }, --Axe of the Nexus-Kings
+			{ itemID = 27840, minDifficulty = "Heroic" }, --Scepter of Sha'tar
+			{ itemID = 27842, minDifficulty = "Heroic" }, --Grand Scepter of the Nexus-Kings
 		},
 	},
 	{
@@ -376,13 +375,13 @@ AtlasLoot_Data["AuchSethekk"] = {
 			{ itemID = 27633 }, --Terokk's Mask
 		},
 		{
-			{ itemID = 29434, [alDif.MIN_DIF] = alDif.Heroic }, --Badge of Justice
+			{ itemID = 29434, minDifficulty = "Heroic" }, --Badge of Justice
 			gap,
-			{ itemID = 30553, [alDif.MIN_DIF] = alDif.Heroic }, --Pristine Fire Opal
-			{ itemID = 30554, [alDif.MIN_DIF] = alDif.Heroic }, --Stalwart Fire Opal
-			{ itemID = 30552, [alDif.MIN_DIF] = alDif.Heroic }, --Blessed Tanzanite
+			{ itemID = 30553, minDifficulty = "Heroic" }, --Pristine Fire Opal
+			{ itemID = 30554, minDifficulty = "Heroic" }, --Stalwart Fire Opal
+			{ itemID = 30552, minDifficulty = "Heroic" }, --Blessed Tanzanite
 			gap,
-			{ itemID = 25461, [alDif.MIN_DIF] = alDif.Heroic }, --Book of Forgotten Names
+			{ itemID = 25461, minDifficulty = "Heroic" }, --Book of Forgotten Names
 		},
 	},
 	{
@@ -425,15 +424,15 @@ AtlasLoot_Data["AuchSethekk"] = {
 			{ itemID = 27991 }, --Shadow Labyrinth Key
 		},
 		{
-			{ itemID = 29434, [alDif.MIN_DIF] = alDif.Heroic }, --Badge of Justice
-			{ itemID = 30553, [alDif.MIN_DIF] = alDif.Heroic }, --Pristine Fire Opal
-			{ itemID = 30554, [alDif.MIN_DIF] = alDif.Heroic }, --Stalwart Fire Opal
-			{ itemID = 30552, [alDif.MIN_DIF] = alDif.Heroic }, --Blessed Tanzanite
-			{ itemID = 29249, [alDif.MIN_DIF] = alDif.Heroic }, --Bands of the Benevolent
-			{ itemID = 29259, [alDif.MIN_DIF] = alDif.Heroic }, --Bracers of the Hunt
-			{ itemID = 32073, [alDif.MIN_DIF] = alDif.Heroic }, --Spaulders of Dementia
-			{ itemID = 29355, [alDif.MIN_DIF] = alDif.Heroic }, --Terokk's Shadowstaff
-			{ itemID = 33834, [alDif.MIN_DIF] = alDif.Heroic }, --The Headfeathers of Ikiss
+			{ itemID = 29434, minDifficulty = "Heroic" }, --Badge of Justice
+			{ itemID = 30553, minDifficulty = "Heroic" }, --Pristine Fire Opal
+			{ itemID = 30554, minDifficulty = "Heroic" }, --Stalwart Fire Opal
+			{ itemID = 30552, minDifficulty = "Heroic" }, --Blessed Tanzanite
+			{ itemID = 29249, minDifficulty = "Heroic" }, --Bands of the Benevolent
+			{ itemID = 29259, minDifficulty = "Heroic" }, --Bracers of the Hunt
+			{ itemID = 32073, minDifficulty = "Heroic" }, --Spaulders of Dementia
+			{ itemID = 29355, minDifficulty = "Heroic" }, --Terokk's Shadowstaff
+			{ itemID = 33834, minDifficulty = "Heroic" }, --The Headfeathers of Ikiss
 		}
 	}
 }
@@ -460,11 +459,11 @@ AtlasLoot_Data["AuchShadowLab"] = {
 			{ itemID = 2076423, groupID = 1, refLootEntry = 2076423 }; --Fel Ambassador's Blades
 		},
 		{
-			{ itemID = 29434, [alDif.MIN_DIF] = alDif.Heroic }, --Badge of Justice
+			{ itemID = 29434, minDifficulty = "Heroic" }, --Badge of Justice
 			gap,
-			{ itemID = 30563, [alDif.MIN_DIF] = alDif.Heroic }, --Regal Tanzanite
-			{ itemID = 30559, [alDif.MIN_DIF] = alDif.Heroic }, --Etched Fire Opal
-			{ itemID = 30560, [alDif.MIN_DIF] = alDif.Heroic }, --Rune Covered Chrysoprase
+			{ itemID = 30563, minDifficulty = "Heroic" }, --Regal Tanzanite
+			{ itemID = 30559, minDifficulty = "Heroic" }, --Etched Fire Opal
+			{ itemID = 30560, minDifficulty = "Heroic" }, --Rune Covered Chrysoprase
 		},
 	},
 	{
@@ -484,10 +483,10 @@ AtlasLoot_Data["AuchShadowLab"] = {
 			{ itemID = 2076410, groupID = 1, refLootEntry = 2076410 }; --Blackheart's Chaotic Warhammer
 		},
 		{
-			{ itemID = 29434, [alDif.MIN_DIF] = alDif.Heroic }, --Badge of Justice
-			{ itemID = 30563, [alDif.MIN_DIF] = alDif.Heroic }, --Regal Tanzanite
-			{ itemID = 30559, [alDif.MIN_DIF] = alDif.Heroic }, --Etched Fire Opal
-			{ itemID = 30560, [alDif.MIN_DIF] = alDif.Heroic }, --Rune Covered Chrysoprase
+			{ itemID = 29434, minDifficulty = "Heroic" }, --Badge of Justice
+			{ itemID = 30563, minDifficulty = "Heroic" }, --Regal Tanzanite
+			{ itemID = 30559, minDifficulty = "Heroic" }, --Etched Fire Opal
+			{ itemID = 30560, minDifficulty = "Heroic" }, --Rune Covered Chrysoprase
 	}
 },
 	{
@@ -511,10 +510,10 @@ AtlasLoot_Data["AuchShadowLab"] = {
 			{ itemID = 2076424, groupID = 1, refLootEntry = 2060617 }; --Staff of Empowering Shadows
 		},
 		{
-			{ itemID = 29434, [alDif.MIN_DIF] = alDif.Heroic }, --Badge of Justice
-			{ itemID = 30563, [alDif.MIN_DIF] = alDif.Heroic }, --Regal Tanzanite
-			{ itemID = 30559, [alDif.MIN_DIF] = alDif.Heroic }, --Etched Fire Opal
-			{ itemID = 30560, [alDif.MIN_DIF] = alDif.Heroic }, --Rune Covered Chrysoprase
+			{ itemID = 29434, minDifficulty = "Heroic" }, --Badge of Justice
+			{ itemID = 30563, minDifficulty = "Heroic" }, --Regal Tanzanite
+			{ itemID = 30559, minDifficulty = "Heroic" }, --Etched Fire Opal
+			{ itemID = 30560, minDifficulty = "Heroic" }, --Rune Covered Chrysoprase
 		},
 	},
 	{
@@ -542,19 +541,19 @@ AtlasLoot_Data["AuchShadowLab"] = {
 		{
 			{ itemID = 24309 }, --Pattern: Spellstrike Pants
 			gap,
-			{ itemID = 29434, [alDif.MIN_DIF] = alDif.Heroic }, --Badge of Justice
+			{ itemID = 29434, minDifficulty = "Heroic" }, --Badge of Justice
 			gap,
-			{ itemID = 30563, [alDif.MIN_DIF] = alDif.Heroic }, --Regal Tanzanite
-			{ itemID = 30559, [alDif.MIN_DIF] = alDif.Heroic }, --Etched Fire Opal
-			{ itemID = 30560, [alDif.MIN_DIF] = alDif.Heroic }, --Rune Covered Chrysoprase
+			{ itemID = 30563, minDifficulty = "Heroic" }, --Regal Tanzanite
+			{ itemID = 30559, minDifficulty = "Heroic" }, --Etched Fire Opal
+			{ itemID = 30560, minDifficulty = "Heroic" }, --Rune Covered Chrysoprase
 			gap,
-			{ itemID = 30532, [alDif.MIN_DIF] = alDif.Heroic }, --Kirin Tor Master's Trousers
-			{ itemID = 29357, [alDif.MIN_DIF] = alDif.Heroic }, --Master Thief's Gloves
-			{ itemID = 29261, [alDif.MIN_DIF] = alDif.Heroic }, --Girdle of Ferocity
-			{ itemID = 29353, [alDif.MIN_DIF] = alDif.Heroic }, --Shockwave Truncheon
+			{ itemID = 30532, minDifficulty = "Heroic" }, --Kirin Tor Master's Trousers
+			{ itemID = 29357, minDifficulty = "Heroic" }, --Master Thief's Gloves
+			{ itemID = 29261, minDifficulty = "Heroic" }, --Girdle of Ferocity
+			{ itemID = 29353, minDifficulty = "Heroic" }, --Shockwave Truncheon
 			gap,
-			{ itemID = 31722, [alDif.MIN_DIF] = alDif.Heroic }, --Murmur's Essence
-			{ itemID = 33840, [alDif.MIN_DIF] = alDif.Heroic }, --Murmur's Whisper
+			{ itemID = 31722, minDifficulty = "Heroic" }, --Murmur's Essence
+			{ itemID = 33840, minDifficulty = "Heroic" }, --Murmur's Whisper
 		},
 
 	},
@@ -613,7 +612,7 @@ AtlasLoot_Data["BlackTemple"] = {
 			{ itemID = 32236, groupID = 2, refLootEntry = 22887 }; --Rising Tide
 			gap,
 			{ itemID = 29434 }, --Badge of Justice
-			{ itemID = 400751, [alDif.MAX_DIF] = alDif.Normal }, --Raider's Commendations
+			{ itemID = 400751, maxDifficulty = "Normal" }, --Raider's Commendations
 			{ itemID = 98570 }, --Mystic Orb
 			gap,
 			{ itemID = 63451, droprate = "1%" }, --Pet Sigil
@@ -641,7 +640,7 @@ AtlasLoot_Data["BlackTemple"] = {
 			{ itemID = 32254, groupID = 2, refLootEntry = 22898 }; --The Brutalizer
 			gap,
 			{ itemID = 29434 }, --Badge of Justice
-			{ itemID = 400751, [alDif.MAX_DIF] = alDif.Normal }, --Raider's Commendations
+			{ itemID = 400751, maxDifficulty = "Normal" }, --Raider's Commendations
 			{ itemID = 98570 }, --Mystic Orb
 			gap,
 			{ itemID = 63510, droprate = "1%" }, --Pet Sigil
@@ -667,7 +666,7 @@ AtlasLoot_Data["BlackTemple"] = {
 			{ itemID = 11432 }, --Ashtongue Jewel
 			gap,
 			{ itemID = 29434 }, --Badge of Justice
-			{ itemID = 400751, [alDif.MAX_DIF] = alDif.Normal }, --Raider's Commendations
+			{ itemID = 400751, maxDifficulty = "Normal" }, --Raider's Commendations
 			{ itemID = 98570 }, --Mystic Orb
 			gap,
 			{ itemID = 63425, droprate = "1%" }, --Pet Sigil
@@ -693,7 +692,7 @@ AtlasLoot_Data["BlackTemple"] = {
 			{ itemID = 32325, groupID = 2, refLootEntry = 22871 }; --Rifle of the Stoic Guardian
 			gap,
 			{ itemID = 29434 }, --Badge of Justice
-			{ itemID = 400751, [alDif.MAX_DIF] = alDif.Normal }, --Raider's Commendations
+			{ itemID = 400751, maxDifficulty = "Normal" }, --Raider's Commendations
 			{ itemID = 98570 }, --Mystic Orb
 			gap,
 			{ itemID = 63443, droprate = "1%" }, --Pet Sigil
@@ -721,7 +720,7 @@ AtlasLoot_Data["BlackTemple"] = {
 
 			gap,
 			{ itemID = 29434 }, --Badge of Justice
-			{ itemID = 400751, [alDif.MAX_DIF] = alDif.Normal }, --Raider's Commendations
+			{ itemID = 400751, maxDifficulty = "Normal" }, --Raider's Commendations
 			{ itemID = 98570 }, --Mystic Orb
 			gap,
 			{ itemID = 63521, droprate = "1%" }, --Pet Sigil
@@ -747,7 +746,7 @@ AtlasLoot_Data["BlackTemple"] = {
 
 			gap,
 			{ itemID = 29434 }, --Badge of Justice
-			{ itemID = 400751, [alDif.MAX_DIF] = alDif.Normal }, --Raider's Commendations
+			{ itemID = 400751, maxDifficulty = "Normal" }, --Raider's Commendations
 			{ itemID = 98570 }, --Mystic Orb
 			gap,
 			{ itemID = 63940, droprate = "1%" }, --Pet Sigil
@@ -768,7 +767,7 @@ AtlasLoot_Data["BlackTemple"] = {
 			{ itemID = 31101, lootTable = {"T6SHOULDER","Token"} }, --Pauldrons of the Forgotten Conqueror
 			gap,
 			{ itemID = 29434 }, --Badge of Justice
-			{ itemID = 400751, [alDif.MAX_DIF] = alDif.Normal }, --Raider's Commendations
+			{ itemID = 400751, maxDifficulty = "Normal" }, --Raider's Commendations
 			{ itemID = 98570 }, --Mystic Orb
 			gap,
 			{ itemID = 63520, droprate = "1%" }, --Pet Sigil
@@ -791,7 +790,7 @@ AtlasLoot_Data["BlackTemple"] = {
 			{ itemID = 31092, lootTable = {"T6HAND","Token"} }, --Gloves of the Forgotten Conqueror
 			gap,
 			{ itemID = 29434 }, --Badge of Justice
-			{ itemID = 400751, [alDif.MAX_DIF] = alDif.Normal }, --Raider's Commendations
+			{ itemID = 400751, maxDifficulty = "Normal" }, --Raider's Commendations
 			{ itemID = 98570 }, --Mystic Orb
 			gap,
 			{ itemID = 63929, droprate = "1%" }, --Pet Sigil
@@ -826,7 +825,7 @@ AtlasLoot_Data["BlackTemple"] = {
 			{ itemID = 32838 }, --Warglaive of Azzinoth
 			gap,
 			{ itemID = 29434 }, --Badge of Justice
-			{ itemID = 400751, [alDif.MAX_DIF] = alDif.Normal }, --Raider's Commendations
+			{ itemID = 400751, maxDifficulty = "Normal" }, --Raider's Commendations
 			{ itemID = 98570 }, --Mystic Orb
 			gap,
 			{ itemID = 63511, droprate = "1%" }, --Pet Sigil
@@ -930,18 +929,18 @@ AtlasLoot_Data["CoTOldHillsbrad"] = {
 			{ itemID = 27436 }, --Iron Band of the Unbreakable
 		},
 		{
-			{ itemID = 29434, [alDif.MIN_DIF] = alDif.Heroic }, --Badge of Justice
+			{ itemID = 29434, minDifficulty = "Heroic" }, --Badge of Justice
 			gap,
-			{ itemID = 30589, [alDif.MIN_DIF] = alDif.Heroic }, --Dazzling Chrysoprase
-			{ itemID = 30591, [alDif.MIN_DIF] = alDif.Heroic }, --Empowered Fire Opal
-			{ itemID = 30590, [alDif.MIN_DIF] = alDif.Heroic }, --Enduring Chrysoprase
+			{ itemID = 30589, minDifficulty = "Heroic" }, --Dazzling Chrysoprase
+			{ itemID = 30591, minDifficulty = "Heroic" }, --Empowered Fire Opal
+			{ itemID = 30590, minDifficulty = "Heroic" }, --Enduring Chrysoprase
 			gap,
-			{ itemID = 28212, [alDif.MIN_DIF] = alDif.Heroic }, --Aran's Sorcerous Slacks
-			{ itemID = 28214, [alDif.MIN_DIF] = alDif.Heroic }, --Grips of the Lunar Eclipse
-			{ itemID = 28215, [alDif.MIN_DIF] = alDif.Heroic }, --Mok'Nathal Mask of Battle
-			{ itemID = 28211, [alDif.MIN_DIF] = alDif.Heroic }, --Lieutenant's Signet of Lordaeron
-			{ itemID = 28213, [alDif.MIN_DIF] = alDif.Heroic }, --Lordaeron Medical Guide
-			{ itemID = 28210, [alDif.MIN_DIF] = alDif.Heroic }, --Bloodskull Destroyer
+			{ itemID = 28212, minDifficulty = "Heroic" }, --Aran's Sorcerous Slacks
+			{ itemID = 28214, minDifficulty = "Heroic" }, --Grips of the Lunar Eclipse
+			{ itemID = 28215, minDifficulty = "Heroic" }, --Mok'Nathal Mask of Battle
+			{ itemID = 28211, minDifficulty = "Heroic" }, --Lieutenant's Signet of Lordaeron
+			{ itemID = 28213, minDifficulty = "Heroic" }, --Lordaeron Medical Guide
+			{ itemID = 28210, minDifficulty = "Heroic" }, --Bloodskull Destroyer
 		},
 	},
 	{
@@ -956,18 +955,18 @@ AtlasLoot_Data["CoTOldHillsbrad"] = {
 			{ itemID = 22927 }, --Recipe: Ironshield Potion
 		},
 		{
-			{ itemID = 29434, [alDif.MIN_DIF] = alDif.Heroic }, --Badge of Justice
+			{ itemID = 29434, minDifficulty = "Heroic" }, --Badge of Justice
 			gap,
-			{ itemID = 30589, [alDif.MIN_DIF] = alDif.Heroic }, --Dazzling Chrysoprase
-			{ itemID = 30591, [alDif.MIN_DIF] = alDif.Heroic }, --Empowered Fire Opal
-			{ itemID = 30590, [alDif.MIN_DIF] = alDif.Heroic }, --Enduring Chrysoprase
+			{ itemID = 30589, minDifficulty = "Heroic" }, --Dazzling Chrysoprase
+			{ itemID = 30591, minDifficulty = "Heroic" }, --Empowered Fire Opal
+			{ itemID = 30590, minDifficulty = "Heroic" }, --Enduring Chrysoprase
 			gap,
-			{ itemID = 28218, [alDif.MIN_DIF] = alDif.Heroic }, --Pontiff's Pantaloons of Prophecy
-			{ itemID = 28220, [alDif.MIN_DIF] = alDif.Heroic }, --Moon-Crown Antlers
-			{ itemID = 28219, [alDif.MIN_DIF] = alDif.Heroic }, --Emerald-Scale Greaves
-			{ itemID = 28221, [alDif.MIN_DIF] = alDif.Heroic }, --Boots of the Watchful Heart
-			{ itemID = 28217, [alDif.MIN_DIF] = alDif.Heroic }, --Tarren Mill Vitality Locket
-			{ itemID = 28216, [alDif.MIN_DIF] = alDif.Heroic }, --Dathrohan's Ceremonial Hammer
+			{ itemID = 28218, minDifficulty = "Heroic" }, --Pontiff's Pantaloons of Prophecy
+			{ itemID = 28220, minDifficulty = "Heroic" }, --Moon-Crown Antlers
+			{ itemID = 28219, minDifficulty = "Heroic" }, --Emerald-Scale Greaves
+			{ itemID = 28221, minDifficulty = "Heroic" }, --Boots of the Watchful Heart
+			{ itemID = 28217, minDifficulty = "Heroic" }, --Tarren Mill Vitality Locket
+			{ itemID = 28216, minDifficulty = "Heroic" }, --Dathrohan's Ceremonial Hammer
 		},
 	},
 	{
@@ -978,33 +977,33 @@ AtlasLoot_Data["CoTOldHillsbrad"] = {
 			{ itemID = 27440 }, --Diamond Prism of Recurrence
 			{ itemID = 27432 }, --Broxigar's Ring of Valor
 			{ itemID = 27431 }, --Time-Shifted Dagger
-			{ itemID = 29250, [alDif.MIN_DIF] = alDif.Heroic }, --Cord of Sanctification
-			{ itemID = 29246, [alDif.MIN_DIF] = alDif.Heroic }, --Nightfall Wristguards
-			{ itemID = 29357, [alDif.MIN_DIF] = alDif.Heroic }, --Master Thief's Gloves
-			{ itemID = 30534, [alDif.MIN_DIF] = alDif.Heroic }, --Wyrmscale Greaves
-			{ itemID = 30536, [alDif.MIN_DIF] = alDif.Heroic }, --Greaves of the Martyr
-			{ itemID = 27911, [alDif.MIN_DIF] = alDif.Heroic }, --Epoch's Whispering Cinch
-			{ itemID = 28344, [alDif.MIN_DIF] = alDif.Heroic }, --Wyrmfury Pauldrons
-			{ itemID = 28233, [alDif.MIN_DIF] = alDif.Heroic }, --Necklace of Resplendent Hope
-			{ itemID = 27904, [alDif.MIN_DIF] = alDif.Heroic }, --Resounding Ring of Glory
-			{ itemID = 28227, [alDif.MIN_DIF] = alDif.Heroic }, --Sparking Arcanite Ring
+			{ itemID = 29250, minDifficulty = "Heroic" }, --Cord of Sanctification
+			{ itemID = 29246, minDifficulty = "Heroic" }, --Nightfall Wristguards
+			{ itemID = 29357, minDifficulty = "Heroic" }, --Master Thief's Gloves
+			{ itemID = 30534, minDifficulty = "Heroic" }, --Wyrmscale Greaves
+			{ itemID = 30536, minDifficulty = "Heroic" }, --Greaves of the Martyr
+			{ itemID = 27911, minDifficulty = "Heroic" }, --Epoch's Whispering Cinch
+			{ itemID = 28344, minDifficulty = "Heroic" }, --Wyrmfury Pauldrons
+			{ itemID = 28233, minDifficulty = "Heroic" }, --Necklace of Resplendent Hope
+			{ itemID = 27904, minDifficulty = "Heroic" }, --Resounding Ring of Glory
+			{ itemID = 28227, minDifficulty = "Heroic" }, --Sparking Arcanite Ring
 		},
 		{
-			{ itemID = 28223, [alDif.MIN_DIF] = alDif.Heroic }, --Arcanist's Stone
-			{ itemID = 28226, [alDif.MIN_DIF] = alDif.Heroic }, --Timeslicer
-			{ itemID = 28222, [alDif.MIN_DIF] = alDif.Heroic }, --Reaver of the Infinites	
-			{ itemID = 28191, [alDif.MIN_DIF] = alDif.Heroic }, --Mana-Etched Vestments
-			{ itemID = 28224, [alDif.MIN_DIF] = alDif.Heroic }, --Wastewalker Helm
-			{ itemID = 28401, [alDif.MIN_DIF] = alDif.Heroic }, --Hauberk of Desolation
-			{ itemID = 28225, [alDif.MIN_DIF] = alDif.Heroic }, --Doomplate Warhelm
-			{ itemID = 33847, [alDif.MIN_DIF] = alDif.Heroic }, --Epoch Hunter's Head
+			{ itemID = 28223, minDifficulty = "Heroic" }, --Arcanist's Stone
+			{ itemID = 28226, minDifficulty = "Heroic" }, --Timeslicer
+			{ itemID = 28222, minDifficulty = "Heroic" }, --Reaver of the Infinites	
+			{ itemID = 28191, minDifficulty = "Heroic" }, --Mana-Etched Vestments
+			{ itemID = 28224, minDifficulty = "Heroic" }, --Wastewalker Helm
+			{ itemID = 28401, minDifficulty = "Heroic" }, --Hauberk of Desolation
+			{ itemID = 28225, minDifficulty = "Heroic" }, --Doomplate Warhelm
+			{ itemID = 33847, minDifficulty = "Heroic" }, --Epoch Hunter's Head
 			gap,
-			{ itemID = 29434, [alDif.MIN_DIF] = alDif.Heroic }, --Badge of Justice
+			{ itemID = 29434, minDifficulty = "Heroic" }, --Badge of Justice
 			gap,
-			{ itemID = 30589, [alDif.MIN_DIF] = alDif.Heroic }, --Dazzling Chrysoprase
-			{ itemID = 30591, [alDif.MIN_DIF] = alDif.Heroic }, --Empowered Fire Opal
-			{ itemID = 30590, [alDif.MIN_DIF] = alDif.Heroic }, --Enduring Chrysoprase
-			{ itemID = 24173, [alDif.MIN_DIF] = alDif.Heroic }, --Design: Circlet of Arcane Might
+			{ itemID = 30589, minDifficulty = "Heroic" }, --Dazzling Chrysoprase
+			{ itemID = 30591, minDifficulty = "Heroic" }, --Empowered Fire Opal
+			{ itemID = 30590, minDifficulty = "Heroic" }, --Enduring Chrysoprase
+			{ itemID = 24173, minDifficulty = "Heroic" }, --Design: Circlet of Arcane Might
 		},
 	},
 	{
@@ -1075,11 +1074,11 @@ AtlasLoot_Data["CoTBlackMorass"] = {
 			{ itemID = 28033 }, --Epoch-Mender
 		},
 		{
-			{ itemID = 29434, [alDif.MIN_DIF] = alDif.Heroic }, --Badge of Justice
+			{ itemID = 29434, minDifficulty = "Heroic" }, --Badge of Justice
 			gap,
-			{ itemID = 30558, [alDif.MIN_DIF] = alDif.Heroic }, --Glimmering Fire Opal
-			{ itemID = 30556, [alDif.MIN_DIF] = alDif.Heroic }, --Glinting Fire Opal
-			{ itemID = 30555, [alDif.MIN_DIF] = alDif.Heroic }, --Glowing Tanzanite
+			{ itemID = 30558, minDifficulty = "Heroic" }, --Glimmering Fire Opal
+			{ itemID = 30556, minDifficulty = "Heroic" }, --Glinting Fire Opal
+			{ itemID = 30555, minDifficulty = "Heroic" }, --Glowing Tanzanite
 		},
 	},
 	{
@@ -1099,17 +1098,17 @@ AtlasLoot_Data["CoTBlackMorass"] = {
 			{ itemID = 28188 }, --Bloodfire Greatstaff
 		},
 		{
-			{ itemID = 29434, [alDif.MIN_DIF] = alDif.Heroic }, --Badge of Justice
+			{ itemID = 29434, minDifficulty = "Heroic" }, --Badge of Justice
 			gap,
-			{ itemID = 30558, [alDif.MIN_DIF] = alDif.Heroic }, --Glimmering Fire Opal
-			{ itemID = 30556, [alDif.MIN_DIF] = alDif.Heroic }, --Glinting Fire Opal
-			{ itemID = 30555, [alDif.MIN_DIF] = alDif.Heroic }, --Glowing Tanzanite
+			{ itemID = 30558, minDifficulty = "Heroic" }, --Glimmering Fire Opal
+			{ itemID = 30556, minDifficulty = "Heroic" }, --Glinting Fire Opal
+			{ itemID = 30555, minDifficulty = "Heroic" }, --Glowing Tanzanite
 			gap,
-			{ itemID = 30531, [alDif.MIN_DIF] = alDif.Heroic }, --Breeches of the Occultist
-			{ itemID = 29247, [alDif.MIN_DIF] = alDif.Heroic }, --Girdle of the Deathdealer
-			{ itemID = 29253, [alDif.MIN_DIF] = alDif.Heroic }, --Girdle of Valorous Deeds
-			{ itemID = 29356, [alDif.MIN_DIF] = alDif.Heroic }, --Quantum Blade
-			{ itemID = 33858, [alDif.MIN_DIF] = alDif.Heroic }, --Aeonus's Hourglass
+			{ itemID = 30531, minDifficulty = "Heroic" }, --Breeches of the Occultist
+			{ itemID = 29247, minDifficulty = "Heroic" }, --Girdle of the Deathdealer
+			{ itemID = 29253, minDifficulty = "Heroic" }, --Girdle of Valorous Deeds
+			{ itemID = 29356, minDifficulty = "Heroic" }, --Quantum Blade
+			{ itemID = 33858, minDifficulty = "Heroic" }, --Aeonus's Hourglass
 		},
 	}
 }
@@ -1147,7 +1146,7 @@ AtlasLoot_Data["CoTHyjal"] = {
 		},
 		{
 			{ itemID = 29434 }, --Badge of Justice
-			{ itemID = 400751, [alDif.MAX_DIF] = alDif.Normal }, --Raider's Commendations
+			{ itemID = 400751, maxDifficulty = "Normal" }, --Raider's Commendations
 			{ itemID = 98570 }, --Mystic Orb
 			gap,
 			{ itemID = 61196, droprate = "1%" }, --Pet Sigil
@@ -1176,7 +1175,7 @@ AtlasLoot_Data["CoTHyjal"] = {
 		},
 		{
 			{ itemID = 29434 }, --Badge of Justice
-			{ itemID = 400751, [alDif.MAX_DIF] = alDif.Normal }, --Raider's Commendations
+			{ itemID = 400751, maxDifficulty = "Normal" }, --Raider's Commendations
 			{ itemID = 98570 }, --Mystic Orb
 			gap,
 			{ itemID = 61287, droprate = "1%" }, --Pet Sigil
@@ -1198,7 +1197,7 @@ AtlasLoot_Data["CoTHyjal"] = {
 			gap,
 			{ itemID = 31092, lootTable = {"T6HAND","Token"} },
 			{ itemID = 29434 }, --Badge of Justice
-			{ itemID = 400751, [alDif.MAX_DIF] = alDif.Normal }, --Raider's Commendations
+			{ itemID = 400751, maxDifficulty = "Normal" }, --Raider's Commendations
 			{ itemID = 98570 }, --Mystic Orb
 		},
 	},
@@ -1218,7 +1217,7 @@ AtlasLoot_Data["CoTHyjal"] = {
 		{
 			{ itemID = 31098, lootTable = {"T6LEGS","Token"} }, --Leggings of the Forgotten Conqueror
 			{ itemID = 29434 }, --Badge of Justice
-			{ itemID = 400751, [alDif.MAX_DIF] = alDif.Normal }, --Raider's Commendations
+			{ itemID = 400751, maxDifficulty = "Normal" }, --Raider's Commendations
 			{ itemID = 98570 }, --Mystic Orb
 			{ itemID = 61289, droprate = "1%" }, --Pet Sigil
 		},
@@ -1249,7 +1248,7 @@ AtlasLoot_Data["CoTHyjal"] = {
 			{ itemID = 450009, desc = AL["Quest Requirements"], contentsPreview = {{450009},{450010},{34334}}}, --The String of Time
 			gap,
 			{ itemID = 29434 }, --Badge of Justice
-			{ itemID = 400751, [alDif.MAX_DIF] = alDif.Normal }, --Raider's Commendations
+			{ itemID = 400751, maxDifficulty = "Normal" }, --Raider's Commendations
 			{ itemID = 98570 }, --Mystic Orb
 			gap,
 			{ itemID = 61557, droprate = "1%" }, --Pet Sigil
@@ -1277,7 +1276,7 @@ AtlasLoot_Data["CoTHyjal"] = {
 		},
 		{
 			{ itemID = 29434 }, --Badge of Justice
-			{ itemID = 400751, [alDif.MAX_DIF] = alDif.Normal }, --Raider's Commendations
+			{ itemID = 400751, maxDifficulty = "Normal" }, --Raider's Commendations
 			{ itemID = 98570 }, --Mystic Orb
 		},
 	},
@@ -1394,18 +1393,18 @@ AtlasLoot_Data["CFRSlavePens"] = {
 			{ itemID = 2072940, groupID = 1, refLootEntry = 2061629 }; --Treachery's Grasp
 		},
 		{
-			{ itemID = 29434, [alDif.MIN_DIF] = alDif.Heroic }, --Badge of Justice
+			{ itemID = 29434, minDifficulty = "Heroic" }, --Badge of Justice
 			gap,
-			{ itemID = 30604, [alDif.MIN_DIF] = alDif.Heroic }, --Resplendent Fire Opal
-			{ itemID = 30605, [alDif.MIN_DIF] = alDif.Heroic }, --Vivid Chrysoprase
-			{ itemID = 30603, [alDif.MIN_DIF] = alDif.Heroic }, --Royal Tanzanite
+			{ itemID = 30604, minDifficulty = "Heroic" }, --Resplendent Fire Opal
+			{ itemID = 30605, minDifficulty = "Heroic" }, --Vivid Chrysoprase
+			{ itemID = 30603, minDifficulty = "Heroic" }, --Royal Tanzanite
 			gap,
-			{ itemID = 27542, [alDif.MIN_DIF] = alDif.Heroic }, --Cord of Belief
-			{ itemID = 27545, [alDif.MIN_DIF] = alDif.Heroic }, --Mennu's Scaled Leggings
-			{ itemID = 27541, [alDif.MIN_DIF] = alDif.Heroic }, --Archery Belt of the Broken
-			{ itemID = 27546, [alDif.MIN_DIF] = alDif.Heroic }, --Traitor's Noose
-			{ itemID = 27544, [alDif.MIN_DIF] = alDif.Heroic }, --Totem of Spontaneous Regrowth
-			{ itemID = 27543, [alDif.MIN_DIF] = alDif.Heroic }, --Starlight Dagger
+			{ itemID = 27542, minDifficulty = "Heroic" }, --Cord of Belief
+			{ itemID = 27545, minDifficulty = "Heroic" }, --Mennu's Scaled Leggings
+			{ itemID = 27541, minDifficulty = "Heroic" }, --Archery Belt of the Broken
+			{ itemID = 27546, minDifficulty = "Heroic" }, --Traitor's Noose
+			{ itemID = 27544, minDifficulty = "Heroic" }, --Totem of Spontaneous Regrowth
+			{ itemID = 27543, minDifficulty = "Heroic" }, --Starlight Dagger
 		},
 
 	},
@@ -1419,18 +1418,18 @@ AtlasLoot_Data["CFRSlavePens"] = {
 			{ itemID = 24376, groupID = 1, refLootEntry = 17991 }; --Runed Fungalcap
 		},
 		{
-			{ itemID = 29434, [alDif.MIN_DIF] = alDif.Heroic }, --Badge of Justice
+			{ itemID = 29434, minDifficulty = "Heroic" }, --Badge of Justice
 			gap,
-			{ itemID = 30604, [alDif.MIN_DIF] = alDif.Heroic }, --Resplendent Fire Opal
-			{ itemID = 30605, [alDif.MIN_DIF] = alDif.Heroic }, --Vivid Chrysoprase
-			{ itemID = 30603, [alDif.MIN_DIF] = alDif.Heroic }, --Royal Tanzanite
+			{ itemID = 30604, minDifficulty = "Heroic" }, --Resplendent Fire Opal
+			{ itemID = 30605, minDifficulty = "Heroic" }, --Vivid Chrysoprase
+			{ itemID = 30603, minDifficulty = "Heroic" }, --Royal Tanzanite
 			gap,
-			{ itemID = 27550, [alDif.MIN_DIF] = alDif.Heroic }, --Ironscale War Cloak
-			{ itemID = 27547, [alDif.MIN_DIF] = alDif.Heroic }, --Coldwhisper Cord
-			{ itemID = 28124, [alDif.MIN_DIF] = alDif.Heroic }, --Liar's Cord
-			{ itemID = 27549, [alDif.MIN_DIF] = alDif.Heroic }, --Wavefury Boots
-			{ itemID = 27548, [alDif.MIN_DIF] = alDif.Heroic }, --Girdle of Many Blessings
-			{ itemID = 27551, [alDif.MIN_DIF] = alDif.Heroic }, --Skeletal Necklace of Battlerage
+			{ itemID = 27550, minDifficulty = "Heroic" }, --Ironscale War Cloak
+			{ itemID = 27547, minDifficulty = "Heroic" }, --Coldwhisper Cord
+			{ itemID = 28124, minDifficulty = "Heroic" }, --Liar's Cord
+			{ itemID = 27549, minDifficulty = "Heroic" }, --Wavefury Boots
+			{ itemID = 27548, minDifficulty = "Heroic" }, --Girdle of Many Blessings
+			{ itemID = 27551, minDifficulty = "Heroic" }, --Skeletal Necklace of Battlerage
 		},
 	},
 	{
@@ -1442,31 +1441,31 @@ AtlasLoot_Data["CFRSlavePens"] = {
 			{ itemID = 24362, groupID = 1, refLootEntry = 17942 }; --Spore-Soaked Vaneer
 			{ itemID = 24363, groupID = 1, refLootEntry = 17942 }; --Unscarred Breastplate
 			gap,
-			{ itemID = 27796, [alDif.MIN_DIF] = alDif.Heroic }, --Mana-Etched Spaulders
-			{ itemID = 27713, [alDif.MIN_DIF] = alDif.Heroic }, --Pauldrons of Desolation
-			{ itemID = 27742, [alDif.MIN_DIF] = alDif.Heroic }, --Mage-Fury Girdle
-			{ itemID = 27712, [alDif.MIN_DIF] = alDif.Heroic }, --Shackles of Quagmirran
-			{ itemID = 27800, [alDif.MIN_DIF] = alDif.Heroic }, --Earthsoul Britches
-			{ itemID = 28337, [alDif.MIN_DIF] = alDif.Heroic }, --Breastplate of Righteous Fury
-			{ itemID = 27672, [alDif.MIN_DIF] = alDif.Heroic }, --Girdle of the Immovable
-			{ itemID = 27740, [alDif.MIN_DIF] = alDif.Heroic }, --Band of Ursol
+			{ itemID = 27796, minDifficulty = "Heroic" }, --Mana-Etched Spaulders
+			{ itemID = 27713, minDifficulty = "Heroic" }, --Pauldrons of Desolation
+			{ itemID = 27742, minDifficulty = "Heroic" }, --Mage-Fury Girdle
+			{ itemID = 27712, minDifficulty = "Heroic" }, --Shackles of Quagmirran
+			{ itemID = 27800, minDifficulty = "Heroic" }, --Earthsoul Britches
+			{ itemID = 28337, minDifficulty = "Heroic" }, --Breastplate of Righteous Fury
+			{ itemID = 27672, minDifficulty = "Heroic" }, --Girdle of the Immovable
+			{ itemID = 27740, minDifficulty = "Heroic" }, --Band of Ursol
 		},
 		{
-			{ itemID = 27683, [alDif.MIN_DIF] = alDif.Heroic }, --Quagmirran's Eye
-			{ itemID = 27714, [alDif.MIN_DIF] = alDif.Heroic }, --Swamplight Lantern
-			{ itemID = 27673, [alDif.MIN_DIF] = alDif.Heroic }, --Phosphorescent Blade
-			{ itemID = 27741, [alDif.MIN_DIF] = alDif.Heroic }, --Bleeding Hollow Warhammer
-			{ itemID = 33821, [alDif.MIN_DIF] = alDif.Heroic }, --The Heart of Quagmirran
-			{ itemID = 29242, [alDif.MIN_DIF] = alDif.Heroic }, --Boots of Blasphemy
-			{ itemID = 30538, [alDif.MIN_DIF] = alDif.Heroic }, --Midnight Legguards
-			{ itemID = 32078, [alDif.MIN_DIF] = alDif.Heroic }, --Pauldrons of Wild Magic
-			{ itemID = 29349, [alDif.MIN_DIF] = alDif.Heroic }, --Adamantine Chain of the Unbroken
+			{ itemID = 27683, minDifficulty = "Heroic" }, --Quagmirran's Eye
+			{ itemID = 27714, minDifficulty = "Heroic" }, --Swamplight Lantern
+			{ itemID = 27673, minDifficulty = "Heroic" }, --Phosphorescent Blade
+			{ itemID = 27741, minDifficulty = "Heroic" }, --Bleeding Hollow Warhammer
+			{ itemID = 33821, minDifficulty = "Heroic" }, --The Heart of Quagmirran
+			{ itemID = 29242, minDifficulty = "Heroic" }, --Boots of Blasphemy
+			{ itemID = 30538, minDifficulty = "Heroic" }, --Midnight Legguards
+			{ itemID = 32078, minDifficulty = "Heroic" }, --Pauldrons of Wild Magic
+			{ itemID = 29349, minDifficulty = "Heroic" }, --Adamantine Chain of the Unbroken
 			gap,
-			{ itemID = 29434, [alDif.MIN_DIF] = alDif.Heroic }, --Badge of Justice
+			{ itemID = 29434, minDifficulty = "Heroic" }, --Badge of Justice
 			gap,
-			{ itemID = 30604, [alDif.MIN_DIF] = alDif.Heroic }, --Resplendent Fire Opal
-			{ itemID = 30605, [alDif.MIN_DIF] = alDif.Heroic }, --Vivid Chrysoprase
-			{ itemID = 30603, [alDif.MIN_DIF] = alDif.Heroic }, --Royal Tanzanite
+			{ itemID = 30604, minDifficulty = "Heroic" }, --Resplendent Fire Opal
+			{ itemID = 30605, minDifficulty = "Heroic" }, --Vivid Chrysoprase
+			{ itemID = 30603, minDifficulty = "Heroic" }, --Royal Tanzanite
 		},
 	}
 }
@@ -1497,11 +1496,11 @@ AtlasLoot_Data["CFRSteamvault"] = {
 			{ itemID = 2076275, groupID = 1, refLootEntry = 2076275 }; --Riptide Staff of the Stormbinder
 		},
 		{
-			{ itemID = 29434, [alDif.MIN_DIF] = alDif.Heroic }, --Badge of Justice
+			{ itemID = 29434, minDifficulty = "Heroic" }, --Badge of Justice
 			gap,
-			{ itemID = 30550, [alDif.MIN_DIF] = alDif.Heroic }, --Sundered Chrysoprase
-			{ itemID = 30551, [alDif.MIN_DIF] = alDif.Heroic }, --Infused Fire Opal
-			{ itemID = 30549, [alDif.MIN_DIF] = alDif.Heroic }, --Shifting Tanzanite
+			{ itemID = 30550, minDifficulty = "Heroic" }, --Sundered Chrysoprase
+			{ itemID = 30551, minDifficulty = "Heroic" }, --Infused Fire Opal
+			{ itemID = 30549, minDifficulty = "Heroic" }, --Shifting Tanzanite
 		},
 	},
 	{
@@ -1516,11 +1515,11 @@ AtlasLoot_Data["CFRSteamvault"] = {
 			{ itemID = 23887 }, --Schematic: Rocket Boots Xtreme
 		},
 		{
-			{ itemID = 29434, [alDif.MIN_DIF] = alDif.Heroic }, --Badge of Justice
+			{ itemID = 29434, minDifficulty = "Heroic" }, --Badge of Justice
 			gap,
-			{ itemID = 30550, [alDif.MIN_DIF] = alDif.Heroic }, --Sundered Chrysoprase
-			{ itemID = 30551, [alDif.MIN_DIF] = alDif.Heroic }, --Infused Fire Opal
-			{ itemID = 30549, [alDif.MIN_DIF] = alDif.Heroic }, --Shifting Tanzanite
+			{ itemID = 30550, minDifficulty = "Heroic" }, --Sundered Chrysoprase
+			{ itemID = 30551, minDifficulty = "Heroic" }, --Infused Fire Opal
+			{ itemID = 30549, minDifficulty = "Heroic" }, --Shifting Tanzanite
 		},
 	},
 	{
@@ -1555,18 +1554,18 @@ AtlasLoot_Data["CFRSteamvault"] = {
 			{ itemID = 2066632, groupID = 1, refLootEntry = 2061802 }; --Waistguard of the Depths
 		},
 		{
-			{ itemID = 29434, [alDif.MIN_DIF] = alDif.Heroic }, --Badge of Justice
+			{ itemID = 29434, minDifficulty = "Heroic" }, --Badge of Justice
 			gap,
-			{ itemID = 30550, [alDif.MIN_DIF] = alDif.Heroic }, --Sundered Chrysoprase
-			{ itemID = 30551, [alDif.MIN_DIF] = alDif.Heroic }, --Infused Fire Opal
-			{ itemID = 30549, [alDif.MIN_DIF] = alDif.Heroic }, --Shifting Tanzanite
+			{ itemID = 30550, minDifficulty = "Heroic" }, --Sundered Chrysoprase
+			{ itemID = 30551, minDifficulty = "Heroic" }, --Infused Fire Opal
+			{ itemID = 30549, minDifficulty = "Heroic" }, --Shifting Tanzanite
 			gap,
-			{ itemID = 30543, [alDif.MIN_DIF] = alDif.Heroic }, --Pontifex Kilt
-			{ itemID = 29243, [alDif.MIN_DIF] = alDif.Heroic }, --Wave-Fury Vambraces
-			{ itemID = 29463, [alDif.MIN_DIF] = alDif.Heroic }, --Amber Bands of the Aggressor
-			{ itemID = 29351, [alDif.MIN_DIF] = alDif.Heroic }, --Wrathtide Longbow
-			{ itemID = 31721, [alDif.MIN_DIF] = alDif.Heroic }, --Kalithresh's Trident
-			{ itemID = 33827, [alDif.MIN_DIF] = alDif.Heroic }, --The Warlord's Treatise
+			{ itemID = 30543, minDifficulty = "Heroic" }, --Pontifex Kilt
+			{ itemID = 29243, minDifficulty = "Heroic" }, --Wave-Fury Vambraces
+			{ itemID = 29463, minDifficulty = "Heroic" }, --Amber Bands of the Aggressor
+			{ itemID = 29351, minDifficulty = "Heroic" }, --Wrathtide Longbow
+			{ itemID = 31721, minDifficulty = "Heroic" }, --Kalithresh's Trident
+			{ itemID = 33827, minDifficulty = "Heroic" }, --The Warlord's Treatise
 		},
 	},
 	{
@@ -1601,19 +1600,19 @@ AtlasLoot_Data["CFRUnderbog"] = {
 			{ itemID = 24452, groupID = 1, refLootEntry = 17770 }; --Starlight Gauntlets
 			{ itemID = 24413, groupID = 1, refLootEntry = 17770 }; --Totem of the Thunderhead
 			gap,
-			{ itemID = 27746, [alDif.MIN_DIF] = alDif.Heroic }, --Arcanium Signet Bands
-			{ itemID = 27745, [alDif.MIN_DIF] = alDif.Heroic }, --Hungarhide Gauntlets
-			{ itemID = 27743, [alDif.MIN_DIF] = alDif.Heroic }, --Girdle of Living Flame
-			{ itemID = 27748, [alDif.MIN_DIF] = alDif.Heroic }, --Cassock of the Loyal
-			{ itemID = 27744, [alDif.MIN_DIF] = alDif.Heroic }, --Idol of Ursoc
-			{ itemID = 27747, [alDif.MIN_DIF] = alDif.Heroic }, --Boggspine Knuckles
+			{ itemID = 27746, minDifficulty = "Heroic" }, --Arcanium Signet Bands
+			{ itemID = 27745, minDifficulty = "Heroic" }, --Hungarhide Gauntlets
+			{ itemID = 27743, minDifficulty = "Heroic" }, --Girdle of Living Flame
+			{ itemID = 27748, minDifficulty = "Heroic" }, --Cassock of the Loyal
+			{ itemID = 27744, minDifficulty = "Heroic" }, --Idol of Ursoc
+			{ itemID = 27747, minDifficulty = "Heroic" }, --Boggspine Knuckles
 		},
 		{
-			{ itemID = 29434, [alDif.MIN_DIF] = alDif.Heroic }, --Badge of Justice
+			{ itemID = 29434, minDifficulty = "Heroic" }, --Badge of Justice
 			gap,
-			{ itemID = 30606, [alDif.MIN_DIF] = alDif.Heroic }, --Lambent Chrysoprase
-			{ itemID = 30607, [alDif.MIN_DIF] = alDif.Heroic }, --Splendid Fire Opal
-			{ itemID = 30608, [alDif.MIN_DIF] = alDif.Heroic }, --Radiant Chrysoprase
+			{ itemID = 30606, minDifficulty = "Heroic" }, --Lambent Chrysoprase
+			{ itemID = 30607, minDifficulty = "Heroic" }, --Splendid Fire Opal
+			{ itemID = 30608, minDifficulty = "Heroic" }, --Radiant Chrysoprase
 		},
 	},
 	{
@@ -1625,19 +1624,19 @@ AtlasLoot_Data["CFRUnderbog"] = {
 			{ itemID = 24458, groupID = 1, refLootEntry = 18105 }; --Studded Girdle of Virtue
 			{ itemID = 24460, groupID = 1, refLootEntry = 18105 }; --Talisman of Tenacity
 			gap,
-			{ itemID = 27760, [alDif.MIN_DIF] = alDif.Heroic }, --Dunewind Sash
-			{ itemID = 27759, [alDif.MIN_DIF] = alDif.Heroic }, --Headdress of the Tides
-			{ itemID = 27755, [alDif.MIN_DIF] = alDif.Heroic }, --Girdle of Gallantry
-			{ itemID = 27758, [alDif.MIN_DIF] = alDif.Heroic }, --Hydra-fang Necklace
-			{ itemID = 27761, [alDif.MIN_DIF] = alDif.Heroic }, --Ring of the Shadow Deeps
-			{ itemID = 27757, [alDif.MIN_DIF] = alDif.Heroic }, --Greatstaff of the Leviathan
+			{ itemID = 27760, minDifficulty = "Heroic" }, --Dunewind Sash
+			{ itemID = 27759, minDifficulty = "Heroic" }, --Headdress of the Tides
+			{ itemID = 27755, minDifficulty = "Heroic" }, --Girdle of Gallantry
+			{ itemID = 27758, minDifficulty = "Heroic" }, --Hydra-fang Necklace
+			{ itemID = 27761, minDifficulty = "Heroic" }, --Ring of the Shadow Deeps
+			{ itemID = 27757, minDifficulty = "Heroic" }, --Greatstaff of the Leviathan
 		},
 		{
-			{ itemID = 29434, [alDif.MIN_DIF] = alDif.Heroic }, --Badge of Justice
+			{ itemID = 29434, minDifficulty = "Heroic" }, --Badge of Justice
 			gap,
-			{ itemID = 30606, [alDif.MIN_DIF] = alDif.Heroic }, --Lambent Chrysoprase
-			{ itemID = 30607, [alDif.MIN_DIF] = alDif.Heroic }, --Splendid Fire Opal
-			{ itemID = 30608, [alDif.MIN_DIF] = alDif.Heroic }, --Radiant Chrysoprase
+			{ itemID = 30606, minDifficulty = "Heroic" }, --Lambent Chrysoprase
+			{ itemID = 30607, minDifficulty = "Heroic" }, --Splendid Fire Opal
+			{ itemID = 30608, minDifficulty = "Heroic" }, --Radiant Chrysoprase
 		},
 	},
 	{
@@ -1649,21 +1648,21 @@ AtlasLoot_Data["CFRUnderbog"] = {
 			{ itemID = 24455, groupID = 1, refLootEntry = 17826 }; --Tunic of the Nightwatcher
 			{ itemID = 24453, groupID = 1, refLootEntry = 17826 }; --Zangartooth Shortblade
 			gap,
-			{ itemID = 27764, [alDif.MIN_DIF] = alDif.Heroic }, --Hands of the Sun
-			{ itemID = 27763, [alDif.MIN_DIF] = alDif.Heroic }, --Crown of the Forest Lord
-			{ itemID = 27765, [alDif.MIN_DIF] = alDif.Heroic }, --Armwraps of Disdain
-			{ itemID = 27766, [alDif.MIN_DIF] = alDif.Heroic }, --Swampstone Necklace
-			{ itemID = 27762, [alDif.MIN_DIF] = alDif.Heroic }, --Weathered Band of the Swamplord
-			{ itemID = 27767, [alDif.MIN_DIF] = alDif.Heroic }, --Bogreaver
+			{ itemID = 27764, minDifficulty = "Heroic" }, --Hands of the Sun
+			{ itemID = 27763, minDifficulty = "Heroic" }, --Crown of the Forest Lord
+			{ itemID = 27765, minDifficulty = "Heroic" }, --Armwraps of Disdain
+			{ itemID = 27766, minDifficulty = "Heroic" }, --Swampstone Necklace
+			{ itemID = 27762, minDifficulty = "Heroic" }, --Weathered Band of the Swamplord
+			{ itemID = 27767, minDifficulty = "Heroic" }, --Bogreaver
 			gap,
 
 		},
 		{
-			{ itemID = 29434, [alDif.MIN_DIF] = alDif.Heroic }, --Badge of Justice
+			{ itemID = 29434, minDifficulty = "Heroic" }, --Badge of Justice
 			gap,
-			{ itemID = 30606, [alDif.MIN_DIF] = alDif.Heroic }, --Lambent Chrysoprase
-			{ itemID = 30607, [alDif.MIN_DIF] = alDif.Heroic }, --Splendid Fire Opal
-			{ itemID = 30608, [alDif.MIN_DIF] = alDif.Heroic }, --Radiant Chrysoprase
+			{ itemID = 30606, minDifficulty = "Heroic" }, --Lambent Chrysoprase
+			{ itemID = 30607, minDifficulty = "Heroic" }, --Splendid Fire Opal
+			{ itemID = 30608, minDifficulty = "Heroic" }, --Radiant Chrysoprase
 			gap,
 			{ itemID = 2066521, groupID = 1, refLootEntry = 2061716 }; --Belt of the Broken Marsh
 			{ itemID = 2071767, groupID = 1, refLootEntry = 2061716 }; --Bindings of the Lost Draenei
@@ -1706,11 +1705,11 @@ AtlasLoot_Data["CFRUnderbog"] = {
 			{ itemID = 24248 }, --Brain of the Black Stalker
 			{ itemID = 33826 }, --Black Stalker Egg
 			gap,
-			{ itemID = 29434, [alDif.MIN_DIF] = alDif.Heroic }, --Badge of Justice
+			{ itemID = 29434, minDifficulty = "Heroic" }, --Badge of Justice
 			gap,
-			{ itemID = 30606, [alDif.MIN_DIF] = alDif.Heroic }, --Lambent Chrysoprase
-			{ itemID = 30607, [alDif.MIN_DIF] = alDif.Heroic }, --Splendid Fire Opal
-			{ itemID = 30608, [alDif.MIN_DIF] = alDif.Heroic }, --Radiant Chrysoprase
+			{ itemID = 30606, minDifficulty = "Heroic" }, --Lambent Chrysoprase
+			{ itemID = 30607, minDifficulty = "Heroic" }, --Splendid Fire Opal
+			{ itemID = 30608, minDifficulty = "Heroic" }, --Radiant Chrysoprase
 		}
 	},
 }
@@ -1737,7 +1736,7 @@ AtlasLoot_Data["CFRSerpentshrine"] = {
 			{ itemID = 30054, groupID = 2, refLootEntry = 21216 }; --Ranger-General's Chestguard
 			{ itemID = 30055, groupID = 2, refLootEntry = 21216 }; --Shoulderpads of the Stranger
 			gap,
-			{ itemID = 600878, [alDif.MIN_DIF] = alDif.Heroic }, --Elemental Lodestone: Hydross the Unstable
+			{ itemID = 600878, minDifficulty = "Heroic" }, --Elemental Lodestone: Hydross the Unstable
 		},
 		{
 			{ itemID = 30052, groupID = 2, refLootEntry = 21216 }; --Ring of Lethality
@@ -1988,18 +1987,18 @@ AtlasLoot_Data["HCRamparts"] = {
 			{ itemID = 24022, groupID = 1, refLootEntry = 17306 }; --Scale Leggings of the Skirmisher
 			{ itemID = 24020, groupID = 1, refLootEntry = 17306 }; --Shadowrend Longblade
 			gap,
-			{ itemID = 27448, [alDif.MIN_DIF] = alDif.Heroic }, --Cloak of the Everliving
-			{ itemID = 27451, [alDif.MIN_DIF] = alDif.Heroic }, --Boots of the Darkwalker
-			{ itemID = 27450, [alDif.MIN_DIF] = alDif.Heroic }, --Wild Stalker Boots
-			{ itemID = 27447, [alDif.MIN_DIF] = alDif.Heroic }, --Bracers of Just Rewards
-			{ itemID = 27449, [alDif.MIN_DIF] = alDif.Heroic }, --Blood Knight Defender
+			{ itemID = 27448, minDifficulty = "Heroic" }, --Cloak of the Everliving
+			{ itemID = 27451, minDifficulty = "Heroic" }, --Boots of the Darkwalker
+			{ itemID = 27450, minDifficulty = "Heroic" }, --Wild Stalker Boots
+			{ itemID = 27447, minDifficulty = "Heroic" }, --Bracers of Just Rewards
+			{ itemID = 27449, minDifficulty = "Heroic" }, --Blood Knight Defender
 		},
 		{
-			{ itemID = 29434, [alDif.MIN_DIF] = alDif.Heroic }, --Badge of Justice
+			{ itemID = 29434, minDifficulty = "Heroic" }, --Badge of Justice
 			gap,
-			{ itemID = 30593, [alDif.MIN_DIF] = alDif.Heroic }, --Iridescent Fire Opal
-			{ itemID = 30594, [alDif.MIN_DIF] = alDif.Heroic }, --Effulgent Chrysoprase
-			{ itemID = 30592, [alDif.MIN_DIF] = alDif.Heroic }, --Steady Chrysoprase
+			{ itemID = 30593, minDifficulty = "Heroic" }, --Iridescent Fire Opal
+			{ itemID = 30594, minDifficulty = "Heroic" }, --Effulgent Chrysoprase
+			{ itemID = 30592, minDifficulty = "Heroic" }, --Steady Chrysoprase
 			gap,
 			{ itemID = 60946, droprate = "1%" }, --Pet Sigil
 		},
@@ -2015,25 +2014,25 @@ AtlasLoot_Data["HCRamparts"] = {
 			{ itemID = 24096, groupID = 1, refLootEntry = 17308 }; --Heartblood Prayer Beads
 			{ itemID = 24091, groupID = 1, refLootEntry = 17308 }; --Tenacious Defenders
 			gap,
-			{ itemID = 27465, [alDif.MIN_DIF] = alDif.Heroic }, --Mana-Etched Gloves
-			{ itemID = 27466, [alDif.MIN_DIF] = alDif.Heroic }, --Headdress of Alacrity
-			{ itemID = 27462, [alDif.MIN_DIF] = alDif.Heroic }, --Crimson Bracers of Gloom
-			{ itemID = 27467, [alDif.MIN_DIF] = alDif.Heroic }, --Silent-Strider Kneeboots
-			{ itemID = 27478, [alDif.MIN_DIF] = alDif.Heroic }, --Girdle of the Blasted Reaches
-			{ itemID = 27539, [alDif.MIN_DIF] = alDif.Heroic }, --Justice Bearer's Pauldrons
-			{ itemID = 27906, [alDif.MIN_DIF] = alDif.Heroic }, --Crimsonforge Breastplate
-			{ itemID = 27464, [alDif.MIN_DIF] = alDif.Heroic }, --Omor's Unyielding Will
-			{ itemID = 27895, [alDif.MIN_DIF] = alDif.Heroic }, --Band of Many Prisms
-			{ itemID = 27477, [alDif.MIN_DIF] = alDif.Heroic }, --Faol's Signet of Cleansing
-			{ itemID = 27463, [alDif.MIN_DIF] = alDif.Heroic }, --Terror Flame Dagger
-			{ itemID = 27476, [alDif.MIN_DIF] = alDif.Heroic }, --Truncheon of Five Hells
+			{ itemID = 27465, minDifficulty = "Heroic" }, --Mana-Etched Gloves
+			{ itemID = 27466, minDifficulty = "Heroic" }, --Headdress of Alacrity
+			{ itemID = 27462, minDifficulty = "Heroic" }, --Crimson Bracers of Gloom
+			{ itemID = 27467, minDifficulty = "Heroic" }, --Silent-Strider Kneeboots
+			{ itemID = 27478, minDifficulty = "Heroic" }, --Girdle of the Blasted Reaches
+			{ itemID = 27539, minDifficulty = "Heroic" }, --Justice Bearer's Pauldrons
+			{ itemID = 27906, minDifficulty = "Heroic" }, --Crimsonforge Breastplate
+			{ itemID = 27464, minDifficulty = "Heroic" }, --Omor's Unyielding Will
+			{ itemID = 27895, minDifficulty = "Heroic" }, --Band of Many Prisms
+			{ itemID = 27477, minDifficulty = "Heroic" }, --Faol's Signet of Cleansing
+			{ itemID = 27463, minDifficulty = "Heroic" }, --Terror Flame Dagger
+			{ itemID = 27476, minDifficulty = "Heroic" }, --Truncheon of Five Hells
 		},
 		{
-			{ itemID = 29434, [alDif.MIN_DIF] = alDif.Heroic }, --Badge of Justice
+			{ itemID = 29434, minDifficulty = "Heroic" }, --Badge of Justice
 			gap,
-			{ itemID = 30593, [alDif.MIN_DIF] = alDif.Heroic }, --Iridescent Fire Opal
-			{ itemID = 30594, [alDif.MIN_DIF] = alDif.Heroic }, --Effulgent Chrysoprase
-			{ itemID = 30592, [alDif.MIN_DIF] = alDif.Heroic }, --Steady Chrysoprase
+			{ itemID = 30593, minDifficulty = "Heroic" }, --Iridescent Fire Opal
+			{ itemID = 30594, minDifficulty = "Heroic" }, --Effulgent Chrysoprase
+			{ itemID = 30592, minDifficulty = "Heroic" }, --Steady Chrysoprase
 			gap,
 			{ itemID = 60947, droprate = "1%" }, --Pet Sigil
 		},
@@ -2108,18 +2107,18 @@ AtlasLoot_Data["HCFurnace"] = {
 			{ itemID = 24387, groupID = 1, refLootEntry = 17381 }; --Ironblade Gauntlets
 			{ itemID = 24386, groupID = 1, refLootEntry = 17381 }; --Libram of Saints Departed
 			{ itemID = 24385, groupID = 1, refLootEntry = 17381 }; --Pendant of Battle-Lust
-			{ itemID = 27485, [alDif.MIN_DIF] = alDif.Heroic }, --Embroidered Cape of Mysteries
-			{ itemID = 27488, [alDif.MIN_DIF] = alDif.Heroic }, --Mage-Collar of the Firestorm
-			{ itemID = 27483, [alDif.MIN_DIF] = alDif.Heroic }, --Moon-Touched Bands
-			{ itemID = 27487, [alDif.MIN_DIF] = alDif.Heroic }, --Bloodlord Legplates
-			{ itemID = 27484, [alDif.MIN_DIF] = alDif.Heroic }, --Libram of Avengement
+			{ itemID = 27485, minDifficulty = "Heroic" }, --Embroidered Cape of Mysteries
+			{ itemID = 27488, minDifficulty = "Heroic" }, --Mage-Collar of the Firestorm
+			{ itemID = 27483, minDifficulty = "Heroic" }, --Moon-Touched Bands
+			{ itemID = 27487, minDifficulty = "Heroic" }, --Bloodlord Legplates
+			{ itemID = 27484, minDifficulty = "Heroic" }, --Libram of Avengement
 		},
 		{
-			{ itemID = 29434, [alDif.MIN_DIF] = alDif.Heroic }, --Badge of Justice
+			{ itemID = 29434, minDifficulty = "Heroic" }, --Badge of Justice
 			gap,
-			{ itemID = 30601, [alDif.MIN_DIF] = alDif.Heroic }, --Beaming Fire Opal
-			{ itemID = 30600, [alDif.MIN_DIF] = alDif.Heroic }, --Fluorescent Tanzanite
-			{ itemID = 30602, [alDif.MIN_DIF] = alDif.Heroic }, --Jagged Chrysoprase	
+			{ itemID = 30601, minDifficulty = "Heroic" }, --Beaming Fire Opal
+			{ itemID = 30600, minDifficulty = "Heroic" }, --Fluorescent Tanzanite
+			{ itemID = 30602, minDifficulty = "Heroic" }, --Jagged Chrysoprase	
 		},
 	},
 	{
@@ -2130,18 +2129,18 @@ AtlasLoot_Data["HCFurnace"] = {
 			{ itemID = 24393, groupID = 1, refLootEntry = 17380 }; --Bloody Surgeon's Mitts
 			{ itemID = 24391, groupID = 1, refLootEntry = 17380 }; --Kilt of the Night Strider
 			{ itemID = 24389, groupID = 1, refLootEntry = 17380 }; --Legion Blunderbuss
-			{ itemID = 27848, [alDif.MIN_DIF] = alDif.Heroic }, --Embroidered Spellpyre Boots
-			{ itemID = 27492, [alDif.MIN_DIF] = alDif.Heroic }, --Moonchild Leggings
-			{ itemID = 27489, [alDif.MIN_DIF] = alDif.Heroic }, --Virtue Bearer's Vambraces
-			{ itemID = 27491, [alDif.MIN_DIF] = alDif.Heroic }, --Signet of Repose
-			{ itemID = 27490, [alDif.MIN_DIF] = alDif.Heroic }, --Firebrand Battleaxe
+			{ itemID = 27848, minDifficulty = "Heroic" }, --Embroidered Spellpyre Boots
+			{ itemID = 27492, minDifficulty = "Heroic" }, --Moonchild Leggings
+			{ itemID = 27489, minDifficulty = "Heroic" }, --Virtue Bearer's Vambraces
+			{ itemID = 27491, minDifficulty = "Heroic" }, --Signet of Repose
+			{ itemID = 27490, minDifficulty = "Heroic" }, --Firebrand Battleaxe
 		},
 		{
-			{ itemID = 29434, [alDif.MIN_DIF] = alDif.Heroic }, --Badge of Justice
+			{ itemID = 29434, minDifficulty = "Heroic" }, --Badge of Justice
 			gap,
-			{ itemID = 30601, [alDif.MIN_DIF] = alDif.Heroic }, --Beaming Fire Opal
-			{ itemID = 30600, [alDif.MIN_DIF] = alDif.Heroic }, --Fluorescent Tanzanite
-			{ itemID = 30602, [alDif.MIN_DIF] = alDif.Heroic }, --Jagged Chrysoprase
+			{ itemID = 30601, minDifficulty = "Heroic" }, --Beaming Fire Opal
+			{ itemID = 30600, minDifficulty = "Heroic" }, --Fluorescent Tanzanite
+			{ itemID = 30602, minDifficulty = "Heroic" }, --Jagged Chrysoprase
 		},
 	},
 	{
@@ -2152,16 +2151,16 @@ AtlasLoot_Data["HCFurnace"] = {
 			{ itemID = 24397, groupID = 1, refLootEntry = 17377 }; --Raiments of Divine Authority
 			{ itemID = 24396, groupID = 1, refLootEntry = 17377 }; --Vest of Vengeance
 			{ itemID = 24394, groupID = 1, refLootEntry = 17377 }; --Warsong Howling Axe
-			{ itemID = 28264, [alDif.MIN_DIF] = alDif.Heroic }, --Wastewalker Tunic
-			{ itemID = 27497, [alDif.MIN_DIF] = alDif.Heroic }, --Doomplate Gauntlets
-			{ itemID = 27506, [alDif.MIN_DIF] = alDif.Heroic }, --Robe of Effervescent Light
-			{ itemID = 27514, [alDif.MIN_DIF] = alDif.Heroic }, --Leggings of the Unrepentant
-			{ itemID = 27522, [alDif.MIN_DIF] = alDif.Heroic }, --World's End Bracers
-			{ itemID = 27494, [alDif.MIN_DIF] = alDif.Heroic }, --Emerald Eye Bracer
-			{ itemID = 27505, [alDif.MIN_DIF] = alDif.Heroic }, --Ruby Helm of the Just
-			{ itemID = 27788, [alDif.MIN_DIF] = alDif.Heroic }, --Bloodsworn Warboots
-			{ itemID = 27495, [alDif.MIN_DIF] = alDif.Heroic }, --Soldier's Dog Tags
-			{ itemID = 28121, [alDif.MIN_DIF] = alDif.Heroic }, --Icon of Unyielding Courage
+			{ itemID = 28264, minDifficulty = "Heroic" }, --Wastewalker Tunic
+			{ itemID = 27497, minDifficulty = "Heroic" }, --Doomplate Gauntlets
+			{ itemID = 27506, minDifficulty = "Heroic" }, --Robe of Effervescent Light
+			{ itemID = 27514, minDifficulty = "Heroic" }, --Leggings of the Unrepentant
+			{ itemID = 27522, minDifficulty = "Heroic" }, --World's End Bracers
+			{ itemID = 27494, minDifficulty = "Heroic" }, --Emerald Eye Bracer
+			{ itemID = 27505, minDifficulty = "Heroic" }, --Ruby Helm of the Just
+			{ itemID = 27788, minDifficulty = "Heroic" }, --Bloodsworn Warboots
+			{ itemID = 27495, minDifficulty = "Heroic" }, --Soldier's Dog Tags
+			{ itemID = 28121, minDifficulty = "Heroic" }, --Icon of Unyielding Courage
 			gap,
 			{ itemID = 2066390, groupID = 1, refLootEntry = 2061613 }; --Belt of Infernal Dominance
 			{ itemID = 2070603, groupID = 1, refLootEntry = 2061613 }; --Boots of Chaotic Energy
@@ -2173,20 +2172,20 @@ AtlasLoot_Data["HCFurnace"] = {
 			{ itemID = 2063253, groupID = 1, refLootEntry = 2061613 }; --Vestments of Shadow Power
 		},
 		{
-			{ itemID = 27512, [alDif.MIN_DIF] = alDif.Heroic }, --The Willbreaker
-			{ itemID = 27507, [alDif.MIN_DIF] = alDif.Heroic }, --Adamantine Repeater
-			{ itemID = 32080, [alDif.MIN_DIF] = alDif.Heroic }, --Mantle of Shadowy Embrace
-			{ itemID = 29245, [alDif.MIN_DIF] = alDif.Heroic }, --Wave-Crest Striders
-			{ itemID = 29239, [alDif.MIN_DIF] = alDif.Heroic }, --Eaglecrest Warboots
-			{ itemID = 29347, [alDif.MIN_DIF] = alDif.Heroic }, --Talisman of the Breaker
+			{ itemID = 27512, minDifficulty = "Heroic" }, --The Willbreaker
+			{ itemID = 27507, minDifficulty = "Heroic" }, --Adamantine Repeater
+			{ itemID = 32080, minDifficulty = "Heroic" }, --Mantle of Shadowy Embrace
+			{ itemID = 29245, minDifficulty = "Heroic" }, --Wave-Crest Striders
+			{ itemID = 29239, minDifficulty = "Heroic" }, --Eaglecrest Warboots
+			{ itemID = 29347, minDifficulty = "Heroic" }, --Talisman of the Breaker
 			gap,
-			{ itemID = 33814, [alDif.MIN_DIF] = alDif.Heroic }, --Keli'dan's Feathered Stave
+			{ itemID = 33814, minDifficulty = "Heroic" }, --Keli'dan's Feathered Stave
 			gap,
-			{ itemID = 29434, [alDif.MIN_DIF] = alDif.Heroic }, --Badge of Justice
+			{ itemID = 29434, minDifficulty = "Heroic" }, --Badge of Justice
 			gap,
-			{ itemID = 30601, [alDif.MIN_DIF] = alDif.Heroic }, --Beaming Fire Opal
-			{ itemID = 30600, [alDif.MIN_DIF] = alDif.Heroic }, --Fluorescent Tanzanite
-			{ itemID = 30602, [alDif.MIN_DIF] = alDif.Heroic }, --Jagged Chrysoprase
+			{ itemID = 30601, minDifficulty = "Heroic" }, --Beaming Fire Opal
+			{ itemID = 30600, minDifficulty = "Heroic" }, --Fluorescent Tanzanite
+			{ itemID = 30602, minDifficulty = "Heroic" }, --Jagged Chrysoprase
 		},
 
 	}
@@ -2224,14 +2223,14 @@ AtlasLoot_Data["HCShatteredHalls"] = {
 			{ itemID = 2061597, groupID = 1, refLootEntry = 2060554 }; --Shoulderguards of Twisted Legacies
 		},
 		{
-			{ itemID = 25462, [alDif.MIN_DIF] = alDif.Heroic }, --Tome of Dusk
+			{ itemID = 25462, minDifficulty = "Heroic" }, --Tome of Dusk
 
 			gap,
-			{ itemID = 29434, [alDif.MIN_DIF] = alDif.Heroic }, --Badge of Justice
+			{ itemID = 29434, minDifficulty = "Heroic" }, --Badge of Justice
 			gap,
-			{ itemID = 30548, [alDif.MIN_DIF] = alDif.Heroic }, --Polished Chrysoprase
-			{ itemID = 30547, [alDif.MIN_DIF] = alDif.Heroic }, --Luminous Fire Opal
-			{ itemID = 30546, [alDif.MIN_DIF] = alDif.Heroic }, --Sovereign Tanzanite
+			{ itemID = 30548, minDifficulty = "Heroic" }, --Polished Chrysoprase
+			{ itemID = 30547, minDifficulty = "Heroic" }, --Luminous Fire Opal
+			{ itemID = 30546, minDifficulty = "Heroic" }, --Sovereign Tanzanite
 		},
 	},
 	{
@@ -2277,11 +2276,11 @@ AtlasLoot_Data["HCShatteredHalls"] = {
 			{ itemID = 2076150, groupID = 1, refLootEntry = 2076150 }; --Fiery Maul of O'mrogg
 		},
 		{
-			{ itemID = 29434, [alDif.MIN_DIF] = alDif.Heroic }, --Badge of Justice
+			{ itemID = 29434, minDifficulty = "Heroic" }, --Badge of Justice
 			gap,
-			{ itemID = 30548, [alDif.MIN_DIF] = alDif.Heroic }, --Polished Chrysoprase
-			{ itemID = 30547, [alDif.MIN_DIF] = alDif.Heroic }, --Luminous Fire Opal
-			{ itemID = 30546, [alDif.MIN_DIF] = alDif.Heroic }, --Sovereign Tanzanite
+			{ itemID = 30548, minDifficulty = "Heroic" }, --Polished Chrysoprase
+			{ itemID = 30547, minDifficulty = "Heroic" }, --Luminous Fire Opal
+			{ itemID = 30546, minDifficulty = "Heroic" }, --Sovereign Tanzanite
 		},
 	},
 	{
@@ -2304,20 +2303,20 @@ AtlasLoot_Data["HCShatteredHalls"] = {
 
 		},
 		{
-			{ itemID = 29255, [alDif.MIN_DIF] = alDif.Heroic }, --Bands of Rarefied Magic
-			{ itemID = 29263, [alDif.MIN_DIF] = alDif.Heroic }, --Forestheart Bracers
-			{ itemID = 29254, [alDif.MIN_DIF] = alDif.Heroic }, --Boots of the Righteous Path
+			{ itemID = 29255, minDifficulty = "Heroic" }, --Bands of Rarefied Magic
+			{ itemID = 29263, minDifficulty = "Heroic" }, --Forestheart Bracers
+			{ itemID = 29254, minDifficulty = "Heroic" }, --Boots of the Righteous Path
 			gap,
 			{ itemID = 23723 }, --Warchief Kargath's Fist
-			{ itemID = 29348, [alDif.MIN_DIF] = alDif.Heroic }, --The Bladefist
+			{ itemID = 29348, minDifficulty = "Heroic" }, --The Bladefist
 			gap,
-			{ itemID = 33815, [alDif.MIN_DIF] = alDif.Heroic }, --Bladefist's Seal
+			{ itemID = 33815, minDifficulty = "Heroic" }, --Bladefist's Seal
 			gap,
-			{ itemID = 29434, [alDif.MIN_DIF] = alDif.Heroic }, --Badge of Justice
+			{ itemID = 29434, minDifficulty = "Heroic" }, --Badge of Justice
 			gap,
-			{ itemID = 30548, [alDif.MIN_DIF] = alDif.Heroic }, --Polished Chrysoprase
-			{ itemID = 30547, [alDif.MIN_DIF] = alDif.Heroic }, --Luminous Fire Opal
-			{ itemID = 30546, [alDif.MIN_DIF] = alDif.Heroic }, --Sovereign Tanzanite
+			{ itemID = 30548, minDifficulty = "Heroic" }, --Polished Chrysoprase
+			{ itemID = 30547, minDifficulty = "Heroic" }, --Luminous Fire Opal
+			{ itemID = 30546, minDifficulty = "Heroic" }, --Sovereign Tanzanite
 		},
 	},
 	{
@@ -2372,8 +2371,8 @@ AtlasLoot_Data["HCMagtheridon"] = {
 			gap,
 			{ itemID = 60945, droprate = "1%" }, --Pet Sigil
 			gap,
-			{ itemID = 428775, [alDif.MIN_DIF] = alDif.Ascended }, --Bor -o G'urth, the Hand of Death
-			{ itemID = 428776, [alDif.MIN_DIF] = alDif.Ascended }, --Lebed -o G'urth, the Finger of Death
+			{ itemID = 428775, minDifficulty = "Ascended" }, --Bor -o G'urth, the Hand of Death
+			{ itemID = 428776, minDifficulty = "Ascended" }, --Lebed -o G'urth, the Finger of Death
 		},
 	}
 }
@@ -2657,7 +2656,7 @@ AtlasLoot_Data["Karazhan"] = {
 			gap,
 			{ itemID = 29434 }, --Badge of Justice
 			gap,
-			{ itemID = 400751, [alDif.MAX_DIF] = alDif.Normal }, --Raider's Commendations
+			{ itemID = 400751, maxDifficulty = "Normal" }, --Raider's Commendations
 		},
 	},
 	{
@@ -2711,7 +2710,7 @@ AtlasLoot_Data["Karazhan"] = {
 			gap,
 			{ itemID = 60169, droprate = "1%" }, --Pet Sigil
 			gap,
-			{ itemID = 499438, [alDif.MIN_DIF] = alDif.Heroic }, --Smoldering Emberwyrm
+			{ itemID = 499438, minDifficulty = "Heroic" }, --Smoldering Emberwyrm
 		},
 	},
 	{
@@ -2771,7 +2770,7 @@ AtlasLoot_Data["MagistersTerrace"] = {
 			{ itemID = 34604, groupID = 1, refLootEntry = 24723 }; --Jaded Crystal Dagger
 			{ itemID = 34601, groupID = 1, refLootEntry = 24723 }; --Shoulderplates of Everlasting Pain
 			gap,
-			{ itemID = 29434, [alDif.MIN_DIF] = alDif.Heroic }, --Badge of Justice
+			{ itemID = 29434, minDifficulty = "Heroic" }, --Badge of Justice
 		},
 	},
 	{
@@ -2786,7 +2785,7 @@ AtlasLoot_Data["MagistersTerrace"] = {
 			{ itemID = 34608, groupID = 1, refLootEntry = 24744 }; --Rod of the Blazing Lightning
 		},
 		{
-			{ itemID = 29434, [alDif.MIN_DIF] = alDif.Heroic }, --Badge of Justice
+			{ itemID = 29434, minDifficulty = "Heroic" }, --Badge of Justice
 		},
 	},
 	{
@@ -2798,15 +2797,15 @@ AtlasLoot_Data["MagistersTerrace"] = {
 			{ itemID = 34700, groupID = 1, refLootEntry = 24560 }; --Gauntlets of Divine Blessings
 			{ itemID = 34791, groupID = 1, refLootEntry = 24560 }; --Gauntlets of the Tranquil Waves
 			gap,
-			{ itemID = 34473, [alDif.MIN_DIF] = alDif.Heroic }, --Commendation of Kael'thas
-			{ itemID = 34472, [alDif.MIN_DIF] = alDif.Heroic }, --Shard of Contempt
-			{ itemID = 34470, [alDif.MIN_DIF] = alDif.Heroic }, --Timbal's Focusing Crystal
-			{ itemID = 34471, [alDif.MIN_DIF] = alDif.Heroic }, --Vial of the Sunwell
+			{ itemID = 34473, minDifficulty = "Heroic" }, --Commendation of Kael'thas
+			{ itemID = 34472, minDifficulty = "Heroic" }, --Shard of Contempt
+			{ itemID = 34470, minDifficulty = "Heroic" }, --Timbal's Focusing Crystal
+			{ itemID = 34471, minDifficulty = "Heroic" }, --Vial of the Sunwell
 		},
 		{
 			{ itemID = 35756, droprate = { nil, "2%", "5%", "7%", "10%" } }, --Formula: Enchant Cloak - Steelweave
 			gap,
-			{ itemID = 29434, [alDif.MIN_DIF] = alDif.Heroic }, --Badge of Justice
+			{ itemID = 29434, minDifficulty = "Heroic" }, --Badge of Justice
 
 		},
 	},
@@ -2832,9 +2831,9 @@ AtlasLoot_Data["MagistersTerrace"] = {
 			{ itemID = 35504 }, --Phoenix Hatchling
 		},
 		{
-			{ itemID = 29434, [alDif.MIN_DIF] = alDif.Heroic }, --Badge of Justice
+			{ itemID = 29434, minDifficulty = "Heroic" }, --Badge of Justice
 			gap,
-			{ itemID = 35513, [alDif.MIN_DIF] = alDif.Heroic  }, --Swift White Hawkstrider
+			{ itemID = 35513, minDifficulty = "Heroic"  }, --Swift White Hawkstrider
 		},
 	},
 	{
@@ -3071,7 +3070,7 @@ AtlasLoot_Data["SunwellPlateau"] = {
 			gap,
 			{ itemID = 34664 }, --Sunmote
 			{ itemID = 29434 }, --Badge of Justice
-			{ itemID = 400751, [alDif.MAX_DIF] = alDif.Normal }, --Raider's Commendations
+			{ itemID = 400751, maxDifficulty = "Normal" }, --Raider's Commendations
 			{ itemID = 98570 }, --Mystic Orb
 			gap,
 			{ itemID = 63978, groupID = 15 }, --Sigil
@@ -3095,7 +3094,7 @@ AtlasLoot_Data["SunwellPlateau"] = {
 			gap,
 			{ itemID = 34664 }, --Sunmote
 			{ itemID = 29434 }, --Badge of Justice
-			{ itemID = 400751, [alDif.MAX_DIF] = alDif.Normal }, --Raider's Commendations
+			{ itemID = 400751, maxDifficulty = "Normal" }, --Raider's Commendations
 			{ itemID = 98570 }, --Mystic Orb
 			gap,
 			{ itemID = 612859, groupID = 16 }, --Summoning Stone - Brutallus
@@ -3122,7 +3121,7 @@ AtlasLoot_Data["SunwellPlateau"] = {
 			gap,
 			{ itemID = 34664 }, --Sunmote
 			{ itemID = 29434 }, --Badge of Justice
-			{ itemID = 400751, [alDif.MAX_DIF] = alDif.Normal }, --Raider's Commendations
+			{ itemID = 400751, maxDifficulty = "Normal" }, --Raider's Commendations
 			{ itemID = 98570 }, --Mystic Orb
 			{ itemID = 63980, groupID = 15 }, --Sigil
 		},
@@ -3155,7 +3154,7 @@ AtlasLoot_Data["SunwellPlateau"] = {
 			gap,
 			{ itemID = 34664 }, --Sunmote
 			{ itemID = 29434 }, --Badge of Justice
-			{ itemID = 400751, [alDif.MAX_DIF] = alDif.Normal }, --Raider's Commendations
+			{ itemID = 400751, maxDifficulty = "Normal" }, --Raider's Commendations
 			{ itemID = 98570 }, --Mystic Orb
 			{ itemID = 612860 ,groupID = 16, refLootEntry = 25166  }, --Summoning Stone - Sacro\'lythess
 			{ itemID = 63984, groupID = 15, refLootEntry = 25166  }, --Sigil
@@ -3180,7 +3179,7 @@ AtlasLoot_Data["SunwellPlateau"] = {
 			gap,
 			{ itemID = 34664 }, --Sunmote
 			{ itemID = 29434 }, --Badge of Justice
-			{ itemID = 400751, [alDif.MAX_DIF] = alDif.Normal }, --Raider's Commendations
+			{ itemID = 400751, maxDifficulty = "Normal" }, --Raider's Commendations
 			{ itemID = 98570 }, --Mystic Orb
 		},
 	},
@@ -3213,7 +3212,7 @@ AtlasLoot_Data["SunwellPlateau"] = {
 			gap,
 			{ itemID = 34664 }, --Sunmote
 			{ itemID = 29434 }, --Badge of Justice
-			{ itemID = 400751, [alDif.MAX_DIF] = alDif.Normal }, --Raider's Commendations
+			{ itemID = 400751, maxDifficulty = "Normal" }, --Raider's Commendations
 			{ itemID = 98570 }, --Mystic Orb
 			gap,
 			{ itemID = 64004, groupID = 15 }, --Sigil
@@ -3249,7 +3248,7 @@ AtlasLoot_Data["SunwellPlateau"] = {
 			gap,
 			{ itemID = 34664 }, --Sunmote
 			{ itemID = 29434 }, --Badge of Justice
-			{ itemID = 400751, [alDif.MAX_DIF] = alDif.Normal }, --Raider's Commendations
+			{ itemID = 400751, maxDifficulty = "Normal" }, --Raider's Commendations
 			{ itemID = 98570 }, --Mystic Orb
 			{ itemID = 450010, groupID = 1, refLootEntry = 25315,desc = AL["Quest Requirements"], contentsPreview = {{450009},{450010},{34334}} }, --Thori'dal, the Stars' Fury
 			{ itemID = 63988, groupID = 15, refLootEntry = 25315 }, --Sigil
@@ -3343,11 +3342,11 @@ AtlasLoot_Data["TKArc"] = {
 			{ itemID = 28375, groupID = 1, refLootEntry = 40080 }; --Rubium War-Girdle
 		},
 		{
-			{ itemID = 29434, [alDif.MIN_DIF] = alDif.Heroic }, --Badge of Justice
+			{ itemID = 29434, minDifficulty = "Heroic" }, --Badge of Justice
 			gap,
-			{ itemID = 30582, [alDif.MIN_DIF] = alDif.Heroic }, --Deadly Fire Opal
-			{ itemID = 30575, [alDif.MIN_DIF] = alDif.Heroic }, --Nimble Fire Opal
-			{ itemID = 30581, [alDif.MIN_DIF] = alDif.Heroic }, --Durable Fire Opal
+			{ itemID = 30582, minDifficulty = "Heroic" }, --Deadly Fire Opal
+			{ itemID = 30575, minDifficulty = "Heroic" }, --Nimble Fire Opal
+			{ itemID = 30581, minDifficulty = "Heroic" }, --Durable Fire Opal
 		},
 	},
 	{
@@ -3362,11 +3361,11 @@ AtlasLoot_Data["TKArc"] = {
 			{ itemID = 2076655, groupID = 1, refLootEntry = 2076655 }; --Axe of Felfire Reckoning
 		},
 		{
-			{ itemID = 29434, [alDif.MIN_DIF] = alDif.Heroic }, --Badge of Justice
+			{ itemID = 29434, minDifficulty = "Heroic" }, --Badge of Justice
 			gap,
-			{ itemID = 30582, [alDif.MIN_DIF] = alDif.Heroic }, --Deadly Fire Opal
-			{ itemID = 30575, [alDif.MIN_DIF] = alDif.Heroic }, --Nimble Fire Opal
-			{ itemID = 30581, [alDif.MIN_DIF] = alDif.Heroic }, --Durable Fire Opal
+			{ itemID = 30582, minDifficulty = "Heroic" }, --Deadly Fire Opal
+			{ itemID = 30575, minDifficulty = "Heroic" }, --Nimble Fire Opal
+			{ itemID = 30581, minDifficulty = "Heroic" }, --Durable Fire Opal
 		},
 	},
 	{
@@ -3383,10 +3382,10 @@ AtlasLoot_Data["TKArc"] = {
 			{ itemID = 24308 }, --Pattern: Whitemend Pants" 
 		},
 		{
-			{ itemID = 29434, [alDif.MIN_DIF] = alDif.Heroic }, --Badge of Justice
-			{ itemID = 30582, [alDif.MIN_DIF] = alDif.Heroic }, --Deadly Fire Opal
-			{ itemID = 30575, [alDif.MIN_DIF] = alDif.Heroic }, --Nimble Fire Opal
-			{ itemID = 30581, [alDif.MIN_DIF] = alDif.Heroic }, --Durable Fire Opal
+			{ itemID = 29434, minDifficulty = "Heroic" }, --Badge of Justice
+			{ itemID = 30582, minDifficulty = "Heroic" }, --Deadly Fire Opal
+			{ itemID = 30575, minDifficulty = "Heroic" }, --Nimble Fire Opal
+			{ itemID = 30581, minDifficulty = "Heroic" }, --Durable Fire Opal
 		},
 	},
 	{
@@ -3408,17 +3407,17 @@ AtlasLoot_Data["TKArc"] = {
 			{ itemID = 28231, groupID = 2, refLootEntry = 25004 }; --Tidefury Chestpiece
 		},
 		{
-			{ itemID = 29241, [alDif.MIN_DIF] = alDif.Heroic }, --Belt of Depravity
-			{ itemID = 29248, [alDif.MIN_DIF] = alDif.Heroic }, --Shadowstep Striders
-			{ itemID = 29252, [alDif.MIN_DIF] = alDif.Heroic }, --Bracers of Dignity
-			{ itemID = 29360, [alDif.MIN_DIF] = alDif.Heroic }, --Vileblade of the Betrayer
-			{ itemID = 33861, [alDif.MIN_DIF] = alDif.Heroic }, --The Scroll of Skyriss
+			{ itemID = 29241, minDifficulty = "Heroic" }, --Belt of Depravity
+			{ itemID = 29248, minDifficulty = "Heroic" }, --Shadowstep Striders
+			{ itemID = 29252, minDifficulty = "Heroic" }, --Bracers of Dignity
+			{ itemID = 29360, minDifficulty = "Heroic" }, --Vileblade of the Betrayer
+			{ itemID = 33861, minDifficulty = "Heroic" }, --The Scroll of Skyriss
 			gap,
-			{ itemID = 29434, [alDif.MIN_DIF] = alDif.Heroic }, --Badge of Justice
+			{ itemID = 29434, minDifficulty = "Heroic" }, --Badge of Justice
 			gap,
-			{ itemID = 30582, [alDif.MIN_DIF] = alDif.Heroic }, --Deadly Fire Opal
-			{ itemID = 30575, [alDif.MIN_DIF] = alDif.Heroic }, --Nimble Fire Opal
-			{ itemID = 30581, [alDif.MIN_DIF] = alDif.Heroic }, --Durable Fire Opal
+			{ itemID = 30582, minDifficulty = "Heroic" }, --Deadly Fire Opal
+			{ itemID = 30575, minDifficulty = "Heroic" }, --Nimble Fire Opal
+			{ itemID = 30581, minDifficulty = "Heroic" }, --Durable Fire Opal
 			gap,
 			{ itemID = 63295 } --Sigil of Harbinger Skyriss
 
@@ -3472,11 +3471,11 @@ AtlasLoot_Data["TKBot"] = {
 			{ itemID = 2076308, groupID = 1, refLootEntry = 2061739 }; --Sword of Sarannis' Resolve
 		},
 		{
-			{ itemID = 29434, [alDif.MIN_DIF] = alDif.Heroic }, --Badge of Justice
+			{ itemID = 29434, minDifficulty = "Heroic" }, --Badge of Justice
 			gap,
-			{ itemID = 30574, [alDif.MIN_DIF] = alDif.Heroic }, --Brutal Tanzanite
-			{ itemID = 30572, [alDif.MIN_DIF] = alDif.Heroic }, --Imperial Tanzanite
-			{ itemID = 30573, [alDif.MIN_DIF] = alDif.Heroic }, --Mysterious Fire Opal
+			{ itemID = 30574, minDifficulty = "Heroic" }, --Brutal Tanzanite
+			{ itemID = 30572, minDifficulty = "Heroic" }, --Imperial Tanzanite
+			{ itemID = 30573, minDifficulty = "Heroic" }, --Mysterious Fire Opal
 			gap,
 			{ itemID = 28769 }, --The Keystone
 		},
@@ -3504,11 +3503,11 @@ AtlasLoot_Data["TKBot"] = {
 			gap,
 			{ itemID = 31744 }, --Botanist's Field Guide
 			gap,
-			{ itemID = 29434, [alDif.MIN_DIF] = alDif.Heroic }, --Badge of Justice
+			{ itemID = 29434, minDifficulty = "Heroic" }, --Badge of Justice
 			gap,
-			{ itemID = 30574, [alDif.MIN_DIF] = alDif.Heroic }, --Brutal Tanzanite
-			{ itemID = 30572, [alDif.MIN_DIF] = alDif.Heroic }, --Imperial Tanzanite
-			{ itemID = 30573, [alDif.MIN_DIF] = alDif.Heroic }, --Mysterious Fire Opal
+			{ itemID = 30574, minDifficulty = "Heroic" }, --Brutal Tanzanite
+			{ itemID = 30572, minDifficulty = "Heroic" }, --Imperial Tanzanite
+			{ itemID = 30573, minDifficulty = "Heroic" }, --Mysterious Fire Opal
 		},
 	},
 	{
@@ -3524,11 +3523,11 @@ AtlasLoot_Data["TKBot"] = {
 			{ itemID = 24310 }, --Pattern: Battlecast Pants
 		},
 		{
-			{ itemID = 29434, [alDif.MIN_DIF] = alDif.Heroic }, --Badge of Justice
+			{ itemID = 29434, minDifficulty = "Heroic" }, --Badge of Justice
 			gap,
-			{ itemID = 30574, [alDif.MIN_DIF] = alDif.Heroic }, --Brutal Tanzanite
-			{ itemID = 30572, [alDif.MIN_DIF] = alDif.Heroic }, --Imperial Tanzanite
-			{ itemID = 30573, [alDif.MIN_DIF] = alDif.Heroic }, --Mysterious Fire Opal
+			{ itemID = 30574, minDifficulty = "Heroic" }, --Brutal Tanzanite
+			{ itemID = 30572, minDifficulty = "Heroic" }, --Imperial Tanzanite
+			{ itemID = 30573, minDifficulty = "Heroic" }, --Mysterious Fire Opal
 		},
 	},
 	{
@@ -3544,11 +3543,11 @@ AtlasLoot_Data["TKBot"] = {
 			{ itemID = 27739, groupID = 1, refLootEntry = 40073 }; --Spaulders of the Righteous
 		},
 		{
-			{ itemID = 29434, [alDif.MIN_DIF] = alDif.Heroic }, --Badge of Justice
+			{ itemID = 29434, minDifficulty = "Heroic" }, --Badge of Justice
 			gap,
-			{ itemID = 30574, [alDif.MIN_DIF] = alDif.Heroic }, --Brutal Tanzanite
-			{ itemID = 30572, [alDif.MIN_DIF] = alDif.Heroic }, --Imperial Tanzanite
-			{ itemID = 30573, [alDif.MIN_DIF] = alDif.Heroic }, --Mysterious Fire Opal
+			{ itemID = 30574, minDifficulty = "Heroic" }, --Brutal Tanzanite
+			{ itemID = 30572, minDifficulty = "Heroic" }, --Imperial Tanzanite
+			{ itemID = 30573, minDifficulty = "Heroic" }, --Mysterious Fire Opal
 		},
 	},
 	{
@@ -3574,20 +3573,20 @@ AtlasLoot_Data["TKBot"] = {
 		{
 			{ itemID = 244915, groupID = 1, refLootEntry = 40077 }; --Warhelm of the Sentinel
 			gap,
-			{ itemID = 29258, [alDif.MIN_DIF] = alDif.Heroic }, --Boots of Ethereal Manipulation
-			{ itemID = 29262, [alDif.MIN_DIF] = alDif.Heroic }, --Boots of the Endless Hunt
-			{ itemID = 32072, [alDif.MIN_DIF] = alDif.Heroic }, --Gauntlets of Dissension
-			{ itemID = 29359, [alDif.MIN_DIF] = alDif.Heroic }, --Feral Staff of Lashing
-			{ itemID = 29434, [alDif.MIN_DIF] = alDif.Heroic }, --Badge of Justice
+			{ itemID = 29258, minDifficulty = "Heroic" }, --Boots of Ethereal Manipulation
+			{ itemID = 29262, minDifficulty = "Heroic" }, --Boots of the Endless Hunt
+			{ itemID = 32072, minDifficulty = "Heroic" }, --Gauntlets of Dissension
+			{ itemID = 29359, minDifficulty = "Heroic" }, --Feral Staff of Lashing
+			{ itemID = 29434, minDifficulty = "Heroic" }, --Badge of Justice
 			gap,
-			{ itemID = 30574, [alDif.MIN_DIF] = alDif.Heroic }, --Brutal Tanzanite
-			{ itemID = 30572, [alDif.MIN_DIF] = alDif.Heroic }, --Imperial Tanzanite
-			{ itemID = 30573, [alDif.MIN_DIF] = alDif.Heroic }, --Mysterious Fire Opal
+			{ itemID = 30574, minDifficulty = "Heroic" }, --Brutal Tanzanite
+			{ itemID = 30572, minDifficulty = "Heroic" }, --Imperial Tanzanite
+			{ itemID = 30573, minDifficulty = "Heroic" }, --Mysterious Fire Opal
 			gap,
 			{ itemID = 24311 }, --Pattern: Whitemend Hood
 			gap,
 			{ itemID = 31085 }, --Top Shard of the Arcatraz Key
-			{ itemID = 33859, [alDif.MIN_DIF] = alDif.Heroic }, --Warp Splinter Clipping
+			{ itemID = 33859, minDifficulty = "Heroic" }, --Warp Splinter Clipping
 		},
 	}
 }
@@ -3636,11 +3635,11 @@ AtlasLoot_Data["TKMech"] = {
 			{ itemID = 35582 }, --Schematic: Rocket Boots Xtreme Lite
 		},
 		{
-			{ itemID = 29434, [alDif.MIN_DIF] = alDif.Heroic }, --Badge of Justice
+			{ itemID = 29434, minDifficulty = "Heroic" }, --Badge of Justice
 			gap,
-			{ itemID = 30565, [alDif.MIN_DIF] = alDif.Heroic }, --Assassin's Fire Opal
-			{ itemID = 30566, [alDif.MIN_DIF] = alDif.Heroic }, --Defender's Tanzanite
-			{ itemID = 30564, [alDif.MIN_DIF] = alDif.Heroic }, --Shining Fire Opal
+			{ itemID = 30565, minDifficulty = "Heroic" }, --Assassin's Fire Opal
+			{ itemID = 30566, minDifficulty = "Heroic" }, --Defender's Tanzanite
+			{ itemID = 30564, minDifficulty = "Heroic" }, --Shining Fire Opal
 		},
 	},
 	{
@@ -3664,11 +3663,11 @@ AtlasLoot_Data["TKMech"] = {
 		{
 			{ itemID = 22920 }, --Recipe: Major Fire Protection Potion
 			gap,
-			{ itemID = 29434, [alDif.MIN_DIF] = alDif.Heroic }, --Badge of Justice
+			{ itemID = 29434, minDifficulty = "Heroic" }, --Badge of Justice
 			gap,
-			{ itemID = 30565, [alDif.MIN_DIF] = alDif.Heroic }, --Assassin's Fire Opal
-			{ itemID = 30566, [alDif.MIN_DIF] = alDif.Heroic }, --Defender's Tanzanite
-			{ itemID = 30564, [alDif.MIN_DIF] = alDif.Heroic }, --Shining Fire Opal
+			{ itemID = 30565, minDifficulty = "Heroic" }, --Assassin's Fire Opal
+			{ itemID = 30566, minDifficulty = "Heroic" }, --Defender's Tanzanite
+			{ itemID = 30564, minDifficulty = "Heroic" }, --Shining Fire Opal
 		},
 	},
 	{
@@ -3702,21 +3701,21 @@ AtlasLoot_Data["TKMech"] = {
 			{ itemID = 2063343, groupID = 1, refLootEntry = 2061806 }; --Robe of Strategic Enigma
 		},
 		{
-			{ itemID = 29251, [alDif.MIN_DIF] = alDif.Heroic }, --Boots of the Pious
-			{ itemID = 32076, [alDif.MIN_DIF] = alDif.Heroic }, --Handguards of the Steady
-			{ itemID = 30533, [alDif.MIN_DIF] = alDif.Heroic }, --Vanquisher's Legplates
-			{ itemID = 29362, [alDif.MIN_DIF] = alDif.Heroic }, --The Sun Eater
+			{ itemID = 29251, minDifficulty = "Heroic" }, --Boots of the Pious
+			{ itemID = 32076, minDifficulty = "Heroic" }, --Handguards of the Steady
+			{ itemID = 30533, minDifficulty = "Heroic" }, --Vanquisher's Legplates
+			{ itemID = 29362, minDifficulty = "Heroic" }, --The Sun Eater
 			gap,
-			{ itemID = 33860, [alDif.MIN_DIF] = alDif.Heroic }, --Pathaleon's Projector
-			{ itemID = 31086, [alDif.MIN_DIF] = alDif.Heroic }, --Bottom Shard of the Arcatraz Key
+			{ itemID = 33860, minDifficulty = "Heroic" }, --Pathaleon's Projector
+			{ itemID = 31086, minDifficulty = "Heroic" }, --Bottom Shard of the Arcatraz Key
 			gap,
 			{ itemID = 21907 }, --Pattern: Arcanoweave Robe
 			gap,
-			{ itemID = 29434, [alDif.MIN_DIF] = alDif.Heroic }, --Badge of Justice
+			{ itemID = 29434, minDifficulty = "Heroic" }, --Badge of Justice
 			gap,
-			{ itemID = 30565, [alDif.MIN_DIF] = alDif.Heroic }, --Assassin's Fire Opal
-			{ itemID = 30566, [alDif.MIN_DIF] = alDif.Heroic }, --Defender's Tanzanite
-			{ itemID = 30564, [alDif.MIN_DIF] = alDif.Heroic }, --Shining Fire Opal
+			{ itemID = 30565, minDifficulty = "Heroic" }, --Assassin's Fire Opal
+			{ itemID = 30566, minDifficulty = "Heroic" }, --Defender's Tanzanite
+			{ itemID = 30564, minDifficulty = "Heroic" }, --Shining Fire Opal
 		},
 	}
 }
@@ -3748,14 +3747,14 @@ AtlasLoot_Data["TKEye"] = {
 			{ itemID = 30448, groupID = 2, refLootEntry = 19514 }; --Talon of Al'ar
 		},
 		{
-			{ itemID = 600867, [alDif.MIN_DIF] = alDif.Heroic }, --Elemental Lodestone: Al'ar
+			{ itemID = 600867, minDifficulty = "Heroic" }, --Elemental Lodestone: Al'ar
 			{ itemID = 29949, groupID = 2, refLootEntry = 19514 }; --Arcanite Steam-Pistol
 			{ itemID = 29948, groupID = 2, refLootEntry = 19514 }; --Claw of the Phoenix
 			{ itemID = 29924, groupID = 2, refLootEntry = 19514 }; --Netherbane
 			{ itemID = 32944, groupID = 2, refLootEntry = 19514 }; --Talon of the Phoenix
 			gap,
 			{ itemID = 29434 }, --Badge of Justice
-			{ itemID = 400751, [alDif.MAX_DIF] = alDif.Normal }, --Raider's Commendations
+			{ itemID = 400751, maxDifficulty = "Normal" }, --Raider's Commendations
 			{ itemID = 98570 }, --Mystic Orb
 			gap,
 			{ itemID = 1816254 }, --Forumla: Enchant Cloak - Phoenix Fire
@@ -3780,7 +3779,7 @@ AtlasLoot_Data["TKEye"] = {
 			{ itemID = 30249, lootTable = {"T5SHOULDER","Token"} }, --Pauldrons of the Vanquished Defender
 			gap,
 			{ itemID = 29434 }, --Badge of Justice
-			{ itemID = 400751, [alDif.MAX_DIF] = alDif.Normal }, --Raider's Commendations
+			{ itemID = 400751, maxDifficulty = "Normal" }, --Raider's Commendations
 			{ itemID = 98570 }, --Mystic Orb
 		},
 	},
@@ -3806,7 +3805,7 @@ AtlasLoot_Data["TKEye"] = {
 		},
 		{
 			{ itemID = 29434 }, --Badge of Justice
-			{ itemID = 400751, [alDif.MAX_DIF] = alDif.Normal }, --Raider's Commendations
+			{ itemID = 400751, maxDifficulty = "Normal" }, --Raider's Commendations
 			{ itemID = 98570 }, --Mystic Orb
 			{ itemID = 62309, droprate = "1%" }, --Pet Sigil
 		},
@@ -3843,7 +3842,7 @@ AtlasLoot_Data["TKEye"] = {
 			{ itemID = 30237, lootTable = {"T5CHEST","Token"} }, --Chestguard of the Vanquished Defender
 			gap,
 			{ itemID = 29434 }, --Badge of Justice
-			{ itemID = 400751, [alDif.MAX_DIF] = alDif.Normal }, --Raider's Commendations
+			{ itemID = 400751, maxDifficulty = "Normal" }, --Raider's Commendations
 			{ itemID = 98570 }, --Mystic Orb
 			gap,
 			{ itemID = 62498, droprate = "1%" }, --Pet Sigil
@@ -3933,7 +3932,7 @@ AtlasLoot_Data["ZulAman"] = {
 			{ itemID = 222637, droprate = { "25%", "50%", "75%", "100%" } }, --Primal Amani Idol
 			gap,
 			{ itemID = 29434 }, --Badge of Justice
-			{ itemID = 400751, [alDif.MAX_DIF] = alDif.Normal }, --Raider's Commendations
+			{ itemID = 400751, maxDifficulty = "Normal" }, --Raider's Commendations
 			{ itemID = 98570 }, --Mystic Orb
 			gap,
 			{ itemID = 63944, droprate = "1%" }, --Pet Sigil
@@ -3961,7 +3960,7 @@ AtlasLoot_Data["ZulAman"] = {
 			{ itemID = 222637, droprate = { "25%", "50%", "75%", "100%" } }, --Primal Amani Idol
 			gap,
 			{ itemID = 29434 }, --Badge of Justice
-			{ itemID = 400751, [alDif.MAX_DIF] = alDif.Normal }, --Raider's Commendations
+			{ itemID = 400751, maxDifficulty = "Normal" }, --Raider's Commendations
 			{ itemID = 98570 }, --Mystic Orb
 			gap,
 			{ itemID = 63943, droprate = "1%" }, --Pet Sigil
@@ -3990,7 +3989,7 @@ AtlasLoot_Data["ZulAman"] = {
 			{ itemID = 222637, droprate = { "25%", "50%", "75%", "100%" } }, --Primal Amani Idol
 			gap,
 			{ itemID = 29434 }, --Badge of Justice
-			{ itemID = 400751, [alDif.MAX_DIF] = alDif.Normal }, --Raider's Commendations
+			{ itemID = 400751, maxDifficulty = "Normal" }, --Raider's Commendations
 			{ itemID = 98570 }, --Mystic Orb
 			gap,
 			{ itemID = 63946, droprate = "1%" }, --Pet Sigil
@@ -4019,7 +4018,7 @@ AtlasLoot_Data["ZulAman"] = {
 			{ itemID = 222637, droprate = { "25%", "50%", "75%", "100%" } }, --Primal Amani Idol
 			gap,
 			{ itemID = 29434 }, --Badge of Justice
-			{ itemID = 400751, [alDif.MAX_DIF] = alDif.Normal }, --Raider's Commendations
+			{ itemID = 400751, maxDifficulty = "Normal" }, --Raider's Commendations
 			{ itemID = 98570 }, --Mystic Orb
 			{ itemID = 63945, droprate = "1%" }, --Pet Sigil
 		},
@@ -4048,7 +4047,7 @@ AtlasLoot_Data["ZulAman"] = {
 			{ itemID = 222637, droprate = { "25%", "50%", "75%", "100%" } },  --Primal Amani Idol
 			gap,
 			{ itemID = 29434 }, --Badge of Justice
-			{ itemID = 400751, [alDif.MAX_DIF] = alDif.Normal }, --Raider's Commendations
+			{ itemID = 400751, maxDifficulty = "Normal" }, --Raider's Commendations
 			{ itemID = 98570 }, --Mystic Orb
 			gap,
 			{ itemID = 63962, droprate = "1%" }, --Pet Sigil
@@ -4083,7 +4082,7 @@ AtlasLoot_Data["ZulAman"] = {
 			{ itemID = 34071, groupID = 3, refLootEntry = 23863 }; --Seething Hate
 			gap,
 			{ itemID = 29434 }, --Badge of Justice
-			{ itemID = 400751, [alDif.MAX_DIF] = alDif.Normal }, --Raider's Commendations
+			{ itemID = 400751, maxDifficulty = "Normal" }, --Raider's Commendations
 			{ itemID = 98570 }, --Mystic Orb
 
 			gap,

@@ -537,7 +537,7 @@ local rows = setmetatable({}, { __index = function(t, i)
         else
             self.ItemindexID = row.itemIndex
             if not self.searchPanel:IsVisible() then
-            self:ShowItemsFrame(self.itemframe.refresh[1], self.itemframe.refresh[2], self.itemframe.refresh[3])
+                self:ShowItemsFrame(self.itemframe.refresh[1], self.itemframe.refresh[2], self.itemframe.refresh[3])
             end
             self:ScrollFrameUpdate()
         end
