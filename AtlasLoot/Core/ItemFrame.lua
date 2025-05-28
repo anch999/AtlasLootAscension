@@ -141,7 +141,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 			local itemType = item.Type or dataSource[dataID].Type
 			local maxDif = self:GetMaxDifficulty(itemType)
 			--stops items from showing that are taged for coa
-			if class == "HERO" and item.COA then
+			if (item.Server and item.Server ~= self.serverType) then
 				toShow = false
 			elseif item[self.Difficulties.MIN_DIF] then
 				if item[self.Difficulties.MIN_DIF] > itemDif then
@@ -271,7 +271,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 			else
 				extra = itemNumber.desc
 			end
-		elseif itemNumber.dropLoc and (self.dataSourceBackup == "AtlasLoot_OnDemand" or (self.db.profile.showdropLocationOnSearch and dataID == "SearchResult")) then
+		elseif itemNumber.dropLoc and (self.dataSourceBackup == "AtlasLoot_OnDemand" or (self.selectedProfile.showdropLocationOnSearch and dataID == "SearchResult")) then
 			local location, boss = itemNumber.dropLoc[1], itemNumber.dropLoc[2]
 			extra = self.Colors.YELLOW..location..self.Colors.WHITE.." - "..boss
 		elseif AtlasLoot_CraftingData["CraftingLevels"] and spellID and AtlasLoot_CraftingData["CraftingLevels"][spellID] and dataID ~= "SearchResult" then

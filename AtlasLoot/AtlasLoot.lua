@@ -79,6 +79,7 @@ end
 --Runs after all addons have fully loaded
 function AtlasLoot:OnEnable()
 
+	self:SetSeverType()
 	LoadItemIDsDatabase()
 	self:WishlistSetup()
 	self:InitializeUI()
@@ -226,4 +227,58 @@ end
 
 function AtlasLoot:MERCHANT_UPDATE()
 	self:SetMerchantFrameGlow()
+end
+
+local serverClasses = {
+	OGCLASSES = {
+		"DRUID",
+		"HUNTER",
+		"MAGE",
+		"PALADIN",
+		"PRIEST",
+		"ROGUE",
+		"SHAMAN",
+		"WARLOCK",
+		"WARRIOR",
+		"DEATHKNIGHT",
+	},
+	COA = {
+		"BARBARIAN",
+    	"WITCHDOCTOR",
+    	"DEMONHUNTER",
+    	"WITCHHUNTER",
+    	"STORMBRINGER",
+    	"FLESHWARDEN",
+    	"GUARDIAN",
+    	"MONK",
+    	"SONOFARUGAL",
+    	"RANGER",
+    	"CHRONOMANCER",
+    	"NECROMANCER",
+    	"PYROMANCER",
+    	"CULTIST",
+    	"STARCALLER",
+    	"SUNCLERIC",
+    	"TINKER",
+    	"PROPHET",
+    	"REAPER",
+    	"WILDWALKER",
+    	"SPIRITMAGE",
+	},
+	CLASSESLESS = {
+		"HERO"
+	}
+
+}
+
+function AtlasLoot:SetSeverType()
+	local _, playerClass = UnitClass("player")
+	for type, classes in pairs(serverClasses) do
+		for _, class in pairs(classes) do
+			if playerClass == class then
+				self.serverType = type
+				return
+			end
+		end
+	end
 end
