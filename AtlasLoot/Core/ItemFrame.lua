@@ -83,8 +83,12 @@ function AtlasLoot:InitializeItemFrame()
 				hideButton(button)
 				if item and item[1] ~= "gap" then
 					if maxValue ~= 0 and value <= maxValue then
-						self:SetupButton(item.itemID or item.recipeID, itemNumber, button, dataSource, dataID, tablenum, dataSource_backup)
-						button:Show()
+						local show = self:SetupButton(item.itemID or item.recipeID, itemNumber, button, dataSource, dataID, tablenum, dataSource_backup)
+						if show then
+							button:Show()
+						else
+							button:Hide()
+						end
 					end
 				end
 			end
@@ -128,7 +132,7 @@ end
 
 local faction = UnitFactionGroup("player")
 
---find the right itemID for the difficulty selected
+--Get whether the item should be displayed and get the itemID that needs to be displayed
 function AtlasLoot:GetItemConditionals(item, dataSource, dataID)
 	if (item and item.faction and item.faction ~= faction) or (item.Server and item.Server ~= self.serverType)	then return end
 
@@ -139,7 +143,7 @@ function AtlasLoot:GetItemConditionals(item, dataSource, dataID)
 	local itemType = item.Type or dataSource[dataID].Type
 	local minDif, maxDif = self:GetMinMaxDifficultys(itemType, item.minDifficulty)
 
-	if maxDif < itemDif then
+	if maxDif and maxDif < itemDif then
 		itemDif = maxDif
 	end
 
@@ -161,7 +165,8 @@ end
 
 -- Setup the button for the to be displayed item/spell
 function AtlasLoot:SetupButton(itemID, itemNumber, itemButton, dataSource, dataID, tablenum, dataSource_backup)
-
+	
+	local show = true
 	local text, extra
 	local itemName, itemQuality, itemSubType, itemEquipLoc, itemIcon
 	if itemID then
@@ -366,6 +371,13 @@ function AtlasLoot:SetupButton(itemID, itemNumber, itemButton, dataSource, dataI
 	else
 		itemButton.difficulty = self.ItemindexID
 	end
+
+	if text == "" then
+		show = false
+	end
+
+	return show
+
 end
 
 --[[
