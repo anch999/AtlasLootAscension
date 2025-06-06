@@ -54,6 +54,14 @@ function AtlasLoot:InitializeUI()
         edgeFile = "Interface\\Tooltips\\UI-Tooltip-Border", edgeSize = 16,
         insets = { left = 4, right = 4, top = 4, bottom = 4 },
     })
+    self.mainUI.lootBackground:SetScript("OnMouseWheel", function(frame,delta)
+            if self.mainUI.nextbutton:IsVisible() and delta == -1 then
+                self.mainUI.nextbutton:Click()
+            end
+            if self.mainUI.prevbutton:IsVisible() and delta == 1 then
+                self.mainUI.prevbutton:Click()
+            end
+    end)
     self.mainUI.lootBackground.Back = self.mainUI.lootBackground:CreateTexture("AtlasLootItemsFrame_LootBack", "BACKGROUND")
     self.mainUI.lootBackground.Back:SetAllPoints()
     self.mainUI.lootBackground.Back:SetSize(730,475)
