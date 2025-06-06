@@ -97,7 +97,9 @@ function AtlasLoot:CreateVanityCollection()
         end
     end
 
-	for _,item in pairs(VANITY_ITEMS) do
+	local categorieList = {}
+	Atlaslootcat = categorieList
+	for _, item in pairs(VANITY_ITEMS) do
         local group
 		local flavor = GetItemFlavorText(item.itemid)
         local itemInfo = {self:GetItemInfo(item.itemid)}
@@ -125,9 +127,7 @@ function AtlasLoot:CreateVanityCollection()
 		end
 
 		if not group then break end
-		if #AtlasLoot_Data[group] == 0 or #AtlasLoot_Data[group][#AtlasLoot_Data[group]] == 30 then
-			tinsert(AtlasLoot_Data[group], {Name = "Page "..(#AtlasLoot_Data[group] +1)})
-		end
+
 		local contentsPreview
 		if item.contentsPreview and #item.contentsPreview > 1 then
 			contentsPreview = {}
@@ -140,7 +140,20 @@ function AtlasLoot:CreateVanityCollection()
 			description = item.description
 		end
 		local price = item.btCost > 0 and item.btCost .. " #bazaar#" or nil
-		tinsert(AtlasLoot_Data[group][#AtlasLoot_Data[group]], { itemID = item.itemid, extraInfo = description, contentsPreview = contentsPreview, vanityItem = true, price = price })
+		if not categorieList[group] then categorieList[group] = {} end
+		tinsert(categorieList[group], { itemID = item.itemid, extraInfo = description, contentsPreview = contentsPreview, vanityItem = true, price = price })
+	end
+	for groupName, categorie in pairs(categorieList) do
+		for i, item in ipairs(categorie) do
+			if not AtlasLoot_Data[groupName][1] then
+				AtlasLoot_Data[groupName][1] = {Name = groupName, {}, {}}
+			end
+			local pageSide = AtlasLoot_Data[groupName][1][1]
+			if i > 15 and i > (#categorie/2) then
+				pageSide = AtlasLoot_Data[groupName][1][2]
+			end
+			tinsert(pageSide, item)
+		end
 	end
 end
 
