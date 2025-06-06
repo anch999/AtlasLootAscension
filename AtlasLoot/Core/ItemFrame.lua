@@ -38,9 +38,9 @@ function AtlasLoot:InitializeItemFrame()
 	local function getMaxValue(itemList)
 		if itemList then
 			if itemList[2] and #itemList[2] > #itemList[1] then
-				return #itemList[2]
+				return #itemList[2], #itemList[1] + #itemList[2]
 			elseif itemList[1] then
-				return #itemList[1]
+				return #itemList[1], #itemList[1] + #itemList[2]
 			end
 		end
 	end
@@ -50,10 +50,8 @@ function AtlasLoot:InitializeItemFrame()
 		if not dataSource then return end
 		storedData = {dataSource, dataID, tablenum, dataSource_backup}
 
-		local itemList = {}
-		ItemList = itemList
+		local itemList = {{},{}}
 		for i, coloum in ipairs(dataSource[dataID][tablenum]) do
-			itemList[i] = itemList[i] or {}
 			local lastWasGap = false
 			for _, item in ipairs(coloum) do
 				local show, itemID, recipeID = self:GetItemConditionals(item, dataSource, dataID)
@@ -70,8 +68,9 @@ function AtlasLoot:InitializeItemFrame()
 			end
 		end
 
-		local maxValue = getMaxValue(itemList)
+		local maxValue, totalItems = getMaxValue(itemList)
 		if not maxValue then return end
+		self.itemframe.scrollBar.totalItems = totalItems
 		FauxScrollFrame_Update(self.itemframe.scrollBar, maxValue, MAX_ROWS, ROW_HEIGHT, nil, nil, nil, nil, nil, nil, true)
 		local offset = FauxScrollFrame_GetOffset(self.itemframe.scrollBar)
 		for column = 1, MAX_COLUMNS do
@@ -102,6 +101,15 @@ function AtlasLoot:InitializeItemFrame()
 		scroll.offset = math.floor(offset / ROW_HEIGHT + 0.5)
 			self:ItemFrameUpdate(unpack(storedData))
 	end)
+	self.itemframe.scrollBar:HookScript("OnMouseWheel", function(frame,delta)
+		if self.itemframe.scrollBar.totalItems > 30 then return end
+        if self.mainUI.nextbutton:IsVisible() and delta == -1 then
+            self.mainUI.nextbutton:Click()
+        end
+        if self.mainUI.prevbutton:IsVisible() and delta == 1 then
+            self.mainUI.prevbutton:Click()
+        end
+    end)
 
 	self.itemframe.scrollBar:SetScript("OnShow", function() self:ItemFrameUpdate(unpack(storedData)) end)
 
