@@ -98,7 +98,6 @@ function AtlasLoot:CreateVanityCollection()
     end
 
 	local categorieList = {}
-	Atlaslootcat = categorieList
 	for _, item in pairs(VANITY_ITEMS) do
         local group
 		local flavor = GetItemFlavorText(item.itemid)
