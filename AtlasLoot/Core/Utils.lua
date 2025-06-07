@@ -219,7 +219,6 @@ function AtlasLoot:PopoupItemFrame(frame, data)
 		button:SetSize(30,30)
 		button:EnableMouse()
 		button:RegisterForClicks("AnyDown")
-		button.number = num
 		button:SetScript("OnClick", function(btn, arg1) self:ItemOnClick(btn, arg1) end)
 		button:SetScript("OnEnter", function(btn)
 			self:ItemOnEnter(btn)
@@ -467,18 +466,22 @@ function AtlasLoot:CreateItemSourceList(overRide)
 			for dataSource, instance in pairs(AtlasLoot_Data) do
 				for _, boss in pairs(instance) do
 					if type(boss) == "table" then
-						for _, item in pairs(boss) do
-							if type(item) == "table" and item.itemID and instance.Name and boss.Name and not IgnoreTables(dataSource) then
-								list[item.itemID] = self.Colors.CYAN..instance.Name .. self.Colors.WHITE .." - " .. boss.Name
-								if ItemIDsDatabase[item.itemID] then
-									for _, varID in pairs(ItemIDsDatabase[item.itemID]) do
-										list[varID] = self.Colors.CYAN..instance.Name .. self.Colors.WHITE .." - " .. boss.Name
-									end
-								end
-								if item.spellID then
-									local recipeID = self:GetRecipeID(item.spellID) or nil
-									if recipeID and (list[recipeID] and not IgnoreTables(dataSource) or not list[recipeID]) then
-										list[recipeID] = self.Colors.CYAN..instance.Name .. self.Colors.WHITE .." - " .. boss.Name
+						for _, side in pairs(boss) do
+							if type(side) == "table" then
+								for _, item in pairs(side) do
+									if type(item) == "table" and item.itemID and instance.Name and boss.Name and not IgnoreTables(dataSource) then
+										list[item.itemID] = self.Colors.CYAN..instance.Name .. self.Colors.WHITE .." - " .. boss.Name
+										if ItemIDsDatabase[item.itemID] then
+											for _, varID in pairs(ItemIDsDatabase[item.itemID]) do
+												list[varID] = self.Colors.CYAN..instance.Name .. self.Colors.WHITE .." - " .. boss.Name
+											end
+										end
+										if item.spellID then
+											local recipeID = self:GetRecipeID(item.spellID) or nil
+											if recipeID and (list[recipeID] and not IgnoreTables(dataSource) or not list[recipeID]) then
+												list[recipeID] = self.Colors.CYAN..instance.Name .. self.Colors.WHITE .." - " .. boss.Name
+											end
+										end
 									end
 								end
 							end
