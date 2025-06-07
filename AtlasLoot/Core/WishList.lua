@@ -14,30 +14,20 @@ AtlasLootWishList = {}
 
 function AtlasLoot:ShowWishList(listType,arg2,arg3)
 	AtlasLoot_CurrentWishList = {Show = {ListType = listType, ListNum = arg2 ,Name = "WishLists", Icon = AtlasLootWishList[listType][arg2].Icon}}
-	local numPages = math.ceil(#AtlasLootWishList[listType][arg2]/30)
-	for n = 1 ,numPages, 1 do
-		table.insert(AtlasLoot_CurrentWishList.Show, {Name = "Page "..n})
-	end
-		for _,v in ipairs(AtlasLootWishList[listType][arg2]) do
-			local itemNum
-			if (v[1]-(math.floor(v[1]/30)*30)) == 0 then
-				itemNum = 30
-			else
-				itemNum = v[1]-(math.floor(v[1]/30)*30)
-			end
-			AtlasLoot_CurrentWishList.Show[math.ceil(v[1]/30)][itemNum] = v
-		end
-	AtlasLoot:ShowItemsFrame("Show", "AtlasLoot_CurrentWishList", arg3 or 1)
-end
 
-local function wishListNumberCheck(list)
-	local count = 1
-	for _, v in ipairs(list) do
-		if v[1] and v[1] > count then
-			count = v[1]
+	for i, item in ipairs(AtlasLootWishList[listType][arg2]) do
+		if i == 1 then
+			tinsert(AtlasLoot_CurrentWishList.Show,{Name = AtlasLootWishList[listType][arg2].Name, {}, {}})
 		end
+		local side = AtlasLoot_CurrentWishList.Show[#AtlasLoot_CurrentWishList.Show][1]
+		if i > 15 and i > (#AtlasLootWishList[listType][arg2]/2) then
+			side = AtlasLoot_CurrentWishList.Show[#AtlasLoot_CurrentWishList.Show][2]
+		end
+		item.positionNumber = i
+		tinsert(side, item)
 	end
-	return count + 1
+
+	AtlasLoot:ShowItemsFrame("Show", "AtlasLoot_CurrentWishList", arg3 or 1)
 end
 
 --[[
@@ -62,7 +52,6 @@ function AtlasLoot:WishListAddDropClick(typ, tableNum, data, show)
 			local tNum = #AtlasLootWishList.Own[tableNum]
 			AtlasLootWishList.Own[tableNum][tNum].lootTable = {{data.dataID, data.dataSource, data.tablenum}, "Source"}
 			AtlasLootWishList.Own[tableNum][tNum].desc = _G[data.dataSource][data.dataID].Name..": ".._G[data.dataSource][data.dataID][data.tablenum].Name
-			AtlasLootWishList.Own[tableNum][tNum][1] = wishListNumberCheck(AtlasLootWishList.Own[tableNum])
 			if AtlasLootWishList.Options[playerName].AutoSortWishlist then
 				AtlasLoot:SortWishList(nil,"Own", tableNum)
 			end
@@ -77,7 +66,6 @@ function AtlasLoot:WishListAddDropClick(typ, tableNum, data, show)
 			local tNum = #AtlasLootWishList.Shared[tableNum]
 			AtlasLootWishList.Shared[tableNum][tNum].lootTable = {{data.dataID, data.dataSource, data.tablenum}, "Source"}
 			AtlasLootWishList.Shared[tableNum][tNum].desc = _G[data.dataSource][data.dataID].Name..": ".._G[data.dataSource][data.dataID][data.tablenum].Name
-			AtlasLootWishList.Shared[tableNum][tNum][1] = wishListNumberCheck(AtlasLootWishList.Shared[tableNum])
 			if AtlasLootWishList.Options[playerName].AutoSortWishlist then
 				AtlasLoot:SortWishList(nil,"Shared", tableNum)
 			end
@@ -88,13 +76,8 @@ end
 
 -- Add CustomHeader 
 function AtlasLoot:AddItemCustomHeader(num,text)
-	for _,v in ipairs(AtlasLootWishList[AtlasLoot_CurrentWishList.Show.ListType][AtlasLoot_CurrentWishList.Show.ListNum]) do
-		if num <= v[1] then
-			v[1] = v[1] + 1
-		end
-	end
 	if text == "" or text == nil then
-		table.insert(AtlasLootWishList[AtlasLoot_CurrentWishList.Show.ListType][AtlasLoot_CurrentWishList.Show.ListNum],{num, icon = "Blank", name = self.Colors.WHITE..text, ""})
+		table.insert(AtlasLootWishList[AtlasLoot_CurrentWishList.Show.ListType][AtlasLoot_CurrentWishList.Show.ListNum],num+1,{"gap"})
 	else
 		table.insert(AtlasLootWishList[AtlasLoot_CurrentWishList.Show.ListType][AtlasLoot_CurrentWishList.Show.ListNum],{num, icon = "INV_Box_01", name =  self.Colors.WHITE..text, ""})
 	end
@@ -112,19 +95,17 @@ function AtlasLoot:EditWishList()
 end
 
 -- Moves wishlist item
-function AtlasLoot:MoveWishlistItem(pos,itemNum,replaceNum,replaceNum2)
-	itemNum = itemNum + ((self.itemframe.refresh[3]-1)*30)
-	if pos == "Up" then replaceNum = itemNum - 1 replaceNum2 = 1 elseif pos == "Down" then replaceNum = itemNum + 1 replaceNum2 = -1 end
-	if replaceNum ~= 0 then
-		for i,v in ipairs(AtlasLootWishList[AtlasLoot_CurrentWishList.Show.ListType][AtlasLoot_CurrentWishList.Show.ListNum]) do
-			if itemNum == v[1] then
-				v[1] = replaceNum
-			elseif v[1] == replaceNum then
-				v[1] = v[1] + replaceNum2
-			end
-		end
-		AtlasLoot:ShowWishList(AtlasLoot_CurrentWishList.Show.ListType, AtlasLoot_CurrentWishList.Show.ListNum,self.itemframe.refresh[3])
+function AtlasLoot:MoveWishlistItem(pos, itemNum)
+	local list = AtlasLootWishList[AtlasLoot_CurrentWishList.Show.ListType][AtlasLoot_CurrentWishList.Show.ListNum]
+	if pos == "Up" and itemNum ~= 1 then
+		tinsert(list, itemNum - 1,list[itemNum])
+		tremove(list, itemNum + 1)
+	elseif pos == "Down" and itemNum ~= #list then
+		tinsert(list, itemNum + 2, list[itemNum])
+		tremove(list, itemNum)
 	end
+	AtlasLoot:ShowWishList(AtlasLoot_CurrentWishList.Show.ListType, AtlasLoot_CurrentWishList.Show.ListNum,self.itemframe.refresh[3])
+
 end
 
 --Sort wishlist
@@ -327,34 +308,23 @@ function AtlasLoot:ShowWishListDropDown(btn, show, panelButton)
 end
 
 --[[
-AtlasLoot:DeleteFromWishList(btnNumber)
+AtlasLoot:DeleteFromWishList()
 Deletes the specified items from the wishlist
 ]]
-function AtlasLoot:DeleteFromWishList(btnNumber)
-	btnNumber  = btnNumber + ((self.itemframe.refresh[3] - 1) * 30)
+function AtlasLoot:DeleteFromWishList(item)
 	if self.itemframe.refresh[2] == "AtlasLoot_CurrentWishList" then
-	   for i, v in ipairs(AtlasLootWishList[AtlasLoot_CurrentWishList.Show.ListType][AtlasLoot_CurrentWishList.Show.ListNum]) do
-			if v[1] == btnNumber then
-				local numPos = v[1]
-				local name
-				if v.name then
-					name = v.name
-				elseif v.itemID then
-					name = GetItemInfo(v.itemID)
-				else
-					name = GetSpellInfo(v.spellID)
-				end
-				DEFAULT_CHAT_FRAME:AddMessage(self.Colors.RED..AL["AtlasLoot"]..": "..self:FixText(name)..self.Colors.GREY..AL[" deleted from the WishList."]..self.Colors.WHITE.." ("..AtlasLootWishList[AtlasLoot_CurrentWishList.Show.ListType][AtlasLoot_CurrentWishList.Show.ListNum].Name..")")
-				table.remove(AtlasLootWishList[AtlasLoot_CurrentWishList.Show.ListType][AtlasLoot_CurrentWishList.Show.ListNum], i)
-				--Sort wishlist after deleting an item
-				for n,table in ipairs(AtlasLootWishList[AtlasLoot_CurrentWishList.Show.ListType][AtlasLoot_CurrentWishList.Show.ListNum]) do
-					if numPos <= table[1] then
-						table[1] = table[1] - 1
-					end
-				end
-				break
-			end
-	   end
+		local name
+		if item.name then
+			name = item.name
+		elseif item.itemID then
+			name = GetItemInfo(item.itemID)
+		elseif item.spellID then
+			name = GetSpellInfo(item.spellID)
+		else
+			name = AL["Removed Spacer"]
+		end
+		DEFAULT_CHAT_FRAME:AddMessage(self.Colors.RED..AL["AtlasLoot"]..": "..self:FixText(name)..self.Colors.GREY..AL[" deleted from the WishList."]..self.Colors.WHITE.." ("..AtlasLootWishList[AtlasLoot_CurrentWishList.Show.ListType][AtlasLoot_CurrentWishList.Show.ListNum].Name..")")
+		table.remove(AtlasLootWishList[AtlasLoot_CurrentWishList.Show.ListType][AtlasLoot_CurrentWishList.Show.ListNum], item.positionNumber)
 	end
 	self.itemframe:Hide()
 	self:ShowWishList(AtlasLoot_CurrentWishList.Show.ListType, AtlasLoot_CurrentWishList.Show.ListNum,self.itemframe.refresh[3])

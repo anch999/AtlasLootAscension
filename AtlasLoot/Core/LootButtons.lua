@@ -161,31 +161,22 @@ function AtlasLoot:ItemOnClick(item, button)
     if not spellID and itemID then
         local itemName, itemLink, itemQuality, itemLevel, itemMinLevel, itemType, itemSubType, itemCount, itemEquipLoc, itemTexture = self:GetItemInfo(itemID)
         --If shift-clicked, link in the chat window
-        if button == "RightButton" and self.itemUnlock then
-            --move wishlist item down
-            self:MoveWishlistItem("Down",item.number)
-        elseif IsAltKeyDown() and button == "LeftButton" and self.itemUnlock then
-            --add custom wishlist header
-            StaticPopup_Show("ATLASLOOT_ADD_CUSTOMHEADER")
-            StaticPopupDialogs.ATLASLOOT_ADD_CUSTOMHEADER.num = item.number
-        elseif button == "LeftButton" and self.itemUnlock then
-            --move wishlist item up
-            self:MoveWishlistItem("Up",item.number)
+        if button == "RightButton" and self.itemUnlock and IsControlKeyDown() then
+            self:MoveWishlistItem("Down", item.item.positionNumber)
+
+        elseif button == "LeftButton" and self.itemUnlock and IsControlKeyDown() then
+            self:MoveWishlistItem("Up", item.item.positionNumber)
+
         elseif button == "RightButton" and itemID and IsAltKeyDown() and self.itemframe.refresh[2] ~= "AtlasLoot_CurrentWishList" then
             local wList = AtlasLootWishList.Options[playerName].DefaultWishList
-            --add to defauly wishlist
+
             self:WishListAddDropClick(wList[1], wList[3], item)
         elseif button == "RightButton" and itemID then
-            --item context menu
-            if self.mainUI.itemPopupframe and self.mainUI.itemPopupframe:IsVisible() then
-                self:ItemContextMenu(item, "item")
+            self:ItemContextMenu(item, "item")
 
-            else
-                self:ItemContextMenu(item, "item")
-            end
         elseif IsShiftKeyDown() and itemName then
-            --insert to chat link
             ChatEdit_InsertLink(itemLink)
+
         elseif ChatFrame1EditBox and ChatFrame1EditBox:IsVisible() and IsShiftKeyDown() then
             ChatFrame1EditBox:Insert(itemName)  -- <-- this line just inserts plain text, does not need any adjustment
             --If control-clicked, use the dressing room
@@ -194,7 +185,7 @@ function AtlasLoot:ItemOnClick(item, button)
             DressUpItemLink(itemLink)
         elseif IsAltKeyDown() then
             if self.itemframe.refresh[2] == "AtlasLoot_CurrentWishList" then
-                self:DeleteFromWishList(item.number)
+                self:DeleteFromWishList(item.item)
             end
         elseif item.sourcePage and item.sourcePage[2] == "Source" then
             dataID, dataSource, dataPage = unpack(item.sourcePage[1])
@@ -221,11 +212,15 @@ function AtlasLoot:ItemOnClick(item, button)
         local recipeData = self:GetRecipeData(spellID, "spell")
         if IsShiftKeyDown() then
             ChatEdit_InsertLink(self:GetEnchantLink(spellID))
+        elseif button == "RightButton" and self.itemUnlock and IsControlKeyDown() then
+            self:MoveWishlistItem("Down", item.item.positionNumber)  
+        elseif button == "LeftButton" and self.itemUnlock and IsControlKeyDown() then
+            self:MoveWishlistItem("Up", item.item.positionNumber)
         elseif button == "RightButton" then
             self:ItemContextMenu(item, "spell", recipeData)
         elseif IsAltKeyDown() then
             if self.itemframe.refresh[2] == "AtlasLoot_CurrentWishList" then
-                self:DeleteFromWishList(item.number)
+                self:DeleteFromWishList(item.item)
             end
         elseif(IsControlKeyDown()) then
             DressUpItemLink("item:"..item.itemID..":0:0:0:0:0:0:0")
@@ -371,8 +366,19 @@ function AtlasLoot:ItemContextMenu(data, Type, recipeData)
                         )
                         if self.itemframe.refresh[2] == "AtlasLoot_CurrentWishList" then
                             self.Dewdrop:AddLine(
+                                "text", AL["Add Custom Header/Blank Line"],
+                                "func", function()
+                                    StaticPopup_Show("ATLASLOOT_ADD_CUSTOMHEADER")
+                                    StaticPopupDialogs.ATLASLOOT_ADD_CUSTOMHEADER.num = data.item.positionNumber
+                                end,
+                                'closeWhenClicked', true,
+                                'textHeight', self.selectedProfile.txtSize,
+                                'textWidth', self.selectedProfile.txtSize,
+                                "notCheckable", true
+                            )
+                            self.Dewdrop:AddLine(
                                 "text", AL["Delete"],
-                                "func", function() self:DeleteFromWishList(data.number) end,
+                                "func", function() self:DeleteFromWishList(data.item) end,
                                 'closeWhenClicked', true,
                                 'textHeight', self.selectedProfile.txtSize,
                                 'textWidth', self.selectedProfile.txtSize,
@@ -415,7 +421,7 @@ function AtlasLoot:ItemContextMenu(data, Type, recipeData)
                                 "notCheckable", true
                             )
                         end
-                        if C_VanityCollection.IsCollectionItemOwned(itemID) then
+                        if itemID and C_VanityCollection.IsCollectionItemOwned(itemID) then
                             self:AddDividerLine(35)
                             self.Dewdrop:AddLine(
                             'text', AL["Vanity Collection"],

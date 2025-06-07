@@ -153,6 +153,7 @@ function AtlasLoot:InitializeUI()
             self.itemUnlock = true
             self.mainUI.wishlistLockButton:SetText("UnLocked")
         end
+        self:ShowItemsFrame(self.itemframe.refresh[1], self.itemframe.refresh[2], self.itemframe.refresh[3])
     end)
     self.mainUI.wishlistLockButton:SetScript("OnEnter", function(button)
         local text = {

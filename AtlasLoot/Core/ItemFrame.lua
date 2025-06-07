@@ -80,10 +80,10 @@ function AtlasLoot:InitializeItemFrame()
 				local item = itemList[column] and itemList[column][value]
 				local itemNumber = itemList[column] and itemList[column][value]
 				hideButton(button)
-				if item and item[1] ~= "gap" then
+				if item then
 					if maxValue ~= 0 and value <= maxValue then
 						local show = self:SetupButton(item.itemID or item.recipeID, itemNumber, button, dataSource, dataID, tablenum, dataSource_backup)
-						if show then
+						if show or (self.itemUnlock and item[1] == "gap") then
 							button:Show()
 						else
 							button:Hide()
@@ -120,7 +120,6 @@ function AtlasLoot:InitializeItemFrame()
 		local button = self.itemframe.buttons[column][row]
 		button:SetID(row)
 		button.isAtlasLoot = true
-		button.number = row
 		if column == 1 and row == 1 then
 			button:SetPoint("TOP", self.itemframe, "TOP",-210,-35)
 		elseif column == 2 and row == 1 then
@@ -317,16 +316,16 @@ function AtlasLoot:SetupButton(itemID, itemNumber, itemButton, dataSource, dataI
 
 	extra = self:FixText(extra)
 	--If there is no data on the texture an item should have, show a big self.Colors.RED question mark
-	if itemNumber.icon == "Blank" then
+	if itemNumber.icon == "?" then
 		iconFrame:SetTexture(nil)
-	elseif itemNumber.icon == "?" then
-		iconFrame:SetTexture("Interface\\Icons\\INV_Misc_QuestionMark")
 	elseif itemNumber.icon then
 		iconFrame:SetTexture("Interface\\Icons\\"..itemNumber.icon)
 	elseif itemNumber.itemID then
 		iconFrame:SetTexture(itemIcon)
 	elseif spellIcon then
 		iconFrame:SetTexture(spellIcon)
+	else
+		iconFrame:SetTexture(nil)
 	end
 
 	if iconFrame:GetTexture() == nil and itemNumber.icon ~= "Blank" then
