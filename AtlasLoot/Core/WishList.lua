@@ -79,7 +79,7 @@ function AtlasLoot:AddItemCustomHeader(num,text)
 	if text == "" or text == nil then
 		table.insert(AtlasLootWishList[AtlasLoot_CurrentWishList.Show.ListType][AtlasLoot_CurrentWishList.Show.ListNum],num+1,{"gap"})
 	else
-		table.insert(AtlasLootWishList[AtlasLoot_CurrentWishList.Show.ListType][AtlasLoot_CurrentWishList.Show.ListNum],{num, icon = "INV_Box_01", name =  self.Colors.WHITE..text, ""})
+		table.insert(AtlasLootWishList[AtlasLoot_CurrentWishList.Show.ListType][AtlasLoot_CurrentWishList.Show.ListNum],num+1,{icon = "INV_Box_01", name = self.Colors.WHITE..text})
 	end
 	AtlasLoot:ShowWishList(AtlasLoot_CurrentWishList.Show.ListType, AtlasLoot_CurrentWishList.Show.ListNum,self.itemframe.refresh[3])
 end
@@ -302,8 +302,6 @@ function AtlasLoot:ShowWishListDropDown(btn, show, panelButton)
 				"children", setOptions
 			)
 		end
-
-	--	DEFAULT_CHAT_FRAME:AddMessage(self.Colors.RED..AL["AtlasLoot"]..": "..AL["Please set a default Wishlist."])
 	end
 end
 
