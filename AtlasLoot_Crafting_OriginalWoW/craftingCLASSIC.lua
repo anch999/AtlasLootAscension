@@ -141,10 +141,11 @@ AtlasLoot_Data["AlchemyCLASSIC"] = {
 			{itemID = 20002, spellID = 24366 }, --Greater Dreamless Sleep Potion
 			{itemID = 13446, spellID = 17556 }, --Major Healing Potion
 			{itemID = 13443, spellID = 17553 }, --Superior Mana Potion
+			{itemID = 6000, spellID = 17525 }, --Potion of Lightning Reflexes
 			{itemID = 13442, spellID = 17552 }, --Mighty Rage Potion
-			{itemID = 3387, spellID = 3175 }, --Limited Invulnerability Potion
 		},
 		{
+			{itemID = 3387, spellID = 3175 }, --Limited Invulnerability Potion
 			{itemID = 9172, spellID = 11464 }, --Invisibility Potion
 			{itemID = 12190, spellID = 15833 }, --Dreamless Sleep Potion
 			{itemID = 9144, spellID = 11458 }, --Wildvine Potion
