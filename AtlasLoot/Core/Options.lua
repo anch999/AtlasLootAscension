@@ -35,21 +35,22 @@ function AtlasLoot:InitializeOptionsFrame()
                     },
                     {
                         Type = "CheckButton",
-                        Name = "recipeExtraInfoSwitch",
-                        Lable = AL["Show drop location on search results"],
-                        OnClick = function(button) self.selectedProfile.recipeExtraInfoSwitch = button:GetChecked() end
-                    },
-                    {
-                        Type = "CheckButton",
                         Name = "showdropLocationOnSearch",
-                        Lable = AL["Show if recipe is unknown in tooltips"],
+                        Lable = AL["Show drop location on search results"],
                         OnClick = function(button) self.selectedProfile.showdropLocationOnSearch = button:GetChecked() end
                     },
                     {
                         Type = "CheckButton",
                         Name = "showUnknownRecipeTooltip",
-                        Lable = AL["Hide crafting source unless holding CTRL"],
+                        Lable = AL["Show if recipe is unknown in tooltips"],
                         OnClick = function(button) self.selectedProfile.showUnknownRecipeTooltip = button:GetChecked() end
+                    },
+                    {
+                        Type = "CheckButton",
+                        
+                        Name = "recipeExtraInfoSwitch",
+                        Lable = AL["Hide crafting source unless holding CTRL"],
+                        OnClick = function(button) self.selectedProfile.recipeExtraInfoSwitch = button:GetChecked() end
                     },
                     {
                         Type = "CheckButton",
