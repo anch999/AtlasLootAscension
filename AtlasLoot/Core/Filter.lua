@@ -116,8 +116,12 @@ function AtlasLoot:FilterItem(item, dataSource, dataID)
 	end
 
 	-- return true if item needs filtering
-	if source.vanity and getVanityFilters(item.itemID, item.learnedSpellID) then
-		return true
+	if source.vanity then
+		if not getVanityFilters(item.itemID, item.learnedSpellID) then
+			return false
+		else
+			return true
+		end
 	elseif source.Type == "Crafting" and getCraftingFilters(item.spellID) then
 		return true
 	elseif getFilterType(item.itemID) or item.icon then
