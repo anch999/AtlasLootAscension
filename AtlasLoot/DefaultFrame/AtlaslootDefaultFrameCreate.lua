@@ -822,7 +822,6 @@ self.mainUI.lootTableScrollFrame.rows = rows2
     self.mainUI.streamIcon:SetScript("OnLeave", GameTooltip_Hide)
     self.mainUI.streamIcon:SetScript("OnShow", function(button) button:SetFrameLevel( (button:GetParent()):GetFrameLevel() + 1 ) end)
 
-    self.mainUI.streamIcon:SetPoint("TOPRIGHT", self.mainUI.lootBackground, "TOPRIGHT")
     self.mainUI.streamIcon:Hide()
 
     self.mainUI.itemPopupframe = CreateFrame("Frame", "AtlasLoot_PopupFrame", nil, "AtlasLootFrameTemplate")
