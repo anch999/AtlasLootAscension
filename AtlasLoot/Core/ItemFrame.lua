@@ -145,7 +145,8 @@ function AtlasLoot:GetItemConditionals(item, dataSource, dataID)
 
 	local itemID, recipeID
 	local show = true
-	local itemDif = self.ItemindexID
+	local itemDif = self.ItemindexID or 3
+	
 
 	local itemType = item.Type or dataSource[dataID].Type
 	local minDif, maxDif = self:GetMinMaxDifficultys(itemType, item.minDifficulty)
