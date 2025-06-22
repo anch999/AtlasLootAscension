@@ -523,7 +523,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 	end
 
 	if dataSource_backup ~= "AtlasLoot_OnDemand" and dataID ~= "SearchResult" and dataSource_backup ~= "AtlasLoot_CurrentWishList" and
-	dataSource[dataID].Back ~= true and dataID ~= "EmptyTable" and not dataSource[dataID].vanity then
+	dataSource[dataID].Back ~= true and dataID ~= "EmptyTable" then
 		self.db.profile.LastBoss[self.Expac] = {dataID, dataSource_backup, tablenum, self.lastModule, self.currentTable, self.moduleName}
 		self.db.profile.savedState[self.currentTable] = {dataID, dataSource_backup, tablenum, self.lastModule, self.currentTable, self.moduleName}
 	end
@@ -542,7 +542,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 						end
 					elseif find == v[2] then
 						return true
-					end	
+					end
 				end
 			end
 		end

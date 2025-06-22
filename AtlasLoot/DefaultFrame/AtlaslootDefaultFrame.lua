@@ -21,7 +21,7 @@ function AtlasLoot:OnShow()
     local lastboss = self.db.profile.LastBoss[self.Expac]
     if self.selectedProfile.AutoCurrentInstance and self:ShowInstance() then
         return
-    elseif lastboss and lastboss[4] then
+    elseif lastboss and (lastboss[4] or (lastboss[6] == "Ascension Vanity Collection")) then
         self.currentTable = lastboss[5]
         self.lastModule = lastboss[4]
         self.moduleName = lastboss[6]
