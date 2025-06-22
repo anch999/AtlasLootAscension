@@ -27,6 +27,27 @@ function AtlasLoot:ShowWishList(listType,arg2,arg3)
 	self:ShowItemsFrame("Show", "AtlasLoot_CurrentWishList", arg3 or 1)
 end
 
+-- Change Wishlist item toggle state
+AtlasLoot.wishListLockState = "Locked"
+function AtlasLoot:WishListItemLockStateClick()
+	    if self.wishListLockState == "Locked" then
+            self.wishListLockState = "Unlocked"
+            self.mainUI.wishlistLockButton:SetText("Unlocked")
+		elseif self.wishListLockState == "Unlocked" then
+            self.wishListLockState = "Divider"
+            self.mainUI.wishlistLockButton:SetText("Delete Divider")
+		else
+			self.wishListLockState = "Locked"
+            self.mainUI.wishlistLockButton:SetText("Locked")
+        end
+        self:ShowItemsFrame(self.itemframe.refresh[1], self.itemframe.refresh[2], self.itemframe.refresh[3])
+end
+
+function AtlasLoot:WishListLockButtonReset()
+	self.wishListLockState = "Locked"
+    self.mainUI.wishlistLockButton:SetText("Locked")
+end
+
 
 --Add item too wishlist or show the selected wishlist
 function AtlasLoot:AddItemToWishList(typ, tableNum, data, show)

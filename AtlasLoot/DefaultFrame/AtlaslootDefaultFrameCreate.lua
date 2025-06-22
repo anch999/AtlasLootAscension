@@ -145,22 +145,14 @@ function AtlasLoot:InitializeUI()
         -- Wishlist Item Lock button
     self.mainUI.wishlistLockButton = CreateFrame("Button", "AtlasLootItemsFrame_Wishlist_UnLock", self.itemframe, "OptionsButtonTemplate")
     self.mainUI.wishlistLockButton:SetPoint("BOTTOM", self.mainUI.wishlistOptionsButton, "BOTTOM",-100,0)
-    self.mainUI.wishlistLockButton:SetScript("OnClick", function(button)
-        if self.itemUnlock then
-            self.itemUnlock = false
-            self.mainUI.wishlistLockButton:SetText("Locked")
-        else
-            self.itemUnlock = true
-            self.mainUI.wishlistLockButton:SetText("UnLocked")
-        end
-        self:ShowItemsFrame(self.itemframe.refresh[1], self.itemframe.refresh[2], self.itemframe.refresh[3])
-    end)
+    self.mainUI.wishlistLockButton:SetScript("OnClick", function(button) self:WishListItemLockStateClick() end)
     self.mainUI.wishlistLockButton:SetScript("OnEnter", function(button)
         local text = {
             "Toggle Item Moving",
             "Left Click to move item up",
             "Right Click to move item down",
-            "Alt + Left Click to add a Custom Header"
+            "Alt + Left Click to add a Custom Header",
+            "Toogle to delete divider mode then right click"
         }
         self:SetGameTooltip(button, text)
     end)

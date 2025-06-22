@@ -83,7 +83,7 @@ function AtlasLoot:InitializeItemFrame()
 				if item then
 					if maxValue ~= 0 and value <= maxValue then
 						local show = self:SetupButton(item.itemID or item.recipeID, itemNumber, button, dataSource, dataID, tablenum, dataSource_backup)
-						if show or (self.itemUnlock and item[1] == "gap") then
+						if show or (self.wishListLockState ~= "Locked" and item[1] == "gap") then
 							button:Show()
 						else
 							button:Hide()
@@ -435,7 +435,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 	end
 
 	if dataSource_backup ~= "AtlasLoot_CurrentWishList" then
-		self.itemUnlock = false
+		self:WishListLockButtonReset()
 	end
 
 	local difType = false

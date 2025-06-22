@@ -161,16 +161,16 @@ function AtlasLoot:ItemOnClick(item, button)
     if not spellID and itemID then
         local itemName, itemLink, itemQuality, itemLevel, itemMinLevel, itemType, itemSubType, itemCount, itemEquipLoc, itemTexture = self:GetItemInfo(itemID)
         --If shift-clicked, link in the chat window
-        if button == "RightButton" and self.itemUnlock and IsControlKeyDown() then
+        if button == "RightButton" and self.wishListLockState == "Unlocked" then
             self:MoveWishlistItem("Down", item.item.positionNumber)
 
-        elseif button == "LeftButton" and self.itemUnlock and IsControlKeyDown() then
+        elseif button == "LeftButton" and self.wishListLockState == "Unlocked" then
             self:MoveWishlistItem("Up", item.item.positionNumber)
 
         elseif button == "RightButton" and itemID and IsAltKeyDown() and self.itemframe.refresh[2] ~= "AtlasLoot_CurrentWishList" then
             local wList = AtlasLootWishList.Options[playerName].DefaultWishList
 
-            self:WishListAddDropClick(wList[1], wList[3], item)
+            self:AddItemToWishList(wList[1], wList[3], item)
         elseif button == "RightButton" and itemID then
             self:ItemContextMenu(item, "item")
 
@@ -212,9 +212,9 @@ function AtlasLoot:ItemOnClick(item, button)
         local recipeData = self:GetRecipeData(spellID, "spell")
         if IsShiftKeyDown() then
             ChatEdit_InsertLink(self:GetEnchantLink(spellID))
-        elseif button == "RightButton" and self.itemUnlock and IsControlKeyDown() then
-            self:MoveWishlistItem("Down", item.item.positionNumber)  
-        elseif button == "LeftButton" and self.itemUnlock and IsControlKeyDown() then
+        elseif button == "RightButton" and self.wishListLockState == "Unlocked" then
+            self:MoveWishlistItem("Down", item.item.positionNumber)
+        elseif button == "LeftButton" and self.wishListLockState == "Unlocked" then
             self:MoveWishlistItem("Up", item.item.positionNumber)
         elseif button == "RightButton" then
             self:ItemContextMenu(item, "spell", recipeData)
@@ -222,7 +222,7 @@ function AtlasLoot:ItemOnClick(item, button)
             if self.itemframe.refresh[2] == "AtlasLoot_CurrentWishList" then
                 self:DeleteFromWishList(item.item)
             end
-        elseif(IsControlKeyDown()) then
+        elseif IsControlKeyDown() then
             DressUpItemLink("item:"..item.itemID..":0:0:0:0:0:0:0")
         elseif item.sourcePage and item.sourcePage[2] == "Source" then
             dataID, dataSource, dataPage = unpack(item.sourcePage[1])
@@ -388,7 +388,7 @@ function AtlasLoot:ItemContextMenu(data, Type, recipeData)
                             local wList = AtlasLootWishList.Options[playerName].DefaultWishList
                             self.Dewdrop:AddLine(
                                 "text", AL["Add To Default"],
-                                "func", function() self:WishListAddDropClick(wList[1], wList[3], data) end,
+                                "func", function() self:AddItemToWishList(wList[1], wList[3], data) end,
                                 'closeWhenClicked', true,
                                 'textHeight', self.selectedProfile.txtSize,
                                 'textWidth', self.selectedProfile.txtSize,
@@ -499,7 +499,7 @@ function AtlasLoot:ItemContextMenu(data, Type, recipeData)
                                 'closeWhenClicked', true,
                                 'textHeight', self.selectedProfile.txtSize,
                                 'textWidth', self.selectedProfile.txtSize,
-                                "func", function() self:WishListAddDropClick("Own", i, data) end,
+                                "func", function() self:AddItemToWishList("Own", i, data) end,
                                 "notCheckable", true
                             )
                         end
@@ -513,7 +513,7 @@ function AtlasLoot:ItemContextMenu(data, Type, recipeData)
                                 'closeWhenClicked', true,
                                 'textHeight', self.selectedProfile.txtSize,
                                 'textWidth', self.selectedProfile.txtSize,
-                                "func", function() self:WishListAddDropClick("Shared", i, data) end,
+                                "func", function() self:AddItemToWishList("Shared", i, data) end,
                                 "notCheckable", true
                             )
                         end
