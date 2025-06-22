@@ -1,4 +1,4 @@
-local AtlasLoot = LibStub("AceAddon-3.0"):NewAddon("AtlasLoot", "AceEvent-3.0", "AceTimer-3.0", "NewsFrame-1.0", "SettingsCreator-1.0")
+local AtlasLoot = LibStub("AceAddon-3.0"):NewAddon("AtlasLoot", "AceEvent-3.0", "AceTimer-3.0", "NewsFrame-1.0", "SettingsCreator-1.0", "AceSerializer-3.0", "AceComm-3.0")
 ATLASLOOT = AtlasLoot
 local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
 
@@ -92,8 +92,10 @@ function AtlasLoot:OnEnable()
 	self:CreateVanityCollection()
 	self:CreateItemSourceList()
 	self:RegisterEvent("UNIT_SPELLCAST_SUCCEEDED")
+	self:RegisterComm("AtlasLootWishlist")
 	self:InitializeWishlistMerchantGlow()
 	self:PatchNotes()
+
 
 	if IsAddOnLoaded("TomTom") then self.TomTomLoaded = true end
 
