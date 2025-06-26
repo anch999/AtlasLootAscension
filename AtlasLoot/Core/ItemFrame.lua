@@ -56,7 +56,7 @@ function AtlasLoot:InitializeItemFrame()
 			for _, item in ipairs(coloum) do
 				local show, itemID, recipeID = self:GetItemConditionals(item, dataSource, dataID)
 				if (show and self:FilterItem(item, dataSource, dataID)) or (item and item[1] == "gap" and #itemList[i] > 0 and not lastWasGap) then
-					tinsert(itemList[i], self:CloneTable(item))
+					table.insert(itemList[i], self:CloneTable(item))
 					if item[1] ~= "gap" then
 						itemList[i][#itemList[i]].itemID = itemID
 						itemList[i][#itemList[i]].recipeID = recipeID
@@ -233,7 +233,7 @@ function AtlasLoot:SetupButton(itemID, itemNumber, itemButton, dataSource, dataI
 			hightlightFrame:SetTexture(itemHighlightBlue)
 			hightlightFrame:Show()
 			if dataSource_backup == "AtlasLoot_CurrentWishList" or (VANITY_ITEMS[itemID] and VANITY_ITEMS[itemID].learnedSpell ~= 0 and not CA_IsSpellKnown(VANITY_ITEMS[itemID].learnedSpell)) then
-				tinsert(self.vanityItems, itemID)
+				table.insert(self.vanityItems, itemID)
 			end
 		end
 
@@ -453,8 +453,8 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 	self.CurrentType = dataSource[dataID].Type or "Default"
 
 	-- Loads the Difficulties into the scrollFrame
-	if dataSource[dataID].ListType then
-		self:ScrollFrameUpdate(nil,dataSource[dataID].ListType)
+	if dataSource[dataID].wishList then
+		self:ScrollFrameUpdate(nil,dataSource[dataID].wishList)
 	else
 		self:ScrollFrameUpdate()
 	end
@@ -478,12 +478,6 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 	if dataSource[dataID].Type and difType and #self.Difficulties[dataSource[dataID].Type] > 5 and findTypeNumber() > 5 then
 		local min, max = AtlasLootDefaultFrameScrollScrollBar:GetMinMaxValues()
 		AtlasLootDefaultFrameScrollScrollBar:SetValue(typeNumber * (max / #self.Difficulties[dataSource[dataID].Type]))
-	end
-
-	-- Moves the difficulty scrollslider if wishlist
-	if dataSource_backup == "AtlasLoot_CurrentWishList" and dataSource[dataID].ListNum > 5 then
-		local min, max = AtlasLootDefaultFrameScrollScrollBar:GetMinMaxValues()
-		AtlasLootDefaultFrameScrollScrollBar:SetValue(dataSource[dataID].ListNum * (max / #AtlasLootWishList[dataSource[dataID].ListType][dataSource[dataID].ListNum]))
 	end
 
 	--For stopping the subtable from changing if its a token table
@@ -567,11 +561,6 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 	-- Show Wishlist buttons when a wishlist in showing
 	if dataSource_backup == "AtlasLoot_CurrentWishList" then
 		self:ToogleWishListButtons(true)
-		if dataSource[dataID].ListType == "Shared" then
-			AtlasLootItemsFrame_Wishlist_Swap:SetText("Own")
-		elseif dataSource[dataID].ListType == "Own" then
-			AtlasLootItemsFrame_Wishlist_Swap:SetText("Shared")
-		end
 	end
 
 	if dataSource[dataID].vanity then

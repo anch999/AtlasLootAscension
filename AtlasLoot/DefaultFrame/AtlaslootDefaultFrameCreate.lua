@@ -32,7 +32,7 @@ function AtlasLoot:InitializeUI()
     self:UpdateLootBrowserScale()
 
     --Add the loot browser to the special frames tables to enable closing wih the ESC key
-	tinsert(UISpecialFrames, "AtlasLootDefaultFrame")
+	table.insert(UISpecialFrames, "AtlasLootDefaultFrame")
 
     --Loot Background
     self.mainUI.lootBackground = CreateFrame("Frame", "AtlasLoot_LootBackground", self.mainUI, "AtlasLootFrameTemplate")
@@ -119,7 +119,6 @@ function AtlasLoot:InitializeUI()
     end
     self:ToggleNavigationButtonsVisibility()
 
-    --------------------------------------- Wish list buttons ---------------------------------------
     -- Learn Unknown vanity spells button
     self.mainUI.learnSpellbtn = CreateFrame("Button", "AtlasLoot_LearnUnknownSpells", self.itemframe, "OptionsButtonTemplate")
     self.mainUI.learnSpellbtn:SetPoint("BOTTOM", self.itemframe, "BOTTOM",0,5)
@@ -131,14 +130,11 @@ function AtlasLoot:InitializeUI()
     end)
     self.mainUI.learnSpellbtn:SetScript("OnLeave", function() GameTooltip:Hide() end)
 
-    -- Wishlist Own/Swap button
-    self.mainUI.wishlistSwapButton = CreateFrame("Button", "AtlasLootItemsFrame_Wishlist_Swap", self.itemframe, "OptionsButtonTemplate")
-    self.mainUI.wishlistSwapButton:SetPoint("BOTTOM", self.itemframe, "BOTTOM",0,5)
-    self.mainUI.wishlistSwapButton:SetScript("OnClick", function(button) self:WishListSwapButton(true) end)
+    --------------------------------------- Wish list buttons ---------------------------------------
 
     -- Wishlist Options button
     self.mainUI.wishlistOptionsButton = CreateFrame("Button", "AtlasLootItemsFrame_Wishlist_Options", self.itemframe, "OptionsButtonTemplate")
-    self.mainUI.wishlistOptionsButton:SetPoint("BOTTOM", self.mainUI.wishlistSwapButton, "BOTTOM",-100,0)
+    self.mainUI.wishlistOptionsButton:SetPoint("BOTTOM", self.itemframe, "BOTTOM",-50,5)
     self.mainUI.wishlistOptionsButton:SetText(AL["Options"])
     self.mainUI.wishlistOptionsButton:SetScript("OnClick", function(button) self:WishListOptionsOpen() end)
 
@@ -148,11 +144,10 @@ function AtlasLoot:InitializeUI()
     self.mainUI.wishlistLockButton:SetScript("OnClick", function(button) self:WishListItemLockStateClick() end)
     self.mainUI.wishlistLockButton:SetScript("OnEnter", function(button)
         local text = {
-            "Toggle Item Moving",
+            "Toggle Item Moving/Divider Removel",
             "Left Click to move item up",
             "Right Click to move item down",
             "Alt + Left Click to add a Custom Header",
-            "Toogle to delete divider mode then right click"
         }
         self:SetGameTooltip(button, text)
     end)
@@ -167,7 +162,7 @@ function AtlasLoot:InitializeUI()
 
     -- Wishlist Share button
     self.mainUI.wishlistShareButton = CreateFrame("Button", "AtlasLootItemsFrame_Wishlist_Share", self.itemframe, "OptionsButtonTemplate")
-    self.mainUI.wishlistShareButton:SetPoint("BOTTOM", self.mainUI.wishlistSwapButton, "BOTTOM",100,0)
+    self.mainUI.wishlistShareButton:SetPoint("BOTTOM", self.mainUI.wishlistOptionsButton, "BOTTOM",100,0)
     self.mainUI.wishlistShareButton:SetText(AL["Share"])
     self.mainUI.wishlistShareButton:SetScript("OnClick", function() self:ShareWishList() end)
 
@@ -196,13 +191,11 @@ function AtlasLoot:InitializeUI()
             self.mainUI.wishlistLearnVanityButton:Show()
             self.mainUI.wishlistShareButton:Show()
             self.mainUI.wishlistLockButton:Show()
-            self.mainUI.wishlistSwapButton:Show()
         else
             self.mainUI.wishlistOptionsButton:Hide()
             self.mainUI.wishlistLearnVanityButton:Hide()
             self.mainUI.wishlistShareButton:Hide()
             self.mainUI.wishlistLockButton:Hide()
-            self.mainUI.wishlistSwapButton:Hide()
         end
     end
     self:ToogleWishListButtons()
@@ -409,7 +402,7 @@ function AtlasLoot:InitializeUI()
                     button.lastModule = AtlasLootCharDB.QuickLooks[num][4]
                     button.currentTable = AtlasLootCharDB.QuickLooks[num][5]
                     if AtlasLootCharDB.QuickLooks[num][2] == "AtlasLootWishList" then
-                        self:ShowWishList(AtlasLootCharDB.QuickLooks[num][1], AtlasLootCharDB.QuickLooks[num][3])
+                        self:ShowWishList(AtlasLootCharDB.QuickLooks[num][3])
                     else
                         self:ShowItemsFrame(AtlasLootCharDB.QuickLooks[num][1], AtlasLootCharDB.QuickLooks[num][2], AtlasLootCharDB.QuickLooks[num][3])
                     end
@@ -462,18 +455,21 @@ function self:ScrollFrameUpdate(hide,wishlist)
     self.mainUI.difficultyScrollFrame.wishList = nil
     if wishlist then
         self.mainUI.difficultyScrollFrame.wishList = wishlist
-        maxValue = #AtlasLootWishList[wishlist]
+        maxValue = 2
         FauxScrollFrame_Update(self.mainUI.difficultyScrollFrame.scrollSlider, maxValue, MAX_ROWS, ROW_HEIGHT)
         offset = FauxScrollFrame_GetOffset(self.mainUI.difficultyScrollFrame.scrollSlider)
         for i = 1, MAX_ROWS do
             value = i + offset
             self.mainUI.difficultyScrollFrame.rows[i]:SetChecked(false)
             self.mainUI.difficultyScrollFrame.rows[i]:SetHighlightTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD")
-            if value <= maxValue and AtlasLootWishList[wishlist][value] then
+            if value <= maxValue then
                 row = self.mainUI.difficultyScrollFrame.rows[i]
-                row:SetText("|cffFFd200"..AtlasLootWishList[wishlist][value].Name)
+                local text = (value == 1 and "Own") or (value == 2 and "Shared")
+
+                row:SetText("|cffFFd200"..text)
                 row.itemIndex = value
-                if row.itemIndex == AtlasLoot_CurrentWishList.Show.ListNum then
+
+                if row.itemIndex == AtlasLoot_CurrentWishList.selected then
                     row:SetChecked(true)
                 end
                 row:Show()
@@ -532,8 +528,8 @@ local rows = setmetatable({}, { __index = function(t, i)
     row:SetCheckedTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD")
     row:SetScript("OnClick", function()
         if self.mainUI.difficultyScrollFrame.wishList then
-            self:ShowWishList(self.mainUI.difficultyScrollFrame.wishList,row.itemIndex)
-            AtlasLoot_CurrentWishList.Show.ListNum = row.itemIndex
+            AtlasLoot_CurrentWishList.selected = row.itemIndex
+            self:ShowWishList()
             self:ScrollFrameUpdate(nil,self.mainUI.difficultyScrollFrame.wishList)
         else
             self.ItemindexID = row.itemIndex

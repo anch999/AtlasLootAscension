@@ -2853,7 +2853,7 @@ AtlasLoot_Data["KarazhanCryptsTBC"] = {
 	{
 		Name = AL["Cynfael"],
 		WebID = {254401,"npc"},
-				{
+		{
 			{ itemID = 255169 }, --Twinglaive of the Vampire Council
 			{ itemID = 255212 }, --Twinglaive of Eternal Slumber
 			{ itemID = 259322 }, --Purified Vitae Chalice
