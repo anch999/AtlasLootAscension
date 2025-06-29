@@ -477,7 +477,7 @@ function self:ScrollFrameUpdate(hide,wishlist)
                 self.mainUI.difficultyScrollFrame.rows[i]:Hide()
             end
         end
-    elseif self.Difficulties then
+    else
         maxValue = #self.Difficulties[self.CurrentType]
         FauxScrollFrame_Update(self.mainUI.difficultyScrollFrame.scrollSlider, maxValue, MAX_ROWS, ROW_HEIGHT)
         offset = FauxScrollFrame_GetOffset(self.mainUI.difficultyScrollFrame.scrollSlider)
@@ -538,7 +538,6 @@ local rows = setmetatable({}, { __index = function(t, i)
             end
             self:ScrollFrameUpdate()
         end
-
     end)
 	if i == 1 then
 		row:SetPoint("TOPLEFT", self.mainUI.difficultyScrollFrame, 8, -8)

@@ -94,7 +94,7 @@ function AtlasLoot:InitializeItemFrame()
         end
 	end
 
-	self.itemframe.scrollBar = CreateFrame("ScrollFrame","AtlasLootDefaultFrameScroll", self.itemframe, "FauxScrollFrameTemplate")
+	self.itemframe.scrollBar = CreateFrame("ScrollFrame","AtlasLootItemFrameScroll", self.itemframe, "FauxScrollFrameTemplate")
 	self.itemframe.scrollBar:SetPoint("TOPLEFT", 0, -8)
 	self.itemframe.scrollBar:SetPoint("BOTTOMRIGHT", -30, 8)
 	self.itemframe.scrollBar:SetScript("OnVerticalScroll", function(scroll, offset)
@@ -449,6 +449,7 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 	if dataSource[dataID].Type then
 		self.type[dataSource[dataID].Type] = self.ItemindexID
 	end
+
 	-- Set current type
 	self.CurrentType = dataSource[dataID].Type or "Default"
 
