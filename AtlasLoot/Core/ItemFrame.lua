@@ -146,16 +146,16 @@ function AtlasLoot:GetItemConditionals(item, dataSource, dataID)
 	local itemID, recipeID
 	local show = true
 	local itemDif = self.ItemindexID or 3
-	
 
 	local itemType = item.Type or dataSource[dataID].Type
-	local minDif, maxDif = self:GetMinMaxDifficultys(itemType, item.minDifficulty)
+	local maxDif = self:GetMaxDifficulty(itemType, item.maxDifficulty)
+	local minDif = self:GetMinDifficulty(item.minDifficulty)
 
 	if maxDif and maxDif < itemDif then
 		itemDif = maxDif
 	end
 
-	if minDif and minDif <= itemDif then
+	if minDif and minDif > itemDif then
 		show = false
 	end
 
@@ -173,7 +173,7 @@ end
 
 -- Setup the button for the to be displayed item/spell
 function AtlasLoot:SetupButton(itemID, itemNumber, itemButton, dataSource, dataID, tablenum, dataSource_backup)
-	
+
 	local show = true
 	local text, extra
 	local itemName, itemQuality, itemSubType, itemEquipLoc, itemIcon
@@ -459,23 +459,21 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 		self:ScrollFrameUpdate()
 	end
 
+	self.dataSourceBackup = dataSource_backup
+
 	-- Finds the tablenumber to set where the difficulty slider should be.
-	local typeNumber = 1
 	local function findTypeNumber()
 		for i,v in ipairs(self.Difficulties[dataSource[dataID].Type]) do
 			if v[2] == self.ItemindexID then
-				typeNumber = i
 				return i
 			end
 		end
+		return 1
 	end
-
-	if dataSource_backup ~= "AtlasLootFilter" then
-		self.dataSourceBackup = dataSource_backup
-	end
+	local typeNumber = findTypeNumber()
 
 	-- Moves the difficulty scrollslider if the difficulty has changed
-	if dataSource[dataID].Type and difType and #self.Difficulties[dataSource[dataID].Type] > 5 and findTypeNumber() > 5 then
+	if dataSource[dataID].Type and difType and #self.Difficulties[dataSource[dataID].Type] > 5 and typeNumber > 5 then
 		local min, max = AtlasLootDefaultFrameScrollScrollBar:GetMinMaxValues()
 		AtlasLootDefaultFrameScrollScrollBar:SetValue(typeNumber * (max / #self.Difficulties[dataSource[dataID].Type]))
 	end
