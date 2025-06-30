@@ -85,8 +85,6 @@ function AtlasLoot:InitializeItemFrame()
 						local show = self:SetupButton(item.itemID or item.recipeID, itemNumber, button, dataSource, dataID, tablenum, dataSource_backup)
 						if show or (self.wishListLockState ~= "Locked" and item[1] == "gap") then
 							button:Show()
-						else
-							button:Hide()
 						end
 					end
 				end
@@ -464,14 +462,14 @@ function AtlasLoot:ShowItemsFrame(dataID, dataSource_backup, tablenum)
 
 	-- Finds the tablenumber to set where the difficulty slider should be.
 	local function findTypeNumber()
+		if not dataSource[dataID].Type and not self.Difficulties[dataSource[dataID].Type] then return end
 		for i,v in ipairs(self.Difficulties[dataSource[dataID].Type]) do
 			if v[2] == self.ItemindexID then
 				return i
 			end
 		end
-		return 1
 	end
-	local typeNumber = findTypeNumber()
+	local typeNumber = findTypeNumber() or 1
 
 	-- Moves the difficulty scrollslider if the difficulty has changed
 	if dataSource[dataID].Type and difType and #self.Difficulties[dataSource[dataID].Type] > 5 and typeNumber > 5 then
