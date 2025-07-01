@@ -352,6 +352,7 @@ function AtlasLoot:InitializeUI()
     end)
     self.mainUI.currentInstanceButton:SetText("Current Instance")
 
+    --Favorites Popup Frame
     self.mainUI.favoritesPopupFrame = CreateFrame("Frame", "AtlasLoot_FavoritesPopupFrame", self.mainUI.favoritesButton, "AtlasLootFrameTemplate")
     self.mainUI.favoritesPopupFrame:SetBackdrop({
         bgFile = "Interface\\DialogFrame\\UI-DialogBox-Background", tile = true, tileSize = 16,
@@ -370,7 +371,16 @@ function AtlasLoot:InitializeUI()
     self.mainUI.favoritesPopupFrame:Hide()
 
     --Favorites Buttons
-    local function presetcreate(preset,num)
+    local presetsize = 3
+    local function createFavoritesButton(num)
+        local preset = CreateFrame("Button", "AtlasLootDefaultFrame_Preset"..num, self.mainUI.favoritesPopupFrame, "AtlasLootDropMenuTemplate")
+
+        if num == 1 then
+            preset:SetPoint("LEFT", self.mainUI.favoritesPopupFrame, 8, 0)
+        else
+            preset:SetPoint("LEFT", self.mainUI.favoritesPopupFrame["preset"..(num-1)], "RIGHT", presetsize, 0)
+        end
+
         preset:SetSize(30,30)
         preset.tex = preset:CreateTexture(nil, "ARTWORK")
         preset.tex:SetPoint("CENTER")
@@ -409,24 +419,13 @@ function AtlasLoot:InitializeUI()
                 end
             end
         end)
+        self.mainUI.favoritesPopupFrame["preset"..num] = preset
     end
-    --QuickLook Button 1
-    local presetsize = 3
-    self.mainUI.favoritesPopupFrame.preset1 = CreateFrame("Button", "AtlasLootDefaultFrame_Preset1", self.mainUI.favoritesPopupFrame, "AtlasLootDropMenuTemplate")
-    self.mainUI.favoritesPopupFrame.preset1:SetPoint("LEFT", self.mainUI.favoritesPopupFrame, 8, 0)
-    presetcreate(self.mainUI.favoritesPopupFrame.preset1,1)
-    --QuickLook Button 2
-    self.mainUI.favoritesPopupFrame.preset2 = CreateFrame("Button", "AtlasLootDefaultFrame_Preset2", self.mainUI.favoritesPopupFrame, "AtlasLootDropMenuTemplate")
-    self.mainUI.favoritesPopupFrame.preset2:SetPoint("LEFT", "AtlasLootDefaultFrame_Preset1", "RIGHT", presetsize, 0)
-    presetcreate(self.mainUI.favoritesPopupFrame.preset2,2)
-    --QuickLook Button 3
-    self.mainUI.favoritesPopupFrame.preset3 = CreateFrame("Button", "AtlasLootDefaultFrame_Preset3", self.mainUI.favoritesPopupFrame, "AtlasLootDropMenuTemplate")
-    self.mainUI.favoritesPopupFrame.preset3:SetPoint("LEFT", "AtlasLootDefaultFrame_Preset2", "RIGHT", presetsize, 0)
-    presetcreate(self.mainUI.favoritesPopupFrame.preset3,3)
-    --QuickLook Button 4
-    self.mainUI.favoritesPopupFrame.preset4 = CreateFrame("Button", "AtlasLootDefaultFrame_Preset4", self.mainUI.favoritesPopupFrame, "AtlasLootDropMenuTemplate")
-    self.mainUI.favoritesPopupFrame.preset4:SetPoint("LEFT", "AtlasLootDefaultFrame_Preset3", "RIGHT", presetsize, 0)
-    presetcreate(self.mainUI.favoritesPopupFrame.preset4,4)
+    --Favorites Buttons
+
+    for i=1, 4 do
+        createFavoritesButton(i)
+    end
 
 ---------------------  Diffcuility ScrollFrame ----------------------------------
     local ROW_HEIGHT = 16   -- How tall is each row?
