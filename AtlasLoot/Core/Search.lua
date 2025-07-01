@@ -621,12 +621,9 @@ function AtlasLoot:AddItemToSearchResult(item, dataSource, dataID, tableNum)
             inResults[1][inResults[2]] = itemData
             inResults[1][inResults[2]].lootTable = {{dataID, dataSource, tableNum}, "Source"}
         else
-            if AtlasLootCharDB["SearchResult"][tablenum] == nil then
-                AtlasLootCharDB["SearchResult"][tablenum] = {Name = "Page "..tablenum,{},{}}
-            end
-            local pageSide = AtlasLootCharDB["SearchResult"][tablenum][1]
+            local pageSide = AtlasLootCharDB["SearchResult"][1][1]
             if count >= 16 then
-                pageSide = AtlasLootCharDB["SearchResult"][tablenum][2]
+                pageSide = AtlasLootCharDB["SearchResult"][1][2]
             end
             table.insert(pageSide, itemData)
 
@@ -634,7 +631,6 @@ function AtlasLoot:AddItemToSearchResult(item, dataSource, dataID, tableNum)
             AtlasLootCharDB["SearchResult"].SearchIDs[item.itemID] = {pageSide, #pageSide}
             count = count + 1
             if count == 31 then
-                tablenum = tablenum + 1
                 count = 1
             end
         end
@@ -693,7 +689,7 @@ end
 local itemList = {}
 
 function AtlasLoot:DoSearch(searchText)
-    AtlasLootCharDB["SearchResult"] = {Name = "Search Result" , Type = "Search"}
+    AtlasLootCharDB["SearchResult"] = {Name = "Search Result" , Type = "Search", {Name = AL["Search Results"],{},{}}}
     count = 1
     tablenum = 1
     showSearch = false
