@@ -59,10 +59,6 @@ function AtlasLoot:AddItemToWishList(typ, tableNum, data, show)
 	if show then
 		self:ShowWishList(tableNum)
 	else
-		if self:WishListCheck(itemID, nil, typ, tableNum) and not AtlasLootWishList.Options[playerName].AllowDuplicates then
-			DEFAULT_CHAT_FRAME:AddMessage(self.Colors.BLUE..AL["AtlasLoot"]..": "..self:FixText(itemName)..self.Colors.RED..AL[" already in the WishList!"]..self.Colors.WHITE.." ("..AtlasLootWishList[typ][tableNum].Name..")")
-			return
-		end
 		local tableCopy = self:CloneTable(data.item)
 		table.insert(AtlasLootWishList[typ][tableNum], tableCopy)
 		local tNum = #AtlasLootWishList[typ][tableNum]
@@ -324,11 +320,6 @@ function AtlasLoot:ShowWishListDropDown(btn, show, panelButton)
 						'checked', AtlasLootWishList.Options[playerName].AutoSortWishlist,
 						'func', function() AtlasLootWishList.Options[playerName].AutoSortWishlist = not AtlasLootWishList.Options[playerName].AutoSortWishlist end
 						)
-						self.Dewdrop:AddLine('textHeight', self.selectedProfile.txtSize,'textWidth', self.selectedProfile.txtSize,'isRadio', true,
-						'text', AL["Allow Duplicates"],
-						'checked', AtlasLootWishList.Options[playerName].AllowDuplicates,
-						'func', function() AtlasLootWishList.Options[playerName].AllowDuplicates = not AtlasLootWishList.Options[playerName].AllowDuplicates end
-						)
 					end
 				end
 				self.Dewdrop:AddLine(
@@ -575,11 +566,6 @@ function AtlasLoot:WishListOptionsOpen()
 					'text', AL["Auto Sort WishLists"],
 					'checked', AtlasLootWishList.Options[playerName].AutoSortWishlist,
 					'func', function() AtlasLootWishList.Options[playerName].AutoSortWishlist = not AtlasLootWishList.Options[playerName].AutoSortWishlist end
-					)
-					self.Dewdrop:AddLine('textHeight', self.selectedProfile.txtSize,'textWidth', self.selectedProfile.txtSize,'isRadio', true,
-					'text', AL["Allow Duplicates"],
-					'checked', AtlasLootWishList.Options[playerName].AllowDuplicates,
-					'func', function() AtlasLootWishList.Options[playerName].AllowDuplicates = not AtlasLootWishList.Options[playerName].AllowDuplicates end
 					)
 				end
 			end
