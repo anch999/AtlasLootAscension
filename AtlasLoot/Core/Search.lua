@@ -691,7 +691,6 @@ local itemList = {}
 function AtlasLoot:DoSearch(searchText)
     AtlasLootCharDB["SearchResult"] = {Name = "Search Result" , Type = "Search", {Name = AL["Search Results"],{},{}}}
     count = 1
-    tablenum = 1
     showSearch = false
 
     wipe(itemList)

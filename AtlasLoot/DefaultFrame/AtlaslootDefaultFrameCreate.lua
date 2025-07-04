@@ -370,55 +370,50 @@ function AtlasLoot:InitializeUI()
     self.mainUI.favoritesPopupFrame:SetSize(150, 40)
     self.mainUI.favoritesPopupFrame:Hide()
 
-    --Favorites Buttons
-    local presetsize = 3
-    local function createFavoritesButton(num)
-        local preset = CreateFrame("Button", "AtlasLootDefaultFrame_Preset"..num, self.mainUI.favoritesPopupFrame, "AtlasLootDropMenuTemplate")
+    function AtlasLoot:FavoritesOnLeave()
+        GameTooltip:Hide()
+        if not GetMouseFocus() then return end
+        local focus = GetMouseFocus():GetName()
+        if focus ~= "AtlasLoot_FavoritesPopupFrame" and focus ~= self.mainUI.favoritesButton and focus ~= "AtlasLootDefaultFrame_Preset1" and focus ~= "AtlasLootDefaultFrame_Preset2" and focus ~= "AtlasLootDefaultFrame_Preset3" and focus ~= "AtlasLootDefaultFrame_Preset4"  then
+            self.mainUI.favoritesPopupFrame:Hide()
+        end
+    end
 
+    function AtlasLoot:FavoritesOnEnter(button)
+        if AtlasLootCharDB.QuickLooks[button.num] then
+            self:SetGameTooltip(button,AtlasLootCharDB.QuickLooks[button.num][6])
+        end
+    end
+
+    function AtlasLoot:FavoritesOnClick(button, buttonClick)
+        if buttonClick == "RightButton" and IsAltKeyDown() then
+            self:SetFavorites(button.num)
+        else
+            local favButton = AtlasLootCharDB.QuickLooks[button.num]
+            if favButton and self:IsLootTableAvailable(favButton[4]) then
+                button.lastModule = favButton[4]
+                button.currentTable = favButton[5]
+                if favButton[2] == "AtlasLootWishList" then
+                    self:ShowWishList(favButton[3])
+                else
+                    self:ShowItemsFrame(favButton[1], favButton[2], favButton[3])
+                end
+            end
+        end
+    end
+
+    --Favorites Buttons
+    local function createFavoritesButton(num)
+        local preset = CreateFrame("Button", "AtlasLootDefaultFrame_Preset"..num, self.mainUI.favoritesPopupFrame, "AtlasLootFavoritesButtonTemplate")
+        local tex = AtlasUtil:GetAtlasInfo("services-number-"..num)
+            preset.tex:SetTexture(tex.filename)
+            preset.tex:SetTexCoord(tex.leftTexCoord, tex.rightTexCoord, tex.topTexCoord, tex.bottomTexCoord)
         if num == 1 then
             preset:SetPoint("LEFT", self.mainUI.favoritesPopupFrame, 8, 0)
         else
-            preset:SetPoint("LEFT", self.mainUI.favoritesPopupFrame["preset"..(num-1)], "RIGHT", presetsize, 0)
+            preset:SetPoint("LEFT", self.mainUI.favoritesPopupFrame["preset"..(num-1)], "RIGHT", 3, 0)
         end
-
-        preset:SetSize(30,30)
-        preset.tex = preset:CreateTexture(nil, "ARTWORK")
-        preset.tex:SetPoint("CENTER")
-        preset.Icon:Hide()
-        preset.Text:Hide()
-        local tex = AtlasUtil:GetAtlasInfo("services-number-"..num)
-        preset.tex:SetTexture(tex.filename)
-        preset.tex:SetTexCoord(tex.leftTexCoord, tex.rightTexCoord, tex.topTexCoord, tex.bottomTexCoord)
-        preset.tex:SetSize(25,25)
-        preset:SetScript("OnEnter", function(button)
-            if AtlasLootCharDB.QuickLooks[num] then
-                self:SetGameTooltip(button,AtlasLootCharDB.QuickLooks[num][6])
-            end
-        end)
-        preset:RegisterForClicks("LeftButtonDown","RightButtonDown")
-        preset:SetScript("OnLeave", function()
-            GameTooltip:Hide()
-            if not GetMouseFocus() then return end
-            local focus = GetMouseFocus():GetName()
-            if focus ~= "AtlasLoot_FavoritesPopupFrame" and focus ~= self.mainUI.favoritesButton and focus ~= "AtlasLootDefaultFrame_Preset1" and focus ~= "AtlasLootDefaultFrame_Preset2" and focus ~= "AtlasLootDefaultFrame_Preset3" and focus ~= "AtlasLootDefaultFrame_Preset4"  then
-                self.mainUI.favoritesPopupFrame:Hide()
-            end
-        end)
-        preset:SetScript("OnClick", function(button, buttonClick)
-            if buttonClick == "RightButton" and IsAltKeyDown() then
-                self:SetFavorites(num)
-            else
-                if AtlasLootCharDB.QuickLooks[num] and self:IsLootTableAvailable(AtlasLootCharDB.QuickLooks[num][4]) then
-                    button.lastModule = AtlasLootCharDB.QuickLooks[num][4]
-                    button.currentTable = AtlasLootCharDB.QuickLooks[num][5]
-                    if AtlasLootCharDB.QuickLooks[num][2] == "AtlasLootWishList" then
-                        self:ShowWishList(AtlasLootCharDB.QuickLooks[num][3])
-                    else
-                        self:ShowItemsFrame(AtlasLootCharDB.QuickLooks[num][1], AtlasLootCharDB.QuickLooks[num][2], AtlasLootCharDB.QuickLooks[num][3])
-                    end
-                end
-            end
-        end)
+        preset.num = num
         self.mainUI.favoritesPopupFrame["preset"..num] = preset
     end
     --Favorites Buttons
