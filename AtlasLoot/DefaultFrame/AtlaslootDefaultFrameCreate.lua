@@ -1,6 +1,11 @@
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
 local INDENT = "    "
+local backDrop = {
+        bgFile = "Interface\\DialogFrame\\UI-DialogBox-Background", tile = true, tileSize = 16,
+        edgeFile = "Interface\\Tooltips\\UI-Tooltip-Border", edgeSize = 16,
+        insets = { left = 4, right = 4, top = 4, bottom = 4 },
+    }
 
 function AtlasLoot:InitializeUI()
     --Main AtlasLoot Frame
@@ -49,18 +54,14 @@ function AtlasLoot:InitializeUI()
         self.Dewdrop:Close()
         self.mainUI.searchbox:ClearFocus()
     end)
-    self.mainUI.lootBackground:SetBackdrop({
-        bgFile = "Interface\\DialogFrame\\UI-DialogBox-Background", tile = true, tileSize = 16,
-        edgeFile = "Interface\\Tooltips\\UI-Tooltip-Border", edgeSize = 16,
-        insets = { left = 4, right = 4, top = 4, bottom = 4 },
-    })
+    self.mainUI.lootBackground:SetBackdrop(backDrop)
     self.mainUI.lootBackground:SetScript("OnMouseWheel", function(frame,delta)
-            if self.mainUI.nextbutton:IsVisible() and delta == -1 then
-                self.mainUI.nextbutton:Click()
-            end
-            if self.mainUI.prevbutton:IsVisible() and delta == 1 then
-                self.mainUI.prevbutton:Click()
-            end
+        if self.mainUI.nextbutton:IsVisible() and delta == -1 then
+            self.mainUI.nextbutton:Click()
+        end
+        if self.mainUI.prevbutton:IsVisible() and delta == 1 then
+            self.mainUI.prevbutton:Click()
+        end
     end)
     self.mainUI.lootBackground.Back = self.mainUI.lootBackground:CreateTexture("AtlasLootItemsFrame_LootBack", "BACKGROUND")
     self.mainUI.lootBackground.Back:SetAllPoints()
@@ -354,11 +355,7 @@ function AtlasLoot:InitializeUI()
 
     --Favorites Popup Frame
     self.mainUI.favoritesPopupFrame = CreateFrame("Frame", "AtlasLoot_FavoritesPopupFrame", self.mainUI.favoritesButton, "AtlasLootFrameTemplate")
-    self.mainUI.favoritesPopupFrame:SetBackdrop({
-        bgFile = "Interface\\DialogFrame\\UI-DialogBox-Background", tile = true, tileSize = 16,
-        edgeFile = "Interface\\Tooltips\\UI-Tooltip-Border", edgeSize = 16,
-        insets = { left = 4, right = 4, top = 4, bottom = 4 },
-    })
+    self.mainUI.favoritesPopupFrame:SetBackdrop(backDrop)
     self.mainUI.favoritesPopupFrame:EnableMouse()
     self.mainUI.favoritesPopupFrame:SetScript("OnLeave", function()
         local focus = GetMouseFocus():GetName()
@@ -370,56 +367,19 @@ function AtlasLoot:InitializeUI()
     self.mainUI.favoritesPopupFrame:SetSize(150, 40)
     self.mainUI.favoritesPopupFrame:Hide()
 
-    function AtlasLoot:FavoritesOnLeave()
-        GameTooltip:Hide()
-        if not GetMouseFocus() then return end
-        local focus = GetMouseFocus():GetName()
-        if focus ~= "AtlasLoot_FavoritesPopupFrame" and focus ~= self.mainUI.favoritesButton and focus ~= "AtlasLootDefaultFrame_Preset1" and focus ~= "AtlasLootDefaultFrame_Preset2" and focus ~= "AtlasLootDefaultFrame_Preset3" and focus ~= "AtlasLootDefaultFrame_Preset4"  then
-            self.mainUI.favoritesPopupFrame:Hide()
-        end
-    end
-
-    function AtlasLoot:FavoritesOnEnter(button)
-        if AtlasLootCharDB.QuickLooks[button.num] then
-            self:SetGameTooltip(button,AtlasLootCharDB.QuickLooks[button.num][6])
-        end
-    end
-
-    function AtlasLoot:FavoritesOnClick(button, buttonClick)
-        if buttonClick == "RightButton" and IsAltKeyDown() then
-            self:SetFavorites(button.num)
-        else
-            local favButton = AtlasLootCharDB.QuickLooks[button.num]
-            if favButton and self:IsLootTableAvailable(favButton[4]) then
-                button.lastModule = favButton[4]
-                button.currentTable = favButton[5]
-                if favButton[2] == "AtlasLootWishList" then
-                    self:ShowWishList(favButton[3])
-                else
-                    self:ShowItemsFrame(favButton[1], favButton[2], favButton[3])
-                end
-            end
-        end
-    end
-
     --Favorites Buttons
-    local function createFavoritesButton(num)
-        local preset = CreateFrame("Button", "AtlasLootDefaultFrame_Preset"..num, self.mainUI.favoritesPopupFrame, "AtlasLootFavoritesButtonTemplate")
-        local tex = AtlasUtil:GetAtlasInfo("services-number-"..num)
+    for i=1, 4 do
+        local preset = CreateFrame("Button", "AtlasLootDefaultFrame_Preset"..i, self.mainUI.favoritesPopupFrame, "AtlasLootFavoritesButtonTemplate")
+        local tex = AtlasUtil:GetAtlasInfo("services-number-"..i)
             preset.tex:SetTexture(tex.filename)
             preset.tex:SetTexCoord(tex.leftTexCoord, tex.rightTexCoord, tex.topTexCoord, tex.bottomTexCoord)
-        if num == 1 then
+        if i == 1 then
             preset:SetPoint("LEFT", self.mainUI.favoritesPopupFrame, 8, 0)
         else
-            preset:SetPoint("LEFT", self.mainUI.favoritesPopupFrame["preset"..(num-1)], "RIGHT", 3, 0)
+            preset:SetPoint("LEFT", self.mainUI.favoritesPopupFrame["preset"..(i-1)], "RIGHT", 3, 0)
         end
-        preset.num = num
-        self.mainUI.favoritesPopupFrame["preset"..num] = preset
-    end
-    --Favorites Buttons
-
-    for i=1, 4 do
-        createFavoritesButton(i)
+        preset.num = i
+        self.mainUI.favoritesPopupFrame["preset"..i] = preset
     end
 
 ---------------------  Diffcuility ScrollFrame ----------------------------------
@@ -430,11 +390,7 @@ function AtlasLoot:InitializeUI()
     self.mainUI.difficultyScrollFrame:EnableMouse(true)
     self.mainUI.difficultyScrollFrame:SetSize(265, ROW_HEIGHT * MAX_ROWS + 16)
     self.mainUI.difficultyScrollFrame:SetPoint("TOPRIGHT",self.mainUI,-30,-55.5)
-    self.mainUI.difficultyScrollFrame:SetBackdrop({
-        bgFile = "Interface\\DialogFrame\\UI-DialogBox-Background", tile = true, tileSize = 16,
-        edgeFile = "Interface\\Tooltips\\UI-Tooltip-Border", edgeSize = 16,
-        insets = { left = 4, right = 4, top = 4, bottom = 4 },
-    })
+    self.mainUI.difficultyScrollFrame:SetBackdrop(backDrop)
     self.mainUI.difficultyScrollFrame.Lable = self.mainUI.difficultyScrollFrame:CreateFontString("Atlasloot_HeaderLabel", "OVERLAY","GameFontNormal")
     self.mainUI.difficultyScrollFrame.Lable:SetPoint("TOPLEFT",self.mainUI.difficultyScrollFrame,10,-10)
     self.mainUI.difficultyScrollFrame.Lable:SetJustifyH("LEFT")
@@ -552,11 +508,7 @@ local MAX_ROWS2 = 26      -- How many rows can be shown at once?
     self.mainUI.lootTableScrollFrame:EnableMouseWheel(true)
     self.mainUI.lootTableScrollFrame:SetSize(265, ROW_HEIGHT * MAX_ROWS2 + 23)
     self.mainUI.lootTableScrollFrame:SetPoint("BOTTOMLEFT","Atlasloot_Difficulty_ScrollFrame",0,-449.5)
-    self.mainUI.lootTableScrollFrame:SetBackdrop({
-        bgFile = "Interface\\DialogFrame\\UI-DialogBox-Background", tile = true, tileSize = 16,
-        edgeFile = "Interface\\Tooltips\\UI-Tooltip-Border", edgeSize = 16,
-        insets = { left = 4, right = 4, top = 4, bottom = 4 },
-    })
+    self.mainUI.lootTableScrollFrame:SetBackdrop(backDrop)
     self.mainUI.lootTableScrollFrame.Back = self.mainUI.lootTableScrollFrame:CreateTexture("Atlasloot_SubTableFrame_Back", "BACKGROUND")
     self.mainUI.lootTableScrollFrame.Back:SetAllPoints()
     self.mainUI.lootTableScrollFrame.Back:SetSize(255, ROW_HEIGHT * MAX_ROWS2 + 13)

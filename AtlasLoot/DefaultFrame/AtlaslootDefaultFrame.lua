@@ -274,3 +274,35 @@ end
 function AtlasLoot:UpdateLootBrowserScale()
 	self.mainUI:SetScale(self.selectedProfile.LootBrowserScale)
 end
+
+function AtlasLoot:FavoritesOnLeave()
+        GameTooltip:Hide()
+        if not GetMouseFocus() then return end
+        local focus = GetMouseFocus():GetName()
+        if focus ~= "AtlasLoot_FavoritesPopupFrame" and focus ~= self.mainUI.favoritesButton and focus ~= "AtlasLootDefaultFrame_Preset1" and focus ~= "AtlasLootDefaultFrame_Preset2" and focus ~= "AtlasLootDefaultFrame_Preset3" and focus ~= "AtlasLootDefaultFrame_Preset4"  then
+            self.mainUI.favoritesPopupFrame:Hide()
+        end
+    end
+
+function AtlasLoot:FavoritesOnEnter(button)
+    if AtlasLootCharDB.QuickLooks[button.num] then
+        self:SetGameTooltip(button,AtlasLootCharDB.QuickLooks[button.num][6])
+    end
+end
+
+function AtlasLoot:FavoritesOnClick(button, buttonClick)
+    if buttonClick == "RightButton" and IsAltKeyDown() then
+        self:SetFavorites(button.num)
+    else
+        local favButton = AtlasLootCharDB.QuickLooks[button.num]
+        if favButton and self:IsLootTableAvailable(favButton[4]) then
+            button.lastModule = favButton[4]
+            button.currentTable = favButton[5]
+            if favButton[2] == "AtlasLootWishList" then
+                self:ShowWishList(favButton[3])
+            else
+                self:ShowItemsFrame(favButton[1], favButton[2], favButton[3])
+            end
+        end
+    end
+end
