@@ -196,15 +196,21 @@ end
 
 function AtlasLoot:BatchRequestVanity(itemList)
 	itemList = self:CloneTable(itemList)
-	  local function nextItem()
+	local duplicateList = {}
+	for _, id in pairs(itemList) do
+		duplicateList[id] = duplicateList[id] and duplicateList[id] + 1 or 1
+	end
+	local function nextItem()
         local task = tremove(itemList)
 		while task do
-            RequestDeliverVanityCollectionItem(task)
-			if not CA_IsSpellKnown(VANITY_ITEMS[task].learnedSpell) and not self:HasItem(task) then
+			RequestDeliverVanityCollectionItem(task)
+            local count = GetItemCount(task)
+			if not CA_IsSpellKnown(VANITY_ITEMS[task].learnedSpell) and (not count or (count and count < duplicateList[task])) then
 				tinsert(itemList, task)
 			end
-            return Timer.After(.2, nextItem)
+			return Timer.After(.2, nextItem)
         end
+		DEFAULT_CHAT_FRAME:AddMessage(self.Colors.BLUE..AL["AtlasLoot"]..": "..self.Colors.YELLOW..AL["Retrieving Vanity Items Completed!"])
     end
     return nextItem()
 end

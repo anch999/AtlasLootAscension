@@ -143,7 +143,7 @@ If someone types /atlasloot, bring up the options box
 function AtlasLoot:SlashCommand(msg)
 	msg = msg or ""
 
-	local cmd, arg1, arg2 = string.split(" ", msg, 3)
+	local cmd, arg1 = string.split(" ", msg, 2)
 	cmd = string.lower(cmd or "")
 
 	if cmd == "reset" then
@@ -151,13 +151,16 @@ function AtlasLoot:SlashCommand(msg)
 	elseif cmd == "options" then
 		self:OptionsToggle()
 	elseif cmd == "updatecache" and self.selectedProfile.isAdmin then
-		self:UpdateItemIDsDatabase(tonumber(arg1), tonumber(arg2))
+		local low, high = string.split(" ", arg1, 2)
+		self:UpdateItemIDsDatabase(tonumber(low), tonumber(high))
 	elseif cmd == "clearcache" and self.selectedProfile.isAdmin then
 		wipe(AtlasLootItemCache)
 	elseif cmd == "clearmerchantcache" and self.selectedProfile.isAdmin then
 		wipe(AtlasLootOtherIds)
 	elseif cmd == "news" then
 		self:OpenNewsFrame()
+	elseif cmd == "getwishlist" then
+		self:GetWishListVanityItems(arg1)
 	elseif cmd == "getmerchant" and self.selectedProfile.isAdmin then
 		self:GetMerchantItems(arg1)
 	elseif cmd == "admin" then

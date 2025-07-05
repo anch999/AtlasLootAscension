@@ -102,10 +102,27 @@ function AtlasLoot:MoveWishlistItem(pos, itemNum)
 		table.remove(list, itemNum)
 	end
 	self:ShowWishList( self.mainUI.lootTableScrollFrame.tablenum)
-
 end
 
---Sort wishlist
+-- Summon Vanity Off wishlist
+function AtlasLoot:GetWishListVanityItems(name)
+	local itemList = {}
+	for _, wishlist in pairs(AtlasLootWishList["Own"]) do
+		if wishlist.Name == name then
+			if type(wishlist) == "table" then
+				for _, item in pairs(wishlist) do
+					local vanityData = VANITY_ITEMS[item.itemID]
+					if item.itemID and vanityData and C_VanityCollection.IsCollectionItemOwned(item.itemID) and (vanityData.learnedSpell == 0 or not CA_IsSpellKnown(vanityData.learnedSpell)) then
+						table.insert(itemList, item.itemID)
+					end
+				end
+			end
+		end
+	end
+	self:BatchRequestVanity(itemList)
+end
+
+-- Sort wishlist
 function AtlasLoot:SortWishList(refresh,type,tNumb)
 	local sorted = {}
 	local name = AtlasLootWishList[type][tNumb].Name
