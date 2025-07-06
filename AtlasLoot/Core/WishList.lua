@@ -990,12 +990,12 @@ end
 
 function AtlasLoot:ShareMenu(button)
 	local menuList = { [1] = {
-		{text = AL["Send to Player"], func = function() self:ShareWishList() end, notCheckable = true, closeWhenClicked = true},
-		{text = AL["Export to String"], func = function() self:ExportString() end, notCheckable = true, closeWhenClicked = true},
-		{text = AL["Import String"], func = function() StaticPopup_Show("ATLASLOOT_IMPORT_WISHLIST") end, notCheckable = true, closeWhenClicked = true},
+		{text = AL["Send to Player"], func = function() self:ShareWishList() end, closeWhenClicked = true},
+		{text = AL["Export to String"], func = function() self:ExportString() end, closeWhenClicked = true},
+		{text = AL["Import String"], func = function() StaticPopup_Show("ATLASLOOT_IMPORT_WISHLIST") end, closeWhenClicked = true},
 		{close = true, divider = 35}
 	} }
-    self:OpenDewdropMenu(button, menuList)
+    self:OpenDewdropMenu(button, nil, menuList)
 end
 
 --[[
@@ -1013,7 +1013,7 @@ StaticPopupDialogs["ATLASLOOT_IMPORT_WISHLIST"] = {
 	OnAccept = function(self)
 		local data = string.sub(_G[self:GetName().."EditBox"]:GetText(), 3)
 		AtlasLoot:GetWishList(data)
-		DEFAULT_CHAT_FRAME:AddMessage(self.Colors.BLUE..AL["AtlasLoot"]..": "..self.Colors.YELLOW..AL["Wishlist Imported Successfully"])
+		DEFAULT_CHAT_FRAME:AddMessage(AtlasLoot.Colors.BLUE..AL["AtlasLoot"]..": "..AtlasLoot.Colors.YELLOW..AL["Wishlist Imported Successfully"])
 	end,
 	hasEditBox = 1,
 	timeout = 0,

@@ -3,12 +3,29 @@ local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
 
 --------------------------------- DewDrop Dropdownmenu ---------------------------------
 -- Used to create a dewdrop menu from a table
-function AtlasLoot:OpenDewdropMenu(frame, menuList, skipRegister)
+function AtlasLoot:OpenDewdropMenu(frame, skipRegister, ...)
+	local menuTables = {...}
+	local menuList = menuTables[1]
+	if #menuTables > 1 then
+		-- if more then 1 table is sent combine them into 1 table
+		for i, v in pairs(menuTables) do
+			if i ~= 1 then
+				for level, list in pairs(v) do
+					for _, entry in pairs(list) do
+						menuList[level] = menuList[level] or {}
+						table.insert(menuList[level], entry)
+					end
+				end
+			end
+		end
+	end
+
 	if self.Dewdrop:IsOpen(frame) then self.Dewdrop:Close() return end
 	if not skipRegister then
 		self.Dewdrop:Register(frame,
 			'point', function(parent)
-				return "TOP", "BOTTOM"
+				local point1, _, point2 = self:GetTipAnchor(frame)
+      			return point1, point2
 			end,
 			'children', function(level, value)
 			for _, menu in pairs(menuList[level]) do
@@ -21,14 +38,16 @@ function AtlasLoot:OpenDewdropMenu(frame, menuList, skipRegister)
 						'isTitle', true,
 						'notCheckable', true
 					)
-				else
+				elseif menu.show or menu.show == nil then
+					local notCheckable = menu.showCheck and false or true
 					self.Dewdrop:AddLine(
 					'text', menu.text,
 					'func', menu.func,
+					'isTitle', menu.isTitle,
 					'closeWhenClicked', menu.closeWhenClicked,
 					'textHeight', menu.textHeight or self.selectedProfile.txtSize,
 					'textWidth', menu.textWidth or self.selectedProfile.txtSize,
-					'notCheckable', menu.notCheckable,
+					'notCheckable', notCheckable,
 					'tooltip', menu.tooltip,
 					'secure', menu.secure,
 					'icon', menu.icon
@@ -102,11 +121,11 @@ end
 --drop down map menu
 function AtlasLoot:OpenDB(frame, type, text)
     local menuList = { [1] = {
-        {text = self.Colors.ORANGE..AL["Open AscensionDB To NPC"], func = function() self:OpenDBURL(text , type) end, notCheckable = true, closeWhenClicked = true, textHeight = 12, textWidth = 12},
+        {text = self.Colors.ORANGE..AL["Open AscensionDB To NPC"], func = function() self:OpenDBURL(text , type) end, closeWhenClicked = true},
 		{close = true, divider = 35},
 		}
 	}
-    self:OpenDewdropMenu(frame, menuList)
+    self:OpenDewdropMenu(frame, nil, menuList)
 end
 
 local itemEquipLocConversion = {

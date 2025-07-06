@@ -244,105 +244,23 @@ function AtlasLoot:DisplayHelp()
 		help.text:SetText(text)
 end
 
-AtlasLoot.worldFrameHook = {}
 function AtlasLoot:OpenSettingQuickMenu(button)
     GameTooltip:Hide()
-    if self.Dewdrop:Open(button) then self.Dewdrop:Close() return end
-    self.Dewdrop:Open(button,
-    'point', function(parent)
-      local point1, _, point2 = self:GetTipAnchor(button)
-      return point1, point2
-    end,
-    'children', function(level, value)
-        self:QuickSettingsMenu(level, value)
-    end)
-    if not self.worldFrameHook[button:GetName()] then
-        WorldFrame:HookScript("OnEnter", function()
-        if self.Dewdrop:IsOpen(button) then
-            self.Dewdrop:Close()
-        end
-    end)
-    self.worldFrameHook[button:GetName()] = true
-    end
-end
-
-function AtlasLoot:QuickSettingsMenu(level, value)
-    if level == 1 then
-        self.Dewdrop:AddLine(
-            'textHeight', self.selectedProfile.txtSize,
-            'textWidth', self.selectedProfile.txtSize,
-            'text', "Quick Settings",
-            'isTitle', true,
-            'notCheckable', true
-        )
-        self.Dewdrop:AddLine(
-            'textHeight', self.selectedProfile.txtSize,
-            'textWidth', self.selectedProfile.txtSize,
-            'text', "News/Patch Notes",
-            'tooltipTitle', "Open the news/patch notes ui",
-            'notCheckable', true,
-            'closeWhenClicked', true,
-            'func', function() self:OpenNewsFrame() end
-        )
-        self.Dewdrop:AddLine(
-            'textHeight', self.selectedProfile.txtSize,
-            'textWidth', self.selectedProfile.txtSize,
-            'text', "Learn vanity",
-            'tooltipTitle', "Learn all unknown vanity spells",
-            'notCheckable', true,
-            'closeWhenClicked', true,
-            'func', function() self:LearnAllUnknownVanitySpells() end
-        )
-        if self.selectedProfile.isAdmin then
-            self:AddDividerLine(35)
-            self.Dewdrop:AddLine(
-                'textHeight', self.selectedProfile.txtSize,
-                'textWidth', self.selectedProfile.txtSize,
-                'text', "Admin Menu",
-                'isTitle', true,
-                'notCheckable', true
-            )
-            self.Dewdrop:AddLine(
-                'textHeight', self.selectedProfile.txtSize,
-                'textWidth', self.selectedProfile.txtSize,
-                'text', "Update ItemId Database",
-                'tooltipTitle', "Updates the item id variations cache",
-                'notCheckable', true,
-                'closeWhenClicked', true,
-                'func', function() self:UpdateItemIDsDatabase() end
-            )
-            self.Dewdrop:AddLine(
-                'textHeight', self.selectedProfile.txtSize,
-                'textWidth', self.selectedProfile.txtSize,
-                'text', "Wipe ItemIds Database",
-                'tooltipTitle', "Wipe the item id variations cache",
-                'notCheckable', true,
-                'closeWhenClicked', true,
-                'func', function() wipe(AtlasLootItemCache) end
-            )
-            self.Dewdrop:AddLine(
-                'textHeight', self.selectedProfile.txtSize,
-                'textWidth', self.selectedProfile.txtSize,
-                'text', "Pull Merchant items",
-                'tooltipTitle', "Cache all off the items in the currently open merchant window",
-                'notCheckable', true,
-                'closeWhenClicked', true,
-                'func', function() self:GetMerchantItems() end
-            )
-            self.Dewdrop:AddLine(
-                'textHeight', self.selectedProfile.txtSize,
-                'textWidth', self.selectedProfile.txtSize,
-                'text', "Wipe Merchant Cache",
-                'tooltipTitle', "Wipe the item merchant cache",
-                'notCheckable', true,
-                'closeWhenClicked', true,
-                'func', function() wipe(AtlasLootOtherIds) end
-            )
-        end 
-        self:CloseDewDrop(true, 35)
-    elseif level == 2 then
-        self:CloseDewDrop(true, 40)
-    end
+    local admin = self.selectedProfile.isAdmin
+    local menuList = {
+        [1] = {
+        {text = AL["Quick Settings"], isTitle = true},
+        {text = AL["News/Patch Notes"], tooltip = "Open the news/patch notes ui", func = function() self:OpenNewsFrame() end, closeWhenClicked = true},
+        {text = AL["Learn vanity"], tooltip = "Learn all unknown vanity spells", func = function() self:LearnAllUnknownVanitySpells() end, closeWhenClicked = true},
+        {divider = 35, show = admin},
+        {text = AL["Admin Menu"], isTitle = true, show = admin},
+        {text = AL["Update ItemId Database"], tooltip = "Updates the item id variations cache",func = function() self:UpdateItemIDsDatabase() end, closeWhenClicked = true, show = admin},
+        {text = AL["Wipe ItemIds Database"], tooltip = "Wipe the item id variations cache", func = function() wipe(AtlasLootItemCache) end, closeWhenClicked = true, show = admin},
+        {text = AL["Pull Merchant items"], tooltip = "Cache all off the items in the currently open merchant window", func = function() self:GetMerchantItems() end, closeWhenClicked = true, show = admin},
+        {text = AL["Wipe Merchant Cache"], tooltip = "Wipe the item merchant cache", func = function() wipe(AtlasLootOtherIds) end, closeWhenClicked = true, show = admin},
+        {close = true, divider = 35}
+        }}
+    self:OpenDewdropMenu(button, nil, menuList)
 end
 
 StaticPopupDialogs["ATLASLOOT_ADD_PROFILE"] = {

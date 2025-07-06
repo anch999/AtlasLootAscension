@@ -227,8 +227,7 @@ end
 function AtlasLoot:MapMenuOpen(frame)
     local mapID = self.CurrentMap
     local map = AtlasLoot_MapData[mapID]
-
-    local menuList = { [1] = {} }
+    local zones = {[1] = {}}
         for i,v in ipairs(map) do
             local text
             if v[1].Zone then
@@ -236,12 +235,13 @@ function AtlasLoot:MapMenuOpen(frame)
             else
                 text = v[1][1] or ""
             end
-            tinsert(menuList[1], {text = self.Colors.WHITE..text, func = function() self:MapOnShow(mapID, i, true) end, notCheckable = true, closeWhenClicked = true, textHeight = 12, textWidth = 12})
+            tinsert(zones[1], {text = self.Colors.WHITE..text, func = function() self:MapOnShow(mapID, i, true) end, closeWhenClicked = true})
         end
+    local menuList = { [1] = {
+        {divider = 35},
+        {text = self.Colors.ORANGE..AL["Open AscensionDB To Zone Map"], func = function() self:OpenDBURL(AtlasLoot_MapData[self.CurrentMap].ZoneName[2] , "zone") end, closeWhenClicked = true},
+		{close = true, divider = 35}
+    }}
 
-        tinsert(menuList[1], {divider = 35})
-        tinsert(menuList[1], {text = self.Colors.ORANGE..AL["Open AscensionDB To Zone Map"], func = function() self:OpenDBURL(AtlasLoot_MapData[self.CurrentMap].ZoneName[2] , "zone") end, notCheckable = true, closeWhenClicked = true, textHeight = 12, textWidth = 12})
-		tinsert(menuList[1], {close = true, divider = 35})
-
-    self:OpenDewdropMenu(frame, menuList)
+    self:OpenDewdropMenu(frame, nil, zones, menuList)
 end

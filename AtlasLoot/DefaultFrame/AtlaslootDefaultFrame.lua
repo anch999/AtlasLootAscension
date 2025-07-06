@@ -136,13 +136,13 @@ function AtlasLoot:DewdropExpansionMenuOpen(btn)
         if AtlasLoot_ExpansionMenu then
             for i,v in ipairs(AtlasLoot_ExpansionMenu) do
                 if type(v) == "table" then
-                    tinsert(menuList[1], {text = v[1], func = function() self:DewdropExpansionMenuClick(v[2], v[1]) end, notCheckable = true, closeWhenClicked = true, textHeight = 12, textWidth = 12})
+                    tinsert(menuList[1], {text = v[1], func = function() self:DewdropExpansionMenuClick(v[2], v[1]) end, closeWhenClicked = true})
                 end
             end
             tinsert(menuList[1], {close = true, divider = 35})
         end
     end
-    expansionMenuLoaded = self:OpenDewdropMenu(btn, menuList, expansionMenuLoaded)
+    expansionMenuLoaded = self:OpenDewdropMenu(btn, expansionMenuLoaded, menuList)
 end
 --[[
 AtlasLoot:DewdropSubMenuOpen(loottable):
