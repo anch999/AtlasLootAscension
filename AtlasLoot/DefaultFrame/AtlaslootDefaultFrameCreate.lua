@@ -165,7 +165,7 @@ function AtlasLoot:InitializeUI()
     self.mainUI.wishlistShareButton = CreateFrame("Button", "AtlasLootItemsFrame_Wishlist_Share", self.itemframe, "OptionsButtonTemplate")
     self.mainUI.wishlistShareButton:SetPoint("BOTTOM", self.mainUI.wishlistOptionsButton, "BOTTOM",100,0)
     self.mainUI.wishlistShareButton:SetText(AL["Share"])
-    self.mainUI.wishlistShareButton:SetScript("OnClick", function() self:ShareWishList() end)
+    self.mainUI.wishlistShareButton:SetScript("OnClick", function(button) self:ShareMenu(button) end)
 
     -- Wishlist Share button
     self.mainUI.wishlistLearnVanityButton = CreateFrame("Button", "AtlasLootItemsFrame_Wishlist_Vanity_Learn", self.itemframe, "OptionsButtonTemplate")

@@ -878,13 +878,6 @@ function AtlasLoot:GetWishList(wlstrg,sendername)
 	end
 	local success, wltab = AtlasLoot:Deserialize(wlstrg)
 	if success then
-		for i,v in ipairs(wltab) do
-			if v[8] then
-				v[8] = v[8].."|"..v[9].."|"..v[10]
-				table.remove(v,9)
-				table.remove(v,10)
-			end
-		end
 		table.insert(AtlasLootWishList.Shared,wltab)
 	end
 end
@@ -982,6 +975,45 @@ StaticPopupDialogs["ATLASLOOT_ADD_CUSTOMHEADER"] = {
 	OnAccept = function(self)
 		local text = _G[self:GetName().."EditBox"]:GetText()
 		AtlasLoot:AddItemCustomHeader(StaticPopupDialogs.ATLASLOOT_ADD_CUSTOMHEADER.num,text)
+	end,
+	hasEditBox = 1,
+	timeout = 0,
+	whileDead = 1,
+	hideOnEscape = 1
+}
+
+function AtlasLoot:ExportString()
+	local listType = (AtlasLoot_CurrentWishList.selected == 2 and "Shared") or "Own"
+	Internal_CopyToClipboard("AL:"..self:Serialize(AtlasLootWishList[listType][AtlasLoot.mainUI.lootTableScrollFrame.tablenum]))
+	DEFAULT_CHAT_FRAME:AddMessage(self.Colors.BLUE..AL["AtlasLoot"]..": "..self.Colors.YELLOW..AL["Wishlist Exported to clipboard"])
+end
+
+function AtlasLoot:ShareMenu(button)
+	local menuList = { [1] = {
+		{text = AL["Send to Player"], func = function() self:ShareWishList() end, notCheckable = true, closeWhenClicked = true},
+		{text = AL["Export to String"], func = function() self:ExportString() end, notCheckable = true, closeWhenClicked = true},
+		{text = AL["Import String"], func = function() StaticPopup_Show("ATLASLOOT_IMPORT_WISHLIST") end, notCheckable = true, closeWhenClicked = true},
+		{close = true, divider = 35}
+	} }
+    self:OpenDewdropMenu(button, menuList)
+end
+
+--[[
+StaticPopupDialogs["MYSTICMAESTRO_IMPORT_SHOPPINGLIST"]
+This is shown, if you want too import an EnchantList
+]]
+StaticPopupDialogs["ATLASLOOT_IMPORT_WISHLIST"] = {
+	text = "Paste WishList String To Import",
+	button1 = "Import",
+	button2 = "Cancel",
+	OnShow = function(self)
+		AtlasLoot.Dewdrop:Close()
+		self:SetFrameStrata("TOOLTIP")
+	end,
+	OnAccept = function(self)
+		local data = string.sub(_G[self:GetName().."EditBox"]:GetText(), 3)
+		AtlasLoot:GetWishList(data)
+		DEFAULT_CHAT_FRAME:AddMessage(self.Colors.BLUE..AL["AtlasLoot"]..": "..self.Colors.YELLOW..AL["Wishlist Imported Successfully"])
 	end,
 	hasEditBox = 1,
 	timeout = 0,

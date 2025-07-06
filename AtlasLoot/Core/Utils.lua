@@ -11,14 +11,13 @@ function AtlasLoot:OpenDewdropMenu(frame, menuList, skipRegister)
 				return "TOP", "BOTTOM"
 			end,
 			'children', function(level, value)
-				local altar
 			for _, menu in pairs(menuList[level]) do
 				if menu.divider then
 					local text = self.Colors.WHITE.."----------------------------------------------------------------------------------------------------"
 					self.Dewdrop:AddLine(
 						'text' , text:sub(1, menu.divider),
-						'textHeight', 13,
-						'textWidth', 13,
+						'textHeight', self.selectedProfile.txtSize+1,
+						'textWidth', self.selectedProfile.txtSize+1,
 						'isTitle', true,
 						'notCheckable', true
 					)
@@ -27,8 +26,8 @@ function AtlasLoot:OpenDewdropMenu(frame, menuList, skipRegister)
 					'text', menu.text,
 					'func', menu.func,
 					'closeWhenClicked', menu.closeWhenClicked,
-					'textHeight', menu.textHeight,
-					'textWidth', menu.textWidth,
+					'textHeight', menu.textHeight or self.selectedProfile.txtSize,
+					'textWidth', menu.textWidth or self.selectedProfile.txtSize,
 					'notCheckable', menu.notCheckable,
 					'tooltip', menu.tooltip,
 					'secure', menu.secure,
