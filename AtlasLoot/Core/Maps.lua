@@ -235,13 +235,12 @@ function AtlasLoot:MapMenuOpen(frame)
             else
                 text = v[1][1] or ""
             end
-            tinsert(zones[1], {text = self.Colors.WHITE..text, func = function() self:MapOnShow(mapID, i, true) end, closeWhenClicked = true})
+            tinsert(zones[1], {text = self.Colors.WHITE..text, func = function() self:MapOnShow(mapID, i, true) end})
         end
-    local menuList = { [1] = {
-        {divider = 35},
-        {text = self.Colors.ORANGE..AL["Open AscensionDB To Zone Map"], func = function() self:OpenDBURL(AtlasLoot_MapData[self.CurrentMap].ZoneName[2] , "zone") end, closeWhenClicked = true},
-		{close = true, divider = 35}
+    local menuList = { 
+    {
+        {text = self.Colors.ORANGE..AL["Open AscensionDB To Zone Map"], divider = true, func = function() self:OpenDBURL(AtlasLoot_MapData[self.CurrentMap].ZoneName[2] , "zone") end},
     }}
 
-    self:OpenDewdropMenu(frame, nil, zones, menuList)
+    self:OpenDewdropMenu(frame, zones, menuList)
 end

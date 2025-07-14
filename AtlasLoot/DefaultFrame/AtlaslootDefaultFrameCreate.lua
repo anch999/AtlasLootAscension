@@ -208,7 +208,7 @@ function AtlasLoot:InitializeUI()
     self.mainUI.submenuButton:SetPoint("TOP", self.mainUI.lootBackground,"TOP",56,30)
     self.mainUI.submenuButton.Lable = self.mainUI.submenuButton:CreateFontString(nil, "OVERLAY","GameFontNormal")
     self.mainUI.submenuButton.Lable:SetPoint("TOP",self.mainUI.submenuButton,"BOTTOM",0,42)
-    self.mainUI.submenuButton.Lable:SetText("Select Subcategory")
+    self.mainUI.submenuButton.Lable:SetText("Select Category")
     self.mainUI.submenuButton.Lable:Show()
     self.mainUI.submenuButton:SetScript("OnClick", function() self:DewdropSubMenuOpen(AtlasLoot_SubMenus[self.currentTable]) end)
 

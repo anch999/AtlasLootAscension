@@ -248,19 +248,17 @@ function AtlasLoot:OpenSettingQuickMenu(button)
     GameTooltip:Hide()
     local admin = self.selectedProfile.isAdmin
     local menuList = {
-        [1] = {
-        {text = AL["Quick Settings"], isTitle = true},
-        {text = AL["News/Patch Notes"], tooltip = "Open the news/patch notes ui", func = function() self:OpenNewsFrame() end, closeWhenClicked = true},
-        {text = AL["Learn vanity"], tooltip = "Learn all unknown vanity spells", func = function() self:LearnAllUnknownVanitySpells() end, closeWhenClicked = true},
-        {divider = 35, show = admin},
-        {text = AL["Admin Menu"], isTitle = true, show = admin},
-        {text = AL["Update ItemId Database"], tooltip = "Updates the item id variations cache",func = function() self:UpdateItemIDsDatabase() end, closeWhenClicked = true, show = admin},
-        {text = AL["Wipe ItemIds Database"], tooltip = "Wipe the item id variations cache", func = function() wipe(AtlasLootItemCache) end, closeWhenClicked = true, show = admin},
-        {text = AL["Pull Merchant items"], tooltip = "Cache all off the items in the currently open merchant window", func = function() self:GetMerchantItems() end, closeWhenClicked = true, show = admin},
-        {text = AL["Wipe Merchant Cache"], tooltip = "Wipe the item merchant cache", func = function() wipe(AtlasLootOtherIds) end, closeWhenClicked = true, show = admin},
-        {close = true, divider = 35}
+        {
+            {text = AL["Quick Settings"], isTitle = true},
+            {text = AL["News/Patch Notes"], tooltip = "Open the news/patch notes ui", func = function() self:OpenNewsFrame() end},
+            {text = AL["Learn vanity"], tooltip = "Learn all unknown vanity spells", func = function() self:LearnAllUnknownVanitySpells() end},
+            {text = AL["Admin Menu"], isTitle = true, show = admin, divider = true},
+            {text = AL["Update ItemId Database"], tooltip = "Updates the item id variations cache",func = function() self:UpdateItemIDsDatabase() end, show = admin},
+            {text = AL["Wipe ItemIds Database"], tooltip = "Wipe the item id variations cache", func = function() wipe(AtlasLootItemCache) end, show = admin},
+            {text = AL["Pull Merchant items"], tooltip = "Cache all off the items in the currently open merchant window", func = function() self:GetMerchantItems() end, show = admin},
+            {text = AL["Wipe Merchant Cache"], tooltip = "Wipe the item merchant cache", func = function() wipe(AtlasLootOtherIds) end, show = admin},
         }}
-    self:OpenDewdropMenu(button, nil, menuList)
+    self:OpenDewdropMenu(button, menuList)
 end
 
 StaticPopupDialogs["ATLASLOOT_ADD_PROFILE"] = {

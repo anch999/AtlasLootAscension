@@ -55,7 +55,6 @@ end
 --Add item too wishlist or show the selected wishlist
 function AtlasLoot:AddItemToWishList(typ, tableNum, data, show)
 	local itemName = data.name
-	local itemID = data.itemID
 	if show then
 		self:ShowWishList(tableNum)
 	else
@@ -218,145 +217,59 @@ function AtlasLoot:ShowWishListDropDown(btn, show, panelButton)
 		self:AddItemToWishList("Own", AtlasLootWishList.Options[playerName].DefaultWishList[3])
 		return
 	else
-		if self.Dewdrop:IsOpen(btn) then
-			self.Dewdrop:Close(1)
-		else
-			local setOptions = function(level, value)
-				if level == 1 then
-					self.Dewdrop:AddLine(
-						"text", AL["Own Wishlists"],
-						"tooltipTitle", AL["Own Wishlists"],
-						"value", "OwnWishlists",
-						"arg1", "1",
-						"hasArrow", true,
-						'textHeight', self.selectedProfile.txtSize,
-						'textWidth', self.selectedProfile.txtSize,
-						"notCheckable", true
-					)
-					self.Dewdrop:AddLine(
-						"text", AL["Shared Wishlists"],
-						"tooltipTitle", AL["Shared Wishlists"],
-						"value", "SharedWishlists",
-						"arg1", "1",
-						"hasArrow", true,
-						'textHeight', self.selectedProfile.txtSize,
-						'textWidth', self.selectedProfile.txtSize,
-						"notCheckable", true
-					)
-					self.Dewdrop:AddLine(
-						"text", AL["Add Wishlist"],
-						"func", function() self:AddWishList() end,
-						'closeWhenClicked', true,
-						'textHeight', self.selectedProfile.txtSize,
-						'textWidth', self.selectedProfile.txtSize,
-						"notCheckable", true
-					)
-					self.Dewdrop:AddLine(
-						"text", AL["Settings"],
-						'textHeight', self.selectedProfile.txtSize,
-						'textWidth', self.selectedProfile.txtSize,
-						'value', "Settings",
-						'hasArrow', true,
-						"notCheckable", true
-					)
-				elseif level == 2 then
-					if value == "OwnWishlists" then
-						for k,v in pairs(AtlasLootWishList.Own) do
-							if type(v) == "table" then
-								self.Dewdrop:AddLine(
-									"text", v.Name,
-									"tooltipTitle", v.Name,
-									"func", function() self:AddItemToWishList("Own", k, "", show) end,
-									'textHeight', self.selectedProfile.txtSize,
-									'textWidth', self.selectedProfile.txtSize,
-									'closeWhenClicked', true,
-									"notCheckable", true
-								)
-							end
-						end
-					elseif value == "SharedWishlists" then
-						for k,v in pairs(AtlasLootWishList.Shared) do
-							if type(v) == "table" then
-								self.Dewdrop:AddLine(
-									"text", v.Name,
-									"tooltipTitle", v.Name,
-									"func", function() self:AddItemToWishList("Own", k, "", show) end,
-									'textHeight', self.selectedProfile.txtSize,
-									'textWidth', self.selectedProfile.txtSize,
-									'closeWhenClicked', true,
-									"notCheckable", true
-								)
-							end
-						end
-					elseif value == "Settings" then
-						self.Dewdrop:AddLine('textHeight', self.selectedProfile.txtSize,'textWidth', self.selectedProfile.txtSize,'isRadio', true,
-							'text', AL["Mark items in loot tables"],
-							'checked', AtlasLootWishList.Options[playerName].Mark,
-							'func', function()
-								if AtlasLootWishList.Options[playerName].Mark then
-									AtlasLootWishList.Options[playerName].Mark = false
-								else
-									AtlasLootWishList.Options[playerName].Mark = true
-								end
-							end
-						)
-						self.Dewdrop:AddLine('textHeight', self.selectedProfile.txtSize,'textWidth', self.selectedProfile.txtSize,'isRadio', true,
-						'text', AL["Mark items from own Wishlist"],
-						'checked', AtlasLootWishList.Options[playerName].markInTable == "own" and true or false,
-						'func', function() 
-								if AtlasLootWishList.Options[playerName].markInTable == "own" then
-									AtlasLootWishList.Options[playerName].markInTable = "all"
-								else
-									AtlasLootWishList.Options[playerName].markInTable = "own"
-								end
-							end
-						)
-						self.Dewdrop:AddLine('textHeight', self.selectedProfile.txtSize,'textWidth', self.selectedProfile.txtSize,'isRadio', true,
-						'text', AL["Mark items from all Wishlists"],
-						'checked', AtlasLootWishList.Options[playerName].markInTable == "all" and true or false,
-						'func', function()
-								if AtlasLootWishList.Options[playerName].markInTable == "own" then
-									AtlasLootWishList.Options[playerName].markInTable = "all"
-								else
-									AtlasLootWishList.Options[playerName].markInTable = "own"
-								end
-							end
-						)
-						self.Dewdrop:AddLine('textHeight', self.selectedProfile.txtSize,'textWidth', self.selectedProfile.txtSize,'isRadio', true,
-						'text', AL["Enable Wishlist Sharing"],
-						'checked', AtlasLootWishList.Options[playerName]["AllowShareWishlist"],
-						'func', function() AtlasLootWishList.Options[playerName]["AllowShareWishlist"] = not AtlasLootWishList.Options[playerName]["AllowShareWishlist"] end
-						)
-						self.Dewdrop:AddLine('textHeight', self.selectedProfile.txtSize,'textWidth', self.selectedProfile.txtSize,'isRadio', true,
-						'text', AL["Auto reject in combat"],
-						'checked', AtlasLootWishList.Options[playerName]["AllowShareWishlist"],
-						'func', function() AtlasLootWishList.Options[playerName].AllowShareWishlistInCombat = not AtlasLootWishList.Options[playerName]["AllowShareWishlistInCombat"] end
-						)
-						self.Dewdrop:AddLine('textHeight', self.selectedProfile.txtSize,'textWidth', self.selectedProfile.txtSize,'isRadio', true,
-						'text', AL["Auto Sort WishLists"],
-						'checked', AtlasLootWishList.Options[playerName].AutoSortWishlist,
-						'func', function() AtlasLootWishList.Options[playerName].AutoSortWishlist = not AtlasLootWishList.Options[playerName].AutoSortWishlist end
-						)
+		local menuList = {
+			{
+				{text = AL["Own Wishlists"], "value", "OwnWishlists", "hasArrow", true},
+				{text = AL["Shared Wishlists"], "value", "SharedWishlists", "hasArrow", true},
+				{text = AL["Add Wishlist"], func = function() self:AddWishList() end},
+				{text = AL["Settings"], value = "Settings", hasArrow = true},
+			},
+			{}}
+				for k,v in pairs(AtlasLootWishList.Own) do
+					if type(v) == "table" then
+						table.insert(menuList[2],{text = v.Name,	func = function() self:AddItemToWishList("Own", k, "", show) end, show = "OwnWishlists"})
 					end
 				end
-				self.Dewdrop:AddLine(
-                'text', AL["Close Menu"],
-                'textR', 0,
-                'textG', 1,
-                'textB', 1,
-                'textHeight', self.selectedProfile.txtSize,
-                'textWidth', self.selectedProfile.txtSize,
-                'closeWhenClicked', true,
-                'notCheckable', true
-            )
-			end
-			self.Dewdrop:Open(btn,
-				"point", function(parent)
-					return "TOP", "BOTTOM"
-				end,
-				"children", setOptions
-			)
-		end
+				for k,v in pairs(AtlasLootWishList.Shared) do
+					if type(v) == "table" then
+						table.insert(menuList[2],{text = v.Name, func = function() self:AddItemToWishList("Own", k, "", show) end, show = "SharedWishlists"})	
+					end
+				end
+				table.insert(menuList[2],{isRadio = true, text = AL["Mark items in loot tables"], checked = AtlasLootWishList.Options[playerName].Mark or false, show = "Settings",
+					func = function()
+						if AtlasLootWishList.Options[playerName].Mark then
+							AtlasLootWishList.Options[playerName].Mark = false
+						else
+							AtlasLootWishList.Options[playerName].Mark = true
+						end
+					end
+				})
+				table.insert(menuList[2],{isRadio = true, text = AL["Mark items from own Wishlist"], checked = AtlasLootWishList.Options[playerName].markInTable == "own" and true or false, show = "Settings",
+				func = function() 
+						if AtlasLootWishList.Options[playerName].markInTable == "own" then
+							AtlasLootWishList.Options[playerName].markInTable = "all"
+						else
+							AtlasLootWishList.Options[playerName].markInTable = "own"
+						end
+					end
+				})
+				table.insert(menuList[2],{isRadio = true, text = AL["Mark items from all Wishlists"], checked = AtlasLootWishList.Options[playerName].markInTable == "all" and true or false, show = "Settings",
+				func = function()
+						if AtlasLootWishList.Options[playerName].markInTable == "own" then
+							AtlasLootWishList.Options[playerName].markInTable = "all"
+						else
+							AtlasLootWishList.Options[playerName].markInTable = "own"
+						end
+					end
+				})
+				local allowShare = AtlasLootWishList.Options[playerName]["AllowShareWishlist"] or false
+				table.insert(menuList[2],{isRadio = true, text = AL["Enable Wishlist Sharing"], checked = allowShare, show = "Settings",
+				func = function() allowShare = not allowShare end})
+				table.insert(menuList[2],{isRadio = true, text = AL["Auto reject in combat"], checked = AtlasLootWishList.Options[playerName].AllowShareWishlistInCombat or false, show = "Settings",
+				func = function() AtlasLootWishList.Options[playerName].AllowShareWishlistInCombat = not AtlasLootWishList.Options[playerName].AllowShareWishlistInCombat end})
+				table.insert(menuList[2],{isRadio = true, text = AL["Auto Sort WishLists"], checked = AtlasLootWishList.Options[playerName].AutoSortWishlist or false, show = "Settings",
+				func = function() AtlasLootWishList.Options[playerName].AutoSortWishlist = not AtlasLootWishList.Options[playerName].AutoSortWishlist end})
+	self:OpenDewdropMenu(btn, menuList)
 	end
 end
 
@@ -465,131 +378,50 @@ AtlasLoot:WishListOptionsOpen:
 Constructs the wishlist options category menu.
 ]]
 function AtlasLoot:WishListOptionsOpen()
-	local frame = self.mainUI.wishlistOptionsButton
-	if self.Dewdrop:IsOpen(frame) then self.Dewdrop:Close() return end
-	self.Dewdrop:Register(frame,
-		'point', function(parent)
-			return "TOP", "BOTTOM"
-		end,
-		'children', function(level, value)
-			if level == 1 then
-				self.Dewdrop:AddLine(
-					"text", AL["Add Wishlist"],
-					"func", function() self:AddWishList() end,
-					'textHeight', self.selectedProfile.txtSize,
-					'textWidth', self.selectedProfile.txtSize,
-					'closeWhenClicked', true,
-					"notCheckable", true
-				)
-				self.Dewdrop:AddLine(
-					"text", AL["Edit Wishlist"],
-					"func", function() self:EditWishList() end,
-					'textHeight', self.selectedProfile.txtSize,
-					'textWidth', self.selectedProfile.txtSize,
-					'closeWhenClicked', true,
-					"notCheckable", true
-				)
-				self.Dewdrop:AddLine(
-					"text", AL["Sort Wishlist"],
-					'textHeight', self.selectedProfile.txtSize,
-					'textWidth', self.selectedProfile.txtSize,
-					'closeWhenClicked', true,
-					"func", function() self:SortWishList(true,self.mainUI.lootTableScrollFrame.tablenum) end,
-					"notCheckable", true
-				)
-				if  self.itemframe.refresh[2] == "AtlasLoot_CurrentWishList" and AtlasLoot_CurrentWishList.Show.ListType == "Shared" then
-					self.Dewdrop:AddLine(
-						"text", AL["Copy Wishlist To Own"],
-						'textHeight', self.selectedProfile.txtSize,
-						'textWidth', self.selectedProfile.txtSize,
-						'closeWhenClicked', true,
-						"func", function() self:CloneSharedWishList() end,
-						"notCheckable", true
-					)
+	local menuList = {
+		{
+			{text = AL["Add Wishlist"], func = function() self:AddWishList() end},
+			{text = AL["Edit Wishlist"], func = function() self:EditWishList() end},
+			{text = AL["Sort Wishlist"], func = function() self:SortWishList(true,self.mainUI.lootTableScrollFrame.tablenum) end},
+			{text = AL["Copy Wishlist To Own"], func = function() self:CloneSharedWishList() end, showOnCondition = self.itemframe.refresh[2] == "AtlasLoot_CurrentWishList" and AtlasLoot_CurrentWishList.Show.ListType == "Shared"},
+			{text = AL["Make Wishlist Default"], func = function() self:SetDefaultWishList() end, showOnCondition = self.itemframe.refresh[2] == "AtlasLoot_CurrentWishList" and AtlasLoot_CurrentWishList.Show.ListType == "Own"},
+			{text = AL["Delete Wishlist"], func = function() self:DeleteWishList() end},
+			{text = AL["Settings"], value = "Settings", hasArrow = true},
+		},
+		{
+			{isRadio = true, text = AL["Mark items in loot tables"], checked = AtlasLootWishList.Options[playerName].Mark, show = "Settings",
+				func = function()
+					if AtlasLootWishList.Options[playerName].Mark then
+						AtlasLootWishList.Options[playerName].Mark = false
+					else
+						AtlasLootWishList.Options[playerName].Mark = true
+					end
 				end
-				if self.itemframe.refresh[2] == "AtlasLoot_CurrentWishList" and AtlasLoot_CurrentWishList.Show.ListType == "Own" then
-					self.Dewdrop:AddLine(
-						"text", AL["Make Wishlist Default"],
-						'textHeight', self.selectedProfile.txtSize,
-						'textWidth', self.selectedProfile.txtSize,
-						'closeWhenClicked', true,
-						"func", function() self:SetDefaultWishList() end,
-						"notCheckable", true
-					)
-				end
-				self.Dewdrop:AddLine(
-					"text", AL["Delete Wishlist"],
-					'textHeight', self.selectedProfile.txtSize,
-					'textWidth', self.selectedProfile.txtSize,
-					'closeWhenClicked', true,
-					"func", function() self:DeleteWishList() end,
-					"notCheckable", true
-				)
-				self.Dewdrop:AddLine(
-					"text", AL["Settings"],
-					'textHeight', self.selectedProfile.txtSize,
-					'textWidth', self.selectedProfile.txtSize,
-					'value', "Settings",
-					'hasArrow', true,
-					"notCheckable", true
-				)
-				self:CloseDewDrop(true, 35)
-			elseif level == 2 then
-				if value == "Settings" then
-					self.Dewdrop:AddLine('textHeight', self.selectedProfile.txtSize,'textWidth', self.selectedProfile.txtSize,'isRadio', true,
-						'text', AL["Mark items in loot tables"],
-						'checked', AtlasLootWishList.Options[playerName].Mark,
-						'func', function()
-							if AtlasLootWishList.Options[playerName].Mark then
-								AtlasLootWishList.Options[playerName].Mark = false
-							else
-								AtlasLootWishList.Options[playerName].Mark = true
-							end
-						end
-					)
-					self.Dewdrop:AddLine('textHeight', self.selectedProfile.txtSize,'textWidth', self.selectedProfile.txtSize,'isRadio', true,
-					'text', AL["Mark items from own Wishlist"],
-					'checked', AtlasLootWishList.Options[playerName].markInTable == "own" and true or false,
-					'func', function()
-							if AtlasLootWishList.Options[playerName].markInTable == "own" then
-								AtlasLootWishList.Options[playerName].markInTable = "all"
-							else
-								AtlasLootWishList.Options[playerName].markInTable = "own"
-							end
-					 	end
-					)
-					self.Dewdrop:AddLine('textHeight', self.selectedProfile.txtSize,'textWidth', self.selectedProfile.txtSize,'isRadio', true,
-					'text', AL["Mark items from all Wishlists"],
-					'checked', AtlasLootWishList.Options[playerName].markInTable == "all" and true or false,
-					'func', function()
-							if AtlasLootWishList.Options[playerName].markInTable == "own" then
-								AtlasLootWishList.Options[playerName].markInTable = "all"
-							else
-								AtlasLootWishList.Options[playerName].markInTable = "own"
-							end
-					 	end
-					)
-					self.Dewdrop:AddLine('textHeight', self.selectedProfile.txtSize,'textWidth', self.selectedProfile.txtSize,'isRadio', true,
-					'text', AL["Enable Wishlist Sharing"],
-					'checked', AtlasLootWishList.Options[playerName]["AllowShareWishlist"],
-					'func', function() AtlasLootWishList.Options[playerName]["AllowShareWishlist"] = not AtlasLootWishList.Options[playerName]["AllowShareWishlist"] end
-					)
-					self.Dewdrop:AddLine('textHeight', self.selectedProfile.txtSize,'textWidth', self.selectedProfile.txtSize,'isRadio', true,
-					'text', AL["Auto reject in combat"],
-					'checked', AtlasLootWishList.Options[playerName]["AllowShareWishlist"],
-					'func', function() AtlasLootWishList.Options[playerName].AllowShareWishlistInCombat = not AtlasLootWishList.Options[playerName]["AllowShareWishlistInCombat"] end
-					)
-					self.Dewdrop:AddLine('textHeight', self.selectedProfile.txtSize,'textWidth', self.selectedProfile.txtSize,'isRadio', true,
-					'text', AL["Auto Sort WishLists"],
-					'checked', AtlasLootWishList.Options[playerName].AutoSortWishlist,
-					'func', function() AtlasLootWishList.Options[playerName].AutoSortWishlist = not AtlasLootWishList.Options[playerName].AutoSortWishlist end
-					)
-				end
-			end
-		end,
-		'dontHook', true
-		)
-		self.Dewdrop:Open(frame)
+			},
+			isRadio = true, text = AL["Mark items from own Wishlist"], checked = AtlasLootWishList.Options[playerName].markInTable == "own" and true or false, show = "Settings",
+			func = function()
+					if AtlasLootWishList.Options[playerName].markInTable == "own" then
+						AtlasLootWishList.Options[playerName].markInTable = "all"
+					else
+						AtlasLootWishList.Options[playerName].markInTable = "own"
+					end
+			 	end
+			},
+			{isRadio = true, text = AL["Mark items from all Wishlists"], checked = AtlasLootWishList.Options[playerName].markInTable == "all" and true or false, show = "Settings",
+			func = function()
+					if AtlasLootWishList.Options[playerName].markInTable == "own" then
+						AtlasLootWishList.Options[playerName].markInTable = "all"
+					else
+						AtlasLootWishList.Options[playerName].markInTable = "own"
+					end
+			 	end
+			},
+			{isRadio = true, text = AL["Enable Wishlist Sharing"], checked = allowShare, show = "Settings",
+			func = function() allowShare = not allowShare end},
+			{isRadio = true, text = AL["Auto reject in combat"], checked = allowShare, func = function() AtlasLootWishList.Options[playerName].AllowShareWishlistInCombat = not AtlasLootWishList.Options[playerName]["AllowShareWishlistInCombat"] end, show = "Settings"},
+			{isRadio = true, text = AL["Auto Sort WishLists"], checked = AtlasLootWishList.Options[playerName].AutoSortWishlist, func = function() AtlasLootWishList.Options[playerName].AutoSortWishlist = not AtlasLootWishList.Options[playerName].AutoSortWishlist end, show = "Settings"}
+		}
+	self:OpenDewdropMenu(self.mainUI.wishlistOptionsButton, menuList)
 end
 
 -- **********************************************************************
@@ -990,12 +822,11 @@ end
 
 function AtlasLoot:ShareMenu(button)
 	local menuList = { [1] = {
-		{text = AL["Send to Player"], func = function() self:ShareWishList() end, closeWhenClicked = true},
-		{text = AL["Export to String"], func = function() self:ExportString() end, closeWhenClicked = true},
-		{text = AL["Import String"], func = function() StaticPopup_Show("ATLASLOOT_IMPORT_WISHLIST") end, closeWhenClicked = true},
-		{close = true, divider = 35}
+		{text = AL["Send to Player"], func = function() self:ShareWishList() end},
+		{text = AL["Export to String"], func = function() self:ExportString() end},
+		{text = AL["Import String"], func = function() StaticPopup_Show("ATLASLOOT_IMPORT_WISHLIST") end},
 	} }
-    self:OpenDewdropMenu(button, nil, menuList)
+    self:OpenDewdropMenu(button, menuList)
 end
 
 --[[

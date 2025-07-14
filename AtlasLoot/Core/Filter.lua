@@ -132,13 +132,7 @@ end
 
 function AtlasLoot:FilterEnableButton(frame, btnclick)
 	if btnclick == "RightButton" then
-		if self.Dewdrop:IsOpen() then
-			self.Dewdrop:Close()
-		else
-			self.Dewdrop:Unregister(self.mainUI.filterButton)
-			self:FilterMenuRegister()
-			self.Dewdrop:Open(frame)
-		end
+		self:FilterMenuOpen(frame)
 		self.mainUI.filterButton:SetChecked(not self.mainUI.filterButton:GetChecked())
 	else
 		if self.filterEnable then
@@ -161,75 +155,53 @@ local function disableFilters(current)
 end
 
 --[[
-AtlasLoot:FilterMenuRegister:
+AtlasLoot:FilterMenuOpen:
 Constructs the Filter menu.
 ]]
-function AtlasLoot:FilterMenuRegister()
-
+function AtlasLoot:FilterMenuOpen(frame)
+	local menuList = {{},{}}
 	local db = AtlasLootFilterDB
-	self.Dewdrop:Register(self.mainUI.filterButton,
-		'point', function(parent)
-			return "TOPLEFT", "BOTTOM"
-		end,
-		'children', function(level, value)
-			if _G[self.itemframe.refresh[2]][self.itemframe.refresh[1]].vanity then
-				for _, filter in ipairs(VanityFilterTable) do
-					local fDB = db.VanityFilters
-					if not fDB[filter[1]] then fDB[filter[1]] = false end
-					self.Dewdrop:AddLine(
-						"text", filter[2],
-						"func", function()
-							fDB[filter[1]] = not fDB[filter[1]]
-							disableFilters(filter[1])
-							if self.filterEnable then
-								self:ShowItemsFrame(self.itemframe.refresh[1], self.itemframe.refresh[2], self.itemframe.refresh[3])
-							end
-						end,
-						"checked", fDB[filter[1]],
-						"isRadio", true,
-						"closeWhenClicked", true
-					)
+	if _G[self.itemframe.refresh[2]][self.itemframe.refresh[1]].vanity then
+		for _, filter in ipairs(VanityFilterTable) do
+			local db = db.VanityFilters
+			db[filter[1]] = db[filter[1]] or false
+			table.insert(menuList[1], {text = filter[2], isRadio = true, checked = {db, filter[1]}, dontCloseWhenClicked = true,
+			func = function()
+				db[filter[1]] = not db[filter[1]]
+				disableFilters(filter[1])
+				if self.filterEnable then
+					self:ShowItemsFrame(self.itemframe.refresh[1], self.itemframe.refresh[2], self.itemframe.refresh[3])
 				end
-			elseif _G[self.itemframe.refresh[2]][self.itemframe.refresh[1]].Type == "Crafting" then
-				for _, filter in ipairs(CraftingFilterTable) do
-					local fDB = db.CraftingFilters
-					if not fDB[filter[1]] then fDB[filter[1]] = false end
-					self.Dewdrop:AddLine(
-						"text", filter[2],
-						"func", function()
-							fDB[filter[1]] = not fDB[filter[1]]
-							disableFilters(filter[1])
-							if self.filterEnable then
-								self:ShowItemsFrame(self.itemframe.refresh[1], self.itemframe.refresh[2], self.itemframe.refresh[3])
-							end
-						end,
-						"checked", fDB[filter[1]],
-						"isRadio", true,
-						"closeWhenClicked", true
-					)
-				end
-			else
-				for _, group in ipairs(FilterTable) do
-					self.Dewdrop:AddLine('text' , group.Name, 'textHeight', self.selectedProfile.txtSize, 'textWidth', self.selectedProfile.txtSize, 'isTitle', true, "notCheckable", true)
-					for _, filters in ipairs(group) do
-						if not db[filters[2]] then db[filters[2]] = {false, group.Type} end
-						self.Dewdrop:AddLine(
-							"text", filters[1],
-							"func", function()
-								db[filters[2]][1] = not db[filters[2]][1]
-								if self.filterEnable then
-									self:ShowItemsFrame(self.itemframe.refresh[1], self.itemframe.refresh[2], self.itemframe.refresh[3])
-								end
-							end,
-							"checked", db[filters[2]][1],
-							"isRadio", true
-						)
-					end
+			end})
+		end
+	elseif _G[self.itemframe.refresh[2]][self.itemframe.refresh[1]].Type == "Crafting" then
+		for _, filter in ipairs(CraftingFilterTable) do
+			local db = db.CraftingFilters
+			db[filter[1]] = db[filter[1]] or false
+			table.insert(menuList[1], {text = filter[2], isRadio = true, checked = {db, filter[1]}, dontCloseWhenClicked = true,
+			func = function()
+				db[filter[1]] = not db[filter[1]]
+				disableFilters(filter[1])
+				if self.filterEnable then
+					self:ShowItemsFrame(self.itemframe.refresh[1], self.itemframe.refresh[2], self.itemframe.refresh[3])
 				end
 			end
-				--Close button
-				self.Dewdrop:AddLine('text', AL["Close Menu"], 'textR', 0, 'textG', 1, 'textB', 1, "closeWhenClicked", true, 'notCheckable', true)
-			end,
-			'dontHook', true
-		)
+			})
+		end
+	else
+		for _, group in ipairs(FilterTable) do
+			table.insert(menuList[1], {text = group.Name, isTitle = true})
+			for _, filters in ipairs(group) do
+				db[filters[2]] = db[filters[2]] or {false, group.Type}
+				table.insert(menuList[1], {text = filters[1], isRadio = true, checked = {AtlasLootFilterDB[filters[2]], 1}, dontCloseWhenClicked = true,
+				func = function()
+					db[filters[2]][1] = not db[filters[2]][1]
+					if self.filterEnable then
+						self:ShowItemsFrame(self.itemframe.refresh[1], self.itemframe.refresh[2], self.itemframe.refresh[3])
+					end
+				end})
+			end
+		end
+	end
+	self:OpenDewdropMenu(frame, menuList)
 end

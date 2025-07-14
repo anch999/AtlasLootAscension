@@ -1,5 +1,6 @@
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
+local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
 --[[
 Functions:
 AtlasLoot:OnShow()
@@ -129,20 +130,14 @@ end
 AtlasLoot:DewdropExpansionMenuOpen():
 Adds expansion menu from expansion table in mainmenus.lua
 ]]
-local expansionMenuLoaded
 function AtlasLoot:DewdropExpansionMenuOpen(btn)
-    local menuList = { [1] = {} }
-    if not expansionMenuLoaded then
-        if AtlasLoot_ExpansionMenu then
-            for i,v in ipairs(AtlasLoot_ExpansionMenu) do
-                if type(v) == "table" then
-                    tinsert(menuList[1], {text = v[1], func = function() self:DewdropExpansionMenuClick(v[2], v[1]) end, closeWhenClicked = true})
-                end
+    local menuList = {{{text = AL["Expansions"], isTitle = true}}}
+        for _,v in ipairs(AtlasLoot_ExpansionMenu) do
+            if type(v) == "table" then
+                table.insert(menuList[1], {text = v[1], func = function() self:DewdropExpansionMenuClick(v[2], v[1]) end})
             end
-            tinsert(menuList[1], {close = true, divider = 35})
         end
-    end
-    expansionMenuLoaded = self:OpenDewdropMenu(btn, expansionMenuLoaded, menuList)
+    self:OpenDewdropMenu(btn, menuList)
 end
 --[[
 AtlasLoot:DewdropSubMenuOpen(loottable):
@@ -150,125 +145,38 @@ loottable - Table defining the sub menu
 Generates the sub menu needed by passing a table of loot tables and titles
 ]]
 function AtlasLoot:DewdropSubMenuOpen(loottable)
-    local frame = AtlasLootDefaultFrame_SubMenu
-    if self.Dewdrop:IsOpen(frame) then self.Dewdrop:Close() return end
-    self.Dewdrop:Register(frame,
-        'point', function(parent)
-            return "TOP", "BOTTOM"
-        end,
-        'children', function(level, value)
-            if level == 1 then
-                for k, v in pairs(loottable) do
-                    if type(v) == "table" then
-                            if type(v[3]) == "table" then
-                                self.Dewdrop:AddLine(
-                                    "text", v[1],
-                                    "value", v[3],
-                                    "hasArrow", true,
-                                    'textHeight', self.selectedProfile.txtSize,
-                                    'textWidth', self.selectedProfile.txtSize,
-                                    "notCheckable", true
-                                )
-                            elseif v[3] == "Header" then
-                                if k ~= 1 then self:AddDividerLine(40) end
-                                self.Dewdrop:AddLine(
-                                    'text', v[1],
-                                    'textR', 0.2,
-                                    'textG', 0.82,
-                                    'textB', 0.5,
-                                    'textHeight', 13,
-                                    'textWidth', 13,
-                                    'func', function() self:DewDropSubMenuClick(v[2]) end,
-                                    'notCheckable', true
-                                )
-                            else
-                                self.Dewdrop:AddLine(
-                                    'text', AtlasLoot_Data[v[2]] and AtlasLoot_Data[v[2]].Name or v[1],
-                                    'func', function() self:DewDropSubMenuClick(v[2], v.OnDamand) end,
-                                    'textHeight', self.selectedProfile.txtSize,
-                                    'textWidth', self.selectedProfile.txtSize,
-                                    'closeWhenClicked', true,
-                                    'notCheckable', true
-                                )
-                            end
-
-                    end
-
-                end
-            elseif level == 2 then
-                if value then
-                    for k,v in pairs(value) do
-                        if v[3] == "Header" then
-                            if k ~= 1 then self:AddDividerLine(40) end
-                            self.Dewdrop:AddLine(
-                                'text', v[1],
-                                'textR', 0.2,
-                                'textG', 0.82,
-                                'textB', 0.5,
-                                'textHeight', 13,
-                                'textWidth', 13,
-                                'func', function() self:DewDropSubMenuClick(v[2], v.OnDamand) end,
-                                'notCheckable', true
-                            )
-                        elseif type(v) == "table" then
-                            self.Dewdrop:AddLine(
-                                "text", AtlasLoot_Data[v[2]] and AtlasLoot_Data[v[2]].Name or v[1],
-                                "func", function() self:DewDropSubMenuClick(v[2], v.OnDamand) end,
-                                'textHeight', self.selectedProfile.txtSize,
-                                'textWidth', self.selectedProfile.txtSize,
-                                'closeWhenClicked', true,
-                                "notCheckable", true
-                            )
+    local menuList = {{{text = AL["Categorys"], isTitle = true}}, {}}
+        for _, menu in pairs(loottable) do
+            if type(menu) == "table" then
+                if type(menu[3]) == "table" then
+                    table.insert(menuList[1], {text = menu[1], value = menu[1], hasArrow = true})
+                    for _,submenu in pairs(menu[3]) do
+                        if submenu[3] == "Header" then
+                            table.insert(menuList[2], {text = self.Colors.GREEN..submenu[1], func = function() self:DewDropSubMenuClick(submenu[2], submenu.OnDamand) end, isTitle = true, show = menu[1], divider = 40} )
+                        elseif type(submenu) == "table" then
+                            table.insert(menuList[2], {text = AtlasLoot_Data[submenu[2]] and AtlasLoot_Data[submenu[2]].Name or submenu[1], func = function() self:DewDropSubMenuClick(submenu[2], submenu.OnDamand) end, show = menu[1]})
                         end
                     end
+                elseif menu[3] == "Header" then
+                    table.insert(menuList[1], {text = self.Colors.GREEN..menu[1], func = function() self:DewDropSubMenuClick(menu[2]) end, isTitle = true, divider = 40})
+                else
+                    table.insert(menuList[1], {text = AtlasLoot_Data[menu[2]] and AtlasLoot_Data[menu[2]].Name or menu[1], func = function() self:DewDropSubMenuClick(menu[2], menu.OnDamand) end})
                 end
             end
-            --Close button
-            self:CloseDewDrop(true,40)
-        end,
-        'dontHook', true
-    )
-    self.Dewdrop:Open(frame)
+        end
+    self:OpenDewdropMenu(self.mainUI.submenuButton, menuList)
 end
 
 --[[
 AtlasLoot:DewdropModuleMenuOpen:
 Constructs the main category menu from a tiered table
 ]]
-local moduleMenuLoaded
 function AtlasLoot:DewdropModuleMenuOpen()
-    local frame = self.mainUI.moduelMenuButton
-    if self.Dewdrop:IsOpen(frame) then self.Dewdrop:Close() return end
-    if not moduleMenuLoaded then
-        self.Dewdrop:Register(frame,
-            'point', function(parent)
-                return "TOP", "BOTTOM"
-            end,
-            'children', function(level, value)
-                if AtlasLoot_Modules then
-                    for k, v in ipairs(AtlasLoot_Modules) do
-                        --If a link to show a submenu
-                        self.Dewdrop:AddLine(
-                            'text', v[1],
-                            'textR', 1,
-                            'textG', 0.82,
-                            'textB', 0,
-                            'func', function() self:DewDropClick(v[2], v[1], v[3]) end,
-                            'textHeight', self.selectedProfile.txtSize,
-                            'textWidth', self.selectedProfile.txtSize,
-                            'closeWhenClicked', true,
-                            'notCheckable', true
-                        )
-                    end
-                end
-                --Close button
-                self:CloseDewDrop(true,35)
-            end,
-            'dontHook', true
-        )
-        moduleMenuLoaded = true
-    end
-    self.Dewdrop:Open(frame)
+    local menuList = {{{text = AL["Modules"], isTitle = true}}}
+        for _, menu in ipairs(AtlasLoot_Modules) do
+           table.insert(menuList[1], {text = menu[1], func = function() self:DewDropClick(menu[2], menu[1], menu[3]) end})
+        end
+    self:OpenDewdropMenu(self.mainUI.moduelMenuButton, menuList)
 end
 
 function AtlasLoot:UpdateLootBrowserScale()
