@@ -139,7 +139,7 @@ local faction = UnitFactionGroup("player")
 
 --Get whether the item should be displayed and get the itemID that needs to be displayed
 function AtlasLoot:GetItemConditionals(item, dataSource, dataID)
-	if (item and item.faction and item.faction ~= faction) or (item.Server and item.Server ~= self.serverType)	then return end
+	if (item and item.faction and item.faction ~= faction) or (item.Server and item.Server ~= self.serverType) or (item and item[1] == "gap") then return end
 
 	local itemID, recipeID
 	local show = true
