@@ -145,20 +145,20 @@ loottable - Table defining the sub menu
 Generates the sub menu needed by passing a table of loot tables and titles
 ]]
 function AtlasLoot:DewdropSubMenuOpen(loottable)
-    local menuList = {{{text = AL["Categorys"], isTitle = true}}, {}}
+    local menuList = {dividerLength = 50, {{text = AL["Categorys"], isTitle = true}}, {}}
         for _, menu in pairs(loottable) do
             if type(menu) == "table" then
                 if type(menu[3]) == "table" then
                     table.insert(menuList[1], {text = menu[1], value = menu[1], hasArrow = true})
                     for _,submenu in pairs(menu[3]) do
                         if submenu[3] == "Header" then
-                            table.insert(menuList[2], {text = self.Colors.GREEN..submenu[1], func = function() self:DewDropSubMenuClick(submenu[2], submenu.OnDamand) end, isTitle = true, show = menu[1], divider = 40} )
+                            table.insert(menuList[2], {text = self.Colors.GREEN..submenu[1], func = function() self:DewDropSubMenuClick(submenu[2], submenu.OnDamand) end, isTitle = true, show = menu[1], divider = true} )
                         elseif type(submenu) == "table" then
                             table.insert(menuList[2], {text = AtlasLoot_Data[submenu[2]] and AtlasLoot_Data[submenu[2]].Name or submenu[1], func = function() self:DewDropSubMenuClick(submenu[2], submenu.OnDamand) end, show = menu[1]})
                         end
                     end
                 elseif menu[3] == "Header" then
-                    table.insert(menuList[1], {text = self.Colors.GREEN..menu[1], func = function() self:DewDropSubMenuClick(menu[2]) end, isTitle = true, divider = 40})
+                    table.insert(menuList[1], {text = self.Colors.GREEN..menu[1], func = function() self:DewDropSubMenuClick(menu[2]) end, isTitle = true, divider = true})
                 else
                     table.insert(menuList[1], {text = AtlasLoot_Data[menu[2]] and AtlasLoot_Data[menu[2]].Name or menu[1], func = function() self:DewDropSubMenuClick(menu[2], menu.OnDamand) end})
                 end
@@ -172,7 +172,7 @@ AtlasLoot:DewdropModuleMenuOpen:
 Constructs the main category menu from a tiered table
 ]]
 function AtlasLoot:DewdropModuleMenuOpen()
-    local menuList = {{{text = AL["Modules"], isTitle = true}}}
+    local menuList = {dividerLength = 40,{{text = AL["Modules"], isTitle = true}}}
         for _, menu in ipairs(AtlasLoot_Modules) do
            table.insert(menuList[1], {text = menu[1], func = function() self:DewDropClick(menu[2], menu[1], menu[3]) end})
         end

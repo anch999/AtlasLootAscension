@@ -35,11 +35,10 @@ function AtlasLoot:OpenDewdropMenu(frame, menuList, ...)
     		return point1, point2
 		end,
 		"children", function(level, value)
-			local textLength = 30
+			local textLength = menuList.dividerLength or 35
 			for i, menu in pairs(menuList[level]) do
 				if menu.showOnCondition == nil or menu.showOnCondition == true then
 					if menu.show == nil or value == menu.show then
-						textLength = (menu.text and menu.text:len() > textLength) and menu.text:len() or textLength
 						if menu.divider then
 							addDiviver(textLength)
 						end
