@@ -20,16 +20,7 @@ function LoadItemIDsDatabase()
 			end
 		end
 	end
-	-- loads ids that have been manuely corrected
-	if ItemIDManuelCorrections then
-		for normalID, item in pairs(ItemIDManuelCorrections) do
-			for itemDif, itemID in pairs(item) do
-				ItemIDsDatabase[normalID] = ItemIDsDatabase[normalID] or {}
-				ItemIDsDatabase[normalID][itemDif] = itemID
-			end
-		end
-	end
-	ItemIDManuelCorrections = nil
+
     collectgarbage("collect")
     databaseUpdated = true
 end
