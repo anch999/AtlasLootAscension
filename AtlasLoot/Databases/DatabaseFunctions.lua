@@ -171,7 +171,7 @@ function AtlasLoot:GetItemDifficultyID(id, difficulty)
 	if not difficulty or difficulty == 3 then return id end
 	local correctID = ItemIDsDatabaseCorrectedIDs[id] or ItemIDsDatabase[id]
 	if correctID then
-		local correctDifficulty = ItemIDsDatabaseCorrectedIDs[id][difficulty] or ItemIDsDatabase[id][difficulty]
+		local correctDifficulty = correctID[difficulty]
 		if correctDifficulty and self:GetItemInfo(correctDifficulty) then
 			return correctDifficulty
 		end
