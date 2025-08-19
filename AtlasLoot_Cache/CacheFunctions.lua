@@ -20,16 +20,20 @@ function LoadItemIDsDatabase()
 			end
 		end
 	end
-	-- loads ids that have been manuely corrected
-	if ItemIDManuelCorrections then
-		for normalID, item in pairs(ItemIDManuelCorrections) do
-			for itemDif, itemID in pairs(item) do
-				ItemIDsDatabase[normalID] = ItemIDsDatabase[normalID] or {}
-				ItemIDsDatabase[normalID][itemDif] = itemID
-			end
-		end
-	end
-	ItemIDManuelCorrections = nil
+
     collectgarbage("collect")
     databaseUpdated = true
+end
+
+--[[
+GetItemDifficultyID(id, difficulty)
+Finds the Ids of other difficulties based on the normal id of the item and the difficulty parameter given.
+]]
+function GetItemDifficultyID(id, difficulty)
+	if not difficulty or difficulty == 3 then return id end
+	local correctID = ItemIDsDatabaseCorrectedIDs[id] or ItemIDsDatabase[id]
+	if correctID and correctID[difficulty] then
+		return correctID[difficulty]
+	end
+	return id
 end

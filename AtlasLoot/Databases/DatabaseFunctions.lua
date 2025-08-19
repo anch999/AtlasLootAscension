@@ -72,23 +72,25 @@ function AtlasLoot:GetSourceList()
     for _, data in pairs(AtlasLoot_Data) do
 		if data.Type then
 			for _, t in ipairs(data) do
-				for _, itemData in pairs(t) do
-					if type(itemData) == "table" then
-						if itemData.itemID then
-							for _, dif in ipairs(self.Difficulties[data.Type]) do
-								local itemType = GetItemInfoInstant(itemData.itemID) or nil
-								if dif[2] ~= 3 and itemType then
-									itemSource[dif[1]] = itemSource[dif[1]] or {}
-									local name = itemType.name:gsub( "%W", "" )..itemType.inventoryType
-									itemSource[dif[1]][name] = itemSource[dif[1]][name] or {}
-									local itemTable = itemSource[dif[1]][name]
-										local function checkForDuplicate(itemID)
-											for _ , item in pairs(itemTable) do
-												if item[1] == itemID then return true end
+				for _, side in ipairs(t) do
+					for _, itemData in pairs(side) do
+						if type(itemData) == "table" then
+							if itemData.itemID then
+								for _, dif in ipairs(self.Difficulties[data.Type]) do
+									local itemType = GetItemInfoInstant(itemData.itemID) or nil
+									if dif[2] ~= 3 and itemType then
+										itemSource[dif[1]] = itemSource[dif[1]] or {}
+										local name = itemType.name:gsub( "%W", "" )..itemType.inventoryType
+										itemSource[dif[1]][name] = itemSource[dif[1]][name] or {}
+										local itemTable = itemSource[dif[1]][name]
+											local function checkForDuplicate(itemID)
+												for _ , item in pairs(itemTable) do
+													if item[1] == itemID then return true end
+												end
 											end
+										if not checkForDuplicate(itemData.itemID) then
+											tinsert(itemTable, {itemData.itemID, itemType.itemLevel})
 										end
-									if not checkForDuplicate(itemData.itemID) then
-										tinsert(itemTable, {itemData.itemID, itemType.itemLevel})
 									end
 								end
 							end
@@ -167,8 +169,9 @@ On the form of {ID, {bloodforged, heroic bloodforged, normal, heroic, mythic, my
 ]]
 function AtlasLoot:GetItemDifficultyID(id, difficulty)
 	if not difficulty or difficulty == 3 then return id end
-	if ItemIDsDatabase[id] and ItemIDsDatabase[id][difficulty] and self:GetItemInfo(ItemIDsDatabase[id][difficulty]) then
-		return ItemIDsDatabase[id][difficulty]
+	local correctID = GetItemDifficultyID(id, difficulty)
+	if correctID and self:GetItemInfo(correctID) then
+		return correctID
 	end
 	return id
 end
@@ -213,6 +216,6 @@ search with this
 (.*)
 
 replace with this
-[1] = { itemID = $2 }; --$5
+{ itemID = $2 }; --$5
 
 ]]

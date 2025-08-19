@@ -2,13 +2,14 @@
 ## Title: AtlasLoot Ascension Edition
 ## Notes: Shows the possible loot from the bosses
 ## Author: Anch - Area 52
-## Version: v7.5.3
+## Version: v7.6.2
 ## X-Credits: Rvng, Skray, Szyler and others.
 ## Dependencies: AtlasLoot_Cache
 ## X-Category: Map
 ## X-License: GPL v2
 ## X-Github-Repository: https://github.com/Szyler/AtlasLootAscension
 ## X-Discord: https://discord.gg/uYCE2X2FgA
+## X-Donate: https://patreon.com/anch649
 ## X-Embeds: Ace3, DewdropLib, LibBabble-Boss-3.0, LibBabble-Faction-3.0, LibBabble-Inventory-3.0, LibBabble-Zone-3.0
 ## Title-deDE: AtlasLoot Enhanced
 ## Notes-deDE: Zeigt mögliche Beute von Bossen

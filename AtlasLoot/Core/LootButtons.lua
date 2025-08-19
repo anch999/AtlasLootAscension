@@ -86,7 +86,7 @@ function AtlasLoot:ItemOnEnter(data)
                     self:SetCraftingTooltip(data)
                     GameTooltip:Show()
                     if self.selectedProfile.EquipCompare or IsShiftKeyDown() then
-                        self:ShowCompareItem(data) --- CALL MISSING METHOD TO SHOW 2 TOOLTIPS (Item Compare)
+                        GameTooltip_ShowCompareItem()
                     end
                 end
             end
@@ -120,7 +120,7 @@ function AtlasLoot:ItemOnEnter(data)
             end
             GameTooltip:Show()
             if self.selectedProfile.EquipCompare or IsShiftKeyDown() then
-                self:ShowCompareItem(data) --- CALL MISSING METHOD TO SHOW 2 TOOLTIPS (Item Compare)
+                GameTooltip_ShowCompareItem()
             end
         end
     end
@@ -161,31 +161,22 @@ function AtlasLoot:ItemOnClick(item, button)
     if not spellID and itemID then
         local itemName, itemLink, itemQuality, itemLevel, itemMinLevel, itemType, itemSubType, itemCount, itemEquipLoc, itemTexture = self:GetItemInfo(itemID)
         --If shift-clicked, link in the chat window
-        if button == "RightButton" and self.itemUnlock then
-            --move wishlist item down
-            self:MoveWishlistItem("Down",item.number)
-        elseif IsAltKeyDown() and button == "LeftButton" and self.itemUnlock then
-            --add custom wishlist header
-            StaticPopup_Show("ATLASLOOT_ADD_CUSTOMHEADER")
-            StaticPopupDialogs.ATLASLOOT_ADD_CUSTOMHEADER.num = item.number
-        elseif button == "LeftButton" and self.itemUnlock then
-            --move wishlist item up
-            self:MoveWishlistItem("Up",item.number)
+        if button == "RightButton" and self.wishListLockState == "Unlocked" then
+            self:MoveWishlistItem("Down", item.item.positionNumber)
+
+        elseif button == "LeftButton" and self.wishListLockState == "Unlocked" then
+            self:MoveWishlistItem("Up", item.item.positionNumber)
+
         elseif button == "RightButton" and itemID and IsAltKeyDown() and self.itemframe.refresh[2] ~= "AtlasLoot_CurrentWishList" then
             local wList = AtlasLootWishList.Options[playerName].DefaultWishList
-            --add to defauly wishlist
-            self:WishListAddDropClick(wList[1], wList[3], item)
-        elseif button == "RightButton" and itemID then
-            --item context menu
-            if self.mainUI.itemPopupframe and self.mainUI.itemPopupframe:IsVisible() then
-                self:ItemContextMenu(item, "item")
 
-            else
-                self:ItemContextMenu(item, "item")
-            end
+            self:AddItemToWishList(wList[1], wList[3], item)
+        elseif button == "RightButton" and itemID then
+            self:ItemContextMenu(item, "item")
+
         elseif IsShiftKeyDown() and itemName then
-            --insert to chat link
             ChatEdit_InsertLink(itemLink)
+
         elseif ChatFrame1EditBox and ChatFrame1EditBox:IsVisible() and IsShiftKeyDown() then
             ChatFrame1EditBox:Insert(itemName)  -- <-- this line just inserts plain text, does not need any adjustment
             --If control-clicked, use the dressing room
@@ -194,7 +185,7 @@ function AtlasLoot:ItemOnClick(item, button)
             DressUpItemLink(itemLink)
         elseif IsAltKeyDown() then
             if self.itemframe.refresh[2] == "AtlasLoot_CurrentWishList" then
-                self:DeleteFromWishList(item.number)
+                self:DeleteFromWishList(item.item)
             end
         elseif item.sourcePage and item.sourcePage[2] == "Source" then
             dataID, dataSource, dataPage = unpack(item.sourcePage[1])
@@ -221,13 +212,17 @@ function AtlasLoot:ItemOnClick(item, button)
         local recipeData = self:GetRecipeData(spellID, "spell")
         if IsShiftKeyDown() then
             ChatEdit_InsertLink(self:GetEnchantLink(spellID))
+        elseif button == "RightButton" and self.wishListLockState == "Unlocked" then
+            self:MoveWishlistItem("Down", item.item.positionNumber)
+        elseif button == "LeftButton" and self.wishListLockState == "Unlocked" then
+            self:MoveWishlistItem("Up", item.item.positionNumber)
         elseif button == "RightButton" then
             self:ItemContextMenu(item, "spell", recipeData)
         elseif IsAltKeyDown() then
             if self.itemframe.refresh[2] == "AtlasLoot_CurrentWishList" then
-                self:DeleteFromWishList(item.number)
+                self:DeleteFromWishList(item.item)
             end
-        elseif(IsControlKeyDown()) then
+        elseif IsControlKeyDown() then
             DressUpItemLink("item:"..item.itemID..":0:0:0:0:0:0:0")
         elseif item.sourcePage and item.sourcePage[2] == "Source" then
             dataID, dataSource, dataPage = unpack(item.sourcePage[1])
@@ -249,82 +244,6 @@ function AtlasLoot:ItemOnClick(item, button)
         end
     end
 end
-
--------
--- Missing GameToolTip method
--- Enables item comparing. I've ripped self method directly from GameTooltip.lua and modified to work with GameTooltip /siena
--------
-function AtlasLoot:ShowCompareItem(data)
-   local link
-   if data.spellID then
-      link = Item:CreateFromID(data.itemID):GetLink()
-   else
-      _,link = GameTooltip:GetItem()
-   end
-
-   if ( not link ) then
-      return
-   end
-
-   ShoppingTooltip1:SetOwner(GameTooltip, "ANCHOR_NONE")
-   ShoppingTooltip2:SetOwner(GameTooltip, "ANCHOR_NONE")
-   ShoppingTooltip3:SetOwner(GameTooltip, "ANCHOR_NONE")
-
-   local item1 = nil
-   local item2 = nil
-   local item3 = nil
-   if ( ShoppingTooltip1:SetHyperlinkCompareItem(link, 1, 1, GameTooltip) ) then
-      item1 = true
-   end
-   if ( ShoppingTooltip2:SetHyperlinkCompareItem(link, 2, 1, GameTooltip) ) then
-      item2 = true
-   end
-   if ( ShoppingTooltip3:SetHyperlinkCompareItem(link, 3, 1, GameTooltip) ) then
-      item3 = true
-   end
-   if not item1 and not item2 and not item3 then 
-        return 
-    end
-
-   if item3 then
-        if not item1 then
-            item1, item3 = true, nil
-            ShoppingTooltip1:SetHyperlinkCompareItem(link, 3, 1, GameTooltip)
-        elseif not item2 then
-            item2, item3 = true, nil
-            ShoppingTooltip2:SetHyperlinkCompareItem(link, 3, 1, GameTooltip)
-        end
-    end
-    if item2 and not item1 then
-        item1, item2 = true, nil
-        ShoppingTooltip1:SetHyperlinkCompareItem(link, 2, 1, GameTooltip)
-    end
-
-   local left, right, anchor1, anchor2 = GameTooltip:GetLeft(), GameTooltip:GetRight(), "TOPLEFT", "TOPRIGHT"
-   if not left or not right then return end
-	if (GetScreenWidth() - right) < left then anchor1, anchor2 = anchor2, anchor1 end
-
-    if item1 then
-		ShoppingTooltip1:ClearAllPoints()
-		ShoppingTooltip1:SetPoint(anchor1, GameTooltip, anchor2, 0, -10)
-		ShoppingTooltip1:Show()
-
-		if item2 then
-			ShoppingTooltip2:ClearAllPoints()
-			ShoppingTooltip2:SetPoint(anchor1, ShoppingTooltip1, anchor2)
-			ShoppingTooltip2:Show()
-		end
-
-        if item3 then
-			ShoppingTooltip3:ClearAllPoints()
-			ShoppingTooltip3:SetPoint(anchor1, ShoppingTooltip2, anchor2)
-			ShoppingTooltip3:Show()
-		end
-	end
-
-end
-
-
 
 local zoneList
 --Creates a zone list for use in adding vendor and mob drop waypoints to tomtom
@@ -348,253 +267,88 @@ function AtlasLoot:ItemContextMenu(data, Type, recipeData)
     local craftingData = data.craftingData
     local itemID = data.itemID
     local linkID = itemID
+
     if Type == "spell" then
         linkID = data.spellID
     end
-    if self.Dewdrop:IsOpen(data) then self.Dewdrop:Close() return end
-    self.Dewdrop:Register(data,
-        'point', function(parent)
-            return "TOP", "BOTTOM"
-        end,
-        'children', function(level, value)
-            if level == 1 then
-                self.Dewdrop:AddLine(
-                    'text', AL["Links"],
-                    'notCheckable', true,
-                    'isTitle', true,
-                    'textHeight', 13,
-                    'textWidth', 13
-                )
-                self.Dewdrop:AddLine(
-                    'text', self.Colors.ORANGE..AL["Open AscensionDB To Entry"],
-                    'func', function() self:OpenDBURL(linkID,Type) end,
-                    'textHeight', self.selectedProfile.txtSize,
-                    'textWidth', self.selectedProfile.txtSize,
-                    'notCheckable', true,
-                    'closeWhenClicked', true
-                )
-                self.Dewdrop:AddLine(
-                        "text", self.Colors.GREEN..AL["Guild"],
-                        "func", function() self:Chatlink(linkID,"GUILD",Type) end,
-                        'closeWhenClicked', true,
-                        'textHeight', self.selectedProfile.txtSize,
-                        'textWidth', self.selectedProfile.txtSize,
-                        "notCheckable", true
-                    )
-                    self.Dewdrop:AddLine(
-                        "text", self.Colors.LIGHTBLUE..AL["Party"],
-                        "func", function() self:Chatlink(linkID,"PARTY",Type) end,
-                        'closeWhenClicked', true,
-                        'textHeight', self.selectedProfile.txtSize,
-                        'textWidth', self.selectedProfile.txtSize,
-                        "notCheckable", true
-                    )
-                    self.Dewdrop:AddLine(
-                        "text", self.Colors.ORANGE2..AL["Raid"],
-                        "func", function() self:Chatlink(linkID,"RAID",Type) end,
-                        'closeWhenClicked', true,
-                        'textHeight', self.selectedProfile.txtSize,
-                        'textWidth', self.selectedProfile.txtSize,
-                        "notCheckable", true
-                    )
-                    if AuctionFrame and AuctionFrame:IsVisible() then
-                        self:AddDividerLine(35)
-                        self.Dewdrop:AddLine(
-                        'text', AL["Auction House Search"],
-                        'notCheckable', true,
-                        'isTitle', true,
-                        'textHeight', 13,
-                        'textWidth', 13
-                        )
-                        if recipeData then
-                            self.Dewdrop:AddLine(
-                                "text", AL["Created Item"],
-                                "func", function() self:SearchAuctionHouse(self:GetItemInfo(recipeData[1][1])) end,
-                                'closeWhenClicked', true,
-                                'textHeight', self.selectedProfile.txtSize,
-                                'textWidth', self.selectedProfile.txtSize,
-                                "notCheckable", true
-                            )
-                            if recipeData.Recipe then
-                                self.Dewdrop:AddLine(
-                                    "text", AL["Recipe"],
-                                    "func", function() self:SearchAuctionHouse(self:GetItemInfo(recipeData.Recipe)) end,
-                                    'closeWhenClicked', true,
-                                    'textHeight', self.selectedProfile.txtSize,
-                                    'textWidth', self.selectedProfile.txtSize,
-                                    "notCheckable", true
-                                )
-                            end
-                        else
-                            self.Dewdrop:AddLine(
-                                "text", AL["Item"],
-                                "func", function() self:SearchAuctionHouse(self:GetItemInfo(itemID)) end,
-                                'closeWhenClicked', true,
-                                'textHeight', self.selectedProfile.txtSize,
-                                'textWidth', self.selectedProfile.txtSize,
-                                "notCheckable", true
-                            ) 
-                        end
-                    end
-                    if not self.mainUI.itemPopupframe or self.mainUI.itemPopupframe and not self.mainUI.itemPopupframe:IsVisible()  then
-                        self:AddDividerLine(35)
-                        self.Dewdrop:AddLine(
-                        'text', AL["Wishlists"],
-                        'notCheckable', true,
-                        'isTitle', true,
-                        'textHeight', 13,
-                        'textWidth', 13
-                        )
-                        if self.itemframe.refresh[2] == "AtlasLoot_CurrentWishList" then
-                            self.Dewdrop:AddLine(
-                                "text", AL["Delete"],
-                                "func", function() self:DeleteFromWishList(data.number) end,
-                                'closeWhenClicked', true,
-                                'textHeight', self.selectedProfile.txtSize,
-                                'textWidth', self.selectedProfile.txtSize,
-                                "notCheckable", true
-                            )
-                        else
-                            local wList = AtlasLootWishList.Options[playerName].DefaultWishList
-                            self.Dewdrop:AddLine(
-                                "text", AL["Add To Default"],
-                                "func", function() self:WishListAddDropClick(wList[1], wList[3], data) end,
-                                'closeWhenClicked', true,
-                                'textHeight', self.selectedProfile.txtSize,
-                                'textWidth', self.selectedProfile.txtSize,
-                                "notCheckable", true
-                            )
-                            self.Dewdrop:AddLine(
-                                "text", AL["Own Wishlists"],
-                                "tooltipTitle", AL["Own Wishlists"],
-                                "value", "OwnWishlists",
-                                "hasArrow", true,
-                                'textHeight', self.selectedProfile.txtSize,
-                                'textWidth', self.selectedProfile.txtSize,
-                                "notCheckable", true
-                            )
-                            self.Dewdrop:AddLine(
-                                "text", AL["Shared Wishlists"],
-                                "tooltipTitle", AL["Shared Wishlists"],
-                                "value", "SharedWishlists",
-                                "hasArrow", true,
-                                'textHeight', self.selectedProfile.txtSize,
-                                'textWidth', self.selectedProfile.txtSize,
-                                "notCheckable", true
-                            )
-                            self.Dewdrop:AddLine(
-                                "text", AL["Add Wishlist"],
-                                "func", function() self:AddWishList() end,
-                                'closeWhenClicked', true,
-                                'textHeight', self.selectedProfile.txtSize,
-                                'textWidth', self.selectedProfile.txtSize,
-                                "notCheckable", true
-                            )
-                        end
-                        if C_VanityCollection.IsCollectionItemOwned(itemID) then
-                            self:AddDividerLine(35)
-                            self.Dewdrop:AddLine(
-                            'text', AL["Vanity Collection"],
-                            'notCheckable', true,
-                            'isTitle', true,
-                            'textHeight', 13,
-                            'textWidth', 13
-                            )
-                            self.Dewdrop:AddLine(
-                                "text", AL["Learn/Recive Vanity Item"],
-                                "func", function() RequestDeliverVanityCollectionItem(itemID) end,
-                                'closeWhenClicked', true,
-                                'textHeight', self.selectedProfile.txtSize,
-                                'textWidth', self.selectedProfile.txtSize,
-                                "notCheckable", true
-                            )
-                        end
-                        if self.TomTomLoaded and data.spellID then
-                            if not self.db.profile.waypointList then self.db.profile.waypointList = {} end
-                            local wayPoint
-                            if (craftingData and self.selectedProfile.recipeExtraInfoSwitch and IsControlKeyDown()) or (craftingData and not self.selectedProfile.recipeExtraInfoSwitch) then
-                                GameTooltip:AddLine(" ")
-                                for _,v in pairs(craftingData) do
-                                    if v.cords and tonumber(v.cords[1]) ~= 0 and tonumber(v.cords[2]) ~= 0 then
-                                        local line1 = v[1]
-                                        local line2 = v[2]
-                                        if v.fac and (v.fac[2] == playerFaction or v.fac[2] == "Netural") then line1 = v.fac[1]..line1 end
-                                        if not wayPoint then wayPoint = {} end
-                                        tinsert(wayPoint, { line2, tonumber(v.cords[1]), tonumber(v.cords[2]), line1})
-                                    end
-                                end
-                            end
-                            self:AddDividerLine(35)
-                            self.Dewdrop:AddLine(
-                            'text', AL["Recipe Waypoints"],
-                            'notCheckable', true,
-                            'isTitle', true,
-                            'textHeight', 13,
-                            'textWidth', 13
-                            )
-                            if craftingData and wayPoint then
-                                self.Dewdrop:AddLine(
-                                "text", "Add pin to map",
-                                "func", function()
-                                    for _,v in pairs(wayPoint) do
-                                        self:AddWayPoint(v)
-                                    end
-                                end,
-                                'closeWhenClicked', true,
-                                'textHeight', self.selectedProfile.txtSize,
-                                'textWidth', self.selectedProfile.txtSize,
-                                "notCheckable", true
-                                )
+    local isAuction = AuctionFrame and AuctionFrame:IsVisible() or false
+    local isCrafted = isAuction and recipeData or false
+    local isRecipe = isCrafted and recipeData.data or false
 
-                            end
-                            self.Dewdrop:AddLine(
-                                "text", "Add pin to map for every missing recipe",
-                                "func", function()
-                                    self:SetRecipeMapPins()
-                                end,
-                                'closeWhenClicked', true,
-                                'textHeight', self.selectedProfile.txtSize,
-                                'textWidth', self.selectedProfile.txtSize,
-                                "notCheckable", true
-                            )
-                        end
-                    end
-            elseif level == 2 then
-                if value == "OwnWishlists" then
-                    for i,v in pairs(AtlasLootWishList["Own"]) do
-                        if type(v) == "table" then
-                            self.Dewdrop:AddLine(
-                                "text", v.Name,
-                                "tooltipTitle", v.Name,
-                                'closeWhenClicked', true,
-                                'textHeight', self.selectedProfile.txtSize,
-                                'textWidth', self.selectedProfile.txtSize,
-                                "func", function() self:WishListAddDropClick("Own", i, data) end,
-                                "notCheckable", true
-                            )
-                        end
-                    end
-                elseif value == "SharedWishlists" then
-                    for i,v in pairs(AtlasLootWishList["Shared"]) do
-                        if type(v) == "table" then
-                            self.Dewdrop:AddLine(
-                                "text", v.Name,
-                                "tooltipTitle", v.Name,
-                                'closeWhenClicked', true,
-                                'textHeight', self.selectedProfile.txtSize,
-                                'textWidth', self.selectedProfile.txtSize,
-                                "func", function() self:WishListAddDropClick("Shared", i, data) end,
-                                "notCheckable", true
-                            )
-                        end
+    local menuList = {
+        {
+                {text = AL["Links"], isTitle = true},
+                {text = self.Colors.ORANGE..AL["Open AscensionDB To Entry"], func = function() self:OpenDBURL(linkID,Type) end},
+                {text = self.Colors.GREEN..AL["Guild"], func = function() self:Chatlink(linkID,"GUILD",Type) end},
+                {text = self.Colors.LIGHTBLUE..AL["Party"], func = function() self:Chatlink(linkID,"PARTY",Type) end},
+                {text = self.Colors.ORANGE2..AL["Raid"], func = function() self:Chatlink(linkID,"RAID",Type) end},
+                {text = AL["Auction House Search"], isTitle = true, showOnCondition = isAuction, divider = true},
+                {text = AL["Created Item"], func = function() self:SearchAuctionHouse(self:GetItemInfo(recipeData[1][1])) end, showOnCondition = isCrafted},
+                {text = AL["Recipe"], func = function() self:SearchAuctionHouse(self:GetItemInfo(recipeData.Recipe)) end, showOnCondition = isRecipe},
+                {text = AL["Item"], func = function() self:SearchAuctionHouse(self:GetItemInfo(itemID)) end, showOnCondition = isAuction},
+        }, {}
+    }
+    local wishList
+    local wayPointList
+    local isWishlist = (self.itemframe.refresh[2] == "AtlasLoot_CurrentWishList") or false
+    local notWishlist = notWishlist and nil
+    local wList = AtlasLootWishList.Options[playerName].DefaultWishList
+    local isCollectionItem = itemID and C_VanityCollection.IsCollectionItemOwned(itemID)
+    if not self.mainUI.itemPopupframe or self.mainUI.itemPopupframe and not self.mainUI.itemPopupframe:IsVisible()  then
+        wishList = {
+            {
+                    {text = AL["Wishlists"], isTitle = true, divider = true},
+                    {text = AL["Add Custom Header/Blank Line"], func = function() StaticPopup_Show("ATLASLOOT_ADD_CUSTOMHEADER") StaticPopupDialogs.ATLASLOOT_ADD_CUSTOMHEADER.num = data.item.positionNumber end, showOnCondition = isWishlist},
+                    {text = AL["Delete"], func = function() self:DeleteFromWishList(data.item) end, showOnCondition = isWishlist},
+                    {text = AL["Add To Default"], func = function() self:AddItemToWishList(wList[1], wList[3], data) end, showOnCondition = notWishlist},
+                    {text = AL["Own Wishlists"], value = "OwnWishlists", hasArrow = true, showOnCondition = notWishlist},
+                    {text = AL["Shared Wishlists"], value = "SharedWishlists", hasArrow = true, showOnCondition = notWishlist},
+                    {text = AL["Add Wishlist"], func = function() self:AddWishList() end, showOnCondition = notWishlist},
+                    {text = AL["Vanity Collection"], isTitle = true, showOnCondition = isCollectionItem},
+                    {text = AL["Learn/Recive Vanity Item"], func = function() RequestDeliverVanityCollectionItem(itemID) end, showOnCondition = isCollectionItem}
+            },{}}
+
+        table.insert(wishList[2], {text = AL["OwnWishlists"], isTitle = true, show = "OwnWishlists"})
+        for i,v in pairs(AtlasLootWishList["Own"]) do  
+            if type(v) == "table" then
+                table.insert(wishList[2],{text = v.Name, func = function() self:AddItemToWishList("Own", i, data) end, show = "OwnWishlists"})
+            end
+        end
+        table.insert(wishList[2], {text = AL["SharedWishlists"], isTitle = true, show = "SharedWishlists"})
+        for i,v in pairs(AtlasLootWishList["Shared"]) do
+            if type(v) == "table" then
+                table.insert(wishList[2],{text = v.Name,func = function() self:AddItemToWishList("Shared", i, data) end, show = "SharedWishlists"})
+            end
+        end
+
+        if self.TomTomLoaded and data.spellID then
+            if not self.db.profile.waypointList then self.db.profile.waypointList = {} end
+            local wayPoint
+            if (craftingData and self.selectedProfile.recipeExtraInfoSwitch and IsControlKeyDown()) or (craftingData and not self.selectedProfile.recipeExtraInfoSwitch) then
+                GameTooltip:AddLine(" ")
+                for _,v in pairs(craftingData) do
+                    if v.cords and tonumber(v.cords[1]) ~= 0 and tonumber(v.cords[2]) ~= 0 then
+                        local line1 = v[1]
+                        local line2 = v[2]
+                        if v.fac and (v.fac[2] == playerFaction or v.fac[2] == "Netural") then line1 = v.fac[1]..line1 end
+                        if not wayPoint then wayPoint = {} end
+                        table.insert(wayPoint, { line2, tonumber(v.cords[1]), tonumber(v.cords[2]), line1})
                     end
                 end
             end
-            --Close button
-            self:CloseDewDrop(true,35)
-        end,
-        'dontHook', true
-    )
-    self.Dewdrop:Open(data)
+            local isWaypoint = (craftingData and wayPoint) and true or false
+            wayPointList = { [1] = {
+                {text = AL["Recipe Waypoints"], isTitle = true},
+                {text = "Add pin to map",
+                func = function()
+                    for _,v in pairs(wayPoint) do
+                        self:AddWayPoint(v)
+                    end
+                end, showOnCondition = isWaypoint},
+                {text = "Add pin to map for every missing recipe", func = function() self:SetRecipeMapPins() end, showOnCondition = isWaypoint},
+            }}
+        end
+    end
+    self:OpenDewdropMenu(data, menuList, wishList, wayPointList)
 end
 

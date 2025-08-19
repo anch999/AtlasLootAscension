@@ -97,7 +97,8 @@ function AtlasLoot:CreateVanityCollection()
         end
     end
 
-	for _,item in pairs(VANITY_ITEMS) do
+	local categorieList = {}
+	for _, item in pairs(VANITY_ITEMS) do
         local group
 		local flavor = GetItemFlavorText(item.itemid)
         local itemInfo = {self:GetItemInfo(item.itemid)}
@@ -125,9 +126,7 @@ function AtlasLoot:CreateVanityCollection()
 		end
 
 		if not group then break end
-		if #AtlasLoot_Data[group] == 0 or #AtlasLoot_Data[group][#AtlasLoot_Data[group]] == 30 then
-			tinsert(AtlasLoot_Data[group], {Name = "Page "..(#AtlasLoot_Data[group] +1)})
-		end
+
 		local contentsPreview
 		if item.contentsPreview and #item.contentsPreview > 1 then
 			contentsPreview = {}
@@ -140,7 +139,20 @@ function AtlasLoot:CreateVanityCollection()
 			description = item.description
 		end
 		local price = item.btCost > 0 and item.btCost .. " #bazaar#" or nil
-		tinsert(AtlasLoot_Data[group][#AtlasLoot_Data[group]], { itemID = item.itemid, extraInfo = description, contentsPreview = contentsPreview, vanityItem = true, price = price })
+		if not categorieList[group] then categorieList[group] = {} end
+		tinsert(categorieList[group], { itemID = item.itemid, extraInfo = description, contentsPreview = contentsPreview, vanityItem = true, price = price })
+	end
+	for groupName, categorie in pairs(categorieList) do
+		for i, item in ipairs(categorie) do
+			if not AtlasLoot_Data[groupName][1] then
+				AtlasLoot_Data[groupName][1] = {Name = groupName, {}, {}}
+			end
+			local pageSide = AtlasLoot_Data[groupName][1][1]
+			if i > 15 and i > (#categorie/2) then
+				pageSide = AtlasLoot_Data[groupName][1][2]
+			end
+			tinsert(pageSide, item)
+		end
 	end
 end
 
@@ -148,15 +160,19 @@ function AtlasLoot:LearnAllUnknownVanitySpells()
 	local unknownSpells = {}
 	local function parseCollection(group)
 		for _, catagory in ipairs(AtlasLoot_Data[group]) do
-			for _, item in pairs(catagory) do
-				if type(item) == "table" and item.itemID and C_VanityCollection.IsCollectionItemOwned(item.itemID) and VANITY_ITEMS[item.itemID] and
-				not CA_IsSpellKnown(VANITY_ITEMS[item.itemID].learnedSpell) and VANITY_ITEMS[item.itemID].learnedSpell ~= 0 then
-					local _, itemLink = self:GetItemInfo(item.itemID)
-					local spellName = GetSpellInfo(VANITY_ITEMS[item.itemID].learnedSpell)
-					local itemTooltipInfo = self:GetTooltipItemInfo(itemLink)
-					if (itemTooltipInfo and not itemTooltipInfo.isKnown) and not unknownSpells[spellName] or
-					(unknownSpells[spellName] and item.itemID > unknownSpells[spellName]) then
-						unknownSpells[spellName] = item.itemID
+			for _, side in ipairs(catagory) do
+				if type(catagory) == "table" then
+					for _, item in ipairs(side) do
+						if type(item) == "table" and item.itemID and C_VanityCollection.IsCollectionItemOwned(item.itemID) and VANITY_ITEMS[item.itemID] and
+						not CA_IsSpellKnown(VANITY_ITEMS[item.itemID].learnedSpell) and VANITY_ITEMS[item.itemID].learnedSpell ~= 0 then
+							local _, itemLink = self:GetItemInfo(item.itemID)
+							local spellName = GetSpellInfo(VANITY_ITEMS[item.itemID].learnedSpell)
+							local itemTooltipInfo = self:GetTooltipItemInfo(itemLink)
+							if (itemTooltipInfo and not itemTooltipInfo.isKnown) and not unknownSpells[spellName] or
+							(unknownSpells[spellName] and item.itemID > unknownSpells[spellName]) then
+								unknownSpells[spellName] = item.itemID
+							end
+						end
 					end
 				end
 			end
@@ -180,15 +196,21 @@ end
 
 function AtlasLoot:BatchRequestVanity(itemList)
 	itemList = self:CloneTable(itemList)
-	  local function nextItem()
+	local duplicateList = {}
+	for _, id in pairs(itemList) do
+		duplicateList[id] = duplicateList[id] and duplicateList[id] + 1 or 1
+	end
+	local function nextItem()
         local task = tremove(itemList)
 		while task do
-            RequestDeliverVanityCollectionItem(task)
-			if not CA_IsSpellKnown(VANITY_ITEMS[task].learnedSpell) and not self:HasItem(task) then
+			RequestDeliverVanityCollectionItem(task)
+            local count = GetItemCount(task)
+			if not CA_IsSpellKnown(VANITY_ITEMS[task].learnedSpell) and (not count or (count and count < duplicateList[task])) then
 				tinsert(itemList, task)
 			end
-            return Timer.After(.2, nextItem)
+			return Timer.After(.2, nextItem)
         end
+		DEFAULT_CHAT_FRAME:AddMessage(self.Colors.BLUE..AL["AtlasLoot"]..": "..self.Colors.YELLOW..AL["Retrieving Vanity Items Completed!"])
     end
     return nextItem()
 end

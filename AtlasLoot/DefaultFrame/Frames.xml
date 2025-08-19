@@ -70,6 +70,33 @@
 		<HighlightTexture file="Interface\QuestFrame\UI-QuestTitleHighlight" alphaMode="ADD"/>
     </Button>
 
+    <Button name="AtlasLootFavoritesButtonTemplate" motionScriptsWhileDisabled="true" frameStrata="DIALOG" inherits="AtlasLootDropMenuTemplate" virtual="true">
+        <Scripts>
+            <OnLoad> 
+                self:RegisterForClicks("AnyDown")
+                self.Icon:Hide()
+                self.Text:Hide()
+            </OnLoad>
+            <OnMouseDown> </OnMouseDown>
+            <OnMouseUp> </OnMouseUp>
+            <OnShow> </OnShow>
+            <OnEnter> ATLASLOOT:FavoritesOnEnter(self) </OnEnter>
+            <OnLeave> ATLASLOOT:FavoritesOnLeave(self) </OnLeave>
+            <OnClick> ATLASLOOT:FavoritesOnClick(self, arg1) </OnClick>
+        </Scripts>
+        <Size x="30" y="30"/>
+        <Layers>
+        	<Layer level="ARTWORK">
+				<Texture name="$parent_tex" parentKey="tex">
+					<Size x="25" y="25"/>
+                    <Anchors>
+						<Anchor point="CENTER" relativeTo="$parent" relativePoint="CENTER" x="0" y="0" />
+					</Anchors>
+				</Texture>
+            </Layer>
+        </Layers>
+    </Button>
+
 	<Frame name="AtlasLootFrameTemplate" virtual="true">
         <Scripts>
 			<OnLoad> 

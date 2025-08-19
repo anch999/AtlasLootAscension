@@ -609,29 +609,30 @@ function AtlasLoot:GetItemDetails(itemId)
     return itemName, itemQuality, itemLvl, minLvl, itemEquipLoc, itemSubType, GetItemStats("item:" .. itemId)
 end
 
-local count = 0
+local count = 1
 local tablenum = 1
 
 function AtlasLoot:AddItemToSearchResult(item, dataSource, dataID, tableNum)
     AtlasLootCharDB["SearchResult"].SearchIDs = AtlasLootCharDB["SearchResult"].SearchIDs or {}
-    local tableCopy = self:CloneTable(item)
+    local itemData = self:CloneTable(item)
     local inResults = AtlasLootCharDB["SearchResult"].SearchIDs[item.itemID]
-    if inResults then
-        AtlasLootCharDB["SearchResult"][inResults[1]][inResults[2]] = tableCopy
-        AtlasLootCharDB["SearchResult"][inResults[1]][inResults[2]].lootTable = {{dataID, dataSource, tableNum}, "Source"}
-        AtlasLootCharDB["SearchResult"][inResults[1]][inResults[2]][1] = inResults[3]
-    else
-        if AtlasLootCharDB["SearchResult"][tablenum] == nil then
-            AtlasLootCharDB["SearchResult"][tablenum] = {Name = "Page "..tablenum}
-        end
-        tinsert(AtlasLootCharDB["SearchResult"][tablenum], tableCopy)
-        local tNum = #AtlasLootCharDB["SearchResult"][tablenum]
-        AtlasLootCharDB["SearchResult"][tablenum][tNum].lootTable = {{dataID, dataSource, tableNum}, "Source"}
-        AtlasLootCharDB["SearchResult"][tablenum][tNum][1] = (count % 30) + 1
-        if item.itemID then AtlasLootCharDB["SearchResult"].SearchIDs[item.itemID] = {tablenum, tNum, AtlasLootCharDB["SearchResult"][tablenum][tNum][1]} end
-        count = count + 1
-        if (count) % 30 == 0 then
-            tablenum = tablenum + 1
+    if item.itemID then
+        if inResults then
+            inResults[1][inResults[2]] = itemData
+            inResults[1][inResults[2]].lootTable = {{dataID, dataSource, tableNum}, "Source"}
+        else
+            local pageSide = AtlasLootCharDB["SearchResult"][1][1]
+            if count >= 16 then
+                pageSide = AtlasLootCharDB["SearchResult"][1][2]
+            end
+            table.insert(pageSide, itemData)
+
+            pageSide[#pageSide].lootTable = {{dataID, dataSource, tableNum}, "Source"}
+            AtlasLootCharDB["SearchResult"].SearchIDs[item.itemID] = {pageSide, #pageSide}
+            count = count + 1
+            if count == 31 then
+                count = 1
+            end
         end
     end
 end
@@ -688,9 +689,8 @@ end
 local itemList = {}
 
 function AtlasLoot:DoSearch(searchText)
-    AtlasLootCharDB["SearchResult"] = {Name = "Search Result" , Type = "Search"}
-    count = 0
-    tablenum = 1
+    AtlasLootCharDB["SearchResult"] = {Name = "Search Result" , Type = "Search", {Name = AL["Search Results"],{},{}}}
+    count = 1
     showSearch = false
 
     wipe(itemList)
@@ -699,16 +699,22 @@ function AtlasLoot:DoSearch(searchText)
     for dataID, data in pairs(AtlasLoot_Data) do
         if self.selectedProfile.SearchOn[data.Type] and self.selectedProfile.SearchOn[data.Type][1] or (self.selectedProfile.SearchAscensionVanity and data.Module == "AtlasLoot_Ascension_Vanity") then
             for tableNum, t in ipairs(data) do
-                for _, itemData in pairs(t) do
-                    if type(itemData) == "table" then
-                        if itemData.itemID or itemData.spellID then
-                            if data.Type then
-                                itemData.Type = data.Type
+                if type(t) == "table" then
+                    for _, side in pairs(t) do
+                        if type(side) == "table" then
+                            for _, itemData in pairs(side) do
+                                if type(itemData) == "table" then
+                                    if itemData.itemID or itemData.spellID then
+                                        if data.Type then
+                                            itemData.Type = data.Type
+                                        end
+                                        if self.selectedProfile.showdropLocationOnSearch then
+                                            itemData.dropLoc = {data.DisplayName or data.Name, t.Name}
+                                        end
+                                        tinsert(itemList, {{itemData, dataID, tableNum, searchTerms, searchText}})
+                                    end
+                                end
                             end
-                            if self.selectedProfile.showdropLocationOnSearch then
-                                itemData.dropLoc = {data.DisplayName or data.Name, t.Name}
-                            end
-                            tinsert(itemList, {{itemData, dataID, tableNum, searchTerms, searchText}})
                         end
                     end
                 end
