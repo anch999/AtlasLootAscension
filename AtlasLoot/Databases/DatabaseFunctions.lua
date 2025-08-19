@@ -169,12 +169,9 @@ On the form of {ID, {bloodforged, heroic bloodforged, normal, heroic, mythic, my
 ]]
 function AtlasLoot:GetItemDifficultyID(id, difficulty)
 	if not difficulty or difficulty == 3 then return id end
-	local correctID = ItemIDsDatabaseCorrectedIDs[id] or ItemIDsDatabase[id]
-	if correctID then
-		local correctDifficulty = correctID[difficulty]
-		if correctDifficulty and self:GetItemInfo(correctDifficulty) then
-			return correctDifficulty
-		end
+	local correctID = GetItemDifficultyID(id, difficulty)
+	if correctID and self:GetItemInfo(correctID) then
+		return correctID
 	end
 	return id
 end

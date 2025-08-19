@@ -24,3 +24,16 @@ function LoadItemIDsDatabase()
     collectgarbage("collect")
     databaseUpdated = true
 end
+
+--[[
+GetItemDifficultyID(id, difficulty)
+Finds the Ids of other difficulties based on the normal id of the item and the difficulty parameter given.
+]]
+function GetItemDifficultyID(id, difficulty)
+	if not difficulty or difficulty == 3 then return id end
+	local correctID = ItemIDsDatabaseCorrectedIDs[id] or ItemIDsDatabase[id]
+	if correctID and correctID[difficulty] then
+		return correctID[difficulty]
+	end
+	return id
+end
