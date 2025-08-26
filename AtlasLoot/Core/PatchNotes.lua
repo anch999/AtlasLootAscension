@@ -1,6 +1,13 @@
 
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 local patchNotes = {
+    {"Version 7.6.3", "26th August, 2025"},
+    "Add new items",
+    "Added missing Karazhan Crypts Difficulties",
+    "Added drop chance to most dungeon and raid items",
+    "Core Update",
+    "Bug Fixs",
+    "For a full list of updates vist the Github page",
     {"Version 7.5.2", "3rd May, 2025"},
     "Fixed bug that causing Item Source to not show in item tooltips",
     {"Version 7.5.1", "15th Feburuary, 2025"},
