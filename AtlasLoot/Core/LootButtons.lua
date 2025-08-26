@@ -91,9 +91,12 @@ function AtlasLoot:ItemOnEnter(data)
                 end
             end
         else
-            GameTooltip:SetOwner(data, "ANCHOR_RIGHT", -(data:GetWidth() / 2), 24)
-            GameTooltip:ClearLines()
-            GameTooltip:SetHyperlink(self:GetEnchantLink(spellID))
+            local link = self:GetEnchantLink(spellID)
+            if link then
+                GameTooltip:SetOwner(data, "ANCHOR_RIGHT", -(data:GetWidth() / 2), 24)
+                GameTooltip:ClearLines()
+                GameTooltip:SetHyperlink(link)
+            end
 
             self:SetCraftingTooltip(data)
 
