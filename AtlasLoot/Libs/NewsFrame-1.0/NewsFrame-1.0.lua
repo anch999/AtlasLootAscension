@@ -1,5 +1,5 @@
 local version, news, addonName, addonDB
-local MAJOR, MINOR = "NewsFrame-1.0", 2
+local MAJOR, MINOR = "NewsFrame-1.0", 3
 local NewsFrame, oldminor = LibStub:NewLibrary(MAJOR, MINOR)
 
 if not NewsFrame then return end -- No Upgrade needed.
@@ -75,24 +75,47 @@ local function createNewsFrame()
     mainframe.AutoShowNews:SetPoint("BOTTOMLEFT", 20, 15)
     mainframe.AutoShowNews.Text:SetText("Auto Open on New Changes" )
     mainframe.AutoShowNews:SetScript("OnClick", function() addonDB.AutoShowNews = not addonDB.AutoShowNews end)
-    local discord = GetAddOnMetadata(addonName, "X-Discord")
-    if discord then
-        mainframe.DiscordLink = CreateFrame("Button", addonName.."NewsFrameDiscordCopyButton", mainframe)
-        mainframe.DiscordLink:RegisterForClicks("AnyDown")
-        mainframe.DiscordLink:SetScript("OnEnter", function(self)
+
+    local metaData = {
+        {"X-Discord", "Discord"},
+        {"X-Github-Repository", "GitHub"}
+    }
+
+    local lastButton
+    local function createLinkButton(link, linkName)
+        mainframe[linkName] = CreateFrame("Button", addonName.."NewsFrameDiscordCopyButton", mainframe)
+        mainframe[linkName]:RegisterForClicks("AnyDown")
+        mainframe[linkName]:SetScript("OnEnter", function(self)
             GameTooltip:ClearLines()
             GameTooltip:SetOwner(self, "ANCHOR_RIGHT", -(self:GetWidth() / 2), 5)
+            GameTooltip:AddLine("|cff1eff00"..link)
             GameTooltip:AddLine("Click to copy link to clipboard")
             GameTooltip:Show()
         end)
-        mainframe.DiscordLink:SetScript("OnLeave", function() GameTooltip:Hide() end)
-        mainframe.DiscordLink:SetPoint("LEFT", mainframe.AutoShowNews, 200, 0)
-        mainframe.DiscordLink:SetSize(300, 30)
+        mainframe[linkName]:SetScript("OnLeave", function() GameTooltip:Hide() end)
+        mainframe[linkName]:SetSize(100, 20)
 
-        mainframe.DiscordLink:SetScript("OnClick", function() copyToClipboard(discord) end)
-        mainframe.DiscordLink.Text = mainframe.DiscordLink:CreateFontString(mainframe.DiscordLink,"OVERLAY","GameFontNormal")
-        mainframe.DiscordLink.Text:SetText("|cff1eff00"..discord)
-        mainframe.DiscordLink.Text:SetPoint("CENTER", 0, 0)
+        if not lastButton then
+            mainframe[linkName]:SetPoint("LEFT", mainframe.AutoShowNews, 250, 0)
+        else
+            mainframe[linkName]:SetPoint("LEFT", lastButton, "RIGHT", 0, 0)
+        end
+
+        mainframe[linkName]:SetScript("OnClick", function() copyToClipboard(link) end)
+        mainframe[linkName].Text = mainframe[linkName]:CreateFontString(mainframe[linkName],"OVERLAY","GameFontNormal")
+        mainframe[linkName].Text:SetText("|cff1eff00"..linkName.." Link")
+        mainframe[linkName].Text:SetPoint("LEFT", 0, 0)
+        mainframe[linkName].Text:SetJustifyH("LEFT")
+        lastButton = mainframe[linkName]
+    end
+
+    if #metaData > 0 then
+        for _, linkData in pairs(metaData) do
+        local link = GetAddOnMetadata(addonName, linkData[1])
+            if link then
+                createLinkButton(link, linkData[2])
+            end
+        end
     end
 
     tinsert(UISpecialFrames, addonName.."NewsFrame")
