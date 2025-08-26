@@ -189,6 +189,7 @@ function AtlasLoot:SetupButton(itemID, itemNumber, itemButton, dataSource, dataI
 
 	if spellID then
 		spellName, _, spellIcon, _, _, _, _, _, _ = GetSpellInfo(spellID)
+		if not spellName then return end
 		if spellName then
 			text = spellName
 		elseif itemNumber.name then
