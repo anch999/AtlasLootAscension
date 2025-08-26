@@ -2096,6 +2096,8 @@ AtlasLoot_Data["BlackwingLair"] = {
 		},
 		{
 			{ itemID = 2522462, lootTable = {"T2WRIST","Token"} }, --Chromatic Wristguards
+			gap,
+			{ itemID = 53144, droprate = 5 }, --Formula: Enchant Cloak - Blazing
 		},
 	},
 	{
@@ -2136,6 +2138,8 @@ AtlasLoot_Data["BlackwingLair"] = {
 		},
 		{
 			{ itemID = 2522465, lootTable = {"T2FEET","Token"} }, --Chromatic Boots
+		gap,
+			{ itemID = 53142, droprate = 5 }, -- Formula: Enchant Cloak - Draconic Might
 		gap,
 			{ itemID = 20383 }, --Head of the Broodlord Lashlayer
 		},
@@ -6442,17 +6446,19 @@ AtlasLoot_Data["Onyxia60"] = {
 		},
 		{
 			{ itemID = 2522460, lootTable = {"T2HEAD","Token"} }, --Chromatic Headpiece
-		gap,
+			gap,
 			{ itemID = 97269 }, --Head of Onyxia
 			{ itemID = 18404 }, -- Onyxia Tooth Pendant
 			{ itemID = 18403 }, -- Dragonslayer's Signet
 			{ itemID = 18406 }, -- Onyxia Blood Talisman
-		gap,
+			gap,
 			{ itemID = 15410 }, -- Scale of Onyxia
 			{ itemID = 17966 }, --Onyxia Hide Backpack
-		gap,
+			gap,
+			{ itemID = 53140, droprate = 5 }, --Formula: Enchant Cloak - Dragon Fire
+			gap,
 			{ itemID = 1180299 }, -- Draconic Warhorn: Onyxia
-		gap,
+			gap,
 			{ itemID = 49636, minDifficulty = "Heroic" }, -- Reins of the Onyxian Drake
 		},
 	},

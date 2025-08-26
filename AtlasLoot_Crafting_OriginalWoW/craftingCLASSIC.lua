@@ -997,6 +997,7 @@ AtlasLoot_Data["EnchantingCLASSIC"] = {
 			{spellID = 7748, icon = "Spell_Holy_GreaterHeal" }, --Enchant Chest - Lesser Health
 		},
 		{
+			{spellID = 7426, icon = "Spell_Holy_GreaterHeal" }, --Enchant Chest - Minor Absorption
 			{spellID = 7443, icon = "Spell_Holy_GreaterHeal" }, --Enchant Chest - Minor Mana
 			{spellID = 7420, icon = "Spell_Holy_GreaterHeal" }, --Enchant Chest - Minor Health
 		},
@@ -1018,7 +1019,11 @@ AtlasLoot_Data["EnchantingCLASSIC"] = {
 			{spellID = 13421, icon = "Spell_Holy_GreaterHeal" }, --Enchant Cloak - Lesser Protection
 			{spellID = 7771, icon = "Spell_Holy_GreaterHeal" }, --Enchant Cloak - Minor Protection
 			{spellID = 7454, icon = "Spell_Holy_GreaterHeal" }, --Enchant Cloak - Minor Resistance
-			{spellID = 7426, icon = "Spell_Holy_GreaterHeal" }, --Enchant Chest - Minor Absorption
+		},
+		{
+			{spellID = 31150, icon = "Spell_Holy_GreaterHeal" }, --Enchant Cloak - Dragon Fire
+			{spellID = 31153, icon = "Spell_Holy_GreaterHeal" }, --Enchant Cloak - Draconic Might
+			{spellID = 31156, icon = "Spell_Holy_GreaterHeal" }, --Enchant Cloak - Blazing
 		},
 	},
 	{
