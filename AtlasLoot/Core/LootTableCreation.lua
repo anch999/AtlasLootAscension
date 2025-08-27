@@ -26,29 +26,37 @@ function AtlasLoot:CreateToken(dataID)
 			Type = AtlasLoot_Data[dataID].Type,
 			Back = true,
 			NoSubt = true,
-			[1] = { Name = itemName },
+			{
+				Name = itemName,
+				{},
+				{},
+			},
 		}
 	end
-	local count = #AtlasLoot_Data[dataID][1] * #AtlasLoot_Data[dataID]
+	local count = 1
 	local function addItem(itemID, desc)
+		local pageSide = AtlasLoot_TokenData[orgID][1][1]
+		if count >= 16 then
+			pageSide = AtlasLoot_TokenData[orgID][1][2]
+		end
 		if itemType == select(9, AtlasLoot:GetItemInfo(itemID)) or itemType2 == select(9, AtlasLoot:GetItemInfo(itemID)) then
-			table.insert(AtlasLoot_TokenData[orgID][1], {itemID = itemID, desc = desc})
+			table.insert(pageSide, {itemID = itemID, desc = desc})
+			count = count + 1
 		end
-		if count == 1 then
-			self:ShowItemsFrame(self.itemframe.refresh[1], self.itemframe.refresh[2], self.itemframe.refresh[3])
-		end
-		count = count - 1
 	end
 	--Fills table with items
 	for _, t in ipairs(AtlasLoot_Data[dataID]) do
-		for _, v in ipairs(t) do
-			if type(v) == "table" then
-				if v.itemID then
-					addItem(v.itemID, t.Name)
+		for _, side in ipairs(t) do
+			for _, v in ipairs(side) do
+				if type(v) == "table" then
+					if v.itemID then
+						addItem(v.itemID, t.Name)
+					end
 				end
 			end
 		end
 	end
+	self:ShowItemsFrame(self.itemframe.refresh[1], self.itemframe.refresh[2], self.itemframe.refresh[3])
 end
 
 --Creates a sorted and consolidated loottable of all of an xpacs dungeon loot
@@ -109,12 +117,14 @@ function AtlasLoot:CreateOnDemandLootTable(typeL)
 			for eLoc, t in pairs(v) do
 				for i, items in ipairs(t) do
 					local name = equipSlot[getEquip(eLoc)] and aType.." "..items[2].." - "..equipSlot[getEquip(eLoc)] or aType
-					if #t > 30 and (i == 1 or i == 31 or i == 61 or i == 91)  then
-						tinsert(AtlasLoot_OnDemand[typeL],{Name = correctText(name)..self.Colors.WHITE.." - Page".. math.ceil(i/30) })
-					elseif i == 1 then
-						tinsert(AtlasLoot_OnDemand[typeL],{Name = correctText(name)})
+					if i == 1 then
+						tinsert(AtlasLoot_OnDemand[typeL],{Name = correctText(name), {}, {}})
 					end
-					tinsert(AtlasLoot_OnDemand[typeL][#AtlasLoot_OnDemand[typeL]], items[1])
+					local side = AtlasLoot_OnDemand[typeL][#AtlasLoot_OnDemand[typeL]][1]
+					if i > 15 and i > (#t/2) then
+						side = AtlasLoot_OnDemand[typeL][#AtlasLoot_OnDemand[typeL]][2]
+					end
+					tinsert(side, items[1])
 				end
 			end
 		end
@@ -139,12 +149,14 @@ function AtlasLoot:CreateOnDemandLootTable(typeL)
 	for dataID, data in pairs(AtlasLoot_Data) do
 		if data.Type == typeL then
 			for tableNum, t in ipairs(data) do
-				for _, itemData in pairs(t) do
-					if type(itemData) == "table" and itemData.itemID and not checkList[itemData.itemID] then
-						itemData.dropLoc = {data.DisplayName or data.Name, t.Name}
-						itemData.lootTable = {{dataID, "AtlasLoot_Data", tableNum}, "Source"}
-						checkList[itemData.itemID] = true
-						tinsert(itemList, {itemData})
+				for _, side in ipairs(t) do
+					for _, itemData in ipairs(side) do
+						if type(itemData) == "table" and itemData.itemID and not checkList[itemData.itemID] then
+							itemData.dropLoc = {data.DisplayName or data.Name, t.Name}
+							itemData.lootTable = {{dataID, "AtlasLoot_Data", tableNum}, "Source"}
+							checkList[itemData.itemID] = true
+							tinsert(itemList, {itemData})
+						end
 					end
 				end
 			end

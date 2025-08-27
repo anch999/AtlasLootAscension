@@ -2,87 +2,83 @@ local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot")
 
 --------------------------------- DewDrop Dropdownmenu ---------------------------------
--- Used to create a dewdrop menu from a table
-function AtlasLoot:OpenDewdropMenu(frame, menuList, skipRegister)
+-- Used to create a dewdrop menus from tables
+function AtlasLoot:OpenDewdropMenu(frame, menuList, ...)
 	if self.Dewdrop:IsOpen(frame) then self.Dewdrop:Close() return end
-	if not skipRegister then
-		self.Dewdrop:Register(frame,
-			'point', function(parent)
-				return "TOP", "BOTTOM"
-			end,
-			'children', function(level, value)
-				local altar
-			for _, menu in pairs(menuList[level]) do
-				if menu.divider then
-					local text = self.Colors.WHITE.."----------------------------------------------------------------------------------------------------"
-					self.Dewdrop:AddLine(
-						'text' , text:sub(1, menu.divider),
-						'textHeight', 13,
-						'textWidth', 13,
-						'isTitle', true,
-						'notCheckable', true
-					)
-				else
-					self.Dewdrop:AddLine(
-					'text', menu.text,
-					'func', menu.func,
-					'closeWhenClicked', menu.closeWhenClicked,
-					'textHeight', menu.textHeight,
-					'textWidth', menu.textWidth,
-					'notCheckable', menu.notCheckable,
-					'tooltip', menu.tooltip,
-					'secure', menu.secure,
-					'icon', menu.icon
-				)
+	local textSize = AtlasLoot.selectedProfile.txtSize or 12
+	local menuTables = {...}
+	if #menuTables > 0 then
+		-- if more then 1 table is sent combine them into 1 table
+		for _, v in pairs(menuTables) do
+			for level, list in pairs(v) do
+				for _, entry in pairs(list) do
+					menuList[level] = menuList[level] or {}
+						table.insert(menuList[level], entry)
+				end
+			end
+		end
+	end
+
+	local function addDiviver(maxLenght)
+		local text = self.Colors.WHITE.."----------------------------------------------------------------------------------------------------"
+		self.Dewdrop:AddLine(
+			"text" , text:sub(1, maxLenght),
+			"textHeight", textSize,
+			"textWidth", textSize,
+			"isTitle", true,
+			"notCheckable", true
+		)
+	end
+	self.Dewdrop:Open(frame,
+		"point", function(parent)
+			local point1, _, point2 = self:GetTipAnchor(frame)
+    		return point1, point2
+		end,
+		"children", function(level, value)
+			local textLength = menuList.dividerLength or 35
+			for i, menu in pairs(menuList[level]) do
+				if menu.showOnCondition == nil or menu.showOnCondition == true then
+					if menu.show == nil or value == menu.show then
+						if menu.divider then
+							addDiviver(textLength)
+						end
+						local checked = menu.checked
+						if menu.checked and type(menu.checked) == "table" then
+							checked = menu.checked[1][menu.checked[2]]
+						end
+						local text = menu.isTitle and self.Colors.YELLOW..menu.text or menu.text
+						self.Dewdrop:AddLine(
+							"text", text,
+							"isTitle", menu.isTitle,
+							"value", menu.value,
+							"hasArrow", menu.hasArrow,
+							"closeWhenClicked", not menu.dontCloseWhenClicked,
+							"textHeight", menu.textHeight or textSize,
+							"textWidth", menu.textWidth or textSize,
+							"checked", checked,
+							"notCheckable", (checked == nil or not menu.isRadio),
+							"tooltip", menu.tooltip or menu.text,
+							"secure", menu.secure,
+							"icon", menu.icon,
+							"isRadio", menu.isRadio,
+							"func", menu.func
+						)
+					end
 				end
 				-- create close button
-				if menu.close then
+				if i == #menuList[level] then
+					addDiviver(textLength)
 					self.Dewdrop:AddLine(
-						'text', AL["Close Menu"],
-						'textR', 0,
-						'textG', 1,
-						'textB', 1,
-						'textHeight', self.selectedProfile.txtSize,
-						'textWidth', self.selectedProfile.txtSize,
-						'closeWhenClicked', true,
-						'notCheckable', true
+						"text", self.Colors.CYAN..AL["Close Menu"],
+						"textHeight", textSize,
+						"textWidth", textSize,
+						"closeWhenClicked", true,
+						"notCheckable", true
 					)
 				end
 			end
-		end,
-		'dontHook', true
-		)
-	end
-	self.Dewdrop:Open(frame)
-	return true
-end
-
---for a adding a divider to dew drop menus 
-function AtlasLoot:AddDividerLine(maxLenght)
-    local text = self.Colors.WHITE.."----------------------------------------------------------------------------------------------------"
-    self.Dewdrop:AddLine(
-        'text' , text:sub(1, maxLenght),
-        'textHeight', self.selectedProfile.txtSize,
-        'textWidth', self.selectedProfile.txtSize,
-        'isTitle', true,
-        "notCheckable", true
-    )
-end
-
-function AtlasLoot:CloseDewDrop(divider, maxLenght)
-    if divider then
-        self:AddDividerLine(maxLenght)
-    end
-    self.Dewdrop:AddLine(
-        'text', AL["Close Menu"],
-        'textR', 0,
-        'textG', 1,
-        'textB', 1,
-        'textHeight', self.selectedProfile.txtSize,
-        'textWidth', self.selectedProfile.txtSize,
-        'closeWhenClicked', true,
-        'notCheckable', true
-    )
+		end
+	)
 end
 
 -------------------------------------------------------------------------------
@@ -103,8 +99,7 @@ end
 --drop down map menu
 function AtlasLoot:OpenDB(frame, type, text)
     local menuList = { [1] = {
-        {text = self.Colors.ORANGE..AL["Open AscensionDB To NPC"], func = function() self:OpenDBURL(text , type) end, notCheckable = true, closeWhenClicked = true, textHeight = 12, textWidth = 12},
-		{close = true, divider = 35},
+        {text = self.Colors.ORANGE..AL["Open AscensionDB To NPC"], func = function() self:OpenDBURL(text , type) end},
 		}
 	}
     self:OpenDewdropMenu(frame, menuList)
@@ -219,7 +214,6 @@ function AtlasLoot:PopoupItemFrame(frame, data)
 		button:SetSize(30,30)
 		button:EnableMouse()
 		button:RegisterForClicks("AnyDown")
-		button.number = num
 		button:SetScript("OnClick", function(btn, arg1) self:ItemOnClick(btn, arg1) end)
 		button:SetScript("OnEnter", function(btn)
 			self:ItemOnEnter(btn)
@@ -243,16 +237,18 @@ function AtlasLoot:PopoupItemFrame(frame, data)
 	end
 	if data.Faction then
 		data = data[self:GetReputationFaction(data.Faction)]
+		if not data then return end
 	end
 
 	local numberBtns
+
 	for i, item in ipairs(data) do
 		createButton(i)
 		local button = _G["AtlasLoot_PopupButton_"..i]
 		if item == "blank" then
 			button:Hide()
 		else
-			local correctID = item.itemID or item[1]
+			local correctID = (type(item) == "number" and item) or (type(item) == "table" and (item.itemID or item[1]))
 			local itemID = self:GetItemDifficultyID(correctID, self.ItemindexID)
 			local itemData = {self:GetItemInfo(itemID)}
 			SetItemButtonTexture(button, itemData[10])
@@ -260,11 +256,12 @@ function AtlasLoot:PopoupItemFrame(frame, data)
 
 			button.itemID = itemID
 			button.itemTexture = frame.itemTexture
+			button.isAtlasLoot = true
 			local recipe = self:GetRecipeData(itemID, "item")
 			if recipe then
 			button.craftingData = self:GetRecipeSource(recipe.spellID)
 			end
-			if item[2] then
+			if type(item) == "table" and item[2] then
 				SetItemButtonCount(button, item[2])
 			else
 				SetItemButtonCount(button)
@@ -414,10 +411,10 @@ end
 -- handle minimap tooltip
 function AtlasLoot:GetTipAnchor(frame)
     local x, y = frame:GetCenter()
-    if not x or not y then return 'TOPLEFT', 'BOTTOMLEFT' end
-    local hhalf = (x > UIParent:GetWidth() * 2 / 3) and 'RIGHT' or (x < UIParent:GetWidth() / 3) and 'LEFT' or ''
-    local vhalf = (y > UIParent:GetHeight() / 2) and 'TOP' or 'BOTTOM'
-    return vhalf .. hhalf, frame, (vhalf == 'TOP' and 'BOTTOM' or 'TOP') .. hhalf
+    if not x or not y then return "TOPLEFT", "BOTTOMLEFT" end
+    local hhalf = (x > UIParent:GetWidth() * 2 / 3) and "RIGHT" or (x < UIParent:GetWidth() / 3) and "LEFT" or ""
+    local vhalf = (y > UIParent:GetHeight() / 2) and "TOP" or "BOTTOM"
+    return vhalf .. hhalf, frame, (vhalf == "TOP" and "BOTTOM" or "TOP") .. hhalf
 end
 
 -- Search Auction House for crafting patern/enchant
@@ -433,17 +430,11 @@ function AtlasLoot:SearchAuctionHouse(text)
 
 end
 
-function AtlasLoot:GetDropRate(lootTable, lootGroup)
-	if not lootGroup then return end
-	local count = 0
-	for _, item in pairs(lootTable) do
-		if type(item) == "table" and item.lootGroup and item.lootGroup == lootGroup then
-			count = count + 1
-		end
-	end
-	local actualLootGroup = lootTable.LootGroups or lootTable.lootTable and _G[lootTable.lootTable[2]][lootTable.lootTable[1]][lootTable.lootTable[3]] or nil
-	if actualLootGroup then
-		return string.format("%.2f%%",actualLootGroup[lootGroup]/count) or nil
+function AtlasLoot:GetDropRate(refLootEntry, groupID)
+	if not refLootEntry or not groupID then return end
+
+	if AtlasLoot_ItemDropRates[refLootEntry] and AtlasLoot_ItemDropRates[refLootEntry][groupID] then
+		return string.format("%.2f%%",(AtlasLoot_ItemDropRates[refLootEntry][groupID])*100) or nil
 	end
 end
 
@@ -470,18 +461,22 @@ function AtlasLoot:CreateItemSourceList(overRide)
 			for dataSource, instance in pairs(AtlasLoot_Data) do
 				for _, boss in pairs(instance) do
 					if type(boss) == "table" then
-						for _, item in pairs(boss) do
-							if type(item) == "table" and item.itemID and instance.Name and boss.Name and not IgnoreTables(dataSource) then
-								list[item.itemID] = self.Colors.CYAN..instance.Name .. self.Colors.WHITE .." - " .. boss.Name
-								if ItemIDsDatabase[item.itemID] then
-									for _, varID in pairs(ItemIDsDatabase[item.itemID]) do
-										list[varID] = self.Colors.CYAN..instance.Name .. self.Colors.WHITE .." - " .. boss.Name
-									end
-								end
-								if item.spellID then
-									local recipeID = self:GetRecipeID(item.spellID) or nil
-									if recipeID and (list[recipeID] and not IgnoreTables(dataSource) or not list[recipeID]) then
-										list[recipeID] = self.Colors.CYAN..instance.Name .. self.Colors.WHITE .." - " .. boss.Name
+						for _, side in pairs(boss) do
+							if type(side) == "table" then
+								for _, item in pairs(side) do
+									if type(item) == "table" and item.itemID and instance.Name and boss.Name and not IgnoreTables(dataSource) then
+										list[item.itemID] = self.Colors.CYAN..instance.Name .. self.Colors.WHITE .." - " .. boss.Name
+										if ItemIDsDatabase[item.itemID] then
+											for _, varID in pairs(ItemIDsDatabase[item.itemID]) do
+												list[varID] = self.Colors.CYAN..instance.Name .. self.Colors.WHITE .." - " .. boss.Name
+											end
+										end
+										if item.spellID then
+											local recipeID = self:GetRecipeID(item.spellID) or nil
+											if recipeID and (list[recipeID] and not IgnoreTables(dataSource) or not list[recipeID]) then
+												list[recipeID] = self.Colors.CYAN..instance.Name .. self.Colors.WHITE .." - " .. boss.Name
+											end
+										end
 									end
 								end
 							end
@@ -494,18 +489,12 @@ function AtlasLoot:CreateItemSourceList(overRide)
 end
 
 function AtlasLoot:ItemSourceTooltip(itemID, tooltip)
-	if not self.selectedProfile.showdropLocationTooltips or not self.ItemSourceList then return end
+	local button = GetMouseFocus()
+	if not self.selectedProfile.showdropLocationTooltips or not self.ItemSourceList or (button and button.isAtlasLoot) then return end
 	local text = self.ItemSourceList[itemID] and "Item Source: " .. self.ItemSourceList[itemID] or nil
 	if text and not CheckTooltipForDuplicate(tooltip, text) then
 		tooltip:AddLine(text)
 	end
-end
-
-function AtlasLoot:UpdateTable(insertTable, table)
-	for i, v in pairs(insertTable) do
-		table[i] = v
-	end
-	return table
 end
 
 local ArmorTypes = {

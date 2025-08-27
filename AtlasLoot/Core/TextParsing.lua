@@ -75,7 +75,8 @@ local txtSubstitution = {
     { "INVTYPE_RELIC, Libram", BabbleInventory["Libram"] },
     { "INVTYPE_BAG, Bag", BabbleInventory["Bag"] },
     { "INVTYPE_BAG, Soul Bag", BabbleInventory["Soul Bag"] },
-    { "INVTYPE_AMMO, Junk", "Ammo (Obsolete ),"},
+    { "INVTYPE_AMMO, Junk", "Ammo (Obsolete)"},
+    { "INVTYPE_AMMO, Bullet", "Ammo (Obsolete)"},
     { "Axes", BabbleInventory["Axe"] },
     { "Bows", BabbleInventory["Bow"] },
     { "Daggers", BabbleInventory["Dagger"] },
@@ -116,12 +117,12 @@ local txtSubstitution = {
     { "Herbalism", AL["Herbalism"] },
 
     -- Gems
-    { "self.Colors.RED", AL["self.Colors.RED Gem"] },
-    { "self.Colors.BLUE", AL["self.Colors.BLUE Gem"] },
+    { "Red", AL["Red Gem"] },
+    { "Blue", AL["Blue Gem"] },
     { "Yellow", AL["Yellow Gem"] },
     { "Purple", AL["Purple Gem"] },
-    { "self.Colors.ORANGE", AL["self.Colors.ORANGE Gem"] },
-    { "self.Colors.GREEN", AL["self.Colors.GREEN Gem"] },
+    { "Orange", AL["Orange Gem"] },
+    { "Green", AL["Green Gem"] },
 
     -- Text Colouring
     { "=q0=", "|cff9d9d9d" },
