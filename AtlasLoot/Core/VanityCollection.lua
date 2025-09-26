@@ -101,7 +101,7 @@ function AtlasLoot:CreateVanityCollection()
 	for _, item in pairs(VANITY_ITEMS) do
         local group
 		local flavor = GetItemFlavorText(item.itemid)
-        local itemInfo = {self:GetItemInfo(item.itemid)}
+        local itemInfo = {self:GetItemInfo(item.itemid, true)}
         local itemType, itemSlot, itemDescription = itemInfo[7], itemInfo[9], itemInfo[12]
         local isItemSlot = getEquipSlot(itemSlot, itemType)
         local groupByName = setGroupByName(item)
