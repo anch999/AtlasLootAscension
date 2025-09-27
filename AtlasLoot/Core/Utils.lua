@@ -120,7 +120,6 @@ function AtlasLoot:GetItemInfo(item, dontCache)
 	local itemDescription
 	local itemName, itemLink, itemQuality, itemLevel, itemMinLevel, itemType, itemSubType, itemStackCount, itemEquipLoc, itemTexture, itemSellPrice = GetItemInfo(item.itemID)
 	if not dontCache and not item:GetInfo() then
-		print("test")
 		self:ItemsLoading(1)
 		item:ContinueOnLoad(function()
 			self:ItemsLoading(-1)
