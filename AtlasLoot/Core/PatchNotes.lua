@@ -1,6 +1,8 @@
 
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
 local patchNotes = {
+    {"Version 7.6.3", "27th September, 2025"},
+    "Bug fix",
     {"Version 7.6.3", "26th August, 2025"},
     "Add new items",
     "Added missing Karazhan Crypts Difficulties",
