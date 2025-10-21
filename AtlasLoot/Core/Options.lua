@@ -18,6 +18,7 @@ function AtlasLoot:InitializeOptionsFrame()
         local Options = {
             AddonName = "AtlasLoot",
             TitleText = "Atlasloot",
+            About = true,
             {
                 Name = "AtlasLoot Ascension: "..self.Version,
                 Left = {
@@ -192,10 +193,6 @@ function AtlasLoot:InitializeOptionsFrame()
 
     function self:RefreshSettings()
         self:CreateOptionsPages(Options, self.selectedProfile)
-    end
-
-    if LibStub:GetLibrary("LibAboutPanel", true) then
-        LibStub("LibAboutPanel").new(AL["AtlasLoot"], "AtlasLoot")
     end
 end
 
