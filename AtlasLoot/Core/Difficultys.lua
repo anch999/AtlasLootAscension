@@ -43,10 +43,10 @@ AtlasLoot.Difficulties = {
         Max = 45
     },
     ClassicRaid = {
-        {AL["Normal Raid"], 3},
-        {AL["Heroic Raid"], 4},
-        {AL["Mythic Raid"], 5},
-        {AL["Ascended Raid"], 6},
+        {AL["Normal"], 3},
+        {AL["Heroic"], 4},
+        {AL["Mythic"], 5},
+        {AL["Ascended"], 6},
         {AL["Bloodforged"], 1},
         {AL["Heroic Bloodforged"], 2},
         Max = 6
@@ -67,10 +67,10 @@ AtlasLoot.Difficulties = {
         Max = 45
     },
     BCRaid = {
-        {AL["Normal Raid"], 3},
-        {AL["Heroic Raid"], 4},
-        {AL["Mythic Raid"], 5},
-        {AL["Ascended Raid"], 6},
+        {AL["Normal"], 3},
+        {AL["Heroic"], 4},
+        {AL["Mythic"], 5},
+        {AL["Ascended"], 6},
         {AL["Bloodforged"], 1},
         {AL["Heroic Bloodforged"], 2},
         Max = 6
@@ -101,10 +101,10 @@ AtlasLoot.Difficulties = {
         Max = 45
     },
     WrathRaid = {
-        {AL["Normal Raid"], 3},
-        {AL["Heroic Raid"], 4},
-        {AL["Mythic Raid"], 5},
-        {AL["Ascended Raid"], 6},
+        {AL["Normal"], 3},
+        {AL["Heroic"], 4},
+        {AL["Mythic"], 5},
+        {AL["Ascended"], 6},
         {AL["Bloodforged"], 1},
         {AL["Heroic Bloodforged"], 2},
         Max = 6
@@ -127,7 +127,7 @@ AtlasLoot.Difficulties = {
         {AL["Normal"], 3},
         {AL["Heroic"], 4},
         {AL["Mythic"], 5},
-        {"Mythic 1/Ascended Raid", 6 },  {AL["Mythic 2"], 7 },  {AL["Mythic 3"], 8 },  {AL["Mythic 4"], 9 },  {AL["Mythic 5"], 10 },
+        {"Mythic 1/Ascended", 6 },  {AL["Mythic 2"], 7 },  {AL["Mythic 3"], 8 },  {AL["Mythic 4"], 9 },  {AL["Mythic 5"], 10 },
         {AL["Mythic 6"], 11 }, {AL["Mythic 7"], 12 }, {AL["Mythic 8"], 13 }, {AL["Mythic 9"], 14 }, {AL["Mythic 10"], 15 },
         {AL["Mythic 11"], 16 }, {AL["Mythic 12"], 17 }, {AL["Mythic 13"], 18 }, {AL["Mythic 14"], 19 }, {AL["Mythic 15"], 20 },
         {AL["Mythic 16"], 21 }, {AL["Mythic 17"], 22 }, {AL["Mythic 18"], 23 }, {AL["Mythic 19"], 24 }, {AL["Mythic 20"], 25 },

@@ -1,21 +1,46 @@
 local AtlasLoot = LibStub("AceAddon-3.0"):GetAddon("AtlasLoot")
-local difficultyList = {
-	["Bloodforged"] = 1,
-	["Heroic Bloodforged"] = 2,
-	["Heroic"] = 4,
-	["Mythic"] = 5,
-	["Heroic Raid"] = 4,
-	["Mythic Raid"] = 5,
-	["Ascended Raid"] = 6,
-	["Mythic 1"] = 6,  ["Mythic 2"] = 7,  ["Mythic 3"] = 8,  ["Mythic 4"] = 9,  ["Mythic 5"] = 10,
-	["Mythic 6"] = 11, ["Mythic 7"] = 12, ["Mythic 8"] = 13, ["Mythic 9"] = 14, ["Mythic 10"] = 15,
-	["Mythic 11"] = 16, ["Mythic 12"] = 17, ["Mythic 13"] = 18, ["Mythic 14"] = 19, ["Mythic 15"] = 20,
-	["Mythic 16"] = 21, ["Mythic 17"] = 22, ["Mythic 18"] = 23, ["Mythic 19"] = 24, ["Mythic 20"] = 25,
-	["Mythic 21"] = 26, ["Mythic 22"] = 27, ["Mythic 23"] = 28, ["Mythic 24"] = 29, ["Mythic 25"] = 30,
-	["Mythic 26"] = 31, ["Mythic 27"] = 32, ["Mythic 28"] = 33, ["Mythic 29"] = 34, ["Mythic 30"] = 35,
-	["Mythic 31"] = 36, ["Mythic 32"] = 37, ["Mythic 33"] = 38, ["Mythic 34"] = 39, ["Mythic 35"] = 40,
-	["Mythic 36"] = 41, ["Mythic 37"] = 42, ["Mythic 38"] = 43, ["Mythic 39"] = 44, ["Mythic 40"] = 45,
-};
+
+local difficultys = {
+	{"Heroic Bloodforged", 2},
+	{"Bloodforged", 1},
+	{"Heroic", 4},
+	{"Ascended", 6}
+}
+
+local function getNormalLevel(discription)
+	for _, match in ipairs(difficultys) do
+		if string.match(discription, match[1]) then
+			return match[1], match[2]
+		end
+	end
+end
+
+local function getMythicLevel(description)
+	for i = 1, 40 do
+  		local mythicNumber = string.match(description, "Mythic (%d+)")
+
+		if mythicNumber then
+			if tonumber(mythicNumber) == i then
+				return "Mythic "..i, (5 + i)
+			end
+		end
+	end
+	if string.match(description, "Mythic") then
+		return "Mythic", 5
+	end
+end
+
+function AtlasLoot:GetDifficultyFromDescription(item)
+	if not item then return end
+	local _, description, _ = string.split("@", item.description, 3)
+	if not description then return end
+	local dif, difNum = getMythicLevel(description)
+	if dif then
+		return dif, difNum
+	else
+		return getNormalLevel(item.description)
+	end
+end
 
 local itemLevels = {
 	{1, 101}, -- Vanilla / Classic
@@ -26,18 +51,6 @@ local itemLevels = {
 function AtlasLoot:MatchItemLevelBracket(ogILevel, newILevel)
 	for _, bracket in pairs(itemLevels) do
 		if ogILevel > bracket[1] and ogILevel < bracket[2] and newILevel > ogILevel and newILevel < bracket[2] then return true end
-	end
-end
-
-function AtlasLoot:GetDifficultyFromDescription(item, ID)
-	if not item then return end
-	local _, description, _ = string.split("@", item.description, 3)
-	if description then
-		description = self:StripTextColor(description)
-		description = description:gsub("Karazhan Crypts Mythic", "Mythic")
-		description = description:gsub("Karazhan Crypts %- Mythic", "Mythic 30")
-		description = description:gsub(" Frozen Reach", "")
-		return description
 	end
 end
 
@@ -117,7 +130,7 @@ function AtlasLoot:UpdateItemIDsDatabase(firstID, lastID)
 	lastID = lastID or 10000000
 	AtlasLootDbUpdateText:SetText("Updating AtlasLoot Item Cache\n"..firstID.." / ".. lastID)
 
-		local function checkID(item, difficulty)
+		local function checkID(item, difficulty, difficultyNum)
 			if difficulty and item and item.name then
 				local foundName = removeExtraText(item.name)..item.inventoryType
 				if foundName then
@@ -126,8 +139,8 @@ function AtlasLoot:UpdateItemIDsDatabase(firstID, lastID)
 						for _ , storedItem in pairs(itemData) do
 							local orignalID = storedItem[1]
 							AtlasLootItemCache[orignalID] = AtlasLootItemCache[orignalID] or {}
-							if not AtlasLootItemCache[orignalID][difficultyList[difficulty]] or self:MatchItemLevelBracket(storedItem[2], item.itemLevel) then
-								AtlasLootItemCache[orignalID][difficultyList[difficulty]] = item.itemID
+							if not AtlasLootItemCache[orignalID][difficultyNum] or self:MatchItemLevelBracket(storedItem[2], item.itemLevel) then
+								AtlasLootItemCache[orignalID][difficultyNum] = item.itemID
 								AtlasLootIDUpdateText:SetText("Last ItemID Added: "..firstID)
 							end
 						end
@@ -144,9 +157,9 @@ function AtlasLoot:UpdateItemIDsDatabase(firstID, lastID)
         startTime = debugprofilestop()
         while (firstID ~= lastID) do
 			local item = GetItemInfoInstant(firstID)
-			local difficulty = self:GetDifficultyFromDescription(item, firstID)
-			if item and difficulty then
-				checkID(item, difficulty)
+			local difficulty, difficultyNum = self:GetDifficultyFromDescription(item)
+			if item and difficulty and difficultyNum then
+				checkID(item, difficulty, difficultyNum)
 			end
 			firstID = firstID + 1
             AtlasLootDbUpdateText:SetText("Updating AtlasLoot Item Cache\n"..firstID.." / ".. lastID)
