@@ -7102,7 +7102,7 @@ AtlasLoot_Data["T1"] = {
 		},
 	},
 	{
-		Name = "Druid" ..color.WHITE.." - Tank",
+		Name = "Druid" ..color.WHITE.." - "..AL["Guardian"],
 		{
 			{ itemID = 13437, desc = "=ds=" ..BabbleBoss["Garr"] }, --Cenarion Cover
 			{ itemID = 13439, desc = "=ds=" ..BabbleBoss["Baron Geddon"] }, --Cenarion Pauldrons
@@ -7112,6 +7112,32 @@ AtlasLoot_Data["T1"] = {
 			{ itemID = 13432, desc = "=ds=" ..AL["Trash Mobs"] }, --Cenarion Girdle
 			{ itemID = 13438, desc = "=ds=" ..BabbleBoss["Magmadar"] }, --Cenarion Pants
 			{ itemID = 13433, desc = "=ds=" ..BabbleBoss["Lucifron"] }, --Cenarion Treads
+		},
+	},
+	{
+		Name = "Druid" ..color.WHITE.." - "..AL["Feral"],
+		{
+			{ itemID = 10984, desc = "=ds=" ..BabbleBoss["Garr"] }, --Cenarion Cover
+			{ itemID = 10986, desc = "=ds=" ..BabbleBoss["Baron Geddon"] }, --Cenarion Pauldrons
+			{ itemID = 10983, desc = "=ds=" ..BabbleBoss["Golemagg the Incinerator"] }, --Cenarion Tunic
+			{ itemID = 10981, desc = "=ds=" ..AL["Trash Mobs"] }, --Cenarion Bands
+			{ itemID = 10982, desc = "=ds=" ..BabbleBoss["Shazzrah"] }, --Cenarion Handguards
+			{ itemID = 10979, desc = "=ds=" ..AL["Trash Mobs"] }, --Cenarion Girdle
+			{ itemID = 10985, desc = "=ds=" ..BabbleBoss["Magmadar"] }, --Cenarion Pants
+			{ itemID = 10980, desc = "=ds=" ..BabbleBoss["Lucifron"] }, --Cenarion Treads
+		},
+	},
+	{
+		Name = "Druid" ..color.WHITE.." - "..AL["Balance"],
+		{
+			{ itemID = 10395, desc = "=ds=" ..BabbleBoss["Garr"] }, --Cenarion Cover
+			{ itemID = 10396, desc = "=ds=" ..BabbleBoss["Baron Geddon"] }, --Cenarion Pauldrons
+			{ itemID = 10415, desc = "=ds=" ..BabbleBoss["Golemagg the Incinerator"] }, --Cenarion Tunic
+			{ itemID = 10416, desc = "=ds=" ..AL["Trash Mobs"] }, --Cenarion Bands
+			{ itemID = 10425, desc = "=ds=" ..BabbleBoss["Shazzrah"] }, --Cenarion Handguards
+			{ itemID = 10468, desc = "=ds=" ..AL["Trash Mobs"] }, --Cenarion Girdle
+			{ itemID = 10469, desc = "=ds=" ..BabbleBoss["Magmadar"] }, --Cenarion Pants
+			{ itemID = 10516, desc = "=ds=" ..BabbleBoss["Lucifron"] }, --Cenarion Treads
 		},
 	},
 	{
@@ -7166,17 +7192,43 @@ AtlasLoot_Data["T1"] = {
 			{ itemID = 11532, desc = "=ds=" ..BabbleBoss["Lucifron"] }, --Lawbringer Stompers
 		},
 	},
+		{
+		Name = LOCALIZED_CLASS_NAMES_MALE["PALADIN"]..color.WHITE.." - "..AL["Retribution"],
+		{
+			{ itemID = 11236, desc = "=ds=" ..BabbleBoss["Garr"] }, --Lawbringer Helmet
+			{ itemID = 11237, desc = "=ds=" ..BabbleBoss["Baron Geddon"] }, --Lawbringer Epaulets
+			{ itemID = 11238, desc = "=ds=" ..BabbleBoss["Golemagg the Incinerator"] }, --Lawbringer Chestpiece
+			{ itemID = 11244, desc = "=ds=" ..AL["Trash Mobs"] }, --Lawbringer Bands
+			{ itemID = 11245, desc = "=ds=" ..BabbleBoss["Gehennas"] }, --Lawbringer Gloves
+			{ itemID = 11246, desc = "=ds=" ..AL["Trash Mobs"] }, --Lawbringer Girdle
+			{ itemID = 11247, desc = "=ds=" ..BabbleBoss["Magmadar"] }, --Lawbringer Greaves
+			{ itemID = 11248, desc = "=ds=" ..BabbleBoss["Lucifron"] }, --Lawbringer Treads
+		},
+	},
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["PRIEST"],
+		Name = LOCALIZED_CLASS_NAMES_MALE["PRIEST"]..color.WHITE.." - ".. AL["Healing"],
 		{
 			{ itemID = 16813, desc = "=ds=" ..BabbleBoss["Garr"] }, --Circlet of Prophecy
 			{ itemID = 16816, desc = "=ds=" ..BabbleBoss["Sulfuron Harbinger"] }, --Mantle of Prophecy
-			{ itemID = 16815, "=q4=Robes of Prophecy", "=ds=" ..BabbleBoss["Golemagg the Incinerator"], "1" },
+			{ itemID = 16815, desc = "=ds=" ..BabbleBoss["Golemagg the Incinerator"] },
 			{ itemID = 16819, desc = "=ds=" ..AL["Trash Mobs"] }, --Vambraces of Prophecy
 			{ itemID = 16812, desc = "=ds=" ..BabbleBoss["Gehennas"] }, --Gloves of Prophecy
 			{ itemID = 16817, desc = "=ds=" ..AL["Trash Mobs"] }, --Girdle of Prophecy
 			{ itemID = 16814, desc = "=ds=" ..BabbleBoss["Magmadar"] }, --Pants of Prophecy
 			{ itemID = 16811, desc = "=ds=" ..BabbleBoss["Shazzrah"] }, --Boots of Prophecy
+		},
+	},
+	{
+		Name = LOCALIZED_CLASS_NAMES_MALE["PRIEST"]..color.WHITE.." - ".. AL["Shadow"],
+		{
+			{ itemID = 10012, desc = "=ds=" ..BabbleBoss["Garr"] }, --Circlet of Prophecy
+			{ itemID = 10013, desc = "=ds=" ..BabbleBoss["Sulfuron Harbinger"] }, --Mantle of Prophecy
+			{ itemID = 10291, desc = "=ds=" ..BabbleBoss["Golemagg the Incinerator"] }, --Gown of Prophecy
+			{ itemID = 10292, desc = "=ds=" ..AL["Trash Mobs"] }, --Vambraces of Prophecy
+			{ itemID = 10293, desc = "=ds=" ..BabbleBoss["Gehennas"] }, --Gloves of Prophecy
+			{ itemID = 10294, desc = "=ds=" ..AL["Trash Mobs"] }, --Girdle of Prophecy
+			{ itemID = 10295, desc = "=ds=" ..BabbleBoss["Magmadar"] }, --Pants of Prophecy
+			{ itemID = 10334, desc = "=ds=" ..BabbleBoss["Shazzrah"] }, --Boots of Prophecy
 		},
 	},
 	{
@@ -7218,6 +7270,19 @@ AtlasLoot_Data["T1"] = {
 			{ itemID = 11795, desc = "=ds=" ..BabbleBoss["Lucifron"] }, --Earthfury Treads
 		},
 	},
+		{
+		Name = LOCALIZED_CLASS_NAMES_MALE["SHAMAN"]..color.WHITE.." - "..AL["Elemental"],
+		{
+			{ itemID = 10861, desc = "=ds=" ..BabbleBoss["Garr"] }, --Earthfury Cover
+			{ itemID = 10908, desc = "=ds=" ..BabbleBoss["Baron Geddon"] }, --Earthfury Pauldrons
+			{ itemID = 10923, desc = "=ds=" ..BabbleBoss["Golemagg the Incinerator"] }, --Earthfury Tunic
+			{ itemID = 10924, desc = "=ds=" ..AL["Trash Mobs"] }, --Earthfury Bands
+			{ itemID = 10925, desc = "=ds=" ..BabbleBoss["Gehennas"] }, --Earthfury Gloves
+			{ itemID = 10926, desc = "=ds=" ..AL["Trash Mobs"] }, --Earthfury Girdle
+			{ itemID = 10960, desc = "=ds=" ..BabbleBoss["Magmadar"] }, --Earthfury Leggings
+			{ itemID = 10961, desc = "=ds=" ..BabbleBoss["Lucifron"] }, --Earthfury Treads
+		},
+	},
 	{
 		Name = LOCALIZED_CLASS_NAMES_MALE["WARLOCK"],
 		{
@@ -7232,7 +7297,7 @@ AtlasLoot_Data["T1"] = {
 		},
 	},
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"] .." - Tank",
+		Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"] ..color.WHITE.." - ".. AL["Tank"],
 		{
 			{ itemID = 16866, desc = "=ds=" ..BabbleBoss["Garr"] }, --Helm of Might
 			{ itemID = 16868, desc = "=ds=" ..BabbleBoss["Sulfuron Harbinger"] }, --Pauldrons of Might
@@ -7245,7 +7310,7 @@ AtlasLoot_Data["T1"] = {
 		},
 	},
 	{
-		Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"] .." - DPS",
+		Name = LOCALIZED_CLASS_NAMES_MALE["WARRIOR"] ..color.WHITE.." - ".. AL["DPS"],
 		{
 			{ itemID = 10480, desc = "=ds=" ..BabbleBoss["Garr"] },--Faceguard of Might
 			{ itemID = 10481, desc = "=ds=" ..BabbleBoss["Sulfuron Harbinger"] },--Shoulderpads of Might
