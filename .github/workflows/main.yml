@@ -24,7 +24,7 @@ jobs:
           version="${{ github.ref_name }}"
           
           # Use the cleaned version in the zip file name
-          zip_name="${{ env.ZIP_FILE_NAME }}-${version}.zip"
+          zip_name="${{ env.ZIP_FILE_NAME }}-v${version}.zip"
           echo "Preparing zip for $ADDON_NAME -> $zip_name"
           
           rsync -av --exclude='.git' --exclude='.github' --exclude='*.zip' AtlasLoot AtlasLoot_Cache AtlasLoot_BurningCrusade AtlasLoot_Crafting_OriginalWoW AtlasLoot_Crafting_TBC AtlasLoot_Crafting_Wrath AtlasLoot_OriginalWoW AtlasLoot_Vanity AtlasLoot_WorldEvents AtlasLoot_WrathoftheLichKing "./temp_build/"
