@@ -53,7 +53,7 @@ jobs:
       - name: Check if tag exists
         id: check_tag
         run: |
-          if git rev-parse "refs/tags/$VERSION" >/dev/null 2>&1; then
+          if git rev-parse "refs/tags/v$VERSION" >/dev/null 2>&1; then
             echo "Tag exists."
             echo "EXISTS=true" >> $GITHUB_ENV
           else
@@ -69,8 +69,8 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git tag "$VERSION"
-          git push origin "$VERSION"
+          git tag "v$VERSION"
+          git push origin "v$VERSION"
       - name: Prepare release zip
         run: |
           zip_name="${ADDON_NAME}-v${VERSION}.zip"
