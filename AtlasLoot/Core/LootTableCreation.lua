@@ -60,12 +60,41 @@ function AtlasLoot:CreateToken(dataID)
 end
 
 --Creates a sorted and consolidated loottable of all of an xpacs dungeon loot
-function AtlasLoot:CreateOnDemandLootTable(typeL)
+function AtlasLoot:CreateOnDemandLootTable(typeL, isDungeon, name)
 	-- Return and show loot table if its already been created
 	if AtlasLoot_OnDemand and AtlasLoot_OnDemand[typeL] then return self:ShowItemsFrame(typeL, "AtlasLoot_OnDemand", 1) end
 	-- Create ondemand loot table if it dosnt exist
 	if not AtlasLoot_OnDemand then AtlasLoot_OnDemand = {} end
 
+	if isDungeon then
+		--Creates a table of all dungeon items
+		local itemList = {}
+		local checkList = {}
+		for dataID, data in pairs(AtlasLoot_Data) do
+			if data.Type == typeL then
+				for tableNum, t in ipairs(data) do
+					for _, side in ipairs(t) do
+						for _, itemData in ipairs(side) do
+							if type(itemData) == "table" and itemData.itemID and not checkList[itemData.itemID] then
+								itemData.dropLoc = {data.DisplayName or data.Name, t.Name}
+								itemData.lootTable = {{dataID, "AtlasLoot_Data", tableNum}, "Source"}
+								checkList[itemData.itemID] = true
+								tinsert(itemList, itemData)
+							end
+						end
+					end
+				end
+			end
+		end
+		wipe(checkList)
+		self:PopulateOnDemandLootTable(itemList, typeL, name)
+	else
+		self:PopulateOnDemandLootTable(_G[typeL], typeL, name)
+	end
+end
+
+
+function AtlasLoot:PopulateOnDemandLootTable(itemList, typeL, name)
 	-- Text Conversion
 	local equipSlot = {
 		INVTYPE_HEAD = BabbleInventory["Head"], INVTYPE_SHOULDER = BabbleInventory["Shoulder"], INVTYPE_CHEST = BabbleInventory["Chest"],
@@ -111,7 +140,8 @@ function AtlasLoot:CreateOnDemandLootTable(typeL)
 		else
 			tinsert(unsorted[armorSubType]["Misc"], {item, armorType})
 		end
-		AtlasLoot_OnDemand[typeL] = {Name = "All Dungeon Items", Type = typeL, filter = true }
+		
+		AtlasLoot_OnDemand[typeL] = {Name = name, Type = typeL, filter = true }
 
 		for aType, v in pairs(unsorted) do
 			for eLoc, t in pairs(v) do
@@ -143,26 +173,6 @@ function AtlasLoot:CreateOnDemandLootTable(typeL)
 		end
 	end
 
-	--Fills table with items
-	local itemList = {}
-	local checkList = {}
-	for dataID, data in pairs(AtlasLoot_Data) do
-		if data.Type == typeL then
-			for tableNum, t in ipairs(data) do
-				for _, side in ipairs(t) do
-					for _, itemData in ipairs(side) do
-						if type(itemData) == "table" and itemData.itemID and not checkList[itemData.itemID] then
-							itemData.dropLoc = {data.DisplayName or data.Name, t.Name}
-							itemData.lootTable = {{dataID, "AtlasLoot_Data", tableNum}, "Source"}
-							checkList[itemData.itemID] = true
-							tinsert(itemList, {itemData})
-						end
-					end
-				end
-			end
-		end
-	end
-	wipe(checkList)
 	-- rate limit tied to half the current frame rate
 	self:ItemsLoading(#itemList)
 	local maxDuration = 500/GetFramerate()
@@ -171,7 +181,7 @@ function AtlasLoot:CreateOnDemandLootTable(typeL)
 		startTime = debugprofilestop()
 		local task = tremove(itemList)
 		while (task) do
-			processItem(task[1])
+			processItem(task)
 			if (debugprofilestop() - startTime > maxDuration) then
 				Timer.After(0, continue)
 				return

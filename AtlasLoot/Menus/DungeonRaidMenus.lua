@@ -16,7 +16,7 @@ AtlasLoot_SubMenus["Dungeons and RaidsCLASSIC"] = {
     { "", "WorldBossesCLASSIC","", "World Bosses" },
     ---- Dungeons -----
     { "Dungeons:", "OldKeys", "Header" },
-    { "All Dungeon Items", "ClassicDungeonExt", OnDamand = "ClassicDungeonExt"},
+    { "All Dungeon Items", "ClassicDungeonExt", OnDamand = {"ClassicDungeonExt", true}},
     { "", "BlackfathomDeeps", "", "Blackfathom Deeps" },
     { "", "BlackrockDepths", "", "Blackrock Depths" },
     { "", "BlackrockCaverns", "", "Blackrock Caverns" },
@@ -62,7 +62,7 @@ AtlasLoot_SubMenus["Dungeons and RaidsTBC"] = {
     { "", "WorldBossesTBC","", "World Bosses" },
     ---- Dungeons -----
     { "Dungeons:", "BCKeys", "Header" },
-    { "All Dungeon Items", "BCDungeon", OnDamand = "BCDungeon"},
+    { "All Dungeon Items", "BCDungeon", OnDamand = {"BCDungeon", true}},
     { "", "HCRamparts", "", "Hellfire Ramparts" },
     { "", "HCShatteredHalls", "", "The Shattered Halls" },
     { "", "HCFurnace", "", "The Blood Furnace" },
@@ -100,7 +100,7 @@ AtlasLoot_SubMenus["Dungeons and RaidsWRATH"] = {
     { "", "Halion", "Halion" },
     ---- Dungeons -----
     { "Dungeons:", "WrathKeys", "Header" },
-    { "All Dungeon Items", "WrathDungeon", OnDamand = "WrathDungeon"},
+    { "All Dungeon Items", "WrathDungeon", OnDamand = {"WrathDungeon", true}},
     { "", "Ahnkahet", "Ahnkahet" },
     { "", "AzjolNerub", "AzjolNerub" },
     { "", "CoTStratholme", "The Culling of Stratholme" },

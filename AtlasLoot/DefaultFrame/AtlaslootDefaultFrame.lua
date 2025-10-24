@@ -88,12 +88,12 @@ AtlasLoot:DewDropSubMenuClick(tablename):
 tablename - Name of the loot table in the database
 Called when a button in AtlasLoot.DewdropSubMenu is clicked
 ]]
-function AtlasLoot:DewDropSubMenuClick(tablename, onDamand)
+function AtlasLoot:DewDropSubMenuClick(tablename, onDamand, name)
     local dataSource = "AtlasLoot_Data"
     self.backEnabled = false
     if  onDamand then
 		dataSource = "AtlasLoot_OnDemand"
-		self:CreateOnDemandLootTable(onDamand)
+		self:CreateOnDemandLootTable(onDamand[1], onDamand[2], name)
 	else
         --Show the select loot table
         local tablenum = _G[dataSource][tablename].Loadfirst or 1
@@ -152,15 +152,15 @@ function AtlasLoot:DewdropSubMenuOpen(loottable)
                     table.insert(menuList[1], {text = menu[1], value = menu[1], hasArrow = true})
                     for _,submenu in pairs(menu[3]) do
                         if submenu[3] == "Header" then
-                            table.insert(menuList[2], {text = self.Colors.GREEN..submenu[1], func = function() self:DewDropSubMenuClick(submenu[2], submenu.OnDamand) end, isTitle = true, show = menu[1], divider = true} )
+                            table.insert(menuList[2], {text = self.Colors.GREEN..submenu[1], func = function() self:DewDropSubMenuClick(submenu[2], submenu.OnDamand, submenu[1]) end, isTitle = true, show = menu[1], divider = true} )
                         elseif type(submenu) == "table" then
-                            table.insert(menuList[2], {text = AtlasLoot_Data[submenu[2]] and AtlasLoot_Data[submenu[2]].Name or submenu[1], func = function() self:DewDropSubMenuClick(submenu[2], submenu.OnDamand) end, show = menu[1]})
+                            table.insert(menuList[2], {text = AtlasLoot_Data[submenu[2]] and AtlasLoot_Data[submenu[2]].Name or submenu[1], func = function() self:DewDropSubMenuClick(submenu[2], submenu.OnDamand, submenu[1]) end, show = menu[1]})
                         end
                     end
                 elseif menu[3] == "Header" then
                     table.insert(menuList[1], {text = self.Colors.GREEN..menu[1], func = function() self:DewDropSubMenuClick(menu[2]) end, isTitle = true, divider = true})
                 else
-                    table.insert(menuList[1], {text = AtlasLoot_Data[menu[2]] and AtlasLoot_Data[menu[2]].Name or menu[1], func = function() self:DewDropSubMenuClick(menu[2], menu.OnDamand) end})
+                    table.insert(menuList[1], {text = AtlasLoot_Data[menu[2]] and AtlasLoot_Data[menu[2]].Name or menu[1], func = function() self:DewDropSubMenuClick(menu[2], menu.OnDamand, menu[1]) end})
                 end
             end
         end
