@@ -57,7 +57,7 @@ jobs:
       - name: Check if tag exists
         id: check_tag
         run: |
-          if git rev-parse "refs/tags/v$VERSION" >/dev/null 2>&1; then
+          if git rev-parse "refs/tags/$VERSION" >/dev/null 2>&1; then
             echo "Tag exists."
             echo "EXISTS=true" >> $GITHUB_ENV
           else
@@ -80,7 +80,7 @@ jobs:
 
       - name: Prepare release zip
         run: |
-          zip_name="${ADDON_NAME}-${VERSION}.zip"
+          zip_name="${ADDON_NAME}-${vVERSION}.zip"
           echo "Preparing zip for $ADDON_NAME -> $zip_name"
           
           # Copy only the addon folder and exclude metadata
