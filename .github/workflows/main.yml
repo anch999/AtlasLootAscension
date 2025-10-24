@@ -7,7 +7,6 @@ on:
 
 env:
   ADDON_NAME: AtlasLoot
-  # This variable will now get its value from the pushed tag.
   ZIP_FILE_NAME: AtlasLootAscension
 
 jobs:
@@ -19,36 +18,34 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Get tag name from context
-        id: get_tag
-        run: |
-          # The GITHUB_REF_NAME variable gives you the tag name directly.
-          echo "tag=${{ github.ref_name }}" >> $GITHUB_OUTPUT
-
       - name: Prepare release zip
+        id: prepare_zip
         run: |
-          version="${{ steps.get_tag.outputs.tag }}"
-          echo "VERSION=$version" >> $GITHUB_ENV
-          # Use the tag from the workflow trigger
-          zip_name="${{ env.ZIP_FILE_NAME }}-${{ env.VERSION }}.zip"
+          version="${{ github.ref_name }}"
+          
+          # Use the cleaned version in the zip file name
+          zip_name="${{ env.ZIP_FILE_NAME }}-${version}.zip"
           echo "Preparing zip for $ADDON_NAME -> $zip_name"
           
           rsync -av --exclude='.git' --exclude='.github' --exclude='*.zip' AtlasLoot AtlasLoot_Cache AtlasLoot_BurningCrusade AtlasLoot_Crafting_OriginalWoW AtlasLoot_Crafting_TBC AtlasLoot_Crafting_Wrath AtlasLoot_OriginalWoW AtlasLoot_Vanity AtlasLoot_WorldEvents AtlasLoot_WrathoftheLichKing "./temp_build/"
           
+          # Navigate into the temporary build directory to zip the addon folder
           cd ./temp_build
-          # Make sure you are zipping the correct directory
           zip -r "../${zip_name}" "${ADDON_NAME}"
           cd ..
           
-          echo "ZIP_NAME=${zip_name}" >> $GITHUB_ENV
+          # Set the variables as outputs so they can be used by the next step
+          echo "version=${version}" >> "$GITHUB_OUTPUT"
+          echo "zip_name=${zip_name}" >> "$GITHUB_OUTPUT"
           echo "✅ Created ${zip_name}"
 
       - name: Create GitHub Release and Upload Zip
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: ${{ env.VERSION }}
-          name: ${{ env.ADDON_NAME }} ${{ env.VERSION }}
+          tag_name: ${{ steps.prepare_zip.outputs.version }}
+          name: ${{ env.ADDON_NAME }} ${{ steps.prepare_zip.outputs.version }}
           files: |
-            ${{ env.ZIP_NAME }}
+            ${{ steps.prepare_zip.outputs.zip_name }}
+
 
 
