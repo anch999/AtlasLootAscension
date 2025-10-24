@@ -69,8 +69,8 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git tag "v$VERSION"
-          git push origin "v$VERSION"
+          git tag "$VERSION"
+          git push origin "$VERSION"
       - name: Prepare release zip
         run: |
           zip_name="${ADDON_NAME}-${VERSION}.zip"
