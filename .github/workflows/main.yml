@@ -17,10 +17,14 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        
+      - name: Get latest tag with git
+        id: latest_tag_git
+        run: echo "tag=$(git describe --tags --abbrev=0)" >> $GITHUB_OUTPUT
 
       - name: Prepare release zip
         run: |
-          version="${{ github.ref_name }}"
+          version="${{ steps.latest_tag_git.outputs.tag }}"
           echo "VERSION=$version" >> $GITHUB_ENV
           zip_name="${ZIP_FILE_NAME}-v${VERSION}.zip"
           echo "Preparing zip for $ADDON_NAME -> $zip_name"
