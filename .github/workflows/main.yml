@@ -12,7 +12,7 @@ on:
         type: string
 
 env:
-  ADDON_NAME: AtlasLoot   # 👈 change this for each addon repo (folder + toc base name)
+  ADDON_NAME: AtlasLoot # 👈 change this for each addon repo (folder + toc base name)
 
 jobs:
   release:
