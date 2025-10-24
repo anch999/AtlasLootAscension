@@ -48,7 +48,7 @@ jobs:
             exit 1
           fi
           echo "VERSION=$version" >> $GITHUB_ENV
-          echo "::set-output name=version::$version"
+          echo "{name}={version}" >> $GITHUB_OUTPUT
           echo "Detected version: $version"
       - name: Check if tag exists
         id: check_tag
