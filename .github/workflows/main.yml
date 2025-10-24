@@ -3,7 +3,7 @@ name: Release WoW Addon
 on:
   push:
     tags:
-      - "v*.*.*" # Trigger on tags like v1.2.3
+      - "*.*.*" # Trigger on tags like v1.2.3
 
 env:
   ADDON_NAME: AtlasLoot
