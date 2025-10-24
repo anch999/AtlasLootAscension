@@ -3,10 +3,11 @@ name: Release WoW Addon
 on:
   push:
     tags:
-      - "*.*.*" # Trigger on tags like v1.2.3
+      - "v*.*.*" # Trigger on tags like v1.2.3
 
 env:
-  ADDON_NAME: AtlasLoot   # 👈 change this for each addon repo (folder + toc base name)
+  ADDON_NAME: AtlasLoot
+  # This variable will now get its value from the pushed tag.
   ZIP_FILE_NAME: AtlasLootAscension
 
 jobs:
@@ -17,33 +18,37 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-        
-      - name: Get latest tag with git
+
+      - name: Get tag name from context
         id: get_tag
-        run:  |
+        run: |
+          # The GITHUB_REF_NAME variable gives you the tag name directly.
           echo "tag=${{ github.ref_name }}" >> $GITHUB_OUTPUT
 
       - name: Prepare release zip
         run: |
           version="${{ steps.get_tag.outputs.tag }}"
           echo "VERSION=$version" >> $GITHUB_ENV
-          zip_name="${env.ZIP_FILE_NAME}-v${env.VERSION}.zip"
+          # Use the tag from the workflow trigger
+          zip_name="${{ env.ZIP_FILE_NAME }}-${{ env.VERSION }}.zip"
           echo "Preparing zip for $ADDON_NAME -> $zip_name"
           
-          # Copy only the addon folder and exclude metadata
           rsync -av --exclude='.git' --exclude='.github' --exclude='*.zip' AtlasLoot AtlasLoot_Cache AtlasLoot_BurningCrusade AtlasLoot_Crafting_OriginalWoW AtlasLoot_Crafting_TBC AtlasLoot_Crafting_Wrath AtlasLoot_OriginalWoW AtlasLoot_Vanity AtlasLoot_WorldEvents AtlasLoot_WrathoftheLichKing "./temp_build/"
           
           cd ./temp_build
+          # Make sure you are zipping the correct directory
           zip -r "../${zip_name}" "${ADDON_NAME}"
           cd ..
           
           echo "ZIP_NAME=${zip_name}" >> $GITHUB_ENV
           echo "✅ Created ${zip_name}"
+
       - name: Create GitHub Release and Upload Zip
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: v${{ env.VERSION }}
+          tag_name: ${{ env.VERSION }}
           name: ${{ env.ADDON_NAME }} ${{ env.VERSION }}
           files: |
             ${{ env.ZIP_NAME }}
+
 
