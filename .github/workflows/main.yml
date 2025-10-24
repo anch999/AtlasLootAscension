@@ -19,14 +19,15 @@ jobs:
         uses: actions/checkout@v4
         
       - name: Get latest tag with git
-        id: latest_tag_git
-        run: echo "tag=$(git describe --tags --abbrev=0)" >> $GITHUB_OUTPUT
+        id: get_tag
+        run:  |
+          echo "tag=${{ github.ref_name }}" >> $GITHUB_OUTPUT
 
       - name: Prepare release zip
         run: |
-          version="${{ steps.latest_tag_git.outputs.tag }}"
+          version="${{ steps.get_tag.outputs.tag }}"
           echo "VERSION=$version" >> $GITHUB_ENV
-          zip_name="${ZIP_FILE_NAME}-v${VERSION}.zip"
+          zip_name="${env.ZIP_FILE_NAME}-v${env.VERSION}.zip"
           echo "Preparing zip for $ADDON_NAME -> $zip_name"
           
           # Copy only the addon folder and exclude metadata
