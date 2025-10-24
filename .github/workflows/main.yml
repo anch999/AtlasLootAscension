@@ -8,7 +8,6 @@ on:
 env:
   ADDON_NAME: AtlasLoot   # 👈 change this for each addon repo (folder + toc base name)
   ZIP_FILE_NAME: AtlasLootAscension
-  VERSION: ${github.ref_name}
 
 jobs:
   release:
@@ -30,7 +29,7 @@ jobs:
           rsync -av --exclude='.git' --exclude='.github' --exclude='*.zip' AtlasLoot AtlasLoot_Cache AtlasLoot_BurningCrusade AtlasLoot_Crafting_OriginalWoW AtlasLoot_Crafting_TBC AtlasLoot_Crafting_Wrath AtlasLoot_OriginalWoW AtlasLoot_Vanity AtlasLoot_WorldEvents AtlasLoot_WrathoftheLichKing "./temp_build/"
           
           cd ./temp_build
-          zip -r "../${zip_name}" "${ZIP_FILE_NAME}"
+          zip -r "../${zip_name}" "${ADDON_NAME}"
           cd ..
           
           echo "ZIP_NAME=${zip_name}" >> $GITHUB_ENV
