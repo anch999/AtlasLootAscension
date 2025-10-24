@@ -2,18 +2,13 @@ name: Release WoW Addon
 
 on:
   push:
-    branches:
-      - main
-  workflow_dispatch:
-    inputs:
-      version:
-        description: "Optional version override (e.g. 1.2.3)"
-        required: false
-        type: string
+    tags:
+      - "*.*.*" # Trigger on tags like v1.2.3
 
 env:
   ADDON_NAME: AtlasLoot   # 👈 change this for each addon repo (folder + toc base name)
   ZIP_FILE_NAME: AtlasLootAscension
+  VERSION: ${github.ref_name}
 
 jobs:
   release:
@@ -24,54 +19,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Determine TOC file path
-        id: find_toc
-        run: |
-          toc_file="${ADDON_NAME}/${ADDON_NAME}.toc"
-          if [ ! -f "$toc_file" ]; then
-            echo "❌ TOC file not found at $toc_file"
-            exit 1
-          fi
-          echo "Found TOC file: $toc_file"
-          echo "TOC_FILE=$toc_file" >> $GITHUB_ENV
-      - name: Read version from TOC file
-        id: get_version
-        run: |
-          version_line=$(grep -i "^## Version:" "$TOC_FILE" | head -n 1 | cut -d':' -f2- | xargs)
-          if [ -n "${{ github.event.inputs.version }}" ]; then
-            version="${{ github.event.inputs.version }}"
-            echo "Using provided version override: $version"
-          else
-            version="$version_line"
-          fi
-          if [ -z "$version" ]; then
-            echo "❌ No version found in TOC file or input. Exiting."
-            exit 1
-          fi
-          echo "VERSION=$version" >> $GITHUB_ENV
-          echo "::set-output name=version::$version"
-          echo "Detected version: $version"
-      - name: Check if tag exists
-        id: check_tag
-        run: |
-          if git rev-parse "refs/tags/v$VERSION" >/dev/null 2>&1; then
-            echo "Tag exists."
-            echo "EXISTS=true" >> $GITHUB_ENV
-          else
-            echo "Tag does not exist."
-            echo "EXISTS=false" >> $GITHUB_ENV
-          fi
-      - name: Exit if tag already exists
-        if: env.EXISTS == 'true'
-        run: |
-          echo "Tag already exists. Skipping release."
-          exit 0
-      - name: Create tag
-        run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
-          git tag "v$VERSION"
-          git push origin "v$VERSION"
       - name: Prepare release zip
         run: |
           zip_name="${ZIP_FILE_NAME}-${VERSION}.zip"
