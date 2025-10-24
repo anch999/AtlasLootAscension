@@ -31,7 +31,7 @@ jobs:
           
           # Navigate into the temporary build directory to zip the addon folder
           cd ./temp_build
-          zip -r "../${zip_name}" "${ADDON_NAME}"
+          zip -r "../${zip_name}" .
           cd ..
           
           # Set the variables as outputs so they can be used by the next step
