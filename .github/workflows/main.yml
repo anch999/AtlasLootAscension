@@ -25,7 +25,7 @@ jobs:
           echo "Preparing zip for $ZIP_FILE_NAME -> $zip_name"
           
           # Copy only the addon folder and exclude metadata
-          rsync -av --exclude='.git' --exclude='.github' --exclude='*.zip' "${ZIP_FILE_NAME}" "./temp_build/"
+          rsync -av --exclude='.git' --exclude='.github' --exclude='*.zip' "${ADDON_NAME}" "./temp_build/"
           
           cd ./temp_build
           zip -r "../${zip_name}" "${ZIP_FILE_NAME}"
