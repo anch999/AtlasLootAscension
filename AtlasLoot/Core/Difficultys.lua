@@ -27,6 +27,16 @@ AtlasLoot.Difficulties = {
         {AL["Bloodforged"], 1},
         Max = 5
     },
+    WorldforgedClassic = {
+        {AL["Base Item"], 3},
+        {AL["Dungeon Upgrade"], 4},
+        {AL["ZG Upgrade"], 5},
+        {AL["Tier 1 Upgrade"], 6},
+        {AL["Tier 2 Upgrade"], 7},
+        {AL["AQ Upgrade"], 8},
+        {AL["Tier 3 Upgrade"], 9},
+        Max = 9
+    },
     ClassicDungeonExt = {
         {AL["Bloodforged"], 1},
         {AL["Normal"], 3},
